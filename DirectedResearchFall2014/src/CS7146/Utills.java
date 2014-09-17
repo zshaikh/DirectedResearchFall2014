@@ -1,3 +1,4 @@
+package CS7146;
 import java.io.*;
 import java.util.ArrayList;
 
@@ -32,7 +33,7 @@ public class Utills
 			
 			while ((s = stdInput.readLine()) != null) 
 			{
-			         commandResult += s+"\n"; //System.out.println(s);
+			         commandResult += s+"\n"; System.out.println(s);
 			}
 			
 
@@ -114,7 +115,7 @@ public class Utills
 				        Element element = (Element) nodes.item(1);
 				        nodes = doc.getElementsByTagName(element.getNodeName());
 			        	 doc.getDocumentElement();
-			        	 
+			        	 System.out.println(nodes.toString());
 			        	 
 				        // iterate the Strings...
 				        for (int i = 0; i < nodes.getLength(); i++) 

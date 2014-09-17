@@ -1,6 +1,8 @@
+package CS7146;
 
 import java.io.*;
 import java.util.*;
+
 
 public class AndroidUIAnalysis 
 {
@@ -9,9 +11,10 @@ public class AndroidUIAnalysis
 	private static BufferedReader bReader = null;
 	private static BufferedWriter bwriter = null;
 	private static ArrayList<String> projectsList = null;
-	private static String workingDirectory="/Users/zeyadal-shaikh/Documents/workspace/DirectedResearchFall2014";
+	private static String workingDirectory="/home/owner/git/DirectedResearchFall2014/DirectedResearchFall2014";
 	private static String apktoolLocation="/usr/local/bin/apktool";
 	private static ArrayList<String> keys= null, mapedkeys=null;
+	
 	public static void main(String[] args) 
 	{
 		// all APKs need to placed into APKs folder
@@ -93,7 +96,8 @@ public class AndroidUIAnalysis
 
 	}
 
-	private static ArrayList getXMLs(String string) {
+	private static ArrayList getXMLs(String string) 
+	{
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -104,10 +108,11 @@ public class AndroidUIAnalysis
 	{
 		try 
 		{
+
 			
-			String[] command={"/bin/sh", "-c", apktoolLocation+" d ./APks/"+ projectName + " ./UnpackedProjects/"+ projectName.replace(".apk", "")};
+			String[] command1={"/bin/sh", "-c", apktoolLocation+" d ./APKs/"+ projectName +" ./unpackedProjects/"+ projectName.replace(".apk", "")};
 			
-			Utills.excuteComamnd(command);
+			Utills.excuteComamnd(command1);
 			
 			return true;
 			
