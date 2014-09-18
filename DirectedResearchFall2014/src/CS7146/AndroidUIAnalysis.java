@@ -10,7 +10,7 @@ public class AndroidUIAnalysis
 	
 	private static BufferedReader bReader = null;
 	private static BufferedWriter bwriter = null;
-	private static ArrayList<String> projectsList = null, mapedkeys=null;
+	private static ArrayList<String> projectsList = null, mapedkeysToXML=null,  mapedkeysToJava=null;
 	private static String workingDirectory="/home/owner/git/DirectedResearchFall2014/DirectedResearchFall2014";
 	private static String apktoolLocation="/usr/local/bin/apktool";
 	private static ArrayList<Key> keys= null;
@@ -48,11 +48,35 @@ public class AndroidUIAnalysis
 							System.out.println(	"Processing  APKs and get the keys and activities");
 							processResources(projectsList.get(i));
 							
-							System.out.println(	"Converting APK tO JAR");
-							convertAPKToJar(projectsList.get(i));
+							//System.out.println(	"Converting APK tO JAR");
+							//convertAPKToJar(projectsList.get(i));
 							
-							System.out.println(	"Converting JAR to JAVA");
-							convertJarToJava(projectsList.get(i));
+							//System.out.println(	"Converting JAR to JAVA");
+							//convertJarToJava(projectsList.get(i));
+							
+							// now we need to get the key id from R.java...
+							// so, first we need to find R.java
+							// it suppose to be one R.java in case we found 2 we will choose 
+							// the one that match the project name !?
+							
+							String RJavaFile= getRJava(projectsList.get(i));
+							processRJava(RJavaFile, projectsList.get(i));
+							
+							int mappedKyes=0;
+							
+							//mapped keys to java files...
+							for(int j=0 ; j< keys.size(); j++)
+							{
+								// mapped each key..
+								mapedkeysToJava= new ArrayList<String>();
+								//System.out.println( keys.get(j).getKeyId());
+								mapedkeysToJava= Utills.mapKeyIDToJavaClass(projectsList.get(i), keys.get(j).getKeyId());
+								
+								// count mapped keys...
+								mappedKyes+=mapedkeysToJava.size()> 0? 1 : 0;
+							}
+							
+							System.out.println("total number of mapped keys is: "+ mappedKyes);
 							
 						}
 
@@ -68,7 +92,7 @@ public class AndroidUIAnalysis
 	}
 
 
-
+	
 
 
 	private static void processResources(String projectName) 
@@ -102,10 +126,11 @@ try
 			{
 				//System.out.println("Key is: " +keys.get(j));
 				
-				mapedkeys= new ArrayList<String>();
-				mapedkeys= Utills.mapKeyToActivity(projectName, keys.get(j).getKeyName(), keys.get(j).getKeyType());
+				mapedkeysToXML= new ArrayList<String>();
+				mapedkeysToXML= Utills.mapKeyToActivity(projectName, keys.get(j).getKeyName(), keys.get(j).getKeyType());
 				
-				mappedKyes+=mapedkeys.size()> 0? 1 : 0;
+				// count mapped keys...
+				mappedKyes+=mapedkeysToXML.size()> 0? 1 : 0;
 				
 //								for(int w=0 ; w < mapedkeys.size(); w++)
 //								{
@@ -194,5 +219,87 @@ try
 			e.toString();
 			return false;
 		}
+	}
+	
+	
+	private static String getRJava(String projectName) 
+	{
+	
+		try 
+		{
+			String[] command={"/bin/sh", "-c", "find  ./unpackedProjects/"+ projectName.replace(".apk", "")+"/code -name R.java "};
+			// if the command return more than one R.java
+			// so we choose the one that match the project
+			// i.e the project Name is air.com.buffalo_studios.newflashbingo
+			// it returns
+			//./unpackedProjects/air.com.buffalo_studios.newflashbingo/code/air/com/buffalo_studios/newflashbingo/R.java
+			//./unpackedProjects/air.com.buffalo_studios.newflashbingo/code/com/buffalostudios/aneutils/R.java
+			//./unpackedProjects/air.com.buffalo_studios.newflashbingo/code/com/facebook/android/R.java
+			// by replacing the . with / we can choose the one that we need..
+			
+			//System.out.println(Utills.excuteComamnd(command));
+			String result =Utills.excuteComamnd(command);
+			String resultList[] = result.split("\n");
+			// check it it has more than one R.java
+			if(resultList.length>1)
+			{
+				for (int i=0 ; i< resultList.length; i++)
+				{
+					if( resultList[i].contains(projectName.replace(".apk", "").replace(".", "/")))
+					{
+						result= resultList[i];
+						break;
+					}
+				}
+				
+			}else
+			{
+				// do somthing
+			}
+			//System.out.println("Project Name :"+ projectName);
+			//System.out.println("R.java File is: "+result);
+			
+			return result;
+		} catch (Exception e) 
+		{
+			e.printStackTrace();
+			e.toString();
+			return null;
+		}
+		
+	}
+	
+	
+	
+	private static void processRJava(String rJavaFile, String projectName) 
+	{
+		try 
+		{
+			String[] command={"/bin/sh", "-c", "cat "+ rJavaFile +" | egrep "};
+			String result="-1";
+			// we will go by each key and find its id
+			// if the key id is not found then we have something missing
+			for(int i =0 ; i< keys.size(); i++)
+			{
+				command[2]= "cat "+ rJavaFile +" | egrep '.* "+ keys.get(i).getKeyName()+" =.*'";
+				//System.out.println(command[2]);
+				if( (result=Utills.excuteComamnd(command)).matches(""))
+				{
+					System.out.println("Key not found");
+				}else 
+				{
+					String id[]= result.split("=");
+					//System.out.println(keys.get(i).getKeyName()+" id ="+ id[id.length-1].replace(" ", "").replace(";", "").replace("\n", "")+"#");
+					// update key id
+					keys.get(i).setKeyId(Integer.parseInt(id[id.length-1].replace(" ", "").replace(";", "").replace("\n", "")));
+				}
+			}
+			
+		} catch (Exception e) 
+		{
+			e.printStackTrace();
+			e.toString();
+		}
+		
 	}
 }

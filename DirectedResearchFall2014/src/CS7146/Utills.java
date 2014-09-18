@@ -26,14 +26,14 @@ public class Utills
 		 
 		 //String[] cmd ;//= { "/bin/sh", "-c", "cd /Users/zeyadal-shaikh/git/AndroidUIAnalysis; ls -l; ls -l | wc -l; ls" };
 		 String s;
-		 System.out.println(cmd[2]);
+		// System.out.println(cmd[2]);
 		 Process p = Runtime.getRuntime().exec(cmd);
 	
 			BufferedReader stdInput = new BufferedReader(new InputStreamReader(p.getInputStream()));
 			
 			while ((s = stdInput.readLine()) != null) 
 			{
-			         commandResult += s+"\n"; System.out.println(s);
+			         commandResult += s+"\n";// System.out.println(s);
 			}
 			
 
@@ -118,17 +118,17 @@ public class Utills
 			        	 
 			        	 // this will return the type of the xml, so when we search we know 
 			        	 // what string we are looking for i.e +@/attribute or +@/id  and so on...
-			        	 
+			        	//System.out.println("File Name: "+fileName); 
 			        	String keyType=nodes.item(0).getNodeName();
 			        	// System.out.println("Key Type is : "+keyType);
 				        // iterate the Strings...
 				        for (int i = 0; i < nodes.getLength(); i++) 
 				        {
 				            element = (Element) nodes.item(i);
-				          // System.out.println("Key Name :"+  nodes.item(i).getAttributes().item(0).getNodeValue());	
+				          // System.out.println("Key Name :"+  nodes.item(i).getAttributes().getNamedItem("name").toString());	
 				          // System.out.println(" Value: "+getCharacterDataFromElement(element));
 				         
-				           keys.add( new Key(nodes.item(i).getAttributes().item(0).getNodeValue(),
+				           keys.add( new Key(nodes.item(i).getAttributes().getNamedItem("name").toString().replace("\"", "").replace("name=", "").replace(" ", ""),
 				        		   keyType));
 				        		   //nodes.item(i).getAttributes().item(0).getNodeValue() );
 				           
@@ -154,7 +154,7 @@ public class Utills
 			
 			//System.out.println(" find ./unpackedProjects/"+ projectName.replace(".apk", "") +"/res/ ./ -name '*.xml' -print0 | xargs -0 egrep -l 'android:id=\"@id/"+key+"\"'");
 			
-			String[] command={"/bin/sh", "-c", " find ./unpackedProjects/"+ projectName.replace(".apk", "") +"/res/layout  -name '*.xml' -print0 | xargs -0 egrep -l 'android:.*=\"@.*/"+key+"\"'" };
+			String[] command={"/bin/sh", "-c", " find ./unpackedProjects/"+ projectName.replace(".apk", "") +"/res/layout  -name '*.xml' -print0 | xargs -0 egrep  '.*"+key+"\".*'" };
 			
 			String result = excuteComamnd(command);
 			
@@ -169,8 +169,39 @@ public class Utills
 				
 			}
 			
+			}else
+			{
+				//System.out.println("The key "+ key + " is not used on any xml file");
 			}
 			return mapedkeys;
 		}
-	 
+	 public static ArrayList<String> mapKeyIDToJavaClass(String projectName, long keyId)
+		{
+			ArrayList<String> mapedkeys = new ArrayList<String>();
+			String type=null;
+			
+			
+			//System.out.println(" find ./unpackedProjects/"+ projectName.replace(".apk", "") +"/res/ ./ -name '*.xml' -print0 | xargs -0 egrep -l 'android:id=\"@id/"+key+"\"'");
+			
+			String[] command={"/bin/sh", "-c", " find ./unpackedProjects/"+ projectName.replace(".apk", "") +"/code  -name '*.java' -print0 | xargs -0 egrep  '.*"+keyId+".*'" };
+			
+			//System.out.println(command[2]);
+			
+			String result = excuteComamnd(command);
+			
+			if(result != null && !result.matches(""))
+			{
+			
+			String temp[]= result.split("\n");
+			
+			for(int i= 0 ; i< temp.length; i++)
+			{
+				if(!temp[i].contains("R.java"))
+					mapedkeys.add(temp[i]);
+				
+			}
+			
+			}
+			return mapedkeys;
+		}
 }
