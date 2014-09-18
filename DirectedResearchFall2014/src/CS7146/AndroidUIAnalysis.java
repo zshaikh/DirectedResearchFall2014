@@ -47,12 +47,12 @@ public class AndroidUIAnalysis
 						{
 							System.out.println(	"Processing  APKs and get the keys and activities");
 							processResources(projectsList.get(i));
-							
-							//System.out.println(	"Converting APK tO JAR");
-							//convertAPKToJar(projectsList.get(i));
-							
-							//System.out.println(	"Converting JAR to JAVA");
-							//convertJarToJava(projectsList.get(i));
+//							
+//							System.out.println(	"Converting APK tO JAR");
+//							convertAPKToJar(projectsList.get(i));
+//							
+//							System.out.println(	"Converting JAR to JAVA");
+//							convertJarToJava(projectsList.get(i));
 							
 							// now we need to get the key id from R.java...
 							// so, first we need to find R.java
@@ -99,10 +99,10 @@ public class AndroidUIAnalysis
 	{
 try
 {
-			if( !unpackAPK(projectName) )
-			{
-				throw new Exception(" Failed to unpack " +projectName);
-			}
+//			if( !unpackAPK(projectName) )
+//			{
+//				throw new Exception(" Failed to unpack " +projectName);
+//			}
 
 
 		
@@ -259,7 +259,7 @@ try
 			//System.out.println("Project Name :"+ projectName);
 			//System.out.println("R.java File is: "+result);
 			
-			return result;
+			return result.replace("\n", "").replace(" ", "");
 		} catch (Exception e) 
 		{
 			e.printStackTrace();
@@ -281,7 +281,7 @@ try
 			// if the key id is not found then we have something missing
 			for(int i =0 ; i< keys.size(); i++)
 			{
-				command[2]= "cat "+ rJavaFile +" | egrep '.* "+ keys.get(i).getKeyName()+" =.*'";
+				command[2]= "cat "+ rJavaFile +"| egrep '.* "+ keys.get(i).getKeyName()+" =.*'";
 				//System.out.println(command[2]);
 				if( (result=Utills.excuteComamnd(command)).matches(""))
 				{
@@ -291,7 +291,9 @@ try
 					String id[]= result.split("=");
 					//System.out.println(keys.get(i).getKeyName()+" id ="+ id[id.length-1].replace(" ", "").replace(";", "").replace("\n", "")+"#");
 					// update key id
-					keys.get(i).setKeyId(Integer.parseInt(id[id.length-1].replace(" ", "").replace(";", "").replace("\n", "")));
+//					System.out.println(result);
+//					System.out.println(id[id.length-1].replaceAll("[^0-9]",""));
+					keys.get(i).setKeyId(Integer.parseInt(id[id.length-1].replaceAll("[^0-9]","")));
 				}
 			}
 			
@@ -302,4 +304,10 @@ try
 		}
 		
 	}
+
+
+
+
+
+	
 }

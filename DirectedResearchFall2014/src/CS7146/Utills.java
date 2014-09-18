@@ -191,7 +191,7 @@ public class Utills
 			
 			if(result != null && !result.matches(""))
 			{
-			
+			//	System.out.println(result);
 			String temp[]= result.split("\n");
 			
 			for(int i= 0 ; i< temp.length; i++)
