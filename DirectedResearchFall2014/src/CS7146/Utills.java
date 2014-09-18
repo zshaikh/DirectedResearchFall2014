@@ -26,7 +26,7 @@ public class Utills
 		 
 		 //String[] cmd ;//= { "/bin/sh", "-c", "cd /Users/zeyadal-shaikh/git/AndroidUIAnalysis; ls -l; ls -l | wc -l; ls" };
 		 String s;
-		 
+		 System.out.println(cmd[2]);
 		 Process p = Runtime.getRuntime().exec(cmd);
 	
 			BufferedReader stdInput = new BufferedReader(new InputStreamReader(p.getInputStream()));
@@ -46,12 +46,12 @@ public class Utills
 			return commandResult;
 	}
 
-	 public static ArrayList<String> getkeysFromXMLs(String projectName)
+	 public static ArrayList<Key> getkeysFromXMLs(String projectName)
 	 {
 		 try 
 		 {
 			 ArrayList<String> XMLs= new ArrayList<String>();
-			 ArrayList<String> keys= new ArrayList<String>();
+			 ArrayList<Key> keys= new ArrayList<Key>();
 			 String[] command={"/bin/sh", "-c", " ls ./unpackedProjects/"+projectName.replace(".apk", "")+"/res/values/*.xml" };
 			 String result = excuteComamnd(command);
 			
@@ -79,10 +79,10 @@ public class Utills
 	 }
 	 
 	 
-	 public static ArrayList<String> getkeysFromXML(String projectName, String fileName)
+	 public static ArrayList<Key> getkeysFromXML(String projectName, String fileName)
 	 {
 		 String fixedXMLfileContent = null, temp;
-		 ArrayList<String> keys = new ArrayList<String>();
+		 ArrayList<Key> keys = new ArrayList<Key>();
 		 
 		 try 
 		 {
@@ -115,8 +115,12 @@ public class Utills
 				        Element element = (Element) nodes.item(1);
 				        nodes = doc.getElementsByTagName(element.getNodeName());
 			        	 doc.getDocumentElement();
-			        	 System.out.println(nodes.toString());
 			        	 
+			        	 // this will return the type of the xml, so when we search we know 
+			        	 // what string we are looking for i.e +@/attribute or +@/id  and so on...
+			        	 
+			        	String keyType=nodes.item(0).getNodeName();
+			        	// System.out.println("Key Type is : "+keyType);
 				        // iterate the Strings...
 				        for (int i = 0; i < nodes.getLength(); i++) 
 				        {
@@ -124,7 +128,9 @@ public class Utills
 				          // System.out.println("Key Name :"+  nodes.item(i).getAttributes().item(0).getNodeValue());	
 				          // System.out.println(" Value: "+getCharacterDataFromElement(element));
 				         
-				           keys.add(nodes.item(i).getAttributes().item(0).getNodeValue() );
+				           keys.add( new Key(nodes.item(i).getAttributes().item(0).getNodeValue(),
+				        		   keyType));
+				        		   //nodes.item(i).getAttributes().item(0).getNodeValue() );
 				           
 				        		   
 				        }
@@ -140,11 +146,15 @@ public class Utills
 		 return null;
 	 }
 	 
-	 public static ArrayList<String> mapKeyToActivity(String projectName, String key)
+	 public static ArrayList<String> mapKeyToActivity(String projectName, String key, String keyType)
 		{
 			ArrayList<String> mapedkeys = new ArrayList<String>();
+			String type=null;
+			
+			
 			//System.out.println(" find ./unpackedProjects/"+ projectName.replace(".apk", "") +"/res/ ./ -name '*.xml' -print0 | xargs -0 egrep -l 'android:id=\"@id/"+key+"\"'");
-			String[] command={"/bin/sh", "-c", " find ./unpackedProjects/"+ projectName.replace(".apk", "") +"/res/layout  -name '*.xml' -print0 | xargs -0 egrep -l 'android:id=\"@id/"+key+"\"'" };
+			
+			String[] command={"/bin/sh", "-c", " find ./unpackedProjects/"+ projectName.replace(".apk", "") +"/res/layout  -name '*.xml' -print0 | xargs -0 egrep -l 'android:.*=\"@.*/"+key+"\"'" };
 			
 			String result = excuteComamnd(command);
 			
