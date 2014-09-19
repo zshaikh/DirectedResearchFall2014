@@ -178,7 +178,7 @@ public class Utills
 	 public static ArrayList<String> mapKeyIDToJavaClass(String projectName, long keyId)
 		{
 			ArrayList<String> mapedkeys = new ArrayList<String>();
-			String type=null;
+			
 			
 			
 			//System.out.println(" find ./unpackedProjects/"+ projectName.replace(".apk", "") +"/res/ ./ -name '*.xml' -print0 | xargs -0 egrep -l 'android:id=\"@id/"+key+"\"'");
