@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding ="utf-8"?>
+<swc xmlns="http://www.adobe.com/flash/swccatalog/9">
+  <versions>
+    <swc version="1.2" />
+    <flex version="4.6.0" build="23201" minimumSupportedVersion="3.0.0" />
+  </versions>
+  <features>
+    <feature-script-deps />
+    <feature-files />
+  </features>
+  <libraries>
+    <library path="library.swf">
+      <script name="com/bitrhymes/playhaven/PlayHavenExt" mod="1382946835446" signatureChecksum="1735685747" >
+        <def id="com.bitrhymes.playhaven:PlayHavenExt" /> 
+        <dep id="com.bitrhymes.playhaven:PlayHavenEvent" type="e" /> 
+        <dep id="flash.events:StatusEvent" type="e" /> 
+        <dep id="flash.external:ExtensionContext" type="e" /> 
+        <dep id="flash.events:StatusEvent" type="s" /> 
+        <dep id="flash.external:ExtensionContext" type="s" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="flash.events:EventDispatcher" type="i" /> 
+      </script>
+      <script name="com/bitrhymes/playhaven/PlayHavenEvent" mod="1380632541766" signatureChecksum="2037027822" >
+        <def id="com.bitrhymes.playhaven:PlayHavenEvent" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="flash.events:Event" type="i" /> 
+      </script>
+      <script name="_66851970d0cd3b2da00ed64b667011e28a06414552433f2049b271ed9705a6ad_flash_display_Sprite" mod="1382947809175" signatureChecksum="3514726433" >
+        <def id="_66851970d0cd3b2da00ed64b667011e28a06414552433f2049b271ed9705a6ad_flash_display_Sprite" /> 
+        <dep id="flash.system:Security" type="e" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="flash.display:Sprite" type="i" /> 
+      </script>
+      <script name="com/bitrhymes/playhaven/IPlayHavenExt" mod="1382946748095" signatureChecksum="1212435245" >
+        <def id="com.bitrhymes.playhaven:IPlayHavenExt" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="Object" type="i" /> 
+      </script>
+      <digests>
+        <digest type="SHA-256" signed="false" value="83ee51dabd26af425b3ed383f7cf0e1f403eb9f7bd46c8f2ce604995816fb331"   />
+      </digests>
+    </library>
+  </libraries>
+  <files>
+  </files>
+</swc>

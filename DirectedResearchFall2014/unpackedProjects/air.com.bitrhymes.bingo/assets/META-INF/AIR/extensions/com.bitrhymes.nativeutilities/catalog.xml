@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding ="utf-8"?>
+<swc xmlns="http://www.adobe.com/flash/swccatalog/9">
+  <versions>
+    <swc version="1.2" />
+    <flex version="4.6.0" build="23201" minimumSupportedVersion="3.0.0" />
+  </versions>
+  <features>
+    <feature-script-deps />
+    <feature-files />
+  </features>
+  <libraries>
+    <library path="library.swf">
+      <script name="com/bitrhymes/nativeutilities/MobileDeviceEvent" mod="1386590881000" signatureChecksum="837474310" >
+        <def id="com.bitrhymes.nativeutilities:MobileDeviceEvent" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="flash.events:Event" type="i" /> 
+      </script>
+      <script name="com/bitrhymes/nativeutilities/MobileDevice" mod="1387348017000" signatureChecksum="3308257669" >
+        <def id="com.bitrhymes.nativeutilities:MobileDevice" /> 
+        <dep id="com.bitrhymes.nativeutilities:MobileDeviceEvent" type="e" /> 
+        <dep id="flash.events:StatusEvent" type="e" /> 
+        <dep id="flash.external:ExtensionContext" type="e" /> 
+        <dep id="flash.events:StatusEvent" type="s" /> 
+        <dep id="flash.external:ExtensionContext" type="s" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="flash.events:EventDispatcher" type="i" /> 
+      </script>
+      <script name="_68a2937728b1d9c4ec70e6573e1da89cc0be24caaddfb1df570c23f5ec01e328_flash_display_Sprite" mod="1387348050481" signatureChecksum="2073394183" >
+        <def id="_68a2937728b1d9c4ec70e6573e1da89cc0be24caaddfb1df570c23f5ec01e328_flash_display_Sprite" /> 
+        <dep id="flash.system:Security" type="e" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="flash.display:Sprite" type="i" /> 
+      </script>
+      <digests>
+        <digest type="SHA-256" signed="false" value="eff0b2495595bcb92003f774c6add475788b893ba1386d26baf9d5f42a616c6e"   />
+      </digests>
+    </library>
+  </libraries>
+  <files>
+  </files>
+</swc>

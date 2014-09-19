@@ -1,0 +1,23 @@
+<extension xmlns="http://ns.adobe.com/air/extension/3.6">
+    <id>com.bitrhymes.messaging</id>
+    <versionNumber>2.0.0</versionNumber>
+    <platforms>
+        <platform name="iPhone-ARM">
+            <applicationDeployment>
+                <nativeLibrary>libEmailSmsiOSExt.a</nativeLibrary>
+                <initializer>EmailSMSExtInitializer</initializer>
+                <finalizer>EmailSMSExtFinalizer</finalizer>
+            </applicationDeployment>
+        </platform>
+        <platform name="Android-ARM">
+			<applicationDeployment>
+				<nativeLibrary>Email.jar</nativeLibrary>
+				<initializer>com.bitrhymes.messaging.AndroidExtension</initializer>
+                <finalizer>com.bitrhymes.messaging.AndroidExtension</finalizer>
+			</applicationDeployment>
+		</platform>
+        <platform name="default">
+            <applicationDeployment/>
+        </platform>
+    </platforms>
+</extension>

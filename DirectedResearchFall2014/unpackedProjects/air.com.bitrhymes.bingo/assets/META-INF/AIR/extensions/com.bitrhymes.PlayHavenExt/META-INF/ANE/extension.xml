@@ -1,0 +1,16 @@
+<extension xmlns="http://ns.adobe.com/air/extension/3.1">
+	<id>com.bitrhymes.PlayHavenExt</id>
+	<versionNumber>1</versionNumber>
+	<platforms>
+		<platform name="Android-ARM">
+			<applicationDeployment>
+				<nativeLibrary>playhaven.jar</nativeLibrary>
+				<initializer>com.bitrhymes.PlayHavenAndroidLib.AndroidExtension</initializer>
+				<finalizer>com.bitrhymes.PlayHavenAndroidLib.AndroidExtension</finalizer>
+			</applicationDeployment>
+		</platform>
+		<platform name="default">
+			<applicationDeployment />
+		</platform>
+	</platforms>
+</extension>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/beigebackground2" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/textView1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="23.0dip" android:layout_marginTop="35.0dip" android:text="Category Name:" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+    <EditText android:id="@id/etCategoryName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="19.0dip" android:ems="10" android:layout_below="@id/textView1" android:layout_alignLeft="@id/textView1">
+        <requestFocus />
+    </EditText>
+    <Button android:id="@id/btnAddCategory" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="74.0dip" android:layout_marginTop="50.0dip" android:text="Add" android:layout_below="@id/etCategoryName" android:layout_alignLeft="@id/etCategoryName" />
+</RelativeLayout>

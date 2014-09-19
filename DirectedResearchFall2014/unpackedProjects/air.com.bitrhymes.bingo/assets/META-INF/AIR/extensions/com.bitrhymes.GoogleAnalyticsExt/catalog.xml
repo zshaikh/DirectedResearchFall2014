@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding ="utf-8"?>
+<swc xmlns="http://www.adobe.com/flash/swccatalog/9">
+  <versions>
+    <swc version="1.2" />
+    <flex version="4.6.0" build="23201" minimumSupportedVersion="3.0.0" />
+  </versions>
+  <features>
+    <feature-script-deps />
+    <feature-files />
+  </features>
+  <libraries>
+    <library path="library.swf">
+      <script name="_8f94889d97046395ceb05d80756721615bfd37c12c3d54948a70e67ee9e3c6af_flash_display_Sprite" mod="1386319999809" signatureChecksum="2459662697" >
+        <def id="_8f94889d97046395ceb05d80756721615bfd37c12c3d54948a70e67ee9e3c6af_flash_display_Sprite" /> 
+        <dep id="flash.system:Security" type="e" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="flash.display:Sprite" type="i" /> 
+      </script>
+      <script name="com/jungleapps/GoogleAnalyticsExt/GFAnalyticsExt" mod="1386319359000" signatureChecksum="389277561" >
+        <def id="com.jungleapps.GoogleAnalyticsExt:GFAnalyticsExt" /> 
+        <dep id="flash.events:StatusEvent" type="e" /> 
+        <dep id="com.jungleapps.GoogleAnalyticsExt:GFAnalyticsEvent" type="e" /> 
+        <dep id="flash.external:ExtensionContext" type="e" /> 
+        <dep id="flash.events:StatusEvent" type="s" /> 
+        <dep id="flash.external:ExtensionContext" type="s" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="flash.events:EventDispatcher" type="i" /> 
+      </script>
+      <script name="com/jungleapps/GoogleAnalyticsExt/GFAnalyticsEvent" mod="1381763418000" signatureChecksum="2596753673" >
+        <def id="com.jungleapps.GoogleAnalyticsExt:GFAnalyticsEvent" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="flash.events:Event" type="i" /> 
+      </script>
+      <script name="com/jungleapps/GoogleAnalyticsExt/IGFAnalyticsExt" mod="1386319359000" signatureChecksum="3882919969" >
+        <def id="com.jungleapps.GoogleAnalyticsExt:IGFAnalyticsExt" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="Object" type="i" /> 
+      </script>
+      <digests>
+        <digest type="SHA-256" signed="false" value="0ca941845a0842d9a6a65fab6e1cb8b28381f277db402a1858ab392c1178317f"   />
+      </digests>
+    </library>
+  </libraries>
+  <files>
+  </files>
+</swc>

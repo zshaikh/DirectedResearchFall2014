@@ -1,0 +1,10 @@
+package com.facebook;
+
+public enum LoggingBehavior
+{
+    CACHE("CACHE", 3), 
+    DEVELOPER_ERRORS("DEVELOPER_ERRORS", 4), 
+    INCLUDE_ACCESS_TOKENS("INCLUDE_ACCESS_TOKENS", 1), 
+    INCLUDE_RAW_RESPONSES("INCLUDE_RAW_RESPONSES", 2), 
+    REQUESTS("REQUESTS", 0);
+}

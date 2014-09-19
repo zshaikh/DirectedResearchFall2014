@@ -1,0 +1,25 @@
+<extension xmlns="http://ns.adobe.com/air/extension/3.6">
+    <id>com.bitrhymes.nativeutilities</id>
+    <versionNumber>2.0.0</versionNumber>
+    <platforms>
+        <platform name="iPhone-ARM">
+            <applicationDeployment>
+                <nativeLibrary>libNativeUtilitiesiOS.a</nativeLibrary>
+                <initializer>NUExtInitializer</initializer>
+                <finalizer>NUExtFinalizer</finalizer>
+            </applicationDeployment>
+        </platform>
+        
+	    <platform name="Android-ARM"> 
+	        <applicationDeployment> 
+	            <nativeLibrary>NativeUtils.jar</nativeLibrary> 
+	            <initializer>com.bitrhymes.nativeutils.NativeUtilsExtension</initializer>
+				<finalizer>com.bitrhymes.nativeutils.NativeUtilsExtension</finalizer> 
+	        </applicationDeployment> 
+	    </platform> 
+        
+        <platform name="default">
+            <applicationDeployment/>
+        </platform>
+    </platforms>
+</extension>

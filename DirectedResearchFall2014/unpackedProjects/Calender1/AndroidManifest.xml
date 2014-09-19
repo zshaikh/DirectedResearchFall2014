@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest android:versionCode="1" android:versionName="1.0" package="com.example.calender1"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <application android:theme="@style/AppTheme" android:label="@string/app_name" android:icon="@drawable/calendarpic" android:debuggable="true" android:allowBackup="true">
+        <activity android:theme="@style/AppBaseTheme" android:label="@string/app_name" android:name="com.example.calender1.CategoryActivity" />
+        <activity android:theme="@style/AppBaseTheme" android:label="@string/app_name" android:name="Mainctivity" />
+        <activity android:label="@string/app_name" android:name="com.example.calender1.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/AppTheme" android:label="@string/app_name" android:name="EventActivity" />
+        <activity android:theme="@style/AppTheme" android:label="@string/app_name" android:name="EditEventActivity" />
+        <activity android:theme="@style/AppTheme" android:label="@string/app_name" android:name="EditCategoryActivity" />
+        <activity android:theme="@style/AppTheme" android:label="@string/app_name" android:name="AgendaActivity" />
+        <activity android:theme="@style/AppTheme" android:label="@string/app_name" android:name="AgendaFutureActivity" />
+    </application>
+</manifest>

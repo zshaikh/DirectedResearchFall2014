@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding ="utf-8"?>
+<swc xmlns="http://www.adobe.com/flash/swccatalog/9">
+  <versions>
+    <swc version="1.2" />
+    <flex version="4.6.0" build="23201" minimumSupportedVersion="3.0.0" />
+  </versions>
+  <features>
+    <feature-script-deps />
+    <feature-files />
+  </features>
+  <libraries>
+    <library path="library.swf">
+      <script name="com/buffalostudios/aneutils/DeviceInfoBuild" mod="1381352957273" signatureChecksum="2876406757" >
+        <def id="com.buffalostudios.aneutils:DeviceInfoBuild" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="Object" type="i" /> 
+      </script>
+      <script name="com/buffalostudios/aneutils/DeviceInfoFingerprint" mod="1384214067421" signatureChecksum="4085333658" >
+        <def id="com.buffalostudios.aneutils:DeviceInfoFingerprint" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="Object" type="i" /> 
+      </script>
+      <script name="com/buffalostudios/aneutils/DeviceInfo" mod="1384294003774" signatureChecksum="3357653814" >
+        <def id="com.buffalostudios.aneutils:DeviceInfo" /> 
+        <dep id="com.buffalostudios.aneutils:DeviceInfoStorage" type="e" /> 
+        <dep id="com.buffalostudios.aneutils:DeviceInfoDisplay" type="e" /> 
+        <dep id="com.buffalostudios.aneutils:DeviceInfoBuild" type="e" /> 
+        <dep id="com.buffalostudios.aneutils:DeviceInfoTelephony" type="e" /> 
+        <dep id="com.buffalostudios.aneutils:DeviceInfoNetwork" type="e" /> 
+        <dep id="flash.filesystem:File" type="e" /> 
+        <dep id="com.buffalostudios.aneutils:DeviceInfoFingerprint" type="e" /> 
+        <dep id="com.buffalostudios.aneutils:ANEUtils" type="e" /> 
+        <dep id="com.buffalostudios.aneutils:DeviceInfoStorage" type="s" /> 
+        <dep id="com.buffalostudios.aneutils:DeviceInfoDisplay" type="s" /> 
+        <dep id="com.buffalostudios.aneutils:DeviceInfoBuild" type="s" /> 
+        <dep id="com.buffalostudios.aneutils:DeviceInfoTelephony" type="s" /> 
+        <dep id="com.buffalostudios.aneutils:DeviceInfoNetwork" type="s" /> 
+        <dep id="flash.events:StatusEvent" type="s" /> 
+        <dep id="com.buffalostudios.aneutils:DeviceInfoFingerprint" type="s" /> 
+        <dep id="flash.external:ExtensionContext" type="s" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="flash.events:EventDispatcher" type="i" /> 
+        <dep id="Object" type="i" /> 
+      </script>
+      <script name="com/buffalostudios/aneutils/DeviceInfoDisplay" mod="1381352975201" signatureChecksum="2409337575" >
+        <def id="com.buffalostudios.aneutils:DeviceInfoDisplay" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="Object" type="i" /> 
+      </script>
+      <script name="com/buffalostudios/aneutils/LocalNotifier" mod="1384911733100" signatureChecksum="3355441790" >
+        <def id="com.buffalostudios.aneutils:LocalNotifier" /> 
+        <dep id="JSON" type="e" /> 
+        <dep id="flash.events:StatusEvent" type="e" /> 
+        <dep id="Error" type="e" /> 
+        <dep id="com.buffalostudios.aneutils.events:LocalNotifierEvent" type="e" /> 
+        <dep id="com.buffalostudios.aneutils:ANEUtils" type="e" /> 
+        <dep id="flash.events:Event" type="s" /> 
+        <dep id="flash.events:StatusEvent" type="s" /> 
+        <dep id="flash.external:ExtensionContext" type="s" /> 
+        <dep id="Error" type="s" /> 
+        <dep id="com.buffalostudios.aneutils.events:LocalNotifierEvent" type="s" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="flash.events:EventDispatcher" type="i" /> 
+      </script>
+      <script name="com/buffalostudios/aneutils/DeviceInfoStorage" mod="1381352994665" signatureChecksum="1766407088" >
+        <def id="com.buffalostudios.aneutils:DeviceInfoStorage" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="Object" type="i" /> 
+      </script>
+      <script name="com/buffalostudios/aneutils/ANEUtils" mod="1384911427541" signatureChecksum="4154235176" >
+        <def id="com.buffalostudios.aneutils:ANEUtils" /> 
+        <dep id="flash.events:Event" type="e" /> 
+        <dep id="flash.events:StatusEvent" type="e" /> 
+        <dep id="flash.external:ExtensionContext" type="e" /> 
+        <dep id="Error" type="e" /> 
+        <dep id="flash.events:InvokeEvent" type="e" /> 
+        <dep id="flash.desktop:NativeApplication" type="e" /> 
+        <dep id="flash.events:Event" type="s" /> 
+        <dep id="flash.events:StatusEvent" type="s" /> 
+        <dep id="flash.external:ExtensionContext" type="s" /> 
+        <dep id="Error" type="s" /> 
+        <dep id="flash.events:InvokeEvent" type="s" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="flash.events:EventDispatcher" type="i" /> 
+      </script>
+      <script name="com/buffalostudios/aneutils/PushNotifier" mod="1384911733114" signatureChecksum="1703251166" >
+        <def id="com.buffalostudios.aneutils:PushNotifier" /> 
+        <dep id="JSON" type="e" /> 
+        <dep id="flash.events:StatusEvent" type="e" /> 
+        <dep id="com.buffalostudios.aneutils.events:PushNotifierEvent" type="e" /> 
+        <dep id="Error" type="e" /> 
+        <dep id="com.buffalostudios.aneutils:ANEUtils" type="e" /> 
+        <dep id="flash.events:Event" type="s" /> 
+        <dep id="flash.events:StatusEvent" type="s" /> 
+        <dep id="flash.external:ExtensionContext" type="s" /> 
+        <dep id="com.buffalostudios.aneutils.events:PushNotifierEvent" type="s" /> 
+        <dep id="Error" type="s" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="flash.events:EventDispatcher" type="i" /> 
+      </script>
+      <script name="_abeff8a753b91deabcabd515211c95b9cbaf06ff753382eecb15db7c1e47ac81_flash_display_Sprite" mod="1385431631969" signatureChecksum="4190141911" >
+        <def id="_abeff8a753b91deabcabd515211c95b9cbaf06ff753382eecb15db7c1e47ac81_flash_display_Sprite" /> 
+        <dep id="flash.system:Security" type="e" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="flash.display:Sprite" type="i" /> 
+      </script>
+      <script name="com/buffalostudios/aneutils/LoadingSpinner" mod="1382552399214" signatureChecksum="2919687184" >
+        <def id="com.buffalostudios.aneutils:LoadingSpinner" /> 
+        <dep id="flash.events:Event" type="e" /> 
+        <dep id="trace" type="e" /> 
+        <dep id="flash.utils:Timer" type="e" /> 
+        <dep id="flash.events:TimerEvent" type="e" /> 
+        <dep id="flash.display:Shape" type="e" /> 
+        <dep id="com.buffalostudios.aneutils:ANEUtils" type="e" /> 
+        <dep id="flash.events:Event" type="s" /> 
+        <dep id="flash.utils:ByteArray" type="s" /> 
+        <dep id="flash.display:BitmapData" type="s" /> 
+        <dep id="flash.utils:Timer" type="s" /> 
+        <dep id="flash.events:TimerEvent" type="s" /> 
+        <dep id="flash.external:ExtensionContext" type="s" /> 
+        <dep id="flash.display:Shape" type="s" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="flash.events:EventDispatcher" type="i" /> 
+      </script>
+      <script name="com/buffalostudios/aneutils/BitmapUtil" mod="1381359237199" signatureChecksum="2877785618" >
+        <def id="com.buffalostudios.aneutils:BitmapUtil" /> 
+        <dep id="flash.utils:ByteArray" type="e" /> 
+        <dep id="flash.display:BitmapData" type="e" /> 
+        <dep id="com.buffalostudios.aneutils:ANEUtils" type="e" /> 
+        <dep id="flash.utils:ByteArray" type="s" /> 
+        <dep id="flash.display:BitmapData" type="s" /> 
+        <dep id="flash.events:StatusEvent" type="s" /> 
+        <dep id="flash.external:ExtensionContext" type="s" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="flash.events:EventDispatcher" type="i" /> 
+      </script>
+      <script name="com/buffalostudios/aneutils/DeviceInfoTelephony" mod="1381353014104" signatureChecksum="62347643" >
+        <def id="com.buffalostudios.aneutils:DeviceInfoTelephony" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="Object" type="i" /> 
+      </script>
+      <script name="com/buffalostudios/aneutils/events/LocalNotifierEvent" mod="1384901160464" signatureChecksum="2188677733" >
+        <def id="com.buffalostudios.aneutils.events:LocalNotifierEvent" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="flash.events:Event" type="i" /> 
+      </script>
+      <script name="com/buffalostudios/aneutils/DeviceInfoNetwork" mod="1384293665631" signatureChecksum="2065579046" >
+        <def id="com.buffalostudios.aneutils:DeviceInfoNetwork" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="Object" type="i" /> 
+      </script>
+      <script name="com/buffalostudios/aneutils/events/PushNotifierEvent" mod="1384901160470" signatureChecksum="3670919825" >
+        <def id="com.buffalostudios.aneutils.events:PushNotifierEvent" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="flash.events:Event" type="i" /> 
+      </script>
+      <digests>
+        <digest type="SHA-256" signed="false" value="99546a1a4b8498a6daea1e2a11978113ac63c46f506404a9408e38cf5c55da9e"   />
+      </digests>
+    </library>
+  </libraries>
+  <files>
+  </files>
+</swc>

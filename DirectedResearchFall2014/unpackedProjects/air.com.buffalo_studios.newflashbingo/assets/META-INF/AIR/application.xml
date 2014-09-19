@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<application xmlns="http://ns.adobe.com/air/application/4.0">
+	<id>com.buffalo-studios.newflashbingo</id>
+	<versionNumber>2.61.0</versionNumber>
+	<supportedProfiles>mobileDevice</supportedProfiles>
+	<filename>MOBILE</filename>
+	<name>Bingo Blitz</name>
+	<android>
+		<manifestAdditions>
+			<!-- Android/Google Play -->
+			<![CDATA[
+				<manifest android:installLocation="auto">
+					<supports-screens
+						android:smallScreens="false"
+						android:normalScreens="true"
+						android:largeScreens="true"
+						android:xlargeScreens="true"/> 
+					
+					<uses-sdk android:minSdkVersion="8" android:targetSdkVersion="13"/>
+					<uses-permission android:name="android.permission.INTERNET"/>
+					<uses-permission android:name="com.android.vending.BILLING" />
+					<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+					<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+					<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+					<uses-permission android:name="android.permission.VIBRATE"/>
+					
+					<permission android:name="air.com.buffalo_studios.newflashbingo.permission.C2D_MESSAGE" android:protectionLevel="signature" />
+					<uses-permission android:name="air.com.buffalo_studios.newflashbingo.permission.C2D_MESSAGE" /> 
+					<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+					<uses-permission android:name="android.permission.GET_ACCOUNTS" />
+					<uses-permission android:name="android.permission.WAKE_LOCK" />
+					
+					<application>
+						
+						<receiver android:name="com.amazon.inapp.purchasing.ResponseReceiver">
+							<intent-filter>
+								<action android:name="com.amazon.inapp.purchasing.NOTIFY"
+								android:permission="com.amazon.inapp.purchasing.Permission.NOTIFY" />
+							</intent-filter>
+						</receiver>		
+
+						<receiver android:name="com.AdX.tag.AdXAppTracker" android:exported="true">
+							<intent-filter>
+								<action android:name="com.android.vending.INSTALL_REFERRER" />
+							</intent-filter>
+						</receiver>
+						<meta-data android:name="APP_NAME" android:value="air.com.buffalo_studios.newflashbingo" />
+						<meta-data android:name="ADX_CLIENT_ID" android:value="PTKjudkBUFkjasdPH" />
+						<meta-data android:name="NOIMEI" android:value="ON" />
+
+						<receiver android:name="com.milkmangames.extensions.android.GCMBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND" >
+						  <intent-filter>
+							<action android:name="com.google.android.c2dm.intent.RECEIVE" />
+							<action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+							<category android:name="air.com.buffalo_studios.newflashbingo" />
+						  </intent-filter>
+						</receiver>
+						
+						<receiver android:name="com.milkmangames.extensions.android.LocalReceiver"/>
+						
+						<service android:name="com.milkmangames.extensions.android.GCMIntentService" />
+						
+						<activity>
+							 <intent-filter> 
+								<action android:name="android.intent.action.MAIN"/> 
+								<category android:name="android.intent.category.LAUNCHER"/> 
+							</intent-filter> 
+							<intent-filter> 
+								<action android:name="android.intent.action.VIEW"/> 
+								<category android:name="android.intent.category.BROWSABLE"/> 
+								<category android:name="android.intent.category.DEFAULT"/> 
+								<data android:scheme="fb108854979142742"/> 
+							</intent-filter> 
+						</activity>
+						<activity android:name="com.milkmangames.extensions.android.MsgWrapActivity" android:configChanges="keyboardHidden|orientation|screenSize"/>
+						<activity android:name="com.milkmangames.extensions.android.FacebookWrapActivity" android:configChanges="keyboardHidden|orientation|screenSize"/>
+						<activity android:name="com.facebook.LoginActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:label="Login"/>
+						<activity android:name="com.buffalostudios.aneutils.loadingspinner.LoadingSpinnerActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" android:process=":loadingspinner"/>
+					</application>
+				</manifest>
+			]]>
+		</manifestAdditions>
+	</android>
+	<initialWindow>
+		<title>Bingo Blitz</title>
+		<content>MOBILE.swf</content>
+		<visible>true</visible>
+		<fullScreen>true</fullScreen>
+		<renderMode>gpu</renderMode>
+		<systemChrome>standard</systemChrome>
+		<autoOrients>true</autoOrients>
+		<aspectRatio>landscape</aspectRatio>
+		<softKeyboardBehavior>none</softKeyboardBehavior>
+	</initialWindow>
+	<supportedLanguages>en</supportedLanguages>
+	<icon>
+		<image29x29>icons/icon_29.png</image29x29>
+		<image36x36>icons/icon_36.png</image36x36>
+		<image48x48>icons/icon_48.png</image48x48>
+		<image50x50>icons/icon_50.png</image50x50>
+		<image57x57>icons/icon_57.png</image57x57>
+		<image58x58>icons/icon_58.png</image58x58>
+		<image72x72>icons/icon_72.png</image72x72>
+		<image100x100>icons/icon_100.png</image100x100>
+		<image114x114>icons/icon_114.png</image114x114>
+		<image144x144>icons/icon_144.png</image144x144>
+		<image512x512>icons/icon_512.png</image512x512>
+		<image1024x1024>icons/icon_1024.png</image1024x1024> 
+	</icon>
+	<!--
+		 AIR options:
+		 http://livedocs.adobe.com/flex/3/html/File_formats_1.html#1043413
+
+		 AIR mobile options:
+		 http://help.adobe.com/en_US/air/build/WSfffb011ac560372f-5d0f4f25128cc9cd0cb-7ffe.html
+
+		 Android manifest documentation:
+		 http://developer.android.com/guide/topics/manifest/manifest-intro.html
+	-->
+	<copyright>Buffalo Studios</copyright>
+	<description>Play the best Bingo game on Bingo Blitz!</description>
+	<versionLabel>2.61.0</versionLabel>
+	
+	<extensions>
+		<!-- GENERIC extensions-->		
+		<extensionID>com.milkmangames.extensions.GoViral</extensionID>
+		<extensionID>com.milkmangames.customextensions.BuffaloUtils</extensionID>
+		<extensionID>com.buffalostudios.ANEUtils</extensionID>
+		<extensionID>com.adx.Tracker</extensionID>
+		
+		<!-- Android extensions -->
+		<extensionID>com.milkmangames.extensions.AndroidIAB</extensionID>
+	</extensions> 	
+</application>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/beigebackground2" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/rt" android:layout_width="fill_parent" android:layout_height="40.0dip">
+        <TextView android:textSize="20.0dip" android:textStyle="bold" android:id="@id/tvDtttttttttdddd" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="                 Future Agenda List          " />
+        <TextView android:id="@id/tvDateAgenda" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" />
+    </LinearLayout>
+    <RelativeLayout android:orientation="horizontal" android:id="@id/layoutMiddleAgenda" android:layout_width="wrap_content" android:layout_height="161.0dip" android:layout_weight="0.74">
+        <TextView android:scrollbarAlwaysDrawVerticalTrack="true" android:scrollbarStyle="insideOverlay" android:textSize="12.0dip" android:textColor="#fff9f9f7" android:gravity="fill_horizontal" android:id="@id/tvShowAgenda" android:layout_width="wrap_content" android:layout_height="250.0dip" android:scrollHorizontally="true" android:selectAllOnFocus="true" android:layout_alignParentLeft="true" android:layout_centerVertical="true" android:textAllCaps="true" />
+        <ListView android:textColor="#fff9f9f7" android:id="@id/lvFutureAgenda" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </RelativeLayout>
+</LinearLayout>

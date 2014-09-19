@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/beigebackground2" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/rt" android:layout_width="fill_parent" android:layout_height="40.0dip">
+        <TextView android:id="@id/tvDttttttttt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="                              " />
+        <Button android:id="@id/btnSelcectAgendaDate" android:background="@drawable/calendarpic" android:layout_width="30.0dip" android:layout_height="30.0dip" android:text="              " android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+        <TextView android:id="@id/tvDateAgenda" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="01-01-01111" />
+    </LinearLayout>
+    <RelativeLayout android:orientation="horizontal" android:id="@id/layoutMiddleAgenda" android:layout_width="wrap_content" android:layout_height="161.0dip" android:layout_weight="0.74">
+        <TextView android:scrollbarAlwaysDrawVerticalTrack="true" android:scrollbarStyle="insideOverlay" android:textSize="12.0dip" android:textColor="#ffff0000" android:gravity="fill_horizontal" android:id="@id/tvShowAgenda" android:layout_width="wrap_content" android:layout_height="250.0dip" android:scrollHorizontally="true" android:selectAllOnFocus="true" android:layout_alignParentLeft="true" android:layout_centerVertical="true" android:textAllCaps="true" />
+        <ListView android:id="@id/lvAgenda" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/rt" android:layout_width="fill_parent" android:layout_height="40.0dip">
+        <Button android:id="@id/btnShowPrevious" android:background="@drawable/arrowleft" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+        <Button android:id="@id/btnShowNext" android:background="@drawable/arrowright" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+</LinearLayout>

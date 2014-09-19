@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding ="utf-8"?>
+<swc xmlns="http://www.adobe.com/flash/swccatalog/9">
+  <versions>
+    <swc version="1.2" />
+    <flex version="4.6.0" build="23201" minimumSupportedVersion="3.0.0" />
+  </versions>
+  <features>
+    <feature-script-deps />
+    <feature-files />
+  </features>
+  <libraries>
+    <library path="library.swf">
+      <script name="com/bitrhymes/FlurryAnalyticsExt/FlurryAnalytics" mod="1387546014796" signatureChecksum="1455576914" >
+        <def id="com.bitrhymes.FlurryAnalyticsExt:FlurryAnalytics" /> 
+        <dep id="flash.events:StatusEvent" type="e" /> 
+        <dep id="flash.external:ExtensionContext" type="e" /> 
+        <dep id="com.bitrhymes.FlurryAnalyticsExt:FlurryAnalyticsEvent" type="e" /> 
+        <dep id="flash.events:StatusEvent" type="s" /> 
+        <dep id="flash.external:ExtensionContext" type="s" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="flash.events:EventDispatcher" type="i" /> 
+      </script>
+      <script name="com/bitrhymes/FlurryAnalyticsExt/IFlurryAnalytics" mod="1387545859387" signatureChecksum="4105888069" >
+        <def id="com.bitrhymes.FlurryAnalyticsExt:IFlurryAnalytics" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="Object" type="i" /> 
+      </script>
+      <script name="_dc9bd4286f69c235017b5cbeeeba6423dbc2e809e330dfc0ddf990b6a1a9175b_flash_display_Sprite" mod="1390208544398" signatureChecksum="3688987749" >
+        <def id="_dc9bd4286f69c235017b5cbeeeba6423dbc2e809e330dfc0ddf990b6a1a9175b_flash_display_Sprite" /> 
+        <dep id="flash.system:Security" type="e" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="flash.display:Sprite" type="i" /> 
+      </script>
+      <script name="com/bitrhymes/FlurryAnalyticsExt/FlurryAnalyticsEvent" mod="1381239095131" signatureChecksum="3802239180" >
+        <def id="com.bitrhymes.FlurryAnalyticsExt:FlurryAnalyticsEvent" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="flash.events:Event" type="i" /> 
+      </script>
+      <digests>
+        <digest type="SHA-256" signed="false" value="b31986c82b9c4b335d5cf5d62714cb6acdce1338f8a1c3c6f23bff642c17f75c"   />
+      </digests>
+    </library>
+  </libraries>
+  <files>
+  </files>
+</swc>

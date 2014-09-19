@@ -1,0 +1,111 @@
+.class Lcom/playhaven/extensions/android/PlayHavenExtensionContext$PHReportPurchaseResolutionFunction;
+.super Ljava/lang/Object;
+.source "PlayHavenExtensionContext.java"
+
+# interfaces
+.implements Lcom/adobe/fre/FREFunction;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/playhaven/extensions/android/PlayHavenExtensionContext;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x2
+    name = "PHReportPurchaseResolutionFunction"
+.end annotation
+
+
+# instance fields
+.field final synthetic this$0:Lcom/playhaven/extensions/android/PlayHavenExtensionContext;
+
+
+# direct methods
+.method private constructor <init>(Lcom/playhaven/extensions/android/PlayHavenExtensionContext;)V
+    .locals 0
+    .parameter
+
+    .prologue
+    .line 575
+    iput-object p1, p0, Lcom/playhaven/extensions/android/PlayHavenExtensionContext$PHReportPurchaseResolutionFunction;->this$0:Lcom/playhaven/extensions/android/PlayHavenExtensionContext;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method synthetic constructor <init>(Lcom/playhaven/extensions/android/PlayHavenExtensionContext;Lcom/playhaven/extensions/android/PlayHavenExtensionContext$PHReportPurchaseResolutionFunction;)V
+    .locals 0
+    .parameter
+    .parameter
+
+    .prologue
+    .line 575
+    invoke-direct {p0, p1}, Lcom/playhaven/extensions/android/PlayHavenExtensionContext$PHReportPurchaseResolutionFunction;-><init>(Lcom/playhaven/extensions/android/PlayHavenExtensionContext;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public call(Lcom/adobe/fre/FREContext;[Lcom/adobe/fre/FREObject;)Lcom/adobe/fre/FREObject;
+    .locals 5
+    .parameter "arg0"
+    .parameter "args"
+
+    .prologue
+    .line 581
+    const/4 v3, 0x0
+
+    :try_start_0
+    aget-object v3, p2, v3
+
+    invoke-virtual {v3}, Lcom/adobe/fre/FREObject;->getAsString()Ljava/lang/String;
+
+    move-result-object v1
+
+    .line 582
+    .local v1, receipt:Ljava/lang/String;
+    const/4 v3, 0x1
+
+    aget-object v3, p2, v3
+
+    invoke-virtual {v3}, Lcom/adobe/fre/FREObject;->getAsString()Ljava/lang/String;
+
+    move-result-object v2
+
+    .line 583
+    .local v2, resolution:Ljava/lang/String;
+    iget-object v3, p0, Lcom/playhaven/extensions/android/PlayHavenExtensionContext$PHReportPurchaseResolutionFunction;->this$0:Lcom/playhaven/extensions/android/PlayHavenExtensionContext;
+
+    invoke-virtual {v3, v1, v2}, Lcom/playhaven/extensions/android/PlayHavenExtensionContext;->ffiReportPurchaseResolution(Ljava/lang/String;Ljava/lang/String;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 589
+    .end local v1           #receipt:Ljava/lang/String;
+    .end local v2           #resolution:Ljava/lang/String;
+    :goto_0
+    const/4 v3, 0x0
+
+    return-object v3
+
+    .line 585
+    :catch_0
+    move-exception v3
+
+    move-object v0, v3
+
+    .line 587
+    .local v0, e:Ljava/lang/Exception;
+    const-string v3, "[PHExtension]"
+
+    invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_0
+.end method

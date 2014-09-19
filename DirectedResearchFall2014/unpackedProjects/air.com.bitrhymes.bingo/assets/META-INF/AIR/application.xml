@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<application xmlns="http://ns.adobe.com/air/application/3.8">
+
+<!-- Adobe AIR Application Descriptor File Template.
+
+	Specifies parameters for identifying, installing, and launching AIR applications.
+
+	xmlns - The Adobe AIR namespace: http://ns.adobe.com/air/application/3.4
+			The last segment of the namespace specifies the version 
+			of the AIR runtime required for this application to run.
+			
+	minimumPatchLevel - The minimum patch level of the AIR runtime required to run 
+			the application. Optional.
+-->
+
+	<!-- A universally unique application identifier. Must be unique across all AIR applications.
+	Using a reverse DNS-style name as the id is recommended. (Eg. com.example.ExampleApplication.) Required. -->
+	<id>com.bitrhymes.bingo</id>
+
+	<!-- Used as the filename for the application. Required. -->
+	<filename>Bingo Bash</filename>
+
+	<!-- The name that is displayed in the AIR application installer. 
+	May have multiple values for each language. See samples or xsd schema file. Optional. -->
+	<name>Bingo Bash</name>
+	
+	<!-- A string value of the format <0-999>.<0-999>.<0-999> that represents application version which can be used to check for application upgrade. 
+	Values can also be 1-part or 2-part. It is not necessary to have a 3-part value.
+	An updated version of application must have a versionNumber value higher than the previous version. Required for namespace >= 2.5 . -->
+	<versionNumber>1.31.0</versionNumber>
+	
+	<!-- A string value (such as "v1", "2.5", or "Alpha 1") that represents the version of the application, as it should be shown to users. Optional. -->
+	<!-- <versionLabel></versionLabel> -->
+
+	<!-- Description, displayed in the AIR application installer.
+	May have multiple values for each language. See samples or xsd schema file. Optional. -->
+	<!-- <description></description> -->
+
+	<!-- Copyright information. Optional -->
+	<!-- <copyright></copyright> -->
+
+	<!-- Publisher ID. Used if you're updating an application created prior to 1.5.3 -->
+	<!-- <publisherID></publisherID> -->
+
+	<!-- Settings for the application's initial window. Required. -->
+	<initialWindow>
+		<!-- The main SWF or HTML file of the application. Required. -->
+		<!-- Note: In Flash Builder, the SWF reference is set automatically. -->
+		<content>Preloader.swf</content>
+		
+		<!-- The title of the main window. Optional. -->
+		<!-- <title></title> -->
+
+		<!-- The type of system chrome to use (either "standard" or "none"). Optional. Default standard. -->
+		<!-- <systemChrome></systemChrome> -->
+
+		<!-- Whether the window is transparent. Only applicable when systemChrome is none. Optional. Default false. -->
+		<!-- <transparent></transparent> -->
+
+		<!-- Whether the window is initially visible. Optional. Default false. -->
+		<!-- <visible></visible> -->
+
+		<!-- Whether the user can minimize the window. Optional. Default true. -->
+		<!-- <minimizable></minimizable> -->
+
+		<!-- Whether the user can maximize the window. Optional. Default true. -->
+		<!-- <maximizable></maximizable> -->
+
+		<!-- Whether the user can resize the window. Optional. Default true. -->
+		<!-- <resizable></resizable> -->
+
+		<!-- The window's initial width in pixels. Optional. -->
+		<!-- <width></width> -->
+
+		<!-- The window's initial height in pixels. Optional. -->
+		<!-- <height></height> -->
+
+		<!-- The window's initial x position. Optional. -->
+		<!-- <x></x> -->
+
+		<!-- The window's initial y position. Optional. -->
+		<!-- <y></y> -->
+
+		<!-- The window's minimum size, specified as a width/height pair in pixels, such as "400 200". Optional. -->
+		<!-- <minSize></minSize> -->
+
+		<!-- The window's initial maximum size, specified as a width/height pair in pixels, such as "1600 1200". Optional. -->
+		<!-- <maxSize></maxSize> -->
+
+        <!-- The aspect ratio of the app ("portrait" or "landscape" or "any"). Optional. Mobile only. Default is the natural orientation of the device -->
+
+        <!-- <aspectRatio></aspectRatio> -->
+
+        <!-- Whether the app will begin auto-orienting on launch. Optional. Mobile only. Default false -->
+
+        <!-- <autoOrients></autoOrients> -->
+
+        <!-- Whether the app launches in full screen. Optional. Mobile only. Default false -->
+
+        <!-- <fullScreen></fullScreen> -->
+
+        <!-- The render mode for the app (either auto, cpu, gpu, or direct). Optional. Default auto -->
+
+        <renderMode>direct</renderMode>
+
+        <!-- Whether the default direct mode rendering context allocates storage for depth and stencil buffers.  Optional.  Default false. -->
+        <!-- <depthAndStencil></depthAndStencil> -->
+
+		<!-- Whether or not to pan when a soft keyboard is raised or lowered (either "pan" or "none").  Optional.  Defaults "pan." -->
+		<!-- <softKeyboardBehavior></softKeyboardBehavior> -->
+
+		<aspectRatio>landscape</aspectRatio>
+		<autoOrients>false</autoOrients>
+		<fullScreen>true</fullScreen>
+		<visible>true</visible>
+	</initialWindow>
+
+	<!-- We recommend omitting the supportedProfiles element, -->
+	<!-- which in turn permits your application to be deployed to all -->
+	<!-- devices supported by AIR. If you wish to restrict deployment -->
+	<!-- (i.e., to only mobile devices) then add this element and list -->
+	<!-- only the profiles which your application does support. -->
+	<!-- <supportedProfiles>desktop extendedDesktop mobileDevice extendedMobileDevice</supportedProfiles> -->
+
+	<!-- Languages supported by application -->
+	<!-- Only these languages can be specified -->
+	<!-- <supportedLanguages>en de cs es fr it ja ko nl pl pt ru sv tr zh</supportedLanguages> -->
+
+	<!-- The subpath of the standard default installation location to use. Optional. -->
+	<!-- <installFolder></installFolder> -->
+
+	<!-- The subpath of the Programs menu to use. (Ignored on operating systems without a Programs menu.) Optional. -->
+	<!-- <programMenuFolder></programMenuFolder> -->
+
+	<!-- The icon the system uses for the application. For at least one resolution,
+	specify the path to a PNG file included in the AIR package. Optional. -->
+	<icon>
+	<!--
+		<image16x16></image16x16>
+		<image29x29></image29x29>
+		<image32x32></image32x32>
+		<image36x36></image36x36>
+		<image114x114></image114x114> 
+		<image128x128></image128x128>-->
+		<image48x48>icon_48x48.png</image48x48>
+		<image57x57>icon_57x57.png</image57x57>
+		<image72x72>icon_72x72.png</image72x72>
+		<image114x114>icon_114x114.png</image114x114>
+		<image512x512>icon_512x512.png</image512x512>
+		<image1024x1024>icon_1024x1024.png</image1024x1024>
+	</icon>
+
+	<!-- Whether the application handles the update when a user double-clicks an update version
+	of the AIR file (true), or the default AIR application installer handles the update (false).
+	Optional. Default false. -->
+	<!-- <customUpdateUI></customUpdateUI> -->
+	
+	<!-- Whether the application can be launched when the user clicks a link in a web browser.
+	Optional. Default false. -->
+	<!-- <allowBrowserInvocation></allowBrowserInvocation> -->
+
+	<!-- Listing of file types for which the application can register. Optional. -->
+	<!-- <fileTypes> -->
+
+		<!-- Defines one file type. Optional. -->
+		<!-- <fileType> -->
+
+			<!-- The name that the system displays for the registered file type. Required. -->
+			<!-- <name></name> -->
+
+			<!-- The extension to register. Required. -->
+			<!-- <extension></extension> -->
+			
+			<!-- The description of the file type. Optional. -->
+			<!-- <description></description> -->
+			
+			<!-- The MIME content type. -->
+			<!-- <contentType></contentType> -->
+			
+			<!-- The icon to display for the file type. Optional. -->
+			<!-- <icon>
+				<image16x16></image16x16>
+				<image32x32></image32x32>
+				<image48x48></image48x48>
+				<image128x128></image128x128>
+			</icon> -->
+			
+		<!-- </fileType> -->
+	<!-- </fileTypes> -->
+
+    <!-- iOS specific capabilities -->
+	<!-- <iPhone> -->
+		<!-- A list of plist key/value pairs to be added to the application Info.plist -->
+		<!-- <InfoAdditions>
+            <![CDATA[
+                <key>UIDeviceFamily</key>
+                <array>
+                    <string>1</string>
+                    <string>2</string>
+                </array>
+                <key>UIStatusBarStyle</key>
+                <string>UIStatusBarStyleBlackOpaque</string>
+                <key>UIRequiresPersistentWiFi</key>
+                <string>YES</string>
+            ]]>
+        </InfoAdditions> -->
+        <!-- A list of plist key/value pairs to be added to the application Entitlements.plist -->
+		<!-- <Entitlements>
+            <![CDATA[
+                <key>keychain-access-groups</key>
+                <array>
+                    <string></string>
+                    <string></string>
+                </array>
+            ]]>
+        </Entitlements> -->
+	<!-- Display Resolution for the app (either "standard" or "high"). Optional. Default "standard" -->
+	<!-- <requestedDisplayResolution></requestedDisplayResolution> -->
+	<!-- </iPhone> -->
+
+	<!-- Specify Android specific tags that get passed to AndroidManifest.xml file. -->
+    <!--<android> -->
+    <!--	<manifestAdditions>
+		<![CDATA[
+			<manifest android:installLocation="auto">
+				<uses-permission android:name="android.permission.INTERNET"/>
+				<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+				<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+				<supports-screens android:normalScreens="true"/>
+				<uses-feature android:required="true" android:name="android.hardware.touchscreen.multitouch"/>
+				<application android:enabled="true">
+					<activity android:excludeFromRecents="false">
+						<intent-filter>
+							<action android:name="android.intent.action.MAIN"/>
+							<category android:name="android.intent.category.LAUNCHER"/>
+						</intent-filter>
+					</activity>
+				</application>
+            </manifest>
+		]]>
+        </manifestAdditions> -->
+	    <!-- Color depth for the app (either "32bit" or "16bit"). Optional. Default 16bit before namespace 3.0, 32bit after -->
+        <!-- <colorDepth></colorDepth> -->
+    <!-- </android> -->
+	<!-- End of the schema for adding the android specific tags in AndroidManifest.xml file -->
+
+<android>
+        <manifestAdditions><![CDATA[
+			<manifest android:installLocation="auto">
+			    <!--See the Adobe AIR documentation for more information about setting Google Android permissions-->
+			    <!--Removing the permission android.permission.INTERNET will have the side effect
+		of preventing you from debugging your application on your device-->
+				<uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+			    <uses-permission android:name="android.permission.INTERNET"/>
+			    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+			    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+			    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+			    <!--The DISABLE_KEYGUARD and WAKE_LOCK permissions should be toggled together
+		in order to access AIR's SystemIdleMode APIs-->
+			    <uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>
+			    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+			    <!--
+			    <uses-permission android:name="android.permission.CAMERA"/>
+			    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+			    -->
+				<uses-permission android:name="com.android.vending.BILLING" />
+			    <!--The ACCESS_NETWORK_STATE and ACCESS_WIFI_STATE permissions should be toggled
+		together in order to use AIR's NetworkInfo APIs-->
+				<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+				<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+				
+				<permission android:name="air.com.bitrhymes.bingo.permission.C2D_MESSAGE" android:protectionLevel="signature" />
+				<uses-permission android:name="air.com.bitrhymes.bingo.permission.C2D_MESSAGE" />
+				<!-- App receives GCM messages. -->
+				<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+				
+				<!-- GCM requires a Google account. -->
+				<uses-permission android:name="android.permission.GET_ACCOUNTS" />
+				<uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE"/>
+				<!-- for mobiles
+				<supports-screens android:smallScreens="true"
+					android:normalScreens="true"
+					android:largeScreens="false"
+					android:xlargeScreens="false"
+				/>
+				-->
+				 
+				<!-- for tablets -->
+				<supports-screens android:smallScreens="false"
+					android:normalScreens="false"
+					android:largeScreens="true"
+					android:xlargeScreens="true"
+				 />
+				
+				<application android:enabled="true">
+					<activity android:excludeFromRecents="false">
+						<intent-filter>
+							<action android:name="android.intent.action.MAIN"/>
+							<category android:name="android.intent.category.LAUNCHER"/>
+						</intent-filter>
+						<intent-filter>
+							<action android:name="android.intent.action.VIEW" />
+							<category android:name="android.intent.category.DEFAULT" />
+							<category android:name="android.intent.category.BROWSABLE" />
+							<data android:scheme="fb8547499526" />
+							<data android:scheme="fb264035183636637" />
+						</intent-filter>
+					</activity>
+					<receiver android:name="com.fiksu.asotracking.InstallTracking" android:exported="true">
+						<intent-filter>
+							<action android:name="com.android.vending.INSTALL_REFERRER" />
+						</intent-filter>
+					</receiver>
+					<service android:name="org.openudid.OpenUDID_service">
+	 					<intent-filter>
+							<action android:name="org.openudid.GETUDID" />
+						</intent-filter>
+					</service>
+					
+					<uses-permission android:name="com.android.vending.BILLING" />
+					<activity  android:name="com.tapjoy.TJCOffersWebView"  android:configChanges="orientation|keyboardHidden|screenSize" />
+       				 <activity   android:name="com.tapjoy.TapjoyFullScreenAdWebView"      android:configChanges="orientation|keyboardHidden|screenSize" />
+        			<activity  android:name="com.tapjoy.TapjoyDailyRewardAdWebView" android:configChanges="orientation|keyboardHidden|screenSize" />
+       				 <activity  android:name="com.tapjoy.TapjoyVideoView" android:configChanges="orientation|keyboardHidden|screenSize" />
+      				  <activity android:name="com.tapjoy.TJAdUnitView" android:configChanges="orientation|keyboardHidden|screenSize"  android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" android:hardwareAccelerated="true" />
+      				  <activity  android:name="com.tapjoy.mraid.view.ActionHandler"  android:configChanges="orientation|keyboardHidden|screenSize" />
+       				 <activity  android:name="com.tapjoy.mraid.view.Browser" android:configChanges="orientation|keyboardHidden|screenSize" />
+					<activity android:name="com.playhaven.src.publishersdk.content.PHContentView" android:windowSoftInputMode="adjustResize"></activity>
+					
+					<activity android:name="com.bitrhymes.iab.functions.GoogleIABV3Activity" android:configChanges="keyboardHidden|orientation" android:theme="@style/Theme.Transparent" android:screenOrientation="landscape"></activity>
+					
+					<activity android:name="com.facebook.LoginActivity"/>
+                    <activity android:name="com.bitrhymes.facebookext.LoginActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"></activity> 
+ 					<activity android:name="com.bitrhymes.facebookext.DialogActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"></activity>
+ 					<meta-data android:name="com.facebook.sdk.ApplicationId" android:value="8547499526"/>
+ 					
+ 					
+					
+			<receiver android:name="com.bitrhymes.nativeutils.GCMIntentReceiver" android:permission="com.google.android.c2dm.permission.SEND" >
+				<intent-filter>
+					<action android:name="com.google.android.c2dm.intent.RECEIVE" />
+					<action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+					<category android:name="air.com.bitrhymes.bingo" />
+				</intent-filter>
+			</receiver>
+			<service android:name="com.bitrhymes.nativeutils.GCMIntentService"></service>
+			
+			<receiver android:enabled="true" android:process=":remote" android:name="com.bitrhymes.nativeutils.localnotify.AlarmReceiver"></receiver>
+			
+					<activity android:name="com.chartboost.sdk.CBDialogActivity"
+						android:configChanges="orientation|keyboard|keyboardHidden"
+						android:windowSoftInputMode="adjustResize"
+						android:theme="@android:style/Theme.Translucent"
+						android:launchMode="singleTop" >
+					</activity>
+					
+					<activity
+						android:name="com.flurry.android.FlurryFullscreenTakeoverActivity"
+						android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode"
+						android:hardwareAccelerated="true">
+					</activity>
+					<activity android:name="com.google.ads.AdActivity" android:screenOrientation="landscape" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" /> 
+					<meta-data android:name="applovin.sdk.key" android:value="VvS661UcyvkftJ11_Udnkd9Awyz8cJ-09sU4VfkUiwcpS9LWtgAoMIc1u5MRVR96gyxN3WIJhL2CCy75UwoR8n"  />
+				</application>
+			</manifest>
+			
+		]]></manifestAdditions>
+	</android>
+	<iPhone>
+		<InfoAdditions><![CDATA[
+			<key>UIDeviceFamily</key>
+			<array>
+				<string>1</string>
+				<string>2</string>
+			</array>
+		]]></InfoAdditions>
+		<requestedDisplayResolution>high</requestedDisplayResolution>
+	</iPhone>
+
+<extensions>
+	<extensionID>com.bitrhymes.AdMob</extensionID>
+        <extensionID>com.bitrhymes.AppLovinExt</extensionID>
+        <extensionID>com.bitrhymes.ChartboostAndroidExt</extensionID>
+        <extensionID>com.bitrhymes.fiksu</extensionID>
+        <extensionID>com.bitrhymes.inmobiExt</extensionID>
+        <extensionID>com.bitrhymes.PlayHavenExt</extensionID>
+        <extensionID>com.bitrhymes.tapjoy</extensionID>
+        <extensionID>com.bitrhymes.FacebookExt</extensionID>
+        <extensionID>com.bitrhymes.Flurry</extensionID>
+        <extensionID>com.bitrhymes.GoogleAnalyticsExt</extensionID>
+        <extensionID>com.bitrhymes.KochavaSDKExt</extensionID>
+        <extensionID>com.bitrhymes.nativeutilities</extensionID>
+        <extensionID>com.bitrhymes.messaging</extensionID>
+   	<extensionID>com.bitrhymes.appPurchase</extensionID>
+    </extensions>
+</application>

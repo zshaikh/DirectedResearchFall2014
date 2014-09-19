@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/beigebackground2" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/rl" android:layout_width="fill_parent" android:layout_height="259.0dip">
+        <TextView android:textSize="12.0dip" android:textColor="#ffff0000" android:id="@id/textView1" android:scrollbars="vertical" android:layout_width="wrap_content" android:layout_height="258.0dip" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/rmiddle" android:layout_width="fill_parent" android:layout_height="40.0dip">
+        <TextView android:textAppearance="?android:textAppearanceMedium" android:id="@id/textView3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" android:text="Event List: " android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+    </RelativeLayout>
+    <RelativeLayout android:orientation="horizontal" android:id="@id/rm" android:layout_width="wrap_content" android:layout_height="161.0dip" android:layout_weight="0.74">
+        <TextView android:scrollbarAlwaysDrawVerticalTrack="true" android:scrollbarStyle="insideOverlay" android:textSize="12.0dip" android:textColor="#ffff0000" android:gravity="fill_horizontal" android:id="@id/textView2" android:layout_width="wrap_content" android:layout_height="250.0dip" android:scrollHorizontally="true" android:selectAllOnFocus="true" android:layout_alignParentLeft="true" android:layout_centerVertical="true" android:textAllCaps="true" />
+        <ListView android:id="@id/lvEvent" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/rt" android:background="#ff413d44" android:layout_width="fill_parent" android:layout_height="80.0dip">
+        <LinearLayout android:orientation="vertical" android:id="@id/rtttt" android:layout_width="215.0dip" android:layout_height="80.0dip">
+            <Button android:id="@id/btnShowAgenda" android:layout_width="150.0dip" android:layout_height="40.0dip" android:text="Daily Agenda" />
+            <Button android:id="@id/btnShowFutureAgenda" android:layout_width="150.0dip" android:layout_height="40.0dip" android:text="Future Agenda" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/rttttdddd" android:layout_width="170.0dip" android:layout_height="80.0dip">
+            <Button android:layout_gravity="right" android:id="@id/btnShowCategories" android:layout_width="150.0dip" android:layout_height="40.0dip" android:text="Categories" />
+            <Button android:layout_gravity="right" android:id="@id/btnAdd" android:layout_width="150.0dip" android:layout_height="40.0dip" android:text="Add Event" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

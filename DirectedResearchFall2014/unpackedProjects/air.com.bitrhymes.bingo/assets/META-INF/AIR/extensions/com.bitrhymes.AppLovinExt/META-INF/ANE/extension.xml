@@ -1,0 +1,16 @@
+<extension xmlns="http://ns.adobe.com/air/extension/3.1">
+    <id>com.bitrhymes.AppLovinExt</id>
+    <versionNumber>1.0.2</versionNumber>
+	<platforms>
+		<platform name="Android-ARM">
+			<applicationDeployment>
+				<nativeLibrary>AppLovinNativeJar.jar</nativeLibrary>
+				<initializer>com.bitrhymes.applovin.AndroidExtension</initializer>
+				<finalizer>com.bitrhymes.applovin.AndroidExtension</finalizer>
+			</applicationDeployment>
+		</platform>
+		<platform name="default">
+			<applicationDeployment />
+		</platform>
+	</platforms>
+</extension>
