@@ -57,11 +57,12 @@ public class AndroidUIAnalysis
 						//Utills.insertProject(projectsList);
 						
 						// unpack all the projects
-						
-						if( !unpackAPK(projectName) )
+						for(int i=0 ; i< projectsList.size(); i++)
+						if( !unpackAPK(projectsList.get(i)) )
 						{
-							throw new Exception(" Failed to unpack " +projectName);
+							throw new Exception(" Failed to unpack " +projectsList.get(i));
 						}
+						
 						
 						for(int i =0 ; i< projectsList.size(); i++)
 						{
