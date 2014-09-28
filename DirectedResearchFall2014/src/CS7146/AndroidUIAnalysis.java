@@ -52,16 +52,22 @@ public class AndroidUIAnalysis
 						}
 						
 						
+						
 						// insert projects into database...
 						//Utills.insertProject(projectsList);
 						
+						// unpack all the projects
 						
+						if( !unpackAPK(projectName) )
+						{
+							throw new Exception(" Failed to unpack " +projectName);
+						}
 						
 						for(int i =0 ; i< projectsList.size(); i++)
 						{
 							System.out.println(	"Processing  APKs and get the keys and activities");
 							
-							TotalKeys=processResources(projectsList.get(i));
+							TotalKeys=processXMLResources(projectsList.get(i));
 							
 							System.out.println(i+"- Summery of Project:"+ projectsList.get(i));
 							writer.println(i+"- Summeryof Project:"+ projectsList.get(i));
@@ -100,44 +106,7 @@ public class AndroidUIAnalysis
 //							
 							
 							
-							ArrayList<String> RSmaliFile= getRSmali(projectsList.get(i));
-							// this function will update the keys id
-							processRSmaliFile(RSmaliFile, projectsList.get(i));
-							
-							RSmaliFile=null;
-							
-							int mappedKyes=0;
-							
-							//mapped keys to smali files...
-							for(int j=0 ; j< keys.size(); j++)
-							{
-								// mapped each key..
-								mapedkeysToSamli= new ArrayList<String>();
-								//System.out.println("Mapping the key id"+ keys.get(j).getKeyId()+" to smali files");
-								mapedkeysToSmali= Utills.mapKeyIDToSmaliFile(projectsList.get(i), keys.get(j).getKeyId());
-								
-								// insert the mapping into database
-								//Utills.insertMappingKeyToCode(projectsList.get(i).replace(".apk",""),keys.get(j).getKeyName(), mapedkeysToSmali);
-								
-								// count mapped keys...
-								//mappedKyes+=mapedkeysToSmali.size()> 0? 1 : 0;
-								for(int k=0; k< mapedkeysToSmali.size(); k++)
-								{
-									keys.get(j).setMappedToCode(true);
-									
-															
-								
-								}
-								
-								mapedkeysToSmali=null;
-								
-//								if( mapedkeysToSmali.size()> 0)
-//								{
-//								//	mappedKyes++;
-//									
-//									keys.get(j).setMappedToCode(true);
-//								}
-							}
+							processSmaliResurces(i);
 							
 							//System.out.println("total number of mapped keys is: "+ mappedKyes);
 							
@@ -209,6 +178,49 @@ public class AndroidUIAnalysis
 
 
 
+	private static void processSmaliResurces(int i) 
+	{
+		ArrayList<String> RSmaliFile= getRSmali(projectsList.get(i));
+		// this function will update the keys id
+		processRSmaliFile(RSmaliFile, projectsList.get(i));
+		
+		RSmaliFile=null;
+		
+		int mappedKyes=0;
+		
+		//mapped keys to smali files...
+		for(int j=0 ; j< keys.size(); j++)
+		{
+			// mapped each key..
+			mapedkeysToSamli= new ArrayList<String>();
+			//System.out.println("Mapping the key id"+ keys.get(j).getKeyId()+" to smali files");
+			mapedkeysToSmali= Utills.mapKeyIDToSmaliFile(projectsList.get(i), keys.get(j).getKeyId());
+			
+			// insert the mapping into database
+			//Utills.insertMappingKeyToCode(projectsList.get(i).replace(".apk",""),keys.get(j).getKeyName(), mapedkeysToSmali);
+			
+			// count mapped keys...
+			//mappedKyes+=mapedkeysToSmali.size()> 0? 1 : 0;
+			for(int k=0; k< mapedkeysToSmali.size(); k++)
+			{
+				keys.get(j).setMappedToCode(true);
+			}
+			
+			mapedkeysToSmali=null;
+			
+//								if( mapedkeysToSmali.size()> 0)
+//								{
+//								//	mappedKyes++;
+//									
+//									keys.get(j).setMappedToCode(true);
+//								}
+		}
+	}
+
+
+
+
+
 	private static int getNumberOfMappedKeys(String type) 
 	{
 		int mappedToActicitycounter=0, mappedToCodecounter=0, both=0, others=0;
@@ -261,16 +273,12 @@ public class AndroidUIAnalysis
 
 
 
-	private static String processResources(String projectName) 
+	private static String processXMLResources(String projectName) 
 	{
 		String totalNumberOfKeys="-1";
 try
 {
-	// All the projects has been unpacked ...
-//			if( !unpackAPK(projectName) )
-//			{
-//				throw new Exception(" Failed to unpack " +projectName);
-//			}
+	
 
 
 		
@@ -287,7 +295,6 @@ try
 			keys  =	Utills.getkeysFromXMLs(projectName);	
 			
 			// inserting keys with limited inforamtion...
-			
 			//Utills.insertProjectKyes(projectName, keys);
 			
 			
