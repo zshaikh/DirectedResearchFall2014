@@ -93,6 +93,7 @@ public class Utills
 				 keys.addAll(getkeysFromXML(projectName,XMLs.get(i))); 
 			 }
 			 
+			 XMLs=null;
 			return keys;
 			
 		} catch (Exception e) 
@@ -174,8 +175,8 @@ public class Utills
 	 
 	 public static ArrayList<String> mapKeyToXML(String projectName, String key, String keyType)
 		{
+		 // this code can be improved by passing the keys array List and work on it here...
 			ArrayList<String> mapedkeys = new ArrayList<String>();
-			String type=null;
 			
 			
 			//System.out.println(" find ./unpackedProjects/"+ projectName.replace(".apk", "") +"/res/ ./ -name '*.xml' -print0 | xargs -0 egrep -l 'android:id=\"@id/"+key+"\"'");
@@ -210,8 +211,8 @@ public class Utills
 	 
 	 public static ArrayList<String> checkIfKeyUsedOnOtherXML(String projectName, String key, String keyType)
 		{
+		 // this code can be improved by passing the keys array List and work on it here...
 			ArrayList<String> mapedkeys = new ArrayList<String>();
-			String type=null;
 			
 			
 			//System.out.println(" find ./unpackedProjects/"+ projectName.replace(".apk", "") +"/res/ ./ -name '*.xml' -print0 | xargs -0 egrep -l 'android:id=\"@id/"+key+"\"'");
@@ -245,6 +246,7 @@ public class Utills
 	 
 	 public static ArrayList<String> mapKeyIDToJavaClass(String projectName, long keyId)
 		{
+		 // this code can be improved by passing the keys array List and work on it here...
 			ArrayList<String> mapedkeys = new ArrayList<String>();
 			
 			
@@ -275,6 +277,7 @@ public class Utills
 
 	 public static ArrayList<String> mapKeyIDToSmaliFile(String projectName, String keyId)
 		{
+		 // this code can be improved by passing the keys array List and work on it here...
 			ArrayList<String> mapedkeys = new ArrayList<String>();
 			
 			

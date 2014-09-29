@@ -12,7 +12,7 @@ public class AndroidUIAnalysis
 
 	//3149354DBD154B36
 	private static BufferedReader bReader = null;
-	private static BufferedWriter bwriter = null;
+	//private static BufferedWriter bwriter = null;
 	private static ArrayList<String> projectsList = null, mapedkeysToXML=null,  mapedkeysToJava=null,mapedkeysToSamli=null,mapedkeysToSmali=null,mapedkeysToOtherXML=null;
 	private static String workingDirectory="/home/owner/git/DirectedResearchFall2014/DirectedResearchFall2014";
 	private static String apktoolLocation="/usr/local/bin/apktool";
@@ -55,62 +55,27 @@ public class AndroidUIAnalysis
 						
 						// insert projects into database...
 						//Utills.insertProject(projectsList);
-						
+					/*	
 						// unpack all the projects
+						System.out.println(	" unpacking the projects " );
 						for(int i=0 ; i< projectsList.size(); i++)
 						if( !unpackAPK(projectsList.get(i)) )
 						{
 							throw new Exception(" Failed to unpack " +projectsList.get(i));
 						}
 						
-						
+						*/
 						for(int i =0 ; i< projectsList.size(); i++)
 						{
-							System.out.println(	"Processing  APKs and get the keys and activities");
+							System.out.println(	"getting the keys From strings.xml for the project: "+projectsList.get(i) );
 							
 							TotalKeys=processXMLResources(projectsList.get(i));
+							System.out.println(	" processing smali files");
+							processSmaliResurces(i);
 							
 							System.out.println(i+"- Summery of Project:"+ projectsList.get(i));
 							writer.println(i+"- Summeryof Project:"+ projectsList.get(i));
 							writer.println("Total number of keys: "+ TotalKeys);
-							
-							
-//							System.out.println(	"Converting APK tO JAR");
-//							convertAPKToJar(projectsList.get(i));
-//							
-//							System.out.println(	"Converting JAR to JAVA");
-//							convertJarToJava(projectsList.get(i));
-							
-							// now we need to get the key id from R.java...
-							// so, first we need to find R.java
-							// it suppose to be one R.java in case we found 2 we will choose 
-							// the one that match the project name !?
-							
-//							String RJavaFile= getRJava(projectsList.get(i));
-//							processRJava(RJavaFile, projectsList.get(i));
-							
-//							int mappedKyes=0;
-//							
-//							//mapped keys to java files...
-//							for(int j=0 ; j< keys.size(); j++)
-//							{
-//								// mapped each key..
-//								mapedkeysToJava= new ArrayList<String>();
-//								//System.out.println( keys.get(j).getKeyId());
-//								mapedkeysToJava= Utills.mapKeyIDToJavaClass(projectsList.get(i), keys.get(j).getKeyId());
-//								
-//								// count mapped keys...
-//								mappedKyes+=mapedkeysToJava.size()> 0? 1 : 0;
-//							}
-//							
-//							System.out.println("total number of mapped keys is: "+ mappedKyes);
-//							
-							
-							
-							processSmaliResurces(i);
-							
-							//System.out.println("total number of mapped keys is: "+ mappedKyes);
-							
 							
 							System.out.println("Number of key that mapped to activity is: "+ getNumberOfMappedKeys("Activity"));
 							writer.println("Number of key that mapped to activity is: "+ getNumberOfMappedKeys("Activity"));
@@ -145,7 +110,7 @@ public class AndroidUIAnalysis
 							{
 								if (keys.get(j).mappedToActivity == false && keys.get(j).mappedToCode == false && keys.get(j).mappedToOtherXML==false)
 									count++;
-								//System.out.println(keys.get(i).getKeyName());
+								
 							}
 								System.out.println( count);
 								writer.println(count);
@@ -209,12 +174,7 @@ public class AndroidUIAnalysis
 			
 			mapedkeysToSmali=null;
 			
-//								if( mapedkeysToSmali.size()> 0)
-//								{
-//								//	mappedKyes++;
-//									
-//									keys.get(j).setMappedToCode(true);
-//								}
+
 		}
 	}
 
@@ -325,39 +285,11 @@ try
 					
 					
 				}
-//				if( mapedkeysToXML.size()> 0)
-//				{
-//				//	mappedKyes++;
-//					
-//					keys.get(j).setMappedToActivity(true);
-//				}
-				
-
-//				mapedkeysToOtherXML= new ArrayList<String>();
-//				mapedkeysToOtherXML= Utills.checkIfKeyUsedOnOtherXML(projectName, keys.get(j).getKeyName(), keys.get(j).getKeyType());
-//				
-//				// count mapped keys...
-//				//mappedKyes+=mapedkeysToXML.size()> 0? 1 : 0;
-//				if( mapedkeysToOtherXML.size()> 0)
-//				{
-//			//		mappedKyes++;
-//					//System.out.println("Key maped to other xml");
-//					keys.get(j).setMappedToOtherXML(true);
-//				}
-				
+				mapedkeysToXML=null;
 				
 			}
 			
-		//	System.out.println("total number of mapped keys Acticty is: "+ mappedKyes);
-			
-			
-			// some keys are used on the code only, so we nee to find them also,
-			// 1. we need to convert apk to jar files by using dex2jar
-			
-			
-			// 2. we will use procyon-decompiler-0.5.26.jar tool to get the code from .jar projects
-			// 3. Read R.java to get the keyid of each key
-			// 4. search for the keyid in the code..
+	
 		
 
 			
@@ -415,11 +347,14 @@ return totalNumberOfKeys;
 	{
 		try 
 		{
-
+			
+			String result=null;
 			
 			String[] command1={"/bin/sh", "-c", apktoolLocation+" d ./APKs/"+ projectName +" ./unpackedProjects/"+ projectName.replace(".apk", "")};
 			
-			Utills.excuteComamnd(command1);
+			if(Utills.excuteComamnd(command1).contains("was not found or was not readable"))
+				throw new Exception("was not found or was not readable.");
+				
 			
 			return true;
 			
