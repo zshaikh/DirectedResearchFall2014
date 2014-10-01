@@ -1,0 +1,9 @@
+to get the keys that are not mapped..
+
+SELECT count( * )
+FROM `keys` AS k
+LEFT OUTER JOIN `Mapping` AS mp ON mp.`Key` LIKE k.`key`
+WHERE mp.mappingType IS NULL and k.projectName like 'Project Name'
+
+// to unpack all the projects...
+for i in `cat ./projects.txt`; do apktool d ./APKs/$i ./unpakedProjects/$i; done
