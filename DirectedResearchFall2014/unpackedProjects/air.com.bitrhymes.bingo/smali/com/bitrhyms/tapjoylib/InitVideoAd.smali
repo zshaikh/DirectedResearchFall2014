@@ -46,8 +46,8 @@
 # virtual methods
 .method public call(Lcom/adobe/fre/FREContext;[Lcom/adobe/fre/FREObject;)Lcom/adobe/fre/FREObject;
     .locals 6
-    .parameter "context"
-    .parameter "args"
+    .param p1, "context"    # Lcom/adobe/fre/FREContext;
+    .param p2, "args"    # [Lcom/adobe/fre/FREObject;
 
     .prologue
     .line 19
@@ -58,7 +58,7 @@
     move-object v1, v0
 
     .line 20
-    .local v1, adec:Lcom/bitrhyms/tapjoylib/AndroidExtensionContext;
+    .local v1, "adec":Lcom/bitrhyms/tapjoylib/AndroidExtensionContext;
     invoke-static {p1}, Lcom/bitrhyms/tapjoylib/AndroidExtensionContext;->setFREContext(Lcom/adobe/fre/FREContext;)V
 
     .line 22
@@ -69,7 +69,7 @@
     invoke-direct {v2, v4}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
     .line 24
-    .local v2, builder:Landroid/app/AlertDialog$Builder;
+    .local v2, "builder":Landroid/app/AlertDialog$Builder;
     const/4 v4, 0x1
 
     :try_start_0
@@ -105,7 +105,7 @@
     move-object v3, v4
 
     .line 29
-    .local v3, e:Ljava/lang/Exception;
+    .local v3, "e":Ljava/lang/Exception;
     sget-object v4, Lcom/bitrhyms/tapjoylib/InitVideoAd;->TAG:Ljava/lang/String;
 
     invoke-virtual {v3}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
@@ -143,7 +143,7 @@
     move-result-object v0
 
     .line 48
-    .local v0, context:Lcom/adobe/fre/FREContext;
+    .local v0, "context":Lcom/adobe/fre/FREContext;
     if-eqz v0, :cond_0
 
     .line 49
@@ -160,7 +160,7 @@
 
 .method public videoError(I)V
     .locals 3
-    .parameter "statusCode"
+    .param p1, "statusCode"    # I
 
     .prologue
     .line 37
@@ -176,7 +176,7 @@
     move-result-object v0
 
     .line 39
-    .local v0, context:Lcom/adobe/fre/FREContext;
+    .local v0, "context":Lcom/adobe/fre/FREContext;
     if-eqz v0, :cond_0
 
     .line 40
@@ -208,7 +208,7 @@
     move-result-object v0
 
     .line 57
-    .local v0, context:Lcom/adobe/fre/FREContext;
+    .local v0, "context":Lcom/adobe/fre/FREContext;
     if-eqz v0, :cond_0
 
     .line 58

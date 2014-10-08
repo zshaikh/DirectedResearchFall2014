@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/bitrhymes/iab/functions/GoogleIABV3Activity$3;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1
@@ -38,7 +37,6 @@
 
 .method static synthetic access$0(Lcom/bitrhymes/iab/functions/GoogleIABV3Activity$3$1;)Lcom/bitrhymes/iab/functions/GoogleIABV3Activity$3;
     .locals 1
-    .parameter
 
     .prologue
     .line 212
@@ -51,8 +49,8 @@
 # virtual methods
 .method public onQueryInventoryFinished(Lcom/bitrhymes/iab/util/IabResult;Lcom/bitrhymes/iab/util/Inventory;)V
     .locals 4
-    .parameter "result"
-    .parameter "inventory"
+    .param p1, "result"    # Lcom/bitrhymes/iab/util/IabResult;
+    .param p2, "inventory"    # Lcom/bitrhymes/iab/util/Inventory;
 
     .prologue
     .line 215
@@ -89,7 +87,7 @@
     .line 221
     iget-object v1, p0, Lcom/bitrhymes/iab/functions/GoogleIABV3Activity$3$1;->this$1:Lcom/bitrhymes/iab/functions/GoogleIABV3Activity$3;
 
-    #getter for: Lcom/bitrhymes/iab/functions/GoogleIABV3Activity$3;->this$0:Lcom/bitrhymes/iab/functions/GoogleIABV3Activity;
+    # getter for: Lcom/bitrhymes/iab/functions/GoogleIABV3Activity$3;->this$0:Lcom/bitrhymes/iab/functions/GoogleIABV3Activity;
     invoke-static {v1}, Lcom/bitrhymes/iab/functions/GoogleIABV3Activity$3;->access$0(Lcom/bitrhymes/iab/functions/GoogleIABV3Activity$3;)Lcom/bitrhymes/iab/functions/GoogleIABV3Activity;
 
     move-result-object v1
@@ -119,10 +117,10 @@
     invoke-direct {v0, p0}, Lcom/bitrhymes/iab/functions/GoogleIABV3Activity$3$1$1;-><init>(Lcom/bitrhymes/iab/functions/GoogleIABV3Activity$3$1;)V
 
     .line 247
-    .local v0, mConsumeFinishedListener:Lcom/bitrhymes/iab/util/IabHelper$OnConsumeFinishedListener;
+    .local v0, "mConsumeFinishedListener":Lcom/bitrhymes/iab/util/IabHelper$OnConsumeFinishedListener;
     iget-object v1, p0, Lcom/bitrhymes/iab/functions/GoogleIABV3Activity$3$1;->this$1:Lcom/bitrhymes/iab/functions/GoogleIABV3Activity$3;
 
-    #getter for: Lcom/bitrhymes/iab/functions/GoogleIABV3Activity$3;->this$0:Lcom/bitrhymes/iab/functions/GoogleIABV3Activity;
+    # getter for: Lcom/bitrhymes/iab/functions/GoogleIABV3Activity$3;->this$0:Lcom/bitrhymes/iab/functions/GoogleIABV3Activity;
     invoke-static {v1}, Lcom/bitrhymes/iab/functions/GoogleIABV3Activity$3;->access$0(Lcom/bitrhymes/iab/functions/GoogleIABV3Activity$3;)Lcom/bitrhymes/iab/functions/GoogleIABV3Activity;
 
     move-result-object v1
@@ -138,7 +136,7 @@
     .line 248
     iget-object v1, p0, Lcom/bitrhymes/iab/functions/GoogleIABV3Activity$3$1;->this$1:Lcom/bitrhymes/iab/functions/GoogleIABV3Activity$3;
 
-    #getter for: Lcom/bitrhymes/iab/functions/GoogleIABV3Activity$3;->this$0:Lcom/bitrhymes/iab/functions/GoogleIABV3Activity;
+    # getter for: Lcom/bitrhymes/iab/functions/GoogleIABV3Activity$3;->this$0:Lcom/bitrhymes/iab/functions/GoogleIABV3Activity;
     invoke-static {v1}, Lcom/bitrhymes/iab/functions/GoogleIABV3Activity$3;->access$0(Lcom/bitrhymes/iab/functions/GoogleIABV3Activity$3;)Lcom/bitrhymes/iab/functions/GoogleIABV3Activity;
 
     move-result-object v1
@@ -147,7 +145,7 @@
 
     iget-object v2, p0, Lcom/bitrhymes/iab/functions/GoogleIABV3Activity$3$1;->this$1:Lcom/bitrhymes/iab/functions/GoogleIABV3Activity$3;
 
-    #getter for: Lcom/bitrhymes/iab/functions/GoogleIABV3Activity$3;->this$0:Lcom/bitrhymes/iab/functions/GoogleIABV3Activity;
+    # getter for: Lcom/bitrhymes/iab/functions/GoogleIABV3Activity$3;->this$0:Lcom/bitrhymes/iab/functions/GoogleIABV3Activity;
     invoke-static {v2}, Lcom/bitrhymes/iab/functions/GoogleIABV3Activity$3;->access$0(Lcom/bitrhymes/iab/functions/GoogleIABV3Activity$3;)Lcom/bitrhymes/iab/functions/GoogleIABV3Activity;
 
     move-result-object v2

@@ -31,7 +31,7 @@
 
 .field private static final ATTRIBUTION_ID_COLUMN_NAME:Ljava/lang/String; = "aid"
 
-.field private static final ATTRIBUTION_ID_CONTENT_URI:Landroid/net/Uri; = null
+.field private static final ATTRIBUTION_ID_CONTENT_URI:Landroid/net/Uri;
 
 .field protected static final ATTRIBUTION_PREF_DATA:Ljava/lang/String; = "attributionData"
 
@@ -255,8 +255,8 @@
 
 .method public constructor <init>(Landroid/content/Context;Ljava/lang/String;)V
     .locals 5
-    .parameter "context"
-    .parameter "kochavaAppID"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "kochavaAppID"    # Ljava/lang/String;
 
     .prologue
     const-wide/16 v3, 0x0
@@ -309,7 +309,7 @@
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     .line 264
-    .local v0, datamap:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v0, "datamap":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     if-eqz p2, :cond_0
 
     invoke-virtual {p2}, Ljava/lang/String;->trim()Ljava/lang/String;
@@ -337,9 +337,9 @@
 
 .method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
     .locals 5
-    .parameter "context"
-    .parameter "kochavaAppID"
-    .parameter "currency"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "kochavaAppID"    # Ljava/lang/String;
+    .param p3, "currency"    # Ljava/lang/String;
 
     .prologue
     const-wide/16 v3, 0x0
@@ -392,7 +392,7 @@
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     .line 250
-    .local v0, datamap:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v0, "datamap":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     if-eqz p2, :cond_0
 
     invoke-virtual {p2}, Ljava/lang/String;->trim()Ljava/lang/String;
@@ -439,9 +439,9 @@
 
 .method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Z)V
     .locals 5
-    .parameter "context"
-    .parameter "kochavaAppID"
-    .parameter "sendOnStart"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "kochavaAppID"    # Ljava/lang/String;
+    .param p3, "sendOnStart"    # Z
 
     .prologue
     const-wide/16 v3, 0x0
@@ -494,7 +494,7 @@
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     .line 239
-    .local v0, datamap:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v0, "datamap":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     if-eqz p2, :cond_0
 
     invoke-virtual {p2}, Ljava/lang/String;->trim()Ljava/lang/String;
@@ -522,10 +522,10 @@
 
 .method public constructor <init>(Landroid/content/Context;Ljava/lang/String;ZLjava/lang/String;)V
     .locals 5
-    .parameter "context"
-    .parameter "kochavaAppID"
-    .parameter "sendOnStart"
-    .parameter "currency"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "kochavaAppID"    # Ljava/lang/String;
+    .param p3, "sendOnStart"    # Z
+    .param p4, "currency"    # Ljava/lang/String;
 
     .prologue
     const-wide/16 v3, 0x0
@@ -578,7 +578,7 @@
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     .line 226
-    .local v0, datamap:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v0, "datamap":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     if-eqz p2, :cond_0
 
     invoke-virtual {p2}, Ljava/lang/String;->trim()Ljava/lang/String;
@@ -625,8 +625,7 @@
 
 .method public constructor <init>(Landroid/content/Context;Ljava/util/HashMap;)V
     .locals 4
-    .parameter "context"
-    .parameter
+    .param p1, "context"    # Landroid/content/Context;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -640,7 +639,7 @@
     .end annotation
 
     .prologue
-    .local p2, datamap:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p2, "datamap":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     const-wide/16 v2, 0x0
 
     const/4 v0, 0x0
@@ -694,9 +693,8 @@
 
 .method public constructor <init>(Landroid/content/Context;ZLjava/util/HashMap;)V
     .locals 4
-    .parameter "context"
-    .parameter "sendOnStart"
-    .parameter
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "sendOnStart"    # Z
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -711,7 +709,7 @@
     .end annotation
 
     .prologue
-    .local p3, datamap:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p3, "datamap":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     const-wide/16 v2, 0x0
 
     const/4 v1, 0x1
@@ -765,7 +763,6 @@
 
 .method static synthetic access$0(Lcom/kochava/android/tracker/Feature;)Landroid/content/Context;
     .locals 1
-    .parameter
 
     .prologue
     .line 149
@@ -776,8 +773,6 @@
 
 .method static synthetic access$1(Lcom/kochava/android/tracker/Feature;Ljava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 166
@@ -788,7 +783,6 @@
 
 .method static synthetic access$10(Lcom/kochava/android/tracker/Feature;)Ljava/lang/String;
     .locals 1
-    .parameter
 
     .prologue
     .line 157
@@ -799,7 +793,6 @@
 
 .method static synthetic access$11(Lcom/kochava/android/tracker/Feature;)Ljava/lang/String;
     .locals 1
-    .parameter
 
     .prologue
     .line 158
@@ -810,8 +803,6 @@
 
 .method static synthetic access$12(Lcom/kochava/android/tracker/Feature;I)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 168
@@ -822,8 +813,6 @@
 
 .method static synthetic access$13(Lcom/kochava/android/tracker/Feature;I)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 169
@@ -834,7 +823,6 @@
 
 .method static synthetic access$14(Lcom/kochava/android/tracker/Feature;)I
     .locals 1
-    .parameter
 
     .prologue
     .line 168
@@ -845,7 +833,6 @@
 
 .method static synthetic access$15(Lcom/kochava/android/tracker/Feature;)I
     .locals 1
-    .parameter
 
     .prologue
     .line 169
@@ -856,8 +843,6 @@
 
 .method static synthetic access$16(Lcom/kochava/android/tracker/Feature;Ljava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 163
@@ -868,7 +853,6 @@
 
 .method static synthetic access$17(Lcom/kochava/android/tracker/Feature;)Ljava/lang/String;
     .locals 1
-    .parameter
 
     .prologue
     .line 1648
@@ -881,8 +865,6 @@
 
 .method static synthetic access$18(Lcom/kochava/android/tracker/Feature;Ljava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 160
@@ -893,8 +875,6 @@
 
 .method static synthetic access$19(Lcom/kochava/android/tracker/Feature;Landroid/content/SharedPreferences;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 196
@@ -905,7 +885,6 @@
 
 .method static synthetic access$2(Lcom/kochava/android/tracker/Feature;)Ljava/lang/String;
     .locals 1
-    .parameter
 
     .prologue
     .line 1583
@@ -918,7 +897,6 @@
 
 .method static synthetic access$20(Lcom/kochava/android/tracker/Feature;)Landroid/content/SharedPreferences;
     .locals 1
-    .parameter
 
     .prologue
     .line 196
@@ -929,7 +907,6 @@
 
 .method static synthetic access$21(Lcom/kochava/android/tracker/Feature;)Lcom/kochava/android/tracker/KochavaDbAdapter;
     .locals 1
-    .parameter
 
     .prologue
     .line 181
@@ -940,7 +917,6 @@
 
 .method static synthetic access$22(Lcom/kochava/android/tracker/Feature;)Ljava/lang/String;
     .locals 1
-    .parameter
 
     .prologue
     .line 1102
@@ -953,7 +929,6 @@
 
 .method static synthetic access$23(I)V
     .locals 0
-    .parameter
 
     .prologue
     .line 147
@@ -964,8 +939,6 @@
 
 .method static synthetic access$24(Lcom/kochava/android/tracker/Feature;Z)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 184
@@ -976,7 +949,6 @@
 
 .method static synthetic access$25(Lcom/kochava/android/tracker/Feature;)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 184
@@ -987,9 +959,6 @@
 
 .method static synthetic access$26(Lcom/kochava/android/tracker/Feature;Ljava/lang/String;Ljava/util/Map;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 1439
@@ -1000,8 +969,6 @@
 
 .method static synthetic access$27(Lcom/kochava/android/tracker/Feature;Ljava/util/Timer;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 186
@@ -1012,7 +979,6 @@
 
 .method static synthetic access$28(Lcom/kochava/android/tracker/Feature;)Ljava/util/Timer;
     .locals 1
-    .parameter
 
     .prologue
     .line 186
@@ -1023,8 +989,6 @@
 
 .method static synthetic access$29(Lcom/kochava/android/tracker/Feature;Ljava/util/Timer;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 186
@@ -1035,8 +999,6 @@
 
 .method static synthetic access$3(Lcom/kochava/android/tracker/Feature;Ljava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 154
@@ -1047,7 +1009,6 @@
 
 .method static synthetic access$30(Lcom/kochava/android/tracker/Feature;)Ljava/util/Timer;
     .locals 1
-    .parameter
 
     .prologue
     .line 186
@@ -1058,8 +1019,6 @@
 
 .method static synthetic access$31(Lcom/kochava/android/tracker/Feature;Z)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 1884
@@ -1070,8 +1029,6 @@
 
 .method static synthetic access$32(Lcom/kochava/android/tracker/Feature;Ljava/util/Timer;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 186
@@ -1082,7 +1039,6 @@
 
 .method static synthetic access$33(Lcom/kochava/android/tracker/Feature;)Ljava/util/Timer;
     .locals 1
-    .parameter
 
     .prologue
     .line 186
@@ -1093,7 +1049,6 @@
 
 .method static synthetic access$34(Lcom/kochava/android/tracker/Feature;)Ljava/lang/String;
     .locals 1
-    .parameter
 
     .prologue
     .line 1748
@@ -1106,8 +1061,6 @@
 
 .method static synthetic access$35(Lcom/kochava/android/tracker/Feature;Z)Lorg/apache/http/client/HttpClient;
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 2250
@@ -1120,7 +1073,6 @@
 
 .method static synthetic access$36(Lcom/kochava/android/tracker/Feature;)Ljava/lang/String;
     .locals 1
-    .parameter
 
     .prologue
     .line 166
@@ -1131,7 +1083,6 @@
 
 .method static synthetic access$37(Lcom/kochava/android/tracker/Feature;)Landroid/content/SharedPreferences;
     .locals 1
-    .parameter
 
     .prologue
     .line 196
@@ -1152,8 +1103,6 @@
 
 .method static synthetic access$39(Lcom/kochava/android/tracker/Feature;Ljava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 161
@@ -1164,7 +1113,6 @@
 
 .method static synthetic access$4(Lcom/kochava/android/tracker/Feature;)Ljava/lang/String;
     .locals 1
-    .parameter
 
     .prologue
     .line 1591
@@ -1177,8 +1125,6 @@
 
 .method static synthetic access$40(Lcom/kochava/android/tracker/Feature;Z)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 190
@@ -1189,8 +1135,6 @@
 
 .method static synthetic access$41(Lcom/kochava/android/tracker/Feature;Ljava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 1200
@@ -1211,7 +1155,6 @@
 
 .method static synthetic access$43(Lcom/kochava/android/tracker/Feature;)Landroid/os/Handler;
     .locals 1
-    .parameter
 
     .prologue
     .line 872
@@ -1222,7 +1165,6 @@
 
 .method static synthetic access$44(Lcom/kochava/android/tracker/Feature;)Ljava/lang/String;
     .locals 1
-    .parameter
 
     .prologue
     .line 161
@@ -1233,7 +1175,6 @@
 
 .method static synthetic access$45(Lcom/kochava/android/tracker/Feature;)Ljava/lang/String;
     .locals 1
-    .parameter
 
     .prologue
     .line 1624
@@ -1246,7 +1187,6 @@
 
 .method static synthetic access$46(Lcom/kochava/android/tracker/Feature;)Ljava/lang/String;
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/security/NoSuchAlgorithmException;,
@@ -1265,8 +1205,6 @@
 
 .method static synthetic access$5(Lcom/kochava/android/tracker/Feature;Ljava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 155
@@ -1277,8 +1215,6 @@
 
 .method static synthetic access$6(Lcom/kochava/android/tracker/Feature;Ljava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 156
@@ -1289,8 +1225,6 @@
 
 .method static synthetic access$7(Lcom/kochava/android/tracker/Feature;Ljava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 157
@@ -1301,8 +1235,6 @@
 
 .method static synthetic access$8(Lcom/kochava/android/tracker/Feature;Ljava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 158
@@ -1313,7 +1245,6 @@
 
 .method static synthetic access$9(Lcom/kochava/android/tracker/Feature;)Ljava/lang/String;
     .locals 1
-    .parameter
 
     .prologue
     .line 156
@@ -1324,7 +1255,7 @@
 
 .method private addGlobalProperties(Lorg/json/JSONObject;)Lorg/json/JSONObject;
     .locals 7
-    .parameter "map"
+    .param p1, "map"    # Lorg/json/JSONObject;
 
     .prologue
     const-string v1, "updelta"
@@ -1527,7 +1458,7 @@
     move-object v0, v1
 
     .line 1150
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     sget-boolean v1, Lcom/kochava/android/tracker/Global;->DEBUG:Z
 
     if-eqz v1, :cond_0
@@ -1551,7 +1482,7 @@
     const-string v0, ""
 
     .line 1105
-    .local v0, data:Ljava/lang/String;
+    .local v0, "data":Ljava/lang/String;
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -1713,7 +1644,7 @@
 
 .method private createHttpClient(Z)Lorg/apache/http/client/HttpClient;
     .locals 7
-    .parameter "setTimeOut"
+    .param p1, "setTimeOut"    # Z
 
     .prologue
     .line 2252
@@ -1734,7 +1665,7 @@
     invoke-direct {v1}, Lorg/apache/http/params/BasicHttpParams;-><init>()V
 
     .line 2254
-    .local v1, params:Lorg/apache/http/params/HttpParams;
+    .local v1, "params":Lorg/apache/http/params/HttpParams;
     sget-object v3, Lorg/apache/http/HttpVersion;->HTTP_1_1:Lorg/apache/http/HttpVersion;
 
     invoke-static {v1, v3}, Lorg/apache/http/params/HttpProtocolParams;->setVersion(Lorg/apache/http/params/HttpParams;Lorg/apache/http/ProtocolVersion;)V
@@ -1764,7 +1695,7 @@
     invoke-direct {v2}, Lorg/apache/http/conn/scheme/SchemeRegistry;-><init>()V
 
     .line 2262
-    .local v2, schReg:Lorg/apache/http/conn/scheme/SchemeRegistry;
+    .local v2, "schReg":Lorg/apache/http/conn/scheme/SchemeRegistry;
     new-instance v3, Lorg/apache/http/conn/scheme/Scheme;
 
     const-string v4, "http"
@@ -1800,7 +1731,7 @@
     invoke-direct {v0, v1, v2}, Lorg/apache/http/impl/conn/tsccm/ThreadSafeClientConnManager;-><init>(Lorg/apache/http/params/HttpParams;Lorg/apache/http/conn/scheme/SchemeRegistry;)V
 
     .line 2266
-    .local v0, conMgr:Lorg/apache/http/conn/ClientConnectionManager;
+    .local v0, "conMgr":Lorg/apache/http/conn/ClientConnectionManager;
     new-instance v3, Lorg/apache/http/impl/client/DefaultHttpClient;
 
     invoke-direct {v3, v0, v1}, Lorg/apache/http/impl/client/DefaultHttpClient;-><init>(Lorg/apache/http/conn/ClientConnectionManager;Lorg/apache/http/params/HttpParams;)V
@@ -1810,7 +1741,7 @@
 
 .method public static enableDebug(Z)V
     .locals 0
-    .parameter "flag"
+    .param p0, "flag"    # Z
 
     .prologue
     .line 2271
@@ -1822,7 +1753,7 @@
 
 .method private eventSession(Ljava/lang/String;)V
     .locals 4
-    .parameter "state"
+    .param p1, "state"    # Ljava/lang/String;
 
     .prologue
     .line 1419
@@ -1856,7 +1787,7 @@
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     .line 1424
-    .local v0, properties:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v0, "properties":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v1, "state"
 
     invoke-virtual {v0, v1, p1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -1872,8 +1803,7 @@
 
 .method private fireEvent(Ljava/lang/String;Ljava/util/Map;)V
     .locals 12
-    .parameter "eventAction"
-    .parameter
+    .param p1, "eventAction"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1887,7 +1817,7 @@
     .end annotation
 
     .prologue
-    .local p2, properties:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p2, "properties":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v7, "android_id"
 
     const-string v7, ""
@@ -1950,7 +1880,7 @@
     invoke-direct {v1}, Lorg/json/JSONObject;-><init>()V
 
     .line 1446
-    .local v1, dataObj:Lorg/json/JSONObject;
+    .local v1, "dataObj":Lorg/json/JSONObject;
     :try_start_0
     const-string v7, "kochava_app_id"
 
@@ -2024,7 +1954,7 @@
     move-result-object v5
 
     .line 1455
-    .local v5, propertiesObj:Lorg/json/JSONObject;
+    .local v5, "propertiesObj":Lorg/json/JSONObject;
     sget-boolean v7, Lcom/kochava/android/tracker/Global;->DEBUG:Z
 
     if-eqz v7, :cond_2
@@ -2381,13 +2311,13 @@
     check-cast v6, Landroid/view/WindowManager;
 
     .line 1490
-    .local v6, wm:Landroid/view/WindowManager;
+    .local v6, "wm":Landroid/view/WindowManager;
     new-instance v4, Landroid/util/DisplayMetrics;
 
     invoke-direct {v4}, Landroid/util/DisplayMetrics;-><init>()V
 
     .line 1491
-    .local v4, metrics:Landroid/util/DisplayMetrics;
+    .local v4, "metrics":Landroid/util/DisplayMetrics;
     invoke-interface {v6}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
 
     move-result-object v7
@@ -2412,15 +2342,15 @@
     invoke-static {v7, v8}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 1549
-    .end local v4           #metrics:Landroid/util/DisplayMetrics;
-    .end local v5           #propertiesObj:Lorg/json/JSONObject;
-    .end local v6           #wm:Landroid/view/WindowManager;
+    .end local v4    # "metrics":Landroid/util/DisplayMetrics;
+    .end local v5    # "propertiesObj":Lorg/json/JSONObject;
+    .end local v6    # "wm":Landroid/view/WindowManager;
     :cond_b
     :goto_1
     return-void
 
     .line 1486
-    .restart local v5       #propertiesObj:Lorg/json/JSONObject;
+    .restart local v5    # "propertiesObj":Lorg/json/JSONObject;
     :cond_c
     const-string v7, "fb_attribution_id"
 
@@ -2442,7 +2372,7 @@
     move-object v2, v7
 
     .line 1502
-    .local v2, e:Lorg/json/JSONException;
+    .local v2, "e":Lorg/json/JSONException;
     :try_start_2
     invoke-virtual {v2}, Lorg/json/JSONException;->printStackTrace()V
 
@@ -2462,15 +2392,15 @@
     goto :goto_1
 
     .line 1531
-    .end local v2           #e:Lorg/json/JSONException;
-    .end local v5           #propertiesObj:Lorg/json/JSONObject;
+    .end local v2    # "e":Lorg/json/JSONException;
+    .end local v5    # "propertiesObj":Lorg/json/JSONObject;
     :catch_1
     move-exception v7
 
     move-object v2, v7
 
     .line 1533
-    .restart local v2       #e:Lorg/json/JSONException;
+    .restart local v2    # "e":Lorg/json/JSONException;
     invoke-virtual {v2}, Lorg/json/JSONException;->printStackTrace()V
 
     .line 1534
@@ -2487,15 +2417,15 @@
     goto :goto_1
 
     .line 1508
-    .end local v2           #e:Lorg/json/JSONException;
-    .restart local v5       #propertiesObj:Lorg/json/JSONObject;
+    .end local v2    # "e":Lorg/json/JSONException;
+    .restart local v5    # "propertiesObj":Lorg/json/JSONObject;
     :catch_2
     move-exception v7
 
     move-object v2, v7
 
     .line 1510
-    .local v2, e:Ljava/lang/Exception;
+    .local v2, "e":Ljava/lang/Exception;
     :try_start_3
     sget-boolean v7, Lcom/kochava/android/tracker/Global;->DEBUGERROR:Z
 
@@ -2512,7 +2442,7 @@
     invoke-virtual {v2}, Ljava/lang/Exception;->printStackTrace()V
 
     .line 1514
-    .end local v2           #e:Ljava/lang/Exception;
+    .end local v2    # "e":Ljava/lang/Exception;
     :cond_e
     :goto_2
     iget-object v7, p0, Lcom/kochava/android/tracker/Feature;->mSuperProperties:Ljava/util/Map;
@@ -2578,7 +2508,7 @@
     move-result v0
 
     .line 1544
-    .local v0, count:I
+    .local v0, "count":I
     sget-boolean v7, Lcom/kochava/android/tracker/Global;->DEBUG:Z
 
     if-eqz v7, :cond_11
@@ -2621,7 +2551,7 @@
     goto/16 :goto_1
 
     .line 1516
-    .end local v0           #count:I
+    .end local v0    # "count":I
     :cond_13
     :try_start_4
     invoke-interface {v8}, Ljava/util/Iterator;->next()Ljava/lang/Object;
@@ -2631,7 +2561,7 @@
     check-cast v3, Ljava/util/Map$Entry;
 
     .line 1518
-    .local v3, entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v3, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-interface {v3}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v7
@@ -2647,7 +2577,7 @@
     goto :goto_3
 
     .line 1524
-    .end local v3           #entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
+    .end local v3    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
     :cond_14
     invoke-interface {v8}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -2656,7 +2586,7 @@
     check-cast v3, Ljava/util/Map$Entry;
 
     .line 1526
-    .restart local v3       #entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
+    .restart local v3    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-interface {v3}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v7
@@ -2674,7 +2604,7 @@
     goto :goto_4
 
     .line 1507
-    .end local v3           #entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
+    .end local v3    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
     :catch_3
     move-exception v7
 
@@ -2689,10 +2619,10 @@
 
 .method private getAd(Landroid/webkit/WebView;Landroid/app/Activity;II)V
     .locals 9
-    .parameter "adWebview"
-    .parameter "context"
-    .parameter "height"
-    .parameter "width"
+    .param p1, "adWebview"    # Landroid/webkit/WebView;
+    .param p2, "context"    # Landroid/app/Activity;
+    .param p3, "height"    # I
+    .param p4, "width"    # I
 
     .prologue
     const-string v2, "KochavaTracker"
@@ -2731,7 +2661,7 @@
     invoke-direct {v7, v1, v2}, Landroid/content/ComponentName;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
     .line 1981
-    .local v7, cn:Landroid/content/ComponentName;
+    .local v7, "cn":Landroid/content/ComponentName;
     :try_start_0
     iget-object v1, p0, Lcom/kochava/android/tracker/Feature;->mContext:Landroid/content/Context;
 
@@ -2746,7 +2676,7 @@
     move-result-object v6
 
     .line 1982
-    .local v6, ai:Landroid/content/pm/ActivityInfo;
+    .local v6, "ai":Landroid/content/pm/ActivityInfo;
     sget-boolean v1, Lcom/kochava/android/tracker/Global;->DEBUG:Z
 
     if-eqz v1, :cond_2
@@ -2760,7 +2690,7 @@
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 1995
-    .end local v6           #ai:Landroid/content/pm/ActivityInfo;
+    .end local v6    # "ai":Landroid/content/pm/ActivityInfo;
     :cond_2
     :goto_1
     new-instance v0, Lcom/kochava/android/tracker/Feature$5;
@@ -2778,20 +2708,20 @@
     invoke-direct/range {v0 .. v5}, Lcom/kochava/android/tracker/Feature$5;-><init>(Lcom/kochava/android/tracker/Feature;Landroid/app/Activity;IILandroid/webkit/WebView;)V
 
     .line 2245
-    .local v0, getResponse:Ljava/lang/Thread;
+    .local v0, "getResponse":Ljava/lang/Thread;
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
     goto :goto_0
 
     .line 1984
-    .end local v0           #getResponse:Ljava/lang/Thread;
+    .end local v0    # "getResponse":Ljava/lang/Thread;
     :catch_0
     move-exception v1
 
     move-object v8, v1
 
     .line 1987
-    .local v8, e1:Landroid/content/pm/PackageManager$NameNotFoundException;
+    .local v8, "e1":Landroid/content/pm/PackageManager$NameNotFoundException;
     sget-boolean v1, Lcom/kochava/android/tracker/Global;->DEBUGERROR:Z
 
     if-eqz v1, :cond_3
@@ -2875,7 +2805,7 @@
 
 .method protected static getAttributionId(Landroid/content/ContentResolver;)Ljava/lang/String;
     .locals 10
-    .parameter "contentResolver"
+    .param p0, "contentResolver"    # Landroid/content/ContentResolver;
 
     .prologue
     const/4 v9, 0x0
@@ -2886,7 +2816,7 @@
     const/4 v6, 0x0
 
     .line 2313
-    .local v6, attributionId:Ljava/lang/String;
+    .local v6, "attributionId":Ljava/lang/String;
     const/4 v0, 0x1
 
     :try_start_0
@@ -2899,7 +2829,7 @@
     aput-object v1, v2, v0
 
     .line 2314
-    .local v2, projection:[Ljava/lang/String;
+    .local v2, "projection":[Ljava/lang/String;
     sget-object v1, Lcom/kochava/android/tracker/Feature;->ATTRIBUTION_ID_CONTENT_URI:Landroid/net/Uri;
 
     const/4 v3, 0x0
@@ -2917,7 +2847,7 @@
     move-result-object v7
 
     .line 2316
-    .local v7, c:Landroid/database/Cursor;
+    .local v7, "c":Landroid/database/Cursor;
     if-eqz v7, :cond_0
 
     invoke-interface {v7}, Landroid/database/Cursor;->moveToFirst()Z
@@ -2930,14 +2860,14 @@
     move-object v0, v9
 
     .line 2326
-    .end local v2           #projection:[Ljava/lang/String;
-    .end local v7           #c:Landroid/database/Cursor;
+    .end local v2    # "projection":[Ljava/lang/String;
+    .end local v7    # "c":Landroid/database/Cursor;
     :goto_0
     return-object v0
 
     .line 2319
-    .restart local v2       #projection:[Ljava/lang/String;
-    .restart local v7       #c:Landroid/database/Cursor;
+    .restart local v2    # "projection":[Ljava/lang/String;
+    .restart local v7    # "c":Landroid/database/Cursor;
     :cond_1
     const-string v0, "aid"
 
@@ -2951,8 +2881,8 @@
 
     move-result-object v6
 
-    .end local v2           #projection:[Ljava/lang/String;
-    .end local v7           #c:Landroid/database/Cursor;
+    .end local v2    # "projection":[Ljava/lang/String;
+    .end local v7    # "c":Landroid/database/Cursor;
     :cond_2
     :goto_1
     move-object v0, v6
@@ -2967,7 +2897,7 @@
     move-object v8, v0
 
     .line 2323
-    .local v8, e:Ljava/lang/Exception;
+    .local v8, "e":Ljava/lang/Exception;
     sget-boolean v0, Lcom/kochava/android/tracker/Global;->DEBUG:Z
 
     if-eqz v0, :cond_2
@@ -3040,7 +2970,7 @@
     iget-object v1, p0, Lcom/kochava/android/tracker/Feature;->mMacAddr:Ljava/lang/String;
 
     .line 1664
-    .local v1, mMacAddrHashed:Ljava/lang/String;
+    .local v1, "mMacAddrHashed":Ljava/lang/String;
     const-string v4, ":"
 
     const-string v5, "k"
@@ -3093,7 +3023,7 @@
     move-result-object v2
 
     .line 1673
-    .local v2, md5:Ljava/security/MessageDigest;
+    .local v2, "md5":Ljava/security/MessageDigest;
     invoke-virtual {v2}, Ljava/security/MessageDigest;->reset()V
 
     .line 1674
@@ -3115,7 +3045,7 @@
     invoke-direct {v0, v4, v5}, Ljava/math/BigInteger;-><init>(I[B)V
 
     .line 1676
-    .local v0, hash:Ljava/math/BigInteger;
+    .local v0, "hash":Ljava/math/BigInteger;
     const/16 v4, 0x10
 
     invoke-virtual {v0, v4}, Ljava/math/BigInteger;->toString(I)Ljava/lang/String;
@@ -3148,16 +3078,16 @@
     move-result-object v4
 
     .line 1702
-    .end local v0           #hash:Ljava/math/BigInteger;
-    .end local v1           #mMacAddrHashed:Ljava/lang/String;
-    .end local v2           #md5:Ljava/security/MessageDigest;
+    .end local v0    # "hash":Ljava/math/BigInteger;
+    .end local v1    # "mMacAddrHashed":Ljava/lang/String;
+    .end local v2    # "md5":Ljava/security/MessageDigest;
     :goto_1
     return-object v4
 
     .line 1679
-    .restart local v0       #hash:Ljava/math/BigInteger;
-    .restart local v1       #mMacAddrHashed:Ljava/lang/String;
-    .restart local v2       #md5:Ljava/security/MessageDigest;
+    .restart local v0    # "hash":Ljava/math/BigInteger;
+    .restart local v1    # "mMacAddrHashed":Ljava/lang/String;
+    .restart local v2    # "md5":Ljava/security/MessageDigest;
     :cond_0
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -3178,22 +3108,22 @@
     goto :goto_0
 
     .line 1684
-    .end local v0           #hash:Ljava/math/BigInteger;
-    .end local v1           #mMacAddrHashed:Ljava/lang/String;
-    .end local v2           #md5:Ljava/security/MessageDigest;
+    .end local v0    # "hash":Ljava/math/BigInteger;
+    .end local v1    # "mMacAddrHashed":Ljava/lang/String;
+    .end local v2    # "md5":Ljava/security/MessageDigest;
     :catch_0
     move-exception v4
 
     move-object v3, v4
 
     .line 1686
-    .local v3, nsae:Ljava/security/NoSuchAlgorithmException;
+    .local v3, "nsae":Ljava/security/NoSuchAlgorithmException;
     iget-object v4, p0, Lcom/kochava/android/tracker/Feature;->mMacAddr:Ljava/lang/String;
 
     goto :goto_1
 
     .line 1691
-    .end local v3           #nsae:Ljava/security/NoSuchAlgorithmException;
+    .end local v3    # "nsae":Ljava/security/NoSuchAlgorithmException;
     :cond_1
     iget-object v4, p0, Lcom/kochava/android/tracker/Feature;->mIMEI:Ljava/lang/String;
 
@@ -3337,7 +3267,7 @@
     const-string v4, ""
 
     .line 1715
-    .local v4, odin:Ljava/lang/String;
+    .local v4, "odin":Ljava/lang/String;
     const-string v8, "SHA-1"
 
     invoke-static {v8}, Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
@@ -3345,13 +3275,13 @@
     move-result-object v3
 
     .line 1716
-    .local v3, md:Ljava/security/MessageDigest;
+    .local v3, "md":Ljava/security/MessageDigest;
     const/16 v8, 0x28
 
     new-array v5, v8, [B
 
     .line 1717
-    .local v5, sha1hash:[B
+    .local v5, "sha1hash":[B
     iget-object v8, p0, Lcom/kochava/android/tracker/Feature;->mMacAddr:Ljava/lang/String;
 
     const-string v9, "iso-8859-1"
@@ -3381,10 +3311,10 @@
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
 
     .line 1723
-    .local v0, buf:Ljava/lang/StringBuffer;
+    .local v0, "buf":Ljava/lang/StringBuffer;
     const/4 v2, 0x0
 
-    .local v2, i:I
+    .local v2, "i":I
     :goto_0
     array-length v8, v5
 
@@ -3398,20 +3328,20 @@
     move-object v8, v4
 
     .line 1744
-    .end local v0           #buf:Ljava/lang/StringBuffer;
-    .end local v2           #i:I
-    .end local v3           #md:Ljava/security/MessageDigest;
-    .end local v4           #odin:Ljava/lang/String;
-    .end local v5           #sha1hash:[B
+    .end local v0    # "buf":Ljava/lang/StringBuffer;
+    .end local v2    # "i":I
+    .end local v3    # "md":Ljava/security/MessageDigest;
+    .end local v4    # "odin":Ljava/lang/String;
+    .end local v5    # "sha1hash":[B
     :goto_1
     return-object v8
 
     .line 1725
-    .restart local v0       #buf:Ljava/lang/StringBuffer;
-    .restart local v2       #i:I
-    .restart local v3       #md:Ljava/security/MessageDigest;
-    .restart local v4       #odin:Ljava/lang/String;
-    .restart local v5       #sha1hash:[B
+    .restart local v0    # "buf":Ljava/lang/StringBuffer;
+    .restart local v2    # "i":I
+    .restart local v3    # "md":Ljava/security/MessageDigest;
+    .restart local v4    # "odin":Ljava/lang/String;
+    .restart local v5    # "sha1hash":[B
     :cond_0
     aget-byte v8, v5, v2
 
@@ -3420,15 +3350,15 @@
     and-int/lit8 v1, v8, 0xf
 
     .line 1726
-    .local v1, halfbyte:I
+    .local v1, "halfbyte":I
     const/4 v6, 0x0
 
-    .local v6, two_halfs:I
+    .local v6, "two_halfs":I
     move v7, v6
 
     .line 1729
-    .end local v6           #two_halfs:I
-    .local v7, two_halfs:I
+    .end local v6    # "two_halfs":I
+    .local v7, "two_halfs":I
     :goto_2
     if-ltz v1, :cond_1
 
@@ -3452,8 +3382,8 @@
     .line 1735
     add-int/lit8 v6, v7, 0x1
 
-    .end local v7           #two_halfs:I
-    .restart local v6       #two_halfs:I
+    .end local v7    # "two_halfs":I
+    .restart local v6    # "two_halfs":I
     const/4 v8, 0x1
 
     if-lt v7, v8, :cond_3
@@ -3464,8 +3394,8 @@
     goto :goto_0
 
     .line 1732
-    .end local v6           #two_halfs:I
-    .restart local v7       #two_halfs:I
+    .end local v6    # "two_halfs":I
+    .restart local v7    # "two_halfs":I
     :cond_1
     const/16 v8, 0xa
 
@@ -3480,13 +3410,13 @@
     goto :goto_3
 
     .line 1744
-    .end local v0           #buf:Ljava/lang/StringBuffer;
-    .end local v1           #halfbyte:I
-    .end local v2           #i:I
-    .end local v3           #md:Ljava/security/MessageDigest;
-    .end local v4           #odin:Ljava/lang/String;
-    .end local v5           #sha1hash:[B
-    .end local v7           #two_halfs:I
+    .end local v0    # "buf":Ljava/lang/StringBuffer;
+    .end local v1    # "halfbyte":I
+    .end local v2    # "i":I
+    .end local v3    # "md":Ljava/security/MessageDigest;
+    .end local v4    # "odin":Ljava/lang/String;
+    .end local v5    # "sha1hash":[B
+    .end local v7    # "two_halfs":I
     :cond_2
     const-string v8, ""
 
@@ -3494,18 +3424,18 @@
 
     goto :goto_1
 
-    .restart local v0       #buf:Ljava/lang/StringBuffer;
-    .restart local v1       #halfbyte:I
-    .restart local v2       #i:I
-    .restart local v3       #md:Ljava/security/MessageDigest;
-    .restart local v4       #odin:Ljava/lang/String;
-    .restart local v5       #sha1hash:[B
-    .restart local v6       #two_halfs:I
+    .restart local v0    # "buf":Ljava/lang/StringBuffer;
+    .restart local v1    # "halfbyte":I
+    .restart local v2    # "i":I
+    .restart local v3    # "md":Ljava/security/MessageDigest;
+    .restart local v4    # "odin":Ljava/lang/String;
+    .restart local v5    # "sha1hash":[B
+    .restart local v6    # "two_halfs":I
     :cond_3
     move v7, v6
 
-    .end local v6           #two_halfs:I
-    .restart local v7       #two_halfs:I
+    .end local v6    # "two_halfs":I
+    .restart local v7    # "two_halfs":I
     goto :goto_2
 .end method
 
@@ -3554,9 +3484,8 @@
 
 .method private init(Landroid/content/Context;ZLjava/util/HashMap;)V
     .locals 23
-    .parameter "context"
-    .parameter "sendOnStart"
-    .parameter
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "sendOnStart"    # Z
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -3572,7 +3501,7 @@
 
     .prologue
     .line 284
-    .local p3, datamap:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p3, "datamap":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     sget-boolean v18, Lcom/kochava/android/tracker/Global;->DEBUG:Z
 
     if-eqz v18, :cond_0
@@ -3726,7 +3655,7 @@
     check-cast v14, Ljava/lang/String;
 
     .line 323
-    .local v14, partner_id:Ljava/lang/String;
+    .local v14, "partner_id":Ljava/lang/String;
     const-string v18, "partner_name"
 
     move-object/from16 v0, p3
@@ -3740,7 +3669,7 @@
     check-cast v15, Ljava/lang/String;
 
     .line 324
-    .local v15, partner_name:Ljava/lang/String;
+    .local v15, "partner_name":Ljava/lang/String;
     const-string v18, "kochava_app_id"
 
     move-object/from16 v0, p3
@@ -3754,7 +3683,7 @@
     check-cast v4, Ljava/lang/String;
 
     .line 325
-    .local v4, app_id:Ljava/lang/String;
+    .local v4, "app_id":Ljava/lang/String;
     const-string v18, "currency"
 
     move-object/from16 v0, p3
@@ -3768,7 +3697,7 @@
     check-cast v7, Ljava/lang/String;
 
     .line 326
-    .local v7, currency:Ljava/lang/String;
+    .local v7, "currency":Ljava/lang/String;
     const-string v18, "request_attribution"
 
     move-object/from16 v0, p3
@@ -3782,7 +3711,7 @@
     check-cast v5, Ljava/lang/String;
 
     .line 328
-    .local v5, attributionBool:Ljava/lang/String;
+    .local v5, "attributionBool":Ljava/lang/String;
     if-eqz v7, :cond_1
 
     invoke-virtual {v7}, Ljava/lang/String;->length()I
@@ -3922,11 +3851,11 @@
     .catch Lorg/json/JSONException; {:try_start_2 .. :try_end_2} :catch_0
 
     .line 790
-    .end local v4           #app_id:Ljava/lang/String;
-    .end local v5           #attributionBool:Ljava/lang/String;
-    .end local v7           #currency:Ljava/lang/String;
-    .end local v14           #partner_id:Ljava/lang/String;
-    .end local v15           #partner_name:Ljava/lang/String;
+    .end local v4    # "app_id":Ljava/lang/String;
+    .end local v5    # "attributionBool":Ljava/lang/String;
+    .end local v7    # "currency":Ljava/lang/String;
+    .end local v14    # "partner_id":Ljava/lang/String;
+    .end local v15    # "partner_name":Ljava/lang/String;
     :cond_6
     :goto_2
     return-void
@@ -3946,11 +3875,11 @@
     goto :goto_2
 
     .line 357
-    .restart local v4       #app_id:Ljava/lang/String;
-    .restart local v5       #attributionBool:Ljava/lang/String;
-    .restart local v7       #currency:Ljava/lang/String;
-    .restart local v14       #partner_id:Ljava/lang/String;
-    .restart local v15       #partner_name:Ljava/lang/String;
+    .restart local v4    # "app_id":Ljava/lang/String;
+    .restart local v5    # "attributionBool":Ljava/lang/String;
+    .restart local v7    # "currency":Ljava/lang/String;
+    .restart local v14    # "partner_id":Ljava/lang/String;
+    .restart local v15    # "partner_name":Ljava/lang/String;
     :cond_8
     :try_start_3
     move-object v0, v4
@@ -4367,11 +4296,11 @@
     const/4 v12, 0x0
 
     .line 448
-    .local v12, missing:Z
+    .local v12, "missing":Z
     const-string v13, ""
 
     .line 450
-    .local v13, missingItems:Ljava/lang/String;
+    .local v13, "missingItems":Ljava/lang/String;
     new-instance v6, Landroid/content/ComponentName;
 
     move-object/from16 v0, p0
@@ -4391,7 +4320,7 @@
     invoke-direct {v0, v1, v2}, Landroid/content/ComponentName;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
     .line 453
-    .local v6, cn:Landroid/content/ComponentName;
+    .local v6, "cn":Landroid/content/ComponentName;
     :try_start_4
     move-object/from16 v0, p0
 
@@ -4416,7 +4345,7 @@
     move-result-object v3
 
     .line 454
-    .local v3, ai:Landroid/content/pm/ActivityInfo;
+    .local v3, "ai":Landroid/content/pm/ActivityInfo;
     sget-boolean v18, Lcom/kochava/android/tracker/Global;->DEBUG:Z
 
     if-eqz v18, :cond_10
@@ -4430,7 +4359,7 @@
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_4 .. :try_end_4} :catch_1
 
     .line 463
-    .end local v3           #ai:Landroid/content/pm/ActivityInfo;
+    .end local v3    # "ai":Landroid/content/pm/ActivityInfo;
     :cond_10
     :goto_5
     move-object/from16 v0, p0
@@ -4634,7 +4563,7 @@
     check-cast v16, Landroid/telephony/TelephonyManager;
 
     .line 495
-    .local v16, telephonyManager:Landroid/telephony/TelephonyManager;
+    .local v16, "telephonyManager":Landroid/telephony/TelephonyManager;
     invoke-virtual/range {v16 .. v16}, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;
 
     move-result-object v18
@@ -4648,7 +4577,7 @@
     .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_2
 
     .line 511
-    .end local v16           #telephonyManager:Landroid/telephony/TelephonyManager;
+    .end local v16    # "telephonyManager":Landroid/telephony/TelephonyManager;
     :cond_16
     :goto_6
     :try_start_6
@@ -4667,7 +4596,7 @@
     check-cast v17, Landroid/net/wifi/WifiManager;
 
     .line 512
-    .local v17, wimanager:Landroid/net/wifi/WifiManager;
+    .local v17, "wimanager":Landroid/net/wifi/WifiManager;
     invoke-virtual/range {v17 .. v17}, Landroid/net/wifi/WifiManager;->getConnectionInfo()Landroid/net/wifi/WifiInfo;
 
     move-result-object v18
@@ -4685,7 +4614,7 @@
     .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_4
 
     .line 515
-    .end local v17           #wimanager:Landroid/net/wifi/WifiManager;
+    .end local v17    # "wimanager":Landroid/net/wifi/WifiManager;
     :goto_7
     new-instance v18, Ljava/lang/StringBuilder;
 
@@ -4898,16 +4827,16 @@
     invoke-direct {v0, v1, v2}, Lcom/kochava/android/tracker/Feature$3;-><init>(Lcom/kochava/android/tracker/Feature;Z)V
 
     .line 788
-    .local v11, getKVinit:Ljava/lang/Thread;
+    .local v11, "getKVinit":Ljava/lang/Thread;
     invoke-virtual {v11}, Ljava/lang/Thread;->start()V
 
     goto/16 :goto_2
 
     .line 370
-    .end local v6           #cn:Landroid/content/ComponentName;
-    .end local v11           #getKVinit:Ljava/lang/Thread;
-    .end local v12           #missing:Z
-    .end local v13           #missingItems:Ljava/lang/String;
+    .end local v6    # "cn":Landroid/content/ComponentName;
+    .end local v11    # "getKVinit":Ljava/lang/Thread;
+    .end local v12    # "missing":Z
+    .end local v13    # "missingItems":Ljava/lang/String;
     :cond_17
     if-eqz v14, :cond_18
 
@@ -4957,7 +4886,7 @@
     move-object/from16 v8, v18
 
     .line 435
-    .local v8, e:Lorg/json/JSONException;
+    .local v8, "e":Lorg/json/JSONException;
     sget-boolean v18, Lcom/kochava/android/tracker/Global;->DEBUGERROR:Z
 
     if-eqz v18, :cond_e
@@ -4988,7 +4917,7 @@
     goto/16 :goto_4
 
     .line 379
-    .end local v8           #e:Lorg/json/JSONException;
+    .end local v8    # "e":Lorg/json/JSONException;
     :cond_19
     :try_start_9
     move-object/from16 v0, p0
@@ -5188,16 +5117,16 @@
     goto/16 :goto_3
 
     .line 456
-    .restart local v6       #cn:Landroid/content/ComponentName;
-    .restart local v12       #missing:Z
-    .restart local v13       #missingItems:Ljava/lang/String;
+    .restart local v6    # "cn":Landroid/content/ComponentName;
+    .restart local v12    # "missing":Z
+    .restart local v13    # "missingItems":Ljava/lang/String;
     :catch_1
     move-exception v18
 
     move-object/from16 v9, v18
 
     .line 458
-    .local v9, e1:Landroid/content/pm/PackageManager$NameNotFoundException;
+    .local v9, "e1":Landroid/content/pm/PackageManager$NameNotFoundException;
     const/4 v12, 0x1
 
     .line 459
@@ -5222,14 +5151,14 @@
     goto/16 :goto_5
 
     .line 504
-    .end local v9           #e1:Landroid/content/pm/PackageManager$NameNotFoundException;
+    .end local v9    # "e1":Landroid/content/pm/PackageManager$NameNotFoundException;
     :catch_2
     move-exception v18
 
     move-object/from16 v10, v18
 
     .line 506
-    .local v10, exc:Ljava/lang/Exception;
+    .local v10, "exc":Ljava/lang/Exception;
     sget-boolean v18, Lcom/kochava/android/tracker/Global;->DEBUGERROR:Z
 
     if-eqz v18, :cond_16
@@ -5259,34 +5188,34 @@
     goto/16 :goto_6
 
     .line 531
-    .end local v10           #exc:Ljava/lang/Exception;
+    .end local v10    # "exc":Ljava/lang/Exception;
     :catch_3
     move-exception v18
 
     move-object/from16 v9, v18
 
     .line 533
-    .local v9, e1:Lorg/json/JSONException;
+    .local v9, "e1":Lorg/json/JSONException;
     invoke-virtual {v9}, Lorg/json/JSONException;->printStackTrace()V
 
     goto/16 :goto_8
 
     .line 513
-    .end local v9           #e1:Lorg/json/JSONException;
+    .end local v9    # "e1":Lorg/json/JSONException;
     :catch_4
     move-exception v18
 
     goto/16 :goto_7
 
     .line 316
-    .end local v4           #app_id:Ljava/lang/String;
-    .end local v5           #attributionBool:Ljava/lang/String;
-    .end local v6           #cn:Landroid/content/ComponentName;
-    .end local v7           #currency:Ljava/lang/String;
-    .end local v12           #missing:Z
-    .end local v13           #missingItems:Ljava/lang/String;
-    .end local v14           #partner_id:Ljava/lang/String;
-    .end local v15           #partner_name:Ljava/lang/String;
+    .end local v4    # "app_id":Ljava/lang/String;
+    .end local v5    # "attributionBool":Ljava/lang/String;
+    .end local v6    # "cn":Landroid/content/ComponentName;
+    .end local v7    # "currency":Ljava/lang/String;
+    .end local v12    # "missing":Z
+    .end local v13    # "missingItems":Ljava/lang/String;
+    .end local v14    # "partner_id":Ljava/lang/String;
+    .end local v15    # "partner_name":Ljava/lang/String;
     :catch_5
     move-exception v18
 
@@ -5315,7 +5244,7 @@
     move-result-object v4
 
     .line 1752
-    .local v4, data:Ljava/lang/String;
+    .local v4, "data":Ljava/lang/String;
     if-nez v4, :cond_0
 
     .line 1755
@@ -5340,7 +5269,7 @@
     invoke-direct {v0, v1, v2}, Ljava/util/StringTokenizer;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 1758
-    .local v19, tok:Ljava/util/StringTokenizer;
+    .local v19, "tok":Ljava/util/StringTokenizer;
     invoke-virtual/range {v19 .. v19}, Ljava/util/StringTokenizer;->nextToken()Ljava/lang/String;
 
     move-result-object v20
@@ -5350,7 +5279,7 @@
     move-result-wide v17
 
     .line 1760
-    .local v17, timestamp:J
+    .local v17, "timestamp":J
     invoke-virtual/range {v19 .. v19}, Ljava/util/StringTokenizer;->nextToken()Ljava/lang/String;
 
     move-result-object v4
@@ -5448,7 +5377,7 @@
     const/4 v11, 0x0
 
     .line 1780
-    .local v11, isInitial:Z
+    .local v11, "isInitial":Z
     const-string v20, "\"action\":\"initial\""
 
     move-object v0, v4
@@ -5489,7 +5418,7 @@
     move-result-object v7
 
     .line 1791
-    .local v7, httpclient:Lorg/apache/http/client/HttpClient;
+    .local v7, "httpclient":Lorg/apache/http/client/HttpClient;
     invoke-interface {v7}, Lorg/apache/http/client/HttpClient;->getParams()Lorg/apache/http/params/HttpParams;
 
     move-result-object v20
@@ -5514,11 +5443,11 @@
     invoke-direct {v0, v1}, Lorg/apache/http/client/methods/HttpPost;-><init>(Ljava/lang/String;)V
 
     .line 1799
-    .local v8, httppost:Lorg/apache/http/client/methods/HttpPost;
+    .local v8, "httppost":Lorg/apache/http/client/methods/HttpPost;
     const/4 v10, 0x0
 
     .line 1801
-    .local v10, isIdentityLink:Z
+    .local v10, "isIdentityLink":Z
     :try_start_0
     const-string v20, "identityLink"
 
@@ -5574,7 +5503,7 @@
     invoke-direct {v0, v1, v2}, Lorg/apache/http/entity/StringEntity;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 1805
-    .local v16, sentity:Lorg/apache/http/entity/StringEntity;
+    .local v16, "sentity":Lorg/apache/http/entity/StringEntity;
     new-instance v3, Lorg/apache/http/message/BasicHeader;
 
     const-string v20, "Content-Type"
@@ -5590,7 +5519,7 @@
     invoke-direct {v0, v1, v2}, Lorg/apache/http/message/BasicHeader;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 1806
-    .local v3, basicHeader:Lorg/apache/http/message/BasicHeader;
+    .local v3, "basicHeader":Lorg/apache/http/message/BasicHeader;
     invoke-virtual {v8}, Lorg/apache/http/client/methods/HttpPost;->getParams()Lorg/apache/http/params/HttpParams;
 
     move-result-object v20
@@ -5633,7 +5562,7 @@
     move-result-object v14
 
     .line 1811
-    .local v14, response:Lorg/apache/http/HttpResponse;
+    .local v14, "response":Lorg/apache/http/HttpResponse;
     invoke-interface {v14}, Lorg/apache/http/HttpResponse;->getEntity()Lorg/apache/http/HttpEntity;
     :try_end_0
     .catch Lorg/apache/http/client/ClientProtocolException; {:try_start_0 .. :try_end_0} :catch_2
@@ -5642,7 +5571,7 @@
     move-result-object v6
 
     .line 1812
-    .local v6, entity:Lorg/apache/http/HttpEntity;
+    .local v6, "entity":Lorg/apache/http/HttpEntity;
     if-nez v6, :cond_8
 
     .line 1813
@@ -5674,7 +5603,7 @@
     move-result-object v15
 
     .line 1819
-    .local v15, result:Ljava/lang/String;
+    .local v15, "result":Ljava/lang/String;
     sget-boolean v20, Lcom/kochava/android/tracker/Global;->DEBUG:Z
 
     if-eqz v20, :cond_a
@@ -5760,7 +5689,7 @@
     move-result v9
 
     .line 1844
-    .local v9, identityLinkResult:Z
+    .local v9, "identityLinkResult":Z
     sget-object v20, Lcom/kochava/android/tracker/Feature;->linkIdentityHandler:Landroid/os/Handler;
 
     if-eqz v20, :cond_d
@@ -5771,13 +5700,13 @@
     move-result-object v12
 
     .line 1847
-    .local v12, message:Landroid/os/Message;
+    .local v12, "message":Landroid/os/Message;
     new-instance v13, Landroid/os/Bundle;
 
     invoke-direct {v13}, Landroid/os/Bundle;-><init>()V
 
     .line 1848
-    .local v13, messageData:Landroid/os/Bundle;
+    .local v13, "messageData":Landroid/os/Bundle;
     const-string v20, "linkIdentityBool"
 
     move-object v0, v13
@@ -5800,9 +5729,9 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .end local v9           #identityLinkResult:Z
-    .end local v12           #message:Landroid/os/Message;
-    .end local v13           #messageData:Landroid/os/Bundle;
+    .end local v9    # "identityLinkResult":Z
+    .end local v12    # "message":Landroid/os/Message;
+    .end local v13    # "messageData":Landroid/os/Bundle;
     :cond_d
     move-object/from16 v20, v15
 
@@ -5830,14 +5759,14 @@
     goto :goto_1
 
     .line 1857
-    .end local v15           #result:Ljava/lang/String;
+    .end local v15    # "result":Ljava/lang/String;
     :catch_0
     move-exception v20
 
     move-object/from16 v5, v20
 
     .line 1859
-    .local v5, e:Ljava/io/IOException;
+    .local v5, "e":Ljava/io/IOException;
     :try_start_2
     sget-boolean v20, Lcom/kochava/android/tracker/Global;->DEBUG:Z
 
@@ -5865,14 +5794,14 @@
     goto/16 :goto_0
 
     .line 1862
-    .end local v5           #e:Ljava/io/IOException;
+    .end local v5    # "e":Ljava/io/IOException;
     :catch_1
     move-exception v20
 
     move-object/from16 v5, v20
 
     .line 1864
-    .local v5, e:Ljava/lang/OutOfMemoryError;
+    .local v5, "e":Ljava/lang/OutOfMemoryError;
     :try_start_3
     sget-boolean v20, Lcom/kochava/android/tracker/Global;->DEBUG:Z
 
@@ -5900,18 +5829,18 @@
     goto/16 :goto_0
 
     .line 1869
-    .end local v3           #basicHeader:Lorg/apache/http/message/BasicHeader;
-    .end local v5           #e:Ljava/lang/OutOfMemoryError;
-    .end local v6           #entity:Lorg/apache/http/HttpEntity;
-    .end local v14           #response:Lorg/apache/http/HttpResponse;
-    .end local v16           #sentity:Lorg/apache/http/entity/StringEntity;
+    .end local v3    # "basicHeader":Lorg/apache/http/message/BasicHeader;
+    .end local v5    # "e":Ljava/lang/OutOfMemoryError;
+    .end local v6    # "entity":Lorg/apache/http/HttpEntity;
+    .end local v14    # "response":Lorg/apache/http/HttpResponse;
+    .end local v16    # "sentity":Lorg/apache/http/entity/StringEntity;
     :catch_2
     move-exception v20
 
     move-object/from16 v5, v20
 
     .line 1871
-    .local v5, e:Lorg/apache/http/client/ClientProtocolException;
+    .local v5, "e":Lorg/apache/http/client/ClientProtocolException;
     sget-boolean v20, Lcom/kochava/android/tracker/Global;->DEBUG:Z
 
     if-eqz v20, :cond_11
@@ -5935,14 +5864,14 @@
     goto/16 :goto_0
 
     .line 1874
-    .end local v5           #e:Lorg/apache/http/client/ClientProtocolException;
+    .end local v5    # "e":Lorg/apache/http/client/ClientProtocolException;
     :catch_3
     move-exception v20
 
     move-object/from16 v5, v20
 
     .line 1877
-    .local v5, e:Ljava/io/IOException;
+    .local v5, "e":Ljava/io/IOException;
     sget-boolean v20, Lcom/kochava/android/tracker/Global;->DEBUG:Z
 
     if-eqz v20, :cond_12
@@ -5968,7 +5897,7 @@
 
 .method private queInitial(Z)V
     .locals 7
-    .parameter "cancelTimer"
+    .param p1, "cancelTimer"    # Z
 
     .prologue
     const-string v1, "noData"
@@ -6222,7 +6151,7 @@
     move-object v0, v1
 
     .line 1911
-    .local v0, e:Lorg/json/JSONException;
+    .local v0, "e":Lorg/json/JSONException;
     sget-boolean v1, Lcom/kochava/android/tracker/Global;->DEBUG:Z
 
     if-eqz v1, :cond_6
@@ -6242,7 +6171,7 @@
 
 .method public static setAttributionHandler(Landroid/os/Handler;)V
     .locals 0
-    .parameter "delegate"
+    .param p0, "delegate"    # Landroid/os/Handler;
 
     .prologue
     .line 1317
@@ -6254,7 +6183,7 @@
 
 .method private setCurrency(Ljava/lang/String;)V
     .locals 3
-    .parameter "cur"
+    .param p1, "cur"    # Ljava/lang/String;
 
     .prologue
     .line 1202
@@ -6336,7 +6265,7 @@
 
 .method public static setErrorDebug(Z)V
     .locals 0
-    .parameter "flag"
+    .param p0, "flag"    # Z
 
     .prologue
     .line 2276
@@ -6513,8 +6442,8 @@
 
 .method public event(Ljava/lang/String;Ljava/lang/String;)V
     .locals 6
-    .parameter "eventName"
-    .parameter "eventData"
+    .param p1, "eventName"    # Ljava/lang/String;
+    .param p2, "eventData"    # Ljava/lang/String;
 
     .prologue
     const-string v5, "KochavaTracker"
@@ -6573,7 +6502,7 @@
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
     .line 1369
-    .local v1, properties:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v1, "properties":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v2, "event_name"
 
     invoke-virtual {v1, v2, p1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -6593,14 +6522,14 @@
     goto :goto_0
 
     .line 1374
-    .end local v1           #properties:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .end local v1    # "properties":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     :catch_0
     move-exception v2
 
     move-object v0, v2
 
     .line 1376
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     sget-boolean v2, Lcom/kochava/android/tracker/Global;->DEBUG:Z
 
     if-eqz v2, :cond_0
@@ -6629,11 +6558,11 @@
 
 .method public eventSpatial(Ljava/lang/String;DDDLjava/lang/String;)V
     .locals 7
-    .parameter "eventName"
-    .parameter "x"
-    .parameter "y"
-    .parameter "z"
-    .parameter "eventData"
+    .param p1, "eventName"    # Ljava/lang/String;
+    .param p2, "x"    # D
+    .param p4, "y"    # D
+    .param p6, "z"    # D
+    .param p8, "eventData"    # Ljava/lang/String;
 
     .prologue
     const-string v6, "KochavaTracker"
@@ -6692,7 +6621,7 @@
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
     .line 1398
-    .local v1, properties:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v1, "properties":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v3, "event_name"
 
     invoke-virtual {v1, v3, p1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -6705,7 +6634,7 @@
     invoke-direct {v2, v3}, Ljava/text/DecimalFormat;-><init>(Ljava/lang/String;)V
 
     .line 1401
-    .local v2, twoDForm:Ljava/text/DecimalFormat;
+    .local v2, "twoDForm":Ljava/text/DecimalFormat;
     const-string v3, "x"
 
     invoke-virtual {v2, p2, p3}, Ljava/text/DecimalFormat;->format(D)Ljava/lang/String;
@@ -6771,15 +6700,15 @@
     goto :goto_0
 
     .line 1408
-    .end local v1           #properties:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
-    .end local v2           #twoDForm:Ljava/text/DecimalFormat;
+    .end local v1    # "properties":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .end local v2    # "twoDForm":Ljava/text/DecimalFormat;
     :catch_0
     move-exception v3
 
     move-object v0, v3
 
     .line 1410
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     sget-boolean v3, Lcom/kochava/android/tracker/Global;->DEBUG:Z
 
     if-eqz v3, :cond_0
@@ -6897,7 +6826,7 @@
     const-string v0, ""
 
     .line 1959
-    .local v0, openudid:Ljava/lang/String;
+    .local v0, "openudid":Ljava/lang/String;
     invoke-static {}, Lcom/kochava/android/util/OpenUDID;->getOpenUDIDInContext()Ljava/lang/String;
 
     move-result-object v0
@@ -6919,7 +6848,6 @@
 
 .method public linkIdentity(Ljava/util/Map;)V
     .locals 2
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -6932,7 +6860,7 @@
     .end annotation
 
     .prologue
-    .local p1, identityMap:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p1, "identityMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v1, "KochavaTracker"
 
     .line 1322
@@ -6980,8 +6908,7 @@
 
 .method public linkIdentity(Ljava/util/Map;Landroid/os/Handler;)V
     .locals 2
-    .parameter
-    .parameter "delegate"
+    .param p2, "delegate"    # Landroid/os/Handler;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -6996,7 +6923,7 @@
     .end annotation
 
     .prologue
-    .local p1, identityMap:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p1, "identityMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v1, "KochavaTracker"
 
     .line 1299
@@ -7047,7 +6974,6 @@
 
 .method public registerSuperProperties(Ljava/util/Map;)V
     .locals 5
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -7060,7 +6986,7 @@
     .end annotation
 
     .prologue
-    .local p1, superProperties:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p1, "superProperties":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v2, "KochavaTracker"
 
     .line 1167
@@ -7131,7 +7057,7 @@
     check-cast v0, Ljava/util/Map$Entry;
 
     .line 1179
-    .local v0, entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v0, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
     iget-object v4, p0, Lcom/kochava/android/tracker/Feature;->mSuperProperties:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
@@ -7153,7 +7079,7 @@
 
 .method public setAppLimitTracking(Z)V
     .locals 1
-    .parameter "shouldLimit"
+    .param p1, "shouldLimit"    # Z
 
     .prologue
     .line 795
@@ -7162,7 +7088,7 @@
     invoke-direct {v0, p0, p1}, Lcom/kochava/android/tracker/Feature$4;-><init>(Lcom/kochava/android/tracker/Feature;Z)V
 
     .line 868
-    .local v0, changeAppLimitTracking:Ljava/lang/Thread;
+    .local v0, "changeAppLimitTracking":Ljava/lang/Thread;
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
     .line 869
@@ -7171,8 +7097,8 @@
 
 .method public setLatlong(Ljava/lang/String;Ljava/lang/String;)V
     .locals 3
-    .parameter "lat"
-    .parameter "lon"
+    .param p1, "lat"    # Ljava/lang/String;
+    .param p2, "lon"    # Ljava/lang/String;
 
     .prologue
     .line 1216
@@ -7246,7 +7172,7 @@
 
 .method public setRequestAttributionData(Z)V
     .locals 0
-    .parameter "receive"
+    .param p1, "receive"    # Z
 
     .prologue
     .line 1229
@@ -7258,7 +7184,7 @@
 
 .method public setVersion(Ljava/lang/String;)V
     .locals 0
-    .parameter "ver"
+    .param p1, "ver"    # Ljava/lang/String;
 
     .prologue
     .line 1617

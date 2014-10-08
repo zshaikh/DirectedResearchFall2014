@@ -34,7 +34,7 @@
 
 .method static final getDefaultIntentServiceClassName(Landroid/content/Context;)Ljava/lang/String;
     .locals 3
-    .parameter "context"
+    .param p0, "context"    # Landroid/content/Context;
 
     .prologue
     .line 71
@@ -61,7 +61,7 @@
     move-result-object v0
 
     .line 73
-    .local v0, className:Ljava/lang/String;
+    .local v0, "className":Ljava/lang/String;
     return-object v0
 .end method
 
@@ -69,7 +69,7 @@
 # virtual methods
 .method protected getGCMIntentServiceClassName(Landroid/content/Context;)Ljava/lang/String;
     .locals 1
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     .line 63
@@ -82,8 +82,8 @@
 
 .method public final onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 6
-    .parameter "context"
-    .parameter "intent"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
     const/4 v4, 0x0
@@ -137,7 +137,7 @@
     move-result-object v1
 
     .line 48
-    .local v1, myClass:Ljava/lang/String;
+    .local v1, "myClass":Ljava/lang/String;
     const-class v2, Lcom/google/android/gcm/GCMBroadcastReceiver;
 
     invoke-virtual {v2}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -154,14 +154,14 @@
     invoke-static {v1}, Lcom/google/android/gcm/GCMRegistrar;->setRetryReceiverClassName(Ljava/lang/String;)V
 
     .line 52
-    .end local v1           #myClass:Ljava/lang/String;
+    .end local v1    # "myClass":Ljava/lang/String;
     :cond_0
     invoke-virtual {p0, p1}, Lcom/google/android/gcm/GCMBroadcastReceiver;->getGCMIntentServiceClassName(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v0
 
     .line 53
-    .local v0, className:Ljava/lang/String;
+    .local v0, "className":Ljava/lang/String;
     const-string v2, "GCMBroadcastReceiver"
 
     new-instance v2, Ljava/lang/StringBuilder;

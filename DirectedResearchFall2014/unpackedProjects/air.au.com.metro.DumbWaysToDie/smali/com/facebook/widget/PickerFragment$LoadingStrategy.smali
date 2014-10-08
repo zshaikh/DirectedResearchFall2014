@@ -162,7 +162,7 @@
 
     iget-object v2, p0, Lcom/facebook/widget/PickerFragment$LoadingStrategy;->this$0:Lcom/facebook/widget/PickerFragment;
 
-    #getter for: Lcom/facebook/widget/PickerFragment;->graphObjectClass:Ljava/lang/Class;
+    # getter for: Lcom/facebook/widget/PickerFragment;->graphObjectClass:Ljava/lang/Class;
     invoke-static {v2}, Lcom/facebook/widget/PickerFragment;->access$500(Lcom/facebook/widget/PickerFragment;)Ljava/lang/Class;
 
     move-result-object v2

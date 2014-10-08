@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/tapjoy/TapjoyDisplayAd;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 179
@@ -48,7 +47,7 @@
 
     iget-object v2, p0, Lcom/tapjoy/TapjoyDisplayAd$1;->this$0:Lcom/tapjoy/TapjoyDisplayAd;
 
-    #getter for: Lcom/tapjoy/TapjoyDisplayAd;->activityContext:Landroid/app/Activity;
+    # getter for: Lcom/tapjoy/TapjoyDisplayAd;->activityContext:Landroid/app/Activity;
     invoke-static {v2}, Lcom/tapjoy/TapjoyDisplayAd;->access$000(Lcom/tapjoy/TapjoyDisplayAd;)Landroid/app/Activity;
 
     move-result-object v2

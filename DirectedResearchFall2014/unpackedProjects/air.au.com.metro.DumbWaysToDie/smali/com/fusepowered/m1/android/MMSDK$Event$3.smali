@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m1/android/MMAdImpl;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 430
@@ -80,7 +79,7 @@
     move-object v0, v1
 
     .line 442
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v1, "Exception raised in your RequestListener: "
 
     const/4 v2, 0x1

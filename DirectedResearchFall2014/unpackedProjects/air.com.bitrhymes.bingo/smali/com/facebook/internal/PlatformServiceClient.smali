@@ -37,11 +37,11 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;IIILjava/lang/String;)V
     .locals 2
-    .parameter "context"
-    .parameter "requestMessage"
-    .parameter "replyMessage"
-    .parameter "protocolVersion"
-    .parameter "applicationId"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "requestMessage"    # I
+    .param p3, "replyMessage"    # I
+    .param p4, "protocolVersion"    # I
+    .param p5, "applicationId"    # Ljava/lang/String;
 
     .prologue
     .line 41
@@ -53,7 +53,7 @@
     move-result-object v0
 
     .line 45
-    .local v0, applicationContext:Landroid/content/Context;
+    .local v0, "applicationContext":Landroid/content/Context;
     if-eqz v0, :cond_0
 
     move-object v1, v0
@@ -92,7 +92,7 @@
 
 .method private callback(Landroid/os/Bundle;)V
     .locals 2
-    .parameter "result"
+    .param p1, "result"    # Landroid/os/Bundle;
 
     .prologue
     .line 137
@@ -115,7 +115,7 @@
     iget-object v0, p0, Lcom/facebook/internal/PlatformServiceClient;->listener:Lcom/facebook/internal/PlatformServiceClient$CompletedListener;
 
     .line 143
-    .local v0, callback:Lcom/facebook/internal/PlatformServiceClient$CompletedListener;
+    .local v0, "callback":Lcom/facebook/internal/PlatformServiceClient$CompletedListener;
     if-eqz v0, :cond_0
 
     .line 144
@@ -136,7 +136,7 @@
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     .line 105
-    .local v0, data:Landroid/os/Bundle;
+    .local v0, "data":Landroid/os/Bundle;
     const-string v3, "com.facebook.platform.extra.APPLICATION_ID"
 
     iget-object v4, p0, Lcom/facebook/internal/PlatformServiceClient;->applicationId:Ljava/lang/String;
@@ -154,7 +154,7 @@
     move-result-object v2
 
     .line 110
-    .local v2, request:Landroid/os/Message;
+    .local v2, "request":Landroid/os/Message;
     iget v3, p0, Lcom/facebook/internal/PlatformServiceClient;->protocolVersion:I
 
     iput v3, v2, Landroid/os/Message;->arg1:I
@@ -190,7 +190,7 @@
     move-object v1, v3
 
     .line 117
-    .local v1, e:Landroid/os/RemoteException;
+    .local v1, "e":Landroid/os/RemoteException;
     invoke-direct {p0, v5}, Lcom/facebook/internal/PlatformServiceClient;->callback(Landroid/os/Bundle;)V
 
     goto :goto_0
@@ -223,7 +223,7 @@
 
 .method protected handleMessage(Landroid/os/Message;)V
     .locals 4
-    .parameter "message"
+    .param p1, "message"    # Landroid/os/Message;
 
     .prologue
     .line 124
@@ -239,7 +239,7 @@
     move-result-object v1
 
     .line 126
-    .local v1, extras:Landroid/os/Bundle;
+    .local v1, "extras":Landroid/os/Bundle;
     const-string v2, "com.facebook.platform.status.ERROR_TYPE"
 
     invoke-virtual {v1, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -247,7 +247,7 @@
     move-result-object v0
 
     .line 127
-    .local v0, errorType:Ljava/lang/String;
+    .local v0, "errorType":Ljava/lang/String;
     if-eqz v0, :cond_1
 
     .line 128
@@ -262,14 +262,14 @@
     invoke-virtual {v2, p0}, Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V
 
     .line 134
-    .end local v0           #errorType:Ljava/lang/String;
-    .end local v1           #extras:Landroid/os/Bundle;
+    .end local v0    # "errorType":Ljava/lang/String;
+    .end local v1    # "extras":Landroid/os/Bundle;
     :cond_0
     return-void
 
     .line 130
-    .restart local v0       #errorType:Ljava/lang/String;
-    .restart local v1       #extras:Landroid/os/Bundle;
+    .restart local v0    # "errorType":Ljava/lang/String;
+    .restart local v1    # "extras":Landroid/os/Bundle;
     :cond_1
     invoke-direct {p0, v1}, Lcom/facebook/internal/PlatformServiceClient;->callback(Landroid/os/Bundle;)V
 
@@ -278,8 +278,8 @@
 
 .method public onServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V
     .locals 1
-    .parameter "name"
-    .parameter "service"
+    .param p1, "name"    # Landroid/content/ComponentName;
+    .param p2, "service"    # Landroid/os/IBinder;
 
     .prologue
     .line 93
@@ -298,7 +298,7 @@
 
 .method public onServiceDisconnected(Landroid/content/ComponentName;)V
     .locals 2
-    .parameter "name"
+    .param p1, "name"    # Landroid/content/ComponentName;
 
     .prologue
     const/4 v1, 0x0
@@ -323,7 +323,7 @@
 
 .method public setCompletedListener(Lcom/facebook/internal/PlatformServiceClient$CompletedListener;)V
     .locals 0
-    .parameter "listener"
+    .param p1, "listener"    # Lcom/facebook/internal/PlatformServiceClient$CompletedListener;
 
     .prologue
     .line 60
@@ -363,7 +363,7 @@
     move-result v0
 
     .line 74
-    .local v0, availableVersion:I
+    .local v0, "availableVersion":I
     const/4 v2, -0x1
 
     if-ne v0, v2, :cond_1
@@ -382,7 +382,7 @@
     move-result-object v1
 
     .line 79
-    .local v1, intent:Landroid/content/Intent;
+    .local v1, "intent":Landroid/content/Intent;
     if-nez v1, :cond_2
 
     move v2, v4

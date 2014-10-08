@@ -110,7 +110,7 @@
 
 .field static final KATANA_SIGNATURE:Ljava/lang/String; = "30820268308201d102044a9c4610300d06092a864886f70d0101040500307a310b3009060355040613025553310b3009060355040813024341311230100603550407130950616c6f20416c746f31183016060355040a130f46616365626f6f6b204d6f62696c653111300f060355040b130846616365626f6f6b311d301b0603550403131446616365626f6f6b20436f72706f726174696f6e3020170d3039303833313231353231365a180f32303530303932353231353231365a307a310b3009060355040613025553310b3009060355040813024341311230100603550407130950616c6f20416c746f31183016060355040a130f46616365626f6f6b204d6f62696c653111300f060355040b130846616365626f6f6b311d301b0603550403131446616365626f6f6b20436f72706f726174696f6e30819f300d06092a864886f70d010101050003818d0030818902818100c207d51df8eb8c97d93ba0c8c1002c928fab00dc1b42fca5e66e99cc3023ed2d214d822bc59e8e35ddcf5f44c7ae8ade50d7e0c434f500e6c131f4a2834f987fc46406115de2018ebbb0d5a3c261bd97581ccfef76afc7135a6d59e8855ecd7eacc8f8737e794c60a761c536b72b11fac8e603f5da1a2d54aa103b8a13c0dbc10203010001300d06092a864886f70d0101040500038181005ee9be8bcbb250648d3b741290a82a1c9dc2e76a0af2f2228f1d9f9c4007529c446a70175c5a900d5141812866db46be6559e2141616483998211f4a673149fb2232a10d247663b26a9031e15f84bc1c74d141ff98a02d76f85b2c8ab2571b6469b232d8e768a7f7ca04f7abe4a775615916c07940656b58717457b42bd928a2"
 
-.field private static final KNOWN_PROTOCOL_VERSIONS:Ljava/util/List; = null
+.field private static final KNOWN_PROTOCOL_VERSIONS:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List",
@@ -139,7 +139,7 @@
 
 .field public static final PLATFORM_PROVIDER:Ljava/lang/String; = "com.facebook.katana.provider.PlatformProvider"
 
-.field public static final PLATFORM_PROVIDER_VERSIONS_URI:Landroid/net/Uri; = null
+.field public static final PLATFORM_PROVIDER_VERSIONS_URI:Landroid/net/Uri;
 
 .field public static final PLATFORM_PROVIDER_VERSION_COLUMN:Ljava/lang/String; = "version"
 
@@ -236,10 +236,9 @@
 
 .method public static createLoginDialog20121101Intent(Landroid/content/Context;Ljava/lang/String;Ljava/util/ArrayList;Ljava/lang/String;)Landroid/content/Intent;
     .locals 4
-    .parameter "context"
-    .parameter "applicationId"
-    .parameter
-    .parameter "audience"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "applicationId"    # Ljava/lang/String;
+    .param p3, "audience"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -257,7 +256,7 @@
 
     .prologue
     .line 295
-    .local p2, permissions:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
+    .local p2, "permissions":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     new-instance v1, Landroid/content/Intent;
 
     invoke-direct {v1}, Landroid/content/Intent;-><init>()V
@@ -342,7 +341,7 @@
     move-result-object v0
 
     .line 305
-    .local v0, intent:Landroid/content/Intent;
+    .local v0, "intent":Landroid/content/Intent;
     invoke-static {p0, v0}, Lcom/facebook/internal/NativeProtocol;->validateKatanaActivityIntent(Landroid/content/Context;Landroid/content/Intent;)Landroid/content/Intent;
 
     move-result-object v1
@@ -352,10 +351,10 @@
 
 .method public static createPlatformActivityIntent(Landroid/content/Context;Ljava/lang/String;ILandroid/os/Bundle;)Landroid/content/Intent;
     .locals 3
-    .parameter "context"
-    .parameter "action"
-    .parameter "version"
-    .parameter "extras"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "action"    # Ljava/lang/String;
+    .param p2, "version"    # I
+    .param p3, "extras"    # Landroid/os/Bundle;
 
     .prologue
     .line 276
@@ -404,7 +403,7 @@
     move-result-object v0
 
     .line 283
-    .local v0, intent:Landroid/content/Intent;
+    .local v0, "intent":Landroid/content/Intent;
     invoke-static {p0, v0}, Lcom/facebook/internal/NativeProtocol;->validateKatanaActivityIntent(Landroid/content/Context;Landroid/content/Intent;)Landroid/content/Intent;
 
     move-result-object v1
@@ -414,7 +413,7 @@
 
 .method public static createPlatformServiceIntent(Landroid/content/Context;)Landroid/content/Intent;
     .locals 3
-    .parameter "context"
+    .param p0, "context"    # Landroid/content/Context;
 
     .prologue
     .line 287
@@ -439,7 +438,7 @@
     move-result-object v0
 
     .line 290
-    .local v0, intent:Landroid/content/Intent;
+    .local v0, "intent":Landroid/content/Intent;
     invoke-static {p0, v0}, Lcom/facebook/internal/NativeProtocol;->validateKatanaServiceIntent(Landroid/content/Context;Landroid/content/Intent;)Landroid/content/Intent;
 
     move-result-object v1
@@ -449,10 +448,9 @@
 
 .method public static createProxyAuthIntent(Landroid/content/Context;Ljava/lang/String;Ljava/util/List;Ljava/lang/String;)Landroid/content/Intent;
     .locals 4
-    .parameter "context"
-    .parameter "applicationId"
-    .parameter
-    .parameter "e2e"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "applicationId"    # Ljava/lang/String;
+    .param p3, "e2e"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -470,7 +468,7 @@
 
     .prologue
     .line 128
-    .local p2, permissions:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
+    .local p2, "permissions":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     new-instance v1, Landroid/content/Intent;
 
     invoke-direct {v1}, Landroid/content/Intent;-><init>()V
@@ -492,7 +490,7 @@
     move-result-object v0
 
     .line 132
-    .local v0, intent:Landroid/content/Intent;
+    .local v0, "intent":Landroid/content/Intent;
     invoke-static {p2}, Lcom/facebook/internal/Utility;->isNullOrEmpty(Ljava/util/Collection;)Z
 
     move-result v1
@@ -534,7 +532,7 @@
 
 .method public static createTokenRefreshIntent(Landroid/content/Context;)Landroid/content/Intent;
     .locals 4
-    .parameter "context"
+    .param p0, "context"    # Landroid/content/Context;
 
     .prologue
     .line 143
@@ -552,7 +550,7 @@
     move-result-object v0
 
     .line 146
-    .local v0, intent:Landroid/content/Intent;
+    .local v0, "intent":Landroid/content/Intent;
     invoke-static {p0, v0}, Lcom/facebook/internal/NativeProtocol;->validateKatanaServiceIntent(Landroid/content/Context;Landroid/content/Intent;)Landroid/content/Intent;
 
     move-result-object v1
@@ -562,7 +560,7 @@
 
 .method private static ensureDefaultAudience(Ljava/lang/String;)Ljava/lang/String;
     .locals 1
-    .parameter "audience"
+    .param p0, "audience"    # Ljava/lang/String;
 
     .prologue
     .line 332
@@ -587,7 +585,6 @@
 
 .method private static ensureDefaultPermissions(Ljava/util/ArrayList;)Ljava/util/ArrayList;
     .locals 5
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -603,7 +600,7 @@
     .end annotation
 
     .prologue
-    .local p0, permissions:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
+    .local p0, "permissions":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     const-string v4, "basic_info"
 
     .line 343
@@ -619,7 +616,7 @@
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     .line 354
-    .local v1, updated:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
+    .local v1, "updated":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     :goto_0
     const-string v2, "basic_info"
 
@@ -628,7 +625,7 @@
     move-object v2, v1
 
     .line 355
-    .end local v1           #updated:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
+    .end local v1    # "updated":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     :goto_1
     return-object v2
 
@@ -650,11 +647,11 @@
 
     invoke-direct {v1, p0}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .restart local v1       #updated:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
+    .restart local v1    # "updated":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     goto :goto_0
 
     .line 346
-    .end local v1           #updated:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
+    .end local v1    # "updated":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     :cond_2
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -663,7 +660,7 @@
     check-cast v0, Ljava/lang/String;
 
     .line 347
-    .local v0, permission:Ljava/lang/String;
+    .local v0, "permission":Ljava/lang/String;
     invoke-static {v0}, Lcom/facebook/Session;->isPublishPermission(Ljava/lang/String;)Z
 
     move-result v3
@@ -703,7 +700,7 @@
 
 .method public static getErrorFromResult(Landroid/content/Intent;)Ljava/lang/Exception;
     .locals 3
-    .parameter "resultIntent"
+    .param p0, "resultIntent"    # Landroid/content/Intent;
 
     .prologue
     .line 313
@@ -729,7 +726,7 @@
     move-result-object v1
 
     .line 318
-    .local v1, type:Ljava/lang/String;
+    .local v1, "type":Ljava/lang/String;
     const-string v2, "com.facebook.platform.status.ERROR_DESCRIPTION"
 
     invoke-virtual {p0, v2}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
@@ -737,7 +734,7 @@
     move-result-object v0
 
     .line 320
-    .local v0, description:Ljava/lang/String;
+    .local v0, "description":Ljava/lang/String;
     const-string v2, "UserCanceled"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
@@ -764,8 +761,8 @@
 
 .method public static getLatestAvailableProtocolVersion(Landroid/content/Context;I)I
     .locals 12
-    .parameter "context"
-    .parameter "minimumVersion"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "minimumVersion"    # I
 
     .prologue
     const/4 v3, 0x0
@@ -780,7 +777,7 @@
     move-result-object v0
 
     .line 370
-    .local v0, contentResolver:Landroid/content/ContentResolver;
+    .local v0, "contentResolver":Landroid/content/ContentResolver;
     const/4 v1, 0x1
 
     new-array v2, v1, [Ljava/lang/String;
@@ -792,7 +789,7 @@
     aput-object v11, v2, v1
 
     .line 371
-    .local v2, projection:[Ljava/lang/String;
+    .local v2, "projection":[Ljava/lang/String;
     sget-object v1, Lcom/facebook/internal/NativeProtocol;->PLATFORM_PROVIDER_VERSIONS_URI:Landroid/net/Uri;
 
     move-object v4, v3
@@ -804,7 +801,7 @@
     move-result-object v6
 
     .line 372
-    .local v6, c:Landroid/database/Cursor;
+    .local v6, "c":Landroid/database/Cursor;
     if-nez v6, :cond_0
 
     move v1, v10
@@ -820,7 +817,7 @@
     invoke-direct {v9}, Ljava/util/HashSet;-><init>()V
 
     .line 377
-    .local v9, versions:Ljava/util/Set;,"Ljava/util/Set<Ljava/lang/Integer;>;"
+    .local v9, "versions":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/Integer;>;"
     :goto_1
     invoke-interface {v6}, Landroid/database/Cursor;->moveToNext()Z
 
@@ -860,7 +857,7 @@
     move-result v8
 
     .line 379
-    .local v8, version:I
+    .local v8, "version":I
     invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -870,7 +867,7 @@
     goto :goto_1
 
     .line 382
-    .end local v8           #version:I
+    .end local v8    # "version":I
     :cond_3
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -879,7 +876,7 @@
     check-cast v7, Ljava/lang/Integer;
 
     .line 383
-    .local v7, knownVersion:Ljava/lang/Integer;
+    .local v7, "knownVersion":Ljava/lang/Integer;
     invoke-virtual {v7}, Ljava/lang/Integer;->intValue()I
 
     move-result v3
@@ -909,7 +906,7 @@
 
 .method public static isErrorResult(Landroid/content/Intent;)Z
     .locals 1
-    .parameter "resultIntent"
+    .param p0, "resultIntent"    # Landroid/content/Intent;
 
     .prologue
     .line 309
@@ -924,7 +921,7 @@
 
 .method public static isServiceDisabledResult20121101(Landroid/content/Intent;)Z
     .locals 4
-    .parameter "data"
+    .param p0, "data"    # Landroid/content/Intent;
 
     .prologue
     const/4 v3, 0x0
@@ -937,7 +934,7 @@
     move-result v1
 
     .line 360
-    .local v1, protocolVersion:I
+    .local v1, "protocolVersion":I
     const-string v2, "com.facebook.platform.status.ERROR_TYPE"
 
     invoke-virtual {p0, v2}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
@@ -945,7 +942,7 @@
     move-result-object v0
 
     .line 362
-    .local v0, errorType:Ljava/lang/String;
+    .local v0, "errorType":Ljava/lang/String;
     const v2, 0x133060d
 
     if-ne v2, v1, :cond_0
@@ -971,8 +968,8 @@
 
 .method static validateKatanaActivityIntent(Landroid/content/Context;Landroid/content/Intent;)Landroid/content/Intent;
     .locals 4
-    .parameter "context"
-    .parameter "intent"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "intent"    # Landroid/content/Intent;
 
     .prologue
     const/4 v3, 0x0
@@ -999,7 +996,7 @@
     move-result-object v0
 
     .line 98
-    .local v0, resolveInfo:Landroid/content/pm/ResolveInfo;
+    .local v0, "resolveInfo":Landroid/content/pm/ResolveInfo;
     if-nez v0, :cond_1
 
     move-object v1, v3
@@ -1033,8 +1030,8 @@
 
 .method static validateKatanaServiceIntent(Landroid/content/Context;Landroid/content/Intent;)Landroid/content/Intent;
     .locals 4
-    .parameter "context"
-    .parameter "intent"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "intent"    # Landroid/content/Intent;
 
     .prologue
     const/4 v3, 0x0
@@ -1061,7 +1058,7 @@
     move-result-object v0
 
     .line 115
-    .local v0, resolveInfo:Landroid/content/pm/ResolveInfo;
+    .local v0, "resolveInfo":Landroid/content/pm/ResolveInfo;
     if-nez v0, :cond_1
 
     move-object v1, v3
@@ -1095,8 +1092,8 @@
 
 .method static final validateSignature(Landroid/content/Context;Ljava/lang/String;)Z
     .locals 12
-    .parameter "context"
-    .parameter "packageName"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
     const/4 v11, 0x1
@@ -1107,7 +1104,7 @@
     sget-object v1, Landroid/os/Build;->BRAND:Ljava/lang/String;
 
     .line 69
-    .local v1, brand:Ljava/lang/String;
+    .local v1, "brand":Ljava/lang/String;
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
 
     move-result-object v5
@@ -1115,7 +1112,7 @@
     iget v0, v5, Landroid/content/pm/ApplicationInfo;->flags:I
 
     .line 70
-    .local v0, applicationFlags:I
+    .local v0, "applicationFlags":I
     const-string v5, "generic"
 
     invoke-virtual {v1, v5}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
@@ -1139,7 +1136,7 @@
     const/4 v3, 0x0
 
     .line 77
-    .local v3, packageInfo:Landroid/content/pm/PackageInfo;
+    .local v3, "packageInfo":Landroid/content/pm/PackageInfo;
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -1176,19 +1173,19 @@
 
     move-object v2, v5
 
-    .local v2, e:Landroid/content/pm/PackageManager$NameNotFoundException;
+    .local v2, "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     move v5, v10
 
     .line 80
     goto :goto_0
 
     .line 83
-    .end local v2           #e:Landroid/content/pm/PackageManager$NameNotFoundException;
+    .end local v2    # "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     :cond_1
     aget-object v4, v5, v7
 
     .line 84
-    .local v4, signature:Landroid/content/pm/Signature;
+    .local v4, "signature":Landroid/content/pm/Signature;
     invoke-virtual {v4}, Landroid/content/pm/Signature;->toCharsString()Ljava/lang/String;
 
     move-result-object v8

@@ -19,9 +19,6 @@
 
 .method private a(Ljava/util/HashMap;Ljava/lang/String;Lcom/google/ads/util/i$c;)V
     .locals 2
-    .parameter
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -104,9 +101,6 @@
 
 .method private b(Ljava/util/HashMap;Ljava/lang/String;Lcom/google/ads/util/i$c;)V
     .locals 2
-    .parameter
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -189,9 +183,6 @@
 
 .method private c(Ljava/util/HashMap;Ljava/lang/String;Lcom/google/ads/util/i$c;)V
     .locals 1
-    .parameter
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -235,9 +226,6 @@
 # virtual methods
 .method public a(Lcom/google/ads/internal/d;Ljava/util/HashMap;Landroid/webkit/WebView;)V
     .locals 8
-    .parameter
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",

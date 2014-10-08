@@ -38,7 +38,7 @@
 
     .prologue
     .line 1427
-    .local p0, this:Lcom/flurry/org/apache/avro/Schema$LockableArrayList;,"Lcom/flurry/org/apache/avro/Schema$LockableArrayList<TE;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/Schema$LockableArrayList;, "Lcom/flurry/org/apache/avro/Schema$LockableArrayList<TE;>;"
     invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
 
     .line 1425
@@ -52,11 +52,11 @@
 
 .method public constructor <init>(I)V
     .locals 1
-    .parameter "size"
+    .param p1, "size"    # I
 
     .prologue
     .line 1431
-    .local p0, this:Lcom/flurry/org/apache/avro/Schema$LockableArrayList;,"Lcom/flurry/org/apache/avro/Schema$LockableArrayList<TE;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/Schema$LockableArrayList;, "Lcom/flurry/org/apache/avro/Schema$LockableArrayList<TE;>;"
     invoke-direct {p0, p1}, Ljava/util/ArrayList;-><init>(I)V
 
     .line 1425
@@ -70,7 +70,6 @@
 
 .method public constructor <init>(Ljava/util/List;)V
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -81,8 +80,8 @@
 
     .prologue
     .line 1435
-    .local p0, this:Lcom/flurry/org/apache/avro/Schema$LockableArrayList;,"Lcom/flurry/org/apache/avro/Schema$LockableArrayList<TE;>;"
-    .local p1, types:Ljava/util/List;,"Ljava/util/List<TE;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/Schema$LockableArrayList;, "Lcom/flurry/org/apache/avro/Schema$LockableArrayList<TE;>;"
+    .local p1, "types":Ljava/util/List;, "Ljava/util/List<TE;>;"
     invoke-direct {p0, p1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
     .line 1425
@@ -99,7 +98,7 @@
 
     .prologue
     .line 1444
-    .local p0, this:Lcom/flurry/org/apache/avro/Schema$LockableArrayList;,"Lcom/flurry/org/apache/avro/Schema$LockableArrayList<TE;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/Schema$LockableArrayList;, "Lcom/flurry/org/apache/avro/Schema$LockableArrayList<TE;>;"
     iget-boolean v0, p0, Lcom/flurry/org/apache/avro/Schema$LockableArrayList;->locked:Z
 
     if-eqz v0, :cond_0
@@ -120,7 +119,6 @@
 # virtual methods
 .method public add(Ljava/lang/Object;)Z
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TE;)Z"
@@ -129,8 +127,8 @@
 
     .prologue
     .line 1450
-    .local p0, this:Lcom/flurry/org/apache/avro/Schema$LockableArrayList;,"Lcom/flurry/org/apache/avro/Schema$LockableArrayList<TE;>;"
-    .local p1, e:Ljava/lang/Object;,"TE;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/Schema$LockableArrayList;, "Lcom/flurry/org/apache/avro/Schema$LockableArrayList<TE;>;"
+    .local p1, "e":Ljava/lang/Object;, "TE;"
     invoke-direct {p0}, Lcom/flurry/org/apache/avro/Schema$LockableArrayList;->ensureUnlocked()V
 
     .line 1451
@@ -143,8 +141,7 @@
 
 .method public addAll(ILjava/util/Collection;)Z
     .locals 1
-    .parameter "index"
-    .parameter
+    .param p1, "index"    # I
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I",
@@ -155,8 +152,8 @@
 
     .prologue
     .line 1470
-    .local p0, this:Lcom/flurry/org/apache/avro/Schema$LockableArrayList;,"Lcom/flurry/org/apache/avro/Schema$LockableArrayList<TE;>;"
-    .local p2, c:Ljava/util/Collection;,"Ljava/util/Collection<+TE;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/Schema$LockableArrayList;, "Lcom/flurry/org/apache/avro/Schema$LockableArrayList<TE;>;"
+    .local p2, "c":Ljava/util/Collection;, "Ljava/util/Collection<+TE;>;"
     invoke-direct {p0}, Lcom/flurry/org/apache/avro/Schema$LockableArrayList;->ensureUnlocked()V
 
     .line 1471
@@ -169,7 +166,6 @@
 
 .method public addAll(Ljava/util/Collection;)Z
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -180,8 +176,8 @@
 
     .prologue
     .line 1465
-    .local p0, this:Lcom/flurry/org/apache/avro/Schema$LockableArrayList;,"Lcom/flurry/org/apache/avro/Schema$LockableArrayList<TE;>;"
-    .local p1, c:Ljava/util/Collection;,"Ljava/util/Collection<+TE;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/Schema$LockableArrayList;, "Lcom/flurry/org/apache/avro/Schema$LockableArrayList<TE;>;"
+    .local p1, "c":Ljava/util/Collection;, "Ljava/util/Collection<+TE;>;"
     invoke-direct {p0}, Lcom/flurry/org/apache/avro/Schema$LockableArrayList;->ensureUnlocked()V
 
     .line 1466
@@ -197,7 +193,7 @@
 
     .prologue
     .line 1485
-    .local p0, this:Lcom/flurry/org/apache/avro/Schema$LockableArrayList;,"Lcom/flurry/org/apache/avro/Schema$LockableArrayList<TE;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/Schema$LockableArrayList;, "Lcom/flurry/org/apache/avro/Schema$LockableArrayList<TE;>;"
     invoke-direct {p0}, Lcom/flurry/org/apache/avro/Schema$LockableArrayList;->ensureUnlocked()V
 
     .line 1486
@@ -219,7 +215,7 @@
 
     .prologue
     .line 1439
-    .local p0, this:Lcom/flurry/org/apache/avro/Schema$LockableArrayList;,"Lcom/flurry/org/apache/avro/Schema$LockableArrayList<TE;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/Schema$LockableArrayList;, "Lcom/flurry/org/apache/avro/Schema$LockableArrayList<TE;>;"
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/flurry/org/apache/avro/Schema$LockableArrayList;->locked:Z
@@ -230,7 +226,7 @@
 
 .method public remove(I)Ljava/lang/Object;
     .locals 1
-    .parameter "index"
+    .param p1, "index"    # I
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I)TE;"
@@ -239,7 +235,7 @@
 
     .prologue
     .line 1460
-    .local p0, this:Lcom/flurry/org/apache/avro/Schema$LockableArrayList;,"Lcom/flurry/org/apache/avro/Schema$LockableArrayList<TE;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/Schema$LockableArrayList;, "Lcom/flurry/org/apache/avro/Schema$LockableArrayList<TE;>;"
     invoke-direct {p0}, Lcom/flurry/org/apache/avro/Schema$LockableArrayList;->ensureUnlocked()V
 
     .line 1461
@@ -252,11 +248,11 @@
 
 .method public remove(Ljava/lang/Object;)Z
     .locals 1
-    .parameter "o"
+    .param p1, "o"    # Ljava/lang/Object;
 
     .prologue
     .line 1455
-    .local p0, this:Lcom/flurry/org/apache/avro/Schema$LockableArrayList;,"Lcom/flurry/org/apache/avro/Schema$LockableArrayList<TE;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/Schema$LockableArrayList;, "Lcom/flurry/org/apache/avro/Schema$LockableArrayList<TE;>;"
     invoke-direct {p0}, Lcom/flurry/org/apache/avro/Schema$LockableArrayList;->ensureUnlocked()V
 
     .line 1456
@@ -269,7 +265,6 @@
 
 .method public removeAll(Ljava/util/Collection;)Z
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -280,8 +275,8 @@
 
     .prologue
     .line 1475
-    .local p0, this:Lcom/flurry/org/apache/avro/Schema$LockableArrayList;,"Lcom/flurry/org/apache/avro/Schema$LockableArrayList<TE;>;"
-    .local p1, c:Ljava/util/Collection;,"Ljava/util/Collection<*>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/Schema$LockableArrayList;, "Lcom/flurry/org/apache/avro/Schema$LockableArrayList<TE;>;"
+    .local p1, "c":Ljava/util/Collection;, "Ljava/util/Collection<*>;"
     invoke-direct {p0}, Lcom/flurry/org/apache/avro/Schema$LockableArrayList;->ensureUnlocked()V
 
     .line 1476
@@ -294,7 +289,6 @@
 
 .method public retainAll(Ljava/util/Collection;)Z
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -305,8 +299,8 @@
 
     .prologue
     .line 1480
-    .local p0, this:Lcom/flurry/org/apache/avro/Schema$LockableArrayList;,"Lcom/flurry/org/apache/avro/Schema$LockableArrayList<TE;>;"
-    .local p1, c:Ljava/util/Collection;,"Ljava/util/Collection<*>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/Schema$LockableArrayList;, "Lcom/flurry/org/apache/avro/Schema$LockableArrayList<TE;>;"
+    .local p1, "c":Ljava/util/Collection;, "Ljava/util/Collection<*>;"
     invoke-direct {p0}, Lcom/flurry/org/apache/avro/Schema$LockableArrayList;->ensureUnlocked()V
 
     .line 1481

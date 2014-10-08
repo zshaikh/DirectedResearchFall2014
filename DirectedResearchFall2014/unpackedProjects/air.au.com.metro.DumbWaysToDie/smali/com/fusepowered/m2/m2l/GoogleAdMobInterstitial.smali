@@ -33,7 +33,6 @@
 
 .method private extractLocation(Ljava/util/Map;)Landroid/location/Location;
     .locals 2
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -48,7 +47,7 @@
 
     .prologue
     .line 111
-    .local p1, localExtras:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
+    .local p1, "localExtras":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
     const-string v1, "location"
 
     invoke-interface {p1, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -56,7 +55,7 @@
     move-result-object v0
 
     .line 112
-    .local v0, location:Ljava/lang/Object;
+    .local v0, "location":Ljava/lang/Object;
     instance-of v1, v0, Landroid/location/Location;
 
     if-eqz v1, :cond_0
@@ -64,14 +63,14 @@
     .line 113
     check-cast v0, Landroid/location/Location;
 
-    .end local v0           #location:Ljava/lang/Object;
+    .end local v0    # "location":Ljava/lang/Object;
     move-object v1, v0
 
     .line 115
     :goto_0
     return-object v1
 
-    .restart local v0       #location:Ljava/lang/Object;
+    .restart local v0    # "location":Ljava/lang/Object;
     :cond_0
     const/4 v1, 0x0
 
@@ -80,7 +79,6 @@
 
 .method private extrasAreValid(Ljava/util/Map;)Z
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -94,7 +92,7 @@
 
     .prologue
     .line 119
-    .local p1, serverExtras:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p1, "serverExtras":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v0, "adUnitID"
 
     invoke-interface {p1, v0}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
@@ -120,10 +118,8 @@
 
 .method protected loadInterstitial(Landroid/content/Context;Lcom/fusepowered/m2/m2l/CustomEventInterstitial$CustomEventInterstitialListener;Ljava/util/Map;Ljava/util/Map;)V
     .locals 5
-    .parameter "context"
-    .parameter "customEventInterstitialListener"
-    .parameter
-    .parameter
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "customEventInterstitialListener"    # Lcom/fusepowered/m2/m2l/CustomEventInterstitial$CustomEventInterstitialListener;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -144,8 +140,8 @@
 
     .prologue
     .line 70
-    .local p3, localExtras:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
-    .local p4, serverExtras:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p3, "localExtras":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
+    .local p4, "serverExtras":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     iput-object p2, p0, Lcom/fusepowered/m2/m2l/GoogleAdMobInterstitial;->mInterstitialListener:Lcom/fusepowered/m2/m2l/CustomEventInterstitial$CustomEventInterstitialListener;
 
     .line 72
@@ -161,12 +157,12 @@
     invoke-interface {v3, v4}, Lcom/fusepowered/m2/m2l/CustomEventInterstitial$CustomEventInterstitialListener;->onInterstitialFailed(Lcom/fusepowered/m2/m2l/MoPubErrorCode;)V
 
     .line 92
-    .end local p1
+    .end local p1    # "context":Landroid/content/Context;
     :goto_0
     return-void
 
     .line 78
-    .restart local p1
+    .restart local p1    # "context":Landroid/content/Context;
     :cond_0
     invoke-direct {p0, p4}, Lcom/fusepowered/m2/m2l/GoogleAdMobInterstitial;->extrasAreValid(Ljava/util/Map;)Z
 
@@ -184,12 +180,12 @@
     check-cast v2, Ljava/lang/String;
 
     .line 85
-    .local v2, pubId:Ljava/lang/String;
+    .local v2, "pubId":Ljava/lang/String;
     new-instance v3, Lcom/google/ads/InterstitialAd;
 
     check-cast p1, Landroid/app/Activity;
 
-    .end local p1
+    .end local p1    # "context":Landroid/content/Context;
     invoke-direct {v3, p1, v2}, Lcom/google/ads/InterstitialAd;-><init>(Landroid/app/Activity;Ljava/lang/String;)V
 
     iput-object v3, p0, Lcom/fusepowered/m2/m2l/GoogleAdMobInterstitial;->mInterstitialAd:Lcom/google/ads/InterstitialAd;
@@ -205,13 +201,13 @@
     invoke-direct {v0}, Lcom/google/ads/AdRequest;-><init>()V
 
     .line 89
-    .local v0, adRequest:Lcom/google/ads/AdRequest;
+    .local v0, "adRequest":Lcom/google/ads/AdRequest;
     invoke-direct {p0, p3}, Lcom/fusepowered/m2/m2l/GoogleAdMobInterstitial;->extractLocation(Ljava/util/Map;)Landroid/location/Location;
 
     move-result-object v1
 
     .line 90
-    .local v1, location:Landroid/location/Location;
+    .local v1, "location":Landroid/location/Location;
     if-eqz v1, :cond_1
 
     invoke-virtual {v0, v1}, Lcom/google/ads/AdRequest;->setLocation(Landroid/location/Location;)Lcom/google/ads/AdRequest;
@@ -225,10 +221,10 @@
     goto :goto_0
 
     .line 81
-    .end local v0           #adRequest:Lcom/google/ads/AdRequest;
-    .end local v1           #location:Landroid/location/Location;
-    .end local v2           #pubId:Ljava/lang/String;
-    .restart local p1
+    .end local v0    # "adRequest":Lcom/google/ads/AdRequest;
+    .end local v1    # "location":Landroid/location/Location;
+    .end local v2    # "pubId":Ljava/lang/String;
+    .restart local p1    # "context":Landroid/content/Context;
     :cond_2
     iget-object v3, p0, Lcom/fusepowered/m2/m2l/GoogleAdMobInterstitial;->mInterstitialListener:Lcom/fusepowered/m2/m2l/CustomEventInterstitial$CustomEventInterstitialListener;
 
@@ -241,7 +237,7 @@
 
 .method public onDismissScreen(Lcom/google/ads/Ad;)V
     .locals 2
-    .parameter "ad"
+    .param p1, "ad"    # Lcom/google/ads/Ad;
 
     .prologue
     .line 133
@@ -262,8 +258,8 @@
 
 .method public onFailedToReceiveAd(Lcom/google/ads/Ad;Lcom/google/ads/AdRequest$ErrorCode;)V
     .locals 2
-    .parameter "ad"
-    .parameter "error"
+    .param p1, "ad"    # Lcom/google/ads/Ad;
+    .param p2, "error"    # Lcom/google/ads/AdRequest$ErrorCode;
 
     .prologue
     .line 139
@@ -307,7 +303,7 @@
 
 .method public onLeaveApplication(Lcom/google/ads/Ad;)V
     .locals 2
-    .parameter "ad"
+    .param p1, "ad"    # Lcom/google/ads/Ad;
 
     .prologue
     .line 145
@@ -339,7 +335,7 @@
 
 .method public onPresentScreen(Lcom/google/ads/Ad;)V
     .locals 2
-    .parameter "ad"
+    .param p1, "ad"    # Lcom/google/ads/Ad;
 
     .prologue
     .line 154
@@ -360,7 +356,7 @@
 
 .method public onReceiveAd(Lcom/google/ads/Ad;)V
     .locals 2
-    .parameter "ad"
+    .param p1, "ad"    # Lcom/google/ads/Ad;
 
     .prologue
     .line 160

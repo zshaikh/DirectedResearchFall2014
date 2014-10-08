@@ -22,7 +22,7 @@
 # virtual methods
 .method public handle(Lorg/json/JSONObject;)V
     .locals 7
-    .parameter "jsonObject"
+    .param p1, "jsonObject"    # Lorg/json/JSONObject;
 
     .prologue
     .line 22
@@ -31,7 +31,7 @@
     invoke-direct {v0}, Lv2/com/playhaven/configuration/PHConfiguration;-><init>()V
 
     .line 27
-    .local v0, config:Lv2/com/playhaven/configuration/PHConfiguration;
+    .local v0, "config":Lv2/com/playhaven/configuration/PHConfiguration;
     const-string v3, "window.PlayHavenDispatchProtocolVersion = %d"
 
     const/4 v4, 0x1
@@ -57,7 +57,7 @@
     move-result-object v2
 
     .line 33
-    .local v2, javascriptCommand:Ljava/lang/String;
+    .local v2, "javascriptCommand":Ljava/lang/String;
     iget-object v3, p0, Lv2/com/playhaven/interstitial/jsbridge/handlers/LoadContextHandler;->bridge:Lv2/com/playhaven/interstitial/jsbridge/PHJSBridge;
 
     invoke-virtual {v3, v2}, Lv2/com/playhaven/interstitial/jsbridge/PHJSBridge;->runJavascript(Ljava/lang/String;)V
@@ -78,7 +78,7 @@
     iget-object v1, v3, Lv2/com/playhaven/model/PHContent;->context:Lorg/json/JSONObject;
 
     .line 38
-    .local v1, downloadedContent:Lorg/json/JSONObject;
+    .local v1, "downloadedContent":Lorg/json/JSONObject;
     iget-object v3, p0, Lv2/com/playhaven/interstitial/jsbridge/handlers/LoadContextHandler;->bridge:Lv2/com/playhaven/interstitial/jsbridge/PHJSBridge;
 
     const-string v4, "callback"

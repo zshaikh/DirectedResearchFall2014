@@ -26,8 +26,6 @@
 # direct methods
 .method constructor <init>(Lcom/chartboost/sdk/impl/h$a$a;Lorg/json/JSONObject;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 1
@@ -45,7 +43,7 @@
 # virtual methods
 .method public onClick(Landroid/view/View;)V
     .locals 3
-    .parameter "v"
+    .param p1, "v"    # Landroid/view/View;
 
     .prologue
     .line 309

@@ -29,7 +29,7 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m2/m2l/AdViewController;)V
     .locals 1
-    .parameter "adViewController"
+    .param p1, "adViewController"    # Lcom/fusepowered/m2/m2l/AdViewController;
 
     .prologue
     .line 67
@@ -48,8 +48,8 @@
 
 .method static fromHttpResponse(Lorg/apache/http/HttpResponse;Lcom/fusepowered/m2/m2l/AdViewController;)Lcom/fusepowered/m2/m2l/AdLoadTask;
     .locals 1
-    .parameter "response"
-    .parameter "adViewController"
+    .param p0, "response"    # Lorg/apache/http/HttpResponse;
+    .param p1, "adViewController"    # Lcom/fusepowered/m2/m2l/AdViewController;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;

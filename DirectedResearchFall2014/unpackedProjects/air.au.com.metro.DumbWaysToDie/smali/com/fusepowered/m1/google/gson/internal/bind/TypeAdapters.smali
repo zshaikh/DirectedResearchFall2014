@@ -742,8 +742,6 @@
 
 .method public static newFactory(Lcom/fusepowered/m1/google/gson/reflect/TypeToken;Lcom/fusepowered/m1/google/gson/TypeAdapter;)Lcom/fusepowered/m1/google/gson/TypeAdapterFactory;
     .locals 1
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<TT:",
@@ -759,8 +757,8 @@
 
     .prologue
     .line 769
-    .local p0, type:Lcom/fusepowered/m1/google/gson/reflect/TypeToken;,"Lcom/fusepowered/m1/google/gson/reflect/TypeToken<TTT;>;"
-    .local p1, typeAdapter:Lcom/fusepowered/m1/google/gson/TypeAdapter;,"Lcom/fusepowered/m1/google/gson/TypeAdapter<TTT;>;"
+    .local p0, "type":Lcom/fusepowered/m1/google/gson/reflect/TypeToken;, "Lcom/fusepowered/m1/google/gson/reflect/TypeToken<TTT;>;"
+    .local p1, "typeAdapter":Lcom/fusepowered/m1/google/gson/TypeAdapter;, "Lcom/fusepowered/m1/google/gson/TypeAdapter<TTT;>;"
     new-instance v0, Lcom/fusepowered/m1/google/gson/internal/bind/TypeAdapters$27;
 
     invoke-direct {v0, p0, p1}, Lcom/fusepowered/m1/google/gson/internal/bind/TypeAdapters$27;-><init>(Lcom/fusepowered/m1/google/gson/reflect/TypeToken;Lcom/fusepowered/m1/google/gson/TypeAdapter;)V
@@ -770,8 +768,6 @@
 
 .method public static newFactory(Ljava/lang/Class;Lcom/fusepowered/m1/google/gson/TypeAdapter;)Lcom/fusepowered/m1/google/gson/TypeAdapterFactory;
     .locals 1
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<TT:",
@@ -787,8 +783,8 @@
 
     .prologue
     .line 779
-    .local p0, type:Ljava/lang/Class;,"Ljava/lang/Class<TTT;>;"
-    .local p1, typeAdapter:Lcom/fusepowered/m1/google/gson/TypeAdapter;,"Lcom/fusepowered/m1/google/gson/TypeAdapter<TTT;>;"
+    .local p0, "type":Ljava/lang/Class;, "Ljava/lang/Class<TTT;>;"
+    .local p1, "typeAdapter":Lcom/fusepowered/m1/google/gson/TypeAdapter;, "Lcom/fusepowered/m1/google/gson/TypeAdapter<TTT;>;"
     new-instance v0, Lcom/fusepowered/m1/google/gson/internal/bind/TypeAdapters$28;
 
     invoke-direct {v0, p0, p1}, Lcom/fusepowered/m1/google/gson/internal/bind/TypeAdapters$28;-><init>(Ljava/lang/Class;Lcom/fusepowered/m1/google/gson/TypeAdapter;)V
@@ -798,9 +794,6 @@
 
 .method public static newFactory(Ljava/lang/Class;Ljava/lang/Class;Lcom/fusepowered/m1/google/gson/TypeAdapter;)Lcom/fusepowered/m1/google/gson/TypeAdapterFactory;
     .locals 1
-    .parameter
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<TT:",
@@ -818,9 +811,9 @@
 
     .prologue
     .line 792
-    .local p0, unboxed:Ljava/lang/Class;,"Ljava/lang/Class<TTT;>;"
-    .local p1, boxed:Ljava/lang/Class;,"Ljava/lang/Class<TTT;>;"
-    .local p2, typeAdapter:Lcom/fusepowered/m1/google/gson/TypeAdapter;,"Lcom/fusepowered/m1/google/gson/TypeAdapter<-TTT;>;"
+    .local p0, "unboxed":Ljava/lang/Class;, "Ljava/lang/Class<TTT;>;"
+    .local p1, "boxed":Ljava/lang/Class;, "Ljava/lang/Class<TTT;>;"
+    .local p2, "typeAdapter":Lcom/fusepowered/m1/google/gson/TypeAdapter;, "Lcom/fusepowered/m1/google/gson/TypeAdapter<-TTT;>;"
     new-instance v0, Lcom/fusepowered/m1/google/gson/internal/bind/TypeAdapters$29;
 
     invoke-direct {v0, p0, p1, p2}, Lcom/fusepowered/m1/google/gson/internal/bind/TypeAdapters$29;-><init>(Ljava/lang/Class;Ljava/lang/Class;Lcom/fusepowered/m1/google/gson/TypeAdapter;)V
@@ -830,9 +823,6 @@
 
 .method public static newFactoryForMultipleTypes(Ljava/lang/Class;Ljava/lang/Class;Lcom/fusepowered/m1/google/gson/TypeAdapter;)Lcom/fusepowered/m1/google/gson/TypeAdapterFactory;
     .locals 1
-    .parameter
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<TT:",
@@ -850,9 +840,9 @@
 
     .prologue
     .line 807
-    .local p0, base:Ljava/lang/Class;,"Ljava/lang/Class<TTT;>;"
-    .local p1, sub:Ljava/lang/Class;,"Ljava/lang/Class<+TTT;>;"
-    .local p2, typeAdapter:Lcom/fusepowered/m1/google/gson/TypeAdapter;,"Lcom/fusepowered/m1/google/gson/TypeAdapter<-TTT;>;"
+    .local p0, "base":Ljava/lang/Class;, "Ljava/lang/Class<TTT;>;"
+    .local p1, "sub":Ljava/lang/Class;, "Ljava/lang/Class<+TTT;>;"
+    .local p2, "typeAdapter":Lcom/fusepowered/m1/google/gson/TypeAdapter;, "Lcom/fusepowered/m1/google/gson/TypeAdapter<-TTT;>;"
     new-instance v0, Lcom/fusepowered/m1/google/gson/internal/bind/TypeAdapters$30;
 
     invoke-direct {v0, p0, p1, p2}, Lcom/fusepowered/m1/google/gson/internal/bind/TypeAdapters$30;-><init>(Ljava/lang/Class;Ljava/lang/Class;Lcom/fusepowered/m1/google/gson/TypeAdapter;)V
@@ -862,8 +852,6 @@
 
 .method public static newTypeHierarchyFactory(Ljava/lang/Class;Lcom/fusepowered/m1/google/gson/TypeAdapter;)Lcom/fusepowered/m1/google/gson/TypeAdapterFactory;
     .locals 1
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<TT:",
@@ -879,8 +867,8 @@
 
     .prologue
     .line 822
-    .local p0, clazz:Ljava/lang/Class;,"Ljava/lang/Class<TTT;>;"
-    .local p1, typeAdapter:Lcom/fusepowered/m1/google/gson/TypeAdapter;,"Lcom/fusepowered/m1/google/gson/TypeAdapter<TTT;>;"
+    .local p0, "clazz":Ljava/lang/Class;, "Ljava/lang/Class<TTT;>;"
+    .local p1, "typeAdapter":Lcom/fusepowered/m1/google/gson/TypeAdapter;, "Lcom/fusepowered/m1/google/gson/TypeAdapter<TTT;>;"
     new-instance v0, Lcom/fusepowered/m1/google/gson/internal/bind/TypeAdapters$31;
 
     invoke-direct {v0, p0, p1}, Lcom/fusepowered/m1/google/gson/internal/bind/TypeAdapters$31;-><init>(Ljava/lang/Class;Lcom/fusepowered/m1/google/gson/TypeAdapter;)V

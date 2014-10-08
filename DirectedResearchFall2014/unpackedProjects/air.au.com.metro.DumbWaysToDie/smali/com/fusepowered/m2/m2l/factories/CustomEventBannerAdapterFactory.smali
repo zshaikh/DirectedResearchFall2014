@@ -34,9 +34,9 @@
 
 .method public static create(Lcom/fusepowered/m2/m2l/MoPubView;Ljava/lang/String;Ljava/lang/String;)Lcom/fusepowered/m2/m2l/CustomEventBannerAdapter;
     .locals 1
-    .parameter "moPubView"
-    .parameter "className"
-    .parameter "classData"
+    .param p0, "moPubView"    # Lcom/fusepowered/m2/m2l/MoPubView;
+    .param p1, "className"    # Ljava/lang/String;
+    .param p2, "classData"    # Ljava/lang/String;
 
     .prologue
     .line 47
@@ -51,7 +51,7 @@
 
 .method public static setInstance(Lcom/fusepowered/m2/m2l/factories/CustomEventBannerAdapterFactory;)V
     .locals 0
-    .parameter "factory"
+    .param p0, "factory"    # Lcom/fusepowered/m2/m2l/factories/CustomEventBannerAdapterFactory;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -67,9 +67,9 @@
 # virtual methods
 .method protected internalCreate(Lcom/fusepowered/m2/m2l/MoPubView;Ljava/lang/String;Ljava/lang/String;)Lcom/fusepowered/m2/m2l/CustomEventBannerAdapter;
     .locals 1
-    .parameter "moPubView"
-    .parameter "className"
-    .parameter "classData"
+    .param p1, "moPubView"    # Lcom/fusepowered/m2/m2l/MoPubView;
+    .param p2, "className"    # Ljava/lang/String;
+    .param p3, "classData"    # Ljava/lang/String;
 
     .prologue
     .line 51

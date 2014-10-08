@@ -46,9 +46,8 @@
 # virtual methods
 .method public nameForConstructorParameter(Lcom/flurry/org/codehaus/jackson/map/MapperConfig;Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedParameter;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
-    .parameter
-    .parameter "ctorParam"
-    .parameter "defaultName"
+    .param p2, "ctorParam"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedParameter;
+    .param p3, "defaultName"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -63,15 +62,14 @@
 
     .prologue
     .line 114
-    .local p1, config:Lcom/flurry/org/codehaus/jackson/map/MapperConfig;,"Lcom/flurry/org/codehaus/jackson/map/MapperConfig<*>;"
+    .local p1, "config":Lcom/flurry/org/codehaus/jackson/map/MapperConfig;, "Lcom/flurry/org/codehaus/jackson/map/MapperConfig<*>;"
     return-object p3
 .end method
 
 .method public nameForField(Lcom/flurry/org/codehaus/jackson/map/MapperConfig;Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedField;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
-    .parameter
-    .parameter "field"
-    .parameter "defaultName"
+    .param p2, "field"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedField;
+    .param p3, "defaultName"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -86,15 +84,14 @@
 
     .prologue
     .line 54
-    .local p1, config:Lcom/flurry/org/codehaus/jackson/map/MapperConfig;,"Lcom/flurry/org/codehaus/jackson/map/MapperConfig<*>;"
+    .local p1, "config":Lcom/flurry/org/codehaus/jackson/map/MapperConfig;, "Lcom/flurry/org/codehaus/jackson/map/MapperConfig<*>;"
     return-object p3
 .end method
 
 .method public nameForGetterMethod(Lcom/flurry/org/codehaus/jackson/map/MapperConfig;Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
-    .parameter
-    .parameter "method"
-    .parameter "defaultName"
+    .param p2, "method"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
+    .param p3, "defaultName"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -109,15 +106,14 @@
 
     .prologue
     .line 75
-    .local p1, config:Lcom/flurry/org/codehaus/jackson/map/MapperConfig;,"Lcom/flurry/org/codehaus/jackson/map/MapperConfig<*>;"
+    .local p1, "config":Lcom/flurry/org/codehaus/jackson/map/MapperConfig;, "Lcom/flurry/org/codehaus/jackson/map/MapperConfig<*>;"
     return-object p3
 .end method
 
 .method public nameForSetterMethod(Lcom/flurry/org/codehaus/jackson/map/MapperConfig;Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
-    .parameter
-    .parameter "method"
-    .parameter "defaultName"
+    .param p2, "method"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
+    .param p3, "defaultName"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -132,6 +128,6 @@
 
     .prologue
     .line 95
-    .local p1, config:Lcom/flurry/org/codehaus/jackson/map/MapperConfig;,"Lcom/flurry/org/codehaus/jackson/map/MapperConfig<*>;"
+    .local p1, "config":Lcom/flurry/org/codehaus/jackson/map/MapperConfig;, "Lcom/flurry/org/codehaus/jackson/map/MapperConfig<*>;"
     return-object p3
 .end method

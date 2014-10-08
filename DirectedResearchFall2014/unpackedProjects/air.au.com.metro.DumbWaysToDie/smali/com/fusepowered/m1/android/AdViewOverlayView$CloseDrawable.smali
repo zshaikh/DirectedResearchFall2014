@@ -23,7 +23,7 @@
 # direct methods
 .method constructor <init>(Z)V
     .locals 2
-    .parameter "enabled"
+    .param p1, "enabled"    # Z
 
     .prologue
     const/4 v1, 0x1
@@ -64,12 +64,12 @@
 # virtual methods
 .method public draw(Landroid/graphics/Canvas;)V
     .locals 12
-    .parameter "canvas"
+    .param p1, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
     const/16 v2, 0xff
 
-    const/high16 v11, 0x4000
+    const/high16 v11, 0x40000000
 
     .line 478
     invoke-virtual {p0}, Lcom/fusepowered/m1/android/AdViewOverlayView$CloseDrawable;->copyBounds()Landroid/graphics/Rect;
@@ -77,7 +77,7 @@
     move-result-object v6
 
     .line 479
-    .local v6, bounds:Landroid/graphics/Rect;
+    .local v6, "bounds":Landroid/graphics/Rect;
     iget v0, v6, Landroid/graphics/Rect;->right:I
 
     iget v1, v6, Landroid/graphics/Rect;->left:I
@@ -85,7 +85,7 @@
     sub-int v10, v0, v1
 
     .line 480
-    .local v10, width:I
+    .local v10, "width":I
     iget v0, v6, Landroid/graphics/Rect;->bottom:I
 
     iget v1, v6, Landroid/graphics/Rect;->top:I
@@ -93,15 +93,15 @@
     sub-int v8, v0, v1
 
     .line 481
-    .local v8, height:I
+    .local v8, "height":I
     int-to-float v0, v10
 
-    const/high16 v1, 0x40c0
+    const/high16 v1, 0x40c00000
 
     div-float v9, v0, v1
 
     .line 482
-    .local v9, strokeWidth:F
+    .local v9, "strokeWidth":F
     iget-object v0, p0, Lcom/fusepowered/m1/android/AdViewOverlayView$CloseDrawable;->paint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, v9}, Landroid/graphics/Paint;->setStrokeWidth(F)V
@@ -114,7 +114,7 @@
     move v7, v2
 
     .line 484
-    .local v7, grayScale:I
+    .local v7, "grayScale":I
     :goto_0
     iget-object v0, p0, Lcom/fusepowered/m1/android/AdViewOverlayView$CloseDrawable;->paint:Landroid/graphics/Paint;
 
@@ -170,7 +170,7 @@
     return-void
 
     .line 483
-    .end local v7           #grayScale:I
+    .end local v7    # "grayScale":I
     :cond_0
     const/16 v0, 0x50
 
@@ -191,7 +191,7 @@
 
 .method public setAlpha(I)V
     .locals 0
-    .parameter "alpha"
+    .param p1, "alpha"    # I
 
     .prologue
     .line 498
@@ -200,7 +200,7 @@
 
 .method public setColorFilter(Landroid/graphics/ColorFilter;)V
     .locals 0
-    .parameter "cf"
+    .param p1, "cf"    # Landroid/graphics/ColorFilter;
 
     .prologue
     .line 503

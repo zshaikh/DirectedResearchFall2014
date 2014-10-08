@@ -36,7 +36,6 @@
 
 .method public static a(Ljava/lang/Object;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 53
@@ -61,8 +60,6 @@
 
 .method public static a(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 3
-    .parameter
-    .parameter
 
     .prologue
     .line 71
@@ -113,7 +110,6 @@
 
 .method public static a(Ljava/lang/String;)V
     .locals 3
-    .parameter
 
     .prologue
     .line 91
@@ -158,7 +154,6 @@
 
 .method public static a(Z)V
     .locals 1
-    .parameter
 
     .prologue
     .line 37
@@ -172,8 +167,6 @@
 
 .method public static a(ZLjava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 41
@@ -185,7 +178,6 @@
 
 .method public static b(Ljava/lang/Object;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 62
@@ -210,7 +202,6 @@
 
 .method public static b(Z)V
     .locals 2
-    .parameter
 
     .prologue
     .line 45
@@ -235,8 +226,6 @@
 
 .method public static b(ZLjava/lang/String;)V
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 49
@@ -259,8 +248,6 @@
 
 .method private static c(ZLjava/lang/String;)V
     .locals 3
-    .parameter
-    .parameter
 
     .prologue
     const-string v2, "GoogleAdsAssertion"

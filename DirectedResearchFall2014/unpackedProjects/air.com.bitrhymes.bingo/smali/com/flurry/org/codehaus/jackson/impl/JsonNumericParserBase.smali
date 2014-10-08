@@ -11,8 +11,8 @@
 # direct methods
 .method protected constructor <init>(Lcom/flurry/org/codehaus/jackson/io/IOContext;I)V
     .locals 0
-    .parameter "ctxt"
-    .parameter "features"
+    .param p1, "ctxt"    # Lcom/flurry/org/codehaus/jackson/io/IOContext;
+    .param p2, "features"    # I
 
     .prologue
     .line 18

@@ -63,10 +63,10 @@
 
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/Double;Landroid/os/Bundle;Z)V
     .locals 10
-    .parameter "eventName"
-    .parameter "valueToSum"
-    .parameter "parameters"
-    .parameter "isImplicitlyLogged"
+    .param p1, "eventName"    # Ljava/lang/String;
+    .param p2, "valueToSum"    # Ljava/lang/Double;
+    .param p3, "parameters"    # Landroid/os/Bundle;
+    .param p4, "isImplicitlyLogged"    # Z
 
     .prologue
     .line 1107
@@ -147,7 +147,7 @@
     move-result-object v0
 
     .line 1130
-    .local v0, appVersion:Ljava/lang/String;
+    .local v0, "appVersion":Ljava/lang/String;
     if-eqz v0, :cond_2
 
     .line 1131
@@ -209,13 +209,13 @@
     invoke-static {v4, v5, v6, v7}, Lcom/facebook/internal/Logger;->log(Lcom/facebook/LoggingBehavior;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 1162
-    .end local v0           #appVersion:Ljava/lang/String;
+    .end local v0    # "appVersion":Ljava/lang/String;
     :cond_4
     :goto_1
     return-void
 
     .line 1135
-    .restart local v0       #appVersion:Ljava/lang/String;
+    .restart local v0    # "appVersion":Ljava/lang/String;
     :cond_5
     invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -224,7 +224,7 @@
     check-cast v2, Ljava/lang/String;
 
     .line 1137
-    .local v2, key:Ljava/lang/String;
+    .local v2, "key":Ljava/lang/String;
     invoke-direct {p0, v2}, Lcom/facebook/AppEventsLogger$AppEvent;->validateIdentifier(Ljava/lang/String;)V
 
     .line 1139
@@ -233,7 +233,7 @@
     move-result-object v3
 
     .line 1140
-    .local v3, value:Ljava/lang/Object;
+    .local v3, "value":Ljava/lang/Object;
     instance-of v5, v3, Ljava/lang/String;
 
     if-nez v5, :cond_6
@@ -274,16 +274,16 @@
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 1154
-    .end local v0           #appVersion:Ljava/lang/String;
-    .end local v2           #key:Ljava/lang/String;
-    .end local v3           #value:Ljava/lang/Object;
+    .end local v0    # "appVersion":Ljava/lang/String;
+    .end local v2    # "key":Ljava/lang/String;
+    .end local v3    # "value":Ljava/lang/Object;
     :catch_0
     move-exception v4
 
     move-object v1, v4
 
     .line 1157
-    .local v1, jsonException:Lorg/json/JSONException;
+    .local v1, "jsonException":Lorg/json/JSONException;
     sget-object v4, Lcom/facebook/LoggingBehavior;->APP_EVENTS:Lcom/facebook/LoggingBehavior;
 
     const-string v5, "AppEvents"
@@ -314,10 +314,10 @@
     goto :goto_1
 
     .line 1146
-    .end local v1           #jsonException:Lorg/json/JSONException;
-    .restart local v0       #appVersion:Ljava/lang/String;
-    .restart local v2       #key:Ljava/lang/String;
-    .restart local v3       #value:Ljava/lang/Object;
+    .end local v1    # "jsonException":Lorg/json/JSONException;
+    .restart local v0    # "appVersion":Ljava/lang/String;
+    .restart local v2    # "key":Ljava/lang/String;
+    .restart local v3    # "value":Ljava/lang/Object;
     :cond_6
     :try_start_1
     iget-object v5, p0, Lcom/facebook/AppEventsLogger$AppEvent;->jsonObject:Lorg/json/JSONObject;
@@ -335,8 +335,8 @@
 
 .method private constructor <init>(Ljava/lang/String;Z)V
     .locals 1
-    .parameter "jsonString"
-    .parameter "isImplicit"
+    .param p1, "jsonString"    # Ljava/lang/String;
+    .param p2, "isImplicit"    # Z
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lorg/json/JSONException;
@@ -363,9 +363,6 @@
 
 .method synthetic constructor <init>(Ljava/lang/String;ZLcom/facebook/AppEventsLogger$AppEvent;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lorg/json/JSONException;
@@ -381,7 +378,7 @@
 
 .method private validateIdentifier(Ljava/lang/String;)V
     .locals 9
-    .parameter "identifier"
+    .param p1, "identifier"    # Ljava/lang/String;
 
     .prologue
     const/16 v8, 0x28
@@ -394,11 +391,11 @@
     const-string v2, "^[0-9a-zA-Z_]+[0-9a-zA-Z _-]*$"
 
     .line 1186
-    .local v2, regex:Ljava/lang/String;
+    .local v2, "regex":Ljava/lang/String;
     const/16 v0, 0x28
 
     .line 1187
-    .local v0, MAX_IDENTIFIER_LENGTH:I
+    .local v0, "MAX_IDENTIFIER_LENGTH":I
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Ljava/lang/String;->length()I
@@ -453,7 +450,7 @@
     const/4 v1, 0x0
 
     .line 1196
-    .local v1, alreadyValidated:Z
+    .local v1, "alreadyValidated":Z
     sget-object v3, Lcom/facebook/AppEventsLogger$AppEvent;->validatedIdentifiers:Ljava/util/HashSet;
 
     monitor-enter v3

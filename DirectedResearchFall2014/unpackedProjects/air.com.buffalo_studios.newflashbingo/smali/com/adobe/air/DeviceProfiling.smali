@@ -14,7 +14,7 @@
 
 .field private static final LOG_TAG:Ljava/lang/String; = "DeviceProfiling"
 
-.field private static final META_INF:Ljava/lang/String; = null
+.field private static final META_INF:Ljava/lang/String;
 
 .field private static final MM_DOT_CFG:Ljava/lang/String; = "mm.cfg"
 
@@ -78,7 +78,6 @@
 
 .method public static checkAndInitiateProfiler(Landroid/app/Activity;)Z
     .locals 5
-    .parameter
 
     .prologue
     .line 50

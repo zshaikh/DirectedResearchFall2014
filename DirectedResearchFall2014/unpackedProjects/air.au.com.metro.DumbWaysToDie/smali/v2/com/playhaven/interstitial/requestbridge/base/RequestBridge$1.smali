@@ -21,7 +21,6 @@
 # direct methods
 .method constructor <init>(Lv2/com/playhaven/interstitial/requestbridge/base/RequestBridge;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1
@@ -37,8 +36,8 @@
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 5
-    .parameter "context"
-    .parameter "intent"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
     .line 173
@@ -49,7 +48,7 @@
     move-result-object v1
 
     .line 176
-    .local v1, md:Landroid/os/Bundle;
+    .local v1, "md":Landroid/os/Bundle;
     sget-object v3, Lv2/com/playhaven/interstitial/requestbridge/base/RequestBridge$Message;->Event:Lv2/com/playhaven/interstitial/requestbridge/base/RequestBridge$Message;
 
     invoke-virtual {v3}, Lv2/com/playhaven/interstitial/requestbridge/base/RequestBridge$Message;->getKey()Ljava/lang/String;
@@ -61,7 +60,7 @@
     move-result-object v0
 
     .line 179
-    .local v0, event:Ljava/lang/String;
+    .local v0, "event":Ljava/lang/String;
     sget-object v3, Lv2/com/playhaven/interstitial/requestbridge/base/RequestBridge$Message;->Tag:Lv2/com/playhaven/interstitial/requestbridge/base/RequestBridge$Message;
 
     invoke-virtual {v3}, Lv2/com/playhaven/interstitial/requestbridge/base/RequestBridge$Message;->getKey()Ljava/lang/String;
@@ -73,12 +72,12 @@
     move-result-object v2
 
     .line 183
-    .local v2, tag:Ljava/lang/String;
+    .local v2, "tag":Ljava/lang/String;
     if-eqz v2, :cond_0
 
     iget-object v3, p0, Lv2/com/playhaven/interstitial/requestbridge/base/RequestBridge$1;->this$0:Lv2/com/playhaven/interstitial/requestbridge/base/RequestBridge;
 
-    #getter for: Lv2/com/playhaven/interstitial/requestbridge/base/RequestBridge;->tag:Ljava/lang/String;
+    # getter for: Lv2/com/playhaven/interstitial/requestbridge/base/RequestBridge;->tag:Ljava/lang/String;
     invoke-static {v3}, Lv2/com/playhaven/interstitial/requestbridge/base/RequestBridge;->access$0(Lv2/com/playhaven/interstitial/requestbridge/base/RequestBridge;)Ljava/lang/String;
 
     move-result-object v3

@@ -92,7 +92,7 @@
     iput-object v0, p0, Lcom/vungle/sdk/VungleAdvert;->i:[Ljava/lang/Boolean;
 
     .line 67
-    const-wide/high16 v0, -0x8000
+    const-wide/high16 v0, -0x8000000000000000L
 
     iput-wide v0, p0, Lcom/vungle/sdk/VungleAdvert;->k:J
 
@@ -112,7 +112,6 @@
 
 .method private a(I)Lcom/vungle/sdk/g;
     .locals 8
-    .parameter
 
     .prologue
     const/4 v7, 0x0
@@ -307,7 +306,6 @@
 
 .method private static a(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
-    .parameter
 
     .prologue
     .line 91
@@ -379,7 +377,6 @@
 
 .method static synthetic a(Lcom/vungle/sdk/VungleAdvert;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 33
@@ -390,8 +387,6 @@
 
 .method static synthetic a(Lcom/vungle/sdk/VungleAdvert;I)V
     .locals 4
-    .parameter
-    .parameter
 
     .prologue
     .line 33
@@ -428,8 +423,6 @@
 
 .method static synthetic a(Lcom/vungle/sdk/VungleAdvert;Ljava/lang/String;)V
     .locals 5
-    .parameter
-    .parameter
 
     .prologue
     .line 33
@@ -541,7 +534,6 @@
 
 .method static synthetic b(Lcom/vungle/sdk/VungleAdvert;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 33
@@ -552,7 +544,6 @@
 
 .method static synthetic c(Lcom/vungle/sdk/VungleAdvert;)I
     .locals 1
-    .parameter
 
     .prologue
     .line 33
@@ -613,7 +604,6 @@
 
 .method static synthetic d(Lcom/vungle/sdk/VungleAdvert;)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 33
@@ -748,7 +738,6 @@
 
 .method static synthetic e(Lcom/vungle/sdk/VungleAdvert;)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 33
@@ -759,7 +748,6 @@
 
 .method static synthetic f(Lcom/vungle/sdk/VungleAdvert;)J
     .locals 2
-    .parameter
 
     .prologue
     .line 33
@@ -791,7 +779,6 @@
 
 .method static synthetic g(Lcom/vungle/sdk/VungleAdvert;)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 33
@@ -820,7 +807,7 @@
 
 .method protected onCreate(Landroid/os/Bundle;)V
     .locals 3
-    .parameter "savedInstanceState"
+    .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
     const/4 v2, 0x4
@@ -995,8 +982,8 @@
 
 .method public onKeyDown(ILandroid/view/KeyEvent;)Z
     .locals 3
-    .parameter "keyCode"
-    .parameter "event"
+    .param p1, "keyCode"    # I
+    .param p2, "event"    # Landroid/view/KeyEvent;
 
     .prologue
     const/4 v2, 0x1
@@ -1014,12 +1001,12 @@
     move-result v0
 
     .line 732
-    .end local p0
+    .end local p0    # "this":Lcom/vungle/sdk/VungleAdvert;
     :goto_0
     return v0
 
     .line 720
-    .restart local p0
+    .restart local p0    # "this":Lcom/vungle/sdk/VungleAdvert;
     :cond_0
     const/16 v0, 0x19
 
@@ -1074,7 +1061,7 @@
     .line 727
     iget-object p0, p0, Lcom/vungle/sdk/VungleAdvert;->d:Lcom/vungle/sdk/g;
 
-    .end local p0
+    .end local p0    # "this":Lcom/vungle/sdk/VungleAdvert;
     check-cast p0, Lcom/vungle/sdk/j;
 
     .line 728
@@ -1096,7 +1083,7 @@
     goto :goto_0
 
     .line 724
-    .restart local p0
+    .restart local p0    # "this":Lcom/vungle/sdk/VungleAdvert;
     :cond_6
     const/4 v0, 0x0
 
@@ -1173,7 +1160,7 @@
 
 .method protected onSaveInstanceState(Landroid/os/Bundle;)V
     .locals 3
-    .parameter "out"
+    .param p1, "out"    # Landroid/os/Bundle;
 
     .prologue
     .line 637
@@ -1199,7 +1186,7 @@
 
 .method public onWindowFocusChanged(Z)V
     .locals 2
-    .parameter "hasFocus"
+    .param p1, "hasFocus"    # Z
 
     .prologue
     .line 688

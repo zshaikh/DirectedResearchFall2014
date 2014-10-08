@@ -245,12 +245,12 @@
     nop
 
     :array_0
-    .array-data 0x4
-        0x57t 0x30t 0x0t 0x0t
-        0x40t 0x0t 0x0t 0x0t
-        0x56t 0x30t 0x0t 0x0t
-        0x40t 0x0t 0x0t 0x0t
-        0x38t 0x30t 0x0t 0x0t
+    .array-data 4
+        0x3057
+        0x40
+        0x3056
+        0x40
+        0x3038
     .end array-data
 .end method
 
@@ -386,8 +386,6 @@
 
 .method private XX(II)I
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 107
@@ -402,7 +400,6 @@
 
 .method private checkEglError(Ljava/lang/String;)I
     .locals 7
-    .parameter
 
     .prologue
     const/16 v6, 0x3000
@@ -823,7 +820,6 @@
 
 .method public CreateGLContext(Z)I
     .locals 7
-    .parameter
 
     .prologue
     const/16 v5, 0x3000
@@ -1005,8 +1001,6 @@
 
 .method public CreateWindowSurface(Landroid/view/SurfaceView;I)I
     .locals 12
-    .parameter
-    .parameter
 
     .prologue
     const/16 v11, 0x300d
@@ -1629,8 +1623,6 @@
 
 .method public GetConfigs(ZZ)[I
     .locals 10
-    .parameter
-    .parameter
 
     .prologue
     const/4 v9, 0x1
@@ -2586,7 +2578,6 @@
 
 .method public SetConfig(I)V
     .locals 6
-    .parameter
 
     .prologue
     const/4 v5, 0x0

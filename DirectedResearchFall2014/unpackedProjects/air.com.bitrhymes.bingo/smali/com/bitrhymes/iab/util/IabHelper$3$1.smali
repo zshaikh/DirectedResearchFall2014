@@ -30,10 +30,6 @@
 # direct methods
 .method constructor <init>(Lcom/bitrhymes/iab/util/IabHelper$3;Lcom/bitrhymes/iab/util/IabHelper$OnConsumeFinishedListener;Ljava/util/List;Ljava/util/List;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 1
@@ -76,7 +72,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/bitrhymes/iab/util/IabHelper$3$1;
     check-cast p0, Lcom/bitrhymes/iab/util/IabResult;
 
     invoke-interface {v1, v0, p0}, Lcom/bitrhymes/iab/util/IabHelper$OnConsumeFinishedListener;->onConsumeFinished(Lcom/bitrhymes/iab/util/Purchase;Lcom/bitrhymes/iab/util/IabResult;)V

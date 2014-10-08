@@ -16,8 +16,7 @@
 
 .method public static varargs safeExecuteOnExecutor(Landroid/os/AsyncTask;[Ljava/lang/Object;)V
     .locals 4
-    .parameter
-    .parameter "params"
+    .param p1, "params"    # [Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<P:",
@@ -35,7 +34,7 @@
     .end annotation
 
     .prologue
-    .local p0, asyncTask:Landroid/os/AsyncTask;,"Landroid/os/AsyncTask<TP;**>;"
+    .local p0, "asyncTask":Landroid/os/AsyncTask;, "Landroid/os/AsyncTask<TP;**>;"
     const-class v3, Landroid/os/AsyncTask;
 
     .line 13
@@ -82,7 +81,7 @@
     check-cast v0, Ljava/util/concurrent/Executor;
 
     .line 20
-    .local v0, threadPoolExecutor:Ljava/util/concurrent/Executor;
+    .local v0, "threadPoolExecutor":Ljava/util/concurrent/Executor;
     new-instance v1, Lcom/fusepowered/m2/m2l/util/Reflection$MethodBuilder;
 
     const-string v2, "executeOnExecutor"
@@ -107,7 +106,7 @@
     invoke-virtual {v1}, Lcom/fusepowered/m2/m2l/util/Reflection$MethodBuilder;->execute()Ljava/lang/Object;
 
     .line 27
-    .end local v0           #threadPoolExecutor:Ljava/util/concurrent/Executor;
+    .end local v0    # "threadPoolExecutor":Ljava/util/concurrent/Executor;
     :goto_0
     return-void
 

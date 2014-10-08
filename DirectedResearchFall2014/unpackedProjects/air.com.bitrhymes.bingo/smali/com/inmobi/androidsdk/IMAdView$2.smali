@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/inmobi/androidsdk/IMAdView;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1
@@ -40,7 +39,6 @@
 # virtual methods
 .method public onAnimationEnd(Landroid/view/animation/Animation;)V
     .locals 5
-    .parameter
 
     .prologue
     const/4 v2, 0x0
@@ -175,8 +173,8 @@
 
     invoke-virtual {v0, v1}, Lcom/inmobi/androidsdk/IMAdView;->startAnimation(Landroid/view/animation/Animation;)V
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 1271
     :goto_1
@@ -247,8 +245,8 @@
 
     invoke-virtual {v0}, Lcom/inmobi/androidsdk/ai/container/IMWebView;->requestFocusFromTouch()Z
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     goto :goto_0
 
@@ -316,8 +314,8 @@
 
     invoke-static {v0}, Lcom/inmobi/androidsdk/IMAdView;->c(Lcom/inmobi/androidsdk/IMAdView;)V
     :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_0
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
     goto :goto_1
 
@@ -356,7 +354,6 @@
 
 .method public onAnimationRepeat(Landroid/view/animation/Animation;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1281
@@ -365,7 +362,6 @@
 
 .method public onAnimationStart(Landroid/view/animation/Animation;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1285

@@ -36,8 +36,6 @@
 # direct methods
 .method constructor <init>(Lcom/facebook/widget/GraphObjectAdapter;Ljava/text/Collator;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 1
@@ -55,21 +53,21 @@
 # virtual methods
 .method public compare(Lcom/facebook/model/GraphObject;Lcom/facebook/model/GraphObject;)I
     .locals 2
-    .parameter "a"
-    .parameter "b"
+    .param p1, "a"    # Lcom/facebook/model/GraphObject;
+    .param p2, "b"    # Lcom/facebook/model/GraphObject;
 
     .prologue
     .line 489
     iget-object v0, p0, Lcom/facebook/widget/GraphObjectAdapter$1;->this$0:Lcom/facebook/widget/GraphObjectAdapter;
 
-    #getter for: Lcom/facebook/widget/GraphObjectAdapter;->sortFields:Ljava/util/List;
+    # getter for: Lcom/facebook/widget/GraphObjectAdapter;->sortFields:Ljava/util/List;
     invoke-static {v0}, Lcom/facebook/widget/GraphObjectAdapter;->access$0(Lcom/facebook/widget/GraphObjectAdapter;)Ljava/util/List;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/facebook/widget/GraphObjectAdapter$1;->val$collator:Ljava/text/Collator;
 
-    #calls: Lcom/facebook/widget/GraphObjectAdapter;->compareGraphObjects(Lcom/facebook/model/GraphObject;Lcom/facebook/model/GraphObject;Ljava/util/Collection;Ljava/text/Collator;)I
+    # invokes: Lcom/facebook/widget/GraphObjectAdapter;->compareGraphObjects(Lcom/facebook/model/GraphObject;Lcom/facebook/model/GraphObject;Ljava/util/Collection;Ljava/text/Collator;)I
     invoke-static {p1, p2, v0, v1}, Lcom/facebook/widget/GraphObjectAdapter;->access$1(Lcom/facebook/model/GraphObject;Lcom/facebook/model/GraphObject;Ljava/util/Collection;Ljava/text/Collator;)I
 
     move-result v0
@@ -79,8 +77,6 @@
 
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 1

@@ -212,7 +212,7 @@
 
 .method private constructor <init>(Landroid/content/Context;)V
     .locals 5
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     const/4 v4, 0x0
@@ -334,7 +334,7 @@
 
 .method static synthetic access$000(Lcom/fusepowered/m1/android/HandShake;)Ljava/lang/ref/WeakReference;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/fusepowered/m1/android/HandShake;
 
     .prologue
     .line 39
@@ -345,7 +345,7 @@
 
 .method static synthetic access$100(Lcom/fusepowered/m1/android/HandShake;)Ljava/lang/ref/WeakReference;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/fusepowered/m1/android/HandShake;
 
     .prologue
     .line 39
@@ -356,8 +356,8 @@
 
 .method static synthetic access$1000(Lcom/fusepowered/m1/android/HandShake;Landroid/content/Context;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
+    .param p0, "x0"    # Lcom/fusepowered/m1/android/HandShake;
+    .param p1, "x1"    # Landroid/content/Context;
 
     .prologue
     .line 39
@@ -368,7 +368,7 @@
 
 .method static synthetic access$1100(Lcom/fusepowered/m1/android/HandShake;)J
     .locals 2
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/fusepowered/m1/android/HandShake;
 
     .prologue
     .line 39
@@ -379,8 +379,8 @@
 
 .method static synthetic access$200(Lcom/fusepowered/m1/android/HandShake;Landroid/content/Context;)Z
     .locals 1
-    .parameter "x0"
-    .parameter "x1"
+    .param p0, "x0"    # Lcom/fusepowered/m1/android/HandShake;
+    .param p1, "x1"    # Landroid/content/Context;
 
     .prologue
     .line 39
@@ -403,7 +403,7 @@
 
 .method static synthetic access$302(Ljava/lang/String;)Ljava/lang/String;
     .locals 0
-    .parameter "x0"
+    .param p0, "x0"    # Ljava/lang/String;
 
     .prologue
     .line 39
@@ -414,8 +414,8 @@
 
 .method static synthetic access$400(Lcom/fusepowered/m1/android/HandShake;Ljava/lang/String;)Lorg/json/JSONObject;
     .locals 1
-    .parameter "x0"
-    .parameter "x1"
+    .param p0, "x0"    # Lcom/fusepowered/m1/android/HandShake;
+    .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
     .line 39
@@ -428,8 +428,8 @@
 
 .method static synthetic access$500(Lcom/fusepowered/m1/android/HandShake;Lorg/json/JSONObject;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
+    .param p0, "x0"    # Lcom/fusepowered/m1/android/HandShake;
+    .param p1, "x1"    # Lorg/json/JSONObject;
 
     .prologue
     .line 39
@@ -440,8 +440,8 @@
 
 .method static synthetic access$600(Lcom/fusepowered/m1/android/HandShake;Landroid/content/Context;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
+    .param p0, "x0"    # Lcom/fusepowered/m1/android/HandShake;
+    .param p1, "x1"    # Landroid/content/Context;
 
     .prologue
     .line 39
@@ -452,7 +452,7 @@
 
 .method static synthetic access$700(Lcom/fusepowered/m1/android/HandShake;)Ljava/lang/Runnable;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/fusepowered/m1/android/HandShake;
 
     .prologue
     .line 39
@@ -463,7 +463,7 @@
 
 .method static synthetic access$800(Lcom/fusepowered/m1/android/HandShake;)J
     .locals 2
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/fusepowered/m1/android/HandShake;
 
     .prologue
     .line 39
@@ -474,7 +474,7 @@
 
 .method static synthetic access$900(Lcom/fusepowered/m1/android/HandShake;)Landroid/os/Handler;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/fusepowered/m1/android/HandShake;
 
     .prologue
     .line 39
@@ -485,7 +485,7 @@
 
 .method private deserializeFromObj(Lorg/json/JSONObject;)V
     .locals 20
-    .parameter "handShakeObject"
+    .param p1, "handShakeObject"    # Lorg/json/JSONObject;
 
     .prologue
     .line 634
@@ -502,16 +502,16 @@
     check-cast v7, Landroid/content/Context;
 
     .line 638
-    .local v7, context:Landroid/content/Context;
+    .local v7, "context":Landroid/content/Context;
     if-nez p1, :cond_0
 
     .line 766
-    .end local p1
+    .end local p1    # "handShakeObject":Lorg/json/JSONObject;
     :goto_0
     return-void
 
     .line 644
-    .restart local p1
+    .restart local p1    # "handShakeObject":Lorg/json/JSONObject;
     :cond_0
     :try_start_0
     const-string v16, "errors"
@@ -525,13 +525,13 @@
     move-result-object v11
 
     .line 645
-    .local v11, jsonArray:Lorg/json/JSONArray;
+    .local v11, "jsonArray":Lorg/json/JSONArray;
     if-eqz v11, :cond_3
 
     .line 647
     const/4 v10, 0x0
 
-    .local v10, i:I
+    .local v10, "i":I
     :goto_1
     invoke-virtual {v11}, Lorg/json/JSONArray;->length()I
 
@@ -549,7 +549,7 @@
     move-result-object v12
 
     .line 650
-    .local v12, jsonObject:Lorg/json/JSONObject;
+    .local v12, "jsonObject":Lorg/json/JSONObject;
     if-eqz v12, :cond_1
 
     .line 652
@@ -568,7 +568,7 @@
     move-result-object v13
 
     .line 653
-    .local v13, message:Ljava/lang/String;
+    .local v13, "message":Ljava/lang/String;
     const-string v16, "type"
 
     const/16 v17, 0x0
@@ -584,7 +584,7 @@
     move-result-object v15
 
     .line 654
-    .local v15, type:Ljava/lang/String;
+    .local v15, "type":Ljava/lang/String;
     if-eqz v13, :cond_1
 
     if-eqz v15, :cond_1
@@ -602,8 +602,8 @@
     invoke-static {v13}, Lcom/fusepowered/m1/android/MMSDK$Log;->e(Ljava/lang/String;)V
 
     .line 647
-    .end local v13           #message:Ljava/lang/String;
-    .end local v15           #type:Ljava/lang/String;
+    .end local v13    # "message":Ljava/lang/String;
+    .end local v15    # "type":Ljava/lang/String;
     :cond_1
     :goto_2
     add-int/lit8 v10, v10, 0x1
@@ -611,8 +611,8 @@
     goto :goto_1
 
     .line 660
-    .restart local v13       #message:Ljava/lang/String;
-    .restart local v15       #type:Ljava/lang/String;
+    .restart local v13    # "message":Ljava/lang/String;
+    .restart local v15    # "type":Ljava/lang/String;
     :cond_2
     const-string v16, "prompt"
 
@@ -648,27 +648,27 @@
     goto :goto_2
 
     .line 762
-    .end local v10           #i:I
-    .end local v11           #jsonArray:Lorg/json/JSONArray;
-    .end local v12           #jsonObject:Lorg/json/JSONObject;
-    .end local v13           #message:Ljava/lang/String;
-    .end local v15           #type:Ljava/lang/String;
-    .end local p1
+    .end local v10    # "i":I
+    .end local v11    # "jsonArray":Lorg/json/JSONArray;
+    .end local v12    # "jsonObject":Lorg/json/JSONObject;
+    .end local v13    # "message":Ljava/lang/String;
+    .end local v15    # "type":Ljava/lang/String;
+    .end local p1    # "handShakeObject":Lorg/json/JSONObject;
     :catch_0
     move-exception v16
 
     move-object/from16 v8, v16
 
     .line 764
-    .local v8, e:Ljava/lang/Exception;
+    .local v8, "e":Ljava/lang/Exception;
     invoke-virtual {v8}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0
 
     .line 696
-    .end local v8           #e:Ljava/lang/Exception;
-    .restart local v11       #jsonArray:Lorg/json/JSONArray;
-    .restart local p1
+    .end local v8    # "e":Ljava/lang/Exception;
+    .restart local v11    # "jsonArray":Lorg/json/JSONArray;
+    .restart local p1    # "handShakeObject":Lorg/json/JSONObject;
     :cond_3
     :try_start_1
     const-string v16, "adtypes"
@@ -682,7 +682,7 @@
     move-result-object v12
 
     .line 697
-    .restart local v12       #jsonObject:Lorg/json/JSONObject;
+    .restart local v12    # "jsonObject":Lorg/json/JSONObject;
     if-eqz v12, :cond_5
 
     .line 700
@@ -691,10 +691,10 @@
     move-result-object v6
 
     .line 702
-    .local v6, adTypes:[Ljava/lang/String;
+    .local v6, "adTypes":[Ljava/lang/String;
     const/4 v10, 0x0
 
-    .restart local v10       #i:I
+    .restart local v10    # "i":I
     :goto_3
     move-object v0, v6
 
@@ -720,7 +720,7 @@
     move-result-object v5
 
     .line 705
-    .local v5, adTypeObject:Lorg/json/JSONObject;
+    .local v5, "adTypeObject":Lorg/json/JSONObject;
     if-eqz v5, :cond_4
 
     .line 707
@@ -733,7 +733,7 @@
     invoke-direct {v0, v1}, Lcom/fusepowered/m1/android/HandShake$AdTypeHandShake;-><init>(Lcom/fusepowered/m1/android/HandShake;)V
 
     .line 708
-    .local v4, adTypeHandShake:Lcom/fusepowered/m1/android/HandShake$AdTypeHandShake;
+    .local v4, "adTypeHandShake":Lcom/fusepowered/m1/android/HandShake$AdTypeHandShake;
     invoke-virtual {v4, v5}, Lcom/fusepowered/m1/android/HandShake$AdTypeHandShake;->deserializeFromObj(Lorg/json/JSONObject;)V
 
     .line 710
@@ -765,16 +765,16 @@
     invoke-virtual {v0, v1, v2}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 702
-    .end local v4           #adTypeHandShake:Lcom/fusepowered/m1/android/HandShake$AdTypeHandShake;
+    .end local v4    # "adTypeHandShake":Lcom/fusepowered/m1/android/HandShake$AdTypeHandShake;
     :cond_4
     add-int/lit8 v10, v10, 0x1
 
     goto :goto_3
 
     .line 717
-    .end local v5           #adTypeObject:Lorg/json/JSONObject;
-    .end local v6           #adTypes:[Ljava/lang/String;
-    .end local v10           #i:I
+    .end local v5    # "adTypeObject":Lorg/json/JSONObject;
+    .end local v6    # "adTypes":[Ljava/lang/String;
+    .end local v10    # "i":I
     :cond_5
     monitor-enter p0
     :try_end_1
@@ -835,7 +835,7 @@
     :cond_6
     const/4 v10, 0x0
 
-    .restart local v10       #i:I
+    .restart local v10    # "i":I
     :goto_4
     invoke-virtual {v11}, Lorg/json/JSONArray;->length()I
 
@@ -865,7 +865,7 @@
     invoke-direct {v0, v1}, Lcom/fusepowered/m1/android/HandShake$Scheme;-><init>(Lcom/fusepowered/m1/android/HandShake;)V
 
     .line 730
-    .local v14, scheme:Lcom/fusepowered/m1/android/HandShake$Scheme;
+    .local v14, "scheme":Lcom/fusepowered/m1/android/HandShake$Scheme;
     invoke-virtual {v14, v12}, Lcom/fusepowered/m1/android/HandShake$Scheme;->deserializeFromObj(Lorg/json/JSONObject;)V
 
     .line 731
@@ -882,14 +882,14 @@
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 724
-    .end local v14           #scheme:Lcom/fusepowered/m1/android/HandShake$Scheme;
+    .end local v14    # "scheme":Lcom/fusepowered/m1/android/HandShake$Scheme;
     :cond_7
     add-int/lit8 v10, v10, 0x1
 
     goto :goto_4
 
     .line 735
-    .end local v10           #i:I
+    .end local v10    # "i":I
     :cond_8
     monitor-exit p0
     :try_end_2
@@ -1089,7 +1089,7 @@
     move-result-object v9
 
     .line 748
-    .local v9, gsonNuance:Ljava/lang/String;
+    .local v9, "gsonNuance":Ljava/lang/String;
     new-instance v16, Lcom/fusepowered/m1/google/gson/Gson;
 
     invoke-direct/range {v16 .. v16}, Lcom/fusepowered/m1/google/gson/Gson;-><init>()V
@@ -1180,7 +1180,7 @@
 
     move-result-object p1
 
-    .end local p1
+    .end local p1    # "handShakeObject":Lorg/json/JSONObject;
     check-cast p1, Landroid/content/Context;
 
     move-object/from16 v0, p0
@@ -1200,8 +1200,8 @@
     goto/16 :goto_0
 
     .line 735
-    .end local v9           #gsonNuance:Ljava/lang/String;
-    .restart local p1
+    .end local v9    # "gsonNuance":Ljava/lang/String;
+    .restart local p1    # "handShakeObject":Lorg/json/JSONObject;
     :catchall_0
     move-exception v16
 
@@ -1214,7 +1214,7 @@
     throw v16
 
     .line 759
-    .restart local v9       #gsonNuance:Ljava/lang/String;
+    .restart local v9    # "gsonNuance":Ljava/lang/String;
     :cond_9
     new-instance v16, Ljava/lang/StringBuilder;
 
@@ -1297,8 +1297,8 @@
 
 .method private handleCachedVideos(Lorg/json/JSONObject;Landroid/content/Context;)V
     .locals 4
-    .parameter "handShakeObject"
-    .parameter "context"
+    .param p1, "handShakeObject"    # Lorg/json/JSONObject;
+    .param p2, "context"    # Landroid/content/Context;
 
     .prologue
     .line 772
@@ -1309,7 +1309,7 @@
     move-result-object v0
 
     .line 773
-    .local v0, jsonArray:Lorg/json/JSONArray;
+    .local v0, "jsonArray":Lorg/json/JSONArray;
     if-eqz v0, :cond_0
 
     .line 775
@@ -1369,7 +1369,7 @@
 
 .method private isFirstLaunch(Landroid/content/Context;)Z
     .locals 3
-    .parameter "tempContext"
+    .param p1, "tempContext"    # Landroid/content/Context;
 
     .prologue
     const/4 v2, 0x0
@@ -1392,7 +1392,7 @@
     move-result-object v0
 
     .line 377
-    .local v0, settings:Landroid/content/SharedPreferences;
+    .local v0, "settings":Landroid/content/SharedPreferences;
     const-string v1, "firstlaunchHandshake"
 
     const/4 v2, 0x1
@@ -1406,14 +1406,14 @@
 
 .method private loadHandShake(Landroid/content/Context;)Z
     .locals 27
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     .line 785
     const/16 v17, 0x0
 
     .line 786
-    .local v17, settingsFound:Z
+    .local v17, "settingsFound":Z
     const-string v19, "MillennialMediaSettings"
 
     const/16 v20, 0x0
@@ -1429,7 +1429,7 @@
     move-result-object v16
 
     .line 788
-    .local v16, settings:Landroid/content/SharedPreferences;
+    .local v16, "settings":Landroid/content/SharedPreferences;
     if-nez v16, :cond_0
 
     .line 789
@@ -1701,7 +1701,7 @@
     move-result-object v7
 
     .line 825
-    .local v7, gsonNuance:Ljava/lang/String;
+    .local v7, "gsonNuance":Ljava/lang/String;
     new-instance v19, Lcom/fusepowered/m1/google/gson/Gson;
 
     invoke-direct/range {v19 .. v19}, Lcom/fusepowered/m1/google/gson/Gson;-><init>()V
@@ -1730,7 +1730,7 @@
     const/16 v17, 0x1
 
     .line 828
-    .end local v7           #gsonNuance:Ljava/lang/String;
+    .end local v7    # "gsonNuance":Ljava/lang/String;
     :cond_7
     const-string v19, "handshake_mmdid"
 
@@ -1869,10 +1869,10 @@
     move-result-object v5
 
     .line 845
-    .local v5, adTypes:[Ljava/lang/String;
+    .local v5, "adTypes":[Ljava/lang/String;
     const/4 v8, 0x0
 
-    .local v8, i:I
+    .local v8, "i":I
     :goto_1
     move-object v0, v5
 
@@ -1896,7 +1896,7 @@
     invoke-direct {v0, v1}, Lcom/fusepowered/m1/android/HandShake$AdTypeHandShake;-><init>(Lcom/fusepowered/m1/android/HandShake;)V
 
     .line 848
-    .local v4, adTypeHandShake:Lcom/fusepowered/m1/android/HandShake$AdTypeHandShake;
+    .local v4, "adTypeHandShake":Lcom/fusepowered/m1/android/HandShake$AdTypeHandShake;
     aget-object v19, v5, v8
 
     move-object v0, v4
@@ -1938,7 +1938,7 @@
     goto :goto_1
 
     .line 855
-    .end local v4           #adTypeHandShake:Lcom/fusepowered/m1/android/HandShake$AdTypeHandShake;
+    .end local v4    # "adTypeHandShake":Lcom/fusepowered/m1/android/HandShake$AdTypeHandShake;
     :cond_c
     monitor-enter p0
 
@@ -1972,7 +1972,7 @@
     move-result-object v15
 
     .line 860
-    .local v15, schemesStr:Ljava/lang/String;
+    .local v15, "schemesStr":Ljava/lang/String;
     invoke-virtual {v15}, Ljava/lang/String;->length()I
 
     move-result v19
@@ -1991,23 +1991,23 @@
     move-result-object v14
 
     .line 863
-    .local v14, schemeStrings:[Ljava/lang/String;
+    .local v14, "schemeStrings":[Ljava/lang/String;
     move-object v6, v14
 
-    .local v6, arr$:[Ljava/lang/String;
+    .local v6, "arr$":[Ljava/lang/String;
     array-length v10, v6
 
-    .local v10, len$:I
+    .local v10, "len$":I
     const/4 v9, 0x0
 
-    .local v9, i$:I
+    .local v9, "i$":I
     :goto_2
     if-ge v9, v10, :cond_e
 
     aget-object v18, v6, v9
 
     .line 865
-    .local v18, str:Ljava/lang/String;
+    .local v18, "str":Ljava/lang/String;
     const-string v19, "\t"
 
     invoke-virtual/range {v18 .. v19}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
@@ -2015,7 +2015,7 @@
     move-result-object v11
 
     .line 866
-    .local v11, parts:[Ljava/lang/String;
+    .local v11, "parts":[Ljava/lang/String;
     move-object v0, v11
 
     array-length v0, v0
@@ -2056,7 +2056,7 @@
     invoke-direct {v0, v1, v2, v3}, Lcom/fusepowered/m1/android/HandShake$Scheme;-><init>(Lcom/fusepowered/m1/android/HandShake;Ljava/lang/String;I)V
 
     .line 869
-    .local v13, scheme:Lcom/fusepowered/m1/android/HandShake$Scheme;
+    .local v13, "scheme":Lcom/fusepowered/m1/android/HandShake$Scheme;
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/fusepowered/m1/android/HandShake;->schemes:Ljava/util/ArrayList;
@@ -2070,24 +2070,24 @@
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 863
-    .end local v13           #scheme:Lcom/fusepowered/m1/android/HandShake$Scheme;
+    .end local v13    # "scheme":Lcom/fusepowered/m1/android/HandShake$Scheme;
     :cond_d
     add-int/lit8 v9, v9, 0x1
 
     goto :goto_2
 
     .line 872
-    .end local v11           #parts:[Ljava/lang/String;
-    .end local v18           #str:Ljava/lang/String;
+    .end local v11    # "parts":[Ljava/lang/String;
+    .end local v18    # "str":Ljava/lang/String;
     :cond_e
     const/16 v17, 0x1
 
     .line 875
-    .end local v6           #arr$:[Ljava/lang/String;
-    .end local v9           #i$:I
-    .end local v10           #len$:I
-    .end local v14           #schemeStrings:[Ljava/lang/String;
-    .end local v15           #schemesStr:Ljava/lang/String;
+    .end local v6    # "arr$":[Ljava/lang/String;
+    .end local v9    # "i$":I
+    .end local v10    # "len$":I
+    .end local v14    # "schemeStrings":[Ljava/lang/String;
+    .end local v15    # "schemesStr":Ljava/lang/String;
     :cond_f
     monitor-exit p0
     :try_end_0
@@ -2122,7 +2122,7 @@
     move-result-object v12
 
     .line 880
-    .local v12, savedVideos:Ljava/lang/String;
+    .local v12, "savedVideos":Ljava/lang/String;
     invoke-virtual {v12}, Ljava/lang/String;->length()I
 
     move-result v19
@@ -2155,7 +2155,7 @@
     iput-object v0, v1, Lcom/fusepowered/m1/android/HandShake;->cachedVideos:[Lcom/fusepowered/m1/android/DTOCachedVideo;
 
     .line 887
-    .end local v12           #savedVideos:Ljava/lang/String;
+    .end local v12    # "savedVideos":Ljava/lang/String;
     :cond_10
     const-string v19, "handshake_lasthandshake"
 
@@ -2336,7 +2336,7 @@
 
 .method private parseJson(Ljava/lang/String;)Lorg/json/JSONObject;
     .locals 5
-    .parameter "jsonString"
+    .param p1, "jsonString"    # Ljava/lang/String;
 
     .prologue
     const-string v2, "mmishake"
@@ -2364,7 +2364,7 @@
     invoke-direct {v1, p1}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
     .line 616
-    .local v1, jsonObject:Lorg/json/JSONObject;
+    .local v1, "jsonObject":Lorg/json/JSONObject;
     invoke-virtual {v1}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
 
     move-result-object v2
@@ -2390,7 +2390,7 @@
     move-result-object v2
 
     .line 625
-    .end local v1           #jsonObject:Lorg/json/JSONObject;
+    .end local v1    # "jsonObject":Lorg/json/JSONObject;
     :goto_0
     return-object v2
 
@@ -2401,11 +2401,11 @@
     move-object v0, v2
 
     .line 622
-    .local v0, e:Lorg/json/JSONException;
+    .local v0, "e":Lorg/json/JSONException;
     invoke-virtual {v0}, Lorg/json/JSONException;->printStackTrace()V
 
     .line 625
-    .end local v0           #e:Lorg/json/JSONException;
+    .end local v0    # "e":Lorg/json/JSONException;
     :cond_0
     const/4 v2, 0x0
 
@@ -2414,7 +2414,7 @@
 
 .method private requestHandshake(Z)V
     .locals 1
-    .parameter "isInitialize"
+    .param p1, "isInitialize"    # Z
 
     .prologue
     .line 263
@@ -2430,7 +2430,7 @@
 
 .method private saveHandShake(Landroid/content/Context;)V
     .locals 11
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     .line 911
@@ -2443,13 +2443,13 @@
     move-result-object v6
 
     .line 912
-    .local v6, settings:Landroid/content/SharedPreferences;
+    .local v6, "settings":Landroid/content/SharedPreferences;
     invoke-interface {v6}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v2
 
     .line 915
-    .local v2, editor:Landroid/content/SharedPreferences$Editor;
+    .local v2, "editor":Landroid/content/SharedPreferences$Editor;
     const-string v8, "handshake_deferredviewtimeout"
 
     iget-wide v9, p0, Lcom/fusepowered/m1/android/HandShake;->deferredViewTimeout:J
@@ -2544,7 +2544,7 @@
 
     move-result-object v4
 
-    .local v4, i$:Ljava/util/Iterator;
+    .local v4, "i$":Ljava/util/Iterator;
     :goto_0
     invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
 
@@ -2559,7 +2559,7 @@
     check-cast v0, Ljava/lang/String;
 
     .line 931
-    .local v0, adType:Ljava/lang/String;
+    .local v0, "adType":Ljava/lang/String;
     iget-object v8, p0, Lcom/fusepowered/m1/android/HandShake;->adTypeHandShakes:Ljava/util/LinkedHashMap;
 
     invoke-virtual {v8, v0}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -2569,16 +2569,16 @@
     check-cast v1, Lcom/fusepowered/m1/android/HandShake$AdTypeHandShake;
 
     .line 932
-    .local v1, adTypeHandShake:Lcom/fusepowered/m1/android/HandShake$AdTypeHandShake;
+    .local v1, "adTypeHandShake":Lcom/fusepowered/m1/android/HandShake$AdTypeHandShake;
     check-cast v0, Ljava/lang/String;
 
-    .end local v0           #adType:Ljava/lang/String;
+    .end local v0    # "adType":Ljava/lang/String;
     invoke-virtual {v1, v2, v0}, Lcom/fusepowered/m1/android/HandShake$AdTypeHandShake;->save(Landroid/content/SharedPreferences$Editor;Ljava/lang/String;)V
 
     goto :goto_0
 
     .line 936
-    .end local v1           #adTypeHandShake:Lcom/fusepowered/m1/android/HandShake$AdTypeHandShake;
+    .end local v1    # "adTypeHandShake":Lcom/fusepowered/m1/android/HandShake$AdTypeHandShake;
     :cond_1
     monitor-enter p0
 
@@ -2589,10 +2589,10 @@
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
     .line 939
-    .local v7, stringBuilder:Ljava/lang/StringBuilder;
+    .local v7, "stringBuilder":Ljava/lang/StringBuilder;
     const/4 v3, 0x0
 
-    .local v3, i:I
+    .local v3, "i":I
     :goto_1
     iget-object v8, p0, Lcom/fusepowered/m1/android/HandShake;->schemes:Ljava/util/ArrayList;
 
@@ -2612,7 +2612,7 @@
     check-cast v5, Lcom/fusepowered/m1/android/HandShake$Scheme;
 
     .line 942
-    .local v5, scheme:Lcom/fusepowered/m1/android/HandShake$Scheme;
+    .local v5, "scheme":Lcom/fusepowered/m1/android/HandShake$Scheme;
     if-lez v3, :cond_2
 
     .line 943
@@ -2656,7 +2656,7 @@
     goto :goto_1
 
     .line 946
-    .end local v5           #scheme:Lcom/fusepowered/m1/android/HandShake$Scheme;
+    .end local v5    # "scheme":Lcom/fusepowered/m1/android/HandShake$Scheme;
     :cond_3
     const-string v8, "handshake_schemes"
 
@@ -2713,8 +2713,8 @@
     return-void
 
     .line 947
-    .end local v3           #i:I
-    .end local v7           #stringBuilder:Ljava/lang/StringBuilder;
+    .end local v3    # "i":I
+    .end local v7    # "stringBuilder":Ljava/lang/StringBuilder;
     :catchall_0
     move-exception v8
 
@@ -2728,7 +2728,7 @@
 
 .method private sentFirstLaunch(Landroid/content/Context;)V
     .locals 4
-    .parameter "tempContext"
+    .param p1, "tempContext"    # Landroid/content/Context;
 
     .prologue
     const/4 v3, 0x0
@@ -2744,13 +2744,13 @@
     move-result-object v1
 
     .line 385
-    .local v1, settings:Landroid/content/SharedPreferences;
+    .local v1, "settings":Landroid/content/SharedPreferences;
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
     .line 386
-    .local v0, editor:Landroid/content/SharedPreferences$Editor;
+    .local v0, "editor":Landroid/content/SharedPreferences$Editor;
     const-string v2, "firstlaunchHandshake"
 
     invoke-interface {v0, v2, v3}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
@@ -2759,16 +2759,16 @@
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     .line 389
-    .end local v0           #editor:Landroid/content/SharedPreferences$Editor;
-    .end local v1           #settings:Landroid/content/SharedPreferences;
+    .end local v0    # "editor":Landroid/content/SharedPreferences$Editor;
+    .end local v1    # "settings":Landroid/content/SharedPreferences;
     :cond_0
     return-void
 .end method
 
 .method static setAdUrl(Landroid/content/Context;Ljava/lang/String;)V
     .locals 4
-    .parameter "context"
-    .parameter "url"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "url"    # Ljava/lang/String;
 
     .prologue
     const-string v3, "getAd.php5?"
@@ -2850,8 +2850,8 @@
 
 .method static declared-synchronized setHandShakeURL(Landroid/content/Context;Ljava/lang/String;)V
     .locals 3
-    .parameter "context"
-    .parameter "url"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "url"    # Ljava/lang/String;
 
     .prologue
     const-string v0, "http://"
@@ -2939,7 +2939,7 @@
 
 .method static declared-synchronized sharedHandShake(Landroid/content/Context;)Lcom/fusepowered/m1/android/HandShake;
     .locals 5
-    .parameter "context"
+    .param p0, "context"    # Landroid/content/Context;
 
     .prologue
     .line 107
@@ -3038,8 +3038,8 @@
 # virtual methods
 .method declared-synchronized canDisplayCachedAd(Ljava/lang/String;J)Z
     .locals 2
-    .parameter "adType"
-    .parameter "cachedTime"
+    .param p1, "adType"    # Ljava/lang/String;
+    .param p2, "cachedTime"    # J
 
     .prologue
     .line 170
@@ -3055,7 +3055,7 @@
     check-cast v0, Lcom/fusepowered/m1/android/HandShake$AdTypeHandShake;
 
     .line 171
-    .local v0, adTypeHandShake:Lcom/fusepowered/m1/android/HandShake$AdTypeHandShake;
+    .local v0, "adTypeHandShake":Lcom/fusepowered/m1/android/HandShake$AdTypeHandShake;
     if-eqz v0, :cond_0
 
     .line 172
@@ -3077,7 +3077,7 @@
     goto :goto_0
 
     .line 170
-    .end local v0           #adTypeHandShake:Lcom/fusepowered/m1/android/HandShake$AdTypeHandShake;
+    .end local v0    # "adTypeHandShake":Lcom/fusepowered/m1/android/HandShake$AdTypeHandShake;
     :catchall_0
     move-exception v1
 
@@ -3088,8 +3088,8 @@
 
 .method declared-synchronized canRequestVideo(Landroid/content/Context;Ljava/lang/String;)Z
     .locals 2
-    .parameter "context"
-    .parameter "adType"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "adType"    # Ljava/lang/String;
 
     .prologue
     .line 151
@@ -3105,7 +3105,7 @@
     check-cast v0, Lcom/fusepowered/m1/android/HandShake$AdTypeHandShake;
 
     .line 152
-    .local v0, adTypeHandShake:Lcom/fusepowered/m1/android/HandShake$AdTypeHandShake;
+    .local v0, "adTypeHandShake":Lcom/fusepowered/m1/android/HandShake$AdTypeHandShake;
     if-eqz v0, :cond_0
 
     .line 153
@@ -3127,7 +3127,7 @@
     goto :goto_0
 
     .line 151
-    .end local v0           #adTypeHandShake:Lcom/fusepowered/m1/android/HandShake$AdTypeHandShake;
+    .end local v0    # "adTypeHandShake":Lcom/fusepowered/m1/android/HandShake$AdTypeHandShake;
     :catchall_0
     move-exception v1
 
@@ -3161,7 +3161,7 @@
 
 .method declared-synchronized getSchemesJSONArray(Landroid/content/Context;)Lorg/json/JSONArray;
     .locals 6
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     .line 431
@@ -3173,7 +3173,7 @@
     invoke-direct {v0}, Lorg/json/JSONArray;-><init>()V
 
     .line 432
-    .local v0, array:Lorg/json/JSONArray;
+    .local v0, "array":Lorg/json/JSONArray;
     iget-object v4, p0, Lcom/fusepowered/m1/android/HandShake;->schemes:Ljava/util/ArrayList;
 
     invoke-virtual {v4}, Ljava/util/ArrayList;->size()I
@@ -3189,7 +3189,7 @@
 
     move-result-object v1
 
-    .local v1, i$:Ljava/util/Iterator;
+    .local v1, "i$":Ljava/util/Iterator;
     :cond_0
     :goto_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
@@ -3205,7 +3205,7 @@
     check-cast v2, Lcom/fusepowered/m1/android/HandShake$Scheme;
 
     .line 436
-    .local v2, scheme:Lcom/fusepowered/m1/android/HandShake$Scheme;
+    .local v2, "scheme":Lcom/fusepowered/m1/android/HandShake$Scheme;
     invoke-virtual {v2, p1}, Lcom/fusepowered/m1/android/HandShake$Scheme;->checkAvailability(Landroid/content/Context;)Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -3221,7 +3221,7 @@
     invoke-direct {v3}, Lorg/json/JSONObject;-><init>()V
 
     .line 441
-    .local v3, schemeObject:Lorg/json/JSONObject;
+    .local v3, "schemeObject":Lorg/json/JSONObject;
     const-string v4, "scheme"
 
     iget-object v5, v2, Lcom/fusepowered/m1/android/HandShake$Scheme;->scheme:Ljava/lang/String;
@@ -3238,28 +3238,28 @@
     .line 443
     invoke-virtual {v0, v3}, Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Lorg/json/JSONException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     goto :goto_0
 
     .line 445
-    .end local v3           #schemeObject:Lorg/json/JSONObject;
+    .end local v3    # "schemeObject":Lorg/json/JSONObject;
     :catch_0
     move-exception v4
 
     goto :goto_0
 
     .line 451
-    .end local v1           #i$:Ljava/util/Iterator;
-    .end local v2           #scheme:Lcom/fusepowered/m1/android/HandShake$Scheme;
+    .end local v1    # "i$":Ljava/util/Iterator;
+    .end local v2    # "scheme":Lcom/fusepowered/m1/android/HandShake$Scheme;
     :cond_1
     monitor-exit p0
 
     return-object v0
 
     .line 431
-    .end local v0           #array:Lorg/json/JSONArray;
+    .end local v0    # "array":Lorg/json/JSONArray;
     :catchall_0
     move-exception v4
 
@@ -3270,7 +3270,7 @@
 
 .method declared-synchronized getSchemesList(Landroid/content/Context;)Ljava/lang/String;
     .locals 5
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     .line 407
@@ -3296,14 +3296,14 @@
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
     .line 412
-    .local v2, stringBuilder:Ljava/lang/StringBuilder;
+    .local v2, "stringBuilder":Ljava/lang/StringBuilder;
     iget-object v3, p0, Lcom/fusepowered/m1/android/HandShake;->schemes:Ljava/util/ArrayList;
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
-    .local v0, i$:Ljava/util/Iterator;
+    .local v0, "i$":Ljava/util/Iterator;
     :cond_0
     :goto_0
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
@@ -3319,7 +3319,7 @@
     check-cast v1, Lcom/fusepowered/m1/android/HandShake$Scheme;
 
     .line 414
-    .local v1, scheme:Lcom/fusepowered/m1/android/HandShake$Scheme;
+    .local v1, "scheme":Lcom/fusepowered/m1/android/HandShake$Scheme;
     invoke-virtual {v1, p1}, Lcom/fusepowered/m1/android/HandShake$Scheme;->checkAvailability(Landroid/content/Context;)Z
 
     move-result v3
@@ -3361,9 +3361,9 @@
     goto :goto_0
 
     .line 407
-    .end local v0           #i$:Ljava/util/Iterator;
-    .end local v1           #scheme:Lcom/fusepowered/m1/android/HandShake$Scheme;
-    .end local v2           #stringBuilder:Ljava/lang/StringBuilder;
+    .end local v0    # "i$":Ljava/util/Iterator;
+    .end local v1    # "scheme":Lcom/fusepowered/m1/android/HandShake$Scheme;
+    .end local v2    # "stringBuilder":Ljava/lang/StringBuilder;
     :catchall_0
     move-exception v3
 
@@ -3372,9 +3372,9 @@
     throw v3
 
     .line 419
-    .restart local v0       #i$:Ljava/util/Iterator;
-    .restart local v1       #scheme:Lcom/fusepowered/m1/android/HandShake$Scheme;
-    .restart local v2       #stringBuilder:Ljava/lang/StringBuilder;
+    .restart local v0    # "i$":Ljava/util/Iterator;
+    .restart local v1    # "scheme":Lcom/fusepowered/m1/android/HandShake$Scheme;
+    .restart local v2    # "stringBuilder":Ljava/lang/StringBuilder;
     :cond_1
     :try_start_1
     iget v3, v1, Lcom/fusepowered/m1/android/HandShake$Scheme;->id:I
@@ -3388,7 +3388,7 @@
     goto :goto_0
 
     .line 422
-    .end local v1           #scheme:Lcom/fusepowered/m1/android/HandShake$Scheme;
+    .end local v1    # "scheme":Lcom/fusepowered/m1/android/HandShake$Scheme;
     :cond_2
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->length()I
 
@@ -3404,8 +3404,8 @@
     iput-object v3, p0, Lcom/fusepowered/m1/android/HandShake;->schemesList:Ljava/lang/String;
 
     .line 426
-    .end local v0           #i$:Ljava/util/Iterator;
-    .end local v2           #stringBuilder:Ljava/lang/StringBuilder;
+    .end local v0    # "i$":Ljava/util/Iterator;
+    .end local v2    # "stringBuilder":Ljava/lang/StringBuilder;
     :cond_3
     iget-object v3, p0, Lcom/fusepowered/m1/android/HandShake;->schemesList:Ljava/lang/String;
     :try_end_1
@@ -3418,7 +3418,7 @@
 
 .method declared-synchronized isAdTypeDownloading(Ljava/lang/String;)Z
     .locals 2
-    .parameter "adType"
+    .param p1, "adType"    # Ljava/lang/String;
 
     .prologue
     .line 195
@@ -3434,7 +3434,7 @@
     check-cast v0, Lcom/fusepowered/m1/android/HandShake$AdTypeHandShake;
 
     .line 196
-    .local v0, adTypeHandShake:Lcom/fusepowered/m1/android/HandShake$AdTypeHandShake;
+    .local v0, "adTypeHandShake":Lcom/fusepowered/m1/android/HandShake$AdTypeHandShake;
     if-eqz v0, :cond_0
 
     .line 197
@@ -3454,7 +3454,7 @@
     goto :goto_0
 
     .line 195
-    .end local v0           #adTypeHandShake:Lcom/fusepowered/m1/android/HandShake$AdTypeHandShake;
+    .end local v0    # "adTypeHandShake":Lcom/fusepowered/m1/android/HandShake$AdTypeHandShake;
     :catchall_0
     move-exception v1
 
@@ -3465,7 +3465,7 @@
 
 .method declared-synchronized lockAdTypeDownload(Ljava/lang/String;)V
     .locals 2
-    .parameter "adType"
+    .param p1, "adType"    # Ljava/lang/String;
 
     .prologue
     .line 205
@@ -3481,7 +3481,7 @@
     check-cast v0, Lcom/fusepowered/m1/android/HandShake$AdTypeHandShake;
 
     .line 206
-    .local v0, adTypeHandShake:Lcom/fusepowered/m1/android/HandShake$AdTypeHandShake;
+    .local v0, "adTypeHandShake":Lcom/fusepowered/m1/android/HandShake$AdTypeHandShake;
     if-eqz v0, :cond_0
 
     .line 207
@@ -3498,7 +3498,7 @@
     return-void
 
     .line 205
-    .end local v0           #adTypeHandShake:Lcom/fusepowered/m1/android/HandShake$AdTypeHandShake;
+    .end local v0    # "adTypeHandShake":Lcom/fusepowered/m1/android/HandShake$AdTypeHandShake;
     :catchall_0
     move-exception v1
 
@@ -3522,8 +3522,8 @@
 
 .method setMMdid(Landroid/content/Context;Ljava/lang/String;)V
     .locals 1
-    .parameter "context"
-    .parameter "newMMdid"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "newMMdid"    # Ljava/lang/String;
 
     .prologue
     .line 221
@@ -3537,9 +3537,9 @@
 
 .method declared-synchronized setMMdid(Landroid/content/Context;Ljava/lang/String;Z)V
     .locals 4
-    .parameter "context"
-    .parameter "newMMdid"
-    .parameter "persist"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "newMMdid"    # Ljava/lang/String;
+    .param p3, "persist"    # Z
 
     .prologue
     .line 226
@@ -3587,13 +3587,13 @@
     move-result-object v1
 
     .line 236
-    .local v1, settings:Landroid/content/SharedPreferences;
+    .local v1, "settings":Landroid/content/SharedPreferences;
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
     .line 237
-    .local v0, editor:Landroid/content/SharedPreferences$Editor;
+    .local v0, "editor":Landroid/content/SharedPreferences$Editor;
     const-string v2, "handshake_mmdid"
 
     iget-object v3, p0, Lcom/fusepowered/m1/android/HandShake;->mmdid:Ljava/lang/String;
@@ -3606,8 +3606,8 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 240
-    .end local v0           #editor:Landroid/content/SharedPreferences$Editor;
-    .end local v1           #settings:Landroid/content/SharedPreferences;
+    .end local v0    # "editor":Landroid/content/SharedPreferences$Editor;
+    .end local v1    # "settings":Landroid/content/SharedPreferences;
     :cond_1
     monitor-exit p0
 
@@ -3656,7 +3656,7 @@
 
 .method declared-synchronized unlockAdTypeDownload(Ljava/lang/String;)V
     .locals 2
-    .parameter "adType"
+    .param p1, "adType"    # Ljava/lang/String;
 
     .prologue
     .line 214
@@ -3672,7 +3672,7 @@
     check-cast v0, Lcom/fusepowered/m1/android/HandShake$AdTypeHandShake;
 
     .line 215
-    .local v0, adTypeHandShake:Lcom/fusepowered/m1/android/HandShake$AdTypeHandShake;
+    .local v0, "adTypeHandShake":Lcom/fusepowered/m1/android/HandShake$AdTypeHandShake;
     if-eqz v0, :cond_0
 
     .line 216
@@ -3689,7 +3689,7 @@
     return-void
 
     .line 214
-    .end local v0           #adTypeHandShake:Lcom/fusepowered/m1/android/HandShake$AdTypeHandShake;
+    .end local v0    # "adTypeHandShake":Lcom/fusepowered/m1/android/HandShake$AdTypeHandShake;
     :catchall_0
     move-exception v1
 
@@ -3700,8 +3700,8 @@
 
 .method declared-synchronized updateLastVideoViewedTime(Landroid/content/Context;Ljava/lang/String;)V
     .locals 2
-    .parameter "context"
-    .parameter "adType"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "adType"    # Ljava/lang/String;
 
     .prologue
     .line 186
@@ -3717,7 +3717,7 @@
     check-cast v0, Lcom/fusepowered/m1/android/HandShake$AdTypeHandShake;
 
     .line 187
-    .local v0, adTypeHandShake:Lcom/fusepowered/m1/android/HandShake$AdTypeHandShake;
+    .local v0, "adTypeHandShake":Lcom/fusepowered/m1/android/HandShake$AdTypeHandShake;
     if-eqz v0, :cond_0
 
     .line 188
@@ -3732,7 +3732,7 @@
     return-void
 
     .line 186
-    .end local v0           #adTypeHandShake:Lcom/fusepowered/m1/android/HandShake$AdTypeHandShake;
+    .end local v0    # "adTypeHandShake":Lcom/fusepowered/m1/android/HandShake$AdTypeHandShake;
     :catchall_0
     move-exception v1
 

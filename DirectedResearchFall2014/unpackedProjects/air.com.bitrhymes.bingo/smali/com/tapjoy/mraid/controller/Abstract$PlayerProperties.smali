@@ -95,7 +95,7 @@
 
 .method public constructor <init>(Landroid/os/Parcel;)V
     .locals 0
-    .parameter "in"
+    .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
     .line 70
@@ -196,13 +196,13 @@
 
 .method public setProperties(ZZZZZLjava/lang/String;Ljava/lang/String;)V
     .locals 0
-    .parameter "audioMuted"
-    .parameter "autoPlay"
-    .parameter "controls"
-    .parameter "inline"
-    .parameter "loop"
-    .parameter "startStyle"
-    .parameter "stopStyle"
+    .param p1, "audioMuted"    # Z
+    .param p2, "autoPlay"    # Z
+    .param p3, "controls"    # Z
+    .param p4, "inline"    # Z
+    .param p5, "loop"    # Z
+    .param p6, "startStyle"    # Ljava/lang/String;
+    .param p7, "stopStyle"    # Ljava/lang/String;
 
     .prologue
     .line 88
@@ -232,7 +232,7 @@
 
 .method public setStopStyle(Ljava/lang/String;)V
     .locals 0
-    .parameter "style"
+    .param p1, "style"    # Ljava/lang/String;
 
     .prologue
     .line 78

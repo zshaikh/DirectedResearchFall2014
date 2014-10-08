@@ -34,7 +34,7 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m1/android/MMWebView;)V
     .locals 1
-    .parameter "webView"
+    .param p1, "webView"    # Lcom/fusepowered/m1/android/MMWebView;
 
     .prologue
     .line 624
@@ -53,8 +53,8 @@
 
 .method static synthetic access$100(Lcom/fusepowered/m1/android/MMWebView$MyWebChromeClient;Z)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
+    .param p0, "x0"    # Lcom/fusepowered/m1/android/MMWebView$MyWebChromeClient;
+    .param p1, "x1"    # Z
 
     .prologue
     .line 620
@@ -65,7 +65,7 @@
 
 .method private getApplicationName(Landroid/content/Context;)Ljava/lang/String;
     .locals 5
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     .line 714
@@ -78,7 +78,7 @@
     move-result-object v2
 
     .line 718
-    .local v2, pm:Landroid/content/pm/PackageManager;
+    .local v2, "pm":Landroid/content/pm/PackageManager;
     :try_start_0
     invoke-virtual {p1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
@@ -93,7 +93,7 @@
     move-result-object v0
 
     .line 722
-    .local v0, ai:Landroid/content/pm/ApplicationInfo;
+    .local v0, "ai":Landroid/content/pm/ApplicationInfo;
     :goto_0
     if-eqz v0, :cond_0
 
@@ -103,7 +103,7 @@
 
     move-object p0, v3
 
-    .end local p0
+    .end local p0    # "this":Lcom/fusepowered/m1/android/MMWebView$MyWebChromeClient;
     :goto_1
     check-cast p0, Ljava/lang/String;
 
@@ -112,22 +112,22 @@
     return-object p0
 
     .line 719
-    .end local v0           #ai:Landroid/content/pm/ApplicationInfo;
-    .restart local p0
+    .end local v0    # "ai":Landroid/content/pm/ApplicationInfo;
+    .restart local p0    # "this":Lcom/fusepowered/m1/android/MMWebView$MyWebChromeClient;
     :catch_0
     move-exception v3
 
     move-object v1, v3
 
     .line 720
-    .local v1, e:Landroid/content/pm/PackageManager$NameNotFoundException;
+    .local v1, "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     const/4 v0, 0x0
 
-    .restart local v0       #ai:Landroid/content/pm/ApplicationInfo;
+    .restart local v0    # "ai":Landroid/content/pm/ApplicationInfo;
     goto :goto_0
 
     .line 722
-    .end local v1           #e:Landroid/content/pm/PackageManager$NameNotFoundException;
+    .end local v1    # "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     :cond_0
     const-string v3, "This app"
 
@@ -152,7 +152,7 @@
     check-cast v1, Lcom/fusepowered/m1/android/MMWebView;
 
     .line 681
-    .local v1, webView:Lcom/fusepowered/m1/android/MMWebView;
+    .local v1, "webView":Lcom/fusepowered/m1/android/MMWebView;
     if-eqz v1, :cond_1
 
     .line 682
@@ -167,7 +167,7 @@
     move-result-object v0
 
     .line 685
-    .local v0, settings:Landroid/content/SharedPreferences;
+    .local v0, "settings":Landroid/content/SharedPreferences;
     const-string v2, "mm_use_geo_location"
 
     invoke-interface {v0, v2}, Landroid/content/SharedPreferences;->contains(Ljava/lang/String;)Z
@@ -179,18 +179,18 @@
     const/4 v2, 0x1
 
     .line 687
-    .end local v0           #settings:Landroid/content/SharedPreferences;
+    .end local v0    # "settings":Landroid/content/SharedPreferences;
     :goto_0
     return v2
 
-    .restart local v0       #settings:Landroid/content/SharedPreferences;
+    .restart local v0    # "settings":Landroid/content/SharedPreferences;
     :cond_0
     move v2, v4
 
     .line 685
     goto :goto_0
 
-    .end local v0           #settings:Landroid/content/SharedPreferences;
+    .end local v0    # "settings":Landroid/content/SharedPreferences;
     :cond_1
     move v2, v4
 
@@ -214,7 +214,7 @@
     check-cast v1, Lcom/fusepowered/m1/android/MMWebView;
 
     .line 692
-    .local v1, webView:Lcom/fusepowered/m1/android/MMWebView;
+    .local v1, "webView":Lcom/fusepowered/m1/android/MMWebView;
     if-eqz v1, :cond_0
 
     .line 693
@@ -229,7 +229,7 @@
     move-result-object v0
 
     .line 696
-    .local v0, settings:Landroid/content/SharedPreferences;
+    .local v0, "settings":Landroid/content/SharedPreferences;
     const-string v2, "mm_use_geo_location"
 
     invoke-interface {v0, v2, v4}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
@@ -237,7 +237,7 @@
     move-result v2
 
     .line 698
-    .end local v0           #settings:Landroid/content/SharedPreferences;
+    .end local v0    # "settings":Landroid/content/SharedPreferences;
     :goto_0
     return v2
 
@@ -249,7 +249,7 @@
 
 .method private saveUseGeo(Z)V
     .locals 6
-    .parameter "allow"
+    .param p1, "allow"    # Z
 
     .prologue
     .line 702
@@ -262,7 +262,7 @@
     check-cast v2, Lcom/fusepowered/m1/android/MMWebView;
 
     .line 703
-    .local v2, webView:Lcom/fusepowered/m1/android/MMWebView;
+    .local v2, "webView":Lcom/fusepowered/m1/android/MMWebView;
     if-eqz v2, :cond_0
 
     .line 704
@@ -279,13 +279,13 @@
     move-result-object v1
 
     .line 707
-    .local v1, settings:Landroid/content/SharedPreferences;
+    .local v1, "settings":Landroid/content/SharedPreferences;
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
     .line 708
-    .local v0, editor:Landroid/content/SharedPreferences$Editor;
+    .local v0, "editor":Landroid/content/SharedPreferences$Editor;
     const-string v3, "mm_use_geo_location"
 
     invoke-interface {v0, v3, p1}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
@@ -294,8 +294,8 @@
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     .line 711
-    .end local v0           #editor:Landroid/content/SharedPreferences$Editor;
-    .end local v1           #settings:Landroid/content/SharedPreferences;
+    .end local v0    # "editor":Landroid/content/SharedPreferences$Editor;
+    .end local v1    # "settings":Landroid/content/SharedPreferences;
     :cond_0
     return-void
 .end method
@@ -304,9 +304,9 @@
 # virtual methods
 .method public onConsoleMessage(Ljava/lang/String;ILjava/lang/String;)V
     .locals 0
-    .parameter "message"
-    .parameter "lineNumber"
-    .parameter "sourceID"
+    .param p1, "message"    # Ljava/lang/String;
+    .param p2, "lineNumber"    # I
+    .param p3, "sourceID"    # Ljava/lang/String;
 
     .prologue
     .line 733
@@ -318,8 +318,8 @@
 
 .method public onGeolocationPermissionsShowPrompt(Ljava/lang/String;Landroid/webkit/GeolocationPermissions$Callback;)V
     .locals 8
-    .parameter "origin"
-    .parameter "callback"
+    .param p1, "origin"    # Ljava/lang/String;
+    .param p2, "callback"    # Landroid/webkit/GeolocationPermissions$Callback;
 
     .prologue
     const/4 v7, 0x1
@@ -359,7 +359,7 @@
     check-cast v4, Lcom/fusepowered/m1/android/MMWebView;
 
     .line 636
-    .local v4, webView:Lcom/fusepowered/m1/android/MMWebView;
+    .local v4, "webView":Lcom/fusepowered/m1/android/MMWebView;
     if-eqz v4, :cond_0
 
     .line 637
@@ -368,7 +368,7 @@
     move-result-object v0
 
     .line 638
-    .local v0, activity:Landroid/app/Activity;
+    .local v0, "activity":Landroid/app/Activity;
     if-eqz v0, :cond_0
 
     .line 639
@@ -377,13 +377,13 @@
     invoke-direct {v3, v0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
     .line 641
-    .local v3, builder:Landroid/app/AlertDialog$Builder;
+    .local v3, "builder":Landroid/app/AlertDialog$Builder;
     invoke-direct {p0, v0}, Lcom/fusepowered/m1/android/MMWebView$MyWebChromeClient;->getApplicationName(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v2
 
     .line 642
-    .local v2, appName:Ljava/lang/String;
+    .local v2, "appName":Ljava/lang/String;
     invoke-virtual {v3, v2}, Landroid/app/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
 
     .line 643
@@ -417,17 +417,17 @@
     move-result-object v1
 
     .line 670
-    .local v1, alert:Landroid/app/AlertDialog;
+    .local v1, "alert":Landroid/app/AlertDialog;
     invoke-virtual {v1}, Landroid/app/AlertDialog;->show()V
 
     goto :goto_0
 
     .line 675
-    .end local v0           #activity:Landroid/app/Activity;
-    .end local v1           #alert:Landroid/app/AlertDialog;
-    .end local v2           #appName:Ljava/lang/String;
-    .end local v3           #builder:Landroid/app/AlertDialog$Builder;
-    .end local v4           #webView:Lcom/fusepowered/m1/android/MMWebView;
+    .end local v0    # "activity":Landroid/app/Activity;
+    .end local v1    # "alert":Landroid/app/AlertDialog;
+    .end local v2    # "appName":Ljava/lang/String;
+    .end local v3    # "builder":Landroid/app/AlertDialog$Builder;
+    .end local v4    # "webView":Lcom/fusepowered/m1/android/MMWebView;
     :cond_2
     invoke-interface {p2, p1, v6, v6}, Landroid/webkit/GeolocationPermissions$Callback;->invoke(Ljava/lang/String;ZZ)V
 
@@ -436,10 +436,10 @@
 
 .method public onJsAlert(Landroid/webkit/WebView;Ljava/lang/String;Ljava/lang/String;Landroid/webkit/JsResult;)Z
     .locals 3
-    .parameter "view"
-    .parameter "url"
-    .parameter "message"
-    .parameter "result"
+    .param p1, "view"    # Landroid/webkit/WebView;
+    .param p2, "url"    # Ljava/lang/String;
+    .param p3, "message"    # Ljava/lang/String;
+    .param p4, "result"    # Landroid/webkit/JsResult;
 
     .prologue
     .line 739
@@ -452,7 +452,7 @@
     check-cast v0, Lcom/fusepowered/m1/android/MMWebView;
 
     .line 740
-    .local v0, webView:Lcom/fusepowered/m1/android/MMWebView;
+    .local v0, "webView":Lcom/fusepowered/m1/android/MMWebView;
     if-eqz v0, :cond_1
 
     .line 741
@@ -502,10 +502,10 @@
 
 .method public onJsBeforeUnload(Landroid/webkit/WebView;Ljava/lang/String;Ljava/lang/String;Landroid/webkit/JsResult;)Z
     .locals 3
-    .parameter "view"
-    .parameter "url"
-    .parameter "message"
-    .parameter "result"
+    .param p1, "view"    # Landroid/webkit/WebView;
+    .param p2, "url"    # Ljava/lang/String;
+    .param p3, "message"    # Ljava/lang/String;
+    .param p4, "result"    # Landroid/webkit/JsResult;
 
     .prologue
     .line 755
@@ -518,7 +518,7 @@
     check-cast v0, Lcom/fusepowered/m1/android/MMWebView;
 
     .line 756
-    .local v0, webView:Lcom/fusepowered/m1/android/MMWebView;
+    .local v0, "webView":Lcom/fusepowered/m1/android/MMWebView;
     if-eqz v0, :cond_1
 
     .line 757
@@ -568,10 +568,10 @@
 
 .method public onJsConfirm(Landroid/webkit/WebView;Ljava/lang/String;Ljava/lang/String;Landroid/webkit/JsResult;)Z
     .locals 3
-    .parameter "view"
-    .parameter "url"
-    .parameter "message"
-    .parameter "result"
+    .param p1, "view"    # Landroid/webkit/WebView;
+    .param p2, "url"    # Ljava/lang/String;
+    .param p3, "message"    # Ljava/lang/String;
+    .param p4, "result"    # Landroid/webkit/JsResult;
 
     .prologue
     .line 771
@@ -584,7 +584,7 @@
     check-cast v0, Lcom/fusepowered/m1/android/MMWebView;
 
     .line 772
-    .local v0, webView:Lcom/fusepowered/m1/android/MMWebView;
+    .local v0, "webView":Lcom/fusepowered/m1/android/MMWebView;
     if-eqz v0, :cond_1
 
     .line 773
@@ -634,11 +634,11 @@
 
 .method public onJsPrompt(Landroid/webkit/WebView;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/webkit/JsPromptResult;)Z
     .locals 3
-    .parameter "view"
-    .parameter "url"
-    .parameter "message"
-    .parameter "defaultValue"
-    .parameter "result"
+    .param p1, "view"    # Landroid/webkit/WebView;
+    .param p2, "url"    # Ljava/lang/String;
+    .param p3, "message"    # Ljava/lang/String;
+    .param p4, "defaultValue"    # Ljava/lang/String;
+    .param p5, "result"    # Landroid/webkit/JsPromptResult;
 
     .prologue
     .line 787
@@ -651,7 +651,7 @@
     check-cast v0, Lcom/fusepowered/m1/android/MMWebView;
 
     .line 788
-    .local v0, webView:Lcom/fusepowered/m1/android/MMWebView;
+    .local v0, "webView":Lcom/fusepowered/m1/android/MMWebView;
     if-eqz v0, :cond_1
 
     .line 789

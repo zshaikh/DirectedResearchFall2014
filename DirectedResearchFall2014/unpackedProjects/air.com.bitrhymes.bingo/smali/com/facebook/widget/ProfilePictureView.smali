@@ -85,7 +85,7 @@
 
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     const/4 v0, 0x0
@@ -123,8 +123,8 @@
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
-    .parameter "context"
-    .parameter "attrs"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
     const/4 v0, 0x0
@@ -165,9 +165,9 @@
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 1
-    .parameter "context"
-    .parameter "attrs"
-    .parameter "defStyle"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "attrs"    # Landroid/util/AttributeSet;
+    .param p3, "defStyle"    # I
 
     .prologue
     const/4 v0, 0x0
@@ -208,8 +208,6 @@
 
 .method static synthetic access$0(Lcom/facebook/widget/ProfilePictureView;Lcom/facebook/internal/ImageResponse;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 459
@@ -220,7 +218,7 @@
 
 .method private getPresetSizeInPixels(Z)I
     .locals 4
-    .parameter "forcePreset"
+    .param p1, "forcePreset"    # Z
 
     .prologue
     const/4 v2, 0x0
@@ -249,7 +247,7 @@
     move-result v0
 
     .line 538
-    .local v0, dimensionId:I
+    .local v0, "dimensionId":I
     :goto_1
     invoke-virtual {p0}, Lcom/facebook/widget/ProfilePictureView;->getResources()Landroid/content/res/Resources;
 
@@ -262,7 +260,7 @@
     goto :goto_0
 
     .line 522
-    .end local v0           #dimensionId:I
+    .end local v0    # "dimensionId":I
     :pswitch_1
     sget-object v1, Lcom/bitrhymes/facebookext/FacebookExt;->context:Lcom/adobe/fre/FREContext;
 
@@ -273,11 +271,11 @@
     move-result v0
 
     .line 523
-    .restart local v0       #dimensionId:I
+    .restart local v0    # "dimensionId":I
     goto :goto_1
 
     .line 525
-    .end local v0           #dimensionId:I
+    .end local v0    # "dimensionId":I
     :pswitch_2
     sget-object v1, Lcom/bitrhymes/facebookext/FacebookExt;->context:Lcom/adobe/fre/FREContext;
 
@@ -288,11 +286,11 @@
     move-result v0
 
     .line 526
-    .restart local v0       #dimensionId:I
+    .restart local v0    # "dimensionId":I
     goto :goto_1
 
     .line 528
-    .end local v0           #dimensionId:I
+    .end local v0    # "dimensionId":I
     :pswitch_3
     if-nez p1, :cond_0
 
@@ -312,7 +310,7 @@
     move-result v0
 
     .line 532
-    .restart local v0       #dimensionId:I
+    .restart local v0    # "dimensionId":I
     goto :goto_1
 
     .line 517
@@ -327,7 +325,7 @@
 
 .method private initialize(Landroid/content/Context;)V
     .locals 3
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     const/4 v2, -0x1
@@ -348,7 +346,7 @@
     invoke-direct {v0, v2, v2}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
 
     .line 378
-    .local v0, imageLayout:Landroid/widget/FrameLayout$LayoutParams;
+    .local v0, "imageLayout":Landroid/widget/FrameLayout$LayoutParams;
     iget-object v1, p0, Lcom/facebook/widget/ProfilePictureView;->image:Landroid/widget/ImageView;
 
     invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
@@ -371,7 +369,7 @@
 
 .method private parseAttributes(Landroid/util/AttributeSet;)V
     .locals 4
-    .parameter "attrs"
+    .param p1, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
     const/4 v3, 0x1
@@ -388,7 +386,7 @@
     move-result-object v0
 
     .line 388
-    .local v0, a:Landroid/content/res/TypedArray;
+    .local v0, "a":Landroid/content/res/TypedArray;
     const/4 v1, 0x0
 
     const/4 v2, -0x1
@@ -415,7 +413,7 @@
 
 .method private processResponse(Lcom/facebook/internal/ImageResponse;)V
     .locals 7
-    .parameter "response"
+    .param p1, "response"    # Lcom/facebook/internal/ImageResponse;
 
     .prologue
     .line 463
@@ -438,20 +436,20 @@
     move-result-object v2
 
     .line 466
-    .local v2, responseImage:Landroid/graphics/Bitmap;
+    .local v2, "responseImage":Landroid/graphics/Bitmap;
     invoke-virtual {p1}, Lcom/facebook/internal/ImageResponse;->getError()Ljava/lang/Exception;
 
     move-result-object v0
 
     .line 467
-    .local v0, error:Ljava/lang/Exception;
+    .local v0, "error":Ljava/lang/Exception;
     if-eqz v0, :cond_2
 
     .line 468
     iget-object v1, p0, Lcom/facebook/widget/ProfilePictureView;->onErrorListener:Lcom/facebook/widget/ProfilePictureView$OnErrorListener;
 
     .line 469
-    .local v1, listener:Lcom/facebook/widget/ProfilePictureView$OnErrorListener;
+    .local v1, "listener":Lcom/facebook/widget/ProfilePictureView$OnErrorListener;
     if-eqz v1, :cond_1
 
     .line 470
@@ -482,17 +480,17 @@
     invoke-interface {v1, v3}, Lcom/facebook/widget/ProfilePictureView$OnErrorListener;->onError(Lcom/facebook/FacebookException;)V
 
     .line 483
-    .end local v0           #error:Ljava/lang/Exception;
-    .end local v1           #listener:Lcom/facebook/widget/ProfilePictureView$OnErrorListener;
-    .end local v2           #responseImage:Landroid/graphics/Bitmap;
+    .end local v0    # "error":Ljava/lang/Exception;
+    .end local v1    # "listener":Lcom/facebook/widget/ProfilePictureView$OnErrorListener;
+    .end local v2    # "responseImage":Landroid/graphics/Bitmap;
     :cond_0
     :goto_0
     return-void
 
     .line 473
-    .restart local v0       #error:Ljava/lang/Exception;
-    .restart local v1       #listener:Lcom/facebook/widget/ProfilePictureView$OnErrorListener;
-    .restart local v2       #responseImage:Landroid/graphics/Bitmap;
+    .restart local v0    # "error":Ljava/lang/Exception;
+    .restart local v1    # "listener":Lcom/facebook/widget/ProfilePictureView$OnErrorListener;
+    .restart local v2    # "responseImage":Landroid/graphics/Bitmap;
     :cond_1
     sget-object v3, Lcom/facebook/LoggingBehavior;->REQUESTS:Lcom/facebook/LoggingBehavior;
 
@@ -509,7 +507,7 @@
     goto :goto_0
 
     .line 475
-    .end local v1           #listener:Lcom/facebook/widget/ProfilePictureView$OnErrorListener;
+    .end local v1    # "listener":Lcom/facebook/widget/ProfilePictureView$OnErrorListener;
     :cond_2
     if-eqz v2, :cond_0
 
@@ -533,7 +531,7 @@
 
 .method private refreshImage(Z)V
     .locals 2
-    .parameter "force"
+    .param p1, "force"    # Z
 
     .prologue
     .line 394
@@ -542,7 +540,7 @@
     move-result v0
 
     .line 397
-    .local v0, changed:Z
+    .local v0, "changed":Z
     iget-object v1, p0, Lcom/facebook/widget/ProfilePictureView;->profileId:Ljava/lang/String;
 
     if-eqz v1, :cond_0
@@ -591,7 +589,7 @@
 
 .method private sendImageRequest(Z)V
     .locals 7
-    .parameter "allowCachedResponse"
+    .param p1, "allowCachedResponse"    # Z
 
     .prologue
     .line 430
@@ -618,7 +616,7 @@
     invoke-direct {v2, v3, v4}, Lcom/facebook/internal/ImageRequest$Builder;-><init>(Landroid/content/Context;Ljava/net/URI;)V
 
     .line 434
-    .local v2, requestBuilder:Lcom/facebook/internal/ImageRequest$Builder;
+    .local v2, "requestBuilder":Lcom/facebook/internal/ImageRequest$Builder;
     invoke-virtual {v2, p1}, Lcom/facebook/internal/ImageRequest$Builder;->setAllowCachedRedirects(Z)Lcom/facebook/internal/ImageRequest$Builder;
 
     move-result-object v3
@@ -644,7 +642,7 @@
     move-result-object v1
 
     .line 448
-    .local v1, request:Lcom/facebook/internal/ImageRequest;
+    .local v1, "request":Lcom/facebook/internal/ImageRequest;
     iget-object v3, p0, Lcom/facebook/widget/ProfilePictureView;->lastRequest:Lcom/facebook/internal/ImageRequest;
 
     if-eqz v3, :cond_0
@@ -664,8 +662,8 @@
     .catch Ljava/net/URISyntaxException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 457
-    .end local v1           #request:Lcom/facebook/internal/ImageRequest;
-    .end local v2           #requestBuilder:Lcom/facebook/internal/ImageRequest$Builder;
+    .end local v1    # "request":Lcom/facebook/internal/ImageRequest;
+    .end local v2    # "requestBuilder":Lcom/facebook/internal/ImageRequest$Builder;
     :goto_0
     return-void
 
@@ -676,7 +674,7 @@
     move-object v0, v3
 
     .line 455
-    .local v0, e:Ljava/net/URISyntaxException;
+    .local v0, "e":Ljava/net/URISyntaxException;
     sget-object v3, Lcom/facebook/LoggingBehavior;->REQUESTS:Lcom/facebook/LoggingBehavior;
 
     const/4 v4, 0x6
@@ -720,7 +718,7 @@
     move v0, v2
 
     .line 411
-    .local v0, blankImageResource:I
+    .local v0, "blankImageResource":I
     :goto_0
     invoke-virtual {p0}, Lcom/facebook/widget/ProfilePictureView;->getResources()Landroid/content/res/Resources;
 
@@ -733,7 +731,7 @@
     invoke-direct {p0, v2}, Lcom/facebook/widget/ProfilePictureView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
     .line 419
-    .end local v0           #blankImageResource:I
+    .end local v0    # "blankImageResource":I
     :goto_1
     return-void
 
@@ -769,7 +767,7 @@
     move-result-object v1
 
     .line 417
-    .local v1, scaledBitmap:Landroid/graphics/Bitmap;
+    .local v1, "scaledBitmap":Landroid/graphics/Bitmap;
     invoke-direct {p0, v1}, Lcom/facebook/widget/ProfilePictureView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
     goto :goto_1
@@ -777,7 +775,7 @@
 
 .method private setImageBitmap(Landroid/graphics/Bitmap;)V
     .locals 1
-    .parameter "imageBitmap"
+    .param p1, "imageBitmap"    # Landroid/graphics/Bitmap;
 
     .prologue
     .line 422
@@ -814,13 +812,13 @@
     move-result v1
 
     .line 487
-    .local v1, newHeightPx:I
+    .local v1, "newHeightPx":I
     invoke-virtual {p0}, Lcom/facebook/widget/ProfilePictureView;->getWidth()I
 
     move-result v2
 
     .line 488
-    .local v2, newWidthPx:I
+    .local v2, "newWidthPx":I
     if-lt v2, v6, :cond_0
 
     if-ge v1, v6, :cond_1
@@ -839,7 +837,7 @@
     move-result v3
 
     .line 494
-    .local v3, presetSize:I
+    .local v3, "presetSize":I
     if-eqz v3, :cond_2
 
     .line 495
@@ -874,7 +872,7 @@
     move v0, v5
 
     .line 509
-    .local v0, changed:Z
+    .local v0, "changed":Z
     :goto_2
     iput v2, p0, Lcom/facebook/widget/ProfilePictureView;->queryWidth:I
 
@@ -886,7 +884,7 @@
     .line 512
     goto :goto_0
 
-    .end local v0           #changed:Z
+    .end local v0    # "changed":Z
     :cond_3
     move v1, v5
 
@@ -978,11 +976,11 @@
 
 .method protected onLayout(ZIIII)V
     .locals 1
-    .parameter "changed"
-    .parameter "left"
-    .parameter "top"
-    .parameter "right"
-    .parameter "bottom"
+    .param p1, "changed"    # Z
+    .param p2, "left"    # I
+    .param p3, "top"    # I
+    .param p4, "right"    # I
+    .param p5, "bottom"    # I
 
     .prologue
     .line 306
@@ -999,15 +997,15 @@
 
 .method protected onMeasure(II)V
     .locals 8
-    .parameter "widthMeasureSpec"
-    .parameter "heightMeasureSpec"
+    .param p1, "widthMeasureSpec"    # I
+    .param p2, "heightMeasureSpec"    # I
 
     .prologue
     const/4 v7, 0x1
 
     const/4 v6, -0x2
 
-    const/high16 v5, 0x4000
+    const/high16 v5, 0x40000000
 
     .line 271
     invoke-virtual {p0}, Lcom/facebook/widget/ProfilePictureView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -1015,23 +1013,23 @@
     move-result-object v3
 
     .line 272
-    .local v3, params:Landroid/view/ViewGroup$LayoutParams;
+    .local v3, "params":Landroid/view/ViewGroup$LayoutParams;
     const/4 v0, 0x0
 
     .line 273
-    .local v0, customMeasure:Z
+    .local v0, "customMeasure":Z
     invoke-static {p2}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v1
 
     .line 274
-    .local v1, newHeight:I
+    .local v1, "newHeight":I
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v2
 
     .line 275
-    .local v2, newWidth:I
+    .local v2, "newWidth":I
     invoke-static {p2}, Landroid/view/View$MeasureSpec;->getMode(I)I
 
     move-result v4
@@ -1105,7 +1103,7 @@
 
 .method protected onRestoreInstanceState(Landroid/os/Parcelable;)V
     .locals 4
-    .parameter "state"
+    .param p1, "state"    # Landroid/os/Parcelable;
 
     .prologue
     .line 339
@@ -1134,7 +1132,7 @@
     move-object v1, v0
 
     .line 343
-    .local v1, instanceState:Landroid/os/Bundle;
+    .local v1, "instanceState":Landroid/os/Bundle;
     const-string v2, "ProfilePictureView_superState"
 
     invoke-virtual {v1, v2}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
@@ -1226,13 +1224,13 @@
     move-result-object v1
 
     .line 320
-    .local v1, superState:Landroid/os/Parcelable;
+    .local v1, "superState":Landroid/os/Parcelable;
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     .line 321
-    .local v0, instanceState:Landroid/os/Bundle;
+    .local v0, "instanceState":Landroid/os/Bundle;
     const-string v2, "ProfilePictureView_superState"
 
     invoke-virtual {v0, v2, v1}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
@@ -1303,7 +1301,7 @@
 
 .method public final setCropped(Z)V
     .locals 1
-    .parameter "showCroppedVersion"
+    .param p1, "showCroppedVersion"    # Z
 
     .prologue
     .line 200
@@ -1320,7 +1318,7 @@
 
 .method public final setDefaultProfilePicture(Landroid/graphics/Bitmap;)V
     .locals 0
-    .parameter "inputBitmap"
+    .param p1, "inputBitmap"    # Landroid/graphics/Bitmap;
 
     .prologue
     .line 258
@@ -1332,7 +1330,7 @@
 
 .method public final setOnErrorListener(Lcom/facebook/widget/ProfilePictureView$OnErrorListener;)V
     .locals 0
-    .parameter "onErrorListener"
+    .param p1, "onErrorListener"    # Lcom/facebook/widget/ProfilePictureView$OnErrorListener;
 
     .prologue
     .line 248
@@ -1344,7 +1342,7 @@
 
 .method public final setPresetSize(I)V
     .locals 2
-    .parameter "sizeType"
+    .param p1, "sizeType"    # I
 
     .prologue
     .line 169
@@ -1383,14 +1381,14 @@
 
 .method public final setProfileId(Ljava/lang/String;)V
     .locals 2
-    .parameter "profileId"
+    .param p1, "profileId"    # Ljava/lang/String;
 
     .prologue
     .line 221
     const/4 v0, 0x0
 
     .line 222
-    .local v0, force:Z
+    .local v0, "force":Z
     iget-object v1, p0, Lcom/facebook/widget/ProfilePictureView;->profileId:Ljava/lang/String;
 
     invoke-static {v1}, Lcom/facebook/internal/Utility;->isNullOrEmpty(Ljava/lang/String;)Z

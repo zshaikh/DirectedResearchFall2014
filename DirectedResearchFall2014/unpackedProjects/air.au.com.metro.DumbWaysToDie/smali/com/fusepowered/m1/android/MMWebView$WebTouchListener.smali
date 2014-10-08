@@ -33,7 +33,7 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m1/android/MMWebView;)V
     .locals 1
-    .parameter "webView"
+    .param p1, "webView"    # Lcom/fusepowered/m1/android/MMWebView;
 
     .prologue
     .line 104
@@ -54,8 +54,8 @@
 # virtual methods
 .method public onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
     .locals 6
-    .parameter "v"
-    .parameter "event"
+    .param p1, "v"    # Landroid/view/View;
+    .param p2, "event"    # Landroid/view/MotionEvent;
 
     .prologue
     const/4 v5, 0x1
@@ -72,7 +72,7 @@
     check-cast v1, Lcom/fusepowered/m1/android/MMWebView;
 
     .line 111
-    .local v1, webView:Lcom/fusepowered/m1/android/MMWebView;
+    .local v1, "webView":Lcom/fusepowered/m1/android/MMWebView;
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v2
@@ -84,7 +84,7 @@
     move v0, v5
 
     .line 112
-    .local v0, consume:Z
+    .local v0, "consume":Z
     :goto_0
     if-eqz v1, :cond_0
 
@@ -104,14 +104,14 @@
     :goto_1
     return v0
 
-    .end local v0           #consume:Z
+    .end local v0    # "consume":Z
     :cond_1
     move v0, v4
 
     .line 111
     goto :goto_0
 
-    .restart local v0       #consume:Z
+    .restart local v0    # "consume":Z
     :cond_2
     move v0, v4
 

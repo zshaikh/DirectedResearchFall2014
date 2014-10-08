@@ -50,8 +50,6 @@
 # direct methods
 .method public constructor <init>(Lcom/flurry/org/codehaus/jackson/map/util/EnumResolver;Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;)V
     .locals 2
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -69,8 +67,8 @@
 
     .prologue
     .line 38
-    .local p1, enumRes:Lcom/flurry/org/codehaus/jackson/map/util/EnumResolver;,"Lcom/flurry/org/codehaus/jackson/map/util/EnumResolver<*>;"
-    .local p2, valueDeser:Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer<Ljava/lang/Object;>;"
+    .local p1, "enumRes":Lcom/flurry/org/codehaus/jackson/map/util/EnumResolver;, "Lcom/flurry/org/codehaus/jackson/map/util/EnumResolver<*>;"
+    .local p2, "valueDeser":Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer<Ljava/lang/Object;>;"
     invoke-virtual {p1}, Lcom/flurry/org/codehaus/jackson/map/util/EnumResolver;->getEnumClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -87,9 +85,6 @@
 
 .method public constructor <init>(Ljava/lang/Class;Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;)V
     .locals 1
-    .parameter
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -106,9 +101,9 @@
 
     .prologue
     .line 44
-    .local p1, enumClass:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
-    .local p2, keyDeserializer:Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer<*>;"
-    .local p3, valueDeser:Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer<Ljava/lang/Object;>;"
+    .local p1, "enumClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
+    .local p2, "keyDeserializer":Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer<*>;"
+    .local p3, "valueDeser":Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer<Ljava/lang/Object;>;"
     const-class v0, Ljava/util/EnumMap;
 
     invoke-direct {p0, v0}, Lcom/flurry/org/codehaus/jackson/map/deser/std/StdDeserializer;-><init>(Ljava/lang/Class;)V
@@ -151,8 +146,8 @@
 # virtual methods
 .method public bridge synthetic deserialize(Lcom/flurry/org/codehaus/jackson/JsonParser;Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;)Ljava/lang/Object;
     .locals 1
-    .parameter "x0"
-    .parameter "x1"
+    .param p1, "x0"    # Lcom/flurry/org/codehaus/jackson/JsonParser;
+    .param p2, "x1"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -171,8 +166,8 @@
 
 .method public deserialize(Lcom/flurry/org/codehaus/jackson/JsonParser;Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;)Ljava/util/EnumMap;
     .locals 6
-    .parameter "jp"
-    .parameter "ctxt"
+    .param p1, "jp"    # Lcom/flurry/org/codehaus/jackson/JsonParser;
+    .param p2, "ctxt"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -217,7 +212,7 @@
     move-result-object v1
 
     .line 60
-    .local v1, result:Ljava/util/EnumMap;
+    .local v1, "result":Ljava/util/EnumMap;
     :goto_0
     invoke-virtual {p1}, Lcom/flurry/org/codehaus/jackson/JsonParser;->nextToken()Lcom/flurry/org/codehaus/jackson/JsonToken;
 
@@ -237,7 +232,7 @@
     check-cast v0, Ljava/lang/Enum;
 
     .line 62
-    .local v0, key:Ljava/lang/Enum;,"Ljava/lang/Enum<*>;"
+    .local v0, "key":Ljava/lang/Enum;, "Ljava/lang/Enum<*>;"
     if-nez v0, :cond_1
 
     .line 63
@@ -258,7 +253,7 @@
     move-result-object v2
 
     .line 70
-    .local v2, t:Lcom/flurry/org/codehaus/jackson/JsonToken;
+    .local v2, "t":Lcom/flurry/org/codehaus/jackson/JsonToken;
     sget-object v4, Lcom/flurry/org/codehaus/jackson/JsonToken;->VALUE_NULL:Lcom/flurry/org/codehaus/jackson/JsonToken;
 
     if-ne v2, v4, :cond_2
@@ -268,14 +263,14 @@
     move-object v3, v4
 
     .line 72
-    .local v3, value:Ljava/lang/Object;
+    .local v3, "value":Ljava/lang/Object;
     :goto_1
     invoke-virtual {v1, v0, v3}, Ljava/util/EnumMap;->put(Ljava/lang/Enum;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 
     .line 70
-    .end local v3           #value:Ljava/lang/Object;
+    .end local v3    # "value":Ljava/lang/Object;
     :cond_2
     iget-object v4, p0, Lcom/flurry/org/codehaus/jackson/map/deser/std/EnumMapDeserializer;->_valueDeserializer:Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;
 
@@ -288,17 +283,17 @@
     goto :goto_1
 
     .line 74
-    .end local v0           #key:Ljava/lang/Enum;,"Ljava/lang/Enum<*>;"
-    .end local v2           #t:Lcom/flurry/org/codehaus/jackson/JsonToken;
+    .end local v0    # "key":Ljava/lang/Enum;, "Ljava/lang/Enum<*>;"
+    .end local v2    # "t":Lcom/flurry/org/codehaus/jackson/JsonToken;
     :cond_3
     return-object v1
 .end method
 
 .method public deserializeWithType(Lcom/flurry/org/codehaus/jackson/JsonParser;Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;Lcom/flurry/org/codehaus/jackson/map/TypeDeserializer;)Ljava/lang/Object;
     .locals 1
-    .parameter "jp"
-    .parameter "ctxt"
-    .parameter "typeDeserializer"
+    .param p1, "jp"    # Lcom/flurry/org/codehaus/jackson/JsonParser;
+    .param p2, "ctxt"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;
+    .param p3, "typeDeserializer"    # Lcom/flurry/org/codehaus/jackson/map/TypeDeserializer;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,

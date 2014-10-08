@@ -10,7 +10,7 @@
 # direct methods
 .method public constructor <init>(Lcom/flurry/org/codehaus/jackson/JsonGenerator;)V
     .locals 0
-    .parameter "d"
+    .param p1, "d"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator;
 
     .prologue
     .line 17
@@ -27,7 +27,7 @@
 # virtual methods
 .method public canUseSchema(Lcom/flurry/org/codehaus/jackson/FormatSchema;)Z
     .locals 1
-    .parameter "schema"
+    .param p1, "schema"    # Lcom/flurry/org/codehaus/jackson/FormatSchema;
 
     .prologue
     .line 68
@@ -60,7 +60,7 @@
 
 .method public copyCurrentEvent(Lcom/flurry/org/codehaus/jackson/JsonParser;)V
     .locals 1
-    .parameter "jp"
+    .param p1, "jp"    # Lcom/flurry/org/codehaus/jackson/JsonParser;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -80,7 +80,7 @@
 
 .method public copyCurrentStructure(Lcom/flurry/org/codehaus/jackson/JsonParser;)V
     .locals 1
-    .parameter "jp"
+    .param p1, "jp"    # Lcom/flurry/org/codehaus/jackson/JsonParser;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -100,7 +100,7 @@
 
 .method public disable(Lcom/flurry/org/codehaus/jackson/JsonGenerator$Feature;)Lcom/flurry/org/codehaus/jackson/JsonGenerator;
     .locals 1
-    .parameter "f"
+    .param p1, "f"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator$Feature;
 
     .prologue
     .line 38
@@ -115,7 +115,7 @@
 
 .method public enable(Lcom/flurry/org/codehaus/jackson/JsonGenerator$Feature;)Lcom/flurry/org/codehaus/jackson/JsonGenerator;
     .locals 1
-    .parameter "f"
+    .param p1, "f"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator$Feature;
 
     .prologue
     .line 43
@@ -204,7 +204,7 @@
 
 .method public isEnabled(Lcom/flurry/org/codehaus/jackson/JsonGenerator$Feature;)Z
     .locals 1
-    .parameter "f"
+    .param p1, "f"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator$Feature;
 
     .prologue
     .line 88
@@ -219,7 +219,7 @@
 
 .method public setCodec(Lcom/flurry/org/codehaus/jackson/ObjectCodec;)Lcom/flurry/org/codehaus/jackson/JsonGenerator;
     .locals 1
-    .parameter "oc"
+    .param p1, "oc"    # Lcom/flurry/org/codehaus/jackson/ObjectCodec;
 
     .prologue
     .line 93
@@ -233,7 +233,7 @@
 
 .method public setSchema(Lcom/flurry/org/codehaus/jackson/FormatSchema;)V
     .locals 1
-    .parameter "schema"
+    .param p1, "schema"    # Lcom/flurry/org/codehaus/jackson/FormatSchema;
 
     .prologue
     .line 63
@@ -274,10 +274,10 @@
 
 .method public writeBinary(Lcom/flurry/org/codehaus/jackson/Base64Variant;[BII)V
     .locals 1
-    .parameter "b64variant"
-    .parameter "data"
-    .parameter "offset"
-    .parameter "len"
+    .param p1, "b64variant"    # Lcom/flurry/org/codehaus/jackson/Base64Variant;
+    .param p2, "data"    # [B
+    .param p3, "offset"    # I
+    .param p4, "len"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -297,7 +297,7 @@
 
 .method public writeBoolean(Z)V
     .locals 1
-    .parameter "state"
+    .param p1, "state"    # Z
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -355,7 +355,7 @@
 
 .method public writeFieldName(Lcom/flurry/org/codehaus/jackson/SerializableString;)V
     .locals 1
-    .parameter "name"
+    .param p1, "name"    # Lcom/flurry/org/codehaus/jackson/SerializableString;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -375,7 +375,7 @@
 
 .method public writeFieldName(Lcom/flurry/org/codehaus/jackson/io/SerializedString;)V
     .locals 1
-    .parameter "name"
+    .param p1, "name"    # Lcom/flurry/org/codehaus/jackson/io/SerializedString;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -395,7 +395,7 @@
 
 .method public writeFieldName(Ljava/lang/String;)V
     .locals 1
-    .parameter "name"
+    .param p1, "name"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -434,7 +434,7 @@
 
 .method public writeNumber(D)V
     .locals 1
-    .parameter "v"
+    .param p1, "v"    # D
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -454,7 +454,7 @@
 
 .method public writeNumber(F)V
     .locals 1
-    .parameter "v"
+    .param p1, "v"    # F
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -474,7 +474,7 @@
 
 .method public writeNumber(I)V
     .locals 1
-    .parameter "v"
+    .param p1, "v"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -494,7 +494,7 @@
 
 .method public writeNumber(J)V
     .locals 1
-    .parameter "v"
+    .param p1, "v"    # J
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -514,7 +514,7 @@
 
 .method public writeNumber(Ljava/lang/String;)V
     .locals 1
-    .parameter "encodedValue"
+    .param p1, "encodedValue"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -535,7 +535,7 @@
 
 .method public writeNumber(Ljava/math/BigDecimal;)V
     .locals 1
-    .parameter "v"
+    .param p1, "v"    # Ljava/math/BigDecimal;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -555,7 +555,7 @@
 
 .method public writeNumber(Ljava/math/BigInteger;)V
     .locals 1
-    .parameter "v"
+    .param p1, "v"    # Ljava/math/BigInteger;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -575,7 +575,7 @@
 
 .method public writeObject(Ljava/lang/Object;)V
     .locals 1
-    .parameter "pojo"
+    .param p1, "pojo"    # Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -595,7 +595,7 @@
 
 .method public writeRaw(C)V
     .locals 1
-    .parameter "c"
+    .param p1, "c"    # C
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -615,7 +615,7 @@
 
 .method public writeRaw(Ljava/lang/String;)V
     .locals 1
-    .parameter "text"
+    .param p1, "text"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -635,9 +635,9 @@
 
 .method public writeRaw(Ljava/lang/String;II)V
     .locals 1
-    .parameter "text"
-    .parameter "offset"
-    .parameter "len"
+    .param p1, "text"    # Ljava/lang/String;
+    .param p2, "offset"    # I
+    .param p3, "len"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -657,9 +657,9 @@
 
 .method public writeRaw([CII)V
     .locals 1
-    .parameter "text"
-    .parameter "offset"
-    .parameter "len"
+    .param p1, "text"    # [C
+    .param p2, "offset"    # I
+    .param p3, "len"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -679,9 +679,9 @@
 
 .method public writeRawUTF8String([BII)V
     .locals 1
-    .parameter "text"
-    .parameter "offset"
-    .parameter "length"
+    .param p1, "text"    # [B
+    .param p2, "offset"    # I
+    .param p3, "length"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -701,7 +701,7 @@
 
 .method public writeRawValue(Ljava/lang/String;)V
     .locals 1
-    .parameter "text"
+    .param p1, "text"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -721,9 +721,9 @@
 
 .method public writeRawValue(Ljava/lang/String;II)V
     .locals 1
-    .parameter "text"
-    .parameter "offset"
-    .parameter "len"
+    .param p1, "text"    # Ljava/lang/String;
+    .param p2, "offset"    # I
+    .param p3, "len"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -743,9 +743,9 @@
 
 .method public writeRawValue([CII)V
     .locals 1
-    .parameter "text"
-    .parameter "offset"
-    .parameter "len"
+    .param p1, "text"    # [C
+    .param p2, "offset"    # I
+    .param p3, "len"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -803,7 +803,7 @@
 
 .method public writeString(Lcom/flurry/org/codehaus/jackson/SerializableString;)V
     .locals 1
-    .parameter "text"
+    .param p1, "text"    # Lcom/flurry/org/codehaus/jackson/SerializableString;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -823,7 +823,7 @@
 
 .method public writeString(Ljava/lang/String;)V
     .locals 1
-    .parameter "text"
+    .param p1, "text"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -843,9 +843,9 @@
 
 .method public writeString([CII)V
     .locals 1
-    .parameter "text"
-    .parameter "offset"
-    .parameter "len"
+    .param p1, "text"    # [C
+    .param p2, "offset"    # I
+    .param p3, "len"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -865,7 +865,7 @@
 
 .method public writeTree(Lcom/flurry/org/codehaus/jackson/JsonNode;)V
     .locals 1
-    .parameter "rootNode"
+    .param p1, "rootNode"    # Lcom/flurry/org/codehaus/jackson/JsonNode;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -885,9 +885,9 @@
 
 .method public writeUTF8String([BII)V
     .locals 1
-    .parameter "text"
-    .parameter "offset"
-    .parameter "length"
+    .param p1, "text"    # [B
+    .param p2, "offset"    # I
+    .param p3, "length"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,

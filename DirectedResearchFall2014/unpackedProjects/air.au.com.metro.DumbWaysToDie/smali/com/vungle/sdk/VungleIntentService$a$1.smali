@@ -27,11 +27,6 @@
 # direct methods
 .method constructor <init>(Lcom/vungle/sdk/VungleIntentService$a;Landroid/os/Looper;Lcom/vungle/sdk/VungleIntentService;Landroid/os/Looper;Ljava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 125
@@ -52,7 +47,7 @@
 # virtual methods
 .method public final handleMessage(Landroid/os/Message;)V
     .locals 3
-    .parameter "message"
+    .param p1, "message"    # Landroid/os/Message;
 
     .prologue
     .line 129

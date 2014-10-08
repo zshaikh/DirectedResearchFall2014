@@ -91,7 +91,7 @@
     move-result v0
 
     .line 213
-    .local v0, test:I
+    .local v0, "test":I
     if-eqz v0, :cond_1
 
     .line 214
@@ -150,7 +150,7 @@
 
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 13
-    .parameter "savedInstanceState"
+    .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
     .line 49
@@ -169,7 +169,7 @@
     move-result-object v0
 
     .line 53
-    .local v0, b:Landroid/os/Bundle;
+    .local v0, "b":Landroid/os/Bundle;
     const-string v9, "URL"
 
     invoke-virtual {v0, v9}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -177,13 +177,13 @@
     move-result-object v7
 
     .line 57
-    .local v7, url:Ljava/lang/String;
+    .local v7, "url":Ljava/lang/String;
     new-instance v8, Landroid/webkit/WebView;
 
     invoke-direct {v8, p0}, Landroid/webkit/WebView;-><init>(Landroid/content/Context;)V
 
     .line 59
-    .local v8, webView:Landroid/webkit/WebView;
+    .local v8, "webView":Landroid/webkit/WebView;
     invoke-virtual {v8, v7}, Landroid/webkit/WebView;->loadUrl(Ljava/lang/String;)V
 
     .line 60
@@ -231,7 +231,7 @@
     invoke-direct {v4, p0}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;)V
 
     .line 130
-    .local v4, rl:Landroid/widget/RelativeLayout;
+    .local v4, "rl":Landroid/widget/RelativeLayout;
     new-instance v5, Landroid/widget/RelativeLayout$LayoutParams;
 
     .line 131
@@ -244,7 +244,7 @@
     invoke-direct {v5, v9, v10}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
     .line 133
-    .local v5, rlp:Landroid/widget/RelativeLayout$LayoutParams;
+    .local v5, "rlp":Landroid/widget/RelativeLayout$LayoutParams;
     const/16 v9, 0xa
 
     const/16 v10, 0xa
@@ -261,13 +261,13 @@
     invoke-direct {v2, p0}, Landroid/widget/Button;-><init>(Landroid/content/Context;)V
 
     .line 151
-    .local v2, close:Landroid/widget/Button;
+    .local v2, "close":Landroid/widget/Button;
     const-string v9, "Close"
 
     invoke-virtual {v2, v9}, Landroid/widget/Button;->setText(Ljava/lang/CharSequence;)V
 
     .line 152
-    const/high16 v9, -0x100
+    const/high16 v9, -0x1000000
 
     invoke-virtual {v2, v9}, Landroid/widget/Button;->setBackgroundColor(I)V
 
@@ -295,7 +295,7 @@
     fill-array-data v1, :array_0
 
     .line 157
-    .local v1, bottomLeftRoundedCorner:[F
+    .local v1, "bottomLeftRoundedCorner":[F
     new-instance v3, Landroid/graphics/drawable/ShapeDrawable;
 
     new-instance v9, Landroid/graphics/drawable/shapes/RoundRectShape;
@@ -309,7 +309,7 @@
     invoke-direct {v3, v9}, Landroid/graphics/drawable/ShapeDrawable;-><init>(Landroid/graphics/drawable/shapes/Shape;)V
 
     .line 158
-    .local v3, drawable:Landroid/graphics/drawable/ShapeDrawable;
+    .local v3, "drawable":Landroid/graphics/drawable/ShapeDrawable;
     const/4 v9, 0x7
 
     const/4 v10, 0x3
@@ -326,7 +326,7 @@
     invoke-direct {v6}, Landroid/graphics/drawable/StateListDrawable;-><init>()V
 
     .line 161
-    .local v6, stateList:Landroid/graphics/drawable/StateListDrawable;
+    .local v6, "stateList":Landroid/graphics/drawable/StateListDrawable;
     const/4 v9, 0x0
 
     new-array v9, v9, [I
@@ -355,7 +355,7 @@
 
     move-result-object p1
 
-    .end local p1
+    .end local p1    # "savedInstanceState":Landroid/os/Bundle;
     check-cast p1, Landroid/view/ViewGroup;
 
     invoke-virtual {p1, v8}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
@@ -419,14 +419,14 @@
     nop
 
     :array_0
-    .array-data 0x4
-        0x0t 0x0t 0x0t 0x0t
-        0x0t 0x0t 0x0t 0x0t
-        0x0t 0x0t 0x0t 0x0t
-        0x0t 0x0t 0x0t 0x0t
-        0x0t 0x0t 0xa0t 0x40t
-        0x0t 0x0t 0xa0t 0x40t
-        0x0t 0x0t 0x0t 0x0t
-        0x0t 0x0t 0x0t 0x0t
+    .array-data 4
+        0x0
+        0x0
+        0x0
+        0x0
+        0x40a00000
+        0x40a00000
+        0x0
+        0x0
     .end array-data
 .end method

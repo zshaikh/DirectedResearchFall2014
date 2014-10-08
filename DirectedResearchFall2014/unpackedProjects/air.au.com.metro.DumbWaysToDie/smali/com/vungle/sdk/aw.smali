@@ -81,8 +81,6 @@
 
 .method protected final a(Ljava/lang/ClassLoader;Ljava/lang/String;)Ljava/lang/Class;
     .locals 2
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -129,8 +127,6 @@
 
 .method protected final a(Ljava/lang/String;Ljava/lang/ClassLoader;)Ljava/lang/Object;
     .locals 5
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",

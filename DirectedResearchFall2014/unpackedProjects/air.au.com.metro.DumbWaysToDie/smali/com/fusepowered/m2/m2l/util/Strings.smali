@@ -16,7 +16,7 @@
 
 .method public static fromStream(Ljava/io/InputStream;)Ljava/lang/String;
     .locals 5
-    .parameter "inputStream"
+    .param p0, "inputStream"    # Ljava/io/InputStream;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -28,19 +28,19 @@
     const/4 v1, 0x0
 
     .line 40
-    .local v1, numberBytesRead:I
+    .local v1, "numberBytesRead":I
     new-instance v2, Ljava/lang/StringBuffer;
 
     invoke-direct {v2}, Ljava/lang/StringBuffer;-><init>()V
 
     .line 41
-    .local v2, out:Ljava/lang/StringBuffer;
+    .local v2, "out":Ljava/lang/StringBuffer;
     const/16 v3, 0x1000
 
     new-array v0, v3, [B
 
     .line 43
-    .local v0, bytes:[B
+    .local v0, "bytes":[B
     :goto_0
     const/4 v3, -0x1
 
@@ -76,7 +76,7 @@
 
 .method public static isEmpty(Ljava/lang/String;)Z
     .locals 2
-    .parameter "input"
+    .param p0, "input"    # Ljava/lang/String;
 
     .prologue
     const/4 v1, 0x0

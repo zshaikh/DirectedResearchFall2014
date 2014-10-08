@@ -21,8 +21,8 @@
 # direct methods
 .method public constructor <init>(I[Ljava/lang/Object;)V
     .locals 0
-    .parameter "rsymCount"
-    .parameter "adjustments"
+    .param p1, "rsymCount"    # I
+    .param p2, "adjustments"    # [Ljava/lang/Object;
 
     .prologue
     .line 415

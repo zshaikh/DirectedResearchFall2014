@@ -8,7 +8,7 @@
 
 
 # static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator; = null
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroid/os/Parcelable$Creator",
@@ -56,7 +56,7 @@
 
 .method constructor <init>(Landroid/os/Parcel;)V
     .locals 4
-    .parameter "in"
+    .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
     .line 39
@@ -76,7 +76,7 @@
     move-result v1
 
     .line 44
-    .local v1, len:I
+    .local v1, "len":I
     new-array v2, v1, [Ljava/lang/String;
 
     iput-object v2, p0, Lcom/fusepowered/m1/android/VideoLogEvent;->activities:[Ljava/lang/String;
@@ -89,7 +89,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 51
-    .end local v1           #len:I
+    .end local v1    # "len":I
     :goto_0
     return-void
 
@@ -100,7 +100,7 @@
     move-object v0, v2
 
     .line 49
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0
@@ -108,7 +108,7 @@
 
 .method constructor <init>(Lorg/json/JSONObject;)V
     .locals 0
-    .parameter "logObject"
+    .param p1, "logObject"    # Lorg/json/JSONObject;
 
     .prologue
     .line 32
@@ -123,7 +123,7 @@
 
 .method private deserializeFromObj(Lorg/json/JSONObject;)V
     .locals 4
-    .parameter "logObject"
+    .param p1, "logObject"    # Lorg/json/JSONObject;
 
     .prologue
     .line 61
@@ -156,7 +156,7 @@
     move-result-object v1
 
     .line 66
-    .local v1, jsonArray:Lorg/json/JSONArray;
+    .local v1, "jsonArray":Lorg/json/JSONArray;
     if-eqz v1, :cond_2
 
     .line 68
@@ -171,7 +171,7 @@
     .line 69
     const/4 v0, 0x0
 
-    .local v0, i:I
+    .local v0, "i":I
     :goto_1
     invoke-virtual {v1}, Lorg/json/JSONArray;->length()I
 
@@ -194,7 +194,7 @@
     goto :goto_1
 
     .line 74
-    .end local v0           #i:I
+    .end local v0    # "i":I
     :cond_2
     const/4 v2, 0x0
 
@@ -219,7 +219,7 @@
 
 .method public readExternal(Ljava/io/ObjectInput;)V
     .locals 4
-    .parameter "input"
+    .param p1, "input"    # Ljava/io/ObjectInput;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -241,7 +241,7 @@
     move-result v0
 
     .line 117
-    .local v0, count:I
+    .local v0, "count":I
     new-array v2, v0, [Ljava/lang/String;
 
     iput-object v2, p0, Lcom/fusepowered/m1/android/VideoLogEvent;->activities:[Ljava/lang/String;
@@ -249,7 +249,7 @@
     .line 118
     const/4 v1, 0x0
 
-    .local v1, i:I
+    .local v1, "i":I
     :goto_0
     if-ge v1, v0, :cond_0
 
@@ -276,7 +276,7 @@
 
 .method public writeExternal(Ljava/io/ObjectOutput;)V
     .locals 6
-    .parameter "output"
+    .param p1, "output"    # Ljava/io/ObjectOutput;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -299,20 +299,20 @@
     .line 127
     iget-object v0, p0, Lcom/fusepowered/m1/android/VideoLogEvent;->activities:[Ljava/lang/String;
 
-    .local v0, arr$:[Ljava/lang/String;
+    .local v0, "arr$":[Ljava/lang/String;
     array-length v2, v0
 
-    .local v2, len$:I
+    .local v2, "len$":I
     const/4 v1, 0x0
 
-    .local v1, i$:I
+    .local v1, "i$":I
     :goto_0
     if-ge v1, v2, :cond_0
 
     aget-object v3, v0, v1
 
     .line 128
-    .local v3, temp:Ljava/lang/String;
+    .local v3, "temp":Ljava/lang/String;
     invoke-interface {p1, v3}, Ljava/io/ObjectOutput;->writeObject(Ljava/lang/Object;)V
 
     .line 127
@@ -321,15 +321,15 @@
     goto :goto_0
 
     .line 129
-    .end local v3           #temp:Ljava/lang/String;
+    .end local v3    # "temp":Ljava/lang/String;
     :cond_0
     return-void
 .end method
 
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 2
-    .parameter "dest"
-    .parameter "flags"
+    .param p1, "dest"    # Landroid/os/Parcel;
+    .param p2, "flags"    # I
 
     .prologue
     .line 89

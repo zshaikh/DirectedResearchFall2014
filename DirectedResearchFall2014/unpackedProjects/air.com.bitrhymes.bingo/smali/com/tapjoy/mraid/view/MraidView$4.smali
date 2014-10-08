@@ -21,7 +21,6 @@
 # direct methods
 .method constructor <init>(Lcom/tapjoy/mraid/view/MraidView;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 943
@@ -36,8 +35,8 @@
 # virtual methods
 .method public onLoadResource(Landroid/webkit/WebView;Ljava/lang/String;)V
     .locals 0
-    .parameter "view"
-    .parameter "url"
+    .param p1, "view"    # Landroid/webkit/WebView;
+    .param p2, "url"    # Ljava/lang/String;
 
     .prologue
     .line 1040
@@ -46,14 +45,14 @@
 
 .method public onPageFinished(Landroid/webkit/WebView;Ljava/lang/String;)V
     .locals 3
-    .parameter "view"
-    .parameter "url"
+    .param p1, "view"    # Landroid/webkit/WebView;
+    .param p2, "url"    # Ljava/lang/String;
 
     .prologue
     .line 966
     iget-object v0, p0, Lcom/tapjoy/mraid/view/MraidView$4;->this$0:Lcom/tapjoy/mraid/view/MraidView;
 
-    #getter for: Lcom/tapjoy/mraid/view/MraidView;->mListener:Lcom/tapjoy/mraid/listener/MraidViewListener;
+    # getter for: Lcom/tapjoy/mraid/view/MraidView;->mListener:Lcom/tapjoy/mraid/listener/MraidViewListener;
     invoke-static {v0}, Lcom/tapjoy/mraid/view/MraidView;->access$200(Lcom/tapjoy/mraid/view/MraidView;)Lcom/tapjoy/mraid/listener/MraidViewListener;
 
     move-result-object v0
@@ -63,7 +62,7 @@
     .line 968
     iget-object v0, p0, Lcom/tapjoy/mraid/view/MraidView$4;->this$0:Lcom/tapjoy/mraid/view/MraidView;
 
-    #getter for: Lcom/tapjoy/mraid/view/MraidView;->mListener:Lcom/tapjoy/mraid/listener/MraidViewListener;
+    # getter for: Lcom/tapjoy/mraid/view/MraidView;->mListener:Lcom/tapjoy/mraid/listener/MraidViewListener;
     invoke-static {v0}, Lcom/tapjoy/mraid/view/MraidView;->access$200(Lcom/tapjoy/mraid/view/MraidView;)Lcom/tapjoy/mraid/listener/MraidViewListener;
 
     move-result-object v0
@@ -84,7 +83,7 @@
 
     iget-object v2, p0, Lcom/tapjoy/mraid/view/MraidView$4;->this$0:Lcom/tapjoy/mraid/view/MraidView;
 
-    #getter for: Lcom/tapjoy/mraid/view/MraidView;->mDensity:F
+    # getter for: Lcom/tapjoy/mraid/view/MraidView;->mDensity:F
     invoke-static {v2}, Lcom/tapjoy/mraid/view/MraidView;->access$500(Lcom/tapjoy/mraid/view/MraidView;)F
 
     move-result v2
@@ -93,7 +92,7 @@
 
     float-to-int v1, v1
 
-    #setter for: Lcom/tapjoy/mraid/view/MraidView;->mDefaultHeight:I
+    # setter for: Lcom/tapjoy/mraid/view/MraidView;->mDefaultHeight:I
     invoke-static {v0, v1}, Lcom/tapjoy/mraid/view/MraidView;->access$1102(Lcom/tapjoy/mraid/view/MraidView;I)I
 
     .line 972
@@ -109,7 +108,7 @@
 
     iget-object v2, p0, Lcom/tapjoy/mraid/view/MraidView$4;->this$0:Lcom/tapjoy/mraid/view/MraidView;
 
-    #getter for: Lcom/tapjoy/mraid/view/MraidView;->mDensity:F
+    # getter for: Lcom/tapjoy/mraid/view/MraidView;->mDensity:F
     invoke-static {v2}, Lcom/tapjoy/mraid/view/MraidView;->access$500(Lcom/tapjoy/mraid/view/MraidView;)F
 
     move-result v2
@@ -118,20 +117,20 @@
 
     float-to-int v1, v1
 
-    #setter for: Lcom/tapjoy/mraid/view/MraidView;->mDefaultWidth:I
+    # setter for: Lcom/tapjoy/mraid/view/MraidView;->mDefaultWidth:I
     invoke-static {v0, v1}, Lcom/tapjoy/mraid/view/MraidView;->access$1202(Lcom/tapjoy/mraid/view/MraidView;I)I
 
     .line 973
     iget-object v0, p0, Lcom/tapjoy/mraid/view/MraidView$4;->this$0:Lcom/tapjoy/mraid/view/MraidView;
 
-    #getter for: Lcom/tapjoy/mraid/view/MraidView;->mUtilityController:Lcom/tapjoy/mraid/controller/Utility;
+    # getter for: Lcom/tapjoy/mraid/view/MraidView;->mUtilityController:Lcom/tapjoy/mraid/controller/Utility;
     invoke-static {v0}, Lcom/tapjoy/mraid/view/MraidView;->access$1300(Lcom/tapjoy/mraid/view/MraidView;)Lcom/tapjoy/mraid/controller/Utility;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/tapjoy/mraid/view/MraidView$4;->this$0:Lcom/tapjoy/mraid/view/MraidView;
 
-    #getter for: Lcom/tapjoy/mraid/view/MraidView;->mDensity:F
+    # getter for: Lcom/tapjoy/mraid/view/MraidView;->mDensity:F
     invoke-static {v1}, Lcom/tapjoy/mraid/view/MraidView;->access$500(Lcom/tapjoy/mraid/view/MraidView;)F
 
     move-result v1
@@ -146,7 +145,7 @@
     .line 976
     iget-object v0, p0, Lcom/tapjoy/mraid/view/MraidView$4;->this$0:Lcom/tapjoy/mraid/view/MraidView;
 
-    #getter for: Lcom/tapjoy/mraid/view/MraidView;->placement:Lcom/tapjoy/mraid/view/MraidView$PLACEMENT_TYPE;
+    # getter for: Lcom/tapjoy/mraid/view/MraidView;->placement:Lcom/tapjoy/mraid/view/MraidView$PLACEMENT_TYPE;
     invoke-static {v0}, Lcom/tapjoy/mraid/view/MraidView;->access$600(Lcom/tapjoy/mraid/view/MraidView;)Lcom/tapjoy/mraid/view/MraidView$PLACEMENT_TYPE;
 
     move-result-object v0
@@ -167,15 +166,15 @@
 
 .method public onPageStarted(Landroid/webkit/WebView;Ljava/lang/String;Landroid/graphics/Bitmap;)V
     .locals 1
-    .parameter "view"
-    .parameter "url"
-    .parameter "favicon"
+    .param p1, "view"    # Landroid/webkit/WebView;
+    .param p2, "url"    # Ljava/lang/String;
+    .param p3, "favicon"    # Landroid/graphics/Bitmap;
 
     .prologue
     .line 947
     iget-object v0, p0, Lcom/tapjoy/mraid/view/MraidView$4;->this$0:Lcom/tapjoy/mraid/view/MraidView;
 
-    #getter for: Lcom/tapjoy/mraid/view/MraidView;->mListener:Lcom/tapjoy/mraid/listener/MraidViewListener;
+    # getter for: Lcom/tapjoy/mraid/view/MraidView;->mListener:Lcom/tapjoy/mraid/listener/MraidViewListener;
     invoke-static {v0}, Lcom/tapjoy/mraid/view/MraidView;->access$200(Lcom/tapjoy/mraid/view/MraidView;)Lcom/tapjoy/mraid/listener/MraidViewListener;
 
     move-result-object v0
@@ -185,7 +184,7 @@
     .line 948
     iget-object v0, p0, Lcom/tapjoy/mraid/view/MraidView$4;->this$0:Lcom/tapjoy/mraid/view/MraidView;
 
-    #getter for: Lcom/tapjoy/mraid/view/MraidView;->mListener:Lcom/tapjoy/mraid/listener/MraidViewListener;
+    # getter for: Lcom/tapjoy/mraid/view/MraidView;->mListener:Lcom/tapjoy/mraid/listener/MraidViewListener;
     invoke-static {v0}, Lcom/tapjoy/mraid/view/MraidView;->access$200(Lcom/tapjoy/mraid/view/MraidView;)Lcom/tapjoy/mraid/listener/MraidViewListener;
 
     move-result-object v0
@@ -199,16 +198,16 @@
 
 .method public onReceivedError(Landroid/webkit/WebView;ILjava/lang/String;Ljava/lang/String;)V
     .locals 3
-    .parameter "view"
-    .parameter "errorCode"
-    .parameter "description"
-    .parameter "failingUrl"
+    .param p1, "view"    # Landroid/webkit/WebView;
+    .param p2, "errorCode"    # I
+    .param p3, "description"    # Ljava/lang/String;
+    .param p4, "failingUrl"    # Ljava/lang/String;
 
     .prologue
     .line 954
     iget-object v0, p0, Lcom/tapjoy/mraid/view/MraidView$4;->this$0:Lcom/tapjoy/mraid/view/MraidView;
 
-    #getter for: Lcom/tapjoy/mraid/view/MraidView;->mListener:Lcom/tapjoy/mraid/listener/MraidViewListener;
+    # getter for: Lcom/tapjoy/mraid/view/MraidView;->mListener:Lcom/tapjoy/mraid/listener/MraidViewListener;
     invoke-static {v0}, Lcom/tapjoy/mraid/view/MraidView;->access$200(Lcom/tapjoy/mraid/view/MraidView;)Lcom/tapjoy/mraid/listener/MraidViewListener;
 
     move-result-object v0
@@ -218,7 +217,7 @@
     .line 956
     iget-object v0, p0, Lcom/tapjoy/mraid/view/MraidView$4;->this$0:Lcom/tapjoy/mraid/view/MraidView;
 
-    #getter for: Lcom/tapjoy/mraid/view/MraidView;->mListener:Lcom/tapjoy/mraid/listener/MraidViewListener;
+    # getter for: Lcom/tapjoy/mraid/view/MraidView;->mListener:Lcom/tapjoy/mraid/listener/MraidViewListener;
     invoke-static {v0}, Lcom/tapjoy/mraid/view/MraidView;->access$200(Lcom/tapjoy/mraid/view/MraidView;)Lcom/tapjoy/mraid/listener/MraidViewListener;
 
     move-result-object v0
@@ -258,8 +257,8 @@
 
 .method public shouldOverrideUrlLoading(Landroid/webkit/WebView;Ljava/lang/String;)Z
     .locals 8
-    .parameter "view"
-    .parameter "url"
+    .param p1, "view"    # Landroid/webkit/WebView;
+    .param p2, "url"    # Ljava/lang/String;
 
     .prologue
     const/4 v7, 0x1
@@ -292,7 +291,7 @@
     .line 987
     iget-object v4, p0, Lcom/tapjoy/mraid/view/MraidView$4;->this$0:Lcom/tapjoy/mraid/view/MraidView;
 
-    #getter for: Lcom/tapjoy/mraid/view/MraidView;->mListener:Lcom/tapjoy/mraid/listener/MraidViewListener;
+    # getter for: Lcom/tapjoy/mraid/view/MraidView;->mListener:Lcom/tapjoy/mraid/listener/MraidViewListener;
     invoke-static {v4}, Lcom/tapjoy/mraid/view/MraidView;->access$200(Lcom/tapjoy/mraid/view/MraidView;)Lcom/tapjoy/mraid/listener/MraidViewListener;
 
     move-result-object v4
@@ -301,7 +300,7 @@
 
     iget-object v4, p0, Lcom/tapjoy/mraid/view/MraidView$4;->this$0:Lcom/tapjoy/mraid/view/MraidView;
 
-    #getter for: Lcom/tapjoy/mraid/view/MraidView;->mListener:Lcom/tapjoy/mraid/listener/MraidViewListener;
+    # getter for: Lcom/tapjoy/mraid/view/MraidView;->mListener:Lcom/tapjoy/mraid/listener/MraidViewListener;
     invoke-static {v4}, Lcom/tapjoy/mraid/view/MraidView;->access$200(Lcom/tapjoy/mraid/view/MraidView;)Lcom/tapjoy/mraid/listener/MraidViewListener;
 
     move-result-object v4
@@ -325,7 +324,7 @@
     move-result-object v3
 
     .line 998
-    .local v3, uri:Landroid/net/Uri;
+    .local v3, "uri":Landroid/net/Uri;
     :try_start_0
     const-string v4, "mraid"
 
@@ -364,8 +363,8 @@
     invoke-direct {v2, v4, v5}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
     .line 1004
-    .local v2, intent:Landroid/content/Intent;
-    const/high16 v4, 0x1000
+    .local v2, "intent":Landroid/content/Intent;
+    const/high16 v4, 0x10000000
 
     invoke-virtual {v2, v4}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
@@ -384,7 +383,7 @@
     goto :goto_0
 
     .line 1008
-    .end local v2           #intent:Landroid/content/Intent;
+    .end local v2    # "intent":Landroid/content/Intent;
     :cond_2
     const-string v4, "mailto:"
 
@@ -406,8 +405,8 @@
     invoke-direct {v2, v4, v5}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
     .line 1011
-    .restart local v2       #intent:Landroid/content/Intent;
-    const/high16 v4, 0x1000
+    .restart local v2    # "intent":Landroid/content/Intent;
+    const/high16 v4, 0x10000000
 
     invoke-virtual {v2, v4}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
@@ -426,14 +425,14 @@
     goto :goto_0
 
     .line 1015
-    .end local v2           #intent:Landroid/content/Intent;
+    .end local v2    # "intent":Landroid/content/Intent;
     :cond_3
     new-instance v2, Landroid/content/Intent;
 
     invoke-direct {v2}, Landroid/content/Intent;-><init>()V
 
     .line 1016
-    .restart local v2       #intent:Landroid/content/Intent;
+    .restart local v2    # "intent":Landroid/content/Intent;
     const-string v4, "android.intent.action.VIEW"
 
     invoke-virtual {v2, v4}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
@@ -442,7 +441,7 @@
     invoke-virtual {v2, v3}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
 
     .line 1018
-    const/high16 v4, 0x1000
+    const/high16 v4, 0x10000000
 
     invoke-virtual {v2, v4}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
@@ -463,21 +462,21 @@
     goto :goto_0
 
     .line 1023
-    .end local v2           #intent:Landroid/content/Intent;
+    .end local v2    # "intent":Landroid/content/Intent;
     :catch_0
     move-exception v4
 
     move-object v0, v4
 
     .line 1025
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     :try_start_1
     new-instance v2, Landroid/content/Intent;
 
     invoke-direct {v2}, Landroid/content/Intent;-><init>()V
 
     .line 1026
-    .restart local v2       #intent:Landroid/content/Intent;
+    .restart local v2    # "intent":Landroid/content/Intent;
     const-string v4, "android.intent.action.VIEW"
 
     invoke-virtual {v2, v4}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
@@ -486,7 +485,7 @@
     invoke-virtual {v2, v3}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
 
     .line 1028
-    const/high16 v4, 0x1000
+    const/high16 v4, 0x10000000
 
     invoke-virtual {v2, v4}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
@@ -507,14 +506,14 @@
     goto/16 :goto_0
 
     .line 1031
-    .end local v2           #intent:Landroid/content/Intent;
+    .end local v2    # "intent":Landroid/content/Intent;
     :catch_1
     move-exception v4
 
     move-object v1, v4
 
     .line 1032
-    .local v1, e2:Ljava/lang/Exception;
+    .local v1, "e2":Ljava/lang/Exception;
     const/4 v4, 0x0
 
     goto/16 :goto_0

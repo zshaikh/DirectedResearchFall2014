@@ -29,7 +29,6 @@
 
 .method public a(D)V
     .locals 2
-    .parameter
 
     .prologue
     .line 153
@@ -48,8 +47,6 @@
 
 .method public a(II)V
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 135
@@ -72,7 +69,6 @@
 
 .method public a(J)V
     .locals 4
-    .parameter
 
     .prologue
     const-wide/16 v2, 0xff
@@ -190,7 +186,6 @@
 
 .method public c(I)V
     .locals 1
-    .parameter
 
     .prologue
     .line 121
@@ -259,7 +254,6 @@
 
 .method public d(I)V
     .locals 1
-    .parameter
 
     .prologue
     .line 128

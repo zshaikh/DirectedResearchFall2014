@@ -57,8 +57,8 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Lcom/tapjoy/mraid/controller/MraidSensor;)V
     .locals 2
-    .parameter "ctx"
-    .parameter "sensorController"
+    .param p1, "ctx"    # Landroid/content/Context;
+    .param p2, "sensorController"    # Lcom/tapjoy/mraid/controller/MraidSensor;
 
     .prologue
     const/4 v0, 0x0
@@ -122,26 +122,26 @@
     nop
 
     :array_0
-    .array-data 0x4
-        0x0t 0x0t 0x0t 0x0t
-        0x0t 0x0t 0x0t 0x0t
-        0x0t 0x0t 0x0t 0x0t
+    .array-data 4
+        0x0
+        0x0
+        0x0
     .end array-data
 
     .line 55
     :array_1
-    .array-data 0x4
-        0x0t 0x0t 0x0t 0x0t
-        0x0t 0x0t 0x0t 0x0t
-        0x0t 0x0t 0x0t 0x0t
+    .array-data 4
+        0x0
+        0x0
+        0x0
     .end array-data
 
     .line 56
     :array_2
-    .array-data 0x4
-        0x0t 0x0t 0x80t 0xbft
-        0x0t 0x0t 0x80t 0xbft
-        0x0t 0x0t 0x80t 0xbft
+    .array-data 4
+        -0x40800000
+        -0x40800000
+        -0x40800000
     .end array-data
 .end method
 
@@ -159,7 +159,7 @@
     move-result-object v0
 
     .line 158
-    .local v0, list:Ljava/util/List;,"Ljava/util/List<Landroid/hardware/Sensor;>;"
+    .local v0, "list":Ljava/util/List;, "Ljava/util/List<Landroid/hardware/Sensor;>;"
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v1
@@ -200,7 +200,7 @@
     move-result-object v0
 
     .line 136
-    .local v0, list:Ljava/util/List;,"Ljava/util/List<Landroid/hardware/Sensor;>;"
+    .local v0, "list":Ljava/util/List;, "Ljava/util/List<Landroid/hardware/Sensor;>;"
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v1
@@ -248,8 +248,8 @@
 
 .method public onAccuracyChanged(Landroid/hardware/Sensor;I)V
     .locals 0
-    .parameter "sensor"
-    .parameter "accuracy"
+    .param p1, "sensor"    # Landroid/hardware/Sensor;
+    .param p2, "accuracy"    # I
 
     .prologue
     .line 178
@@ -258,7 +258,7 @@
 
 .method public onSensorChanged(Landroid/hardware/SensorEvent;)V
     .locals 14
-    .parameter "event"
+    .param p1, "event"    # Landroid/hardware/SensorEvent;
 
     .prologue
     const/16 v8, 0x9
@@ -306,11 +306,11 @@
     new-array v1, v8, [F
 
     .line 201
-    .local v1, R:[F
+    .local v1, "R":[F
     new-array v0, v8, [F
 
     .line 202
-    .local v0, I:[F
+    .local v0, "I":[F
     iget-object v7, p0, Lcom/tapjoy/mraid/listener/Accel;->mAccVals:[F
 
     iget-object v8, p0, Lcom/tapjoy/mraid/listener/Accel;->mMagVals:[F
@@ -339,8 +339,8 @@
     invoke-virtual {v7, v8}, Lcom/tapjoy/mraid/controller/MraidSensor;->onHeadingChange(F)V
 
     .line 209
-    .end local v0           #I:[F
-    .end local v1           #R:[F
+    .end local v0    # "I":[F
+    .end local v1    # "R":[F
     :cond_0
     iget-object v7, p1, Landroid/hardware/SensorEvent;->sensor:Landroid/hardware/Sensor;
 
@@ -356,7 +356,7 @@
     move-result-wide v4
 
     .line 212
-    .local v4, now:J
+    .local v4, "now":J
     iget-wide v7, p0, Lcom/tapjoy/mraid/listener/Accel;->mLastForce:J
 
     sub-long v7, v4, v7
@@ -388,7 +388,7 @@
     sub-long v2, v4, v7
 
     .line 218
-    .local v2, diff:J
+    .local v2, "diff":J
     iget-object v7, p0, Lcom/tapjoy/mraid/listener/Accel;->mAccVals:[F
 
     aget v7, v7, v11
@@ -436,8 +436,8 @@
     mul-float v6, v7, v8
 
     .line 222
-    .local v6, speed:F
-    const/high16 v7, 0x447a
+    .local v6, "speed":F
+    const/high16 v7, 0x447a0000
 
     cmpl-float v7, v6, v7
 
@@ -499,9 +499,9 @@
     invoke-virtual {v7, v8, v9, v10}, Lcom/tapjoy/mraid/controller/MraidSensor;->onTilt(FFF)V
 
     .line 237
-    .end local v2           #diff:J
-    .end local v4           #now:J
-    .end local v6           #speed:F
+    .end local v2    # "diff":J
+    .end local v4    # "now":J
+    .end local v6    # "speed":F
     :cond_4
     return-void
 
@@ -556,7 +556,7 @@
 
 .method public setSensorDelay(I)V
     .locals 1
-    .parameter "delay"
+    .param p1, "delay"    # I
 
     .prologue
     .line 76

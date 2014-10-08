@@ -15,9 +15,9 @@
 
 
 # static fields
-.field private static final DECODE:[I = null
+.field private static final DECODE:[I
 
-.field private static final DECODE_WEBSAFE:[I = null
+.field private static final DECODE_WEBSAFE:[I
 
 .field private static final EQUALS:I = -0x2
 
@@ -2365,8 +2365,8 @@
 
 .method public constructor <init>(I[B)V
     .locals 2
-    .parameter "flags"
-    .parameter "output"
+    .param p1, "flags"    # I
+    .param p2, "output"    # [B
 
     .prologue
     const/4 v1, 0x0
@@ -2407,7 +2407,7 @@
 # virtual methods
 .method public maxOutputSize(I)I
     .locals 1
-    .parameter "len"
+    .param p1, "len"    # I
 
     .prologue
     .line 270
@@ -2422,10 +2422,10 @@
 
 .method public process([BIIZ)Z
     .locals 11
-    .parameter "input"
-    .parameter "offset"
-    .parameter "len"
-    .parameter "finish"
+    .param p1, "input"    # [B
+    .param p2, "offset"    # I
+    .param p3, "len"    # I
+    .param p4, "finish"    # Z
 
     .prologue
     .line 280
@@ -2446,38 +2446,38 @@
     move v5, p2
 
     .line 283
-    .local v5, p:I
+    .local v5, "p":I
     add-int/2addr p3, p2
 
     .line 290
     iget v7, p0, Lcom/fusepowered/m2/m2l/util/Base64$Decoder;->state:I
 
     .line 291
-    .local v7, state:I
+    .local v7, "state":I
     iget v8, p0, Lcom/fusepowered/m2/m2l/util/Base64$Decoder;->value:I
 
     .line 292
-    .local v8, value:I
+    .local v8, "value":I
     const/4 v2, 0x0
 
     .line 293
-    .local v2, op:I
+    .local v2, "op":I
     iget-object v4, p0, Lcom/fusepowered/m2/m2l/util/Base64$Decoder;->output:[B
 
     .line 294
-    .local v4, output:[B
+    .local v4, "output":[B
     iget-object v0, p0, Lcom/fusepowered/m2/m2l/util/Base64$Decoder;->alphabet:[I
 
     .line 296
-    .local v0, alphabet:[I
+    .local v0, "alphabet":[I
     :goto_1
     if-lt v5, p3, :cond_1
 
     move v3, v2
 
     .line 409
-    .end local v2           #op:I
-    .local v3, op:I
+    .end local v2    # "op":I
+    .local v3, "op":I
     :goto_2
     if-nez p4, :cond_d
 
@@ -2496,8 +2496,8 @@
     goto :goto_0
 
     .line 311
-    .end local v3           #op:I
-    .restart local v2       #op:I
+    .end local v3    # "op":I
+    .restart local v2    # "op":I
     :cond_1
     if-nez v7, :cond_4
 
@@ -2565,13 +2565,13 @@
 
     move v3, v2
 
-    .end local v2           #op:I
-    .restart local v3       #op:I
+    .end local v2    # "op":I
+    .restart local v3    # "op":I
     goto :goto_2
 
     .line 317
-    .end local v3           #op:I
-    .restart local v2       #op:I
+    .end local v3    # "op":I
+    .restart local v2    # "op":I
     :cond_3
     add-int/lit8 v9, v2, 0x2
 
@@ -2607,8 +2607,8 @@
     :cond_4
     add-int/lit8 v6, v5, 0x1
 
-    .end local v5           #p:I
-    .local v6, p:I
+    .end local v5    # "p":I
+    .local v6, "p":I
     aget-byte v9, p1, v5
 
     and-int/lit16 v9, v9, 0xff
@@ -2616,19 +2616,19 @@
     aget v1, v0, v9
 
     .line 333
-    .local v1, d:I
+    .local v1, "d":I
     packed-switch v7, :pswitch_data_0
 
     :cond_5
     move v5, v6
 
-    .end local v6           #p:I
-    .restart local v5       #p:I
+    .end local v6    # "p":I
+    .restart local v5    # "p":I
     goto :goto_1
 
     .line 335
-    .end local v5           #p:I
-    .restart local v6       #p:I
+    .end local v5    # "p":I
+    .restart local v6    # "p":I
     :pswitch_0
     if-ltz v1, :cond_6
 
@@ -2641,12 +2641,12 @@
     move v5, v6
 
     .line 338
-    .end local v6           #p:I
-    .restart local v5       #p:I
+    .end local v6    # "p":I
+    .restart local v5    # "p":I
     goto :goto_1
 
-    .end local v5           #p:I
-    .restart local v6       #p:I
+    .end local v5    # "p":I
+    .restart local v6    # "p":I
     :cond_6
     const/4 v9, -0x1
 
@@ -2677,12 +2677,12 @@
     move v5, v6
 
     .line 348
-    .end local v6           #p:I
-    .restart local v5       #p:I
+    .end local v6    # "p":I
+    .restart local v5    # "p":I
     goto :goto_1
 
-    .end local v5           #p:I
-    .restart local v6       #p:I
+    .end local v5    # "p":I
+    .restart local v6    # "p":I
     :cond_7
     const/4 v9, -0x1
 
@@ -2713,12 +2713,12 @@
     move v5, v6
 
     .line 358
-    .end local v6           #p:I
-    .restart local v5       #p:I
+    .end local v6    # "p":I
+    .restart local v5    # "p":I
     goto/16 :goto_1
 
-    .end local v5           #p:I
-    .restart local v6       #p:I
+    .end local v5    # "p":I
+    .restart local v6    # "p":I
     :cond_8
     const/4 v9, -0x2
 
@@ -2727,8 +2727,8 @@
     .line 361
     add-int/lit8 v3, v2, 0x1
 
-    .end local v2           #op:I
-    .restart local v3       #op:I
+    .end local v2    # "op":I
+    .restart local v3    # "op":I
     shr-int/lit8 v9, v8, 0x4
 
     int-to-byte v9, v9
@@ -2740,17 +2740,17 @@
 
     move v2, v3
 
-    .end local v3           #op:I
-    .restart local v2       #op:I
+    .end local v3    # "op":I
+    .restart local v2    # "op":I
     move v5, v6
 
     .line 363
-    .end local v6           #p:I
-    .restart local v5       #p:I
+    .end local v6    # "p":I
+    .restart local v5    # "p":I
     goto/16 :goto_1
 
-    .end local v5           #p:I
-    .restart local v6       #p:I
+    .end local v5    # "p":I
+    .restart local v6    # "p":I
     :cond_9
     const/4 v9, -0x1
 
@@ -2807,12 +2807,12 @@
     move v5, v6
 
     .line 378
-    .end local v6           #p:I
-    .restart local v5       #p:I
+    .end local v6    # "p":I
+    .restart local v5    # "p":I
     goto/16 :goto_1
 
-    .end local v5           #p:I
-    .restart local v6       #p:I
+    .end local v5    # "p":I
+    .restart local v6    # "p":I
     :cond_a
     const/4 v9, -0x2
 
@@ -2843,12 +2843,12 @@
     move v5, v6
 
     .line 385
-    .end local v6           #p:I
-    .restart local v5       #p:I
+    .end local v6    # "p":I
+    .restart local v5    # "p":I
     goto/16 :goto_1
 
-    .end local v5           #p:I
-    .restart local v6       #p:I
+    .end local v5    # "p":I
+    .restart local v6    # "p":I
     :cond_b
     const/4 v9, -0x1
 
@@ -2876,12 +2876,12 @@
     move v5, v6
 
     .line 394
-    .end local v6           #p:I
-    .restart local v5       #p:I
+    .end local v6    # "p":I
+    .restart local v5    # "p":I
     goto/16 :goto_1
 
-    .end local v5           #p:I
-    .restart local v6       #p:I
+    .end local v5    # "p":I
+    .restart local v6    # "p":I
     :cond_c
     const/4 v9, -0x1
 
@@ -2914,19 +2914,19 @@
     goto/16 :goto_0
 
     .line 421
-    .end local v1           #d:I
-    .end local v2           #op:I
-    .end local v6           #p:I
-    .restart local v3       #op:I
-    .restart local v5       #p:I
+    .end local v1    # "d":I
+    .end local v2    # "op":I
+    .end local v6    # "p":I
+    .restart local v3    # "op":I
+    .restart local v5    # "p":I
     :cond_d
     packed-switch v7, :pswitch_data_1
 
     move v2, v3
 
     .line 451
-    .end local v3           #op:I
-    .restart local v2       #op:I
+    .end local v3    # "op":I
+    .restart local v2    # "op":I
     :goto_4
     iput v7, p0, Lcom/fusepowered/m2/m2l/util/Base64$Decoder;->state:I
 
@@ -2938,19 +2938,19 @@
 
     goto/16 :goto_0
 
-    .end local v2           #op:I
-    .restart local v3       #op:I
+    .end local v2    # "op":I
+    .restart local v3    # "op":I
     :pswitch_6
     move v2, v3
 
     .line 424
-    .end local v3           #op:I
-    .restart local v2       #op:I
+    .end local v3    # "op":I
+    .restart local v2    # "op":I
     goto :goto_4
 
     .line 428
-    .end local v2           #op:I
-    .restart local v3       #op:I
+    .end local v2    # "op":I
+    .restart local v3    # "op":I
     :pswitch_7
     const/4 v9, 0x6
 
@@ -2965,8 +2965,8 @@
     :pswitch_8
     add-int/lit8 v2, v3, 0x1
 
-    .end local v3           #op:I
-    .restart local v2       #op:I
+    .end local v3    # "op":I
+    .restart local v2    # "op":I
     shr-int/lit8 v9, v8, 0x4
 
     int-to-byte v9, v9
@@ -2976,13 +2976,13 @@
     goto :goto_4
 
     .line 438
-    .end local v2           #op:I
-    .restart local v3       #op:I
+    .end local v2    # "op":I
+    .restart local v3    # "op":I
     :pswitch_9
     add-int/lit8 v2, v3, 0x1
 
-    .end local v3           #op:I
-    .restart local v2       #op:I
+    .end local v3    # "op":I
+    .restart local v2    # "op":I
     shr-int/lit8 v9, v8, 0xa
 
     int-to-byte v9, v9
@@ -2992,8 +2992,8 @@
     .line 439
     add-int/lit8 v3, v2, 0x1
 
-    .end local v2           #op:I
-    .restart local v3       #op:I
+    .end local v2    # "op":I
+    .restart local v3    # "op":I
     shr-int/lit8 v9, v8, 0x2
 
     int-to-byte v9, v9
@@ -3003,13 +3003,13 @@
     move v2, v3
 
     .line 440
-    .end local v3           #op:I
-    .restart local v2       #op:I
+    .end local v3    # "op":I
+    .restart local v2    # "op":I
     goto :goto_4
 
     .line 443
-    .end local v2           #op:I
-    .restart local v3       #op:I
+    .end local v2    # "op":I
+    .restart local v3    # "op":I
     :pswitch_a
     const/4 v9, 0x6
 

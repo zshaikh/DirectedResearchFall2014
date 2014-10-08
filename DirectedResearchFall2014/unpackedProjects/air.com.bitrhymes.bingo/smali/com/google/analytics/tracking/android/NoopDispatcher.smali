@@ -21,7 +21,6 @@
 # virtual methods
 .method public dispatchHits(Ljava/util/List;)I
     .locals 7
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -34,19 +33,19 @@
 
     .prologue
     .line 23
-    .local p1, hits:Ljava/util/List;,"Ljava/util/List<Lcom/google/analytics/tracking/android/Hit;>;"
+    .local p1, "hits":Ljava/util/List;, "Ljava/util/List<Lcom/google/analytics/tracking/android/Hit;>;"
     if-nez p1, :cond_0
 
     .line 24
     const/4 v5, 0x0
 
     .line 46
-    .end local p0
+    .end local p0    # "this":Lcom/google/analytics/tracking/android/NoopDispatcher;
     :goto_0
     return v5
 
     .line 26
-    .restart local p0
+    .restart local p0    # "this":Lcom/google/analytics/tracking/android/NoopDispatcher;
     :cond_0
     const-string v5, "Hits not actually being sent as dispatch is false..."
 
@@ -64,11 +63,11 @@
     move-result v3
 
     .line 28
-    .local v3, maxHits:I
+    .local v3, "maxHits":I
     const/4 v1, 0x0
 
-    .end local p0
-    .local v1, i:I
+    .end local p0    # "this":Lcom/google/analytics/tracking/android/NoopDispatcher;
+    .local v1, "i":I
     :goto_1
     if-ge v1, v3, :cond_6
 
@@ -83,7 +82,7 @@
     const/4 v2, 0x0
 
     .line 31
-    .local v2, logMessage:Ljava/lang/String;
+    .local v2, "logMessage":Ljava/lang/String;
     invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p0
@@ -95,7 +94,7 @@
     move-result-object v0
 
     .line 32
-    .local v0, hitString:Ljava/lang/String;
+    .local v0, "hitString":Ljava/lang/String;
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v5
@@ -107,7 +106,7 @@
     move-object v4, v5
 
     .line 34
-    .local v4, modifiedHit:Ljava/lang/String;
+    .local v4, "modifiedHit":Ljava/lang/String;
     :goto_2
     invoke-static {v4}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -139,17 +138,17 @@
     invoke-static {v5}, Lcom/google/analytics/tracking/android/Log;->iDebug(Ljava/lang/String;)I
 
     .line 28
-    .end local v0           #hitString:Ljava/lang/String;
-    .end local v2           #logMessage:Ljava/lang/String;
-    .end local v4           #modifiedHit:Ljava/lang/String;
+    .end local v0    # "hitString":Ljava/lang/String;
+    .end local v2    # "logMessage":Ljava/lang/String;
+    .end local v4    # "modifiedHit":Ljava/lang/String;
     :cond_1
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
     .line 32
-    .restart local v0       #hitString:Ljava/lang/String;
-    .restart local v2       #logMessage:Ljava/lang/String;
+    .restart local v0    # "hitString":Ljava/lang/String;
+    .restart local v2    # "logMessage":Ljava/lang/String;
     :cond_2
     invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -170,7 +169,7 @@
     goto :goto_2
 
     .line 36
-    .restart local v4       #modifiedHit:Ljava/lang/String;
+    .restart local v4    # "modifiedHit":Ljava/lang/String;
     :cond_3
     invoke-virtual {v4}, Ljava/lang/String;->length()I
 
@@ -206,9 +205,9 @@
 
     goto :goto_3
 
-    .end local v0           #hitString:Ljava/lang/String;
-    .end local v2           #logMessage:Ljava/lang/String;
-    .end local v4           #modifiedHit:Ljava/lang/String;
+    .end local v0    # "hitString":Ljava/lang/String;
+    .end local v2    # "logMessage":Ljava/lang/String;
+    .end local v4    # "modifiedHit":Ljava/lang/String;
     :cond_6
     move v5, v3
 

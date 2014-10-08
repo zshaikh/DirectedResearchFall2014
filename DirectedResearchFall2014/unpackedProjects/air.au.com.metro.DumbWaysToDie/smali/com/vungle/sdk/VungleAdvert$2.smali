@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/vungle/sdk/VungleAdvert;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 190
@@ -66,7 +65,6 @@
 
 .method public final a(Ljava/lang/String;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 223

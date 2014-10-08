@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m1/google/gson/Gson;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 124
@@ -39,8 +38,8 @@
 # virtual methods
 .method public deserialize(Lcom/fusepowered/m1/google/gson/JsonElement;Ljava/lang/reflect/Type;)Ljava/lang/Object;
     .locals 1
-    .parameter "json"
-    .parameter "typeOfT"
+    .param p1, "json"    # Lcom/fusepowered/m1/google/gson/JsonElement;
+    .param p2, "typeOfT"    # Ljava/lang/reflect/Type;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",

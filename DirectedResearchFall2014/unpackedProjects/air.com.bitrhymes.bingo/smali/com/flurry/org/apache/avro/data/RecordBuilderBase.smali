@@ -76,11 +76,11 @@
 
 .method protected constructor <init>(Lcom/flurry/org/apache/avro/Schema;Lcom/flurry/org/apache/avro/generic/GenericData;)V
     .locals 2
-    .parameter "schema"
-    .parameter "data"
+    .param p1, "schema"    # Lcom/flurry/org/apache/avro/Schema;
+    .param p2, "data"    # Lcom/flurry/org/apache/avro/generic/GenericData;
 
     .prologue
-    .local p0, this:Lcom/flurry/org/apache/avro/data/RecordBuilderBase;,"Lcom/flurry/org/apache/avro/data/RecordBuilderBase<TT;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/data/RecordBuilderBase;, "Lcom/flurry/org/apache/avro/data/RecordBuilderBase<TT;>;"
     const/4 v0, 0x0
 
     .line 62
@@ -130,8 +130,7 @@
 
 .method protected constructor <init>(Lcom/flurry/org/apache/avro/data/RecordBuilderBase;Lcom/flurry/org/apache/avro/generic/GenericData;)V
     .locals 4
-    .parameter
-    .parameter "data"
+    .param p2, "data"    # Lcom/flurry/org/apache/avro/generic/GenericData;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -143,8 +142,8 @@
     .end annotation
 
     .prologue
-    .local p0, this:Lcom/flurry/org/apache/avro/data/RecordBuilderBase;,"Lcom/flurry/org/apache/avro/data/RecordBuilderBase<TT;>;"
-    .local p1, other:Lcom/flurry/org/apache/avro/data/RecordBuilderBase;,"Lcom/flurry/org/apache/avro/data/RecordBuilderBase<TT;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/data/RecordBuilderBase;, "Lcom/flurry/org/apache/avro/data/RecordBuilderBase<TT;>;"
+    .local p1, "other":Lcom/flurry/org/apache/avro/data/RecordBuilderBase;, "Lcom/flurry/org/apache/avro/data/RecordBuilderBase<TT;>;"
     const/4 v0, 0x0
 
     const/4 v3, 0x0
@@ -211,8 +210,8 @@
 
 .method protected static isValidValue(Lcom/flurry/org/apache/avro/Schema$Field;Ljava/lang/Object;)Z
     .locals 7
-    .parameter "f"
-    .parameter "value"
+    .param p0, "f"    # Lcom/flurry/org/apache/avro/Schema$Field;
+    .param p1, "value"    # Ljava/lang/Object;
 
     .prologue
     const/4 v6, 0x1
@@ -233,13 +232,13 @@
     move-result-object v2
 
     .line 120
-    .local v2, schema:Lcom/flurry/org/apache/avro/Schema;
+    .local v2, "schema":Lcom/flurry/org/apache/avro/Schema;
     invoke-virtual {v2}, Lcom/flurry/org/apache/avro/Schema;->getType()Lcom/flurry/org/apache/avro/Schema$Type;
 
     move-result-object v3
 
     .line 123
-    .local v3, type:Lcom/flurry/org/apache/avro/Schema$Type;
+    .local v3, "type":Lcom/flurry/org/apache/avro/Schema$Type;
     sget-object v4, Lcom/flurry/org/apache/avro/Schema$Type;->NULL:Lcom/flurry/org/apache/avro/Schema$Type;
 
     if-ne v3, v4, :cond_1
@@ -264,7 +263,7 @@
 
     move-result-object v0
 
-    .local v0, i$:Ljava/util/Iterator;
+    .local v0, "i$":Ljava/util/Iterator;
     :cond_2
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
@@ -279,7 +278,7 @@
     check-cast v1, Lcom/flurry/org/apache/avro/Schema;
 
     .line 130
-    .local v1, s:Lcom/flurry/org/apache/avro/Schema;
+    .local v1, "s":Lcom/flurry/org/apache/avro/Schema;
     invoke-virtual {v1}, Lcom/flurry/org/apache/avro/Schema;->getType()Lcom/flurry/org/apache/avro/Schema$Type;
 
     move-result-object v4
@@ -294,8 +293,8 @@
     goto :goto_0
 
     .line 137
-    .end local v0           #i$:Ljava/util/Iterator;
-    .end local v1           #s:Lcom/flurry/org/apache/avro/Schema;
+    .end local v0    # "i$":Ljava/util/Iterator;
+    .end local v1    # "s":Lcom/flurry/org/apache/avro/Schema;
     :cond_3
     const/4 v4, 0x0
 
@@ -309,7 +308,7 @@
 
     .prologue
     .line 56
-    .local p0, this:Lcom/flurry/org/apache/avro/data/RecordBuilderBase;,"Lcom/flurry/org/apache/avro/data/RecordBuilderBase<TT;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/data/RecordBuilderBase;, "Lcom/flurry/org/apache/avro/data/RecordBuilderBase<TT;>;"
     iget-object v0, p0, Lcom/flurry/org/apache/avro/data/RecordBuilderBase;->data:Lcom/flurry/org/apache/avro/generic/GenericData;
 
     return-object v0
@@ -317,7 +316,7 @@
 
 .method protected defaultValue(Lcom/flurry/org/apache/avro/Schema$Field;)Ljava/lang/Object;
     .locals 9
-    .parameter "field"
+    .param p1, "field"    # Lcom/flurry/org/apache/avro/Schema$Field;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -325,7 +324,7 @@
     .end annotation
 
     .prologue
-    .local p0, this:Lcom/flurry/org/apache/avro/data/RecordBuilderBase;,"Lcom/flurry/org/apache/avro/data/RecordBuilderBase<TT;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/data/RecordBuilderBase;, "Lcom/flurry/org/apache/avro/data/RecordBuilderBase<TT;>;"
     const/4 v8, 0x0
 
     .line 149
@@ -334,7 +333,7 @@
     move-result-object v1
 
     .line 150
-    .local v1, defaultJsonValue:Lcom/flurry/org/codehaus/jackson/JsonNode;
+    .local v1, "defaultJsonValue":Lcom/flurry/org/codehaus/jackson/JsonNode;
     if-nez v1, :cond_0
 
     .line 151
@@ -436,7 +435,7 @@
     const/4 v3, 0x0
 
     .line 164
-    .local v3, defaultValue:Ljava/lang/Object;
+    .local v3, "defaultValue":Ljava/lang/Object;
     sget-object v4, Lcom/flurry/org/apache/avro/data/RecordBuilderBase;->DEFAULT_VALUE_CACHE:Ljava/util/concurrent/ConcurrentMap;
 
     iget-object v5, p0, Lcom/flurry/org/apache/avro/data/RecordBuilderBase;->schema:Lcom/flurry/org/apache/avro/Schema;
@@ -452,7 +451,7 @@
     check-cast v2, Ljava/util/concurrent/ConcurrentMap;
 
     .line 166
-    .local v2, defaultSchemaValues:Ljava/util/concurrent/ConcurrentMap;,"Ljava/util/concurrent/ConcurrentMap<Ljava/lang/Integer;Ljava/lang/Object;>;"
+    .local v2, "defaultSchemaValues":Ljava/util/concurrent/ConcurrentMap;, "Ljava/util/concurrent/ConcurrentMap<Ljava/lang/Integer;Ljava/lang/Object;>;"
     if-nez v2, :cond_3
 
     .line 167
@@ -487,11 +486,11 @@
 
     move-result-object v2
 
-    .end local v2           #defaultSchemaValues:Ljava/util/concurrent/ConcurrentMap;,"Ljava/util/concurrent/ConcurrentMap<Ljava/lang/Integer;Ljava/lang/Object;>;"
+    .end local v2    # "defaultSchemaValues":Ljava/util/concurrent/ConcurrentMap;, "Ljava/util/concurrent/ConcurrentMap<Ljava/lang/Integer;Ljava/lang/Object;>;"
     check-cast v2, Ljava/util/concurrent/ConcurrentMap;
 
     .line 171
-    .restart local v2       #defaultSchemaValues:Ljava/util/concurrent/ConcurrentMap;,"Ljava/util/concurrent/ConcurrentMap<Ljava/lang/Integer;Ljava/lang/Object;>;"
+    .restart local v2    # "defaultSchemaValues":Ljava/util/concurrent/ConcurrentMap;, "Ljava/util/concurrent/ConcurrentMap<Ljava/lang/Integer;Ljava/lang/Object;>;"
     :cond_3
     invoke-virtual {p1}, Lcom/flurry/org/apache/avro/Schema$Field;->pos()I
 
@@ -514,7 +513,7 @@
     invoke-direct {v0}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
     .line 177
-    .local v0, baos:Ljava/io/ByteArrayOutputStream;
+    .local v0, "baos":Ljava/io/ByteArrayOutputStream;
     invoke-static {}, Lcom/flurry/org/apache/avro/io/EncoderFactory;->get()Lcom/flurry/org/apache/avro/io/EncoderFactory;
 
     move-result-object v4
@@ -587,7 +586,7 @@
     invoke-interface {v2, v4, v3}, Ljava/util/concurrent/ConcurrentMap;->putIfAbsent(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 190
-    .end local v0           #baos:Ljava/io/ByteArrayOutputStream;
+    .end local v0    # "baos":Ljava/io/ByteArrayOutputStream;
     :cond_4
     iget-object v4, p0, Lcom/flurry/org/apache/avro/data/RecordBuilderBase;->data:Lcom/flurry/org/apache/avro/generic/GenericData;
 
@@ -604,10 +603,10 @@
 
 .method public equals(Ljava/lang/Object;)Z
     .locals 6
-    .parameter "obj"
+    .param p1, "obj"    # Ljava/lang/Object;
 
     .prologue
-    .local p0, this:Lcom/flurry/org/apache/avro/data/RecordBuilderBase;,"Lcom/flurry/org/apache/avro/data/RecordBuilderBase<TT;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/data/RecordBuilderBase;, "Lcom/flurry/org/apache/avro/data/RecordBuilderBase<TT;>;"
     const/4 v5, 0x1
 
     const/4 v4, 0x0
@@ -656,7 +655,7 @@
     move-object v1, v0
 
     .line 212
-    .local v1, other:Lcom/flurry/org/apache/avro/data/RecordBuilderBase;
+    .local v1, "other":Lcom/flurry/org/apache/avro/data/RecordBuilderBase;
     iget-object v2, p0, Lcom/flurry/org/apache/avro/data/RecordBuilderBase;->fieldSetFlags:[Z
 
     iget-object v3, v1, Lcom/flurry/org/apache/avro/data/RecordBuilderBase;->fieldSetFlags:[Z
@@ -717,7 +716,7 @@
 
     .prologue
     .line 55
-    .local p0, this:Lcom/flurry/org/apache/avro/data/RecordBuilderBase;,"Lcom/flurry/org/apache/avro/data/RecordBuilderBase<TT;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/data/RecordBuilderBase;, "Lcom/flurry/org/apache/avro/data/RecordBuilderBase<TT;>;"
     iget-object v0, p0, Lcom/flurry/org/apache/avro/data/RecordBuilderBase;->fieldSetFlags:[Z
 
     return-object v0
@@ -728,7 +727,7 @@
 
     .prologue
     .line 54
-    .local p0, this:Lcom/flurry/org/apache/avro/data/RecordBuilderBase;,"Lcom/flurry/org/apache/avro/data/RecordBuilderBase<TT;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/data/RecordBuilderBase;, "Lcom/flurry/org/apache/avro/data/RecordBuilderBase<TT;>;"
     iget-object v0, p0, Lcom/flurry/org/apache/avro/data/RecordBuilderBase;->fields:[Lcom/flurry/org/apache/avro/Schema$Field;
 
     return-object v0
@@ -739,15 +738,15 @@
 
     .prologue
     .line 195
-    .local p0, this:Lcom/flurry/org/apache/avro/data/RecordBuilderBase;,"Lcom/flurry/org/apache/avro/data/RecordBuilderBase<TT;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/data/RecordBuilderBase;, "Lcom/flurry/org/apache/avro/data/RecordBuilderBase<TT;>;"
     const/16 v0, 0x1f
 
     .line 196
-    .local v0, prime:I
+    .local v0, "prime":I
     const/4 v1, 0x1
 
     .line 197
-    .local v1, result:I
+    .local v1, "result":I
     mul-int/lit8 v2, v1, 0x1f
 
     iget-object v2, p0, Lcom/flurry/org/apache/avro/data/RecordBuilderBase;->fieldSetFlags:[Z
@@ -789,7 +788,7 @@
 
     .prologue
     .line 53
-    .local p0, this:Lcom/flurry/org/apache/avro/data/RecordBuilderBase;,"Lcom/flurry/org/apache/avro/data/RecordBuilderBase<TT;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/data/RecordBuilderBase;, "Lcom/flurry/org/apache/avro/data/RecordBuilderBase<TT;>;"
     iget-object v0, p0, Lcom/flurry/org/apache/avro/data/RecordBuilderBase;->schema:Lcom/flurry/org/apache/avro/Schema;
 
     return-object v0
@@ -797,12 +796,12 @@
 
 .method protected validate(Lcom/flurry/org/apache/avro/Schema$Field;Ljava/lang/Object;)V
     .locals 3
-    .parameter "field"
-    .parameter "value"
+    .param p1, "field"    # Lcom/flurry/org/apache/avro/Schema$Field;
+    .param p2, "value"    # Ljava/lang/Object;
 
     .prologue
     .line 96
-    .local p0, this:Lcom/flurry/org/apache/avro/data/RecordBuilderBase;,"Lcom/flurry/org/apache/avro/data/RecordBuilderBase<TT;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/data/RecordBuilderBase;, "Lcom/flurry/org/apache/avro/data/RecordBuilderBase<TT;>;"
     invoke-static {p1, p2}, Lcom/flurry/org/apache/avro/data/RecordBuilderBase;->isValidValue(Lcom/flurry/org/apache/avro/Schema$Field;Ljava/lang/Object;)Z
 
     move-result v0

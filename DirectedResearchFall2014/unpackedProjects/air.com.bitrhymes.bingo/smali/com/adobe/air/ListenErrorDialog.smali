@@ -16,8 +16,6 @@
 # direct methods
 .method constructor <init>(Landroid/app/Activity;I)V
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 41
@@ -189,7 +187,6 @@
 
 .method public gotResultFromDialog(Z)V
     .locals 3
-    .parameter
 
     .prologue
     .line 93

@@ -33,7 +33,7 @@
 # direct methods
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 0
-    .parameter "msg"
+    .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
     .line 143
@@ -45,8 +45,8 @@
 
 .method public constructor <init>(Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/JsonLocation;)V
     .locals 0
-    .parameter "msg"
-    .parameter "loc"
+    .param p1, "msg"    # Ljava/lang/String;
+    .param p2, "loc"    # Lcom/flurry/org/codehaus/jackson/JsonLocation;
 
     .prologue
     .line 153
@@ -58,9 +58,9 @@
 
 .method public constructor <init>(Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/JsonLocation;Ljava/lang/Throwable;)V
     .locals 0
-    .parameter "msg"
-    .parameter "loc"
-    .parameter "rootCause"
+    .param p1, "msg"    # Ljava/lang/String;
+    .param p2, "loc"    # Lcom/flurry/org/codehaus/jackson/JsonLocation;
+    .param p3, "rootCause"    # Ljava/lang/Throwable;
 
     .prologue
     .line 158
@@ -72,8 +72,8 @@
 
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 0
-    .parameter "msg"
-    .parameter "rootCause"
+    .param p1, "msg"    # Ljava/lang/String;
+    .param p2, "rootCause"    # Ljava/lang/Throwable;
 
     .prologue
     .line 148
@@ -85,8 +85,8 @@
 
 .method public static from(Lcom/flurry/org/codehaus/jackson/JsonParser;Ljava/lang/String;)Lcom/flurry/org/codehaus/jackson/map/JsonMappingException;
     .locals 2
-    .parameter "jp"
-    .parameter "msg"
+    .param p0, "jp"    # Lcom/flurry/org/codehaus/jackson/JsonParser;
+    .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
     .line 163
@@ -103,9 +103,9 @@
 
 .method public static from(Lcom/flurry/org/codehaus/jackson/JsonParser;Ljava/lang/String;Ljava/lang/Throwable;)Lcom/flurry/org/codehaus/jackson/map/JsonMappingException;
     .locals 2
-    .parameter "jp"
-    .parameter "msg"
-    .parameter "problem"
+    .param p0, "jp"    # Lcom/flurry/org/codehaus/jackson/JsonParser;
+    .param p1, "msg"    # Ljava/lang/String;
+    .param p2, "problem"    # Ljava/lang/Throwable;
 
     .prologue
     .line 169
@@ -122,8 +122,8 @@
 
 .method public static wrapWithPath(Ljava/lang/Throwable;Lcom/flurry/org/codehaus/jackson/map/JsonMappingException$Reference;)Lcom/flurry/org/codehaus/jackson/map/JsonMappingException;
     .locals 5
-    .parameter "src"
-    .parameter "ref"
+    .param p0, "src"    # Ljava/lang/Throwable;
+    .param p1, "ref"    # Lcom/flurry/org/codehaus/jackson/map/JsonMappingException$Reference;
 
     .prologue
     .line 208
@@ -139,7 +139,7 @@
     move-object v1, v0
 
     .line 220
-    .local v1, jme:Lcom/flurry/org/codehaus/jackson/map/JsonMappingException;
+    .local v1, "jme":Lcom/flurry/org/codehaus/jackson/map/JsonMappingException;
     :goto_0
     invoke-virtual {v1, p1}, Lcom/flurry/org/codehaus/jackson/map/JsonMappingException;->prependPath(Lcom/flurry/org/codehaus/jackson/map/JsonMappingException$Reference;)V
 
@@ -147,14 +147,14 @@
     return-object v1
 
     .line 211
-    .end local v1           #jme:Lcom/flurry/org/codehaus/jackson/map/JsonMappingException;
+    .end local v1    # "jme":Lcom/flurry/org/codehaus/jackson/map/JsonMappingException;
     :cond_0
     invoke-virtual {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     move-result-object v2
 
     .line 215
-    .local v2, msg:Ljava/lang/String;
+    .local v2, "msg":Ljava/lang/String;
     if-eqz v2, :cond_1
 
     invoke-virtual {v2}, Ljava/lang/String;->length()I
@@ -205,15 +205,15 @@
 
     invoke-direct {v1, v2, v3, p0}, Lcom/flurry/org/codehaus/jackson/map/JsonMappingException;-><init>(Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/JsonLocation;Ljava/lang/Throwable;)V
 
-    .restart local v1       #jme:Lcom/flurry/org/codehaus/jackson/map/JsonMappingException;
+    .restart local v1    # "jme":Lcom/flurry/org/codehaus/jackson/map/JsonMappingException;
     goto :goto_0
 .end method
 
 .method public static wrapWithPath(Ljava/lang/Throwable;Ljava/lang/Object;I)Lcom/flurry/org/codehaus/jackson/map/JsonMappingException;
     .locals 1
-    .parameter "src"
-    .parameter "refFrom"
-    .parameter "index"
+    .param p0, "src"    # Ljava/lang/Throwable;
+    .param p1, "refFrom"    # Ljava/lang/Object;
+    .param p2, "index"    # I
 
     .prologue
     .line 197
@@ -230,9 +230,9 @@
 
 .method public static wrapWithPath(Ljava/lang/Throwable;Ljava/lang/Object;Ljava/lang/String;)Lcom/flurry/org/codehaus/jackson/map/JsonMappingException;
     .locals 1
-    .parameter "src"
-    .parameter "refFrom"
-    .parameter "refFieldName"
+    .param p0, "src"    # Ljava/lang/Throwable;
+    .param p1, "refFrom"    # Ljava/lang/Object;
+    .param p2, "refFieldName"    # Ljava/lang/String;
 
     .prologue
     .line 183
@@ -251,7 +251,7 @@
 # virtual methods
 .method protected _appendPathDesc(Ljava/lang/StringBuilder;)V
     .locals 2
-    .parameter "sb"
+    .param p1, "sb"    # Ljava/lang/StringBuilder;
 
     .prologue
     .line 321
@@ -262,8 +262,8 @@
     move-result-object v0
 
     .line 322
-    .end local p0
-    .local v0, it:Ljava/util/Iterator;,"Ljava/util/Iterator<Lcom/flurry/org/codehaus/jackson/map/JsonMappingException$Reference;>;"
+    .end local p0    # "this":Lcom/flurry/org/codehaus/jackson/map/JsonMappingException;
+    .local v0, "it":Ljava/util/Iterator;, "Ljava/util/Iterator<Lcom/flurry/org/codehaus/jackson/map/JsonMappingException$Reference;>;"
     :cond_0
     :goto_0
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
@@ -314,7 +314,7 @@
     move-result-object v0
 
     .line 288
-    .local v0, msg:Ljava/lang/String;
+    .local v0, "msg":Ljava/lang/String;
     iget-object v2, p0, Lcom/flurry/org/codehaus/jackson/map/JsonMappingException;->_path:Ljava/util/LinkedList;
 
     if-nez v2, :cond_0
@@ -336,7 +336,7 @@
     move-object v1, v2
 
     .line 301
-    .local v1, sb:Ljava/lang/StringBuilder;
+    .local v1, "sb":Ljava/lang/StringBuilder;
     :goto_1
     const-string v2, " (through reference chain: "
 
@@ -358,7 +358,7 @@
     goto :goto_0
 
     .line 295
-    .end local v1           #sb:Ljava/lang/StringBuilder;
+    .end local v1    # "sb":Ljava/lang/StringBuilder;
     :cond_1
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -408,7 +408,7 @@
 
 .method public prependPath(Lcom/flurry/org/codehaus/jackson/map/JsonMappingException$Reference;)V
     .locals 2
-    .parameter "r"
+    .param p1, "r"    # Lcom/flurry/org/codehaus/jackson/map/JsonMappingException$Reference;
 
     .prologue
     .line 259
@@ -447,8 +447,8 @@
 
 .method public prependPath(Ljava/lang/Object;I)V
     .locals 1
-    .parameter "referrer"
-    .parameter "index"
+    .param p1, "referrer"    # Ljava/lang/Object;
+    .param p2, "index"    # I
 
     .prologue
     .line 253
@@ -457,7 +457,7 @@
     invoke-direct {v0, p1, p2}, Lcom/flurry/org/codehaus/jackson/map/JsonMappingException$Reference;-><init>(Ljava/lang/Object;I)V
 
     .line 254
-    .local v0, ref:Lcom/flurry/org/codehaus/jackson/map/JsonMappingException$Reference;
+    .local v0, "ref":Lcom/flurry/org/codehaus/jackson/map/JsonMappingException$Reference;
     invoke-virtual {p0, v0}, Lcom/flurry/org/codehaus/jackson/map/JsonMappingException;->prependPath(Lcom/flurry/org/codehaus/jackson/map/JsonMappingException$Reference;)V
 
     .line 255
@@ -466,8 +466,8 @@
 
 .method public prependPath(Ljava/lang/Object;Ljava/lang/String;)V
     .locals 1
-    .parameter "referrer"
-    .parameter "fieldName"
+    .param p1, "referrer"    # Ljava/lang/Object;
+    .param p2, "fieldName"    # Ljava/lang/String;
 
     .prologue
     .line 244
@@ -476,7 +476,7 @@
     invoke-direct {v0, p1, p2}, Lcom/flurry/org/codehaus/jackson/map/JsonMappingException$Reference;-><init>(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 245
-    .local v0, ref:Lcom/flurry/org/codehaus/jackson/map/JsonMappingException$Reference;
+    .local v0, "ref":Lcom/flurry/org/codehaus/jackson/map/JsonMappingException$Reference;
     invoke-virtual {p0, v0}, Lcom/flurry/org/codehaus/jackson/map/JsonMappingException;->prependPath(Lcom/flurry/org/codehaus/jackson/map/JsonMappingException$Reference;)V
 
     .line 246

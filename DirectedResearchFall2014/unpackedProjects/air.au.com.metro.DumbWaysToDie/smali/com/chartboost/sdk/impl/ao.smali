@@ -43,7 +43,6 @@
 
 .method public a(Ljava/io/OutputStream;)I
     .locals 3
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -68,7 +67,6 @@
 
 .method public a(I)V
     .locals 0
-    .parameter
 
     .prologue
     .line 50
@@ -90,7 +88,6 @@
 
 .method b(I)V
     .locals 4
-    .parameter
 
     .prologue
     const/4 v3, 0x0
@@ -149,7 +146,7 @@
 
 .method public write(I)V
     .locals 3
-    .parameter "b"
+    .param p1, "b"    # I
 
     .prologue
     .line 39
@@ -189,7 +186,7 @@
 
 .method public write([B)V
     .locals 2
-    .parameter "b"
+    .param p1, "b"    # [B
 
     .prologue
     .line 27
@@ -205,9 +202,9 @@
 
 .method public write([BII)V
     .locals 2
-    .parameter "b"
-    .parameter "off"
-    .parameter "len"
+    .param p1, "b"    # [B
+    .param p2, "off"    # I
+    .param p3, "len"    # I
 
     .prologue
     .line 32

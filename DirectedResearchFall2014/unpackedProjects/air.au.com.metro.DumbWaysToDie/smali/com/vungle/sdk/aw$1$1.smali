@@ -33,8 +33,6 @@
 # direct methods
 .method constructor <init>(Lcom/vungle/sdk/aw$1;Ljava/lang/ClassLoader;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 32
@@ -49,7 +47,6 @@
 
 .method private a(Ljava/lang/String;)Ljava/lang/Class;
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -87,7 +84,6 @@
 # virtual methods
 .method protected final bridge synthetic a(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
-    .parameter
 
     .prologue
     .line 32

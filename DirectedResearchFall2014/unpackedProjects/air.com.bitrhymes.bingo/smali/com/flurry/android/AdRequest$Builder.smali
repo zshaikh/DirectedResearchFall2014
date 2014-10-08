@@ -113,7 +113,6 @@
 
 .method private constructor <init>(B)V
     .locals 1
-    .parameter
 
     .prologue
     .line 410
@@ -1816,7 +1815,6 @@
 
 .method public setAdReportedIds(Ljava/util/List;)Lcom/flurry/android/AdRequest$Builder;
     .locals 3
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1858,7 +1856,6 @@
 
 .method public setAdSpaceName(Ljava/lang/CharSequence;)Lcom/flurry/android/AdRequest$Builder;
     .locals 3
-    .parameter
 
     .prologue
     const/4 v2, 0x2
@@ -1890,7 +1887,6 @@
 
 .method public setAdViewContainer(Lcom/flurry/android/AdViewContainer;)Lcom/flurry/android/AdRequest$Builder;
     .locals 3
-    .parameter
 
     .prologue
     const/16 v2, 0x8
@@ -1922,7 +1918,6 @@
 
 .method public setAgentVersion(Ljava/lang/CharSequence;)Lcom/flurry/android/AdRequest$Builder;
     .locals 2
-    .parameter
 
     .prologue
     const/4 v1, 0x1
@@ -1952,7 +1947,6 @@
 
 .method public setApiKey(Ljava/lang/CharSequence;)Lcom/flurry/android/AdRequest$Builder;
     .locals 3
-    .parameter
 
     .prologue
     const/4 v2, 0x0
@@ -1984,7 +1978,6 @@
 
 .method public setBindings(Ljava/util/List;)Lcom/flurry/android/AdRequest$Builder;
     .locals 3
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -2026,7 +2019,6 @@
 
 .method public setCanDoSKAppStore(Z)Lcom/flurry/android/AdRequest$Builder;
     .locals 3
-    .parameter
 
     .prologue
     const/16 v2, 0x11
@@ -2062,7 +2054,6 @@
 
 .method public setDevicePlatform(Ljava/lang/CharSequence;)Lcom/flurry/android/AdRequest$Builder;
     .locals 3
-    .parameter
 
     .prologue
     const/16 v2, 0xc
@@ -2094,7 +2085,6 @@
 
 .method public setFrequencyCapInfos(Ljava/util/List;)Lcom/flurry/android/AdRequest$Builder;
     .locals 3
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -2136,7 +2126,6 @@
 
 .method public setKeywords(Ljava/util/Map;)Lcom/flurry/android/AdRequest$Builder;
     .locals 3
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -2179,7 +2168,6 @@
 
 .method public setLocale(Ljava/lang/CharSequence;)Lcom/flurry/android/AdRequest$Builder;
     .locals 3
-    .parameter
 
     .prologue
     const/16 v2, 0x9
@@ -2211,7 +2199,6 @@
 
 .method public setLocation(Lcom/flurry/android/Location;)Lcom/flurry/android/AdRequest$Builder;
     .locals 3
-    .parameter
 
     .prologue
     const/4 v2, 0x5
@@ -2243,7 +2230,6 @@
 
 .method public setNetworkStatus(I)Lcom/flurry/android/AdRequest$Builder;
     .locals 3
-    .parameter
 
     .prologue
     const/16 v2, 0x10
@@ -2279,7 +2265,6 @@
 
 .method public setOsVersion(Ljava/lang/CharSequence;)Lcom/flurry/android/AdRequest$Builder;
     .locals 3
-    .parameter
 
     .prologue
     const/16 v2, 0xb
@@ -2311,7 +2296,6 @@
 
 .method public setRefresh(Z)Lcom/flurry/android/AdRequest$Builder;
     .locals 3
-    .parameter
 
     .prologue
     const/16 v2, 0xf
@@ -2347,7 +2331,6 @@
 
 .method public setSessionId(J)Lcom/flurry/android/AdRequest$Builder;
     .locals 3
-    .parameter
 
     .prologue
     const/4 v2, 0x3
@@ -2383,7 +2366,6 @@
 
 .method public setTestAds(Lcom/flurry/android/TestAds;)Lcom/flurry/android/AdRequest$Builder;
     .locals 3
-    .parameter
 
     .prologue
     const/16 v2, 0xd
@@ -2415,7 +2397,6 @@
 
 .method public setTestDevice(Z)Lcom/flurry/android/AdRequest$Builder;
     .locals 3
-    .parameter
 
     .prologue
     const/4 v2, 0x6
@@ -2451,7 +2432,6 @@
 
 .method public setTimezone(Ljava/lang/CharSequence;)Lcom/flurry/android/AdRequest$Builder;
     .locals 3
-    .parameter
 
     .prologue
     const/16 v2, 0xa

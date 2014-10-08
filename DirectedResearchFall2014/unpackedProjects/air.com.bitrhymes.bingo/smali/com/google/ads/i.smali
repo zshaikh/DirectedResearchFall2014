@@ -50,11 +50,6 @@
 # direct methods
 .method public constructor <init>(Lcom/google/ads/h;Landroid/app/Activity;Ljava/lang/String;Lcom/google/ads/AdRequest;Ljava/util/HashMap;)V
     .locals 1
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -112,7 +107,6 @@
 
 .method private a(Lcom/google/ads/mediation/MediationAdapter;)V
     .locals 14
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T::",
@@ -386,9 +380,6 @@
 
 .method private a(Ljava/lang/String;Ljava/lang/Throwable;Lcom/google/ads/g$a;)V
     .locals 2
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 136
@@ -407,7 +398,6 @@
 
 .method private static a(Ljava/util/Map;)Z
     .locals 2
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",

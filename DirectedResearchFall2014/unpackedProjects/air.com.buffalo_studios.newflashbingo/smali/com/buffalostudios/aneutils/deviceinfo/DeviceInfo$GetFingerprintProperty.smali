@@ -34,7 +34,7 @@
 
 .method private getFingerprintProperty(I)Ljava/lang/String;
     .locals 1
-    .parameter "propertyId"
+    .param p1, "propertyId"    # I
 
     .prologue
     .line 197
@@ -73,7 +73,7 @@
 
 .method private onError(Ljava/lang/String;)V
     .locals 0
-    .parameter "message"
+    .param p1, "message"    # Ljava/lang/String;
 
     .prologue
     .line 210
@@ -84,8 +84,8 @@
 # virtual methods
 .method public call(Lcom/adobe/fre/FREContext;[Lcom/adobe/fre/FREObject;)Lcom/adobe/fre/FREObject;
     .locals 5
-    .parameter "context"
-    .parameter "args"
+    .param p1, "context"    # Lcom/adobe/fre/FREContext;
+    .param p2, "args"    # [Lcom/adobe/fre/FREObject;
 
     .prologue
     .line 178
@@ -98,13 +98,13 @@
     move-result v2
 
     .line 180
-    .local v2, propertyId:I
+    .local v2, "propertyId":I
     invoke-direct {p0, v2}, Lcom/buffalostudios/aneutils/deviceinfo/DeviceInfo$GetFingerprintProperty;->getFingerprintProperty(I)Ljava/lang/String;
 
     move-result-object v1
 
     .line 181
-    .local v1, property:Ljava/lang/String;
+    .local v1, "property":Ljava/lang/String;
     if-nez v1, :cond_0
 
     .line 182
@@ -119,7 +119,7 @@
     const/4 v3, 0x0
 
     .line 188
-    .local v3, result:Lcom/adobe/fre/FREObject;
+    .local v3, "result":Lcom/adobe/fre/FREObject;
     :try_start_0
     invoke-static {v1}, Lcom/adobe/fre/FREObject;->newObject(Ljava/lang/String;)Lcom/adobe/fre/FREObject;
     :try_end_0
@@ -138,7 +138,7 @@
     move-exception v0
 
     .line 190
-    .local v0, e:Lcom/adobe/fre/FREWrongThreadException;
+    .local v0, "e":Lcom/adobe/fre/FREWrongThreadException;
     const-string v4, "ERROR: FREWrongThreadException in DeviceInfoGetFingerprintProperty#call"
 
     invoke-direct {p0, v4}, Lcom/buffalostudios/aneutils/deviceinfo/DeviceInfo$GetFingerprintProperty;->onError(Ljava/lang/String;)V

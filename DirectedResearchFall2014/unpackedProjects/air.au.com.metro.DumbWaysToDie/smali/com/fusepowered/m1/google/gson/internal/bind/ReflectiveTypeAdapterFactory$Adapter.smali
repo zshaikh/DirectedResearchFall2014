@@ -50,8 +50,6 @@
 # direct methods
 .method private constructor <init>(Lcom/fusepowered/m1/google/gson/internal/ObjectConstructor;Ljava/util/Map;)V
     .locals 0
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -67,9 +65,9 @@
 
     .prologue
     .line 152
-    .local p0, this:Lcom/fusepowered/m1/google/gson/internal/bind/ReflectiveTypeAdapterFactory$Adapter;,"Lcom/fusepowered/m1/google/gson/internal/bind/ReflectiveTypeAdapterFactory$Adapter<TT;>;"
-    .local p1, constructor:Lcom/fusepowered/m1/google/gson/internal/ObjectConstructor;,"Lcom/fusepowered/m1/google/gson/internal/ObjectConstructor<TT;>;"
-    .local p2, boundFields:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Lcom/fusepowered/m1/google/gson/internal/bind/ReflectiveTypeAdapterFactory$BoundField;>;"
+    .local p0, "this":Lcom/fusepowered/m1/google/gson/internal/bind/ReflectiveTypeAdapterFactory$Adapter;, "Lcom/fusepowered/m1/google/gson/internal/bind/ReflectiveTypeAdapterFactory$Adapter<TT;>;"
+    .local p1, "constructor":Lcom/fusepowered/m1/google/gson/internal/ObjectConstructor;, "Lcom/fusepowered/m1/google/gson/internal/ObjectConstructor<TT;>;"
+    .local p2, "boundFields":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Lcom/fusepowered/m1/google/gson/internal/bind/ReflectiveTypeAdapterFactory$BoundField;>;"
     invoke-direct {p0}, Lcom/fusepowered/m1/google/gson/TypeAdapter;-><init>()V
 
     .line 153
@@ -84,13 +82,13 @@
 
 .method synthetic constructor <init>(Lcom/fusepowered/m1/google/gson/internal/ObjectConstructor;Ljava/util/Map;Lcom/fusepowered/m1/google/gson/internal/bind/ReflectiveTypeAdapterFactory$1;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
-    .parameter "x2"
+    .param p1, "x0"    # Lcom/fusepowered/m1/google/gson/internal/ObjectConstructor;
+    .param p2, "x1"    # Ljava/util/Map;
+    .param p3, "x2"    # Lcom/fusepowered/m1/google/gson/internal/bind/ReflectiveTypeAdapterFactory$1;
 
     .prologue
     .line 148
-    .local p0, this:Lcom/fusepowered/m1/google/gson/internal/bind/ReflectiveTypeAdapterFactory$Adapter;,"Lcom/fusepowered/m1/google/gson/internal/bind/ReflectiveTypeAdapterFactory$Adapter<TT;>;"
+    .local p0, "this":Lcom/fusepowered/m1/google/gson/internal/bind/ReflectiveTypeAdapterFactory$Adapter;, "Lcom/fusepowered/m1/google/gson/internal/bind/ReflectiveTypeAdapterFactory$Adapter<TT;>;"
     invoke-direct {p0, p1, p2}, Lcom/fusepowered/m1/google/gson/internal/bind/ReflectiveTypeAdapterFactory$Adapter;-><init>(Lcom/fusepowered/m1/google/gson/internal/ObjectConstructor;Ljava/util/Map;)V
 
     return-void
@@ -100,7 +98,7 @@
 # virtual methods
 .method public read(Lcom/fusepowered/m1/google/gson/stream/JsonReader;)Ljava/lang/Object;
     .locals 6
-    .parameter "in"
+    .param p1, "in"    # Lcom/fusepowered/m1/google/gson/stream/JsonReader;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -117,7 +115,7 @@
 
     .prologue
     .line 158
-    .local p0, this:Lcom/fusepowered/m1/google/gson/internal/bind/ReflectiveTypeAdapterFactory$Adapter;,"Lcom/fusepowered/m1/google/gson/internal/bind/ReflectiveTypeAdapterFactory$Adapter<TT;>;"
+    .local p0, "this":Lcom/fusepowered/m1/google/gson/internal/bind/ReflectiveTypeAdapterFactory$Adapter;, "Lcom/fusepowered/m1/google/gson/internal/bind/ReflectiveTypeAdapterFactory$Adapter<TT;>;"
     invoke-virtual {p1}, Lcom/fusepowered/m1/google/gson/stream/JsonReader;->peek()Lcom/fusepowered/m1/google/gson/stream/JsonToken;
 
     move-result-object v4
@@ -145,7 +143,7 @@
     move-result-object v2
 
     .line 166
-    .local v2, instance:Ljava/lang/Object;,"TT;"
+    .local v2, "instance":Ljava/lang/Object;, "TT;"
     :try_start_0
     invoke-virtual {p1}, Lcom/fusepowered/m1/google/gson/stream/JsonReader;->beginObject()V
 
@@ -163,7 +161,7 @@
     move-result-object v3
 
     .line 169
-    .local v3, name:Ljava/lang/String;
+    .local v3, "name":Ljava/lang/String;
     iget-object v4, p0, Lcom/fusepowered/m1/google/gson/internal/bind/ReflectiveTypeAdapterFactory$Adapter;->boundFields:Ljava/util/Map;
 
     invoke-interface {v4, v3}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -173,7 +171,7 @@
     check-cast v1, Lcom/fusepowered/m1/google/gson/internal/bind/ReflectiveTypeAdapterFactory$BoundField;
 
     .line 170
-    .local v1, field:Lcom/fusepowered/m1/google/gson/internal/bind/ReflectiveTypeAdapterFactory$BoundField;
+    .local v1, "field":Lcom/fusepowered/m1/google/gson/internal/bind/ReflectiveTypeAdapterFactory$BoundField;
     if-eqz v1, :cond_1
 
     iget-boolean v4, v1, Lcom/fusepowered/m1/google/gson/internal/bind/ReflectiveTypeAdapterFactory$BoundField;->deserialized:Z
@@ -190,15 +188,15 @@
     goto :goto_1
 
     .line 176
-    .end local v1           #field:Lcom/fusepowered/m1/google/gson/internal/bind/ReflectiveTypeAdapterFactory$BoundField;
-    .end local v3           #name:Ljava/lang/String;
+    .end local v1    # "field":Lcom/fusepowered/m1/google/gson/internal/bind/ReflectiveTypeAdapterFactory$BoundField;
+    .end local v3    # "name":Ljava/lang/String;
     :catch_0
     move-exception v4
 
     move-object v0, v4
 
     .line 177
-    .local v0, e:Ljava/lang/IllegalStateException;
+    .local v0, "e":Ljava/lang/IllegalStateException;
     new-instance v4, Lcom/fusepowered/m1/google/gson/JsonSyntaxException;
 
     invoke-direct {v4, v0}, Lcom/fusepowered/m1/google/gson/JsonSyntaxException;-><init>(Ljava/lang/Throwable;)V
@@ -206,9 +204,9 @@
     throw v4
 
     .line 173
-    .end local v0           #e:Ljava/lang/IllegalStateException;
-    .restart local v1       #field:Lcom/fusepowered/m1/google/gson/internal/bind/ReflectiveTypeAdapterFactory$BoundField;
-    .restart local v3       #name:Ljava/lang/String;
+    .end local v0    # "e":Ljava/lang/IllegalStateException;
+    .restart local v1    # "field":Lcom/fusepowered/m1/google/gson/internal/bind/ReflectiveTypeAdapterFactory$BoundField;
+    .restart local v3    # "name":Ljava/lang/String;
     :cond_2
     :try_start_1
     invoke-virtual {v1, p1, v2}, Lcom/fusepowered/m1/google/gson/internal/bind/ReflectiveTypeAdapterFactory$BoundField;->read(Lcom/fusepowered/m1/google/gson/stream/JsonReader;Ljava/lang/Object;)V
@@ -219,15 +217,15 @@
     goto :goto_1
 
     .line 178
-    .end local v1           #field:Lcom/fusepowered/m1/google/gson/internal/bind/ReflectiveTypeAdapterFactory$BoundField;
-    .end local v3           #name:Ljava/lang/String;
+    .end local v1    # "field":Lcom/fusepowered/m1/google/gson/internal/bind/ReflectiveTypeAdapterFactory$BoundField;
+    .end local v3    # "name":Ljava/lang/String;
     :catch_1
     move-exception v4
 
     move-object v0, v4
 
     .line 179
-    .local v0, e:Ljava/lang/IllegalAccessException;
+    .local v0, "e":Ljava/lang/IllegalAccessException;
     new-instance v4, Ljava/lang/AssertionError;
 
     invoke-direct {v4, v0}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
@@ -235,7 +233,7 @@
     throw v4
 
     .line 181
-    .end local v0           #e:Ljava/lang/IllegalAccessException;
+    .end local v0    # "e":Ljava/lang/IllegalAccessException;
     :cond_3
     invoke-virtual {p1}, Lcom/fusepowered/m1/google/gson/stream/JsonReader;->endObject()V
 
@@ -247,8 +245,7 @@
 
 .method public write(Lcom/fusepowered/m1/google/gson/stream/JsonWriter;Ljava/lang/Object;)V
     .locals 4
-    .parameter "out"
-    .parameter
+    .param p1, "out"    # Lcom/fusepowered/m1/google/gson/stream/JsonWriter;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -265,8 +262,8 @@
 
     .prologue
     .line 186
-    .local p0, this:Lcom/fusepowered/m1/google/gson/internal/bind/ReflectiveTypeAdapterFactory$Adapter;,"Lcom/fusepowered/m1/google/gson/internal/bind/ReflectiveTypeAdapterFactory$Adapter<TT;>;"
-    .local p2, value:Ljava/lang/Object;,"TT;"
+    .local p0, "this":Lcom/fusepowered/m1/google/gson/internal/bind/ReflectiveTypeAdapterFactory$Adapter;, "Lcom/fusepowered/m1/google/gson/internal/bind/ReflectiveTypeAdapterFactory$Adapter<TT;>;"
+    .local p2, "value":Ljava/lang/Object;, "TT;"
     if-nez p2, :cond_0
 
     .line 187
@@ -292,7 +289,7 @@
 
     move-result-object v2
 
-    .local v2, i$:Ljava/util/Iterator;
+    .local v2, "i$":Ljava/util/Iterator;
     :cond_1
     :goto_1
     invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
@@ -308,7 +305,7 @@
     check-cast v0, Lcom/fusepowered/m1/google/gson/internal/bind/ReflectiveTypeAdapterFactory$BoundField;
 
     .line 194
-    .local v0, boundField:Lcom/fusepowered/m1/google/gson/internal/bind/ReflectiveTypeAdapterFactory$BoundField;
+    .local v0, "boundField":Lcom/fusepowered/m1/google/gson/internal/bind/ReflectiveTypeAdapterFactory$BoundField;
     iget-boolean v3, v0, Lcom/fusepowered/m1/google/gson/internal/bind/ReflectiveTypeAdapterFactory$BoundField;->serialized:Z
 
     if-eqz v3, :cond_1
@@ -326,15 +323,15 @@
     goto :goto_1
 
     .line 199
-    .end local v0           #boundField:Lcom/fusepowered/m1/google/gson/internal/bind/ReflectiveTypeAdapterFactory$BoundField;
-    .end local v2           #i$:Ljava/util/Iterator;
+    .end local v0    # "boundField":Lcom/fusepowered/m1/google/gson/internal/bind/ReflectiveTypeAdapterFactory$BoundField;
+    .end local v2    # "i$":Ljava/util/Iterator;
     :catch_0
     move-exception v3
 
     move-object v1, v3
 
     .line 200
-    .local v1, e:Ljava/lang/IllegalAccessException;
+    .local v1, "e":Ljava/lang/IllegalAccessException;
     new-instance v3, Ljava/lang/AssertionError;
 
     invoke-direct {v3}, Ljava/lang/AssertionError;-><init>()V
@@ -342,8 +339,8 @@
     throw v3
 
     .line 202
-    .end local v1           #e:Ljava/lang/IllegalAccessException;
-    .restart local v2       #i$:Ljava/util/Iterator;
+    .end local v1    # "e":Ljava/lang/IllegalAccessException;
+    .restart local v2    # "i$":Ljava/util/Iterator;
     :cond_2
     invoke-virtual {p1}, Lcom/fusepowered/m1/google/gson/stream/JsonWriter;->endObject()Lcom/fusepowered/m1/google/gson/stream/JsonWriter;
 

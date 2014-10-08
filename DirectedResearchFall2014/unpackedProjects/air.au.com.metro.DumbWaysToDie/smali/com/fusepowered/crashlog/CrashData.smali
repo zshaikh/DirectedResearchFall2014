@@ -47,7 +47,7 @@
 
 .method private constructor <init>(Ljava/lang/String;)V
     .locals 0
-    .parameter "id"
+    .param p1, "id"    # Ljava/lang/String;
 
     .prologue
     .line 29
@@ -62,7 +62,7 @@
 
 .method public static fromJson(Ljava/lang/String;)Lcom/fusepowered/crashlog/CrashData;
     .locals 10
-    .parameter "crashJson"
+    .param p0, "crashJson"    # Ljava/lang/String;
 
     .prologue
     .line 87
@@ -72,7 +72,7 @@
     invoke-direct {v3, p0}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
     .line 89
-    .local v3, jsonObject:Lorg/json/JSONObject;
+    .local v3, "jsonObject":Lorg/json/JSONObject;
     const-string v7, "id"
 
     invoke-virtual {v3, v7}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -80,7 +80,7 @@
     move-result-object v1
 
     .line 90
-    .local v1, crashId:Ljava/lang/String;
+    .local v1, "crashId":Ljava/lang/String;
     const-string v7, "stackTrace"
 
     invoke-virtual {v3, v7}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -88,7 +88,7 @@
     move-result-object v4
 
     .line 91
-    .local v4, stackTrace:Ljava/lang/String;
+    .local v4, "stackTrace":Ljava/lang/String;
     const-string v7, "threadName"
 
     invoke-virtual {v3, v7}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -96,7 +96,7 @@
     move-result-object v5
 
     .line 92
-    .local v5, threadName:Ljava/lang/String;
+    .local v5, "threadName":Ljava/lang/String;
     const-string v7, "threadState"
 
     invoke-virtual {v3, v7}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -104,13 +104,13 @@
     move-result-object v6
 
     .line 94
-    .local v6, threadState:Ljava/lang/String;
+    .local v6, "threadState":Ljava/lang/String;
     new-instance v0, Lcom/fusepowered/crashlog/CrashData;
 
     invoke-direct {v0, v1}, Lcom/fusepowered/crashlog/CrashData;-><init>(Ljava/lang/String;)V
 
     .line 95
-    .local v0, crashData:Lcom/fusepowered/crashlog/CrashData;
+    .local v0, "crashData":Lcom/fusepowered/crashlog/CrashData;
     invoke-virtual {v0, v4}, Lcom/fusepowered/crashlog/CrashData;->setStackTrace(Ljava/lang/String;)V
 
     .line 96
@@ -124,12 +124,12 @@
     move-object v7, v0
 
     .line 103
-    .end local v0           #crashData:Lcom/fusepowered/crashlog/CrashData;
-    .end local v1           #crashId:Ljava/lang/String;
-    .end local v3           #jsonObject:Lorg/json/JSONObject;
-    .end local v4           #stackTrace:Ljava/lang/String;
-    .end local v5           #threadName:Ljava/lang/String;
-    .end local v6           #threadState:Ljava/lang/String;
+    .end local v0    # "crashData":Lcom/fusepowered/crashlog/CrashData;
+    .end local v1    # "crashId":Ljava/lang/String;
+    .end local v3    # "jsonObject":Lorg/json/JSONObject;
+    .end local v4    # "stackTrace":Ljava/lang/String;
+    .end local v5    # "threadName":Ljava/lang/String;
+    .end local v6    # "threadState":Ljava/lang/String;
     :goto_0
     return-object v7
 
@@ -140,7 +140,7 @@
     move-object v2, v7
 
     .line 102
-    .local v2, e:Lorg/json/JSONException;
+    .local v2, "e":Lorg/json/JSONException;
     const-string v7, "CrashData"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -213,7 +213,7 @@
 
 .method public setCrashedThreadName(Ljava/lang/String;)V
     .locals 0
-    .parameter "crashedThreadName"
+    .param p1, "crashedThreadName"    # Ljava/lang/String;
 
     .prologue
     .line 42
@@ -225,7 +225,7 @@
 
 .method public setCrashedThreadState(Ljava/lang/String;)V
     .locals 0
-    .parameter "crashedThreadState"
+    .param p1, "crashedThreadState"    # Ljava/lang/String;
 
     .prologue
     .line 50
@@ -237,7 +237,7 @@
 
 .method public setStackTrace(Ljava/lang/String;)V
     .locals 0
-    .parameter "stackTrace"
+    .param p1, "stackTrace"    # Ljava/lang/String;
 
     .prologue
     .line 34
@@ -257,7 +257,7 @@
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     .line 70
-    .local v0, map:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v0, "map":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v2, "id"
 
     iget-object v3, p0, Lcom/fusepowered/crashlog/CrashData;->mCrashId:Ljava/lang/String;
@@ -291,7 +291,7 @@
     invoke-direct {v1, v0}, Lorg/json/JSONObject;-><init>(Ljava/util/Map;)V
 
     .line 76
-    .local v1, root:Lorg/json/JSONObject;
+    .local v1, "root":Lorg/json/JSONObject;
     invoke-virtual {v1}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
 
     move-result-object v2

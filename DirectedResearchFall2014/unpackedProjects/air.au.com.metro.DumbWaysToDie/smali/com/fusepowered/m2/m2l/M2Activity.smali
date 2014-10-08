@@ -28,7 +28,6 @@
 
 .method static synthetic access$0(Lcom/fusepowered/m2/m2l/M2Activity;)Lcom/fusepowered/m2/m2l/HtmlInterstitialWebView;
     .locals 1
-    .parameter
 
     .prologue
     .line 57
@@ -39,12 +38,12 @@
 
 .method static createIntent(Landroid/content/Context;Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;Lcom/fusepowered/m2/m2l/AdConfiguration;)Landroid/content/Intent;
     .locals 2
-    .parameter "context"
-    .parameter "htmlData"
-    .parameter "isScrollable"
-    .parameter "redirectUrl"
-    .parameter "clickthroughUrl"
-    .parameter "adConfiguration"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "htmlData"    # Ljava/lang/String;
+    .param p2, "isScrollable"    # Z
+    .param p3, "redirectUrl"    # Ljava/lang/String;
+    .param p4, "clickthroughUrl"    # Ljava/lang/String;
+    .param p5, "adConfiguration"    # Lcom/fusepowered/m2/m2l/AdConfiguration;
 
     .prologue
     .line 69
@@ -55,7 +54,7 @@
     invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
     .line 70
-    .local v0, intent:Landroid/content/Intent;
+    .local v0, "intent":Landroid/content/Intent;
     const-string v1, "Html-Response-Body"
 
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
@@ -81,7 +80,7 @@
     invoke-virtual {v0, v1, p5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/io/Serializable;)Landroid/content/Intent;
 
     .line 75
-    const/high16 v1, 0x1000
+    const/high16 v1, 0x10000000
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
@@ -91,9 +90,9 @@
 
 .method static preRenderHtml(Landroid/content/Context;Lcom/fusepowered/m2/m2l/CustomEventInterstitial$CustomEventInterstitialListener;Ljava/lang/String;)V
     .locals 7
-    .parameter "context"
-    .parameter "customEventInterstitialListener"
-    .parameter "htmlData"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "customEventInterstitialListener"    # Lcom/fusepowered/m2/m2l/CustomEventInterstitial$CustomEventInterstitialListener;
+    .param p2, "htmlData"    # Ljava/lang/String;
 
     .prologue
     const/4 v2, 0x0
@@ -114,7 +113,7 @@
     move-result-object v6
 
     .line 81
-    .local v6, dummyWebView:Lcom/fusepowered/m2/m2l/HtmlInterstitialWebView;
+    .local v6, "dummyWebView":Lcom/fusepowered/m2/m2l/HtmlInterstitialWebView;
     invoke-virtual {v6, v2}, Lcom/fusepowered/m2/m2l/HtmlInterstitialWebView;->enablePlugins(Z)V
 
     .line 83
@@ -140,12 +139,12 @@
 
 .method public static start(Landroid/content/Context;Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;Lcom/fusepowered/m2/m2l/AdConfiguration;)V
     .locals 4
-    .parameter "context"
-    .parameter "htmlData"
-    .parameter "isScrollable"
-    .parameter "redirectUrl"
-    .parameter "clickthroughUrl"
-    .parameter "adConfiguration"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "htmlData"    # Ljava/lang/String;
+    .param p2, "isScrollable"    # Z
+    .param p3, "redirectUrl"    # Ljava/lang/String;
+    .param p4, "clickthroughUrl"    # Ljava/lang/String;
+    .param p5, "adConfiguration"    # Lcom/fusepowered/m2/m2l/AdConfiguration;
 
     .prologue
     .line 60
@@ -154,7 +153,7 @@
     move-result-object v1
 
     .line 62
-    .local v1, intent:Landroid/content/Intent;
+    .local v1, "intent":Landroid/content/Intent;
     :try_start_0
     invoke-virtual {p0, v1}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
     :try_end_0
@@ -169,7 +168,7 @@
     move-exception v0
 
     .line 64
-    .local v0, anfe:Landroid/content/ActivityNotFoundException;
+    .local v0, "anfe":Landroid/content/ActivityNotFoundException;
     const-string v2, "MoPubActivity"
 
     const-string v3, "MoPubActivity not found - did you declare it in AndroidManifest.xml?"
@@ -191,7 +190,7 @@
     move-result-object v7
 
     .line 107
-    .local v7, intent:Landroid/content/Intent;
+    .local v7, "intent":Landroid/content/Intent;
     const-string v0, "Scrollable"
 
     const/4 v1, 0x0
@@ -201,7 +200,7 @@
     move-result v2
 
     .line 108
-    .local v2, isScrollable:Z
+    .local v2, "isScrollable":Z
     const-string v0, "Redirect-Url"
 
     invoke-virtual {v7, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
@@ -209,7 +208,7 @@
     move-result-object v3
 
     .line 109
-    .local v3, redirectUrl:Ljava/lang/String;
+    .local v3, "redirectUrl":Ljava/lang/String;
     const-string v0, "Clickthrough-Url"
 
     invoke-virtual {v7, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
@@ -217,7 +216,7 @@
     move-result-object v4
 
     .line 110
-    .local v4, clickthroughUrl:Ljava/lang/String;
+    .local v4, "clickthroughUrl":Ljava/lang/String;
     const-string v0, "Html-Response-Body"
 
     invoke-virtual {v7, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
@@ -225,7 +224,7 @@
     move-result-object v6
 
     .line 112
-    .local v6, htmlResponse:Ljava/lang/String;
+    .local v6, "htmlResponse":Ljava/lang/String;
     invoke-virtual {p0}, Lcom/fusepowered/m2/m2l/M2Activity;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
@@ -257,7 +256,7 @@
 
 .method protected onCreate(Landroid/os/Bundle;)V
     .locals 1
-    .parameter "savedInstanceState"
+    .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
     .line 120

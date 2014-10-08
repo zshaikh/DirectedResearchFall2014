@@ -21,7 +21,7 @@
 # direct methods
 .method public constructor <init>(Lcom/flurry/org/apache/avro/Schema;)V
     .locals 0
-    .parameter "actual"
+    .param p1, "actual"    # Lcom/flurry/org/apache/avro/Schema;
 
     .prologue
     .line 121
@@ -36,7 +36,7 @@
 # virtual methods
 .method public equals(Ljava/lang/Object;)Z
     .locals 3
-    .parameter "o"
+    .param p1, "o"    # Ljava/lang/Object;
 
     .prologue
     const/4 v2, 0x0
@@ -49,17 +49,17 @@
     move v0, v2
 
     .line 129
-    .end local p1
+    .end local p1    # "o":Ljava/lang/Object;
     :goto_0
     return v0
 
-    .restart local p1
+    .restart local p1    # "o":Ljava/lang/Object;
     :cond_0
     iget-object v0, p0, Lcom/flurry/org/apache/avro/io/parsing/ValidatingGrammarGenerator$LitS;->actual:Lcom/flurry/org/apache/avro/Schema;
 
     check-cast p1, Lcom/flurry/org/apache/avro/io/parsing/ValidatingGrammarGenerator$LitS;
 
-    .end local p1
+    .end local p1    # "o":Ljava/lang/Object;
     iget-object v1, p1, Lcom/flurry/org/apache/avro/io/parsing/ValidatingGrammarGenerator$LitS;->actual:Lcom/flurry/org/apache/avro/Schema;
 
     if-ne v0, v1, :cond_1

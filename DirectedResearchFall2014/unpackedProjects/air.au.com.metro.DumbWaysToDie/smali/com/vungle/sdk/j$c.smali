@@ -24,7 +24,6 @@
 # direct methods
 .method private constructor <init>(Lcom/vungle/sdk/j;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 323
@@ -37,8 +36,6 @@
 
 .method synthetic constructor <init>(Lcom/vungle/sdk/j;B)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 323
@@ -51,9 +48,8 @@
 # virtual methods
 .method public final onError(Landroid/media/MediaPlayer;II)Z
     .locals 3
-    .parameter
-    .parameter "what"
-    .parameter "extra"
+    .param p2, "what"    # I
+    .param p3, "extra"    # I
 
     .prologue
     .line 326

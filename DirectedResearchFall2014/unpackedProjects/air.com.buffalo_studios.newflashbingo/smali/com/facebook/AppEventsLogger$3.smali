@@ -20,6 +20,7 @@
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
+    # getter for: Lcom/facebook/AppEventsLogger;->staticLock:Ljava/lang/Object;
     invoke-static {}, Lcom/facebook/AppEventsLogger;->access$200()Ljava/lang/Object;
 
     move-result-object v1
@@ -27,6 +28,7 @@
     monitor-enter v1
 
     :try_start_0
+    # getter for: Lcom/facebook/AppEventsLogger;->stateMap:Ljava/util/Map;
     invoke-static {}, Lcom/facebook/AppEventsLogger;->access$300()Ljava/util/Map;
 
     move-result-object v2

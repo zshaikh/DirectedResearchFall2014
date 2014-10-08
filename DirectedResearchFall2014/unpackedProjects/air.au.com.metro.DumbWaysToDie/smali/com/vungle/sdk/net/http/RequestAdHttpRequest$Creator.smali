@@ -61,7 +61,7 @@
 # virtual methods
 .method public synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 1
-    .parameter "x0"
+    .param p1, "x0"    # Landroid/os/Parcel;
 
     .prologue
     .line 76
@@ -71,7 +71,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/vungle/sdk/net/http/RequestAdHttpRequest$Creator;
     check-cast p0, Lcom/vungle/sdk/net/http/RequestAdHttpRequest;
 
     invoke-virtual {p0, p1}, Lcom/vungle/sdk/net/http/RequestAdHttpRequest;->a(Landroid/os/Parcel;)Lcom/vungle/sdk/net/http/RequestAdHttpRequest;
@@ -83,7 +83,7 @@
 
 .method public bridge synthetic newArray(I)[Ljava/lang/Object;
     .locals 1
-    .parameter "x0"
+    .param p1, "x0"    # I
 
     .prologue
     .line 76

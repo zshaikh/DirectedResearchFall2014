@@ -51,7 +51,7 @@
 
 .method public constructor <init>(Lv2/com/playhaven/listeners/PHIAPRequestListener;)V
     .locals 0
-    .parameter "listener"
+    .param p1, "listener"    # Lv2/com/playhaven/listeners/PHIAPRequestListener;
 
     .prologue
     .line 44
@@ -66,8 +66,8 @@
 
 .method public constructor <init>(Lv2/com/playhaven/listeners/PHIAPRequestListener;Lv2/com/playhaven/model/PHPurchase;)V
     .locals 0
-    .parameter "listener"
-    .parameter "purchase"
+    .param p1, "listener"    # Lv2/com/playhaven/listeners/PHIAPRequestListener;
+    .param p2, "purchase"    # Lv2/com/playhaven/model/PHPurchase;
 
     .prologue
     .line 49
@@ -85,7 +85,7 @@
 
 .method public constructor <init>(Lv2/com/playhaven/model/PHPurchase;)V
     .locals 0
-    .parameter "purchase"
+    .param p1, "purchase"    # Lv2/com/playhaven/model/PHPurchase;
 
     .prologue
     .line 54
@@ -100,7 +100,7 @@
 
 .method public static getAndExpireCookie(Ljava/lang/String;)Ljava/lang/String;
     .locals 3
-    .parameter "product"
+    .param p0, "product"    # Ljava/lang/String;
 
     .prologue
     .line 96
@@ -119,7 +119,7 @@
     check-cast v0, Ljava/lang/String;
 
     .line 101
-    .local v0, cookie:Ljava/lang/String;
+    .local v0, "cookie":Ljava/lang/String;
     sget-object v2, Lv2/com/playhaven/requests/purchases/PHIAPTrackingRequest;->cookies:Ljava/util/Hashtable;
 
     invoke-virtual {v2, p0}, Ljava/util/Hashtable;->remove(Ljava/lang/Object;)Ljava/lang/Object;
@@ -130,7 +130,7 @@
     return-object v0
 
     .line 104
-    .end local v0           #cookie:Ljava/lang/String;
+    .end local v0    # "cookie":Ljava/lang/String;
     :catchall_0
     move-exception v2
 
@@ -143,8 +143,8 @@
 
 .method public static setConversionCookie(Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
-    .parameter "product"
-    .parameter "cookie"
+    .param p0, "product"    # Ljava/lang/String;
+    .param p1, "cookie"    # Ljava/lang/String;
 
     .prologue
     .line 80
@@ -200,7 +200,7 @@
 # virtual methods
 .method public baseURL(Landroid/content/Context;)Ljava/lang/String;
     .locals 1
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     .line 124
@@ -215,7 +215,7 @@
 
 .method public getAdditionalParams(Landroid/content/Context;)Ljava/util/Hashtable;
     .locals 7
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -267,7 +267,7 @@
     invoke-direct {v1}, Ljava/util/Hashtable;-><init>()V
 
     .line 136
-    .local v1, purchaseData:Ljava/util/Hashtable;,"Ljava/util/Hashtable<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v1, "purchaseData":Ljava/util/Hashtable;, "Ljava/util/Hashtable<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v2, "product"
 
     iget-object v3, p0, Lv2/com/playhaven/requests/purchases/PHIAPTrackingRequest;->purchase:Lv2/com/playhaven/model/PHPurchase;
@@ -421,7 +421,7 @@
     move-result-object v0
 
     .line 154
-    .local v0, cookie:Ljava/lang/String;
+    .local v0, "cookie":Ljava/lang/String;
     const-string v2, "cookie"
 
     if-eqz v0, :cond_7
@@ -437,7 +437,7 @@
     goto/16 :goto_0
 
     .line 136
-    .end local v0           #cookie:Ljava/lang/String;
+    .end local v0    # "cookie":Ljava/lang/String;
     :cond_2
     const-string v3, ""
 
@@ -474,7 +474,7 @@
     goto :goto_5
 
     .line 154
-    .restart local v0       #cookie:Ljava/lang/String;
+    .restart local v0    # "cookie":Ljava/lang/String;
     :cond_7
     const-string v3, ""
 
@@ -495,7 +495,7 @@
 
 .method public handleRequestFailure(Lv2/com/playhaven/model/PHError;)V
     .locals 1
-    .parameter "error"
+    .param p1, "error"    # Lv2/com/playhaven/model/PHError;
 
     .prologue
     .line 118
@@ -515,7 +515,7 @@
 
 .method public handleRequestSuccess(Lorg/json/JSONObject;)V
     .locals 1
-    .parameter "data"
+    .param p1, "data"    # Lorg/json/JSONObject;
 
     .prologue
     .line 112
@@ -535,7 +535,7 @@
 
 .method public setIAPListener(Lv2/com/playhaven/listeners/PHIAPRequestListener;)V
     .locals 0
-    .parameter "listener"
+    .param p1, "listener"    # Lv2/com/playhaven/listeners/PHIAPRequestListener;
 
     .prologue
     .line 63
@@ -547,7 +547,7 @@
 
 .method public setPurchase(Lv2/com/playhaven/model/PHPurchase;)V
     .locals 0
-    .parameter "purchase"
+    .param p1, "purchase"    # Lv2/com/playhaven/model/PHPurchase;
 
     .prologue
     .line 59

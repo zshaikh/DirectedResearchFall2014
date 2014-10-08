@@ -56,10 +56,6 @@
 
 .method public constructor <init>(Lcom/google/ads/internal/d;Ljava/util/Map;ZZ)V
     .locals 1
-    .parameter
-    .parameter
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -105,10 +101,6 @@
 
 .method public static a(Lcom/google/ads/internal/d;Ljava/util/Map;ZZ)Lcom/google/ads/internal/i;
     .locals 2
-    .parameter
-    .parameter
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -151,7 +143,6 @@
 # virtual methods
 .method public a(Z)V
     .locals 0
-    .parameter
 
     .prologue
     .line 226
@@ -173,7 +164,6 @@
 
 .method public b(Z)V
     .locals 0
-    .parameter
 
     .prologue
     .line 234
@@ -185,7 +175,6 @@
 
 .method public c(Z)V
     .locals 0
-    .parameter
 
     .prologue
     .line 245
@@ -197,7 +186,6 @@
 
 .method public d(Z)V
     .locals 0
-    .parameter
 
     .prologue
     .line 254
@@ -209,8 +197,8 @@
 
 .method public onPageFinished(Landroid/webkit/WebView;Ljava/lang/String;)V
     .locals 2
-    .parameter "view"
-    .parameter "url"
+    .param p1, "view"    # Landroid/webkit/WebView;
+    .param p2, "url"    # Ljava/lang/String;
 
     .prologue
     const/4 v1, 0x0
@@ -269,9 +257,9 @@
 
 .method public onPageStarted(Landroid/webkit/WebView;Ljava/lang/String;Landroid/graphics/Bitmap;)V
     .locals 1
-    .parameter "webView"
-    .parameter "url"
-    .parameter "favicon"
+    .param p1, "webView"    # Landroid/webkit/WebView;
+    .param p2, "url"    # Ljava/lang/String;
+    .param p3, "favicon"    # Landroid/graphics/Bitmap;
 
     .prologue
     .line 178
@@ -285,10 +273,10 @@
 
 .method public onReceivedError(Landroid/webkit/WebView;ILjava/lang/String;Ljava/lang/String;)V
     .locals 2
-    .parameter "view"
-    .parameter "errorCode"
-    .parameter "description"
-    .parameter "failingUrl"
+    .param p1, "view"    # Landroid/webkit/WebView;
+    .param p2, "errorCode"    # I
+    .param p3, "description"    # Ljava/lang/String;
+    .param p4, "failingUrl"    # Ljava/lang/String;
 
     .prologue
     .line 215
@@ -318,8 +306,8 @@
 
 .method public shouldOverrideUrlLoading(Landroid/webkit/WebView;Ljava/lang/String;)Z
     .locals 5
-    .parameter "webView"
-    .parameter "url"
+    .param p1, "webView"    # Landroid/webkit/WebView;
+    .param p2, "url"    # Ljava/lang/String;
 
     .prologue
     const/4 v4, 0x1

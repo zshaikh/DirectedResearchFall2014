@@ -60,7 +60,6 @@
 
 .method public constructor <init>(Ljava/lang/Class;)V
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -71,7 +70,7 @@
 
     .prologue
     .line 40
-    .local p1, clz:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p1, "clz":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 41
@@ -101,7 +100,7 @@
 # virtual methods
 .method public compareTo(Lcom/flurry/org/codehaus/jackson/map/type/ClassKey;)I
     .locals 2
-    .parameter "other"
+    .param p1, "other"    # Lcom/flurry/org/codehaus/jackson/map/type/ClassKey;
 
     .prologue
     .line 63
@@ -118,13 +117,13 @@
 
 .method public bridge synthetic compareTo(Ljava/lang/Object;)I
     .locals 1
-    .parameter "x0"
+    .param p1, "x0"    # Ljava/lang/Object;
 
     .prologue
     .line 19
     check-cast p1, Lcom/flurry/org/codehaus/jackson/map/type/ClassKey;
 
-    .end local p1
+    .end local p1    # "x0":Ljava/lang/Object;
     invoke-virtual {p0, p1}, Lcom/flurry/org/codehaus/jackson/map/type/ClassKey;->compareTo(Lcom/flurry/org/codehaus/jackson/map/type/ClassKey;)I
 
     move-result v0
@@ -134,7 +133,7 @@
 
 .method public equals(Ljava/lang/Object;)Z
     .locals 6
-    .parameter "o"
+    .param p1, "o"    # Ljava/lang/Object;
 
     .prologue
     const/4 v5, 0x1
@@ -183,7 +182,7 @@
     move-object v1, v0
 
     .line 87
-    .local v1, other:Lcom/flurry/org/codehaus/jackson/map/type/ClassKey;
+    .local v1, "other":Lcom/flurry/org/codehaus/jackson/map/type/ClassKey;
     iget-object v2, v1, Lcom/flurry/org/codehaus/jackson/map/type/ClassKey;->_class:Ljava/lang/Class;
 
     iget-object v3, p0, Lcom/flurry/org/codehaus/jackson/map/type/ClassKey;->_class:Ljava/lang/Class;
@@ -212,7 +211,6 @@
 
 .method public reset(Ljava/lang/Class;)V
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -223,7 +221,7 @@
 
     .prologue
     .line 48
-    .local p1, clz:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p1, "clz":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     iput-object p1, p0, Lcom/flurry/org/codehaus/jackson/map/type/ClassKey;->_class:Ljava/lang/Class;
 
     .line 49

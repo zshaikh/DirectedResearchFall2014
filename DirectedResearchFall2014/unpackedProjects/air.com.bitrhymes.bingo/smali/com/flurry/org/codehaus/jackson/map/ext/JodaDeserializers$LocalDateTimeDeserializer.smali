@@ -40,8 +40,8 @@
 # virtual methods
 .method public bridge synthetic deserialize(Lcom/flurry/org/codehaus/jackson/JsonParser;Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;)Ljava/lang/Object;
     .locals 1
-    .parameter "x0"
-    .parameter "x1"
+    .param p1, "x0"    # Lcom/flurry/org/codehaus/jackson/JsonParser;
+    .param p2, "x1"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -60,8 +60,8 @@
 
 .method public deserialize(Lcom/flurry/org/codehaus/jackson/JsonParser;Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;)Lorg/joda/time/LocalDateTime;
     .locals 11
-    .parameter "jp"
-    .parameter "ctxt"
+    .param p1, "jp"    # Lcom/flurry/org/codehaus/jackson/JsonParser;
+    .param p2, "ctxt"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -86,7 +86,7 @@
     move-result v1
 
     .line 155
-    .local v1, year:I
+    .local v1, "year":I
     invoke-virtual {p1}, Lcom/flurry/org/codehaus/jackson/JsonParser;->nextToken()Lcom/flurry/org/codehaus/jackson/JsonToken;
 
     .line 156
@@ -95,7 +95,7 @@
     move-result v2
 
     .line 157
-    .local v2, month:I
+    .local v2, "month":I
     invoke-virtual {p1}, Lcom/flurry/org/codehaus/jackson/JsonParser;->nextToken()Lcom/flurry/org/codehaus/jackson/JsonToken;
 
     .line 158
@@ -104,7 +104,7 @@
     move-result v3
 
     .line 159
-    .local v3, day:I
+    .local v3, "day":I
     invoke-virtual {p1}, Lcom/flurry/org/codehaus/jackson/JsonParser;->nextToken()Lcom/flurry/org/codehaus/jackson/JsonToken;
 
     .line 160
@@ -113,7 +113,7 @@
     move-result v4
 
     .line 161
-    .local v4, hour:I
+    .local v4, "hour":I
     invoke-virtual {p1}, Lcom/flurry/org/codehaus/jackson/JsonParser;->nextToken()Lcom/flurry/org/codehaus/jackson/JsonToken;
 
     .line 162
@@ -122,7 +122,7 @@
     move-result v5
 
     .line 163
-    .local v5, minute:I
+    .local v5, "minute":I
     invoke-virtual {p1}, Lcom/flurry/org/codehaus/jackson/JsonParser;->nextToken()Lcom/flurry/org/codehaus/jackson/JsonToken;
 
     .line 164
@@ -131,11 +131,11 @@
     move-result v6
 
     .line 166
-    .local v6, second:I
+    .local v6, "second":I
     const/4 v7, 0x0
 
     .line 167
-    .local v7, millisecond:I
+    .local v7, "millisecond":I
     invoke-virtual {p1}, Lcom/flurry/org/codehaus/jackson/JsonParser;->nextToken()Lcom/flurry/org/codehaus/jackson/JsonToken;
 
     move-result-object v0
@@ -180,13 +180,13 @@
     invoke-direct/range {v0 .. v7}, Lorg/joda/time/LocalDateTime;-><init>(IIIIIII)V
 
     .line 185
-    .end local v1           #year:I
-    .end local v2           #month:I
-    .end local v3           #day:I
-    .end local v4           #hour:I
-    .end local v5           #minute:I
-    .end local v6           #second:I
-    .end local v7           #millisecond:I
+    .end local v1    # "year":I
+    .end local v2    # "month":I
+    .end local v3    # "day":I
+    .end local v4    # "hour":I
+    .end local v5    # "minute":I
+    .end local v6    # "second":I
+    .end local v7    # "millisecond":I
     :goto_0
     return-object v0
 
@@ -236,7 +236,7 @@
     move-result-object v8
 
     .line 182
-    .local v8, local:Lorg/joda/time/DateTime;
+    .local v8, "local":Lorg/joda/time/DateTime;
     if-nez v8, :cond_3
 
     .line 183

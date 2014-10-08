@@ -16,12 +16,12 @@
 # direct methods
 .method public constructor <init>(Lcom/flurry/org/codehaus/jackson/io/IOContext;Ljava/io/InputStream;[BIIZ)V
     .locals 1
-    .parameter "ctxt"
-    .parameter "in"
-    .parameter "buf"
-    .parameter "ptr"
-    .parameter "len"
-    .parameter "isBigEndian"
+    .param p1, "ctxt"    # Lcom/flurry/org/codehaus/jackson/io/IOContext;
+    .param p2, "in"    # Ljava/io/InputStream;
+    .param p3, "buf"    # [B
+    .param p4, "ptr"    # I
+    .param p5, "len"    # I
+    .param p6, "isBigEndian"    # Z
 
     .prologue
     const/4 v0, 0x0
@@ -47,7 +47,7 @@
 
 .method private loadMore(I)Z
     .locals 9
-    .parameter "available"
+    .param p1, "available"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -83,7 +83,7 @@
     .line 172
     const/4 v1, 0x0
 
-    .local v1, i:I
+    .local v1, "i":I
     :goto_0
     if-ge v1, p1, :cond_0
 
@@ -110,7 +110,7 @@
     iput v5, p0, Lcom/flurry/org/codehaus/jackson/io/UTF32Reader;->_ptr:I
 
     .line 177
-    .end local v1           #i:I
+    .end local v1    # "i":I
     :cond_1
     iput p1, p0, Lcom/flurry/org/codehaus/jackson/io/UTF32Reader;->_length:I
 
@@ -140,7 +140,7 @@
     move-result v0
 
     .line 201
-    .local v0, count:I
+    .local v0, "count":I
     if-ge v0, v7, :cond_3
 
     .line 202
@@ -169,7 +169,7 @@
     goto :goto_1
 
     .line 182
-    .end local v0           #count:I
+    .end local v0    # "count":I
     :cond_4
     iput v5, p0, Lcom/flurry/org/codehaus/jackson/io/UTF32Reader;->_ptr:I
 
@@ -183,7 +183,7 @@
     move-result v0
 
     .line 184
-    .restart local v0       #count:I
+    .restart local v0    # "count":I
     if-ge v0, v7, :cond_6
 
     .line 185
@@ -198,12 +198,12 @@
     move v2, v5
 
     .line 211
-    .end local v0           #count:I
+    .end local v0    # "count":I
     :goto_2
     return v2
 
     .line 191
-    .restart local v0       #count:I
+    .restart local v0    # "count":I
     :cond_5
     invoke-virtual {p0}, Lcom/flurry/org/codehaus/jackson/io/UTF32Reader;->reportStrangeStream()V
 
@@ -213,7 +213,7 @@
 
     goto :goto_1
 
-    .end local v0           #count:I
+    .end local v0    # "count":I
     :cond_7
     move v2, v7
 
@@ -223,9 +223,9 @@
 
 .method private reportInvalid(IILjava/lang/String;)V
     .locals 5
-    .parameter "value"
-    .parameter "offset"
-    .parameter "msg"
+    .param p1, "value"    # I
+    .param p2, "offset"    # I
+    .param p3, "msg"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -245,13 +245,13 @@
     sub-int v0, v2, v3
 
     .line 151
-    .local v0, bytePos:I
+    .local v0, "bytePos":I
     iget v2, p0, Lcom/flurry/org/codehaus/jackson/io/UTF32Reader;->mCharCount:I
 
     add-int v1, v2, p2
 
     .line 153
-    .local v1, charPos:I
+    .local v1, "charPos":I
     new-instance v2, Ljava/io/CharConversionException;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -313,8 +313,8 @@
 
 .method private reportUnexpectedEOF(II)V
     .locals 5
-    .parameter "gotBytes"
-    .parameter "needed"
+    .param p1, "gotBytes"    # I
+    .param p2, "needed"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -328,11 +328,11 @@
     add-int v0, v2, p1
 
     .line 140
-    .local v0, bytePos:I
+    .local v0, "bytePos":I
     iget v1, p0, Lcom/flurry/org/codehaus/jackson/io/UTF32Reader;->mCharCount:I
 
     .line 142
-    .local v1, charPos:I
+    .local v1, "charPos":I
     new-instance v2, Ljava/io/CharConversionException;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -430,9 +430,9 @@
 
 .method public read([CII)I
     .locals 9
-    .parameter "cbuf"
-    .parameter "start"
-    .parameter "len"
+    .param p1, "cbuf"    # [C
+    .param p2, "start"    # I
+    .param p3, "len"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -488,7 +488,7 @@
     move v2, p2
 
     .line 72
-    .local v2, outPtr:I
+    .local v2, "outPtr":I
     iget-char v5, p0, Lcom/flurry/org/codehaus/jackson/io/UTF32Reader;->mSurrogate:C
 
     if-eqz v5, :cond_6
@@ -496,8 +496,8 @@
     .line 73
     add-int/lit8 v3, v2, 0x1
 
-    .end local v2           #outPtr:I
-    .local v3, outPtr:I
+    .end local v2    # "outPtr":I
+    .local v3, "outPtr":I
     iget-char v5, p0, Lcom/flurry/org/codehaus/jackson/io/UTF32Reader;->mSurrogate:C
 
     aput-char v5, p1, v2
@@ -516,7 +516,7 @@
     iget v4, p0, Lcom/flurry/org/codehaus/jackson/io/UTF32Reader;->_ptr:I
 
     .line 93
-    .local v4, ptr:I
+    .local v4, "ptr":I
     iget-boolean v5, p0, Lcom/flurry/org/codehaus/jackson/io/UTF32Reader;->mBigEndian:Z
 
     if-eqz v5, :cond_7
@@ -563,7 +563,7 @@
     or-int v0, v5, v6
 
     .line 100
-    .local v0, ch:I
+    .local v0, "ch":I
     :goto_2
     iget v5, p0, Lcom/flurry/org/codehaus/jackson/io/UTF32Reader;->_ptr:I
 
@@ -614,15 +614,15 @@
 
     .line 109
     :cond_5
-    const/high16 v5, 0x1
+    const/high16 v5, 0x10000
 
     sub-int/2addr v0, v5
 
     .line 110
     add-int/lit8 v2, v3, 0x1
 
-    .end local v3           #outPtr:I
-    .restart local v2       #outPtr:I
+    .end local v3    # "outPtr":I
+    .restart local v2    # "outPtr":I
     const v5, 0xd800
 
     shr-int/lit8 v6, v0, 0xa
@@ -649,8 +649,8 @@
     iput-char v5, p0, Lcom/flurry/org/codehaus/jackson/io/UTF32Reader;->mSurrogate:C
 
     .line 125
-    .end local v0           #ch:I
-    .end local v4           #ptr:I
+    .end local v0    # "ch":I
+    .end local v4    # "ptr":I
     :goto_3
     sub-int p3, v2, p2
 
@@ -675,7 +675,7 @@
     sub-int v1, v5, v6
 
     .line 81
-    .local v1, left:I
+    .local v1, "left":I
     const/4 v5, 0x4
 
     if-ge v1, v5, :cond_b
@@ -693,10 +693,10 @@
     goto/16 :goto_0
 
     .line 97
-    .end local v1           #left:I
-    .end local v2           #outPtr:I
-    .restart local v3       #outPtr:I
-    .restart local v4       #ptr:I
+    .end local v1    # "left":I
+    .end local v2    # "outPtr":I
+    .restart local v3    # "outPtr":I
+    .restart local v4    # "ptr":I
     :cond_7
     iget-object v5, p0, Lcom/flurry/org/codehaus/jackson/io/UTF32Reader;->_buffer:[B
 
@@ -738,20 +738,20 @@
 
     or-int v0, v5, v6
 
-    .restart local v0       #ch:I
+    .restart local v0    # "ch":I
     goto/16 :goto_2
 
     :cond_8
     move v2, v3
 
     .line 119
-    .end local v3           #outPtr:I
-    .restart local v2       #outPtr:I
+    .end local v3    # "outPtr":I
+    .restart local v2    # "outPtr":I
     :cond_9
     add-int/lit8 v3, v2, 0x1
 
-    .end local v2           #outPtr:I
-    .restart local v3       #outPtr:I
+    .end local v2    # "outPtr":I
+    .restart local v3    # "outPtr":I
     int-to-char v5, v0
 
     aput-char v5, p1, v2
@@ -766,26 +766,26 @@
     move v2, v3
 
     .line 121
-    .end local v3           #outPtr:I
-    .restart local v2       #outPtr:I
+    .end local v3    # "outPtr":I
+    .restart local v2    # "outPtr":I
     goto :goto_3
 
-    .end local v0           #ch:I
-    .end local v2           #outPtr:I
-    .end local v4           #ptr:I
-    .restart local v3       #outPtr:I
+    .end local v0    # "ch":I
+    .end local v2    # "outPtr":I
+    .end local v4    # "ptr":I
+    .restart local v3    # "outPtr":I
     :cond_a
     move v2, v3
 
-    .end local v3           #outPtr:I
-    .restart local v2       #outPtr:I
+    .end local v3    # "outPtr":I
+    .restart local v2    # "outPtr":I
     goto :goto_3
 
-    .restart local v1       #left:I
+    .restart local v1    # "left":I
     :cond_b
     move v3, v2
 
-    .end local v2           #outPtr:I
-    .restart local v3       #outPtr:I
+    .end local v2    # "outPtr":I
+    .restart local v3    # "outPtr":I
     goto/16 :goto_1
 .end method

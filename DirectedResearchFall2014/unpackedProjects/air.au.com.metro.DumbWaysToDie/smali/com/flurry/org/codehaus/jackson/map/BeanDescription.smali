@@ -10,7 +10,7 @@
 # direct methods
 .method protected constructor <init>(Lcom/flurry/org/codehaus/jackson/type/JavaType;)V
     .locals 0
-    .parameter "type"
+    .param p1, "type"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
 
     .prologue
     .line 45

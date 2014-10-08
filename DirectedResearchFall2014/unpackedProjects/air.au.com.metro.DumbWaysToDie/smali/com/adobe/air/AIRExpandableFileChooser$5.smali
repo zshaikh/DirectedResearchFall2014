@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/adobe/air/AIRExpandableFileChooser;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 532
@@ -39,20 +38,18 @@
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     .line 535
     iget-object v0, p0, Lcom/adobe/air/AIRExpandableFileChooser$5;->this$0:Lcom/adobe/air/AIRExpandableFileChooser;
 
-    #calls: Lcom/adobe/air/AIRExpandableFileChooser;->uncheckAll()V
+    # invokes: Lcom/adobe/air/AIRExpandableFileChooser;->uncheckAll()V
     invoke-static {v0}, Lcom/adobe/air/AIRExpandableFileChooser;->access$1200(Lcom/adobe/air/AIRExpandableFileChooser;)V
 
     .line 536
     iget-object v0, p0, Lcom/adobe/air/AIRExpandableFileChooser$5;->this$0:Lcom/adobe/air/AIRExpandableFileChooser;
 
-    #getter for: Lcom/adobe/air/AIRExpandableFileChooser;->mFileChooserStub:Lcom/adobe/air/FileChooserStub;
+    # getter for: Lcom/adobe/air/AIRExpandableFileChooser;->mFileChooserStub:Lcom/adobe/air/FileChooserStub;
     invoke-static {v0}, Lcom/adobe/air/AIRExpandableFileChooser;->access$600(Lcom/adobe/air/AIRExpandableFileChooser;)Lcom/adobe/air/FileChooserStub;
 
     move-result-object v0

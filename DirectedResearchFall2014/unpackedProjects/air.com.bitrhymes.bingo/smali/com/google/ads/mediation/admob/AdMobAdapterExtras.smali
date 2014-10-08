@@ -44,7 +44,7 @@
 
 .method public constructor <init>(Lcom/google/ads/mediation/admob/AdMobAdapterExtras;)V
     .locals 2
-    .parameter "original"
+    .param p1, "original"    # Lcom/google/ads/mediation/admob/AdMobAdapterExtras;
 
     .prologue
     .line 31
@@ -74,8 +74,8 @@
 # virtual methods
 .method public addExtra(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/ads/mediation/admob/AdMobAdapterExtras;
     .locals 1
-    .parameter "key"
-    .parameter "value"
+    .param p1, "key"    # Ljava/lang/String;
+    .param p2, "value"    # Ljava/lang/Object;
 
     .prologue
     .line 128
@@ -146,7 +146,6 @@
 
 .method public setExtras(Ljava/util/Map;)Lcom/google/ads/mediation/admob/AdMobAdapterExtras;
     .locals 2
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -161,7 +160,7 @@
 
     .prologue
     .line 102
-    .local p1, extras:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
+    .local p1, "extras":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
     if-nez p1, :cond_0
 
     .line 103
@@ -183,7 +182,7 @@
 
 .method public setPlusOneOptOut(Z)Lcom/google/ads/mediation/admob/AdMobAdapterExtras;
     .locals 0
-    .parameter "plusOneOptOut"
+    .param p1, "plusOneOptOut"    # Z
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -194,7 +193,7 @@
 
 .method public setUseExactAdSize(Z)Lcom/google/ads/mediation/admob/AdMobAdapterExtras;
     .locals 0
-    .parameter "useExactAdSize"
+    .param p1, "useExactAdSize"    # Z
 
     .prologue
     .line 69

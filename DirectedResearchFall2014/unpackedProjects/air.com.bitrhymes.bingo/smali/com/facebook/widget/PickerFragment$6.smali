@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/facebook/widget/PickerFragment;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1
@@ -40,7 +39,7 @@
 # virtual methods
 .method public onClick(Landroid/view/View;)V
     .locals 2
-    .parameter "v"
+    .param p1, "v"    # Landroid/view/View;
 
     .prologue
     const/4 v1, 0x1
@@ -53,13 +52,12 @@
     .line 641
     iget-object v0, p0, Lcom/facebook/widget/PickerFragment$6;->this$0:Lcom/facebook/widget/PickerFragment;
 
-    #setter for: Lcom/facebook/widget/PickerFragment;->appEventsLogged:Z
     invoke-static {v0, v1}, Lcom/facebook/widget/PickerFragment;->access$6(Lcom/facebook/widget/PickerFragment;Z)V
 
     .line 643
     iget-object v0, p0, Lcom/facebook/widget/PickerFragment$6;->this$0:Lcom/facebook/widget/PickerFragment;
 
-    #getter for: Lcom/facebook/widget/PickerFragment;->onDoneButtonClickedListener:Lcom/facebook/widget/PickerFragment$OnDoneButtonClickedListener;
+    # getter for: Lcom/facebook/widget/PickerFragment;->onDoneButtonClickedListener:Lcom/facebook/widget/PickerFragment$OnDoneButtonClickedListener;
     invoke-static {v0}, Lcom/facebook/widget/PickerFragment;->access$7(Lcom/facebook/widget/PickerFragment;)Lcom/facebook/widget/PickerFragment$OnDoneButtonClickedListener;
 
     move-result-object v0
@@ -69,7 +67,7 @@
     .line 644
     iget-object v0, p0, Lcom/facebook/widget/PickerFragment$6;->this$0:Lcom/facebook/widget/PickerFragment;
 
-    #getter for: Lcom/facebook/widget/PickerFragment;->onDoneButtonClickedListener:Lcom/facebook/widget/PickerFragment$OnDoneButtonClickedListener;
+    # getter for: Lcom/facebook/widget/PickerFragment;->onDoneButtonClickedListener:Lcom/facebook/widget/PickerFragment$OnDoneButtonClickedListener;
     invoke-static {v0}, Lcom/facebook/widget/PickerFragment;->access$7(Lcom/facebook/widget/PickerFragment;)Lcom/facebook/widget/PickerFragment$OnDoneButtonClickedListener;
 
     move-result-object v0

@@ -28,16 +28,6 @@
 # direct methods
 .method public constructor <init>(IFFFIFFZ[FI)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 40

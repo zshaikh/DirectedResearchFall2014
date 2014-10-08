@@ -71,8 +71,8 @@
 
 .method public launchAdActivity(Lcom/google/ads/internal/d;Lcom/google/ads/internal/e;)V
     .locals 3
-    .parameter "adManager"
-    .parameter "adOpener"
+    .param p1, "adManager"    # Lcom/google/ads/internal/d;
+    .param p2, "adOpener"    # Lcom/google/ads/internal/e;
 
     .prologue
     .line 163
@@ -110,7 +110,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/google/ads/AdActivity$StaticMethodWrapper;
     check-cast p0, Landroid/app/Activity;
 
     .line 174
@@ -126,7 +126,7 @@
     return-void
 
     .line 166
-    .restart local p0
+    .restart local p0    # "this":Lcom/google/ads/AdActivity$StaticMethodWrapper;
     :cond_1
     :try_start_1
     invoke-static {}, Lcom/google/ads/AdActivity;->d()Lcom/google/ads/internal/d;
@@ -156,7 +156,7 @@
     throw v1
 
     .line 178
-    .end local p0
+    .end local p0    # "this":Lcom/google/ads/AdActivity$StaticMethodWrapper;
     :cond_2
     new-instance v0, Landroid/content/Intent;
 

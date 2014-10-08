@@ -180,7 +180,6 @@
 
 .method static synthetic access$000(Lcom/adobe/air/AdobeAIR;)Landroid/webkit/WebView;
     .locals 1
-    .parameter
 
     .prologue
     .line 70
@@ -191,7 +190,6 @@
 
 .method static synthetic access$100(Lcom/adobe/air/AdobeAIR;)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 70
@@ -202,7 +200,6 @@
 
 .method static synthetic access$1000(Lcom/adobe/air/AdobeAIR;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 70
@@ -213,8 +210,6 @@
 
 .method static synthetic access$102(Lcom/adobe/air/AdobeAIR;Z)Z
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 70
@@ -225,7 +220,6 @@
 
 .method static synthetic access$200(Lcom/adobe/air/AdobeAIR;)Landroid/webkit/WebView;
     .locals 1
-    .parameter
 
     .prologue
     .line 70
@@ -236,8 +230,6 @@
 
 .method static synthetic access$302(Lcom/adobe/air/AdobeAIR;Z)Z
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 70
@@ -248,7 +240,6 @@
 
 .method static synthetic access$500(Lcom/adobe/air/AdobeAIR;)Lcom/google/android/gms/gcm/GoogleCloudMessaging;
     .locals 1
-    .parameter
 
     .prologue
     .line 70
@@ -259,8 +250,6 @@
 
 .method static synthetic access$502(Lcom/adobe/air/AdobeAIR;Lcom/google/android/gms/gcm/GoogleCloudMessaging;)Lcom/google/android/gms/gcm/GoogleCloudMessaging;
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 70
@@ -271,7 +260,6 @@
 
 .method static synthetic access$600(Lcom/adobe/air/AdobeAIR;)Landroid/content/Context;
     .locals 1
-    .parameter
 
     .prologue
     .line 70
@@ -282,7 +270,6 @@
 
 .method static synthetic access$700(Lcom/adobe/air/AdobeAIR;)Ljava/lang/String;
     .locals 1
-    .parameter
 
     .prologue
     .line 70
@@ -293,8 +280,6 @@
 
 .method static synthetic access$702(Lcom/adobe/air/AdobeAIR;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 70
@@ -315,8 +300,6 @@
 
 .method static synthetic access$900(Lcom/adobe/air/AdobeAIR;I)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 70
@@ -373,7 +356,7 @@
     .locals 4
 
     .prologue
-    const/high16 v3, -0x8000
+    const/high16 v3, -0x80000000
 
     .line 575
     :try_start_0
@@ -445,7 +428,7 @@
     .line 589
     const-string v1, "rateLimit"
 
-    const/high16 v2, -0x8000
+    const/high16 v2, -0x80000000
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
 
@@ -1002,7 +985,7 @@
     .prologue
     const/4 v3, 0x0
 
-    const/high16 v2, -0x8000
+    const/high16 v2, -0x80000000
 
     .line 337
     const-class v0, Lcom/adobe/air/AdobeAIR;
@@ -1111,7 +1094,6 @@
 
 .method private registerInBackground(I)V
     .locals 4
-    .parameter
 
     .prologue
     .line 355
@@ -1602,7 +1584,6 @@
 
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 77
@@ -1653,7 +1634,6 @@
 
 .method public onNewIntent(Landroid/content/Intent;)V
     .locals 3
-    .parameter
 
     .prologue
     const-string v2, "gameUrl"

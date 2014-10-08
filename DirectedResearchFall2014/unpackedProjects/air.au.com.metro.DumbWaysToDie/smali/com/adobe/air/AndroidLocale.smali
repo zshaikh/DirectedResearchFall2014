@@ -104,7 +104,6 @@
 
 .method public static GetLocalizedString(Lcom/adobe/air/AndroidLocale$STRING_ID;)Ljava/lang/String;
     .locals 2
-    .parameter
 
     .prologue
     .line 39

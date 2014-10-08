@@ -49,7 +49,7 @@
 
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
-    .parameter "ctx"
+    .param p1, "ctx"    # Landroid/content/Context;
 
     .prologue
     .line 36
@@ -64,7 +64,7 @@
 
 .method static synthetic access$000(Lcom/tapjoy/TapjoyFullScreenAd;)Ljava/util/Map;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/tapjoy/TapjoyFullScreenAd;
 
     .prologue
     .line 18
@@ -75,7 +75,7 @@
 
 .method static synthetic access$102(Ljava/lang/String;)Ljava/lang/String;
     .locals 0
-    .parameter "x0"
+    .param p0, "x0"    # Ljava/lang/String;
 
     .prologue
     .line 18
@@ -86,7 +86,7 @@
 
 .method static synthetic access$202(Ljava/lang/String;)Ljava/lang/String;
     .locals 0
-    .parameter "x0"
+    .param p0, "x0"    # Ljava/lang/String;
 
     .prologue
     .line 18
@@ -119,7 +119,7 @@
 # virtual methods
 .method public getFeaturedApp(Lcom/tapjoy/TapjoyFeaturedAppNotifier;)V
     .locals 2
-    .parameter "notifier"
+    .param p1, "notifier"    # Lcom/tapjoy/TapjoyFeaturedAppNotifier;
 
     .prologue
     .line 70
@@ -140,8 +140,8 @@
 
 .method public getFeaturedApp(Ljava/lang/String;Lcom/tapjoy/TapjoyFeaturedAppNotifier;)V
     .locals 0
-    .parameter "currencyID"
-    .parameter "notifier"
+    .param p1, "currencyID"    # Ljava/lang/String;
+    .param p2, "notifier"    # Lcom/tapjoy/TapjoyFeaturedAppNotifier;
 
     .prologue
     .line 82
@@ -156,7 +156,7 @@
 
 .method public getFullScreenAd(Lcom/tapjoy/TapjoyFullScreenAdNotifier;)V
     .locals 2
-    .parameter "notifier"
+    .param p1, "notifier"    # Lcom/tapjoy/TapjoyFullScreenAdNotifier;
 
     .prologue
     .line 47
@@ -177,8 +177,8 @@
 
 .method public getFullScreenAd(Ljava/lang/String;Lcom/tapjoy/TapjoyFullScreenAdNotifier;)V
     .locals 0
-    .parameter "currencyID"
-    .parameter "notifier"
+    .param p1, "currencyID"    # Ljava/lang/String;
+    .param p2, "notifier"    # Lcom/tapjoy/TapjoyFullScreenAdNotifier;
 
     .prologue
     .line 59
@@ -193,7 +193,7 @@
 
 .method public getFullScreenAdLegacy(Ljava/lang/String;)V
     .locals 3
-    .parameter "currencyID"
+    .param p1, "currencyID"    # Ljava/lang/String;
 
     .prologue
     .line 137
@@ -245,7 +245,7 @@
 
 .method public setDisplayCount(I)V
     .locals 0
-    .parameter "count"
+    .param p1, "count"    # I
 
     .prologue
     .line 129
@@ -279,8 +279,8 @@
     invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
     .line 116
-    .local v0, intent:Landroid/content/Intent;
-    const/high16 v1, 0x1000
+    .local v0, "intent":Landroid/content/Intent;
+    const/high16 v1, 0x10000000
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
@@ -311,7 +311,7 @@
     invoke-virtual {v1, v0}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
 
     .line 122
-    .end local v0           #intent:Landroid/content/Intent;
+    .end local v0    # "intent":Landroid/content/Intent;
     :cond_0
     return-void
 .end method
@@ -343,8 +343,8 @@
     invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
     .line 97
-    .local v0, intent:Landroid/content/Intent;
-    const/high16 v1, 0x1000
+    .local v0, "intent":Landroid/content/Intent;
+    const/high16 v1, 0x10000000
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
@@ -375,7 +375,7 @@
     invoke-virtual {v1, v0}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
 
     .line 103
-    .end local v0           #intent:Landroid/content/Intent;
+    .end local v0    # "intent":Landroid/content/Intent;
     :cond_0
     return-void
 .end method

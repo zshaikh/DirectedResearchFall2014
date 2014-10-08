@@ -24,7 +24,6 @@
 # direct methods
 .method private constructor <init>(Lcom/kochava/android/tracker/KochavaWebAdView;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 225
@@ -37,8 +36,6 @@
 
 .method synthetic constructor <init>(Lcom/kochava/android/tracker/KochavaWebAdView;Lcom/kochava/android/tracker/KochavaWebAdView$MyPictureListener;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 225
@@ -51,8 +48,8 @@
 # virtual methods
 .method public onNewPicture(Landroid/webkit/WebView;Landroid/graphics/Picture;)V
     .locals 1
-    .parameter "view"
-    .parameter "arg1"
+    .param p1, "view"    # Landroid/webkit/WebView;
+    .param p2, "arg1"    # Landroid/graphics/Picture;
 
     .prologue
     .line 230

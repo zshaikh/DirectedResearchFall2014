@@ -355,9 +355,8 @@
 
 .method public static create(Ljava/lang/String;Ljava/util/Map;Lcom/fusepowered/m2/m2l/MraidView;)Lcom/fusepowered/m2/m2l/MraidCommand;
     .locals 1
-    .parameter "command"
-    .parameter
-    .parameter "view"
+    .param p0, "command"    # Ljava/lang/String;
+    .param p2, "view"    # Lcom/fusepowered/m2/m2l/MraidView;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -375,7 +374,7 @@
 
     .prologue
     .line 84
-    .local p1, params:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p1, "params":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     sget-object v0, Lcom/fusepowered/m2/m2l/MraidCommandFactory;->instance:Lcom/fusepowered/m2/m2l/MraidCommandFactory;
 
     invoke-virtual {v0, p0, p1, p2}, Lcom/fusepowered/m2/m2l/MraidCommandFactory;->internalCreate(Ljava/lang/String;Ljava/util/Map;Lcom/fusepowered/m2/m2l/MraidView;)Lcom/fusepowered/m2/m2l/MraidCommand;
@@ -387,7 +386,7 @@
 
 .method public static setInstance(Lcom/fusepowered/m2/m2l/MraidCommandFactory;)V
     .locals 0
-    .parameter "factory"
+    .param p0, "factory"    # Lcom/fusepowered/m2/m2l/MraidCommandFactory;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -403,9 +402,8 @@
 # virtual methods
 .method protected internalCreate(Ljava/lang/String;Ljava/util/Map;Lcom/fusepowered/m2/m2l/MraidView;)Lcom/fusepowered/m2/m2l/MraidCommand;
     .locals 4
-    .parameter "command"
-    .parameter
-    .parameter "view"
+    .param p1, "command"    # Ljava/lang/String;
+    .param p3, "view"    # Lcom/fusepowered/m2/m2l/MraidView;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -422,17 +420,17 @@
     .end annotation
 
     .prologue
-    .local p2, params:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p2, "params":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     const/4 v3, 0x0
 
     .line 88
-    #calls: Lcom/fusepowered/m2/m2l/MraidCommandFactory$MraidJavascriptCommand;->fromString(Ljava/lang/String;)Lcom/fusepowered/m2/m2l/MraidCommandFactory$MraidJavascriptCommand;
+    # invokes: Lcom/fusepowered/m2/m2l/MraidCommandFactory$MraidJavascriptCommand;->fromString(Ljava/lang/String;)Lcom/fusepowered/m2/m2l/MraidCommandFactory$MraidJavascriptCommand;
     invoke-static {p1}, Lcom/fusepowered/m2/m2l/MraidCommandFactory$MraidJavascriptCommand;->access$2(Ljava/lang/String;)Lcom/fusepowered/m2/m2l/MraidCommandFactory$MraidJavascriptCommand;
 
     move-result-object v0
 
     .line 90
-    .local v0, mraidJavascriptCommand:Lcom/fusepowered/m2/m2l/MraidCommandFactory$MraidJavascriptCommand;
+    .local v0, "mraidJavascriptCommand":Lcom/fusepowered/m2/m2l/MraidCommandFactory$MraidJavascriptCommand;
     invoke-static {}, Lcom/fusepowered/m2/m2l/MraidCommandFactory;->$SWITCH_TABLE$com$mopub$mobileads$MraidCommandFactory$MraidJavascriptCommand()[I
 
     move-result-object v1

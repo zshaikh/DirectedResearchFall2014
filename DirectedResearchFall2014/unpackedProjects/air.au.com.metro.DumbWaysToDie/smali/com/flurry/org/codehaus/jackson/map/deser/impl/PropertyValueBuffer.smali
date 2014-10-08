@@ -18,9 +18,9 @@
 # direct methods
 .method public constructor <init>(Lcom/flurry/org/codehaus/jackson/JsonParser;Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;I)V
     .locals 1
-    .parameter "jp"
-    .parameter "ctxt"
-    .parameter "paramCount"
+    .param p1, "jp"    # Lcom/flurry/org/codehaus/jackson/JsonParser;
+    .param p2, "ctxt"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;
+    .param p3, "paramCount"    # I
 
     .prologue
     .line 41
@@ -48,8 +48,8 @@
 # virtual methods
 .method public assignParameter(ILjava/lang/Object;)Z
     .locals 2
-    .parameter "index"
-    .parameter "value"
+    .param p1, "index"    # I
+    .param p2, "value"    # Ljava/lang/Object;
 
     .prologue
     const/4 v1, 0x1
@@ -81,9 +81,9 @@
 
 .method public bufferAnyProperty(Lcom/flurry/org/codehaus/jackson/map/deser/SettableAnyProperty;Ljava/lang/String;Ljava/lang/Object;)V
     .locals 2
-    .parameter "prop"
-    .parameter "propName"
-    .parameter "value"
+    .param p1, "prop"    # Lcom/flurry/org/codehaus/jackson/map/deser/SettableAnyProperty;
+    .param p2, "propName"    # Ljava/lang/String;
+    .param p3, "value"    # Ljava/lang/Object;
 
     .prologue
     .line 95
@@ -101,8 +101,8 @@
 
 .method public bufferMapProperty(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 2
-    .parameter "key"
-    .parameter "value"
+    .param p1, "key"    # Ljava/lang/Object;
+    .param p2, "value"    # Ljava/lang/Object;
 
     .prologue
     .line 99
@@ -120,8 +120,8 @@
 
 .method public bufferProperty(Lcom/flurry/org/codehaus/jackson/map/deser/SettableBeanProperty;Ljava/lang/Object;)V
     .locals 2
-    .parameter "prop"
-    .parameter "value"
+    .param p1, "prop"    # Lcom/flurry/org/codehaus/jackson/map/deser/SettableBeanProperty;
+    .param p2, "value"    # Ljava/lang/Object;
 
     .prologue
     .line 91
@@ -149,7 +149,7 @@
 
 .method protected final getParameters([Ljava/lang/Object;)[Ljava/lang/Object;
     .locals 4
-    .parameter "defaults"
+    .param p1, "defaults"    # [Ljava/lang/Object;
 
     .prologue
     .line 67
@@ -158,12 +158,12 @@
     .line 68
     const/4 v0, 0x0
 
-    .local v0, i:I
+    .local v0, "i":I
     iget-object v3, p0, Lcom/flurry/org/codehaus/jackson/map/deser/impl/PropertyValueBuffer;->_creatorParameters:[Ljava/lang/Object;
 
     array-length v1, v3
 
-    .local v1, len:I
+    .local v1, "len":I
     :goto_0
     if-ge v0, v1, :cond_1
 
@@ -178,7 +178,7 @@
     aget-object v2, p1, v0
 
     .line 71
-    .local v2, value:Ljava/lang/Object;
+    .local v2, "value":Ljava/lang/Object;
     if-eqz v2, :cond_0
 
     .line 72
@@ -187,15 +187,15 @@
     aput-object v2, v3, v0
 
     .line 68
-    .end local v2           #value:Ljava/lang/Object;
+    .end local v2    # "value":Ljava/lang/Object;
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
     .line 77
-    .end local v0           #i:I
-    .end local v1           #len:I
+    .end local v0    # "i":I
+    .end local v1    # "len":I
     :cond_1
     iget-object v3, p0, Lcom/flurry/org/codehaus/jackson/map/deser/impl/PropertyValueBuffer;->_creatorParameters:[Ljava/lang/Object;
 
@@ -204,16 +204,16 @@
 
 .method public inject([Lcom/flurry/org/codehaus/jackson/map/deser/SettableBeanProperty;)V
     .locals 7
-    .parameter "injectableProperties"
+    .param p1, "injectableProperties"    # [Lcom/flurry/org/codehaus/jackson/map/deser/SettableBeanProperty;
 
     .prologue
     .line 50
     const/4 v0, 0x0
 
-    .local v0, i:I
+    .local v0, "i":I
     array-length v1, p1
 
-    .local v1, len:I
+    .local v1, "len":I
     :goto_0
     if-ge v0, v1, :cond_1
 
@@ -221,7 +221,7 @@
     aget-object v2, p1, v0
 
     .line 52
-    .local v2, prop:Lcom/flurry/org/codehaus/jackson/map/deser/SettableBeanProperty;
+    .local v2, "prop":Lcom/flurry/org/codehaus/jackson/map/deser/SettableBeanProperty;
     if-eqz v2, :cond_0
 
     .line 54
@@ -248,7 +248,7 @@
     goto :goto_0
 
     .line 58
-    .end local v2           #prop:Lcom/flurry/org/codehaus/jackson/map/deser/SettableBeanProperty;
+    .end local v2    # "prop":Lcom/flurry/org/codehaus/jackson/map/deser/SettableBeanProperty;
     :cond_1
     return-void
 .end method

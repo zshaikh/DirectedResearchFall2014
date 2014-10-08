@@ -6,7 +6,6 @@
 # direct methods
 .method public static a(Ljava/lang/Object;)Ljava/lang/String;
     .locals 1
-    .parameter
 
     .prologue
     .line 40
@@ -27,8 +26,6 @@
 
 .method public static a(Ljava/lang/Object;Ljava/lang/StringBuilder;)V
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 56
@@ -44,8 +41,6 @@
 
 .method static a(Ljava/lang/StringBuilder;Ljava/lang/String;)V
     .locals 4
-    .parameter
-    .parameter
 
     .prologue
     const-string v3, "\""

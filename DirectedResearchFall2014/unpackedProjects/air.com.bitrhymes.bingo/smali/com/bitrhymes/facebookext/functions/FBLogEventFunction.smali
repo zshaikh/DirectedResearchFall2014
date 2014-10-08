@@ -21,23 +21,23 @@
 # virtual methods
 .method public call(Lcom/adobe/fre/FREContext;[Lcom/adobe/fre/FREObject;)Lcom/adobe/fre/FREObject;
     .locals 6
-    .parameter "arg0"
-    .parameter "arg1"
+    .param p1, "arg0"    # Lcom/adobe/fre/FREContext;
+    .param p2, "arg1"    # [Lcom/adobe/fre/FREObject;
 
     .prologue
     .line 17
     const/4 v1, 0x0
 
     .line 18
-    .local v1, pixelStr:Ljava/lang/String;
+    .local v1, "pixelStr":Ljava/lang/String;
     const/4 v4, 0x0
 
     .line 19
-    .local v4, pixelValueStr:Ljava/lang/String;
+    .local v4, "pixelValueStr":Ljava/lang/String;
     const-wide/16 v2, 0x0
 
     .line 23
-    .local v2, pixelValue:D
+    .local v2, "pixelValue":D
     const/4 v5, 0x1
 
     :try_start_0
@@ -100,46 +100,46 @@
     move-object v0, v5
 
     .line 32
-    .local v0, e:Ljava/lang/IllegalStateException;
+    .local v0, "e":Ljava/lang/IllegalStateException;
     invoke-virtual {v0}, Ljava/lang/IllegalStateException;->printStackTrace()V
 
     goto :goto_0
 
     .line 33
-    .end local v0           #e:Ljava/lang/IllegalStateException;
+    .end local v0    # "e":Ljava/lang/IllegalStateException;
     :catch_1
     move-exception v5
 
     move-object v0, v5
 
     .line 34
-    .local v0, e:Lcom/adobe/fre/FRETypeMismatchException;
+    .local v0, "e":Lcom/adobe/fre/FRETypeMismatchException;
     invoke-virtual {v0}, Lcom/adobe/fre/FRETypeMismatchException;->printStackTrace()V
 
     goto :goto_0
 
     .line 35
-    .end local v0           #e:Lcom/adobe/fre/FRETypeMismatchException;
+    .end local v0    # "e":Lcom/adobe/fre/FRETypeMismatchException;
     :catch_2
     move-exception v5
 
     move-object v0, v5
 
     .line 36
-    .local v0, e:Lcom/adobe/fre/FREInvalidObjectException;
+    .local v0, "e":Lcom/adobe/fre/FREInvalidObjectException;
     invoke-virtual {v0}, Lcom/adobe/fre/FREInvalidObjectException;->printStackTrace()V
 
     goto :goto_0
 
     .line 37
-    .end local v0           #e:Lcom/adobe/fre/FREInvalidObjectException;
+    .end local v0    # "e":Lcom/adobe/fre/FREInvalidObjectException;
     :catch_3
     move-exception v5
 
     move-object v0, v5
 
     .line 38
-    .local v0, e:Lcom/adobe/fre/FREWrongThreadException;
+    .local v0, "e":Lcom/adobe/fre/FREWrongThreadException;
     invoke-virtual {v0}, Lcom/adobe/fre/FREWrongThreadException;->printStackTrace()V
 
     goto :goto_0

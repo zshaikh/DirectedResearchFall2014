@@ -45,7 +45,6 @@
 
 .method static synthetic access$0(Lcom/bitrhymes/facebookext/LoginActivity;)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 30
@@ -58,9 +57,9 @@
 # virtual methods
 .method protected onActivityResult(IILandroid/content/Intent;)V
     .locals 1
-    .parameter "requestCode"
-    .parameter "resultCode"
-    .parameter "data"
+    .param p1, "requestCode"    # I
+    .param p2, "resultCode"    # I
+    .param p3, "data"    # Landroid/content/Intent;
 
     .prologue
     .line 192
@@ -115,7 +114,7 @@
 
 .method protected onCreate(Landroid/os/Bundle;)V
     .locals 14
-    .parameter "savedInstanceState"
+    .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
     const/4 v8, 0x0
@@ -140,7 +139,7 @@
     sget-object v0, Lcom/bitrhymes/facebookext/FacebookExt;->context:Lcom/adobe/fre/FREContext;
 
     .line 39
-    .local v0, context:Lcom/adobe/fre/FREContext;
+    .local v0, "context":Lcom/adobe/fre/FREContext;
     if-eqz v0, :cond_0
 
     sget-object v7, Lcom/bitrhymes/facebookext/FacebookExtContext;->session:Lcom/facebook/Session;
@@ -180,7 +179,7 @@
     move-result-object v2
 
     .line 51
-    .local v2, extras:Landroid/os/Bundle;
+    .local v2, "extras":Landroid/os/Bundle;
     new-instance v4, Ljava/util/ArrayList;
 
     const-string v7, "permissions"
@@ -196,7 +195,7 @@
     invoke-direct {v4, v7}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
     .line 52
-    .local v4, permissions:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
+    .local v4, "permissions":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     const-string v7, "type"
 
     invoke-virtual {v2, v7}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -204,7 +203,7 @@
     move-result-object v6
 
     .line 54
-    .local v6, type:Ljava/lang/String;
+    .local v6, "type":Ljava/lang/String;
     const-string v7, "reauthorize"
 
     invoke-virtual {v2, v7, v8}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;Z)Z
@@ -340,7 +339,7 @@
     aput-object v8, v5, v7
 
     .line 67
-    .local v5, permissionsArray:[Ljava/lang/String;
+    .local v5, "permissionsArray":[Ljava/lang/String;
     sget-object v7, Lcom/bitrhymes/facebookext/FacebookExtContext;->session:Lcom/facebook/Session;
 
     .line 68
@@ -364,14 +363,14 @@
     goto/16 :goto_0
 
     .line 79
-    .end local v5           #permissionsArray:[Ljava/lang/String;
+    .end local v5    # "permissionsArray":[Ljava/lang/String;
     :catch_0
     move-exception v7
 
     move-object v1, v7
 
     .line 81
-    .local v1, exception:Lcom/facebook/FacebookException;
+    .local v1, "exception":Lcom/facebook/FacebookException;
     new-instance v7, Ljava/lang/StringBuilder;
 
     const-string v8, "Login FacebookException : "
@@ -398,7 +397,7 @@
     move-object v3, v7
 
     .line 83
-    .local v3, msg:Ljava/lang/String;
+    .local v3, "msg":Ljava/lang/String;
     :goto_1
     sget-object v7, Lcom/bitrhymes/facebookext/FacebookExt;->context:Lcom/adobe/fre/FREContext;
 
@@ -426,8 +425,8 @@
     goto/16 :goto_0
 
     .line 73
-    .end local v1           #exception:Lcom/facebook/FacebookException;
-    .end local v3           #msg:Ljava/lang/String;
+    .end local v1    # "exception":Lcom/facebook/FacebookException;
+    .end local v3    # "msg":Ljava/lang/String;
     :cond_2
     :try_start_1
     sget-object v7, Lcom/bitrhymes/facebookext/FacebookExtContext;->session:Lcom/facebook/Session;
@@ -459,7 +458,7 @@
     move-object v1, v7
 
     .line 88
-    .local v1, exception:Ljava/lang/UnsupportedOperationException;
+    .local v1, "exception":Ljava/lang/UnsupportedOperationException;
     new-instance v7, Ljava/lang/StringBuilder;
 
     const-string v8, "Login UnsupportedOperationException : "
@@ -486,7 +485,7 @@
     move-object v3, v7
 
     .line 90
-    .restart local v3       #msg:Ljava/lang/String;
+    .restart local v3    # "msg":Ljava/lang/String;
     :goto_2
     sget-object v7, Lcom/bitrhymes/facebookext/FacebookExt;->context:Lcom/adobe/fre/FREContext;
 
@@ -514,8 +513,8 @@
     goto/16 :goto_0
 
     .line 82
-    .end local v3           #msg:Ljava/lang/String;
-    .local v1, exception:Lcom/facebook/FacebookException;
+    .end local v3    # "msg":Ljava/lang/String;
+    .local v1, "exception":Lcom/facebook/FacebookException;
     :cond_3
     const-string v7, "null exception"
 
@@ -524,7 +523,7 @@
     goto :goto_1
 
     .line 89
-    .local v1, exception:Ljava/lang/UnsupportedOperationException;
+    .local v1, "exception":Ljava/lang/UnsupportedOperationException;
     :cond_4
     const-string v7, "null exception"
 
@@ -533,7 +532,7 @@
     goto :goto_2
 
     .line 94
-    .end local v1           #exception:Ljava/lang/UnsupportedOperationException;
+    .end local v1    # "exception":Ljava/lang/UnsupportedOperationException;
     :cond_5
     sget-object v7, Lcom/bitrhymes/facebookext/FacebookExtContext;->session:Lcom/facebook/Session;
 
@@ -610,7 +609,7 @@
     aput-object v8, v5, v7
 
     .line 105
-    .restart local v5       #permissionsArray:[Ljava/lang/String;
+    .restart local v5    # "permissionsArray":[Ljava/lang/String;
     sget-object v7, Lcom/bitrhymes/facebookext/FacebookExtContext;->session:Lcom/facebook/Session;
 
     new-instance v8, Lcom/facebook/Session$OpenRequest;
@@ -693,14 +692,14 @@
     goto/16 :goto_0
 
     .line 129
-    .end local v5           #permissionsArray:[Ljava/lang/String;
+    .end local v5    # "permissionsArray":[Ljava/lang/String;
     :catch_2
     move-exception v7
 
     move-object v1, v7
 
     .line 131
-    .local v1, exception:Lcom/facebook/FacebookException;
+    .local v1, "exception":Lcom/facebook/FacebookException;
     new-instance v7, Ljava/lang/StringBuilder;
 
     const-string v8, "Login FacebookException : "
@@ -727,7 +726,7 @@
     move-object v3, v7
 
     .line 133
-    .restart local v3       #msg:Ljava/lang/String;
+    .restart local v3    # "msg":Ljava/lang/String;
     :goto_3
     sget-object v7, Lcom/bitrhymes/facebookext/FacebookExt;->context:Lcom/adobe/fre/FREContext;
 
@@ -755,8 +754,8 @@
     goto/16 :goto_0
 
     .line 113
-    .end local v1           #exception:Lcom/facebook/FacebookException;
-    .end local v3           #msg:Ljava/lang/String;
+    .end local v1    # "exception":Lcom/facebook/FacebookException;
+    .end local v3    # "msg":Ljava/lang/String;
     :cond_6
     :try_start_3
     const-string v7, "publish"
@@ -818,7 +817,7 @@
     move-object v1, v7
 
     .line 138
-    .local v1, exception:Ljava/lang/UnsupportedOperationException;
+    .local v1, "exception":Ljava/lang/UnsupportedOperationException;
     new-instance v7, Ljava/lang/StringBuilder;
 
     const-string v8, "Login UnsupportedOperationException : "
@@ -845,7 +844,7 @@
     move-object v3, v7
 
     .line 140
-    .restart local v3       #msg:Ljava/lang/String;
+    .restart local v3    # "msg":Ljava/lang/String;
     :goto_4
     sget-object v7, Lcom/bitrhymes/facebookext/FacebookExt;->context:Lcom/adobe/fre/FREContext;
 
@@ -873,8 +872,8 @@
     goto/16 :goto_0
 
     .line 122
-    .end local v1           #exception:Ljava/lang/UnsupportedOperationException;
-    .end local v3           #msg:Ljava/lang/String;
+    .end local v1    # "exception":Ljava/lang/UnsupportedOperationException;
+    .end local v3    # "msg":Ljava/lang/String;
     :cond_7
     :try_start_4
     const-string v7, "Login session.isOpened else: "
@@ -909,7 +908,7 @@
     goto/16 :goto_0
 
     .line 132
-    .local v1, exception:Lcom/facebook/FacebookException;
+    .local v1, "exception":Lcom/facebook/FacebookException;
     :cond_8
     const-string v7, "null exception"
 
@@ -918,7 +917,7 @@
     goto/16 :goto_3
 
     .line 139
-    .local v1, exception:Ljava/lang/UnsupportedOperationException;
+    .local v1, "exception":Ljava/lang/UnsupportedOperationException;
     :cond_9
     const-string v7, "null exception"
 
@@ -927,7 +926,7 @@
     goto :goto_4
 
     .line 146
-    .end local v1           #exception:Ljava/lang/UnsupportedOperationException;
+    .end local v1    # "exception":Ljava/lang/UnsupportedOperationException;
     :cond_a
     sget-object v7, Lcom/bitrhymes/facebookext/FacebookExt;->context:Lcom/adobe/fre/FREContext;
 
@@ -992,8 +991,8 @@
 
 .method public onKeyUp(ILandroid/view/KeyEvent;)Z
     .locals 1
-    .parameter "keyCode"
-    .parameter "event"
+    .param p1, "keyCode"    # I
+    .param p2, "event"    # Landroid/view/KeyEvent;
 
     .prologue
     .line 212
@@ -1021,7 +1020,7 @@
 
 .method protected onSaveInstanceState(Landroid/os/Bundle;)V
     .locals 2
-    .parameter "outState"
+    .param p1, "outState"    # Landroid/os/Bundle;
 
     .prologue
     .line 201
@@ -1036,11 +1035,11 @@
     sget-object v0, Lcom/bitrhymes/facebookext/FacebookExtContext;->session:Lcom/facebook/Session;
 
     .line 205
-    .local v0, session:Lcom/facebook/Session;
+    .local v0, "session":Lcom/facebook/Session;
     invoke-static {v0, p1}, Lcom/facebook/Session;->saveSession(Lcom/facebook/Session;Landroid/os/Bundle;)V
 
     .line 207
-    .end local v0           #session:Lcom/facebook/Session;
+    .end local v0    # "session":Lcom/facebook/Session;
     :cond_0
     return-void
 .end method
@@ -1116,7 +1115,7 @@
     move-result-object v0
 
     .line 160
-    .local v0, info:Landroid/content/pm/PackageInfo;
+    .local v0, "info":Landroid/content/pm/PackageInfo;
     iget-object v3, v0, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
 
     array-length v4, v3
@@ -1127,17 +1126,17 @@
     if-lt v5, v4, :cond_0
 
     .line 171
-    .end local v0           #info:Landroid/content/pm/PackageInfo;
+    .end local v0    # "info":Landroid/content/pm/PackageInfo;
     :goto_1
     return-void
 
     .line 160
-    .restart local v0       #info:Landroid/content/pm/PackageInfo;
+    .restart local v0    # "info":Landroid/content/pm/PackageInfo;
     :cond_0
     aget-object v2, v3, v5
 
     .line 161
-    .local v2, signature:Landroid/content/pm/Signature;
+    .local v2, "signature":Landroid/content/pm/Signature;
     const-string v6, "SHA"
 
     invoke-static {v6}, Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
@@ -1145,7 +1144,7 @@
     move-result-object v1
 
     .line 162
-    .local v1, md:Ljava/security/MessageDigest;
+    .local v1, "md":Ljava/security/MessageDigest;
     invoke-virtual {v2}, Landroid/content/pm/Signature;->toByteArray()[B
 
     move-result-object v6
@@ -1178,9 +1177,9 @@
     goto :goto_0
 
     .line 168
-    .end local v0           #info:Landroid/content/pm/PackageInfo;
-    .end local v1           #md:Ljava/security/MessageDigest;
-    .end local v2           #signature:Landroid/content/pm/Signature;
+    .end local v0    # "info":Landroid/content/pm/PackageInfo;
+    .end local v1    # "md":Ljava/security/MessageDigest;
+    .end local v2    # "signature":Landroid/content/pm/Signature;
     :catch_0
     move-exception v3
 

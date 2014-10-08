@@ -292,8 +292,6 @@
 
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 1
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()V"
@@ -319,7 +317,7 @@
 
 .method static synthetic access$000(Lcom/flurry/org/apache/avro/Schema$Type;)Ljava/lang/String;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/flurry/org/apache/avro/Schema$Type;
 
     .prologue
     .line 90
@@ -330,7 +328,7 @@
 
 .method public static valueOf(Ljava/lang/String;)Lcom/flurry/org/apache/avro/Schema$Type;
     .locals 1
-    .parameter "name"
+    .param p0, "name"    # Ljava/lang/String;
 
     .prologue
     .line 90
@@ -340,7 +338,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "name":Ljava/lang/String;
     check-cast p0, Lcom/flurry/org/apache/avro/Schema$Type;
 
     return-object p0

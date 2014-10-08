@@ -23,8 +23,8 @@
 # direct methods
 .method public constructor <init>([Lcom/flurry/org/apache/avro/io/parsing/Symbol;I)V
     .locals 0
-    .parameter "symbols"
-    .parameter "pos"
+    .param p1, "symbols"    # [Lcom/flurry/org/apache/avro/io/parsing/Symbol;
+    .param p2, "pos"    # I
 
     .prologue
     .line 138

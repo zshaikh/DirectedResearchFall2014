@@ -21,7 +21,6 @@
 # direct methods
 .method constructor <init>(Lcom/tapjoy/mraid/view/MraidView;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1047
@@ -36,7 +35,7 @@
 # virtual methods
 .method public onCloseWindow(Landroid/webkit/WebView;)V
     .locals 1
-    .parameter "w"
+    .param p1, "w"    # Landroid/webkit/WebView;
 
     .prologue
     .line 1057
@@ -45,7 +44,7 @@
     .line 1058
     iget-object v0, p0, Lcom/tapjoy/mraid/view/MraidView$5;->this$0:Lcom/tapjoy/mraid/view/MraidView;
 
-    #calls: Lcom/tapjoy/mraid/view/MraidView;->closeWindow()V
+    # invokes: Lcom/tapjoy/mraid/view/MraidView;->closeWindow()V
     invoke-static {v0}, Lcom/tapjoy/mraid/view/MraidView;->access$900(Lcom/tapjoy/mraid/view/MraidView;)V
 
     .line 1059
@@ -54,13 +53,13 @@
 
 .method public onConsoleMessage(Landroid/webkit/ConsoleMessage;)Z
     .locals 1
-    .parameter "consoleMessage"
+    .param p1, "consoleMessage"    # Landroid/webkit/ConsoleMessage;
 
     .prologue
     .line 1167
     iget-object v0, p0, Lcom/tapjoy/mraid/view/MraidView$5;->this$0:Lcom/tapjoy/mraid/view/MraidView;
 
-    #getter for: Lcom/tapjoy/mraid/view/MraidView;->mListener:Lcom/tapjoy/mraid/listener/MraidViewListener;
+    # getter for: Lcom/tapjoy/mraid/view/MraidView;->mListener:Lcom/tapjoy/mraid/listener/MraidViewListener;
     invoke-static {v0}, Lcom/tapjoy/mraid/view/MraidView;->access$200(Lcom/tapjoy/mraid/view/MraidView;)Lcom/tapjoy/mraid/listener/MraidViewListener;
 
     move-result-object v0
@@ -70,7 +69,7 @@
     .line 1168
     iget-object v0, p0, Lcom/tapjoy/mraid/view/MraidView$5;->this$0:Lcom/tapjoy/mraid/view/MraidView;
 
-    #getter for: Lcom/tapjoy/mraid/view/MraidView;->mListener:Lcom/tapjoy/mraid/listener/MraidViewListener;
+    # getter for: Lcom/tapjoy/mraid/view/MraidView;->mListener:Lcom/tapjoy/mraid/listener/MraidViewListener;
     invoke-static {v0}, Lcom/tapjoy/mraid/view/MraidView;->access$200(Lcom/tapjoy/mraid/view/MraidView;)Lcom/tapjoy/mraid/listener/MraidViewListener;
 
     move-result-object v0
@@ -104,10 +103,10 @@
 
 .method public onJsAlert(Landroid/webkit/WebView;Ljava/lang/String;Ljava/lang/String;Landroid/webkit/JsResult;)Z
     .locals 1
-    .parameter "view"
-    .parameter "url"
-    .parameter "message"
-    .parameter "result"
+    .param p1, "view"    # Landroid/webkit/WebView;
+    .param p2, "url"    # Ljava/lang/String;
+    .param p3, "message"    # Ljava/lang/String;
+    .param p4, "result"    # Landroid/webkit/JsResult;
 
     .prologue
     .line 1051
@@ -123,8 +122,8 @@
 
 .method public onShowCustomView(Landroid/view/View;Landroid/webkit/WebChromeClient$CustomViewCallback;)V
     .locals 13
-    .parameter "view"
-    .parameter "callback"
+    .param p1, "view"    # Landroid/view/View;
+    .param p2, "callback"    # Landroid/webkit/WebChromeClient$CustomViewCallback;
 
     .prologue
     const/16 v12, 0xd
@@ -146,7 +145,7 @@
     .line 1067
     iget-object v5, p0, Lcom/tapjoy/mraid/view/MraidView$5;->this$0:Lcom/tapjoy/mraid/view/MraidView;
 
-    #setter for: Lcom/tapjoy/mraid/view/MraidView;->videoViewCallback:Landroid/webkit/WebChromeClient$CustomViewCallback;
+    # setter for: Lcom/tapjoy/mraid/view/MraidView;->videoViewCallback:Landroid/webkit/WebChromeClient$CustomViewCallback;
     invoke-static {v5, p2}, Lcom/tapjoy/mraid/view/MraidView;->access$1402(Lcom/tapjoy/mraid/view/MraidView;Landroid/webkit/WebChromeClient$CustomViewCallback;)Landroid/webkit/WebChromeClient$CustomViewCallback;
 
     .line 1069
@@ -162,7 +161,7 @@
     move-object v2, v0
 
     .line 1072
-    .local v2, frame:Landroid/widget/FrameLayout;
+    .local v2, "frame":Landroid/widget/FrameLayout;
     invoke-virtual {v2}, Landroid/widget/FrameLayout;->getFocusedChild()Landroid/view/View;
 
     move-result-object v5
@@ -174,7 +173,7 @@
     .line 1075
     iget-object v5, p0, Lcom/tapjoy/mraid/view/MraidView$5;->this$0:Lcom/tapjoy/mraid/view/MraidView;
 
-    #getter for: Lcom/tapjoy/mraid/view/MraidView;->ctx:Landroid/content/Context;
+    # getter for: Lcom/tapjoy/mraid/view/MraidView;->ctx:Landroid/content/Context;
     invoke-static {v5}, Lcom/tapjoy/mraid/view/MraidView;->access$1500(Lcom/tapjoy/mraid/view/MraidView;)Landroid/content/Context;
 
     move-result-object v5
@@ -184,17 +183,17 @@
     if-nez v5, :cond_1
 
     .line 1156
-    .end local v2           #frame:Landroid/widget/FrameLayout;
+    .end local v2    # "frame":Landroid/widget/FrameLayout;
     :cond_0
     :goto_0
     return-void
 
     .line 1078
-    .restart local v2       #frame:Landroid/widget/FrameLayout;
+    .restart local v2    # "frame":Landroid/widget/FrameLayout;
     :cond_1
     iget-object v5, p0, Lcom/tapjoy/mraid/view/MraidView$5;->this$0:Lcom/tapjoy/mraid/view/MraidView;
 
-    #getter for: Lcom/tapjoy/mraid/view/MraidView;->ctx:Landroid/content/Context;
+    # getter for: Lcom/tapjoy/mraid/view/MraidView;->ctx:Landroid/content/Context;
     invoke-static {v5}, Lcom/tapjoy/mraid/view/MraidView;->access$1500(Lcom/tapjoy/mraid/view/MraidView;)Landroid/content/Context;
 
     move-result-object v1
@@ -202,7 +201,7 @@
     check-cast v1, Landroid/app/Activity;
 
     .line 1080
-    .local v1, activity:Landroid/app/Activity;
+    .local v1, "activity":Landroid/app/Activity;
     iget-object v6, p0, Lcom/tapjoy/mraid/view/MraidView$5;->this$0:Lcom/tapjoy/mraid/view/MraidView;
 
     invoke-virtual {v2}, Landroid/widget/FrameLayout;->getFocusedChild()Landroid/view/View;
@@ -211,13 +210,13 @@
 
     check-cast v5, Landroid/widget/VideoView;
 
-    #setter for: Lcom/tapjoy/mraid/view/MraidView;->videoView:Landroid/widget/VideoView;
+    # setter for: Lcom/tapjoy/mraid/view/MraidView;->videoView:Landroid/widget/VideoView;
     invoke-static {v6, v5}, Lcom/tapjoy/mraid/view/MraidView;->access$1602(Lcom/tapjoy/mraid/view/MraidView;Landroid/widget/VideoView;)Landroid/widget/VideoView;
 
     .line 1082
     iget-object v5, p0, Lcom/tapjoy/mraid/view/MraidView$5;->this$0:Lcom/tapjoy/mraid/view/MraidView;
 
-    #getter for: Lcom/tapjoy/mraid/view/MraidView;->videoView:Landroid/widget/VideoView;
+    # getter for: Lcom/tapjoy/mraid/view/MraidView;->videoView:Landroid/widget/VideoView;
     invoke-static {v5}, Lcom/tapjoy/mraid/view/MraidView;->access$1600(Lcom/tapjoy/mraid/view/MraidView;)Landroid/widget/VideoView;
 
     move-result-object v5
@@ -227,7 +226,7 @@
     .line 1084
     iget-object v5, p0, Lcom/tapjoy/mraid/view/MraidView$5;->this$0:Lcom/tapjoy/mraid/view/MraidView;
 
-    #getter for: Lcom/tapjoy/mraid/view/MraidView;->videoRelativeLayout:Landroid/widget/RelativeLayout;
+    # getter for: Lcom/tapjoy/mraid/view/MraidView;->videoRelativeLayout:Landroid/widget/RelativeLayout;
     invoke-static {v5}, Lcom/tapjoy/mraid/view/MraidView;->access$1700(Lcom/tapjoy/mraid/view/MraidView;)Landroid/widget/RelativeLayout;
 
     move-result-object v5
@@ -241,20 +240,20 @@
 
     iget-object v7, p0, Lcom/tapjoy/mraid/view/MraidView$5;->this$0:Lcom/tapjoy/mraid/view/MraidView;
 
-    #getter for: Lcom/tapjoy/mraid/view/MraidView;->ctx:Landroid/content/Context;
+    # getter for: Lcom/tapjoy/mraid/view/MraidView;->ctx:Landroid/content/Context;
     invoke-static {v7}, Lcom/tapjoy/mraid/view/MraidView;->access$1500(Lcom/tapjoy/mraid/view/MraidView;)Landroid/content/Context;
 
     move-result-object v7
 
     invoke-direct {v6, v7}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;)V
 
-    #setter for: Lcom/tapjoy/mraid/view/MraidView;->videoRelativeLayout:Landroid/widget/RelativeLayout;
+    # setter for: Lcom/tapjoy/mraid/view/MraidView;->videoRelativeLayout:Landroid/widget/RelativeLayout;
     invoke-static {v5, v6}, Lcom/tapjoy/mraid/view/MraidView;->access$1702(Lcom/tapjoy/mraid/view/MraidView;Landroid/widget/RelativeLayout;)Landroid/widget/RelativeLayout;
 
     .line 1087
     iget-object v5, p0, Lcom/tapjoy/mraid/view/MraidView$5;->this$0:Lcom/tapjoy/mraid/view/MraidView;
 
-    #getter for: Lcom/tapjoy/mraid/view/MraidView;->videoRelativeLayout:Landroid/widget/RelativeLayout;
+    # getter for: Lcom/tapjoy/mraid/view/MraidView;->videoRelativeLayout:Landroid/widget/RelativeLayout;
     invoke-static {v5}, Lcom/tapjoy/mraid/view/MraidView;->access$1700(Lcom/tapjoy/mraid/view/MraidView;)Landroid/widget/RelativeLayout;
 
     move-result-object v5
@@ -268,12 +267,12 @@
     .line 1088
     iget-object v5, p0, Lcom/tapjoy/mraid/view/MraidView$5;->this$0:Lcom/tapjoy/mraid/view/MraidView;
 
-    #getter for: Lcom/tapjoy/mraid/view/MraidView;->videoRelativeLayout:Landroid/widget/RelativeLayout;
+    # getter for: Lcom/tapjoy/mraid/view/MraidView;->videoRelativeLayout:Landroid/widget/RelativeLayout;
     invoke-static {v5}, Lcom/tapjoy/mraid/view/MraidView;->access$1700(Lcom/tapjoy/mraid/view/MraidView;)Landroid/widget/RelativeLayout;
 
     move-result-object v5
 
-    const/high16 v6, -0x100
+    const/high16 v6, -0x1000000
 
     invoke-virtual {v5, v6}, Landroid/widget/RelativeLayout;->setBackgroundColor(I)V
 
@@ -284,13 +283,13 @@
     invoke-direct {v3, v10, v10}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
     .line 1094
-    .local v3, layoutParams:Landroid/widget/RelativeLayout$LayoutParams;
+    .local v3, "layoutParams":Landroid/widget/RelativeLayout$LayoutParams;
     invoke-virtual {v3, v12}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
 
     .line 1095
     iget-object v5, p0, Lcom/tapjoy/mraid/view/MraidView$5;->this$0:Lcom/tapjoy/mraid/view/MraidView;
 
-    #getter for: Lcom/tapjoy/mraid/view/MraidView;->videoView:Landroid/widget/VideoView;
+    # getter for: Lcom/tapjoy/mraid/view/MraidView;->videoView:Landroid/widget/VideoView;
     invoke-static {v5}, Lcom/tapjoy/mraid/view/MraidView;->access$1600(Lcom/tapjoy/mraid/view/MraidView;)Landroid/widget/VideoView;
 
     move-result-object v5
@@ -304,7 +303,7 @@
 
     iget-object v7, p0, Lcom/tapjoy/mraid/view/MraidView$5;->this$0:Lcom/tapjoy/mraid/view/MraidView;
 
-    #getter for: Lcom/tapjoy/mraid/view/MraidView;->ctx:Landroid/content/Context;
+    # getter for: Lcom/tapjoy/mraid/view/MraidView;->ctx:Landroid/content/Context;
     invoke-static {v7}, Lcom/tapjoy/mraid/view/MraidView;->access$1500(Lcom/tapjoy/mraid/view/MraidView;)Landroid/content/Context;
 
     move-result-object v7
@@ -315,13 +314,13 @@
 
     invoke-direct {v6, v7, v8, v9}, Landroid/widget/ProgressBar;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    #setter for: Lcom/tapjoy/mraid/view/MraidView;->progressBar:Landroid/widget/ProgressBar;
+    # setter for: Lcom/tapjoy/mraid/view/MraidView;->progressBar:Landroid/widget/ProgressBar;
     invoke-static {v5, v6}, Lcom/tapjoy/mraid/view/MraidView;->access$1802(Lcom/tapjoy/mraid/view/MraidView;Landroid/widget/ProgressBar;)Landroid/widget/ProgressBar;
 
     .line 1099
     iget-object v5, p0, Lcom/tapjoy/mraid/view/MraidView$5;->this$0:Lcom/tapjoy/mraid/view/MraidView;
 
-    #getter for: Lcom/tapjoy/mraid/view/MraidView;->progressBar:Landroid/widget/ProgressBar;
+    # getter for: Lcom/tapjoy/mraid/view/MraidView;->progressBar:Landroid/widget/ProgressBar;
     invoke-static {v5}, Lcom/tapjoy/mraid/view/MraidView;->access$1800(Lcom/tapjoy/mraid/view/MraidView;)Landroid/widget/ProgressBar;
 
     move-result-object v5
@@ -336,13 +335,13 @@
     invoke-direct {v4, v11, v11}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
     .line 1103
-    .local v4, progressParams:Landroid/widget/RelativeLayout$LayoutParams;
+    .local v4, "progressParams":Landroid/widget/RelativeLayout$LayoutParams;
     invoke-virtual {v4, v12}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
 
     .line 1104
     iget-object v5, p0, Lcom/tapjoy/mraid/view/MraidView$5;->this$0:Lcom/tapjoy/mraid/view/MraidView;
 
-    #getter for: Lcom/tapjoy/mraid/view/MraidView;->progressBar:Landroid/widget/ProgressBar;
+    # getter for: Lcom/tapjoy/mraid/view/MraidView;->progressBar:Landroid/widget/ProgressBar;
     invoke-static {v5}, Lcom/tapjoy/mraid/view/MraidView;->access$1800(Lcom/tapjoy/mraid/view/MraidView;)Landroid/widget/ProgressBar;
 
     move-result-object v5
@@ -352,14 +351,14 @@
     .line 1106
     iget-object v5, p0, Lcom/tapjoy/mraid/view/MraidView$5;->this$0:Lcom/tapjoy/mraid/view/MraidView;
 
-    #getter for: Lcom/tapjoy/mraid/view/MraidView;->videoRelativeLayout:Landroid/widget/RelativeLayout;
+    # getter for: Lcom/tapjoy/mraid/view/MraidView;->videoRelativeLayout:Landroid/widget/RelativeLayout;
     invoke-static {v5}, Lcom/tapjoy/mraid/view/MraidView;->access$1700(Lcom/tapjoy/mraid/view/MraidView;)Landroid/widget/RelativeLayout;
 
     move-result-object v5
 
     iget-object v6, p0, Lcom/tapjoy/mraid/view/MraidView$5;->this$0:Lcom/tapjoy/mraid/view/MraidView;
 
-    #getter for: Lcom/tapjoy/mraid/view/MraidView;->videoView:Landroid/widget/VideoView;
+    # getter for: Lcom/tapjoy/mraid/view/MraidView;->videoView:Landroid/widget/VideoView;
     invoke-static {v6}, Lcom/tapjoy/mraid/view/MraidView;->access$1600(Lcom/tapjoy/mraid/view/MraidView;)Landroid/widget/VideoView;
 
     move-result-object v6
@@ -369,14 +368,14 @@
     .line 1107
     iget-object v5, p0, Lcom/tapjoy/mraid/view/MraidView$5;->this$0:Lcom/tapjoy/mraid/view/MraidView;
 
-    #getter for: Lcom/tapjoy/mraid/view/MraidView;->videoRelativeLayout:Landroid/widget/RelativeLayout;
+    # getter for: Lcom/tapjoy/mraid/view/MraidView;->videoRelativeLayout:Landroid/widget/RelativeLayout;
     invoke-static {v5}, Lcom/tapjoy/mraid/view/MraidView;->access$1700(Lcom/tapjoy/mraid/view/MraidView;)Landroid/widget/RelativeLayout;
 
     move-result-object v5
 
     iget-object v6, p0, Lcom/tapjoy/mraid/view/MraidView$5;->this$0:Lcom/tapjoy/mraid/view/MraidView;
 
-    #getter for: Lcom/tapjoy/mraid/view/MraidView;->progressBar:Landroid/widget/ProgressBar;
+    # getter for: Lcom/tapjoy/mraid/view/MraidView;->progressBar:Landroid/widget/ProgressBar;
     invoke-static {v6}, Lcom/tapjoy/mraid/view/MraidView;->access$1800(Lcom/tapjoy/mraid/view/MraidView;)Landroid/widget/ProgressBar;
 
     move-result-object v6
@@ -390,7 +389,7 @@
 
     iget-object v6, p0, Lcom/tapjoy/mraid/view/MraidView$5;->this$0:Lcom/tapjoy/mraid/view/MraidView;
 
-    #getter for: Lcom/tapjoy/mraid/view/MraidView;->videoRelativeLayout:Landroid/widget/RelativeLayout;
+    # getter for: Lcom/tapjoy/mraid/view/MraidView;->videoRelativeLayout:Landroid/widget/RelativeLayout;
     invoke-static {v6}, Lcom/tapjoy/mraid/view/MraidView;->access$1700(Lcom/tapjoy/mraid/view/MraidView;)Landroid/widget/RelativeLayout;
 
     move-result-object v6
@@ -424,7 +423,7 @@
     .line 1117
     iget-object v5, p0, Lcom/tapjoy/mraid/view/MraidView$5;->this$0:Lcom/tapjoy/mraid/view/MraidView;
 
-    #getter for: Lcom/tapjoy/mraid/view/MraidView;->videoView:Landroid/widget/VideoView;
+    # getter for: Lcom/tapjoy/mraid/view/MraidView;->videoView:Landroid/widget/VideoView;
     invoke-static {v5}, Lcom/tapjoy/mraid/view/MraidView;->access$1600(Lcom/tapjoy/mraid/view/MraidView;)Landroid/widget/VideoView;
 
     move-result-object v5
@@ -438,7 +437,7 @@
     .line 1131
     iget-object v5, p0, Lcom/tapjoy/mraid/view/MraidView$5;->this$0:Lcom/tapjoy/mraid/view/MraidView;
 
-    #getter for: Lcom/tapjoy/mraid/view/MraidView;->videoView:Landroid/widget/VideoView;
+    # getter for: Lcom/tapjoy/mraid/view/MraidView;->videoView:Landroid/widget/VideoView;
     invoke-static {v5}, Lcom/tapjoy/mraid/view/MraidView;->access$1600(Lcom/tapjoy/mraid/view/MraidView;)Landroid/widget/VideoView;
 
     move-result-object v5
@@ -452,7 +451,7 @@
     .line 1142
     iget-object v5, p0, Lcom/tapjoy/mraid/view/MraidView$5;->this$0:Lcom/tapjoy/mraid/view/MraidView;
 
-    #getter for: Lcom/tapjoy/mraid/view/MraidView;->videoView:Landroid/widget/VideoView;
+    # getter for: Lcom/tapjoy/mraid/view/MraidView;->videoView:Landroid/widget/VideoView;
     invoke-static {v5}, Lcom/tapjoy/mraid/view/MraidView;->access$1600(Lcom/tapjoy/mraid/view/MraidView;)Landroid/widget/VideoView;
 
     move-result-object v5
@@ -466,7 +465,7 @@
     .line 1153
     iget-object v5, p0, Lcom/tapjoy/mraid/view/MraidView$5;->this$0:Lcom/tapjoy/mraid/view/MraidView;
 
-    #getter for: Lcom/tapjoy/mraid/view/MraidView;->videoView:Landroid/widget/VideoView;
+    # getter for: Lcom/tapjoy/mraid/view/MraidView;->videoView:Landroid/widget/VideoView;
     invoke-static {v5}, Lcom/tapjoy/mraid/view/MraidView;->access$1600(Lcom/tapjoy/mraid/view/MraidView;)Landroid/widget/VideoView;
 
     move-result-object v5

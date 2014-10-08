@@ -31,9 +31,6 @@
 # direct methods
 .method public constructor <init>(Lcom/vungle/sdk/VungleCache;Ljava/lang/String;Lcom/vungle/sdk/VungleCache$a;)V
     .locals 1
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const/4 v0, 0x0

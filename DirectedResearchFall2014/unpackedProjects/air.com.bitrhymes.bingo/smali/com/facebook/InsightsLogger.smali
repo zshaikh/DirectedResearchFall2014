@@ -23,9 +23,9 @@
 # direct methods
 .method private constructor <init>(Landroid/content/Context;Ljava/lang/String;Lcom/facebook/Session;)V
     .locals 1
-    .parameter "context"
-    .parameter "applicationId"
-    .parameter "session"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "applicationId"    # Ljava/lang/String;
+    .param p3, "session"    # Lcom/facebook/Session;
 
     .prologue
     .line 38
@@ -44,8 +44,8 @@
 
 .method public static newLogger(Landroid/content/Context;Ljava/lang/String;)Lcom/facebook/InsightsLogger;
     .locals 2
-    .parameter "context"
-    .parameter "clientToken"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "clientToken"    # Ljava/lang/String;
 
     .prologue
     const/4 v1, 0x0
@@ -60,9 +60,9 @@
 
 .method public static newLogger(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Lcom/facebook/InsightsLogger;
     .locals 2
-    .parameter "context"
-    .parameter "clientToken"
-    .parameter "applicationId"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "clientToken"    # Ljava/lang/String;
+    .param p2, "applicationId"    # Ljava/lang/String;
 
     .prologue
     .line 53
@@ -77,10 +77,10 @@
 
 .method public static newLogger(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Lcom/facebook/Session;)Lcom/facebook/InsightsLogger;
     .locals 1
-    .parameter "context"
-    .parameter "clientToken"
-    .parameter "applicationId"
-    .parameter "session"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "clientToken"    # Ljava/lang/String;
+    .param p2, "applicationId"    # Ljava/lang/String;
+    .param p3, "session"    # Lcom/facebook/Session;
 
     .prologue
     .line 60
@@ -95,8 +95,8 @@
 # virtual methods
 .method public logConversionPixel(Ljava/lang/String;D)V
     .locals 4
-    .parameter "pixelId"
-    .parameter "valueOfPixel"
+    .param p1, "pixelId"    # Ljava/lang/String;
+    .param p2, "valueOfPixel"    # D
 
     .prologue
     .line 82
@@ -122,7 +122,7 @@
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     .line 88
-    .local v0, parameters:Landroid/os/Bundle;
+    .local v0, "parameters":Landroid/os/Bundle;
     const-string v1, "fb_offsite_pixel_id"
 
     invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
@@ -147,8 +147,8 @@
 
 .method public logPurchase(Ljava/math/BigDecimal;Ljava/util/Currency;)V
     .locals 1
-    .parameter "purchaseAmount"
-    .parameter "currency"
+    .param p1, "purchaseAmount"    # Ljava/math/BigDecimal;
+    .param p2, "currency"    # Ljava/util/Currency;
 
     .prologue
     .line 67
@@ -162,9 +162,9 @@
 
 .method public logPurchase(Ljava/math/BigDecimal;Ljava/util/Currency;Landroid/os/Bundle;)V
     .locals 1
-    .parameter "purchaseAmount"
-    .parameter "currency"
-    .parameter "parameters"
+    .param p1, "purchaseAmount"    # Ljava/math/BigDecimal;
+    .param p2, "currency"    # Ljava/util/Currency;
+    .param p3, "parameters"    # Landroid/os/Bundle;
 
     .prologue
     .line 74

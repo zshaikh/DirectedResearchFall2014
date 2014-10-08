@@ -30,7 +30,7 @@
 # direct methods
 .method public constructor <init>(Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;)V
     .locals 3
-    .parameter "campaign"
+    .param p1, "campaign"    # Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;
 
     .prologue
     const-wide/16 v1, 0x0
@@ -112,7 +112,7 @@
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     .line 159
-    .local v0, values:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
+    .local v0, "values":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
     const-string v1, "eventValue"
 
     const-string v2, "start"
@@ -134,7 +134,7 @@
 
 .method private checkFileAndDownloadIfNeeded(Ljava/lang/String;)V
     .locals 1
-    .parameter "fileUrl"
+    .param p1, "fileUrl"    # Ljava/lang/String;
 
     .prologue
     .line 118
@@ -238,7 +238,7 @@
 
 .method private finishDownload(Ljava/lang/String;)Z
     .locals 2
-    .parameter "downloadUrl"
+    .param p1, "downloadUrl"    # Ljava/lang/String;
 
     .prologue
     .line 105
@@ -286,7 +286,7 @@
 
 .method private isFileOk(Ljava/lang/String;)Z
     .locals 12
-    .parameter "fileUrl"
+    .param p1, "fileUrl"    # Ljava/lang/String;
 
     .prologue
     const-wide/16 v10, 0x0
@@ -309,7 +309,7 @@
     move-result-wide v2
 
     .line 134
-    .local v2, localSize:J
+    .local v2, "localSize":J
     iget-object v4, p0, Lcom/fusepowered/a1/campaign/ApplifierImpactCampaignHandler;->_campaign:Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;
 
     invoke-virtual {v4}, Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;->getVideoFileExpectedSize()J
@@ -317,7 +317,7 @@
     move-result-wide v0
 
     .line 136
-    .local v0, expectedSize:J
+    .local v0, "expectedSize":J
     new-instance v4, Ljava/lang/StringBuilder;
 
     const-string v5, "isFileOk: localSize="
@@ -394,7 +394,7 @@
 
 .method private removeDownload(Ljava/lang/String;)V
     .locals 3
-    .parameter "downloadUrl"
+    .param p1, "downloadUrl"    # Ljava/lang/String;
 
     .prologue
     .line 166
@@ -412,10 +412,10 @@
     const/4 v1, -0x1
 
     .line 170
-    .local v1, removeIndex:I
+    .local v1, "removeIndex":I
     const/4 v0, 0x0
 
-    .local v0, i:I
+    .local v0, "i":I
     :goto_1
     iget-object v2, p0, Lcom/fusepowered/a1/campaign/ApplifierImpactCampaignHandler;->_downloadList:Ljava/util/ArrayList;
 
@@ -617,7 +617,7 @@
 
 .method public onFileDownloadCancelled(Ljava/lang/String;)V
     .locals 3
-    .parameter "downloadUrl"
+    .param p1, "downloadUrl"    # Ljava/lang/String;
 
     .prologue
     .line 62
@@ -656,7 +656,7 @@
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     .line 67
-    .local v0, values:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
+    .local v0, "values":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
     const-string v1, "eventValue"
 
     const-string v2, "failed"
@@ -669,14 +669,14 @@
     invoke-static {v1, v0}, Lcom/fusepowered/a1/webapp/ApplifierImpactInstrumentation;->gaInstrumentationVideoCaching(Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;Ljava/util/Map;)V
 
     .line 70
-    .end local v0           #values:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
+    .end local v0    # "values":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
     :cond_0
     return-void
 .end method
 
 .method public onFileDownloadCompleted(Ljava/lang/String;)V
     .locals 4
-    .parameter "downloadUrl"
+    .param p1, "downloadUrl"    # Ljava/lang/String;
 
     .prologue
     .line 49
@@ -715,7 +715,7 @@
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     .line 54
-    .local v0, values:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
+    .local v0, "values":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
     const-string v1, "eventValue"
 
     const-string v2, "completed"
@@ -741,14 +741,14 @@
     invoke-static {v1, v0}, Lcom/fusepowered/a1/webapp/ApplifierImpactInstrumentation;->gaInstrumentationVideoCaching(Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;Ljava/util/Map;)V
 
     .line 58
-    .end local v0           #values:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
+    .end local v0    # "values":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
     :cond_0
     return-void
 .end method
 
 .method public setListener(Lcom/fusepowered/a1/campaign/IApplifierImpactCampaignHandlerListener;)V
     .locals 0
-    .parameter "listener"
+    .param p1, "listener"    # Lcom/fusepowered/a1/campaign/IApplifierImpactCampaignHandlerListener;
 
     .prologue
     .line 44

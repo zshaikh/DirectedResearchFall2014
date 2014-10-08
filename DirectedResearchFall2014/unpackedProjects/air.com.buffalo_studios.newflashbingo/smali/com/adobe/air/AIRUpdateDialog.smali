@@ -41,7 +41,6 @@
 
 .method static synthetic access$000(Lcom/adobe/air/AIRUpdateDialog;)Lcom/adobe/air/AndroidActivityWrapper;
     .locals 1
-    .parameter
 
     .prologue
     .line 10
@@ -54,7 +53,6 @@
 # virtual methods
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 4
-    .parameter
 
     .prologue
     .line 19

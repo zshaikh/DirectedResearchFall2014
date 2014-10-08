@@ -48,7 +48,6 @@
 
 .method private constructor <init>(Ljava/lang/Class;)V
     .locals 0
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -59,7 +58,7 @@
 
     .prologue
     .line 81
-    .local p1, nominalType:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p1, "nominalType":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-direct {p0, p1}, Lcom/flurry/org/codehaus/jackson/map/deser/std/StdKeyDeserializer;-><init>(Ljava/lang/Class;)V
 
     return-void
@@ -67,7 +66,6 @@
 
 .method public static forType(Ljava/lang/Class;)Lcom/flurry/org/codehaus/jackson/map/deser/std/StdKeyDeserializer$StringKD;
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -79,7 +77,7 @@
 
     .prologue
     .line 85
-    .local p0, nominalType:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p0, "nominalType":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const-class v0, Ljava/lang/String;
 
     if-ne p0, v0, :cond_0
@@ -115,8 +113,8 @@
 # virtual methods
 .method public bridge synthetic _parse(Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;)Ljava/lang/Object;
     .locals 1
-    .parameter "x0"
-    .parameter "x1"
+    .param p1, "x0"    # Ljava/lang/String;
+    .param p2, "x1"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/Exception;
@@ -134,8 +132,8 @@
 
 .method public _parse(Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;)Ljava/lang/String;
     .locals 0
-    .parameter "key"
-    .parameter "ctxt"
+    .param p1, "key"    # Ljava/lang/String;
+    .param p2, "ctxt"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lcom/flurry/org/codehaus/jackson/map/JsonMappingException;

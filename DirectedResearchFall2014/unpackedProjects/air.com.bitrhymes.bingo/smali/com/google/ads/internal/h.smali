@@ -36,8 +36,6 @@
 
 .method private constructor <init>(Lcom/google/ads/AdSize;Z)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 28
@@ -55,7 +53,6 @@
 
 .method public static a(Lcom/google/ads/AdSize;)Lcom/google/ads/internal/h;
     .locals 1
-    .parameter
 
     .prologue
     .line 56
@@ -70,8 +67,6 @@
 
 .method public static a(Lcom/google/ads/AdSize;Landroid/content/Context;)Lcom/google/ads/internal/h;
     .locals 3
-    .parameter
-    .parameter
 
     .prologue
     .line 43
@@ -92,7 +87,6 @@
 # virtual methods
 .method public a(Z)V
     .locals 0
-    .parameter
 
     .prologue
     .line 85
@@ -114,7 +108,6 @@
 
 .method public b(Lcom/google/ads/AdSize;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 79

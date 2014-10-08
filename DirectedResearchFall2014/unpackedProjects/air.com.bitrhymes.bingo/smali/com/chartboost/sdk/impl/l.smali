@@ -33,8 +33,6 @@
 
 .method static synthetic a(Landroid/app/Application;Ljava/lang/String;)Ljava/lang/String;
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 139
@@ -87,8 +85,6 @@
 
 .method private static b(Landroid/app/Application;Ljava/lang/String;)Ljava/lang/String;
     .locals 4
-    .parameter
-    .parameter
 
     .prologue
     const-string v3, "; "

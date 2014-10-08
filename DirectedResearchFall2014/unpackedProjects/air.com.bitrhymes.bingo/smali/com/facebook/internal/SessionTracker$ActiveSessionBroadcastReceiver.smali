@@ -21,7 +21,6 @@
 # direct methods
 .method private constructor <init>(Lcom/facebook/internal/SessionTracker;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 208
@@ -34,8 +33,6 @@
 
 .method synthetic constructor <init>(Lcom/facebook/internal/SessionTracker;Lcom/facebook/internal/SessionTracker$ActiveSessionBroadcastReceiver;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 208
@@ -48,8 +45,8 @@
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 3
-    .parameter "context"
-    .parameter "intent"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
     .line 211
@@ -71,13 +68,13 @@
     move-result-object v0
 
     .line 213
-    .local v0, session:Lcom/facebook/Session;
+    .local v0, "session":Lcom/facebook/Session;
     if-eqz v0, :cond_0
 
     .line 214
     iget-object v1, p0, Lcom/facebook/internal/SessionTracker$ActiveSessionBroadcastReceiver;->this$0:Lcom/facebook/internal/SessionTracker;
 
-    #getter for: Lcom/facebook/internal/SessionTracker;->callback:Lcom/facebook/Session$StatusCallback;
+    # getter for: Lcom/facebook/internal/SessionTracker;->callback:Lcom/facebook/Session$StatusCallback;
     invoke-static {v1}, Lcom/facebook/internal/SessionTracker;->access$0(Lcom/facebook/internal/SessionTracker;)Lcom/facebook/Session$StatusCallback;
 
     move-result-object v1
@@ -85,7 +82,7 @@
     invoke-virtual {v0, v1}, Lcom/facebook/Session;->addCallback(Lcom/facebook/Session$StatusCallback;)V
 
     .line 217
-    .end local v0           #session:Lcom/facebook/Session;
+    .end local v0    # "session":Lcom/facebook/Session;
     :cond_0
     return-void
 .end method

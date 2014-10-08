@@ -155,7 +155,7 @@
     .prologue
     const/4 v6, 0x1
 
-    const/high16 v5, 0x3f80
+    const/high16 v5, 0x3f800000
 
     const/4 v4, 0x0
 
@@ -390,7 +390,7 @@
 
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 5
-    .parameter "applicationContext"
+    .param p1, "applicationContext"    # Landroid/content/Context;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lcom/tapjoy/TapjoyException;
@@ -545,7 +545,7 @@
 
 .method static synthetic access$000(Lcom/tapjoy/TapjoyConnectCore;)J
     .locals 2
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/tapjoy/TapjoyConnectCore;
 
     .prologue
     .line 44
@@ -556,8 +556,8 @@
 
 .method static synthetic access$014(Lcom/tapjoy/TapjoyConnectCore;J)J
     .locals 2
-    .parameter "x0"
-    .parameter "x1"
+    .param p0, "x0"    # Lcom/tapjoy/TapjoyConnectCore;
+    .param p1, "x1"    # J
 
     .prologue
     .line 44
@@ -602,7 +602,7 @@
 
 .method static synthetic access$400(Ljava/lang/String;)Z
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Ljava/lang/String;
 
     .prologue
     .line 44
@@ -635,8 +635,8 @@
 
 .method static synthetic access$800(JLjava/lang/String;)Ljava/lang/String;
     .locals 1
-    .parameter "x0"
-    .parameter "x1"
+    .param p0, "x0"    # J
+    .param p2, "x1"    # Ljava/lang/String;
 
     .prologue
     .line 44
@@ -649,8 +649,8 @@
 
 .method static synthetic access$900(Lcom/tapjoy/TapjoyConnectCore;Ljava/lang/String;)Z
     .locals 1
-    .parameter "x0"
-    .parameter "x1"
+    .param p0, "x0"    # Lcom/tapjoy/TapjoyConnectCore;
+    .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
     .line 44
@@ -663,7 +663,7 @@
 
 .method private checkForDependency(Landroid/content/pm/ActivityInfo;)V
     .locals 6
-    .parameter "activityInfo"
+    .param p1, "activityInfo"    # Landroid/content/pm/ActivityInfo;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lcom/tapjoy/TapjoyIntegrationException;
@@ -692,7 +692,7 @@
     move-result v1
 
     .line 940
-    .local v1, index:I
+    .local v1, "index":I
     :try_start_0
     sget-object v3, Lcom/tapjoy/TapjoyConnectCore;->dependencyClassesRequired:Ljava/util/Vector;
 
@@ -700,7 +700,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/tapjoy/TapjoyConnectCore;
     check-cast p0, Ljava/lang/String;
 
     invoke-static {p0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
@@ -711,7 +711,7 @@
     invoke-direct {v2}, Ljava/util/Vector;-><init>()V
 
     .line 945
-    .local v2, missingConfigChanges:Ljava/util/Vector;,"Ljava/util/Vector<Ljava/lang/String;>;"
+    .local v2, "missingConfigChanges":Ljava/util/Vector;, "Ljava/util/Vector<Ljava/lang/String;>;"
     iget v3, p1, Landroid/content/pm/ActivityInfo;->configChanges:I
 
     and-int/lit16 v3, v3, 0x80
@@ -822,14 +822,14 @@
     .catch Ljava/lang/ClassNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 969
-    .end local v2           #missingConfigChanges:Ljava/util/Vector;,"Ljava/util/Vector<Ljava/lang/String;>;"
+    .end local v2    # "missingConfigChanges":Ljava/util/Vector;, "Ljava/util/Vector<Ljava/lang/String;>;"
     :catch_0
     move-exception v3
 
     move-object v0, v3
 
     .line 971
-    .local v0, e:Ljava/lang/ClassNotFoundException;
+    .local v0, "e":Ljava/lang/ClassNotFoundException;
     new-instance v3, Lcom/tapjoy/TapjoyIntegrationException;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -863,8 +863,8 @@
     throw v3
 
     .line 960
-    .end local v0           #e:Ljava/lang/ClassNotFoundException;
-    .restart local v2       #missingConfigChanges:Ljava/util/Vector;,"Ljava/util/Vector<Ljava/lang/String;>;"
+    .end local v0    # "e":Ljava/lang/ClassNotFoundException;
+    .restart local v2    # "missingConfigChanges":Ljava/util/Vector;, "Ljava/util/Vector<Ljava/lang/String;>;"
     :cond_3
     :try_start_1
     new-instance v3, Lcom/tapjoy/TapjoyIntegrationException;
@@ -975,8 +975,8 @@
     .catch Ljava/lang/ClassNotFoundException; {:try_start_1 .. :try_end_1} :catch_0
 
     .line 974
-    .end local v1           #index:I
-    .end local v2           #missingConfigChanges:Ljava/util/Vector;,"Ljava/util/Vector<Ljava/lang/String;>;"
+    .end local v1    # "index":I
+    .end local v2    # "missingConfigChanges":Ljava/util/Vector;, "Ljava/util/Vector<Ljava/lang/String;>;"
     :cond_6
     return-void
 .end method
@@ -1009,7 +1009,7 @@
     move-result-object v0
 
     .line 754
-    .local v0, appInfo:Landroid/content/pm/ApplicationInfo;
+    .local v0, "appInfo":Landroid/content/pm/ApplicationInfo;
     if-eqz v0, :cond_3
 
     iget-object v7, v0, Landroid/content/pm/ApplicationInfo;->metaData:Landroid/os/Bundle;
@@ -1019,20 +1019,20 @@
     .line 756
     sget-object v1, Lcom/tapjoy/TapjoyConnectFlag;->FLAG_ARRAY:[Ljava/lang/String;
 
-    .local v1, arr$:[Ljava/lang/String;
+    .local v1, "arr$":[Ljava/lang/String;
     array-length v5, v1
 
-    .local v5, len$:I
+    .local v5, "len$":I
     const/4 v3, 0x0
 
-    .local v3, i$:I
+    .local v3, "i$":I
     :goto_0
     if-ge v3, v5, :cond_1
 
     aget-object v4, v1, v3
 
     .line 758
-    .local v4, key:Ljava/lang/String;
+    .local v4, "key":Ljava/lang/String;
     iget-object v7, v0, Landroid/content/pm/ApplicationInfo;->metaData:Landroid/os/Bundle;
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -1058,7 +1058,7 @@
     move-result-object v6
 
     .line 759
-    .local v6, value:Ljava/lang/String;
+    .local v6, "value":Ljava/lang/String;
     if-eqz v6, :cond_0
 
     .line 761
@@ -1106,8 +1106,8 @@
     goto :goto_0
 
     .line 765
-    .end local v4           #key:Ljava/lang/String;
-    .end local v6           #value:Ljava/lang/String;
+    .end local v4    # "key":Ljava/lang/String;
+    .end local v6    # "value":Ljava/lang/String;
     :cond_1
     const-string v7, "TapjoyConnect"
 
@@ -1116,16 +1116,16 @@
     invoke-static {v7, v8}, Lcom/tapjoy/TapjoyLog;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 777
-    .end local v0           #appInfo:Landroid/content/pm/ApplicationInfo;
-    .end local v1           #arr$:[Ljava/lang/String;
-    .end local v3           #i$:I
-    .end local v5           #len$:I
+    .end local v0    # "appInfo":Landroid/content/pm/ApplicationInfo;
+    .end local v1    # "arr$":[Ljava/lang/String;
+    .end local v3    # "i$":I
+    .end local v5    # "len$":I
     :cond_2
     :goto_1
     return-void
 
     .line 769
-    .restart local v0       #appInfo:Landroid/content/pm/ApplicationInfo;
+    .restart local v0    # "appInfo":Landroid/content/pm/ApplicationInfo;
     :cond_3
     const-string v7, "TapjoyConnect"
 
@@ -1138,14 +1138,14 @@
     goto :goto_1
 
     .line 773
-    .end local v0           #appInfo:Landroid/content/pm/ApplicationInfo;
+    .end local v0    # "appInfo":Landroid/content/pm/ApplicationInfo;
     :catch_0
     move-exception v7
 
     move-object v2, v7
 
     .line 775
-    .local v2, e:Ljava/lang/Exception;
+    .local v2, "e":Ljava/lang/Exception;
     const-string v7, "TapjoyConnect"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -1196,23 +1196,23 @@
     invoke-direct {v3}, Ljava/util/Vector;-><init>()V
 
     .line 866
-    .local v3, missingPermissions:Ljava/util/Vector;,"Ljava/util/Vector<Ljava/lang/String;>;"
+    .local v3, "missingPermissions":Ljava/util/Vector;, "Ljava/util/Vector<Ljava/lang/String;>;"
     sget-object v0, Lcom/tapjoy/TapjoyConstants;->dependencyPermissions:[Ljava/lang/String;
 
-    .local v0, arr$:[Ljava/lang/String;
+    .local v0, "arr$":[Ljava/lang/String;
     array-length v2, v0
 
-    .local v2, len$:I
+    .local v2, "len$":I
     const/4 v1, 0x0
 
-    .local v1, i$:I
+    .local v1, "i$":I
     :goto_0
     if-ge v1, v2, :cond_1
 
     aget-object v4, v0, v1
 
     .line 868
-    .local v4, permission:Ljava/lang/String;
+    .local v4, "permission":Ljava/lang/String;
     invoke-direct {p0, v4}, Lcom/tapjoy/TapjoyConnectCore;->isPermissionGranted(Ljava/lang/String;)Z
 
     move-result v5
@@ -1229,7 +1229,7 @@
     goto :goto_0
 
     .line 874
-    .end local v4           #permission:Ljava/lang/String;
+    .end local v4    # "permission":Ljava/lang/String;
     :cond_1
     invoke-virtual {v3}, Ljava/util/Vector;->size()I
 
@@ -1321,11 +1321,11 @@
     :cond_3
     new-instance v3, Ljava/util/Vector;
 
-    .end local v3           #missingPermissions:Ljava/util/Vector;,"Ljava/util/Vector<Ljava/lang/String;>;"
+    .end local v3    # "missingPermissions":Ljava/util/Vector;, "Ljava/util/Vector<Ljava/lang/String;>;"
     invoke-direct {v3}, Ljava/util/Vector;-><init>()V
 
     .line 884
-    .restart local v3       #missingPermissions:Ljava/util/Vector;,"Ljava/util/Vector<Ljava/lang/String;>;"
+    .restart local v3    # "missingPermissions":Ljava/util/Vector;, "Ljava/util/Vector<Ljava/lang/String;>;"
     sget-object v0, Lcom/tapjoy/TapjoyConstants;->optionalPermissions:[Ljava/lang/String;
 
     array-length v2, v0
@@ -1338,7 +1338,7 @@
     aget-object v4, v0, v1
 
     .line 886
-    .restart local v4       #permission:Ljava/lang/String;
+    .restart local v4    # "permission":Ljava/lang/String;
     invoke-direct {p0, v4}, Lcom/tapjoy/TapjoyConnectCore;->isPermissionGranted(Ljava/lang/String;)Z
 
     move-result v5
@@ -1355,7 +1355,7 @@
     goto :goto_1
 
     .line 892
-    .end local v4           #permission:Ljava/lang/String;
+    .end local v4    # "permission":Ljava/lang/String;
     :cond_5
     invoke-virtual {v3}, Ljava/util/Vector;->size()I
 
@@ -1457,7 +1457,7 @@
     move-result-object v3
 
     .line 789
-    .local v3, resources:Landroid/content/res/Resources;
+    .local v3, "resources":Landroid/content/res/Resources;
     const-string v4, "raw/tapjoy_config"
 
     const/4 v5, 0x0
@@ -1473,13 +1473,13 @@
     move-result v2
 
     .line 790
-    .local v2, resId:I
+    .local v2, "resId":I
     new-instance v1, Ljava/util/Properties;
 
     invoke-direct {v1}, Ljava/util/Properties;-><init>()V
 
     .line 793
-    .local v1, properties:Ljava/util/Properties;
+    .local v1, "properties":Ljava/util/Properties;
     :try_start_0
     sget-object v4, Lcom/tapjoy/TapjoyConnectCore;->context:Landroid/content/Context;
 
@@ -1509,7 +1509,7 @@
     move-object v0, v4
 
     .line 797
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v4, "TapjoyConnect"
 
     const-string v5, "No raw/tapjoy_config file present."
@@ -1613,7 +1613,7 @@
     const/4 v1, 0x0
 
     .line 1493
-    .local v1, id:Ljava/lang/String;
+    .local v1, "id":Ljava/lang/String;
     const-string v2, "TapjoyConnect"
 
     const-string v2, "generating sessionID..."
@@ -1678,7 +1678,7 @@
     move-object v0, v2
 
     .line 1502
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v2, "TapjoyConnect"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1730,9 +1730,9 @@
 
 .method public static getAwardPointsVerifier(JILjava/lang/String;)Ljava/lang/String;
     .locals 5
-    .parameter "time"
-    .parameter "amount"
-    .parameter "guid"
+    .param p0, "time"    # J
+    .param p2, "amount"    # I
+    .param p3, "guid"    # Ljava/lang/String;
 
     .prologue
     const-string v2, ":"
@@ -1741,7 +1741,7 @@
     const-string v1, ""
 
     .line 1586
-    .local v1, verifier:Ljava/lang/String;
+    .local v1, "verifier":Ljava/lang/String;
     :try_start_0
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -1830,7 +1830,7 @@
     move-object v0, v2
 
     .line 1590
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v2, "TapjoyConnect"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1872,14 +1872,14 @@
 
 .method public static getConnectFlagValue(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
-    .parameter "key"
+    .param p0, "key"    # Ljava/lang/String;
 
     .prologue
     .line 2017
     const-string v0, ""
 
     .line 2019
-    .local v0, flag:Ljava/lang/String;
+    .local v0, "flag":Ljava/lang/String;
     sget-object v1, Lcom/tapjoy/TapjoyConnectCore;->connectFlags:Ljava/util/Hashtable;
 
     if-eqz v1, :cond_0
@@ -1891,11 +1891,11 @@
 
     move-result-object v0
 
-    .end local v0           #flag:Ljava/lang/String;
+    .end local v0    # "flag":Ljava/lang/String;
     check-cast v0, Ljava/lang/String;
 
     .line 2025
-    .restart local v0       #flag:Ljava/lang/String;
+    .restart local v0    # "flag":Ljava/lang/String;
     :cond_0
     if-nez v0, :cond_1
 
@@ -1917,7 +1917,7 @@
     const-string v2, ""
 
     .line 1312
-    .local v2, subType:Ljava/lang/String;
+    .local v2, "subType":Ljava/lang/String;
     :try_start_0
     sget-object v3, Lcom/tapjoy/TapjoyConnectCore;->context:Landroid/content/Context;
 
@@ -1930,7 +1930,7 @@
     check-cast v0, Landroid/net/ConnectivityManager;
 
     .line 1315
-    .local v0, connectivityManager:Landroid/net/ConnectivityManager;
+    .local v0, "connectivityManager":Landroid/net/ConnectivityManager;
     if-eqz v0, :cond_0
 
     .line 1317
@@ -1968,7 +1968,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 1326
-    .end local v0           #connectivityManager:Landroid/net/ConnectivityManager;
+    .end local v0    # "connectivityManager":Landroid/net/ConnectivityManager;
     :cond_0
     :goto_0
     return-object v2
@@ -1980,7 +1980,7 @@
     move-object v1, v3
 
     .line 1323
-    .local v1, e:Ljava/lang/Exception;
+    .local v1, "e":Ljava/lang/Exception;
     const-string v3, "TapjoyConnect"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -2020,7 +2020,7 @@
     const-string v2, ""
 
     .line 1271
-    .local v2, type:Ljava/lang/String;
+    .local v2, "type":Ljava/lang/String;
     :try_start_0
     sget-object v3, Lcom/tapjoy/TapjoyConnectCore;->context:Landroid/content/Context;
 
@@ -2033,7 +2033,7 @@
     check-cast v0, Landroid/net/ConnectivityManager;
 
     .line 1274
-    .local v0, connectivityManager:Landroid/net/ConnectivityManager;
+    .local v0, "connectivityManager":Landroid/net/ConnectivityManager;
     if-eqz v0, :cond_0
 
     invoke-virtual {v0}, Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;
@@ -2112,13 +2112,13 @@
     invoke-static {v3, v4}, Lcom/tapjoy/TapjoyLog;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 1296
-    .end local v0           #connectivityManager:Landroid/net/ConnectivityManager;
+    .end local v0    # "connectivityManager":Landroid/net/ConnectivityManager;
     :cond_0
     :goto_1
     return-object v2
 
     .line 1280
-    .restart local v0       #connectivityManager:Landroid/net/ConnectivityManager;
+    .restart local v0    # "connectivityManager":Landroid/net/ConnectivityManager;
     :sswitch_0
     const-string v2, "wifi"
     :try_end_0
@@ -2128,14 +2128,14 @@
     goto :goto_0
 
     .line 1291
-    .end local v0           #connectivityManager:Landroid/net/ConnectivityManager;
+    .end local v0    # "connectivityManager":Landroid/net/ConnectivityManager;
     :catch_0
     move-exception v3
 
     move-object v1, v3
 
     .line 1293
-    .local v1, e:Ljava/lang/Exception;
+    .local v1, "e":Ljava/lang/Exception;
     const-string v3, "TapjoyConnect"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -2222,7 +2222,7 @@
     move-result-object v0
 
     .line 257
-    .local v0, params:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v0, "params":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v1, "app_id"
 
     sget-object v2, Lcom/tapjoy/TapjoyConnectCore;->appID:Ljava/lang/String;
@@ -2294,7 +2294,7 @@
     move-result-object v0
 
     .line 1795
-    .local v0, settings:Landroid/content/SharedPreferences;
+    .local v0, "settings":Landroid/content/SharedPreferences;
     invoke-interface {v0}, Landroid/content/SharedPreferences;->getAll()Ljava/util/Map;
 
     move-result-object v1
@@ -2304,8 +2304,8 @@
 
 .method private static getPackageNamesVerifier(JLjava/lang/String;)Ljava/lang/String;
     .locals 5
-    .parameter "time"
-    .parameter "packageNames"
+    .param p0, "time"    # J
+    .param p2, "packageNames"    # Ljava/lang/String;
 
     .prologue
     const-string v2, ":"
@@ -2314,7 +2314,7 @@
     const-string v1, ""
 
     .line 1611
-    .local v1, verifier:Ljava/lang/String;
+    .local v1, "verifier":Ljava/lang/String;
     :try_start_0
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -2391,7 +2391,7 @@
     move-object v0, v2
 
     .line 1615
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v2, "TapjoyConnect"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -2447,7 +2447,7 @@
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     .line 273
-    .local v0, params:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v0, "params":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v1, "sha_2_udid"
 
     invoke-static {v2}, Lcom/tapjoy/TapjoyConnectCore;->getConnectFlagValue(Ljava/lang/String;)Ljava/lang/String;
@@ -2868,7 +2868,7 @@
     const/4 v1, 0x0
 
     .line 2067
-    .local v1, sha1MacAddress:Ljava/lang/String;
+    .local v1, "sha1MacAddress":Ljava/lang/String;
     :try_start_0
     sget-object v2, Lcom/tapjoy/TapjoyConnectCore;->macAddress:Ljava/lang/String;
 
@@ -2889,7 +2889,7 @@
     move-object v0, v2
 
     .line 2071
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v2, "TapjoyConnect"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -2951,11 +2951,11 @@
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     .line 1336
-    .local v0, params:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v0, "params":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v3, ""
 
     .line 1339
-    .local v3, verifier:Ljava/lang/String;
+    .local v3, "verifier":Ljava/lang/String;
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v4
@@ -2965,7 +2965,7 @@
     div-long v1, v4, v6
 
     .line 1340
-    .local v1, time:J
+    .local v1, "time":J
     invoke-static {v1, v2}, Lcom/tapjoy/TapjoyConnectCore;->getVerifier(J)Ljava/lang/String;
 
     move-result-object v3
@@ -3008,7 +3008,7 @@
     move-result-object v0
 
     .line 243
-    .local v0, params:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v0, "params":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-static {}, Lcom/tapjoy/TapjoyConnectCore;->getTimeStampAndVerifierParams()Ljava/util/Map;
 
     move-result-object v1
@@ -3031,7 +3031,7 @@
 
 .method private static getVerifier(J)Ljava/lang/String;
     .locals 5
-    .parameter "time"
+    .param p0, "time"    # J
 
     .prologue
     const-string v2, ":"
@@ -3040,7 +3040,7 @@
     const-string v1, ""
 
     .line 1561
-    .local v1, verifier:Ljava/lang/String;
+    .local v1, "verifier":Ljava/lang/String;
     :try_start_0
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -3109,7 +3109,7 @@
     move-object v0, v2
 
     .line 1565
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v2, "TapjoyConnect"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -3237,7 +3237,7 @@
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     .line 1204
-    .local v0, params:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v0, "params":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     sget-boolean v1, Lcom/tapjoy/TapjoyConnectCore;->videoEnabled:Z
 
     if-eqz v1, :cond_1
@@ -3301,7 +3301,7 @@
 
 .method private static handleConnectResponse(Ljava/lang/String;)Z
     .locals 15
-    .parameter "response"
+    .param p0, "response"    # Ljava/lang/String;
 
     .prologue
     const/4 v13, 0x0
@@ -3318,7 +3318,7 @@
     move-result-object v5
 
     .line 1020
-    .local v5, document:Lorg/w3c/dom/Document;
+    .local v5, "document":Lorg/w3c/dom/Document;
     if-eqz v5, :cond_5
 
     .line 1022
@@ -3333,7 +3333,7 @@
     move-result-object v8
 
     .line 1025
-    .local v8, nodeValue:Ljava/lang/String;
+    .local v8, "nodeValue":Ljava/lang/String;
     if-eqz v8, :cond_3
 
     invoke-virtual {v8}, Ljava/lang/String;->length()I
@@ -3346,21 +3346,21 @@
     move-object v4, v8
 
     .line 1028
-    .local v4, data:Ljava/lang/String;
+    .local v4, "data":Ljava/lang/String;
     new-instance v0, Ljava/util/Vector;
 
     invoke-direct {v0}, Ljava/util/Vector;-><init>()V
 
     .line 1030
-    .local v0, allPackageNames:Ljava/util/Vector;,"Ljava/util/Vector<Ljava/lang/String;>;"
+    .local v0, "allPackageNames":Ljava/util/Vector;, "Ljava/util/Vector<Ljava/lang/String;>;"
     const/4 v3, 0x0
 
     .line 1031
-    .local v3, current:I
+    .local v3, "current":I
     const/4 v7, -0x1
 
     .line 1035
-    .local v7, index:I
+    .local v7, "index":I
     :goto_0
     const/16 v9, 0x2c
 
@@ -3428,12 +3428,12 @@
     move-result-object v2
 
     .line 1058
-    .local v2, applications:Ljava/util/List;,"Ljava/util/List<Landroid/content/pm/ApplicationInfo;>;"
+    .local v2, "applications":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ApplicationInfo;>;"
     invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v6
 
-    .local v6, i$:Ljava/util/Iterator;
+    .local v6, "i$":Ljava/util/Iterator;
     :cond_0
     :goto_1
     invoke-interface {v6}, Ljava/util/Iterator;->hasNext()Z
@@ -3449,7 +3449,7 @@
     check-cast v1, Landroid/content/pm/ApplicationInfo;
 
     .line 1061
-    .local v1, appInfo:Landroid/content/pm/ApplicationInfo;
+    .local v1, "appInfo":Landroid/content/pm/ApplicationInfo;
     iget v9, v1, Landroid/content/pm/ApplicationInfo;->flags:I
 
     and-int/lit8 v9, v9, 0x1
@@ -3549,9 +3549,9 @@
     goto :goto_1
 
     .line 1049
-    .end local v1           #appInfo:Landroid/content/pm/ApplicationInfo;
-    .end local v2           #applications:Ljava/util/List;,"Ljava/util/List<Landroid/content/pm/ApplicationInfo;>;"
-    .end local v6           #i$:Ljava/util/Iterator;
+    .end local v1    # "appInfo":Landroid/content/pm/ApplicationInfo;
+    .end local v2    # "applications":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ApplicationInfo;>;"
+    .end local v6    # "i$":Ljava/util/Iterator;
     :cond_2
     const-string v9, "TapjoyConnect"
 
@@ -3600,10 +3600,10 @@
     goto/16 :goto_0
 
     .line 1082
-    .end local v0           #allPackageNames:Ljava/util/Vector;,"Ljava/util/Vector<Ljava/lang/String;>;"
-    .end local v3           #current:I
-    .end local v4           #data:Ljava/lang/String;
-    .end local v7           #index:I
+    .end local v0    # "allPackageNames":Ljava/util/Vector;, "Ljava/util/Vector<Ljava/lang/String;>;"
+    .end local v3    # "current":I
+    .end local v4    # "data":Ljava/lang/String;
+    .end local v7    # "index":I
     :cond_3
     const-string v9, "Success"
 
@@ -3629,18 +3629,18 @@
     move v9, v11
 
     .line 1095
-    .end local v8           #nodeValue:Ljava/lang/String;
+    .end local v8    # "nodeValue":Ljava/lang/String;
     :goto_2
     return v9
 
-    .restart local v8       #nodeValue:Ljava/lang/String;
+    .restart local v8    # "nodeValue":Ljava/lang/String;
     :cond_4
     move v9, v13
 
     .line 1091
     goto :goto_2
 
-    .end local v8           #nodeValue:Ljava/lang/String;
+    .end local v8    # "nodeValue":Ljava/lang/String;
     :cond_5
     move v9, v11
 
@@ -3650,7 +3650,7 @@
 
 .method private handlePayPerActionResponse(Ljava/lang/String;)Z
     .locals 4
-    .parameter "response"
+    .param p1, "response"    # Ljava/lang/String;
 
     .prologue
     const-string v3, "TapjoyConnect"
@@ -3661,7 +3661,7 @@
     move-result-object v0
 
     .line 1109
-    .local v0, document:Lorg/w3c/dom/Document;
+    .local v0, "document":Lorg/w3c/dom/Document;
     if-eqz v0, :cond_1
 
     .line 1111
@@ -3676,7 +3676,7 @@
     move-result-object v1
 
     .line 1114
-    .local v1, nodeValue:Ljava/lang/String;
+    .local v1, "nodeValue":Ljava/lang/String;
     if-eqz v1, :cond_0
 
     const-string v2, "true"
@@ -3698,12 +3698,12 @@
     const/4 v2, 0x1
 
     .line 1125
-    .end local v1           #nodeValue:Ljava/lang/String;
+    .end local v1    # "nodeValue":Ljava/lang/String;
     :goto_0
     return v2
 
     .line 1121
-    .restart local v1       #nodeValue:Ljava/lang/String;
+    .restart local v1    # "nodeValue":Ljava/lang/String;
     :cond_0
     const-string v2, "TapjoyConnect"
 
@@ -3712,7 +3712,7 @@
     invoke-static {v3, v2}, Lcom/tapjoy/TapjoyLog;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 1125
-    .end local v1           #nodeValue:Ljava/lang/String;
+    .end local v1    # "nodeValue":Ljava/lang/String;
     :cond_1
     const/4 v2, 0x0
 
@@ -3812,7 +3812,7 @@
     move-result-object v1
 
     .line 367
-    .local v1, hostURL:Ljava/lang/String;
+    .local v1, "hostURL":Ljava/lang/String;
     const-string v4, "//"
 
     invoke-virtual {v1, v9}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
@@ -3922,7 +3922,7 @@
     move-result-object v3
 
     .line 374
-    .local v3, params:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v3, "params":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-interface {v3}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object v4
@@ -3931,7 +3931,7 @@
 
     move-result-object v2
 
-    .local v2, i$:Ljava/util/Iterator;
+    .local v2, "i$":Ljava/util/Iterator;
     :goto_1
     invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
@@ -3946,7 +3946,7 @@
     check-cast v0, Ljava/util/Map$Entry;
 
     .line 376
-    .local v0, entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v0, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v4, "TapjoyConnect"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -3988,9 +3988,9 @@
     goto :goto_1
 
     .line 369
-    .end local v0           #entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
-    .end local v2           #i$:Ljava/util/Iterator;
-    .end local v3           #params:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .end local v0    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
+    .end local v2    # "i$":Ljava/util/Iterator;
+    .end local v3    # "params":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     :cond_2
     const-string v5, ""
 
@@ -3999,8 +3999,8 @@
     goto :goto_0
 
     .line 379
-    .restart local v2       #i$:Ljava/util/Iterator;
-    .restart local v3       #params:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .restart local v2    # "i$":Ljava/util/Iterator;
+    .restart local v3    # "params":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     :cond_3
     sget-object v4, Lcom/tapjoy/TapjoyConnectCore;->connectFlags:Ljava/util/Hashtable;
 
@@ -4046,7 +4046,7 @@
     move-result-object v4
 
     .line 832
-    .local v4, packageActivityInfo:Landroid/content/pm/PackageInfo;
+    .local v4, "packageActivityInfo":Landroid/content/pm/PackageInfo;
     iget-object v5, v4, Landroid/content/pm/PackageInfo;->activities:[Landroid/content/pm/ActivityInfo;
 
     invoke-static {v5}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
@@ -4054,7 +4054,7 @@
     move-result-object v1
 
     .line 833
-    .local v1, activityInfoList:Ljava/util/List;,"Ljava/util/List<Landroid/content/pm/ActivityInfo;>;"
+    .local v1, "activityInfoList":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ActivityInfo;>;"
     if-eqz v1, :cond_0
 
     .line 835
@@ -4062,7 +4062,7 @@
 
     move-result-object v3
 
-    .local v3, i$:Ljava/util/Iterator;
+    .local v3, "i$":Ljava/util/Iterator;
     :goto_0
     invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
 
@@ -4077,7 +4077,7 @@
     check-cast v0, Landroid/content/pm/ActivityInfo;
 
     .line 836
-    .local v0, activityInfo:Landroid/content/pm/ActivityInfo;
+    .local v0, "activityInfo":Landroid/content/pm/ActivityInfo;
     invoke-direct {p0, v0}, Lcom/tapjoy/TapjoyConnectCore;->checkForDependency(Landroid/content/pm/ActivityInfo;)V
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
@@ -4085,17 +4085,17 @@
     goto :goto_0
 
     .line 839
-    .end local v0           #activityInfo:Landroid/content/pm/ActivityInfo;
-    .end local v1           #activityInfoList:Ljava/util/List;,"Ljava/util/List<Landroid/content/pm/ActivityInfo;>;"
-    .end local v3           #i$:Ljava/util/Iterator;
-    .end local v4           #packageActivityInfo:Landroid/content/pm/PackageInfo;
+    .end local v0    # "activityInfo":Landroid/content/pm/ActivityInfo;
+    .end local v1    # "activityInfoList":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ActivityInfo;>;"
+    .end local v3    # "i$":Ljava/util/Iterator;
+    .end local v4    # "packageActivityInfo":Landroid/content/pm/PackageInfo;
     :catch_0
     move-exception v5
 
     move-object v2, v5
 
     .line 841
-    .local v2, e1:Landroid/content/pm/PackageManager$NameNotFoundException;
+    .local v2, "e1":Landroid/content/pm/PackageManager$NameNotFoundException;
     new-instance v5, Lcom/tapjoy/TapjoyIntegrationException;
 
     const-string v6, "NameNotFoundException: Could not find package."
@@ -4105,9 +4105,9 @@
     throw v5
 
     .line 844
-    .end local v2           #e1:Landroid/content/pm/PackageManager$NameNotFoundException;
-    .restart local v1       #activityInfoList:Ljava/util/List;,"Ljava/util/List<Landroid/content/pm/ActivityInfo;>;"
-    .restart local v4       #packageActivityInfo:Landroid/content/pm/PackageInfo;
+    .end local v2    # "e1":Landroid/content/pm/PackageManager$NameNotFoundException;
+    .restart local v1    # "activityInfoList":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ActivityInfo;>;"
+    .restart local v4    # "packageActivityInfo":Landroid/content/pm/PackageInfo;
     :cond_0
     sget-object v5, Lcom/tapjoy/TapjoyConnectCore;->dependencyClassesRequired:Ljava/util/Vector;
 
@@ -4234,7 +4234,7 @@
 
 .method private isPermissionGranted(Ljava/lang/String;)Z
     .locals 3
-    .parameter "permission"
+    .param p1, "permission"    # Ljava/lang/String;
 
     .prologue
     .line 1766
@@ -4251,7 +4251,7 @@
     move-result v0
 
     .line 1768
-    .local v0, status:I
+    .local v0, "status":I
     if-eqz v0, :cond_0
 
     .line 1770
@@ -4359,14 +4359,14 @@
     move-result-object v0
 
     .line 396
-    .local v0, entries:Ljava/util/Set;,"Ljava/util/Set<Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;>;"
+    .local v0, "entries":Ljava/util/Set;, "Ljava/util/Set<Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;>;"
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
 
     .line 398
-    .end local p0
-    .local v2, iterator:Ljava/util/Iterator;,"Ljava/util/Iterator<Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;>;"
+    .end local p0    # "this":Lcom/tapjoy/TapjoyConnectCore;
+    .local v2, "iterator":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;>;"
     :cond_0
     :goto_0
     invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
@@ -4383,7 +4383,7 @@
     check-cast v1, Ljava/util/Map$Entry;
 
     .line 401
-    .local v1, item:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v1, "item":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v3, "TapjoyConnect"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -4474,7 +4474,7 @@
     goto :goto_0
 
     .line 411
-    .end local v1           #item:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
+    .end local v1    # "item":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
     :cond_1
     const-string v3, "TapjoyConnect"
 
@@ -4578,7 +4578,7 @@
     check-cast v2, Landroid/telephony/TelephonyManager;
 
     .line 536
-    .local v2, telephonyManager:Landroid/telephony/TelephonyManager;
+    .local v2, "telephonyManager":Landroid/telephony/TelephonyManager;
     if-eqz v2, :cond_4
 
     .line 538
@@ -4722,7 +4722,7 @@
     const/4 v3, 0x0
 
     .line 566
-    .local v3, validDeviceID:Z
+    .local v3, "validDeviceID":Z
     sget-object v4, Lcom/tapjoy/TapjoyConnectCore;->deviceID:Ljava/lang/String;
 
     if-nez v4, :cond_6
@@ -4780,7 +4780,7 @@
     move-result-object v1
 
     .line 595
-    .local v1, serialID:Ljava/lang/String;
+    .local v1, "serialID":Ljava/lang/String;
     if-nez v3, :cond_2
 
     .line 597
@@ -4800,7 +4800,7 @@
     invoke-static {v4, v5}, Lcom/tapjoy/TapjoyLog;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 620
-    .end local v1           #serialID:Ljava/lang/String;
+    .end local v1    # "serialID":Ljava/lang/String;
     :cond_3
     :goto_2
     if-eqz v3, :cond_4
@@ -4815,7 +4815,7 @@
     sput-object v4, Lcom/tapjoy/TapjoyConnectCore;->sha2DeviceID:Ljava/lang/String;
 
     .line 637
-    .end local v3           #validDeviceID:Z
+    .end local v3    # "validDeviceID":Z
     :cond_4
     :goto_3
     return-void
@@ -4839,7 +4839,7 @@
     move-object v0, v4
 
     .line 628
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v4, "TapjoyConnect"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -4874,8 +4874,8 @@
     goto :goto_3
 
     .line 572
-    .end local v0           #e:Ljava/lang/Exception;
-    .restart local v3       #validDeviceID:Z
+    .end local v0    # "e":Ljava/lang/Exception;
+    .restart local v3    # "validDeviceID":Z
     :cond_6
     :try_start_1
     sget-object v4, Lcom/tapjoy/TapjoyConnectCore;->deviceID:Ljava/lang/String;
@@ -4936,7 +4936,7 @@
     goto/16 :goto_1
 
     .line 607
-    .restart local v1       #serialID:Ljava/lang/String;
+    .restart local v1    # "serialID":Ljava/lang/String;
     :cond_9
     sget-object v4, Lcom/tapjoy/TapjoyConnectCore;->deviceID:Ljava/lang/String;
 
@@ -5008,8 +5008,8 @@
     goto/16 :goto_2
 
     .line 634
-    .end local v1           #serialID:Ljava/lang/String;
-    .end local v3           #validDeviceID:Z
+    .end local v1    # "serialID":Ljava/lang/String;
+    .end local v3    # "validDeviceID":Z
     :cond_c
     const-string v4, "TapjoyConnect"
 
@@ -5165,7 +5165,7 @@
     move-object v0, v1
 
     .line 436
-    .local v0, e:Landroid/content/pm/PackageManager$NameNotFoundException;
+    .local v0, "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     new-instance v1, Lcom/tapjoy/TapjoyException;
 
     invoke-virtual {v0}, Landroid/content/pm/PackageManager$NameNotFoundException;->getMessage()Ljava/lang/String;
@@ -5205,7 +5205,7 @@
     check-cast v2, Landroid/net/wifi/WifiManager;
 
     .line 503
-    .local v2, wifiManager:Landroid/net/wifi/WifiManager;
+    .local v2, "wifiManager":Landroid/net/wifi/WifiManager;
     if-eqz v2, :cond_0
 
     .line 505
@@ -5214,7 +5214,7 @@
     move-result-object v1
 
     .line 507
-    .local v1, wifiInfo:Landroid/net/wifi/WifiInfo;
+    .local v1, "wifiInfo":Landroid/net/wifi/WifiInfo;
     if-eqz v1, :cond_0
 
     .line 509
@@ -5249,8 +5249,8 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 528
-    .end local v1           #wifiInfo:Landroid/net/wifi/WifiInfo;
-    .end local v2           #wifiManager:Landroid/net/wifi/WifiManager;
+    .end local v1    # "wifiInfo":Landroid/net/wifi/WifiInfo;
+    .end local v2    # "wifiManager":Landroid/net/wifi/WifiManager;
     :cond_0
     :goto_0
     return-void
@@ -5262,7 +5262,7 @@
     move-object v0, v3
 
     .line 521
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v3, "TapjoyConnect"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -5292,7 +5292,7 @@
     goto :goto_0
 
     .line 526
-    .end local v0           #e:Ljava/lang/Exception;
+    .end local v0    # "e":Ljava/lang/Exception;
     :cond_1
     const-string v3, "TapjoyConnect"
 
@@ -5323,7 +5323,7 @@
     invoke-direct {v0, v2}, Lcom/tapjoy/TapjoyDisplayMetricsUtil;-><init>(Landroid/content/Context;)V
 
     .line 480
-    .local v0, displayMetricsUtil:Lcom/tapjoy/TapjoyDisplayMetricsUtil;
+    .local v0, "displayMetricsUtil":Lcom/tapjoy/TapjoyDisplayMetricsUtil;
     invoke-virtual {v0}, Lcom/tapjoy/TapjoyDisplayMetricsUtil;->getScreenDensityDPI()I
 
     move-result v2
@@ -5347,7 +5347,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 489
-    .end local v0           #displayMetricsUtil:Lcom/tapjoy/TapjoyDisplayMetricsUtil;
+    .end local v0    # "displayMetricsUtil":Lcom/tapjoy/TapjoyDisplayMetricsUtil;
     :cond_0
     :goto_0
     return-void
@@ -5359,7 +5359,7 @@
     move-object v1, v2
 
     .line 487
-    .local v1, e:Ljava/lang/Exception;
+    .local v1, "e":Ljava/lang/Exception;
     const-string v2, "TapjoyConnect"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -5391,7 +5391,7 @@
 
 .method private parsePropertiesIntoConfigFlags(Ljava/util/Properties;)V
     .locals 6
-    .parameter "properties"
+    .param p1, "properties"    # Ljava/util/Properties;
 
     .prologue
     .line 806
@@ -5400,7 +5400,7 @@
     move-result-object v2
 
     .line 808
-    .local v2, keys:Ljava/util/Enumeration;,"Ljava/util/Enumeration<Ljava/lang/Object;>;"
+    .local v2, "keys":Ljava/util/Enumeration;, "Ljava/util/Enumeration<Ljava/lang/Object;>;"
     :goto_0
     invoke-interface {v2}, Ljava/util/Enumeration;->hasMoreElements()Z
 
@@ -5417,7 +5417,7 @@
     check-cast v1, Ljava/lang/String;
 
     .line 813
-    .local v1, key:Ljava/lang/String;
+    .local v1, "key":Ljava/lang/String;
     invoke-virtual {p1, v1}, Ljava/util/Properties;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v3
@@ -5425,7 +5425,7 @@
     check-cast v3, Ljava/lang/String;
 
     .line 814
-    .local v3, value:Ljava/lang/String;
+    .local v3, "value":Ljava/lang/String;
     sget-object v4, Lcom/tapjoy/TapjoyConnectCore;->connectFlags:Ljava/util/Hashtable;
 
     invoke-virtual {v4, v1, v3}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -5435,15 +5435,15 @@
     goto :goto_0
 
     .line 815
-    .end local v1           #key:Ljava/lang/String;
-    .end local v3           #value:Ljava/lang/String;
+    .end local v1    # "key":Ljava/lang/String;
+    .end local v3    # "value":Ljava/lang/String;
     :catch_0
     move-exception v4
 
     move-object v0, v4
 
     .line 817
-    .local v0, e:Ljava/lang/ClassCastException;
+    .local v0, "e":Ljava/lang/ClassCastException;
     const-string v4, "TapjoyConnect"
 
     const-string v5, "Error parsing configuration properties in tapjoy_config.txt"
@@ -5453,14 +5453,14 @@
     goto :goto_0
 
     .line 820
-    .end local v0           #e:Ljava/lang/ClassCastException;
+    .end local v0    # "e":Ljava/lang/ClassCastException;
     :cond_0
     return-void
 .end method
 
 .method public static removeOfflineLog(Ljava/lang/String;)V
     .locals 5
-    .parameter "key"
+    .param p0, "key"    # Ljava/lang/String;
 
     .prologue
     .line 1800
@@ -5475,13 +5475,13 @@
     move-result-object v1
 
     .line 1801
-    .local v1, settings:Landroid/content/SharedPreferences;
+    .local v1, "settings":Landroid/content/SharedPreferences;
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
     .line 1802
-    .local v0, editor:Landroid/content/SharedPreferences$Editor;
+    .local v0, "editor":Landroid/content/SharedPreferences$Editor;
     invoke-interface {v0, p0}, Landroid/content/SharedPreferences$Editor;->remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
     .line 1803
@@ -5493,9 +5493,9 @@
 
 .method public static requestTapjoyConnect(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
-    .parameter "applicationContext"
-    .parameter "app_ID"
-    .parameter "secret_Key"
+    .param p0, "applicationContext"    # Landroid/content/Context;
+    .param p1, "app_ID"    # Ljava/lang/String;
+    .param p2, "secret_Key"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lcom/tapjoy/TapjoyException;
@@ -5514,10 +5514,9 @@
 
 .method public static requestTapjoyConnect(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/util/Hashtable;)V
     .locals 1
-    .parameter "applicationContext"
-    .parameter "app_ID"
-    .parameter "secret_Key"
-    .parameter
+    .param p0, "applicationContext"    # Landroid/content/Context;
+    .param p1, "app_ID"    # Ljava/lang/String;
+    .param p2, "secret_Key"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -5540,7 +5539,7 @@
 
     .prologue
     .line 154
-    .local p3, flags:Ljava/util/Hashtable;,"Ljava/util/Hashtable<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p3, "flags":Ljava/util/Hashtable;, "Ljava/util/Hashtable<Ljava/lang/String;Ljava/lang/String;>;"
     const/4 v0, 0x0
 
     invoke-static {p0, p1, p2, p3, v0}, Lcom/tapjoy/TapjoyConnectCore;->requestTapjoyConnect(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/util/Hashtable;Lcom/tapjoy/TapjoyConnectNotifier;)V
@@ -5551,11 +5550,10 @@
 
 .method public static requestTapjoyConnect(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/util/Hashtable;Lcom/tapjoy/TapjoyConnectNotifier;)V
     .locals 1
-    .parameter "applicationContext"
-    .parameter "app_ID"
-    .parameter "secret_Key"
-    .parameter
-    .parameter "notifier"
+    .param p0, "applicationContext"    # Landroid/content/Context;
+    .param p1, "app_ID"    # Ljava/lang/String;
+    .param p2, "secret_Key"    # Ljava/lang/String;
+    .param p4, "notifier"    # Lcom/tapjoy/TapjoyConnectNotifier;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -5580,7 +5578,7 @@
 
     .prologue
     .line 168
-    .local p3, flags:Ljava/util/Hashtable;,"Ljava/util/Hashtable<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p3, "flags":Ljava/util/Hashtable;, "Ljava/util/Hashtable<Ljava/lang/String;Ljava/lang/String;>;"
     sput-object p1, Lcom/tapjoy/TapjoyConnectCore;->appID:Ljava/lang/String;
 
     .line 169
@@ -5623,7 +5621,7 @@
     move-result-object v1
 
     .line 920
-    .local v1, jsBridge:Ljava/lang/Class;
+    .local v1, "jsBridge":Ljava/lang/Class;
     :try_start_1
     const-string v2, "closeRequested"
 
@@ -5639,14 +5637,14 @@
     return-void
 
     .line 912
-    .end local v1           #jsBridge:Ljava/lang/Class;
+    .end local v1    # "jsBridge":Ljava/lang/Class;
     :catch_0
     move-exception v2
 
     move-object v0, v2
 
     .line 914
-    .local v0, e:Ljava/lang/ClassNotFoundException;
+    .local v0, "e":Ljava/lang/ClassNotFoundException;
     new-instance v2, Lcom/tapjoy/TapjoyIntegrationException;
 
     const-string v3, "ClassNotFoundException: com.tapjoy.TJAdUnitJSBridge was not found."
@@ -5656,15 +5654,15 @@
     throw v2
 
     .line 922
-    .end local v0           #e:Ljava/lang/ClassNotFoundException;
-    .restart local v1       #jsBridge:Ljava/lang/Class;
+    .end local v0    # "e":Ljava/lang/ClassNotFoundException;
+    .restart local v1    # "jsBridge":Ljava/lang/Class;
     :catch_1
     move-exception v2
 
     move-object v0, v2
 
     .line 925
-    .local v0, e:Ljava/lang/NoSuchMethodException;
+    .local v0, "e":Ljava/lang/NoSuchMethodException;
     new-instance v2, Lcom/tapjoy/TapjoyIntegrationException;
 
     const-string v3, "Try configuring Proguard or other code obfuscators to ignore com.tapjoy classes. Visit http://kc.tapjoy.com for more information."
@@ -5676,14 +5674,14 @@
 
 .method public static saveOfflineLog(Ljava/lang/String;)V
     .locals 8
-    .parameter "message"
+    .param p0, "message"    # Ljava/lang/String;
 
     .prologue
     .line 1778
     move-object v1, p0
 
     .line 1781
-    .local v1, saveMessage:Ljava/lang/String;
+    .local v1, "saveMessage":Ljava/lang/String;
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -5745,13 +5743,13 @@
     move-result-object v2
 
     .line 1786
-    .local v2, settings:Landroid/content/SharedPreferences;
+    .local v2, "settings":Landroid/content/SharedPreferences;
     invoke-interface {v2}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
     .line 1787
-    .local v0, editor:Landroid/content/SharedPreferences$Editor;
+    .local v0, "editor":Landroid/content/SharedPreferences$Editor;
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v3
@@ -5893,7 +5891,7 @@
     invoke-direct {v1, v2}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
     .line 703
-    .local v1, supportedStores:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
+    .local v1, "supportedStores":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     sget-object v2, Lcom/tapjoy/TapjoyConnectCore;->storeName:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
@@ -5928,7 +5926,7 @@
     invoke-static {v4, v2}, Lcom/tapjoy/TapjoyLog;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 712
-    .end local v1           #supportedStores:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
+    .end local v1    # "supportedStores":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     :cond_0
     :try_start_2
     sget-object v2, Lcom/tapjoy/TapjoyConnectCore;->storeName:Ljava/lang/String;
@@ -5952,7 +5950,7 @@
     move-object v0, v2
 
     .line 678
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v2, "TapjoyConnect"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -5982,14 +5980,14 @@
     goto/16 :goto_0
 
     .line 689
-    .end local v0           #e:Ljava/lang/Exception;
+    .end local v0    # "e":Ljava/lang/Exception;
     :catch_1
     move-exception v2
 
     move-object v0, v2
 
     .line 691
-    .restart local v0       #e:Ljava/lang/Exception;
+    .restart local v0    # "e":Ljava/lang/Exception;
     const-string v2, "TapjoyConnect"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -6019,14 +6017,14 @@
     goto/16 :goto_1
 
     .line 714
-    .end local v0           #e:Ljava/lang/Exception;
+    .end local v0    # "e":Ljava/lang/Exception;
     :catch_2
     move-exception v2
 
     move-object v0, v2
 
     .line 716
-    .restart local v0       #e:Ljava/lang/Exception;
+    .restart local v0    # "e":Ljava/lang/Exception;
     const-string v2, "TapjoyConnect"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -6058,7 +6056,7 @@
 
 .method public static setHostURL(Ljava/lang/String;)V
     .locals 3
-    .parameter "url"
+    .param p0, "url"    # Ljava/lang/String;
 
     .prologue
     const-string v2, "/"
@@ -6105,7 +6103,7 @@
 
 .method public static setPlugin(Ljava/lang/String;)V
     .locals 0
-    .parameter "name"
+    .param p0, "name"    # Ljava/lang/String;
 
     .prologue
     .line 1637
@@ -6117,7 +6115,7 @@
 
 .method public static setSDKType(Ljava/lang/String;)V
     .locals 0
-    .parameter "name"
+    .param p0, "name"    # Ljava/lang/String;
 
     .prologue
     .line 1646
@@ -6129,7 +6127,7 @@
 
 .method public static setUserID(Ljava/lang/String;)V
     .locals 3
-    .parameter "id"
+    .param p0, "id"    # Ljava/lang/String;
 
     .prologue
     .line 1657
@@ -6179,7 +6177,7 @@
 
 .method public static setVideoEnabled(Z)V
     .locals 0
-    .parameter "enabled"
+    .param p0, "enabled"    # Z
 
     .prologue
     .line 1696
@@ -6191,7 +6189,7 @@
 
 .method public static setVideoIDs(Ljava/lang/String;)V
     .locals 0
-    .parameter "ids"
+    .param p0, "ids"    # Ljava/lang/String;
 
     .prologue
     .line 1687
@@ -6203,7 +6201,7 @@
 
 .method public static viewDidClose(I)V
     .locals 1
-    .parameter "type"
+    .param p0, "type"    # I
 
     .prologue
     .line 1724
@@ -6223,7 +6221,7 @@
 
 .method public static viewDidOpen(I)V
     .locals 1
-    .parameter "type"
+    .param p0, "type"    # I
 
     .prologue
     .line 1744
@@ -6243,7 +6241,7 @@
 
 .method public static viewWillClose(I)V
     .locals 1
-    .parameter "type"
+    .param p0, "type"    # I
 
     .prologue
     .line 1714
@@ -6263,7 +6261,7 @@
 
 .method public static viewWillOpen(I)V
     .locals 1
-    .parameter "type"
+    .param p0, "type"    # I
 
     .prologue
     .line 1734
@@ -6285,7 +6283,7 @@
 # virtual methods
 .method public actionComplete(Ljava/lang/String;)V
     .locals 4
-    .parameter "actionID"
+    .param p1, "actionID"    # Ljava/lang/String;
 
     .prologue
     const-string v3, "TapjoyConnect"
@@ -6319,7 +6317,7 @@
     move-result-object v0
 
     .line 1853
-    .local v0, actionURLParams:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v0, "actionURLParams":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v1, "app_id"
 
     const/4 v2, 0x1
@@ -6427,7 +6425,7 @@
 
 .method protected detectApplication(Ljava/lang/String;)Z
     .locals 5
-    .parameter "name"
+    .param p1, "name"    # Ljava/lang/String;
 
     .prologue
     const/4 v4, 0x0
@@ -6440,12 +6438,12 @@
     move-result-object v1
 
     .line 1360
-    .local v1, applications:Ljava/util/List;,"Ljava/util/List<Landroid/content/pm/ApplicationInfo;>;"
+    .local v1, "applications":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ApplicationInfo;>;"
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
 
-    .local v2, i$:Ljava/util/Iterator;
+    .local v2, "i$":Ljava/util/Iterator;
     :cond_0
     invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
@@ -6460,7 +6458,7 @@
     check-cast v0, Landroid/content/pm/ApplicationInfo;
 
     .line 1362
-    .local v0, application:Landroid/content/pm/ApplicationInfo;
+    .local v0, "application":Landroid/content/pm/ApplicationInfo;
     iget-object v3, v0, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
 
     invoke-virtual {v3, p1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
@@ -6473,7 +6471,7 @@
     const/4 v3, 0x1
 
     .line 1370
-    .end local v0           #application:Landroid/content/pm/ApplicationInfo;
+    .end local v0    # "application":Landroid/content/pm/ApplicationInfo;
     :goto_0
     return v3
 
@@ -6485,8 +6483,8 @@
 
 .method protected detectCapability(Ljava/lang/String;Ljava/lang/String;)Z
     .locals 9
-    .parameter "name"
-    .parameter "permission"
+    .param p1, "name"    # Ljava/lang/String;
+    .param p2, "permission"    # Ljava/lang/String;
 
     .prologue
     const/4 v8, 0x1
@@ -6501,23 +6499,23 @@
     move-result-object v2
 
     .line 1412
-    .local v2, featuresList:[Landroid/content/pm/FeatureInfo;
+    .local v2, "featuresList":[Landroid/content/pm/FeatureInfo;
     move-object v0, v2
 
-    .local v0, arr$:[Landroid/content/pm/FeatureInfo;
+    .local v0, "arr$":[Landroid/content/pm/FeatureInfo;
     array-length v4, v0
 
-    .local v4, len$:I
+    .local v4, "len$":I
     const/4 v3, 0x0
 
-    .local v3, i$:I
+    .local v3, "i$":I
     :goto_0
     if-ge v3, v4, :cond_3
 
     aget-object v1, v0, v3
 
     .line 1413
-    .local v1, feature:Landroid/content/pm/FeatureInfo;
+    .local v1, "feature":Landroid/content/pm/FeatureInfo;
     iget-object v5, v1, Landroid/content/pm/FeatureInfo;->name:Ljava/lang/String;
 
     invoke-virtual {v5, p1}, Ljava/lang/String;->matches(Ljava/lang/String;)Z
@@ -6532,12 +6530,12 @@
     move v5, v8
 
     .line 1436
-    .end local v1           #feature:Landroid/content/pm/FeatureInfo;
+    .end local v1    # "feature":Landroid/content/pm/FeatureInfo;
     :goto_1
     return v5
 
     .line 1422
-    .restart local v1       #feature:Landroid/content/pm/FeatureInfo;
+    .restart local v1    # "feature":Landroid/content/pm/FeatureInfo;
     :cond_0
     sget-object v5, Lcom/tapjoy/TapjoyConnectCore;->packageManager:Landroid/content/pm/PackageManager;
 
@@ -6570,7 +6568,7 @@
 
     goto :goto_0
 
-    .end local v1           #feature:Landroid/content/pm/FeatureInfo;
+    .end local v1    # "feature":Landroid/content/pm/FeatureInfo;
     :cond_3
     move v5, v7
 
@@ -6580,7 +6578,7 @@
 
 .method protected detectSharingApplication(Ljava/lang/String;)Z
     .locals 6
-    .parameter "name"
+    .param p1, "name"    # Ljava/lang/String;
 
     .prologue
     const/4 v5, 0x0
@@ -6593,7 +6591,7 @@
     invoke-direct {v3, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
     .line 1383
-    .local v3, sendIntent:Landroid/content/Intent;
+    .local v3, "sendIntent":Landroid/content/Intent;
     const-string v4, "text/plain"
 
     invoke-virtual {v3, v4}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
@@ -6606,12 +6604,12 @@
     move-result-object v0
 
     .line 1387
-    .local v0, activities:Ljava/util/List;,"Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
+    .local v0, "activities":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
 
-    .local v2, i$:Ljava/util/Iterator;
+    .local v2, "i$":Ljava/util/Iterator;
     :cond_0
     invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
@@ -6626,7 +6624,7 @@
     check-cast v1, Landroid/content/pm/ResolveInfo;
 
     .line 1389
-    .local v1, activity:Landroid/content/pm/ResolveInfo;
+    .local v1, "activity":Landroid/content/pm/ResolveInfo;
     iget-object v4, v1, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
     iget-object v4, v4, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
@@ -6641,7 +6639,7 @@
     const/4 v4, 0x1
 
     .line 1397
-    .end local v1           #activity:Landroid/content/pm/ResolveInfo;
+    .end local v1    # "activity":Landroid/content/pm/ResolveInfo;
     :goto_0
     return v4
 
@@ -6653,14 +6651,14 @@
 
 .method protected detectStore(Ljava/lang/String;)Z
     .locals 5
-    .parameter "name"
+    .param p1, "name"    # Ljava/lang/String;
 
     .prologue
     .line 1446
     const/4 v1, 0x0
 
     .line 1449
-    .local v1, detected:Z
+    .local v1, "detected":Z
     new-instance v2, Landroid/content/Intent;
 
     const-string v3, "android.intent.action.VIEW"
@@ -6668,7 +6666,7 @@
     invoke-direct {v2, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
     .line 1452
-    .local v2, sendIntent:Landroid/content/Intent;
+    .local v2, "sendIntent":Landroid/content/Intent;
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v3
@@ -6696,7 +6694,7 @@
     move-result-object v0
 
     .line 1459
-    .local v0, activities:Ljava/util/List;,"Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
+    .local v0, "activities":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v3
@@ -6707,7 +6705,7 @@
     const/4 v1, 0x1
 
     .line 1474
-    .end local v0           #activities:Ljava/util/List;,"Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
+    .end local v0    # "activities":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     :cond_0
     :goto_0
     if-eqz v1, :cond_1
@@ -6757,7 +6755,7 @@
 
 .method public enablePaidAppWithActionID(Ljava/lang/String;)V
     .locals 8
-    .parameter "paidAppPayPerActionID"
+    .param p1, "paidAppPayPerActionID"    # Ljava/lang/String;
 
     .prologue
     const-wide/16 v2, 0x2710
@@ -6802,7 +6800,7 @@
     move-result-object v6
 
     .line 1879
-    .local v6, prefs:Landroid/content/SharedPreferences;
+    .local v6, "prefs":Landroid/content/SharedPreferences;
     const-string v0, "tapjoy_elapsed_time"
 
     const-wide/16 v4, 0x0
@@ -6926,7 +6924,7 @@
     const/4 v3, 0x0
 
     .line 1241
-    .local v3, serial:Ljava/lang/String;
+    .local v3, "serial":Ljava/lang/String;
     :try_start_0
     const-string v4, "android.os.Build"
 
@@ -6935,7 +6933,7 @@
     move-result-object v0
 
     .line 1242
-    .local v0, clazz:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local v0, "clazz":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const-string v4, "SERIAL"
 
     invoke-virtual {v0, v4}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
@@ -6943,7 +6941,7 @@
     move-result-object v2
 
     .line 1244
-    .local v2, field:Ljava/lang/reflect/Field;
+    .local v2, "field":Ljava/lang/reflect/Field;
     invoke-virtual {v2}, Ljava/lang/reflect/Field;->isAccessible()Z
 
     move-result v4
@@ -6993,8 +6991,8 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 1256
-    .end local v0           #clazz:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
-    .end local v2           #field:Ljava/lang/reflect/Field;
+    .end local v0    # "clazz":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
+    .end local v2    # "field":Ljava/lang/reflect/Field;
     :goto_0
     return-object v3
 
@@ -7005,7 +7003,7 @@
     move-object v1, v4
 
     .line 1253
-    .local v1, e:Ljava/lang/Exception;
+    .local v1, "e":Ljava/lang/Exception;
     const-string v4, "TapjoyConnect"
 
     invoke-virtual {v1}, Ljava/lang/Exception;->toString()Ljava/lang/String;
@@ -7052,7 +7050,7 @@
 
 .method public setCurrencyMultiplier(F)V
     .locals 3
-    .parameter "multiplier"
+    .param p1, "multiplier"    # F
 
     .prologue
     .line 1997
@@ -7087,7 +7085,7 @@
 
 .method public setTapjoyViewNotifier(Lcom/tapjoy/TapjoyViewNotifier;)V
     .locals 0
-    .parameter "notifier"
+    .param p1, "notifier"    # Lcom/tapjoy/TapjoyViewNotifier;
 
     .prologue
     .line 1705

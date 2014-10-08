@@ -56,9 +56,6 @@
 
 .method private a(DII)Ljava/lang/String;
     .locals 4
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 35
@@ -135,12 +132,12 @@
 # virtual methods
 .method public recordPaymentTransaction(Ljava/lang/String;Ljava/lang/String;DLjava/lang/String;ILjava/lang/Object;)Ljava/lang/Boolean;
     .locals 7
-    .parameter "sku"
-    .parameter "title"
-    .parameter "price"
-    .parameter "currency"
-    .parameter "quantity"
-    .parameter "meta"
+    .param p1, "sku"    # Ljava/lang/String;
+    .param p2, "title"    # Ljava/lang/String;
+    .param p3, "price"    # D
+    .param p5, "currency"    # Ljava/lang/String;
+    .param p6, "quantity"    # I
+    .param p7, "meta"    # Ljava/lang/Object;
 
     .prologue
     .line 43
@@ -320,11 +317,11 @@
 
 .method public trackEvent(Ljava/lang/String;)Ljava/lang/Boolean;
     .locals 3
-    .parameter "eventIdentifier"
+    .param p1, "eventIdentifier"    # Ljava/lang/String;
 
     .prologue
     .line 70
-    const-wide/high16 v0, 0x3ff0
+    const-wide/high16 v0, 0x3ff0000000000000L
 
     const/4 v2, 0x0
 
@@ -337,8 +334,8 @@
 
 .method public trackEvent(Ljava/lang/String;D)Ljava/lang/Boolean;
     .locals 1
-    .parameter "eventIdentifier"
-    .parameter "value"
+    .param p1, "eventIdentifier"    # Ljava/lang/String;
+    .param p2, "value"    # D
 
     .prologue
     .line 76
@@ -353,9 +350,9 @@
 
 .method public trackEvent(Ljava/lang/String;DLjava/lang/Object;)Ljava/lang/Boolean;
     .locals 9
-    .parameter "eventIdentifier"
-    .parameter "value"
-    .parameter "meta"
+    .param p1, "eventIdentifier"    # Ljava/lang/String;
+    .param p2, "value"    # D
+    .param p4, "meta"    # Ljava/lang/Object;
 
     .prologue
     const/4 v8, 0x1

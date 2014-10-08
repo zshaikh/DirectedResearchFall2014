@@ -18,10 +18,9 @@
 # virtual methods
 .method public handleUnknownProperty(Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;Ljava/lang/Object;Ljava/lang/String;)Z
     .locals 1
-    .parameter "ctxt"
-    .parameter
-    .parameter "beanOrClass"
-    .parameter "propertyName"
+    .param p1, "ctxt"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;
+    .param p3, "beanOrClass"    # Ljava/lang/Object;
+    .param p4, "propertyName"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -43,7 +42,7 @@
 
     .prologue
     .line 54
-    .local p2, deserializer:Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer<*>;"
+    .local p2, "deserializer":Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer<*>;"
     const/4 v0, 0x0
 
     return v0

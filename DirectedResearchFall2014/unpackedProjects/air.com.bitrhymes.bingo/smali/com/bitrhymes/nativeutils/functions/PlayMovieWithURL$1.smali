@@ -26,8 +26,6 @@
 # direct methods
 .method constructor <init>(Lcom/bitrhymes/nativeutils/functions/PlayMovieWithURL;Landroid/widget/VideoView;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 1
@@ -45,13 +43,13 @@
 # virtual methods
 .method public onPrepared(Landroid/media/MediaPlayer;)V
     .locals 3
-    .parameter "mp"
+    .param p1, "mp"    # Landroid/media/MediaPlayer;
 
     .prologue
     .line 42
     iget-object v0, p0, Lcom/bitrhymes/nativeutils/functions/PlayMovieWithURL$1;->this$0:Lcom/bitrhymes/nativeutils/functions/PlayMovieWithURL;
 
-    #getter for: Lcom/bitrhymes/nativeutils/functions/PlayMovieWithURL;->mContext:Lcom/adobe/fre/FREContext;
+    # getter for: Lcom/bitrhymes/nativeutils/functions/PlayMovieWithURL;->mContext:Lcom/adobe/fre/FREContext;
     invoke-static {v0}, Lcom/bitrhymes/nativeutils/functions/PlayMovieWithURL;->access$0(Lcom/bitrhymes/nativeutils/functions/PlayMovieWithURL;)Lcom/adobe/fre/FREContext;
 
     move-result-object v0

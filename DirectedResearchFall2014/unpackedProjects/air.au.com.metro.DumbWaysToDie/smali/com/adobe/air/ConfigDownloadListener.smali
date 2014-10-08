@@ -101,7 +101,6 @@
 
 .method static synthetic access$000(Lcom/adobe/air/ConfigDownloadListener;)J
     .locals 2
-    .parameter
 
     .prologue
     .line 40
@@ -112,8 +111,6 @@
 
 .method static synthetic access$002(Lcom/adobe/air/ConfigDownloadListener;J)J
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 40
@@ -124,7 +121,6 @@
 
 .method static synthetic access$100(Lcom/adobe/air/ConfigDownloadListener;)Landroid/content/BroadcastReceiver;
     .locals 1
-    .parameter
 
     .prologue
     .line 40

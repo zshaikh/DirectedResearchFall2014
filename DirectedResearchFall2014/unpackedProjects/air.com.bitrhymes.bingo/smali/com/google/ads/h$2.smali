@@ -26,8 +26,6 @@
 # direct methods
 .method constructor <init>(Lcom/google/ads/h;Lcom/google/ads/mediation/MediationInterstitialAdapter;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 217

@@ -16,7 +16,7 @@
 
 .method public static isSleepMode(Landroid/content/Context;)Z
     .locals 2
-    .parameter "context"
+    .param p0, "context"    # Landroid/content/Context;
 
     .prologue
     .line 11
@@ -29,7 +29,7 @@
     check-cast v0, Landroid/os/PowerManager;
 
     .line 12
-    .local v0, pm:Landroid/os/PowerManager;
+    .local v0, "pm":Landroid/os/PowerManager;
     invoke-virtual {v0}, Landroid/os/PowerManager;->isScreenOn()Z
 
     move-result v1

@@ -29,28 +29,28 @@
 # virtual methods
 .method public call(Lcom/adobe/fre/FREContext;[Lcom/adobe/fre/FREObject;)Lcom/adobe/fre/FREObject;
     .locals 6
-    .parameter "freContext"
-    .parameter "args"
+    .param p1, "freContext"    # Lcom/adobe/fre/FREContext;
+    .param p2, "args"    # [Lcom/adobe/fre/FREObject;
 
     .prologue
     .line 22
     const-string v1, ""
 
     .line 25
-    .local v1, returnVal:Ljava/lang/String;
+    .local v1, "returnVal":Ljava/lang/String;
     :try_start_0
     new-instance v3, Lorg/json/JSONObject;
 
     invoke-direct {v3}, Lorg/json/JSONObject;-><init>()V
 
     .line 26
-    .local v3, sessionJson:Lorg/json/JSONObject;
+    .local v3, "sessionJson":Lorg/json/JSONObject;
     invoke-static {}, Lcom/facebook/Session;->getActiveSession()Lcom/facebook/Session;
 
     move-result-object v2
 
     .line 28
-    .local v2, session:Lcom/facebook/Session;
+    .local v2, "session":Lcom/facebook/Session;
     if-eqz v2, :cond_0
 
     .line 30
@@ -92,8 +92,8 @@
     move-result-object v4
 
     .line 43
-    .end local v2           #session:Lcom/facebook/Session;
-    .end local v3           #sessionJson:Lorg/json/JSONObject;
+    .end local v2    # "session":Lcom/facebook/Session;
+    .end local v3    # "sessionJson":Lorg/json/JSONObject;
     :goto_0
     return-object v4
 
@@ -104,7 +104,7 @@
     move-object v0, v4
 
     .line 40
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     .line 43

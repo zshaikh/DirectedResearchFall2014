@@ -10,7 +10,6 @@
 # direct methods
 .method synthetic constructor <init>(Lcom/flurry/android/cl;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 83
@@ -23,8 +22,6 @@
 
 .method private constructor <init>(Lcom/flurry/android/cl;B)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 83
@@ -39,8 +36,6 @@
 # virtual methods
 .method public final onPageFinished(Landroid/webkit/WebView;Ljava/lang/String;)V
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     .line 125
@@ -91,9 +86,6 @@
 
 .method public final onPageStarted(Landroid/webkit/WebView;Ljava/lang/String;Landroid/graphics/Bitmap;)V
     .locals 2
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 103
@@ -190,8 +182,6 @@
 
 .method public final shouldOverrideUrlLoading(Landroid/webkit/WebView;Ljava/lang/String;)Z
     .locals 3
-    .parameter
-    .parameter
 
     .prologue
     const/4 v2, 0x0

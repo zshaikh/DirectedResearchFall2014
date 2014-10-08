@@ -18,7 +18,6 @@
 # direct methods
 .method protected constructor <init>(Ljava/lang/Class;)V
     .locals 0
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -29,8 +28,8 @@
 
     .prologue
     .line 23
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/ser/std/NonTypedScalarSerializerBase;,"Lcom/flurry/org/codehaus/jackson/map/ser/std/NonTypedScalarSerializerBase<TT;>;"
-    .local p1, t:Ljava/lang/Class;,"Ljava/lang/Class<TT;>;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/ser/std/NonTypedScalarSerializerBase;, "Lcom/flurry/org/codehaus/jackson/map/ser/std/NonTypedScalarSerializerBase<TT;>;"
+    .local p1, "t":Ljava/lang/Class;, "Ljava/lang/Class<TT;>;"
     invoke-direct {p0, p1}, Lcom/flurry/org/codehaus/jackson/map/ser/std/ScalarSerializerBase;-><init>(Ljava/lang/Class;)V
 
     .line 24
@@ -41,10 +40,9 @@
 # virtual methods
 .method public final serializeWithType(Ljava/lang/Object;Lcom/flurry/org/codehaus/jackson/JsonGenerator;Lcom/flurry/org/codehaus/jackson/map/SerializerProvider;Lcom/flurry/org/codehaus/jackson/map/TypeSerializer;)V
     .locals 0
-    .parameter
-    .parameter "jgen"
-    .parameter "provider"
-    .parameter "typeSer"
+    .param p2, "jgen"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator;
+    .param p3, "provider"    # Lcom/flurry/org/codehaus/jackson/map/SerializerProvider;
+    .param p4, "typeSer"    # Lcom/flurry/org/codehaus/jackson/map/TypeSerializer;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;",
@@ -64,8 +62,8 @@
 
     .prologue
     .line 32
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/ser/std/NonTypedScalarSerializerBase;,"Lcom/flurry/org/codehaus/jackson/map/ser/std/NonTypedScalarSerializerBase<TT;>;"
-    .local p1, value:Ljava/lang/Object;,"TT;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/ser/std/NonTypedScalarSerializerBase;, "Lcom/flurry/org/codehaus/jackson/map/ser/std/NonTypedScalarSerializerBase<TT;>;"
+    .local p1, "value":Ljava/lang/Object;, "TT;"
     invoke-virtual {p0, p1, p2, p3}, Lcom/flurry/org/codehaus/jackson/map/ser/std/NonTypedScalarSerializerBase;->serialize(Ljava/lang/Object;Lcom/flurry/org/codehaus/jackson/JsonGenerator;Lcom/flurry/org/codehaus/jackson/map/SerializerProvider;)V
 
     .line 33

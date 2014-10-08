@@ -29,7 +29,6 @@
 
 .method public handleMessage(Landroid/os/Message;)V
     .locals 11
-    .parameter
 
     .prologue
     .line 20

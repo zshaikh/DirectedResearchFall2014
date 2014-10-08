@@ -390,9 +390,6 @@
 
 .method public constructor <init>(III)V
     .locals 1
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 160
@@ -418,7 +415,6 @@
 
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 122
@@ -432,8 +428,6 @@
 
 .method public constructor <init>(Ljava/lang/String;Z)V
     .locals 6
-    .parameter
-    .parameter
 
     .prologue
     const/4 v5, 0x0
@@ -569,7 +563,6 @@
 
 .method public static a(Ljava/lang/Object;)Lcom/chartboost/sdk/impl/ay;
     .locals 3
-    .parameter
 
     .prologue
     const/4 v2, 0x0
@@ -632,8 +625,6 @@
 
 .method static a(Ljava/lang/String;I)Ljava/lang/String;
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     .line 229
@@ -652,7 +643,6 @@
 
 .method public static a(Ljava/lang/String;)Z
     .locals 5
-    .parameter
 
     .prologue
     const/4 v4, 0x0
@@ -744,7 +734,6 @@
 
 .method public static b(Ljava/lang/String;)Ljava/lang/String;
     .locals 3
-    .parameter
 
     .prologue
     .line 233
@@ -839,8 +828,6 @@
 # virtual methods
 .method a(II)I
     .locals 6
-    .parameter
-    .parameter
 
     .prologue
     const-wide v4, 0xffffffffL
@@ -867,7 +854,7 @@
     if-gez v2, :cond_0
 
     .line 256
-    const/high16 v0, -0x8000
+    const/high16 v0, -0x80000000
 
     .line 259
     :goto_0
@@ -895,7 +882,6 @@
 
 .method public a(Lcom/chartboost/sdk/impl/ay;)I
     .locals 2
-    .parameter
 
     .prologue
     .line 263
@@ -1057,13 +1043,13 @@
 
 .method public synthetic compareTo(Ljava/lang/Object;)I
     .locals 1
-    .parameter "x0"
+    .param p1, "x0"    # Ljava/lang/Object;
 
     .prologue
     .line 41
     check-cast p1, Lcom/chartboost/sdk/impl/ay;
 
-    .end local p1
+    .end local p1    # "x0":Ljava/lang/Object;
     invoke-virtual {p0, p1}, Lcom/chartboost/sdk/impl/ay;->a(Lcom/chartboost/sdk/impl/ay;)I
 
     move-result v0
@@ -1093,7 +1079,7 @@
 
 .method public equals(Ljava/lang/Object;)Z
     .locals 5
-    .parameter "o"
+    .param p1, "o"    # Ljava/lang/Object;
 
     .prologue
     const/4 v4, 0x1

@@ -27,8 +27,8 @@
 
 .method private static fixDataAndTypeForVideo(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 4
-    .parameter "context"
-    .parameter "intent"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "intent"    # Landroid/content/Intent;
 
     .prologue
     .line 140
@@ -37,7 +37,7 @@
     move-result-object v0
 
     .line 141
-    .local v0, data:Landroid/net/Uri;
+    .local v0, "data":Landroid/net/Uri;
     if-eqz v0, :cond_1
 
     .line 143
@@ -46,7 +46,7 @@
     move-result-object v1
 
     .line 144
-    .local v1, lastPathSegment:Ljava/lang/String;
+    .local v1, "lastPathSegment":Ljava/lang/String;
     const-string v2, "class"
 
     invoke-virtual {p1, v2}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
@@ -108,14 +108,14 @@
     invoke-virtual {p1, v2, v3}, Landroid/content/Intent;->setDataAndType(Landroid/net/Uri;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 148
-    .end local v1           #lastPathSegment:Ljava/lang/String;
+    .end local v1    # "lastPathSegment":Ljava/lang/String;
     :cond_1
     return-void
 .end method
 
 .method static getIntentForUri(Lcom/fusepowered/m1/android/HttpRedirection$RedirectionListenerImpl;)Landroid/content/Intent;
     .locals 15
-    .parameter "listener"
+    .param p0, "listener"    # Lcom/fusepowered/m1/android/HttpRedirection$RedirectionListenerImpl;
 
     .prologue
     const/4 v12, 0x1
@@ -143,15 +143,15 @@
     const/4 v5, 0x0
 
     .line 155
-    .local v5, intent:Landroid/content/Intent;
+    .local v5, "intent":Landroid/content/Intent;
     const/4 v7, 0x0
 
     .line 157
-    .local v7, scheme:Ljava/lang/String;
+    .local v7, "scheme":Ljava/lang/String;
     iget-object v4, p0, Lcom/fusepowered/m1/android/HttpRedirection$RedirectionListenerImpl;->destinationUri:Landroid/net/Uri;
 
     .line 158
-    .local v4, destinationUri:Landroid/net/Uri;
+    .local v4, "destinationUri":Landroid/net/Uri;
     iget-object v8, p0, Lcom/fusepowered/m1/android/HttpRedirection$RedirectionListenerImpl;->weakContext:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v8}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -161,7 +161,7 @@
     check-cast v3, Landroid/content/Context;
 
     .line 159
-    .local v3, context:Landroid/content/Context;
+    .local v3, "context":Landroid/content/Context;
     if-eqz v3, :cond_2
 
     .line 161
@@ -190,13 +190,13 @@
     .line 166
     new-instance v5, Landroid/content/Intent;
 
-    .end local v5           #intent:Landroid/content/Intent;
+    .end local v5    # "intent":Landroid/content/Intent;
     const-string v8, "android.intent.action.VIEW"
 
     invoke-direct {v5, v10, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
     .line 167
-    .restart local v5       #intent:Landroid/content/Intent;
+    .restart local v5    # "intent":Landroid/content/Intent;
     const-string v8, "market"
 
     iget-wide v9, p0, Lcom/fusepowered/m1/android/HttpRedirection$RedirectionListenerImpl;->creatorAdImplInternalId:J
@@ -246,13 +246,13 @@
     .line 172
     new-instance v5, Landroid/content/Intent;
 
-    .end local v5           #intent:Landroid/content/Intent;
+    .end local v5    # "intent":Landroid/content/Intent;
     const-class v8, Lcom/fusepowered/m1/android/MMActivity;
 
     invoke-direct {v5, v3, v8}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
     .line 173
-    .restart local v5       #intent:Landroid/content/Intent;
+    .restart local v5    # "intent":Landroid/content/Intent;
     invoke-virtual {v5, v4}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
 
     .line 174
@@ -282,13 +282,13 @@
     .line 179
     new-instance v5, Landroid/content/Intent;
 
-    .end local v5           #intent:Landroid/content/Intent;
+    .end local v5    # "intent":Landroid/content/Intent;
     const-string v8, "android.intent.action.DIAL"
 
     invoke-direct {v5, v8, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
     .line 180
-    .restart local v5       #intent:Landroid/content/Intent;
+    .restart local v5    # "intent":Landroid/content/Intent;
     const-string v8, "tel"
 
     iget-wide v9, p0, Lcom/fusepowered/m1/android/HttpRedirection$RedirectionListenerImpl;->creatorAdImplInternalId:J
@@ -315,19 +315,19 @@
     .line 185
     new-instance v5, Landroid/content/Intent;
 
-    .end local v5           #intent:Landroid/content/Intent;
+    .end local v5    # "intent":Landroid/content/Intent;
     const-string v8, "android.intent.action.VIEW"
 
     invoke-direct {v5, v10}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
     .line 186
-    .restart local v5       #intent:Landroid/content/Intent;
+    .restart local v5    # "intent":Landroid/content/Intent;
     invoke-virtual {v4}, Landroid/net/Uri;->getSchemeSpecificPart()Ljava/lang/String;
 
     move-result-object v0
 
     .line 187
-    .local v0, address:Ljava/lang/String;
+    .local v0, "address":Ljava/lang/String;
     const-string v8, "?body="
 
     invoke-virtual {v0, v8}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
@@ -335,7 +335,7 @@
     move-result v2
 
     .line 188
-    .local v2, bodyIndex:I
+    .local v2, "bodyIndex":I
     const/4 v8, -0x1
 
     if-eq v2, v8, :cond_6
@@ -371,7 +371,7 @@
     move-result-object v1
 
     .line 195
-    .local v1, body:Ljava/lang/String;
+    .local v1, "body":Ljava/lang/String;
     add-int/lit8 v8, v2, 0x6
 
     invoke-virtual {v1, v8}, Ljava/lang/String;->substring(I)Ljava/lang/String;
@@ -384,7 +384,7 @@
     invoke-virtual {v5, v8, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 198
-    .end local v1           #body:Ljava/lang/String;
+    .end local v1    # "body":Ljava/lang/String;
     :cond_7
     const-string v8, "vnd.android-dir/mms-sms"
 
@@ -400,8 +400,8 @@
     goto/16 :goto_1
 
     .line 201
-    .end local v0           #address:Ljava/lang/String;
-    .end local v2           #bodyIndex:I
+    .end local v0    # "address":Ljava/lang/String;
+    .end local v2    # "bodyIndex":I
     :cond_8
     const-string v8, "mailto"
 
@@ -414,13 +414,13 @@
     .line 203
     new-instance v5, Landroid/content/Intent;
 
-    .end local v5           #intent:Landroid/content/Intent;
+    .end local v5    # "intent":Landroid/content/Intent;
     const-string v8, "android.intent.action.VIEW"
 
     invoke-direct {v5, v10, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
     .line 204
-    .restart local v5       #intent:Landroid/content/Intent;
+    .restart local v5    # "intent":Landroid/content/Intent;
     const-string v8, "email"
 
     iget-wide v9, p0, Lcom/fusepowered/m1/android/HttpRedirection$RedirectionListenerImpl;->creatorAdImplInternalId:J
@@ -447,13 +447,13 @@
     .line 209
     new-instance v5, Landroid/content/Intent;
 
-    .end local v5           #intent:Landroid/content/Intent;
+    .end local v5    # "intent":Landroid/content/Intent;
     const-string v8, "android.intent.action.VIEW"
 
     invoke-direct {v5, v10, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
     .line 210
-    .restart local v5       #intent:Landroid/content/Intent;
+    .restart local v5    # "intent":Landroid/content/Intent;
     const-string v8, "geo"
 
     iget-wide v9, p0, Lcom/fusepowered/m1/android/HttpRedirection$RedirectionListenerImpl;->creatorAdImplInternalId:J
@@ -480,13 +480,13 @@
     .line 216
     new-instance v5, Landroid/content/Intent;
 
-    .end local v5           #intent:Landroid/content/Intent;
+    .end local v5    # "intent":Landroid/content/Intent;
     const-string v8, "android.intent.action.VIEW"
 
     invoke-direct {v5, v10, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
     .line 217
-    .restart local v5       #intent:Landroid/content/Intent;
+    .restart local v5    # "intent":Landroid/content/Intent;
     const-string v8, "browser"
 
     iget-wide v8, p0, Lcom/fusepowered/m1/android/HttpRedirection$RedirectionListenerImpl;->creatorAdImplInternalId:J
@@ -517,7 +517,7 @@
     move-result-object v6
 
     .line 224
-    .local v6, mmBrowserUrl:Ljava/lang/String;
+    .local v6, "mmBrowserUrl":Ljava/lang/String;
     if-eqz v6, :cond_c
 
     .line 226
@@ -547,7 +547,7 @@
     .line 231
     new-instance v5, Landroid/content/Intent;
 
-    .end local v5           #intent:Landroid/content/Intent;
+    .end local v5    # "intent":Landroid/content/Intent;
     const-string v8, "android.intent.action.VIEW"
 
     invoke-static {v6}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -557,7 +557,7 @@
     invoke-direct {v5, v10, v8}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
     .line 232
-    .restart local v5       #intent:Landroid/content/Intent;
+    .restart local v5    # "intent":Landroid/content/Intent;
     const-string v8, "browser"
 
     iget-wide v8, p0, Lcom/fusepowered/m1/android/HttpRedirection$RedirectionListenerImpl;->creatorAdImplInternalId:J
@@ -567,7 +567,7 @@
     goto/16 :goto_1
 
     .line 234
-    .end local v6           #mmBrowserUrl:Ljava/lang/String;
+    .end local v6    # "mmBrowserUrl":Ljava/lang/String;
     :cond_d
     const-string v8, "http"
 
@@ -617,13 +617,13 @@
     .line 239
     new-instance v5, Landroid/content/Intent;
 
-    .end local v5           #intent:Landroid/content/Intent;
+    .end local v5    # "intent":Landroid/content/Intent;
     const-class v8, Lcom/fusepowered/m1/android/MMActivity;
 
     invoke-direct {v5, v3, v8}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
     .line 240
-    .restart local v5       #intent:Landroid/content/Intent;
+    .restart local v5    # "intent":Landroid/content/Intent;
     invoke-virtual {v5, v4}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
 
     .line 241
@@ -658,13 +658,13 @@
     .line 248
     new-instance v5, Landroid/content/Intent;
 
-    .end local v5           #intent:Landroid/content/Intent;
+    .end local v5    # "intent":Landroid/content/Intent;
     const-class v8, Lcom/fusepowered/m1/android/MMActivity;
 
     invoke-direct {v5, v3, v8}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
     .line 249
-    .restart local v5       #intent:Landroid/content/Intent;
+    .restart local v5    # "intent":Landroid/content/Intent;
     const-string v8, "class"
 
     const-class v8, Lcom/fusepowered/m1/android/AdViewOverlayActivity;
@@ -699,12 +699,12 @@
     .line 258
     new-instance v5, Landroid/content/Intent;
 
-    .end local v5           #intent:Landroid/content/Intent;
+    .end local v5    # "intent":Landroid/content/Intent;
     const-string v8, "android.intent.action.VIEW"
 
     invoke-direct {v5, v10, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
-    .restart local v5       #intent:Landroid/content/Intent;
+    .restart local v5    # "intent":Landroid/content/Intent;
     goto/16 :goto_1
 
     .line 263
@@ -720,12 +720,12 @@
     .line 264
     new-instance v5, Landroid/content/Intent;
 
-    .end local v5           #intent:Landroid/content/Intent;
+    .end local v5    # "intent":Landroid/content/Intent;
     const-string v8, "android.intent.action.VIEW"
 
     invoke-direct {v5, v10, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
-    .restart local v5       #intent:Landroid/content/Intent;
+    .restart local v5    # "intent":Landroid/content/Intent;
     goto/16 :goto_1
 
     .line 274
@@ -743,8 +743,8 @@
 
 .method static startActionView(Landroid/content/Context;Ljava/lang/String;)V
     .locals 3
-    .parameter "context"
-    .parameter "nextUrl"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "nextUrl"    # Ljava/lang/String;
 
     .prologue
     .line 123
@@ -759,7 +759,7 @@
     invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
     .line 124
-    .local v0, actionIntent:Landroid/content/Intent;
+    .local v0, "actionIntent":Landroid/content/Intent;
     invoke-static {p0, v0}, Lcom/fusepowered/m1/android/Utils$IntentUtils;->startActivity(Landroid/content/Context;Landroid/content/Intent;)V
 
     .line 125
@@ -768,8 +768,8 @@
 
 .method static startActivity(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 1
-    .parameter "context"
-    .parameter "intent"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "intent"    # Landroid/content/Intent;
 
     .prologue
     .line 129
@@ -778,7 +778,7 @@
     if-nez v0, :cond_0
 
     .line 130
-    const/high16 v0, 0x1000
+    const/high16 v0, 0x10000000
 
     invoke-virtual {p1, v0}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
@@ -795,7 +795,7 @@
 
 .method static startAdViewOverlayActivity(Landroid/content/Context;)V
     .locals 3
-    .parameter "context"
+    .param p0, "context"    # Landroid/content/Context;
 
     .prologue
     .line 109
@@ -806,7 +806,7 @@
     invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
     .line 110
-    .local v0, intent:Landroid/content/Intent;
+    .local v0, "intent":Landroid/content/Intent;
     const-string v1, "class"
 
     const-string v2, "com.fusepowered.m1.android.AdViewOverlayActivity"
@@ -822,8 +822,8 @@
 
 .method static startAdViewOverlayActivity(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 2
-    .parameter "context"
-    .parameter "extrasAddedIntent"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "extrasAddedIntent"    # Landroid/content/Intent;
 
     .prologue
     .line 102
@@ -847,8 +847,8 @@
 
 .method static startAdViewOverlayActivityWithData(Landroid/content/Context;Ljava/lang/String;)V
     .locals 3
-    .parameter "context"
-    .parameter "url"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "url"    # Ljava/lang/String;
 
     .prologue
     .line 93
@@ -859,7 +859,7 @@
     invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
     .line 94
-    .local v0, intent:Landroid/content/Intent;
+    .local v0, "intent":Landroid/content/Intent;
     const-string v1, "class"
 
     const-string v2, "com.fusepowered.m1.android.AdViewOverlayActivity"
@@ -882,8 +882,8 @@
 
 .method static startCachedVideoPlayerActivity(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 2
-    .parameter "context"
-    .parameter "extrasAddedIntent"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "extrasAddedIntent"    # Landroid/content/Intent;
 
     .prologue
     .line 116
@@ -907,9 +907,9 @@
 
 .method static startPickerActivity(Landroid/content/Context;Ljava/io/File;Ljava/lang/String;)V
     .locals 3
-    .parameter "context"
-    .parameter "file"
-    .parameter "type"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "file"    # Ljava/io/File;
+    .param p2, "type"    # Ljava/lang/String;
 
     .prologue
     .line 84
@@ -920,7 +920,7 @@
     invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
     .line 85
-    .local v0, intent:Landroid/content/Intent;
+    .local v0, "intent":Landroid/content/Intent;
     invoke-static {p1}, Landroid/net/Uri;->fromFile(Ljava/io/File;)Landroid/net/Uri;
 
     move-result-object v1
@@ -948,8 +948,8 @@
 
 .method static startVideoPlayerActivityWithData(Landroid/content/Context;Landroid/net/Uri;)V
     .locals 3
-    .parameter "context"
-    .parameter "dataUri"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "dataUri"    # Landroid/net/Uri;
 
     .prologue
     .line 76
@@ -960,7 +960,7 @@
     invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
     .line 77
-    .local v0, intent:Landroid/content/Intent;
+    .local v0, "intent":Landroid/content/Intent;
     invoke-virtual {v0, p1}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
 
     .line 78
@@ -979,8 +979,8 @@
 
 .method static startVideoPlayerActivityWithData(Landroid/content/Context;Ljava/io/File;)V
     .locals 1
-    .parameter "context"
-    .parameter "file"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "file"    # Ljava/io/File;
 
     .prologue
     .line 71
@@ -996,8 +996,8 @@
 
 .method static startVideoPlayerActivityWithData(Landroid/content/Context;Ljava/lang/String;)V
     .locals 1
-    .parameter "context"
-    .parameter "data"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "data"    # Ljava/lang/String;
 
     .prologue
     .line 66

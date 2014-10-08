@@ -27,9 +27,9 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;)V
     .locals 1
-    .parameter "context"
-    .parameter "applicationId"
-    .parameter "parameters"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "applicationId"    # Ljava/lang/String;
+    .param p3, "parameters"    # Landroid/os/Bundle;
 
     .prologue
     .line 1020
@@ -53,7 +53,7 @@
     move-result-object v3
 
     .line 1031
-    .local v3, parameters:Landroid/os/Bundle;
+    .local v3, "parameters":Landroid/os/Bundle;
     const-string v0, "redirect_uri"
 
     const-string v1, "fbconnect://success"
@@ -100,7 +100,7 @@
 
 .method public setE2E(Ljava/lang/String;)Lcom/facebook/AuthorizationClient$AuthDialogBuilder;
     .locals 0
-    .parameter "e2e"
+    .param p1, "e2e"    # Ljava/lang/String;
 
     .prologue
     .line 1024

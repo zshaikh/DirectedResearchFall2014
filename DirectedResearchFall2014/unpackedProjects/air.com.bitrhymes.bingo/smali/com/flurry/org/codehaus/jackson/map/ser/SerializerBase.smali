@@ -21,11 +21,11 @@
 # direct methods
 .method protected constructor <init>(Lcom/flurry/org/codehaus/jackson/type/JavaType;)V
     .locals 0
-    .parameter "type"
+    .param p1, "type"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
 
     .prologue
     .line 17
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/ser/SerializerBase;,"Lcom/flurry/org/codehaus/jackson/map/ser/SerializerBase<TT;>;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/ser/SerializerBase;, "Lcom/flurry/org/codehaus/jackson/map/ser/SerializerBase<TT;>;"
     invoke-direct {p0, p1}, Lcom/flurry/org/codehaus/jackson/map/ser/std/SerializerBase;-><init>(Lcom/flurry/org/codehaus/jackson/type/JavaType;)V
 
     .line 18
@@ -34,7 +34,6 @@
 
 .method protected constructor <init>(Ljava/lang/Class;)V
     .locals 0
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -45,8 +44,8 @@
 
     .prologue
     .line 13
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/ser/SerializerBase;,"Lcom/flurry/org/codehaus/jackson/map/ser/SerializerBase<TT;>;"
-    .local p1, t:Ljava/lang/Class;,"Ljava/lang/Class<TT;>;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/ser/SerializerBase;, "Lcom/flurry/org/codehaus/jackson/map/ser/SerializerBase<TT;>;"
+    .local p1, "t":Ljava/lang/Class;, "Ljava/lang/Class<TT;>;"
     invoke-direct {p0, p1}, Lcom/flurry/org/codehaus/jackson/map/ser/std/SerializerBase;-><init>(Ljava/lang/Class;)V
 
     .line 14
@@ -55,8 +54,7 @@
 
 .method protected constructor <init>(Ljava/lang/Class;Z)V
     .locals 0
-    .parameter
-    .parameter "dummy"
+    .param p2, "dummy"    # Z
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -67,8 +65,8 @@
 
     .prologue
     .line 21
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/ser/SerializerBase;,"Lcom/flurry/org/codehaus/jackson/map/ser/SerializerBase<TT;>;"
-    .local p1, t:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/ser/SerializerBase;, "Lcom/flurry/org/codehaus/jackson/map/ser/SerializerBase<TT;>;"
+    .local p1, "t":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-direct {p0, p1, p2}, Lcom/flurry/org/codehaus/jackson/map/ser/std/SerializerBase;-><init>(Ljava/lang/Class;Z)V
 
     .line 22

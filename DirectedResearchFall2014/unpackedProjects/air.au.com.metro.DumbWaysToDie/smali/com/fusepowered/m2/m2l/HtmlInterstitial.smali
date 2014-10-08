@@ -28,7 +28,6 @@
 # virtual methods
 .method protected extractExtras(Ljava/util/Map;)V
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -42,7 +41,7 @@
 
     .prologue
     .line 52
-    .local p1, serverExtras:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p1, "serverExtras":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v0, "Html-Response-Body"
 
     invoke-interface {p1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -104,7 +103,7 @@
 
 .method protected preRenderHtml(Lcom/fusepowered/m2/m2l/CustomEventInterstitial$CustomEventInterstitialListener;)V
     .locals 2
-    .parameter "customEventInterstitialListener"
+    .param p1, "customEventInterstitialListener"    # Lcom/fusepowered/m2/m2l/CustomEventInterstitial$CustomEventInterstitialListener;
 
     .prologue
     .line 60

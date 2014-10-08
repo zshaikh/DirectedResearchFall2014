@@ -64,7 +64,7 @@
 # virtual methods
 .method compress(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
     .locals 0
-    .parameter "buffer"
+    .param p1, "buffer"    # Ljava/nio/ByteBuffer;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -78,7 +78,7 @@
 
 .method decompress(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
     .locals 0
-    .parameter "data"
+    .param p1, "data"    # Ljava/nio/ByteBuffer;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -92,7 +92,7 @@
 
 .method public equals(Ljava/lang/Object;)Z
     .locals 3
-    .parameter "other"
+    .param p1, "other"    # Ljava/lang/Object;
 
     .prologue
     const/4 v2, 0x1

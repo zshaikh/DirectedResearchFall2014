@@ -27,11 +27,10 @@
 # direct methods
 .method public constructor <init>(Lcom/flurry/org/codehaus/jackson/map/deser/StdDeserializer;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 41
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/deser/StdDeserializer$ClassDeserializer;,"Lcom/flurry/org/codehaus/jackson/map/deser/StdDeserializer<TT;>.ClassDeserializer;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/deser/StdDeserializer$ClassDeserializer;, "Lcom/flurry/org/codehaus/jackson/map/deser/StdDeserializer<TT;>.ClassDeserializer;"
     iput-object p1, p0, Lcom/flurry/org/codehaus/jackson/map/deser/StdDeserializer$ClassDeserializer;->this$0:Lcom/flurry/org/codehaus/jackson/map/deser/StdDeserializer;
 
     invoke-direct {p0}, Lcom/flurry/org/codehaus/jackson/map/deser/std/ClassDeserializer;-><init>()V

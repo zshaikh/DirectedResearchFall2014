@@ -44,7 +44,7 @@
 # direct methods
 .method public constructor <init>(Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;)V
     .locals 2
-    .parameter "campaign"
+    .param p1, "campaign"    # Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;
 
     .prologue
     const/4 v1, 0x0
@@ -90,7 +90,7 @@
     const-string v0, "ERROR"
 
     .line 324
-    .local v0, url:Ljava/lang/String;
+    .local v0, "url":Ljava/lang/String;
     iget-object v1, p0, Lcom/fusepowered/a1/cache/ApplifierImpactDownloader$CacheDownload;->_downloadUrl:Ljava/net/URL;
 
     if-eqz v1, :cond_0
@@ -135,17 +135,17 @@
     .line 330
     iget-object v1, p0, Lcom/fusepowered/a1/cache/ApplifierImpactDownloader$CacheDownload;->_campaign:Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;
 
-    #calls: Lcom/fusepowered/a1/cache/ApplifierImpactDownloader;->removeDownload(Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;)V
+    # invokes: Lcom/fusepowered/a1/cache/ApplifierImpactDownloader;->removeDownload(Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;)V
     invoke-static {v1}, Lcom/fusepowered/a1/cache/ApplifierImpactDownloader;->access$2(Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;)V
 
     .line 331
-    #calls: Lcom/fusepowered/a1/cache/ApplifierImpactDownloader;->removeFromCacheDownloads(Lcom/fusepowered/a1/cache/ApplifierImpactDownloader$CacheDownload;)V
+    # invokes: Lcom/fusepowered/a1/cache/ApplifierImpactDownloader;->removeFromCacheDownloads(Lcom/fusepowered/a1/cache/ApplifierImpactDownloader$CacheDownload;)V
     invoke-static {p0}, Lcom/fusepowered/a1/cache/ApplifierImpactDownloader;->access$3(Lcom/fusepowered/a1/cache/ApplifierImpactDownloader$CacheDownload;)V
 
     .line 332
     sget-object v1, Lcom/fusepowered/a1/cache/ApplifierImpactDownloader$ApplifierDownloadEventType;->DownloadCancelled:Lcom/fusepowered/a1/cache/ApplifierImpactDownloader$ApplifierDownloadEventType;
 
-    #calls: Lcom/fusepowered/a1/cache/ApplifierImpactDownloader;->sendToListeners(Lcom/fusepowered/a1/cache/ApplifierImpactDownloader$ApplifierDownloadEventType;Ljava/lang/String;)V
+    # invokes: Lcom/fusepowered/a1/cache/ApplifierImpactDownloader;->sendToListeners(Lcom/fusepowered/a1/cache/ApplifierImpactDownloader$ApplifierDownloadEventType;Ljava/lang/String;)V
     invoke-static {v1, v0}, Lcom/fusepowered/a1/cache/ApplifierImpactDownloader;->access$4(Lcom/fusepowered/a1/cache/ApplifierImpactDownloader$ApplifierDownloadEventType;Ljava/lang/String;)V
 
     .line 333
@@ -185,7 +185,7 @@
     move-object v0, v1
 
     .line 318
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     new-instance v1, Ljava/lang/StringBuilder;
 
     const-string v2, "Problems closing connection: "
@@ -213,7 +213,6 @@
 # virtual methods
 .method protected bridge varargs synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
-    .parameter
 
     .prologue
     .line 1
@@ -228,7 +227,7 @@
 
 .method protected varargs doInBackground([Ljava/lang/String;)Ljava/lang/String;
     .locals 15
-    .parameter "sUrl"
+    .param p1, "sUrl"    # [Ljava/lang/String;
 
     .prologue
     .line 209
@@ -237,11 +236,11 @@
     move-result-wide v5
 
     .line 210
-    .local v5, startTime:J
+    .local v5, "startTime":J
     const-wide/16 v2, 0x0
 
     .line 213
-    .local v2, duration:J
+    .local v2, "duration":J
     :try_start_0
     new-instance v9, Ljava/net/URL;
 
@@ -325,7 +324,7 @@
 
     move-result-object v9
 
-    #calls: Lcom/fusepowered/a1/cache/ApplifierImpactDownloader;->getOutputStreamFor(Ljava/lang/String;)Ljava/io/FileOutputStream;
+    # invokes: Lcom/fusepowered/a1/cache/ApplifierImpactDownloader;->getOutputStreamFor(Ljava/lang/String;)Ljava/io/FileOutputStream;
     invoke-static {v9}, Lcom/fusepowered/a1/cache/ApplifierImpactDownloader;->access$0(Ljava/lang/String;)Ljava/io/FileOutputStream;
 
     move-result-object v9
@@ -347,15 +346,15 @@
     new-array v1, v9, [B
 
     .line 246
-    .local v1, data:[B
+    .local v1, "data":[B
     const-wide/16 v7, 0x0
 
     .line 247
-    .local v7, total:J
+    .local v7, "total":J
     const/4 v0, 0x0
 
     .line 250
-    .local v0, count:I
+    .local v0, "count":I
     :cond_1
     :try_start_3
     iget-object v9, p0, Lcom/fusepowered/a1/cache/ApplifierImpactDownloader$CacheDownload;->_input:Ljava/io/InputStream;
@@ -430,9 +429,9 @@
     invoke-static {v9, p0}, Lcom/fusepowered/a1/ApplifierImpactUtils;->Log(Ljava/lang/String;Ljava/lang/Object;)V
 
     .line 272
-    .end local v0           #count:I
-    .end local v1           #data:[B
-    .end local v7           #total:J
+    .end local v0    # "count":I
+    .end local v1    # "data":[B
+    .end local v7    # "total":J
     :cond_2
     const/4 v9, 0x0
 
@@ -446,7 +445,7 @@
     move-object v4, v9
 
     .line 216
-    .local v4, e:Ljava/lang/Exception;
+    .local v4, "e":Ljava/lang/Exception;
     new-instance v9, Ljava/lang/StringBuilder;
 
     const-string v10, "Problems with url: "
@@ -476,14 +475,14 @@
     goto :goto_2
 
     .line 227
-    .end local v4           #e:Ljava/lang/Exception;
+    .end local v4    # "e":Ljava/lang/Exception;
     :catch_1
     move-exception v9
 
     move-object v4, v9
 
     .line 228
-    .restart local v4       #e:Ljava/lang/Exception;
+    .restart local v4    # "e":Ljava/lang/Exception;
     new-instance v9, Ljava/lang/StringBuilder;
 
     const-string v10, "Problems opening connection: "
@@ -507,14 +506,14 @@
     goto/16 :goto_0
 
     .line 237
-    .end local v4           #e:Ljava/lang/Exception;
+    .end local v4    # "e":Ljava/lang/Exception;
     :catch_2
     move-exception v9
 
     move-object v4, v9
 
     .line 238
-    .restart local v4       #e:Ljava/lang/Exception;
+    .restart local v4    # "e":Ljava/lang/Exception;
     new-instance v9, Ljava/lang/StringBuilder;
 
     const-string v10, "Problems opening stream: "
@@ -538,10 +537,10 @@
     goto/16 :goto_1
 
     .line 251
-    .end local v4           #e:Ljava/lang/Exception;
-    .restart local v0       #count:I
-    .restart local v1       #data:[B
-    .restart local v7       #total:J
+    .end local v4    # "e":Ljava/lang/Exception;
+    .restart local v0    # "count":I
+    .restart local v1    # "data":[B
+    .restart local v7    # "total":J
     :cond_3
     int-to-long v9, v0
 
@@ -601,7 +600,7 @@
     move-object v4, v9
 
     .line 261
-    .restart local v4       #e:Ljava/lang/Exception;
+    .restart local v4    # "e":Ljava/lang/Exception;
     new-instance v9, Ljava/lang/StringBuilder;
 
     const-string v10, "Problems downloading file: "
@@ -626,7 +625,7 @@
     invoke-direct {p0}, Lcom/fusepowered/a1/cache/ApplifierImpactDownloader$CacheDownload;->cancelDownload()V
 
     .line 263
-    #calls: Lcom/fusepowered/a1/cache/ApplifierImpactDownloader;->cacheNextFile()V
+    # invokes: Lcom/fusepowered/a1/cache/ApplifierImpactDownloader;->cacheNextFile()V
     invoke-static {}, Lcom/fusepowered/a1/cache/ApplifierImpactDownloader;->access$1()V
 
     .line 264
@@ -658,7 +657,6 @@
 
 .method protected bridge synthetic onPostExecute(Ljava/lang/Object;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1
@@ -671,7 +669,7 @@
 
 .method protected onPostExecute(Ljava/lang/String;)V
     .locals 2
-    .parameter "result"
+    .param p1, "result"    # Ljava/lang/String;
 
     .prologue
     .line 284
@@ -682,22 +680,22 @@
     .line 285
     iget-object v1, p0, Lcom/fusepowered/a1/cache/ApplifierImpactDownloader$CacheDownload;->_campaign:Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;
 
-    #calls: Lcom/fusepowered/a1/cache/ApplifierImpactDownloader;->removeDownload(Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;)V
+    # invokes: Lcom/fusepowered/a1/cache/ApplifierImpactDownloader;->removeDownload(Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;)V
     invoke-static {v1}, Lcom/fusepowered/a1/cache/ApplifierImpactDownloader;->access$2(Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;)V
 
     .line 286
-    #calls: Lcom/fusepowered/a1/cache/ApplifierImpactDownloader;->removeFromCacheDownloads(Lcom/fusepowered/a1/cache/ApplifierImpactDownloader$CacheDownload;)V
+    # invokes: Lcom/fusepowered/a1/cache/ApplifierImpactDownloader;->removeFromCacheDownloads(Lcom/fusepowered/a1/cache/ApplifierImpactDownloader$CacheDownload;)V
     invoke-static {p0}, Lcom/fusepowered/a1/cache/ApplifierImpactDownloader;->access$3(Lcom/fusepowered/a1/cache/ApplifierImpactDownloader$CacheDownload;)V
 
     .line 287
-    #calls: Lcom/fusepowered/a1/cache/ApplifierImpactDownloader;->cacheNextFile()V
+    # invokes: Lcom/fusepowered/a1/cache/ApplifierImpactDownloader;->cacheNextFile()V
     invoke-static {}, Lcom/fusepowered/a1/cache/ApplifierImpactDownloader;->access$1()V
 
     .line 289
     const-string v0, "ERROR"
 
     .line 290
-    .local v0, url:Ljava/lang/String;
+    .local v0, "url":Ljava/lang/String;
     iget-object v1, p0, Lcom/fusepowered/a1/cache/ApplifierImpactDownloader$CacheDownload;->_downloadUrl:Ljava/net/URL;
 
     if-eqz v1, :cond_0
@@ -713,14 +711,14 @@
     :cond_0
     sget-object v1, Lcom/fusepowered/a1/cache/ApplifierImpactDownloader$ApplifierDownloadEventType;->DownloadCompleted:Lcom/fusepowered/a1/cache/ApplifierImpactDownloader$ApplifierDownloadEventType;
 
-    #calls: Lcom/fusepowered/a1/cache/ApplifierImpactDownloader;->sendToListeners(Lcom/fusepowered/a1/cache/ApplifierImpactDownloader$ApplifierDownloadEventType;Ljava/lang/String;)V
+    # invokes: Lcom/fusepowered/a1/cache/ApplifierImpactDownloader;->sendToListeners(Lcom/fusepowered/a1/cache/ApplifierImpactDownloader$ApplifierDownloadEventType;Ljava/lang/String;)V
     invoke-static {v1, v0}, Lcom/fusepowered/a1/cache/ApplifierImpactDownloader;->access$4(Lcom/fusepowered/a1/cache/ApplifierImpactDownloader$ApplifierDownloadEventType;Ljava/lang/String;)V
 
     .line 294
     invoke-super {p0, p1}, Landroid/os/AsyncTask;->onPostExecute(Ljava/lang/Object;)V
 
     .line 296
-    .end local v0           #url:Ljava/lang/String;
+    .end local v0    # "url":Ljava/lang/String;
     :cond_1
     return-void
 .end method
@@ -738,7 +736,7 @@
 
 .method protected varargs onProgressUpdate([Ljava/lang/Integer;)V
     .locals 1
-    .parameter "progress"
+    .param p1, "progress"    # [Ljava/lang/Integer;
 
     .prologue
     .line 305
@@ -757,7 +755,6 @@
 
 .method protected bridge varargs synthetic onProgressUpdate([Ljava/lang/Object;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1

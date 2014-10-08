@@ -51,12 +51,6 @@
 # direct methods
 .method public constructor <init>(Lcom/google/ads/e;Lcom/google/ads/internal/h;Lcom/google/ads/f;Ljava/lang/String;Lcom/google/ads/AdRequest;Ljava/util/HashMap;)V
     .locals 3
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -133,7 +127,6 @@
 
 .method static synthetic a(Lcom/google/ads/h;)Lcom/google/ads/mediation/MediationAdapter;
     .locals 1
-    .parameter
 
     .prologue
     .line 42
@@ -156,7 +149,6 @@
 
 .method public declared-synchronized a(Landroid/app/Activity;)V
     .locals 8
-    .parameter
 
     .prologue
     .line 130
@@ -225,7 +217,6 @@
 
 .method declared-synchronized a(Landroid/view/View;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 276
@@ -252,7 +243,6 @@
 
 .method declared-synchronized a(Lcom/google/ads/mediation/MediationAdapter;)V
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -286,8 +276,6 @@
 
 .method declared-synchronized a(ZLcom/google/ads/g$a;)V
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 253
@@ -543,8 +531,8 @@
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Ljava/lang/ClassCastException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     .line 237
     :goto_0

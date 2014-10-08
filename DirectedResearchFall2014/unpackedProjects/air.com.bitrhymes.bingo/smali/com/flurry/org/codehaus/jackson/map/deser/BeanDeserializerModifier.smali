@@ -18,9 +18,8 @@
 # virtual methods
 .method public modifyDeserializer(Lcom/flurry/org/codehaus/jackson/map/DeserializationConfig;Lcom/flurry/org/codehaus/jackson/map/introspect/BasicBeanDescription;Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;)Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;
     .locals 0
-    .parameter "config"
-    .parameter "beanDesc"
-    .parameter
+    .param p1, "config"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationConfig;
+    .param p2, "beanDesc"    # Lcom/flurry/org/codehaus/jackson/map/introspect/BasicBeanDescription;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -35,15 +34,15 @@
 
     .prologue
     .line 56
-    .local p3, deserializer:Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer<*>;"
+    .local p3, "deserializer":Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer<*>;"
     return-object p3
 .end method
 
 .method public updateBuilder(Lcom/flurry/org/codehaus/jackson/map/DeserializationConfig;Lcom/flurry/org/codehaus/jackson/map/introspect/BasicBeanDescription;Lcom/flurry/org/codehaus/jackson/map/deser/BeanDeserializerBuilder;)Lcom/flurry/org/codehaus/jackson/map/deser/BeanDeserializerBuilder;
     .locals 0
-    .parameter "config"
-    .parameter "beanDesc"
-    .parameter "builder"
+    .param p1, "config"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationConfig;
+    .param p2, "beanDesc"    # Lcom/flurry/org/codehaus/jackson/map/introspect/BasicBeanDescription;
+    .param p3, "builder"    # Lcom/flurry/org/codehaus/jackson/map/deser/BeanDeserializerBuilder;
 
     .prologue
     .line 43

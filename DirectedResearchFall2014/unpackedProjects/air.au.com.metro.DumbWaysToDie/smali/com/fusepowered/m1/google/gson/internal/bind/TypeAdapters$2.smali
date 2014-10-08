@@ -38,7 +38,7 @@
 # virtual methods
 .method public bridge synthetic read(Lcom/fusepowered/m1/google/gson/stream/JsonReader;)Ljava/lang/Object;
     .locals 1
-    .parameter "x0"
+    .param p1, "x0"    # Lcom/fusepowered/m1/google/gson/stream/JsonReader;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -56,7 +56,7 @@
 
 .method public read(Lcom/fusepowered/m1/google/gson/stream/JsonReader;)Ljava/util/BitSet;
     .locals 10
-    .parameter "in"
+    .param p1, "in"    # Lcom/fusepowered/m1/google/gson/stream/JsonReader;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -94,20 +94,20 @@
     invoke-direct {v0}, Ljava/util/BitSet;-><init>()V
 
     .line 92
-    .local v0, bitset:Ljava/util/BitSet;
+    .local v0, "bitset":Ljava/util/BitSet;
     invoke-virtual {p1}, Lcom/fusepowered/m1/google/gson/stream/JsonReader;->beginArray()V
 
     .line 93
     const/4 v2, 0x0
 
     .line 94
-    .local v2, i:I
+    .local v2, "i":I
     invoke-virtual {p1}, Lcom/fusepowered/m1/google/gson/stream/JsonReader;->peek()Lcom/fusepowered/m1/google/gson/stream/JsonToken;
 
     move-result-object v5
 
     .line 95
-    .local v5, tokenType:Lcom/fusepowered/m1/google/gson/stream/JsonToken;
+    .local v5, "tokenType":Lcom/fusepowered/m1/google/gson/stream/JsonToken;
     :goto_1
     sget-object v6, Lcom/fusepowered/m1/google/gson/stream/JsonToken;->END_ARRAY:Lcom/fusepowered/m1/google/gson/stream/JsonToken;
 
@@ -160,7 +160,7 @@
     move v3, v9
 
     .line 116
-    .local v3, set:Z
+    .local v3, "set":Z
     :goto_2
     if-eqz v3, :cond_1
 
@@ -179,7 +179,7 @@
     .line 121
     goto :goto_1
 
-    .end local v3           #set:Z
+    .end local v3    # "set":Z
     :cond_2
     move v3, v8
 
@@ -193,18 +193,18 @@
     move-result v3
 
     .line 103
-    .restart local v3       #set:Z
+    .restart local v3    # "set":Z
     goto :goto_2
 
     .line 105
-    .end local v3           #set:Z
+    .end local v3    # "set":Z
     :pswitch_2
     invoke-virtual {p1}, Lcom/fusepowered/m1/google/gson/stream/JsonReader;->nextString()Ljava/lang/String;
 
     move-result-object v4
 
     .line 107
-    .local v4, stringValue:Ljava/lang/String;
+    .local v4, "stringValue":Ljava/lang/String;
     :try_start_0
     invoke-static {v4}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
     :try_end_0
@@ -216,11 +216,11 @@
 
     move v3, v9
 
-    .restart local v3       #set:Z
+    .restart local v3    # "set":Z
     :goto_3
     goto :goto_2
 
-    .end local v3           #set:Z
+    .end local v3    # "set":Z
     :cond_3
     move v3, v8
 
@@ -231,7 +231,7 @@
     move-exception v1
 
     .line 109
-    .local v1, e:Ljava/lang/NumberFormatException;
+    .local v1, "e":Ljava/lang/NumberFormatException;
     new-instance v6, Lcom/fusepowered/m1/google/gson/JsonSyntaxException;
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -257,8 +257,8 @@
     throw v6
 
     .line 122
-    .end local v1           #e:Ljava/lang/NumberFormatException;
-    .end local v4           #stringValue:Ljava/lang/String;
+    .end local v1    # "e":Ljava/lang/NumberFormatException;
+    .end local v4    # "stringValue":Ljava/lang/String;
     :cond_4
     invoke-virtual {p1}, Lcom/fusepowered/m1/google/gson/stream/JsonReader;->endArray()V
 
@@ -280,8 +280,8 @@
 
 .method public bridge synthetic write(Lcom/fusepowered/m1/google/gson/stream/JsonWriter;Ljava/lang/Object;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
+    .param p1, "x0"    # Lcom/fusepowered/m1/google/gson/stream/JsonWriter;
+    .param p2, "x1"    # Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -292,7 +292,7 @@
     .line 84
     check-cast p2, Ljava/util/BitSet;
 
-    .end local p2
+    .end local p2    # "x1":Ljava/lang/Object;
     invoke-virtual {p0, p1, p2}, Lcom/fusepowered/m1/google/gson/internal/bind/TypeAdapters$2;->write(Lcom/fusepowered/m1/google/gson/stream/JsonWriter;Ljava/util/BitSet;)V
 
     return-void
@@ -300,8 +300,8 @@
 
 .method public write(Lcom/fusepowered/m1/google/gson/stream/JsonWriter;Ljava/util/BitSet;)V
     .locals 4
-    .parameter "out"
-    .parameter "src"
+    .param p1, "out"    # Lcom/fusepowered/m1/google/gson/stream/JsonWriter;
+    .param p2, "src"    # Ljava/util/BitSet;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -326,7 +326,7 @@
     .line 133
     const/4 v0, 0x0
 
-    .local v0, i:I
+    .local v0, "i":I
     :goto_1
     invoke-virtual {p2}, Ljava/util/BitSet;->length()I
 
@@ -346,7 +346,7 @@
     move v1, v2
 
     .line 135
-    .local v1, value:I
+    .local v1, "value":I
     :goto_2
     int-to-long v2, v1
 
@@ -358,7 +358,7 @@
     goto :goto_1
 
     .line 134
-    .end local v1           #value:I
+    .end local v1    # "value":I
     :cond_1
     const/4 v2, 0x0
 

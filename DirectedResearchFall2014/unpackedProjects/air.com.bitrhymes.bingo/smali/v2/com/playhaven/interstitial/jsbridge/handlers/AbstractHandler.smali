@@ -44,7 +44,7 @@
     move-result-object v1
 
     .line 72
-    .local v1, contextStr:Ljava/lang/String;
+    .local v1, "contextStr":Ljava/lang/String;
     if-eqz v1, :cond_0
 
     const-string v3, "undefined"
@@ -70,7 +70,7 @@
     invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
 
     .line 78
-    .local v0, context:Lorg/json/JSONObject;
+    .local v0, "context":Lorg/json/JSONObject;
     :goto_0
     sget-object v3, Lorg/json/JSONObject;->NULL:Ljava/lang/Object;
 
@@ -89,13 +89,13 @@
     move-object v3, v0
 
     .line 86
-    .end local v0           #context:Lorg/json/JSONObject;
-    .end local v1           #contextStr:Ljava/lang/String;
+    .end local v0    # "context":Lorg/json/JSONObject;
+    .end local v1    # "contextStr":Ljava/lang/String;
     :goto_1
     return-object v3
 
     .line 75
-    .restart local v1       #contextStr:Ljava/lang/String;
+    .restart local v1    # "contextStr":Ljava/lang/String;
     :cond_1
     new-instance v0, Lorg/json/JSONObject;
 
@@ -103,23 +103,23 @@
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .restart local v0       #context:Lorg/json/JSONObject;
+    .restart local v0    # "context":Lorg/json/JSONObject;
     goto :goto_0
 
     .line 82
-    .end local v0           #context:Lorg/json/JSONObject;
-    .end local v1           #contextStr:Ljava/lang/String;
+    .end local v0    # "context":Lorg/json/JSONObject;
+    .end local v1    # "contextStr":Ljava/lang/String;
     :catch_0
     move-exception v3
 
     move-object v2, v3
 
     .line 83
-    .local v2, e:Lorg/json/JSONException;
+    .local v2, "e":Lorg/json/JSONException;
     invoke-virtual {v2}, Lorg/json/JSONException;->printStackTrace()V
 
     .line 86
-    .end local v2           #e:Lorg/json/JSONException;
+    .end local v2    # "e":Lorg/json/JSONException;
     :cond_2
     const/4 v3, 0x0
 
@@ -130,7 +130,7 @@
 # virtual methods
 .method public attachBridge(Lv2/com/playhaven/interstitial/jsbridge/PHJSBridge;)V
     .locals 0
-    .parameter "bridge"
+    .param p1, "bridge"    # Lv2/com/playhaven/interstitial/jsbridge/PHJSBridge;
 
     .prologue
     .line 48
@@ -142,7 +142,7 @@
 
 .method public attachContentDisplayer(Lv2/com/playhaven/interstitial/jsbridge/ManipulatableContentDisplayer;)V
     .locals 1
-    .parameter "contentDisplayer"
+    .param p1, "contentDisplayer"    # Lv2/com/playhaven/interstitial/jsbridge/ManipulatableContentDisplayer;
 
     .prologue
     .line 53
@@ -216,9 +216,9 @@
 
 .method protected sendResponseToWebview(Ljava/lang/String;Lorg/json/JSONObject;Lorg/json/JSONObject;)V
     .locals 1
-    .parameter "callback"
-    .parameter "payload"
-    .parameter "error"
+    .param p1, "callback"    # Ljava/lang/String;
+    .param p2, "payload"    # Lorg/json/JSONObject;
+    .param p3, "error"    # Lorg/json/JSONObject;
 
     .prologue
     .line 97

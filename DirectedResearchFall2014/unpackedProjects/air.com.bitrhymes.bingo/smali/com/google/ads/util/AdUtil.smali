@@ -99,8 +99,6 @@
 
 .method public static a(Landroid/content/Context;I)I
     .locals 3
-    .parameter
-    .parameter
 
     .prologue
     .line 912
@@ -127,8 +125,6 @@
 
 .method public static a(Landroid/content/Context;Landroid/util/DisplayMetrics;)I
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     .line 245
@@ -155,7 +151,6 @@
 
 .method public static a(Ljava/lang/String;)I
     .locals 2
-    .parameter
 
     .prologue
     .line 167
@@ -210,7 +205,6 @@
 
 .method public static a(Landroid/app/Activity;)Landroid/util/DisplayMetrics;
     .locals 2
-    .parameter
 
     .prologue
     .line 624
@@ -249,7 +243,6 @@
 
 .method public static a(Landroid/content/Context;)Ljava/lang/String;
     .locals 2
-    .parameter
 
     .prologue
     .line 185
@@ -323,7 +316,6 @@
 
 .method public static a(Ljava/lang/Readable;)Ljava/lang/String;
     .locals 4
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -374,7 +366,6 @@
 
 .method public static a(Ljava/util/Map;)Ljava/lang/String;
     .locals 3
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -423,7 +414,6 @@
 
 .method public static a(Landroid/location/Location;)Ljava/util/HashMap;
     .locals 8
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -514,7 +504,7 @@
 
     move-result v2
 
-    const/high16 v3, 0x447a
+    const/high16 v3, 0x447a0000
 
     mul-float/2addr v2, v3
 
@@ -531,7 +521,6 @@
 
 .method public static a(Ljava/util/Set;)Lorg/json/JSONArray;
     .locals 5
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -705,7 +694,6 @@
 
 .method public static a(Landroid/webkit/WebView;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 796
@@ -734,8 +722,6 @@
 
 .method public static a(Ljava/net/HttpURLConnection;Landroid/content/Context;)V
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     .line 807
@@ -753,7 +739,6 @@
 
 .method public static a(Z)V
     .locals 0
-    .parameter
 
     .prologue
     .line 692
@@ -765,9 +750,6 @@
 
 .method public static a(IILjava/lang/String;)Z
     .locals 2
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 303
@@ -817,8 +799,6 @@
 
 .method public static a(Landroid/content/Context;Ljava/lang/String;)Z
     .locals 3
-    .parameter
-    .parameter
 
     .prologue
     const/4 v2, 0x0
@@ -855,8 +835,6 @@
 
 .method public static a(Landroid/content/Intent;Landroid/content/Context;)Z
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     .line 139
@@ -864,7 +842,7 @@
 
     move-result-object v0
 
-    const/high16 v1, 0x1
+    const/high16 v1, 0x10000
 
     invoke-virtual {v0, p0, v1}, Landroid/content/pm/PackageManager;->resolveActivity(Landroid/content/Intent;I)Landroid/content/pm/ResolveInfo;
 
@@ -886,7 +864,6 @@
 
 .method public static a(Landroid/net/Uri;)Z
     .locals 3
-    .parameter
 
     .prologue
     const/4 v2, 0x0
@@ -936,7 +913,6 @@
 
 .method static a(Lcom/google/ads/util/d;)Z
     .locals 2
-    .parameter
 
     .prologue
     .line 408
@@ -1006,8 +982,6 @@
 
 .method public static b(Landroid/content/Context;Landroid/util/DisplayMetrics;)I
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     .line 261
@@ -1034,7 +1008,6 @@
 
 .method public static b(Ljava/lang/String;)Ljava/lang/String;
     .locals 8
-    .parameter
 
     .prologue
     const/4 v7, 0x0
@@ -1122,7 +1095,6 @@
 
 .method public static b(Landroid/net/Uri;)Ljava/util/HashMap;
     .locals 10
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1235,7 +1207,6 @@
 
 .method public static b(Ljava/util/Map;)Lorg/json/JSONObject;
     .locals 6
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1430,7 +1401,6 @@
 
 .method public static b(Landroid/content/Context;)Z
     .locals 5
-    .parameter
 
     .prologue
     const/4 v4, 0x0
@@ -1510,7 +1480,6 @@
 
 .method public static c(Landroid/content/Context;)Z
     .locals 5
-    .parameter
 
     .prologue
     const/4 v4, 0x0
@@ -1545,7 +1514,7 @@
     invoke-direct {v1, p0, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
     .line 330
-    const/high16 v2, 0x1
+    const/high16 v2, 0x10000
 
     invoke-virtual {v0, v1, v2}, Landroid/content/pm/PackageManager;->resolveActivity(Landroid/content/Intent;I)Landroid/content/pm/ResolveInfo;
 
@@ -1757,7 +1726,6 @@
 
 .method public static d(Landroid/content/Context;)Ljava/lang/String;
     .locals 1
-    .parameter
 
     .prologue
     .line 463
@@ -1829,10 +1797,9 @@
 
 .method public static e(Landroid/content/Context;)Ljava/lang/String;
     .locals 6
-    .parameter
 
     .prologue
-    const/high16 v4, 0x1
+    const/high16 v4, 0x10000
 
     const-string v5, "android.intent.action.VIEW"
 
@@ -1946,7 +1913,6 @@
 
 .method public static f(Landroid/content/Context;)Ljava/lang/String;
     .locals 5
-    .parameter
 
     .prologue
     const/4 v4, 0x0
@@ -1984,7 +1950,7 @@
     invoke-direct {v1, v2, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
     .line 556
-    const/high16 v2, 0x1
+    const/high16 v2, 0x10000
 
     invoke-virtual {v0, v1, v2}, Landroid/content/pm/PackageManager;->resolveActivity(Landroid/content/Intent;I)Landroid/content/pm/ResolveInfo;
 
@@ -2077,7 +2043,6 @@
 
 .method public static g(Landroid/content/Context;)Lcom/google/ads/util/AdUtil$a;
     .locals 3
-    .parameter
 
     .prologue
     const/4 v2, 0x1
@@ -2181,7 +2146,6 @@
 
 .method public static h(Landroid/content/Context;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 702
@@ -2226,7 +2190,6 @@
 
 .method public static i(Landroid/content/Context;)Ljava/lang/String;
     .locals 7
-    .parameter
 
     .prologue
     const-string v6, "; "

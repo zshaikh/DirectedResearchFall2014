@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m2/m2l/MraidDisplayController;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1
@@ -50,10 +49,10 @@
     move-result v0
 
     .line 138
-    .local v0, currentViewable:Z
+    .local v0, "currentViewable":Z
     iget-object v1, p0, Lcom/fusepowered/m2/m2l/MraidDisplayController$1;->this$0:Lcom/fusepowered/m2/m2l/MraidDisplayController;
 
-    #getter for: Lcom/fusepowered/m2/m2l/MraidDisplayController;->mIsViewable:Z
+    # getter for: Lcom/fusepowered/m2/m2l/MraidDisplayController;->mIsViewable:Z
     invoke-static {v1}, Lcom/fusepowered/m2/m2l/MraidDisplayController;->access$0(Lcom/fusepowered/m2/m2l/MraidDisplayController;)Z
 
     move-result v1
@@ -63,7 +62,6 @@
     .line 139
     iget-object v1, p0, Lcom/fusepowered/m2/m2l/MraidDisplayController$1;->this$0:Lcom/fusepowered/m2/m2l/MraidDisplayController;
 
-    #setter for: Lcom/fusepowered/m2/m2l/MraidDisplayController;->mIsViewable:Z
     invoke-static {v1, v0}, Lcom/fusepowered/m2/m2l/MraidDisplayController;->access$1(Lcom/fusepowered/m2/m2l/MraidDisplayController;Z)V
 
     .line 140
@@ -76,7 +74,7 @@
     .line 141
     iget-object v2, p0, Lcom/fusepowered/m2/m2l/MraidDisplayController$1;->this$0:Lcom/fusepowered/m2/m2l/MraidDisplayController;
 
-    #getter for: Lcom/fusepowered/m2/m2l/MraidDisplayController;->mIsViewable:Z
+    # getter for: Lcom/fusepowered/m2/m2l/MraidDisplayController;->mIsViewable:Z
     invoke-static {v2}, Lcom/fusepowered/m2/m2l/MraidDisplayController;->access$0(Lcom/fusepowered/m2/m2l/MraidDisplayController;)Z
 
     move-result v2
@@ -92,7 +90,7 @@
     :cond_0
     iget-object v1, p0, Lcom/fusepowered/m2/m2l/MraidDisplayController$1;->this$0:Lcom/fusepowered/m2/m2l/MraidDisplayController;
 
-    #getter for: Lcom/fusepowered/m2/m2l/MraidDisplayController;->mHandler:Landroid/os/Handler;
+    # getter for: Lcom/fusepowered/m2/m2l/MraidDisplayController;->mHandler:Landroid/os/Handler;
     invoke-static {v1}, Lcom/fusepowered/m2/m2l/MraidDisplayController;->access$2(Lcom/fusepowered/m2/m2l/MraidDisplayController;)Landroid/os/Handler;
 
     move-result-object v1

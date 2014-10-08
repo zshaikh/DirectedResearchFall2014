@@ -47,10 +47,6 @@
 
 .method public constructor <init>(Lcom/flurry/android/FlurryAds;Landroid/content/Context;Ljava/lang/String;Landroid/view/ViewGroup;)V
     .locals 1
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 31
@@ -88,7 +84,6 @@
 
 .method static synthetic a(Lcom/flurry/android/ac;)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 17
@@ -117,7 +112,6 @@
 
 .method static synthetic b(Lcom/flurry/android/ac;)Ljava/lang/Runnable;
     .locals 1
-    .parameter
 
     .prologue
     .line 17
@@ -128,7 +122,6 @@
 
 .method static synthetic c(Lcom/flurry/android/ac;)V
     .locals 7
-    .parameter
 
     .prologue
     .line 17
@@ -312,7 +305,6 @@
 # virtual methods
 .method public final declared-synchronized a(J)V
     .locals 7
-    .parameter
 
     .prologue
     .line 55

@@ -46,7 +46,7 @@
 # direct methods
 .method public constructor <init>(Lcom/flurry/org/codehaus/jackson/map/BeanProperty;)V
     .locals 2
-    .parameter "prop"
+    .param p1, "prop"    # Lcom/flurry/org/codehaus/jackson/map/BeanProperty;
 
     .prologue
     .line 97
@@ -62,10 +62,9 @@
 
 .method private serializeContentsSlow([Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/JsonGenerator;Lcom/flurry/org/codehaus/jackson/map/SerializerProvider;Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;)V
     .locals 4
-    .parameter "value"
-    .parameter "jgen"
-    .parameter "provider"
-    .parameter
+    .param p1, "value"    # [Ljava/lang/String;
+    .param p2, "jgen"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator;
+    .param p3, "provider"    # Lcom/flurry/org/codehaus/jackson/map/SerializerProvider;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "([",
@@ -88,13 +87,13 @@
 
     .prologue
     .line 144
-    .local p4, ser:Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
+    .local p4, "ser":Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
     const/4 v0, 0x0
 
-    .local v0, i:I
+    .local v0, "i":I
     array-length v1, p1
 
-    .local v1, len:I
+    .local v1, "len":I
     :goto_0
     if-ge v0, v1, :cond_1
 
@@ -102,7 +101,7 @@
     aget-object v2, p1, v0
 
     .line 146
-    .local v2, str:Ljava/lang/String;
+    .local v2, "str":Ljava/lang/String;
     if-nez v2, :cond_0
 
     .line 147
@@ -123,7 +122,7 @@
     goto :goto_1
 
     .line 152
-    .end local v2           #str:Ljava/lang/String;
+    .end local v2    # "str":Ljava/lang/String;
     :cond_1
     return-void
 .end method
@@ -132,7 +131,7 @@
 # virtual methods
 .method public _withValueTypeSerializer(Lcom/flurry/org/codehaus/jackson/map/TypeSerializer;)Lcom/flurry/org/codehaus/jackson/map/ser/std/ContainerSerializerBase;
     .locals 0
-    .parameter "vts"
+    .param p1, "vts"    # Lcom/flurry/org/codehaus/jackson/map/TypeSerializer;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -150,8 +149,8 @@
 
 .method public getSchema(Lcom/flurry/org/codehaus/jackson/map/SerializerProvider;Ljava/lang/reflect/Type;)Lcom/flurry/org/codehaus/jackson/JsonNode;
     .locals 3
-    .parameter "provider"
-    .parameter "typeHint"
+    .param p1, "provider"    # Lcom/flurry/org/codehaus/jackson/map/SerializerProvider;
+    .param p2, "typeHint"    # Ljava/lang/reflect/Type;
 
     .prologue
     .line 172
@@ -164,7 +163,7 @@
     move-result-object v0
 
     .line 173
-    .local v0, o:Lcom/flurry/org/codehaus/jackson/node/ObjectNode;
+    .local v0, "o":Lcom/flurry/org/codehaus/jackson/node/ObjectNode;
     const-string v1, "items"
 
     const-string v2, "string"
@@ -181,7 +180,7 @@
 
 .method public resolve(Lcom/flurry/org/codehaus/jackson/map/SerializerProvider;)V
     .locals 3
-    .parameter "provider"
+    .param p1, "provider"    # Lcom/flurry/org/codehaus/jackson/map/SerializerProvider;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lcom/flurry/org/codehaus/jackson/map/JsonMappingException;
@@ -199,7 +198,7 @@
     move-result-object v0
 
     .line 164
-    .local v0, ser:Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
+    .local v0, "ser":Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
     if-eqz v0, :cond_0
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -224,9 +223,9 @@
 
 .method public bridge synthetic serializeContents(Ljava/lang/Object;Lcom/flurry/org/codehaus/jackson/JsonGenerator;Lcom/flurry/org/codehaus/jackson/map/SerializerProvider;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
-    .parameter "x2"
+    .param p1, "x0"    # Ljava/lang/Object;
+    .param p2, "x1"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator;
+    .param p3, "x2"    # Lcom/flurry/org/codehaus/jackson/map/SerializerProvider;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -238,7 +237,7 @@
     .line 83
     check-cast p1, [Ljava/lang/String;
 
-    .end local p1
+    .end local p1    # "x0":Ljava/lang/Object;
     invoke-virtual {p0, p1, p2, p3}, Lcom/flurry/org/codehaus/jackson/map/ser/std/StdArraySerializers$StringArraySerializer;->serializeContents([Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/JsonGenerator;Lcom/flurry/org/codehaus/jackson/map/SerializerProvider;)V
 
     return-void
@@ -246,9 +245,9 @@
 
 .method public serializeContents([Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/JsonGenerator;Lcom/flurry/org/codehaus/jackson/map/SerializerProvider;)V
     .locals 4
-    .parameter "value"
-    .parameter "jgen"
-    .parameter "provider"
+    .param p1, "value"    # [Ljava/lang/String;
+    .param p2, "jgen"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator;
+    .param p3, "provider"    # Lcom/flurry/org/codehaus/jackson/map/SerializerProvider;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -261,7 +260,7 @@
     array-length v1, p1
 
     .line 114
-    .local v1, len:I
+    .local v1, "len":I
     if-nez v1, :cond_1
 
     .line 138
@@ -286,7 +285,7 @@
     :cond_2
     const/4 v0, 0x0
 
-    .local v0, i:I
+    .local v0, "i":I
     :goto_1
     if-ge v0, v1, :cond_0
 
@@ -294,7 +293,7 @@
     aget-object v2, p1, v0
 
     .line 131
-    .local v2, str:Ljava/lang/String;
+    .local v2, "str":Ljava/lang/String;
     if-nez v2, :cond_3
 
     .line 132

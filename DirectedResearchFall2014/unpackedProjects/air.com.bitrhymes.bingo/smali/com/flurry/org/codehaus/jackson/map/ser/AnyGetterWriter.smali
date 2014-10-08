@@ -12,8 +12,8 @@
 # direct methods
 .method public constructor <init>(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;Lcom/flurry/org/codehaus/jackson/map/ser/std/MapSerializer;)V
     .locals 1
-    .parameter "anyGetter"
-    .parameter "serializer"
+    .param p1, "anyGetter"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
+    .param p2, "serializer"    # Lcom/flurry/org/codehaus/jackson/map/ser/std/MapSerializer;
 
     .prologue
     .line 25
@@ -37,9 +37,9 @@
 # virtual methods
 .method public getAndSerialize(Ljava/lang/Object;Lcom/flurry/org/codehaus/jackson/JsonGenerator;Lcom/flurry/org/codehaus/jackson/map/SerializerProvider;)V
     .locals 4
-    .parameter "bean"
-    .parameter "jgen"
-    .parameter "provider"
+    .param p1, "bean"    # Ljava/lang/Object;
+    .param p2, "jgen"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator;
+    .param p3, "provider"    # Lcom/flurry/org/codehaus/jackson/map/SerializerProvider;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/Exception;
@@ -59,16 +59,16 @@
     move-result-object v0
 
     .line 34
-    .local v0, value:Ljava/lang/Object;
+    .local v0, "value":Ljava/lang/Object;
     if-nez v0, :cond_0
 
     .line 42
-    .end local v0           #value:Ljava/lang/Object;
+    .end local v0    # "value":Ljava/lang/Object;
     :goto_0
     return-void
 
     .line 37
-    .restart local v0       #value:Ljava/lang/Object;
+    .restart local v0    # "value":Ljava/lang/Object;
     :cond_0
     instance-of v1, v0, Ljava/util/Map;
 
@@ -129,7 +129,7 @@
 
     check-cast v0, Ljava/util/Map;
 
-    .end local v0           #value:Ljava/lang/Object;
+    .end local v0    # "value":Ljava/lang/Object;
     invoke-virtual {v1, v0, p2, p3}, Lcom/flurry/org/codehaus/jackson/map/ser/std/MapSerializer;->serializeFields(Ljava/util/Map;Lcom/flurry/org/codehaus/jackson/JsonGenerator;Lcom/flurry/org/codehaus/jackson/map/SerializerProvider;)V
 
     goto :goto_0
@@ -137,7 +137,7 @@
 
 .method public resolve(Lcom/flurry/org/codehaus/jackson/map/SerializerProvider;)V
     .locals 1
-    .parameter "provider"
+    .param p1, "provider"    # Lcom/flurry/org/codehaus/jackson/map/SerializerProvider;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lcom/flurry/org/codehaus/jackson/map/JsonMappingException;

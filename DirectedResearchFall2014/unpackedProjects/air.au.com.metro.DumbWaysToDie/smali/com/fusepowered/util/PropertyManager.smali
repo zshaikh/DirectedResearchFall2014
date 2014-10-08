@@ -38,7 +38,7 @@
     const/4 v0, 0x0
 
     .line 39
-    .local v0, gameVersion:Ljava/lang/String;
+    .local v0, "gameVersion":Ljava/lang/String;
     :try_start_0
     invoke-static {}, Lcom/fusepowered/fuseapi/FuseAPI;->getContext()Landroid/content/Context;
 
@@ -49,7 +49,7 @@
     move-result-object v2
 
     .line 40
-    .local v2, packageName:Ljava/lang/String;
+    .local v2, "packageName":Ljava/lang/String;
     invoke-static {}, Lcom/fusepowered/fuseapi/FuseAPI;->getContext()Landroid/content/Context;
 
     move-result-object v3
@@ -65,14 +65,14 @@
     move-result-object v1
 
     .line 42
-    .local v1, packageInfo:Landroid/content/pm/PackageInfo;
+    .local v1, "packageInfo":Landroid/content/pm/PackageInfo;
     iget-object v0, v1, Landroid/content/pm/PackageInfo;->versionName:Ljava/lang/String;
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 46
-    .end local v1           #packageInfo:Landroid/content/pm/PackageInfo;
-    .end local v2           #packageName:Ljava/lang/String;
+    .end local v1    # "packageInfo":Landroid/content/pm/PackageInfo;
+    .end local v2    # "packageName":Ljava/lang/String;
     :goto_0
     return-object v0
 
@@ -85,14 +85,14 @@
 
 .method public static readProperty(Ljava/lang/String;)Ljava/lang/String;
     .locals 6
-    .parameter "propertyName"
+    .param p0, "propertyName"    # Ljava/lang/String;
 
     .prologue
     .line 19
     const/4 v3, 0x0
 
     .line 20
-    .local v3, propertyValue:Ljava/lang/String;
+    .local v3, "propertyValue":Ljava/lang/String;
     invoke-static {}, Lcom/fusepowered/fuseapi/FuseAPI;->getContext()Landroid/content/Context;
 
     move-result-object v5
@@ -119,13 +119,13 @@
     move-result-object v4
 
     .line 22
-    .local v4, resources:Landroid/content/res/Resources;
+    .local v4, "resources":Landroid/content/res/Resources;
     invoke-virtual {v4}, Landroid/content/res/Resources;->getAssets()Landroid/content/res/AssetManager;
 
     move-result-object v0
 
     .line 26
-    .local v0, assetManager:Landroid/content/res/AssetManager;
+    .local v0, "assetManager":Landroid/content/res/AssetManager;
     :try_start_0
     const-string v5, "fuse.properties"
 
@@ -134,13 +134,13 @@
     move-result-object v1
 
     .line 27
-    .local v1, inputStream:Ljava/io/InputStream;
+    .local v1, "inputStream":Ljava/io/InputStream;
     new-instance v2, Ljava/util/Properties;
 
     invoke-direct {v2}, Ljava/util/Properties;-><init>()V
 
     .line 28
-    .local v2, properties:Ljava/util/Properties;
+    .local v2, "properties":Ljava/util/Properties;
     invoke-virtual {v2, v1}, Ljava/util/Properties;->load(Ljava/io/InputStream;)V
 
     .line 29
@@ -151,17 +151,17 @@
     move-result-object v3
 
     .line 33
-    .end local v0           #assetManager:Landroid/content/res/AssetManager;
-    .end local v1           #inputStream:Ljava/io/InputStream;
-    .end local v2           #properties:Ljava/util/Properties;
-    .end local v4           #resources:Landroid/content/res/Resources;
+    .end local v0    # "assetManager":Landroid/content/res/AssetManager;
+    .end local v1    # "inputStream":Ljava/io/InputStream;
+    .end local v2    # "properties":Ljava/util/Properties;
+    .end local v4    # "resources":Landroid/content/res/Resources;
     :cond_0
     :goto_0
     return-object v3
 
     .line 30
-    .restart local v0       #assetManager:Landroid/content/res/AssetManager;
-    .restart local v4       #resources:Landroid/content/res/Resources;
+    .restart local v0    # "assetManager":Landroid/content/res/AssetManager;
+    .restart local v4    # "resources":Landroid/content/res/Resources;
     :catch_0
     move-exception v5
 

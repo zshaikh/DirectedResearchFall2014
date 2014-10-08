@@ -10,7 +10,6 @@
 # direct methods
 .method constructor <init>(Lcom/flurry/android/a;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1223

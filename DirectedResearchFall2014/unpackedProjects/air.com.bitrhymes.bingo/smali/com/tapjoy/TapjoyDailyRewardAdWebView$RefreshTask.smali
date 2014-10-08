@@ -32,7 +32,6 @@
 # direct methods
 .method private constructor <init>(Lcom/tapjoy/TapjoyDailyRewardAdWebView;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 58
@@ -45,8 +44,8 @@
 
 .method synthetic constructor <init>(Lcom/tapjoy/TapjoyDailyRewardAdWebView;Lcom/tapjoy/TapjoyDailyRewardAdWebView$1;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
+    .param p1, "x0"    # Lcom/tapjoy/TapjoyDailyRewardAdWebView;
+    .param p2, "x1"    # Lcom/tapjoy/TapjoyDailyRewardAdWebView$1;
 
     .prologue
     .line 58
@@ -59,7 +58,7 @@
 # virtual methods
 .method protected varargs doInBackground([Ljava/lang/Void;)Ljava/lang/Boolean;
     .locals 3
-    .parameter "params"
+    .param p1, "params"    # [Ljava/lang/Void;
 
     .prologue
     .line 65
@@ -85,7 +84,7 @@
     move-exception v0
 
     .line 69
-    .local v0, e:Ljava/lang/InterruptedException;
+    .local v0, "e":Ljava/lang/InterruptedException;
     invoke-virtual {v0}, Ljava/lang/InterruptedException;->printStackTrace()V
 
     goto :goto_0
@@ -93,13 +92,13 @@
 
 .method protected bridge synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
-    .parameter "x0"
+    .param p1, "x0"    # [Ljava/lang/Object;
 
     .prologue
     .line 58
     check-cast p1, [Ljava/lang/Void;
 
-    .end local p1
+    .end local p1    # "x0":[Ljava/lang/Object;
     invoke-virtual {p0, p1}, Lcom/tapjoy/TapjoyDailyRewardAdWebView$RefreshTask;->doInBackground([Ljava/lang/Void;)Ljava/lang/Boolean;
 
     move-result-object v0
@@ -109,7 +108,7 @@
 
 .method protected onPostExecute(Ljava/lang/Boolean;)V
     .locals 2
-    .parameter "result"
+    .param p1, "result"    # Ljava/lang/Boolean;
 
     .prologue
     .line 77
@@ -135,13 +134,13 @@
 
 .method protected bridge synthetic onPostExecute(Ljava/lang/Object;)V
     .locals 0
-    .parameter "x0"
+    .param p1, "x0"    # Ljava/lang/Object;
 
     .prologue
     .line 58
     check-cast p1, Ljava/lang/Boolean;
 
-    .end local p1
+    .end local p1    # "x0":Ljava/lang/Object;
     invoke-virtual {p0, p1}, Lcom/tapjoy/TapjoyDailyRewardAdWebView$RefreshTask;->onPostExecute(Ljava/lang/Boolean;)V
 
     return-void

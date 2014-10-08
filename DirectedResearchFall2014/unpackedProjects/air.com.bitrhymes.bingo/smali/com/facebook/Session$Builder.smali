@@ -25,7 +25,7 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     .line 1543
@@ -60,7 +60,7 @@
 
 .method public setApplicationId(Ljava/lang/String;)Lcom/facebook/Session$Builder;
     .locals 0
-    .parameter "applicationId"
+    .param p1, "applicationId"    # Ljava/lang/String;
 
     .prologue
     .line 1554
@@ -72,7 +72,7 @@
 
 .method public setTokenCachingStrategy(Lcom/facebook/TokenCachingStrategy;)Lcom/facebook/Session$Builder;
     .locals 0
-    .parameter "tokenCachingStrategy"
+    .param p1, "tokenCachingStrategy"    # Lcom/facebook/TokenCachingStrategy;
 
     .prologue
     .line 1565

@@ -35,7 +35,7 @@
 # virtual methods
 .method public includeMethod(Ljava/lang/reflect/Method;)Z
     .locals 4
-    .parameter "m"
+    .param p1, "m"    # Ljava/lang/reflect/Method;
 
     .prologue
     const/4 v3, 0x1
@@ -68,7 +68,7 @@
     array-length v0, v1
 
     .line 316
-    .local v0, pcount:I
+    .local v0, "pcount":I
     packed-switch v0, :pswitch_data_0
 
     move v1, v2

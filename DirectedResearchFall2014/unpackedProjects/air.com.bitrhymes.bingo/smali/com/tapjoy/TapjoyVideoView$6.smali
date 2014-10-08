@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/tapjoy/TapjoyVideoView;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 641
@@ -39,7 +38,7 @@
 # virtual methods
 .method public onCancel(Landroid/content/DialogInterface;)V
     .locals 2
-    .parameter "dialog"
+    .param p1, "dialog"    # Landroid/content/DialogInterface;
 
     .prologue
     .line 645
@@ -55,14 +54,14 @@
     .line 649
     iget-object v0, p0, Lcom/tapjoy/TapjoyVideoView$6;->this$0:Lcom/tapjoy/TapjoyVideoView;
 
-    #getter for: Lcom/tapjoy/TapjoyVideoView;->videoView:Landroid/widget/VideoView;
+    # getter for: Lcom/tapjoy/TapjoyVideoView;->videoView:Landroid/widget/VideoView;
     invoke-static {v0}, Lcom/tapjoy/TapjoyVideoView;->access$700(Lcom/tapjoy/TapjoyVideoView;)Landroid/widget/VideoView;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/tapjoy/TapjoyVideoView$6;->this$0:Lcom/tapjoy/TapjoyVideoView;
 
-    #getter for: Lcom/tapjoy/TapjoyVideoView;->seekTime:I
+    # getter for: Lcom/tapjoy/TapjoyVideoView;->seekTime:I
     invoke-static {v1}, Lcom/tapjoy/TapjoyVideoView;->access$600(Lcom/tapjoy/TapjoyVideoView;)I
 
     move-result v1
@@ -72,7 +71,7 @@
     .line 650
     iget-object v0, p0, Lcom/tapjoy/TapjoyVideoView$6;->this$0:Lcom/tapjoy/TapjoyVideoView;
 
-    #getter for: Lcom/tapjoy/TapjoyVideoView;->videoView:Landroid/widget/VideoView;
+    # getter for: Lcom/tapjoy/TapjoyVideoView;->videoView:Landroid/widget/VideoView;
     invoke-static {v0}, Lcom/tapjoy/TapjoyVideoView;->access$700(Lcom/tapjoy/TapjoyVideoView;)Landroid/widget/VideoView;
 
     move-result-object v0
@@ -84,7 +83,7 @@
 
     const/4 v1, 0x0
 
-    #setter for: Lcom/tapjoy/TapjoyVideoView;->dialogShowing:Z
+    # setter for: Lcom/tapjoy/TapjoyVideoView;->dialogShowing:Z
     invoke-static {v0, v1}, Lcom/tapjoy/TapjoyVideoView;->access$802(Lcom/tapjoy/TapjoyVideoView;Z)Z
 
     .line 653

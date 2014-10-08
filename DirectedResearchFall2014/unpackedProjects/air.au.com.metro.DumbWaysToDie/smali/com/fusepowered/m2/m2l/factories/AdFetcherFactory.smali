@@ -34,8 +34,8 @@
 
 .method public static create(Lcom/fusepowered/m2/m2l/AdViewController;Ljava/lang/String;)Lcom/fusepowered/m2/m2l/AdFetcher;
     .locals 1
-    .parameter "adViewController"
-    .parameter "userAgent"
+    .param p0, "adViewController"    # Lcom/fusepowered/m2/m2l/AdViewController;
+    .param p1, "userAgent"    # Ljava/lang/String;
 
     .prologue
     .line 47
@@ -50,7 +50,7 @@
 
 .method public static setInstance(Lcom/fusepowered/m2/m2l/factories/AdFetcherFactory;)V
     .locals 0
-    .parameter "factory"
+    .param p0, "factory"    # Lcom/fusepowered/m2/m2l/factories/AdFetcherFactory;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -66,8 +66,8 @@
 # virtual methods
 .method protected internalCreate(Lcom/fusepowered/m2/m2l/AdViewController;Ljava/lang/String;)Lcom/fusepowered/m2/m2l/AdFetcher;
     .locals 1
-    .parameter "adViewController"
-    .parameter "userAgent"
+    .param p1, "adViewController"    # Lcom/fusepowered/m2/m2l/AdViewController;
+    .param p2, "userAgent"    # Ljava/lang/String;
 
     .prologue
     .line 51

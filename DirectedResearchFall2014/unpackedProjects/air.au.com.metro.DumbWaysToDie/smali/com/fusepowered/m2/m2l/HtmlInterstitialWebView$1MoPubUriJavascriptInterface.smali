@@ -23,8 +23,6 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m2/m2l/HtmlInterstitialWebView;Lcom/fusepowered/m2/m2l/HtmlInterstitialWebView$MoPubUriJavascriptFireFinishLoadListener;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 83
@@ -52,7 +50,7 @@
 
     invoke-direct {v1, p0, v2}, Lcom/fusepowered/m2/m2l/HtmlInterstitialWebView$1MoPubUriJavascriptInterface$1;-><init>(Lcom/fusepowered/m2/m2l/HtmlInterstitialWebView$1MoPubUriJavascriptInterface;Lcom/fusepowered/m2/m2l/HtmlInterstitialWebView$MoPubUriJavascriptFireFinishLoadListener;)V
 
-    #calls: Lcom/fusepowered/m2/m2l/HtmlInterstitialWebView;->postHandlerRunnable(Ljava/lang/Runnable;)V
+    # invokes: Lcom/fusepowered/m2/m2l/HtmlInterstitialWebView;->postHandlerRunnable(Ljava/lang/Runnable;)V
     invoke-static {v0, v1}, Lcom/fusepowered/m2/m2l/HtmlInterstitialWebView;->access$0(Lcom/fusepowered/m2/m2l/HtmlInterstitialWebView;Ljava/lang/Runnable;)V
 
     .line 93

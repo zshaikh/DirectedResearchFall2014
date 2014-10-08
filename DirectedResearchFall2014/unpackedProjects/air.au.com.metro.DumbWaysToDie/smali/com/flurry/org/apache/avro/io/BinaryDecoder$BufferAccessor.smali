@@ -29,7 +29,7 @@
 # direct methods
 .method private constructor <init>(Lcom/flurry/org/apache/avro/io/BinaryDecoder;)V
     .locals 1
-    .parameter "decoder"
+    .param p1, "decoder"    # Lcom/flurry/org/apache/avro/io/BinaryDecoder;
 
     .prologue
     .line 494
@@ -49,8 +49,8 @@
 
 .method synthetic constructor <init>(Lcom/flurry/org/apache/avro/io/BinaryDecoder;Lcom/flurry/org/apache/avro/io/BinaryDecoder$1;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
+    .param p1, "x0"    # Lcom/flurry/org/apache/avro/io/BinaryDecoder;
+    .param p2, "x1"    # Lcom/flurry/org/apache/avro/io/BinaryDecoder$1;
 
     .prologue
     .line 487
@@ -68,7 +68,7 @@
     .line 499
     iget-object v0, p0, Lcom/flurry/org/apache/avro/io/BinaryDecoder$BufferAccessor;->decoder:Lcom/flurry/org/apache/avro/io/BinaryDecoder;
 
-    #getter for: Lcom/flurry/org/apache/avro/io/BinaryDecoder;->buf:[B
+    # getter for: Lcom/flurry/org/apache/avro/io/BinaryDecoder;->buf:[B
     invoke-static {v0}, Lcom/flurry/org/apache/avro/io/BinaryDecoder;->access$300(Lcom/flurry/org/apache/avro/io/BinaryDecoder;)[B
 
     move-result-object v0
@@ -78,7 +78,7 @@
     .line 500
     iget-object v0, p0, Lcom/flurry/org/apache/avro/io/BinaryDecoder$BufferAccessor;->decoder:Lcom/flurry/org/apache/avro/io/BinaryDecoder;
 
-    #getter for: Lcom/flurry/org/apache/avro/io/BinaryDecoder;->pos:I
+    # getter for: Lcom/flurry/org/apache/avro/io/BinaryDecoder;->pos:I
     invoke-static {v0}, Lcom/flurry/org/apache/avro/io/BinaryDecoder;->access$400(Lcom/flurry/org/apache/avro/io/BinaryDecoder;)I
 
     move-result v0
@@ -88,7 +88,7 @@
     .line 501
     iget-object v0, p0, Lcom/flurry/org/apache/avro/io/BinaryDecoder$BufferAccessor;->decoder:Lcom/flurry/org/apache/avro/io/BinaryDecoder;
 
-    #getter for: Lcom/flurry/org/apache/avro/io/BinaryDecoder;->limit:I
+    # getter for: Lcom/flurry/org/apache/avro/io/BinaryDecoder;->limit:I
     invoke-static {v0}, Lcom/flurry/org/apache/avro/io/BinaryDecoder;->access$500(Lcom/flurry/org/apache/avro/io/BinaryDecoder;)I
 
     move-result v0
@@ -123,7 +123,7 @@
     :cond_0
     iget-object v0, p0, Lcom/flurry/org/apache/avro/io/BinaryDecoder$BufferAccessor;->decoder:Lcom/flurry/org/apache/avro/io/BinaryDecoder;
 
-    #getter for: Lcom/flurry/org/apache/avro/io/BinaryDecoder;->buf:[B
+    # getter for: Lcom/flurry/org/apache/avro/io/BinaryDecoder;->buf:[B
     invoke-static {v0}, Lcom/flurry/org/apache/avro/io/BinaryDecoder;->access$300(Lcom/flurry/org/apache/avro/io/BinaryDecoder;)[B
 
     move-result-object v0
@@ -150,7 +150,7 @@
     :cond_0
     iget-object v0, p0, Lcom/flurry/org/apache/avro/io/BinaryDecoder$BufferAccessor;->decoder:Lcom/flurry/org/apache/avro/io/BinaryDecoder;
 
-    #getter for: Lcom/flurry/org/apache/avro/io/BinaryDecoder;->limit:I
+    # getter for: Lcom/flurry/org/apache/avro/io/BinaryDecoder;->limit:I
     invoke-static {v0}, Lcom/flurry/org/apache/avro/io/BinaryDecoder;->access$500(Lcom/flurry/org/apache/avro/io/BinaryDecoder;)I
 
     move-result v0
@@ -177,7 +177,7 @@
     :cond_0
     iget-object v0, p0, Lcom/flurry/org/apache/avro/io/BinaryDecoder$BufferAccessor;->decoder:Lcom/flurry/org/apache/avro/io/BinaryDecoder;
 
-    #getter for: Lcom/flurry/org/apache/avro/io/BinaryDecoder;->pos:I
+    # getter for: Lcom/flurry/org/apache/avro/io/BinaryDecoder;->pos:I
     invoke-static {v0}, Lcom/flurry/org/apache/avro/io/BinaryDecoder;->access$400(Lcom/flurry/org/apache/avro/io/BinaryDecoder;)I
 
     move-result v0
@@ -187,9 +187,9 @@
 
 .method setBuf([BII)V
     .locals 2
-    .parameter "buf"
-    .parameter "offset"
-    .parameter "length"
+    .param p1, "buf"    # [B
+    .param p2, "offset"    # I
+    .param p3, "length"    # I
 
     .prologue
     .line 541
@@ -216,7 +216,7 @@
     :cond_0
     iget-object v0, p0, Lcom/flurry/org/apache/avro/io/BinaryDecoder$BufferAccessor;->decoder:Lcom/flurry/org/apache/avro/io/BinaryDecoder;
 
-    #setter for: Lcom/flurry/org/apache/avro/io/BinaryDecoder;->buf:[B
+    # setter for: Lcom/flurry/org/apache/avro/io/BinaryDecoder;->buf:[B
     invoke-static {v0, p1}, Lcom/flurry/org/apache/avro/io/BinaryDecoder;->access$302(Lcom/flurry/org/apache/avro/io/BinaryDecoder;[B)[B
 
     .line 547
@@ -224,19 +224,19 @@
 
     add-int v1, p2, p3
 
-    #setter for: Lcom/flurry/org/apache/avro/io/BinaryDecoder;->limit:I
+    # setter for: Lcom/flurry/org/apache/avro/io/BinaryDecoder;->limit:I
     invoke-static {v0, v1}, Lcom/flurry/org/apache/avro/io/BinaryDecoder;->access$502(Lcom/flurry/org/apache/avro/io/BinaryDecoder;I)I
 
     .line 548
     iget-object v0, p0, Lcom/flurry/org/apache/avro/io/BinaryDecoder$BufferAccessor;->decoder:Lcom/flurry/org/apache/avro/io/BinaryDecoder;
 
-    #setter for: Lcom/flurry/org/apache/avro/io/BinaryDecoder;->pos:I
+    # setter for: Lcom/flurry/org/apache/avro/io/BinaryDecoder;->pos:I
     invoke-static {v0, p2}, Lcom/flurry/org/apache/avro/io/BinaryDecoder;->access$402(Lcom/flurry/org/apache/avro/io/BinaryDecoder;I)I
 
     .line 549
     iget-object v0, p0, Lcom/flurry/org/apache/avro/io/BinaryDecoder$BufferAccessor;->decoder:Lcom/flurry/org/apache/avro/io/BinaryDecoder;
 
-    #setter for: Lcom/flurry/org/apache/avro/io/BinaryDecoder;->minPos:I
+    # setter for: Lcom/flurry/org/apache/avro/io/BinaryDecoder;->minPos:I
     invoke-static {v0, p2}, Lcom/flurry/org/apache/avro/io/BinaryDecoder;->access$602(Lcom/flurry/org/apache/avro/io/BinaryDecoder;I)I
 
     goto :goto_0
@@ -244,7 +244,7 @@
 
 .method setLimit(I)V
     .locals 1
-    .parameter "limit"
+    .param p1, "limit"    # I
 
     .prologue
     .line 534
@@ -263,7 +263,7 @@
     :cond_0
     iget-object v0, p0, Lcom/flurry/org/apache/avro/io/BinaryDecoder$BufferAccessor;->decoder:Lcom/flurry/org/apache/avro/io/BinaryDecoder;
 
-    #setter for: Lcom/flurry/org/apache/avro/io/BinaryDecoder;->limit:I
+    # setter for: Lcom/flurry/org/apache/avro/io/BinaryDecoder;->limit:I
     invoke-static {v0, p1}, Lcom/flurry/org/apache/avro/io/BinaryDecoder;->access$502(Lcom/flurry/org/apache/avro/io/BinaryDecoder;I)I
 
     goto :goto_0
@@ -271,7 +271,7 @@
 
 .method setPos(I)V
     .locals 1
-    .parameter "pos"
+    .param p1, "pos"    # I
 
     .prologue
     .line 527
@@ -290,7 +290,7 @@
     :cond_0
     iget-object v0, p0, Lcom/flurry/org/apache/avro/io/BinaryDecoder$BufferAccessor;->decoder:Lcom/flurry/org/apache/avro/io/BinaryDecoder;
 
-    #setter for: Lcom/flurry/org/apache/avro/io/BinaryDecoder;->pos:I
+    # setter for: Lcom/flurry/org/apache/avro/io/BinaryDecoder;->pos:I
     invoke-static {v0, p1}, Lcom/flurry/org/apache/avro/io/BinaryDecoder;->access$402(Lcom/flurry/org/apache/avro/io/BinaryDecoder;I)I
 
     goto :goto_0

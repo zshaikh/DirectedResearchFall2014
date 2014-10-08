@@ -21,7 +21,6 @@
 # direct methods
 .method private constructor <init>(Lcom/google/analytics/tracking/android/GAServiceProxy;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 344
@@ -34,8 +33,8 @@
 
 .method synthetic constructor <init>(Lcom/google/analytics/tracking/android/GAServiceProxy;Lcom/google/analytics/tracking/android/GAServiceProxy$1;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
+    .param p1, "x0"    # Lcom/google/analytics/tracking/android/GAServiceProxy;
+    .param p2, "x1"    # Lcom/google/analytics/tracking/android/GAServiceProxy$1;
 
     .prologue
     .line 344
@@ -53,7 +52,7 @@
     .line 347
     iget-object v0, p0, Lcom/google/analytics/tracking/android/GAServiceProxy$FailedConnectTask;->this$0:Lcom/google/analytics/tracking/android/GAServiceProxy;
 
-    #getter for: Lcom/google/analytics/tracking/android/GAServiceProxy;->state:Lcom/google/analytics/tracking/android/GAServiceProxy$ConnectState;
+    # getter for: Lcom/google/analytics/tracking/android/GAServiceProxy;->state:Lcom/google/analytics/tracking/android/GAServiceProxy$ConnectState;
     invoke-static {v0}, Lcom/google/analytics/tracking/android/GAServiceProxy;->access$400(Lcom/google/analytics/tracking/android/GAServiceProxy;)Lcom/google/analytics/tracking/android/GAServiceProxy$ConnectState;
 
     move-result-object v0
@@ -65,7 +64,7 @@
     .line 348
     iget-object v0, p0, Lcom/google/analytics/tracking/android/GAServiceProxy$FailedConnectTask;->this$0:Lcom/google/analytics/tracking/android/GAServiceProxy;
 
-    #calls: Lcom/google/analytics/tracking/android/GAServiceProxy;->useStore()V
+    # invokes: Lcom/google/analytics/tracking/android/GAServiceProxy;->useStore()V
     invoke-static {v0}, Lcom/google/analytics/tracking/android/GAServiceProxy;->access$500(Lcom/google/analytics/tracking/android/GAServiceProxy;)V
 
     .line 351

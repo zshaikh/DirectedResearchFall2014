@@ -6,8 +6,7 @@
 # direct methods
 .method constructor <init>(Ljava/util/Map;Lcom/fusepowered/m2/m2l/MraidView;)V
     .locals 0
-    .parameter
-    .parameter "view"
+    .param p2, "view"    # Lcom/fusepowered/m2/m2l/MraidView;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -23,7 +22,7 @@
 
     .prologue
     .line 195
-    .local p1, params:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p1, "params":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-direct {p0, p1, p2}, Lcom/fusepowered/m2/m2l/MraidCommand;-><init>(Ljava/util/Map;Lcom/fusepowered/m2/m2l/MraidView;)V
 
     .line 196
@@ -44,7 +43,7 @@
     move-result v0
 
     .line 201
-    .local v0, shouldUseCustomClose:Z
+    .local v0, "shouldUseCustomClose":Z
     iget-object v1, p0, Lcom/fusepowered/m2/m2l/MraidCommandUseCustomClose;->mView:Lcom/fusepowered/m2/m2l/MraidView;
 
     invoke-virtual {v1}, Lcom/fusepowered/m2/m2l/MraidView;->getDisplayController()Lcom/fusepowered/m2/m2l/MraidDisplayController;

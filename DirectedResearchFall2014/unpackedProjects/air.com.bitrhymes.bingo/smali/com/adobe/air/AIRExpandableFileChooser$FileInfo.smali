@@ -27,9 +27,6 @@
 # direct methods
 .method public constructor <init>(Lcom/adobe/air/AIRExpandableFileChooser;Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 78

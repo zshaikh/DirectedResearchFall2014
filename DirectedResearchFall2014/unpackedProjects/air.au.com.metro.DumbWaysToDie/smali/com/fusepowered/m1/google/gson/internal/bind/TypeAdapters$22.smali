@@ -32,8 +32,7 @@
 # virtual methods
 .method public create(Lcom/fusepowered/m1/google/gson/Gson;Lcom/fusepowered/m1/google/gson/reflect/TypeToken;)Lcom/fusepowered/m1/google/gson/TypeAdapter;
     .locals 3
-    .parameter "gson"
-    .parameter
+    .param p1, "gson"    # Lcom/fusepowered/m1/google/gson/Gson;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -49,7 +48,7 @@
 
     .prologue
     .line 519
-    .local p2, typeToken:Lcom/fusepowered/m1/google/gson/reflect/TypeToken;,"Lcom/fusepowered/m1/google/gson/reflect/TypeToken<TT;>;"
+    .local p2, "typeToken":Lcom/fusepowered/m1/google/gson/reflect/TypeToken;, "Lcom/fusepowered/m1/google/gson/reflect/TypeToken<TT;>;"
     invoke-virtual {p2}, Lcom/fusepowered/m1/google/gson/reflect/TypeToken;->getRawType()Ljava/lang/Class;
 
     move-result-object v1
@@ -74,7 +73,7 @@
     move-result-object v0
 
     .line 524
-    .local v0, dateTypeAdapter:Lcom/fusepowered/m1/google/gson/TypeAdapter;,"Lcom/fusepowered/m1/google/gson/TypeAdapter<Ljava/util/Date;>;"
+    .local v0, "dateTypeAdapter":Lcom/fusepowered/m1/google/gson/TypeAdapter;, "Lcom/fusepowered/m1/google/gson/TypeAdapter<Ljava/util/Date;>;"
     new-instance v1, Lcom/fusepowered/m1/google/gson/internal/bind/TypeAdapters$22$1;
 
     invoke-direct {v1, p0, v0}, Lcom/fusepowered/m1/google/gson/internal/bind/TypeAdapters$22$1;-><init>(Lcom/fusepowered/m1/google/gson/internal/bind/TypeAdapters$22;Lcom/fusepowered/m1/google/gson/TypeAdapter;)V

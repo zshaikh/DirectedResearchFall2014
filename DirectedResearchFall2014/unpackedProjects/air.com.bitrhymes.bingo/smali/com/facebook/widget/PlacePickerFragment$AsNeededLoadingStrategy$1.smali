@@ -31,7 +31,6 @@
 # direct methods
 .method constructor <init>(Lcom/facebook/widget/PlacePickerFragment$AsNeededLoadingStrategy;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1

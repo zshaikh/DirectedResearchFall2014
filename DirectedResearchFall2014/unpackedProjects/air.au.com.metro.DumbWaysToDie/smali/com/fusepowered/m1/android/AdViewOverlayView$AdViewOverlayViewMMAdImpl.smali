@@ -21,8 +21,7 @@
 # direct methods
 .method public constructor <init>(Lcom/fusepowered/m1/android/AdViewOverlayView;Landroid/content/Context;)V
     .locals 1
-    .parameter
-    .parameter "context"
+    .param p2, "context"    # Landroid/content/Context;
 
     .prologue
     .line 305
@@ -173,7 +172,7 @@
     .line 313
     iget-object v0, p0, Lcom/fusepowered/m1/android/AdViewOverlayView$AdViewOverlayViewMMAdImpl;->this$0:Lcom/fusepowered/m1/android/AdViewOverlayView;
 
-    #calls: Lcom/fusepowered/m1/android/AdViewOverlayView;->removeProgressBar()V
+    # invokes: Lcom/fusepowered/m1/android/AdViewOverlayView;->removeProgressBar()V
     invoke-static {v0}, Lcom/fusepowered/m1/android/AdViewOverlayView;->access$200(Lcom/fusepowered/m1/android/AdViewOverlayView;)V
 
     .line 314

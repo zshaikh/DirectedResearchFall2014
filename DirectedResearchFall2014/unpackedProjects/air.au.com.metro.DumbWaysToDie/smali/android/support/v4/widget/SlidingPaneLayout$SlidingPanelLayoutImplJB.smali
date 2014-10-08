@@ -83,7 +83,7 @@
     move-object v0, v1
 
     .line 1360
-    .local v0, e:Ljava/lang/NoSuchMethodException;
+    .local v0, "e":Ljava/lang/NoSuchMethodException;
     const-string v1, "SlidingPaneLayout"
 
     const-string v1, "Couldn\'t fetch getDisplayList method; dimming won\'t work right."
@@ -93,14 +93,14 @@
     goto :goto_0
 
     .line 1365
-    .end local v0           #e:Ljava/lang/NoSuchMethodException;
+    .end local v0    # "e":Ljava/lang/NoSuchMethodException;
     :catch_1
     move-exception v1
 
     move-object v0, v1
 
     .line 1366
-    .local v0, e:Ljava/lang/NoSuchFieldException;
+    .local v0, "e":Ljava/lang/NoSuchFieldException;
     const-string v1, "SlidingPaneLayout"
 
     const-string v1, "Couldn\'t fetch mRecreateDisplayList field; dimming will be slow."
@@ -114,8 +114,8 @@
 # virtual methods
 .method public invalidateChildRegion(Landroid/support/v4/widget/SlidingPaneLayout;Landroid/view/View;)V
     .locals 3
-    .parameter "parent"
-    .parameter "child"
+    .param p1, "parent"    # Landroid/support/v4/widget/SlidingPaneLayout;
+    .param p2, "child"    # Landroid/view/View;
 
     .prologue
     .line 1372
@@ -161,7 +161,7 @@
     move-object v0, v1
 
     .line 1377
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v1, "SlidingPaneLayout"
 
     const-string v2, "Error refreshing display list state"
@@ -171,7 +171,7 @@
     goto :goto_0
 
     .line 1381
-    .end local v0           #e:Ljava/lang/Exception;
+    .end local v0    # "e":Ljava/lang/Exception;
     :cond_0
     invoke-virtual {p2}, Landroid/view/View;->invalidate()V
 

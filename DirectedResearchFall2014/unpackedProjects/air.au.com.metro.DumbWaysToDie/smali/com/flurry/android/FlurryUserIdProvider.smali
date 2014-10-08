@@ -10,7 +10,6 @@
 # direct methods
 .method constructor <init>(Landroid/content/Context;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 12

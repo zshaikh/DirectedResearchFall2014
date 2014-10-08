@@ -30,7 +30,6 @@
 
 .method synthetic constructor <init>(Lv2/com/playhaven/utils/PHStringUtil$DefaultUUIDGenerator;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 33

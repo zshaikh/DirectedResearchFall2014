@@ -35,7 +35,6 @@
 # direct methods
 .method public constructor <init>(Landroid/app/Activity;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 39
@@ -49,8 +48,6 @@
 
 .method constructor <init>(Landroid/app/Activity;Landroid/content/SharedPreferences$Editor;)V
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 48
@@ -72,7 +69,6 @@
 
 .method private a(Landroid/content/Context;)Landroid/content/SharedPreferences$Editor;
     .locals 1
-    .parameter
 
     .prologue
     .line 54

@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/inmobi/androidsdk/ai/container/IMWebView;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1
@@ -40,8 +39,6 @@
 # virtual methods
 .method public onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 3464

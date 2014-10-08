@@ -12,8 +12,6 @@
 # direct methods
 .method public constructor <init>(Lcom/inmobi/androidsdk/ai/container/IMWebView;Landroid/content/Context;)V
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     .line 67
@@ -46,7 +44,6 @@
 
 .method private a(Ljava/lang/String;)Ljava/lang/String;
     .locals 3
-    .parameter
 
     .prologue
     const-string v2, "tel:"
@@ -101,10 +98,6 @@
 
 .method private a(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 10
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const/16 v9, 0x8
@@ -306,11 +299,6 @@
 
 .method static synthetic a(Lcom/inmobi/androidsdk/ai/controller/JSUtilityController;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 290
@@ -321,7 +309,6 @@
 
 .method private b(Ljava/lang/String;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 487
@@ -340,7 +327,6 @@
 # virtual methods
 .method public activate(Ljava/lang/String;)V
     .locals 3
-    .parameter
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 
@@ -370,7 +356,6 @@
 
 .method public asyncPing(Ljava/lang/String;)V
     .locals 3
-    .parameter
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 
@@ -432,7 +417,6 @@
 
 .method public closeVideo(Ljava/lang/String;)V
     .locals 3
-    .parameter
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 
@@ -467,8 +451,6 @@
 
 .method public copyTextFromJarIntoAssetDir(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 1
-    .parameter
-    .parameter
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 
@@ -485,9 +467,6 @@
 
 .method public createEvent(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 12
-    .parameter
-    .parameter
-    .parameter
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 
@@ -800,15 +779,14 @@
 
     .line 258
     :array_0
-    .array-data 0x4
-        0x14t 0x0t 0x2t 0x1t
-        0x15t 0x0t 0x2t 0x1t
+    .array-data 4
+        0x1020014
+        0x1020015
     .end array-data
 .end method
 
 .method public deactivate(Ljava/lang/String;)V
     .locals 3
-    .parameter
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 
@@ -853,7 +831,6 @@
 
 .method public getAudioVolume(Ljava/lang/String;)I
     .locals 2
-    .parameter
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 
@@ -956,8 +933,8 @@
 
     aget v4, v0, v4
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 734
     const/4 v5, 0x1
@@ -965,8 +942,8 @@
     :try_start_1
     aget v0, v0, v5
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_4
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     .line 735
     :try_start_2
@@ -980,8 +957,8 @@
 
     iget v6, v3, Landroid/util/DisplayMetrics;->density:F
     :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_5
+    .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
     div-float/2addr v5, v6
 
@@ -999,8 +976,8 @@
 
     iget v2, v3, Landroid/util/DisplayMetrics;->density:F
     :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_6
+    .catchall {:try_start_3 .. :try_end_3} :catchall_3
 
     div-float v2, v6, v2
 
@@ -1344,7 +1321,6 @@
 
 .method public getVideoVolume(Ljava/lang/String;)I
     .locals 2
-    .parameter
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 
@@ -1368,7 +1344,6 @@
 
 .method public hideVideo(Ljava/lang/String;)V
     .locals 3
-    .parameter
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 
@@ -1403,7 +1378,6 @@
 
 .method public isAudioMuted(Ljava/lang/String;)Z
     .locals 2
-    .parameter
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 
@@ -1427,7 +1401,6 @@
 
 .method public isVideoMuted(Ljava/lang/String;)Z
     .locals 2
-    .parameter
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 
@@ -1451,7 +1424,6 @@
 
 .method public log(Ljava/lang/String;)V
     .locals 3
-    .parameter
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 
@@ -1481,7 +1453,6 @@
 
 .method public makeCall(Ljava/lang/String;)V
     .locals 5
-    .parameter
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 
@@ -1609,7 +1580,7 @@
     invoke-direct {v1, v2, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
     .line 192
-    const/high16 v0, 0x1000
+    const/high16 v0, 0x10000000
 
     invoke-virtual {v1, v0}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
@@ -1634,7 +1605,6 @@
 
 .method public muteAudio(Ljava/lang/String;)V
     .locals 2
-    .parameter
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 
@@ -1657,7 +1627,6 @@
 
 .method public muteVideo(Ljava/lang/String;)V
     .locals 2
-    .parameter
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 
@@ -1680,7 +1649,6 @@
 
 .method public openExternal(Ljava/lang/String;)V
     .locals 3
-    .parameter
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 
@@ -1719,7 +1687,7 @@
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
 
     .line 685
-    const/high16 v1, 0x1000
+    const/high16 v1, 0x10000000
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
@@ -1762,7 +1730,6 @@
 
 .method public pauseAudio(Ljava/lang/String;)V
     .locals 3
-    .parameter
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 
@@ -1797,7 +1764,6 @@
 
 .method public pauseVideo(Ljava/lang/String;)V
     .locals 3
-    .parameter
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 
@@ -1832,13 +1798,6 @@
 
 .method public playAudio(Ljava/lang/String;ZZZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 8
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 
@@ -1951,18 +1910,6 @@
 
 .method public playVideo(Ljava/lang/String;ZZZZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 12
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 
@@ -2198,8 +2145,6 @@
 
 .method public seekAudio(Ljava/lang/String;I)V
     .locals 2
-    .parameter
-    .parameter
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 
@@ -2222,8 +2167,6 @@
 
 .method public seekVideo(Ljava/lang/String;I)V
     .locals 2
-    .parameter
-    .parameter
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 
@@ -2246,9 +2189,6 @@
 
 .method public sendMail(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 5
-    .parameter
-    .parameter
-    .parameter
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 
@@ -2335,7 +2275,7 @@
     invoke-virtual {v0, v1, p3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 134
-    const/high16 v1, 0x1000
+    const/high16 v1, 0x10000000
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
@@ -2392,8 +2332,6 @@
 
 .method public sendSMS(Ljava/lang/String;Ljava/lang/String;)V
     .locals 3
-    .parameter
-    .parameter
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 
@@ -2455,7 +2393,7 @@
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
 
     .line 103
-    const/high16 v1, 0x1000
+    const/high16 v1, 0x10000000
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
@@ -2504,8 +2442,6 @@
 
 .method public setAudioVolume(Ljava/lang/String;I)V
     .locals 2
-    .parameter
-    .parameter
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 
@@ -2528,8 +2464,6 @@
 
 .method public setVideoVolume(Ljava/lang/String;I)V
     .locals 2
-    .parameter
-    .parameter
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 
@@ -2552,7 +2486,6 @@
 
 .method public showAlert(Ljava/lang/String;)V
     .locals 1
-    .parameter
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 
@@ -2568,7 +2501,6 @@
 
 .method public showVideo(Ljava/lang/String;)V
     .locals 3
-    .parameter
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 
@@ -2631,7 +2563,6 @@
 
 .method public unMuteAudio(Ljava/lang/String;)V
     .locals 2
-    .parameter
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 
@@ -2654,7 +2585,6 @@
 
 .method public unMuteVideo(Ljava/lang/String;)V
     .locals 2
-    .parameter
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 
@@ -2677,12 +2607,6 @@
 
 .method public writeToDiskWrap(Ljava/io/InputStream;Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 7
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 

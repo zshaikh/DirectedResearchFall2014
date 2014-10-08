@@ -58,7 +58,7 @@
 
 .method protected constructor <init>(Landroid/os/Parcel;)V
     .locals 4
-    .parameter "in"
+    .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
     const/4 v2, 0x0
@@ -106,7 +106,7 @@
     new-array v1, v2, [Z
 
     .line 57
-    .local v1, yo:[Z
+    .local v1, "yo":[Z
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->readBooleanArray([Z)V
 
     .line 58
@@ -133,7 +133,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 66
-    .end local v1           #yo:[Z
+    .end local v1    # "yo":[Z
     :goto_0
     return-void
 
@@ -144,7 +144,7 @@
     move-object v0, v2
 
     .line 64
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0
@@ -152,7 +152,7 @@
 
 .method static synthetic access$000(Lcom/fusepowered/m1/android/CachedAd;)Ljava/lang/String;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/fusepowered/m1/android/CachedAd;
 
     .prologue
     .line 19
@@ -163,14 +163,14 @@
 
 .method static parseJSON(Ljava/lang/String;)Lcom/fusepowered/m1/android/CachedAd;
     .locals 6
-    .parameter "json"
+    .param p0, "json"    # Ljava/lang/String;
 
     .prologue
     .line 182
     const/4 v0, 0x0
 
     .line 184
-    .local v0, ad:Lcom/fusepowered/m1/android/CachedAd;
+    .local v0, "ad":Lcom/fusepowered/m1/android/CachedAd;
     sget v4, Lcom/fusepowered/m1/android/MMSDK;->logLevel:I
 
     const/4 v5, 0x5
@@ -188,7 +188,7 @@
     move-result v2
 
     .line 188
-    .local v2, length:I
+    .local v2, "length":I
     const/16 v4, 0x3e8
 
     if-le v2, v4, :cond_4
@@ -197,11 +197,11 @@
     const/16 v1, 0x3e7
 
     .line 191
-    .local v1, e:I
+    .local v1, "e":I
     const/4 v3, 0x0
 
     .line 192
-    .local v3, s:I
+    .local v3, "s":I
     :cond_0
     if-ge v1, v2, :cond_1
 
@@ -235,9 +235,9 @@
     invoke-static {v4}, Lcom/fusepowered/m1/android/MMSDK$Log;->v(Ljava/lang/String;)V
 
     .line 209
-    .end local v1           #e:I
-    .end local v2           #length:I
-    .end local v3           #s:I
+    .end local v1    # "e":I
+    .end local v2    # "length":I
+    .end local v3    # "s":I
     :cond_2
     :goto_0
     invoke-virtual {p0}, Ljava/lang/String;->length()I
@@ -249,16 +249,16 @@
     .line 210
     new-instance v0, Lcom/fusepowered/m1/android/VideoAd;
 
-    .end local v0           #ad:Lcom/fusepowered/m1/android/CachedAd;
+    .end local v0    # "ad":Lcom/fusepowered/m1/android/CachedAd;
     invoke-direct {v0, p0}, Lcom/fusepowered/m1/android/VideoAd;-><init>(Ljava/lang/String;)V
 
     .line 212
-    .restart local v0       #ad:Lcom/fusepowered/m1/android/CachedAd;
+    .restart local v0    # "ad":Lcom/fusepowered/m1/android/CachedAd;
     :cond_3
     return-object v0
 
     .line 206
-    .restart local v2       #length:I
+    .restart local v2    # "length":I
     :cond_4
     invoke-static {p0}, Lcom/fusepowered/m1/android/MMSDK$Log;->v(Ljava/lang/String;)V
 
@@ -272,7 +272,7 @@
 
 .method delete(Landroid/content/Context;)V
     .locals 8
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     .line 149
@@ -281,7 +281,7 @@
     move-result-object v0
 
     .line 151
-    .local v0, dir:Ljava/io/File;
+    .local v0, "dir":Ljava/io/File;
     if-eqz v0, :cond_0
 
     invoke-virtual {v0}, Ljava/io/File;->isDirectory()Z
@@ -301,7 +301,7 @@
     move-result-object v2
 
     .line 163
-    .local v2, files:[Ljava/io/File;
+    .local v2, "files":[Ljava/io/File;
     const-string v4, "Deleting %d files for %s."
 
     const/4 v5, 0x2
@@ -329,7 +329,7 @@
     .line 164
     const/4 v3, 0x0
 
-    .local v3, i:I
+    .local v3, "i":I
     :goto_0
     array-length v4, v2
 
@@ -348,26 +348,26 @@
     goto :goto_0
 
     .line 167
-    .end local v2           #files:[Ljava/io/File;
-    .end local v3           #i:I
+    .end local v2    # "files":[Ljava/io/File;
+    .end local v3    # "i":I
     :catch_0
     move-exception v4
 
     move-object v1, v4
 
     .line 169
-    .local v1, e:Ljava/lang/Exception;
+    .local v1, "e":Ljava/lang/Exception;
     invoke-static {v1}, Lcom/fusepowered/m1/android/MMSDK$Log;->v(Ljava/lang/Throwable;)V
 
     .line 172
-    .end local v1           #e:Ljava/lang/Exception;
+    .end local v1    # "e":Ljava/lang/Exception;
     :cond_0
     return-void
 .end method
 
 .method protected deserializeFromObj(Lorg/json/JSONObject;)V
     .locals 5
-    .parameter "videoObject"
+    .param p1, "videoObject"    # Lorg/json/JSONObject;
 
     .prologue
     const/4 v4, 0x0
@@ -407,7 +407,7 @@
     move-result-object v1
 
     .line 97
-    .local v1, exp:Ljava/lang/String;
+    .local v1, "exp":Ljava/lang/String;
     if-eqz v1, :cond_0
 
     .line 99
@@ -418,7 +418,7 @@
     invoke-direct {v2, v3}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
 
     .line 102
-    .local v2, format:Ljava/text/SimpleDateFormat;
+    .local v2, "format":Ljava/text/SimpleDateFormat;
     :try_start_0
     invoke-virtual {v2, v1}, Ljava/text/SimpleDateFormat;->parse(Ljava/lang/String;)Ljava/util/Date;
 
@@ -429,20 +429,20 @@
     .catch Ljava/text/ParseException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 109
-    .end local v2           #format:Ljava/text/SimpleDateFormat;
+    .end local v2    # "format":Ljava/text/SimpleDateFormat;
     :cond_0
     :goto_0
     return-void
 
     .line 104
-    .restart local v2       #format:Ljava/text/SimpleDateFormat;
+    .restart local v2    # "format":Ljava/text/SimpleDateFormat;
     :catch_0
     move-exception v3
 
     move-object v0, v3
 
     .line 106
-    .local v0, e:Ljava/text/ParseException;
+    .local v0, "e":Ljava/text/ParseException;
     invoke-static {v0}, Lcom/fusepowered/m1/android/MMSDK$Log;->e(Ljava/lang/Throwable;)V
 
     goto :goto_0
@@ -453,7 +453,7 @@
 
 .method public equals(Ljava/lang/Object;)Z
     .locals 4
-    .parameter "other"
+    .param p1, "other"    # Ljava/lang/Object;
 
     .prologue
     .line 82
@@ -486,7 +486,7 @@
     move-object v1, v0
 
     .line 87
-    .local v1, that:Lcom/fusepowered/m1/android/CachedAd;
+    .local v1, "that":Lcom/fusepowered/m1/android/CachedAd;
     iget-object v2, p0, Lcom/fusepowered/m1/android/CachedAd;->id:Ljava/lang/String;
 
     iget-object v3, v1, Lcom/fusepowered/m1/android/CachedAd;->id:Ljava/lang/String;
@@ -599,7 +599,7 @@
 
 .method public readExternal(Ljava/io/ObjectInput;)V
     .locals 2
-    .parameter "input"
+    .param p1, "input"    # Ljava/io/ObjectInput;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -660,7 +660,7 @@
 
 .method setId(Ljava/lang/String;)V
     .locals 0
-    .parameter "idIn"
+    .param p1, "idIn"    # Ljava/lang/String;
 
     .prologue
     .line 242
@@ -675,7 +675,7 @@
 
 .method public writeExternal(Ljava/io/ObjectOutput;)V
     .locals 2
-    .parameter "output"
+    .param p1, "output"    # Ljava/io/ObjectOutput;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -714,8 +714,8 @@
 
 .method protected writeToParcel(Landroid/os/Parcel;I)V
     .locals 3
-    .parameter "dest"
-    .parameter "flags"
+    .param p1, "dest"    # Landroid/os/Parcel;
+    .param p2, "flags"    # I
 
     .prologue
     .line 70

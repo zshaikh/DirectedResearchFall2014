@@ -30,7 +30,6 @@
 # direct methods
 .method public constructor <init>(Landroid/app/Activity;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 87
@@ -61,7 +60,6 @@
 
 .method public a(Landroid/app/Activity;)Z
     .locals 3
-    .parameter
 
     .prologue
     const/4 v2, 0x0
@@ -96,7 +94,6 @@
 
 .method public a(Lcom/chartboost/sdk/Chartboost$b;)Z
     .locals 3
-    .parameter
 
     .prologue
     const/4 v2, 0x0

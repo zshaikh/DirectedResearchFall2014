@@ -29,8 +29,8 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Ljava/net/URI;)V
     .locals 1
-    .parameter "context"
-    .parameter "imageUrl"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "imageUrl"    # Ljava/net/URI;
 
     .prologue
     .line 119
@@ -53,7 +53,6 @@
 
 .method static synthetic access$0(Lcom/facebook/internal/ImageRequest$Builder;)Landroid/content/Context;
     .locals 1
-    .parameter
 
     .prologue
     .line 111
@@ -64,7 +63,6 @@
 
 .method static synthetic access$1(Lcom/facebook/internal/ImageRequest$Builder;)Ljava/net/URI;
     .locals 1
-    .parameter
 
     .prologue
     .line 112
@@ -75,7 +73,6 @@
 
 .method static synthetic access$2(Lcom/facebook/internal/ImageRequest$Builder;)Lcom/facebook/internal/ImageRequest$Callback;
     .locals 1
-    .parameter
 
     .prologue
     .line 115
@@ -86,7 +83,6 @@
 
 .method static synthetic access$3(Lcom/facebook/internal/ImageRequest$Builder;)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 116
@@ -97,7 +93,6 @@
 
 .method static synthetic access$4(Lcom/facebook/internal/ImageRequest$Builder;)Ljava/lang/Object;
     .locals 1
-    .parameter
 
     .prologue
     .line 117
@@ -124,7 +119,7 @@
 
 .method public setAllowCachedRedirects(Z)Lcom/facebook/internal/ImageRequest$Builder;
     .locals 0
-    .parameter "allowCachedRedirects"
+    .param p1, "allowCachedRedirects"    # Z
 
     .prologue
     .line 136
@@ -136,7 +131,7 @@
 
 .method public setCallback(Lcom/facebook/internal/ImageRequest$Callback;)Lcom/facebook/internal/ImageRequest$Builder;
     .locals 0
-    .parameter "callback"
+    .param p1, "callback"    # Lcom/facebook/internal/ImageRequest$Callback;
 
     .prologue
     .line 126
@@ -148,7 +143,7 @@
 
 .method public setCallerTag(Ljava/lang/Object;)Lcom/facebook/internal/ImageRequest$Builder;
     .locals 0
-    .parameter "callerTag"
+    .param p1, "callerTag"    # Ljava/lang/Object;
 
     .prologue
     .line 131

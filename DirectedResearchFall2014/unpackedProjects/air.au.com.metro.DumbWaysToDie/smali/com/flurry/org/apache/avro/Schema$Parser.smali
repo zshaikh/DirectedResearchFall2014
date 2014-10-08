@@ -45,7 +45,7 @@
 
 .method private parse(Lcom/flurry/org/codehaus/jackson/JsonParser;)Lcom/flurry/org/apache/avro/Schema;
     .locals 5
-    .parameter "parser"
+    .param p1, "parser"    # Lcom/flurry/org/codehaus/jackson/JsonParser;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -54,6 +54,7 @@
 
     .prologue
     .line 977
+    # getter for: Lcom/flurry/org/apache/avro/Schema;->validateNames:Ljava/lang/ThreadLocal;
     invoke-static {}, Lcom/flurry/org/apache/avro/Schema;->access$1500()Ljava/lang/ThreadLocal;
 
     move-result-object v2
@@ -69,8 +70,9 @@
     move-result v1
 
     .line 979
-    .local v1, saved:Z
+    .local v1, "saved":Z
     :try_start_0
+    # getter for: Lcom/flurry/org/apache/avro/Schema;->validateNames:Ljava/lang/ThreadLocal;
     invoke-static {}, Lcom/flurry/org/apache/avro/Schema;->access$1500()Ljava/lang/ThreadLocal;
 
     move-result-object v2
@@ -94,12 +96,13 @@
 
     invoke-static {v2, v3}, Lcom/flurry/org/apache/avro/Schema;->parse(Lcom/flurry/org/codehaus/jackson/JsonNode;Lcom/flurry/org/apache/avro/Schema$Names;)Lcom/flurry/org/apache/avro/Schema;
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Lcom/flurry/org/codehaus/jackson/JsonParseException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result-object v2
 
     .line 984
+    # getter for: Lcom/flurry/org/apache/avro/Schema;->validateNames:Ljava/lang/ThreadLocal;
     invoke-static {}, Lcom/flurry/org/apache/avro/Schema;->access$1500()Ljava/lang/ThreadLocal;
 
     move-result-object v3
@@ -119,7 +122,7 @@
     move-object v0, v2
 
     .line 982
-    .local v0, e:Lcom/flurry/org/codehaus/jackson/JsonParseException;
+    .local v0, "e":Lcom/flurry/org/codehaus/jackson/JsonParseException;
     :try_start_1
     new-instance v2, Lcom/flurry/org/apache/avro/SchemaParseException;
 
@@ -130,10 +133,11 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     .line 984
-    .end local v0           #e:Lcom/flurry/org/codehaus/jackson/JsonParseException;
+    .end local v0    # "e":Lcom/flurry/org/codehaus/jackson/JsonParseException;
     :catchall_0
     move-exception v2
 
+    # getter for: Lcom/flurry/org/apache/avro/Schema;->validateNames:Ljava/lang/ThreadLocal;
     invoke-static {}, Lcom/flurry/org/apache/avro/Schema;->access$1500()Ljava/lang/ThreadLocal;
 
     move-result-object v3
@@ -151,7 +155,6 @@
 # virtual methods
 .method public addTypes(Ljava/util/Map;)Lcom/flurry/org/apache/avro/Schema$Parser;
     .locals 3
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -166,7 +169,7 @@
 
     .prologue
     .line 932
-    .local p1, types:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Lcom/flurry/org/apache/avro/Schema;>;"
+    .local p1, "types":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Lcom/flurry/org/apache/avro/Schema;>;"
     invoke-interface {p1}, Ljava/util/Map;->values()Ljava/util/Collection;
 
     move-result-object v2
@@ -175,7 +178,7 @@
 
     move-result-object v0
 
-    .local v0, i$:Ljava/util/Iterator;
+    .local v0, "i$":Ljava/util/Iterator;
     :goto_0
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
@@ -190,7 +193,7 @@
     check-cast v1, Lcom/flurry/org/apache/avro/Schema;
 
     .line 933
-    .local v1, s:Lcom/flurry/org/apache/avro/Schema;
+    .local v1, "s":Lcom/flurry/org/apache/avro/Schema;
     iget-object v2, p0, Lcom/flurry/org/apache/avro/Schema$Parser;->names:Lcom/flurry/org/apache/avro/Schema$Names;
 
     invoke-virtual {v2, v1}, Lcom/flurry/org/apache/avro/Schema$Names;->add(Lcom/flurry/org/apache/avro/Schema;)V
@@ -198,7 +201,7 @@
     goto :goto_0
 
     .line 934
-    .end local v1           #s:Lcom/flurry/org/apache/avro/Schema;
+    .end local v1    # "s":Lcom/flurry/org/apache/avro/Schema;
     :cond_0
     return-object p0
 .end method
@@ -223,7 +226,7 @@
     invoke-direct {v1}, Ljava/util/LinkedHashMap;-><init>()V
 
     .line 940
-    .local v1, result:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Lcom/flurry/org/apache/avro/Schema;>;"
+    .local v1, "result":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Lcom/flurry/org/apache/avro/Schema;>;"
     iget-object v3, p0, Lcom/flurry/org/apache/avro/Schema$Parser;->names:Lcom/flurry/org/apache/avro/Schema$Names;
 
     invoke-virtual {v3}, Lcom/flurry/org/apache/avro/Schema$Names;->values()Ljava/util/Collection;
@@ -234,7 +237,7 @@
 
     move-result-object v0
 
-    .local v0, i$:Ljava/util/Iterator;
+    .local v0, "i$":Ljava/util/Iterator;
     :goto_0
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
@@ -249,7 +252,7 @@
     check-cast v2, Lcom/flurry/org/apache/avro/Schema;
 
     .line 941
-    .local v2, s:Lcom/flurry/org/apache/avro/Schema;
+    .local v2, "s":Lcom/flurry/org/apache/avro/Schema;
     invoke-virtual {v2}, Lcom/flurry/org/apache/avro/Schema;->getFullName()Ljava/lang/String;
 
     move-result-object v3
@@ -259,7 +262,7 @@
     goto :goto_0
 
     .line 942
-    .end local v2           #s:Lcom/flurry/org/apache/avro/Schema;
+    .end local v2    # "s":Lcom/flurry/org/apache/avro/Schema;
     :cond_0
     return-object v1
 .end method
@@ -276,7 +279,7 @@
 
 .method public parse(Ljava/io/File;)Lcom/flurry/org/apache/avro/Schema;
     .locals 1
-    .parameter "file"
+    .param p1, "file"    # Ljava/io/File;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -300,7 +303,7 @@
 
 .method public parse(Ljava/io/InputStream;)Lcom/flurry/org/apache/avro/Schema;
     .locals 1
-    .parameter "in"
+    .param p1, "in"    # Ljava/io/InputStream;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -324,7 +327,7 @@
 
 .method public parse(Ljava/lang/String;)Lcom/flurry/org/apache/avro/Schema;
     .locals 3
-    .parameter "s"
+    .param p1, "s"    # Ljava/lang/String;
 
     .prologue
     .line 970
@@ -354,7 +357,7 @@
     move-object v0, v1
 
     .line 972
-    .local v0, e:Ljava/io/IOException;
+    .local v0, "e":Ljava/io/IOException;
     new-instance v1, Lcom/flurry/org/apache/avro/SchemaParseException;
 
     invoke-direct {v1, v0}, Lcom/flurry/org/apache/avro/SchemaParseException;-><init>(Ljava/lang/Throwable;)V
@@ -364,7 +367,7 @@
 
 .method public setValidate(Z)Lcom/flurry/org/apache/avro/Schema$Parser;
     .locals 0
-    .parameter "validate"
+    .param p1, "validate"    # Z
 
     .prologue
     .line 947

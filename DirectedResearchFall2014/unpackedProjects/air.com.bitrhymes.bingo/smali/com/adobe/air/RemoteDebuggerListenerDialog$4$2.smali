@@ -26,8 +26,6 @@
 # direct methods
 .method constructor <init>(Lcom/adobe/air/RemoteDebuggerListenerDialog$4;Landroid/content/DialogInterface$OnClickListener;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 154
@@ -44,9 +42,6 @@
 # virtual methods
 .method public onKey(Landroid/content/DialogInterface;ILandroid/view/KeyEvent;)Z
     .locals 2
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 156

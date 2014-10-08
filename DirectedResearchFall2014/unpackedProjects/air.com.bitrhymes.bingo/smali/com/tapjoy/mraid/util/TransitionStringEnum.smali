@@ -170,9 +170,7 @@
 
 .method private constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter "text"
+    .param p3, "text"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -194,7 +192,7 @@
 
 .method public static fromString(Ljava/lang/String;)Lcom/tapjoy/mraid/util/TransitionStringEnum;
     .locals 5
-    .parameter "text"
+    .param p0, "text"    # Ljava/lang/String;
 
     .prologue
     .line 19
@@ -205,20 +203,20 @@
 
     move-result-object v0
 
-    .local v0, arr$:[Lcom/tapjoy/mraid/util/TransitionStringEnum;
+    .local v0, "arr$":[Lcom/tapjoy/mraid/util/TransitionStringEnum;
     array-length v3, v0
 
-    .local v3, len$:I
+    .local v3, "len$":I
     const/4 v2, 0x0
 
-    .local v2, i$:I
+    .local v2, "i$":I
     :goto_0
     if-ge v2, v3, :cond_1
 
     aget-object v1, v0, v2
 
     .line 21
-    .local v1, b:Lcom/tapjoy/mraid/util/TransitionStringEnum;
+    .local v1, "b":Lcom/tapjoy/mraid/util/TransitionStringEnum;
     iget-object v4, v1, Lcom/tapjoy/mraid/util/TransitionStringEnum;->text:Ljava/lang/String;
 
     invoke-virtual {p0, v4}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
@@ -230,28 +228,28 @@
     move-object v4, v1
 
     .line 26
-    .end local v0           #arr$:[Lcom/tapjoy/mraid/util/TransitionStringEnum;
-    .end local v1           #b:Lcom/tapjoy/mraid/util/TransitionStringEnum;
-    .end local v2           #i$:I
-    .end local v3           #len$:I
+    .end local v0    # "arr$":[Lcom/tapjoy/mraid/util/TransitionStringEnum;
+    .end local v1    # "b":Lcom/tapjoy/mraid/util/TransitionStringEnum;
+    .end local v2    # "i$":I
+    .end local v3    # "len$":I
     :goto_1
     return-object v4
 
     .line 20
-    .restart local v0       #arr$:[Lcom/tapjoy/mraid/util/TransitionStringEnum;
-    .restart local v1       #b:Lcom/tapjoy/mraid/util/TransitionStringEnum;
-    .restart local v2       #i$:I
-    .restart local v3       #len$:I
+    .restart local v0    # "arr$":[Lcom/tapjoy/mraid/util/TransitionStringEnum;
+    .restart local v1    # "b":Lcom/tapjoy/mraid/util/TransitionStringEnum;
+    .restart local v2    # "i$":I
+    .restart local v3    # "len$":I
     :cond_0
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
     .line 26
-    .end local v0           #arr$:[Lcom/tapjoy/mraid/util/TransitionStringEnum;
-    .end local v1           #b:Lcom/tapjoy/mraid/util/TransitionStringEnum;
-    .end local v2           #i$:I
-    .end local v3           #len$:I
+    .end local v0    # "arr$":[Lcom/tapjoy/mraid/util/TransitionStringEnum;
+    .end local v1    # "b":Lcom/tapjoy/mraid/util/TransitionStringEnum;
+    .end local v2    # "i$":I
+    .end local v3    # "len$":I
     :cond_1
     const/4 v4, 0x0
 
@@ -260,7 +258,7 @@
 
 .method public static valueOf(Ljava/lang/String;)Lcom/tapjoy/mraid/util/TransitionStringEnum;
     .locals 1
-    .parameter "name"
+    .param p0, "name"    # Ljava/lang/String;
 
     .prologue
     .line 4
@@ -270,7 +268,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "name":Ljava/lang/String;
     check-cast p0, Lcom/tapjoy/mraid/util/TransitionStringEnum;
 
     return-object p0

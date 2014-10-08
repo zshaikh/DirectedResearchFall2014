@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/tapjoy/TJPoints;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 153
@@ -47,7 +46,7 @@
     const/4 v2, 0x0
 
     .line 158
-    .local v2, returnValue:Z
+    .local v2, "returnValue":Z
     invoke-static {}, Ljava/util/UUID;->randomUUID()Ljava/util/UUID;
 
     move-result-object v6
@@ -57,7 +56,7 @@
     move-result-object v0
 
     .line 159
-    .local v0, guid:Ljava/lang/String;
+    .local v0, "guid":Ljava/lang/String;
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v6
@@ -67,13 +66,13 @@
     div-long v3, v6, v8
 
     .line 162
-    .local v3, time:J
+    .local v3, "time":J
     invoke-static {}, Lcom/tapjoy/TapjoyConnectCore;->getGenericURLParams()Ljava/util/Map;
 
     move-result-object v5
 
     .line 163
-    .local v5, urlParams:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v5, "urlParams":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v6, "tap_points"
 
     iget-object v7, p0, Lcom/tapjoy/TJPoints$3;->this$0:Lcom/tapjoy/TJPoints;
@@ -145,7 +144,7 @@
     move-result-object v1
 
     .line 172
-    .local v1, response:Lcom/tapjoy/TapjoyHttpURLResponse;
+    .local v1, "response":Lcom/tapjoy/TapjoyHttpURLResponse;
     iget-object v6, v1, Lcom/tapjoy/TapjoyHttpURLResponse;->response:Ljava/lang/String;
 
     if-eqz v6, :cond_0
@@ -155,7 +154,7 @@
 
     iget-object v7, v1, Lcom/tapjoy/TapjoyHttpURLResponse;->response:Ljava/lang/String;
 
-    #calls: Lcom/tapjoy/TJPoints;->handleAwardPointsResponse(Ljava/lang/String;)Z
+    # invokes: Lcom/tapjoy/TJPoints;->handleAwardPointsResponse(Ljava/lang/String;)Z
     invoke-static {v6, v7}, Lcom/tapjoy/TJPoints;->access$400(Lcom/tapjoy/TJPoints;Ljava/lang/String;)Z
 
     move-result v2
@@ -165,6 +164,7 @@
     if-nez v2, :cond_1
 
     .line 179
+    # getter for: Lcom/tapjoy/TJPoints;->tapjoyAwardPointsNotifier:Lcom/tapjoy/TapjoyAwardPointsNotifier;
     invoke-static {}, Lcom/tapjoy/TJPoints;->access$500()Lcom/tapjoy/TapjoyAwardPointsNotifier;
 
     move-result-object v6

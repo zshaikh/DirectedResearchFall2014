@@ -35,7 +35,7 @@
 
     .prologue
     .line 62
-    .local p0, this:Lcom/fusepowered/m1/google/gson/reflect/TypeToken;,"Lcom/fusepowered/m1/google/gson/reflect/TypeToken<TT;>;"
+    .local p0, "this":Lcom/fusepowered/m1/google/gson/reflect/TypeToken;, "Lcom/fusepowered/m1/google/gson/reflect/TypeToken<TT;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 63
@@ -73,11 +73,11 @@
 
 .method constructor <init>(Ljava/lang/reflect/Type;)V
     .locals 1
-    .parameter "type"
+    .param p1, "type"    # Ljava/lang/reflect/Type;
 
     .prologue
     .line 72
-    .local p0, this:Lcom/fusepowered/m1/google/gson/reflect/TypeToken;,"Lcom/fusepowered/m1/google/gson/reflect/TypeToken<TT;>;"
+    .local p0, "this":Lcom/fusepowered/m1/google/gson/reflect/TypeToken;, "Lcom/fusepowered/m1/google/gson/reflect/TypeToken<TT;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 73
@@ -117,8 +117,7 @@
 
 .method private static varargs buildUnexpectedTypeError(Ljava/lang/reflect/Type;[Ljava/lang/Class;)Ljava/lang/AssertionError;
     .locals 7
-    .parameter "token"
-    .parameter
+    .param p0, "token"    # Ljava/lang/reflect/Type;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -132,7 +131,7 @@
 
     .prologue
     .line 258
-    .local p1, expected:[Ljava/lang/Class;,"[Ljava/lang/Class<*>;"
+    .local p1, "expected":[Ljava/lang/Class;, "[Ljava/lang/Class<*>;"
     new-instance v2, Ljava/lang/StringBuilder;
 
     const-string v5, "Unexpected type. Expected one of: "
@@ -140,23 +139,23 @@
     invoke-direct {v2, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     .line 260
-    .local v2, exceptionMessage:Ljava/lang/StringBuilder;
+    .local v2, "exceptionMessage":Ljava/lang/StringBuilder;
     move-object v0, p1
 
-    .local v0, arr$:[Ljava/lang/Class;
+    .local v0, "arr$":[Ljava/lang/Class;
     array-length v4, v0
 
-    .local v4, len$:I
+    .local v4, "len$":I
     const/4 v3, 0x0
 
-    .local v3, i$:I
+    .local v3, "i$":I
     :goto_0
     if-ge v3, v4, :cond_0
 
     aget-object v1, v0, v3
 
     .line 261
-    .local v1, clazz:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local v1, "clazz":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object v5
@@ -175,7 +174,7 @@
     goto :goto_0
 
     .line 263
-    .end local v1           #clazz:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .end local v1    # "clazz":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     :cond_0
     const-string v5, "but got: "
 
@@ -227,7 +226,6 @@
 
 .method public static get(Ljava/lang/Class;)Lcom/fusepowered/m1/google/gson/reflect/TypeToken;
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -242,7 +240,7 @@
 
     .prologue
     .line 304
-    .local p0, type:Ljava/lang/Class;,"Ljava/lang/Class<TT;>;"
+    .local p0, "type":Ljava/lang/Class;, "Ljava/lang/Class<TT;>;"
     new-instance v0, Lcom/fusepowered/m1/google/gson/reflect/TypeToken;
 
     invoke-direct {v0, p0}, Lcom/fusepowered/m1/google/gson/reflect/TypeToken;-><init>(Ljava/lang/reflect/Type;)V
@@ -252,7 +250,7 @@
 
 .method public static get(Ljava/lang/reflect/Type;)Lcom/fusepowered/m1/google/gson/reflect/TypeToken;
     .locals 1
-    .parameter "type"
+    .param p0, "type"    # Ljava/lang/reflect/Type;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -274,7 +272,6 @@
 
 .method static getSuperclassTypeParameter(Ljava/lang/Class;)Ljava/lang/reflect/Type;
     .locals 5
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -286,13 +283,13 @@
 
     .prologue
     .line 83
-    .local p0, subclass:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p0, "subclass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-virtual {p0}, Ljava/lang/Class;->getGenericSuperclass()Ljava/lang/reflect/Type;
 
     move-result-object v2
 
     .line 84
-    .local v2, superclass:Ljava/lang/reflect/Type;
+    .local v2, "superclass":Ljava/lang/reflect/Type;
     instance-of v3, v2, Ljava/lang/Class;
 
     if-eqz v3, :cond_0
@@ -315,7 +312,7 @@
     move-object v1, v0
 
     .line 88
-    .local v1, parameterized:Ljava/lang/reflect/ParameterizedType;
+    .local v1, "parameterized":Ljava/lang/reflect/ParameterizedType;
     invoke-interface {v1}, Ljava/lang/reflect/ParameterizedType;->getActualTypeArguments()[Ljava/lang/reflect/Type;
 
     move-result-object v3
@@ -333,8 +330,8 @@
 
 .method private static isAssignableFrom(Ljava/lang/reflect/Type;Ljava/lang/reflect/GenericArrayType;)Z
     .locals 5
-    .parameter "from"
-    .parameter "to"
+    .param p0, "from"    # Ljava/lang/reflect/Type;
+    .param p1, "to"    # Ljava/lang/reflect/GenericArrayType;
 
     .prologue
     .line 162
@@ -343,7 +340,7 @@
     move-result-object v3
 
     .line 163
-    .local v3, toGenericComponentType:Ljava/lang/reflect/Type;
+    .local v3, "toGenericComponentType":Ljava/lang/reflect/Type;
     instance-of v4, v3, Ljava/lang/reflect/ParameterizedType;
 
     if-eqz v4, :cond_3
@@ -352,7 +349,7 @@
     move-object v2, p0
 
     .line 165
-    .local v2, t:Ljava/lang/reflect/Type;
+    .local v2, "t":Ljava/lang/reflect/Type;
     instance-of v4, p0, Ljava/lang/reflect/GenericArrayType;
 
     if-eqz v4, :cond_1
@@ -360,7 +357,7 @@
     .line 166
     check-cast p0, Ljava/lang/reflect/GenericArrayType;
 
-    .end local p0
+    .end local p0    # "from":Ljava/lang/reflect/Type;
     invoke-interface {p0}, Ljava/lang/reflect/GenericArrayType;->getGenericComponentType()Ljava/lang/reflect/Type;
 
     move-result-object v2
@@ -370,7 +367,7 @@
     :goto_0
     check-cast v3, Ljava/lang/reflect/ParameterizedType;
 
-    .end local v3           #toGenericComponentType:Ljava/lang/reflect/Type;
+    .end local v3    # "toGenericComponentType":Ljava/lang/reflect/Type;
     new-instance v4, Ljava/util/HashMap;
 
     invoke-direct {v4}, Ljava/util/HashMap;-><init>()V
@@ -380,14 +377,14 @@
     move-result v4
 
     .line 179
-    .end local v2           #t:Ljava/lang/reflect/Type;
+    .end local v2    # "t":Ljava/lang/reflect/Type;
     :goto_1
     return v4
 
     .line 167
-    .restart local v2       #t:Ljava/lang/reflect/Type;
-    .restart local v3       #toGenericComponentType:Ljava/lang/reflect/Type;
-    .restart local p0
+    .restart local v2    # "t":Ljava/lang/reflect/Type;
+    .restart local v3    # "toGenericComponentType":Ljava/lang/reflect/Type;
+    .restart local p0    # "from":Ljava/lang/reflect/Type;
     :cond_1
     instance-of v4, p0, Ljava/lang/Class;
 
@@ -401,7 +398,7 @@
     move-object v1, v0
 
     .line 169
-    .local v1, classType:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local v1, "classType":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     :goto_2
     invoke-virtual {v1}, Ljava/lang/Class;->isArray()Z
 
@@ -423,8 +420,8 @@
     goto :goto_0
 
     .line 179
-    .end local v1           #classType:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
-    .end local v2           #t:Ljava/lang/reflect/Type;
+    .end local v1    # "classType":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
+    .end local v2    # "t":Ljava/lang/reflect/Type;
     :cond_3
     const/4 v4, 0x1
 
@@ -433,9 +430,8 @@
 
 .method private static isAssignableFrom(Ljava/lang/reflect/Type;Ljava/lang/reflect/ParameterizedType;Ljava/util/Map;)Z
     .locals 7
-    .parameter "from"
-    .parameter "to"
-    .parameter
+    .param p0, "from"    # Ljava/lang/reflect/Type;
+    .param p1, "to"    # Ljava/lang/reflect/ParameterizedType;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -451,19 +447,19 @@
 
     .prologue
     .line 189
-    .local p2, typeVarMap:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/reflect/Type;>;"
+    .local p2, "typeVarMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/reflect/Type;>;"
     if-nez p0, :cond_0
 
     .line 190
     const/4 p0, 0x0
 
     .line 232
-    .end local p0
+    .end local p0    # "from":Ljava/lang/reflect/Type;
     :goto_0
     return p0
 
     .line 193
-    .restart local p0
+    .restart local p0    # "from":Ljava/lang/reflect/Type;
     :cond_0
     invoke-virtual {p1, p0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -483,11 +479,11 @@
     move-result-object v0
 
     .line 199
-    .local v0, clazz:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local v0, "clazz":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const/4 v1, 0x0
 
     .line 200
-    .local v1, ptype:Ljava/lang/reflect/ParameterizedType;
+    .local v1, "ptype":Ljava/lang/reflect/ParameterizedType;
     instance-of v2, p0, Ljava/lang/reflect/ParameterizedType;
 
     if-eqz v2, :cond_7
@@ -495,13 +491,13 @@
     .line 201
     check-cast p0, Ljava/lang/reflect/ParameterizedType;
 
-    .end local v1           #ptype:Ljava/lang/reflect/ParameterizedType;
-    .local p0, ptype:Ljava/lang/reflect/ParameterizedType;
+    .end local v1    # "ptype":Ljava/lang/reflect/ParameterizedType;
+    .local p0, "ptype":Ljava/lang/reflect/ParameterizedType;
     move-object v2, p0
 
     .line 205
-    .end local p0           #ptype:Ljava/lang/reflect/ParameterizedType;
-    .local v2, ptype:Ljava/lang/reflect/ParameterizedType;
+    .end local p0    # "ptype":Ljava/lang/reflect/ParameterizedType;
+    .local v2, "ptype":Ljava/lang/reflect/ParameterizedType;
     :goto_1
     if-eqz v2, :cond_4
 
@@ -511,20 +507,20 @@
     move-result-object v3
 
     .line 207
-    .local v3, tArgs:[Ljava/lang/reflect/Type;
+    .local v3, "tArgs":[Ljava/lang/reflect/Type;
     invoke-virtual {v0}, Ljava/lang/Class;->getTypeParameters()[Ljava/lang/reflect/TypeVariable;
 
     move-result-object v4
 
     .line 208
-    .local v4, tParams:[Ljava/lang/reflect/TypeVariable;,"[Ljava/lang/reflect/TypeVariable<*>;"
+    .local v4, "tParams":[Ljava/lang/reflect/TypeVariable;, "[Ljava/lang/reflect/TypeVariable<*>;"
     const/4 p0, 0x0
 
-    .local p0, i:I
+    .local p0, "i":I
     move v1, p0
 
-    .end local p0           #i:I
-    .local v1, i:I
+    .end local p0    # "i":I
+    .local v1, "i":I
     :goto_2
     array-length p0, v3
 
@@ -534,11 +530,11 @@
     aget-object p0, v3, v1
 
     .line 210
-    .local p0, arg:Ljava/lang/reflect/Type;
+    .local p0, "arg":Ljava/lang/reflect/Type;
     aget-object v5, v4, v1
 
     .line 211
-    .local v5, var:Ljava/lang/reflect/TypeVariable;,"Ljava/lang/reflect/TypeVariable<*>;"
+    .local v5, "var":Ljava/lang/reflect/TypeVariable;, "Ljava/lang/reflect/TypeVariable<*>;"
     :goto_3
     instance-of v6, p0, Ljava/lang/reflect/TypeVariable;
 
@@ -548,12 +544,12 @@
     check-cast p0, Ljava/lang/reflect/TypeVariable;
 
     .line 213
-    .local p0, v:Ljava/lang/reflect/TypeVariable;,"Ljava/lang/reflect/TypeVariable<*>;"
+    .local p0, "v":Ljava/lang/reflect/TypeVariable;, "Ljava/lang/reflect/TypeVariable<*>;"
     invoke-interface {p0}, Ljava/lang/reflect/TypeVariable;->getName()Ljava/lang/String;
 
     move-result-object p0
 
-    .end local p0           #v:Ljava/lang/reflect/TypeVariable;,"Ljava/lang/reflect/TypeVariable<*>;"
+    .end local p0    # "v":Ljava/lang/reflect/TypeVariable;, "Ljava/lang/reflect/TypeVariable<*>;"
     invoke-interface {p2, p0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -561,7 +557,7 @@
     check-cast p0, Ljava/lang/reflect/Type;
 
     .line 214
-    .local p0, arg:Ljava/lang/reflect/Type;
+    .local p0, "arg":Ljava/lang/reflect/Type;
     goto :goto_3
 
     .line 215
@@ -570,18 +566,18 @@
 
     move-result-object v5
 
-    .end local v5           #var:Ljava/lang/reflect/TypeVariable;,"Ljava/lang/reflect/TypeVariable<*>;"
+    .end local v5    # "var":Ljava/lang/reflect/TypeVariable;, "Ljava/lang/reflect/TypeVariable<*>;"
     invoke-interface {p2, v5, p0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 208
     add-int/lit8 p0, v1, 0x1
 
-    .end local v1           #i:I
-    .local p0, i:I
+    .end local v1    # "i":I
+    .local p0, "i":I
     move v1, p0
 
-    .end local p0           #i:I
-    .restart local v1       #i:I
+    .end local p0    # "i":I
+    .restart local v1    # "i":I
     goto :goto_2
 
     .line 219
@@ -598,29 +594,29 @@
     goto :goto_0
 
     .line 224
-    .end local v1           #i:I
-    .end local v3           #tArgs:[Ljava/lang/reflect/Type;
-    .end local v4           #tParams:[Ljava/lang/reflect/TypeVariable;,"[Ljava/lang/reflect/TypeVariable<*>;"
+    .end local v1    # "i":I
+    .end local v3    # "tArgs":[Ljava/lang/reflect/Type;
+    .end local v4    # "tParams":[Ljava/lang/reflect/TypeVariable;, "[Ljava/lang/reflect/TypeVariable<*>;"
     :cond_4
     invoke-virtual {v0}, Ljava/lang/Class;->getGenericInterfaces()[Ljava/lang/reflect/Type;
 
     move-result-object p0
 
-    .local p0, arr$:[Ljava/lang/reflect/Type;
+    .local p0, "arr$":[Ljava/lang/reflect/Type;
     array-length v3, p0
 
-    .local v3, len$:I
+    .local v3, "len$":I
     const/4 v1, 0x0
 
-    .end local v2           #ptype:Ljava/lang/reflect/ParameterizedType;
-    .local v1, i$:I
+    .end local v2    # "ptype":Ljava/lang/reflect/ParameterizedType;
+    .local v1, "i$":I
     :goto_4
     if-ge v1, v3, :cond_6
 
     aget-object v2, p0, v1
 
     .line 225
-    .local v2, itype:Ljava/lang/reflect/Type;
+    .local v2, "itype":Ljava/lang/reflect/Type;
     new-instance v4, Ljava/util/HashMap;
 
     invoke-direct {v4, p2}, Ljava/util/HashMap;-><init>(Ljava/util/Map;)V
@@ -629,7 +625,7 @@
 
     move-result v2
 
-    .end local v2           #itype:Ljava/lang/reflect/Type;
+    .end local v2    # "itype":Ljava/lang/reflect/Type;
     if-eqz v2, :cond_5
 
     .line 226
@@ -650,10 +646,10 @@
     move-result-object p0
 
     .line 232
-    .local p0, sType:Ljava/lang/reflect/Type;
+    .local p0, "sType":Ljava/lang/reflect/Type;
     new-instance v0, Ljava/util/HashMap;
 
-    .end local v0           #clazz:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .end local v0    # "clazz":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-direct {v0, p2}, Ljava/util/HashMap;-><init>(Ljava/util/Map;)V
 
     invoke-static {p0, p1, v0}, Lcom/fusepowered/m1/google/gson/reflect/TypeToken;->isAssignableFrom(Ljava/lang/reflect/Type;Ljava/lang/reflect/ParameterizedType;Ljava/util/Map;)Z
@@ -662,23 +658,22 @@
 
     goto :goto_0
 
-    .end local v3           #len$:I
-    .restart local v0       #clazz:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
-    .local v1, ptype:Ljava/lang/reflect/ParameterizedType;
-    .local p0, from:Ljava/lang/reflect/Type;
+    .end local v3    # "len$":I
+    .restart local v0    # "clazz":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
+    .local v1, "ptype":Ljava/lang/reflect/ParameterizedType;
+    .local p0, "from":Ljava/lang/reflect/Type;
     :cond_7
     move-object v2, v1
 
-    .end local v1           #ptype:Ljava/lang/reflect/ParameterizedType;
-    .local v2, ptype:Ljava/lang/reflect/ParameterizedType;
+    .end local v1    # "ptype":Ljava/lang/reflect/ParameterizedType;
+    .local v2, "ptype":Ljava/lang/reflect/ParameterizedType;
     goto :goto_1
 .end method
 
 .method private static matches(Ljava/lang/reflect/Type;Ljava/lang/reflect/Type;Ljava/util/Map;)Z
     .locals 1
-    .parameter "from"
-    .parameter "to"
-    .parameter
+    .param p0, "from"    # Ljava/lang/reflect/Type;
+    .param p1, "to"    # Ljava/lang/reflect/Type;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -694,7 +689,7 @@
 
     .prologue
     .line 274
-    .local p2, typeMap:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/reflect/Type;>;"
+    .local p2, "typeMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/reflect/Type;>;"
     invoke-virtual {p1, p0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -707,7 +702,7 @@
 
     check-cast p0, Ljava/lang/reflect/TypeVariable;
 
-    .end local p0
+    .end local p0    # "from":Ljava/lang/reflect/Type;
     invoke-interface {p0}, Ljava/lang/reflect/TypeVariable;->getName()Ljava/lang/String;
 
     move-result-object v0
@@ -736,9 +731,8 @@
 
 .method private static typeEquals(Ljava/lang/reflect/ParameterizedType;Ljava/lang/reflect/ParameterizedType;Ljava/util/Map;)Z
     .locals 6
-    .parameter "from"
-    .parameter "to"
-    .parameter
+    .param p0, "from"    # Ljava/lang/reflect/ParameterizedType;
+    .param p1, "to"    # Ljava/lang/reflect/ParameterizedType;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -753,7 +747,7 @@
     .end annotation
 
     .prologue
-    .local p2, typeVarMap:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/reflect/Type;>;"
+    .local p2, "typeVarMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/reflect/Type;>;"
     const/4 v5, 0x0
 
     .line 241
@@ -777,16 +771,16 @@
     move-result-object v0
 
     .line 243
-    .local v0, fromArgs:[Ljava/lang/reflect/Type;
+    .local v0, "fromArgs":[Ljava/lang/reflect/Type;
     invoke-interface {p1}, Ljava/lang/reflect/ParameterizedType;->getActualTypeArguments()[Ljava/lang/reflect/Type;
 
     move-result-object v2
 
     .line 244
-    .local v2, toArgs:[Ljava/lang/reflect/Type;
+    .local v2, "toArgs":[Ljava/lang/reflect/Type;
     const/4 v1, 0x0
 
-    .local v1, i:I
+    .local v1, "i":I
     :goto_0
     array-length v3, v0
 
@@ -806,16 +800,16 @@
     move v3, v5
 
     .line 251
-    .end local v0           #fromArgs:[Ljava/lang/reflect/Type;
-    .end local v1           #i:I
-    .end local v2           #toArgs:[Ljava/lang/reflect/Type;
+    .end local v0    # "fromArgs":[Ljava/lang/reflect/Type;
+    .end local v1    # "i":I
+    .end local v2    # "toArgs":[Ljava/lang/reflect/Type;
     :goto_1
     return v3
 
     .line 244
-    .restart local v0       #fromArgs:[Ljava/lang/reflect/Type;
-    .restart local v1       #i:I
-    .restart local v2       #toArgs:[Ljava/lang/reflect/Type;
+    .restart local v0    # "fromArgs":[Ljava/lang/reflect/Type;
+    .restart local v1    # "i":I
+    .restart local v2    # "toArgs":[Ljava/lang/reflect/Type;
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
@@ -827,9 +821,9 @@
 
     goto :goto_1
 
-    .end local v0           #fromArgs:[Ljava/lang/reflect/Type;
-    .end local v1           #i:I
-    .end local v2           #toArgs:[Ljava/lang/reflect/Type;
+    .end local v0    # "fromArgs":[Ljava/lang/reflect/Type;
+    .end local v1    # "i":I
+    .end local v2    # "toArgs":[Ljava/lang/reflect/Type;
     :cond_2
     move v3, v5
 
@@ -841,11 +835,11 @@
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
     .locals 2
-    .parameter "o"
+    .param p1, "o"    # Ljava/lang/Object;
 
     .prologue
     .line 285
-    .local p0, this:Lcom/fusepowered/m1/google/gson/reflect/TypeToken;,"Lcom/fusepowered/m1/google/gson/reflect/TypeToken<TT;>;"
+    .local p0, "this":Lcom/fusepowered/m1/google/gson/reflect/TypeToken;, "Lcom/fusepowered/m1/google/gson/reflect/TypeToken<TT;>;"
     instance-of v0, p1, Lcom/fusepowered/m1/google/gson/reflect/TypeToken;
 
     if-eqz v0, :cond_0
@@ -854,7 +848,7 @@
 
     check-cast p1, Lcom/fusepowered/m1/google/gson/reflect/TypeToken;
 
-    .end local p1
+    .end local p1    # "o":Ljava/lang/Object;
     iget-object v1, p1, Lcom/fusepowered/m1/google/gson/reflect/TypeToken;->type:Ljava/lang/reflect/Type;
 
     invoke-static {v0, v1}, Lcom/fusepowered/m1/google/gson/internal/$Gson$Types;->equals(Ljava/lang/reflect/Type;Ljava/lang/reflect/Type;)Z
@@ -886,7 +880,7 @@
 
     .prologue
     .line 95
-    .local p0, this:Lcom/fusepowered/m1/google/gson/reflect/TypeToken;,"Lcom/fusepowered/m1/google/gson/reflect/TypeToken<TT;>;"
+    .local p0, "this":Lcom/fusepowered/m1/google/gson/reflect/TypeToken;, "Lcom/fusepowered/m1/google/gson/reflect/TypeToken<TT;>;"
     iget-object v0, p0, Lcom/fusepowered/m1/google/gson/reflect/TypeToken;->rawType:Ljava/lang/Class;
 
     return-object v0
@@ -897,7 +891,7 @@
 
     .prologue
     .line 102
-    .local p0, this:Lcom/fusepowered/m1/google/gson/reflect/TypeToken;,"Lcom/fusepowered/m1/google/gson/reflect/TypeToken<TT;>;"
+    .local p0, "this":Lcom/fusepowered/m1/google/gson/reflect/TypeToken;, "Lcom/fusepowered/m1/google/gson/reflect/TypeToken<TT;>;"
     iget-object v0, p0, Lcom/fusepowered/m1/google/gson/reflect/TypeToken;->type:Ljava/lang/reflect/Type;
 
     return-object v0
@@ -908,7 +902,7 @@
 
     .prologue
     .line 281
-    .local p0, this:Lcom/fusepowered/m1/google/gson/reflect/TypeToken;,"Lcom/fusepowered/m1/google/gson/reflect/TypeToken<TT;>;"
+    .local p0, "this":Lcom/fusepowered/m1/google/gson/reflect/TypeToken;, "Lcom/fusepowered/m1/google/gson/reflect/TypeToken<TT;>;"
     iget v0, p0, Lcom/fusepowered/m1/google/gson/reflect/TypeToken;->hashCode:I
 
     return v0
@@ -916,7 +910,6 @@
 
 .method public isAssignableFrom(Lcom/fusepowered/m1/google/gson/reflect/TypeToken;)Z
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -930,8 +923,8 @@
 
     .prologue
     .line 154
-    .local p0, this:Lcom/fusepowered/m1/google/gson/reflect/TypeToken;,"Lcom/fusepowered/m1/google/gson/reflect/TypeToken<TT;>;"
-    .local p1, token:Lcom/fusepowered/m1/google/gson/reflect/TypeToken;,"Lcom/fusepowered/m1/google/gson/reflect/TypeToken<*>;"
+    .local p0, "this":Lcom/fusepowered/m1/google/gson/reflect/TypeToken;, "Lcom/fusepowered/m1/google/gson/reflect/TypeToken<TT;>;"
+    .local p1, "token":Lcom/fusepowered/m1/google/gson/reflect/TypeToken;, "Lcom/fusepowered/m1/google/gson/reflect/TypeToken<*>;"
     invoke-virtual {p1}, Lcom/fusepowered/m1/google/gson/reflect/TypeToken;->getType()Ljava/lang/reflect/Type;
 
     move-result-object v0
@@ -945,7 +938,6 @@
 
 .method public isAssignableFrom(Ljava/lang/Class;)Z
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -959,8 +951,8 @@
 
     .prologue
     .line 113
-    .local p0, this:Lcom/fusepowered/m1/google/gson/reflect/TypeToken;,"Lcom/fusepowered/m1/google/gson/reflect/TypeToken<TT;>;"
-    .local p1, cls:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p0, "this":Lcom/fusepowered/m1/google/gson/reflect/TypeToken;, "Lcom/fusepowered/m1/google/gson/reflect/TypeToken<TT;>;"
+    .local p1, "cls":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-virtual {p0, p1}, Lcom/fusepowered/m1/google/gson/reflect/TypeToken;->isAssignableFrom(Ljava/lang/reflect/Type;)Z
 
     move-result v0
@@ -970,12 +962,12 @@
 
 .method public isAssignableFrom(Ljava/lang/reflect/Type;)Z
     .locals 5
-    .parameter "from"
+    .param p1, "from"    # Ljava/lang/reflect/Type;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
     .prologue
-    .local p0, this:Lcom/fusepowered/m1/google/gson/reflect/TypeToken;,"Lcom/fusepowered/m1/google/gson/reflect/TypeToken<TT;>;"
+    .local p0, "this":Lcom/fusepowered/m1/google/gson/reflect/TypeToken;, "Lcom/fusepowered/m1/google/gson/reflect/TypeToken<TT;>;"
     const/4 v4, 0x1
 
     const/4 v3, 0x0
@@ -986,12 +978,12 @@
     move v0, v3
 
     .line 138
-    .end local p0           #this:Lcom/fusepowered/m1/google/gson/reflect/TypeToken;,"Lcom/fusepowered/m1/google/gson/reflect/TypeToken<TT;>;"
+    .end local p0    # "this":Lcom/fusepowered/m1/google/gson/reflect/TypeToken;, "Lcom/fusepowered/m1/google/gson/reflect/TypeToken<TT;>;"
     :goto_0
     return v0
 
     .line 128
-    .restart local p0       #this:Lcom/fusepowered/m1/google/gson/reflect/TypeToken;,"Lcom/fusepowered/m1/google/gson/reflect/TypeToken<TT;>;"
+    .restart local p0    # "this":Lcom/fusepowered/m1/google/gson/reflect/TypeToken;, "Lcom/fusepowered/m1/google/gson/reflect/TypeToken<TT;>;"
     :cond_0
     iget-object v0, p0, Lcom/fusepowered/m1/google/gson/reflect/TypeToken;->type:Ljava/lang/reflect/Type;
 
@@ -1038,7 +1030,7 @@
     .line 135
     iget-object p0, p0, Lcom/fusepowered/m1/google/gson/reflect/TypeToken;->type:Ljava/lang/reflect/Type;
 
-    .end local p0           #this:Lcom/fusepowered/m1/google/gson/reflect/TypeToken;,"Lcom/fusepowered/m1/google/gson/reflect/TypeToken<TT;>;"
+    .end local p0    # "this":Lcom/fusepowered/m1/google/gson/reflect/TypeToken;, "Lcom/fusepowered/m1/google/gson/reflect/TypeToken<TT;>;"
     check-cast p0, Ljava/lang/reflect/ParameterizedType;
 
     new-instance v0, Ljava/util/HashMap;
@@ -1052,7 +1044,7 @@
     goto :goto_0
 
     .line 137
-    .restart local p0       #this:Lcom/fusepowered/m1/google/gson/reflect/TypeToken;,"Lcom/fusepowered/m1/google/gson/reflect/TypeToken<TT;>;"
+    .restart local p0    # "this":Lcom/fusepowered/m1/google/gson/reflect/TypeToken;, "Lcom/fusepowered/m1/google/gson/reflect/TypeToken<TT;>;"
     :cond_3
     iget-object v0, p0, Lcom/fusepowered/m1/google/gson/reflect/TypeToken;->type:Ljava/lang/reflect/Type;
 
@@ -1075,7 +1067,7 @@
 
     iget-object p0, p0, Lcom/fusepowered/m1/google/gson/reflect/TypeToken;->type:Ljava/lang/reflect/Type;
 
-    .end local p0           #this:Lcom/fusepowered/m1/google/gson/reflect/TypeToken;,"Lcom/fusepowered/m1/google/gson/reflect/TypeToken<TT;>;"
+    .end local p0    # "this":Lcom/fusepowered/m1/google/gson/reflect/TypeToken;, "Lcom/fusepowered/m1/google/gson/reflect/TypeToken<TT;>;"
     check-cast p0, Ljava/lang/reflect/GenericArrayType;
 
     invoke-static {p1, p0}, Lcom/fusepowered/m1/google/gson/reflect/TypeToken;->isAssignableFrom(Ljava/lang/reflect/Type;Ljava/lang/reflect/GenericArrayType;)Z
@@ -1094,7 +1086,7 @@
     goto :goto_0
 
     .line 141
-    .restart local p0       #this:Lcom/fusepowered/m1/google/gson/reflect/TypeToken;,"Lcom/fusepowered/m1/google/gson/reflect/TypeToken<TT;>;"
+    .restart local p0    # "this":Lcom/fusepowered/m1/google/gson/reflect/TypeToken;, "Lcom/fusepowered/m1/google/gson/reflect/TypeToken<TT;>;"
     :cond_5
     iget-object v0, p0, Lcom/fusepowered/m1/google/gson/reflect/TypeToken;->type:Ljava/lang/reflect/Type;
 
@@ -1128,7 +1120,7 @@
 
     .prologue
     .line 290
-    .local p0, this:Lcom/fusepowered/m1/google/gson/reflect/TypeToken;,"Lcom/fusepowered/m1/google/gson/reflect/TypeToken<TT;>;"
+    .local p0, "this":Lcom/fusepowered/m1/google/gson/reflect/TypeToken;, "Lcom/fusepowered/m1/google/gson/reflect/TypeToken<TT;>;"
     iget-object v0, p0, Lcom/fusepowered/m1/google/gson/reflect/TypeToken;->type:Ljava/lang/reflect/Type;
 
     invoke-static {v0}, Lcom/fusepowered/m1/google/gson/internal/$Gson$Types;->typeToString(Ljava/lang/reflect/Type;)Ljava/lang/String;

@@ -6,9 +6,9 @@
 # direct methods
 .method constructor <init>(Landroid/content/Context;Ljava/lang/String;I)V
     .locals 2
-    .parameter "context"
-    .parameter "outcome"
-    .parameter "launches"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "outcome"    # Ljava/lang/String;
+    .param p3, "launches"    # I
 
     .prologue
     .line 17

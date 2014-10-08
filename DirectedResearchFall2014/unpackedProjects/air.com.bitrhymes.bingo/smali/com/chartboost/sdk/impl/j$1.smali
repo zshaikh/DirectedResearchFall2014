@@ -40,7 +40,6 @@
 
 .method public a(Ljava/lang/Object;)Z
     .locals 2
-    .parameter
 
     .prologue
     .line 46

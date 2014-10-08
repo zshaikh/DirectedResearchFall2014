@@ -40,7 +40,6 @@
 
 .method static synthetic access$0(Lcom/fusepowered/m2/m2l/MillennialBanner;)Lcom/fusepowered/m2/m2l/CustomEventBanner$CustomEventBannerListener;
     .locals 1
-    .parameter
 
     .prologue
     .line 48
@@ -51,7 +50,6 @@
 
 .method static synthetic access$1(Lcom/fusepowered/m2/m2l/MillennialBanner;)Lcom/fusepowered/m1/android/MMAdView;
     .locals 1
-    .parameter
 
     .prologue
     .line 47
@@ -62,7 +60,6 @@
 
 .method private extrasAreValid(Ljava/util/Map;)Z
     .locals 2
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -76,7 +73,7 @@
 
     .prologue
     .line 93
-    .local p1, serverExtras:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p1, "serverExtras":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     :try_start_0
     const-string v1, "adWidth"
 
@@ -84,7 +81,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/fusepowered/m2/m2l/MillennialBanner;
     check-cast p0, Ljava/lang/String;
 
     invoke-static {p0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -119,7 +116,7 @@
     move-object v0, v1
 
     .line 96
-    .local v0, e:Ljava/lang/NumberFormatException;
+    .local v0, "e":Ljava/lang/NumberFormatException;
     const/4 v1, 0x0
 
     goto :goto_0
@@ -141,10 +138,8 @@
 
 .method protected loadBanner(Landroid/content/Context;Lcom/fusepowered/m2/m2l/CustomEventBanner$CustomEventBannerListener;Ljava/util/Map;Ljava/util/Map;)V
     .locals 6
-    .parameter "context"
-    .parameter "customEventBannerListener"
-    .parameter
-    .parameter
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "customEventBannerListener"    # Lcom/fusepowered/m2/m2l/CustomEventBanner$CustomEventBannerListener;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -165,8 +160,8 @@
 
     .prologue
     .line 57
-    .local p3, localExtras:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
-    .local p4, serverExtras:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p3, "localExtras":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
+    .local p4, "serverExtras":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     iput-object p2, p0, Lcom/fusepowered/m2/m2l/MillennialBanner;->mBannerListener:Lcom/fusepowered/m2/m2l/CustomEventBanner$CustomEventBannerListener;
 
     .line 62
@@ -186,7 +181,7 @@
     check-cast v0, Ljava/lang/String;
 
     .line 64
-    .local v0, apid:Ljava/lang/String;
+    .local v0, "apid":Ljava/lang/String;
     const-string v4, "adWidth"
 
     invoke-interface {p4, v4}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -200,7 +195,7 @@
     move-result v3
 
     .line 65
-    .local v3, width:I
+    .local v3, "width":I
     const-string v4, "adHeight"
 
     invoke-interface {p4, v4}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -214,7 +209,7 @@
     move-result v1
 
     .line 71
-    .local v1, height:I
+    .local v1, "height":I
     invoke-static {p1}, Lcom/fusepowered/m1/android/MMSDK;->initialize(Landroid/content/Context;)V
 
     .line 72
@@ -266,7 +261,7 @@
     check-cast v2, Landroid/location/Location;
 
     .line 83
-    .local v2, location:Landroid/location/Location;
+    .local v2, "location":Landroid/location/Location;
     if-eqz v2, :cond_0
 
     invoke-static {v2}, Lcom/fusepowered/m1/android/MMRequest;->setUserLocation(Landroid/location/Location;)V
@@ -301,10 +296,10 @@
     invoke-virtual {v4}, Lcom/fusepowered/m1/android/MMAdView;->getAd()V
 
     .line 89
-    .end local v0           #apid:Ljava/lang/String;
-    .end local v1           #height:I
-    .end local v2           #location:Landroid/location/Location;
-    .end local v3           #width:I
+    .end local v0    # "apid":Ljava/lang/String;
+    .end local v1    # "height":I
+    .end local v2    # "location":Landroid/location/Location;
+    .end local v3    # "width":I
     :goto_0
     return-void
 

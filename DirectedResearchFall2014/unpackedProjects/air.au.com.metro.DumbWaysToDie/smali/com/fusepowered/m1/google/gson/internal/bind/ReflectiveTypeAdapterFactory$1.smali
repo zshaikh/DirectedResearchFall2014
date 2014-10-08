@@ -38,14 +38,9 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m1/google/gson/internal/bind/ReflectiveTypeAdapterFactory;Ljava/lang/String;ZZLcom/fusepowered/m1/google/gson/Gson;Lcom/fusepowered/m1/google/gson/reflect/TypeToken;Ljava/lang/reflect/Field;Z)V
     .locals 2
-    .parameter
-    .parameter "x0"
-    .parameter "x1"
-    .parameter "x2"
-    .parameter
-    .parameter
-    .parameter
-    .parameter
+    .param p2, "x0"    # Ljava/lang/String;
+    .param p3, "x1"    # Z
+    .param p4, "x2"    # Z
 
     .prologue
     .line 82
@@ -79,8 +74,8 @@
 # virtual methods
 .method read(Lcom/fusepowered/m1/google/gson/stream/JsonReader;Ljava/lang/Object;)V
     .locals 2
-    .parameter "reader"
-    .parameter "value"
+    .param p1, "reader"    # Lcom/fusepowered/m1/google/gson/stream/JsonReader;
+    .param p2, "value"    # Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -97,7 +92,7 @@
     move-result-object v0
 
     .line 95
-    .local v0, fieldValue:Ljava/lang/Object;
+    .local v0, "fieldValue":Ljava/lang/Object;
     if-nez v0, :cond_0
 
     iget-boolean v1, p0, Lcom/fusepowered/m1/google/gson/internal/bind/ReflectiveTypeAdapterFactory$1;->val$isPrimitive:Z
@@ -117,8 +112,8 @@
 
 .method write(Lcom/fusepowered/m1/google/gson/stream/JsonWriter;Ljava/lang/Object;)V
     .locals 5
-    .parameter "writer"
-    .parameter "value"
+    .param p1, "writer"    # Lcom/fusepowered/m1/google/gson/stream/JsonWriter;
+    .param p2, "value"    # Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -135,7 +130,7 @@
     move-result-object v0
 
     .line 88
-    .local v0, fieldValue:Ljava/lang/Object;
+    .local v0, "fieldValue":Ljava/lang/Object;
     new-instance v1, Lcom/fusepowered/m1/google/gson/internal/bind/TypeAdapterRuntimeTypeWrapper;
 
     iget-object v2, p0, Lcom/fusepowered/m1/google/gson/internal/bind/ReflectiveTypeAdapterFactory$1;->val$context:Lcom/fusepowered/m1/google/gson/Gson;
@@ -151,7 +146,7 @@
     invoke-direct {v1, v2, v3, v4}, Lcom/fusepowered/m1/google/gson/internal/bind/TypeAdapterRuntimeTypeWrapper;-><init>(Lcom/fusepowered/m1/google/gson/Gson;Lcom/fusepowered/m1/google/gson/TypeAdapter;Ljava/lang/reflect/Type;)V
 
     .line 90
-    .local v1, t:Lcom/fusepowered/m1/google/gson/TypeAdapter;
+    .local v1, "t":Lcom/fusepowered/m1/google/gson/TypeAdapter;
     invoke-virtual {v1, p1, v0}, Lcom/fusepowered/m1/google/gson/TypeAdapter;->write(Lcom/fusepowered/m1/google/gson/stream/JsonWriter;Ljava/lang/Object;)V
 
     .line 91

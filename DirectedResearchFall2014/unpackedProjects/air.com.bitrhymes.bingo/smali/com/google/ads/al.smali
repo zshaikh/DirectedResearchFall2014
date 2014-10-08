@@ -18,7 +18,6 @@
 # direct methods
 .method public constructor <init>(Lcom/google/ads/ai;)V
     .locals 3
-    .parameter
 
     .prologue
     .line 63
@@ -75,10 +74,6 @@
 
 .method private a(Landroid/net/Uri;Landroid/content/Context;Ljava/lang/String;Z)Landroid/net/Uri;
     .locals 2
-    .parameter
-    .parameter
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lcom/google/ads/am;
@@ -159,9 +154,6 @@
 
 .method private a(Landroid/net/Uri;Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri;
     .locals 5
-    .parameter
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/UnsupportedOperationException;
@@ -276,8 +268,6 @@
 # virtual methods
 .method public a(Landroid/net/Uri;Landroid/content/Context;)Landroid/net/Uri;
     .locals 2
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lcom/google/ads/am;
@@ -319,7 +309,6 @@
 
 .method public a(Ljava/lang/String;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 128
@@ -337,7 +326,6 @@
 
 .method public a(Landroid/net/Uri;)Z
     .locals 6
-    .parameter
 
     .prologue
     const/4 v5, 0x0

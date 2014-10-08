@@ -21,7 +21,7 @@
 
 .method public constructor <init>(Lcom/google/ads/doubleclick/DfpExtras;)V
     .locals 1
-    .parameter "original"
+    .param p1, "original"    # Lcom/google/ads/doubleclick/DfpExtras;
 
     .prologue
     .line 25
@@ -44,8 +44,8 @@
 # virtual methods
 .method public addExtra(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/ads/doubleclick/DfpExtras;
     .locals 0
-    .parameter "key"
-    .parameter "value"
+    .param p1, "key"    # Ljava/lang/String;
+    .param p2, "value"    # Ljava/lang/Object;
 
     .prologue
     .line 79
@@ -57,8 +57,8 @@
 
 .method public bridge synthetic addExtra(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/ads/mediation/admob/AdMobAdapterExtras;
     .locals 1
-    .parameter "x0"
-    .parameter "x1"
+    .param p1, "x0"    # Ljava/lang/String;
+    .param p2, "x1"    # Ljava/lang/Object;
 
     .prologue
     .line 12
@@ -104,7 +104,6 @@
 
 .method public setExtras(Ljava/util/Map;)Lcom/google/ads/doubleclick/DfpExtras;
     .locals 0
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -119,7 +118,7 @@
 
     .prologue
     .line 67
-    .local p1, extras:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
+    .local p1, "extras":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
     invoke-super {p0, p1}, Lcom/google/ads/mediation/admob/AdMobAdapterExtras;->setExtras(Ljava/util/Map;)Lcom/google/ads/mediation/admob/AdMobAdapterExtras;
 
     .line 68
@@ -128,7 +127,7 @@
 
 .method public bridge synthetic setExtras(Ljava/util/Map;)Lcom/google/ads/mediation/admob/AdMobAdapterExtras;
     .locals 1
-    .parameter "x0"
+    .param p1, "x0"    # Ljava/util/Map;
 
     .prologue
     .line 12
@@ -141,7 +140,7 @@
 
 .method public setPlusOneOptOut(Z)Lcom/google/ads/doubleclick/DfpExtras;
     .locals 0
-    .parameter "plusOneOptOut"
+    .param p1, "plusOneOptOut"    # Z
 
     .prologue
     .line 55
@@ -153,7 +152,7 @@
 
 .method public bridge synthetic setPlusOneOptOut(Z)Lcom/google/ads/mediation/admob/AdMobAdapterExtras;
     .locals 1
-    .parameter "x0"
+    .param p1, "x0"    # Z
 
     .prologue
     .line 12
@@ -166,7 +165,7 @@
 
 .method public setPublisherProvidedId(Ljava/lang/String;)Lcom/google/ads/doubleclick/DfpExtras;
     .locals 0
-    .parameter "publisherProvidedId"
+    .param p1, "publisherProvidedId"    # Ljava/lang/String;
 
     .prologue
     .line 46
@@ -178,7 +177,7 @@
 
 .method public setUseExactAdSize(Z)Lcom/google/ads/doubleclick/DfpExtras;
     .locals 0
-    .parameter "useExactAdSize"
+    .param p1, "useExactAdSize"    # Z
 
     .prologue
     .line 61
@@ -190,7 +189,7 @@
 
 .method public bridge synthetic setUseExactAdSize(Z)Lcom/google/ads/mediation/admob/AdMobAdapterExtras;
     .locals 1
-    .parameter "x0"
+    .param p1, "x0"    # Z
 
     .prologue
     .line 12

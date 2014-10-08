@@ -78,8 +78,6 @@
 
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 570
@@ -90,9 +88,6 @@
 
 .method synthetic constructor <init>(Ljava/lang/String;ILcom/chartboost/sdk/impl/bc$h$a;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 570
@@ -103,7 +98,6 @@
 
 .method public static valueOf(Ljava/lang/String;)Lcom/chartboost/sdk/impl/bc$h$a;
     .locals 1
-    .parameter
 
     .prologue
     .line 1

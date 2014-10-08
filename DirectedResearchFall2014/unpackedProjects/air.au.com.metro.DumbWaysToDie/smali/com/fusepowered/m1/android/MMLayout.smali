@@ -3,8 +3,8 @@
 .source "MMLayout.java"
 
 # interfaces
-.implements Lcom/fusepowered/m1/android/MMAd;
 .implements Lcom/fusepowered/m1/android/InlineVideoView$TransparentFix;
+.implements Lcom/fusepowered/m1/android/MMAd;
 
 
 # annotations
@@ -62,7 +62,7 @@
 # direct methods
 .method protected constructor <init>(Landroid/content/Context;)V
     .locals 0
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     .line 37
@@ -77,9 +77,9 @@
 
 .method protected constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 0
-    .parameter "context"
-    .parameter "attrs"
-    .parameter "defStyle"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "attrs"    # Landroid/util/AttributeSet;
+    .param p3, "defStyle"    # I
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -96,8 +96,8 @@
 
 .method static synthetic access$000(Lcom/fusepowered/m1/android/MMLayout;Ljava/lang/String;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
+    .param p0, "x0"    # Lcom/fusepowered/m1/android/MMLayout;
+    .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
     .line 25
@@ -125,7 +125,7 @@
     move-result-object v1
 
     .line 664
-    .local v1, parent:Landroid/view/ViewParent;
+    .local v1, "parent":Landroid/view/ViewParent;
     if-eqz v1, :cond_0
 
     instance-of v2, v1, Landroid/view/ViewGroup;
@@ -135,7 +135,7 @@
     .line 666
     check-cast v1, Landroid/view/ViewGroup;
 
-    .end local v1           #parent:Landroid/view/ViewParent;
+    .end local v1    # "parent":Landroid/view/ViewParent;
     iget-object v2, p0, Lcom/fusepowered/m1/android/MMLayout;->blackView:Landroid/view/View;
 
     invoke-virtual {v1, v2}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
@@ -160,7 +160,7 @@
     .line 671
     iget-object v2, p0, Lcom/fusepowered/m1/android/MMLayout;->blackView:Landroid/view/View;
 
-    const/high16 v3, -0x100
+    const/high16 v3, -0x1000000
 
     invoke-virtual {v2, v3}, Landroid/view/View;->setBackgroundColor(I)V
 
@@ -170,7 +170,7 @@
     invoke-direct {v0, v4, v4}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
     .line 674
-    .local v0, blackViewParams:Landroid/widget/RelativeLayout$LayoutParams;
+    .local v0, "blackViewParams":Landroid/widget/RelativeLayout$LayoutParams;
     iget-object v2, p0, Lcom/fusepowered/m1/android/MMLayout;->blackView:Landroid/view/View;
 
     invoke-virtual {v2, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
@@ -202,14 +202,14 @@
 
 .method private internalSetCloseArea(Ljava/lang/String;)V
     .locals 8
-    .parameter "position"
+    .param p1, "position"    # Ljava/lang/String;
 
     .prologue
     const/16 v7, 0xe
 
     const/16 v6, 0xb
 
-    const/high16 v5, 0x4248
+    const/high16 v5, 0x42480000
 
     const/16 v4, 0xc
 
@@ -245,7 +245,7 @@
     iget v1, v2, Landroid/util/DisplayMetrics;->density:F
 
     .line 333
-    .local v1, density:F
+    .local v1, "density":F
     new-instance v0, Landroid/widget/RelativeLayout$LayoutParams;
 
     mul-float v2, v5, v1
@@ -259,7 +259,7 @@
     invoke-direct {v0, v2, v3}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
     .line 334
-    .local v0, closeParams:Landroid/widget/RelativeLayout$LayoutParams;
+    .local v0, "closeParams":Landroid/widget/RelativeLayout$LayoutParams;
     const-string v2, "top-right"
 
     invoke-virtual {v2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -288,14 +288,14 @@
     invoke-virtual {p0, v2, v0}, Lcom/fusepowered/m1/android/MMLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 371
-    .end local v0           #closeParams:Landroid/widget/RelativeLayout$LayoutParams;
-    .end local v1           #density:F
+    .end local v0    # "closeParams":Landroid/widget/RelativeLayout$LayoutParams;
+    .end local v1    # "density":F
     :cond_1
     return-void
 
     .line 338
-    .restart local v0       #closeParams:Landroid/widget/RelativeLayout$LayoutParams;
-    .restart local v1       #density:F
+    .restart local v0    # "closeParams":Landroid/widget/RelativeLayout$LayoutParams;
+    .restart local v1    # "density":F
     :cond_2
     const-string v2, "top-center"
 
@@ -529,7 +529,7 @@
 
 .method adjustVideo(Lcom/fusepowered/m1/android/InlineVideoView$InlineParams;)Z
     .locals 1
-    .parameter "params"
+    .param p1, "params"    # Lcom/fusepowered/m1/android/InlineVideoView$InlineParams;
 
     .prologue
     .line 558
@@ -677,7 +677,7 @@
 
 .method initInlineVideo(Lcom/fusepowered/m1/android/InlineVideoView$InlineParams;)V
     .locals 4
-    .parameter "params"
+    .param p1, "params"    # Lcom/fusepowered/m1/android/InlineVideoView$InlineParams;
 
     .prologue
     const/4 v3, -0x2
@@ -697,7 +697,7 @@
     check-cast v1, Landroid/view/ViewGroup;
 
     .line 601
-    .local v1, vg:Landroid/view/ViewGroup;
+    .local v1, "vg":Landroid/view/ViewGroup;
     if-eqz v1, :cond_0
 
     .line 603
@@ -727,7 +727,7 @@
     iput-object v2, p0, Lcom/fusepowered/m1/android/MMLayout;->inlineVideoView:Lcom/fusepowered/m1/android/InlineVideoView;
 
     .line 609
-    .end local v1           #vg:Landroid/view/ViewGroup;
+    .end local v1    # "vg":Landroid/view/ViewGroup;
     :cond_2
     new-instance v2, Lcom/fusepowered/m1/android/InlineVideoView;
 
@@ -746,7 +746,7 @@
     invoke-direct {v0, v3, v3}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
     .line 613
-    .local v0, lp:Landroid/widget/RelativeLayout$LayoutParams;
+    .local v0, "lp":Landroid/widget/RelativeLayout$LayoutParams;
     const/16 v2, 0xd
 
     const/4 v3, -0x1
@@ -767,7 +767,7 @@
 
 .method protected final initLayout(Landroid/content/Context;)V
     .locals 6
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     const/4 v5, 0x1
@@ -846,7 +846,7 @@
     move-object v0, v1
 
     .line 81
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v1, "There was an exception initializing the MMAdView. %s"
 
     new-array v2, v5, [Ljava/lang/Object;
@@ -897,7 +897,7 @@
 
 .method loadUrl(Ljava/lang/String;)V
     .locals 1
-    .parameter "url"
+    .param p1, "url"    # Ljava/lang/String;
 
     .prologue
     .line 392
@@ -941,8 +941,8 @@
 
 .method loadWebContent(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
-    .parameter "content"
-    .parameter "adUrl"
+    .param p1, "content"    # Ljava/lang/String;
+    .param p2, "adUrl"    # Ljava/lang/String;
 
     .prologue
     .line 405
@@ -1138,7 +1138,7 @@
 
 .method protected onRestoreInstanceState(Landroid/os/Parcelable;)V
     .locals 8
-    .parameter "state"
+    .param p1, "state"    # Landroid/os/Parcelable;
 
     .prologue
     .line 263
@@ -1149,13 +1149,13 @@
     move-object v1, v0
 
     .line 264
-    .local v1, bundle:Landroid/os/Bundle;
+    .local v1, "bundle":Landroid/os/Bundle;
     iget-object v5, p0, Lcom/fusepowered/m1/android/MMLayout;->adImpl:Lcom/fusepowered/m1/android/MMAdImpl;
 
     iget-wide v3, v5, Lcom/fusepowered/m1/android/MMAdImpl;->internalId:J
 
     .line 265
-    .local v3, tempId:J
+    .local v3, "tempId":J
     iget-object v5, p0, Lcom/fusepowered/m1/android/MMLayout;->adImpl:Lcom/fusepowered/m1/android/MMAdImpl;
 
     const-string v6, "MMAdImplId"
@@ -1232,7 +1232,7 @@
     move-result-object v2
 
     .line 269
-    .local v2, gsonInline:Ljava/lang/String;
+    .local v2, "gsonInline":Ljava/lang/String;
     if-eqz v2, :cond_0
 
     .line 271
@@ -1306,7 +1306,7 @@
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     .line 236
-    .local v0, bundle:Landroid/os/Bundle;
+    .local v0, "bundle":Landroid/os/Bundle;
     const-string v1, "super"
 
     invoke-super {p0}, Landroid/widget/RelativeLayout;->onSaveInstanceState()Landroid/os/Parcelable;
@@ -1379,7 +1379,7 @@
 
 .method public onTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 1
-    .parameter "event"
+    .param p1, "event"    # Landroid/view/MotionEvent;
 
     .prologue
     .line 217
@@ -1417,7 +1417,7 @@
 
 .method public onWindowFocusChanged(Z)V
     .locals 7
-    .parameter "windowInFocus"
+    .param p1, "windowInFocus"    # Z
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -1532,7 +1532,7 @@
     check-cast v0, Landroid/app/Activity;
 
     .line 193
-    .local v0, activity:Landroid/app/Activity;
+    .local v0, "activity":Landroid/app/Activity;
     if-eqz v0, :cond_2
 
     invoke-virtual {v0}, Landroid/app/Activity;->isFinishing()Z
@@ -1605,7 +1605,7 @@
     invoke-static {v2}, Lcom/fusepowered/m1/android/MMAdImplController;->removeAdViewController(Lcom/fusepowered/m1/android/MMAdImpl;)V
 
     .line 203
-    .end local v0           #activity:Landroid/app/Activity;
+    .end local v0    # "activity":Landroid/app/Activity;
     :cond_4
     invoke-virtual {p0}, Lcom/fusepowered/m1/android/MMLayout;->getContext()Landroid/content/Context;
 
@@ -1616,7 +1616,7 @@
     move-result-object v1
 
     .line 204
-    .local v1, audio:Lcom/fusepowered/m1/android/BridgeMMMedia$Audio;
+    .local v1, "audio":Lcom/fusepowered/m1/android/BridgeMMMedia$Audio;
     if-eqz v1, :cond_5
 
     .line 206
@@ -1643,7 +1643,7 @@
     return-void
 
     .line 170
-    .end local v1           #audio:Lcom/fusepowered/m1/android/BridgeMMMedia$Audio;
+    .end local v1    # "audio":Lcom/fusepowered/m1/android/BridgeMMMedia$Audio;
     :cond_6
     iget-object v2, p0, Lcom/fusepowered/m1/android/MMLayout;->inlineVideoView:Lcom/fusepowered/m1/android/InlineVideoView;
 
@@ -1681,7 +1681,7 @@
     goto/16 :goto_1
 
     .line 209
-    .restart local v1       #audio:Lcom/fusepowered/m1/android/BridgeMMMedia$Audio;
+    .restart local v1    # "audio":Lcom/fusepowered/m1/android/BridgeMMMedia$Audio;
     :catchall_0
     move-exception v2
 
@@ -1856,7 +1856,7 @@
 
 .method public setApid(Ljava/lang/String;)V
     .locals 1
-    .parameter "apid"
+    .param p1, "apid"    # Ljava/lang/String;
 
     .prologue
     .line 483
@@ -1870,7 +1870,7 @@
 
 .method setCloseArea(Ljava/lang/String;)V
     .locals 1
-    .parameter "position"
+    .param p1, "position"    # Ljava/lang/String;
 
     .prologue
     .line 313
@@ -1886,7 +1886,7 @@
 
 .method public setIgnoresDensityScaling(Z)V
     .locals 1
-    .parameter "ignoresDensityScaling"
+    .param p1, "ignoresDensityScaling"    # Z
 
     .prologue
     .line 507
@@ -1900,7 +1900,7 @@
 
 .method public setListener(Lcom/fusepowered/m1/android/RequestListener;)V
     .locals 1
-    .parameter "listener"
+    .param p1, "listener"    # Lcom/fusepowered/m1/android/RequestListener;
 
     .prologue
     .line 495
@@ -1914,7 +1914,7 @@
 
 .method public setMMRequest(Lcom/fusepowered/m1/android/MMRequest;)V
     .locals 1
-    .parameter "request"
+    .param p1, "request"    # Lcom/fusepowered/m1/android/MMRequest;
 
     .prologue
     .line 519
@@ -1928,7 +1928,7 @@
 
 .method setMediaPlaybackRequiresUserGesture(Z)V
     .locals 6
-    .parameter "requiresGesture"
+    .param p1, "requiresGesture"    # Z
 
     .prologue
     .line 146
@@ -1952,7 +1952,7 @@
     move-result-object v0
 
     .line 147
-    .local v0, method:Ljava/lang/reflect/Method;
+    .local v0, "method":Ljava/lang/reflect/Method;
     const/4 v1, 0x1
 
     new-array v1, v1, [Ljava/lang/Object;
@@ -1970,7 +1970,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 152
-    .end local v0           #method:Ljava/lang/reflect/Method;
+    .end local v0    # "method":Ljava/lang/reflect/Method;
     :goto_0
     return-void
 
@@ -1983,7 +1983,7 @@
 
 .method setVideoSource(Ljava/lang/String;)V
     .locals 1
-    .parameter "streamVideoURI"
+    .param p1, "streamVideoURI"    # Ljava/lang/String;
 
     .prologue
     .line 592

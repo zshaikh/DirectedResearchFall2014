@@ -21,7 +21,6 @@
 # direct methods
 .method constructor <init>(Lcom/vungle/sdk/j;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 441
@@ -36,10 +35,10 @@
 # virtual methods
 .method public final handleMessage(Landroid/os/Message;)V
     .locals 8
-    .parameter "msg"
+    .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    const/high16 v2, 0x447a
+    const/high16 v2, 0x447a0000
 
     .line 443
     iget-object v0, p0, Lcom/vungle/sdk/j$1;->a:Lcom/vungle/sdk/j;
@@ -156,7 +155,7 @@
 
     move-result-object v3
 
-    const/high16 v4, 0x4000
+    const/high16 v4, 0x40000000
 
     const/4 v5, 0x0
 
@@ -225,7 +224,7 @@
 
     const/4 v4, 0x0
 
-    const/high16 v5, 0x3f80
+    const/high16 v5, 0x3f800000
 
     invoke-direct {v3, v4, v5}, Landroid/view/animation/AlphaAnimation;-><init>(FF)V
 
@@ -299,7 +298,7 @@
 
     const/4 v4, 0x0
 
-    const/high16 v5, 0x3f80
+    const/high16 v5, 0x3f800000
 
     invoke-direct {v3, v4, v5}, Landroid/view/animation/AlphaAnimation;-><init>(FF)V
 
@@ -340,13 +339,13 @@
 
     move-result-object v3
 
-    const/high16 v4, 0x4000
+    const/high16 v4, 0x40000000
 
     const/4 v5, 0x0
 
     const/4 v6, 0x0
 
-    const/high16 v7, -0x100
+    const/high16 v7, -0x1000000
 
     invoke-virtual {v3, v4, v5, v6, v7}, Landroid/widget/TextView;->setShadowLayer(FFFI)V
 

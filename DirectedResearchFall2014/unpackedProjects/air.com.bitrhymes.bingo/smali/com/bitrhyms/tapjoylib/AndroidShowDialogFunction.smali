@@ -21,8 +21,8 @@
 # virtual methods
 .method public call(Lcom/adobe/fre/FREContext;[Lcom/adobe/fre/FREObject;)Lcom/adobe/fre/FREObject;
     .locals 9
-    .parameter "context"
-    .parameter "args"
+    .param p1, "context"    # Lcom/adobe/fre/FREContext;
+    .param p2, "args"    # [Lcom/adobe/fre/FREObject;
 
     .prologue
     const/4 v8, 0x0
@@ -40,7 +40,7 @@
     move-object v1, v0
 
     .line 20
-    .local v1, adec:Lcom/bitrhyms/tapjoylib/AndroidExtensionContext;
+    .local v1, "adec":Lcom/bitrhyms/tapjoylib/AndroidExtensionContext;
     const-string v5, "2.FREObject.call"
 
     invoke-virtual {p0, v5}, Lcom/bitrhyms/tapjoylib/AndroidShowDialogFunction;->debugLog(Ljava/lang/String;)V
@@ -56,7 +56,7 @@
     invoke-direct {v2, v5}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
     .line 23
-    .local v2, builder:Landroid/app/AlertDialog$Builder;
+    .local v2, "builder":Landroid/app/AlertDialog$Builder;
     const-string v5, "3.FREObject.call"
 
     invoke-virtual {p0, v5}, Lcom/bitrhyms/tapjoylib/AndroidShowDialogFunction;->debugLog(Ljava/lang/String;)V
@@ -72,7 +72,7 @@
     move-result-object v4
 
     .line 26
-    .local v4, message:Ljava/lang/String;
+    .local v4, "message":Ljava/lang/String;
     const-string v5, "4.FREObject.call"
 
     invoke-virtual {p0, v5}, Lcom/bitrhyms/tapjoylib/AndroidShowDialogFunction;->debugLog(Ljava/lang/String;)V
@@ -100,7 +100,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 33
-    .end local v4           #message:Ljava/lang/String;
+    .end local v4    # "message":Ljava/lang/String;
     :goto_0
     return-object v8
 
@@ -111,7 +111,7 @@
     move-object v3, v5
 
     .line 30
-    .local v3, e:Ljava/lang/Exception;
+    .local v3, "e":Ljava/lang/Exception;
     const-string v5, "AIR_AndroidDialog"
 
     invoke-virtual {v3}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
@@ -125,14 +125,14 @@
 
 .method public debugLog(Ljava/lang/String;)V
     .locals 1
-    .parameter "msg"
+    .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
     .line 12
     const-string v0, "AndroidShowDialogFunction"
 
     .line 13
-    .local v0, TAG:Ljava/lang/String;
+    .local v0, "TAG":Ljava/lang/String;
     invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 14

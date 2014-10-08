@@ -16,7 +16,7 @@
 
 .method protected static isCglibGetCallbacks(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;)Z
     .locals 6
-    .parameter "am"
+    .param p0, "am"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
 
     .prologue
     const/4 v5, 0x0
@@ -27,7 +27,7 @@
     move-result-object v3
 
     .line 179
-    .local v3, rt:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local v3, "rt":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     if-eqz v3, :cond_0
 
     invoke-virtual {v3}, Ljava/lang/Class;->isArray()Z
@@ -50,13 +50,13 @@
     move-result-object v0
 
     .line 188
-    .local v0, compType:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local v0, "compType":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-virtual {v0}, Ljava/lang/Class;->getPackage()Ljava/lang/Package;
 
     move-result-object v1
 
     .line 189
-    .local v1, pkg:Ljava/lang/Package;
+    .local v1, "pkg":Ljava/lang/Package;
     if-eqz v1, :cond_3
 
     .line 190
@@ -65,7 +65,7 @@
     move-result-object v2
 
     .line 191
-    .local v2, pname:Ljava/lang/String;
+    .local v2, "pname":Ljava/lang/String;
     const-string v4, "net.sf.cglib"
 
     invoke-virtual {v2, v4}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
@@ -88,7 +88,7 @@
 
     goto :goto_0
 
-    .end local v2           #pname:Ljava/lang/String;
+    .end local v2    # "pname":Ljava/lang/String;
     :cond_3
     move v4, v5
 
@@ -98,7 +98,7 @@
 
 .method protected static isGroovyMetaClassGetter(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;)Z
     .locals 5
-    .parameter "am"
+    .param p0, "am"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
 
     .prologue
     const/4 v4, 0x0
@@ -109,7 +109,7 @@
     move-result-object v1
 
     .line 220
-    .local v1, rt:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local v1, "rt":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     if-eqz v1, :cond_0
 
     invoke-virtual {v1}, Ljava/lang/Class;->isArray()Z
@@ -132,7 +132,7 @@
     move-result-object v0
 
     .line 224
-    .local v0, pkg:Ljava/lang/Package;
+    .local v0, "pkg":Ljava/lang/Package;
     if-eqz v0, :cond_2
 
     invoke-virtual {v0}, Ljava/lang/Package;->getName()Ljava/lang/String;
@@ -161,7 +161,7 @@
 
 .method protected static isGroovyMetaClassSetter(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;)Z
     .locals 5
-    .parameter "am"
+    .param p0, "am"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
 
     .prologue
     const/4 v4, 0x0
@@ -172,13 +172,13 @@
     move-result-object v0
 
     .line 207
-    .local v0, argType:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local v0, "argType":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-virtual {v0}, Ljava/lang/Class;->getPackage()Ljava/lang/Package;
 
     move-result-object v1
 
     .line 208
-    .local v1, pkg:Ljava/lang/Package;
+    .local v1, "pkg":Ljava/lang/Package;
     if-eqz v1, :cond_0
 
     invoke-virtual {v1}, Ljava/lang/Package;->getName()Ljava/lang/String;
@@ -208,7 +208,7 @@
 
 .method protected static manglePropertyName(Ljava/lang/String;)Ljava/lang/String;
     .locals 6
-    .parameter "basename"
+    .param p0, "basename"    # Ljava/lang/String;
 
     .prologue
     .line 239
@@ -217,7 +217,7 @@
     move-result v1
 
     .line 242
-    .local v1, len:I
+    .local v1, "len":I
     if-nez v1, :cond_0
 
     .line 243
@@ -232,10 +232,10 @@
     const/4 v3, 0x0
 
     .line 247
-    .local v3, sb:Ljava/lang/StringBuilder;
+    .local v3, "sb":Ljava/lang/StringBuilder;
     const/4 v0, 0x0
 
-    .local v0, i:I
+    .local v0, "i":I
     :goto_1
     if-ge v0, v1, :cond_1
 
@@ -245,18 +245,18 @@
     move-result v4
 
     .line 249
-    .local v4, upper:C
+    .local v4, "upper":C
     invoke-static {v4}, Ljava/lang/Character;->toLowerCase(C)C
 
     move-result v2
 
     .line 250
-    .local v2, lower:C
+    .local v2, "lower":C
     if-ne v4, v2, :cond_2
 
     .line 258
-    .end local v2           #lower:C
-    .end local v4           #upper:C
+    .end local v2    # "lower":C
+    .end local v4    # "upper":C
     :cond_1
     if-nez v3, :cond_4
 
@@ -265,19 +265,19 @@
     goto :goto_0
 
     .line 253
-    .restart local v2       #lower:C
-    .restart local v4       #upper:C
+    .restart local v2    # "lower":C
+    .restart local v4    # "upper":C
     :cond_2
     if-nez v3, :cond_3
 
     .line 254
     new-instance v3, Ljava/lang/StringBuilder;
 
-    .end local v3           #sb:Ljava/lang/StringBuilder;
+    .end local v3    # "sb":Ljava/lang/StringBuilder;
     invoke-direct {v3, p0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     .line 256
-    .restart local v3       #sb:Ljava/lang/StringBuilder;
+    .restart local v3    # "sb":Ljava/lang/StringBuilder;
     :cond_3
     invoke-virtual {v3, v0, v2}, Ljava/lang/StringBuilder;->setCharAt(IC)V
 
@@ -287,8 +287,8 @@
     goto :goto_1
 
     .line 258
-    .end local v2           #lower:C
-    .end local v4           #upper:C
+    .end local v2    # "lower":C
+    .end local v4    # "upper":C
     :cond_4
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -299,7 +299,7 @@
 
 .method public static okNameForGetter(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;)Ljava/lang/String;
     .locals 2
-    .parameter "am"
+    .param p0, "am"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
 
     .prologue
     .line 90
@@ -308,13 +308,13 @@
     move-result-object v0
 
     .line 91
-    .local v0, name:Ljava/lang/String;
+    .local v0, "name":Ljava/lang/String;
     invoke-static {p0, v0}, Lcom/flurry/org/codehaus/jackson/map/util/BeanUtil;->okNameForIsGetter(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     .line 92
-    .local v1, str:Ljava/lang/String;
+    .local v1, "str":Ljava/lang/String;
     if-nez v1, :cond_0
 
     .line 93
@@ -329,8 +329,8 @@
 
 .method public static okNameForIsGetter(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;Ljava/lang/String;)Ljava/lang/String;
     .locals 3
-    .parameter "am"
-    .parameter "name"
+    .param p0, "am"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
+    .param p1, "name"    # Ljava/lang/String;
 
     .prologue
     const/4 v2, 0x0
@@ -350,7 +350,7 @@
     move-result-object v0
 
     .line 130
-    .local v0, rt:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local v0, "rt":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const-class v1, Ljava/lang/Boolean;
 
     if-eq v0, v1, :cond_0
@@ -362,12 +362,12 @@
     move-object v1, v2
 
     .line 136
-    .end local v0           #rt:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .end local v0    # "rt":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     :goto_0
     return-object v1
 
     .line 133
-    .restart local v0       #rt:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .restart local v0    # "rt":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     :cond_0
     const/4 v1, 0x2
 
@@ -381,7 +381,7 @@
 
     goto :goto_0
 
-    .end local v0           #rt:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .end local v0    # "rt":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     :cond_1
     move-object v1, v2
 
@@ -391,8 +391,8 @@
 
 .method public static okNameForRegularGetter(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;Ljava/lang/String;)Ljava/lang/String;
     .locals 2
-    .parameter "am"
-    .parameter "name"
+    .param p0, "am"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
+    .param p1, "name"    # Ljava/lang/String;
 
     .prologue
     const/4 v1, 0x0
@@ -473,7 +473,7 @@
 
 .method public static okNameForSetter(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;)Ljava/lang/String;
     .locals 3
-    .parameter "am"
+    .param p0, "am"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
 
     .prologue
     const/4 v2, 0x0
@@ -484,7 +484,7 @@
     move-result-object v0
 
     .line 142
-    .local v0, name:Ljava/lang/String;
+    .local v0, "name":Ljava/lang/String;
     const-string v1, "set"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z

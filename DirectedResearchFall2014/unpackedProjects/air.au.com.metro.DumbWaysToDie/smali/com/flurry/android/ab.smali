@@ -27,9 +27,6 @@
 # direct methods
 .method public constructor <init>(Lcom/flurry/android/FlurryAds;Landroid/content/Context;Ljava/lang/String;)V
     .locals 1
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 2834
@@ -318,7 +315,6 @@
 # virtual methods
 .method protected final bridge synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
-    .parameter
 
     .prologue
     .line 2826

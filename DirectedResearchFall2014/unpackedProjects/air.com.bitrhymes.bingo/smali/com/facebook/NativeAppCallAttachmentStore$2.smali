@@ -34,7 +34,6 @@
 # direct methods
 .method constructor <init>(Lcom/facebook/NativeAppCallAttachmentStore;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1
@@ -50,8 +49,8 @@
 # virtual methods
 .method public processAttachment(Ljava/io/File;Ljava/io/File;)V
     .locals 6
-    .parameter "attachment"
-    .parameter "outputFile"
+    .param p1, "attachment"    # Ljava/io/File;
+    .param p2, "outputFile"    # Ljava/io/File;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -65,11 +64,11 @@
     invoke-direct {v4, p2}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
 
     .line 95
-    .local v4, outputStream:Ljava/io/FileOutputStream;
+    .local v4, "outputStream":Ljava/io/FileOutputStream;
     const/4 v1, 0x0
 
     .line 97
-    .local v1, inputStream:Ljava/io/FileInputStream;
+    .local v1, "inputStream":Ljava/io/FileInputStream;
     :try_start_0
     new-instance v2, Ljava/io/FileInputStream;
 
@@ -78,15 +77,15 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
     .line 99
-    .end local v1           #inputStream:Ljava/io/FileInputStream;
-    .local v2, inputStream:Ljava/io/FileInputStream;
+    .end local v1    # "inputStream":Ljava/io/FileInputStream;
+    .local v2, "inputStream":Ljava/io/FileInputStream;
     const/16 v5, 0x400
 
     :try_start_1
     new-array v0, v5, [B
 
     .line 101
-    .local v0, buffer:[B
+    .local v0, "buffer":[B
     :goto_0
     invoke-virtual {v2, v0}, Ljava/io/FileInputStream;->read([B)I
     :try_end_1
@@ -94,7 +93,7 @@
 
     move-result v3
 
-    .local v3, len:I
+    .local v3, "len":I
     if-gtz v3, :cond_0
 
     .line 105
@@ -118,16 +117,16 @@
     goto :goto_0
 
     .line 104
-    .end local v0           #buffer:[B
-    .end local v3           #len:I
+    .end local v0    # "buffer":[B
+    .end local v3    # "len":I
     :catchall_0
     move-exception v5
 
     move-object v1, v2
 
     .line 105
-    .end local v2           #inputStream:Ljava/io/FileInputStream;
-    .restart local v1       #inputStream:Ljava/io/FileInputStream;
+    .end local v2    # "inputStream":Ljava/io/FileInputStream;
+    .restart local v1    # "inputStream":Ljava/io/FileInputStream;
     :goto_1
     invoke-static {v4}, Lcom/facebook/internal/Utility;->closeQuietly(Ljava/io/Closeable;)V
 
@@ -146,8 +145,6 @@
 
 .method public bridge synthetic processAttachment(Ljava/lang/Object;Ljava/io/File;)V
     .locals 0
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;

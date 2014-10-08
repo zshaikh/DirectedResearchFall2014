@@ -30,7 +30,6 @@
 # direct methods
 .method constructor <init>(I)V
     .locals 0
-    .parameter
 
     .prologue
     .line 66

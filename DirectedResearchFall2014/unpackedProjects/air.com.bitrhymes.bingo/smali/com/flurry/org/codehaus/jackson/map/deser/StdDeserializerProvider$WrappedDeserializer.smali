@@ -41,8 +41,7 @@
 # direct methods
 .method public constructor <init>(Lcom/flurry/org/codehaus/jackson/map/TypeDeserializer;Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;)V
     .locals 0
-    .parameter "typeDeser"
-    .parameter
+    .param p1, "typeDeser"    # Lcom/flurry/org/codehaus/jackson/map/TypeDeserializer;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -56,7 +55,7 @@
 
     .prologue
     .line 452
-    .local p2, deser:Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer<Ljava/lang/Object;>;"
+    .local p2, "deser":Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer<Ljava/lang/Object;>;"
     invoke-direct {p0}, Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;-><init>()V
 
     .line 453
@@ -73,8 +72,8 @@
 # virtual methods
 .method public deserialize(Lcom/flurry/org/codehaus/jackson/JsonParser;Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;)Ljava/lang/Object;
     .locals 2
-    .parameter "jp"
-    .parameter "ctxt"
+    .param p1, "jp"    # Lcom/flurry/org/codehaus/jackson/JsonParser;
+    .param p2, "ctxt"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -97,9 +96,9 @@
 
 .method public deserializeWithType(Lcom/flurry/org/codehaus/jackson/JsonParser;Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;Lcom/flurry/org/codehaus/jackson/map/TypeDeserializer;)Ljava/lang/Object;
     .locals 2
-    .parameter "jp"
-    .parameter "ctxt"
-    .parameter "typeDeserializer"
+    .param p1, "jp"    # Lcom/flurry/org/codehaus/jackson/JsonParser;
+    .param p2, "ctxt"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;
+    .param p3, "typeDeserializer"    # Lcom/flurry/org/codehaus/jackson/map/TypeDeserializer;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,

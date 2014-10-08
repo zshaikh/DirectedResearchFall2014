@@ -1063,7 +1063,6 @@
 
 .method public setAdFrames(Ljava/util/List;)Lcom/flurry/android/AdUnit$Builder;
     .locals 3
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1105,7 +1104,6 @@
 
 .method public setAdSpace(Ljava/lang/CharSequence;)Lcom/flurry/android/AdUnit$Builder;
     .locals 3
-    .parameter
 
     .prologue
     const/4 v2, 0x0
@@ -1137,7 +1135,6 @@
 
 .method public setCombinable(I)Lcom/flurry/android/AdUnit$Builder;
     .locals 3
-    .parameter
 
     .prologue
     const/4 v2, 0x3
@@ -1173,7 +1170,6 @@
 
 .method public setExpiration(J)Lcom/flurry/android/AdUnit$Builder;
     .locals 3
-    .parameter
 
     .prologue
     const/4 v2, 0x1
@@ -1207,7 +1203,6 @@
 
 .method public setExpirationTime(J)Lcom/flurry/android/AdUnit$Builder;
     .locals 3
-    .parameter
 
     .prologue
     const/16 v2, 0xa
@@ -1243,7 +1238,6 @@
 
 .method public setGroupId(Ljava/lang/CharSequence;)Lcom/flurry/android/AdUnit$Builder;
     .locals 3
-    .parameter
 
     .prologue
     const/4 v2, 0x4
@@ -1275,7 +1269,6 @@
 
 .method public setIdHash(Ljava/lang/CharSequence;)Lcom/flurry/android/AdUnit$Builder;
     .locals 3
-    .parameter
 
     .prologue
     const/4 v2, 0x5
@@ -1307,7 +1300,6 @@
 
 .method public setNewCap(I)Lcom/flurry/android/AdUnit$Builder;
     .locals 3
-    .parameter
 
     .prologue
     const/4 v2, 0x7
@@ -1343,7 +1335,6 @@
 
 .method public setPreviousCap(I)Lcom/flurry/android/AdUnit$Builder;
     .locals 3
-    .parameter
 
     .prologue
     const/16 v2, 0x8
@@ -1379,7 +1370,6 @@
 
 .method public setPreviousCapType(I)Lcom/flurry/android/AdUnit$Builder;
     .locals 3
-    .parameter
 
     .prologue
     const/16 v2, 0x9
@@ -1415,7 +1405,6 @@
 
 .method public setServeTime(J)Lcom/flurry/android/AdUnit$Builder;
     .locals 3
-    .parameter
 
     .prologue
     const/4 v2, 0x6

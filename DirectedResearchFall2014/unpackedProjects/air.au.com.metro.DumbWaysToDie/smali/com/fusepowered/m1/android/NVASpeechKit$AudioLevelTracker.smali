@@ -51,7 +51,7 @@
 
 .method static synthetic access$100(D)D
     .locals 2
-    .parameter "x0"
+    .param p0, "x0"    # D
 
     .prologue
     .line 109
@@ -64,11 +64,11 @@
 
 .method private static normalize(D)D
     .locals 6
-    .parameter "level"
+    .param p0, "level"    # D
 
     .prologue
     .line 152
-    const-wide/high16 v2, 0x4044
+    const-wide/high16 v2, 0x4044000000000000L
 
     sub-double v2, p0, v2
 
@@ -81,7 +81,7 @@
     div-double v0, v2, v4
 
     .line 155
-    .local v0, normalized:D
+    .local v0, "normalized":D
     const-wide v2, 0x4023fae147ae147bL
 
     const-wide/16 v4, 0x0
@@ -148,7 +148,7 @@
 
 .method public update(D)Z
     .locals 10
-    .parameter "level"
+    .param p1, "level"    # D
 
     .prologue
     const/4 v9, 0x1
@@ -159,11 +159,11 @@
     iget-wide v0, p0, Lcom/fusepowered/m1/android/NVASpeechKit$AudioLevelTracker;->averageLevel:D
 
     .line 165
-    .local v0, oldAverage:D
+    .local v0, "oldAverage":D
     iget-wide v2, p0, Lcom/fusepowered/m1/android/NVASpeechKit$AudioLevelTracker;->audioLevel:D
 
     .line 166
-    .local v2, oldLevel:D
+    .local v2, "oldLevel":D
     iput-wide p1, p0, Lcom/fusepowered/m1/android/NVASpeechKit$AudioLevelTracker;->audioLevel:D
 
     .line 167

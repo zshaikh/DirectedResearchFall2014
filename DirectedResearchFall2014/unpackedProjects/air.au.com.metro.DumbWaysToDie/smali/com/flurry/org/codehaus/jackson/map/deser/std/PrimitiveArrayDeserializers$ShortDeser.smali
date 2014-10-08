@@ -39,8 +39,8 @@
 
 .method private final handleNonArray(Lcom/flurry/org/codehaus/jackson/JsonParser;Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;)[S
     .locals 3
-    .parameter "jp"
-    .parameter "ctxt"
+    .param p1, "jp"    # Lcom/flurry/org/codehaus/jackson/JsonParser;
+    .param p2, "ctxt"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -124,8 +124,8 @@
 # virtual methods
 .method public bridge synthetic deserialize(Lcom/flurry/org/codehaus/jackson/JsonParser;Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;)Ljava/lang/Object;
     .locals 1
-    .parameter "x0"
-    .parameter "x1"
+    .param p1, "x0"    # Lcom/flurry/org/codehaus/jackson/JsonParser;
+    .param p2, "x1"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -144,8 +144,8 @@
 
 .method public deserialize(Lcom/flurry/org/codehaus/jackson/JsonParser;Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;)[S
     .locals 7
-    .parameter "jp"
-    .parameter "ctxt"
+    .param p1, "jp"    # Lcom/flurry/org/codehaus/jackson/JsonParser;
+    .param p2, "ctxt"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -167,12 +167,12 @@
     move-result-object v5
 
     .line 382
-    .end local p0
+    .end local p0    # "this":Lcom/flurry/org/codehaus/jackson/map/deser/std/PrimitiveArrayDeserializers$ShortDeser;
     :goto_0
     return-object v5
 
     .line 370
-    .restart local p0
+    .restart local p0    # "this":Lcom/flurry/org/codehaus/jackson/map/deser/std/PrimitiveArrayDeserializers$ShortDeser;
     :cond_0
     invoke-virtual {p2}, Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;->getArrayBuilders()Lcom/flurry/org/codehaus/jackson/map/util/ArrayBuilders;
 
@@ -183,7 +183,7 @@
     move-result-object v0
 
     .line 371
-    .local v0, builder:Lcom/flurry/org/codehaus/jackson/map/util/ArrayBuilders$ShortBuilder;
+    .local v0, "builder":Lcom/flurry/org/codehaus/jackson/map/util/ArrayBuilders$ShortBuilder;
     invoke-virtual {v0}, Lcom/flurry/org/codehaus/jackson/map/util/ArrayBuilders$ShortBuilder;->resetAndStart()Ljava/lang/Object;
 
     move-result-object v1
@@ -191,11 +191,11 @@
     check-cast v1, [S
 
     .line 372
-    .local v1, chunk:[S
+    .local v1, "chunk":[S
     const/4 v2, 0x0
 
     .line 374
-    .local v2, ix:I
+    .local v2, "ix":I
     :goto_1
     invoke-virtual {p1}, Lcom/flurry/org/codehaus/jackson/JsonParser;->nextToken()Lcom/flurry/org/codehaus/jackson/JsonToken;
 
@@ -211,7 +211,7 @@
     move-result v4
 
     .line 376
-    .local v4, value:S
+    .local v4, "value":S
     array-length v5, v1
 
     if-lt v2, v5, :cond_1
@@ -221,36 +221,36 @@
 
     move-result-object v1
 
-    .end local v1           #chunk:[S
+    .end local v1    # "chunk":[S
     check-cast v1, [S
 
     .line 378
-    .restart local v1       #chunk:[S
+    .restart local v1    # "chunk":[S
     const/4 v2, 0x0
 
     .line 380
     :cond_1
     add-int/lit8 v3, v2, 0x1
 
-    .end local v2           #ix:I
-    .local v3, ix:I
+    .end local v2    # "ix":I
+    .local v3, "ix":I
     aput-short v4, v1, v2
 
     move v2, v3
 
     .line 381
-    .end local v3           #ix:I
-    .restart local v2       #ix:I
+    .end local v3    # "ix":I
+    .restart local v2    # "ix":I
     goto :goto_1
 
     .line 382
-    .end local v4           #value:S
+    .end local v4    # "value":S
     :cond_2
     invoke-virtual {v0, v1, v2}, Lcom/flurry/org/codehaus/jackson/map/util/ArrayBuilders$ShortBuilder;->completeAndClearBuffer(Ljava/lang/Object;I)Ljava/lang/Object;
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/flurry/org/codehaus/jackson/map/deser/std/PrimitiveArrayDeserializers$ShortDeser;
     check-cast p0, [S
 
     move-object v5, p0

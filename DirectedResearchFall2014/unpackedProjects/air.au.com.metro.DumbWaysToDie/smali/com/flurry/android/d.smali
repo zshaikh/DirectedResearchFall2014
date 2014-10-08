@@ -14,9 +14,6 @@
 # direct methods
 .method constructor <init>(Lcom/flurry/android/FlurryAgent;Landroid/content/Context;Z)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 1103

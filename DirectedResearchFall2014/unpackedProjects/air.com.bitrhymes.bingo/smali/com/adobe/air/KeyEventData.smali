@@ -20,12 +20,6 @@
 # direct methods
 .method public constructor <init>(IIIZZZ)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 38

@@ -183,10 +183,10 @@
 
 .method public constructor <init>(Lcom/fusepowered/m2/m2l/TaskTracker;Lcom/fusepowered/m2/m2l/AdViewController;Ljava/lang/String;I)V
     .locals 2
-    .parameter "taskTracker"
-    .parameter "adViewController"
-    .parameter "userAgent"
-    .parameter "timeoutMilliseconds"
+    .param p1, "taskTracker"    # Lcom/fusepowered/m2/m2l/TaskTracker;
+    .param p2, "adViewController"    # Lcom/fusepowered/m2/m2l/AdViewController;
+    .param p3, "userAgent"    # Ljava/lang/String;
+    .param p4, "timeoutMilliseconds"    # I
 
     .prologue
     .line 61
@@ -269,10 +269,10 @@
     move-result v0
 
     .line 254
-    .local v0, refreshTimeMilliseconds:I
+    .local v0, "refreshTimeMilliseconds":I
     int-to-double v1, v0
 
-    const-wide/high16 v3, 0x3ff8
+    const-wide/high16 v3, 0x3ff8000000000000L
 
     mul-double/2addr v1, v3
 
@@ -297,7 +297,7 @@
 
 .method private fetch(Ljava/lang/String;)Lcom/fusepowered/m2/m2l/AdLoadTask;
     .locals 5
-    .parameter "url"
+    .param p1, "url"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/Exception;
@@ -313,7 +313,7 @@
     invoke-direct {v0, p1}, Lorg/apache/http/client/methods/HttpGet;-><init>(Ljava/lang/String;)V
 
     .line 85
-    .local v0, httpget:Lorg/apache/http/client/methods/HttpGet;
+    .local v0, "httpget":Lorg/apache/http/client/methods/HttpGet;
     sget-object v2, Lcom/fusepowered/m2/m2l/util/ResponseHeader;->USER_AGENT:Lcom/fusepowered/m2/m2l/util/ResponseHeader;
 
     invoke-virtual {v2}, Lcom/fusepowered/m2/m2l/util/ResponseHeader;->getKey()Ljava/lang/String;
@@ -346,7 +346,7 @@
     move-result-object v1
 
     .line 91
-    .local v1, response:Lorg/apache/http/HttpResponse;
+    .local v1, "response":Lorg/apache/http/HttpResponse;
     invoke-direct {p0, v1}, Lcom/fusepowered/m2/m2l/AdFetchTask;->isResponseValid(Lorg/apache/http/HttpResponse;)Z
 
     move-result v2
@@ -413,7 +413,7 @@
 
 .method private isResponseValid(Lorg/apache/http/HttpResponse;)Z
     .locals 5
-    .parameter "response"
+    .param p1, "response"    # Lorg/apache/http/HttpResponse;
 
     .prologue
     const/4 v3, 0x0
@@ -459,7 +459,7 @@
     move-result v0
 
     .line 130
-    .local v0, statusCode:I
+    .local v0, "statusCode":I
     const/16 v1, 0x190
 
     if-lt v0, v1, :cond_2
@@ -619,7 +619,7 @@
 
 .method private responseContainsContent(Lorg/apache/http/HttpResponse;)Z
     .locals 5
-    .parameter "response"
+    .param p1, "response"    # Lorg/apache/http/HttpResponse;
 
     .prologue
     const/4 v3, 0x0
@@ -700,7 +700,7 @@
     move-result-object v0
 
     .line 111
-    .local v0, adType:Ljava/lang/String;
+    .local v0, "adType":Ljava/lang/String;
     const-string v1, "clear"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -774,7 +774,7 @@
     move-result-object v0
 
     .line 271
-    .local v0, manager:Lorg/apache/http/conn/ClientConnectionManager;
+    .local v0, "manager":Lorg/apache/http/conn/ClientConnectionManager;
     if-eqz v0, :cond_0
 
     .line 272
@@ -787,7 +787,7 @@
     iput-object v1, p0, Lcom/fusepowered/m2/m2l/AdFetchTask;->mHttpClient:Lorg/apache/http/client/HttpClient;
 
     .line 276
-    .end local v0           #manager:Lorg/apache/http/conn/ClientConnectionManager;
+    .end local v0    # "manager":Lorg/apache/http/conn/ClientConnectionManager;
     :cond_1
     return-void
 .end method
@@ -796,14 +796,14 @@
 # virtual methods
 .method protected varargs doInBackground([Ljava/lang/String;)Lcom/fusepowered/m2/m2l/AdLoadTask;
     .locals 3
-    .parameter "urls"
+    .param p1, "urls"    # [Ljava/lang/String;
 
     .prologue
     .line 72
     const/4 v1, 0x0
 
     .line 74
-    .local v1, result:Lcom/fusepowered/m2/m2l/AdLoadTask;
+    .local v1, "result":Lcom/fusepowered/m2/m2l/AdLoadTask;
     const/4 v2, 0x0
 
     :try_start_0
@@ -811,8 +811,8 @@
 
     invoke-direct {p0, v2}, Lcom/fusepowered/m2/m2l/AdFetchTask;->fetch(Ljava/lang/String;)Lcom/fusepowered/m2/m2l/AdLoadTask;
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result-object v1
 
@@ -830,7 +830,7 @@
     move-object v0, v2
 
     .line 76
-    .local v0, exception:Ljava/lang/Exception;
+    .local v0, "exception":Ljava/lang/Exception;
     :try_start_1
     iput-object v0, p0, Lcom/fusepowered/m2/m2l/AdFetchTask;->mException:Ljava/lang/Exception;
     :try_end_1
@@ -842,7 +842,7 @@
     goto :goto_0
 
     .line 77
-    .end local v0           #exception:Ljava/lang/Exception;
+    .end local v0    # "exception":Ljava/lang/Exception;
     :catchall_0
     move-exception v2
 
@@ -855,7 +855,6 @@
 
 .method protected bridge varargs synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
-    .parameter
 
     .prologue
     .line 1
@@ -945,7 +944,7 @@
 
 .method protected onPostExecute(Lcom/fusepowered/m2/m2l/AdLoadTask;)V
     .locals 4
-    .parameter "adLoadTask"
+    .param p1, "adLoadTask"    # Lcom/fusepowered/m2/m2l/AdLoadTask;
 
     .prologue
     const-string v3, "MoPub"
@@ -1055,7 +1054,7 @@
     sget-object v0, Lcom/fusepowered/m2/m2l/MoPubErrorCode;->UNSPECIFIED:Lcom/fusepowered/m2/m2l/MoPubErrorCode;
 
     .line 205
-    .local v0, errorCode:Lcom/fusepowered/m2/m2l/MoPubErrorCode;
+    .local v0, "errorCode":Lcom/fusepowered/m2/m2l/MoPubErrorCode;
     :goto_1
     iget-object v1, p0, Lcom/fusepowered/m2/m2l/AdFetchTask;->mAdViewController:Lcom/fusepowered/m2/m2l/AdViewController;
 
@@ -1077,7 +1076,7 @@
     iput-object v1, p0, Lcom/fusepowered/m2/m2l/AdFetchTask;->mFetchStatus:Lcom/fusepowered/m2/m2l/AdFetcher$FetchStatus;
 
     .line 224
-    .end local v0           #errorCode:Lcom/fusepowered/m2/m2l/MoPubErrorCode;
+    .end local v0    # "errorCode":Lcom/fusepowered/m2/m2l/MoPubErrorCode;
     :cond_5
     :goto_2
     iget-object v1, p0, Lcom/fusepowered/m2/m2l/AdFetchTask;->mTaskTracker:Lcom/fusepowered/m2/m2l/TaskTracker;
@@ -1096,38 +1095,38 @@
     sget-object v0, Lcom/fusepowered/m2/m2l/MoPubErrorCode;->UNSPECIFIED:Lcom/fusepowered/m2/m2l/MoPubErrorCode;
 
     .line 188
-    .restart local v0       #errorCode:Lcom/fusepowered/m2/m2l/MoPubErrorCode;
+    .restart local v0    # "errorCode":Lcom/fusepowered/m2/m2l/MoPubErrorCode;
     goto :goto_1
 
     .line 190
-    .end local v0           #errorCode:Lcom/fusepowered/m2/m2l/MoPubErrorCode;
+    .end local v0    # "errorCode":Lcom/fusepowered/m2/m2l/MoPubErrorCode;
     :pswitch_1
     sget-object v0, Lcom/fusepowered/m2/m2l/MoPubErrorCode;->CANCELLED:Lcom/fusepowered/m2/m2l/MoPubErrorCode;
 
     .line 191
-    .restart local v0       #errorCode:Lcom/fusepowered/m2/m2l/MoPubErrorCode;
+    .restart local v0    # "errorCode":Lcom/fusepowered/m2/m2l/MoPubErrorCode;
     goto :goto_1
 
     .line 194
-    .end local v0           #errorCode:Lcom/fusepowered/m2/m2l/MoPubErrorCode;
+    .end local v0    # "errorCode":Lcom/fusepowered/m2/m2l/MoPubErrorCode;
     :pswitch_2
     sget-object v0, Lcom/fusepowered/m2/m2l/MoPubErrorCode;->SERVER_ERROR:Lcom/fusepowered/m2/m2l/MoPubErrorCode;
 
     .line 195
-    .restart local v0       #errorCode:Lcom/fusepowered/m2/m2l/MoPubErrorCode;
+    .restart local v0    # "errorCode":Lcom/fusepowered/m2/m2l/MoPubErrorCode;
     goto :goto_1
 
     .line 198
-    .end local v0           #errorCode:Lcom/fusepowered/m2/m2l/MoPubErrorCode;
+    .end local v0    # "errorCode":Lcom/fusepowered/m2/m2l/MoPubErrorCode;
     :pswitch_3
     sget-object v0, Lcom/fusepowered/m2/m2l/MoPubErrorCode;->NO_FILL:Lcom/fusepowered/m2/m2l/MoPubErrorCode;
 
     .line 199
-    .restart local v0       #errorCode:Lcom/fusepowered/m2/m2l/MoPubErrorCode;
+    .restart local v0    # "errorCode":Lcom/fusepowered/m2/m2l/MoPubErrorCode;
     goto :goto_1
 
     .line 220
-    .end local v0           #errorCode:Lcom/fusepowered/m2/m2l/MoPubErrorCode;
+    .end local v0    # "errorCode":Lcom/fusepowered/m2/m2l/MoPubErrorCode;
     :cond_6
     invoke-virtual {p1}, Lcom/fusepowered/m2/m2l/AdLoadTask;->execute()V
 
@@ -1150,7 +1149,6 @@
 
 .method protected bridge synthetic onPostExecute(Ljava/lang/Object;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1

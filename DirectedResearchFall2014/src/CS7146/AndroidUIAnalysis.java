@@ -15,7 +15,7 @@ public class AndroidUIAnalysis
 	//private static BufferedWriter bwriter = null;
 	private static ArrayList<String> projectsList = null, mapedkeysToXML=null,  mapedkeysToJava=null,mapedkeysToSamli=null,mapedkeysToSmali=null,mapedkeysToOtherXML=null;
 	private static String workingDirectory="/home/owner/git/DirectedResearchFall2014/DirectedResearchFall2014";
-	private static String apktoolLocation="/usr/local/bin/apktool";
+	private static String apktoolLocation="apktool";
 	private static ArrayList<Key> keys= null;
 	private static PrintWriter writer=null;
 	
@@ -55,16 +55,17 @@ public class AndroidUIAnalysis
 						
 						// insert projects into database...
 						//Utills.insertProject(projectsList);
-					/*	
+						
 						// unpack all the projects
+						/*
 						System.out.println(	" unpacking the projects " );
 						for(int i=0 ; i< projectsList.size(); i++)
 						if( !unpackAPK(projectsList.get(i)) )
 						{
 							throw new Exception(" Failed to unpack " +projectsList.get(i));
 						}
-						
 						*/
+						
 						for(int i =0 ; i< projectsList.size(); i++)
 						{
 							System.out.println(	"getting the keys From strings.xml for the project: "+projectsList.get(i) );
@@ -127,6 +128,7 @@ public class AndroidUIAnalysis
 				  totalTime = endTime - startTime;
 				 writer.println("Total Running time is:"+(totalTime/1000)+" sec");
 				// writer.close();
+				
 				
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
@@ -350,10 +352,11 @@ return totalNumberOfKeys;
 			
 			String result=null;
 			
-			String[] command1={"/bin/sh", "-c", apktoolLocation+" d ./APKs/"+ projectName +" ./unpackedProjects/"+ projectName.replace(".apk", "")};
-			
-			if(Utills.excuteComamnd(command1).contains("was not found or was not readable"))
-				throw new Exception("was not found or was not readable.");
+			String[] command1={"/bin/sh", "-c", apktoolLocation+" d ./APKs/"+ projectName +" -o ./unpackedProjects/"+ projectName.replace(".apk", "")};
+			System.out.println(command1[2]);
+			System.out.println(Utills.excuteComamnd(command1));
+		//	if(Utills.excuteComamnd(command1).contains("was not found or was not readable"))
+			//	throw new Exception("was not found or was not readable.");
 				
 			
 			return true;

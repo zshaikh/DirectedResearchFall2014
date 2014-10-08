@@ -27,7 +27,7 @@
 
     iget-object v0, p0, Lcom/facebook/widget/PickerFragment$6;->this$0:Lcom/facebook/widget/PickerFragment;
 
-    #calls: Lcom/facebook/widget/PickerFragment;->reprioritizeDownloads()V
+    # invokes: Lcom/facebook/widget/PickerFragment;->reprioritizeDownloads()V
     invoke-static {v0}, Lcom/facebook/widget/PickerFragment;->access$300(Lcom/facebook/widget/PickerFragment;)V
 
     return-void

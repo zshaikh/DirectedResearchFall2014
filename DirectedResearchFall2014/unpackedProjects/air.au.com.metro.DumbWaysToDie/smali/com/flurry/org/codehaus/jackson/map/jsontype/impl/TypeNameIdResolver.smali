@@ -41,10 +41,7 @@
 # direct methods
 .method protected constructor <init>(Lcom/flurry/org/codehaus/jackson/map/MapperConfig;Lcom/flurry/org/codehaus/jackson/type/JavaType;Ljava/util/HashMap;Ljava/util/HashMap;)V
     .locals 1
-    .parameter
-    .parameter "baseType"
-    .parameter
-    .parameter
+    .param p2, "baseType"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -66,9 +63,9 @@
 
     .prologue
     .line 32
-    .local p1, config:Lcom/flurry/org/codehaus/jackson/map/MapperConfig;,"Lcom/flurry/org/codehaus/jackson/map/MapperConfig<*>;"
-    .local p3, typeToId:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
-    .local p4, idToType:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/type/JavaType;>;"
+    .local p1, "config":Lcom/flurry/org/codehaus/jackson/map/MapperConfig;, "Lcom/flurry/org/codehaus/jackson/map/MapperConfig<*>;"
+    .local p3, "typeToId":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p4, "idToType":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/type/JavaType;>;"
     invoke-virtual {p1}, Lcom/flurry/org/codehaus/jackson/map/MapperConfig;->getTypeFactory()Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;
 
     move-result-object v0
@@ -90,7 +87,6 @@
 
 .method protected static _defaultTypeId(Ljava/lang/Class;)Ljava/lang/String;
     .locals 3
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -102,13 +98,13 @@
 
     .prologue
     .line 150
-    .local p0, cls:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p0, "cls":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-virtual {p0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object v1
 
     .line 151
-    .local v1, n:Ljava/lang/String;
+    .local v1, "n":Ljava/lang/String;
     const/16 v2, 0x2e
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->lastIndexOf(I)I
@@ -116,7 +112,7 @@
     move-result v0
 
     .line 152
-    .local v0, ix:I
+    .local v0, "ix":I
     if-gez v0, :cond_0
 
     move-object v2, v1
@@ -136,11 +132,9 @@
 
 .method public static construct(Lcom/flurry/org/codehaus/jackson/map/MapperConfig;Lcom/flurry/org/codehaus/jackson/type/JavaType;Ljava/util/Collection;ZZ)Lcom/flurry/org/codehaus/jackson/map/jsontype/impl/TypeNameIdResolver;
     .locals 8
-    .parameter
-    .parameter "baseType"
-    .parameter
-    .parameter "forSer"
-    .parameter "forDeser"
+    .param p1, "baseType"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .param p3, "forSer"    # Z
+    .param p4, "forDeser"    # Z
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -157,8 +151,8 @@
 
     .prologue
     .line 43
-    .local p0, config:Lcom/flurry/org/codehaus/jackson/map/MapperConfig;,"Lcom/flurry/org/codehaus/jackson/map/MapperConfig<*>;"
-    .local p2, subtypes:Ljava/util/Collection;,"Ljava/util/Collection<Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;>;"
+    .local p0, "config":Lcom/flurry/org/codehaus/jackson/map/MapperConfig;, "Lcom/flurry/org/codehaus/jackson/map/MapperConfig<*>;"
+    .local p2, "subtypes":Ljava/util/Collection;, "Ljava/util/Collection<Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;>;"
     if-ne p3, p4, :cond_0
 
     new-instance v7, Ljava/lang/IllegalArgumentException;
@@ -172,32 +166,32 @@
     const/4 v6, 0x0
 
     .line 45
-    .local v6, typeToId:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v6, "typeToId":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     const/4 v3, 0x0
 
     .line 47
-    .local v3, idToType:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/type/JavaType;>;"
+    .local v3, "idToType":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/type/JavaType;>;"
     if-eqz p3, :cond_1
 
     .line 48
     new-instance v6, Ljava/util/HashMap;
 
-    .end local v6           #typeToId:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .end local v6    # "typeToId":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-direct {v6}, Ljava/util/HashMap;-><init>()V
 
     .line 50
-    .restart local v6       #typeToId:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .restart local v6    # "typeToId":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     :cond_1
     if-eqz p4, :cond_2
 
     .line 51
     new-instance v3, Ljava/util/HashMap;
 
-    .end local v3           #idToType:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/type/JavaType;>;"
+    .end local v3    # "idToType":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/type/JavaType;>;"
     invoke-direct {v3}, Ljava/util/HashMap;-><init>()V
 
     .line 53
-    .restart local v3       #idToType:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/type/JavaType;>;"
+    .restart local v3    # "idToType":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/type/JavaType;>;"
     :cond_2
     if-eqz p2, :cond_7
 
@@ -206,7 +200,7 @@
 
     move-result-object v1
 
-    .local v1, i$:Ljava/util/Iterator;
+    .local v1, "i$":Ljava/util/Iterator;
     :cond_3
     :goto_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
@@ -222,13 +216,13 @@
     check-cast v5, Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;
 
     .line 58
-    .local v5, t:Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;
+    .local v5, "t":Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;
     invoke-virtual {v5}, Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;->getType()Ljava/lang/Class;
 
     move-result-object v0
 
     .line 59
-    .local v0, cls:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local v0, "cls":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-virtual {v5}, Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;->hasName()Z
 
     move-result v7
@@ -242,7 +236,7 @@
     move-object v2, v7
 
     .line 60
-    .local v2, id:Ljava/lang/String;
+    .local v2, "id":Ljava/lang/String;
     :goto_1
     if-eqz p3, :cond_4
 
@@ -265,7 +259,7 @@
     check-cast v4, Lcom/flurry/org/codehaus/jackson/type/JavaType;
 
     .line 69
-    .local v4, prev:Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .local v4, "prev":Lcom/flurry/org/codehaus/jackson/type/JavaType;
     if-eqz v4, :cond_5
 
     .line 70
@@ -290,8 +284,8 @@
     goto :goto_0
 
     .line 59
-    .end local v2           #id:Ljava/lang/String;
-    .end local v4           #prev:Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .end local v2    # "id":Ljava/lang/String;
+    .end local v4    # "prev":Lcom/flurry/org/codehaus/jackson/type/JavaType;
     :cond_6
     invoke-static {v0}, Lcom/flurry/org/codehaus/jackson/map/jsontype/impl/TypeNameIdResolver;->_defaultTypeId(Ljava/lang/Class;)Ljava/lang/String;
 
@@ -302,9 +296,9 @@
     goto :goto_1
 
     .line 78
-    .end local v0           #cls:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
-    .end local v1           #i$:Ljava/util/Iterator;
-    .end local v5           #t:Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;
+    .end local v0    # "cls":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
+    .end local v1    # "i$":Ljava/util/Iterator;
+    .end local v5    # "t":Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;
     :cond_7
     new-instance v7, Lcom/flurry/org/codehaus/jackson/map/jsontype/impl/TypeNameIdResolver;
 
@@ -327,7 +321,7 @@
 
 .method public idFromValue(Ljava/lang/Object;)Ljava/lang/String;
     .locals 7
-    .parameter "value"
+    .param p1, "value"    # Ljava/lang/Object;
 
     .prologue
     .line 87
@@ -336,13 +330,13 @@
     move-result-object v1
 
     .line 88
-    .local v1, cls:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local v1, "cls":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object v2
 
     .line 90
-    .local v2, key:Ljava/lang/String;
+    .local v2, "key":Ljava/lang/String;
     iget-object v4, p0, Lcom/flurry/org/codehaus/jackson/map/jsontype/impl/TypeNameIdResolver;->_typeToId:Ljava/util/HashMap;
 
     monitor-enter v4
@@ -358,7 +352,7 @@
     check-cast v3, Ljava/lang/String;
 
     .line 92
-    .local v3, name:Ljava/lang/String;
+    .local v3, "name":Ljava/lang/String;
     if-nez v3, :cond_2
 
     .line 95
@@ -380,7 +374,7 @@
     check-cast v0, Lcom/flurry/org/codehaus/jackson/map/introspect/BasicBeanDescription;
 
     .line 97
-    .local v0, beanDesc:Lcom/flurry/org/codehaus/jackson/map/introspect/BasicBeanDescription;
+    .local v0, "beanDesc":Lcom/flurry/org/codehaus/jackson/map/introspect/BasicBeanDescription;
     iget-object v5, p0, Lcom/flurry/org/codehaus/jackson/map/jsontype/impl/TypeNameIdResolver;->_config:Lcom/flurry/org/codehaus/jackson/map/MapperConfig;
 
     invoke-virtual {v5}, Lcom/flurry/org/codehaus/jackson/map/MapperConfig;->getAnnotationIntrospector()Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;
@@ -396,7 +390,7 @@
     move-result-object v3
 
     .line 99
-    .end local v0           #beanDesc:Lcom/flurry/org/codehaus/jackson/map/introspect/BasicBeanDescription;
+    .end local v0    # "beanDesc":Lcom/flurry/org/codehaus/jackson/map/introspect/BasicBeanDescription;
     :cond_0
     if-nez v3, :cond_1
 
@@ -419,7 +413,7 @@
     return-object v3
 
     .line 105
-    .end local v3           #name:Ljava/lang/String;
+    .end local v3    # "name":Ljava/lang/String;
     :catchall_0
     move-exception v5
 
@@ -432,8 +426,7 @@
 
 .method public idFromValueAndType(Ljava/lang/Object;Ljava/lang/Class;)Ljava/lang/String;
     .locals 1
-    .parameter "value"
-    .parameter
+    .param p1, "value"    # Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -446,7 +439,7 @@
 
     .prologue
     .line 112
-    .local p2, type:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p2, "type":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-virtual {p0, p1}, Lcom/flurry/org/codehaus/jackson/map/jsontype/impl/TypeNameIdResolver;->idFromValue(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
@@ -464,7 +457,7 @@
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     .line 132
-    .local v0, sb:Ljava/lang/StringBuilder;
+    .local v0, "sb":Ljava/lang/StringBuilder;
     const/16 v1, 0x5b
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
@@ -507,7 +500,7 @@
 
 .method public typeFromId(Ljava/lang/String;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .locals 2
-    .parameter "id"
+    .param p1, "id"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/IllegalArgumentException;
@@ -525,6 +518,6 @@
     check-cast v0, Lcom/flurry/org/codehaus/jackson/type/JavaType;
 
     .line 125
-    .local v0, t:Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .local v0, "t":Lcom/flurry/org/codehaus/jackson/type/JavaType;
     return-object v0
 .end method

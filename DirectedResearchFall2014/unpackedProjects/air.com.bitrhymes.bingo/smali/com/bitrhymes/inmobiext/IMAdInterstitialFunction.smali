@@ -46,7 +46,6 @@
 
 .method static synthetic access$0(Lcom/bitrhymes/inmobiext/IMAdInterstitialFunction;)Lcom/adobe/fre/FREContext;
     .locals 1
-    .parameter
 
     .prologue
     .line 21
@@ -59,8 +58,8 @@
 # virtual methods
 .method public call(Lcom/adobe/fre/FREContext;[Lcom/adobe/fre/FREObject;)Lcom/adobe/fre/FREObject;
     .locals 4
-    .parameter "context"
-    .parameter "arg1"
+    .param p1, "context"    # Lcom/adobe/fre/FREContext;
+    .param p2, "arg1"    # [Lcom/adobe/fre/FREObject;
 
     .prologue
     .line 27
@@ -158,7 +157,7 @@
     move-object v0, v1
 
     .line 42
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0

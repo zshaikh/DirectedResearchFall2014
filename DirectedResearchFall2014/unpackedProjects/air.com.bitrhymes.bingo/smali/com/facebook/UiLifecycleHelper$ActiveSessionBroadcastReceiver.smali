@@ -21,7 +21,6 @@
 # direct methods
 .method private constructor <init>(Lcom/facebook/UiLifecycleHelper;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 237
@@ -34,8 +33,6 @@
 
 .method synthetic constructor <init>(Lcom/facebook/UiLifecycleHelper;Lcom/facebook/UiLifecycleHelper$ActiveSessionBroadcastReceiver;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 237
@@ -48,8 +45,8 @@
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 3
-    .parameter "context"
-    .parameter "intent"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
     .line 240
@@ -71,12 +68,12 @@
     move-result-object v0
 
     .line 242
-    .local v0, session:Lcom/facebook/Session;
+    .local v0, "session":Lcom/facebook/Session;
     if-eqz v0, :cond_0
 
     iget-object v1, p0, Lcom/facebook/UiLifecycleHelper$ActiveSessionBroadcastReceiver;->this$0:Lcom/facebook/UiLifecycleHelper;
 
-    #getter for: Lcom/facebook/UiLifecycleHelper;->callback:Lcom/facebook/Session$StatusCallback;
+    # getter for: Lcom/facebook/UiLifecycleHelper;->callback:Lcom/facebook/Session$StatusCallback;
     invoke-static {v1}, Lcom/facebook/UiLifecycleHelper;->access$0(Lcom/facebook/UiLifecycleHelper;)Lcom/facebook/Session$StatusCallback;
 
     move-result-object v1
@@ -86,7 +83,7 @@
     .line 243
     iget-object v1, p0, Lcom/facebook/UiLifecycleHelper$ActiveSessionBroadcastReceiver;->this$0:Lcom/facebook/UiLifecycleHelper;
 
-    #getter for: Lcom/facebook/UiLifecycleHelper;->callback:Lcom/facebook/Session$StatusCallback;
+    # getter for: Lcom/facebook/UiLifecycleHelper;->callback:Lcom/facebook/Session$StatusCallback;
     invoke-static {v1}, Lcom/facebook/UiLifecycleHelper;->access$0(Lcom/facebook/UiLifecycleHelper;)Lcom/facebook/Session$StatusCallback;
 
     move-result-object v1
@@ -94,7 +91,7 @@
     invoke-virtual {v0, v1}, Lcom/facebook/Session;->addCallback(Lcom/facebook/Session$StatusCallback;)V
 
     .line 251
-    .end local v0           #session:Lcom/facebook/Session;
+    .end local v0    # "session":Lcom/facebook/Session;
     :cond_0
     :goto_0
     return-void
@@ -119,12 +116,12 @@
     move-result-object v0
 
     .line 247
-    .restart local v0       #session:Lcom/facebook/Session;
+    .restart local v0    # "session":Lcom/facebook/Session;
     if-eqz v0, :cond_0
 
     iget-object v1, p0, Lcom/facebook/UiLifecycleHelper$ActiveSessionBroadcastReceiver;->this$0:Lcom/facebook/UiLifecycleHelper;
 
-    #getter for: Lcom/facebook/UiLifecycleHelper;->callback:Lcom/facebook/Session$StatusCallback;
+    # getter for: Lcom/facebook/UiLifecycleHelper;->callback:Lcom/facebook/Session$StatusCallback;
     invoke-static {v1}, Lcom/facebook/UiLifecycleHelper;->access$0(Lcom/facebook/UiLifecycleHelper;)Lcom/facebook/Session$StatusCallback;
 
     move-result-object v1
@@ -134,7 +131,7 @@
     .line 248
     iget-object v1, p0, Lcom/facebook/UiLifecycleHelper$ActiveSessionBroadcastReceiver;->this$0:Lcom/facebook/UiLifecycleHelper;
 
-    #getter for: Lcom/facebook/UiLifecycleHelper;->callback:Lcom/facebook/Session$StatusCallback;
+    # getter for: Lcom/facebook/UiLifecycleHelper;->callback:Lcom/facebook/Session$StatusCallback;
     invoke-static {v1}, Lcom/facebook/UiLifecycleHelper;->access$0(Lcom/facebook/UiLifecycleHelper;)Lcom/facebook/Session$StatusCallback;
 
     move-result-object v1

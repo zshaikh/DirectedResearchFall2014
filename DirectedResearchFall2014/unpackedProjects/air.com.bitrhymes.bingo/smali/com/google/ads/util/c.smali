@@ -56,7 +56,6 @@
 
 .method public static a(Ljava/lang/String;)[B
     .locals 2
-    .parameter
 
     .prologue
     .line 118
@@ -75,8 +74,6 @@
 
 .method public static a([BI)[B
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     .line 161
@@ -93,10 +90,6 @@
 
 .method public static a([BIII)[B
     .locals 4
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const/4 v3, 0x0

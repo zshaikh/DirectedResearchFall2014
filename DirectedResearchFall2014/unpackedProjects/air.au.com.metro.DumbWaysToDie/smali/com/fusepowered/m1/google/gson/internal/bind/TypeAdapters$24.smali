@@ -38,7 +38,7 @@
 # virtual methods
 .method public bridge synthetic read(Lcom/fusepowered/m1/google/gson/stream/JsonReader;)Ljava/lang/Object;
     .locals 1
-    .parameter "x0"
+    .param p1, "x0"    # Lcom/fusepowered/m1/google/gson/stream/JsonReader;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -56,7 +56,7 @@
 
 .method public read(Lcom/fusepowered/m1/google/gson/stream/JsonReader;)Ljava/util/Locale;
     .locals 7
-    .parameter "in"
+    .param p1, "in"    # Lcom/fusepowered/m1/google/gson/stream/JsonReader;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -90,7 +90,7 @@
     move-result-object v2
 
     .line 613
-    .local v2, locale:Ljava/lang/String;
+    .local v2, "locale":Ljava/lang/String;
     new-instance v3, Ljava/util/StringTokenizer;
 
     const-string v5, "_"
@@ -98,19 +98,19 @@
     invoke-direct {v3, v2, v5}, Ljava/util/StringTokenizer;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 614
-    .local v3, tokenizer:Ljava/util/StringTokenizer;
+    .local v3, "tokenizer":Ljava/util/StringTokenizer;
     const/4 v1, 0x0
 
     .line 615
-    .local v1, language:Ljava/lang/String;
+    .local v1, "language":Ljava/lang/String;
     const/4 v0, 0x0
 
     .line 616
-    .local v0, country:Ljava/lang/String;
+    .local v0, "country":Ljava/lang/String;
     const/4 v4, 0x0
 
     .line 617
-    .local v4, variant:Ljava/lang/String;
+    .local v4, "variant":Ljava/lang/String;
     invoke-virtual {v3}, Ljava/util/StringTokenizer;->hasMoreElements()Z
 
     move-result v5
@@ -183,8 +183,8 @@
 
 .method public bridge synthetic write(Lcom/fusepowered/m1/google/gson/stream/JsonWriter;Ljava/lang/Object;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
+    .param p1, "x0"    # Lcom/fusepowered/m1/google/gson/stream/JsonWriter;
+    .param p2, "x1"    # Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -195,7 +195,7 @@
     .line 605
     check-cast p2, Ljava/util/Locale;
 
-    .end local p2
+    .end local p2    # "x1":Ljava/lang/Object;
     invoke-virtual {p0, p1, p2}, Lcom/fusepowered/m1/google/gson/internal/bind/TypeAdapters$24;->write(Lcom/fusepowered/m1/google/gson/stream/JsonWriter;Ljava/util/Locale;)V
 
     return-void
@@ -203,8 +203,8 @@
 
 .method public write(Lcom/fusepowered/m1/google/gson/stream/JsonWriter;Ljava/util/Locale;)V
     .locals 1
-    .parameter "out"
-    .parameter "value"
+    .param p1, "out"    # Lcom/fusepowered/m1/google/gson/stream/JsonWriter;
+    .param p2, "value"    # Ljava/util/Locale;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;

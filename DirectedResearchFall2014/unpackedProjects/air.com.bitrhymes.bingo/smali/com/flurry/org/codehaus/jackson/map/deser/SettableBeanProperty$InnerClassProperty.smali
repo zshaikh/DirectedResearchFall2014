@@ -30,8 +30,7 @@
 # direct methods
 .method protected constructor <init>(Lcom/flurry/org/codehaus/jackson/map/deser/SettableBeanProperty$InnerClassProperty;Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;)V
     .locals 1
-    .parameter "src"
-    .parameter
+    .param p1, "src"    # Lcom/flurry/org/codehaus/jackson/map/deser/SettableBeanProperty$InnerClassProperty;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -45,7 +44,7 @@
 
     .prologue
     .line 740
-    .local p2, deser:Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer<Ljava/lang/Object;>;"
+    .local p2, "deser":Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer<Ljava/lang/Object;>;"
     invoke-direct {p0, p1, p2}, Lcom/flurry/org/codehaus/jackson/map/deser/SettableBeanProperty;-><init>(Lcom/flurry/org/codehaus/jackson/map/deser/SettableBeanProperty;Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;)V
 
     .line 741
@@ -68,8 +67,7 @@
 
 .method public constructor <init>(Lcom/flurry/org/codehaus/jackson/map/deser/SettableBeanProperty;Ljava/lang/reflect/Constructor;)V
     .locals 0
-    .parameter "delegate"
-    .parameter
+    .param p1, "delegate"    # Lcom/flurry/org/codehaus/jackson/map/deser/SettableBeanProperty;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -81,7 +79,7 @@
 
     .prologue
     .line 733
-    .local p2, ctor:Ljava/lang/reflect/Constructor;,"Ljava/lang/reflect/Constructor<*>;"
+    .local p2, "ctor":Ljava/lang/reflect/Constructor;, "Ljava/lang/reflect/Constructor<*>;"
     invoke-direct {p0, p1}, Lcom/flurry/org/codehaus/jackson/map/deser/SettableBeanProperty;-><init>(Lcom/flurry/org/codehaus/jackson/map/deser/SettableBeanProperty;)V
 
     .line 734
@@ -98,9 +96,9 @@
 # virtual methods
 .method public deserializeAndSet(Lcom/flurry/org/codehaus/jackson/JsonParser;Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;Ljava/lang/Object;)V
     .locals 6
-    .parameter "jp"
-    .parameter "ctxt"
-    .parameter "bean"
+    .param p1, "jp"    # Lcom/flurry/org/codehaus/jackson/JsonParser;
+    .param p2, "ctxt"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;
+    .param p3, "bean"    # Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -115,7 +113,7 @@
     move-result-object v1
 
     .line 769
-    .local v1, t:Lcom/flurry/org/codehaus/jackson/JsonToken;
+    .local v1, "t":Lcom/flurry/org/codehaus/jackson/JsonToken;
     sget-object v3, Lcom/flurry/org/codehaus/jackson/JsonToken;->VALUE_NULL:Lcom/flurry/org/codehaus/jackson/JsonToken;
 
     if-ne v1, v3, :cond_1
@@ -129,12 +127,12 @@
 
     move-object v2, v3
 
-    .local v2, value:Ljava/lang/Object;
+    .local v2, "value":Ljava/lang/Object;
     :goto_0
     move-object v3, v2
 
     .line 782
-    .end local v2           #value:Ljava/lang/Object;
+    .end local v2    # "value":Ljava/lang/Object;
     :goto_1
     invoke-virtual {p0, p3, v3}, Lcom/flurry/org/codehaus/jackson/map/deser/SettableBeanProperty$InnerClassProperty;->set(Ljava/lang/Object;Ljava/lang/Object;)V
 
@@ -168,13 +166,13 @@
 
     move-result-object v2
 
-    .restart local v2       #value:Ljava/lang/Object;
+    .restart local v2    # "value":Ljava/lang/Object;
     move-object v3, v2
 
     goto :goto_1
 
     .line 775
-    .end local v2           #value:Ljava/lang/Object;
+    .end local v2    # "value":Ljava/lang/Object;
     :cond_2
     :try_start_0
     iget-object v3, p0, Lcom/flurry/org/codehaus/jackson/map/deser/SettableBeanProperty$InnerClassProperty;->_creator:Ljava/lang/reflect/Constructor;
@@ -210,7 +208,7 @@
     move-object v0, v3
 
     .line 777
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -258,13 +256,12 @@
     .line 778
     const/4 v2, 0x0
 
-    .restart local v2       #value:Ljava/lang/Object;
+    .restart local v2    # "value":Ljava/lang/Object;
     goto :goto_2
 .end method
 
 .method public getAnnotation(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<A::",
@@ -277,7 +274,7 @@
 
     .prologue
     .line 754
-    .local p1, acls:Ljava/lang/Class;,"Ljava/lang/Class<TA;>;"
+    .local p1, "acls":Ljava/lang/Class;, "Ljava/lang/Class<TA;>;"
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/map/deser/SettableBeanProperty$InnerClassProperty;->_delegate:Lcom/flurry/org/codehaus/jackson/map/deser/SettableBeanProperty;
 
     invoke-virtual {v0, p1}, Lcom/flurry/org/codehaus/jackson/map/deser/SettableBeanProperty;->getAnnotation(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;
@@ -303,8 +300,8 @@
 
 .method public final set(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 1
-    .parameter "instance"
-    .parameter "value"
+    .param p1, "instance"    # Ljava/lang/Object;
+    .param p2, "value"    # Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -323,7 +320,6 @@
 
 .method public withValueDeserializer(Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;)Lcom/flurry/org/codehaus/jackson/map/deser/SettableBeanProperty$InnerClassProperty;
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -337,7 +333,7 @@
 
     .prologue
     .line 747
-    .local p1, deser:Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer<Ljava/lang/Object;>;"
+    .local p1, "deser":Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer<Ljava/lang/Object;>;"
     new-instance v0, Lcom/flurry/org/codehaus/jackson/map/deser/SettableBeanProperty$InnerClassProperty;
 
     invoke-direct {v0, p0, p1}, Lcom/flurry/org/codehaus/jackson/map/deser/SettableBeanProperty$InnerClassProperty;-><init>(Lcom/flurry/org/codehaus/jackson/map/deser/SettableBeanProperty$InnerClassProperty;Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;)V
@@ -347,7 +343,7 @@
 
 .method public bridge synthetic withValueDeserializer(Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;)Lcom/flurry/org/codehaus/jackson/map/deser/SettableBeanProperty;
     .locals 1
-    .parameter "x0"
+    .param p1, "x0"    # Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;
 
     .prologue
     .line 717

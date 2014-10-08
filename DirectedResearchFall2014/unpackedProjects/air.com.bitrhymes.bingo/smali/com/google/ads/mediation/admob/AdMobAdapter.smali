@@ -57,10 +57,6 @@
 
 .method private a(Landroid/app/Activity;Lcom/google/ads/mediation/admob/AdMobAdapterServerParameters;Lcom/google/ads/mediation/MediationAdRequest;Lcom/google/ads/mediation/admob/AdMobAdapterExtras;)Lcom/google/ads/AdRequest;
     .locals 3
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 88
@@ -161,7 +157,6 @@
 
 .method static synthetic a(Lcom/google/ads/mediation/admob/AdMobAdapter;)Lcom/google/ads/mediation/MediationBannerListener;
     .locals 1
-    .parameter
 
     .prologue
     .line 25
@@ -197,7 +192,6 @@
 
 .method static synthetic b(Lcom/google/ads/mediation/admob/AdMobAdapter;)Lcom/google/ads/mediation/MediationInterstitialListener;
     .locals 1
-    .parameter
 
     .prologue
     .line 25
@@ -234,9 +228,6 @@
 # virtual methods
 .method protected a(Landroid/app/Activity;Lcom/google/ads/AdSize;Ljava/lang/String;)Lcom/google/ads/AdView;
     .locals 1
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 127
@@ -249,8 +240,6 @@
 
 .method protected a(Landroid/app/Activity;Ljava/lang/String;)Lcom/google/ads/InterstitialAd;
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 131
@@ -357,12 +346,12 @@
 
 .method public bridge synthetic requestBannerAd(Lcom/google/ads/mediation/MediationBannerListener;Landroid/app/Activity;Lcom/google/ads/mediation/MediationServerParameters;Lcom/google/ads/AdSize;Lcom/google/ads/mediation/MediationAdRequest;Lcom/google/ads/mediation/NetworkExtras;)V
     .locals 8
-    .parameter "x0"
-    .parameter "x1"
-    .parameter "x2"
-    .parameter "x3"
-    .parameter "x4"
-    .parameter "x5"
+    .param p1, "x0"    # Lcom/google/ads/mediation/MediationBannerListener;
+    .param p2, "x1"    # Landroid/app/Activity;
+    .param p3, "x2"    # Lcom/google/ads/mediation/MediationServerParameters;
+    .param p4, "x3"    # Lcom/google/ads/AdSize;
+    .param p5, "x4"    # Lcom/google/ads/mediation/MediationAdRequest;
+    .param p6, "x5"    # Lcom/google/ads/mediation/NetworkExtras;
 
     .prologue
     .line 25
@@ -395,12 +384,12 @@
 
 .method public requestBannerAd(Lcom/google/ads/mediation/MediationBannerListener;Landroid/app/Activity;Lcom/google/ads/mediation/admob/AdMobAdapterServerParameters;Lcom/google/ads/AdSize;Lcom/google/ads/mediation/MediationAdRequest;Lcom/google/ads/mediation/admob/AdMobAdapterExtras;)V
     .locals 3
-    .parameter "listener"
-    .parameter "activity"
-    .parameter "serverParameters"
-    .parameter "adSize"
-    .parameter "mediationAdRequest"
-    .parameter "extras"
+    .param p1, "listener"    # Lcom/google/ads/mediation/MediationBannerListener;
+    .param p2, "activity"    # Landroid/app/Activity;
+    .param p3, "serverParameters"    # Lcom/google/ads/mediation/admob/AdMobAdapterServerParameters;
+    .param p4, "adSize"    # Lcom/google/ads/AdSize;
+    .param p5, "mediationAdRequest"    # Lcom/google/ads/mediation/MediationAdRequest;
+    .param p6, "extras"    # Lcom/google/ads/mediation/admob/AdMobAdapterExtras;
 
     .prologue
     .line 167
@@ -516,11 +505,11 @@
 
 .method public bridge synthetic requestInterstitialAd(Lcom/google/ads/mediation/MediationInterstitialListener;Landroid/app/Activity;Lcom/google/ads/mediation/MediationServerParameters;Lcom/google/ads/mediation/MediationAdRequest;Lcom/google/ads/mediation/NetworkExtras;)V
     .locals 7
-    .parameter "x0"
-    .parameter "x1"
-    .parameter "x2"
-    .parameter "x3"
-    .parameter "x4"
+    .param p1, "x0"    # Lcom/google/ads/mediation/MediationInterstitialListener;
+    .param p2, "x1"    # Landroid/app/Activity;
+    .param p3, "x2"    # Lcom/google/ads/mediation/MediationServerParameters;
+    .param p4, "x3"    # Lcom/google/ads/mediation/MediationAdRequest;
+    .param p5, "x4"    # Lcom/google/ads/mediation/NetworkExtras;
 
     .prologue
     .line 25
@@ -551,11 +540,11 @@
 
 .method public requestInterstitialAd(Lcom/google/ads/mediation/MediationInterstitialListener;Landroid/app/Activity;Lcom/google/ads/mediation/admob/AdMobAdapterServerParameters;Lcom/google/ads/mediation/MediationAdRequest;Lcom/google/ads/mediation/admob/AdMobAdapterExtras;)V
     .locals 3
-    .parameter "listener"
-    .parameter "activity"
-    .parameter "serverParameters"
-    .parameter "mediationAdRequest"
-    .parameter "extras"
+    .param p1, "listener"    # Lcom/google/ads/mediation/MediationInterstitialListener;
+    .param p2, "activity"    # Landroid/app/Activity;
+    .param p3, "serverParameters"    # Lcom/google/ads/mediation/admob/AdMobAdapterServerParameters;
+    .param p4, "mediationAdRequest"    # Lcom/google/ads/mediation/MediationAdRequest;
+    .param p5, "extras"    # Lcom/google/ads/mediation/admob/AdMobAdapterExtras;
 
     .prologue
     .line 246

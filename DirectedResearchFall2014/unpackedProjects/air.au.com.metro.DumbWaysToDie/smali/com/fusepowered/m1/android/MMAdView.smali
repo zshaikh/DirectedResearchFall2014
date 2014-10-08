@@ -51,7 +51,7 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 3
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     const/4 v2, 0x0
@@ -94,8 +94,8 @@
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
-    .parameter "context"
-    .parameter "attrs"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "attrs"    # Landroid/util/AttributeSet;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -111,9 +111,9 @@
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 6
-    .parameter "context"
-    .parameter "attrs"
-    .parameter "defStyle"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "attrs"    # Landroid/util/AttributeSet;
+    .param p3, "defStyle"    # I
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -168,7 +168,7 @@
     const-string v1, "http://millennialmedia.com/android/schema"
 
     .line 95
-    .local v1, namespace:Ljava/lang/String;
+    .local v1, "namespace":Ljava/lang/String;
     const-string v3, "apid"
 
     invoke-interface {p2, v1, v3}, Landroid/util/AttributeSet;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
@@ -196,7 +196,7 @@
     move-result-object v0
 
     .line 98
-    .local v0, heightIn:Ljava/lang/String;
+    .local v0, "heightIn":Ljava/lang/String;
     const-string v3, "width"
 
     invoke-interface {p2, v1, v3}, Landroid/util/AttributeSet;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
@@ -204,7 +204,7 @@
     move-result-object v2
 
     .line 101
-    .local v2, widthIn:Ljava/lang/String;
+    .local v2, "widthIn":Ljava/lang/String;
     :try_start_0
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -412,9 +412,9 @@
     iput-object v3, p0, Lcom/fusepowered/m1/android/MMAdView;->goalId:Ljava/lang/String;
 
     .line 131
-    .end local v0           #heightIn:Ljava/lang/String;
-    .end local v1           #namespace:Ljava/lang/String;
-    .end local v2           #widthIn:Ljava/lang/String;
+    .end local v0    # "heightIn":Ljava/lang/String;
+    .end local v1    # "namespace":Ljava/lang/String;
+    .end local v2    # "widthIn":Ljava/lang/String;
     :cond_3
     iget-object v3, p0, Lcom/fusepowered/m1/android/MMAdView;->adImpl:Lcom/fusepowered/m1/android/MMAdImpl;
 
@@ -436,9 +436,9 @@
     goto :goto_1
 
     .line 109
-    .restart local v0       #heightIn:Ljava/lang/String;
-    .restart local v1       #namespace:Ljava/lang/String;
-    .restart local v2       #widthIn:Ljava/lang/String;
+    .restart local v0    # "heightIn":Ljava/lang/String;
+    .restart local v1    # "namespace":Ljava/lang/String;
+    .restart local v2    # "widthIn":Ljava/lang/String;
     :catch_0
     move-exception v3
 
@@ -447,8 +447,8 @@
 
 .method static synthetic access$000(Lcom/fusepowered/m1/android/MMAdView;Landroid/view/View;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
+    .param p0, "x0"    # Lcom/fusepowered/m1/android/MMAdView;
+    .param p1, "x1"    # Landroid/view/View;
 
     .prologue
     .line 34
@@ -459,8 +459,8 @@
 
 .method static synthetic access$100(Lcom/fusepowered/m1/android/MMAdView;Landroid/view/View;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
+    .param p0, "x0"    # Lcom/fusepowered/m1/android/MMAdView;
+    .param p1, "x1"    # Landroid/view/View;
 
     .prologue
     .line 34
@@ -471,7 +471,7 @@
 
 .method private declared-synchronized attachToWindow(Landroid/view/View;)V
     .locals 7
-    .parameter "view"
+    .param p1, "view"    # Landroid/view/View;
 
     .prologue
     .line 587
@@ -486,7 +486,7 @@
     move-result-object v2
 
     .line 589
-    .local v2, context:Landroid/content/Context;
+    .local v2, "context":Landroid/content/Context;
     if-eqz v2, :cond_0
 
     instance-of v6, v2, Landroid/app/Activity;
@@ -501,13 +501,13 @@
     move-object v1, v0
 
     .line 592
-    .local v1, activity:Landroid/app/Activity;
+    .local v1, "activity":Landroid/app/Activity;
     invoke-virtual {v1}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
 
     move-result-object v5
 
     .line 593
-    .local v5, win:Landroid/view/Window;
+    .local v5, "win":Landroid/view/Window;
     if-eqz v5, :cond_0
 
     .line 595
@@ -516,7 +516,7 @@
     move-result-object v3
 
     .line 596
-    .local v3, decorView:Landroid/view/View;
+    .local v3, "decorView":Landroid/view/View;
     if-eqz v3, :cond_0
 
     instance-of v6, v3, Landroid/view/ViewGroup;
@@ -531,23 +531,23 @@
     move-object v4, v0
 
     .line 599
-    .local v4, group:Landroid/view/ViewGroup;
+    .local v4, "group":Landroid/view/ViewGroup;
     invoke-virtual {v4, p1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 603
-    .end local v1           #activity:Landroid/app/Activity;
-    .end local v3           #decorView:Landroid/view/View;
-    .end local v4           #group:Landroid/view/ViewGroup;
-    .end local v5           #win:Landroid/view/Window;
+    .end local v1    # "activity":Landroid/app/Activity;
+    .end local v3    # "decorView":Landroid/view/View;
+    .end local v4    # "group":Landroid/view/ViewGroup;
+    .end local v5    # "win":Landroid/view/Window;
     :cond_0
     monitor-exit p0
 
     return-void
 
     .line 587
-    .end local v2           #context:Landroid/content/Context;
+    .end local v2    # "context":Landroid/content/Context;
     :catchall_0
     move-exception v6
 
@@ -558,7 +558,7 @@
 
 .method private callSetTranslationX(I)V
     .locals 6
-    .parameter "translationX"
+    .param p1, "translationX"    # I
 
     .prologue
     .line 696
@@ -582,7 +582,7 @@
     move-result-object v0
 
     .line 697
-    .local v0, method:Ljava/lang/reflect/Method;
+    .local v0, "method":Ljava/lang/reflect/Method;
     const/4 v1, 0x1
 
     new-array v1, v1, [Ljava/lang/Object;
@@ -600,7 +600,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 701
-    .end local v0           #method:Ljava/lang/reflect/Method;
+    .end local v0    # "method":Ljava/lang/reflect/Method;
     :goto_0
     return-void
 
@@ -613,7 +613,7 @@
 
 .method private callSetTranslationY(I)V
     .locals 6
-    .parameter "translationY"
+    .param p1, "translationY"    # I
 
     .prologue
     .line 707
@@ -637,7 +637,7 @@
     move-result-object v0
 
     .line 708
-    .local v0, method:Ljava/lang/reflect/Method;
+    .local v0, "method":Ljava/lang/reflect/Method;
     const/4 v1, 0x1
 
     new-array v1, v1, [Ljava/lang/Object;
@@ -655,7 +655,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 712
-    .end local v0           #method:Ljava/lang/reflect/Method;
+    .end local v0    # "method":Ljava/lang/reflect/Method;
     :goto_0
     return-void
 
@@ -668,7 +668,7 @@
 
 .method private declared-synchronized detachFromParent(Landroid/view/View;)V
     .locals 4
-    .parameter "view"
+    .param p1, "view"    # Landroid/view/View;
 
     .prologue
     .line 571
@@ -683,7 +683,7 @@
     move-result-object v2
 
     .line 574
-    .local v2, parent:Landroid/view/ViewParent;
+    .local v2, "parent":Landroid/view/ViewParent;
     if-eqz v2, :cond_0
 
     instance-of v3, v2, Landroid/view/ViewGroup;
@@ -698,7 +698,7 @@
     move-object v1, v0
 
     .line 577
-    .local v1, group:Landroid/view/ViewGroup;
+    .local v1, "group":Landroid/view/ViewGroup;
     invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object v3
@@ -711,8 +711,8 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 583
-    .end local v1           #group:Landroid/view/ViewGroup;
-    .end local v2           #parent:Landroid/view/ViewParent;
+    .end local v1    # "group":Landroid/view/ViewGroup;
+    .end local v2    # "parent":Landroid/view/ViewParent;
     :cond_0
     monitor-exit p0
 
@@ -774,7 +774,7 @@
 
 .method private init(Landroid/content/Context;)V
     .locals 3
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     const/4 v2, -0x2
@@ -842,7 +842,7 @@
 
 .method private initEclipseAd(Landroid/content/Context;)V
     .locals 13
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     .line 168
@@ -851,19 +851,19 @@
     invoke-direct {v8, p1}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
 
     .line 169
-    .local v8, logoForXML:Landroid/widget/ImageView;
+    .local v8, "logoForXML":Landroid/widget/ImageView;
     const-string v6, "http://images.millennialmedia.com/9513/192134.gif"
 
     .line 170
-    .local v6, imageUrl:Ljava/lang/String;
+    .local v6, "imageUrl":Ljava/lang/String;
     const/4 v7, 0x0
 
     .line 171
-    .local v7, is:Ljava/io/InputStream;
+    .local v7, "is":Ljava/io/InputStream;
     const/4 v9, 0x0
 
     .line 174
-    .local v9, out:Ljava/io/OutputStream;
+    .local v9, "out":Ljava/io/OutputStream;
     :try_start_0
     const-string v11, "java.io.tmpdir"
 
@@ -872,7 +872,7 @@
     move-result-object v4
 
     .line 175
-    .local v4, dir:Ljava/lang/String;
+    .local v4, "dir":Ljava/lang/String;
     if-eqz v4, :cond_0
 
     sget-object v11, Ljava/io/File;->separator:Ljava/lang/String;
@@ -927,7 +927,7 @@
     invoke-direct {v5, v11}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
     .line 181
-    .local v5, file:Ljava/io/File;
+    .local v5, "file":Ljava/io/File;
     invoke-virtual {v5}, Ljava/io/File;->exists()Z
 
     move-result v11
@@ -948,7 +948,7 @@
     check-cast v3, Ljava/net/HttpURLConnection;
 
     .line 184
-    .local v3, conn:Ljava/net/HttpURLConnection;
+    .local v3, "conn":Ljava/net/HttpURLConnection;
     const/4 v11, 0x1
 
     invoke-virtual {v3, v11}, Ljava/net/HttpURLConnection;->setDoOutput(Z)V
@@ -971,23 +971,23 @@
 
     invoke-direct {v10, v5}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_4
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 190
-    .end local v9           #out:Ljava/io/OutputStream;
-    .local v10, out:Ljava/io/OutputStream;
+    .end local v9    # "out":Ljava/io/OutputStream;
+    .local v10, "out":Ljava/io/OutputStream;
     const/16 v11, 0x400
 
     :try_start_1
     new-array v1, v11, [B
 
     .line 191
-    .local v1, buffer:[B
+    .local v1, "buffer":[B
     const/4 v2, 0x0
 
     .line 192
-    .local v2, bytesRead:I
+    .local v2, "bytesRead":I
     :goto_0
     invoke-virtual {v7, v1}, Ljava/io/InputStream;->read([B)I
 
@@ -1000,25 +1000,25 @@
 
     invoke-virtual {v10, v1, v11, v2}, Ljava/io/OutputStream;->write([BII)V
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     goto :goto_0
 
     .line 203
-    .end local v1           #buffer:[B
-    .end local v2           #bytesRead:I
+    .end local v1    # "buffer":[B
+    .end local v2    # "bytesRead":I
     :catch_0
     move-exception v11
 
     move-object v9, v10
 
     .line 210
-    .end local v3           #conn:Ljava/net/HttpURLConnection;
-    .end local v4           #dir:Ljava/lang/String;
-    .end local v5           #file:Ljava/io/File;
-    .end local v10           #out:Ljava/io/OutputStream;
-    .restart local v9       #out:Ljava/io/OutputStream;
+    .end local v3    # "conn":Ljava/net/HttpURLConnection;
+    .end local v4    # "dir":Ljava/lang/String;
+    .end local v5    # "file":Ljava/io/File;
+    .end local v10    # "out":Ljava/io/OutputStream;
+    .restart local v9    # "out":Ljava/io/OutputStream;
     :goto_1
     if-eqz v7, :cond_1
 
@@ -1043,22 +1043,22 @@
     .line 223
     return-void
 
-    .end local v9           #out:Ljava/io/OutputStream;
-    .restart local v1       #buffer:[B
-    .restart local v2       #bytesRead:I
-    .restart local v3       #conn:Ljava/net/HttpURLConnection;
-    .restart local v4       #dir:Ljava/lang/String;
-    .restart local v5       #file:Ljava/io/File;
-    .restart local v10       #out:Ljava/io/OutputStream;
+    .end local v9    # "out":Ljava/io/OutputStream;
+    .restart local v1    # "buffer":[B
+    .restart local v2    # "bytesRead":I
+    .restart local v3    # "conn":Ljava/net/HttpURLConnection;
+    .restart local v4    # "dir":Ljava/lang/String;
+    .restart local v5    # "file":Ljava/io/File;
+    .restart local v10    # "out":Ljava/io/OutputStream;
     :cond_3
     move-object v9, v10
 
     .line 197
-    .end local v1           #buffer:[B
-    .end local v2           #bytesRead:I
-    .end local v3           #conn:Ljava/net/HttpURLConnection;
-    .end local v10           #out:Ljava/io/OutputStream;
-    .restart local v9       #out:Ljava/io/OutputStream;
+    .end local v1    # "buffer":[B
+    .end local v2    # "bytesRead":I
+    .end local v3    # "conn":Ljava/net/HttpURLConnection;
+    .end local v10    # "out":Ljava/io/OutputStream;
+    .restart local v9    # "out":Ljava/io/OutputStream;
     :cond_4
     :try_start_3
     invoke-virtual {v5}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
@@ -1070,7 +1070,7 @@
     move-result-object v0
 
     .line 199
-    .local v0, bmp:Landroid/graphics/Bitmap;
+    .local v0, "bmp":Landroid/graphics/Bitmap;
     if-eqz v8, :cond_5
 
     if-eqz v0, :cond_5
@@ -1078,8 +1078,8 @@
     .line 201
     invoke-virtual {v8, v0}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
     :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_4
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
     .line 210
     :cond_5
@@ -1107,9 +1107,9 @@
     goto :goto_2
 
     .line 208
-    .end local v0           #bmp:Landroid/graphics/Bitmap;
-    .end local v4           #dir:Ljava/lang/String;
-    .end local v5           #file:Ljava/io/File;
+    .end local v0    # "bmp":Landroid/graphics/Bitmap;
+    .end local v4    # "dir":Ljava/lang/String;
+    .end local v5    # "file":Ljava/io/File;
     :catchall_0
     move-exception v11
 
@@ -1142,24 +1142,24 @@
     goto :goto_4
 
     .line 208
-    .end local v9           #out:Ljava/io/OutputStream;
-    .restart local v3       #conn:Ljava/net/HttpURLConnection;
-    .restart local v4       #dir:Ljava/lang/String;
-    .restart local v5       #file:Ljava/io/File;
-    .restart local v10       #out:Ljava/io/OutputStream;
+    .end local v9    # "out":Ljava/io/OutputStream;
+    .restart local v3    # "conn":Ljava/net/HttpURLConnection;
+    .restart local v4    # "dir":Ljava/lang/String;
+    .restart local v5    # "file":Ljava/io/File;
+    .restart local v10    # "out":Ljava/io/OutputStream;
     :catchall_1
     move-exception v11
 
     move-object v9, v10
 
-    .end local v10           #out:Ljava/io/OutputStream;
-    .restart local v9       #out:Ljava/io/OutputStream;
+    .end local v10    # "out":Ljava/io/OutputStream;
+    .restart local v9    # "out":Ljava/io/OutputStream;
     goto :goto_3
 
     .line 218
-    .end local v3           #conn:Ljava/net/HttpURLConnection;
-    .end local v4           #dir:Ljava/lang/String;
-    .end local v5           #file:Ljava/io/File;
+    .end local v3    # "conn":Ljava/net/HttpURLConnection;
+    .end local v4    # "dir":Ljava/lang/String;
+    .end local v5    # "file":Ljava/io/File;
     :catch_3
     move-exception v11
 
@@ -1189,7 +1189,7 @@
     move-result-object v0
 
     .line 719
-    .local v0, oldParams:Landroid/view/ViewGroup$LayoutParams;
+    .local v0, "oldParams":Landroid/view/ViewGroup$LayoutParams;
     iget v1, v0, Landroid/view/ViewGroup$LayoutParams;->width:I
 
     iput v1, p0, Lcom/fusepowered/m1/android/MMAdView;->oldWidth:I
@@ -1225,7 +1225,7 @@
     iput v1, p0, Lcom/fusepowered/m1/android/MMAdView;->oldHeight:I
 
     .line 730
-    .end local v0           #oldParams:Landroid/view/ViewGroup$LayoutParams;
+    .end local v0    # "oldParams":Landroid/view/ViewGroup$LayoutParams;
     :cond_1
     return-void
 .end method
@@ -1290,7 +1290,7 @@
 
 .method public getAd(Lcom/fusepowered/m1/android/RequestListener;)V
     .locals 1
-    .parameter "listener"
+    .param p1, "listener"    # Lcom/fusepowered/m1/android/RequestListener;
 
     .prologue
     .line 491
@@ -1361,7 +1361,7 @@
 
 .method declared-synchronized handleMraidResize(Lcom/fusepowered/m1/android/DTOResizeParameters;)V
     .locals 12
-    .parameter "resizeParams"
+    .param p1, "resizeParams"    # Lcom/fusepowered/m1/android/DTOResizeParameters;
 
     .prologue
     .line 613
@@ -1433,7 +1433,7 @@
     move-result-object v5
 
     .line 624
-    .local v5, parent:Landroid/view/ViewParent;
+    .local v5, "parent":Landroid/view/ViewParent;
     if-nez v5, :cond_1
 
     .line 626
@@ -1442,7 +1442,7 @@
     move-result-object v0
 
     .line 627
-    .local v0, adViewParent:Landroid/view/ViewParent;
+    .local v0, "adViewParent":Landroid/view/ViewParent;
     if-eqz v0, :cond_1
 
     instance-of v8, v0, Landroid/view/ViewGroup;
@@ -1452,7 +1452,7 @@
     .line 629
     check-cast v0, Landroid/view/ViewGroup;
 
-    .end local v0           #adViewParent:Landroid/view/ViewParent;
+    .end local v0    # "adViewParent":Landroid/view/ViewParent;
     iget-object v8, p0, Lcom/fusepowered/m1/android/MMAdView;->view:Lcom/fusepowered/m1/android/MMAdView$ResizeView;
 
     invoke-virtual {v0, v8}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
@@ -1464,7 +1464,7 @@
     invoke-direct {v1, p0, p1}, Lcom/fusepowered/m1/android/MMAdView$BannerBounds;-><init>(Lcom/fusepowered/m1/android/MMAdView;Lcom/fusepowered/m1/android/DTOResizeParameters;)V
 
     .line 634
-    .local v1, bounds:Lcom/fusepowered/m1/android/MMAdView$BannerBounds;
+    .local v1, "bounds":Lcom/fusepowered/m1/android/MMAdView$BannerBounds;
     iget-boolean v8, p1, Lcom/fusepowered/m1/android/DTOResizeParameters;->allowOffScreen:Z
 
     if-nez v8, :cond_2
@@ -1479,7 +1479,7 @@
     new-array v4, v8, [I
 
     .line 640
-    .local v4, location:[I
+    .local v4, "location":[I
     invoke-virtual {p0, v4}, Lcom/fusepowered/m1/android/MMAdView;->getLocationInWindow([I)V
 
     .line 642
@@ -1491,7 +1491,7 @@
     new-array v3, v8, [I
 
     .line 644
-    .local v3, locAfterAttach:[I
+    .local v3, "locAfterAttach":[I
     invoke-virtual {p0, v3}, Lcom/fusepowered/m1/android/MMAdView;->getLocationInWindow([I)V
 
     .line 646
@@ -1509,7 +1509,7 @@
     sub-int v6, v8, v9
 
     .line 649
-    .local v6, xOld:I
+    .local v6, "xOld":I
     const/4 v8, 0x1
 
     aget v8, v4, v8
@@ -1521,13 +1521,13 @@
     sub-int v7, v8, v9
 
     .line 651
-    .local v7, yOld:I
+    .local v7, "yOld":I
     invoke-virtual {p0}, Lcom/fusepowered/m1/android/MMAdView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v2
 
     .line 652
-    .local v2, layoutParams:Landroid/view/ViewGroup$LayoutParams;
+    .local v2, "layoutParams":Landroid/view/ViewGroup$LayoutParams;
     invoke-virtual {v1, v2}, Lcom/fusepowered/m1/android/MMAdView$BannerBounds;->modifyLayoutParams(Landroid/view/ViewGroup$LayoutParams;)Landroid/view/ViewGroup$LayoutParams;
 
     .line 653
@@ -1552,13 +1552,13 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 657
-    .end local v1           #bounds:Lcom/fusepowered/m1/android/MMAdView$BannerBounds;
-    .end local v2           #layoutParams:Landroid/view/ViewGroup$LayoutParams;
-    .end local v3           #locAfterAttach:[I
-    .end local v4           #location:[I
-    .end local v5           #parent:Landroid/view/ViewParent;
-    .end local v6           #xOld:I
-    .end local v7           #yOld:I
+    .end local v1    # "bounds":Lcom/fusepowered/m1/android/MMAdView$BannerBounds;
+    .end local v2    # "layoutParams":Landroid/view/ViewGroup$LayoutParams;
+    .end local v3    # "locAfterAttach":[I
+    .end local v4    # "location":[I
+    .end local v5    # "parent":Landroid/view/ViewParent;
+    .end local v6    # "xOld":I
+    .end local v7    # "yOld":I
     :cond_3
     monitor-exit p0
 
@@ -1603,7 +1603,7 @@
     move-result-object v2
 
     .line 667
-    .local v2, params:Landroid/view/ViewGroup$LayoutParams;
+    .local v2, "params":Landroid/view/ViewGroup$LayoutParams;
     iget v4, p0, Lcom/fusepowered/m1/android/MMAdView;->oldWidth:I
 
     iput v4, v2, Landroid/view/ViewGroup$LayoutParams;->width:I
@@ -1634,7 +1634,7 @@
     iput v4, p0, Lcom/fusepowered/m1/android/MMAdView;->oldHeight:I
 
     .line 674
-    .end local v2           #params:Landroid/view/ViewGroup$LayoutParams;
+    .end local v2    # "params":Landroid/view/ViewGroup$LayoutParams;
     :cond_0
     iget-object v4, p0, Lcom/fusepowered/m1/android/MMAdView;->view:Lcom/fusepowered/m1/android/MMAdView$ResizeView;
 
@@ -1656,7 +1656,7 @@
     move-result-object v3
 
     .line 679
-    .local v3, parent:Landroid/view/ViewParent;
+    .local v3, "parent":Landroid/view/ViewParent;
     if-eqz v3, :cond_1
 
     instance-of v4, v3, Landroid/view/ViewGroup;
@@ -1671,7 +1671,7 @@
     move-object v1, v0
 
     .line 682
-    .local v1, group:Landroid/view/ViewGroup;
+    .local v1, "group":Landroid/view/ViewGroup;
     iget-object v4, p0, Lcom/fusepowered/m1/android/MMAdView;->view:Lcom/fusepowered/m1/android/MMAdView$ResizeView;
 
     invoke-virtual {v4}, Lcom/fusepowered/m1/android/MMAdView$ResizeView;->getParent()Landroid/view/ViewParent;
@@ -1686,7 +1686,7 @@
     invoke-virtual {v1, v4}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
 
     .line 687
-    .end local v1           #group:Landroid/view/ViewGroup;
+    .end local v1    # "group":Landroid/view/ViewGroup;
     :cond_1
     const/4 v4, 0x0
 
@@ -1695,7 +1695,7 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 690
-    .end local v3           #parent:Landroid/view/ViewParent;
+    .end local v3    # "parent":Landroid/view/ViewParent;
     :cond_2
     monitor-exit p0
 
@@ -1712,7 +1712,7 @@
 
 .method public onAnimationEnd(Landroid/view/animation/Animation;)V
     .locals 2
-    .parameter "animation"
+    .param p1, "animation"    # Landroid/view/animation/Animation;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -1730,7 +1730,7 @@
 
 .method public onAnimationRepeat(Landroid/view/animation/Animation;)V
     .locals 0
-    .parameter "animation"
+    .param p1, "animation"    # Landroid/view/animation/Animation;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -1741,7 +1741,7 @@
 
 .method public onAnimationStart(Landroid/view/animation/Animation;)V
     .locals 0
-    .parameter "animation"
+    .param p1, "animation"    # Landroid/view/animation/Animation;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -1752,7 +1752,7 @@
 
 .method public onClick(Landroid/view/View;)V
     .locals 8
-    .parameter "v"
+    .param p1, "v"    # Landroid/view/View;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -1831,11 +1831,11 @@
 
 .method protected onLayout(ZIIII)V
     .locals 1
-    .parameter "changed"
-    .parameter "left"
-    .parameter "top"
-    .parameter "right"
-    .parameter "bottom"
+    .param p1, "changed"    # Z
+    .param p2, "left"    # I
+    .param p3, "top"    # I
+    .param p4, "right"    # I
+    .param p5, "bottom"    # I
 
     .prologue
     .line 241
@@ -1854,7 +1854,7 @@
 
 .method public bridge synthetic onTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 1
-    .parameter "x0"
+    .param p1, "x0"    # Landroid/view/MotionEvent;
 
     .prologue
     .line 34
@@ -1867,7 +1867,7 @@
 
 .method public onWindowFocusChanged(Z)V
     .locals 3
-    .parameter "windowInFocus"
+    .param p1, "windowInFocus"    # Z
 
     .prologue
     .line 509
@@ -1969,7 +1969,7 @@
 
 .method public bridge synthetic setApid(Ljava/lang/String;)V
     .locals 0
-    .parameter "x0"
+    .param p1, "x0"    # Ljava/lang/String;
 
     .prologue
     .line 34
@@ -1980,7 +1980,7 @@
 
 .method public setBackgroundColor(I)V
     .locals 1
-    .parameter "color"
+    .param p1, "color"    # I
 
     .prologue
     .line 142
@@ -2021,7 +2021,7 @@
 
 .method public setHeight(I)V
     .locals 0
-    .parameter "height"
+    .param p1, "height"    # I
 
     .prologue
     .line 270
@@ -2033,7 +2033,7 @@
 
 .method public bridge synthetic setIgnoresDensityScaling(Z)V
     .locals 0
-    .parameter "x0"
+    .param p1, "x0"    # Z
 
     .prologue
     .line 34
@@ -2044,7 +2044,7 @@
 
 .method public bridge synthetic setListener(Lcom/fusepowered/m1/android/RequestListener;)V
     .locals 0
-    .parameter "x0"
+    .param p1, "x0"    # Lcom/fusepowered/m1/android/RequestListener;
 
     .prologue
     .line 34
@@ -2055,7 +2055,7 @@
 
 .method public bridge synthetic setMMRequest(Lcom/fusepowered/m1/android/MMRequest;)V
     .locals 0
-    .parameter "x0"
+    .param p1, "x0"    # Lcom/fusepowered/m1/android/MMRequest;
 
     .prologue
     .line 34
@@ -2066,7 +2066,7 @@
 
 .method public setTransitionType(I)V
     .locals 0
-    .parameter "type"
+    .param p1, "type"    # I
 
     .prologue
     .line 290
@@ -2078,7 +2078,7 @@
 
 .method public setWidth(I)V
     .locals 0
-    .parameter "width"
+    .param p1, "width"    # I
 
     .prologue
     .line 282

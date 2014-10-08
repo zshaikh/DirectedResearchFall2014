@@ -24,7 +24,6 @@
 # direct methods
 .method public constructor <init>(Lcom/tapjoy/mraid/view/MraidView;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1276
@@ -45,7 +44,7 @@
     :goto_0
     iget-object v0, p0, Lcom/tapjoy/mraid/view/MraidView$OrientationThread;->this$0:Lcom/tapjoy/mraid/view/MraidView;
 
-    #getter for: Lcom/tapjoy/mraid/view/MraidView;->viewDetached:Z
+    # getter for: Lcom/tapjoy/mraid/view/MraidView;->viewDetached:Z
     invoke-static {v0}, Lcom/tapjoy/mraid/view/MraidView;->access$1900(Lcom/tapjoy/mraid/view/MraidView;)Z
 
     move-result v0
@@ -61,7 +60,7 @@
     .line 1287
     iget-object v0, p0, Lcom/tapjoy/mraid/view/MraidView$OrientationThread;->this$0:Lcom/tapjoy/mraid/view/MraidView;
 
-    #calls: Lcom/tapjoy/mraid/view/MraidView;->checkForOrientationChange()V
+    # invokes: Lcom/tapjoy/mraid/view/MraidView;->checkForOrientationChange()V
     invoke-static {v0}, Lcom/tapjoy/mraid/view/MraidView;->access$2000(Lcom/tapjoy/mraid/view/MraidView;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0

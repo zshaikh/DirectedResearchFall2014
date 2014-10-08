@@ -16,10 +16,6 @@
 # direct methods
 .method constructor <init>(Lcom/flurry/android/FlurryAds;Landroid/content/Context;Ljava/lang/String;Lcom/flurry/android/ac;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 2668

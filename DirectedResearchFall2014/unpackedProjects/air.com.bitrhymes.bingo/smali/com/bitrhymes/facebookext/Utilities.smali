@@ -32,7 +32,7 @@
 
 .method public static getStringArray(Ljava/lang/String;)[Ljava/lang/String;
     .locals 5
-    .parameter "permissionsStr"
+    .param p0, "permissionsStr"    # Ljava/lang/String;
 
     .prologue
     .line 17
@@ -43,7 +43,7 @@
     invoke-direct {v3, p0, v4}, Ljava/util/StringTokenizer;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 18
-    .local v3, tokenizer:Ljava/util/StringTokenizer;
+    .local v3, "tokenizer":Ljava/util/StringTokenizer;
     invoke-virtual {v3}, Ljava/util/StringTokenizer;->countTokens()I
 
     move-result v4
@@ -51,11 +51,11 @@
     new-array v0, v4, [Ljava/lang/String;
 
     .line 19
-    .local v0, arrStrings:[Ljava/lang/String;
+    .local v0, "arrStrings":[Ljava/lang/String;
     const/4 v1, 0x0
 
     .line 20
-    .local v1, i:I
+    .local v1, "i":I
     :goto_0
     invoke-virtual {v3}, Ljava/util/StringTokenizer;->hasMoreTokens()Z
 
@@ -70,8 +70,8 @@
     :cond_0
     add-int/lit8 v2, v1, 0x1
 
-    .end local v1           #i:I
-    .local v2, i:I
+    .end local v1    # "i":I
+    .local v2, "i":I
     invoke-virtual {v3}, Ljava/util/StringTokenizer;->nextToken()Ljava/lang/String;
 
     move-result-object v4
@@ -80,7 +80,7 @@
 
     move v1, v2
 
-    .end local v2           #i:I
-    .restart local v1       #i:I
+    .end local v2    # "i":I
+    .restart local v1    # "i":I
     goto :goto_0
 .end method

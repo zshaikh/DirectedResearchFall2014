@@ -58,7 +58,7 @@
 
 .method private final balloc(I)[B
     .locals 1
-    .parameter "size"
+    .param p1, "size"    # I
 
     .prologue
     .line 102
@@ -69,7 +69,7 @@
 
 .method private final calloc(I)[C
     .locals 1
-    .parameter "size"
+    .param p1, "size"    # I
 
     .prologue
     .line 107
@@ -82,7 +82,7 @@
 # virtual methods
 .method public final allocByteBuffer(Lcom/flurry/org/codehaus/jackson/util/BufferRecycler$ByteBufferType;)[B
     .locals 4
-    .parameter "type"
+    .param p1, "type"    # Lcom/flurry/org/codehaus/jackson/util/BufferRecycler$ByteBufferType;
 
     .prologue
     .line 54
@@ -91,17 +91,17 @@
     move-result v1
 
     .line 55
-    .local v1, ix:I
+    .local v1, "ix":I
     iget-object v2, p0, Lcom/flurry/org/codehaus/jackson/util/BufferRecycler;->_byteBuffers:[[B
 
     aget-object v0, v2, v1
 
     .line 56
-    .local v0, buffer:[B
+    .local v0, "buffer":[B
     if-nez v0, :cond_0
 
     .line 57
-    #getter for: Lcom/flurry/org/codehaus/jackson/util/BufferRecycler$ByteBufferType;->size:I
+    # getter for: Lcom/flurry/org/codehaus/jackson/util/BufferRecycler$ByteBufferType;->size:I
     invoke-static {p1}, Lcom/flurry/org/codehaus/jackson/util/BufferRecycler$ByteBufferType;->access$000(Lcom/flurry/org/codehaus/jackson/util/BufferRecycler$ByteBufferType;)I
 
     move-result v2
@@ -127,7 +127,7 @@
 
 .method public final allocCharBuffer(Lcom/flurry/org/codehaus/jackson/util/BufferRecycler$CharBufferType;)[C
     .locals 1
-    .parameter "type"
+    .param p1, "type"    # Lcom/flurry/org/codehaus/jackson/util/BufferRecycler$CharBufferType;
 
     .prologue
     .line 71
@@ -142,12 +142,12 @@
 
 .method public final allocCharBuffer(Lcom/flurry/org/codehaus/jackson/util/BufferRecycler$CharBufferType;I)[C
     .locals 4
-    .parameter "type"
-    .parameter "minSize"
+    .param p1, "type"    # Lcom/flurry/org/codehaus/jackson/util/BufferRecycler$CharBufferType;
+    .param p2, "minSize"    # I
 
     .prologue
     .line 76
-    #getter for: Lcom/flurry/org/codehaus/jackson/util/BufferRecycler$CharBufferType;->size:I
+    # getter for: Lcom/flurry/org/codehaus/jackson/util/BufferRecycler$CharBufferType;->size:I
     invoke-static {p1}, Lcom/flurry/org/codehaus/jackson/util/BufferRecycler$CharBufferType;->access$100(Lcom/flurry/org/codehaus/jackson/util/BufferRecycler$CharBufferType;)I
 
     move-result v2
@@ -155,7 +155,7 @@
     if-le v2, p2, :cond_0
 
     .line 77
-    #getter for: Lcom/flurry/org/codehaus/jackson/util/BufferRecycler$CharBufferType;->size:I
+    # getter for: Lcom/flurry/org/codehaus/jackson/util/BufferRecycler$CharBufferType;->size:I
     invoke-static {p1}, Lcom/flurry/org/codehaus/jackson/util/BufferRecycler$CharBufferType;->access$100(Lcom/flurry/org/codehaus/jackson/util/BufferRecycler$CharBufferType;)I
 
     move-result p2
@@ -167,13 +167,13 @@
     move-result v1
 
     .line 80
-    .local v1, ix:I
+    .local v1, "ix":I
     iget-object v2, p0, Lcom/flurry/org/codehaus/jackson/util/BufferRecycler;->_charBuffers:[[C
 
     aget-object v0, v2, v1
 
     .line 81
-    .local v0, buffer:[C
+    .local v0, "buffer":[C
     if-eqz v0, :cond_1
 
     array-length v2, v0
@@ -203,8 +203,8 @@
 
 .method public final releaseByteBuffer(Lcom/flurry/org/codehaus/jackson/util/BufferRecycler$ByteBufferType;[B)V
     .locals 2
-    .parameter "type"
-    .parameter "buffer"
+    .param p1, "type"    # Lcom/flurry/org/codehaus/jackson/util/BufferRecycler$ByteBufferType;
+    .param p2, "buffer"    # [B
 
     .prologue
     .line 66
@@ -222,8 +222,8 @@
 
 .method public final releaseCharBuffer(Lcom/flurry/org/codehaus/jackson/util/BufferRecycler$CharBufferType;[C)V
     .locals 2
-    .parameter "type"
-    .parameter "buffer"
+    .param p1, "type"    # Lcom/flurry/org/codehaus/jackson/util/BufferRecycler$CharBufferType;
+    .param p2, "buffer"    # [C
 
     .prologue
     .line 91

@@ -19,8 +19,8 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Lv2/com/playhaven/views/interstitial/PHCloseButton$Listener;)V
     .locals 3
-    .parameter "context"
-    .parameter "listener"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "listener"    # Lv2/com/playhaven/views/interstitial/PHCloseButton$Listener;
 
     .prologue
     const/4 v2, 0x0
@@ -54,7 +54,7 @@
     move-object v0, p2
 
     .line 63
-    .local v0, finalListener:Lv2/com/playhaven/views/interstitial/PHCloseButton$Listener;
+    .local v0, "finalListener":Lv2/com/playhaven/views/interstitial/PHCloseButton$Listener;
     new-instance v1, Lv2/com/playhaven/views/interstitial/PHCloseButton$1;
 
     invoke-direct {v1, p0, v0}, Lv2/com/playhaven/views/interstitial/PHCloseButton$1;-><init>(Lv2/com/playhaven/views/interstitial/PHCloseButton;Lv2/com/playhaven/views/interstitial/PHCloseButton$Listener;)V
@@ -67,10 +67,10 @@
 
 .method public constructor <init>(Landroid/content/Context;Lv2/com/playhaven/views/interstitial/PHCloseButton$Listener;Landroid/graphics/drawable/BitmapDrawable;Landroid/graphics/drawable/BitmapDrawable;)V
     .locals 0
-    .parameter "context"
-    .parameter "listener"
-    .parameter "customActive"
-    .parameter "customInactive"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "listener"    # Lv2/com/playhaven/views/interstitial/PHCloseButton$Listener;
+    .param p3, "customActive"    # Landroid/graphics/drawable/BitmapDrawable;
+    .param p4, "customInactive"    # Landroid/graphics/drawable/BitmapDrawable;
 
     .prologue
     .line 83
@@ -97,13 +97,13 @@
     move-result-object v2
 
     .line 96
-    .local v2, dm:Landroid/util/DisplayMetrics;
+    .local v2, "dm":Landroid/util/DisplayMetrics;
     invoke-static {}, Lv2/com/playhaven/resources/PHResourceManager;->sharedResourceManager()Lv2/com/playhaven/resources/PHResourceManager;
 
     move-result-object v5
 
     .line 100
-    .local v5, rm:Lv2/com/playhaven/resources/PHResourceManager;
+    .local v5, "rm":Lv2/com/playhaven/resources/PHResourceManager;
     const-string v6, "close_inactive"
 
     invoke-virtual {v5, v6}, Lv2/com/playhaven/resources/PHResourceManager;->getResource(Ljava/lang/String;)Lv2/com/playhaven/resources/types/PHResource;
@@ -113,7 +113,7 @@
     check-cast v4, Lv2/com/playhaven/resources/data/PHCloseImageResource;
 
     .line 102
-    .local v4, inactiveRes:Lv2/com/playhaven/resources/data/PHCloseImageResource;
+    .local v4, "inactiveRes":Lv2/com/playhaven/resources/data/PHCloseImageResource;
     const-string v6, "close_active"
 
     invoke-virtual {v5, v6}, Lv2/com/playhaven/resources/PHResourceManager;->getResource(Ljava/lang/String;)Lv2/com/playhaven/resources/types/PHResource;
@@ -123,7 +123,7 @@
     check-cast v1, Lv2/com/playhaven/resources/data/PHCloseActiveImageResource;
 
     .line 104
-    .local v1, active_res:Lv2/com/playhaven/resources/data/PHCloseActiveImageResource;
+    .local v1, "active_res":Lv2/com/playhaven/resources/data/PHCloseActiveImageResource;
     new-instance v3, Landroid/graphics/drawable/BitmapDrawable;
 
     invoke-virtual {p0}, Lv2/com/playhaven/views/interstitial/PHCloseButton;->getResources()Landroid/content/res/Resources;
@@ -139,7 +139,7 @@
     invoke-direct {v3, v6, v7}, Landroid/graphics/drawable/BitmapDrawable;-><init>(Landroid/content/res/Resources;Landroid/graphics/Bitmap;)V
 
     .line 106
-    .local v3, inactive:Landroid/graphics/drawable/BitmapDrawable;
+    .local v3, "inactive":Landroid/graphics/drawable/BitmapDrawable;
     new-instance v0, Landroid/graphics/drawable/BitmapDrawable;
 
     invoke-virtual {p0}, Lv2/com/playhaven/views/interstitial/PHCloseButton;->getResources()Landroid/content/res/Resources;
@@ -155,7 +155,7 @@
     invoke-direct {v0, v6, v7}, Landroid/graphics/drawable/BitmapDrawable;-><init>(Landroid/content/res/Resources;Landroid/graphics/Bitmap;)V
 
     .line 108
-    .local v0, active:Landroid/graphics/drawable/BitmapDrawable;
+    .local v0, "active":Landroid/graphics/drawable/BitmapDrawable;
     invoke-direct {p0, v0, v3}, Lv2/com/playhaven/views/interstitial/PHCloseButton;->setActiveAndInactive(Landroid/graphics/drawable/BitmapDrawable;Landroid/graphics/drawable/BitmapDrawable;)V
 
     .line 109
@@ -164,8 +164,8 @@
 
 .method private setActiveAndInactive(Landroid/graphics/drawable/BitmapDrawable;Landroid/graphics/drawable/BitmapDrawable;)V
     .locals 5
-    .parameter "active"
-    .parameter "inactive"
+    .param p1, "active"    # Landroid/graphics/drawable/BitmapDrawable;
+    .param p2, "inactive"    # Landroid/graphics/drawable/BitmapDrawable;
 
     .prologue
     const/4 v4, 0x1
@@ -178,7 +178,7 @@
     invoke-direct {v0}, Landroid/graphics/drawable/StateListDrawable;-><init>()V
 
     .line 116
-    .local v0, states:Landroid/graphics/drawable/StateListDrawable;
+    .local v0, "states":Landroid/graphics/drawable/StateListDrawable;
     new-array v1, v4, [I
 
     sget-object v2, Lv2/com/playhaven/views/interstitial/PHCloseButton$CloseButtonState;->Down:Lv2/com/playhaven/views/interstitial/PHCloseButton$CloseButtonState;

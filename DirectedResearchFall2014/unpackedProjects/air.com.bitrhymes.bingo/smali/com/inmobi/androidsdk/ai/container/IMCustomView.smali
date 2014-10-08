@@ -40,7 +40,6 @@
 # direct methods
 .method private constructor <init>(Landroid/content/Context;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 28
@@ -52,14 +51,11 @@
 
 .method public constructor <init>(Landroid/content/Context;FLcom/inmobi/androidsdk/ai/container/IMCustomView$SwitchIconType;)V
     .locals 4
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
-    const/high16 v3, 0x4040
+    const/high16 v3, 0x40400000
 
-    const/high16 v2, 0x4000
+    const/high16 v2, 0x40000000
 
     .line 32
     invoke-direct {p0, p1}, Lcom/inmobi/androidsdk/ai/container/IMCustomView;-><init>(Landroid/content/Context;)V
@@ -76,7 +72,7 @@
     iput v0, p0, Lcom/inmobi/androidsdk/ai/container/IMCustomView;->g:I
 
     .line 36
-    const/high16 v0, 0x4248
+    const/high16 v0, 0x42480000
 
     iget v1, p0, Lcom/inmobi/androidsdk/ai/container/IMCustomView;->a:F
 
@@ -87,7 +83,7 @@
     iput v0, p0, Lcom/inmobi/androidsdk/ai/container/IMCustomView;->b:F
 
     .line 37
-    const/high16 v0, 0x41f0
+    const/high16 v0, 0x41f00000
 
     iget v1, p0, Lcom/inmobi/androidsdk/ai/container/IMCustomView;->a:F
 
@@ -309,18 +305,17 @@
 # virtual methods
 .method protected onDraw(Landroid/graphics/Canvas;)V
     .locals 9
-    .parameter
 
     .prologue
-    const/high16 v2, 0x40a0
+    const/high16 v2, 0x40a00000
 
-    const/high16 v8, -0x100
+    const/high16 v8, -0x1000000
 
-    const/high16 v6, 0x4040
+    const/high16 v6, 0x40400000
 
     const/4 v5, 0x1
 
-    const/high16 v7, 0x4000
+    const/high16 v7, 0x40000000
 
     .line 46
     invoke-super {p0, p1}, Landroid/view/View;->onDraw(Landroid/graphics/Canvas;)V
@@ -1237,7 +1232,7 @@
 
     const/4 v2, 0x0
 
-    const/high16 v3, 0x4387
+    const/high16 v3, 0x43870000
 
     const/4 v4, 0x0
 
@@ -1647,7 +1642,6 @@
 
 .method public setSwitchInt(Lcom/inmobi/androidsdk/ai/container/IMCustomView$SwitchIconType;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 149

@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m1/android/MMLayout;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 361
@@ -39,7 +38,7 @@
 # virtual methods
 .method public onClick(Landroid/view/View;)V
     .locals 1
-    .parameter "v"
+    .param p1, "v"    # Landroid/view/View;
 
     .prologue
     .line 366

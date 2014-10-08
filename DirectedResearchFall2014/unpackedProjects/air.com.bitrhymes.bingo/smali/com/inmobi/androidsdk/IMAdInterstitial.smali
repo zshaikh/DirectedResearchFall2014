@@ -51,8 +51,6 @@
 # direct methods
 .method public constructor <init>(Landroid/app/Activity;Ljava/lang/String;)V
     .locals 3
-    .parameter
-    .parameter
 
     .prologue
     .line 119
@@ -140,9 +138,6 @@
 
 .method public constructor <init>(Landroid/app/Activity;Ljava/lang/String;J)V
     .locals 3
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 142
@@ -233,7 +228,6 @@
 
 .method static synthetic a(Lcom/inmobi/androidsdk/IMAdInterstitial;)Lcom/inmobi/androidsdk/IMAdInterstitial$a;
     .locals 1
-    .parameter
 
     .prologue
     .line 658
@@ -244,8 +238,6 @@
 
 .method private a(ILcom/inmobi/androidsdk/IMAdRequest$ErrorCode;)V
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     .line 461
@@ -272,8 +264,6 @@
 
 .method private a(Landroid/app/Activity;Ljava/lang/String;)V
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     .line 152
@@ -327,9 +317,6 @@
 
 .method static synthetic a(Lcom/inmobi/androidsdk/IMAdInterstitial;ILcom/inmobi/androidsdk/IMAdRequest$ErrorCode;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 457
@@ -340,8 +327,6 @@
 
 .method static synthetic a(Lcom/inmobi/androidsdk/IMAdInterstitial;Lcom/inmobi/androidsdk/IMAdInterstitial$State;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 69
@@ -352,8 +337,6 @@
 
 .method static synthetic a(Lcom/inmobi/androidsdk/IMAdInterstitial;Lcom/inmobi/androidsdk/ai/container/IMWebView;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 79
@@ -364,8 +347,6 @@
 
 .method static synthetic a(Lcom/inmobi/androidsdk/IMAdInterstitial;Lcom/inmobi/androidsdk/impl/IMAdUnit;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 76
@@ -376,7 +357,6 @@
 
 .method private a(Lcom/inmobi/androidsdk/impl/IMAdUnit;)V
     .locals 6
-    .parameter
 
     .prologue
     const-string v3, "InMobiAndroidSDK_3.6.2"
@@ -588,7 +568,6 @@
 
 .method static synthetic b(Lcom/inmobi/androidsdk/IMAdInterstitial;)Lcom/inmobi/androidsdk/ai/container/IMWebView;
     .locals 1
-    .parameter
 
     .prologue
     .line 79
@@ -628,8 +607,6 @@
 
 .method static synthetic b(Lcom/inmobi/androidsdk/IMAdInterstitial;Lcom/inmobi/androidsdk/impl/IMAdUnit;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 533
@@ -640,7 +617,6 @@
 
 .method static synthetic c(Lcom/inmobi/androidsdk/IMAdInterstitial;)Landroid/app/Activity;
     .locals 1
-    .parameter
 
     .prologue
     .line 71
@@ -879,7 +855,6 @@
 
 .method static synthetic d(Lcom/inmobi/androidsdk/IMAdInterstitial;)Lcom/inmobi/androidsdk/ai/container/IMWebView$IMWebViewListener;
     .locals 1
-    .parameter
 
     .prologue
     .line 660
@@ -890,7 +865,6 @@
 
 .method static synthetic e(Lcom/inmobi/androidsdk/IMAdInterstitial;)Lcom/inmobi/androidsdk/impl/IMAdUnit;
     .locals 1
-    .parameter
 
     .prologue
     .line 76
@@ -901,7 +875,6 @@
 
 .method static synthetic f(Lcom/inmobi/androidsdk/IMAdInterstitial;)Lcom/inmobi/androidsdk/impl/net/IMRequestResponseManager;
     .locals 1
-    .parameter
 
     .prologue
     .line 103
@@ -912,7 +885,6 @@
 
 .method static synthetic g(Lcom/inmobi/androidsdk/IMAdInterstitial;)Lcom/inmobi/androidsdk/IMAdInterstitialListener;
     .locals 1
-    .parameter
 
     .prologue
     .line 75
@@ -923,7 +895,6 @@
 
 .method private setAdServerTestUrl(Ljava/lang/String;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 251
@@ -935,7 +906,6 @@
 
 .method private setAdServerUrl(Ljava/lang/String;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 241
@@ -1121,7 +1091,6 @@
 
 .method public loadNewAd(Lcom/inmobi/androidsdk/IMAdRequest;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 230
@@ -1136,7 +1105,6 @@
 
 .method public setAppId(Ljava/lang/String;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 415
@@ -1151,7 +1119,6 @@
 
 .method public setIMAdInterstitialListener(Lcom/inmobi/androidsdk/IMAdInterstitialListener;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 371
@@ -1163,7 +1130,6 @@
 
 .method public setIMAdRequest(Lcom/inmobi/androidsdk/IMAdRequest;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 391
@@ -1175,7 +1141,6 @@
 
 .method public setSlotId(J)V
     .locals 0
-    .parameter
 
     .prologue
     .line 436

@@ -26,9 +26,9 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Ljava/lang/String;I)V
     .locals 3
-    .parameter "context"
-    .parameter "cacheDirectoryName"
-    .parameter "maxSizeBytes"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "cacheDirectoryName"    # Ljava/lang/String;
+    .param p3, "maxSizeBytes"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/IllegalArgumentException;,
@@ -158,8 +158,8 @@
 
 .method private createFile(Ljava/lang/String;Ljava/io/InputStream;)Ljava/io/File;
     .locals 6
-    .parameter "fileName"
-    .parameter "content"
+    .param p1, "fileName"    # Ljava/lang/String;
+    .param p2, "content"    # Ljava/io/InputStream;
 
     .prologue
     const/4 v5, 0x0
@@ -210,7 +210,7 @@
     invoke-direct {v1, v3}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
     .line 91
-    .local v1, file:Ljava/io/File;
+    .local v1, "file":Ljava/io/File;
     :try_start_0
     new-instance v2, Ljava/io/FileOutputStream;
 
@@ -219,12 +219,12 @@
     .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 97
-    .local v2, fileOutputStream:Ljava/io/FileOutputStream;
+    .local v2, "fileOutputStream":Ljava/io/FileOutputStream;
     :try_start_1
     invoke-static {p2, v2}, Lcom/fusepowered/m2/m2l/util/Streams;->copyContent(Ljava/io/InputStream;Ljava/io/OutputStream;)V
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     .line 102
     invoke-static {v2}, Lcom/fusepowered/m2/m2l/util/Streams;->closeStream(Ljava/io/Closeable;)V
@@ -232,7 +232,7 @@
     move-object v3, v1
 
     .line 105
-    .end local v2           #fileOutputStream:Ljava/io/FileOutputStream;
+    .end local v2    # "fileOutputStream":Ljava/io/FileOutputStream;
     :goto_0
     return-object v3
 
@@ -242,20 +242,20 @@
 
     move-object v0, v3
 
-    .local v0, e:Ljava/io/FileNotFoundException;
+    .local v0, "e":Ljava/io/FileNotFoundException;
     move-object v3, v5
 
     .line 93
     goto :goto_0
 
     .line 98
-    .end local v0           #e:Ljava/io/FileNotFoundException;
-    .restart local v2       #fileOutputStream:Ljava/io/FileOutputStream;
+    .end local v0    # "e":Ljava/io/FileNotFoundException;
+    .restart local v2    # "fileOutputStream":Ljava/io/FileOutputStream;
     :catch_1
     move-exception v0
 
     .line 99
-    .local v0, e:Ljava/io/IOException;
+    .local v0, "e":Ljava/io/IOException;
     :try_start_2
     invoke-virtual {v1}, Ljava/io/File;->delete()Z
     :try_end_2
@@ -270,7 +270,7 @@
     goto :goto_0
 
     .line 101
-    .end local v0           #e:Ljava/io/IOException;
+    .end local v0    # "e":Ljava/io/IOException;
     :catchall_0
     move-exception v3
 
@@ -293,7 +293,7 @@
     move-result-object v0
 
     .line 111
-    .local v0, allFiles:[Ljava/io/File;
+    .local v0, "allFiles":[Ljava/io/File;
     if-eqz v0, :cond_0
 
     .line 112
@@ -313,7 +313,7 @@
     aget-object v1, v0, v3
 
     .line 113
-    .local v1, file:Ljava/io/File;
+    .local v1, "file":Ljava/io/File;
     invoke-virtual {v1}, Ljava/io/File;->getName()Ljava/lang/String;
 
     move-result-object v4
@@ -330,10 +330,6 @@
 # virtual methods
 .method protected bridge synthetic entryRemoved(ZLjava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 1
@@ -350,10 +346,10 @@
 
 .method protected entryRemoved(ZLjava/lang/String;Ljava/io/File;Ljava/io/File;)V
     .locals 3
-    .parameter "evicted"
-    .parameter "key"
-    .parameter "oldValue"
-    .parameter "newValue"
+    .param p1, "evicted"    # Z
+    .param p2, "key"    # Ljava/lang/String;
+    .param p3, "oldValue"    # Ljava/io/File;
+    .param p4, "newValue"    # Ljava/io/File;
 
     .prologue
     .line 124
@@ -409,7 +405,7 @@
 
 .method getUri(Ljava/lang/String;)Landroid/net/Uri;
     .locals 2
-    .parameter "key"
+    .param p1, "key"    # Ljava/lang/String;
 
     .prologue
     .line 48
@@ -424,7 +420,7 @@
     check-cast v0, Ljava/io/File;
 
     .line 50
-    .local v0, value:Ljava/io/File;
+    .local v0, "value":Ljava/io/File;
     if-nez v0, :cond_0
 
     .line 51
@@ -448,8 +444,8 @@
 
 .method declared-synchronized putStream(Ljava/lang/String;Ljava/io/InputStream;)Z
     .locals 4
-    .parameter "fileName"
-    .parameter "content"
+    .param p1, "fileName"    # Ljava/lang/String;
+    .param p2, "content"    # Ljava/io/InputStream;
 
     .prologue
     const/4 v3, 0x0
@@ -478,7 +474,7 @@
     move-result-object v1
 
     .line 64
-    .local v1, hashedFileName:Ljava/lang/String;
+    .local v1, "hashedFileName":Ljava/lang/String;
     invoke-virtual {p0, v1}, Lcom/fusepowered/m2/m2l/DiskLruCache;->getUri(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v2
@@ -497,7 +493,7 @@
     move-result-object v0
 
     .line 70
-    .local v0, file:Ljava/io/File;
+    .local v0, "file":Ljava/io/File;
     if-eqz v0, :cond_3
 
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
@@ -524,8 +520,8 @@
     goto :goto_0
 
     .line 58
-    .end local v0           #file:Ljava/io/File;
-    .end local v1           #hashedFileName:Ljava/lang/String;
+    .end local v0    # "file":Ljava/io/File;
+    .end local v1    # "hashedFileName":Ljava/lang/String;
     :catchall_0
     move-exception v2
 
@@ -536,7 +532,7 @@
 
 .method declared-synchronized removeStream(Ljava/lang/String;)Ljava/io/File;
     .locals 1
-    .parameter "fileName"
+    .param p1, "fileName"    # Ljava/lang/String;
 
     .prologue
     .line 79
@@ -580,8 +576,6 @@
 
 .method protected bridge synthetic sizeOf(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 1
@@ -598,8 +592,8 @@
 
 .method protected sizeOf(Ljava/lang/String;Ljava/io/File;)I
     .locals 4
-    .parameter "key"
-    .parameter "value"
+    .param p1, "key"    # Ljava/lang/String;
+    .param p2, "value"    # Ljava/io/File;
 
     .prologue
     .line 135

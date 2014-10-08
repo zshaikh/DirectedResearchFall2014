@@ -21,7 +21,6 @@
 # direct methods
 .method constructor <init>(Lcom/vungle/sdk/VungleAdvert;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 653

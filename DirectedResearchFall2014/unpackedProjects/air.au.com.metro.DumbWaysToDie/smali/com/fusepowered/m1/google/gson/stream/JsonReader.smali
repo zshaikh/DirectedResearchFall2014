@@ -9,7 +9,7 @@
 # static fields
 .field private static final MIN_INCOMPLETE_INTEGER:J = -0xcccccccccccccccL
 
-.field private static final NON_EXECUTE_PREFIX:[C = null
+.field private static final NON_EXECUTE_PREFIX:[C
 
 .field private static final NUMBER_CHAR_DECIMAL:I = 0x3
 
@@ -119,7 +119,7 @@
 
 .method public constructor <init>(Ljava/io/Reader;)V
     .locals 3
-    .parameter "in"
+    .param p1, "in"    # Ljava/io/Reader;
 
     .prologue
     const/4 v1, 0x0
@@ -197,7 +197,7 @@
 
 .method static synthetic access$000(Lcom/fusepowered/m1/google/gson/stream/JsonReader;)I
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/fusepowered/m1/google/gson/stream/JsonReader;
 
     .prologue
     .line 191
@@ -208,8 +208,8 @@
 
 .method static synthetic access$002(Lcom/fusepowered/m1/google/gson/stream/JsonReader;I)I
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
+    .param p0, "x0"    # Lcom/fusepowered/m1/google/gson/stream/JsonReader;
+    .param p1, "x1"    # I
 
     .prologue
     .line 191
@@ -220,7 +220,7 @@
 
 .method static synthetic access$100(Lcom/fusepowered/m1/google/gson/stream/JsonReader;)I
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/fusepowered/m1/google/gson/stream/JsonReader;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -238,7 +238,7 @@
 
 .method static synthetic access$200(Lcom/fusepowered/m1/google/gson/stream/JsonReader;)I
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/fusepowered/m1/google/gson/stream/JsonReader;
 
     .prologue
     .line 191
@@ -251,7 +251,7 @@
 
 .method static synthetic access$300(Lcom/fusepowered/m1/google/gson/stream/JsonReader;)I
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/fusepowered/m1/google/gson/stream/JsonReader;
 
     .prologue
     .line 191
@@ -343,7 +343,7 @@
     :cond_1
     const/4 v0, 0x0
 
-    .local v0, i:I
+    .local v0, "i":I
     :goto_1
     sget-object v1, Lcom/fusepowered/m1/google/gson/stream/JsonReader;->NON_EXECUTE_PREFIX:[C
 
@@ -415,7 +415,7 @@
     aget v1, v3, v4
 
     .line 453
-    .local v1, peekStack:I
+    .local v1, "peekStack":I
     if-ne v1, v5, :cond_2
 
     .line 454
@@ -437,7 +437,7 @@
     move-result v0
 
     .line 540
-    .local v0, c:I
+    .local v0, "c":I
     sparse-switch v0, :sswitch_data_0
 
     .line 569
@@ -462,18 +462,18 @@
     move-result v2
 
     .line 577
-    .local v2, result:I
+    .local v2, "result":I
     if-eqz v2, :cond_13
 
     move v3, v2
 
     .line 591
-    .end local v2           #result:I
+    .end local v2    # "result":I
     :goto_1
     return v3
 
     .line 455
-    .end local v0           #c:I
+    .end local v0    # "c":I
     :cond_2
     if-ne v1, v6, :cond_3
 
@@ -483,7 +483,7 @@
     move-result v0
 
     .line 458
-    .restart local v0       #c:I
+    .restart local v0    # "c":I
     sparse-switch v0, :sswitch_data_1
 
     .line 466
@@ -510,7 +510,7 @@
     goto :goto_0
 
     .line 468
-    .end local v0           #c:I
+    .end local v0    # "c":I
     :cond_3
     const/4 v3, 0x3
 
@@ -537,7 +537,7 @@
     move-result v0
 
     .line 473
-    .restart local v0       #c:I
+    .restart local v0    # "c":I
     sparse-switch v0, :sswitch_data_2
 
     .line 481
@@ -562,7 +562,7 @@
     invoke-direct {p0}, Lcom/fusepowered/m1/google/gson/stream/JsonReader;->checkLenient()V
 
     .line 484
-    .end local v0           #c:I
+    .end local v0    # "c":I
     :cond_5
     :sswitch_5
     invoke-direct {p0, v5}, Lcom/fusepowered/m1/google/gson/stream/JsonReader;->nextNonWhitespace(Z)I
@@ -570,7 +570,7 @@
     move-result v0
 
     .line 485
-    .restart local v0       #c:I
+    .restart local v0    # "c":I
     sparse-switch v0, :sswitch_data_3
 
     .line 498
@@ -650,7 +650,7 @@
     throw v3
 
     .line 506
-    .end local v0           #c:I
+    .end local v0    # "c":I
     :cond_8
     if-ne v1, v7, :cond_a
 
@@ -669,7 +669,7 @@
     move-result v0
 
     .line 510
-    .restart local v0       #c:I
+    .restart local v0    # "c":I
     packed-switch v0, :pswitch_data_0
 
     .line 520
@@ -720,7 +720,7 @@
     goto/16 :goto_0
 
     .line 522
-    .end local v0           #c:I
+    .end local v0    # "c":I
     :cond_a
     const/4 v3, 0x6
 
@@ -758,7 +758,7 @@
     move-result v0
 
     .line 529
-    .restart local v0       #c:I
+    .restart local v0    # "c":I
     const/4 v3, -0x1
 
     if-ne v0, v3, :cond_d
@@ -784,7 +784,7 @@
     goto/16 :goto_0
 
     .line 535
-    .end local v0           #c:I
+    .end local v0    # "c":I
     :cond_e
     const/16 v3, 0x8
 
@@ -800,7 +800,7 @@
     throw v3
 
     .line 542
-    .restart local v0       #c:I
+    .restart local v0    # "c":I
     :sswitch_9
     if-ne v1, v5, :cond_f
 
@@ -891,7 +891,7 @@
     goto/16 :goto_1
 
     .line 581
-    .restart local v2       #result:I
+    .restart local v2    # "result":I
     :cond_13
     invoke-direct {p0}, Lcom/fusepowered/m1/google/gson/stream/JsonReader;->peekNumber()I
 
@@ -987,7 +987,7 @@
 
 .method private fillBuffer(I)Z
     .locals 7
-    .parameter "minimum"
+    .param p1, "minimum"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -1001,7 +1001,7 @@
     iget-object v0, p0, Lcom/fusepowered/m1/google/gson/stream/JsonReader;->buffer:[C
 
     .line 1254
-    .local v0, buffer:[C
+    .local v0, "buffer":[C
     iget v2, p0, Lcom/fusepowered/m1/google/gson/stream/JsonReader;->lineStart:I
 
     iget v3, p0, Lcom/fusepowered/m1/google/gson/stream/JsonReader;->pos:I
@@ -1053,7 +1053,7 @@
 
     move-result v1
 
-    .local v1, total:I
+    .local v1, "total":I
     const/4 v2, -0x1
 
     if-eq v1, v2, :cond_3
@@ -1115,13 +1115,13 @@
     return v2
 
     .line 1259
-    .end local v1           #total:I
+    .end local v1    # "total":I
     :cond_2
     iput v6, p0, Lcom/fusepowered/m1/google/gson/stream/JsonReader;->limit:I
 
     goto :goto_0
 
-    .restart local v1       #total:I
+    .restart local v1    # "total":I
     :cond_3
     move v2, v6
 
@@ -1159,7 +1159,7 @@
 
 .method private isLiteral(C)Z
     .locals 1
-    .parameter "c"
+    .param p1, "c"    # C
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -1210,7 +1210,7 @@
 
 .method private nextNonWhitespace(Z)I
     .locals 10
-    .parameter "throwOnEof"
+    .param p1, "throwOnEof"    # Z
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -1224,15 +1224,15 @@
     iget-object v0, p0, Lcom/fusepowered/m1/google/gson/stream/JsonReader;->buffer:[C
 
     .line 1305
-    .local v0, buffer:[C
+    .local v0, "buffer":[C
     iget v4, p0, Lcom/fusepowered/m1/google/gson/stream/JsonReader;->pos:I
 
     .line 1306
-    .local v4, p:I
+    .local v4, "p":I
     iget v3, p0, Lcom/fusepowered/m1/google/gson/stream/JsonReader;->limit:I
 
     .line 1308
-    .local v3, l:I
+    .local v3, "l":I
     :goto_0
     if-ne v4, v3, :cond_1
 
@@ -1303,12 +1303,12 @@
     :cond_1
     add-int/lit8 v5, v4, 0x1
 
-    .end local v4           #p:I
-    .local v5, p:I
+    .end local v4    # "p":I
+    .local v5, "p":I
     aget-char v1, v0, v4
 
     .line 1318
-    .local v1, c:I
+    .local v1, "c":I
     const/16 v7, 0xa
 
     if-ne v1, v7, :cond_2
@@ -1326,13 +1326,13 @@
     move v4, v5
 
     .line 1321
-    .end local v5           #p:I
-    .restart local v4       #p:I
+    .end local v5    # "p":I
+    .restart local v4    # "p":I
     goto :goto_0
 
     .line 1322
-    .end local v4           #p:I
-    .restart local v5       #p:I
+    .end local v4    # "p":I
+    .restart local v5    # "p":I
     :cond_2
     const/16 v7, 0x20
 
@@ -1349,13 +1349,13 @@
     move v4, v5
 
     .line 1323
-    .end local v5           #p:I
-    .restart local v4       #p:I
+    .end local v5    # "p":I
+    .restart local v4    # "p":I
     goto :goto_0
 
     .line 1326
-    .end local v4           #p:I
-    .restart local v5       #p:I
+    .end local v4    # "p":I
+    .restart local v5    # "p":I
     :cond_3
     const/16 v7, 0x2f
 
@@ -1382,7 +1382,7 @@
     move-result v2
 
     .line 1331
-    .local v2, charsLoaded:Z
+    .local v2, "charsLoaded":Z
     iget v7, p0, Lcom/fusepowered/m1/google/gson/stream/JsonReader;->pos:I
 
     add-int/lit8 v7, v7, 0x1
@@ -1394,20 +1394,20 @@
 
     move v4, v5
 
-    .end local v5           #p:I
-    .restart local v4       #p:I
+    .end local v5    # "p":I
+    .restart local v4    # "p":I
     move v7, v1
 
     .line 1381
-    .end local v1           #c:I
-    .end local v2           #charsLoaded:Z
+    .end local v1    # "c":I
+    .end local v2    # "charsLoaded":Z
     :goto_1
     return v7
 
     .line 1337
-    .end local v4           #p:I
-    .restart local v1       #c:I
-    .restart local v5       #p:I
+    .end local v4    # "p":I
+    .restart local v1    # "c":I
+    .restart local v5    # "p":I
     :cond_4
     invoke-direct {p0}, Lcom/fusepowered/m1/google/gson/stream/JsonReader;->checkLenient()V
 
@@ -1417,21 +1417,21 @@
     aget-char v6, v0, v7
 
     .line 1339
-    .local v6, peek:C
+    .local v6, "peek":C
     sparse-switch v6, :sswitch_data_0
 
     move v4, v5
 
-    .end local v5           #p:I
-    .restart local v4       #p:I
+    .end local v5    # "p":I
+    .restart local v4    # "p":I
     move v7, v1
 
     .line 1359
     goto :goto_1
 
     .line 1342
-    .end local v4           #p:I
-    .restart local v5       #p:I
+    .end local v4    # "p":I
+    .restart local v5    # "p":I
     :sswitch_0
     iget v7, p0, Lcom/fusepowered/m1/google/gson/stream/JsonReader;->pos:I
 
@@ -1464,16 +1464,16 @@
     add-int/lit8 v4, v7, 0x2
 
     .line 1347
-    .end local v5           #p:I
-    .restart local v4       #p:I
+    .end local v5    # "p":I
+    .restart local v4    # "p":I
     iget v3, p0, Lcom/fusepowered/m1/google/gson/stream/JsonReader;->limit:I
 
     .line 1348
     goto/16 :goto_0
 
     .line 1352
-    .end local v4           #p:I
-    .restart local v5       #p:I
+    .end local v4    # "p":I
+    .restart local v5    # "p":I
     :sswitch_1
     iget v7, p0, Lcom/fusepowered/m1/google/gson/stream/JsonReader;->pos:I
 
@@ -1488,17 +1488,17 @@
     iget v4, p0, Lcom/fusepowered/m1/google/gson/stream/JsonReader;->pos:I
 
     .line 1355
-    .end local v5           #p:I
-    .restart local v4       #p:I
+    .end local v5    # "p":I
+    .restart local v4    # "p":I
     iget v3, p0, Lcom/fusepowered/m1/google/gson/stream/JsonReader;->limit:I
 
     .line 1356
     goto/16 :goto_0
 
     .line 1361
-    .end local v4           #p:I
-    .end local v6           #peek:C
-    .restart local v5       #p:I
+    .end local v4    # "p":I
+    .end local v6    # "peek":C
+    .restart local v5    # "p":I
     :cond_6
     const/16 v7, 0x23
 
@@ -1517,42 +1517,42 @@
     iget v4, p0, Lcom/fusepowered/m1/google/gson/stream/JsonReader;->pos:I
 
     .line 1371
-    .end local v5           #p:I
-    .restart local v4       #p:I
+    .end local v5    # "p":I
+    .restart local v4    # "p":I
     iget v3, p0, Lcom/fusepowered/m1/google/gson/stream/JsonReader;->limit:I
 
     goto/16 :goto_0
 
     .line 1373
-    .end local v4           #p:I
-    .restart local v5       #p:I
+    .end local v4    # "p":I
+    .restart local v5    # "p":I
     :cond_7
     iput v5, p0, Lcom/fusepowered/m1/google/gson/stream/JsonReader;->pos:I
 
     move v4, v5
 
-    .end local v5           #p:I
-    .restart local v4       #p:I
+    .end local v5    # "p":I
+    .restart local v4    # "p":I
     move v7, v1
 
     .line 1374
     goto :goto_1
 
     .line 1381
-    .end local v1           #c:I
+    .end local v1    # "c":I
     :cond_8
     const/4 v7, -0x1
 
     goto :goto_1
 
-    .end local v4           #p:I
-    .restart local v1       #c:I
-    .restart local v5       #p:I
+    .end local v4    # "p":I
+    .restart local v1    # "c":I
+    .restart local v5    # "p":I
     :cond_9
     move v4, v5
 
-    .end local v5           #p:I
-    .restart local v4       #p:I
+    .end local v5    # "p":I
+    .restart local v4    # "p":I
     goto/16 :goto_0
 
     .line 1339
@@ -1565,7 +1565,7 @@
 
 .method private nextQuotedValue(C)Ljava/lang/String;
     .locals 9
-    .parameter "quote"
+    .param p1, "quote"    # C
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -1579,42 +1579,42 @@
     iget-object v0, p0, Lcom/fusepowered/m1/google/gson/stream/JsonReader;->buffer:[C
 
     .line 978
-    .local v0, buffer:[C
+    .local v0, "buffer":[C
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
     .line 980
-    .local v1, builder:Ljava/lang/StringBuilder;
+    .local v1, "builder":Ljava/lang/StringBuilder;
     :cond_0
     iget v4, p0, Lcom/fusepowered/m1/google/gson/stream/JsonReader;->pos:I
 
     .line 981
-    .local v4, p:I
+    .local v4, "p":I
     iget v3, p0, Lcom/fusepowered/m1/google/gson/stream/JsonReader;->limit:I
 
     .line 983
-    .local v3, l:I
+    .local v3, "l":I
     move v6, v4
 
-    .local v6, start:I
+    .local v6, "start":I
     move v5, v4
 
     .line 984
-    .end local v4           #p:I
-    .local v5, p:I
+    .end local v4    # "p":I
+    .local v5, "p":I
     :goto_0
     if-ge v5, v3, :cond_4
 
     .line 985
     add-int/lit8 v4, v5, 0x1
 
-    .end local v5           #p:I
-    .restart local v4       #p:I
+    .end local v5    # "p":I
+    .restart local v4    # "p":I
     aget-char v2, v0, v5
 
     .line 987
-    .local v2, c:I
+    .local v2, "c":I
     if-ne v2, p1, :cond_1
 
     .line 988
@@ -1671,13 +1671,13 @@
     move v5, v4
 
     .line 1002
-    .end local v4           #p:I
-    .restart local v5       #p:I
+    .end local v4    # "p":I
+    .restart local v5    # "p":I
     goto :goto_0
 
     .line 998
-    .end local v5           #p:I
-    .restart local v4       #p:I
+    .end local v5    # "p":I
+    .restart local v4    # "p":I
     :cond_3
     const/16 v7, 0xa
 
@@ -1696,9 +1696,9 @@
     goto :goto_1
 
     .line 1004
-    .end local v2           #c:I
-    .end local v4           #p:I
-    .restart local v5       #p:I
+    .end local v2    # "c":I
+    .end local v4    # "p":I
+    .restart local v5    # "p":I
     :cond_4
     sub-int v7, v5, v6
 
@@ -1737,11 +1737,11 @@
     const/4 v0, 0x0
 
     .line 1018
-    .local v0, builder:Ljava/lang/StringBuilder;
+    .local v0, "builder":Ljava/lang/StringBuilder;
     const/4 v1, 0x0
 
     .line 1022
-    .local v1, i:I
+    .local v1, "i":I
     :cond_0
     :goto_0
     iget v3, p0, Lcom/fusepowered/m1/google/gson/stream/JsonReader;->pos:I
@@ -1788,7 +1788,7 @@
     invoke-direct {v2, v3, v4, v1}, Ljava/lang/String;-><init>([CII)V
 
     .line 1073
-    .local v2, result:Ljava/lang/String;
+    .local v2, "result":Ljava/lang/String;
     :goto_2
     iget v3, p0, Lcom/fusepowered/m1/google/gson/stream/JsonReader;->pos:I
 
@@ -1800,7 +1800,7 @@
     return-object v2
 
     .line 1046
-    .end local v2           #result:Ljava/lang/String;
+    .end local v2    # "result":Ljava/lang/String;
     :cond_2
     iget-object v3, p0, Lcom/fusepowered/m1/google/gson/stream/JsonReader;->buffer:[C
 
@@ -1826,11 +1826,11 @@
     .line 1056
     new-instance v0, Ljava/lang/StringBuilder;
 
-    .end local v0           #builder:Ljava/lang/StringBuilder;
+    .end local v0    # "builder":Ljava/lang/StringBuilder;
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     .line 1058
-    .restart local v0       #builder:Ljava/lang/StringBuilder;
+    .restart local v0    # "builder":Ljava/lang/StringBuilder;
     :cond_4
     iget-object v3, p0, Lcom/fusepowered/m1/google/gson/stream/JsonReader;->buffer:[C
 
@@ -1872,7 +1872,7 @@
 
     move-result-object v2
 
-    .restart local v2       #result:Ljava/lang/String;
+    .restart local v2    # "result":Ljava/lang/String;
     goto :goto_2
 
     .line 1023
@@ -1916,7 +1916,7 @@
     aget-char v0, v6, v7
 
     .line 600
-    .local v0, c:C
+    .local v0, "c":C
     const/16 v6, 0x74
 
     if-eq v0, v6, :cond_0
@@ -1930,25 +1930,25 @@
     const-string v2, "true"
 
     .line 602
-    .local v2, keyword:Ljava/lang/String;
+    .local v2, "keyword":Ljava/lang/String;
     const-string v3, "TRUE"
 
     .line 603
-    .local v3, keywordUpper:Ljava/lang/String;
+    .local v3, "keywordUpper":Ljava/lang/String;
     const/4 v5, 0x5
 
     .line 617
-    .local v5, peeking:I
+    .local v5, "peeking":I
     :goto_0
     invoke-virtual {v2}, Ljava/lang/String;->length()I
 
     move-result v4
 
     .line 618
-    .local v4, length:I
+    .local v4, "length":I
     const/4 v1, 0x1
 
-    .local v1, i:I
+    .local v1, "i":I
     :goto_1
     if-ge v1, v4, :cond_8
 
@@ -1972,11 +1972,11 @@
     move v6, v8
 
     .line 635
-    .end local v1           #i:I
-    .end local v2           #keyword:Ljava/lang/String;
-    .end local v3           #keywordUpper:Ljava/lang/String;
-    .end local v4           #length:I
-    .end local v5           #peeking:I
+    .end local v1    # "i":I
+    .end local v2    # "keyword":Ljava/lang/String;
+    .end local v3    # "keywordUpper":Ljava/lang/String;
+    .end local v4    # "length":I
+    .end local v5    # "peeking":I
     :goto_2
     return v6
 
@@ -1995,20 +1995,20 @@
     const-string v2, "false"
 
     .line 606
-    .restart local v2       #keyword:Ljava/lang/String;
+    .restart local v2    # "keyword":Ljava/lang/String;
     const-string v3, "FALSE"
 
     .line 607
-    .restart local v3       #keywordUpper:Ljava/lang/String;
+    .restart local v3    # "keywordUpper":Ljava/lang/String;
     const/4 v5, 0x6
 
-    .restart local v5       #peeking:I
+    .restart local v5    # "peeking":I
     goto :goto_0
 
     .line 608
-    .end local v2           #keyword:Ljava/lang/String;
-    .end local v3           #keywordUpper:Ljava/lang/String;
-    .end local v5           #peeking:I
+    .end local v2    # "keyword":Ljava/lang/String;
+    .end local v3    # "keywordUpper":Ljava/lang/String;
+    .end local v5    # "peeking":I
     :cond_3
     const/16 v6, 0x6e
 
@@ -2023,19 +2023,19 @@
     const-string v2, "null"
 
     .line 610
-    .restart local v2       #keyword:Ljava/lang/String;
+    .restart local v2    # "keyword":Ljava/lang/String;
     const-string v3, "NULL"
 
     .line 611
-    .restart local v3       #keywordUpper:Ljava/lang/String;
+    .restart local v3    # "keywordUpper":Ljava/lang/String;
     const/4 v5, 0x7
 
-    .restart local v5       #peeking:I
+    .restart local v5    # "peeking":I
     goto :goto_0
 
-    .end local v2           #keyword:Ljava/lang/String;
-    .end local v3           #keywordUpper:Ljava/lang/String;
-    .end local v5           #peeking:I
+    .end local v2    # "keyword":Ljava/lang/String;
+    .end local v3    # "keywordUpper":Ljava/lang/String;
+    .end local v5    # "peeking":I
     :cond_5
     move v6, v8
 
@@ -2043,11 +2043,11 @@
     goto :goto_2
 
     .line 622
-    .restart local v1       #i:I
-    .restart local v2       #keyword:Ljava/lang/String;
-    .restart local v3       #keywordUpper:Ljava/lang/String;
-    .restart local v4       #length:I
-    .restart local v5       #peeking:I
+    .restart local v1    # "i":I
+    .restart local v2    # "keyword":Ljava/lang/String;
+    .restart local v3    # "keywordUpper":Ljava/lang/String;
+    .restart local v4    # "length":I
+    .restart local v5    # "peeking":I
     :cond_6
     iget-object v6, p0, Lcom/fusepowered/m1/google/gson/stream/JsonReader;->buffer:[C
 
@@ -2152,7 +2152,7 @@
     move-object v3, v0
 
     .line 641
-    .local v3, buffer:[C
+    .local v3, "buffer":[C
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/fusepowered/m1/google/gson/stream/JsonReader;->pos:I
@@ -2160,7 +2160,7 @@
     move v12, v0
 
     .line 642
-    .local v12, p:I
+    .local v12, "p":I
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/fusepowered/m1/google/gson/stream/JsonReader;->limit:I
@@ -2168,27 +2168,27 @@
     move v7, v0
 
     .line 644
-    .local v7, l:I
+    .local v7, "l":I
     const-wide/16 v13, 0x0
 
     .line 645
-    .local v13, value:J
+    .local v13, "value":J
     const/4 v9, 0x0
 
     .line 646
-    .local v9, negative:Z
+    .local v9, "negative":Z
     const/4 v5, 0x1
 
     .line 647
-    .local v5, fitsInLong:Z
+    .local v5, "fitsInLong":Z
     const/4 v8, 0x0
 
     .line 649
-    .local v8, last:I
+    .local v8, "last":I
     const/4 v6, 0x0
 
     .line 653
-    .local v6, i:I
+    .local v6, "i":I
     :goto_0
     add-int v15, v12, v6
 
@@ -2228,7 +2228,7 @@
 
     if-eqz v5, :cond_17
 
-    const-wide/high16 v15, -0x8000
+    const-wide/high16 v15, -0x8000000000000000L
 
     cmp-long v15, v13, v15
 
@@ -2297,7 +2297,7 @@
     aget-char v4, v3, v15
 
     .line 667
-    .local v4, c:C
+    .local v4, "c":C
     sparse-switch v4, :sswitch_data_0
 
     .line 702
@@ -2480,7 +2480,7 @@
     sub-long v10, v15, v17
 
     .line 716
-    .local v10, newValue:J
+    .local v10, "newValue":J
     const-wide v15, -0xcccccccccccccccL
 
     cmp-long v15, v13, v15
@@ -2516,7 +2516,7 @@
     goto :goto_4
 
     .line 719
-    .end local v10           #newValue:J
+    .end local v10    # "newValue":J
     :cond_13
     const/4 v15, 0x3
 
@@ -2544,7 +2544,7 @@
     goto :goto_3
 
     .line 729
-    .end local v4           #c:C
+    .end local v4    # "c":C
     :cond_16
     neg-long v15, v13
 
@@ -2602,7 +2602,7 @@
 
 .method private push(I)V
     .locals 4
-    .parameter "newTop"
+    .param p1, "newTop"    # I
 
     .prologue
     const/4 v3, 0x0
@@ -2624,7 +2624,7 @@
     new-array v0, v1, [I
 
     .line 1241
-    .local v0, newStack:[I
+    .local v0, "newStack":[I
     iget-object v1, p0, Lcom/fusepowered/m1/google/gson/stream/JsonReader;->stack:[I
 
     iget v2, p0, Lcom/fusepowered/m1/google/gson/stream/JsonReader;->stackSize:I
@@ -2635,7 +2635,7 @@
     iput-object v0, p0, Lcom/fusepowered/m1/google/gson/stream/JsonReader;->stack:[I
 
     .line 1244
-    .end local v0           #newStack:[I
+    .end local v0    # "newStack":[I
     :cond_0
     iget-object v1, p0, Lcom/fusepowered/m1/google/gson/stream/JsonReader;->stack:[I
 
@@ -2707,7 +2707,7 @@
     aget-char v2, v5, v6
 
     .line 1450
-    .local v2, escaped:C
+    .local v2, "escaped":C
     sparse-switch v2, :sswitch_data_0
 
     :goto_0
@@ -2747,13 +2747,13 @@
     const/4 v4, 0x0
 
     .line 1457
-    .local v4, result:C
+    .local v4, "result":C
     iget v3, p0, Lcom/fusepowered/m1/google/gson/stream/JsonReader;->pos:I
 
-    .local v3, i:I
+    .local v3, "i":I
     add-int/lit8 v1, v3, 0x4
 
-    .local v1, end:I
+    .local v1, "end":I
     :goto_2
     if-ge v3, v1, :cond_5
 
@@ -2763,7 +2763,7 @@
     aget-char v0, v5, v3
 
     .line 1459
-    .local v0, c:C
+    .local v0, "c":C
     shl-int/lit8 v5, v4, 0x4
 
     int-to-char v4, v5
@@ -2861,7 +2861,7 @@
     throw v5
 
     .line 1470
-    .end local v0           #c:C
+    .end local v0    # "c":C
     :cond_5
     iget v5, p0, Lcom/fusepowered/m1/google/gson/stream/JsonReader;->pos:I
 
@@ -2875,9 +2875,9 @@
     goto :goto_1
 
     .line 1474
-    .end local v1           #end:I
-    .end local v3           #i:I
-    .end local v4           #result:C
+    .end local v1    # "end":I
+    .end local v3    # "i":I
+    .end local v4    # "result":C
     :sswitch_1
     const/16 v5, 0x9
 
@@ -2937,7 +2937,7 @@
 
 .method private skipQuotedValue(C)V
     .locals 6
-    .parameter "quote"
+    .param p1, "quote"    # C
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -2949,32 +2949,32 @@
     iget-object v0, p0, Lcom/fusepowered/m1/google/gson/stream/JsonReader;->buffer:[C
 
     .line 1081
-    .local v0, buffer:[C
+    .local v0, "buffer":[C
     :cond_0
     iget v3, p0, Lcom/fusepowered/m1/google/gson/stream/JsonReader;->pos:I
 
     .line 1082
-    .local v3, p:I
+    .local v3, "p":I
     iget v2, p0, Lcom/fusepowered/m1/google/gson/stream/JsonReader;->limit:I
 
-    .local v2, l:I
+    .local v2, "l":I
     move v4, v3
 
     .line 1084
-    .end local v3           #p:I
-    .local v4, p:I
+    .end local v3    # "p":I
+    .local v4, "p":I
     :goto_0
     if-ge v4, v2, :cond_4
 
     .line 1085
     add-int/lit8 v3, v4, 0x1
 
-    .end local v4           #p:I
-    .restart local v3       #p:I
+    .end local v4    # "p":I
+    .restart local v3    # "p":I
     aget-char v1, v0, v4
 
     .line 1086
-    .local v1, c:I
+    .local v1, "c":I
     if-ne v1, p1, :cond_1
 
     .line 1087
@@ -3006,13 +3006,13 @@
     move v4, v3
 
     .line 1098
-    .end local v3           #p:I
-    .restart local v4       #p:I
+    .end local v3    # "p":I
+    .restart local v4    # "p":I
     goto :goto_0
 
     .line 1094
-    .end local v4           #p:I
-    .restart local v3       #p:I
+    .end local v4    # "p":I
+    .restart local v3    # "p":I
     :cond_3
     const/16 v5, 0xa
 
@@ -3031,9 +3031,9 @@
     goto :goto_1
 
     .line 1099
-    .end local v1           #c:I
-    .end local v3           #p:I
-    .restart local v4       #p:I
+    .end local v1    # "c":I
+    .end local v3    # "p":I
+    .restart local v4    # "p":I
     :cond_4
     iput v4, p0, Lcom/fusepowered/m1/google/gson/stream/JsonReader;->pos:I
 
@@ -3058,7 +3058,7 @@
 
 .method private skipTo(Ljava/lang/String;)Z
     .locals 3
-    .parameter "toFind"
+    .param p1, "toFind"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -3130,7 +3130,7 @@
     :cond_2
     const/4 v0, 0x0
 
-    .local v0, c:I
+    .local v0, "c":I
     :goto_1
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
@@ -3163,7 +3163,7 @@
     const/4 v1, 0x1
 
     .line 1427
-    .end local v0           #c:I
+    .end local v0    # "c":I
     :goto_2
     return v1
 
@@ -3211,7 +3211,7 @@
     aget-char v0, v1, v2
 
     .line 1399
-    .local v0, c:C
+    .local v0, "c":C
     const/16 v1, 0xa
 
     if-ne v0, v1, :cond_3
@@ -3229,13 +3229,13 @@
     iput v1, p0, Lcom/fusepowered/m1/google/gson/stream/JsonReader;->lineStart:I
 
     .line 1407
-    .end local v0           #c:C
+    .end local v0    # "c":C
     :cond_2
     :goto_0
     return-void
 
     .line 1403
-    .restart local v0       #c:C
+    .restart local v0    # "c":C
     :cond_3
     const/16 v1, 0xd
 
@@ -3258,7 +3258,7 @@
     const/4 v0, 0x0
 
     .line 1107
-    .local v0, i:I
+    .local v0, "i":I
     :goto_0
     iget v1, p0, Lcom/fusepowered/m1/google/gson/stream/JsonReader;->pos:I
 
@@ -3345,7 +3345,7 @@
 
 .method private syntaxError(Ljava/lang/String;)Ljava/io/IOException;
     .locals 3
-    .parameter "message"
+    .param p1, "message"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -3416,7 +3416,7 @@
     iget v0, p0, Lcom/fusepowered/m1/google/gson/stream/JsonReader;->peeked:I
 
     .line 332
-    .local v0, p:I
+    .local v0, "p":I
     if-nez v0, :cond_0
 
     .line 333
@@ -3515,7 +3515,7 @@
     iget v0, p0, Lcom/fusepowered/m1/google/gson/stream/JsonReader;->peeked:I
 
     .line 368
-    .local v0, p:I
+    .local v0, "p":I
     if-nez v0, :cond_0
 
     .line 369
@@ -3649,7 +3649,7 @@
     iget v0, p0, Lcom/fusepowered/m1/google/gson/stream/JsonReader;->peeked:I
 
     .line 350
-    .local v0, p:I
+    .local v0, "p":I
     if-nez v0, :cond_0
 
     .line 351
@@ -3752,7 +3752,7 @@
     iget v0, p0, Lcom/fusepowered/m1/google/gson/stream/JsonReader;->peeked:I
 
     .line 386
-    .local v0, p:I
+    .local v0, "p":I
     if-nez v0, :cond_0
 
     .line 387
@@ -3855,7 +3855,7 @@
     iget v0, p0, Lcom/fusepowered/m1/google/gson/stream/JsonReader;->peeked:I
 
     .line 403
-    .local v0, p:I
+    .local v0, "p":I
     if-nez v0, :cond_0
 
     .line 404
@@ -3909,7 +3909,7 @@
     iget v0, p0, Lcom/fusepowered/m1/google/gson/stream/JsonReader;->peeked:I
 
     .line 838
-    .local v0, p:I
+    .local v0, "p":I
     if-nez v0, :cond_0
 
     .line 839
@@ -4029,7 +4029,7 @@
     iget v0, p0, Lcom/fusepowered/m1/google/gson/stream/JsonReader;->peeked:I
 
     .line 883
-    .local v0, p:I
+    .local v0, "p":I
     if-nez v0, :cond_0
 
     .line 884
@@ -4096,7 +4096,7 @@
     move-result-wide v1
 
     .line 906
-    .local v1, result:D
+    .local v1, "result":D
     iget-boolean v3, p0, Lcom/fusepowered/m1/google/gson/stream/JsonReader;->lenient:Z
 
     if-nez v3, :cond_9
@@ -4168,7 +4168,7 @@
     throw v3
 
     .line 895
-    .end local v1           #result:D
+    .end local v1    # "result":D
     :cond_4
     if-eq v0, v4, :cond_5
 
@@ -4273,7 +4273,7 @@
     throw v3
 
     .line 910
-    .restart local v1       #result:D
+    .restart local v1    # "result":D
     :cond_9
     const/4 v3, 0x0
 
@@ -4311,7 +4311,7 @@
     iget v2, p0, Lcom/fusepowered/m1/google/gson/stream/JsonReader;->peeked:I
 
     .line 1146
-    .local v2, p:I
+    .local v2, "p":I
     if-nez v2, :cond_0
 
     .line 1147
@@ -4331,7 +4331,7 @@
     long-to-int v3, v5
 
     .line 1153
-    .local v3, result:I
+    .local v3, "result":I
     iget-wide v5, p0, Lcom/fusepowered/m1/google/gson/stream/JsonReader;->peekedLong:J
 
     int-to-long v7, v3
@@ -4402,13 +4402,13 @@
     move v4, v3
 
     .line 1187
-    .end local v3           #result:I
-    .local v4, result:I
+    .end local v3    # "result":I
+    .local v4, "result":I
     :goto_0
     return v4
 
     .line 1161
-    .end local v4           #result:I
+    .end local v4    # "result":I
     :cond_2
     const/16 v5, 0x10
 
@@ -4450,11 +4450,11 @@
     move-result-wide v0
 
     .line 1180
-    .local v0, asDouble:D
+    .local v0, "asDouble":D
     double-to-int v3, v0
 
     .line 1181
-    .restart local v3       #result:I
+    .restart local v3    # "result":I
     int-to-double v5, v3
 
     cmpl-double v5, v5, v0
@@ -4517,8 +4517,8 @@
     throw v5
 
     .line 1164
-    .end local v0           #asDouble:D
-    .end local v3           #result:I
+    .end local v0    # "asDouble":D
+    .end local v3    # "result":I
     :cond_3
     if-eq v2, v6, :cond_4
 
@@ -4548,7 +4548,7 @@
     move-result v3
 
     .line 1168
-    .restart local v3       #result:I
+    .restart local v3    # "result":I
     const/4 v5, 0x0
 
     iput v5, p0, Lcom/fusepowered/m1/google/gson/stream/JsonReader;->peeked:I
@@ -4558,12 +4558,12 @@
     move v4, v3
 
     .line 1169
-    .end local v3           #result:I
-    .restart local v4       #result:I
+    .end local v3    # "result":I
+    .restart local v4    # "result":I
     goto :goto_0
 
     .line 1165
-    .end local v4           #result:I
+    .end local v4    # "result":I
     :cond_5
     const/16 v5, 0x22
 
@@ -4628,8 +4628,8 @@
     throw v5
 
     .line 1185
-    .restart local v0       #asDouble:D
-    .restart local v3       #result:I
+    .restart local v0    # "asDouble":D
+    .restart local v3    # "result":I
     :cond_7
     const/4 v5, 0x0
 
@@ -4641,13 +4641,13 @@
     move v4, v3
 
     .line 1187
-    .end local v3           #result:I
-    .restart local v4       #result:I
+    .end local v3    # "result":I
+    .restart local v4    # "result":I
     goto/16 :goto_0
 
     .line 1170
-    .end local v0           #asDouble:D
-    .end local v4           #result:I
+    .end local v0    # "asDouble":D
+    .end local v4    # "result":I
     :catch_0
     move-exception v5
 
@@ -4677,7 +4677,7 @@
     iget v2, p0, Lcom/fusepowered/m1/google/gson/stream/JsonReader;->peeked:I
 
     .line 927
-    .local v2, p:I
+    .local v2, "p":I
     if-nez v2, :cond_0
 
     .line 928
@@ -4743,11 +4743,11 @@
     move-result-wide v0
 
     .line 955
-    .local v0, asDouble:D
+    .local v0, "asDouble":D
     double-to-long v3, v0
 
     .line 956
-    .local v3, result:J
+    .local v3, "result":J
     long-to-double v5, v3
 
     cmpl-double v5, v5, v0
@@ -4810,8 +4810,8 @@
     throw v5
 
     .line 939
-    .end local v0           #asDouble:D
-    .end local v3           #result:J
+    .end local v0    # "asDouble":D
+    .end local v3    # "result":J
     :cond_2
     if-eq v2, v6, :cond_3
 
@@ -4841,7 +4841,7 @@
     move-result-wide v3
 
     .line 943
-    .restart local v3       #result:J
+    .restart local v3    # "result":J
     const/4 v5, 0x0
 
     iput v5, p0, Lcom/fusepowered/m1/google/gson/stream/JsonReader;->peeked:I
@@ -4854,7 +4854,7 @@
     goto :goto_0
 
     .line 940
-    .end local v3           #result:J
+    .end local v3    # "result":J
     :cond_4
     const/16 v5, 0x22
 
@@ -4919,8 +4919,8 @@
     throw v5
 
     .line 960
-    .restart local v0       #asDouble:D
-    .restart local v3       #result:J
+    .restart local v0    # "asDouble":D
+    .restart local v3    # "result":J
     :cond_6
     const/4 v5, 0x0
 
@@ -4935,8 +4935,8 @@
     goto/16 :goto_0
 
     .line 945
-    .end local v0           #asDouble:D
-    .end local v3           #result:J
+    .end local v0    # "asDouble":D
+    .end local v3    # "result":J
     :catch_0
     move-exception v5
 
@@ -4956,7 +4956,7 @@
     iget v0, p0, Lcom/fusepowered/m1/google/gson/stream/JsonReader;->peeked:I
 
     .line 775
-    .local v0, p:I
+    .local v0, "p":I
     if-nez v0, :cond_0
 
     .line 776
@@ -4976,7 +4976,7 @@
     move-result-object v1
 
     .line 789
-    .local v1, result:Ljava/lang/String;
+    .local v1, "result":Ljava/lang/String;
     :goto_0
     const/4 v2, 0x0
 
@@ -4986,7 +4986,7 @@
     return-object v1
 
     .line 781
-    .end local v1           #result:Ljava/lang/String;
+    .end local v1    # "result":Ljava/lang/String;
     :cond_1
     const/16 v2, 0xc
 
@@ -4999,11 +4999,11 @@
 
     move-result-object v1
 
-    .restart local v1       #result:Ljava/lang/String;
+    .restart local v1    # "result":Ljava/lang/String;
     goto :goto_0
 
     .line 783
-    .end local v1           #result:Ljava/lang/String;
+    .end local v1    # "result":Ljava/lang/String;
     :cond_2
     const/16 v2, 0xd
 
@@ -5016,11 +5016,11 @@
 
     move-result-object v1
 
-    .restart local v1       #result:Ljava/lang/String;
+    .restart local v1    # "result":Ljava/lang/String;
     goto :goto_0
 
     .line 786
-    .end local v1           #result:Ljava/lang/String;
+    .end local v1    # "result":Ljava/lang/String;
     :cond_3
     new-instance v2, Ljava/lang/IllegalStateException;
 
@@ -5092,7 +5092,7 @@
     iget v0, p0, Lcom/fusepowered/m1/google/gson/stream/JsonReader;->peeked:I
 
     .line 861
-    .local v0, p:I
+    .local v0, "p":I
     if-nez v0, :cond_0
 
     .line 862
@@ -5186,7 +5186,7 @@
     iget v0, p0, Lcom/fusepowered/m1/google/gson/stream/JsonReader;->peeked:I
 
     .line 803
-    .local v0, p:I
+    .local v0, "p":I
     if-nez v0, :cond_0
 
     .line 804
@@ -5206,7 +5206,7 @@
     move-result-object v1
 
     .line 825
-    .local v1, result:Ljava/lang/String;
+    .local v1, "result":Ljava/lang/String;
     :goto_0
     const/4 v2, 0x0
 
@@ -5216,7 +5216,7 @@
     return-object v1
 
     .line 809
-    .end local v1           #result:Ljava/lang/String;
+    .end local v1    # "result":Ljava/lang/String;
     :cond_1
     const/16 v2, 0x8
 
@@ -5229,11 +5229,11 @@
 
     move-result-object v1
 
-    .restart local v1       #result:Ljava/lang/String;
+    .restart local v1    # "result":Ljava/lang/String;
     goto :goto_0
 
     .line 811
-    .end local v1           #result:Ljava/lang/String;
+    .end local v1    # "result":Ljava/lang/String;
     :cond_2
     const/16 v2, 0x9
 
@@ -5246,11 +5246,11 @@
 
     move-result-object v1
 
-    .restart local v1       #result:Ljava/lang/String;
+    .restart local v1    # "result":Ljava/lang/String;
     goto :goto_0
 
     .line 813
-    .end local v1           #result:Ljava/lang/String;
+    .end local v1    # "result":Ljava/lang/String;
     :cond_3
     const/16 v2, 0xb
 
@@ -5260,7 +5260,7 @@
     iget-object v1, p0, Lcom/fusepowered/m1/google/gson/stream/JsonReader;->peekedString:Ljava/lang/String;
 
     .line 815
-    .restart local v1       #result:Ljava/lang/String;
+    .restart local v1    # "result":Ljava/lang/String;
     const/4 v2, 0x0
 
     iput-object v2, p0, Lcom/fusepowered/m1/google/gson/stream/JsonReader;->peekedString:Ljava/lang/String;
@@ -5268,7 +5268,7 @@
     goto :goto_0
 
     .line 816
-    .end local v1           #result:Ljava/lang/String;
+    .end local v1    # "result":Ljava/lang/String;
     :cond_4
     const/16 v2, 0xf
 
@@ -5281,11 +5281,11 @@
 
     move-result-object v1
 
-    .restart local v1       #result:Ljava/lang/String;
+    .restart local v1    # "result":Ljava/lang/String;
     goto :goto_0
 
     .line 818
-    .end local v1           #result:Ljava/lang/String;
+    .end local v1    # "result":Ljava/lang/String;
     :cond_5
     const/16 v2, 0x10
 
@@ -5303,7 +5303,7 @@
     invoke-direct {v1, v2, v3, v4}, Ljava/lang/String;-><init>([CII)V
 
     .line 820
-    .restart local v1       #result:Ljava/lang/String;
+    .restart local v1    # "result":Ljava/lang/String;
     iget v2, p0, Lcom/fusepowered/m1/google/gson/stream/JsonReader;->pos:I
 
     iget v3, p0, Lcom/fusepowered/m1/google/gson/stream/JsonReader;->peekedNumberLength:I
@@ -5315,7 +5315,7 @@
     goto :goto_0
 
     .line 822
-    .end local v1           #result:Ljava/lang/String;
+    .end local v1    # "result":Ljava/lang/String;
     :cond_6
     new-instance v2, Ljava/lang/IllegalStateException;
 
@@ -5387,7 +5387,7 @@
     iget v0, p0, Lcom/fusepowered/m1/google/gson/stream/JsonReader;->peeked:I
 
     .line 414
-    .local v0, p:I
+    .local v0, "p":I
     if-nez v0, :cond_0
 
     .line 415
@@ -5495,7 +5495,7 @@
 
 .method public final setLenient(Z)V
     .locals 0
-    .parameter "lenient"
+    .param p1, "lenient"    # Z
 
     .prologue
     .line 316
@@ -5522,12 +5522,12 @@
     const/4 v0, 0x0
 
     .line 1208
-    .local v0, count:I
+    .local v0, "count":I
     :cond_0
     iget v1, p0, Lcom/fusepowered/m1/google/gson/stream/JsonReader;->peeked:I
 
     .line 1209
-    .local v1, p:I
+    .local v1, "p":I
     if-nez v1, :cond_1
 
     .line 1210

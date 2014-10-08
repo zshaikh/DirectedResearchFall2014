@@ -28,8 +28,7 @@
 # direct methods
 .method public constructor <init>(Lcom/fusepowered/m1/android/BridgeMMMicrophone$Recorder;I)V
     .locals 0
-    .parameter
-    .parameter "callbackRate"
+    .param p2, "callbackRate"    # I
 
     .prologue
     .line 235
@@ -83,7 +82,7 @@
     .line 249
     iget-object v1, p0, Lcom/fusepowered/m1/android/BridgeMMMicrophone$Recorder$AudioRunnable;->this$0:Lcom/fusepowered/m1/android/BridgeMMMicrophone$Recorder;
 
-    #getter for: Lcom/fusepowered/m1/android/BridgeMMMicrophone$Recorder;->webViewRef:Ljava/lang/ref/WeakReference;
+    # getter for: Lcom/fusepowered/m1/android/BridgeMMMicrophone$Recorder;->webViewRef:Ljava/lang/ref/WeakReference;
     invoke-static {v1}, Lcom/fusepowered/m1/android/BridgeMMMicrophone$Recorder;->access$200(Lcom/fusepowered/m1/android/BridgeMMMicrophone$Recorder;)Ljava/lang/ref/WeakReference;
 
     move-result-object v1
@@ -95,13 +94,13 @@
     check-cast v0, Lcom/fusepowered/m1/android/MMWebView;
 
     .line 250
-    .local v0, webView:Lcom/fusepowered/m1/android/MMWebView;
+    .local v0, "webView":Lcom/fusepowered/m1/android/MMWebView;
     if-eqz v0, :cond_0
 
     .line 252
     iget-object v1, p0, Lcom/fusepowered/m1/android/BridgeMMMicrophone$Recorder$AudioRunnable;->this$0:Lcom/fusepowered/m1/android/BridgeMMMicrophone$Recorder;
 
-    #calls: Lcom/fusepowered/m1/android/BridgeMMMicrophone$Recorder;->getAudioLevel()D
+    # invokes: Lcom/fusepowered/m1/android/BridgeMMMicrophone$Recorder;->getAudioLevel()D
     invoke-static {v1}, Lcom/fusepowered/m1/android/BridgeMMMicrophone$Recorder;->access$300(Lcom/fusepowered/m1/android/BridgeMMMicrophone$Recorder;)D
 
     move-result-wide v1
@@ -117,7 +116,7 @@
     invoke-virtual {v0, p0, v1, v2}, Lcom/fusepowered/m1/android/MMWebView;->postDelayed(Ljava/lang/Runnable;J)Z
 
     .line 256
-    .end local v0           #webView:Lcom/fusepowered/m1/android/MMWebView;
+    .end local v0    # "webView":Lcom/fusepowered/m1/android/MMWebView;
     :cond_1
     return-void
 .end method

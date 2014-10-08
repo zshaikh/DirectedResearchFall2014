@@ -40,7 +40,7 @@
 # direct methods
 .method public constructor <init>(Lcom/fusepowered/m1/android/InlineVideoView;)V
     .locals 1
-    .parameter "videoView"
+    .param p1, "videoView"    # Lcom/fusepowered/m1/android/InlineVideoView;
 
     .prologue
     .line 836
@@ -65,7 +65,7 @@
 # virtual methods
 .method public setAnchorView(Landroid/view/View;)V
     .locals 12
-    .parameter "view"
+    .param p1, "view"    # Landroid/view/View;
 
     .prologue
     const/4 v10, 0x0
@@ -87,7 +87,7 @@
     invoke-direct {v4, v7}, Landroid/widget/Button;-><init>(Landroid/content/Context;)V
 
     .line 845
-    .local v4, fullScreenButton:Landroid/widget/Button;
+    .local v4, "fullScreenButton":Landroid/widget/Button;
     iget-object v7, p0, Lcom/fusepowered/m1/android/InlineVideoView$MediaController;->inDrawable:Landroid/graphics/drawable/BitmapDrawable;
 
     if-nez v7, :cond_0
@@ -101,13 +101,13 @@
     move-result-object v1
 
     .line 850
-    .local v1, decodedIn:[B
+    .local v1, "decodedIn":[B
     new-instance v0, Ljava/io/ByteArrayInputStream;
 
     invoke-direct {v0, v1}, Ljava/io/ByteArrayInputStream;-><init>([B)V
 
     .line 851
-    .local v0, bias:Ljava/io/ByteArrayInputStream;
+    .local v0, "bias":Ljava/io/ByteArrayInputStream;
     new-instance v7, Landroid/graphics/drawable/BitmapDrawable;
 
     invoke-direct {v7, v0}, Landroid/graphics/drawable/BitmapDrawable;-><init>(Ljava/io/InputStream;)V
@@ -117,8 +117,8 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 858
-    .end local v0           #bias:Ljava/io/ByteArrayInputStream;
-    .end local v1           #decodedIn:[B
+    .end local v0    # "bias":Ljava/io/ByteArrayInputStream;
+    .end local v1    # "decodedIn":[B
     :cond_0
     :goto_0
     iget-object v7, p0, Lcom/fusepowered/m1/android/InlineVideoView$MediaController;->outDrawable:Landroid/graphics/drawable/BitmapDrawable;
@@ -134,13 +134,13 @@
     move-result-object v2
 
     .line 863
-    .local v2, decodedOut:[B
+    .local v2, "decodedOut":[B
     new-instance v0, Ljava/io/ByteArrayInputStream;
 
     invoke-direct {v0, v2}, Ljava/io/ByteArrayInputStream;-><init>([B)V
 
     .line 864
-    .restart local v0       #bias:Ljava/io/ByteArrayInputStream;
+    .restart local v0    # "bias":Ljava/io/ByteArrayInputStream;
     new-instance v7, Landroid/graphics/drawable/BitmapDrawable;
 
     invoke-direct {v7, v0}, Landroid/graphics/drawable/BitmapDrawable;-><init>(Ljava/io/InputStream;)V
@@ -150,8 +150,8 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
     .line 871
-    .end local v0           #bias:Ljava/io/ByteArrayInputStream;
-    .end local v2           #decodedOut:[B
+    .end local v0    # "bias":Ljava/io/ByteArrayInputStream;
+    .end local v2    # "decodedOut":[B
     :cond_1
     :goto_1
     iget-object v7, p0, Lcom/fusepowered/m1/android/InlineVideoView$MediaController;->inlineVideoRef:Ljava/lang/ref/WeakReference;
@@ -163,7 +163,7 @@
     check-cast v5, Lcom/fusepowered/m1/android/InlineVideoView;
 
     .line 872
-    .local v5, inlineView:Lcom/fusepowered/m1/android/InlineVideoView;
+    .local v5, "inlineView":Lcom/fusepowered/m1/android/InlineVideoView;
     if-eqz v5, :cond_2
 
     .line 874
@@ -195,7 +195,7 @@
     invoke-direct {v6, v9, v9, v7}, Landroid/widget/FrameLayout$LayoutParams;-><init>(III)V
 
     .line 881
-    .local v6, params:Landroid/widget/FrameLayout$LayoutParams;
+    .local v6, "params":Landroid/widget/FrameLayout$LayoutParams;
     const/16 v7, 0x14
 
     const/16 v8, 0xa
@@ -209,15 +209,15 @@
     return-void
 
     .line 853
-    .end local v5           #inlineView:Lcom/fusepowered/m1/android/InlineVideoView;
-    .end local v6           #params:Landroid/widget/FrameLayout$LayoutParams;
+    .end local v5    # "inlineView":Lcom/fusepowered/m1/android/InlineVideoView;
+    .end local v6    # "params":Landroid/widget/FrameLayout$LayoutParams;
     :catch_0
     move-exception v7
 
     move-object v3, v7
 
     .line 855
-    .local v3, e:Ljava/lang/Exception;
+    .local v3, "e":Ljava/lang/Exception;
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -245,14 +245,14 @@
     goto :goto_0
 
     .line 866
-    .end local v3           #e:Ljava/lang/Exception;
+    .end local v3    # "e":Ljava/lang/Exception;
     :catch_1
     move-exception v7
 
     move-object v3, v7
 
     .line 868
-    .restart local v3       #e:Ljava/lang/Exception;
+    .restart local v3    # "e":Ljava/lang/Exception;
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -280,8 +280,8 @@
     goto :goto_1
 
     .line 877
-    .end local v3           #e:Ljava/lang/Exception;
-    .restart local v5       #inlineView:Lcom/fusepowered/m1/android/InlineVideoView;
+    .end local v3    # "e":Ljava/lang/Exception;
+    .restart local v5    # "inlineView":Lcom/fusepowered/m1/android/InlineVideoView;
     :cond_3
     iget-object v7, p0, Lcom/fusepowered/m1/android/InlineVideoView$MediaController;->outDrawable:Landroid/graphics/drawable/BitmapDrawable;
 

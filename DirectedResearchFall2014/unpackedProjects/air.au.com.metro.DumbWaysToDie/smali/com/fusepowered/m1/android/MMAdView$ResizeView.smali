@@ -21,8 +21,7 @@
 # direct methods
 .method public constructor <init>(Lcom/fusepowered/m1/android/MMAdView;Landroid/content/Context;)V
     .locals 0
-    .parameter
-    .parameter "context"
+    .param p2, "context"    # Landroid/content/Context;
 
     .prologue
     .line 536
@@ -39,7 +38,7 @@
 # virtual methods
 .method declared-synchronized attachToContext(Landroid/view/View;)V
     .locals 1
-    .parameter "view"
+    .param p1, "view"    # Landroid/view/View;
 
     .prologue
     .line 561
@@ -48,7 +47,7 @@
     :try_start_0
     iget-object v0, p0, Lcom/fusepowered/m1/android/MMAdView$ResizeView;->this$0:Lcom/fusepowered/m1/android/MMAdView;
 
-    #calls: Lcom/fusepowered/m1/android/MMAdView;->detachFromParent(Landroid/view/View;)V
+    # invokes: Lcom/fusepowered/m1/android/MMAdView;->detachFromParent(Landroid/view/View;)V
     invoke-static {v0, p1}, Lcom/fusepowered/m1/android/MMAdView;->access$100(Lcom/fusepowered/m1/android/MMAdView;Landroid/view/View;)V
 
     .line 562
@@ -94,7 +93,7 @@
 
 .method protected onRestoreInstanceState(Landroid/os/Parcelable;)V
     .locals 2
-    .parameter "state"
+    .param p1, "state"    # Landroid/os/Parcelable;
 
     .prologue
     .line 554
@@ -107,7 +106,7 @@
 
     iget-object v1, p0, Lcom/fusepowered/m1/android/MMAdView$ResizeView;->this$0:Lcom/fusepowered/m1/android/MMAdView;
 
-    #calls: Lcom/fusepowered/m1/android/MMAdView;->attachToWindow(Landroid/view/View;)V
+    # invokes: Lcom/fusepowered/m1/android/MMAdView;->attachToWindow(Landroid/view/View;)V
     invoke-static {v0, v1}, Lcom/fusepowered/m1/android/MMAdView;->access$000(Lcom/fusepowered/m1/android/MMAdView;Landroid/view/View;)V
 
     .line 556

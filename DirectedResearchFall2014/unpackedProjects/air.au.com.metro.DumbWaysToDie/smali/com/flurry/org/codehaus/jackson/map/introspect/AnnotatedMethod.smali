@@ -20,9 +20,9 @@
 # direct methods
 .method public constructor <init>(Ljava/lang/reflect/Method;Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;[Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;)V
     .locals 0
-    .parameter "method"
-    .parameter "classAnn"
-    .parameter "paramAnnotations"
+    .param p1, "method"    # Ljava/lang/reflect/Method;
+    .param p2, "classAnn"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;
+    .param p3, "paramAnnotations"    # [Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;
 
     .prologue
     .line 25
@@ -64,7 +64,7 @@
 
 .method public final call([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
-    .parameter "args"
+    .param p1, "args"    # [Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/Exception;
@@ -86,7 +86,7 @@
 
 .method public final call1(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 4
-    .parameter "arg"
+    .param p1, "arg"    # Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/Exception;
@@ -273,7 +273,7 @@
 
 .method public getParameterClass(I)Ljava/lang/Class;
     .locals 2
-    .parameter "index"
+    .param p1, "index"    # I
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I)",
@@ -291,7 +291,7 @@
     move-result-object v0
 
     .line 150
-    .local v0, types:[Ljava/lang/Class;,"[Ljava/lang/Class<*>;"
+    .local v0, "types":[Ljava/lang/Class;, "[Ljava/lang/Class<*>;"
     array-length v1, v0
 
     if-lt p1, v1, :cond_0
@@ -355,7 +355,7 @@
 
 .method public getParameterType(I)Ljava/lang/reflect/Type;
     .locals 2
-    .parameter "index"
+    .param p1, "index"    # I
 
     .prologue
     .line 156
@@ -366,7 +366,7 @@
     move-result-object v0
 
     .line 157
-    .local v0, types:[Ljava/lang/reflect/Type;
+    .local v0, "types":[Ljava/lang/reflect/Type;
     array-length v1, v0
 
     if-lt p1, v1, :cond_0
@@ -419,7 +419,7 @@
 
 .method public getType(Lcom/flurry/org/codehaus/jackson/map/type/TypeBindings;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .locals 1
-    .parameter "bindings"
+    .param p1, "bindings"    # Lcom/flurry/org/codehaus/jackson/map/type/TypeBindings;
 
     .prologue
     .line 86
@@ -438,8 +438,8 @@
 
 .method public setValue(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 6
-    .parameter "pojo"
-    .parameter "value"
+    .param p1, "pojo"    # Ljava/lang/Object;
+    .param p2, "value"    # Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/IllegalArgumentException;
@@ -478,7 +478,7 @@
     move-object v0, v1
 
     .line 123
-    .local v0, e:Ljava/lang/IllegalAccessException;
+    .local v0, "e":Ljava/lang/IllegalAccessException;
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -522,14 +522,14 @@
     throw v1
 
     .line 125
-    .end local v0           #e:Ljava/lang/IllegalAccessException;
+    .end local v0    # "e":Ljava/lang/IllegalAccessException;
     :catch_1
     move-exception v1
 
     move-object v0, v1
 
     .line 126
-    .local v0, e:Ljava/lang/reflect/InvocationTargetException;
+    .local v0, "e":Ljava/lang/reflect/InvocationTargetException;
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -623,7 +623,7 @@
 
 .method public bridge synthetic withAnnotations(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;)Lcom/flurry/org/codehaus/jackson/map/introspect/Annotated;
     .locals 1
-    .parameter "x0"
+    .param p1, "x0"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;
 
     .prologue
     .line 8
@@ -636,7 +636,7 @@
 
 .method public withAnnotations(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;)Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
     .locals 3
-    .parameter "ann"
+    .param p1, "ann"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;
 
     .prologue
     .line 42
@@ -653,7 +653,7 @@
 
 .method public withMethod(Ljava/lang/reflect/Method;)Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
     .locals 3
-    .parameter "m"
+    .param p1, "m"    # Ljava/lang/reflect/Method;
 
     .prologue
     .line 37

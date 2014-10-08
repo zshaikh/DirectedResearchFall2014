@@ -20,9 +20,9 @@
 
 .method public static configureMenuItem(Landroid/view/MenuItem;Landroid/app/Activity;Landroid/content/Intent;)V
     .locals 5
-    .parameter "item"
-    .parameter "callingActivity"
-    .parameter "intent"
+    .param p0, "item"    # Landroid/view/MenuItem;
+    .param p1, "callingActivity"    # Landroid/app/Activity;
+    .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
     .line 29
@@ -31,11 +31,11 @@
     move-result-object v1
 
     .line 30
-    .local v1, itemProvider:Landroid/view/ActionProvider;
+    .local v1, "itemProvider":Landroid/view/ActionProvider;
     const/4 v2, 0x0
 
     .line 31
-    .local v2, provider:Landroid/widget/ShareActionProvider;
+    .local v2, "provider":Landroid/widget/ShareActionProvider;
     instance-of v3, v1, Landroid/widget/ShareActionProvider;
 
     if-nez v3, :cond_0
@@ -43,11 +43,11 @@
     .line 32
     new-instance v2, Landroid/widget/ShareActionProvider;
 
-    .end local v2           #provider:Landroid/widget/ShareActionProvider;
+    .end local v2    # "provider":Landroid/widget/ShareActionProvider;
     invoke-direct {v2, p1}, Landroid/widget/ShareActionProvider;-><init>(Landroid/content/Context;)V
 
     .line 36
-    .restart local v2       #provider:Landroid/widget/ShareActionProvider;
+    .restart local v2    # "provider":Landroid/widget/ShareActionProvider;
     :goto_0
     new-instance v3, Ljava/lang/StringBuilder;
 

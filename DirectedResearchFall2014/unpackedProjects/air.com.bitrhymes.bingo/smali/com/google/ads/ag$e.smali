@@ -24,7 +24,6 @@
 # direct methods
 .method private constructor <init>(Lcom/google/ads/ag;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 11089
@@ -37,8 +36,6 @@
 
 .method synthetic constructor <init>(Lcom/google/ads/ag;Lcom/google/ads/ag$1;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 11089
@@ -51,15 +48,13 @@
 # virtual methods
 .method public a([B[B)V
     .locals 6
-    .parameter
-    .parameter
 
     .prologue
-    const/high16 v5, 0xff
+    const/high16 v5, 0xff0000
 
     const v4, 0xff00
 
-    const/high16 v3, -0x100
+    const/high16 v3, -0x1000000
 
     .line 11091
     iget-object v0, p0, Lcom/google/ads/ag$e;->a:Lcom/google/ads/ag;

@@ -36,7 +36,7 @@
 # virtual methods
 .method public bridge synthetic _constructArray(I)Ljava/lang/Object;
     .locals 1
-    .parameter "x0"
+    .param p1, "x0"    # I
 
     .prologue
     .line 124
@@ -49,7 +49,7 @@
 
 .method public final _constructArray(I)[F
     .locals 1
-    .parameter "len"
+    .param p1, "len"    # I
 
     .prologue
     .line 129

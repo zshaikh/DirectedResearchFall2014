@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/adobe/flashruntime/shared/VideoView;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 70
@@ -39,10 +38,6 @@
 # virtual methods
 .method public surfaceChanged(Landroid/view/SurfaceHolder;III)V
     .locals 5
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 72
@@ -100,7 +95,7 @@
     .line 79
     iget-object v0, p0, Lcom/adobe/flashruntime/shared/VideoView$1;->this$0:Lcom/adobe/flashruntime/shared/VideoView;
 
-    #getter for: Lcom/adobe/flashruntime/shared/VideoView;->mPlanePositionSet:Z
+    # getter for: Lcom/adobe/flashruntime/shared/VideoView;->mPlanePositionSet:Z
     invoke-static {v0}, Lcom/adobe/flashruntime/shared/VideoView;->access$000(Lcom/adobe/flashruntime/shared/VideoView;)Z
 
     move-result v0
@@ -109,14 +104,14 @@
 
     iget-object v0, p0, Lcom/adobe/flashruntime/shared/VideoView$1;->this$0:Lcom/adobe/flashruntime/shared/VideoView;
 
-    #getter for: Lcom/adobe/flashruntime/shared/VideoView;->mXmax:I
+    # getter for: Lcom/adobe/flashruntime/shared/VideoView;->mXmax:I
     invoke-static {v0}, Lcom/adobe/flashruntime/shared/VideoView;->access$100(Lcom/adobe/flashruntime/shared/VideoView;)I
 
     move-result v0
 
     iget-object v1, p0, Lcom/adobe/flashruntime/shared/VideoView$1;->this$0:Lcom/adobe/flashruntime/shared/VideoView;
 
-    #getter for: Lcom/adobe/flashruntime/shared/VideoView;->mXmin:I
+    # getter for: Lcom/adobe/flashruntime/shared/VideoView;->mXmin:I
     invoke-static {v1}, Lcom/adobe/flashruntime/shared/VideoView;->access$200(Lcom/adobe/flashruntime/shared/VideoView;)I
 
     move-result v1
@@ -127,14 +122,14 @@
 
     iget-object v0, p0, Lcom/adobe/flashruntime/shared/VideoView$1;->this$0:Lcom/adobe/flashruntime/shared/VideoView;
 
-    #getter for: Lcom/adobe/flashruntime/shared/VideoView;->mYmax:I
+    # getter for: Lcom/adobe/flashruntime/shared/VideoView;->mYmax:I
     invoke-static {v0}, Lcom/adobe/flashruntime/shared/VideoView;->access$300(Lcom/adobe/flashruntime/shared/VideoView;)I
 
     move-result v0
 
     iget-object v1, p0, Lcom/adobe/flashruntime/shared/VideoView$1;->this$0:Lcom/adobe/flashruntime/shared/VideoView;
 
-    #getter for: Lcom/adobe/flashruntime/shared/VideoView;->mYmin:I
+    # getter for: Lcom/adobe/flashruntime/shared/VideoView;->mYmin:I
     invoke-static {v1}, Lcom/adobe/flashruntime/shared/VideoView;->access$400(Lcom/adobe/flashruntime/shared/VideoView;)I
 
     move-result v1
@@ -149,28 +144,28 @@
 
     iget-object v1, p0, Lcom/adobe/flashruntime/shared/VideoView$1;->this$0:Lcom/adobe/flashruntime/shared/VideoView;
 
-    #getter for: Lcom/adobe/flashruntime/shared/VideoView;->mXmin:I
+    # getter for: Lcom/adobe/flashruntime/shared/VideoView;->mXmin:I
     invoke-static {v1}, Lcom/adobe/flashruntime/shared/VideoView;->access$200(Lcom/adobe/flashruntime/shared/VideoView;)I
 
     move-result v1
 
     iget-object v2, p0, Lcom/adobe/flashruntime/shared/VideoView$1;->this$0:Lcom/adobe/flashruntime/shared/VideoView;
 
-    #getter for: Lcom/adobe/flashruntime/shared/VideoView;->mYmin:I
+    # getter for: Lcom/adobe/flashruntime/shared/VideoView;->mYmin:I
     invoke-static {v2}, Lcom/adobe/flashruntime/shared/VideoView;->access$400(Lcom/adobe/flashruntime/shared/VideoView;)I
 
     move-result v2
 
     iget-object v3, p0, Lcom/adobe/flashruntime/shared/VideoView$1;->this$0:Lcom/adobe/flashruntime/shared/VideoView;
 
-    #getter for: Lcom/adobe/flashruntime/shared/VideoView;->mXmax:I
+    # getter for: Lcom/adobe/flashruntime/shared/VideoView;->mXmax:I
     invoke-static {v3}, Lcom/adobe/flashruntime/shared/VideoView;->access$100(Lcom/adobe/flashruntime/shared/VideoView;)I
 
     move-result v3
 
     iget-object v4, p0, Lcom/adobe/flashruntime/shared/VideoView$1;->this$0:Lcom/adobe/flashruntime/shared/VideoView;
 
-    #getter for: Lcom/adobe/flashruntime/shared/VideoView;->mYmax:I
+    # getter for: Lcom/adobe/flashruntime/shared/VideoView;->mYmax:I
     invoke-static {v4}, Lcom/adobe/flashruntime/shared/VideoView;->access$300(Lcom/adobe/flashruntime/shared/VideoView;)I
 
     move-result v4
@@ -184,7 +179,6 @@
 
 .method public surfaceCreated(Landroid/view/SurfaceHolder;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 89
@@ -201,7 +195,7 @@
 
     move-result-object v1
 
-    #setter for: Lcom/adobe/flashruntime/shared/VideoView;->mSurface:Landroid/view/Surface;
+    # setter for: Lcom/adobe/flashruntime/shared/VideoView;->mSurface:Landroid/view/Surface;
     invoke-static {v0, v1}, Lcom/adobe/flashruntime/shared/VideoView;->access$502(Lcom/adobe/flashruntime/shared/VideoView;Landroid/view/Surface;)Landroid/view/Surface;
 
     .line 91
@@ -209,7 +203,7 @@
 
     const/4 v1, 0x1
 
-    #setter for: Lcom/adobe/flashruntime/shared/VideoView;->mAmCreated:Z
+    # setter for: Lcom/adobe/flashruntime/shared/VideoView;->mAmCreated:Z
     invoke-static {v0, v1}, Lcom/adobe/flashruntime/shared/VideoView;->access$602(Lcom/adobe/flashruntime/shared/VideoView;Z)Z
 
     .line 92
@@ -223,7 +217,6 @@
 
 .method public surfaceDestroyed(Landroid/view/SurfaceHolder;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 96
@@ -236,7 +229,7 @@
     .line 97
     iget-object v0, p0, Lcom/adobe/flashruntime/shared/VideoView$1;->this$0:Lcom/adobe/flashruntime/shared/VideoView;
 
-    #getter for: Lcom/adobe/flashruntime/shared/VideoView;->mSurface:Landroid/view/Surface;
+    # getter for: Lcom/adobe/flashruntime/shared/VideoView;->mSurface:Landroid/view/Surface;
     invoke-static {v0}, Lcom/adobe/flashruntime/shared/VideoView;->access$500(Lcom/adobe/flashruntime/shared/VideoView;)Landroid/view/Surface;
 
     move-result-object v0
@@ -248,7 +241,7 @@
 
     const/4 v1, 0x0
 
-    #setter for: Lcom/adobe/flashruntime/shared/VideoView;->mAmCreated:Z
+    # setter for: Lcom/adobe/flashruntime/shared/VideoView;->mAmCreated:Z
     invoke-static {v0, v1}, Lcom/adobe/flashruntime/shared/VideoView;->access$602(Lcom/adobe/flashruntime/shared/VideoView;Z)Z
 
     .line 99

@@ -28,9 +28,9 @@
 # direct methods
 .method constructor <init>(Landroid/content/Context;Lcom/facebook/internal/ImageDownloader$RequestKey;Z)V
     .locals 0
-    .parameter "context"
-    .parameter "key"
-    .parameter "allowCachedRedirects"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "key"    # Lcom/facebook/internal/ImageDownloader$RequestKey;
+    .param p3, "allowCachedRedirects"    # Z
 
     .prologue
     .line 333
@@ -62,7 +62,7 @@
 
     iget-boolean v2, p0, Lcom/facebook/internal/ImageDownloader$CacheReadWorkItem;->allowCachedRedirects:Z
 
-    #calls: Lcom/facebook/internal/ImageDownloader;->readFromCache(Lcom/facebook/internal/ImageDownloader$RequestKey;Landroid/content/Context;Z)V
+    # invokes: Lcom/facebook/internal/ImageDownloader;->readFromCache(Lcom/facebook/internal/ImageDownloader$RequestKey;Landroid/content/Context;Z)V
     invoke-static {v0, v1, v2}, Lcom/facebook/internal/ImageDownloader;->access$0(Lcom/facebook/internal/ImageDownloader$RequestKey;Landroid/content/Context;Z)V
 
     .line 342

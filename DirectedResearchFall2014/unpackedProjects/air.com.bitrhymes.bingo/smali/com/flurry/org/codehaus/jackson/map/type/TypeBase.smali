@@ -13,8 +13,7 @@
 # direct methods
 .method protected constructor <init>(Ljava/lang/Class;I)V
     .locals 0
-    .parameter
-    .parameter "hash"
+    .param p2, "hash"    # I
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -28,7 +27,7 @@
 
     .prologue
     .line 23
-    .local p1, raw:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p1, "raw":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-direct {p0, p1, p2}, Lcom/flurry/org/codehaus/jackson/type/JavaType;-><init>(Ljava/lang/Class;I)V
 
     .line 24
@@ -37,10 +36,9 @@
 
 .method protected constructor <init>(Ljava/lang/Class;ILjava/lang/Object;Ljava/lang/Object;)V
     .locals 0
-    .parameter
-    .parameter "hash"
-    .parameter "valueHandler"
-    .parameter "typeHandler"
+    .param p2, "hash"    # I
+    .param p3, "valueHandler"    # Ljava/lang/Object;
+    .param p4, "typeHandler"    # Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -54,7 +52,7 @@
 
     .prologue
     .line 34
-    .local p1, raw:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p1, "raw":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-direct {p0, p1, p2}, Lcom/flurry/org/codehaus/jackson/type/JavaType;-><init>(Ljava/lang/Class;I)V
 
     .line 39
@@ -69,9 +67,8 @@
 
 .method protected static _classSignature(Ljava/lang/Class;Ljava/lang/StringBuilder;Z)Ljava/lang/StringBuilder;
     .locals 7
-    .parameter
-    .parameter "sb"
-    .parameter "trailingSemicolon"
+    .param p1, "sb"    # Ljava/lang/StringBuilder;
+    .param p2, "trailingSemicolon"    # Z
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -85,7 +82,7 @@
 
     .prologue
     .line 105
-    .local p0, cls:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p0, "cls":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-virtual {p0}, Ljava/lang/Class;->isPrimitive()Z
 
     move-result v4
@@ -253,15 +250,15 @@
     move-result-object v3
 
     .line 137
-    .local v3, name:Ljava/lang/String;
+    .local v3, "name":Ljava/lang/String;
     const/4 v1, 0x0
 
-    .local v1, i:I
+    .local v1, "i":I
     invoke-virtual {v3}, Ljava/lang/String;->length()I
 
     move-result v2
 
-    .local v2, len:I
+    .local v2, "len":I
     :goto_1
     if-ge v1, v2, :cond_c
 
@@ -271,7 +268,7 @@
     move-result v0
 
     .line 139
-    .local v0, c:C
+    .local v0, "c":C
     const/16 v4, 0x2e
 
     if-ne v0, v4, :cond_b
@@ -288,7 +285,7 @@
     goto :goto_1
 
     .line 142
-    .end local v0           #c:C
+    .end local v0    # "c":C
     :cond_c
     if-eqz p2, :cond_0
 
@@ -347,8 +344,8 @@
 
 .method public serialize(Lcom/flurry/org/codehaus/jackson/JsonGenerator;Lcom/flurry/org/codehaus/jackson/map/SerializerProvider;)V
     .locals 1
-    .parameter "jgen"
-    .parameter "provider"
+    .param p1, "jgen"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator;
+    .param p2, "provider"    # Lcom/flurry/org/codehaus/jackson/map/SerializerProvider;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -370,9 +367,9 @@
 
 .method public serializeWithType(Lcom/flurry/org/codehaus/jackson/JsonGenerator;Lcom/flurry/org/codehaus/jackson/map/SerializerProvider;Lcom/flurry/org/codehaus/jackson/map/TypeSerializer;)V
     .locals 0
-    .parameter "jgen"
-    .parameter "provider"
-    .parameter "typeSer"
+    .param p1, "jgen"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator;
+    .param p2, "provider"    # Lcom/flurry/org/codehaus/jackson/map/SerializerProvider;
+    .param p3, "typeSer"    # Lcom/flurry/org/codehaus/jackson/map/TypeSerializer;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -402,7 +399,7 @@
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/map/type/TypeBase;->_canonicalName:Ljava/lang/String;
 
     .line 47
-    .local v0, str:Ljava/lang/String;
+    .local v0, "str":Ljava/lang/String;
     if-nez v0, :cond_0
 
     .line 48

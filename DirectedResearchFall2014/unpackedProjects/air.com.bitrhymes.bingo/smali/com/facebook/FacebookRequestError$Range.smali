@@ -23,8 +23,8 @@
 # direct methods
 .method private constructor <init>(II)V
     .locals 0
-    .parameter "start"
-    .parameter "end"
+    .param p1, "start"    # I
+    .param p2, "end"    # I
 
     .prologue
     .line 65
@@ -42,9 +42,6 @@
 
 .method synthetic constructor <init>(IILcom/facebook/FacebookRequestError$Range;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 65
@@ -57,7 +54,7 @@
 # virtual methods
 .method contains(I)Z
     .locals 1
-    .parameter "value"
+    .param p1, "value"    # I
 
     .prologue
     .line 71

@@ -25,7 +25,7 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     const/4 v0, 0x0
@@ -39,9 +39,9 @@
 
 .method private constructor <init>(Lcom/fusepowered/crashlog/handlers/CrashHandler;Lcom/fusepowered/crashlog/senders/CrashSender;Landroid/content/Context;)V
     .locals 2
-    .parameter "crashHandler"
-    .parameter "crashSender"
-    .parameter "context"
+    .param p1, "crashHandler"    # Lcom/fusepowered/crashlog/handlers/CrashHandler;
+    .param p2, "crashSender"    # Lcom/fusepowered/crashlog/senders/CrashSender;
+    .param p3, "context"    # Landroid/content/Context;
 
     .prologue
     .line 42
@@ -115,7 +115,7 @@
 
 .method static synthetic access$000(Lcom/fusepowered/crashlog/CrashDetector;)Landroid/content/Context;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/fusepowered/crashlog/CrashDetector;
 
     .prologue
     .line 17
@@ -126,7 +126,7 @@
 
 .method private formattedStackTrace(Ljava/lang/Throwable;)Ljava/lang/String;
     .locals 4
-    .parameter "throwable"
+    .param p1, "throwable"    # Ljava/lang/Throwable;
 
     .prologue
     .line 180
@@ -135,17 +135,17 @@
     invoke-direct {v2}, Ljava/io/StringWriter;-><init>()V
 
     .line 181
-    .local v2, stringWriter:Ljava/io/StringWriter;
+    .local v2, "stringWriter":Ljava/io/StringWriter;
     new-instance v1, Ljava/io/PrintWriter;
 
     invoke-direct {v1, v2}, Ljava/io/PrintWriter;-><init>(Ljava/io/Writer;)V
 
     .line 183
-    .local v1, printWriter:Ljava/io/PrintWriter;
+    .local v1, "printWriter":Ljava/io/PrintWriter;
     move-object v0, p1
 
     .line 184
-    .local v0, cause:Ljava/lang/Throwable;
+    .local v0, "cause":Ljava/lang/Throwable;
     :goto_0
     if-eqz v0, :cond_0
 
@@ -170,8 +170,8 @@
 
 .method private gatherCrashData(Ljava/lang/Thread;Ljava/lang/Throwable;)Lcom/fusepowered/crashlog/CrashData;
     .locals 5
-    .parameter "thread"
-    .parameter "throwable"
+    .param p1, "thread"    # Ljava/lang/Thread;
+    .param p2, "throwable"    # Ljava/lang/Throwable;
 
     .prologue
     .line 160
@@ -180,7 +180,7 @@
     move-result-object v2
 
     .line 161
-    .local v2, threadName:Ljava/lang/String;
+    .local v2, "threadName":Ljava/lang/String;
     invoke-virtual {p1}, Ljava/lang/Thread;->getState()Ljava/lang/Thread$State;
 
     move-result-object v4
@@ -190,19 +190,19 @@
     move-result-object v3
 
     .line 163
-    .local v3, threadState:Ljava/lang/String;
+    .local v3, "threadState":Ljava/lang/String;
     invoke-direct {p0, p2}, Lcom/fusepowered/crashlog/CrashDetector;->formattedStackTrace(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object v1
 
     .line 165
-    .local v1, stackTrace:Ljava/lang/String;
+    .local v1, "stackTrace":Ljava/lang/String;
     new-instance v0, Lcom/fusepowered/crashlog/CrashData;
 
     invoke-direct {v0}, Lcom/fusepowered/crashlog/CrashData;-><init>()V
 
     .line 166
-    .local v0, crashData:Lcom/fusepowered/crashlog/CrashData;
+    .local v0, "crashData":Lcom/fusepowered/crashlog/CrashData;
     invoke-virtual {v0, v1}, Lcom/fusepowered/crashlog/CrashData;->setStackTrace(Ljava/lang/String;)V
 
     .line 167
@@ -225,7 +225,7 @@
     move-result-object v0
 
     .line 86
-    .local v0, currentExceptionHandler:Ljava/lang/Thread$UncaughtExceptionHandler;
+    .local v0, "currentExceptionHandler":Ljava/lang/Thread$UncaughtExceptionHandler;
     if-eqz v0, :cond_0
 
     .line 87
@@ -265,7 +265,7 @@
     move-result-object v0
 
     .line 102
-    .local v0, cachedCrashes:[Lcom/fusepowered/crashlog/CrashData;
+    .local v0, "cachedCrashes":[Lcom/fusepowered/crashlog/CrashData;
     if-eqz v0, :cond_0
 
     array-length v1, v0
@@ -364,8 +364,8 @@
 
 .method public uncaughtException(Ljava/lang/Thread;Ljava/lang/Throwable;)V
     .locals 4
-    .parameter "thread"
-    .parameter "throwable"
+    .param p1, "thread"    # Ljava/lang/Thread;
+    .param p2, "throwable"    # Ljava/lang/Throwable;
 
     .prologue
     const-string v3, "CrashDetector"
@@ -391,7 +391,7 @@
     move-result-object v0
 
     .line 140
-    .local v0, crashData:Lcom/fusepowered/crashlog/CrashData;
+    .local v0, "crashData":Lcom/fusepowered/crashlog/CrashData;
     const-string v1, "CrashDetector"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -426,7 +426,7 @@
     invoke-interface {v1, v0, v2}, Lcom/fusepowered/crashlog/handlers/CrashHandler;->handleCrash(Lcom/fusepowered/crashlog/CrashData;Landroid/content/Context;)Z
 
     .line 145
-    .end local v0           #crashData:Lcom/fusepowered/crashlog/CrashData;
+    .end local v0    # "crashData":Lcom/fusepowered/crashlog/CrashData;
     :cond_0
     iget-object v1, p0, Lcom/fusepowered/crashlog/CrashDetector;->mExternalExceptionHandler:Ljava/lang/Thread$UncaughtExceptionHandler;
 

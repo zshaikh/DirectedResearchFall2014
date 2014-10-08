@@ -45,8 +45,6 @@
 # direct methods
 .method private constructor <init>(Lcom/chartboost/sdk/impl/h;Landroid/content/Context;)V
     .locals 5
-    .parameter
-    .parameter
 
     .prologue
     const/4 v4, 0x1
@@ -227,9 +225,6 @@
 
 .method synthetic constructor <init>(Lcom/chartboost/sdk/impl/h;Landroid/content/Context;Lcom/chartboost/sdk/impl/h$a;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 67
@@ -240,7 +235,6 @@
 
 .method static synthetic a(Lcom/chartboost/sdk/impl/h$a;)Lcom/chartboost/sdk/impl/s;
     .locals 1
-    .parameter
 
     .prologue
     .line 62
@@ -251,7 +245,6 @@
 
 .method private a(Landroid/view/View;)V
     .locals 3
-    .parameter
 
     .prologue
     .line 112
@@ -313,8 +306,6 @@
 
 .method static synthetic a(Lcom/chartboost/sdk/impl/h$a;Z)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 56
@@ -325,7 +316,6 @@
 
 .method static synthetic b(Lcom/chartboost/sdk/impl/h$a;)Lcom/chartboost/sdk/impl/h;
     .locals 1
-    .parameter
 
     .prologue
     .line 56
@@ -440,8 +430,6 @@
 # virtual methods
 .method protected a(II)V
     .locals 11
-    .parameter
-    .parameter
 
     .prologue
     const/16 v10, 0xb

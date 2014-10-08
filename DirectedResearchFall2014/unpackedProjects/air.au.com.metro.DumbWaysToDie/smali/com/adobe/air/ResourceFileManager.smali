@@ -14,7 +14,6 @@
 # direct methods
 .method constructor <init>(Landroid/content/Context;)V
     .locals 3
-    .parameter
 
     .prologue
     .line 44
@@ -94,7 +93,6 @@
 
 .method private remapSpecialFileNames(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
-    .parameter
 
     .prologue
     .line 131
@@ -144,7 +142,6 @@
 
 .method private resExists(Ljava/lang/String;)Z
     .locals 3
-    .parameter
 
     .prologue
     .line 143
@@ -194,7 +191,6 @@
 # virtual methods
 .method public GetAssetFileDescriptor(Ljava/lang/String;)Landroid/content/res/AssetFileDescriptor;
     .locals 4
-    .parameter
 
     .prologue
     .line 163
@@ -283,8 +279,6 @@
 
 .method public extractResource(ILjava/io/File;)V
     .locals 1
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -309,7 +303,6 @@
 
 .method public getFileStreamFromRawRes(I)Ljava/io/InputStream;
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/content/res/Resources$NotFoundException;
@@ -334,7 +327,6 @@
 
 .method public getResourceEntryName(I)Ljava/lang/String;
     .locals 1
-    .parameter
 
     .prologue
     .line 196
@@ -363,7 +355,6 @@
 
 .method public getResourceName(I)Ljava/lang/String;
     .locals 1
-    .parameter
 
     .prologue
     .line 187
@@ -392,7 +383,6 @@
 
 .method public getStream(I)Ljava/io/InputStream;
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/content/res/Resources$NotFoundException;
@@ -413,7 +403,6 @@
 
 .method public lookupResId(Ljava/lang/String;)I
     .locals 1
-    .parameter
 
     .prologue
     .line 121
@@ -448,7 +437,6 @@
 
 .method public readFileFromRawRes(I)Ljava/lang/String;
     .locals 4
-    .parameter
 
     .prologue
     .line 76
@@ -498,7 +486,6 @@
 
 .method public resExists(I)Z
     .locals 2
-    .parameter
 
     .prologue
     const/4 v1, 0x0

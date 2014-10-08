@@ -29,7 +29,7 @@
 # virtual methods
 .method public getAlpha(Landroid/view/View;)F
     .locals 1
-    .parameter "view"
+    .param p1, "view"    # Landroid/view/View;
 
     .prologue
     .line 298
@@ -54,7 +54,7 @@
 
 .method public getLayerType(Landroid/view/View;)I
     .locals 1
-    .parameter "view"
+    .param p1, "view"    # Landroid/view/View;
 
     .prologue
     .line 306
@@ -67,8 +67,8 @@
 
 .method public setLayerPaint(Landroid/view/View;Landroid/graphics/Paint;)V
     .locals 1
-    .parameter "view"
-    .parameter "paint"
+    .param p1, "view"    # Landroid/view/View;
+    .param p2, "paint"    # Landroid/graphics/Paint;
 
     .prologue
     .line 312
@@ -87,9 +87,9 @@
 
 .method public setLayerType(Landroid/view/View;ILandroid/graphics/Paint;)V
     .locals 0
-    .parameter "view"
-    .parameter "layerType"
-    .parameter "paint"
+    .param p1, "view"    # Landroid/view/View;
+    .param p2, "layerType"    # I
+    .param p3, "paint"    # Landroid/graphics/Paint;
 
     .prologue
     .line 302

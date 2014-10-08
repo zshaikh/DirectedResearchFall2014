@@ -17,8 +17,7 @@
 
 
 # static fields
-#the value of this static final field might be set in the static constructor
-.field static final synthetic $assertionsDisabled:Z = false
+.field static final synthetic $assertionsDisabled:Z
 
 .field private static final LOG_TAG:Ljava/lang/String; = "FacebookSDK.TestSession"
 
@@ -93,11 +92,10 @@
 
 .method constructor <init>(Landroid/app/Activity;Ljava/util/List;Lcom/facebook/TokenCachingStrategy;Ljava/lang/String;Lcom/facebook/TestSession$Mode;)V
     .locals 2
-    .parameter "activity"
-    .parameter
-    .parameter "tokenCachingStrategy"
-    .parameter "sessionUniqueUserTag"
-    .parameter "mode"
+    .param p1, "activity"    # Landroid/app/Activity;
+    .param p3, "tokenCachingStrategy"    # Lcom/facebook/TokenCachingStrategy;
+    .param p4, "sessionUniqueUserTag"    # Ljava/lang/String;
+    .param p5, "mode"    # Lcom/facebook/TestSession$Mode;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -115,7 +113,7 @@
 
     .prologue
     .line 85
-    .local p2, permissions:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
+    .local p2, "permissions":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     sget-object v0, Lcom/facebook/TestSession;->testApplicationId:Ljava/lang/String;
 
     invoke-direct {p0, p1, v0, p3}, Lcom/facebook/Session;-><init>(Landroid/content/Context;Ljava/lang/String;Lcom/facebook/TokenCachingStrategy;)V
@@ -154,8 +152,7 @@
 
 .method public static createSessionWithPrivateUser(Landroid/app/Activity;Ljava/util/List;)Lcom/facebook/TestSession;
     .locals 2
-    .parameter "activity"
-    .parameter
+    .param p0, "activity"    # Landroid/app/Activity;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -170,7 +167,7 @@
 
     .prologue
     .line 109
-    .local p1, permissions:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
+    .local p1, "permissions":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     sget-object v0, Lcom/facebook/TestSession$Mode;->PRIVATE:Lcom/facebook/TestSession$Mode;
 
     const/4 v1, 0x0
@@ -184,8 +181,7 @@
 
 .method public static createSessionWithSharedUser(Landroid/app/Activity;Ljava/util/List;)Lcom/facebook/TestSession;
     .locals 1
-    .parameter "activity"
-    .parameter
+    .param p0, "activity"    # Landroid/app/Activity;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -200,7 +196,7 @@
 
     .prologue
     .line 126
-    .local p1, permissions:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
+    .local p1, "permissions":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     const/4 v0, 0x0
 
     invoke-static {p0, p1, v0}, Lcom/facebook/TestSession;->createSessionWithSharedUser(Landroid/app/Activity;Ljava/util/List;Ljava/lang/String;)Lcom/facebook/TestSession;
@@ -212,9 +208,8 @@
 
 .method public static createSessionWithSharedUser(Landroid/app/Activity;Ljava/util/List;Ljava/lang/String;)Lcom/facebook/TestSession;
     .locals 1
-    .parameter "activity"
-    .parameter
-    .parameter "sessionUniqueUserTag"
+    .param p0, "activity"    # Landroid/app/Activity;
+    .param p2, "sessionUniqueUserTag"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -231,7 +226,7 @@
 
     .prologue
     .line 147
-    .local p1, permissions:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
+    .local p1, "permissions":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     sget-object v0, Lcom/facebook/TestSession$Mode;->SHARED:Lcom/facebook/TestSession$Mode;
 
     invoke-static {p0, p1, v0, p2}, Lcom/facebook/TestSession;->createTestSession(Landroid/app/Activity;Ljava/util/List;Lcom/facebook/TestSession$Mode;Ljava/lang/String;)Lcom/facebook/TestSession;
@@ -259,7 +254,7 @@
     invoke-direct {v3}, Landroid/os/Bundle;-><init>()V
 
     .line 386
-    .local v3, parameters:Landroid/os/Bundle;
+    .local v3, "parameters":Landroid/os/Bundle;
     const-string v6, "installed"
 
     const-string v7, "true"
@@ -325,7 +320,7 @@
     move-result-object v2
 
     .line 398
-    .local v2, graphPath:Ljava/lang/String;
+    .local v2, "graphPath":Ljava/lang/String;
     new-instance v0, Lcom/facebook/Request;
 
     sget-object v6, Lcom/facebook/HttpMethod;->POST:Lcom/facebook/HttpMethod;
@@ -333,19 +328,19 @@
     invoke-direct {v0, v9, v2, v3, v6}, Lcom/facebook/Request;-><init>(Lcom/facebook/Session;Ljava/lang/String;Landroid/os/Bundle;Lcom/facebook/HttpMethod;)V
 
     .line 399
-    .local v0, createUserRequest:Lcom/facebook/Request;
+    .local v0, "createUserRequest":Lcom/facebook/Request;
     invoke-virtual {v0}, Lcom/facebook/Request;->executeAndWait()Lcom/facebook/Response;
 
     move-result-object v4
 
     .line 401
-    .local v4, response:Lcom/facebook/Response;
+    .local v4, "response":Lcom/facebook/Response;
     invoke-virtual {v4}, Lcom/facebook/Response;->getError()Lcom/facebook/FacebookRequestError;
 
     move-result-object v1
 
     .line 402
-    .local v1, error:Lcom/facebook/FacebookRequestError;
+    .local v1, "error":Lcom/facebook/FacebookRequestError;
     const-class v6, Lcom/facebook/TestSession$TestAccount;
 
     invoke-virtual {v4, v6}, Lcom/facebook/Response;->getGraphObjectAs(Ljava/lang/Class;)Lcom/facebook/model/GraphObject;
@@ -355,7 +350,7 @@
     check-cast v5, Lcom/facebook/TestSession$TestAccount;
 
     .line 403
-    .local v5, testAccount:Lcom/facebook/TestSession$TestAccount;
+    .local v5, "testAccount":Lcom/facebook/TestSession$TestAccount;
     if-eqz v1, :cond_1
 
     .line 404
@@ -417,10 +412,9 @@
 
 .method private static declared-synchronized createTestSession(Landroid/app/Activity;Ljava/util/List;Lcom/facebook/TestSession$Mode;Ljava/lang/String;)Lcom/facebook/TestSession;
     .locals 7
-    .parameter "activity"
-    .parameter
-    .parameter "mode"
-    .parameter "sessionUniqueUserTag"
+    .param p0, "activity"    # Landroid/app/Activity;
+    .param p2, "mode"    # Lcom/facebook/TestSession$Mode;
+    .param p3, "sessionUniqueUserTag"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -438,7 +432,7 @@
 
     .prologue
     .line 205
-    .local p1, permissions:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
+    .local p1, "permissions":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     const-class v6, Lcom/facebook/TestSession;
 
     monitor-enter v6
@@ -539,8 +533,8 @@
 
 .method private deleteTestAccount(Ljava/lang/String;Ljava/lang/String;)V
     .locals 10
-    .parameter "testAccountId"
-    .parameter "appAccessToken"
+    .param p1, "testAccountId"    # Ljava/lang/String;
+    .param p2, "appAccessToken"    # Ljava/lang/String;
 
     .prologue
     const/4 v8, 0x1
@@ -555,7 +549,7 @@
     invoke-direct {v2}, Landroid/os/Bundle;-><init>()V
 
     .line 424
-    .local v2, parameters:Landroid/os/Bundle;
+    .local v2, "parameters":Landroid/os/Bundle;
     const-string v5, "access_token"
 
     invoke-virtual {v2, v5, p2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
@@ -570,25 +564,25 @@
     invoke-direct {v3, v5, p1, v2, v6}, Lcom/facebook/Request;-><init>(Lcom/facebook/Session;Ljava/lang/String;Landroid/os/Bundle;Lcom/facebook/HttpMethod;)V
 
     .line 427
-    .local v3, request:Lcom/facebook/Request;
+    .local v3, "request":Lcom/facebook/Request;
     invoke-virtual {v3}, Lcom/facebook/Request;->executeAndWait()Lcom/facebook/Response;
 
     move-result-object v4
 
     .line 429
-    .local v4, response:Lcom/facebook/Response;
+    .local v4, "response":Lcom/facebook/Response;
     invoke-virtual {v4}, Lcom/facebook/Response;->getError()Lcom/facebook/FacebookRequestError;
 
     move-result-object v0
 
     .line 430
-    .local v0, error:Lcom/facebook/FacebookRequestError;
+    .local v0, "error":Lcom/facebook/FacebookRequestError;
     invoke-virtual {v4}, Lcom/facebook/Response;->getGraphObject()Lcom/facebook/model/GraphObject;
 
     move-result-object v1
 
     .line 431
-    .local v1, graphObject:Lcom/facebook/model/GraphObject;
+    .local v1, "graphObject":Lcom/facebook/model/GraphObject;
     if-eqz v0, :cond_1
 
     .line 432
@@ -669,7 +663,7 @@
     move-result-object v0
 
     .line 369
-    .local v0, testAccount:Lcom/facebook/TestSession$TestAccount;
+    .local v0, "testAccount":Lcom/facebook/TestSession$TestAccount;
     if-eqz v0, :cond_0
 
     .line 370
@@ -688,7 +682,7 @@
 
 .method private static declared-synchronized findTestAccountMatchingIdentifier(Ljava/lang/String;)Lcom/facebook/TestSession$TestAccount;
     .locals 4
-    .parameter "identifier"
+    .param p0, "identifier"    # Ljava/lang/String;
 
     .prologue
     .line 295
@@ -737,7 +731,7 @@
     check-cast v0, Lcom/facebook/TestSession$TestAccount;
 
     .line 298
-    .local v0, testAccount:Lcom/facebook/TestSession$TestAccount;
+    .local v0, "testAccount":Lcom/facebook/TestSession$TestAccount;
     invoke-interface {v0}, Lcom/facebook/TestSession$TestAccount;->getName()Ljava/lang/String;
 
     move-result-object v3
@@ -756,7 +750,7 @@
     goto :goto_0
 
     .line 295
-    .end local v0           #testAccount:Lcom/facebook/TestSession$TestAccount;
+    .end local v0    # "testAccount":Lcom/facebook/TestSession$TestAccount;
     :catchall_0
     move-exception v2
 
@@ -767,7 +761,7 @@
 
 .method private finishAuthWithTestAccount(Lcom/facebook/TestSession$TestAccount;)V
     .locals 4
-    .parameter "testAccount"
+    .param p1, "testAccount"    # Lcom/facebook/TestSession$TestAccount;
 
     .prologue
     .line 377
@@ -793,7 +787,7 @@
     move-result-object v0
 
     .line 381
-    .local v0, accessToken:Lcom/facebook/AccessToken;
+    .local v0, "accessToken":Lcom/facebook/AccessToken;
     const/4 v1, 0x0
 
     invoke-virtual {p0, v0, v1}, Lcom/facebook/TestSession;->finishAuthOrReauth(Lcom/facebook/AccessToken;Ljava/lang/Exception;)V
@@ -872,7 +866,7 @@
     and-long v2, v6, v8
 
     .line 445
-    .local v2, permissionsHash:J
+    .local v2, "permissionsHash":J
     iget-object v6, p0, Lcom/facebook/TestSession;->sessionUniqueUserTag:Ljava/lang/String;
 
     if-eqz v6, :cond_0
@@ -890,12 +884,12 @@
     move-wide v4, v6
 
     .line 447
-    .local v4, sessionTagHash:J
+    .local v4, "sessionTagHash":J
     :goto_0
     xor-long v0, v2, v4
 
     .line 448
-    .local v0, combinedHash:J
+    .local v0, "combinedHash":J
     invoke-direct {p0, v0, v1}, Lcom/facebook/TestSession;->validNameStringFromInteger(J)Ljava/lang/String;
 
     move-result-object v6
@@ -903,8 +897,8 @@
     return-object v6
 
     .line 445
-    .end local v0           #combinedHash:J
-    .end local v4           #sessionTagHash:J
+    .end local v0    # "combinedHash":J
+    .end local v4    # "sessionTagHash":J
     :cond_0
     const-wide/16 v6, 0x0
 
@@ -967,8 +961,6 @@
 
 .method private static declared-synchronized populateTestAccounts(Ljava/util/Collection;Ljava/util/Collection;)V
     .locals 6
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -985,8 +977,8 @@
 
     .prologue
     .line 278
-    .local p0, testAccounts:Ljava/util/Collection;,"Ljava/util/Collection<Lcom/facebook/TestSession$TestAccount;>;"
-    .local p1, userAccounts:Ljava/util/Collection;,"Ljava/util/Collection<Lcom/facebook/TestSession$UserAccount;>;"
+    .local p0, "testAccounts":Ljava/util/Collection;, "Ljava/util/Collection<Lcom/facebook/TestSession$TestAccount;>;"
+    .local p1, "userAccounts":Ljava/util/Collection;, "Ljava/util/Collection<Lcom/facebook/TestSession$UserAccount;>;"
     const-class v2, Lcom/facebook/TestSession;
 
     monitor-enter v2
@@ -1033,7 +1025,7 @@
     check-cast v0, Lcom/facebook/TestSession$TestAccount;
 
     .line 279
-    .local v0, testAccount:Lcom/facebook/TestSession$TestAccount;
+    .local v0, "testAccount":Lcom/facebook/TestSession$TestAccount;
     invoke-static {v0}, Lcom/facebook/TestSession;->storeTestAccount(Lcom/facebook/TestSession$TestAccount;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -1041,7 +1033,7 @@
     goto :goto_0
 
     .line 278
-    .end local v0           #testAccount:Lcom/facebook/TestSession$TestAccount;
+    .end local v0    # "testAccount":Lcom/facebook/TestSession$TestAccount;
     :catchall_0
     move-exception v3
 
@@ -1059,7 +1051,7 @@
     check-cast v1, Lcom/facebook/TestSession$UserAccount;
 
     .line 283
-    .local v1, userAccount:Lcom/facebook/TestSession$UserAccount;
+    .local v1, "userAccount":Lcom/facebook/TestSession$UserAccount;
     sget-object v4, Lcom/facebook/TestSession;->appTestAccounts:Ljava/util/Map;
 
     invoke-interface {v1}, Lcom/facebook/TestSession$UserAccount;->getUid()Ljava/lang/String;
@@ -1073,7 +1065,7 @@
     check-cast v0, Lcom/facebook/TestSession$TestAccount;
 
     .line 284
-    .restart local v0       #testAccount:Lcom/facebook/TestSession$TestAccount;
+    .restart local v0    # "testAccount":Lcom/facebook/TestSession$TestAccount;
     if-eqz v0, :cond_0
 
     .line 285
@@ -1139,11 +1131,11 @@
     move-result-object v7
 
     .line 231
-    .local v7, testAccountQuery:Ljava/lang/String;
+    .local v7, "testAccountQuery":Ljava/lang/String;
     const-string v10, "SELECT uid,name FROM user WHERE uid IN (SELECT id FROM #test_accounts)"
 
     .line 233
-    .local v10, userQuery:Ljava/lang/String;
+    .local v10, "userQuery":Ljava/lang/String;
     new-instance v4, Landroid/os/Bundle;
 
     invoke-direct {v4}, Landroid/os/Bundle;-><init>()V
@@ -1151,14 +1143,14 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     .line 238
-    .local v4, parameters:Landroid/os/Bundle;
+    .local v4, "parameters":Landroid/os/Bundle;
     :try_start_2
     new-instance v3, Lorg/json/JSONObject;
 
     invoke-direct {v3}, Lorg/json/JSONObject;-><init>()V
 
     .line 239
-    .local v3, multiquery:Lorg/json/JSONObject;
+    .local v3, "multiquery":Lorg/json/JSONObject;
     const-string v12, "test_accounts"
 
     invoke-virtual {v3, v12, v7}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
@@ -1168,8 +1160,8 @@
 
     invoke-virtual {v3, v12, v10}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
     :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
     .catch Lorg/json/JSONException; {:try_start_2 .. :try_end_2} :catch_0
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
     .line 244
     :try_start_3
@@ -1202,13 +1194,13 @@
     invoke-direct {v5, v12, v13, v4, v14}, Lcom/facebook/Request;-><init>(Lcom/facebook/Session;Ljava/lang/String;Landroid/os/Bundle;Lcom/facebook/HttpMethod;)V
 
     .line 250
-    .local v5, request:Lcom/facebook/Request;
+    .local v5, "request":Lcom/facebook/Request;
     invoke-virtual {v5}, Lcom/facebook/Request;->executeAndWait()Lcom/facebook/Response;
 
     move-result-object v6
 
     .line 252
-    .local v6, response:Lcom/facebook/Response;
+    .local v6, "response":Lcom/facebook/Response;
     invoke-virtual {v6}, Lcom/facebook/Response;->getError()Lcom/facebook/FacebookRequestError;
 
     move-result-object v12
@@ -1229,12 +1221,12 @@
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
     .line 218
-    .end local v3           #multiquery:Lorg/json/JSONObject;
-    .end local v4           #parameters:Landroid/os/Bundle;
-    .end local v5           #request:Lcom/facebook/Request;
-    .end local v6           #response:Lcom/facebook/Response;
-    .end local v7           #testAccountQuery:Ljava/lang/String;
-    .end local v10           #userQuery:Ljava/lang/String;
+    .end local v3    # "multiquery":Lorg/json/JSONObject;
+    .end local v4    # "parameters":Landroid/os/Bundle;
+    .end local v5    # "request":Lcom/facebook/Request;
+    .end local v6    # "response":Lcom/facebook/Response;
+    .end local v7    # "testAccountQuery":Ljava/lang/String;
+    .end local v10    # "userQuery":Ljava/lang/String;
     :catchall_0
     move-exception v12
 
@@ -1243,16 +1235,16 @@
     throw v12
 
     .line 241
-    .restart local v4       #parameters:Landroid/os/Bundle;
-    .restart local v7       #testAccountQuery:Ljava/lang/String;
-    .restart local v10       #userQuery:Ljava/lang/String;
+    .restart local v4    # "parameters":Landroid/os/Bundle;
+    .restart local v7    # "testAccountQuery":Ljava/lang/String;
+    .restart local v10    # "userQuery":Ljava/lang/String;
     :catch_0
     move-exception v12
 
     move-object v0, v12
 
     .line 242
-    .local v0, exception:Lorg/json/JSONException;
+    .local v0, "exception":Lorg/json/JSONException;
     :try_start_4
     new-instance v12, Lcom/facebook/FacebookException;
 
@@ -1261,10 +1253,10 @@
     throw v12
 
     .line 256
-    .end local v0           #exception:Lorg/json/JSONException;
-    .restart local v3       #multiquery:Lorg/json/JSONObject;
-    .restart local v5       #request:Lcom/facebook/Request;
-    .restart local v6       #response:Lcom/facebook/Response;
+    .end local v0    # "exception":Lorg/json/JSONException;
+    .restart local v3    # "multiquery":Lorg/json/JSONObject;
+    .restart local v5    # "request":Lcom/facebook/Request;
+    .restart local v6    # "response":Lcom/facebook/Response;
     :cond_1
     const-class v12, Lcom/facebook/TestSession$FqlResponse;
 
@@ -1275,13 +1267,13 @@
     check-cast v1, Lcom/facebook/TestSession$FqlResponse;
 
     .line 258
-    .local v1, fqlResponse:Lcom/facebook/TestSession$FqlResponse;
+    .local v1, "fqlResponse":Lcom/facebook/TestSession$FqlResponse;
     invoke-interface {v1}, Lcom/facebook/TestSession$FqlResponse;->getData()Lcom/facebook/model/GraphObjectList;
 
     move-result-object v2
 
     .line 259
-    .local v2, fqlResults:Lcom/facebook/model/GraphObjectList;,"Lcom/facebook/model/GraphObjectList<Lcom/facebook/TestSession$FqlResult;>;"
+    .local v2, "fqlResults":Lcom/facebook/model/GraphObjectList;, "Lcom/facebook/model/GraphObjectList<Lcom/facebook/TestSession$FqlResult;>;"
     if-eqz v2, :cond_2
 
     invoke-interface {v2}, Lcom/facebook/model/GraphObjectList;->size()I
@@ -1323,7 +1315,7 @@
     move-result-object v8
 
     .line 265
-    .local v8, testAccounts:Ljava/util/Collection;,"Ljava/util/Collection<Lcom/facebook/TestSession$TestAccount;>;"
+    .local v8, "testAccounts":Ljava/util/Collection;, "Ljava/util/Collection<Lcom/facebook/TestSession$TestAccount;>;"
     const/4 v12, 0x1
 
     invoke-interface {v2, v12}, Lcom/facebook/model/GraphObjectList;->get(I)Ljava/lang/Object;
@@ -1343,7 +1335,7 @@
     move-result-object v9
 
     .line 268
-    .local v9, userAccounts:Ljava/util/Collection;,"Ljava/util/Collection<Lcom/facebook/TestSession$UserAccount;>;"
+    .local v9, "userAccounts":Ljava/util/Collection;, "Ljava/util/Collection<Lcom/facebook/TestSession$UserAccount;>;"
     invoke-static {v8, v9}, Lcom/facebook/TestSession;->populateTestAccounts(Ljava/util/Collection;Ljava/util/Collection;)V
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
@@ -1353,7 +1345,7 @@
 
 .method public static declared-synchronized setTestApplicationId(Ljava/lang/String;)V
     .locals 3
-    .parameter "applicationId"
+    .param p0, "applicationId"    # Ljava/lang/String;
 
     .prologue
     .line 166
@@ -1408,7 +1400,7 @@
 
 .method public static declared-synchronized setTestApplicationSecret(Ljava/lang/String;)V
     .locals 3
-    .parameter "applicationSecret"
+    .param p0, "applicationSecret"    # Ljava/lang/String;
 
     .prologue
     .line 188
@@ -1463,7 +1455,7 @@
 
 .method private static declared-synchronized storeTestAccount(Lcom/facebook/TestSession$TestAccount;)V
     .locals 3
-    .parameter "testAccount"
+    .param p0, "testAccount"    # Lcom/facebook/TestSession$TestAccount;
 
     .prologue
     .line 291
@@ -1498,7 +1490,7 @@
 
 .method private validNameStringFromInteger(J)Ljava/lang/String;
     .locals 9
-    .parameter "i"
+    .param p1, "i"    # J
 
     .prologue
     .line 452
@@ -1507,7 +1499,7 @@
     move-result-object v3
 
     .line 453
-    .local v3, s:Ljava/lang/String;
+    .local v3, "s":Ljava/lang/String;
     new-instance v2, Ljava/lang/StringBuilder;
 
     const-string v4, "Perm"
@@ -1515,11 +1507,11 @@
     invoke-direct {v2, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     .line 458
-    .local v2, result:Ljava/lang/StringBuilder;
+    .local v2, "result":Ljava/lang/StringBuilder;
     const/4 v1, 0x0
 
     .line 459
-    .local v1, lastChar:C
+    .local v1, "lastChar":C
     invoke-virtual {v3}, Ljava/lang/String;->toCharArray()[C
 
     move-result-object v4
@@ -1543,7 +1535,7 @@
     aget-char v0, v4, v6
 
     .line 460
-    .local v0, c:C
+    .local v0, "c":C
     if-ne v0, v1, :cond_1
 
     .line 461
@@ -1576,7 +1568,7 @@
 # virtual methods
 .method authorize(Lcom/facebook/Session$AuthorizationRequest;)V
     .locals 2
-    .parameter "request"
+    .param p1, "request"    # Lcom/facebook/Session$AuthorizationRequest;
 
     .prologue
     .line 315
@@ -1633,7 +1625,7 @@
 
 .method forceExtendAccessToken(Z)V
     .locals 9
-    .parameter "forceExtendAccessToken"
+    .param p1, "forceExtendAccessToken"    # Z
 
     .prologue
     const-wide/16 v7, 0x0
@@ -1644,7 +1636,7 @@
     move-result-object v6
 
     .line 341
-    .local v6, currentToken:Lcom/facebook/AccessToken;
+    .local v6, "currentToken":Lcom/facebook/AccessToken;
     new-instance v0, Lcom/facebook/AccessToken;
 
     invoke-virtual {v6}, Lcom/facebook/AccessToken;->getToken()Ljava/lang/String;
@@ -1705,16 +1697,16 @@
 
 .method postStateChange(Lcom/facebook/SessionState;Lcom/facebook/SessionState;Ljava/lang/Exception;)V
     .locals 3
-    .parameter "oldState"
-    .parameter "newState"
-    .parameter "error"
+    .param p1, "oldState"    # Lcom/facebook/SessionState;
+    .param p2, "newState"    # Lcom/facebook/SessionState;
+    .param p3, "error"    # Ljava/lang/Exception;
 
     .prologue
     .line 325
     iget-object v0, p0, Lcom/facebook/TestSession;->testAccountId:Ljava/lang/String;
 
     .line 327
-    .local v0, id:Ljava/lang/String;
+    .local v0, "id":Ljava/lang/String;
     invoke-super {p0, p1, p2, p3}, Lcom/facebook/Session;->postStateChange(Lcom/facebook/SessionState;Lcom/facebook/SessionState;Ljava/lang/Exception;)V
 
     .line 329
@@ -1754,7 +1746,7 @@
     move-result v0
 
     .line 349
-    .local v0, result:Z
+    .local v0, "result":Z
     const/4 v1, 0x0
 
     iput-boolean v1, p0, Lcom/facebook/TestSession;->wasAskedToExtendAccessToken:Z
@@ -1773,7 +1765,7 @@
     move-result-object v0
 
     .line 309
-    .local v0, superString:Ljava/lang/String;
+    .local v0, "superString":Ljava/lang/String;
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V

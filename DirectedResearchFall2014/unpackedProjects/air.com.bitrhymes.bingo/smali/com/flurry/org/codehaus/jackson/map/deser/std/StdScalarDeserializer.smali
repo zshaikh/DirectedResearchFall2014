@@ -18,11 +18,11 @@
 # direct methods
 .method protected constructor <init>(Lcom/flurry/org/codehaus/jackson/type/JavaType;)V
     .locals 0
-    .parameter "valueType"
+    .param p1, "valueType"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
 
     .prologue
     .line 24
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/deser/std/StdScalarDeserializer;,"Lcom/flurry/org/codehaus/jackson/map/deser/std/StdScalarDeserializer<TT;>;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/deser/std/StdScalarDeserializer;, "Lcom/flurry/org/codehaus/jackson/map/deser/std/StdScalarDeserializer<TT;>;"
     invoke-direct {p0, p1}, Lcom/flurry/org/codehaus/jackson/map/deser/std/StdDeserializer;-><init>(Lcom/flurry/org/codehaus/jackson/type/JavaType;)V
 
     .line 25
@@ -31,7 +31,6 @@
 
 .method protected constructor <init>(Ljava/lang/Class;)V
     .locals 0
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -42,8 +41,8 @@
 
     .prologue
     .line 20
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/deser/std/StdScalarDeserializer;,"Lcom/flurry/org/codehaus/jackson/map/deser/std/StdScalarDeserializer<TT;>;"
-    .local p1, vc:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/deser/std/StdScalarDeserializer;, "Lcom/flurry/org/codehaus/jackson/map/deser/std/StdScalarDeserializer<TT;>;"
+    .local p1, "vc":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-direct {p0, p1}, Lcom/flurry/org/codehaus/jackson/map/deser/std/StdDeserializer;-><init>(Ljava/lang/Class;)V
 
     .line 21
@@ -54,9 +53,9 @@
 # virtual methods
 .method public deserializeWithType(Lcom/flurry/org/codehaus/jackson/JsonParser;Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;Lcom/flurry/org/codehaus/jackson/map/TypeDeserializer;)Ljava/lang/Object;
     .locals 1
-    .parameter "jp"
-    .parameter "ctxt"
-    .parameter "typeDeserializer"
+    .param p1, "jp"    # Lcom/flurry/org/codehaus/jackson/JsonParser;
+    .param p2, "ctxt"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;
+    .param p3, "typeDeserializer"    # Lcom/flurry/org/codehaus/jackson/map/TypeDeserializer;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -66,7 +65,7 @@
 
     .prologue
     .line 32
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/deser/std/StdScalarDeserializer;,"Lcom/flurry/org/codehaus/jackson/map/deser/std/StdScalarDeserializer<TT;>;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/deser/std/StdScalarDeserializer;, "Lcom/flurry/org/codehaus/jackson/map/deser/std/StdScalarDeserializer<TT;>;"
     invoke-virtual {p3, p1, p2}, Lcom/flurry/org/codehaus/jackson/map/TypeDeserializer;->deserializeTypedFromScalar(Lcom/flurry/org/codehaus/jackson/JsonParser;Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;)Ljava/lang/Object;
 
     move-result-object v0

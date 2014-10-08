@@ -63,12 +63,12 @@
 
 .method public constructor <init>(ILcom/flurry/org/apache/avro/Schema;)V
     .locals 3
-    .parameter "capacity"
-    .parameter "schema"
+    .param p1, "capacity"    # I
+    .param p2, "schema"    # Lcom/flurry/org/apache/avro/Schema;
 
     .prologue
     .line 129
-    .local p0, this:Lcom/flurry/org/apache/avro/generic/GenericData$Array;,"Lcom/flurry/org/apache/avro/generic/GenericData$Array<TT;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/generic/GenericData$Array;, "Lcom/flurry/org/apache/avro/generic/GenericData$Array<TT;>;"
     invoke-direct {p0}, Ljava/util/AbstractList;-><init>()V
 
     .line 128
@@ -136,8 +136,7 @@
 
 .method public constructor <init>(Lcom/flurry/org/apache/avro/Schema;Ljava/util/Collection;)V
     .locals 3
-    .parameter "schema"
-    .parameter
+    .param p1, "schema"    # Lcom/flurry/org/apache/avro/Schema;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -149,8 +148,8 @@
 
     .prologue
     .line 136
-    .local p0, this:Lcom/flurry/org/apache/avro/generic/GenericData$Array;,"Lcom/flurry/org/apache/avro/generic/GenericData$Array<TT;>;"
-    .local p2, c:Ljava/util/Collection;,"Ljava/util/Collection<TT;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/generic/GenericData$Array;, "Lcom/flurry/org/apache/avro/generic/GenericData$Array<TT;>;"
+    .local p2, "c":Ljava/util/Collection;, "Ljava/util/Collection<TT;>;"
     invoke-direct {p0}, Ljava/util/AbstractList;-><init>()V
 
     .line 128
@@ -225,7 +224,7 @@
 
 .method static synthetic access$100(Lcom/flurry/org/apache/avro/generic/GenericData$Array;)I
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/flurry/org/apache/avro/generic/GenericData$Array;
 
     .prologue
     .line 123
@@ -236,7 +235,7 @@
 
 .method static synthetic access$200(Lcom/flurry/org/apache/avro/generic/GenericData$Array;)[Ljava/lang/Object;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/flurry/org/apache/avro/generic/GenericData$Array;
 
     .prologue
     .line 123
@@ -249,8 +248,7 @@
 # virtual methods
 .method public add(ILjava/lang/Object;)V
     .locals 5
-    .parameter "location"
-    .parameter
+    .param p1, "location"    # I
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(ITT;)V"
@@ -258,8 +256,8 @@
     .end annotation
 
     .prologue
-    .local p0, this:Lcom/flurry/org/apache/avro/generic/GenericData$Array;,"Lcom/flurry/org/apache/avro/generic/GenericData$Array<TT;>;"
-    .local p2, o:Ljava/lang/Object;,"TT;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/generic/GenericData$Array;, "Lcom/flurry/org/apache/avro/generic/GenericData$Array<TT;>;"
+    .local p2, "o":Ljava/lang/Object;, "TT;"
     const/4 v3, 0x0
 
     .line 171
@@ -323,7 +321,7 @@
     new-array v0, v1, [Ljava/lang/Object;
 
     .line 176
-    .local v0, newElements:[Ljava/lang/Object;
+    .local v0, "newElements":[Ljava/lang/Object;
     iget-object v1, p0, Lcom/flurry/org/apache/avro/generic/GenericData$Array;->elements:[Ljava/lang/Object;
 
     iget v2, p0, Lcom/flurry/org/apache/avro/generic/GenericData$Array;->size:I
@@ -334,7 +332,7 @@
     iput-object v0, p0, Lcom/flurry/org/apache/avro/generic/GenericData$Array;->elements:[Ljava/lang/Object;
 
     .line 179
-    .end local v0           #newElements:[Ljava/lang/Object;
+    .end local v0    # "newElements":[Ljava/lang/Object;
     :cond_2
     iget-object v1, p0, Lcom/flurry/org/apache/avro/generic/GenericData$Array;->elements:[Ljava/lang/Object;
 
@@ -366,7 +364,6 @@
 
 .method public add(Ljava/lang/Object;)Z
     .locals 4
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;)Z"
@@ -374,8 +371,8 @@
     .end annotation
 
     .prologue
-    .local p0, this:Lcom/flurry/org/apache/avro/generic/GenericData$Array;,"Lcom/flurry/org/apache/avro/generic/GenericData$Array<TT;>;"
-    .local p1, o:Ljava/lang/Object;,"TT;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/generic/GenericData$Array;, "Lcom/flurry/org/apache/avro/generic/GenericData$Array<TT;>;"
+    .local p1, "o":Ljava/lang/Object;, "TT;"
     const/4 v3, 0x0
 
     .line 162
@@ -399,7 +396,7 @@
     new-array v0, v1, [Ljava/lang/Object;
 
     .line 164
-    .local v0, newElements:[Ljava/lang/Object;
+    .local v0, "newElements":[Ljava/lang/Object;
     iget-object v1, p0, Lcom/flurry/org/apache/avro/generic/GenericData$Array;->elements:[Ljava/lang/Object;
 
     iget v2, p0, Lcom/flurry/org/apache/avro/generic/GenericData$Array;->size:I
@@ -410,7 +407,7 @@
     iput-object v0, p0, Lcom/flurry/org/apache/avro/generic/GenericData$Array;->elements:[Ljava/lang/Object;
 
     .line 167
-    .end local v0           #newElements:[Ljava/lang/Object;
+    .end local v0    # "newElements":[Ljava/lang/Object;
     :cond_0
     iget-object v1, p0, Lcom/flurry/org/apache/avro/generic/GenericData$Array;->elements:[Ljava/lang/Object;
 
@@ -433,7 +430,7 @@
 
     .prologue
     .line 147
-    .local p0, this:Lcom/flurry/org/apache/avro/generic/GenericData$Array;,"Lcom/flurry/org/apache/avro/generic/GenericData$Array<TT;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/generic/GenericData$Array;, "Lcom/flurry/org/apache/avro/generic/GenericData$Array<TT;>;"
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/flurry/org/apache/avro/generic/GenericData$Array;->size:I
@@ -443,7 +440,6 @@
 
 .method public compareTo(Lcom/flurry/org/apache/avro/generic/GenericArray;)I
     .locals 2
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -454,8 +450,8 @@
 
     .prologue
     .line 203
-    .local p0, this:Lcom/flurry/org/apache/avro/generic/GenericData$Array;,"Lcom/flurry/org/apache/avro/generic/GenericData$Array<TT;>;"
-    .local p1, that:Lcom/flurry/org/apache/avro/generic/GenericArray;,"Lcom/flurry/org/apache/avro/generic/GenericArray<TT;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/generic/GenericData$Array;, "Lcom/flurry/org/apache/avro/generic/GenericData$Array<TT;>;"
+    .local p1, "that":Lcom/flurry/org/apache/avro/generic/GenericArray;, "Lcom/flurry/org/apache/avro/generic/GenericArray<TT;>;"
     invoke-static {}, Lcom/flurry/org/apache/avro/generic/GenericData;->get()Lcom/flurry/org/apache/avro/generic/GenericData;
 
     move-result-object v0
@@ -473,14 +469,14 @@
 
 .method public bridge synthetic compareTo(Ljava/lang/Object;)I
     .locals 1
-    .parameter "x0"
+    .param p1, "x0"    # Ljava/lang/Object;
 
     .prologue
     .line 122
-    .local p0, this:Lcom/flurry/org/apache/avro/generic/GenericData$Array;,"Lcom/flurry/org/apache/avro/generic/GenericData$Array<TT;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/generic/GenericData$Array;, "Lcom/flurry/org/apache/avro/generic/GenericData$Array<TT;>;"
     check-cast p1, Lcom/flurry/org/apache/avro/generic/GenericArray;
 
-    .end local p1
+    .end local p1    # "x0":Ljava/lang/Object;
     invoke-virtual {p0, p1}, Lcom/flurry/org/apache/avro/generic/GenericData$Array;->compareTo(Lcom/flurry/org/apache/avro/generic/GenericArray;)I
 
     move-result v0
@@ -490,7 +486,7 @@
 
 .method public get(I)Ljava/lang/Object;
     .locals 3
-    .parameter "i"
+    .param p1, "i"    # I
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I)TT;"
@@ -499,7 +495,7 @@
 
     .prologue
     .line 157
-    .local p0, this:Lcom/flurry/org/apache/avro/generic/GenericData$Array;,"Lcom/flurry/org/apache/avro/generic/GenericData$Array<TT;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/generic/GenericData$Array;, "Lcom/flurry/org/apache/avro/generic/GenericData$Array<TT;>;"
     iget v0, p0, Lcom/flurry/org/apache/avro/generic/GenericData$Array;->size:I
 
     if-lt p1, v0, :cond_0
@@ -549,7 +545,7 @@
 
     .prologue
     .line 145
-    .local p0, this:Lcom/flurry/org/apache/avro/generic/GenericData$Array;,"Lcom/flurry/org/apache/avro/generic/GenericData$Array<TT;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/generic/GenericData$Array;, "Lcom/flurry/org/apache/avro/generic/GenericData$Array<TT;>;"
     iget-object v0, p0, Lcom/flurry/org/apache/avro/generic/GenericData$Array;->schema:Lcom/flurry/org/apache/avro/Schema;
 
     return-object v0
@@ -567,7 +563,7 @@
 
     .prologue
     .line 149
-    .local p0, this:Lcom/flurry/org/apache/avro/generic/GenericData$Array;,"Lcom/flurry/org/apache/avro/generic/GenericData$Array<TT;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/generic/GenericData$Array;, "Lcom/flurry/org/apache/avro/generic/GenericData$Array<TT;>;"
     new-instance v0, Lcom/flurry/org/apache/avro/generic/GenericData$Array$1;
 
     invoke-direct {v0, p0}, Lcom/flurry/org/apache/avro/generic/GenericData$Array$1;-><init>(Lcom/flurry/org/apache/avro/generic/GenericData$Array;)V
@@ -585,7 +581,7 @@
 
     .prologue
     .line 200
-    .local p0, this:Lcom/flurry/org/apache/avro/generic/GenericData$Array;,"Lcom/flurry/org/apache/avro/generic/GenericData$Array<TT;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/generic/GenericData$Array;, "Lcom/flurry/org/apache/avro/generic/GenericData$Array<TT;>;"
     iget v0, p0, Lcom/flurry/org/apache/avro/generic/GenericData$Array;->size:I
 
     iget-object v1, p0, Lcom/flurry/org/apache/avro/generic/GenericData$Array;->elements:[Ljava/lang/Object;
@@ -611,7 +607,7 @@
 
 .method public remove(I)Ljava/lang/Object;
     .locals 5
-    .parameter "i"
+    .param p1, "i"    # I
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I)TT;"
@@ -620,7 +616,7 @@
 
     .prologue
     .line 191
-    .local p0, this:Lcom/flurry/org/apache/avro/generic/GenericData$Array;,"Lcom/flurry/org/apache/avro/generic/GenericData$Array<TT;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/generic/GenericData$Array;, "Lcom/flurry/org/apache/avro/generic/GenericData$Array<TT;>;"
     iget v1, p0, Lcom/flurry/org/apache/avro/generic/GenericData$Array;->size:I
 
     if-lt p1, v1, :cond_0
@@ -663,7 +659,7 @@
     aget-object v0, v1, p1
 
     .line 194
-    .local v0, result:Ljava/lang/Object;,"TT;"
+    .local v0, "result":Ljava/lang/Object;, "TT;"
     iget v1, p0, Lcom/flurry/org/apache/avro/generic/GenericData$Array;->size:I
 
     const/4 v2, 0x1
@@ -703,11 +699,11 @@
 
     .prologue
     .line 206
-    .local p0, this:Lcom/flurry/org/apache/avro/generic/GenericData$Array;,"Lcom/flurry/org/apache/avro/generic/GenericData$Array<TT;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/generic/GenericData$Array;, "Lcom/flurry/org/apache/avro/generic/GenericData$Array<TT;>;"
     const/4 v0, 0x0
 
     .line 207
-    .local v0, left:I
+    .local v0, "left":I
     iget-object v3, p0, Lcom/flurry/org/apache/avro/generic/GenericData$Array;->elements:[Ljava/lang/Object;
 
     array-length v3, v3
@@ -717,7 +713,7 @@
     sub-int v1, v3, v4
 
     .line 209
-    .local v1, right:I
+    .local v1, "right":I
     :goto_0
     if-ge v0, v1, :cond_0
 
@@ -727,7 +723,7 @@
     aget-object v2, v3, v0
 
     .line 211
-    .local v2, tmp:Ljava/lang/Object;
+    .local v2, "tmp":Ljava/lang/Object;
     iget-object v3, p0, Lcom/flurry/org/apache/avro/generic/GenericData$Array;->elements:[Ljava/lang/Object;
 
     iget-object v4, p0, Lcom/flurry/org/apache/avro/generic/GenericData$Array;->elements:[Ljava/lang/Object;
@@ -751,15 +747,14 @@
     goto :goto_0
 
     .line 217
-    .end local v2           #tmp:Ljava/lang/Object;
+    .end local v2    # "tmp":Ljava/lang/Object;
     :cond_0
     return-void
 .end method
 
 .method public set(ILjava/lang/Object;)Ljava/lang/Object;
     .locals 4
-    .parameter "i"
-    .parameter
+    .param p1, "i"    # I
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(ITT;)TT;"
@@ -768,8 +763,8 @@
 
     .prologue
     .line 184
-    .local p0, this:Lcom/flurry/org/apache/avro/generic/GenericData$Array;,"Lcom/flurry/org/apache/avro/generic/GenericData$Array<TT;>;"
-    .local p2, o:Ljava/lang/Object;,"TT;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/generic/GenericData$Array;, "Lcom/flurry/org/apache/avro/generic/GenericData$Array<TT;>;"
+    .local p2, "o":Ljava/lang/Object;, "TT;"
     iget v1, p0, Lcom/flurry/org/apache/avro/generic/GenericData$Array;->size:I
 
     if-lt p1, v1, :cond_0
@@ -812,7 +807,7 @@
     aget-object v0, v1, p1
 
     .line 187
-    .local v0, response:Ljava/lang/Object;,"TT;"
+    .local v0, "response":Ljava/lang/Object;, "TT;"
     iget-object v1, p0, Lcom/flurry/org/apache/avro/generic/GenericData$Array;->elements:[Ljava/lang/Object;
 
     aput-object p2, v1, p1
@@ -826,7 +821,7 @@
 
     .prologue
     .line 146
-    .local p0, this:Lcom/flurry/org/apache/avro/generic/GenericData$Array;,"Lcom/flurry/org/apache/avro/generic/GenericData$Array<TT;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/generic/GenericData$Array;, "Lcom/flurry/org/apache/avro/generic/GenericData$Array<TT;>;"
     iget v0, p0, Lcom/flurry/org/apache/avro/generic/GenericData$Array;->size:I
 
     return v0
@@ -837,13 +832,13 @@
 
     .prologue
     .line 220
-    .local p0, this:Lcom/flurry/org/apache/avro/generic/GenericData$Array;,"Lcom/flurry/org/apache/avro/generic/GenericData$Array<TT;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/generic/GenericData$Array;, "Lcom/flurry/org/apache/avro/generic/GenericData$Array<TT;>;"
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
 
     .line 221
-    .local v0, buffer:Ljava/lang/StringBuffer;
+    .local v0, "buffer":Ljava/lang/StringBuffer;
     const-string v4, "["
 
     invoke-virtual {v0, v4}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
@@ -852,12 +847,12 @@
     const/4 v1, 0x0
 
     .line 223
-    .local v1, count:I
+    .local v1, "count":I
     invoke-virtual {p0}, Lcom/flurry/org/apache/avro/generic/GenericData$Array;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
 
-    .local v3, i$:Ljava/util/Iterator;
+    .local v3, "i$":Ljava/util/Iterator;
     :cond_0
     :goto_0
     invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
@@ -871,7 +866,7 @@
     move-result-object v2
 
     .line 224
-    .local v2, e:Ljava/lang/Object;,"TT;"
+    .local v2, "e":Ljava/lang/Object;, "TT;"
     if-nez v2, :cond_1
 
     const-string v4, "null"
@@ -904,7 +899,7 @@
     goto :goto_1
 
     .line 228
-    .end local v2           #e:Ljava/lang/Object;,"TT;"
+    .end local v2    # "e":Ljava/lang/Object;, "TT;"
     :cond_2
     const-string v4, "]"
 

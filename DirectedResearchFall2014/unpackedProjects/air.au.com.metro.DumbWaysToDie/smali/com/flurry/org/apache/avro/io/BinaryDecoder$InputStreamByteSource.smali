@@ -23,7 +23,7 @@
 # direct methods
 .method private constructor <init>(Ljava/io/InputStream;)V
     .locals 1
-    .parameter "in"
+    .param p1, "in"    # Ljava/io/InputStream;
 
     .prologue
     .line 743
@@ -43,8 +43,8 @@
 
 .method synthetic constructor <init>(Ljava/io/InputStream;Lcom/flurry/org/apache/avro/io/BinaryDecoder$1;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
+    .param p1, "x0"    # Ljava/io/InputStream;
+    .param p2, "x1"    # Lcom/flurry/org/apache/avro/io/BinaryDecoder$1;
 
     .prologue
     .line 738
@@ -129,7 +129,7 @@
     move-result v0
 
     .line 846
-    .local v0, position:I
+    .local v0, "position":I
     iget-object v2, p0, Lcom/flurry/org/apache/avro/io/BinaryDecoder$InputStreamByteSource;->ba:Lcom/flurry/org/apache/avro/io/BinaryDecoder$BufferAccessor;
 
     invoke-virtual {v2}, Lcom/flurry/org/apache/avro/io/BinaryDecoder$BufferAccessor;->getBuf()[B
@@ -141,7 +141,7 @@
     and-int/lit16 v1, v2, 0xff
 
     .line 847
-    .local v1, result:I
+    .local v1, "result":I
     iget-object v2, p0, Lcom/flurry/org/apache/avro/io/BinaryDecoder$InputStreamByteSource;->ba:Lcom/flurry/org/apache/avro/io/BinaryDecoder$BufferAccessor;
 
     add-int/lit8 v3, v0, 0x1
@@ -156,9 +156,9 @@
 
 .method protected readRaw([BII)V
     .locals 2
-    .parameter "data"
-    .parameter "off"
-    .parameter "len"
+    .param p1, "data"    # [B
+    .param p2, "off"    # I
+    .param p3, "len"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -178,7 +178,7 @@
     move-result v0
 
     .line 812
-    .local v0, read:I
+    .local v0, "read":I
     if-gez v0, :cond_0
 
     .line 813
@@ -204,14 +204,14 @@
     goto :goto_0
 
     .line 819
-    .end local v0           #read:I
+    .end local v0    # "read":I
     :cond_1
     return-void
 .end method
 
 .method protected skipSourceBytes(J)V
     .locals 7
-    .parameter "length"
+    .param p1, "length"    # J
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -227,7 +227,7 @@
     const/4 v2, 0x0
 
     .line 750
-    .local v2, readZero:Z
+    .local v2, "readZero":Z
     :goto_0
     cmp-long v3, p1, v4
 
@@ -241,7 +241,7 @@
     move-result-wide v0
 
     .line 752
-    .local v0, n:J
+    .local v0, "n":J
     cmp-long v3, v0, v4
 
     if-lez v3, :cond_0
@@ -290,16 +290,16 @@
     throw v3
 
     .line 772
-    .end local v0           #n:J
+    .end local v0    # "n":J
     :cond_3
     return-void
 .end method
 
 .method protected tryReadRaw([BII)I
     .locals 5
-    .parameter "data"
-    .parameter "off"
-    .parameter "len"
+    .param p1, "data"    # [B
+    .param p2, "off"    # I
+    .param p3, "len"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -313,7 +313,7 @@
     move v1, p3
 
     .line 825
-    .local v1, leftToCopy:I
+    .local v1, "leftToCopy":I
     :goto_0
     if-lez v1, :cond_0
 
@@ -326,7 +326,7 @@
     move-result v2
 
     .line 827
-    .local v2, read:I
+    .local v2, "read":I
     if-gez v2, :cond_1
 
     .line 828
@@ -337,7 +337,7 @@
     .catch Ljava/io/EOFException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 837
-    .end local v2           #read:I
+    .end local v2    # "read":I
     :cond_0
     :goto_1
     sub-int v3, p3, v1
@@ -345,7 +345,7 @@
     return v3
 
     .line 831
-    .restart local v2       #read:I
+    .restart local v2    # "read":I
     :cond_1
     sub-int/2addr v1, v2
 
@@ -356,14 +356,14 @@
     goto :goto_0
 
     .line 834
-    .end local v2           #read:I
+    .end local v2    # "read":I
     :catch_0
     move-exception v3
 
     move-object v0, v3
 
     .line 835
-    .local v0, eof:Ljava/io/EOFException;
+    .local v0, "eof":Ljava/io/EOFException;
     iput-boolean v4, p0, Lcom/flurry/org/apache/avro/io/BinaryDecoder$InputStreamByteSource;->isEof:Z
 
     goto :goto_1
@@ -371,7 +371,7 @@
 
 .method protected trySkipBytes(J)J
     .locals 10
-    .parameter "length"
+    .param p1, "length"    # J
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -387,11 +387,11 @@
     move-wide v1, p1
 
     .line 778
-    .local v1, leftToSkip:J
+    .local v1, "leftToSkip":J
     const/4 v5, 0x0
 
     .line 779
-    .local v5, readZero:Z
+    .local v5, "readZero":Z
     :goto_0
     cmp-long v6, v1, v8
 
@@ -406,7 +406,7 @@
     move-result-wide v3
 
     .line 781
-    .local v3, n:J
+    .local v3, "n":J
     cmp-long v6, v3, v8
 
     if-lez v6, :cond_0
@@ -432,7 +432,7 @@
     iput-boolean v6, p0, Lcom/flurry/org/apache/avro/io/BinaryDecoder$InputStreamByteSource;->isEof:Z
 
     .line 805
-    .end local v3           #n:J
+    .end local v3    # "n":J
     :cond_1
     :goto_1
     sub-long v6, p1, v1
@@ -440,7 +440,7 @@
     return-wide v6
 
     .line 794
-    .restart local v3       #n:J
+    .restart local v3    # "n":J
     :cond_2
     const/4 v5, 0x1
 
@@ -458,14 +458,14 @@
     goto :goto_1
 
     .line 802
-    .end local v3           #n:J
+    .end local v3    # "n":J
     :catch_0
     move-exception v6
 
     move-object v0, v6
 
     .line 803
-    .local v0, eof:Ljava/io/EOFException;
+    .local v0, "eof":Ljava/io/EOFException;
     iput-boolean v7, p0, Lcom/flurry/org/apache/avro/io/BinaryDecoder$InputStreamByteSource;->isEof:Z
 
     goto :goto_1

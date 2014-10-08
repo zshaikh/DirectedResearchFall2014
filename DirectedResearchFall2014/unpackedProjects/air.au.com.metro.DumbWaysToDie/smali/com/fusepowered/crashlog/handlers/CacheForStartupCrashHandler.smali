@@ -17,7 +17,7 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     .line 49
@@ -33,7 +33,7 @@
 
 .method private constructor <init>(Ljava/io/File;)V
     .locals 0
-    .parameter "cacheDirectory"
+    .param p1, "cacheDirectory"    # Ljava/io/File;
 
     .prologue
     .line 52
@@ -48,7 +48,7 @@
 
 .method public static clearCachedCrashes(Landroid/content/Context;)V
     .locals 1
-    .parameter "context"
+    .param p0, "context"    # Landroid/content/Context;
 
     .prologue
     .line 137
@@ -64,8 +64,8 @@
 
 .method private static clearCachedCrashes(Ljava/io/File;Landroid/content/Context;)V
     .locals 9
-    .parameter "cacheDirectory"
-    .parameter "context"
+    .param p0, "cacheDirectory"    # Ljava/io/File;
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     const-string v8, "CacheForStartupCrashHandler"
@@ -80,7 +80,7 @@
     move-result-object v2
 
     .line 149
-    .local v2, crashFiles:[Ljava/io/File;
+    .local v2, "crashFiles":[Ljava/io/File;
     if-eqz v2, :cond_0
 
     array-length v6, v2
@@ -103,26 +103,26 @@
     :cond_2
     move-object v0, v2
 
-    .local v0, arr$:[Ljava/io/File;
+    .local v0, "arr$":[Ljava/io/File;
     array-length v5, v0
 
-    .local v5, len$:I
+    .local v5, "len$":I
     const/4 v4, 0x0
 
-    .local v4, i$:I
+    .local v4, "i$":I
     :goto_0
     if-ge v4, v5, :cond_1
 
     aget-object v1, v0, v4
 
     .line 156
-    .local v1, crashFile:Ljava/io/File;
+    .local v1, "crashFile":Ljava/io/File;
     invoke-virtual {v1}, Ljava/io/File;->delete()Z
 
     move-result v3
 
     .line 157
-    .local v3, deleted:Z
+    .local v3, "deleted":Z
     if-eqz v3, :cond_3
 
     .line 158
@@ -191,7 +191,7 @@
 
 .method private static createFilename(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
-    .parameter "crashId"
+    .param p0, "crashId"    # Ljava/lang/String;
 
     .prologue
     .line 234
@@ -224,7 +224,7 @@
 
 .method private static getCachedCrashFiles(Ljava/io/File;)[Ljava/io/File;
     .locals 2
-    .parameter "directory"
+    .param p0, "directory"    # Ljava/io/File;
 
     .prologue
     .line 215
@@ -235,7 +235,7 @@
     move-result-object v0
 
     .line 217
-    .local v0, pattern:Ljava/util/regex/Pattern;
+    .local v0, "pattern":Ljava/util/regex/Pattern;
     new-instance v1, Lcom/fusepowered/crashlog/handlers/CacheForStartupCrashHandler$1;
 
     invoke-direct {v1, v0}, Lcom/fusepowered/crashlog/handlers/CacheForStartupCrashHandler$1;-><init>(Ljava/util/regex/Pattern;)V
@@ -249,7 +249,7 @@
 
 .method public static getCachedCrashes(Landroid/content/Context;)[Lcom/fusepowered/crashlog/CrashData;
     .locals 1
-    .parameter "context"
+    .param p0, "context"    # Landroid/content/Context;
 
     .prologue
     .line 101
@@ -266,8 +266,8 @@
 
 .method public static getCachedCrashes(Ljava/io/File;Landroid/content/Context;)[Lcom/fusepowered/crashlog/CrashData;
     .locals 9
-    .parameter "cacheDirectory"
-    .parameter "context"
+    .param p0, "cacheDirectory"    # Ljava/io/File;
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     .line 112
@@ -276,7 +276,7 @@
     move-result-object v5
 
     .line 114
-    .local v5, files:[Ljava/io/File;
+    .local v5, "files":[Ljava/io/File;
     new-instance v1, Ljava/util/ArrayList;
 
     array-length v8, v5
@@ -284,29 +284,29 @@
     invoke-direct {v1, v8}, Ljava/util/ArrayList;-><init>(I)V
 
     .line 115
-    .local v1, cachedCrashes:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/fusepowered/crashlog/CrashData;>;"
+    .local v1, "cachedCrashes":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/fusepowered/crashlog/CrashData;>;"
     move-object v0, v5
 
-    .local v0, arr$:[Ljava/io/File;
+    .local v0, "arr$":[Ljava/io/File;
     array-length v7, v0
 
-    .local v7, len$:I
+    .local v7, "len$":I
     const/4 v6, 0x0
 
-    .local v6, i$:I
+    .local v6, "i$":I
     :goto_0
     if-ge v6, v7, :cond_1
 
     aget-object v4, v0, v6
 
     .line 116
-    .local v4, crashFile:Ljava/io/File;
+    .local v4, "crashFile":Ljava/io/File;
     invoke-static {v4, p1}, Lcom/fusepowered/crashlog/handlers/CacheForStartupCrashHandler;->readCrashDataFromFile(Ljava/io/File;Landroid/content/Context;)Lcom/fusepowered/crashlog/CrashData;
 
     move-result-object v2
 
     .line 117
-    .local v2, crashData:Lcom/fusepowered/crashlog/CrashData;
+    .local v2, "crashData":Lcom/fusepowered/crashlog/CrashData;
     if-eqz v2, :cond_0
 
     .line 118
@@ -319,8 +319,8 @@
     goto :goto_0
 
     .line 123
-    .end local v2           #crashData:Lcom/fusepowered/crashlog/CrashData;
-    .end local v4           #crashFile:Ljava/io/File;
+    .end local v2    # "crashData":Lcom/fusepowered/crashlog/CrashData;
+    .end local v4    # "crashFile":Ljava/io/File;
     :cond_1
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
@@ -332,12 +332,12 @@
     const/4 v8, 0x0
 
     .line 129
-    .end local p0
+    .end local p0    # "cacheDirectory":Ljava/io/File;
     :goto_1
     return-object v8
 
     .line 127
-    .restart local p0
+    .restart local p0    # "cacheDirectory":Ljava/io/File;
     :cond_2
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
@@ -346,7 +346,7 @@
     new-array v3, v8, [Lcom/fusepowered/crashlog/CrashData;
 
     .line 129
-    .local v3, crashDataArray:[Lcom/fusepowered/crashlog/CrashData;
+    .local v3, "crashDataArray":[Lcom/fusepowered/crashlog/CrashData;
     invoke-virtual {v1, v3}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object v8
@@ -355,7 +355,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "cacheDirectory":Ljava/io/File;
     check-cast p0, [Lcom/fusepowered/crashlog/CrashData;
 
     move-object v8, p0
@@ -365,7 +365,7 @@
 
 .method public static getDefaultCacheDirectory(Landroid/content/Context;)Ljava/io/File;
     .locals 5
-    .parameter "context"
+    .param p0, "context"    # Landroid/content/Context;
 
     .prologue
     const/4 v3, 0x0
@@ -384,7 +384,7 @@
     invoke-direct {v0, v1, v2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
     .line 29
-    .local v0, defaultCacheDirectory:Ljava/io/File;
+    .local v0, "defaultCacheDirectory":Ljava/io/File;
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result v1
@@ -440,8 +440,8 @@
 
 .method private static readCrashDataFromFile(Ljava/io/File;Landroid/content/Context;)Lcom/fusepowered/crashlog/CrashData;
     .locals 10
-    .parameter "crashFile"
-    .parameter "context"
+    .param p0, "crashFile"    # Ljava/io/File;
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     const-string v9, "CacheForStartupCrashHandler"
@@ -461,7 +461,7 @@
     invoke-direct {v4, v6}, Ljava/io/BufferedReader;-><init>(Ljava/io/Reader;)V
 
     .line 179
-    .local v4, reader:Ljava/io/BufferedReader;
+    .local v4, "reader":Ljava/io/BufferedReader;
     new-instance v5, Ljava/lang/StringBuilder;
 
     const-string v6, ""
@@ -469,13 +469,13 @@
     invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     .line 182
-    .local v5, stringBuilder:Ljava/lang/StringBuilder;
+    .local v5, "stringBuilder":Ljava/lang/StringBuilder;
     :goto_0
     invoke-virtual {v4}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
     move-result-object v3
 
-    .local v3, line:Ljava/lang/String;
+    .local v3, "line":Ljava/lang/String;
     if-eqz v3, :cond_0
 
     .line 183
@@ -486,16 +486,16 @@
     goto :goto_0
 
     .line 198
-    .end local v3           #line:Ljava/lang/String;
-    .end local v4           #reader:Ljava/io/BufferedReader;
-    .end local v5           #stringBuilder:Ljava/lang/StringBuilder;
+    .end local v3    # "line":Ljava/lang/String;
+    .end local v4    # "reader":Ljava/io/BufferedReader;
+    .end local v5    # "stringBuilder":Ljava/lang/StringBuilder;
     :catch_0
     move-exception v6
 
     move-object v2, v6
 
     .line 199
-    .local v2, e:Ljava/io/IOException;
+    .local v2, "e":Ljava/io/IOException;
     const-string v6, "CacheForStartupCrashHandler"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -525,14 +525,14 @@
     .line 200
     const/4 v6, 0x0
 
-    .end local v2           #e:Ljava/io/IOException;
+    .end local v2    # "e":Ljava/io/IOException;
     :goto_1
     return-object v6
 
     .line 185
-    .restart local v3       #line:Ljava/lang/String;
-    .restart local v4       #reader:Ljava/io/BufferedReader;
-    .restart local v5       #stringBuilder:Ljava/lang/StringBuilder;
+    .restart local v3    # "line":Ljava/lang/String;
+    .restart local v4    # "reader":Ljava/io/BufferedReader;
+    .restart local v5    # "stringBuilder":Ljava/lang/StringBuilder;
     :cond_0
     :try_start_1
     invoke-virtual {v4}, Ljava/io/BufferedReader;->close()V
@@ -543,13 +543,13 @@
     move-result-object v1
 
     .line 188
-    .local v1, crashJson:Ljava/lang/String;
+    .local v1, "crashJson":Ljava/lang/String;
     invoke-static {v1}, Lcom/fusepowered/crashlog/CrashData;->fromJson(Ljava/lang/String;)Lcom/fusepowered/crashlog/CrashData;
 
     move-result-object v0
 
     .line 190
-    .local v0, crashData:Lcom/fusepowered/crashlog/CrashData;
+    .local v0, "crashData":Lcom/fusepowered/crashlog/CrashData;
     if-nez v0, :cond_1
 
     .line 191
@@ -622,8 +622,8 @@
 # virtual methods
 .method public handleCrash(Lcom/fusepowered/crashlog/CrashData;Landroid/content/Context;)Z
     .locals 9
-    .parameter "crashData"
-    .parameter "context"
+    .param p1, "crashData"    # Lcom/fusepowered/crashlog/CrashData;
+    .param p2, "context"    # Landroid/content/Context;
 
     .prologue
     const/4 v8, 0x0
@@ -647,7 +647,7 @@
     move-result-object v3
 
     .line 69
-    .local v3, filename:Ljava/lang/String;
+    .local v3, "filename":Ljava/lang/String;
     new-instance v0, Ljava/io/File;
 
     iget-object v5, p0, Lcom/fusepowered/crashlog/handlers/CacheForStartupCrashHandler;->mCacheDirectory:Ljava/io/File;
@@ -655,7 +655,7 @@
     invoke-direct {v0, v5, v3}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
     .line 71
-    .local v0, crashFile:Ljava/io/File;
+    .local v0, "crashFile":Ljava/io/File;
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result v5
@@ -707,13 +707,13 @@
     invoke-direct {v4, v5}, Ljava/io/BufferedWriter;-><init>(Ljava/io/Writer;)V
 
     .line 80
-    .local v4, writer:Ljava/io/BufferedWriter;
+    .local v4, "writer":Ljava/io/BufferedWriter;
     invoke-virtual {p1}, Lcom/fusepowered/crashlog/CrashData;->toJson()Ljava/lang/String;
 
     move-result-object v1
 
     .line 81
-    .local v1, crashJson:Ljava/lang/String;
+    .local v1, "crashJson":Ljava/lang/String;
     invoke-virtual {v4, v1}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
 
     .line 82
@@ -754,15 +754,15 @@
     goto :goto_0
 
     .line 84
-    .end local v1           #crashJson:Ljava/lang/String;
-    .end local v4           #writer:Ljava/io/BufferedWriter;
+    .end local v1    # "crashJson":Ljava/lang/String;
+    .end local v4    # "writer":Ljava/io/BufferedWriter;
     :catch_0
     move-exception v5
 
     move-object v2, v5
 
     .line 85
-    .local v2, e:Ljava/io/IOException;
+    .local v2, "e":Ljava/io/IOException;
     const-string v5, "CacheForStartupCrashHandler"
 
     new-instance v5, Ljava/lang/StringBuilder;

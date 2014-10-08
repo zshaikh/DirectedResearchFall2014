@@ -45,7 +45,7 @@
 # virtual methods
 .method public format(Ljava/lang/String;)Ljava/lang/String;
     .locals 3
-    .parameter "rawValue"
+    .param p1, "rawValue"    # Ljava/lang/String;
 
     .prologue
     .line 25

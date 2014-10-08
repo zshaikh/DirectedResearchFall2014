@@ -1,4 +1,4 @@
-version: 1.5.2
+version: 2.0.0-RC2
 apkFileName: air.com.buffalo_studios.newflashbingo.apk
 isFrameworkApk: false
 usesFramework:
@@ -8,6 +8,8 @@ sdkInfo:
   minSdkVersion: '8'
   targetSdkVersion: '13'
 packageInfo:
-  cur_package: air.com.buffalo_studios.newflashbingo
-  orig_package: air.com.buffalo_studios.newflashbingo
+  forced-package-id: '127'
+versionInfo:
+  versionCode: '2061000'
+  versionName: 2.61.0
 compressionType: true

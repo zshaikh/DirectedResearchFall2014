@@ -12,7 +12,7 @@
 
 .field public static final FOOTER_BLOCK:J = -0x1L
 
-.field public static final MAGIC:[B = null
+.field public static final MAGIC:[B
 
 .field public static final NULL_CODEC:Ljava/lang/String; = "null"
 
@@ -44,7 +44,7 @@
     nop
 
     :array_0
-    .array-data 0x1
+    .array-data 1
         0x4ft
         0x62t
         0x6at

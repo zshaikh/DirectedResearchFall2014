@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/adobe/air/AIRUpdateDialog;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 24
@@ -39,8 +38,6 @@
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     .line 28
@@ -59,7 +56,7 @@
     .line 29
     iget-object v1, p0, Lcom/adobe/air/AIRUpdateDialog$1;->this$0:Lcom/adobe/air/AIRUpdateDialog;
 
-    #getter for: Lcom/adobe/air/AIRUpdateDialog;->actWrapper:Lcom/adobe/air/AndroidActivityWrapper;
+    # getter for: Lcom/adobe/air/AIRUpdateDialog;->actWrapper:Lcom/adobe/air/AndroidActivityWrapper;
     invoke-static {v1}, Lcom/adobe/air/AIRUpdateDialog;->access$000(Lcom/adobe/air/AIRUpdateDialog;)Lcom/adobe/air/AndroidActivityWrapper;
 
     move-result-object v1

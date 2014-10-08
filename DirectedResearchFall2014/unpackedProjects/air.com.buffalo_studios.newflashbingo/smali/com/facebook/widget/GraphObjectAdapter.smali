@@ -18,8 +18,7 @@
 
 
 # static fields
-#the value of this static final field might be set in the static constructor
-.field static final synthetic $assertionsDisabled:Z = false
+.field static final synthetic $assertionsDisabled:Z
 
 .field private static final ACTIVITY_CIRCLE_VIEW_TYPE:I = 0x2
 

@@ -17,7 +17,7 @@
 
 .method static getDeviceInfo(Landroid/content/Context;)Lorg/json/JSONObject;
     .locals 11
-    .parameter "context"
+    .param p0, "context"    # Landroid/content/Context;
 
     .prologue
     const-string v8, "5.1.0-13.08.12.a"
@@ -26,15 +26,15 @@
     const/4 v4, 0x0
 
     .line 178
-    .local v4, jsonObject:Lorg/json/JSONObject;
+    .local v4, "jsonObject":Lorg/json/JSONObject;
     const/4 v0, 0x0
 
     .line 179
-    .local v0, jsonCookieArray:Lorg/json/JSONArray;
+    .local v0, "jsonCookieArray":Lorg/json/JSONArray;
     const/4 v2, 0x0
 
     .line 181
-    .local v2, jsonCookieObject:Lorg/json/JSONObject;
+    .local v2, "jsonCookieObject":Lorg/json/JSONObject;
     :try_start_0
     new-instance v5, Lorg/json/JSONObject;
 
@@ -43,8 +43,8 @@
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 182
-    .end local v4           #jsonObject:Lorg/json/JSONObject;
-    .local v5, jsonObject:Lorg/json/JSONObject;
+    .end local v4    # "jsonObject":Lorg/json/JSONObject;
+    .local v5, "jsonObject":Lorg/json/JSONObject;
     :try_start_1
     const-string v8, "sdkVersion"
 
@@ -120,7 +120,7 @@
     move-result-object v7
 
     .line 193
-    .local v7, metrics:Landroid/util/DisplayMetrics;
+    .local v7, "metrics":Landroid/util/DisplayMetrics;
     const-string v8, "density"
 
     new-instance v9, Ljava/lang/Float;
@@ -159,7 +159,7 @@
     move-result-object v6
 
     .line 198
-    .local v6, locale:Ljava/util/Locale;
+    .local v6, "locale":Ljava/util/Locale;
     if-eqz v6, :cond_2
 
     .line 200
@@ -189,8 +189,8 @@
     .catch Lorg/json/JSONException; {:try_start_1 .. :try_end_1} :catch_1
 
     .line 205
-    .end local v2           #jsonCookieObject:Lorg/json/JSONObject;
-    .local v3, jsonCookieObject:Lorg/json/JSONObject;
+    .end local v2    # "jsonCookieObject":Lorg/json/JSONObject;
+    .local v3, "jsonCookieObject":Lorg/json/JSONObject;
     :try_start_2
     const-string v8, "name"
 
@@ -220,8 +220,8 @@
     .catch Lorg/json/JSONException; {:try_start_2 .. :try_end_2} :catch_2
 
     .line 209
-    .end local v0           #jsonCookieArray:Lorg/json/JSONArray;
-    .local v1, jsonCookieArray:Lorg/json/JSONArray;
+    .end local v0    # "jsonCookieArray":Lorg/json/JSONArray;
+    .local v1, "jsonCookieArray":Lorg/json/JSONArray;
     :try_start_3
     invoke-virtual {v1, v3}, Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;
 
@@ -234,77 +234,77 @@
 
     move-object v2, v3
 
-    .end local v3           #jsonCookieObject:Lorg/json/JSONObject;
-    .restart local v2       #jsonCookieObject:Lorg/json/JSONObject;
+    .end local v3    # "jsonCookieObject":Lorg/json/JSONObject;
+    .restart local v2    # "jsonCookieObject":Lorg/json/JSONObject;
     move-object v4, v5
 
     .line 215
-    .end local v1           #jsonCookieArray:Lorg/json/JSONArray;
-    .end local v5           #jsonObject:Lorg/json/JSONObject;
-    .end local v6           #locale:Ljava/util/Locale;
-    .end local v7           #metrics:Landroid/util/DisplayMetrics;
-    .restart local v4       #jsonObject:Lorg/json/JSONObject;
+    .end local v1    # "jsonCookieArray":Lorg/json/JSONArray;
+    .end local v5    # "jsonObject":Lorg/json/JSONObject;
+    .end local v6    # "locale":Ljava/util/Locale;
+    .end local v7    # "metrics":Landroid/util/DisplayMetrics;
+    .restart local v4    # "jsonObject":Lorg/json/JSONObject;
     :goto_0
     return-object v4
 
     .line 212
-    .restart local v0       #jsonCookieArray:Lorg/json/JSONArray;
+    .restart local v0    # "jsonCookieArray":Lorg/json/JSONArray;
     :catch_0
     move-exception v8
 
     goto :goto_0
 
-    .end local v4           #jsonObject:Lorg/json/JSONObject;
-    .restart local v5       #jsonObject:Lorg/json/JSONObject;
+    .end local v4    # "jsonObject":Lorg/json/JSONObject;
+    .restart local v5    # "jsonObject":Lorg/json/JSONObject;
     :catch_1
     move-exception v8
 
     move-object v4, v5
 
-    .end local v5           #jsonObject:Lorg/json/JSONObject;
-    .restart local v4       #jsonObject:Lorg/json/JSONObject;
+    .end local v5    # "jsonObject":Lorg/json/JSONObject;
+    .restart local v4    # "jsonObject":Lorg/json/JSONObject;
     goto :goto_0
 
-    .end local v2           #jsonCookieObject:Lorg/json/JSONObject;
-    .end local v4           #jsonObject:Lorg/json/JSONObject;
-    .restart local v3       #jsonCookieObject:Lorg/json/JSONObject;
-    .restart local v5       #jsonObject:Lorg/json/JSONObject;
-    .restart local v6       #locale:Ljava/util/Locale;
-    .restart local v7       #metrics:Landroid/util/DisplayMetrics;
+    .end local v2    # "jsonCookieObject":Lorg/json/JSONObject;
+    .end local v4    # "jsonObject":Lorg/json/JSONObject;
+    .restart local v3    # "jsonCookieObject":Lorg/json/JSONObject;
+    .restart local v5    # "jsonObject":Lorg/json/JSONObject;
+    .restart local v6    # "locale":Ljava/util/Locale;
+    .restart local v7    # "metrics":Landroid/util/DisplayMetrics;
     :catch_2
     move-exception v8
 
     move-object v2, v3
 
-    .end local v3           #jsonCookieObject:Lorg/json/JSONObject;
-    .restart local v2       #jsonCookieObject:Lorg/json/JSONObject;
+    .end local v3    # "jsonCookieObject":Lorg/json/JSONObject;
+    .restart local v2    # "jsonCookieObject":Lorg/json/JSONObject;
     move-object v4, v5
 
-    .end local v5           #jsonObject:Lorg/json/JSONObject;
-    .restart local v4       #jsonObject:Lorg/json/JSONObject;
+    .end local v5    # "jsonObject":Lorg/json/JSONObject;
+    .restart local v4    # "jsonObject":Lorg/json/JSONObject;
     goto :goto_0
 
-    .end local v0           #jsonCookieArray:Lorg/json/JSONArray;
-    .end local v2           #jsonCookieObject:Lorg/json/JSONObject;
-    .end local v4           #jsonObject:Lorg/json/JSONObject;
-    .restart local v1       #jsonCookieArray:Lorg/json/JSONArray;
-    .restart local v3       #jsonCookieObject:Lorg/json/JSONObject;
-    .restart local v5       #jsonObject:Lorg/json/JSONObject;
+    .end local v0    # "jsonCookieArray":Lorg/json/JSONArray;
+    .end local v2    # "jsonCookieObject":Lorg/json/JSONObject;
+    .end local v4    # "jsonObject":Lorg/json/JSONObject;
+    .restart local v1    # "jsonCookieArray":Lorg/json/JSONArray;
+    .restart local v3    # "jsonCookieObject":Lorg/json/JSONObject;
+    .restart local v5    # "jsonObject":Lorg/json/JSONObject;
     :catch_3
     move-exception v8
 
     move-object v2, v3
 
-    .end local v3           #jsonCookieObject:Lorg/json/JSONObject;
-    .restart local v2       #jsonCookieObject:Lorg/json/JSONObject;
+    .end local v3    # "jsonCookieObject":Lorg/json/JSONObject;
+    .restart local v2    # "jsonCookieObject":Lorg/json/JSONObject;
     move-object v0, v1
 
-    .end local v1           #jsonCookieArray:Lorg/json/JSONArray;
-    .restart local v0       #jsonCookieArray:Lorg/json/JSONArray;
+    .end local v1    # "jsonCookieArray":Lorg/json/JSONArray;
+    .restart local v0    # "jsonCookieArray":Lorg/json/JSONArray;
     move-object v4, v5
 
-    .end local v5           #jsonObject:Lorg/json/JSONObject;
-    .restart local v4       #jsonObject:Lorg/json/JSONObject;
+    .end local v5    # "jsonObject":Lorg/json/JSONObject;
+    .restart local v4    # "jsonObject":Lorg/json/JSONObject;
     goto :goto_0
 .end method
 
@@ -312,7 +312,6 @@
 # virtual methods
 .method public call(Ljava/util/HashMap;)Lcom/fusepowered/m1/android/MMJSResponse;
     .locals 9
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -326,7 +325,7 @@
     .end annotation
 
     .prologue
-    .local p1, arguments:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p1, "arguments":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v8, "tel:"
 
     .line 289
@@ -339,7 +338,7 @@
     check-cast v2, Landroid/content/Context;
 
     .line 290
-    .local v2, context:Landroid/content/Context;
+    .local v2, "context":Landroid/content/Context;
     const-string v5, "number"
 
     invoke-virtual {p1, v5}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -349,7 +348,7 @@
     check-cast v4, Ljava/lang/String;
 
     .line 291
-    .local v4, number:Ljava/lang/String;
+    .local v4, "number":Ljava/lang/String;
     if-eqz v2, :cond_1
 
     if-eqz v4, :cond_1
@@ -420,7 +419,7 @@
     invoke-direct {v3, v5, v6}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
     .line 299
-    .local v3, intent:Landroid/content/Intent;
+    .local v3, "intent":Landroid/content/Intent;
     :goto_0
     invoke-static {v2, v3}, Lcom/fusepowered/m1/android/Utils$IntentUtils;->startActivity(Landroid/content/Context;Landroid/content/Intent;)V
 
@@ -438,7 +437,7 @@
     move-result-wide v0
 
     .line 302
-    .local v0, adImplId:J
+    .local v0, "adImplId":J
     const-string v5, "tel"
 
     invoke-static {v2, v5, v0, v1}, Lcom/fusepowered/m1/android/MMSDK$Event;->intentStarted(Landroid/content/Context;Ljava/lang/String;J)V
@@ -449,8 +448,8 @@
     move-result-object v5
 
     .line 306
-    .end local v0           #adImplId:J
-    .end local v3           #intent:Landroid/content/Intent;
+    .end local v0    # "adImplId":J
+    .end local v3    # "intent":Landroid/content/Intent;
     :goto_1
     return-object v5
 
@@ -484,11 +483,11 @@
 
     invoke-direct {v3, v5, v6}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
-    .restart local v3       #intent:Landroid/content/Intent;
+    .restart local v3    # "intent":Landroid/content/Intent;
     goto :goto_0
 
     .line 306
-    .end local v3           #intent:Landroid/content/Intent;
+    .end local v3    # "intent":Landroid/content/Intent;
     :cond_1
     const/4 v5, 0x0
 
@@ -497,7 +496,6 @@
 
 .method public composeEmail(Ljava/util/HashMap;)Lcom/fusepowered/m1/android/MMJSResponse;
     .locals 9
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -512,7 +510,7 @@
 
     .prologue
     .line 345
-    .local p1, arguments:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p1, "arguments":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     iget-object v7, p0, Lcom/fusepowered/m1/android/BridgeMMDevice;->contextRef:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v7}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -522,7 +520,7 @@
     check-cast v2, Landroid/content/Context;
 
     .line 346
-    .local v2, context:Landroid/content/Context;
+    .local v2, "context":Landroid/content/Context;
     const-string v7, "recipient"
 
     invoke-virtual {p1, v7}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -532,7 +530,7 @@
     check-cast v5, Ljava/lang/String;
 
     .line 347
-    .local v5, recipients:Ljava/lang/String;
+    .local v5, "recipients":Ljava/lang/String;
     const-string v7, "subject"
 
     invoke-virtual {p1, v7}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -542,7 +540,7 @@
     check-cast v6, Ljava/lang/String;
 
     .line 348
-    .local v6, subject:Ljava/lang/String;
+    .local v6, "subject":Ljava/lang/String;
     const-string v7, "message"
 
     invoke-virtual {p1, v7}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -552,7 +550,7 @@
     check-cast v4, Ljava/lang/String;
 
     .line 349
-    .local v4, message:Ljava/lang/String;
+    .local v4, "message":Ljava/lang/String;
     if-eqz v2, :cond_3
 
     .line 351
@@ -568,7 +566,7 @@
     invoke-direct {v3, v7}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
     .line 353
-    .local v3, emailIntent:Landroid/content/Intent;
+    .local v3, "emailIntent":Landroid/content/Intent;
     const-string v7, "plain/text"
 
     invoke-virtual {v3, v7}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
@@ -623,7 +621,7 @@
     move-result-wide v0
 
     .line 363
-    .local v0, adImplId:J
+    .local v0, "adImplId":J
     const-string v7, "email"
 
     invoke-static {v2, v7, v0, v1}, Lcom/fusepowered/m1/android/MMSDK$Event;->intentStarted(Landroid/content/Context;Ljava/lang/String;J)V
@@ -634,8 +632,8 @@
     move-result-object v7
 
     .line 367
-    .end local v0           #adImplId:J
-    .end local v3           #emailIntent:Landroid/content/Intent;
+    .end local v0    # "adImplId":J
+    .end local v3    # "emailIntent":Landroid/content/Intent;
     :goto_0
     return-object v7
 
@@ -647,7 +645,6 @@
 
 .method public composeSms(Ljava/util/HashMap;)Lcom/fusepowered/m1/android/MMJSResponse;
     .locals 9
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -662,7 +659,7 @@
 
     .prologue
     .line 318
-    .local p1, arguments:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p1, "arguments":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     iget-object v6, p0, Lcom/fusepowered/m1/android/BridgeMMDevice;->contextRef:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v6}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -672,7 +669,7 @@
     check-cast v2, Landroid/content/Context;
 
     .line 319
-    .local v2, context:Landroid/content/Context;
+    .local v2, "context":Landroid/content/Context;
     const-string v6, "number"
 
     invoke-virtual {p1, v6}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -682,7 +679,7 @@
     check-cast v5, Ljava/lang/String;
 
     .line 320
-    .local v5, number:Ljava/lang/String;
+    .local v5, "number":Ljava/lang/String;
     const-string v6, "message"
 
     invoke-virtual {p1, v6}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -692,7 +689,7 @@
     check-cast v4, Ljava/lang/String;
 
     .line 321
-    .local v4, message:Ljava/lang/String;
+    .local v4, "message":Ljava/lang/String;
     if-eqz v2, :cond_1
 
     if-eqz v5, :cond_1
@@ -740,7 +737,7 @@
     invoke-direct {v3, v6, v7}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
     .line 325
-    .local v3, intent:Landroid/content/Intent;
+    .local v3, "intent":Landroid/content/Intent;
     if-eqz v4, :cond_0
 
     .line 326
@@ -766,7 +763,7 @@
     move-result-wide v0
 
     .line 330
-    .local v0, adImplId:J
+    .local v0, "adImplId":J
     const-string v6, "sms"
 
     invoke-static {v2, v6, v0, v1}, Lcom/fusepowered/m1/android/MMSDK$Event;->intentStarted(Landroid/content/Context;Ljava/lang/String;J)V
@@ -779,8 +776,8 @@
     move-result-object v6
 
     .line 333
-    .end local v0           #adImplId:J
-    .end local v3           #intent:Landroid/content/Intent;
+    .end local v0    # "adImplId":J
+    .end local v3    # "intent":Landroid/content/Intent;
     :goto_0
     return-object v6
 
@@ -792,7 +789,6 @@
 
 .method public enableHardwareAcceleration(Ljava/util/HashMap;)Lcom/fusepowered/m1/android/MMJSResponse;
     .locals 5
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -807,7 +803,7 @@
 
     .prologue
     .line 57
-    .local p1, arguments:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p1, "arguments":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -838,7 +834,7 @@
     check-cast v1, Ljava/lang/String;
 
     .line 59
-    .local v1, enabled:Ljava/lang/String;
+    .local v1, "enabled":Ljava/lang/String;
     iget-object v3, p0, Lcom/fusepowered/m1/android/BridgeMMDevice;->mmWebViewRef:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v3}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -848,7 +844,7 @@
     check-cast v2, Lcom/fusepowered/m1/android/MMWebView;
 
     .line 60
-    .local v2, webView:Lcom/fusepowered/m1/android/MMWebView;
+    .local v2, "webView":Lcom/fusepowered/m1/android/MMWebView;
     if-eqz v2, :cond_1
 
     .line 62
@@ -860,7 +856,7 @@
     move-result v0
 
     .line 65
-    .local v0, enable:Z
+    .local v0, "enable":Z
     if-eqz v0, :cond_0
 
     .line 66
@@ -873,19 +869,19 @@
     move-result-object v3
 
     .line 72
-    .end local v0           #enable:Z
+    .end local v0    # "enable":Z
     :goto_1
     return-object v3
 
     .line 68
-    .restart local v0       #enable:Z
+    .restart local v0    # "enable":Z
     :cond_0
     invoke-virtual {v2}, Lcom/fusepowered/m1/android/MMWebView;->disableAllAcceleration()V
 
     goto :goto_0
 
     .line 72
-    .end local v0           #enable:Z
+    .end local v0    # "enable":Z
     :cond_1
     const/4 v3, 0x0
 
@@ -894,7 +890,6 @@
 
 .method public getAvailableSchemes(Ljava/util/HashMap;)Lcom/fusepowered/m1/android/MMJSResponse;
     .locals 4
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -909,7 +904,7 @@
 
     .prologue
     .line 82
-    .local p1, arguments:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p1, "arguments":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     iget-object v3, p0, Lcom/fusepowered/m1/android/BridgeMMDevice;->contextRef:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v3}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -919,7 +914,7 @@
     check-cast v0, Landroid/content/Context;
 
     .line 83
-    .local v0, context:Landroid/content/Context;
+    .local v0, "context":Landroid/content/Context;
     if-eqz v0, :cond_0
 
     .line 85
@@ -928,13 +923,13 @@
     move-result-object v1
 
     .line 86
-    .local v1, handShake:Lcom/fusepowered/m1/android/HandShake;
+    .local v1, "handShake":Lcom/fusepowered/m1/android/HandShake;
     new-instance v2, Lcom/fusepowered/m1/android/MMJSResponse;
 
     invoke-direct {v2}, Lcom/fusepowered/m1/android/MMJSResponse;-><init>()V
 
     .line 87
-    .local v2, response:Lcom/fusepowered/m1/android/MMJSResponse;
+    .local v2, "response":Lcom/fusepowered/m1/android/MMJSResponse;
     const/4 v3, 0x1
 
     iput v3, v2, Lcom/fusepowered/m1/android/MMJSResponse;->result:I
@@ -949,8 +944,8 @@
     move-object v3, v2
 
     .line 91
-    .end local v1           #handShake:Lcom/fusepowered/m1/android/HandShake;
-    .end local v2           #response:Lcom/fusepowered/m1/android/MMJSResponse;
+    .end local v1    # "handShake":Lcom/fusepowered/m1/android/HandShake;
+    .end local v2    # "response":Lcom/fusepowered/m1/android/MMJSResponse;
     :goto_0
     return-object v3
 
@@ -962,7 +957,6 @@
 
 .method public getInfo(Ljava/util/HashMap;)Lcom/fusepowered/m1/android/MMJSResponse;
     .locals 3
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -977,7 +971,7 @@
 
     .prologue
     .line 161
-    .local p1, arguments:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p1, "arguments":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     iget-object v2, p0, Lcom/fusepowered/m1/android/BridgeMMDevice;->contextRef:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v2}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -987,7 +981,7 @@
     check-cast v0, Landroid/content/Context;
 
     .line 162
-    .local v0, context:Landroid/content/Context;
+    .local v0, "context":Landroid/content/Context;
     if-eqz v0, :cond_0
 
     .line 164
@@ -996,7 +990,7 @@
     invoke-direct {v1}, Lcom/fusepowered/m1/android/MMJSResponse;-><init>()V
 
     .line 165
-    .local v1, response:Lcom/fusepowered/m1/android/MMJSResponse;
+    .local v1, "response":Lcom/fusepowered/m1/android/MMJSResponse;
     const/4 v2, 0x1
 
     iput v2, v1, Lcom/fusepowered/m1/android/MMJSResponse;->result:I
@@ -1011,7 +1005,7 @@
     move-object v2, v1
 
     .line 169
-    .end local v1           #response:Lcom/fusepowered/m1/android/MMJSResponse;
+    .end local v1    # "response":Lcom/fusepowered/m1/android/MMJSResponse;
     :goto_0
     return-object v2
 
@@ -1023,7 +1017,6 @@
 
 .method public getLocation(Ljava/util/HashMap;)Lcom/fusepowered/m1/android/MMJSResponse;
     .locals 6
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1038,7 +1031,7 @@
 
     .prologue
     .line 224
-    .local p1, arguments:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p1, "arguments":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     sget-object v3, Lcom/fusepowered/m1/android/MMRequest;->location:Landroid/location/Location;
 
     if-eqz v3, :cond_4
@@ -1047,7 +1040,7 @@
     const/4 v0, 0x0
 
     .line 229
-    .local v0, jsonObject:Lorg/json/JSONObject;
+    .local v0, "jsonObject":Lorg/json/JSONObject;
     :try_start_0
     new-instance v1, Lorg/json/JSONObject;
 
@@ -1056,8 +1049,8 @@
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 230
-    .end local v0           #jsonObject:Lorg/json/JSONObject;
-    .local v1, jsonObject:Lorg/json/JSONObject;
+    .end local v0    # "jsonObject":Lorg/json/JSONObject;
+    .local v1, "jsonObject":Lorg/json/JSONObject;
     :try_start_1
     const-string v3, "lat"
 
@@ -1223,15 +1216,15 @@
     move-object v0, v1
 
     .line 248
-    .end local v1           #jsonObject:Lorg/json/JSONObject;
-    .restart local v0       #jsonObject:Lorg/json/JSONObject;
+    .end local v1    # "jsonObject":Lorg/json/JSONObject;
+    .restart local v0    # "jsonObject":Lorg/json/JSONObject;
     :goto_0
     new-instance v2, Lcom/fusepowered/m1/android/MMJSResponse;
 
     invoke-direct {v2}, Lcom/fusepowered/m1/android/MMJSResponse;-><init>()V
 
     .line 249
-    .local v2, response:Lcom/fusepowered/m1/android/MMJSResponse;
+    .local v2, "response":Lcom/fusepowered/m1/android/MMJSResponse;
     const/4 v3, 0x1
 
     iput v3, v2, Lcom/fusepowered/m1/android/MMJSResponse;->result:I
@@ -1242,8 +1235,8 @@
     move-object v3, v2
 
     .line 253
-    .end local v0           #jsonObject:Lorg/json/JSONObject;
-    .end local v2           #response:Lcom/fusepowered/m1/android/MMJSResponse;
+    .end local v0    # "jsonObject":Lorg/json/JSONObject;
+    .end local v2    # "response":Lcom/fusepowered/m1/android/MMJSResponse;
     :goto_1
     return-object v3
 
@@ -1257,27 +1250,26 @@
     goto :goto_1
 
     .line 245
-    .restart local v0       #jsonObject:Lorg/json/JSONObject;
+    .restart local v0    # "jsonObject":Lorg/json/JSONObject;
     :catch_0
     move-exception v3
 
     goto :goto_0
 
-    .end local v0           #jsonObject:Lorg/json/JSONObject;
-    .restart local v1       #jsonObject:Lorg/json/JSONObject;
+    .end local v0    # "jsonObject":Lorg/json/JSONObject;
+    .restart local v1    # "jsonObject":Lorg/json/JSONObject;
     :catch_1
     move-exception v3
 
     move-object v0, v1
 
-    .end local v1           #jsonObject:Lorg/json/JSONObject;
-    .restart local v0       #jsonObject:Lorg/json/JSONObject;
+    .end local v1    # "jsonObject":Lorg/json/JSONObject;
+    .restart local v0    # "jsonObject":Lorg/json/JSONObject;
     goto :goto_0
 .end method
 
 .method public getOrientation(Ljava/util/HashMap;)Lcom/fusepowered/m1/android/MMJSResponse;
     .locals 5
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1292,7 +1284,7 @@
 
     .prologue
     .line 125
-    .local p1, arguments:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p1, "arguments":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     iget-object v4, p0, Lcom/fusepowered/m1/android/BridgeMMDevice;->contextRef:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v4}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -1302,7 +1294,7 @@
     check-cast v0, Landroid/content/Context;
 
     .line 126
-    .local v0, context:Landroid/content/Context;
+    .local v0, "context":Landroid/content/Context;
     if-eqz v0, :cond_1
 
     .line 128
@@ -1317,7 +1309,7 @@
     iget v2, v4, Landroid/content/res/Configuration;->orientation:I
 
     .line 129
-    .local v2, orientation:I
+    .local v2, "orientation":I
     if-nez v2, :cond_0
 
     .line 131
@@ -1327,7 +1319,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/fusepowered/m1/android/BridgeMMDevice;
     check-cast p0, Landroid/view/WindowManager;
 
     invoke-interface {p0}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
@@ -1335,20 +1327,20 @@
     move-result-object v1
 
     .line 132
-    .local v1, display:Landroid/view/Display;
+    .local v1, "display":Landroid/view/Display;
     invoke-virtual {v1}, Landroid/view/Display;->getOrientation()I
 
     move-result v2
 
     .line 135
-    .end local v1           #display:Landroid/view/Display;
+    .end local v1    # "display":Landroid/view/Display;
     :cond_0
     new-instance v3, Lcom/fusepowered/m1/android/MMJSResponse;
 
     invoke-direct {v3}, Lcom/fusepowered/m1/android/MMJSResponse;-><init>()V
 
     .line 136
-    .local v3, response:Lcom/fusepowered/m1/android/MMJSResponse;
+    .local v3, "response":Lcom/fusepowered/m1/android/MMJSResponse;
     const/4 v4, 0x1
 
     iput v4, v3, Lcom/fusepowered/m1/android/MMJSResponse;->result:I
@@ -1365,14 +1357,14 @@
     move-object v4, v3
 
     .line 151
-    .end local v2           #orientation:I
-    .end local v3           #response:Lcom/fusepowered/m1/android/MMJSResponse;
+    .end local v2    # "orientation":I
+    .end local v3    # "response":Lcom/fusepowered/m1/android/MMJSResponse;
     :goto_1
     return-object v4
 
     .line 146
-    .restart local v2       #orientation:I
-    .restart local v3       #response:Lcom/fusepowered/m1/android/MMJSResponse;
+    .restart local v2    # "orientation":I
+    .restart local v3    # "response":Lcom/fusepowered/m1/android/MMJSResponse;
     :pswitch_0
     const-string v4, "landscape"
 
@@ -1381,9 +1373,9 @@
     goto :goto_0
 
     .line 151
-    .end local v2           #orientation:I
-    .end local v3           #response:Lcom/fusepowered/m1/android/MMJSResponse;
-    .restart local p0
+    .end local v2    # "orientation":I
+    .end local v3    # "response":Lcom/fusepowered/m1/android/MMJSResponse;
+    .restart local p0    # "this":Lcom/fusepowered/m1/android/BridgeMMDevice;
     :cond_1
     const/4 v4, 0x0
 
@@ -1398,7 +1390,6 @@
 
 .method public isSchemeAvailable(Ljava/util/HashMap;)Lcom/fusepowered/m1/android/MMJSResponse;
     .locals 7
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1412,7 +1403,7 @@
     .end annotation
 
     .prologue
-    .local p1, arguments:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p1, "arguments":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v6, ":"
 
     .line 101
@@ -1425,7 +1416,7 @@
     check-cast v3, Ljava/lang/String;
 
     .line 102
-    .local v3, scheme:Ljava/lang/String;
+    .local v3, "scheme":Ljava/lang/String;
     const-string v4, ":"
 
     invoke-virtual {v3, v6}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
@@ -1464,7 +1455,7 @@
     check-cast v0, Landroid/content/Context;
 
     .line 106
-    .local v0, context:Landroid/content/Context;
+    .local v0, "context":Landroid/content/Context;
     if-eqz v3, :cond_1
 
     if-eqz v0, :cond_1
@@ -1481,19 +1472,19 @@
     invoke-direct {v1, v4, v5}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
     .line 111
-    .local v1, intent:Landroid/content/Intent;
+    .local v1, "intent":Landroid/content/Intent;
     invoke-virtual {v0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v4
 
-    const/high16 v5, 0x1
+    const/high16 v5, 0x10000
 
     invoke-virtual {v4, v1, v5}, Landroid/content/pm/PackageManager;->queryIntentActivities(Landroid/content/Intent;I)Ljava/util/List;
 
     move-result-object v2
 
     .line 112
-    .local v2, list:Ljava/util/List;,"Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
+    .local v2, "list":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     invoke-interface {v2}, Ljava/util/List;->size()I
 
     move-result v4
@@ -1506,8 +1497,8 @@
     move-result-object v4
 
     .line 115
-    .end local v1           #intent:Landroid/content/Intent;
-    .end local v2           #list:Ljava/util/List;,"Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
+    .end local v1    # "intent":Landroid/content/Intent;
+    .end local v2    # "list":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     :goto_0
     return-object v4
 
@@ -1521,7 +1512,6 @@
 
 .method public openAppStore(Ljava/util/HashMap;)Lcom/fusepowered/m1/android/MMJSResponse;
     .locals 10
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1535,7 +1525,7 @@
     .end annotation
 
     .prologue
-    .local p1, arguments:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p1, "arguments":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     const/4 v9, 0x1
 
     const/4 v8, 0x0
@@ -1550,7 +1540,7 @@
     check-cast v2, Landroid/content/Context;
 
     .line 406
-    .local v2, context:Landroid/content/Context;
+    .local v2, "context":Landroid/content/Context;
     const-string v6, "appId"
 
     invoke-virtual {p1, v6}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1560,7 +1550,7 @@
     check-cast v3, Ljava/lang/String;
 
     .line 407
-    .local v3, id:Ljava/lang/String;
+    .local v3, "id":Ljava/lang/String;
     const-string v6, "referrer"
 
     invoke-virtual {p1, v6}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1570,7 +1560,7 @@
     check-cast v5, Ljava/lang/String;
 
     .line 408
-    .local v5, referrer:Ljava/lang/String;
+    .local v5, "referrer":Ljava/lang/String;
     if-eqz v2, :cond_1
 
     if-eqz v3, :cond_1
@@ -1592,7 +1582,7 @@
     invoke-direct {v4, v6}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
     .line 412
-    .local v4, intent:Landroid/content/Intent;
+    .local v4, "intent":Landroid/content/Intent;
     if-eqz v5, :cond_0
 
     .line 413
@@ -1635,7 +1625,7 @@
     move-result-wide v0
 
     .line 418
-    .local v0, adImplId:J
+    .local v0, "adImplId":J
     const-string v6, "market"
 
     invoke-static {v2, v6, v0, v1}, Lcom/fusepowered/m1/android/MMSDK$Event;->intentStarted(Landroid/content/Context;Ljava/lang/String;J)V
@@ -1649,13 +1639,13 @@
     move-result-object v6
 
     .line 423
-    .end local v0           #adImplId:J
-    .end local v4           #intent:Landroid/content/Intent;
+    .end local v0    # "adImplId":J
+    .end local v4    # "intent":Landroid/content/Intent;
     :goto_1
     return-object v6
 
     .line 415
-    .restart local v4       #intent:Landroid/content/Intent;
+    .restart local v4    # "intent":Landroid/content/Intent;
     :cond_0
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -1684,7 +1674,7 @@
     goto :goto_0
 
     .line 423
-    .end local v4           #intent:Landroid/content/Intent;
+    .end local v4    # "intent":Landroid/content/Intent;
     :cond_1
     const/4 v6, 0x0
 
@@ -1693,7 +1683,6 @@
 
 .method public openUrl(Ljava/util/HashMap;)Lcom/fusepowered/m1/android/MMJSResponse;
     .locals 8
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1708,7 +1697,7 @@
 
     .prologue
     .line 379
-    .local p1, arguments:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p1, "arguments":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     iget-object v5, p0, Lcom/fusepowered/m1/android/BridgeMMDevice;->contextRef:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v5}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -1718,7 +1707,7 @@
     check-cast v2, Landroid/content/Context;
 
     .line 380
-    .local v2, context:Landroid/content/Context;
+    .local v2, "context":Landroid/content/Context;
     const-string v5, "url"
 
     invoke-virtual {p1, v5}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1728,7 +1717,7 @@
     check-cast v4, Ljava/lang/String;
 
     .line 381
-    .local v4, url:Ljava/lang/String;
+    .local v4, "url":Ljava/lang/String;
     if-eqz v2, :cond_2
 
     if-eqz v4, :cond_2
@@ -1758,7 +1747,7 @@
     invoke-direct {v3, v5, v6}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
     .line 385
-    .local v3, intent:Landroid/content/Intent;
+    .local v3, "intent":Landroid/content/Intent;
     invoke-virtual {v3}, Landroid/content/Intent;->getScheme()Ljava/lang/String;
 
     move-result-object v5
@@ -1798,13 +1787,13 @@
     move-result-wide v0
 
     .line 388
-    .local v0, adImplId:J
+    .local v0, "adImplId":J
     const-string v5, "browser"
 
     invoke-static {v2, v5, v0, v1}, Lcom/fusepowered/m1/android/MMSDK$Event;->intentStarted(Landroid/content/Context;Ljava/lang/String;J)V
 
     .line 390
-    .end local v0           #adImplId:J
+    .end local v0    # "adImplId":J
     :cond_1
     invoke-static {v2, v3}, Lcom/fusepowered/m1/android/Utils$IntentUtils;->startActivity(Landroid/content/Context;Landroid/content/Intent;)V
 
@@ -1816,7 +1805,7 @@
     move-result-object v5
 
     .line 393
-    .end local v3           #intent:Landroid/content/Intent;
+    .end local v3    # "intent":Landroid/content/Intent;
     :goto_0
     return-object v5
 
@@ -1832,7 +1821,6 @@
 
 .method public setMMDID(Ljava/util/HashMap;)Lcom/fusepowered/m1/android/MMJSResponse;
     .locals 4
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1847,7 +1835,7 @@
 
     .prologue
     .line 40
-    .local p1, arguments:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p1, "arguments":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v3, "mmdid"
 
     invoke-virtual {p1, v3}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1857,7 +1845,7 @@
     check-cast v2, Ljava/lang/String;
 
     .line 41
-    .local v2, mmdid:Ljava/lang/String;
+    .local v2, "mmdid":Ljava/lang/String;
     iget-object v3, p0, Lcom/fusepowered/m1/android/BridgeMMDevice;->contextRef:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v3}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -1867,7 +1855,7 @@
     check-cast v0, Landroid/content/Context;
 
     .line 42
-    .local v0, context:Landroid/content/Context;
+    .local v0, "context":Landroid/content/Context;
     if-eqz v0, :cond_0
 
     .line 44
@@ -1876,7 +1864,7 @@
     move-result-object v1
 
     .line 45
-    .local v1, handShake:Lcom/fusepowered/m1/android/HandShake;
+    .local v1, "handShake":Lcom/fusepowered/m1/android/HandShake;
     invoke-virtual {v1, v0, v2}, Lcom/fusepowered/m1/android/HandShake;->setMMdid(Landroid/content/Context;Ljava/lang/String;)V
 
     .line 46
@@ -1887,7 +1875,7 @@
     move-result-object v3
 
     .line 48
-    .end local v1           #handShake:Lcom/fusepowered/m1/android/HandShake;
+    .end local v1    # "handShake":Lcom/fusepowered/m1/android/HandShake;
     :goto_0
     return-object v3
 
@@ -1899,7 +1887,6 @@
 
 .method public showMap(Ljava/util/HashMap;)Lcom/fusepowered/m1/android/MMJSResponse;
     .locals 8
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1914,7 +1901,7 @@
 
     .prologue
     .line 265
-    .local p1, arguments:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p1, "arguments":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     iget-object v5, p0, Lcom/fusepowered/m1/android/BridgeMMDevice;->contextRef:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v5}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -1924,7 +1911,7 @@
     check-cast v2, Landroid/content/Context;
 
     .line 266
-    .local v2, context:Landroid/content/Context;
+    .local v2, "context":Landroid/content/Context;
     const-string v5, "location"
 
     invoke-virtual {p1, v5}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1934,7 +1921,7 @@
     check-cast v4, Ljava/lang/String;
 
     .line 267
-    .local v4, location:Ljava/lang/String;
+    .local v4, "location":Ljava/lang/String;
     if-eqz v2, :cond_0
 
     if-eqz v4, :cond_0
@@ -1982,7 +1969,7 @@
     invoke-direct {v3, v5, v6}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
     .line 271
-    .local v3, intent:Landroid/content/Intent;
+    .local v3, "intent":Landroid/content/Intent;
     invoke-static {v2, v3}, Lcom/fusepowered/m1/android/Utils$IntentUtils;->startActivity(Landroid/content/Context;Landroid/content/Intent;)V
 
     .line 273
@@ -1999,7 +1986,7 @@
     move-result-wide v0
 
     .line 274
-    .local v0, adImplId:J
+    .local v0, "adImplId":J
     const-string v5, "geo"
 
     invoke-static {v2, v5, v0, v1}, Lcom/fusepowered/m1/android/MMSDK$Event;->intentStarted(Landroid/content/Context;Ljava/lang/String;J)V
@@ -2012,8 +1999,8 @@
     move-result-object v5
 
     .line 277
-    .end local v0           #adImplId:J
-    .end local v3           #intent:Landroid/content/Intent;
+    .end local v0    # "adImplId":J
+    .end local v3    # "intent":Landroid/content/Intent;
     :goto_0
     return-object v5
 
@@ -2025,7 +2012,6 @@
 
 .method public tweet(Ljava/util/HashMap;)Lcom/fusepowered/m1/android/MMJSResponse;
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -2040,7 +2026,7 @@
 
     .prologue
     .line 429
-    .local p1, arguments:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p1, "arguments":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     const/4 v0, 0x0
 
     return-object v0

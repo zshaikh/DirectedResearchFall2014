@@ -77,13 +77,14 @@
 
     if-eqz p0, :cond_1
 
+    # getter for: Lcom/facebook/Session;->staticContext:Landroid/content/Context;
     invoke-static {}, Lcom/facebook/Session;->access$600()Landroid/content/Context;
 
     move-result-object v0
 
     invoke-virtual {v0, p0}, Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V
 
-    #calls: Lcom/facebook/Session$TokenRefreshRequest;->cleanup()V
+    # invokes: Lcom/facebook/Session$TokenRefreshRequest;->cleanup()V
     invoke-static {p0}, Lcom/facebook/Session$TokenRefreshRequest;->access$800(Lcom/facebook/Session$TokenRefreshRequest;)V
 
     :cond_1

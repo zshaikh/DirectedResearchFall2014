@@ -32,8 +32,8 @@
 # direct methods
 .method public constructor <init>(Lcom/flurry/org/codehaus/jackson/JsonNode;Lcom/flurry/org/codehaus/jackson/node/NodeCursor;)V
     .locals 1
-    .parameter "n"
-    .parameter "p"
+    .param p1, "n"    # Lcom/flurry/org/codehaus/jackson/JsonNode;
+    .param p2, "p"    # Lcom/flurry/org/codehaus/jackson/node/NodeCursor;
 
     .prologue
     .line 127
@@ -63,7 +63,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/flurry/org/codehaus/jackson/node/NodeCursor$Array;
     check-cast p0, Lcom/flurry/org/codehaus/jackson/node/ContainerNode;
 
     invoke-virtual {p0}, Lcom/flurry/org/codehaus/jackson/node/ContainerNode;->size()I

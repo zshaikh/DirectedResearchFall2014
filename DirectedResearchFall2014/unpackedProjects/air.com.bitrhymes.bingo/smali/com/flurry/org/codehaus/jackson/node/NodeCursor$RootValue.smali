@@ -23,8 +23,8 @@
 # direct methods
 .method public constructor <init>(Lcom/flurry/org/codehaus/jackson/JsonNode;Lcom/flurry/org/codehaus/jackson/node/NodeCursor;)V
     .locals 1
-    .parameter "n"
-    .parameter "p"
+    .param p1, "n"    # Lcom/flurry/org/codehaus/jackson/JsonNode;
+    .param p2, "p"    # Lcom/flurry/org/codehaus/jackson/node/NodeCursor;
 
     .prologue
     const/4 v0, 0x0

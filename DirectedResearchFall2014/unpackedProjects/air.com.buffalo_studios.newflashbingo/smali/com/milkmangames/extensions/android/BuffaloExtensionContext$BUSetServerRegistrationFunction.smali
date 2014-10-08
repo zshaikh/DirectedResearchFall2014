@@ -24,7 +24,6 @@
 # direct methods
 .method private constructor <init>(Lcom/milkmangames/extensions/android/BuffaloExtensionContext;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 887
@@ -37,8 +36,6 @@
 
 .method synthetic constructor <init>(Lcom/milkmangames/extensions/android/BuffaloExtensionContext;Lcom/milkmangames/extensions/android/BuffaloExtensionContext$BUSetServerRegistrationFunction;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 887
@@ -51,19 +48,19 @@
 # virtual methods
 .method public call(Lcom/adobe/fre/FREContext;[Lcom/adobe/fre/FREObject;)Lcom/adobe/fre/FREObject;
     .locals 6
-    .parameter "arg0"
-    .parameter "args"
+    .param p1, "arg0"    # Lcom/adobe/fre/FREContext;
+    .param p2, "args"    # [Lcom/adobe/fre/FREObject;
 
     .prologue
     .line 891
     const/4 v3, 0x0
 
     .line 893
-    .local v3, result:Z
+    .local v3, "result":Z
     const/4 v2, 0x0
 
     .line 896
-    .local v2, resFreObject:Lcom/adobe/fre/FREObject;
+    .local v2, "resFreObject":Lcom/adobe/fre/FREObject;
     const/4 v4, 0x0
 
     :try_start_0
@@ -74,7 +71,7 @@
     move-result v1
 
     .line 897
-    .local v1, isRegistered:Z
+    .local v1, "isRegistered":Z
     iget-object v4, p0, Lcom/milkmangames/extensions/android/BuffaloExtensionContext$BUSetServerRegistrationFunction;->this$0:Lcom/milkmangames/extensions/android/BuffaloExtensionContext;
 
     invoke-virtual {v4, v1}, Lcom/milkmangames/extensions/android/BuffaloExtensionContext;->setServerRegistration(Z)Z
@@ -89,7 +86,7 @@
     move-result-object v2
 
     .line 905
-    .end local v1           #isRegistered:Z
+    .end local v1    # "isRegistered":Z
     :goto_0
     return-object v2
 
@@ -100,7 +97,7 @@
     move-object v0, v4
 
     .line 902
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v4, "[BUExtension]"
 
     const-string v5, "Thread Exception"

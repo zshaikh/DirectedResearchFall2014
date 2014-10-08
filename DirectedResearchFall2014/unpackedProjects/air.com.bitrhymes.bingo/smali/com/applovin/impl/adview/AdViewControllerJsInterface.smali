@@ -265,7 +265,7 @@
 
     move-result v0
 
-    const/high16 v1, 0x42c8
+    const/high16 v1, 0x42c80000
 
     div-float/2addr v0, v1
 

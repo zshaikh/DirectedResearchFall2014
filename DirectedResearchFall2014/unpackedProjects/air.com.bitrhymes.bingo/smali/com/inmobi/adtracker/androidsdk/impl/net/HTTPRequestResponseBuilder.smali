@@ -33,12 +33,6 @@
 
 .method protected static formHTTPRequest(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;
     .locals 8
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const/4 v0, 0x0
@@ -348,11 +342,6 @@
 
 .method public static saveWebviewRequestParam(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
     .locals 6
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 152
@@ -380,12 +369,6 @@
 
 .method public static sendHTTPRequest(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;)Lcom/inmobi/adtracker/androidsdk/impl/ConfigConstants$StatusCode;
     .locals 9
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 80
@@ -673,7 +656,6 @@
 
 .method public static serverReachable(Ljava/lang/String;)Z
     .locals 2
-    .parameter
 
     .prologue
     .line 135

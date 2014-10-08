@@ -24,8 +24,6 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Lcom/chartboost/sdk/impl/u$a;)V
     .locals 3
-    .parameter
-    .parameter
 
     .prologue
     const/4 v2, -0x1
@@ -131,7 +129,6 @@
 
 .method static synthetic a(Lcom/chartboost/sdk/impl/u;)Lcom/chartboost/sdk/Libraries/CBOrientation$Difference;
     .locals 1
-    .parameter
 
     .prologue
     .line 20
@@ -142,8 +139,6 @@
 
 .method static synthetic a(Lcom/chartboost/sdk/impl/u;Lcom/chartboost/sdk/Libraries/CBOrientation$Difference;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 20
@@ -154,7 +149,6 @@
 
 .method static synthetic b(Lcom/chartboost/sdk/impl/u;)Landroid/view/View;
     .locals 1
-    .parameter
 
     .prologue
     .line 16
@@ -211,7 +205,7 @@
 
 .method public onTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 1
-    .parameter "ev"
+    .param p1, "ev"    # Landroid/view/MotionEvent;
 
     .prologue
     .line 61

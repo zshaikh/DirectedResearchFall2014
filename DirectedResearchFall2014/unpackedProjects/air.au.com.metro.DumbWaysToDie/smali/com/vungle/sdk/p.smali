@@ -6,8 +6,6 @@
 # direct methods
 .method public static a(Ljava/lang/String;Ljava/lang/String;)Z
     .locals 9
-    .parameter
-    .parameter
 
     .prologue
     const/4 v7, 0x0

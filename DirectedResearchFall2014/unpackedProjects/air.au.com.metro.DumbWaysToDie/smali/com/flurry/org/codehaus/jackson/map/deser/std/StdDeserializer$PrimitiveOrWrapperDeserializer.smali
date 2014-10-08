@@ -37,8 +37,6 @@
 # direct methods
 .method protected constructor <init>(Ljava/lang/Class;Ljava/lang/Object;)V
     .locals 0
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -49,9 +47,9 @@
 
     .prologue
     .line 692
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/deser/std/StdDeserializer$PrimitiveOrWrapperDeserializer;,"Lcom/flurry/org/codehaus/jackson/map/deser/std/StdDeserializer$PrimitiveOrWrapperDeserializer<TT;>;"
-    .local p1, vc:Ljava/lang/Class;,"Ljava/lang/Class<TT;>;"
-    .local p2, nvl:Ljava/lang/Object;,"TT;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/deser/std/StdDeserializer$PrimitiveOrWrapperDeserializer;, "Lcom/flurry/org/codehaus/jackson/map/deser/std/StdDeserializer$PrimitiveOrWrapperDeserializer<TT;>;"
+    .local p1, "vc":Ljava/lang/Class;, "Ljava/lang/Class<TT;>;"
+    .local p2, "nvl":Ljava/lang/Object;, "TT;"
     invoke-direct {p0, p1}, Lcom/flurry/org/codehaus/jackson/map/deser/std/StdScalarDeserializer;-><init>(Ljava/lang/Class;)V
 
     .line 693
@@ -73,7 +71,7 @@
 
     .prologue
     .line 698
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/deser/std/StdDeserializer$PrimitiveOrWrapperDeserializer;,"Lcom/flurry/org/codehaus/jackson/map/deser/std/StdDeserializer$PrimitiveOrWrapperDeserializer<TT;>;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/deser/std/StdDeserializer$PrimitiveOrWrapperDeserializer;, "Lcom/flurry/org/codehaus/jackson/map/deser/std/StdDeserializer$PrimitiveOrWrapperDeserializer<TT;>;"
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/map/deser/std/StdDeserializer$PrimitiveOrWrapperDeserializer;->_nullValue:Ljava/lang/Object;
 
     return-object v0

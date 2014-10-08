@@ -61,7 +61,6 @@
 # virtual methods
 .method public get(I)Ljava/lang/Object;
     .locals 2
-    .parameter
 
     .prologue
     .line 15
@@ -140,8 +139,6 @@
 
 .method public put(ILjava/lang/Object;)V
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     .line 24

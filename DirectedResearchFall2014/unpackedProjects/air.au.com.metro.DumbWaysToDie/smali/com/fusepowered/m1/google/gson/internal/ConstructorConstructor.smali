@@ -20,7 +20,6 @@
 # direct methods
 .method public constructor <init>(Ljava/util/Map;)V
     .locals 0
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -34,7 +33,7 @@
 
     .prologue
     .line 47
-    .local p1, instanceCreators:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/reflect/Type;Lcom/fusepowered/m1/google/gson/InstanceCreator<*>;>;"
+    .local p1, "instanceCreators":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/reflect/Type;Lcom/fusepowered/m1/google/gson/InstanceCreator<*>;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 48
@@ -46,7 +45,6 @@
 
 .method private newDefaultConstructor(Ljava/lang/Class;)Lcom/fusepowered/m1/google/gson/internal/ObjectConstructor;
     .locals 3
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -61,7 +59,7 @@
 
     .prologue
     .line 97
-    .local p1, rawType:Ljava/lang/Class;,"Ljava/lang/Class<-TT;>;"
+    .local p1, "rawType":Ljava/lang/Class;, "Ljava/lang/Class<-TT;>;"
     const/4 v2, 0x0
 
     :try_start_0
@@ -72,7 +70,7 @@
     move-result-object v0
 
     .line 98
-    .local v0, constructor:Ljava/lang/reflect/Constructor;,"Ljava/lang/reflect/Constructor<-TT;>;"
+    .local v0, "constructor":Ljava/lang/reflect/Constructor;, "Ljava/lang/reflect/Constructor<-TT;>;"
     invoke-virtual {v0}, Ljava/lang/reflect/Constructor;->isAccessible()Z
 
     move-result v2
@@ -93,7 +91,7 @@
     .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 119
-    .end local v0           #constructor:Ljava/lang/reflect/Constructor;,"Ljava/lang/reflect/Constructor<-TT;>;"
+    .end local v0    # "constructor":Ljava/lang/reflect/Constructor;, "Ljava/lang/reflect/Constructor<-TT;>;"
     :goto_0
     return-object v2
 
@@ -104,7 +102,7 @@
     move-object v1, v2
 
     .line 119
-    .local v1, e:Ljava/lang/NoSuchMethodException;
+    .local v1, "e":Ljava/lang/NoSuchMethodException;
     const/4 v2, 0x0
 
     goto :goto_0
@@ -112,8 +110,7 @@
 
 .method private newDefaultImplementationConstructor(Ljava/lang/reflect/Type;Ljava/lang/Class;)Lcom/fusepowered/m1/google/gson/internal/ObjectConstructor;
     .locals 3
-    .parameter "type"
-    .parameter
+    .param p1, "type"    # Ljava/lang/reflect/Type;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -129,7 +126,7 @@
 
     .prologue
     .line 130
-    .local p2, rawType:Ljava/lang/Class;,"Ljava/lang/Class<-TT;>;"
+    .local p2, "rawType":Ljava/lang/Class;, "Ljava/lang/Class<-TT;>;"
     const-class v0, Ljava/util/Collection;
 
     invoke-virtual {v0, p2}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
@@ -153,12 +150,12 @@
     invoke-direct {v0, p0}, Lcom/fusepowered/m1/google/gson/internal/ConstructorConstructor$4;-><init>(Lcom/fusepowered/m1/google/gson/internal/ConstructorConstructor;)V
 
     .line 205
-    .end local p1
+    .end local p1    # "type":Ljava/lang/reflect/Type;
     :goto_0
     return-object v0
 
     .line 138
-    .restart local p1
+    .restart local p1    # "type":Ljava/lang/reflect/Type;
     :cond_0
     const-class v0, Ljava/util/EnumSet;
 
@@ -253,7 +250,7 @@
 
     check-cast p1, Ljava/lang/reflect/ParameterizedType;
 
-    .end local p1
+    .end local p1    # "type":Ljava/lang/reflect/Type;
     invoke-interface {p1}, Ljava/lang/reflect/ParameterizedType;->getActualTypeArguments()[Ljava/lang/reflect/Type;
 
     move-result-object v1
@@ -292,7 +289,7 @@
     goto :goto_0
 
     .line 205
-    .restart local p1
+    .restart local p1    # "type":Ljava/lang/reflect/Type;
     :cond_7
     const/4 v0, 0x0
 
@@ -301,8 +298,7 @@
 
 .method private newUnsafeAllocator(Ljava/lang/reflect/Type;Ljava/lang/Class;)Lcom/fusepowered/m1/google/gson/internal/ObjectConstructor;
     .locals 1
-    .parameter "type"
-    .parameter
+    .param p1, "type"    # Ljava/lang/reflect/Type;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -318,7 +314,7 @@
 
     .prologue
     .line 211
-    .local p2, rawType:Ljava/lang/Class;,"Ljava/lang/Class<-TT;>;"
+    .local p2, "rawType":Ljava/lang/Class;, "Ljava/lang/Class<-TT;>;"
     new-instance v0, Lcom/fusepowered/m1/google/gson/internal/ConstructorConstructor$12;
 
     invoke-direct {v0, p0, p2, p1}, Lcom/fusepowered/m1/google/gson/internal/ConstructorConstructor$12;-><init>(Lcom/fusepowered/m1/google/gson/internal/ConstructorConstructor;Ljava/lang/Class;Ljava/lang/reflect/Type;)V
@@ -330,7 +326,6 @@
 # virtual methods
 .method public get(Lcom/fusepowered/m1/google/gson/reflect/TypeToken;)Lcom/fusepowered/m1/google/gson/internal/ObjectConstructor;
     .locals 7
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -345,19 +340,19 @@
 
     .prologue
     .line 52
-    .local p1, typeToken:Lcom/fusepowered/m1/google/gson/reflect/TypeToken;,"Lcom/fusepowered/m1/google/gson/reflect/TypeToken<TT;>;"
+    .local p1, "typeToken":Lcom/fusepowered/m1/google/gson/reflect/TypeToken;, "Lcom/fusepowered/m1/google/gson/reflect/TypeToken<TT;>;"
     invoke-virtual {p1}, Lcom/fusepowered/m1/google/gson/reflect/TypeToken;->getType()Ljava/lang/reflect/Type;
 
     move-result-object v4
 
     .line 53
-    .local v4, type:Ljava/lang/reflect/Type;
+    .local v4, "type":Ljava/lang/reflect/Type;
     invoke-virtual {p1}, Lcom/fusepowered/m1/google/gson/reflect/TypeToken;->getRawType()Ljava/lang/Class;
 
     move-result-object v2
 
     .line 58
-    .local v2, rawType:Ljava/lang/Class;,"Ljava/lang/Class<-TT;>;"
+    .local v2, "rawType":Ljava/lang/Class;, "Ljava/lang/Class<-TT;>;"
     iget-object v6, p0, Lcom/fusepowered/m1/google/gson/internal/ConstructorConstructor;->instanceCreators:Ljava/util/Map;
 
     invoke-interface {v6, v4}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -367,7 +362,7 @@
     check-cast v5, Lcom/fusepowered/m1/google/gson/InstanceCreator;
 
     .line 59
-    .local v5, typeCreator:Lcom/fusepowered/m1/google/gson/InstanceCreator;,"Lcom/fusepowered/m1/google/gson/InstanceCreator<TT;>;"
+    .local v5, "typeCreator":Lcom/fusepowered/m1/google/gson/InstanceCreator;, "Lcom/fusepowered/m1/google/gson/InstanceCreator<TT;>;"
     if-eqz v5, :cond_0
 
     .line 60
@@ -390,7 +385,7 @@
     check-cast v3, Lcom/fusepowered/m1/google/gson/InstanceCreator;
 
     .line 72
-    .local v3, rawTypeCreator:Lcom/fusepowered/m1/google/gson/InstanceCreator;,"Lcom/fusepowered/m1/google/gson/InstanceCreator<TT;>;"
+    .local v3, "rawTypeCreator":Lcom/fusepowered/m1/google/gson/InstanceCreator;, "Lcom/fusepowered/m1/google/gson/InstanceCreator<TT;>;"
     if-eqz v3, :cond_1
 
     .line 73
@@ -407,7 +402,7 @@
     move-result-object v0
 
     .line 82
-    .local v0, defaultConstructor:Lcom/fusepowered/m1/google/gson/internal/ObjectConstructor;,"Lcom/fusepowered/m1/google/gson/internal/ObjectConstructor<TT;>;"
+    .local v0, "defaultConstructor":Lcom/fusepowered/m1/google/gson/internal/ObjectConstructor;, "Lcom/fusepowered/m1/google/gson/internal/ObjectConstructor<TT;>;"
     if-eqz v0, :cond_2
 
     move-object v6, v0
@@ -422,7 +417,7 @@
     move-result-object v1
 
     .line 87
-    .local v1, defaultImplementation:Lcom/fusepowered/m1/google/gson/internal/ObjectConstructor;,"Lcom/fusepowered/m1/google/gson/internal/ObjectConstructor<TT;>;"
+    .local v1, "defaultImplementation":Lcom/fusepowered/m1/google/gson/internal/ObjectConstructor;, "Lcom/fusepowered/m1/google/gson/internal/ObjectConstructor<TT;>;"
     if-eqz v1, :cond_3
 
     move-object v6, v1

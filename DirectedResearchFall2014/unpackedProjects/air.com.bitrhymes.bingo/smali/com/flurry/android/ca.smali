@@ -13,7 +13,6 @@
 # direct methods
 .method constructor <init>(Lcom/flurry/android/u;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 38
@@ -28,8 +27,6 @@
 # virtual methods
 .method public final onAdRequestFailed(Lcom/inmobi/androidsdk/IMAdInterstitial;Lcom/inmobi/androidsdk/IMAdRequest$ErrorCode;)V
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     .line 42
@@ -56,7 +53,6 @@
 
 .method public final onAdRequestLoaded(Lcom/inmobi/androidsdk/IMAdInterstitial;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 48
@@ -109,7 +105,6 @@
 
 .method public final onDismissAdScreen(Lcom/inmobi/androidsdk/IMAdInterstitial;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 58
@@ -136,7 +131,6 @@
 
 .method public final onLeaveApplication(Lcom/inmobi/androidsdk/IMAdInterstitial;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 69
@@ -154,7 +148,6 @@
 
 .method public final onShowAdScreen(Lcom/inmobi/androidsdk/IMAdInterstitial;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 64

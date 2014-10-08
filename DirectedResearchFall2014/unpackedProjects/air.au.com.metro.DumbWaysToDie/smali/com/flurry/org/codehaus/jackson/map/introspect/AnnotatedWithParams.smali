@@ -10,8 +10,8 @@
 # direct methods
 .method protected constructor <init>(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;[Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;)V
     .locals 0
-    .parameter "annotations"
-    .parameter "paramAnnotations"
+    .param p1, "annotations"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;
+    .param p2, "paramAnnotations"    # [Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;
 
     .prologue
     .line 32
@@ -28,7 +28,7 @@
 # virtual methods
 .method public final addIfNotPresent(Ljava/lang/annotation/Annotation;)V
     .locals 1
-    .parameter "a"
+    .param p1, "a"    # Ljava/lang/annotation/Annotation;
 
     .prologue
     .line 68
@@ -42,7 +42,7 @@
 
 .method public final addOrOverride(Ljava/lang/annotation/Annotation;)V
     .locals 1
-    .parameter "a"
+    .param p1, "a"    # Ljava/lang/annotation/Annotation;
 
     .prologue
     .line 42
@@ -56,8 +56,8 @@
 
 .method public final addOrOverrideParam(ILjava/lang/annotation/Annotation;)V
     .locals 2
-    .parameter "paramIndex"
-    .parameter "a"
+    .param p1, "paramIndex"    # I
+    .param p2, "a"    # Ljava/lang/annotation/Annotation;
 
     .prologue
     .line 53
@@ -66,17 +66,17 @@
     aget-object v0, v1, p1
 
     .line 54
-    .local v0, old:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;
+    .local v0, "old":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;
     if-nez v0, :cond_0
 
     .line 55
     new-instance v0, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;
 
-    .end local v0           #old:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;
+    .end local v0    # "old":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;
     invoke-direct {v0}, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;-><init>()V
 
     .line 56
-    .restart local v0       #old:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;
+    .restart local v0    # "old":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedWithParams;->_paramAnnotations:[Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;
 
     aput-object v0, v1, p1
@@ -115,7 +115,6 @@
 
 .method public final getAnnotation(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<A::",
@@ -128,7 +127,7 @@
 
     .prologue
     .line 118
-    .local p1, acls:Ljava/lang/Class;,"Ljava/lang/Class<TA;>;"
+    .local p1, "acls":Ljava/lang/Class;, "Ljava/lang/Class<TA;>;"
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedWithParams;->_annotations:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;
 
     invoke-virtual {v0, p1}, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;->get(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;
@@ -154,7 +153,7 @@
 
 .method public final getParameter(I)Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedParameter;
     .locals 3
-    .parameter "index"
+    .param p1, "index"    # I
 
     .prologue
     .line 138
@@ -175,7 +174,7 @@
 
 .method public final getParameterAnnotations(I)Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;
     .locals 1
-    .parameter "index"
+    .param p1, "index"    # I
 
     .prologue
     .line 129
@@ -225,8 +224,7 @@
 
 .method protected getType(Lcom/flurry/org/codehaus/jackson/map/type/TypeBindings;[Ljava/lang/reflect/TypeVariable;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .locals 9
-    .parameter "bindings"
-    .parameter
+    .param p1, "bindings"    # Lcom/flurry/org/codehaus/jackson/map/type/TypeBindings;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -240,7 +238,7 @@
 
     .prologue
     .line 93
-    .local p2, typeParams:[Ljava/lang/reflect/TypeVariable;,"[Ljava/lang/reflect/TypeVariable<*>;"
+    .local p2, "typeParams":[Ljava/lang/reflect/TypeVariable;, "[Ljava/lang/reflect/TypeVariable<*>;"
     if-eqz p2, :cond_1
 
     array-length v7, p2
@@ -255,26 +253,26 @@
     .line 95
     move-object v0, p2
 
-    .local v0, arr$:[Ljava/lang/reflect/TypeVariable;
+    .local v0, "arr$":[Ljava/lang/reflect/TypeVariable;
     array-length v2, v0
 
-    .local v2, len$:I
+    .local v2, "len$":I
     const/4 v1, 0x0
 
-    .local v1, i$:I
+    .local v1, "i$":I
     :goto_0
     if-ge v1, v2, :cond_1
 
     aget-object v6, v0, v1
 
     .line 96
-    .local v6, var:Ljava/lang/reflect/TypeVariable;,"Ljava/lang/reflect/TypeVariable<*>;"
+    .local v6, "var":Ljava/lang/reflect/TypeVariable;, "Ljava/lang/reflect/TypeVariable<*>;"
     invoke-interface {v6}, Ljava/lang/reflect/TypeVariable;->getName()Ljava/lang/String;
 
     move-result-object v4
 
     .line 98
-    .local v4, name:Ljava/lang/String;
+    .local v4, "name":Ljava/lang/String;
     invoke-virtual {p1, v4}, Lcom/flurry/org/codehaus/jackson/map/type/TypeBindings;->_addPlaceholder(Ljava/lang/String;)V
 
     .line 100
@@ -287,7 +285,7 @@
     aget-object v3, v7, v8
 
     .line 101
-    .local v3, lowerBound:Ljava/lang/reflect/Type;
+    .local v3, "lowerBound":Ljava/lang/reflect/Type;
     if-nez v3, :cond_0
 
     invoke-static {}, Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;->unknownType()Lcom/flurry/org/codehaus/jackson/type/JavaType;
@@ -297,7 +295,7 @@
     move-object v5, v7
 
     .line 103
-    .local v5, type:Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .local v5, "type":Lcom/flurry/org/codehaus/jackson/type/JavaType;
     :goto_1
     invoke-interface {v6}, Ljava/lang/reflect/TypeVariable;->getName()Ljava/lang/String;
 
@@ -311,7 +309,7 @@
     goto :goto_0
 
     .line 101
-    .end local v5           #type:Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .end local v5    # "type":Lcom/flurry/org/codehaus/jackson/type/JavaType;
     :cond_0
     invoke-virtual {p1, v3}, Lcom/flurry/org/codehaus/jackson/map/type/TypeBindings;->resolveType(Ljava/lang/reflect/Type;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
 
@@ -322,12 +320,12 @@
     goto :goto_1
 
     .line 106
-    .end local v0           #arr$:[Ljava/lang/reflect/TypeVariable;
-    .end local v1           #i$:I
-    .end local v2           #len$:I
-    .end local v3           #lowerBound:Ljava/lang/reflect/Type;
-    .end local v4           #name:Ljava/lang/String;
-    .end local v6           #var:Ljava/lang/reflect/TypeVariable;,"Ljava/lang/reflect/TypeVariable<*>;"
+    .end local v0    # "arr$":[Ljava/lang/reflect/TypeVariable;
+    .end local v1    # "i$":I
+    .end local v2    # "len$":I
+    .end local v3    # "lowerBound":Ljava/lang/reflect/Type;
+    .end local v4    # "name":Ljava/lang/String;
+    .end local v6    # "var":Ljava/lang/reflect/TypeVariable;, "Ljava/lang/reflect/TypeVariable<*>;"
     :cond_1
     invoke-virtual {p0}, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedWithParams;->getGenericType()Ljava/lang/reflect/Type;
 
@@ -342,8 +340,8 @@
 
 .method protected replaceParameterAnnotations(ILcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;)Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedParameter;
     .locals 1
-    .parameter "index"
-    .parameter "ann"
+    .param p1, "index"    # I
+    .param p2, "ann"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;
 
     .prologue
     .line 80
@@ -361,8 +359,8 @@
 
 .method public final resolveParameterType(ILcom/flurry/org/codehaus/jackson/map/type/TypeBindings;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .locals 1
-    .parameter "index"
-    .parameter "bindings"
+    .param p1, "index"    # I
+    .param p2, "bindings"    # Lcom/flurry/org/codehaus/jackson/map/type/TypeBindings;
 
     .prologue
     .line 155

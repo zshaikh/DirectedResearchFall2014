@@ -32,8 +32,6 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m1/google/gson/internal/bind/TypeAdapters$22;Lcom/fusepowered/m1/google/gson/TypeAdapter;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 524
@@ -50,7 +48,7 @@
 # virtual methods
 .method public bridge synthetic read(Lcom/fusepowered/m1/google/gson/stream/JsonReader;)Ljava/lang/Object;
     .locals 1
-    .parameter "x0"
+    .param p1, "x0"    # Lcom/fusepowered/m1/google/gson/stream/JsonReader;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -68,7 +66,7 @@
 
 .method public read(Lcom/fusepowered/m1/google/gson/stream/JsonReader;)Ljava/sql/Timestamp;
     .locals 4
-    .parameter "in"
+    .param p1, "in"    # Lcom/fusepowered/m1/google/gson/stream/JsonReader;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -86,7 +84,7 @@
     check-cast v0, Ljava/util/Date;
 
     .line 527
-    .local v0, date:Ljava/util/Date;
+    .local v0, "date":Ljava/util/Date;
     if-eqz v0, :cond_0
 
     new-instance v1, Ljava/sql/Timestamp;
@@ -108,8 +106,8 @@
 
 .method public bridge synthetic write(Lcom/fusepowered/m1/google/gson/stream/JsonWriter;Ljava/lang/Object;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
+    .param p1, "x0"    # Lcom/fusepowered/m1/google/gson/stream/JsonWriter;
+    .param p2, "x1"    # Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -120,7 +118,7 @@
     .line 524
     check-cast p2, Ljava/sql/Timestamp;
 
-    .end local p2
+    .end local p2    # "x1":Ljava/lang/Object;
     invoke-virtual {p0, p1, p2}, Lcom/fusepowered/m1/google/gson/internal/bind/TypeAdapters$22$1;->write(Lcom/fusepowered/m1/google/gson/stream/JsonWriter;Ljava/sql/Timestamp;)V
 
     return-void
@@ -128,8 +126,8 @@
 
 .method public write(Lcom/fusepowered/m1/google/gson/stream/JsonWriter;Ljava/sql/Timestamp;)V
     .locals 1
-    .parameter "out"
-    .parameter "value"
+    .param p1, "out"    # Lcom/fusepowered/m1/google/gson/stream/JsonWriter;
+    .param p2, "value"    # Ljava/sql/Timestamp;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;

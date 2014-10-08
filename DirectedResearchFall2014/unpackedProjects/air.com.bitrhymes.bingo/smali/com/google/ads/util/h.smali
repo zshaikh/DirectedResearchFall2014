@@ -12,8 +12,6 @@
 # direct methods
 .method public static a(Landroid/webkit/WebSettings;Lcom/google/ads/n;)V
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 28

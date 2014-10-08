@@ -41,8 +41,6 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Lcom/inmobi/androidsdk/impl/IMUserInfo;)V
     .locals 4
-    .parameter
-    .parameter
 
     .prologue
     const-wide/16 v2, 0x0
@@ -103,7 +101,6 @@
 
 .method static synthetic a(Lcom/inmobi/androidsdk/impl/IMNiceInfo;)Ljava/util/concurrent/atomic/AtomicLong;
     .locals 1
-    .parameter
 
     .prologue
     .line 47
@@ -114,8 +111,6 @@
 
 .method static synthetic a(Lcom/inmobi/androidsdk/impl/IMNiceInfo;Lcom/inmobi/androidsdk/impl/IMNiceInfo$a;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 49
@@ -126,8 +121,6 @@
 
 .method static synthetic a(Lcom/inmobi/androidsdk/impl/IMNiceInfo;Ljava/util/List;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 42
@@ -167,7 +160,6 @@
 
 .method static synthetic b(Lcom/inmobi/androidsdk/impl/IMNiceInfo;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 323
@@ -207,7 +199,6 @@
 
 .method static synthetic c(Lcom/inmobi/androidsdk/impl/IMNiceInfo;)Ljava/lang/Long;
     .locals 1
-    .parameter
 
     .prologue
     .line 45
@@ -323,7 +314,6 @@
 
 .method static synthetic d(Lcom/inmobi/androidsdk/impl/IMNiceInfo;)Lcom/inmobi/androidsdk/impl/IMNiceInfo$a;
     .locals 1
-    .parameter
 
     .prologue
     .line 49
@@ -523,7 +513,6 @@
 
 .method static synthetic e(Lcom/inmobi/androidsdk/impl/IMNiceInfo;)Ljava/lang/Long;
     .locals 1
-    .parameter
 
     .prologue
     .line 46
@@ -1291,7 +1280,6 @@
 
 .method public processNiceParams(Ljava/net/HttpURLConnection;)V
     .locals 8
-    .parameter
 
     .prologue
     const-string v7, "InMobiAndroidSDK_3.6.2"

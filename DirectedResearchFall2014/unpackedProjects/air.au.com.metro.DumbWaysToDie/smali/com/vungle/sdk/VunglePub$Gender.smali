@@ -35,7 +35,7 @@
 
 .method public static toString(I)Ljava/lang/String;
     .locals 1
-    .parameter "gender"
+    .param p0, "gender"    # I
 
     .prologue
     .line 505

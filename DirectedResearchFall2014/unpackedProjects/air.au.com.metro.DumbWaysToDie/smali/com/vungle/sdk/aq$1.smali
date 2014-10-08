@@ -42,7 +42,6 @@
 # virtual methods
 .method public final a(Ljava/lang/Object;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 31

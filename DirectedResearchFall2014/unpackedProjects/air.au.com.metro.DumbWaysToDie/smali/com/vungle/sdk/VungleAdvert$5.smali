@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/vungle/sdk/VungleAdvert;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 600
@@ -39,7 +38,6 @@
 # virtual methods
 .method public final onAnimationEnd(Landroid/view/animation/Animation;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 604
@@ -92,7 +90,6 @@
 
 .method public final onAnimationRepeat(Landroid/view/animation/Animation;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 609
@@ -101,7 +98,6 @@
 
 .method public final onAnimationStart(Landroid/view/animation/Animation;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 612

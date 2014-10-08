@@ -40,8 +40,8 @@
 # virtual methods
 .method public bridge synthetic deserialize(Lcom/flurry/org/codehaus/jackson/JsonParser;Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;)Ljava/lang/Object;
     .locals 1
-    .parameter "x0"
-    .parameter "x1"
+    .param p1, "x0"    # Lcom/flurry/org/codehaus/jackson/JsonParser;
+    .param p2, "x1"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -60,8 +60,8 @@
 
 .method public deserialize(Lcom/flurry/org/codehaus/jackson/JsonParser;Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;)Ljavax/xml/datatype/XMLGregorianCalendar;
     .locals 3
-    .parameter "jp"
-    .parameter "ctxt"
+    .param p1, "jp"    # Lcom/flurry/org/codehaus/jackson/JsonParser;
+    .param p2, "ctxt"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -76,7 +76,7 @@
     move-result-object v1
 
     .line 93
-    .local v1, d:Ljava/util/Date;
+    .local v1, "d":Ljava/util/Date;
     if-nez v1, :cond_0
 
     .line 94
@@ -93,7 +93,7 @@
     invoke-direct {v0}, Ljava/util/GregorianCalendar;-><init>()V
 
     .line 97
-    .local v0, calendar:Ljava/util/GregorianCalendar;
+    .local v0, "calendar":Ljava/util/GregorianCalendar;
     invoke-virtual {v0, v1}, Ljava/util/GregorianCalendar;->setTime(Ljava/util/Date;)V
 
     .line 98

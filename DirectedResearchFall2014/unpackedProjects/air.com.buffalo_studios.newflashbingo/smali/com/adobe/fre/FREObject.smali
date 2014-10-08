@@ -18,7 +18,7 @@
 # direct methods
 .method protected constructor <init>(D)V
     .locals 0
-    .parameter "value"
+    .param p1, "value"    # D
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lcom/adobe/fre/FREWrongThreadException;
@@ -38,7 +38,7 @@
 
 .method protected constructor <init>(I)V
     .locals 0
-    .parameter "value"
+    .param p1, "value"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lcom/adobe/fre/FREWrongThreadException;
@@ -58,14 +58,14 @@
 
 .method protected constructor <init>(Lcom/adobe/fre/FREObject$CFREObjectWrapper;)V
     .locals 2
-    .parameter "obj"
+    .param p1, "obj"    # Lcom/adobe/fre/FREObject$CFREObjectWrapper;
 
     .prologue
     .line 39
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 40
-    #getter for: Lcom/adobe/fre/FREObject$CFREObjectWrapper;->m_objectPointer:J
+    # getter for: Lcom/adobe/fre/FREObject$CFREObjectWrapper;->m_objectPointer:J
     invoke-static {p1}, Lcom/adobe/fre/FREObject$CFREObjectWrapper;->access$000(Lcom/adobe/fre/FREObject$CFREObjectWrapper;)J
 
     move-result-wide v0
@@ -78,7 +78,7 @@
 
 .method protected constructor <init>(Ljava/lang/String;)V
     .locals 0
-    .parameter "value"
+    .param p1, "value"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lcom/adobe/fre/FREWrongThreadException;
@@ -98,8 +98,8 @@
 
 .method public constructor <init>(Ljava/lang/String;[Lcom/adobe/fre/FREObject;)V
     .locals 0
-    .parameter "className"
-    .parameter "constructorArgs"
+    .param p1, "className"    # Ljava/lang/String;
+    .param p2, "constructorArgs"    # [Lcom/adobe/fre/FREObject;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lcom/adobe/fre/FRETypeMismatchException;,
@@ -124,7 +124,7 @@
 
 .method protected constructor <init>(Z)V
     .locals 0
-    .parameter "value"
+    .param p1, "value"    # Z
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lcom/adobe/fre/FREWrongThreadException;
@@ -188,7 +188,7 @@
 
 .method public static newObject(D)Lcom/adobe/fre/FREObject;
     .locals 1
-    .parameter "value"
+    .param p0, "value"    # D
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lcom/adobe/fre/FREWrongThreadException;
@@ -206,7 +206,7 @@
 
 .method public static newObject(I)Lcom/adobe/fre/FREObject;
     .locals 1
-    .parameter "value"
+    .param p0, "value"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lcom/adobe/fre/FREWrongThreadException;
@@ -224,7 +224,7 @@
 
 .method public static newObject(Ljava/lang/String;)Lcom/adobe/fre/FREObject;
     .locals 1
-    .parameter "value"
+    .param p0, "value"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lcom/adobe/fre/FREWrongThreadException;
@@ -255,7 +255,7 @@
 
 .method public static newObject(Z)Lcom/adobe/fre/FREObject;
     .locals 1
-    .parameter "value"
+    .param p0, "value"    # Z
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lcom/adobe/fre/FREWrongThreadException;

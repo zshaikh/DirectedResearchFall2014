@@ -34,12 +34,11 @@
 # direct methods
 .method public constructor <init>(Lcom/fusepowered/a1/webapp/ApplifierImpactWebData;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/fusepowered/a1/webapp/ApplifierImpactWebData$ApplifierImpactRequestType;I)V
     .locals 1
-    .parameter
-    .parameter "urlPart1"
-    .parameter "urlPart2"
-    .parameter "requestMethod"
-    .parameter "requestType"
-    .parameter "retries"
+    .param p2, "urlPart1"    # Ljava/lang/String;
+    .param p3, "urlPart2"    # Ljava/lang/String;
+    .param p4, "requestMethod"    # Ljava/lang/String;
+    .param p5, "requestType"    # Lcom/fusepowered/a1/webapp/ApplifierImpactWebData$ApplifierImpactRequestType;
+    .param p6, "retries"    # I
 
     .prologue
     const/4 v0, 0x0
@@ -109,7 +108,7 @@
     invoke-direct/range {v0 .. v6}, Lcom/fusepowered/a1/webapp/ApplifierImpactWebData$ApplifierImpactUrlLoader;-><init>(Lcom/fusepowered/a1/webapp/ApplifierImpactWebData;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/fusepowered/a1/webapp/ApplifierImpactWebData$ApplifierImpactRequestType;I)V
 
     .line 595
-    .local v0, loader:Lcom/fusepowered/a1/webapp/ApplifierImpactWebData$ApplifierImpactUrlLoader;
+    .local v0, "loader":Lcom/fusepowered/a1/webapp/ApplifierImpactWebData$ApplifierImpactUrlLoader;
     new-instance v1, Ljava/lang/StringBuilder;
 
     const-string v2, "URL: "
@@ -140,14 +139,14 @@
     .line 598
     iget-object v1, p0, Lcom/fusepowered/a1/webapp/ApplifierImpactWebData$ApplifierImpactUrlLoaderCreator;->this$0:Lcom/fusepowered/a1/webapp/ApplifierImpactWebData;
 
-    #calls: Lcom/fusepowered/a1/webapp/ApplifierImpactWebData;->addLoader(Lcom/fusepowered/a1/webapp/ApplifierImpactWebData$ApplifierImpactUrlLoader;)V
+    # invokes: Lcom/fusepowered/a1/webapp/ApplifierImpactWebData;->addLoader(Lcom/fusepowered/a1/webapp/ApplifierImpactWebData$ApplifierImpactUrlLoader;)V
     invoke-static {v1, v0}, Lcom/fusepowered/a1/webapp/ApplifierImpactWebData;->access$0(Lcom/fusepowered/a1/webapp/ApplifierImpactWebData;Lcom/fusepowered/a1/webapp/ApplifierImpactWebData$ApplifierImpactUrlLoader;)V
 
     .line 600
     :cond_0
     iget-object v1, p0, Lcom/fusepowered/a1/webapp/ApplifierImpactWebData$ApplifierImpactUrlLoaderCreator;->this$0:Lcom/fusepowered/a1/webapp/ApplifierImpactWebData;
 
-    #calls: Lcom/fusepowered/a1/webapp/ApplifierImpactWebData;->startNextLoader()V
+    # invokes: Lcom/fusepowered/a1/webapp/ApplifierImpactWebData;->startNextLoader()V
     invoke-static {v1}, Lcom/fusepowered/a1/webapp/ApplifierImpactWebData;->access$1(Lcom/fusepowered/a1/webapp/ApplifierImpactWebData;)V
 
     .line 601

@@ -23,8 +23,6 @@
 # direct methods
 .method public constructor <init>(Lcom/vungle/sdk/VungleIntentService;Ljava/lang/String;)V
     .locals 6
-    .parameter
-    .parameter
 
     .prologue
     .line 119

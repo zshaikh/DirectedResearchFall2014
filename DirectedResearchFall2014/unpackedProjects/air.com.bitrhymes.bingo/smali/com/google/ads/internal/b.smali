@@ -10,8 +10,6 @@
 # direct methods
 .method public constructor <init>(Ljava/lang/String;Z)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 23
@@ -26,9 +24,6 @@
 
 .method public constructor <init>(Ljava/lang/String;ZLjava/lang/Throwable;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 36
@@ -45,7 +40,6 @@
 # virtual methods
 .method public a(Ljava/lang/String;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 42
@@ -66,7 +60,6 @@
 
 .method public b(Ljava/lang/String;)V
     .locals 3
-    .parameter
 
     .prologue
     .line 47
@@ -95,7 +88,6 @@
 
 .method public c(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
-    .parameter
 
     .prologue
     .line 56

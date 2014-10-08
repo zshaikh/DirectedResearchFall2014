@@ -26,8 +26,6 @@
 # direct methods
 .method constructor <init>(Lcom/flurry/org/codehaus/jackson/map/ObjectMapper;Lcom/flurry/org/codehaus/jackson/map/ObjectMapper;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 455
@@ -44,7 +42,7 @@
 # virtual methods
 .method public addAbstractTypeResolver(Lcom/flurry/org/codehaus/jackson/map/AbstractTypeResolver;)V
     .locals 2
-    .parameter "resolver"
+    .param p1, "resolver"    # Lcom/flurry/org/codehaus/jackson/map/AbstractTypeResolver;
 
     .prologue
     .line 529
@@ -66,7 +64,7 @@
 
 .method public addBeanDeserializerModifier(Lcom/flurry/org/codehaus/jackson/map/deser/BeanDeserializerModifier;)V
     .locals 2
-    .parameter "modifier"
+    .param p1, "modifier"    # Lcom/flurry/org/codehaus/jackson/map/deser/BeanDeserializerModifier;
 
     .prologue
     .line 522
@@ -88,7 +86,7 @@
 
 .method public addBeanSerializerModifier(Lcom/flurry/org/codehaus/jackson/map/ser/BeanSerializerModifier;)V
     .locals 2
-    .parameter "modifier"
+    .param p1, "modifier"    # Lcom/flurry/org/codehaus/jackson/map/ser/BeanSerializerModifier;
 
     .prologue
     .line 517
@@ -110,7 +108,7 @@
 
 .method public addDeserializers(Lcom/flurry/org/codehaus/jackson/map/Deserializers;)V
     .locals 2
-    .parameter "d"
+    .param p1, "d"    # Lcom/flurry/org/codehaus/jackson/map/Deserializers;
 
     .prologue
     .line 497
@@ -132,7 +130,7 @@
 
 .method public addKeyDeserializers(Lcom/flurry/org/codehaus/jackson/map/KeyDeserializers;)V
     .locals 2
-    .parameter "d"
+    .param p1, "d"    # Lcom/flurry/org/codehaus/jackson/map/KeyDeserializers;
 
     .prologue
     .line 502
@@ -154,7 +152,7 @@
 
 .method public addKeySerializers(Lcom/flurry/org/codehaus/jackson/map/Serializers;)V
     .locals 2
-    .parameter "s"
+    .param p1, "s"    # Lcom/flurry/org/codehaus/jackson/map/Serializers;
 
     .prologue
     .line 512
@@ -176,7 +174,7 @@
 
 .method public addSerializers(Lcom/flurry/org/codehaus/jackson/map/Serializers;)V
     .locals 2
-    .parameter "s"
+    .param p1, "s"    # Lcom/flurry/org/codehaus/jackson/map/Serializers;
 
     .prologue
     .line 507
@@ -198,7 +196,7 @@
 
 .method public addTypeModifier(Lcom/flurry/org/codehaus/jackson/map/type/TypeModifier;)V
     .locals 2
-    .parameter "modifier"
+    .param p1, "modifier"    # Lcom/flurry/org/codehaus/jackson/map/type/TypeModifier;
 
     .prologue
     .line 534
@@ -207,7 +205,7 @@
     iget-object v0, v1, Lcom/flurry/org/codehaus/jackson/map/ObjectMapper;->_typeFactory:Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;
 
     .line 535
-    .local v0, f:Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;
+    .local v0, "f":Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;
     invoke-virtual {v0, p1}, Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;->withModifier(Lcom/flurry/org/codehaus/jackson/map/type/TypeModifier;)Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;
 
     move-result-object v0
@@ -223,7 +221,7 @@
 
 .method public addValueInstantiators(Lcom/flurry/org/codehaus/jackson/map/deser/ValueInstantiators;)V
     .locals 2
-    .parameter "instantiators"
+    .param p1, "instantiators"    # Lcom/flurry/org/codehaus/jackson/map/deser/ValueInstantiators;
 
     .prologue
     .line 541
@@ -245,7 +243,7 @@
 
 .method public appendAnnotationIntrospector(Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;)V
     .locals 2
-    .parameter "ai"
+    .param p1, "ai"    # Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;
 
     .prologue
     .line 552
@@ -322,7 +320,7 @@
 
 .method public insertAnnotationIntrospector(Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;)V
     .locals 2
-    .parameter "ai"
+    .param p1, "ai"    # Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;
 
     .prologue
     .line 546
@@ -357,7 +355,7 @@
 
 .method public isEnabled(Lcom/flurry/org/codehaus/jackson/JsonGenerator$Feature;)Z
     .locals 1
-    .parameter "f"
+    .param p1, "f"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator$Feature;
 
     .prologue
     .line 490
@@ -372,7 +370,7 @@
 
 .method public isEnabled(Lcom/flurry/org/codehaus/jackson/JsonParser$Feature;)Z
     .locals 1
-    .parameter "f"
+    .param p1, "f"    # Lcom/flurry/org/codehaus/jackson/JsonParser$Feature;
 
     .prologue
     .line 485
@@ -387,7 +385,7 @@
 
 .method public isEnabled(Lcom/flurry/org/codehaus/jackson/map/DeserializationConfig$Feature;)Z
     .locals 1
-    .parameter "f"
+    .param p1, "f"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationConfig$Feature;
 
     .prologue
     .line 475
@@ -402,7 +400,7 @@
 
 .method public isEnabled(Lcom/flurry/org/codehaus/jackson/map/SerializationConfig$Feature;)Z
     .locals 1
-    .parameter "f"
+    .param p1, "f"    # Lcom/flurry/org/codehaus/jackson/map/SerializationConfig$Feature;
 
     .prologue
     .line 480
@@ -417,8 +415,6 @@
 
 .method public setMixInAnnotations(Ljava/lang/Class;Ljava/lang/Class;)V
     .locals 1
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -431,8 +427,8 @@
 
     .prologue
     .line 558
-    .local p1, target:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
-    .local p2, mixinSource:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p1, "target":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
+    .local p2, "mixinSource":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/map/ObjectMapper$1;->val$mapper:Lcom/flurry/org/codehaus/jackson/map/ObjectMapper;
 
     iget-object v0, v0, Lcom/flurry/org/codehaus/jackson/map/ObjectMapper;->_deserializationConfig:Lcom/flurry/org/codehaus/jackson/map/DeserializationConfig;

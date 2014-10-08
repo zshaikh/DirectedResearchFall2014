@@ -13,7 +13,7 @@
 # direct methods
 .method public constructor <init>(Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest$RewardDelegate;)V
     .locals 0
-    .parameter "delegate"
+    .param p1, "delegate"    # Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest$RewardDelegate;
 
     .prologue
     .line 16
@@ -30,8 +30,8 @@
 # virtual methods
 .method public onUnlockedReward(Lv2/com/playhaven/requests/content/PHContentRequest;Lv2/com/playhaven/model/PHReward;)V
     .locals 2
-    .parameter "request"
-    .parameter "reward"
+    .param p1, "request"    # Lv2/com/playhaven/requests/content/PHContentRequest;
+    .param p2, "reward"    # Lv2/com/playhaven/model/PHReward;
 
     .prologue
     .line 22
@@ -39,7 +39,7 @@
 
     check-cast p1, Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest;
 
-    .end local p1
+    .end local p1    # "request":Lv2/com/playhaven/requests/content/PHContentRequest;
     new-instance v1, Lcom/playhaven/src/publishersdk/content/PHReward;
 
     invoke-direct {v1, p2}, Lcom/playhaven/src/publishersdk/content/PHReward;-><init>(Lv2/com/playhaven/model/PHReward;)V

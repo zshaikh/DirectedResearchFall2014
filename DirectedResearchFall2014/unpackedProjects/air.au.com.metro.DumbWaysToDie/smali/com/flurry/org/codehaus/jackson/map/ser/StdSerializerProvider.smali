@@ -188,9 +188,9 @@
 
 .method protected constructor <init>(Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;Lcom/flurry/org/codehaus/jackson/map/ser/StdSerializerProvider;Lcom/flurry/org/codehaus/jackson/map/SerializerFactory;)V
     .locals 1
-    .parameter "config"
-    .parameter "src"
-    .parameter "f"
+    .param p1, "config"    # Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;
+    .param p2, "src"    # Lcom/flurry/org/codehaus/jackson/map/ser/StdSerializerProvider;
+    .param p3, "f"    # Lcom/flurry/org/codehaus/jackson/map/SerializerFactory;
 
     .prologue
     .line 170
@@ -272,8 +272,8 @@
 # virtual methods
 .method protected _createAndCacheUntypedSerializer(Lcom/flurry/org/codehaus/jackson/type/JavaType;Lcom/flurry/org/codehaus/jackson/map/BeanProperty;)Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;
     .locals 5
-    .parameter "type"
-    .parameter "property"
+    .param p1, "type"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .param p2, "property"    # Lcom/flurry/org/codehaus/jackson/map/BeanProperty;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -303,7 +303,7 @@
     move-result-object v1
 
     .line 766
-    .local v1, ser:Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
+    .local v1, "ser":Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
     if-eqz v1, :cond_0
 
     .line 767
@@ -316,12 +316,12 @@
     return-object v1
 
     .line 759
-    .end local v1           #ser:Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
+    .end local v1    # "ser":Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
     :catch_0
     move-exception v0
 
     .line 763
-    .local v0, iae:Ljava/lang/IllegalArgumentException;
+    .local v0, "iae":Ljava/lang/IllegalArgumentException;
     new-instance v2, Lcom/flurry/org/codehaus/jackson/map/JsonMappingException;
 
     invoke-virtual {v0}, Ljava/lang/IllegalArgumentException;->getMessage()Ljava/lang/String;
@@ -337,8 +337,7 @@
 
 .method protected _createAndCacheUntypedSerializer(Ljava/lang/Class;Lcom/flurry/org/codehaus/jackson/map/BeanProperty;)Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;
     .locals 5
-    .parameter
-    .parameter "property"
+    .param p2, "property"    # Lcom/flurry/org/codehaus/jackson/map/BeanProperty;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -361,7 +360,7 @@
 
     .prologue
     .line 735
-    .local p1, type:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p1, "type":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     :try_start_0
     iget-object v2, p0, Lcom/flurry/org/codehaus/jackson/map/ser/StdSerializerProvider;->_config:Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;
 
@@ -376,7 +375,7 @@
     move-result-object v1
 
     .line 743
-    .local v1, ser:Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
+    .local v1, "ser":Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
     if-eqz v1, :cond_0
 
     .line 744
@@ -389,14 +388,14 @@
     return-object v1
 
     .line 736
-    .end local v1           #ser:Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
+    .end local v1    # "ser":Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
     :catch_0
     move-exception v2
 
     move-object v0, v2
 
     .line 740
-    .local v0, iae:Ljava/lang/IllegalArgumentException;
+    .local v0, "iae":Ljava/lang/IllegalArgumentException;
     new-instance v2, Lcom/flurry/org/codehaus/jackson/map/JsonMappingException;
 
     invoke-virtual {v0}, Ljava/lang/IllegalArgumentException;->getMessage()Ljava/lang/String;
@@ -412,8 +411,8 @@
 
 .method protected _createUntypedSerializer(Lcom/flurry/org/codehaus/jackson/type/JavaType;Lcom/flurry/org/codehaus/jackson/map/BeanProperty;)Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;
     .locals 2
-    .parameter "type"
-    .parameter "property"
+    .param p1, "type"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .param p2, "property"    # Lcom/flurry/org/codehaus/jackson/map/BeanProperty;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -448,8 +447,7 @@
 
 .method protected _findExplicitUntypedSerializer(Ljava/lang/Class;Lcom/flurry/org/codehaus/jackson/map/BeanProperty;)Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;
     .locals 3
-    .parameter
-    .parameter "property"
+    .param p2, "property"    # Lcom/flurry/org/codehaus/jackson/map/BeanProperty;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -466,7 +464,7 @@
 
     .prologue
     .line 702
-    .local p1, runtimeType:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p1, "runtimeType":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     iget-object v2, p0, Lcom/flurry/org/codehaus/jackson/map/ser/StdSerializerProvider;->_knownSerializers:Lcom/flurry/org/codehaus/jackson/map/ser/impl/ReadOnlyClassToSerializerMap;
 
     invoke-virtual {v2, p1}, Lcom/flurry/org/codehaus/jackson/map/ser/impl/ReadOnlyClassToSerializerMap;->untypedValueSerializer(Ljava/lang/Class;)Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;
@@ -474,7 +472,7 @@
     move-result-object v1
 
     .line 703
-    .local v1, ser:Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
+    .local v1, "ser":Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
     if-eqz v1, :cond_0
 
     move-object v2, v1
@@ -515,7 +513,7 @@
     move-exception v0
 
     .line 714
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const/4 v2, 0x0
 
     goto :goto_0
@@ -523,8 +521,7 @@
 
 .method protected _handleContextualResolvable(Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;Lcom/flurry/org/codehaus/jackson/map/BeanProperty;)Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;
     .locals 5
-    .parameter
-    .parameter "property"
+    .param p2, "property"    # Lcom/flurry/org/codehaus/jackson/map/BeanProperty;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -549,7 +546,7 @@
 
     .prologue
     .line 793
-    .local p1, ser:Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
+    .local p1, "ser":Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
     instance-of v3, p1, Lcom/flurry/org/codehaus/jackson/map/ContextualSerializer;
 
     if-nez v3, :cond_0
@@ -557,14 +554,14 @@
     move-object v2, p1
 
     .line 804
-    .end local p1           #ser:Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
-    .local v2, ser:Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
+    .end local p1    # "ser":Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
+    .local v2, "ser":Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
     :goto_0
     return-object v2
 
     .line 796
-    .end local v2           #ser:Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
-    .restart local p1       #ser:Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
+    .end local v2    # "ser":Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
+    .restart local p1    # "ser":Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
     :cond_0
     move-object v0, p1
 
@@ -579,7 +576,7 @@
     move-result-object v1
 
     .line 797
-    .local v1, ctxtSer:Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
+    .local v1, "ctxtSer":Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
     if-eq v1, p1, :cond_2
 
     .line 799
@@ -604,15 +601,15 @@
     move-object v2, p1
 
     .line 804
-    .end local p1           #ser:Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
-    .restart local v2       #ser:Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
+    .end local p1    # "ser":Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
+    .restart local v2    # "ser":Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
     goto :goto_0
 .end method
 
 .method protected _reportIncompatibleRootType(Ljava/lang/Object;Lcom/flurry/org/codehaus/jackson/type/JavaType;)V
     .locals 4
-    .parameter "value"
-    .parameter "rootType"
+    .param p1, "value"    # Ljava/lang/Object;
+    .param p2, "rootType"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -638,7 +635,7 @@
     move-result-object v0
 
     .line 683
-    .local v0, wrapperType:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local v0, "wrapperType":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v1
@@ -653,7 +650,7 @@
     return-void
 
     .line 687
-    .end local v0           #wrapperType:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .end local v0    # "wrapperType":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     :cond_0
     new-instance v1, Lcom/flurry/org/codehaus/jackson/map/JsonMappingException;
 
@@ -700,8 +697,8 @@
 
 .method protected _serializeValue(Lcom/flurry/org/codehaus/jackson/JsonGenerator;Ljava/lang/Object;)V
     .locals 9
-    .parameter "jgen"
-    .parameter "value"
+    .param p1, "jgen"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator;
+    .param p2, "value"    # Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -719,11 +716,11 @@
     move-result-object v4
 
     .line 597
-    .local v4, ser:Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
+    .local v4, "ser":Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
     const/4 v5, 0x0
 
     .line 610
-    .local v5, wrap:Z
+    .local v5, "wrap":Z
     :cond_0
     :goto_0
     :try_start_0
@@ -743,15 +740,15 @@
     return-void
 
     .line 599
-    .end local v4           #ser:Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
-    .end local v5           #wrap:Z
+    .end local v4    # "ser":Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
+    .end local v5    # "wrap":Z
     :cond_2
     invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
 
     .line 601
-    .local v0, cls:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local v0, "cls":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const/4 v6, 0x1
 
     const/4 v7, 0x0
@@ -761,7 +758,7 @@
     move-result-object v4
 
     .line 603
-    .restart local v4       #ser:Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
+    .restart local v4    # "ser":Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
     iget-object v6, p0, Lcom/flurry/org/codehaus/jackson/map/ser/StdSerializerProvider;->_config:Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;
 
     sget-object v7, Lcom/flurry/org/codehaus/jackson/map/SerializationConfig$Feature;->WRAP_ROOT_VALUE:Lcom/flurry/org/codehaus/jackson/map/SerializationConfig$Feature;
@@ -771,7 +768,7 @@
     move-result v5
 
     .line 604
-    .restart local v5       #wrap:Z
+    .restart local v5    # "wrap":Z
     if-eqz v5, :cond_0
 
     .line 605
@@ -795,31 +792,31 @@
     goto :goto_0
 
     .line 614
-    .end local v0           #cls:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .end local v0    # "cls":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     :catch_0
     move-exception v6
 
     move-object v2, v6
 
     .line 618
-    .local v2, ioe:Ljava/io/IOException;
+    .local v2, "ioe":Ljava/io/IOException;
     throw v2
 
     .line 619
-    .end local v2           #ioe:Ljava/io/IOException;
+    .end local v2    # "ioe":Ljava/io/IOException;
     :catch_1
     move-exception v6
 
     move-object v1, v6
 
     .line 621
-    .local v1, e:Ljava/lang/Exception;
+    .local v1, "e":Ljava/lang/Exception;
     invoke-virtual {v1}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object v3
 
     .line 622
-    .local v3, msg:Ljava/lang/String;
+    .local v3, "msg":Ljava/lang/String;
     if-nez v3, :cond_3
 
     .line 623
@@ -866,9 +863,9 @@
 
 .method protected _serializeValue(Lcom/flurry/org/codehaus/jackson/JsonGenerator;Ljava/lang/Object;Lcom/flurry/org/codehaus/jackson/type/JavaType;)V
     .locals 7
-    .parameter "jgen"
-    .parameter "value"
-    .parameter "rootType"
+    .param p1, "jgen"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator;
+    .param p2, "value"    # Ljava/lang/Object;
+    .param p3, "rootType"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -886,11 +883,11 @@
     move-result-object v3
 
     .line 643
-    .local v3, ser:Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
+    .local v3, "ser":Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
     const/4 v4, 0x0
 
     .line 659
-    .local v4, wrap:Z
+    .local v4, "wrap":Z
     :cond_0
     :goto_0
     :try_start_0
@@ -910,8 +907,8 @@
     return-void
 
     .line 646
-    .end local v3           #ser:Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
-    .end local v4           #wrap:Z
+    .end local v3    # "ser":Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
+    .end local v4    # "wrap":Z
     :cond_2
     invoke-virtual {p3}, Lcom/flurry/org/codehaus/jackson/type/JavaType;->getRawClass()Ljava/lang/Class;
 
@@ -941,7 +938,7 @@
     move-result-object v3
 
     .line 652
-    .restart local v3       #ser:Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
+    .restart local v3    # "ser":Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
     iget-object v5, p0, Lcom/flurry/org/codehaus/jackson/map/ser/StdSerializerProvider;->_config:Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;
 
     sget-object v6, Lcom/flurry/org/codehaus/jackson/map/SerializationConfig$Feature;->WRAP_ROOT_VALUE:Lcom/flurry/org/codehaus/jackson/map/SerializationConfig$Feature;
@@ -951,7 +948,7 @@
     move-result v4
 
     .line 653
-    .restart local v4       #wrap:Z
+    .restart local v4    # "wrap":Z
     if-eqz v4, :cond_0
 
     .line 654
@@ -977,24 +974,24 @@
     move-object v1, v5
 
     .line 664
-    .local v1, ioe:Ljava/io/IOException;
+    .local v1, "ioe":Ljava/io/IOException;
     throw v1
 
     .line 665
-    .end local v1           #ioe:Ljava/io/IOException;
+    .end local v1    # "ioe":Ljava/io/IOException;
     :catch_1
     move-exception v5
 
     move-object v0, v5
 
     .line 666
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object v2
 
     .line 667
-    .local v2, msg:Ljava/lang/String;
+    .local v2, "msg":Ljava/lang/String;
     if-nez v2, :cond_4
 
     .line 668
@@ -1055,8 +1052,8 @@
 
 .method protected createInstance(Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;Lcom/flurry/org/codehaus/jackson/map/SerializerFactory;)Lcom/flurry/org/codehaus/jackson/map/ser/StdSerializerProvider;
     .locals 1
-    .parameter "config"
-    .parameter "jsf"
+    .param p1, "config"    # Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;
+    .param p2, "jsf"    # Lcom/flurry/org/codehaus/jackson/map/SerializerFactory;
 
     .prologue
     .line 195
@@ -1069,8 +1066,8 @@
 
 .method public defaultSerializeDateKey(JLcom/flurry/org/codehaus/jackson/JsonGenerator;)V
     .locals 3
-    .parameter "timestamp"
-    .parameter "jgen"
+    .param p1, "timestamp"    # J
+    .param p3, "jgen"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -1113,7 +1110,7 @@
     move-result-object v0
 
     .line 557
-    .local v0, blueprint:Ljava/text/DateFormat;
+    .local v0, "blueprint":Ljava/text/DateFormat;
     invoke-virtual {v0}, Ljava/text/DateFormat;->clone()Ljava/lang/Object;
 
     move-result-object v1
@@ -1123,7 +1120,7 @@
     iput-object v1, p0, Lcom/flurry/org/codehaus/jackson/map/ser/StdSerializerProvider;->_dateFormat:Ljava/text/DateFormat;
 
     .line 559
-    .end local v0           #blueprint:Ljava/text/DateFormat;
+    .end local v0    # "blueprint":Ljava/text/DateFormat;
     :cond_1
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/map/ser/StdSerializerProvider;->_dateFormat:Ljava/text/DateFormat;
 
@@ -1142,8 +1139,8 @@
 
 .method public defaultSerializeDateKey(Ljava/util/Date;Lcom/flurry/org/codehaus/jackson/JsonGenerator;)V
     .locals 3
-    .parameter "date"
-    .parameter "jgen"
+    .param p1, "date"    # Ljava/util/Date;
+    .param p2, "jgen"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -1190,7 +1187,7 @@
     move-result-object v0
 
     .line 573
-    .local v0, blueprint:Ljava/text/DateFormat;
+    .local v0, "blueprint":Ljava/text/DateFormat;
     invoke-virtual {v0}, Ljava/text/DateFormat;->clone()Ljava/lang/Object;
 
     move-result-object v1
@@ -1200,7 +1197,7 @@
     iput-object v1, p0, Lcom/flurry/org/codehaus/jackson/map/ser/StdSerializerProvider;->_dateFormat:Ljava/text/DateFormat;
 
     .line 575
-    .end local v0           #blueprint:Ljava/text/DateFormat;
+    .end local v0    # "blueprint":Ljava/text/DateFormat;
     :cond_1
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/map/ser/StdSerializerProvider;->_dateFormat:Ljava/text/DateFormat;
 
@@ -1215,8 +1212,8 @@
 
 .method public final defaultSerializeDateValue(JLcom/flurry/org/codehaus/jackson/JsonGenerator;)V
     .locals 2
-    .parameter "timestamp"
-    .parameter "jgen"
+    .param p1, "timestamp"    # J
+    .param p3, "jgen"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -1281,8 +1278,8 @@
 
 .method public final defaultSerializeDateValue(Ljava/util/Date;Lcom/flurry/org/codehaus/jackson/JsonGenerator;)V
     .locals 3
-    .parameter "date"
-    .parameter "jgen"
+    .param p1, "date"    # Ljava/util/Date;
+    .param p2, "jgen"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -1325,7 +1322,7 @@
     move-result-object v0
 
     .line 541
-    .local v0, blueprint:Ljava/text/DateFormat;
+    .local v0, "blueprint":Ljava/text/DateFormat;
     invoke-virtual {v0}, Ljava/text/DateFormat;->clone()Ljava/lang/Object;
 
     move-result-object v1
@@ -1335,7 +1332,7 @@
     iput-object v1, p0, Lcom/flurry/org/codehaus/jackson/map/ser/StdSerializerProvider;->_dateFormat:Ljava/text/DateFormat;
 
     .line 543
-    .end local v0           #blueprint:Ljava/text/DateFormat;
+    .end local v0    # "blueprint":Ljava/text/DateFormat;
     :cond_1
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/map/ser/StdSerializerProvider;->_dateFormat:Ljava/text/DateFormat;
 
@@ -1350,8 +1347,8 @@
 
 .method public findKeySerializer(Lcom/flurry/org/codehaus/jackson/type/JavaType;Lcom/flurry/org/codehaus/jackson/map/BeanProperty;)Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;
     .locals 5
-    .parameter "keyType"
-    .parameter "property"
+    .param p1, "keyType"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .param p2, "property"    # Lcom/flurry/org/codehaus/jackson/map/BeanProperty;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1382,7 +1379,7 @@
     move-result-object v2
 
     .line 475
-    .local v2, ser:Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
+    .local v2, "ser":Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
     if-nez v2, :cond_0
 
     .line 476
@@ -1410,7 +1407,7 @@
     move-object v1, v0
 
     .line 485
-    .local v1, contextual:Lcom/flurry/org/codehaus/jackson/map/ContextualSerializer;,"Lcom/flurry/org/codehaus/jackson/map/ContextualSerializer<*>;"
+    .local v1, "contextual":Lcom/flurry/org/codehaus/jackson/map/ContextualSerializer;, "Lcom/flurry/org/codehaus/jackson/map/ContextualSerializer<*>;"
     iget-object v3, p0, Lcom/flurry/org/codehaus/jackson/map/ser/StdSerializerProvider;->_config:Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;
 
     invoke-interface {v1, v3, p2}, Lcom/flurry/org/codehaus/jackson/map/ContextualSerializer;->createContextual(Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;Lcom/flurry/org/codehaus/jackson/map/BeanProperty;)Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;
@@ -1418,7 +1415,7 @@
     move-result-object v2
 
     .line 487
-    .end local v1           #contextual:Lcom/flurry/org/codehaus/jackson/map/ContextualSerializer;,"Lcom/flurry/org/codehaus/jackson/map/ContextualSerializer<*>;"
+    .end local v1    # "contextual":Lcom/flurry/org/codehaus/jackson/map/ContextualSerializer;, "Lcom/flurry/org/codehaus/jackson/map/ContextualSerializer<*>;"
     :cond_1
     return-object v2
 
@@ -1431,9 +1428,9 @@
 
 .method public findTypedValueSerializer(Lcom/flurry/org/codehaus/jackson/type/JavaType;ZLcom/flurry/org/codehaus/jackson/map/BeanProperty;)Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;
     .locals 5
-    .parameter "valueType"
-    .parameter "cache"
-    .parameter "property"
+    .param p1, "valueType"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .param p2, "cache"    # Z
+    .param p3, "property"    # Lcom/flurry/org/codehaus/jackson/map/BeanProperty;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1463,20 +1460,20 @@
     move-result-object v0
 
     .line 439
-    .local v0, ser:Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
+    .local v0, "ser":Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
     if-eqz v0, :cond_0
 
     move-object v1, v0
 
     .line 457
-    .end local v0           #ser:Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
-    .local v1, ser:Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
+    .end local v0    # "ser":Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
+    .local v1, "ser":Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
     :goto_0
     return-object v1
 
     .line 443
-    .end local v1           #ser:Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
-    .restart local v0       #ser:Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
+    .end local v1    # "ser":Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
+    .restart local v0    # "ser":Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
     :cond_0
     iget-object v3, p0, Lcom/flurry/org/codehaus/jackson/map/ser/StdSerializerProvider;->_serializerCache:Lcom/flurry/org/codehaus/jackson/map/ser/impl/SerializerCache;
 
@@ -1490,13 +1487,13 @@
     move-object v1, v0
 
     .line 445
-    .end local v0           #ser:Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
-    .restart local v1       #ser:Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
+    .end local v0    # "ser":Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
+    .restart local v1    # "ser":Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
     goto :goto_0
 
     .line 449
-    .end local v1           #ser:Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
-    .restart local v0       #ser:Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
+    .end local v1    # "ser":Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
+    .restart local v0    # "ser":Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
     :cond_1
     invoke-virtual {p0, p1, p3}, Lcom/flurry/org/codehaus/jackson/map/ser/StdSerializerProvider;->findValueSerializer(Lcom/flurry/org/codehaus/jackson/type/JavaType;Lcom/flurry/org/codehaus/jackson/map/BeanProperty;)Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;
 
@@ -1512,7 +1509,7 @@
     move-result-object v2
 
     .line 451
-    .local v2, typeSer:Lcom/flurry/org/codehaus/jackson/map/TypeSerializer;
+    .local v2, "typeSer":Lcom/flurry/org/codehaus/jackson/map/TypeSerializer;
     if-eqz v2, :cond_2
 
     .line 452
@@ -1520,13 +1517,13 @@
 
     invoke-direct {v1, v2, v0}, Lcom/flurry/org/codehaus/jackson/map/ser/StdSerializerProvider$WrappedSerializer;-><init>(Lcom/flurry/org/codehaus/jackson/map/TypeSerializer;Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;)V
 
-    .end local v0           #ser:Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
-    .restart local v1       #ser:Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
+    .end local v0    # "ser":Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
+    .restart local v1    # "ser":Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
     move-object v0, v1
 
     .line 454
-    .end local v1           #ser:Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
-    .restart local v0       #ser:Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
+    .end local v1    # "ser":Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
+    .restart local v0    # "ser":Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
     :cond_2
     if-eqz p2, :cond_3
 
@@ -1539,16 +1536,15 @@
     move-object v1, v0
 
     .line 457
-    .end local v0           #ser:Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
-    .restart local v1       #ser:Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
+    .end local v0    # "ser":Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
+    .restart local v1    # "ser":Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
     goto :goto_0
 .end method
 
 .method public findTypedValueSerializer(Ljava/lang/Class;ZLcom/flurry/org/codehaus/jackson/map/BeanProperty;)Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;
     .locals 6
-    .parameter
-    .parameter "cache"
-    .parameter "property"
+    .param p2, "cache"    # Z
+    .param p3, "property"    # Lcom/flurry/org/codehaus/jackson/map/BeanProperty;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1571,7 +1567,7 @@
 
     .prologue
     .line 409
-    .local p1, valueType:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p1, "valueType":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     iget-object v3, p0, Lcom/flurry/org/codehaus/jackson/map/ser/StdSerializerProvider;->_knownSerializers:Lcom/flurry/org/codehaus/jackson/map/ser/impl/ReadOnlyClassToSerializerMap;
 
     invoke-virtual {v3, p1}, Lcom/flurry/org/codehaus/jackson/map/ser/impl/ReadOnlyClassToSerializerMap;->typedValueSerializer(Ljava/lang/Class;)Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;
@@ -1579,20 +1575,20 @@
     move-result-object v0
 
     .line 410
-    .local v0, ser:Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
+    .local v0, "ser":Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
     if-eqz v0, :cond_0
 
     move-object v1, v0
 
     .line 429
-    .end local v0           #ser:Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
-    .local v1, ser:Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
+    .end local v0    # "ser":Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
+    .local v1, "ser":Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
     :goto_0
     return-object v1
 
     .line 414
-    .end local v1           #ser:Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
-    .restart local v0       #ser:Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
+    .end local v1    # "ser":Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
+    .restart local v0    # "ser":Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
     :cond_0
     iget-object v3, p0, Lcom/flurry/org/codehaus/jackson/map/ser/StdSerializerProvider;->_serializerCache:Lcom/flurry/org/codehaus/jackson/map/ser/impl/SerializerCache;
 
@@ -1606,13 +1602,13 @@
     move-object v1, v0
 
     .line 416
-    .end local v0           #ser:Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
-    .restart local v1       #ser:Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
+    .end local v0    # "ser":Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
+    .restart local v1    # "ser":Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
     goto :goto_0
 
     .line 420
-    .end local v1           #ser:Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
-    .restart local v0       #ser:Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
+    .end local v1    # "ser":Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
+    .restart local v0    # "ser":Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
     :cond_1
     invoke-virtual {p0, p1, p3}, Lcom/flurry/org/codehaus/jackson/map/ser/StdSerializerProvider;->findValueSerializer(Ljava/lang/Class;Lcom/flurry/org/codehaus/jackson/map/BeanProperty;)Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;
 
@@ -1634,7 +1630,7 @@
     move-result-object v2
 
     .line 423
-    .local v2, typeSer:Lcom/flurry/org/codehaus/jackson/map/TypeSerializer;
+    .local v2, "typeSer":Lcom/flurry/org/codehaus/jackson/map/TypeSerializer;
     if-eqz v2, :cond_2
 
     .line 424
@@ -1642,13 +1638,13 @@
 
     invoke-direct {v1, v2, v0}, Lcom/flurry/org/codehaus/jackson/map/ser/StdSerializerProvider$WrappedSerializer;-><init>(Lcom/flurry/org/codehaus/jackson/map/TypeSerializer;Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;)V
 
-    .end local v0           #ser:Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
-    .restart local v1       #ser:Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
+    .end local v0    # "ser":Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
+    .restart local v1    # "ser":Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
     move-object v0, v1
 
     .line 426
-    .end local v1           #ser:Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
-    .restart local v0       #ser:Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
+    .end local v1    # "ser":Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
+    .restart local v0    # "ser":Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
     :cond_2
     if-eqz p2, :cond_3
 
@@ -1661,15 +1657,15 @@
     move-object v1, v0
 
     .line 429
-    .end local v0           #ser:Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
-    .restart local v1       #ser:Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
+    .end local v0    # "ser":Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
+    .restart local v1    # "ser":Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
     goto :goto_0
 .end method
 
 .method public findValueSerializer(Lcom/flurry/org/codehaus/jackson/type/JavaType;Lcom/flurry/org/codehaus/jackson/map/BeanProperty;)Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;
     .locals 2
-    .parameter "valueType"
-    .parameter "property"
+    .param p1, "valueType"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .param p2, "property"    # Lcom/flurry/org/codehaus/jackson/map/BeanProperty;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1698,7 +1694,7 @@
     move-result-object v0
 
     .line 375
-    .local v0, ser:Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
+    .local v0, "ser":Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
     if-nez v0, :cond_0
 
     .line 377
@@ -1744,8 +1740,7 @@
 
 .method public findValueSerializer(Ljava/lang/Class;Lcom/flurry/org/codehaus/jackson/map/BeanProperty;)Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;
     .locals 3
-    .parameter
-    .parameter "property"
+    .param p2, "property"    # Lcom/flurry/org/codehaus/jackson/map/BeanProperty;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1768,7 +1763,7 @@
 
     .prologue
     .line 335
-    .local p1, valueType:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p1, "valueType":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/map/ser/StdSerializerProvider;->_knownSerializers:Lcom/flurry/org/codehaus/jackson/map/ser/impl/ReadOnlyClassToSerializerMap;
 
     invoke-virtual {v1, p1}, Lcom/flurry/org/codehaus/jackson/map/ser/impl/ReadOnlyClassToSerializerMap;->untypedValueSerializer(Ljava/lang/Class;)Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;
@@ -1776,7 +1771,7 @@
     move-result-object v0
 
     .line 336
-    .local v0, ser:Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
+    .local v0, "ser":Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
     if-nez v0, :cond_0
 
     .line 338
@@ -1847,9 +1842,8 @@
 
 .method public generateJsonSchema(Ljava/lang/Class;Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;Lcom/flurry/org/codehaus/jackson/map/SerializerFactory;)Lcom/flurry/org/codehaus/jackson/schema/JsonSchema;
     .locals 6
-    .parameter
-    .parameter "config"
-    .parameter "jsf"
+    .param p2, "config"    # Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;
+    .param p3, "jsf"    # Lcom/flurry/org/codehaus/jackson/map/SerializerFactory;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1869,7 +1863,7 @@
     .end annotation
 
     .prologue
-    .local p1, type:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p1, "type":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const/4 v5, 0x0
 
     .line 278
@@ -1891,7 +1885,7 @@
     move-result-object v0
 
     .line 288
-    .local v0, inst:Lcom/flurry/org/codehaus/jackson/map/ser/StdSerializerProvider;
+    .local v0, "inst":Lcom/flurry/org/codehaus/jackson/map/ser/StdSerializerProvider;
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v3
@@ -1952,14 +1946,14 @@
     move-result-object v2
 
     .line 295
-    .local v2, ser:Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
+    .local v2, "ser":Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
     instance-of v3, v2, Lcom/flurry/org/codehaus/jackson/schema/SchemaAware;
 
     if-eqz v3, :cond_2
 
     check-cast v2, Lcom/flurry/org/codehaus/jackson/schema/SchemaAware;
 
-    .end local v2           #ser:Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
+    .end local v2    # "ser":Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
     invoke-interface {v2, v0, v5}, Lcom/flurry/org/codehaus/jackson/schema/SchemaAware;->getSchema(Lcom/flurry/org/codehaus/jackson/map/SerializerProvider;Ljava/lang/reflect/Type;)Lcom/flurry/org/codehaus/jackson/JsonNode;
 
     move-result-object v3
@@ -1967,7 +1961,7 @@
     move-object v1, v3
 
     .line 298
-    .local v1, schemaNode:Lcom/flurry/org/codehaus/jackson/JsonNode;
+    .local v1, "schemaNode":Lcom/flurry/org/codehaus/jackson/JsonNode;
     :goto_0
     instance-of v3, v1, Lcom/flurry/org/codehaus/jackson/node/ObjectNode;
 
@@ -2009,8 +2003,8 @@
     throw v3
 
     .line 295
-    .end local v1           #schemaNode:Lcom/flurry/org/codehaus/jackson/JsonNode;
-    .restart local v2       #ser:Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
+    .end local v1    # "schemaNode":Lcom/flurry/org/codehaus/jackson/JsonNode;
+    .restart local v2    # "ser":Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
     :cond_2
     invoke-static {}, Lcom/flurry/org/codehaus/jackson/schema/JsonSchema;->getDefaultSchemaNode()Lcom/flurry/org/codehaus/jackson/JsonNode;
 
@@ -2021,14 +2015,14 @@
     goto :goto_0
 
     .line 303
-    .end local v2           #ser:Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
-    .restart local v1       #schemaNode:Lcom/flurry/org/codehaus/jackson/JsonNode;
+    .end local v2    # "ser":Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
+    .restart local v1    # "schemaNode":Lcom/flurry/org/codehaus/jackson/JsonNode;
     :cond_3
     new-instance v3, Lcom/flurry/org/codehaus/jackson/schema/JsonSchema;
 
     check-cast v1, Lcom/flurry/org/codehaus/jackson/node/ObjectNode;
 
-    .end local v1           #schemaNode:Lcom/flurry/org/codehaus/jackson/JsonNode;
+    .end local v1    # "schemaNode":Lcom/flurry/org/codehaus/jackson/JsonNode;
     invoke-direct {v3, v1}, Lcom/flurry/org/codehaus/jackson/schema/JsonSchema;-><init>(Lcom/flurry/org/codehaus/jackson/node/ObjectNode;)V
 
     return-object v3
@@ -2074,7 +2068,6 @@
 
 .method public getUnknownTypeSerializer(Ljava/lang/Class;)Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -2089,7 +2082,7 @@
 
     .prologue
     .line 502
-    .local p1, unknownType:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p1, "unknownType":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/map/ser/StdSerializerProvider;->_unknownTypeSerializer:Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;
 
     return-object v0
@@ -2097,9 +2090,8 @@
 
 .method public hasSerializerFor(Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;Ljava/lang/Class;Lcom/flurry/org/codehaus/jackson/map/SerializerFactory;)Z
     .locals 2
-    .parameter "config"
-    .parameter
-    .parameter "jsf"
+    .param p1, "config"    # Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;
+    .param p3, "jsf"    # Lcom/flurry/org/codehaus/jackson/map/SerializerFactory;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -2113,7 +2105,7 @@
 
     .prologue
     .line 310
-    .local p2, cls:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p2, "cls":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-virtual {p0, p1, p3}, Lcom/flurry/org/codehaus/jackson/map/ser/StdSerializerProvider;->createInstance(Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;Lcom/flurry/org/codehaus/jackson/map/SerializerFactory;)Lcom/flurry/org/codehaus/jackson/map/ser/StdSerializerProvider;
 
     move-result-object v0
@@ -2139,10 +2131,10 @@
 
 .method public final serializeValue(Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;Lcom/flurry/org/codehaus/jackson/JsonGenerator;Ljava/lang/Object;Lcom/flurry/org/codehaus/jackson/map/SerializerFactory;)V
     .locals 4
-    .parameter "config"
-    .parameter "jgen"
-    .parameter "value"
-    .parameter "jsf"
+    .param p1, "config"    # Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;
+    .param p2, "jgen"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator;
+    .param p3, "value"    # Ljava/lang/Object;
+    .param p4, "jsf"    # Lcom/flurry/org/codehaus/jackson/map/SerializerFactory;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -2170,7 +2162,7 @@
     move-result-object v0
 
     .line 252
-    .local v0, inst:Lcom/flurry/org/codehaus/jackson/map/ser/StdSerializerProvider;
+    .local v0, "inst":Lcom/flurry/org/codehaus/jackson/map/ser/StdSerializerProvider;
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v1
@@ -2234,11 +2226,11 @@
 
 .method public final serializeValue(Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;Lcom/flurry/org/codehaus/jackson/JsonGenerator;Ljava/lang/Object;Lcom/flurry/org/codehaus/jackson/type/JavaType;Lcom/flurry/org/codehaus/jackson/map/SerializerFactory;)V
     .locals 4
-    .parameter "config"
-    .parameter "jgen"
-    .parameter "value"
-    .parameter "rootType"
-    .parameter "jsf"
+    .param p1, "config"    # Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;
+    .param p2, "jgen"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator;
+    .param p3, "value"    # Ljava/lang/Object;
+    .param p4, "rootType"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .param p5, "jsf"    # Lcom/flurry/org/codehaus/jackson/map/SerializerFactory;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -2266,7 +2258,7 @@
     move-result-object v0
 
     .line 268
-    .local v0, inst:Lcom/flurry/org/codehaus/jackson/map/ser/StdSerializerProvider;
+    .local v0, "inst":Lcom/flurry/org/codehaus/jackson/map/ser/StdSerializerProvider;
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v1
@@ -2330,7 +2322,6 @@
 
 .method public setDefaultKeySerializer(Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;)V
     .locals 2
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -2343,7 +2334,7 @@
 
     .prologue
     .line 207
-    .local p1, ks:Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
+    .local p1, "ks":Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
     if-nez p1, :cond_0
 
     .line 208
@@ -2365,7 +2356,6 @@
 
 .method public setNullKeySerializer(Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;)V
     .locals 2
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -2378,7 +2368,7 @@
 
     .prologue
     .line 225
-    .local p1, nks:Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
+    .local p1, "nks":Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
     if-nez p1, :cond_0
 
     .line 226
@@ -2400,7 +2390,6 @@
 
 .method public setNullValueSerializer(Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;)V
     .locals 2
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -2413,7 +2402,7 @@
 
     .prologue
     .line 216
-    .local p1, nvs:Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
+    .local p1, "nvs":Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
     if-nez p1, :cond_0
 
     .line 217

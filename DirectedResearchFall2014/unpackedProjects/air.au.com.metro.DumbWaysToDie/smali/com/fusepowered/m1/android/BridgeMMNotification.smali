@@ -24,7 +24,7 @@
 
 .method static synthetic access$000(Lcom/fusepowered/m1/android/BridgeMMNotification;)I
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/fusepowered/m1/android/BridgeMMNotification;
 
     .prologue
     .line 14
@@ -37,7 +37,6 @@
 # virtual methods
 .method public declared-synchronized alert(Ljava/util/HashMap;)Lcom/fusepowered/m1/android/MMJSResponse;
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -52,7 +51,7 @@
 
     .prologue
     .line 44
-    .local p1, arguments:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p1, "arguments":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     monitor-enter p0
 
     :try_start_0
@@ -80,8 +79,8 @@
 
 .method public declared-synchronized onClick(Landroid/content/DialogInterface;I)V
     .locals 1
-    .parameter "dialog"
-    .parameter "which"
+    .param p1, "dialog"    # Landroid/content/DialogInterface;
+    .param p2, "which"    # I
 
     .prologue
     .line 27
@@ -144,7 +143,6 @@
 
 .method public vibrate(Ljava/util/HashMap;)Lcom/fusepowered/m1/android/MMJSResponse;
     .locals 8
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -158,7 +156,7 @@
     .end annotation
 
     .prologue
-    .local p1, arguments:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p1, "arguments":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v5, "duration"
 
     .line 94
@@ -171,11 +169,11 @@
     check-cast v0, Landroid/content/Context;
 
     .line 95
-    .local v0, context:Landroid/content/Context;
+    .local v0, "context":Landroid/content/Context;
     const-wide/16 v1, 0x0
 
     .line 97
-    .local v1, time:J
+    .local v1, "time":J
     const-string v4, "duration"
 
     invoke-virtual {p1, v5}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
@@ -191,7 +189,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/fusepowered/m1/android/BridgeMMNotification;
     check-cast p0, Ljava/lang/String;
 
     invoke-static {p0}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
@@ -243,7 +241,7 @@
     check-cast v3, Landroid/os/Vibrator;
 
     .line 105
-    .local v3, vibrator:Landroid/os/Vibrator;
+    .local v3, "vibrator":Landroid/os/Vibrator;
     invoke-virtual {v3, v1, v2}, Landroid/os/Vibrator;->vibrate(J)V
 
     .line 106
@@ -270,7 +268,7 @@
     move-result-object v4
 
     .line 113
-    .end local v3           #vibrator:Landroid/os/Vibrator;
+    .end local v3    # "vibrator":Landroid/os/Vibrator;
     :goto_0
     return-object v4
 

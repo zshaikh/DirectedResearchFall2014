@@ -34,8 +34,6 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m1/google/gson/internal/ConstructorConstructor;Ljava/lang/reflect/Constructor;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 101
@@ -67,7 +65,7 @@
     const/4 v0, 0x0
 
     .line 107
-    .local v0, args:[Ljava/lang/Object;
+    .local v0, "args":[Ljava/lang/Object;
     :try_start_0
     iget-object v2, p0, Lcom/fusepowered/m1/google/gson/internal/ConstructorConstructor$3;->val$constructor:Ljava/lang/reflect/Constructor;
 
@@ -88,7 +86,7 @@
     move-object v1, v2
 
     .line 109
-    .local v1, e:Ljava/lang/InstantiationException;
+    .local v1, "e":Ljava/lang/InstantiationException;
     new-instance v2, Ljava/lang/RuntimeException;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -122,14 +120,14 @@
     throw v2
 
     .line 110
-    .end local v1           #e:Ljava/lang/InstantiationException;
+    .end local v1    # "e":Ljava/lang/InstantiationException;
     :catch_1
     move-exception v2
 
     move-object v1, v2
 
     .line 111
-    .local v1, e:Ljava/lang/reflect/InvocationTargetException;
+    .local v1, "e":Ljava/lang/reflect/InvocationTargetException;
     new-instance v2, Ljava/lang/RuntimeException;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -167,14 +165,14 @@
     throw v2
 
     .line 113
-    .end local v1           #e:Ljava/lang/reflect/InvocationTargetException;
+    .end local v1    # "e":Ljava/lang/reflect/InvocationTargetException;
     :catch_2
     move-exception v2
 
     move-object v1, v2
 
     .line 114
-    .local v1, e:Ljava/lang/IllegalAccessException;
+    .local v1, "e":Ljava/lang/IllegalAccessException;
     new-instance v2, Ljava/lang/AssertionError;
 
     invoke-direct {v2, v1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V

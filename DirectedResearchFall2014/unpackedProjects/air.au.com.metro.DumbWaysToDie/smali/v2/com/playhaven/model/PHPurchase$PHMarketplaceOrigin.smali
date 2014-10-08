@@ -143,9 +143,7 @@
 
 .method private constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter "originStr"
+    .param p3, "originStr"    # Ljava/lang/String;
 
     .prologue
     .line 49
@@ -160,7 +158,6 @@
 
 .method public static valueOf(Ljava/lang/String;)Lv2/com/playhaven/model/PHPurchase$PHMarketplaceOrigin;
     .locals 1
-    .parameter
 
     .prologue
     .line 1

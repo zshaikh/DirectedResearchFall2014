@@ -126,8 +126,6 @@
 
 .method public static debug(Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     .line 31
@@ -155,9 +153,6 @@
 
 .method public static debug(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 2
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 39
@@ -211,8 +206,6 @@
 
 .method public static internal(Ljava/lang/String;Ljava/lang/String;)V
     .locals 3
-    .parameter
-    .parameter
 
     .prologue
     .line 53
@@ -294,9 +287,6 @@
 
 .method public static internal(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 3
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 63
@@ -378,7 +368,6 @@
 
 .method public static setInternalLogLevel(Lcom/inmobi/commons/internal/IMLog$INTERNAL_LOG_LEVEL;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 26

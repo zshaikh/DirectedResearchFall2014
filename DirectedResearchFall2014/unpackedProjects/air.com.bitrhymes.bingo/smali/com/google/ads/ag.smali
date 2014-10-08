@@ -538,8 +538,6 @@
 # virtual methods
 .method a([B[B)V
     .locals 4
-    .parameter
-    .parameter
 
     .prologue
     .line 11434

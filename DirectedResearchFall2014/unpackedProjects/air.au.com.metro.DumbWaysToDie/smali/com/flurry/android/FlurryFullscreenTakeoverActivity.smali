@@ -72,7 +72,6 @@
 
 .method static synthetic a(Lcom/flurry/android/FlurryFullscreenTakeoverActivity;)Landroid/widget/VideoView;
     .locals 1
-    .parameter
 
     .prologue
     .line 31
@@ -83,8 +82,6 @@
 
 .method static synthetic a(Lcom/flurry/android/FlurryFullscreenTakeoverActivity;Landroid/widget/VideoView;)Landroid/widget/VideoView;
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 31
@@ -95,8 +92,6 @@
 
 .method static synthetic a(Lcom/flurry/android/FlurryFullscreenTakeoverActivity;Ljava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 31
@@ -107,8 +102,6 @@
 
 .method static synthetic a(Lcom/flurry/android/FlurryFullscreenTakeoverActivity;Z)Z
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 31
@@ -119,7 +112,6 @@
 
 .method private static a(Ljava/lang/String;)Z
     .locals 3
-    .parameter
 
     .prologue
     const/4 v2, 0x0
@@ -176,7 +168,6 @@
 
 .method private b(Ljava/lang/String;)V
     .locals 5
-    .parameter
 
     .prologue
     const/4 v4, -0x1
@@ -303,7 +294,6 @@
 
 .method static synthetic c(Ljava/lang/String;)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 31
@@ -408,7 +398,6 @@
 # virtual methods
 .method public final onCompletion(Landroid/media/MediaPlayer;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 289
@@ -417,7 +406,6 @@
 
 .method public final onConfigurationChanged(Landroid/content/res/Configuration;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 160
@@ -429,7 +417,6 @@
 
 .method public final onCreate(Landroid/os/Bundle;)V
     .locals 7
-    .parameter
 
     .prologue
     const/4 v6, 0x0
@@ -785,9 +772,6 @@
 
 .method public final onError(Landroid/media/MediaPlayer;II)Z
     .locals 2
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 264
@@ -851,8 +835,6 @@
 
 .method public final onKeyUp(ILandroid/view/KeyEvent;)Z
     .locals 8
-    .parameter
-    .parameter
 
     .prologue
     const/4 v7, 0x1
@@ -1016,7 +998,6 @@
 
 .method public final onPrepared(Landroid/media/MediaPlayer;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 295
@@ -1099,7 +1080,6 @@
 
 .method public final onSaveInstanceState(Landroid/os/Bundle;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 150
@@ -1172,7 +1152,6 @@
 
 .method public final onWindowFocusChanged(Z)V
     .locals 2
-    .parameter
 
     .prologue
     .line 215

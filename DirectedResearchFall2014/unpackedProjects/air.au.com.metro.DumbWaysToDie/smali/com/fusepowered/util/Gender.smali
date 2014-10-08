@@ -90,9 +90,7 @@
 
 .method private constructor <init>(Ljava/lang/String;II)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter "genderCode"
+    .param p3, "genderCode"    # I
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I)V"
@@ -112,7 +110,7 @@
 
 .method public static getGenderByCode(I)Lcom/fusepowered/util/Gender;
     .locals 1
-    .parameter "genderCode"
+    .param p0, "genderCode"    # I
 
     .prologue
     .line 23
@@ -155,7 +153,7 @@
 
 .method public static valueOf(Ljava/lang/String;)Lcom/fusepowered/util/Gender;
     .locals 1
-    .parameter "name"
+    .param p0, "name"    # Ljava/lang/String;
 
     .prologue
     .line 3
@@ -165,7 +163,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "name":Ljava/lang/String;
     check-cast p0, Lcom/fusepowered/util/Gender;
 
     return-object p0
@@ -201,7 +199,7 @@
 
 .method public setGenderCode(I)V
     .locals 0
-    .parameter "genderCode"
+    .param p1, "genderCode"    # I
 
     .prologue
     .line 19

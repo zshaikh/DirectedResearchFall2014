@@ -39,8 +39,6 @@
 
 .method private static a(Ljava/lang/String;Ljava/util/Map;)Ljava/lang/String;
     .locals 7
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -160,7 +158,6 @@
 
 .method private static a(Lcom/vungle/sdk/ah;)V
     .locals 5
-    .parameter
 
     .prologue
     .line 76
@@ -199,8 +196,6 @@
 
 .method public static varargs a(Ljava/util/Map;[Ljava/lang/String;)V
     .locals 4
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -257,7 +252,6 @@
 # virtual methods
 .method public final a(Ljava/lang/String;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 64

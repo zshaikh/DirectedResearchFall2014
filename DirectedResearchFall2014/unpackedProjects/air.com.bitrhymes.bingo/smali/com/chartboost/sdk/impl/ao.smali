@@ -33,8 +33,6 @@
 
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/Object;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 58
@@ -51,7 +49,6 @@
 # virtual methods
 .method public a(Ljava/lang/String;)Ljava/lang/Object;
     .locals 1
-    .parameter
 
     .prologue
     .line 108
@@ -64,8 +61,6 @@
 
 .method public a(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 281
@@ -78,7 +73,6 @@
 
 .method public b(Ljava/lang/String;)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 92
@@ -91,7 +85,7 @@
 
 .method public equals(Ljava/lang/Object;)Z
     .locals 8
-    .parameter "o"
+    .param p1, "o"    # Ljava/lang/Object;
 
     .prologue
     const/4 v7, 0x0
@@ -104,17 +98,17 @@
     move v1, v7
 
     .line 351
-    .end local p1
+    .end local p1    # "o":Ljava/lang/Object;
     :goto_0
     return v1
 
     .line 319
-    .restart local p1
+    .restart local p1    # "o":Ljava/lang/Object;
     :cond_0
     check-cast p1, Lcom/chartboost/sdk/impl/al;
 
     .line 320
-    .end local p1
+    .end local p1    # "o":Ljava/lang/Object;
     invoke-virtual {p0}, Lcom/chartboost/sdk/impl/ao;->keySet()Ljava/util/Set;
 
     move-result-object v1
@@ -302,8 +296,6 @@
 
 .method public synthetic put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 1
@@ -320,7 +312,7 @@
 
 .method public putAll(Ljava/util/Map;)V
     .locals 3
-    .parameter "m"
+    .param p1, "m"    # Ljava/util/Map;
 
     .prologue
     .line 286

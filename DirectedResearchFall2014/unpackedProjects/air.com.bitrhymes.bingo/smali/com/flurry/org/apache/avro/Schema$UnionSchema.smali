@@ -42,7 +42,6 @@
 # direct methods
 .method public constructor <init>(Lcom/flurry/org/apache/avro/Schema$LockableArrayList;)V
     .locals 8
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -55,7 +54,7 @@
 
     .prologue
     .line 814
-    .local p1, types:Lcom/flurry/org/apache/avro/Schema$LockableArrayList;,"Lcom/flurry/org/apache/avro/Schema$LockableArrayList<Lcom/flurry/org/apache/avro/Schema;>;"
+    .local p1, "types":Lcom/flurry/org/apache/avro/Schema$LockableArrayList;, "Lcom/flurry/org/apache/avro/Schema$LockableArrayList<Lcom/flurry/org/apache/avro/Schema;>;"
     sget-object v5, Lcom/flurry/org/apache/avro/Schema$Type;->UNION:Lcom/flurry/org/apache/avro/Schema$Type;
 
     invoke-direct {p0, v5}, Lcom/flurry/org/apache/avro/Schema;-><init>(Lcom/flurry/org/apache/avro/Schema$Type;)V
@@ -78,12 +77,12 @@
     const/4 v1, 0x0
 
     .line 817
-    .local v1, index:I
+    .local v1, "index":I
     invoke-virtual {p1}, Lcom/flurry/org/apache/avro/Schema$LockableArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
-    .local v0, i$:Ljava/util/Iterator;
+    .local v0, "i$":Ljava/util/Iterator;
     :goto_0
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
@@ -98,7 +97,7 @@
     check-cast v4, Lcom/flurry/org/apache/avro/Schema;
 
     .line 818
-    .local v4, type:Lcom/flurry/org/apache/avro/Schema;
+    .local v4, "type":Lcom/flurry/org/apache/avro/Schema;
     invoke-virtual {v4}, Lcom/flurry/org/apache/avro/Schema;->getType()Lcom/flurry/org/apache/avro/Schema$Type;
 
     move-result-object v5
@@ -139,7 +138,7 @@
     move-result-object v3
 
     .line 821
-    .local v3, name:Ljava/lang/String;
+    .local v3, "name":Ljava/lang/String;
     if-nez v3, :cond_1
 
     .line 822
@@ -173,8 +172,8 @@
 
     add-int/lit8 v2, v1, 0x1
 
-    .end local v1           #index:I
-    .local v2, index:I
+    .end local v1    # "index":I
+    .local v2, "index":I
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v6
@@ -214,13 +213,13 @@
     move v1, v2
 
     .line 825
-    .end local v2           #index:I
-    .restart local v1       #index:I
+    .end local v2    # "index":I
+    .restart local v1    # "index":I
     goto :goto_0
 
     .line 826
-    .end local v3           #name:Ljava/lang/String;
-    .end local v4           #type:Lcom/flurry/org/apache/avro/Schema;
+    .end local v3    # "name":Ljava/lang/String;
+    .end local v4    # "type":Lcom/flurry/org/apache/avro/Schema;
     :cond_3
     return-void
 .end method
@@ -229,8 +228,8 @@
 # virtual methods
 .method public addProp(Ljava/lang/String;Ljava/lang/String;)V
     .locals 3
-    .parameter "name"
-    .parameter "value"
+    .param p1, "name"    # Ljava/lang/String;
+    .param p2, "value"    # Ljava/lang/String;
 
     .prologue
     .line 846
@@ -269,14 +268,14 @@
     move-result v0
 
     .line 839
-    .local v0, hash:I
+    .local v0, "hash":I
     iget-object v3, p0, Lcom/flurry/org/apache/avro/Schema$UnionSchema;->types:Ljava/util/List;
 
     invoke-interface {v3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
 
-    .local v1, i$:Ljava/util/Iterator;
+    .local v1, "i$":Ljava/util/Iterator;
     :goto_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
@@ -291,7 +290,7 @@
     check-cast v2, Lcom/flurry/org/apache/avro/Schema;
 
     .line 840
-    .local v2, type:Lcom/flurry/org/apache/avro/Schema;
+    .local v2, "type":Lcom/flurry/org/apache/avro/Schema;
     invoke-virtual {v2}, Lcom/flurry/org/apache/avro/Schema;->computeHash()I
 
     move-result v3
@@ -301,14 +300,14 @@
     goto :goto_0
 
     .line 841
-    .end local v2           #type:Lcom/flurry/org/apache/avro/Schema;
+    .end local v2    # "type":Lcom/flurry/org/apache/avro/Schema;
     :cond_0
     return v0
 .end method
 
 .method public equals(Ljava/lang/Object;)Z
     .locals 6
-    .parameter "o"
+    .param p1, "o"    # Ljava/lang/Object;
 
     .prologue
     const/4 v5, 0x1
@@ -343,7 +342,7 @@
     move-object v1, v0
 
     .line 833
-    .local v1, that:Lcom/flurry/org/apache/avro/Schema$UnionSchema;
+    .local v1, "that":Lcom/flurry/org/apache/avro/Schema$UnionSchema;
     invoke-virtual {p0, v1}, Lcom/flurry/org/apache/avro/Schema$UnionSchema;->equalCachedHash(Lcom/flurry/org/apache/avro/Schema;)Z
 
     move-result v2
@@ -382,7 +381,7 @@
 
 .method public getIndexNamed(Ljava/lang/String;)Ljava/lang/Integer;
     .locals 1
-    .parameter "name"
+    .param p1, "name"    # Ljava/lang/String;
 
     .prologue
     .line 828
@@ -392,7 +391,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/flurry/org/apache/avro/Schema$UnionSchema;
     check-cast p0, Ljava/lang/Integer;
 
     return-object p0
@@ -419,8 +418,8 @@
 
 .method toJson(Lcom/flurry/org/apache/avro/Schema$Names;Lcom/flurry/org/codehaus/jackson/JsonGenerator;)V
     .locals 3
-    .parameter "names"
-    .parameter "gen"
+    .param p1, "names"    # Lcom/flurry/org/apache/avro/Schema$Names;
+    .param p2, "gen"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -438,7 +437,7 @@
 
     move-result-object v0
 
-    .local v0, i$:Ljava/util/Iterator;
+    .local v0, "i$":Ljava/util/Iterator;
     :goto_0
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
@@ -453,13 +452,13 @@
     check-cast v1, Lcom/flurry/org/apache/avro/Schema;
 
     .line 852
-    .local v1, type:Lcom/flurry/org/apache/avro/Schema;
+    .local v1, "type":Lcom/flurry/org/apache/avro/Schema;
     invoke-virtual {v1, p1, p2}, Lcom/flurry/org/apache/avro/Schema;->toJson(Lcom/flurry/org/apache/avro/Schema$Names;Lcom/flurry/org/codehaus/jackson/JsonGenerator;)V
 
     goto :goto_0
 
     .line 853
-    .end local v1           #type:Lcom/flurry/org/apache/avro/Schema;
+    .end local v1    # "type":Lcom/flurry/org/apache/avro/Schema;
     :cond_0
     invoke-virtual {p2}, Lcom/flurry/org/codehaus/jackson/JsonGenerator;->writeEndArray()V
 

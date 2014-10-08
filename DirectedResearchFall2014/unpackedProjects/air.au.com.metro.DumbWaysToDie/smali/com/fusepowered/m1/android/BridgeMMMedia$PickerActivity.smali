@@ -40,9 +40,9 @@
 # virtual methods
 .method protected onActivityResult(IILandroid/content/Intent;)V
     .locals 26
-    .parameter "requestCode"
-    .parameter "resultCode"
-    .parameter "data"
+    .param p1, "requestCode"    # I
+    .param p2, "resultCode"    # I
+    .param p3, "data"    # Landroid/content/Intent;
 
     .prologue
     .line 183
@@ -55,18 +55,18 @@
     const/16 v20, 0x0
 
     .line 187
-    .local v20, in:Ljava/io/InputStream;
+    .local v20, "in":Ljava/io/InputStream;
     const/16 v24, 0x0
 
     .line 191
-    .local v24, out:Ljava/io/OutputStream;
+    .local v24, "out":Ljava/io/OutputStream;
     :try_start_0
     invoke-virtual/range {p3 .. p3}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object v5
 
     .line 193
-    .local v5, contentUri:Landroid/net/Uri;
+    .local v5, "contentUri":Landroid/net/Uri;
     if-nez v5, :cond_7
 
     .line 195
@@ -75,7 +75,7 @@
     move-result-object v15
 
     .line 196
-    .local v15, bundle:Landroid/os/Bundle;
+    .local v15, "bundle":Landroid/os/Bundle;
     if-eqz v15, :cond_1
 
     .line 198
@@ -94,7 +94,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_2
 
     .line 201
-    .local v10, bitmap:Landroid/graphics/Bitmap;
+    .local v10, "bitmap":Landroid/graphics/Bitmap;
     :try_start_1
     new-instance v19, Ljava/io/File;
 
@@ -117,13 +117,13 @@
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
     .line 202
-    .local v19, file:Ljava/io/File;
+    .local v19, "file":Ljava/io/File;
     new-instance v12, Ljava/io/ByteArrayOutputStream;
 
     invoke-direct {v12}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
     .line 203
-    .local v12, bos:Ljava/io/ByteArrayOutputStream;
+    .local v12, "bos":Ljava/io/ByteArrayOutputStream;
     sget-object v7, Landroid/graphics/Bitmap$CompressFormat;->PNG:Landroid/graphics/Bitmap$CompressFormat;
 
     const/4 v8, 0x0
@@ -136,13 +136,13 @@
     move-result-object v11
 
     .line 205
-    .local v11, bitmapdata:[B
+    .local v11, "bitmapdata":[B
     new-instance v13, Ljava/io/ByteArrayInputStream;
 
     invoke-direct {v13, v11}, Ljava/io/ByteArrayInputStream;-><init>([B)V
 
     .line 206
-    .local v13, bs:Ljava/io/ByteArrayInputStream;
+    .local v13, "bs":Ljava/io/ByteArrayInputStream;
     new-instance v25, Ljava/io/FileOutputStream;
 
     move-object/from16 v0, v25
@@ -151,25 +151,25 @@
 
     invoke-direct {v0, v1}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_b
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     .line 207
-    .end local v24           #out:Ljava/io/OutputStream;
-    .local v25, out:Ljava/io/OutputStream;
+    .end local v24    # "out":Ljava/io/OutputStream;
+    .local v25, "out":Ljava/io/OutputStream;
     const/16 v7, 0x400
 
     :try_start_2
     new-array v14, v7, [B
 
     .line 209
-    .local v14, buf:[B
+    .local v14, "buf":[B
     :goto_0
     invoke-virtual {v13, v14}, Ljava/io/ByteArrayInputStream;->read([B)I
 
     move-result v23
 
-    .local v23, len:I
+    .local v23, "len":I
     if-lez v23, :cond_2
 
     .line 210
@@ -185,26 +185,26 @@
 
     invoke-virtual {v0, v1, v2, v3}, Ljava/io/OutputStream;->write([BII)V
     :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_5
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
+    .catchall {:try_start_2 .. :try_end_2} :catchall_5
 
     goto :goto_0
 
     .line 212
-    .end local v14           #buf:[B
-    .end local v23           #len:I
+    .end local v14    # "buf":[B
+    .end local v23    # "len":I
     :catch_0
     move-exception v7
 
     move-object/from16 v24, v25
 
     .line 219
-    .end local v11           #bitmapdata:[B
-    .end local v12           #bos:Ljava/io/ByteArrayOutputStream;
-    .end local v13           #bs:Ljava/io/ByteArrayInputStream;
-    .end local v19           #file:Ljava/io/File;
-    .end local v25           #out:Ljava/io/OutputStream;
-    .restart local v24       #out:Ljava/io/OutputStream;
+    .end local v11    # "bitmapdata":[B
+    .end local v12    # "bos":Ljava/io/ByteArrayOutputStream;
+    .end local v13    # "bs":Ljava/io/ByteArrayInputStream;
+    .end local v19    # "file":Ljava/io/File;
+    .end local v25    # "out":Ljava/io/OutputStream;
+    .restart local v24    # "out":Ljava/io/OutputStream;
     :goto_1
     if-eqz v20, :cond_0
 
@@ -222,13 +222,14 @@
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_a
 
     .line 283
-    .end local v5           #contentUri:Landroid/net/Uri;
-    .end local v10           #bitmap:Landroid/graphics/Bitmap;
-    .end local v15           #bundle:Landroid/os/Bundle;
-    .end local v20           #in:Ljava/io/InputStream;
-    .end local v24           #out:Ljava/io/OutputStream;
+    .end local v5    # "contentUri":Landroid/net/Uri;
+    .end local v10    # "bitmap":Landroid/graphics/Bitmap;
+    .end local v15    # "bundle":Landroid/os/Bundle;
+    .end local v20    # "in":Ljava/io/InputStream;
+    .end local v24    # "out":Ljava/io/OutputStream;
     :cond_1
     :goto_2
+    # getter for: Lcom/fusepowered/m1/android/BridgeMMMedia;->pickerActivityObject:Ljava/lang/Object;
     invoke-static {}, Lcom/fusepowered/m1/android/BridgeMMMedia;->access$000()Ljava/lang/Object;
 
     move-result-object v7
@@ -237,6 +238,7 @@
 
     .line 285
     :try_start_4
+    # getter for: Lcom/fusepowered/m1/android/BridgeMMMedia;->pickerActivityObject:Ljava/lang/Object;
     invoke-static {}, Lcom/fusepowered/m1/android/BridgeMMMedia;->access$000()Ljava/lang/Object;
 
     move-result-object v8
@@ -255,17 +257,17 @@
     return-void
 
     .line 219
-    .restart local v5       #contentUri:Landroid/net/Uri;
-    .restart local v10       #bitmap:Landroid/graphics/Bitmap;
-    .restart local v11       #bitmapdata:[B
-    .restart local v12       #bos:Ljava/io/ByteArrayOutputStream;
-    .restart local v13       #bs:Ljava/io/ByteArrayInputStream;
-    .restart local v14       #buf:[B
-    .restart local v15       #bundle:Landroid/os/Bundle;
-    .restart local v19       #file:Ljava/io/File;
-    .restart local v20       #in:Ljava/io/InputStream;
-    .restart local v23       #len:I
-    .restart local v25       #out:Ljava/io/OutputStream;
+    .restart local v5    # "contentUri":Landroid/net/Uri;
+    .restart local v10    # "bitmap":Landroid/graphics/Bitmap;
+    .restart local v11    # "bitmapdata":[B
+    .restart local v12    # "bos":Ljava/io/ByteArrayOutputStream;
+    .restart local v13    # "bs":Ljava/io/ByteArrayInputStream;
+    .restart local v14    # "buf":[B
+    .restart local v15    # "bundle":Landroid/os/Bundle;
+    .restart local v19    # "file":Ljava/io/File;
+    .restart local v20    # "in":Ljava/io/InputStream;
+    .restart local v23    # "len":I
+    .restart local v25    # "out":Ljava/io/OutputStream;
     :cond_2
     if-eqz v20, :cond_3
 
@@ -286,30 +288,30 @@
     move-object/from16 v24, v25
 
     .line 226
-    .end local v25           #out:Ljava/io/OutputStream;
-    .restart local v24       #out:Ljava/io/OutputStream;
+    .end local v25    # "out":Ljava/io/OutputStream;
+    .restart local v24    # "out":Ljava/io/OutputStream;
     goto :goto_2
 
     .line 224
-    .end local v24           #out:Ljava/io/OutputStream;
-    .restart local v25       #out:Ljava/io/OutputStream;
+    .end local v24    # "out":Ljava/io/OutputStream;
+    .restart local v25    # "out":Ljava/io/OutputStream;
     :catch_1
     move-exception v7
 
     move-object/from16 v24, v25
 
     .line 227
-    .end local v25           #out:Ljava/io/OutputStream;
-    .restart local v24       #out:Ljava/io/OutputStream;
+    .end local v25    # "out":Ljava/io/OutputStream;
+    .restart local v24    # "out":Ljava/io/OutputStream;
     goto :goto_2
 
     .line 217
-    .end local v11           #bitmapdata:[B
-    .end local v12           #bos:Ljava/io/ByteArrayOutputStream;
-    .end local v13           #bs:Ljava/io/ByteArrayInputStream;
-    .end local v14           #buf:[B
-    .end local v19           #file:Ljava/io/File;
-    .end local v23           #len:I
+    .end local v11    # "bitmapdata":[B
+    .end local v12    # "bos":Ljava/io/ByteArrayOutputStream;
+    .end local v13    # "bs":Ljava/io/ByteArrayInputStream;
+    .end local v14    # "buf":[B
+    .end local v19    # "file":Ljava/io/File;
+    .end local v23    # "len":I
     :catchall_0
     move-exception v7
 
@@ -339,16 +341,16 @@
     .catch Ljava/lang/Exception; {:try_start_7 .. :try_end_7} :catch_2
 
     .line 278
-    .end local v5           #contentUri:Landroid/net/Uri;
-    .end local v10           #bitmap:Landroid/graphics/Bitmap;
-    .end local v15           #bundle:Landroid/os/Bundle;
+    .end local v5    # "contentUri":Landroid/net/Uri;
+    .end local v10    # "bitmap":Landroid/graphics/Bitmap;
+    .end local v15    # "bundle":Landroid/os/Bundle;
     :catch_2
     move-exception v7
 
     move-object/from16 v18, v7
 
     .line 280
-    .local v18, e:Ljava/lang/Exception;
+    .local v18, "e":Ljava/lang/Exception;
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -376,8 +378,8 @@
     goto :goto_2
 
     .line 230
-    .end local v18           #e:Ljava/lang/Exception;
-    .restart local v5       #contentUri:Landroid/net/Uri;
+    .end local v18    # "e":Ljava/lang/Exception;
+    .restart local v5    # "contentUri":Landroid/net/Uri;
     :cond_7
     if-eqz v5, :cond_1
 
@@ -394,13 +396,13 @@
     aput-object v8, v6, v7
 
     .line 233
-    .local v6, proj:[Ljava/lang/String;
+    .local v6, "proj":[Ljava/lang/String;
     invoke-virtual/range {p0 .. p0}, Lcom/fusepowered/m1/android/BridgeMMMedia$PickerActivity;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v4
 
     .line 234
-    .local v4, resolver:Landroid/content/ContentResolver;
+    .local v4, "resolver":Landroid/content/ContentResolver;
     if-eqz v4, :cond_1
 
     .line 236
@@ -415,7 +417,7 @@
     move-result-object v17
 
     .line 237
-    .local v17, cursor:Landroid/database/Cursor;
+    .local v17, "cursor":Landroid/database/Cursor;
     if-eqz v17, :cond_1
 
     .line 239
@@ -430,7 +432,7 @@
     move-result v22
 
     .line 240
-    .local v22, index:I
+    .local v22, "index":I
     const/4 v7, -0x1
 
     move/from16 v0, v22
@@ -460,7 +462,7 @@
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
     .line 244
-    .local v16, chosenFile:Ljava/io/File;
+    .local v16, "chosenFile":Ljava/io/File;
     invoke-interface/range {v17 .. v17}, Landroid/database/Cursor;->close()V
     :try_end_8
     .catch Ljava/lang/Exception; {:try_start_8 .. :try_end_8} :catch_2
@@ -488,7 +490,7 @@
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
     .line 250
-    .restart local v19       #file:Ljava/io/File;
+    .restart local v19    # "file":Ljava/io/File;
     new-instance v21, Ljava/io/FileInputStream;
 
     move-object/from16 v0, v21
@@ -497,12 +499,12 @@
 
     invoke-direct {v0, v1}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
     :try_end_9
-    .catchall {:try_start_9 .. :try_end_9} :catchall_1
     .catch Ljava/lang/Exception; {:try_start_9 .. :try_end_9} :catch_7
+    .catchall {:try_start_9 .. :try_end_9} :catchall_1
 
     .line 251
-    .end local v20           #in:Ljava/io/InputStream;
-    .local v21, in:Ljava/io/InputStream;
+    .end local v20    # "in":Ljava/io/InputStream;
+    .local v21, "in":Ljava/io/InputStream;
     :try_start_a
     new-instance v25, Ljava/io/FileOutputStream;
 
@@ -512,19 +514,19 @@
 
     invoke-direct {v0, v1}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
     :try_end_a
-    .catchall {:try_start_a .. :try_end_a} :catchall_3
     .catch Ljava/lang/Exception; {:try_start_a .. :try_end_a} :catch_8
+    .catchall {:try_start_a .. :try_end_a} :catchall_3
 
     .line 252
-    .end local v24           #out:Ljava/io/OutputStream;
-    .restart local v25       #out:Ljava/io/OutputStream;
+    .end local v24    # "out":Ljava/io/OutputStream;
+    .restart local v25    # "out":Ljava/io/OutputStream;
     const/16 v7, 0x400
 
     :try_start_b
     new-array v14, v7, [B
 
     .line 254
-    .restart local v14       #buf:[B
+    .restart local v14    # "buf":[B
     :goto_5
     move-object/from16 v0, v21
 
@@ -534,7 +536,7 @@
 
     move-result v23
 
-    .restart local v23       #len:I
+    .restart local v23    # "len":I
     if-lez v23, :cond_9
 
     .line 255
@@ -550,27 +552,27 @@
 
     invoke-virtual {v0, v1, v2, v3}, Ljava/io/OutputStream;->write([BII)V
     :try_end_b
-    .catchall {:try_start_b .. :try_end_b} :catchall_4
     .catch Ljava/lang/Exception; {:try_start_b .. :try_end_b} :catch_3
+    .catchall {:try_start_b .. :try_end_b} :catchall_4
 
     goto :goto_5
 
     .line 257
-    .end local v14           #buf:[B
-    .end local v23           #len:I
+    .end local v14    # "buf":[B
+    .end local v23    # "len":I
     :catch_3
     move-exception v7
 
     move-object/from16 v24, v25
 
-    .end local v25           #out:Ljava/io/OutputStream;
-    .restart local v24       #out:Ljava/io/OutputStream;
+    .end local v25    # "out":Ljava/io/OutputStream;
+    .restart local v24    # "out":Ljava/io/OutputStream;
     move-object/from16 v20, v21
 
     .line 264
-    .end local v19           #file:Ljava/io/File;
-    .end local v21           #in:Ljava/io/InputStream;
-    .restart local v20       #in:Ljava/io/InputStream;
+    .end local v19    # "file":Ljava/io/File;
+    .end local v21    # "in":Ljava/io/InputStream;
+    .restart local v20    # "in":Ljava/io/InputStream;
     :goto_6
     if-eqz v20, :cond_8
 
@@ -596,13 +598,13 @@
     goto/16 :goto_2
 
     .line 264
-    .end local v20           #in:Ljava/io/InputStream;
-    .end local v24           #out:Ljava/io/OutputStream;
-    .restart local v14       #buf:[B
-    .restart local v19       #file:Ljava/io/File;
-    .restart local v21       #in:Ljava/io/InputStream;
-    .restart local v23       #len:I
-    .restart local v25       #out:Ljava/io/OutputStream;
+    .end local v20    # "in":Ljava/io/InputStream;
+    .end local v24    # "out":Ljava/io/OutputStream;
+    .restart local v14    # "buf":[B
+    .restart local v19    # "file":Ljava/io/File;
+    .restart local v21    # "in":Ljava/io/InputStream;
+    .restart local v23    # "len":I
+    .restart local v25    # "out":Ljava/io/OutputStream;
     :cond_9
     if-eqz v21, :cond_a
 
@@ -622,38 +624,38 @@
     :cond_b
     move-object/from16 v24, v25
 
-    .end local v25           #out:Ljava/io/OutputStream;
-    .restart local v24       #out:Ljava/io/OutputStream;
+    .end local v25    # "out":Ljava/io/OutputStream;
+    .restart local v24    # "out":Ljava/io/OutputStream;
     move-object/from16 v20, v21
 
     .line 271
-    .end local v21           #in:Ljava/io/InputStream;
-    .restart local v20       #in:Ljava/io/InputStream;
+    .end local v21    # "in":Ljava/io/InputStream;
+    .restart local v20    # "in":Ljava/io/InputStream;
     goto/16 :goto_2
 
     .line 269
-    .end local v20           #in:Ljava/io/InputStream;
-    .end local v24           #out:Ljava/io/OutputStream;
-    .restart local v21       #in:Ljava/io/InputStream;
-    .restart local v25       #out:Ljava/io/OutputStream;
+    .end local v20    # "in":Ljava/io/InputStream;
+    .end local v24    # "out":Ljava/io/OutputStream;
+    .restart local v21    # "in":Ljava/io/InputStream;
+    .restart local v25    # "out":Ljava/io/OutputStream;
     :catch_5
     move-exception v7
 
     move-object/from16 v24, v25
 
-    .end local v25           #out:Ljava/io/OutputStream;
-    .restart local v24       #out:Ljava/io/OutputStream;
+    .end local v25    # "out":Ljava/io/OutputStream;
+    .restart local v24    # "out":Ljava/io/OutputStream;
     move-object/from16 v20, v21
 
     .line 272
-    .end local v21           #in:Ljava/io/InputStream;
-    .restart local v20       #in:Ljava/io/InputStream;
+    .end local v21    # "in":Ljava/io/InputStream;
+    .restart local v20    # "in":Ljava/io/InputStream;
     goto/16 :goto_2
 
     .line 262
-    .end local v14           #buf:[B
-    .end local v19           #file:Ljava/io/File;
-    .end local v23           #len:I
+    .end local v14    # "buf":[B
+    .end local v19    # "file":Ljava/io/File;
+    .end local v23    # "len":I
     :catchall_1
     move-exception v7
 
@@ -683,14 +685,14 @@
     .catch Ljava/lang/Exception; {:try_start_f .. :try_end_f} :catch_2
 
     .line 286
-    .end local v4           #resolver:Landroid/content/ContentResolver;
-    .end local v5           #contentUri:Landroid/net/Uri;
-    .end local v6           #proj:[Ljava/lang/String;
-    .end local v16           #chosenFile:Ljava/io/File;
-    .end local v17           #cursor:Landroid/database/Cursor;
-    .end local v20           #in:Ljava/io/InputStream;
-    .end local v22           #index:I
-    .end local v24           #out:Ljava/io/OutputStream;
+    .end local v4    # "resolver":Landroid/content/ContentResolver;
+    .end local v5    # "contentUri":Landroid/net/Uri;
+    .end local v6    # "proj":[Ljava/lang/String;
+    .end local v16    # "chosenFile":Ljava/io/File;
+    .end local v17    # "cursor":Landroid/database/Cursor;
+    .end local v20    # "in":Ljava/io/InputStream;
+    .end local v22    # "index":I
+    .end local v24    # "out":Ljava/io/OutputStream;
     :catchall_2
     move-exception v8
 
@@ -702,103 +704,103 @@
     throw v8
 
     .line 269
-    .restart local v4       #resolver:Landroid/content/ContentResolver;
-    .restart local v5       #contentUri:Landroid/net/Uri;
-    .restart local v6       #proj:[Ljava/lang/String;
-    .restart local v16       #chosenFile:Ljava/io/File;
-    .restart local v17       #cursor:Landroid/database/Cursor;
-    .restart local v20       #in:Ljava/io/InputStream;
-    .restart local v22       #index:I
-    .restart local v24       #out:Ljava/io/OutputStream;
+    .restart local v4    # "resolver":Landroid/content/ContentResolver;
+    .restart local v5    # "contentUri":Landroid/net/Uri;
+    .restart local v6    # "proj":[Ljava/lang/String;
+    .restart local v16    # "chosenFile":Ljava/io/File;
+    .restart local v17    # "cursor":Landroid/database/Cursor;
+    .restart local v20    # "in":Ljava/io/InputStream;
+    .restart local v22    # "index":I
+    .restart local v24    # "out":Ljava/io/OutputStream;
     :catch_6
     move-exception v8
 
     goto :goto_8
 
     .line 262
-    .end local v20           #in:Ljava/io/InputStream;
-    .restart local v19       #file:Ljava/io/File;
-    .restart local v21       #in:Ljava/io/InputStream;
+    .end local v20    # "in":Ljava/io/InputStream;
+    .restart local v19    # "file":Ljava/io/File;
+    .restart local v21    # "in":Ljava/io/InputStream;
     :catchall_3
     move-exception v7
 
     move-object/from16 v20, v21
 
-    .end local v21           #in:Ljava/io/InputStream;
-    .restart local v20       #in:Ljava/io/InputStream;
+    .end local v21    # "in":Ljava/io/InputStream;
+    .restart local v20    # "in":Ljava/io/InputStream;
     goto :goto_7
 
-    .end local v20           #in:Ljava/io/InputStream;
-    .end local v24           #out:Ljava/io/OutputStream;
-    .restart local v21       #in:Ljava/io/InputStream;
-    .restart local v25       #out:Ljava/io/OutputStream;
+    .end local v20    # "in":Ljava/io/InputStream;
+    .end local v24    # "out":Ljava/io/OutputStream;
+    .restart local v21    # "in":Ljava/io/InputStream;
+    .restart local v25    # "out":Ljava/io/OutputStream;
     :catchall_4
     move-exception v7
 
     move-object/from16 v24, v25
 
-    .end local v25           #out:Ljava/io/OutputStream;
-    .restart local v24       #out:Ljava/io/OutputStream;
+    .end local v25    # "out":Ljava/io/OutputStream;
+    .restart local v24    # "out":Ljava/io/OutputStream;
     move-object/from16 v20, v21
 
-    .end local v21           #in:Ljava/io/InputStream;
-    .restart local v20       #in:Ljava/io/InputStream;
+    .end local v21    # "in":Ljava/io/InputStream;
+    .restart local v20    # "in":Ljava/io/InputStream;
     goto :goto_7
 
     .line 257
-    .end local v19           #file:Ljava/io/File;
+    .end local v19    # "file":Ljava/io/File;
     :catch_7
     move-exception v7
 
     goto :goto_6
 
-    .end local v20           #in:Ljava/io/InputStream;
-    .restart local v19       #file:Ljava/io/File;
-    .restart local v21       #in:Ljava/io/InputStream;
+    .end local v20    # "in":Ljava/io/InputStream;
+    .restart local v19    # "file":Ljava/io/File;
+    .restart local v21    # "in":Ljava/io/InputStream;
     :catch_8
     move-exception v7
 
     move-object/from16 v20, v21
 
-    .end local v21           #in:Ljava/io/InputStream;
-    .restart local v20       #in:Ljava/io/InputStream;
+    .end local v21    # "in":Ljava/io/InputStream;
+    .restart local v20    # "in":Ljava/io/InputStream;
     goto :goto_6
 
     .line 224
-    .end local v4           #resolver:Landroid/content/ContentResolver;
-    .end local v6           #proj:[Ljava/lang/String;
-    .end local v16           #chosenFile:Ljava/io/File;
-    .end local v17           #cursor:Landroid/database/Cursor;
-    .end local v19           #file:Ljava/io/File;
-    .end local v22           #index:I
-    .restart local v10       #bitmap:Landroid/graphics/Bitmap;
-    .restart local v15       #bundle:Landroid/os/Bundle;
+    .end local v4    # "resolver":Landroid/content/ContentResolver;
+    .end local v6    # "proj":[Ljava/lang/String;
+    .end local v16    # "chosenFile":Ljava/io/File;
+    .end local v17    # "cursor":Landroid/database/Cursor;
+    .end local v19    # "file":Ljava/io/File;
+    .end local v22    # "index":I
+    .restart local v10    # "bitmap":Landroid/graphics/Bitmap;
+    .restart local v15    # "bundle":Landroid/os/Bundle;
     :catch_9
     move-exception v8
 
     goto/16 :goto_4
 
     .line 217
-    .end local v24           #out:Ljava/io/OutputStream;
-    .restart local v11       #bitmapdata:[B
-    .restart local v12       #bos:Ljava/io/ByteArrayOutputStream;
-    .restart local v13       #bs:Ljava/io/ByteArrayInputStream;
-    .restart local v19       #file:Ljava/io/File;
-    .restart local v25       #out:Ljava/io/OutputStream;
+    .end local v24    # "out":Ljava/io/OutputStream;
+    .restart local v11    # "bitmapdata":[B
+    .restart local v12    # "bos":Ljava/io/ByteArrayOutputStream;
+    .restart local v13    # "bs":Ljava/io/ByteArrayInputStream;
+    .restart local v19    # "file":Ljava/io/File;
+    .restart local v25    # "out":Ljava/io/OutputStream;
     :catchall_5
     move-exception v7
 
     move-object/from16 v24, v25
 
-    .end local v25           #out:Ljava/io/OutputStream;
-    .restart local v24       #out:Ljava/io/OutputStream;
+    .end local v25    # "out":Ljava/io/OutputStream;
+    .restart local v24    # "out":Ljava/io/OutputStream;
     goto/16 :goto_3
 
     .line 224
-    .end local v11           #bitmapdata:[B
-    .end local v12           #bos:Ljava/io/ByteArrayOutputStream;
-    .end local v13           #bs:Ljava/io/ByteArrayInputStream;
-    .end local v19           #file:Ljava/io/File;
+    .end local v11    # "bitmapdata":[B
+    .end local v12    # "bos":Ljava/io/ByteArrayOutputStream;
+    .end local v13    # "bs":Ljava/io/ByteArrayInputStream;
+    .end local v19    # "file":Ljava/io/File;
     :catch_a
     move-exception v7
 
@@ -813,7 +815,7 @@
 
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 6
-    .parameter "savedInstanceState"
+    .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
     const/4 v5, 0x0
@@ -838,7 +840,7 @@
     check-cast v0, Landroid/os/Bundle;
 
     .line 149
-    .local v0, inState:Landroid/os/Bundle;
+    .local v0, "inState":Landroid/os/Bundle;
     const-string v2, "hasRequestedPic"
 
     invoke-virtual {v0, v2}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
@@ -848,7 +850,7 @@
     iput-boolean v2, p0, Lcom/fusepowered/m1/android/BridgeMMMedia$PickerActivity;->hasRequestedPic:Z
 
     .line 153
-    .end local v0           #inState:Landroid/os/Bundle;
+    .end local v0    # "inState":Landroid/os/Bundle;
     :cond_0
     iget-boolean v2, p0, Lcom/fusepowered/m1/android/BridgeMMMedia$PickerActivity;->hasRequestedPic:Z
 
@@ -881,7 +883,7 @@
     invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
     .line 158
-    .local v1, intent:Landroid/content/Intent;
+    .local v1, "intent":Landroid/content/Intent;
     invoke-virtual {p0}, Lcom/fusepowered/m1/android/BridgeMMMedia$PickerActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v2
@@ -904,7 +906,7 @@
     invoke-virtual {p0, v1, v5}, Lcom/fusepowered/m1/android/BridgeMMMedia$PickerActivity;->startActivityForResult(Landroid/content/Intent;I)V
 
     .line 178
-    .end local v1           #intent:Landroid/content/Intent;
+    .end local v1    # "intent":Landroid/content/Intent;
     :cond_1
     :goto_0
     return-void
@@ -916,7 +918,7 @@
     invoke-direct {v1}, Landroid/content/Intent;-><init>()V
 
     .line 172
-    .restart local v1       #intent:Landroid/content/Intent;
+    .restart local v1    # "intent":Landroid/content/Intent;
     const-string v2, "image/*"
 
     invoke-virtual {v1, v2}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
@@ -948,7 +950,7 @@
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     .line 135
-    .local v0, outState:Landroid/os/Bundle;
+    .local v0, "outState":Landroid/os/Bundle;
     const-string v1, "hasRequestedPic"
 
     iget-boolean v2, p0, Lcom/fusepowered/m1/android/BridgeMMMedia$PickerActivity;->hasRequestedPic:Z

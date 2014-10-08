@@ -3,8 +3,8 @@
 .source "Utf8.java"
 
 # interfaces
-.implements Ljava/lang/Comparable;
 .implements Ljava/lang/CharSequence;
+.implements Ljava/lang/Comparable;
 
 
 # annotations
@@ -66,7 +66,7 @@
 
 .method public constructor <init>(Lcom/flurry/org/apache/avro/util/Utf8;)V
     .locals 4
-    .parameter "other"
+    .param p1, "other"    # Lcom/flurry/org/apache/avro/util/Utf8;
 
     .prologue
     const/4 v3, 0x0
@@ -111,7 +111,7 @@
 
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 1
-    .parameter "string"
+    .param p1, "string"    # Ljava/lang/String;
 
     .prologue
     .line 38
@@ -145,7 +145,7 @@
 
 .method public constructor <init>([B)V
     .locals 1
-    .parameter "bytes"
+    .param p1, "bytes"    # [B
 
     .prologue
     .line 51
@@ -170,7 +170,7 @@
 
 .method public static final getBytesFor(Ljava/lang/String;)[B
     .locals 2
-    .parameter "str"
+    .param p0, "str"    # Ljava/lang/String;
 
     .prologue
     .line 141
@@ -194,7 +194,7 @@
     move-object v0, v1
 
     .line 144
-    .local v0, e:Ljava/io/UnsupportedEncodingException;
+    .local v0, "e":Ljava/io/UnsupportedEncodingException;
     invoke-virtual {v0}, Ljava/io/UnsupportedEncodingException;->printStackTrace()V
 
     .line 146
@@ -209,7 +209,7 @@
 # virtual methods
 .method public charAt(I)C
     .locals 1
-    .parameter "index"
+    .param p1, "index"    # I
 
     .prologue
     .line 131
@@ -226,7 +226,7 @@
 
 .method public compareTo(Lcom/flurry/org/apache/avro/util/Utf8;)I
     .locals 6
-    .parameter "that"
+    .param p1, "that"    # Lcom/flurry/org/apache/avro/util/Utf8;
 
     .prologue
     const/4 v1, 0x0
@@ -253,7 +253,6 @@
 
 .method public bridge synthetic compareTo(Ljava/lang/Object;)I
     .locals 1
-    .parameter
 
     .prologue
     .line 1
@@ -268,7 +267,7 @@
 
 .method public equals(Ljava/lang/Object;)Z
     .locals 8
-    .parameter "o"
+    .param p1, "o"    # Ljava/lang/Object;
 
     .prologue
     const/4 v7, 0x1
@@ -303,7 +302,7 @@
     move-object v2, v0
 
     .line 108
-    .local v2, that:Lcom/flurry/org/apache/avro/util/Utf8;
+    .local v2, "that":Lcom/flurry/org/apache/avro/util/Utf8;
     iget v4, p0, Lcom/flurry/org/apache/avro/util/Utf8;->length:I
 
     iget v5, v2, Lcom/flurry/org/apache/avro/util/Utf8;->length:I
@@ -319,10 +318,10 @@
     iget-object v3, v2, Lcom/flurry/org/apache/avro/util/Utf8;->bytes:[B
 
     .line 110
-    .local v3, thatBytes:[B
+    .local v3, "thatBytes":[B
     const/4 v1, 0x0
 
-    .local v1, i:I
+    .local v1, "i":I
     :goto_1
     iget v4, p0, Lcom/flurry/org/apache/avro/util/Utf8;->length:I
 
@@ -393,10 +392,10 @@
     const/4 v0, 0x0
 
     .line 119
-    .local v0, hash:I
+    .local v0, "hash":I
     const/4 v1, 0x0
 
-    .local v1, i:I
+    .local v1, "i":I
     :goto_0
     iget v2, p0, Lcom/flurry/org/apache/avro/util/Utf8;->length:I
 
@@ -439,7 +438,7 @@
 
 .method public setByteLength(I)Lcom/flurry/org/apache/avro/util/Utf8;
     .locals 4
-    .parameter "newLength"
+    .param p1, "newLength"    # I
 
     .prologue
     const/4 v3, 0x0
@@ -453,7 +452,7 @@
     new-array v0, p1, [B
 
     .line 79
-    .local v0, newBytes:[B
+    .local v0, "newBytes":[B
     iget-object v1, p0, Lcom/flurry/org/apache/avro/util/Utf8;->bytes:[B
 
     iget v2, p0, Lcom/flurry/org/apache/avro/util/Utf8;->length:I
@@ -464,7 +463,7 @@
     iput-object v0, p0, Lcom/flurry/org/apache/avro/util/Utf8;->bytes:[B
 
     .line 82
-    .end local v0           #newBytes:[B
+    .end local v0    # "newBytes":[B
     :cond_0
     iput p1, p0, Lcom/flurry/org/apache/avro/util/Utf8;->length:I
 
@@ -479,7 +478,7 @@
 
 .method public setLength(I)Lcom/flurry/org/apache/avro/util/Utf8;
     .locals 1
-    .parameter "newLength"
+    .param p1, "newLength"    # I
 
     .prologue
     .line 71
@@ -492,8 +491,8 @@
 
 .method public subSequence(II)Ljava/lang/CharSequence;
     .locals 1
-    .parameter "start"
-    .parameter "end"
+    .param p1, "start"    # I
+    .param p2, "end"    # I
 
     .prologue
     .line 134
@@ -549,7 +548,7 @@
     move-object v0, v1
 
     .line 97
-    .local v0, e:Ljava/io/UnsupportedEncodingException;
+    .local v0, "e":Ljava/io/UnsupportedEncodingException;
     invoke-virtual {v0}, Ljava/io/UnsupportedEncodingException;->printStackTrace()V
 
     goto :goto_0

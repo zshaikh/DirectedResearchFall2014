@@ -36,11 +36,6 @@
 # direct methods
 .method public constructor <init>(IIIILandroid/graphics/Bitmap;)V
     .locals 1
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const/4 v0, 0x0
@@ -78,17 +73,6 @@
 
 .method public constructor <init>(IIIILandroid/graphics/Bitmap;IIIIZI)V
     .locals 1
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const/4 v0, 0x0

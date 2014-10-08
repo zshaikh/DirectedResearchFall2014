@@ -25,7 +25,7 @@
 
 .method private delayedEnd(Ljava/lang/String;)V
     .locals 4
-    .parameter "duration"
+    .param p1, "duration"    # Ljava/lang/String;
 
     .prologue
     .line 77
@@ -37,7 +37,7 @@
     mul-int/lit16 v0, v1, 0x3e8
 
     .line 78
-    .local v0, dura:I
+    .local v0, "dura":I
     new-instance v1, Lcom/fusepowered/m1/android/BridgeMMMicrophone$1;
 
     invoke-direct {v1, p0}, Lcom/fusepowered/m1/android/BridgeMMMicrophone$1;-><init>(Lcom/fusepowered/m1/android/BridgeMMMicrophone;)V
@@ -49,7 +49,7 @@
     .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 91
-    .end local v0           #dura:I
+    .end local v0    # "dura":I
     :goto_0
     return-void
 
@@ -68,7 +68,7 @@
     const/4 v0, 0x0
 
     .line 96
-    .local v0, recorder:Lcom/fusepowered/m1/android/BridgeMMMicrophone$Recorder;
+    .local v0, "recorder":Lcom/fusepowered/m1/android/BridgeMMMicrophone$Recorder;
     iget-object v2, p0, Lcom/fusepowered/m1/android/BridgeMMMicrophone;->mmWebViewRef:Ljava/lang/ref/WeakReference;
 
     if-eqz v2, :cond_0
@@ -83,7 +83,7 @@
     check-cast v1, Lcom/fusepowered/m1/android/MMWebView;
 
     .line 99
-    .local v1, webView:Lcom/fusepowered/m1/android/MMWebView;
+    .local v1, "webView":Lcom/fusepowered/m1/android/MMWebView;
     if-eqz v1, :cond_0
 
     invoke-virtual {v1}, Lcom/fusepowered/m1/android/MMWebView;->allowMicrophoneCreationCommands()Z
@@ -101,7 +101,7 @@
     invoke-virtual {v0, v1}, Lcom/fusepowered/m1/android/BridgeMMMicrophone$Recorder;->addCallBack(Lcom/fusepowered/m1/android/MMWebView;)V
 
     .line 105
-    .end local v1           #webView:Lcom/fusepowered/m1/android/MMWebView;
+    .end local v1    # "webView":Lcom/fusepowered/m1/android/MMWebView;
     :cond_0
     return-object v0
 .end method
@@ -110,7 +110,6 @@
 # virtual methods
 .method public isRecordingAllowed(Ljava/util/HashMap;)Lcom/fusepowered/m1/android/MMJSResponse;
     .locals 3
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -125,11 +124,11 @@
 
     .prologue
     .line 126
-    .local p1, arguments:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p1, "arguments":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     const/4 v0, 0x0
 
     .line 127
-    .local v0, context:Landroid/content/Context;
+    .local v0, "context":Landroid/content/Context;
     iget-object v1, p0, Lcom/fusepowered/m1/android/BridgeMMMicrophone;->contextRef:Ljava/lang/ref/WeakReference;
 
     if-eqz v1, :cond_0
@@ -141,11 +140,11 @@
 
     move-result-object v0
 
-    .end local v0           #context:Landroid/content/Context;
+    .end local v0    # "context":Landroid/content/Context;
     check-cast v0, Landroid/content/Context;
 
     .line 131
-    .restart local v0       #context:Landroid/content/Context;
+    .restart local v0    # "context":Landroid/content/Context;
     :cond_0
     invoke-static {v0}, Lcom/fusepowered/m1/android/MMSDK;->hasVoiceAbility(Landroid/content/Context;)Ljava/lang/String;
 
@@ -182,7 +181,6 @@
 
 .method public startRecording(Ljava/util/HashMap;)Lcom/fusepowered/m1/android/MMJSResponse;
     .locals 9
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -197,13 +195,13 @@
 
     .prologue
     .line 30
-    .local p1, arguments:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p1, "arguments":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-direct {p0}, Lcom/fusepowered/m1/android/BridgeMMMicrophone;->initRecorder()Lcom/fusepowered/m1/android/BridgeMMMicrophone$Recorder;
 
     move-result-object v6
 
     .line 31
-    .local v6, recorder:Lcom/fusepowered/m1/android/BridgeMMMicrophone$Recorder;
+    .local v6, "recorder":Lcom/fusepowered/m1/android/BridgeMMMicrophone$Recorder;
     if-nez v6, :cond_0
 
     .line 33
@@ -228,11 +226,11 @@
     check-cast v5, Ljava/lang/String;
 
     .line 37
-    .local v5, path:Ljava/lang/String;
+    .local v5, "path":Ljava/lang/String;
     const/4 v3, 0x0
 
     .line 38
-    .local v3, filePath:Ljava/io/File;
+    .local v3, "filePath":Ljava/io/File;
     invoke-static {v5}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v7
@@ -257,17 +255,17 @@
     move-result-object v1
 
     .line 41
-    .local v1, dir:Ljava/io/File;
+    .local v1, "dir":Ljava/io/File;
     if-eqz v1, :cond_1
 
     .line 43
     new-instance v3, Ljava/io/File;
 
-    .end local v3           #filePath:Ljava/io/File;
+    .end local v3    # "filePath":Ljava/io/File;
     invoke-direct {v3, v1, v5}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
     .line 44
-    .restart local v3       #filePath:Ljava/io/File;
+    .restart local v3    # "filePath":Ljava/io/File;
     if-eqz v3, :cond_1
 
     .line 46
@@ -276,7 +274,7 @@
     move-result-object v5
 
     .line 50
-    .end local v1           #dir:Ljava/io/File;
+    .end local v1    # "dir":Ljava/io/File;
     :cond_1
     const-string v7, "duration"
 
@@ -287,7 +285,7 @@
     check-cast v2, Ljava/lang/String;
 
     .line 51
-    .local v2, duration:Ljava/lang/String;
+    .local v2, "duration":Ljava/lang/String;
     invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v7
@@ -310,11 +308,11 @@
     check-cast v0, Ljava/lang/String;
 
     .line 57
-    .local v0, callbackRate:Ljava/lang/String;
+    .local v0, "callbackRate":Ljava/lang/String;
     const/16 v4, 0x64
 
     .line 58
-    .local v4, intCallbackRate:I
+    .local v4, "intCallbackRate":I
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v7
@@ -329,7 +327,7 @@
 
     move-result v7
 
-    const/high16 v8, 0x447a
+    const/high16 v8, 0x447a0000
 
     mul-float/2addr v7, v8
 
@@ -338,7 +336,7 @@
     .line 69
     :cond_3
     :goto_1
-    #calls: Lcom/fusepowered/m1/android/BridgeMMMicrophone$Recorder;->startRecording(Ljava/lang/String;I)V
+    # invokes: Lcom/fusepowered/m1/android/BridgeMMMicrophone$Recorder;->startRecording(Ljava/lang/String;I)V
     invoke-static {v6, v5, v4}, Lcom/fusepowered/m1/android/BridgeMMMicrophone$Recorder;->access$000(Lcom/fusepowered/m1/android/BridgeMMMicrophone$Recorder;Ljava/lang/String;I)V
 
     .line 70
@@ -359,7 +357,6 @@
 
 .method public stopRecording(Ljava/util/HashMap;)Lcom/fusepowered/m1/android/MMJSResponse;
     .locals 2
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -374,13 +371,13 @@
 
     .prologue
     .line 113
-    .local p1, arguments:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p1, "arguments":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-direct {p0}, Lcom/fusepowered/m1/android/BridgeMMMicrophone;->initRecorder()Lcom/fusepowered/m1/android/BridgeMMMicrophone$Recorder;
 
     move-result-object v0
 
     .line 114
-    .local v0, recorder:Lcom/fusepowered/m1/android/BridgeMMMicrophone$Recorder;
+    .local v0, "recorder":Lcom/fusepowered/m1/android/BridgeMMMicrophone$Recorder;
     if-nez v0, :cond_0
 
     .line 116

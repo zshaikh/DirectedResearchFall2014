@@ -64,7 +64,7 @@
 
 .method private setSharedPreferences(Landroid/content/Context;)V
     .locals 2
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     .line 52
@@ -108,7 +108,7 @@
 # virtual methods
 .method public final getAndroidId(Landroid/content/Context;)Ljava/lang/String;
     .locals 3
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     .line 93
@@ -123,7 +123,7 @@
     move-result-object v0
 
     .line 95
-    .local v0, androidId:Ljava/lang/String;
+    .local v0, "androidId":Ljava/lang/String;
     if-nez v0, :cond_0
 
     .line 96
@@ -164,7 +164,7 @@
 
 .method public final getDeviceId(Landroid/content/Context;)Ljava/lang/String;
     .locals 7
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     const-string v6, "FiksuTracking"
@@ -182,7 +182,7 @@
     check-cast v2, Landroid/telephony/TelephonyManager;
 
     .line 111
-    .local v2, telephonyManager:Landroid/telephony/TelephonyManager;
+    .local v2, "telephonyManager":Landroid/telephony/TelephonyManager;
     if-nez v2, :cond_0
 
     .line 112
@@ -200,12 +200,12 @@
     move-object v3, v5
 
     .line 125
-    .end local v2           #telephonyManager:Landroid/telephony/TelephonyManager;
+    .end local v2    # "telephonyManager":Landroid/telephony/TelephonyManager;
     :goto_0
     return-object v3
 
     .line 115
-    .restart local v2       #telephonyManager:Landroid/telephony/TelephonyManager;
+    .restart local v2    # "telephonyManager":Landroid/telephony/TelephonyManager;
     :cond_0
     :try_start_1
     invoke-virtual {v2}, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;
@@ -213,7 +213,7 @@
     move-result-object v0
 
     .line 116
-    .local v0, deviceId:Ljava/lang/String;
+    .local v0, "deviceId":Ljava/lang/String;
     if-eqz v0, :cond_1
 
     invoke-virtual {v0}, Ljava/lang/String;->length()I
@@ -246,15 +246,15 @@
     goto :goto_0
 
     .line 123
-    .end local v0           #deviceId:Ljava/lang/String;
-    .end local v2           #telephonyManager:Landroid/telephony/TelephonyManager;
+    .end local v0    # "deviceId":Ljava/lang/String;
+    .end local v2    # "telephonyManager":Landroid/telephony/TelephonyManager;
     :catch_0
     move-exception v3
 
     move-object v1, v3
 
     .line 124
-    .local v1, securityException:Ljava/lang/SecurityException;
+    .local v1, "securityException":Ljava/lang/SecurityException;
     const-string v3, "FiksuTracking"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -287,7 +287,7 @@
 
 .method protected final initialize(Landroid/content/Context;)V
     .locals 2
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     .line 43
@@ -326,8 +326,8 @@
 
 .method protected final setAppTrackingEnabled(Landroid/content/Context;Z)V
     .locals 2
-    .parameter "context"
-    .parameter "appTrackingEnabled"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "appTrackingEnabled"    # Z
 
     .prologue
     .line 79
@@ -357,8 +357,8 @@
 
 .method protected final setClientId(Landroid/content/Context;Ljava/lang/String;)V
     .locals 2
-    .parameter "context"
-    .parameter "clientId"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "clientId"    # Ljava/lang/String;
 
     .prologue
     .line 68

@@ -36,8 +36,8 @@
 # direct methods
 .method public constructor <init>(Lcom/flurry/org/codehaus/jackson/type/JavaType;Lcom/flurry/org/codehaus/jackson/map/BeanProperty;)V
     .locals 1
-    .parameter "referencedType"
-    .parameter "property"
+    .param p1, "referencedType"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .param p2, "property"    # Lcom/flurry/org/codehaus/jackson/map/BeanProperty;
 
     .prologue
     .line 29
@@ -59,8 +59,8 @@
 # virtual methods
 .method public bridge synthetic deserialize(Lcom/flurry/org/codehaus/jackson/JsonParser;Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;)Ljava/lang/Object;
     .locals 1
-    .parameter "x0"
-    .parameter "x1"
+    .param p1, "x0"    # Lcom/flurry/org/codehaus/jackson/JsonParser;
+    .param p2, "x1"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -79,8 +79,8 @@
 
 .method public deserialize(Lcom/flurry/org/codehaus/jackson/JsonParser;Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;)Ljava/util/concurrent/atomic/AtomicReference;
     .locals 2
-    .parameter "jp"
-    .parameter "ctxt"
+    .param p1, "jp"    # Lcom/flurry/org/codehaus/jackson/JsonParser;
+    .param p2, "ctxt"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -116,8 +116,8 @@
 
 .method public resolve(Lcom/flurry/org/codehaus/jackson/map/DeserializationConfig;Lcom/flurry/org/codehaus/jackson/map/DeserializerProvider;)V
     .locals 2
-    .parameter "config"
-    .parameter "provider"
+    .param p1, "config"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationConfig;
+    .param p2, "provider"    # Lcom/flurry/org/codehaus/jackson/map/DeserializerProvider;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lcom/flurry/org/codehaus/jackson/map/JsonMappingException;

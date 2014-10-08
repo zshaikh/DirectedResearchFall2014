@@ -32,8 +32,8 @@
 
 .method public static d(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
-    .parameter "tag"
-    .parameter "s"
+    .param p0, "tag"    # Ljava/lang/String;
+    .param p1, "s"    # Ljava/lang/String;
 
     .prologue
     .line 22
@@ -42,8 +42,8 @@
 
 .method public static e(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
-    .parameter "tag"
-    .parameter "s"
+    .param p0, "tag"    # Ljava/lang/String;
+    .param p1, "s"    # Ljava/lang/String;
 
     .prologue
     .line 14
@@ -52,8 +52,8 @@
 
 .method public static i(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
-    .parameter "tag"
-    .parameter "s"
+    .param p0, "tag"    # Ljava/lang/String;
+    .param p1, "s"    # Ljava/lang/String;
 
     .prologue
     .line 26
@@ -62,8 +62,8 @@
 
 .method public static v(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
-    .parameter "tag"
-    .parameter "s"
+    .param p0, "tag"    # Ljava/lang/String;
+    .param p1, "s"    # Ljava/lang/String;
 
     .prologue
     .line 18

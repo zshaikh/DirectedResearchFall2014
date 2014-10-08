@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/google/analytics/tracking/android/GAServiceManager;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 99
@@ -39,7 +38,7 @@
 # virtual methods
 .method public handleMessage(Landroid/os/Message;)Z
     .locals 5
-    .parameter "msg"
+    .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
     const/4 v4, 0x1
@@ -49,6 +48,7 @@
 
     if-ne v4, v0, :cond_0
 
+    # getter for: Lcom/google/analytics/tracking/android/GAServiceManager;->MSG_OBJECT:Ljava/lang/Object;
     invoke-static {}, Lcom/google/analytics/tracking/android/GAServiceManager;->access$100()Ljava/lang/Object;
 
     move-result-object v0
@@ -85,7 +85,7 @@
     .line 107
     iget-object v0, p0, Lcom/google/analytics/tracking/android/GAServiceManager$2;->this$0:Lcom/google/analytics/tracking/android/GAServiceManager;
 
-    #getter for: Lcom/google/analytics/tracking/android/GAServiceManager;->dispatchPeriodInSeconds:I
+    # getter for: Lcom/google/analytics/tracking/android/GAServiceManager;->dispatchPeriodInSeconds:I
     invoke-static {v0}, Lcom/google/analytics/tracking/android/GAServiceManager;->access$200(Lcom/google/analytics/tracking/android/GAServiceManager;)I
 
     move-result v0
@@ -94,7 +94,7 @@
 
     iget-object v0, p0, Lcom/google/analytics/tracking/android/GAServiceManager$2;->this$0:Lcom/google/analytics/tracking/android/GAServiceManager;
 
-    #getter for: Lcom/google/analytics/tracking/android/GAServiceManager;->storeIsEmpty:Z
+    # getter for: Lcom/google/analytics/tracking/android/GAServiceManager;->storeIsEmpty:Z
     invoke-static {v0}, Lcom/google/analytics/tracking/android/GAServiceManager;->access$300(Lcom/google/analytics/tracking/android/GAServiceManager;)Z
 
     move-result v0
@@ -104,18 +104,19 @@
     .line 109
     iget-object v0, p0, Lcom/google/analytics/tracking/android/GAServiceManager$2;->this$0:Lcom/google/analytics/tracking/android/GAServiceManager;
 
-    #getter for: Lcom/google/analytics/tracking/android/GAServiceManager;->handler:Landroid/os/Handler;
+    # getter for: Lcom/google/analytics/tracking/android/GAServiceManager;->handler:Landroid/os/Handler;
     invoke-static {v0}, Lcom/google/analytics/tracking/android/GAServiceManager;->access$400(Lcom/google/analytics/tracking/android/GAServiceManager;)Landroid/os/Handler;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/google/analytics/tracking/android/GAServiceManager$2;->this$0:Lcom/google/analytics/tracking/android/GAServiceManager;
 
-    #getter for: Lcom/google/analytics/tracking/android/GAServiceManager;->handler:Landroid/os/Handler;
+    # getter for: Lcom/google/analytics/tracking/android/GAServiceManager;->handler:Landroid/os/Handler;
     invoke-static {v1}, Lcom/google/analytics/tracking/android/GAServiceManager;->access$400(Lcom/google/analytics/tracking/android/GAServiceManager;)Landroid/os/Handler;
 
     move-result-object v1
 
+    # getter for: Lcom/google/analytics/tracking/android/GAServiceManager;->MSG_OBJECT:Ljava/lang/Object;
     invoke-static {}, Lcom/google/analytics/tracking/android/GAServiceManager;->access$100()Ljava/lang/Object;
 
     move-result-object v2
@@ -126,7 +127,7 @@
 
     iget-object v2, p0, Lcom/google/analytics/tracking/android/GAServiceManager$2;->this$0:Lcom/google/analytics/tracking/android/GAServiceManager;
 
-    #getter for: Lcom/google/analytics/tracking/android/GAServiceManager;->dispatchPeriodInSeconds:I
+    # getter for: Lcom/google/analytics/tracking/android/GAServiceManager;->dispatchPeriodInSeconds:I
     invoke-static {v2}, Lcom/google/analytics/tracking/android/GAServiceManager;->access$200(Lcom/google/analytics/tracking/android/GAServiceManager;)I
 
     move-result v2

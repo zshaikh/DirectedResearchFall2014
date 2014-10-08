@@ -28,7 +28,7 @@
 # virtual methods
 .method public onConfigurationChanged(Landroid/content/res/Configuration;)V
     .locals 2
-    .parameter "newConfig"
+    .param p1, "newConfig"    # Landroid/content/res/Configuration;
 
     .prologue
     .line 39
@@ -47,7 +47,7 @@
     invoke-direct {v0, p0, v1}, Lcom/tapjoy/TapjoyDailyRewardAdWebView$RefreshTask;-><init>(Lcom/tapjoy/TapjoyDailyRewardAdWebView;Lcom/tapjoy/TapjoyDailyRewardAdWebView$1;)V
 
     .line 46
-    .local v0, refreshTask:Lcom/tapjoy/TapjoyDailyRewardAdWebView$RefreshTask;
+    .local v0, "refreshTask":Lcom/tapjoy/TapjoyDailyRewardAdWebView$RefreshTask;
     const/4 v1, 0x0
 
     new-array v1, v1, [Ljava/lang/Void;
@@ -55,14 +55,14 @@
     invoke-virtual {v0, v1}, Lcom/tapjoy/TapjoyDailyRewardAdWebView$RefreshTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
     .line 48
-    .end local v0           #refreshTask:Lcom/tapjoy/TapjoyDailyRewardAdWebView$RefreshTask;
+    .end local v0    # "refreshTask":Lcom/tapjoy/TapjoyDailyRewardAdWebView$RefreshTask;
     :cond_0
     return-void
 .end method
 
 .method protected onCreate(Landroid/os/Bundle;)V
     .locals 1
-    .parameter "savedInstanceState"
+    .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
     const/4 v0, 0x2

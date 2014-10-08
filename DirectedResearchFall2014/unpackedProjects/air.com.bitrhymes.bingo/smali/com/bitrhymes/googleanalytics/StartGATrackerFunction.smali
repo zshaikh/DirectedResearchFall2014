@@ -21,8 +21,8 @@
 # virtual methods
 .method public call(Lcom/adobe/fre/FREContext;[Lcom/adobe/fre/FREObject;)Lcom/adobe/fre/FREObject;
     .locals 8
-    .parameter "context"
-    .parameter "args"
+    .param p1, "context"    # Lcom/adobe/fre/FREContext;
+    .param p2, "args"    # [Lcom/adobe/fre/FREObject;
 
     .prologue
     const-string v4, "started GA tracker"
@@ -42,7 +42,7 @@
     move-result-object v1
 
     .line 18
-    .local v1, gaID:Ljava/lang/String;
+    .local v1, "gaID":Ljava/lang/String;
     sput-object v1, Lcom/bitrhymes/googleanalytics/Utils;->GOOGLE_ANALYTICS_ID:Ljava/lang/String;
 
     .line 21
@@ -81,7 +81,7 @@
     move-result-object v2
 
     .line 26
-    .local v2, gaObj:Lcom/google/analytics/tracking/android/GoogleAnalytics;
+    .local v2, "gaObj":Lcom/google/analytics/tracking/android/GoogleAnalytics;
     const/4 v4, 0x1
 
     invoke-virtual {v2, v4}, Lcom/google/analytics/tracking/android/GoogleAnalytics;->setDebug(Z)V
@@ -100,7 +100,7 @@
     move-result-object v3
 
     .line 29
-    .local v3, tracker:Lcom/google/analytics/tracking/android/Tracker;
+    .local v3, "tracker":Lcom/google/analytics/tracking/android/Tracker;
     const/4 v4, 0x1
 
     invoke-virtual {v3, v4}, Lcom/google/analytics/tracking/android/Tracker;->setStartSession(Z)V
@@ -112,9 +112,9 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
     .line 38
-    .end local v1           #gaID:Ljava/lang/String;
-    .end local v2           #gaObj:Lcom/google/analytics/tracking/android/GoogleAnalytics;
-    .end local v3           #tracker:Lcom/google/analytics/tracking/android/Tracker;
+    .end local v1    # "gaID":Ljava/lang/String;
+    .end local v2    # "gaObj":Lcom/google/analytics/tracking/android/GoogleAnalytics;
+    .end local v3    # "tracker":Lcom/google/analytics/tracking/android/Tracker;
     :goto_0
     const/4 v4, 0x0
 
@@ -127,7 +127,7 @@
     move-object v0, v4
 
     .line 33
-    .local v0, e:Ljava/lang/IllegalStateException;
+    .local v0, "e":Ljava/lang/IllegalStateException;
     const-string v4, "ERROR_EVENT"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -193,14 +193,14 @@
     goto :goto_0
 
     .line 34
-    .end local v0           #e:Ljava/lang/IllegalStateException;
+    .end local v0    # "e":Ljava/lang/IllegalStateException;
     :catch_1
     move-exception v4
 
     move-object v0, v4
 
     .line 36
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v4, "ERROR_EVENT"
 
     new-instance v4, Ljava/lang/StringBuilder;

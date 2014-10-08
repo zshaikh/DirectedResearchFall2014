@@ -42,7 +42,7 @@
 # direct methods
 .method constructor <init>(Ljava/io/File;)V
     .locals 2
-    .parameter "file"
+    .param p1, "file"    # Ljava/io/File;
 
     .prologue
     .line 598
@@ -66,7 +66,7 @@
 # virtual methods
 .method public compareTo(Lcom/facebook/internal/FileLruCache$ModifiedFile;)I
     .locals 4
-    .parameter "another"
+    .param p1, "another"    # Lcom/facebook/internal/FileLruCache$ModifiedFile;
 
     .prologue
     .line 613
@@ -127,7 +127,6 @@
 
 .method public bridge synthetic compareTo(Ljava/lang/Object;)I
     .locals 1
-    .parameter
 
     .prologue
     .line 1
@@ -142,7 +141,7 @@
 
 .method public equals(Ljava/lang/Object;)Z
     .locals 1
-    .parameter "another"
+    .param p1, "another"    # Ljava/lang/Object;
 
     .prologue
     .line 625
@@ -153,7 +152,7 @@
     .line 626
     check-cast p1, Lcom/facebook/internal/FileLruCache$ModifiedFile;
 
-    .end local p1
+    .end local p1    # "another":Ljava/lang/Object;
     invoke-virtual {p0, p1}, Lcom/facebook/internal/FileLruCache$ModifiedFile;->compareTo(Lcom/facebook/internal/FileLruCache$ModifiedFile;)I
 
     move-result v0
@@ -200,7 +199,7 @@
     const/16 v0, 0x1d
 
     .line 633
-    .local v0, result:I
+    .local v0, "result":I
     mul-int/lit8 v1, v0, 0x25
 
     iget-object v1, p0, Lcom/facebook/internal/FileLruCache$ModifiedFile;->file:Ljava/io/File;

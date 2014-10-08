@@ -51,10 +51,8 @@
 # direct methods
 .method public constructor <init>(Lcom/fusepowered/m1/google/gson/Gson;Ljava/lang/reflect/Type;Lcom/fusepowered/m1/google/gson/TypeAdapter;Lcom/fusepowered/m1/google/gson/internal/ObjectConstructor;)V
     .locals 1
-    .parameter "context"
-    .parameter "elementType"
-    .parameter
-    .parameter
+    .param p1, "context"    # Lcom/fusepowered/m1/google/gson/Gson;
+    .param p2, "elementType"    # Ljava/lang/reflect/Type;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -71,9 +69,9 @@
 
     .prologue
     .line 67
-    .local p0, this:Lcom/fusepowered/m1/google/gson/internal/bind/CollectionTypeAdapterFactory$Adapter;,"Lcom/fusepowered/m1/google/gson/internal/bind/CollectionTypeAdapterFactory$Adapter<TE;>;"
-    .local p3, elementTypeAdapter:Lcom/fusepowered/m1/google/gson/TypeAdapter;,"Lcom/fusepowered/m1/google/gson/TypeAdapter<TE;>;"
-    .local p4, constructor:Lcom/fusepowered/m1/google/gson/internal/ObjectConstructor;,"Lcom/fusepowered/m1/google/gson/internal/ObjectConstructor<+Ljava/util/Collection<TE;>;>;"
+    .local p0, "this":Lcom/fusepowered/m1/google/gson/internal/bind/CollectionTypeAdapterFactory$Adapter;, "Lcom/fusepowered/m1/google/gson/internal/bind/CollectionTypeAdapterFactory$Adapter<TE;>;"
+    .local p3, "elementTypeAdapter":Lcom/fusepowered/m1/google/gson/TypeAdapter;, "Lcom/fusepowered/m1/google/gson/TypeAdapter<TE;>;"
+    .local p4, "constructor":Lcom/fusepowered/m1/google/gson/internal/ObjectConstructor;, "Lcom/fusepowered/m1/google/gson/internal/ObjectConstructor<+Ljava/util/Collection<TE;>;>;"
     invoke-direct {p0}, Lcom/fusepowered/m1/google/gson/TypeAdapter;-><init>()V
 
     .line 68
@@ -94,7 +92,7 @@
 # virtual methods
 .method public bridge synthetic read(Lcom/fusepowered/m1/google/gson/stream/JsonReader;)Ljava/lang/Object;
     .locals 1
-    .parameter "x0"
+    .param p1, "x0"    # Lcom/fusepowered/m1/google/gson/stream/JsonReader;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -103,7 +101,7 @@
 
     .prologue
     .line 61
-    .local p0, this:Lcom/fusepowered/m1/google/gson/internal/bind/CollectionTypeAdapterFactory$Adapter;,"Lcom/fusepowered/m1/google/gson/internal/bind/CollectionTypeAdapterFactory$Adapter<TE;>;"
+    .local p0, "this":Lcom/fusepowered/m1/google/gson/internal/bind/CollectionTypeAdapterFactory$Adapter;, "Lcom/fusepowered/m1/google/gson/internal/bind/CollectionTypeAdapterFactory$Adapter<TE;>;"
     invoke-virtual {p0, p1}, Lcom/fusepowered/m1/google/gson/internal/bind/CollectionTypeAdapterFactory$Adapter;->read(Lcom/fusepowered/m1/google/gson/stream/JsonReader;)Ljava/util/Collection;
 
     move-result-object v0
@@ -113,7 +111,7 @@
 
 .method public read(Lcom/fusepowered/m1/google/gson/stream/JsonReader;)Ljava/util/Collection;
     .locals 4
-    .parameter "in"
+    .param p1, "in"    # Lcom/fusepowered/m1/google/gson/stream/JsonReader;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -132,7 +130,7 @@
 
     .prologue
     .line 74
-    .local p0, this:Lcom/fusepowered/m1/google/gson/internal/bind/CollectionTypeAdapterFactory$Adapter;,"Lcom/fusepowered/m1/google/gson/internal/bind/CollectionTypeAdapterFactory$Adapter<TE;>;"
+    .local p0, "this":Lcom/fusepowered/m1/google/gson/internal/bind/CollectionTypeAdapterFactory$Adapter;, "Lcom/fusepowered/m1/google/gson/internal/bind/CollectionTypeAdapterFactory$Adapter<TE;>;"
     invoke-virtual {p1}, Lcom/fusepowered/m1/google/gson/stream/JsonReader;->peek()Lcom/fusepowered/m1/google/gson/stream/JsonToken;
 
     move-result-object v2
@@ -162,7 +160,7 @@
     check-cast v0, Ljava/util/Collection;
 
     .line 80
-    .local v0, collection:Ljava/util/Collection;,"Ljava/util/Collection<TE;>;"
+    .local v0, "collection":Ljava/util/Collection;, "Ljava/util/Collection<TE;>;"
     invoke-virtual {p1}, Lcom/fusepowered/m1/google/gson/stream/JsonReader;->beginArray()V
 
     .line 81
@@ -181,13 +179,13 @@
     move-result-object v1
 
     .line 83
-    .local v1, instance:Ljava/lang/Object;,"TE;"
+    .local v1, "instance":Ljava/lang/Object;, "TE;"
     invoke-interface {v0, v1}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
 
     .line 85
-    .end local v1           #instance:Ljava/lang/Object;,"TE;"
+    .end local v1    # "instance":Ljava/lang/Object;, "TE;"
     :cond_1
     invoke-virtual {p1}, Lcom/fusepowered/m1/google/gson/stream/JsonReader;->endArray()V
 
@@ -199,8 +197,8 @@
 
 .method public bridge synthetic write(Lcom/fusepowered/m1/google/gson/stream/JsonWriter;Ljava/lang/Object;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
+    .param p1, "x0"    # Lcom/fusepowered/m1/google/gson/stream/JsonWriter;
+    .param p2, "x1"    # Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -209,10 +207,10 @@
 
     .prologue
     .line 61
-    .local p0, this:Lcom/fusepowered/m1/google/gson/internal/bind/CollectionTypeAdapterFactory$Adapter;,"Lcom/fusepowered/m1/google/gson/internal/bind/CollectionTypeAdapterFactory$Adapter<TE;>;"
+    .local p0, "this":Lcom/fusepowered/m1/google/gson/internal/bind/CollectionTypeAdapterFactory$Adapter;, "Lcom/fusepowered/m1/google/gson/internal/bind/CollectionTypeAdapterFactory$Adapter<TE;>;"
     check-cast p2, Ljava/util/Collection;
 
-    .end local p2
+    .end local p2    # "x1":Ljava/lang/Object;
     invoke-virtual {p0, p1, p2}, Lcom/fusepowered/m1/google/gson/internal/bind/CollectionTypeAdapterFactory$Adapter;->write(Lcom/fusepowered/m1/google/gson/stream/JsonWriter;Ljava/util/Collection;)V
 
     return-void
@@ -220,8 +218,7 @@
 
 .method public write(Lcom/fusepowered/m1/google/gson/stream/JsonWriter;Ljava/util/Collection;)V
     .locals 3
-    .parameter "out"
-    .parameter
+    .param p1, "out"    # Lcom/fusepowered/m1/google/gson/stream/JsonWriter;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -239,8 +236,8 @@
 
     .prologue
     .line 90
-    .local p0, this:Lcom/fusepowered/m1/google/gson/internal/bind/CollectionTypeAdapterFactory$Adapter;,"Lcom/fusepowered/m1/google/gson/internal/bind/CollectionTypeAdapterFactory$Adapter<TE;>;"
-    .local p2, collection:Ljava/util/Collection;,"Ljava/util/Collection<TE;>;"
+    .local p0, "this":Lcom/fusepowered/m1/google/gson/internal/bind/CollectionTypeAdapterFactory$Adapter;, "Lcom/fusepowered/m1/google/gson/internal/bind/CollectionTypeAdapterFactory$Adapter<TE;>;"
+    .local p2, "collection":Ljava/util/Collection;, "Ljava/util/Collection<TE;>;"
     if-nez p2, :cond_0
 
     .line 91
@@ -259,7 +256,7 @@
 
     move-result-object v1
 
-    .local v1, i$:Ljava/util/Iterator;
+    .local v1, "i$":Ljava/util/Iterator;
     :goto_1
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
@@ -272,7 +269,7 @@
     move-result-object v0
 
     .line 97
-    .local v0, element:Ljava/lang/Object;,"TE;"
+    .local v0, "element":Ljava/lang/Object;, "TE;"
     iget-object v2, p0, Lcom/fusepowered/m1/google/gson/internal/bind/CollectionTypeAdapterFactory$Adapter;->elementTypeAdapter:Lcom/fusepowered/m1/google/gson/TypeAdapter;
 
     invoke-virtual {v2, p1, v0}, Lcom/fusepowered/m1/google/gson/TypeAdapter;->write(Lcom/fusepowered/m1/google/gson/stream/JsonWriter;Ljava/lang/Object;)V
@@ -280,7 +277,7 @@
     goto :goto_1
 
     .line 99
-    .end local v0           #element:Ljava/lang/Object;,"TE;"
+    .end local v0    # "element":Ljava/lang/Object;, "TE;"
     :cond_1
     invoke-virtual {p1}, Lcom/fusepowered/m1/google/gson/stream/JsonWriter;->endArray()Lcom/fusepowered/m1/google/gson/stream/JsonWriter;
 

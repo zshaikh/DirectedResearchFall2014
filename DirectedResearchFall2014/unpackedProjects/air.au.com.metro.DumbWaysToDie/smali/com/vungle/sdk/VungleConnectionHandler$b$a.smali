@@ -24,7 +24,6 @@
 # direct methods
 .method private constructor <init>(Lcom/vungle/sdk/VungleConnectionHandler$b;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 448
@@ -37,8 +36,6 @@
 
 .method synthetic constructor <init>(Lcom/vungle/sdk/VungleConnectionHandler$b;B)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 448

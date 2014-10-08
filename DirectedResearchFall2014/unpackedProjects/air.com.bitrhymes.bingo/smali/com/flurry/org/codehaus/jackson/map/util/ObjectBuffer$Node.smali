@@ -23,7 +23,7 @@
 # direct methods
 .method public constructor <init>([Ljava/lang/Object;)V
     .locals 0
-    .parameter "data"
+    .param p1, "data"    # [Ljava/lang/Object;
 
     .prologue
     .line 241
@@ -50,7 +50,7 @@
 
 .method public linkNext(Lcom/flurry/org/codehaus/jackson/map/util/ObjectBuffer$Node;)V
     .locals 1
-    .parameter "next"
+    .param p1, "next"    # Lcom/flurry/org/codehaus/jackson/map/util/ObjectBuffer$Node;
 
     .prologue
     .line 251

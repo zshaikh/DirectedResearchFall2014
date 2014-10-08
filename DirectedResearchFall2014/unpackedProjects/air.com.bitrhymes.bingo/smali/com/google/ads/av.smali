@@ -61,8 +61,6 @@
 
 .method static a(II)I
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 42

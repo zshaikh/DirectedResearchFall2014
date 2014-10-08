@@ -92,7 +92,7 @@
 
 .method public asBoolean(Z)Z
     .locals 0
-    .parameter "defaultValue"
+    .param p1, "defaultValue"    # Z
 
     .prologue
     .line 418
@@ -115,7 +115,7 @@
 
 .method public asDouble(D)D
     .locals 0
-    .parameter "defaultValue"
+    .param p1, "defaultValue"    # D
 
     .prologue
     .line 386
@@ -138,7 +138,7 @@
 
 .method public asInt(I)I
     .locals 0
-    .parameter "defaultValue"
+    .param p1, "defaultValue"    # I
 
     .prologue
     .line 322
@@ -161,7 +161,7 @@
 
 .method public asLong(J)J
     .locals 0
-    .parameter "defaultValue"
+    .param p1, "defaultValue"    # J
 
     .prologue
     .line 354
@@ -182,7 +182,7 @@
 
 .method public final findParents(Ljava/lang/String;)Ljava/util/List;
     .locals 2
-    .parameter "fieldName"
+    .param p1, "fieldName"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -204,7 +204,7 @@
     move-result-object v0
 
     .line 721
-    .local v0, result:Ljava/util/List;,"Ljava/util/List<Lcom/flurry/org/codehaus/jackson/JsonNode;>;"
+    .local v0, "result":Ljava/util/List;, "Ljava/util/List<Lcom/flurry/org/codehaus/jackson/JsonNode;>;"
     if-nez v0, :cond_0
 
     .line 722
@@ -247,7 +247,7 @@
 
 .method public final findValues(Ljava/lang/String;)Ljava/util/List;
     .locals 2
-    .parameter "fieldName"
+    .param p1, "fieldName"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -269,7 +269,7 @@
     move-result-object v0
 
     .line 657
-    .local v0, result:Ljava/util/List;,"Ljava/util/List<Lcom/flurry/org/codehaus/jackson/JsonNode;>;"
+    .local v0, "result":Ljava/util/List;, "Ljava/util/List<Lcom/flurry/org/codehaus/jackson/JsonNode;>;"
     if-nez v0, :cond_0
 
     .line 658
@@ -306,7 +306,7 @@
 
 .method public final findValuesAsText(Ljava/lang/String;)Ljava/util/List;
     .locals 2
-    .parameter "fieldName"
+    .param p1, "fieldName"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -328,7 +328,7 @@
     move-result-object v0
 
     .line 672
-    .local v0, result:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
+    .local v0, "result":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     if-nez v0, :cond_0
 
     .line 673
@@ -365,7 +365,7 @@
 
 .method public get(I)Lcom/flurry/org/codehaus/jackson/JsonNode;
     .locals 1
-    .parameter "index"
+    .param p1, "index"    # I
 
     .prologue
     .line 263
@@ -376,7 +376,7 @@
 
 .method public get(Ljava/lang/String;)Lcom/flurry/org/codehaus/jackson/JsonNode;
     .locals 1
-    .parameter "fieldName"
+    .param p1, "fieldName"    # Ljava/lang/String;
 
     .prologue
     .line 275
@@ -508,7 +508,7 @@
     move-result-object v0
 
     .line 777
-    .local v0, coll:Ljava/util/Collection;,"Ljava/util/Collection<Ljava/util/Map$Entry<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/JsonNode;>;>;"
+    .local v0, "coll":Ljava/util/Collection;, "Ljava/util/Collection<Ljava/util/Map$Entry<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/JsonNode;>;>;"
     invoke-interface {v0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -551,7 +551,7 @@
 
 .method public final getPath(I)Lcom/flurry/org/codehaus/jackson/JsonNode;
     .locals 1
-    .parameter "index"
+    .param p1, "index"    # I
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -566,7 +566,7 @@
 
 .method public final getPath(Ljava/lang/String;)Lcom/flurry/org/codehaus/jackson/JsonNode;
     .locals 1
-    .parameter "fieldName"
+    .param p1, "fieldName"    # Ljava/lang/String;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -607,7 +607,7 @@
 
 .method public getValueAsBoolean(Z)Z
     .locals 1
-    .parameter "defaultValue"
+    .param p1, "defaultValue"    # Z
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -638,7 +638,7 @@
 
 .method public getValueAsDouble(D)D
     .locals 2
-    .parameter "defaultValue"
+    .param p1, "defaultValue"    # D
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -669,7 +669,7 @@
 
 .method public getValueAsInt(I)I
     .locals 1
-    .parameter "defaultValue"
+    .param p1, "defaultValue"    # I
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -700,7 +700,7 @@
 
 .method public getValueAsLong(J)J
     .locals 2
-    .parameter "defaultValue"
+    .param p1, "defaultValue"    # J
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -729,7 +729,7 @@
 
 .method public has(I)Z
     .locals 1
-    .parameter "index"
+    .param p1, "index"    # I
 
     .prologue
     .line 627
@@ -752,7 +752,7 @@
 
 .method public has(Ljava/lang/String;)Z
     .locals 1
-    .parameter "fieldName"
+    .param p1, "fieldName"    # Ljava/lang/String;
 
     .prologue
     .line 602
@@ -998,7 +998,7 @@
 
 .method public with(Ljava/lang/String;)Lcom/flurry/org/codehaus/jackson/JsonNode;
     .locals 3
-    .parameter "propertyName"
+    .param p1, "propertyName"    # Ljava/lang/String;
 
     .prologue
     .line 834

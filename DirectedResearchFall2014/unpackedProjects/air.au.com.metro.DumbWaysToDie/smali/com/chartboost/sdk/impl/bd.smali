@@ -78,7 +78,6 @@
 
 .method public static a(Ljava/lang/Class;)Ljava/util/List;
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -104,7 +103,6 @@
 
 .method static synthetic a(Lcom/chartboost/sdk/impl/bd;)Ljava/util/Map;
     .locals 1
-    .parameter
 
     .prologue
     .line 40
@@ -131,8 +129,6 @@
 
 .method public a(Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -171,7 +167,6 @@
 
 .method public a(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",

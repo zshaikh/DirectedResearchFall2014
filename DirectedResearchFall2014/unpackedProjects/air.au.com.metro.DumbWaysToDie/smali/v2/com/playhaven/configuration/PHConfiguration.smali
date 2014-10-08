@@ -48,8 +48,8 @@
 
 .method private getString(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
     .locals 4
-    .parameter "context"
-    .parameter "key"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "key"    # Ljava/lang/String;
 
     .prologue
     .line 205
@@ -58,7 +58,7 @@
     move-result-object v0
 
     .line 208
-    .local v0, appContext:Landroid/content/Context;
+    .local v0, "appContext":Landroid/content/Context;
     sget-object v2, Lv2/com/playhaven/configuration/PHConfiguration;->SHARED_PREF_NAME:Ljava/lang/String;
 
     const/4 v3, 0x0
@@ -68,7 +68,7 @@
     move-result-object v1
 
     .line 210
-    .local v1, prefs:Landroid/content/SharedPreferences;
+    .local v1, "prefs":Landroid/content/SharedPreferences;
     const/4 v2, 0x0
 
     invoke-interface {v1, p2, v2}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
@@ -80,9 +80,9 @@
 
 .method private setString(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
     .locals 5
-    .parameter "context"
-    .parameter "key"
-    .parameter "value"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "key"    # Ljava/lang/String;
+    .param p3, "value"    # Ljava/lang/String;
 
     .prologue
     .line 194
@@ -91,7 +91,7 @@
     move-result-object v0
 
     .line 196
-    .local v0, appContext:Landroid/content/Context;
+    .local v0, "appContext":Landroid/content/Context;
     sget-object v3, Lv2/com/playhaven/configuration/PHConfiguration;->SHARED_PREF_NAME:Ljava/lang/String;
 
     const/4 v4, 0x0
@@ -101,13 +101,13 @@
     move-result-object v2
 
     .line 197
-    .local v2, prefs:Landroid/content/SharedPreferences;
+    .local v2, "prefs":Landroid/content/SharedPreferences;
     invoke-interface {v2}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v1
 
     .line 199
-    .local v1, editor:Landroid/content/SharedPreferences$Editor;
+    .local v1, "editor":Landroid/content/SharedPreferences$Editor;
     invoke-interface {v1, p2, p3}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
     .line 201
@@ -119,7 +119,7 @@
 
 .method private validateCredential(Ljava/lang/String;)Z
     .locals 1
-    .parameter "value"
+    .param p1, "value"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/RuntimeException;
@@ -154,7 +154,7 @@
 # virtual methods
 .method public getAPIUrl(Landroid/content/Context;)Ljava/lang/String;
     .locals 2
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     .line 165
@@ -169,7 +169,7 @@
     move-result-object v0
 
     .line 167
-    .local v0, api_url:Ljava/lang/String;
+    .local v0, "api_url":Ljava/lang/String;
     if-nez v0, :cond_0
 
     .line 168
@@ -202,7 +202,7 @@
 
 .method public getIsRunningUITests(Landroid/content/Context;)Z
     .locals 1
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     .line 186
@@ -252,7 +252,7 @@
 
     .prologue
     .line 126
-    const/high16 v0, 0x80
+    const/high16 v0, 0x800000
 
     return v0
 .end method
@@ -269,7 +269,7 @@
 
 .method public getSecret(Landroid/content/Context;)Ljava/lang/String;
     .locals 1
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     .line 110
@@ -288,7 +288,7 @@
 
 .method public getShouldPrecache(Landroid/content/Context;)Z
     .locals 1
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     .line 178
@@ -315,7 +315,7 @@
 
 .method public getStagingPassword(Landroid/content/Context;)Ljava/lang/String;
     .locals 1
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     .line 118
@@ -334,7 +334,7 @@
 
 .method public getStagingUsername(Landroid/content/Context;)Ljava/lang/String;
     .locals 1
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     .line 114
@@ -353,7 +353,7 @@
 
 .method public getToken(Landroid/content/Context;)Ljava/lang/String;
     .locals 1
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     .line 106
@@ -372,8 +372,8 @@
 
 .method public setAPIUrl(Landroid/content/Context;Ljava/lang/String;)V
     .locals 1
-    .parameter "context"
-    .parameter "api"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "api"    # Ljava/lang/String;
 
     .prologue
     .line 161
@@ -391,9 +391,9 @@
 
 .method public setCredentials(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
-    .parameter "context"
-    .parameter "token"
-    .parameter "secret"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "token"    # Ljava/lang/String;
+    .param p3, "secret"    # Ljava/lang/String;
 
     .prologue
     .line 89
@@ -467,8 +467,8 @@
 
 .method public setIsRunningUITests(Landroid/content/Context;Z)V
     .locals 2
-    .parameter "context"
-    .parameter "isRunning"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "isRunning"    # Z
 
     .prologue
     .line 190
@@ -490,8 +490,8 @@
 
 .method public setShouldPrecache(Landroid/content/Context;Z)V
     .locals 2
-    .parameter "context"
-    .parameter "shouldPrecache"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "shouldPrecache"    # Z
 
     .prologue
     .line 182
@@ -513,8 +513,8 @@
 
 .method public setStagingPassword(Landroid/content/Context;Ljava/lang/String;)V
     .locals 1
-    .parameter "context"
-    .parameter "password"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "password"    # Ljava/lang/String;
 
     .prologue
     .line 130
@@ -532,8 +532,8 @@
 
 .method public setStagingUsername(Landroid/content/Context;Ljava/lang/String;)V
     .locals 1
-    .parameter "context"
-    .parameter "username"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "username"    # Ljava/lang/String;
 
     .prologue
     .line 122

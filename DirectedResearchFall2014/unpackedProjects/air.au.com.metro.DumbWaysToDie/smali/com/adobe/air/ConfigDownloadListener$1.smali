@@ -23,7 +23,6 @@
 # direct methods
 .method constructor <init>(Lcom/adobe/air/ConfigDownloadListener;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 45
@@ -43,8 +42,6 @@
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 6
-    .parameter
-    .parameter
 
     .prologue
     const/4 v5, 0x1
@@ -90,7 +87,7 @@
     .line 70
     iget-object v3, p0, Lcom/adobe/air/ConfigDownloadListener$1;->this$0:Lcom/adobe/air/ConfigDownloadListener;
 
-    #getter for: Lcom/adobe/air/ConfigDownloadListener;->lastPauseTime:J
+    # getter for: Lcom/adobe/air/ConfigDownloadListener;->lastPauseTime:J
     invoke-static {v3}, Lcom/adobe/air/ConfigDownloadListener;->access$000(Lcom/adobe/air/ConfigDownloadListener;)J
 
     move-result-wide v3

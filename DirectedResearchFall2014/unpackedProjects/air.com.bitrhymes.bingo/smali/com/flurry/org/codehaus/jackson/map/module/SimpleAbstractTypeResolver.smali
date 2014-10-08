@@ -39,8 +39,6 @@
 # virtual methods
 .method public addMapping(Ljava/lang/Class;Ljava/lang/Class;)Lcom/flurry/org/codehaus/jackson/map/module/SimpleAbstractTypeResolver;
     .locals 4
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -55,8 +53,8 @@
     .end annotation
 
     .prologue
-    .local p1, superType:Ljava/lang/Class;,"Ljava/lang/Class<TT;>;"
-    .local p2, subType:Ljava/lang/Class;,"Ljava/lang/Class<+TT;>;"
+    .local p1, "superType":Ljava/lang/Class;, "Ljava/lang/Class<TT;>;"
+    .local p2, "subType":Ljava/lang/Class;, "Ljava/lang/Class<+TT;>;"
     const-string v3, "Can not add mapping from class "
 
     .line 52
@@ -191,8 +189,8 @@
 
 .method public findTypeMapping(Lcom/flurry/org/codehaus/jackson/map/DeserializationConfig;Lcom/flurry/org/codehaus/jackson/type/JavaType;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .locals 4
-    .parameter "config"
-    .parameter "type"
+    .param p1, "config"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationConfig;
+    .param p2, "type"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
 
     .prologue
     .line 71
@@ -201,7 +199,7 @@
     move-result-object v1
 
     .line 72
-    .local v1, src:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local v1, "src":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     iget-object v2, p0, Lcom/flurry/org/codehaus/jackson/map/module/SimpleAbstractTypeResolver;->_mappings:Ljava/util/HashMap;
 
     new-instance v3, Lcom/flurry/org/codehaus/jackson/map/type/ClassKey;
@@ -215,7 +213,7 @@
     check-cast v0, Ljava/lang/Class;
 
     .line 73
-    .local v0, dst:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local v0, "dst":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     if-nez v0, :cond_0
 
     .line 74
@@ -235,8 +233,8 @@
 
 .method public resolveAbstractType(Lcom/flurry/org/codehaus/jackson/map/DeserializationConfig;Lcom/flurry/org/codehaus/jackson/type/JavaType;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .locals 1
-    .parameter "config"
-    .parameter "type"
+    .param p1, "config"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationConfig;
+    .param p2, "type"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
 
     .prologue
     .line 84

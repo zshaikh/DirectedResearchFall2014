@@ -21,7 +21,6 @@
 # direct methods
 .method constructor <init>(Landroid/app/Application;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1

@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/tapjoy/TapjoyVideoView;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 487
@@ -44,7 +43,7 @@
     .line 491
     iget-object v0, p0, Lcom/tapjoy/TapjoyVideoView$2;->this$0:Lcom/tapjoy/TapjoyVideoView;
 
-    #getter for: Lcom/tapjoy/TapjoyVideoView;->overlayText:Landroid/widget/TextView;
+    # getter for: Lcom/tapjoy/TapjoyVideoView;->overlayText:Landroid/widget/TextView;
     invoke-static {v0}, Lcom/tapjoy/TapjoyVideoView;->access$500(Lcom/tapjoy/TapjoyVideoView;)Landroid/widget/TextView;
 
     move-result-object v0
@@ -61,7 +60,7 @@
 
     iget-object v2, p0, Lcom/tapjoy/TapjoyVideoView$2;->this$0:Lcom/tapjoy/TapjoyVideoView;
 
-    #calls: Lcom/tapjoy/TapjoyVideoView;->getRemainingVideoTime()I
+    # invokes: Lcom/tapjoy/TapjoyVideoView;->getRemainingVideoTime()I
     invoke-static {v2}, Lcom/tapjoy/TapjoyVideoView;->access$400(Lcom/tapjoy/TapjoyVideoView;)I
 
     move-result v2

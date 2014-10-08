@@ -27,8 +27,7 @@
 
 .method public static createForPost(Ljava/lang/Class;Ljava/lang/String;)Lcom/facebook/model/OpenGraphObject;
     .locals 6
-    .parameter
-    .parameter "type"
+    .param p1, "type"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T::",
@@ -42,7 +41,7 @@
     .end annotation
 
     .prologue
-    .local p0, graphObjectClass:Ljava/lang/Class;,"Ljava/lang/Class<TT;>;"
+    .local p0, "graphObjectClass":Ljava/lang/Class;, "Ljava/lang/Class<TT;>;"
     const/4 v2, 0x0
 
     .line 278
@@ -65,12 +64,11 @@
 
 .method public static createForPost(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lcom/facebook/model/OpenGraphObject;
     .locals 4
-    .parameter
-    .parameter "type"
-    .parameter "title"
-    .parameter "imageUrl"
-    .parameter "url"
-    .parameter "description"
+    .param p1, "type"    # Ljava/lang/String;
+    .param p2, "title"    # Ljava/lang/String;
+    .param p3, "imageUrl"    # Ljava/lang/String;
+    .param p4, "url"    # Ljava/lang/String;
+    .param p5, "description"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T::",
@@ -88,7 +86,7 @@
     .end annotation
 
     .prologue
-    .local p0, graphObjectClass:Ljava/lang/Class;,"Ljava/lang/Class<TT;>;"
+    .local p0, "graphObjectClass":Ljava/lang/Class;, "Ljava/lang/Class<TT;>;"
     const/4 v3, 0x1
 
     .line 294
@@ -99,7 +97,7 @@
     check-cast v0, Lcom/facebook/model/OpenGraphObject;
 
     .line 296
-    .local v0, object:Lcom/facebook/model/OpenGraphObject;,"TT;"
+    .local v0, "object":Lcom/facebook/model/OpenGraphObject;, "TT;"
     if-eqz p1, :cond_0
 
     .line 297
@@ -160,7 +158,7 @@
 
 .method public static createForPost(Ljava/lang/String;)Lcom/facebook/model/OpenGraphObject;
     .locals 1
-    .parameter "type"
+    .param p0, "type"    # Ljava/lang/String;
 
     .prologue
     .line 267

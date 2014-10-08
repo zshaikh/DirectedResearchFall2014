@@ -24,7 +24,6 @@
 # direct methods
 .method private constructor <init>(Lcom/playhaven/extensions/android/PlayHavenExtensionContext;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 647
@@ -37,8 +36,6 @@
 
 .method synthetic constructor <init>(Lcom/playhaven/extensions/android/PlayHavenExtensionContext;Lcom/playhaven/extensions/android/PlayHavenExtensionContext$PHRemoveNotificationFunction;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 647
@@ -51,8 +48,8 @@
 # virtual methods
 .method public call(Lcom/adobe/fre/FREContext;[Lcom/adobe/fre/FREObject;)Lcom/adobe/fre/FREObject;
     .locals 5
-    .parameter "arg0"
-    .parameter "args"
+    .param p1, "arg0"    # Lcom/adobe/fre/FREContext;
+    .param p2, "args"    # [Lcom/adobe/fre/FREObject;
 
     .prologue
     .line 651
@@ -63,11 +60,11 @@
     move-result v1
 
     .line 652
-    .local v1, res:Z
+    .local v1, "res":Z
     const/4 v2, 0x0
 
     .line 655
-    .local v2, resFreObject:Lcom/adobe/fre/FREObject;
+    .local v2, "resFreObject":Lcom/adobe/fre/FREObject;
     :try_start_0
     invoke-static {v1}, Lcom/adobe/fre/FREObject;->newObject(Z)Lcom/adobe/fre/FREObject;
     :try_end_0
@@ -84,7 +81,7 @@
     move-exception v0
 
     .line 659
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v3, "[PHExtension]"
 
     invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;

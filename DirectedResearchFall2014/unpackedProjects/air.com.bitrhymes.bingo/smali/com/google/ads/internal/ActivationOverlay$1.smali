@@ -26,8 +26,6 @@
 # direct methods
 .method constructor <init>(Lcom/google/ads/internal/ActivationOverlay;Lcom/google/ads/internal/ActivationOverlay;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 60

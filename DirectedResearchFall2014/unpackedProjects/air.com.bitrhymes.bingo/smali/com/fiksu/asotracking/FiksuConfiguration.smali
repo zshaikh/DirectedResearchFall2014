@@ -52,9 +52,9 @@
 
 .method private static final getBooleanFromJSONObject(Lorg/json/JSONObject;Ljava/lang/String;Z)Z
     .locals 2
-    .parameter "jsonObject"
-    .parameter "lookupKey"
-    .parameter "defaultValue"
+    .param p0, "jsonObject"    # Lorg/json/JSONObject;
+    .param p1, "lookupKey"    # Ljava/lang/String;
+    .param p2, "defaultValue"    # Z
 
     .prologue
     .line 85
@@ -73,7 +73,7 @@
     :catch_0
     move-exception v0
 
-    .local v0, jsonException:Lorg/json/JSONException;
+    .local v0, "jsonException":Lorg/json/JSONException;
     move v1, p2
 
     .line 87
@@ -140,7 +140,7 @@
     move-wide v0, v2
 
     .line 105
-    .local v0, threshold:J
+    .local v0, "threshold":J
     :goto_0
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -160,7 +160,7 @@
     return v2
 
     .line 104
-    .end local v0           #threshold:J
+    .end local v0    # "threshold":J
     :cond_0
     const-wide/32 v2, 0x5265c00
 
@@ -169,7 +169,7 @@
     goto :goto_0
 
     .line 105
-    .restart local v0       #threshold:J
+    .restart local v0    # "threshold":J
     :cond_1
     const/4 v2, 0x0
 
@@ -178,7 +178,7 @@
 
 .method protected final readFromJSONObject(Lorg/json/JSONObject;)Z
     .locals 2
-    .parameter "jsonObject"
+    .param p1, "jsonObject"    # Lorg/json/JSONObject;
 
     .prologue
     .line 72
@@ -229,7 +229,7 @@
 
 .method protected final readFromSharedPreferences(Landroid/content/SharedPreferences;)Z
     .locals 3
-    .parameter "sharedPreferences"
+    .param p1, "sharedPreferences"    # Landroid/content/SharedPreferences;
 
     .prologue
     .line 60
@@ -284,7 +284,7 @@
 
 .method public final setDebugModeEnabled(Z)V
     .locals 0
-    .parameter "debugModeEnabled"
+    .param p1, "debugModeEnabled"    # Z
 
     .prologue
     .line 126
@@ -311,7 +311,7 @@
 
 .method protected final writeToSharedPreferences(Landroid/content/SharedPreferences;)Z
     .locals 4
-    .parameter "sharedPreferences"
+    .param p1, "sharedPreferences"    # Landroid/content/SharedPreferences;
 
     .prologue
     .line 46
@@ -331,7 +331,7 @@
     move-result-object v0
 
     .line 52
-    .local v0, editor:Landroid/content/SharedPreferences$Editor;
+    .local v0, "editor":Landroid/content/SharedPreferences$Editor;
     const-string v1, "facebook_attribution"
 
     iget-boolean v2, p0, Lcom/fiksu/asotracking/FiksuConfiguration;->mFacebookAttributionEnabled:Z

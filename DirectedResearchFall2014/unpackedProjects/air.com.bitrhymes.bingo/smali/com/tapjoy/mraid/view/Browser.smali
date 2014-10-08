@@ -46,8 +46,8 @@
 
 .method static synthetic access$000(Lcom/tapjoy/mraid/view/Browser;Ljava/lang/String;)Landroid/graphics/Bitmap;
     .locals 1
-    .parameter "x0"
-    .parameter "x1"
+    .param p0, "x0"    # Lcom/tapjoy/mraid/view/Browser;
+    .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
     .line 44
@@ -60,7 +60,7 @@
 
 .method private bitmapFromBase64(Ljava/lang/String;)Landroid/graphics/Bitmap;
     .locals 3
-    .parameter "source"
+    .param p1, "source"    # Ljava/lang/String;
 
     .prologue
     const/4 v2, 0x0
@@ -71,7 +71,7 @@
     move-result-object v0
 
     .line 347
-    .local v0, decodedByte:[B
+    .local v0, "decodedByte":[B
     array-length v1, v0
 
     invoke-static {v0, v2, v1}, Landroid/graphics/BitmapFactory;->decodeByteArray([BII)Landroid/graphics/Bitmap;
@@ -83,7 +83,7 @@
 
 .method private getDensityScaledBitmap(Ljava/lang/String;)Landroid/graphics/Bitmap;
     .locals 10
-    .parameter "source"
+    .param p1, "source"    # Ljava/lang/String;
 
     .prologue
     const/4 v1, 0x0
@@ -92,13 +92,13 @@
     const/4 v0, 0x0
 
     .line 353
-    .local v0, bitmap:Landroid/graphics/Bitmap;
+    .local v0, "bitmap":Landroid/graphics/Bitmap;
     new-instance v7, Landroid/util/DisplayMetrics;
 
     invoke-direct {v7}, Landroid/util/DisplayMetrics;-><init>()V
 
     .line 354
-    .local v7, metrics:Landroid/util/DisplayMetrics;
+    .local v7, "metrics":Landroid/util/DisplayMetrics;
     invoke-virtual {p0}, Lcom/tapjoy/mraid/view/Browser;->getWindowManager()Landroid/view/WindowManager;
 
     move-result-object v2
@@ -123,27 +123,27 @@
     move-result v3
 
     .line 362
-    .local v3, width:I
+    .local v3, "width":I
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v4
 
     .line 363
-    .local v4, height:I
+    .local v4, "height":I
     iget v9, v7, Landroid/util/DisplayMetrics;->scaledDensity:F
 
     .line 364
-    .local v9, scaleWidth:F
+    .local v9, "scaleWidth":F
     iget v8, v7, Landroid/util/DisplayMetrics;->scaledDensity:F
 
     .line 366
-    .local v8, scaleHeight:F
+    .local v8, "scaleHeight":F
     new-instance v5, Landroid/graphics/Matrix;
 
     invoke-direct {v5}, Landroid/graphics/Matrix;-><init>()V
 
     .line 367
-    .local v5, matrix:Landroid/graphics/Matrix;
+    .local v5, "matrix":Landroid/graphics/Matrix;
     invoke-virtual {v5, v9, v8}, Landroid/graphics/Matrix;->postScale(FF)Z
 
     .line 369
@@ -156,11 +156,11 @@
     move-result-object v0
 
     .line 372
-    .end local v3           #width:I
-    .end local v4           #height:I
-    .end local v5           #matrix:Landroid/graphics/Matrix;
-    .end local v8           #scaleHeight:F
-    .end local v9           #scaleWidth:F
+    .end local v3    # "width":I
+    .end local v4    # "height":I
+    .end local v5    # "matrix":Landroid/graphics/Matrix;
+    .end local v8    # "scaleHeight":F
+    .end local v9    # "scaleWidth":F
     :cond_0
     return-object v0
 .end method
@@ -169,14 +169,14 @@
 # virtual methods
 .method public bitmapFromJar(Ljava/lang/String;)Landroid/graphics/Bitmap;
     .locals 10
-    .parameter "source"
+    .param p1, "source"    # Ljava/lang/String;
 
     .prologue
     .line 312
     const/4 v4, 0x0
 
     .line 314
-    .local v4, in:Ljava/io/InputStream;
+    .local v4, "in":Ljava/io/InputStream;
     :try_start_0
     const-class v8, Lcom/tapjoy/mraid/controller/Assets;
 
@@ -189,13 +189,13 @@
     move-result-object v7
 
     .line 316
-    .local v7, url:Ljava/net/URL;
+    .local v7, "url":Ljava/net/URL;
     invoke-virtual {v7}, Ljava/net/URL;->getFile()Ljava/lang/String;
 
     move-result-object v3
 
     .line 317
-    .local v3, file:Ljava/lang/String;
+    .local v3, "file":Ljava/lang/String;
     const-string v8, "file:"
 
     invoke-virtual {v3, v8}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
@@ -220,7 +220,7 @@
     move-result v6
 
     .line 321
-    .local v6, pos:I
+    .local v6, "pos":I
     if-lez v6, :cond_1
 
     .line 322
@@ -237,13 +237,13 @@
     invoke-direct {v5, v3}, Ljava/util/jar/JarFile;-><init>(Ljava/lang/String;)V
 
     .line 324
-    .local v5, jf:Ljava/util/jar/JarFile;
+    .local v5, "jf":Ljava/util/jar/JarFile;
     invoke-virtual {v5, p1}, Ljava/util/jar/JarFile;->getJarEntry(Ljava/lang/String;)Ljava/util/jar/JarEntry;
 
     move-result-object v2
 
     .line 325
-    .local v2, entry:Ljava/util/jar/JarEntry;
+    .local v2, "entry":Ljava/util/jar/JarEntry;
     invoke-virtual {v5, v2}, Ljava/util/jar/JarFile;->getInputStream(Ljava/util/zip/ZipEntry;)Ljava/io/InputStream;
 
     move-result-object v4
@@ -251,13 +251,13 @@
     .line 326
     invoke-static {v4}, Landroid/graphics/BitmapFactory;->decodeStream(Ljava/io/InputStream;)Landroid/graphics/Bitmap;
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result-object v0
 
     .line 332
-    .local v0, bmp:Landroid/graphics/Bitmap;
+    .local v0, "bmp":Landroid/graphics/Bitmap;
     if-eqz v4, :cond_2
 
     .line 334
@@ -274,12 +274,12 @@
     move-object v8, v0
 
     .line 341
-    .end local v0           #bmp:Landroid/graphics/Bitmap;
-    .end local v2           #entry:Ljava/util/jar/JarEntry;
-    .end local v3           #file:Ljava/lang/String;
-    .end local v5           #jf:Ljava/util/jar/JarFile;
-    .end local v6           #pos:I
-    .end local v7           #url:Ljava/net/URL;
+    .end local v0    # "bmp":Landroid/graphics/Bitmap;
+    .end local v2    # "entry":Ljava/util/jar/JarEntry;
+    .end local v3    # "file":Ljava/lang/String;
+    .end local v5    # "jf":Ljava/util/jar/JarFile;
+    .end local v6    # "pos":I
+    .end local v7    # "url":Ljava/net/URL;
     :goto_1
     return-object v8
 
@@ -290,7 +290,7 @@
     move-object v1, v8
 
     .line 330
-    .local v1, e:Ljava/lang/Exception;
+    .local v1, "e":Ljava/lang/Exception;
     :try_start_2
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_2
@@ -316,7 +316,7 @@
     goto :goto_1
 
     .line 332
-    .end local v1           #e:Ljava/lang/Exception;
+    .end local v1    # "e":Ljava/lang/Exception;
     :catchall_0
     move-exception v8
 
@@ -336,30 +336,30 @@
     throw v8
 
     .line 335
-    .restart local v0       #bmp:Landroid/graphics/Bitmap;
-    .restart local v2       #entry:Ljava/util/jar/JarEntry;
-    .restart local v3       #file:Ljava/lang/String;
-    .restart local v5       #jf:Ljava/util/jar/JarFile;
-    .restart local v6       #pos:I
-    .restart local v7       #url:Ljava/net/URL;
+    .restart local v0    # "bmp":Landroid/graphics/Bitmap;
+    .restart local v2    # "entry":Ljava/util/jar/JarEntry;
+    .restart local v3    # "file":Ljava/lang/String;
+    .restart local v5    # "jf":Ljava/util/jar/JarFile;
+    .restart local v6    # "pos":I
+    .restart local v7    # "url":Ljava/net/URL;
     :catch_1
     move-exception v8
 
     goto :goto_0
 
-    .end local v0           #bmp:Landroid/graphics/Bitmap;
-    .end local v2           #entry:Ljava/util/jar/JarEntry;
-    .end local v3           #file:Ljava/lang/String;
-    .end local v5           #jf:Ljava/util/jar/JarFile;
-    .end local v6           #pos:I
-    .end local v7           #url:Ljava/net/URL;
-    .restart local v1       #e:Ljava/lang/Exception;
+    .end local v0    # "bmp":Landroid/graphics/Bitmap;
+    .end local v2    # "entry":Ljava/util/jar/JarEntry;
+    .end local v3    # "file":Ljava/lang/String;
+    .end local v5    # "jf":Ljava/util/jar/JarFile;
+    .end local v6    # "pos":I
+    .end local v7    # "url":Ljava/net/URL;
+    .restart local v1    # "e":Ljava/lang/Exception;
     :catch_2
     move-exception v8
 
     goto :goto_2
 
-    .end local v1           #e:Ljava/lang/Exception;
+    .end local v1    # "e":Ljava/lang/Exception;
     :catch_3
     move-exception v9
 
@@ -368,7 +368,7 @@
 
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 14
-    .parameter "savedInstanceState"
+    .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
     .line 74
@@ -380,13 +380,13 @@
     invoke-direct {v9, p0}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;)V
 
     .line 78
-    .local v9, rl:Landroid/widget/RelativeLayout;
+    .local v9, "rl":Landroid/widget/RelativeLayout;
     new-instance v10, Landroid/webkit/WebView;
 
     invoke-direct {v10, p0}, Landroid/webkit/WebView;-><init>(Landroid/content/Context;)V
 
     .line 80
-    .local v10, webview:Landroid/webkit/WebView;
+    .local v10, "webview":Landroid/webkit/WebView;
     invoke-virtual {p0}, Lcom/tapjoy/mraid/view/Browser;->getWindow()Landroid/view/Window;
 
     move-result-object v11
@@ -412,13 +412,13 @@
     move-result-object v5
 
     .line 87
-    .local v5, i:Landroid/content/Intent;
+    .local v5, "i":Landroid/content/Intent;
     new-instance v2, Landroid/widget/LinearLayout;
 
     invoke-direct {v2, p0}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
 
     .line 88
-    .local v2, bll:Landroid/widget/LinearLayout;
+    .local v2, "bll":Landroid/widget/LinearLayout;
     const/4 v11, 0x0
 
     invoke-virtual {v2, v11}, Landroid/widget/LinearLayout;->setOrientation(I)V
@@ -429,7 +429,7 @@
     invoke-virtual {v2, v11}, Landroid/widget/LinearLayout;->setId(I)V
 
     .line 90
-    const/high16 v11, 0x42c8
+    const/high16 v11, 0x42c80000
 
     invoke-virtual {v2, v11}, Landroid/widget/LinearLayout;->setWeightSum(F)V
 
@@ -443,7 +443,7 @@
     invoke-direct {v6, v11, v12}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
     .line 94
-    .local v6, lp:Landroid/widget/RelativeLayout$LayoutParams;
+    .local v6, "lp":Landroid/widget/RelativeLayout$LayoutParams;
     const/4 v11, 0x2
 
     const/16 v12, 0x64
@@ -462,7 +462,7 @@
     invoke-direct {v1, v11}, Landroid/graphics/drawable/BitmapDrawable;-><init>(Landroid/graphics/Bitmap;)V
 
     .line 97
-    .local v1, bkgDrawable:Landroid/graphics/drawable/BitmapDrawable;
+    .local v1, "bkgDrawable":Landroid/graphics/drawable/BitmapDrawable;
     invoke-virtual {v2, v1}, Landroid/widget/LinearLayout;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
     .line 98
@@ -471,7 +471,7 @@
     .line 100
     new-instance v6, Landroid/widget/RelativeLayout$LayoutParams;
 
-    .end local v6           #lp:Landroid/widget/RelativeLayout$LayoutParams;
+    .end local v6    # "lp":Landroid/widget/RelativeLayout$LayoutParams;
     const/4 v11, -0x1
 
     const/4 v12, -0x2
@@ -479,7 +479,7 @@
     invoke-direct {v6, v11, v12}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
     .line 103
-    .restart local v6       #lp:Landroid/widget/RelativeLayout$LayoutParams;
+    .restart local v6    # "lp":Landroid/widget/RelativeLayout$LayoutParams;
     const/16 v11, 0xc
 
     invoke-virtual {v6, v11}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
@@ -497,8 +497,8 @@
     invoke-direct {v7, v11, v12}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
 
     .line 109
-    .local v7, lp2:Landroid/widget/LinearLayout$LayoutParams;
-    const/high16 v11, 0x41c8
+    .local v7, "lp2":Landroid/widget/LinearLayout$LayoutParams;
+    const/high16 v11, 0x41c80000
 
     iput v11, v7, Landroid/widget/LinearLayout$LayoutParams;->weight:F
 
@@ -513,7 +513,7 @@
     invoke-direct {v0, p0}, Landroid/widget/ImageButton;-><init>(Landroid/content/Context;)V
 
     .line 113
-    .local v0, backButton:Landroid/widget/ImageButton;
+    .local v0, "backButton":Landroid/widget/ImageButton;
     invoke-virtual {p0}, Lcom/tapjoy/mraid/view/Browser;->getResources()Landroid/content/res/Resources;
 
     move-result-object v11
@@ -573,7 +573,7 @@
     invoke-direct {v4, p0}, Landroid/widget/ImageButton;-><init>(Landroid/content/Context;)V
 
     .line 135
-    .local v4, forwardButton:Landroid/widget/ImageButton;
+    .local v4, "forwardButton":Landroid/widget/ImageButton;
     invoke-virtual {p0}, Lcom/tapjoy/mraid/view/Browser;->getResources()Landroid/content/res/Resources;
 
     move-result-object v11
@@ -594,7 +594,7 @@
     .line 137
     new-instance v7, Landroid/widget/LinearLayout$LayoutParams;
 
-    .end local v7           #lp2:Landroid/widget/LinearLayout$LayoutParams;
+    .end local v7    # "lp2":Landroid/widget/LinearLayout$LayoutParams;
     const/4 v11, -0x2
 
     const/4 v12, -0x1
@@ -602,8 +602,8 @@
     invoke-direct {v7, v11, v12}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
 
     .line 140
-    .restart local v7       #lp2:Landroid/widget/LinearLayout$LayoutParams;
-    const/high16 v11, 0x41c8
+    .restart local v7    # "lp2":Landroid/widget/LinearLayout$LayoutParams;
+    const/high16 v11, 0x41c80000
 
     iput v11, v7, Landroid/widget/LinearLayout$LayoutParams;->weight:F
 
@@ -645,7 +645,7 @@
     invoke-direct {v8, p0}, Landroid/widget/ImageButton;-><init>(Landroid/content/Context;)V
 
     .line 156
-    .local v8, refreshButton:Landroid/widget/ImageButton;
+    .local v8, "refreshButton":Landroid/widget/ImageButton;
     const-string v11, "iVBORw0KGgoAAAANSUhEUgAAABMAAAAUCAYAAABvVQZ0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJ\nbWFnZVJlYWR5ccllPAAAA2NJREFUeNqMVF1Ik1EYPm7TpsIca84pGs6VrboYaeRPpFgXKUzBH4S8\nsLoIMVCpRERCAgfSZXpR2ZVJCEIgaIQm+MdCIkXRTTTnQG0qorCFm21zp+f9+IQ5NHvh4eP7vnOe\n877Ped5Xyv4dEYAMSK2rq/tkt9tlXq83Cu9BwC8+zyQ4B5wHLgAG4M7IyAgfHR31FhcXv8F7EXAZ\nUADSo43SMCLKQimS0GKDTqfLys7OvlldXZ2Vnp4uy8nJuZGWlmacnp52ejyeANZ4AB/AQ4kigSQg\nT6/XPzebzd8pk4WFBb6+vs6xkVP4/X6+s7PDx8bGPJWVlWasTxGTOJZRInC3oaHh88zMjLDh4OCA\n+3w+4RkIBPhRHB4e8u3tbd7f38+rqqpM2CcJ1YhKu4Vsvq2urnKIzN1uN3c4HHxqaso1Pj7+Y3d3\nVyAicqfTyaHhenNzc1Eo0VF5F2traz+srKwIRFtbW3xoaMjW1tZ2X9Q12WazcZfLxefn53lXV9fb\niooKjZjIsVAkJSXdIw1IFyqvt7d3pLy8PCFksXJgYIAPDg5aGxsbs8OzCY2E+vr692tra4LIFovl\nd15eXmrYqbKmpiZzuNAnRXJ3d7eVStjc3OQo7ZXos7OC5ImjZAA1EE0nSbRarUYulzNoxeCfb/gW\n+A+yGEAvuoC8ZieyoFKpVEulUgYPMVy3Qyzn8IwuiYWNXl5FQB4/9r0gIf+gxG34iEVFRbH8/HwS\nOPakmwovMTMz81JZWZm+oKDAkJiYGENk3o2NjSVYgsXFxbHc3NxCMXX5KYRkFRU2XzEajQZUxSQS\nCdvb2/tJZAfLy8uDyI4pFApmMpkKNRpNJr7rxEaWiaS0NhrQAuk1NTVPoDWDiRmS2RweHrYK9aO0\nFPjMvb+/z3EC7+vr+6VWqx/j321xauhEsa8DJjR9NxIQDI6xxFtbW58emx4tLS0PFhcXhT4kwomJ\nCS/67qNKparH/4fAo4yMDHNHR8c8EdDB1J8w+NRJVors7Ox8t7S0JCwkIH1utVr57Owsn5ub49Ru\ndBAdSC2HG7SVlJRoT7ssaXt7e+3k5KSLiIiQJgRFMBgUmpzIqE97enq+lJaWhrbciYwRKE+NW32G\nIVgcHx9/TSaTMfAxkLsx2ywge40J8zV8bP8VYACAQuluULZPjQAAAABJRU5ErkJggg=="
 
     invoke-direct {p0, v11}, Lcom/tapjoy/mraid/view/Browser;->getDensityScaledBitmap(Ljava/lang/String;)Landroid/graphics/Bitmap;
@@ -670,7 +670,7 @@
     .line 158
     new-instance v7, Landroid/widget/LinearLayout$LayoutParams;
 
-    .end local v7           #lp2:Landroid/widget/LinearLayout$LayoutParams;
+    .end local v7    # "lp2":Landroid/widget/LinearLayout$LayoutParams;
     const/4 v11, -0x2
 
     const/4 v12, -0x2
@@ -678,8 +678,8 @@
     invoke-direct {v7, v11, v12}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
 
     .line 161
-    .restart local v7       #lp2:Landroid/widget/LinearLayout$LayoutParams;
-    const/high16 v11, 0x41c8
+    .restart local v7    # "lp2":Landroid/widget/LinearLayout$LayoutParams;
+    const/high16 v11, 0x41c80000
 
     iput v11, v7, Landroid/widget/LinearLayout$LayoutParams;->weight:F
 
@@ -721,7 +721,7 @@
     invoke-direct {v3, p0}, Landroid/widget/ImageButton;-><init>(Landroid/content/Context;)V
 
     .line 180
-    .local v3, closeButton:Landroid/widget/ImageButton;
+    .local v3, "closeButton":Landroid/widget/ImageButton;
     invoke-virtual {p0}, Lcom/tapjoy/mraid/view/Browser;->getResources()Landroid/content/res/Resources;
 
     move-result-object v11
@@ -737,7 +737,7 @@
     .line 181
     new-instance v7, Landroid/widget/LinearLayout$LayoutParams;
 
-    .end local v7           #lp2:Landroid/widget/LinearLayout$LayoutParams;
+    .end local v7    # "lp2":Landroid/widget/LinearLayout$LayoutParams;
     const/4 v11, -0x2
 
     const/4 v12, -0x2
@@ -745,8 +745,8 @@
     invoke-direct {v7, v11, v12}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
 
     .line 184
-    .restart local v7       #lp2:Landroid/widget/LinearLayout$LayoutParams;
-    const/high16 v11, 0x41c8
+    .restart local v7    # "lp2":Landroid/widget/LinearLayout$LayoutParams;
+    const/high16 v11, 0x41c80000
 
     iput v11, v7, Landroid/widget/LinearLayout$LayoutParams;->weight:F
 

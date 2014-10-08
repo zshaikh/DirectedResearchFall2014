@@ -56,7 +56,7 @@
 
 .method public static asInterface(Landroid/os/IBinder;)Lcom/android/vending/billing/IInAppBillingService;
     .locals 2
-    .parameter "obj"
+    .param p0, "obj"    # Landroid/os/IBinder;
 
     .prologue
     .line 47
@@ -78,7 +78,7 @@
     move-result-object v0
 
     .line 51
-    .local v0, iin:Landroid/os/IInterface;
+    .local v0, "iin":Landroid/os/IInterface;
     if-eqz v0, :cond_1
 
     instance-of v1, v0, Lcom/android/vending/billing/IInAppBillingService;
@@ -88,13 +88,13 @@
     .line 52
     check-cast v0, Lcom/android/vending/billing/IInAppBillingService;
 
-    .end local v0           #iin:Landroid/os/IInterface;
+    .end local v0    # "iin":Landroid/os/IInterface;
     move-object v1, v0
 
     goto :goto_0
 
     .line 54
-    .restart local v0       #iin:Landroid/os/IInterface;
+    .restart local v0    # "iin":Landroid/os/IInterface;
     :cond_1
     new-instance v1, Lcom/android/vending/billing/IInAppBillingService$Stub$Proxy;
 
@@ -115,10 +115,10 @@
 
 .method public onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
     .locals 10
-    .parameter "code"
-    .parameter "data"
-    .parameter "reply"
-    .parameter "flags"
+    .param p1, "code"    # I
+    .param p2, "data"    # Landroid/os/Parcel;
+    .param p3, "reply"    # Landroid/os/Parcel;
+    .param p4, "flags"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;
@@ -166,25 +166,25 @@
     move-result v1
 
     .line 75
-    .local v1, _arg0:I
+    .local v1, "_arg0":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v2
 
     .line 77
-    .local v2, _arg1:Ljava/lang/String;
+    .local v2, "_arg1":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
     .line 78
-    .local v3, _arg2:Ljava/lang/String;
+    .local v3, "_arg2":Ljava/lang/String;
     invoke-virtual {p0, v1, v2, v3}, Lcom/android/vending/billing/IInAppBillingService$Stub;->isBillingSupported(ILjava/lang/String;Ljava/lang/String;)I
 
     move-result v6
 
     .line 79
-    .local v6, _result:I
+    .local v6, "_result":I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     .line 80
@@ -196,10 +196,10 @@
     goto :goto_0
 
     .line 85
-    .end local v1           #_arg0:I
-    .end local v2           #_arg1:Ljava/lang/String;
-    .end local v3           #_arg2:Ljava/lang/String;
-    .end local v6           #_result:I
+    .end local v1    # "_arg0":I
+    .end local v2    # "_arg1":Ljava/lang/String;
+    .end local v3    # "_arg2":Ljava/lang/String;
+    .end local v6    # "_result":I
     :sswitch_2
     const-string v0, "com.android.vending.billing.IInAppBillingService"
 
@@ -211,19 +211,19 @@
     move-result v1
 
     .line 89
-    .restart local v1       #_arg0:I
+    .restart local v1    # "_arg0":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v2
 
     .line 91
-    .restart local v2       #_arg1:Ljava/lang/String;
+    .restart local v2    # "_arg1":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
     .line 93
-    .restart local v3       #_arg2:Ljava/lang/String;
+    .restart local v3    # "_arg2":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -240,14 +240,14 @@
     check-cast v4, Landroid/os/Bundle;
 
     .line 99
-    .local v4, _arg3:Landroid/os/Bundle;
+    .local v4, "_arg3":Landroid/os/Bundle;
     :goto_1
     invoke-virtual {p0, v1, v2, v3, v4}, Lcom/android/vending/billing/IInAppBillingService$Stub;->getSkuDetails(ILjava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;
 
     move-result-object v6
 
     .line 100
-    .local v6, _result:Landroid/os/Bundle;
+    .local v6, "_result":Landroid/os/Bundle;
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     .line 101
@@ -266,27 +266,27 @@
     goto :goto_0
 
     .line 97
-    .end local v4           #_arg3:Landroid/os/Bundle;
-    .end local v6           #_result:Landroid/os/Bundle;
+    .end local v4    # "_arg3":Landroid/os/Bundle;
+    .end local v6    # "_result":Landroid/os/Bundle;
     :cond_0
     const/4 v4, 0x0
 
-    .restart local v4       #_arg3:Landroid/os/Bundle;
+    .restart local v4    # "_arg3":Landroid/os/Bundle;
     goto :goto_1
 
     .line 106
-    .restart local v6       #_result:Landroid/os/Bundle;
+    .restart local v6    # "_result":Landroid/os/Bundle;
     :cond_1
     invoke-virtual {p3, v9}, Landroid/os/Parcel;->writeInt(I)V
 
     goto :goto_2
 
     .line 112
-    .end local v1           #_arg0:I
-    .end local v2           #_arg1:Ljava/lang/String;
-    .end local v3           #_arg2:Ljava/lang/String;
-    .end local v4           #_arg3:Landroid/os/Bundle;
-    .end local v6           #_result:Landroid/os/Bundle;
+    .end local v1    # "_arg0":I
+    .end local v2    # "_arg1":Ljava/lang/String;
+    .end local v3    # "_arg2":Ljava/lang/String;
+    .end local v4    # "_arg3":Landroid/os/Bundle;
+    .end local v6    # "_result":Landroid/os/Bundle;
     :sswitch_3
     const-string v0, "com.android.vending.billing.IInAppBillingService"
 
@@ -298,30 +298,30 @@
     move-result v1
 
     .line 116
-    .restart local v1       #_arg0:I
+    .restart local v1    # "_arg0":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v2
 
     .line 118
-    .restart local v2       #_arg1:Ljava/lang/String;
+    .restart local v2    # "_arg1":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
     .line 120
-    .restart local v3       #_arg2:Ljava/lang/String;
+    .restart local v3    # "_arg2":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v4
 
     .line 122
-    .local v4, _arg3:Ljava/lang/String;
+    .local v4, "_arg3":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v5
 
-    .local v5, _arg4:Ljava/lang/String;
+    .local v5, "_arg4":Ljava/lang/String;
     move-object v0, p0
 
     .line 123
@@ -330,7 +330,7 @@
     move-result-object v6
 
     .line 124
-    .restart local v6       #_result:Landroid/os/Bundle;
+    .restart local v6    # "_result":Landroid/os/Bundle;
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     .line 125
@@ -355,12 +355,12 @@
     goto :goto_3
 
     .line 136
-    .end local v1           #_arg0:I
-    .end local v2           #_arg1:Ljava/lang/String;
-    .end local v3           #_arg2:Ljava/lang/String;
-    .end local v4           #_arg3:Ljava/lang/String;
-    .end local v5           #_arg4:Ljava/lang/String;
-    .end local v6           #_result:Landroid/os/Bundle;
+    .end local v1    # "_arg0":I
+    .end local v2    # "_arg1":Ljava/lang/String;
+    .end local v3    # "_arg2":Ljava/lang/String;
+    .end local v4    # "_arg3":Ljava/lang/String;
+    .end local v5    # "_arg4":Ljava/lang/String;
+    .end local v6    # "_result":Landroid/os/Bundle;
     :sswitch_4
     const-string v0, "com.android.vending.billing.IInAppBillingService"
 
@@ -372,31 +372,31 @@
     move-result v1
 
     .line 140
-    .restart local v1       #_arg0:I
+    .restart local v1    # "_arg0":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v2
 
     .line 142
-    .restart local v2       #_arg1:Ljava/lang/String;
+    .restart local v2    # "_arg1":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
     .line 144
-    .restart local v3       #_arg2:Ljava/lang/String;
+    .restart local v3    # "_arg2":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v4
 
     .line 145
-    .restart local v4       #_arg3:Ljava/lang/String;
+    .restart local v4    # "_arg3":Ljava/lang/String;
     invoke-virtual {p0, v1, v2, v3, v4}, Lcom/android/vending/billing/IInAppBillingService$Stub;->getPurchases(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/os/Bundle;
 
     move-result-object v6
 
     .line 146
-    .restart local v6       #_result:Landroid/os/Bundle;
+    .restart local v6    # "_result":Landroid/os/Bundle;
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     .line 147
@@ -421,11 +421,11 @@
     goto :goto_4
 
     .line 158
-    .end local v1           #_arg0:I
-    .end local v2           #_arg1:Ljava/lang/String;
-    .end local v3           #_arg2:Ljava/lang/String;
-    .end local v4           #_arg3:Ljava/lang/String;
-    .end local v6           #_result:Landroid/os/Bundle;
+    .end local v1    # "_arg0":I
+    .end local v2    # "_arg1":Ljava/lang/String;
+    .end local v3    # "_arg2":Ljava/lang/String;
+    .end local v4    # "_arg3":Ljava/lang/String;
+    .end local v6    # "_result":Landroid/os/Bundle;
     :sswitch_5
     const-string v0, "com.android.vending.billing.IInAppBillingService"
 
@@ -437,25 +437,25 @@
     move-result v1
 
     .line 162
-    .restart local v1       #_arg0:I
+    .restart local v1    # "_arg0":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v2
 
     .line 164
-    .restart local v2       #_arg1:Ljava/lang/String;
+    .restart local v2    # "_arg1":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
     .line 165
-    .restart local v3       #_arg2:Ljava/lang/String;
+    .restart local v3    # "_arg2":Ljava/lang/String;
     invoke-virtual {p0, v1, v2, v3}, Lcom/android/vending/billing/IInAppBillingService$Stub;->consumePurchase(ILjava/lang/String;Ljava/lang/String;)I
 
     move-result v6
 
     .line 166
-    .local v6, _result:I
+    .local v6, "_result":I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     .line 167

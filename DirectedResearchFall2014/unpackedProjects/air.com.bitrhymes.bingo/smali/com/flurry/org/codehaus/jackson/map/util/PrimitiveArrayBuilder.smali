@@ -64,7 +64,7 @@
 
     .prologue
     .line 45
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/util/PrimitiveArrayBuilder;,"Lcom/flurry/org/codehaus/jackson/map/util/PrimitiveArrayBuilder<TT;>;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/util/PrimitiveArrayBuilder;, "Lcom/flurry/org/codehaus/jackson/map/util/PrimitiveArrayBuilder<TT;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -85,7 +85,7 @@
 
     .prologue
     .line 120
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/util/PrimitiveArrayBuilder;,"Lcom/flurry/org/codehaus/jackson/map/util/PrimitiveArrayBuilder<TT;>;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/util/PrimitiveArrayBuilder;, "Lcom/flurry/org/codehaus/jackson/map/util/PrimitiveArrayBuilder<TT;>;"
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/map/util/PrimitiveArrayBuilder;->_bufferTail:Lcom/flurry/org/codehaus/jackson/map/util/PrimitiveArrayBuilder$Node;
 
     if-eqz v0, :cond_0
@@ -118,8 +118,7 @@
 
 .method public final appendCompletedChunk(Ljava/lang/Object;I)Ljava/lang/Object;
     .locals 3
-    .parameter
-    .parameter "fullChunkLength"
+    .param p2, "fullChunkLength"    # I
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;I)TT;"
@@ -128,14 +127,14 @@
 
     .prologue
     .line 65
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/util/PrimitiveArrayBuilder;,"Lcom/flurry/org/codehaus/jackson/map/util/PrimitiveArrayBuilder<TT;>;"
-    .local p1, fullChunk:Ljava/lang/Object;,"TT;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/util/PrimitiveArrayBuilder;, "Lcom/flurry/org/codehaus/jackson/map/util/PrimitiveArrayBuilder<TT;>;"
+    .local p1, "fullChunk":Ljava/lang/Object;, "TT;"
     new-instance v0, Lcom/flurry/org/codehaus/jackson/map/util/PrimitiveArrayBuilder$Node;
 
     invoke-direct {v0, p1, p2}, Lcom/flurry/org/codehaus/jackson/map/util/PrimitiveArrayBuilder$Node;-><init>(Ljava/lang/Object;I)V
 
     .line 66
-    .local v0, next:Lcom/flurry/org/codehaus/jackson/map/util/PrimitiveArrayBuilder$Node;,"Lcom/flurry/org/codehaus/jackson/map/util/PrimitiveArrayBuilder$Node<TT;>;"
+    .local v0, "next":Lcom/flurry/org/codehaus/jackson/map/util/PrimitiveArrayBuilder$Node;, "Lcom/flurry/org/codehaus/jackson/map/util/PrimitiveArrayBuilder$Node<TT;>;"
     iget-object v2, p0, Lcom/flurry/org/codehaus/jackson/map/util/PrimitiveArrayBuilder;->_bufferHead:Lcom/flurry/org/codehaus/jackson/map/util/PrimitiveArrayBuilder$Node;
 
     if-nez v2, :cond_0
@@ -157,7 +156,7 @@
     move v1, p2
 
     .line 75
-    .local v1, nextLen:I
+    .local v1, "nextLen":I
     const/16 v2, 0x4000
 
     if-ge v1, v2, :cond_1
@@ -174,7 +173,7 @@
     return-object v2
 
     .line 69
-    .end local v1           #nextLen:I
+    .end local v1    # "nextLen":I
     :cond_0
     iget-object v2, p0, Lcom/flurry/org/codehaus/jackson/map/util/PrimitiveArrayBuilder;->_bufferTail:Lcom/flurry/org/codehaus/jackson/map/util/PrimitiveArrayBuilder$Node;
 
@@ -186,7 +185,7 @@
     goto :goto_0
 
     .line 78
-    .restart local v1       #nextLen:I
+    .restart local v1    # "nextLen":I
     :cond_1
     shr-int/lit8 v2, v1, 0x2
 
@@ -197,8 +196,7 @@
 
 .method public completeAndClearBuffer(Ljava/lang/Object;I)Ljava/lang/Object;
     .locals 7
-    .parameter
-    .parameter "lastChunkEntries"
+    .param p2, "lastChunkEntries"    # I
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;I)TT;"
@@ -207,27 +205,27 @@
 
     .prologue
     .line 85
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/util/PrimitiveArrayBuilder;,"Lcom/flurry/org/codehaus/jackson/map/util/PrimitiveArrayBuilder<TT;>;"
-    .local p1, lastChunk:Ljava/lang/Object;,"TT;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/util/PrimitiveArrayBuilder;, "Lcom/flurry/org/codehaus/jackson/map/util/PrimitiveArrayBuilder<TT;>;"
+    .local p1, "lastChunk":Ljava/lang/Object;, "TT;"
     iget v4, p0, Lcom/flurry/org/codehaus/jackson/map/util/PrimitiveArrayBuilder;->_bufferedEntryCount:I
 
     add-int v3, p2, v4
 
     .line 86
-    .local v3, totalSize:I
+    .local v3, "totalSize":I
     invoke-virtual {p0, v3}, Lcom/flurry/org/codehaus/jackson/map/util/PrimitiveArrayBuilder;->_constructArray(I)Ljava/lang/Object;
 
     move-result-object v2
 
     .line 88
-    .local v2, resultArray:Ljava/lang/Object;,"TT;"
+    .local v2, "resultArray":Ljava/lang/Object;, "TT;"
     const/4 v1, 0x0
 
     .line 90
-    .local v1, ptr:I
+    .local v1, "ptr":I
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/map/util/PrimitiveArrayBuilder;->_bufferHead:Lcom/flurry/org/codehaus/jackson/map/util/PrimitiveArrayBuilder$Node;
 
-    .local v0, n:Lcom/flurry/org/codehaus/jackson/map/util/PrimitiveArrayBuilder$Node;,"Lcom/flurry/org/codehaus/jackson/map/util/PrimitiveArrayBuilder$Node<TT;>;"
+    .local v0, "n":Lcom/flurry/org/codehaus/jackson/map/util/PrimitiveArrayBuilder$Node;, "Lcom/flurry/org/codehaus/jackson/map/util/PrimitiveArrayBuilder$Node<TT;>;"
     :goto_0
     if-eqz v0, :cond_0
 
@@ -305,7 +303,7 @@
 
     .prologue
     .line 55
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/util/PrimitiveArrayBuilder;,"Lcom/flurry/org/codehaus/jackson/map/util/PrimitiveArrayBuilder<TT;>;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/util/PrimitiveArrayBuilder;, "Lcom/flurry/org/codehaus/jackson/map/util/PrimitiveArrayBuilder<TT;>;"
     invoke-virtual {p0}, Lcom/flurry/org/codehaus/jackson/map/util/PrimitiveArrayBuilder;->_reset()V
 
     .line 56

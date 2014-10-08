@@ -40,8 +40,6 @@
 # direct methods
 .method public constructor <init>(Lcom/vungle/sdk/VungleConnectionHandler;I)V
     .locals 3
-    .parameter
-    .parameter
 
     .prologue
     .line 437

@@ -21,9 +21,6 @@
 # direct methods
 .method private constructor <init>(Ljava/lang/Class;[Ljava/lang/Enum;Ljava/util/HashMap;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -38,10 +35,10 @@
 
     .prologue
     .line 13
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/deser/EnumResolver;,"Lcom/flurry/org/codehaus/jackson/map/deser/EnumResolver<TT;>;"
-    .local p1, enumClass:Ljava/lang/Class;,"Ljava/lang/Class<TT;>;"
-    .local p2, enums:[Ljava/lang/Enum;,"[TT;"
-    .local p3, map:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;TT;>;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/deser/EnumResolver;, "Lcom/flurry/org/codehaus/jackson/map/deser/EnumResolver<TT;>;"
+    .local p1, "enumClass":Ljava/lang/Class;, "Ljava/lang/Class<TT;>;"
+    .local p2, "enums":[Ljava/lang/Enum;, "[TT;"
+    .local p3, "map":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;TT;>;"
     invoke-direct {p0, p1, p2, p3}, Lcom/flurry/org/codehaus/jackson/map/util/EnumResolver;-><init>(Ljava/lang/Class;[Ljava/lang/Enum;Ljava/util/HashMap;)V
 
     .line 14

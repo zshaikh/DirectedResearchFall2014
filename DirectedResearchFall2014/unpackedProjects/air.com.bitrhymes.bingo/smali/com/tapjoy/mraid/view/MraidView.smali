@@ -222,15 +222,15 @@
 
     .line 104
     :array_0
-    .array-data 0x4
-        0x1ft 0x1t 0x1t 0x1t
-        0x20t 0x1t 0x1t 0x1t
+    .array-data 4
+        0x101011f
+        0x1010120
     .end array-data
 .end method
 
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 3
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     const/4 v2, 0x0
@@ -313,8 +313,8 @@
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 8
-    .parameter "context"
-    .parameter "set"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "set"    # Landroid/util/AttributeSet;
 
     .prologue
     const/4 v4, 0x0
@@ -402,19 +402,19 @@
     move-result-object v0
 
     .line 596
-    .local v0, a:Landroid/content/res/TypedArray;
+    .local v0, "a":Landroid/content/res/TypedArray;
     invoke-virtual {v0, v5, v6}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
     move-result v2
 
     .line 597
-    .local v2, w:I
+    .local v2, "w":I
     invoke-virtual {v0, v7, v6}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
     move-result v1
 
     .line 598
-    .local v1, h:I
+    .local v1, "h":I
     if-lez v2, :cond_0
 
     if-lez v1, :cond_0
@@ -434,8 +434,8 @@
 
 .method public constructor <init>(Landroid/content/Context;Lcom/tapjoy/mraid/listener/MraidViewListener;)V
     .locals 3
-    .parameter "context"
-    .parameter "listener"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "listener"    # Lcom/tapjoy/mraid/listener/MraidViewListener;
 
     .prologue
     const/4 v2, 0x0
@@ -521,8 +521,8 @@
 
 .method static synthetic access$001(Lcom/tapjoy/mraid/view/MraidView;Ljava/lang/String;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
+    .param p0, "x0"    # Lcom/tapjoy/mraid/view/MraidView;
+    .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
     .line 78
@@ -533,8 +533,8 @@
 
 .method static synthetic access$1000(Lcom/tapjoy/mraid/view/MraidView;Landroid/os/Bundle;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
+    .param p0, "x0"    # Lcom/tapjoy/mraid/view/MraidView;
+    .param p1, "x1"    # Landroid/os/Bundle;
 
     .prologue
     .line 78
@@ -545,8 +545,8 @@
 
 .method static synthetic access$1102(Lcom/tapjoy/mraid/view/MraidView;I)I
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
+    .param p0, "x0"    # Lcom/tapjoy/mraid/view/MraidView;
+    .param p1, "x1"    # I
 
     .prologue
     .line 78
@@ -557,8 +557,8 @@
 
 .method static synthetic access$1202(Lcom/tapjoy/mraid/view/MraidView;I)I
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
+    .param p0, "x0"    # Lcom/tapjoy/mraid/view/MraidView;
+    .param p1, "x1"    # I
 
     .prologue
     .line 78
@@ -569,7 +569,7 @@
 
 .method static synthetic access$1300(Lcom/tapjoy/mraid/view/MraidView;)Lcom/tapjoy/mraid/controller/Utility;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/tapjoy/mraid/view/MraidView;
 
     .prologue
     .line 78
@@ -580,8 +580,8 @@
 
 .method static synthetic access$1402(Lcom/tapjoy/mraid/view/MraidView;Landroid/webkit/WebChromeClient$CustomViewCallback;)Landroid/webkit/WebChromeClient$CustomViewCallback;
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
+    .param p0, "x0"    # Lcom/tapjoy/mraid/view/MraidView;
+    .param p1, "x1"    # Landroid/webkit/WebChromeClient$CustomViewCallback;
 
     .prologue
     .line 78
@@ -592,7 +592,7 @@
 
 .method static synthetic access$1500(Lcom/tapjoy/mraid/view/MraidView;)Landroid/content/Context;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/tapjoy/mraid/view/MraidView;
 
     .prologue
     .line 78
@@ -603,7 +603,7 @@
 
 .method static synthetic access$1600(Lcom/tapjoy/mraid/view/MraidView;)Landroid/widget/VideoView;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/tapjoy/mraid/view/MraidView;
 
     .prologue
     .line 78
@@ -614,8 +614,8 @@
 
 .method static synthetic access$1602(Lcom/tapjoy/mraid/view/MraidView;Landroid/widget/VideoView;)Landroid/widget/VideoView;
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
+    .param p0, "x0"    # Lcom/tapjoy/mraid/view/MraidView;
+    .param p1, "x1"    # Landroid/widget/VideoView;
 
     .prologue
     .line 78
@@ -626,7 +626,7 @@
 
 .method static synthetic access$1700(Lcom/tapjoy/mraid/view/MraidView;)Landroid/widget/RelativeLayout;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/tapjoy/mraid/view/MraidView;
 
     .prologue
     .line 78
@@ -637,8 +637,8 @@
 
 .method static synthetic access$1702(Lcom/tapjoy/mraid/view/MraidView;Landroid/widget/RelativeLayout;)Landroid/widget/RelativeLayout;
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
+    .param p0, "x0"    # Lcom/tapjoy/mraid/view/MraidView;
+    .param p1, "x1"    # Landroid/widget/RelativeLayout;
 
     .prologue
     .line 78
@@ -649,7 +649,7 @@
 
 .method static synthetic access$1800(Lcom/tapjoy/mraid/view/MraidView;)Landroid/widget/ProgressBar;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/tapjoy/mraid/view/MraidView;
 
     .prologue
     .line 78
@@ -660,8 +660,8 @@
 
 .method static synthetic access$1802(Lcom/tapjoy/mraid/view/MraidView;Landroid/widget/ProgressBar;)Landroid/widget/ProgressBar;
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
+    .param p0, "x0"    # Lcom/tapjoy/mraid/view/MraidView;
+    .param p1, "x1"    # Landroid/widget/ProgressBar;
 
     .prologue
     .line 78
@@ -672,7 +672,7 @@
 
 .method static synthetic access$1900(Lcom/tapjoy/mraid/view/MraidView;)Z
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/tapjoy/mraid/view/MraidView;
 
     .prologue
     .line 78
@@ -683,7 +683,7 @@
 
 .method static synthetic access$200(Lcom/tapjoy/mraid/view/MraidView;)Lcom/tapjoy/mraid/listener/MraidViewListener;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/tapjoy/mraid/view/MraidView;
 
     .prologue
     .line 78
@@ -694,7 +694,7 @@
 
 .method static synthetic access$2000(Lcom/tapjoy/mraid/view/MraidView;)V
     .locals 0
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/tapjoy/mraid/view/MraidView;
 
     .prologue
     .line 78
@@ -705,7 +705,7 @@
 
 .method static synthetic access$300(Lcom/tapjoy/mraid/view/MraidView;)Lcom/tapjoy/mraid/view/MraidView$VIEW_STATE;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/tapjoy/mraid/view/MraidView;
 
     .prologue
     .line 78
@@ -716,8 +716,8 @@
 
 .method static synthetic access$302(Lcom/tapjoy/mraid/view/MraidView;Lcom/tapjoy/mraid/view/MraidView$VIEW_STATE;)Lcom/tapjoy/mraid/view/MraidView$VIEW_STATE;
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
+    .param p0, "x0"    # Lcom/tapjoy/mraid/view/MraidView;
+    .param p1, "x1"    # Lcom/tapjoy/mraid/view/MraidView$VIEW_STATE;
 
     .prologue
     .line 78
@@ -728,8 +728,8 @@
 
 .method static synthetic access$400(Lcom/tapjoy/mraid/view/MraidView;Ljava/lang/String;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
+    .param p0, "x0"    # Lcom/tapjoy/mraid/view/MraidView;
+    .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
     .line 78
@@ -740,7 +740,7 @@
 
 .method static synthetic access$500(Lcom/tapjoy/mraid/view/MraidView;)F
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/tapjoy/mraid/view/MraidView;
 
     .prologue
     .line 78
@@ -751,7 +751,7 @@
 
 .method static synthetic access$600(Lcom/tapjoy/mraid/view/MraidView;)Lcom/tapjoy/mraid/view/MraidView$PLACEMENT_TYPE;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/tapjoy/mraid/view/MraidView;
 
     .prologue
     .line 78
@@ -762,7 +762,7 @@
 
 .method static synthetic access$700(Lcom/tapjoy/mraid/view/MraidView;)Lcom/tapjoy/mraid/view/MraidView$customCloseState;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/tapjoy/mraid/view/MraidView;
 
     .prologue
     .line 78
@@ -773,7 +773,7 @@
 
 .method static synthetic access$800(Lcom/tapjoy/mraid/view/MraidView;)V
     .locals 0
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/tapjoy/mraid/view/MraidView;
 
     .prologue
     .line 78
@@ -784,7 +784,7 @@
 
 .method static synthetic access$900(Lcom/tapjoy/mraid/view/MraidView;)V
     .locals 0
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/tapjoy/mraid/view/MraidView;
 
     .prologue
     .line 78
@@ -795,7 +795,7 @@
 
 .method private changeContentArea(Lcom/tapjoy/mraid/controller/Abstract$Dimensions;)Landroid/widget/FrameLayout;
     .locals 13
-    .parameter "d"
+    .param p1, "d"    # Lcom/tapjoy/mraid/controller/Abstract$Dimensions;
 
     .prologue
     const/4 v12, 0x0
@@ -816,7 +816,7 @@
     check-cast v2, Landroid/widget/FrameLayout;
 
     .line 833
-    .local v2, contentView:Landroid/widget/FrameLayout;
+    .local v2, "contentView":Landroid/widget/FrameLayout;
     invoke-virtual {p0}, Lcom/tapjoy/mraid/view/MraidView;->getParent()Landroid/view/ViewParent;
 
     move-result-object v7
@@ -824,7 +824,7 @@
     check-cast v7, Landroid/view/ViewGroup;
 
     .line 834
-    .local v7, parent:Landroid/view/ViewGroup;
+    .local v7, "parent":Landroid/view/ViewGroup;
     new-instance v4, Landroid/widget/FrameLayout$LayoutParams;
 
     iget v9, p1, Lcom/tapjoy/mraid/controller/Abstract$Dimensions;->width:I
@@ -834,7 +834,7 @@
     invoke-direct {v4, v9, v10}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
 
     .line 836
-    .local v4, fl:Landroid/widget/FrameLayout$LayoutParams;
+    .local v4, "fl":Landroid/widget/FrameLayout$LayoutParams;
     iget v9, p1, Lcom/tapjoy/mraid/controller/Abstract$Dimensions;->x:I
 
     iput v9, v4, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
@@ -848,13 +848,13 @@
     const/4 v5, 0x0
 
     .line 839
-    .local v5, index:I
+    .local v5, "index":I
     invoke-virtual {v7}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v3
 
     .line 840
-    .local v3, count:I
+    .local v3, "count":I
     const/4 v5, 0x0
 
     :goto_0
@@ -881,7 +881,7 @@
     invoke-direct {v8, v9}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
     .line 846
-    .local v8, placeHolder:Landroid/widget/FrameLayout;
+    .local v8, "placeHolder":Landroid/widget/FrameLayout;
     const/16 v9, 0x64
 
     invoke-virtual {v8, v9}, Landroid/widget/FrameLayout;->setId(I)V
@@ -900,7 +900,7 @@
     invoke-direct {v6, v9, v10}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
 
     .line 849
-    .local v6, lp:Landroid/view/ViewGroup$LayoutParams;
+    .local v6, "lp":Landroid/view/ViewGroup$LayoutParams;
     invoke-virtual {v7, v8, v5, v6}, Landroid/view/ViewGroup;->addView(Landroid/view/View;ILandroid/view/ViewGroup$LayoutParams;)V
 
     .line 850
@@ -916,7 +916,7 @@
     invoke-direct {v0, v9}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
     .line 852
-    .local v0, backGround:Landroid/widget/FrameLayout;
+    .local v0, "backGround":Landroid/widget/FrameLayout;
     new-instance v9, Lcom/tapjoy/mraid/view/MraidView$3;
 
     invoke-direct {v9, p0}, Lcom/tapjoy/mraid/view/MraidView$3;-><init>(Lcom/tapjoy/mraid/view/MraidView;)V
@@ -929,7 +929,7 @@
     invoke-direct {v1, v11, v11}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
 
     .line 862
-    .local v1, bgfl:Landroid/widget/FrameLayout$LayoutParams;
+    .local v1, "bgfl":Landroid/widget/FrameLayout$LayoutParams;
     const/16 v9, 0x65
 
     invoke-virtual {v0, v9}, Landroid/widget/FrameLayout;->setId(I)V
@@ -951,10 +951,10 @@
     return-object v0
 
     .line 840
-    .end local v0           #backGround:Landroid/widget/FrameLayout;
-    .end local v1           #bgfl:Landroid/widget/FrameLayout$LayoutParams;
-    .end local v6           #lp:Landroid/view/ViewGroup$LayoutParams;
-    .end local v8           #placeHolder:Landroid/widget/FrameLayout;
+    .end local v0    # "backGround":Landroid/widget/FrameLayout;
+    .end local v1    # "bgfl":Landroid/widget/FrameLayout$LayoutParams;
+    .end local v6    # "lp":Landroid/view/ViewGroup$LayoutParams;
+    .end local v8    # "placeHolder":Landroid/widget/FrameLayout;
     :cond_1
     add-int/lit8 v5, v5, 0x1
 
@@ -979,7 +979,7 @@
     check-cast v2, Landroid/view/WindowManager;
 
     .line 1369
-    .local v2, windowManager:Landroid/view/WindowManager;
+    .local v2, "windowManager":Landroid/view/WindowManager;
     invoke-interface {v2}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
 
     move-result-object v3
@@ -989,7 +989,7 @@
     move-result v1
 
     .line 1370
-    .local v1, screenWidth:I
+    .local v1, "screenWidth":I
     invoke-interface {v2}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
 
     move-result-object v3
@@ -999,7 +999,7 @@
     move-result v0
 
     .line 1375
-    .local v0, screenHeight:I
+    .local v0, "screenHeight":I
     iget v3, p0, Lcom/tapjoy/mraid/view/MraidView;->lastScreenWidth:I
 
     if-ne v1, v3, :cond_0
@@ -1050,26 +1050,26 @@
 
 .method private static checkForVideo(Ljava/lang/String;)Z
     .locals 5
-    .parameter "url"
+    .param p0, "url"    # Ljava/lang/String;
 
     .prologue
     .line 1635
     sget-object v0, Lcom/tapjoy/mraid/view/MraidView;->videoFormats:[Ljava/lang/String;
 
-    .local v0, arr$:[Ljava/lang/String;
+    .local v0, "arr$":[Ljava/lang/String;
     array-length v3, v0
 
-    .local v3, len$:I
+    .local v3, "len$":I
     const/4 v2, 0x0
 
-    .local v2, i$:I
+    .local v2, "i$":I
     :goto_0
     if-ge v2, v3, :cond_1
 
     aget-object v1, v0, v2
 
     .line 1636
-    .local v1, i:Ljava/lang/String;
+    .local v1, "i":Ljava/lang/String;
     invoke-virtual {p0, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
     move-result v4
@@ -1079,19 +1079,19 @@
     const/4 v4, 0x1
 
     .line 1638
-    .end local v1           #i:Ljava/lang/String;
+    .end local v1    # "i":Ljava/lang/String;
     :goto_1
     return v4
 
     .line 1635
-    .restart local v1       #i:Ljava/lang/String;
+    .restart local v1    # "i":Ljava/lang/String;
     :cond_0
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
     .line 1638
-    .end local v1           #i:Ljava/lang/String;
+    .end local v1    # "i":Ljava/lang/String;
     :cond_1
     const/4 v4, 0x0
 
@@ -1196,7 +1196,7 @@
     move-result-object v0
 
     .line 933
-    .local v0, injection:Ljava/lang/String;
+    .local v0, "injection":Ljava/lang/String;
     const-string v1, "MRAIDView"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1263,7 +1263,7 @@
     move-object v1, v0
 
     .line 819
-    .local v1, vg:Landroid/view/ViewGroup;
+    .local v1, "vg":Landroid/view/ViewGroup;
     invoke-virtual {v1, p0}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
 
     .line 820
@@ -1272,7 +1272,7 @@
 
 .method private doExpand(Landroid/os/Bundle;)V
     .locals 9
-    .parameter "data"
+    .param p1, "data"    # Landroid/os/Bundle;
 
     .prologue
     .line 873
@@ -1298,7 +1298,7 @@
     check-cast v2, Lcom/tapjoy/mraid/controller/Abstract$Dimensions;
 
     .line 876
-    .local v2, d:Lcom/tapjoy/mraid/controller/Abstract$Dimensions;
+    .local v2, "d":Lcom/tapjoy/mraid/controller/Abstract$Dimensions;
     const-string v6, "expand_url"
 
     invoke-virtual {p1, v6}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -1306,7 +1306,7 @@
     move-result-object v5
 
     .line 877
-    .local v5, url:Ljava/lang/String;
+    .local v5, "url":Ljava/lang/String;
     const-string v6, "expand_properties"
 
     invoke-virtual {p1, v6}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
@@ -1316,7 +1316,7 @@
     check-cast v4, Lcom/tapjoy/mraid/controller/Abstract$Properties;
 
     .line 878
-    .local v4, p:Lcom/tapjoy/mraid/controller/Abstract$Properties;
+    .local v4, "p":Lcom/tapjoy/mraid/controller/Abstract$Properties;
     invoke-static {v5}, Landroid/webkit/URLUtil;->isValidUrl(Ljava/lang/String;)Z
 
     move-result v6
@@ -1333,7 +1333,7 @@
     move-result-object v0
 
     .line 882
-    .local v0, backGround:Landroid/widget/FrameLayout;
+    .local v0, "backGround":Landroid/widget/FrameLayout;
     iget-boolean v6, v4, Lcom/tapjoy/mraid/controller/Abstract$Properties;->useBackground:Z
 
     if-eqz v6, :cond_3
@@ -1343,24 +1343,24 @@
 
     iget v7, v4, Lcom/tapjoy/mraid/controller/Abstract$Properties;->backgroundOpacity:F
 
-    const/high16 v8, 0x437f
+    const/high16 v8, 0x437f0000
 
     mul-float/2addr v7, v8
 
     float-to-int v7, v7
 
-    const/high16 v8, 0x1000
+    const/high16 v8, 0x10000000
 
     mul-int/2addr v7, v8
 
     or-int v1, v6, v7
 
     .line 885
-    .local v1, color:I
+    .local v1, "color":I
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setBackgroundColor(I)V
 
     .line 887
-    .end local v1           #color:I
+    .end local v1    # "color":I
     :cond_3
     iget-boolean v6, v4, Lcom/tapjoy/mraid/controller/Abstract$Properties;->useCustomClose:Z
 
@@ -1456,7 +1456,7 @@
     move-result-object v3
 
     .line 902
-    .local v3, injection:Ljava/lang/String;
+    .local v3, "injection":Ljava/lang/String;
     const-string v6, "MRAIDView"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -1519,7 +1519,7 @@
     move-result-object v0
 
     .line 1403
-    .local v0, contentView:Landroid/view/View;
+    .local v0, "contentView":Landroid/view/View;
     if-eqz v0, :cond_0
 
     .line 1404
@@ -1539,7 +1539,7 @@
 
 .method private initAndPlayVideo(Ljava/lang/String;)V
     .locals 9
-    .parameter "url"
+    .param p1, "url"    # Ljava/lang/String;
 
     .prologue
     const/4 v3, 0x1
@@ -1552,7 +1552,7 @@
     invoke-direct {v6}, Lcom/tapjoy/mraid/controller/Abstract$Dimensions;-><init>()V
 
     .line 1627
-    .local v6, d:Lcom/tapjoy/mraid/controller/Abstract$Dimensions;
+    .local v6, "d":Lcom/tapjoy/mraid/controller/Abstract$Dimensions;
     iput v2, v6, Lcom/tapjoy/mraid/controller/Abstract$Dimensions;->x:I
 
     .line 1628
@@ -1593,7 +1593,7 @@
 
 .method private isRegisteredProtocol(Landroid/net/Uri;)Z
     .locals 5
-    .parameter "uri"
+    .param p1, "uri"    # Landroid/net/Uri;
 
     .prologue
     const/4 v4, 0x0
@@ -1604,7 +1604,7 @@
     move-result-object v2
 
     .line 355
-    .local v2, scheme:Ljava/lang/String;
+    .local v2, "scheme":Ljava/lang/String;
     if-nez v2, :cond_0
 
     move v3, v4
@@ -1621,7 +1621,7 @@
 
     move-result-object v0
 
-    .local v0, i$:Ljava/util/Iterator;
+    .local v0, "i$":Ljava/util/Iterator;
     :cond_1
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
@@ -1636,7 +1636,7 @@
     check-cast v1, Ljava/lang/String;
 
     .line 359
-    .local v1, protocol:Ljava/lang/String;
+    .local v1, "protocol":Ljava/lang/String;
     invoke-virtual {v1, v2}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v3
@@ -1648,7 +1648,7 @@
 
     goto :goto_0
 
-    .end local v1           #protocol:Ljava/lang/String;
+    .end local v1    # "protocol":Ljava/lang/String;
     :cond_2
     move v3, v4
 
@@ -1658,7 +1658,7 @@
 
 .method private repositionCloseButton(Ljava/lang/String;)V
     .locals 3
-    .parameter "position"
+    .param p1, "position"    # Ljava/lang/String;
 
     .prologue
     .line 611
@@ -1673,7 +1673,7 @@
     const/4 v0, 0x0
 
     .line 614
-    .local v0, injection:Ljava/lang/String;
+    .local v0, "injection":Ljava/lang/String;
     const-string v1, "top-right"
 
     invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -1806,7 +1806,7 @@
     move-result-object v0
 
     .line 1883
-    .local v0, lp:Landroid/view/ViewGroup$LayoutParams;
+    .local v0, "lp":Landroid/view/ViewGroup$LayoutParams;
     iget-boolean v1, p0, Lcom/tapjoy/mraid/view/MraidView;->bGotLayoutParams:Z
 
     if-eqz v1, :cond_0
@@ -1911,8 +1911,8 @@
 # virtual methods
 .method public addJavascriptObject(Ljava/lang/Object;Ljava/lang/String;)V
     .locals 0
-    .parameter "obj"
-    .parameter "name"
+    .param p1, "obj"    # Ljava/lang/Object;
+    .param p2, "name"    # Ljava/lang/String;
 
     .prologue
     .line 1393
@@ -2013,7 +2013,7 @@
     move-result-object v0
 
     .line 1434
-    .local v0, injection:Ljava/lang/String;
+    .local v0, "injection":Ljava/lang/String;
     const-string v1, "MRAIDView"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -2078,7 +2078,7 @@
     return-void
 
     .line 1425
-    .end local v0           #injection:Ljava/lang/String;
+    .end local v0    # "injection":Ljava/lang/String;
     :catchall_0
     move-exception v1
 
@@ -2089,7 +2089,7 @@
 
 .method protected closeOpened(Landroid/view/View;)V
     .locals 1
-    .parameter "openedFrame"
+    .param p1, "openedFrame"    # Landroid/view/View;
 
     .prologue
     .line 1451
@@ -2126,7 +2126,7 @@
     const-string v0, "window.mraidview.createCss();"
 
     .line 279
-    .local v0, injection:Ljava/lang/String;
+    .local v0, "injection":Ljava/lang/String;
     invoke-virtual {p0, v0}, Lcom/tapjoy/mraid/view/MraidView;->injectMraidJavaScript(Ljava/lang/String;)V
 
     .line 280
@@ -2142,7 +2142,7 @@
 
 .method public deregisterProtocol(Ljava/lang/String;)V
     .locals 2
-    .parameter "protocol"
+    .param p1, "protocol"    # Ljava/lang/String;
 
     .prologue
     .line 340
@@ -2164,9 +2164,9 @@
 
 .method public expand(Lcom/tapjoy/mraid/controller/Abstract$Dimensions;Ljava/lang/String;Lcom/tapjoy/mraid/controller/Abstract$Properties;)V
     .locals 4
-    .parameter "dimensions"
-    .parameter "URL"
-    .parameter "properties"
+    .param p1, "dimensions"    # Lcom/tapjoy/mraid/controller/Abstract$Dimensions;
+    .param p2, "URL"    # Ljava/lang/String;
+    .param p3, "properties"    # Lcom/tapjoy/mraid/controller/Abstract$Properties;
 
     .prologue
     .line 1554
@@ -2179,13 +2179,13 @@
     move-result-object v1
 
     .line 1555
-    .local v1, msg:Landroid/os/Message;
+    .local v1, "msg":Landroid/os/Message;
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     .line 1556
-    .local v0, data:Landroid/os/Bundle;
+    .local v0, "data":Landroid/os/Bundle;
     const-string v2, "expand_dimensions"
 
     invoke-virtual {v0, v2, p1}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
@@ -2237,7 +2237,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/tapjoy/mraid/view/MraidView;
     check-cast p0, Landroid/net/ConnectivityManager;
 
     return-object p0
@@ -2399,7 +2399,7 @@
 
 .method public hasMraidTag(Ljava/lang/String;)Z
     .locals 5
-    .parameter "html"
+    .param p1, "html"    # Ljava/lang/String;
 
     .prologue
     .line 418
@@ -2410,7 +2410,7 @@
     move-result-object v2
 
     .line 419
-    .local v2, ormma:Ljava/util/regex/Pattern;
+    .local v2, "ormma":Ljava/util/regex/Pattern;
     const-string v4, "<\\s*script[^>]+mraid\\.js"
 
     invoke-static {v4}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
@@ -2418,19 +2418,19 @@
     move-result-object v0
 
     .line 421
-    .local v0, mraid:Ljava/util/regex/Pattern;
+    .local v0, "mraid":Ljava/util/regex/Pattern;
     invoke-virtual {v0, p1}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
     move-result-object v1
 
     .line 422
-    .local v1, mraidMatcher:Ljava/util/regex/Matcher;
+    .local v1, "mraidMatcher":Ljava/util/regex/Matcher;
     invoke-virtual {v2, p1}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
     move-result-object v3
 
     .line 424
-    .local v3, ormmaMatcher:Ljava/util/regex/Matcher;
+    .local v3, "ormmaMatcher":Ljava/util/regex/Matcher;
     invoke-virtual {v1}, Ljava/util/regex/Matcher;->find()Z
 
     move-result v4
@@ -2517,7 +2517,7 @@
     invoke-direct {v0}, Landroid/util/DisplayMetrics;-><init>()V
 
     .line 1234
-    .local v0, metrics:Landroid/util/DisplayMetrics;
+    .local v0, "metrics":Landroid/util/DisplayMetrics;
     invoke-virtual {p0}, Lcom/tapjoy/mraid/view/MraidView;->getContext()Landroid/content/Context;
 
     move-result-object v3
@@ -2531,7 +2531,7 @@
     check-cast v2, Landroid/view/WindowManager;
 
     .line 1237
-    .local v2, wm:Landroid/view/WindowManager;
+    .local v2, "wm":Landroid/view/WindowManager;
     invoke-interface {v2}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
 
     move-result-object v3
@@ -2630,7 +2630,7 @@
     check-cast v1, Landroid/view/WindowManager;
 
     .line 1264
-    .local v1, windowManager:Landroid/view/WindowManager;
+    .local v1, "windowManager":Landroid/view/WindowManager;
     invoke-interface {v1}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
 
     move-result-object v3
@@ -2671,7 +2671,7 @@
 
 .method public injectMraidJavaScript(Ljava/lang/String;)V
     .locals 2
-    .parameter "str"
+    .param p1, "str"    # Ljava/lang/String;
 
     .prologue
     .line 373
@@ -2752,11 +2752,11 @@
 
 .method public loadDataWithBaseURL(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 17
-    .parameter "baseUrl"
-    .parameter "data"
-    .parameter "mimeType"
-    .parameter "encoding"
-    .parameter "historyUrl"
+    .param p1, "baseUrl"    # Ljava/lang/String;
+    .param p2, "data"    # Ljava/lang/String;
+    .param p3, "mimeType"    # Ljava/lang/String;
+    .param p4, "encoding"    # Ljava/lang/String;
+    .param p5, "historyUrl"    # Ljava/lang/String;
 
     .prologue
     .line 432
@@ -2773,7 +2773,7 @@
     invoke-direct {v10}, Ljava/lang/StringBuffer;-><init>()V
 
     .line 437
-    .local v10, buffer:Ljava/lang/StringBuffer;
+    .local v10, "buffer":Ljava/lang/StringBuffer;
     const-string v3, "<html>"
 
     move-object/from16 v0, p2
@@ -2785,7 +2785,7 @@
     move-result v12
 
     .line 439
-    .local v12, htmlPresent:I
+    .local v12, "htmlPresent":I
     const/4 v3, 0x0
 
     move v0, v3
@@ -2806,7 +2806,7 @@
     move-result v16
 
     .line 442
-    .local v16, start:I
+    .local v16, "start":I
     if-gez v16, :cond_1
 
     .line 443
@@ -2825,11 +2825,11 @@
     move/from16 v14, v16
 
     .line 447
-    .local v14, send:I
+    .local v14, "send":I
     move/from16 v15, v16
 
     .line 453
-    .local v15, sstart:I
+    .local v15, "sstart":I
     if-lez v16, :cond_b
 
     move-object/from16 v0, p0
@@ -2854,7 +2854,7 @@
     .line 458
     move/from16 v13, v16
 
-    .local v13, i:I
+    .local v13, "i":I
     :goto_1
     if-ltz v13, :cond_2
 
@@ -2996,7 +2996,7 @@
     move-result-object v9
 
     .line 495
-    .local v9, bigString:Ljava/lang/String;
+    .local v9, "bigString":Ljava/lang/String;
     if-nez v9, :cond_4
 
     .line 496
@@ -3033,7 +3033,7 @@
     invoke-virtual {v10, v3}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     .line 520
-    .end local v9           #bigString:Ljava/lang/String;
+    .end local v9    # "bigString":Ljava/lang/String;
     :cond_5
     :goto_4
     const-string v3, "MRAIDView"
@@ -3043,7 +3043,7 @@
     invoke-static {v3, v4}, Lcom/tapjoy/TapjoyLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 526
-    .end local v13           #i:I
+    .end local v13    # "i":I
     :goto_5
     invoke-virtual {v10}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
@@ -3064,7 +3064,7 @@
     goto/16 :goto_0
 
     .line 458
-    .restart local v13       #i:I
+    .restart local v13    # "i":I
     :cond_6
     add-int/lit8 v13, v13, -0x1
 
@@ -3123,7 +3123,7 @@
     move-result v11
 
     .line 504
-    .local v11, headStart:I
+    .local v11, "headStart":I
     const/4 v3, -0x1
 
     if-eq v11, v3, :cond_5
@@ -3134,7 +3134,7 @@
     move-result-object v9
 
     .line 509
-    .restart local v9       #bigString:Ljava/lang/String;
+    .restart local v9    # "bigString":Ljava/lang/String;
     if-nez v9, :cond_a
 
     .line 510
@@ -3197,9 +3197,9 @@
     goto/16 :goto_4
 
     .line 523
-    .end local v9           #bigString:Ljava/lang/String;
-    .end local v11           #headStart:I
-    .end local v13           #i:I
+    .end local v9    # "bigString":Ljava/lang/String;
+    .end local v11    # "headStart":I
+    .end local v13    # "i":I
     :cond_b
     move-object v0, v10
 
@@ -3212,7 +3212,7 @@
 
 .method public loadUrl(Ljava/lang/String;)V
     .locals 2
-    .parameter "url"
+    .param p1, "url"    # Ljava/lang/String;
 
     .prologue
     .line 387
@@ -3232,7 +3232,7 @@
 
 .method public loadUrlStandard(Ljava/lang/String;)V
     .locals 0
-    .parameter "url"
+    .param p1, "url"    # Ljava/lang/String;
 
     .prologue
     .line 414
@@ -3257,7 +3257,7 @@
     move-result-object v0
 
     .line 1939
-    .local v0, lp:Landroid/view/ViewGroup$LayoutParams;
+    .local v0, "lp":Landroid/view/ViewGroup$LayoutParams;
     iget v1, v0, Landroid/view/ViewGroup$LayoutParams;->height:I
 
     iput v1, p0, Lcom/tapjoy/mraid/view/MraidView;->mInitLayoutHeight:I
@@ -3273,7 +3273,7 @@
     iput-boolean v1, p0, Lcom/tapjoy/mraid/view/MraidView;->bGotLayoutParams:Z
 
     .line 1944
-    .end local v0           #lp:Landroid/view/ViewGroup$LayoutParams;
+    .end local v0    # "lp":Landroid/view/ViewGroup$LayoutParams;
     :cond_0
     const/4 v1, 0x0
 
@@ -3370,7 +3370,7 @@
     move-object v0, v1
 
     .line 2026
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0
@@ -3384,7 +3384,7 @@
     iget-boolean v1, p0, Lcom/tapjoy/mraid/view/MraidView;->bKeyboardOut:Z
 
     .line 1904
-    .local v1, state:Z
+    .local v1, "state":Z
     iget-boolean v2, p0, Lcom/tapjoy/mraid/view/MraidView;->bKeyboardOut:Z
 
     if-nez v2, :cond_0
@@ -3414,11 +3414,11 @@
     const-string v0, "window.mraidview.fireChangeEvent({ keyboardState: true});"
 
     .line 1910
-    .local v0, injection:Ljava/lang/String;
+    .local v0, "injection":Ljava/lang/String;
     invoke-virtual {p0, v0}, Lcom/tapjoy/mraid/view/MraidView;->injectMraidJavaScript(Ljava/lang/String;)V
 
     .line 1912
-    .end local v0           #injection:Ljava/lang/String;
+    .end local v0    # "injection":Ljava/lang/String;
     :cond_0
     iget-boolean v2, p0, Lcom/tapjoy/mraid/view/MraidView;->bKeyboardOut:Z
 
@@ -3449,11 +3449,11 @@
     const-string v0, "window.mraidview.fireChangeEvent({ keyboardState: false});"
 
     .line 1917
-    .restart local v0       #injection:Ljava/lang/String;
+    .restart local v0    # "injection":Ljava/lang/String;
     invoke-virtual {p0, v0}, Lcom/tapjoy/mraid/view/MraidView;->injectMraidJavaScript(Ljava/lang/String;)V
 
     .line 1919
-    .end local v0           #injection:Ljava/lang/String;
+    .end local v0    # "injection":Ljava/lang/String;
     :cond_1
     iget v2, p0, Lcom/tapjoy/mraid/view/MraidView;->mContentViewHeight:I
 
@@ -3476,10 +3476,10 @@
 
 .method public open(Ljava/lang/String;ZZZ)V
     .locals 7
-    .parameter "url"
-    .parameter "back"
-    .parameter "forward"
-    .parameter "refresh"
+    .param p1, "url"    # Ljava/lang/String;
+    .param p2, "back"    # Z
+    .param p3, "forward"    # Z
+    .param p4, "refresh"    # Z
 
     .prologue
     const-string v6, "MRAIDView"
@@ -3488,11 +3488,11 @@
     const/4 v1, 0x0
 
     .line 1578
-    .local v1, isVideo:Z
+    .local v1, "isVideo":Z
     const/4 v3, 0x0
 
     .line 1581
-    .local v3, videoURL:Ljava/lang/String;
+    .local v3, "videoURL":Ljava/lang/String;
     invoke-static {p1}, Lcom/tapjoy/mraid/view/MraidView;->checkForVideo(Ljava/lang/String;)Z
 
     move-result v4
@@ -3528,7 +3528,7 @@
     move-result-object v2
 
     .line 1590
-    .local v2, response:Lcom/tapjoy/TapjoyHttpURLResponse;
+    .local v2, "response":Lcom/tapjoy/TapjoyHttpURLResponse;
     const-string v4, "MRAIDView"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -3598,7 +3598,7 @@
     goto :goto_0
 
     .line 1612
-    .end local v2           #response:Lcom/tapjoy/TapjoyHttpURLResponse;
+    .end local v2    # "response":Lcom/tapjoy/TapjoyHttpURLResponse;
     :cond_2
     const-string v4, "MRAIDView"
 
@@ -3634,7 +3634,7 @@
     invoke-direct {v0, v4, v5}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
     .line 1614
-    .local v0, i:Landroid/content/Intent;
+    .local v0, "i":Landroid/content/Intent;
     const-string v4, "extra_url"
 
     invoke-virtual {v0, v4, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
@@ -3655,7 +3655,7 @@
     invoke-virtual {v0, v4, p4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
     .line 1618
-    const/high16 v4, 0x1000
+    const/high16 v4, 0x10000000
 
     invoke-virtual {v0, v4}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
@@ -3671,8 +3671,8 @@
 
 .method public openMap(Ljava/lang/String;Z)V
     .locals 5
-    .parameter "POI"
-    .parameter "fullscreen"
+    .param p1, "POI"    # Ljava/lang/String;
+    .param p2, "fullscreen"    # Z
 
     .prologue
     .line 1660
@@ -3724,8 +3724,8 @@
     invoke-direct {v1, v2, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
     .line 1667
-    .local v1, mapIntent:Landroid/content/Intent;
-    const/high16 v2, 0x1000
+    .local v1, "mapIntent":Landroid/content/Intent;
+    const/high16 v2, 0x10000000
 
     invoke-virtual {v1, v2}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
@@ -3739,7 +3739,7 @@
     .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 1674
-    .end local v1           #mapIntent:Landroid/content/Intent;
+    .end local v1    # "mapIntent":Landroid/content/Intent;
     :cond_0
     :goto_0
     return-void
@@ -3751,7 +3751,7 @@
     move-object v0, v2
 
     .line 1671
-    .local v0, e:Landroid/content/ActivityNotFoundException;
+    .local v0, "e":Landroid/content/ActivityNotFoundException;
     invoke-virtual {v0}, Landroid/content/ActivityNotFoundException;->printStackTrace()V
 
     goto :goto_0
@@ -3759,13 +3759,13 @@
 
 .method public playAudio(Ljava/lang/String;ZZZZLjava/lang/String;Ljava/lang/String;)V
     .locals 12
-    .parameter "url"
-    .parameter "autoPlay"
-    .parameter "controls"
-    .parameter "loop"
-    .parameter "position"
-    .parameter "startStyle"
-    .parameter "stopStyle"
+    .param p1, "url"    # Ljava/lang/String;
+    .param p2, "autoPlay"    # Z
+    .param p3, "controls"    # Z
+    .param p4, "loop"    # Z
+    .param p5, "position"    # Z
+    .param p6, "startStyle"    # Ljava/lang/String;
+    .param p7, "stopStyle"    # Ljava/lang/String;
 
     .prologue
     .line 1709
@@ -3774,7 +3774,7 @@
     invoke-direct {v0}, Lcom/tapjoy/mraid/controller/Abstract$PlayerProperties;-><init>()V
 
     .line 1711
-    .local v0, properties:Lcom/tapjoy/mraid/controller/Abstract$PlayerProperties;
+    .local v0, "properties":Lcom/tapjoy/mraid/controller/Abstract$PlayerProperties;
     const/4 v1, 0x0
 
     move v2, p2
@@ -3797,7 +3797,7 @@
     invoke-direct {v8}, Landroid/os/Bundle;-><init>()V
 
     .line 1716
-    .local v8, data:Landroid/os/Bundle;
+    .local v8, "data":Landroid/os/Bundle;
     const-string v1, "action"
 
     sget-object v2, Lcom/tapjoy/mraid/view/MraidView$Action;->PLAY_AUDIO:Lcom/tapjoy/mraid/view/MraidView$Action;
@@ -3838,7 +3838,7 @@
     invoke-direct {v10, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
     .line 1723
-    .local v10, intent:Landroid/content/Intent;
+    .local v10, "intent":Landroid/content/Intent;
     invoke-virtual {v10, v8}, Landroid/content/Intent;->putExtras(Landroid/os/Bundle;)Landroid/content/Intent;
 
     .line 1724
@@ -3851,7 +3851,7 @@
     .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 1733
-    .end local v10           #intent:Landroid/content/Intent;
+    .end local v10    # "intent":Landroid/content/Intent;
     :goto_0
     return-void
 
@@ -3862,13 +3862,13 @@
     move-object v9, v1
 
     .line 1726
-    .local v9, e:Landroid/content/ActivityNotFoundException;
+    .local v9, "e":Landroid/content/ActivityNotFoundException;
     invoke-virtual {v9}, Landroid/content/ActivityNotFoundException;->printStackTrace()V
 
     goto :goto_0
 
     .line 1729
-    .end local v9           #e:Landroid/content/ActivityNotFoundException;
+    .end local v9    # "e":Landroid/content/ActivityNotFoundException;
     :cond_0
     iget-object v1, p0, Lcom/tapjoy/mraid/view/MraidView;->mHandler:Landroid/os/Handler;
 
@@ -3879,7 +3879,7 @@
     move-result-object v11
 
     .line 1730
-    .local v11, msg:Landroid/os/Message;
+    .local v11, "msg":Landroid/os/Message;
     invoke-virtual {v11, v8}, Landroid/os/Message;->setData(Landroid/os/Bundle;)V
 
     .line 1731
@@ -3892,7 +3892,7 @@
 
 .method public playAudioImpl(Landroid/os/Bundle;)V
     .locals 5
-    .parameter "data"
+    .param p1, "data"    # Landroid/os/Bundle;
 
     .prologue
     const/4 v4, 0x1
@@ -3907,7 +3907,7 @@
     check-cast v1, Lcom/tapjoy/mraid/controller/Abstract$PlayerProperties;
 
     .line 1679
-    .local v1, properties:Lcom/tapjoy/mraid/controller/Abstract$PlayerProperties;
+    .local v1, "properties":Lcom/tapjoy/mraid/controller/Abstract$PlayerProperties;
     const-string v3, "expand_url"
 
     invoke-virtual {p1, v3}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -3915,13 +3915,13 @@
     move-result-object v2
 
     .line 1680
-    .local v2, url:Ljava/lang/String;
+    .local v2, "url":Ljava/lang/String;
     invoke-virtual {p0}, Lcom/tapjoy/mraid/view/MraidView;->getPlayer()Lcom/tapjoy/mraid/util/MraidPlayer;
 
     move-result-object v0
 
     .line 1681
-    .local v0, audioPlayer:Lcom/tapjoy/mraid/util/MraidPlayer;
+    .local v0, "audioPlayer":Lcom/tapjoy/mraid/util/MraidPlayer;
     invoke-virtual {v0, v1, v2}, Lcom/tapjoy/mraid/util/MraidPlayer;->setPlayData(Lcom/tapjoy/mraid/controller/Abstract$PlayerProperties;Ljava/lang/String;)V
 
     .line 1682
@@ -3936,7 +3936,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/tapjoy/mraid/view/MraidView;
     check-cast p0, Landroid/view/ViewGroup;
 
     invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
@@ -3950,14 +3950,14 @@
 
 .method public playVideo(Ljava/lang/String;ZZZZLcom/tapjoy/mraid/controller/Abstract$Dimensions;Ljava/lang/String;Ljava/lang/String;)V
     .locals 15
-    .parameter "url"
-    .parameter "audioMuted"
-    .parameter "autoPlay"
-    .parameter "controls"
-    .parameter "loop"
-    .parameter "d"
-    .parameter "startStyle"
-    .parameter "stopStyle"
+    .param p1, "url"    # Ljava/lang/String;
+    .param p2, "audioMuted"    # Z
+    .param p3, "autoPlay"    # Z
+    .param p4, "controls"    # Z
+    .param p5, "loop"    # Z
+    .param p6, "d"    # Lcom/tapjoy/mraid/controller/Abstract$Dimensions;
+    .param p7, "startStyle"    # Ljava/lang/String;
+    .param p8, "stopStyle"    # Ljava/lang/String;
 
     .prologue
     .line 1812
@@ -3970,13 +3970,13 @@
     move-result-object v14
 
     .line 1813
-    .local v14, msg:Landroid/os/Message;
+    .local v14, "msg":Landroid/os/Message;
     new-instance v3, Lcom/tapjoy/mraid/controller/Abstract$PlayerProperties;
 
     invoke-direct {v3}, Lcom/tapjoy/mraid/controller/Abstract$PlayerProperties;-><init>()V
 
     .line 1814
-    .local v3, properties:Lcom/tapjoy/mraid/controller/Abstract$PlayerProperties;
+    .local v3, "properties":Lcom/tapjoy/mraid/controller/Abstract$PlayerProperties;
     const/4 v7, 0x0
 
     move/from16 v4, p2
@@ -3999,7 +3999,7 @@
     invoke-direct {v11}, Landroid/os/Bundle;-><init>()V
 
     .line 1817
-    .local v11, data:Landroid/os/Bundle;
+    .local v11, "data":Landroid/os/Bundle;
     const-string v4, "expand_url"
 
     move-object v0, v11
@@ -4061,11 +4061,11 @@
     invoke-direct {v13, v4, v5}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
     .line 1828
-    .local v13, intent:Landroid/content/Intent;
+    .local v13, "intent":Landroid/content/Intent;
     invoke-virtual {v13, v11}, Landroid/content/Intent;->putExtras(Landroid/os/Bundle;)Landroid/content/Intent;
 
     .line 1829
-    const/high16 v4, 0x1000
+    const/high16 v4, 0x10000000
 
     invoke-virtual {v13, v4}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
@@ -4079,7 +4079,7 @@
     .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 1838
-    .end local v13           #intent:Landroid/content/Intent;
+    .end local v13    # "intent":Landroid/content/Intent;
     :cond_1
     :goto_0
     return-void
@@ -4091,13 +4091,13 @@
     move-object v12, v4
 
     .line 1832
-    .local v12, e:Landroid/content/ActivityNotFoundException;
+    .local v12, "e":Landroid/content/ActivityNotFoundException;
     invoke-virtual {v12}, Landroid/content/ActivityNotFoundException;->printStackTrace()V
 
     goto :goto_0
 
     .line 1834
-    .end local v12           #e:Landroid/content/ActivityNotFoundException;
+    .end local v12    # "e":Landroid/content/ActivityNotFoundException;
     :cond_2
     if-eqz p6, :cond_1
 
@@ -4114,7 +4114,7 @@
 
 .method public playVideoImpl(Landroid/os/Bundle;)V
     .locals 11
-    .parameter "data"
+    .param p1, "data"    # Landroid/os/Bundle;
 
     .prologue
     const/4 v10, 0x0
@@ -4131,7 +4131,7 @@
     check-cast v4, Lcom/tapjoy/mraid/controller/Abstract$PlayerProperties;
 
     .line 1739
-    .local v4, properties:Lcom/tapjoy/mraid/controller/Abstract$PlayerProperties;
+    .local v4, "properties":Lcom/tapjoy/mraid/controller/Abstract$PlayerProperties;
     const-string v7, "expand_dimensions"
 
     invoke-virtual {p1, v7}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
@@ -4141,7 +4141,7 @@
     check-cast v2, Lcom/tapjoy/mraid/controller/Abstract$Dimensions;
 
     .line 1740
-    .local v2, d:Lcom/tapjoy/mraid/controller/Abstract$Dimensions;
+    .local v2, "d":Lcom/tapjoy/mraid/controller/Abstract$Dimensions;
     const-string v7, "expand_url"
 
     invoke-virtual {p1, v7}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -4149,13 +4149,13 @@
     move-result-object v5
 
     .line 1742
-    .local v5, url:Ljava/lang/String;
+    .local v5, "url":Ljava/lang/String;
     invoke-virtual {p0}, Lcom/tapjoy/mraid/view/MraidView;->getPlayer()Lcom/tapjoy/mraid/util/MraidPlayer;
 
     move-result-object v6
 
     .line 1743
-    .local v6, videoPlayer:Lcom/tapjoy/mraid/util/MraidPlayer;
+    .local v6, "videoPlayer":Lcom/tapjoy/mraid/util/MraidPlayer;
     invoke-virtual {v6, v4, v5}, Lcom/tapjoy/mraid/util/MraidPlayer;->setPlayData(Lcom/tapjoy/mraid/controller/Abstract$PlayerProperties;Ljava/lang/String;)V
 
     .line 1745
@@ -4168,7 +4168,7 @@
     invoke-direct {v3, v7, v8}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
 
     .line 1747
-    .local v3, fl:Landroid/widget/FrameLayout$LayoutParams;
+    .local v3, "fl":Landroid/widget/FrameLayout$LayoutParams;
     iget v7, v2, Lcom/tapjoy/mraid/controller/Abstract$Dimensions;->x:I
 
     iput v7, v3, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
@@ -4191,7 +4191,7 @@
     invoke-direct {v0, v7}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
     .line 1753
-    .local v0, backGround:Landroid/widget/FrameLayout;
+    .local v0, "backGround":Landroid/widget/FrameLayout;
     const/16 v7, 0x65
 
     invoke-virtual {v0, v7}, Landroid/widget/FrameLayout;->setId(I)V
@@ -4217,7 +4217,7 @@
     check-cast v1, Landroid/widget/FrameLayout;
 
     .line 1758
-    .local v1, contentView:Landroid/widget/FrameLayout;
+    .local v1, "contentView":Landroid/widget/FrameLayout;
     new-instance v7, Landroid/widget/FrameLayout$LayoutParams;
 
     invoke-direct {v7, v9, v9}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
@@ -4248,8 +4248,8 @@
 
 .method public raiseError(Ljava/lang/String;Ljava/lang/String;)V
     .locals 4
-    .parameter "strMsg"
-    .parameter "action"
+    .param p1, "strMsg"    # Ljava/lang/String;
+    .param p2, "action"    # Ljava/lang/String;
 
     .prologue
     .line 1992
@@ -4262,13 +4262,13 @@
     move-result-object v1
 
     .line 1994
-    .local v1, msg:Landroid/os/Message;
+    .local v1, "msg":Landroid/os/Message;
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     .line 1995
-    .local v0, data:Landroid/os/Bundle;
+    .local v0, "data":Landroid/os/Bundle;
     const-string v2, "message"
 
     invoke-virtual {v0, v2, p1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
@@ -4292,7 +4292,7 @@
 
 .method public registerProtocol(Ljava/lang/String;)V
     .locals 2
-    .parameter "protocol"
+    .param p1, "protocol"    # Ljava/lang/String;
 
     .prologue
     .line 328
@@ -4320,7 +4320,7 @@
     const-string v0, "document.getElementById(\"closeButton\").style.visibility=\"hidden\";"
 
     .line 285
-    .local v0, injection:Ljava/lang/String;
+    .local v0, "injection":Ljava/lang/String;
     invoke-virtual {p0, v0}, Lcom/tapjoy/mraid/view/MraidView;->injectMraidJavaScript(Ljava/lang/String;)V
 
     .line 286
@@ -4419,7 +4419,7 @@
     check-cast v1, Landroid/widget/FrameLayout;
 
     .line 1847
-    .local v1, contentView:Landroid/widget/FrameLayout;
+    .local v1, "contentView":Landroid/widget/FrameLayout;
     invoke-virtual {p0}, Lcom/tapjoy/mraid/view/MraidView;->getRootView()Landroid/view/View;
 
     move-result-object v4
@@ -4433,7 +4433,7 @@
     check-cast v3, Landroid/widget/FrameLayout;
 
     .line 1849
-    .local v3, placeHolder:Landroid/widget/FrameLayout;
+    .local v3, "placeHolder":Landroid/widget/FrameLayout;
     invoke-virtual {p0}, Lcom/tapjoy/mraid/view/MraidView;->getRootView()Landroid/view/View;
 
     move-result-object v4
@@ -4447,7 +4447,7 @@
     check-cast v0, Landroid/widget/FrameLayout;
 
     .line 1851
-    .local v0, background:Landroid/widget/FrameLayout;
+    .local v0, "background":Landroid/widget/FrameLayout;
     invoke-virtual {v0, p0}, Landroid/widget/FrameLayout;->removeView(Landroid/view/View;)V
 
     .line 1852
@@ -4467,7 +4467,7 @@
     check-cast v2, Landroid/view/ViewGroup;
 
     .line 1856
-    .local v2, parent:Landroid/view/ViewGroup;
+    .local v2, "parent":Landroid/view/ViewGroup;
     if-eqz v2, :cond_0
 
     .line 1857
@@ -4482,19 +4482,19 @@
     invoke-virtual {v2}, Landroid/view/ViewGroup;->invalidate()V
 
     .line 1862
-    .end local v2           #parent:Landroid/view/ViewGroup;
+    .end local v2    # "parent":Landroid/view/ViewGroup;
     :cond_0
     return-void
 .end method
 
 .method public resize(IIIILjava/lang/String;Z)V
     .locals 4
-    .parameter "width"
-    .parameter "height"
-    .parameter "offsetX"
-    .parameter "offsetY"
-    .parameter "customClosePosition"
-    .parameter "allowOffScreen"
+    .param p1, "width"    # I
+    .param p2, "height"    # I
+    .param p3, "offsetX"    # I
+    .param p4, "offsetY"    # I
+    .param p5, "customClosePosition"    # Ljava/lang/String;
+    .param p6, "allowOffScreen"    # Z
 
     .prologue
     .line 1480
@@ -4507,13 +4507,13 @@
     move-result-object v1
 
     .line 1481
-    .local v1, msg:Landroid/os/Message;
+    .local v1, "msg":Landroid/os/Message;
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     .line 1482
-    .local v0, data:Landroid/os/Bundle;
+    .local v0, "data":Landroid/os/Bundle;
     const-string v2, "resize_width"
 
     invoke-virtual {v0, v2, p1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
@@ -4557,10 +4557,10 @@
 
 .method public resizeOrientation(IILjava/lang/String;Z)V
     .locals 5
-    .parameter "width"
-    .parameter "height"
-    .parameter "customClosePosition"
-    .parameter "allowOffScreen"
+    .param p1, "width"    # I
+    .param p2, "height"    # I
+    .param p3, "customClosePosition"    # Ljava/lang/String;
+    .param p4, "allowOffScreen"    # Z
 
     .prologue
     .line 1497
@@ -4612,13 +4612,13 @@
     move-result-object v1
 
     .line 1503
-    .local v1, msg:Landroid/os/Message;
+    .local v1, "msg":Landroid/os/Message;
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     .line 1504
-    .local v0, data:Landroid/os/Bundle;
+    .local v0, "data":Landroid/os/Bundle;
     const-string v2, "resize_width"
 
     invoke-virtual {v0, v2, p1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
@@ -4652,7 +4652,7 @@
 
 .method public restoreState(Landroid/os/Bundle;)Landroid/webkit/WebBackForwardList;
     .locals 1
-    .parameter "savedInstanceState"
+    .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
     .line 1975
@@ -4665,7 +4665,7 @@
 
 .method public saveState(Landroid/os/Bundle;)Landroid/webkit/WebBackForwardList;
     .locals 1
-    .parameter "outState"
+    .param p1, "outState"    # Landroid/os/Bundle;
 
     .prologue
     .line 1961
@@ -4678,7 +4678,7 @@
 
 .method public setListener(Lcom/tapjoy/mraid/listener/MraidViewListener;)V
     .locals 0
-    .parameter "listener"
+    .param p1, "listener"    # Lcom/tapjoy/mraid/listener/MraidViewListener;
 
     .prologue
     .line 232
@@ -4690,8 +4690,8 @@
 
 .method public setMaxSize(II)V
     .locals 1
-    .parameter "w"
-    .parameter "h"
+    .param p1, "w"    # I
+    .param p2, "h"    # I
 
     .prologue
     .line 317
@@ -4705,15 +4705,15 @@
 
 .method public setOrientationProperties(ZLjava/lang/String;)V
     .locals 2
-    .parameter "allowOrientationChange"
-    .parameter "forceOrientation"
+    .param p1, "allowOrientationChange"    # Z
+    .param p2, "forceOrientation"    # Ljava/lang/String;
 
     .prologue
     .line 1642
     const/4 v0, -0x1
 
     .line 1644
-    .local v0, requestedOrientation:I
+    .local v0, "requestedOrientation":I
     if-nez p1, :cond_0
 
     .line 1645
@@ -4736,7 +4736,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/tapjoy/mraid/view/MraidView;
     check-cast p0, Landroid/app/Activity;
 
     invoke-virtual {p0, v0}, Landroid/app/Activity;->setRequestedOrientation(I)V
@@ -4745,7 +4745,7 @@
     return-void
 
     .line 1645
-    .restart local p0
+    .restart local p0    # "this":Lcom/tapjoy/mraid/view/MraidView;
     :cond_1
     const/4 v1, 0x1
 
@@ -4756,7 +4756,7 @@
 
 .method public setPlacementType(Lcom/tapjoy/mraid/view/MraidView$PLACEMENT_TYPE;)V
     .locals 2
-    .parameter "type"
+    .param p1, "type"    # Lcom/tapjoy/mraid/view/MraidView$PLACEMENT_TYPE;
 
     .prologue
     .line 255
@@ -4858,7 +4858,7 @@
     const-string v0, "document.getElementById(\"closeButton\").style.visibility=\"visible\";"
 
     .line 292
-    .local v0, injection:Ljava/lang/String;
+    .local v0, "injection":Ljava/lang/String;
     invoke-virtual {p0, v0}, Lcom/tapjoy/mraid/view/MraidView;->injectMraidJavaScript(Ljava/lang/String;)V
 
     .line 293
@@ -4988,7 +4988,7 @@
     move-object v0, v1
 
     .line 1203
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0

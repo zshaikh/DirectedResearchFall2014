@@ -34,8 +34,8 @@
 
 .method public static create(Landroid/content/Context;Lcom/fusepowered/m2/m2l/AdConfiguration;)Lcom/fusepowered/m2/m2l/MraidView;
     .locals 1
-    .parameter "context"
-    .parameter "adConfiguration"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "adConfiguration"    # Lcom/fusepowered/m2/m2l/AdConfiguration;
 
     .prologue
     .line 49
@@ -50,11 +50,11 @@
 
 .method public static create(Landroid/content/Context;Lcom/fusepowered/m2/m2l/AdConfiguration;Lcom/fusepowered/m2/m2l/MraidView$ExpansionStyle;Lcom/fusepowered/m2/m2l/MraidView$NativeCloseButtonStyle;Lcom/fusepowered/m2/m2l/MraidView$PlacementType;)Lcom/fusepowered/m2/m2l/MraidView;
     .locals 6
-    .parameter "context"
-    .parameter "adConfiguration"
-    .parameter "expansionStyle"
-    .parameter "buttonStyle"
-    .parameter "placementType"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "adConfiguration"    # Lcom/fusepowered/m2/m2l/AdConfiguration;
+    .param p2, "expansionStyle"    # Lcom/fusepowered/m2/m2l/MraidView$ExpansionStyle;
+    .param p3, "buttonStyle"    # Lcom/fusepowered/m2/m2l/MraidView$NativeCloseButtonStyle;
+    .param p4, "placementType"    # Lcom/fusepowered/m2/m2l/MraidView$PlacementType;
 
     .prologue
     .line 58
@@ -79,7 +79,7 @@
 
 .method public static setInstance(Lcom/fusepowered/m2/m2l/factories/MraidViewFactory;)V
     .locals 0
-    .parameter "factory"
+    .param p0, "factory"    # Lcom/fusepowered/m2/m2l/factories/MraidViewFactory;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -95,8 +95,8 @@
 # virtual methods
 .method protected internalCreate(Landroid/content/Context;Lcom/fusepowered/m2/m2l/AdConfiguration;)Lcom/fusepowered/m2/m2l/MraidView;
     .locals 1
-    .parameter "context"
-    .parameter "adConfiguration"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "adConfiguration"    # Lcom/fusepowered/m2/m2l/AdConfiguration;
 
     .prologue
     .line 62
@@ -109,11 +109,11 @@
 
 .method protected internalCreate(Landroid/content/Context;Lcom/fusepowered/m2/m2l/AdConfiguration;Lcom/fusepowered/m2/m2l/MraidView$ExpansionStyle;Lcom/fusepowered/m2/m2l/MraidView$NativeCloseButtonStyle;Lcom/fusepowered/m2/m2l/MraidView$PlacementType;)Lcom/fusepowered/m2/m2l/MraidView;
     .locals 6
-    .parameter "context"
-    .parameter "adConfiguration"
-    .parameter "expansionStyle"
-    .parameter "buttonStyle"
-    .parameter "placementType"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "adConfiguration"    # Lcom/fusepowered/m2/m2l/AdConfiguration;
+    .param p3, "expansionStyle"    # Lcom/fusepowered/m2/m2l/MraidView$ExpansionStyle;
+    .param p4, "buttonStyle"    # Lcom/fusepowered/m2/m2l/MraidView$NativeCloseButtonStyle;
+    .param p5, "placementType"    # Lcom/fusepowered/m2/m2l/MraidView$PlacementType;
 
     .prologue
     .line 71

@@ -28,9 +28,6 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m1/android/MMCommand;Lcom/fusepowered/m1/android/MMWebView;Ljava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 135
@@ -54,7 +51,7 @@
     .line 139
     iget-object v0, p0, Lcom/fusepowered/m1/android/MMCommand$1;->this$0:Lcom/fusepowered/m1/android/MMCommand;
 
-    #getter for: Lcom/fusepowered/m1/android/MMCommand;->method:Ljava/lang/reflect/Method;
+    # getter for: Lcom/fusepowered/m1/android/MMCommand;->method:Ljava/lang/reflect/Method;
     invoke-static {v0}, Lcom/fusepowered/m1/android/MMCommand;->access$000(Lcom/fusepowered/m1/android/MMCommand;)Ljava/lang/reflect/Method;
 
     move-result-object v0

@@ -30,10 +30,6 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;IZZ)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 1
@@ -60,7 +56,7 @@
     .line 483
     iget-object v0, p0, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$9;->this$0:Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;
 
-    #getter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->_bufferingText:Landroid/widget/RelativeLayout;
+    # getter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->_bufferingText:Landroid/widget/RelativeLayout;
     invoke-static {v0}, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->access$32(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;)Landroid/widget/RelativeLayout;
 
     move-result-object v0
@@ -70,7 +66,7 @@
     .line 484
     iget-object v0, p0, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$9;->this$0:Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;
 
-    #getter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->_bufferingText:Landroid/widget/RelativeLayout;
+    # getter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->_bufferingText:Landroid/widget/RelativeLayout;
     invoke-static {v0}, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->access$32(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;)Landroid/widget/RelativeLayout;
 
     move-result-object v0
@@ -88,7 +84,7 @@
     .line 487
     iget-object v0, p0, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$9;->this$0:Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;
 
-    #getter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->_skipText:Landroid/widget/RelativeLayout;
+    # getter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->_skipText:Landroid/widget/RelativeLayout;
     invoke-static {v0}, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->access$7(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;)Landroid/widget/RelativeLayout;
 
     move-result-object v0
@@ -98,14 +94,14 @@
     .line 488
     iget-object v0, p0, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$9;->this$0:Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;
 
-    #calls: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->createAndAddSkipText()V
+    # invokes: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->createAndAddSkipText()V
     invoke-static {v0}, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->access$33(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;)V
 
     .line 490
     :cond_1
     iget-object v0, p0, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$9;->this$0:Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;
 
-    #calls: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->enableSkippingFromSkipText()V
+    # invokes: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->enableSkippingFromSkipText()V
     invoke-static {v0}, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->access$5(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;)V
 
     .line 502
@@ -126,7 +122,7 @@
     .line 494
     iget-object v0, p0, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$9;->this$0:Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;
 
-    #calls: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->enableSkippingFromSkipText()V
+    # invokes: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->enableSkippingFromSkipText()V
     invoke-static {v0}, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->access$5(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;)V
 
     goto :goto_0
@@ -135,7 +131,7 @@
     :cond_3
     iget-object v0, p0, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$9;->this$0:Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;
 
-    #calls: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->disableSkippingFromSkipText()V
+    # invokes: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->disableSkippingFromSkipText()V
     invoke-static {v0}, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->access$34(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;)V
 
     goto :goto_0
@@ -144,7 +140,7 @@
     :cond_4
     iget-object v0, p0, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$9;->this$0:Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;
 
-    #calls: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->hideSkipText()V
+    # invokes: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->hideSkipText()V
     invoke-static {v0}, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->access$8(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;)V
 
     goto :goto_0

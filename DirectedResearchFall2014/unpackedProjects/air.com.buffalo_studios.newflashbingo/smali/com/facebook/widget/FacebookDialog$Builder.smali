@@ -85,7 +85,7 @@
 
     move-result-object v1
 
-    #calls: Lcom/facebook/widget/FacebookDialog;->getActionForFeatures(Ljava/lang/Iterable;)Ljava/lang/String;
+    # invokes: Lcom/facebook/widget/FacebookDialog;->getActionForFeatures(Ljava/lang/Iterable;)Ljava/lang/String;
     invoke-static {v1}, Lcom/facebook/widget/FacebookDialog;->access$100(Ljava/lang/Iterable;)Ljava/lang/String;
 
     move-result-object v1
@@ -96,12 +96,12 @@
 
     move-result-object v3
 
-    #calls: Lcom/facebook/widget/FacebookDialog;->getMinVersionForFeatures(Ljava/lang/Iterable;)I
+    # invokes: Lcom/facebook/widget/FacebookDialog;->getMinVersionForFeatures(Ljava/lang/Iterable;)I
     invoke-static {v3}, Lcom/facebook/widget/FacebookDialog;->access$200(Ljava/lang/Iterable;)I
 
     move-result v3
 
-    #calls: Lcom/facebook/widget/FacebookDialog;->getProtocolVersionForNativeDialog(Landroid/content/Context;Ljava/lang/String;I)I
+    # invokes: Lcom/facebook/widget/FacebookDialog;->getProtocolVersionForNativeDialog(Landroid/content/Context;Ljava/lang/String;I)I
     invoke-static {v2, v1, v3}, Lcom/facebook/widget/FacebookDialog;->access$300(Landroid/content/Context;Ljava/lang/String;I)I
 
     move-result v2
@@ -125,7 +125,7 @@
     :cond_0
     iget-object v1, p0, Lcom/facebook/widget/FacebookDialog$Builder;->appCall:Lcom/facebook/widget/FacebookDialog$PendingCall;
 
-    #calls: Lcom/facebook/widget/FacebookDialog$PendingCall;->setRequestIntent(Landroid/content/Intent;)V
+    # invokes: Lcom/facebook/widget/FacebookDialog$PendingCall;->setRequestIntent(Landroid/content/Intent;)V
     invoke-static {v1, v0}, Lcom/facebook/widget/FacebookDialog$PendingCall;->access$400(Lcom/facebook/widget/FacebookDialog$PendingCall;Landroid/content/Intent;)V
 
     new-instance v0, Lcom/facebook/widget/FacebookDialog;
@@ -156,7 +156,7 @@
 
     move-result-object v1
 
-    #calls: Lcom/facebook/widget/FacebookDialog;->handleCanPresent(Landroid/content/Context;Ljava/lang/Iterable;)Z
+    # invokes: Lcom/facebook/widget/FacebookDialog;->handleCanPresent(Landroid/content/Context;Ljava/lang/Iterable;)Z
     invoke-static {v0, v1}, Lcom/facebook/widget/FacebookDialog;->access$600(Landroid/content/Context;Ljava/lang/Iterable;)Z
 
     move-result v0
@@ -238,7 +238,6 @@
 
     iget-object v0, p0, Lcom/facebook/widget/FacebookDialog$Builder;->appCall:Lcom/facebook/widget/FacebookDialog$PendingCall;
 
-    #setter for: Lcom/facebook/widget/FacebookDialog$PendingCall;->requestCode:I
     invoke-static {v0, p1}, Lcom/facebook/widget/FacebookDialog$PendingCall;->access$000(Lcom/facebook/widget/FacebookDialog$PendingCall;I)V
 
     return-object p0

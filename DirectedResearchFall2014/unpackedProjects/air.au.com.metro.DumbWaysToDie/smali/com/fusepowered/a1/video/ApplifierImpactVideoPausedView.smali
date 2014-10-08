@@ -16,7 +16,7 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     const/4 v0, 0x0
@@ -45,8 +45,8 @@
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
-    .parameter "context"
-    .parameter "attrs"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
     const/4 v0, 0x0
@@ -75,9 +75,9 @@
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 1
-    .parameter "context"
-    .parameter "attrs"
-    .parameter "defStyle"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "attrs"    # Landroid/util/AttributeSet;
+    .param p3, "defStyle"    # I
 
     .prologue
     const/4 v0, 0x0
@@ -106,12 +106,12 @@
 
 .method private createBall(I)Landroid/widget/ImageView;
     .locals 9
-    .parameter "id"
+    .param p1, "id"    # I
 
     .prologue
-    const/high16 v7, 0x42ca
+    const/high16 v7, 0x42ca0000
 
-    const/high16 v8, 0x4248
+    const/high16 v8, 0x42480000
 
     .line 93
     sget-object v5, Lcom/fusepowered/a1/properties/ApplifierImpactProperties;->CURRENT_ACTIVITY:Landroid/app/Activity;
@@ -125,7 +125,7 @@
     move-result-object v3
 
     .line 94
-    .local v3, metrics:Landroid/util/DisplayMetrics;
+    .local v3, "metrics":Landroid/util/DisplayMetrics;
     iget v5, v3, Landroid/util/DisplayMetrics;->density:F
 
     mul-float/2addr v5, v7
@@ -149,13 +149,13 @@
     move-result-object v0
 
     .line 95
-    .local v0, bmp:Landroid/graphics/Bitmap;
+    .local v0, "bmp":Landroid/graphics/Bitmap;
     new-instance v1, Landroid/graphics/Canvas;
 
     invoke-direct {v1, v0}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
     .line 96
-    .local v1, cnv:Landroid/graphics/Canvas;
+    .local v1, "cnv":Landroid/graphics/Canvas;
     new-instance v4, Landroid/graphics/Paint;
 
     const/4 v5, 0x1
@@ -163,8 +163,8 @@
     invoke-direct {v4, v5}, Landroid/graphics/Paint;-><init>(I)V
 
     .line 97
-    .local v4, pnt:Landroid/graphics/Paint;
-    const/high16 v5, -0x7000
+    .local v4, "pnt":Landroid/graphics/Paint;
+    const/high16 v5, -0x70000000
 
     invoke-virtual {v4, v5}, Landroid/graphics/Paint;->setColor(I)V
 
@@ -211,7 +211,7 @@
     invoke-direct {v2, v5}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
 
     .line 100
-    .local v2, img:Landroid/widget/ImageView;
+    .local v2, "img":Landroid/widget/ImageView;
     invoke-virtual {v2, v0}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
     .line 101
@@ -223,7 +223,7 @@
 
 .method private createBlinkAnimation(J)Landroid/view/animation/AnimationSet;
     .locals 5
-    .parameter "offset"
+    .param p1, "offset"    # J
 
     .prologue
     const/4 v4, 0x1
@@ -236,17 +236,17 @@
     invoke-direct {v1, v2}, Landroid/view/animation/AnimationSet;-><init>(Z)V
 
     .line 144
-    .local v1, animSet:Landroid/view/animation/AnimationSet;
+    .local v1, "animSet":Landroid/view/animation/AnimationSet;
     new-instance v0, Landroid/view/animation/AlphaAnimation;
 
-    const/high16 v2, 0x3f80
+    const/high16 v2, 0x3f800000
 
     const/4 v3, 0x0
 
     invoke-direct {v0, v2, v3}, Landroid/view/animation/AlphaAnimation;-><init>(FF)V
 
     .line 145
-    .local v0, alphaAnimation:Landroid/view/animation/Animation;
+    .local v0, "alphaAnimation":Landroid/view/animation/Animation;
     const/4 v2, -0x1
 
     invoke-virtual {v0, v2}, Landroid/view/animation/Animation;->setRepeatCount(I)V
@@ -276,12 +276,12 @@
 
 .method private createOuterStroke(I)Landroid/widget/ImageView;
     .locals 9
-    .parameter "id"
+    .param p1, "id"    # I
 
     .prologue
-    const/high16 v7, 0x42e2
+    const/high16 v7, 0x42e20000
 
-    const/high16 v8, 0x4260
+    const/high16 v8, 0x42600000
 
     .line 78
     sget-object v5, Lcom/fusepowered/a1/properties/ApplifierImpactProperties;->CURRENT_ACTIVITY:Landroid/app/Activity;
@@ -295,7 +295,7 @@
     move-result-object v3
 
     .line 79
-    .local v3, metrics:Landroid/util/DisplayMetrics;
+    .local v3, "metrics":Landroid/util/DisplayMetrics;
     iget v5, v3, Landroid/util/DisplayMetrics;->density:F
 
     mul-float/2addr v5, v7
@@ -319,13 +319,13 @@
     move-result-object v0
 
     .line 80
-    .local v0, bmp:Landroid/graphics/Bitmap;
+    .local v0, "bmp":Landroid/graphics/Bitmap;
     new-instance v1, Landroid/graphics/Canvas;
 
     invoke-direct {v1, v0}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
     .line 81
-    .local v1, cnv:Landroid/graphics/Canvas;
+    .local v1, "cnv":Landroid/graphics/Canvas;
     new-instance v4, Landroid/graphics/Paint;
 
     const/4 v5, 0x1
@@ -333,7 +333,7 @@
     invoke-direct {v4, v5}, Landroid/graphics/Paint;-><init>(I)V
 
     .line 82
-    .local v4, pnt:Landroid/graphics/Paint;
+    .local v4, "pnt":Landroid/graphics/Paint;
     const/4 v5, -0x1
 
     invoke-virtual {v4, v5}, Landroid/graphics/Paint;->setColor(I)V
@@ -344,7 +344,7 @@
     invoke-virtual {v4, v5}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
     .line 84
-    const/high16 v5, 0x40a0
+    const/high16 v5, 0x40a00000
 
     invoke-virtual {v4, v5}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
@@ -369,7 +369,7 @@
 
     int-to-float v6, v6
 
-    const/high16 v7, 0x4254
+    const/high16 v7, 0x42540000
 
     iget v8, v3, Landroid/util/DisplayMetrics;->density:F
 
@@ -393,7 +393,7 @@
     invoke-direct {v2, v5}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
 
     .line 87
-    .local v2, img:Landroid/widget/ImageView;
+    .local v2, "img":Landroid/widget/ImageView;
     invoke-virtual {v2, v0}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
     .line 88
@@ -405,7 +405,7 @@
 
 .method private createTriangle(I)Landroid/widget/ImageView;
     .locals 20
-    .parameter "id"
+    .param p1, "id"    # I
 
     .prologue
     .line 106
@@ -420,8 +420,8 @@
     move-result-object v18
 
     .line 107
-    .local v18, metrics:Landroid/util/DisplayMetrics;
-    const/high16 v4, 0x423c
+    .local v18, "metrics":Landroid/util/DisplayMetrics;
+    const/high16 v4, 0x423c0000
 
     move-object/from16 v0, v18
 
@@ -435,7 +435,7 @@
 
     move-result v4
 
-    const/high16 v5, 0x424c
+    const/high16 v5, 0x424c0000
 
     move-object/from16 v0, v18
 
@@ -456,7 +456,7 @@
     move-result-object v16
 
     .line 108
-    .local v16, bmp:Landroid/graphics/Bitmap;
+    .local v16, "bmp":Landroid/graphics/Bitmap;
     new-instance v3, Landroid/graphics/Canvas;
 
     move-object v0, v3
@@ -466,7 +466,7 @@
     invoke-direct {v0, v1}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
     .line 109
-    .local v3, cnv:Landroid/graphics/Canvas;
+    .local v3, "cnv":Landroid/graphics/Canvas;
     new-instance v15, Landroid/graphics/Paint;
 
     const/4 v4, 0x1
@@ -474,7 +474,7 @@
     invoke-direct {v15, v4}, Landroid/graphics/Paint;-><init>(I)V
 
     .line 110
-    .local v15, pnt:Landroid/graphics/Paint;
+    .local v15, "pnt":Landroid/graphics/Paint;
     const/4 v4, -0x1
 
     invoke-virtual {v15, v4}, Landroid/graphics/Paint;->setColor(I)V
@@ -490,7 +490,7 @@
     new-array v6, v4, [F
 
     .line 114
-    .local v6, points:[F
+    .local v6, "points":[F
     const/4 v4, 0x0
 
     const/4 v5, 0x0
@@ -507,7 +507,7 @@
     .line 117
     const/4 v4, 0x2
 
-    const/high16 v5, 0x423c
+    const/high16 v5, 0x423c0000
 
     move-object/from16 v0, v18
 
@@ -522,7 +522,7 @@
     .line 118
     const/4 v4, 0x3
 
-    const/high16 v5, 0x41c8
+    const/high16 v5, 0x41c80000
 
     move-object/from16 v0, v18
 
@@ -544,7 +544,7 @@
     .line 121
     const/4 v4, 0x5
 
-    const/high16 v5, 0x424c
+    const/high16 v5, 0x424c0000
 
     move-object/from16 v0, v18
 
@@ -599,7 +599,7 @@
     invoke-direct/range {v19 .. v19}, Landroid/graphics/Path;-><init>()V
 
     .line 129
-    .local v19, path:Landroid/graphics/Path;
+    .local v19, "path":Landroid/graphics/Path;
     const/4 v4, 0x0
 
     aget v4, v6, v4
@@ -673,7 +673,7 @@
     invoke-direct {v0, v1}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
 
     .line 135
-    .local v17, img:Landroid/widget/ImageView;
+    .local v17, "img":Landroid/widget/ImageView;
     move-object/from16 v0, v17
 
     move-object/from16 v1, v16
@@ -713,8 +713,8 @@
     move-result-object v2
 
     .line 46
-    .local v2, metrics:Landroid/util/DisplayMetrics;
-    const/high16 v5, -0x4000
+    .local v2, "metrics":Landroid/util/DisplayMetrics;
+    const/high16 v5, -0x40000000
 
     invoke-virtual {p0, v5}, Lcom/fusepowered/a1/video/ApplifierImpactVideoPausedView;->setBackgroundColor(I)V
 
@@ -724,7 +724,7 @@
     invoke-direct {v3, v7, v7}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
     .line 49
-    .local v3, strokeParams:Landroid/widget/RelativeLayout$LayoutParams;
+    .local v3, "strokeParams":Landroid/widget/RelativeLayout$LayoutParams;
     invoke-virtual {v3, v6}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
 
     .line 50
@@ -747,7 +747,7 @@
     invoke-direct {v1, v7, v7}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
     .line 54
-    .local v1, ballParams:Landroid/widget/RelativeLayout$LayoutParams;
+    .local v1, "ballParams":Landroid/widget/RelativeLayout$LayoutParams;
     invoke-virtual {v1, v6}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
 
     .line 55
@@ -768,7 +768,7 @@
     invoke-direct {v0, v7, v7}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
     .line 60
-    .local v0, arrowParams:Landroid/widget/RelativeLayout$LayoutParams;
+    .local v0, "arrowParams":Landroid/widget/RelativeLayout$LayoutParams;
     const/16 v5, 0xf
 
     invoke-virtual {v0, v5}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
@@ -779,7 +779,7 @@
     invoke-virtual {v0, v5, v8}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
 
     .line 62
-    const/high16 v5, 0x41f8
+    const/high16 v5, 0x41f80000
 
     iget v6, v2, Landroid/util/DisplayMetrics;->density:F
 
@@ -843,7 +843,7 @@
     invoke-direct {v4, v7, v7}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
     .line 71
-    .local v4, textViewParams:Landroid/widget/RelativeLayout$LayoutParams;
+    .local v4, "textViewParams":Landroid/widget/RelativeLayout$LayoutParams;
     const/16 v5, 0xe
 
     invoke-virtual {v4, v5}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
@@ -854,7 +854,7 @@
     invoke-virtual {v4, v5}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
 
     .line 73
-    const/high16 v5, 0x41a0
+    const/high16 v5, 0x41a00000
 
     iget v6, v2, Landroid/util/DisplayMetrics;->density:F
 

@@ -47,9 +47,6 @@
 # direct methods
 .method protected constructor <init>(Ljava/lang/Class;[Ljava/lang/Enum;Ljava/util/HashMap;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -64,10 +61,10 @@
 
     .prologue
     .line 22
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/util/EnumResolver;,"Lcom/flurry/org/codehaus/jackson/map/util/EnumResolver<TT;>;"
-    .local p1, enumClass:Ljava/lang/Class;,"Ljava/lang/Class<TT;>;"
-    .local p2, enums:[Ljava/lang/Enum;,"[TT;"
-    .local p3, map:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;TT;>;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/util/EnumResolver;, "Lcom/flurry/org/codehaus/jackson/map/util/EnumResolver<TT;>;"
+    .local p1, "enumClass":Ljava/lang/Class;, "Ljava/lang/Class<TT;>;"
+    .local p2, "enums":[Ljava/lang/Enum;, "[TT;"
+    .local p3, "map":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;TT;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 23
@@ -85,8 +82,7 @@
 
 .method public static constructFor(Ljava/lang/Class;Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;)Lcom/flurry/org/codehaus/jackson/map/util/EnumResolver;
     .locals 9
-    .parameter
-    .parameter "ai"
+    .param p1, "ai"    # Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<ET:",
@@ -103,7 +99,7 @@
 
     .prologue
     .line 34
-    .local p0, enumCls:Ljava/lang/Class;,"Ljava/lang/Class<TET;>;"
+    .local p0, "enumCls":Ljava/lang/Class;, "Ljava/lang/Class<TET;>;"
     invoke-virtual {p0}, Ljava/lang/Class;->getEnumConstants()[Ljava/lang/Object;
 
     move-result-object v2
@@ -111,7 +107,7 @@
     check-cast v2, [Ljava/lang/Enum;
 
     .line 35
-    .local v2, enumValues:[Ljava/lang/Enum;,"[TET;"
+    .local v2, "enumValues":[Ljava/lang/Enum;, "[TET;"
     if-nez v2, :cond_0
 
     .line 36
@@ -150,23 +146,23 @@
     invoke-direct {v5}, Ljava/util/HashMap;-><init>()V
 
     .line 39
-    .local v5, map:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;TET;>;"
+    .local v5, "map":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;TET;>;"
     move-object v0, v2
 
-    .local v0, arr$:[Ljava/lang/Enum;
+    .local v0, "arr$":[Ljava/lang/Enum;
     array-length v4, v0
 
-    .local v4, len$:I
+    .local v4, "len$":I
     const/4 v3, 0x0
 
-    .local v3, i$:I
+    .local v3, "i$":I
     :goto_0
     if-ge v3, v4, :cond_1
 
     aget-object v1, v0, v3
 
     .line 40
-    .local v1, e:Ljava/lang/Enum;,"TET;"
+    .local v1, "e":Ljava/lang/Enum;, "TET;"
     invoke-virtual {p1, v1}, Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;->findEnumValue(Ljava/lang/Enum;)Ljava/lang/String;
 
     move-result-object v6
@@ -179,7 +175,7 @@
     goto :goto_0
 
     .line 42
-    .end local v1           #e:Ljava/lang/Enum;,"TET;"
+    .end local v1    # "e":Ljava/lang/Enum;, "TET;"
     :cond_1
     new-instance v6, Lcom/flurry/org/codehaus/jackson/map/util/EnumResolver;
 
@@ -190,8 +186,7 @@
 
 .method public static constructUnsafe(Ljava/lang/Class;Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;)Lcom/flurry/org/codehaus/jackson/map/util/EnumResolver;
     .locals 2
-    .parameter
-    .parameter "ai"
+    .param p1, "ai"    # Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -206,11 +201,11 @@
 
     .prologue
     .line 73
-    .local p0, rawEnumCls:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p0, "rawEnumCls":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     move-object v0, p0
 
     .line 74
-    .local v0, enumCls:Ljava/lang/Class;,"Ljava/lang/Class<Ljava/lang/Enum;>;"
+    .local v0, "enumCls":Ljava/lang/Class;, "Ljava/lang/Class<Ljava/lang/Enum;>;"
     invoke-static {v0, p1}, Lcom/flurry/org/codehaus/jackson/map/util/EnumResolver;->constructFor(Ljava/lang/Class;Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;)Lcom/flurry/org/codehaus/jackson/map/util/EnumResolver;
 
     move-result-object v1
@@ -220,7 +215,6 @@
 
 .method public static constructUnsafeUsingToString(Ljava/lang/Class;)Lcom/flurry/org/codehaus/jackson/map/util/EnumResolver;
     .locals 2
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -233,11 +227,11 @@
 
     .prologue
     .line 87
-    .local p0, rawEnumCls:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p0, "rawEnumCls":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     move-object v0, p0
 
     .line 88
-    .local v0, enumCls:Ljava/lang/Class;,"Ljava/lang/Class<Ljava/lang/Enum;>;"
+    .local v0, "enumCls":Ljava/lang/Class;, "Ljava/lang/Class<Ljava/lang/Enum;>;"
     invoke-static {v0}, Lcom/flurry/org/codehaus/jackson/map/util/EnumResolver;->constructUsingToString(Ljava/lang/Class;)Lcom/flurry/org/codehaus/jackson/map/util/EnumResolver;
 
     move-result-object v1
@@ -247,7 +241,6 @@
 
 .method public static constructUsingToString(Ljava/lang/Class;)Lcom/flurry/org/codehaus/jackson/map/util/EnumResolver;
     .locals 5
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<ET:",
@@ -262,7 +255,7 @@
 
     .prologue
     .line 53
-    .local p0, enumCls:Ljava/lang/Class;,"Ljava/lang/Class<TET;>;"
+    .local p0, "enumCls":Ljava/lang/Class;, "Ljava/lang/Class<TET;>;"
     invoke-virtual {p0}, Ljava/lang/Class;->getEnumConstants()[Ljava/lang/Object;
 
     move-result-object v1
@@ -270,16 +263,16 @@
     check-cast v1, [Ljava/lang/Enum;
 
     .line 54
-    .local v1, enumValues:[Ljava/lang/Enum;,"[TET;"
+    .local v1, "enumValues":[Ljava/lang/Enum;, "[TET;"
     new-instance v3, Ljava/util/HashMap;
 
     invoke-direct {v3}, Ljava/util/HashMap;-><init>()V
 
     .line 56
-    .local v3, map:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;TET;>;"
+    .local v3, "map":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;TET;>;"
     array-length v2, v1
 
-    .local v2, i:I
+    .local v2, "i":I
     :goto_0
     add-int/lit8 v2, v2, -0x1
 
@@ -289,7 +282,7 @@
     aget-object v0, v1, v2
 
     .line 58
-    .local v0, e:Ljava/lang/Enum;,"TET;"
+    .local v0, "e":Ljava/lang/Enum;, "TET;"
     invoke-virtual {v0}, Ljava/lang/Enum;->toString()Ljava/lang/String;
 
     move-result-object v4
@@ -299,7 +292,7 @@
     goto :goto_0
 
     .line 60
-    .end local v0           #e:Ljava/lang/Enum;,"TET;"
+    .end local v0    # "e":Ljava/lang/Enum;, "TET;"
     :cond_0
     new-instance v4, Lcom/flurry/org/codehaus/jackson/map/util/EnumResolver;
 
@@ -312,7 +305,7 @@
 # virtual methods
 .method public findEnum(Ljava/lang/String;)Ljava/lang/Enum;
     .locals 1
-    .parameter "key"
+    .param p1, "key"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -323,14 +316,14 @@
 
     .prologue
     .line 93
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/util/EnumResolver;,"Lcom/flurry/org/codehaus/jackson/map/util/EnumResolver<TT;>;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/util/EnumResolver;, "Lcom/flurry/org/codehaus/jackson/map/util/EnumResolver<TT;>;"
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/map/util/EnumResolver;->_enumsById:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
 
-    .end local p0           #this:Lcom/flurry/org/codehaus/jackson/map/util/EnumResolver;,"Lcom/flurry/org/codehaus/jackson/map/util/EnumResolver<TT;>;"
+    .end local p0    # "this":Lcom/flurry/org/codehaus/jackson/map/util/EnumResolver;, "Lcom/flurry/org/codehaus/jackson/map/util/EnumResolver<TT;>;"
     check-cast p0, Ljava/lang/Enum;
 
     return-object p0
@@ -338,7 +331,7 @@
 
 .method public getEnum(I)Ljava/lang/Enum;
     .locals 1
-    .parameter "index"
+    .param p1, "index"    # I
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I)TT;"
@@ -347,7 +340,7 @@
 
     .prologue
     .line 98
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/util/EnumResolver;,"Lcom/flurry/org/codehaus/jackson/map/util/EnumResolver<TT;>;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/util/EnumResolver;, "Lcom/flurry/org/codehaus/jackson/map/util/EnumResolver<TT;>;"
     if-ltz p1, :cond_0
 
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/map/util/EnumResolver;->_enums:[Ljava/lang/Enum;
@@ -384,7 +377,7 @@
 
     .prologue
     .line 104
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/util/EnumResolver;,"Lcom/flurry/org/codehaus/jackson/map/util/EnumResolver<TT;>;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/util/EnumResolver;, "Lcom/flurry/org/codehaus/jackson/map/util/EnumResolver<TT;>;"
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/map/util/EnumResolver;->_enumClass:Ljava/lang/Class;
 
     return-object v0
@@ -395,7 +388,7 @@
 
     .prologue
     .line 106
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/util/EnumResolver;,"Lcom/flurry/org/codehaus/jackson/map/util/EnumResolver<TT;>;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/util/EnumResolver;, "Lcom/flurry/org/codehaus/jackson/map/util/EnumResolver<TT;>;"
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/map/util/EnumResolver;->_enums:[Ljava/lang/Enum;
 
     array-length v0, v0

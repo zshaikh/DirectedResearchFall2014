@@ -21,15 +21,15 @@
 # virtual methods
 .method public call(Lcom/adobe/fre/FREContext;[Lcom/adobe/fre/FREObject;)Lcom/adobe/fre/FREObject;
     .locals 3
-    .parameter "arg0"
-    .parameter "arg1"
+    .param p1, "arg0"    # Lcom/adobe/fre/FREContext;
+    .param p2, "arg1"    # [Lcom/adobe/fre/FREObject;
 
     .prologue
     .line 17
     const/4 v0, 0x0
 
     .line 20
-    .local v0, clientToken:Ljava/lang/String;
+    .local v0, "clientToken":Ljava/lang/String;
     const/4 v2, 0x0
 
     :try_start_0
@@ -68,52 +68,52 @@
     move-object v1, v2
 
     .line 22
-    .local v1, e:Ljava/lang/IllegalStateException;
+    .local v1, "e":Ljava/lang/IllegalStateException;
     invoke-virtual {v1}, Ljava/lang/IllegalStateException;->printStackTrace()V
 
     goto :goto_0
 
     .line 23
-    .end local v1           #e:Ljava/lang/IllegalStateException;
+    .end local v1    # "e":Ljava/lang/IllegalStateException;
     :catch_1
     move-exception v2
 
     move-object v1, v2
 
     .line 24
-    .local v1, e:Lcom/adobe/fre/FRETypeMismatchException;
+    .local v1, "e":Lcom/adobe/fre/FRETypeMismatchException;
     invoke-virtual {v1}, Lcom/adobe/fre/FRETypeMismatchException;->printStackTrace()V
 
     goto :goto_0
 
     .line 25
-    .end local v1           #e:Lcom/adobe/fre/FRETypeMismatchException;
+    .end local v1    # "e":Lcom/adobe/fre/FRETypeMismatchException;
     :catch_2
     move-exception v2
 
     move-object v1, v2
 
     .line 26
-    .local v1, e:Lcom/adobe/fre/FREInvalidObjectException;
+    .local v1, "e":Lcom/adobe/fre/FREInvalidObjectException;
     invoke-virtual {v1}, Lcom/adobe/fre/FREInvalidObjectException;->printStackTrace()V
 
     goto :goto_0
 
     .line 27
-    .end local v1           #e:Lcom/adobe/fre/FREInvalidObjectException;
+    .end local v1    # "e":Lcom/adobe/fre/FREInvalidObjectException;
     :catch_3
     move-exception v2
 
     move-object v1, v2
 
     .line 28
-    .local v1, e:Lcom/adobe/fre/FREWrongThreadException;
+    .local v1, "e":Lcom/adobe/fre/FREWrongThreadException;
     invoke-virtual {v1}, Lcom/adobe/fre/FREWrongThreadException;->printStackTrace()V
 
     goto :goto_0
 
     .line 37
-    .end local v1           #e:Lcom/adobe/fre/FREWrongThreadException;
+    .end local v1    # "e":Lcom/adobe/fre/FREWrongThreadException;
     :cond_0
     const-string v2, "cannot start publish install, applicationId is null"
 

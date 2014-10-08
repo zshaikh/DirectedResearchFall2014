@@ -21,8 +21,7 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m1/android/BridgeMMMedia$Audio;Landroid/media/SoundPool;)V
     .locals 0
-    .parameter
-    .parameter "x0"
+    .param p2, "x0"    # Landroid/media/SoundPool;
 
     .prologue
     .line 858
@@ -37,9 +36,9 @@
 # virtual methods
 .method public declared-synchronized onLoadComplete(Landroid/media/SoundPool;II)V
     .locals 9
-    .parameter "soundPool"
-    .parameter "sampleId"
-    .parameter "status"
+    .param p1, "soundPool"    # Landroid/media/SoundPool;
+    .param p2, "sampleId"    # I
+    .param p3, "status"    # I
 
     .prologue
     .line 862
@@ -51,7 +50,7 @@
     :try_start_0
     iget-object v0, p0, Lcom/fusepowered/m1/android/BridgeMMMedia$Audio$2;->this$0:Lcom/fusepowered/m1/android/BridgeMMMedia$Audio;
 
-    #getter for: Lcom/fusepowered/m1/android/BridgeMMMedia$Audio;->contextRef:Ljava/lang/ref/WeakReference;
+    # getter for: Lcom/fusepowered/m1/android/BridgeMMMedia$Audio;->contextRef:Ljava/lang/ref/WeakReference;
     invoke-static {v0}, Lcom/fusepowered/m1/android/BridgeMMMedia$Audio;->access$200(Lcom/fusepowered/m1/android/BridgeMMMedia$Audio;)Ljava/lang/ref/WeakReference;
 
     move-result-object v0
@@ -63,7 +62,7 @@
     check-cast v8, Landroid/content/Context;
 
     .line 865
-    .local v8, context:Landroid/content/Context;
+    .local v8, "context":Landroid/content/Context;
     if-eqz v8, :cond_0
 
     .line 867
@@ -76,7 +75,7 @@
     check-cast v7, Landroid/media/AudioManager;
 
     .line 868
-    .local v7, audioManager:Landroid/media/AudioManager;
+    .local v7, "audioManager":Landroid/media/AudioManager;
     const/4 v0, 0x3
 
     invoke-virtual {v7, v0}, Landroid/media/AudioManager;->getStreamVolume(I)I
@@ -100,12 +99,12 @@
     div-float v2, v0, v1
 
     .line 869
-    .local v2, streamVolume:F
+    .local v2, "streamVolume":F
     const/4 v4, 0x1
 
     const/4 v5, 0x0
 
-    const/high16 v6, 0x3f80
+    const/high16 v6, 0x3f800000
 
     move-object v0, p1
 
@@ -118,9 +117,9 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 872
-    .end local v2           #streamVolume:F
-    .end local v7           #audioManager:Landroid/media/AudioManager;
-    .end local v8           #context:Landroid/content/Context;
+    .end local v2    # "streamVolume":F
+    .end local v7    # "audioManager":Landroid/media/AudioManager;
+    .end local v8    # "context":Landroid/content/Context;
     :cond_0
     monitor-exit p0
 

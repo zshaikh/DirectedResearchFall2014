@@ -21,7 +21,6 @@
 # direct methods
 .method public constructor <init>(Ljava/lang/Class;)V
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -32,8 +31,8 @@
 
     .prologue
     .line 26
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/ser/std/RawSerializer;,"Lcom/flurry/org/codehaus/jackson/map/ser/std/RawSerializer<TT;>;"
-    .local p1, cls:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/ser/std/RawSerializer;, "Lcom/flurry/org/codehaus/jackson/map/ser/std/RawSerializer<TT;>;"
+    .local p1, "cls":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Lcom/flurry/org/codehaus/jackson/map/ser/std/SerializerBase;-><init>(Ljava/lang/Class;Z)V
@@ -46,12 +45,12 @@
 # virtual methods
 .method public getSchema(Lcom/flurry/org/codehaus/jackson/map/SerializerProvider;Ljava/lang/reflect/Type;)Lcom/flurry/org/codehaus/jackson/JsonNode;
     .locals 2
-    .parameter "provider"
-    .parameter "typeHint"
+    .param p1, "provider"    # Lcom/flurry/org/codehaus/jackson/map/SerializerProvider;
+    .param p2, "typeHint"    # Ljava/lang/reflect/Type;
 
     .prologue
     .line 50
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/ser/std/RawSerializer;,"Lcom/flurry/org/codehaus/jackson/map/ser/std/RawSerializer<TT;>;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/ser/std/RawSerializer;, "Lcom/flurry/org/codehaus/jackson/map/ser/std/RawSerializer<TT;>;"
     const-string v0, "string"
 
     const/4 v1, 0x1
@@ -65,9 +64,8 @@
 
 .method public serialize(Ljava/lang/Object;Lcom/flurry/org/codehaus/jackson/JsonGenerator;Lcom/flurry/org/codehaus/jackson/map/SerializerProvider;)V
     .locals 1
-    .parameter
-    .parameter "jgen"
-    .parameter "provider"
+    .param p2, "jgen"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator;
+    .param p3, "provider"    # Lcom/flurry/org/codehaus/jackson/map/SerializerProvider;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;",
@@ -86,8 +84,8 @@
 
     .prologue
     .line 33
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/ser/std/RawSerializer;,"Lcom/flurry/org/codehaus/jackson/map/ser/std/RawSerializer<TT;>;"
-    .local p1, value:Ljava/lang/Object;,"TT;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/ser/std/RawSerializer;, "Lcom/flurry/org/codehaus/jackson/map/ser/std/RawSerializer<TT;>;"
+    .local p1, "value":Ljava/lang/Object;, "TT;"
     invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v0
@@ -100,10 +98,9 @@
 
 .method public serializeWithType(Ljava/lang/Object;Lcom/flurry/org/codehaus/jackson/JsonGenerator;Lcom/flurry/org/codehaus/jackson/map/SerializerProvider;Lcom/flurry/org/codehaus/jackson/map/TypeSerializer;)V
     .locals 0
-    .parameter
-    .parameter "jgen"
-    .parameter "provider"
-    .parameter "typeSer"
+    .param p2, "jgen"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator;
+    .param p3, "provider"    # Lcom/flurry/org/codehaus/jackson/map/SerializerProvider;
+    .param p4, "typeSer"    # Lcom/flurry/org/codehaus/jackson/map/TypeSerializer;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;",
@@ -123,8 +120,8 @@
 
     .prologue
     .line 41
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/ser/std/RawSerializer;,"Lcom/flurry/org/codehaus/jackson/map/ser/std/RawSerializer<TT;>;"
-    .local p1, value:Ljava/lang/Object;,"TT;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/ser/std/RawSerializer;, "Lcom/flurry/org/codehaus/jackson/map/ser/std/RawSerializer<TT;>;"
+    .local p1, "value":Ljava/lang/Object;, "TT;"
     invoke-virtual {p4, p1, p2}, Lcom/flurry/org/codehaus/jackson/map/TypeSerializer;->writeTypePrefixForScalar(Ljava/lang/Object;Lcom/flurry/org/codehaus/jackson/JsonGenerator;)V
 
     .line 42

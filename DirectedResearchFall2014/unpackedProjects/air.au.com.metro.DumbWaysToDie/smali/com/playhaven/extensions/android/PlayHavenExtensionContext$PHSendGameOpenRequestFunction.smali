@@ -24,7 +24,6 @@
 # direct methods
 .method private constructor <init>(Lcom/playhaven/extensions/android/PlayHavenExtensionContext;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 506
@@ -37,8 +36,6 @@
 
 .method synthetic constructor <init>(Lcom/playhaven/extensions/android/PlayHavenExtensionContext;Lcom/playhaven/extensions/android/PlayHavenExtensionContext$PHSendGameOpenRequestFunction;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 506
@@ -51,8 +48,8 @@
 # virtual methods
 .method public call(Lcom/adobe/fre/FREContext;[Lcom/adobe/fre/FREObject;)Lcom/adobe/fre/FREObject;
     .locals 3
-    .parameter "arg0"
-    .parameter "args"
+    .param p1, "arg0"    # Lcom/adobe/fre/FREContext;
+    .param p2, "args"    # [Lcom/adobe/fre/FREObject;
 
     .prologue
     .line 512
@@ -76,7 +73,7 @@
     move-object v0, v1
 
     .line 516
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v1, "[PHExtension]"
 
     invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;

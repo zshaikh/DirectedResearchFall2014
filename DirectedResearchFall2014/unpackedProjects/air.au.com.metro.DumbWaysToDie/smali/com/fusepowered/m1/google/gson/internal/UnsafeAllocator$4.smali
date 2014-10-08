@@ -29,7 +29,6 @@
 # virtual methods
 .method public newInstance(Ljava/lang/Class;)Ljava/lang/Object;
     .locals 3
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -42,7 +41,7 @@
 
     .prologue
     .line 100
-    .local p1, c:Ljava/lang/Class;,"Ljava/lang/Class<TT;>;"
+    .local p1, "c":Ljava/lang/Class;, "Ljava/lang/Class<TT;>;"
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     new-instance v1, Ljava/lang/StringBuilder;

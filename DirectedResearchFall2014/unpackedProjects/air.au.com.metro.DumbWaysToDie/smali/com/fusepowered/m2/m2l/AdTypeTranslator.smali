@@ -144,8 +144,8 @@
 
 .method static getAdNetworkType(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 2
-    .parameter "adType"
-    .parameter "fullAdType"
+    .param p0, "adType"    # Ljava/lang/String;
+    .param p1, "fullAdType"    # Ljava/lang/String;
 
     .prologue
     .line 62
@@ -160,7 +160,7 @@
     move-object v0, p1
 
     .line 63
-    .local v0, adNetworkType:Ljava/lang/String;
+    .local v0, "adNetworkType":Ljava/lang/String;
     :goto_0
     if-eqz v0, :cond_1
 
@@ -169,7 +169,7 @@
     :goto_1
     return-object v1
 
-    .end local v0           #adNetworkType:Ljava/lang/String;
+    .end local v0    # "adNetworkType":Ljava/lang/String;
     :cond_0
     move-object v0, p0
 
@@ -177,7 +177,7 @@
     goto :goto_0
 
     .line 63
-    .restart local v0       #adNetworkType:Ljava/lang/String;
+    .restart local v0    # "adNetworkType":Ljava/lang/String;
     :cond_1
     const-string v1, "unknown"
 
@@ -186,9 +186,9 @@
 
 .method static getCustomEventNameForAdType(Lcom/fusepowered/m2/m2l/MoPubView;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 5
-    .parameter "moPubView"
-    .parameter "adType"
-    .parameter "fullAdType"
+    .param p0, "moPubView"    # Lcom/fusepowered/m2/m2l/MoPubView;
+    .param p1, "adType"    # Ljava/lang/String;
+    .param p2, "fullAdType"    # Ljava/lang/String;
 
     .prologue
     const-string v4, "_interstitial"
@@ -245,7 +245,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "moPubView":Lcom/fusepowered/m2/m2l/MoPubView;
     check-cast p0, Ljava/lang/String;
 
     move-object v0, p0
@@ -255,7 +255,7 @@
     return-object v0
 
     .line 70
-    .restart local p0
+    .restart local p0    # "moPubView":Lcom/fusepowered/m2/m2l/MoPubView;
     :cond_1
     sget-object v0, Lcom/fusepowered/m2/m2l/AdTypeTranslator;->customEventNameForAdType:Ljava/util/Map;
 
@@ -281,7 +281,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "moPubView":Lcom/fusepowered/m2/m2l/MoPubView;
     check-cast p0, Ljava/lang/String;
 
     move-object v0, p0
@@ -289,7 +289,7 @@
     goto :goto_0
 
     .line 72
-    .restart local p0
+    .restart local p0    # "moPubView":Lcom/fusepowered/m2/m2l/MoPubView;
     :cond_2
     const-string v0, "interstitial"
 
@@ -324,7 +324,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "moPubView":Lcom/fusepowered/m2/m2l/MoPubView;
     check-cast p0, Ljava/lang/String;
 
     move-object v0, p0
@@ -332,7 +332,7 @@
     goto :goto_0
 
     .line 74
-    .restart local p0
+    .restart local p0    # "moPubView":Lcom/fusepowered/m2/m2l/MoPubView;
     :cond_3
     sget-object v0, Lcom/fusepowered/m2/m2l/AdTypeTranslator;->customEventNameForAdType:Ljava/util/Map;
 
@@ -358,7 +358,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "moPubView":Lcom/fusepowered/m2/m2l/MoPubView;
     check-cast p0, Ljava/lang/String;
 
     move-object v0, p0
@@ -368,7 +368,7 @@
 
 .method private static isInterstitial(Lcom/fusepowered/m2/m2l/MoPubView;)Z
     .locals 1
-    .parameter "moPubView"
+    .param p0, "moPubView"    # Lcom/fusepowered/m2/m2l/MoPubView;
 
     .prologue
     .line 79

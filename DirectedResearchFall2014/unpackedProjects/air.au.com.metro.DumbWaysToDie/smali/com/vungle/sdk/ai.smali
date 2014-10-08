@@ -25,7 +25,6 @@
 
 .method public constructor <init>(Lcom/vungle/sdk/VungleIntentService;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 19
@@ -39,7 +38,6 @@
 
 .method private b(Lcom/vungle/sdk/ah;)Landroid/os/Message;
     .locals 2
-    .parameter
 
     .prologue
     .line 34
@@ -62,7 +60,6 @@
 # virtual methods
 .method protected final a(Landroid/content/Intent;)V
     .locals 3
-    .parameter
 
     .prologue
     .line 23
@@ -110,7 +107,6 @@
 
 .method protected final a(Landroid/os/Message;)V
     .locals 4
-    .parameter
 
     .prologue
     .line 41
@@ -177,7 +173,6 @@
 
 .method public final a(Lcom/vungle/sdk/ah;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 70
@@ -195,8 +190,6 @@
 
 .method public final a(Lcom/vungle/sdk/ah;J)V
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     .line 59

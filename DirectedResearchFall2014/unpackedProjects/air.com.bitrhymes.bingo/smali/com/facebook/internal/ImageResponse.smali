@@ -16,10 +16,10 @@
 # direct methods
 .method constructor <init>(Lcom/facebook/internal/ImageRequest;Ljava/lang/Exception;ZLandroid/graphics/Bitmap;)V
     .locals 0
-    .parameter "request"
-    .parameter "error"
-    .parameter "isCachedRedirect"
-    .parameter "bitmap"
+    .param p1, "request"    # Lcom/facebook/internal/ImageRequest;
+    .param p2, "error"    # Ljava/lang/Exception;
+    .param p3, "isCachedRedirect"    # Z
+    .param p4, "bitmap"    # Landroid/graphics/Bitmap;
 
     .prologue
     .line 28

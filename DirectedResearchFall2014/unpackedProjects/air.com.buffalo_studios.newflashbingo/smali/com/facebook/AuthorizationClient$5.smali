@@ -115,12 +115,12 @@
 
     invoke-virtual {v1, v0}, Lcom/facebook/AuthorizationClient;->complete(Lcom/facebook/AuthorizationClient$Result;)V
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     iget-object v0, p0, Lcom/facebook/AuthorizationClient$5;->this$0:Lcom/facebook/AuthorizationClient;
 
-    #calls: Lcom/facebook/AuthorizationClient;->notifyBackgroundProcessingStop()V
+    # invokes: Lcom/facebook/AuthorizationClient;->notifyBackgroundProcessingStop()V
     invoke-static {v0}, Lcom/facebook/AuthorizationClient;->access$000(Lcom/facebook/AuthorizationClient;)V
 
     :goto_1
@@ -138,8 +138,8 @@
 
     invoke-static {v0, v1, v2}, Lcom/facebook/AuthorizationClient$Result;->createErrorResult(Lcom/facebook/AuthorizationClient$AuthorizationRequest;Ljava/lang/String;Ljava/lang/String;)Lcom/facebook/AuthorizationClient$Result;
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     move-result-object v0
 
@@ -171,7 +171,7 @@
 
     iget-object v0, p0, Lcom/facebook/AuthorizationClient$5;->this$0:Lcom/facebook/AuthorizationClient;
 
-    #calls: Lcom/facebook/AuthorizationClient;->notifyBackgroundProcessingStop()V
+    # invokes: Lcom/facebook/AuthorizationClient;->notifyBackgroundProcessingStop()V
     invoke-static {v0}, Lcom/facebook/AuthorizationClient;->access$000(Lcom/facebook/AuthorizationClient;)V
 
     goto :goto_1
@@ -181,7 +181,7 @@
 
     iget-object v1, p0, Lcom/facebook/AuthorizationClient$5;->this$0:Lcom/facebook/AuthorizationClient;
 
-    #calls: Lcom/facebook/AuthorizationClient;->notifyBackgroundProcessingStop()V
+    # invokes: Lcom/facebook/AuthorizationClient;->notifyBackgroundProcessingStop()V
     invoke-static {v1}, Lcom/facebook/AuthorizationClient;->access$000(Lcom/facebook/AuthorizationClient;)V
 
     throw v0

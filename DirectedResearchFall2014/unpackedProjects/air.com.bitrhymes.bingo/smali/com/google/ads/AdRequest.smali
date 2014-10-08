@@ -15,7 +15,7 @@
 # static fields
 .field public static final LOGTAG:Ljava/lang/String; = "Ads"
 
-.field public static final TEST_EMULATOR:Ljava/lang/String; = null
+.field public static final TEST_EMULATOR:Ljava/lang/String;
 
 .field public static final VERSION:Ljava/lang/String; = "6.4.1"
 
@@ -355,8 +355,8 @@
 # virtual methods
 .method public addExtra(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/ads/AdRequest;
     .locals 2
-    .parameter "key"
-    .parameter "value"
+    .param p1, "key"    # Ljava/lang/String;
+    .param p2, "value"    # Ljava/lang/Object;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -394,7 +394,7 @@
 
 .method public addKeyword(Ljava/lang/String;)Lcom/google/ads/AdRequest;
     .locals 1
-    .parameter "keyword"
+    .param p1, "keyword"    # Ljava/lang/String;
 
     .prologue
     .line 360
@@ -421,7 +421,6 @@
 
 .method public addKeywords(Ljava/util/Set;)Lcom/google/ads/AdRequest;
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -435,7 +434,7 @@
 
     .prologue
     .line 378
-    .local p1, keywords:Ljava/util/Set;,"Ljava/util/Set<Ljava/lang/String;>;"
+    .local p1, "keywords":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     iget-object v0, p0, Lcom/google/ads/AdRequest;->f:Ljava/util/Set;
 
     if-nez v0, :cond_0
@@ -459,8 +458,8 @@
 
 .method public addMediationExtra(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/ads/AdRequest;
     .locals 1
-    .parameter "key"
-    .parameter "value"
+    .param p1, "key"    # Ljava/lang/String;
+    .param p2, "value"    # Ljava/lang/Object;
 
     .prologue
     .line 517
@@ -487,7 +486,7 @@
 
 .method public addTestDevice(Ljava/lang/String;)Lcom/google/ads/AdRequest;
     .locals 1
-    .parameter "testDevice"
+    .param p1, "testDevice"    # Ljava/lang/String;
 
     .prologue
     .line 673
@@ -592,7 +591,6 @@
 
 .method public getNetworkExtras(Ljava/lang/Class;)Ljava/lang/Object;
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -605,7 +603,7 @@
 
     .prologue
     .line 489
-    .local p1, extrasClass:Ljava/lang/Class;,"Ljava/lang/Class<TT;>;"
+    .local p1, "extrasClass":Ljava/lang/Class;, "Ljava/lang/Class<TT;>;"
     iget-object v0, p0, Lcom/google/ads/AdRequest;->h:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -635,7 +633,7 @@
 
 .method public getRequestMap(Landroid/content/Context;)Ljava/util/Map;
     .locals 7
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -875,7 +873,7 @@
     move-result-object p0
 
     .line 643
-    .end local p0
+    .end local p0    # "this":Lcom/google/ads/AdRequest;
     check-cast p0, Ljava/util/Map;
 
     .line 644
@@ -900,7 +898,7 @@
     return-object v2
 
     .line 598
-    .restart local p0
+    .restart local p0    # "this":Lcom/google/ads/AdRequest;
     :cond_a
     iget-boolean v0, p0, Lcom/google/ads/AdRequest;->k:Z
 
@@ -1013,7 +1011,7 @@
     goto/16 :goto_1
 
     .line 648
-    .end local p0
+    .end local p0    # "this":Lcom/google/ads/AdRequest;
     :catch_0
     move-exception v0
 
@@ -1027,7 +1025,7 @@
 
 .method public isTestDevice(Landroid/content/Context;)Z
     .locals 3
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     const/4 v2, 0x0
@@ -1075,7 +1073,6 @@
 
 .method public removeNetworkExtras(Ljava/lang/Class;)Lcom/google/ads/AdRequest;
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1087,7 +1084,7 @@
 
     .prologue
     .line 478
-    .local p1, extrasClass:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p1, "extrasClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     iget-object v0, p0, Lcom/google/ads/AdRequest;->h:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1098,7 +1095,7 @@
 
 .method public setBirthday(Ljava/lang/String;)Lcom/google/ads/AdRequest;
     .locals 2
-    .parameter "birthday"
+    .param p1, "birthday"    # Ljava/lang/String;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -1152,7 +1149,7 @@
 
 .method public setBirthday(Ljava/util/Calendar;)Lcom/google/ads/AdRequest;
     .locals 1
-    .parameter "calendar"
+    .param p1, "calendar"    # Ljava/util/Calendar;
 
     .prologue
     .line 280
@@ -1180,7 +1177,7 @@
 
 .method public setBirthday(Ljava/util/Date;)Lcom/google/ads/AdRequest;
     .locals 3
-    .parameter "birthday"
+    .param p1, "birthday"    # Ljava/util/Date;
 
     .prologue
     .line 264
@@ -1212,7 +1209,6 @@
 
 .method public setExtras(Ljava/util/Map;)Lcom/google/ads/AdRequest;
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1230,7 +1226,7 @@
 
     .prologue
     .line 427
-    .local p1, extras:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
+    .local p1, "extras":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
     invoke-direct {p0}, Lcom/google/ads/AdRequest;->a()Lcom/google/ads/mediation/admob/AdMobAdapterExtras;
 
     move-result-object v0
@@ -1243,7 +1239,7 @@
 
 .method public setGender(Lcom/google/ads/AdRequest$Gender;)Lcom/google/ads/AdRequest;
     .locals 0
-    .parameter "gender"
+    .param p1, "gender"    # Lcom/google/ads/AdRequest$Gender;
 
     .prologue
     .line 221
@@ -1255,7 +1251,6 @@
 
 .method public setKeywords(Ljava/util/Set;)Lcom/google/ads/AdRequest;
     .locals 0
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1269,7 +1264,7 @@
 
     .prologue
     .line 346
-    .local p1, keywords:Ljava/util/Set;,"Ljava/util/Set<Ljava/lang/String;>;"
+    .local p1, "keywords":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     iput-object p1, p0, Lcom/google/ads/AdRequest;->f:Ljava/util/Set;
 
     .line 347
@@ -1278,7 +1273,7 @@
 
 .method public setLocation(Landroid/location/Location;)Lcom/google/ads/AdRequest;
     .locals 0
-    .parameter "location"
+    .param p1, "location"    # Landroid/location/Location;
 
     .prologue
     .line 533
@@ -1290,7 +1285,6 @@
 
 .method public setMediationExtras(Ljava/util/Map;)Lcom/google/ads/AdRequest;
     .locals 0
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1305,7 +1299,7 @@
 
     .prologue
     .line 502
-    .local p1, mediationExtras:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
+    .local p1, "mediationExtras":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
     iput-object p1, p0, Lcom/google/ads/AdRequest;->g:Ljava/util/Map;
 
     .line 503
@@ -1314,7 +1308,7 @@
 
 .method public setNetworkExtras(Lcom/google/ads/mediation/NetworkExtras;)Lcom/google/ads/AdRequest;
     .locals 2
-    .parameter "extras"
+    .param p1, "extras"    # Lcom/google/ads/mediation/NetworkExtras;
 
     .prologue
     .line 465
@@ -1336,7 +1330,7 @@
 
 .method public setPlusOneOptOut(Z)Lcom/google/ads/AdRequest;
     .locals 1
-    .parameter "plusOneOptOut"
+    .param p1, "plusOneOptOut"    # Z
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -1354,7 +1348,6 @@
 
 .method public setTestDevices(Ljava/util/Set;)Lcom/google/ads/AdRequest;
     .locals 0
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1368,7 +1361,7 @@
 
     .prologue
     .line 691
-    .local p1, testDevices:Ljava/util/Set;,"Ljava/util/Set<Ljava/lang/String;>;"
+    .local p1, "testDevices":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     iput-object p1, p0, Lcom/google/ads/AdRequest;->l:Ljava/util/Set;
 
     .line 692
@@ -1377,7 +1370,7 @@
 
 .method public setTesting(Z)Lcom/google/ads/AdRequest;
     .locals 0
-    .parameter "testing"
+    .param p1, "testing"    # Z
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 

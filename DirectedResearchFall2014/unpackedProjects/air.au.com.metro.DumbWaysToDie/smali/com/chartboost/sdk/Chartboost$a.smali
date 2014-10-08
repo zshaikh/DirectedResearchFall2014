@@ -30,7 +30,6 @@
 # direct methods
 .method private constructor <init>(Lcom/chartboost/sdk/Chartboost;)V
     .locals 2
-    .parameter
 
     .prologue
     const/4 v1, -0x1
@@ -118,8 +117,6 @@
 
 .method synthetic constructor <init>(Lcom/chartboost/sdk/Chartboost;Lcom/chartboost/sdk/Chartboost$a;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 392

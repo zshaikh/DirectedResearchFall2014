@@ -30,7 +30,7 @@
 # direct methods
 .method public constructor <init>(Lcom/fusepowered/m1/android/VideoPlayerActivity;)V
     .locals 2
-    .parameter "activity"
+    .param p1, "activity"    # Lcom/fusepowered/m1/android/VideoPlayerActivity;
 
     .prologue
     .line 109
@@ -79,7 +79,7 @@
     check-cast v0, Lcom/fusepowered/m1/android/VideoPlayerActivity;
 
     .line 158
-    .local v0, activity:Lcom/fusepowered/m1/android/VideoPlayerActivity;
+    .local v0, "activity":Lcom/fusepowered/m1/android/VideoPlayerActivity;
     if-eqz v0, :cond_0
 
     iget-object v1, v0, Lcom/fusepowered/m1/android/VideoPlayerActivity;->adProperties:Lcom/fusepowered/m1/android/AdProperties;
@@ -111,7 +111,7 @@
     const/4 v1, 0x0
 
     .line 145
-    .local v1, settings:Lcom/fusepowered/m1/android/OverlaySettings;
+    .local v1, "settings":Lcom/fusepowered/m1/android/OverlaySettings;
     iget-object v2, p0, Lcom/fusepowered/m1/android/VideoPlayerActivity$VideoRedirectionListener;->activityRef:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v2}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -121,7 +121,7 @@
     check-cast v0, Lcom/fusepowered/m1/android/VideoPlayerActivity;
 
     .line 146
-    .local v0, activity:Lcom/fusepowered/m1/android/VideoPlayerActivity;
+    .local v0, "activity":Lcom/fusepowered/m1/android/VideoPlayerActivity;
     if-eqz v0, :cond_0
 
     iget-object v2, v0, Lcom/fusepowered/m1/android/VideoPlayerActivity;->lastOverlayOrientation:Ljava/lang/String;
@@ -131,11 +131,11 @@
     .line 148
     new-instance v1, Lcom/fusepowered/m1/android/OverlaySettings;
 
-    .end local v1           #settings:Lcom/fusepowered/m1/android/OverlaySettings;
+    .end local v1    # "settings":Lcom/fusepowered/m1/android/OverlaySettings;
     invoke-direct {v1}, Lcom/fusepowered/m1/android/OverlaySettings;-><init>()V
 
     .line 149
-    .restart local v1       #settings:Lcom/fusepowered/m1/android/OverlaySettings;
+    .restart local v1    # "settings":Lcom/fusepowered/m1/android/OverlaySettings;
     iget-object v2, v0, Lcom/fusepowered/m1/android/VideoPlayerActivity;->lastOverlayOrientation:Ljava/lang/String;
 
     iput-object v2, v1, Lcom/fusepowered/m1/android/OverlaySettings;->orientation:Ljava/lang/String;
@@ -147,7 +147,7 @@
 
 .method public isHandlingMMVideo(Landroid/net/Uri;)Z
     .locals 2
-    .parameter "uri"
+    .param p1, "uri"    # Landroid/net/Uri;
 
     .prologue
     .line 121
@@ -160,7 +160,7 @@
     check-cast v0, Lcom/fusepowered/m1/android/VideoPlayerActivity;
 
     .line 122
-    .local v0, activity:Lcom/fusepowered/m1/android/VideoPlayerActivity;
+    .local v0, "activity":Lcom/fusepowered/m1/android/VideoPlayerActivity;
     if-eqz v0, :cond_0
 
     .line 124
@@ -173,7 +173,7 @@
     .line 132
     if-eqz p1, :cond_0
 
-    #calls: Lcom/fusepowered/m1/android/VideoPlayerActivity;->isActionable(Landroid/net/Uri;)Z
+    # invokes: Lcom/fusepowered/m1/android/VideoPlayerActivity;->isActionable(Landroid/net/Uri;)Z
     invoke-static {v0, p1}, Lcom/fusepowered/m1/android/VideoPlayerActivity;->access$000(Lcom/fusepowered/m1/android/VideoPlayerActivity;Landroid/net/Uri;)Z
 
     move-result v1

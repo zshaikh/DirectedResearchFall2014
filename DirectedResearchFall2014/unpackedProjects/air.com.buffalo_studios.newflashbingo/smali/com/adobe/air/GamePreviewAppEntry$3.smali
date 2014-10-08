@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/adobe/air/GamePreviewAppEntry;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 173
@@ -39,7 +38,6 @@
 # virtual methods
 .method public onCancel(Landroid/content/DialogInterface;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 176

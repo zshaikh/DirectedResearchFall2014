@@ -55,7 +55,7 @@
 # direct methods
 .method public constructor <init>(Landroid/app/Activity;)V
     .locals 0
-    .parameter "activity"
+    .param p1, "activity"    # Landroid/app/Activity;
 
     .prologue
     .line 435
@@ -93,7 +93,7 @@
 
 .method handleBuild(Landroid/os/Bundle;)Landroid/content/Intent;
     .locals 5
-    .parameter "extras"
+    .param p1, "extras"    # Landroid/os/Bundle;
 
     .prologue
     const-string v4, "com.facebook.platform.extra.TITLE"
@@ -201,13 +201,13 @@
 
     move-result-object v3
 
-    #calls: Lcom/facebook/widget/FacebookDialog;->getProtocolVersionForNativeDialog(Landroid/content/Context;Ljava/lang/Integer;)I
+    # invokes: Lcom/facebook/widget/FacebookDialog;->getProtocolVersionForNativeDialog(Landroid/content/Context;Ljava/lang/Integer;)I
     invoke-static {v2, v3}, Lcom/facebook/widget/FacebookDialog;->access$1(Landroid/content/Context;Ljava/lang/Integer;)I
 
     move-result v1
 
     .line 554
-    .local v1, protocolVersion:I
+    .local v1, "protocolVersion":I
     iget-object v2, p0, Lcom/facebook/widget/FacebookDialog$ShareDialogBuilder;->activity:Landroid/app/Activity;
 
     const-string v3, "com.facebook.platform.action.request.FEED_DIALOG"
@@ -217,7 +217,7 @@
     move-result-object v0
 
     .line 556
-    .local v0, intent:Landroid/content/Intent;
+    .local v0, "intent":Landroid/content/Intent;
     return-object v0
 .end method
 
@@ -247,7 +247,6 @@
 
 .method public bridge synthetic setApplicationName(Ljava/lang/String;)Lcom/facebook/widget/FacebookDialog$Builder;
     .locals 1
-    .parameter
 
     .prologue
     .line 1
@@ -260,7 +259,7 @@
 
 .method public setCaption(Ljava/lang/String;)Lcom/facebook/widget/FacebookDialog$ShareDialogBuilder;
     .locals 0
-    .parameter "caption"
+    .param p1, "caption"    # Ljava/lang/String;
 
     .prologue
     .line 454
@@ -272,7 +271,7 @@
 
 .method public setDataErrorsFatal(Z)Lcom/facebook/widget/FacebookDialog$ShareDialogBuilder;
     .locals 0
-    .parameter "dataErrorsFatal"
+    .param p1, "dataErrorsFatal"    # Z
 
     .prologue
     .line 525
@@ -284,7 +283,7 @@
 
 .method public setDescription(Ljava/lang/String;)Lcom/facebook/widget/FacebookDialog$ShareDialogBuilder;
     .locals 0
-    .parameter "description"
+    .param p1, "description"    # Ljava/lang/String;
 
     .prologue
     .line 464
@@ -296,7 +295,6 @@
 
 .method public bridge synthetic setFragment(Landroid/support/v4/app/Fragment;)Lcom/facebook/widget/FacebookDialog$Builder;
     .locals 1
-    .parameter
 
     .prologue
     .line 1
@@ -309,7 +307,6 @@
 
 .method public setFriends(Ljava/util/List;)Lcom/facebook/widget/FacebookDialog$ShareDialogBuilder;
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -323,7 +320,7 @@
 
     .prologue
     .line 504
-    .local p1, friends:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
+    .local p1, "friends":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0, p1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
@@ -336,7 +333,7 @@
 
 .method public setLink(Ljava/lang/String;)Lcom/facebook/widget/FacebookDialog$ShareDialogBuilder;
     .locals 0
-    .parameter "link"
+    .param p1, "link"    # Ljava/lang/String;
 
     .prologue
     .line 474
@@ -348,7 +345,7 @@
 
 .method public setName(Ljava/lang/String;)Lcom/facebook/widget/FacebookDialog$ShareDialogBuilder;
     .locals 0
-    .parameter "name"
+    .param p1, "name"    # Ljava/lang/String;
 
     .prologue
     .line 444
@@ -360,7 +357,7 @@
 
 .method public setPicture(Ljava/lang/String;)Lcom/facebook/widget/FacebookDialog$ShareDialogBuilder;
     .locals 0
-    .parameter "picture"
+    .param p1, "picture"    # Ljava/lang/String;
 
     .prologue
     .line 484
@@ -372,7 +369,7 @@
 
 .method public setPlace(Ljava/lang/String;)Lcom/facebook/widget/FacebookDialog$ShareDialogBuilder;
     .locals 0
-    .parameter "place"
+    .param p1, "place"    # Ljava/lang/String;
 
     .prologue
     .line 494
@@ -384,7 +381,7 @@
 
 .method public setRef(Ljava/lang/String;)Lcom/facebook/widget/FacebookDialog$ShareDialogBuilder;
     .locals 0
-    .parameter "ref"
+    .param p1, "ref"    # Ljava/lang/String;
 
     .prologue
     .line 514
@@ -396,7 +393,6 @@
 
 .method public bridge synthetic setRequestCode(I)Lcom/facebook/widget/FacebookDialog$Builder;
     .locals 1
-    .parameter
 
     .prologue
     .line 1

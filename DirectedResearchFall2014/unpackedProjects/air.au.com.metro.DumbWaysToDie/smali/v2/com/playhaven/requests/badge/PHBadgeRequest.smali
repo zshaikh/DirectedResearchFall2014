@@ -12,7 +12,7 @@
 # direct methods
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 1
-    .parameter "placement"
+    .param p1, "placement"    # Ljava/lang/String;
 
     .prologue
     .line 24
@@ -32,8 +32,8 @@
 
 .method public constructor <init>(Lv2/com/playhaven/listeners/PHBadgeRequestListener;Ljava/lang/String;)V
     .locals 0
-    .parameter "listener"
-    .parameter "placement"
+    .param p1, "listener"    # Lv2/com/playhaven/listeners/PHBadgeRequestListener;
+    .param p2, "placement"    # Ljava/lang/String;
 
     .prologue
     .line 29
@@ -50,7 +50,7 @@
 # virtual methods
 .method public baseURL(Landroid/content/Context;)Ljava/lang/String;
     .locals 1
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     .line 73
@@ -65,7 +65,7 @@
 
 .method public getAdditionalParams(Landroid/content/Context;)Ljava/util/Hashtable;
     .locals 3
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -86,7 +86,7 @@
     invoke-direct {v0}, Ljava/util/Hashtable;-><init>()V
 
     .line 79
-    .local v0, params:Ljava/util/Hashtable;,"Ljava/util/Hashtable<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v0, "params":Ljava/util/Hashtable;, "Ljava/util/Hashtable<Ljava/lang/String;Ljava/lang/String;>;"
     iget-object v1, p0, Lv2/com/playhaven/requests/badge/PHBadgeRequest;->placement:Ljava/lang/String;
 
     if-eqz v1, :cond_0
@@ -132,7 +132,7 @@
 
 .method public handleRequestFailure(Lv2/com/playhaven/model/PHError;)V
     .locals 1
-    .parameter "error"
+    .param p1, "error"    # Lv2/com/playhaven/model/PHError;
 
     .prologue
     .line 67
@@ -152,7 +152,7 @@
 
 .method public handleRequestSuccess(Lorg/json/JSONObject;)V
     .locals 3
-    .parameter "json"
+    .param p1, "json"    # Lorg/json/JSONObject;
 
     .prologue
     .line 52
@@ -208,7 +208,7 @@
 
 .method public setMetadataListener(Lv2/com/playhaven/listeners/PHBadgeRequestListener;)V
     .locals 0
-    .parameter "listener"
+    .param p1, "listener"    # Lv2/com/playhaven/listeners/PHBadgeRequestListener;
 
     .prologue
     .line 39

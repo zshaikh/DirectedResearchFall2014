@@ -18,10 +18,6 @@
 # virtual methods
 .method public final a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/ClassLoader;Z)Lcom/vungle/sdk/aq;
     .locals 4
-    .parameter
-    .parameter
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -131,8 +127,6 @@
 
 .method public final a(Ljava/lang/Class;Ljava/lang/Object;)Lcom/vungle/sdk/ay;
     .locals 3
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -251,7 +245,6 @@
 
 .method public final a(Ljava/lang/Class;)Lcom/vungle/sdk/bb;
     .locals 2
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",

@@ -38,7 +38,8 @@
     invoke-direct {v2}, Ljava/util/HashSet;-><init>()V
 
     .line 662
-    .local v2, applicationIds:Ljava/util/Set;,"Ljava/util/Set<Ljava/lang/String;>;"
+    .local v2, "applicationIds":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
+    # getter for: Lcom/facebook/AppEventsLogger;->staticLock:Ljava/lang/Object;
     invoke-static {}, Lcom/facebook/AppEventsLogger;->access$2()Ljava/lang/Object;
 
     move-result-object v3
@@ -47,6 +48,7 @@
 
     .line 663
     :try_start_0
+    # getter for: Lcom/facebook/AppEventsLogger;->stateMap:Ljava/util/Map;
     invoke-static {}, Lcom/facebook/AppEventsLogger;->access$3()Ljava/util/Map;
 
     move-result-object v4
@@ -96,7 +98,7 @@
     check-cast v0, Lcom/facebook/AppEventsLogger$AccessTokenAppIdPair;
 
     .line 664
-    .local v0, accessTokenAppId:Lcom/facebook/AppEventsLogger$AccessTokenAppIdPair;
+    .local v0, "accessTokenAppId":Lcom/facebook/AppEventsLogger$AccessTokenAppIdPair;
     invoke-virtual {v0}, Lcom/facebook/AppEventsLogger$AccessTokenAppIdPair;->getApplicationId()Ljava/lang/String;
 
     move-result-object v5
@@ -106,7 +108,7 @@
     goto :goto_0
 
     .line 662
-    .end local v0           #accessTokenAppId:Lcom/facebook/AppEventsLogger$AccessTokenAppIdPair;
+    .end local v0    # "accessTokenAppId":Lcom/facebook/AppEventsLogger$AccessTokenAppIdPair;
     :catchall_0
     move-exception v4
 
@@ -125,7 +127,7 @@
     check-cast v1, Ljava/lang/String;
 
     .line 668
-    .local v1, applicationId:Ljava/lang/String;
+    .local v1, "applicationId":Ljava/lang/String;
     const/4 v4, 0x1
 
     invoke-static {v1, v4}, Lcom/facebook/internal/Utility;->queryAppSettings(Ljava/lang/String;Z)Lcom/facebook/internal/Utility$FetchedAppSettings;

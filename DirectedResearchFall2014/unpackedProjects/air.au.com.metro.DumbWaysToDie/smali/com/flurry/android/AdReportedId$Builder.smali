@@ -42,7 +42,6 @@
 
 .method private constructor <init>(B)V
     .locals 1
-    .parameter
 
     .prologue
     .line 87
@@ -268,7 +267,6 @@
 
 .method public setId(Ljava/nio/ByteBuffer;)Lcom/flurry/android/AdReportedId$Builder;
     .locals 2
-    .parameter
 
     .prologue
     const/4 v1, 0x1
@@ -298,7 +296,6 @@
 
 .method public setType(I)Lcom/flurry/android/AdReportedId$Builder;
     .locals 3
-    .parameter
 
     .prologue
     const/4 v2, 0x0

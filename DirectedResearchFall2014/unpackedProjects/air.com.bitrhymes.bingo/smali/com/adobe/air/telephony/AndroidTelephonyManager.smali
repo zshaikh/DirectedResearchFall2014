@@ -32,7 +32,6 @@
 
 .method private constructor <init>(Landroid/content/Context;)V
     .locals 2
-    .parameter
 
     .prologue
     const/4 v0, 0x0
@@ -82,7 +81,6 @@
 
 .method public static CreateAndroidTelephonyManager(Landroid/content/Context;)Lcom/adobe/air/telephony/AndroidTelephonyManager;
     .locals 1
-    .parameter
 
     .prologue
     .line 38
@@ -118,7 +116,6 @@
 # virtual methods
 .method public listen(Z)V
     .locals 3
-    .parameter
 
     .prologue
     .line 59

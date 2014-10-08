@@ -25,9 +25,9 @@
 # direct methods
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Lcom/google/analytics/tracking/android/MetaModel$Formatter;)V
     .locals 0
-    .parameter "urlParam"
-    .parameter "defaultValue"
-    .parameter "formatter"
+    .param p1, "urlParam"    # Ljava/lang/String;
+    .param p2, "defaultValue"    # Ljava/lang/String;
+    .param p3, "formatter"    # Lcom/google/analytics/tracking/android/MetaModel$Formatter;
 
     .prologue
     .line 54
@@ -82,7 +82,7 @@
 
 .method public getUrlParam(Ljava/lang/String;)Ljava/lang/String;
     .locals 7
-    .parameter "actualKey"
+    .param p1, "actualKey"    # Ljava/lang/String;
 
     .prologue
     const/4 v6, 0x0
@@ -102,11 +102,11 @@
     iget-object v1, p0, Lcom/google/analytics/tracking/android/MetaModel$MetaInfo;->mUrlParam:Ljava/lang/String;
 
     .line 73
-    .local v1, param:Ljava/lang/String;
+    .local v1, "param":Ljava/lang/String;
     const/4 v2, 0x0
 
     .line 74
-    .local v2, slot:I
+    .local v2, "slot":I
     const-string v4, "\\*"
 
     invoke-virtual {p1, v4}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
@@ -114,7 +114,7 @@
     move-result-object v3
 
     .line 75
-    .local v3, splits:[Ljava/lang/String;
+    .local v3, "splits":[Ljava/lang/String;
     array-length v4, v3
 
     if-le v4, v5, :cond_0
@@ -149,23 +149,23 @@
     move-result-object v4
 
     .line 88
-    .end local v1           #param:Ljava/lang/String;
-    .end local v2           #slot:I
-    .end local v3           #splits:[Ljava/lang/String;
+    .end local v1    # "param":Ljava/lang/String;
+    .end local v2    # "slot":I
+    .end local v3    # "splits":[Ljava/lang/String;
     :goto_0
     return-object v4
 
     .line 79
-    .restart local v1       #param:Ljava/lang/String;
-    .restart local v2       #slot:I
-    .restart local v3       #splits:[Ljava/lang/String;
+    .restart local v1    # "param":Ljava/lang/String;
+    .restart local v2    # "slot":I
+    .restart local v3    # "splits":[Ljava/lang/String;
     :catch_0
     move-exception v4
 
     move-object v0, v4
 
     .line 80
-    .local v0, e:Ljava/lang/NumberFormatException;
+    .local v0, "e":Ljava/lang/NumberFormatException;
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -191,7 +191,7 @@
     .line 81
     goto :goto_0
 
-    .end local v0           #e:Ljava/lang/NumberFormatException;
+    .end local v0    # "e":Ljava/lang/NumberFormatException;
     :cond_0
     move-object v4, v6
 
@@ -199,9 +199,9 @@
     goto :goto_0
 
     .line 88
-    .end local v1           #param:Ljava/lang/String;
-    .end local v2           #slot:I
-    .end local v3           #splits:[Ljava/lang/String;
+    .end local v1    # "param":Ljava/lang/String;
+    .end local v2    # "slot":I
+    .end local v3    # "splits":[Ljava/lang/String;
     :cond_1
     iget-object v4, p0, Lcom/google/analytics/tracking/android/MetaModel$MetaInfo;->mUrlParam:Ljava/lang/String;
 

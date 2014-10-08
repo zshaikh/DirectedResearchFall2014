@@ -205,8 +205,6 @@
 
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 34
@@ -217,7 +215,6 @@
 
 .method public static valueOf(Ljava/lang/String;)Lv2/com/playhaven/interstitial/requestbridge/bridges/ContentRequestToInterstitialBridge$InterstitialEvent;
     .locals 1
-    .parameter
 
     .prologue
     .line 1

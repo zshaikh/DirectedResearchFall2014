@@ -18,7 +18,7 @@
 
 
 # static fields
-.field static final SPACES:[C = null
+.field static final SPACES:[C
 
 .field static final SPACE_COUNT:I = 0x40
 
@@ -34,7 +34,7 @@
     const/4 v0, 0x0
 
     .line 253
-    .local v0, lf:Ljava/lang/String;
+    .local v0, "lf":Ljava/lang/String;
     :try_start_0
     const-string v1, "line.separator"
 
@@ -107,8 +107,8 @@
 
 .method public writeIndentation(Lcom/flurry/org/codehaus/jackson/JsonGenerator;I)V
     .locals 3
-    .parameter "jg"
-    .parameter "level"
+    .param p1, "jg"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator;
+    .param p2, "level"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,

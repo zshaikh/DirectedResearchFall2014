@@ -28,9 +28,6 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m1/android/MMWebView$MyWebChromeClient;Landroid/webkit/GeolocationPermissions$Callback;Ljava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 647
@@ -49,8 +46,8 @@
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 3
-    .parameter "dialog"
-    .parameter "id"
+    .param p1, "dialog"    # Landroid/content/DialogInterface;
+    .param p2, "id"    # I
 
     .prologue
     const/4 v2, 0x1
@@ -58,7 +55,7 @@
     .line 652
     iget-object v0, p0, Lcom/fusepowered/m1/android/MMWebView$MyWebChromeClient$2;->this$0:Lcom/fusepowered/m1/android/MMWebView$MyWebChromeClient;
 
-    #calls: Lcom/fusepowered/m1/android/MMWebView$MyWebChromeClient;->saveUseGeo(Z)V
+    # invokes: Lcom/fusepowered/m1/android/MMWebView$MyWebChromeClient;->saveUseGeo(Z)V
     invoke-static {v0, v2}, Lcom/fusepowered/m1/android/MMWebView$MyWebChromeClient;->access$100(Lcom/fusepowered/m1/android/MMWebView$MyWebChromeClient;Z)V
 
     .line 653

@@ -326,11 +326,6 @@
 
 .method private constructor <init>(Ljava/lang/String;IICLjava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(IC",
@@ -358,7 +353,7 @@
 
 .method public static valueOf(Ljava/lang/String;)Lcom/chartboost/sdk/impl/ag$a;
     .locals 1
-    .parameter "name"
+    .param p0, "name"    # Ljava/lang/String;
 
     .prologue
     .line 133
@@ -368,7 +363,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "name":Ljava/lang/String;
     check-cast p0, Lcom/chartboost/sdk/impl/ag$a;
 
     return-object p0

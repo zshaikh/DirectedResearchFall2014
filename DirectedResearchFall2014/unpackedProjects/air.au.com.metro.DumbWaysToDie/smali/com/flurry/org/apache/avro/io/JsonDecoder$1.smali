@@ -25,8 +25,6 @@
 # direct methods
 .method constructor <init>(Lcom/flurry/org/apache/avro/io/JsonDecoder;Ljava/util/List;)V
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 556
@@ -82,7 +80,7 @@
 
 .method public getBinaryValue(Lcom/flurry/org/codehaus/jackson/Base64Variant;)[B
     .locals 1
-    .parameter "b64variant"
+    .param p1, "b64variant"    # Lcom/flurry/org/codehaus/jackson/Base64Variant;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -152,7 +150,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/flurry/org/apache/avro/io/JsonDecoder$1;
     check-cast p0, Lcom/flurry/org/apache/avro/io/JsonDecoder$JsonElement;
 
     iget-object v0, p0, Lcom/flurry/org/apache/avro/io/JsonDecoder$JsonElement;->token:Lcom/flurry/org/codehaus/jackson/JsonToken;
@@ -325,7 +323,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/flurry/org/apache/avro/io/JsonDecoder$1;
     check-cast p0, Lcom/flurry/org/apache/avro/io/JsonDecoder$JsonElement;
 
     iget-object v0, p0, Lcom/flurry/org/apache/avro/io/JsonDecoder$JsonElement;->value:Ljava/lang/String;
@@ -433,7 +431,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/flurry/org/apache/avro/io/JsonDecoder$1;
     check-cast p0, Lcom/flurry/org/apache/avro/io/JsonDecoder$JsonElement;
 
     iget-object v0, p0, Lcom/flurry/org/apache/avro/io/JsonDecoder$JsonElement;->token:Lcom/flurry/org/codehaus/jackson/JsonToken;
@@ -443,7 +441,7 @@
 
 .method public setCodec(Lcom/flurry/org/codehaus/jackson/ObjectCodec;)V
     .locals 1
-    .parameter "c"
+    .param p1, "c"    # Lcom/flurry/org/codehaus/jackson/ObjectCodec;
 
     .prologue
     .line 566
@@ -467,7 +465,7 @@
     const/4 v0, 0x0
 
     .line 584
-    .local v0, level:I
+    .local v0, "level":I
     :cond_0
     sget-object v2, Lcom/flurry/org/apache/avro/io/JsonDecoder$2;->$SwitchMap$org$codehaus$jackson$JsonToken:[I
 

@@ -24,7 +24,6 @@
 # direct methods
 .method private constructor <init>(Lcom/facebook/widget/PlacePickerFragment;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 515
@@ -37,8 +36,6 @@
 
 .method synthetic constructor <init>(Lcom/facebook/widget/PlacePickerFragment;Lcom/facebook/widget/PlacePickerFragment$SearchTextWatcher;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 515
@@ -51,7 +48,7 @@
 # virtual methods
 .method public afterTextChanged(Landroid/text/Editable;)V
     .locals 0
-    .parameter "s"
+    .param p1, "s"    # Landroid/text/Editable;
 
     .prologue
     .line 528
@@ -60,10 +57,10 @@
 
 .method public beforeTextChanged(Ljava/lang/CharSequence;III)V
     .locals 0
-    .parameter "s"
-    .parameter "start"
-    .parameter "count"
-    .parameter "after"
+    .param p1, "s"    # Ljava/lang/CharSequence;
+    .param p2, "start"    # I
+    .param p3, "count"    # I
+    .param p4, "after"    # I
 
     .prologue
     .line 519
@@ -72,10 +69,10 @@
 
 .method public onTextChanged(Ljava/lang/CharSequence;III)V
     .locals 3
-    .parameter "s"
-    .parameter "start"
-    .parameter "before"
-    .parameter "count"
+    .param p1, "s"    # Ljava/lang/CharSequence;
+    .param p2, "start"    # I
+    .param p3, "before"    # I
+    .param p4, "count"    # I
 
     .prologue
     .line 523

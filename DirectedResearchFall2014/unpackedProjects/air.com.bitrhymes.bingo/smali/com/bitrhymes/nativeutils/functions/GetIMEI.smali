@@ -21,8 +21,8 @@
 # virtual methods
 .method public call(Lcom/adobe/fre/FREContext;[Lcom/adobe/fre/FREObject;)Lcom/adobe/fre/FREObject;
     .locals 8
-    .parameter "arg0"
-    .parameter "arg1"
+    .param p1, "arg0"    # Lcom/adobe/fre/FREContext;
+    .param p2, "arg1"    # [Lcom/adobe/fre/FREObject;
 
     .prologue
     const-string v7, ","
@@ -46,17 +46,17 @@
     check-cast v3, Landroid/telephony/TelephonyManager;
 
     .line 19
-    .local v3, telephony:Landroid/telephony/TelephonyManager;
+    .local v3, "telephony":Landroid/telephony/TelephonyManager;
     invoke-virtual {v3}, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;
 
     move-result-object v0
 
     .line 21
-    .local v0, IMEI:Ljava/lang/String;
+    .local v0, "IMEI":Ljava/lang/String;
     const/4 v1, 0x0
 
     .line 22
-    .local v1, deviceInfoObject:Lcom/adobe/fre/FREObject;
+    .local v1, "deviceInfoObject":Lcom/adobe/fre/FREObject;
     if-nez v0, :cond_0
 
     .line 23
@@ -73,9 +73,9 @@
     move-object v4, v1
 
     .line 30
-    .end local v0           #IMEI:Ljava/lang/String;
-    .end local v1           #deviceInfoObject:Lcom/adobe/fre/FREObject;
-    .end local v3           #telephony:Landroid/telephony/TelephonyManager;
+    .end local v0    # "IMEI":Ljava/lang/String;
+    .end local v1    # "deviceInfoObject":Lcom/adobe/fre/FREObject;
+    .end local v3    # "telephony":Landroid/telephony/TelephonyManager;
     :goto_0
     return-object v4
 
@@ -86,7 +86,7 @@
     move-object v2, v4
 
     .line 28
-    .local v2, e:Ljava/lang/Exception;
+    .local v2, "e":Ljava/lang/Exception;
     const-string v4, "ERROR_EVENT"
 
     new-instance v5, Ljava/lang/StringBuilder;

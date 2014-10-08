@@ -111,7 +111,7 @@
 
     invoke-virtual {v0, v2, v3}, Lcom/facebook/android/Facebook;->setAccessExpires(J)V
 
-    #getter for: Lcom/facebook/android/Facebook;->session:Lcom/facebook/Session;
+    # getter for: Lcom/facebook/android/Facebook;->session:Lcom/facebook/Session;
     invoke-static {v0}, Lcom/facebook/android/Facebook;->access$200(Lcom/facebook/android/Facebook;)Lcom/facebook/Session;
 
     move-result-object v0

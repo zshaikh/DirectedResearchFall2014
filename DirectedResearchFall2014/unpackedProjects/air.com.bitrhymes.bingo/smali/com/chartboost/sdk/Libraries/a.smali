@@ -42,7 +42,7 @@
 
     const/16 v1, 0xa
 
-    const/high16 v2, 0x3fc0
+    const/high16 v2, 0x3fc00000
 
     const/4 v3, 0x1
 
@@ -91,7 +91,6 @@
 
 .method private static a(Landroid/graphics/Bitmap;)J
     .locals 2
-    .parameter
 
     .prologue
     .line 76
@@ -205,7 +204,6 @@
 # virtual methods
 .method public a(Ljava/lang/String;)Lcom/chartboost/sdk/Libraries/a$a;
     .locals 1
-    .parameter
 
     .prologue
     .line 36
@@ -253,7 +251,6 @@
 
 .method public a(J)V
     .locals 0
-    .parameter
 
     .prologue
     .line 30
@@ -265,8 +262,6 @@
 
 .method public a(Ljava/lang/String;Lcom/chartboost/sdk/Libraries/a$a;)V
     .locals 5
-    .parameter
-    .parameter
 
     .prologue
     .line 43

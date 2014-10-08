@@ -26,13 +26,14 @@
 
     iget-object v0, v0, Lcom/applovin/impl/adview/p;->a:Lcom/applovin/impl/adview/AdViewControllerJsInterface;
 
-    #getter for: Lcom/applovin/impl/adview/AdViewControllerJsInterface;->currentlyWaiting:Z
+    # getter for: Lcom/applovin/impl/adview/AdViewControllerJsInterface;->currentlyWaiting:Z
     invoke-static {v0}, Lcom/applovin/impl/adview/AdViewControllerJsInterface;->access$500(Lcom/applovin/impl/adview/AdViewControllerJsInterface;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    # getter for: Lcom/applovin/impl/adview/AdViewControllerJsInterface;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/applovin/impl/adview/AdViewControllerJsInterface;->access$400()Ljava/lang/String;
 
     move-result-object v0
@@ -47,13 +48,14 @@
 
     const/4 v1, 0x1
 
-    #setter for: Lcom/applovin/impl/adview/AdViewControllerJsInterface;->interruptNotify:Z
+    # setter for: Lcom/applovin/impl/adview/AdViewControllerJsInterface;->interruptNotify:Z
     invoke-static {v0, v1}, Lcom/applovin/impl/adview/AdViewControllerJsInterface;->access$602(Lcom/applovin/impl/adview/AdViewControllerJsInterface;Z)Z
 
     :goto_0
     return-void
 
     :cond_0
+    # getter for: Lcom/applovin/impl/adview/AdViewControllerJsInterface;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/applovin/impl/adview/AdViewControllerJsInterface;->access$400()Ljava/lang/String;
 
     move-result-object v0

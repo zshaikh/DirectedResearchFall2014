@@ -18,7 +18,7 @@
 # virtual methods
 .method public handle(Lorg/json/JSONObject;)V
     .locals 6
-    .parameter "jsonPayload"
+    .param p1, "jsonPayload"    # Lorg/json/JSONObject;
 
     .prologue
     const-string v4, "hidden"
@@ -40,7 +40,7 @@
     move-result-object v3
 
     .line 21
-    .local v3, shouldHide:Ljava/lang/String;
+    .local v3, "shouldHide":Ljava/lang/String;
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -82,7 +82,7 @@
     move-result v2
 
     .line 28
-    .local v2, shouldDisableClosable:Z
+    .local v2, "shouldDisableClosable":Z
     if-eqz v2, :cond_2
 
     .line 29
@@ -97,7 +97,7 @@
     invoke-interface {v4}, Lv2/com/playhaven/interstitial/jsbridge/ManipulatableContentDisplayer;->disableClosable()V
 
     .line 34
-    .end local v2           #shouldDisableClosable:Z
+    .end local v2    # "shouldDisableClosable":Z
     :cond_1
     :goto_1
     new-instance v1, Lorg/json/JSONObject;
@@ -105,7 +105,7 @@
     invoke-direct {v1}, Lorg/json/JSONObject;-><init>()V
 
     .line 38
-    .local v1, response:Lorg/json/JSONObject;
+    .local v1, "response":Lorg/json/JSONObject;
     const-string v5, "hidden"
 
     iget-object v4, p0, Lv2/com/playhaven/interstitial/jsbridge/handlers/CloseButtonHandler;->contentDisplayer:Ljava/lang/ref/WeakReference;
@@ -145,15 +145,15 @@
     goto :goto_0
 
     .line 43
-    .end local v1           #response:Lorg/json/JSONObject;
-    .end local v3           #shouldHide:Ljava/lang/String;
+    .end local v1    # "response":Lorg/json/JSONObject;
+    .end local v3    # "shouldHide":Ljava/lang/String;
     :catch_0
     move-exception v4
 
     move-object v0, v4
 
     .line 44
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v4, "PHInterstitialActivity - handleCloseButton"
 
     sget-object v5, Lv2/com/playhaven/requests/crashreport/PHCrashReport$Urgency;->critical:Lv2/com/playhaven/requests/crashreport/PHCrashReport$Urgency;
@@ -163,9 +163,9 @@
     goto :goto_0
 
     .line 31
-    .end local v0           #e:Ljava/lang/Exception;
-    .restart local v2       #shouldDisableClosable:Z
-    .restart local v3       #shouldHide:Ljava/lang/String;
+    .end local v0    # "e":Ljava/lang/Exception;
+    .restart local v2    # "shouldDisableClosable":Z
+    .restart local v3    # "shouldHide":Ljava/lang/String;
     :cond_2
     :try_start_1
     iget-object v4, p0, Lv2/com/playhaven/interstitial/jsbridge/handlers/CloseButtonHandler;->contentDisplayer:Ljava/lang/ref/WeakReference;
@@ -181,8 +181,8 @@
     goto :goto_1
 
     .line 38
-    .end local v2           #shouldDisableClosable:Z
-    .restart local v1       #response:Lorg/json/JSONObject;
+    .end local v2    # "shouldDisableClosable":Z
+    .restart local v1    # "response":Lorg/json/JSONObject;
     :cond_3
     const-string v4, "true"
     :try_end_1

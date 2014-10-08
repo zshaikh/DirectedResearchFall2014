@@ -497,14 +497,14 @@
     invoke-interface {v0, p3}, Lcom/facebook/RequestOutputStream;->setCurrentRequest(Lcom/facebook/Request;)V
 
     :cond_0
-    #calls: Lcom/facebook/Request;->isSupportedParameterType(Ljava/lang/Object;)Z
+    # invokes: Lcom/facebook/Request;->isSupportedParameterType(Ljava/lang/Object;)Z
     invoke-static {p2}, Lcom/facebook/Request;->access$100(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    #calls: Lcom/facebook/Request;->parameterToString(Ljava/lang/Object;)Ljava/lang/String;
+    # invokes: Lcom/facebook/Request;->parameterToString(Ljava/lang/Object;)Ljava/lang/String;
     invoke-static {p2}, Lcom/facebook/Request;->access$200(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0

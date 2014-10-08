@@ -43,7 +43,6 @@
 
 .method public constructor <init>(Ljava/util/Map;)V
     .locals 0
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -70,10 +69,6 @@
 # virtual methods
 .method public final a(Landroid/content/Context;Lcom/flurry/android/FlurryAds;Lcom/flurry/android/cz;Lcom/flurry/android/AdUnit;)Lcom/flurry/android/ao;
     .locals 5
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const/4 v3, 0x0

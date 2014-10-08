@@ -47,7 +47,7 @@
 
 .method static clearCache(Landroid/content/Context;)V
     .locals 6
-    .parameter "context"
+    .param p0, "context"    # Landroid/content/Context;
 
     .prologue
     .line 102
@@ -71,7 +71,7 @@
     move-object v0, v1
 
     .line 104
-    .local v0, e:Ljava/io/IOException;
+    .local v0, "e":Ljava/io/IOException;
     sget-object v1, Lcom/facebook/LoggingBehavior;->CACHE:Lcom/facebook/LoggingBehavior;
 
     const/4 v2, 0x5
@@ -103,7 +103,7 @@
 
 .method static declared-synchronized getCache(Landroid/content/Context;)Lcom/facebook/internal/FileLruCache;
     .locals 5
-    .parameter "context"
+    .param p0, "context"    # Landroid/content/Context;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -159,15 +159,15 @@
 
 .method static getCachedImageStream(Ljava/net/URI;Landroid/content/Context;)Ljava/io/InputStream;
     .locals 7
-    .parameter "url"
-    .parameter "context"
+    .param p0, "url"    # Ljava/net/URI;
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     .line 46
     const/4 v2, 0x0
 
     .line 47
-    .local v2, imageStream:Ljava/io/InputStream;
+    .local v2, "imageStream":Ljava/io/InputStream;
     if-eqz p0, :cond_0
 
     .line 48
@@ -184,7 +184,7 @@
     move-result-object v0
 
     .line 51
-    .local v0, cache:Lcom/facebook/internal/FileLruCache;
+    .local v0, "cache":Lcom/facebook/internal/FileLruCache;
     invoke-virtual {p0}, Ljava/net/URI;->toString()Ljava/lang/String;
 
     move-result-object v3
@@ -196,7 +196,7 @@
     move-result-object v2
 
     .line 58
-    .end local v0           #cache:Lcom/facebook/internal/FileLruCache;
+    .end local v0    # "cache":Lcom/facebook/internal/FileLruCache;
     :cond_0
     :goto_0
     return-object v2
@@ -208,7 +208,7 @@
     move-object v1, v3
 
     .line 53
-    .local v1, e:Ljava/io/IOException;
+    .local v1, "e":Ljava/io/IOException;
     sget-object v3, Lcom/facebook/LoggingBehavior;->CACHE:Lcom/facebook/LoggingBehavior;
 
     const/4 v4, 0x5
@@ -226,8 +226,8 @@
 
 .method static interceptAndCacheImageStream(Landroid/content/Context;Ljava/net/HttpURLConnection;)Ljava/io/InputStream;
     .locals 5
-    .parameter "context"
-    .parameter "connection"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "connection"    # Ljava/net/HttpURLConnection;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -239,7 +239,7 @@
     const/4 v1, 0x0
 
     .line 63
-    .local v1, stream:Ljava/io/InputStream;
+    .local v1, "stream":Ljava/io/InputStream;
     invoke-virtual {p1}, Ljava/net/HttpURLConnection;->getResponseCode()I
 
     move-result v3
@@ -254,7 +254,7 @@
     move-result-object v2
 
     .line 65
-    .local v2, url:Ljava/net/URL;
+    .local v2, "url":Ljava/net/URL;
     invoke-virtual {p1}, Ljava/net/HttpURLConnection;->getInputStream()Ljava/io/InputStream;
 
     move-result-object v1
@@ -277,7 +277,7 @@
     move-result-object v0
 
     .line 72
-    .local v0, cache:Lcom/facebook/internal/FileLruCache;
+    .local v0, "cache":Lcom/facebook/internal/FileLruCache;
     invoke-virtual {v2}, Ljava/net/URL;->toString()Ljava/lang/String;
 
     move-result-object v3
@@ -296,14 +296,14 @@
     move-result-object v1
 
     .line 81
-    .end local v0           #cache:Lcom/facebook/internal/FileLruCache;
-    .end local v2           #url:Ljava/net/URL;
+    .end local v0    # "cache":Lcom/facebook/internal/FileLruCache;
+    .end local v2    # "url":Ljava/net/URL;
     :cond_0
     :goto_0
     return-object v1
 
     .line 77
-    .restart local v2       #url:Ljava/net/URL;
+    .restart local v2    # "url":Ljava/net/URL;
     :catch_0
     move-exception v3
 
@@ -318,7 +318,7 @@
 
 .method private static isCDNURL(Ljava/net/URI;)Z
     .locals 3
-    .parameter "url"
+    .param p0, "url"    # Ljava/net/URI;
 
     .prologue
     const/4 v2, 0x1
@@ -332,7 +332,7 @@
     move-result-object v0
 
     .line 88
-    .local v0, uriHost:Ljava/lang/String;
+    .local v0, "uriHost":Ljava/lang/String;
     const-string v1, "fbcdn.net"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
@@ -344,12 +344,12 @@
     move v1, v2
 
     .line 97
-    .end local v0           #uriHost:Ljava/lang/String;
+    .end local v0    # "uriHost":Ljava/lang/String;
     :goto_0
     return v1
 
     .line 92
-    .restart local v0       #uriHost:Ljava/lang/String;
+    .restart local v0    # "uriHost":Ljava/lang/String;
     :cond_0
     const-string v1, "fbcdn"
 
@@ -373,7 +373,7 @@
     goto :goto_0
 
     .line 97
-    .end local v0           #uriHost:Ljava/lang/String;
+    .end local v0    # "uriHost":Ljava/lang/String;
     :cond_1
     const/4 v1, 0x0
 

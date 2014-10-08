@@ -43,7 +43,6 @@
 
 .method static synthetic a(Lcom/inmobi/activity/InMobiAdActivity;)Lcom/inmobi/androidsdk/IMAdView;
     .locals 1
-    .parameter
 
     .prologue
     .line 23
@@ -54,7 +53,6 @@
 
 .method static synthetic b(Lcom/inmobi/activity/InMobiAdActivity;)Lcom/inmobi/androidsdk/IMAdInterstitial;
     .locals 1
-    .parameter
 
     .prologue
     .line 24
@@ -65,7 +63,6 @@
 
 .method static synthetic c(Lcom/inmobi/activity/InMobiAdActivity;)Lcom/inmobi/androidsdk/IMAdRequest;
     .locals 1
-    .parameter
 
     .prologue
     .line 25
@@ -78,14 +75,13 @@
 # virtual methods
 .method protected onCreate(Landroid/os/Bundle;)V
     .locals 3
-    .parameter
 
     .prologue
     .line 30
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
     .line 32
-    const/high16 v0, 0x7f03
+    const/high16 v0, 0x7f030000
 
     invoke-virtual {p0, v0}, Lcom/inmobi/activity/InMobiAdActivity;->setContentView(I)V
 
@@ -194,7 +190,6 @@
 
 .method public onGetInAd(Landroid/view/View;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 92
@@ -211,7 +206,6 @@
 
 .method public onRefreshAd(Landroid/view/View;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 83
@@ -228,7 +222,6 @@
 
 .method public onShowInAd(Landroid/view/View;)V
     .locals 3
-    .parameter
 
     .prologue
     .line 102

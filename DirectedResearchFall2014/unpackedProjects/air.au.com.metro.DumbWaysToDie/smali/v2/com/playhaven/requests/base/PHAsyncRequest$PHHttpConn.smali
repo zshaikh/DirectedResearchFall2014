@@ -108,7 +108,7 @@
 
 .method private enableRedirecting(Lorg/apache/http/params/HttpParams;)Lorg/apache/http/params/HttpParams;
     .locals 3
-    .parameter "params"
+    .param p1, "params"    # Lorg/apache/http/params/HttpParams;
 
     .prologue
     const/4 v2, 0x1
@@ -119,11 +119,11 @@
     .line 219
     new-instance p1, Lorg/apache/http/params/BasicHttpParams;
 
-    .end local p1
+    .end local p1    # "params":Lorg/apache/http/params/HttpParams;
     invoke-direct {p1}, Lorg/apache/http/params/BasicHttpParams;-><init>()V
 
     .line 221
-    .restart local p1
+    .restart local p1    # "params":Lorg/apache/http/params/HttpParams;
     :cond_0
     const-string v0, "http.protocol.version"
 
@@ -147,7 +147,7 @@
 # virtual methods
 .method public addRedirectUrl(Ljava/lang/String;)V
     .locals 1
-    .parameter "url"
+    .param p1, "url"    # Ljava/lang/String;
 
     .prologue
     .line 163
@@ -208,11 +208,11 @@
     const/4 v0, 0x0
 
     .line 159
-    .end local p0
+    .end local p0    # "this":Lv2/com/playhaven/requests/base/PHAsyncRequest$PHHttpConn;
     :goto_0
     return-object v0
 
-    .restart local p0
+    .restart local p0    # "this":Lv2/com/playhaven/requests/base/PHAsyncRequest$PHHttpConn;
     :cond_0
     iget-object v0, p0, Lv2/com/playhaven/requests/base/PHAsyncRequest$PHHttpConn;->redirectUrls:Ljava/util/ArrayList;
 
@@ -230,7 +230,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lv2/com/playhaven/requests/base/PHAsyncRequest$PHHttpConn;
     check-cast p0, Ljava/lang/String;
 
     move-object v0, p0
@@ -270,7 +270,7 @@
 
 .method public isRedirectResponse(I)Z
     .locals 1
-    .parameter "code"
+    .param p1, "code"    # I
 
     .prologue
     .line 172
@@ -295,7 +295,7 @@
 
 .method public setMaxRedirect(I)V
     .locals 0
-    .parameter "max"
+    .param p1, "max"    # I
 
     .prologue
     .line 132
@@ -307,7 +307,7 @@
 
 .method public setPassword(Ljava/lang/String;)V
     .locals 0
-    .parameter "password"
+    .param p1, "password"    # Ljava/lang/String;
 
     .prologue
     .line 240
@@ -319,7 +319,7 @@
 
 .method public setSchemeRegistry(Lv2/com/playhaven/requests/base/PHAsyncRequest$PHHttpConn$PHSchemeRegistry;)V
     .locals 0
-    .parameter "reg"
+    .param p1, "reg"    # Lv2/com/playhaven/requests/base/PHAsyncRequest$PHHttpConn$PHSchemeRegistry;
 
     .prologue
     .line 147
@@ -331,7 +331,7 @@
 
 .method public setUsername(Ljava/lang/String;)V
     .locals 0
-    .parameter "username"
+    .param p1, "username"    # Ljava/lang/String;
 
     .prologue
     .line 228
@@ -343,7 +343,7 @@
 
 .method public shouldRedirect(Lorg/apache/http/HttpResponse;)Z
     .locals 6
-    .parameter "response"
+    .param p1, "response"    # Lorg/apache/http/HttpResponse;
 
     .prologue
     const/4 v5, 0x0
@@ -397,7 +397,7 @@
     move-result-object v0
 
     .line 191
-    .local v0, redirectURL:Ljava/lang/String;
+    .local v0, "redirectURL":Ljava/lang/String;
     if-nez v0, :cond_1
 
     move v3, v5
@@ -411,7 +411,7 @@
     move-result-object v2
 
     .line 195
-    .local v2, uri:Landroid/net/Uri;
+    .local v2, "uri":Landroid/net/Uri;
     if-eqz v2, :cond_2
 
     .line 196
@@ -454,7 +454,7 @@
     move-result-object v1
 
     .line 206
-    .local v1, scheme:Lorg/apache/http/conn/scheme/Scheme;
+    .local v1, "scheme":Lorg/apache/http/conn/scheme/Scheme;
     if-nez v1, :cond_4
 
     move v3, v5
@@ -482,9 +482,9 @@
 
     goto :goto_0
 
-    .end local v0           #redirectURL:Ljava/lang/String;
-    .end local v1           #scheme:Lorg/apache/http/conn/scheme/Scheme;
-    .end local v2           #uri:Landroid/net/Uri;
+    .end local v0    # "redirectURL":Ljava/lang/String;
+    .end local v1    # "scheme":Lorg/apache/http/conn/scheme/Scheme;
+    .end local v2    # "uri":Landroid/net/Uri;
     :cond_6
     move v3, v5
 
@@ -494,7 +494,7 @@
 
 .method public start(Lorg/apache/http/client/methods/HttpUriRequest;)Lorg/apache/http/HttpResponse;
     .locals 5
-    .parameter "request"
+    .param p1, "request"    # Lorg/apache/http/client/methods/HttpUriRequest;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -560,7 +560,7 @@
     move-result-object v1
 
     .line 253
-    .local v1, encodedCredentials:Ljava/lang/String;
+    .local v1, "encodedCredentials":Ljava/lang/String;
     const-string v2, "Basic %s"
 
     const/4 v3, 0x1
@@ -574,14 +574,14 @@
     move-result-object v0
 
     .line 255
-    .local v0, authStr:Ljava/lang/String;
+    .local v0, "authStr":Ljava/lang/String;
     const-string v2, "Authorization"
 
     invoke-interface {p1, v2, v0}, Lorg/apache/http/client/methods/HttpUriRequest;->setHeader(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 258
-    .end local v0           #authStr:Ljava/lang/String;
-    .end local v1           #encodedCredentials:Ljava/lang/String;
+    .end local v0    # "authStr":Ljava/lang/String;
+    .end local v1    # "encodedCredentials":Ljava/lang/String;
     :cond_0
     iget-object v2, p0, Lv2/com/playhaven/requests/base/PHAsyncRequest$PHHttpConn;->client:Lorg/apache/http/impl/client/DefaultHttpClient;
 

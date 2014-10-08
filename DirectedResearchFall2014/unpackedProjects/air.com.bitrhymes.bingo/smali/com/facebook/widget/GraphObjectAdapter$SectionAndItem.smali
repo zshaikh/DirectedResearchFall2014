@@ -44,8 +44,7 @@
 # direct methods
 .method public constructor <init>(Ljava/lang/String;Lcom/facebook/model/GraphObject;)V
     .locals 0
-    .parameter "sectionKey"
-    .parameter
+    .param p1, "sectionKey"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -56,8 +55,8 @@
 
     .prologue
     .line 87
-    .local p0, this:Lcom/facebook/widget/GraphObjectAdapter$SectionAndItem;,"Lcom/facebook/widget/GraphObjectAdapter<TT;>.SectionAndItem<TT;>;"
-    .local p2, graphObject:Lcom/facebook/model/GraphObject;,"TT;"
+    .local p0, "this":Lcom/facebook/widget/GraphObjectAdapter$SectionAndItem;, "Lcom/facebook/widget/GraphObjectAdapter<TT;>.SectionAndItem<TT;>;"
+    .local p2, "graphObject":Lcom/facebook/model/GraphObject;, "TT;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 88
@@ -77,7 +76,7 @@
 
     .prologue
     .line 93
-    .local p0, this:Lcom/facebook/widget/GraphObjectAdapter$SectionAndItem;,"Lcom/facebook/widget/GraphObjectAdapter<TT;>.SectionAndItem<TT;>;"
+    .local p0, "this":Lcom/facebook/widget/GraphObjectAdapter$SectionAndItem;, "Lcom/facebook/widget/GraphObjectAdapter<TT;>.SectionAndItem<TT;>;"
     iget-object v0, p0, Lcom/facebook/widget/GraphObjectAdapter$SectionAndItem;->sectionKey:Ljava/lang/String;
 
     if-nez v0, :cond_0

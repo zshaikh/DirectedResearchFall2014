@@ -24,7 +24,6 @@
 # direct methods
 .method private constructor <init>(Lcom/milkmangames/extensions/android/BuffaloExtensionContext;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 754
@@ -37,8 +36,6 @@
 
 .method synthetic constructor <init>(Lcom/milkmangames/extensions/android/BuffaloExtensionContext;Lcom/milkmangames/extensions/android/BuffaloExtensionContext$BUScheduleOnceLocalNotificaitonFunction;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 754
@@ -51,8 +48,8 @@
 # virtual methods
 .method public call(Lcom/adobe/fre/FREContext;[Lcom/adobe/fre/FREObject;)Lcom/adobe/fre/FREObject;
     .locals 11
-    .parameter "context"
-    .parameter "args"
+    .param p1, "context"    # Lcom/adobe/fre/FREContext;
+    .param p2, "args"    # [Lcom/adobe/fre/FREObject;
 
     .prologue
     const/4 v10, 0x0
@@ -68,7 +65,7 @@
     move-result v1
 
     .line 763
-    .local v1, uid:I
+    .local v1, "uid":I
     const/4 v0, 0x1
 
     aget-object v0, p2, v0
@@ -80,7 +77,7 @@
     double-to-long v2, v8
 
     .line 764
-    .local v2, timeSeconds:J
+    .local v2, "timeSeconds":J
     const/4 v0, 0x2
 
     aget-object v0, p2, v0
@@ -90,7 +87,7 @@
     move-result-object v4
 
     .line 765
-    .local v4, title:Ljava/lang/String;
+    .local v4, "title":Ljava/lang/String;
     const/4 v0, 0x3
 
     aget-object v0, p2, v0
@@ -100,7 +97,7 @@
     move-result-object v5
 
     .line 766
-    .local v5, message:Ljava/lang/String;
+    .local v5, "message":Ljava/lang/String;
     const/4 v0, 0x4
 
     aget-object v0, p2, v0
@@ -110,7 +107,7 @@
     move-result-object v6
 
     .line 767
-    .local v6, extraData:Ljava/lang/String;
+    .local v6, "extraData":Ljava/lang/String;
     iget-object v0, p0, Lcom/milkmangames/extensions/android/BuffaloExtensionContext$BUScheduleOnceLocalNotificaitonFunction;->this$0:Lcom/milkmangames/extensions/android/BuffaloExtensionContext;
 
     invoke-virtual/range {v0 .. v6}, Lcom/milkmangames/extensions/android/BuffaloExtensionContext;->scheduleOnceLocalNotification(IJLjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
@@ -120,11 +117,11 @@
     move-object v0, v10
 
     .line 775
-    .end local v1           #uid:I
-    .end local v2           #timeSeconds:J
-    .end local v4           #title:Ljava/lang/String;
-    .end local v5           #message:Ljava/lang/String;
-    .end local v6           #extraData:Ljava/lang/String;
+    .end local v1    # "uid":I
+    .end local v2    # "timeSeconds":J
+    .end local v4    # "title":Ljava/lang/String;
+    .end local v5    # "message":Ljava/lang/String;
+    .end local v6    # "extraData":Ljava/lang/String;
     :goto_0
     return-object v0
 
@@ -135,7 +132,7 @@
     move-object v7, v0
 
     .line 771
-    .local v7, e:Ljava/lang/Exception;
+    .local v7, "e":Ljava/lang/Exception;
     const-string v0, "[BUExtension]"
 
     const-string v8, "Parse exception"

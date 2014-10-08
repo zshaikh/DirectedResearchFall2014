@@ -35,7 +35,7 @@
 
 .method synthetic constructor <init>(Lcom/fusepowered/m1/android/AdViewOverlayView$1;)V
     .locals 0
-    .parameter "x0"
+    .param p1, "x0"    # Lcom/fusepowered/m1/android/AdViewOverlayView$1;
 
     .prologue
     .line 44

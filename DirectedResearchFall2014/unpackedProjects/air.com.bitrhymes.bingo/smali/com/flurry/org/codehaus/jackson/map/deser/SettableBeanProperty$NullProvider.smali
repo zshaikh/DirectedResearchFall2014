@@ -32,8 +32,8 @@
 # direct methods
 .method protected constructor <init>(Lcom/flurry/org/codehaus/jackson/type/JavaType;Ljava/lang/Object;)V
     .locals 1
-    .parameter "type"
-    .parameter "nullValue"
+    .param p1, "type"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .param p2, "nullValue"    # Ljava/lang/Object;
 
     .prologue
     .line 811
@@ -64,7 +64,7 @@
 # virtual methods
 .method public nullValue(Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;)Ljava/lang/Object;
     .locals 2
-    .parameter "ctxt"
+    .param p1, "ctxt"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lcom/flurry/org/codehaus/jackson/JsonProcessingException;

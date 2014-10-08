@@ -29,8 +29,7 @@
 # direct methods
 .method public constructor <init>(Lcom/flurry/org/apache/avro/file/DataFileWriter;Ljava/io/OutputStream;)V
     .locals 1
-    .parameter
-    .parameter "out"
+    .param p2, "out"    # Ljava/io/OutputStream;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -39,7 +38,7 @@
 
     .prologue
     .line 390
-    .local p0, this:Lcom/flurry/org/apache/avro/file/DataFileWriter$BufferedFileOutputStream;,"Lcom/flurry/org/apache/avro/file/DataFileWriter<TD;>.BufferedFileOutputStream;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/file/DataFileWriter$BufferedFileOutputStream;, "Lcom/flurry/org/apache/avro/file/DataFileWriter<TD;>.BufferedFileOutputStream;"
     iput-object p1, p0, Lcom/flurry/org/apache/avro/file/DataFileWriter$BufferedFileOutputStream;->this$0:Lcom/flurry/org/apache/avro/file/DataFileWriter;
 
     .line 391
@@ -60,8 +59,8 @@
 
 .method static synthetic access$014(Lcom/flurry/org/apache/avro/file/DataFileWriter$BufferedFileOutputStream;J)J
     .locals 2
-    .parameter "x0"
-    .parameter "x1"
+    .param p0, "x0"    # Lcom/flurry/org/apache/avro/file/DataFileWriter$BufferedFileOutputStream;
+    .param p1, "x1"    # J
 
     .prologue
     .line 378
@@ -81,7 +80,7 @@
 
     .prologue
     .line 395
-    .local p0, this:Lcom/flurry/org/apache/avro/file/DataFileWriter$BufferedFileOutputStream;,"Lcom/flurry/org/apache/avro/file/DataFileWriter<TD;>.BufferedFileOutputStream;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/file/DataFileWriter$BufferedFileOutputStream;, "Lcom/flurry/org/apache/avro/file/DataFileWriter<TD;>.BufferedFileOutputStream;"
     iget-wide v0, p0, Lcom/flurry/org/apache/avro/file/DataFileWriter$BufferedFileOutputStream;->position:J
 
     iget v2, p0, Lcom/flurry/org/apache/avro/file/DataFileWriter$BufferedFileOutputStream;->count:I

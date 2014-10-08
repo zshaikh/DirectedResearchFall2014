@@ -38,7 +38,7 @@
 # direct methods
 .method public constructor <init>(Lcom/flurry/org/apache/avro/Schema;)V
     .locals 3
-    .parameter "schema"
+    .param p1, "schema"    # Lcom/flurry/org/apache/avro/Schema;
 
     .prologue
     .line 68
@@ -108,8 +108,8 @@
 
 .method public constructor <init>(Lcom/flurry/org/apache/avro/generic/GenericData$Record;Z)V
     .locals 5
-    .parameter "other"
-    .parameter "deepCopy"
+    .param p1, "other"    # Lcom/flurry/org/apache/avro/generic/GenericData$Record;
+    .param p2, "deepCopy"    # Z
 
     .prologue
     const/4 v4, 0x0
@@ -143,7 +143,7 @@
     .line 78
     const/4 v0, 0x0
 
-    .local v0, ii:I
+    .local v0, "ii":I
     :goto_0
     iget-object v1, p0, Lcom/flurry/org/apache/avro/generic/GenericData$Record;->values:[Ljava/lang/Object;
 
@@ -154,6 +154,7 @@
     .line 79
     iget-object v2, p0, Lcom/flurry/org/apache/avro/generic/GenericData$Record;->values:[Ljava/lang/Object;
 
+    # getter for: Lcom/flurry/org/apache/avro/generic/GenericData;->INSTANCE:Lcom/flurry/org/apache/avro/generic/GenericData;
     invoke-static {}, Lcom/flurry/org/apache/avro/generic/GenericData;->access$000()Lcom/flurry/org/apache/avro/generic/GenericData;
 
     move-result-object v3
@@ -190,7 +191,7 @@
     goto :goto_0
 
     .line 84
-    .end local v0           #ii:I
+    .end local v0    # "ii":I
     :cond_0
     iget-object v1, p1, Lcom/flurry/org/apache/avro/generic/GenericData$Record;->values:[Ljava/lang/Object;
 
@@ -211,7 +212,7 @@
 # virtual methods
 .method public compareTo(Lcom/flurry/org/apache/avro/generic/GenericData$Record;)I
     .locals 2
-    .parameter "that"
+    .param p1, "that"    # Lcom/flurry/org/apache/avro/generic/GenericData$Record;
 
     .prologue
     .line 114
@@ -230,13 +231,13 @@
 
 .method public bridge synthetic compareTo(Ljava/lang/Object;)I
     .locals 1
-    .parameter "x0"
+    .param p1, "x0"    # Ljava/lang/Object;
 
     .prologue
     .line 65
     check-cast p1, Lcom/flurry/org/apache/avro/generic/GenericData$Record;
 
-    .end local p1
+    .end local p1    # "x0":Ljava/lang/Object;
     invoke-virtual {p0, p1}, Lcom/flurry/org/apache/avro/generic/GenericData$Record;->compareTo(Lcom/flurry/org/apache/avro/generic/GenericData$Record;)I
 
     move-result v0
@@ -246,7 +247,7 @@
 
 .method public equals(Ljava/lang/Object;)Z
     .locals 6
-    .parameter "o"
+    .param p1, "o"    # Ljava/lang/Object;
 
     .prologue
     const/4 v5, 0x1
@@ -281,7 +282,7 @@
     move-object v1, v0
 
     .line 106
-    .local v1, that:Lcom/flurry/org/apache/avro/generic/GenericData$Record;
+    .local v1, "that":Lcom/flurry/org/apache/avro/generic/GenericData$Record;
     iget-object v2, p0, Lcom/flurry/org/apache/avro/generic/GenericData$Record;->schema:Lcom/flurry/org/apache/avro/Schema;
 
     invoke-virtual {v2}, Lcom/flurry/org/apache/avro/Schema;->getFullName()Ljava/lang/String;
@@ -331,7 +332,7 @@
 
 .method public get(I)Ljava/lang/Object;
     .locals 1
-    .parameter "i"
+    .param p1, "i"    # I
 
     .prologue
     .line 101
@@ -344,7 +345,7 @@
 
 .method public get(Ljava/lang/String;)Ljava/lang/Object;
     .locals 3
-    .parameter "key"
+    .param p1, "key"    # Ljava/lang/String;
 
     .prologue
     .line 97
@@ -355,7 +356,7 @@
     move-result-object v0
 
     .line 98
-    .local v0, field:Lcom/flurry/org/apache/avro/Schema$Field;
+    .local v0, "field":Lcom/flurry/org/apache/avro/Schema$Field;
     if-nez v0, :cond_0
 
     const/4 v1, 0x0
@@ -406,8 +407,8 @@
 
 .method public put(ILjava/lang/Object;)V
     .locals 1
-    .parameter "i"
-    .parameter "v"
+    .param p1, "i"    # I
+    .param p2, "v"    # Ljava/lang/Object;
 
     .prologue
     .line 95
@@ -420,8 +421,8 @@
 
 .method public put(Ljava/lang/String;Ljava/lang/Object;)V
     .locals 4
-    .parameter "key"
-    .parameter "value"
+    .param p1, "key"    # Ljava/lang/String;
+    .param p2, "value"    # Ljava/lang/Object;
 
     .prologue
     .line 89
@@ -432,7 +433,7 @@
     move-result-object v0
 
     .line 90
-    .local v0, field:Lcom/flurry/org/apache/avro/Schema$Field;
+    .local v0, "field":Lcom/flurry/org/apache/avro/Schema$Field;
     if-nez v0, :cond_0
 
     .line 91

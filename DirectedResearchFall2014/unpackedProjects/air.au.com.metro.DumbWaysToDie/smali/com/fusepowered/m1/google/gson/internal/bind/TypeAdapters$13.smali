@@ -38,7 +38,7 @@
 # virtual methods
 .method public bridge synthetic read(Lcom/fusepowered/m1/google/gson/stream/JsonReader;)Ljava/lang/Object;
     .locals 1
-    .parameter "x0"
+    .param p1, "x0"    # Lcom/fusepowered/m1/google/gson/stream/JsonReader;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -56,7 +56,7 @@
 
 .method public read(Lcom/fusepowered/m1/google/gson/stream/JsonReader;)Ljava/lang/String;
     .locals 2
-    .parameter "in"
+    .param p1, "in"    # Lcom/fusepowered/m1/google/gson/stream/JsonReader;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -70,7 +70,7 @@
     move-result-object v0
 
     .line 350
-    .local v0, peek:Lcom/fusepowered/m1/google/gson/stream/JsonToken;
+    .local v0, "peek":Lcom/fusepowered/m1/google/gson/stream/JsonToken;
     sget-object v1, Lcom/fusepowered/m1/google/gson/stream/JsonToken;->NULL:Lcom/fusepowered/m1/google/gson/stream/JsonToken;
 
     if-ne v0, v1, :cond_0
@@ -113,8 +113,8 @@
 
 .method public bridge synthetic write(Lcom/fusepowered/m1/google/gson/stream/JsonWriter;Ljava/lang/Object;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
+    .param p1, "x0"    # Lcom/fusepowered/m1/google/gson/stream/JsonWriter;
+    .param p2, "x1"    # Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -125,7 +125,7 @@
     .line 346
     check-cast p2, Ljava/lang/String;
 
-    .end local p2
+    .end local p2    # "x1":Ljava/lang/Object;
     invoke-virtual {p0, p1, p2}, Lcom/fusepowered/m1/google/gson/internal/bind/TypeAdapters$13;->write(Lcom/fusepowered/m1/google/gson/stream/JsonWriter;Ljava/lang/String;)V
 
     return-void
@@ -133,8 +133,8 @@
 
 .method public write(Lcom/fusepowered/m1/google/gson/stream/JsonWriter;Ljava/lang/String;)V
     .locals 0
-    .parameter "out"
-    .parameter "value"
+    .param p1, "out"    # Lcom/fusepowered/m1/google/gson/stream/JsonWriter;
+    .param p2, "value"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;

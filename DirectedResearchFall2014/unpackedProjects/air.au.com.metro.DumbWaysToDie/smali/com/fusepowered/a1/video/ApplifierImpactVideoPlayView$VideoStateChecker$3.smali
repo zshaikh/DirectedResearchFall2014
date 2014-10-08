@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1
@@ -45,12 +44,12 @@
     .line 626
     iget-object v0, p0, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker$3;->this$1:Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker;
 
-    #getter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker;->this$0:Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;
+    # getter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker;->this$0:Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;
     invoke-static {v0}, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker;->access$4(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker;)Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;
 
     move-result-object v0
 
-    #getter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->_skipTextView:Landroid/widget/TextView;
+    # getter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->_skipTextView:Landroid/widget/TextView;
     invoke-static {v0}, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->access$6(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;)Landroid/widget/TextView;
 
     move-result-object v0
@@ -59,7 +58,7 @@
 
     iget-object v0, p0, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker$3;->this$1:Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker;
 
-    #getter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker;->_videoHasStalled:Z
+    # getter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker;->_videoHasStalled:Z
     invoke-static {v0}, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker;->access$2(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker;)Z
 
     move-result v0
@@ -69,12 +68,12 @@
     .line 627
     iget-object v0, p0, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker$3;->this$1:Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker;
 
-    #getter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker;->this$0:Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;
+    # getter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker;->this$0:Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;
     invoke-static {v0}, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker;->access$4(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker;)Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;
 
     move-result-object v0
 
-    #getter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->_skipText:Landroid/widget/RelativeLayout;
+    # getter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->_skipText:Landroid/widget/RelativeLayout;
     invoke-static {v0}, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->access$7(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;)Landroid/widget/RelativeLayout;
 
     move-result-object v0
@@ -86,12 +85,12 @@
     .line 628
     iget-object v0, p0, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker$3;->this$1:Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker;
 
-    #getter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker;->this$0:Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;
+    # getter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker;->this$0:Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;
     invoke-static {v0}, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker;->access$4(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker;)Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;
 
     move-result-object v0
 
-    #getter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->_skipTextView:Landroid/widget/TextView;
+    # getter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->_skipTextView:Landroid/widget/TextView;
     invoke-static {v0}, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->access$6(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;)Landroid/widget/TextView;
 
     move-result-object v0
@@ -104,12 +103,12 @@
 
     iget-object v2, p0, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker$3;->this$1:Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker;
 
-    #getter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker;->this$0:Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;
+    # getter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker;->this$0:Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;
     invoke-static {v2}, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker;->access$4(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker;)Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;
 
     move-result-object v2
 
-    #getter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->_skipTimeInSeconds:I
+    # getter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->_skipTimeInSeconds:I
     invoke-static {v2}, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->access$4(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;)I
 
     move-result v2
@@ -120,7 +119,7 @@
 
     iget-object v3, p0, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker$3;->this$1:Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker;
 
-    #getter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker;->_curPos:Ljava/lang/Float;
+    # getter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker;->_curPos:Ljava/lang/Float;
     invoke-static {v3}, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker;->access$1(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker;)Ljava/lang/Float;
 
     move-result-object v3
@@ -131,7 +130,7 @@
 
     sub-float/2addr v2, v3
 
-    const/high16 v3, 0x447a
+    const/high16 v3, 0x447a0000
 
     div-float/2addr v2, v3
 

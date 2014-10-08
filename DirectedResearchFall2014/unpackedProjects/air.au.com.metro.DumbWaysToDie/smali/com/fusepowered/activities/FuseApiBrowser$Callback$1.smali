@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/activities/FuseApiBrowser$Callback;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 26
@@ -91,7 +90,7 @@
     move-object v0, v1
 
     .line 33
-    .local v0, e:Ljava/lang/InterruptedException;
+    .local v0, "e":Ljava/lang/InterruptedException;
     invoke-virtual {v0}, Ljava/lang/InterruptedException;->printStackTrace()V
 
     goto :goto_0

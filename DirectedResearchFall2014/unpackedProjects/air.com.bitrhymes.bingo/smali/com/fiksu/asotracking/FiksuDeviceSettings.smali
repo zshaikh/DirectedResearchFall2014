@@ -39,7 +39,7 @@
 
 .method private static final makeNonNull(Ljava/lang/String;)Ljava/lang/String;
     .locals 1
-    .parameter "value"
+    .param p0, "value"    # Ljava/lang/String;
 
     .prologue
     .line 72
@@ -80,7 +80,7 @@
 
 .method protected final readFromSharedPreferences(Landroid/content/SharedPreferences;)V
     .locals 2
-    .parameter "sharedPreferences"
+    .param p1, "sharedPreferences"    # Landroid/content/SharedPreferences;
 
     .prologue
     .line 26
@@ -111,7 +111,7 @@
 
 .method protected final setAppTrackingEnabled(Z)V
     .locals 0
-    .parameter "appTrackingEnabled"
+    .param p1, "appTrackingEnabled"    # Z
 
     .prologue
     .line 62
@@ -123,7 +123,7 @@
 
 .method protected final setClientId(Ljava/lang/String;)V
     .locals 1
-    .parameter "clientId"
+    .param p1, "clientId"    # Ljava/lang/String;
 
     .prologue
     .line 48
@@ -139,7 +139,7 @@
 
 .method protected final writeToSharedPreferences(Landroid/content/SharedPreferences;)V
     .locals 3
-    .parameter "sharedPreferences"
+    .param p1, "sharedPreferences"    # Landroid/content/SharedPreferences;
 
     .prologue
     .line 31
@@ -148,7 +148,7 @@
     move-result-object v0
 
     .line 32
-    .local v0, editor:Landroid/content/SharedPreferences$Editor;
+    .local v0, "editor":Landroid/content/SharedPreferences$Editor;
     const-string v1, "clientId"
 
     iget-object v2, p0, Lcom/fiksu/asotracking/FiksuDeviceSettings;->mClientId:Ljava/lang/String;

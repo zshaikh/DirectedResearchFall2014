@@ -77,8 +77,8 @@
 # direct methods
 .method public constructor <init>(Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;Ljava/lang/String;)V
     .locals 1
-    .parameter "src"
-    .parameter "newName"
+    .param p1, "src"    # Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
+    .param p2, "newName"    # Ljava/lang/String;
 
     .prologue
     .line 43
@@ -118,7 +118,7 @@
 
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 0
-    .parameter "internalName"
+    .param p1, "internalName"    # Ljava/lang/String;
 
     .prologue
     .line 37
@@ -136,7 +136,6 @@
 
 .method private _anyExplicitNames(Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node;)Z
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -149,7 +148,7 @@
 
     .prologue
     .line 422
-    .local p1, n:Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node;,"Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node<TT;>;"
+    .local p1, "n":Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node;, "Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node<TT;>;"
     :goto_0
     if-eqz p1, :cond_1
 
@@ -188,7 +187,6 @@
 
 .method private _anyIgnorals(Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node;)Z
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -201,7 +199,7 @@
 
     .prologue
     .line 471
-    .local p1, n:Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node;,"Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node<TT;>;"
+    .local p1, "n":Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node;, "Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node<TT;>;"
     :goto_0
     if-eqz p1, :cond_1
 
@@ -232,7 +230,6 @@
 
 .method private _anyVisible(Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node;)Z
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -245,7 +242,7 @@
 
     .prologue
     .line 440
-    .local p1, n:Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node;,"Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node<TT;>;"
+    .local p1, "n":Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node;, "Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node<TT;>;"
     :goto_0
     if-eqz p1, :cond_1
 
@@ -276,8 +273,7 @@
 
 .method private varargs _mergeAnnotations(I[Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node;)Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;
     .locals 2
-    .parameter "index"
-    .parameter
+    .param p1, "index"    # I
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I[",
@@ -291,7 +287,7 @@
 
     .prologue
     .line 372
-    .local p2, nodes:[Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node;,"[Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node<+Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMember;>;"
+    .local p2, "nodes":[Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node;, "[Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node<+Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMember;>;"
     aget-object v1, p2, p1
 
     iget-object v1, v1, Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node;->value:Ljava/lang/Object;
@@ -303,7 +299,7 @@
     move-result-object v0
 
     .line 373
-    .local v0, ann:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;
+    .local v0, "ann":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;
     add-int/lit8 p1, p1, 0x1
 
     .line 374
@@ -345,7 +341,6 @@
 
 .method private _removeIgnored(Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node;)Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node;
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -360,7 +355,7 @@
 
     .prologue
     .line 384
-    .local p1, node:Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node;,"Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node<TT;>;"
+    .local p1, "node":Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node;, "Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node<TT;>;"
     if-nez p1, :cond_0
 
     move-object v0, p1
@@ -379,7 +374,6 @@
 
 .method private _removeNonVisible(Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node;)Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node;
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -394,7 +388,7 @@
 
     .prologue
     .line 392
-    .local p1, node:Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node;,"Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node<TT;>;"
+    .local p1, "node":Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node;, "Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node<TT;>;"
     if-nez p1, :cond_0
 
     move-object v0, p1
@@ -413,7 +407,6 @@
 
 .method private _trimByVisibility(Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node;)Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node;
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -428,7 +421,7 @@
 
     .prologue
     .line 400
-    .local p1, node:Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node;,"Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node<TT;>;"
+    .local p1, "node":Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node;, "Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node<TT;>;"
     if-nez p1, :cond_0
 
     move-object v0, p1
@@ -447,8 +440,6 @@
 
 .method private findRenamed(Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node;Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node;)Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node;
     .locals 5
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -468,8 +459,8 @@
     .end annotation
 
     .prologue
-    .local p1, node:Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node;,"Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node<+Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMember;>;"
-    .local p2, renamed:Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node;,"Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node<+Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMember;>;"
+    .local p1, "node":Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node;, "Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node<+Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMember;>;"
+    .local p2, "renamed":Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node;, "Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node<+Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMember;>;"
     const-string v4, "\' (for "
 
     .line 497
@@ -480,7 +471,7 @@
     iget-object v0, p1, Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node;->explicitName:Ljava/lang/String;
 
     .line 499
-    .local v0, explName:Ljava/lang/String;
+    .local v0, "explName":Ljava/lang/String;
     if-nez v0, :cond_1
 
     .line 497
@@ -588,15 +579,13 @@
     throw v1
 
     .line 517
-    .end local v0           #explName:Ljava/lang/String;
+    .end local v0    # "explName":Ljava/lang/String;
     :cond_3
     return-object p2
 .end method
 
 .method private static merge(Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node;Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node;)Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node;
     .locals 1
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -613,8 +602,8 @@
 
     .prologue
     .line 288
-    .local p0, chain1:Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node;,"Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node<TT;>;"
-    .local p1, chain2:Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node;,"Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node<TT;>;"
+    .local p0, "chain1":Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node;, "Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node<TT;>;"
+    .local p1, "chain2":Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node;, "Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node<TT;>;"
     if-nez p0, :cond_0
 
     move-object v0, p1
@@ -634,7 +623,7 @@
 
     .line 294
     :cond_1
-    #calls: Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node;->append(Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node;)Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node;
+    # invokes: Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node;->append(Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node;)Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node;
     invoke-static {p0, p1}, Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node;->access$000(Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node;Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node;)Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node;
 
     move-result-object v0
@@ -646,7 +635,7 @@
 # virtual methods
 .method public addAll(Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;)V
     .locals 2
-    .parameter "src"
+    .param p1, "src"    # Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
 
     .prologue
     .line 280
@@ -699,10 +688,10 @@
 
 .method public addCtor(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedParameter;Ljava/lang/String;ZZ)V
     .locals 6
-    .parameter "a"
-    .parameter "ename"
-    .parameter "visible"
-    .parameter "ignored"
+    .param p1, "a"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedParameter;
+    .param p2, "ename"    # Ljava/lang/String;
+    .param p3, "visible"    # Z
+    .param p4, "ignored"    # Z
 
     .prologue
     .line 263
@@ -728,10 +717,10 @@
 
 .method public addField(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedField;Ljava/lang/String;ZZ)V
     .locals 6
-    .parameter "a"
-    .parameter "ename"
-    .parameter "visible"
-    .parameter "ignored"
+    .param p1, "a"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedField;
+    .param p2, "ename"    # Ljava/lang/String;
+    .param p3, "visible"    # Z
+    .param p4, "ignored"    # Z
 
     .prologue
     .line 259
@@ -757,10 +746,10 @@
 
 .method public addGetter(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;Ljava/lang/String;ZZ)V
     .locals 6
-    .parameter "a"
-    .parameter "ename"
-    .parameter "visible"
-    .parameter "ignored"
+    .param p1, "a"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
+    .param p2, "ename"    # Ljava/lang/String;
+    .param p3, "visible"    # Z
+    .param p4, "ignored"    # Z
 
     .prologue
     .line 267
@@ -786,10 +775,10 @@
 
 .method public addSetter(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;Ljava/lang/String;ZZ)V
     .locals 6
-    .parameter "a"
-    .parameter "ename"
-    .parameter "visible"
-    .parameter "ignored"
+    .param p1, "a"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
+    .param p2, "ename"    # Ljava/lang/String;
+    .param p3, "visible"    # Z
+    .param p4, "ignored"    # Z
 
     .prologue
     .line 271
@@ -1036,7 +1025,7 @@
 
 .method public compareTo(Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;)I
     .locals 2
-    .parameter "other"
+    .param p1, "other"    # Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
 
     .prologue
     .line 71
@@ -1086,13 +1075,13 @@
 
 .method public bridge synthetic compareTo(Ljava/lang/Object;)I
     .locals 1
-    .parameter "x0"
+    .param p1, "x0"    # Ljava/lang/Object;
 
     .prologue
     .line 11
     check-cast p1, Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
 
-    .end local p1
+    .end local p1    # "x0":Ljava/lang/Object;
     invoke-virtual {p0, p1}, Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;->compareTo(Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;)I
 
     move-result v0
@@ -1133,7 +1122,7 @@
     const/4 v0, 0x0
 
     .line 487
-    .local v0, renamed:Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node;,"Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node<+Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMember;>;"
+    .local v0, "renamed":Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node;, "Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node<+Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMember;>;"
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;->_fields:Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node;
 
     invoke-direct {p0, v1, v0}, Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;->findRenamed(Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node;Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node;)Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node;
@@ -1185,7 +1174,7 @@
     move-result-object v0
 
     .line 112
-    .local v0, m:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMember;
+    .local v0, "m":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMember;
     if-nez v0, :cond_0
 
     .line 113
@@ -1211,17 +1200,17 @@
     const/4 v1, 0x0
 
     .line 249
-    .end local p0
+    .end local p0    # "this":Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
     :goto_0
     return-object v1
 
     .line 242
-    .restart local p0
+    .restart local p0    # "this":Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
     :cond_0
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;->_ctorParameters:Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node;
 
     .line 244
-    .local v0, curr:Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node;,"Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node<Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedParameter;>;"
+    .local v0, "curr":Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node;, "Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node<Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedParameter;>;"
     :cond_1
     iget-object v1, v0, Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node;->value:Ljava/lang/Object;
 
@@ -1238,7 +1227,7 @@
     .line 245
     iget-object p0, v0, Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node;->value:Ljava/lang/Object;
 
-    .end local p0
+    .end local p0    # "this":Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
     check-cast p0, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedParameter;
 
     move-object v1, p0
@@ -1246,7 +1235,7 @@
     goto :goto_0
 
     .line 247
-    .restart local p0
+    .restart local p0    # "this":Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
     :cond_2
     iget-object v0, v0, Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node;->next:Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node;
 
@@ -1258,7 +1247,7 @@
 
     iget-object p0, v1, Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node;->value:Ljava/lang/Object;
 
-    .end local p0
+    .end local p0    # "this":Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
     check-cast p0, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedParameter;
 
     move-object v1, p0
@@ -1291,13 +1280,13 @@
     check-cast v0, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedField;
 
     .line 208
-    .local v0, field:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedField;
+    .local v0, "field":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedField;
     iget-object v5, p0, Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;->_fields:Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node;
 
     iget-object v2, v5, Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node;->next:Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node;
 
     .line 209
-    .local v2, next:Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node;,"Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node<Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedField;>;"
+    .local v2, "next":Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node;, "Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node<Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedField;>;"
     :goto_1
     if-eqz v2, :cond_4
 
@@ -1307,19 +1296,19 @@
     check-cast v4, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedField;
 
     .line 211
-    .local v4, nextField:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedField;
+    .local v4, "nextField":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedField;
     invoke-virtual {v0}, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedField;->getDeclaringClass()Ljava/lang/Class;
 
     move-result-object v1
 
     .line 212
-    .local v1, fieldClass:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local v1, "fieldClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-virtual {v4}, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedField;->getDeclaringClass()Ljava/lang/Class;
 
     move-result-object v3
 
     .line 213
-    .local v3, nextClass:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local v3, "nextClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     if-eq v1, v3, :cond_3
 
     .line 214
@@ -1404,9 +1393,9 @@
 
     throw v5
 
-    .end local v1           #fieldClass:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
-    .end local v3           #nextClass:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
-    .end local v4           #nextField:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedField;
+    .end local v1    # "fieldClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
+    .end local v3    # "nextClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
+    .end local v4    # "nextField":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedField;
     :cond_4
     move-object v5, v0
 
@@ -1439,13 +1428,13 @@
     check-cast v0, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
 
     .line 144
-    .local v0, getter:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
+    .local v0, "getter":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
     iget-object v5, p0, Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;->_getters:Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node;
 
     iget-object v2, v5, Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node;->next:Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node;
 
     .line 145
-    .local v2, next:Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node;,"Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node<Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;>;"
+    .local v2, "next":Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node;, "Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node<Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;>;"
     :goto_1
     if-eqz v2, :cond_4
 
@@ -1455,19 +1444,19 @@
     check-cast v4, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
 
     .line 151
-    .local v4, nextGetter:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
+    .local v4, "nextGetter":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
     invoke-virtual {v0}, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;->getDeclaringClass()Ljava/lang/Class;
 
     move-result-object v1
 
     .line 152
-    .local v1, getterClass:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local v1, "getterClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-virtual {v4}, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;->getDeclaringClass()Ljava/lang/Class;
 
     move-result-object v3
 
     .line 153
-    .local v3, nextClass:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local v3, "nextClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     if-eq v1, v3, :cond_3
 
     .line 154
@@ -1552,9 +1541,9 @@
 
     throw v5
 
-    .end local v1           #getterClass:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
-    .end local v3           #nextClass:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
-    .end local v4           #nextGetter:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
+    .end local v1    # "getterClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
+    .end local v3    # "nextClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
+    .end local v4    # "nextGetter":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
     :cond_4
     move-object v5, v0
 
@@ -1582,7 +1571,7 @@
     move-result-object v0
 
     .line 122
-    .local v0, m:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMember;
+    .local v0, "m":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMember;
     if-nez v0, :cond_0
 
     .line 123
@@ -1638,13 +1627,13 @@
     check-cast v3, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
 
     .line 176
-    .local v3, setter:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
+    .local v3, "setter":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
     iget-object v5, p0, Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;->_setters:Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node;
 
     iget-object v0, v5, Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node;->next:Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node;
 
     .line 177
-    .local v0, next:Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node;,"Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node<Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;>;"
+    .local v0, "next":Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node;, "Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node<Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;>;"
     :goto_1
     if-eqz v0, :cond_4
 
@@ -1654,19 +1643,19 @@
     check-cast v2, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
 
     .line 183
-    .local v2, nextSetter:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
+    .local v2, "nextSetter":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
     invoke-virtual {v3}, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;->getDeclaringClass()Ljava/lang/Class;
 
     move-result-object v4
 
     .line 184
-    .local v4, setterClass:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local v4, "setterClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-virtual {v2}, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;->getDeclaringClass()Ljava/lang/Class;
 
     move-result-object v1
 
     .line 185
-    .local v1, nextClass:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local v1, "nextClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     if-eq v4, v1, :cond_3
 
     .line 186
@@ -1751,9 +1740,9 @@
 
     throw v5
 
-    .end local v1           #nextClass:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
-    .end local v2           #nextSetter:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
-    .end local v4           #setterClass:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .end local v1    # "nextClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
+    .end local v2    # "nextSetter":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
+    .end local v4    # "setterClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     :cond_4
     move-object v5, v3
 
@@ -1843,7 +1832,7 @@
 
 .method public mergeAnnotations(Z)V
     .locals 7
-    .parameter "forSerialization"
+    .param p1, "forSerialization"    # Z
 
     .prologue
     const/4 v2, 0x4
@@ -1888,7 +1877,7 @@
     move-result-object v0
 
     .line 351
-    .local v0, ann:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;
+    .local v0, "ann":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;
     iget-object v2, p0, Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;->_getters:Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node;
 
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;->_getters:Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node;
@@ -1908,7 +1897,7 @@
     iput-object v1, p0, Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;->_getters:Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node;
 
     .line 368
-    .end local v0           #ann:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;
+    .end local v0    # "ann":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;
     :cond_0
     :goto_0
     return-void
@@ -1939,7 +1928,7 @@
     move-result-object v0
 
     .line 354
-    .restart local v0       #ann:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;
+    .restart local v0    # "ann":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;
     iget-object v2, p0, Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;->_fields:Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node;
 
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;->_fields:Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node;
@@ -1961,7 +1950,7 @@
     goto :goto_0
 
     .line 357
-    .end local v0           #ann:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;
+    .end local v0    # "ann":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;
     :cond_2
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;->_ctorParameters:Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node;
 
@@ -1991,7 +1980,7 @@
     move-result-object v0
 
     .line 359
-    .restart local v0       #ann:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;
+    .restart local v0    # "ann":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;
     iget-object v2, p0, Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;->_ctorParameters:Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node;
 
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;->_ctorParameters:Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node;
@@ -2013,7 +2002,7 @@
     goto :goto_0
 
     .line 360
-    .end local v0           #ann:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;
+    .end local v0    # "ann":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;
     :cond_3
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;->_setters:Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node;
 
@@ -2039,7 +2028,7 @@
     move-result-object v0
 
     .line 362
-    .restart local v0       #ann:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;
+    .restart local v0    # "ann":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;
     iget-object v2, p0, Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;->_setters:Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node;
 
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;->_setters:Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node;
@@ -2061,7 +2050,7 @@
     goto :goto_0
 
     .line 363
-    .end local v0           #ann:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;
+    .end local v0    # "ann":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;
     :cond_4
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;->_fields:Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node;
 
@@ -2083,7 +2072,7 @@
     move-result-object v0
 
     .line 365
-    .restart local v0       #ann:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;
+    .restart local v0    # "ann":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;
     iget-object v2, p0, Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;->_fields:Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node;
 
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;->_fields:Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder$Node;
@@ -2209,7 +2198,7 @@
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     .line 525
-    .local v0, sb:Ljava/lang/StringBuilder;
+    .local v0, "sb":Ljava/lang/StringBuilder;
     const-string v1, "[Property \'"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -2327,7 +2316,7 @@
 
 .method public withName(Ljava/lang/String;)Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
     .locals 1
-    .parameter "newName"
+    .param p1, "newName"    # Ljava/lang/String;
 
     .prologue
     .line 56

@@ -28,9 +28,9 @@
 # direct methods
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 3
-    .parameter "itemType"
-    .parameter "jsonPurchaseInfo"
-    .parameter "signature"
+    .param p1, "itemType"    # Ljava/lang/String;
+    .param p2, "jsonPurchaseInfo"    # Ljava/lang/String;
+    .param p3, "signature"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lorg/json/JSONException;
@@ -55,7 +55,7 @@
     invoke-direct {v0, v1}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
     .line 26
-    .local v0, o:Lorg/json/JSONObject;
+    .local v0, "o":Lorg/json/JSONObject;
     const-string v1, "orderId"
 
     invoke-virtual {v0, v1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;

@@ -21,8 +21,8 @@
 # virtual methods
 .method public call(Lcom/adobe/fre/FREContext;[Lcom/adobe/fre/FREObject;)Lcom/adobe/fre/FREObject;
     .locals 10
-    .parameter "arg0"
-    .parameter "arg1"
+    .param p1, "arg0"    # Lcom/adobe/fre/FREContext;
+    .param p2, "arg1"    # [Lcom/adobe/fre/FREObject;
 
     .prologue
     const-string v9, "ERROR_EVENT"
@@ -40,7 +40,7 @@
     move-result-object v5
 
     .line 16
-    .local v5, userName:Ljava/lang/String;
+    .local v5, "userName":Ljava/lang/String;
     const/4 v6, 0x1
 
     aget-object v6, p2, v6
@@ -50,7 +50,7 @@
     move-result-object v2
 
     .line 17
-    .local v2, price:Ljava/lang/String;
+    .local v2, "price":Ljava/lang/String;
     const/4 v6, 0x2
 
     aget-object v6, p2, v6
@@ -60,13 +60,13 @@
     move-result-object v0
 
     .line 18
-    .local v0, currency:Ljava/lang/String;
+    .local v0, "currency":Ljava/lang/String;
     invoke-static {v2}, Ljava/lang/Double;->parseDouble(Ljava/lang/String;)D
 
     move-result-wide v3
 
     .line 19
-    .local v3, priceDouble:D
+    .local v3, "priceDouble":D
     invoke-virtual {p1}, Lcom/adobe/fre/FREContext;->getActivity()Landroid/app/Activity;
 
     move-result-object v6
@@ -77,10 +77,10 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
     .line 27
-    .end local v0           #currency:Ljava/lang/String;
-    .end local v2           #price:Ljava/lang/String;
-    .end local v3           #priceDouble:D
-    .end local v5           #userName:Ljava/lang/String;
+    .end local v0    # "currency":Ljava/lang/String;
+    .end local v2    # "price":Ljava/lang/String;
+    .end local v3    # "priceDouble":D
+    .end local v5    # "userName":Ljava/lang/String;
     :goto_0
     const/4 v6, 0x0
 
@@ -93,7 +93,7 @@
     move-object v1, v6
 
     .line 21
-    .local v1, e:Ljava/lang/IllegalStateException;
+    .local v1, "e":Ljava/lang/IllegalStateException;
     invoke-virtual {v1}, Ljava/lang/IllegalStateException;->printStackTrace()V
 
     .line 22
@@ -162,14 +162,14 @@
     goto :goto_0
 
     .line 23
-    .end local v1           #e:Ljava/lang/IllegalStateException;
+    .end local v1    # "e":Ljava/lang/IllegalStateException;
     :catch_1
     move-exception v6
 
     move-object v1, v6
 
     .line 24
-    .local v1, e:Ljava/lang/Exception;
+    .local v1, "e":Ljava/lang/Exception;
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
     .line 25

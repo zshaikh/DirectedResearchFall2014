@@ -26,8 +26,6 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/util/Message;I)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 2267
@@ -44,8 +42,8 @@
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 5
-    .parameter "dialog"
-    .parameter "whichButton"
+    .param p1, "dialog"    # Landroid/content/DialogInterface;
+    .param p2, "whichButton"    # I
 
     .prologue
     const/4 v4, 0x1
@@ -64,7 +62,7 @@
 
     move-result v2
 
-    #calls: Lcom/fusepowered/fuseapi/FuseAPI;->notificationView(I)V
+    # invokes: Lcom/fusepowered/fuseapi/FuseAPI;->notificationView(I)V
     invoke-static {v2}, Lcom/fusepowered/fuseapi/FuseAPI;->access$200(I)V
 
     .line 2274
@@ -74,7 +72,7 @@
 
     move-result v2
 
-    #calls: Lcom/fusepowered/fuseapi/FuseAPI;->notificationClick(I)V
+    # invokes: Lcom/fusepowered/fuseapi/FuseAPI;->notificationClick(I)V
     invoke-static {v2}, Lcom/fusepowered/fuseapi/FuseAPI;->access$300(I)V
 
     .line 2275
@@ -94,7 +92,7 @@
     move-result-object v1
 
     .line 2278
-    .local v1, urlToGo:Ljava/lang/String;
+    .local v1, "urlToGo":Ljava/lang/String;
     if-eqz v1, :cond_0
 
     .line 2281
@@ -104,21 +102,21 @@
     invoke-direct {v0, v1}, Ljava/net/URI;-><init>(Ljava/lang/String;)V
 
     .line 2282
-    .local v0, url:Ljava/net/URI;
+    .local v0, "url":Ljava/net/URI;
     iget-object v2, p0, Lcom/fusepowered/fuseapi/FuseAPI$7;->val$message:Lcom/fusepowered/util/Message;
 
     invoke-virtual {v2}, Lcom/fusepowered/util/Message;->getAction()Ljava/lang/String;
 
     move-result-object v2
 
-    #calls: Lcom/fusepowered/fuseapi/FuseAPI;->openWebPage(Ljava/lang/String;)V
+    # invokes: Lcom/fusepowered/fuseapi/FuseAPI;->openWebPage(Ljava/lang/String;)V
     invoke-static {v2}, Lcom/fusepowered/fuseapi/FuseAPI;->access$400(Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/net/URISyntaxException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 2290
-    .end local v0           #url:Ljava/net/URI;
-    .end local v1           #urlToGo:Ljava/lang/String;
+    .end local v0    # "url":Ljava/net/URI;
+    .end local v1    # "urlToGo":Ljava/lang/String;
     :cond_0
     :goto_0
     iget-object v2, p0, Lcom/fusepowered/fuseapi/FuseAPI$7;->val$message:Lcom/fusepowered/util/Message;
@@ -145,14 +143,14 @@
     :cond_1
     iget v2, p0, Lcom/fusepowered/fuseapi/FuseAPI$7;->val$next:I
 
-    #calls: Lcom/fusepowered/fuseapi/FuseAPI;->showNextMessage(I)V
+    # invokes: Lcom/fusepowered/fuseapi/FuseAPI;->showNextMessage(I)V
     invoke-static {v2}, Lcom/fusepowered/fuseapi/FuseAPI;->access$500(I)V
 
     .line 2296
     return-void
 
     .line 2284
-    .restart local v1       #urlToGo:Ljava/lang/String;
+    .restart local v1    # "urlToGo":Ljava/lang/String;
     :catch_0
     move-exception v2
 

@@ -10,9 +10,6 @@
 # direct methods
 .method constructor <init>(Lcom/flurry/android/cs;Landroid/content/Context;I)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 310
@@ -27,7 +24,6 @@
 # virtual methods
 .method public final dispatchTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 2
-    .parameter
 
     .prologue
     .line 314
@@ -64,7 +60,6 @@
 
 .method public final dispatchTrackballEvent(Landroid/view/MotionEvent;)Z
     .locals 2
-    .parameter
 
     .prologue
     .line 325

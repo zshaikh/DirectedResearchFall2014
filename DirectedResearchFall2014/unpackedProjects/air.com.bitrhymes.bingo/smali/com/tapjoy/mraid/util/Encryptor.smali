@@ -20,8 +20,8 @@
 
 .method private static appendHex(Ljava/lang/StringBuffer;B)V
     .locals 3
-    .parameter "sb"
-    .parameter "b"
+    .param p0, "sb"    # Ljava/lang/StringBuffer;
+    .param p1, "b"    # B
 
     .prologue
     const-string v2, "0123456789ABCDEF"
@@ -57,8 +57,8 @@
 
 .method public static decrypt(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 4
-    .parameter "seed"
-    .parameter "encrypted"
+    .param p0, "seed"    # Ljava/lang/String;
+    .param p1, "encrypted"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/Exception;
@@ -76,19 +76,19 @@
     move-result-object v1
 
     .line 26
-    .local v1, rawKey:[B
+    .local v1, "rawKey":[B
     invoke-static {p1}, Lcom/tapjoy/mraid/util/Encryptor;->toByte(Ljava/lang/String;)[B
 
     move-result-object v0
 
     .line 27
-    .local v0, enc:[B
+    .local v0, "enc":[B
     invoke-static {v1, v0}, Lcom/tapjoy/mraid/util/Encryptor;->decrypt([B[B)[B
 
     move-result-object v2
 
     .line 28
-    .local v2, result:[B
+    .local v2, "result":[B
     new-instance v3, Ljava/lang/String;
 
     invoke-direct {v3, v2}, Ljava/lang/String;-><init>([B)V
@@ -98,8 +98,8 @@
 
 .method private static decrypt([B[B)[B
     .locals 5
-    .parameter "raw"
-    .parameter "encrypted"
+    .param p0, "raw"    # [B
+    .param p1, "encrypted"    # [B
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/Exception;
@@ -117,7 +117,7 @@
     invoke-direct {v2, p0, v4}, Ljavax/crypto/spec/SecretKeySpec;-><init>([BLjava/lang/String;)V
 
     .line 52
-    .local v2, skeySpec:Ljavax/crypto/spec/SecretKeySpec;
+    .local v2, "skeySpec":Ljavax/crypto/spec/SecretKeySpec;
     const-string v3, "AES"
 
     invoke-static {v4}, Ljavax/crypto/Cipher;->getInstance(Ljava/lang/String;)Ljavax/crypto/Cipher;
@@ -125,7 +125,7 @@
     move-result-object v0
 
     .line 53
-    .local v0, cipher:Ljavax/crypto/Cipher;
+    .local v0, "cipher":Ljavax/crypto/Cipher;
     const/4 v3, 0x2
 
     invoke-virtual {v0, v3, v2}, Ljavax/crypto/Cipher;->init(ILjava/security/Key;)V
@@ -136,14 +136,14 @@
     move-result-object v1
 
     .line 55
-    .local v1, decrypted:[B
+    .local v1, "decrypted":[B
     return-object v1
 .end method
 
 .method public static encrypt(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 3
-    .parameter "seed"
-    .parameter "cleartext"
+    .param p0, "seed"    # Ljava/lang/String;
+    .param p1, "cleartext"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/Exception;
@@ -161,7 +161,7 @@
     move-result-object v0
 
     .line 20
-    .local v0, rawKey:[B
+    .local v0, "rawKey":[B
     invoke-virtual {p1}, Ljava/lang/String;->getBytes()[B
 
     move-result-object v2
@@ -171,7 +171,7 @@
     move-result-object v1
 
     .line 21
-    .local v1, result:[B
+    .local v1, "result":[B
     invoke-static {v1}, Lcom/tapjoy/mraid/util/Encryptor;->toHex([B)Ljava/lang/String;
 
     move-result-object v2
@@ -181,8 +181,8 @@
 
 .method private static encrypt([B[B)[B
     .locals 5
-    .parameter "raw"
-    .parameter "clear"
+    .param p0, "raw"    # [B
+    .param p1, "clear"    # [B
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/Exception;
@@ -200,7 +200,7 @@
     invoke-direct {v2, p0, v4}, Ljavax/crypto/spec/SecretKeySpec;-><init>([BLjava/lang/String;)V
 
     .line 44
-    .local v2, skeySpec:Ljavax/crypto/spec/SecretKeySpec;
+    .local v2, "skeySpec":Ljavax/crypto/spec/SecretKeySpec;
     const-string v3, "AES"
 
     invoke-static {v4}, Ljavax/crypto/Cipher;->getInstance(Ljava/lang/String;)Ljavax/crypto/Cipher;
@@ -208,7 +208,7 @@
     move-result-object v0
 
     .line 45
-    .local v0, cipher:Ljavax/crypto/Cipher;
+    .local v0, "cipher":Ljavax/crypto/Cipher;
     const/4 v3, 0x1
 
     invoke-virtual {v0, v3, v2}, Ljavax/crypto/Cipher;->init(ILjava/security/Key;)V
@@ -219,13 +219,13 @@
     move-result-object v1
 
     .line 47
-    .local v1, encrypted:[B
+    .local v1, "encrypted":[B
     return-object v1
 .end method
 
 .method public static fromHex(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
-    .parameter "hex"
+    .param p0, "hex"    # Ljava/lang/String;
 
     .prologue
     .line 62
@@ -242,7 +242,7 @@
 
 .method private static getRawKey([B)[B
     .locals 5
-    .parameter "seed"
+    .param p0, "seed"    # [B
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/Exception;
@@ -258,7 +258,7 @@
     move-result-object v0
 
     .line 33
-    .local v0, kgen:Ljavax/crypto/KeyGenerator;
+    .local v0, "kgen":Ljavax/crypto/KeyGenerator;
     const-string v4, "SHA1PRNG"
 
     invoke-static {v4}, Ljava/security/SecureRandom;->getInstance(Ljava/lang/String;)Ljava/security/SecureRandom;
@@ -266,7 +266,7 @@
     move-result-object v3
 
     .line 34
-    .local v3, sr:Ljava/security/SecureRandom;
+    .local v3, "sr":Ljava/security/SecureRandom;
     invoke-virtual {v3, p0}, Ljava/security/SecureRandom;->setSeed([B)V
 
     .line 35
@@ -280,19 +280,19 @@
     move-result-object v2
 
     .line 37
-    .local v2, skey:Ljavax/crypto/SecretKey;
+    .local v2, "skey":Ljavax/crypto/SecretKey;
     invoke-interface {v2}, Ljavax/crypto/SecretKey;->getEncoded()[B
 
     move-result-object v1
 
     .line 38
-    .local v1, raw:[B
+    .local v1, "raw":[B
     return-object v1
 .end method
 
 .method public static toByte(Ljava/lang/String;)[B
     .locals 5
-    .parameter "hexString"
+    .param p0, "hexString"    # Ljava/lang/String;
 
     .prologue
     .line 66
@@ -303,14 +303,14 @@
     div-int/lit8 v1, v3, 0x2
 
     .line 67
-    .local v1, len:I
+    .local v1, "len":I
     new-array v2, v1, [B
 
     .line 68
-    .local v2, result:[B
+    .local v2, "result":[B
     const/4 v0, 0x0
 
-    .local v0, i:I
+    .local v0, "i":I
     :goto_0
     if-ge v0, v1, :cond_0
 
@@ -349,7 +349,7 @@
 
 .method public static toHex(Ljava/lang/String;)Ljava/lang/String;
     .locals 1
-    .parameter "txt"
+    .param p0, "txt"    # Ljava/lang/String;
 
     .prologue
     .line 59
@@ -366,7 +366,7 @@
 
 .method public static toHex([B)Ljava/lang/String;
     .locals 3
-    .parameter "buf"
+    .param p0, "buf"    # [B
 
     .prologue
     .line 74
@@ -390,10 +390,10 @@
     invoke-direct {v1, v2}, Ljava/lang/StringBuffer;-><init>(I)V
 
     .line 77
-    .local v1, result:Ljava/lang/StringBuffer;
+    .local v1, "result":Ljava/lang/StringBuffer;
     const/4 v0, 0x0
 
-    .local v0, i:I
+    .local v0, "i":I
     :goto_1
     array-length v2, p0
 

@@ -122,9 +122,7 @@
 
 .method private constructor <init>(Ljava/lang/String;II)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter "size"
+    .param p3, "size"    # I
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I)V"
@@ -142,7 +140,7 @@
 
 .method static synthetic access$100(Lcom/flurry/org/codehaus/jackson/util/BufferRecycler$CharBufferType;)I
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/flurry/org/codehaus/jackson/util/BufferRecycler$CharBufferType;
 
     .prologue
     .line 35
@@ -153,7 +151,7 @@
 
 .method public static valueOf(Ljava/lang/String;)Lcom/flurry/org/codehaus/jackson/util/BufferRecycler$CharBufferType;
     .locals 1
-    .parameter "name"
+    .param p0, "name"    # Ljava/lang/String;
 
     .prologue
     .line 35
@@ -163,7 +161,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "name":Ljava/lang/String;
     check-cast p0, Lcom/flurry/org/codehaus/jackson/util/BufferRecycler$CharBufferType;
 
     return-object p0

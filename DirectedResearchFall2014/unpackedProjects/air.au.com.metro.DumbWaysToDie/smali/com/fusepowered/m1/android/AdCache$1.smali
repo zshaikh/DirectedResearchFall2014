@@ -23,8 +23,6 @@
 # direct methods
 .method constructor <init>(Landroid/content/Context;Ljava/util/Set;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 119
@@ -41,7 +39,7 @@
 # virtual methods
 .method callback(Lcom/fusepowered/m1/android/CachedAd;)Z
     .locals 3
-    .parameter "cachedAd"
+    .param p1, "cachedAd"    # Lcom/fusepowered/m1/android/CachedAd;
 
     .prologue
     const/4 v2, 0x1

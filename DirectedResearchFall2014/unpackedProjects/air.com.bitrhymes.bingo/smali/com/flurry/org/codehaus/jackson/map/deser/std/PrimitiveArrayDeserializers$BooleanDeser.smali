@@ -39,8 +39,8 @@
 
 .method private final handleNonArray(Lcom/flurry/org/codehaus/jackson/JsonParser;Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;)[Z
     .locals 3
-    .parameter "jp"
-    .parameter "ctxt"
+    .param p1, "jp"    # Lcom/flurry/org/codehaus/jackson/JsonParser;
+    .param p2, "ctxt"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -124,8 +124,8 @@
 # virtual methods
 .method public bridge synthetic deserialize(Lcom/flurry/org/codehaus/jackson/JsonParser;Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;)Ljava/lang/Object;
     .locals 1
-    .parameter "x0"
-    .parameter "x1"
+    .param p1, "x0"    # Lcom/flurry/org/codehaus/jackson/JsonParser;
+    .param p2, "x1"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -144,8 +144,8 @@
 
 .method public deserialize(Lcom/flurry/org/codehaus/jackson/JsonParser;Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;)[Z
     .locals 7
-    .parameter "jp"
-    .parameter "ctxt"
+    .param p1, "jp"    # Lcom/flurry/org/codehaus/jackson/JsonParser;
+    .param p2, "ctxt"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -167,12 +167,12 @@
     move-result-object v5
 
     .line 251
-    .end local p0
+    .end local p0    # "this":Lcom/flurry/org/codehaus/jackson/map/deser/std/PrimitiveArrayDeserializers$BooleanDeser;
     :goto_0
     return-object v5
 
     .line 238
-    .restart local p0
+    .restart local p0    # "this":Lcom/flurry/org/codehaus/jackson/map/deser/std/PrimitiveArrayDeserializers$BooleanDeser;
     :cond_0
     invoke-virtual {p2}, Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;->getArrayBuilders()Lcom/flurry/org/codehaus/jackson/map/util/ArrayBuilders;
 
@@ -183,7 +183,7 @@
     move-result-object v0
 
     .line 239
-    .local v0, builder:Lcom/flurry/org/codehaus/jackson/map/util/ArrayBuilders$BooleanBuilder;
+    .local v0, "builder":Lcom/flurry/org/codehaus/jackson/map/util/ArrayBuilders$BooleanBuilder;
     invoke-virtual {v0}, Lcom/flurry/org/codehaus/jackson/map/util/ArrayBuilders$BooleanBuilder;->resetAndStart()Ljava/lang/Object;
 
     move-result-object v1
@@ -191,11 +191,11 @@
     check-cast v1, [Z
 
     .line 240
-    .local v1, chunk:[Z
+    .local v1, "chunk":[Z
     const/4 v2, 0x0
 
     .line 242
-    .local v2, ix:I
+    .local v2, "ix":I
     :goto_1
     invoke-virtual {p1}, Lcom/flurry/org/codehaus/jackson/JsonParser;->nextToken()Lcom/flurry/org/codehaus/jackson/JsonToken;
 
@@ -211,7 +211,7 @@
     move-result v4
 
     .line 245
-    .local v4, value:Z
+    .local v4, "value":Z
     array-length v5, v1
 
     if-lt v2, v5, :cond_1
@@ -221,36 +221,36 @@
 
     move-result-object v1
 
-    .end local v1           #chunk:[Z
+    .end local v1    # "chunk":[Z
     check-cast v1, [Z
 
     .line 247
-    .restart local v1       #chunk:[Z
+    .restart local v1    # "chunk":[Z
     const/4 v2, 0x0
 
     .line 249
     :cond_1
     add-int/lit8 v3, v2, 0x1
 
-    .end local v2           #ix:I
-    .local v3, ix:I
+    .end local v2    # "ix":I
+    .local v3, "ix":I
     aput-boolean v4, v1, v2
 
     move v2, v3
 
     .line 250
-    .end local v3           #ix:I
-    .restart local v2       #ix:I
+    .end local v3    # "ix":I
+    .restart local v2    # "ix":I
     goto :goto_1
 
     .line 251
-    .end local v4           #value:Z
+    .end local v4    # "value":Z
     :cond_2
     invoke-virtual {v0, v1, v2}, Lcom/flurry/org/codehaus/jackson/map/util/ArrayBuilders$BooleanBuilder;->completeAndClearBuffer(Ljava/lang/Object;I)Ljava/lang/Object;
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/flurry/org/codehaus/jackson/map/deser/std/PrimitiveArrayDeserializers$BooleanDeser;
     check-cast p0, [Z
 
     move-object v5, p0

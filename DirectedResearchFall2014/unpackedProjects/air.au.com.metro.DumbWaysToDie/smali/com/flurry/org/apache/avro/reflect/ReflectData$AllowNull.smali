@@ -57,8 +57,7 @@
 # virtual methods
 .method protected createFieldSchema(Ljava/lang/reflect/Field;Ljava/util/Map;)Lcom/flurry/org/apache/avro/Schema;
     .locals 2
-    .parameter "field"
-    .parameter
+    .param p1, "field"    # Ljava/lang/reflect/Field;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -74,13 +73,13 @@
 
     .prologue
     .line 70
-    .local p2, names:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Lcom/flurry/org/apache/avro/Schema;>;"
+    .local p2, "names":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Lcom/flurry/org/apache/avro/Schema;>;"
     invoke-super {p0, p1, p2}, Lcom/flurry/org/apache/avro/reflect/ReflectData;->createFieldSchema(Ljava/lang/reflect/Field;Ljava/util/Map;)Lcom/flurry/org/apache/avro/Schema;
 
     move-result-object v0
 
     .line 71
-    .local v0, schema:Lcom/flurry/org/apache/avro/Schema;
+    .local v0, "schema":Lcom/flurry/org/apache/avro/Schema;
     invoke-static {v0}, Lcom/flurry/org/apache/avro/reflect/ReflectData$AllowNull;->makeNullable(Lcom/flurry/org/apache/avro/Schema;)Lcom/flurry/org/apache/avro/Schema;
 
     move-result-object v1

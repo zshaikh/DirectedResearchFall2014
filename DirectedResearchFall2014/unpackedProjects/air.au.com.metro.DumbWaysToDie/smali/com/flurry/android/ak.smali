@@ -36,11 +36,6 @@
 
 .method public constructor <init>(Landroid/content/Context;Lcom/flurry/android/FlurryAds;Lcom/flurry/android/cz;Lcom/flurry/android/AdUnit;Landroid/os/Bundle;)V
     .locals 3
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 27
@@ -113,7 +108,6 @@
 
 .method static synthetic a(Lcom/flurry/android/ak;)Lcom/google/ads/InterstitialAd;
     .locals 1
-    .parameter
 
     .prologue
     .line 17

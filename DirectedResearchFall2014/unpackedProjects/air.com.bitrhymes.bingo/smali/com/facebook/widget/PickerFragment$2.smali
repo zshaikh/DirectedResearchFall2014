@@ -32,7 +32,6 @@
 # direct methods
 .method constructor <init>(Lcom/facebook/widget/PickerFragment;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1
@@ -48,7 +47,6 @@
 # virtual methods
 .method public includeItem(Lcom/facebook/model/GraphObject;)Z
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;)Z"
@@ -57,7 +55,7 @@
 
     .prologue
     .line 124
-    .local p1, graphObject:Lcom/facebook/model/GraphObject;,"TT;"
+    .local p1, "graphObject":Lcom/facebook/model/GraphObject;, "TT;"
     iget-object v0, p0, Lcom/facebook/widget/PickerFragment$2;->this$0:Lcom/facebook/widget/PickerFragment;
 
     invoke-virtual {v0, p1}, Lcom/facebook/widget/PickerFragment;->filterIncludesItem(Lcom/facebook/model/GraphObject;)Z
@@ -69,7 +67,6 @@
 
 .method public bridge synthetic includeItem(Ljava/lang/Object;)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 1

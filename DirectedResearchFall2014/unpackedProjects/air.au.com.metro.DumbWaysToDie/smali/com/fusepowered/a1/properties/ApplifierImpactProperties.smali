@@ -203,7 +203,7 @@
     const-string v1, "?"
 
     .line 56
-    .local v1, queryString:Ljava/lang/String;
+    .local v1, "queryString":Ljava/lang/String;
     :try_start_0
     const-string v2, "%s%s=%s"
 
@@ -941,7 +941,7 @@
     move-object v0, v2
 
     .line 87
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     new-instance v2, Ljava/lang/StringBuilder;
 
     const-string v3, "Problems creating campaigns query: "
@@ -979,7 +979,7 @@
     goto :goto_0
 
     .line 102
-    .end local v0           #e:Ljava/lang/Exception;
+    .end local v0    # "e":Ljava/lang/Exception;
     :cond_8
     sget-object v2, Lcom/fusepowered/a1/properties/ApplifierImpactProperties;->CURRENT_ACTIVITY:Landroid/app/Activity;
 
@@ -1032,7 +1032,7 @@
     sget-object v0, Lcom/fusepowered/a1/properties/ApplifierImpactProperties;->CAMPAIGN_DATA_URL:Ljava/lang/String;
 
     .line 158
-    .local v0, url:Ljava/lang/String;
+    .local v0, "url":Ljava/lang/String;
     sget-object v1, Lcom/fusepowered/a1/properties/ApplifierImpactProperties;->BASE_ACTIVITY:Landroid/app/Activity;
 
     invoke-static {v1}, Lcom/fusepowered/a1/ApplifierImpactUtils;->isDebuggable(Landroid/content/Context;)Z
@@ -1098,23 +1098,23 @@
     invoke-direct {v4}, Lorg/json/JSONObject;-><init>()V
 
     .line 114
-    .local v4, options:Lorg/json/JSONObject;
+    .local v4, "options":Lorg/json/JSONObject;
     const/4 v2, 0x0
 
     .line 115
-    .local v2, noOfferscreen:Z
+    .local v2, "noOfferscreen":Z
     const/4 v3, 0x0
 
     .line 116
-    .local v3, openAnimated:Z
+    .local v3, "openAnimated":Z
     const/4 v1, 0x0
 
     .line 117
-    .local v1, muteVideoSounds:Z
+    .local v1, "muteVideoSounds":Z
     const/4 v5, 0x0
 
     .line 120
-    .local v5, videoUsesDeviceOrientation:Z
+    .local v5, "videoUsesDeviceOrientation":Z
     :try_start_0
     sget-object v6, Lcom/fusepowered/a1/properties/ApplifierImpactProperties;->IMPACT_DEVELOPER_OPTIONS:Ljava/util/Map;
 
@@ -1274,27 +1274,27 @@
     move-object v6, v4
 
     .line 151
-    .end local v1           #muteVideoSounds:Z
-    .end local v2           #noOfferscreen:Z
-    .end local v3           #openAnimated:Z
-    .end local v4           #options:Lorg/json/JSONObject;
-    .end local v5           #videoUsesDeviceOrientation:Z
+    .end local v1    # "muteVideoSounds":Z
+    .end local v2    # "noOfferscreen":Z
+    .end local v3    # "openAnimated":Z
+    .end local v4    # "options":Lorg/json/JSONObject;
+    .end local v5    # "videoUsesDeviceOrientation":Z
     :goto_1
     return-object v6
 
     .line 144
-    .restart local v1       #muteVideoSounds:Z
-    .restart local v2       #noOfferscreen:Z
-    .restart local v3       #openAnimated:Z
-    .restart local v4       #options:Lorg/json/JSONObject;
-    .restart local v5       #videoUsesDeviceOrientation:Z
+    .restart local v1    # "muteVideoSounds":Z
+    .restart local v2    # "noOfferscreen":Z
+    .restart local v3    # "openAnimated":Z
+    .restart local v4    # "options":Lorg/json/JSONObject;
+    .restart local v5    # "videoUsesDeviceOrientation":Z
     :catch_0
     move-exception v6
 
     move-object v0, v6
 
     .line 145
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v6, "Could not create JSON"
 
     const-class v7, Lcom/fusepowered/a1/properties/ApplifierImpactProperties;
@@ -1304,12 +1304,12 @@
     goto :goto_0
 
     .line 151
-    .end local v0           #e:Ljava/lang/Exception;
-    .end local v1           #muteVideoSounds:Z
-    .end local v2           #noOfferscreen:Z
-    .end local v3           #openAnimated:Z
-    .end local v4           #options:Lorg/json/JSONObject;
-    .end local v5           #videoUsesDeviceOrientation:Z
+    .end local v0    # "e":Ljava/lang/Exception;
+    .end local v1    # "muteVideoSounds":Z
+    .end local v2    # "noOfferscreen":Z
+    .end local v3    # "openAnimated":Z
+    .end local v4    # "options":Lorg/json/JSONObject;
+    .end local v5    # "videoUsesDeviceOrientation":Z
     :cond_5
     const/4 v6, 0x0
 
@@ -1318,7 +1318,6 @@
 
 .method public static setExtraParams(Ljava/util/Map;)V
     .locals 4
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1331,7 +1330,7 @@
     .end annotation
 
     .prologue
-    .local p0, params:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p0, "params":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v3, "testUrl"
 
     const-string v2, "testJavaScript"
@@ -1396,7 +1395,7 @@
 
     move-result-object p0
 
-    .end local p0           #params:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .end local p0    # "params":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     check-cast p0, Ljava/lang/String;
 
     sput-object p0, Lcom/fusepowered/a1/properties/ApplifierImpactProperties;->TEST_JAVASCRIPT:Ljava/lang/String;

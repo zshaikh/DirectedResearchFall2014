@@ -15,9 +15,9 @@
 
 
 # static fields
-.field private static final c:[I = null
+.field private static final c:[I
 
-.field private static final d:[I = null
+.field private static final d:[I
 
 .field private static final e:I = -0x1
 
@@ -2365,8 +2365,6 @@
 
 .method public constructor <init>(I[B)V
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     const/4 v1, 0x0
@@ -2407,7 +2405,6 @@
 # virtual methods
 .method public a(I)I
     .locals 1
-    .parameter
 
     .prologue
     .line 232
@@ -2422,10 +2419,6 @@
 
 .method public a([BIIZ)Z
     .locals 10
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 242

@@ -21,7 +21,6 @@
 # direct methods
 .method public constructor <init>(Lcom/vungle/sdk/k;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 114
@@ -39,11 +38,8 @@
 
 .method public onJsPrompt(Landroid/webkit/WebView;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/webkit/JsPromptResult;)Z
     .locals 5
-    .parameter
-    .parameter
-    .parameter "message"
-    .parameter
-    .parameter "result"
+    .param p3, "message"    # Ljava/lang/String;
+    .param p5, "result"    # Landroid/webkit/JsPromptResult;
 
     .prologue
     const/4 v1, 0x0

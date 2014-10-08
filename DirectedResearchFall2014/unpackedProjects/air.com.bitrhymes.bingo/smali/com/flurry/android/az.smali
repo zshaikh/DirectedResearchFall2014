@@ -40,7 +40,6 @@
 
 .method private static a(Lcom/flurry/android/av;)Z
     .locals 5
-    .parameter
 
     .prologue
     const/4 v4, 0x0
@@ -193,10 +192,6 @@
 
 .method public final a(Landroid/content/Context;Lcom/flurry/android/FlurryAds;Lcom/flurry/android/cz;Lcom/flurry/android/AdUnit;)Lcom/flurry/android/ao;
     .locals 6
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const/4 v1, 0x0
@@ -288,10 +283,6 @@
 
 .method public final b(Landroid/content/Context;Lcom/flurry/android/FlurryAds;Lcom/flurry/android/cz;Lcom/flurry/android/AdUnit;)Lcom/flurry/android/p;
     .locals 6
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const/4 v2, 0x0

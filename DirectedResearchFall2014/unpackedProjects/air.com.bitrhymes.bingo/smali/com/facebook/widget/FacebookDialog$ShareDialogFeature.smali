@@ -72,9 +72,7 @@
 
 .method private constructor <init>(Ljava/lang/String;II)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter "minVersion"
+    .param p3, "minVersion"    # I
 
     .prologue
     .line 103
@@ -89,7 +87,6 @@
 
 .method public static valueOf(Ljava/lang/String;)Lcom/facebook/widget/FacebookDialog$ShareDialogFeature;
     .locals 1
-    .parameter
 
     .prologue
     .line 1

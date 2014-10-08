@@ -48,7 +48,7 @@
 
 .method public constructor <init>(Ljava/lang/Object;)V
     .locals 1
-    .parameter "from"
+    .param p1, "from"    # Ljava/lang/Object;
 
     .prologue
     .line 71
@@ -67,8 +67,8 @@
 
 .method public constructor <init>(Ljava/lang/Object;I)V
     .locals 1
-    .parameter "from"
-    .parameter "index"
+    .param p1, "from"    # Ljava/lang/Object;
+    .param p2, "index"    # I
 
     .prologue
     .line 81
@@ -91,8 +91,8 @@
 
 .method public constructor <init>(Ljava/lang/Object;Ljava/lang/String;)V
     .locals 2
-    .parameter "from"
-    .parameter "fieldName"
+    .param p1, "from"    # Ljava/lang/Object;
+    .param p2, "fieldName"    # Ljava/lang/String;
 
     .prologue
     .line 73
@@ -160,7 +160,7 @@
 
 .method public setFieldName(Ljava/lang/String;)V
     .locals 0
-    .parameter "n"
+    .param p1, "n"    # Ljava/lang/String;
 
     .prologue
     .line 87
@@ -171,7 +171,7 @@
 
 .method public setFrom(Ljava/lang/Object;)V
     .locals 0
-    .parameter "o"
+    .param p1, "o"    # Ljava/lang/Object;
 
     .prologue
     .line 86
@@ -182,7 +182,7 @@
 
 .method public setIndex(I)V
     .locals 0
-    .parameter "ix"
+    .param p1, "ix"    # I
 
     .prologue
     .line 88
@@ -203,7 +203,7 @@
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
     .line 96
-    .local v2, sb:Ljava/lang/StringBuilder;
+    .local v2, "sb":Ljava/lang/StringBuilder;
     iget-object v3, p0, Lcom/flurry/org/codehaus/jackson/map/JsonMappingException$Reference;->_from:Ljava/lang/Object;
 
     instance-of v3, v3, Ljava/lang/Class;
@@ -217,14 +217,14 @@
     move-object v0, v3
 
     .line 102
-    .local v0, cls:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local v0, "cls":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     :goto_0
     invoke-virtual {v0}, Ljava/lang/Class;->getPackage()Ljava/lang/Package;
 
     move-result-object v1
 
     .line 103
-    .local v1, pkg:Ljava/lang/Package;
+    .local v1, "pkg":Ljava/lang/Package;
     if-eqz v1, :cond_0
 
     .line 104
@@ -282,8 +282,8 @@
     return-object v3
 
     .line 96
-    .end local v0           #cls:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
-    .end local v1           #pkg:Ljava/lang/Package;
+    .end local v0    # "cls":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
+    .end local v1    # "pkg":Ljava/lang/Package;
     :cond_1
     iget-object v3, p0, Lcom/flurry/org/codehaus/jackson/map/JsonMappingException$Reference;->_from:Ljava/lang/Object;
 
@@ -296,8 +296,8 @@
     goto :goto_0
 
     .line 113
-    .restart local v0       #cls:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
-    .restart local v1       #pkg:Ljava/lang/Package;
+    .restart local v0    # "cls":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
+    .restart local v1    # "pkg":Ljava/lang/Package;
     :cond_2
     iget v3, p0, Lcom/flurry/org/codehaus/jackson/map/JsonMappingException$Reference;->_index:I
 

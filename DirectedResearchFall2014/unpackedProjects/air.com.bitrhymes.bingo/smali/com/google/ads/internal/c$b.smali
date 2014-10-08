@@ -21,8 +21,6 @@
 # direct methods
 .method public constructor <init>(Lcom/google/ads/internal/c;Ljava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 86

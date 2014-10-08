@@ -18,7 +18,6 @@
 
 .method private constructor <init>(B)V
     .locals 0
-    .parameter
 
     .prologue
     .line 130
@@ -34,8 +33,6 @@
 
 .method public final b(Landroid/content/Context;Lcom/flurry/android/AdSpaceLayout;)I
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 135
@@ -82,8 +79,6 @@
 
 .method public final c(Landroid/content/Context;Lcom/flurry/android/AdSpaceLayout;)I
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 140

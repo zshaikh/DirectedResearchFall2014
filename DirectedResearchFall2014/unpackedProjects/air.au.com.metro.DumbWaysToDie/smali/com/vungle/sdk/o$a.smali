@@ -33,7 +33,6 @@
 # direct methods
 .method private constructor <init>(Lcom/vungle/sdk/o;)V
     .locals 3
-    .parameter
 
     .prologue
     const/4 v2, 0x0
@@ -66,8 +65,6 @@
 
 .method synthetic constructor <init>(Lcom/vungle/sdk/o;B)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 100
@@ -80,7 +77,6 @@
 # virtual methods
 .method protected final varargs a([Ljava/lang/String;)Ljava/lang/Boolean;
     .locals 7
-    .parameter
 
     .prologue
     const/4 v6, 0x0
@@ -349,9 +345,6 @@
 
 .method public final a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 3
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 114

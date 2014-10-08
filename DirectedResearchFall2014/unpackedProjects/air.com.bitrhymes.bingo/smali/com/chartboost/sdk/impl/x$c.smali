@@ -23,8 +23,6 @@
 # direct methods
 .method public constructor <init>(Lcom/chartboost/sdk/impl/x;Lcom/chartboost/sdk/impl/x;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 90
@@ -44,8 +42,8 @@
 # virtual methods
 .method public onPageFinished(Landroid/webkit/WebView;Ljava/lang/String;)V
     .locals 1
-    .parameter "view"
-    .parameter "url"
+    .param p1, "view"    # Landroid/webkit/WebView;
+    .param p2, "url"    # Ljava/lang/String;
 
     .prologue
     .line 96
@@ -75,10 +73,10 @@
 
 .method public onReceivedError(Landroid/webkit/WebView;ILjava/lang/String;Ljava/lang/String;)V
     .locals 1
-    .parameter "view"
-    .parameter "errorCode"
-    .parameter "description"
-    .parameter "failingUrl"
+    .param p1, "view"    # Landroid/webkit/WebView;
+    .param p2, "errorCode"    # I
+    .param p3, "description"    # Ljava/lang/String;
+    .param p4, "failingUrl"    # Ljava/lang/String;
 
     .prologue
     .line 103
@@ -101,8 +99,8 @@
 
 .method public shouldOverrideUrlLoading(Landroid/webkit/WebView;Ljava/lang/String;)Z
     .locals 7
-    .parameter "webView"
-    .parameter "url"
+    .param p1, "webView"    # Landroid/webkit/WebView;
+    .param p2, "url"    # Ljava/lang/String;
 
     .prologue
     const/4 v6, 0x0

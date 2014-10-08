@@ -43,12 +43,6 @@
 # direct methods
 .method public constructor <init>(Lcom/chartboost/sdk/impl/o;Landroid/widget/ImageView;Lcom/chartboost/sdk/impl/o$b;Ljava/lang/String;Landroid/os/Bundle;Ljava/lang/String;)V
     .locals 1
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 112
@@ -93,7 +87,6 @@
 
 .method static synthetic a(Lcom/chartboost/sdk/impl/o$a;)Landroid/os/Bundle;
     .locals 1
-    .parameter
 
     .prologue
     .line 110
@@ -104,7 +97,6 @@
 
 .method static synthetic b(Lcom/chartboost/sdk/impl/o$a;)Ljava/lang/String;
     .locals 1
-    .parameter
 
     .prologue
     .line 109
@@ -115,7 +107,6 @@
 
 .method static synthetic c(Lcom/chartboost/sdk/impl/o$a;)Ljava/lang/ref/WeakReference;
     .locals 1
-    .parameter
 
     .prologue
     .line 107
@@ -126,7 +117,6 @@
 
 .method static synthetic d(Lcom/chartboost/sdk/impl/o$a;)Lcom/chartboost/sdk/impl/o$b;
     .locals 1
-    .parameter
 
     .prologue
     .line 108
@@ -137,7 +127,6 @@
 
 .method static synthetic e(Lcom/chartboost/sdk/impl/o$a;)Lcom/chartboost/sdk/impl/o;
     .locals 1
-    .parameter
 
     .prologue
     .line 105
@@ -150,7 +139,6 @@
 # virtual methods
 .method public a(Lcom/chartboost/sdk/Libraries/a$a;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 211
@@ -465,8 +453,8 @@
 
     invoke-virtual {v0, v6, v1}, Lcom/chartboost/sdk/Libraries/a;->a(Ljava/lang/String;Lcom/chartboost/sdk/Libraries/a$a;)V
     :try_end_7
-    .catchall {:try_start_7 .. :try_end_7} :catchall_1
     .catch Ljava/lang/Exception; {:try_start_7 .. :try_end_7} :catch_3
+    .catchall {:try_start_7 .. :try_end_7} :catchall_1
 
     move-object v0, v1
 

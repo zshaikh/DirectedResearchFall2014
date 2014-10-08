@@ -41,9 +41,9 @@
 # direct methods
 .method protected constructor <init>(Lcom/flurry/org/codehaus/jackson/type/JavaType;Lcom/flurry/org/codehaus/jackson/map/jsontype/TypeIdResolver;Lcom/flurry/org/codehaus/jackson/map/BeanProperty;)V
     .locals 1
-    .parameter "baseType"
-    .parameter "idRes"
-    .parameter "property"
+    .param p1, "baseType"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .param p2, "idRes"    # Lcom/flurry/org/codehaus/jackson/map/jsontype/TypeIdResolver;
+    .param p3, "property"    # Lcom/flurry/org/codehaus/jackson/map/BeanProperty;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -59,10 +59,9 @@
 
 .method protected constructor <init>(Lcom/flurry/org/codehaus/jackson/type/JavaType;Lcom/flurry/org/codehaus/jackson/map/jsontype/TypeIdResolver;Lcom/flurry/org/codehaus/jackson/map/BeanProperty;Ljava/lang/Class;)V
     .locals 1
-    .parameter "baseType"
-    .parameter "idRes"
-    .parameter "property"
-    .parameter
+    .param p1, "baseType"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .param p2, "idRes"    # Lcom/flurry/org/codehaus/jackson/map/jsontype/TypeIdResolver;
+    .param p3, "property"    # Lcom/flurry/org/codehaus/jackson/map/BeanProperty;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -76,7 +75,7 @@
 
     .prologue
     .line 56
-    .local p4, defaultImpl:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p4, "defaultImpl":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-direct {p0}, Lcom/flurry/org/codehaus/jackson/map/TypeDeserializer;-><init>()V
 
     .line 57
@@ -122,7 +121,7 @@
 # virtual methods
 .method protected final _findDefaultImplDeserializer(Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;)Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;
     .locals 5
-    .parameter "ctxt"
+    .param p1, "ctxt"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -209,8 +208,8 @@
 
 .method protected final _findDeserializer(Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;Ljava/lang/String;)Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;
     .locals 6
-    .parameter "ctxt"
-    .parameter "typeId"
+    .param p1, "ctxt"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;
+    .param p2, "typeId"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -248,7 +247,7 @@
     check-cast v0, Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;
 
     .line 112
-    .local v0, deser:Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer<Ljava/lang/Object;>;"
+    .local v0, "deser":Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer<Ljava/lang/Object;>;"
     if-nez v0, :cond_1
 
     .line 113
@@ -259,7 +258,7 @@
     move-result-object v1
 
     .line 114
-    .local v1, type:Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .local v1, "type":Lcom/flurry/org/codehaus/jackson/type/JavaType;
     if-nez v1, :cond_2
 
     .line 116
@@ -277,8 +276,8 @@
     throw v3
 
     .line 136
-    .end local v0           #deser:Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer<Ljava/lang/Object;>;"
-    .end local v1           #type:Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .end local v0    # "deser":Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer<Ljava/lang/Object;>;"
+    .end local v1    # "type":Lcom/flurry/org/codehaus/jackson/type/JavaType;
     :catchall_0
     move-exception v3
 
@@ -289,8 +288,8 @@
     throw v3
 
     .line 119
-    .restart local v0       #deser:Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer<Ljava/lang/Object;>;"
-    .restart local v1       #type:Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .restart local v0    # "deser":Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer<Ljava/lang/Object;>;"
+    .restart local v1    # "type":Lcom/flurry/org/codehaus/jackson/type/JavaType;
     :cond_0
     :try_start_1
     invoke-virtual {p0, p1}, Lcom/flurry/org/codehaus/jackson/map/jsontype/impl/TypeDeserializerBase;->_findDefaultImplDeserializer(Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;)Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;
@@ -304,7 +303,7 @@
     invoke-virtual {v3, p2, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 136
-    .end local v1           #type:Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .end local v1    # "type":Lcom/flurry/org/codehaus/jackson/type/JavaType;
     :cond_1
     monitor-exit v2
 
@@ -312,7 +311,7 @@
     return-object v0
 
     .line 129
-    .restart local v1       #type:Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .restart local v1    # "type":Lcom/flurry/org/codehaus/jackson/type/JavaType;
     :cond_2
     iget-object v3, p0, Lcom/flurry/org/codehaus/jackson/map/jsontype/impl/TypeDeserializerBase;->_baseType:Lcom/flurry/org/codehaus/jackson/type/JavaType;
 
@@ -444,7 +443,7 @@
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     .line 92
-    .local v0, sb:Ljava/lang/StringBuilder;
+    .local v0, "sb":Ljava/lang/StringBuilder;
     const/16 v1, 0x5b
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;

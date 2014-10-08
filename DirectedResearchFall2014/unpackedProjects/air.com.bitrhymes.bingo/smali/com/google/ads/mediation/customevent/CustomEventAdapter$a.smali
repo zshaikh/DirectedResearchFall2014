@@ -28,8 +28,6 @@
 # direct methods
 .method public constructor <init>(Lcom/google/ads/mediation/customevent/CustomEventAdapter;Lcom/google/ads/mediation/MediationBannerListener;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 48
@@ -327,7 +325,7 @@
 
 .method public declared-synchronized onReceivedAd(Landroid/view/View;)V
     .locals 2
-    .parameter "view"
+    .param p1, "view"    # Landroid/view/View;
 
     .prologue
     .line 56

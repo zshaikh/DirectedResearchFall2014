@@ -39,7 +39,6 @@
 # direct methods
 .method protected constructor <init>(Ljava/lang/Class;)V
     .locals 0
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -50,7 +49,7 @@
 
     .prologue
     .line 25
-    .local p1, cls:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p1, "cls":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-direct {p0}, Lcom/flurry/org/codehaus/jackson/map/KeyDeserializer;-><init>()V
 
     iput-object p1, p0, Lcom/flurry/org/codehaus/jackson/map/deser/std/StdKeyDeserializer;->_keyClass:Ljava/lang/Class;
@@ -70,7 +69,7 @@
 
 .method protected _parseDouble(Ljava/lang/String;)D
     .locals 2
-    .parameter "key"
+    .param p1, "key"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/IllegalArgumentException;
@@ -88,7 +87,7 @@
 
 .method protected _parseInt(Ljava/lang/String;)I
     .locals 1
-    .parameter "key"
+    .param p1, "key"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/IllegalArgumentException;
@@ -106,7 +105,7 @@
 
 .method protected _parseLong(Ljava/lang/String;)J
     .locals 2
-    .parameter "key"
+    .param p1, "key"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/IllegalArgumentException;
@@ -124,8 +123,8 @@
 
 .method public final deserializeKey(Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;)Ljava/lang/Object;
     .locals 5
-    .parameter "key"
-    .parameter "ctxt"
+    .param p1, "key"    # Ljava/lang/String;
+    .param p2, "ctxt"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -154,7 +153,7 @@
     move-result-object v1
 
     .line 36
-    .local v1, result:Ljava/lang/Object;
+    .local v1, "result":Ljava/lang/Object;
     if-eqz v1, :cond_1
 
     move-object v2, v1
@@ -163,12 +162,12 @@
     goto :goto_0
 
     .line 39
-    .end local v1           #result:Ljava/lang/Object;
+    .end local v1    # "result":Ljava/lang/Object;
     :catch_0
     move-exception v0
 
     .line 40
-    .local v0, re:Ljava/lang/Exception;
+    .local v0, "re":Ljava/lang/Exception;
     iget-object v2, p0, Lcom/flurry/org/codehaus/jackson/map/deser/std/StdKeyDeserializer;->_keyClass:Ljava/lang/Class;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -200,8 +199,8 @@
     throw v2
 
     .line 42
-    .end local v0           #re:Ljava/lang/Exception;
-    .restart local v1       #result:Ljava/lang/Object;
+    .end local v0    # "re":Ljava/lang/Exception;
+    .restart local v1    # "result":Ljava/lang/Object;
     :cond_1
     iget-object v2, p0, Lcom/flurry/org/codehaus/jackson/map/deser/std/StdKeyDeserializer;->_keyClass:Ljava/lang/Class;
 

@@ -52,7 +52,7 @@
 
 .method public constructor <init>(Landroid/os/Bundle;)V
     .locals 3
-    .parameter "args"
+    .param p1, "args"    # Landroid/os/Bundle;
     .annotation build Landroid/annotation/SuppressLint;
         value = {
             "ValidFragment"
@@ -87,9 +87,8 @@
 
 .method private createRequest(Ljava/lang/String;Ljava/util/Set;Lcom/facebook/Session;)Lcom/facebook/Request;
     .locals 7
-    .parameter "userID"
-    .parameter
-    .parameter "session"
+    .param p1, "userID"    # Ljava/lang/String;
+    .param p3, "session"    # Lcom/facebook/Session;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -106,7 +105,7 @@
 
     .prologue
     .line 210
-    .local p2, extraFields:Ljava/util/Set;,"Ljava/util/Set<Ljava/lang/String;>;"
+    .local p2, "extraFields":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -132,13 +131,13 @@
     move-result-object v3
 
     .line 212
-    .local v3, request:Lcom/facebook/Request;
+    .local v3, "request":Lcom/facebook/Request;
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0, p2}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
 
     .line 213
-    .local v0, fields:Ljava/util/Set;,"Ljava/util/Set<Ljava/lang/String;>;"
+    .local v0, "fields":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     const/4 v5, 0x2
 
     new-array v4, v5, [Ljava/lang/String;
@@ -158,7 +157,7 @@
     aput-object v6, v4, v5
 
     .line 217
-    .local v4, requiredFields:[Ljava/lang/String;
+    .local v4, "requiredFields":[Ljava/lang/String;
     invoke-static {v4}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v5
@@ -173,7 +172,7 @@
     move-result-object v2
 
     .line 220
-    .local v2, pictureField:Ljava/lang/String;
+    .local v2, "pictureField":Ljava/lang/String;
     if-eqz v2, :cond_0
 
     .line 221
@@ -186,7 +185,7 @@
     move-result-object v1
 
     .line 225
-    .local v1, parameters:Landroid/os/Bundle;
+    .local v1, "parameters":Landroid/os/Bundle;
     const-string v5, "fields"
 
     const-string v6, ","
@@ -206,7 +205,7 @@
 
 .method private setFriendPickerSettingsFromBundle(Landroid/os/Bundle;)V
     .locals 2
-    .parameter "inState"
+    .param p1, "inState"    # Landroid/os/Bundle;
 
     .prologue
     const-string v1, "com.facebook.widget.FriendPickerFragment.UserId"
@@ -282,7 +281,7 @@
     invoke-direct {v0, p0, p0, v1}, Lcom/facebook/widget/FriendPickerFragment$1;-><init>(Lcom/facebook/widget/FriendPickerFragment;Lcom/facebook/widget/PickerFragment;Landroid/content/Context;)V
 
     .line 160
-    .local v0, adapter:Lcom/facebook/widget/PickerFragment$PickerFragmentAdapter;,"Lcom/facebook/widget/PickerFragment<Lcom/facebook/model/GraphUser;>.PickerFragmentAdapter<Lcom/facebook/model/GraphUser;>;"
+    .local v0, "adapter":Lcom/facebook/widget/PickerFragment$PickerFragmentAdapter;, "Lcom/facebook/widget/PickerFragment<Lcom/facebook/model/GraphUser;>.PickerFragmentAdapter<Lcom/facebook/model/GraphUser;>;"
     invoke-virtual {v0, v2}, Lcom/facebook/widget/PickerFragment$PickerFragmentAdapter;->setShowCheckbox(Z)V
 
     .line 161
@@ -405,7 +404,7 @@
 
 .method getRequestForLoadData(Lcom/facebook/Session;)Lcom/facebook/Request;
     .locals 3
-    .parameter "session"
+    .param p1, "session"    # Lcom/facebook/Session;
 
     .prologue
     .line 180
@@ -433,7 +432,7 @@
     move-object v0, v1
 
     .line 185
-    .local v0, userToFetch:Ljava/lang/String;
+    .local v0, "userToFetch":Ljava/lang/String;
     :goto_0
     iget-object v1, p0, Lcom/facebook/widget/FriendPickerFragment;->extraFields:Ljava/util/HashSet;
 
@@ -444,7 +443,7 @@
     return-object v1
 
     .line 184
-    .end local v0           #userToFetch:Ljava/lang/String;
+    .end local v0    # "userToFetch":Ljava/lang/String;
     :cond_1
     const-string v1, "me"
 
@@ -486,7 +485,7 @@
 
 .method logAppEvents(Z)V
     .locals 5
-    .parameter "doneButtonClicked"
+    .param p1, "doneButtonClicked"    # Z
 
     .prologue
     .line 195
@@ -503,13 +502,13 @@
     move-result-object v0
 
     .line 196
-    .local v0, logger:Lcom/facebook/AppEventsLogger;
+    .local v0, "logger":Lcom/facebook/AppEventsLogger;
     new-instance v2, Landroid/os/Bundle;
 
     invoke-direct {v2}, Landroid/os/Bundle;-><init>()V
 
     .line 201
-    .local v2, parameters:Landroid/os/Bundle;
+    .local v2, "parameters":Landroid/os/Bundle;
     if-eqz p1, :cond_0
 
     const-string v3, "Completed"
@@ -517,7 +516,7 @@
     move-object v1, v3
 
     .line 203
-    .local v1, outcome:Ljava/lang/String;
+    .local v1, "outcome":Ljava/lang/String;
     :goto_0
     const-string v3, "fb_dialog_outcome"
 
@@ -547,7 +546,7 @@
     return-void
 
     .line 202
-    .end local v1           #outcome:Ljava/lang/String;
+    .end local v1    # "outcome":Ljava/lang/String;
     :cond_0
     const-string v3, "Unknown"
 
@@ -558,9 +557,9 @@
 
 .method public onInflate(Landroid/app/Activity;Landroid/util/AttributeSet;Landroid/os/Bundle;)V
     .locals 3
-    .parameter "activity"
-    .parameter "attrs"
-    .parameter "savedInstanceState"
+    .param p1, "activity"    # Landroid/app/Activity;
+    .param p2, "attrs"    # Landroid/util/AttributeSet;
+    .param p3, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
     .line 124
@@ -574,7 +573,7 @@
     move-result-object v0
 
     .line 127
-    .local v0, a:Landroid/content/res/TypedArray;
+    .local v0, "a":Landroid/content/res/TypedArray;
     const/4 v1, 0x0
 
     iget-boolean v2, p0, Lcom/facebook/widget/FriendPickerFragment;->multiSelect:Z
@@ -594,7 +593,7 @@
 
 .method saveSettingsToBundle(Landroid/os/Bundle;)V
     .locals 2
-    .parameter "outState"
+    .param p1, "outState"    # Landroid/os/Bundle;
 
     .prologue
     .line 138
@@ -620,7 +619,7 @@
 
 .method public setMultiSelect(Z)V
     .locals 1
-    .parameter "multiSelect"
+    .param p1, "multiSelect"    # Z
 
     .prologue
     .line 108
@@ -645,7 +644,7 @@
 
 .method public setSettingsFromBundle(Landroid/os/Bundle;)V
     .locals 0
-    .parameter "inState"
+    .param p1, "inState"    # Landroid/os/Bundle;
 
     .prologue
     .line 133
@@ -660,7 +659,7 @@
 
 .method public setUserId(Ljava/lang/String;)V
     .locals 0
-    .parameter "userId"
+    .param p1, "userId"    # Ljava/lang/String;
 
     .prologue
     .line 92

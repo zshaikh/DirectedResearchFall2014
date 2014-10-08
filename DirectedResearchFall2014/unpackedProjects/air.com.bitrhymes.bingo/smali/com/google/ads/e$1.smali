@@ -28,9 +28,6 @@
 # direct methods
 .method constructor <init>(Lcom/google/ads/e;Lcom/google/ads/c;Lcom/google/ads/AdRequest;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 150

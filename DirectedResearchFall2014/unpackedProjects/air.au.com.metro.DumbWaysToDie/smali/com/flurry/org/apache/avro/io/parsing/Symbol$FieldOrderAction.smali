@@ -21,7 +21,7 @@
 # direct methods
 .method public constructor <init>([Lcom/flurry/org/apache/avro/Schema$Field;)V
     .locals 1
-    .parameter "fields"
+    .param p1, "fields"    # [Lcom/flurry/org/apache/avro/Schema$Field;
 
     .prologue
     .line 466

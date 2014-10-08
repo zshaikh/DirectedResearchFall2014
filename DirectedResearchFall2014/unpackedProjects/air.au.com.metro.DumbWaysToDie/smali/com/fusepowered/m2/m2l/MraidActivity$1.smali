@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m2/m2l/CustomEventInterstitial$CustomEventInterstitialListener;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1
@@ -40,8 +39,8 @@
 # virtual methods
 .method public onClose(Lcom/fusepowered/m2/m2l/MraidView;Lcom/fusepowered/m2/m2l/MraidView$ViewState;)V
     .locals 0
-    .parameter "view"
-    .parameter "newViewState"
+    .param p1, "view"    # Lcom/fusepowered/m2/m2l/MraidView;
+    .param p2, "newViewState"    # Lcom/fusepowered/m2/m2l/MraidView$ViewState;
 
     .prologue
     .line 82
@@ -50,7 +49,7 @@
 
 .method public onExpand(Lcom/fusepowered/m2/m2l/MraidView;)V
     .locals 0
-    .parameter "view"
+    .param p1, "view"    # Lcom/fusepowered/m2/m2l/MraidView;
 
     .prologue
     .line 78
@@ -59,7 +58,7 @@
 
 .method public onFailure(Lcom/fusepowered/m2/m2l/MraidView;)V
     .locals 2
-    .parameter "view"
+    .param p1, "view"    # Lcom/fusepowered/m2/m2l/MraidView;
 
     .prologue
     .line 73
@@ -75,7 +74,7 @@
 
 .method public onReady(Lcom/fusepowered/m2/m2l/MraidView;)V
     .locals 1
-    .parameter "view"
+    .param p1, "view"    # Lcom/fusepowered/m2/m2l/MraidView;
 
     .prologue
     .line 68

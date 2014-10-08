@@ -62,8 +62,8 @@
 
 .method static downloadMraidJs(Landroid/content/Context;Ljava/lang/String;)V
     .locals 1
-    .parameter "context"
-    .parameter "url"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "url"    # Ljava/lang/String;
 
     .prologue
     .line 101
@@ -87,7 +87,7 @@
 
 .method static getMMJSStats(Landroid/content/Context;)Ljava/lang/String;
     .locals 13
-    .parameter "context"
+    .param p0, "context"    # Landroid/content/Context;
 
     .prologue
     .line 173
@@ -101,50 +101,50 @@
     const-string p0, "No MMJS Downloaded!"
 
     .line 243
-    .end local p0
+    .end local p0    # "context":Landroid/content/Context;
     :goto_0
     return-object p0
 
     .line 177
-    .restart local p0
+    .restart local p0    # "context":Landroid/content/Context;
     :cond_0
     invoke-static {p0}, Lcom/fusepowered/m1/android/MRaid;->getMRaidJsFile(Landroid/content/Context;)Ljava/io/File;
 
     move-result-object v6
 
     .line 178
-    .local v6, mmjs:Ljava/io/File;
+    .local v6, "mmjs":Ljava/io/File;
     const/4 v7, 0x0
 
     .line 180
-    .local v7, reader:Ljava/io/BufferedReader;
+    .local v7, "reader":Ljava/io/BufferedReader;
     const/4 v1, 0x0
 
     .line 181
-    .local v1, fileStream:Ljava/io/FileInputStream;
+    .local v1, "fileStream":Ljava/io/FileInputStream;
     const-string v4, ""
 
     .line 182
-    .local v4, md5Hash:Ljava/lang/String;
+    .local v4, "md5Hash":Ljava/lang/String;
     const-string v0, ""
 
     .line 183
-    .local v0, buildDate:Ljava/lang/String;
+    .local v0, "buildDate":Ljava/lang/String;
     const-string v9, ""
 
     .line 186
-    .local v9, version:Ljava/lang/String;
+    .local v9, "version":Ljava/lang/String;
     :try_start_0
     new-instance v2, Ljava/io/FileInputStream;
 
     invoke-direct {v2, v6}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 188
-    .end local v1           #fileStream:Ljava/io/FileInputStream;
-    .local v2, fileStream:Ljava/io/FileInputStream;
+    .end local v1    # "fileStream":Ljava/io/FileInputStream;
+    .local v2, "fileStream":Ljava/io/FileInputStream;
     :try_start_1
     invoke-virtual {v6}, Ljava/io/File;->length()J
 
@@ -155,7 +155,7 @@
     new-array v1, v1, [B
 
     .line 189
-    .local v1, contents:[B
+    .local v1, "contents":[B
     invoke-virtual {v2, v1}, Ljava/io/FileInputStream;->read([B)I
 
     .line 191
@@ -166,23 +166,23 @@
     move-result-object v3
 
     .line 192
-    .local v3, md:Ljava/security/MessageDigest;
+    .local v3, "md":Ljava/security/MessageDigest;
     invoke-virtual {v3, v1}, Ljava/security/MessageDigest;->digest([B)[B
 
     move-result-object v3
 
     .line 193
-    .local v3, hashBytes:[B
+    .local v3, "hashBytes":[B
     invoke-static {v3}, Lcom/fusepowered/m1/android/MMSDK;->byteArrayToString([B)Ljava/lang/String;
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_4
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     move-result-object v5
 
     .line 195
-    .end local v4           #md5Hash:Ljava/lang/String;
-    .local v5, md5Hash:Ljava/lang/String;
+    .end local v4    # "md5Hash":Ljava/lang/String;
+    .local v5, "md5Hash":Ljava/lang/String;
     :try_start_2
     invoke-static {p0}, Lcom/fusepowered/m1/android/MRaid;->getMRaidJsFile(Landroid/content/Context;)Ljava/io/File;
 
@@ -193,24 +193,24 @@
 
     new-instance v3, Ljava/io/FileReader;
 
-    .end local v3           #hashBytes:[B
+    .end local v3    # "hashBytes":[B
     invoke-direct {v3, v6}, Ljava/io/FileReader;-><init>(Ljava/io/File;)V
 
     invoke-direct {v8, v3}, Ljava/io/BufferedReader;-><init>(Ljava/io/Reader;)V
     :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_5
+    .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
     .line 198
-    .end local v7           #reader:Ljava/io/BufferedReader;
-    .local v8, reader:Ljava/io/BufferedReader;
+    .end local v7    # "reader":Ljava/io/BufferedReader;
+    .local v8, "reader":Ljava/io/BufferedReader;
     const/4 v3, 0x0
 
-    .local v3, i:I
+    .local v3, "i":I
     move-object v7, v9
 
-    .end local v9           #version:Ljava/lang/String;
-    .local v7, version:Ljava/lang/String;
+    .end local v9    # "version":Ljava/lang/String;
+    .local v7, "version":Ljava/lang/String;
     :goto_1
     const/16 v4, 0xa
 
@@ -220,20 +220,20 @@
     :try_start_3
     invoke-virtual {v8}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
     :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_6
+    .catchall {:try_start_3 .. :try_end_3} :catchall_3
 
     move-result-object v4
 
-    .local v4, line:Ljava/lang/String;
+    .local v4, "line":Ljava/lang/String;
     if-nez v4, :cond_4
 
     move-object v3, v7
 
     .line 229
-    .end local v4           #line:Ljava/lang/String;
-    .end local v7           #version:Ljava/lang/String;
-    .local v3, version:Ljava/lang/String;
+    .end local v4    # "line":Ljava/lang/String;
+    .end local v7    # "version":Ljava/lang/String;
+    .local v3, "version":Ljava/lang/String;
     :goto_2
     if-eqz v2, :cond_1
 
@@ -253,26 +253,26 @@
     :cond_2
     move-object v4, v6
 
-    .end local v6           #mmjs:Ljava/io/File;
-    .local v4, mmjs:Ljava/io/File;
+    .end local v6    # "mmjs":Ljava/io/File;
+    .local v4, "mmjs":Ljava/io/File;
     move-object v6, v3
 
-    .end local v3           #version:Ljava/lang/String;
-    .local v6, version:Ljava/lang/String;
+    .end local v3    # "version":Ljava/lang/String;
+    .local v6, "version":Ljava/lang/String;
     move-object v3, v5
 
-    .end local v5           #md5Hash:Ljava/lang/String;
-    .local v3, md5Hash:Ljava/lang/String;
+    .end local v5    # "md5Hash":Ljava/lang/String;
+    .local v3, "md5Hash":Ljava/lang/String;
     move-object v5, v8
 
     .line 239
-    .end local v8           #reader:Ljava/io/BufferedReader;
-    .local v5, reader:Ljava/io/BufferedReader;
+    .end local v8    # "reader":Ljava/io/BufferedReader;
+    .local v5, "reader":Ljava/io/BufferedReader;
     :cond_3
     :goto_3
     new-instance v1, Ljava/util/Date;
 
-    .end local v1           #contents:[B
+    .end local v1    # "contents":[B
     invoke-virtual {v4}, Ljava/io/File;->lastModified()J
 
     move-result-wide v7
@@ -280,12 +280,12 @@
     invoke-direct {v1, v7, v8}, Ljava/util/Date;-><init>(J)V
 
     .line 240
-    .local v1, date:Ljava/util/Date;
+    .local v1, "date":Ljava/util/Date;
     invoke-static {v6}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v2
 
-    .end local v2           #fileStream:Ljava/io/FileInputStream;
+    .end local v2    # "fileStream":Ljava/io/FileInputStream;
     if-eqz v2, :cond_b
 
     .line 241
@@ -295,17 +295,17 @@
 
     new-array v5, v5, [Ljava/lang/Object;
 
-    .end local v5           #reader:Ljava/io/BufferedReader;
+    .end local v5    # "reader":Ljava/io/BufferedReader;
     const/4 v6, 0x0
 
     aput-object v0, v5, v6
 
-    .end local v6           #version:Ljava/lang/String;
+    .end local v6    # "version":Ljava/lang/String;
     const/4 v0, 0x1
 
     aput-object v3, v5, v0
 
-    .end local v0           #buildDate:Ljava/lang/String;
+    .end local v0    # "buildDate":Ljava/lang/String;
     const/4 v0, 0x2
 
     aput-object v1, v5, v0
@@ -316,12 +316,12 @@
 
     move-result-wide v3
 
-    .end local v3           #md5Hash:Ljava/lang/String;
+    .end local v3    # "md5Hash":Ljava/lang/String;
     invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v1
 
-    .end local v1           #date:Ljava/util/Date;
+    .end local v1    # "date":Ljava/util/Date;
     aput-object v1, v5, v0
 
     const/4 v0, 0x4
@@ -330,7 +330,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "context":Landroid/content/Context;
     aput-object p0, v5, v0
 
     invoke-static {v2, v5}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
@@ -340,16 +340,16 @@
     goto/16 :goto_0
 
     .line 202
-    .restart local v0       #buildDate:Ljava/lang/String;
-    .local v1, contents:[B
-    .restart local v2       #fileStream:Ljava/io/FileInputStream;
-    .local v3, i:I
-    .local v4, line:Ljava/lang/String;
-    .local v5, md5Hash:Ljava/lang/String;
-    .local v6, mmjs:Ljava/io/File;
-    .restart local v7       #version:Ljava/lang/String;
-    .restart local v8       #reader:Ljava/io/BufferedReader;
-    .restart local p0
+    .restart local v0    # "buildDate":Ljava/lang/String;
+    .local v1, "contents":[B
+    .restart local v2    # "fileStream":Ljava/io/FileInputStream;
+    .local v3, "i":I
+    .local v4, "line":Ljava/lang/String;
+    .local v5, "md5Hash":Ljava/lang/String;
+    .local v6, "mmjs":Ljava/io/File;
+    .restart local v7    # "version":Ljava/lang/String;
+    .restart local v8    # "reader":Ljava/io/BufferedReader;
+    .restart local p0    # "context":Landroid/content/Context;
     :cond_4
     :try_start_5
     invoke-static {v4}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -409,8 +409,8 @@
 
     invoke-static {v7}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
     :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_3
     .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_6
+    .catchall {:try_start_5 .. :try_end_5} :catchall_3
 
     move-result v9
 
@@ -420,8 +420,8 @@
     move-object v4, v4
 
     .line 212
-    .end local v7           #version:Ljava/lang/String;
-    .local v4, version:Ljava/lang/String;
+    .end local v7    # "version":Ljava/lang/String;
+    .local v4, "version":Ljava/lang/String;
     :try_start_6
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -453,8 +453,8 @@
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
     :try_end_6
-    .catchall {:try_start_6 .. :try_end_6} :catchall_4
     .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_7
+    .catchall {:try_start_6 .. :try_end_6} :catchall_4
 
     move-result v7
 
@@ -463,98 +463,98 @@
     move-object v3, v4
 
     .line 216
-    .end local v4           #version:Ljava/lang/String;
-    .local v3, version:Ljava/lang/String;
+    .end local v4    # "version":Ljava/lang/String;
+    .local v3, "version":Ljava/lang/String;
     goto/16 :goto_2
 
-    .local v3, i:I
-    .local v4, line:Ljava/lang/String;
-    .restart local v7       #version:Ljava/lang/String;
+    .local v3, "i":I
+    .local v4, "line":Ljava/lang/String;
+    .restart local v7    # "version":Ljava/lang/String;
     :cond_6
     move-object v4, v7
 
     .line 198
-    .end local v7           #version:Ljava/lang/String;
-    .local v4, version:Ljava/lang/String;
+    .end local v7    # "version":Ljava/lang/String;
+    .local v4, "version":Ljava/lang/String;
     :cond_7
     add-int/lit8 v3, v3, 0x1
 
     move-object v7, v4
 
-    .end local v4           #version:Ljava/lang/String;
-    .restart local v7       #version:Ljava/lang/String;
+    .end local v4    # "version":Ljava/lang/String;
+    .restart local v7    # "version":Ljava/lang/String;
     goto/16 :goto_1
 
     .line 234
-    .end local v7           #version:Ljava/lang/String;
-    .local v3, version:Ljava/lang/String;
+    .end local v7    # "version":Ljava/lang/String;
+    .local v3, "version":Ljava/lang/String;
     :catch_0
     move-exception v4
 
     move-object v4, v6
 
-    .end local v6           #mmjs:Ljava/io/File;
-    .local v4, mmjs:Ljava/io/File;
+    .end local v6    # "mmjs":Ljava/io/File;
+    .local v4, "mmjs":Ljava/io/File;
     move-object v6, v3
 
-    .end local v3           #version:Ljava/lang/String;
-    .local v6, version:Ljava/lang/String;
+    .end local v3    # "version":Ljava/lang/String;
+    .local v6, "version":Ljava/lang/String;
     move-object v3, v5
 
-    .end local v5           #md5Hash:Ljava/lang/String;
-    .local v3, md5Hash:Ljava/lang/String;
+    .end local v5    # "md5Hash":Ljava/lang/String;
+    .local v3, "md5Hash":Ljava/lang/String;
     move-object v5, v8
 
     .line 237
-    .end local v8           #reader:Ljava/io/BufferedReader;
-    .local v5, reader:Ljava/io/BufferedReader;
+    .end local v8    # "reader":Ljava/io/BufferedReader;
+    .local v5, "reader":Ljava/io/BufferedReader;
     goto/16 :goto_3
 
     .line 221
-    .end local v2           #fileStream:Ljava/io/FileInputStream;
-    .end local v3           #md5Hash:Ljava/lang/String;
-    .end local v5           #reader:Ljava/io/BufferedReader;
-    .local v1, fileStream:Ljava/io/FileInputStream;
-    .local v4, md5Hash:Ljava/lang/String;
-    .local v6, mmjs:Ljava/io/File;
-    .local v7, reader:Ljava/io/BufferedReader;
-    .restart local v9       #version:Ljava/lang/String;
+    .end local v2    # "fileStream":Ljava/io/FileInputStream;
+    .end local v3    # "md5Hash":Ljava/lang/String;
+    .end local v5    # "reader":Ljava/io/BufferedReader;
+    .local v1, "fileStream":Ljava/io/FileInputStream;
+    .local v4, "md5Hash":Ljava/lang/String;
+    .local v6, "mmjs":Ljava/io/File;
+    .local v7, "reader":Ljava/io/BufferedReader;
+    .restart local v9    # "version":Ljava/lang/String;
     :catch_1
     move-exception v2
 
     move-object v3, v4
 
-    .end local v4           #md5Hash:Ljava/lang/String;
-    .restart local v3       #md5Hash:Ljava/lang/String;
+    .end local v4    # "md5Hash":Ljava/lang/String;
+    .restart local v3    # "md5Hash":Ljava/lang/String;
     move-object v5, v7
 
-    .end local v7           #reader:Ljava/io/BufferedReader;
-    .restart local v5       #reader:Ljava/io/BufferedReader;
+    .end local v7    # "reader":Ljava/io/BufferedReader;
+    .restart local v5    # "reader":Ljava/io/BufferedReader;
     move-object v4, v6
 
-    .end local v6           #mmjs:Ljava/io/File;
-    .local v4, mmjs:Ljava/io/File;
+    .end local v6    # "mmjs":Ljava/io/File;
+    .local v4, "mmjs":Ljava/io/File;
     move-object v6, v9
 
-    .end local v9           #version:Ljava/lang/String;
-    .local v6, version:Ljava/lang/String;
+    .end local v9    # "version":Ljava/lang/String;
+    .local v6, "version":Ljava/lang/String;
     move-object v12, v1
 
-    .end local v1           #fileStream:Ljava/io/FileInputStream;
-    .local v12, fileStream:Ljava/io/FileInputStream;
+    .end local v1    # "fileStream":Ljava/io/FileInputStream;
+    .local v12, "fileStream":Ljava/io/FileInputStream;
     move-object v1, v2
 
     move-object v2, v12
 
     .line 223
-    .end local v12           #fileStream:Ljava/io/FileInputStream;
-    .local v1, e:Ljava/lang/Exception;
-    .restart local v2       #fileStream:Ljava/io/FileInputStream;
+    .end local v12    # "fileStream":Ljava/io/FileInputStream;
+    .local v1, "e":Ljava/lang/Exception;
+    .restart local v2    # "fileStream":Ljava/io/FileInputStream;
     :goto_5
     const/4 v1, 0x0
 
     .line 229
-    .local v1, contents:[B
+    .local v1, "contents":[B
     if-eqz v2, :cond_8
 
     .line 230
@@ -579,14 +579,14 @@
     goto/16 :goto_3
 
     .line 227
-    .end local v2           #fileStream:Ljava/io/FileInputStream;
-    .end local v3           #md5Hash:Ljava/lang/String;
-    .end local v5           #reader:Ljava/io/BufferedReader;
-    .local v1, fileStream:Ljava/io/FileInputStream;
-    .local v4, md5Hash:Ljava/lang/String;
-    .local v6, mmjs:Ljava/io/File;
-    .restart local v7       #reader:Ljava/io/BufferedReader;
-    .restart local v9       #version:Ljava/lang/String;
+    .end local v2    # "fileStream":Ljava/io/FileInputStream;
+    .end local v3    # "md5Hash":Ljava/lang/String;
+    .end local v5    # "reader":Ljava/io/BufferedReader;
+    .local v1, "fileStream":Ljava/io/FileInputStream;
+    .local v4, "md5Hash":Ljava/lang/String;
+    .local v6, "mmjs":Ljava/io/File;
+    .restart local v7    # "reader":Ljava/io/BufferedReader;
+    .restart local v9    # "version":Ljava/lang/String;
     :catchall_0
     move-exception p0
 
@@ -594,29 +594,29 @@
 
     move-object v3, v7
 
-    .end local v7           #reader:Ljava/io/BufferedReader;
-    .local v3, reader:Ljava/io/BufferedReader;
+    .end local v7    # "reader":Ljava/io/BufferedReader;
+    .local v3, "reader":Ljava/io/BufferedReader;
     move-object v2, v6
 
-    .end local v6           #mmjs:Ljava/io/File;
-    .local v2, mmjs:Ljava/io/File;
+    .end local v6    # "mmjs":Ljava/io/File;
+    .local v2, "mmjs":Ljava/io/File;
     move-object p0, v0
 
-    .end local v0           #buildDate:Ljava/lang/String;
-    .local p0, buildDate:Ljava/lang/String;
+    .end local v0    # "buildDate":Ljava/lang/String;
+    .local p0, "buildDate":Ljava/lang/String;
     move-object v0, v1
 
-    .end local v1           #fileStream:Ljava/io/FileInputStream;
-    .local v0, fileStream:Ljava/io/FileInputStream;
+    .end local v1    # "fileStream":Ljava/io/FileInputStream;
+    .local v0, "fileStream":Ljava/io/FileInputStream;
     move-object v1, v4
 
-    .end local v4           #md5Hash:Ljava/lang/String;
-    .local v1, md5Hash:Ljava/lang/String;
+    .end local v4    # "md5Hash":Ljava/lang/String;
+    .local v1, "md5Hash":Ljava/lang/String;
     move-object v4, v9
 
     .line 229
-    .end local v9           #version:Ljava/lang/String;
-    .local v4, version:Ljava/lang/String;
+    .end local v9    # "version":Ljava/lang/String;
+    .local v4, "version":Ljava/lang/String;
     :goto_6
     if-eqz v0, :cond_9
 
@@ -634,20 +634,20 @@
     .catch Ljava/lang/Exception; {:try_start_8 .. :try_end_8} :catch_3
 
     .line 236
-    .end local p0           #buildDate:Ljava/lang/String;
+    .end local p0    # "buildDate":Ljava/lang/String;
     :cond_a
     :goto_7
     throw v5
 
     .line 243
-    .end local v2           #mmjs:Ljava/io/File;
-    .local v0, buildDate:Ljava/lang/String;
-    .local v1, date:Ljava/util/Date;
-    .local v3, md5Hash:Ljava/lang/String;
-    .local v4, mmjs:Ljava/io/File;
-    .restart local v5       #reader:Ljava/io/BufferedReader;
-    .local v6, version:Ljava/lang/String;
-    .local p0, context:Landroid/content/Context;
+    .end local v2    # "mmjs":Ljava/io/File;
+    .local v0, "buildDate":Ljava/lang/String;
+    .local v1, "date":Ljava/util/Date;
+    .local v3, "md5Hash":Ljava/lang/String;
+    .local v4, "mmjs":Ljava/io/File;
+    .restart local v5    # "reader":Ljava/io/BufferedReader;
+    .local v6, "version":Ljava/lang/String;
+    .local p0, "context":Landroid/content/Context;
     :cond_b
     const-string v2, "MMJS Stats: Version[%s] buildDate[%s] MD5[%s] dlDate[%s] Size[%d] Url[%s]"
 
@@ -655,7 +655,7 @@
 
     new-array v5, v5, [Ljava/lang/Object;
 
-    .end local v5           #reader:Ljava/io/BufferedReader;
+    .end local v5    # "reader":Ljava/io/BufferedReader;
     const/4 v7, 0x0
 
     aput-object v6, v5, v7
@@ -664,12 +664,12 @@
 
     aput-object v0, v5, v6
 
-    .end local v6           #version:Ljava/lang/String;
+    .end local v6    # "version":Ljava/lang/String;
     const/4 v0, 0x2
 
     aput-object v3, v5, v0
 
-    .end local v0           #buildDate:Ljava/lang/String;
+    .end local v0    # "buildDate":Ljava/lang/String;
     const/4 v0, 0x3
 
     aput-object v1, v5, v0
@@ -680,12 +680,12 @@
 
     move-result-wide v3
 
-    .end local v3           #md5Hash:Ljava/lang/String;
+    .end local v3    # "md5Hash":Ljava/lang/String;
     invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v1
 
-    .end local v1           #date:Ljava/util/Date;
+    .end local v1    # "date":Ljava/util/Date;
     aput-object v1, v5, v0
 
     const/4 v0, 0x5
@@ -694,7 +694,7 @@
 
     move-result-object p0
 
-    .end local p0           #context:Landroid/content/Context;
+    .end local p0    # "context":Landroid/content/Context;
     aput-object p0, v5, v0
 
     invoke-static {v2, v5}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
@@ -704,27 +704,27 @@
     goto/16 :goto_0
 
     .line 234
-    .local v0, fileStream:Ljava/io/FileInputStream;
-    .local v1, md5Hash:Ljava/lang/String;
-    .restart local v2       #mmjs:Ljava/io/File;
-    .local v3, reader:Ljava/io/BufferedReader;
-    .local v4, version:Ljava/lang/String;
-    .local p0, buildDate:Ljava/lang/String;
+    .local v0, "fileStream":Ljava/io/FileInputStream;
+    .local v1, "md5Hash":Ljava/lang/String;
+    .restart local v2    # "mmjs":Ljava/io/File;
+    .local v3, "reader":Ljava/io/BufferedReader;
+    .local v4, "version":Ljava/lang/String;
+    .local p0, "buildDate":Ljava/lang/String;
     :catch_3
     move-exception p0
 
     goto :goto_7
 
     .line 227
-    .end local v1           #md5Hash:Ljava/lang/String;
-    .end local v3           #reader:Ljava/io/BufferedReader;
-    .local v0, buildDate:Ljava/lang/String;
-    .local v2, fileStream:Ljava/io/FileInputStream;
-    .local v4, md5Hash:Ljava/lang/String;
-    .local v6, mmjs:Ljava/io/File;
-    .restart local v7       #reader:Ljava/io/BufferedReader;
-    .restart local v9       #version:Ljava/lang/String;
-    .local p0, context:Landroid/content/Context;
+    .end local v1    # "md5Hash":Ljava/lang/String;
+    .end local v3    # "reader":Ljava/io/BufferedReader;
+    .local v0, "buildDate":Ljava/lang/String;
+    .local v2, "fileStream":Ljava/io/FileInputStream;
+    .local v4, "md5Hash":Ljava/lang/String;
+    .local v6, "mmjs":Ljava/io/File;
+    .restart local v7    # "reader":Ljava/io/BufferedReader;
+    .restart local v9    # "version":Ljava/lang/String;
+    .local p0, "context":Landroid/content/Context;
     :catchall_1
     move-exception p0
 
@@ -732,289 +732,289 @@
 
     move-object v1, v4
 
-    .end local v4           #md5Hash:Ljava/lang/String;
-    .restart local v1       #md5Hash:Ljava/lang/String;
+    .end local v4    # "md5Hash":Ljava/lang/String;
+    .restart local v1    # "md5Hash":Ljava/lang/String;
     move-object v3, v7
 
-    .end local v7           #reader:Ljava/io/BufferedReader;
-    .restart local v3       #reader:Ljava/io/BufferedReader;
+    .end local v7    # "reader":Ljava/io/BufferedReader;
+    .restart local v3    # "reader":Ljava/io/BufferedReader;
     move-object v4, v9
 
-    .end local v9           #version:Ljava/lang/String;
-    .local v4, version:Ljava/lang/String;
+    .end local v9    # "version":Ljava/lang/String;
+    .local v4, "version":Ljava/lang/String;
     move-object p0, v0
 
-    .end local v0           #buildDate:Ljava/lang/String;
-    .local p0, buildDate:Ljava/lang/String;
+    .end local v0    # "buildDate":Ljava/lang/String;
+    .local p0, "buildDate":Ljava/lang/String;
     move-object v0, v2
 
-    .end local v2           #fileStream:Ljava/io/FileInputStream;
-    .local v0, fileStream:Ljava/io/FileInputStream;
+    .end local v2    # "fileStream":Ljava/io/FileInputStream;
+    .local v0, "fileStream":Ljava/io/FileInputStream;
     move-object v2, v6
 
-    .end local v6           #mmjs:Ljava/io/File;
-    .local v2, mmjs:Ljava/io/File;
+    .end local v6    # "mmjs":Ljava/io/File;
+    .local v2, "mmjs":Ljava/io/File;
     goto :goto_6
 
-    .end local v3           #reader:Ljava/io/BufferedReader;
-    .end local v4           #version:Ljava/lang/String;
-    .local v0, buildDate:Ljava/lang/String;
-    .local v1, contents:[B
-    .local v2, fileStream:Ljava/io/FileInputStream;
-    .local v5, md5Hash:Ljava/lang/String;
-    .restart local v6       #mmjs:Ljava/io/File;
-    .restart local v7       #reader:Ljava/io/BufferedReader;
-    .restart local v9       #version:Ljava/lang/String;
-    .local p0, context:Landroid/content/Context;
+    .end local v3    # "reader":Ljava/io/BufferedReader;
+    .end local v4    # "version":Ljava/lang/String;
+    .local v0, "buildDate":Ljava/lang/String;
+    .local v1, "contents":[B
+    .local v2, "fileStream":Ljava/io/FileInputStream;
+    .local v5, "md5Hash":Ljava/lang/String;
+    .restart local v6    # "mmjs":Ljava/io/File;
+    .restart local v7    # "reader":Ljava/io/BufferedReader;
+    .restart local v9    # "version":Ljava/lang/String;
+    .local p0, "context":Landroid/content/Context;
     :catchall_2
     move-exception p0
 
     move-object v4, v9
 
-    .end local v9           #version:Ljava/lang/String;
-    .restart local v4       #version:Ljava/lang/String;
+    .end local v9    # "version":Ljava/lang/String;
+    .restart local v4    # "version":Ljava/lang/String;
     move-object v1, v5
 
-    .end local v5           #md5Hash:Ljava/lang/String;
-    .local v1, md5Hash:Ljava/lang/String;
+    .end local v5    # "md5Hash":Ljava/lang/String;
+    .local v1, "md5Hash":Ljava/lang/String;
     move-object v3, v7
 
-    .end local v7           #reader:Ljava/io/BufferedReader;
-    .restart local v3       #reader:Ljava/io/BufferedReader;
+    .end local v7    # "reader":Ljava/io/BufferedReader;
+    .restart local v3    # "reader":Ljava/io/BufferedReader;
     move-object v5, p0
 
     move-object p0, v0
 
-    .end local v0           #buildDate:Ljava/lang/String;
-    .local p0, buildDate:Ljava/lang/String;
+    .end local v0    # "buildDate":Ljava/lang/String;
+    .local p0, "buildDate":Ljava/lang/String;
     move-object v0, v2
 
-    .end local v2           #fileStream:Ljava/io/FileInputStream;
-    .local v0, fileStream:Ljava/io/FileInputStream;
+    .end local v2    # "fileStream":Ljava/io/FileInputStream;
+    .local v0, "fileStream":Ljava/io/FileInputStream;
     move-object v2, v6
 
-    .end local v6           #mmjs:Ljava/io/File;
-    .local v2, mmjs:Ljava/io/File;
+    .end local v6    # "mmjs":Ljava/io/File;
+    .local v2, "mmjs":Ljava/io/File;
     goto :goto_6
 
-    .end local v4           #version:Ljava/lang/String;
-    .local v0, buildDate:Ljava/lang/String;
-    .local v1, contents:[B
-    .local v2, fileStream:Ljava/io/FileInputStream;
-    .local v3, i:I
-    .restart local v5       #md5Hash:Ljava/lang/String;
-    .restart local v6       #mmjs:Ljava/io/File;
-    .local v7, version:Ljava/lang/String;
-    .restart local v8       #reader:Ljava/io/BufferedReader;
-    .local p0, context:Landroid/content/Context;
+    .end local v4    # "version":Ljava/lang/String;
+    .local v0, "buildDate":Ljava/lang/String;
+    .local v1, "contents":[B
+    .local v2, "fileStream":Ljava/io/FileInputStream;
+    .local v3, "i":I
+    .restart local v5    # "md5Hash":Ljava/lang/String;
+    .restart local v6    # "mmjs":Ljava/io/File;
+    .local v7, "version":Ljava/lang/String;
+    .restart local v8    # "reader":Ljava/io/BufferedReader;
+    .local p0, "context":Landroid/content/Context;
     :catchall_3
     move-exception p0
 
     move-object v4, v7
 
-    .end local v7           #version:Ljava/lang/String;
-    .restart local v4       #version:Ljava/lang/String;
+    .end local v7    # "version":Ljava/lang/String;
+    .restart local v4    # "version":Ljava/lang/String;
     move-object v1, v5
 
-    .end local v5           #md5Hash:Ljava/lang/String;
-    .local v1, md5Hash:Ljava/lang/String;
+    .end local v5    # "md5Hash":Ljava/lang/String;
+    .local v1, "md5Hash":Ljava/lang/String;
     move-object v3, v8
 
-    .end local v8           #reader:Ljava/io/BufferedReader;
-    .local v3, reader:Ljava/io/BufferedReader;
+    .end local v8    # "reader":Ljava/io/BufferedReader;
+    .local v3, "reader":Ljava/io/BufferedReader;
     move-object v5, p0
 
     move-object p0, v0
 
-    .end local v0           #buildDate:Ljava/lang/String;
-    .local p0, buildDate:Ljava/lang/String;
+    .end local v0    # "buildDate":Ljava/lang/String;
+    .local p0, "buildDate":Ljava/lang/String;
     move-object v0, v2
 
-    .end local v2           #fileStream:Ljava/io/FileInputStream;
-    .local v0, fileStream:Ljava/io/FileInputStream;
+    .end local v2    # "fileStream":Ljava/io/FileInputStream;
+    .local v0, "fileStream":Ljava/io/FileInputStream;
     move-object v2, v6
 
-    .end local v6           #mmjs:Ljava/io/File;
-    .local v2, mmjs:Ljava/io/File;
+    .end local v6    # "mmjs":Ljava/io/File;
+    .local v2, "mmjs":Ljava/io/File;
     goto :goto_6
 
-    .local v0, buildDate:Ljava/lang/String;
-    .local v1, contents:[B
-    .local v2, fileStream:Ljava/io/FileInputStream;
-    .local v3, i:I
-    .restart local v5       #md5Hash:Ljava/lang/String;
-    .restart local v6       #mmjs:Ljava/io/File;
-    .restart local v8       #reader:Ljava/io/BufferedReader;
-    .local p0, context:Landroid/content/Context;
+    .local v0, "buildDate":Ljava/lang/String;
+    .local v1, "contents":[B
+    .local v2, "fileStream":Ljava/io/FileInputStream;
+    .local v3, "i":I
+    .restart local v5    # "md5Hash":Ljava/lang/String;
+    .restart local v6    # "mmjs":Ljava/io/File;
+    .restart local v8    # "reader":Ljava/io/BufferedReader;
+    .local p0, "context":Landroid/content/Context;
     :catchall_4
     move-exception p0
 
     move-object v1, v5
 
-    .end local v5           #md5Hash:Ljava/lang/String;
-    .local v1, md5Hash:Ljava/lang/String;
+    .end local v5    # "md5Hash":Ljava/lang/String;
+    .local v1, "md5Hash":Ljava/lang/String;
     move-object v3, v8
 
-    .end local v8           #reader:Ljava/io/BufferedReader;
-    .local v3, reader:Ljava/io/BufferedReader;
+    .end local v8    # "reader":Ljava/io/BufferedReader;
+    .local v3, "reader":Ljava/io/BufferedReader;
     move-object v5, p0
 
     move-object p0, v0
 
-    .end local v0           #buildDate:Ljava/lang/String;
-    .local p0, buildDate:Ljava/lang/String;
+    .end local v0    # "buildDate":Ljava/lang/String;
+    .local p0, "buildDate":Ljava/lang/String;
     move-object v0, v2
 
-    .end local v2           #fileStream:Ljava/io/FileInputStream;
-    .local v0, fileStream:Ljava/io/FileInputStream;
+    .end local v2    # "fileStream":Ljava/io/FileInputStream;
+    .local v0, "fileStream":Ljava/io/FileInputStream;
     move-object v2, v6
 
-    .end local v6           #mmjs:Ljava/io/File;
-    .local v2, mmjs:Ljava/io/File;
+    .end local v6    # "mmjs":Ljava/io/File;
+    .local v2, "mmjs":Ljava/io/File;
     goto :goto_6
 
     .line 221
-    .end local v1           #md5Hash:Ljava/lang/String;
-    .end local v3           #reader:Ljava/io/BufferedReader;
-    .local v0, buildDate:Ljava/lang/String;
-    .local v2, fileStream:Ljava/io/FileInputStream;
-    .local v4, md5Hash:Ljava/lang/String;
-    .restart local v6       #mmjs:Ljava/io/File;
-    .local v7, reader:Ljava/io/BufferedReader;
-    .restart local v9       #version:Ljava/lang/String;
-    .local p0, context:Landroid/content/Context;
+    .end local v1    # "md5Hash":Ljava/lang/String;
+    .end local v3    # "reader":Ljava/io/BufferedReader;
+    .local v0, "buildDate":Ljava/lang/String;
+    .local v2, "fileStream":Ljava/io/FileInputStream;
+    .local v4, "md5Hash":Ljava/lang/String;
+    .restart local v6    # "mmjs":Ljava/io/File;
+    .local v7, "reader":Ljava/io/BufferedReader;
+    .restart local v9    # "version":Ljava/lang/String;
+    .local p0, "context":Landroid/content/Context;
     :catch_4
     move-exception v1
 
     move-object v3, v4
 
-    .end local v4           #md5Hash:Ljava/lang/String;
-    .local v3, md5Hash:Ljava/lang/String;
+    .end local v4    # "md5Hash":Ljava/lang/String;
+    .local v3, "md5Hash":Ljava/lang/String;
     move-object v5, v7
 
-    .end local v7           #reader:Ljava/io/BufferedReader;
-    .local v5, reader:Ljava/io/BufferedReader;
+    .end local v7    # "reader":Ljava/io/BufferedReader;
+    .local v5, "reader":Ljava/io/BufferedReader;
     move-object v4, v6
 
-    .end local v6           #mmjs:Ljava/io/File;
-    .local v4, mmjs:Ljava/io/File;
+    .end local v6    # "mmjs":Ljava/io/File;
+    .local v4, "mmjs":Ljava/io/File;
     move-object v6, v9
 
-    .end local v9           #version:Ljava/lang/String;
-    .local v6, version:Ljava/lang/String;
+    .end local v9    # "version":Ljava/lang/String;
+    .local v6, "version":Ljava/lang/String;
     goto :goto_5
 
-    .end local v3           #md5Hash:Ljava/lang/String;
-    .end local v4           #mmjs:Ljava/io/File;
-    .local v1, contents:[B
-    .local v5, md5Hash:Ljava/lang/String;
-    .local v6, mmjs:Ljava/io/File;
-    .restart local v7       #reader:Ljava/io/BufferedReader;
-    .restart local v9       #version:Ljava/lang/String;
+    .end local v3    # "md5Hash":Ljava/lang/String;
+    .end local v4    # "mmjs":Ljava/io/File;
+    .local v1, "contents":[B
+    .local v5, "md5Hash":Ljava/lang/String;
+    .local v6, "mmjs":Ljava/io/File;
+    .restart local v7    # "reader":Ljava/io/BufferedReader;
+    .restart local v9    # "version":Ljava/lang/String;
     :catch_5
     move-exception v1
 
     move-object v3, v5
 
-    .end local v5           #md5Hash:Ljava/lang/String;
-    .restart local v3       #md5Hash:Ljava/lang/String;
+    .end local v5    # "md5Hash":Ljava/lang/String;
+    .restart local v3    # "md5Hash":Ljava/lang/String;
     move-object v4, v6
 
-    .end local v6           #mmjs:Ljava/io/File;
-    .restart local v4       #mmjs:Ljava/io/File;
+    .end local v6    # "mmjs":Ljava/io/File;
+    .restart local v4    # "mmjs":Ljava/io/File;
     move-object v5, v7
 
-    .end local v7           #reader:Ljava/io/BufferedReader;
-    .local v5, reader:Ljava/io/BufferedReader;
+    .end local v7    # "reader":Ljava/io/BufferedReader;
+    .local v5, "reader":Ljava/io/BufferedReader;
     move-object v6, v9
 
-    .end local v9           #version:Ljava/lang/String;
-    .local v6, version:Ljava/lang/String;
+    .end local v9    # "version":Ljava/lang/String;
+    .local v6, "version":Ljava/lang/String;
     goto :goto_5
 
-    .end local v4           #mmjs:Ljava/io/File;
-    .local v3, i:I
-    .local v5, md5Hash:Ljava/lang/String;
-    .local v6, mmjs:Ljava/io/File;
-    .local v7, version:Ljava/lang/String;
-    .restart local v8       #reader:Ljava/io/BufferedReader;
+    .end local v4    # "mmjs":Ljava/io/File;
+    .local v3, "i":I
+    .local v5, "md5Hash":Ljava/lang/String;
+    .local v6, "mmjs":Ljava/io/File;
+    .local v7, "version":Ljava/lang/String;
+    .restart local v8    # "reader":Ljava/io/BufferedReader;
     :catch_6
     move-exception v1
 
     move-object v3, v5
 
-    .end local v5           #md5Hash:Ljava/lang/String;
-    .local v3, md5Hash:Ljava/lang/String;
+    .end local v5    # "md5Hash":Ljava/lang/String;
+    .local v3, "md5Hash":Ljava/lang/String;
     move-object v4, v6
 
-    .end local v6           #mmjs:Ljava/io/File;
-    .restart local v4       #mmjs:Ljava/io/File;
+    .end local v6    # "mmjs":Ljava/io/File;
+    .restart local v4    # "mmjs":Ljava/io/File;
     move-object v5, v8
 
-    .end local v8           #reader:Ljava/io/BufferedReader;
-    .local v5, reader:Ljava/io/BufferedReader;
+    .end local v8    # "reader":Ljava/io/BufferedReader;
+    .local v5, "reader":Ljava/io/BufferedReader;
     move-object v6, v7
 
-    .end local v7           #version:Ljava/lang/String;
-    .local v6, version:Ljava/lang/String;
+    .end local v7    # "version":Ljava/lang/String;
+    .local v6, "version":Ljava/lang/String;
     goto/16 :goto_5
 
-    .local v3, i:I
-    .local v4, version:Ljava/lang/String;
-    .local v5, md5Hash:Ljava/lang/String;
-    .local v6, mmjs:Ljava/io/File;
-    .restart local v8       #reader:Ljava/io/BufferedReader;
+    .local v3, "i":I
+    .local v4, "version":Ljava/lang/String;
+    .local v5, "md5Hash":Ljava/lang/String;
+    .local v6, "mmjs":Ljava/io/File;
+    .restart local v8    # "reader":Ljava/io/BufferedReader;
     :catch_7
     move-exception v1
 
     move-object v3, v5
 
-    .end local v5           #md5Hash:Ljava/lang/String;
-    .local v3, md5Hash:Ljava/lang/String;
+    .end local v5    # "md5Hash":Ljava/lang/String;
+    .local v3, "md5Hash":Ljava/lang/String;
     move-object v5, v8
 
-    .end local v8           #reader:Ljava/io/BufferedReader;
-    .local v5, reader:Ljava/io/BufferedReader;
+    .end local v8    # "reader":Ljava/io/BufferedReader;
+    .local v5, "reader":Ljava/io/BufferedReader;
     move-object v12, v4
 
-    .end local v4           #version:Ljava/lang/String;
-    .local v12, version:Ljava/lang/String;
+    .end local v4    # "version":Ljava/lang/String;
+    .local v12, "version":Ljava/lang/String;
     move-object v4, v6
 
-    .end local v6           #mmjs:Ljava/io/File;
-    .local v4, mmjs:Ljava/io/File;
+    .end local v6    # "mmjs":Ljava/io/File;
+    .local v4, "mmjs":Ljava/io/File;
     move-object v6, v12
 
-    .end local v12           #version:Ljava/lang/String;
-    .local v6, version:Ljava/lang/String;
+    .end local v12    # "version":Ljava/lang/String;
+    .local v6, "version":Ljava/lang/String;
     goto/16 :goto_5
 
-    .local v3, i:I
-    .local v4, line:Ljava/lang/String;
-    .local v5, md5Hash:Ljava/lang/String;
-    .local v6, mmjs:Ljava/io/File;
-    .restart local v7       #version:Ljava/lang/String;
-    .restart local v8       #reader:Ljava/io/BufferedReader;
+    .local v3, "i":I
+    .local v4, "line":Ljava/lang/String;
+    .local v5, "md5Hash":Ljava/lang/String;
+    .local v6, "mmjs":Ljava/io/File;
+    .restart local v7    # "version":Ljava/lang/String;
+    .restart local v8    # "reader":Ljava/io/BufferedReader;
     :cond_c
     move-object v4, v7
 
-    .end local v7           #version:Ljava/lang/String;
-    .local v4, version:Ljava/lang/String;
+    .end local v7    # "version":Ljava/lang/String;
+    .local v4, "version":Ljava/lang/String;
     goto/16 :goto_4
 
-    .end local v4           #version:Ljava/lang/String;
-    .restart local v7       #version:Ljava/lang/String;
+    .end local v4    # "version":Ljava/lang/String;
+    .restart local v7    # "version":Ljava/lang/String;
     :cond_d
     move-object v3, v7
 
-    .end local v7           #version:Ljava/lang/String;
-    .local v3, version:Ljava/lang/String;
+    .end local v7    # "version":Ljava/lang/String;
+    .local v3, "version":Ljava/lang/String;
     goto/16 :goto_2
 .end method
 
 .method private static getMRaidJsFile(Landroid/content/Context;)Ljava/io/File;
     .locals 3
-    .parameter "context"
+    .param p0, "context"    # Landroid/content/Context;
 
     .prologue
     .line 163
@@ -1033,7 +1033,7 @@
 
 .method static getMRaidJsPath(Landroid/content/Context;)Ljava/lang/String;
     .locals 1
-    .parameter "context"
+    .param p0, "context"    # Landroid/content/Context;
 
     .prologue
     .line 168
@@ -1054,7 +1054,7 @@
 
 .method static getPreviousUrl(Landroid/content/Context;)Ljava/lang/String;
     .locals 4
-    .parameter "context"
+    .param p0, "context"    # Landroid/content/Context;
 
     .prologue
     .line 309
@@ -1067,7 +1067,7 @@
     move-result-object v0
 
     .line 310
-    .local v0, prefs:Landroid/content/SharedPreferences;
+    .local v0, "prefs":Landroid/content/SharedPreferences;
     const-string v2, "KEY_MMJS_URL"
 
     const-string v3, ""
@@ -1077,13 +1077,13 @@
     move-result-object v1
 
     .line 311
-    .local v1, previousUrl:Ljava/lang/String;
+    .local v1, "previousUrl":Ljava/lang/String;
     return-object v1
 .end method
 
 .method static hasMraidLocally(Landroid/content/Context;)Z
     .locals 3
-    .parameter "context"
+    .param p0, "context"    # Landroid/content/Context;
 
     .prologue
     .line 316
@@ -1092,7 +1092,7 @@
     move-result-object v0
 
     .line 317
-    .local v0, mmjs:Ljava/io/File;
+    .local v0, "mmjs":Ljava/io/File;
     if-eqz v0, :cond_0
 
     .line 318
@@ -1143,8 +1143,8 @@
 
 .method static injectMraidJs(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
     .locals 9
-    .parameter "context"
-    .parameter "content"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "content"    # Ljava/lang/String;
 
     .prologue
     const/4 v5, -0x1
@@ -1163,19 +1163,19 @@
     move-result-object v2
 
     .line 60
-    .local v2, pattern:Ljava/util/regex/Pattern;
+    .local v2, "pattern":Ljava/util/regex/Pattern;
     invoke-virtual {v2, p1}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
     move-result-object v0
 
     .line 61
-    .local v0, matcher:Ljava/util/regex/Matcher;
+    .local v0, "matcher":Ljava/util/regex/Matcher;
     invoke-static {p0}, Lcom/fusepowered/m1/android/MRaid;->getMRaidJsPath(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v1
 
     .line 62
-    .local v1, mraid:Ljava/lang/String;
+    .local v1, "mraid":Ljava/lang/String;
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1371,7 +1371,7 @@
 
 .method static isMRaidAd(Ljava/lang/String;)Z
     .locals 3
-    .parameter "content"
+    .param p0, "content"    # Ljava/lang/String;
 
     .prologue
     .line 48
@@ -1393,13 +1393,13 @@
     move-result-object v1
 
     .line 52
-    .local v1, pattern:Ljava/util/regex/Pattern;
+    .local v1, "pattern":Ljava/util/regex/Pattern;
     invoke-virtual {v1, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
     move-result-object v0
 
     .line 53
-    .local v0, matcher:Ljava/util/regex/Matcher;
+    .local v0, "matcher":Ljava/util/regex/Matcher;
     invoke-virtual {v0}, Ljava/util/regex/Matcher;->find()Z
 
     move-result v2
@@ -1409,8 +1409,8 @@
 
 .method static isMRaidUpdated(Landroid/content/Context;Ljava/lang/String;)Z
     .locals 6
-    .parameter "context"
-    .parameter "mmjsUrl"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "mmjsUrl"    # Ljava/lang/String;
 
     .prologue
     const/4 v5, 0x0
@@ -1423,7 +1423,7 @@
     move-result v0
 
     .line 295
-    .local v0, hasMraidLocally:Z
+    .local v0, "hasMraidLocally":Z
     if-nez v0, :cond_0
 
     const-string v3, "http://lp.mydas.mobi/assets/mmjs/1.4/mm.js"
@@ -1458,7 +1458,7 @@
     move-result-object v2
 
     .line 301
-    .local v2, previousUrl:Ljava/lang/String;
+    .local v2, "previousUrl":Ljava/lang/String;
     invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v3
@@ -1474,7 +1474,7 @@
     move v1, v4
 
     .line 302
-    .local v1, isSameUrl:Z
+    .local v1, "isSameUrl":Z
     :goto_1
     if-eqz v1, :cond_1
 
@@ -1493,14 +1493,14 @@
 
     goto :goto_0
 
-    .end local v1           #isSameUrl:Z
+    .end local v1    # "isSameUrl":Z
     :cond_2
     move v1, v5
 
     .line 301
     goto :goto_1
 
-    .restart local v1       #isSameUrl:Z
+    .restart local v1    # "isSameUrl":Z
     :cond_3
     move v3, v5
 
@@ -1510,8 +1510,8 @@
 
 .method static saveIncludedMMJS(Landroid/content/Context;Ljava/lang/String;)Z
     .locals 7
-    .parameter "context"
-    .parameter "mmjsUrl"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "mmjsUrl"    # Ljava/lang/String;
 
     .prologue
     const/4 v6, 0x0
@@ -1524,7 +1524,7 @@
     move-result-object v1
 
     .line 325
-    .local v1, mmjsBytesFirst:[B
+    .local v1, "mmjsBytesFirst":[B
     const-string v4, "ICBjYWxsYmFjazogY2FsbGJhY2sKICAgICAgfSk7CiAgICB9OwoKICAgIHJldHVybiBNTUZpbGVNYW5hZ2VyOwoKICB9KShNTUJyaWRnZU9iamVjdCk7CiAgTU1JbmxpbmVWaWRlbyA9IChmdW5jdGlvbihfc3VwZXIpIHsKICAgIF9fZXh0ZW5kcyhNTUlubGluZVZpZGVvLCBfc3VwZXIpOwoKICAgIGZ1bmN0aW9uIE1NSW5saW5lVmlkZW8oKSB7CiAgICAgIF9yZWY2ID0gTU1JbmxpbmVWaWRlby5fX3N1cGVyX18uY29uc3RydWN0b3IuYXBwbHkodGhpcywgYXJndW1lbnRzKTsKICAgICAgcmV0dXJuIF9yZWY2OwogICAgfQoKICAgIE1NSW5saW5lVmlkZW8ucHJvdG90eXBlLnVwZGF0ZVZpZGVvU2Vla1RpbWUgPSBmdW5jdGlvbihjdXJyZW50U2Vla1RpbWUpIHsKICAgICAgaWYgKHRoaXMudGltaW5nQ2FsbGJhY2sgIT0gbnVsbCkgewogICAgICAgIHJldHVybiB0aGlzLnRpbWluZ0NhbGxiYWNrKGN1cnJlbnRTZWVrVGltZSk7CiAgICAgIH0KICAgIH07CgogICAgTU1JbmxpbmVWaWRlby5wcm90b3R5cGUuc2V0VGltaW5nQ2FsbGJhY2sgPSBmdW5jdGlvbihfdGltaW5nQ2FsbGJhY2spIHsKICAgICAgcmV0dXJuIHRoaXMudGltaW5nQ2FsbGJhY2sgPSBfdGltaW5nQ2FsbGJhY2s7CiAgICB9OwoKICAgIE1NSW5saW5lVmlkZW8ucHJvdG90eXBlLnBsYXlWaWRlbyA9IGZ1bmN0aW9uKGNhbGxiYWNrKSB7CiAgICAgIHJldHVybiB0aGlzLmVucXVldWUoInBsYXlWaWRlbyIsIHsKICAgICAgICBjYWxsYmFjazogY2FsbGJhY2sKICAgICAgfSk7CiAgICB9OwoKICAgIE1NSW5saW5lVmlkZW8ucHJvdG90eXBlLnN0b3BWaWRlbyA9IGZ1bmN0aW9uKGNhbGxiYWNrKSB7CiAgICAgIHJldHVybiB0aGlzLmVucXVldWUoInN0b3BWaWRlbyIsIHsKICAgICAgICBjYWxsYmFjazogY2FsbGJhY2sKICAgICAgfSk7CiAgICB9OwoKICAgIE1NSW5saW5lVmlkZW8ucHJvdG90eXBlLnBhdXNlVmlkZW8gPSBmdW5jdGlvbihjYWxsYmFjaykgewogICAgICByZXR1cm4gdGhpcy5lbnF1ZXVlKCJwYXVzZVZpZGVvIiwgewogICAgICAgIGNhbGxiYWNrOiBjYWxsYmFjawogICAgICB9KTsKICAgIH07CgogICAgTU1JbmxpbmVWaWRlby5wcm90b3R5cGUucmVzdW1lVmlkZW8gPSBmdW5jdGlvbihjYWxsYmFjaykgewogICAgICByZXR1cm4gdGhpcy5lbnF1ZXVlKCJyZXN1bWVWaWRlbyIsIHsKICAgICAgICBjYWxsYmFjazogY2FsbGJhY2sKICAgICAgfSk7CiAgICB9OwoKICAgIE1NSW5saW5lVmlkZW8ucHJvdG90eXBlLnJlbW92ZVZpZGVvID0gZnVuY3Rpb24oY2FsbGJhY2spIHsKICAgICAgcmV0dXJuIHRoaXMuZW5xdWV1ZSgicmVtb3ZlVmlkZW8iLCB7CiAgICAgICAgY2FsbGJhY2s6IGNhbGxiYWNrCiAgICAgIH0pOwogICAgfTsKCiAgICBNTUlubGluZVZpZGVvLnByb3RvdHlwZS5zZXRTdHJlYW1WaWRlb1NvdXJjZSA9IGZ1bmN0aW9uKHN0cmVhbVZpZGVvVVJJLCBjYWxsYmFjaykgewogICAgICByZXR1cm4gdGhpcy5lbnF1ZXVlKCJzZXRTdHJlYW1WaWRlb1NvdXJjZSIsIHsKICAgICAgICBzdHJlYW1WaWRlb1VSSTogc3RyZWFtVmlkZW9VUkksCiAgICAgICAgY2FsbGJhY2s6IGNhbGxiYWNrCiAgICAgIH0pOwogICAgfTsKCiAgICBNTUlubGluZVZpZGVvLnByb3RvdHlwZS5hZGp1c3RWaWRlbyA9IGZ1bmN0aW9uKGNhbGxiYWNrKSB7CiAgICAgIHJldHVybiB0aGlzLmFkanVzdFZpZGVvV2l0aElkKCdpbmxpbmVWaWRlbycsIGNhbGxiYWNrKTsKICAgIH07CgogICAgTU1JbmxpbmVWaWRlby5wcm90b3R5cGUuYWRqdXN0VmlkZW9XaXRoSWQgPSBmdW5jdGlvbihkaXZJZCwgY2FsbGJhY2spIHsKICAgICAgdmFyIGZyYW1lLCB2aWRlb0VsOwoKICAgICAgdmlkZW9FbCA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKGRpdklkKTsKICAgICAgaWYgKHZpZGVvRWwgIT0gbnVsbCkgewogICAgICAgIGZyYW1lID0gdGhpcy5jYWxjdWxhdGVEaXZQb3NpdGlvbihkaXZJZCk7CiAgICAgICAgZnJhbWVbImNhbGxiYWNrIl0gPSBjYWxsYmFjazsKICAgICAgICByZXR1cm4gdGhpcy5lbnF1ZXVlKCJhZGp1c3RWaWRlbyIsIGZyYW1lKTsKICAgICAgfSBlbHNlIHsKICAgICAgICByZXR1cm4gY2FsbGJhY2soewogICAgICAgICAgInJlc3VsdCI6IDAsCiAgICAgICAgICAicmVzcG9uc2UiOiAiRGl2IElkIG5vdCBmb3VuZCIsCiAgICAgICAgICAiY2xhc3MiOiAiTU1JbmxpbmVWaWRlbyIsCiAgICAgICAgICAiY2FsbCI6ICJpbnNlcnRWaWRlbyIKICAgICAgICB9KTsKICAgICAgfQogICAgfTsKCiAgICBNTUlubGluZVZpZGVvLnByb3RvdHlwZS5pbnNlcnRWaWRlb1dpdGhJZCA9IGZ1bmN0aW9uKGRpdklkLCB0aW1pbmdDYWxsYmFjaywgY2FsbGJhY2spIHsKICAgICAgdmFyIGF1dG9QbGF5LCBib2R5SGVpZ2h0LCBib2R5V2lkdGgsIGNhY2hlZFZpZGVvSUQsIGNhY2hlZFZpZGVvVVJJLCBmcmFtZSwgaGVpZ2h0LCBzaG93Q29udHJvbHMsIHN0cmVhbVZpZGVvVVJJLCB0b3VjaENhbGxiYWNrLCB2aWRlb0VsLCB3aWR0aCwgeCwgeTsKCiAgICAgIHZpZGVvRWwgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZChkaXZJZCk7CiAgICAgIGlmICh2aWRlb0VsICE9IG51bGwpIHsKICAgICAgICBmcmFtZSA9IHRoaXMuY2FsY3VsYXRlRGl2UG9zaXRpb24oZGl2SWQpOwogICAgICAgIGlmICh0aW1pbmdDYWxsYmFjayAhPSBudWxsKSB7CiAgICAgICAgICB0aGlzLnNldFRpbWluZ0NhbGxiYWNrKHRpbWluZ0NhbGxiYWNrKTsKICAgICAgICB9CiAgICAgICAgeCA9IGZyYW1lWyd4J107CiAgICAgICAgeSA9IGZyYW1lWyd5J107CiAgICAgICAgd2lkdGggPSBmcmFtZVsnd2lkdGgnXTsKICAgICAgICBoZWlnaHQgPSBmcmFtZVsnaGVpZ2h0J107CiAgICAgICAgYm9keVdpZHRoID0gZG9jdW1lbnQuYm9keS5jbGllbnRXaWR0aDsKICAgICAgICBib2R5SGVpZ2h0ID0gZG9jdW1lbnQuYm9keS5jbGllbnRIZWlnaHQ7CiAgICAgICAgY2FjaGVkVmlkZW9VUkkgPSB2aWRlb0VsLmdldEF0dHJpYnV0ZSgiY2FjaGVkVmlkZW9VUkkiKTsKICAgICAgICBjYWNoZWRWaWRlb0lEID0gdmlkZW9FbC5nZXRBdHRyaWJ1dGUoImNhY2hlZFZpZGVvSUQiKTsKICAgICAgICB0b3VjaENhbGxiYWNrID0gdmlkZW9FbC5nZXRBdHRyaWJ1dGUoIm9uVG91Y2giKTsKICAgICAgICBzdHJlYW1WaWRlb1VSSSA9IHZpZGVvRWwuZ2V0QXR0cmlidXRlKCJzdHJlYW1WaWRlb1VSSSIpOwogICAgICAgIGF1dG9QbGF5ID0gdmlkZW9FbC5nZXRBdHRyaWJ1dGUoImF1dG9QbGF5Iik7CiAgICAgICAgc2hvd0NvbnRyb2xzID0gdmlkZW9FbC5nZXRBdHRyaWJ1dGUoInNob3dDb250cm9scyIpOwogICAgICAgIGlmIChjYWNoZWRWaWRlb1VSSSB8fCBzdHJlYW1WaWRlb1VSSSkgewogICAgICAgICAgcmV0dXJuIHRoaXMuZW5xdWV1ZSgiaW5zZXJ0VmlkZW8iLCB7CiAgICAgICAgICAgIHg6IHgsCiAgICAgICAgICAgIHk6IHksCiAgICAgICAgICAgIHdpZHRoOiB3aWR0aCwKICAgICAgICAgICAgaGVpZ2h0OiBoZWlnaHQsCiAgICAgICAgICAgIGJvZHlXaWR0aDogYm9keVdpZHRoLAogICAgICAgICAgICBib2R5SGVpZ2h0OiBib2R5SGVpZ2h0LAogICAgICAgICAgICBjYWNoZWRWaWRlb1VSSTogY2FjaGVkVmlkZW9VUkksCiAgICAgICAgICAgIHN0cmVhbVZpZGVvVVJJOiBzdHJlYW1WaWRlb1VSSSwKICAgICAgICAgICAgdG91Y2hDYWxsYmFjazogdG91Y2hDYWxsYmFjaywKICAgICAgICAgICAgY2FjaGVkVmlkZW9JRDogY2FjaGVkVmlkZW9JRCwKICAgICAgICAgICAgYXV0b1BsYXk6IGF1dG9QbGF5LAogICAgICAgICAgICBzaG93Q29udHJvbHM6IHNob3dDb250cm9scywKICAgICAgICAgICAgY2FsbGJhY2s6IGNhbGxiYWNrCiAgICAgICAgICB9KTsKICAgICAgICB9IGVsc2UgewogICAgICAgICAgcmV0dXJuIGNhbGxiYWNrKHsKICAgICAgICAgICAgInJlc3VsdCI6IDAsCiAgICAgICAgICAgICJyZXNwb25zZSI6ICJjYWNoZWRWaWRlb1VSSSBvciBzdHJlYW1WaWRlb1VSSSBub3QgZm91bmQiLAogICAgICAgICAgICAiY2xhc3MiOiAiTU1JbmxpbmVWaWRlbyIsCiAgICAgICAgICAgICJjYWxsIjogImluc2VydFZpZGVvIgogICAgICAgICAgfSk7CiAgICAgICAgfQogICAgICB9IGVsc2UgewogICAgICAgIHJldHVybiBjYWxsYmFjayh7CiAgICAgICAgICAicmVzdWx0IjogMCwKICAgICAgICAgICJyZXNwb25zZSI6ICJEaXYgSWQgbm90IGZvdW5kIiwKICAgICAgICAgICJjbGFzcyI6ICJNTUlubGluZVZpZGVvIiwKICAgICAgICAgICJjYWxsIjogImluc2VydFZpZGVvIgogICAgICAgIH0pOwogICAgICB9CiAgICB9OwoKICAgIE1NSW5saW5lVmlkZW8ucHJvdG90eXBlLmluc2VydFZpZGVvID0gZnVuY3Rpb24odGltaW5nQ2FsbGJhY2ssIGNhbGxiYWNrKSB7CiAgICAgIHJldHVybiB0aGlzLmluc2VydFZpZGVvV2l0aElkKCdpbmxpbmVWaWRlbycsIHRpbWluZ0NhbGxiYWNrLCBjYWxsYmFjayk7CiAgICB9OwoKICAgIE1NSW5saW5lVmlkZW8ucHJvdG90eXBlLmNhbGN1bGF0ZURpdlBvc2l0aW9uID0gZnVuY3Rpb24oZGl2SWQpIHsKICAgICAgdmFyIGRpdkVsLCBoZWlnaHQsIHBvc2l0aW9uLCB3aWR0aCwgeCwgeTsKCiAgICAgIGRpdkVsID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoZGl2SWQpOwogICAgICBwb3NpdGlvbiA9IHRoaXMudXRpbHMub2Zmc2V0KGRpdkVsKTsKICAgICAgeCA9IHBvc2l0aW9uWzBdOwogICAgICB5ID0gcG9zaXRpb25bMV07CiAgICAgIHdpZHRoID0gZGl2RWwub2Zmc2V0V2lkdGg7CiAgICAgIGhlaWdodCA9IGRpdkVsLm9mZnNldEhlaWdodDsKICAgICAgcmV0dXJuIHsKICAgICAgICB4OiB4LAogICAgICAgIHk6IHksCiAgICAgICAgd2lkdGg6IHdpZHRoLAogICAgICAgIGhlaWdodDogaGVpZ2h0CiAgICAgIH07CiAgICB9OwoKICAgIHJldHVybiBNTUlubGluZVZpZGVvOwoKICB9KShNTUJyaWRnZU9iamVjdCk7CiAgTU1DYWNoZWRWaWRlbyA9IChmdW5jdGlvbihfc3VwZXIpIHsKICAgIF9fZXh0ZW5kcyhNTUNhY2hlZFZpZGVvLCBfc3VwZXIpOwoKICAgIGZ1bmN0aW9uIE1NQ2FjaGVkVmlkZW8oKSB7CiAgICAgIF9yZWY3ID0gTU1DYWNoZWRWaWRlby5fX3N1cGVyX18uY29uc3RydWN0b3IuYXBwbHkodGhpcywgYXJndW1lbnRzKTsKICAgICAgcmV0dXJuIF9yZWY3OwogICAgfQoKICAgIE1NQ2FjaGVkVmlkZW8udGltaW5nQ2FsbGJhY2sgPSBudWxsOwoKICAgIE1NQ2FjaGVkVmlkZW8uZXJyb3JDYWxsYmFjayA9IG51bGw7CgogICAgTU1DYWNoZWRWaWRlby5wcm90b3R5cGUudXBkYXRlVmlkZW9TZWVrVGltZSA9IGZ1bmN0aW9uKGN1cnJlbnRTZWVrVGltZSkgewogICAgICBpZiAodGhpcy50aW1pbmdDYWxsYmFjayAhPSBudWxsKSB7CiAgICAgICAgcmV0dXJuIHRoaXMudGltaW5nQ2FsbGJhY2soY3VycmVudFNlZWtUaW1lKTsKICAgICAgfQogICAgfTsKCiAgICBNTUNhY2hlZFZpZGVvLnByb3RvdHlwZS5zZXRUaW1pbmdDYWxsYmFjayA9IGZ1bmN0aW9uKHRpbWluZ0NhbGxiYWNrKSB7CiAgICAgIHJldHVybiB0aGlzLnRpbWluZ0NhbGxiYWNrID0gdGltaW5nQ2FsbGJhY2s7CiAgICB9OwoKICAgIE1NQ2FjaGVkVmlkZW8ucHJvdG90eXBlLnNldEVycm9yID0gZnVuY3Rpb24oZXJyb3IpIHsKICAgICAgaWYgKHRoaXMuZXJyb3JDYWxsYmFjayAhPSBudWxsKSB7CiAgICAgICAgcmV0dXJuIHRoaXMuZXJyb3JDYWxsYmFjayhlcnJvcik7CiAgICAgIH0KICAgIH07CgogICAgTU1DYWNoZWRWaWRlby5wcm90b3R5cGUuc2V0RXJyb3JDYWxsYmFjayA9IGZ1bmN0aW9uKGVycm9yQ2FsbGJhY2spIHsKICAgICAgcmV0dXJuIHRoaXMuZXJyb3JDYWxsYmFjayA9IGVycm9yQ2FsbGJhY2s7CiAgICB9OwoKICAgIE1NQ2FjaGVkVmlkZW8ucHJvdG90eXBlLnJlc3RhcnRWaWRlbyA9IGZ1bmN0aW9uKGNhbGxiYWNrKSB7CiAgICAgIHJldHVybiB0aGlzLmVucXVldWUoInJlc3RhcnRWaWRlbyIsIHsKICAgICAgICBjYWxsYmFjazogY2FsbGJhY2sKICAgICAgfSk7CiAgICB9OwoKICAgIE1NQ2FjaGVkVmlkZW8ucHJvdG90eXBlLmVuZFZpZGVvID0gZnVuY3Rpb24oY2FsbGJhY2spIHsKICAgICAgcmV0dXJuIHRoaXMuZW5xdWV1ZSgiZW5kVmlkZW8iLCB7CiAgICAgICAgY2FsbGJhY2s6IGNhbGxiYWNrCiAgICAgIH0pOwogICAgfTsKCiAgICBNTUNhY2hlZFZpZGVvLnByb3RvdHlwZS5wYXVzZVZpZGVvID0gZnVuY3Rpb24oY2FsbGJhY2spIHsKICAgICAgcmV0dXJuIHRoaXMuZW5xdWV1ZSgicGF1c2VWaWRlbyIsIHsKICAgICAgICBjYWxsYmFjazogY2FsbGJhY2sKICAgICAgfSk7CiAgICB9OwoKICAgIE1NQ2FjaGVkVmlkZW8ucHJvdG90eXBlLnBsYXlWaWRlbyA9IGZ1bmN0aW9uKGNhbGxiYWNrKSB7CiAgICAgIHJldHVybiB0aGlzLmVucXVldWUoInBsYXlWaWRlbyIsIHsKICAgICAgICBjYWxsYmFjazogY2FsbGJhY2sKICAgICAgfSk7CiAgICB9OwoKICAgIE1NQ2FjaGVkVmlkZW8ucHJvdG90eXBlLmF2YWlsYWJsZUNhY2hlZFZpZGVvcyA9IGZ1bmN0aW9uKGNhbGxiYWNrKSB7CiAgICAgIHJldHVybiB0aGlzLmVucXVldWUoImF2YWlsYWJsZUNhY2hlZFZpZGVvcyIsIHsKICAgICAgICBjYWxsYmFjazogY2FsbGJhY2sKICAgICAgfSk7CiAgICB9OwoKICAgIE1NQ2FjaGVkVmlkZW8ucHJvdG90eXBlLnBsYXlDYWNoZWRWaWRlbyA9IGZ1bmN0aW9uKHZpZGVvSWQsIGNhbGxiYWNrKSB7CiAgICAgIHJldHVybiB0aGlzLmVucXVldWUoInBsYXlDYWNoZWRWaWRlbyIsIHsKICAgICAgICB2aWRlb0lkOiB2aWRlb0lkLAogICAgICAgIGNhbGxiYWNrOiBjYWxsYmFjawogICAgICB9KTsKICAgIH07CgogICAgTU1DYWNoZWRWaWRlby5wcm90b3R5cGUuY2FjaGVWaWRlbyA9IGZ1bmN0aW9uKHVybCwgY2FsbGJhY2spIHsKICAgICAgcmV0dXJuIHRoaXMuZW5xdWV1ZSgiY2FjaGVWaWRlbyIsIHsKICAgICAgICB1cmw6IHVybCwKICAgICAgICBjYWxsYmFjazogY2FsbGJhY2sKICAgICAgfSk7CiAgICB9OwoKICAgIE1NQ2FjaGVkVmlkZW8ucHJvdG90eXBlLnZpZGVvSWRFeGlzdHMgPSBmdW5jdGlvbih2aWRlb0lkLCBjYWxsYmFjaykgewogICAgICByZXR1cm4gdGhpcy5lbnF1ZXVlKCJ2aWRlb0lkRXhpc3RzIiwgewogICAgICAgIHZpZGVvSWQ6IHZpZGVvSWQsCiAgICAgICAgY2FsbGJhY2s6IGNhbGxiYWNrCiAgICAgIH0pOwogICAgfTsKCiAgICByZXR1cm4gTU1DYWNoZWRWaWRlbzsKCiAgfSkoTU1CcmlkZ2VPYmplY3QpOwogIE1NSW50ZXJzdGl0aWFsID0gKGZ1bmN0aW9uKF9zdXBlcikgewogICAgX19leHRlbmRzKE1NSW50ZXJzdGl0aWFsLCBfc3VwZXIpOwoKICAgIGZ1bmN0aW9uIE1NSW50ZXJzdGl0aWFsKCkgewogICAgICBfcmVmOCA9IE1NSW50ZXJzdGl0aWFsLl9fc3VwZXJfXy5jb25zdHJ1Y3Rvci5hcHBseSh0aGlzLCBhcmd1bWVudHMpOwogICAgICByZXR1cm4gX3JlZjg7CiAgICB9CgogICAgTU1JbnRlcnN0aXRpYWwuYW5pbWF0aW9uVHlwZXMgPSB7CiAgICAgICJpb3MiOiBbImN1cmwiLCAiZmxpcCIsICJkaXNzb2x2ZSIsICJzbGlkZXVwIiwgIm5vbmUiXSwKICAgICAgImFuZHJvaWQiOiBbInNsaWRldXAiLCAic2xpZGVkb3duIiwgImV4cGxvZGUiLCAibm9uZSJdLAogICAgICAid2luZG93cyI6IFsic2xpZGV1cCIsICJzbGlkZWRvd24iLCAiZXhwbG9kZSIsICJub25lIl0KICAgIH07CgogICAgTU1JbnRlcnN0aXRpYWwucHJvdG90eXBlLmNsb3NlID0gZnVuY3Rpb24oY2FsbGJhY2spIHsKICAgICAgcmV0dXJuIHRoaXMuZW5xdWV1ZSgiY2xvc2UiLCB7CiAgICAgICAgY2FsbGJhY2s6IGNhbGxiYWNrCiAgICAgIH0pOwogICAgfTsKCiAgICBNTUludGVyc3RpdGlhbC5wcm90b3R5cGUub3BlbiA9IGZ1bmN0aW9uKHVybCwgY2FsbGJhY2spIHsKICAgICAgcmV0dXJuIHRoaXMuZW5xdWV1ZSgib3BlbiIsIHsKICAgICAgICB1cmw6IHVybCwKICAgICAgICBjYWxsYmFjazogY2FsbGJhY2sKICAgICAgfSk7CiAgICB9OwoKICAgIE1NSW50ZXJzdGl0aWFsLnByb3RvdHlwZS51c2VDdXN0b21DbG9zZSA9IGZ1bmN0aW9uKHVzZUN1c3RvbUNsb3NlLCBjYWxsYmFjaykgewogICAgICByZXR1cm4gdGhpcy5lbnF1ZXVlKCJ1c2VDdXN0b21DbG9zZSIsIHsKICAgICAgICB1c2VDdXN0b21DbG9zZTogdXNlQ3VzdG9tQ2xvc2UsCiAgICAgICAgY2FsbGJhY2s6IGNhbGxiYWNrCiAgICAgIH0pOwogICAgfTsKCiAgICBNTUludGVyc3RpdGlhbC5wcm90b3R5cGUuc2V0T3JpZW50YXRpb24gPSBmdW5jdGlvbihwcm9wZXJ0aWVzLCBjYWxsYmFjaykgewogICAgICBwcm9wZXJ0aWVzWyJjYWxsYmFjayJdID0gY2FsbGJhY2s7CiAgICAgIHJldHVybiB0aGlzLmVucXVldWUoInNldE9yaWVudGF0aW9uIiwgcHJvcGVydGllcyk7CiAgICB9OwoKICAgIE1NSW50ZXJzdGl0aWFsLnByb3RvdHlwZS5leHBhbmRUb0V4dGVybmFsQnJvd3NlciA9IGZ1bmN0aW9uKHVybCwgY2FsbGJhY2spIHsKICAgICAgcmV0dXJuIHRoaXMuZW5xdWV1ZSgiZXhwYW5kVG9FeHRlcm5hbEJyb3dzZXIiLCB7CiAgICAgICAgdXJsOiB1cmwsCiAgICAgICAgY2FsbGJhY2s6IGNhbGxiYWNrCiAgICAgIH0pOwogICAgfTsKCiAgICBNTUludGVyc3RpdGlhbC5wcm90b3R5cGUuZXhwYW5kV2l0aFByb3BlcnRpZXMgPSBmdW5jdGlvbih1cmwsIHByb3BlcnRpZXMsIGNhbGxiYWNrKSB7CiAgICAgIHZhciBrZXksIHBhcmFtcywgdHJhbnNpdGlvblR5cGUsIHZhbHVlOwoKICAgICAgcGFyYW1zID0gewogICAgICAgIGNhbGxiYWNrOiBjYWxsYmFjawogICAgICB9OwogICAgICBpZiAodXJsICE9IG51bGwpIHsKICAgICAgICBwYXJhbXNbInVybCJdID0gdXJsOwogICAgICB9CiAgICAgIE1NSlMudXRpbHMuY29uc29sZUxvZygiZXhwYW5kV2l0aFByb3BlcnRpZXMgcHJvcGVydGllcyAiICsgSlNPTi5zdHJpbmdpZnkocHJvcGVydGllcykpOwogICAgICBpZiAocHJvcGVydGllcyAhPSBudWxsKSB7CiAgICAgICAgZm9yIChrZXkgaW4gcHJvcGVydGllcykgewogICAgICAgICAgaWYgKCFfX2hhc1Byb3AuY2FsbChwcm9wZXJ0aWVzLCBrZXkpKSBjb250aW51ZTsKICAgICAgICAgIHZhbHVlID0gcHJvcGVydGllc1trZXldOwogICAgICAgICAgaWYgKGtleSA9PT0gInRyYW5zaXRpb24iKSB7CiAgICAgICAgICAgIHRyYW5zaXRpb25UeXBlID0gdmFsdWU7CiAgICAgICAgICAgIHBhcmFtc1trZXldID0gdHJhbnNpdGlvblR5cGU7CiAgICAgICAgICB9IGVsc2UgewogICAgICAgICAgICBwYXJhbXNba2V5XSA9IHZhbHVlOwogICAgICAgICAgfQogICAgICAgIH0KICAgICAgfQogICAgICByZXR1cm4gdGhpcy5lbnF1ZXVlKCJleHBhbmRXaXRoUHJvcGVydGllcyIsIHBhcmFtcyk7CiAgICB9OwoKICAgIHJldHVybiBNTUludGVyc3RpdGlhbDsKCiAgfSkoTU1CcmlkZ2VPYmplY3QpOwogIE1NQnJhbmQgPSAoZnVuY3Rpb24oX3N1cGVyKSB7CiAgICBfX2V4dGVuZHMoTU1CcmFuZCwgX3N1cGVyKTsKCiAgICBmdW5jdGlvbiBNTUJyYW5kKCkgewogICAgICBfcmVmOSA9IE1NQnJhbmQuX19zdXBlcl9fLmNvbnN0cnVjdG9yLmFwcGx5KHRoaXMsIGFyZ3VtZW50cyk7CiAgICAgIHJldHVybiBfcmVmOTsKICAgIH0KCiAgICBNTUJyYW5kLnByb3RvdHlwZS5nZXRJbmZvID0gZnVuY3Rpb24oY2FsbGJhY2spIHsKICAgICAgcmV0dXJuIHRoaXMuZW5xdWV1ZSgiZ2V0SW5mbyIsIHsKICAgICAgICBjYWxsYmFjazogY2FsbGJhY2sKICAgICAgfSk7CiAgICB9OwoKICAgIHJldHVybiBNTUJyYW5kOwoKICB9KShNTUJyaWRnZU9iamVjdCk7CiAgTU1BcHBTdG9yZSA9IChmdW5jdGlvbihfc3VwZXIpIHsKICAgIF9fZXh0ZW5kcyhNTUFwcFN0b3JlLCBfc3VwZXIpOwoKICAgIGZ1bmN0aW9uIE1NQXBwU3RvcmUoKSB7CiAgICAgIF9yZWYxMCA9IE1NQXBwU3RvcmUuX19zdXBlcl9fLmNvbnN0cnVjdG9yLmFwcGx5KHRoaXMsIGFyZ3VtZW50cyk7CiAgICAgIHJldHVybiBfcmVmMTA7CiAgICB9CgogICAgTU1BcHBTdG9yZS5wcm90b3R5cGUubG9hZEFwcCA9IGZ1bmN0aW9uKGFwcElkLCBjYWxsYmFjaykgewogICAgICByZXR1cm4gdGhpcy5lbnF1ZXVlKCJsb2FkQXBwIiwgewogICAgICAgIGFwcElkOiBhcHBJZCwKICAgICAgICBjYWxsYmFjazogY2FsbGJhY2sKICAgICAgfSk7CiAgICB9OwoKICAgIHJldHVybiBNTUFwcFN0b3JlOwoKICB9KShNTUJyaWRnZU9iamVjdCk7CiAgTU1QYXN0ZWJvYXJkID0gKGZ1bmN0aW9uKF9zdXBlcikgewogICAgX19leHRlbmRzKE1NUGFzdGVib2FyZCwgX3N1cGVyKTsKCiAgICBmdW5jdGlvbiBNTVBhc3RlYm9hcmQoKSB7CiAgICAgIF9yZWYxMSA9IE1NUGFzdGVib2FyZC5fX3N1cGVyX18uY29uc3RydWN0b3IuYXBwbHkodGhpcywgYXJndW1lbnRzKTsKICAgICAgcmV0dXJuIF9yZWYxMTsKICAgIH0KCiAgICBNTVBhc3RlYm9hcmQucHJvdG90eXBlLmdldFBhc3RlYm9hcmRDb250ZW50cyA9IGZ1bmN0aW9uKHBhc3RlYm9hcmRJZCwgY2FsbGJhY2spIHsKICAgICAgdmFyIGFyZ3M7CgogICAgICBhcmdzID0gewogICAgICAgIGNhbGxiYWNrOiBjYWxsYmFjawogICAgICB9OwogICAgICBpZiAocGFzdGVib2FyZElkICE9IG51bGwpIHsKICAgICAgICBhcmdzWyJwYXN0ZWJvYXJkSWQiXSA9IHBhc3RlYm9hcmRJZDsKICAgICAgfQogICAgICByZXR1cm4gdGhpcy5lbnF1ZXVlKCJnZXRQYXN0ZWJvYXJkQ29udGVudHMiLCBhcmdzKTsKICAgIH07CgogICAgTU1QYXN0ZWJvYXJkLnByb3RvdHlwZS53cml0ZVRvUGFzdGVib2FyZCA9IGZ1bmN0aW9uKGRhdGEsIHBhc3RlYm9hcmRJZCwgY2FsbGJhY2spIHsKICAgICAgdmFyIGFyZ3M7CgogICAgICBhcmdzID0gewogICAgICAgIGRhdGE6IGRhdGEsCiAgICAgICAgY2FsbGJhY2s6IGNhbGxiYWNrCiAgICAgIH07CiAgICAgIGlmIChwYXN0ZWJvYXJkSWQgIT0gbnVsbCkgewogICAgICAgIGFyZ3NbInBhc3RlYm9hcmRJZCJdID0gcGFzdGVib2FyZElkOwogICAgICB9CiAgICAgIHJldHVybiB0aGlzLmVucXVldWUoIndyaXRlVG9QYXN0ZWJvYXJkIiwgYXJncyk7CiAgICB9OwoKICAgIHJldHVybiBNTVBhc3RlYm9hcmQ7CgogIH0pKE1NQnJpZGdlT2JqZWN0KTsKICBNTVBhc3Nib29rID0gKGZ1bmN0aW9uKF9zdXBlcikgewogICAgX19leHRlbmRzKE1NUGFzc2Jvb2ssIF9zdXBlcik7CgogICAgZnVuY3Rpb24gTU1QYXNzYm9vaygpIHsKICAgICAgX3JlZjEyID0gTU1QYXNzYm9vay5fX3N1cGVyX18uY29uc3RydWN0b3IuYXBwbHkodGhpcywgYXJndW1lbnRzKTsKICAgICAgcmV0dXJuIF9yZWYxMjsKICAgIH0KCiAgICBNTVBhc3Nib29rLnByb3RvdHlwZS5pc1Bhc3Nib29rQXZhaWxhYmxlID0gZnVuY3Rpb24oY2FsbGJhY2spIHsKICAgICAgcmV0dXJuIHRoaXMuZW5xdWV1ZSgiaXNQYXNzYm9va0F2YWlsYWJsZSIsIHsKICAgICAgICBjYWxsYmFjazogY2FsbGJhY2sKICAgICAgfSk7CiAgICB9OwoKICAgIE1NUGFzc2Jvb2sucHJvdG90eXBlLmFkZFBhc3NGcm9tVVJMID0gZnVuY3Rpb24odXJsLCBjYWxsYmFjaykgewogICAgICByZXR1cm4gdGhpcy5lbnF1ZXVlKCJhZGRQYXNzRnJvbVVSTCIsIHsKICAgICAgICB1cmw6IHVybCwKICAgICAgICBjYWxsYmFjazogY2FsbGJhY2sKICAgICAgfSk7CiAgICB9OwoKICAgIE1NUGFzc2Jvb2sucHJvdG90eXBlLmlzUGFzc0luc3RhbGxlZCA9IGZ1bmN0aW9uKHVybCwgaWRlbnRpZmllciwgc2VyaWFsLCBjYWxsYmFjaykgewogICAgICBpZiAodXJsICE9IG51bGwpIHsKICAgICAgICByZXR1cm4gdGhpcy5lbnF1ZXVlKCJpc1Bhc3NJbnN0YWxsZWQiLCB7CiAgICAgICAgICB1cmw6IHVybCwKICAgICAgICAgIGNhbGxiYWNrOiBjYWxsYmFjawogICAgICAgIH0pOwogICAgICB9IGVsc2UgewogICAgICAgIHJldHVybiB0aGlzLmVucXVldWUoImlzUGFzc0luc3RhbGxlZCIsIHsKICAgICAgICAgIGlkZW50aWZpZXI6IGlkZW50aWZpZXIsCiAgICAgICAgICBzZXJpYWw6IHNlcmlhbCwKICAgICAgICAgIGNhbGxiYWNrOiBjYWxsYmFjawogICAgICAgIH0pOwogICAgICB9CiAgICB9OwoKICAgIE1NUGFzc2Jvb2sucHJvdG90eXBlLmlzUGFzc1VSTEluc3RhbGxlZCA9IGZ1bmN0aW9uKHVybCwgY2FsbGJhY2spIHsKICAgICAgcmV0dXJuIHRoaXMuaXNQYXNzSW5zdGFsbGVkKHVybCwgbnVsbCwgbnVsbCwgY2FsbGJhY2spOwogICAgfTsKCiAgICBNTVBhc3Nib29rLnByb3RvdHlwZS5pc1Bhc3NJZGVudGlmaWVySW5zdGFsbGVkID0gZnVuY3Rpb24oaWRlbnRpZmllciwgc2VyaWFsLCBjYWxsYmFjaykgewogICAgICByZXR1cm4gdGhpcy5pc1Bhc3NJbnN0YWxsZWQobnVsbCwgaWRlbnRpZmllciwgc2VyaWFsLCBjYWxsYmFjayk7CiAgICB9OwoKICAgIHJldHVybiBNTVBhc3Nib29rOwoKICB9KShNTUJyaWRnZU9iamVjdCk7CiAgTU1Tb2NpYWwgPSAoZnVuY3Rpb24oX3N1cGVyKSB7CiAgICBfX2V4dGVuZHMoTU1Tb2NpYWwsIF9zdXBlcik7CgogICAgZnVuY3Rpb24gTU1Tb2NpYWwoKSB7CiAgICAgIF9yZWYxMyA9IE1NU29jaWFsLl9fc3VwZXJfXy5jb25zdHJ1Y3Rvci5hcHBseSh0aGlzLCBhcmd1bWVudHMpOwogICAgICByZXR1cm4gX3JlZjEzOwogICAgfQoKICAgIE1NU29jaWFsLnByb3RvdHlwZS50d2VldCA9IGZ1bmN0aW9uKG1lc3NhZ2UsIGNhbGxiYWNrKSB7CiAgICAgIHJldHVybiB0aGlzLmVucXVldWUoInR3ZWV0IiwgewogICAgICAgIG1lc3NhZ2U6IG1lc3NhZ2UsCiAgICAgICAgY2FsbGJhY2s6IGNhbGxiYWNrCiAgICAgIH0pOwogICAgfTsKCiAgICBNTVNvY2lhbC5wcm90b3R5cGUudHdlZXRXaXRoQ29udGVudCA9IGZ1bmN0aW9uKG1lc3NhZ2UsIHVybHMsIGltYWdlcywgY2FsbGJhY2spIHsKICAgICAgcmV0dXJuIHRoaXMuZW5xdWV1ZSgidHdlZXQiLCB7CiAgICAgICAgbWVzc2FnZTogbWVzc2FnZSwKICAgICAgICAidXJscyI6IHVybHMuam9pbignLCcpLAogICAgICAgICJpbWFnZXMiOiBpbWFnZXMuam9pbignLCcpLAogICAgICAgIGNhbGxiYWNrOiBjYWxsYmFjawogICAgICB9KTsKICAgIH07CgogICAgTU1Tb2NpYWwucHJvdG90eXBlLmZhY2Vib29rUG9zdCA9IGZ1bmN0aW9uKG1lc3NhZ2UsIGNhbGxiYWNrKSB7CiAgICAgIHJldHVybiB0aGlzLmVucXVldWUoImZhY2Vib29rUG9zdCIsIHsKICAgICAgICBtZXNzYWdlOiBtZXNzYWdlLAogICAgICAgIGNhbGxiYWNrOiBjYWxsYmFjawogICAgICB9KTsKICAgIH07CgogICAgTU1Tb2NpYWwucHJvdG90eXBlLmZhY2Vib29rUG9zdFdpdGhDb250ZW50ID0gZnVuY3Rpb24obWVzc2FnZSwgdXJscywgaW1hZ2VzLCBjYWxsYmFjaykgewogICAgICByZXR1cm4gdGhpcy5lbnF1ZXVlKCJmYWNlYm9va1Bvc3QiLCB7CiAgICAgICAgbWVzc2FnZTogbWVzc2FnZSwKICAgICAgICAidXJscyI6IHVybHMuam9pbignLCcpLAogICAgICAgICJpbWFnZXMiOiBpbWFnZXMuam9pbignLCcpLAogICAgICAgIGNhbGxiYWNrOiBjYWxsYmFjawogICAgICB9KTsKICAgIH07CgogICAgTU1Tb2NpYWwucHJvdG90eXBlLmF1dGhlbnRpY2F0ZWRTZXJ2aWNlcyA9IGZ1bmN0aW9uKGNhbGxiYWNrKSB7CiAgICAgIHJldHVybiB0aGlzLmVucXVldWUoImF1dGhlbnRpY2F0ZWRTZXJ2aWNlcyIsIHsKICAgICAgICBjYWxsYmFjazogY2FsbGJhY2sKICAgICAgfSk7CiAgICB9OwoKICAgIHJldHVybiBNTVNvY2lhbDsKCiAgfSkoTU1CcmlkZ2VPYmplY3QpOwogIE1NU3BlZWNoa2l0ID0gKGZ1bmN0aW9uKF9zdXBlcikgewogICAgX19leHRlbmRzKE1NU3BlZWNoa2l0LCBfc3VwZXIpOwoKICAgIGZ1bmN0aW9uIE1NU3BlZWNoa2l0KCkgewogICAgICBfcmVmMTQgPSBNTVNwZWVjaGtpdC5fX3N1cGVyX18uY29uc3RydWN0b3IuYXBwbHkodGhpcywgYXJndW1lbnRzKTsKICAgICAgcmV0dXJuIF9yZWYxNDsKICAgIH0KCiAgICBNTVNwZWVjaGtpdC5wcm90b3R5cGUuc3RhcnRSZWNvcmRpbmcgPSBmdW5jdGlvbihsYW5ndWFnZSwgcmVjb2duaXplciwgZW5kT2ZTcGVlY2gsIGNhbGxiYWNrKSB7CiAgICAgIHJldHVybiB0aGlzLmVucXVldWUoInN0YXJ0UmVjb3JkaW5nIiwgewogICAgICAgIGxhbmd1YWdlOiBsYW5ndWFnZSwKICAgICAgICByZWNvZ25pemVyOiByZWNvZ25pemVyLAogICAgICAgIGVuZE9mU3BlZWNoOiBlbmRPZlNwZWVjaCwKICAgICAgICBjYWxsYmFjazogY2FsbGJhY2sKICAgICAgfSk7CiAgICB9OwoKICAgIE1NU3BlZWNoa2l0LnByb3RvdHlwZS5lbmRSZWNvcmRpbmcgPSBmdW5jdGlvbihjYWxsYmFjaykgewogICAgICByZXR1cm4gdGhpcy5lbnF1ZXVlKCJlbmRSZWNvcmRpbmciLCB7CiAgICAgICAgY2FsbGJhY2s6IGNhbGxiYWNrCiAgICAgIH0pOwogICAgfTsKCiAgICBNTVNwZWVjaGtpdC5wcm90b3R5cGUuc2FtcGxlQmFja2dyb3VuZEF1ZGlvTGV2ZWwgPSBmdW5jdGlvbihjYWxsYmFjaykgewogICAgICByZXR1cm4gdGhpcy5lbnF1ZXVlKCJzYW1wbGVCYWNrZ3JvdW5kQXVkaW9MZXZlbCIsIHsKICAgICAgICBjYWxsYmFjazogY2FsbGJhY2sKICAgICAgfSk7CiAgICB9OwoKICAgIE1NU3BlZWNoa2l0LnByb3RvdHlwZS50ZXh0VG9TcGVlY2ggPSBmdW5jdGlvbihsYW5ndWFnZSwgdGV4dCwgY2FsbGJhY2spIHsKICAgICAgcmV0dXJuIHRoaXMuZW5xdWV1ZSgidGV4dFRvU3BlZWNoIiwgewogICAgICAgIGxhbmd1YWdlOiBsYW5ndWFnZSwKICAgICAgICB0ZXh0OiB0ZXh0LAogICAgICAgIGNhbGxiYWNrOiBjYWxsYmFjawogICAgICB9KTsKICAgIH07CgogICAgTU1TcGVlY2hraXQucHJvdG90eXBlLnJlbGVhc2VWb2ljZSA9IGZ1bmN0aW9uKGNhbGxiYWNrKSB7CiAgICAgIE1NSlMuc2RrLnNwZWVjaFJlc3VsdHMgPSBbXTsKICAgICAgTU1KUy5zZGsuc3BlZWNoQXVkaW9MZXZlbCA9IDA7CiAgICAgIE1NSlMuc2RrLnNwZWVjaEJhY2tncm91bmRBdWRpb0xldmVsID0gMDsKICAgICAgTU1KUy5zZGsuc3BlZWNoU3RhdHVzID0gIlJlbGVhc2VkIjsKICAgICAgcmV0dXJuIHRoaXMuZW5xdWV1ZSgicmVsZWFzZVZvaWNlIiwgewogICAgICAgIGNhbGxiYWNrOiBjYWxsYmFjawogICAgICB9KTsKICAgIH07CgogICAgTU1TcGVlY2hraXQucHJvdG90eXBlLmNhY2hlQXVkaW8gPSBmdW5jdGlvbih1cmwsIGNhbGxiYWNrKSB7CiAgICAgIHJldHVybiB0aGlzLmVucXVldWUoImNhY2hlQXVkaW8iLCB7CiAgICAgICAgdXJsOiB1cmwsCiAgICAgICAgY2FsbGJhY2s6IGNhbGxiYWNrCiAgICAgIH0pOwogICAgfTsKCiAgICBNTVNwZWVjaGtpdC5wcm90b3R5cGUucGxheUF1ZGlvID0gZnVuY3Rpb24odXJsLCBwcm9wZXJ0aWVzLCBjYWxsYmFjaykgewogICAgICBwcm9wZXJ0aWVzWyJ1cmwiXSA9IHVybDsKICAgICAgcHJvcGVydGllc1siY2FsbGJhY2siXSA9IGNhbGxiYWNrOwogICAgICByZXR1cm4gdGhpcy5lbnF1ZXVlKCJwbGF5QXVkaW8iLCBwcm9wZXJ0aWVzKTsKICAgIH07CgogICAgTU1TcGVlY2hraXQucHJvdG90eXBlLnN0b3BBdWRpbyA9IGZ1bmN0aW9uKGNhbGxiYWNrKSB7CiAgICAgIHJldHVybiB0aGlzLmVucXVldWUoInN0b3BBdWRpbyIsIHsKICAgICAgICBjYWxsYmFjazogY2FsbGJhY2sKICAgICAgfSk7CiAgICB9OwoKICAgIE1NU3BlZWNoa2l0LnByb3RvdHlwZS5hZGRDdXN0b21Wb2ljZVdvcmRzID0gZnVuY3Rpb24od29yZHMsIGNhbGxiYWNrKSB7CiAgICAgIHJldHVybiB0aGlzLmVucXVldWUoImFkZEN1c3RvbVZvaWNlV29yZHMiLCB7CiAgICAgICAgd29yZHM6IHdvcmRzLAogICAgICAgIGNhbGxiYWNrOiBjYWxsYmFjawogICAgICB9KTsKICAgIH07CgogICAgTU1TcGVlY2hraXQucHJvdG90eXBlLmRlbGV0ZUN1c3RvbVZvaWNlV29yZHMgPSBmdW5jdGlvbih3b3JkcywgY2FsbGJhY2spIHsKICAgICAgcmV0dXJuIHRoaXMuZW5xdWV1ZSgiZGVsZXRlQ3VzdG9tVm9pY2VXb3JkcyIsIHsKICAgICAgICB3b3Jkczogd29yZHMsCiAgICAgICAgY2FsbGJhY2s6IGNhbGxiYWNrCiAgICAgIH0pOwogICAgfTsKCiAgICBNTVNwZWVjaGtpdC5wcm90b3R5cGUuZ2V0U2Vzc2lvbklkID0gZnVuY3Rpb24oY2FsbGJhY2spIHsKICAgICAgcmV0dXJuIHRoaXMuZW5xdWV1ZSgiZ2V0U2Vzc2lvbklkIiwgewogICAgICAgIGNhbGxiYWNrOiBjYWxsYmFjawogICAgICB9KTsKICAgIH07CgogICAgTU1TcGVlY2hraXQucHJvdG90eXBlLmdldFJlY29nbml0aW9uUmVzdWx0cyA9IGZ1bmN0aW9uKCkgewogICAgICByZXR1cm4gTU1KUy5zZGsuc3BlZWNoUmVzdWx0czsKICAgIH07CgogICAgTU1TcGVlY2hraXQucHJvdG90eXBlLmdldEJhY2tncm91bmROb2lzZUxldmVsID0gZnVuY3Rpb24oKSB7CiAgICAgIHJldHVybiBNTUpTLnNkay5zcGVlY2hCYWNrZ3JvdW5kQXVkaW9MZXZlbDsKICAgIH07CgogICAgTU1TcGVlY2hraXQucHJvdG90eXBlLmdldEF1ZGlvTGV2ZWwgPSBmdW5jdGlvbigpIHsKICAgICAgcmV0dXJuIE1NSlMuc2RrLnNwZWVjaEF1ZGlvTGV2ZWw7CiAgICB9OwoKICAgIE1NU3BlZWNoa2l0LnByb3RvdHlwZS5nZXRWb2ljZVN0YXRlID0gZnVuY3Rpb24oKSB7CiAgICAgIHJldHVybiBNTUpTLnNkay5zcGVlY2hTdGF0dXM7CiAgICB9OwoKICAgIE1NU3BlZWNoa2l0LnByb3RvdHlwZS5nZXRBdWRpb1Bvc2l0aW9uID0gZnVuY3Rpb24oKSB7CiAgICAgIHJldHVybiBNTUpTLnNkay5hdWRpb1Bvc2l0aW9uOwogICAgfTsKCiAgICByZXR1cm4gTU1TcGVlY2hraXQ7CgogIH0pKE1NQnJpZGdlT2JqZWN0KTsKICBNTU1pY3JvcGhvbmUgPSAoZnVuY3Rpb24oX3N1cGVyKSB7CiAgICBfX2V4dGVuZHMoTU1NaWNyb3Bob25lLCBfc3VwZXIpOwoKICAgIGZ1bmN0aW9uIE1NTWljcm9waG9uZSgpIHsKICAgICAgX3JlZjE1ID0gTU1NaWNyb3Bob25lLl9fc3VwZXJfXy5jb25zdHJ1Y3Rvci5hcHBseSh0aGlzLCBhcmd1bWVudHMpOwogICAgICByZXR1cm4gX3JlZjE1OwogICAgfQoKICAgIE1NTWljcm9waG9uZS5wcm90b3R5cGUuc3RhcnRSZWNvcmRpbmcgPSBmdW5jdGlvbihwYXRoLCBkdXJhdGlvbiwgY2FsbGJhY2tSYXRlLCBjYWxsYmFjaykgewogICAgICByZXR1cm4gdGhpcy5lbnF1ZXVlKCJzdGFydFJlY29yZGluZyIsIHsKICAgICAgICBwYXRoOiBwYXRoLAogICAgICAgIGR1cmF0aW9uOiBkdXJhdGlvbiwKICAgICAgICBjYWxsYmFja1JhdGU6IGNhbGxiYWNrUmF0ZSwKICAgICAgICBjYWxsYmFjazogY2FsbGJhY2sKICAgICAgfSk7CiAgICB9OwoKICAgIE1NTWljcm9waG9uZS5wcm90b3R5cGUuc3RvcFJlY29yZGluZyA9IGZ1bmN0aW9uKGNhbGxiYWNrKSB7CiAgICAgIHJldHVybiB0aGlzLmVucXVldWUoInN0b3BSZWNvcmRpbmciLCB7CiAgICAgICAgY2FsbGJhY2s6IGNhbGxiYWNrCiAgICAgIH0pOwogICAgfTsKCiAgICBNTU1pY3JvcGhvbmUucHJvdG90eXBlLmlzUmVjb3JkaW5nQWxsb3dlZCA9IGZ1bmN0aW9uKGNhbGxiYWNrKSB7CiAgICAgIHJldHVybiB0aGlzLmVucXVldWUoImlzUmVjb3JkaW5nQWxsb3dlZCIsIHsKICAgICAgICBjYWxsYmFjazogY2FsbGJhY2sKICAgICAgfSk7CiAgICB9OwoKICAgIE1NTWljcm9waG9uZS5wcm90b3R5cGUuZ2V0TWljcm9waG9uZUF1ZGlvTGV2ZWwgPSBmdW5jdGlvbigpIHsKICAgICAgcmV0dXJuIE1NSlMuc2RrLm1pY3JvcGhvbmVBdWRpb0xldmVsOwogICAgfTsKCiAgICBNTU1pY3JvcGhvbmUucHJvdG90eXBlLmdldE1pY3JvcGhvbmVTdGF0ZSA9IGZ1bmN0aW9uKCkgewogICAgICByZXR1cm4gTU1KUy5zZGsubWljcm9waG9uZVN0YXRlOwogICAgfTsKCiAgICByZXR1cm4gTU1NaWNyb3Bob25lOwoKICB9KShNTUJyaWRnZU9iamVjdCk7CiAgTVJBSUQgPSAoZnVuY3Rpb24oX3N1cGVyKSB7CiAgICBfX2V4dGVuZHMoTVJBSUQsIF9zdXBlcik7CgogICAgZnVuY3Rpb24gTVJBSUQoKSB7CiAgICAgIHRoaXMuc2RrID0gTU1KUy5zZGs7CiAgICAgIHRoaXMudXRpbHMgPSBNTUpTLnV0aWxzOwogICAgICB0aGlzLnByb3BlcnRpZXMgPSB7CiAgICAgICAgd2lkdGg6IG51bGwsCiAgICAgICAgaGVpZ2h0OiBudWxsLAogICAgICAgIHVzZUN1c3RvbUNsb3NlOiBmYWxzZSwKICAgICAgICBpc01vZGFsOiB0cnVlCiAgICAgIH07CiAgICAgIHRoaXMub3JpZW50YXRpb25Qcm9wZXJ0aWVzID0gewogICAgICAgIGFsbG93T3JpZW50YXRpb25DaGFuZ2U6IHRydWUsCiAgICAgICAgZm9yY2VPcmllbnRhdGlvbjogJ25vbmUnCiAgICAgIH07CiAgICAgIHRoaXMucmVzaXplUHJvcGVydGllcyA9IHsKICAgICAgICB3aWR0aDogbnVsbCwKICAgICAgICBoZWlnaHQ6IG51bGwsCiAgICAgICAgY3VzdG9tQ2xvc2VQb3NpdGlvbjogJ3RvcC1yaWdodCcsCiAgICAgICAgb2Zmc2V0WDogMCwKICAgICAgICBvZmZzZXRZOiAwLAogICAgICAgIGFsbG93T2Zmc2NyZWVuOiB0cnVlCiAgICAgIH07CiAgICAgIHRoaXMuYXVkaW9Qcm9wZXJ0aWVzID0gewogICAgICAgIGxvb3A6IGZhbHNlLAogICAgICAgIGNvbnRyb2xzOiBmYWxzZQogICAgICB9OwogICAgfQoKICAgIE1SQUlELnByb3RvdHlwZS5nZXRBZFNpemUgPSBmdW5jdGlvbigpIHsKICAgICAgaWYgKHRoaXMuc2RrLmFkU2l6ZSAhPSBudWxsKSB7CiAgICAgICAgdGhpcy51dGlscy5jb25zb2xlTG9nKCJNUkFJRCBnZXRBZFNpemUgIiArIEpTT04uc3RyaW5naWZ5KHRoaXMuc2RrLmFkU2l6ZSkpOwogICAgICAgIGlmICh0aGlzLnNkay5hZFNpemVbImhlaWdodCJdID4gMCAmJiB0aGlzLnNkay5hZFNpemVbIndpZHRoIl0gPiAwKSB7CiAgICAgICAgICByZXR1cm4gdGhpcy5zZGsuYWRTaXplOwogICAgICAgIH0KICAgICAgfQogICAgICByZXR1cm4gbnVsbDsKICAgIH07CgogICAgTVJBSUQucHJvdG90eXBlLmNhbGxiYWNrTWFuYWdlciA9IGZ1bmN0aW9uKHJlc3BvbnNlKSB7CiAgICAgIHZhciBrbGFzcywgbWV0aG9kLCByZXNwb25zZV9kYXRhLCByZXN1bHQ7CgogICAgICByZXN1bHQgPSByZXNwb25zZVsncmVzdWx0J107CiAgICAgIG1ldGhvZCA9IHJlc3BvbnNlWydjYWxsJ107CiAgICAgIHJlc3BvbnNlX2RhdGEgPSByZXNwb25zZVsncmVzcG9uc2UnXTsKICAgICAga2xhc3MgPSByZXNwb25zZVsnY2xhc3MnXTsKICAgICAgcmV0dXJuIHRoaXM7CiAgICB9OwoKICAgIE1SQUlELnByb3RvdHlwZS5nZXRWZXJzaW9uID0gZnVuY3Rpb24oKSB7CiAgICAgIHJldHVybiAiMi4wIjsKICAgIH07CgogICAgTVJBSUQucHJvdG90eXBlLmNsb3NlID0gZnVuY3Rpb24oKSB7CiAgICAgIHJldHVybiBNTUpTLmludGVyc3RpdGlhbC5jbG9zZSgoZnVuY3Rpb24ocmVzcG9uc2UpIHsKICAgICAgICBpZiAocmVzcG9uc2VbJ3Jlc3VsdCddIDwgMSkgewogICAgICAgICAgcmV0dXJuIE1NSlMubGlzdGVuZXJNYW5hZ2VyLmZpcmVFdmVudENhbGxiYWNrcygiZXJyb3IiLCAiQ2xvc2UgZmFpbGVkIiwgImNsb3NlIik7CiAgICAgICAgfQogICAgICB9KSk7CiAgICB9OwoKICAgIE1SQUlELnByb3RvdHlwZS5leHBhbmQgPSBmdW5jdGlvbihfdXJsKSB7CiAgICAgIHZhciBrLCBtYXhTaXplLCBwcm9wcywgdiwgX3JlZjE2OwoKICAgICAgdGhpcy51dGlscy5jb25zb2xlTG9nKCdtcmFpZC5leHBhbmQgY2FsbGVkIHdpdGggcHJvcGVydGllczogJyArIEpTT04uc3RyaW5naWZ5KHRoaXMuZ2V0RXhwYW5kUHJvcGVydGllcygpKSk7CiAgICAgIHRoaXMudXRpbHMuY29uc29sZUxvZygnbXJhaWQuZXhwYW5kIHVybDogJyArIF91cmwpOwogICAgICBwcm9wcyA9IHRoaXMuZ2V0RXhwYW5kUHJvcGVydGllcygpOwogICAgICBtYXhTaXplID0gdGhpcy5nZXRNYXhTaXplKCk7CiAgICAgIGlmICgocHJvcHMgIT0gbnVsbCkgJiYgKG1heFNpemUgIT0gbnVsbCkpIHsKICAgICAgICBpZiAocHJvcHNbImhlaWdodCJdID09PSBtYXhTaXplWyJoZWlnaHQiXSAmJiBwcm9wc1sid2lkdGgiXSA9PT0gbWF4U2l6ZVsid2lkdGgiXSkgewogICAgICAgICAgcHJvcHNbImhlaWdodCJdID0gdm9pZCAwOwogICAgICAgICAgcHJvcHNbIndpZHRoIl0gPSB2b2lkIDA7CiAgICAgICAgfQogICAgICB9CiAgICAgIF9yZWYxNiA9IHRoaXMub3JpZW50YXRpb25Qcm9wZXJ0aWVzOwogICAgICBmb3IgKGsgaW4gX3JlZjE2KSB7CiAgICAgICAgdiA9IF9yZWYxNltrXTsKICAgICAgICBwcm9wc1trXSA9IHY7CiAgICAgIH0KICAgICAgcmV0dXJuIE1NSlMuaW50ZXJzdGl0aWFsLmV4cGFuZFdpdGhQcm9wZXJ0aWVzKF91cmwsIHByb3BzLCAoZnVuY3Rpb24ocmVzcG9uc2UpIHsKICAgICAgICBpZiAocmVzcG9uc2VbJ3Jlc3VsdCddIDwgMSkgewogICAgICAgICAgcmV0dXJuIE1NSlMubGlzdGVuZXJNYW5hZ2VyLmZpcmVFdmVudENhbGxiYWNrcygiZXJyb3IiLCAiRXhwYW5kIGZhaWxlZCIsICJleHBhbmQiKTsKICAgICAgICB9CiAgICAgIH0pKTsKICAgIH07CgogICAgTVJBSUQucHJvdG90eXBlLm9wZW4gPSBmdW5jdGlvbihfdXJsKSB7CiAgICAgIHJldHVybiBNTUpTLmludGVyc3RpdGlhbC5vcGVuKF91cmwsIChmdW5jdGlvbihyZXNwb25zZSkgewogICAgICAgIGlmIChyZXNwb25zZVsncmVzdWx0J10gPCAxKSB7CiAgICAgICAgICByZXR1cm4gTU1KUy5saXN0ZW5lck1hbmFnZXIuZmlyZUV2ZW50Q2FsbGJhY2tzKCJlcnJvciIsICJPcGVuIGZhaWxlZCB0byBvcGVuIGV4dGVybmFsIHVybCIsICJvcGVuIik7CiAgICAgICAgfQogICAgICB9KSk7CiAgICB9OwoKICAgIE1SQUlELnByb3RvdHlwZS5nZXRFeHBhbmRQcm9wZXJ0aWVzID0gZnVuY3Rpb24oKSB7CiAgICAgIHZhciBtYXhTaXplOwoKICAgICAgbWF4U2l6ZSA9IHRoaXMuZ2V0TWF4U2l6ZSgpOwogICAgICBpZiAobWF4U2l6ZSAhPSBudWxsKSB7CiAgICAgICAgaWYgKHRoaXMucHJvcGVydGllc1siaGVpZ2h0Il0gPT09IG51bGwgfHwgdGhpcy5wcm9wZXJ0aWVzWyJoZWlnaHQiXSA9PT0gdm9pZCAwKSB7CiAgICAgICAgICB0aGlzLnByb3BlcnRpZXNbImhlaWdodCJdID0gbWF4U2l6ZVsiaGVpZ2h0Il07CiAgICAgICAgfQogICAgICAgIGlmICh0aGlzLnByb3BlcnRpZXNbIndpZHRoIl0gPT09IG51bGwgfHwgdGhpcy5wcm9wZXJ0aWVzWyJ3aWR0aCJdID09PSB2b2lkIDApIHsKICAgICAgICAgIHRoaXMucHJvcGVydGllc1sid2lkdGgiXSA9IG1heFNpemVbIndpZHRoIl07CiAgICAgICAgfQogICAgICAgIHJldHVybiB0aGlzLnByb3BlcnRpZXM7CiAgICAgIH0gZWxzZSB7CiAgICAgICAgcmV0dXJuIE1NSlMubGlzdGVuZXJNYW5hZ2VyLmZpcmVFdmVudENhbGxiYWNrcygiZXJyb3IiLCAiZ2V0RXhwYW5kUHJvcGVydGllcyBmYWlsZWQiLCAiZ2V0RXhwYW5kUHJvcGVydGllcyIpOwogICAgICB9CiAgICB9OwoKICAgIE1SQUlELnByb3RvdHlwZS5zZXRFeHBhbmRQcm9wZXJ0aWVzID0gZnVuY3Rpb24oX3Byb3BlcnRpZXMpIHsKICAgICAgdGhpcy51dGlscy5jb25zb2xlTG9nKCdzZXRFeHBhbmRQcm9wZXJ0aWVzOiAnICsgSlNPTi5zdHJpbmdpZnkodGhpcy5wcm9wZXJ0aWVzKSk7CiAgICAgIHJldHVybiB0aGlzLnByb3BlcnRpZXMgPSBfcHJvcGVydGllczsKICAgIH07CgogICAgTVJBSUQucHJvdG90eXBlLmdldFBsYWNlbWVudFR5cGUgPSBmdW5jdGlvbigpIHsKICAgICAgcmV0dXJuIHRoaXMuc2RrLnBsYWNlbWVudFR5cGU7CiAgICB9OwoKICAgIE1SQUlELnByb3RvdHlwZS5nZXRTdGF0ZSA9IGZ1bmN0aW9uKCkgewogICAgICByZXR1cm4gdGhpcy5zZGsuc3RhdGU7CiAgICB9OwoKICAgIE1SQUlELnByb3RvdHlwZS51c2VDdXN0b21DbG9zZSA9IGZ1bmN0aW9uKF9jdXN0b21DbG9zZSkgewogICAgICB0aGlzLnByb3BlcnRpZXNbInVzZUN1c3RvbUNsb3NlIl0gPSBfY3VzdG9tQ2xvc2U7CiAgICAgIHRoaXMudXRpbHMuY29uc29sZUxvZygiVXNlIEN1c3RvbSBDbG9zZSB3YXMgY2FsbGVkOiAiICsgX2N1c3RvbUNsb3NlKTsKICAgICAgcmV0dXJuIE1NSlMuaW50ZXJzdGl0aWFsLnVzZUN1c3RvbUNsb3NlKF9jdXN0b21DbG9zZSwgKGZ1bmN0aW9uKHJlc3BvbnNlKSB7CiAgICAgICAgaWYgKHJlc3BvbnNlWydyZXN1bHQnXSA8IDEpIHsKICAgICAgICAgIHJldHVybiBNTUpTLmxpc3RlbmVyTWFuYWdlci5maXJlRXZlbnRDYWxsYmFja3MoImVycm9yIiwgIlVzZSBjdXN0b20gY2xvc2UgZmFpbGVkIHRvIHNldCIsICJ1c2VDdXN0b21DbG9zZSIpOwogICAgICAgIH0KICAgICAgfSkpOwogICAgfTsKCiAgICBNUkFJRC5wcm90b3R5cGUuaXNWaWV3YWJsZSA9IGZ1bmN0aW9uKCkgewogICAgICByZXR1cm4gdGhpcy5zZGsudmlld2FibGU7CiAgICB9OwoKICAgIE1SQUlELnByb3RvdHlwZS5yZW1vdmVFdmVudExpc3RlbmVyID0gZnVuY3Rpb24oZXZlbnQsIGxpc3RlbmVyKSB7CiAgICAgIHJldHVybiBNTUpTLmxpc3RlbmVyTWFuYWdlci5yZW1vdmVFdmVudExpc3RlbmVyKGV2ZW50LCBsaXN0ZW5lcik7CiAgICB9OwoKICAgIE1SQUlELnByb3RvdHlwZS5hZGRFdmVudExpc3RlbmVyID0gZnVuY3Rpb24oZXZlbnQsIGxpc3RlbmVyKSB7CiAgICAgIHJldHVybiBNTUpTLmxpc3RlbmVyTWFuYWdlci5hZGRFdmVudExpc3RlbmVyKGV2ZW50LCBsaXN0ZW5lcik7CiAgICB9OwoKICAgIE1SQUlELnByb3RvdHlwZS5maXJlRXZlbnRDYWxsYmFja3MgPSBmdW5jdGlvbihldmVudE5hbWUsIHBhcmFtZXRlciwgYWN0aW9uKSB7CiAgICAgIHJldHVybiBNTUpTLmxpc3RlbmVyTWFuYWdlci5maXJlRXZlbnRDYWxsYmFja3MoZXZlbnROYW1lLCBwYXJhbWV0ZXIsIGFjdGlvbik7CiAgICB9OwoKICAgIE1SQUlELnByb3RvdHlwZS5yZXNpemUgPSBmdW5jdGlvbigpIHsKICAgICAgdmFyIGNhbGxlZHJlc2l6ZVByb3BlcnRpZXMsIG1heFNpemU7CgogICAgICBtYXhTaXplID0gdGhpcy5nZXRNYXhTaXplKCk7CiAgICAgIGNhbGxlZHJlc2l6ZVByb3BlcnRpZXMgPSB0aGlzLmdldFJlc2l6ZVByb3BlcnRpZXMoKTsKICAgICAgaWYgKGNhbGxlZHJlc2l6ZVByb3BlcnRpZXNbImFsbG93T2Zmc2NyZWVuIl0gPT09IGZhbHNlKSB7CiAgICAgICAgaWYgKGNhbGxlZHJlc2l6ZVByb3BlcnRpZXNbIndpZHRoIl0gPiBtYXhTaXplWyJ3aWR0aCJdIHx8IGNhbGxlZHJlc2l6ZVByb3BlcnRpZXNbImhlaWdodCJdID4gbWF4U2l6ZVsiaGVpZ2h0Il0pIHsKICAgICAgICAgIHRoaXMuZmlyZUV2ZW50Q2FsbGJhY2tzKCJlcnJvciIsICJSZXNpemUgaXMgdW5zdXBwb3J0ZWQgaW4gdGhpcyBhcHBsaWNhdGlvbi4iLCAicmVzaXplIik7CiAgICAgICAgICByZXR1cm47CiAgICAgICAgfQogICAgICB9CiAgICAgIE1NSlMuYmFubmVyLnJlc2l6ZShjYWxsZWRyZXNpemVQcm9wZXJ0aWVzLCAoZnVuY3Rpb24ocmVzcG9uc2UpIHsKICAgICAgICBpZiAocmVzcG9uc2VbJ3Jlc3VsdCddIDwgMSkgewogICAgICAgICAgcmV0dXJuIG1yYWlkLmZpcmVFdmVudENhbGxiYWNrcygiZXJyb3IiLCAiUmVzaXplIGlzIHVuc3VwcG9ydGVkIGluIHRoaXMgYXBwbGljYXRpb24uIiwgInJlc2l6ZSIpOwogICAgICAgIH0KICAgICAgfSkpOwogICAgICByZXR1cm4gbnVsbDsKICAgIH07CgogICAgTVJBSUQucHJvdG90eXBlLmdldFJlc2l6ZVByb3BlcnRpZXMgPSBmdW5jdGlvbigpIHsKICAgICAgdmFyIGFkU2l6ZTsKCiAgICAgIGFkU2l6ZSA9IHRoaXMuZ2V0QWRTaXplKCk7CiAgICAgIGlmIChhZFNpemUgIT0gbnVsbCkgewogICAgICAgIE1NSlMudXRpbHMuY29uc29sZUxvZygiQWQgU2l6ZSB3YXMgZm91bmQiKTsKICAgICAgICBpZiAodGhpcy5yZXNpemVQcm9wZXJ0aWVzWyJoZWlnaHQiXSA9PT0gbnVsbCkgewogICAgICAgICAgdGhpcy5yZXNpemVQcm9wZXJ0aWVzWyJoZWlnaHQiXSA9IGFkU2l6ZVsiaGVpZ2h0Il07CiAgICAgICAgfQogICAgICAgIGlmICh0aGlzLnJlc2l6ZVByb3BlcnRpZXNbIndpZHRoIl0gPT09IG51bGwpIHsKICAgICAgICAgIHRoaXMucmVzaXplUHJvcGVydGllc1sid2lkdGgiXSA9IGFkU2l6ZVsid2lkdGgiXTsKICAgICAgICB9CiAgICAgICAgcmV0dXJuIHRoaXMucmVzaXplUHJvcGVydGllczsKICAgICAgfSBlbHNlIHsKICAgICAgICBNTUpTLnV0aWxzLmNvbnNvbGVMb2coImdldFJlc2l6ZVByb3BlcnRpZXMgZmFpbGVkIik7CiAgICAgICAgcmV0dXJuIE1NSlMubGlzdGVuZXJNYW5hZ2VyLmZpcmVFdmVudENhbGxiYWNrcygiZXJyb3IiLCAiUmVzaXplIGlzIHVuc3VwcG9ydGVkIGluIHRoaXMgYXBwbGljYXRpb24uIiwgInJlc2l6ZSIpOwogICAgICB9CiAgICB9OwoKICAgIE1SQUlELnByb3RvdHlwZS5zZXRSZXNpemVQcm9wZXJ0aWVzID0gZnVuY3Rpb24oX3Byb3BlcnRpZXMpIHsKICAgICAgcmV0dXJuIHRoaXMucmVzaXplUHJvcGVydGllcyA9IF9wcm9wZXJ0aWVzOwogICAgfTsKCiAgICBNUkFJRC5wcm90b3R5cGUuZ2V0Q3VycmVudFBvc2l0aW9uID0gZnVuY3Rpb24oKSB7CiAgICAgIHJldHVybiB0aGlzLnNkay5hZFNpemU7CiAgICB9OwoKICAgIE1SQUlELnByb3RvdHlwZS5nZXRNYXhTaXplID0gZnVuY3Rpb24oKSB7CiAgICAgIGlmICh0aGlzLnNkay5hZFByb3BlcnRpZXNbIm1heFNpemUiXSAhPSBudWxsKSB7CiAgICAgICAgcmV0dXJuIHsKICAgICAgICAgICJoZWlnaHQiOiB0aGlzLnNkay5hZFByb3BlcnRpZXNbIm1heFNpemUiXVsiaGVpZ2h0Il0sCiAgICAgICAgICAid2lkdGgiOiB0aGlzLnNkay5hZFByb3BlcnRpZXNbIm1heFNpemUiXVsid2lkdGgiXQogICAgICAgIH07CiAgICAgIH0gZWxzZSB7CiAgICAgICAgTU1KUy5saXN0ZW5lck1hbmFnZXIuZmlyZUV2ZW50Q2FsbGJhY2tzKCJlcnJvciIsICJnZXRSZXNpemVQcm9wZXJ0aWVzIGZhaWxlZCIsICJnZXRSZXNpemVQcm9wZXJ0aWVzIik7CiAgICAgIH0KICAgICAgcmV0dXJuIG51bGw7CiAgICB9OwoKICAgIE1SQUlELnByb3RvdHlwZS5nZXREZWZhdWx0UG9zaXRpb24gPSBmdW5jdGlvbigpIHsKICAgICAgcmV0dXJuIHRoaXMuc2RrLmRlZmF1bHRQb3NpdGlvbjsKICAgIH07CgogICAgTVJBSUQucHJvdG90eXBlLmdldFNjcmVlblNpemUgPSBmdW5jdGlvbigpIHsKICAgICAgTU1KUy51dGlscy5jb25zb2xlTG9nKCJnZXRTY3JlZW5TaXplOiAiICsgdGhpcy5zZGsuYWRQcm9wZXJ0aWVzWyJzY3JlZW4iXSk7CiAgICAgIGlmICh0aGlzLnNkay5hZFByb3BlcnRpZXNbInNjcmVlbiJdICE9IG51bGwpIHsKICAgICAgICByZXR1cm4gdGhpcy5zZGsuYWRQcm9wZXJ0aWVzWyJzY3JlZW4iXTsKICAgICAgfSBlbHNlIHsKICAgICAgICB0aGlzLmZpcmVFdmVudENhbGxiYWNrcygiZXJyb3IiLCAiU2NyZWVuIHNpemUgaXMgdW5hdmFpbGFibGUiLCAiZ2V0U2NyZWVuU2l6ZSIpOwogICAgICB9CiAgICAgIHJldHVybiBudWxsOwogICAgfTsKCiAgICBNUkFJRC5wcm90b3R5cGUuc3VwcG9ydHMgPSBmdW5jdGlvbihmZWF0dXJlKSB7CiAgICAgIGlmIChmZWF0dXJlICE9IG51bGwpIHsKICAgICAgICByZXR1cm4gdGhpcy5zZGsuc3VwcG9ydFByb3BlcnRpZXNbZmVhdHVyZV07CiAgICAgIH0gZWxzZSB7CiAgICAgICAgcmV0dXJuIHRoaXMuc2RrLnN1cHBvcnRQcm9wZXJ0aWVzOwogICAgICB9CiAgICB9OwoKICAgIE1SQUlELnByb3RvdHlwZS5zdG9yZVBpY3R1cmUgPSBmdW5jdGlvbihVUkkpIHsKICAgICAgcmV0dXJuIE1NSlMubWVkaWEud3JpdGVUb1Bob3RvTGlicmFyeShVUkksICIiLCAiIiwgKGZ1bmN0aW9uKHJlc3BvbnNlKSB7CiAgICAgICAgaWYgKHJlc3BvbnNlWydyZXN1bHQnXSA8IDEpIHsKICAgICAgICAgIHJldHVybiBNTUpTLmxpc3RlbmVyTWFuYWdlci5maXJlRXZlbnRDYWxsYmFja3MoImVycm9yIiwgIkVycm9yIHN0b3JpbmcgcGljdHVyZSIsICJzdG9yZVBpY3R1cmUiKTsKICAgICAgICB9CiAgICAgIH0pKTsKICAgIH07CgogICAgTVJBSUQucHJvdG90eXBlLmNyZWF0ZUNhbGVuZGFyRXZlbnQgPSBmdW5jdGlvbihwYXJhbWV0ZXJzKSB7CiAgICAgIHJldHVybiBNTUpTLmNhbGVuZGFyLmFkZEV2ZW50KHBhcmFtZXRlcnMsIChmdW5jdGlvbihyZXNwb25zZSkgewogICAgICAgIGlmIChyZXNwb25zZVsncmVzdWx0J10gPCAxKSB7CiAgICAgICAgICByZXR1cm4gTU1KUy5saXN0ZW5lck1hbmFnZXIuZmlyZUV2ZW50Q2FsbGJhY2tzKCJlcnJvciIsICJFcnJvciBhZGRpbmcgY2FsZW5kYXIgZXZlbnQiLCAiY3JlYXRlQ2FsZW5kYXJFdmVudCIpOwogICAgICAgIH0KICAgICAgfSkpOwogICAgfTsKCiAgICBNUkFJRC5wcm90b3R5cGUucGxheVZpZGVvID0gZnVuY3Rpb24oVVJJKSB7CiAgICAgIHJldHVybiBNTUpTLm1lZGlhLnBsYXlWaWRlbyhVUkksIChmdW5jdGlvbihyZXNwb25zZSkgewogICAgICAgIGlmIChyZXNwb25zZVsncmVzdWx0J10gPCAxKSB7CiAgICAgICAgICByZXR1cm4gTU1KUy5saXN0ZW5lck1hbmFnZXIuZmlyZUV2ZW50Q2FsbGJhY2tzKCJlcnJvciIsICJFcnJvciBwbGF5aW5nIHZpZGVvIiwgInBsYXlWaWRlbyIpOwogICAgICAgIH0KICAgICAgfSkpOwogICAgfTsKCiAgICBNUkFJRC5wcm90b3R5cGUuZ2V0T3JpZW50YXRpb25Qcm9wZXJ0aWVzID0gZnVuY3Rpb24oKSB7CiAgICAgIHJldHVybiB0aGlzLm9yaWVudGF0aW9uUHJvcGVydGllczsKICAgIH07CgogICAgTVJBSUQucHJvdG90eXBlLnNldE9yaWVudGF0aW9uUHJvcGVydGllcyA9IGZ1bmN0aW9uKHByb3BlcnRpZXMpIHsKICAgICAgdGhpcy5vcmllbnRhdGlvblByb3BlcnRpZXMgPSBwcm9wZXJ0aWVzOwogICAgICBpZiAoKHRoaXMuZ2V0U3RhdGUoKSA9PT0gImV4cGFuZGVkIiAmJiB0aGlzLmdldFBsYWNlbWVudFR5cGUoKSA9PT0gImlubGluZSIpIHx8ICh0aGlzLmdldFBsYWNlbWVudFR5cGUoKSA9PT0gImludGVyc3RpdGlhbCIpKSB7CiAgICAgICAgcmV0dXJuIE1NSlMuaW50ZXJzdGl0aWFsLnNldE9yaWVudGF0aW9uKHRoaXMub3JpZW50YXRpb25Qcm9wZXJ0aWVzLCAibXJhaWQuY2FsbGJhY2tNYW5hZ2VyIik7CiAgICAgIH0KICAgIH07CgogICAgTVJBSUQucHJvdG90eXBlLnN0YXJ0UmVjb3JkaW5nID0gZnVuY3Rpb24obGFuZ3VhZ2VDb2RlKSB7CiAgICAgIHJldHVybiBNTUpTLnNwZWVjaGtpdC5zdGFydFJlY29yZGluZyhsYW5ndWFnZUNvZGUsICJkaWN0YXRpb24iLCAic2hvcnQiLCBmdW5jdGlvbihyZXNwb25zZSkgewogICAgICAgIGlmIChyZXNwb25zZVsncmVzdWx0J10gPCAxKSB7CiAgICAgICAgICByZXR1cm4gTU1KUy5saXN0ZW5lck1hbmFnZXIuZmlyZUV2ZW50Q2FsbGJhY2tzKCJ2b2ljZUVycm9yIiwgIlN0YXJ0IHJlY29yZGluZyBmYWlsZWQiLCAic3RhcnRSZWNvcmRpbmciKTsKICAgICAgICB9CiAgICAgIH0pOwogICAgfTsKCiAgICBNUkFJRC5wcm90b3R5cGUuZW5kUmVjb3JkaW5nID0gZnVuY3Rpb24oKSB7CiAgICAgIHJldHVybiBNTUpTLnNwZWVjaGtpdC5lbmRSZWNvcmRpbmcoZnVuY3Rpb24ocmVzcG9uc2UpIHsKICAgICAgICBpZiAocmVzcG9uc2VbJ3Jlc3VsdCddIDwgMSkgewogICAgICAgICAgcmV0dXJuIE1NSlMubGlzdGVuZXJNYW5hZ2VyLmZpcmVFdmVudENhbGxiYWNrcygidm9pY2VFcnJvciIsICJFbmQgcmVjb3JkaW5nIGZhaWxlZCIsICJlbmRSZWNvcmRpbmciKTsKICAgICAgICB9CiAgICAgIH0pOwogICAgfTsKCiAgICBNUkFJRC5wcm90b3R5cGUudGV4dFRvU3BlZWNoID0gZnVuY3Rpb24odGV4dCwgbGFuZ3VhZ2VDb2RlKSB7CiAgICAgIHJldHVybiBNTUpTLnNwZWVjaGtpdC50ZXh0VG9TcGVlY2gobGFuZ3VhZ2VDb2RlLCB0ZXh0LCBmdW5jdGlvbihyZXNwb25zZSkgewogICAgICAgIGlmIChyZXNwb25zZVsncmVzdWx0J10gPCAxKSB7CiAgICAgICAgICByZXR1cm4gTU1KUy5saXN0ZW5lck1hbmFnZXIuZmlyZUV2ZW50Q2FsbGJhY2tzKCJ2b2ljZUVycm9yIiwgIlRleHQgdG8gU3BlZWNoIGZhaWxlZCIsICJ0ZXh0VG9TcGVlY2giKTsKICAgICAgICB9CiAgICAgIH0pOwogICAgfTsKCiAgICBNUkFJRC5wcm90b3R5cGUucGxheUF1ZGlvID0gZnVuY3Rpb24odXJsLCBvcHRpb25zKSB7CiAgICAgIGlmIChvcHRpb25zICE9IG51bGwpIHsKICAgICAgICBvcHRpb25zWyJsb29wIl0gPSB0aGlzLmF1ZGlvUHJvcGVydGllc1sibG9vcCJdOwogICAgICAgIG9wdGlvbnNbImNvbnRyb2xzIl0gPSB0aGlzLmF1ZGlvUHJvcGVydGllc1siY29udHJvbHMiXTsKICAgICAgfQogICAgICByZXR1cm4gTU1KUy5zcGVlY2hraXQucGxheUF1ZGlvKHVybCwgdGhpcy5hdWRpb1Byb3BlcnRpZXMsIGZ1bmN0aW9uKHJlc3BvbnNlKSB7CiAgICAgICAgaWYgKHJlc3BvbnNlWydyZXN1bHQnXSA8IDEpIHsKICAgICAgICAgIHJldHVybiBNTUpTLmxpc3RlbmVyTWFuYWdlci5maXJlRXZlbnRDYWxsYmFja3MoInZvaWNlRXJyb3IiLCAiUGxheWluZyBhdWRpbyBmYWlsZWQiLCAicGxheUF1ZGlvIik7CiAgICAgICAgfQogICAgICB9KTsKICAgIH07CgogICAgTVJBSUQucHJvdG90eXBlLnN0b3BBdWRpbyA9IGZ1bmN0aW9uKCkgewogICAgICByZXR1cm4gTU1KUy5zcGVlY2hraXQuc3RvcEF1ZGlvKGZ1bmN0aW9uKHJlc3BvbnNlKSB7CiAgICAgICAgaWYgKHJlc3BvbnNlWydyZXN1bHQnXSA8IDEpIHsKICAgICAgICAgIHJldHVybiBNTUpTLmxpc3RlbmVyTWFuYWdlci5maXJlRXZlbnRDYWxsYmFja3MoInZvaWNlRXJyb3IiLCAiU3RvcCBwbGF5aW5nIGF1ZGlvIGZhaWxlZCIsICJzdG9wQXVkaW8iKTsKICAgICAgICB9CiAgICAgIH0pOwogICAgfTsKCiAgICBNUkFJRC5wcm90b3R5cGUuY2FjaGVBdWRpbyA9IGZ1bmN0aW9uKHVybCkgewogICAgICByZXR1cm4gTU1KUy5zcGVlY2hraXQuY2FjaGVBdWRpbyh1cmwsIGZ1bmN0aW9uKHJlc3BvbnNlKSB7CiAgICAgICAgaWYgKHJlc3BvbnNlWydyZXN1bHQnXSA8IDEpIHsKICAgICAgICAgIHJldHVybiBNTUpTLmxpc3RlbmVyTWFuYWdlci5maXJlRXZlbnRDYWxsYmFja3MoInZvaWNlRXJyb3IiLCAiQXVkaW8gY2FjaGluZyBmYWlsZWQiLCAiY2FjaGVBdWRpbyIpOwogICAgICAgIH0KICAgICAgfSk7CiAgICB9OwoKICAgIE1SQUlELnByb3RvdHlwZS5zYW1wbGVCYWNrZ3JvdW5kQXVkaW9MZXZlbCA9IGZ1bmN0aW9uKCkgewogICAgICByZXR1cm4gTU1KUy5zcGVlY2hraXQuc2FtcGxlQmFja2dyb3VuZEF1ZGlvTGV2ZWwoZnVuY3Rpb24ocmVzcG9uc2UpIHsKICAgICAgICBpZiAocmVzcG9uc2VbJ3Jlc3VsdCddIDwgMSkgewogICAgICAgICAgcmV0dXJuIE1NSlMubGlzdGVuZXJNYW5hZ2VyLmZpcmVFdmVudENhbGxiYWNrcygidm9pY2VFcnJvciIsICJTYW1wbGluZyBvZiBiYWNrZ3JvdW5kIGF1ZGlvIGZhaWxlZCIsICJzYW1wbGVCYWNrZ3JvdW5kQXVkaW9MZXZlbCIpOwogICAgICAgIH0KICAgICAgfSk7CiAgICB9OwoKICAgIE1SQUlELnByb3RvdHlwZS5yZWxlYXNlVm9pY2UgPSBmdW5jdGlvbigpIHsKICAgICAgcmV0dXJuIE1NSlMuc3BlZWNoa2l0LnJlbGVhc2VWb2ljZShmdW5jdGlvbigpIHt9KTsKICAgIH07CgogICAgTVJBSUQucHJvdG90eXBlLmFkZEN1c3RvbVZvaWNlV29yZHMgPSBmdW5jdGlvbih3b3JkcykgewogICAgICByZXR1cm4gTU1KUy5zcGVlY2hraXQuYWRkQ3VzdG9tVm9pY2VXb3Jkcyh3b3JkcywgZnVuY3Rpb24ocmVzcG9uc2UpIHsKICAgICAgICBpZiAocmVzcG9uc2VbJ3Jlc3VsdCddIDwgMSkgewogICAgICAgICAgcmV0dXJuIE1NSlMubGlzdGVuZXJNYW5hZ2VyLmZpcmVFdmVudENhbGxiYWNrcygidm9pY2VFcnJvciIsICJBZGRpbmcgY3VzdG9tIHdvcmRzIGZhaWxlZCIsICJhZGRDdXN0b21Wb2ljZVdvcmRzIik7CiAgICAgICAgfQogICAgICB9KTsKICAgIH07CgogICAgTVJBSUQucHJvdG90eXBlLmRlbGV0ZUN1c3RvbVZvaWNlV29yZHMgPSBmdW5jdGlvbih3b3JkcykgewogICAgICByZXR1cm4gTU1KUy5zcGVlY2hraXQuZGVsZXRlQ3VzdG9tVm9pY2VXb3Jkcyh3b3JkcywgZnVuY3Rpb24ocmVzcG9uc2UpIHsKICAgICAgICBpZiAocmVzcG9uc2VbJ3Jlc3VsdCddIDwgMSkgewogICAgICAgICAgcmV0dXJuIE1NSlMubGlzdGVuZXJNYW5hZ2VyLmZpcmVFdmVudENhbGxiYWNrcygidm9pY2VFcnJvciIsICJEZWxldGluZyBjdXN0b20gd29yZHMgZmFpbGVkIiwgImRlbGV0ZUN1c3RvbVZvaWNlV29yZHMiKTsKICAgICAgICB9CiAgICAgIH0pOwogICAgfTsKCiAgICBNUkFJRC5wcm90b3R5cGUuZ2V0UmVjb2duaXRpb25SZXN1bHRzID0gZnVuY3Rpb24oKSB7CiAgICAgIHJldHVybiBNTUpTLnNwZWVjaGtpdC5nZXRSZWNvZ25pdGlvblJlc3VsdHMoKTsKICAgIH07CgogICAgTVJBSUQucHJvdG90eXBlLmdldEF1ZGlvTGV2ZWwgPSBmdW5jdGlvbigpIHsKICAgICAgcmV0dXJuIE1NSlMuc3BlZWNoa2l0LmdldEF1ZGlvTGV2ZWwoKTsKICAgIH07CgogICAgTVJBSUQucHJvdG90eXBlLmdldFZvaWNlU3RhdGUgPSBmdW5jdGlvbigpIHsKICAgICAgcmV0dXJuIE1NSlMuc3BlZWNoa2l0LmdldFZvaWNlU3RhdGUoKTsKICAgIH07CgogICAgTVJBSUQucHJvdG90eXBlLmdldEF1ZGlvUG9zaXRpb24gPSBmdW5jdGlvbigpIHsKICAgICAgcmV0dXJuIE1NSlMuc3BlZWNoa2l0LmdldEF1ZGlvUG9zaXRpb24oKTsKICAgIH07CgogICAgcmV0dXJuIE1SQUlEOwoKICB9KShNTUJyaWRnZU9iamVjdCk7CiAgKGZ1bmN0aW9uKCkgewogICAgaWYgKHR5cGVvZiBNTUpTLnNkayA9PT0gTU1KUy5UWVBFX1VOREVGSU5FRCkgewogICAgICBNTUpTLnNkayA9IG5ldyBNTVNES0ludGVyZmFjZTsKICAgIH0KICAgIGlmICh0eXBlb2YgTU1KUy5kZXZpY2UgPT09IE1NSlMuVFlQRV9VTkRFRklORUQpIHsKICAgICAgTU1KUy5kZXZpY2UgPSBuZXcgTU1EZXZpY2U7CiAgICB9CiAgICBpZiAodHlwZW9mIE1NSlMubWVkaWEgPT09IE1NSlMuVFlQRV9VTkRFRklORUQpIHsKICAgICAgTU1KUy5tZWRpYSA9IG5ldyBNTU1lZGlhOwogICAgfQogICAgaWYgKHR5cGVvZiBNTUpTLmZpbGVNYW5hZ2VyID09PSBNTUpTLlRZUEVfVU5ERUZJTkVEKSB7CiAgICAgIE1NSlMuZmlsZU1hbmFnZXIgPSBuZXcgTU1GaWxlTWFuYWdlcjsKICAgIH0KICAgIGlmICh0eXBlb2YgTU1KUy5ub3RpZmljYXRpb24gPT09IE1NSlMuVFlQRV9VTkRFRklORUQpIHsKICAgICAgTU1KUy5ub3RpZmljYXRpb24gPSBuZXcgTU1Ob3RpZmljYXRpb247CiAgICB9CiAgICBpZiAodHlwZW9mIE1NSlMuaW50ZXJzdGl0aWFsID09PSBNTUpTLlRZUEVfVU5ERUZJTkVEKSB7CiAgICAgIE1NSlMuaW50ZXJzdGl0aWFsID0gbmV3IE1NSW50ZXJzdGl0aWFsOwogICAgfQogICAgaWYgKHR5cGVvZiBNTUpTLmNhY2hlZFZpZGVvID09PSBNTUpTLlRZUEVfVU5ERUZJTkVEKSB7CiAgICAgIE1NSlMuY2FjaGVkVmlkZW8gPSBuZXcgTU1DYWNoZWRWaWRlbzsKICAgIH0KICAgIGlmICh0eXBlb2YgTU1KUy5icmFuZCA9PT0gTU1KUy5UWVBFX1VOREVGSU5FRCkgewogICAgICBNTUpTLmJyYW5kID0gbmV3IE1NQnJhbmQ7CiAgICB9CiAgICBpZiAodHlwZW9mIE1NSlMuaW5saW5lVmlkZW8gPT09IE1NSlMuVFlQRV9VTkRFRklORUQpIHsKICAgICAgTU1KUy5pbmxpbmVWaWRlbyA9IG5ldyBNTUlubGluZVZpZGVvOwogICAgfQogICAgaWYgKHR5cGVvZiBNTUpTLnNvY2lhbCA9PT0gTU1KUy5UWVBFX1VOREVGSU5FRCkgewogICAgICBNTUpTLnNvY2lhbCA9IG5ldyBNTVNvY2lhbDsKICAgIH0KICAgIGlmICh0eXBlb2YgTU1KUy5wYXNzYm9vayA9PT0gTU1KUy5UWVBFX1VOREVGSU5FRCkgewogICAgICBNTUpTLnBhc3Nib29rID0gbmV3IE1NUGFzc2Jvb2s7CiAgICB9CiAgICBpZiAodHlwZW9mIE1NSlMuY2FsZW5kYXIgPT09IE1NSlMuVFlQRV9VTkRFRklORUQpIHsKICAgICAgTU1KUy5jYWxlbmRhciA9IG5ldyBNTUNhbGVuZGFyOwogICAgfQogICAgaWYgKHR5cGVvZiBNTUpTLmJhbm5lciA9PT0gTU1KUy5UWVBFX1VOREVGSU5FRCkgewogICAgICBNTUpTLmJhbm5lciA9IG5ldyBNTUJhbm5lcjsKICAgIH0KICAgIGlmICh0eXBlb2YgTU1KUy5hcHBzdG9yZSA9PT0gTU1KUy5UWVBFX1VOREVGSU5FRCkgewogICAgICBNTUpTLmFwcHN0b3JlID0gbmV3IE1NQXBwU3RvcmU7CiAgICB9CiAgICBNTUpTLmFwcFN0b3JlID0gTU1KUy5hcHBzdG9yZTsKICAgIGlmICh0eXBlb2YgTU1KUy5wYXN0ZWJvYXJkID09PSBNTUpTLlRZUEVfVU5ERUZJTkVEKSB7CiAgICAgIE1NSlMucGFzdGVib2FyZCA9IG5ldyBNTVBhc3RlYm9hcmQ7CiAgICB9CiAgICBpZiAodHlwZW9mIE1NSlMubGlzdGVuZXJNYW5hZ2VyID09PSBNTUpTLlRZUEVfVU5ERUZJTkVEKSB7CiAgICAgIE1NSlMubGlzdGVuZXJNYW5hZ2VyID0gbmV3IE1NTGlzdGVuZXJNYW5hZ2VyOwogICAgfQogICAgaWYgKHR5cGVvZiBNTUpTLnNwZWVjaGtpdCA9PT0gTU1KUy5UWVBFX1VOREVGSU5FRCkgewogICAgICBNTUpTLnNwZWVjaGtpdCA9IG5ldyBNTVNwZWVjaGtpdDsKICAgIH0KICAgIGlmICh0eXBlb2YgTU1KUy5taWNyb3Bob25lID09PSBNTUpTLlRZUEVfVU5ERUZJTkVEKSB7CiAgICAgIE1NSlMubWljcm9waG9uZSA9IG5ldyBNTU1pY3JvcGhvbmU7CiAgICB9CiAgICBpZiAodHlwZW9mIHdpbmRvdy5NTVNESyA9PT0gTU1KUy5UWVBFX1VOREVGSU5FRCkgewogICAgICB3aW5kb3cuTU1TREsgPSBNTUpTOwogICAgfQogICAgaWYgKHR5cGVvZiBNTVNESy5zZGsgPT09IE1NSlMuVFlQRV9VTkRFRklORUQpIHsKICAgICAgTU1TREsuc2RrID0gTU1KUy5zZGs7CiAgICB9CiAgICBpZiAodHlwZW9mIE1NU0RLLmRldmljZSA9PT0gTU1KUy5UWVBFX1VOREVGSU5FRCkgewogICAgICBNTVNESy5kZXZpY2UgPSBNTUpTLmRldmljZTsKICAgIH0KICAgIGlmICh0eXBlb2YgTU1TREsubWVkaWEgPT09IE1NSlMuVFlQRV9VTkRFRklORUQpIHsKICAgICAgTU1TREsubWVkaWEgPSBNTUpTLm1lZGlhOwogICAgfQogICAgaWYgKHR5cGVvZiBNTVNESy5maWxlTWFuYWdlciA9PT0gTU1KUy5UWVBFX1VOREVGSU5FRCkgewogICAgICBNTVNESy5maWxlTWFuYWdlciA9IE1NSlMuZmlsZU1hbmFnZXI7CiAgICB9CiAgICBpZiAodHlwZW9mIE1NU0RLLm5vdGlmaWNhdGlvbiA9PT0gTU1KUy5UWVBFX1VOREVGSU5FRCkgewogICAgICBNTVNESy5ub3RpZmljYXRpb24gPSBNTUpTLm5vdGlmaWNhdGlvbjsKICAgIH0KICAgIGlmICh0eXBlb2YgTU1TREsuaW50ZXJzdGl0aWFsID09PSBNTUpTLlRZUEVfVU5ERUZJTkVEKSB7CiAgICAgIE1NU0RLLmludGVyc3RpdGlhbCA9IE1NSlMuaW50ZXJzdGl0aWFsOwogICAgfQogICAgaWYgKHR5cGVvZiBNTUpTLmNhY2hlZFZpZGVvID09PSBNTUpTLlRZUEVfVU5ERUZJTkVEKSB7CiAgICAgIE1NU0RLLmNhY2hlZFZpZGVvID0gTU1KUy5jYWNoZWRWaWRlbzsKICAgIH0KICAgIGlmICh0eXBlb2YgTU1TREsuYnJhbmQgPT09IE1NSlMuVFlQRV9VTkRFRklORUQpIHsKICAgICAgTU1TREsuYnJhbmQgPSBNTUpTLmJyYW5kOwogICAgfQogICAgaWYgKHR5cGVvZiBNTVNESy5pbmxpbmVWaWRlbyA9PT0gTU1KUy5UWVBFX1VOREVGSU5FRCkgewogICAgICBNTVNESy5pbmxpbmVWaWRlbyA9IE1NSlMuaW5saW5lVmlkZW87CiAgICB9CiAgICBpZiAodHlwZW9mIE1NU0RLLnNvY2lhbCA9PT0gTU1KUy5UWVBFX1VOREVGSU5FRCkgewogICAgICBNTVNESy5zb2NpYWwgPSBNTUpTLnNvY2lhbDsKICAgIH0KICAgIGlmICh0eXBlb2YgTU1TREsucGFzc2Jvb2sgPT09IE1NSlMuVFlQRV9VTkRFRklORUQpIHsKICAgICAgTU1TREsucGFzc2Jvb2sgPSBNTUpTLnBhc3Nib29rOwogICAgfQogICAgaWYgKHR5cGVvZiBNTVNESy5jYWxlbmRhciA9PT0gTU1KUy5UWVBFX1VOREVGSU5FRCkgewogICAgICBNTVNESy5jYWxlbmRhciA9IE1NSlMuY2FsZW5kYXI7CiAgICB9CiAgICBpZiAodHlwZW9mIE1NU0RLLmJhbm5lciA9PT0gTU1KUy5UWVBFX1VOREVGSU5FRCkgewogICAgICBNTVNESy5iYW5uZXIgPSBNTUpTLmJhbm5lcjsKICAgIH0KICAgIGlmICh0eXBlb2YgTU1TREsuYXBwc3RvcmUgPT09IE1NSlMuVFlQRV9VTkRFRklORUQpIHsKICAgICAgTU1TREsuYXBwc3RvcmUgPSBNTUpTLmFwcHN0b3JlOwogICAgfQogICAgTU1TREsuYXBwU3RvcmUgPSBNTUpTLmFwcHN0b3JlOwogICAgaWYgKHR5cGVvZiBNTVNESy5wYXN0ZWJvYXJkID09PSBNTUpTLlRZUEVfVU5ERUZJTkVEKSB7CiAgICAgIE1NU0RLLnBhc3RlYm9hcmQgPSBNTUpTLnBhc3RlYm9hcmQ7CiAgICB9CiAgICBpZiAodHlwZW9mIE1NU0RLLnNwZWVjaGtpdCA9PT0gTU1KUy5UWVBFX1VOREVGSU5FRCkgewogICAgICBNTVNESy5zcGVlY2hraXQgPSBNTUpTLnNwZWVjaGtpdDsKICAgIH0KICAgIGlmICh0eXBlb2YgTU1TREsubWljcm9waG9uZSA9PT0gTU1KUy5UWVBFX1VOREVGSU5FRCkgewogICAgICBNTVNESy5taWNyb3Bob25lID0gTU1KUy5taWNyb3Bob25lOwogICAgfQogICAgaWYgKHR5cGVvZiB3aW5kb3cubXJhaWQgPT09IE1NSlMuVFlQRV9VTkRFRklORUQpIHsKICAgICAgd2luZG93Lm1yYWlkID0gbmV3IE1SQUlEOwogICAgfQogICAgaWYgKHR5cGVvZiB3aW5kb3cuTU0gPT09IE1NSlMuVFlQRV9VTkRFRklORUQpIHsKICAgICAgcmV0dXJuIHdpbmRvdy5NTSA9IE1NSlM7CiAgICB9CiAgfSkoKTsKICBNTUpTLnV0aWxzLmxpc3RlbkZvckJyb3dzZXJSZWFkeSgoZnVuY3Rpb24oKSB7CiAgICB2YXIgdGltZXI7CgogICAgcmV0dXJuIHRpbWVyID0gc2V0SW50ZXJ2YWwoZnVuY3Rpb24oKSB7CiAgICAgIHZhciBjb21tYW5kLCBlOwoKICAgICAgaWYgKE1NSlMuc2RrLnN0YXRlICE9PSAibG9hZGluZyIpIHsKICAgICAgICBpZiAoTU1KUy5leGVjdXRpbmdDb21tYW5kID09PSBmYWxzZSAmJiBNTUpTLmNvbW1hbmRRdWV1ZS5sZW5ndGggPiAwICYmIE1NSlMuZXhlY3V0aW5nQ29tbWFuZERlbGF5ID09PSAwKSB7CiAgICAgICAgICBjb21tYW5kID0gTU1KUy5jb21tYW5kUXVldWUuc2hpZnQoKTsKICAgICAgICAgIE1NSlMudXRpbHMuY29uc29sZUxvZygicnVubmluZyBjb21tYW5kOiAiICsgY29tbWFuZC51cmwpOwogICAgICAgICAgdHJ5IHsKICAgICAgICAgICAgcmV0dXJuIGNvbW1hbmQucGVyZm9ybSgpOwogICAgICAgICAgfSBjYXRjaCAoX2Vycm9yKSB7CiAgICAgICAgICAgIGUgPSBfZXJyb3I7CiAgICAgICAgICAgIHJldHVybiBNTUpTLnV0aWxzLmNvbnNvbGVMb2coIkZhaWxlZCB0byBydW4gY29tbWFuZDogIiArIGUubWVzc2FnZWFsZXJ0KTsKICAgICAgICAgIH0KICAgICAgICB9CiAgICAgIH0KICAgIH0sIDEpOwogIH0pKCkpOwp9Cg=="
 
     invoke-static {v4}, Lcom/fusepowered/m1/android/Base64;->decode(Ljava/lang/String;)[B
@@ -1532,7 +1532,7 @@
     move-result-object v2
 
     .line 326
-    .local v2, mmjsBytesSecond:[B
+    .local v2, "mmjsBytesSecond":[B
     if-eqz v1, :cond_0
 
     if-eqz v2, :cond_0
@@ -1547,7 +1547,7 @@
     new-array v3, v4, [B
 
     .line 329
-    .local v3, mmjsComplete:[B
+    .local v3, "mmjsComplete":[B
     array-length v4, v1
 
     invoke-static {v1, v6, v3, v6, v4}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
@@ -1565,7 +1565,7 @@
     invoke-direct {v0, v3}, Ljava/io/ByteArrayInputStream;-><init>([B)V
 
     .line 333
-    .local v0, byteStream:Ljava/io/ByteArrayInputStream;
+    .local v0, "byteStream":Ljava/io/ByteArrayInputStream;
     invoke-static {p0, v0}, Lcom/fusepowered/m1/android/MRaid;->saveMRaid(Landroid/content/Context;Ljava/io/InputStream;)Z
 
     move-result v4
@@ -1582,8 +1582,8 @@
     const/4 v4, 0x1
 
     .line 339
-    .end local v0           #byteStream:Ljava/io/ByteArrayInputStream;
-    .end local v3           #mmjsComplete:[B
+    .end local v0    # "byteStream":Ljava/io/ByteArrayInputStream;
+    .end local v3    # "mmjsComplete":[B
     :goto_0
     return v4
 
@@ -1595,8 +1595,8 @@
 
 .method static saveMRaid(Landroid/content/Context;Ljava/io/InputStream;)Z
     .locals 11
-    .parameter "context"
-    .parameter "is"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "is"    # Ljava/io/InputStream;
 
     .prologue
     const/4 v8, 0x1
@@ -1615,7 +1615,7 @@
     invoke-direct {v2, v6, v7}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
     .line 252
-    .local v2, mraidJsFile:Ljava/io/File;
+    .local v2, "mraidJsFile":Ljava/io/File;
     const-string v6, "Saving mraid js to %s"
 
     new-array v7, v8, [Ljava/lang/Object;
@@ -1628,35 +1628,35 @@
     const/4 v4, 0x0
 
     .line 256
-    .local v4, out:Ljava/io/FileOutputStream;
+    .local v4, "out":Ljava/io/FileOutputStream;
     :try_start_0
     new-instance v5, Ljava/io/FileOutputStream;
 
     invoke-direct {v5, v2}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_4
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 257
-    .end local v4           #out:Ljava/io/FileOutputStream;
-    .local v5, out:Ljava/io/FileOutputStream;
+    .end local v4    # "out":Ljava/io/FileOutputStream;
+    .local v5, "out":Ljava/io/FileOutputStream;
     const/16 v6, 0x400
 
     :try_start_1
     new-array v0, v6, [B
 
     .line 260
-    .local v0, buf:[B
+    .local v0, "buf":[B
     :goto_0
     invoke-virtual {p1, v0}, Ljava/io/InputStream;->read([B)I
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     move-result v3
 
     .line 261
-    .local v3, numread:I
+    .local v3, "numread":I
     if-gtz v3, :cond_1
 
     .line 277
@@ -1672,35 +1672,35 @@
     :goto_1
     move-object v4, v5
 
-    .end local v5           #out:Ljava/io/FileOutputStream;
-    .restart local v4       #out:Ljava/io/FileOutputStream;
+    .end local v5    # "out":Ljava/io/FileOutputStream;
+    .restart local v4    # "out":Ljava/io/FileOutputStream;
     move v6, v8
 
     .line 287
-    .end local v0           #buf:[B
-    .end local v3           #numread:I
+    .end local v0    # "buf":[B
+    .end local v3    # "numread":I
     :goto_2
     return v6
 
     .line 263
-    .end local v4           #out:Ljava/io/FileOutputStream;
-    .restart local v0       #buf:[B
-    .restart local v3       #numread:I
-    .restart local v5       #out:Ljava/io/FileOutputStream;
+    .end local v4    # "out":Ljava/io/FileOutputStream;
+    .restart local v0    # "buf":[B
+    .restart local v3    # "numread":I
+    .restart local v5    # "out":Ljava/io/FileOutputStream;
     :cond_1
     const/4 v6, 0x0
 
     :try_start_3
     invoke-virtual {v5, v0, v6, v3}, Ljava/io/FileOutputStream;->write([BII)V
     :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_0
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
     goto :goto_0
 
     .line 268
-    .end local v0           #buf:[B
-    .end local v3           #numread:I
+    .end local v0    # "buf":[B
+    .end local v3    # "numread":I
     :catch_0
     move-exception v6
 
@@ -1709,9 +1709,9 @@
     move-object v4, v5
 
     .line 270
-    .end local v5           #out:Ljava/io/FileOutputStream;
-    .local v1, e:Ljava/lang/Exception;
-    .restart local v4       #out:Ljava/io/FileOutputStream;
+    .end local v5    # "out":Ljava/io/FileOutputStream;
+    .local v1, "e":Ljava/lang/Exception;
+    .restart local v4    # "out":Ljava/io/FileOutputStream;
     :goto_3
     if-eqz v2, :cond_2
 
@@ -1748,7 +1748,7 @@
     :try_end_5
     .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_2
 
-    .end local v1           #e:Ljava/lang/Exception;
+    .end local v1    # "e":Ljava/lang/Exception;
     :cond_3
     :goto_4
     move v6, v10
@@ -1757,36 +1757,36 @@
     goto :goto_2
 
     .line 282
-    .end local v4           #out:Ljava/io/FileOutputStream;
-    .restart local v0       #buf:[B
-    .restart local v3       #numread:I
-    .restart local v5       #out:Ljava/io/FileOutputStream;
+    .end local v4    # "out":Ljava/io/FileOutputStream;
+    .restart local v0    # "buf":[B
+    .restart local v3    # "numread":I
+    .restart local v5    # "out":Ljava/io/FileOutputStream;
     :catch_1
     move-exception v1
 
     .line 284
-    .local v1, e:Ljava/io/IOException;
+    .local v1, "e":Ljava/io/IOException;
     invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
 
     goto :goto_1
 
     .line 282
-    .end local v0           #buf:[B
-    .end local v3           #numread:I
-    .end local v5           #out:Ljava/io/FileOutputStream;
-    .local v1, e:Ljava/lang/Exception;
-    .restart local v4       #out:Ljava/io/FileOutputStream;
+    .end local v0    # "buf":[B
+    .end local v3    # "numread":I
+    .end local v5    # "out":Ljava/io/FileOutputStream;
+    .local v1, "e":Ljava/lang/Exception;
+    .restart local v4    # "out":Ljava/io/FileOutputStream;
     :catch_2
     move-exception v1
 
     .line 284
-    .local v1, e:Ljava/io/IOException;
+    .local v1, "e":Ljava/io/IOException;
     invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
 
     goto :goto_4
 
     .line 277
-    .end local v1           #e:Ljava/io/IOException;
+    .end local v1    # "e":Ljava/io/IOException;
     :catchall_0
     move-exception v6
 
@@ -1809,22 +1809,22 @@
     move-exception v1
 
     .line 284
-    .restart local v1       #e:Ljava/io/IOException;
+    .restart local v1    # "e":Ljava/io/IOException;
     invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
 
     goto :goto_6
 
     .line 277
-    .end local v1           #e:Ljava/io/IOException;
-    .end local v4           #out:Ljava/io/FileOutputStream;
-    .restart local v5       #out:Ljava/io/FileOutputStream;
+    .end local v1    # "e":Ljava/io/IOException;
+    .end local v4    # "out":Ljava/io/FileOutputStream;
+    .restart local v5    # "out":Ljava/io/FileOutputStream;
     :catchall_1
     move-exception v6
 
     move-object v4, v5
 
-    .end local v5           #out:Ljava/io/FileOutputStream;
-    .restart local v4       #out:Ljava/io/FileOutputStream;
+    .end local v5    # "out":Ljava/io/FileOutputStream;
+    .restart local v4    # "out":Ljava/io/FileOutputStream;
     goto :goto_5
 
     .line 268
@@ -1838,7 +1838,7 @@
 
 .method static setCallbackRef(Lcom/fusepowered/m1/android/MRaid$Finished;)V
     .locals 1
-    .parameter "callback"
+    .param p0, "callback"    # Lcom/fusepowered/m1/android/MRaid$Finished;
 
     .prologue
     .line 96
@@ -1854,8 +1854,8 @@
 
 .method static storeMraidUrl(Landroid/content/Context;Ljava/lang/String;)Z
     .locals 4
-    .parameter "context"
-    .parameter "url"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "url"    # Ljava/lang/String;
 
     .prologue
     const/4 v3, 0x0
@@ -1875,13 +1875,13 @@
     move-result-object v1
 
     .line 153
-    .local v1, prefs:Landroid/content/SharedPreferences;
+    .local v1, "prefs":Landroid/content/SharedPreferences;
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
     .line 154
-    .local v0, editor:Landroid/content/SharedPreferences$Editor;
+    .local v0, "editor":Landroid/content/SharedPreferences$Editor;
     const-string v2, "KEY_MMJS_URL"
 
     invoke-interface {v0, v2, p1}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
@@ -1893,8 +1893,8 @@
     const/4 v2, 0x1
 
     .line 158
-    .end local v0           #editor:Landroid/content/SharedPreferences$Editor;
-    .end local v1           #prefs:Landroid/content/SharedPreferences;
+    .end local v0    # "editor":Landroid/content/SharedPreferences$Editor;
+    .end local v1    # "prefs":Landroid/content/SharedPreferences;
     :goto_0
     return v2
 

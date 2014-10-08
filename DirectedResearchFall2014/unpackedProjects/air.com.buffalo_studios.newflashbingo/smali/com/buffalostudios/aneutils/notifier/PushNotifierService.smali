@@ -19,7 +19,7 @@
 # virtual methods
 .method protected getSenderIds(Landroid/content/Context;)[Ljava/lang/String;
     .locals 1
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     .line 15
@@ -32,8 +32,8 @@
 
 .method protected onError(Landroid/content/Context;Ljava/lang/String;)V
     .locals 0
-    .parameter "context"
-    .parameter "errorId"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "errorId"    # Ljava/lang/String;
 
     .prologue
     .line 20
@@ -45,8 +45,8 @@
 
 .method protected onMessage(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 0
-    .parameter "context"
-    .parameter "intent"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
     .line 25
@@ -58,8 +58,8 @@
 
 .method protected onRegistered(Landroid/content/Context;Ljava/lang/String;)V
     .locals 0
-    .parameter "context"
-    .parameter "registrationId"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "registrationId"    # Ljava/lang/String;
 
     .prologue
     .line 30
@@ -71,8 +71,8 @@
 
 .method protected onUnregistered(Landroid/content/Context;Ljava/lang/String;)V
     .locals 0
-    .parameter "context"
-    .parameter "registrationId"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "registrationId"    # Ljava/lang/String;
 
     .prologue
     .line 35

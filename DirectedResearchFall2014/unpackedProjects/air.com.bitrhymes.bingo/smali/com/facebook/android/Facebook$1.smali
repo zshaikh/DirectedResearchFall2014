@@ -26,8 +26,6 @@
 # direct methods
 .method constructor <init>(Lcom/facebook/android/Facebook;Lcom/facebook/android/Facebook$DialogListener;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 1
@@ -45,9 +43,9 @@
 # virtual methods
 .method public call(Lcom/facebook/Session;Lcom/facebook/SessionState;Ljava/lang/Exception;)V
     .locals 2
-    .parameter "callbackSession"
-    .parameter "state"
-    .parameter "exception"
+    .param p1, "callbackSession"    # Lcom/facebook/Session;
+    .param p2, "state"    # Lcom/facebook/SessionState;
+    .param p3, "exception"    # Ljava/lang/Exception;
 
     .prologue
     .line 304
@@ -55,7 +53,7 @@
 
     iget-object v1, p0, Lcom/facebook/android/Facebook$1;->val$listener:Lcom/facebook/android/Facebook$DialogListener;
 
-    #calls: Lcom/facebook/android/Facebook;->onSessionCallback(Lcom/facebook/Session;Lcom/facebook/SessionState;Ljava/lang/Exception;Lcom/facebook/android/Facebook$DialogListener;)V
+    # invokes: Lcom/facebook/android/Facebook;->onSessionCallback(Lcom/facebook/Session;Lcom/facebook/SessionState;Ljava/lang/Exception;Lcom/facebook/android/Facebook$DialogListener;)V
     invoke-static {v0, p1, p2, p3, v1}, Lcom/facebook/android/Facebook;->access$11(Lcom/facebook/android/Facebook;Lcom/facebook/Session;Lcom/facebook/SessionState;Ljava/lang/Exception;Lcom/facebook/android/Facebook$DialogListener;)V
 
     .line 305

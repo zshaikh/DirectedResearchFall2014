@@ -6,24 +6,23 @@
 
 
 # static fields
-#the value of this static final field might be set in the static constructor
-.field static final synthetic $assertionsDisabled:Z = false
+.field static final synthetic $assertionsDisabled:Z
 
 .field static final ACCESS_TOKEN_KEY:Ljava/lang/String; = "access_token"
 
-.field private static final ALREADY_EXPIRED_EXPIRATION_TIME:Ljava/util/Date; = null
+.field private static final ALREADY_EXPIRED_EXPIRATION_TIME:Ljava/util/Date;
 
-.field private static final DEFAULT_ACCESS_TOKEN_SOURCE:Lcom/facebook/AccessTokenSource; = null
+.field private static final DEFAULT_ACCESS_TOKEN_SOURCE:Lcom/facebook/AccessTokenSource;
 
-.field private static final DEFAULT_EXPIRATION_TIME:Ljava/util/Date; = null
+.field private static final DEFAULT_EXPIRATION_TIME:Ljava/util/Date;
 
-.field private static final DEFAULT_LAST_REFRESH_TIME:Ljava/util/Date; = null
+.field private static final DEFAULT_LAST_REFRESH_TIME:Ljava/util/Date;
 
 .field static final EXPIRES_IN_KEY:Ljava/lang/String; = "expires_in"
 
-.field private static final MAX_DATE:Ljava/util/Date; = null
+.field private static final MAX_DATE:Ljava/util/Date;
 
-.field private static final MIN_DATE:Ljava/util/Date; = null
+.field private static final MIN_DATE:Ljava/util/Date;
 
 .field private static final serialVersionUID:J = 0x1L
 
@@ -68,7 +67,7 @@
 
     new-instance v0, Ljava/util/Date;
 
-    const-wide/high16 v1, -0x8000
+    const-wide/high16 v1, -0x8000000000000000L
 
     invoke-direct {v0, v1, v2}, Ljava/util/Date;-><init>(J)V
 

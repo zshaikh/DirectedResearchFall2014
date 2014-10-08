@@ -114,9 +114,9 @@
 
 .method public parseResponse(Lcom/fusepowered/util/Response;Lcom/fusepowered/util/ActionType;Ljava/lang/String;)Z
     .locals 2
-    .parameter "response"
-    .parameter "actionType"
-    .parameter "gameDataRequestId"
+    .param p1, "response"    # Lcom/fusepowered/util/Response;
+    .param p2, "actionType"    # Lcom/fusepowered/util/ActionType;
+    .param p3, "gameDataRequestId"    # Ljava/lang/String;
 
     .prologue
     .line 15
@@ -128,7 +128,7 @@
     move-result-object v0
 
     .line 17
-    .local v0, responseXml:Ljava/lang/String;
+    .local v0, "responseXml":Ljava/lang/String;
     invoke-static {v0}, Lcom/fusepowered/util/StringUtil;->isEmpty(Ljava/lang/String;)Z
 
     move-result v1
@@ -146,7 +146,7 @@
     move-result v1
 
     .line 23
-    .end local v0           #responseXml:Ljava/lang/String;
+    .end local v0    # "responseXml":Ljava/lang/String;
     :goto_0
     return v1
 

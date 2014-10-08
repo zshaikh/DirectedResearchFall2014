@@ -16,7 +16,6 @@
 
 .method public static final commaSeparatedArray(Ljava/util/ArrayList;)Ljava/lang/String;
     .locals 7
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -30,20 +29,20 @@
 
     .prologue
     .line 19
-    .local p0, keys:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
+    .local p0, "keys":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     const-string v4, ""
 
     .line 20
-    .local v4, str:Ljava/lang/String;
+    .local v4, "str":Ljava/lang/String;
     const/4 v0, 0x0
 
     .line 21
-    .local v0, i:I
+    .local v0, "i":I
     invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
 
-    .local v2, i$:Ljava/util/Iterator;
+    .local v2, "i$":Ljava/util/Iterator;
     :goto_0
     invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
@@ -58,11 +57,11 @@
     check-cast v3, Ljava/lang/String;
 
     .line 22
-    .local v3, keyName:Ljava/lang/String;
+    .local v3, "keyName":Ljava/lang/String;
     add-int/lit8 v1, v0, 0x1
 
-    .end local v0           #i:I
-    .local v1, i:I
+    .end local v0    # "i":I
+    .local v1, "i":I
     if-eqz v0, :cond_0
 
     .line 23
@@ -105,26 +104,26 @@
     move v0, v1
 
     .line 26
-    .end local v1           #i:I
-    .restart local v0       #i:I
+    .end local v1    # "i":I
+    .restart local v0    # "i":I
     goto :goto_0
 
     .line 28
-    .end local v3           #keyName:Ljava/lang/String;
+    .end local v3    # "keyName":Ljava/lang/String;
     :cond_1
     return-object v4
 .end method
 
 .method public static isEmpty(Ljava/lang/String;)Z
     .locals 3
-    .parameter "str"
+    .param p0, "str"    # Ljava/lang/String;
 
     .prologue
     .line 8
     const/4 v0, 0x0
 
     .line 10
-    .local v0, isEmpty:Z
+    .local v0, "isEmpty":Z
     if-eqz p0, :cond_0
 
     invoke-virtual {p0}, Ljava/lang/String;->trim()Ljava/lang/String;

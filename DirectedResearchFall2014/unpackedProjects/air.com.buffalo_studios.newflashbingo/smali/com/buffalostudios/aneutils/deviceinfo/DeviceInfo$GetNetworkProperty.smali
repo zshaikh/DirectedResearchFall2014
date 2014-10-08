@@ -42,7 +42,7 @@
     const/4 v1, 0x0
 
     .line 250
-    .local v1, en:Ljava/util/Enumeration;,"Ljava/util/Enumeration<Ljava/net/NetworkInterface;>;"
+    .local v1, "en":Ljava/util/Enumeration;, "Ljava/util/Enumeration<Ljava/net/NetworkInterface;>;"
     :try_start_0
     invoke-static {}, Ljava/net/NetworkInterface;->getNetworkInterfaces()Ljava/util/Enumeration;
     :try_end_0
@@ -67,7 +67,7 @@
     move-exception v0
 
     .line 257
-    .local v0, e:Ljava/net/SocketException;
+    .local v0, "e":Ljava/net/SocketException;
     const-string v6, "N/A"
 
     move-object v6, v7
@@ -75,7 +75,7 @@
     goto :goto_0
 
     .line 262
-    .end local v0           #e:Ljava/net/SocketException;
+    .end local v0    # "e":Ljava/net/SocketException;
     :cond_0
     invoke-interface {v1}, Ljava/util/Enumeration;->nextElement()Ljava/lang/Object;
 
@@ -84,13 +84,13 @@
     check-cast v4, Ljava/net/NetworkInterface;
 
     .line 265
-    .local v4, intf:Ljava/net/NetworkInterface;
+    .local v4, "intf":Ljava/net/NetworkInterface;
     invoke-virtual {v4}, Ljava/net/NetworkInterface;->getInetAddresses()Ljava/util/Enumeration;
 
     move-result-object v2
 
     .line 267
-    .local v2, enumIpAddr:Ljava/util/Enumeration;,"Ljava/util/Enumeration<Ljava/net/InetAddress;>;"
+    .local v2, "enumIpAddr":Ljava/util/Enumeration;, "Ljava/util/Enumeration<Ljava/net/InetAddress;>;"
     :cond_1
     invoke-interface {v2}, Ljava/util/Enumeration;->hasMoreElements()Z
 
@@ -99,8 +99,8 @@
     if-nez v6, :cond_3
 
     .line 260
-    .end local v2           #enumIpAddr:Ljava/util/Enumeration;,"Ljava/util/Enumeration<Ljava/net/InetAddress;>;"
-    .end local v4           #intf:Ljava/net/NetworkInterface;
+    .end local v2    # "enumIpAddr":Ljava/util/Enumeration;, "Ljava/util/Enumeration<Ljava/net/InetAddress;>;"
+    .end local v4    # "intf":Ljava/net/NetworkInterface;
     :cond_2
     invoke-interface {v1}, Ljava/util/Enumeration;->hasMoreElements()Z
 
@@ -116,8 +116,8 @@
     goto :goto_0
 
     .line 269
-    .restart local v2       #enumIpAddr:Ljava/util/Enumeration;,"Ljava/util/Enumeration<Ljava/net/InetAddress;>;"
-    .restart local v4       #intf:Ljava/net/NetworkInterface;
+    .restart local v2    # "enumIpAddr":Ljava/util/Enumeration;, "Ljava/util/Enumeration<Ljava/net/InetAddress;>;"
+    .restart local v4    # "intf":Ljava/net/NetworkInterface;
     :cond_3
     invoke-interface {v2}, Ljava/util/Enumeration;->nextElement()Ljava/lang/Object;
 
@@ -126,13 +126,13 @@
     check-cast v3, Ljava/net/InetAddress;
 
     .line 272
-    .local v3, inetAddress:Ljava/net/InetAddress;
+    .local v3, "inetAddress":Ljava/net/InetAddress;
     invoke-virtual {v3}, Ljava/net/InetAddress;->getHostAddress()Ljava/lang/String;
 
     move-result-object v5
 
     .line 274
-    .local v5, ipv4:Ljava/lang/String;
+    .local v5, "ipv4":Ljava/lang/String;
     invoke-virtual {v3}, Ljava/net/InetAddress;->isLoopbackAddress()Z
 
     move-result v6
@@ -153,7 +153,7 @@
 
 .method private getNetworkProperty(I)Ljava/lang/String;
     .locals 1
-    .parameter "propertyId"
+    .param p1, "propertyId"    # I
 
     .prologue
     .line 237
@@ -182,7 +182,7 @@
 
 .method private onError(Ljava/lang/String;)V
     .locals 0
-    .parameter "message"
+    .param p1, "message"    # Ljava/lang/String;
 
     .prologue
     .line 285
@@ -193,8 +193,8 @@
 # virtual methods
 .method public call(Lcom/adobe/fre/FREContext;[Lcom/adobe/fre/FREObject;)Lcom/adobe/fre/FREObject;
     .locals 5
-    .parameter "context"
-    .parameter "args"
+    .param p1, "context"    # Lcom/adobe/fre/FREContext;
+    .param p2, "args"    # [Lcom/adobe/fre/FREObject;
 
     .prologue
     .line 218
@@ -207,13 +207,13 @@
     move-result v2
 
     .line 220
-    .local v2, propertyId:I
+    .local v2, "propertyId":I
     invoke-direct {p0, v2}, Lcom/buffalostudios/aneutils/deviceinfo/DeviceInfo$GetNetworkProperty;->getNetworkProperty(I)Ljava/lang/String;
 
     move-result-object v1
 
     .line 221
-    .local v1, property:Ljava/lang/String;
+    .local v1, "property":Ljava/lang/String;
     if-nez v1, :cond_0
 
     .line 222
@@ -228,7 +228,7 @@
     const/4 v3, 0x0
 
     .line 228
-    .local v3, result:Lcom/adobe/fre/FREObject;
+    .local v3, "result":Lcom/adobe/fre/FREObject;
     :try_start_0
     invoke-static {v1}, Lcom/adobe/fre/FREObject;->newObject(Ljava/lang/String;)Lcom/adobe/fre/FREObject;
     :try_end_0
@@ -247,7 +247,7 @@
     move-exception v0
 
     .line 230
-    .local v0, e:Lcom/adobe/fre/FREWrongThreadException;
+    .local v0, "e":Lcom/adobe/fre/FREWrongThreadException;
     const-string v4, "ERROR: FREWrongThreadException in DeviceInfoGetNetworkProperty#call"
 
     invoke-direct {p0, v4}, Lcom/buffalostudios/aneutils/deviceinfo/DeviceInfo$GetNetworkProperty;->onError(Ljava/lang/String;)V

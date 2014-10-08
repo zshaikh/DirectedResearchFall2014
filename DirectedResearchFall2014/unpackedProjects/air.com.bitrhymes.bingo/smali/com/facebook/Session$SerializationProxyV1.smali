@@ -38,12 +38,12 @@
 # direct methods
 .method constructor <init>(Ljava/lang/String;Lcom/facebook/SessionState;Lcom/facebook/AccessToken;Ljava/util/Date;ZLcom/facebook/Session$AuthorizationRequest;)V
     .locals 0
-    .parameter "applicationId"
-    .parameter "state"
-    .parameter "tokenInfo"
-    .parameter "lastAttemptedTokenExtendDate"
-    .parameter "shouldAutoPublish"
-    .parameter "pendingAuthorizationRequest"
+    .param p1, "applicationId"    # Ljava/lang/String;
+    .param p2, "state"    # Lcom/facebook/SessionState;
+    .param p3, "tokenInfo"    # Lcom/facebook/AccessToken;
+    .param p4, "lastAttemptedTokenExtendDate"    # Ljava/util/Date;
+    .param p5, "shouldAutoPublish"    # Z
+    .param p6, "pendingAuthorizationRequest"    # Lcom/facebook/Session$AuthorizationRequest;
 
     .prologue
     .line 172

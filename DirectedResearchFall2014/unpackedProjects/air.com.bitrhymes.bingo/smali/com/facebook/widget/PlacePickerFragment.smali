@@ -85,7 +85,7 @@
 
 .method public constructor <init>(Landroid/os/Bundle;)V
     .locals 3
-    .parameter "args"
+    .param p1, "args"    # Landroid/os/Bundle;
 
     .prologue
     .line 114
@@ -125,7 +125,6 @@
 
 .method static synthetic access$0(Lcom/facebook/widget/PlacePickerFragment;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 443
@@ -136,12 +135,11 @@
 
 .method private createRequest(Landroid/location/Location;IILjava/lang/String;Ljava/util/Set;Lcom/facebook/Session;)Lcom/facebook/Request;
     .locals 13
-    .parameter "location"
-    .parameter "radiusInMeters"
-    .parameter "resultsLimit"
-    .parameter "searchText"
-    .parameter
-    .parameter "session"
+    .param p1, "location"    # Landroid/location/Location;
+    .param p2, "radiusInMeters"    # I
+    .param p3, "resultsLimit"    # I
+    .param p4, "searchText"    # Ljava/lang/String;
+    .param p6, "session"    # Lcom/facebook/Session;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -161,7 +159,7 @@
     .prologue
     .line 390
     .line 391
-    .local p5, extraFields:Ljava/util/Set;,"Ljava/util/Set<Ljava/lang/String;>;"
+    .local p5, "extraFields":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     const/4 v7, 0x0
 
     move-object/from16 v2, p6
@@ -180,7 +178,7 @@
     move-result-object v11
 
     .line 393
-    .local v11, request:Lcom/facebook/Request;
+    .local v11, "request":Lcom/facebook/Request;
     new-instance v8, Ljava/util/HashSet;
 
     move-object v0, v8
@@ -190,7 +188,7 @@
     invoke-direct {v0, v1}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
 
     .line 394
-    .local v8, fields:Ljava/util/Set;,"Ljava/util/Set<Ljava/lang/String;>;"
+    .local v8, "fields":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     const/4 v2, 0x5
 
     new-array v12, v2, [Ljava/lang/String;
@@ -231,7 +229,7 @@
     aput-object v3, v12, v2
 
     .line 401
-    .local v12, requiredFields:[Ljava/lang/String;
+    .local v12, "requiredFields":[Ljava/lang/String;
     invoke-static {v12}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v2
@@ -246,7 +244,7 @@
     move-result-object v10
 
     .line 404
-    .local v10, pictureField:Ljava/lang/String;
+    .local v10, "pictureField":Ljava/lang/String;
     if-eqz v10, :cond_0
 
     .line 405
@@ -259,7 +257,7 @@
     move-result-object v9
 
     .line 409
-    .local v9, parameters:Landroid/os/Bundle;
+    .local v9, "parameters":Landroid/os/Bundle;
     const-string v2, "fields"
 
     const-string v3, ","
@@ -287,7 +285,7 @@
     invoke-direct {v0}, Ljava/util/Timer;-><init>()V
 
     .line 433
-    .local v0, timer:Ljava/util/Timer;
+    .local v0, "timer":Ljava/util/Timer;
     new-instance v1, Lcom/facebook/widget/PlacePickerFragment$2;
 
     invoke-direct {v1, p0}, Lcom/facebook/widget/PlacePickerFragment$2;-><init>(Lcom/facebook/widget/PlacePickerFragment;)V
@@ -323,7 +321,7 @@
     invoke-direct {v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
     .line 446
-    .local v0, handler:Landroid/os/Handler;
+    .local v0, "handler":Landroid/os/Handler;
     new-instance v1, Lcom/facebook/widget/PlacePickerFragment$3;
 
     invoke-direct {v1, p0}, Lcom/facebook/widget/PlacePickerFragment$3;-><init>(Lcom/facebook/widget/PlacePickerFragment;)V
@@ -331,7 +329,7 @@
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     .line 474
-    .end local v0           #handler:Landroid/os/Handler;
+    .end local v0    # "handler":Landroid/os/Handler;
     :goto_0
     return-void
 
@@ -351,7 +349,7 @@
 
 .method private setPlacePickerSettingsFromBundle(Landroid/os/Bundle;)V
     .locals 5
-    .parameter "inState"
+    .param p1, "inState"    # Landroid/os/Bundle;
 
     .prologue
     const-string v4, "com.facebook.widget.PlacePickerFragment.SearchText"
@@ -421,11 +419,11 @@
     check-cast v0, Landroid/location/Location;
 
     .line 425
-    .local v0, location:Landroid/location/Location;
+    .local v0, "location":Landroid/location/Location;
     invoke-virtual {p0, v0}, Lcom/facebook/widget/PlacePickerFragment;->setLocation(Landroid/location/Location;)V
 
     .line 427
-    .end local v0           #location:Landroid/location/Location;
+    .end local v0    # "location":Landroid/location/Location;
     :cond_1
     const-string v1, "com.facebook.widget.PlacePickerFragment.ShowSearchBox"
 
@@ -471,7 +469,7 @@
     invoke-direct {v0, p0, p0, v1}, Lcom/facebook/widget/PlacePickerFragment$1;-><init>(Lcom/facebook/widget/PlacePickerFragment;Lcom/facebook/widget/PickerFragment;Landroid/content/Context;)V
 
     .line 372
-    .local v0, adapter:Lcom/facebook/widget/PickerFragment$PickerFragmentAdapter;,"Lcom/facebook/widget/PickerFragment<Lcom/facebook/model/GraphPlace;>.PickerFragmentAdapter<Lcom/facebook/model/GraphPlace;>;"
+    .local v0, "adapter":Lcom/facebook/widget/PickerFragment$PickerFragmentAdapter;, "Lcom/facebook/widget/PickerFragment<Lcom/facebook/model/GraphPlace;>.PickerFragmentAdapter<Lcom/facebook/model/GraphPlace;>;"
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/facebook/widget/PickerFragment$PickerFragmentAdapter;->setShowCheckbox(Z)V
@@ -574,7 +572,7 @@
 
 .method getRequestForLoadData(Lcom/facebook/Session;)Lcom/facebook/Request;
     .locals 7
-    .parameter "session"
+    .param p1, "session"    # Lcom/facebook/Session;
 
     .prologue
     .line 317
@@ -629,7 +627,7 @@
     move-result-object v0
 
     .line 238
-    .local v0, selection:Ljava/util/Collection;,"Ljava/util/Collection<Lcom/facebook/model/GraphPlace;>;"
+    .local v0, "selection":Ljava/util/Collection;, "Ljava/util/Collection<Lcom/facebook/model/GraphPlace;>;"
     if-eqz v0, :cond_0
 
     invoke-interface {v0}, Ljava/util/Collection;->isEmpty()Z
@@ -646,7 +644,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/facebook/widget/PlacePickerFragment;
     check-cast p0, Lcom/facebook/model/GraphPlace;
 
     move-object v1, p0
@@ -654,7 +652,7 @@
     :goto_0
     return-object v1
 
-    .restart local p0
+    .restart local p0    # "this":Lcom/facebook/widget/PlacePickerFragment;
     :cond_0
     const/4 v1, 0x0
 
@@ -663,7 +661,7 @@
 
 .method logAppEvents(Z)V
     .locals 5
-    .parameter "doneButtonClicked"
+    .param p1, "doneButtonClicked"    # Z
 
     .prologue
     .line 327
@@ -680,13 +678,13 @@
     move-result-object v0
 
     .line 328
-    .local v0, logger:Lcom/facebook/AppEventsLogger;
+    .local v0, "logger":Lcom/facebook/AppEventsLogger;
     new-instance v2, Landroid/os/Bundle;
 
     invoke-direct {v2}, Landroid/os/Bundle;-><init>()V
 
     .line 333
-    .local v2, parameters:Landroid/os/Bundle;
+    .local v2, "parameters":Landroid/os/Bundle;
     if-eqz p1, :cond_0
 
     const-string v3, "Completed"
@@ -694,7 +692,7 @@
     move-object v1, v3
 
     .line 335
-    .local v1, outcome:Ljava/lang/String;
+    .local v1, "outcome":Ljava/lang/String;
     :goto_0
     const-string v3, "fb_dialog_outcome"
 
@@ -725,7 +723,7 @@
     return-void
 
     .line 334
-    .end local v1           #outcome:Ljava/lang/String;
+    .end local v1    # "outcome":Ljava/lang/String;
     :cond_0
     const-string v3, "Unknown"
 
@@ -734,7 +732,7 @@
     goto :goto_0
 
     .line 336
-    .restart local v1       #outcome:Ljava/lang/String;
+    .restart local v1    # "outcome":Ljava/lang/String;
     :cond_1
     const/4 v4, 0x0
 
@@ -743,7 +741,7 @@
 
 .method public onAttach(Landroid/app/Activity;)V
     .locals 3
-    .parameter "activity"
+    .param p1, "activity"    # Landroid/app/Activity;
 
     .prologue
     .line 282
@@ -768,7 +766,7 @@
     check-cast v0, Landroid/view/inputmethod/InputMethodManager;
 
     .line 286
-    .local v0, imm:Landroid/view/inputmethod/InputMethodManager;
+    .local v0, "imm":Landroid/view/inputmethod/InputMethodManager;
     iget-object v1, p0, Lcom/facebook/widget/PlacePickerFragment;->searchBox:Landroid/widget/EditText;
 
     const/4 v2, 0x1
@@ -776,7 +774,7 @@
     invoke-virtual {v0, v1, v2}, Landroid/view/inputmethod/InputMethodManager;->showSoftInput(Landroid/view/View;I)Z
 
     .line 288
-    .end local v0           #imm:Landroid/view/inputmethod/InputMethodManager;
+    .end local v0    # "imm":Landroid/view/inputmethod/InputMethodManager;
     :cond_0
     return-void
 .end method
@@ -807,7 +805,7 @@
     check-cast v0, Landroid/view/inputmethod/InputMethodManager;
 
     .line 296
-    .local v0, imm:Landroid/view/inputmethod/InputMethodManager;
+    .local v0, "imm":Landroid/view/inputmethod/InputMethodManager;
     iget-object v1, p0, Lcom/facebook/widget/PlacePickerFragment;->searchBox:Landroid/widget/EditText;
 
     invoke-virtual {v1}, Landroid/widget/EditText;->getWindowToken()Landroid/os/IBinder;
@@ -819,16 +817,16 @@
     invoke-virtual {v0, v1, v2}, Landroid/view/inputmethod/InputMethodManager;->hideSoftInputFromWindow(Landroid/os/IBinder;I)Z
 
     .line 298
-    .end local v0           #imm:Landroid/view/inputmethod/InputMethodManager;
+    .end local v0    # "imm":Landroid/view/inputmethod/InputMethodManager;
     :cond_0
     return-void
 .end method
 
 .method public onInflate(Landroid/app/Activity;Landroid/util/AttributeSet;Landroid/os/Bundle;)V
     .locals 4
-    .parameter "activity"
-    .parameter "attrs"
-    .parameter "savedInstanceState"
+    .param p1, "activity"    # Landroid/app/Activity;
+    .param p2, "attrs"    # Landroid/util/AttributeSet;
+    .param p3, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
     const/4 v3, 0x1
@@ -844,7 +842,7 @@
     move-result-object v0
 
     .line 251
-    .local v0, a:Landroid/content/res/TypedArray;
+    .local v0, "a":Landroid/content/res/TypedArray;
     const/4 v1, 0x0
 
     iget v2, p0, Lcom/facebook/widget/PlacePickerFragment;->radiusInMeters:I
@@ -914,8 +912,8 @@
 
 .method public onSearchBoxTextChanged(Ljava/lang/String;Z)V
     .locals 1
-    .parameter "searchText"
-    .parameter "forceReloadEventIfSameText"
+    .param p1, "searchText"    # Ljava/lang/String;
+    .param p2, "forceReloadEventIfSameText"    # Z
 
     .prologue
     .line 212
@@ -971,7 +969,7 @@
 
 .method saveSettingsToBundle(Landroid/os/Bundle;)V
     .locals 2
-    .parameter "outState"
+    .param p1, "outState"    # Landroid/os/Bundle;
 
     .prologue
     .line 301
@@ -1018,7 +1016,7 @@
 
 .method public setLocation(Landroid/location/Location;)V
     .locals 0
-    .parameter "location"
+    .param p1, "location"    # Landroid/location/Location;
 
     .prologue
     .line 133
@@ -1030,7 +1028,7 @@
 
 .method public setRadiusInMeters(I)V
     .locals 0
-    .parameter "radiusInMeters"
+    .param p1, "radiusInMeters"    # I
 
     .prologue
     .line 151
@@ -1042,7 +1040,7 @@
 
 .method public setResultsLimit(I)V
     .locals 0
-    .parameter "resultsLimit"
+    .param p1, "resultsLimit"    # I
 
     .prologue
     .line 169
@@ -1054,7 +1052,7 @@
 
 .method public setSearchText(Ljava/lang/String;)V
     .locals 1
-    .parameter "searchText"
+    .param p1, "searchText"    # Ljava/lang/String;
 
     .prologue
     .line 190
@@ -1088,7 +1086,7 @@
 
 .method public setSettingsFromBundle(Landroid/os/Bundle;)V
     .locals 0
-    .parameter "inState"
+    .param p1, "inState"    # Landroid/os/Bundle;
 
     .prologue
     .line 242
@@ -1103,7 +1101,7 @@
 
 .method setupViews(Landroid/view/ViewGroup;)V
     .locals 7
-    .parameter "view"
+    .param p1, "view"    # Landroid/view/ViewGroup;
 
     .prologue
     const/4 v6, 0x0
@@ -1131,7 +1129,7 @@
     check-cast v0, Landroid/widget/ListView;
 
     .line 266
-    .local v0, listView:Landroid/widget/ListView;
+    .local v0, "listView":Landroid/widget/ListView;
     invoke-virtual {p0}, Lcom/facebook/widget/PlacePickerFragment;->getActivity()Landroid/support/v4/app/FragmentActivity;
 
     move-result-object v2
@@ -1155,7 +1153,7 @@
     move-result-object v1
 
     .line 269
-    .local v1, searchHeaderView:Landroid/view/View;
+    .local v1, "searchHeaderView":Landroid/view/View;
     invoke-virtual {v0, v1, v6, v5}, Landroid/widget/ListView;->addHeaderView(Landroid/view/View;Ljava/lang/Object;Z)V
 
     .line 271
@@ -1201,8 +1199,8 @@
     invoke-virtual {v2, v3}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
     .line 278
-    .end local v0           #listView:Landroid/widget/ListView;
-    .end local v1           #searchHeaderView:Landroid/view/View;
+    .end local v0    # "listView":Landroid/widget/ListView;
+    .end local v1    # "searchHeaderView":Landroid/view/View;
     :cond_0
     return-void
 .end method

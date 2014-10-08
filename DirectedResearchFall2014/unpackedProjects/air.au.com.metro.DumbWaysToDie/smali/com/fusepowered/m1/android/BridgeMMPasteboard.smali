@@ -19,7 +19,6 @@
 # virtual methods
 .method public getPasteboardContents(Ljava/util/HashMap;)Lcom/fusepowered/m1/android/MMJSResponse;
     .locals 2
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -34,7 +33,7 @@
 
     .prologue
     .line 20
-    .local p1, arguments:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p1, "arguments":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     iget-object v1, p0, Lcom/fusepowered/m1/android/BridgeMMPasteboard;->contextRef:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -44,7 +43,7 @@
     check-cast v0, Landroid/content/Context;
 
     .line 21
-    .local v0, context:Landroid/content/Context;
+    .local v0, "context":Landroid/content/Context;
     if-eqz v0, :cond_0
 
     .line 23
@@ -68,7 +67,6 @@
 
 .method public writeToPasteboard(Ljava/util/HashMap;)Lcom/fusepowered/m1/android/MMJSResponse;
     .locals 2
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -83,7 +81,7 @@
 
     .prologue
     .line 59
-    .local p1, arguments:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p1, "arguments":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     iget-object v1, p0, Lcom/fusepowered/m1/android/BridgeMMPasteboard;->contextRef:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -93,7 +91,7 @@
     check-cast v0, Landroid/content/Context;
 
     .line 60
-    .local v0, context:Landroid/content/Context;
+    .local v0, "context":Landroid/content/Context;
     if-eqz v0, :cond_0
 
     .line 62

@@ -48,9 +48,6 @@
 
 .method public static AddImage(Landroid/app/Application;Landroid/graphics/Bitmap;Z)Z
     .locals 7
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const/4 v6, 0x1
@@ -198,10 +195,6 @@
 
 .method private static SaveImage(Ljava/lang/String;Landroid/content/ContentResolver;Landroid/graphics/Bitmap;Z)Ljava/lang/String;
     .locals 11
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const/4 v10, 0x0
@@ -297,9 +290,9 @@
     move-result-wide v3
 
     .line 227
-    const/high16 v5, 0x43a0
+    const/high16 v5, 0x43a00000
 
-    const/high16 v6, 0x4370
+    const/high16 v6, 0x43700000
 
     const/4 v7, 0x1
 
@@ -314,9 +307,9 @@
     move-result-object v2
 
     .line 228
-    const/high16 v5, 0x4248
+    const/high16 v5, 0x42480000
 
-    const/high16 v6, 0x4248
+    const/high16 v6, 0x42480000
 
     const/4 v7, 0x3
 
@@ -326,8 +319,8 @@
 
     invoke-static/range {v0 .. v7}, Lcom/adobe/air/AndroidMediaManager;->SaveThumbnail(Ljava/lang/String;Landroid/content/ContentResolver;Landroid/graphics/Bitmap;JFFI)Landroid/graphics/Bitmap;
     :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
     .line 241
     :try_start_3
@@ -453,13 +446,6 @@
 
 .method private static final SaveThumbnail(Ljava/lang/String;Landroid/content/ContentResolver;Landroid/graphics/Bitmap;JFFI)Landroid/graphics/Bitmap;
     .locals 8
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const/4 v7, 0x0
@@ -667,7 +653,6 @@
 
 .method static synthetic access$100(Lcom/adobe/air/AndroidMediaManager;)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 35
@@ -678,7 +663,6 @@
 
 .method private doCallbackRegistration(Z)V
     .locals 2
-    .parameter
 
     .prologue
     .line 91
@@ -741,7 +725,6 @@
 # virtual methods
 .method public BrowseImage(J)I
     .locals 5
-    .parameter
 
     .prologue
     const/4 v4, 0x2
@@ -826,9 +809,6 @@
 
 .method public onBrowseImageResult(ILandroid/content/Intent;Landroid/app/Activity;)V
     .locals 8
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 360

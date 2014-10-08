@@ -60,8 +60,8 @@
 # virtual methods
 .method public final synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 3
-    .parameter "x0"
-    .parameter "x1"
+    .param p1, "x0"    # Ljava/lang/Object;
+    .param p2, "x1"    # Ljava/lang/Object;
 
     .prologue
     const/4 v2, 0x0
@@ -69,10 +69,10 @@
     .line 229
     check-cast p1, Lcom/vungle/sdk/aa$a;
 
-    .end local p1
+    .end local p1    # "x0":Ljava/lang/Object;
     check-cast p2, Lcom/vungle/sdk/aa$a;
 
-    .end local p2
+    .end local p2    # "x1":Ljava/lang/Object;
     iget-object v0, p1, Lcom/vungle/sdk/aa$a;->a:Ljava/lang/Float;
 
     invoke-virtual {v0}, Ljava/lang/Float;->floatValue()F

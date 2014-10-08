@@ -10,8 +10,8 @@
 # direct methods
 .method public constructor <init>(Ljava/lang/reflect/Field;Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;)V
     .locals 0
-    .parameter "field"
-    .parameter "annMap"
+    .param p1, "field"    # Ljava/lang/reflect/Field;
+    .param p2, "annMap"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;
 
     .prologue
     .line 27
@@ -28,7 +28,7 @@
 # virtual methods
 .method public addOrOverride(Ljava/lang/annotation/Annotation;)V
     .locals 1
-    .parameter "a"
+    .param p1, "a"    # Ljava/lang/annotation/Annotation;
 
     .prologue
     .line 43
@@ -64,7 +64,6 @@
 
 .method public getAnnotation(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<A::",
@@ -77,7 +76,7 @@
 
     .prologue
     .line 64
-    .local p1, acls:Ljava/lang/Class;,"Ljava/lang/Class<TA;>;"
+    .local p1, "acls":Ljava/lang/Class;, "Ljava/lang/Class<TA;>;"
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedField;->_annotations:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;
 
     invoke-virtual {v0, p1}, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;->get(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;
@@ -239,8 +238,8 @@
 
 .method public setValue(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 4
-    .parameter "pojo"
-    .parameter "value"
+    .param p1, "pojo"    # Ljava/lang/Object;
+    .param p2, "value"    # Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/IllegalArgumentException;
@@ -266,7 +265,7 @@
     move-object v0, v1
 
     .line 96
-    .local v0, e:Ljava/lang/IllegalAccessException;
+    .local v0, "e":Ljava/lang/IllegalAccessException;
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -360,7 +359,7 @@
 
 .method public bridge synthetic withAnnotations(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;)Lcom/flurry/org/codehaus/jackson/map/introspect/Annotated;
     .locals 1
-    .parameter "x0"
+    .param p1, "x0"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;
 
     .prologue
     .line 14
@@ -373,7 +372,7 @@
 
 .method public withAnnotations(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;)Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedField;
     .locals 2
-    .parameter "ann"
+    .param p1, "ann"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;
 
     .prologue
     .line 33

@@ -24,7 +24,7 @@
 # direct methods
 .method constructor <init>(Landroid/content/Context;)V
     .locals 0
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     .line 73
@@ -57,7 +57,7 @@
     move-result-object v2
 
     .line 81
-    .local v2, preferences:Landroid/content/SharedPreferences;
+    .local v2, "preferences":Landroid/content/SharedPreferences;
     if-nez v2, :cond_0
 
     .line 82
@@ -74,13 +74,13 @@
     invoke-direct {v1}, Ljava/util/Date;-><init>()V
 
     .line 86
-    .local v1, now:Ljava/util/Date;
+    .local v1, "now":Ljava/util/Date;
     invoke-interface {v2}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
     .line 87
-    .local v0, editor:Landroid/content/SharedPreferences$Editor;
+    .local v0, "editor":Landroid/content/SharedPreferences$Editor;
     const-string v4, "Fiksu.cd2MessageTime"
 
     invoke-virtual {v1}, Ljava/util/Date;->getTime()J
@@ -97,9 +97,9 @@
 
     goto :goto_0
 
-    .end local v0           #editor:Landroid/content/SharedPreferences$Editor;
-    .end local v1           #now:Ljava/util/Date;
-    .end local v2           #preferences:Landroid/content/SharedPreferences;
+    .end local v0    # "editor":Landroid/content/SharedPreferences$Editor;
+    .end local v1    # "now":Ljava/util/Date;
+    .end local v2    # "preferences":Landroid/content/SharedPreferences;
     :catchall_0
     move-exception v4
 

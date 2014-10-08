@@ -48,7 +48,6 @@
 
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 8
-    .parameter
 
     .prologue
     const/16 v7, 0xf
@@ -352,7 +351,7 @@
     invoke-virtual {v0, v7}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
 
     .line 177
-    const/high16 v2, 0x40a0
+    const/high16 v2, 0x40a00000
 
     mul-float/2addr v1, v2
 
@@ -437,11 +436,9 @@
 
 .method private static a(Landroid/widget/ImageView;F)V
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
-    const/high16 v1, 0x4228
+    const/high16 v1, 0x42280000
 
     .line 124
     sget-object v0, Landroid/widget/ImageView$ScaleType;->FIT_CENTER:Landroid/widget/ImageView$ScaleType;
@@ -480,7 +477,6 @@
 
 .method public final a(Z)V
     .locals 2
-    .parameter
 
     .prologue
     .line 192

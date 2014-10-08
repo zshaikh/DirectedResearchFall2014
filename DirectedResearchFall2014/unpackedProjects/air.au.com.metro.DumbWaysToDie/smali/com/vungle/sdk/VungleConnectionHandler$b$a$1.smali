@@ -26,8 +26,6 @@
 # direct methods
 .method constructor <init>(Lcom/vungle/sdk/VungleConnectionHandler$b$a;Lcom/vungle/sdk/VungleConnectionHandler;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 467

@@ -16,9 +16,6 @@
 # direct methods
 .method public constructor <init>(Lcom/adobe/air/AIRWindowThreadedSurfaceView;Landroid/view/SurfaceHolder;Landroid/content/Context;)V
     .locals 2
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const/4 v1, 0x0
@@ -49,8 +46,6 @@
 
 .method static synthetic access$000(Lcom/adobe/air/DrawThread;Lcom/adobe/air/DrawRequest;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 128
@@ -61,7 +56,6 @@
 
 .method static synthetic access$100(Lcom/adobe/air/DrawThread;)Lcom/adobe/air/AIRWindowThreadedSurfaceView;
     .locals 1
-    .parameter
 
     .prologue
     .line 128
@@ -72,7 +66,6 @@
 
 .method private draw(Lcom/adobe/air/DrawRequest;)V
     .locals 12
-    .parameter
 
     .prologue
     .line 200
@@ -134,11 +127,6 @@
 # virtual methods
 .method public requestDraw(IIIILandroid/graphics/Bitmap;)V
     .locals 7
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 176
@@ -179,17 +167,6 @@
 
 .method public requestDraw(IIIILandroid/graphics/Bitmap;IIIIZI)V
     .locals 13
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 184
@@ -270,7 +247,6 @@
 
 .method public setRunning(Z)V
     .locals 1
-    .parameter
 
     .prologue
     .line 192

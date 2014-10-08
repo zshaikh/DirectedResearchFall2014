@@ -69,8 +69,6 @@
 
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()V"
@@ -86,7 +84,7 @@
 
 .method public static valueOf(Ljava/lang/String;)Lcom/fusepowered/util/Model;
     .locals 1
-    .parameter "name"
+    .param p0, "name"    # Ljava/lang/String;
 
     .prologue
     .line 3
@@ -96,7 +94,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "name":Ljava/lang/String;
     check-cast p0, Lcom/fusepowered/util/Model;
 
     return-object p0

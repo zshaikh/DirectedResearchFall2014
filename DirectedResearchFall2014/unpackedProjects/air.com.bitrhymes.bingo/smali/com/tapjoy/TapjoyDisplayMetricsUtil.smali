@@ -14,7 +14,7 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 3
-    .parameter "theContext"
+    .param p1, "theContext"    # Landroid/content/Context;
 
     .prologue
     .line 30
@@ -42,7 +42,7 @@
     check-cast v0, Landroid/view/WindowManager;
 
     .line 35
-    .local v0, windowManager:Landroid/view/WindowManager;
+    .local v0, "windowManager":Landroid/view/WindowManager;
     invoke-interface {v0}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
 
     move-result-object v1

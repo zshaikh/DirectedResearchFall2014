@@ -107,12 +107,6 @@
 
 .method public constructor <init>(Lcom/google/ads/Ad;Landroid/app/Activity;Lcom/google/ads/AdSize;Ljava/lang/String;Landroid/view/ViewGroup;Z)V
     .locals 13
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 211
@@ -536,8 +530,6 @@
 
 .method private a(Lcom/google/ads/f;Ljava/lang/Boolean;)V
     .locals 8
-    .parameter
-    .parameter
 
     .prologue
     .line 816
@@ -606,8 +598,6 @@
 
 .method private a(Ljava/util/List;Ljava/lang/String;)V
     .locals 8
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -673,13 +663,6 @@
 
 .method private a(Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Boolean;Ljava/lang/String;Ljava/lang/String;)V
     .locals 12
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -817,8 +800,6 @@
 
 .method private b(Lcom/google/ads/f;Ljava/lang/Boolean;)V
     .locals 8
-    .parameter
-    .parameter
 
     .prologue
     const/4 v6, 0x0
@@ -1585,7 +1566,6 @@
 
 .method public declared-synchronized a(F)V
     .locals 4
-    .parameter
 
     .prologue
     .line 1049
@@ -1595,7 +1575,7 @@
     iget-wide v0, p0, Lcom/google/ads/internal/d;->p:J
 
     .line 1050
-    const/high16 v2, 0x447a
+    const/high16 v2, 0x447a0000
 
     mul-float/2addr v2, p1
 
@@ -1641,7 +1621,6 @@
 
 .method public declared-synchronized a(I)V
     .locals 1
-    .parameter
 
     .prologue
     .line 512
@@ -1668,10 +1647,6 @@
 
 .method public a(IIII)V
     .locals 6
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const/4 v5, 0x0
@@ -1904,7 +1879,6 @@
 
 .method public a(J)V
     .locals 4
-    .parameter
 
     .prologue
     .line 1000
@@ -1976,7 +1950,6 @@
 
 .method public a(Landroid/view/View;)V
     .locals 7
-    .parameter
 
     .prologue
     const/4 v2, 0x0
@@ -2179,10 +2152,6 @@
 
 .method public declared-synchronized a(Landroid/view/View;Lcom/google/ads/h;Lcom/google/ads/f;Z)V
     .locals 2
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 687
@@ -2272,7 +2241,6 @@
 
 .method public declared-synchronized a(Lcom/google/ads/AdRequest$ErrorCode;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 633
@@ -2289,7 +2257,7 @@
     if-ne p1, v0, :cond_0
 
     .line 639
-    const/high16 v0, 0x4270
+    const/high16 v0, 0x42700000
 
     invoke-virtual {p0, v0}, Lcom/google/ads/internal/d;->a(F)V
 
@@ -2414,7 +2382,6 @@
 
 .method public declared-synchronized a(Lcom/google/ads/AdRequest;)V
     .locals 4
-    .parameter
 
     .prologue
     .line 566
@@ -2641,7 +2608,6 @@
 
 .method public declared-synchronized a(Lcom/google/ads/c;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 670
@@ -2677,8 +2643,6 @@
 
 .method public declared-synchronized a(Lcom/google/ads/f;Z)V
     .locals 5
-    .parameter
-    .parameter
 
     .prologue
     .line 718
@@ -2732,12 +2696,6 @@
 
 .method public a(Lcom/google/ads/l;ZIIII)V
     .locals 2
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 1253
@@ -2838,7 +2796,6 @@
 
 .method public a(Ljava/lang/String;)V
     .locals 6
-    .parameter
 
     .prologue
     .line 365
@@ -2949,8 +2906,6 @@
 
 .method public declared-synchronized a(Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     .line 792
@@ -3002,7 +2957,6 @@
 
 .method protected declared-synchronized a(Ljava/util/LinkedList;)V
     .locals 4
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -3083,7 +3037,6 @@
 
 .method public declared-synchronized a(Z)V
     .locals 1
-    .parameter
 
     .prologue
     .line 1015
@@ -3184,7 +3137,6 @@
 
 .method public declared-synchronized b(J)V
     .locals 2
-    .parameter
 
     .prologue
     .line 1064
@@ -3231,7 +3183,6 @@
 
 .method public declared-synchronized b(Lcom/google/ads/c;)V
     .locals 3
-    .parameter
 
     .prologue
     .line 730
@@ -3301,7 +3252,6 @@
 
 .method protected declared-synchronized b(Ljava/lang/String;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 1193
@@ -3351,7 +3301,6 @@
 
 .method public b(Z)V
     .locals 1
-    .parameter
 
     .prologue
     .line 1233
@@ -3377,7 +3326,6 @@
 
 .method protected declared-synchronized c(Ljava/lang/String;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 1203

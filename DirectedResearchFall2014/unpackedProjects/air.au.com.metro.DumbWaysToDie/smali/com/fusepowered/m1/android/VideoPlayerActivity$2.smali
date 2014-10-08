@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m1/android/VideoPlayerActivity;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 268
@@ -39,7 +38,7 @@
 # virtual methods
 .method public onClick(Landroid/view/View;)V
     .locals 2
-    .parameter "view"
+    .param p1, "view"    # Landroid/view/View;
 
     .prologue
     .line 272

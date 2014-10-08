@@ -33,9 +33,6 @@
 # direct methods
 .method public constructor <init>(Lcom/google/ads/util/i;Ljava/lang/String;Ljava/lang/Object;)V
     .locals 2
-    .parameter
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",

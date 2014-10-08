@@ -50,7 +50,6 @@
 
 .method static synthetic a(Ljava/lang/String;)Lcom/inmobi/adtracker/androidsdk/impl/net/WebViewLoader$a;
     .locals 1
-    .parameter
 
     .prologue
     .line 141
@@ -63,7 +62,6 @@
 
 .method static synthetic b(Ljava/lang/String;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 203
@@ -74,7 +72,6 @@
 
 .method private static c(Ljava/lang/String;)Lcom/inmobi/adtracker/androidsdk/impl/net/WebViewLoader$a;
     .locals 12
-    .parameter
 
     .prologue
     const/4 v11, 0x0
@@ -387,7 +384,6 @@
 
 .method private static d(Ljava/lang/String;)V
     .locals 13
-    .parameter
 
     .prologue
     const/4 v11, 0x0
@@ -958,9 +954,6 @@
 
 .method public static saveCurrentGoal(Ljava/lang/String;IJ)V
     .locals 1
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 50

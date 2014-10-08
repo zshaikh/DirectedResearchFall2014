@@ -21,7 +21,6 @@
 # direct methods
 .method constructor <init>(Lcom/adobe/air/AdobeAIR;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 115
@@ -36,14 +35,12 @@
 # virtual methods
 .method public onPageFinished(Landroid/webkit/WebView;Ljava/lang/String;)V
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     .line 176
     iget-object v0, p0, Lcom/adobe/air/AdobeAIR$1;->this$0:Lcom/adobe/air/AdobeAIR;
 
-    #getter for: Lcom/adobe/air/AdobeAIR;->mFirstLoad:Z
+    # getter for: Lcom/adobe/air/AdobeAIR;->mFirstLoad:Z
     invoke-static {v0}, Lcom/adobe/air/AdobeAIR;->access$100(Lcom/adobe/air/AdobeAIR;)Z
 
     move-result v0
@@ -66,7 +63,7 @@
 
     const/4 v1, 0x0
 
-    #setter for: Lcom/adobe/air/AdobeAIR;->mFirstLoad:Z
+    # setter for: Lcom/adobe/air/AdobeAIR;->mFirstLoad:Z
     invoke-static {v0, v1}, Lcom/adobe/air/AdobeAIR;->access$102(Lcom/adobe/air/AdobeAIR;Z)Z
 
     .line 185
@@ -81,7 +78,7 @@
 
     iget-object v1, p0, Lcom/adobe/air/AdobeAIR$1;->this$0:Lcom/adobe/air/AdobeAIR;
 
-    #getter for: Lcom/adobe/air/AdobeAIR;->mWebView:Landroid/webkit/WebView;
+    # getter for: Lcom/adobe/air/AdobeAIR;->mWebView:Landroid/webkit/WebView;
     invoke-static {v1}, Lcom/adobe/air/AdobeAIR;->access$200(Lcom/adobe/air/AdobeAIR;)Landroid/webkit/WebView;
 
     move-result-object v1
@@ -95,10 +92,6 @@
 
 .method public onReceivedError(Landroid/webkit/WebView;ILjava/lang/String;Ljava/lang/String;)V
     .locals 2
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 200
@@ -106,13 +99,13 @@
 
     const/4 v1, 0x1
 
-    #setter for: Lcom/adobe/air/AdobeAIR;->mOffline:Z
+    # setter for: Lcom/adobe/air/AdobeAIR;->mOffline:Z
     invoke-static {v0, v1}, Lcom/adobe/air/AdobeAIR;->access$302(Lcom/adobe/air/AdobeAIR;Z)Z
 
     .line 203
     iget-object v0, p0, Lcom/adobe/air/AdobeAIR$1;->this$0:Lcom/adobe/air/AdobeAIR;
 
-    #getter for: Lcom/adobe/air/AdobeAIR;->mWebView:Landroid/webkit/WebView;
+    # getter for: Lcom/adobe/air/AdobeAIR;->mWebView:Landroid/webkit/WebView;
     invoke-static {v0}, Lcom/adobe/air/AdobeAIR;->access$200(Lcom/adobe/air/AdobeAIR;)Landroid/webkit/WebView;
 
     move-result-object v0
@@ -127,8 +120,6 @@
 
 .method public shouldOverrideUrlLoading(Landroid/webkit/WebView;Ljava/lang/String;)Z
     .locals 5
-    .parameter
-    .parameter
 
     .prologue
     const/4 v4, 0x0
@@ -301,7 +292,7 @@
     :cond_6
     iget-object v0, p0, Lcom/adobe/air/AdobeAIR$1;->this$0:Lcom/adobe/air/AdobeAIR;
 
-    #getter for: Lcom/adobe/air/AdobeAIR;->mAuxWebView:Landroid/webkit/WebView;
+    # getter for: Lcom/adobe/air/AdobeAIR;->mAuxWebView:Landroid/webkit/WebView;
     invoke-static {v0}, Lcom/adobe/air/AdobeAIR;->access$000(Lcom/adobe/air/AdobeAIR;)Landroid/webkit/WebView;
 
     move-result-object v0

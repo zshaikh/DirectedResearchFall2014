@@ -10,8 +10,8 @@
 # direct methods
 .method public constructor <init>(Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/JsonLocation;)V
     .locals 0
-    .parameter "msg"
-    .parameter "loc"
+    .param p1, "msg"    # Ljava/lang/String;
+    .param p2, "loc"    # Lcom/flurry/org/codehaus/jackson/JsonLocation;
 
     .prologue
     .line 16
@@ -23,9 +23,9 @@
 
 .method public constructor <init>(Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/JsonLocation;Ljava/lang/Throwable;)V
     .locals 0
-    .parameter "msg"
-    .parameter "loc"
-    .parameter "root"
+    .param p1, "msg"    # Ljava/lang/String;
+    .param p2, "loc"    # Lcom/flurry/org/codehaus/jackson/JsonLocation;
+    .param p3, "root"    # Ljava/lang/Throwable;
 
     .prologue
     .line 21

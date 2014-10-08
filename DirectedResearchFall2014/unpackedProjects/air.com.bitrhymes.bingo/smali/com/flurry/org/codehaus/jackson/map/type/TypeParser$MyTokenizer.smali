@@ -25,7 +25,7 @@
 # direct methods
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 2
-    .parameter "str"
+    .param p1, "str"    # Ljava/lang/String;
 
     .prologue
     .line 103
@@ -128,7 +128,7 @@
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/map/type/TypeParser$MyTokenizer;->_pushbackToken:Ljava/lang/String;
 
     .line 117
-    .local v0, token:Ljava/lang/String;
+    .local v0, "token":Ljava/lang/String;
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/flurry/org/codehaus/jackson/map/type/TypeParser$MyTokenizer;->_pushbackToken:Ljava/lang/String;
@@ -149,19 +149,19 @@
     return-object v0
 
     .line 119
-    .end local v0           #token:Ljava/lang/String;
+    .end local v0    # "token":Ljava/lang/String;
     :cond_0
     invoke-super {p0}, Ljava/util/StringTokenizer;->nextToken()Ljava/lang/String;
 
     move-result-object v0
 
-    .restart local v0       #token:Ljava/lang/String;
+    .restart local v0    # "token":Ljava/lang/String;
     goto :goto_0
 .end method
 
 .method public pushBack(Ljava/lang/String;)V
     .locals 2
-    .parameter "token"
+    .param p1, "token"    # Ljava/lang/String;
 
     .prologue
     .line 126

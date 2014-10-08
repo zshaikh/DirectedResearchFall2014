@@ -24,7 +24,7 @@
 # direct methods
 .method constructor <init>(Ljava/io/InputStream;)V
     .locals 1
-    .parameter "in"
+    .param p1, "in"    # Ljava/io/InputStream;
 
     .prologue
     .line 76
@@ -48,7 +48,7 @@
 # virtual methods
 .method configure(Ljava/io/InputStream;)Lcom/flurry/org/apache/avro/io/DirectBinaryDecoder;
     .locals 2
-    .parameter "in"
+    .param p1, "in"    # Ljava/io/InputStream;
 
     .prologue
     .line 81
@@ -63,7 +63,7 @@
 
     check-cast p1, Lcom/flurry/org/apache/avro/util/ByteBufferInputStream;
 
-    .end local p1
+    .end local p1    # "in":Ljava/io/InputStream;
     invoke-direct {v0, p0, p1}, Lcom/flurry/org/apache/avro/io/DirectBinaryDecoder$ReuseByteReader;-><init>(Lcom/flurry/org/apache/avro/io/DirectBinaryDecoder;Lcom/flurry/org/apache/avro/util/ByteBufferInputStream;)V
 
     :goto_0
@@ -73,7 +73,7 @@
     return-object p0
 
     .line 82
-    .restart local p1
+    .restart local p1    # "in":Ljava/io/InputStream;
     :cond_0
     new-instance v0, Lcom/flurry/org/apache/avro/io/DirectBinaryDecoder$ByteReader;
 
@@ -86,9 +86,9 @@
 
 .method protected doReadBytes([BII)V
     .locals 2
-    .parameter "bytes"
-    .parameter "start"
-    .parameter "length"
+    .param p1, "bytes"    # [B
+    .param p2, "start"    # I
+    .param p3, "length"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -105,7 +105,7 @@
     move-result v0
 
     .line 185
-    .local v0, n:I
+    .local v0, "n":I
     if-eq v0, p3, :cond_0
 
     if-nez p3, :cond_1
@@ -138,7 +138,7 @@
 
 .method protected doSkipBytes(J)V
     .locals 5
-    .parameter "length"
+    .param p1, "length"    # J
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -162,7 +162,7 @@
     move-result-wide v0
 
     .line 173
-    .local v0, n:J
+    .local v0, "n":J
     cmp-long v2, v0, v3
 
     if-gtz v2, :cond_0
@@ -182,7 +182,7 @@
     goto :goto_0
 
     .line 178
-    .end local v0           #n:J
+    .end local v0    # "n":J
     :cond_1
     return-void
 .end method
@@ -233,7 +233,7 @@
     move-result v0
 
     .line 90
-    .local v0, n:I
+    .local v0, "n":I
     if-gez v0, :cond_0
 
     .line 91
@@ -260,7 +260,7 @@
 
 .method public readBytes(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
     .locals 2
-    .parameter "old"
+    .param p1, "old"    # Ljava/nio/ByteBuffer;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -274,7 +274,7 @@
     move-result v0
 
     .line 166
-    .local v0, length:I
+    .local v0, "length":I
     iget-object v1, p0, Lcom/flurry/org/apache/avro/io/DirectBinaryDecoder;->byteReader:Lcom/flurry/org/apache/avro/io/DirectBinaryDecoder$ByteReader;
 
     invoke-virtual {v1, p1, v0}, Lcom/flurry/org/apache/avro/io/DirectBinaryDecoder$ByteReader;->read(Ljava/nio/ByteBuffer;I)Ljava/nio/ByteBuffer;
@@ -424,7 +424,7 @@
     or-long v0, v2, v4
 
     .line 160
-    .local v0, n:J
+    .local v0, "n":J
     invoke-static {v0, v1}, Ljava/lang/Double;->longBitsToDouble(J)D
 
     move-result-wide v2
@@ -494,7 +494,7 @@
     or-int v0, v1, v2
 
     .line 146
-    .local v0, n:I
+    .local v0, "n":I
     invoke-static {v0}, Ljava/lang/Float;->intBitsToFloat(I)F
 
     move-result v1
@@ -515,11 +515,11 @@
     const/4 v1, 0x0
 
     .line 100
-    .local v1, n:I
+    .local v1, "n":I
     const/4 v2, 0x0
 
     .line 102
-    .local v2, shift:I
+    .local v2, "shift":I
     :cond_0
     iget-object v3, p0, Lcom/flurry/org/apache/avro/io/DirectBinaryDecoder;->in:Ljava/io/InputStream;
 
@@ -528,7 +528,7 @@
     move-result v0
 
     .line 103
-    .local v0, b:I
+    .local v0, "b":I
     if-ltz v0, :cond_1
 
     .line 104
@@ -594,11 +594,11 @@
     const-wide/16 v1, 0x0
 
     .line 121
-    .local v1, n:J
+    .local v1, "n":J
     const/4 v3, 0x0
 
     .line 123
-    .local v3, shift:I
+    .local v3, "shift":I
     :cond_0
     iget-object v4, p0, Lcom/flurry/org/apache/avro/io/DirectBinaryDecoder;->in:Ljava/io/InputStream;
 
@@ -607,7 +607,7 @@
     move-result v0
 
     .line 124
-    .local v0, b:I
+    .local v0, "b":I
     if-ltz v0, :cond_1
 
     .line 125

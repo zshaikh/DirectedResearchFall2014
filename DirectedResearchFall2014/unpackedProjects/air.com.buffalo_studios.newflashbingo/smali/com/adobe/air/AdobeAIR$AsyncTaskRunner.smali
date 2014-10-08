@@ -32,7 +32,6 @@
 # direct methods
 .method private constructor <init>(Lcom/adobe/air/AdobeAIR;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 365
@@ -45,8 +44,6 @@
 
 .method synthetic constructor <init>(Lcom/adobe/air/AdobeAIR;Lcom/adobe/air/AdobeAIR$1;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 365
@@ -59,7 +56,6 @@
 # virtual methods
 .method protected bridge synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
-    .parameter
 
     .prologue
     .line 365
@@ -74,7 +70,6 @@
 
 .method protected varargs doInBackground([Ljava/lang/Integer;)Ljava/lang/Void;
     .locals 6
-    .parameter
 
     .prologue
     const v5, 0x493e0
@@ -96,7 +91,7 @@
     .line 376
     iget-object v0, p0, Lcom/adobe/air/AdobeAIR$AsyncTaskRunner;->this$0:Lcom/adobe/air/AdobeAIR;
 
-    #getter for: Lcom/adobe/air/AdobeAIR;->mGcm:Lcom/google/android/gms/gcm/GoogleCloudMessaging;
+    # getter for: Lcom/adobe/air/AdobeAIR;->mGcm:Lcom/google/android/gms/gcm/GoogleCloudMessaging;
     invoke-static {v0}, Lcom/adobe/air/AdobeAIR;->access$500(Lcom/adobe/air/AdobeAIR;)Lcom/google/android/gms/gcm/GoogleCloudMessaging;
 
     move-result-object v0
@@ -108,7 +103,7 @@
 
     iget-object v1, p0, Lcom/adobe/air/AdobeAIR$AsyncTaskRunner;->this$0:Lcom/adobe/air/AdobeAIR;
 
-    #getter for: Lcom/adobe/air/AdobeAIR;->mCtx:Landroid/content/Context;
+    # getter for: Lcom/adobe/air/AdobeAIR;->mCtx:Landroid/content/Context;
     invoke-static {v1}, Lcom/adobe/air/AdobeAIR;->access$600(Lcom/adobe/air/AdobeAIR;)Landroid/content/Context;
 
     move-result-object v1
@@ -117,7 +112,7 @@
 
     move-result-object v1
 
-    #setter for: Lcom/adobe/air/AdobeAIR;->mGcm:Lcom/google/android/gms/gcm/GoogleCloudMessaging;
+    # setter for: Lcom/adobe/air/AdobeAIR;->mGcm:Lcom/google/android/gms/gcm/GoogleCloudMessaging;
     invoke-static {v0, v1}, Lcom/adobe/air/AdobeAIR;->access$502(Lcom/adobe/air/AdobeAIR;Lcom/google/android/gms/gcm/GoogleCloudMessaging;)Lcom/google/android/gms/gcm/GoogleCloudMessaging;
 
     .line 379
@@ -126,7 +121,7 @@
 
     iget-object v1, p0, Lcom/adobe/air/AdobeAIR$AsyncTaskRunner;->this$0:Lcom/adobe/air/AdobeAIR;
 
-    #getter for: Lcom/adobe/air/AdobeAIR;->mGcm:Lcom/google/android/gms/gcm/GoogleCloudMessaging;
+    # getter for: Lcom/adobe/air/AdobeAIR;->mGcm:Lcom/google/android/gms/gcm/GoogleCloudMessaging;
     invoke-static {v1}, Lcom/adobe/air/AdobeAIR;->access$500(Lcom/adobe/air/AdobeAIR;)Lcom/google/android/gms/gcm/GoogleCloudMessaging;
 
     move-result-object v1
@@ -137,6 +132,7 @@
 
     const/4 v3, 0x0
 
+    # getter for: Lcom/adobe/air/AdobeAIR;->SENDER_ID:Ljava/lang/String;
     invoke-static {}, Lcom/adobe/air/AdobeAIR;->access$800()Ljava/lang/String;
 
     move-result-object v4
@@ -147,13 +143,13 @@
 
     move-result-object v1
 
-    #setter for: Lcom/adobe/air/AdobeAIR;->mRegId:Ljava/lang/String;
+    # setter for: Lcom/adobe/air/AdobeAIR;->mRegId:Ljava/lang/String;
     invoke-static {v0, v1}, Lcom/adobe/air/AdobeAIR;->access$702(Lcom/adobe/air/AdobeAIR;Ljava/lang/String;)Ljava/lang/String;
 
     .line 380
     iget-object v0, p0, Lcom/adobe/air/AdobeAIR$AsyncTaskRunner;->this$0:Lcom/adobe/air/AdobeAIR;
 
-    #getter for: Lcom/adobe/air/AdobeAIR;->mRegId:Ljava/lang/String;
+    # getter for: Lcom/adobe/air/AdobeAIR;->mRegId:Ljava/lang/String;
     invoke-static {v0}, Lcom/adobe/air/AdobeAIR;->access$700(Lcom/adobe/air/AdobeAIR;)Ljava/lang/String;
 
     move-result-object v0
@@ -165,7 +161,7 @@
 
     const v1, 0x493e0
 
-    #calls: Lcom/adobe/air/AdobeAIR;->registerInBackground(I)V
+    # invokes: Lcom/adobe/air/AdobeAIR;->registerInBackground(I)V
     invoke-static {v0, v1}, Lcom/adobe/air/AdobeAIR;->access$900(Lcom/adobe/air/AdobeAIR;I)V
 
     .line 395
@@ -178,7 +174,7 @@
     :cond_1
     iget-object v0, p0, Lcom/adobe/air/AdobeAIR$AsyncTaskRunner;->this$0:Lcom/adobe/air/AdobeAIR;
 
-    #calls: Lcom/adobe/air/AdobeAIR;->sendRegistrationIdToAws()V
+    # invokes: Lcom/adobe/air/AdobeAIR;->sendRegistrationIdToAws()V
     invoke-static {v0}, Lcom/adobe/air/AdobeAIR;->access$1000(Lcom/adobe/air/AdobeAIR;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -192,7 +188,7 @@
     .line 393
     iget-object v0, p0, Lcom/adobe/air/AdobeAIR$AsyncTaskRunner;->this$0:Lcom/adobe/air/AdobeAIR;
 
-    #calls: Lcom/adobe/air/AdobeAIR;->registerInBackground(I)V
+    # invokes: Lcom/adobe/air/AdobeAIR;->registerInBackground(I)V
     invoke-static {v0, v5}, Lcom/adobe/air/AdobeAIR;->access$900(Lcom/adobe/air/AdobeAIR;I)V
 
     goto :goto_0

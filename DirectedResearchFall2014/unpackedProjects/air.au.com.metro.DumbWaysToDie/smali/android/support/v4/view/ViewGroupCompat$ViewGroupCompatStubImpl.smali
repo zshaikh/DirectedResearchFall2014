@@ -32,9 +32,9 @@
 # virtual methods
 .method public onRequestSendAccessibilityEvent(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)Z
     .locals 1
-    .parameter "group"
-    .parameter "child"
-    .parameter "event"
+    .param p1, "group"    # Landroid/view/ViewGroup;
+    .param p2, "child"    # Landroid/view/View;
+    .param p3, "event"    # Landroid/view/accessibility/AccessibilityEvent;
 
     .prologue
     .line 40
@@ -45,8 +45,8 @@
 
 .method public setMotionEventSplittingEnabled(Landroid/view/ViewGroup;Z)V
     .locals 0
-    .parameter "group"
-    .parameter "split"
+    .param p1, "group"    # Landroid/view/ViewGroup;
+    .param p2, "split"    # Z
 
     .prologue
     .line 45

@@ -30,10 +30,6 @@
 # direct methods
 .method constructor <init>(Lcom/bitrhymes/iab/util/IabHelper$2;Lcom/bitrhymes/iab/util/IabHelper$QueryInventoryFinishedListener;Lcom/bitrhymes/iab/util/IabResult;Lcom/bitrhymes/iab/util/Inventory;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 1

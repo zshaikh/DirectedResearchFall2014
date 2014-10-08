@@ -25,8 +25,8 @@
 # virtual methods
 .method public call(Lcom/adobe/fre/FREContext;[Lcom/adobe/fre/FREObject;)Lcom/adobe/fre/FREObject;
     .locals 10
-    .parameter "context"
-    .parameter "arg1"
+    .param p1, "context"    # Lcom/adobe/fre/FREContext;
+    .param p2, "arg1"    # [Lcom/adobe/fre/FREObject;
 
     .prologue
     const-string v9, "Chartboost"
@@ -51,7 +51,7 @@
     move-result-object v1
 
     .line 21
-    .local v1, appID:Ljava/lang/String;
+    .local v1, "appID":Ljava/lang/String;
     const/4 v5, 0x1
 
     aget-object v5, p2, v5
@@ -61,7 +61,7 @@
     move-result-object v2
 
     .line 23
-    .local v2, appSig:Ljava/lang/String;
+    .local v2, "appSig":Ljava/lang/String;
     const-string v5, "Chartboost"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -96,13 +96,13 @@
     move-result-object v0
 
     .line 26
-    .local v0, _cb:Lcom/chartboost/sdk/Chartboost;
+    .local v0, "_cb":Lcom/chartboost/sdk/Chartboost;
     new-instance v4, Lcom/bitrhymes/chartboost/ChartboostListener;
 
     invoke-direct {v4, p1}, Lcom/bitrhymes/chartboost/ChartboostListener;-><init>(Lcom/adobe/fre/FREContext;)V
 
     .line 27
-    .local v4, listener:Lcom/bitrhymes/chartboost/ChartboostListener;
+    .local v4, "listener":Lcom/bitrhymes/chartboost/ChartboostListener;
     invoke-virtual {p1}, Lcom/adobe/fre/FREContext;->getActivity()Landroid/app/Activity;
 
     move-result-object v5
@@ -115,10 +115,10 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 35
-    .end local v0           #_cb:Lcom/chartboost/sdk/Chartboost;
-    .end local v1           #appID:Ljava/lang/String;
-    .end local v2           #appSig:Ljava/lang/String;
-    .end local v4           #listener:Lcom/bitrhymes/chartboost/ChartboostListener;
+    .end local v0    # "_cb":Lcom/chartboost/sdk/Chartboost;
+    .end local v1    # "appID":Ljava/lang/String;
+    .end local v2    # "appSig":Ljava/lang/String;
+    .end local v4    # "listener":Lcom/bitrhymes/chartboost/ChartboostListener;
     :goto_0
     const/4 v5, 0x0
 
@@ -131,7 +131,7 @@
     move-object v3, v5
 
     .line 31
-    .local v3, e:Ljava/lang/Exception;
+    .local v3, "e":Ljava/lang/Exception;
     const-string v5, "Chartboost"
 
     new-instance v5, Ljava/lang/StringBuilder;

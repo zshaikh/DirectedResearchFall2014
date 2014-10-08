@@ -83,7 +83,7 @@
 
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 6
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     const/4 v1, 0x0
@@ -200,8 +200,8 @@
 # virtual methods
 .method addView(Lcom/fusepowered/m1/android/MMWebView;Landroid/widget/RelativeLayout$LayoutParams;)V
     .locals 0
-    .parameter "webView"
-    .parameter "webLayoutParams"
+    .param p1, "webView"    # Lcom/fusepowered/m1/android/MMWebView;
+    .param p2, "webLayoutParams"    # Landroid/widget/RelativeLayout$LayoutParams;
 
     .prologue
     .line 313
@@ -319,7 +319,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/fusepowered/m1/android/MMAdImpl;
     check-cast p0, Landroid/content/Context;
 
     move-object v0, p0
@@ -328,7 +328,7 @@
     :goto_0
     return-object v0
 
-    .restart local p0
+    .restart local p0    # "this":Lcom/fusepowered/m1/android/MMAdImpl;
     :cond_0
     const/4 v0, 0x0
 
@@ -456,7 +456,6 @@
 
 .method insertUrlAdMetaValues(Ljava/util/Map;)V
     .locals 7
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -469,7 +468,7 @@
     .end annotation
 
     .prologue
-    .local p1, paramsMap:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p1, "paramsMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v6, "video"
 
     const-string v5, "false"
@@ -484,7 +483,7 @@
     move-result-object v0
 
     .line 272
-    .local v0, context:Landroid/content/Context;
+    .local v0, "context":Landroid/content/Context;
     const-string v1, "ar"
 
     const-string v2, "manual"
@@ -729,7 +728,7 @@
     move-result-wide v2
 
     .line 190
-    .local v2, currentTime:J
+    .local v2, "currentTime":J
     iget-wide v5, p0, Lcom/fusepowered/m1/android/MMAdImpl;->lastAdRequest:J
 
     sub-long v5, v2, v5
@@ -741,7 +740,7 @@
     long-to-int v4, v5
 
     .line 191
-    .local v4, lastRequestSecs:I
+    .local v4, "lastRequestSecs":I
     invoke-virtual {p0}, Lcom/fusepowered/m1/android/MMAdImpl;->getContext()Landroid/content/Context;
 
     move-result-object v5
@@ -753,7 +752,7 @@
     iget-wide v0, v5, Lcom/fusepowered/m1/android/HandShake;->adRefreshSecs:J
 
     .line 192
-    .local v0, adRefreshSecs:J
+    .local v0, "adRefreshSecs":J
     int-to-long v5, v4
 
     cmp-long v5, v5, v0
@@ -846,7 +845,7 @@
 
 .method prepareTransition(Landroid/graphics/Bitmap;)V
     .locals 0
-    .parameter "bitmap"
+    .param p1, "bitmap"    # Landroid/graphics/Bitmap;
 
     .prologue
     .line 210
@@ -863,7 +862,7 @@
 
 .method removeView(Lcom/fusepowered/m1/android/MMWebView;)V
     .locals 0
-    .parameter "mmWebView"
+    .param p1, "mmWebView"    # Lcom/fusepowered/m1/android/MMWebView;
 
     .prologue
     .line 309
@@ -894,7 +893,7 @@
 
 .method public setApid(Ljava/lang/String;)V
     .locals 2
-    .parameter "apid"
+    .param p1, "apid"    # Ljava/lang/String;
 
     .prologue
     .line 103
@@ -928,7 +927,7 @@
 
 .method setClickable(Z)V
     .locals 0
-    .parameter "clickable"
+    .param p1, "clickable"    # Z
 
     .prologue
     .line 317
@@ -937,7 +936,7 @@
 
 .method public setIgnoresDensityScaling(Z)V
     .locals 0
-    .parameter "ignoresDensityScaling"
+    .param p1, "ignoresDensityScaling"    # Z
 
     .prologue
     .line 143
@@ -949,7 +948,7 @@
 
 .method public setListener(Lcom/fusepowered/m1/android/RequestListener;)V
     .locals 0
-    .parameter "listener"
+    .param p1, "listener"    # Lcom/fusepowered/m1/android/RequestListener;
 
     .prologue
     .line 122
@@ -961,7 +960,7 @@
 
 .method public setMMRequest(Lcom/fusepowered/m1/android/MMRequest;)V
     .locals 0
-    .parameter "request"
+    .param p1, "request"    # Lcom/fusepowered/m1/android/MMRequest;
 
     .prologue
     .line 158

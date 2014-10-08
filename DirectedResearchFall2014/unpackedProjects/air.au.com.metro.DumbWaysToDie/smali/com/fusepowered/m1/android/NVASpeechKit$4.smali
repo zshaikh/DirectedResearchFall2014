@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m1/android/NVASpeechKit;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 256
@@ -37,13 +36,13 @@
 
 .method private notifyListener(Lcom/nuance/nmdp/speechkit/DataUploadCommand;)V
     .locals 2
-    .parameter "command"
+    .param p1, "command"    # Lcom/nuance/nmdp/speechkit/DataUploadCommand;
 
     .prologue
     .line 274
     iget-object v0, p0, Lcom/fusepowered/m1/android/NVASpeechKit$4;->this$0:Lcom/fusepowered/m1/android/NVASpeechKit;
 
-    #getter for: Lcom/fusepowered/m1/android/NVASpeechKit;->speechKitListener:Lcom/fusepowered/m1/android/NVASpeechKit$Listener;
+    # getter for: Lcom/fusepowered/m1/android/NVASpeechKit;->speechKitListener:Lcom/fusepowered/m1/android/NVASpeechKit$Listener;
     invoke-static {v0}, Lcom/fusepowered/m1/android/NVASpeechKit;->access$300(Lcom/fusepowered/m1/android/NVASpeechKit;)Lcom/fusepowered/m1/android/NVASpeechKit$Listener;
 
     move-result-object v0
@@ -53,7 +52,7 @@
     .line 276
     iget-object v0, p0, Lcom/fusepowered/m1/android/NVASpeechKit$4;->this$0:Lcom/fusepowered/m1/android/NVASpeechKit;
 
-    #getter for: Lcom/fusepowered/m1/android/NVASpeechKit;->pendingDataUploadCommand:Lcom/nuance/nmdp/speechkit/DataUploadCommand;
+    # getter for: Lcom/fusepowered/m1/android/NVASpeechKit;->pendingDataUploadCommand:Lcom/nuance/nmdp/speechkit/DataUploadCommand;
     invoke-static {v0}, Lcom/fusepowered/m1/android/NVASpeechKit;->access$800(Lcom/fusepowered/m1/android/NVASpeechKit;)Lcom/nuance/nmdp/speechkit/DataUploadCommand;
 
     move-result-object v0
@@ -63,7 +62,7 @@
     .line 278
     iget-object v0, p0, Lcom/fusepowered/m1/android/NVASpeechKit$4;->this$0:Lcom/fusepowered/m1/android/NVASpeechKit;
 
-    #getter for: Lcom/fusepowered/m1/android/NVASpeechKit;->pendingDataUploadCommandType:Lcom/fusepowered/m1/android/NVASpeechKit$CustomWordsOp;
+    # getter for: Lcom/fusepowered/m1/android/NVASpeechKit;->pendingDataUploadCommandType:Lcom/fusepowered/m1/android/NVASpeechKit$CustomWordsOp;
     invoke-static {v0}, Lcom/fusepowered/m1/android/NVASpeechKit;->access$900(Lcom/fusepowered/m1/android/NVASpeechKit;)Lcom/fusepowered/m1/android/NVASpeechKit$CustomWordsOp;
 
     move-result-object v0
@@ -75,7 +74,7 @@
     .line 280
     iget-object v0, p0, Lcom/fusepowered/m1/android/NVASpeechKit$4;->this$0:Lcom/fusepowered/m1/android/NVASpeechKit;
 
-    #getter for: Lcom/fusepowered/m1/android/NVASpeechKit;->speechKitListener:Lcom/fusepowered/m1/android/NVASpeechKit$Listener;
+    # getter for: Lcom/fusepowered/m1/android/NVASpeechKit;->speechKitListener:Lcom/fusepowered/m1/android/NVASpeechKit$Listener;
     invoke-static {v0}, Lcom/fusepowered/m1/android/NVASpeechKit;->access$300(Lcom/fusepowered/m1/android/NVASpeechKit;)Lcom/fusepowered/m1/android/NVASpeechKit$Listener;
 
     move-result-object v0
@@ -89,7 +88,7 @@
 
     const/4 v1, 0x0
 
-    #setter for: Lcom/fusepowered/m1/android/NVASpeechKit;->pendingDataUploadCommand:Lcom/nuance/nmdp/speechkit/DataUploadCommand;
+    # setter for: Lcom/fusepowered/m1/android/NVASpeechKit;->pendingDataUploadCommand:Lcom/nuance/nmdp/speechkit/DataUploadCommand;
     invoke-static {v0, v1}, Lcom/fusepowered/m1/android/NVASpeechKit;->access$802(Lcom/fusepowered/m1/android/NVASpeechKit;Lcom/nuance/nmdp/speechkit/DataUploadCommand;)Lcom/nuance/nmdp/speechkit/DataUploadCommand;
 
     .line 289
@@ -99,7 +98,7 @@
     :cond_1
     iget-object v0, p0, Lcom/fusepowered/m1/android/NVASpeechKit$4;->this$0:Lcom/fusepowered/m1/android/NVASpeechKit;
 
-    #getter for: Lcom/fusepowered/m1/android/NVASpeechKit;->speechKitListener:Lcom/fusepowered/m1/android/NVASpeechKit$Listener;
+    # getter for: Lcom/fusepowered/m1/android/NVASpeechKit;->speechKitListener:Lcom/fusepowered/m1/android/NVASpeechKit$Listener;
     invoke-static {v0}, Lcom/fusepowered/m1/android/NVASpeechKit;->access$300(Lcom/fusepowered/m1/android/NVASpeechKit;)Lcom/fusepowered/m1/android/NVASpeechKit$Listener;
 
     move-result-object v0
@@ -113,8 +112,8 @@
 # virtual methods
 .method public onError(Lcom/nuance/nmdp/speechkit/DataUploadCommand;Lcom/nuance/nmdp/speechkit/SpeechError;)V
     .locals 2
-    .parameter "command"
-    .parameter "error"
+    .param p1, "command"    # Lcom/nuance/nmdp/speechkit/DataUploadCommand;
+    .param p2, "error"    # Lcom/nuance/nmdp/speechkit/SpeechError;
 
     .prologue
     .line 267
@@ -165,8 +164,8 @@
 
 .method public onResults(Lcom/nuance/nmdp/speechkit/DataUploadCommand;Lcom/nuance/nmdp/speechkit/DataUploadResult;)V
     .locals 2
-    .parameter "command"
-    .parameter "results"
+    .param p1, "command"    # Lcom/nuance/nmdp/speechkit/DataUploadCommand;
+    .param p2, "results"    # Lcom/nuance/nmdp/speechkit/DataUploadResult;
 
     .prologue
     .line 260

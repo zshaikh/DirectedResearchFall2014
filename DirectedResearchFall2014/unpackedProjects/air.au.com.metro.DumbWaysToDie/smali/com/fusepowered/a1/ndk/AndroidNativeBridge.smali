@@ -141,7 +141,7 @@
 
 .method public static __getRewardUrl(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
-    .parameter "key"
+    .param p0, "key"    # Ljava/lang/String;
 
     .prologue
     .line 110
@@ -162,7 +162,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "key":Ljava/lang/String;
     check-cast p0, Ljava/lang/String;
 
     .line 110
@@ -171,7 +171,7 @@
 
 .method public static __init(I)V
     .locals 1
-    .parameter "id"
+    .param p0, "id"    # I
 
     .prologue
     .line 41
@@ -185,8 +185,8 @@
 
 .method public static __showImpact(ZZ)V
     .locals 3
-    .parameter "offerScreen"
-    .parameter "animated"
+    .param p0, "offerScreen"    # Z
+    .param p1, "animated"    # Z
 
     .prologue
     .line 92
@@ -214,7 +214,7 @@
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     .line 96
-    .local v0, properties:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/Object;>;"
+    .local v0, "properties":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/Object;>;"
     const-string v1, "noOfferScreen"
 
     invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -259,7 +259,7 @@
 # virtual methods
 .method public __initImpact(I)V
     .locals 4
-    .parameter "appId"
+    .param p1, "appId"    # I
 
     .prologue
     .line 116
@@ -416,8 +416,8 @@
 
 .method public onVideoCompleted(Ljava/lang/String;Z)V
     .locals 1
-    .parameter "key"
-    .parameter "skipped"
+    .param p1, "key"    # Ljava/lang/String;
+    .param p2, "skipped"    # Z
 
     .prologue
     .line 75
@@ -461,7 +461,7 @@
 
 .method public setRootActivity(Landroid/app/Activity;)V
     .locals 1
-    .parameter "activity"
+    .param p1, "activity"    # Landroid/app/Activity;
 
     .prologue
     .line 53

@@ -46,7 +46,7 @@
 
 .method public constructor <init>(Lcom/fusepowered/m1/google/gson/JsonElement;)V
     .locals 1
-    .parameter "element"
+    .param p1, "element"    # Lcom/fusepowered/m1/google/gson/JsonElement;
 
     .prologue
     .line 54
@@ -72,7 +72,7 @@
 
 .method private expect(Lcom/fusepowered/m1/google/gson/stream/JsonToken;)V
     .locals 3
-    .parameter "expected"
+    .param p1, "expected"    # Lcom/fusepowered/m1/google/gson/stream/JsonToken;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -203,7 +203,7 @@
     check-cast v0, Lcom/fusepowered/m1/google/gson/JsonArray;
 
     .line 61
-    .local v0, array:Lcom/fusepowered/m1/google/gson/JsonArray;
+    .local v0, "array":Lcom/fusepowered/m1/google/gson/JsonArray;
     iget-object v1, p0, Lcom/fusepowered/m1/google/gson/internal/bind/JsonTreeReader;->stack:Ljava/util/List;
 
     invoke-virtual {v0}, Lcom/fusepowered/m1/google/gson/JsonArray;->iterator()Ljava/util/Iterator;
@@ -238,7 +238,7 @@
     check-cast v0, Lcom/fusepowered/m1/google/gson/JsonObject;
 
     .line 73
-    .local v0, object:Lcom/fusepowered/m1/google/gson/JsonObject;
+    .local v0, "object":Lcom/fusepowered/m1/google/gson/JsonObject;
     iget-object v1, p0, Lcom/fusepowered/m1/google/gson/internal/bind/JsonTreeReader;->stack:Ljava/util/List;
 
     invoke-virtual {v0}, Lcom/fusepowered/m1/google/gson/JsonObject;->entrySet()Ljava/util/Set;
@@ -343,7 +343,7 @@
     move-result-object v0
 
     .line 84
-    .local v0, token:Lcom/fusepowered/m1/google/gson/stream/JsonToken;
+    .local v0, "token":Lcom/fusepowered/m1/google/gson/stream/JsonToken;
     sget-object v1, Lcom/fusepowered/m1/google/gson/stream/JsonToken;->END_OBJECT:Lcom/fusepowered/m1/google/gson/stream/JsonToken;
 
     if-eq v0, v1, :cond_0
@@ -382,7 +382,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/fusepowered/m1/google/gson/internal/bind/JsonTreeReader;
     check-cast p0, Lcom/fusepowered/m1/google/gson/JsonPrimitive;
 
     invoke-virtual {p0}, Lcom/fusepowered/m1/google/gson/JsonPrimitive;->getAsBoolean()Z
@@ -407,7 +407,7 @@
     move-result-object v2
 
     .line 172
-    .local v2, token:Lcom/fusepowered/m1/google/gson/stream/JsonToken;
+    .local v2, "token":Lcom/fusepowered/m1/google/gson/stream/JsonToken;
     sget-object v3, Lcom/fusepowered/m1/google/gson/stream/JsonToken;->NUMBER:Lcom/fusepowered/m1/google/gson/stream/JsonToken;
 
     if-eq v2, v3, :cond_0
@@ -466,7 +466,7 @@
     move-result-wide v0
 
     .line 176
-    .local v0, result:D
+    .local v0, "result":D
     invoke-virtual {p0}, Lcom/fusepowered/m1/google/gson/internal/bind/JsonTreeReader;->isLenient()Z
 
     move-result v3
@@ -534,7 +534,7 @@
     move-result-object v1
 
     .line 195
-    .local v1, token:Lcom/fusepowered/m1/google/gson/stream/JsonToken;
+    .local v1, "token":Lcom/fusepowered/m1/google/gson/stream/JsonToken;
     sget-object v2, Lcom/fusepowered/m1/google/gson/stream/JsonToken;->NUMBER:Lcom/fusepowered/m1/google/gson/stream/JsonToken;
 
     if-eq v1, v2, :cond_0
@@ -593,7 +593,7 @@
     move-result v0
 
     .line 199
-    .local v0, result:I
+    .local v0, "result":I
     invoke-direct {p0}, Lcom/fusepowered/m1/google/gson/internal/bind/JsonTreeReader;->popStack()Ljava/lang/Object;
 
     .line 200
@@ -615,7 +615,7 @@
     move-result-object v2
 
     .line 185
-    .local v2, token:Lcom/fusepowered/m1/google/gson/stream/JsonToken;
+    .local v2, "token":Lcom/fusepowered/m1/google/gson/stream/JsonToken;
     sget-object v3, Lcom/fusepowered/m1/google/gson/stream/JsonToken;->NUMBER:Lcom/fusepowered/m1/google/gson/stream/JsonToken;
 
     if-eq v2, v3, :cond_0
@@ -674,7 +674,7 @@
     move-result-wide v0
 
     .line 189
-    .local v0, result:J
+    .local v0, "result":J
     invoke-direct {p0}, Lcom/fusepowered/m1/google/gson/internal/bind/JsonTreeReader;->popStack()Ljava/lang/Object;
 
     .line 190
@@ -703,7 +703,7 @@
     check-cast v1, Ljava/util/Iterator;
 
     .line 147
-    .local v1, i:Ljava/util/Iterator;,"Ljava/util/Iterator<*>;"
+    .local v1, "i":Ljava/util/Iterator;, "Ljava/util/Iterator<*>;"
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
@@ -711,7 +711,7 @@
     check-cast v0, Ljava/util/Map$Entry;
 
     .line 148
-    .local v0, entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<**>;"
+    .local v0, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<**>;"
     iget-object v2, p0, Lcom/fusepowered/m1/google/gson/internal/bind/JsonTreeReader;->stack:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
@@ -725,7 +725,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/fusepowered/m1/google/gson/internal/bind/JsonTreeReader;
     check-cast p0, Ljava/lang/String;
 
     return-object p0
@@ -767,7 +767,7 @@
     move-result-object v0
 
     .line 154
-    .local v0, token:Lcom/fusepowered/m1/google/gson/stream/JsonToken;
+    .local v0, "token":Lcom/fusepowered/m1/google/gson/stream/JsonToken;
     sget-object v1, Lcom/fusepowered/m1/google/gson/stream/JsonToken;->STRING:Lcom/fusepowered/m1/google/gson/stream/JsonToken;
 
     if-eq v0, v1, :cond_0
@@ -819,7 +819,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/fusepowered/m1/google/gson/internal/bind/JsonTreeReader;
     check-cast p0, Lcom/fusepowered/m1/google/gson/JsonPrimitive;
 
     invoke-virtual {p0}, Lcom/fusepowered/m1/google/gson/JsonPrimitive;->getAsString()Ljava/lang/String;
@@ -861,7 +861,7 @@
     move-result-object v3
 
     .line 93
-    .local v3, o:Ljava/lang/Object;
+    .local v3, "o":Ljava/lang/Object;
     instance-of v5, v3, Ljava/util/Iterator;
 
     if-eqz v5, :cond_4
@@ -886,7 +886,7 @@
     instance-of v1, v5, Lcom/fusepowered/m1/google/gson/JsonObject;
 
     .line 95
-    .local v1, isObject:Z
+    .local v1, "isObject":Z
     move-object v0, v3
 
     check-cast v0, Ljava/util/Iterator;
@@ -894,7 +894,7 @@
     move-object v2, v0
 
     .line 96
-    .local v2, iterator:Ljava/util/Iterator;,"Ljava/util/Iterator<*>;"
+    .local v2, "iterator":Ljava/util/Iterator;, "Ljava/util/Iterator<*>;"
     invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v5
@@ -940,8 +940,8 @@
     goto :goto_0
 
     .line 106
-    .end local v1           #isObject:Z
-    .end local v2           #iterator:Ljava/util/Iterator;,"Ljava/util/Iterator<*>;"
+    .end local v1    # "isObject":Z
+    .end local v2    # "iterator":Ljava/util/Iterator;, "Ljava/util/Iterator<*>;"
     :cond_4
     instance-of v5, v3, Lcom/fusepowered/m1/google/gson/JsonObject;
 
@@ -977,7 +977,7 @@
     move-object v4, v0
 
     .line 112
-    .local v4, primitive:Lcom/fusepowered/m1/google/gson/JsonPrimitive;
+    .local v4, "primitive":Lcom/fusepowered/m1/google/gson/JsonPrimitive;
     invoke-virtual {v4}, Lcom/fusepowered/m1/google/gson/JsonPrimitive;->isString()Z
 
     move-result v5
@@ -1024,7 +1024,7 @@
     throw v5
 
     .line 121
-    .end local v4           #primitive:Lcom/fusepowered/m1/google/gson/JsonPrimitive;
+    .end local v4    # "primitive":Lcom/fusepowered/m1/google/gson/JsonPrimitive;
     :cond_a
     instance-of v5, v3, Lcom/fusepowered/m1/google/gson/JsonNull;
 
@@ -1081,7 +1081,7 @@
     check-cast v1, Ljava/util/Iterator;
 
     .line 223
-    .local v1, i:Ljava/util/Iterator;,"Ljava/util/Iterator<*>;"
+    .local v1, "i":Ljava/util/Iterator;, "Ljava/util/Iterator<*>;"
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
@@ -1089,7 +1089,7 @@
     check-cast v0, Ljava/util/Map$Entry;
 
     .line 224
-    .local v0, entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<**>;"
+    .local v0, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<**>;"
     iget-object v2, p0, Lcom/fusepowered/m1/google/gson/internal/bind/JsonTreeReader;->stack:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
@@ -1107,7 +1107,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/fusepowered/m1/google/gson/internal/bind/JsonTreeReader;
     check-cast p0, Ljava/lang/String;
 
     invoke-direct {v3, p0}, Lcom/fusepowered/m1/google/gson/JsonPrimitive;-><init>(Ljava/lang/String;)V

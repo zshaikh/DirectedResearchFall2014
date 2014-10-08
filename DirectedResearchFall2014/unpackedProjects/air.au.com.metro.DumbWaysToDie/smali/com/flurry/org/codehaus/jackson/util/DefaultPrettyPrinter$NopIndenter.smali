@@ -42,8 +42,8 @@
 
 .method public writeIndentation(Lcom/flurry/org/codehaus/jackson/JsonGenerator;I)V
     .locals 0
-    .parameter "jg"
-    .parameter "level"
+    .param p1, "jg"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator;
+    .param p2, "level"    # I
 
     .prologue
     .line 216

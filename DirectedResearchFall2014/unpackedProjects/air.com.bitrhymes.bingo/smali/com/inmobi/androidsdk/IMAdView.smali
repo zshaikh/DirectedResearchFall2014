@@ -109,9 +109,6 @@
 # direct methods
 .method public constructor <init>(Landroid/app/Activity;ILjava/lang/String;)V
     .locals 3
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 230
@@ -158,10 +155,6 @@
 
 .method public constructor <init>(Landroid/app/Activity;ILjava/lang/String;J)V
     .locals 3
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 261
@@ -211,7 +204,6 @@
 
 .method private constructor <init>(Landroid/content/Context;)V
     .locals 3
-    .parameter
 
     .prologue
     const/4 v2, 0x1
@@ -313,8 +305,6 @@
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 4
-    .parameter
-    .parameter
 
     .prologue
     const/4 v2, 0x1
@@ -506,7 +496,6 @@
 
 .method static synthetic a(Lcom/inmobi/androidsdk/IMAdView;)Lcom/inmobi/androidsdk/ai/container/IMWebView;
     .locals 1
-    .parameter
 
     .prologue
     .line 142
@@ -517,7 +506,6 @@
 
 .method private a(I)V
     .locals 2
-    .parameter
 
     .prologue
     .line 326
@@ -539,8 +527,6 @@
 
 .method private a(ILcom/inmobi/androidsdk/IMAdRequest$ErrorCode;)V
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     .line 775
@@ -582,9 +568,6 @@
 
 .method private a(Landroid/app/Activity;ILjava/lang/String;)V
     .locals 5
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const/4 v4, 0x0
@@ -748,7 +731,6 @@
 
 .method private a(Landroid/view/MotionEvent;)V
     .locals 10
-    .parameter
 
     .prologue
     const/4 v9, 0x0
@@ -880,9 +862,6 @@
 
 .method static synthetic a(Lcom/inmobi/androidsdk/IMAdView;ILcom/inmobi/androidsdk/IMAdRequest$ErrorCode;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 771
@@ -893,8 +872,6 @@
 
 .method static synthetic a(Lcom/inmobi/androidsdk/IMAdView;Landroid/view/MotionEvent;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 848
@@ -905,8 +882,6 @@
 
 .method static synthetic a(Lcom/inmobi/androidsdk/IMAdView;Lcom/inmobi/androidsdk/ai/container/IMWebView;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 142
@@ -917,8 +892,6 @@
 
 .method static synthetic a(Lcom/inmobi/androidsdk/IMAdView;Lcom/inmobi/androidsdk/impl/IMAdUnit;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 155
@@ -929,8 +902,6 @@
 
 .method static synthetic a(Lcom/inmobi/androidsdk/IMAdView;Z)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 742
@@ -941,7 +912,6 @@
 
 .method private a(Lcom/inmobi/androidsdk/impl/IMAdUnit;)V
     .locals 8
-    .parameter
 
     .prologue
     const/4 v4, 0x0
@@ -1183,7 +1153,6 @@
 
 .method private a(Ljava/lang/StringBuffer;)V
     .locals 3
-    .parameter
 
     .prologue
     const-string v2, "#BGCOLOR1"
@@ -1272,7 +1241,6 @@
 
 .method private a(Z)V
     .locals 1
-    .parameter
 
     .prologue
     .line 695
@@ -1286,7 +1254,6 @@
 
 .method private a(Ljava/lang/String;)Z
     .locals 2
-    .parameter
 
     .prologue
     .line 971
@@ -1343,7 +1310,6 @@
 
 .method static synthetic b(Lcom/inmobi/androidsdk/IMAdView;)Lcom/inmobi/androidsdk/ai/container/IMWebView;
     .locals 1
-    .parameter
 
     .prologue
     .line 143
@@ -1354,8 +1320,6 @@
 
 .method static synthetic b(Lcom/inmobi/androidsdk/IMAdView;Lcom/inmobi/androidsdk/ai/container/IMWebView;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 143
@@ -1366,8 +1330,6 @@
 
 .method static synthetic b(Lcom/inmobi/androidsdk/IMAdView;Lcom/inmobi/androidsdk/impl/IMAdUnit;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 424
@@ -1378,8 +1340,6 @@
 
 .method static synthetic b(Lcom/inmobi/androidsdk/IMAdView;Z)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 694
@@ -1390,7 +1350,6 @@
 
 .method private b(Z)V
     .locals 1
-    .parameter
 
     .prologue
     .line 735
@@ -1571,7 +1530,6 @@
 
 .method static synthetic c(Lcom/inmobi/androidsdk/IMAdView;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 890
@@ -1582,8 +1540,6 @@
 
 .method static synthetic c(Lcom/inmobi/androidsdk/IMAdView;Z)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 184
@@ -1594,7 +1550,6 @@
 
 .method private c(Z)V
     .locals 2
-    .parameter
 
     .prologue
     const/4 v1, 0x0
@@ -1660,8 +1615,6 @@
 
 .method static synthetic d(Lcom/inmobi/androidsdk/IMAdView;Z)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 734
@@ -1672,7 +1625,6 @@
 
 .method static synthetic d(Lcom/inmobi/androidsdk/IMAdView;)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 698
@@ -1901,7 +1853,6 @@
 
 .method static synthetic e(Lcom/inmobi/androidsdk/IMAdView;)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 690
@@ -1914,7 +1865,6 @@
 
 .method static synthetic f(Lcom/inmobi/androidsdk/IMAdView;)Lcom/inmobi/androidsdk/impl/IMAdUnit;
     .locals 1
-    .parameter
 
     .prologue
     .line 155
@@ -2019,8 +1969,8 @@
     .line 577
     invoke-direct {p0}, Lcom/inmobi/androidsdk/IMAdView;->l()V
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 581
     invoke-direct {p0, v3, v4}, Lcom/inmobi/androidsdk/IMAdView;->a(ILcom/inmobi/androidsdk/IMAdRequest$ErrorCode;)V
@@ -2056,8 +2006,8 @@
 
     invoke-virtual {v0}, Lcom/inmobi/androidsdk/ai/container/IMWebView;->requestFocusFromTouch()Z
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     goto :goto_0
 
@@ -2099,7 +2049,6 @@
 
 .method static synthetic g(Lcom/inmobi/androidsdk/IMAdView;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 875
@@ -2178,7 +2127,6 @@
 
 .method static synthetic h(Lcom/inmobi/androidsdk/IMAdView;)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 738
@@ -2191,7 +2139,6 @@
 
 .method static synthetic i(Lcom/inmobi/androidsdk/IMAdView;)Landroid/widget/LinearLayout;
     .locals 1
-    .parameter
 
     .prologue
     .line 144
@@ -2348,7 +2295,6 @@
 
 .method static synthetic j(Lcom/inmobi/androidsdk/IMAdView;)Lcom/inmobi/androidsdk/IMAdView$a;
     .locals 1
-    .parameter
 
     .prologue
     .line 1149
@@ -2369,7 +2315,6 @@
 
 .method static synthetic k(Lcom/inmobi/androidsdk/IMAdView;)Lcom/inmobi/androidsdk/impl/net/IMRequestResponseManager;
     .locals 1
-    .parameter
 
     .prologue
     .line 201
@@ -2445,7 +2390,6 @@
 
 .method static synthetic l(Lcom/inmobi/androidsdk/IMAdView;)I
     .locals 1
-    .parameter
 
     .prologue
     .line 138
@@ -2514,7 +2458,6 @@
 
 .method static synthetic m(Lcom/inmobi/androidsdk/IMAdView;)Landroid/app/Activity;
     .locals 1
-    .parameter
 
     .prologue
     .line 145
@@ -2561,7 +2504,6 @@
 
 .method static synthetic n(Lcom/inmobi/androidsdk/IMAdView;)Lcom/inmobi/androidsdk/impl/IMUserInfo;
     .locals 1
-    .parameter
 
     .prologue
     .line 149
@@ -2572,7 +2514,6 @@
 
 .method static synthetic o(Lcom/inmobi/androidsdk/IMAdView;)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 184
@@ -2583,7 +2524,6 @@
 
 .method static synthetic p(Lcom/inmobi/androidsdk/IMAdView;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 555
@@ -2594,7 +2534,6 @@
 
 .method static synthetic q(Lcom/inmobi/androidsdk/IMAdView;)Lcom/inmobi/androidsdk/IMAdView$AnimationType;
     .locals 1
-    .parameter
 
     .prologue
     .line 186
@@ -2605,7 +2544,6 @@
 
 .method static synthetic r(Lcom/inmobi/androidsdk/IMAdView;)Lcom/inmobi/androidsdk/a;
     .locals 1
-    .parameter
 
     .prologue
     .line 189
@@ -2616,7 +2554,6 @@
 
 .method static synthetic s(Lcom/inmobi/androidsdk/IMAdView;)Lcom/inmobi/androidsdk/IMAdListener;
     .locals 1
-    .parameter
 
     .prologue
     .line 171
@@ -2627,7 +2564,6 @@
 
 .method private setAdServerTestUrl(Ljava/lang/String;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 649
@@ -2639,7 +2575,6 @@
 
 .method private setAdServerUrl(Ljava/lang/String;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 639
@@ -2651,7 +2586,6 @@
 
 .method static synthetic t(Lcom/inmobi/androidsdk/IMAdView;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1476
@@ -2674,7 +2608,6 @@
 
 .method a(Landroid/view/animation/Animation;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 760
@@ -2696,7 +2629,6 @@
 
 .method b(Landroid/view/animation/Animation;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 768
@@ -2791,8 +2723,8 @@
     .line 599
     invoke-direct {p0, v0, v1}, Lcom/inmobi/androidsdk/IMAdView;->a(ILcom/inmobi/androidsdk/IMAdRequest$ErrorCode;)V
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     .line 630
     :goto_0
@@ -2818,8 +2750,8 @@
     .line 603
     invoke-direct {p0, v0, v1}, Lcom/inmobi/androidsdk/IMAdView;->a(ILcom/inmobi/androidsdk/IMAdRequest$ErrorCode;)V
     :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
     goto :goto_0
 
@@ -2932,15 +2864,14 @@
     .line 624
     invoke-virtual/range {v0 .. v6}, Lcom/inmobi/androidsdk/impl/net/IMRequestResponseManager;->asyncRequestAd(Lcom/inmobi/androidsdk/impl/IMUserInfo;Lcom/inmobi/androidsdk/impl/IMNiceInfo;Lcom/inmobi/androidsdk/impl/net/IMRequestResponseManager$ActionType;Ljava/lang/String;Ljava/lang/String;Lcom/inmobi/androidsdk/impl/net/IMHttpRequestCallback;)V
     :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_0
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
     goto :goto_0
 .end method
 
 .method public loadNewAd(Lcom/inmobi/androidsdk/IMAdRequest;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 663
@@ -3043,7 +2974,6 @@
 
 .method protected onWindowVisibilityChanged(I)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1488
@@ -3062,7 +2992,6 @@
 
 .method public setAdBackgroundColor(Ljava/lang/String;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 917
@@ -3090,8 +3019,6 @@
 
 .method public setAdBackgroundGradientColor(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 941
@@ -3128,7 +3055,6 @@
 
 .method public setAdSize(I)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1430
@@ -3143,7 +3069,6 @@
 
 .method public setAdTextColor(Ljava/lang/String;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 963
@@ -3171,7 +3096,6 @@
 
 .method public setAnimationType(Lcom/inmobi/androidsdk/IMAdView$AnimationType;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1023
@@ -3183,7 +3107,6 @@
 
 .method public setAppId(Ljava/lang/String;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1401
@@ -3198,7 +3121,6 @@
 
 .method public setIMAdListener(Lcom/inmobi/androidsdk/IMAdListener;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1324
@@ -3210,7 +3132,6 @@
 
 .method public setIMAdRequest(Lcom/inmobi/androidsdk/IMAdRequest;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1343
@@ -3222,8 +3143,6 @@
 
 .method public setRefTagParam(Ljava/lang/String;Ljava/lang/String;)V
     .locals 3
-    .parameter
-    .parameter
 
     .prologue
     const-string v2, ""
@@ -3310,7 +3229,6 @@
 
 .method public setRefreshInterval(I)V
     .locals 4
-    .parameter
 
     .prologue
     const/4 v0, -0x1
@@ -3372,7 +3290,6 @@
 
 .method public setSlotId(J)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1451

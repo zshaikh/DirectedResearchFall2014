@@ -22,7 +22,7 @@
 
 .field private static final MANAGE_PERMISSION_PREFIX:Ljava/lang/String; = "manage"
 
-.field private static final OTHER_PUBLISH_PERMISSIONS:Ljava/util/Set; = null
+.field private static final OTHER_PUBLISH_PERMISSIONS:Ljava/util/Set;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Set",
@@ -37,9 +37,9 @@
 
 .field private static final SESSION_BUNDLE_SAVE_KEY:Ljava/lang/String; = "com.facebook.sdk.Session.saveSessionKey"
 
-.field private static final STATIC_LOCK:Ljava/lang/Object; = null
+.field private static final STATIC_LOCK:Ljava/lang/Object;
 
-.field public static final TAG:Ljava/lang/String; = null
+.field public static final TAG:Ljava/lang/String;
 
 .field private static final TOKEN_EXTEND_RETRY_SECONDS:I = 0xe10
 
@@ -912,7 +912,7 @@
     :cond_2
     iget-object v1, p0, Lcom/facebook/Session;->pendingAuthorizationRequest:Lcom/facebook/Session$AuthorizationRequest;
 
-    #getter for: Lcom/facebook/Session$AuthorizationRequest;->loggingExtras:Ljava/util/Map;
+    # getter for: Lcom/facebook/Session$AuthorizationRequest;->loggingExtras:Ljava/util/Map;
     invoke-static {v1}, Lcom/facebook/Session$AuthorizationRequest;->access$100(Lcom/facebook/Session$AuthorizationRequest;)Ljava/util/Map;
 
     move-result-object v1
@@ -927,7 +927,7 @@
 
     iget-object v2, p0, Lcom/facebook/Session;->pendingAuthorizationRequest:Lcom/facebook/Session$AuthorizationRequest;
 
-    #getter for: Lcom/facebook/Session$AuthorizationRequest;->loggingExtras:Ljava/util/Map;
+    # getter for: Lcom/facebook/Session$AuthorizationRequest;->loggingExtras:Ljava/util/Map;
     invoke-static {v2}, Lcom/facebook/Session$AuthorizationRequest;->access$100(Lcom/facebook/Session$AuthorizationRequest;)Ljava/util/Map;
 
     move-result-object v2
@@ -1056,7 +1056,7 @@
 
     iget-object v3, p0, Lcom/facebook/Session;->pendingAuthorizationRequest:Lcom/facebook/Session$AuthorizationRequest;
 
-    #getter for: Lcom/facebook/Session$AuthorizationRequest;->loginBehavior:Lcom/facebook/SessionLoginBehavior;
+    # getter for: Lcom/facebook/Session$AuthorizationRequest;->loginBehavior:Lcom/facebook/SessionLoginBehavior;
     invoke-static {v3}, Lcom/facebook/Session$AuthorizationRequest;->access$300(Lcom/facebook/Session$AuthorizationRequest;)Lcom/facebook/SessionLoginBehavior;
 
     move-result-object v3
@@ -1071,7 +1071,7 @@
 
     iget-object v3, p0, Lcom/facebook/Session;->pendingAuthorizationRequest:Lcom/facebook/Session$AuthorizationRequest;
 
-    #getter for: Lcom/facebook/Session$AuthorizationRequest;->requestCode:I
+    # getter for: Lcom/facebook/Session$AuthorizationRequest;->requestCode:I
     invoke-static {v3}, Lcom/facebook/Session$AuthorizationRequest;->access$400(Lcom/facebook/Session$AuthorizationRequest;)I
 
     move-result v3
@@ -1082,7 +1082,7 @@
 
     iget-object v3, p0, Lcom/facebook/Session;->pendingAuthorizationRequest:Lcom/facebook/Session$AuthorizationRequest;
 
-    #getter for: Lcom/facebook/Session$AuthorizationRequest;->isLegacy:Z
+    # getter for: Lcom/facebook/Session$AuthorizationRequest;->isLegacy:Z
     invoke-static {v3}, Lcom/facebook/Session$AuthorizationRequest;->access$200(Lcom/facebook/Session$AuthorizationRequest;)Z
 
     move-result v3
@@ -1095,7 +1095,7 @@
 
     iget-object v4, p0, Lcom/facebook/Session;->pendingAuthorizationRequest:Lcom/facebook/Session$AuthorizationRequest;
 
-    #getter for: Lcom/facebook/Session$AuthorizationRequest;->permissions:Ljava/util/List;
+    # getter for: Lcom/facebook/Session$AuthorizationRequest;->permissions:Ljava/util/List;
     invoke-static {v4}, Lcom/facebook/Session$AuthorizationRequest;->access$500(Lcom/facebook/Session$AuthorizationRequest;)Ljava/util/List;
 
     move-result-object v4
@@ -1110,7 +1110,7 @@
 
     iget-object v3, p0, Lcom/facebook/Session;->pendingAuthorizationRequest:Lcom/facebook/Session$AuthorizationRequest;
 
-    #getter for: Lcom/facebook/Session$AuthorizationRequest;->defaultAudience:Lcom/facebook/SessionDefaultAudience;
+    # getter for: Lcom/facebook/Session$AuthorizationRequest;->defaultAudience:Lcom/facebook/SessionDefaultAudience;
     invoke-static {v3}, Lcom/facebook/Session$AuthorizationRequest;->access$600(Lcom/facebook/Session$AuthorizationRequest;)Lcom/facebook/SessionDefaultAudience;
 
     move-result-object v3
@@ -1938,7 +1938,7 @@
 
     if-eqz p1, :cond_0
 
-    #getter for: Lcom/facebook/Session$AuthorizationRequest;->isLegacy:Z
+    # getter for: Lcom/facebook/Session$AuthorizationRequest;->isLegacy:Z
     invoke-static {p1}, Lcom/facebook/Session$AuthorizationRequest;->access$200(Lcom/facebook/Session$AuthorizationRequest;)Z
 
     move-result v0
@@ -2199,7 +2199,7 @@
 
     iget-object v1, p0, Lcom/facebook/Session;->pendingAuthorizationRequest:Lcom/facebook/Session$AuthorizationRequest;
 
-    #getter for: Lcom/facebook/Session$AuthorizationRequest;->loggingExtras:Ljava/util/Map;
+    # getter for: Lcom/facebook/Session$AuthorizationRequest;->loggingExtras:Ljava/util/Map;
     invoke-static {v1}, Lcom/facebook/Session$AuthorizationRequest;->access$100(Lcom/facebook/Session$AuthorizationRequest;)Ljava/util/Map;
 
     move-result-object v1
@@ -2217,7 +2217,7 @@
 
     if-nez v0, :cond_0
 
-    #getter for: Lcom/facebook/Session$AuthorizationRequest;->isLegacy:Z
+    # getter for: Lcom/facebook/Session$AuthorizationRequest;->isLegacy:Z
     invoke-static {p1}, Lcom/facebook/Session$AuthorizationRequest;->access$200(Lcom/facebook/Session$AuthorizationRequest;)Z
 
     move-result v1
@@ -2226,7 +2226,7 @@
 
     iget-object v0, p0, Lcom/facebook/Session;->pendingAuthorizationRequest:Lcom/facebook/Session$AuthorizationRequest;
 
-    #getter for: Lcom/facebook/Session$AuthorizationRequest;->loggingExtras:Ljava/util/Map;
+    # getter for: Lcom/facebook/Session$AuthorizationRequest;->loggingExtras:Ljava/util/Map;
     invoke-static {v0}, Lcom/facebook/Session$AuthorizationRequest;->access$100(Lcom/facebook/Session$AuthorizationRequest;)Ljava/util/Map;
 
     move-result-object v0

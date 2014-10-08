@@ -30,9 +30,8 @@
 # direct methods
 .method private constructor <init>(Lcom/fusepowered/m2/m2l/MraidDisplayController;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter "filename"
-    .parameter "mimeType"
+    .param p2, "filename"    # Ljava/lang/String;
+    .param p3, "mimeType"    # Ljava/lang/String;
 
     .prologue
     .line 840
@@ -52,10 +51,6 @@
 
 .method synthetic constructor <init>(Lcom/fusepowered/m2/m2l/MraidDisplayController;Ljava/lang/String;Ljava/lang/String;Lcom/fusepowered/m2/m2l/MraidDisplayController$MoPubMediaScannerConnectionClient;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 840
@@ -66,8 +61,6 @@
 
 .method static synthetic access$1(Lcom/fusepowered/m2/m2l/MraidDisplayController$MoPubMediaScannerConnectionClient;Landroid/media/MediaScannerConnection;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 845
@@ -78,7 +71,7 @@
 
 .method private setMediaScannerConnection(Landroid/media/MediaScannerConnection;)V
     .locals 0
-    .parameter "connection"
+    .param p1, "connection"    # Landroid/media/MediaScannerConnection;
 
     .prologue
     .line 846
@@ -115,8 +108,8 @@
 
 .method public onScanCompleted(Ljava/lang/String;Landroid/net/Uri;)V
     .locals 1
-    .parameter "path"
-    .parameter "uri"
+    .param p1, "path"    # Ljava/lang/String;
+    .param p2, "uri"    # Landroid/net/Uri;
 
     .prologue
     .line 858

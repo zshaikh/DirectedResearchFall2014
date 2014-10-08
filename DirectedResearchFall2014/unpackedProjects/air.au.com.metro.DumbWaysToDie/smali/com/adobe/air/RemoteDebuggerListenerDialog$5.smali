@@ -32,7 +32,6 @@
 # direct methods
 .method constructor <init>(Lcom/adobe/air/RemoteDebuggerListenerDialog;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 186
@@ -47,7 +46,6 @@
 # virtual methods
 .method protected varargs doInBackground([Ljava/lang/Integer;)Ljava/lang/Integer;
     .locals 4
-    .parameter
 
     .prologue
     const/4 v3, 0x0
@@ -91,7 +89,6 @@
 
 .method protected bridge synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
-    .parameter
 
     .prologue
     .line 186

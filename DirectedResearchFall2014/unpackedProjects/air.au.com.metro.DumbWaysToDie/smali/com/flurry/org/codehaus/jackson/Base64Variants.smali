@@ -4,13 +4,13 @@
 
 
 # static fields
-.field public static final MIME:Lcom/flurry/org/codehaus/jackson/Base64Variant; = null
+.field public static final MIME:Lcom/flurry/org/codehaus/jackson/Base64Variant;
 
-.field public static final MIME_NO_LINEFEEDS:Lcom/flurry/org/codehaus/jackson/Base64Variant; = null
+.field public static final MIME_NO_LINEFEEDS:Lcom/flurry/org/codehaus/jackson/Base64Variant;
 
-.field public static final MODIFIED_FOR_URL:Lcom/flurry/org/codehaus/jackson/Base64Variant; = null
+.field public static final MODIFIED_FOR_URL:Lcom/flurry/org/codehaus/jackson/Base64Variant;
 
-.field public static final PEM:Lcom/flurry/org/codehaus/jackson/Base64Variant; = null
+.field public static final PEM:Lcom/flurry/org/codehaus/jackson/Base64Variant;
 
 .field static final STD_BASE64_ALPHABET:Ljava/lang/String; = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/"
 
@@ -79,7 +79,7 @@
     invoke-direct {v11, v2}, Ljava/lang/StringBuffer;-><init>(Ljava/lang/String;)V
 
     .line 73
-    .local v11, sb:Ljava/lang/StringBuffer;
+    .local v11, "sb":Ljava/lang/StringBuffer;
     const-string v0, "+"
 
     invoke-virtual {v11, v0}, Ljava/lang/StringBuffer;->indexOf(Ljava/lang/String;)I

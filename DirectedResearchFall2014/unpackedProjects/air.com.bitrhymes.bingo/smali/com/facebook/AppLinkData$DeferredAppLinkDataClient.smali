@@ -17,8 +17,8 @@
 # direct methods
 .method constructor <init>(Landroid/content/Context;Ljava/lang/String;)V
     .locals 6
-    .parameter "context"
-    .parameter "applicationId"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "applicationId"    # Ljava/lang/String;
 
     .prologue
     .line 242
@@ -45,7 +45,7 @@
 # virtual methods
 .method protected populateRequestBundle(Landroid/os/Bundle;)V
     .locals 2
-    .parameter "data"
+    .param p1, "data"    # Landroid/os/Bundle;
 
     .prologue
     .line 248
@@ -58,7 +58,7 @@
     move-result-object v0
 
     .line 249
-    .local v0, packageName:Ljava/lang/String;
+    .local v0, "packageName":Ljava/lang/String;
     const-string v1, "com.facebook.platform.extra.INSTALLDATA_PACKAGE"
 
     invoke-virtual {p1, v1, v0}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V

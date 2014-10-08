@@ -31,8 +31,8 @@
 # virtual methods
 .method public call(Lcom/adobe/fre/FREContext;[Lcom/adobe/fre/FREObject;)Lcom/adobe/fre/FREObject;
     .locals 1
-    .parameter "context"
-    .parameter "arg1"
+    .param p1, "context"    # Lcom/adobe/fre/FREContext;
+    .param p2, "arg1"    # [Lcom/adobe/fre/FREObject;
 
     .prologue
     .line 27
@@ -62,7 +62,7 @@
 
 .method public clearAlarms(Landroid/content/Context;)V
     .locals 6
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     .line 68
@@ -81,7 +81,7 @@
     invoke-direct {v2}, Landroid/content/Intent;-><init>()V
 
     .line 72
-    .local v2, i:Landroid/content/Intent;
+    .local v2, "i":Landroid/content/Intent;
     const-class v4, Lcom/bitrhymes/nativeutils/localnotify/AlarmReceiver;
 
     invoke-virtual {v2, p1, v4}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
@@ -90,7 +90,7 @@
     const/4 v1, 0x1
 
     .line 76
-    .local v1, counter:I
+    .local v1, "counter":I
     :goto_0
     const/16 v4, 0x64
 
@@ -107,14 +107,14 @@
 
     add-int/2addr v4, v5
 
-    const/high16 v5, 0x800
+    const/high16 v5, 0x8000000
 
     invoke-static {p1, v4, v2, v5}, Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
 
     move-result-object v3
 
     .line 81
-    .local v3, sender1:Landroid/app/PendingIntent;
+    .local v3, "sender1":Landroid/app/PendingIntent;
     const-string v4, "alarm"
 
     invoke-virtual {p1, v4}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -124,7 +124,7 @@
     check-cast v0, Landroid/app/AlarmManager;
 
     .line 82
-    .local v0, am:Landroid/app/AlarmManager;
+    .local v0, "am":Landroid/app/AlarmManager;
     invoke-virtual {v0, v3}, Landroid/app/AlarmManager;->cancel(Landroid/app/PendingIntent;)V
 
     .line 84
@@ -157,7 +157,7 @@
 
 .method public clearLocalNotificationsSetByBackend(Landroid/content/Context;)V
     .locals 13
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     const/4 v12, 0x0
@@ -168,7 +168,7 @@
     invoke-direct {v4}, Landroid/content/Intent;-><init>()V
 
     .line 36
-    .local v4, i:Landroid/content/Intent;
+    .local v4, "i":Landroid/content/Intent;
     const-class v9, Lcom/bitrhymes/nativeutils/localnotify/AlarmReceiver;
 
     invoke-virtual {v4, p1, v9}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
@@ -181,13 +181,13 @@
     move-result-object v8
 
     .line 38
-    .local v8, settings:Landroid/content/SharedPreferences;
+    .local v8, "settings":Landroid/content/SharedPreferences;
     invoke-interface {v8}, Landroid/content/SharedPreferences;->getAll()Ljava/util/Map;
 
     move-result-object v0
 
     .line 40
-    .local v0, allNotifyIdsMap:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;*>;"
+    .local v0, "allNotifyIdsMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;*>;"
     if-eqz v0, :cond_1
 
     invoke-interface {v0}, Ljava/util/Map;->isEmpty()Z
@@ -226,13 +226,13 @@
     check-cast v6, Ljava/lang/String;
 
     .line 44
-    .local v6, notifyId:Ljava/lang/String;
+    .local v6, "notifyId":Ljava/lang/String;
     invoke-interface {v8, v6, v12}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v5
 
     .line 46
-    .local v5, isCleared:Z
+    .local v5, "isCleared":Z
     if-nez v5, :cond_0
 
     .line 48
@@ -241,21 +241,21 @@
     move-result v2
 
     .line 50
-    .local v2, counter:I
+    .local v2, "counter":I
     sget v10, Lcom/bitrhymes/nativeutils/utils/Utils;->requestCode1:I
 
     mul-int/lit8 v11, v2, 0xa
 
     add-int/2addr v10, v11
 
-    const/high16 v11, 0x800
+    const/high16 v11, 0x8000000
 
     invoke-static {p1, v10, v4, v11}, Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
 
     move-result-object v7
 
     .line 53
-    .local v7, sender1:Landroid/app/PendingIntent;
+    .local v7, "sender1":Landroid/app/PendingIntent;
     const-string v10, "alarm"
 
     invoke-virtual {p1, v10}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -265,7 +265,7 @@
     check-cast v1, Landroid/app/AlarmManager;
 
     .line 54
-    .local v1, am:Landroid/app/AlarmManager;
+    .local v1, "am":Landroid/app/AlarmManager;
     invoke-virtual {v1, v7}, Landroid/app/AlarmManager;->cancel(Landroid/app/PendingIntent;)V
 
     .line 56
@@ -274,7 +274,7 @@
     move-result-object v3
 
     .line 58
-    .local v3, editor:Landroid/content/SharedPreferences$Editor;
+    .local v3, "editor":Landroid/content/SharedPreferences$Editor;
     const/4 v10, 0x1
 
     invoke-interface {v3, v6, v10}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
@@ -287,7 +287,7 @@
 
 .method public debugLog(Ljava/lang/String;)V
     .locals 1
-    .parameter "msg"
+    .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
     .line 22

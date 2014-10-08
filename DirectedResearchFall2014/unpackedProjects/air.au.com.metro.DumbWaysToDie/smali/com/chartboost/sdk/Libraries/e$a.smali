@@ -51,11 +51,6 @@
 # direct methods
 .method public constructor <init>(Lcom/chartboost/sdk/Libraries/e;Landroid/widget/ImageView;Lcom/chartboost/sdk/Libraries/e$b;Ljava/lang/String;Landroid/os/Bundle;)V
     .locals 1
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 109
@@ -98,7 +93,6 @@
 # virtual methods
 .method protected varargs a([Ljava/lang/String;)Lcom/chartboost/sdk/Libraries/a$a;
     .locals 12
-    .parameter
 
     .prologue
     const/4 v10, 0x1
@@ -332,8 +326,8 @@
 
     invoke-virtual {v0, v5, v1}, Lcom/chartboost/sdk/Libraries/a;->a(Ljava/lang/String;Lcom/chartboost/sdk/Libraries/a$a;)V
     :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_1
     .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_2
+    .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
     move-object v0, v1
 
@@ -586,7 +580,6 @@
 
 .method protected a(Lcom/chartboost/sdk/Libraries/a$a;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 197
@@ -676,7 +669,6 @@
 
 .method protected varargs synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
-    .parameter
 
     .prologue
     .line 1
@@ -691,7 +683,6 @@
 
 .method protected synthetic onPostExecute(Ljava/lang/Object;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1

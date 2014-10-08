@@ -42,9 +42,9 @@
 
 .method public static getResourseIdByName(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
     .locals 6
-    .parameter "packageName"
-    .parameter "className"
-    .parameter "name"
+    .param p0, "packageName"    # Ljava/lang/String;
+    .param p1, "className"    # Ljava/lang/String;
+    .param p2, "name"    # Ljava/lang/String;
 
     .prologue
     const-string v3, ".R"
@@ -53,10 +53,10 @@
     const/4 v2, 0x0
 
     .line 119
-    .local v2, id:I
+    .local v2, "id":I
     const/4 v1, 0x0
 
-    .local v1, i:I
+    .local v1, "i":I
     :goto_0
     :try_start_0
     new-instance v3, Ljava/lang/StringBuilder;
@@ -278,13 +278,13 @@
     move-object v0, v3
 
     .line 131
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const/4 v3, -0x1
 
     goto/16 :goto_2
 
     .line 119
-    .end local v0           #e:Ljava/lang/Exception;
+    .end local v0    # "e":Ljava/lang/Exception;
     :cond_2
     add-int/lit8 v1, v1, 0x1
 
@@ -295,7 +295,7 @@
 # virtual methods
 .method public debugLog(Ljava/lang/String;)V
     .locals 1
-    .parameter "msg"
+    .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
     .line 21
@@ -309,8 +309,8 @@
 
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 10
-    .parameter "context"
-    .parameter "intent"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
     const-string v0, "============================================"
@@ -335,7 +335,7 @@
     move-result-object v4
 
     .line 32
-    .local v4, src_text:Ljava/lang/String;
+    .local v4, "src_text":Ljava/lang/String;
     const-string v0, "src_title"
 
     invoke-virtual {p2, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
@@ -343,7 +343,7 @@
     move-result-object v2
 
     .line 33
-    .local v2, src_title:Ljava/lang/String;
+    .local v2, "src_title":Ljava/lang/String;
     const-string v0, "src_scroll"
 
     invoke-virtual {p2, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
@@ -351,7 +351,7 @@
     move-result-object v3
 
     .line 34
-    .local v3, src_scroll:Ljava/lang/String;
+    .local v3, "src_scroll":Ljava/lang/String;
     const-string v0, "src_package"
 
     invoke-virtual {p2, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
@@ -359,13 +359,13 @@
     move-result-object v6
 
     .line 36
-    .local v6, src_package:Ljava/lang/String;
+    .local v6, "src_package":Ljava/lang/String;
     invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v9
 
     .line 40
-    .local v9, manager:Landroid/content/pm/PackageManager;
+    .local v9, "manager":Landroid/content/pm/PackageManager;
     :try_start_0
     invoke-virtual {p1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
@@ -378,11 +378,11 @@
     move-result-object v7
 
     .line 42
-    .local v7, ai:Landroid/content/pm/ApplicationInfo;
+    .local v7, "ai":Landroid/content/pm/ApplicationInfo;
     iget v5, v7, Landroid/content/pm/ApplicationInfo;->icon:I
 
     .line 43
-    .local v5, iconID:I
+    .local v5, "iconID":I
     const-string v0, "============================================"
 
     invoke-virtual {p0, v0}, Lcom/bitrhymes/nativeutils/localnotify/AlarmReceiver;->debugLog(Ljava/lang/String;)V
@@ -423,8 +423,8 @@
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 53
-    .end local v5           #iconID:I
-    .end local v7           #ai:Landroid/content/pm/ApplicationInfo;
+    .end local v5    # "iconID":I
+    .end local v7    # "ai":Landroid/content/pm/ApplicationInfo;
     :goto_0
     return-void
 
@@ -435,7 +435,7 @@
     move-object v8, v0
 
     .line 50
-    .local v8, e:Landroid/content/pm/PackageManager$NameNotFoundException;
+    .local v8, "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     invoke-virtual {v8}, Landroid/content/pm/PackageManager$NameNotFoundException;->printStackTrace()V
 
     .line 51
@@ -448,12 +448,12 @@
 
 .method public showNotification(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;)V
     .locals 19
-    .parameter "context"
-    .parameter "title"
-    .parameter "tickerText"
-    .parameter "msg"
-    .parameter "icon"
-    .parameter "packagename"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "title"    # Ljava/lang/String;
+    .param p3, "tickerText"    # Ljava/lang/String;
+    .param p4, "msg"    # Ljava/lang/String;
+    .param p5, "icon"    # I
+    .param p6, "packagename"    # Ljava/lang/String;
 
     .prologue
     .line 59
@@ -472,7 +472,7 @@
     move-result-object v10
 
     .line 61
-    .local v10, manager:Landroid/content/pm/PackageManager;
+    .local v10, "manager":Landroid/content/pm/PackageManager;
     const-string v15, "2.step"
 
     move-object/from16 v0, p0
@@ -485,7 +485,7 @@
     const-string v12, "notification"
 
     .line 64
-    .local v12, ns:Ljava/lang/String;
+    .local v12, "ns":Ljava/lang/String;
     move-object/from16 v0, p1
 
     move-object v1, v12
@@ -497,13 +497,13 @@
     check-cast v9, Landroid/app/NotificationManager;
 
     .line 65
-    .local v9, mNotificationManager:Landroid/app/NotificationManager;
+    .local v9, "mNotificationManager":Landroid/app/NotificationManager;
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v13
 
     .line 68
-    .local v13, when:J
+    .local v13, "when":J
     new-instance v11, Landroid/app/Notification;
 
     move-object v0, v11
@@ -517,7 +517,7 @@
     invoke-direct {v0, v1, v2, v3, v4}, Landroid/app/Notification;-><init>(ILjava/lang/CharSequence;J)V
 
     .line 69
-    .local v11, notification:Landroid/app/Notification;
+    .local v11, "notification":Landroid/app/Notification;
     new-instance v8, Landroid/content/Intent;
 
     const-string v15, "android.intent.action.MAIN"
@@ -525,7 +525,7 @@
     invoke-direct {v8, v15}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
     .line 70
-    .local v8, i:Landroid/content/Intent;
+    .local v8, "i":Landroid/content/Intent;
     const-string v15, "AlarmReceiver"
 
     move-object v0, v15
@@ -556,22 +556,22 @@
     invoke-virtual {v0, v1}, Lcom/bitrhymes/nativeutils/localnotify/AlarmReceiver;->debugLog(Ljava/lang/String;)V
 
     .line 114
-    .end local v8           #i:Landroid/content/Intent;
-    .end local v9           #mNotificationManager:Landroid/app/NotificationManager;
-    .end local v10           #manager:Landroid/content/pm/PackageManager;
-    .end local v11           #notification:Landroid/app/Notification;
-    .end local v12           #ns:Ljava/lang/String;
-    .end local v13           #when:J
+    .end local v8    # "i":Landroid/content/Intent;
+    .end local v9    # "mNotificationManager":Landroid/app/NotificationManager;
+    .end local v10    # "manager":Landroid/content/pm/PackageManager;
+    .end local v11    # "notification":Landroid/app/Notification;
+    .end local v12    # "ns":Ljava/lang/String;
+    .end local v13    # "when":J
     :goto_0
     return-void
 
     .line 80
-    .restart local v8       #i:Landroid/content/Intent;
-    .restart local v9       #mNotificationManager:Landroid/app/NotificationManager;
-    .restart local v10       #manager:Landroid/content/pm/PackageManager;
-    .restart local v11       #notification:Landroid/app/Notification;
-    .restart local v12       #ns:Ljava/lang/String;
-    .restart local v13       #when:J
+    .restart local v8    # "i":Landroid/content/Intent;
+    .restart local v9    # "mNotificationManager":Landroid/app/NotificationManager;
+    .restart local v10    # "manager":Landroid/content/pm/PackageManager;
+    .restart local v11    # "notification":Landroid/app/Notification;
+    .restart local v12    # "ns":Ljava/lang/String;
+    .restart local v13    # "when":J
     :cond_0
     const-string v15, "LocalNotification"
 
@@ -627,7 +627,7 @@
     invoke-direct {v0, v1, v2}, Landroid/widget/RemoteViews;-><init>(Ljava/lang/String;I)V
 
     .line 85
-    .local v6, contentView:Landroid/widget/RemoteViews;
+    .local v6, "contentView":Landroid/widget/RemoteViews;
     invoke-virtual/range {p1 .. p1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object v15
@@ -697,7 +697,7 @@
     move-result-object v5
 
     .line 93
-    .local v5, contentIntent:Landroid/app/PendingIntent;
+    .local v5, "contentIntent":Landroid/app/PendingIntent;
     iput-object v5, v11, Landroid/app/Notification;->contentIntent:Landroid/app/PendingIntent;
 
     .line 96
@@ -736,21 +736,21 @@
     goto/16 :goto_0
 
     .line 110
-    .end local v5           #contentIntent:Landroid/app/PendingIntent;
-    .end local v6           #contentView:Landroid/widget/RemoteViews;
-    .end local v8           #i:Landroid/content/Intent;
-    .end local v9           #mNotificationManager:Landroid/app/NotificationManager;
-    .end local v10           #manager:Landroid/content/pm/PackageManager;
-    .end local v11           #notification:Landroid/app/Notification;
-    .end local v12           #ns:Ljava/lang/String;
-    .end local v13           #when:J
+    .end local v5    # "contentIntent":Landroid/app/PendingIntent;
+    .end local v6    # "contentView":Landroid/widget/RemoteViews;
+    .end local v8    # "i":Landroid/content/Intent;
+    .end local v9    # "mNotificationManager":Landroid/app/NotificationManager;
+    .end local v10    # "manager":Landroid/content/pm/PackageManager;
+    .end local v11    # "notification":Landroid/app/Notification;
+    .end local v12    # "ns":Ljava/lang/String;
+    .end local v13    # "when":J
     :catch_0
     move-exception v15
 
     move-object v7, v15
 
     .line 111
-    .local v7, e:Ljava/lang/Exception;
+    .local v7, "e":Ljava/lang/Exception;
     new-instance v15, Ljava/lang/StringBuilder;
 
     const-string v16, "Error: "

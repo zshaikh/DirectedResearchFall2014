@@ -61,7 +61,7 @@
 
 .method public constructor <init>(I)V
     .locals 1
-    .parameter "firstBlockSize"
+    .param p1, "firstBlockSize"    # I
 
     .prologue
     .line 75
@@ -74,7 +74,7 @@
 
 .method public constructor <init>(Lcom/flurry/org/codehaus/jackson/util/BufferRecycler;)V
     .locals 1
-    .parameter "br"
+    .param p1, "br"    # Lcom/flurry/org/codehaus/jackson/util/BufferRecycler;
 
     .prologue
     .line 73
@@ -87,8 +87,8 @@
 
 .method public constructor <init>(Lcom/flurry/org/codehaus/jackson/util/BufferRecycler;I)V
     .locals 1
-    .parameter "br"
-    .parameter "firstBlockSize"
+    .param p1, "br"    # Lcom/flurry/org/codehaus/jackson/util/BufferRecycler;
+    .param p2, "firstBlockSize"    # I
 
     .prologue
     .line 78
@@ -156,13 +156,13 @@
     move-result v0
 
     .line 285
-    .local v0, newSize:I
-    const/high16 v1, 0x4
+    .local v0, "newSize":I
+    const/high16 v1, 0x40000
 
     if-le v0, v1, :cond_0
 
     .line 286
-    const/high16 v0, 0x4
+    const/high16 v0, 0x40000
 
     .line 288
     :cond_0
@@ -190,7 +190,7 @@
 # virtual methods
 .method public append(I)V
     .locals 3
-    .parameter "i"
+    .param p1, "i"    # I
 
     .prologue
     .line 112
@@ -225,7 +225,7 @@
 
 .method public appendThreeBytes(I)V
     .locals 3
-    .parameter "b24"
+    .param p1, "b24"    # I
 
     .prologue
     .line 131
@@ -305,7 +305,7 @@
 
 .method public appendTwoBytes(I)V
     .locals 3
-    .parameter "b16"
+    .param p1, "b16"    # I
 
     .prologue
     .line 120
@@ -373,7 +373,7 @@
 
 .method public completeAndCoalesce(I)[B
     .locals 1
-    .parameter "lastBlockLength"
+    .param p1, "lastBlockLength"    # I
 
     .prologue
     .line 214
@@ -509,7 +509,7 @@
 
 .method public setCurrentSegmentLength(I)V
     .locals 0
-    .parameter "len"
+    .param p1, "len"    # I
 
     .prologue
     .line 223
@@ -533,7 +533,7 @@
     add-int v5, v6, v7
 
     .line 150
-    .local v5, totalLen:I
+    .local v5, "totalLen":I
     if-nez v5, :cond_0
 
     .line 151
@@ -548,18 +548,18 @@
     new-array v4, v5, [B
 
     .line 155
-    .local v4, result:[B
+    .local v4, "result":[B
     const/4 v3, 0x0
 
     .line 157
-    .local v3, offset:I
+    .local v3, "offset":I
     iget-object v6, p0, Lcom/flurry/org/codehaus/jackson/util/ByteArrayBuilder;->_pastBlocks:Ljava/util/LinkedList;
 
     invoke-virtual {v6}, Ljava/util/LinkedList;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
 
-    .local v1, i$:Ljava/util/Iterator;
+    .local v1, "i$":Ljava/util/Iterator;
     :goto_1
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
@@ -574,11 +574,11 @@
     check-cast v0, [B
 
     .line 158
-    .local v0, block:[B
+    .local v0, "block":[B
     array-length v2, v0
 
     .line 159
-    .local v2, len:I
+    .local v2, "len":I
     invoke-static {v0, v8, v4, v3, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
     .line 160
@@ -588,8 +588,8 @@
     goto :goto_1
 
     .line 162
-    .end local v0           #block:[B
-    .end local v2           #len:I
+    .end local v0    # "block":[B
+    .end local v2    # "len":I
     :cond_1
     iget-object v6, p0, Lcom/flurry/org/codehaus/jackson/util/ByteArrayBuilder;->_currBlock:[B
 
@@ -668,7 +668,7 @@
 
 .method public write(I)V
     .locals 0
-    .parameter "b"
+    .param p1, "b"    # I
 
     .prologue
     .line 260
@@ -680,7 +680,7 @@
 
 .method public write([B)V
     .locals 2
-    .parameter "b"
+    .param p1, "b"    # [B
 
     .prologue
     .line 238
@@ -696,9 +696,9 @@
 
 .method public write([BII)V
     .locals 4
-    .parameter "b"
-    .parameter "off"
-    .parameter "len"
+    .param p1, "b"    # [B
+    .param p2, "off"    # I
+    .param p3, "len"    # I
 
     .prologue
     .line 245
@@ -712,13 +712,13 @@
     sub-int v0, v2, v3
 
     .line 246
-    .local v0, max:I
+    .local v0, "max":I
     invoke-static {v0, p3}, Ljava/lang/Math;->min(II)I
 
     move-result v1
 
     .line 247
-    .local v1, toCopy:I
+    .local v1, "toCopy":I
     if-lez v1, :cond_0
 
     .line 248

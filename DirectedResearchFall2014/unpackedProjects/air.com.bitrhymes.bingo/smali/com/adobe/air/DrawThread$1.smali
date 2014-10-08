@@ -21,7 +21,6 @@
 # direct methods
 .method constructor <init>(Lcom/adobe/air/DrawThread;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 152
@@ -36,7 +35,6 @@
 # virtual methods
 .method public handleMessage(Landroid/os/Message;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 156
@@ -53,13 +51,13 @@
 
     check-cast v0, Lcom/adobe/air/DrawRequest;
 
-    #calls: Lcom/adobe/air/DrawThread;->draw(Lcom/adobe/air/DrawRequest;)V
+    # invokes: Lcom/adobe/air/DrawThread;->draw(Lcom/adobe/air/DrawRequest;)V
     invoke-static {v1, v0}, Lcom/adobe/air/DrawThread;->access$000(Lcom/adobe/air/DrawThread;Lcom/adobe/air/DrawRequest;)V
 
     .line 162
     iget-object v0, p0, Lcom/adobe/air/DrawThread$1;->this$0:Lcom/adobe/air/DrawThread;
 
-    #getter for: Lcom/adobe/air/DrawThread;->mView:Lcom/adobe/air/AIRWindowThreadedSurfaceView;
+    # getter for: Lcom/adobe/air/DrawThread;->mView:Lcom/adobe/air/AIRWindowThreadedSurfaceView;
     invoke-static {v0}, Lcom/adobe/air/DrawThread;->access$100(Lcom/adobe/air/DrawThread;)Lcom/adobe/air/AIRWindowThreadedSurfaceView;
 
     move-result-object v0

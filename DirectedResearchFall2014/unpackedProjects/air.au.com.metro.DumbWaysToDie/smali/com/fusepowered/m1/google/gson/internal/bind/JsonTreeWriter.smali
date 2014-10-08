@@ -96,7 +96,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/fusepowered/m1/google/gson/internal/bind/JsonTreeWriter;
     check-cast p0, Lcom/fusepowered/m1/google/gson/JsonElement;
 
     return-object p0
@@ -104,7 +104,7 @@
 
 .method private put(Lcom/fusepowered/m1/google/gson/JsonElement;)V
     .locals 3
-    .parameter "value"
+    .param p1, "value"    # Lcom/fusepowered/m1/google/gson/JsonElement;
 
     .prologue
     .line 77
@@ -134,13 +134,13 @@
     check-cast v1, Lcom/fusepowered/m1/google/gson/JsonObject;
 
     .line 80
-    .local v1, object:Lcom/fusepowered/m1/google/gson/JsonObject;
+    .local v1, "object":Lcom/fusepowered/m1/google/gson/JsonObject;
     iget-object v2, p0, Lcom/fusepowered/m1/google/gson/internal/bind/JsonTreeWriter;->pendingName:Ljava/lang/String;
 
     invoke-virtual {v1, v2, p1}, Lcom/fusepowered/m1/google/gson/JsonObject;->add(Ljava/lang/String;Lcom/fusepowered/m1/google/gson/JsonElement;)V
 
     .line 82
-    .end local v1           #object:Lcom/fusepowered/m1/google/gson/JsonObject;
+    .end local v1    # "object":Lcom/fusepowered/m1/google/gson/JsonObject;
     :cond_1
     const/4 v2, 0x0
 
@@ -172,7 +172,7 @@
     move-result-object v0
 
     .line 87
-    .local v0, element:Lcom/fusepowered/m1/google/gson/JsonElement;
+    .local v0, "element":Lcom/fusepowered/m1/google/gson/JsonElement;
     instance-of v2, v0, Lcom/fusepowered/m1/google/gson/JsonArray;
 
     if-eqz v2, :cond_4
@@ -180,13 +180,13 @@
     .line 88
     check-cast v0, Lcom/fusepowered/m1/google/gson/JsonArray;
 
-    .end local v0           #element:Lcom/fusepowered/m1/google/gson/JsonElement;
+    .end local v0    # "element":Lcom/fusepowered/m1/google/gson/JsonElement;
     invoke-virtual {v0, p1}, Lcom/fusepowered/m1/google/gson/JsonArray;->add(Lcom/fusepowered/m1/google/gson/JsonElement;)V
 
     goto :goto_0
 
     .line 90
-    .restart local v0       #element:Lcom/fusepowered/m1/google/gson/JsonElement;
+    .restart local v0    # "element":Lcom/fusepowered/m1/google/gson/JsonElement;
     :cond_4
     new-instance v2, Ljava/lang/IllegalStateException;
 
@@ -212,7 +212,7 @@
     invoke-direct {v0}, Lcom/fusepowered/m1/google/gson/JsonArray;-><init>()V
 
     .line 97
-    .local v0, array:Lcom/fusepowered/m1/google/gson/JsonArray;
+    .local v0, "array":Lcom/fusepowered/m1/google/gson/JsonArray;
     invoke-direct {p0, v0}, Lcom/fusepowered/m1/google/gson/internal/bind/JsonTreeWriter;->put(Lcom/fusepowered/m1/google/gson/JsonElement;)V
 
     .line 98
@@ -239,7 +239,7 @@
     invoke-direct {v0}, Lcom/fusepowered/m1/google/gson/JsonObject;-><init>()V
 
     .line 116
-    .local v0, object:Lcom/fusepowered/m1/google/gson/JsonObject;
+    .local v0, "object":Lcom/fusepowered/m1/google/gson/JsonObject;
     invoke-direct {p0, v0}, Lcom/fusepowered/m1/google/gson/internal/bind/JsonTreeWriter;->put(Lcom/fusepowered/m1/google/gson/JsonElement;)V
 
     .line 117
@@ -327,7 +327,7 @@
     move-result-object v0
 
     .line 107
-    .local v0, element:Lcom/fusepowered/m1/google/gson/JsonElement;
+    .local v0, "element":Lcom/fusepowered/m1/google/gson/JsonElement;
     instance-of v1, v0, Lcom/fusepowered/m1/google/gson/JsonArray;
 
     if-eqz v1, :cond_2
@@ -396,7 +396,7 @@
     move-result-object v0
 
     .line 126
-    .local v0, element:Lcom/fusepowered/m1/google/gson/JsonElement;
+    .local v0, "element":Lcom/fusepowered/m1/google/gson/JsonElement;
     instance-of v1, v0, Lcom/fusepowered/m1/google/gson/JsonObject;
 
     if-eqz v1, :cond_2
@@ -490,7 +490,7 @@
 
 .method public name(Ljava/lang/String;)Lcom/fusepowered/m1/google/gson/stream/JsonWriter;
     .locals 2
-    .parameter "name"
+    .param p1, "name"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -526,7 +526,7 @@
     move-result-object v0
 
     .line 138
-    .local v0, element:Lcom/fusepowered/m1/google/gson/JsonElement;
+    .local v0, "element":Lcom/fusepowered/m1/google/gson/JsonElement;
     instance-of v1, v0, Lcom/fusepowered/m1/google/gson/JsonObject;
 
     if-eqz v1, :cond_2
@@ -566,7 +566,7 @@
 
 .method public value(D)Lcom/fusepowered/m1/google/gson/stream/JsonWriter;
     .locals 3
-    .parameter "value"
+    .param p1, "value"    # D
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -637,7 +637,7 @@
 
 .method public value(J)Lcom/fusepowered/m1/google/gson/stream/JsonWriter;
     .locals 2
-    .parameter "value"
+    .param p1, "value"    # J
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -662,7 +662,7 @@
 
 .method public value(Ljava/lang/Number;)Lcom/fusepowered/m1/google/gson/stream/JsonWriter;
     .locals 5
-    .parameter "value"
+    .param p1, "value"    # Ljava/lang/Number;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -696,7 +696,7 @@
     move-result-wide v0
 
     .line 183
-    .local v0, d:D
+    .local v0, "d":D
     invoke-static {v0, v1}, Ljava/lang/Double;->isNaN(D)Z
 
     move-result v2
@@ -736,7 +736,7 @@
     throw v2
 
     .line 188
-    .end local v0           #d:D
+    .end local v0    # "d":D
     :cond_2
     new-instance v2, Lcom/fusepowered/m1/google/gson/JsonPrimitive;
 
@@ -752,7 +752,7 @@
 
 .method public value(Ljava/lang/String;)Lcom/fusepowered/m1/google/gson/stream/JsonWriter;
     .locals 1
-    .parameter "value"
+    .param p1, "value"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -788,7 +788,7 @@
 
 .method public value(Z)Lcom/fusepowered/m1/google/gson/stream/JsonWriter;
     .locals 2
-    .parameter "value"
+    .param p1, "value"    # Z
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;

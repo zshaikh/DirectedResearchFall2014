@@ -23,8 +23,8 @@
 # direct methods
 .method public constructor <init>(Lcom/fusepowered/m1/google/gson/internal/ConstructorConstructor;Z)V
     .locals 0
-    .parameter "constructorConstructor"
-    .parameter "complexMapKeySerialization"
+    .param p1, "constructorConstructor"    # Lcom/fusepowered/m1/google/gson/internal/ConstructorConstructor;
+    .param p2, "complexMapKeySerialization"    # Z
 
     .prologue
     .line 111
@@ -42,7 +42,7 @@
 
 .method static synthetic access$000(Lcom/fusepowered/m1/google/gson/internal/bind/MapTypeAdapterFactory;)Z
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/fusepowered/m1/google/gson/internal/bind/MapTypeAdapterFactory;
 
     .prologue
     .line 106
@@ -53,8 +53,8 @@
 
 .method private getKeyAdapter(Lcom/fusepowered/m1/google/gson/Gson;Ljava/lang/reflect/Type;)Lcom/fusepowered/m1/google/gson/TypeAdapter;
     .locals 1
-    .parameter "context"
-    .parameter "keyType"
+    .param p1, "context"    # Lcom/fusepowered/m1/google/gson/Gson;
+    .param p2, "keyType"    # Ljava/lang/reflect/Type;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -98,8 +98,7 @@
 # virtual methods
 .method public create(Lcom/fusepowered/m1/google/gson/Gson;Lcom/fusepowered/m1/google/gson/reflect/TypeToken;)Lcom/fusepowered/m1/google/gson/TypeAdapter;
     .locals 12
-    .parameter "gson"
-    .parameter
+    .param p1, "gson"    # Lcom/fusepowered/m1/google/gson/Gson;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -114,7 +113,7 @@
     .end annotation
 
     .prologue
-    .local p2, typeToken:Lcom/fusepowered/m1/google/gson/reflect/TypeToken;,"Lcom/fusepowered/m1/google/gson/reflect/TypeToken<TT;>;"
+    .local p2, "typeToken":Lcom/fusepowered/m1/google/gson/reflect/TypeToken;, "Lcom/fusepowered/m1/google/gson/reflect/TypeToken<TT;>;"
     const/4 v5, 0x1
 
     const/4 v2, 0x0
@@ -125,13 +124,13 @@
     move-result-object v11
 
     .line 119
-    .local v11, type:Ljava/lang/reflect/Type;
+    .local v11, "type":Ljava/lang/reflect/Type;
     invoke-virtual {p2}, Lcom/fusepowered/m1/google/gson/reflect/TypeToken;->getRawType()Ljava/lang/Class;
 
     move-result-object v9
 
     .line 120
-    .local v9, rawType:Ljava/lang/Class;,"Ljava/lang/Class<-TT;>;"
+    .local v9, "rawType":Ljava/lang/Class;, "Ljava/lang/Class<-TT;>;"
     const-class v1, Ljava/util/Map;
 
     invoke-virtual {v1, v9}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
@@ -154,13 +153,13 @@
     move-result-object v10
 
     .line 125
-    .local v10, rawTypeOfSrc:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local v10, "rawTypeOfSrc":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-static {v11, v10}, Lcom/fusepowered/m1/google/gson/internal/$Gson$Types;->getMapKeyAndValueTypes(Ljava/lang/reflect/Type;Ljava/lang/Class;)[Ljava/lang/reflect/Type;
 
     move-result-object v8
 
     .line 126
-    .local v8, keyAndValueTypes:[Ljava/lang/reflect/Type;
+    .local v8, "keyAndValueTypes":[Ljava/lang/reflect/Type;
     aget-object v1, v8, v2
 
     invoke-direct {p0, p1, v1}, Lcom/fusepowered/m1/google/gson/internal/bind/MapTypeAdapterFactory;->getKeyAdapter(Lcom/fusepowered/m1/google/gson/Gson;Ljava/lang/reflect/Type;)Lcom/fusepowered/m1/google/gson/TypeAdapter;
@@ -168,7 +167,7 @@
     move-result-object v4
 
     .line 127
-    .local v4, keyAdapter:Lcom/fusepowered/m1/google/gson/TypeAdapter;,"Lcom/fusepowered/m1/google/gson/TypeAdapter<*>;"
+    .local v4, "keyAdapter":Lcom/fusepowered/m1/google/gson/TypeAdapter;, "Lcom/fusepowered/m1/google/gson/TypeAdapter<*>;"
     aget-object v1, v8, v5
 
     invoke-static {v1}, Lcom/fusepowered/m1/google/gson/reflect/TypeToken;->get(Ljava/lang/reflect/Type;)Lcom/fusepowered/m1/google/gson/reflect/TypeToken;
@@ -180,7 +179,7 @@
     move-result-object v6
 
     .line 128
-    .local v6, valueAdapter:Lcom/fusepowered/m1/google/gson/TypeAdapter;,"Lcom/fusepowered/m1/google/gson/TypeAdapter<*>;"
+    .local v6, "valueAdapter":Lcom/fusepowered/m1/google/gson/TypeAdapter;, "Lcom/fusepowered/m1/google/gson/TypeAdapter<*>;"
     iget-object v1, p0, Lcom/fusepowered/m1/google/gson/internal/bind/MapTypeAdapterFactory;->constructorConstructor:Lcom/fusepowered/m1/google/gson/internal/ConstructorConstructor;
 
     invoke-virtual {v1, p2}, Lcom/fusepowered/m1/google/gson/internal/ConstructorConstructor;->get(Lcom/fusepowered/m1/google/gson/reflect/TypeToken;)Lcom/fusepowered/m1/google/gson/internal/ObjectConstructor;
@@ -188,7 +187,7 @@
     move-result-object v7
 
     .line 132
-    .local v7, constructor:Lcom/fusepowered/m1/google/gson/internal/ObjectConstructor;,"Lcom/fusepowered/m1/google/gson/internal/ObjectConstructor<TT;>;"
+    .local v7, "constructor":Lcom/fusepowered/m1/google/gson/internal/ObjectConstructor;, "Lcom/fusepowered/m1/google/gson/internal/ObjectConstructor<TT;>;"
     new-instance v0, Lcom/fusepowered/m1/google/gson/internal/bind/MapTypeAdapterFactory$Adapter;
 
     aget-object v3, v8, v2
@@ -201,7 +200,7 @@
 
     invoke-direct/range {v0 .. v7}, Lcom/fusepowered/m1/google/gson/internal/bind/MapTypeAdapterFactory$Adapter;-><init>(Lcom/fusepowered/m1/google/gson/internal/bind/MapTypeAdapterFactory;Lcom/fusepowered/m1/google/gson/Gson;Ljava/lang/reflect/Type;Lcom/fusepowered/m1/google/gson/TypeAdapter;Ljava/lang/reflect/Type;Lcom/fusepowered/m1/google/gson/TypeAdapter;Lcom/fusepowered/m1/google/gson/internal/ObjectConstructor;)V
 
-    .local v0, result:Lcom/fusepowered/m1/google/gson/TypeAdapter;,"Lcom/fusepowered/m1/google/gson/TypeAdapter<TT;>;"
+    .local v0, "result":Lcom/fusepowered/m1/google/gson/TypeAdapter;, "Lcom/fusepowered/m1/google/gson/TypeAdapter<TT;>;"
     move-object v1, v0
 
     .line 134

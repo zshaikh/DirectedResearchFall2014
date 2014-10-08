@@ -39,8 +39,6 @@
 # direct methods
 .method public constructor <init>(Ljava/lang/Class;Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;)V
     .locals 0
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -55,8 +53,8 @@
 
     .prologue
     .line 130
-    .local p1, type:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
-    .local p2, serializer:Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
+    .local p1, "type":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
+    .local p2, "serializer":Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
     invoke-direct {p0}, Lcom/flurry/org/codehaus/jackson/map/ser/impl/PropertySerializerMap;-><init>()V
 
     .line 131
@@ -73,8 +71,6 @@
 # virtual methods
 .method public newWith(Ljava/lang/Class;Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;)Lcom/flurry/org/codehaus/jackson/map/ser/impl/PropertySerializerMap;
     .locals 3
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -90,8 +86,8 @@
 
     .prologue
     .line 146
-    .local p1, type:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
-    .local p2, serializer:Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
+    .local p1, "type":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
+    .local p2, "serializer":Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
     new-instance v0, Lcom/flurry/org/codehaus/jackson/map/ser/impl/PropertySerializerMap$Double;
 
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/map/ser/impl/PropertySerializerMap$Single;->_type:Ljava/lang/Class;
@@ -105,7 +101,6 @@
 
 .method public serializerFor(Ljava/lang/Class;)Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -120,7 +115,7 @@
 
     .prologue
     .line 138
-    .local p1, type:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p1, "type":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/map/ser/impl/PropertySerializerMap$Single;->_type:Ljava/lang/Class;
 
     if-ne p1, v0, :cond_0

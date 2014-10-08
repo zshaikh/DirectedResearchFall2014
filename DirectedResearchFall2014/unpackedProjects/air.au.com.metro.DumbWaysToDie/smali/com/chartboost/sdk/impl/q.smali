@@ -59,8 +59,6 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;I)V
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     .line 52
@@ -152,7 +150,6 @@
 
 .method private a(Landroid/content/Context;)Landroid/widget/HorizontalScrollView;
     .locals 2
-    .parameter
 
     .prologue
     .line 85
@@ -183,7 +180,6 @@
 
 .method static synthetic a(Lcom/chartboost/sdk/impl/q;)Landroid/widget/LinearLayout;
     .locals 1
-    .parameter
 
     .prologue
     .line 46
@@ -194,7 +190,6 @@
 
 .method private b(Landroid/content/Context;)Landroid/widget/ScrollView;
     .locals 2
-    .parameter
 
     .prologue
     .line 93
@@ -225,7 +220,6 @@
 
 .method static synthetic b(Lcom/chartboost/sdk/impl/q;)Ljava/util/List;
     .locals 1
-    .parameter
 
     .prologue
     .line 48
@@ -236,7 +230,6 @@
 
 .method static synthetic c(Lcom/chartboost/sdk/impl/q;)Ljava/util/List;
     .locals 1
-    .parameter
 
     .prologue
     .line 49
@@ -261,7 +254,6 @@
 
 .method static synthetic d(Lcom/chartboost/sdk/impl/q;)Ljava/util/List;
     .locals 1
-    .parameter
 
     .prologue
     .line 48
@@ -272,7 +264,6 @@
 
 .method static synthetic e(Lcom/chartboost/sdk/impl/q;)Landroid/widget/BaseAdapter;
     .locals 1
-    .parameter
 
     .prologue
     .line 47
@@ -283,7 +274,6 @@
 
 .method static synthetic f(Lcom/chartboost/sdk/impl/q;)I
     .locals 1
-    .parameter
 
     .prologue
     .line 50
@@ -306,7 +296,6 @@
 
 .method public a(I)V
     .locals 2
-    .parameter
 
     .prologue
     .line 133
@@ -372,7 +361,6 @@
 
 .method public a(Landroid/widget/BaseAdapter;)V
     .locals 3
-    .parameter
 
     .prologue
     .line 106

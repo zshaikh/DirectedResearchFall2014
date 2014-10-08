@@ -80,7 +80,6 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 3
-    .parameter
     .annotation runtime Ljavax/inject/Inject;
     .end annotation
 
@@ -129,8 +128,6 @@
 
 .method static synthetic a(Lcom/vungle/sdk/VungleConnectionHandler;I)I
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 27
@@ -141,7 +138,6 @@
 
 .method static synthetic a(Lcom/vungle/sdk/VungleConnectionHandler;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 27
@@ -152,8 +148,6 @@
 
 .method static synthetic a(Lcom/vungle/sdk/VungleConnectionHandler;Lcom/vungle/sdk/VungleConnectionHandler$a;)V
     .locals 3
-    .parameter
-    .parameter
 
     .prologue
     const/4 v1, 0x0
@@ -278,8 +272,6 @@
 
 .method static synthetic a(Lcom/vungle/sdk/VungleConnectionHandler;Z)Z
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 27
@@ -290,7 +282,6 @@
 
 .method static synthetic b(Lcom/vungle/sdk/VungleConnectionHandler;)V
     .locals 4
-    .parameter
 
     .prologue
     .line 27
@@ -395,7 +386,6 @@
 
 .method static synthetic c(Lcom/vungle/sdk/VungleConnectionHandler;)V
     .locals 6
-    .parameter
 
     .prologue
     const/4 v5, 0x0
@@ -597,7 +587,6 @@
 
 .method static synthetic d(Lcom/vungle/sdk/VungleConnectionHandler;)I
     .locals 1
-    .parameter
 
     .prologue
     .line 27

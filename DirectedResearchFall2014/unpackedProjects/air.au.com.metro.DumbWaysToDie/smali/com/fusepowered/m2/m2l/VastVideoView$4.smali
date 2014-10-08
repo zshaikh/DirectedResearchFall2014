@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m2/m2l/VastVideoView;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1
@@ -54,7 +53,7 @@
     int-to-float v1, v2
 
     .line 159
-    .local v1, videoLength:F
+    .local v1, "videoLength":F
     const/4 v2, 0x0
 
     cmpl-float v2, v1, v2
@@ -73,8 +72,8 @@
     div-float v0, v2, v1
 
     .line 162
-    .local v0, progressPercentage:F
-    const/high16 v2, 0x3e80
+    .local v0, "progressPercentage":F
+    const/high16 v2, 0x3e800000
 
     cmpl-float v2, v0, v2
 
@@ -82,7 +81,7 @@
 
     iget-object v2, p0, Lcom/fusepowered/m2/m2l/VastVideoView$4;->this$0:Lcom/fusepowered/m2/m2l/VastVideoView;
 
-    #getter for: Lcom/fusepowered/m2/m2l/VastVideoView;->mIsFirstMarkHit:Z
+    # getter for: Lcom/fusepowered/m2/m2l/VastVideoView;->mIsFirstMarkHit:Z
     invoke-static {v2}, Lcom/fusepowered/m2/m2l/VastVideoView;->access$7(Lcom/fusepowered/m2/m2l/VastVideoView;)Z
 
     move-result v2
@@ -92,7 +91,6 @@
     .line 163
     iget-object v2, p0, Lcom/fusepowered/m2/m2l/VastVideoView$4;->this$0:Lcom/fusepowered/m2/m2l/VastVideoView;
 
-    #setter for: Lcom/fusepowered/m2/m2l/VastVideoView;->mIsFirstMarkHit:Z
     invoke-static {v2, v4}, Lcom/fusepowered/m2/m2l/VastVideoView;->access$8(Lcom/fusepowered/m2/m2l/VastVideoView;Z)V
 
     .line 164
@@ -100,17 +98,17 @@
 
     iget-object v3, p0, Lcom/fusepowered/m2/m2l/VastVideoView$4;->this$0:Lcom/fusepowered/m2/m2l/VastVideoView;
 
-    #getter for: Lcom/fusepowered/m2/m2l/VastVideoView;->mFirstQuarterTrackers:Ljava/util/ArrayList;
+    # getter for: Lcom/fusepowered/m2/m2l/VastVideoView;->mFirstQuarterTrackers:Ljava/util/ArrayList;
     invoke-static {v3}, Lcom/fusepowered/m2/m2l/VastVideoView;->access$9(Lcom/fusepowered/m2/m2l/VastVideoView;)Ljava/util/ArrayList;
 
     move-result-object v3
 
-    #calls: Lcom/fusepowered/m2/m2l/VastVideoView;->pingOnBackgroundThread(Ljava/util/List;)V
+    # invokes: Lcom/fusepowered/m2/m2l/VastVideoView;->pingOnBackgroundThread(Ljava/util/List;)V
     invoke-static {v2, v3}, Lcom/fusepowered/m2/m2l/VastVideoView;->access$3(Lcom/fusepowered/m2/m2l/VastVideoView;Ljava/util/List;)V
 
     .line 167
     :cond_0
-    const/high16 v2, 0x3f00
+    const/high16 v2, 0x3f000000
 
     cmpl-float v2, v0, v2
 
@@ -118,7 +116,7 @@
 
     iget-object v2, p0, Lcom/fusepowered/m2/m2l/VastVideoView$4;->this$0:Lcom/fusepowered/m2/m2l/VastVideoView;
 
-    #getter for: Lcom/fusepowered/m2/m2l/VastVideoView;->mIsSecondMarkHit:Z
+    # getter for: Lcom/fusepowered/m2/m2l/VastVideoView;->mIsSecondMarkHit:Z
     invoke-static {v2}, Lcom/fusepowered/m2/m2l/VastVideoView;->access$10(Lcom/fusepowered/m2/m2l/VastVideoView;)Z
 
     move-result v2
@@ -128,7 +126,6 @@
     .line 168
     iget-object v2, p0, Lcom/fusepowered/m2/m2l/VastVideoView$4;->this$0:Lcom/fusepowered/m2/m2l/VastVideoView;
 
-    #setter for: Lcom/fusepowered/m2/m2l/VastVideoView;->mIsSecondMarkHit:Z
     invoke-static {v2, v4}, Lcom/fusepowered/m2/m2l/VastVideoView;->access$11(Lcom/fusepowered/m2/m2l/VastVideoView;Z)V
 
     .line 169
@@ -136,17 +133,17 @@
 
     iget-object v3, p0, Lcom/fusepowered/m2/m2l/VastVideoView$4;->this$0:Lcom/fusepowered/m2/m2l/VastVideoView;
 
-    #getter for: Lcom/fusepowered/m2/m2l/VastVideoView;->mMidPointTrackers:Ljava/util/ArrayList;
+    # getter for: Lcom/fusepowered/m2/m2l/VastVideoView;->mMidPointTrackers:Ljava/util/ArrayList;
     invoke-static {v3}, Lcom/fusepowered/m2/m2l/VastVideoView;->access$12(Lcom/fusepowered/m2/m2l/VastVideoView;)Ljava/util/ArrayList;
 
     move-result-object v3
 
-    #calls: Lcom/fusepowered/m2/m2l/VastVideoView;->pingOnBackgroundThread(Ljava/util/List;)V
+    # invokes: Lcom/fusepowered/m2/m2l/VastVideoView;->pingOnBackgroundThread(Ljava/util/List;)V
     invoke-static {v2, v3}, Lcom/fusepowered/m2/m2l/VastVideoView;->access$3(Lcom/fusepowered/m2/m2l/VastVideoView;Ljava/util/List;)V
 
     .line 172
     :cond_1
-    const/high16 v2, 0x3f40
+    const/high16 v2, 0x3f400000
 
     cmpl-float v2, v0, v2
 
@@ -154,7 +151,7 @@
 
     iget-object v2, p0, Lcom/fusepowered/m2/m2l/VastVideoView$4;->this$0:Lcom/fusepowered/m2/m2l/VastVideoView;
 
-    #getter for: Lcom/fusepowered/m2/m2l/VastVideoView;->mIsThirdMarkHit:Z
+    # getter for: Lcom/fusepowered/m2/m2l/VastVideoView;->mIsThirdMarkHit:Z
     invoke-static {v2}, Lcom/fusepowered/m2/m2l/VastVideoView;->access$13(Lcom/fusepowered/m2/m2l/VastVideoView;)Z
 
     move-result v2
@@ -164,7 +161,6 @@
     .line 173
     iget-object v2, p0, Lcom/fusepowered/m2/m2l/VastVideoView$4;->this$0:Lcom/fusepowered/m2/m2l/VastVideoView;
 
-    #setter for: Lcom/fusepowered/m2/m2l/VastVideoView;->mIsThirdMarkHit:Z
     invoke-static {v2, v4}, Lcom/fusepowered/m2/m2l/VastVideoView;->access$14(Lcom/fusepowered/m2/m2l/VastVideoView;Z)V
 
     .line 174
@@ -172,12 +168,12 @@
 
     iget-object v3, p0, Lcom/fusepowered/m2/m2l/VastVideoView$4;->this$0:Lcom/fusepowered/m2/m2l/VastVideoView;
 
-    #getter for: Lcom/fusepowered/m2/m2l/VastVideoView;->mThirdQuarterTrackers:Ljava/util/ArrayList;
+    # getter for: Lcom/fusepowered/m2/m2l/VastVideoView;->mThirdQuarterTrackers:Ljava/util/ArrayList;
     invoke-static {v3}, Lcom/fusepowered/m2/m2l/VastVideoView;->access$15(Lcom/fusepowered/m2/m2l/VastVideoView;)Ljava/util/ArrayList;
 
     move-result-object v3
 
-    #calls: Lcom/fusepowered/m2/m2l/VastVideoView;->pingOnBackgroundThread(Ljava/util/List;)V
+    # invokes: Lcom/fusepowered/m2/m2l/VastVideoView;->pingOnBackgroundThread(Ljava/util/List;)V
     invoke-static {v2, v3}, Lcom/fusepowered/m2/m2l/VastVideoView;->access$3(Lcom/fusepowered/m2/m2l/VastVideoView;Ljava/util/List;)V
 
     .line 177
@@ -190,7 +186,7 @@
 
     iget-object v3, p0, Lcom/fusepowered/m2/m2l/VastVideoView$4;->this$0:Lcom/fusepowered/m2/m2l/VastVideoView;
 
-    #getter for: Lcom/fusepowered/m2/m2l/VastVideoView;->mShowCloseButtonDelay:I
+    # getter for: Lcom/fusepowered/m2/m2l/VastVideoView;->mShowCloseButtonDelay:I
     invoke-static {v3}, Lcom/fusepowered/m2/m2l/VastVideoView;->access$16(Lcom/fusepowered/m2/m2l/VastVideoView;)I
 
     move-result v3
@@ -200,7 +196,7 @@
     .line 178
     iget-object v2, p0, Lcom/fusepowered/m2/m2l/VastVideoView$4;->this$0:Lcom/fusepowered/m2/m2l/VastVideoView;
 
-    #getter for: Lcom/fusepowered/m2/m2l/VastVideoView;->mBaseVideoViewListener:Lcom/fusepowered/m2/m2l/BaseVideoView$BaseVideoViewListener;
+    # getter for: Lcom/fusepowered/m2/m2l/VastVideoView;->mBaseVideoViewListener:Lcom/fusepowered/m2/m2l/BaseVideoView$BaseVideoViewListener;
     invoke-static {v2}, Lcom/fusepowered/m2/m2l/VastVideoView;->access$1(Lcom/fusepowered/m2/m2l/VastVideoView;)Lcom/fusepowered/m2/m2l/BaseVideoView$BaseVideoViewListener;
 
     move-result-object v2
@@ -210,7 +206,7 @@
     .line 179
     iget-object v2, p0, Lcom/fusepowered/m2/m2l/VastVideoView$4;->this$0:Lcom/fusepowered/m2/m2l/VastVideoView;
 
-    #getter for: Lcom/fusepowered/m2/m2l/VastVideoView;->mBaseVideoViewListener:Lcom/fusepowered/m2/m2l/BaseVideoView$BaseVideoViewListener;
+    # getter for: Lcom/fusepowered/m2/m2l/VastVideoView;->mBaseVideoViewListener:Lcom/fusepowered/m2/m2l/BaseVideoView$BaseVideoViewListener;
     invoke-static {v2}, Lcom/fusepowered/m2/m2l/VastVideoView;->access$1(Lcom/fusepowered/m2/m2l/VastVideoView;)Lcom/fusepowered/m2/m2l/BaseVideoView$BaseVideoViewListener;
 
     move-result-object v2
@@ -218,11 +214,11 @@
     invoke-interface {v2}, Lcom/fusepowered/m2/m2l/BaseVideoView$BaseVideoViewListener;->showCloseButton()V
 
     .line 184
-    .end local v0           #progressPercentage:F
+    .end local v0    # "progressPercentage":F
     :cond_3
     iget-object v2, p0, Lcom/fusepowered/m2/m2l/VastVideoView$4;->this$0:Lcom/fusepowered/m2/m2l/VastVideoView;
 
-    #getter for: Lcom/fusepowered/m2/m2l/VastVideoView;->mIsVideoProgressShouldBeChecked:Z
+    # getter for: Lcom/fusepowered/m2/m2l/VastVideoView;->mIsVideoProgressShouldBeChecked:Z
     invoke-static {v2}, Lcom/fusepowered/m2/m2l/VastVideoView;->access$17(Lcom/fusepowered/m2/m2l/VastVideoView;)Z
 
     move-result v2
@@ -232,14 +228,14 @@
     .line 185
     iget-object v2, p0, Lcom/fusepowered/m2/m2l/VastVideoView$4;->this$0:Lcom/fusepowered/m2/m2l/VastVideoView;
 
-    #getter for: Lcom/fusepowered/m2/m2l/VastVideoView;->mHandler:Landroid/os/Handler;
+    # getter for: Lcom/fusepowered/m2/m2l/VastVideoView;->mHandler:Landroid/os/Handler;
     invoke-static {v2}, Lcom/fusepowered/m2/m2l/VastVideoView;->access$18(Lcom/fusepowered/m2/m2l/VastVideoView;)Landroid/os/Handler;
 
     move-result-object v2
 
     iget-object v3, p0, Lcom/fusepowered/m2/m2l/VastVideoView$4;->this$0:Lcom/fusepowered/m2/m2l/VastVideoView;
 
-    #getter for: Lcom/fusepowered/m2/m2l/VastVideoView;->mVideoProgressCheckerRunnable:Ljava/lang/Runnable;
+    # getter for: Lcom/fusepowered/m2/m2l/VastVideoView;->mVideoProgressCheckerRunnable:Ljava/lang/Runnable;
     invoke-static {v3}, Lcom/fusepowered/m2/m2l/VastVideoView;->access$19(Lcom/fusepowered/m2/m2l/VastVideoView;)Ljava/lang/Runnable;
 
     move-result-object v3

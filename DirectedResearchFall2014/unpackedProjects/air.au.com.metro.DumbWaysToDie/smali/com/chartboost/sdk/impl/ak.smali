@@ -86,8 +86,6 @@
 
 .method static a(BB)V
     .locals 3
-    .parameter
-    .parameter
 
     .prologue
     .line 514

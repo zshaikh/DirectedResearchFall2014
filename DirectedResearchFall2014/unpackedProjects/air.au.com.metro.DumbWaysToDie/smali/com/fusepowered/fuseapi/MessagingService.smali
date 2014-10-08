@@ -78,7 +78,6 @@
 
 .method private static addRequestToJsonList(Ljava/util/HashMap;)V
     .locals 3
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -92,7 +91,7 @@
 
     .prologue
     .line 44
-    .local p0, commonParams:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p0, "commonParams":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     sget-object v0, Lcom/fusepowered/fuseapi/MessagingService;->lock:Ljava/lang/Object;
 
     monitor-enter v0
@@ -199,8 +198,6 @@
 
 .method private static addRequestToJsonList(Ljava/util/HashMap;Ljava/util/HashMap;)V
     .locals 4
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -219,8 +216,8 @@
 
     .prologue
     .line 31
-    .local p0, commonParams:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
-    .local p1, params:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p0, "commonParams":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p1, "params":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-static {p0}, Lcom/fusepowered/fuseapi/MessagingService;->addRequestToJsonList(Ljava/util/HashMap;)V
 
     .line 32
@@ -229,7 +226,7 @@
     move-result v0
 
     .line 33
-    .local v0, isData:Z
+    .local v0, "isData":Z
     sget-object v1, Lcom/fusepowered/fuseapi/MessagingService;->lock:Ljava/lang/Object;
 
     monitor-enter v1
@@ -279,8 +276,8 @@
 
 .method private static flush(Lcom/fusepowered/util/ActionType;Lcom/fusepowered/util/FuseCallback;)V
     .locals 8
-    .parameter "actionType"
-    .parameter "fuseCallback"
+    .param p0, "actionType"    # Lcom/fusepowered/util/ActionType;
+    .param p1, "fuseCallback"    # Lcom/fusepowered/util/FuseCallback;
 
     .prologue
     const/4 v7, 0x1
@@ -291,7 +288,7 @@
     const/4 v1, 0x0
 
     .line 157
-    .local v1, messagingTask:Lcom/fusepowered/fuseapi/MessagingTask;
+    .local v1, "messagingTask":Lcom/fusepowered/fuseapi/MessagingTask;
     sget-object v5, Lcom/fusepowered/fuseapi/MessagingService;->lock:Ljava/lang/Object;
 
     monitor-enter v5
@@ -320,8 +317,8 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
     .line 161
-    .end local v1           #messagingTask:Lcom/fusepowered/fuseapi/MessagingTask;
-    .local v2, messagingTask:Lcom/fusepowered/fuseapi/MessagingTask;
+    .end local v1    # "messagingTask":Lcom/fusepowered/fuseapi/MessagingTask;
+    .local v2, "messagingTask":Lcom/fusepowered/fuseapi/MessagingTask;
     :try_start_1
     sget-object v6, Lcom/fusepowered/fuseapi/MessagingService;->gameJsonObjects:Ljava/util/ArrayList;
 
@@ -354,14 +351,14 @@
     move-result-object v3
 
     .line 169
-    .local v3, x:Ljava/util/ListIterator;,"Ljava/util/ListIterator<Lorg/json/JSONObject;>;"
+    .local v3, "x":Ljava/util/ListIterator;, "Ljava/util/ListIterator<Lorg/json/JSONObject;>;"
     invoke-interface {v3}, Ljava/util/ListIterator;->next()Ljava/lang/Object;
 
     move-result-object v4
 
     check-cast v4, Lorg/json/JSONObject;
 
-    .local v4, y:Lorg/json/JSONObject;
+    .local v4, "y":Lorg/json/JSONObject;
     :goto_1
     invoke-interface {v3}, Ljava/util/ListIterator;->hasNext()Z
     :try_end_1
@@ -392,8 +389,8 @@
 
     invoke-virtual {v4, v6, v7}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
     :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
     .catch Lorg/json/JSONException; {:try_start_2 .. :try_end_2} :catch_0
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
     .line 169
     :cond_0
@@ -403,10 +400,10 @@
 
     move-result-object v4
 
-    .end local v4           #y:Lorg/json/JSONObject;
+    .end local v4    # "y":Lorg/json/JSONObject;
     check-cast v4, Lorg/json/JSONObject;
 
-    .restart local v4       #y:Lorg/json/JSONObject;
+    .restart local v4    # "y":Lorg/json/JSONObject;
     goto :goto_1
 
     .line 174
@@ -416,7 +413,7 @@
     move-object v0, v6
 
     .line 176
-    .local v0, e:Lorg/json/JSONException;
+    .local v0, "e":Lorg/json/JSONException;
     invoke-virtual {v0}, Lorg/json/JSONException;->printStackTrace()V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
@@ -424,16 +421,16 @@
     goto :goto_2
 
     .line 184
-    .end local v0           #e:Lorg/json/JSONException;
-    .end local v3           #x:Ljava/util/ListIterator;,"Ljava/util/ListIterator<Lorg/json/JSONObject;>;"
-    .end local v4           #y:Lorg/json/JSONObject;
+    .end local v0    # "e":Lorg/json/JSONException;
+    .end local v3    # "x":Ljava/util/ListIterator;, "Ljava/util/ListIterator<Lorg/json/JSONObject;>;"
+    .end local v4    # "y":Lorg/json/JSONObject;
     :catchall_0
     move-exception v6
 
     move-object v1, v2
 
-    .end local v2           #messagingTask:Lcom/fusepowered/fuseapi/MessagingTask;
-    .restart local v1       #messagingTask:Lcom/fusepowered/fuseapi/MessagingTask;
+    .end local v2    # "messagingTask":Lcom/fusepowered/fuseapi/MessagingTask;
+    .restart local v1    # "messagingTask":Lcom/fusepowered/fuseapi/MessagingTask;
     :goto_3
     :try_start_4
     monitor-exit v5
@@ -443,10 +440,10 @@
     throw v6
 
     .line 180
-    .end local v1           #messagingTask:Lcom/fusepowered/fuseapi/MessagingTask;
-    .restart local v2       #messagingTask:Lcom/fusepowered/fuseapi/MessagingTask;
-    .restart local v3       #x:Ljava/util/ListIterator;,"Ljava/util/ListIterator<Lorg/json/JSONObject;>;"
-    .restart local v4       #y:Lorg/json/JSONObject;
+    .end local v1    # "messagingTask":Lcom/fusepowered/fuseapi/MessagingTask;
+    .restart local v2    # "messagingTask":Lcom/fusepowered/fuseapi/MessagingTask;
+    .restart local v3    # "x":Ljava/util/ListIterator;, "Ljava/util/ListIterator<Lorg/json/JSONObject;>;"
+    .restart local v4    # "y":Lorg/json/JSONObject;
     :cond_1
     :try_start_5
     new-instance v1, Lcom/fusepowered/fuseapi/MessagingTask;
@@ -458,8 +455,8 @@
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
     .line 181
-    .end local v2           #messagingTask:Lcom/fusepowered/fuseapi/MessagingTask;
-    .restart local v1       #messagingTask:Lcom/fusepowered/fuseapi/MessagingTask;
+    .end local v2    # "messagingTask":Lcom/fusepowered/fuseapi/MessagingTask;
+    .restart local v1    # "messagingTask":Lcom/fusepowered/fuseapi/MessagingTask;
     :try_start_6
     sget-object v6, Lcom/fusepowered/fuseapi/MessagingService;->jsonObjects:Ljava/util/ArrayList;
 
@@ -471,8 +468,8 @@
     invoke-interface {v6, v1}, Ljava/util/concurrent/ExecutorService;->execute(Ljava/lang/Runnable;)V
 
     .line 184
-    .end local v3           #x:Ljava/util/ListIterator;,"Ljava/util/ListIterator<Lorg/json/JSONObject;>;"
-    .end local v4           #y:Lorg/json/JSONObject;
+    .end local v3    # "x":Ljava/util/ListIterator;, "Ljava/util/ListIterator<Lorg/json/JSONObject;>;"
+    .end local v4    # "y":Lorg/json/JSONObject;
     :goto_4
     monitor-exit v5
     :try_end_6
@@ -487,26 +484,25 @@
 
     goto :goto_3
 
-    .end local v1           #messagingTask:Lcom/fusepowered/fuseapi/MessagingTask;
-    .restart local v2       #messagingTask:Lcom/fusepowered/fuseapi/MessagingTask;
+    .end local v1    # "messagingTask":Lcom/fusepowered/fuseapi/MessagingTask;
+    .restart local v2    # "messagingTask":Lcom/fusepowered/fuseapi/MessagingTask;
     :cond_2
     move-object v1, v2
 
-    .end local v2           #messagingTask:Lcom/fusepowered/fuseapi/MessagingTask;
-    .restart local v1       #messagingTask:Lcom/fusepowered/fuseapi/MessagingTask;
+    .end local v2    # "messagingTask":Lcom/fusepowered/fuseapi/MessagingTask;
+    .restart local v1    # "messagingTask":Lcom/fusepowered/fuseapi/MessagingTask;
     goto :goto_4
 
     :cond_3
     move-object v2, v1
 
-    .end local v1           #messagingTask:Lcom/fusepowered/fuseapi/MessagingTask;
-    .restart local v2       #messagingTask:Lcom/fusepowered/fuseapi/MessagingTask;
+    .end local v1    # "messagingTask":Lcom/fusepowered/fuseapi/MessagingTask;
+    .restart local v2    # "messagingTask":Lcom/fusepowered/fuseapi/MessagingTask;
     goto :goto_0
 .end method
 
 .method private static getRequestActionType(Ljava/util/HashMap;)Lcom/fusepowered/util/ActionType;
     .locals 3
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -520,14 +516,14 @@
     .end annotation
 
     .prologue
-    .local p0, params:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p0, "params":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v2, "action"
 
     .line 84
     const/4 v0, 0x0
 
     .line 85
-    .local v0, actionType:Lcom/fusepowered/util/ActionType;
+    .local v0, "actionType":Lcom/fusepowered/util/ActionType;
     const-string v1, "action"
 
     invoke-virtual {p0, v2}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
@@ -543,7 +539,7 @@
 
     move-result-object p0
 
-    .end local p0           #params:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .end local p0    # "params":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     check-cast p0, Ljava/lang/String;
 
     invoke-static {p0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -561,7 +557,7 @@
 
 .method private static getRequestActionType(Lorg/json/JSONObject;)Lcom/fusepowered/util/ActionType;
     .locals 5
-    .parameter "params"
+    .param p0, "params"    # Lorg/json/JSONObject;
 
     .prologue
     const-string v4, "action"
@@ -570,7 +566,7 @@
     const/4 v0, 0x0
 
     .line 93
-    .local v0, actionType:Lcom/fusepowered/util/ActionType;
+    .local v0, "actionType":Lcom/fusepowered/util/ActionType;
     const-string v3, "action"
 
     invoke-virtual {p0, v4}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
@@ -588,10 +584,10 @@
     move-result-object v2
 
     .line 96
-    .local v2, param:Ljava/lang/Object;
+    .local v2, "param":Ljava/lang/Object;
     check-cast v2, Ljava/lang/String;
 
-    .end local v2           #param:Ljava/lang/Object;
+    .end local v2    # "param":Ljava/lang/Object;
     invoke-static {v2}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v3
@@ -614,7 +610,7 @@
     move-object v1, v3
 
     .line 99
-    .local v1, jse:Lorg/json/JSONException;
+    .local v1, "jse":Lorg/json/JSONException;
     const-string v3, "MessagingService"
 
     const-string v4, "Unexpected exception"
@@ -626,7 +622,6 @@
 
 .method private static isData(Ljava/util/HashMap;)Z
     .locals 2
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -640,13 +635,13 @@
 
     .prologue
     .line 79
-    .local p0, params:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p0, "params":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-static {p0}, Lcom/fusepowered/fuseapi/MessagingService;->getRequestActionType(Ljava/util/HashMap;)Lcom/fusepowered/util/ActionType;
 
     move-result-object v0
 
     .line 80
-    .local v0, actionType:Lcom/fusepowered/util/ActionType;
+    .local v0, "actionType":Lcom/fusepowered/util/ActionType;
     invoke-static {v0}, Lcom/fusepowered/util/ActionType;->isDataAction(Lcom/fusepowered/util/ActionType;)Z
 
     move-result v1
@@ -656,7 +651,6 @@
 
 .method private static isSessionInitiated(Ljava/util/HashMap;)Z
     .locals 2
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -669,7 +663,7 @@
     .end annotation
 
     .prologue
-    .local p0, commonParams:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p0, "commonParams":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v1, "session_id"
 
     .line 106
@@ -688,7 +682,7 @@
 
     move-result-object p0
 
-    .end local p0           #commonParams:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .end local p0    # "commonParams":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     check-cast p0, Ljava/lang/String;
 
     invoke-static {p0}, Lcom/fusepowered/util/StringUtil;->isEmpty(Ljava/lang/String;)Z
@@ -711,8 +705,8 @@
 
 .method private static isTimeToFlush(Lcom/fusepowered/util/ActionType;Z)Z
     .locals 5
-    .parameter "actionType"
-    .parameter "isSessionInitiated"
+    .param p0, "actionType"    # Lcom/fusepowered/util/ActionType;
+    .param p1, "isSessionInitiated"    # Z
 
     .prologue
     const/4 v4, 0x0
@@ -769,7 +763,7 @@
     move-result v0
 
     .line 211
-    .local v0, isData:Z
+    .local v0, "isData":Z
     if-nez v0, :cond_2
 
     sget-object v1, Lcom/fusepowered/fuseapi/MessagingService;->jsonObjects:Ljava/util/ArrayList;
@@ -836,7 +830,6 @@
 
 .method public static mapToJson(Ljava/util/HashMap;)Lorg/json/JSONObject;
     .locals 7
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -850,13 +843,13 @@
 
     .prologue
     .line 62
-    .local p0, params:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;*>;"
+    .local p0, "params":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;*>;"
     new-instance v2, Lorg/json/JSONObject;
 
     invoke-direct {v2}, Lorg/json/JSONObject;-><init>()V
 
     .line 66
-    .local v2, json:Lorg/json/JSONObject;
+    .local v2, "json":Lorg/json/JSONObject;
     :try_start_0
     invoke-virtual {p0}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
 
@@ -866,7 +859,7 @@
 
     move-result-object v1
 
-    .local v1, i$:Ljava/util/Iterator;
+    .local v1, "i$":Ljava/util/Iterator;
     :goto_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
@@ -881,13 +874,13 @@
     check-cast v3, Ljava/lang/String;
 
     .line 68
-    .local v3, k:Ljava/lang/String;
+    .local v3, "k":Ljava/lang/String;
     invoke-virtual {p0, v3}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v4
 
     .line 69
-    .local v4, v:Ljava/lang/Object;
+    .local v4, "v":Ljava/lang/Object;
     if-eqz v4, :cond_1
 
     invoke-virtual {v4}, Ljava/lang/Object;->toString()Ljava/lang/String;
@@ -902,16 +895,16 @@
     goto :goto_0
 
     .line 72
-    .end local v1           #i$:Ljava/util/Iterator;
-    .end local v3           #k:Ljava/lang/String;
-    .end local v4           #v:Ljava/lang/Object;
+    .end local v1    # "i$":Ljava/util/Iterator;
+    .end local v3    # "k":Ljava/lang/String;
+    .end local v4    # "v":Ljava/lang/Object;
     :catch_0
     move-exception v5
 
     move-object v0, v5
 
     .line 73
-    .local v0, e:Lorg/json/JSONException;
+    .local v0, "e":Lorg/json/JSONException;
     const-string v5, "FuseAPI"
 
     const-string v6, "mapToJson JSONException"
@@ -919,14 +912,14 @@
     invoke-static {v5, v6, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     .line 75
-    .end local v0           #e:Lorg/json/JSONException;
+    .end local v0    # "e":Lorg/json/JSONException;
     :cond_0
     return-object v2
 
     .line 69
-    .restart local v1       #i$:Ljava/util/Iterator;
-    .restart local v3       #k:Ljava/lang/String;
-    .restart local v4       #v:Ljava/lang/Object;
+    .restart local v1    # "i$":Ljava/util/Iterator;
+    .restart local v3    # "k":Ljava/lang/String;
+    .restart local v4    # "v":Ljava/lang/Object;
     :cond_1
     :try_start_1
     const-string v5, ""
@@ -938,9 +931,7 @@
 
 .method public static sendJsonMessage(Ljava/util/HashMap;Ljava/util/HashMap;Lcom/fusepowered/util/FuseCallback;)V
     .locals 1
-    .parameter
-    .parameter
-    .parameter "fuseCallback"
+    .param p2, "fuseCallback"    # Lcom/fusepowered/util/FuseCallback;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -961,8 +952,8 @@
 
     .prologue
     .line 115
-    .local p0, commonParams:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
-    .local p1, params:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p0, "commonParams":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p1, "params":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     const/4 v0, 0x1
 
     invoke-static {p0, p1, p2, v0}, Lcom/fusepowered/fuseapi/MessagingService;->sendJsonMessage(Ljava/util/HashMap;Ljava/util/HashMap;Lcom/fusepowered/util/FuseCallback;Z)V
@@ -973,10 +964,8 @@
 
 .method public static sendJsonMessage(Ljava/util/HashMap;Ljava/util/HashMap;Lcom/fusepowered/util/FuseCallback;Z)V
     .locals 4
-    .parameter
-    .parameter
-    .parameter "fuseCallback"
-    .parameter "doSendNow"
+    .param p2, "fuseCallback"    # Lcom/fusepowered/util/FuseCallback;
+    .param p3, "doSendNow"    # Z
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -997,8 +986,8 @@
 
     .prologue
     .line 119
-    .local p0, commonParams:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
-    .local p1, params:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p0, "commonParams":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p1, "params":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-static {p0, p1}, Lcom/fusepowered/fuseapi/MessagingService;->addRequestToJsonList(Ljava/util/HashMap;Ljava/util/HashMap;)V
 
     .line 120
@@ -1010,13 +999,13 @@
     move-result-object v0
 
     .line 122
-    .local v0, actionType:Lcom/fusepowered/util/ActionType;
+    .local v0, "actionType":Lcom/fusepowered/util/ActionType;
     invoke-static {p0}, Lcom/fusepowered/fuseapi/MessagingService;->isSessionInitiated(Ljava/util/HashMap;)Z
 
     move-result v1
 
     .line 123
-    .local v1, isSessionInitiated:Z
+    .local v1, "isSessionInitiated":Z
     invoke-static {v0, v1}, Lcom/fusepowered/fuseapi/MessagingService;->isTimeToFlush(Lcom/fusepowered/util/ActionType;Z)Z
 
     move-result v2
@@ -1036,14 +1025,14 @@
     monitor-exit v2
 
     .line 129
-    .end local v0           #actionType:Lcom/fusepowered/util/ActionType;
-    .end local v1           #isSessionInitiated:Z
+    .end local v0    # "actionType":Lcom/fusepowered/util/ActionType;
+    .end local v1    # "isSessionInitiated":Z
     :cond_0
     return-void
 
     .line 126
-    .restart local v0       #actionType:Lcom/fusepowered/util/ActionType;
-    .restart local v1       #isSessionInitiated:Z
+    .restart local v0    # "actionType":Lcom/fusepowered/util/ActionType;
+    .restart local v1    # "isSessionInitiated":Z
     :catchall_0
     move-exception v3
 
@@ -1056,10 +1045,9 @@
 
 .method public static sendJsonMessage(Ljava/util/HashMap;Lorg/json/JSONObject;Lcom/fusepowered/util/FuseCallback;Z)V
     .locals 4
-    .parameter
-    .parameter "json"
-    .parameter "fuseCallback"
-    .parameter "doSendNow"
+    .param p1, "json"    # Lorg/json/JSONObject;
+    .param p2, "fuseCallback"    # Lcom/fusepowered/util/FuseCallback;
+    .param p3, "doSendNow"    # Z
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1076,7 +1064,7 @@
 
     .prologue
     .line 132
-    .local p0, commonParams:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p0, "commonParams":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-static {p0}, Lcom/fusepowered/fuseapi/MessagingService;->addRequestToJsonList(Ljava/util/HashMap;)V
 
     .line 133
@@ -1093,13 +1081,13 @@
     move-result-object v0
 
     .line 136
-    .local v0, actionType:Lcom/fusepowered/util/ActionType;
+    .local v0, "actionType":Lcom/fusepowered/util/ActionType;
     invoke-static {p0}, Lcom/fusepowered/fuseapi/MessagingService;->isSessionInitiated(Ljava/util/HashMap;)Z
 
     move-result v1
 
     .line 137
-    .local v1, isSessionInitiated:Z
+    .local v1, "isSessionInitiated":Z
     invoke-static {v0, v1}, Lcom/fusepowered/fuseapi/MessagingService;->isTimeToFlush(Lcom/fusepowered/util/ActionType;Z)Z
 
     move-result v2
@@ -1119,14 +1107,14 @@
     monitor-exit v2
 
     .line 143
-    .end local v0           #actionType:Lcom/fusepowered/util/ActionType;
-    .end local v1           #isSessionInitiated:Z
+    .end local v0    # "actionType":Lcom/fusepowered/util/ActionType;
+    .end local v1    # "isSessionInitiated":Z
     :cond_0
     return-void
 
     .line 140
-    .restart local v0       #actionType:Lcom/fusepowered/util/ActionType;
-    .restart local v1       #isSessionInitiated:Z
+    .restart local v0    # "actionType":Lcom/fusepowered/util/ActionType;
+    .restart local v1    # "isSessionInitiated":Z
     :catchall_0
     move-exception v3
 
@@ -1139,9 +1127,7 @@
 
 .method public static declared-synchronized sendSyncJsonMessage(Ljava/util/HashMap;Ljava/util/HashMap;Lcom/fusepowered/util/FuseCallback;)V
     .locals 6
-    .parameter
-    .parameter
-    .parameter "fuseCallback"
+    .param p2, "fuseCallback"    # Lcom/fusepowered/util/FuseCallback;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1162,8 +1148,8 @@
 
     .prologue
     .line 146
-    .local p0, commonParams:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
-    .local p1, params:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p0, "commonParams":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p1, "params":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     const-class v2, Lcom/fusepowered/fuseapi/MessagingService;
 
     monitor-enter v2
@@ -1175,7 +1161,7 @@
     const/4 v0, 0x0
 
     .line 148
-    .local v0, messagingTask:Lcom/fusepowered/fuseapi/MessagingTask;
+    .local v0, "messagingTask":Lcom/fusepowered/fuseapi/MessagingTask;
     sget-object v3, Lcom/fusepowered/fuseapi/MessagingService;->lock:Ljava/lang/Object;
 
     monitor-enter v3
@@ -1197,8 +1183,8 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     .line 150
-    .end local v0           #messagingTask:Lcom/fusepowered/fuseapi/MessagingTask;
-    .local v1, messagingTask:Lcom/fusepowered/fuseapi/MessagingTask;
+    .end local v0    # "messagingTask":Lcom/fusepowered/fuseapi/MessagingTask;
+    .local v1, "messagingTask":Lcom/fusepowered/fuseapi/MessagingTask;
     :try_start_2
     sget-object v4, Lcom/fusepowered/fuseapi/MessagingService;->jsonObjects:Ljava/util/ArrayList;
 
@@ -1221,8 +1207,8 @@
     return-void
 
     .line 151
-    .end local v1           #messagingTask:Lcom/fusepowered/fuseapi/MessagingTask;
-    .restart local v0       #messagingTask:Lcom/fusepowered/fuseapi/MessagingTask;
+    .end local v1    # "messagingTask":Lcom/fusepowered/fuseapi/MessagingTask;
+    .restart local v0    # "messagingTask":Lcom/fusepowered/fuseapi/MessagingTask;
     :catchall_0
     move-exception v4
 
@@ -1238,7 +1224,7 @@
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
     .line 146
-    .end local v0           #messagingTask:Lcom/fusepowered/fuseapi/MessagingTask;
+    .end local v0    # "messagingTask":Lcom/fusepowered/fuseapi/MessagingTask;
     :catchall_1
     move-exception v3
 
@@ -1247,13 +1233,13 @@
     throw v3
 
     .line 151
-    .restart local v1       #messagingTask:Lcom/fusepowered/fuseapi/MessagingTask;
+    .restart local v1    # "messagingTask":Lcom/fusepowered/fuseapi/MessagingTask;
     :catchall_2
     move-exception v4
 
     move-object v0, v1
 
-    .end local v1           #messagingTask:Lcom/fusepowered/fuseapi/MessagingTask;
-    .restart local v0       #messagingTask:Lcom/fusepowered/fuseapi/MessagingTask;
+    .end local v1    # "messagingTask":Lcom/fusepowered/fuseapi/MessagingTask;
+    .restart local v0    # "messagingTask":Lcom/fusepowered/fuseapi/MessagingTask;
     goto :goto_0
 .end method

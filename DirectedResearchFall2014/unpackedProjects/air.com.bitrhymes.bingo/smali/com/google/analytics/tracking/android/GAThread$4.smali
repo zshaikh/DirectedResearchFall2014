@@ -26,8 +26,6 @@
 # direct methods
 .method constructor <init>(Lcom/google/analytics/tracking/android/GAThread;Lcom/google/analytics/tracking/android/GoogleAnalytics$AppOptOutCallback;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 304
@@ -51,7 +49,7 @@
 
     iget-object v1, p0, Lcom/google/analytics/tracking/android/GAThread$4;->this$0:Lcom/google/analytics/tracking/android/GAThread;
 
-    #getter for: Lcom/google/analytics/tracking/android/GAThread;->mAppOptOut:Z
+    # getter for: Lcom/google/analytics/tracking/android/GAThread;->mAppOptOut:Z
     invoke-static {v1}, Lcom/google/analytics/tracking/android/GAThread;->access$100(Lcom/google/analytics/tracking/android/GAThread;)Z
 
     move-result v1

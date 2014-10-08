@@ -24,7 +24,7 @@
 
     .prologue
     .line 14
-    const/high16 v0, 0x7f02
+    const/high16 v0, 0x7f020000
 
     sput v0, Lcom/buffalostudios/aneutils/R$drawable;->ic_launcher:I
 

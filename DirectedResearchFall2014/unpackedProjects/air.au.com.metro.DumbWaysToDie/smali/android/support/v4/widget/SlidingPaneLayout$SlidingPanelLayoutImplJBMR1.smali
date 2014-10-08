@@ -29,8 +29,8 @@
 # virtual methods
 .method public invalidateChildRegion(Landroid/support/v4/widget/SlidingPaneLayout;Landroid/view/View;)V
     .locals 1
-    .parameter "parent"
-    .parameter "child"
+    .param p1, "parent"    # Landroid/support/v4/widget/SlidingPaneLayout;
+    .param p2, "child"    # Landroid/view/View;
 
     .prologue
     .line 1391
@@ -38,7 +38,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Landroid/support/v4/widget/SlidingPaneLayout$SlidingPanelLayoutImplJBMR1;
     check-cast p0, Landroid/support/v4/widget/SlidingPaneLayout$LayoutParams;
 
     iget-object v0, p0, Landroid/support/v4/widget/SlidingPaneLayout$LayoutParams;->dimPaint:Landroid/graphics/Paint;

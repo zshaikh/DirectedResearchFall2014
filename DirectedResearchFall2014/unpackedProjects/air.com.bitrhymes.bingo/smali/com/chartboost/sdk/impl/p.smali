@@ -21,8 +21,6 @@
 # direct methods
 .method public static a(Lcom/chartboost/sdk/impl/p$b;Lcom/chartboost/sdk/impl/a;)V
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 47
@@ -36,9 +34,6 @@
 
 .method public static a(Lcom/chartboost/sdk/impl/p$b;Lcom/chartboost/sdk/impl/a;Lcom/chartboost/sdk/impl/p$a;)V
     .locals 1
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 51
@@ -56,10 +51,6 @@
 
 .method static synthetic a(Lcom/chartboost/sdk/impl/p$b;Lcom/chartboost/sdk/impl/a;Lcom/chartboost/sdk/impl/p$a;Ljava/lang/Boolean;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 95
@@ -172,9 +163,6 @@
 
 .method public static b(Lcom/chartboost/sdk/impl/p$b;Lcom/chartboost/sdk/impl/a;Lcom/chartboost/sdk/impl/p$a;)V
     .locals 1
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 60
@@ -192,10 +180,6 @@
 
 .method private static b(Lcom/chartboost/sdk/impl/p$b;Lcom/chartboost/sdk/impl/a;Lcom/chartboost/sdk/impl/p$a;Ljava/lang/Boolean;)V
     .locals 7
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 66
@@ -403,10 +387,6 @@
 
 .method private static c(Lcom/chartboost/sdk/impl/p$b;Lcom/chartboost/sdk/impl/a;Lcom/chartboost/sdk/impl/p$a;Ljava/lang/Boolean;)V
     .locals 22
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 97
@@ -426,9 +406,9 @@
     .line 99
     new-instance v5, Landroid/view/animation/AlphaAnimation;
 
-    const/high16 v6, 0x3f80
+    const/high16 v6, 0x3f800000
 
-    const/high16 v7, 0x3f80
+    const/high16 v7, 0x3f800000
 
     invoke-direct {v5, v6, v7}, Landroid/view/animation/AlphaAnimation;-><init>(FF)V
 
@@ -484,17 +464,17 @@
     int-to-float v13, v5
 
     .line 116
-    const/high16 v7, 0x4270
+    const/high16 v7, 0x42700000
 
     .line 117
     const v18, 0x3ecccccd
 
     .line 118
-    const/high16 v5, 0x3f80
+    const/high16 v5, 0x3f800000
 
     sub-float v5, v5, v18
 
-    const/high16 v6, 0x4000
+    const/high16 v6, 0x40000000
 
     div-float v19, v5, v6
 
@@ -568,11 +548,11 @@
 
     const/4 v7, 0x0
 
-    const/high16 v8, 0x4000
+    const/high16 v8, 0x40000000
 
     div-float v8, v12, v8
 
-    const/high16 v9, 0x4000
+    const/high16 v9, 0x40000000
 
     div-float v9, v13, v9
 
@@ -605,9 +585,9 @@
 
     new-instance v5, Landroid/view/animation/ScaleAnimation;
 
-    const/high16 v6, 0x3f80
+    const/high16 v6, 0x3f800000
 
-    const/high16 v7, 0x3f80
+    const/high16 v7, 0x3f800000
 
     move-object v0, v5
 
@@ -721,11 +701,11 @@
 
     const/4 v7, 0x0
 
-    const/high16 v8, 0x4000
+    const/high16 v8, 0x40000000
 
     div-float v8, v12, v8
 
-    const/high16 v9, 0x4000
+    const/high16 v9, 0x40000000
 
     div-float v9, v13, v9
 
@@ -741,11 +721,11 @@
 
     const/4 v6, 0x0
 
-    const/high16 v8, 0x4000
+    const/high16 v8, 0x40000000
 
     div-float v8, v12, v8
 
-    const/high16 v9, 0x4000
+    const/high16 v9, 0x40000000
 
     div-float v9, v13, v9
 
@@ -767,11 +747,11 @@
 
     const/4 v8, 0x0
 
-    const/high16 v5, 0x4000
+    const/high16 v5, 0x40000000
 
     div-float v9, v12, v5
 
-    const/high16 v5, 0x4000
+    const/high16 v5, 0x40000000
 
     div-float v10, v13, v5
 
@@ -791,11 +771,11 @@
 
     neg-float v7, v7
 
-    const/high16 v8, 0x4000
+    const/high16 v8, 0x40000000
 
     div-float v8, v12, v8
 
-    const/high16 v9, 0x4000
+    const/high16 v9, 0x40000000
 
     div-float v9, v13, v9
 
@@ -817,11 +797,11 @@
 
     const/4 v8, 0x0
 
-    const/high16 v5, 0x4000
+    const/high16 v5, 0x40000000
 
     div-float v9, v12, v5
 
-    const/high16 v5, 0x4000
+    const/high16 v5, 0x40000000
 
     div-float v10, v13, v5
 
@@ -841,11 +821,11 @@
 
     neg-float v7, v7
 
-    const/high16 v8, 0x4000
+    const/high16 v8, 0x40000000
 
     div-float v8, v12, v8
 
-    const/high16 v9, 0x4000
+    const/high16 v9, 0x40000000
 
     div-float v9, v13, v9
 
@@ -861,11 +841,11 @@
 
     const/4 v6, 0x0
 
-    const/high16 v8, 0x4000
+    const/high16 v8, 0x40000000
 
     div-float v8, v12, v8
 
-    const/high16 v9, 0x4000
+    const/high16 v9, 0x40000000
 
     div-float v9, v13, v9
 
@@ -879,9 +859,9 @@
     :cond_6
     new-instance v5, Landroid/view/animation/ScaleAnimation;
 
-    const/high16 v6, 0x3f80
+    const/high16 v6, 0x3f800000
 
-    const/high16 v7, 0x3f80
+    const/high16 v7, 0x3f800000
 
     move-object v0, v5
 
@@ -1122,11 +1102,11 @@
 
     const/4 v7, 0x0
 
-    const/high16 v8, 0x4000
+    const/high16 v8, 0x40000000
 
     div-float v8, v12, v8
 
-    const/high16 v9, 0x4000
+    const/high16 v9, 0x40000000
 
     div-float v9, v13, v9
 
@@ -1159,9 +1139,9 @@
 
     new-instance v5, Landroid/view/animation/ScaleAnimation;
 
-    const/high16 v6, 0x3f80
+    const/high16 v6, 0x3f800000
 
-    const/high16 v7, 0x3f80
+    const/high16 v7, 0x3f800000
 
     move-object v0, v5
 
@@ -1273,11 +1253,11 @@
 
     const/4 v8, 0x0
 
-    const/high16 v5, 0x4000
+    const/high16 v5, 0x40000000
 
     div-float v9, v12, v5
 
-    const/high16 v5, 0x4000
+    const/high16 v5, 0x40000000
 
     div-float v10, v13, v5
 
@@ -1297,11 +1277,11 @@
 
     neg-float v7, v7
 
-    const/high16 v8, 0x4000
+    const/high16 v8, 0x40000000
 
     div-float v8, v12, v8
 
-    const/high16 v9, 0x4000
+    const/high16 v9, 0x40000000
 
     div-float v9, v13, v9
 
@@ -1323,11 +1303,11 @@
 
     const/4 v8, 0x0
 
-    const/high16 v5, 0x4000
+    const/high16 v5, 0x40000000
 
     div-float v9, v12, v5
 
-    const/high16 v5, 0x4000
+    const/high16 v5, 0x40000000
 
     div-float v10, v13, v5
 
@@ -1347,11 +1327,11 @@
 
     neg-float v7, v7
 
-    const/high16 v8, 0x4000
+    const/high16 v8, 0x40000000
 
     div-float v8, v12, v8
 
-    const/high16 v9, 0x4000
+    const/high16 v9, 0x40000000
 
     div-float v9, v13, v9
 
@@ -1375,11 +1355,11 @@
 
     const/4 v7, 0x0
 
-    const/high16 v8, 0x4000
+    const/high16 v8, 0x40000000
 
     div-float v8, v12, v8
 
-    const/high16 v9, 0x4000
+    const/high16 v9, 0x40000000
 
     div-float v9, v13, v9
 
@@ -1395,11 +1375,11 @@
 
     const/4 v6, 0x0
 
-    const/high16 v8, 0x4000
+    const/high16 v8, 0x40000000
 
     div-float v8, v12, v8
 
-    const/high16 v9, 0x4000
+    const/high16 v9, 0x40000000
 
     div-float v9, v13, v9
 
@@ -1415,11 +1395,11 @@
 
     const/4 v6, 0x0
 
-    const/high16 v8, 0x4000
+    const/high16 v8, 0x40000000
 
     div-float v8, v12, v8
 
-    const/high16 v9, 0x4000
+    const/high16 v9, 0x40000000
 
     div-float v9, v13, v9
 
@@ -1433,9 +1413,9 @@
     :cond_f
     new-instance v5, Landroid/view/animation/ScaleAnimation;
 
-    const/high16 v6, 0x3f80
+    const/high16 v6, 0x3f800000
 
-    const/high16 v7, 0x3f80
+    const/high16 v7, 0x3f800000
 
     move-object v0, v5
 
@@ -2174,11 +2154,11 @@
 
     const/4 v10, 0x1
 
-    const/high16 v11, 0x3f00
+    const/high16 v11, 0x3f000000
 
     const/4 v12, 0x1
 
-    const/high16 v13, 0x3f00
+    const/high16 v13, 0x3f000000
 
     invoke-direct/range {v5 .. v13}, Landroid/view/animation/ScaleAnimation;-><init>(FFFFIFIF)V
 
@@ -2229,21 +2209,21 @@
     .line 301
     new-instance v5, Landroid/view/animation/ScaleAnimation;
 
-    const/high16 v6, 0x3f80
+    const/high16 v6, 0x3f800000
 
     const v7, 0x3f51745c
 
-    const/high16 v8, 0x3f80
+    const/high16 v8, 0x3f800000
 
     const v9, 0x3f51745c
 
     const/4 v10, 0x1
 
-    const/high16 v11, 0x3f00
+    const/high16 v11, 0x3f000000
 
     const/4 v12, 0x1
 
-    const/high16 v13, 0x3f00
+    const/high16 v13, 0x3f000000
 
     invoke-direct/range {v5 .. v13}, Landroid/view/animation/ScaleAnimation;-><init>(FFFFIFIF)V
 
@@ -2313,21 +2293,21 @@
     .line 308
     new-instance v5, Landroid/view/animation/ScaleAnimation;
 
-    const/high16 v6, 0x3f80
+    const/high16 v6, 0x3f800000
 
     const v7, 0x3f8e38e4
 
-    const/high16 v8, 0x3f80
+    const/high16 v8, 0x3f800000
 
     const v9, 0x3f8e38e4
 
     const/4 v10, 0x1
 
-    const/high16 v11, 0x3f00
+    const/high16 v11, 0x3f000000
 
     const/4 v12, 0x1
 
-    const/high16 v13, 0x3f00
+    const/high16 v13, 0x3f000000
 
     invoke-direct/range {v5 .. v13}, Landroid/view/animation/ScaleAnimation;-><init>(FFFFIFIF)V
 
@@ -2399,21 +2379,21 @@
     :cond_24
     new-instance v5, Landroid/view/animation/ScaleAnimation;
 
-    const/high16 v6, 0x3f80
+    const/high16 v6, 0x3f800000
 
     const/4 v7, 0x0
 
-    const/high16 v8, 0x3f80
+    const/high16 v8, 0x3f800000
 
     const/4 v9, 0x0
 
     const/4 v10, 0x1
 
-    const/high16 v11, 0x3f00
+    const/high16 v11, 0x3f000000
 
     const/4 v12, 0x1
 
-    const/high16 v13, 0x3f00
+    const/high16 v13, 0x3f000000
 
     invoke-direct/range {v5 .. v13}, Landroid/view/animation/ScaleAnimation;-><init>(FFFFIFIF)V
 

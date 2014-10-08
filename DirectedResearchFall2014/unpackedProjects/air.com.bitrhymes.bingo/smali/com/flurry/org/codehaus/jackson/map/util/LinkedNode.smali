@@ -36,8 +36,6 @@
 # direct methods
 .method public constructor <init>(Ljava/lang/Object;Lcom/flurry/org/codehaus/jackson/map/util/LinkedNode;)V
     .locals 0
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;",
@@ -48,9 +46,9 @@
 
     .prologue
     .line 16
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/util/LinkedNode;,"Lcom/flurry/org/codehaus/jackson/map/util/LinkedNode<TT;>;"
-    .local p1, value:Ljava/lang/Object;,"TT;"
-    .local p2, next:Lcom/flurry/org/codehaus/jackson/map/util/LinkedNode;,"Lcom/flurry/org/codehaus/jackson/map/util/LinkedNode<TT;>;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/util/LinkedNode;, "Lcom/flurry/org/codehaus/jackson/map/util/LinkedNode<TT;>;"
+    .local p1, "value":Ljava/lang/Object;, "TT;"
+    .local p2, "next":Lcom/flurry/org/codehaus/jackson/map/util/LinkedNode;, "Lcom/flurry/org/codehaus/jackson/map/util/LinkedNode<TT;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 17
@@ -65,8 +63,6 @@
 
 .method public static contains(Lcom/flurry/org/codehaus/jackson/map/util/LinkedNode;Ljava/lang/Object;)Z
     .locals 1
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<ST:",
@@ -79,8 +75,8 @@
 
     .prologue
     .line 37
-    .local p0, node:Lcom/flurry/org/codehaus/jackson/map/util/LinkedNode;,"Lcom/flurry/org/codehaus/jackson/map/util/LinkedNode<TST;>;"
-    .local p1, value:Ljava/lang/Object;,"TST;"
+    .local p0, "node":Lcom/flurry/org/codehaus/jackson/map/util/LinkedNode;, "Lcom/flurry/org/codehaus/jackson/map/util/LinkedNode<TST;>;"
+    .local p1, "value":Ljava/lang/Object;, "TST;"
     :goto_0
     if-eqz p0, :cond_1
 
@@ -127,7 +123,7 @@
 
     .prologue
     .line 21
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/util/LinkedNode;,"Lcom/flurry/org/codehaus/jackson/map/util/LinkedNode<TT;>;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/util/LinkedNode;, "Lcom/flurry/org/codehaus/jackson/map/util/LinkedNode<TT;>;"
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/map/util/LinkedNode;->_next:Lcom/flurry/org/codehaus/jackson/map/util/LinkedNode;
 
     return-object v0
@@ -143,7 +139,7 @@
 
     .prologue
     .line 23
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/util/LinkedNode;,"Lcom/flurry/org/codehaus/jackson/map/util/LinkedNode<TT;>;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/util/LinkedNode;, "Lcom/flurry/org/codehaus/jackson/map/util/LinkedNode<TT;>;"
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/map/util/LinkedNode;->_value:Ljava/lang/Object;
 
     return-object v0

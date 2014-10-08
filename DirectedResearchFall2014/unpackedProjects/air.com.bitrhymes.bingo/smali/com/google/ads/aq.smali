@@ -58,54 +58,54 @@
     nop
 
     :array_0
-    .array-data 0x1
-        0xf7t
-        0xf7t
-        0xf7t
-        0xf7t
-        0xf7t
-        0xf7t
-        0xf7t
-        0xf7t
-        0xf7t
-        0xfbt
-        0xfbt
-        0xf7t
-        0xf7t
-        0xfbt
-        0xf7t
-        0xf7t
-        0xf7t
-        0xf7t
-        0xf7t
-        0xf7t
-        0xf7t
-        0xf7t
-        0xf7t
-        0xf7t
-        0xf7t
-        0xf7t
-        0xf7t
-        0xf7t
-        0xf7t
-        0xf7t
-        0xf7t
-        0xf7t
-        0xfbt
-        0xf7t
-        0xf7t
-        0xf7t
-        0xf7t
-        0xf7t
-        0xf7t
-        0xf7t
-        0xf7t
-        0xf7t
-        0xf7t
+    .array-data 1
+        -0x9t
+        -0x9t
+        -0x9t
+        -0x9t
+        -0x9t
+        -0x9t
+        -0x9t
+        -0x9t
+        -0x9t
+        -0x5t
+        -0x5t
+        -0x9t
+        -0x9t
+        -0x5t
+        -0x9t
+        -0x9t
+        -0x9t
+        -0x9t
+        -0x9t
+        -0x9t
+        -0x9t
+        -0x9t
+        -0x9t
+        -0x9t
+        -0x9t
+        -0x9t
+        -0x9t
+        -0x9t
+        -0x9t
+        -0x9t
+        -0x9t
+        -0x9t
+        -0x5t
+        -0x9t
+        -0x9t
+        -0x9t
+        -0x9t
+        -0x9t
+        -0x9t
+        -0x9t
+        -0x9t
+        -0x9t
+        -0x9t
         0x3et
-        0xf7t
-        0xf7t
-        0xf7t
+        -0x9t
+        -0x9t
+        -0x9t
         0x3ft
         0x34t
         0x35t
@@ -117,13 +117,13 @@
         0x3bt
         0x3ct
         0x3dt
-        0xf7t
-        0xf7t
-        0xf7t
-        0xfft
-        0xf7t
-        0xf7t
-        0xf7t
+        -0x9t
+        -0x9t
+        -0x9t
+        -0x1t
+        -0x9t
+        -0x9t
+        -0x9t
         0x0t
         0x1t
         0x2t
@@ -150,12 +150,12 @@
         0x17t
         0x18t
         0x19t
-        0xf7t
-        0xf7t
-        0xf7t
-        0xf7t
-        0xf7t
-        0xf7t
+        -0x9t
+        -0x9t
+        -0x9t
+        -0x9t
+        -0x9t
+        -0x9t
         0x1at
         0x1bt
         0x1ct
@@ -182,64 +182,64 @@
         0x31t
         0x32t
         0x33t
-        0xf7t
-        0xf7t
-        0xf7t
-        0xf7t
-        0xf7t
+        -0x9t
+        -0x9t
+        -0x9t
+        -0x9t
+        -0x9t
     .end array-data
 
     .line 112
     :array_1
-    .array-data 0x1
-        0xf7t
-        0xf7t
-        0xf7t
-        0xf7t
-        0xf7t
-        0xf7t
-        0xf7t
-        0xf7t
-        0xf7t
-        0xfbt
-        0xfbt
-        0xf7t
-        0xf7t
-        0xfbt
-        0xf7t
-        0xf7t
-        0xf7t
-        0xf7t
-        0xf7t
-        0xf7t
-        0xf7t
-        0xf7t
-        0xf7t
-        0xf7t
-        0xf7t
-        0xf7t
-        0xf7t
-        0xf7t
-        0xf7t
-        0xf7t
-        0xf7t
-        0xf7t
-        0xfbt
-        0xf7t
-        0xf7t
-        0xf7t
-        0xf7t
-        0xf7t
-        0xf7t
-        0xf7t
-        0xf7t
-        0xf7t
-        0xf7t
-        0xf7t
-        0xf7t
+    .array-data 1
+        -0x9t
+        -0x9t
+        -0x9t
+        -0x9t
+        -0x9t
+        -0x9t
+        -0x9t
+        -0x9t
+        -0x9t
+        -0x5t
+        -0x5t
+        -0x9t
+        -0x9t
+        -0x5t
+        -0x9t
+        -0x9t
+        -0x9t
+        -0x9t
+        -0x9t
+        -0x9t
+        -0x9t
+        -0x9t
+        -0x9t
+        -0x9t
+        -0x9t
+        -0x9t
+        -0x9t
+        -0x9t
+        -0x9t
+        -0x9t
+        -0x9t
+        -0x9t
+        -0x5t
+        -0x9t
+        -0x9t
+        -0x9t
+        -0x9t
+        -0x9t
+        -0x9t
+        -0x9t
+        -0x9t
+        -0x9t
+        -0x9t
+        -0x9t
+        -0x9t
         0x3et
-        0xf7t
-        0xf7t
+        -0x9t
+        -0x9t
         0x34t
         0x35t
         0x36t
@@ -250,13 +250,13 @@
         0x3bt
         0x3ct
         0x3dt
-        0xf7t
-        0xf7t
-        0xf7t
-        0xfft
-        0xf7t
-        0xf7t
-        0xf7t
+        -0x9t
+        -0x9t
+        -0x9t
+        -0x1t
+        -0x9t
+        -0x9t
+        -0x9t
         0x0t
         0x1t
         0x2t
@@ -283,12 +283,12 @@
         0x17t
         0x18t
         0x19t
-        0xf7t
-        0xf7t
-        0xf7t
-        0xf7t
+        -0x9t
+        -0x9t
+        -0x9t
+        -0x9t
         0x3ft
-        0xf7t
+        -0x9t
         0x1at
         0x1bt
         0x1ct
@@ -315,21 +315,16 @@
         0x31t
         0x32t
         0x33t
-        0xf7t
-        0xf7t
-        0xf7t
-        0xf7t
-        0xf7t
+        -0x9t
+        -0x9t
+        -0x9t
+        -0x9t
+        -0x9t
     .end array-data
 .end method
 
 .method private static a([CI[BI[B)I
     .locals 3
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const/16 v1, 0x3d
@@ -515,11 +510,6 @@
 
 .method public static a([BII[CZ)Ljava/lang/String;
     .locals 4
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 281
@@ -568,8 +558,6 @@
 
 .method public static a([BZ)Ljava/lang/String;
     .locals 3
-    .parameter
-    .parameter
 
     .prologue
     .line 266
@@ -588,7 +576,6 @@
 
 .method public static a(Ljava/lang/String;)[B
     .locals 3
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lcom/google/ads/ap;
@@ -615,9 +602,6 @@
 
 .method public static a([CII)[B
     .locals 1
-    .parameter
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lcom/google/ads/ap;
@@ -637,10 +621,6 @@
 
 .method public static a([CII[B)[B
     .locals 10
-    .parameter
-    .parameter
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lcom/google/ads/ap;
@@ -980,11 +960,6 @@
 
 .method public static a([BII[CI)[C
     .locals 10
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const/16 v9, 0xa
@@ -1165,12 +1140,6 @@
 
 .method private static a([BII[CI[C)[C
     .locals 4
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const/16 v3, 0x3d

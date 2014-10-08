@@ -23,8 +23,8 @@
 # direct methods
 .method private constructor <init>([Lcom/flurry/org/apache/avro/io/parsing/Symbol;[Ljava/lang/String;)V
     .locals 1
-    .parameter "symbols"
-    .parameter "labels"
+    .param p1, "symbols"    # [Lcom/flurry/org/apache/avro/io/parsing/Symbol;
+    .param p2, "labels"    # [Ljava/lang/String;
 
     .prologue
     .line 358
@@ -44,9 +44,9 @@
 
 .method synthetic constructor <init>([Lcom/flurry/org/apache/avro/io/parsing/Symbol;[Ljava/lang/String;Lcom/flurry/org/apache/avro/io/parsing/Symbol$1;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
-    .parameter "x2"
+    .param p1, "x0"    # [Lcom/flurry/org/apache/avro/io/parsing/Symbol;
+    .param p2, "x1"    # [Ljava/lang/String;
+    .param p3, "x2"    # Lcom/flurry/org/apache/avro/io/parsing/Symbol$1;
 
     .prologue
     .line 354
@@ -59,7 +59,7 @@
 # virtual methods
 .method public findLabel(Ljava/lang/String;)I
     .locals 2
-    .parameter "label"
+    .param p1, "label"    # Ljava/lang/String;
 
     .prologue
     .line 376
@@ -68,7 +68,7 @@
     .line 377
     const/4 v0, 0x0
 
-    .local v0, i:I
+    .local v0, "i":I
     :goto_0
     iget-object v1, p0, Lcom/flurry/org/apache/avro/io/parsing/Symbol$Alternative;->labels:[Ljava/lang/String;
 
@@ -90,19 +90,19 @@
     move v1, v0
 
     .line 383
-    .end local v0           #i:I
+    .end local v0    # "i":I
     :goto_1
     return v1
 
     .line 377
-    .restart local v0       #i:I
+    .restart local v0    # "i":I
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
     .line 383
-    .end local v0           #i:I
+    .end local v0    # "i":I
     :cond_1
     const/4 v1, -0x1
 
@@ -111,8 +111,6 @@
 
 .method public flatten(Ljava/util/Map;Ljava/util/Map;)Lcom/flurry/org/apache/avro/io/parsing/Symbol$Alternative;
     .locals 4
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -134,8 +132,8 @@
 
     .prologue
     .line 389
-    .local p1, map:Ljava/util/Map;,"Ljava/util/Map<Lcom/flurry/org/apache/avro/io/parsing/Symbol$Sequence;Lcom/flurry/org/apache/avro/io/parsing/Symbol$Sequence;>;"
-    .local p2, map2:Ljava/util/Map;,"Ljava/util/Map<Lcom/flurry/org/apache/avro/io/parsing/Symbol$Sequence;Ljava/util/List<Lcom/flurry/org/apache/avro/io/parsing/Symbol$Fixup;>;>;"
+    .local p1, "map":Ljava/util/Map;, "Ljava/util/Map<Lcom/flurry/org/apache/avro/io/parsing/Symbol$Sequence;Lcom/flurry/org/apache/avro/io/parsing/Symbol$Sequence;>;"
+    .local p2, "map2":Ljava/util/Map;, "Ljava/util/Map<Lcom/flurry/org/apache/avro/io/parsing/Symbol$Sequence;Ljava/util/List<Lcom/flurry/org/apache/avro/io/parsing/Symbol$Fixup;>;>;"
     iget-object v2, p0, Lcom/flurry/org/apache/avro/io/parsing/Symbol$Alternative;->symbols:[Lcom/flurry/org/apache/avro/io/parsing/Symbol;
 
     array-length v2, v2
@@ -143,10 +141,10 @@
     new-array v1, v2, [Lcom/flurry/org/apache/avro/io/parsing/Symbol;
 
     .line 390
-    .local v1, ss:[Lcom/flurry/org/apache/avro/io/parsing/Symbol;
+    .local v1, "ss":[Lcom/flurry/org/apache/avro/io/parsing/Symbol;
     const/4 v0, 0x0
 
-    .local v0, i:I
+    .local v0, "i":I
     :goto_0
     array-length v2, v1
 
@@ -181,8 +179,8 @@
 
 .method public bridge synthetic flatten(Ljava/util/Map;Ljava/util/Map;)Lcom/flurry/org/apache/avro/io/parsing/Symbol;
     .locals 1
-    .parameter "x0"
-    .parameter "x1"
+    .param p1, "x0"    # Ljava/util/Map;
+    .param p2, "x1"    # Ljava/util/Map;
 
     .prologue
     .line 354
@@ -195,7 +193,7 @@
 
 .method public getLabel(I)Ljava/lang/String;
     .locals 1
-    .parameter "index"
+    .param p1, "index"    # I
 
     .prologue
     .line 368
@@ -208,7 +206,7 @@
 
 .method public getSymbol(I)Lcom/flurry/org/apache/avro/io/parsing/Symbol;
     .locals 1
-    .parameter "index"
+    .param p1, "index"    # I
 
     .prologue
     .line 364

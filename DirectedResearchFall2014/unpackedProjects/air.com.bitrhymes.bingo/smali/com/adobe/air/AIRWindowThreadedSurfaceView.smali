@@ -12,8 +12,6 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Lcom/adobe/air/AndroidActivityWrapper;)V
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     .line 22
@@ -44,7 +42,6 @@
 # virtual methods
 .method protected Init(Landroid/content/Context;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 29
@@ -62,11 +59,6 @@
 
 .method public drawBitmap(IIIILandroid/graphics/Bitmap;)V
     .locals 6
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 93
@@ -105,17 +97,6 @@
 
 .method public drawBitmap(IIIILandroid/graphics/Bitmap;IIIIZI)V
     .locals 12
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 114
@@ -166,10 +147,6 @@
 
 .method public surfaceChanged(Landroid/view/SurfaceHolder;III)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 60
@@ -181,7 +158,6 @@
 
 .method public surfaceCreated(Landroid/view/SurfaceHolder;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 38
@@ -225,7 +201,6 @@
 
 .method public surfaceDestroyed(Landroid/view/SurfaceHolder;)V
     .locals 3
-    .parameter
 
     .prologue
     const/4 v2, 0x0

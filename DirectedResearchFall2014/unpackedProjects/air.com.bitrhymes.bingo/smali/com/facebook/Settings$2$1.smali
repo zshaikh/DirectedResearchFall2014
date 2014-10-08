@@ -28,9 +28,6 @@
 # direct methods
 .method constructor <init>(Lcom/facebook/Settings$2;Lcom/facebook/Request$Callback;Lcom/facebook/Response;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 1

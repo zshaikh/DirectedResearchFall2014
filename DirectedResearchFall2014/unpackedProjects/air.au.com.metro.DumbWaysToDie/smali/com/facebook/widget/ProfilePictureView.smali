@@ -751,7 +751,7 @@
 
     const/4 v8, -0x2
 
-    const/high16 v7, 0x4000
+    const/high16 v7, 0x40000000
 
     const/4 v6, 0x1
 

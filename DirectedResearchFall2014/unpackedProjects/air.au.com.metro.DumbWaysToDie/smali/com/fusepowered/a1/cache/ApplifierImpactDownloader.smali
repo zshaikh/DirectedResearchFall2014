@@ -151,7 +151,6 @@
 
 .method static synthetic access$0(Ljava/lang/String;)Ljava/io/FileOutputStream;
     .locals 1
-    .parameter
 
     .prologue
     .line 163
@@ -174,7 +173,6 @@
 
 .method static synthetic access$2(Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 81
@@ -185,7 +183,6 @@
 
 .method static synthetic access$3(Lcom/fusepowered/a1/cache/ApplifierImpactDownloader$CacheDownload;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 186
@@ -196,8 +193,6 @@
 
 .method static synthetic access$4(Lcom/fusepowered/a1/cache/ApplifierImpactDownloader$ApplifierDownloadEventType;Ljava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 110
@@ -208,7 +203,7 @@
 
 .method public static addDownload(Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;)V
     .locals 1
-    .parameter "downloadCampaign"
+    .param p0, "downloadCampaign"    # Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;
 
     .prologue
     .line 30
@@ -260,7 +255,7 @@
 
 .method public static addListener(Lcom/fusepowered/a1/cache/IApplifierImpactDownloadListener;)V
     .locals 1
-    .parameter "listener"
+    .param p0, "listener"    # Lcom/fusepowered/a1/cache/IApplifierImpactDownloadListener;
 
     .prologue
     .line 43
@@ -296,7 +291,7 @@
 
 .method private static addToCacheDownloads(Lcom/fusepowered/a1/cache/ApplifierImpactDownloader$CacheDownload;)V
     .locals 1
-    .parameter "cd"
+    .param p0, "cd"    # Lcom/fusepowered/a1/cache/ApplifierImpactDownloader$CacheDownload;
 
     .prologue
     .line 180
@@ -323,7 +318,7 @@
 
 .method private static cacheCampaign(Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;)V
     .locals 6
-    .parameter "campaign"
+    .param p0, "campaign"    # Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;
 
     .prologue
     const/4 v4, 0x1
@@ -365,7 +360,7 @@
     check-cast v1, Landroid/net/ConnectivityManager;
 
     .line 133
-    .local v1, cm:Landroid/net/ConnectivityManager;
+    .local v1, "cm":Landroid/net/ConnectivityManager;
     if-eqz v1, :cond_3
 
     invoke-virtual {v1, v4}, Landroid/net/ConnectivityManager;->getNetworkInfo(I)Landroid/net/NetworkInfo;
@@ -426,7 +421,7 @@
     invoke-direct {v0, p0}, Lcom/fusepowered/a1/cache/ApplifierImpactDownloader$CacheDownload;-><init>(Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;)V
 
     .line 138
-    .local v0, cd:Lcom/fusepowered/a1/cache/ApplifierImpactDownloader$CacheDownload;
+    .local v0, "cd":Lcom/fusepowered/a1/cache/ApplifierImpactDownloader$CacheDownload;
     invoke-static {v0}, Lcom/fusepowered/a1/cache/ApplifierImpactDownloader;->addToCacheDownloads(Lcom/fusepowered/a1/cache/ApplifierImpactDownloader$CacheDownload;)V
 
     .line 139
@@ -445,7 +440,7 @@
     goto :goto_0
 
     .line 142
-    .end local v0           #cd:Lcom/fusepowered/a1/cache/ApplifierImpactDownloader$CacheDownload;
+    .end local v0    # "cd":Lcom/fusepowered/a1/cache/ApplifierImpactDownloader$CacheDownload;
     :cond_2
     invoke-static {p0}, Lcom/fusepowered/a1/cache/ApplifierImpactDownloader;->removeDownload(Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;)V
 
@@ -592,7 +587,7 @@
 
 .method private static getOutputStreamFor(Ljava/lang/String;)Ljava/io/FileOutputStream;
     .locals 7
-    .parameter "fileName"
+    .param p0, "fileName"    # Ljava/lang/String;
 
     .prologue
     .line 164
@@ -601,17 +596,17 @@
     move-result-object v4
 
     .line 165
-    .local v4, tdir:Ljava/io/File;
+    .local v4, "tdir":Ljava/io/File;
     new-instance v3, Ljava/io/File;
 
     invoke-direct {v3, v4, p0}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
     .line 166
-    .local v3, outf:Ljava/io/File;
+    .local v3, "outf":Ljava/io/File;
     const/4 v1, 0x0
 
     .line 169
-    .local v1, fos:Ljava/io/FileOutputStream;
+    .local v1, "fos":Ljava/io/FileOutputStream;
     :try_start_0
     new-instance v2, Ljava/io/FileOutputStream;
 
@@ -619,12 +614,12 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .end local v1           #fos:Ljava/io/FileOutputStream;
-    .local v2, fos:Ljava/io/FileOutputStream;
+    .end local v1    # "fos":Ljava/io/FileOutputStream;
+    .local v2, "fos":Ljava/io/FileOutputStream;
     move-object v1, v2
 
-    .end local v2           #fos:Ljava/io/FileOutputStream;
-    .restart local v1       #fos:Ljava/io/FileOutputStream;
+    .end local v2    # "fos":Ljava/io/FileOutputStream;
+    .restart local v1    # "fos":Ljava/io/FileOutputStream;
     move-object v5, v2
 
     .line 176
@@ -638,7 +633,7 @@
     move-object v0, v5
 
     .line 172
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     new-instance v5, Ljava/lang/StringBuilder;
 
     const-string v6, "Problems creating FOS: "
@@ -665,7 +660,7 @@
 
 .method private static isInDownloads(Ljava/lang/String;)Z
     .locals 3
-    .parameter "downloadUrl"
+    .param p0, "downloadUrl"    # Ljava/lang/String;
 
     .prologue
     .line 98
@@ -704,7 +699,7 @@
     check-cast v0, Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;
 
     .line 100
-    .local v0, download:Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;
+    .local v0, "download":Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;
     if-eqz v0, :cond_3
 
     invoke-virtual {v0}, Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;->getVideoUrl()Ljava/lang/String;
@@ -749,7 +744,7 @@
 
 .method private static removeDownload(Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;)V
     .locals 3
-    .parameter "campaign"
+    .param p0, "campaign"    # Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;
 
     .prologue
     .line 82
@@ -767,10 +762,10 @@
     const/4 v1, -0x1
 
     .line 86
-    .local v1, removeIndex:I
+    .local v1, "removeIndex":I
     const/4 v0, 0x0
 
-    .local v0, i:I
+    .local v0, "i":I
     :goto_1
     sget-object v2, Lcom/fusepowered/a1/cache/ApplifierImpactDownloader;->_downloadList:Ljava/util/ArrayList;
 
@@ -824,7 +819,7 @@
 
 .method private static removeFromCacheDownloads(Lcom/fusepowered/a1/cache/ApplifierImpactDownloader$CacheDownload;)V
     .locals 1
-    .parameter "cd"
+    .param p0, "cd"    # Lcom/fusepowered/a1/cache/ApplifierImpactDownloader$CacheDownload;
 
     .prologue
     .line 187
@@ -844,7 +839,7 @@
 
 .method public static removeListener(Lcom/fusepowered/a1/cache/IApplifierImpactDownloadListener;)V
     .locals 1
-    .parameter "listener"
+    .param p0, "listener"    # Lcom/fusepowered/a1/cache/IApplifierImpactDownloadListener;
 
     .prologue
     .line 49
@@ -877,8 +872,8 @@
 
 .method private static sendToListeners(Lcom/fusepowered/a1/cache/ApplifierImpactDownloader$ApplifierDownloadEventType;Ljava/lang/String;)V
     .locals 5
-    .parameter "type"
-    .parameter "downloadUrl"
+    .param p0, "type"    # Lcom/fusepowered/a1/cache/ApplifierImpactDownloader$ApplifierDownloadEventType;
+    .param p1, "downloadUrl"    # Ljava/lang/String;
 
     .prologue
     .line 111
@@ -901,7 +896,7 @@
     check-cast v1, Ljava/util/ArrayList;
 
     .line 116
-    .local v1, tmpListeners:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/fusepowered/a1/cache/IApplifierImpactDownloadListener;>;"
+    .local v1, "tmpListeners":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/fusepowered/a1/cache/IApplifierImpactDownloadListener;>;"
     invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
@@ -920,7 +915,7 @@
     check-cast v0, Lcom/fusepowered/a1/cache/IApplifierImpactDownloadListener;
 
     .line 117
-    .local v0, listener:Lcom/fusepowered/a1/cache/IApplifierImpactDownloadListener;
+    .local v0, "listener":Lcom/fusepowered/a1/cache/IApplifierImpactDownloadListener;
     invoke-static {}, Lcom/fusepowered/a1/cache/ApplifierImpactDownloader;->$SWITCH_TABLE$com$applifier$impact$android$cache$ApplifierImpactDownloader$ApplifierDownloadEventType()[I
 
     move-result-object v3
@@ -1000,7 +995,7 @@
     check-cast v0, Lcom/fusepowered/a1/cache/ApplifierImpactDownloader$CacheDownload;
 
     .line 59
-    .local v0, cd:Lcom/fusepowered/a1/cache/ApplifierImpactDownloader$CacheDownload;
+    .local v0, "cd":Lcom/fusepowered/a1/cache/ApplifierImpactDownloader$CacheDownload;
     const/4 v2, 0x1
 
     invoke-virtual {v0, v2}, Lcom/fusepowered/a1/cache/ApplifierImpactDownloader$CacheDownload;->cancel(Z)Z

@@ -24,15 +24,15 @@
 # direct methods
 .method constructor <init>(FIILjava/lang/String;IIZII)V
     .locals 1
-    .parameter "density"
-    .parameter "widthIndependentPixels"
-    .parameter "heightIndependentPixels"
-    .parameter "customClosePosition"
-    .parameter "offsetXIndependentPixels"
-    .parameter "offsetYIndependentPixels"
-    .parameter "allowOffScreen"
-    .parameter "maxX"
-    .parameter "maxY"
+    .param p1, "density"    # F
+    .param p2, "widthIndependentPixels"    # I
+    .param p3, "heightIndependentPixels"    # I
+    .param p4, "customClosePosition"    # Ljava/lang/String;
+    .param p5, "offsetXIndependentPixels"    # I
+    .param p6, "offsetYIndependentPixels"    # I
+    .param p7, "allowOffScreen"    # Z
+    .param p8, "maxX"    # I
+    .param p9, "maxY"    # I
 
     .prologue
     .line 7

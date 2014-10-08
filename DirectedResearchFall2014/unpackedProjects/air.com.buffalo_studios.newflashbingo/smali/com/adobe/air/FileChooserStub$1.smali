@@ -32,11 +32,6 @@
 # direct methods
 .method constructor <init>(Lcom/adobe/air/FileChooserStub;ZZLjava/lang/String;Lcom/adobe/air/FileChooserStub;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 50
@@ -68,7 +63,7 @@
 
     iget-object v1, p0, Lcom/adobe/air/FileChooserStub$1;->this$0:Lcom/adobe/air/FileChooserStub;
 
-    #getter for: Lcom/adobe/air/FileChooserStub;->m_filterList:Ljava/util/ArrayList;
+    # getter for: Lcom/adobe/air/FileChooserStub;->m_filterList:Ljava/util/ArrayList;
     invoke-static {v1}, Lcom/adobe/air/FileChooserStub;->access$100(Lcom/adobe/air/FileChooserStub;)Ljava/util/ArrayList;
 
     move-result-object v1
@@ -83,13 +78,13 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/adobe/air/AIRExpandableFileChooser;-><init>(Ljava/util/ArrayList;ZZLjava/lang/String;Lcom/adobe/air/FileChooserStub;)V
 
-    #setter for: Lcom/adobe/air/FileChooserStub;->fileChooser:Lcom/adobe/air/AIRExpandableFileChooser;
+    # setter for: Lcom/adobe/air/FileChooserStub;->fileChooser:Lcom/adobe/air/AIRExpandableFileChooser;
     invoke-static {v6, v0}, Lcom/adobe/air/FileChooserStub;->access$002(Lcom/adobe/air/FileChooserStub;Lcom/adobe/air/AIRExpandableFileChooser;)Lcom/adobe/air/AIRExpandableFileChooser;
 
     .line 54
     iget-object v0, p0, Lcom/adobe/air/FileChooserStub$1;->this$0:Lcom/adobe/air/FileChooserStub;
 
-    #getter for: Lcom/adobe/air/FileChooserStub;->fileChooser:Lcom/adobe/air/AIRExpandableFileChooser;
+    # getter for: Lcom/adobe/air/FileChooserStub;->fileChooser:Lcom/adobe/air/AIRExpandableFileChooser;
     invoke-static {v0}, Lcom/adobe/air/FileChooserStub;->access$000(Lcom/adobe/air/FileChooserStub;)Lcom/adobe/air/AIRExpandableFileChooser;
 
     move-result-object v0

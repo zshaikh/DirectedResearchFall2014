@@ -59,7 +59,7 @@
 # direct methods
 .method public constructor <init>(Lcom/fusepowered/m1/android/MMLayout;)V
     .locals 1
-    .parameter "mmLayout"
+    .param p1, "mmLayout"    # Lcom/fusepowered/m1/android/MMLayout;
 
     .prologue
     .line 45
@@ -318,7 +318,7 @@
     invoke-virtual {p0, v0}, Lcom/fusepowered/m1/android/InlineVideoView;->setVideoURI(Landroid/net/Uri;)V
 
     .line 274
-    const/high16 v0, -0x100
+    const/high16 v0, -0x1000000
 
     invoke-virtual {p0, v0}, Lcom/fusepowered/m1/android/InlineVideoView;->setBackgroundColor(I)V
 
@@ -470,7 +470,7 @@
     check-cast v0, Landroid/view/ViewGroup;
 
     .line 505
-    .local v0, currentParent:Landroid/view/ViewGroup;
+    .local v0, "currentParent":Landroid/view/ViewGroup;
     if-eqz v0, :cond_0
 
     .line 506
@@ -499,7 +499,7 @@
     check-cast v0, Landroid/view/inputmethod/InputMethodManager;
 
     .line 795
-    .local v0, imm:Landroid/view/inputmethod/InputMethodManager;
+    .local v0, "imm":Landroid/view/inputmethod/InputMethodManager;
     invoke-virtual {p0}, Lcom/fusepowered/m1/android/InlineVideoView;->getWindowToken()Landroid/os/IBinder;
 
     move-result-object v1
@@ -517,7 +517,7 @@
 
 .method private resumeInternal(Z)V
     .locals 4
-    .parameter "wasPlaying"
+    .param p1, "wasPlaying"    # Z
 
     .prologue
     const/4 v2, 0x2
@@ -582,7 +582,7 @@
 
 .method private setInlineVideoParams(Lcom/fusepowered/m1/android/InlineVideoView$InlineParams;)V
     .locals 0
-    .parameter "parameters"
+    .param p1, "parameters"    # Lcom/fusepowered/m1/android/InlineVideoView$InlineParams;
 
     .prologue
     .line 213
@@ -596,7 +596,7 @@
 # virtual methods
 .method declared-synchronized adjustVideo(Lcom/fusepowered/m1/android/InlineVideoView$InlineParams;)Z
     .locals 3
-    .parameter "params"
+    .param p1, "params"    # Lcom/fusepowered/m1/android/InlineVideoView$InlineParams;
 
     .prologue
     .line 318
@@ -616,7 +616,7 @@
     move-result v1
 
     .line 323
-    .local v1, wasPlaying:Z
+    .local v1, "wasPlaying":Z
     invoke-virtual {p0}, Lcom/fusepowered/m1/android/InlineVideoView;->stopPlayback()V
 
     .line 326
@@ -629,7 +629,7 @@
     check-cast v0, Lcom/fusepowered/m1/android/MMLayout;
 
     .line 327
-    .local v0, mmLayout:Lcom/fusepowered/m1/android/MMLayout;
+    .local v0, "mmLayout":Lcom/fusepowered/m1/android/MMLayout;
     if-eqz v0, :cond_0
 
     .line 329
@@ -649,8 +649,8 @@
     return v2
 
     .line 318
-    .end local v0           #mmLayout:Lcom/fusepowered/m1/android/MMLayout;
-    .end local v1           #wasPlaying:Z
+    .end local v0    # "mmLayout":Lcom/fusepowered/m1/android/MMLayout;
+    .end local v1    # "wasPlaying":Z
     :catchall_0
     move-exception v2
 
@@ -701,12 +701,12 @@
     invoke-direct {v0, v2, v2}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
     .line 208
-    .local v0, lp:Landroid/widget/RelativeLayout$LayoutParams;
+    .local v0, "lp":Landroid/widget/RelativeLayout$LayoutParams;
     :goto_0
     return-object v0
 
     .line 202
-    .end local v0           #lp:Landroid/widget/RelativeLayout$LayoutParams;
+    .end local v0    # "lp":Landroid/widget/RelativeLayout$LayoutParams;
     :cond_0
     new-instance v0, Landroid/widget/RelativeLayout$LayoutParams;
 
@@ -741,7 +741,7 @@
     invoke-direct {v0, v1, v2}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
     .line 203
-    .restart local v0       #lp:Landroid/widget/RelativeLayout$LayoutParams;
+    .restart local v0    # "lp":Landroid/widget/RelativeLayout$LayoutParams;
     iget-object v1, p0, Lcom/fusepowered/m1/android/InlineVideoView;->inlineParams:Lcom/fusepowered/m1/android/InlineVideoView$InlineParams;
 
     iget v1, v1, Lcom/fusepowered/m1/android/InlineVideoView$InlineParams;->scaleFactor:F
@@ -821,7 +821,7 @@
 
 .method handleTransparentMessage(Landroid/os/Message;)V
     .locals 4
-    .parameter "msg"
+    .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
     .line 578
@@ -830,13 +830,13 @@
     packed-switch v0, :pswitch_data_0
 
     .line 601
-    .end local p0
+    .end local p0    # "this":Lcom/fusepowered/m1/android/InlineVideoView;
     :cond_0
     :goto_0
     return-void
 
     .line 581
-    .restart local p0
+    .restart local p0    # "this":Lcom/fusepowered/m1/android/InlineVideoView;
     :pswitch_0
     invoke-virtual {p0}, Lcom/fusepowered/m1/android/InlineVideoView;->isPlaying()Z
 
@@ -912,7 +912,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/fusepowered/m1/android/InlineVideoView;
     check-cast p0, Lcom/fusepowered/m1/android/MMLayout;
 
     invoke-virtual {p0}, Lcom/fusepowered/m1/android/MMLayout;->removeBlackView()V
@@ -929,7 +929,7 @@
 
 .method declared-synchronized initInlineVideo(Lcom/fusepowered/m1/android/InlineVideoView$InlineParams;)V
     .locals 1
-    .parameter "parameters"
+    .param p1, "parameters"    # Lcom/fusepowered/m1/android/InlineVideoView$InlineParams;
 
     .prologue
     .line 226
@@ -1052,7 +1052,7 @@
 
 .method onCompletion(Landroid/media/MediaPlayer;)V
     .locals 2
-    .parameter "mp"
+    .param p1, "mp"    # Landroid/media/MediaPlayer;
 
     .prologue
     const/4 v1, 0x2
@@ -1116,9 +1116,9 @@
 
 .method onError(Landroid/media/MediaPlayer;II)Z
     .locals 7
-    .parameter "mp"
-    .parameter "what"
-    .parameter "extra"
+    .param p1, "mp"    # Landroid/media/MediaPlayer;
+    .param p2, "what"    # I
+    .param p3, "extra"    # I
 
     .prologue
     const/4 v6, 0x1
@@ -1156,7 +1156,7 @@
     check-cast v0, Lcom/fusepowered/m1/android/MMLayout;
 
     .line 683
-    .local v0, mmLayout:Lcom/fusepowered/m1/android/MMLayout;
+    .local v0, "mmLayout":Lcom/fusepowered/m1/android/MMLayout;
     if-nez v0, :cond_1
 
     .line 685
@@ -1226,7 +1226,7 @@
 
 .method onMediaControllerClick(Landroid/view/View;)V
     .locals 7
-    .parameter "arg0"
+    .param p1, "arg0"    # Landroid/view/View;
 
     .prologue
     const/4 v6, 0x0
@@ -1243,11 +1243,11 @@
     check-cast v1, Lcom/fusepowered/m1/android/MMLayout;
 
     .line 915
-    .local v1, mmLayout:Lcom/fusepowered/m1/android/MMLayout;
+    .local v1, "mmLayout":Lcom/fusepowered/m1/android/MMLayout;
     if-eqz v1, :cond_1
 
     .line 917
-    const/high16 v3, -0x100
+    const/high16 v3, -0x1000000
 
     invoke-virtual {p0, v3}, Lcom/fusepowered/m1/android/InlineVideoView;->setBackgroundColor(I)V
 
@@ -1295,14 +1295,14 @@
     check-cast v0, Landroid/app/Activity;
 
     .line 930
-    .local v0, activity:Landroid/app/Activity;
+    .local v0, "activity":Landroid/app/Activity;
     if-eqz v0, :cond_1
 
     .line 932
     invoke-virtual {v0, v5}, Landroid/app/Activity;->setRequestedOrientation(I)V
 
     .line 964
-    .end local v0           #activity:Landroid/app/Activity;
+    .end local v0    # "activity":Landroid/app/Activity;
     :cond_1
     :goto_0
     return-void
@@ -1314,7 +1314,7 @@
     move-result v2
 
     .line 938
-    .local v2, wasPlaying:Z
+    .local v2, "wasPlaying":Z
     invoke-virtual {p0}, Lcom/fusepowered/m1/android/InlineVideoView;->stopPlayback()V
 
     .line 939
@@ -1326,7 +1326,7 @@
     goto :goto_0
 
     .line 945
-    .end local v2           #wasPlaying:Z
+    .end local v2    # "wasPlaying":Z
     :cond_3
     iget-object v3, p0, Lcom/fusepowered/m1/android/InlineVideoView;->inlineParams:Lcom/fusepowered/m1/android/InlineVideoView$InlineParams;
 
@@ -1368,7 +1368,7 @@
     check-cast v0, Landroid/app/Activity;
 
     .line 950
-    .restart local v0       #activity:Landroid/app/Activity;
+    .restart local v0    # "activity":Landroid/app/Activity;
     if-eqz v0, :cond_1
 
     .line 952
@@ -1377,14 +1377,14 @@
     goto :goto_0
 
     .line 957
-    .end local v0           #activity:Landroid/app/Activity;
+    .end local v0    # "activity":Landroid/app/Activity;
     :cond_4
     invoke-virtual {p0}, Lcom/fusepowered/m1/android/InlineVideoView;->isPlaying()Z
 
     move-result v2
 
     .line 958
-    .restart local v2       #wasPlaying:Z
+    .restart local v2    # "wasPlaying":Z
     invoke-virtual {p0}, Lcom/fusepowered/m1/android/InlineVideoView;->stopPlayback()V
 
     .line 959
@@ -1398,7 +1398,7 @@
 
 .method onPrepared(Landroid/media/MediaPlayer;)V
     .locals 2
-    .parameter "mp"
+    .param p1, "mp"    # Landroid/media/MediaPlayer;
 
     .prologue
     .line 763
@@ -1460,7 +1460,7 @@
 
 .method public onRestoreInstanceState(Landroid/os/Parcelable;)V
     .locals 4
-    .parameter "state"
+    .param p1, "state"    # Landroid/os/Parcelable;
 
     .prologue
     .line 159
@@ -1484,7 +1484,7 @@
     move-object v1, v0
 
     .line 166
-    .local v1, ss:Lcom/fusepowered/m1/android/AdViewOverlayView$SavedState;
+    .local v1, "ss":Lcom/fusepowered/m1/android/AdViewOverlayView$SavedState;
     invoke-virtual {v1}, Lcom/fusepowered/m1/android/AdViewOverlayView$SavedState;->getSuperState()Landroid/os/Parcelable;
 
     move-result-object v2
@@ -1511,13 +1511,13 @@
     move-result-object v1
 
     .line 148
-    .local v1, superState:Landroid/os/Parcelable;
+    .local v1, "superState":Landroid/os/Parcelable;
     new-instance v0, Lcom/fusepowered/m1/android/AdViewOverlayView$SavedState;
 
     invoke-direct {v0, v1}, Lcom/fusepowered/m1/android/AdViewOverlayView$SavedState;-><init>(Landroid/os/Parcelable;)V
 
     .line 149
-    .local v0, ss:Lcom/fusepowered/m1/android/AdViewOverlayView$SavedState;
+    .local v0, "ss":Lcom/fusepowered/m1/android/AdViewOverlayView$SavedState;
     invoke-virtual {p0}, Lcom/fusepowered/m1/android/InlineVideoView;->isPlaying()Z
 
     move-result v2
@@ -1547,8 +1547,8 @@
 
 .method onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
     .locals 6
-    .parameter "v"
-    .parameter "event"
+    .param p1, "v"    # Landroid/view/View;
+    .param p2, "event"    # Landroid/view/MotionEvent;
 
     .prologue
     const/4 v5, 0x0
@@ -1572,7 +1572,7 @@
     check-cast v0, Lcom/fusepowered/m1/android/MMLayout;
 
     .line 398
-    .local v0, mmLayout:Lcom/fusepowered/m1/android/MMLayout;
+    .local v0, "mmLayout":Lcom/fusepowered/m1/android/MMLayout;
     if-nez v0, :cond_0
 
     .line 400
@@ -1583,12 +1583,12 @@
     move v1, v5
 
     .line 412
-    .end local v0           #mmLayout:Lcom/fusepowered/m1/android/MMLayout;
+    .end local v0    # "mmLayout":Lcom/fusepowered/m1/android/MMLayout;
     :goto_0
     return v1
 
     .line 403
-    .restart local v0       #mmLayout:Lcom/fusepowered/m1/android/MMLayout;
+    .restart local v0    # "mmLayout":Lcom/fusepowered/m1/android/MMLayout;
     :cond_0
     iget-object v1, p0, Lcom/fusepowered/m1/android/InlineVideoView;->inlineParams:Lcom/fusepowered/m1/android/InlineVideoView$InlineParams;
 
@@ -1689,7 +1689,7 @@
     .line 409
     goto :goto_0
 
-    .end local v0           #mmLayout:Lcom/fusepowered/m1/android/MMLayout;
+    .end local v0    # "mmLayout":Lcom/fusepowered/m1/android/MMLayout;
     :cond_2
     move v1, v4
 
@@ -1956,7 +1956,7 @@
 
 .method setAdjustVideoParams(Lcom/fusepowered/m1/android/InlineVideoView$InlineParams;)V
     .locals 2
-    .parameter "parameters"
+    .param p1, "parameters"    # Lcom/fusepowered/m1/android/InlineVideoView$InlineParams;
 
     .prologue
     .line 218
@@ -1993,7 +1993,7 @@
 
 .method setVideoSource(Ljava/lang/String;)V
     .locals 2
-    .parameter "streamVideoURI"
+    .param p1, "streamVideoURI"    # Ljava/lang/String;
 
     .prologue
     .line 781
@@ -2015,7 +2015,7 @@
     iput v1, v0, Lcom/fusepowered/m1/android/InlineVideoView$InlineParams;->currentPosition:I
 
     .line 787
-    const/high16 v0, -0x100
+    const/high16 v0, -0x1000000
 
     invoke-virtual {p0, v0}, Lcom/fusepowered/m1/android/InlineVideoView;->setBackgroundColor(I)V
 
@@ -2068,7 +2068,7 @@
     check-cast v0, Landroid/os/PowerManager;
 
     .line 535
-    .local v0, pm:Landroid/os/PowerManager;
+    .local v0, "pm":Landroid/os/PowerManager;
     invoke-virtual {v0}, Landroid/os/PowerManager;->isScreenOn()Z
 
     move-result v1
@@ -2233,7 +2233,7 @@
     move-result v0
 
     .line 452
-    .local v0, time:I
+    .local v0, "time":I
     if-ltz v0, :cond_0
 
     .line 454
@@ -2260,7 +2260,7 @@
     .line 455
     int-to-float v3, v0
 
-    const/high16 v4, 0x447a
+    const/high16 v4, 0x447a0000
 
     div-float/2addr v3, v4
 
@@ -2271,18 +2271,18 @@
     move-result-wide v1
 
     .line 456
-    .local v1, timeInSeconds:D
+    .local v1, "timeInSeconds":D
     invoke-virtual {p0, v1, v2}, Lcom/fusepowered/m1/android/InlineVideoView;->updateVideoSeekTime(D)V
 
     .line 458
-    .end local v1           #timeInSeconds:D
+    .end local v1    # "timeInSeconds":D
     :cond_0
     return-void
 .end method
 
 .method updateVideoSeekTime(D)V
     .locals 3
-    .parameter "timeInSeconds"
+    .param p1, "timeInSeconds"    # D
 
     .prologue
     .line 474
@@ -2295,7 +2295,7 @@
     check-cast v0, Lcom/fusepowered/m1/android/MMLayout;
 
     .line 475
-    .local v0, mmLayout:Lcom/fusepowered/m1/android/MMLayout;
+    .local v0, "mmLayout":Lcom/fusepowered/m1/android/MMLayout;
     if-nez v0, :cond_0
 
     .line 477
@@ -2372,7 +2372,7 @@
 
     int-to-float v2, v2
 
-    const/high16 v3, 0x447a
+    const/high16 v3, 0x447a0000
 
     div-float/2addr v2, v3
 
@@ -2383,11 +2383,11 @@
     move-result-wide v0
 
     .line 468
-    .local v0, timeInSeconds:D
+    .local v0, "timeInSeconds":D
     invoke-virtual {p0, v0, v1}, Lcom/fusepowered/m1/android/InlineVideoView;->updateVideoSeekTime(D)V
 
     .line 470
-    .end local v0           #timeInSeconds:D
+    .end local v0    # "timeInSeconds":D
     :cond_0
     return-void
 .end method

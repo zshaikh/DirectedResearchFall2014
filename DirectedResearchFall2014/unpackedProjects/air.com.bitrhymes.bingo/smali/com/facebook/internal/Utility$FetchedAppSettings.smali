@@ -23,8 +23,8 @@
 # direct methods
 .method private constructor <init>(ZZ)V
     .locals 0
-    .parameter "supportsAttribution"
-    .parameter "supportsImplicitLogging"
+    .param p1, "supportsAttribution"    # Z
+    .param p2, "supportsImplicitLogging"    # Z
 
     .prologue
     .line 74
@@ -42,9 +42,6 @@
 
 .method synthetic constructor <init>(ZZLcom/facebook/internal/Utility$FetchedAppSettings;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 74

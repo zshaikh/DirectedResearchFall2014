@@ -21,7 +21,6 @@
 # direct methods
 .method constructor <init>(Lcom/adobe/air/AndroidIdleState;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 43
@@ -36,8 +35,6 @@
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 3
-    .parameter
-    .parameter
 
     .prologue
     const/4 v2, 0x1
@@ -63,7 +60,7 @@
     :goto_0
     iget-object v1, p0, Lcom/adobe/air/AndroidIdleState$1;->this$0:Lcom/adobe/air/AndroidIdleState;
 
-    #getter for: Lcom/adobe/air/AndroidIdleState;->sScreenOn:Z
+    # getter for: Lcom/adobe/air/AndroidIdleState;->sScreenOn:Z
     invoke-static {v1}, Lcom/adobe/air/AndroidIdleState;->access$000(Lcom/adobe/air/AndroidIdleState;)Z
 
     move-result v1
@@ -73,7 +70,7 @@
     .line 57
     iget-object v1, p0, Lcom/adobe/air/AndroidIdleState$1;->this$0:Lcom/adobe/air/AndroidIdleState;
 
-    #setter for: Lcom/adobe/air/AndroidIdleState;->sScreenOn:Z
+    # setter for: Lcom/adobe/air/AndroidIdleState;->sScreenOn:Z
     invoke-static {v1, v0}, Lcom/adobe/air/AndroidIdleState;->access$002(Lcom/adobe/air/AndroidIdleState;Z)Z
 
     .line 58
@@ -84,7 +81,7 @@
     .line 59
     iget-object v1, p0, Lcom/adobe/air/AndroidIdleState$1;->this$0:Lcom/adobe/air/AndroidIdleState;
 
-    #getter for: Lcom/adobe/air/AndroidIdleState;->sScreenOn:Z
+    # getter for: Lcom/adobe/air/AndroidIdleState;->sScreenOn:Z
     invoke-static {v1}, Lcom/adobe/air/AndroidIdleState;->access$000(Lcom/adobe/air/AndroidIdleState;)Z
 
     move-result v1

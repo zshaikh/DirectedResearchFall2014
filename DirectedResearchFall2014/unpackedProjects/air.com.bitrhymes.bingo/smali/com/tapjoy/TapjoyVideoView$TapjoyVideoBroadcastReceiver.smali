@@ -21,7 +21,6 @@
 # direct methods
 .method private constructor <init>(Lcom/tapjoy/TapjoyVideoView;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 695
@@ -34,8 +33,8 @@
 
 .method synthetic constructor <init>(Lcom/tapjoy/TapjoyVideoView;Lcom/tapjoy/TapjoyVideoView$1;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
+    .param p1, "x0"    # Lcom/tapjoy/TapjoyVideoView;
+    .param p2, "x1"    # Lcom/tapjoy/TapjoyVideoView$1;
 
     .prologue
     .line 695
@@ -48,8 +47,8 @@
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 4
-    .parameter "context"
-    .parameter "intent"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
     const/4 v3, 0x1
@@ -64,13 +63,13 @@
     move-result v0
 
     .line 701
-    .local v0, noConnectivity:Z
+    .local v0, "noConnectivity":Z
     if-eqz v0, :cond_0
 
     .line 702
     iget-object v1, p0, Lcom/tapjoy/TapjoyVideoView$TapjoyVideoBroadcastReceiver;->this$0:Lcom/tapjoy/TapjoyVideoView;
 
-    #getter for: Lcom/tapjoy/TapjoyVideoView;->videoView:Landroid/widget/VideoView;
+    # getter for: Lcom/tapjoy/TapjoyVideoView;->videoView:Landroid/widget/VideoView;
     invoke-static {v1}, Lcom/tapjoy/TapjoyVideoView;->access$700(Lcom/tapjoy/TapjoyVideoView;)Landroid/widget/VideoView;
 
     move-result-object v1
@@ -80,7 +79,7 @@
     .line 703
     iget-object v1, p0, Lcom/tapjoy/TapjoyVideoView$TapjoyVideoBroadcastReceiver;->this$0:Lcom/tapjoy/TapjoyVideoView;
 
-    #setter for: Lcom/tapjoy/TapjoyVideoView;->dialogShowing:Z
+    # setter for: Lcom/tapjoy/TapjoyVideoView;->dialogShowing:Z
     invoke-static {v1, v3}, Lcom/tapjoy/TapjoyVideoView;->access$802(Lcom/tapjoy/TapjoyVideoView;Z)Z
 
     .line 704

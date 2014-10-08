@@ -16,7 +16,6 @@
 
 .method public static GetBitsPerPixel(Landroid/content/Context;)I
     .locals 2
-    .parameter
 
     .prologue
     .line 70
@@ -53,7 +52,6 @@
 
 .method public static GetScreenDPI(Landroid/content/Context;)I
     .locals 3
-    .parameter
 
     .prologue
     .line 53
@@ -189,7 +187,6 @@
 
 .method public static GetScreenHRes(Landroid/content/Context;)I
     .locals 2
-    .parameter
 
     .prologue
     .line 18
@@ -221,7 +218,6 @@
 
 .method public static GetScreenVRes(Landroid/content/Context;)I
     .locals 2
-    .parameter
 
     .prologue
     .line 26
@@ -253,7 +249,6 @@
 
 .method public static HasTrackBall(Landroid/content/Context;)Z
     .locals 2
-    .parameter
 
     .prologue
     .line 81

@@ -121,9 +121,7 @@
 
 .method private constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter "protocol"
+    .param p3, "protocol"    # Ljava/lang/String;
 
     .prologue
     .line 50
@@ -138,7 +136,6 @@
 
 .method public static valueOf(Ljava/lang/String;)Lcom/facebook/SessionDefaultAudience;
     .locals 1
-    .parameter
 
     .prologue
     .line 1

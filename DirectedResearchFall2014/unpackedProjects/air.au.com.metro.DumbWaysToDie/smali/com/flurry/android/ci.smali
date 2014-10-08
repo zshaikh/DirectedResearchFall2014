@@ -20,12 +20,6 @@
 # direct methods
 .method public constructor <init>(IJLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 20
@@ -85,8 +79,8 @@
 
     invoke-direct {v2, v1}, Ljava/io/DataOutputStream;-><init>(Ljava/io/OutputStream;)V
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_1
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
     .line 44
     :try_start_1
@@ -184,8 +178,8 @@
 
     invoke-virtual {v2, v0}, Ljava/io/DataOutputStream;->writeByte(I)V
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     goto :goto_0
 
@@ -287,8 +281,8 @@
     .line 96
     invoke-virtual {v1}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
     :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_0
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
     move-result-object v0
 
@@ -309,8 +303,8 @@
 
     invoke-virtual {v2, v0}, Ljava/io/DataOutputStream;->writeByte(I)V
     :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_0
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_0
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
     goto :goto_5
 

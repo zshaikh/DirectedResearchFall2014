@@ -47,8 +47,8 @@
 
 .method public constructor <init>(Landroid/content/Context;Ljava/lang/String;)V
     .locals 1
-    .parameter "context"
-    .parameter "event"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "event"    # Ljava/lang/String;
 
     .prologue
     .line 24
@@ -102,7 +102,7 @@
 
 .method protected static c2dMessageReceived(Landroid/content/Context;)V
     .locals 2
-    .parameter "context"
+    .param p0, "context"    # Landroid/content/Context;
 
     .prologue
     .line 94
@@ -146,7 +146,7 @@
 
 .method protected static getOurSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
     .locals 2
-    .parameter "context"
+    .param p0, "context"    # Landroid/content/Context;
 
     .prologue
     .line 64
@@ -175,8 +175,8 @@
 # virtual methods
 .method protected addParameter(Lcom/fiksu/asotracking/FiksuEventParameter;Ljava/lang/String;)V
     .locals 2
-    .parameter "eventParameter"
-    .parameter "value"
+    .param p1, "eventParameter"    # Lcom/fiksu/asotracking/FiksuEventParameter;
+    .param p2, "value"    # Ljava/lang/String;
 
     .prologue
     .line 40
@@ -219,7 +219,7 @@
 
 .method protected uploadEventSynchronously(J)V
     .locals 3
-    .parameter "timeoutMs"
+    .param p1, "timeoutMs"    # J
 
     .prologue
     .line 52
@@ -234,7 +234,7 @@
     invoke-direct {v0, v1, v2}, Lcom/fiksu/asotracking/EventUploader;-><init>(Landroid/content/Context;Ljava/util/Map;)V
 
     .line 54
-    .local v0, uploader:Lcom/fiksu/asotracking/EventUploader;
+    .local v0, "uploader":Lcom/fiksu/asotracking/EventUploader;
     monitor-enter v0
 
     .line 55
@@ -251,8 +251,8 @@
     :try_start_1
     invoke-virtual {v0, p1, p2}, Ljava/lang/Object;->wait(J)V
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     .line 54
     :goto_0

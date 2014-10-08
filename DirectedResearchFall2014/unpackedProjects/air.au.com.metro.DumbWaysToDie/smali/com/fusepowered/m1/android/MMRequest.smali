@@ -202,7 +202,6 @@
 
 .method static insertLocation(Ljava/util/Map;)V
     .locals 4
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -215,7 +214,7 @@
     .end annotation
 
     .prologue
-    .local p0, paramsMap:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p0, "paramsMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v3, "loc"
 
     .line 323
@@ -418,7 +417,7 @@
 
 .method public static setUserLocation(Landroid/location/Location;)V
     .locals 0
-    .parameter "userLocation"
+    .param p0, "userLocation"    # Landroid/location/Location;
 
     .prologue
     .line 134
@@ -439,7 +438,6 @@
 # virtual methods
 .method getUrlParams(Ljava/util/Map;)V
     .locals 4
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -453,7 +451,7 @@
 
     .prologue
     .line 146
-    .local p1, paramsMap:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p1, "paramsMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     iget-object v2, p0, Lcom/fusepowered/m1/android/MMRequest;->values:Ljava/util/Map;
 
     invoke-interface {v2}, Ljava/util/Map;->entrySet()Ljava/util/Set;
@@ -464,7 +462,7 @@
 
     move-result-object v1
 
-    .local v1, i$:Ljava/util/Iterator;
+    .local v1, "i$":Ljava/util/Iterator;
     :goto_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
@@ -479,7 +477,7 @@
     check-cast v0, Ljava/util/Map$Entry;
 
     .line 147
-    .local v0, entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v0, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v2
@@ -493,7 +491,7 @@
     goto :goto_0
 
     .line 149
-    .end local v0           #entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
+    .end local v0    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
     :cond_0
     iget-object v2, p0, Lcom/fusepowered/m1/android/MMRequest;->age:Ljava/lang/String;
 
@@ -656,8 +654,8 @@
 
 .method public put(Ljava/lang/String;Ljava/lang/String;)Lcom/fusepowered/m1/android/MMRequest;
     .locals 1
-    .parameter "key"
-    .parameter "value"
+    .param p1, "key"    # Ljava/lang/String;
+    .param p2, "value"    # Ljava/lang/String;
 
     .prologue
     .line 96
@@ -863,7 +861,7 @@
 
 .method public setAge(Ljava/lang/String;)V
     .locals 0
-    .parameter "age"
+    .param p1, "age"    # Ljava/lang/String;
 
     .prologue
     .line 182
@@ -875,7 +873,7 @@
 
 .method public setChildren(Ljava/lang/String;)V
     .locals 0
-    .parameter "children"
+    .param p1, "children"    # Ljava/lang/String;
 
     .prologue
     .line 192
@@ -887,7 +885,7 @@
 
 .method public setEducation(Ljava/lang/String;)V
     .locals 0
-    .parameter "education"
+    .param p1, "education"    # Ljava/lang/String;
 
     .prologue
     .line 202
@@ -899,7 +897,7 @@
 
 .method public setEthnicity(Ljava/lang/String;)V
     .locals 0
-    .parameter "ethnicity"
+    .param p1, "ethnicity"    # Ljava/lang/String;
 
     .prologue
     .line 212
@@ -911,7 +909,7 @@
 
 .method public setGender(Ljava/lang/String;)V
     .locals 0
-    .parameter "gender"
+    .param p1, "gender"    # Ljava/lang/String;
 
     .prologue
     .line 222
@@ -923,7 +921,7 @@
 
 .method public setIncome(Ljava/lang/String;)V
     .locals 0
-    .parameter "income"
+    .param p1, "income"    # Ljava/lang/String;
 
     .prologue
     .line 232
@@ -935,7 +933,7 @@
 
 .method public setKeywords(Ljava/lang/String;)V
     .locals 0
-    .parameter "keywords"
+    .param p1, "keywords"    # Ljava/lang/String;
 
     .prologue
     .line 242
@@ -947,7 +945,7 @@
 
 .method public setMarital(Ljava/lang/String;)V
     .locals 0
-    .parameter "marital"
+    .param p1, "marital"    # Ljava/lang/String;
 
     .prologue
     .line 252
@@ -959,7 +957,6 @@
 
 .method public setMetaValues(Ljava/util/Map;)V
     .locals 4
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -973,7 +970,7 @@
 
     .prologue
     .line 314
-    .local p1, metaData:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p1, "metaData":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     if-nez p1, :cond_1
 
     .line 319
@@ -990,7 +987,7 @@
 
     move-result-object v1
 
-    .local v1, i$:Ljava/util/Iterator;
+    .local v1, "i$":Ljava/util/Iterator;
     :goto_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
@@ -1005,7 +1002,7 @@
     check-cast v0, Ljava/util/Map$Entry;
 
     .line 318
-    .local v0, entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v0, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v2
@@ -1025,7 +1022,7 @@
 
 .method public setOrientation(Ljava/lang/String;)V
     .locals 0
-    .parameter "sexualOrientation"
+    .param p1, "sexualOrientation"    # Ljava/lang/String;
 
     .prologue
     .line 262
@@ -1037,7 +1034,7 @@
 
 .method public setPolitics(Ljava/lang/String;)V
     .locals 0
-    .parameter "politics"
+    .param p1, "politics"    # Ljava/lang/String;
 
     .prologue
     .line 271
@@ -1049,7 +1046,7 @@
 
 .method public setVendor(Ljava/lang/String;)V
     .locals 0
-    .parameter "vendor"
+    .param p1, "vendor"    # Ljava/lang/String;
 
     .prologue
     .line 281
@@ -1061,7 +1058,7 @@
 
 .method public setZip(Ljava/lang/String;)V
     .locals 0
-    .parameter "zipCode"
+    .param p1, "zipCode"    # Ljava/lang/String;
 
     .prologue
     .line 292

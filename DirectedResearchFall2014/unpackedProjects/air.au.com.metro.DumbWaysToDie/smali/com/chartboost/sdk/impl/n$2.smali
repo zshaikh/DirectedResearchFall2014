@@ -26,8 +26,6 @@
 # direct methods
 .method constructor <init>(Lcom/chartboost/sdk/impl/n$a;Lcom/chartboost/sdk/impl/a;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 1
@@ -45,7 +43,7 @@
 # virtual methods
 .method public onAnimationEnd(Landroid/view/animation/Animation;)V
     .locals 2
-    .parameter "animation"
+    .param p1, "animation"    # Landroid/view/animation/Animation;
 
     .prologue
     .line 316
@@ -66,7 +64,7 @@
 
 .method public onAnimationRepeat(Landroid/view/animation/Animation;)V
     .locals 0
-    .parameter "animation"
+    .param p1, "animation"    # Landroid/view/animation/Animation;
 
     .prologue
     .line 320
@@ -75,7 +73,7 @@
 
 .method public onAnimationStart(Landroid/view/animation/Animation;)V
     .locals 0
-    .parameter "animation"
+    .param p1, "animation"    # Landroid/view/animation/Animation;
 
     .prologue
     .line 323

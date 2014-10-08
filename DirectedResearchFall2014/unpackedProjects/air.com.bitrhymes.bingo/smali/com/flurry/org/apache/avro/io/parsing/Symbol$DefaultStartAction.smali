@@ -21,7 +21,7 @@
 # direct methods
 .method public constructor <init>([B)V
     .locals 1
-    .parameter "contents"
+    .param p1, "contents"    # [B
 
     .prologue
     .line 473

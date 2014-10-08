@@ -16,7 +16,7 @@
 
 
 # static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator; = null
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroid/os/Parcelable$Creator",
@@ -102,7 +102,7 @@
 
 .method public constructor <init>(Landroid/os/Parcel;)V
     .locals 5
-    .parameter "in"
+    .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
     const/4 v3, 0x0
@@ -263,7 +263,7 @@
     move-result-object v0
 
     .line 194
-    .local v0, resCandidate:Ljava/lang/String;
+    .local v0, "resCandidate":Ljava/lang/String;
     const-string v1, "null"
 
     invoke-virtual {v0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -310,7 +310,7 @@
 
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 2
-    .parameter "tag"
+    .param p1, "tag"    # Ljava/lang/String;
 
     .prologue
     .line 99
@@ -382,8 +382,8 @@
 
 .method public reportAndroidBillingResult(Lv2/com/playhaven/model/PHPurchase$AndroidBillingResult;Landroid/content/Context;)V
     .locals 4
-    .parameter "resolution"
-    .parameter "context"
+    .param p1, "resolution"    # Lv2/com/playhaven/model/PHPurchase$AndroidBillingResult;
+    .param p2, "context"    # Landroid/content/Context;
 
     .prologue
     .line 132
@@ -395,7 +395,7 @@
     invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
 
     .line 136
-    .local v1, message:Landroid/os/Bundle;
+    .local v1, "message":Landroid/os/Bundle;
     sget-object v3, Lv2/com/playhaven/interstitial/requestbridge/bridges/ContentRequestToInterstitialBridge$InterstitialEventArgument;->Purchase:Lv2/com/playhaven/interstitial/requestbridge/bridges/ContentRequestToInterstitialBridge$InterstitialEventArgument;
 
     invoke-virtual {v3}, Lv2/com/playhaven/interstitial/requestbridge/bridges/ContentRequestToInterstitialBridge$InterstitialEventArgument;->getKey()Ljava/lang/String;
@@ -403,7 +403,7 @@
     move-result-object v2
 
     .line 138
-    .local v2, purchase_key:Ljava/lang/String;
+    .local v2, "purchase_key":Ljava/lang/String;
     invoke-virtual {v1, v2, p0}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
     .line 140
@@ -414,7 +414,7 @@
     move-result-object v0
 
     .line 144
-    .local v0, event:Ljava/lang/String;
+    .local v0, "event":Ljava/lang/String;
     iget-object v3, p0, Lv2/com/playhaven/model/PHPurchase;->tag:Ljava/lang/String;
 
     invoke-static {v3, v0, v1, p2}, Lv2/com/playhaven/interstitial/requestbridge/BridgeManager;->sendMessageFromRequester(Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;Landroid/content/Context;)V
@@ -425,8 +425,8 @@
 
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 2
-    .parameter "out"
-    .parameter "flags"
+    .param p1, "out"    # Landroid/os/Parcel;
+    .param p2, "flags"    # I
 
     .prologue
     const-string v1, "null"

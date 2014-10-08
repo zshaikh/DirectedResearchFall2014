@@ -18,8 +18,8 @@
 # virtual methods
 .method public findTypeMapping(Lcom/flurry/org/codehaus/jackson/map/DeserializationConfig;Lcom/flurry/org/codehaus/jackson/type/JavaType;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .locals 1
-    .parameter "config"
-    .parameter "type"
+    .param p1, "config"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationConfig;
+    .param p2, "type"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
 
     .prologue
     .line 39
@@ -30,8 +30,8 @@
 
 .method public resolveAbstractType(Lcom/flurry/org/codehaus/jackson/map/DeserializationConfig;Lcom/flurry/org/codehaus/jackson/type/JavaType;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .locals 1
-    .parameter "config"
-    .parameter "type"
+    .param p1, "config"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationConfig;
+    .param p2, "type"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
 
     .prologue
     .line 61

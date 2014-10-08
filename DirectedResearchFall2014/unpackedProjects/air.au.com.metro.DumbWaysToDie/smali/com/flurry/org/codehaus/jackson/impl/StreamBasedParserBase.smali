@@ -19,13 +19,13 @@
 # direct methods
 .method protected constructor <init>(Lcom/flurry/org/codehaus/jackson/io/IOContext;ILjava/io/InputStream;[BIIZ)V
     .locals 0
-    .parameter "ctxt"
-    .parameter "features"
-    .parameter "in"
-    .parameter "inputBuffer"
-    .parameter "start"
-    .parameter "end"
-    .parameter "bufferRecyclable"
+    .param p1, "ctxt"    # Lcom/flurry/org/codehaus/jackson/io/IOContext;
+    .param p2, "features"    # I
+    .param p3, "in"    # Ljava/io/InputStream;
+    .param p4, "inputBuffer"    # [B
+    .param p5, "start"    # I
+    .param p6, "end"    # I
+    .param p7, "bufferRecyclable"    # Z
 
     .prologue
     .line 68
@@ -102,7 +102,7 @@
 
 .method protected final _loadToHaveAtLeast(I)Z
     .locals 9
-    .parameter "minAvailable"
+    .param p1, "minAvailable"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -134,7 +134,7 @@
     sub-int v0, v2, v3
 
     .line 145
-    .local v0, amount:I
+    .local v0, "amount":I
     if-lez v0, :cond_1
 
     iget v2, p0, Lcom/flurry/org/codehaus/jackson/impl/StreamBasedParserBase;->_inputPtr:I
@@ -203,7 +203,7 @@
     move-result v1
 
     .line 156
-    .local v1, count:I
+    .local v1, "count":I
     if-ge v1, v8, :cond_3
 
     .line 158
@@ -244,13 +244,13 @@
     throw v2
 
     .line 151
-    .end local v1           #count:I
+    .end local v1    # "count":I
     :cond_1
     iput v7, p0, Lcom/flurry/org/codehaus/jackson/impl/StreamBasedParserBase;->_inputEnd:I
 
     goto :goto_1
 
-    .restart local v1       #count:I
+    .restart local v1    # "count":I
     :cond_2
     move v2, v7
 
@@ -267,7 +267,7 @@
 
     goto :goto_2
 
-    .end local v1           #count:I
+    .end local v1    # "count":I
     :cond_4
     move v2, v8
 
@@ -296,7 +296,7 @@
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/impl/StreamBasedParserBase;->_inputBuffer:[B
 
     .line 191
-    .local v0, buf:[B
+    .local v0, "buf":[B
     if-eqz v0, :cond_0
 
     .line 192
@@ -310,7 +310,7 @@
     invoke-virtual {v1, v0}, Lcom/flurry/org/codehaus/jackson/io/IOContext;->releaseReadIOBuffer([B)V
 
     .line 196
-    .end local v0           #buf:[B
+    .end local v0    # "buf":[B
     :cond_0
     return-void
 .end method
@@ -375,7 +375,7 @@
     move-result v0
 
     .line 115
-    .local v0, count:I
+    .local v0, "count":I
     if-lez v0, :cond_0
 
     .line 116
@@ -388,12 +388,12 @@
     const/4 v1, 0x1
 
     .line 127
-    .end local v0           #count:I
+    .end local v0    # "count":I
     :goto_0
     return v1
 
     .line 121
-    .restart local v0       #count:I
+    .restart local v0    # "count":I
     :cond_0
     invoke-virtual {p0}, Lcom/flurry/org/codehaus/jackson/impl/StreamBasedParserBase;->_closeInput()V
 
@@ -435,7 +435,7 @@
 
     throw v1
 
-    .end local v0           #count:I
+    .end local v0    # "count":I
     :cond_1
     move v1, v5
 
@@ -445,7 +445,7 @@
 
 .method public releaseBuffered(Ljava/io/OutputStream;)I
     .locals 4
-    .parameter "out"
+    .param p1, "out"    # Ljava/io/OutputStream;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -461,7 +461,7 @@
     sub-int v0, v2, v3
 
     .line 86
-    .local v0, count:I
+    .local v0, "count":I
     const/4 v2, 0x1
 
     if-ge v0, v2, :cond_0
@@ -478,7 +478,7 @@
     iget v1, p0, Lcom/flurry/org/codehaus/jackson/impl/StreamBasedParserBase;->_inputPtr:I
 
     .line 91
-    .local v1, origPtr:I
+    .local v1, "origPtr":I
     iget-object v2, p0, Lcom/flurry/org/codehaus/jackson/impl/StreamBasedParserBase;->_inputBuffer:[B
 
     invoke-virtual {p1, v2, v1, v0}, Ljava/io/OutputStream;->write([BII)V

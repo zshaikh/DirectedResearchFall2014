@@ -29,7 +29,7 @@
 
 .method private broadcastVastInterstitialAction(Ljava/lang/String;)V
     .locals 1
-    .parameter "action"
+    .param p1, "action"    # Ljava/lang/String;
 
     .prologue
     .line 215
@@ -49,8 +49,8 @@
 
 .method static createIntentMraid(Landroid/content/Context;Ljava/lang/String;)Landroid/content/Intent;
     .locals 3
-    .parameter "context"
-    .parameter "videoUrl"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "videoUrl"    # Ljava/lang/String;
 
     .prologue
     .line 62
@@ -61,8 +61,8 @@
     invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
     .line 63
-    .local v0, intentVideoPlayerActivity:Landroid/content/Intent;
-    const/high16 v1, 0x1000
+    .local v0, "intentVideoPlayerActivity":Landroid/content/Intent;
+    const/high16 v1, 0x10000000
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
@@ -84,16 +84,9 @@
 
 .method static createIntentVast(Landroid/content/Context;Ljava/lang/String;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/lang/String;Ljava/util/ArrayList;)Landroid/content/Intent;
     .locals 3
-    .parameter "context"
-    .parameter "videoUrl"
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter "clickThroughUrl"
-    .parameter
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "videoUrl"    # Ljava/lang/String;
+    .param p8, "clickThroughUrl"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -134,13 +127,13 @@
 
     .prologue
     .line 114
-    .local p2, videoStartTrackers:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
-    .local p3, videoFirstQuartileTrackers:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
-    .local p4, videoMidpointTrackers:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
-    .local p5, videoThirdQuartileTrackers:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
-    .local p6, videoCompleteTrackers:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
-    .local p7, impressionTrackers:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
-    .local p9, clickThroughTrackers:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
+    .local p2, "videoStartTrackers":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
+    .local p3, "videoFirstQuartileTrackers":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
+    .local p4, "videoMidpointTrackers":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
+    .local p5, "videoThirdQuartileTrackers":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
+    .local p6, "videoCompleteTrackers":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
+    .local p7, "impressionTrackers":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
+    .local p9, "clickThroughTrackers":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     new-instance v0, Landroid/content/Intent;
 
     const-class v1, Lcom/fusepowered/m2/m2l/M2RvpActivity;
@@ -148,8 +141,8 @@
     invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
     .line 115
-    .local v0, intentVideoPlayerActivity:Landroid/content/Intent;
-    const/high16 v1, 0x1000
+    .local v0, "intentVideoPlayerActivity":Landroid/content/Intent;
+    const/high16 v1, 0x10000000
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
@@ -225,7 +218,7 @@
     move-result-object v0
 
     .line 166
-    .local v0, clazz:Ljava/lang/String;
+    .local v0, "clazz":Ljava/lang/String;
     const-string v1, "vast"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -287,8 +280,8 @@
 
 .method static startMraid(Landroid/content/Context;Ljava/lang/String;)V
     .locals 4
-    .parameter "context"
-    .parameter "videoUrl"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "videoUrl"    # Ljava/lang/String;
 
     .prologue
     .line 53
@@ -297,7 +290,7 @@
     move-result-object v1
 
     .line 55
-    .local v1, intentVideoPlayerActivity:Landroid/content/Intent;
+    .local v1, "intentVideoPlayerActivity":Landroid/content/Intent;
     :try_start_0
     invoke-virtual {p0, v1}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
     :try_end_0
@@ -312,7 +305,7 @@
     move-exception v0
 
     .line 57
-    .local v0, e:Landroid/content/ActivityNotFoundException;
+    .local v0, "e":Landroid/content/ActivityNotFoundException;
     const-string v2, "MraidVideoPlayerActivity"
 
     const-string v3, "Activity MraidVideoPlayerActivity not found. Did you declare it in your AndroidManifest.xml?"
@@ -324,16 +317,9 @@
 
 .method static startVast(Landroid/content/Context;Ljava/lang/String;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/lang/String;Ljava/util/ArrayList;)V
     .locals 4
-    .parameter "context"
-    .parameter "videoUrl"
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter "clickThroughUrl"
-    .parameter
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "videoUrl"    # Ljava/lang/String;
+    .param p8, "clickThroughUrl"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -373,13 +359,13 @@
 
     .prologue
     .line 81
-    .local p2, videoStartTrackers:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
-    .local p3, videoFirstQuartileTrackers:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
-    .local p4, videoMidpointTrackers:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
-    .local p5, videoThirdQuartileTrackers:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
-    .local p6, videoCompleteTrackers:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
-    .local p7, impressionTrackers:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
-    .local p9, clickThroughTrackers:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
+    .local p2, "videoStartTrackers":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
+    .local p3, "videoFirstQuartileTrackers":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
+    .local p4, "videoMidpointTrackers":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
+    .local p5, "videoThirdQuartileTrackers":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
+    .local p6, "videoCompleteTrackers":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
+    .local p7, "impressionTrackers":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
+    .local p9, "clickThroughTrackers":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     if-nez p1, :cond_0
 
     .line 101
@@ -393,7 +379,7 @@
     move-result-object v1
 
     .line 97
-    .local v1, intentVideoPlayerActivity:Landroid/content/Intent;
+    .local v1, "intentVideoPlayerActivity":Landroid/content/Intent;
     :try_start_0
     invoke-virtual {p0, v1}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
     :try_end_0
@@ -406,7 +392,7 @@
     move-exception v0
 
     .line 99
-    .local v0, e:Landroid/content/ActivityNotFoundException;
+    .local v0, "e":Landroid/content/ActivityNotFoundException;
     const-string v2, "MoPub"
 
     const-string v3, "Activity MraidVideoPlayerActivity not found. Did you declare it in your AndroidManifest.xml?"
@@ -437,7 +423,7 @@
 
 .method protected onCreate(Landroid/os/Bundle;)V
     .locals 1
-    .parameter "savedInstanceState"
+    .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
     .line 137
@@ -534,7 +520,7 @@
 
 .method public videoCompleted(Z)V
     .locals 0
-    .parameter "shouldFinish"
+    .param p1, "shouldFinish"    # Z
 
     .prologue
     .line 198
@@ -553,7 +539,7 @@
 
 .method public videoError(Z)V
     .locals 2
-    .parameter "shouldFinish"
+    .param p1, "shouldFinish"    # Z
 
     .prologue
     .line 188

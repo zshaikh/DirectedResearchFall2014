@@ -29,7 +29,6 @@
 # direct methods
 .method constructor <init>(Lcom/facebook/AuthorizationClient;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 804
@@ -42,8 +41,8 @@
 
 .method private createCancelOrErrorResult(Lcom/facebook/AuthorizationClient$AuthorizationRequest;Landroid/content/Intent;)Lcom/facebook/AuthorizationClient$Result;
     .locals 7
-    .parameter "request"
-    .parameter "data"
+    .param p1, "request"    # Lcom/facebook/AuthorizationClient$AuthorizationRequest;
+    .param p2, "data"    # Landroid/content/Intent;
 
     .prologue
     const-string v6, "com.facebook.platform.status.ERROR_DESCRIPTION"
@@ -54,7 +53,7 @@
     move-result-object v3
 
     .line 884
-    .local v3, extras:Landroid/os/Bundle;
+    .local v3, "extras":Landroid/os/Bundle;
     const-string v5, "com.facebook.platform.status.ERROR_TYPE"
 
     invoke-virtual {v3, v5}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -62,7 +61,7 @@
     move-result-object v2
 
     .line 886
-    .local v2, errorType:Ljava/lang/String;
+    .local v2, "errorType":Ljava/lang/String;
     const-string v5, "UserCanceled"
 
     invoke-virtual {v5, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -105,11 +104,11 @@
     move-result-object v1
 
     .line 892
-    .local v1, errorJson:Ljava/lang/String;
+    .local v1, "errorJson":Ljava/lang/String;
     const/4 v0, 0x0
 
     .line 893
-    .local v0, errorCode:Ljava/lang/String;
+    .local v0, "errorCode":Ljava/lang/String;
     if-eqz v1, :cond_2
 
     .line 895
@@ -119,7 +118,7 @@
     invoke-direct {v4, v1}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
     .line 896
-    .local v4, jsonObject:Lorg/json/JSONObject;
+    .local v4, "jsonObject":Lorg/json/JSONObject;
     const-string v5, "error_code"
 
     invoke-virtual {v4, v5}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -129,7 +128,7 @@
     move-result-object v0
 
     .line 901
-    .end local v4           #jsonObject:Lorg/json/JSONObject;
+    .end local v4    # "jsonObject":Lorg/json/JSONObject;
     :cond_2
     :goto_1
     const-string v5, "com.facebook.platform.status.ERROR_DESCRIPTION"
@@ -154,7 +153,7 @@
 
 .method private handleResultOk(Landroid/content/Intent;)Lcom/facebook/AuthorizationClient$Result;
     .locals 4
-    .parameter "data"
+    .param p1, "data"    # Landroid/content/Intent;
 
     .prologue
     .line 869
@@ -163,7 +162,7 @@
     move-result-object v1
 
     .line 870
-    .local v1, extras:Landroid/os/Bundle;
+    .local v1, "extras":Landroid/os/Bundle;
     const-string v2, "com.facebook.platform.status.ERROR_TYPE"
 
     invoke-virtual {v1, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -171,7 +170,7 @@
     move-result-object v0
 
     .line 871
-    .local v0, errorType:Ljava/lang/String;
+    .local v0, "errorType":Ljava/lang/String;
     if-nez v0, :cond_0
 
     .line 872
@@ -232,9 +231,9 @@
 
 .method private logEvent(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 4
-    .parameter "eventName"
-    .parameter "timeParameter"
-    .parameter "callId"
+    .param p1, "eventName"    # Ljava/lang/String;
+    .param p2, "timeParameter"    # Ljava/lang/String;
+    .param p3, "callId"    # Ljava/lang/String;
 
     .prologue
     .line 906
@@ -252,13 +251,13 @@
     move-result-object v0
 
     .line 908
-    .local v0, appEventsLogger:Lcom/facebook/AppEventsLogger;
+    .local v0, "appEventsLogger":Lcom/facebook/AppEventsLogger;
     new-instance v1, Landroid/os/Bundle;
 
     invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
 
     .line 909
-    .local v1, parameters:Landroid/os/Bundle;
+    .local v1, "parameters":Landroid/os/Bundle;
     const-string v2, "app_id"
 
     iget-object v3, p0, Lcom/facebook/AuthorizationClient$KatanaLoginDialogAuthHandler;->applicationId:Ljava/lang/String;
@@ -283,8 +282,8 @@
     invoke-virtual {v0, p1, v2, v1}, Lcom/facebook/AppEventsLogger;->logSdkEvent(Ljava/lang/String;Ljava/lang/Double;Landroid/os/Bundle;)V
 
     .line 914
-    .end local v0           #appEventsLogger:Lcom/facebook/AppEventsLogger;
-    .end local v1           #parameters:Landroid/os/Bundle;
+    .end local v0    # "appEventsLogger":Lcom/facebook/AppEventsLogger;
+    .end local v1    # "parameters":Landroid/os/Bundle;
     :cond_0
     return-void
 .end method
@@ -303,9 +302,9 @@
 
 .method onActivityResult(IILandroid/content/Intent;)Z
     .locals 4
-    .parameter "requestCode"
-    .parameter "resultCode"
-    .parameter "data"
+    .param p1, "requestCode"    # I
+    .param p2, "resultCode"    # I
+    .param p3, "data"    # Landroid/content/Intent;
 
     .prologue
     .line 843
@@ -334,7 +333,7 @@
     move-result-object v0
 
     .line 859
-    .local v0, outcome:Lcom/facebook/AuthorizationClient$Result;
+    .local v0, "outcome":Lcom/facebook/AuthorizationClient$Result;
     :goto_0
     if-eqz v0, :cond_4
 
@@ -350,7 +349,7 @@
     return v1
 
     .line 849
-    .end local v0           #outcome:Lcom/facebook/AuthorizationClient$Result;
+    .end local v0    # "outcome":Lcom/facebook/AuthorizationClient$Result;
     :cond_0
     invoke-static {p3}, Lcom/facebook/internal/NativeProtocol;->isServiceDisabledResult20121101(Landroid/content/Intent;)Z
 
@@ -362,10 +361,10 @@
     const/4 v0, 0x0
 
     .line 851
-    .restart local v0       #outcome:Lcom/facebook/AuthorizationClient$Result;
+    .restart local v0    # "outcome":Lcom/facebook/AuthorizationClient$Result;
     goto :goto_0
 
-    .end local v0           #outcome:Lcom/facebook/AuthorizationClient$Result;
+    .end local v0    # "outcome":Lcom/facebook/AuthorizationClient$Result;
     :cond_1
     if-nez p2, :cond_2
 
@@ -379,10 +378,10 @@
     move-result-object v0
 
     .line 853
-    .restart local v0       #outcome:Lcom/facebook/AuthorizationClient$Result;
+    .restart local v0    # "outcome":Lcom/facebook/AuthorizationClient$Result;
     goto :goto_0
 
-    .end local v0           #outcome:Lcom/facebook/AuthorizationClient$Result;
+    .end local v0    # "outcome":Lcom/facebook/AuthorizationClient$Result;
     :cond_2
     const/4 v1, -0x1
 
@@ -402,17 +401,17 @@
     move-result-object v0
 
     .line 855
-    .restart local v0       #outcome:Lcom/facebook/AuthorizationClient$Result;
+    .restart local v0    # "outcome":Lcom/facebook/AuthorizationClient$Result;
     goto :goto_0
 
     .line 856
-    .end local v0           #outcome:Lcom/facebook/AuthorizationClient$Result;
+    .end local v0    # "outcome":Lcom/facebook/AuthorizationClient$Result;
     :cond_3
     invoke-direct {p0, p3}, Lcom/facebook/AuthorizationClient$KatanaLoginDialogAuthHandler;->handleResultOk(Landroid/content/Intent;)Lcom/facebook/AuthorizationClient$Result;
 
     move-result-object v0
 
-    .restart local v0       #outcome:Lcom/facebook/AuthorizationClient$Result;
+    .restart local v0    # "outcome":Lcom/facebook/AuthorizationClient$Result;
     goto :goto_0
 
     .line 862
@@ -426,7 +425,7 @@
 
 .method tryAuthorize(Lcom/facebook/AuthorizationClient$AuthorizationRequest;)Z
     .locals 6
-    .parameter "request"
+    .param p1, "request"    # Lcom/facebook/AuthorizationClient$AuthorizationRequest;
 
     .prologue
     const/4 v5, 0x0
@@ -471,7 +470,7 @@
     move-result-object v0
 
     .line 821
-    .local v0, intent:Landroid/content/Intent;
+    .local v0, "intent":Landroid/content/Intent;
     if-nez v0, :cond_0
 
     move v1, v5

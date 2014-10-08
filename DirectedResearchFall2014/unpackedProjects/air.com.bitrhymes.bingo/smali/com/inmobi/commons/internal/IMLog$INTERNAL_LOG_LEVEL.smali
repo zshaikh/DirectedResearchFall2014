@@ -97,9 +97,6 @@
 
 .method private constructor <init>(Ljava/lang/String;II)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 12
@@ -114,7 +111,6 @@
 
 .method public static valueOf(Ljava/lang/String;)Lcom/inmobi/commons/internal/IMLog$INTERNAL_LOG_LEVEL;
     .locals 1
-    .parameter
 
     .prologue
     .line 1

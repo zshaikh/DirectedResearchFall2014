@@ -51,8 +51,8 @@
 # virtual methods
 .method protected addParam(Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
-    .parameter "key"
-    .parameter "value"
+    .param p1, "key"    # Ljava/lang/String;
+    .param p2, "value"    # Ljava/lang/String;
 
     .prologue
     .line 58
@@ -108,7 +108,7 @@
 
 .method protected getAppVersionFromContext(Landroid/content/Context;)Ljava/lang/String;
     .locals 5
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     .line 109
@@ -118,7 +118,7 @@
     move-result-object v2
 
     .line 110
-    .local v2, packageName:Ljava/lang/String;
+    .local v2, "packageName":Ljava/lang/String;
     invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v3
@@ -130,14 +130,14 @@
     move-result-object v1
 
     .line 111
-    .local v1, packageInfo:Landroid/content/pm/PackageInfo;
+    .local v1, "packageInfo":Landroid/content/pm/PackageInfo;
     iget-object v3, v1, Landroid/content/pm/PackageInfo;->versionName:Ljava/lang/String;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 113
-    .end local v1           #packageInfo:Landroid/content/pm/PackageInfo;
-    .end local v2           #packageName:Ljava/lang/String;
+    .end local v1    # "packageInfo":Landroid/content/pm/PackageInfo;
+    .end local v2    # "packageName":Ljava/lang/String;
     :goto_0
     return-object v3
 
@@ -148,7 +148,7 @@
     move-object v0, v3
 
     .line 113
-    .local v0, exception:Ljava/lang/Exception;
+    .local v0, "exception":Ljava/lang/Exception;
     const/4 v3, 0x0
 
     goto :goto_0
@@ -170,7 +170,7 @@
 
 .method protected getUdidFromContext(Landroid/content/Context;)Ljava/lang/String;
     .locals 2
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     .line 118
@@ -189,8 +189,8 @@
 
 .method protected initUrlString(Ljava/lang/String;Ljava/lang/String;)V
     .locals 3
-    .parameter "serverHostname"
-    .parameter "handlerType"
+    .param p1, "serverHostname"    # Ljava/lang/String;
+    .param p2, "handlerType"    # Ljava/lang/String;
 
     .prologue
     .line 49
@@ -229,7 +229,7 @@
 
 .method protected setApiVersion(Ljava/lang/String;)V
     .locals 1
-    .parameter "apiVersion"
+    .param p1, "apiVersion"    # Ljava/lang/String;
 
     .prologue
     .line 77
@@ -243,7 +243,7 @@
 
 .method protected setAppVersion(Ljava/lang/String;)V
     .locals 1
-    .parameter "appVersion"
+    .param p1, "appVersion"    # Ljava/lang/String;
 
     .prologue
     .line 81
@@ -257,7 +257,7 @@
 
 .method protected varargs setDeviceInfo([Ljava/lang/String;)V
     .locals 5
-    .parameter "info"
+    .param p1, "info"    # [Ljava/lang/String;
 
     .prologue
     const/4 v4, 0x1
@@ -268,7 +268,7 @@
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
     .line 90
-    .local v1, result:Ljava/lang/StringBuilder;
+    .local v1, "result":Ljava/lang/StringBuilder;
     if-eqz p1, :cond_0
 
     array-length v2, p1
@@ -284,7 +284,7 @@
     :cond_1
     const/4 v0, 0x0
 
-    .local v0, i:I
+    .local v0, "i":I
     :goto_1
     array-length v2, p1
 
@@ -332,7 +332,7 @@
 
 .method protected setExternalStoragePermission(Z)V
     .locals 2
-    .parameter "isExternalStoragePermissionGranted"
+    .param p1, "isExternalStoragePermissionGranted"    # Z
 
     .prologue
     .line 85
@@ -357,7 +357,7 @@
 
 .method protected setUdid(Ljava/lang/String;)V
     .locals 4
-    .parameter "udid"
+    .param p1, "udid"    # Ljava/lang/String;
 
     .prologue
     .line 103
@@ -368,7 +368,7 @@
     move-object v0, v1
 
     .line 104
-    .local v0, udidDigest:Ljava/lang/String;
+    .local v0, "udidDigest":Ljava/lang/String;
     :goto_0
     const-string v1, "udid"
 
@@ -392,7 +392,7 @@
     return-void
 
     .line 103
-    .end local v0           #udidDigest:Ljava/lang/String;
+    .end local v0    # "udidDigest":Ljava/lang/String;
     :cond_0
     invoke-static {p1}, Lcom/fusepowered/m2/m2l/Utils;->sha1(Ljava/lang/String;)Ljava/lang/String;
 

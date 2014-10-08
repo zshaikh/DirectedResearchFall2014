@@ -58,14 +58,11 @@
 # direct methods
 .method public constructor <init>(Lcom/flurry/org/codehaus/jackson/map/ClassIntrospector;Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;Lcom/flurry/org/codehaus/jackson/map/introspect/VisibilityChecker;Lcom/flurry/org/codehaus/jackson/map/PropertyNamingStrategy;Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;Lcom/flurry/org/codehaus/jackson/map/jsontype/TypeResolverBuilder;Ljava/text/DateFormat;Lcom/flurry/org/codehaus/jackson/map/HandlerInstantiator;)V
     .locals 0
-    .parameter
-    .parameter "ai"
-    .parameter
-    .parameter "pns"
-    .parameter "tf"
-    .parameter
-    .parameter "dateFormat"
-    .parameter "hi"
+    .param p2, "ai"    # Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;
+    .param p4, "pns"    # Lcom/flurry/org/codehaus/jackson/map/PropertyNamingStrategy;
+    .param p5, "tf"    # Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;
+    .param p7, "dateFormat"    # Ljava/text/DateFormat;
+    .param p8, "hi"    # Lcom/flurry/org/codehaus/jackson/map/HandlerInstantiator;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -88,9 +85,9 @@
 
     .prologue
     .line 882
-    .local p1, ci:Lcom/flurry/org/codehaus/jackson/map/ClassIntrospector;,"Lcom/flurry/org/codehaus/jackson/map/ClassIntrospector<+Lcom/flurry/org/codehaus/jackson/map/BeanDescription;>;"
-    .local p3, vc:Lcom/flurry/org/codehaus/jackson/map/introspect/VisibilityChecker;,"Lcom/flurry/org/codehaus/jackson/map/introspect/VisibilityChecker<*>;"
-    .local p6, typer:Lcom/flurry/org/codehaus/jackson/map/jsontype/TypeResolverBuilder;,"Lcom/flurry/org/codehaus/jackson/map/jsontype/TypeResolverBuilder<*>;"
+    .local p1, "ci":Lcom/flurry/org/codehaus/jackson/map/ClassIntrospector;, "Lcom/flurry/org/codehaus/jackson/map/ClassIntrospector<+Lcom/flurry/org/codehaus/jackson/map/BeanDescription;>;"
+    .local p3, "vc":Lcom/flurry/org/codehaus/jackson/map/introspect/VisibilityChecker;, "Lcom/flurry/org/codehaus/jackson/map/introspect/VisibilityChecker<*>;"
+    .local p6, "typer":Lcom/flurry/org/codehaus/jackson/map/jsontype/TypeResolverBuilder;, "Lcom/flurry/org/codehaus/jackson/map/jsontype/TypeResolverBuilder<*>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 883
@@ -228,7 +225,7 @@
 
 .method public withAnnotationIntrospector(Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;)Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Base;
     .locals 9
-    .parameter "ai"
+    .param p1, "ai"    # Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;
 
     .prologue
     .line 905
@@ -257,7 +254,7 @@
 
 .method public withAppendedAnnotationIntrospector(Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;)Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Base;
     .locals 1
-    .parameter "ai"
+    .param p1, "ai"    # Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;
 
     .prologue
     .line 914
@@ -276,7 +273,6 @@
 
 .method public withClassIntrospector(Lcom/flurry/org/codehaus/jackson/map/ClassIntrospector;)Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Base;
     .locals 9
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -290,7 +286,7 @@
 
     .prologue
     .line 900
-    .local p1, ci:Lcom/flurry/org/codehaus/jackson/map/ClassIntrospector;,"Lcom/flurry/org/codehaus/jackson/map/ClassIntrospector<+Lcom/flurry/org/codehaus/jackson/map/BeanDescription;>;"
+    .local p1, "ci":Lcom/flurry/org/codehaus/jackson/map/ClassIntrospector;, "Lcom/flurry/org/codehaus/jackson/map/ClassIntrospector<+Lcom/flurry/org/codehaus/jackson/map/BeanDescription;>;"
     new-instance v0, Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Base;
 
     iget-object v2, p0, Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Base;->_annotationIntrospector:Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;
@@ -316,7 +312,7 @@
 
 .method public withDateFormat(Ljava/text/DateFormat;)Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Base;
     .locals 9
-    .parameter "df"
+    .param p1, "df"    # Ljava/text/DateFormat;
 
     .prologue
     .line 945
@@ -345,7 +341,7 @@
 
 .method public withHandlerInstantiator(Lcom/flurry/org/codehaus/jackson/map/HandlerInstantiator;)Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Base;
     .locals 9
-    .parameter "hi"
+    .param p1, "hi"    # Lcom/flurry/org/codehaus/jackson/map/HandlerInstantiator;
 
     .prologue
     .line 950
@@ -374,7 +370,7 @@
 
 .method public withInsertedAnnotationIntrospector(Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;)Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Base;
     .locals 1
-    .parameter "ai"
+    .param p1, "ai"    # Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;
 
     .prologue
     .line 910
@@ -393,7 +389,7 @@
 
 .method public withPropertyNamingStrategy(Lcom/flurry/org/codehaus/jackson/map/PropertyNamingStrategy;)Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Base;
     .locals 9
-    .parameter "pns"
+    .param p1, "pns"    # Lcom/flurry/org/codehaus/jackson/map/PropertyNamingStrategy;
 
     .prologue
     .line 930
@@ -422,7 +418,7 @@
 
 .method public withTypeFactory(Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;)Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Base;
     .locals 9
-    .parameter "tf"
+    .param p1, "tf"    # Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;
 
     .prologue
     .line 935
@@ -451,7 +447,6 @@
 
 .method public withTypeResolverBuilder(Lcom/flurry/org/codehaus/jackson/map/jsontype/TypeResolverBuilder;)Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Base;
     .locals 9
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -463,7 +458,7 @@
 
     .prologue
     .line 940
-    .local p1, typer:Lcom/flurry/org/codehaus/jackson/map/jsontype/TypeResolverBuilder;,"Lcom/flurry/org/codehaus/jackson/map/jsontype/TypeResolverBuilder<*>;"
+    .local p1, "typer":Lcom/flurry/org/codehaus/jackson/map/jsontype/TypeResolverBuilder;, "Lcom/flurry/org/codehaus/jackson/map/jsontype/TypeResolverBuilder<*>;"
     new-instance v0, Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Base;
 
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Base;->_classIntrospector:Lcom/flurry/org/codehaus/jackson/map/ClassIntrospector;
@@ -489,8 +484,8 @@
 
 .method public withVisibility(Lcom/flurry/org/codehaus/jackson/annotate/JsonMethod;Lcom/flurry/org/codehaus/jackson/annotate/JsonAutoDetect$Visibility;)Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Base;
     .locals 9
-    .parameter "forMethod"
-    .parameter "visibility"
+    .param p1, "forMethod"    # Lcom/flurry/org/codehaus/jackson/annotate/JsonMethod;
+    .param p2, "visibility"    # Lcom/flurry/org/codehaus/jackson/annotate/JsonAutoDetect$Visibility;
 
     .prologue
     .line 923
@@ -523,7 +518,6 @@
 
 .method public withVisibilityChecker(Lcom/flurry/org/codehaus/jackson/map/introspect/VisibilityChecker;)Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Base;
     .locals 9
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -535,7 +529,7 @@
 
     .prologue
     .line 918
-    .local p1, vc:Lcom/flurry/org/codehaus/jackson/map/introspect/VisibilityChecker;,"Lcom/flurry/org/codehaus/jackson/map/introspect/VisibilityChecker<*>;"
+    .local p1, "vc":Lcom/flurry/org/codehaus/jackson/map/introspect/VisibilityChecker;, "Lcom/flurry/org/codehaus/jackson/map/introspect/VisibilityChecker<*>;"
     new-instance v0, Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Base;
 
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Base;->_classIntrospector:Lcom/flurry/org/codehaus/jackson/map/ClassIntrospector;

@@ -52,10 +52,8 @@
 
 .method private addAttachments(Landroid/content/Context;Ljava/util/UUID;Ljava/util/Map;Lcom/facebook/NativeAppCallAttachmentStore$ProcessAttachment;)V
     .locals 9
-    .parameter "context"
-    .parameter "callId"
-    .parameter
-    .parameter
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "callId"    # Ljava/util/UUID;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -74,8 +72,8 @@
 
     .prologue
     .line 114
-    .local p3, attachments:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;TT;>;"
-    .local p4, processor:Lcom/facebook/NativeAppCallAttachmentStore$ProcessAttachment;,"Lcom/facebook/NativeAppCallAttachmentStore$ProcessAttachment<TT;>;"
+    .local p3, "attachments":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;TT;>;"
+    .local p4, "processor":Lcom/facebook/NativeAppCallAttachmentStore$ProcessAttachment;, "Lcom/facebook/NativeAppCallAttachmentStore$ProcessAttachment<TT;>;"
     invoke-interface {p3}, Ljava/util/Map;->size()I
 
     move-result v6
@@ -105,7 +103,7 @@
     invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
 
     .line 128
-    .local v5, filesToCleanup:Ljava/util/List;,"Ljava/util/List<Ljava/io/File;>;"
+    .local v5, "filesToCleanup":Ljava/util/List;, "Ljava/util/List<Ljava/io/File;>;"
     :try_start_0
     invoke-interface {p3}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
@@ -129,7 +127,7 @@
     check-cast v2, Ljava/util/Map$Entry;
 
     .line 129
-    .local v2, entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;TT;>;"
+    .local v2, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;TT;>;"
     invoke-interface {v2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v1
@@ -137,13 +135,13 @@
     check-cast v1, Ljava/lang/String;
 
     .line 130
-    .local v1, attachmentName:Ljava/lang/String;
+    .local v1, "attachmentName":Ljava/lang/String;
     invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
     .line 132
-    .local v0, attachment:Ljava/lang/Object;,"TT;"
+    .local v0, "attachment":Ljava/lang/Object;, "TT;"
     const/4 v7, 0x1
 
     invoke-virtual {p0, p2, v1, v7}, Lcom/facebook/NativeAppCallAttachmentStore;->getAttachmentFile(Ljava/util/UUID;Ljava/lang/String;Z)Ljava/io/File;
@@ -151,7 +149,7 @@
     move-result-object v4
 
     .line 133
-    .local v4, file:Ljava/io/File;
+    .local v4, "file":Ljava/io/File;
     invoke-interface {v5, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 135
@@ -162,17 +160,17 @@
     goto :goto_0
 
     .line 137
-    .end local v0           #attachment:Ljava/lang/Object;,"TT;"
-    .end local v1           #attachmentName:Ljava/lang/String;
-    .end local v2           #entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;TT;>;"
-    .end local v4           #file:Ljava/io/File;
+    .end local v0    # "attachment":Ljava/lang/Object;, "TT;"
+    .end local v1    # "attachmentName":Ljava/lang/String;
+    .end local v2    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;TT;>;"
+    .end local v4    # "file":Ljava/io/File;
     :catch_0
     move-exception v6
 
     move-object v3, v6
 
     .line 138
-    .local v3, exception:Ljava/io/IOException;
+    .local v3, "exception":Ljava/io/IOException;
     sget-object v6, Lcom/facebook/NativeAppCallAttachmentStore;->TAG:Ljava/lang/String;
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -219,7 +217,7 @@
     check-cast v4, Ljava/io/File;
 
     .line 141
-    .restart local v4       #file:Ljava/io/File;
+    .restart local v4    # "file":Ljava/io/File;
     :try_start_1
     invoke-virtual {v4}, Ljava/io/File;->delete()Z
     :try_end_1
@@ -236,7 +234,7 @@
 
 .method static declared-synchronized getAttachmentsDirectory(Landroid/content/Context;)Ljava/io/File;
     .locals 4
-    .parameter "context"
+    .param p0, "context"    # Landroid/content/Context;
 
     .prologue
     .line 183
@@ -285,9 +283,8 @@
 # virtual methods
 .method public addAttachmentFilesForCall(Landroid/content/Context;Ljava/util/UUID;Ljava/util/Map;)V
     .locals 3
-    .parameter "context"
-    .parameter "callId"
-    .parameter
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "callId"    # Ljava/util/UUID;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -302,7 +299,7 @@
     .end annotation
 
     .prologue
-    .local p3, imageAttachmentFiles:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/io/File;>;"
+    .local p3, "imageAttachmentFiles":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/io/File;>;"
     const-string v2, "imageAttachmentFiles"
 
     .line 86
@@ -346,9 +343,8 @@
 
 .method public addAttachmentsForCall(Landroid/content/Context;Ljava/util/UUID;Ljava/util/Map;)V
     .locals 3
-    .parameter "context"
-    .parameter "callId"
-    .parameter
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "callId"    # Ljava/util/UUID;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -363,7 +359,7 @@
     .end annotation
 
     .prologue
-    .local p3, imageAttachments:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Landroid/graphics/Bitmap;>;"
+    .local p3, "imageAttachments":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Landroid/graphics/Bitmap;>;"
     const-string v2, "imageAttachments"
 
     .line 57
@@ -407,7 +403,7 @@
 
 .method cleanupAllAttachments(Landroid/content/Context;)V
     .locals 1
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     .line 222
@@ -416,7 +412,7 @@
     move-result-object v0
 
     .line 223
-    .local v0, dir:Ljava/io/File;
+    .local v0, "dir":Ljava/io/File;
     invoke-static {v0}, Lcom/facebook/internal/Utility;->deleteDirectory(Ljava/io/File;)V
 
     .line 224
@@ -425,8 +421,8 @@
 
 .method public cleanupAttachmentsForCall(Landroid/content/Context;Ljava/util/UUID;)V
     .locals 2
-    .parameter "context"
-    .parameter "callId"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "callId"    # Ljava/util/UUID;
 
     .prologue
     .line 162
@@ -437,7 +433,7 @@
     move-result-object v0
 
     .line 163
-    .local v0, dir:Ljava/io/File;
+    .local v0, "dir":Ljava/io/File;
     invoke-static {v0}, Lcom/facebook/internal/Utility;->deleteDirectory(Ljava/io/File;)V
 
     .line 164
@@ -446,7 +442,7 @@
 
 .method ensureAttachmentsDirectoryExists(Landroid/content/Context;)Ljava/io/File;
     .locals 1
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     .line 190
@@ -455,7 +451,7 @@
     move-result-object v0
 
     .line 191
-    .local v0, dir:Ljava/io/File;
+    .local v0, "dir":Ljava/io/File;
     invoke-virtual {v0}, Ljava/io/File;->mkdirs()Z
 
     .line 192
@@ -464,9 +460,9 @@
 
 .method getAttachmentFile(Ljava/util/UUID;Ljava/lang/String;Z)Ljava/io/File;
     .locals 5
-    .parameter "callId"
-    .parameter "attachmentName"
-    .parameter "createDirs"
+    .param p1, "callId"    # Ljava/util/UUID;
+    .param p2, "attachmentName"    # Ljava/lang/String;
+    .param p3, "createDirs"    # Z
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -482,7 +478,7 @@
     move-result-object v0
 
     .line 209
-    .local v0, dir:Ljava/io/File;
+    .local v0, "dir":Ljava/io/File;
     if-nez v0, :cond_0
 
     move-object v2, v4
@@ -514,7 +510,7 @@
 
     move-object v1, v2
 
-    .local v1, e:Ljava/io/UnsupportedEncodingException;
+    .local v1, "e":Ljava/io/UnsupportedEncodingException;
     move-object v2, v4
 
     .line 216
@@ -523,8 +519,8 @@
 
 .method getAttachmentsDirectoryForCall(Ljava/util/UUID;Z)Ljava/io/File;
     .locals 3
-    .parameter "callId"
-    .parameter "create"
+    .param p1, "callId"    # Ljava/util/UUID;
+    .param p2, "create"    # Z
 
     .prologue
     .line 196
@@ -552,7 +548,7 @@
     invoke-direct {v0, v1, v2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
     .line 201
-    .local v0, dir:Ljava/io/File;
+    .local v0, "dir":Ljava/io/File;
     if-eqz p2, :cond_1
 
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
@@ -573,8 +569,8 @@
 
 .method public openAttachment(Ljava/util/UUID;Ljava/lang/String;)Ljava/io/File;
     .locals 2
-    .parameter "callId"
-    .parameter "attachmentName"
+    .param p1, "callId"    # Ljava/util/UUID;
+    .param p2, "attachmentName"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/FileNotFoundException;
@@ -618,7 +614,7 @@
     move-exception v0
 
     .line 178
-    .local v0, e:Ljava/io/IOException;
+    .local v0, "e":Ljava/io/IOException;
     new-instance v1, Ljava/io/FileNotFoundException;
 
     invoke-direct {v1}, Ljava/io/FileNotFoundException;-><init>()V

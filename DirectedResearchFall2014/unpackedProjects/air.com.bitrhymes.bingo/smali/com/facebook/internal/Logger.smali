@@ -46,8 +46,8 @@
 
 .method public constructor <init>(Lcom/facebook/LoggingBehavior;Ljava/lang/String;)V
     .locals 2
-    .parameter "behavior"
-    .parameter "tag"
+    .param p1, "behavior"    # Lcom/facebook/LoggingBehavior;
+    .param p2, "tag"    # Ljava/lang/String;
 
     .prologue
     .line 86
@@ -96,10 +96,10 @@
 
 .method public static log(Lcom/facebook/LoggingBehavior;ILjava/lang/String;Ljava/lang/String;)V
     .locals 3
-    .parameter "behavior"
-    .parameter "priority"
-    .parameter "tag"
-    .parameter "string"
+    .param p0, "behavior"    # Lcom/facebook/LoggingBehavior;
+    .param p1, "priority"    # I
+    .param p2, "tag"    # Ljava/lang/String;
+    .param p3, "string"    # Ljava/lang/String;
 
     .prologue
     const-string v2, "FacebookSDK."
@@ -163,9 +163,9 @@
 
 .method public static log(Lcom/facebook/LoggingBehavior;Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
-    .parameter "behavior"
-    .parameter "tag"
-    .parameter "string"
+    .param p0, "behavior"    # Lcom/facebook/LoggingBehavior;
+    .param p1, "tag"    # Ljava/lang/String;
+    .param p2, "string"    # Ljava/lang/String;
 
     .prologue
     .line 53
@@ -179,10 +179,10 @@
 
 .method public static varargs log(Lcom/facebook/LoggingBehavior;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     .locals 2
-    .parameter "behavior"
-    .parameter "tag"
-    .parameter "format"
-    .parameter "args"
+    .param p0, "behavior"    # Lcom/facebook/LoggingBehavior;
+    .param p1, "tag"    # Ljava/lang/String;
+    .param p2, "format"    # Ljava/lang/String;
+    .param p3, "args"    # [Ljava/lang/Object;
 
     .prologue
     .line 57
@@ -198,20 +198,20 @@
     move-result-object v0
 
     .line 59
-    .local v0, string:Ljava/lang/String;
+    .local v0, "string":Ljava/lang/String;
     const/4 v1, 0x3
 
     invoke-static {p0, v1, p1, v0}, Lcom/facebook/internal/Logger;->log(Lcom/facebook/LoggingBehavior;ILjava/lang/String;Ljava/lang/String;)V
 
     .line 61
-    .end local v0           #string:Ljava/lang/String;
+    .end local v0    # "string":Ljava/lang/String;
     :cond_0
     return-void
 .end method
 
 .method public static declared-synchronized registerAccessToken(Ljava/lang/String;)V
     .locals 2
-    .parameter "accessToken"
+    .param p0, "accessToken"    # Ljava/lang/String;
 
     .prologue
     .line 47
@@ -252,8 +252,8 @@
 
 .method public static declared-synchronized registerStringToReplace(Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
-    .parameter "original"
-    .parameter "replace"
+    .param p0, "original"    # Ljava/lang/String;
+    .param p1, "replace"    # Ljava/lang/String;
 
     .prologue
     .line 43
@@ -284,7 +284,7 @@
 
 .method private static declared-synchronized replaceStrings(Ljava/lang/String;)Ljava/lang/String;
     .locals 5
-    .parameter "string"
+    .param p0, "string"    # Ljava/lang/String;
 
     .prologue
     .line 80
@@ -327,7 +327,7 @@
     check-cast v0, Ljava/util/Map$Entry;
 
     .line 81
-    .local v0, entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v0, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v1
@@ -349,7 +349,7 @@
     goto :goto_0
 
     .line 80
-    .end local v0           #entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
+    .end local v0    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
     :catchall_0
     move-exception v1
 
@@ -376,7 +376,7 @@
 # virtual methods
 .method public append(Ljava/lang/String;)V
     .locals 1
-    .parameter "string"
+    .param p1, "string"    # Ljava/lang/String;
 
     .prologue
     .line 126
@@ -398,8 +398,8 @@
 
 .method public varargs append(Ljava/lang/String;[Ljava/lang/Object;)V
     .locals 2
-    .parameter "format"
-    .parameter "args"
+    .param p1, "format"    # Ljava/lang/String;
+    .param p2, "args"    # [Ljava/lang/Object;
 
     .prologue
     .line 132
@@ -425,7 +425,7 @@
 
 .method public append(Ljava/lang/StringBuilder;)V
     .locals 1
-    .parameter "stringBuilder"
+    .param p1, "stringBuilder"    # Ljava/lang/StringBuilder;
 
     .prologue
     .line 120
@@ -447,8 +447,8 @@
 
 .method public appendKeyValue(Ljava/lang/String;Ljava/lang/Object;)V
     .locals 3
-    .parameter "key"
-    .parameter "value"
+    .param p1, "key"    # Ljava/lang/String;
+    .param p2, "value"    # Ljava/lang/Object;
 
     .prologue
     .line 138
@@ -526,7 +526,7 @@
 
 .method public logString(Ljava/lang/String;)V
     .locals 3
-    .parameter "string"
+    .param p1, "string"    # Ljava/lang/String;
 
     .prologue
     .line 116
@@ -544,7 +544,7 @@
 
 .method public setPriority(I)V
     .locals 10
-    .parameter "value"
+    .param p1, "value"    # I
 
     .prologue
     const/4 v9, 0x6

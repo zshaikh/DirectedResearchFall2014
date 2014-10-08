@@ -19,7 +19,7 @@
 
 .method public constructor <init>(Lcom/flurry/org/codehaus/jackson/map/ObjectMapper;)V
     .locals 1
-    .parameter "mapper"
+    .param p1, "mapper"    # Lcom/flurry/org/codehaus/jackson/map/ObjectMapper;
 
     .prologue
     .line 41
@@ -61,7 +61,7 @@
     .line 52
     iget-object p0, p0, Lcom/flurry/org/codehaus/jackson/map/MappingJsonFactory;->_objectCodec:Lcom/flurry/org/codehaus/jackson/ObjectCodec;
 
-    .end local p0
+    .end local p0    # "this":Lcom/flurry/org/codehaus/jackson/map/MappingJsonFactory;
     check-cast p0, Lcom/flurry/org/codehaus/jackson/map/ObjectMapper;
 
     return-object p0
@@ -79,7 +79,7 @@
 
 .method public hasFormat(Lcom/flurry/org/codehaus/jackson/format/InputAccessor;)Lcom/flurry/org/codehaus/jackson/format/MatchStrength;
     .locals 1
-    .parameter "acc"
+    .param p1, "acc"    # Lcom/flurry/org/codehaus/jackson/format/InputAccessor;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;

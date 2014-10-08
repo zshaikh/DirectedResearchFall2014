@@ -20,7 +20,7 @@
 
 .method public static encodeNotificationIntent(Landroid/content/Intent;)Lorg/json/JSONObject;
     .locals 8
-    .parameter "intent"
+    .param p0, "intent"    # Landroid/content/Intent;
 
     .prologue
     const-string v7, "NotifierUtils"
@@ -31,13 +31,13 @@
     invoke-direct {v2}, Lorg/json/JSONObject;-><init>()V
 
     .line 19
-    .local v2, jsonObject:Lorg/json/JSONObject;
+    .local v2, "jsonObject":Lorg/json/JSONObject;
     new-instance v1, Lorg/json/JSONObject;
 
     invoke-direct {v1}, Lorg/json/JSONObject;-><init>()V
 
     .line 21
-    .local v1, extrasJsonObject:Lorg/json/JSONObject;
+    .local v1, "extrasJsonObject":Lorg/json/JSONObject;
     invoke-virtual {p0}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object v5
@@ -47,7 +47,7 @@
     move-result-object v4
 
     .line 22
-    .local v4, keySet:Ljava/util/Set;,"Ljava/util/Set<Ljava/lang/String;>;"
+    .local v4, "keySet":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     invoke-interface {v4}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v5
@@ -80,7 +80,7 @@
     check-cast v3, Ljava/lang/String;
 
     .line 24
-    .local v3, key:Ljava/lang/String;
+    .local v3, "key":Ljava/lang/String;
     :try_start_1
     invoke-virtual {p0}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
@@ -103,7 +103,7 @@
     move-object v0, v6
 
     .line 26
-    .local v0, e:Lorg/json/JSONException;
+    .local v0, "e":Lorg/json/JSONException;
     const-string v6, "NotifierUtils"
 
     const-string v6, "Failed posting extra to callback"
@@ -116,15 +116,15 @@
     goto :goto_0
 
     .line 33
-    .end local v0           #e:Lorg/json/JSONException;
-    .end local v3           #key:Ljava/lang/String;
+    .end local v0    # "e":Lorg/json/JSONException;
+    .end local v3    # "key":Ljava/lang/String;
     :catch_1
     move-exception v5
 
     move-object v0, v5
 
     .line 34
-    .restart local v0       #e:Lorg/json/JSONException;
+    .restart local v0    # "e":Lorg/json/JSONException;
     const-string v5, "NotifierUtils"
 
     const-string v5, "Failed posting extras obj to callback"

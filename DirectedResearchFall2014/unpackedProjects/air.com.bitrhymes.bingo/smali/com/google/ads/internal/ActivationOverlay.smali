@@ -18,7 +18,7 @@
 # direct methods
 .method public constructor <init>(Lcom/google/ads/n;)V
     .locals 3
-    .parameter "slotState"
+    .param p1, "slotState"    # Lcom/google/ads/n;
 
     .prologue
     const/4 v1, 0x0
@@ -145,7 +145,7 @@
 
 .method public canScrollHorizontally(I)Z
     .locals 1
-    .parameter "direction"
+    .param p1, "direction"    # I
 
     .prologue
     .line 116
@@ -156,7 +156,7 @@
 
 .method public canScrollVertically(I)Z
     .locals 1
-    .parameter "direction"
+    .param p1, "direction"    # I
 
     .prologue
     .line 121
@@ -187,7 +187,7 @@
 
 .method public setOverlayActivated(Z)V
     .locals 0
-    .parameter "overlayActivated"
+    .param p1, "overlayActivated"    # Z
 
     .prologue
     .line 71
@@ -199,7 +199,7 @@
 
 .method public setOverlayEnabled(Z)V
     .locals 2
-    .parameter "overlayEnabled"
+    .param p1, "overlayEnabled"    # Z
 
     .prologue
     .line 58
@@ -234,7 +234,7 @@
 
 .method public setXPosition(I)V
     .locals 0
-    .parameter "xPosition"
+    .param p1, "xPosition"    # I
 
     .prologue
     .line 107
@@ -246,7 +246,7 @@
 
 .method public setYPosition(I)V
     .locals 0
-    .parameter "yPosition"
+    .param p1, "yPosition"    # I
 
     .prologue
     .line 93

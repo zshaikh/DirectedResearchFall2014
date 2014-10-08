@@ -28,9 +28,6 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m1/android/HandShake;Landroid/content/Context;Ljava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 663
@@ -96,7 +93,7 @@
     move-object v0, v1
 
     .line 685
-    .local v0, e:Landroid/view/WindowManager$BadTokenException;
+    .local v0, "e":Landroid/view/WindowManager$BadTokenException;
     invoke-virtual {v0}, Landroid/view/WindowManager$BadTokenException;->printStackTrace()V
 
     goto :goto_0

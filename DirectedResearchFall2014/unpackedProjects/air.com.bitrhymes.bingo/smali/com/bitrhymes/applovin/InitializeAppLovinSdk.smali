@@ -21,8 +21,8 @@
 # virtual methods
 .method public call(Lcom/adobe/fre/FREContext;[Lcom/adobe/fre/FREObject;)Lcom/adobe/fre/FREObject;
     .locals 6
-    .parameter "freContext"
-    .parameter "arg1"
+    .param p1, "freContext"    # Lcom/adobe/fre/FREContext;
+    .param p2, "arg1"    # [Lcom/adobe/fre/FREObject;
 
     .prologue
     const-string v5, ","
@@ -61,7 +61,7 @@
     invoke-direct {v1, p0}, Lcom/bitrhymes/applovin/InitializeAppLovinSdk$1;-><init>(Lcom/bitrhymes/applovin/InitializeAppLovinSdk;)V
 
     .line 48
-    .local v1, loadCallback:Lcom/applovin/sdk/AppLovinAdLoadListener;
+    .local v1, "loadCallback":Lcom/applovin/sdk/AppLovinAdLoadListener;
     invoke-virtual {p1}, Lcom/adobe/fre/FREContext;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
@@ -101,7 +101,7 @@
     .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 59
-    .end local v1           #loadCallback:Lcom/applovin/sdk/AppLovinAdLoadListener;
+    .end local v1    # "loadCallback":Lcom/applovin/sdk/AppLovinAdLoadListener;
     :goto_0
     const/4 v2, 0x0
 
@@ -114,7 +114,7 @@
     move-object v0, v2
 
     .line 54
-    .local v0, e1:Ljava/lang/IllegalStateException;
+    .local v0, "e1":Ljava/lang/IllegalStateException;
     invoke-virtual {v0}, Ljava/lang/IllegalStateException;->printStackTrace()V
 
     .line 55

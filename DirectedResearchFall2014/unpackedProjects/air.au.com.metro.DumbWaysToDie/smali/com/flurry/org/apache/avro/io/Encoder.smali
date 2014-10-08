@@ -69,7 +69,7 @@
 
 .method public writeBytes([B)V
     .locals 2
-    .parameter "bytes"
+    .param p1, "bytes"    # [B
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -114,7 +114,7 @@
 
 .method public writeFixed([B)V
     .locals 2
-    .parameter "bytes"
+    .param p1, "bytes"    # [B
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -207,7 +207,7 @@
 
 .method public writeString(Ljava/lang/CharSequence;)V
     .locals 1
-    .parameter "charSequence"
+    .param p1, "charSequence"    # Ljava/lang/CharSequence;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -223,7 +223,7 @@
     .line 119
     check-cast p1, Lcom/flurry/org/apache/avro/util/Utf8;
 
-    .end local p1
+    .end local p1    # "charSequence":Ljava/lang/CharSequence;
     invoke-virtual {p0, p1}, Lcom/flurry/org/apache/avro/io/Encoder;->writeString(Lcom/flurry/org/apache/avro/util/Utf8;)V
 
     .line 122
@@ -231,7 +231,7 @@
     return-void
 
     .line 121
-    .restart local p1
+    .restart local p1    # "charSequence":Ljava/lang/CharSequence;
     :cond_0
     invoke-interface {p1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
@@ -244,7 +244,7 @@
 
 .method public writeString(Ljava/lang/String;)V
     .locals 1
-    .parameter "str"
+    .param p1, "str"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;

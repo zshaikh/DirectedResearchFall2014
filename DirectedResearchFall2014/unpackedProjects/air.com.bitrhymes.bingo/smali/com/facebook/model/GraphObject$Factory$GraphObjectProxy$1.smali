@@ -26,8 +26,6 @@
 # direct methods
 .method constructor <init>(Lcom/facebook/model/GraphObject$Factory$GraphObjectProxy;Ljava/lang/Class;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 1

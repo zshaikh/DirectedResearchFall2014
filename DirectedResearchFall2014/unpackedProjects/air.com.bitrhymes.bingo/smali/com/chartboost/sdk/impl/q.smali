@@ -20,7 +20,6 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 3
-    .parameter
 
     .prologue
     const/4 v2, -0x1
@@ -62,7 +61,6 @@
 
 .method static synthetic a(Lcom/chartboost/sdk/impl/q;)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 15
@@ -88,7 +86,6 @@
 
 .method public a(Landroid/view/View;)V
     .locals 3
-    .parameter
 
     .prologue
     .line 32
@@ -96,7 +93,7 @@
 
     const/4 v1, 0x0
 
-    const/high16 v2, 0x3f80
+    const/high16 v2, 0x3f800000
 
     invoke-direct {v0, v1, v2}, Landroid/view/animation/AlphaAnimation;-><init>(FF)V
 
@@ -119,7 +116,6 @@
 
 .method public a(Z)V
     .locals 1
-    .parameter
 
     .prologue
     .line 48

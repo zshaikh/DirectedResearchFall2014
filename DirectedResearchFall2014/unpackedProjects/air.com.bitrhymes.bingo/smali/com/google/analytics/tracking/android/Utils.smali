@@ -24,23 +24,23 @@
     return-void
 
     :array_0
-    .array-data 0x2
-        0x30t 0x0t
-        0x31t 0x0t
-        0x32t 0x0t
-        0x33t 0x0t
-        0x34t 0x0t
-        0x35t 0x0t
-        0x36t 0x0t
-        0x37t 0x0t
-        0x38t 0x0t
-        0x39t 0x0t
-        0x41t 0x0t
-        0x42t 0x0t
-        0x43t 0x0t
-        0x44t 0x0t
-        0x45t 0x0t
-        0x46t 0x0t
+    .array-data 2
+        0x30s
+        0x31s
+        0x32s
+        0x33s
+        0x34s
+        0x35s
+        0x36s
+        0x37s
+        0x38s
+        0x39s
+        0x41s
+        0x42s
+        0x43s
+        0x44s
+        0x45s
+        0x46s
     .end array-data
 .end method
 
@@ -56,7 +56,7 @@
 
 .method public static filterCampaign(Ljava/lang/String;)Ljava/lang/String;
     .locals 10
-    .parameter "campaign"
+    .param p0, "campaign"    # Ljava/lang/String;
 
     .prologue
     const/4 v8, 0x1
@@ -75,17 +75,17 @@
     move-object v6, v7
 
     .line 126
-    .end local p0
+    .end local p0    # "campaign":Ljava/lang/String;
     :goto_0
     return-object v6
 
     .line 80
-    .restart local p0
+    .restart local p0    # "campaign":Ljava/lang/String;
     :cond_0
     move-object v4, p0
 
     .line 81
-    .local v4, urlParameters:Ljava/lang/String;
+    .local v4, "urlParameters":Ljava/lang/String;
     const-string v6, "?"
 
     invoke-virtual {p0, v6}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
@@ -130,7 +130,7 @@
     move-result-object v3
 
     .line 105
-    .local v3, paramsMap:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v3, "paramsMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     const/16 v6, 0x9
 
     new-array v5, v6, [Ljava/lang/String;
@@ -188,17 +188,17 @@
     aput-object v7, v5, v6
 
     .line 117
-    .local v5, validParameters:[Ljava/lang/String;
+    .local v5, "validParameters":[Ljava/lang/String;
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
     .line 118
-    .local v2, params:Ljava/lang/StringBuilder;
+    .local v2, "params":Ljava/lang/StringBuilder;
     const/4 v1, 0x0
 
-    .end local p0
-    .local v1, i:I
+    .end local p0    # "campaign":Ljava/lang/String;
+    .local v1, "i":I
     :goto_1
     array-length v6, v5
 
@@ -262,24 +262,24 @@
     goto :goto_1
 
     .line 95
-    .end local v1           #i:I
-    .end local v2           #params:Ljava/lang/StringBuilder;
-    .end local v3           #paramsMap:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
-    .end local v5           #validParameters:[Ljava/lang/String;
-    .restart local p0
+    .end local v1    # "i":I
+    .end local v2    # "params":Ljava/lang/StringBuilder;
+    .end local v3    # "paramsMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .end local v5    # "validParameters":[Ljava/lang/String;
+    .restart local p0    # "campaign":Ljava/lang/String;
     :catch_0
     move-exception v6
 
     move-object v0, v6
 
-    .local v0, e:Ljava/io/UnsupportedEncodingException;
+    .local v0, "e":Ljava/io/UnsupportedEncodingException;
     move-object v6, v7
 
     .line 96
     goto/16 :goto_0
 
     .line 98
-    .end local v0           #e:Ljava/io/UnsupportedEncodingException;
+    .end local v0    # "e":Ljava/io/UnsupportedEncodingException;
     :cond_5
     const-string v6, "="
 
@@ -295,11 +295,11 @@
     goto/16 :goto_0
 
     .line 126
-    .end local p0
-    .restart local v1       #i:I
-    .restart local v2       #params:Ljava/lang/StringBuilder;
-    .restart local v3       #paramsMap:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
-    .restart local v5       #validParameters:[Ljava/lang/String;
+    .end local p0    # "campaign":Ljava/lang/String;
+    .restart local v1    # "i":I
+    .restart local v2    # "params":Ljava/lang/StringBuilder;
+    .restart local v3    # "paramsMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .restart local v5    # "validParameters":[Ljava/lang/String;
     :cond_6
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -310,7 +310,7 @@
 
 .method static fromHexDigit(C)I
     .locals 2
-    .parameter "hexDigit"
+    .param p0, "hexDigit"    # C
 
     .prologue
     .line 163
@@ -319,7 +319,7 @@
     sub-int v0, p0, v1
 
     .line 166
-    .local v0, value:I
+    .local v0, "value":I
     const/16 v1, 0x9
 
     if-le v0, v1, :cond_0
@@ -334,7 +334,7 @@
 
 .method static getLanguage(Ljava/util/Locale;)Ljava/lang/String;
     .locals 3
-    .parameter "locale"
+    .param p0, "locale"    # Ljava/util/Locale;
 
     .prologue
     const/4 v2, 0x0
@@ -372,7 +372,7 @@
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     .line 145
-    .local v0, lang:Ljava/lang/StringBuilder;
+    .local v0, "lang":Ljava/lang/StringBuilder;
     invoke-virtual {p0}, Ljava/util/Locale;->getLanguage()Ljava/lang/String;
 
     move-result-object v1
@@ -422,8 +422,8 @@
 
 .method static getSlottedModelField(Ljava/lang/String;I)Ljava/lang/String;
     .locals 2
-    .parameter "field"
-    .parameter "slot"
+    .param p0, "field"    # Ljava/lang/String;
+    .param p1, "slot"    # I
 
     .prologue
     .line 182
@@ -454,7 +454,7 @@
 
 .method static hexDecode(Ljava/lang/String;)[B
     .locals 4
-    .parameter "s"
+    .param p0, "s"    # Ljava/lang/String;
 
     .prologue
     .line 173
@@ -467,10 +467,10 @@
     new-array v0, v2, [B
 
     .line 174
-    .local v0, bytes:[B
+    .local v0, "bytes":[B
     const/4 v1, 0x0
 
-    .local v1, i:I
+    .local v1, "i":I
     :goto_0
     array-length v2, v0
 
@@ -519,7 +519,7 @@
 
 .method static hexEncode([B)Ljava/lang/String;
     .locals 6
-    .parameter "bytes"
+    .param p0, "bytes"    # [B
 
     .prologue
     .line 153
@@ -530,10 +530,10 @@
     new-array v2, v3, [C
 
     .line 154
-    .local v2, out:[C
+    .local v2, "out":[C
     const/4 v1, 0x0
 
-    .local v1, i:I
+    .local v1, "i":I
     :goto_0
     array-length v3, p0
 
@@ -545,7 +545,7 @@
     and-int/lit16 v0, v3, 0xff
 
     .line 156
-    .local v0, b:I
+    .local v0, "b":I
     mul-int/lit8 v3, v1, 0x2
 
     sget-object v4, Lcom/google/analytics/tracking/android/Utils;->HEXBYTES:[C
@@ -575,7 +575,7 @@
     goto :goto_0
 
     .line 159
-    .end local v0           #b:I
+    .end local v0    # "b":I
     :cond_0
     new-instance v3, Ljava/lang/String;
 
@@ -586,7 +586,7 @@
 
 .method public static parseURLParameters(Ljava/lang/String;)Ljava/util/Map;
     .locals 11
-    .parameter "parameterString"
+    .param p0, "parameterString"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -611,7 +611,7 @@
     invoke-direct {v3}, Ljava/util/HashMap;-><init>()V
 
     .line 25
-    .local v3, parameters:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v3, "parameters":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v7, "&"
 
     invoke-virtual {p0, v7}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
@@ -619,23 +619,23 @@
     move-result-object v4
 
     .line 26
-    .local v4, params:[Ljava/lang/String;
+    .local v4, "params":[Ljava/lang/String;
     move-object v0, v4
 
-    .local v0, arr$:[Ljava/lang/String;
+    .local v0, "arr$":[Ljava/lang/String;
     array-length v2, v0
 
-    .local v2, len$:I
+    .local v2, "len$":I
     const/4 v1, 0x0
 
-    .local v1, i$:I
+    .local v1, "i$":I
     :goto_0
     if-ge v1, v2, :cond_2
 
     aget-object v5, v0, v1
 
     .line 27
-    .local v5, s:Ljava/lang/String;
+    .local v5, "s":Ljava/lang/String;
     const-string v7, "="
 
     invoke-virtual {v5, v7}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
@@ -643,7 +643,7 @@
     move-result-object v6
 
     .line 28
-    .local v6, ss:[Ljava/lang/String;
+    .local v6, "ss":[Ljava/lang/String;
     array-length v7, v6
 
     if-le v7, v10, :cond_1
@@ -686,15 +686,15 @@
     goto :goto_1
 
     .line 34
-    .end local v5           #s:Ljava/lang/String;
-    .end local v6           #ss:[Ljava/lang/String;
+    .end local v5    # "s":Ljava/lang/String;
+    .end local v6    # "ss":[Ljava/lang/String;
     :cond_2
     return-object v3
 .end method
 
 .method public static safeParseBoolean(Ljava/lang/String;)Z
     .locals 1
-    .parameter "s"
+    .param p0, "s"    # Ljava/lang/String;
 
     .prologue
     .line 63
@@ -707,7 +707,7 @@
 
 .method public static safeParseDouble(Ljava/lang/String;)D
     .locals 3
-    .parameter "s"
+    .param p0, "s"    # Ljava/lang/String;
 
     .prologue
     const-wide/16 v1, 0x0
@@ -735,13 +735,13 @@
     move-exception v0
 
     .line 45
-    .local v0, e:Ljava/lang/NumberFormatException;
+    .local v0, "e":Ljava/lang/NumberFormatException;
     goto :goto_0
 .end method
 
 .method public static safeParseLong(Ljava/lang/String;)J
     .locals 3
-    .parameter "s"
+    .param p0, "s"    # Ljava/lang/String;
 
     .prologue
     const-wide/16 v1, 0x0
@@ -769,6 +769,6 @@
     move-exception v0
 
     .line 57
-    .local v0, e:Ljava/lang/NumberFormatException;
+    .local v0, "e":Ljava/lang/NumberFormatException;
     goto :goto_0
 .end method

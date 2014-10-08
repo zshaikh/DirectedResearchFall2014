@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/tapjoy/TJPoints;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 71
@@ -45,7 +44,7 @@
     const/4 v1, 0x0
 
     .line 77
-    .local v1, returnValue:Z
+    .local v1, "returnValue":Z
     new-instance v2, Lcom/tapjoy/TapjoyURLConnection;
 
     invoke-direct {v2}, Lcom/tapjoy/TapjoyURLConnection;-><init>()V
@@ -81,7 +80,7 @@
     move-result-object v0
 
     .line 80
-    .local v0, response:Lcom/tapjoy/TapjoyHttpURLResponse;
+    .local v0, "response":Lcom/tapjoy/TapjoyHttpURLResponse;
     iget-object v2, v0, Lcom/tapjoy/TapjoyHttpURLResponse;->response:Ljava/lang/String;
 
     if-eqz v2, :cond_0
@@ -91,7 +90,7 @@
 
     iget-object v3, v0, Lcom/tapjoy/TapjoyHttpURLResponse;->response:Ljava/lang/String;
 
-    #calls: Lcom/tapjoy/TJPoints;->handleGetPointsResponse(Ljava/lang/String;)Z
+    # invokes: Lcom/tapjoy/TJPoints;->handleGetPointsResponse(Ljava/lang/String;)Z
     invoke-static {v2, v3}, Lcom/tapjoy/TJPoints;->access$000(Lcom/tapjoy/TJPoints;Ljava/lang/String;)Z
 
     move-result v1
@@ -101,6 +100,7 @@
     if-nez v1, :cond_1
 
     .line 87
+    # getter for: Lcom/tapjoy/TJPoints;->tapjoyNotifier:Lcom/tapjoy/TapjoyNotifier;
     invoke-static {}, Lcom/tapjoy/TJPoints;->access$100()Lcom/tapjoy/TapjoyNotifier;
 
     move-result-object v2

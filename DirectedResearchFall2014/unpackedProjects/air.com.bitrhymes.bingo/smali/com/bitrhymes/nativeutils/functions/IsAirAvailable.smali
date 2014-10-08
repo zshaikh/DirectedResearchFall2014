@@ -25,8 +25,8 @@
 # virtual methods
 .method public call(Lcom/adobe/fre/FREContext;[Lcom/adobe/fre/FREObject;)Lcom/adobe/fre/FREObject;
     .locals 9
-    .parameter "_context"
-    .parameter "args"
+    .param p1, "_context"    # Lcom/adobe/fre/FREContext;
+    .param p2, "args"    # [Lcom/adobe/fre/FREObject;
 
     .prologue
     const-string v8, "ERROR_EVENT"
@@ -40,18 +40,18 @@
     const/4 v2, 0x0
 
     .line 27
-    .local v2, object:Lcom/adobe/fre/FREObject;
+    .local v2, "object":Lcom/adobe/fre/FREObject;
     const-string v3, "com.adobe.air"
 
     .line 30
-    .local v3, targetPackage:Ljava/lang/String;
+    .local v3, "targetPackage":Ljava/lang/String;
     :try_start_0
     invoke-virtual {p0, v3}, Lcom/bitrhymes/nativeutils/functions/IsAirAvailable;->isPackageExisted(Ljava/lang/String;)Z
 
     move-result v1
 
     .line 31
-    .local v1, isAvail:Z
+    .local v1, "isAvail":Z
     const-string v4, "IsAirAvailable"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -79,7 +79,7 @@
     move-result-object v2
 
     .line 41
-    .end local v1           #isAvail:Z
+    .end local v1    # "isAvail":Z
     :goto_0
     return-object v2
 
@@ -90,7 +90,7 @@
     move-object v0, v4
 
     .line 34
-    .local v0, e:Lcom/adobe/fre/FREWrongThreadException;
+    .local v0, "e":Lcom/adobe/fre/FREWrongThreadException;
     invoke-virtual {v0}, Lcom/adobe/fre/FREWrongThreadException;->printStackTrace()V
 
     .line 35
@@ -161,14 +161,14 @@
     goto :goto_0
 
     .line 36
-    .end local v0           #e:Lcom/adobe/fre/FREWrongThreadException;
+    .end local v0    # "e":Lcom/adobe/fre/FREWrongThreadException;
     :catch_1
     move-exception v4
 
     move-object v0, v4
 
     .line 37
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     .line 38
@@ -241,7 +241,7 @@
 
 .method public isPackageExisted(Ljava/lang/String;)Z
     .locals 6
-    .parameter "targetPackage"
+    .param p1, "targetPackage"    # Ljava/lang/String;
 
     .prologue
     const/4 v5, 0x0
@@ -258,13 +258,13 @@
     move-result-object v2
 
     .line 48
-    .local v2, pm:Landroid/content/pm/PackageManager;
+    .local v2, "pm":Landroid/content/pm/PackageManager;
     invoke-virtual {v2, v5}, Landroid/content/pm/PackageManager;->getInstalledApplications(I)Ljava/util/List;
 
     move-result-object v1
 
     .line 50
-    .local v1, packages:Ljava/util/List;,"Ljava/util/List<Landroid/content/pm/ApplicationInfo;>;"
+    .local v1, "packages":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ApplicationInfo;>;"
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
@@ -291,7 +291,7 @@
     check-cast v0, Landroid/content/pm/ApplicationInfo;
 
     .line 51
-    .local v0, packageInfo:Landroid/content/pm/ApplicationInfo;
+    .local v0, "packageInfo":Landroid/content/pm/ApplicationInfo;
     iget-object v4, v0, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
 
     invoke-virtual {v4, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z

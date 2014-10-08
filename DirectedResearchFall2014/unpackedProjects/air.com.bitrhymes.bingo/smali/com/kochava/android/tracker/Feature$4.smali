@@ -23,8 +23,6 @@
 # direct methods
 .method constructor <init>(Lcom/kochava/android/tracker/Feature;Z)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 1
@@ -56,7 +54,7 @@
     invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
 
     .line 804
-    .local v0, appLimitDataHolder:Lorg/json/JSONObject;
+    .local v0, "appLimitDataHolder":Lorg/json/JSONObject;
     const-string v11, "action"
 
     const-string v12, "options"
@@ -69,7 +67,7 @@
     invoke-direct {v7}, Lorg/json/JSONObject;-><init>()V
 
     .line 807
-    .local v7, optionsHolder:Lorg/json/JSONObject;
+    .local v7, "optionsHolder":Lorg/json/JSONObject;
     iget-boolean v11, p0, Lcom/kochava/android/tracker/Feature$4;->val$shouldLimit:Z
 
     if-eqz v11, :cond_4
@@ -99,7 +97,7 @@
 
     iget-object v12, p0, Lcom/kochava/android/tracker/Feature$4;->this$0:Lcom/kochava/android/tracker/Feature;
 
-    #getter for: Lcom/kochava/android/tracker/Feature;->mAppId:Ljava/lang/String;
+    # getter for: Lcom/kochava/android/tracker/Feature;->mAppId:Ljava/lang/String;
     invoke-static {v12}, Lcom/kochava/android/tracker/Feature;->access$44(Lcom/kochava/android/tracker/Feature;)Ljava/lang/String;
 
     move-result-object v12
@@ -111,7 +109,7 @@
 
     iget-object v12, p0, Lcom/kochava/android/tracker/Feature$4;->this$0:Lcom/kochava/android/tracker/Feature;
 
-    #calls: Lcom/kochava/android/tracker/Feature;->getDeviceId()Ljava/lang/String;
+    # invokes: Lcom/kochava/android/tracker/Feature;->getDeviceId()Ljava/lang/String;
     invoke-static {v12}, Lcom/kochava/android/tracker/Feature;->access$17(Lcom/kochava/android/tracker/Feature;)Ljava/lang/String;
 
     move-result-object v12
@@ -163,20 +161,20 @@
 
     const/4 v12, 0x1
 
-    #calls: Lcom/kochava/android/tracker/Feature;->createHttpClient(Z)Lorg/apache/http/client/HttpClient;
+    # invokes: Lcom/kochava/android/tracker/Feature;->createHttpClient(Z)Lorg/apache/http/client/HttpClient;
     invoke-static {v11, v12}, Lcom/kochava/android/tracker/Feature;->access$35(Lcom/kochava/android/tracker/Feature;Z)Lorg/apache/http/client/HttpClient;
 
     move-result-object v5
 
     .line 825
-    .local v5, httpclient:Lorg/apache/http/client/HttpClient;
+    .local v5, "httpclient":Lorg/apache/http/client/HttpClient;
     invoke-interface {v5}, Lorg/apache/http/client/HttpClient;->getParams()Lorg/apache/http/params/HttpParams;
 
     move-result-object v11
 
     iget-object v12, p0, Lcom/kochava/android/tracker/Feature$4;->this$0:Lcom/kochava/android/tracker/Feature;
 
-    #getter for: Lcom/kochava/android/tracker/Feature;->mUserAgent:Ljava/lang/String;
+    # getter for: Lcom/kochava/android/tracker/Feature;->mUserAgent:Ljava/lang/String;
     invoke-static {v12}, Lcom/kochava/android/tracker/Feature;->access$36(Lcom/kochava/android/tracker/Feature;)Ljava/lang/String;
 
     move-result-object v12
@@ -191,13 +189,13 @@
     invoke-direct {v6, v11}, Lorg/apache/http/client/methods/HttpPost;-><init>(Ljava/lang/String;)V
 
     .line 830
-    .local v6, httppost:Lorg/apache/http/client/methods/HttpPost;
+    .local v6, "httppost":Lorg/apache/http/client/methods/HttpPost;
     invoke-virtual {v0}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
 
     move-result-object v2
 
     .line 832
-    .local v2, data:Ljava/lang/String;
+    .local v2, "data":Ljava/lang/String;
     new-instance v10, Lorg/apache/http/entity/StringEntity;
 
     const-string v11, "UTF-8"
@@ -205,7 +203,7 @@
     invoke-direct {v10, v2, v11}, Lorg/apache/http/entity/StringEntity;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 833
-    .local v10, sentity:Lorg/apache/http/entity/StringEntity;
+    .local v10, "sentity":Lorg/apache/http/entity/StringEntity;
     new-instance v1, Lorg/apache/http/message/BasicHeader;
 
     const-string v11, "Content-Type"
@@ -215,7 +213,7 @@
     invoke-direct {v1, v11, v12}, Lorg/apache/http/message/BasicHeader;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 834
-    .local v1, basicHeader:Lorg/apache/http/message/BasicHeader;
+    .local v1, "basicHeader":Lorg/apache/http/message/BasicHeader;
     invoke-virtual {v6}, Lorg/apache/http/client/methods/HttpPost;->getParams()Lorg/apache/http/params/HttpParams;
 
     move-result-object v11
@@ -250,13 +248,13 @@
     move-result-object v8
 
     .line 839
-    .local v8, response:Lorg/apache/http/HttpResponse;
+    .local v8, "response":Lorg/apache/http/HttpResponse;
     invoke-interface {v8}, Lorg/apache/http/HttpResponse;->getEntity()Lorg/apache/http/HttpEntity;
 
     move-result-object v4
 
     .line 840
-    .local v4, entity:Lorg/apache/http/HttpEntity;
+    .local v4, "entity":Lorg/apache/http/HttpEntity;
     if-nez v4, :cond_5
 
     .line 842
@@ -271,22 +269,22 @@
     invoke-static {v11, v12}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 865
-    .end local v0           #appLimitDataHolder:Lorg/json/JSONObject;
-    .end local v1           #basicHeader:Lorg/apache/http/message/BasicHeader;
-    .end local v2           #data:Ljava/lang/String;
-    .end local v4           #entity:Lorg/apache/http/HttpEntity;
-    .end local v5           #httpclient:Lorg/apache/http/client/HttpClient;
-    .end local v6           #httppost:Lorg/apache/http/client/methods/HttpPost;
-    .end local v7           #optionsHolder:Lorg/json/JSONObject;
-    .end local v8           #response:Lorg/apache/http/HttpResponse;
-    .end local v10           #sentity:Lorg/apache/http/entity/StringEntity;
+    .end local v0    # "appLimitDataHolder":Lorg/json/JSONObject;
+    .end local v1    # "basicHeader":Lorg/apache/http/message/BasicHeader;
+    .end local v2    # "data":Ljava/lang/String;
+    .end local v4    # "entity":Lorg/apache/http/HttpEntity;
+    .end local v5    # "httpclient":Lorg/apache/http/client/HttpClient;
+    .end local v6    # "httppost":Lorg/apache/http/client/methods/HttpPost;
+    .end local v7    # "optionsHolder":Lorg/json/JSONObject;
+    .end local v8    # "response":Lorg/apache/http/HttpResponse;
+    .end local v10    # "sentity":Lorg/apache/http/entity/StringEntity;
     :cond_3
     :goto_1
     return-void
 
     .line 810
-    .restart local v0       #appLimitDataHolder:Lorg/json/JSONObject;
-    .restart local v7       #optionsHolder:Lorg/json/JSONObject;
+    .restart local v0    # "appLimitDataHolder":Lorg/json/JSONObject;
+    .restart local v7    # "optionsHolder":Lorg/json/JSONObject;
     :cond_4
     const-string v11, "app_limit_tracking"
 
@@ -301,15 +299,15 @@
     goto/16 :goto_0
 
     .line 850
-    .end local v0           #appLimitDataHolder:Lorg/json/JSONObject;
-    .end local v7           #optionsHolder:Lorg/json/JSONObject;
+    .end local v0    # "appLimitDataHolder":Lorg/json/JSONObject;
+    .end local v7    # "optionsHolder":Lorg/json/JSONObject;
     :catch_0
     move-exception v11
 
     move-object v3, v11
 
     .line 852
-    .local v3, e:Lorg/apache/http/client/ClientProtocolException;
+    .local v3, "e":Lorg/apache/http/client/ClientProtocolException;
     sget-boolean v11, Lcom/kochava/android/tracker/Global;->DEBUG:Z
 
     if-eqz v11, :cond_3
@@ -323,16 +321,16 @@
     goto :goto_1
 
     .line 846
-    .end local v3           #e:Lorg/apache/http/client/ClientProtocolException;
-    .restart local v0       #appLimitDataHolder:Lorg/json/JSONObject;
-    .restart local v1       #basicHeader:Lorg/apache/http/message/BasicHeader;
-    .restart local v2       #data:Ljava/lang/String;
-    .restart local v4       #entity:Lorg/apache/http/HttpEntity;
-    .restart local v5       #httpclient:Lorg/apache/http/client/HttpClient;
-    .restart local v6       #httppost:Lorg/apache/http/client/methods/HttpPost;
-    .restart local v7       #optionsHolder:Lorg/json/JSONObject;
-    .restart local v8       #response:Lorg/apache/http/HttpResponse;
-    .restart local v10       #sentity:Lorg/apache/http/entity/StringEntity;
+    .end local v3    # "e":Lorg/apache/http/client/ClientProtocolException;
+    .restart local v0    # "appLimitDataHolder":Lorg/json/JSONObject;
+    .restart local v1    # "basicHeader":Lorg/apache/http/message/BasicHeader;
+    .restart local v2    # "data":Ljava/lang/String;
+    .restart local v4    # "entity":Lorg/apache/http/HttpEntity;
+    .restart local v5    # "httpclient":Lorg/apache/http/client/HttpClient;
+    .restart local v6    # "httppost":Lorg/apache/http/client/methods/HttpPost;
+    .restart local v7    # "optionsHolder":Lorg/json/JSONObject;
+    .restart local v8    # "response":Lorg/apache/http/HttpResponse;
+    .restart local v10    # "sentity":Lorg/apache/http/entity/StringEntity;
     :cond_5
     :try_start_1
     sget-boolean v11, Lcom/kochava/android/tracker/Global;->DEBUG:Z
@@ -356,7 +354,7 @@
     move-result-object v9
 
     .line 848
-    .local v9, result:Ljava/lang/String;
+    .local v9, "result":Ljava/lang/String;
     sget-boolean v11, Lcom/kochava/android/tracker/Global;->DEBUG:Z
 
     if-eqz v11, :cond_3
@@ -386,23 +384,23 @@
     goto :goto_1
 
     .line 855
-    .end local v0           #appLimitDataHolder:Lorg/json/JSONObject;
-    .end local v1           #basicHeader:Lorg/apache/http/message/BasicHeader;
-    .end local v2           #data:Ljava/lang/String;
-    .end local v4           #entity:Lorg/apache/http/HttpEntity;
-    .end local v5           #httpclient:Lorg/apache/http/client/HttpClient;
-    .end local v6           #httppost:Lorg/apache/http/client/methods/HttpPost;
-    .end local v7           #optionsHolder:Lorg/json/JSONObject;
-    .end local v8           #response:Lorg/apache/http/HttpResponse;
-    .end local v9           #result:Ljava/lang/String;
-    .end local v10           #sentity:Lorg/apache/http/entity/StringEntity;
+    .end local v0    # "appLimitDataHolder":Lorg/json/JSONObject;
+    .end local v1    # "basicHeader":Lorg/apache/http/message/BasicHeader;
+    .end local v2    # "data":Ljava/lang/String;
+    .end local v4    # "entity":Lorg/apache/http/HttpEntity;
+    .end local v5    # "httpclient":Lorg/apache/http/client/HttpClient;
+    .end local v6    # "httppost":Lorg/apache/http/client/methods/HttpPost;
+    .end local v7    # "optionsHolder":Lorg/json/JSONObject;
+    .end local v8    # "response":Lorg/apache/http/HttpResponse;
+    .end local v9    # "result":Ljava/lang/String;
+    .end local v10    # "sentity":Lorg/apache/http/entity/StringEntity;
     :catch_1
     move-exception v11
 
     move-object v3, v11
 
     .line 857
-    .local v3, e:Ljava/io/IOException;
+    .local v3, "e":Ljava/io/IOException;
     sget-boolean v11, Lcom/kochava/android/tracker/Global;->DEBUG:Z
 
     if-eqz v11, :cond_3
@@ -416,14 +414,14 @@
     goto :goto_1
 
     .line 860
-    .end local v3           #e:Ljava/io/IOException;
+    .end local v3    # "e":Ljava/io/IOException;
     :catch_2
     move-exception v11
 
     move-object v3, v11
 
     .line 862
-    .local v3, e:Ljava/lang/Exception;
+    .local v3, "e":Ljava/lang/Exception;
     sget-boolean v11, Lcom/kochava/android/tracker/Global;->DEBUGERROR:Z
 
     if-eqz v11, :cond_3

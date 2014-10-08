@@ -21,8 +21,8 @@
 # virtual methods
 .method public call(Lcom/adobe/fre/FREContext;[Lcom/adobe/fre/FREObject;)Lcom/adobe/fre/FREObject;
     .locals 7
-    .parameter "arg0"
-    .parameter "arg1"
+    .param p1, "arg0"    # Lcom/adobe/fre/FREContext;
+    .param p2, "arg1"    # [Lcom/adobe/fre/FREObject;
 
     .prologue
     const-string v6, ","
@@ -38,11 +38,11 @@
     move-result-object v2
 
     .line 19
-    .local v2, language:Ljava/lang/String;
+    .local v2, "language":Ljava/lang/String;
     const/4 v0, 0x0
 
     .line 20
-    .local v0, deviceInfoObject:Lcom/adobe/fre/FREObject;
+    .local v0, "deviceInfoObject":Lcom/adobe/fre/FREObject;
     invoke-virtual {v2}, Ljava/lang/String;->length()I
 
     move-result v3
@@ -60,14 +60,14 @@
     move-object v3, v0
 
     .line 31
-    .end local v0           #deviceInfoObject:Lcom/adobe/fre/FREObject;
-    .end local v2           #language:Ljava/lang/String;
+    .end local v0    # "deviceInfoObject":Lcom/adobe/fre/FREObject;
+    .end local v2    # "language":Ljava/lang/String;
     :goto_1
     return-object v3
 
     .line 23
-    .restart local v0       #deviceInfoObject:Lcom/adobe/fre/FREObject;
-    .restart local v2       #language:Ljava/lang/String;
+    .restart local v0    # "deviceInfoObject":Lcom/adobe/fre/FREObject;
+    .restart local v2    # "language":Ljava/lang/String;
     :cond_0
     const-string v3, ""
 
@@ -80,15 +80,15 @@
     goto :goto_0
 
     .line 26
-    .end local v0           #deviceInfoObject:Lcom/adobe/fre/FREObject;
-    .end local v2           #language:Ljava/lang/String;
+    .end local v0    # "deviceInfoObject":Lcom/adobe/fre/FREObject;
+    .end local v2    # "language":Ljava/lang/String;
     :catch_0
     move-exception v3
 
     move-object v1, v3
 
     .line 28
-    .local v1, e:Ljava/lang/Exception;
+    .local v1, "e":Ljava/lang/Exception;
     const-string v3, "ERROR_EVENT"
 
     new-instance v4, Ljava/lang/StringBuilder;

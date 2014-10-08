@@ -42,7 +42,7 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 2
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     .line 88
@@ -83,8 +83,8 @@
 
 .method private static addKeyword(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 2
-    .parameter "keywords"
-    .parameter "addition"
+    .param p0, "keywords"    # Ljava/lang/String;
+    .param p1, "addition"    # Ljava/lang/String;
 
     .prologue
     .line 295
@@ -148,8 +148,8 @@
 
 .method private addParam(Ljava/lang/String;Lcom/fusepowered/m2/m2l/AdUrlGenerator$MoPubNetworkType;)V
     .locals 1
-    .parameter "key"
-    .parameter "value"
+    .param p1, "key"    # Ljava/lang/String;
+    .param p2, "value"    # Lcom/fusepowered/m2/m2l/AdUrlGenerator$MoPubNetworkType;
 
     .prologue
     .line 239
@@ -171,7 +171,7 @@
     const/4 v1, 0x1
 
     .line 245
-    .local v1, mraid:Z
+    .local v1, "mraid":Z
     :try_start_0
     const-string v2, "com.fusepowered.m2.m2l.MraidView"
 
@@ -190,7 +190,7 @@
     move-object v0, v2
 
     .line 247
-    .local v0, e:Ljava/lang/ClassNotFoundException;
+    .local v0, "e":Ljava/lang/ClassNotFoundException;
     const/4 v1, 0x0
 
     goto :goto_0
@@ -221,7 +221,7 @@
     move-result-object v0
 
     .line 289
-    .local v0, activeNetworkInfo:Landroid/net/NetworkInfo;
+    .local v0, "activeNetworkInfo":Landroid/net/NetworkInfo;
     if-eqz v0, :cond_0
 
     invoke-virtual {v0}, Landroid/net/NetworkInfo;->getType()I
@@ -229,18 +229,18 @@
     move-result v1
 
     .line 291
-    .end local v0           #activeNetworkInfo:Landroid/net/NetworkInfo;
+    .end local v0    # "activeNetworkInfo":Landroid/net/NetworkInfo;
     :goto_0
     return v1
 
-    .restart local v0       #activeNetworkInfo:Landroid/net/NetworkInfo;
+    .restart local v0    # "activeNetworkInfo":Landroid/net/NetworkInfo;
     :cond_0
     move v1, v3
 
     .line 289
     goto :goto_0
 
-    .end local v0           #activeNetworkInfo:Landroid/net/NetworkInfo;
+    .end local v0    # "activeNetworkInfo":Landroid/net/NetworkInfo;
     :cond_1
     move v1, v3
 
@@ -250,8 +250,8 @@
 
 .method private static getFacebookKeyword(Landroid/content/Context;Z)Ljava/lang/String;
     .locals 8
-    .parameter "context"
-    .parameter "enabled"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "enabled"    # Z
 
     .prologue
     const/4 v7, 0x0
@@ -262,12 +262,12 @@
     move-object v3, v7
 
     .line 282
-    .end local p0
+    .end local p0    # "context":Landroid/content/Context;
     :goto_0
     return-object v3
 
     .line 277
-    .restart local p0
+    .restart local p0    # "context":Landroid/content/Context;
     :cond_0
     :try_start_0
     const-string v3, "com.fusepowered.m2.m2l.FacebookKeywordProvider"
@@ -277,7 +277,7 @@
     move-result-object v1
 
     .line 278
-    .local v1, facebookKeywordProviderClass:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local v1, "facebookKeywordProviderClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const-string v3, "getKeyword"
 
     const/4 v4, 0x1
@@ -295,7 +295,7 @@
     move-result-object v2
 
     .line 280
-    .local v2, getKeywordMethod:Ljava/lang/reflect/Method;
+    .local v2, "getKeywordMethod":Ljava/lang/reflect/Method;
     const/4 v3, 0x1
 
     new-array v3, v3, [Ljava/lang/Object;
@@ -308,7 +308,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "context":Landroid/content/Context;
     check-cast p0, Ljava/lang/String;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -318,14 +318,14 @@
     goto :goto_0
 
     .line 281
-    .end local v1           #facebookKeywordProviderClass:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
-    .end local v2           #getKeywordMethod:Ljava/lang/reflect/Method;
+    .end local v1    # "facebookKeywordProviderClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
+    .end local v2    # "getKeywordMethod":Ljava/lang/reflect/Method;
     :catch_0
     move-exception v3
 
     move-object v0, v3
 
-    .local v0, exception:Ljava/lang/Exception;
+    .local v0, "exception":Ljava/lang/Exception;
     move-object v3, v7
 
     .line 282
@@ -344,7 +344,7 @@
     move-result-object v0
 
     .line 254
-    .local v0, networkOperator:Ljava/lang/String;
+    .local v0, "networkOperator":Ljava/lang/String;
     iget-object v1, p0, Lcom/fusepowered/m2/m2l/AdUrlGenerator;->mTelephonyManager:Landroid/telephony/TelephonyManager;
 
     invoke-virtual {v1}, Landroid/telephony/TelephonyManager;->getPhoneType()I
@@ -390,7 +390,7 @@
     invoke-direct {v0, v1}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
 
     .line 267
-    .local v0, format:Ljava/text/SimpleDateFormat;
+    .local v0, "format":Ljava/text/SimpleDateFormat;
     invoke-static {}, Lcom/fusepowered/m2/m2l/util/DateAndTime;->localTimeZone()Ljava/util/TimeZone;
 
     move-result-object v1
@@ -411,7 +411,7 @@
 
 .method private mncPortionLength(Ljava/lang/String;)I
     .locals 2
-    .parameter "networkOperator"
+    .param p1, "networkOperator"    # Ljava/lang/String;
 
     .prologue
     .line 262
@@ -430,7 +430,7 @@
 
 .method private setAdUnitId(Ljava/lang/String;)V
     .locals 1
-    .parameter "adUnitId"
+    .param p1, "adUnitId"    # Ljava/lang/String;
 
     .prologue
     .line 158
@@ -444,7 +444,7 @@
 
 .method private setCarrierName(Ljava/lang/String;)V
     .locals 1
-    .parameter "networkOperatorName"
+    .param p1, "networkOperatorName"    # Ljava/lang/String;
 
     .prologue
     .line 215
@@ -458,7 +458,7 @@
 
 .method private setDensity(F)V
     .locals 2
-    .parameter "density"
+    .param p1, "density"    # F
 
     .prologue
     .line 193
@@ -484,7 +484,7 @@
 
 .method private setIsoCountryCode(Ljava/lang/String;)V
     .locals 1
-    .parameter "networkCountryIso"
+    .param p1, "networkCountryIso"    # Ljava/lang/String;
 
     .prologue
     .line 211
@@ -498,7 +498,7 @@
 
 .method private setKeywords(Ljava/lang/String;)V
     .locals 1
-    .parameter "keywords"
+    .param p1, "keywords"    # Ljava/lang/String;
 
     .prologue
     .line 166
@@ -512,7 +512,7 @@
 
 .method private setLocation(Landroid/location/Location;)V
     .locals 4
-    .parameter "location"
+    .param p1, "location"    # Landroid/location/Location;
 
     .prologue
     .line 170
@@ -583,7 +583,7 @@
 
 .method private setMccCode(Ljava/lang/String;)V
     .locals 3
-    .parameter "networkOperator"
+    .param p1, "networkOperator"    # Ljava/lang/String;
 
     .prologue
     .line 201
@@ -594,7 +594,7 @@
     move-object v0, v1
 
     .line 202
-    .local v0, mcc:Ljava/lang/String;
+    .local v0, "mcc":Ljava/lang/String;
     :goto_0
     const-string v1, "mcc"
 
@@ -604,7 +604,7 @@
     return-void
 
     .line 201
-    .end local v0           #mcc:Ljava/lang/String;
+    .end local v0    # "mcc":Ljava/lang/String;
     :cond_0
     const/4 v1, 0x0
 
@@ -623,7 +623,7 @@
 
 .method private setMncCode(Ljava/lang/String;)V
     .locals 2
-    .parameter "networkOperator"
+    .param p1, "networkOperator"    # Ljava/lang/String;
 
     .prologue
     .line 206
@@ -634,7 +634,7 @@
     move-object v0, v1
 
     .line 207
-    .local v0, mnc:Ljava/lang/String;
+    .local v0, "mnc":Ljava/lang/String;
     :goto_0
     const-string v1, "mnc"
 
@@ -644,7 +644,7 @@
     return-void
 
     .line 206
-    .end local v0           #mnc:Ljava/lang/String;
+    .end local v0    # "mnc":Ljava/lang/String;
     :cond_0
     invoke-direct {p0, p1}, Lcom/fusepowered/m2/m2l/AdUrlGenerator;->mncPortionLength(Ljava/lang/String;)I
 
@@ -661,7 +661,7 @@
 
 .method private setMraidFlag(Z)V
     .locals 2
-    .parameter "mraid"
+    .param p1, "mraid"    # Z
 
     .prologue
     .line 197
@@ -680,7 +680,7 @@
 
 .method private setNetworkType(I)V
     .locals 2
-    .parameter "type"
+    .param p1, "type"    # I
 
     .prologue
     const-string v1, "ct"
@@ -750,14 +750,14 @@
 
 .method private setOrientation(I)V
     .locals 2
-    .parameter "orientation"
+    .param p1, "orientation"    # I
 
     .prologue
     .line 181
     const-string v0, "u"
 
     .line 182
-    .local v0, orString:Ljava/lang/String;
+    .local v0, "orString":Ljava/lang/String;
     const/4 v1, 0x1
 
     if-ne p1, v1, :cond_1
@@ -800,7 +800,7 @@
 
 .method private setSdkVersion(Ljava/lang/String;)V
     .locals 1
-    .parameter "sdkVersion"
+    .param p1, "sdkVersion"    # Ljava/lang/String;
 
     .prologue
     .line 162
@@ -814,7 +814,7 @@
 
 .method private setTimezone(Ljava/lang/String;)V
     .locals 1
-    .parameter "timeZoneOffsetString"
+    .param p1, "timeZoneOffsetString"    # Ljava/lang/String;
 
     .prologue
     .line 177
@@ -830,7 +830,7 @@
 # virtual methods
 .method public generateUrlString(Ljava/lang/String;)Ljava/lang/String;
     .locals 5
-    .parameter "serverHostname"
+    .param p1, "serverHostname"    # Ljava/lang/String;
 
     .prologue
     .line 116
@@ -903,7 +903,7 @@
     move-result-object v0
 
     .line 129
-    .local v0, keywords:Ljava/lang/String;
+    .local v0, "keywords":Ljava/lang/String;
     invoke-direct {p0, v0}, Lcom/fusepowered/m2/m2l/AdUrlGenerator;->setKeywords(Ljava/lang/String;)V
 
     .line 131
@@ -961,7 +961,7 @@
     move-result-object v1
 
     .line 142
-    .local v1, networkOperator:Ljava/lang/String;
+    .local v1, "networkOperator":Ljava/lang/String;
     invoke-direct {p0, v1}, Lcom/fusepowered/m2/m2l/AdUrlGenerator;->setMccCode(Ljava/lang/String;)V
 
     .line 143
@@ -1020,7 +1020,7 @@
 
 .method public withAdUnitId(Ljava/lang/String;)Lcom/fusepowered/m2/m2l/AdUrlGenerator;
     .locals 0
-    .parameter "adUnitId"
+    .param p1, "adUnitId"    # Ljava/lang/String;
 
     .prologue
     .line 95
@@ -1032,7 +1032,7 @@
 
 .method public withFacebookSupported(Z)Lcom/fusepowered/m2/m2l/AdUrlGenerator;
     .locals 0
-    .parameter "enabled"
+    .param p1, "enabled"    # Z
 
     .prologue
     .line 105
@@ -1044,7 +1044,7 @@
 
 .method public withKeywords(Ljava/lang/String;)Lcom/fusepowered/m2/m2l/AdUrlGenerator;
     .locals 0
-    .parameter "keywords"
+    .param p1, "keywords"    # Ljava/lang/String;
 
     .prologue
     .line 100
@@ -1056,7 +1056,7 @@
 
 .method public withLocation(Landroid/location/Location;)Lcom/fusepowered/m2/m2l/AdUrlGenerator;
     .locals 0
-    .parameter "location"
+    .param p1, "location"    # Landroid/location/Location;
 
     .prologue
     .line 110

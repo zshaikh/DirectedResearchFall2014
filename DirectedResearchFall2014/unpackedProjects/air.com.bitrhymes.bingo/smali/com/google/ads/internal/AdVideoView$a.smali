@@ -33,7 +33,6 @@
 # direct methods
 .method public constructor <init>(Lcom/google/ads/internal/AdVideoView;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 48

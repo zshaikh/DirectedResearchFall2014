@@ -106,8 +106,8 @@
 
 .method public constructor <init>(Landroid/app/Activity;Ljava/lang/String;)V
     .locals 2
-    .parameter "activity"
-    .parameter "id"
+    .param p1, "activity"    # Landroid/app/Activity;
+    .param p2, "id"    # Ljava/lang/String;
 
     .prologue
     .line 83
@@ -146,7 +146,6 @@
 
 .method static synthetic access$0(Lcom/fusepowered/m2/m2l/MoPubInterstitial;)Lcom/fusepowered/m2/m2l/CustomEventInterstitialAdapter;
     .locals 1
-    .parameter
 
     .prologue
     .line 60
@@ -157,8 +156,6 @@
 
 .method static synthetic access$1(Lcom/fusepowered/m2/m2l/MoPubInterstitial;Lcom/fusepowered/m2/m2l/CustomEventInterstitialAdapter;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 60
@@ -169,7 +166,6 @@
 
 .method static synthetic access$2(Lcom/fusepowered/m2/m2l/MoPubInterstitial;)Lcom/fusepowered/m2/m2l/MoPubInterstitial$InterstitialAdListener;
     .locals 1
-    .parameter
 
     .prologue
     .line 61
@@ -625,7 +621,7 @@
 
 .method public onCustomEventInterstitialFailed(Lcom/fusepowered/m2/m2l/MoPubErrorCode;)V
     .locals 1
-    .parameter "errorCode"
+    .param p1, "errorCode"    # Lcom/fusepowered/m2/m2l/MoPubErrorCode;
 
     .prologue
     .line 241
@@ -736,7 +732,7 @@
 
 .method public setFacebookSupported(Z)V
     .locals 1
-    .parameter "enabled"
+    .param p1, "enabled"    # Z
 
     .prologue
     .line 155
@@ -750,7 +746,7 @@
 
 .method public setInterstitialAdListener(Lcom/fusepowered/m2/m2l/MoPubInterstitial$InterstitialAdListener;)V
     .locals 0
-    .parameter "listener"
+    .param p1, "listener"    # Lcom/fusepowered/m2/m2l/MoPubInterstitial$InterstitialAdListener;
 
     .prologue
     .line 183
@@ -762,7 +758,7 @@
 
 .method setInterstitialView(Lcom/fusepowered/m2/m2l/MoPubInterstitial$MoPubInterstitialView;)V
     .locals 0
-    .parameter "interstitialView"
+    .param p1, "interstitialView"    # Lcom/fusepowered/m2/m2l/MoPubInterstitial$MoPubInterstitialView;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -776,7 +772,7 @@
 
 .method public setKeywords(Ljava/lang/String;)V
     .locals 1
-    .parameter "keywords"
+    .param p1, "keywords"    # Ljava/lang/String;
 
     .prologue
     .line 147
@@ -790,7 +786,7 @@
 
 .method public setListener(Lcom/fusepowered/m2/m2l/MoPubInterstitial$MoPubInterstitialListener;)V
     .locals 0
-    .parameter "listener"
+    .param p1, "listener"    # Lcom/fusepowered/m2/m2l/MoPubInterstitial$MoPubInterstitialListener;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -804,7 +800,6 @@
 
 .method public setLocalExtras(Ljava/util/Map;)V
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -818,7 +813,7 @@
 
     .prologue
     .line 215
-    .local p1, extras:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
+    .local p1, "extras":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
     iget-object v0, p0, Lcom/fusepowered/m2/m2l/MoPubInterstitial;->mInterstitialView:Lcom/fusepowered/m2/m2l/MoPubInterstitial$MoPubInterstitialView;
 
     invoke-virtual {v0, p1}, Lcom/fusepowered/m2/m2l/MoPubInterstitial$MoPubInterstitialView;->setLocalExtras(Ljava/util/Map;)V
@@ -829,7 +824,7 @@
 
 .method public setLocationAwareness(Lcom/fusepowered/m2/m2l/MoPubView$LocationAwareness;)V
     .locals 1
-    .parameter "awareness"
+    .param p1, "awareness"    # Lcom/fusepowered/m2/m2l/MoPubView$LocationAwareness;
 
     .prologue
     .line 191
@@ -843,7 +838,7 @@
 
 .method public setLocationPrecision(I)V
     .locals 1
-    .parameter "precision"
+    .param p1, "precision"    # I
 
     .prologue
     .line 199
@@ -857,7 +852,7 @@
 
 .method public setTesting(Z)V
     .locals 1
-    .parameter "testing"
+    .param p1, "testing"    # Z
 
     .prologue
     .line 207

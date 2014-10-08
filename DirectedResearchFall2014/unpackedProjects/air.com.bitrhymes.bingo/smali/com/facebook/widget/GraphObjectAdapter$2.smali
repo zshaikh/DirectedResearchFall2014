@@ -28,9 +28,6 @@
 # direct methods
 .method constructor <init>(Lcom/facebook/widget/GraphObjectAdapter;Ljava/lang/String;Landroid/widget/ImageView;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 1
@@ -50,7 +47,7 @@
 # virtual methods
 .method public onCompleted(Lcom/facebook/internal/ImageResponse;)V
     .locals 3
-    .parameter "response"
+    .param p1, "response"    # Lcom/facebook/internal/ImageResponse;
 
     .prologue
     .line 755
@@ -60,7 +57,7 @@
 
     iget-object v2, p0, Lcom/facebook/widget/GraphObjectAdapter$2;->val$imageView:Landroid/widget/ImageView;
 
-    #calls: Lcom/facebook/widget/GraphObjectAdapter;->processImageResponse(Lcom/facebook/internal/ImageResponse;Ljava/lang/String;Landroid/widget/ImageView;)V
+    # invokes: Lcom/facebook/widget/GraphObjectAdapter;->processImageResponse(Lcom/facebook/internal/ImageResponse;Ljava/lang/String;Landroid/widget/ImageView;)V
     invoke-static {v0, p1, v1, v2}, Lcom/facebook/widget/GraphObjectAdapter;->access$3(Lcom/facebook/widget/GraphObjectAdapter;Lcom/facebook/internal/ImageResponse;Ljava/lang/String;Landroid/widget/ImageView;)V
 
     .line 756

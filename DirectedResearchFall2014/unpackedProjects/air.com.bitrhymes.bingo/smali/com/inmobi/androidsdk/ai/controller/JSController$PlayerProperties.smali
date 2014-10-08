@@ -98,7 +98,6 @@
 
 .method public constructor <init>(Landroid/os/Parcel;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 72
@@ -187,13 +186,6 @@
 
 .method public setProperties(ZZZZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 98
@@ -223,7 +215,6 @@
 
 .method public setStopStyle(Ljava/lang/String;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 82

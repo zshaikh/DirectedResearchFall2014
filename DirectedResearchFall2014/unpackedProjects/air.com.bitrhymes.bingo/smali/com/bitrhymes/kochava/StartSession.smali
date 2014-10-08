@@ -21,8 +21,8 @@
 # virtual methods
 .method public call(Lcom/adobe/fre/FREContext;[Lcom/adobe/fre/FREObject;)Lcom/adobe/fre/FREObject;
     .locals 7
-    .parameter "context"
-    .parameter "args"
+    .param p1, "context"    # Lcom/adobe/fre/FREContext;
+    .param p2, "args"    # [Lcom/adobe/fre/FREObject;
 
     .prologue
     const-string v6, "ERROR_EVENT"
@@ -40,7 +40,7 @@
     move-result-object v0
 
     .line 20
-    .local v0, appID:Ljava/lang/String;
+    .local v0, "appID":Ljava/lang/String;
     if-nez v0, :cond_0
 
     .line 21
@@ -57,7 +57,7 @@
     move-result-object v2
 
     .line 25
-    .local v2, kTracker:Lcom/kochava/android/tracker/Feature;
+    .local v2, "kTracker":Lcom/kochava/android/tracker/Feature;
     invoke-virtual {v2}, Lcom/kochava/android/tracker/Feature;->startSession()V
     :try_end_0
     .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
@@ -67,8 +67,8 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_4
 
     .line 38
-    .end local v0           #appID:Ljava/lang/String;
-    .end local v2           #kTracker:Lcom/kochava/android/tracker/Feature;
+    .end local v0    # "appID":Ljava/lang/String;
+    .end local v2    # "kTracker":Lcom/kochava/android/tracker/Feature;
     :goto_0
     const/4 v3, 0x0
 
@@ -81,7 +81,7 @@
     move-object v1, v3
 
     .line 28
-    .local v1, e:Ljava/lang/IllegalStateException;
+    .local v1, "e":Ljava/lang/IllegalStateException;
     const-string v3, "ERROR_EVENT"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -147,14 +147,14 @@
     goto :goto_0
 
     .line 29
-    .end local v1           #e:Ljava/lang/IllegalStateException;
+    .end local v1    # "e":Ljava/lang/IllegalStateException;
     :catch_1
     move-exception v3
 
     move-object v1, v3
 
     .line 30
-    .local v1, e:Lcom/adobe/fre/FRETypeMismatchException;
+    .local v1, "e":Lcom/adobe/fre/FRETypeMismatchException;
     const-string v3, "ERROR_EVENT"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -220,14 +220,14 @@
     goto/16 :goto_0
 
     .line 31
-    .end local v1           #e:Lcom/adobe/fre/FRETypeMismatchException;
+    .end local v1    # "e":Lcom/adobe/fre/FRETypeMismatchException;
     :catch_2
     move-exception v3
 
     move-object v1, v3
 
     .line 32
-    .local v1, e:Lcom/adobe/fre/FREInvalidObjectException;
+    .local v1, "e":Lcom/adobe/fre/FREInvalidObjectException;
     const-string v3, "ERROR_EVENT"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -293,14 +293,14 @@
     goto/16 :goto_0
 
     .line 33
-    .end local v1           #e:Lcom/adobe/fre/FREInvalidObjectException;
+    .end local v1    # "e":Lcom/adobe/fre/FREInvalidObjectException;
     :catch_3
     move-exception v3
 
     move-object v1, v3
 
     .line 34
-    .local v1, e:Lcom/adobe/fre/FREWrongThreadException;
+    .local v1, "e":Lcom/adobe/fre/FREWrongThreadException;
     const-string v3, "ERROR_EVENT"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -366,14 +366,14 @@
     goto/16 :goto_0
 
     .line 35
-    .end local v1           #e:Lcom/adobe/fre/FREWrongThreadException;
+    .end local v1    # "e":Lcom/adobe/fre/FREWrongThreadException;
     :catch_4
     move-exception v3
 
     move-object v1, v3
 
     .line 36
-    .local v1, e:Ljava/lang/Exception;
+    .local v1, "e":Ljava/lang/Exception;
     const-string v3, "ERROR_EVENT"
 
     new-instance v3, Ljava/lang/StringBuilder;

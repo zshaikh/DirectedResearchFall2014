@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m1/google/gson/Gson;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 131
@@ -39,7 +38,7 @@
 # virtual methods
 .method public serialize(Ljava/lang/Object;)Lcom/fusepowered/m1/google/gson/JsonElement;
     .locals 1
-    .parameter "src"
+    .param p1, "src"    # Ljava/lang/Object;
 
     .prologue
     .line 133
@@ -54,8 +53,8 @@
 
 .method public serialize(Ljava/lang/Object;Ljava/lang/reflect/Type;)Lcom/fusepowered/m1/google/gson/JsonElement;
     .locals 1
-    .parameter "src"
-    .parameter "typeOfSrc"
+    .param p1, "src"    # Ljava/lang/Object;
+    .param p2, "typeOfSrc"    # Ljava/lang/reflect/Type;
 
     .prologue
     .line 136

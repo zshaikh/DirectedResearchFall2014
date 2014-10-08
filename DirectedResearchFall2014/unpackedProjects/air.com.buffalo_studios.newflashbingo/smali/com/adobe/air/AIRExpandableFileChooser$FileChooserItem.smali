@@ -31,12 +31,6 @@
 # direct methods
 .method constructor <init>(Lcom/adobe/air/AIRExpandableFileChooser;Landroid/view/LayoutInflater;Landroid/content/res/Resources;Landroid/view/ViewGroup;II)V
     .locals 5
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const-string v4, "filepath"
@@ -63,7 +57,7 @@
     iput v0, p0, Lcom/adobe/air/AIRExpandableFileChooser$FileChooserItem;->mListFlatPosition:I
 
     .line 101
-    #getter for: Lcom/adobe/air/AIRExpandableFileChooser;->mAllowMultiple:Z
+    # getter for: Lcom/adobe/air/AIRExpandableFileChooser;->mAllowMultiple:Z
     invoke-static {p1}, Lcom/adobe/air/AIRExpandableFileChooser;->access$000(Lcom/adobe/air/AIRExpandableFileChooser;)Z
 
     move-result v0
@@ -136,7 +130,7 @@
 
     .line 113
     :cond_0
-    #calls: Lcom/adobe/air/AIRExpandableFileChooser;->expandableListPositionToFlatPosition(II)I
+    # invokes: Lcom/adobe/air/AIRExpandableFileChooser;->expandableListPositionToFlatPosition(II)I
     invoke-static {p1, p5, p6}, Lcom/adobe/air/AIRExpandableFileChooser;->access$100(Lcom/adobe/air/AIRExpandableFileChooser;II)I
 
     move-result v0
@@ -214,7 +208,6 @@
 
 .method static synthetic access$200(Lcom/adobe/air/AIRExpandableFileChooser$FileChooserItem;)I
     .locals 1
-    .parameter
 
     .prologue
     .line 88
@@ -227,9 +220,6 @@
 # virtual methods
 .method public bindToData(Lcom/adobe/air/AIRExpandableFileChooser$FileInfo;II)V
     .locals 3
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 152
@@ -249,7 +239,7 @@
     .line 154
     iget-object v0, p0, Lcom/adobe/air/AIRExpandableFileChooser$FileChooserItem;->this$0:Lcom/adobe/air/AIRExpandableFileChooser;
 
-    #getter for: Lcom/adobe/air/AIRExpandableFileChooser;->mAllowMultiple:Z
+    # getter for: Lcom/adobe/air/AIRExpandableFileChooser;->mAllowMultiple:Z
     invoke-static {v0}, Lcom/adobe/air/AIRExpandableFileChooser;->access$000(Lcom/adobe/air/AIRExpandableFileChooser;)Z
 
     move-result v0
@@ -259,7 +249,7 @@
     .line 156
     iget-object v0, p0, Lcom/adobe/air/AIRExpandableFileChooser$FileChooserItem;->this$0:Lcom/adobe/air/AIRExpandableFileChooser;
 
-    #calls: Lcom/adobe/air/AIRExpandableFileChooser;->expandableListPositionToFlatPosition(II)I
+    # invokes: Lcom/adobe/air/AIRExpandableFileChooser;->expandableListPositionToFlatPosition(II)I
     invoke-static {v0, p2, p3}, Lcom/adobe/air/AIRExpandableFileChooser;->access$100(Lcom/adobe/air/AIRExpandableFileChooser;II)I
 
     move-result v0
@@ -278,7 +268,7 @@
 
     iget-object v1, p0, Lcom/adobe/air/AIRExpandableFileChooser$FileChooserItem;->this$0:Lcom/adobe/air/AIRExpandableFileChooser;
 
-    #getter for: Lcom/adobe/air/AIRExpandableFileChooser;->mCheckedFiles:Landroid/util/SparseBooleanArray;
+    # getter for: Lcom/adobe/air/AIRExpandableFileChooser;->mCheckedFiles:Landroid/util/SparseBooleanArray;
     invoke-static {v1}, Lcom/adobe/air/AIRExpandableFileChooser;->access$300(Lcom/adobe/air/AIRExpandableFileChooser;)Landroid/util/SparseBooleanArray;
 
     move-result-object v1
@@ -313,7 +303,7 @@
     .line 166
     iget-object v0, p0, Lcom/adobe/air/AIRExpandableFileChooser$FileChooserItem;->this$0:Lcom/adobe/air/AIRExpandableFileChooser;
 
-    #getter for: Lcom/adobe/air/AIRExpandableFileChooser;->mAllowMultiple:Z
+    # getter for: Lcom/adobe/air/AIRExpandableFileChooser;->mAllowMultiple:Z
     invoke-static {v0}, Lcom/adobe/air/AIRExpandableFileChooser;->access$000(Lcom/adobe/air/AIRExpandableFileChooser;)Z
 
     move-result v0
@@ -350,7 +340,7 @@
 
     iget-object v1, p0, Lcom/adobe/air/AIRExpandableFileChooser$FileChooserItem;->this$0:Lcom/adobe/air/AIRExpandableFileChooser;
 
-    #getter for: Lcom/adobe/air/AIRExpandableFileChooser;->mCheckedFiles:Landroid/util/SparseBooleanArray;
+    # getter for: Lcom/adobe/air/AIRExpandableFileChooser;->mCheckedFiles:Landroid/util/SparseBooleanArray;
     invoke-static {v1}, Lcom/adobe/air/AIRExpandableFileChooser;->access$300(Lcom/adobe/air/AIRExpandableFileChooser;)Landroid/util/SparseBooleanArray;
 
     move-result-object v1
@@ -390,7 +380,7 @@
     .line 177
     iget-object v0, p0, Lcom/adobe/air/AIRExpandableFileChooser$FileChooserItem;->this$0:Lcom/adobe/air/AIRExpandableFileChooser;
 
-    #getter for: Lcom/adobe/air/AIRExpandableFileChooser;->mAllowMultiple:Z
+    # getter for: Lcom/adobe/air/AIRExpandableFileChooser;->mAllowMultiple:Z
     invoke-static {v0}, Lcom/adobe/air/AIRExpandableFileChooser;->access$000(Lcom/adobe/air/AIRExpandableFileChooser;)Z
 
     move-result v0

@@ -38,7 +38,7 @@
 
 .method private getStringDataAsList(Lcom/fusepowered/m2/m2l/util/vast/VastXmlManager$VastElementName;)Ljava/util/List;
     .locals 1
-    .parameter "elementName"
+    .param p1, "elementName"    # Lcom/fusepowered/m2/m2l/util/vast/VastXmlManager$VastElementName;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -64,9 +64,9 @@
 
 .method private getStringDataAsList(Lcom/fusepowered/m2/m2l/util/vast/VastXmlManager$VastElementName;Lcom/fusepowered/m2/m2l/util/vast/VastXmlManager$VastElementAttributeName;Lcom/fusepowered/m2/m2l/util/vast/VastXmlManager$VastElementAttributeValue;)Ljava/util/List;
     .locals 8
-    .parameter "elementName"
-    .parameter "attributeName"
-    .parameter "attributeValue"
+    .param p1, "elementName"    # Lcom/fusepowered/m2/m2l/util/vast/VastXmlManager$VastElementName;
+    .param p2, "attributeName"    # Lcom/fusepowered/m2/m2l/util/vast/VastXmlManager$VastElementAttributeName;
+    .param p3, "attributeValue"    # Lcom/fusepowered/m2/m2l/util/vast/VastXmlManager$VastElementAttributeValue;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -88,7 +88,7 @@
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
     .line 150
-    .local v3, results:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
+    .local v3, "results":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     iget-object v6, p0, Lcom/fusepowered/m2/m2l/util/vast/VastXmlManager;->mVastDoc:Lorg/w3c/dom/Document;
 
     if-nez v6, :cond_1
@@ -110,13 +110,13 @@
     move-result-object v2
 
     .line 156
-    .local v2, nodes:Lorg/w3c/dom/NodeList;
+    .local v2, "nodes":Lorg/w3c/dom/NodeList;
     if-eqz v2, :cond_0
 
     .line 160
     const/4 v0, 0x0
 
-    .local v0, i:I
+    .local v0, "i":I
     :goto_0
     invoke-interface {v2}, Lorg/w3c/dom/NodeList;->getLength()I
 
@@ -130,7 +130,7 @@
     move-result-object v1
 
     .line 163
-    .local v1, node:Lorg/w3c/dom/Node;
+    .local v1, "node":Lorg/w3c/dom/Node;
     if-eqz v1, :cond_2
 
     invoke-direct {p0, v1, p2, p3}, Lcom/fusepowered/m2/m2l/util/vast/VastXmlManager;->nodeMatchesFilter(Lorg/w3c/dom/Node;Lcom/fusepowered/m2/m2l/util/vast/VastXmlManager$VastElementAttributeName;Lcom/fusepowered/m2/m2l/util/vast/VastXmlManager$VastElementAttributeValue;)Z
@@ -145,7 +145,7 @@
     move-result-object v4
 
     .line 166
-    .local v4, textChild:Lorg/w3c/dom/Node;
+    .local v4, "textChild":Lorg/w3c/dom/Node;
     if-eqz v4, :cond_2
 
     .line 167
@@ -154,7 +154,7 @@
     move-result-object v5
 
     .line 168
-    .local v5, textValue:Ljava/lang/String;
+    .local v5, "textValue":Ljava/lang/String;
     if-eqz v5, :cond_2
 
     .line 169
@@ -165,8 +165,8 @@
     invoke-virtual {v3, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 160
-    .end local v4           #textChild:Lorg/w3c/dom/Node;
-    .end local v5           #textValue:Ljava/lang/String;
+    .end local v4    # "textChild":Lorg/w3c/dom/Node;
+    .end local v5    # "textValue":Ljava/lang/String;
     :cond_2
     add-int/lit8 v0, v0, 0x1
 
@@ -175,7 +175,7 @@
 
 .method private getVideoTrackerByAttribute(Lcom/fusepowered/m2/m2l/util/vast/VastXmlManager$VastElementAttributeValue;)Ljava/util/List;
     .locals 2
-    .parameter "attributeValue"
+    .param p1, "attributeValue"    # Lcom/fusepowered/m2/m2l/util/vast/VastXmlManager$VastElementAttributeValue;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -203,9 +203,9 @@
 
 .method private nodeMatchesFilter(Lorg/w3c/dom/Node;Lcom/fusepowered/m2/m2l/util/vast/VastXmlManager$VastElementAttributeName;Lcom/fusepowered/m2/m2l/util/vast/VastXmlManager$VastElementAttributeValue;)Z
     .locals 5
-    .parameter "node"
-    .parameter "attributeName"
-    .parameter "attributeValue"
+    .param p1, "node"    # Lorg/w3c/dom/Node;
+    .param p2, "attributeName"    # Lcom/fusepowered/m2/m2l/util/vast/VastXmlManager$VastElementAttributeName;
+    .param p3, "attributeValue"    # Lcom/fusepowered/m2/m2l/util/vast/VastXmlManager$VastElementAttributeValue;
 
     .prologue
     const/4 v4, 0x1
@@ -229,7 +229,7 @@
     move-result-object v0
 
     .line 184
-    .local v0, attrMap:Lorg/w3c/dom/NamedNodeMap;
+    .local v0, "attrMap":Lorg/w3c/dom/NamedNodeMap;
     if-eqz v0, :cond_2
 
     .line 185
@@ -242,7 +242,7 @@
     move-result-object v1
 
     .line 186
-    .local v1, attrNode:Lorg/w3c/dom/Node;
+    .local v1, "attrNode":Lorg/w3c/dom/Node;
     if-eqz v1, :cond_2
 
     invoke-virtual {p3}, Lcom/fusepowered/m2/m2l/util/vast/VastXmlManager$VastElementAttributeValue;->getValue()Ljava/lang/String;
@@ -265,7 +265,7 @@
     goto :goto_0
 
     .line 191
-    .end local v1           #attrNode:Lorg/w3c/dom/Node;
+    .end local v1    # "attrNode":Lorg/w3c/dom/Node;
     :cond_2
     const/4 v2, 0x0
 
@@ -286,7 +286,7 @@
     move-result-object v0
 
     .line 127
-    .local v0, clickUrlWrapper:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
+    .local v0, "clickUrlWrapper":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v1
@@ -299,7 +299,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/fusepowered/m2/m2l/util/vast/VastXmlManager;
     check-cast p0, Ljava/lang/String;
 
     move-object v1, p0
@@ -307,7 +307,7 @@
     :goto_0
     return-object v1
 
-    .restart local p0
+    .restart local p0    # "this":Lcom/fusepowered/m2/m2l/util/vast/VastXmlManager;
     :cond_0
     const/4 v1, 0x0
 
@@ -358,7 +358,7 @@
     move-result-object v0
 
     .line 100
-    .local v0, impressionTrackers:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
+    .local v0, "impressionTrackers":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     sget-object v1, Lcom/fusepowered/m2/m2l/util/vast/VastXmlManager$VastElementName;->MP_IMPRESSION_TRACKER:Lcom/fusepowered/m2/m2l/util/vast/VastXmlManager$VastElementName;
 
     invoke-direct {p0, v1}, Lcom/fusepowered/m2/m2l/util/vast/VastXmlManager;->getStringDataAsList(Lcom/fusepowered/m2/m2l/util/vast/VastXmlManager$VastElementName;)Ljava/util/List;
@@ -383,7 +383,7 @@
     move-result-object v0
 
     .line 136
-    .local v0, urlWrapper:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
+    .local v0, "urlWrapper":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v1
@@ -396,7 +396,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/fusepowered/m2/m2l/util/vast/VastXmlManager;
     check-cast p0, Ljava/lang/String;
 
     move-object v1, p0
@@ -404,7 +404,7 @@
     :goto_0
     return-object v1
 
-    .restart local p0
+    .restart local p0    # "this":Lcom/fusepowered/m2/m2l/util/vast/VastXmlManager;
     :cond_0
     const/4 v1, 0x0
 
@@ -423,7 +423,7 @@
     move-result-object v0
 
     .line 95
-    .local v0, uriWrapper:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
+    .local v0, "uriWrapper":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v1
@@ -436,7 +436,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/fusepowered/m2/m2l/util/vast/VastXmlManager;
     check-cast p0, Ljava/lang/String;
 
     move-object v1, p0
@@ -444,7 +444,7 @@
     :goto_0
     return-object v1
 
-    .restart local p0
+    .restart local p0    # "this":Lcom/fusepowered/m2/m2l/util/vast/VastXmlManager;
     :cond_0
     const/4 v1, 0x0
 
@@ -568,7 +568,7 @@
 
 .method parseVastXml(Ljava/lang/String;)V
     .locals 5
-    .parameter "xmlString"
+    .param p1, "xmlString"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljavax/xml/parsers/ParserConfigurationException;,
@@ -609,13 +609,13 @@
     move-result-object v2
 
     .line 87
-    .local v2, documentString:Ljava/lang/String;
+    .local v2, "documentString":Ljava/lang/String;
     invoke-static {}, Ljavax/xml/parsers/DocumentBuilderFactory;->newInstance()Ljavax/xml/parsers/DocumentBuilderFactory;
 
     move-result-object v1
 
     .line 88
-    .local v1, documentBuilderFactory:Ljavax/xml/parsers/DocumentBuilderFactory;
+    .local v1, "documentBuilderFactory":Ljavax/xml/parsers/DocumentBuilderFactory;
     const/4 v3, 0x1
 
     invoke-virtual {v1, v3}, Ljavax/xml/parsers/DocumentBuilderFactory;->setCoalescing(Z)V
@@ -626,7 +626,7 @@
     move-result-object v0
 
     .line 90
-    .local v0, documentBuilder:Ljavax/xml/parsers/DocumentBuilder;
+    .local v0, "documentBuilder":Ljavax/xml/parsers/DocumentBuilder;
     new-instance v3, Lorg/xml/sax/InputSource;
 
     new-instance v4, Ljava/io/StringReader;

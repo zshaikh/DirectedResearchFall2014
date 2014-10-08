@@ -31,14 +31,14 @@
 
     iget-object v0, p0, Lcom/facebook/widget/GraphObjectAdapter$1;->this$0:Lcom/facebook/widget/GraphObjectAdapter;
 
-    #getter for: Lcom/facebook/widget/GraphObjectAdapter;->sortFields:Ljava/util/List;
+    # getter for: Lcom/facebook/widget/GraphObjectAdapter;->sortFields:Ljava/util/List;
     invoke-static {v0}, Lcom/facebook/widget/GraphObjectAdapter;->access$000(Lcom/facebook/widget/GraphObjectAdapter;)Ljava/util/List;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/facebook/widget/GraphObjectAdapter$1;->val$collator:Ljava/text/Collator;
 
-    #calls: Lcom/facebook/widget/GraphObjectAdapter;->compareGraphObjects(Lcom/facebook/model/GraphObject;Lcom/facebook/model/GraphObject;Ljava/util/Collection;Ljava/text/Collator;)I
+    # invokes: Lcom/facebook/widget/GraphObjectAdapter;->compareGraphObjects(Lcom/facebook/model/GraphObject;Lcom/facebook/model/GraphObject;Ljava/util/Collection;Ljava/text/Collator;)I
     invoke-static {p1, p2, v0, v1}, Lcom/facebook/widget/GraphObjectAdapter;->access$100(Lcom/facebook/model/GraphObject;Lcom/facebook/model/GraphObject;Ljava/util/Collection;Ljava/text/Collator;)I
 
     move-result v0

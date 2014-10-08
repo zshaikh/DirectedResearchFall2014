@@ -21,7 +21,6 @@
 # direct methods
 .method constructor <init>(Landroid/support/v4/view/accessibility/AccessibilityNodeProviderCompatJellyBean$AccessibilityNodeInfoBridge;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 38
@@ -36,7 +35,7 @@
 # virtual methods
 .method public createAccessibilityNodeInfo(I)Landroid/view/accessibility/AccessibilityNodeInfo;
     .locals 1
-    .parameter "virtualViewId"
+    .param p1, "virtualViewId"    # I
 
     .prologue
     .line 41
@@ -46,7 +45,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Landroid/support/v4/view/accessibility/AccessibilityNodeProviderCompatJellyBean$1;
     check-cast p0, Landroid/view/accessibility/AccessibilityNodeInfo;
 
     return-object p0
@@ -54,8 +53,8 @@
 
 .method public findAccessibilityNodeInfosByText(Ljava/lang/String;I)Ljava/util/List;
     .locals 1
-    .parameter "text"
-    .parameter "virtualViewId"
+    .param p1, "text"    # Ljava/lang/String;
+    .param p2, "virtualViewId"    # I
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -81,9 +80,9 @@
 
 .method public performAction(IILandroid/os/Bundle;)Z
     .locals 1
-    .parameter "virtualViewId"
-    .parameter "action"
-    .parameter "arguments"
+    .param p1, "virtualViewId"    # I
+    .param p2, "action"    # I
+    .param p3, "arguments"    # Landroid/os/Bundle;
 
     .prologue
     .line 55

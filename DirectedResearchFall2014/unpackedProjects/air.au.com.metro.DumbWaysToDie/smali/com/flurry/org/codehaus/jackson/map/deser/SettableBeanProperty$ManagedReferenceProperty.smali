@@ -27,8 +27,7 @@
 # direct methods
 .method protected constructor <init>(Lcom/flurry/org/codehaus/jackson/map/deser/SettableBeanProperty$ManagedReferenceProperty;Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;)V
     .locals 1
-    .parameter "src"
-    .parameter
+    .param p1, "src"    # Lcom/flurry/org/codehaus/jackson/map/deser/SettableBeanProperty$ManagedReferenceProperty;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -42,7 +41,7 @@
 
     .prologue
     .line 631
-    .local p2, deser:Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer<Ljava/lang/Object;>;"
+    .local p2, "deser":Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer<Ljava/lang/Object;>;"
     invoke-direct {p0, p1, p2}, Lcom/flurry/org/codehaus/jackson/map/deser/SettableBeanProperty;-><init>(Lcom/flurry/org/codehaus/jackson/map/deser/SettableBeanProperty;Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;)V
 
     .line 632
@@ -71,11 +70,11 @@
 
 .method public constructor <init>(Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/map/deser/SettableBeanProperty;Lcom/flurry/org/codehaus/jackson/map/deser/SettableBeanProperty;Lcom/flurry/org/codehaus/jackson/map/util/Annotations;Z)V
     .locals 3
-    .parameter "refName"
-    .parameter "forward"
-    .parameter "backward"
-    .parameter "contextAnnotations"
-    .parameter "isContainer"
+    .param p1, "refName"    # Ljava/lang/String;
+    .param p2, "forward"    # Lcom/flurry/org/codehaus/jackson/map/deser/SettableBeanProperty;
+    .param p3, "backward"    # Lcom/flurry/org/codehaus/jackson/map/deser/SettableBeanProperty;
+    .param p4, "contextAnnotations"    # Lcom/flurry/org/codehaus/jackson/map/util/Annotations;
+    .param p5, "isContainer"    # Z
 
     .prologue
     .line 621
@@ -111,9 +110,9 @@
 # virtual methods
 .method public deserializeAndSet(Lcom/flurry/org/codehaus/jackson/JsonParser;Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;Ljava/lang/Object;)V
     .locals 1
-    .parameter "jp"
-    .parameter "ctxt"
-    .parameter "instance"
+    .param p1, "jp"    # Lcom/flurry/org/codehaus/jackson/JsonParser;
+    .param p2, "ctxt"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;
+    .param p3, "instance"    # Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -137,7 +136,6 @@
 
 .method public getAnnotation(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<A::",
@@ -150,7 +148,7 @@
 
     .prologue
     .line 651
-    .local p1, acls:Ljava/lang/Class;,"Ljava/lang/Class<TA;>;"
+    .local p1, "acls":Ljava/lang/Class;, "Ljava/lang/Class<TA;>;"
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/map/deser/SettableBeanProperty$ManagedReferenceProperty;->_managedProperty:Lcom/flurry/org/codehaus/jackson/map/deser/SettableBeanProperty;
 
     invoke-virtual {v0, p1}, Lcom/flurry/org/codehaus/jackson/map/deser/SettableBeanProperty;->getAnnotation(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;
@@ -176,8 +174,8 @@
 
 .method public final set(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 8
-    .parameter "instance"
-    .parameter "value"
+    .param p1, "instance"    # Ljava/lang/Object;
+    .param p2, "value"    # Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -206,27 +204,27 @@
     .line 681
     check-cast p2, [Ljava/lang/Object;
 
-    .end local p2
+    .end local p2    # "value":Ljava/lang/Object;
     move-object v0, p2
 
     check-cast v0, [Ljava/lang/Object;
 
     move-object v1, v0
 
-    .local v1, arr$:[Ljava/lang/Object;
+    .local v1, "arr$":[Ljava/lang/Object;
     array-length v3, v1
 
-    .local v3, len$:I
+    .local v3, "len$":I
     const/4 v2, 0x0
 
-    .local v2, i$:I
+    .local v2, "i$":I
     :goto_0
     if-ge v2, v3, :cond_7
 
     aget-object v4, v1, v2
 
     .line 682
-    .local v4, ob:Ljava/lang/Object;
+    .local v4, "ob":Ljava/lang/Object;
     if-eqz v4, :cond_0
 
     .line 683
@@ -241,11 +239,11 @@
     goto :goto_0
 
     .line 686
-    .end local v1           #arr$:[Ljava/lang/Object;
-    .end local v2           #i$:I
-    .end local v3           #len$:I
-    .end local v4           #ob:Ljava/lang/Object;
-    .restart local p2
+    .end local v1    # "arr$":[Ljava/lang/Object;
+    .end local v2    # "i$":I
+    .end local v3    # "len$":I
+    .end local v4    # "ob":Ljava/lang/Object;
+    .restart local p2    # "value":Ljava/lang/Object;
     :cond_1
     instance-of v5, p2, Ljava/util/Collection;
 
@@ -254,12 +252,12 @@
     .line 687
     check-cast p2, Ljava/util/Collection;
 
-    .end local p2
+    .end local p2    # "value":Ljava/lang/Object;
     invoke-interface {p2}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
 
-    .local v2, i$:Ljava/util/Iterator;
+    .local v2, "i$":Ljava/util/Iterator;
     :cond_2
     :goto_1
     invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
@@ -273,7 +271,7 @@
     move-result-object v4
 
     .line 688
-    .restart local v4       #ob:Ljava/lang/Object;
+    .restart local v4    # "ob":Ljava/lang/Object;
     if-eqz v4, :cond_2
 
     .line 689
@@ -284,9 +282,9 @@
     goto :goto_1
 
     .line 692
-    .end local v2           #i$:Ljava/util/Iterator;
-    .end local v4           #ob:Ljava/lang/Object;
-    .restart local p2
+    .end local v2    # "i$":Ljava/util/Iterator;
+    .end local v4    # "ob":Ljava/lang/Object;
+    .restart local p2    # "value":Ljava/lang/Object;
     :cond_3
     instance-of v5, p2, Ljava/util/Map;
 
@@ -295,7 +293,7 @@
     .line 693
     check-cast p2, Ljava/util/Map;
 
-    .end local p2
+    .end local p2    # "value":Ljava/lang/Object;
     invoke-interface {p2}, Ljava/util/Map;->values()Ljava/util/Collection;
 
     move-result-object v5
@@ -304,7 +302,7 @@
 
     move-result-object v2
 
-    .restart local v2       #i$:Ljava/util/Iterator;
+    .restart local v2    # "i$":Ljava/util/Iterator;
     :cond_4
     :goto_2
     invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
@@ -318,7 +316,7 @@
     move-result-object v4
 
     .line 694
-    .restart local v4       #ob:Ljava/lang/Object;
+    .restart local v4    # "ob":Ljava/lang/Object;
     if-eqz v4, :cond_4
 
     .line 695
@@ -329,9 +327,9 @@
     goto :goto_2
 
     .line 699
-    .end local v2           #i$:Ljava/util/Iterator;
-    .end local v4           #ob:Ljava/lang/Object;
-    .restart local p2
+    .end local v2    # "i$":Ljava/util/Iterator;
+    .end local v4    # "ob":Ljava/lang/Object;
+    .restart local p2    # "value":Ljava/lang/Object;
     :cond_5
     new-instance v5, Ljava/lang/IllegalStateException;
 
@@ -390,14 +388,13 @@
     invoke-virtual {v5, p2, p1}, Lcom/flurry/org/codehaus/jackson/map/deser/SettableBeanProperty;->set(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 706
-    .end local p2
+    .end local p2    # "value":Ljava/lang/Object;
     :cond_7
     return-void
 .end method
 
 .method public withValueDeserializer(Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;)Lcom/flurry/org/codehaus/jackson/map/deser/SettableBeanProperty$ManagedReferenceProperty;
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -411,7 +408,7 @@
 
     .prologue
     .line 640
-    .local p1, deser:Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer<Ljava/lang/Object;>;"
+    .local p1, "deser":Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer<Ljava/lang/Object;>;"
     new-instance v0, Lcom/flurry/org/codehaus/jackson/map/deser/SettableBeanProperty$ManagedReferenceProperty;
 
     invoke-direct {v0, p0, p1}, Lcom/flurry/org/codehaus/jackson/map/deser/SettableBeanProperty$ManagedReferenceProperty;-><init>(Lcom/flurry/org/codehaus/jackson/map/deser/SettableBeanProperty$ManagedReferenceProperty;Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;)V
@@ -421,7 +418,7 @@
 
 .method public bridge synthetic withValueDeserializer(Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;)Lcom/flurry/org/codehaus/jackson/map/deser/SettableBeanProperty;
     .locals 1
-    .parameter "x0"
+    .param p1, "x0"    # Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;
 
     .prologue
     .line 601

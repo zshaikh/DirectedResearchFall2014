@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Ljava/util/regex/Pattern;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 217
@@ -39,8 +38,8 @@
 # virtual methods
 .method public accept(Ljava/io/File;Ljava/lang/String;)Z
     .locals 2
-    .parameter "file"
-    .parameter "filename"
+    .param p1, "file"    # Ljava/io/File;
+    .param p2, "filename"    # Ljava/lang/String;
 
     .prologue
     .line 221
@@ -51,7 +50,7 @@
     move-result-object v0
 
     .line 222
-    .local v0, matcher:Ljava/util/regex/Matcher;
+    .local v0, "matcher":Ljava/util/regex/Matcher;
     invoke-virtual {v0}, Ljava/util/regex/Matcher;->matches()Z
 
     move-result v1

@@ -25,7 +25,6 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 3
-    .parameter
 
     .prologue
     const/4 v2, 0x1
@@ -114,8 +113,6 @@
 
 .method public onAccuracyChanged(Landroid/hardware/Sensor;I)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 25
@@ -124,7 +121,6 @@
 
 .method public onSensorChanged(Landroid/hardware/SensorEvent;)V
     .locals 3
-    .parameter
 
     .prologue
     const v2, 0x411cf5c3

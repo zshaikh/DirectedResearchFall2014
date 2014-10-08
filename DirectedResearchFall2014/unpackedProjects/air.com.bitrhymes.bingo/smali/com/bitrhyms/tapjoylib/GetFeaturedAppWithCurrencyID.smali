@@ -22,8 +22,8 @@
 # virtual methods
 .method public call(Lcom/adobe/fre/FREContext;[Lcom/adobe/fre/FREObject;)Lcom/adobe/fre/FREObject;
     .locals 3
-    .parameter "context"
-    .parameter "args"
+    .param p1, "context"    # Lcom/adobe/fre/FREContext;
+    .param p2, "args"    # [Lcom/adobe/fre/FREObject;
 
     .prologue
     .line 17
@@ -73,7 +73,7 @@
     move-object v0, v1
 
     .line 24
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v1, "ERROR_EVENT"
 
     invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
@@ -87,7 +87,7 @@
 
 .method public getFeaturedAppResponse(Lcom/tapjoy/TapjoyFeaturedAppObject;)V
     .locals 3
-    .parameter "featuredAppObject"
+    .param p1, "featuredAppObject"    # Lcom/tapjoy/TapjoyFeaturedAppObject;
 
     .prologue
     .line 31
@@ -96,7 +96,7 @@
     move-result-object v0
 
     .line 32
-    .local v0, context:Lcom/adobe/fre/FREContext;
+    .local v0, "context":Lcom/adobe/fre/FREContext;
     if-eqz v0, :cond_0
 
     .line 33
@@ -113,7 +113,7 @@
 
 .method public getFeaturedAppResponseFailed(Ljava/lang/String;)V
     .locals 3
-    .parameter "error"
+    .param p1, "error"    # Ljava/lang/String;
 
     .prologue
     .line 39
@@ -122,7 +122,7 @@
     move-result-object v0
 
     .line 40
-    .local v0, context:Lcom/adobe/fre/FREContext;
+    .local v0, "context":Lcom/adobe/fre/FREContext;
     if-eqz v0, :cond_0
 
     .line 41

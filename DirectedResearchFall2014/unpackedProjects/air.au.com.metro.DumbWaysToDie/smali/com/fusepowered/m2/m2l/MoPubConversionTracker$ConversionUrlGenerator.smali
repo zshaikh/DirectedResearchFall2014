@@ -21,7 +21,6 @@
 # direct methods
 .method private constructor <init>(Lcom/fusepowered/m2/m2l/MoPubConversionTracker;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 78
@@ -34,8 +33,6 @@
 
 .method synthetic constructor <init>(Lcom/fusepowered/m2/m2l/MoPubConversionTracker;Lcom/fusepowered/m2/m2l/MoPubConversionTracker$ConversionUrlGenerator;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 78
@@ -46,7 +43,7 @@
 
 .method private setPackageId(Ljava/lang/String;)V
     .locals 1
-    .parameter "packageName"
+    .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
     .line 91
@@ -62,7 +59,7 @@
 # virtual methods
 .method public generateUrlString(Ljava/lang/String;)Ljava/lang/String;
     .locals 1
-    .parameter "serverHostname"
+    .param p1, "serverHostname"    # Ljava/lang/String;
 
     .prologue
     .line 81
@@ -78,7 +75,7 @@
     .line 84
     iget-object v0, p0, Lcom/fusepowered/m2/m2l/MoPubConversionTracker$ConversionUrlGenerator;->this$0:Lcom/fusepowered/m2/m2l/MoPubConversionTracker;
 
-    #getter for: Lcom/fusepowered/m2/m2l/MoPubConversionTracker;->mPackageName:Ljava/lang/String;
+    # getter for: Lcom/fusepowered/m2/m2l/MoPubConversionTracker;->mPackageName:Ljava/lang/String;
     invoke-static {v0}, Lcom/fusepowered/m2/m2l/MoPubConversionTracker;->access$0(Lcom/fusepowered/m2/m2l/MoPubConversionTracker;)Ljava/lang/String;
 
     move-result-object v0
@@ -88,7 +85,7 @@
     .line 85
     iget-object v0, p0, Lcom/fusepowered/m2/m2l/MoPubConversionTracker$ConversionUrlGenerator;->this$0:Lcom/fusepowered/m2/m2l/MoPubConversionTracker;
 
-    #getter for: Lcom/fusepowered/m2/m2l/MoPubConversionTracker;->mContext:Landroid/content/Context;
+    # getter for: Lcom/fusepowered/m2/m2l/MoPubConversionTracker;->mContext:Landroid/content/Context;
     invoke-static {v0}, Lcom/fusepowered/m2/m2l/MoPubConversionTracker;->access$1(Lcom/fusepowered/m2/m2l/MoPubConversionTracker;)Landroid/content/Context;
 
     move-result-object v0
@@ -102,7 +99,7 @@
     .line 86
     iget-object v0, p0, Lcom/fusepowered/m2/m2l/MoPubConversionTracker$ConversionUrlGenerator;->this$0:Lcom/fusepowered/m2/m2l/MoPubConversionTracker;
 
-    #getter for: Lcom/fusepowered/m2/m2l/MoPubConversionTracker;->mContext:Landroid/content/Context;
+    # getter for: Lcom/fusepowered/m2/m2l/MoPubConversionTracker;->mContext:Landroid/content/Context;
     invoke-static {v0}, Lcom/fusepowered/m2/m2l/MoPubConversionTracker;->access$1(Lcom/fusepowered/m2/m2l/MoPubConversionTracker;)Landroid/content/Context;
 
     move-result-object v0

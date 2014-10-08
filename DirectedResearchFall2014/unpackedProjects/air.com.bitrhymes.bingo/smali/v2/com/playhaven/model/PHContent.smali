@@ -15,7 +15,7 @@
 
 
 # static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator; = null
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroid/os/Parcelable$Creator",
@@ -95,7 +95,7 @@
     iput-object v0, p0, Lv2/com/playhaven/model/PHContent;->frameDict:Ljava/util/HashMap;
 
     .line 48
-    const-wide/high16 v0, 0x4024
+    const-wide/high16 v0, 0x4024000000000000L
 
     iput-wide v0, p0, Lv2/com/playhaven/model/PHContent;->closeButtonDelay:D
 
@@ -110,7 +110,7 @@
 
 .method public constructor <init>(Landroid/os/Parcel;)V
     .locals 12
-    .parameter "in"
+    .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
     const/4 v11, 0x1
@@ -143,7 +143,7 @@
     move-result-object v5
 
     .line 60
-    .local v5, transition_str:Ljava/lang/String;
+    .local v5, "transition_str":Ljava/lang/String;
     if-eqz v5, :cond_0
 
     .line 61
@@ -198,7 +198,7 @@
     move-result-object v0
 
     .line 71
-    .local v0, context_str:Ljava/lang/String;
+    .local v0, "context_str":Ljava/lang/String;
     if-eqz v0, :cond_2
 
     .line 72
@@ -220,7 +220,7 @@
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_1
 
     .line 79
-    .end local v0           #context_str:Ljava/lang/String;
+    .end local v0    # "context_str":Ljava/lang/String;
     :cond_2
     :goto_0
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
@@ -228,7 +228,7 @@
     move-result-object v6
 
     .line 80
-    .local v6, url_str:Ljava/lang/String;
+    .local v6, "url_str":Ljava/lang/String;
     if-eqz v6, :cond_3
 
     .line 81
@@ -273,7 +273,7 @@
     move-result-object v2
 
     .line 89
-    .local v2, frameBundle:Landroid/os/Bundle;
+    .local v2, "frameBundle":Landroid/os/Bundle;
     if-eqz v2, :cond_5
 
     .line 90
@@ -285,7 +285,7 @@
 
     move-result-object v3
 
-    .local v3, i$:Ljava/util/Iterator;
+    .local v3, "i$":Ljava/util/Iterator;
     :goto_2
     invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
 
@@ -300,7 +300,7 @@
     check-cast v4, Ljava/lang/String;
 
     .line 92
-    .local v4, key:Ljava/lang/String;
+    .local v4, "key":Ljava/lang/String;
     :try_start_1
     iget-object v7, p0, Lv2/com/playhaven/model/PHContent;->frameDict:Ljava/util/HashMap;
 
@@ -325,7 +325,7 @@
     move-object v1, v7
 
     .line 94
-    .local v1, e:Lorg/json/JSONException;
+    .local v1, "e":Lorg/json/JSONException;
     const-string v7, "Error deserializing frameDict from bundle in PHContent"
 
     invoke-static {v7}, Lv2/com/playhaven/utils/PHStringUtil;->log(Ljava/lang/String;)V
@@ -333,18 +333,18 @@
     goto :goto_2
 
     .line 75
-    .end local v1           #e:Lorg/json/JSONException;
-    .end local v2           #frameBundle:Landroid/os/Bundle;
-    .end local v3           #i$:Ljava/util/Iterator;
-    .end local v4           #key:Ljava/lang/String;
-    .end local v6           #url_str:Ljava/lang/String;
+    .end local v1    # "e":Lorg/json/JSONException;
+    .end local v2    # "frameBundle":Landroid/os/Bundle;
+    .end local v3    # "i$":Ljava/util/Iterator;
+    .end local v4    # "key":Ljava/lang/String;
+    .end local v6    # "url_str":Ljava/lang/String;
     :catch_1
     move-exception v7
 
     move-object v1, v7
 
     .line 76
-    .restart local v1       #e:Lorg/json/JSONException;
+    .restart local v1    # "e":Lorg/json/JSONException;
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -371,8 +371,8 @@
 
     goto :goto_0
 
-    .end local v1           #e:Lorg/json/JSONException;
-    .restart local v6       #url_str:Ljava/lang/String;
+    .end local v1    # "e":Lorg/json/JSONException;
+    .restart local v6    # "url_str":Ljava/lang/String;
     :cond_4
     move v7, v10
 
@@ -380,14 +380,14 @@
     goto :goto_1
 
     .line 100
-    .restart local v2       #frameBundle:Landroid/os/Bundle;
+    .restart local v2    # "frameBundle":Landroid/os/Bundle;
     :cond_5
     return-void
 .end method
 
 .method public constructor <init>(Lorg/json/JSONObject;)V
     .locals 1
-    .parameter "dict"
+    .param p1, "dict"    # Lorg/json/JSONObject;
 
     .prologue
     .line 53
@@ -419,7 +419,7 @@
 
 .method private setFrameDict(Lorg/json/JSONObject;)V
     .locals 5
-    .parameter "frame"
+    .param p1, "frame"    # Lorg/json/JSONObject;
 
     .prologue
     .line 178
@@ -434,7 +434,7 @@
     move-result-object v2
 
     .line 185
-    .local v2, keys:Ljava/util/Iterator;,"Ljava/util/Iterator<Ljava/lang/String;>;"
+    .local v2, "keys":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/String;>;"
     :goto_0
     invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
@@ -450,7 +450,7 @@
     check-cast v1, Ljava/lang/String;
 
     .line 188
-    .local v1, key:Ljava/lang/String;
+    .local v1, "key":Ljava/lang/String;
     iget-object v4, p0, Lv2/com/playhaven/model/PHContent;->frameDict:Ljava/util/HashMap;
 
     invoke-virtual {p1, v1}, Lorg/json/JSONObject;->get(Ljava/lang/String;)Ljava/lang/Object;
@@ -466,19 +466,19 @@
     goto :goto_0
 
     .line 190
-    .end local v1           #key:Ljava/lang/String;
-    .end local v2           #keys:Ljava/util/Iterator;,"Ljava/util/Iterator<Ljava/lang/String;>;"
+    .end local v1    # "key":Ljava/lang/String;
+    .end local v2    # "keys":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/String;>;"
     :catch_0
     move-exception v3
 
     move-object v0, v3
 
     .line 191
-    .local v0, e:Lorg/json/JSONException;
+    .local v0, "e":Lorg/json/JSONException;
     invoke-virtual {v0}, Lorg/json/JSONException;->printStackTrace()V
 
     .line 194
-    .end local v0           #e:Lorg/json/JSONException;
+    .end local v0    # "e":Lorg/json/JSONException;
     :cond_0
     return-void
 .end method
@@ -497,7 +497,7 @@
 
 .method public fromJSON(Lorg/json/JSONObject;)V
     .locals 13
-    .parameter "dict"
+    .param p1, "dict"    # Lorg/json/JSONObject;
 
     .prologue
     const/4 v12, 0x0
@@ -513,7 +513,7 @@
     move-result-object v3
 
     .line 125
-    .local v3, frame:Ljava/lang/Object;
+    .local v3, "frame":Ljava/lang/Object;
     const-string v6, "url"
 
     invoke-virtual {p1, v6}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
@@ -521,7 +521,7 @@
     move-result-object v5
 
     .line 126
-    .local v5, url:Ljava/lang/String;
+    .local v5, "url":Ljava/lang/String;
     const-string v6, "transition"
 
     invoke-virtual {p1, v6}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
@@ -529,7 +529,7 @@
     move-result-object v4
 
     .line 127
-    .local v4, transition:Ljava/lang/String;
+    .local v4, "transition":Ljava/lang/String;
     const-string v6, "close_delay"
 
     invoke-virtual {p1, v6}, Lorg/json/JSONObject;->optDouble(Ljava/lang/String;)D
@@ -591,7 +591,7 @@
     invoke-virtual {v7, v6, v8}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 139
-    .end local v3           #frame:Ljava/lang/Object;
+    .end local v3    # "frame":Ljava/lang/Object;
     :cond_0
     :goto_0
     const-string v6, ""
@@ -617,7 +617,7 @@
     move-result-object v1
 
     .line 144
-    .local v1, context:Lorg/json/JSONObject;
+    .local v1, "context":Lorg/json/JSONObject;
     sget-object v6, Lorg/json/JSONObject;->NULL:Ljava/lang/Object;
 
     invoke-virtual {v6, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
@@ -660,17 +660,17 @@
     iput-object v6, p0, Lv2/com/playhaven/model/PHContent;->transition:Lv2/com/playhaven/model/PHContent$TransitionType;
 
     .line 161
-    .end local v1           #context:Lorg/json/JSONObject;
-    .end local v4           #transition:Ljava/lang/String;
-    .end local v5           #url:Ljava/lang/String;
+    .end local v1    # "context":Lorg/json/JSONObject;
+    .end local v4    # "transition":Ljava/lang/String;
+    .end local v5    # "url":Ljava/lang/String;
     :cond_2
     :goto_2
     return-void
 
     .line 135
-    .restart local v3       #frame:Ljava/lang/Object;
-    .restart local v4       #transition:Ljava/lang/String;
-    .restart local v5       #url:Ljava/lang/String;
+    .restart local v3    # "frame":Ljava/lang/Object;
+    .restart local v4    # "transition":Ljava/lang/String;
+    .restart local v5    # "url":Ljava/lang/String;
     :cond_3
     instance-of v6, v3, Lorg/json/JSONObject;
 
@@ -679,7 +679,7 @@
     .line 136
     check-cast v3, Lorg/json/JSONObject;
 
-    .end local v3           #frame:Ljava/lang/Object;
+    .end local v3    # "frame":Ljava/lang/Object;
     invoke-direct {p0, v3}, Lv2/com/playhaven/model/PHContent;->setFrameDict(Lorg/json/JSONObject;)V
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
@@ -687,22 +687,22 @@
     goto :goto_0
 
     .line 158
-    .end local v4           #transition:Ljava/lang/String;
-    .end local v5           #url:Ljava/lang/String;
+    .end local v4    # "transition":Ljava/lang/String;
+    .end local v5    # "url":Ljava/lang/String;
     :catch_0
     move-exception v6
 
     move-object v2, v6
 
     .line 159
-    .local v2, e:Lorg/json/JSONException;
+    .local v2, "e":Lorg/json/JSONException;
     invoke-virtual {v2}, Lorg/json/JSONException;->printStackTrace()V
 
     goto :goto_2
 
-    .end local v2           #e:Lorg/json/JSONException;
-    .restart local v4       #transition:Ljava/lang/String;
-    .restart local v5       #url:Ljava/lang/String;
+    .end local v2    # "e":Lorg/json/JSONException;
+    .restart local v4    # "transition":Ljava/lang/String;
+    .restart local v5    # "url":Ljava/lang/String;
     :cond_4
     move-object v6, v12
 
@@ -710,7 +710,7 @@
     goto :goto_1
 
     .line 153
-    .restart local v1       #context:Lorg/json/JSONObject;
+    .restart local v1    # "context":Lorg/json/JSONObject;
     :cond_5
     :try_start_1
     const-string v6, "PH_DIALOG"
@@ -741,10 +741,10 @@
 
 .method public getFrame(I)Landroid/graphics/RectF;
     .locals 10
-    .parameter "orientation"
+    .param p1, "orientation"    # I
 
     .prologue
-    const/high16 v9, 0x4f00
+    const/high16 v9, 0x4f000000
 
     const/4 v8, 0x0
 
@@ -758,7 +758,7 @@
     move-object v2, v6
 
     .line 200
-    .local v2, orientKey:Ljava/lang/String;
+    .local v2, "orientKey":Ljava/lang/String;
     :goto_0
     iget-object v6, p0, Lv2/com/playhaven/model/PHContent;->frameDict:Ljava/util/HashMap;
 
@@ -780,7 +780,7 @@
     return-object v6
 
     .line 198
-    .end local v2           #orientKey:Ljava/lang/String;
+    .end local v2    # "orientKey":Ljava/lang/String;
     :cond_0
     const-string v6, "PH_PORTRAIT"
 
@@ -789,7 +789,7 @@
     goto :goto_0
 
     .line 203
-    .restart local v2       #orientKey:Ljava/lang/String;
+    .restart local v2    # "orientKey":Ljava/lang/String;
     :cond_1
     iget-object v6, p0, Lv2/com/playhaven/model/PHContent;->frameDict:Ljava/util/HashMap;
 
@@ -803,19 +803,19 @@
     const/4 v4, 0x0
 
     .line 206
-    .local v4, x:F
+    .local v4, "x":F
     const/4 v5, 0x0
 
     .line 207
-    .local v5, y:F
+    .local v5, "y":F
     const/4 v3, 0x0
 
     .line 208
-    .local v3, w:F
+    .local v3, "w":F
     const/4 v1, 0x0
 
     .line 211
-    .local v1, h:F
+    .local v1, "h":F
     iget-object v6, p0, Lv2/com/playhaven/model/PHContent;->frameDict:Ljava/util/HashMap;
 
     invoke-virtual {v6, v2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -825,7 +825,7 @@
     check-cast v0, Lorg/json/JSONObject;
 
     .line 212
-    .local v0, dict:Lorg/json/JSONObject;
+    .local v0, "dict":Lorg/json/JSONObject;
     if-eqz v0, :cond_2
 
     .line 213
@@ -876,11 +876,11 @@
     goto :goto_1
 
     .line 222
-    .end local v0           #dict:Lorg/json/JSONObject;
-    .end local v1           #h:F
-    .end local v3           #w:F
-    .end local v4           #x:F
-    .end local v5           #y:F
+    .end local v0    # "dict":Lorg/json/JSONObject;
+    .end local v1    # "h":F
+    .end local v3    # "w":F
+    .end local v4    # "x":F
+    .end local v5    # "y":F
     :cond_2
     new-instance v6, Landroid/graphics/RectF;
 
@@ -940,7 +940,6 @@
 
 .method public setFrames(Ljava/util/HashMap;)V
     .locals 0
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -954,7 +953,7 @@
 
     .prologue
     .line 174
-    .local p1, frameDict:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Lorg/json/JSONObject;>;"
+    .local p1, "frameDict":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Lorg/json/JSONObject;>;"
     iput-object p1, p0, Lv2/com/playhaven/model/PHContent;->frameDict:Ljava/util/HashMap;
 
     .line 175
@@ -971,7 +970,7 @@
     const-string v1, "(NULL)"
 
     .line 229
-    .local v1, formattedJson:Ljava/lang/String;
+    .local v1, "formattedJson":Ljava/lang/String;
     :try_start_0
     iget-object v3, p0, Lv2/com/playhaven/model/PHContent;->context:Lorg/json/JSONObject;
 
@@ -1020,18 +1019,18 @@
     move-result-object v2
 
     .line 243
-    .local v2, message:Ljava/lang/String;
+    .local v2, "message":Ljava/lang/String;
     return-object v2
 
     .line 230
-    .end local v2           #message:Ljava/lang/String;
+    .end local v2    # "message":Ljava/lang/String;
     :catch_0
     move-exception v3
 
     move-object v0, v3
 
     .line 231
-    .local v0, e:Lorg/json/JSONException;
+    .local v0, "e":Lorg/json/JSONException;
     invoke-virtual {v0}, Lorg/json/JSONException;->printStackTrace()V
 
     .line 232
@@ -1042,8 +1041,8 @@
 
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 5
-    .parameter "out"
-    .parameter "flags"
+    .param p1, "out"    # Landroid/os/Parcel;
+    .param p2, "flags"    # I
 
     .prologue
     const-string v4, "null"
@@ -1128,7 +1127,7 @@
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     .line 268
-    .local v0, frameBundle:Landroid/os/Bundle;
+    .local v0, "frameBundle":Landroid/os/Bundle;
     iget-object v3, p0, Lv2/com/playhaven/model/PHContent;->frameDict:Ljava/util/HashMap;
 
     invoke-virtual {v3}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
@@ -1139,7 +1138,7 @@
 
     move-result-object v1
 
-    .local v1, i$:Ljava/util/Iterator;
+    .local v1, "i$":Ljava/util/Iterator;
     :goto_5
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
@@ -1154,7 +1153,7 @@
     check-cast v2, Ljava/lang/String;
 
     .line 269
-    .local v2, key:Ljava/lang/String;
+    .local v2, "key":Ljava/lang/String;
     iget-object v3, p0, Lv2/com/playhaven/model/PHContent;->frameDict:Ljava/util/HashMap;
 
     invoke-virtual {v3, v2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1172,9 +1171,9 @@
     goto :goto_5
 
     .line 258
-    .end local v0           #frameBundle:Landroid/os/Bundle;
-    .end local v1           #i$:Ljava/util/Iterator;
-    .end local v2           #key:Ljava/lang/String;
+    .end local v0    # "frameBundle":Landroid/os/Bundle;
+    .end local v1    # "i$":Ljava/util/Iterator;
+    .end local v2    # "key":Ljava/lang/String;
     :cond_0
     const-string v3, "null"
 
@@ -1213,14 +1212,14 @@
     goto :goto_4
 
     .line 271
-    .restart local v0       #frameBundle:Landroid/os/Bundle;
-    .restart local v1       #i$:Ljava/util/Iterator;
+    .restart local v0    # "frameBundle":Landroid/os/Bundle;
+    .restart local v1    # "i$":Ljava/util/Iterator;
     :cond_5
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeBundle(Landroid/os/Bundle;)V
 
     .line 273
-    .end local v0           #frameBundle:Landroid/os/Bundle;
-    .end local v1           #i$:Ljava/util/Iterator;
+    .end local v0    # "frameBundle":Landroid/os/Bundle;
+    .end local v1    # "i$":Ljava/util/Iterator;
     :cond_6
     return-void
 .end method

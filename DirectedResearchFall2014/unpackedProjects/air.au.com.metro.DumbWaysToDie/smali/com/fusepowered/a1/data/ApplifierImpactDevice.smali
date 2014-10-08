@@ -16,7 +16,7 @@
 
 .method public static buildMacAddressFromInterface(Ljava/net/NetworkInterface;)Ljava/lang/String;
     .locals 13
-    .parameter "intf"
+    .param p0, "intf"    # Ljava/net/NetworkInterface;
     .annotation build Landroid/annotation/SuppressLint;
         value = {
             "DefaultLocale"
@@ -34,7 +34,7 @@
     const/4 v5, 0x0
 
     .line 107
-    .local v5, mac:[B
+    .local v5, "mac":[B
     if-nez p0, :cond_0
 
     .line 108
@@ -62,7 +62,7 @@
     move-result-object v4
 
     .line 114
-    .local v4, layertype:Ljava/lang/reflect/Method;
+    .local v4, "layertype":Ljava/lang/reflect/Method;
     const/4 v7, 0x0
 
     new-array v7, v7, [Ljava/lang/Object;
@@ -80,7 +80,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 120
-    .end local v4           #layertype:Ljava/lang/reflect/Method;
+    .end local v4    # "layertype":Ljava/lang/reflect/Method;
     :goto_1
     if-nez v5, :cond_1
 
@@ -98,7 +98,7 @@
     move-object v2, v7
 
     .line 117
-    .local v2, e:Ljava/lang/Exception;
+    .local v2, "e":Ljava/lang/Exception;
     const-string v7, "Could not getHardwareAddress"
 
     const-class v8, Lcom/fusepowered/a1/data/ApplifierImpactDevice;
@@ -108,17 +108,17 @@
     goto :goto_1
 
     .line 124
-    .end local v2           #e:Ljava/lang/Exception;
+    .end local v2    # "e":Ljava/lang/Exception;
     :cond_1
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
     .line 125
-    .local v1, buf:Ljava/lang/StringBuilder;
+    .local v1, "buf":Ljava/lang/StringBuilder;
     const/4 v3, 0x0
 
-    .local v3, idx:I
+    .local v3, "idx":I
     :goto_2
     array-length v7, v5
 
@@ -150,7 +150,7 @@
     move-result-object v6
 
     .line 130
-    .local v6, retMacAddress:Ljava/lang/String;
+    .local v6, "retMacAddress":Ljava/lang/String;
     invoke-virtual {v6}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
 
     move-result-object v7
@@ -158,7 +158,7 @@
     goto :goto_0
 
     .line 126
-    .end local v6           #retMacAddress:Ljava/lang/String;
+    .end local v6    # "retMacAddress":Ljava/lang/String;
     :cond_3
     const-string v7, "%02X:"
 
@@ -197,7 +197,7 @@
     const-string v0, "unknown"
 
     .line 52
-    .local v0, androidID:Ljava/lang/String;
+    .local v0, "androidID":Ljava/lang/String;
     :try_start_0
     sget-object v2, Lcom/fusepowered/a1/properties/ApplifierImpactProperties;->CURRENT_ACTIVITY:Landroid/app/Activity;
 
@@ -233,7 +233,7 @@
     move-object v1, v2
 
     .line 56
-    .local v1, e:Ljava/lang/Exception;
+    .local v1, "e":Ljava/lang/Exception;
     new-instance v2, Ljava/lang/StringBuilder;
 
     const-string v3, "Problems fetching androidId: "
@@ -267,7 +267,7 @@
     const-string v1, "unknown"
 
     .line 81
-    .local v1, androidSerial:Ljava/lang/String;
+    .local v1, "androidSerial":Ljava/lang/String;
     :try_start_0
     const-string v4, "android.os.SystemProperties"
 
@@ -276,7 +276,7 @@
     move-result-object v2
 
     .line 82
-    .local v2, c:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local v2, "c":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const-string v4, "get"
 
     const/4 v5, 0x1
@@ -294,7 +294,7 @@
     move-result-object v3
 
     .line 83
-    .local v3, get:Ljava/lang/reflect/Method;
+    .local v3, "get":Ljava/lang/reflect/Method;
     const/4 v4, 0x1
 
     new-array v4, v4, [Ljava/lang/Object;
@@ -328,8 +328,8 @@
     move-result-object v1
 
     .line 90
-    .end local v2           #c:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
-    .end local v3           #get:Ljava/lang/reflect/Method;
+    .end local v2    # "c":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
+    .end local v3    # "get":Ljava/lang/reflect/Method;
     :goto_0
     return-object v1
 
@@ -420,7 +420,7 @@
 
 .method public static getInterfaceFor(Ljava/lang/String;)Ljava/net/NetworkInterface;
     .locals 6
-    .parameter "interfaceName"
+    .param p0, "interfaceName"    # Ljava/lang/String;
 
     .prologue
     const/4 v5, 0x0
@@ -429,7 +429,7 @@
     const/4 v1, 0x0
 
     .line 137
-    .local v1, interfaces:Ljava/util/List;,"Ljava/util/List<Ljava/net/NetworkInterface;>;"
+    .local v1, "interfaces":Ljava/util/List;, "Ljava/util/List<Ljava/net/NetworkInterface;>;"
     :try_start_0
     invoke-static {}, Ljava/net/NetworkInterface;->getNetworkInterfaces()Ljava/util/Enumeration;
 
@@ -465,14 +465,14 @@
 
     move-object v0, v3
 
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     move-object v3, v5
 
     .line 140
     goto :goto_0
 
     .line 143
-    .end local v0           #e:Ljava/lang/Exception;
+    .end local v0    # "e":Ljava/lang/Exception;
     :cond_1
     invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -481,7 +481,7 @@
     check-cast v2, Ljava/net/NetworkInterface;
 
     .line 144
-    .local v2, intf:Ljava/net/NetworkInterface;
+    .local v2, "intf":Ljava/net/NetworkInterface;
     if-eqz p0, :cond_0
 
     .line 145
@@ -532,7 +532,7 @@
     const/4 v0, 0x0
 
     .line 95
-    .local v0, intf:Ljava/net/NetworkInterface;
+    .local v0, "intf":Ljava/net/NetworkInterface;
     const-string v1, "eth0"
 
     invoke-static {v1}, Lcom/fusepowered/a1/data/ApplifierImpactDevice;->getInterfaceFor(Ljava/lang/String;)Ljava/net/NetworkInterface;
@@ -566,7 +566,7 @@
     const-string v1, "unknown"
 
     .line 38
-    .local v1, odin1ID:Ljava/lang/String;
+    .local v1, "odin1ID":Ljava/lang/String;
     :try_start_0
     sget-object v2, Lcom/fusepowered/a1/properties/ApplifierImpactProperties;->CURRENT_ACTIVITY:Landroid/app/Activity;
 
@@ -597,7 +597,7 @@
     move-object v0, v2
 
     .line 41
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     new-instance v2, Ljava/lang/StringBuilder;
 
     const-string v3, "Could not resolve ODIN1 Id: "
@@ -631,7 +631,7 @@
     const-string v0, "unknown"
 
     .line 158
-    .local v0, deviceId:Ljava/lang/String;
+    .local v0, "deviceId":Ljava/lang/String;
     sget-object v1, Lcom/fusepowered/a1/properties/ApplifierImpactProperties;->CURRENT_ACTIVITY:Landroid/app/Activity;
 
     invoke-static {v1}, Lcom/fusepowered/a1/data/ApplifierImpactOpenUDID;->syncContext(Landroid/content/Context;)V
@@ -715,7 +715,7 @@
     const-string v1, "unknown"
 
     .line 66
-    .local v1, telephonyID:Ljava/lang/String;
+    .local v1, "telephonyID":Ljava/lang/String;
     :try_start_0
     sget-object v3, Lcom/fusepowered/a1/properties/ApplifierImpactProperties;->CURRENT_ACTIVITY:Landroid/app/Activity;
 
@@ -728,7 +728,7 @@
     check-cast v2, Landroid/telephony/TelephonyManager;
 
     .line 67
-    .local v2, tmanager:Landroid/telephony/TelephonyManager;
+    .local v2, "tmanager":Landroid/telephony/TelephonyManager;
     invoke-virtual {v2}, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;
 
     move-result-object v3
@@ -745,7 +745,7 @@
     move-result-object v1
 
     .line 74
-    .end local v2           #tmanager:Landroid/telephony/TelephonyManager;
+    .end local v2    # "tmanager":Landroid/telephony/TelephonyManager;
     :goto_0
     return-object v1
 
@@ -756,7 +756,7 @@
     move-object v0, v3
 
     .line 71
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     new-instance v3, Ljava/lang/StringBuilder;
 
     const-string v4, "Problems fetching telephonyId: "
@@ -792,7 +792,7 @@
     const/4 v1, 0x0
 
     .line 174
-    .local v1, mConnectivity:Landroid/net/ConnectivityManager;
+    .local v1, "mConnectivity":Landroid/net/ConnectivityManager;
     sget-object v4, Lcom/fusepowered/a1/properties/ApplifierImpactProperties;->CURRENT_ACTIVITY:Landroid/app/Activity;
 
     const-string v5, "connectivity"
@@ -801,11 +801,11 @@
 
     move-result-object v1
 
-    .end local v1           #mConnectivity:Landroid/net/ConnectivityManager;
+    .end local v1    # "mConnectivity":Landroid/net/ConnectivityManager;
     check-cast v1, Landroid/net/ConnectivityManager;
 
     .line 176
-    .restart local v1       #mConnectivity:Landroid/net/ConnectivityManager;
+    .restart local v1    # "mConnectivity":Landroid/net/ConnectivityManager;
     if-nez v1, :cond_0
 
     move v4, v6
@@ -827,13 +827,13 @@
     check-cast v2, Landroid/telephony/TelephonyManager;
 
     .line 181
-    .local v2, mTelephony:Landroid/telephony/TelephonyManager;
+    .local v2, "mTelephony":Landroid/telephony/TelephonyManager;
     invoke-virtual {v1}, Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;
 
     move-result-object v0
 
     .line 182
-    .local v0, info:Landroid/net/NetworkInfo;
+    .local v0, "info":Landroid/net/NetworkInfo;
     if-eqz v0, :cond_1
 
     invoke-virtual {v1}, Landroid/net/ConnectivityManager;->getBackgroundDataSetting()Z
@@ -867,7 +867,7 @@
     move-result v3
 
     .line 187
-    .local v3, netType:I
+    .local v3, "netType":I
     const/4 v4, 0x1
 
     if-ne v3, v4, :cond_3

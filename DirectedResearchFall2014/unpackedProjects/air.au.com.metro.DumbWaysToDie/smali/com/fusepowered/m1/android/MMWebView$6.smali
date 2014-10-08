@@ -26,8 +26,6 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m1/android/MMWebView;Ljava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 563

@@ -52,8 +52,6 @@
 
 .method public static ConvertMBCStoUTF16([BLjava/lang/String;)[B
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     .line 110
@@ -97,8 +95,6 @@
 
 .method public static ConvertMBCStoUTF8([BLjava/lang/String;)[B
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     .line 166
@@ -147,8 +143,6 @@
 
 .method public static ConvertUTF16toMBCS([BLjava/lang/String;)[B
     .locals 3
-    .parameter
-    .parameter
 
     .prologue
     .line 126
@@ -202,8 +196,6 @@
 
 .method public static ConvertUTF8toMBCS([BLjava/lang/String;)[B
     .locals 3
-    .parameter
-    .parameter
 
     .prologue
     .line 145
@@ -257,8 +249,6 @@
 
 .method public static DecodeBuffer([BLjava/lang/String;)Ljava/nio/CharBuffer;
     .locals 2
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/nio/charset/CharacterCodingException;
@@ -366,7 +356,6 @@
 
 .method public static mbcsToUtf16([B)[C
     .locals 2
-    .parameter
 
     .prologue
     .line 75
@@ -421,7 +410,6 @@
 
 .method public static mbcsToUtf8([B)[B
     .locals 1
-    .parameter
 
     .prologue
     .line 92
@@ -440,7 +428,6 @@
 
 .method public static utf16ToUtf8([C)[B
     .locals 2
-    .parameter
 
     .prologue
     .line 55

@@ -33,9 +33,9 @@
 # virtual methods
 .method public call(Lcom/facebook/Session;Lcom/facebook/SessionState;Ljava/lang/Exception;)V
     .locals 2
-    .parameter "session"
-    .parameter "state"
-    .parameter "exception"
+    .param p1, "session"    # Lcom/facebook/Session;
+    .param p2, "state"    # Lcom/facebook/SessionState;
+    .param p3, "exception"    # Ljava/lang/Exception;
 
     .prologue
     .line 100

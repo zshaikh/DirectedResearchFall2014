@@ -62,8 +62,7 @@
 
 .method constructor <init>(Lcom/facebook/internal/WorkQueue;Ljava/lang/Runnable;)V
     .locals 0
-    .parameter
-    .parameter "callback"
+    .param p2, "callback"    # Ljava/lang/Runnable;
 
     .prologue
     .line 132
@@ -82,8 +81,8 @@
 # virtual methods
 .method addToList(Lcom/facebook/internal/WorkQueue$WorkNode;Z)Lcom/facebook/internal/WorkQueue$WorkNode;
     .locals 2
-    .parameter "list"
-    .parameter "addToFront"
+    .param p1, "list"    # Lcom/facebook/internal/WorkQueue$WorkNode;
+    .param p2, "addToFront"    # Z
 
     .prologue
     .line 176
@@ -171,7 +170,7 @@
     .line 138
     iget-object v0, p0, Lcom/facebook/internal/WorkQueue$WorkNode;->this$0:Lcom/facebook/internal/WorkQueue;
 
-    #getter for: Lcom/facebook/internal/WorkQueue;->workLock:Ljava/lang/Object;
+    # getter for: Lcom/facebook/internal/WorkQueue;->workLock:Ljava/lang/Object;
     invoke-static {v0}, Lcom/facebook/internal/WorkQueue;->access$0(Lcom/facebook/internal/WorkQueue;)Ljava/lang/Object;
 
     move-result-object v0
@@ -191,7 +190,7 @@
 
     iget-object v2, p0, Lcom/facebook/internal/WorkQueue$WorkNode;->this$0:Lcom/facebook/internal/WorkQueue;
 
-    #getter for: Lcom/facebook/internal/WorkQueue;->pendingJobs:Lcom/facebook/internal/WorkQueue$WorkNode;
+    # getter for: Lcom/facebook/internal/WorkQueue;->pendingJobs:Lcom/facebook/internal/WorkQueue$WorkNode;
     invoke-static {v2}, Lcom/facebook/internal/WorkQueue;->access$1(Lcom/facebook/internal/WorkQueue;)Lcom/facebook/internal/WorkQueue$WorkNode;
 
     move-result-object v2
@@ -200,7 +199,6 @@
 
     move-result-object v2
 
-    #setter for: Lcom/facebook/internal/WorkQueue;->pendingJobs:Lcom/facebook/internal/WorkQueue$WorkNode;
     invoke-static {v1, v2}, Lcom/facebook/internal/WorkQueue;->access$2(Lcom/facebook/internal/WorkQueue;Lcom/facebook/internal/WorkQueue$WorkNode;)V
 
     .line 141
@@ -269,7 +267,7 @@
     .line 150
     iget-object v0, p0, Lcom/facebook/internal/WorkQueue$WorkNode;->this$0:Lcom/facebook/internal/WorkQueue;
 
-    #getter for: Lcom/facebook/internal/WorkQueue;->workLock:Ljava/lang/Object;
+    # getter for: Lcom/facebook/internal/WorkQueue;->workLock:Ljava/lang/Object;
     invoke-static {v0}, Lcom/facebook/internal/WorkQueue;->access$0(Lcom/facebook/internal/WorkQueue;)Ljava/lang/Object;
 
     move-result-object v0
@@ -289,7 +287,7 @@
 
     iget-object v2, p0, Lcom/facebook/internal/WorkQueue$WorkNode;->this$0:Lcom/facebook/internal/WorkQueue;
 
-    #getter for: Lcom/facebook/internal/WorkQueue;->pendingJobs:Lcom/facebook/internal/WorkQueue$WorkNode;
+    # getter for: Lcom/facebook/internal/WorkQueue;->pendingJobs:Lcom/facebook/internal/WorkQueue$WorkNode;
     invoke-static {v2}, Lcom/facebook/internal/WorkQueue;->access$1(Lcom/facebook/internal/WorkQueue;)Lcom/facebook/internal/WorkQueue$WorkNode;
 
     move-result-object v2
@@ -298,7 +296,6 @@
 
     move-result-object v2
 
-    #setter for: Lcom/facebook/internal/WorkQueue;->pendingJobs:Lcom/facebook/internal/WorkQueue$WorkNode;
     invoke-static {v1, v2}, Lcom/facebook/internal/WorkQueue;->access$2(Lcom/facebook/internal/WorkQueue;Lcom/facebook/internal/WorkQueue$WorkNode;)V
 
     .line 153
@@ -306,7 +303,7 @@
 
     iget-object v2, p0, Lcom/facebook/internal/WorkQueue$WorkNode;->this$0:Lcom/facebook/internal/WorkQueue;
 
-    #getter for: Lcom/facebook/internal/WorkQueue;->pendingJobs:Lcom/facebook/internal/WorkQueue$WorkNode;
+    # getter for: Lcom/facebook/internal/WorkQueue;->pendingJobs:Lcom/facebook/internal/WorkQueue$WorkNode;
     invoke-static {v2}, Lcom/facebook/internal/WorkQueue;->access$1(Lcom/facebook/internal/WorkQueue;)Lcom/facebook/internal/WorkQueue$WorkNode;
 
     move-result-object v2
@@ -317,7 +314,6 @@
 
     move-result-object v2
 
-    #setter for: Lcom/facebook/internal/WorkQueue;->pendingJobs:Lcom/facebook/internal/WorkQueue$WorkNode;
     invoke-static {v1, v2}, Lcom/facebook/internal/WorkQueue;->access$2(Lcom/facebook/internal/WorkQueue;Lcom/facebook/internal/WorkQueue$WorkNode;)V
 
     .line 150
@@ -340,7 +336,7 @@
 
 .method removeFromList(Lcom/facebook/internal/WorkQueue$WorkNode;)Lcom/facebook/internal/WorkQueue$WorkNode;
     .locals 2
-    .parameter "list"
+    .param p1, "list"    # Lcom/facebook/internal/WorkQueue$WorkNode;
 
     .prologue
     .line 191
@@ -421,7 +417,7 @@
 
 .method setIsRunning(Z)V
     .locals 0
-    .parameter "isRunning"
+    .param p1, "isRunning"    # Z
 
     .prologue
     .line 172
@@ -433,7 +429,7 @@
 
 .method verify(Z)V
     .locals 1
-    .parameter "shouldBeRunning"
+    .param p1, "shouldBeRunning"    # Z
 
     .prologue
     .line 210

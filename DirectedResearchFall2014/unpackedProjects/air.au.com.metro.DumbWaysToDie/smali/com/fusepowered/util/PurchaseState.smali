@@ -86,8 +86,6 @@
 
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()V"
@@ -103,7 +101,7 @@
 
 .method public static valueOf(I)Lcom/fusepowered/util/PurchaseState;
     .locals 2
-    .parameter "index"
+    .param p0, "index"    # I
 
     .prologue
     .line 12
@@ -112,7 +110,7 @@
     move-result-object v0
 
     .line 13
-    .local v0, values:[Lcom/fusepowered/util/PurchaseState;
+    .local v0, "values":[Lcom/fusepowered/util/PurchaseState;
     if-ltz p0, :cond_0
 
     array-length v1, v0
@@ -135,7 +133,7 @@
 
 .method public static valueOf(Ljava/lang/String;)Lcom/fusepowered/util/PurchaseState;
     .locals 1
-    .parameter "name"
+    .param p0, "name"    # Ljava/lang/String;
 
     .prologue
     .line 4
@@ -145,7 +143,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "name":Ljava/lang/String;
     check-cast p0, Lcom/fusepowered/util/PurchaseState;
 
     return-object p0

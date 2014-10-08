@@ -27,9 +27,9 @@
 # direct methods
 .method private constructor <init>([BII)V
     .locals 3
-    .parameter "data"
-    .parameter "start"
-    .parameter "len"
+    .param p1, "data"    # [B
+    .param p2, "start"    # I
+    .param p3, "len"    # I
 
     .prologue
     const/16 v2, 0x10
@@ -87,10 +87,10 @@
 
 .method synthetic constructor <init>([BIILcom/flurry/org/apache/avro/io/BinaryDecoder$1;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
-    .parameter "x2"
-    .parameter "x3"
+    .param p1, "x0"    # [B
+    .param p2, "x1"    # I
+    .param p3, "x2"    # I
+    .param p4, "x3"    # Lcom/flurry/org/apache/avro/io/BinaryDecoder$1;
 
     .prologue
     .line 868
@@ -103,32 +103,32 @@
 # virtual methods
 .method protected attach(ILcom/flurry/org/apache/avro/io/BinaryDecoder;)V
     .locals 2
-    .parameter "bufferSize"
-    .parameter "decoder"
+    .param p1, "bufferSize"    # I
+    .param p2, "decoder"    # Lcom/flurry/org/apache/avro/io/BinaryDecoder;
 
     .prologue
     .line 894
     iget-object v0, p0, Lcom/flurry/org/apache/avro/io/BinaryDecoder$ByteArrayByteSource;->data:[B
 
-    #setter for: Lcom/flurry/org/apache/avro/io/BinaryDecoder;->buf:[B
+    # setter for: Lcom/flurry/org/apache/avro/io/BinaryDecoder;->buf:[B
     invoke-static {p2, v0}, Lcom/flurry/org/apache/avro/io/BinaryDecoder;->access$302(Lcom/flurry/org/apache/avro/io/BinaryDecoder;[B)[B
 
     .line 895
     iget v0, p0, Lcom/flurry/org/apache/avro/io/BinaryDecoder$ByteArrayByteSource;->position:I
 
-    #setter for: Lcom/flurry/org/apache/avro/io/BinaryDecoder;->pos:I
+    # setter for: Lcom/flurry/org/apache/avro/io/BinaryDecoder;->pos:I
     invoke-static {p2, v0}, Lcom/flurry/org/apache/avro/io/BinaryDecoder;->access$402(Lcom/flurry/org/apache/avro/io/BinaryDecoder;I)I
 
     .line 896
     iget v0, p0, Lcom/flurry/org/apache/avro/io/BinaryDecoder$ByteArrayByteSource;->position:I
 
-    #setter for: Lcom/flurry/org/apache/avro/io/BinaryDecoder;->minPos:I
+    # setter for: Lcom/flurry/org/apache/avro/io/BinaryDecoder;->minPos:I
     invoke-static {p2, v0}, Lcom/flurry/org/apache/avro/io/BinaryDecoder;->access$602(Lcom/flurry/org/apache/avro/io/BinaryDecoder;I)I
 
     .line 897
     iget v0, p0, Lcom/flurry/org/apache/avro/io/BinaryDecoder$ByteArrayByteSource;->max:I
 
-    #setter for: Lcom/flurry/org/apache/avro/io/BinaryDecoder;->limit:I
+    # setter for: Lcom/flurry/org/apache/avro/io/BinaryDecoder;->limit:I
     invoke-static {p2, v0}, Lcom/flurry/org/apache/avro/io/BinaryDecoder;->access$502(Lcom/flurry/org/apache/avro/io/BinaryDecoder;I)I
 
     .line 898
@@ -170,10 +170,10 @@
 
 .method protected compactAndFill([BIII)V
     .locals 3
-    .parameter "buf"
-    .parameter "pos"
-    .parameter "minPos"
-    .parameter "remaining"
+    .param p1, "buf"    # [B
+    .param p2, "pos"    # I
+    .param p3, "minPos"    # I
+    .param p4, "remaining"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -194,7 +194,7 @@
     new-array v0, v1, [B
 
     .line 949
-    .local v0, tinybuf:[B
+    .local v0, "tinybuf":[B
     invoke-static {p1, p2, v0, v2, p4}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
     .line 950
@@ -208,7 +208,7 @@
     iput-boolean v1, p0, Lcom/flurry/org/apache/avro/io/BinaryDecoder$ByteArrayByteSource;->compacted:Z
 
     .line 953
-    .end local v0           #tinybuf:[B
+    .end local v0    # "tinybuf":[B
     :cond_0
     return-void
 .end method
@@ -233,7 +233,7 @@
     sub-int v0, v1, v2
 
     .line 976
-    .local v0, remaining:I
+    .local v0, "remaining":I
     if-nez v0, :cond_0
 
     const/4 v1, 0x1
@@ -307,7 +307,7 @@
     and-int/lit16 v0, v1, 0xff
 
     .line 963
-    .local v0, result:I
+    .local v0, "result":I
     iget-object v1, p0, Lcom/flurry/org/apache/avro/io/BinaryDecoder$ByteArrayByteSource;->ba:Lcom/flurry/org/apache/avro/io/BinaryDecoder$BufferAccessor;
 
     iget v2, p0, Lcom/flurry/org/apache/avro/io/BinaryDecoder$ByteArrayByteSource;->position:I
@@ -322,9 +322,9 @@
 
 .method protected readRaw([BII)V
     .locals 2
-    .parameter "data"
-    .parameter "off"
-    .parameter "len"
+    .param p1, "data"    # [B
+    .param p2, "off"    # I
+    .param p3, "len"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -338,7 +338,7 @@
     move-result v0
 
     .line 930
-    .local v0, read:I
+    .local v0, "read":I
     if-ge v0, p3, :cond_0
 
     .line 931
@@ -355,7 +355,7 @@
 
 .method protected skipSourceBytes(J)V
     .locals 3
-    .parameter "length"
+    .param p1, "length"    # J
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -369,7 +369,7 @@
     move-result-wide v0
 
     .line 905
-    .local v0, skipped:J
+    .local v0, "skipped":J
     cmp-long v2, v0, p1
 
     if-gez v2, :cond_0
@@ -388,9 +388,9 @@
 
 .method protected tryReadRaw([BII)I
     .locals 1
-    .parameter "data"
-    .parameter "off"
-    .parameter "len"
+    .param p1, "data"    # [B
+    .param p2, "off"    # I
+    .param p3, "len"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -406,7 +406,7 @@
 
 .method protected trySkipBytes(J)J
     .locals 4
-    .parameter "length"
+    .param p1, "length"    # J
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -442,7 +442,7 @@
     int-to-long v0, v2
 
     .line 916
-    .local v0, remaining:J
+    .local v0, "remaining":J
     cmp-long v2, v0, p1
 
     if-ltz v2, :cond_0

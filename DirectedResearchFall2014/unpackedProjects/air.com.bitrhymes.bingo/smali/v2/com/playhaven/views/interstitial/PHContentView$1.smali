@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lv2/com/playhaven/views/interstitial/PHContentView;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 246

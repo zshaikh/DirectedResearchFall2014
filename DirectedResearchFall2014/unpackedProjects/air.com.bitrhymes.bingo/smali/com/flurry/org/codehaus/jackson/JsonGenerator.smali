@@ -3,8 +3,8 @@
 .source "JsonGenerator.java"
 
 # interfaces
-.implements Ljava/io/Closeable;
 .implements Lcom/flurry/org/codehaus/jackson/Versioned;
+.implements Ljava/io/Closeable;
 
 
 # annotations
@@ -34,7 +34,7 @@
 # virtual methods
 .method public canUseSchema(Lcom/flurry/org/codehaus/jackson/FormatSchema;)Z
     .locals 1
-    .parameter "schema"
+    .param p1, "schema"    # Lcom/flurry/org/codehaus/jackson/FormatSchema;
 
     .prologue
     .line 219
@@ -53,8 +53,8 @@
 
 .method public configure(Lcom/flurry/org/codehaus/jackson/JsonGenerator$Feature;Z)Lcom/flurry/org/codehaus/jackson/JsonGenerator;
     .locals 0
-    .parameter "f"
-    .parameter "state"
+    .param p1, "f"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator$Feature;
+    .param p2, "state"    # Z
 
     .prologue
     .line 287
@@ -97,7 +97,7 @@
 
 .method public disableFeature(Lcom/flurry/org/codehaus/jackson/JsonGenerator$Feature;)V
     .locals 0
-    .parameter "f"
+    .param p1, "f"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator$Feature;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -113,7 +113,7 @@
 
 .method public enableFeature(Lcom/flurry/org/codehaus/jackson/JsonGenerator$Feature;)V
     .locals 0
-    .parameter "f"
+    .param p1, "f"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator$Feature;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -176,7 +176,7 @@
 
 .method public isFeatureEnabled(Lcom/flurry/org/codehaus/jackson/JsonGenerator$Feature;)Z
     .locals 1
-    .parameter "f"
+    .param p1, "f"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator$Feature;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -191,7 +191,7 @@
 
 .method public setCharacterEscapes(Lcom/flurry/org/codehaus/jackson/io/CharacterEscapes;)Lcom/flurry/org/codehaus/jackson/JsonGenerator;
     .locals 0
-    .parameter "esc"
+    .param p1, "esc"    # Lcom/flurry/org/codehaus/jackson/io/CharacterEscapes;
 
     .prologue
     .line 431
@@ -203,8 +203,8 @@
 
 .method public setFeature(Lcom/flurry/org/codehaus/jackson/JsonGenerator$Feature;Z)V
     .locals 0
-    .parameter "f"
-    .parameter "state"
+    .param p1, "f"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator$Feature;
+    .param p2, "state"    # Z
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -217,7 +217,7 @@
 
 .method public setHighestNonEscapedChar(I)Lcom/flurry/org/codehaus/jackson/JsonGenerator;
     .locals 0
-    .parameter "charCode"
+    .param p1, "charCode"    # I
 
     .prologue
     .line 396
@@ -226,7 +226,7 @@
 
 .method public setPrettyPrinter(Lcom/flurry/org/codehaus/jackson/PrettyPrinter;)Lcom/flurry/org/codehaus/jackson/JsonGenerator;
     .locals 0
-    .parameter "pp"
+    .param p1, "pp"    # Lcom/flurry/org/codehaus/jackson/PrettyPrinter;
 
     .prologue
     .line 359
@@ -238,7 +238,7 @@
 
 .method public setSchema(Lcom/flurry/org/codehaus/jackson/FormatSchema;)V
     .locals 3
-    .parameter "schema"
+    .param p1, "schema"    # Lcom/flurry/org/codehaus/jackson/FormatSchema;
 
     .prologue
     .line 204
@@ -312,7 +312,7 @@
 
 .method public final writeArrayFieldStart(Ljava/lang/String;)V
     .locals 0
-    .parameter "fieldName"
+    .param p1, "fieldName"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -342,7 +342,7 @@
 
 .method public writeBinary([B)V
     .locals 3
-    .parameter "data"
+    .param p1, "data"    # [B
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -368,9 +368,9 @@
 
 .method public writeBinary([BII)V
     .locals 1
-    .parameter "data"
-    .parameter "offset"
-    .parameter "len"
+    .param p1, "data"    # [B
+    .param p2, "offset"    # I
+    .param p3, "len"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -392,8 +392,8 @@
 
 .method public final writeBinaryField(Ljava/lang/String;[B)V
     .locals 0
-    .parameter "fieldName"
-    .parameter "data"
+    .param p1, "fieldName"    # Ljava/lang/String;
+    .param p2, "data"    # [B
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -423,8 +423,8 @@
 
 .method public final writeBooleanField(Ljava/lang/String;Z)V
     .locals 0
-    .parameter "fieldName"
-    .parameter "value"
+    .param p1, "fieldName"    # Ljava/lang/String;
+    .param p2, "value"    # Z
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -463,7 +463,7 @@
 
 .method public writeFieldName(Lcom/flurry/org/codehaus/jackson/SerializableString;)V
     .locals 1
-    .parameter "name"
+    .param p1, "name"    # Lcom/flurry/org/codehaus/jackson/SerializableString;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -485,7 +485,7 @@
 
 .method public writeFieldName(Lcom/flurry/org/codehaus/jackson/io/SerializedString;)V
     .locals 1
-    .parameter "name"
+    .param p1, "name"    # Lcom/flurry/org/codehaus/jackson/io/SerializedString;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -525,7 +525,7 @@
 
 .method public final writeNullField(Ljava/lang/String;)V
     .locals 0
-    .parameter "fieldName"
+    .param p1, "fieldName"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -610,8 +610,8 @@
 
 .method public final writeNumberField(Ljava/lang/String;D)V
     .locals 0
-    .parameter "fieldName"
-    .parameter "value"
+    .param p1, "fieldName"    # Ljava/lang/String;
+    .param p2, "value"    # D
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -632,8 +632,8 @@
 
 .method public final writeNumberField(Ljava/lang/String;F)V
     .locals 0
-    .parameter "fieldName"
-    .parameter "value"
+    .param p1, "fieldName"    # Ljava/lang/String;
+    .param p2, "value"    # F
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -654,8 +654,8 @@
 
 .method public final writeNumberField(Ljava/lang/String;I)V
     .locals 0
-    .parameter "fieldName"
-    .parameter "value"
+    .param p1, "fieldName"    # Ljava/lang/String;
+    .param p2, "value"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -676,8 +676,8 @@
 
 .method public final writeNumberField(Ljava/lang/String;J)V
     .locals 0
-    .parameter "fieldName"
-    .parameter "value"
+    .param p1, "fieldName"    # Ljava/lang/String;
+    .param p2, "value"    # J
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -698,8 +698,8 @@
 
 .method public final writeNumberField(Ljava/lang/String;Ljava/math/BigDecimal;)V
     .locals 0
-    .parameter "fieldName"
-    .parameter "value"
+    .param p1, "fieldName"    # Ljava/lang/String;
+    .param p2, "value"    # Ljava/math/BigDecimal;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -729,8 +729,8 @@
 
 .method public final writeObjectField(Ljava/lang/String;Ljava/lang/Object;)V
     .locals 0
-    .parameter "fieldName"
-    .parameter "pojo"
+    .param p1, "fieldName"    # Ljava/lang/String;
+    .param p2, "pojo"    # Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -751,7 +751,7 @@
 
 .method public final writeObjectFieldStart(Ljava/lang/String;)V
     .locals 0
-    .parameter "fieldName"
+    .param p1, "fieldName"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -862,7 +862,7 @@
 
 .method public writeString(Lcom/flurry/org/codehaus/jackson/SerializableString;)V
     .locals 1
-    .parameter "text"
+    .param p1, "text"    # Lcom/flurry/org/codehaus/jackson/SerializableString;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -902,8 +902,8 @@
 
 .method public writeStringField(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
-    .parameter "fieldName"
-    .parameter "value"
+    .param p1, "fieldName"    # Ljava/lang/String;
+    .param p2, "value"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,

@@ -32,7 +32,7 @@
     const-string v0, ""
 
     .line 67
-    .local v0, url:Ljava/lang/String;
+    .local v0, "url":Ljava/lang/String;
     sget-object v1, Lcom/fusepowered/util/FuseServer$1;->$SwitchMap$com$fusepowered$util$FuseServer$SERVER_NAMES:[I
 
     sget-object v2, Lcom/fusepowered/fuseapi/Constants;->FUSE_SERVER:Lcom/fusepowered/util/FuseServer$SERVER_NAMES;
@@ -78,7 +78,7 @@
     const-string v0, ""
 
     .line 14
-    .local v0, url:Ljava/lang/String;
+    .local v0, "url":Ljava/lang/String;
     sget-object v1, Lcom/fusepowered/util/FuseServer$1;->$SwitchMap$com$fusepowered$util$FuseServer$SERVER_NAMES:[I
 
     sget-object v2, Lcom/fusepowered/fuseapi/Constants;->FUSE_SERVER:Lcom/fusepowered/util/FuseServer$SERVER_NAMES;
@@ -124,7 +124,7 @@
     const-string v0, ""
 
     .line 41
-    .local v0, url:Ljava/lang/String;
+    .local v0, "url":Ljava/lang/String;
     sget-object v1, Lcom/fusepowered/util/FuseServer$1;->$SwitchMap$com$fusepowered$util$FuseServer$SERVER_NAMES:[I
 
     sget-object v2, Lcom/fusepowered/fuseapi/Constants;->FUSE_SERVER:Lcom/fusepowered/util/FuseServer$SERVER_NAMES;
@@ -170,7 +170,7 @@
     const-string v0, ""
 
     .line 93
-    .local v0, url:Ljava/lang/String;
+    .local v0, "url":Ljava/lang/String;
     sget-object v1, Lcom/fusepowered/util/FuseServer$1;->$SwitchMap$com$fusepowered$util$FuseServer$SERVER_NAMES:[I
 
     sget-object v2, Lcom/fusepowered/fuseapi/Constants;->FUSE_SERVER:Lcom/fusepowered/util/FuseServer$SERVER_NAMES;
@@ -216,7 +216,7 @@
     const-string v0, ""
 
     .line 80
-    .local v0, url:Ljava/lang/String;
+    .local v0, "url":Ljava/lang/String;
     sget-object v1, Lcom/fusepowered/util/FuseServer$1;->$SwitchMap$com$fusepowered$util$FuseServer$SERVER_NAMES:[I
 
     sget-object v2, Lcom/fusepowered/fuseapi/Constants;->FUSE_SERVER:Lcom/fusepowered/util/FuseServer$SERVER_NAMES;
@@ -262,7 +262,7 @@
     const-string v0, ""
 
     .line 54
-    .local v0, url:Ljava/lang/String;
+    .local v0, "url":Ljava/lang/String;
     sget-object v1, Lcom/fusepowered/util/FuseServer$1;->$SwitchMap$com$fusepowered$util$FuseServer$SERVER_NAMES:[I
 
     sget-object v2, Lcom/fusepowered/fuseapi/Constants;->FUSE_SERVER:Lcom/fusepowered/util/FuseServer$SERVER_NAMES;
@@ -308,7 +308,7 @@
     const-string v0, ""
 
     .line 27
-    .local v0, url:Ljava/lang/String;
+    .local v0, "url":Ljava/lang/String;
     sget-object v1, Lcom/fusepowered/util/FuseServer$1;->$SwitchMap$com$fusepowered$util$FuseServer$SERVER_NAMES:[I
 
     sget-object v2, Lcom/fusepowered/fuseapi/Constants;->FUSE_SERVER:Lcom/fusepowered/util/FuseServer$SERVER_NAMES;

@@ -95,9 +95,7 @@
 
 .method private constructor <init>(Ljava/lang/String;II)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter "value"
+    .param p3, "value"    # I
 
     .prologue
     .line 61
@@ -109,7 +107,6 @@
 
 .method public static valueOf(Ljava/lang/String;)Lcom/fiksu/asotracking/RatingPrompter$PromptResult;
     .locals 1
-    .parameter
 
     .prologue
     .line 1

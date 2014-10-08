@@ -42,11 +42,11 @@
 # direct methods
 .method protected constructor <init>(Lcom/flurry/org/apache/avro/Schema;)V
     .locals 1
-    .parameter "schema"
+    .param p1, "schema"    # Lcom/flurry/org/apache/avro/Schema;
 
     .prologue
     .line 43
-    .local p0, this:Lcom/flurry/org/apache/avro/specific/SpecificErrorBuilderBase;,"Lcom/flurry/org/apache/avro/specific/SpecificErrorBuilderBase<TT;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/specific/SpecificErrorBuilderBase;, "Lcom/flurry/org/apache/avro/specific/SpecificErrorBuilderBase<TT;>;"
     invoke-static {}, Lcom/flurry/org/apache/avro/specific/SpecificData;->get()Lcom/flurry/org/apache/avro/specific/SpecificData;
 
     move-result-object v0
@@ -59,7 +59,6 @@
 
 .method protected constructor <init>(Lcom/flurry/org/apache/avro/specific/SpecificErrorBuilderBase;)V
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -70,8 +69,8 @@
 
     .prologue
     .line 51
-    .local p0, this:Lcom/flurry/org/apache/avro/specific/SpecificErrorBuilderBase;,"Lcom/flurry/org/apache/avro/specific/SpecificErrorBuilderBase<TT;>;"
-    .local p1, other:Lcom/flurry/org/apache/avro/specific/SpecificErrorBuilderBase;,"Lcom/flurry/org/apache/avro/specific/SpecificErrorBuilderBase<TT;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/specific/SpecificErrorBuilderBase;, "Lcom/flurry/org/apache/avro/specific/SpecificErrorBuilderBase<TT;>;"
+    .local p1, "other":Lcom/flurry/org/apache/avro/specific/SpecificErrorBuilderBase;, "Lcom/flurry/org/apache/avro/specific/SpecificErrorBuilderBase<TT;>;"
     invoke-static {}, Lcom/flurry/org/apache/avro/specific/SpecificData;->get()Lcom/flurry/org/apache/avro/specific/SpecificData;
 
     move-result-object v0
@@ -109,7 +108,6 @@
 
 .method protected constructor <init>(Lcom/flurry/org/apache/avro/specific/SpecificExceptionBase;)V
     .locals 4
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;)V"
@@ -118,8 +116,8 @@
 
     .prologue
     .line 64
-    .local p0, this:Lcom/flurry/org/apache/avro/specific/SpecificErrorBuilderBase;,"Lcom/flurry/org/apache/avro/specific/SpecificErrorBuilderBase<TT;>;"
-    .local p1, other:Lcom/flurry/org/apache/avro/specific/SpecificExceptionBase;,"TT;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/specific/SpecificErrorBuilderBase;, "Lcom/flurry/org/apache/avro/specific/SpecificErrorBuilderBase<TT;>;"
+    .local p1, "other":Lcom/flurry/org/apache/avro/specific/SpecificExceptionBase;, "TT;"
     invoke-virtual {p1}, Lcom/flurry/org/apache/avro/specific/SpecificExceptionBase;->getSchema()Lcom/flurry/org/apache/avro/Schema;
 
     move-result-object v2
@@ -136,7 +134,7 @@
     move-result-object v1
 
     .line 67
-    .local v1, otherValue:Ljava/lang/Object;
+    .local v1, "otherValue":Ljava/lang/Object;
     if-eqz v1, :cond_0
 
     .line 68
@@ -149,7 +147,7 @@
     move-result-object v0
 
     .line 72
-    .local v0, otherCause:Ljava/lang/Throwable;
+    .local v0, "otherCause":Ljava/lang/Throwable;
     if-eqz v0, :cond_1
 
     .line 73
@@ -167,7 +165,7 @@
 
     .prologue
     .line 30
-    .local p0, this:Lcom/flurry/org/apache/avro/specific/SpecificErrorBuilderBase;,"Lcom/flurry/org/apache/avro/specific/SpecificErrorBuilderBase<TT;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/specific/SpecificErrorBuilderBase;, "Lcom/flurry/org/apache/avro/specific/SpecificErrorBuilderBase<TT;>;"
     invoke-virtual {p0}, Lcom/flurry/org/apache/avro/specific/SpecificErrorBuilderBase;->clearCause()Lcom/flurry/org/apache/avro/specific/SpecificErrorBuilderBase;
 
     move-result-object v0
@@ -187,7 +185,7 @@
 
     .prologue
     .line 120
-    .local p0, this:Lcom/flurry/org/apache/avro/specific/SpecificErrorBuilderBase;,"Lcom/flurry/org/apache/avro/specific/SpecificErrorBuilderBase<TT;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/specific/SpecificErrorBuilderBase;, "Lcom/flurry/org/apache/avro/specific/SpecificErrorBuilderBase<TT;>;"
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/flurry/org/apache/avro/specific/SpecificErrorBuilderBase;->cause:Ljava/lang/Throwable;
@@ -206,7 +204,7 @@
 
     .prologue
     .line 30
-    .local p0, this:Lcom/flurry/org/apache/avro/specific/SpecificErrorBuilderBase;,"Lcom/flurry/org/apache/avro/specific/SpecificErrorBuilderBase<TT;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/specific/SpecificErrorBuilderBase;, "Lcom/flurry/org/apache/avro/specific/SpecificErrorBuilderBase<TT;>;"
     invoke-virtual {p0}, Lcom/flurry/org/apache/avro/specific/SpecificErrorBuilderBase;->clearValue()Lcom/flurry/org/apache/avro/specific/SpecificErrorBuilderBase;
 
     move-result-object v0
@@ -226,7 +224,7 @@
 
     .prologue
     .line 96
-    .local p0, this:Lcom/flurry/org/apache/avro/specific/SpecificErrorBuilderBase;,"Lcom/flurry/org/apache/avro/specific/SpecificErrorBuilderBase<TT;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/specific/SpecificErrorBuilderBase;, "Lcom/flurry/org/apache/avro/specific/SpecificErrorBuilderBase<TT;>;"
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/flurry/org/apache/avro/specific/SpecificErrorBuilderBase;->value:Ljava/lang/Object;
@@ -245,7 +243,7 @@
 
     .prologue
     .line 103
-    .local p0, this:Lcom/flurry/org/apache/avro/specific/SpecificErrorBuilderBase;,"Lcom/flurry/org/apache/avro/specific/SpecificErrorBuilderBase<TT;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/specific/SpecificErrorBuilderBase;, "Lcom/flurry/org/apache/avro/specific/SpecificErrorBuilderBase<TT;>;"
     iget-object v0, p0, Lcom/flurry/org/apache/avro/specific/SpecificErrorBuilderBase;->cause:Ljava/lang/Throwable;
 
     return-object v0
@@ -256,7 +254,7 @@
 
     .prologue
     .line 79
-    .local p0, this:Lcom/flurry/org/apache/avro/specific/SpecificErrorBuilderBase;,"Lcom/flurry/org/apache/avro/specific/SpecificErrorBuilderBase<TT;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/specific/SpecificErrorBuilderBase;, "Lcom/flurry/org/apache/avro/specific/SpecificErrorBuilderBase<TT;>;"
     iget-object v0, p0, Lcom/flurry/org/apache/avro/specific/SpecificErrorBuilderBase;->value:Ljava/lang/Object;
 
     return-object v0
@@ -267,7 +265,7 @@
 
     .prologue
     .line 115
-    .local p0, this:Lcom/flurry/org/apache/avro/specific/SpecificErrorBuilderBase;,"Lcom/flurry/org/apache/avro/specific/SpecificErrorBuilderBase<TT;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/specific/SpecificErrorBuilderBase;, "Lcom/flurry/org/apache/avro/specific/SpecificErrorBuilderBase<TT;>;"
     iget-boolean v0, p0, Lcom/flurry/org/apache/avro/specific/SpecificErrorBuilderBase;->hasCause:Z
 
     return v0
@@ -278,7 +276,7 @@
 
     .prologue
     .line 91
-    .local p0, this:Lcom/flurry/org/apache/avro/specific/SpecificErrorBuilderBase;,"Lcom/flurry/org/apache/avro/specific/SpecificErrorBuilderBase<TT;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/specific/SpecificErrorBuilderBase;, "Lcom/flurry/org/apache/avro/specific/SpecificErrorBuilderBase<TT;>;"
     iget-boolean v0, p0, Lcom/flurry/org/apache/avro/specific/SpecificErrorBuilderBase;->hasValue:Z
 
     return v0
@@ -286,11 +284,11 @@
 
 .method public bridge synthetic setCause(Ljava/lang/Throwable;)Lcom/flurry/org/apache/avro/data/ErrorBuilder;
     .locals 1
-    .parameter "x0"
+    .param p1, "x0"    # Ljava/lang/Throwable;
 
     .prologue
     .line 30
-    .local p0, this:Lcom/flurry/org/apache/avro/specific/SpecificErrorBuilderBase;,"Lcom/flurry/org/apache/avro/specific/SpecificErrorBuilderBase<TT;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/specific/SpecificErrorBuilderBase;, "Lcom/flurry/org/apache/avro/specific/SpecificErrorBuilderBase<TT;>;"
     invoke-virtual {p0, p1}, Lcom/flurry/org/apache/avro/specific/SpecificErrorBuilderBase;->setCause(Ljava/lang/Throwable;)Lcom/flurry/org/apache/avro/specific/SpecificErrorBuilderBase;
 
     move-result-object v0
@@ -300,7 +298,7 @@
 
 .method public setCause(Ljava/lang/Throwable;)Lcom/flurry/org/apache/avro/specific/SpecificErrorBuilderBase;
     .locals 1
-    .parameter "cause"
+    .param p1, "cause"    # Ljava/lang/Throwable;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -313,7 +311,7 @@
 
     .prologue
     .line 108
-    .local p0, this:Lcom/flurry/org/apache/avro/specific/SpecificErrorBuilderBase;,"Lcom/flurry/org/apache/avro/specific/SpecificErrorBuilderBase<TT;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/specific/SpecificErrorBuilderBase;, "Lcom/flurry/org/apache/avro/specific/SpecificErrorBuilderBase<TT;>;"
     iput-object p1, p0, Lcom/flurry/org/apache/avro/specific/SpecificErrorBuilderBase;->cause:Ljava/lang/Throwable;
 
     .line 109
@@ -327,11 +325,11 @@
 
 .method public bridge synthetic setValue(Ljava/lang/Object;)Lcom/flurry/org/apache/avro/data/ErrorBuilder;
     .locals 1
-    .parameter "x0"
+    .param p1, "x0"    # Ljava/lang/Object;
 
     .prologue
     .line 30
-    .local p0, this:Lcom/flurry/org/apache/avro/specific/SpecificErrorBuilderBase;,"Lcom/flurry/org/apache/avro/specific/SpecificErrorBuilderBase<TT;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/specific/SpecificErrorBuilderBase;, "Lcom/flurry/org/apache/avro/specific/SpecificErrorBuilderBase<TT;>;"
     invoke-virtual {p0, p1}, Lcom/flurry/org/apache/avro/specific/SpecificErrorBuilderBase;->setValue(Ljava/lang/Object;)Lcom/flurry/org/apache/avro/specific/SpecificErrorBuilderBase;
 
     move-result-object v0
@@ -341,7 +339,7 @@
 
 .method public setValue(Ljava/lang/Object;)Lcom/flurry/org/apache/avro/specific/SpecificErrorBuilderBase;
     .locals 1
-    .parameter "value"
+    .param p1, "value"    # Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -354,7 +352,7 @@
 
     .prologue
     .line 84
-    .local p0, this:Lcom/flurry/org/apache/avro/specific/SpecificErrorBuilderBase;,"Lcom/flurry/org/apache/avro/specific/SpecificErrorBuilderBase<TT;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/specific/SpecificErrorBuilderBase;, "Lcom/flurry/org/apache/avro/specific/SpecificErrorBuilderBase<TT;>;"
     iput-object p1, p0, Lcom/flurry/org/apache/avro/specific/SpecificErrorBuilderBase;->value:Ljava/lang/Object;
 
     .line 85

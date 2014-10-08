@@ -20,7 +20,7 @@
 
 .method public static c2dMessageReceived(Landroid/content/Context;)V
     .locals 0
-    .parameter "context"
+    .param p0, "context"    # Landroid/content/Context;
 
     .prologue
     .line 60
@@ -48,7 +48,7 @@
 
 .method public static initialize(Landroid/app/Application;)V
     .locals 2
-    .parameter "application"
+    .param p0, "application"    # Landroid/app/Application;
 
     .prologue
     .line 21
@@ -99,7 +99,7 @@
 
 .method public static promptForRating(Landroid/app/Activity;)V
     .locals 1
-    .parameter "activity"
+    .param p0, "activity"    # Landroid/app/Activity;
 
     .prologue
     .line 64
@@ -115,8 +115,8 @@
 
 .method public static setAppTrackingEnabled(Landroid/content/Context;Z)V
     .locals 1
-    .parameter "context"
-    .parameter "appTrackingEnabled"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "appTrackingEnabled"    # Z
 
     .prologue
     .line 52
@@ -132,8 +132,8 @@
 
 .method public static setClientId(Landroid/content/Context;Ljava/lang/String;)V
     .locals 1
-    .parameter "context"
-    .parameter "clientId"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "clientId"    # Ljava/lang/String;
 
     .prologue
     .line 28
@@ -149,7 +149,7 @@
 
 .method public static setDebugModeEnabled(Z)V
     .locals 1
-    .parameter "debugModeEnabled"
+    .param p0, "debugModeEnabled"    # Z
 
     .prologue
     .line 48
@@ -165,7 +165,7 @@
 
 .method public static uploadCustomEvent(Landroid/content/Context;)V
     .locals 1
-    .parameter "context"
+    .param p0, "context"    # Landroid/content/Context;
 
     .prologue
     .line 44
@@ -181,10 +181,10 @@
 
 .method public static uploadPurchaseEvent(Landroid/content/Context;Ljava/lang/String;DLjava/lang/String;)V
     .locals 2
-    .parameter "context"
-    .parameter "username"
-    .parameter "price"
-    .parameter "currency"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "username"    # Ljava/lang/String;
+    .param p2, "price"    # D
+    .param p4, "currency"    # Ljava/lang/String;
 
     .prologue
     .line 36
@@ -204,8 +204,8 @@
 
 .method public static uploadRegistrationEvent(Landroid/content/Context;Ljava/lang/String;)V
     .locals 1
-    .parameter "context"
-    .parameter "username"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "username"    # Ljava/lang/String;
 
     .prologue
     .line 40

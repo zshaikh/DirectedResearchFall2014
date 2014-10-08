@@ -22,7 +22,7 @@
 # direct methods
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 1
-    .parameter "jsonSkuDetails"
+    .param p1, "jsonSkuDetails"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lorg/json/JSONException;
@@ -41,8 +41,8 @@
 
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
-    .parameter "itemType"
-    .parameter "jsonSkuDetails"
+    .param p1, "itemType"    # Ljava/lang/String;
+    .param p2, "jsonSkuDetails"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lorg/json/JSONException;
@@ -67,7 +67,7 @@
     invoke-direct {v0, v1}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
     .line 26
-    .local v0, o:Lorg/json/JSONObject;
+    .local v0, "o":Lorg/json/JSONObject;
     const-string v1, "productId"
 
     invoke-virtual {v0, v1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;

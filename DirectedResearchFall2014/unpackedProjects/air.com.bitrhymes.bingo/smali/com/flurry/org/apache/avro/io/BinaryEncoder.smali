@@ -21,7 +21,7 @@
 
 .method public setItemCount(J)V
     .locals 2
-    .parameter "itemCount"
+    .param p1, "itemCount"    # J
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -88,7 +88,7 @@
 
 .method public writeBytes(Ljava/nio/ByteBuffer;)V
     .locals 4
-    .parameter "bytes"
+    .param p1, "bytes"    # Ljava/nio/ByteBuffer;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -102,7 +102,7 @@
     move-result v1
 
     .line 61
-    .local v1, pos:I
+    .local v1, "pos":I
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->arrayOffset()I
 
     move-result v3
@@ -110,7 +110,7 @@
     add-int v2, v3, v1
 
     .line 62
-    .local v2, start:I
+    .local v2, "start":I
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->limit()I
 
     move-result v3
@@ -118,7 +118,7 @@
     sub-int v0, v3, v1
 
     .line 63
-    .local v0, len:I
+    .local v0, "len":I
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->array()[B
 
     move-result-object v3
@@ -131,9 +131,9 @@
 
 .method public writeBytes([BII)V
     .locals 0
-    .parameter "bytes"
-    .parameter "start"
-    .parameter "len"
+    .param p1, "bytes"    # [B
+    .param p2, "start"    # I
+    .param p3, "len"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -163,7 +163,7 @@
 
 .method public writeEnum(I)V
     .locals 0
-    .parameter "e"
+    .param p1, "e"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -180,7 +180,7 @@
 
 .method public writeIndex(I)V
     .locals 0
-    .parameter "unionIndex"
+    .param p1, "unionIndex"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -239,7 +239,7 @@
 
 .method public writeString(Lcom/flurry/org/apache/avro/util/Utf8;)V
     .locals 3
-    .parameter "utf8"
+    .param p1, "utf8"    # Lcom/flurry/org/apache/avro/util/Utf8;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -266,7 +266,7 @@
 
 .method public writeString(Ljava/lang/String;)V
     .locals 3
-    .parameter "string"
+    .param p1, "string"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -297,7 +297,7 @@
     move-result-object v0
 
     .line 54
-    .local v0, bytes:[B
+    .local v0, "bytes":[B
     array-length v1, v0
 
     invoke-virtual {p0, v1}, Lcom/flurry/org/apache/avro/io/BinaryEncoder;->writeInt(I)V

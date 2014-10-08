@@ -44,7 +44,7 @@
 
 .method private getDiagonal(Landroid/util/DisplayMetrics;)D
     .locals 8
-    .parameter "displayMetrics"
+    .param p1, "displayMetrics"    # Landroid/util/DisplayMetrics;
 
     .prologue
     .line 147
@@ -53,13 +53,13 @@
     move-result-wide v2
 
     .line 148
-    .local v2, widthInches:D
+    .local v2, "widthInches":D
     invoke-direct {p0, p1}, Lcom/buffalostudios/aneutils/deviceinfo/DeviceInfo$GetDisplayProperty;->getHeightInches(Landroid/util/DisplayMetrics;)D
 
     move-result-wide v0
 
     .line 149
-    .local v0, heightInches:D
+    .local v0, "heightInches":D
     mul-double v4, v2, v2
 
     mul-double v6, v0, v0
@@ -75,8 +75,8 @@
 
 .method private getDisplayProperty(Landroid/view/Display;I)D
     .locals 3
-    .parameter "display"
-    .parameter "propertyId"
+    .param p1, "display"    # Landroid/view/Display;
+    .param p2, "propertyId"    # I
 
     .prologue
     .line 126
@@ -85,7 +85,7 @@
     invoke-direct {v0}, Landroid/util/DisplayMetrics;-><init>()V
 
     .line 127
-    .local v0, displayMetrics:Landroid/util/DisplayMetrics;
+    .local v0, "displayMetrics":Landroid/util/DisplayMetrics;
     invoke-virtual {p1, v0}, Landroid/view/Display;->getMetrics(Landroid/util/DisplayMetrics;)V
 
     .line 129
@@ -159,7 +159,7 @@
 
 .method private getDpi(Landroid/util/DisplayMetrics;)D
     .locals 6
-    .parameter "displayMetrics"
+    .param p1, "displayMetrics"    # Landroid/util/DisplayMetrics;
 
     .prologue
     .line 141
@@ -168,13 +168,13 @@
     float-to-double v0, v4
 
     .line 142
-    .local v0, dpiX:D
+    .local v0, "dpiX":D
     iget v4, p1, Landroid/util/DisplayMetrics;->ydpi:F
 
     float-to-double v2, v4
 
     .line 143
-    .local v2, dpiY:D
+    .local v2, "dpiY":D
     mul-double v4, v0, v2
 
     invoke-static {v4, v5}, Ljava/lang/Math;->sqrt(D)D
@@ -186,7 +186,7 @@
 
 .method private getHeight(Landroid/util/DisplayMetrics;)D
     .locals 2
-    .parameter "displayMetrics"
+    .param p1, "displayMetrics"    # Landroid/util/DisplayMetrics;
 
     .prologue
     .line 153
@@ -205,7 +205,7 @@
 
 .method private getHeightInches(Landroid/util/DisplayMetrics;)D
     .locals 4
-    .parameter "displayMetrics"
+    .param p1, "displayMetrics"    # Landroid/util/DisplayMetrics;
 
     .prologue
     .line 157
@@ -224,7 +224,7 @@
 
 .method private getWidth(Landroid/util/DisplayMetrics;)D
     .locals 2
-    .parameter "displayMetrics"
+    .param p1, "displayMetrics"    # Landroid/util/DisplayMetrics;
 
     .prologue
     .line 161
@@ -243,7 +243,7 @@
 
 .method private getWidthInches(Landroid/util/DisplayMetrics;)D
     .locals 4
-    .parameter "displayMetrics"
+    .param p1, "displayMetrics"    # Landroid/util/DisplayMetrics;
 
     .prologue
     .line 165
@@ -262,7 +262,7 @@
 
 .method private onError(Ljava/lang/String;)V
     .locals 0
-    .parameter "message"
+    .param p1, "message"    # Ljava/lang/String;
 
     .prologue
     .line 170
@@ -273,8 +273,8 @@
 # virtual methods
 .method public call(Lcom/adobe/fre/FREContext;[Lcom/adobe/fre/FREObject;)Lcom/adobe/fre/FREObject;
     .locals 7
-    .parameter "context"
-    .parameter "args"
+    .param p1, "context"    # Lcom/adobe/fre/FREContext;
+    .param p2, "args"    # [Lcom/adobe/fre/FREObject;
 
     .prologue
     .line 108
@@ -287,7 +287,7 @@
     move-result v4
 
     .line 110
-    .local v4, propertyId:I
+    .local v4, "propertyId":I
     invoke-virtual {p1}, Lcom/adobe/fre/FREContext;->getActivity()Landroid/app/Activity;
 
     move-result-object v6
@@ -301,17 +301,17 @@
     move-result-object v0
 
     .line 112
-    .local v0, display:Landroid/view/Display;
+    .local v0, "display":Landroid/view/Display;
     invoke-direct {p0, v0, v4}, Lcom/buffalostudios/aneutils/deviceinfo/DeviceInfo$GetDisplayProperty;->getDisplayProperty(Landroid/view/Display;I)D
 
     move-result-wide v2
 
     .line 114
-    .local v2, property:D
+    .local v2, "property":D
     const/4 v5, 0x0
 
     .line 117
-    .local v5, result:Lcom/adobe/fre/FREObject;
+    .local v5, "result":Lcom/adobe/fre/FREObject;
     :try_start_0
     invoke-static {v2, v3}, Lcom/adobe/fre/FREObject;->newObject(D)Lcom/adobe/fre/FREObject;
     :try_end_0
@@ -328,7 +328,7 @@
     move-exception v1
 
     .line 119
-    .local v1, e:Lcom/adobe/fre/FREWrongThreadException;
+    .local v1, "e":Lcom/adobe/fre/FREWrongThreadException;
     const-string v6, "ERROR: FREWrongThreadException in DeviceInfoGetDisplayProperty#call"
 
     invoke-direct {p0, v6}, Lcom/buffalostudios/aneutils/deviceinfo/DeviceInfo$GetDisplayProperty;->onError(Ljava/lang/String;)V

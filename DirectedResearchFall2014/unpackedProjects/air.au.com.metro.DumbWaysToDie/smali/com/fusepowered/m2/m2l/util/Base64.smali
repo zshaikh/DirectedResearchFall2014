@@ -14,8 +14,7 @@
 
 
 # static fields
-#the value of this static final field might be set in the static constructor
-.field static final synthetic $assertionsDisabled:Z = false
+.field static final synthetic $assertionsDisabled:Z
 
 .field public static final CRLF:I = 0x4
 
@@ -71,8 +70,8 @@
 
 .method public static decode(Ljava/lang/String;I)[B
     .locals 1
-    .parameter "str"
-    .parameter "flags"
+    .param p0, "str"    # Ljava/lang/String;
+    .param p1, "flags"    # I
 
     .prologue
     .line 134
@@ -89,8 +88,8 @@
 
 .method public static decode([BI)[B
     .locals 2
-    .parameter "input"
-    .parameter "flags"
+    .param p0, "input"    # [B
+    .param p1, "flags"    # I
 
     .prologue
     .line 152
@@ -107,10 +106,10 @@
 
 .method public static decode([BIII)[B
     .locals 5
-    .parameter "input"
-    .parameter "offset"
-    .parameter "len"
-    .parameter "flags"
+    .param p0, "input"    # [B
+    .param p1, "offset"    # I
+    .param p2, "len"    # I
+    .param p3, "flags"    # I
 
     .prologue
     const/4 v4, 0x0
@@ -127,7 +126,7 @@
     invoke-direct {v0, p3, v2}, Lcom/fusepowered/m2/m2l/util/Base64$Decoder;-><init>(I[B)V
 
     .line 176
-    .local v0, decoder:Lcom/fusepowered/m2/m2l/util/Base64$Decoder;
+    .local v0, "decoder":Lcom/fusepowered/m2/m2l/util/Base64$Decoder;
     const/4 v2, 0x1
 
     invoke-virtual {v0, p0, p1, p2, v2}, Lcom/fusepowered/m2/m2l/util/Base64$Decoder;->process([BIIZ)Z
@@ -169,7 +168,7 @@
     new-array v1, v2, [B
 
     .line 188
-    .local v1, temp:[B
+    .local v1, "temp":[B
     iget-object v2, v0, Lcom/fusepowered/m2/m2l/util/Base64$Decoder;->output:[B
 
     iget v3, v0, Lcom/fusepowered/m2/m2l/util/Base64$Decoder;->op:I
@@ -184,8 +183,8 @@
 
 .method public static encode([BI)[B
     .locals 2
-    .parameter "input"
-    .parameter "flags"
+    .param p0, "input"    # [B
+    .param p1, "flags"    # I
 
     .prologue
     .line 510
@@ -202,10 +201,10 @@
 
 .method public static encode([BIII)[B
     .locals 5
-    .parameter "input"
-    .parameter "offset"
-    .parameter "len"
-    .parameter "flags"
+    .param p0, "input"    # [B
+    .param p1, "offset"    # I
+    .param p2, "len"    # I
+    .param p3, "flags"    # I
 
     .prologue
     const/4 v4, 0x1
@@ -218,13 +217,13 @@
     invoke-direct {v0, p3, v2}, Lcom/fusepowered/m2/m2l/util/Base64$Encoder;-><init>(I[B)V
 
     .line 529
-    .local v0, encoder:Lcom/fusepowered/m2/m2l/util/Base64$Encoder;
+    .local v0, "encoder":Lcom/fusepowered/m2/m2l/util/Base64$Encoder;
     div-int/lit8 v2, p2, 0x3
 
     mul-int/lit8 v1, v2, 0x4
 
     .line 532
-    .local v1, output_len:I
+    .local v1, "output_len":I
     iget-boolean v2, v0, Lcom/fusepowered/m2/m2l/util/Base64$Encoder;->do_padding:Z
 
     if-eqz v2, :cond_2
@@ -333,8 +332,8 @@
 
 .method public static encodeToString([BI)Ljava/lang/String;
     .locals 4
-    .parameter "input"
-    .parameter "flags"
+    .param p0, "input"    # [B
+    .param p1, "flags"    # I
 
     .prologue
     .line 472
@@ -360,7 +359,7 @@
     move-object v0, v1
 
     .line 475
-    .local v0, e:Ljava/io/UnsupportedEncodingException;
+    .local v0, "e":Ljava/io/UnsupportedEncodingException;
     new-instance v1, Ljava/lang/AssertionError;
 
     invoke-direct {v1, v0}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
@@ -370,10 +369,10 @@
 
 .method public static encodeToString([BIII)Ljava/lang/String;
     .locals 4
-    .parameter "input"
-    .parameter "offset"
-    .parameter "len"
-    .parameter "flags"
+    .param p0, "input"    # [B
+    .param p1, "offset"    # I
+    .param p2, "len"    # I
+    .param p3, "flags"    # I
 
     .prologue
     .line 493
@@ -399,7 +398,7 @@
     move-object v0, v1
 
     .line 496
-    .local v0, e:Ljava/io/UnsupportedEncodingException;
+    .local v0, "e":Ljava/io/UnsupportedEncodingException;
     new-instance v1, Ljava/lang/AssertionError;
 
     invoke-direct {v1, v0}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V

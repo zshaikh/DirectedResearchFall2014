@@ -22,8 +22,8 @@
 # direct methods
 .method public constructor <init>(Lcom/flurry/org/apache/avro/io/parsing/Symbol;Lcom/flurry/org/apache/avro/io/parsing/Parser$ActionHandler;)V
     .locals 2
-    .parameter "root"
-    .parameter "symbolHandler"
+    .param p1, "root"    # Lcom/flurry/org/apache/avro/io/parsing/Symbol;
+    .param p2, "symbolHandler"    # Lcom/flurry/org/apache/avro/io/parsing/Parser$ActionHandler;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -86,7 +86,7 @@
     new-array v0, v1, [Lcom/flurry/org/apache/avro/io/parsing/Symbol;
 
     .line 68
-    .local v0, newStack:[Lcom/flurry/org/apache/avro/io/parsing/Symbol;
+    .local v0, "newStack":[Lcom/flurry/org/apache/avro/io/parsing/Symbol;
     iget-object v1, p0, Lcom/flurry/org/apache/avro/io/parsing/Parser;->stack:[Lcom/flurry/org/apache/avro/io/parsing/Symbol;
 
     iget-object v2, p0, Lcom/flurry/org/apache/avro/io/parsing/Parser;->stack:[Lcom/flurry/org/apache/avro/io/parsing/Symbol;
@@ -106,7 +106,7 @@
 # virtual methods
 .method public final advance(Lcom/flurry/org/apache/avro/io/parsing/Symbol;)Lcom/flurry/org/apache/avro/io/parsing/Symbol;
     .locals 7
-    .parameter "input"
+    .param p1, "input"    # Lcom/flurry/org/apache/avro/io/parsing/Symbol;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -130,7 +130,7 @@
     aget-object v3, v4, v5
 
     .line 85
-    .local v3, top:Lcom/flurry/org/apache/avro/io/parsing/Symbol;
+    .local v3, "top":Lcom/flurry/org/apache/avro/io/parsing/Symbol;
     if-ne v3, p1, :cond_1
 
     move-object v4, v3
@@ -144,7 +144,7 @@
     iget-object v1, v3, Lcom/flurry/org/apache/avro/io/parsing/Symbol;->kind:Lcom/flurry/org/apache/avro/io/parsing/Symbol$Kind;
 
     .line 90
-    .local v1, k:Lcom/flurry/org/apache/avro/io/parsing/Symbol$Kind;
+    .local v1, "k":Lcom/flurry/org/apache/avro/io/parsing/Symbol$Kind;
     sget-object v4, Lcom/flurry/org/apache/avro/io/parsing/Symbol$Kind;->IMPLICIT_ACTION:Lcom/flurry/org/apache/avro/io/parsing/Symbol$Kind;
 
     if-ne v1, v4, :cond_2
@@ -157,7 +157,7 @@
     move-result-object v2
 
     .line 92
-    .local v2, result:Lcom/flurry/org/apache/avro/io/parsing/Symbol;
+    .local v2, "result":Lcom/flurry/org/apache/avro/io/parsing/Symbol;
     if-eqz v2, :cond_0
 
     move-object v4, v2
@@ -166,7 +166,7 @@
     goto :goto_1
 
     .line 95
-    .end local v2           #result:Lcom/flurry/org/apache/avro/io/parsing/Symbol;
+    .end local v2    # "result":Lcom/flurry/org/apache/avro/io/parsing/Symbol;
     :cond_2
     sget-object v4, Lcom/flurry/org/apache/avro/io/parsing/Symbol$Kind;->TERMINAL:Lcom/flurry/org/apache/avro/io/parsing/Symbol$Kind;
 
@@ -303,7 +303,7 @@
     aget-object v0, v1, v2
 
     .line 117
-    .local v0, top:Lcom/flurry/org/apache/avro/io/parsing/Symbol;
+    .local v0, "top":Lcom/flurry/org/apache/avro/io/parsing/Symbol;
     iget-object v1, v0, Lcom/flurry/org/apache/avro/io/parsing/Symbol;->kind:Lcom/flurry/org/apache/avro/io/parsing/Symbol$Kind;
 
     sget-object v2, Lcom/flurry/org/apache/avro/io/parsing/Symbol$Kind;->IMPLICIT_ACTION:Lcom/flurry/org/apache/avro/io/parsing/Symbol$Kind;
@@ -379,7 +379,7 @@
     aget-object v1, v2, v3
 
     .line 135
-    .local v1, top:Lcom/flurry/org/apache/avro/io/parsing/Symbol;
+    .local v1, "top":Lcom/flurry/org/apache/avro/io/parsing/Symbol;
     iget-object v2, v1, Lcom/flurry/org/apache/avro/io/parsing/Symbol;->kind:Lcom/flurry/org/apache/avro/io/parsing/Symbol$Kind;
 
     sget-object v3, Lcom/flurry/org/apache/avro/io/parsing/Symbol$Kind;->IMPLICIT_ACTION:Lcom/flurry/org/apache/avro/io/parsing/Symbol$Kind;
@@ -416,14 +416,14 @@
 
 .method public final pushProduction(Lcom/flurry/org/apache/avro/io/parsing/Symbol;)V
     .locals 5
-    .parameter "sym"
+    .param p1, "sym"    # Lcom/flurry/org/apache/avro/io/parsing/Symbol;
 
     .prologue
     .line 152
     iget-object v0, p1, Lcom/flurry/org/apache/avro/io/parsing/Symbol;->production:[Lcom/flurry/org/apache/avro/io/parsing/Symbol;
 
     .line 153
-    .local v0, p:[Lcom/flurry/org/apache/avro/io/parsing/Symbol;
+    .local v0, "p":[Lcom/flurry/org/apache/avro/io/parsing/Symbol;
     :goto_0
     iget v1, p0, Lcom/flurry/org/apache/avro/io/parsing/Parser;->pos:I
 
@@ -469,7 +469,7 @@
 
 .method public pushSymbol(Lcom/flurry/org/apache/avro/io/parsing/Symbol;)V
     .locals 3
-    .parameter "sym"
+    .param p1, "sym"    # Lcom/flurry/org/apache/avro/io/parsing/Symbol;
 
     .prologue
     .line 178

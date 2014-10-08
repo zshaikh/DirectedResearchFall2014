@@ -168,9 +168,9 @@
 
 .method public constructor <init>(Landroid/content/Context;Landroid/content/Intent;Lcom/fusepowered/m2/m2l/BaseVideoView$BaseVideoViewListener;)V
     .locals 2
-    .parameter "context"
-    .parameter "intent"
-    .parameter "baseVideoViewListener"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "intent"    # Landroid/content/Intent;
+    .param p3, "baseVideoViewListener"    # Lcom/fusepowered/m2/m2l/BaseVideoView$BaseVideoViewListener;
 
     .prologue
     .line 90
@@ -348,7 +348,6 @@
 
 .method static synthetic access$0(Lcom/fusepowered/m2/m2l/VastVideoView;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 246
@@ -359,7 +358,6 @@
 
 .method static synthetic access$1(Lcom/fusepowered/m2/m2l/VastVideoView;)Lcom/fusepowered/m2/m2l/BaseVideoView$BaseVideoViewListener;
     .locals 1
-    .parameter
 
     .prologue
     .line 67
@@ -370,7 +368,6 @@
 
 .method static synthetic access$10(Lcom/fusepowered/m2/m2l/VastVideoView;)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 84
@@ -381,8 +378,6 @@
 
 .method static synthetic access$11(Lcom/fusepowered/m2/m2l/VastVideoView;Z)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 84
@@ -393,7 +388,6 @@
 
 .method static synthetic access$12(Lcom/fusepowered/m2/m2l/VastVideoView;)Ljava/util/ArrayList;
     .locals 1
-    .parameter
 
     .prologue
     .line 72
@@ -404,7 +398,6 @@
 
 .method static synthetic access$13(Lcom/fusepowered/m2/m2l/VastVideoView;)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 85
@@ -415,8 +408,6 @@
 
 .method static synthetic access$14(Lcom/fusepowered/m2/m2l/VastVideoView;Z)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 85
@@ -427,7 +418,6 @@
 
 .method static synthetic access$15(Lcom/fusepowered/m2/m2l/VastVideoView;)Ljava/util/ArrayList;
     .locals 1
-    .parameter
 
     .prologue
     .line 73
@@ -438,7 +428,6 @@
 
 .method static synthetic access$16(Lcom/fusepowered/m2/m2l/VastVideoView;)I
     .locals 1
-    .parameter
 
     .prologue
     .line 81
@@ -449,7 +438,6 @@
 
 .method static synthetic access$17(Lcom/fusepowered/m2/m2l/VastVideoView;)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 80
@@ -460,7 +448,6 @@
 
 .method static synthetic access$18(Lcom/fusepowered/m2/m2l/VastVideoView;)Landroid/os/Handler;
     .locals 1
-    .parameter
 
     .prologue
     .line 78
@@ -471,7 +458,6 @@
 
 .method static synthetic access$19(Lcom/fusepowered/m2/m2l/VastVideoView;)Ljava/lang/Runnable;
     .locals 1
-    .parameter
 
     .prologue
     .line 79
@@ -482,7 +468,6 @@
 
 .method static synthetic access$2(Lcom/fusepowered/m2/m2l/VastVideoView;)Ljava/util/ArrayList;
     .locals 1
-    .parameter
 
     .prologue
     .line 74
@@ -493,8 +478,6 @@
 
 .method static synthetic access$20(Lcom/fusepowered/m2/m2l/VastVideoView;I)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 81
@@ -505,8 +488,6 @@
 
 .method static synthetic access$3(Lcom/fusepowered/m2/m2l/VastVideoView;Ljava/util/List;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 227
@@ -517,8 +498,6 @@
 
 .method static synthetic access$4(Lcom/fusepowered/m2/m2l/VastVideoView;Z)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 87
@@ -529,7 +508,6 @@
 
 .method static synthetic access$5(Lcom/fusepowered/m2/m2l/VastVideoView;)Ljava/util/ArrayList;
     .locals 1
-    .parameter
 
     .prologue
     .line 77
@@ -540,7 +518,6 @@
 
 .method static synthetic access$6(Lcom/fusepowered/m2/m2l/VastVideoView;)Ljava/lang/String;
     .locals 1
-    .parameter
 
     .prologue
     .line 76
@@ -551,7 +528,6 @@
 
 .method static synthetic access$7(Lcom/fusepowered/m2/m2l/VastVideoView;)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 83
@@ -562,8 +538,6 @@
 
 .method static synthetic access$8(Lcom/fusepowered/m2/m2l/VastVideoView;Z)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 83
@@ -574,7 +548,6 @@
 
 .method static synthetic access$9(Lcom/fusepowered/m2/m2l/VastVideoView;)Ljava/util/ArrayList;
     .locals 1
-    .parameter
 
     .prologue
     .line 71
@@ -585,7 +558,6 @@
 
 .method private pingOnBackgroundThread(Ljava/util/List;)V
     .locals 4
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -598,7 +570,7 @@
 
     .prologue
     .line 228
-    .local p1, urls:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
+    .local p1, "urls":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     if-nez p1, :cond_1
 
     .line 244
@@ -625,7 +597,7 @@
     check-cast v0, Ljava/lang/String;
 
     .line 233
-    .local v0, url:Ljava/lang/String;
+    .local v0, "url":Ljava/lang/String;
     sget-object v2, Lcom/fusepowered/m2/m2l/VastVideoView;->sThreadPoolExecutor:Ljava/util/concurrent/ThreadPoolExecutor;
 
     new-instance v3, Lcom/fusepowered/m2/m2l/VastVideoView$6;

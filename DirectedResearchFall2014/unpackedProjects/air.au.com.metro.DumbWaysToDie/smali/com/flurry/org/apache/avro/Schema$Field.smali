@@ -50,10 +50,10 @@
 # direct methods
 .method public constructor <init>(Ljava/lang/String;Lcom/flurry/org/apache/avro/Schema;Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/JsonNode;)V
     .locals 6
-    .parameter "name"
-    .parameter "schema"
-    .parameter "doc"
-    .parameter "defaultValue"
+    .param p1, "name"    # Ljava/lang/String;
+    .param p2, "schema"    # Lcom/flurry/org/apache/avro/Schema;
+    .param p3, "doc"    # Ljava/lang/String;
+    .param p4, "defaultValue"    # Lcom/flurry/org/codehaus/jackson/JsonNode;
 
     .prologue
     .line 407
@@ -77,11 +77,11 @@
 
 .method public constructor <init>(Ljava/lang/String;Lcom/flurry/org/apache/avro/Schema;Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/JsonNode;Lcom/flurry/org/apache/avro/Schema$Field$Order;)V
     .locals 2
-    .parameter "name"
-    .parameter "schema"
-    .parameter "doc"
-    .parameter "defaultValue"
-    .parameter "order"
+    .param p1, "name"    # Ljava/lang/String;
+    .param p2, "schema"    # Lcom/flurry/org/apache/avro/Schema;
+    .param p3, "doc"    # Ljava/lang/String;
+    .param p4, "defaultValue"    # Lcom/flurry/org/codehaus/jackson/JsonNode;
+    .param p5, "order"    # Lcom/flurry/org/apache/avro/Schema$Field$Order;
 
     .prologue
     .line 410
@@ -95,6 +95,7 @@
     .line 403
     new-instance v0, Lcom/flurry/org/apache/avro/Schema$Props;
 
+    # getter for: Lcom/flurry/org/apache/avro/Schema;->FIELD_RESERVED:Ljava/util/Set;
     invoke-static {}, Lcom/flurry/org/apache/avro/Schema;->access$100()Ljava/util/Set;
 
     move-result-object v1
@@ -104,7 +105,7 @@
     iput-object v0, p0, Lcom/flurry/org/apache/avro/Schema$Field;->props:Lcom/flurry/org/apache/avro/Schema$Props;
 
     .line 411
-    #calls: Lcom/flurry/org/apache/avro/Schema;->validateName(Ljava/lang/String;)Ljava/lang/String;
+    # invokes: Lcom/flurry/org/apache/avro/Schema;->validateName(Ljava/lang/String;)Ljava/lang/String;
     invoke-static {p1}, Lcom/flurry/org/apache/avro/Schema;->access$200(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -129,7 +130,7 @@
 
 .method static synthetic access$1300(Lcom/flurry/org/apache/avro/Schema$Field;)Ljava/util/Set;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/flurry/org/apache/avro/Schema$Field;
 
     .prologue
     .line 387
@@ -140,8 +141,8 @@
 
 .method static synthetic access$1302(Lcom/flurry/org/apache/avro/Schema$Field;Ljava/util/Set;)Ljava/util/Set;
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
+    .param p0, "x0"    # Lcom/flurry/org/apache/avro/Schema$Field;
+    .param p1, "x1"    # Ljava/util/Set;
 
     .prologue
     .line 387
@@ -152,7 +153,7 @@
 
 .method static synthetic access$1400(Lcom/flurry/org/apache/avro/Schema$Field;)Lcom/flurry/org/apache/avro/Schema$Props;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/flurry/org/apache/avro/Schema$Field;
 
     .prologue
     .line 387
@@ -163,7 +164,7 @@
 
 .method static synthetic access$1600(Lcom/flurry/org/apache/avro/Schema$Field;)Lcom/flurry/org/apache/avro/Schema;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/flurry/org/apache/avro/Schema$Field;
 
     .prologue
     .line 387
@@ -174,7 +175,7 @@
 
 .method static synthetic access$1700(Lcom/flurry/org/apache/avro/Schema$Field;)Ljava/lang/String;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/flurry/org/apache/avro/Schema$Field;
 
     .prologue
     .line 387
@@ -185,7 +186,7 @@
 
 .method static synthetic access$1800(Lcom/flurry/org/apache/avro/Schema$Field;)Ljava/lang/String;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/flurry/org/apache/avro/Schema$Field;
 
     .prologue
     .line 387
@@ -196,7 +197,7 @@
 
 .method static synthetic access$1900(Lcom/flurry/org/apache/avro/Schema$Field;)Lcom/flurry/org/codehaus/jackson/JsonNode;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/flurry/org/apache/avro/Schema$Field;
 
     .prologue
     .line 387
@@ -207,7 +208,7 @@
 
 .method static synthetic access$2000(Lcom/flurry/org/apache/avro/Schema$Field;)Lcom/flurry/org/apache/avro/Schema$Field$Order;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/flurry/org/apache/avro/Schema$Field;
 
     .prologue
     .line 387
@@ -218,7 +219,7 @@
 
 .method static synthetic access$700(Lcom/flurry/org/apache/avro/Schema$Field;)I
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/flurry/org/apache/avro/Schema$Field;
 
     .prologue
     .line 387
@@ -229,8 +230,8 @@
 
 .method static synthetic access$702(Lcom/flurry/org/apache/avro/Schema$Field;I)I
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
+    .param p0, "x0"    # Lcom/flurry/org/apache/avro/Schema$Field;
+    .param p1, "x1"    # I
 
     .prologue
     .line 387
@@ -241,7 +242,7 @@
 
 .method private defaultValueEquals(Lcom/flurry/org/codehaus/jackson/JsonNode;)Z
     .locals 2
-    .parameter "thatDefaultValue"
+    .param p1, "thatDefaultValue"    # Lcom/flurry/org/codehaus/jackson/JsonNode;
 
     .prologue
     .line 459
@@ -304,7 +305,7 @@
 # virtual methods
 .method public addAlias(Ljava/lang/String;)V
     .locals 1
-    .parameter "alias"
+    .param p1, "alias"    # Ljava/lang/String;
 
     .prologue
     .line 437
@@ -331,8 +332,8 @@
 
 .method public declared-synchronized addProp(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
-    .parameter "name"
-    .parameter "value"
+    .param p1, "name"    # Ljava/lang/String;
+    .param p2, "value"    # Ljava/lang/String;
 
     .prologue
     .line 430
@@ -418,7 +419,7 @@
 
 .method public equals(Ljava/lang/Object;)Z
     .locals 6
-    .parameter "other"
+    .param p1, "other"    # Ljava/lang/Object;
 
     .prologue
     const/4 v5, 0x1
@@ -453,7 +454,7 @@
     move-object v1, v0
 
     .line 451
-    .local v1, that:Lcom/flurry/org/apache/avro/Schema$Field;
+    .local v1, "that":Lcom/flurry/org/apache/avro/Schema$Field;
     iget-object v2, p0, Lcom/flurry/org/apache/avro/Schema$Field;->name:Ljava/lang/String;
 
     iget-object v3, v1, Lcom/flurry/org/apache/avro/Schema$Field;->name:Ljava/lang/String;
@@ -504,7 +505,7 @@
 
 .method public declared-synchronized getProp(Ljava/lang/String;)Ljava/lang/String;
     .locals 1
-    .parameter "name"
+    .param p1, "name"    # Ljava/lang/String;
 
     .prologue
     .line 427
@@ -642,7 +643,7 @@
 
     iget-object v1, p0, Lcom/flurry/org/apache/avro/Schema$Field;->schema:Lcom/flurry/org/apache/avro/Schema;
 
-    #getter for: Lcom/flurry/org/apache/avro/Schema;->type:Lcom/flurry/org/apache/avro/Schema$Type;
+    # getter for: Lcom/flurry/org/apache/avro/Schema;->type:Lcom/flurry/org/apache/avro/Schema$Type;
     invoke-static {v1}, Lcom/flurry/org/apache/avro/Schema;->access$300(Lcom/flurry/org/apache/avro/Schema;)Lcom/flurry/org/apache/avro/Schema$Type;
 
     move-result-object v1

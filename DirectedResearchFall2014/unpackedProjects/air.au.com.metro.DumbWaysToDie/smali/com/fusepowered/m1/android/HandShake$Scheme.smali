@@ -25,7 +25,6 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m1/android/HandShake;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 479
@@ -39,9 +38,8 @@
 
 .method constructor <init>(Lcom/fusepowered/m1/android/HandShake;Ljava/lang/String;I)V
     .locals 0
-    .parameter
-    .parameter "scheme"
-    .parameter "id"
+    .param p2, "scheme"    # Ljava/lang/String;
+    .param p3, "id"    # I
 
     .prologue
     .line 483
@@ -63,7 +61,7 @@
 # virtual methods
 .method checkAvailability(Landroid/content/Context;)Z
     .locals 6
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     const-string v5, "android.intent.action.VIEW"
@@ -95,20 +93,20 @@
     invoke-direct {v0, v5, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
     .line 496
-    .local v0, intent:Landroid/content/Intent;
+    .local v0, "intent":Landroid/content/Intent;
     :goto_0
     invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v2
 
-    const/high16 v3, 0x1
+    const/high16 v3, 0x10000
 
     invoke-virtual {v2, v0, v3}, Landroid/content/pm/PackageManager;->queryIntentActivities(Landroid/content/Intent;I)Ljava/util/List;
 
     move-result-object v1
 
     .line 497
-    .local v1, list:Ljava/util/List;,"Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
+    .local v1, "list":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     invoke-interface {v1}, Ljava/util/List;->size()I
 
     move-result v2
@@ -121,8 +119,8 @@
     return v2
 
     .line 495
-    .end local v0           #intent:Landroid/content/Intent;
-    .end local v1           #list:Ljava/util/List;,"Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
+    .end local v0    # "intent":Landroid/content/Intent;
+    .end local v1    # "list":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     :cond_0
     new-instance v0, Landroid/content/Intent;
 
@@ -154,11 +152,11 @@
 
     invoke-direct {v0, v5, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
-    .restart local v0       #intent:Landroid/content/Intent;
+    .restart local v0    # "intent":Landroid/content/Intent;
     goto :goto_0
 
     .line 497
-    .restart local v1       #list:Ljava/util/List;,"Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
+    .restart local v1    # "list":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     :cond_1
     const/4 v2, 0x0
 
@@ -167,7 +165,7 @@
 
 .method deserializeFromObj(Lorg/json/JSONObject;)V
     .locals 2
-    .parameter "schemeObject"
+    .param p1, "schemeObject"    # Lorg/json/JSONObject;
 
     .prologue
     .line 502

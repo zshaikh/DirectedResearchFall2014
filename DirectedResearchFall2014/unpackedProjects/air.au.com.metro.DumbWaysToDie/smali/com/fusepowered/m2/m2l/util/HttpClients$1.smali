@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lorg/apache/http/client/HttpClient;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1

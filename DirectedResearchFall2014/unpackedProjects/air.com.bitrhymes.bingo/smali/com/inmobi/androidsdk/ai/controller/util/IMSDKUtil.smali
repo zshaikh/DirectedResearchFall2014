@@ -22,7 +22,6 @@
 
 .method public static getRootActivity(Landroid/app/Activity;)Landroid/app/Activity;
     .locals 2
-    .parameter
 
     .prologue
     .line 121
@@ -49,7 +48,6 @@
 
 .method public static validateAdConfiguration(Landroid/content/Context;)V
     .locals 5
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lcom/inmobi/androidsdk/ai/controller/util/IMConfigException;
@@ -130,7 +128,7 @@
     invoke-direct {v1, p0, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
     .line 49
-    const/high16 v2, 0x1
+    const/high16 v2, 0x10000
 
     .line 48
     invoke-virtual {v0, v1, v2}, Landroid/content/pm/PackageManager;->queryIntentActivities(Landroid/content/Intent;I)Ljava/util/List;
@@ -378,7 +376,6 @@
 
 .method public static validateAppID(Ljava/lang/String;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 111

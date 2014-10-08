@@ -50,7 +50,6 @@
 
 .method static synthetic a(Lcom/inmobi/androidsdk/IMBrowserActivity;)Lcom/inmobi/androidsdk/ai/container/IMCustomView;
     .locals 1
-    .parameter
 
     .prologue
     .line 56
@@ -61,7 +60,6 @@
 
 .method private a(Landroid/view/ViewGroup;)V
     .locals 5
-    .parameter
 
     .prologue
     .line 118
@@ -80,7 +78,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setId(I)V
 
     .line 121
-    const/high16 v1, 0x42c8
+    const/high16 v1, 0x42c80000
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setWeightSum(F)V
 
@@ -110,7 +108,7 @@
     move-result v2
 
     .line 133
-    const/high16 v3, 0x4230
+    const/high16 v3, 0x42300000
 
     iget v4, p0, Lcom/inmobi/androidsdk/IMBrowserActivity;->e:F
 
@@ -146,7 +144,7 @@
     invoke-direct {v1, v2, v3}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
 
     .line 140
-    const/high16 v2, 0x41c8
+    const/high16 v2, 0x41c80000
 
     iput v2, v1, Landroid/widget/LinearLayout$LayoutParams;->weight:F
 
@@ -238,7 +236,6 @@
 
 .method static synthetic b(Lcom/inmobi/androidsdk/IMBrowserActivity;)Lcom/inmobi/androidsdk/ai/container/IMWebView;
     .locals 1
-    .parameter
 
     .prologue
     .line 50
@@ -249,7 +246,6 @@
 
 .method public static requestOnAdDismiss(Landroid/os/Message;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 318
@@ -261,7 +257,6 @@
 
 .method public static setWebViewListener(Lcom/inmobi/androidsdk/ai/container/IMWebView$IMWebViewListener;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 322
@@ -275,7 +270,6 @@
 # virtual methods
 .method public onConfigurationChanged(Landroid/content/res/Configuration;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 333
@@ -298,7 +292,6 @@
 
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 5
-    .parameter
     .annotation build Landroid/annotation/SuppressLint;
         value = {
             "SetJavaScriptEnabled"

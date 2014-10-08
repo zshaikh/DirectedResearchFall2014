@@ -16,8 +16,7 @@
 
 .method public static containsNoNullOrEmpty(Ljava/util/Collection;Ljava/lang/String;)V
     .locals 5
-    .parameter
-    .parameter "name"
+    .param p1, "name"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -31,7 +30,7 @@
     .end annotation
 
     .prologue
-    .local p0, container:Ljava/util/Collection;,"Ljava/util/Collection<Ljava/lang/String;>;"
+    .local p0, "container":Ljava/util/Collection;, "Ljava/util/Collection<Ljava/lang/String;>;"
     const-string v4, "Container \'"
 
     .line 49
@@ -61,7 +60,7 @@
     check-cast v0, Ljava/lang/String;
 
     .line 51
-    .local v0, item:Ljava/lang/String;
+    .local v0, "item":Ljava/lang/String;
     if-nez v0, :cond_2
 
     .line 52
@@ -129,8 +128,7 @@
 
 .method public static containsNoNulls(Ljava/util/Collection;Ljava/lang/String;)V
     .locals 4
-    .parameter
-    .parameter "name"
+    .param p1, "name"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -145,7 +143,7 @@
 
     .prologue
     .line 40
-    .local p0, container:Ljava/util/Collection;,"Ljava/util/Collection<TT;>;"
+    .local p0, "container":Ljava/util/Collection;, "Ljava/util/Collection<TT;>;"
     invoke-static {p0, p1}, Lcom/facebook/internal/Validate;->notNull(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 41
@@ -172,7 +170,7 @@
     check-cast v0, Ljava/lang/Object;
 
     .line 42
-    .local v0, item:Ljava/lang/Object;,"TT;"
+    .local v0, "item":Ljava/lang/Object;, "TT;"
     if-nez v0, :cond_0
 
     .line 43
@@ -205,8 +203,7 @@
 
 .method public static notEmpty(Ljava/util/Collection;Ljava/lang/String;)V
     .locals 3
-    .parameter
-    .parameter "name"
+    .param p1, "name"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -221,7 +218,7 @@
 
     .prologue
     .line 34
-    .local p0, container:Ljava/util/Collection;,"Ljava/util/Collection<TT;>;"
+    .local p0, "container":Ljava/util/Collection;, "Ljava/util/Collection<TT;>;"
     invoke-interface {p0}, Ljava/util/Collection;->isEmpty()Z
 
     move-result v0
@@ -262,8 +259,7 @@
 
 .method public static notEmptyAndContainsNoNulls(Ljava/util/Collection;Ljava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter "name"
+    .param p1, "name"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -278,7 +274,7 @@
 
     .prologue
     .line 61
-    .local p0, container:Ljava/util/Collection;,"Ljava/util/Collection<TT;>;"
+    .local p0, "container":Ljava/util/Collection;, "Ljava/util/Collection<TT;>;"
     invoke-static {p0, p1}, Lcom/facebook/internal/Validate;->containsNoNulls(Ljava/util/Collection;Ljava/lang/String;)V
 
     .line 62
@@ -290,8 +286,8 @@
 
 .method public static notNull(Ljava/lang/Object;Ljava/lang/String;)V
     .locals 3
-    .parameter "arg"
-    .parameter "name"
+    .param p0, "arg"    # Ljava/lang/Object;
+    .param p1, "name"    # Ljava/lang/String;
 
     .prologue
     .line 28
@@ -331,8 +327,8 @@
 
 .method public static notNullOrEmpty(Ljava/lang/String;Ljava/lang/String;)V
     .locals 3
-    .parameter "arg"
-    .parameter "name"
+    .param p0, "arg"    # Ljava/lang/String;
+    .param p1, "name"    # Ljava/lang/String;
 
     .prologue
     .line 66
@@ -376,9 +372,9 @@
 
 .method public static varargs oneOf(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Object;)V
     .locals 4
-    .parameter "arg"
-    .parameter "name"
-    .parameter "values"
+    .param p0, "arg"    # Ljava/lang/Object;
+    .param p1, "name"    # Ljava/lang/String;
+    .param p2, "values"    # [Ljava/lang/Object;
 
     .prologue
     .line 72
@@ -421,7 +417,7 @@
     aget-object v0, p2, v2
 
     .line 73
-    .local v0, value:Ljava/lang/Object;
+    .local v0, "value":Ljava/lang/Object;
     if-eqz v0, :cond_2
 
     .line 74

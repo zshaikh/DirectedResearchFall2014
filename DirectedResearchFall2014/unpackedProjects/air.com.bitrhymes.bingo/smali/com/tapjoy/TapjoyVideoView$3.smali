@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/tapjoy/TapjoyVideoView;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 543
@@ -44,7 +43,7 @@
     .line 547
     iget-object v0, p0, Lcom/tapjoy/TapjoyVideoView$3;->this$0:Lcom/tapjoy/TapjoyVideoView;
 
-    #getter for: Lcom/tapjoy/TapjoyVideoView;->clickRequestSuccess:Z
+    # getter for: Lcom/tapjoy/TapjoyVideoView;->clickRequestSuccess:Z
     invoke-static {v0}, Lcom/tapjoy/TapjoyVideoView;->access$300(Lcom/tapjoy/TapjoyVideoView;)Z
 
     move-result v0
@@ -56,6 +55,7 @@
 
     move-result-object v0
 
+    # getter for: Lcom/tapjoy/TapjoyVideoView;->videoData:Lcom/tapjoy/TapjoyVideoObject;
     invoke-static {}, Lcom/tapjoy/TapjoyVideoView;->access$200()Lcom/tapjoy/TapjoyVideoObject;
 
     move-result-object v1

@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/adobe/air/ConfigDownloadListener;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 95
@@ -39,7 +38,6 @@
 # virtual methods
 .method public onActivityStateChanged(Lcom/adobe/air/AndroidActivityWrapper$ActivityState;)V
     .locals 4
-    .parameter
 
     .prologue
     .line 103
@@ -59,7 +57,7 @@
     .line 106
     iget-object v1, p0, Lcom/adobe/air/ConfigDownloadListener$2;->this$0:Lcom/adobe/air/ConfigDownloadListener;
 
-    #getter for: Lcom/adobe/air/ConfigDownloadListener;->mDownloadConfigRecv:Landroid/content/BroadcastReceiver;
+    # getter for: Lcom/adobe/air/ConfigDownloadListener;->mDownloadConfigRecv:Landroid/content/BroadcastReceiver;
     invoke-static {v1}, Lcom/adobe/air/ConfigDownloadListener;->access$100(Lcom/adobe/air/ConfigDownloadListener;)Landroid/content/BroadcastReceiver;
 
     move-result-object v1
@@ -73,7 +71,7 @@
 
     move-result-wide v1
 
-    #setter for: Lcom/adobe/air/ConfigDownloadListener;->lastPauseTime:J
+    # setter for: Lcom/adobe/air/ConfigDownloadListener;->lastPauseTime:J
     invoke-static {v0, v1, v2}, Lcom/adobe/air/ConfigDownloadListener;->access$002(Lcom/adobe/air/ConfigDownloadListener;J)J
 
     .line 112
@@ -90,7 +88,7 @@
     .line 110
     iget-object v1, p0, Lcom/adobe/air/ConfigDownloadListener$2;->this$0:Lcom/adobe/air/ConfigDownloadListener;
 
-    #getter for: Lcom/adobe/air/ConfigDownloadListener;->mDownloadConfigRecv:Landroid/content/BroadcastReceiver;
+    # getter for: Lcom/adobe/air/ConfigDownloadListener;->mDownloadConfigRecv:Landroid/content/BroadcastReceiver;
     invoke-static {v1}, Lcom/adobe/air/ConfigDownloadListener;->access$100(Lcom/adobe/air/ConfigDownloadListener;)Landroid/content/BroadcastReceiver;
 
     move-result-object v1
@@ -108,7 +106,6 @@
 
 .method public onConfigurationChanged(Landroid/content/res/Configuration;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 116

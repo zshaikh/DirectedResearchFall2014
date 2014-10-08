@@ -24,7 +24,7 @@
 
 .method public static getExceptionStackTraceAsString(Ljava/lang/Exception;)Ljava/lang/String;
     .locals 2
-    .parameter "exception"
+    .param p0, "exception"    # Ljava/lang/Exception;
 
     .prologue
     .line 14
@@ -33,7 +33,7 @@
     invoke-direct {v0}, Ljava/io/StringWriter;-><init>()V
 
     .line 15
-    .local v0, sw:Ljava/io/StringWriter;
+    .local v0, "sw":Ljava/io/StringWriter;
     new-instance v1, Ljava/io/PrintWriter;
 
     invoke-direct {v1, v0}, Ljava/io/PrintWriter;-><init>(Ljava/io/Writer;)V

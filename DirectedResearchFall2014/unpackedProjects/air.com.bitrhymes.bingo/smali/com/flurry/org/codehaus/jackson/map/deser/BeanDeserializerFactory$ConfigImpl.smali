@@ -91,11 +91,11 @@
 
 .method protected constructor <init>([Lcom/flurry/org/codehaus/jackson/map/Deserializers;[Lcom/flurry/org/codehaus/jackson/map/KeyDeserializers;[Lcom/flurry/org/codehaus/jackson/map/deser/BeanDeserializerModifier;[Lcom/flurry/org/codehaus/jackson/map/AbstractTypeResolver;[Lcom/flurry/org/codehaus/jackson/map/deser/ValueInstantiators;)V
     .locals 1
-    .parameter "allAdditionalDeserializers"
-    .parameter "allAdditionalKeyDeserializers"
-    .parameter "modifiers"
-    .parameter "atr"
-    .parameter "vi"
+    .param p1, "allAdditionalDeserializers"    # [Lcom/flurry/org/codehaus/jackson/map/Deserializers;
+    .param p2, "allAdditionalKeyDeserializers"    # [Lcom/flurry/org/codehaus/jackson/map/KeyDeserializers;
+    .param p3, "modifiers"    # [Lcom/flurry/org/codehaus/jackson/map/deser/BeanDeserializerModifier;
+    .param p4, "atr"    # [Lcom/flurry/org/codehaus/jackson/map/AbstractTypeResolver;
+    .param p5, "vi"    # [Lcom/flurry/org/codehaus/jackson/map/deser/ValueInstantiators;
 
     .prologue
     .line 111
@@ -104,6 +104,7 @@
     .line 112
     if-nez p1, :cond_0
 
+    # getter for: Lcom/flurry/org/codehaus/jackson/map/deser/BeanDeserializerFactory;->NO_DESERIALIZERS:[Lcom/flurry/org/codehaus/jackson/map/Deserializers;
     invoke-static {}, Lcom/flurry/org/codehaus/jackson/map/deser/BeanDeserializerFactory;->access$000()[Lcom/flurry/org/codehaus/jackson/map/Deserializers;
 
     move-result-object v0
@@ -406,7 +407,7 @@
 
 .method public withAbstractTypeResolver(Lcom/flurry/org/codehaus/jackson/map/AbstractTypeResolver;)Lcom/flurry/org/codehaus/jackson/map/DeserializerFactory$Config;
     .locals 6
-    .parameter "resolver"
+    .param p1, "resolver"    # Lcom/flurry/org/codehaus/jackson/map/AbstractTypeResolver;
 
     .prologue
     .line 157
@@ -432,7 +433,7 @@
     check-cast v4, [Lcom/flurry/org/codehaus/jackson/map/AbstractTypeResolver;
 
     .line 161
-    .local v4, all:[Lcom/flurry/org/codehaus/jackson/map/AbstractTypeResolver;
+    .local v4, "all":[Lcom/flurry/org/codehaus/jackson/map/AbstractTypeResolver;
     new-instance v0, Lcom/flurry/org/codehaus/jackson/map/deser/BeanDeserializerFactory$ConfigImpl;
 
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/map/deser/BeanDeserializerFactory$ConfigImpl;->_additionalDeserializers:[Lcom/flurry/org/codehaus/jackson/map/Deserializers;
@@ -450,7 +451,7 @@
 
 .method public withAdditionalDeserializers(Lcom/flurry/org/codehaus/jackson/map/Deserializers;)Lcom/flurry/org/codehaus/jackson/map/DeserializerFactory$Config;
     .locals 6
-    .parameter "additional"
+    .param p1, "additional"    # Lcom/flurry/org/codehaus/jackson/map/Deserializers;
 
     .prologue
     .line 124
@@ -476,7 +477,7 @@
     check-cast v1, [Lcom/flurry/org/codehaus/jackson/map/Deserializers;
 
     .line 128
-    .local v1, all:[Lcom/flurry/org/codehaus/jackson/map/Deserializers;
+    .local v1, "all":[Lcom/flurry/org/codehaus/jackson/map/Deserializers;
     new-instance v0, Lcom/flurry/org/codehaus/jackson/map/deser/BeanDeserializerFactory$ConfigImpl;
 
     iget-object v2, p0, Lcom/flurry/org/codehaus/jackson/map/deser/BeanDeserializerFactory$ConfigImpl;->_additionalKeyDeserializers:[Lcom/flurry/org/codehaus/jackson/map/KeyDeserializers;
@@ -494,7 +495,7 @@
 
 .method public withAdditionalKeyDeserializers(Lcom/flurry/org/codehaus/jackson/map/KeyDeserializers;)Lcom/flurry/org/codehaus/jackson/map/DeserializerFactory$Config;
     .locals 6
-    .parameter "additional"
+    .param p1, "additional"    # Lcom/flurry/org/codehaus/jackson/map/KeyDeserializers;
 
     .prologue
     .line 135
@@ -520,7 +521,7 @@
     check-cast v2, [Lcom/flurry/org/codehaus/jackson/map/KeyDeserializers;
 
     .line 139
-    .local v2, all:[Lcom/flurry/org/codehaus/jackson/map/KeyDeserializers;
+    .local v2, "all":[Lcom/flurry/org/codehaus/jackson/map/KeyDeserializers;
     new-instance v0, Lcom/flurry/org/codehaus/jackson/map/deser/BeanDeserializerFactory$ConfigImpl;
 
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/map/deser/BeanDeserializerFactory$ConfigImpl;->_additionalDeserializers:[Lcom/flurry/org/codehaus/jackson/map/Deserializers;
@@ -538,7 +539,7 @@
 
 .method public withDeserializerModifier(Lcom/flurry/org/codehaus/jackson/map/deser/BeanDeserializerModifier;)Lcom/flurry/org/codehaus/jackson/map/DeserializerFactory$Config;
     .locals 6
-    .parameter "modifier"
+    .param p1, "modifier"    # Lcom/flurry/org/codehaus/jackson/map/deser/BeanDeserializerModifier;
 
     .prologue
     .line 146
@@ -564,7 +565,7 @@
     check-cast v3, [Lcom/flurry/org/codehaus/jackson/map/deser/BeanDeserializerModifier;
 
     .line 150
-    .local v3, all:[Lcom/flurry/org/codehaus/jackson/map/deser/BeanDeserializerModifier;
+    .local v3, "all":[Lcom/flurry/org/codehaus/jackson/map/deser/BeanDeserializerModifier;
     new-instance v0, Lcom/flurry/org/codehaus/jackson/map/deser/BeanDeserializerFactory$ConfigImpl;
 
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/map/deser/BeanDeserializerFactory$ConfigImpl;->_additionalDeserializers:[Lcom/flurry/org/codehaus/jackson/map/Deserializers;
@@ -582,7 +583,7 @@
 
 .method public withValueInstantiators(Lcom/flurry/org/codehaus/jackson/map/deser/ValueInstantiators;)Lcom/flurry/org/codehaus/jackson/map/DeserializerFactory$Config;
     .locals 6
-    .parameter "instantiators"
+    .param p1, "instantiators"    # Lcom/flurry/org/codehaus/jackson/map/deser/ValueInstantiators;
 
     .prologue
     .line 168
@@ -608,7 +609,7 @@
     check-cast v5, [Lcom/flurry/org/codehaus/jackson/map/deser/ValueInstantiators;
 
     .line 172
-    .local v5, all:[Lcom/flurry/org/codehaus/jackson/map/deser/ValueInstantiators;
+    .local v5, "all":[Lcom/flurry/org/codehaus/jackson/map/deser/ValueInstantiators;
     new-instance v0, Lcom/flurry/org/codehaus/jackson/map/deser/BeanDeserializerFactory$ConfigImpl;
 
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/map/deser/BeanDeserializerFactory$ConfigImpl;->_additionalDeserializers:[Lcom/flurry/org/codehaus/jackson/map/Deserializers;

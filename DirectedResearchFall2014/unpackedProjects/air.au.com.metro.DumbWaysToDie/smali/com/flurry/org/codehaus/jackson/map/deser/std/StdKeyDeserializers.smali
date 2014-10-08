@@ -115,7 +115,7 @@
 
 .method private add(Lcom/flurry/org/codehaus/jackson/map/deser/std/StdKeyDeserializer;)V
     .locals 3
-    .parameter "kdeser"
+    .param p1, "kdeser"    # Lcom/flurry/org/codehaus/jackson/map/deser/std/StdKeyDeserializer;
 
     .prologue
     .line 49
@@ -124,7 +124,7 @@
     move-result-object v0
 
     .line 53
-    .local v0, keyClass:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local v0, "keyClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/map/deser/std/StdKeyDeserializers;->_keyDeserializers:Ljava/util/HashMap;
 
     invoke-static {}, Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;->defaultInstance()Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;
@@ -167,7 +167,6 @@
 
 .method public static constructEnumKeyDeserializer(Lcom/flurry/org/codehaus/jackson/map/util/EnumResolver;)Lcom/flurry/org/codehaus/jackson/map/KeyDeserializer;
     .locals 2
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -179,7 +178,7 @@
 
     .prologue
     .line 73
-    .local p0, enumResolver:Lcom/flurry/org/codehaus/jackson/map/util/EnumResolver;,"Lcom/flurry/org/codehaus/jackson/map/util/EnumResolver<*>;"
+    .local p0, "enumResolver":Lcom/flurry/org/codehaus/jackson/map/util/EnumResolver;, "Lcom/flurry/org/codehaus/jackson/map/util/EnumResolver<*>;"
     new-instance v0, Lcom/flurry/org/codehaus/jackson/map/deser/std/StdKeyDeserializer$EnumKD;
 
     const/4 v1, 0x0
@@ -191,8 +190,7 @@
 
 .method public static constructEnumKeyDeserializer(Lcom/flurry/org/codehaus/jackson/map/util/EnumResolver;Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;)Lcom/flurry/org/codehaus/jackson/map/KeyDeserializer;
     .locals 1
-    .parameter
-    .parameter "factory"
+    .param p1, "factory"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -206,7 +204,7 @@
 
     .prologue
     .line 78
-    .local p0, enumResolver:Lcom/flurry/org/codehaus/jackson/map/util/EnumResolver;,"Lcom/flurry/org/codehaus/jackson/map/util/EnumResolver<*>;"
+    .local p0, "enumResolver":Lcom/flurry/org/codehaus/jackson/map/util/EnumResolver;, "Lcom/flurry/org/codehaus/jackson/map/util/EnumResolver<*>;"
     new-instance v0, Lcom/flurry/org/codehaus/jackson/map/deser/std/StdKeyDeserializer$EnumKD;
 
     invoke-direct {v0, p0, p1}, Lcom/flurry/org/codehaus/jackson/map/deser/std/StdKeyDeserializer$EnumKD;-><init>(Lcom/flurry/org/codehaus/jackson/map/util/EnumResolver;Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;)V
@@ -216,8 +214,8 @@
 
 .method public static constructStringKeyDeserializer(Lcom/flurry/org/codehaus/jackson/map/DeserializationConfig;Lcom/flurry/org/codehaus/jackson/type/JavaType;)Lcom/flurry/org/codehaus/jackson/map/KeyDeserializer;
     .locals 1
-    .parameter "config"
-    .parameter "type"
+    .param p0, "config"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationConfig;
+    .param p1, "type"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
 
     .prologue
     .line 69
@@ -234,8 +232,8 @@
 
 .method public static findStringBasedKeyDeserializer(Lcom/flurry/org/codehaus/jackson/map/DeserializationConfig;Lcom/flurry/org/codehaus/jackson/type/JavaType;)Lcom/flurry/org/codehaus/jackson/map/KeyDeserializer;
     .locals 8
-    .parameter "config"
-    .parameter "type"
+    .param p0, "config"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationConfig;
+    .param p1, "type"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
 
     .prologue
     const/4 v6, 0x1
@@ -252,7 +250,7 @@
     check-cast v0, Lcom/flurry/org/codehaus/jackson/map/introspect/BasicBeanDescription;
 
     .line 88
-    .local v0, beanDesc:Lcom/flurry/org/codehaus/jackson/map/introspect/BasicBeanDescription;
+    .local v0, "beanDesc":Lcom/flurry/org/codehaus/jackson/map/introspect/BasicBeanDescription;
     new-array v3, v6, [Ljava/lang/Class;
 
     const-class v4, Ljava/lang/String;
@@ -264,7 +262,7 @@
     move-result-object v1
 
     .line 89
-    .local v1, ctor:Ljava/lang/reflect/Constructor;,"Ljava/lang/reflect/Constructor<*>;"
+    .local v1, "ctor":Ljava/lang/reflect/Constructor;, "Ljava/lang/reflect/Constructor<*>;"
     if-eqz v1, :cond_1
 
     .line 90
@@ -302,7 +300,7 @@
     move-result-object v2
 
     .line 99
-    .local v2, m:Ljava/lang/reflect/Method;
+    .local v2, "m":Ljava/lang/reflect/Method;
     if-eqz v2, :cond_3
 
     .line 100

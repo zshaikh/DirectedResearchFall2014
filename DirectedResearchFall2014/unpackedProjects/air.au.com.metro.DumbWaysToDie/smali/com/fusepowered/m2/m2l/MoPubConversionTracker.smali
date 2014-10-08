@@ -43,7 +43,6 @@
 
 .method static synthetic access$0(Lcom/fusepowered/m2/m2l/MoPubConversionTracker;)Ljava/lang/String;
     .locals 1
-    .parameter
 
     .prologue
     .line 55
@@ -54,7 +53,6 @@
 
 .method static synthetic access$1(Lcom/fusepowered/m2/m2l/MoPubConversionTracker;)Landroid/content/Context;
     .locals 1
-    .parameter
 
     .prologue
     .line 52
@@ -65,7 +63,6 @@
 
 .method static synthetic access$2(Lcom/fusepowered/m2/m2l/MoPubConversionTracker;)Landroid/content/SharedPreferences;
     .locals 1
-    .parameter
 
     .prologue
     .line 54
@@ -76,7 +73,6 @@
 
 .method static synthetic access$3(Lcom/fusepowered/m2/m2l/MoPubConversionTracker;)Ljava/lang/String;
     .locals 1
-    .parameter
 
     .prologue
     .line 53
@@ -107,7 +103,7 @@
 # virtual methods
 .method public reportAppOpen(Landroid/content/Context;)V
     .locals 3
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     .line 58

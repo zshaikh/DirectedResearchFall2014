@@ -21,7 +21,6 @@
 # direct methods
 .method private constructor <init>(Lcom/facebook/android/Facebook;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1155
@@ -34,8 +33,6 @@
 
 .method synthetic constructor <init>(Lcom/facebook/android/Facebook;Lcom/facebook/android/Facebook$SetterTokenCachingStrategy;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 1155
@@ -55,7 +52,6 @@
 
     const/4 v1, 0x0
 
-    #setter for: Lcom/facebook/android/Facebook;->accessToken:Ljava/lang/String;
     invoke-static {v0, v1}, Lcom/facebook/android/Facebook;->access$6(Lcom/facebook/android/Facebook;Ljava/lang/String;)V
 
     .line 1183
@@ -72,10 +68,10 @@
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     .line 1161
-    .local v0, bundle:Landroid/os/Bundle;
+    .local v0, "bundle":Landroid/os/Bundle;
     iget-object v1, p0, Lcom/facebook/android/Facebook$SetterTokenCachingStrategy;->this$0:Lcom/facebook/android/Facebook;
 
-    #getter for: Lcom/facebook/android/Facebook;->accessToken:Ljava/lang/String;
+    # getter for: Lcom/facebook/android/Facebook;->accessToken:Ljava/lang/String;
     invoke-static {v1}, Lcom/facebook/android/Facebook;->access$0(Lcom/facebook/android/Facebook;)Ljava/lang/String;
 
     move-result-object v1
@@ -85,7 +81,7 @@
     .line 1162
     iget-object v1, p0, Lcom/facebook/android/Facebook$SetterTokenCachingStrategy;->this$0:Lcom/facebook/android/Facebook;
 
-    #getter for: Lcom/facebook/android/Facebook;->accessToken:Ljava/lang/String;
+    # getter for: Lcom/facebook/android/Facebook;->accessToken:Ljava/lang/String;
     invoke-static {v1}, Lcom/facebook/android/Facebook;->access$0(Lcom/facebook/android/Facebook;)Ljava/lang/String;
 
     move-result-object v1
@@ -95,7 +91,7 @@
     .line 1163
     iget-object v1, p0, Lcom/facebook/android/Facebook$SetterTokenCachingStrategy;->this$0:Lcom/facebook/android/Facebook;
 
-    #getter for: Lcom/facebook/android/Facebook;->accessExpiresMillisecondsAfterEpoch:J
+    # getter for: Lcom/facebook/android/Facebook;->accessExpiresMillisecondsAfterEpoch:J
     invoke-static {v1}, Lcom/facebook/android/Facebook;->access$2(Lcom/facebook/android/Facebook;)J
 
     move-result-wide v1
@@ -105,12 +101,12 @@
     .line 1164
     iget-object v1, p0, Lcom/facebook/android/Facebook$SetterTokenCachingStrategy;->this$0:Lcom/facebook/android/Facebook;
 
-    #getter for: Lcom/facebook/android/Facebook;->pendingAuthorizationPermissions:[Ljava/lang/String;
+    # getter for: Lcom/facebook/android/Facebook;->pendingAuthorizationPermissions:[Ljava/lang/String;
     invoke-static {v1}, Lcom/facebook/android/Facebook;->access$3(Lcom/facebook/android/Facebook;)[Ljava/lang/String;
 
     move-result-object v1
 
-    #calls: Lcom/facebook/android/Facebook;->stringList([Ljava/lang/String;)Ljava/util/List;
+    # invokes: Lcom/facebook/android/Facebook;->stringList([Ljava/lang/String;)Ljava/util/List;
     invoke-static {v1}, Lcom/facebook/android/Facebook;->access$4([Ljava/lang/String;)Ljava/util/List;
 
     move-result-object v1
@@ -125,7 +121,7 @@
     .line 1166
     iget-object v1, p0, Lcom/facebook/android/Facebook$SetterTokenCachingStrategy;->this$0:Lcom/facebook/android/Facebook;
 
-    #getter for: Lcom/facebook/android/Facebook;->lastAccessUpdateMillisecondsAfterEpoch:J
+    # getter for: Lcom/facebook/android/Facebook;->lastAccessUpdateMillisecondsAfterEpoch:J
     invoke-static {v1}, Lcom/facebook/android/Facebook;->access$5(Lcom/facebook/android/Facebook;)J
 
     move-result-wide v1
@@ -139,7 +135,7 @@
 
 .method public save(Landroid/os/Bundle;)V
     .locals 3
-    .parameter "bundle"
+    .param p1, "bundle"    # Landroid/os/Bundle;
 
     .prologue
     .line 1174
@@ -149,7 +145,6 @@
 
     move-result-object v1
 
-    #setter for: Lcom/facebook/android/Facebook;->accessToken:Ljava/lang/String;
     invoke-static {v0, v1}, Lcom/facebook/android/Facebook;->access$6(Lcom/facebook/android/Facebook;Ljava/lang/String;)V
 
     .line 1175
@@ -159,7 +154,6 @@
 
     move-result-wide v1
 
-    #setter for: Lcom/facebook/android/Facebook;->accessExpiresMillisecondsAfterEpoch:J
     invoke-static {v0, v1, v2}, Lcom/facebook/android/Facebook;->access$7(Lcom/facebook/android/Facebook;J)V
 
     .line 1176
@@ -169,12 +163,11 @@
 
     move-result-object v1
 
-    #calls: Lcom/facebook/android/Facebook;->stringArray(Ljava/util/List;)[Ljava/lang/String;
+    # invokes: Lcom/facebook/android/Facebook;->stringArray(Ljava/util/List;)[Ljava/lang/String;
     invoke-static {v1}, Lcom/facebook/android/Facebook;->access$8(Ljava/util/List;)[Ljava/lang/String;
 
     move-result-object v1
 
-    #setter for: Lcom/facebook/android/Facebook;->pendingAuthorizationPermissions:[Ljava/lang/String;
     invoke-static {v0, v1}, Lcom/facebook/android/Facebook;->access$9(Lcom/facebook/android/Facebook;[Ljava/lang/String;)V
 
     .line 1177
@@ -184,7 +177,6 @@
 
     move-result-wide v1
 
-    #setter for: Lcom/facebook/android/Facebook;->lastAccessUpdateMillisecondsAfterEpoch:J
     invoke-static {v0, v1, v2}, Lcom/facebook/android/Facebook;->access$10(Lcom/facebook/android/Facebook;J)V
 
     .line 1178

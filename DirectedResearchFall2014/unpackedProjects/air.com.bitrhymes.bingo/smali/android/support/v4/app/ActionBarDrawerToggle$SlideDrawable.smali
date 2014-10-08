@@ -30,7 +30,7 @@
 # direct methods
 .method public constructor <init>(Landroid/graphics/drawable/Drawable;)V
     .locals 1
-    .parameter "wrapped"
+    .param p1, "wrapped"    # Landroid/graphics/drawable/Drawable;
 
     .prologue
     .line 388
@@ -67,7 +67,7 @@
 
 .method public draw(Landroid/graphics/Canvas;)V
     .locals 2
-    .parameter "canvas"
+    .param p1, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
     .line 408
@@ -237,7 +237,7 @@
 
 .method public getPadding(Landroid/graphics/Rect;)Z
     .locals 1
-    .parameter "padding"
+    .param p1, "padding"    # Landroid/graphics/Rect;
 
     .prologue
     .line 524
@@ -280,7 +280,7 @@
 
 .method public invalidateDrawable(Landroid/graphics/drawable/Drawable;)V
     .locals 1
-    .parameter "who"
+    .param p1, "who"    # Landroid/graphics/drawable/Drawable;
 
     .prologue
     .line 534
@@ -312,7 +312,7 @@
 
 .method protected onBoundsChange(Landroid/graphics/Rect;)V
     .locals 1
-    .parameter "bounds"
+    .param p1, "bounds"    # Landroid/graphics/Rect;
 
     .prologue
     .line 498
@@ -329,7 +329,7 @@
 
 .method protected onStateChange([I)Z
     .locals 1
-    .parameter "state"
+    .param p1, "state"    # [I
 
     .prologue
     .line 492
@@ -347,9 +347,9 @@
 
 .method public scheduleDrawable(Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;J)V
     .locals 1
-    .parameter "who"
-    .parameter "what"
-    .parameter "when"
+    .param p1, "who"    # Landroid/graphics/drawable/Drawable;
+    .param p2, "what"    # Ljava/lang/Runnable;
+    .param p3, "when"    # J
 
     .prologue
     .line 541
@@ -367,7 +367,7 @@
 
 .method public setAlpha(I)V
     .locals 1
-    .parameter "alpha"
+    .param p1, "alpha"    # I
 
     .prologue
     .line 437
@@ -381,7 +381,7 @@
 
 .method public setChangingConfigurations(I)V
     .locals 1
-    .parameter "configs"
+    .param p1, "configs"    # I
 
     .prologue
     .line 417
@@ -395,8 +395,8 @@
 
 .method public setColorFilter(ILandroid/graphics/PorterDuff$Mode;)V
     .locals 1
-    .parameter "color"
-    .parameter "mode"
+    .param p1, "color"    # I
+    .param p2, "mode"    # Landroid/graphics/PorterDuff$Mode;
 
     .prologue
     .line 447
@@ -410,7 +410,7 @@
 
 .method public setColorFilter(Landroid/graphics/ColorFilter;)V
     .locals 1
-    .parameter "cf"
+    .param p1, "cf"    # Landroid/graphics/ColorFilter;
 
     .prologue
     .line 442
@@ -424,7 +424,7 @@
 
 .method public setDither(Z)V
     .locals 1
-    .parameter "dither"
+    .param p1, "dither"    # Z
 
     .prologue
     .line 427
@@ -438,7 +438,7 @@
 
 .method public setFilterBitmap(Z)V
     .locals 1
-    .parameter "filter"
+    .param p1, "filter"    # Z
 
     .prologue
     .line 432
@@ -452,7 +452,7 @@
 
 .method public setOffset(F)V
     .locals 0
-    .parameter "offset"
+    .param p1, "offset"    # F
 
     .prologue
     .line 393
@@ -467,7 +467,7 @@
 
 .method public setOffsetBy(F)V
     .locals 0
-    .parameter "offsetBy"
+    .param p1, "offsetBy"    # F
 
     .prologue
     .line 402
@@ -482,7 +482,7 @@
 
 .method public setState([I)Z
     .locals 1
-    .parameter "stateSet"
+    .param p1, "stateSet"    # [I
 
     .prologue
     .line 462
@@ -497,8 +497,8 @@
 
 .method public setVisible(ZZ)Z
     .locals 1
-    .parameter "visible"
-    .parameter "restart"
+    .param p1, "visible"    # Z
+    .param p2, "restart"    # Z
 
     .prologue
     .line 477
@@ -511,8 +511,8 @@
 
 .method public unscheduleDrawable(Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;)V
     .locals 1
-    .parameter "who"
-    .parameter "what"
+    .param p1, "who"    # Landroid/graphics/drawable/Drawable;
+    .param p2, "what"    # Ljava/lang/Runnable;
 
     .prologue
     .line 548

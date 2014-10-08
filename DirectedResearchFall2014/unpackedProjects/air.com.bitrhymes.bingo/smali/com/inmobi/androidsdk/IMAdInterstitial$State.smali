@@ -116,8 +116,6 @@
 
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 44
@@ -128,7 +126,6 @@
 
 .method public static valueOf(Ljava/lang/String;)Lcom/inmobi/androidsdk/IMAdInterstitial$State;
     .locals 1
-    .parameter
 
     .prologue
     .line 1

@@ -39,7 +39,6 @@
 # direct methods
 .method constructor <init>(Lcom/facebook/widget/PickerFragment;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 995
@@ -107,7 +106,7 @@
 
 .method isSelected(Ljava/lang/String;)Z
     .locals 1
-    .parameter "id"
+    .param p1, "id"    # Ljava/lang/String;
 
     .prologue
     .line 1004
@@ -134,8 +133,8 @@
 
 .method readSelectionFromBundle(Landroid/os/Bundle;Ljava/lang/String;)V
     .locals 3
-    .parameter "inBundle"
-    .parameter "key"
+    .param p1, "inBundle"    # Landroid/os/Bundle;
+    .param p2, "key"    # Ljava/lang/String;
 
     .prologue
     .line 1028
@@ -147,7 +146,7 @@
     move-result-object v0
 
     .line 1030
-    .local v0, ids:Ljava/lang/String;
+    .local v0, "ids":Ljava/lang/String;
     if-eqz v0, :cond_0
 
     .line 1031
@@ -158,7 +157,7 @@
     move-result-object v1
 
     .line 1032
-    .local v1, splitIds:[Ljava/lang/String;
+    .local v1, "splitIds":[Ljava/lang/String;
     iget-object v2, p0, Lcom/facebook/widget/PickerFragment$MultiSelectionStrategy;->selectedIds:Ljava/util/Set;
 
     invoke-interface {v2}, Ljava/util/Set;->clear()V
@@ -169,16 +168,16 @@
     invoke-static {v2, v1}, Ljava/util/Collections;->addAll(Ljava/util/Collection;[Ljava/lang/Object;)Z
 
     .line 1036
-    .end local v0           #ids:Ljava/lang/String;
-    .end local v1           #splitIds:[Ljava/lang/String;
+    .end local v0    # "ids":Ljava/lang/String;
+    .end local v1    # "splitIds":[Ljava/lang/String;
     :cond_0
     return-void
 .end method
 
 .method saveSelectionToBundle(Landroid/os/Bundle;Ljava/lang/String;)V
     .locals 3
-    .parameter "outBundle"
-    .parameter "key"
+    .param p1, "outBundle"    # Landroid/os/Bundle;
+    .param p2, "key"    # Ljava/lang/String;
 
     .prologue
     .line 1020
@@ -200,11 +199,11 @@
     move-result-object v0
 
     .line 1022
-    .local v0, ids:Ljava/lang/String;
+    .local v0, "ids":Ljava/lang/String;
     invoke-virtual {p1, p2, v0}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 1024
-    .end local v0           #ids:Ljava/lang/String;
+    .end local v0    # "ids":Ljava/lang/String;
     :cond_0
     return-void
 .end method
@@ -221,7 +220,7 @@
 
 .method toggleSelection(Ljava/lang/String;)V
     .locals 1
-    .parameter "id"
+    .param p1, "id"    # Ljava/lang/String;
 
     .prologue
     .line 1009

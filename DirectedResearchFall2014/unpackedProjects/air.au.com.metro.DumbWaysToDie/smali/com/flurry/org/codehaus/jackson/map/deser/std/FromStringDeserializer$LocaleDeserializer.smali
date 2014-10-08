@@ -40,8 +40,8 @@
 # virtual methods
 .method protected bridge synthetic _deserialize(Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;)Ljava/lang/Object;
     .locals 1
-    .parameter "x0"
-    .parameter "x1"
+    .param p1, "x0"    # Ljava/lang/String;
+    .param p2, "x1"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -60,8 +60,8 @@
 
 .method protected _deserialize(Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;)Ljava/util/Locale;
     .locals 6
-    .parameter "value"
-    .parameter "ctxt"
+    .param p1, "value"    # Ljava/lang/String;
+    .param p2, "ctxt"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -79,7 +79,7 @@
     move-result v1
 
     .line 202
-    .local v1, ix:I
+    .local v1, "ix":I
     if-gez v1, :cond_0
 
     .line 203
@@ -98,7 +98,7 @@
     move-result-object v0
 
     .line 206
-    .local v0, first:Ljava/lang/String;
+    .local v0, "first":Ljava/lang/String;
     add-int/lit8 v3, v1, 0x1
 
     invoke-virtual {p1, v3}, Ljava/lang/String;->substring(I)Ljava/lang/String;
@@ -127,7 +127,7 @@
     move-result-object v2
 
     .line 212
-    .local v2, second:Ljava/lang/String;
+    .local v2, "second":Ljava/lang/String;
     new-instance v3, Ljava/util/Locale;
 
     add-int/lit8 v4, v1, 0x1

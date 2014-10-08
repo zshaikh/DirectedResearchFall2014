@@ -122,7 +122,6 @@
 # virtual methods
 .method public final a(Ljava/util/Map;)V
     .locals 3
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",

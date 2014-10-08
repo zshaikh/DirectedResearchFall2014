@@ -55,8 +55,6 @@
 
 .method static synthetic access$0(Lcom/facebook/LoginActivity;Lcom/facebook/AuthorizationClient$Result;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 91
@@ -67,7 +65,7 @@
 
 .method private onAuthClientCompleted(Lcom/facebook/AuthorizationClient$Result;)V
     .locals 5
-    .parameter "outcome"
+    .param p1, "outcome"    # Lcom/facebook/AuthorizationClient$Result;
 
     .prologue
     .line 92
@@ -88,14 +86,14 @@
     move v1, v3
 
     .line 97
-    .local v1, resultCode:I
+    .local v1, "resultCode":I
     :goto_0
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     .line 98
-    .local v0, bundle:Landroid/os/Bundle;
+    .local v0, "bundle":Landroid/os/Bundle;
     const-string v3, "com.facebook.LoginActivity:Result"
 
     invoke-virtual {v0, v3, p1}, Landroid/os/Bundle;->putSerializable(Ljava/lang/String;Ljava/io/Serializable;)V
@@ -106,7 +104,7 @@
     invoke-direct {v2}, Landroid/content/Intent;-><init>()V
 
     .line 101
-    .local v2, resultIntent:Landroid/content/Intent;
+    .local v2, "resultIntent":Landroid/content/Intent;
     invoke-virtual {v2, v0}, Landroid/content/Intent;->putExtras(Landroid/os/Bundle;)Landroid/content/Intent;
 
     .line 102
@@ -119,9 +117,9 @@
     return-void
 
     .line 95
-    .end local v0           #bundle:Landroid/os/Bundle;
-    .end local v1           #resultCode:I
-    .end local v2           #resultIntent:Landroid/content/Intent;
+    .end local v0    # "bundle":Landroid/os/Bundle;
+    .end local v1    # "resultCode":I
+    .end local v2    # "resultIntent":Landroid/content/Intent;
     :cond_0
     const/4 v3, -0x1
 
@@ -132,7 +130,7 @@
 
 .method static populateIntentExtras(Lcom/facebook/AuthorizationClient$AuthorizationRequest;)Landroid/os/Bundle;
     .locals 2
-    .parameter "request"
+    .param p0, "request"    # Lcom/facebook/AuthorizationClient$AuthorizationRequest;
 
     .prologue
     .line 146
@@ -141,7 +139,7 @@
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     .line 147
-    .local v0, extras:Landroid/os/Bundle;
+    .local v0, "extras":Landroid/os/Bundle;
     const-string v1, "request"
 
     invoke-virtual {v0, v1, p0}, Landroid/os/Bundle;->putSerializable(Ljava/lang/String;Ljava/io/Serializable;)V
@@ -154,9 +152,9 @@
 # virtual methods
 .method protected onActivityResult(IILandroid/content/Intent;)V
     .locals 1
-    .parameter "requestCode"
-    .parameter "resultCode"
-    .parameter "data"
+    .param p1, "requestCode"    # I
+    .param p2, "resultCode"    # I
+    .param p3, "data"    # Landroid/content/Intent;
 
     .prologue
     .line 142
@@ -170,7 +168,7 @@
 
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 2
-    .parameter "savedInstanceState"
+    .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
     .line 56
@@ -342,7 +340,7 @@
 
 .method public onSaveInstanceState(Landroid/os/Bundle;)V
     .locals 2
-    .parameter "outState"
+    .param p1, "outState"    # Landroid/os/Bundle;
 
     .prologue
     .line 134

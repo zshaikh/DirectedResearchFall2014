@@ -34,9 +34,9 @@
 
 .method public static create(Lcom/fusepowered/m2/m2l/MoPubInterstitial;Ljava/lang/String;Ljava/lang/String;)Lcom/fusepowered/m2/m2l/CustomEventInterstitialAdapter;
     .locals 1
-    .parameter "moPubInterstitial"
-    .parameter "className"
-    .parameter "classData"
+    .param p0, "moPubInterstitial"    # Lcom/fusepowered/m2/m2l/MoPubInterstitial;
+    .param p1, "className"    # Ljava/lang/String;
+    .param p2, "classData"    # Ljava/lang/String;
 
     .prologue
     .line 47
@@ -51,7 +51,7 @@
 
 .method public static setInstance(Lcom/fusepowered/m2/m2l/factories/CustomEventInterstitialAdapterFactory;)V
     .locals 0
-    .parameter "factory"
+    .param p0, "factory"    # Lcom/fusepowered/m2/m2l/factories/CustomEventInterstitialAdapterFactory;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -67,9 +67,9 @@
 # virtual methods
 .method protected internalCreate(Lcom/fusepowered/m2/m2l/MoPubInterstitial;Ljava/lang/String;Ljava/lang/String;)Lcom/fusepowered/m2/m2l/CustomEventInterstitialAdapter;
     .locals 1
-    .parameter "moPubInterstitial"
-    .parameter "className"
-    .parameter "classData"
+    .param p1, "moPubInterstitial"    # Lcom/fusepowered/m2/m2l/MoPubInterstitial;
+    .param p2, "className"    # Ljava/lang/String;
+    .param p3, "classData"    # Ljava/lang/String;
 
     .prologue
     .line 51

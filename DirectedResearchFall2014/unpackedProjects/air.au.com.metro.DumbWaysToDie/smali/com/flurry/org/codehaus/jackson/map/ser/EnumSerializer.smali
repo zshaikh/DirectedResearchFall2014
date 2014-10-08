@@ -14,7 +14,7 @@
 # direct methods
 .method public constructor <init>(Lcom/flurry/org/codehaus/jackson/map/util/EnumValues;)V
     .locals 0
-    .parameter "v"
+    .param p1, "v"    # Lcom/flurry/org/codehaus/jackson/map/util/EnumValues;
 
     .prologue
     .line 15

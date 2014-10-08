@@ -72,7 +72,6 @@
 
 .method static synthetic access$0(Ljava/lang/String;)Lcom/facebook/AppLinkData;
     .locals 1
-    .parameter
 
     .prologue
     .line 151
@@ -95,7 +94,7 @@
 
 .method public static createFromActivity(Landroid/app/Activity;)Lcom/facebook/AppLinkData;
     .locals 4
-    .parameter "activity"
+    .param p0, "activity"    # Landroid/app/Activity;
 
     .prologue
     .line 134
@@ -109,7 +108,7 @@
     move-result-object v2
 
     .line 136
-    .local v2, intent:Landroid/content/Intent;
+    .local v2, "intent":Landroid/content/Intent;
     if-nez v2, :cond_0
 
     .line 137
@@ -128,13 +127,13 @@
     move-result-object v0
 
     .line 142
-    .local v0, appLinkArgsJsonString:Ljava/lang/String;
+    .local v0, "appLinkArgsJsonString":Ljava/lang/String;
     invoke-static {v0}, Lcom/facebook/AppLinkData;->createFromJson(Ljava/lang/String;)Lcom/facebook/AppLinkData;
 
     move-result-object v1
 
     .line 143
-    .local v1, appLinkData:Lcom/facebook/AppLinkData;
+    .local v1, "appLinkData":Lcom/facebook/AppLinkData;
     if-nez v1, :cond_1
 
     .line 145
@@ -155,7 +154,7 @@
 
 .method private static createFromJson(Ljava/lang/String;)Lcom/facebook/AppLinkData;
     .locals 10
-    .parameter "jsonString"
+    .param p0, "jsonString"    # Ljava/lang/String;
 
     .prologue
     const/4 v9, 0x0
@@ -181,7 +180,7 @@
     invoke-direct {v0, p0}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
     .line 159
-    .local v0, appLinkArgsJson:Lorg/json/JSONObject;
+    .local v0, "appLinkArgsJson":Lorg/json/JSONObject;
     const-string v7, "version"
 
     invoke-virtual {v0, v7}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -189,7 +188,7 @@
     move-result-object v6
 
     .line 161
-    .local v6, version:Ljava/lang/String;
+    .local v6, "version":Ljava/lang/String;
     const-string v7, "bridge_args"
 
     invoke-virtual {v0, v7}, Lorg/json/JSONObject;->getJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
@@ -197,7 +196,7 @@
     move-result-object v2
 
     .line 162
-    .local v2, bridgeArgs:Lorg/json/JSONObject;
+    .local v2, "bridgeArgs":Lorg/json/JSONObject;
     const-string v7, "method"
 
     invoke-virtual {v2, v7}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -205,7 +204,7 @@
     move-result-object v4
 
     .line 163
-    .local v4, method:Ljava/lang/String;
+    .local v4, "method":Ljava/lang/String;
     const-string v7, "applink"
 
     invoke-virtual {v4, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -228,7 +227,7 @@
     invoke-direct {v1}, Lcom/facebook/AppLinkData;-><init>()V
 
     .line 166
-    .local v1, appLinkData:Lcom/facebook/AppLinkData;
+    .local v1, "appLinkData":Lcom/facebook/AppLinkData;
     iput-object v6, v1, Lcom/facebook/AppLinkData;->version:Ljava/lang/String;
 
     .line 168
@@ -261,7 +260,7 @@
     move-result-object v5
 
     .line 171
-    .local v5, ref:Ljava/lang/String;
+    .local v5, "ref":Ljava/lang/String;
     if-eqz v5, :cond_1
 
     .line 172
@@ -274,7 +273,7 @@
     iput-object v7, v1, Lcom/facebook/AppLinkData;->ref:[Ljava/lang/String;
 
     .line 176
-    .end local v5           #ref:Ljava/lang/String;
+    .end local v5    # "ref":Ljava/lang/String;
     :cond_1
     iget-object v7, v1, Lcom/facebook/AppLinkData;->arguments:Lorg/json/JSONObject;
 
@@ -310,25 +309,25 @@
     goto :goto_0
 
     .line 182
-    .end local v0           #appLinkArgsJson:Lorg/json/JSONObject;
-    .end local v1           #appLinkData:Lcom/facebook/AppLinkData;
-    .end local v2           #bridgeArgs:Lorg/json/JSONObject;
-    .end local v4           #method:Ljava/lang/String;
-    .end local v6           #version:Ljava/lang/String;
+    .end local v0    # "appLinkArgsJson":Lorg/json/JSONObject;
+    .end local v1    # "appLinkData":Lcom/facebook/AppLinkData;
+    .end local v2    # "bridgeArgs":Lorg/json/JSONObject;
+    .end local v4    # "method":Ljava/lang/String;
+    .end local v6    # "version":Ljava/lang/String;
     :catch_0
     move-exception v7
 
     move-object v3, v7
 
     .line 183
-    .local v3, e:Lorg/json/JSONException;
+    .local v3, "e":Lorg/json/JSONException;
     sget-object v7, Lcom/facebook/AppLinkData;->TAG:Ljava/lang/String;
 
     const-string v8, "Unable to parse AppLink JSON"
 
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .end local v3           #e:Lorg/json/JSONException;
+    .end local v3    # "e":Lorg/json/JSONException;
     :cond_3
     move-object v7, v9
 
@@ -338,7 +337,7 @@
 
 .method private static createFromUri(Landroid/net/Uri;)Lcom/facebook/AppLinkData;
     .locals 1
-    .parameter "appLinkDataUri"
+    .param p0, "appLinkDataUri"    # Landroid/net/Uri;
 
     .prologue
     const/4 v0, 0x0
@@ -353,8 +352,8 @@
 
 .method public static fetchDeferredAppLinkData(Landroid/content/Context;Lcom/facebook/AppLinkData$CompletionHandler;)V
     .locals 1
-    .parameter "context"
-    .parameter "completionHandler"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "completionHandler"    # Lcom/facebook/AppLinkData$CompletionHandler;
 
     .prologue
     .line 67
@@ -368,9 +367,9 @@
 
 .method public static fetchDeferredAppLinkData(Landroid/content/Context;Ljava/lang/String;Lcom/facebook/AppLinkData$CompletionHandler;)V
     .locals 4
-    .parameter "context"
-    .parameter "applicationId"
-    .parameter "completionHandler"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "applicationId"    # Ljava/lang/String;
+    .param p2, "completionHandler"    # Lcom/facebook/AppLinkData$CompletionHandler;
 
     .prologue
     .line 82
@@ -403,13 +402,13 @@
     invoke-direct {v1, p0, p1}, Lcom/facebook/AppLinkData$DeferredAppLinkDataClient;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
     .line 92
-    .local v1, client:Lcom/facebook/AppLinkData$DeferredAppLinkDataClient;
+    .local v1, "client":Lcom/facebook/AppLinkData$DeferredAppLinkDataClient;
     new-instance v0, Lcom/facebook/AppLinkData$1;
 
     invoke-direct {v0, p2}, Lcom/facebook/AppLinkData$1;-><init>(Lcom/facebook/AppLinkData$CompletionHandler;)V
 
     .line 113
-    .local v0, callback:Lcom/facebook/internal/PlatformServiceClient$CompletedListener;
+    .local v0, "callback":Lcom/facebook/internal/PlatformServiceClient$CompletedListener;
     invoke-virtual {v1, v0}, Lcom/facebook/AppLinkData$DeferredAppLinkDataClient;->setCompletedListener(Lcom/facebook/internal/PlatformServiceClient$CompletedListener;)V
 
     .line 115
@@ -429,7 +428,7 @@
     invoke-direct {v2, v3}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
     .line 119
-    .local v2, handler:Landroid/os/Handler;
+    .local v2, "handler":Landroid/os/Handler;
     new-instance v3, Lcom/facebook/AppLinkData$2;
 
     invoke-direct {v3, p2}, Lcom/facebook/AppLinkData$2;-><init>(Lcom/facebook/AppLinkData$CompletionHandler;)V
@@ -437,7 +436,7 @@
     invoke-virtual {v2, v3}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     .line 126
-    .end local v2           #handler:Landroid/os/Handler;
+    .end local v2    # "handler":Landroid/os/Handler;
     :cond_1
     return-void
 .end method

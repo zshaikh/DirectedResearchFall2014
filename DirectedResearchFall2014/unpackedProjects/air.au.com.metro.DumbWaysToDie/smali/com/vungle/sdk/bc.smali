@@ -21,7 +21,6 @@
 # virtual methods
 .method public final a(Ljava/util/List;)V
     .locals 3
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",

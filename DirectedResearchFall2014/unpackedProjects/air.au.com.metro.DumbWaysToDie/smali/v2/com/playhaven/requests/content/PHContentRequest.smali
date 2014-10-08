@@ -210,7 +210,7 @@
 
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 1
-    .parameter "placement"
+    .param p1, "placement"    # Ljava/lang/String;
 
     .prologue
     const/4 v0, 0x0
@@ -251,8 +251,8 @@
 
 .method public constructor <init>(Lv2/com/playhaven/listeners/PHContentRequestListener;Ljava/lang/String;)V
     .locals 0
-    .parameter "listener"
-    .parameter "placement"
+    .param p1, "listener"    # Lv2/com/playhaven/listeners/PHContentRequestListener;
+    .param p2, "placement"    # Ljava/lang/String;
 
     .prologue
     .line 123
@@ -267,7 +267,7 @@
 
 .method private continueToNextContentState(Landroid/app/Activity;)V
     .locals 2
-    .parameter "activity"
+    .param p1, "activity"    # Landroid/app/Activity;
 
     .prologue
     .line 405
@@ -358,7 +358,7 @@
 
 .method public static didDismissContentWithin(Ljava/lang/Long;)Z
     .locals 7
-    .parameter "range"
+    .param p0, "range"    # Ljava/lang/Long;
 
     .prologue
     const/4 v6, 0x0
@@ -453,10 +453,9 @@
 
 .method public static displayInterstitialActivity(Lv2/com/playhaven/model/PHContent;Landroid/app/Activity;Ljava/util/HashMap;Ljava/lang/String;)V
     .locals 3
-    .parameter "content"
-    .parameter "context"
-    .parameter
-    .parameter "tag"
+    .param p0, "content"    # Lv2/com/playhaven/model/PHContent;
+    .param p1, "context"    # Landroid/app/Activity;
+    .param p3, "tag"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -474,7 +473,7 @@
 
     .prologue
     .line 305
-    .local p2, customCloseImages:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Landroid/graphics/Bitmap;>;"
+    .local p2, "customCloseImages":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Landroid/graphics/Bitmap;>;"
     if-eqz p1, :cond_1
 
     .line 307
@@ -485,7 +484,7 @@
     invoke-direct {v0, p1, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
     .line 310
-    .local v0, contentViewIntent:Landroid/content/Intent;
+    .local v0, "contentViewIntent":Landroid/content/Intent;
     sget-object v1, Lv2/com/playhaven/interstitial/PHContentEnums$IntentArgument;->Content:Lv2/com/playhaven/interstitial/PHContentEnums$IntentArgument;
 
     invoke-virtual {v1}, Lv2/com/playhaven/interstitial/PHContentEnums$IntentArgument;->getKey()Ljava/lang/String;
@@ -551,7 +550,7 @@
     invoke-virtual {p1, v0}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
 
     .line 325
-    .end local v0           #contentViewIntent:Landroid/content/Intent;
+    .end local v0    # "contentViewIntent":Landroid/content/Intent;
     :cond_1
     return-void
 .end method
@@ -574,7 +573,7 @@
     invoke-direct {v0, v1, v2}, Ljava/util/Random;-><init>(J)V
 
     .line 396
-    .local v0, random:Ljava/util/Random;
+    .local v0, "random":Ljava/util/Random;
     new-instance v1, Ljava/lang/StringBuilder;
 
     const-string v2, "PHInterstitialActivity: "
@@ -612,7 +611,7 @@
 
 .method private loadContent(Landroid/content/Context;)V
     .locals 1
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     .line 290
@@ -640,7 +639,7 @@
 
 .method private showContentActivityIfReady(Landroid/app/Activity;)V
     .locals 3
-    .parameter "activity"
+    .param p1, "activity"    # Landroid/app/Activity;
 
     .prologue
     .line 351
@@ -686,7 +685,7 @@
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     .line 367
-    .local v0, customClose:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Landroid/graphics/Bitmap;>;"
+    .local v0, "customClose":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Landroid/graphics/Bitmap;>;"
     iget-object v1, p0, Lv2/com/playhaven/requests/content/PHContentRequest;->close_button_down:Landroid/graphics/Bitmap;
 
     if-eqz v1, :cond_2
@@ -738,7 +737,7 @@
     invoke-static {v1, p1, v0, v2}, Lv2/com/playhaven/requests/content/PHContentRequest;->displayInterstitialActivity(Lv2/com/playhaven/model/PHContent;Landroid/app/Activity;Ljava/util/HashMap;Ljava/lang/String;)V
 
     .line 384
-    .end local v0           #customClose:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Landroid/graphics/Bitmap;>;"
+    .end local v0    # "customClose":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Landroid/graphics/Bitmap;>;"
     :cond_3
     return-void
 .end method
@@ -766,7 +765,7 @@
 # virtual methods
 .method public baseURL(Landroid/content/Context;)Ljava/lang/String;
     .locals 1
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     .line 203
@@ -797,7 +796,7 @@
 
 .method public getAdditionalParams(Landroid/content/Context;)Ljava/util/Hashtable;
     .locals 5
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -818,7 +817,7 @@
     invoke-direct {v1}, Ljava/util/Hashtable;-><init>()V
 
     .line 459
-    .local v1, table:Ljava/util/Hashtable;,"Ljava/util/Hashtable<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v1, "table":Ljava/util/Hashtable;, "Ljava/util/Hashtable<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v2, "placement_id"
 
     iget-object v3, p0, Lv2/com/playhaven/requests/content/PHContentRequest;->placement:Ljava/lang/String;
@@ -850,7 +849,7 @@
     move-result-object v0
 
     .line 465
-    .local v0, session:Lv2/com/playhaven/requests/open/PHSession;
+    .local v0, "session":Lv2/com/playhaven/requests/open/PHSession;
     const-string v2, "stime"
 
     invoke-virtual {v0}, Lv2/com/playhaven/requests/open/PHSession;->getSessionTime()J
@@ -867,7 +866,7 @@
     return-object v1
 
     .line 459
-    .end local v0           #session:Lv2/com/playhaven/requests/open/PHSession;
+    .end local v0    # "session":Lv2/com/playhaven/requests/open/PHSession;
     :cond_0
     const-string v3, ""
 
@@ -911,7 +910,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lv2/com/playhaven/requests/content/PHContentRequest;
     check-cast p0, Landroid/content/Context;
 
     return-object p0
@@ -969,7 +968,7 @@
 
 .method public handleRequestFailure(Lv2/com/playhaven/model/PHError;)V
     .locals 4
-    .parameter "error"
+    .param p1, "error"    # Lv2/com/playhaven/model/PHError;
 
     .prologue
     .line 472
@@ -1011,7 +1010,7 @@
 
 .method public handleRequestSuccess(Lorg/json/JSONObject;)V
     .locals 2
-    .parameter "response"
+    .param p1, "response"    # Lorg/json/JSONObject;
 
     .prologue
     .line 479
@@ -1123,7 +1122,7 @@
 
 .method public onTagChanged(Ljava/lang/String;)V
     .locals 0
-    .parameter "new_tag"
+    .param p1, "new_tag"    # Ljava/lang/String;
 
     .prologue
     .line 252
@@ -1135,7 +1134,7 @@
 
 .method public preload(Landroid/app/Activity;)V
     .locals 2
-    .parameter "activity"
+    .param p1, "activity"    # Landroid/app/Activity;
 
     .prologue
     .line 266
@@ -1217,7 +1216,7 @@
 
 .method public send(Landroid/content/Context;)V
     .locals 5
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     .line 426
@@ -1228,7 +1227,7 @@
     move-object v1, v0
 
     .line 429
-    .local v1, activity:Landroid/app/Activity;
+    .local v1, "activity":Landroid/app/Activity;
     iget-object v3, p0, Lv2/com/playhaven/requests/content/PHContentRequest;->config:Lv2/com/playhaven/configuration/PHConfiguration;
 
     invoke-virtual {v3, v1}, Lv2/com/playhaven/configuration/PHConfiguration;->getShouldPrecache(Landroid/content/Context;)Z
@@ -1277,7 +1276,7 @@
     move-object v2, v3
 
     .line 441
-    .local v2, e:Ljava/lang/Exception;
+    .local v2, "e":Ljava/lang/Exception;
     const-string v3, "PHContentRequest - send"
 
     sget-object v4, Lv2/com/playhaven/requests/crashreport/PHCrashReport$Urgency;->critical:Lv2/com/playhaven/requests/crashreport/PHCrashReport$Urgency;
@@ -1289,8 +1288,8 @@
 
 .method public setCloseButton(Landroid/graphics/Bitmap;Lv2/com/playhaven/views/interstitial/PHCloseButton$CloseButtonState;)V
     .locals 1
-    .parameter "image"
-    .parameter "state"
+    .param p1, "image"    # Landroid/graphics/Bitmap;
+    .param p2, "state"    # Lv2/com/playhaven/views/interstitial/PHCloseButton$CloseButtonState;
 
     .prologue
     .line 194
@@ -1320,7 +1319,7 @@
 
 .method public setCurrentContentState(Lv2/com/playhaven/requests/content/PHContentRequest$PHRequestState;)V
     .locals 2
-    .parameter "state"
+    .param p1, "state"    # Lv2/com/playhaven/requests/content/PHContentRequest$PHRequestState;
 
     .prologue
     .line 207
@@ -1361,7 +1360,7 @@
 
 .method public setCurrentState(Lv2/com/playhaven/requests/content/PHContentRequest$PHRequestState;)V
     .locals 0
-    .parameter "state"
+    .param p1, "state"    # Lv2/com/playhaven/requests/content/PHContentRequest$PHRequestState;
 
     .prologue
     .line 232
@@ -1373,7 +1372,7 @@
 
 .method public setOnContentListener(Lv2/com/playhaven/listeners/PHContentRequestListener;)V
     .locals 1
-    .parameter "content_listener"
+    .param p1, "content_listener"    # Lv2/com/playhaven/listeners/PHContentRequestListener;
 
     .prologue
     .line 133
@@ -1396,7 +1395,7 @@
 
 .method public setOnPurchaseListener(Lv2/com/playhaven/listeners/PHPurchaseListener;)V
     .locals 1
-    .parameter "purchase_listener"
+    .param p1, "purchase_listener"    # Lv2/com/playhaven/listeners/PHPurchaseListener;
 
     .prologue
     .line 154
@@ -1419,7 +1418,7 @@
 
 .method public setOnRewardListener(Lv2/com/playhaven/listeners/PHRewardListener;)V
     .locals 1
-    .parameter "reward_listener"
+    .param p1, "reward_listener"    # Lv2/com/playhaven/listeners/PHRewardListener;
 
     .prologue
     .line 147
@@ -1442,7 +1441,7 @@
 
 .method public setTargetState(Lv2/com/playhaven/requests/content/PHContentRequest$PHRequestState;)V
     .locals 0
-    .parameter "state"
+    .param p1, "state"    # Lv2/com/playhaven/requests/content/PHContentRequest$PHRequestState;
 
     .prologue
     .line 228

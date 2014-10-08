@@ -47,7 +47,6 @@
 
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 12
@@ -71,7 +70,6 @@
 # virtual methods
 .method protected final a(Landroid/os/Parcel;)Lcom/vungle/sdk/ad;
     .locals 1
-    .parameter
 
     .prologue
     .line 53
@@ -110,7 +108,6 @@
 
 .method protected final synthetic b(Landroid/os/Parcel;)Lcom/vungle/sdk/ah;
     .locals 1
-    .parameter
 
     .prologue
     .line 8
@@ -175,8 +172,8 @@
 
 .method public final writeToParcel(Landroid/os/Parcel;I)V
     .locals 1
-    .parameter "parcel"
-    .parameter "flags"
+    .param p1, "parcel"    # Landroid/os/Parcel;
+    .param p2, "flags"    # I
 
     .prologue
     .line 46

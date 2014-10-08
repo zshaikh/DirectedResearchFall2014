@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/facebook/Session$AuthorizationRequest;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1
@@ -56,8 +55,8 @@
 
 .method public startActivityForResult(Landroid/content/Intent;I)V
     .locals 2
-    .parameter "intent"
-    .parameter "requestCode"
+    .param p1, "intent"    # Landroid/content/Intent;
+    .param p2, "requestCode"    # I
 
     .prologue
     .line 1692

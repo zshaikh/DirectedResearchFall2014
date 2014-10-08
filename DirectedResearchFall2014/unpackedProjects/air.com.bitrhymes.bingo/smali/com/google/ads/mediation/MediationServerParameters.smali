@@ -36,7 +36,6 @@
 
 .method public load(Ljava/util/Map;)V
     .locals 9
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -55,7 +54,7 @@
     .end annotation
 
     .prologue
-    .local p1, parameters:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p1, "parameters":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v8, "Server Option \'"
 
     const-class v7, Lcom/google/ads/mediation/MediationServerParameters$Parameter;

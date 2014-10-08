@@ -10,7 +10,7 @@
 # direct methods
 .method public constructor <init>(Ljava/lang/Object;)V
     .locals 0
-    .parameter "v"
+    .param p1, "v"    # Ljava/lang/Object;
 
     .prologue
     .line 18
@@ -25,7 +25,7 @@
 # virtual methods
 .method public asBoolean(Z)Z
     .locals 1
-    .parameter "defaultValue"
+    .param p1, "defaultValue"    # Z
 
     .prologue
     .line 55
@@ -42,7 +42,7 @@
     .line 56
     iget-object p0, p0, Lcom/flurry/org/codehaus/jackson/node/POJONode;->_value:Ljava/lang/Object;
 
-    .end local p0
+    .end local p0    # "this":Lcom/flurry/org/codehaus/jackson/node/POJONode;
     check-cast p0, Ljava/lang/Boolean;
 
     invoke-virtual {p0}, Ljava/lang/Boolean;->booleanValue()Z
@@ -53,7 +53,7 @@
     :goto_0
     return v0
 
-    .restart local p0
+    .restart local p0    # "this":Lcom/flurry/org/codehaus/jackson/node/POJONode;
     :cond_0
     move v0, p1
 
@@ -62,7 +62,7 @@
 
 .method public asDouble(D)D
     .locals 2
-    .parameter "defaultValue"
+    .param p1, "defaultValue"    # D
 
     .prologue
     .line 82
@@ -75,7 +75,7 @@
     .line 83
     iget-object p0, p0, Lcom/flurry/org/codehaus/jackson/node/POJONode;->_value:Ljava/lang/Object;
 
-    .end local p0
+    .end local p0    # "this":Lcom/flurry/org/codehaus/jackson/node/POJONode;
     check-cast p0, Ljava/lang/Number;
 
     invoke-virtual {p0}, Ljava/lang/Number;->doubleValue()D
@@ -86,7 +86,7 @@
     :goto_0
     return-wide v0
 
-    .restart local p0
+    .restart local p0    # "this":Lcom/flurry/org/codehaus/jackson/node/POJONode;
     :cond_0
     move-wide v0, p1
 
@@ -95,7 +95,7 @@
 
 .method public asInt(I)I
     .locals 1
-    .parameter "defaultValue"
+    .param p1, "defaultValue"    # I
 
     .prologue
     .line 64
@@ -108,7 +108,7 @@
     .line 65
     iget-object p0, p0, Lcom/flurry/org/codehaus/jackson/node/POJONode;->_value:Ljava/lang/Object;
 
-    .end local p0
+    .end local p0    # "this":Lcom/flurry/org/codehaus/jackson/node/POJONode;
     check-cast p0, Ljava/lang/Number;
 
     invoke-virtual {p0}, Ljava/lang/Number;->intValue()I
@@ -119,7 +119,7 @@
     :goto_0
     return v0
 
-    .restart local p0
+    .restart local p0    # "this":Lcom/flurry/org/codehaus/jackson/node/POJONode;
     :cond_0
     move v0, p1
 
@@ -128,7 +128,7 @@
 
 .method public asLong(J)J
     .locals 2
-    .parameter "defaultValue"
+    .param p1, "defaultValue"    # J
 
     .prologue
     .line 73
@@ -141,7 +141,7 @@
     .line 74
     iget-object p0, p0, Lcom/flurry/org/codehaus/jackson/node/POJONode;->_value:Ljava/lang/Object;
 
-    .end local p0
+    .end local p0    # "this":Lcom/flurry/org/codehaus/jackson/node/POJONode;
     check-cast p0, Ljava/lang/Number;
 
     invoke-virtual {p0}, Ljava/lang/Number;->longValue()J
@@ -152,7 +152,7 @@
     :goto_0
     return-wide v0
 
-    .restart local p0
+    .restart local p0    # "this":Lcom/flurry/org/codehaus/jackson/node/POJONode;
     :cond_0
     move-wide v0, p1
 
@@ -195,7 +195,7 @@
 
 .method public equals(Ljava/lang/Object;)Z
     .locals 6
-    .parameter "o"
+    .param p1, "o"    # Ljava/lang/Object;
 
     .prologue
     const/4 v5, 0x1
@@ -245,7 +245,7 @@
     move-object v1, v0
 
     .line 131
-    .local v1, other:Lcom/flurry/org/codehaus/jackson/node/POJONode;
+    .local v1, "other":Lcom/flurry/org/codehaus/jackson/node/POJONode;
     iget-object v2, p0, Lcom/flurry/org/codehaus/jackson/node/POJONode;->_value:Ljava/lang/Object;
 
     if-nez v2, :cond_4
@@ -296,7 +296,7 @@
     .line 36
     iget-object p0, p0, Lcom/flurry/org/codehaus/jackson/node/POJONode;->_value:Ljava/lang/Object;
 
-    .end local p0
+    .end local p0    # "this":Lcom/flurry/org/codehaus/jackson/node/POJONode;
     check-cast p0, [B
 
     check-cast p0, [B
@@ -307,7 +307,7 @@
     :goto_0
     return-object v0
 
-    .restart local p0
+    .restart local p0    # "this":Lcom/flurry/org/codehaus/jackson/node/POJONode;
     :cond_0
     invoke-super {p0}, Lcom/flurry/org/codehaus/jackson/node/ValueNode;->getBinaryValue()[B
 
@@ -352,8 +352,8 @@
 
 .method public final serialize(Lcom/flurry/org/codehaus/jackson/JsonGenerator;Lcom/flurry/org/codehaus/jackson/map/SerializerProvider;)V
     .locals 1
-    .parameter "jg"
-    .parameter "provider"
+    .param p1, "jg"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator;
+    .param p2, "provider"    # Lcom/flurry/org/codehaus/jackson/map/SerializerProvider;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,

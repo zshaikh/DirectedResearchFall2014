@@ -25,13 +25,11 @@
 # direct methods
 .method private constructor <init>(Lcom/flurry/org/apache/avro/Protocol;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;Lcom/flurry/org/apache/avro/Schema;Lcom/flurry/org/apache/avro/Schema;Lcom/flurry/org/apache/avro/Schema;)V
     .locals 7
-    .parameter
-    .parameter "name"
-    .parameter "doc"
-    .parameter
-    .parameter "request"
-    .parameter "response"
-    .parameter "errors"
+    .param p2, "name"    # Ljava/lang/String;
+    .param p3, "doc"    # Ljava/lang/String;
+    .param p5, "request"    # Lcom/flurry/org/apache/avro/Schema;
+    .param p6, "response"    # Lcom/flurry/org/apache/avro/Schema;
+    .param p7, "errors"    # Lcom/flurry/org/apache/avro/Schema;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -51,7 +49,7 @@
 
     .prologue
     .line 166
-    .local p4, propMap:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p4, "propMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     iput-object p1, p0, Lcom/flurry/org/apache/avro/Protocol$TwoWayMessage;->this$0:Lcom/flurry/org/apache/avro/Protocol;
 
     .line 167
@@ -83,14 +81,14 @@
 
 .method synthetic constructor <init>(Lcom/flurry/org/apache/avro/Protocol;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;Lcom/flurry/org/apache/avro/Schema;Lcom/flurry/org/apache/avro/Schema;Lcom/flurry/org/apache/avro/Schema;Lcom/flurry/org/apache/avro/Protocol$1;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
-    .parameter "x2"
-    .parameter "x3"
-    .parameter "x4"
-    .parameter "x5"
-    .parameter "x6"
-    .parameter "x7"
+    .param p1, "x0"    # Lcom/flurry/org/apache/avro/Protocol;
+    .param p2, "x1"    # Ljava/lang/String;
+    .param p3, "x2"    # Ljava/lang/String;
+    .param p4, "x3"    # Ljava/util/Map;
+    .param p5, "x4"    # Lcom/flurry/org/apache/avro/Schema;
+    .param p6, "x5"    # Lcom/flurry/org/apache/avro/Schema;
+    .param p7, "x6"    # Lcom/flurry/org/apache/avro/Schema;
+    .param p8, "x7"    # Lcom/flurry/org/apache/avro/Protocol$1;
 
     .prologue
     .line 160
@@ -103,7 +101,7 @@
 # virtual methods
 .method public equals(Ljava/lang/Object;)Z
     .locals 5
-    .parameter "o"
+    .param p1, "o"    # Ljava/lang/Object;
 
     .prologue
     const/4 v4, 0x0
@@ -140,7 +138,7 @@
     move-object v1, v0
 
     .line 180
-    .local v1, that:Lcom/flurry/org/apache/avro/Protocol$TwoWayMessage;
+    .local v1, "that":Lcom/flurry/org/apache/avro/Protocol$TwoWayMessage;
     iget-object v2, p0, Lcom/flurry/org/apache/avro/Protocol$TwoWayMessage;->response:Lcom/flurry/org/apache/avro/Schema;
 
     iget-object v3, v1, Lcom/flurry/org/apache/avro/Protocol$TwoWayMessage;->response:Lcom/flurry/org/apache/avro/Schema;
@@ -231,7 +229,7 @@
 
 .method toJson1(Lcom/flurry/org/codehaus/jackson/JsonGenerator;)V
     .locals 5
-    .parameter "gen"
+    .param p1, "gen"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -251,7 +249,7 @@
 
     iget-object v3, p0, Lcom/flurry/org/apache/avro/Protocol$TwoWayMessage;->this$0:Lcom/flurry/org/apache/avro/Protocol;
 
-    #getter for: Lcom/flurry/org/apache/avro/Protocol;->types:Lcom/flurry/org/apache/avro/Schema$Names;
+    # getter for: Lcom/flurry/org/apache/avro/Protocol;->types:Lcom/flurry/org/apache/avro/Schema$Names;
     invoke-static {v3}, Lcom/flurry/org/apache/avro/Protocol;->access$100(Lcom/flurry/org/apache/avro/Protocol;)Lcom/flurry/org/apache/avro/Schema$Names;
 
     move-result-object v3
@@ -266,7 +264,7 @@
     move-result-object v0
 
     .line 193
-    .local v0, errs:Ljava/util/List;,"Ljava/util/List<Lcom/flurry/org/apache/avro/Schema;>;"
+    .local v0, "errs":Ljava/util/List;, "Ljava/util/List<Lcom/flurry/org/apache/avro/Schema;>;"
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v2
@@ -287,7 +285,7 @@
     move-result-object v1
 
     .line 195
-    .local v1, union:Lcom/flurry/org/apache/avro/Schema;
+    .local v1, "union":Lcom/flurry/org/apache/avro/Schema;
     const-string v2, "errors"
 
     invoke-virtual {p1, v2}, Lcom/flurry/org/codehaus/jackson/JsonGenerator;->writeFieldName(Ljava/lang/String;)V
@@ -295,7 +293,7 @@
     .line 196
     iget-object v2, p0, Lcom/flurry/org/apache/avro/Protocol$TwoWayMessage;->this$0:Lcom/flurry/org/apache/avro/Protocol;
 
-    #getter for: Lcom/flurry/org/apache/avro/Protocol;->types:Lcom/flurry/org/apache/avro/Schema$Names;
+    # getter for: Lcom/flurry/org/apache/avro/Protocol;->types:Lcom/flurry/org/apache/avro/Schema$Names;
     invoke-static {v2}, Lcom/flurry/org/apache/avro/Protocol;->access$100(Lcom/flurry/org/apache/avro/Protocol;)Lcom/flurry/org/apache/avro/Schema$Names;
 
     move-result-object v2
@@ -303,7 +301,7 @@
     invoke-virtual {v1, v2, p1}, Lcom/flurry/org/apache/avro/Schema;->toJson(Lcom/flurry/org/apache/avro/Schema$Names;Lcom/flurry/org/codehaus/jackson/JsonGenerator;)V
 
     .line 198
-    .end local v1           #union:Lcom/flurry/org/apache/avro/Schema;
+    .end local v1    # "union":Lcom/flurry/org/apache/avro/Schema;
     :cond_0
     return-void
 .end method

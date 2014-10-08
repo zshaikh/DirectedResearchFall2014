@@ -33,8 +33,6 @@
 # direct methods
 .method public constructor <init>(Lcom/google/ads/util/i;Ljava/lang/String;)V
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     const/4 v1, 0x0
@@ -59,9 +57,6 @@
 
 .method public constructor <init>(Lcom/google/ads/util/i;Ljava/lang/String;Ljava/lang/Object;)V
     .locals 2
-    .parameter
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -124,7 +119,6 @@
 
 .method public declared-synchronized a(Ljava/lang/Object;)V
     .locals 2
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;)V"

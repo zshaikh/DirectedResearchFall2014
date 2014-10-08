@@ -34,8 +34,6 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m1/google/gson/internal/ConstructorConstructor;Ljava/lang/reflect/Type;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 139
@@ -82,7 +80,7 @@
     aget-object v0, v1, v2
 
     .line 145
-    .local v0, elementType:Ljava/lang/reflect/Type;
+    .local v0, "elementType":Ljava/lang/reflect/Type;
     instance-of v1, v0, Ljava/lang/Class;
 
     if-eqz v1, :cond_0
@@ -90,7 +88,7 @@
     .line 146
     check-cast v0, Ljava/lang/Class;
 
-    .end local v0           #elementType:Ljava/lang/reflect/Type;
+    .end local v0    # "elementType":Ljava/lang/reflect/Type;
     invoke-static {v0}, Ljava/util/EnumSet;->noneOf(Ljava/lang/Class;)Ljava/util/EnumSet;
 
     move-result-object v1
@@ -98,7 +96,7 @@
     return-object v1
 
     .line 148
-    .restart local v0       #elementType:Ljava/lang/reflect/Type;
+    .restart local v0    # "elementType":Ljava/lang/reflect/Type;
     :cond_0
     new-instance v1, Lcom/fusepowered/m1/google/gson/JsonIOException;
 
@@ -131,7 +129,7 @@
     throw v1
 
     .line 151
-    .end local v0           #elementType:Ljava/lang/reflect/Type;
+    .end local v0    # "elementType":Ljava/lang/reflect/Type;
     :cond_1
     new-instance v1, Lcom/fusepowered/m1/google/gson/JsonIOException;
 

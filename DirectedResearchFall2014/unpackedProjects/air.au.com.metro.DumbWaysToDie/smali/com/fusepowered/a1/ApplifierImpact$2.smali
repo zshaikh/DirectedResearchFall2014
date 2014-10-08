@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/a1/ApplifierImpact;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1
@@ -52,13 +51,12 @@
 
     const/4 v1, 0x1
 
-    #setter for: Lcom/fusepowered/a1/ApplifierImpact;->_impactReadySent:Z
     invoke-static {v0, v1}, Lcom/fusepowered/a1/ApplifierImpact;->access$5(Lcom/fusepowered/a1/ApplifierImpact;Z)V
 
     .line 659
     iget-object v0, p0, Lcom/fusepowered/a1/ApplifierImpact$2;->this$0:Lcom/fusepowered/a1/ApplifierImpact;
 
-    #getter for: Lcom/fusepowered/a1/ApplifierImpact;->_impactListener:Lcom/fusepowered/a1/IApplifierImpactListener;
+    # getter for: Lcom/fusepowered/a1/ApplifierImpact;->_impactListener:Lcom/fusepowered/a1/IApplifierImpactListener;
     invoke-static {v0}, Lcom/fusepowered/a1/ApplifierImpact;->access$1(Lcom/fusepowered/a1/ApplifierImpact;)Lcom/fusepowered/a1/IApplifierImpactListener;
 
     move-result-object v0

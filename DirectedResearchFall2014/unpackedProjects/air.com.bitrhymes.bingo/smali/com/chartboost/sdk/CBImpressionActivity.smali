@@ -50,7 +50,7 @@
 
 .method protected onCreate(Landroid/os/Bundle;)V
     .locals 3
-    .parameter "savedInstanceState"
+    .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
     const/4 v2, 0x0

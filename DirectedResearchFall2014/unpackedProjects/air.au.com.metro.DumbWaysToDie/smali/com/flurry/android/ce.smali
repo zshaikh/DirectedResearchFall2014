@@ -6,7 +6,6 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
-    .parameter
 
     .prologue
     const/4 v0, 0x1
@@ -28,7 +27,6 @@
 # virtual methods
 .method public final seekTo(I)V
     .locals 1
-    .parameter
 
     .prologue
     .line 24

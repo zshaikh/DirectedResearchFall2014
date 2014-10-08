@@ -59,7 +59,7 @@
     sget-object v0, Lcom/flurry/org/codehaus/jackson/map/ser/std/ToStringSerializer;->instance:Lcom/flurry/org/codehaus/jackson/map/ser/std/ToStringSerializer;
 
     .line 45
-    .local v0, tss:Lcom/flurry/org/codehaus/jackson/map/ser/std/ToStringSerializer;
+    .local v0, "tss":Lcom/flurry/org/codehaus/jackson/map/ser/std/ToStringSerializer;
     sget-object v1, Lcom/flurry/org/codehaus/jackson/map/ext/CoreXMLSerializers;->_serializers:Ljava/util/HashMap;
 
     const-class v2, Ljavax/xml/datatype/Duration;

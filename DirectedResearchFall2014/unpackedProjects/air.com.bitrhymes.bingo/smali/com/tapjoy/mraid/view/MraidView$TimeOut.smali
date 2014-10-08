@@ -25,7 +25,6 @@
 # direct methods
 .method constructor <init>(Lcom/tapjoy/mraid/view/MraidView;)V
     .locals 1
-    .parameter
 
     .prologue
     const/4 v0, 0x0
@@ -58,7 +57,7 @@
     move-result v1
 
     .line 543
-    .local v1, progress:I
+    .local v1, "progress":I
     const/16 v2, 0x64
 
     if-ne v1, v2, :cond_1
@@ -115,7 +114,7 @@
     move-object v0, v2
 
     .line 552
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v2, "MRAIDView"
 
     const-string v3, "error in stopLoading"

@@ -13,7 +13,7 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 2
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     .line 18
@@ -45,8 +45,8 @@
 
 .method private getResourceIdForType(Ljava/lang/String;Ljava/lang/String;)I
     .locals 2
-    .parameter "key"
-    .parameter "type"
+    .param p1, "key"    # Ljava/lang/String;
+    .param p2, "type"    # Ljava/lang/String;
 
     .prologue
     .line 35
@@ -85,7 +85,7 @@
 # virtual methods
 .method public getBoolean(Ljava/lang/String;)Z
     .locals 3
-    .parameter "key"
+    .param p1, "key"    # Ljava/lang/String;
 
     .prologue
     .line 53
@@ -96,7 +96,7 @@
     move-result v0
 
     .line 54
-    .local v0, id:I
+    .local v0, "id":I
     if-nez v0, :cond_0
 
     .line 55
@@ -124,7 +124,7 @@
 
 .method public getDoubleFromString(Ljava/lang/String;)Ljava/lang/Double;
     .locals 5
-    .parameter "key"
+    .param p1, "key"    # Ljava/lang/String;
 
     .prologue
     const/4 v4, 0x0
@@ -135,7 +135,7 @@
     move-result-object v1
 
     .line 84
-    .local v1, value:Ljava/lang/String;
+    .local v1, "value":Ljava/lang/String;
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v2
@@ -170,7 +170,7 @@
     move-object v0, v2
 
     .line 90
-    .local v0, e:Ljava/lang/NumberFormatException;
+    .local v0, "e":Ljava/lang/NumberFormatException;
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -199,8 +199,8 @@
 
 .method public getInt(Ljava/lang/String;I)I
     .locals 4
-    .parameter "key"
-    .parameter "defaultValue"
+    .param p1, "key"    # Ljava/lang/String;
+    .param p2, "defaultValue"    # I
 
     .prologue
     .line 63
@@ -211,7 +211,7 @@
     move-result v1
 
     .line 64
-    .local v1, id:I
+    .local v1, "id":I
     if-nez v1, :cond_0
 
     move v2, p2
@@ -244,7 +244,7 @@
     move-object v0, v2
 
     .line 70
-    .local v0, e:Ljava/lang/NumberFormatException;
+    .local v0, "e":Ljava/lang/NumberFormatException;
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -279,7 +279,7 @@
 
 .method public getString(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
-    .parameter "key"
+    .param p1, "key"    # Ljava/lang/String;
 
     .prologue
     .line 43
@@ -290,7 +290,7 @@
     move-result v0
 
     .line 44
-    .local v0, id:I
+    .local v0, "id":I
     if-nez v0, :cond_0
 
     .line 45
@@ -312,7 +312,7 @@
 
 .method public isBooleanKeyPresent(Ljava/lang/String;)Z
     .locals 1
-    .parameter "key"
+    .param p1, "key"    # Ljava/lang/String;
 
     .prologue
     .line 78

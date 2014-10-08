@@ -23,8 +23,8 @@
 # direct methods
 .method public constructor <init>(ILjava/lang/String;)V
     .locals 1
-    .parameter "rindex"
-    .parameter "fname"
+    .param p1, "rindex"    # I
+    .param p2, "fname"    # Ljava/lang/String;
 
     .prologue
     .line 458

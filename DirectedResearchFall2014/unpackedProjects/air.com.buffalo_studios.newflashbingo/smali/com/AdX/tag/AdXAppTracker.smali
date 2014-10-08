@@ -33,8 +33,8 @@
 
 .method private pass_on_broadcast(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 12
-    .parameter "paramContext"
-    .parameter "paramIntent"
+    .param p1, "paramContext"    # Landroid/content/Context;
+    .param p2, "paramIntent"    # Landroid/content/Intent;
 
     .prologue
     const-string v11, "AdXAppTracker"
@@ -43,14 +43,14 @@
     const-string v6, ""
 
     .line 54
-    .local v6, str1:Ljava/lang/String;
+    .local v6, "str1":Ljava/lang/String;
     :try_start_0
     invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v5
 
     .line 55
-    .local v5, localObject:Landroid/content/pm/PackageManager;
+    .local v5, "localObject":Landroid/content/pm/PackageManager;
     if-eqz v5, :cond_0
 
     .line 57
@@ -61,10 +61,10 @@
     invoke-direct {v1, p1, v9}, Landroid/content/ComponentName;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
     .line 58
-    .local v1, localComponentName:Landroid/content/ComponentName;
+    .local v1, "localComponentName":Landroid/content/ComponentName;
     check-cast v5, Landroid/content/pm/PackageManager;
 
-    .end local v5           #localObject:Landroid/content/pm/PackageManager;
+    .end local v5    # "localObject":Landroid/content/pm/PackageManager;
     const/16 v9, 0x80
 
     invoke-virtual {v5, v1, v9}, Landroid/content/pm/PackageManager;->getReceiverInfo(Landroid/content/ComponentName;I)Landroid/content/pm/ActivityInfo;
@@ -72,7 +72,7 @@
     move-result-object v0
 
     .line 59
-    .local v0, localActivityInfo:Landroid/content/pm/ActivityInfo;
+    .local v0, "localActivityInfo":Landroid/content/pm/ActivityInfo;
     if-eqz v0, :cond_0
 
     iget-object v9, v0, Landroid/content/pm/ActivityInfo;->metaData:Landroid/os/Bundle;
@@ -87,20 +87,20 @@
     move-result-object v5
 
     .line 62
-    .local v5, localObject:Ljava/util/Set;
+    .local v5, "localObject":Ljava/util/Set;
     if-eqz v5, :cond_0
 
     .line 64
     check-cast v5, Ljava/util/Set;
 
-    .end local v5           #localObject:Ljava/util/Set;
+    .end local v5    # "localObject":Ljava/util/Set;
     invoke-interface {v5}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v4
 
     .line 65
-    .end local p0
-    .local v4, localIterator:Ljava/util/Iterator;
+    .end local p0    # "this":Lcom/AdX/tag/AdXAppTracker;
+    .local v4, "localIterator":Ljava/util/Iterator;
     :goto_0
     invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
 
@@ -109,17 +109,17 @@
     if-nez v9, :cond_1
 
     .line 95
-    .end local v0           #localActivityInfo:Landroid/content/pm/ActivityInfo;
-    .end local v1           #localComponentName:Landroid/content/ComponentName;
-    .end local v4           #localIterator:Ljava/util/Iterator;
+    .end local v0    # "localActivityInfo":Landroid/content/pm/ActivityInfo;
+    .end local v1    # "localComponentName":Landroid/content/ComponentName;
+    .end local v4    # "localIterator":Ljava/util/Iterator;
     :cond_0
     :goto_1
     return-void
 
     .line 67
-    .restart local v0       #localActivityInfo:Landroid/content/pm/ActivityInfo;
-    .restart local v1       #localComponentName:Landroid/content/ComponentName;
-    .restart local v4       #localIterator:Ljava/util/Iterator;
+    .restart local v0    # "localActivityInfo":Landroid/content/pm/ActivityInfo;
+    .restart local v1    # "localComponentName":Landroid/content/ComponentName;
+    .restart local v4    # "localIterator":Ljava/util/Iterator;
     :cond_1
     invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -130,13 +130,13 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
     .line 70
-    .local v5, localObject:Ljava/lang/String;
+    .local v5, "localObject":Ljava/lang/String;
     :try_start_1
     iget-object v9, v0, Landroid/content/pm/ActivityInfo;->metaData:Landroid/os/Bundle;
 
     check-cast v5, Ljava/lang/String;
 
-    .end local v5           #localObject:Ljava/lang/String;
+    .end local v5    # "localObject":Ljava/lang/String;
     invoke-virtual {v9, v5}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v6
@@ -170,7 +170,7 @@
     move-result-object v7
 
     .line 75
-    .local v7, str2:Ljava/lang/String;
+    .local v7, "str2":Ljava/lang/String;
     const-string v9, "AdXAppTracker"
 
     invoke-static {v9, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
@@ -180,14 +180,14 @@
     goto :goto_0
 
     .line 77
-    .end local v7           #str2:Ljava/lang/String;
+    .end local v7    # "str2":Ljava/lang/String;
     :catch_0
     move-exception v9
 
     move-object v2, v9
 
     .line 80
-    .local v2, localException1:Ljava/lang/Exception;
+    .local v2, "localException1":Ljava/lang/Exception;
     :try_start_2
     new-instance v9, Ljava/lang/StringBuilder;
 
@@ -204,7 +204,7 @@
     move-result-object v8
 
     .line 81
-    .local v8, str3:Ljava/lang/String;
+    .local v8, "str3":Ljava/lang/String;
     const-string v9, "AdXAppTracker"
 
     invoke-static {v9, v8, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
@@ -214,18 +214,18 @@
     goto :goto_0
 
     .line 88
-    .end local v0           #localActivityInfo:Landroid/content/pm/ActivityInfo;
-    .end local v1           #localComponentName:Landroid/content/ComponentName;
-    .end local v2           #localException1:Ljava/lang/Exception;
-    .end local v4           #localIterator:Ljava/util/Iterator;
-    .end local v8           #str3:Ljava/lang/String;
+    .end local v0    # "localActivityInfo":Landroid/content/pm/ActivityInfo;
+    .end local v1    # "localComponentName":Landroid/content/ComponentName;
+    .end local v2    # "localException1":Ljava/lang/Exception;
+    .end local v4    # "localIterator":Ljava/util/Iterator;
+    .end local v8    # "str3":Ljava/lang/String;
     :catch_1
     move-exception v9
 
     move-object v3, v9
 
     .line 91
-    .local v3, localException2:Ljava/lang/Exception;
+    .local v3, "localException2":Ljava/lang/Exception;
     const-string v9, "AdXAppTracker"
 
     const-string v9, "Unhandled exception while forwarding install intents.  Possibly lost some install information."
@@ -239,8 +239,8 @@
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 7
-    .parameter "context"
-    .parameter "intent"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
     const-string v6, "AdXAppTracker"
@@ -258,7 +258,7 @@
     move-result-object v3
 
     .line 25
-    .local v3, uri:Ljava/lang/String;
+    .local v3, "uri":Ljava/lang/String;
     if-eqz v3, :cond_0
 
     invoke-virtual {v3}, Ljava/lang/String;->length()I
@@ -275,7 +275,7 @@
     move-result v1
 
     .line 28
-    .local v1, index:I
+    .local v1, "index":I
     const/4 v4, -0x1
 
     if-le v1, v4, :cond_1
@@ -322,13 +322,13 @@
     move-result-object v2
 
     .line 34
-    .local v2, settings:Landroid/content/SharedPreferences;
+    .local v2, "settings":Landroid/content/SharedPreferences;
     invoke-interface {v2}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
     .line 35
-    .local v0, editor:Landroid/content/SharedPreferences$Editor;
+    .local v0, "editor":Landroid/content/SharedPreferences$Editor;
     const-string v4, "InstallReferral"
 
     invoke-interface {v0, v4, v3}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
@@ -356,9 +356,9 @@
     invoke-static {v6, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 42
-    .end local v0           #editor:Landroid/content/SharedPreferences$Editor;
-    .end local v1           #index:I
-    .end local v2           #settings:Landroid/content/SharedPreferences;
+    .end local v0    # "editor":Landroid/content/SharedPreferences$Editor;
+    .end local v1    # "index":I
+    .end local v2    # "settings":Landroid/content/SharedPreferences;
     :cond_0
     :goto_0
     invoke-static {p1}, Lcom/AdX/tag/AdXConnect;->doBroadcastConnectInstance(Landroid/content/Context;)V
@@ -377,7 +377,7 @@
     return-void
 
     .line 40
-    .restart local v1       #index:I
+    .restart local v1    # "index":I
     :cond_1
     const-string v4, "AdXAppTracker"
 

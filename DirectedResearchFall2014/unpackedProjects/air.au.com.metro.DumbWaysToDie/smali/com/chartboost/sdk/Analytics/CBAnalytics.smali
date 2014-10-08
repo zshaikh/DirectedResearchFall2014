@@ -56,9 +56,6 @@
 
 .method private a(DII)Ljava/lang/String;
     .locals 4
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 38
@@ -135,12 +132,11 @@
 # virtual methods
 .method public recordPaymentTransaction(Ljava/lang/String;Ljava/lang/String;DLjava/lang/String;ILjava/util/Map;)Ljava/lang/Boolean;
     .locals 8
-    .parameter "sku"
-    .parameter "title"
-    .parameter "price"
-    .parameter "currency"
-    .parameter "quantity"
-    .parameter
+    .param p1, "sku"    # Ljava/lang/String;
+    .param p2, "title"    # Ljava/lang/String;
+    .param p3, "price"    # D
+    .param p5, "currency"    # Ljava/lang/String;
+    .param p6, "quantity"    # I
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -160,7 +156,7 @@
 
     .prologue
     .line 45
-    .local p7, meta:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
+    .local p7, "meta":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
     invoke-static {}, Lcom/chartboost/sdk/Chartboost;->sharedChartboost()Lcom/chartboost/sdk/Chartboost;
 
     move-result-object v0
@@ -342,11 +338,11 @@
 
 .method public trackEvent(Ljava/lang/String;)Ljava/lang/Boolean;
     .locals 3
-    .parameter "eventIdentifier"
+    .param p1, "eventIdentifier"    # Ljava/lang/String;
 
     .prologue
     .line 74
-    const-wide/high16 v0, 0x3ff0
+    const-wide/high16 v0, 0x3ff0000000000000L
 
     const/4 v2, 0x0
 
@@ -359,8 +355,8 @@
 
 .method public trackEvent(Ljava/lang/String;D)Ljava/lang/Boolean;
     .locals 1
-    .parameter "eventIdentifier"
-    .parameter "value"
+    .param p1, "eventIdentifier"    # Ljava/lang/String;
+    .param p2, "value"    # D
 
     .prologue
     .line 79
@@ -375,9 +371,8 @@
 
 .method public trackEvent(Ljava/lang/String;DLjava/util/Map;)Ljava/lang/Boolean;
     .locals 9
-    .parameter "eventIdentifier"
-    .parameter "value"
-    .parameter
+    .param p1, "eventIdentifier"    # Ljava/lang/String;
+    .param p2, "value"    # D
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -393,7 +388,7 @@
     .end annotation
 
     .prologue
-    .local p4, meta:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
+    .local p4, "meta":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
     const/4 v8, 0x1
 
     .line 84

@@ -21,8 +21,8 @@
 # virtual methods
 .method public call(Lcom/adobe/fre/FREContext;[Lcom/adobe/fre/FREObject;)Lcom/adobe/fre/FREObject;
     .locals 9
-    .parameter "arg0"
-    .parameter "arg1"
+    .param p1, "arg0"    # Lcom/adobe/fre/FREContext;
+    .param p2, "arg1"    # [Lcom/adobe/fre/FREObject;
 
     .prologue
     const-string v8, ","
@@ -41,21 +41,21 @@
     check-cast v4, Landroid/net/wifi/WifiManager;
 
     .line 17
-    .local v4, wifiManager:Landroid/net/wifi/WifiManager;
+    .local v4, "wifiManager":Landroid/net/wifi/WifiManager;
     invoke-virtual {v4}, Landroid/net/wifi/WifiManager;->getConnectionInfo()Landroid/net/wifi/WifiInfo;
 
     move-result-object v3
 
     .line 18
-    .local v3, wInfo:Landroid/net/wifi/WifiInfo;
+    .local v3, "wInfo":Landroid/net/wifi/WifiInfo;
     const-string v2, ""
 
     .line 19
-    .local v2, macAddress:Ljava/lang/String;
+    .local v2, "macAddress":Ljava/lang/String;
     const/4 v0, 0x0
 
     .line 21
-    .local v0, deviceInfoObject:Lcom/adobe/fre/FREObject;
+    .local v0, "deviceInfoObject":Lcom/adobe/fre/FREObject;
     :try_start_0
     invoke-virtual {v3}, Landroid/net/wifi/WifiInfo;->getMacAddress()Ljava/lang/String;
 
@@ -105,7 +105,7 @@
     move-object v1, v5
 
     .line 28
-    .local v1, e:Ljava/lang/Exception;
+    .local v1, "e":Ljava/lang/Exception;
     const-string v5, "ERROR_EVENT"
 
     new-instance v6, Ljava/lang/StringBuilder;

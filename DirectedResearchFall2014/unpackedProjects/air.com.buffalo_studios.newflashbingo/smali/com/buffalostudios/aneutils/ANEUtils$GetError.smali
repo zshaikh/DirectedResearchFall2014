@@ -32,8 +32,8 @@
 # virtual methods
 .method public call(Lcom/adobe/fre/FREContext;[Lcom/adobe/fre/FREObject;)Lcom/adobe/fre/FREObject;
     .locals 2
-    .parameter "context"
-    .parameter "args"
+    .param p1, "context"    # Lcom/adobe/fre/FREContext;
+    .param p2, "args"    # [Lcom/adobe/fre/FREObject;
 
     .prologue
     .line 25
@@ -42,7 +42,7 @@
     move-result-object v0
 
     .line 26
-    .local v0, error:Ljava/lang/String;
+    .local v0, "error":Ljava/lang/String;
     invoke-static {v0}, Lcom/buffalostudios/aneutils/common/ANEHelper;->newFREString(Ljava/lang/String;)Lcom/adobe/fre/FREObject;
 
     move-result-object v1

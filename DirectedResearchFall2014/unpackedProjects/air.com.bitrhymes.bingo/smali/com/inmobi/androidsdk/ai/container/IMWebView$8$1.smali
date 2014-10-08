@@ -26,8 +26,6 @@
 # direct methods
 .method constructor <init>(Lcom/inmobi/androidsdk/ai/container/IMWebView$8;Landroid/webkit/JsResult;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 1
@@ -45,8 +43,6 @@
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 1585

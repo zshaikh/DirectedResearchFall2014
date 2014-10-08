@@ -34,7 +34,7 @@
 
 .method public static acquire(Landroid/content/Context;)V
     .locals 3
-    .parameter "context"
+    .param p0, "context"    # Landroid/content/Context;
 
     .prologue
     .line 13
@@ -66,7 +66,7 @@
     check-cast v0, Landroid/os/PowerManager;
 
     .line 20
-    .local v0, pm:Landroid/os/PowerManager;
+    .local v0, "pm":Landroid/os/PowerManager;
     const v1, 0x20000001
 
     const-string v2, "WakeLocker"

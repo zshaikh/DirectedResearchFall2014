@@ -36,9 +36,6 @@
 # direct methods
 .method constructor <init>(Lcom/chartboost/sdk/impl/m;Ljava/lang/String;Landroid/content/Context;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 1
@@ -58,7 +55,6 @@
 # virtual methods
 .method public varargs a([Ljava/lang/Void;)Ljava/lang/String;
     .locals 4
-    .parameter
 
     .prologue
     const/4 v2, 0x0
@@ -79,8 +75,8 @@
 
     check-cast v0, Ljava/net/HttpURLConnection;
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 55
     const/4 v1, 0x0
@@ -101,8 +97,8 @@
     .line 58
     iget-object v1, p0, Lcom/chartboost/sdk/impl/m$1;->b:Ljava/lang/String;
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     .line 64
     :cond_0
@@ -175,7 +171,6 @@
 
 .method public a(Ljava/lang/String;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 72
@@ -191,7 +186,6 @@
 
 .method public varargs synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
-    .parameter
 
     .prologue
     .line 1
@@ -206,7 +200,6 @@
 
 .method public synthetic onPostExecute(Ljava/lang/Object;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1

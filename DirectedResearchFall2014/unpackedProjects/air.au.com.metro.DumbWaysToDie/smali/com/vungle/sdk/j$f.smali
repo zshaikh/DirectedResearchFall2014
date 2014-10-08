@@ -21,7 +21,6 @@
 # direct methods
 .method private constructor <init>(Lcom/vungle/sdk/j;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 499
@@ -34,8 +33,6 @@
 
 .method synthetic constructor <init>(Lcom/vungle/sdk/j;B)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 499

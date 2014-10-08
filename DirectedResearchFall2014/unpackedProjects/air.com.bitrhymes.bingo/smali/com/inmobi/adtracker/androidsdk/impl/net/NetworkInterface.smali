@@ -335,9 +335,6 @@
 
 .method public static declared-synchronized reportToServer(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lcom/inmobi/adtracker/androidsdk/impl/ConfigConstants$StatusCode;
     .locals 4
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 51
@@ -402,12 +399,6 @@
 
 .method public static reportUsingNetwork(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IJ)V
     .locals 8
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const-wide/32 v4, 0xa4cb80
@@ -795,12 +786,6 @@
 
 .method public static reportUsingWebview(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IJ)V
     .locals 8
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const-wide/32 v6, 0xa4cb80

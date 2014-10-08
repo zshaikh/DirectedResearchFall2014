@@ -52,7 +52,7 @@
 # direct methods
 .method constructor <init>(I)V
     .locals 1
-    .parameter "code"
+    .param p1, "code"    # I
 
     .prologue
     .line 69
@@ -71,7 +71,7 @@
 
 .method constructor <init>(Ljava/lang/Exception;)V
     .locals 1
-    .parameter "e"
+    .param p1, "e"    # Ljava/lang/Exception;
 
     .prologue
     .line 57
@@ -88,8 +88,8 @@
 
 .method constructor <init>(Ljava/lang/String;I)V
     .locals 0
-    .parameter "message"
-    .parameter "code"
+    .param p1, "message"    # Ljava/lang/String;
+    .param p2, "code"    # I
 
     .prologue
     .line 75
@@ -104,8 +104,8 @@
 
 .method constructor <init>(Ljava/lang/String;Ljava/lang/Exception;)V
     .locals 1
-    .parameter "message"
-    .parameter "e"
+    .param p1, "message"    # Ljava/lang/String;
+    .param p2, "e"    # Ljava/lang/Exception;
 
     .prologue
     .line 63
@@ -122,7 +122,7 @@
 
 .method static getErrorCodeMessage(I)Ljava/lang/String;
     .locals 2
-    .parameter "error"
+    .param p0, "error"    # I
 
     .prologue
     const-string v1, "The ad has already been displayed."

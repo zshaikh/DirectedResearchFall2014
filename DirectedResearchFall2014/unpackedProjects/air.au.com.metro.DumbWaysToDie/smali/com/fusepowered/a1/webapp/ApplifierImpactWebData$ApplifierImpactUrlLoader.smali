@@ -58,12 +58,11 @@
 # direct methods
 .method public constructor <init>(Lcom/fusepowered/a1/webapp/ApplifierImpactWebData;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/fusepowered/a1/webapp/ApplifierImpactWebData$ApplifierImpactRequestType;I)V
     .locals 5
-    .parameter
-    .parameter "url"
-    .parameter "queryParams"
-    .parameter "httpMethod"
-    .parameter "requestType"
-    .parameter "existingRetries"
+    .param p2, "url"    # Ljava/lang/String;
+    .param p3, "queryParams"    # Ljava/lang/String;
+    .param p4, "httpMethod"    # Ljava/lang/String;
+    .param p5, "requestType"    # Lcom/fusepowered/a1/webapp/ApplifierImpactWebData$ApplifierImpactRequestType;
+    .param p6, "existingRetries"    # I
 
     .prologue
     const/4 v3, 0x0
@@ -198,14 +197,13 @@
     iput-object p4, p0, Lcom/fusepowered/a1/webapp/ApplifierImpactWebData$ApplifierImpactUrlLoader;->_httpMethod:Ljava/lang/String;
 
     .line 653
-    #getter for: Lcom/fusepowered/a1/webapp/ApplifierImpactWebData;->_totalLoadersCreated:I
+    # getter for: Lcom/fusepowered/a1/webapp/ApplifierImpactWebData;->_totalLoadersCreated:I
     invoke-static {p1}, Lcom/fusepowered/a1/webapp/ApplifierImpactWebData;->access$2(Lcom/fusepowered/a1/webapp/ApplifierImpactWebData;)I
 
     move-result v1
 
     add-int/lit8 v1, v1, 0x1
 
-    #setter for: Lcom/fusepowered/a1/webapp/ApplifierImpactWebData;->_totalLoadersCreated:I
     invoke-static {p1, v1}, Lcom/fusepowered/a1/webapp/ApplifierImpactWebData;->access$3(Lcom/fusepowered/a1/webapp/ApplifierImpactWebData;I)V
 
     .line 654
@@ -215,7 +213,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    #getter for: Lcom/fusepowered/a1/webapp/ApplifierImpactWebData;->_totalLoadersCreated:I
+    # getter for: Lcom/fusepowered/a1/webapp/ApplifierImpactWebData;->_totalLoadersCreated:I
     invoke-static {p1}, Lcom/fusepowered/a1/webapp/ApplifierImpactWebData;->access$2(Lcom/fusepowered/a1/webapp/ApplifierImpactWebData;)I
 
     move-result v2
@@ -246,7 +244,7 @@
     move-object v0, v1
 
     .line 648
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     new-instance v1, Ljava/lang/StringBuilder;
 
     const-string v2, "Problems with url! Error-message: "
@@ -333,7 +331,7 @@
     move-object v0, v1
 
     .line 817
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     new-instance v1, Ljava/lang/StringBuilder;
 
     const-string v2, "Problems closing streams: "
@@ -402,7 +400,6 @@
 
 .method protected bridge varargs synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
-    .parameter
 
     .prologue
     .line 1
@@ -417,7 +414,7 @@
 
 .method protected varargs doInBackground([Ljava/lang/String;)Ljava/lang/String;
     .locals 12
-    .parameter "params"
+    .param p1, "params"    # [Ljava/lang/String;
 
     .prologue
     const/4 v9, 0x0
@@ -549,7 +546,7 @@
     invoke-direct {v3, v6, v7}, Ljava/io/PrintWriter;-><init>(Ljava/io/Writer;Z)V
 
     .line 733
-    .local v3, pout:Ljava/io/PrintWriter;
+    .local v3, "pout":Ljava/io/PrintWriter;
     iget-object v6, p0, Lcom/fusepowered/a1/webapp/ApplifierImpactWebData$ApplifierImpactUrlLoader;->_queryParams:Ljava/lang/String;
 
     invoke-virtual {v3, v6}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -560,7 +557,7 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
     .line 744
-    .end local v3           #pout:Ljava/io/PrintWriter;
+    .end local v3    # "pout":Ljava/io/PrintWriter;
     :cond_1
     :try_start_2
     new-instance v6, Ljava/lang/StringBuilder;
@@ -657,7 +654,7 @@
     const-wide/16 v4, 0x0
 
     .line 755
-    .local v4, total:J
+    .local v4, "total":J
     iget-object v6, p0, Lcom/fusepowered/a1/webapp/ApplifierImpactWebData$ApplifierImpactUrlLoader;->_connection:Ljava/net/HttpURLConnection;
 
     invoke-virtual {v6}, Ljava/net/HttpURLConnection;->getContentLength()I
@@ -670,14 +667,13 @@
     :try_start_3
     iget-object v6, p0, Lcom/fusepowered/a1/webapp/ApplifierImpactWebData$ApplifierImpactUrlLoader;->this$0:Lcom/fusepowered/a1/webapp/ApplifierImpactWebData;
 
-    #getter for: Lcom/fusepowered/a1/webapp/ApplifierImpactWebData;->_totalLoadersHaveRun:I
+    # getter for: Lcom/fusepowered/a1/webapp/ApplifierImpactWebData;->_totalLoadersHaveRun:I
     invoke-static {v6}, Lcom/fusepowered/a1/webapp/ApplifierImpactWebData;->access$4(Lcom/fusepowered/a1/webapp/ApplifierImpactWebData;)I
 
     move-result v7
 
     add-int/lit8 v7, v7, 0x1
 
-    #setter for: Lcom/fusepowered/a1/webapp/ApplifierImpactWebData;->_totalLoadersHaveRun:I
     invoke-static {v6, v7}, Lcom/fusepowered/a1/webapp/ApplifierImpactWebData;->access$5(Lcom/fusepowered/a1/webapp/ApplifierImpactWebData;I)V
 
     .line 759
@@ -689,7 +685,7 @@
 
     iget-object v7, p0, Lcom/fusepowered/a1/webapp/ApplifierImpactWebData$ApplifierImpactUrlLoader;->this$0:Lcom/fusepowered/a1/webapp/ApplifierImpactWebData;
 
-    #getter for: Lcom/fusepowered/a1/webapp/ApplifierImpactWebData;->_totalLoadersHaveRun:I
+    # getter for: Lcom/fusepowered/a1/webapp/ApplifierImpactWebData;->_totalLoadersHaveRun:I
     invoke-static {v7}, Lcom/fusepowered/a1/webapp/ApplifierImpactWebData;->access$4(Lcom/fusepowered/a1/webapp/ApplifierImpactWebData;)I
 
     move-result v7
@@ -747,11 +743,11 @@
     invoke-direct {v0, v6}, Lorg/apache/http/util/ByteArrayBuffer;-><init>(I)V
 
     .line 763
-    .local v0, baf:Lorg/apache/http/util/ByteArrayBuffer;
+    .local v0, "baf":Lorg/apache/http/util/ByteArrayBuffer;
     const/4 v1, 0x0
 
     .line 765
-    .local v1, current:I
+    .local v1, "current":I
     :cond_2
     iget-object v6, p0, Lcom/fusepowered/a1/webapp/ApplifierImpactWebData$ApplifierImpactUrlLoader;->_binput:Ljava/io/BufferedInputStream;
 
@@ -793,9 +789,9 @@
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_3
 
-    .end local v0           #baf:Lorg/apache/http/util/ByteArrayBuffer;
-    .end local v1           #current:I
-    .end local v4           #total:J
+    .end local v0    # "baf":Lorg/apache/http/util/ByteArrayBuffer;
+    .end local v1    # "current":I
+    .end local v4    # "total":J
     :cond_3
     move-object v6, v9
 
@@ -827,7 +823,7 @@
     move-object v2, v6
 
     .line 724
-    .local v2, e:Ljava/lang/Exception;
+    .local v2, "e":Ljava/lang/Exception;
     new-instance v6, Ljava/lang/StringBuilder;
 
     const-string v7, "Problems opening connection: "
@@ -857,14 +853,14 @@
     goto :goto_1
 
     .line 736
-    .end local v2           #e:Ljava/lang/Exception;
+    .end local v2    # "e":Ljava/lang/Exception;
     :catch_1
     move-exception v6
 
     move-object v2, v6
 
     .line 737
-    .restart local v2       #e:Ljava/lang/Exception;
+    .restart local v2    # "e":Ljava/lang/Exception;
     new-instance v6, Ljava/lang/StringBuilder;
 
     const-string v7, "Problems writing post-data: "
@@ -908,14 +904,14 @@
     goto :goto_1
 
     .line 748
-    .end local v2           #e:Ljava/lang/Exception;
+    .end local v2    # "e":Ljava/lang/Exception;
     :catch_2
     move-exception v6
 
     move-object v2, v6
 
     .line 749
-    .restart local v2       #e:Ljava/lang/Exception;
+    .restart local v2    # "e":Ljava/lang/Exception;
     new-instance v6, Ljava/lang/StringBuilder;
 
     const-string v7, "Problems opening stream: "
@@ -945,10 +941,10 @@
     goto :goto_1
 
     .line 766
-    .end local v2           #e:Ljava/lang/Exception;
-    .restart local v0       #baf:Lorg/apache/http/util/ByteArrayBuffer;
-    .restart local v1       #current:I
-    .restart local v4       #total:J
+    .end local v2    # "e":Ljava/lang/Exception;
+    .restart local v0    # "baf":Lorg/apache/http/util/ByteArrayBuffer;
+    .restart local v1    # "current":I
+    .restart local v4    # "total":J
     :cond_5
     const-wide/16 v6, 0x1
 
@@ -975,15 +971,15 @@
     goto :goto_1
 
     .line 776
-    .end local v0           #baf:Lorg/apache/http/util/ByteArrayBuffer;
-    .end local v1           #current:I
+    .end local v0    # "baf":Lorg/apache/http/util/ByteArrayBuffer;
+    .end local v1    # "current":I
     :catch_3
     move-exception v6
 
     move-object v2, v6
 
     .line 777
-    .restart local v2       #e:Ljava/lang/Exception;
+    .restart local v2    # "e":Ljava/lang/Exception;
     new-instance v6, Ljava/lang/StringBuilder;
 
     const-string v7, "Problems loading url! Error-message: "
@@ -1106,7 +1102,7 @@
     .line 790
     iget-object v0, p0, Lcom/fusepowered/a1/webapp/ApplifierImpactWebData$ApplifierImpactUrlLoader;->this$0:Lcom/fusepowered/a1/webapp/ApplifierImpactWebData;
 
-    #calls: Lcom/fusepowered/a1/webapp/ApplifierImpactWebData;->urlLoadFailed(Lcom/fusepowered/a1/webapp/ApplifierImpactWebData$ApplifierImpactUrlLoader;)V
+    # invokes: Lcom/fusepowered/a1/webapp/ApplifierImpactWebData;->urlLoadFailed(Lcom/fusepowered/a1/webapp/ApplifierImpactWebData$ApplifierImpactUrlLoader;)V
     invoke-static {v0, p0}, Lcom/fusepowered/a1/webapp/ApplifierImpactWebData;->access$6(Lcom/fusepowered/a1/webapp/ApplifierImpactWebData;Lcom/fusepowered/a1/webapp/ApplifierImpactWebData$ApplifierImpactUrlLoader;)V
 
     .line 791
@@ -1115,7 +1111,6 @@
 
 .method protected bridge synthetic onPostExecute(Ljava/lang/Object;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1
@@ -1128,7 +1123,7 @@
 
 .method protected onPostExecute(Ljava/lang/String;)V
     .locals 1
-    .parameter "result"
+    .param p1, "result"    # Ljava/lang/String;
 
     .prologue
     .line 795
@@ -1161,7 +1156,7 @@
     .line 798
     iget-object v0, p0, Lcom/fusepowered/a1/webapp/ApplifierImpactWebData$ApplifierImpactUrlLoader;->this$0:Lcom/fusepowered/a1/webapp/ApplifierImpactWebData;
 
-    #calls: Lcom/fusepowered/a1/webapp/ApplifierImpactWebData;->urlLoadCompleted(Lcom/fusepowered/a1/webapp/ApplifierImpactWebData$ApplifierImpactUrlLoader;)V
+    # invokes: Lcom/fusepowered/a1/webapp/ApplifierImpactWebData;->urlLoadCompleted(Lcom/fusepowered/a1/webapp/ApplifierImpactWebData$ApplifierImpactUrlLoader;)V
     invoke-static {v0, p0}, Lcom/fusepowered/a1/webapp/ApplifierImpactWebData;->access$7(Lcom/fusepowered/a1/webapp/ApplifierImpactWebData;Lcom/fusepowered/a1/webapp/ApplifierImpactWebData$ApplifierImpactUrlLoader;)V
 
     .line 801
@@ -1174,7 +1169,7 @@
 
 .method protected varargs onProgressUpdate([Ljava/lang/Integer;)V
     .locals 0
-    .parameter "values"
+    .param p1, "values"    # [Ljava/lang/Integer;
 
     .prologue
     .line 806
@@ -1186,7 +1181,6 @@
 
 .method protected bridge varargs synthetic onProgressUpdate([Ljava/lang/Object;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1

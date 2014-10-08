@@ -6,17 +6,17 @@
 # static fields
 .field public static final AUTO_HEIGHT:I = -0x2
 
-.field public static final BANNER:Lcom/google/ads/AdSize; = null
+.field public static final BANNER:Lcom/google/ads/AdSize;
 
 .field public static final FULL_WIDTH:I = -0x1
 
-.field public static final IAB_BANNER:Lcom/google/ads/AdSize; = null
+.field public static final IAB_BANNER:Lcom/google/ads/AdSize;
 
-.field public static final IAB_LEADERBOARD:Lcom/google/ads/AdSize; = null
+.field public static final IAB_LEADERBOARD:Lcom/google/ads/AdSize;
 
-.field public static final IAB_MRECT:Lcom/google/ads/AdSize; = null
+.field public static final IAB_MRECT:Lcom/google/ads/AdSize;
 
-.field public static final IAB_WIDE_SKYSCRAPER:Lcom/google/ads/AdSize; = null
+.field public static final IAB_WIDE_SKYSCRAPER:Lcom/google/ads/AdSize;
 
 .field public static final LANDSCAPE_AD_HEIGHT:I = 0x20
 
@@ -133,8 +133,8 @@
 
 .method public constructor <init>(II)V
     .locals 1
-    .parameter "width"
-    .parameter "height"
+    .param p1, "width"    # I
+    .param p2, "height"    # I
 
     .prologue
     .line 142
@@ -174,9 +174,9 @@
 
 .method private constructor <init>(IILjava/lang/String;)V
     .locals 3
-    .parameter "width"
-    .parameter "height"
-    .parameter "type"
+    .param p1, "width"    # I
+    .param p2, "height"    # I
+    .param p3, "type"    # Ljava/lang/String;
 
     .prologue
     const/4 v2, 0x1
@@ -236,7 +236,6 @@
 
 .method private static a(Landroid/content/Context;)I
     .locals 2
-    .parameter
 
     .prologue
     .line 370
@@ -289,7 +288,6 @@
 
 .method private static b(Landroid/content/Context;)I
     .locals 2
-    .parameter
 
     .prologue
     .line 382
@@ -344,8 +342,8 @@
 
 .method public static createAdSize(Lcom/google/ads/AdSize;Landroid/content/Context;)Lcom/google/ads/AdSize;
     .locals 4
-    .parameter "adSize"
-    .parameter "context"
+    .param p0, "adSize"    # Lcom/google/ads/AdSize;
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     .line 181
@@ -446,7 +444,7 @@
 # virtual methods
 .method public equals(Ljava/lang/Object;)Z
     .locals 3
-    .parameter "other"
+    .param p1, "other"    # Ljava/lang/Object;
 
     .prologue
     const/4 v2, 0x0
@@ -459,17 +457,17 @@
     move v0, v2
 
     .line 209
-    .end local p1
+    .end local p1    # "other":Ljava/lang/Object;
     :goto_0
     return v0
 
     .line 207
-    .restart local p1
+    .restart local p1    # "other":Ljava/lang/Object;
     :cond_0
     check-cast p1, Lcom/google/ads/AdSize;
 
     .line 209
-    .end local p1
+    .end local p1    # "other":Ljava/lang/Object;
     iget v0, p0, Lcom/google/ads/AdSize;->a:I
 
     iget v1, p1, Lcom/google/ads/AdSize;->a:I
@@ -494,7 +492,7 @@
 
 .method public varargs findBestSize([Lcom/google/ads/AdSize;)Lcom/google/ads/AdSize;
     .locals 13
-    .parameter "options"
+    .param p1, "options"    # [Lcom/google/ads/AdSize;
 
     .prologue
     .line 339
@@ -557,14 +555,14 @@
     div-double/2addr v6, v8
 
     .line 347
-    const-wide/high16 v8, 0x3ff0
+    const-wide/high16 v8, 0x3ff0000000000000L
 
     cmpl-double v8, v6, v8
 
     if-lez v8, :cond_0
 
     .line 348
-    const-wide/high16 v8, 0x3ff0
+    const-wide/high16 v8, 0x3ff0000000000000L
 
     div-double v6, v8, v6
 
@@ -619,7 +617,7 @@
 
 .method public getHeightInPixels(Landroid/content/Context;)I
     .locals 3
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     .line 301
@@ -673,7 +671,7 @@
 
 .method public getWidthInPixels(Landroid/content/Context;)I
     .locals 3
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     .line 291
@@ -768,11 +766,11 @@
 
 .method public isSizeAppropriate(II)Z
     .locals 8
-    .parameter "width"
-    .parameter "height"
+    .param p1, "width"    # I
+    .param p2, "height"    # I
 
     .prologue
-    const-wide/high16 v6, 0x3ff4
+    const-wide/high16 v6, 0x3ff4000000000000L
 
     const-wide v4, 0x3fe999999999999aL
 

@@ -53,9 +53,9 @@
 # direct methods
 .method public constructor <init>(Lcom/fusepowered/m2/m2l/MoPubView;Ljava/lang/String;Ljava/lang/String;)V
     .locals 4
-    .parameter "moPubView"
-    .parameter "className"
-    .parameter "classData"
+    .param p1, "moPubView"    # Lcom/fusepowered/m2/m2l/MoPubView;
+    .param p2, "className"    # Ljava/lang/String;
+    .param p3, "classData"    # Ljava/lang/String;
 
     .prologue
     const-string v3, "MoPub"
@@ -211,7 +211,7 @@
     move-object v0, v1
 
     .line 82
-    .local v0, exception:Ljava/lang/Exception;
+    .local v0, "exception":Ljava/lang/Exception;
     const-string v1, "MoPub"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -246,14 +246,14 @@
     goto :goto_1
 
     .line 90
-    .end local v0           #exception:Ljava/lang/Exception;
+    .end local v0    # "exception":Ljava/lang/Exception;
     :catch_1
     move-exception v1
 
     move-object v0, v1
 
     .line 91
-    .restart local v0       #exception:Ljava/lang/Exception;
+    .restart local v0    # "exception":Ljava/lang/Exception;
     const-string v1, "MoPub"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -559,7 +559,7 @@
 
 .method public onBannerFailed(Lcom/fusepowered/m2/m2l/MoPubErrorCode;)V
     .locals 1
-    .parameter "errorCode"
+    .param p1, "errorCode"    # Lcom/fusepowered/m2/m2l/MoPubErrorCode;
 
     .prologue
     .line 160
@@ -600,7 +600,7 @@
 
 .method public onBannerLoaded(Landroid/view/View;)V
     .locals 1
-    .parameter "bannerView"
+    .param p1, "bannerView"    # Landroid/view/View;
 
     .prologue
     .line 146

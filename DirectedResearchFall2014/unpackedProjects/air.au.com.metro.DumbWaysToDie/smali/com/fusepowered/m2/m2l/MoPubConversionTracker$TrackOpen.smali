@@ -24,7 +24,6 @@
 # direct methods
 .method private constructor <init>(Lcom/fusepowered/m2/m2l/MoPubConversionTracker;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 95
@@ -37,8 +36,6 @@
 
 .method synthetic constructor <init>(Lcom/fusepowered/m2/m2l/MoPubConversionTracker;Lcom/fusepowered/m2/m2l/MoPubConversionTracker$TrackOpen;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 95
@@ -71,7 +68,7 @@
     move-result-object v5
 
     .line 98
-    .local v5, url:Ljava/lang/String;
+    .local v5, "url":Ljava/lang/String;
     const-string v6, "MoPub"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -96,14 +93,14 @@
     move-result-object v2
 
     .line 103
-    .local v2, httpClient:Lorg/apache/http/impl/client/DefaultHttpClient;
+    .local v2, "httpClient":Lorg/apache/http/impl/client/DefaultHttpClient;
     :try_start_0
     new-instance v3, Lorg/apache/http/client/methods/HttpGet;
 
     invoke-direct {v3, v5}, Lorg/apache/http/client/methods/HttpGet;-><init>(Ljava/lang/String;)V
 
     .line 104
-    .local v3, httpget:Lorg/apache/http/client/methods/HttpGet;
+    .local v3, "httpget":Lorg/apache/http/client/methods/HttpGet;
     invoke-virtual {v2, v3}, Lorg/apache/http/impl/client/DefaultHttpClient;->execute(Lorg/apache/http/client/methods/HttpUriRequest;)Lorg/apache/http/HttpResponse;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -111,7 +108,7 @@
     move-result-object v4
 
     .line 110
-    .local v4, response:Lorg/apache/http/HttpResponse;
+    .local v4, "response":Lorg/apache/http/HttpResponse;
     invoke-interface {v4}, Lorg/apache/http/HttpResponse;->getStatusLine()Lorg/apache/http/StatusLine;
 
     move-result-object v6
@@ -132,8 +129,8 @@
     invoke-static {v10, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 127
-    .end local v3           #httpget:Lorg/apache/http/client/methods/HttpGet;
-    .end local v4           #response:Lorg/apache/http/HttpResponse;
+    .end local v3    # "httpget":Lorg/apache/http/client/methods/HttpGet;
+    .end local v4    # "response":Lorg/apache/http/HttpResponse;
     :goto_0
     return-void
 
@@ -144,7 +141,7 @@
     move-object v0, v6
 
     .line 106
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v6, "MoPub"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -184,16 +181,16 @@
     goto :goto_0
 
     .line 115
-    .end local v0           #e:Ljava/lang/Exception;
-    .restart local v3       #httpget:Lorg/apache/http/client/methods/HttpGet;
-    .restart local v4       #response:Lorg/apache/http/HttpResponse;
+    .end local v0    # "e":Ljava/lang/Exception;
+    .restart local v3    # "httpget":Lorg/apache/http/client/methods/HttpGet;
+    .restart local v4    # "response":Lorg/apache/http/HttpResponse;
     :cond_0
     invoke-interface {v4}, Lorg/apache/http/HttpResponse;->getEntity()Lorg/apache/http/HttpEntity;
 
     move-result-object v1
 
     .line 116
-    .local v1, entity:Lorg/apache/http/HttpEntity;
+    .local v1, "entity":Lorg/apache/http/HttpEntity;
     if-eqz v1, :cond_1
 
     invoke-interface {v1}, Lorg/apache/http/HttpEntity;->getContentLength()J
@@ -227,7 +224,7 @@
     .line 123
     iget-object v6, p0, Lcom/fusepowered/m2/m2l/MoPubConversionTracker$TrackOpen;->this$0:Lcom/fusepowered/m2/m2l/MoPubConversionTracker;
 
-    #getter for: Lcom/fusepowered/m2/m2l/MoPubConversionTracker;->mSharedPreferences:Landroid/content/SharedPreferences;
+    # getter for: Lcom/fusepowered/m2/m2l/MoPubConversionTracker;->mSharedPreferences:Landroid/content/SharedPreferences;
     invoke-static {v6}, Lcom/fusepowered/m2/m2l/MoPubConversionTracker;->access$2(Lcom/fusepowered/m2/m2l/MoPubConversionTracker;)Landroid/content/SharedPreferences;
 
     move-result-object v6
@@ -240,7 +237,7 @@
     .line 125
     iget-object v7, p0, Lcom/fusepowered/m2/m2l/MoPubConversionTracker$TrackOpen;->this$0:Lcom/fusepowered/m2/m2l/MoPubConversionTracker;
 
-    #getter for: Lcom/fusepowered/m2/m2l/MoPubConversionTracker;->mIsTrackedKey:Ljava/lang/String;
+    # getter for: Lcom/fusepowered/m2/m2l/MoPubConversionTracker;->mIsTrackedKey:Ljava/lang/String;
     invoke-static {v7}, Lcom/fusepowered/m2/m2l/MoPubConversionTracker;->access$3(Lcom/fusepowered/m2/m2l/MoPubConversionTracker;)Ljava/lang/String;
 
     move-result-object v7

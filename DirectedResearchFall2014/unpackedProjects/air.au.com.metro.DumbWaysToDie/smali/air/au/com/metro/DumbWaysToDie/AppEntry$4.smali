@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lair/au/com/metro/DumbWaysToDie/AppEntry;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 276
@@ -39,8 +38,8 @@
 # virtual methods
 .method public onServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V
     .locals 2
-    .parameter "name"
-    .parameter "service"
+    .param p1, "name"    # Landroid/content/ComponentName;
+    .param p2, "service"    # Landroid/os/IBinder;
 
     .prologue
     .line 282
@@ -51,7 +50,7 @@
     .line 285
     iget-object v0, p0, Lair/au/com/metro/DumbWaysToDie/AppEntry$4;->this$0:Lair/au/com/metro/DumbWaysToDie/AppEntry;
 
-    #calls: Lair/au/com/metro/DumbWaysToDie/AppEntry;->loadSharedRuntimeDex()V
+    # invokes: Lair/au/com/metro/DumbWaysToDie/AppEntry;->loadSharedRuntimeDex()V
     invoke-static {v0}, Lair/au/com/metro/DumbWaysToDie/AppEntry;->access$100(Lair/au/com/metro/DumbWaysToDie/AppEntry;)V
 
     .line 286
@@ -59,10 +58,11 @@
 
     const/4 v1, 0x0
 
-    #calls: Lair/au/com/metro/DumbWaysToDie/AppEntry;->createActivityWrapper(Z)V
+    # invokes: Lair/au/com/metro/DumbWaysToDie/AppEntry;->createActivityWrapper(Z)V
     invoke-static {v0, v1}, Lair/au/com/metro/DumbWaysToDie/AppEntry;->access$200(Lair/au/com/metro/DumbWaysToDie/AppEntry;Z)V
 
     .line 288
+    # getter for: Lair/au/com/metro/DumbWaysToDie/AppEntry;->sRuntimeClassesLoaded:Z
     invoke-static {}, Lair/au/com/metro/DumbWaysToDie/AppEntry;->access$300()Z
 
     move-result v0
@@ -72,7 +72,7 @@
     .line 290
     iget-object v0, p0, Lair/au/com/metro/DumbWaysToDie/AppEntry$4;->this$0:Lair/au/com/metro/DumbWaysToDie/AppEntry;
 
-    #calls: Lair/au/com/metro/DumbWaysToDie/AppEntry;->InvokeWrapperOnCreate()V
+    # invokes: Lair/au/com/metro/DumbWaysToDie/AppEntry;->InvokeWrapperOnCreate()V
     invoke-static {v0}, Lair/au/com/metro/DumbWaysToDie/AppEntry;->access$400(Lair/au/com/metro/DumbWaysToDie/AppEntry;)V
 
     .line 297
@@ -81,7 +81,7 @@
 
     .line 295
     :cond_0
-    #calls: Lair/au/com/metro/DumbWaysToDie/AppEntry;->KillSelf()V
+    # invokes: Lair/au/com/metro/DumbWaysToDie/AppEntry;->KillSelf()V
     invoke-static {}, Lair/au/com/metro/DumbWaysToDie/AppEntry;->access$500()V
 
     goto :goto_0
@@ -89,7 +89,7 @@
 
 .method public onServiceDisconnected(Landroid/content/ComponentName;)V
     .locals 0
-    .parameter "name"
+    .param p1, "name"    # Landroid/content/ComponentName;
 
     .prologue
     .line 302

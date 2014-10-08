@@ -31,7 +31,6 @@
 # direct methods
 .method constructor <init>(Lcom/google/ads/l;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 132
@@ -47,8 +46,6 @@
 
 .method constructor <init>(Lcom/google/ads/l;Lcom/google/ads/internal/f$a;)V
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 147
@@ -71,8 +68,6 @@
 
 .method private a(Landroid/content/Context;Ljava/net/HttpURLConnection;)V
     .locals 3
-    .parameter
-    .parameter
 
     .prologue
     .line 504
@@ -128,7 +123,6 @@
 
 .method private a(Ljava/net/HttpURLConnection;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 166
@@ -176,8 +170,6 @@
 
 .method private a(Ljava/net/HttpURLConnection;I)V
     .locals 3
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -560,7 +552,6 @@
 
 .method private b(Ljava/net/HttpURLConnection;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 185
@@ -597,7 +588,6 @@
 
 .method private c(Ljava/net/HttpURLConnection;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 196
@@ -634,7 +624,6 @@
 
 .method private d(Ljava/net/HttpURLConnection;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 208
@@ -679,7 +668,6 @@
 
 .method private e(Ljava/net/HttpURLConnection;)V
     .locals 4
-    .parameter
 
     .prologue
     .line 218
@@ -721,7 +709,7 @@
 
     check-cast p0, Lcom/google/ads/internal/d;
 
-    const/high16 v2, 0x447a
+    const/high16 v2, 0x447a0000
 
     mul-float/2addr v1, v2
 
@@ -766,7 +754,6 @@
 
 .method private f(Ljava/net/HttpURLConnection;)V
     .locals 5
-    .parameter
 
     .prologue
     .line 235
@@ -841,7 +828,6 @@
 
 .method private g(Ljava/net/HttpURLConnection;)V
     .locals 5
-    .parameter
 
     .prologue
     .line 249
@@ -916,7 +902,6 @@
 
 .method private h(Ljava/net/HttpURLConnection;)V
     .locals 5
-    .parameter
 
     .prologue
     .line 262
@@ -983,7 +968,6 @@
 
 .method private i(Ljava/net/HttpURLConnection;)V
     .locals 4
-    .parameter
 
     .prologue
     .line 277
@@ -1095,7 +1079,6 @@
 
 .method private j(Ljava/net/HttpURLConnection;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 304
@@ -1175,7 +1158,6 @@
 
 .method private k(Ljava/net/HttpURLConnection;)V
     .locals 4
-    .parameter
 
     .prologue
     const-string v3, "X-Afma-Doritos-Cache-Life"
@@ -1275,7 +1257,6 @@
 
 .method private l(Ljava/net/HttpURLConnection;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 347
@@ -1312,7 +1293,6 @@
 
 .method private m(Ljava/net/HttpURLConnection;)V
     .locals 5
-    .parameter
 
     .prologue
     const/4 v3, 0x2
@@ -1444,7 +1424,6 @@
 
 .method private n(Ljava/net/HttpURLConnection;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 384
@@ -1502,7 +1481,6 @@
 
 .method declared-synchronized a(Ljava/lang/String;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 396
@@ -1552,7 +1530,6 @@
 
 .method public a(Z)V
     .locals 0
-    .parameter
 
     .prologue
     .line 339

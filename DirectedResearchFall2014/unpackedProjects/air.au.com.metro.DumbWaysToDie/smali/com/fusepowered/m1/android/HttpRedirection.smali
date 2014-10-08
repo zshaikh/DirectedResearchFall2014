@@ -36,7 +36,7 @@
 
 .method static final navigateRedirects(Ljava/lang/String;)Ljava/lang/String;
     .locals 9
-    .parameter "urlString"
+    .param p0, "urlString"    # Ljava/lang/String;
 
     .prologue
     const/4 v6, 0x0
@@ -45,7 +45,7 @@
     const/16 v4, 0xcc
 
     .line 33
-    .local v4, rc:I
+    .local v4, "rc":I
     if-nez p0, :cond_0
 
     .line 34
@@ -84,7 +84,7 @@
     invoke-direct {v5, p0}, Ljava/net/URL;-><init>(Ljava/lang/String;)V
 
     .line 46
-    .local v5, url:Ljava/net/URL;
+    .local v5, "url":Ljava/net/URL;
     invoke-virtual {v5}, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;
 
     move-result-object v0
@@ -92,7 +92,7 @@
     check-cast v0, Ljava/net/HttpURLConnection;
 
     .line 47
-    .local v0, conn:Ljava/net/HttpURLConnection;
+    .local v0, "conn":Ljava/net/HttpURLConnection;
     const/16 v6, 0x2710
 
     invoke-virtual {v0, v6}, Ljava/net/HttpURLConnection;->setConnectTimeout(I)V
@@ -127,13 +127,13 @@
     move-result-object v3
 
     .line 56
-    .local v3, locationUrl:Ljava/lang/String;
+    .local v3, "locationUrl":Ljava/lang/String;
     new-instance v2, Ljava/net/URI;
 
     invoke-direct {v2, v3}, Ljava/net/URI;-><init>(Ljava/lang/String;)V
 
     .line 57
-    .local v2, locationUri:Ljava/net/URI;
+    .local v2, "locationUri":Ljava/net/URI;
     invoke-virtual {v2}, Ljava/net/URI;->isAbsolute()Z
 
     move-result v6
@@ -176,20 +176,20 @@
     goto :goto_1
 
     .line 69
-    .end local v0           #conn:Ljava/net/HttpURLConnection;
-    .end local v2           #locationUri:Ljava/net/URI;
-    .end local v3           #locationUrl:Ljava/lang/String;
-    .end local v5           #url:Ljava/net/URL;
+    .end local v0    # "conn":Ljava/net/HttpURLConnection;
+    .end local v2    # "locationUri":Ljava/net/URI;
+    .end local v3    # "locationUrl":Ljava/lang/String;
+    .end local v5    # "url":Ljava/net/URL;
     :catch_0
     move-exception v6
 
     goto :goto_2
 
     .line 60
-    .restart local v0       #conn:Ljava/net/HttpURLConnection;
-    .restart local v2       #locationUri:Ljava/net/URI;
-    .restart local v3       #locationUrl:Ljava/lang/String;
-    .restart local v5       #url:Ljava/net/URL;
+    .restart local v0    # "conn":Ljava/net/HttpURLConnection;
+    .restart local v2    # "locationUri":Ljava/net/URI;
+    .restart local v3    # "locationUrl":Ljava/lang/String;
+    .restart local v5    # "url":Ljava/net/URL;
     :cond_4
     if-eqz v3, :cond_3
 
@@ -199,17 +199,17 @@
     goto :goto_3
 
     .line 73
-    .end local v0           #conn:Ljava/net/HttpURLConnection;
-    .end local v2           #locationUri:Ljava/net/URI;
-    .end local v3           #locationUrl:Ljava/lang/String;
-    .end local v5           #url:Ljava/net/URL;
+    .end local v0    # "conn":Ljava/net/HttpURLConnection;
+    .end local v2    # "locationUri":Ljava/net/URI;
+    .end local v3    # "locationUrl":Ljava/lang/String;
+    .end local v5    # "url":Ljava/net/URL;
     :catch_1
     move-exception v6
 
     move-object v1, v6
 
     .line 75
-    .local v1, e:Ljava/net/SocketTimeoutException;
+    .local v1, "e":Ljava/net/SocketTimeoutException;
     const-string v6, "Connection timeout."
 
     invoke-static {v6}, Lcom/fusepowered/m1/android/MMSDK$Log;->d(Ljava/lang/String;)V
@@ -217,14 +217,14 @@
     goto :goto_2
 
     .line 81
-    .end local v1           #e:Ljava/net/SocketTimeoutException;
+    .end local v1    # "e":Ljava/net/SocketTimeoutException;
     :catch_2
     move-exception v6
 
     move-object v1, v6
 
     .line 83
-    .local v1, e:Ljava/net/URISyntaxException;
+    .local v1, "e":Ljava/net/URISyntaxException;
     const-string v6, "URI Syntax incorrect."
 
     invoke-static {v6}, Lcom/fusepowered/m1/android/MMSDK$Log;->d(Ljava/lang/String;)V
@@ -232,7 +232,7 @@
     goto :goto_2
 
     .line 77
-    .end local v1           #e:Ljava/net/URISyntaxException;
+    .end local v1    # "e":Ljava/net/URISyntaxException;
     :catch_3
     move-exception v6
 
@@ -241,7 +241,7 @@
 
 .method static startActivityFromUri(Lcom/fusepowered/m1/android/HttpRedirection$RedirectionListenerImpl;)V
     .locals 2
-    .parameter "listener"
+    .param p0, "listener"    # Lcom/fusepowered/m1/android/HttpRedirection$RedirectionListenerImpl;
 
     .prologue
     .line 174
@@ -267,7 +267,7 @@
     invoke-direct {v0, p0}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     .line 179
-    .local v0, listenerReference:Ljava/lang/ref/WeakReference;,"Ljava/lang/ref/WeakReference<Lcom/fusepowered/m1/android/HttpRedirection$RedirectionListenerImpl;>;"
+    .local v0, "listenerReference":Ljava/lang/ref/WeakReference;, "Ljava/lang/ref/WeakReference<Lcom/fusepowered/m1/android/HttpRedirection$RedirectionListenerImpl;>;"
     new-instance v1, Lcom/fusepowered/m1/android/HttpRedirection$1;
 
     invoke-direct {v1, v0}, Lcom/fusepowered/m1/android/HttpRedirection$1;-><init>(Ljava/lang/ref/WeakReference;)V

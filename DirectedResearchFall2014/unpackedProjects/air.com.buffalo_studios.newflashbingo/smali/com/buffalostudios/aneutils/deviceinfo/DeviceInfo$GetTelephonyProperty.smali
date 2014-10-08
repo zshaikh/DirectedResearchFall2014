@@ -36,7 +36,7 @@
 
 .method private getNetworkOperator(Landroid/telephony/TelephonyManager;)Ljava/lang/String;
     .locals 1
-    .parameter "tm"
+    .param p1, "tm"    # Landroid/telephony/TelephonyManager;
 
     .prologue
     .line 327
@@ -49,7 +49,7 @@
 
 .method private getNetworkType(Landroid/telephony/TelephonyManager;)Ljava/lang/String;
     .locals 2
-    .parameter "tm"
+    .param p1, "tm"    # Landroid/telephony/TelephonyManager;
 
     .prologue
     .line 331
@@ -58,7 +58,7 @@
     move-result v0
 
     .line 333
-    .local v0, networkType:I
+    .local v0, "networkType":I
     packed-switch v0, :pswitch_data_0
 
     .line 350
@@ -189,8 +189,8 @@
 
 .method private getTelephonyProperty(Landroid/telephony/TelephonyManager;I)Ljava/lang/String;
     .locals 1
-    .parameter "tm"
-    .parameter "propertyId"
+    .param p1, "tm"    # Landroid/telephony/TelephonyManager;
+    .param p2, "propertyId"    # I
 
     .prologue
     .line 318
@@ -231,7 +231,7 @@
 
 .method private onError(Ljava/lang/String;)V
     .locals 0
-    .parameter "message"
+    .param p1, "message"    # Ljava/lang/String;
 
     .prologue
     .line 356
@@ -242,8 +242,8 @@
 # virtual methods
 .method public call(Lcom/adobe/fre/FREContext;[Lcom/adobe/fre/FREObject;)Lcom/adobe/fre/FREObject;
     .locals 8
-    .parameter "context"
-    .parameter "args"
+    .param p1, "context"    # Lcom/adobe/fre/FREContext;
+    .param p2, "args"    # [Lcom/adobe/fre/FREObject;
 
     .prologue
     const/4 v7, 0x0
@@ -258,7 +258,7 @@
     move-result v2
 
     .line 296
-    .local v2, propertyId:I
+    .local v2, "propertyId":I
     invoke-virtual {p1}, Lcom/adobe/fre/FREContext;->getActivity()Landroid/app/Activity;
 
     move-result-object v5
@@ -272,7 +272,7 @@
     check-cast v4, Landroid/telephony/TelephonyManager;
 
     .line 297
-    .local v4, tm:Landroid/telephony/TelephonyManager;
+    .local v4, "tm":Landroid/telephony/TelephonyManager;
     if-nez v4, :cond_0
 
     move-object v5, v7
@@ -288,7 +288,7 @@
     move-result-object v1
 
     .line 302
-    .local v1, property:Ljava/lang/String;
+    .local v1, "property":Ljava/lang/String;
     if-nez v1, :cond_1
 
     move-object v5, v7
@@ -301,7 +301,7 @@
     const/4 v3, 0x0
 
     .line 309
-    .local v3, result:Lcom/adobe/fre/FREObject;
+    .local v3, "result":Lcom/adobe/fre/FREObject;
     :try_start_0
     invoke-static {v1}, Lcom/adobe/fre/FREObject;->newObject(Ljava/lang/String;)Lcom/adobe/fre/FREObject;
     :try_end_0
@@ -320,7 +320,7 @@
     move-exception v0
 
     .line 311
-    .local v0, e:Lcom/adobe/fre/FREWrongThreadException;
+    .local v0, "e":Lcom/adobe/fre/FREWrongThreadException;
     const-string v5, "ERROR: FREWrongThreadException in DeviceInfoGetTelephonyProperty#call"
 
     invoke-direct {p0, v5}, Lcom/buffalostudios/aneutils/deviceinfo/DeviceInfo$GetTelephonyProperty;->onError(Ljava/lang/String;)V

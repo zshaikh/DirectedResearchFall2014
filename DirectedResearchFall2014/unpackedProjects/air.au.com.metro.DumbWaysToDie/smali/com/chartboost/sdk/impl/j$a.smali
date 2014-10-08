@@ -32,7 +32,6 @@
 # direct methods
 .method protected constructor <init>(Lcom/chartboost/sdk/impl/j;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 183
@@ -47,7 +46,6 @@
 # virtual methods
 .method protected varargs a([Lcom/chartboost/sdk/impl/j$b;)Lcom/chartboost/sdk/impl/j$b;
     .locals 10
-    .parameter
 
     .prologue
     const-string v6, "application/json; charset=UTF-8"
@@ -506,7 +504,6 @@
 
 .method protected a(Lcom/chartboost/sdk/impl/j$b;)V
     .locals 3
-    .parameter
 
     .prologue
     .line 285
@@ -567,7 +564,6 @@
 
 .method protected varargs synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
-    .parameter
 
     .prologue
     .line 1
@@ -582,7 +578,6 @@
 
 .method protected synthetic onPostExecute(Ljava/lang/Object;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1

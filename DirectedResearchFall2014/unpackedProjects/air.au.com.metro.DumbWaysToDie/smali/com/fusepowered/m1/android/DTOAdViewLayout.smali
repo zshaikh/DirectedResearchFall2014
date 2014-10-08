@@ -24,10 +24,10 @@
 # direct methods
 .method constructor <init>(IIII)V
     .locals 0
-    .parameter "x"
-    .parameter "y"
-    .parameter "width"
-    .parameter "height"
+    .param p1, "x"    # I
+    .param p2, "y"    # I
+    .param p3, "width"    # I
+    .param p4, "height"    # I
 
     .prologue
     .line 8

@@ -4,7 +4,7 @@
 
 
 # static fields
-.field private static final CANONICALS:[Lcom/flurry/org/codehaus/jackson/node/IntNode; = null
+.field private static final CANONICALS:[Lcom/flurry/org/codehaus/jackson/node/IntNode;
 
 .field static final MAX_CANONICAL:I = 0xa
 
@@ -24,7 +24,7 @@
     const/16 v0, 0xc
 
     .line 25
-    .local v0, count:I
+    .local v0, "count":I
     new-array v2, v0, [Lcom/flurry/org/codehaus/jackson/node/IntNode;
 
     sput-object v2, Lcom/flurry/org/codehaus/jackson/node/IntNode;->CANONICALS:[Lcom/flurry/org/codehaus/jackson/node/IntNode;
@@ -32,7 +32,7 @@
     .line 26
     const/4 v1, 0x0
 
-    .local v1, i:I
+    .local v1, "i":I
     :goto_0
     if-ge v1, v0, :cond_0
 
@@ -59,7 +59,7 @@
 
 .method public constructor <init>(I)V
     .locals 0
-    .parameter "v"
+    .param p1, "v"    # I
 
     .prologue
     .line 42
@@ -72,7 +72,7 @@
 
 .method public static valueOf(I)Lcom/flurry/org/codehaus/jackson/node/IntNode;
     .locals 2
-    .parameter "i"
+    .param p0, "i"    # I
 
     .prologue
     const/4 v1, -0x1
@@ -107,7 +107,7 @@
 # virtual methods
 .method public asBoolean(Z)Z
     .locals 1
-    .parameter "defaultValue"
+    .param p1, "defaultValue"    # Z
 
     .prologue
     .line 99
@@ -152,7 +152,7 @@
 
 .method public equals(Ljava/lang/Object;)Z
     .locals 4
-    .parameter "o"
+    .param p1, "o"    # Ljava/lang/Object;
 
     .prologue
     const/4 v3, 0x1
@@ -165,12 +165,12 @@
     move v0, v3
 
     .line 117
-    .end local p1
+    .end local p1    # "o":Ljava/lang/Object;
     :goto_0
     return v0
 
     .line 113
-    .restart local p1
+    .restart local p1    # "o":Ljava/lang/Object;
     :cond_0
     if-nez p1, :cond_1
 
@@ -199,7 +199,7 @@
     :cond_2
     check-cast p1, Lcom/flurry/org/codehaus/jackson/node/IntNode;
 
-    .end local p1
+    .end local p1    # "o":Ljava/lang/Object;
     iget v0, p1, Lcom/flurry/org/codehaus/jackson/node/IntNode;->_value:I
 
     iget v1, p0, Lcom/flurry/org/codehaus/jackson/node/IntNode;->_value:I
@@ -338,8 +338,8 @@
 
 .method public final serialize(Lcom/flurry/org/codehaus/jackson/JsonGenerator;Lcom/flurry/org/codehaus/jackson/map/SerializerProvider;)V
     .locals 1
-    .parameter "jg"
-    .parameter "provider"
+    .param p1, "jg"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator;
+    .param p2, "provider"    # Lcom/flurry/org/codehaus/jackson/map/SerializerProvider;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,

@@ -26,8 +26,8 @@
 # direct methods
 .method public constructor <init>(Lcom/tapjoy/mraid/view/MraidView;Landroid/content/Context;)V
     .locals 3
-    .parameter "adView"
-    .parameter "context"
+    .param p1, "adView"    # Lcom/tapjoy/mraid/view/MraidView;
+    .param p2, "context"    # Landroid/content/Context;
 
     .prologue
     const/4 v1, 0x0
@@ -128,7 +128,7 @@
 
 .method private static formatLocation(Landroid/location/Location;)Ljava/lang/String;
     .locals 3
-    .parameter "loc"
+    .param p0, "loc"    # Landroid/location/Location;
 
     .prologue
     .line 66
@@ -195,7 +195,7 @@
 # virtual methods
 .method public allowLocationServices(Z)V
     .locals 0
-    .parameter "flag"
+    .param p1, "flag"    # Z
 
     .prologue
     .line 54
@@ -292,17 +292,17 @@
     move-result-object v2
 
     .line 80
-    .local v2, providers:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
+    .local v2, "providers":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
 
     .line 81
-    .local v1, provider:Ljava/util/Iterator;,"Ljava/util/Iterator<Ljava/lang/String;>;"
+    .local v1, "provider":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/String;>;"
     const/4 v0, 0x0
 
     .line 82
-    .local v0, lastKnown:Landroid/location/Location;
+    .local v0, "lastKnown":Landroid/location/Location;
     :cond_1
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
@@ -498,7 +498,7 @@
 
 .method public success(Landroid/location/Location;)V
     .locals 3
-    .parameter "loc"
+    .param p1, "loc"    # Landroid/location/Location;
 
     .prologue
     .line 129
@@ -531,7 +531,7 @@
     move-result-object v0
 
     .line 130
-    .local v0, script:Ljava/lang/String;
+    .local v0, "script":Ljava/lang/String;
     const-string v1, "MRAID Location"
 
     invoke-static {v1, v0}, Lcom/tapjoy/TapjoyLog;->d(Ljava/lang/String;Ljava/lang/String;)V

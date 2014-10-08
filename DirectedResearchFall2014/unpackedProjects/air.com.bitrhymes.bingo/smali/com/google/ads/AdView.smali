@@ -35,9 +35,9 @@
 
 .method public constructor <init>(Landroid/app/Activity;Lcom/google/ads/AdSize;Ljava/lang/String;)V
     .locals 4
-    .parameter "activity"
-    .parameter "adSize"
-    .parameter "adUnitId"
+    .param p1, "activity"    # Landroid/app/Activity;
+    .param p2, "adSize"    # Lcom/google/ads/AdSize;
+    .param p3, "adUnitId"    # Ljava/lang/String;
 
     .prologue
     const/4 v2, 0x0
@@ -94,9 +94,9 @@
 
 .method protected constructor <init>(Landroid/app/Activity;[Lcom/google/ads/AdSize;Ljava/lang/String;)V
     .locals 2
-    .parameter "activity"
-    .parameter "adSizes"
-    .parameter "adUnitId"
+    .param p1, "activity"    # Landroid/app/Activity;
+    .param p2, "adSizes"    # [Lcom/google/ads/AdSize;
+    .param p3, "adUnitId"    # Ljava/lang/String;
 
     .prologue
     const/4 v1, 0x0
@@ -117,8 +117,8 @@
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
-    .parameter "context"
-    .parameter "attrs"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
     .line 123
@@ -133,9 +133,9 @@
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 0
-    .parameter "context"
-    .parameter "attrs"
-    .parameter "defStyle"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "attrs"    # Landroid/util/AttributeSet;
+    .param p3, "defStyle"    # I
 
     .prologue
     .line 139
@@ -147,9 +147,6 @@
 
 .method private a(Landroid/app/Activity;Lcom/google/ads/AdSize;Ljava/lang/String;)V
     .locals 8
-    .parameter
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lcom/google/ads/internal/b;
@@ -247,8 +244,6 @@
 
 .method private a(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 11
-    .parameter
-    .parameter
 
     .prologue
     const/4 v5, 0x1
@@ -588,17 +583,13 @@
 
 .method private a(Landroid/content/Context;Ljava/lang/String;Lcom/google/ads/AdSize;Landroid/util/AttributeSet;)V
     .locals 6
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 270
     invoke-static {p2}, Lcom/google/ads/util/b;->b(Ljava/lang/String;)V
 
     .line 273
-    const/high16 v3, -0x1
+    const/high16 v3, -0x10000
 
     move-object v0, p0
 
@@ -618,7 +609,6 @@
 
 .method private varargs a([Lcom/google/ads/AdSize;)V
     .locals 4
-    .parameter
 
     .prologue
     .line 622
@@ -670,9 +660,6 @@
 
 .method private a(Landroid/content/Context;Lcom/google/ads/AdSize;Landroid/util/AttributeSet;)Z
     .locals 1
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 208
@@ -702,10 +689,6 @@
 
 .method private a(Ljava/lang/String;Landroid/content/Context;Landroid/util/AttributeSet;Z)Z
     .locals 8
-    .parameter
-    .parameter
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lcom/google/ads/internal/b;
@@ -952,8 +935,6 @@
 
 .method private a(Ljava/lang/String;Landroid/util/AttributeSet;)Z
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 492
@@ -978,10 +959,6 @@
 
 .method private b(Ljava/lang/String;Landroid/content/Context;Landroid/util/AttributeSet;Z)Ljava/lang/String;
     .locals 8
-    .parameter
-    .parameter
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lcom/google/ads/internal/b;
@@ -1249,9 +1226,6 @@
 
 .method private b(Landroid/content/Context;Lcom/google/ads/AdSize;Landroid/util/AttributeSet;)Z
     .locals 1
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 235
@@ -1281,10 +1255,6 @@
 
 .method private c(Ljava/lang/String;Landroid/content/Context;Landroid/util/AttributeSet;Z)Ljava/util/Set;
     .locals 6
-    .parameter
-    .parameter
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1366,11 +1336,6 @@
 # virtual methods
 .method a(Landroid/content/Context;Ljava/lang/String;ILcom/google/ads/AdSize;Landroid/util/AttributeSet;)V
     .locals 7
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const/4 v6, 0x2
@@ -1418,7 +1383,7 @@
     invoke-virtual {v1, p3}, Landroid/widget/TextView;->setTextColor(I)V
 
     .line 170
-    const/high16 v2, -0x100
+    const/high16 v2, -0x1000000
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setBackgroundColor(I)V
 
@@ -1514,7 +1479,6 @@
 
 .method a(Ljava/lang/String;)[Lcom/google/ads/AdSize;
     .locals 10
-    .parameter
 
     .prologue
     const/4 v9, 0x0
@@ -1839,7 +1803,7 @@
 
 .method public loadAd(Lcom/google/ads/AdRequest;)V
     .locals 1
-    .parameter "adRequest"
+    .param p1, "adRequest"    # Lcom/google/ads/AdRequest;
 
     .prologue
     .line 569
@@ -1872,8 +1836,8 @@
 
 .method protected onMeasure(II)V
     .locals 2
-    .parameter "widthMeasureSpec"
-    .parameter "heightMeasureSpec"
+    .param p1, "widthMeasureSpec"    # I
+    .param p2, "heightMeasureSpec"    # I
 
     .prologue
     .line 635
@@ -1908,7 +1872,7 @@
 
 .method protected onWindowVisibilityChanged(I)V
     .locals 3
-    .parameter "visibility"
+    .param p1, "visibility"    # I
 
     .prologue
     const/4 v2, 0x0
@@ -1924,13 +1888,13 @@
     if-eqz v0, :cond_1
 
     .line 681
-    .end local p0
+    .end local p0    # "this":Lcom/google/ads/AdView;
     :cond_0
     :goto_0
     return-void
 
     .line 667
-    .restart local p0
+    .restart local p0    # "this":Lcom/google/ads/AdView;
     :cond_1
     iget-object v0, p0, Lcom/google/ads/AdView;->a:Lcom/google/ads/internal/d;
 
@@ -2011,7 +1975,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/google/ads/AdView;
     check-cast p0, Landroid/webkit/WebView;
 
     const-string v1, "onopeninapp"
@@ -2021,7 +1985,7 @@
     goto :goto_0
 
     .line 675
-    .restart local p0
+    .restart local p0    # "this":Lcom/google/ads/AdView;
     :cond_2
     sget-object v0, Lcom/google/ads/AdView;->b:Lcom/google/ads/internal/a;
 
@@ -2037,7 +2001,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/google/ads/AdView;
     check-cast p0, Landroid/webkit/WebView;
 
     const-string v1, "onleaveapp"
@@ -2049,7 +2013,7 @@
 
 .method public setAdListener(Lcom/google/ads/AdListener;)V
     .locals 1
-    .parameter "adListener"
+    .param p1, "adListener"    # Lcom/google/ads/AdListener;
 
     .prologue
     .line 586
@@ -2069,7 +2033,7 @@
 
 .method protected setAppEventListener(Lcom/google/ads/AppEventListener;)V
     .locals 1
-    .parameter "appEventListener"
+    .param p1, "appEventListener"    # Lcom/google/ads/AppEventListener;
 
     .prologue
     .line 593
@@ -2089,7 +2053,7 @@
 
 .method protected varargs setSupportedAdSizes([Lcom/google/ads/AdSize;)V
     .locals 1
-    .parameter "adSizes"
+    .param p1, "adSizes"    # [Lcom/google/ads/AdSize;
 
     .prologue
     .line 607
@@ -2125,7 +2089,7 @@
 
 .method protected setSwipeableEventListener(Lcom/google/ads/SwipeableAdListener;)V
     .locals 1
-    .parameter "swipeableEventListener"
+    .param p1, "swipeableEventListener"    # Lcom/google/ads/SwipeableAdListener;
 
     .prologue
     .line 600

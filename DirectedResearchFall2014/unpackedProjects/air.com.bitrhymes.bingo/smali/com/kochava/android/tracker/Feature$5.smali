@@ -29,11 +29,6 @@
 # direct methods
 .method constructor <init>(Lcom/kochava/android/tracker/Feature;Landroid/app/Activity;IILandroid/webkit/WebView;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 1
@@ -68,7 +63,7 @@
     const-string v27, ""
 
     .line 2011
-    .local v27, responseString:Ljava/lang/String;
+    .local v27, "responseString":Ljava/lang/String;
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/kochava/android/tracker/Feature$5;->val$context:Landroid/app/Activity;
@@ -80,7 +75,7 @@
     move-result-object v23
 
     .line 2014
-    .local v23, pm:Landroid/content/pm/PackageManager;
+    .local v23, "pm":Landroid/content/pm/PackageManager;
     :try_start_0
     move-object/from16 v0, p0
 
@@ -88,7 +83,7 @@
 
     move-object v5, v0
 
-    #calls: Lcom/kochava/android/tracker/Feature;->getAppPackageName()Ljava/lang/String;
+    # invokes: Lcom/kochava/android/tracker/Feature;->getAppPackageName()Ljava/lang/String;
     invoke-static {v5}, Lcom/kochava/android/tracker/Feature;->access$45(Lcom/kochava/android/tracker/Feature;)Ljava/lang/String;
 
     move-result-object v5
@@ -108,7 +103,7 @@
     move-result-object v11
 
     .line 2018
-    .local v11, ai:Landroid/content/pm/ApplicationInfo;
+    .local v11, "ai":Landroid/content/pm/ApplicationInfo;
     :goto_0
     if-eqz v11, :cond_4
 
@@ -126,7 +121,7 @@
     check-cast v12, Ljava/lang/String;
 
     .line 2021
-    .local v12, applicationName:Ljava/lang/String;
+    .local v12, "applicationName":Ljava/lang/String;
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/kochava/android/tracker/Feature$5;->this$0:Lcom/kochava/android/tracker/Feature;
@@ -135,21 +130,21 @@
 
     const/4 v6, 0x0
 
-    #calls: Lcom/kochava/android/tracker/Feature;->createHttpClient(Z)Lorg/apache/http/client/HttpClient;
+    # invokes: Lcom/kochava/android/tracker/Feature;->createHttpClient(Z)Lorg/apache/http/client/HttpClient;
     invoke-static {v5, v6}, Lcom/kochava/android/tracker/Feature;->access$35(Lcom/kochava/android/tracker/Feature;Z)Lorg/apache/http/client/HttpClient;
 
     move-result-object v17
 
     .line 2023
-    .local v17, httpclient:Lorg/apache/http/client/HttpClient;
+    .local v17, "httpclient":Lorg/apache/http/client/HttpClient;
     const/16 v24, 0x0
 
     .line 2025
-    .local v24, reader:Ljava/io/Reader;
+    .local v24, "reader":Ljava/io/Reader;
     const/16 v26, 0x0
 
     .line 2028
-    .local v26, response:Lorg/apache/http/HttpResponse;
+    .local v26, "response":Lorg/apache/http/HttpResponse;
     :try_start_1
     new-instance v18, Lorg/apache/http/client/methods/HttpGet;
 
@@ -200,7 +195,7 @@
 
     move-object v6, v0
 
-    #calls: Lcom/kochava/android/tracker/Feature;->getOdin()Ljava/lang/String;
+    # invokes: Lcom/kochava/android/tracker/Feature;->getOdin()Ljava/lang/String;
     invoke-static {v6}, Lcom/kochava/android/tracker/Feature;->access$46(Lcom/kochava/android/tracker/Feature;)Ljava/lang/String;
 
     move-result-object v6
@@ -243,7 +238,7 @@
 
     move-object v6, v0
 
-    #getter for: Lcom/kochava/android/tracker/Feature;->mAppId:Ljava/lang/String;
+    # getter for: Lcom/kochava/android/tracker/Feature;->mAppId:Ljava/lang/String;
     invoke-static {v6}, Lcom/kochava/android/tracker/Feature;->access$44(Lcom/kochava/android/tracker/Feature;)Ljava/lang/String;
 
     move-result-object v6
@@ -289,7 +284,7 @@
 
     move-object v6, v0
 
-    #calls: Lcom/kochava/android/tracker/Feature;->getDeviceId()Ljava/lang/String;
+    # invokes: Lcom/kochava/android/tracker/Feature;->getDeviceId()Ljava/lang/String;
     invoke-static {v6}, Lcom/kochava/android/tracker/Feature;->access$17(Lcom/kochava/android/tracker/Feature;)Ljava/lang/String;
 
     move-result-object v6
@@ -310,7 +305,7 @@
     invoke-direct {v0, v1}, Lorg/apache/http/client/methods/HttpGet;-><init>(Ljava/lang/String;)V
 
     .line 2041
-    .local v18, httppost:Lorg/apache/http/client/methods/HttpGet;
+    .local v18, "httppost":Lorg/apache/http/client/methods/HttpGet;
     invoke-interface/range {v17 .. v18}, Lorg/apache/http/client/HttpClient;->execute(Lorg/apache/http/client/methods/HttpUriRequest;)Lorg/apache/http/HttpResponse;
 
     move-result-object v26
@@ -321,7 +316,7 @@
     move-result-object v16
 
     .line 2047
-    .local v16, entity:Lorg/apache/http/HttpEntity;
+    .local v16, "entity":Lorg/apache/http/HttpEntity;
     if-eqz v16, :cond_0
 
     .line 2049
@@ -330,7 +325,7 @@
     move-result-object v19
 
     .line 2050
-    .local v19, is:Ljava/io/InputStream;
+    .local v19, "is":Ljava/io/InputStream;
     new-instance v25, Ljava/io/InputStreamReader;
 
     const-string v5, "ISO-8859-1"
@@ -347,15 +342,15 @@
     .catch Ljava/security/NoSuchAlgorithmException; {:try_start_1 .. :try_end_1} :catch_2
 
     .line 2051
-    .end local v24           #reader:Ljava/io/Reader;
-    .local v25, reader:Ljava/io/Reader;
+    .end local v24    # "reader":Ljava/io/Reader;
+    .local v25, "reader":Ljava/io/Reader;
     :try_start_2
     new-instance v13, Ljava/lang/StringBuilder;
 
     invoke-direct {v13}, Ljava/lang/StringBuilder;-><init>()V
 
     .line 2052
-    .local v13, buffer:Ljava/lang/StringBuilder;
+    .local v13, "buffer":Ljava/lang/StringBuilder;
     const/16 v5, 0x400
 
     move v0, v5
@@ -365,7 +360,7 @@
     move-object/from16 v29, v0
 
     .line 2054
-    .local v29, tmp:[C
+    .local v29, "tmp":[C
     :goto_2
     move-object/from16 v0, v25
 
@@ -375,7 +370,7 @@
 
     move-result v20
 
-    .local v20, l:I
+    .local v20, "l":I
     const/4 v5, -0x1
 
     move/from16 v0, v20
@@ -395,24 +390,24 @@
     move-object/from16 v24, v25
 
     .line 2079
-    .end local v13           #buffer:Ljava/lang/StringBuilder;
-    .end local v16           #entity:Lorg/apache/http/HttpEntity;
-    .end local v18           #httppost:Lorg/apache/http/client/methods/HttpGet;
-    .end local v19           #is:Ljava/io/InputStream;
-    .end local v20           #l:I
-    .end local v25           #reader:Ljava/io/Reader;
-    .end local v29           #tmp:[C
-    .restart local v24       #reader:Ljava/io/Reader;
+    .end local v13    # "buffer":Ljava/lang/StringBuilder;
+    .end local v16    # "entity":Lorg/apache/http/HttpEntity;
+    .end local v18    # "httppost":Lorg/apache/http/client/methods/HttpGet;
+    .end local v19    # "is":Ljava/io/InputStream;
+    .end local v20    # "l":I
+    .end local v25    # "reader":Ljava/io/Reader;
+    .end local v29    # "tmp":[C
+    .restart local v24    # "reader":Ljava/io/Reader;
     :cond_0
     :goto_3
     const-string v28, ""
 
     .line 2080
-    .local v28, temp:Ljava/lang/String;
+    .local v28, "temp":Ljava/lang/String;
     const-string v10, ""
 
     .line 2082
-    .local v10, adUrl:Ljava/lang/String;
+    .local v10, "adUrl":Ljava/lang/String;
     sget-boolean v5, Lcom/kochava/android/tracker/Global;->DEBUG:Z
 
     if-eqz v5, :cond_1
@@ -449,7 +444,7 @@
     move-result-object v22
 
     .line 2086
-    .local v22, pattern:Ljava/util/regex/Pattern;
+    .local v22, "pattern":Ljava/util/regex/Pattern;
     move-object/from16 v0, v22
 
     move-object/from16 v1, v27
@@ -459,7 +454,7 @@
     move-result-object v21
 
     .line 2087
-    .local v21, matcher:Ljava/util/regex/Matcher;
+    .local v21, "matcher":Ljava/util/regex/Matcher;
     invoke-virtual/range {v21 .. v21}, Ljava/util/regex/Matcher;->find()Z
 
     move-result v5
@@ -482,7 +477,7 @@
     move-object/from16 v9, v28
 
     .line 2150
-    .local v9, clickUrl:Ljava/lang/String;
+    .local v9, "clickUrl":Ljava/lang/String;
     const-string v5, "src=\'(.*?)\'"
 
     invoke-static {v5}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
@@ -521,7 +516,7 @@
     move-object v7, v10
 
     .line 2160
-    .local v7, fAdUrl:Ljava/lang/String;
+    .local v7, "fAdUrl":Ljava/lang/String;
     new-instance v4, Lcom/kochava/android/tracker/Feature$5$1;
 
     move-object/from16 v0, p0
@@ -541,7 +536,7 @@
     invoke-direct/range {v4 .. v9}, Lcom/kochava/android/tracker/Feature$5$1;-><init>(Lcom/kochava/android/tracker/Feature$5;Landroid/webkit/WebView;Ljava/lang/String;Landroid/app/Activity;Ljava/lang/String;)V
 
     .line 2232
-    .local v4, updateUI:Ljava/lang/Thread;
+    .local v4, "updateUI":Ljava/lang/Thread;
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/kochava/android/tracker/Feature$5;->val$context:Landroid/app/Activity;
@@ -554,32 +549,32 @@
     return-void
 
     .line 2015
-    .end local v4           #updateUI:Ljava/lang/Thread;
-    .end local v7           #fAdUrl:Ljava/lang/String;
-    .end local v9           #clickUrl:Ljava/lang/String;
-    .end local v10           #adUrl:Ljava/lang/String;
-    .end local v11           #ai:Landroid/content/pm/ApplicationInfo;
-    .end local v12           #applicationName:Ljava/lang/String;
-    .end local v17           #httpclient:Lorg/apache/http/client/HttpClient;
-    .end local v21           #matcher:Ljava/util/regex/Matcher;
-    .end local v22           #pattern:Ljava/util/regex/Pattern;
-    .end local v24           #reader:Ljava/io/Reader;
-    .end local v26           #response:Lorg/apache/http/HttpResponse;
-    .end local v28           #temp:Ljava/lang/String;
+    .end local v4    # "updateUI":Ljava/lang/Thread;
+    .end local v7    # "fAdUrl":Ljava/lang/String;
+    .end local v9    # "clickUrl":Ljava/lang/String;
+    .end local v10    # "adUrl":Ljava/lang/String;
+    .end local v11    # "ai":Landroid/content/pm/ApplicationInfo;
+    .end local v12    # "applicationName":Ljava/lang/String;
+    .end local v17    # "httpclient":Lorg/apache/http/client/HttpClient;
+    .end local v21    # "matcher":Ljava/util/regex/Matcher;
+    .end local v22    # "pattern":Ljava/util/regex/Pattern;
+    .end local v24    # "reader":Ljava/io/Reader;
+    .end local v26    # "response":Lorg/apache/http/HttpResponse;
+    .end local v28    # "temp":Ljava/lang/String;
     :catch_0
     move-exception v5
 
     move-object v14, v5
 
     .line 2016
-    .local v14, e:Landroid/content/pm/PackageManager$NameNotFoundException;
+    .local v14, "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     const/4 v11, 0x0
 
-    .restart local v11       #ai:Landroid/content/pm/ApplicationInfo;
+    .restart local v11    # "ai":Landroid/content/pm/ApplicationInfo;
     goto/16 :goto_0
 
     .line 2018
-    .end local v14           #e:Landroid/content/pm/PackageManager$NameNotFoundException;
+    .end local v14    # "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     :cond_4
     const-string v5, "(unknown)"
 
@@ -588,16 +583,16 @@
     goto/16 :goto_1
 
     .line 2056
-    .restart local v12       #applicationName:Ljava/lang/String;
-    .restart local v13       #buffer:Ljava/lang/StringBuilder;
-    .restart local v16       #entity:Lorg/apache/http/HttpEntity;
-    .restart local v17       #httpclient:Lorg/apache/http/client/HttpClient;
-    .restart local v18       #httppost:Lorg/apache/http/client/methods/HttpGet;
-    .restart local v19       #is:Ljava/io/InputStream;
-    .restart local v20       #l:I
-    .restart local v25       #reader:Ljava/io/Reader;
-    .restart local v26       #response:Lorg/apache/http/HttpResponse;
-    .restart local v29       #tmp:[C
+    .restart local v12    # "applicationName":Ljava/lang/String;
+    .restart local v13    # "buffer":Ljava/lang/StringBuilder;
+    .restart local v16    # "entity":Lorg/apache/http/HttpEntity;
+    .restart local v17    # "httpclient":Lorg/apache/http/client/HttpClient;
+    .restart local v18    # "httppost":Lorg/apache/http/client/methods/HttpGet;
+    .restart local v19    # "is":Ljava/io/InputStream;
+    .restart local v20    # "l":I
+    .restart local v25    # "reader":Ljava/io/Reader;
+    .restart local v26    # "response":Lorg/apache/http/HttpResponse;
+    .restart local v29    # "tmp":[C
     :cond_5
     const/4 v5, 0x0
 
@@ -618,9 +613,9 @@
     goto/16 :goto_2
 
     .line 2063
-    .end local v13           #buffer:Ljava/lang/StringBuilder;
-    .end local v20           #l:I
-    .end local v29           #tmp:[C
+    .end local v13    # "buffer":Ljava/lang/StringBuilder;
+    .end local v20    # "l":I
+    .end local v29    # "tmp":[C
     :catch_1
     move-exception v5
 
@@ -629,12 +624,12 @@
     move-object/from16 v24, v25
 
     .line 2065
-    .end local v16           #entity:Lorg/apache/http/HttpEntity;
-    .end local v18           #httppost:Lorg/apache/http/client/methods/HttpGet;
-    .end local v19           #is:Ljava/io/InputStream;
-    .end local v25           #reader:Ljava/io/Reader;
-    .local v14, e:Ljava/io/IOException;
-    .restart local v24       #reader:Ljava/io/Reader;
+    .end local v16    # "entity":Lorg/apache/http/HttpEntity;
+    .end local v18    # "httppost":Lorg/apache/http/client/methods/HttpGet;
+    .end local v19    # "is":Ljava/io/InputStream;
+    .end local v25    # "reader":Ljava/io/Reader;
+    .local v14, "e":Ljava/io/IOException;
+    .restart local v24    # "reader":Ljava/io/Reader;
     :goto_4
     sget-boolean v5, Lcom/kochava/android/tracker/Global;->DEBUG:Z
 
@@ -670,14 +665,14 @@
     goto/16 :goto_3
 
     .line 2069
-    .end local v14           #e:Ljava/io/IOException;
+    .end local v14    # "e":Ljava/io/IOException;
     :catch_2
     move-exception v5
 
     move-object v15, v5
 
     .line 2071
-    .local v15, e1:Ljava/security/NoSuchAlgorithmException;
+    .local v15, "e1":Ljava/security/NoSuchAlgorithmException;
     :goto_5
     sget-boolean v5, Lcom/kochava/android/tracker/Global;->DEBUG:Z
 
@@ -713,12 +708,12 @@
     goto/16 :goto_3
 
     .line 2069
-    .end local v15           #e1:Ljava/security/NoSuchAlgorithmException;
-    .end local v24           #reader:Ljava/io/Reader;
-    .restart local v16       #entity:Lorg/apache/http/HttpEntity;
-    .restart local v18       #httppost:Lorg/apache/http/client/methods/HttpGet;
-    .restart local v19       #is:Ljava/io/InputStream;
-    .restart local v25       #reader:Ljava/io/Reader;
+    .end local v15    # "e1":Ljava/security/NoSuchAlgorithmException;
+    .end local v24    # "reader":Ljava/io/Reader;
+    .restart local v16    # "entity":Lorg/apache/http/HttpEntity;
+    .restart local v18    # "httppost":Lorg/apache/http/client/methods/HttpGet;
+    .restart local v19    # "is":Ljava/io/InputStream;
+    .restart local v25    # "reader":Ljava/io/Reader;
     :catch_3
     move-exception v5
 
@@ -726,14 +721,14 @@
 
     move-object/from16 v24, v25
 
-    .end local v25           #reader:Ljava/io/Reader;
-    .restart local v24       #reader:Ljava/io/Reader;
+    .end local v25    # "reader":Ljava/io/Reader;
+    .restart local v24    # "reader":Ljava/io/Reader;
     goto :goto_5
 
     .line 2063
-    .end local v16           #entity:Lorg/apache/http/HttpEntity;
-    .end local v18           #httppost:Lorg/apache/http/client/methods/HttpGet;
-    .end local v19           #is:Ljava/io/InputStream;
+    .end local v16    # "entity":Lorg/apache/http/HttpEntity;
+    .end local v18    # "httppost":Lorg/apache/http/client/methods/HttpGet;
+    .end local v19    # "is":Ljava/io/InputStream;
     :catch_4
     move-exception v5
 

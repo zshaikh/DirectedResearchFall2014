@@ -21,7 +21,6 @@
 # direct methods
 .method constructor <init>(Lcom/kochava/android/tracker/KochavaWebAdView;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1
@@ -37,9 +36,9 @@
 # virtual methods
 .method public onPageStarted(Landroid/webkit/WebView;Ljava/lang/String;Landroid/graphics/Bitmap;)V
     .locals 3
-    .parameter "view"
-    .parameter "url"
-    .parameter "favicon"
+    .param p1, "view"    # Landroid/webkit/WebView;
+    .param p2, "url"    # Ljava/lang/String;
+    .param p3, "favicon"    # Landroid/graphics/Bitmap;
 
     .prologue
     .line 102
@@ -75,8 +74,8 @@
 
 .method public shouldOverrideUrlLoading(Landroid/webkit/WebView;Ljava/lang/String;)Z
     .locals 8
-    .parameter "view"
-    .parameter "url"
+    .param p1, "view"    # Landroid/webkit/WebView;
+    .param p2, "url"    # Ljava/lang/String;
 
     .prologue
     const/4 v6, 0x1
@@ -121,7 +120,7 @@
     const-string v2, ""
 
     .line 77
-    .local v2, packageName:Ljava/lang/String;
+    .local v2, "packageName":Ljava/lang/String;
     const-string v4, "\\?p=(.*)"
 
     invoke-static {v4}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
@@ -129,13 +128,13 @@
     move-result-object v3
 
     .line 78
-    .local v3, pattern:Ljava/util/regex/Pattern;
+    .local v3, "pattern":Ljava/util/regex/Pattern;
     invoke-virtual {v3, p2}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
     move-result-object v1
 
     .line 79
-    .local v1, matcher:Ljava/util/regex/Matcher;
+    .local v1, "matcher":Ljava/util/regex/Matcher;
     invoke-virtual {v1}, Ljava/util/regex/Matcher;->find()Z
 
     move-result v4
@@ -181,7 +180,7 @@
     invoke-direct {v0, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
     .line 88
-    .local v0, marketLaunch:Landroid/content/Intent;
+    .local v0, "marketLaunch":Landroid/content/Intent;
     new-instance v4, Ljava/lang/StringBuilder;
 
     const-string v5, "https://market.android.com/details?id="
@@ -217,10 +216,10 @@
     invoke-virtual {v4}, Landroid/app/Activity;->finish()V
 
     .line 96
-    .end local v0           #marketLaunch:Landroid/content/Intent;
-    .end local v1           #matcher:Ljava/util/regex/Matcher;
-    .end local v2           #packageName:Ljava/lang/String;
-    .end local v3           #pattern:Ljava/util/regex/Pattern;
+    .end local v0    # "marketLaunch":Landroid/content/Intent;
+    .end local v1    # "matcher":Ljava/util/regex/Matcher;
+    .end local v2    # "packageName":Ljava/lang/String;
+    .end local v3    # "pattern":Ljava/util/regex/Pattern;
     :goto_0
     return v6
 

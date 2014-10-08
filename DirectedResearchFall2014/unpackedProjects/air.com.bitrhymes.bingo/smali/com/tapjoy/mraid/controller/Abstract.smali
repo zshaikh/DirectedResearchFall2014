@@ -43,8 +43,8 @@
 # direct methods
 .method public constructor <init>(Lcom/tapjoy/mraid/view/MraidView;Landroid/content/Context;)V
     .locals 0
-    .parameter "adView"
-    .parameter "context"
+    .param p1, "adView"    # Lcom/tapjoy/mraid/view/MraidView;
+    .param p2, "context"    # Landroid/content/Context;
 
     .prologue
     .line 254
@@ -62,8 +62,7 @@
 
 .method protected static getFromJSON(Lorg/json/JSONObject;Ljava/lang/Class;)Ljava/lang/Object;
     .locals 13
-    .parameter "json"
-    .parameter
+    .param p0, "json"    # Lorg/json/JSONObject;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -85,11 +84,11 @@
 
     .prologue
     .line 272
-    .local p1, c:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p1, "c":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const/4 v3, 0x0
 
     .line 273
-    .local v3, fields:[Ljava/lang/reflect/Field;
+    .local v3, "fields":[Ljava/lang/reflect/Field;
     invoke-virtual {p1}, Ljava/lang/Class;->getDeclaredFields()[Ljava/lang/reflect/Field;
 
     move-result-object v3
@@ -100,10 +99,10 @@
     move-result-object v7
 
     .line 276
-    .local v7, obj:Ljava/lang/Object;
+    .local v7, "obj":Ljava/lang/Object;
     const/4 v4, 0x0
 
-    .local v4, i:I
+    .local v4, "i":I
     :goto_0
     array-length v11, v3
 
@@ -113,13 +112,13 @@
     aget-object v2, v3, v4
 
     .line 278
-    .local v2, f:Ljava/lang/reflect/Field;
+    .local v2, "f":Ljava/lang/reflect/Field;
     invoke-virtual {v2}, Ljava/lang/reflect/Field;->getName()Ljava/lang/String;
 
     move-result-object v6
 
     .line 279
-    .local v6, name:Ljava/lang/String;
+    .local v6, "name":Ljava/lang/String;
     const/16 v11, 0x5f
 
     const/16 v12, 0x2d
@@ -129,19 +128,19 @@
     move-result-object v0
 
     .line 280
-    .local v0, JSONName:Ljava/lang/String;
+    .local v0, "JSONName":Ljava/lang/String;
     invoke-virtual {v2}, Ljava/lang/reflect/Field;->getType()Ljava/lang/Class;
 
     move-result-object v8
 
     .line 281
-    .local v8, type:Ljava/lang/reflect/Type;
+    .local v8, "type":Ljava/lang/reflect/Type;
     invoke-virtual {v8}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v9
 
     .line 283
-    .local v9, typeStr:Ljava/lang/String;
+    .local v9, "typeStr":Ljava/lang/String;
     :try_start_0
     const-string v11, "int"
 
@@ -161,11 +160,11 @@
     move-result-object v10
 
     .line 285
-    .local v10, value:Ljava/lang/String;
+    .local v10, "value":Ljava/lang/String;
     const/4 v5, 0x0
 
     .line 286
-    .local v5, iVal:I
+    .local v5, "iVal":I
     const-string v11, "#"
 
     invoke-virtual {v10, v11}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
@@ -219,8 +218,8 @@
     .catch Lorg/json/JSONException; {:try_start_2 .. :try_end_2} :catch_0
 
     .line 276
-    .end local v5           #iVal:I
-    .end local v10           #value:Ljava/lang/String;
+    .end local v5    # "iVal":I
+    .end local v10    # "value":Ljava/lang/String;
     :cond_0
     :goto_2
     add-int/lit8 v4, v4, 0x1
@@ -228,8 +227,8 @@
     goto :goto_0
 
     .line 293
-    .restart local v5       #iVal:I
-    .restart local v10       #value:Ljava/lang/String;
+    .restart local v5    # "iVal":I
+    .restart local v10    # "value":Ljava/lang/String;
     :cond_1
     const/4 v11, 0x1
 
@@ -259,8 +258,8 @@
     goto :goto_1
 
     .line 303
-    .end local v5           #iVal:I
-    .end local v10           #value:Ljava/lang/String;
+    .end local v5    # "iVal":I
+    .end local v10    # "value":Ljava/lang/String;
     :cond_3
     const-string v11, "class java.lang.String"
 
@@ -276,7 +275,7 @@
     move-result-object v10
 
     .line 305
-    .restart local v10       #value:Ljava/lang/String;
+    .restart local v10    # "value":Ljava/lang/String;
     invoke-virtual {v2, v7, v10}, Ljava/lang/reflect/Field;->set(Ljava/lang/Object;Ljava/lang/Object;)V
     :try_end_4
     .catch Lorg/json/JSONException; {:try_start_4 .. :try_end_4} :catch_0
@@ -284,20 +283,20 @@
     goto :goto_2
 
     .line 319
-    .end local v10           #value:Ljava/lang/String;
+    .end local v10    # "value":Ljava/lang/String;
     :catch_0
     move-exception v11
 
     move-object v1, v11
 
     .line 321
-    .local v1, e:Lorg/json/JSONException;
+    .local v1, "e":Lorg/json/JSONException;
     invoke-virtual {v1}, Lorg/json/JSONException;->printStackTrace()V
 
     goto :goto_2
 
     .line 306
-    .end local v1           #e:Lorg/json/JSONException;
+    .end local v1    # "e":Lorg/json/JSONException;
     :cond_4
     :try_start_5
     const-string v11, "boolean"
@@ -314,7 +313,7 @@
     move-result v10
 
     .line 308
-    .local v10, value:Z
+    .local v10, "value":Z
     invoke-static {v10}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v11
@@ -324,7 +323,7 @@
     goto :goto_2
 
     .line 309
-    .end local v10           #value:Z
+    .end local v10    # "value":Z
     :cond_5
     const-string v11, "float"
 
@@ -344,7 +343,7 @@
     move-result v10
 
     .line 311
-    .local v10, value:F
+    .local v10, "value":F
     invoke-static {v10}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v11
@@ -354,7 +353,7 @@
     goto :goto_2
 
     .line 312
-    .end local v10           #value:F
+    .end local v10    # "value":F
     :cond_6
     const-string v11, "class com.tapjoy.mraid.util.NavigationStringEnum"
 
@@ -374,13 +373,13 @@
     move-result-object v10
 
     .line 314
-    .local v10, value:Lcom/tapjoy/mraid/util/NavigationStringEnum;
+    .local v10, "value":Lcom/tapjoy/mraid/util/NavigationStringEnum;
     invoke-virtual {v2, v7, v10}, Ljava/lang/reflect/Field;->set(Ljava/lang/Object;Ljava/lang/Object;)V
 
     goto :goto_2
 
     .line 315
-    .end local v10           #value:Lcom/tapjoy/mraid/util/NavigationStringEnum;
+    .end local v10    # "value":Lcom/tapjoy/mraid/util/NavigationStringEnum;
     :cond_7
     const-string v11, "class com.tapjoy.mraid.util.TransitionStringEnum"
 
@@ -400,7 +399,7 @@
     move-result-object v10
 
     .line 317
-    .local v10, value:Lcom/tapjoy/mraid/util/TransitionStringEnum;
+    .local v10, "value":Lcom/tapjoy/mraid/util/TransitionStringEnum;
     invoke-virtual {v2, v7, v10}, Ljava/lang/reflect/Field;->set(Ljava/lang/Object;Ljava/lang/Object;)V
     :try_end_5
     .catch Lorg/json/JSONException; {:try_start_5 .. :try_end_5} :catch_0
@@ -408,23 +407,23 @@
     goto :goto_2
 
     .line 325
-    .end local v0           #JSONName:Ljava/lang/String;
-    .end local v2           #f:Ljava/lang/reflect/Field;
-    .end local v6           #name:Ljava/lang/String;
-    .end local v8           #type:Ljava/lang/reflect/Type;
-    .end local v9           #typeStr:Ljava/lang/String;
-    .end local v10           #value:Lcom/tapjoy/mraid/util/TransitionStringEnum;
+    .end local v0    # "JSONName":Ljava/lang/String;
+    .end local v2    # "f":Ljava/lang/reflect/Field;
+    .end local v6    # "name":Ljava/lang/String;
+    .end local v8    # "type":Ljava/lang/reflect/Type;
+    .end local v9    # "typeStr":Ljava/lang/String;
+    .end local v10    # "value":Lcom/tapjoy/mraid/util/TransitionStringEnum;
     :cond_8
     return-object v7
 
     .line 295
-    .restart local v0       #JSONName:Ljava/lang/String;
-    .restart local v2       #f:Ljava/lang/reflect/Field;
-    .restart local v5       #iVal:I
-    .restart local v6       #name:Ljava/lang/String;
-    .restart local v8       #type:Ljava/lang/reflect/Type;
-    .restart local v9       #typeStr:Ljava/lang/String;
-    .local v10, value:Ljava/lang/String;
+    .restart local v0    # "JSONName":Ljava/lang/String;
+    .restart local v2    # "f":Ljava/lang/reflect/Field;
+    .restart local v5    # "iVal":I
+    .restart local v6    # "name":Ljava/lang/String;
+    .restart local v8    # "type":Ljava/lang/reflect/Type;
+    .restart local v9    # "typeStr":Ljava/lang/String;
+    .local v10, "value":Ljava/lang/String;
     :catch_1
     move-exception v11
 

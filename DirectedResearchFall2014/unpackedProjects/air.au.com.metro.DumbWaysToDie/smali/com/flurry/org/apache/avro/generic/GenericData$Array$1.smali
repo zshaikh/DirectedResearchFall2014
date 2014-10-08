@@ -34,11 +34,10 @@
 # direct methods
 .method constructor <init>(Lcom/flurry/org/apache/avro/generic/GenericData$Array;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 149
-    .local p0, this:Lcom/flurry/org/apache/avro/generic/GenericData$Array$1;,"Lcom/flurry/org/apache/avro/generic/GenericData$Array.1;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/generic/GenericData$Array$1;, "Lcom/flurry/org/apache/avro/generic/GenericData$Array.1;"
     iput-object p1, p0, Lcom/flurry/org/apache/avro/generic/GenericData$Array$1;->this$0:Lcom/flurry/org/apache/avro/generic/GenericData$Array;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -58,12 +57,12 @@
 
     .prologue
     .line 151
-    .local p0, this:Lcom/flurry/org/apache/avro/generic/GenericData$Array$1;,"Lcom/flurry/org/apache/avro/generic/GenericData$Array.1;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/generic/GenericData$Array$1;, "Lcom/flurry/org/apache/avro/generic/GenericData$Array.1;"
     iget v0, p0, Lcom/flurry/org/apache/avro/generic/GenericData$Array$1;->position:I
 
     iget-object v1, p0, Lcom/flurry/org/apache/avro/generic/GenericData$Array$1;->this$0:Lcom/flurry/org/apache/avro/generic/GenericData$Array;
 
-    #getter for: Lcom/flurry/org/apache/avro/generic/GenericData$Array;->size:I
+    # getter for: Lcom/flurry/org/apache/avro/generic/GenericData$Array;->size:I
     invoke-static {v1}, Lcom/flurry/org/apache/avro/generic/GenericData$Array;->access$100(Lcom/flurry/org/apache/avro/generic/GenericData$Array;)I
 
     move-result v1
@@ -91,10 +90,10 @@
 
     .prologue
     .line 152
-    .local p0, this:Lcom/flurry/org/apache/avro/generic/GenericData$Array$1;,"Lcom/flurry/org/apache/avro/generic/GenericData$Array.1;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/generic/GenericData$Array$1;, "Lcom/flurry/org/apache/avro/generic/GenericData$Array.1;"
     iget-object v0, p0, Lcom/flurry/org/apache/avro/generic/GenericData$Array$1;->this$0:Lcom/flurry/org/apache/avro/generic/GenericData$Array;
 
-    #getter for: Lcom/flurry/org/apache/avro/generic/GenericData$Array;->elements:[Ljava/lang/Object;
+    # getter for: Lcom/flurry/org/apache/avro/generic/GenericData$Array;->elements:[Ljava/lang/Object;
     invoke-static {v0}, Lcom/flurry/org/apache/avro/generic/GenericData$Array;->access$200(Lcom/flurry/org/apache/avro/generic/GenericData$Array;)[Ljava/lang/Object;
 
     move-result-object v0
@@ -115,7 +114,7 @@
 
     .prologue
     .line 153
-    .local p0, this:Lcom/flurry/org/apache/avro/generic/GenericData$Array$1;,"Lcom/flurry/org/apache/avro/generic/GenericData$Array.1;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/generic/GenericData$Array$1;, "Lcom/flurry/org/apache/avro/generic/GenericData$Array.1;"
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V

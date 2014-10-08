@@ -31,8 +31,7 @@
 # direct methods
 .method protected constructor <init>(Lcom/flurry/org/codehaus/jackson/map/ser/BeanPropertyWriter;[Ljava/lang/Class;)V
     .locals 0
-    .parameter "delegate"
-    .parameter
+    .param p1, "delegate"    # Lcom/flurry/org/codehaus/jackson/map/ser/BeanPropertyWriter;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -45,7 +44,7 @@
 
     .prologue
     .line 68
-    .local p2, views:[Ljava/lang/Class;,"[Ljava/lang/Class<*>;"
+    .local p2, "views":[Ljava/lang/Class;, "[Ljava/lang/Class<*>;"
     invoke-direct {p0, p1}, Lcom/flurry/org/codehaus/jackson/map/ser/BeanPropertyWriter;-><init>(Lcom/flurry/org/codehaus/jackson/map/ser/BeanPropertyWriter;)V
 
     .line 69
@@ -62,9 +61,9 @@
 # virtual methods
 .method public serializeAsField(Ljava/lang/Object;Lcom/flurry/org/codehaus/jackson/JsonGenerator;Lcom/flurry/org/codehaus/jackson/map/SerializerProvider;)V
     .locals 4
-    .parameter "bean"
-    .parameter "jgen"
-    .parameter "prov"
+    .param p1, "bean"    # Ljava/lang/Object;
+    .param p2, "jgen"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator;
+    .param p3, "prov"    # Lcom/flurry/org/codehaus/jackson/map/SerializerProvider;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/Exception;
@@ -78,19 +77,19 @@
     move-result-object v0
 
     .line 83
-    .local v0, activeView:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local v0, "activeView":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     if-eqz v0, :cond_2
 
     .line 84
     const/4 v1, 0x0
 
-    .local v1, i:I
+    .local v1, "i":I
     iget-object v3, p0, Lcom/flurry/org/codehaus/jackson/map/ser/FilteredBeanPropertyWriter$MultiView;->_views:[Ljava/lang/Class;
 
     array-length v2, v3
 
     .line 85
-    .local v2, len:I
+    .local v2, "len":I
     :goto_0
     if-ge v1, v2, :cond_0
 
@@ -110,22 +109,22 @@
     if-ne v1, v2, :cond_2
 
     .line 94
-    .end local v1           #i:I
-    .end local v2           #len:I
+    .end local v1    # "i":I
+    .end local v2    # "len":I
     :goto_1
     return-void
 
     .line 85
-    .restart local v1       #i:I
-    .restart local v2       #len:I
+    .restart local v1    # "i":I
+    .restart local v2    # "len":I
     :cond_1
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
     .line 93
-    .end local v1           #i:I
-    .end local v2           #len:I
+    .end local v1    # "i":I
+    .end local v2    # "len":I
     :cond_2
     iget-object v3, p0, Lcom/flurry/org/codehaus/jackson/map/ser/FilteredBeanPropertyWriter$MultiView;->_delegate:Lcom/flurry/org/codehaus/jackson/map/ser/BeanPropertyWriter;
 
@@ -136,7 +135,6 @@
 
 .method public withSerializer(Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;)Lcom/flurry/org/codehaus/jackson/map/ser/BeanPropertyWriter;
     .locals 3
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -150,7 +148,7 @@
 
     .prologue
     .line 75
-    .local p1, ser:Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
+    .local p1, "ser":Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
     new-instance v0, Lcom/flurry/org/codehaus/jackson/map/ser/FilteredBeanPropertyWriter$MultiView;
 
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/map/ser/FilteredBeanPropertyWriter$MultiView;->_delegate:Lcom/flurry/org/codehaus/jackson/map/ser/BeanPropertyWriter;

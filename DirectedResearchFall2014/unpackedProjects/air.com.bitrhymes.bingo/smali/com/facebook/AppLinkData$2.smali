@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/facebook/AppLinkData$CompletionHandler;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1

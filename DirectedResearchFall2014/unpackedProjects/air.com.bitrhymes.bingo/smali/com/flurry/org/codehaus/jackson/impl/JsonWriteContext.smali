@@ -28,8 +28,8 @@
 # direct methods
 .method protected constructor <init>(ILcom/flurry/org/codehaus/jackson/impl/JsonWriteContext;)V
     .locals 1
-    .parameter "type"
-    .parameter "parent"
+    .param p1, "type"    # I
+    .param p2, "parent"    # Lcom/flurry/org/codehaus/jackson/impl/JsonWriteContext;
 
     .prologue
     .line 48
@@ -73,7 +73,7 @@
 
 .method private final reset(I)Lcom/flurry/org/codehaus/jackson/impl/JsonWriteContext;
     .locals 1
-    .parameter "type"
+    .param p1, "type"    # I
 
     .prologue
     .line 62
@@ -97,7 +97,7 @@
 # virtual methods
 .method protected final appendDesc(Ljava/lang/StringBuilder;)V
     .locals 3
-    .parameter "sb"
+    .param p1, "sb"    # Ljava/lang/StringBuilder;
 
     .prologue
     const/16 v2, 0x22
@@ -194,16 +194,16 @@
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/impl/JsonWriteContext;->_child:Lcom/flurry/org/codehaus/jackson/impl/JsonWriteContext;
 
     .line 71
-    .local v0, ctxt:Lcom/flurry/org/codehaus/jackson/impl/JsonWriteContext;
+    .local v0, "ctxt":Lcom/flurry/org/codehaus/jackson/impl/JsonWriteContext;
     if-nez v0, :cond_0
 
     .line 72
     new-instance v0, Lcom/flurry/org/codehaus/jackson/impl/JsonWriteContext;
 
-    .end local v0           #ctxt:Lcom/flurry/org/codehaus/jackson/impl/JsonWriteContext;
+    .end local v0    # "ctxt":Lcom/flurry/org/codehaus/jackson/impl/JsonWriteContext;
     invoke-direct {v0, v1, p0}, Lcom/flurry/org/codehaus/jackson/impl/JsonWriteContext;-><init>(ILcom/flurry/org/codehaus/jackson/impl/JsonWriteContext;)V
 
-    .restart local v0       #ctxt:Lcom/flurry/org/codehaus/jackson/impl/JsonWriteContext;
+    .restart local v0    # "ctxt":Lcom/flurry/org/codehaus/jackson/impl/JsonWriteContext;
     iput-object v0, p0, Lcom/flurry/org/codehaus/jackson/impl/JsonWriteContext;->_child:Lcom/flurry/org/codehaus/jackson/impl/JsonWriteContext;
 
     move-object v1, v0
@@ -230,16 +230,16 @@
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/impl/JsonWriteContext;->_child:Lcom/flurry/org/codehaus/jackson/impl/JsonWriteContext;
 
     .line 81
-    .local v0, ctxt:Lcom/flurry/org/codehaus/jackson/impl/JsonWriteContext;
+    .local v0, "ctxt":Lcom/flurry/org/codehaus/jackson/impl/JsonWriteContext;
     if-nez v0, :cond_0
 
     .line 82
     new-instance v0, Lcom/flurry/org/codehaus/jackson/impl/JsonWriteContext;
 
-    .end local v0           #ctxt:Lcom/flurry/org/codehaus/jackson/impl/JsonWriteContext;
+    .end local v0    # "ctxt":Lcom/flurry/org/codehaus/jackson/impl/JsonWriteContext;
     invoke-direct {v0, v1, p0}, Lcom/flurry/org/codehaus/jackson/impl/JsonWriteContext;-><init>(ILcom/flurry/org/codehaus/jackson/impl/JsonWriteContext;)V
 
-    .restart local v0       #ctxt:Lcom/flurry/org/codehaus/jackson/impl/JsonWriteContext;
+    .restart local v0    # "ctxt":Lcom/flurry/org/codehaus/jackson/impl/JsonWriteContext;
     iput-object v0, p0, Lcom/flurry/org/codehaus/jackson/impl/JsonWriteContext;->_child:Lcom/flurry/org/codehaus/jackson/impl/JsonWriteContext;
 
     move-object v1, v0
@@ -300,7 +300,7 @@
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
     .line 175
-    .local v0, sb:Ljava/lang/StringBuilder;
+    .local v0, "sb":Ljava/lang/StringBuilder;
     invoke-virtual {p0, v0}, Lcom/flurry/org/codehaus/jackson/impl/JsonWriteContext;->appendDesc(Ljava/lang/StringBuilder;)V
 
     .line 176
@@ -313,7 +313,7 @@
 
 .method public final writeFieldName(Ljava/lang/String;)I
     .locals 3
-    .parameter "name"
+    .param p1, "name"    # Ljava/lang/String;
 
     .prologue
     const/4 v2, 0x4
@@ -416,7 +416,7 @@
     iget v0, p0, Lcom/flurry/org/codehaus/jackson/impl/JsonWriteContext;->_index:I
 
     .line 130
-    .local v0, ix:I
+    .local v0, "ix":I
     iget v1, p0, Lcom/flurry/org/codehaus/jackson/impl/JsonWriteContext;->_index:I
 
     add-int/lit8 v1, v1, 0x1
@@ -436,7 +436,7 @@
     goto :goto_0
 
     .line 136
-    .end local v0           #ix:I
+    .end local v0    # "ix":I
     :cond_3
     iget v1, p0, Lcom/flurry/org/codehaus/jackson/impl/JsonWriteContext;->_index:I
 

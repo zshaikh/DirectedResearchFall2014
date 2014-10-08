@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/facebook/widget/PickerFragment;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1
@@ -40,9 +39,9 @@
 # virtual methods
 .method public call(Lcom/facebook/Session;Lcom/facebook/SessionState;Ljava/lang/Exception;)V
     .locals 1
-    .parameter "session"
-    .parameter "state"
-    .parameter "exception"
+    .param p1, "session"    # Lcom/facebook/Session;
+    .param p2, "state"    # Lcom/facebook/SessionState;
+    .param p3, "exception"    # Ljava/lang/Exception;
 
     .prologue
     .line 188
@@ -55,7 +54,7 @@
     .line 190
     iget-object v0, p0, Lcom/facebook/widget/PickerFragment$5;->this$0:Lcom/facebook/widget/PickerFragment;
 
-    #calls: Lcom/facebook/widget/PickerFragment;->clearResults()V
+    # invokes: Lcom/facebook/widget/PickerFragment;->clearResults()V
     invoke-static {v0}, Lcom/facebook/widget/PickerFragment;->access$5(Lcom/facebook/widget/PickerFragment;)V
 
     .line 192

@@ -19,7 +19,7 @@
 # static fields
 .field private static final FILEINFO:Ljava/lang/String; = "FILEINFO"
 
-.field public static final TAG:Ljava/lang/String; = null
+.field public static final TAG:Ljava/lang/String;
 
 .field private static final TYPE:Ljava/lang/String; = "TYPE"
 
@@ -114,11 +114,6 @@
 
 .method public constructor <init>(Ljava/util/ArrayList;ZZLjava/lang/String;Lcom/adobe/air/FileChooserStub;)V
     .locals 10
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -679,8 +674,6 @@
 
 .method private AddMediaSubtree(Ljava/lang/String;Landroid/net/Uri;)V
     .locals 6
-    .parameter
-    .parameter
 
     .prologue
     const/4 v4, 0x0
@@ -810,7 +803,6 @@
 
 .method private HideVirtualKeyboard(Landroid/view/View;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 573
@@ -845,7 +837,6 @@
 
 .method static synthetic access$000(Lcom/adobe/air/AIRExpandableFileChooser;)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 46
@@ -856,9 +847,6 @@
 
 .method static synthetic access$100(Lcom/adobe/air/AIRExpandableFileChooser;II)I
     .locals 1
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 46
@@ -871,7 +859,6 @@
 
 .method static synthetic access$1000(Lcom/adobe/air/AIRExpandableFileChooser;)Lcom/adobe/air/AndroidAlertDialog;
     .locals 1
-    .parameter
 
     .prologue
     .line 46
@@ -882,7 +869,6 @@
 
 .method static synthetic access$1100(Lcom/adobe/air/AIRExpandableFileChooser;)Landroid/widget/ExpandableListAdapter;
     .locals 1
-    .parameter
 
     .prologue
     .line 46
@@ -893,7 +879,6 @@
 
 .method static synthetic access$1200(Lcom/adobe/air/AIRExpandableFileChooser;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 46
@@ -904,7 +889,6 @@
 
 .method static synthetic access$300(Lcom/adobe/air/AIRExpandableFileChooser;)Landroid/util/SparseBooleanArray;
     .locals 1
-    .parameter
 
     .prologue
     .line 46
@@ -915,7 +899,6 @@
 
 .method static synthetic access$400(Lcom/adobe/air/AIRExpandableFileChooser;)Ljava/util/List;
     .locals 1
-    .parameter
 
     .prologue
     .line 46
@@ -926,7 +909,6 @@
 
 .method static synthetic access$500(Lcom/adobe/air/AIRExpandableFileChooser;)Ljava/util/List;
     .locals 1
-    .parameter
 
     .prologue
     .line 46
@@ -937,7 +919,6 @@
 
 .method static synthetic access$600(Lcom/adobe/air/AIRExpandableFileChooser;)Lcom/adobe/air/FileChooserStub;
     .locals 1
-    .parameter
 
     .prologue
     .line 46
@@ -948,7 +929,6 @@
 
 .method static synthetic access$700(Lcom/adobe/air/AIRExpandableFileChooser;)Landroid/widget/EditText;
     .locals 1
-    .parameter
 
     .prologue
     .line 46
@@ -959,7 +939,6 @@
 
 .method static synthetic access$800(Lcom/adobe/air/AIRExpandableFileChooser;)Ljava/util/ArrayList;
     .locals 1
-    .parameter
 
     .prologue
     .line 46
@@ -970,8 +949,6 @@
 
 .method static synthetic access$900(Lcom/adobe/air/AIRExpandableFileChooser;Landroid/view/View;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 46
@@ -1027,8 +1004,6 @@
 
 .method private expandableListPositionToFlatPosition(II)I
     .locals 3
-    .parameter
-    .parameter
 
     .prologue
     const/4 v2, 0x0
@@ -1238,11 +1213,6 @@
 
 .method public onChildClick(Landroid/widget/ExpandableListView;Landroid/view/View;IIJ)Z
     .locals 4
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const-string v3, "FILEINFO"

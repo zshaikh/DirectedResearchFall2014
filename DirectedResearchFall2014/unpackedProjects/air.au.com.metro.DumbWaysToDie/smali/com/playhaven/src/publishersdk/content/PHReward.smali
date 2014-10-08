@@ -6,7 +6,7 @@
 # direct methods
 .method public constructor <init>(Lv2/com/playhaven/model/PHReward;)V
     .locals 1
-    .parameter "reward"
+    .param p1, "reward"    # Lv2/com/playhaven/model/PHReward;
 
     .prologue
     .line 9

@@ -26,8 +26,6 @@
 # direct methods
 .method constructor <init>(Lcom/adobe/air/AIRWindowSurfaceView;Lcom/adobe/air/AIRWindowSurfaceView;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 1300
@@ -44,7 +42,6 @@
 # virtual methods
 .method public onSystemUiVisibilityChange(I)V
     .locals 2
-    .parameter
 
     .prologue
     .line 1303
@@ -68,7 +65,7 @@
 
     const/4 v1, 0x1
 
-    #calls: Lcom/adobe/air/AIRWindowSurfaceView;->nativeDispatchFullScreenEvent(Z)V
+    # invokes: Lcom/adobe/air/AIRWindowSurfaceView;->nativeDispatchFullScreenEvent(Z)V
     invoke-static {v0, v1}, Lcom/adobe/air/AIRWindowSurfaceView;->access$900(Lcom/adobe/air/AIRWindowSurfaceView;Z)V
 
     .line 1313
@@ -81,7 +78,7 @@
 
     const/4 v1, 0x0
 
-    #calls: Lcom/adobe/air/AIRWindowSurfaceView;->nativeDispatchFullScreenEvent(Z)V
+    # invokes: Lcom/adobe/air/AIRWindowSurfaceView;->nativeDispatchFullScreenEvent(Z)V
     invoke-static {v0, v1}, Lcom/adobe/air/AIRWindowSurfaceView;->access$900(Lcom/adobe/air/AIRWindowSurfaceView;Z)V
 
     goto :goto_0

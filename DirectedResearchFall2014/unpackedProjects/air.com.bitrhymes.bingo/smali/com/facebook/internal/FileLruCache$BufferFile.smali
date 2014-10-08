@@ -57,7 +57,7 @@
 
 .method static deleteAll(Ljava/io/File;)V
     .locals 4
-    .parameter "root"
+    .param p0, "root"    # Ljava/io/File;
 
     .prologue
     .line 329
@@ -70,7 +70,7 @@
     move-result-object v1
 
     .line 330
-    .local v1, filesToDelete:[Ljava/io/File;
+    .local v1, "filesToDelete":[Ljava/io/File;
     if-eqz v1, :cond_0
 
     .line 331
@@ -90,7 +90,7 @@
     aget-object v0, v1, v3
 
     .line 332
-    .local v0, file:Ljava/io/File;
+    .local v0, "file":Ljava/io/File;
     invoke-virtual {v0}, Ljava/io/File;->delete()Z
 
     .line 331
@@ -121,7 +121,7 @@
 
 .method static newFile(Ljava/io/File;)Ljava/io/File;
     .locals 4
-    .parameter "root"
+    .param p0, "root"    # Ljava/io/File;
 
     .prologue
     .line 346
@@ -131,6 +131,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
+    # getter for: Lcom/facebook/internal/FileLruCache;->bufferIndex:Ljava/util/concurrent/atomic/AtomicLong;
     invoke-static {}, Lcom/facebook/internal/FileLruCache;->access$0()Ljava/util/concurrent/atomic/AtomicLong;
 
     move-result-object v2
@@ -156,7 +157,7 @@
     move-result-object v0
 
     .line 347
-    .local v0, name:Ljava/lang/String;
+    .local v0, "name":Ljava/lang/String;
     new-instance v1, Ljava/io/File;
 
     invoke-direct {v1, p0, v0}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V

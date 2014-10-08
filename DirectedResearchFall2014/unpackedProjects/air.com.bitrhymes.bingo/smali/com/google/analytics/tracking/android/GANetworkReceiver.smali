@@ -10,7 +10,7 @@
 # direct methods
 .method constructor <init>(Lcom/google/analytics/tracking/android/ServiceManager;)V
     .locals 0
-    .parameter "manager"
+    .param p1, "manager"    # Lcom/google/analytics/tracking/android/ServiceManager;
 
     .prologue
     .line 23
@@ -27,8 +27,8 @@
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 5
-    .parameter "ctx"
-    .parameter "intent"
+    .param p1, "ctx"    # Landroid/content/Context;
+    .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
     .line 29
@@ -37,7 +37,7 @@
     move-result-object v0
 
     .line 30
-    .local v0, action:Ljava/lang/String;
+    .local v0, "action":Ljava/lang/String;
     const-string v3, "android.net.conn.CONNECTIVITY_CHANGE"
 
     invoke-virtual {v3, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -52,11 +52,11 @@
     move-result-object v1
 
     .line 32
-    .local v1, b:Landroid/os/Bundle;
+    .local v1, "b":Landroid/os/Bundle;
     sget-object v2, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
     .line 33
-    .local v2, notConnected:Ljava/lang/Boolean;
+    .local v2, "notConnected":Ljava/lang/Boolean;
     if-eqz v1, :cond_0
 
     .line 34
@@ -90,14 +90,14 @@
     invoke-interface {v3, v4}, Lcom/google/analytics/tracking/android/ServiceManager;->updateConnectivityStatus(Z)V
 
     .line 38
-    .end local v1           #b:Landroid/os/Bundle;
-    .end local v2           #notConnected:Ljava/lang/Boolean;
+    .end local v1    # "b":Landroid/os/Bundle;
+    .end local v2    # "notConnected":Ljava/lang/Boolean;
     :cond_1
     return-void
 
     .line 36
-    .restart local v1       #b:Landroid/os/Bundle;
-    .restart local v2       #notConnected:Ljava/lang/Boolean;
+    .restart local v1    # "b":Landroid/os/Bundle;
+    .restart local v2    # "notConnected":Ljava/lang/Boolean;
     :cond_2
     const/4 v4, 0x0
 

@@ -32,7 +32,7 @@
 
 .method public constructor <init>([B)V
     .locals 0
-    .parameter "bytes"
+    .param p1, "bytes"    # [B
 
     .prologue
     .line 29

@@ -124,9 +124,6 @@
 
 .method private constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -148,7 +145,7 @@
 
 .method public static valueOf(Ljava/lang/String;)Lcom/google/ads/internal/c$d;
     .locals 1
-    .parameter "name"
+    .param p0, "name"    # Ljava/lang/String;
 
     .prologue
     .line 222
@@ -158,7 +155,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "name":Ljava/lang/String;
     check-cast p0, Lcom/google/ads/internal/c$d;
 
     return-object p0

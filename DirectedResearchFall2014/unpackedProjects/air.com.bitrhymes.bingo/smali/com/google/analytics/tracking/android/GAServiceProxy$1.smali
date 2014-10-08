@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/google/analytics/tracking/android/GAServiceProxy;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 71

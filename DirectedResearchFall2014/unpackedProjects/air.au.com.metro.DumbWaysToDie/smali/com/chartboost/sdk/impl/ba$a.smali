@@ -53,7 +53,6 @@
 
 .method public final add(Ljava/lang/Object;)Z
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TE;)Z"
@@ -62,8 +61,8 @@
 
     .prologue
     .line 539
-    .local p0, this:Lcom/chartboost/sdk/impl/ba$a;,"Lcom/chartboost/sdk/impl/ba$a<TE;>;"
-    .local p1, o:Ljava/lang/Object;,"TE;"
+    .local p0, "this":Lcom/chartboost/sdk/impl/ba$a;, "Lcom/chartboost/sdk/impl/ba$a<TE;>;"
+    .local p1, "o":Ljava/lang/Object;, "TE;"
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -73,7 +72,6 @@
 
 .method public final addAll(Ljava/util/Collection;)Z
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -84,8 +82,8 @@
 
     .prologue
     .line 543
-    .local p0, this:Lcom/chartboost/sdk/impl/ba$a;,"Lcom/chartboost/sdk/impl/ba$a<TE;>;"
-    .local p1, c:Ljava/util/Collection;,"Ljava/util/Collection<+TE;>;"
+    .local p0, "this":Lcom/chartboost/sdk/impl/ba$a;, "Lcom/chartboost/sdk/impl/ba$a<TE;>;"
+    .local p1, "c":Ljava/util/Collection;, "Ljava/util/Collection<+TE;>;"
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -95,11 +93,11 @@
 
 .method public final contains(Ljava/lang/Object;)Z
     .locals 1
-    .parameter "o"
+    .param p1, "o"    # Ljava/lang/Object;
 
     .prologue
     .line 492
-    .local p0, this:Lcom/chartboost/sdk/impl/ba$a;,"Lcom/chartboost/sdk/impl/ba$a<TE;>;"
+    .local p0, "this":Lcom/chartboost/sdk/impl/ba$a;, "Lcom/chartboost/sdk/impl/ba$a<TE;>;"
     invoke-virtual {p0}, Lcom/chartboost/sdk/impl/ba$a;->a()Ljava/util/Collection;
 
     move-result-object v0
@@ -113,7 +111,6 @@
 
 .method public final containsAll(Ljava/util/Collection;)Z
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -124,8 +121,8 @@
 
     .prologue
     .line 496
-    .local p0, this:Lcom/chartboost/sdk/impl/ba$a;,"Lcom/chartboost/sdk/impl/ba$a<TE;>;"
-    .local p1, c:Ljava/util/Collection;,"Ljava/util/Collection<*>;"
+    .local p0, "this":Lcom/chartboost/sdk/impl/ba$a;, "Lcom/chartboost/sdk/impl/ba$a<TE;>;"
+    .local p1, "c":Ljava/util/Collection;, "Ljava/util/Collection<*>;"
     invoke-virtual {p0}, Lcom/chartboost/sdk/impl/ba$a;->a()Ljava/util/Collection;
 
     move-result-object v0
@@ -139,11 +136,11 @@
 
 .method public equals(Ljava/lang/Object;)Z
     .locals 1
-    .parameter "obj"
+    .param p1, "obj"    # Ljava/lang/Object;
 
     .prologue
     .line 526
-    .local p0, this:Lcom/chartboost/sdk/impl/ba$a;,"Lcom/chartboost/sdk/impl/ba$a<TE;>;"
+    .local p0, "this":Lcom/chartboost/sdk/impl/ba$a;, "Lcom/chartboost/sdk/impl/ba$a<TE;>;"
     invoke-virtual {p0}, Lcom/chartboost/sdk/impl/ba$a;->a()Ljava/util/Collection;
 
     move-result-object v0
@@ -248,7 +245,6 @@
 
 .method public final toArray([Ljava/lang/Object;)[Ljava/lang/Object;
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -259,8 +255,8 @@
 
     .prologue
     .line 516
-    .local p0, this:Lcom/chartboost/sdk/impl/ba$a;,"Lcom/chartboost/sdk/impl/ba$a<TE;>;"
-    .local p1, a:[Ljava/lang/Object;,"[TT;"
+    .local p0, "this":Lcom/chartboost/sdk/impl/ba$a;, "Lcom/chartboost/sdk/impl/ba$a<TE;>;"
+    .local p1, "a":[Ljava/lang/Object;, "[TT;"
     invoke-virtual {p0}, Lcom/chartboost/sdk/impl/ba$a;->a()Ljava/util/Collection;
 
     move-result-object v0

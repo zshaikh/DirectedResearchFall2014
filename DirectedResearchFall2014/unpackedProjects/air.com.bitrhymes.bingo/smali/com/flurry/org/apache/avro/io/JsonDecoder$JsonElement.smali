@@ -23,7 +23,7 @@
 # direct methods
 .method public constructor <init>(Lcom/flurry/org/codehaus/jackson/JsonToken;)V
     .locals 1
-    .parameter "t"
+    .param p1, "t"    # Lcom/flurry/org/codehaus/jackson/JsonToken;
 
     .prologue
     .line 519
@@ -37,8 +37,8 @@
 
 .method public constructor <init>(Lcom/flurry/org/codehaus/jackson/JsonToken;Ljava/lang/String;)V
     .locals 0
-    .parameter "t"
-    .parameter "value"
+    .param p1, "t"    # Lcom/flurry/org/codehaus/jackson/JsonToken;
+    .param p2, "value"    # Ljava/lang/String;
 
     .prologue
     .line 513

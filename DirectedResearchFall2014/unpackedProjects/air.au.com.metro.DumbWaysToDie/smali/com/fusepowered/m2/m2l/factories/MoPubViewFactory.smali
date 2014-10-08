@@ -34,7 +34,7 @@
 
 .method public static create(Landroid/content/Context;)Lcom/fusepowered/m2/m2l/MoPubView;
     .locals 1
-    .parameter "context"
+    .param p0, "context"    # Landroid/content/Context;
 
     .prologue
     .line 47
@@ -49,7 +49,7 @@
 
 .method public static setInstance(Lcom/fusepowered/m2/m2l/factories/MoPubViewFactory;)V
     .locals 0
-    .parameter "factory"
+    .param p0, "factory"    # Lcom/fusepowered/m2/m2l/factories/MoPubViewFactory;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -65,7 +65,7 @@
 # virtual methods
 .method protected internalCreate(Landroid/content/Context;)Lcom/fusepowered/m2/m2l/MoPubView;
     .locals 1
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     .line 51

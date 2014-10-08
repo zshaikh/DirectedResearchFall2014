@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/bitrhymes/PlayHavenAndroidLib/RequestForApp;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1
@@ -40,8 +39,8 @@
 # virtual methods
 .method public onOpenFailed(Lv2/com/playhaven/requests/open/PHOpenRequest;Lv2/com/playhaven/model/PHError;)V
     .locals 3
-    .parameter "arg0"
-    .parameter "arg1"
+    .param p1, "arg0"    # Lv2/com/playhaven/requests/open/PHOpenRequest;
+    .param p2, "arg1"    # Lv2/com/playhaven/model/PHError;
 
     .prologue
     .line 43
@@ -76,7 +75,7 @@
 
 .method public onOpenSuccessful(Lv2/com/playhaven/requests/open/PHOpenRequest;)V
     .locals 3
-    .parameter "arg0"
+    .param p1, "arg0"    # Lv2/com/playhaven/requests/open/PHOpenRequest;
 
     .prologue
     .line 36

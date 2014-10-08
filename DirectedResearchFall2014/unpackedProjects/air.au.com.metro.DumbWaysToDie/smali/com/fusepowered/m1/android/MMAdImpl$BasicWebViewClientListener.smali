@@ -30,7 +30,7 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m1/android/MMAdImpl;)V
     .locals 1
-    .parameter "adImpl"
+    .param p1, "adImpl"    # Lcom/fusepowered/m1/android/MMAdImpl;
 
     .prologue
     .line 48
@@ -51,7 +51,7 @@
 # virtual methods
 .method public onPageFinished(Ljava/lang/String;)V
     .locals 3
-    .parameter "url"
+    .param p1, "url"    # Ljava/lang/String;
 
     .prologue
     .line 63
@@ -64,7 +64,7 @@
     check-cast v0, Lcom/fusepowered/m1/android/MMAdImpl;
 
     .line 64
-    .local v0, adImpl:Lcom/fusepowered/m1/android/MMAdImpl;
+    .local v0, "adImpl":Lcom/fusepowered/m1/android/MMAdImpl;
     if-eqz v0, :cond_0
 
     .line 66
@@ -140,7 +140,7 @@
 
 .method onPageStarted(Ljava/lang/String;)V
     .locals 2
-    .parameter "url"
+    .param p1, "url"    # Ljava/lang/String;
 
     .prologue
     .line 55
@@ -153,7 +153,7 @@
     check-cast v0, Lcom/fusepowered/m1/android/MMAdImpl;
 
     .line 56
-    .local v0, adImpl:Lcom/fusepowered/m1/android/MMAdImpl;
+    .local v0, "adImpl":Lcom/fusepowered/m1/android/MMAdImpl;
     if-eqz v0, :cond_0
 
     .line 57

@@ -17,8 +17,6 @@
 # direct methods
 .method constructor <init>(Ljava/lang/String;I)V
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 577
@@ -34,7 +32,6 @@
 # virtual methods
 .method a(Lcom/chartboost/sdk/impl/bc;)Lcom/chartboost/sdk/impl/bc$h;
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<K:",

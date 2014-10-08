@@ -50,10 +50,6 @@
 # direct methods
 .method public constructor <init>(Lcom/vungle/sdk/av;Lcom/vungle/sdk/aw;Ljava/util/Map;Ljava/util/Map;)V
     .locals 2
-    .parameter
-    .parameter
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -148,9 +144,6 @@
 
 .method private a(Ljava/lang/ClassLoader;Ljava/lang/String;Ljava/lang/String;)Lcom/vungle/sdk/aq;
     .locals 4
-    .parameter
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -356,7 +349,6 @@
 # virtual methods
 .method public final a(Ljava/lang/Class;)Ljava/lang/Object;
     .locals 3
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -411,7 +403,6 @@
 
 .method public final a(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",

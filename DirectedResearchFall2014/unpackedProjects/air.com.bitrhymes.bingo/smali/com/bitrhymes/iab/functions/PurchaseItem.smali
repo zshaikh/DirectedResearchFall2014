@@ -45,8 +45,8 @@
 # virtual methods
 .method public call(Lcom/adobe/fre/FREContext;[Lcom/adobe/fre/FREObject;)Lcom/adobe/fre/FREObject;
     .locals 9
-    .parameter "freContext"
-    .parameter "args"
+    .param p1, "freContext"    # Lcom/adobe/fre/FREContext;
+    .param p2, "args"    # [Lcom/adobe/fre/FREObject;
 
     .prologue
     .line 28
@@ -67,7 +67,7 @@
     move-result-object v3
 
     .line 33
-    .local v3, mSku:Ljava/lang/String;
+    .local v3, "mSku":Ljava/lang/String;
     const/4 v6, 0x1
 
     aget-object v6, p2, v6
@@ -77,7 +77,7 @@
     move-result-object v1
 
     .line 34
-    .local v1, devPayload:Ljava/lang/String;
+    .local v1, "devPayload":Ljava/lang/String;
     const/4 v6, 0x2
 
     aget-object v6, p2, v6
@@ -87,7 +87,7 @@
     move-result v5
 
     .line 36
-    .local v5, quantity:I
+    .local v5, "quantity":I
     sget-object v6, Lcom/bitrhymes/iab/functions/PurchaseItem;->TAG:Ljava/lang/String;
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -115,13 +115,13 @@
     move-result-object v0
 
     .line 39
-    .local v0, activity:Landroid/app/Activity;
+    .local v0, "activity":Landroid/app/Activity;
     new-instance v4, Landroid/content/Intent;
 
     invoke-direct {v4}, Landroid/content/Intent;-><init>()V
 
     .line 41
-    .local v4, myIntent:Landroid/content/Intent;
+    .local v4, "myIntent":Landroid/content/Intent;
     invoke-virtual {v0}, Landroid/app/Activity;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v6
@@ -162,11 +162,11 @@
     .catch Lcom/adobe/fre/FREWrongThreadException; {:try_start_0 .. :try_end_0} :catch_3
 
     .line 58
-    .end local v0           #activity:Landroid/app/Activity;
-    .end local v1           #devPayload:Ljava/lang/String;
-    .end local v3           #mSku:Ljava/lang/String;
-    .end local v4           #myIntent:Landroid/content/Intent;
-    .end local v5           #quantity:I
+    .end local v0    # "activity":Landroid/app/Activity;
+    .end local v1    # "devPayload":Ljava/lang/String;
+    .end local v3    # "mSku":Ljava/lang/String;
+    .end local v4    # "myIntent":Landroid/content/Intent;
+    .end local v5    # "quantity":I
     :goto_0
     const/4 v6, 0x0
 
@@ -179,46 +179,46 @@
     move-object v2, v6
 
     .line 49
-    .local v2, e:Ljava/lang/IllegalStateException;
+    .local v2, "e":Ljava/lang/IllegalStateException;
     invoke-virtual {v2}, Ljava/lang/IllegalStateException;->printStackTrace()V
 
     goto :goto_0
 
     .line 50
-    .end local v2           #e:Ljava/lang/IllegalStateException;
+    .end local v2    # "e":Ljava/lang/IllegalStateException;
     :catch_1
     move-exception v6
 
     move-object v2, v6
 
     .line 51
-    .local v2, e:Lcom/adobe/fre/FRETypeMismatchException;
+    .local v2, "e":Lcom/adobe/fre/FRETypeMismatchException;
     invoke-virtual {v2}, Lcom/adobe/fre/FRETypeMismatchException;->printStackTrace()V
 
     goto :goto_0
 
     .line 52
-    .end local v2           #e:Lcom/adobe/fre/FRETypeMismatchException;
+    .end local v2    # "e":Lcom/adobe/fre/FRETypeMismatchException;
     :catch_2
     move-exception v6
 
     move-object v2, v6
 
     .line 53
-    .local v2, e:Lcom/adobe/fre/FREInvalidObjectException;
+    .local v2, "e":Lcom/adobe/fre/FREInvalidObjectException;
     invoke-virtual {v2}, Lcom/adobe/fre/FREInvalidObjectException;->printStackTrace()V
 
     goto :goto_0
 
     .line 54
-    .end local v2           #e:Lcom/adobe/fre/FREInvalidObjectException;
+    .end local v2    # "e":Lcom/adobe/fre/FREInvalidObjectException;
     :catch_3
     move-exception v6
 
     move-object v2, v6
 
     .line 55
-    .local v2, e:Lcom/adobe/fre/FREWrongThreadException;
+    .local v2, "e":Lcom/adobe/fre/FREWrongThreadException;
     invoke-virtual {v2}, Lcom/adobe/fre/FREWrongThreadException;->printStackTrace()V
 
     goto :goto_0

@@ -55,7 +55,7 @@
 
 .method private constructor <init>(Landroid/content/Context;)V
     .locals 1
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     .line 1252
@@ -77,9 +77,9 @@
 
 .method public static persistEvents(Landroid/content/Context;Lcom/facebook/AppEventsLogger$AccessTokenAppIdPair;Lcom/facebook/AppEventsLogger$SessionEventsState;)V
     .locals 1
-    .parameter "context"
-    .parameter "accessTokenAppId"
-    .parameter "eventsToPersist"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "accessTokenAppId"    # Lcom/facebook/AppEventsLogger$AccessTokenAppIdPair;
+    .param p2, "eventsToPersist"    # Lcom/facebook/AppEventsLogger$SessionEventsState;
 
     .prologue
     .line 1267
@@ -88,7 +88,7 @@
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     .line 1268
-    .local v0, map:Ljava/util/Map;,"Ljava/util/Map<Lcom/facebook/AppEventsLogger$AccessTokenAppIdPair;Lcom/facebook/AppEventsLogger$SessionEventsState;>;"
+    .local v0, "map":Ljava/util/Map;, "Ljava/util/Map<Lcom/facebook/AppEventsLogger$AccessTokenAppIdPair;Lcom/facebook/AppEventsLogger$SessionEventsState;>;"
     invoke-interface {v0, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 1269
@@ -100,8 +100,7 @@
 
 .method public static persistEvents(Landroid/content/Context;Ljava/util/Map;)V
     .locals 6
-    .parameter "context"
-    .parameter
+    .param p0, "context"    # Landroid/content/Context;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -116,7 +115,7 @@
 
     .prologue
     .line 1274
-    .local p1, eventsToPersist:Ljava/util/Map;,"Ljava/util/Map<Lcom/facebook/AppEventsLogger$AccessTokenAppIdPair;Lcom/facebook/AppEventsLogger$SessionEventsState;>;"
+    .local p1, "eventsToPersist":Ljava/util/Map;, "Ljava/util/Map<Lcom/facebook/AppEventsLogger$AccessTokenAppIdPair;Lcom/facebook/AppEventsLogger$SessionEventsState;>;"
     sget-object v3, Lcom/facebook/AppEventsLogger$PersistedEvents;->staticLock:Ljava/lang/Object;
 
     monitor-enter v3
@@ -128,7 +127,7 @@
     move-result-object v2
 
     .line 1281
-    .local v2, persistedEvents:Lcom/facebook/AppEventsLogger$PersistedEvents;
+    .local v2, "persistedEvents":Lcom/facebook/AppEventsLogger$PersistedEvents;
     invoke-interface {p1}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object v4
@@ -137,7 +136,7 @@
 
     move-result-object v4
 
-    .end local p0
+    .end local p0    # "context":Landroid/content/Context;
     :cond_0
     :goto_0
     invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
@@ -164,7 +163,7 @@
     check-cast v0, Ljava/util/Map$Entry;
 
     .line 1282
-    .local v0, entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Lcom/facebook/AppEventsLogger$AccessTokenAppIdPair;Lcom/facebook/AppEventsLogger$SessionEventsState;>;"
+    .local v0, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Lcom/facebook/AppEventsLogger$AccessTokenAppIdPair;Lcom/facebook/AppEventsLogger$SessionEventsState;>;"
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object p0
@@ -176,7 +175,7 @@
     move-result-object v1
 
     .line 1283
-    .local v1, events:Ljava/util/List;,"Ljava/util/List<Lcom/facebook/AppEventsLogger$AppEvent;>;"
+    .local v1, "events":Ljava/util/List;, "Ljava/util/List<Lcom/facebook/AppEventsLogger$AppEvent;>;"
     invoke-interface {v1}, Ljava/util/List;->size()I
 
     move-result v5
@@ -195,9 +194,9 @@
     goto :goto_0
 
     .line 1274
-    .end local v0           #entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Lcom/facebook/AppEventsLogger$AccessTokenAppIdPair;Lcom/facebook/AppEventsLogger$SessionEventsState;>;"
-    .end local v1           #events:Ljava/util/List;,"Ljava/util/List<Lcom/facebook/AppEventsLogger$AppEvent;>;"
-    .end local v2           #persistedEvents:Lcom/facebook/AppEventsLogger$PersistedEvents;
+    .end local v0    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Lcom/facebook/AppEventsLogger$AccessTokenAppIdPair;Lcom/facebook/AppEventsLogger$SessionEventsState;>;"
+    .end local v1    # "events":Ljava/util/List;, "Ljava/util/List<Lcom/facebook/AppEventsLogger$AppEvent;>;"
+    .end local v2    # "persistedEvents":Lcom/facebook/AppEventsLogger$PersistedEvents;
     :catchall_0
     move-exception v4
 
@@ -210,7 +209,7 @@
 
 .method public static readAndClearStore(Landroid/content/Context;)Lcom/facebook/AppEventsLogger$PersistedEvents;
     .locals 3
-    .parameter "context"
+    .param p0, "context"    # Landroid/content/Context;
 
     .prologue
     .line 1257
@@ -225,7 +224,7 @@
     invoke-direct {v0, p0}, Lcom/facebook/AppEventsLogger$PersistedEvents;-><init>(Landroid/content/Context;)V
 
     .line 1260
-    .local v0, persistedEvents:Lcom/facebook/AppEventsLogger$PersistedEvents;
+    .local v0, "persistedEvents":Lcom/facebook/AppEventsLogger$PersistedEvents;
     invoke-direct {v0}, Lcom/facebook/AppEventsLogger$PersistedEvents;->readAndClearStore()V
 
     .line 1262
@@ -234,7 +233,7 @@
     return-object v0
 
     .line 1257
-    .end local v0           #persistedEvents:Lcom/facebook/AppEventsLogger$PersistedEvents;
+    .end local v0    # "persistedEvents":Lcom/facebook/AppEventsLogger$PersistedEvents;
     :catchall_0
     move-exception v2
 
@@ -255,7 +254,7 @@
     const/4 v2, 0x0
 
     .line 1318
-    .local v2, ois:Ljava/io/ObjectInputStream;
+    .local v2, "ois":Ljava/io/ObjectInputStream;
     :try_start_0
     new-instance v3, Ljava/io/ObjectInputStream;
 
@@ -275,13 +274,13 @@
     .line 1318
     invoke-direct {v3, v4}, Ljava/io/ObjectInputStream;-><init>(Ljava/io/InputStream;)V
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 1323
-    .end local v2           #ois:Ljava/io/ObjectInputStream;
-    .local v3, ois:Ljava/io/ObjectInputStream;
+    .end local v2    # "ois":Ljava/io/ObjectInputStream;
+    .local v3, "ois":Ljava/io/ObjectInputStream;
     :try_start_1
     invoke-virtual {v3}, Ljava/io/ObjectInputStream;->readObject()Ljava/lang/Object;
 
@@ -290,7 +289,7 @@
     check-cast v1, Ljava/util/HashMap;
 
     .line 1327
-    .local v1, obj:Ljava/util/HashMap;,"Ljava/util/HashMap<Lcom/facebook/AppEventsLogger$AccessTokenAppIdPair;Ljava/util/List<Lcom/facebook/AppEventsLogger$AppEvent;>;>;"
+    .local v1, "obj":Ljava/util/HashMap;, "Ljava/util/HashMap<Lcom/facebook/AppEventsLogger$AccessTokenAppIdPair;Ljava/util/List<Lcom/facebook/AppEventsLogger$AppEvent;>;>;"
     iget-object v4, p0, Lcom/facebook/AppEventsLogger$PersistedEvents;->context:Landroid/content/Context;
 
     const-string v5, "AppEventsLogger.persistedevents"
@@ -304,9 +303,9 @@
     .line 1328
     iput-object v1, p0, Lcom/facebook/AppEventsLogger$PersistedEvents;->persistedEvents:Ljava/util/HashMap;
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
     .catch Ljava/io/FileNotFoundException; {:try_start_1 .. :try_end_1} :catch_3
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_2
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     .line 1334
     invoke-static {v3}, Lcom/facebook/internal/Utility;->closeQuietly(Ljava/io/Closeable;)V
@@ -314,9 +313,9 @@
     move-object v2, v3
 
     .line 1336
-    .end local v1           #obj:Ljava/util/HashMap;,"Ljava/util/HashMap<Lcom/facebook/AppEventsLogger$AccessTokenAppIdPair;Ljava/util/List<Lcom/facebook/AppEventsLogger$AppEvent;>;>;"
-    .end local v3           #ois:Ljava/io/ObjectInputStream;
-    .restart local v2       #ois:Ljava/io/ObjectInputStream;
+    .end local v1    # "obj":Ljava/util/HashMap;, "Ljava/util/HashMap<Lcom/facebook/AppEventsLogger$AccessTokenAppIdPair;Ljava/util/List<Lcom/facebook/AppEventsLogger$AppEvent;>;>;"
+    .end local v3    # "ois":Ljava/io/ObjectInputStream;
+    .restart local v2    # "ois":Ljava/io/ObjectInputStream;
     :goto_0
     return-void
 
@@ -337,9 +336,10 @@
     move-object v0, v4
 
     .line 1332
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     :goto_2
     :try_start_2
+    # getter for: Lcom/facebook/AppEventsLogger;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/facebook/AppEventsLogger;->access$0()Ljava/lang/String;
 
     move-result-object v4
@@ -372,7 +372,7 @@
     goto :goto_0
 
     .line 1333
-    .end local v0           #e:Ljava/lang/Exception;
+    .end local v0    # "e":Ljava/lang/Exception;
     :catchall_0
     move-exception v4
 
@@ -384,20 +384,20 @@
     throw v4
 
     .line 1333
-    .end local v2           #ois:Ljava/io/ObjectInputStream;
-    .restart local v3       #ois:Ljava/io/ObjectInputStream;
+    .end local v2    # "ois":Ljava/io/ObjectInputStream;
+    .restart local v3    # "ois":Ljava/io/ObjectInputStream;
     :catchall_1
     move-exception v4
 
     move-object v2, v3
 
-    .end local v3           #ois:Ljava/io/ObjectInputStream;
-    .restart local v2       #ois:Ljava/io/ObjectInputStream;
+    .end local v3    # "ois":Ljava/io/ObjectInputStream;
+    .restart local v2    # "ois":Ljava/io/ObjectInputStream;
     goto :goto_3
 
     .line 1331
-    .end local v2           #ois:Ljava/io/ObjectInputStream;
-    .restart local v3       #ois:Ljava/io/ObjectInputStream;
+    .end local v2    # "ois":Ljava/io/ObjectInputStream;
+    .restart local v3    # "ois":Ljava/io/ObjectInputStream;
     :catch_2
     move-exception v4
 
@@ -405,20 +405,20 @@
 
     move-object v2, v3
 
-    .end local v3           #ois:Ljava/io/ObjectInputStream;
-    .restart local v2       #ois:Ljava/io/ObjectInputStream;
+    .end local v3    # "ois":Ljava/io/ObjectInputStream;
+    .restart local v2    # "ois":Ljava/io/ObjectInputStream;
     goto :goto_2
 
     .line 1329
-    .end local v2           #ois:Ljava/io/ObjectInputStream;
-    .restart local v3       #ois:Ljava/io/ObjectInputStream;
+    .end local v2    # "ois":Ljava/io/ObjectInputStream;
+    .restart local v3    # "ois":Ljava/io/ObjectInputStream;
     :catch_3
     move-exception v4
 
     move-object v2, v3
 
-    .end local v3           #ois:Ljava/io/ObjectInputStream;
-    .restart local v2       #ois:Ljava/io/ObjectInputStream;
+    .end local v3    # "ois":Ljava/io/ObjectInputStream;
+    .restart local v2    # "ois":Ljava/io/ObjectInputStream;
     goto :goto_1
 .end method
 
@@ -430,7 +430,7 @@
     const/4 v1, 0x0
 
     .line 1305
-    .local v1, oos:Ljava/io/ObjectOutputStream;
+    .local v1, "oos":Ljava/io/ObjectOutputStream;
     :try_start_0
     new-instance v2, Ljava/io/ObjectOutputStream;
 
@@ -452,19 +452,19 @@
     .line 1305
     invoke-direct {v2, v3}, Ljava/io/ObjectOutputStream;-><init>(Ljava/io/OutputStream;)V
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 1307
-    .end local v1           #oos:Ljava/io/ObjectOutputStream;
-    .local v2, oos:Ljava/io/ObjectOutputStream;
+    .end local v1    # "oos":Ljava/io/ObjectOutputStream;
+    .local v2, "oos":Ljava/io/ObjectOutputStream;
     :try_start_1
     iget-object v3, p0, Lcom/facebook/AppEventsLogger$PersistedEvents;->persistedEvents:Ljava/util/HashMap;
 
     invoke-virtual {v2, v3}, Ljava/io/ObjectOutputStream;->writeObject(Ljava/lang/Object;)V
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     .line 1311
     invoke-static {v2}, Lcom/facebook/internal/Utility;->closeQuietly(Ljava/io/Closeable;)V
@@ -472,8 +472,8 @@
     move-object v1, v2
 
     .line 1313
-    .end local v2           #oos:Ljava/io/ObjectOutputStream;
-    .restart local v1       #oos:Ljava/io/ObjectOutputStream;
+    .end local v2    # "oos":Ljava/io/ObjectOutputStream;
+    .restart local v1    # "oos":Ljava/io/ObjectOutputStream;
     :goto_0
     return-void
 
@@ -484,9 +484,10 @@
     move-object v0, v3
 
     .line 1309
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     :goto_1
     :try_start_2
+    # getter for: Lcom/facebook/AppEventsLogger;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/facebook/AppEventsLogger;->access$0()Ljava/lang/String;
 
     move-result-object v3
@@ -519,7 +520,7 @@
     goto :goto_0
 
     .line 1310
-    .end local v0           #e:Ljava/lang/Exception;
+    .end local v0    # "e":Ljava/lang/Exception;
     :catchall_0
     move-exception v3
 
@@ -531,20 +532,20 @@
     throw v3
 
     .line 1310
-    .end local v1           #oos:Ljava/io/ObjectOutputStream;
-    .restart local v2       #oos:Ljava/io/ObjectOutputStream;
+    .end local v1    # "oos":Ljava/io/ObjectOutputStream;
+    .restart local v2    # "oos":Ljava/io/ObjectOutputStream;
     :catchall_1
     move-exception v3
 
     move-object v1, v2
 
-    .end local v2           #oos:Ljava/io/ObjectOutputStream;
-    .restart local v1       #oos:Ljava/io/ObjectOutputStream;
+    .end local v2    # "oos":Ljava/io/ObjectOutputStream;
+    .restart local v1    # "oos":Ljava/io/ObjectOutputStream;
     goto :goto_2
 
     .line 1308
-    .end local v1           #oos:Ljava/io/ObjectOutputStream;
-    .restart local v2       #oos:Ljava/io/ObjectOutputStream;
+    .end local v1    # "oos":Ljava/io/ObjectOutputStream;
+    .restart local v2    # "oos":Ljava/io/ObjectOutputStream;
     :catch_1
     move-exception v3
 
@@ -552,8 +553,8 @@
 
     move-object v1, v2
 
-    .end local v2           #oos:Ljava/io/ObjectOutputStream;
-    .restart local v1       #oos:Ljava/io/ObjectOutputStream;
+    .end local v2    # "oos":Ljava/io/ObjectOutputStream;
+    .restart local v1    # "oos":Ljava/io/ObjectOutputStream;
     goto :goto_1
 .end method
 
@@ -561,8 +562,7 @@
 # virtual methods
 .method public addEvents(Lcom/facebook/AppEventsLogger$AccessTokenAppIdPair;Ljava/util/List;)V
     .locals 2
-    .parameter "accessTokenAppId"
-    .parameter
+    .param p1, "accessTokenAppId"    # Lcom/facebook/AppEventsLogger$AccessTokenAppIdPair;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -576,7 +576,7 @@
 
     .prologue
     .line 1339
-    .local p2, eventsToPersist:Ljava/util/List;,"Ljava/util/List<Lcom/facebook/AppEventsLogger$AppEvent;>;"
+    .local p2, "eventsToPersist":Ljava/util/List;, "Ljava/util/List<Lcom/facebook/AppEventsLogger$AppEvent;>;"
     iget-object v0, p0, Lcom/facebook/AppEventsLogger$PersistedEvents;->persistedEvents:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
@@ -602,7 +602,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/facebook/AppEventsLogger$PersistedEvents;
     check-cast p0, Ljava/util/List;
 
     invoke-interface {p0, p2}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
@@ -613,7 +613,7 @@
 
 .method public getEvents(Lcom/facebook/AppEventsLogger$AccessTokenAppIdPair;)Ljava/util/List;
     .locals 1
-    .parameter "accessTokenAppId"
+    .param p1, "accessTokenAppId"    # Lcom/facebook/AppEventsLogger$AccessTokenAppIdPair;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -634,7 +634,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/facebook/AppEventsLogger$PersistedEvents;
     check-cast p0, Ljava/util/List;
 
     return-object p0

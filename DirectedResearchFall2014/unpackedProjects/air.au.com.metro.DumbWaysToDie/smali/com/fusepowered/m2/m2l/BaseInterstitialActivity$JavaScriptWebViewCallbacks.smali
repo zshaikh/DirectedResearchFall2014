@@ -86,9 +86,7 @@
 
 .method private constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter "url"
+    .param p3, "url"    # Ljava/lang/String;
 
     .prologue
     .line 68
@@ -103,7 +101,6 @@
 
 .method public static valueOf(Ljava/lang/String;)Lcom/fusepowered/m2/m2l/BaseInterstitialActivity$JavaScriptWebViewCallbacks;
     .locals 1
-    .parameter
 
     .prologue
     .line 1

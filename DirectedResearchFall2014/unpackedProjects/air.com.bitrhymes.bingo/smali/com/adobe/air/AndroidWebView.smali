@@ -123,7 +123,7 @@
     .line 390
     iget-object v0, p0, Lcom/adobe/air/AndroidWebView;->mView:Lcom/adobe/air/AndroidWebView$AndroidWebViewImpl;
 
-    const/high16 v1, 0x200
+    const/high16 v1, 0x2000000
 
     invoke-virtual {v0, v1}, Lcom/adobe/air/AndroidWebView$AndroidWebViewImpl;->setScrollBarStyle(I)V
 
@@ -151,7 +151,6 @@
 
 .method static synthetic access$000(Lcom/adobe/air/AndroidWebView;)Landroid/content/Context;
     .locals 1
-    .parameter
 
     .prologue
     .line 56
@@ -162,7 +161,6 @@
 
 .method static synthetic access$100(Lcom/adobe/air/AndroidWebView;)Lcom/adobe/air/AndroidWebView$AndroidWebViewImpl;
     .locals 1
-    .parameter
 
     .prologue
     .line 56
@@ -173,7 +171,6 @@
 
 .method static synthetic access$200(Lcom/adobe/air/AndroidWebView;)J
     .locals 2
-    .parameter
 
     .prologue
     .line 56
@@ -184,7 +181,6 @@
 
 .method static synthetic access$300(Lcom/adobe/air/AndroidWebView;)Lcom/adobe/air/AIRWindowSurfaceView;
     .locals 1
-    .parameter
 
     .prologue
     .line 56
@@ -195,9 +191,6 @@
 
 .method static synthetic access$400(Lcom/adobe/air/AndroidWebView;JI)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 56
@@ -208,9 +201,6 @@
 
 .method static synthetic access$500(Lcom/adobe/air/AndroidWebView;JI)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 56
@@ -221,7 +211,6 @@
 
 .method static synthetic access$600(Lcom/adobe/air/AndroidWebView;)Lcom/adobe/air/AndroidWebView$WebViewCustomView;
     .locals 1
-    .parameter
 
     .prologue
     .line 56
@@ -232,8 +221,6 @@
 
 .method static synthetic access$602(Lcom/adobe/air/AndroidWebView;Lcom/adobe/air/AndroidWebView$WebViewCustomView;)Lcom/adobe/air/AndroidWebView$WebViewCustomView;
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 56
@@ -244,7 +231,6 @@
 
 .method static synthetic access$800(Lcom/adobe/air/AndroidWebView;)Landroid/graphics/Rect;
     .locals 1
-    .parameter
 
     .prologue
     .line 56
@@ -255,7 +241,6 @@
 
 .method private decodeURL(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
-    .parameter
 
     .prologue
     .line 892
@@ -336,7 +321,6 @@
 # virtual methods
 .method public addedToStage(Lcom/adobe/air/AIRWindowSurfaceView;)V
     .locals 4
-    .parameter
 
     .prologue
     const/4 v3, 0x0
@@ -387,10 +371,6 @@
 
 .method public adjustViewBounds(DDDD)V
     .locals 6
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 821
@@ -426,7 +406,6 @@
 
 .method public assignFocus(I)V
     .locals 2
-    .parameter
 
     .prologue
     const/4 v1, 0x1
@@ -517,8 +496,6 @@
 
 .method public captureSnapshot(II)Landroid/graphics/Bitmap;
     .locals 6
-    .parameter
-    .parameter
 
     .prologue
     const/4 v0, 0x0
@@ -784,8 +761,6 @@
 
 .method public loadString(Ljava/lang/String;Ljava/lang/String;)V
     .locals 5
-    .parameter
-    .parameter
 
     .prologue
     const/4 v2, 0x3
@@ -918,7 +893,6 @@
 
 .method public loadURL(Ljava/lang/String;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 871
@@ -939,7 +913,6 @@
 
 .method public onActivityStateChanged(Lcom/adobe/air/AndroidActivityWrapper$ActivityState;)V
     .locals 5
-    .parameter
 
     .prologue
     const-class v0, Landroid/webkit/WebView;
@@ -1131,7 +1104,6 @@
 
 .method public onConfigurationChanged(Landroid/content/res/Configuration;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 631
@@ -1140,7 +1112,6 @@
 
 .method public onLoadComplete(Ljava/lang/String;)V
     .locals 4
-    .parameter
 
     .prologue
     .line 913
@@ -1170,9 +1141,6 @@
 
 .method public onLoadError(Ljava/lang/String;Ljava/lang/String;I)V
     .locals 4
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 926
@@ -1202,7 +1170,6 @@
 
 .method public onLocationChange(Ljava/lang/String;)Z
     .locals 4
-    .parameter
 
     .prologue
     .line 879
@@ -1237,7 +1204,6 @@
 
 .method public onLocationChanging(Ljava/lang/String;)Z
     .locals 4
-    .parameter
 
     .prologue
     .line 901
@@ -1350,7 +1316,6 @@
 
 .method public setInternalReference(J)V
     .locals 0
-    .parameter
 
     .prologue
     .line 635
@@ -1362,7 +1327,6 @@
 
 .method public setStageFocus(I)V
     .locals 1
-    .parameter
 
     .prologue
     .line 991
@@ -1381,7 +1345,6 @@
 
 .method public setVisibility(Z)V
     .locals 2
-    .parameter
 
     .prologue
     .line 720
@@ -1430,7 +1393,6 @@
 
 .method public updateViewBoundsWithKeyboard(I)J
     .locals 6
-    .parameter
 
     .prologue
     const-wide/16 v4, 0x0

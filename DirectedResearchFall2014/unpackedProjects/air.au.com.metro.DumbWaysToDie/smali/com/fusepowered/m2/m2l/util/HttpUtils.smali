@@ -16,7 +16,7 @@
 
 .method public static ping(Ljava/lang/String;)Lorg/apache/http/HttpResponse;
     .locals 4
-    .parameter "url"
+    .param p0, "url"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -44,13 +44,13 @@
     invoke-direct {v1, p0}, Lorg/apache/http/client/methods/HttpGet;-><init>(Ljava/lang/String;)V
 
     .line 50
-    .local v1, request:Lorg/apache/http/client/methods/HttpGet;
+    .local v1, "request":Lorg/apache/http/client/methods/HttpGet;
     invoke-static {}, Lcom/fusepowered/m2/m2l/factories/HttpClientFactory;->create()Lorg/apache/http/impl/client/DefaultHttpClient;
 
     move-result-object v0
 
     .line 51
-    .local v0, defaultHttpClient:Lorg/apache/http/impl/client/DefaultHttpClient;
+    .local v0, "defaultHttpClient":Lorg/apache/http/impl/client/DefaultHttpClient;
     invoke-virtual {v0, v1}, Lorg/apache/http/impl/client/DefaultHttpClient;->execute(Lorg/apache/http/client/methods/HttpUriRequest;)Lorg/apache/http/HttpResponse;
 
     move-result-object v2

@@ -33,9 +33,8 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m1/google/gson/Gson;Lcom/fusepowered/m1/google/gson/TypeAdapter;Ljava/lang/reflect/Type;)V
     .locals 0
-    .parameter "context"
-    .parameter
-    .parameter "type"
+    .param p1, "context"    # Lcom/fusepowered/m1/google/gson/Gson;
+    .param p3, "type"    # Ljava/lang/reflect/Type;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -49,8 +48,8 @@
 
     .prologue
     .line 33
-    .local p0, this:Lcom/fusepowered/m1/google/gson/internal/bind/TypeAdapterRuntimeTypeWrapper;,"Lcom/fusepowered/m1/google/gson/internal/bind/TypeAdapterRuntimeTypeWrapper<TT;>;"
-    .local p2, delegate:Lcom/fusepowered/m1/google/gson/TypeAdapter;,"Lcom/fusepowered/m1/google/gson/TypeAdapter<TT;>;"
+    .local p0, "this":Lcom/fusepowered/m1/google/gson/internal/bind/TypeAdapterRuntimeTypeWrapper;, "Lcom/fusepowered/m1/google/gson/internal/bind/TypeAdapterRuntimeTypeWrapper<TT;>;"
+    .local p2, "delegate":Lcom/fusepowered/m1/google/gson/TypeAdapter;, "Lcom/fusepowered/m1/google/gson/TypeAdapter<TT;>;"
     invoke-direct {p0}, Lcom/fusepowered/m1/google/gson/TypeAdapter;-><init>()V
 
     .line 34
@@ -68,12 +67,12 @@
 
 .method private getRuntimeTypeIfMoreSpecific(Ljava/lang/reflect/Type;Ljava/lang/Object;)Ljava/lang/reflect/Type;
     .locals 1
-    .parameter "type"
-    .parameter "value"
+    .param p1, "type"    # Ljava/lang/reflect/Type;
+    .param p2, "value"    # Ljava/lang/Object;
 
     .prologue
     .line 76
-    .local p0, this:Lcom/fusepowered/m1/google/gson/internal/bind/TypeAdapterRuntimeTypeWrapper;,"Lcom/fusepowered/m1/google/gson/internal/bind/TypeAdapterRuntimeTypeWrapper<TT;>;"
+    .local p0, "this":Lcom/fusepowered/m1/google/gson/internal/bind/TypeAdapterRuntimeTypeWrapper;, "Lcom/fusepowered/m1/google/gson/internal/bind/TypeAdapterRuntimeTypeWrapper<TT;>;"
     if-eqz p2, :cond_1
 
     const-class v0, Ljava/lang/Object;
@@ -103,7 +102,7 @@
 # virtual methods
 .method public read(Lcom/fusepowered/m1/google/gson/stream/JsonReader;)Ljava/lang/Object;
     .locals 1
-    .parameter "in"
+    .param p1, "in"    # Lcom/fusepowered/m1/google/gson/stream/JsonReader;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -120,7 +119,7 @@
 
     .prologue
     .line 41
-    .local p0, this:Lcom/fusepowered/m1/google/gson/internal/bind/TypeAdapterRuntimeTypeWrapper;,"Lcom/fusepowered/m1/google/gson/internal/bind/TypeAdapterRuntimeTypeWrapper<TT;>;"
+    .local p0, "this":Lcom/fusepowered/m1/google/gson/internal/bind/TypeAdapterRuntimeTypeWrapper;, "Lcom/fusepowered/m1/google/gson/internal/bind/TypeAdapterRuntimeTypeWrapper<TT;>;"
     iget-object v0, p0, Lcom/fusepowered/m1/google/gson/internal/bind/TypeAdapterRuntimeTypeWrapper;->delegate:Lcom/fusepowered/m1/google/gson/TypeAdapter;
 
     invoke-virtual {v0, p1}, Lcom/fusepowered/m1/google/gson/TypeAdapter;->read(Lcom/fusepowered/m1/google/gson/stream/JsonReader;)Ljava/lang/Object;
@@ -132,8 +131,7 @@
 
 .method public write(Lcom/fusepowered/m1/google/gson/stream/JsonWriter;Ljava/lang/Object;)V
     .locals 5
-    .parameter "out"
-    .parameter
+    .param p1, "out"    # Lcom/fusepowered/m1/google/gson/stream/JsonWriter;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -150,12 +148,12 @@
 
     .prologue
     .line 53
-    .local p0, this:Lcom/fusepowered/m1/google/gson/internal/bind/TypeAdapterRuntimeTypeWrapper;,"Lcom/fusepowered/m1/google/gson/internal/bind/TypeAdapterRuntimeTypeWrapper<TT;>;"
-    .local p2, value:Ljava/lang/Object;,"TT;"
+    .local p0, "this":Lcom/fusepowered/m1/google/gson/internal/bind/TypeAdapterRuntimeTypeWrapper;, "Lcom/fusepowered/m1/google/gson/internal/bind/TypeAdapterRuntimeTypeWrapper<TT;>;"
+    .local p2, "value":Ljava/lang/Object;, "TT;"
     iget-object v0, p0, Lcom/fusepowered/m1/google/gson/internal/bind/TypeAdapterRuntimeTypeWrapper;->delegate:Lcom/fusepowered/m1/google/gson/TypeAdapter;
 
     .line 54
-    .local v0, chosen:Lcom/fusepowered/m1/google/gson/TypeAdapter;
+    .local v0, "chosen":Lcom/fusepowered/m1/google/gson/TypeAdapter;
     iget-object v3, p0, Lcom/fusepowered/m1/google/gson/internal/bind/TypeAdapterRuntimeTypeWrapper;->type:Ljava/lang/reflect/Type;
 
     invoke-direct {p0, v3, p2}, Lcom/fusepowered/m1/google/gson/internal/bind/TypeAdapterRuntimeTypeWrapper;->getRuntimeTypeIfMoreSpecific(Ljava/lang/reflect/Type;Ljava/lang/Object;)Ljava/lang/reflect/Type;
@@ -163,7 +161,7 @@
     move-result-object v1
 
     .line 55
-    .local v1, runtimeType:Ljava/lang/reflect/Type;
+    .local v1, "runtimeType":Ljava/lang/reflect/Type;
     iget-object v3, p0, Lcom/fusepowered/m1/google/gson/internal/bind/TypeAdapterRuntimeTypeWrapper;->type:Ljava/lang/reflect/Type;
 
     if-eq v1, v3, :cond_0
@@ -180,7 +178,7 @@
     move-result-object v2
 
     .line 57
-    .local v2, runtimeTypeAdapter:Lcom/fusepowered/m1/google/gson/TypeAdapter;
+    .local v2, "runtimeTypeAdapter":Lcom/fusepowered/m1/google/gson/TypeAdapter;
     instance-of v3, v2, Lcom/fusepowered/m1/google/gson/internal/bind/ReflectiveTypeAdapterFactory$Adapter;
 
     if-nez v3, :cond_1
@@ -189,7 +187,7 @@
     move-object v0, v2
 
     .line 69
-    .end local v2           #runtimeTypeAdapter:Lcom/fusepowered/m1/google/gson/TypeAdapter;
+    .end local v2    # "runtimeTypeAdapter":Lcom/fusepowered/m1/google/gson/TypeAdapter;
     :cond_0
     :goto_0
     invoke-virtual {v0, p1, p2}, Lcom/fusepowered/m1/google/gson/TypeAdapter;->write(Lcom/fusepowered/m1/google/gson/stream/JsonWriter;Ljava/lang/Object;)V
@@ -198,7 +196,7 @@
     return-void
 
     .line 60
-    .restart local v2       #runtimeTypeAdapter:Lcom/fusepowered/m1/google/gson/TypeAdapter;
+    .restart local v2    # "runtimeTypeAdapter":Lcom/fusepowered/m1/google/gson/TypeAdapter;
     :cond_1
     iget-object v3, p0, Lcom/fusepowered/m1/google/gson/internal/bind/TypeAdapterRuntimeTypeWrapper;->delegate:Lcom/fusepowered/m1/google/gson/TypeAdapter;
 

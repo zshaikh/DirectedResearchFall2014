@@ -45,7 +45,7 @@
 
 .method public static base64Digest(Ljava/lang/String;)Ljava/lang/String;
     .locals 4
-    .parameter "input"
+    .param p0, "input"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/UnsupportedEncodingException;,
@@ -64,7 +64,7 @@
     move-result-object v0
 
     .line 194
-    .local v0, b64digest:Ljava/lang/String;
+    .local v0, "b64digest":Ljava/lang/String;
     const/4 v1, 0x0
 
     invoke-virtual {v0}, Ljava/lang/String;->length()I
@@ -84,7 +84,7 @@
 
 .method private static convertToBase64([B)Ljava/lang/String;
     .locals 3
-    .parameter "in"
+    .param p0, "in"    # [B
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/UnsupportedEncodingException;
@@ -119,7 +119,7 @@
 
 .method private static convertToHex([B)Ljava/lang/String;
     .locals 10
-    .parameter "in"
+    .param p0, "in"    # [B
 
     .prologue
     const/4 v9, 0x0
@@ -134,13 +134,13 @@
     invoke-direct {v0, v4}, Ljava/lang/StringBuilder;-><init>(I)V
 
     .line 171
-    .local v0, builder:Ljava/lang/StringBuilder;
+    .local v0, "builder":Ljava/lang/StringBuilder;
     new-instance v1, Ljava/util/Formatter;
 
     invoke-direct {v1, v0}, Ljava/util/Formatter;-><init>(Ljava/lang/Appendable;)V
 
     .line 172
-    .local v1, formatter:Ljava/util/Formatter;
+    .local v1, "formatter":Ljava/util/Formatter;
     array-length v4, p0
 
     move v5, v9
@@ -154,19 +154,19 @@
     move-result-object v2
 
     .line 177
-    .local v2, hex:Ljava/lang/String;
+    .local v2, "hex":Ljava/lang/String;
     invoke-virtual {v1}, Ljava/util/Formatter;->close()V
 
     .line 179
     return-object v2
 
     .line 172
-    .end local v2           #hex:Ljava/lang/String;
+    .end local v2    # "hex":Ljava/lang/String;
     :cond_0
     aget-byte v3, p0, v5
 
     .line 173
-    .local v3, inByte:B
+    .local v3, "inByte":B
     const-string v6, "%02x"
 
     const/4 v7, 0x1
@@ -189,7 +189,6 @@
 
 .method public static createQuery(Ljava/util/HashMap;)Ljava/lang/String;
     .locals 8
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -204,7 +203,7 @@
 
     .prologue
     .line 77
-    .local p0, dict:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p0, "dict":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     if-nez p0, :cond_0
 
     const/4 v4, 0x0
@@ -220,7 +219,7 @@
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
     .line 81
-    .local v2, query:Ljava/lang/StringBuilder;
+    .local v2, "query":Ljava/lang/StringBuilder;
     invoke-virtual {p0}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
 
     move-result-object v4
@@ -253,7 +252,7 @@
     check-cast v0, Ljava/util/Map$Entry;
 
     .line 83
-    .local v0, entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v0, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v1
@@ -261,7 +260,7 @@
     check-cast v1, Ljava/lang/String;
 
     .line 84
-    .local v1, key:Ljava/lang/String;
+    .local v1, "key":Ljava/lang/String;
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v3
@@ -269,7 +268,7 @@
     check-cast v3, Ljava/lang/String;
 
     .line 86
-    .local v3, value:Ljava/lang/String;
+    .local v3, "value":Ljava/lang/String;
     if-eqz v1, :cond_1
 
     .line 87
@@ -328,7 +327,7 @@
 
 .method public static createQueryDict(Ljava/lang/String;)Ljava/util/HashMap;
     .locals 11
-    .parameter "query"
+    .param p0, "query"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -361,7 +360,7 @@
     invoke-direct {v4}, Ljava/util/HashMap;-><init>()V
 
     .line 47
-    .local v4, queryComps:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v4, "queryComps":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v6, "&|\\?"
 
     invoke-virtual {p0, v6}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
@@ -369,7 +368,7 @@
     move-result-object v3
 
     .line 48
-    .local v3, parts:[Ljava/lang/String;
+    .local v3, "parts":[Ljava/lang/String;
     array-length v6, v3
 
     move v7, v10
@@ -387,7 +386,7 @@
     aget-object v2, v3, v7
 
     .line 49
-    .local v2, part:Ljava/lang/String;
+    .local v2, "part":Ljava/lang/String;
     const-string v8, "="
 
     invoke-virtual {v2, v8}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
@@ -395,7 +394,7 @@
     move-result-object v1
 
     .line 51
-    .local v1, kv:[Ljava/lang/String;
+    .local v1, "kv":[Ljava/lang/String;
     array-length v8, v1
 
     const/4 v9, 0x2
@@ -417,7 +416,7 @@
     move-result-object v0
 
     .line 54
-    .local v0, key:Ljava/lang/String;
+    .local v0, "key":Ljava/lang/String;
     const/4 v8, 0x1
 
     aget-object v8, v1, v8
@@ -427,7 +426,7 @@
     move-result-object v5
 
     .line 56
-    .local v5, val:Ljava/lang/String;
+    .local v5, "val":Ljava/lang/String;
     invoke-virtual {v4, v0, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_2
@@ -435,7 +434,7 @@
 
 .method private static dataDigest(Ljava/lang/String;)[B
     .locals 2
-    .parameter "in"
+    .param p0, "in"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/security/NoSuchAlgorithmException;,
@@ -462,7 +461,7 @@
     move-result-object v0
 
     .line 207
-    .local v0, md:Ljava/security/MessageDigest;
+    .local v0, "md":Ljava/security/MessageDigest;
     const-string v1, "UTF8"
 
     invoke-virtual {p0, v1}, Ljava/lang/String;->getBytes(Ljava/lang/String;)[B
@@ -478,7 +477,7 @@
 
 .method public static decodeURL(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
-    .parameter "url"
+    .param p0, "url"    # Ljava/lang/String;
 
     .prologue
     .line 20
@@ -493,7 +492,7 @@
 
 .method public static encodeHtml(Ljava/lang/String;)Ljava/lang/String;
     .locals 1
-    .parameter "to_encode"
+    .param p0, "to_encode"    # Ljava/lang/String;
 
     .prologue
     .line 217
@@ -506,7 +505,7 @@
 
 .method public static encodeURL(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
-    .parameter "url"
+    .param p0, "url"    # Ljava/lang/String;
 
     .prologue
     .line 24
@@ -535,7 +534,7 @@
 
 .method public static hexDigest(Ljava/lang/String;)Ljava/lang/String;
     .locals 1
-    .parameter "input"
+    .param p0, "input"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/security/NoSuchAlgorithmException;,
@@ -558,7 +557,7 @@
 
 .method public static log(Ljava/lang/String;)V
     .locals 6
-    .parameter "message"
+    .param p0, "message"    # Ljava/lang/String;
 
     .prologue
     .line 64
@@ -567,7 +566,7 @@
     invoke-direct {v0}, Lv2/com/playhaven/configuration/PHConfiguration;-><init>()V
 
     .line 66
-    .local v0, config:Lv2/com/playhaven/configuration/PHConfiguration;
+    .local v0, "config":Lv2/com/playhaven/configuration/PHConfiguration;
     const-string v2, "PlayHaven-%s"
 
     const/4 v3, 0x1
@@ -587,7 +586,7 @@
     move-result-object v1
 
     .line 68
-    .local v1, tag:Ljava/lang/String;
+    .local v1, "tag":Ljava/lang/String;
     invoke-static {v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 69
@@ -596,7 +595,7 @@
 
 .method public static queryComponent(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
-    .parameter "url"
+    .param p0, "url"    # Ljava/lang/String;
 
     .prologue
     .line 107
@@ -607,7 +606,7 @@
     move-result v0
 
     .line 109
-    .local v0, queryStart:I
+    .local v0, "queryStart":I
     const/4 v1, -0x1
 
     if-ne v0, v1, :cond_0
@@ -630,7 +629,7 @@
 
 .method public static urlDecode(Ljava/lang/String;)Ljava/lang/String;
     .locals 1
-    .parameter "in"
+    .param p0, "in"    # Ljava/lang/String;
 
     .prologue
     .line 165
@@ -643,7 +642,7 @@
 
 .method public static urlEncode(Ljava/lang/String;)Ljava/lang/String;
     .locals 1
-    .parameter "in"
+    .param p0, "in"    # Ljava/lang/String;
 
     .prologue
     .line 115
@@ -656,7 +655,7 @@
 
 .method public static weakUrlEncode(Ljava/lang/String;)Ljava/lang/String;
     .locals 14
-    .parameter "url"
+    .param p0, "url"    # Ljava/lang/String;
 
     .prologue
     const/4 v13, 0x4
@@ -770,7 +769,7 @@
     aput-object v8, v6, v7
 
     .line 135
-    .local v6, reserved:[Ljava/lang/String;
+    .local v6, "reserved":[Ljava/lang/String;
     const/16 v7, 0xf
 
     new-array v2, v7, [Ljava/lang/String;
@@ -861,16 +860,16 @@
     aput-object v8, v2, v7
 
     .line 144
-    .local v2, escaped:[Ljava/lang/String;
+    .local v2, "escaped":[Ljava/lang/String;
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0, p0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     .line 147
-    .local v0, encUrl:Ljava/lang/StringBuilder;
+    .local v0, "encUrl":Ljava/lang/StringBuilder;
     const/4 v3, 0x0
 
-    .local v3, i:I
+    .local v3, "i":I
     :goto_1
     array-length v7, v2
 
@@ -888,17 +887,17 @@
     aget-object v5, v6, v3
 
     .line 149
-    .local v5, res:Ljava/lang/String;
+    .local v5, "res":Ljava/lang/String;
     aget-object v1, v2, v3
 
     .line 152
-    .local v1, esc:Ljava/lang/String;
+    .local v1, "esc":Ljava/lang/String;
     invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->indexOf(Ljava/lang/String;)I
 
     move-result v4
 
     .line 153
-    .local v4, index:I
+    .local v4, "index":I
     :goto_2
     const/4 v7, -0x1
 

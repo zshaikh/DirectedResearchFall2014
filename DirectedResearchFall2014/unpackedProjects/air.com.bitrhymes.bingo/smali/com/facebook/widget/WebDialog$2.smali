@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/facebook/widget/WebDialog;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1
@@ -40,13 +39,13 @@
 # virtual methods
 .method public onCancel(Landroid/content/DialogInterface;)V
     .locals 1
-    .parameter "dialogInterface"
+    .param p1, "dialogInterface"    # Landroid/content/DialogInterface;
 
     .prologue
     .line 205
     iget-object v0, p0, Lcom/facebook/widget/WebDialog$2;->this$0:Lcom/facebook/widget/WebDialog;
 
-    #calls: Lcom/facebook/widget/WebDialog;->sendCancelToListener()V
+    # invokes: Lcom/facebook/widget/WebDialog;->sendCancelToListener()V
     invoke-static {v0}, Lcom/facebook/widget/WebDialog;->access$1(Lcom/facebook/widget/WebDialog;)V
 
     .line 206

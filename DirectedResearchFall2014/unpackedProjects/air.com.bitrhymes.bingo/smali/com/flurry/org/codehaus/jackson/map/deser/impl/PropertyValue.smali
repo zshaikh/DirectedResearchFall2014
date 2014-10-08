@@ -22,8 +22,8 @@
 # direct methods
 .method protected constructor <init>(Lcom/flurry/org/codehaus/jackson/map/deser/impl/PropertyValue;Ljava/lang/Object;)V
     .locals 0
-    .parameter "next"
-    .parameter "value"
+    .param p1, "next"    # Lcom/flurry/org/codehaus/jackson/map/deser/impl/PropertyValue;
+    .param p2, "value"    # Ljava/lang/Object;
 
     .prologue
     .line 22

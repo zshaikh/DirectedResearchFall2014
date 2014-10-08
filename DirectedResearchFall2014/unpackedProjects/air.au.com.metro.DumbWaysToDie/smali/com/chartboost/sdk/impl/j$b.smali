@@ -30,9 +30,6 @@
 # direct methods
 .method public constructor <init>(Lcom/chartboost/sdk/impl/j;Lcom/chartboost/sdk/impl/k;Lorg/json/JSONObject;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 61

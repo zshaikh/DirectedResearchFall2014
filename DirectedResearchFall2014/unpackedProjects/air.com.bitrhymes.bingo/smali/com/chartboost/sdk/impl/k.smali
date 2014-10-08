@@ -42,7 +42,6 @@
 # direct methods
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 85
@@ -67,7 +66,6 @@
 
 .method public static a(Lorg/json/JSONObject;)Lcom/chartboost/sdk/impl/k;
     .locals 2
-    .parameter
 
     .prologue
     .line 290
@@ -153,7 +151,6 @@
 
 .method private b(Landroid/content/Context;)V
     .locals 5
-    .parameter
 
     .prologue
     const/4 v4, 0x0
@@ -387,7 +384,6 @@
 
 .method public a(Landroid/content/Context;)V
     .locals 6
-    .parameter
 
     .prologue
     const-string v5, "sdk"
@@ -704,8 +700,6 @@
 
 .method public a(Ljava/lang/String;Ljava/lang/Object;)V
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 91
@@ -745,8 +739,6 @@
 
 .method public a(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 107
@@ -773,7 +765,6 @@
 
 .method public a(Z)V
     .locals 0
-    .parameter
 
     .prologue
     .line 266
@@ -785,7 +776,6 @@
 
 .method public varargs a([Lcom/chartboost/sdk/Libraries/e$g;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 281
@@ -815,8 +805,6 @@
 
 .method public b(Ljava/lang/String;Ljava/lang/String;)V
     .locals 5
-    .parameter
-    .parameter
 
     .prologue
     .line 170

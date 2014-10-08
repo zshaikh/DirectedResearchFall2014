@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/bitrhymes/facebookext/functions/FBExtendAccessTokenFunction;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1
@@ -40,9 +39,9 @@
 # virtual methods
 .method public call(Lcom/facebook/Session;Lcom/facebook/SessionState;Ljava/lang/Exception;)V
     .locals 5
-    .parameter "session"
-    .parameter "state"
-    .parameter "exception"
+    .param p1, "session"    # Lcom/facebook/Session;
+    .param p2, "state"    # Lcom/facebook/SessionState;
+    .param p3, "exception"    # Ljava/lang/Exception;
 
     .prologue
     const-string v4, "EXTEND_ACCESS_TOKEN_EVENT"

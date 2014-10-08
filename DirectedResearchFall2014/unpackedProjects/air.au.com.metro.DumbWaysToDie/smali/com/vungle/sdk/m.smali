@@ -50,7 +50,6 @@
 # virtual methods
 .method public final a(Lcom/vungle/sdk/VungleBitmapFactory;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 23

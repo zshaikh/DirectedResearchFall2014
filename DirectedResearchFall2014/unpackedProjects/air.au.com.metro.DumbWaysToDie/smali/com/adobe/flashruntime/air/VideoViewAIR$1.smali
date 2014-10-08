@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/adobe/flashruntime/air/VideoViewAIR;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 54
@@ -39,10 +38,6 @@
 # virtual methods
 .method public surfaceChanged(Landroid/view/SurfaceHolder;III)V
     .locals 3
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 57
@@ -54,7 +49,7 @@
 
     move-result-wide v1
 
-    #calls: Lcom/adobe/flashruntime/air/VideoViewAIR;->nativeSetSurfaceSize(JII)V
+    # invokes: Lcom/adobe/flashruntime/air/VideoViewAIR;->nativeSetSurfaceSize(JII)V
     invoke-static {v0, v1, v2, p3, p4}, Lcom/adobe/flashruntime/air/VideoViewAIR;->access$000(Lcom/adobe/flashruntime/air/VideoViewAIR;JII)V
 
     .line 59
@@ -63,7 +58,6 @@
 
 .method public surfaceCreated(Landroid/view/SurfaceHolder;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 63
@@ -79,7 +73,6 @@
 
 .method public surfaceDestroyed(Landroid/view/SurfaceHolder;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 68

@@ -40,7 +40,6 @@
 # direct methods
 .method public constructor <init>(Lcom/chartboost/sdk/impl/a;)V
     .locals 2
-    .parameter
 
     .prologue
     const/4 v1, 0x0
@@ -82,7 +81,6 @@
 
 .method protected a(Lcom/chartboost/sdk/Libraries/a$a;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 194
@@ -136,8 +134,6 @@
 
 .method protected a(Ljava/lang/String;Lcom/chartboost/sdk/Libraries/e$b;)V
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 158
@@ -151,9 +147,6 @@
 
 .method protected a(Ljava/lang/String;Lcom/chartboost/sdk/Libraries/e$b;Z)V
     .locals 2
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 163
@@ -177,7 +170,6 @@
 
 .method public a(Lorg/json/JSONObject;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 147
@@ -219,10 +211,6 @@
 
 .method protected a(Lorg/json/JSONObject;Ljava/lang/String;Lcom/chartboost/sdk/Libraries/e$b;Landroid/os/Bundle;)V
     .locals 6
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const/4 v4, 0x0

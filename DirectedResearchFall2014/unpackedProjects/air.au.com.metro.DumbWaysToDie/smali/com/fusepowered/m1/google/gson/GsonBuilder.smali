@@ -126,10 +126,9 @@
 
 .method private addTypeAdaptersForDate(Ljava/lang/String;IILjava/util/List;)V
     .locals 4
-    .parameter "datePattern"
-    .parameter "dateStyle"
-    .parameter "timeStyle"
-    .parameter
+    .param p1, "datePattern"    # Ljava/lang/String;
+    .param p2, "dateStyle"    # I
+    .param p3, "timeStyle"    # I
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -143,7 +142,7 @@
     .end annotation
 
     .prologue
-    .local p4, factories:Ljava/util/List;,"Ljava/util/List<Lcom/fusepowered/m1/google/gson/TypeAdapterFactory;>;"
+    .local p4, "factories":Ljava/util/List;, "Ljava/util/List<Lcom/fusepowered/m1/google/gson/TypeAdapterFactory;>;"
     const/4 v3, 0x2
 
     .line 554
@@ -167,7 +166,7 @@
     invoke-direct {v0, p1}, Lcom/fusepowered/m1/google/gson/DefaultDateTypeAdapter;-><init>(Ljava/lang/String;)V
 
     .line 562
-    .local v0, dateTypeAdapter:Lcom/fusepowered/m1/google/gson/DefaultDateTypeAdapter;
+    .local v0, "dateTypeAdapter":Lcom/fusepowered/m1/google/gson/DefaultDateTypeAdapter;
     :goto_0
     const-class v1, Ljava/util/Date;
 
@@ -208,7 +207,7 @@
     invoke-interface {p4, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 565
-    .end local v0           #dateTypeAdapter:Lcom/fusepowered/m1/google/gson/DefaultDateTypeAdapter;
+    .end local v0    # "dateTypeAdapter":Lcom/fusepowered/m1/google/gson/DefaultDateTypeAdapter;
     :cond_0
     return-void
 
@@ -223,7 +222,7 @@
 
     invoke-direct {v0, p2, p3}, Lcom/fusepowered/m1/google/gson/DefaultDateTypeAdapter;-><init>(II)V
 
-    .restart local v0       #dateTypeAdapter:Lcom/fusepowered/m1/google/gson/DefaultDateTypeAdapter;
+    .restart local v0    # "dateTypeAdapter":Lcom/fusepowered/m1/google/gson/DefaultDateTypeAdapter;
     goto :goto_0
 .end method
 
@@ -231,7 +230,7 @@
 # virtual methods
 .method public addDeserializationExclusionStrategy(Lcom/fusepowered/m1/google/gson/ExclusionStrategy;)Lcom/fusepowered/m1/google/gson/GsonBuilder;
     .locals 3
-    .parameter "strategy"
+    .param p1, "strategy"    # Lcom/fusepowered/m1/google/gson/ExclusionStrategy;
 
     .prologue
     .line 339
@@ -253,7 +252,7 @@
 
 .method public addSerializationExclusionStrategy(Lcom/fusepowered/m1/google/gson/ExclusionStrategy;)Lcom/fusepowered/m1/google/gson/GsonBuilder;
     .locals 3
-    .parameter "strategy"
+    .param p1, "strategy"    # Lcom/fusepowered/m1/google/gson/ExclusionStrategy;
 
     .prologue
     .line 322
@@ -283,7 +282,7 @@
     invoke-direct {v11}, Ljava/util/ArrayList;-><init>()V
 
     .line 540
-    .local v11, factories:Ljava/util/List;,"Ljava/util/List<Lcom/fusepowered/m1/google/gson/TypeAdapterFactory;>;"
+    .local v11, "factories":Ljava/util/List;, "Ljava/util/List<Lcom/fusepowered/m1/google/gson/TypeAdapterFactory;>;"
     iget-object v0, p0, Lcom/fusepowered/m1/google/gson/GsonBuilder;->factories:Ljava/util/List;
 
     invoke-interface {v11, v0}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
@@ -378,7 +377,7 @@
 
 .method public varargs excludeFieldsWithModifiers([I)Lcom/fusepowered/m1/google/gson/GsonBuilder;
     .locals 1
-    .parameter "modifiers"
+    .param p1, "modifiers"    # [I
 
     .prologue
     .line 120
@@ -426,8 +425,8 @@
 
 .method public registerTypeAdapter(Ljava/lang/reflect/Type;Ljava/lang/Object;)Lcom/fusepowered/m1/google/gson/GsonBuilder;
     .locals 4
-    .parameter "type"
-    .parameter "typeAdapter"
+    .param p1, "type"    # Ljava/lang/reflect/Type;
+    .param p2, "typeAdapter"    # Ljava/lang/Object;
 
     .prologue
     .line 448
@@ -486,7 +485,7 @@
     move-result-object v1
 
     .line 457
-    .local v1, typeToken:Lcom/fusepowered/m1/google/gson/reflect/TypeToken;,"Lcom/fusepowered/m1/google/gson/reflect/TypeToken<*>;"
+    .local v1, "typeToken":Lcom/fusepowered/m1/google/gson/reflect/TypeToken;, "Lcom/fusepowered/m1/google/gson/reflect/TypeToken<*>;"
     iget-object v2, p0, Lcom/fusepowered/m1/google/gson/GsonBuilder;->factories:Ljava/util/List;
 
     invoke-static {v1, p2}, Lcom/fusepowered/m1/google/gson/TreeTypeAdapter;->newFactoryWithMatchRawType(Lcom/fusepowered/m1/google/gson/reflect/TypeToken;Ljava/lang/Object;)Lcom/fusepowered/m1/google/gson/TypeAdapterFactory;
@@ -496,7 +495,7 @@
     invoke-interface {v2, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 459
-    .end local v1           #typeToken:Lcom/fusepowered/m1/google/gson/reflect/TypeToken;,"Lcom/fusepowered/m1/google/gson/reflect/TypeToken<*>;"
+    .end local v1    # "typeToken":Lcom/fusepowered/m1/google/gson/reflect/TypeToken;, "Lcom/fusepowered/m1/google/gson/reflect/TypeToken<*>;"
     :cond_3
     instance-of v2, p2, Lcom/fusepowered/m1/google/gson/TypeAdapter;
 
@@ -511,7 +510,7 @@
 
     check-cast p2, Lcom/fusepowered/m1/google/gson/TypeAdapter;
 
-    .end local p2
+    .end local p2    # "typeAdapter":Ljava/lang/Object;
     invoke-static {v3, p2}, Lcom/fusepowered/m1/google/gson/internal/bind/TypeAdapters;->newFactory(Lcom/fusepowered/m1/google/gson/reflect/TypeToken;Lcom/fusepowered/m1/google/gson/TypeAdapter;)Lcom/fusepowered/m1/google/gson/TypeAdapterFactory;
 
     move-result-object v3
@@ -523,7 +522,7 @@
     return-object p0
 
     .line 448
-    .restart local p2
+    .restart local p2    # "typeAdapter":Ljava/lang/Object;
     :cond_5
     const/4 v2, 0x0
 
@@ -532,7 +531,7 @@
 
 .method public registerTypeAdapterFactory(Lcom/fusepowered/m1/google/gson/TypeAdapterFactory;)Lcom/fusepowered/m1/google/gson/GsonBuilder;
     .locals 1
-    .parameter "factory"
+    .param p1, "factory"    # Lcom/fusepowered/m1/google/gson/TypeAdapterFactory;
 
     .prologue
     .line 474
@@ -546,8 +545,7 @@
 
 .method public registerTypeHierarchyAdapter(Ljava/lang/Class;Ljava/lang/Object;)Lcom/fusepowered/m1/google/gson/GsonBuilder;
     .locals 3
-    .parameter
-    .parameter "typeAdapter"
+    .param p2, "typeAdapter"    # Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -560,7 +558,7 @@
     .end annotation
 
     .prologue
-    .local p1, baseType:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p1, "baseType":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const/4 v2, 0x0
 
     .line 494
@@ -612,7 +610,7 @@
 
     check-cast p2, Lcom/fusepowered/m1/google/gson/TypeAdapter;
 
-    .end local p2
+    .end local p2    # "typeAdapter":Ljava/lang/Object;
     invoke-static {p1, p2}, Lcom/fusepowered/m1/google/gson/internal/bind/TypeAdapters;->newTypeHierarchyFactory(Ljava/lang/Class;Lcom/fusepowered/m1/google/gson/TypeAdapter;)Lcom/fusepowered/m1/google/gson/TypeAdapterFactory;
 
     move-result-object v1
@@ -623,7 +621,7 @@
     :cond_3
     return-object p0
 
-    .restart local p2
+    .restart local p2    # "typeAdapter":Ljava/lang/Object;
     :cond_4
     move v0, v2
 
@@ -659,7 +657,7 @@
 
 .method public setDateFormat(I)Lcom/fusepowered/m1/google/gson/GsonBuilder;
     .locals 1
-    .parameter "style"
+    .param p1, "style"    # I
 
     .prologue
     .line 403
@@ -676,8 +674,8 @@
 
 .method public setDateFormat(II)Lcom/fusepowered/m1/google/gson/GsonBuilder;
     .locals 1
-    .parameter "dateStyle"
-    .parameter "timeStyle"
+    .param p1, "dateStyle"    # I
+    .param p2, "timeStyle"    # I
 
     .prologue
     .line 424
@@ -697,7 +695,7 @@
 
 .method public setDateFormat(Ljava/lang/String;)Lcom/fusepowered/m1/google/gson/GsonBuilder;
     .locals 0
-    .parameter "pattern"
+    .param p1, "pattern"    # Ljava/lang/String;
 
     .prologue
     .line 384
@@ -709,7 +707,7 @@
 
 .method public varargs setExclusionStrategies([Lcom/fusepowered/m1/google/gson/ExclusionStrategy;)Lcom/fusepowered/m1/google/gson/GsonBuilder;
     .locals 6
-    .parameter "strategies"
+    .param p1, "strategies"    # [Lcom/fusepowered/m1/google/gson/ExclusionStrategy;
 
     .prologue
     const/4 v5, 0x1
@@ -717,20 +715,20 @@
     .line 303
     move-object v0, p1
 
-    .local v0, arr$:[Lcom/fusepowered/m1/google/gson/ExclusionStrategy;
+    .local v0, "arr$":[Lcom/fusepowered/m1/google/gson/ExclusionStrategy;
     array-length v2, v0
 
-    .local v2, len$:I
+    .local v2, "len$":I
     const/4 v1, 0x0
 
-    .local v1, i$:I
+    .local v1, "i$":I
     :goto_0
     if-ge v1, v2, :cond_0
 
     aget-object v3, v0, v1
 
     .line 304
-    .local v3, strategy:Lcom/fusepowered/m1/google/gson/ExclusionStrategy;
+    .local v3, "strategy":Lcom/fusepowered/m1/google/gson/ExclusionStrategy;
     iget-object v4, p0, Lcom/fusepowered/m1/google/gson/GsonBuilder;->excluder:Lcom/fusepowered/m1/google/gson/internal/Excluder;
 
     invoke-virtual {v4, v3, v5, v5}, Lcom/fusepowered/m1/google/gson/internal/Excluder;->withExclusionStrategy(Lcom/fusepowered/m1/google/gson/ExclusionStrategy;ZZ)Lcom/fusepowered/m1/google/gson/internal/Excluder;
@@ -745,14 +743,14 @@
     goto :goto_0
 
     .line 306
-    .end local v3           #strategy:Lcom/fusepowered/m1/google/gson/ExclusionStrategy;
+    .end local v3    # "strategy":Lcom/fusepowered/m1/google/gson/ExclusionStrategy;
     :cond_0
     return-object p0
 .end method
 
 .method public setFieldNamingPolicy(Lcom/fusepowered/m1/google/gson/FieldNamingPolicy;)Lcom/fusepowered/m1/google/gson/GsonBuilder;
     .locals 0
-    .parameter "namingConvention"
+    .param p1, "namingConvention"    # Lcom/fusepowered/m1/google/gson/FieldNamingPolicy;
 
     .prologue
     .line 275
@@ -764,7 +762,7 @@
 
 .method public setFieldNamingStrategy(Lcom/fusepowered/m1/google/gson/FieldNamingStrategy;)Lcom/fusepowered/m1/google/gson/GsonBuilder;
     .locals 0
-    .parameter "fieldNamingStrategy"
+    .param p1, "fieldNamingStrategy"    # Lcom/fusepowered/m1/google/gson/FieldNamingStrategy;
 
     .prologue
     .line 288
@@ -776,7 +774,7 @@
 
 .method public setLongSerializationPolicy(Lcom/fusepowered/m1/google/gson/LongSerializationPolicy;)Lcom/fusepowered/m1/google/gson/GsonBuilder;
     .locals 0
-    .parameter "serializationPolicy"
+    .param p1, "serializationPolicy"    # Lcom/fusepowered/m1/google/gson/LongSerializationPolicy;
 
     .prologue
     .line 262
@@ -801,7 +799,7 @@
 
 .method public setVersion(D)Lcom/fusepowered/m1/google/gson/GsonBuilder;
     .locals 1
-    .parameter "ignoreVersionsAfter"
+    .param p1, "ignoreVersionsAfter"    # D
 
     .prologue
     .line 104

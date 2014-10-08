@@ -13,7 +13,7 @@
 # direct methods
 .method public constructor <init>(Lcom/playhaven/src/common/PHAPIRequest$Delegate;)V
     .locals 0
-    .parameter "delegate"
+    .param p1, "delegate"    # Lcom/playhaven/src/common/PHAPIRequest$Delegate;
 
     .prologue
     .line 16
@@ -30,8 +30,8 @@
 # virtual methods
 .method public onIAPRequestFailed(Lv2/com/playhaven/requests/purchases/PHIAPTrackingRequest;Lv2/com/playhaven/model/PHError;)V
     .locals 3
-    .parameter "request"
-    .parameter "error"
+    .param p1, "request"    # Lv2/com/playhaven/requests/purchases/PHIAPTrackingRequest;
+    .param p2, "error"    # Lv2/com/playhaven/model/PHError;
 
     .prologue
     .line 27
@@ -39,7 +39,7 @@
 
     check-cast p1, Lcom/playhaven/src/publishersdk/purchases/PHPublisherIAPTrackingRequest;
 
-    .end local p1
+    .end local p1    # "request":Lv2/com/playhaven/requests/purchases/PHIAPTrackingRequest;
     new-instance v1, Ljava/lang/Exception;
 
     invoke-virtual {p2}, Lv2/com/playhaven/model/PHError;->getMessage()Ljava/lang/String;
@@ -56,7 +56,7 @@
 
 .method public onIAPRequestSucceeded(Lv2/com/playhaven/requests/purchases/PHIAPTrackingRequest;)V
     .locals 2
-    .parameter "request"
+    .param p1, "request"    # Lv2/com/playhaven/requests/purchases/PHIAPTrackingRequest;
 
     .prologue
     .line 22
@@ -64,7 +64,7 @@
 
     check-cast p1, Lcom/playhaven/src/publishersdk/purchases/PHPublisherIAPTrackingRequest;
 
-    .end local p1
+    .end local p1    # "request":Lv2/com/playhaven/requests/purchases/PHIAPTrackingRequest;
     new-instance v1, Lorg/json/JSONObject;
 
     invoke-direct {v1}, Lorg/json/JSONObject;-><init>()V

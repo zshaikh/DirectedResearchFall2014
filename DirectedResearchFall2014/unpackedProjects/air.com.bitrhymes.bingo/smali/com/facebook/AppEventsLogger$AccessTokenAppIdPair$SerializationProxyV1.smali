@@ -30,8 +30,8 @@
 # direct methods
 .method private constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
-    .parameter "accessToken"
-    .parameter "appId"
+    .param p1, "accessToken"    # Ljava/lang/String;
+    .param p2, "appId"    # Ljava/lang/String;
 
     .prologue
     .line 234
@@ -49,9 +49,6 @@
 
 .method synthetic constructor <init>(Ljava/lang/String;Ljava/lang/String;Lcom/facebook/AppEventsLogger$AccessTokenAppIdPair$SerializationProxyV1;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 234

@@ -45,7 +45,7 @@
 
 .method static execute(Ljava/lang/Runnable;)V
     .locals 1
-    .parameter "runnable"
+    .param p0, "runnable"    # Ljava/lang/Runnable;
 
     .prologue
     .line 32

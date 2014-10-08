@@ -80,7 +80,7 @@
 
 .method public setAmount(I)V
     .locals 0
-    .parameter "amount"
+    .param p1, "amount"    # I
 
     .prologue
     .line 21
@@ -92,7 +92,7 @@
 
 .method public setClaimConfirmed(Z)V
     .locals 0
-    .parameter "claimConfirmed"
+    .param p1, "claimConfirmed"    # Z
 
     .prologue
     .line 40
@@ -104,7 +104,7 @@
 
 .method public setIncentiveId(I)V
     .locals 0
-    .parameter "incentiveId"
+    .param p1, "incentiveId"    # I
 
     .prologue
     .line 15
@@ -116,7 +116,7 @@
 
 .method public setRewardItemId(Ljava/lang/String;)V
     .locals 0
-    .parameter "rewardItemId"
+    .param p1, "rewardItemId"    # Ljava/lang/String;
 
     .prologue
     .line 28
@@ -128,7 +128,7 @@
 
 .method public setRewardItemName(Ljava/lang/String;)V
     .locals 0
-    .parameter "rewardItemName"
+    .param p1, "rewardItemName"    # Ljava/lang/String;
 
     .prologue
     .line 34
@@ -210,7 +210,7 @@
     move-result-object v0
 
     .line 51
-    .local v0, buf:Ljava/lang/StringBuilder;
+    .local v0, "buf":Ljava/lang/StringBuilder;
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1

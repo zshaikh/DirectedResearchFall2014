@@ -33,8 +33,8 @@
 # direct methods
 .method public constructor <init>(Lcom/flurry/org/codehaus/jackson/util/TokenBuffer$Segment;Lcom/flurry/org/codehaus/jackson/ObjectCodec;)V
     .locals 2
-    .parameter "firstSeg"
-    .parameter "codec"
+    .param p1, "firstSeg"    # Lcom/flurry/org/codehaus/jackson/util/TokenBuffer$Segment;
+    .param p2, "codec"    # Lcom/flurry/org/codehaus/jackson/ObjectCodec;
 
     .prologue
     const/4 v1, -0x1
@@ -204,7 +204,7 @@
     move-result-object v0
 
     .line 972
-    .local v0, n:Ljava/lang/Number;
+    .local v0, "n":Ljava/lang/Number;
     instance-of v1, v0, Ljava/math/BigInteger;
 
     if-eqz v1, :cond_0
@@ -212,7 +212,7 @@
     .line 973
     check-cast v0, Ljava/math/BigInteger;
 
-    .end local v0           #n:Ljava/lang/Number;
+    .end local v0    # "n":Ljava/lang/Number;
     move-object v1, v0
 
     .line 980
@@ -220,7 +220,7 @@
     return-object v1
 
     .line 975
-    .restart local v0       #n:Ljava/lang/Number;
+    .restart local v0    # "n":Ljava/lang/Number;
     :cond_0
     sget-object v1, Lcom/flurry/org/codehaus/jackson/util/TokenBuffer$1;->$SwitchMap$org$codehaus$jackson$JsonParser$NumberType:[I
 
@@ -251,7 +251,7 @@
     :pswitch_0
     check-cast v0, Ljava/math/BigDecimal;
 
-    .end local v0           #n:Ljava/lang/Number;
+    .end local v0    # "n":Ljava/lang/Number;
     invoke-virtual {v0}, Ljava/math/BigDecimal;->toBigInteger()Ljava/math/BigInteger;
 
     move-result-object v1
@@ -269,7 +269,7 @@
 
 .method public getBinaryValue(Lcom/flurry/org/codehaus/jackson/Base64Variant;)[B
     .locals 5
-    .parameter "b64variant"
+    .param p1, "b64variant"    # Lcom/flurry/org/codehaus/jackson/Base64Variant;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -291,7 +291,7 @@
     move-result-object v1
 
     .line 1067
-    .local v1, ob:Ljava/lang/Object;
+    .local v1, "ob":Ljava/lang/Object;
     instance-of v3, v1, [B
 
     if-eqz v3, :cond_0
@@ -299,7 +299,7 @@
     .line 1068
     check-cast v1, [B
 
-    .end local v1           #ob:Ljava/lang/Object;
+    .end local v1    # "ob":Ljava/lang/Object;
     check-cast v1, [B
 
     move-object v3, v1
@@ -356,7 +356,7 @@
     move-result-object v2
 
     .line 1076
-    .local v2, str:Ljava/lang/String;
+    .local v2, "str":Ljava/lang/String;
     if-nez v2, :cond_2
 
     .line 1077
@@ -369,18 +369,18 @@
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/util/TokenBuffer$Parser;->_byteBuilder:Lcom/flurry/org/codehaus/jackson/util/ByteArrayBuilder;
 
     .line 1080
-    .local v0, builder:Lcom/flurry/org/codehaus/jackson/util/ByteArrayBuilder;
+    .local v0, "builder":Lcom/flurry/org/codehaus/jackson/util/ByteArrayBuilder;
     if-nez v0, :cond_3
 
     .line 1081
     new-instance v0, Lcom/flurry/org/codehaus/jackson/util/ByteArrayBuilder;
 
-    .end local v0           #builder:Lcom/flurry/org/codehaus/jackson/util/ByteArrayBuilder;
+    .end local v0    # "builder":Lcom/flurry/org/codehaus/jackson/util/ByteArrayBuilder;
     const/16 v3, 0x64
 
     invoke-direct {v0, v3}, Lcom/flurry/org/codehaus/jackson/util/ByteArrayBuilder;-><init>(I)V
 
-    .restart local v0       #builder:Lcom/flurry/org/codehaus/jackson/util/ByteArrayBuilder;
+    .restart local v0    # "builder":Lcom/flurry/org/codehaus/jackson/util/ByteArrayBuilder;
     iput-object v0, p0, Lcom/flurry/org/codehaus/jackson/util/TokenBuffer$Parser;->_byteBuilder:Lcom/flurry/org/codehaus/jackson/util/ByteArrayBuilder;
 
     .line 1085
@@ -463,7 +463,7 @@
     move-result-object v0
 
     .line 987
-    .local v0, n:Ljava/lang/Number;
+    .local v0, "n":Ljava/lang/Number;
     instance-of v1, v0, Ljava/math/BigDecimal;
 
     if-eqz v1, :cond_0
@@ -471,7 +471,7 @@
     .line 988
     check-cast v0, Ljava/math/BigDecimal;
 
-    .end local v0           #n:Ljava/lang/Number;
+    .end local v0    # "n":Ljava/lang/Number;
     move-object v1, v0
 
     .line 998
@@ -479,7 +479,7 @@
     return-object v1
 
     .line 990
-    .restart local v0       #n:Ljava/lang/Number;
+    .restart local v0    # "n":Ljava/lang/Number;
     :cond_0
     sget-object v1, Lcom/flurry/org/codehaus/jackson/util/TokenBuffer$1;->$SwitchMap$org$codehaus$jackson$JsonParser$NumberType:[I
 
@@ -525,7 +525,7 @@
 
     check-cast v0, Ljava/math/BigInteger;
 
-    .end local v0           #n:Ljava/lang/Number;
+    .end local v0    # "n":Ljava/lang/Number;
     invoke-direct {v1, v0}, Ljava/math/BigDecimal;-><init>(Ljava/math/BigInteger;)V
 
     goto :goto_0
@@ -635,7 +635,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/flurry/org/codehaus/jackson/util/TokenBuffer$Parser;
     check-cast p0, Ljava/lang/Number;
 
     invoke-virtual {p0}, Ljava/lang/Number;->intValue()I
@@ -646,7 +646,7 @@
     :goto_0
     return v0
 
-    .restart local p0
+    .restart local p0    # "this":Lcom/flurry/org/codehaus/jackson/util/TokenBuffer$Parser;
     :cond_0
     invoke-virtual {p0}, Lcom/flurry/org/codehaus/jackson/util/TokenBuffer$Parser;->getNumberValue()Ljava/lang/Number;
 
@@ -697,7 +697,7 @@
     move-result-object v0
 
     .line 1030
-    .local v0, n:Ljava/lang/Number;
+    .local v0, "n":Ljava/lang/Number;
     instance-of v1, v0, Ljava/lang/Integer;
 
     if-eqz v1, :cond_0
@@ -783,7 +783,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/flurry/org/codehaus/jackson/util/TokenBuffer$Parser;
     check-cast p0, Ljava/lang/Number;
 
     return-object p0
@@ -825,7 +825,7 @@
     move-result-object v0
 
     .line 924
-    .local v0, ob:Ljava/lang/Object;
+    .local v0, "ob":Ljava/lang/Object;
     instance-of v1, v0, Ljava/lang/String;
 
     if-eqz v1, :cond_1
@@ -833,7 +833,7 @@
     .line 925
     check-cast v0, Ljava/lang/String;
 
-    .end local v0           #ob:Ljava/lang/Object;
+    .end local v0    # "ob":Ljava/lang/Object;
     move-object v1, v0
 
     .line 938
@@ -841,7 +841,7 @@
     return-object v1
 
     .line 927
-    .restart local v0       #ob:Ljava/lang/Object;
+    .restart local v0    # "ob":Ljava/lang/Object;
     :cond_1
     if-nez v0, :cond_2
 
@@ -857,7 +857,7 @@
     goto :goto_0
 
     .line 929
-    .end local v0           #ob:Ljava/lang/Object;
+    .end local v0    # "ob":Ljava/lang/Object;
     :cond_3
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/util/TokenBuffer$Parser;->_currToken:Lcom/flurry/org/codehaus/jackson/JsonToken;
 
@@ -898,7 +898,7 @@
     move-result-object v0
 
     .line 936
-    .restart local v0       #ob:Ljava/lang/Object;
+    .restart local v0    # "ob":Ljava/lang/Object;
     if-nez v0, :cond_5
 
     move-object v1, v3
@@ -932,7 +932,7 @@
     move-result-object v0
 
     .line 944
-    .local v0, str:Ljava/lang/String;
+    .local v0, "str":Ljava/lang/String;
     if-nez v0, :cond_0
 
     const/4 v1, 0x0
@@ -958,7 +958,7 @@
     move-result-object v0
 
     .line 950
-    .local v0, str:Ljava/lang/String;
+    .local v0, "str":Ljava/lang/String;
     if-nez v0, :cond_0
 
     const/4 v1, 0x0
@@ -1107,25 +1107,25 @@
     move-result-object v1
 
     .line 870
-    .local v1, ob:Ljava/lang/Object;
+    .local v1, "ob":Ljava/lang/Object;
     instance-of v2, v1, Ljava/lang/String;
 
     if-eqz v2, :cond_4
 
     check-cast v1, Ljava/lang/String;
 
-    .end local v1           #ob:Ljava/lang/Object;
+    .end local v1    # "ob":Ljava/lang/Object;
     move-object v0, v1
 
     .line 871
-    .local v0, name:Ljava/lang/String;
+    .local v0, "name":Ljava/lang/String;
     :goto_1
     iget-object v2, p0, Lcom/flurry/org/codehaus/jackson/util/TokenBuffer$Parser;->_parsingContext:Lcom/flurry/org/codehaus/jackson/impl/JsonReadContext;
 
     invoke-virtual {v2, v0}, Lcom/flurry/org/codehaus/jackson/impl/JsonReadContext;->setCurrentName(Ljava/lang/String;)V
 
     .line 885
-    .end local v0           #name:Ljava/lang/String;
+    .end local v0    # "name":Ljava/lang/String;
     :cond_3
     :goto_2
     iget-object v2, p0, Lcom/flurry/org/codehaus/jackson/util/TokenBuffer$Parser;->_currToken:Lcom/flurry/org/codehaus/jackson/JsonToken;
@@ -1133,7 +1133,7 @@
     goto :goto_0
 
     .line 870
-    .restart local v1       #ob:Ljava/lang/Object;
+    .restart local v1    # "ob":Ljava/lang/Object;
     :cond_4
     invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
@@ -1144,7 +1144,7 @@
     goto :goto_1
 
     .line 872
-    .end local v1           #ob:Ljava/lang/Object;
+    .end local v1    # "ob":Ljava/lang/Object;
     :cond_5
     iget-object v2, p0, Lcom/flurry/org/codehaus/jackson/util/TokenBuffer$Parser;->_currToken:Lcom/flurry/org/codehaus/jackson/JsonToken;
 
@@ -1249,13 +1249,13 @@
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/util/TokenBuffer$Parser;->_segment:Lcom/flurry/org/codehaus/jackson/util/TokenBuffer$Segment;
 
     .line 825
-    .local v1, seg:Lcom/flurry/org/codehaus/jackson/util/TokenBuffer$Segment;
+    .local v1, "seg":Lcom/flurry/org/codehaus/jackson/util/TokenBuffer$Segment;
     iget v2, p0, Lcom/flurry/org/codehaus/jackson/util/TokenBuffer$Parser;->_segmentPtr:I
 
     add-int/lit8 v0, v2, 0x1
 
     .line 826
-    .local v0, ptr:I
+    .local v0, "ptr":I
     const/16 v2, 0x10
 
     if-lt v0, v2, :cond_1
@@ -1298,7 +1298,7 @@
 
 .method public setCodec(Lcom/flurry/org/codehaus/jackson/ObjectCodec;)V
     .locals 0
-    .parameter "c"
+    .param p1, "c"    # Lcom/flurry/org/codehaus/jackson/ObjectCodec;
 
     .prologue
     .line 811
@@ -1309,7 +1309,7 @@
 
 .method public setLocation(Lcom/flurry/org/codehaus/jackson/JsonLocation;)V
     .locals 0
-    .parameter "l"
+    .param p1, "l"    # Lcom/flurry/org/codehaus/jackson/JsonLocation;
 
     .prologue
     .line 804

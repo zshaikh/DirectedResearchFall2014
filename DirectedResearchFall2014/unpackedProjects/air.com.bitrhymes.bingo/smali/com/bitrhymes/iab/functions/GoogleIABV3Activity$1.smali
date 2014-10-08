@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/bitrhymes/iab/functions/GoogleIABV3Activity;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1
@@ -38,7 +37,6 @@
 
 .method static synthetic access$0(Lcom/bitrhymes/iab/functions/GoogleIABV3Activity$1;)Lcom/bitrhymes/iab/functions/GoogleIABV3Activity;
     .locals 1
-    .parameter
 
     .prologue
     .line 64
@@ -51,7 +49,7 @@
 # virtual methods
 .method public onIabSetupFinished(Lcom/bitrhymes/iab/util/IabResult;)V
     .locals 6
-    .parameter "result"
+    .param p1, "result"    # Lcom/bitrhymes/iab/util/IabResult;
 
     .prologue
     const-string v2, "InApp"
@@ -213,7 +211,7 @@
     invoke-direct {v4, p0}, Lcom/bitrhymes/iab/functions/GoogleIABV3Activity$1$1;-><init>(Lcom/bitrhymes/iab/functions/GoogleIABV3Activity$1;)V
 
     .line 125
-    .local v4, mPurchasedItemListener:Lcom/bitrhymes/iab/util/IabHelper$OnIabPurchaseFinishedListener;
+    .local v4, "mPurchasedItemListener":Lcom/bitrhymes/iab/util/IabHelper$OnIabPurchaseFinishedListener;
     invoke-static {}, Lcom/bitrhymes/iab/functions/Utils;->getInAppActivity()Lcom/bitrhymes/iab/functions/GoogleIABV3Activity;
 
     move-result-object v0

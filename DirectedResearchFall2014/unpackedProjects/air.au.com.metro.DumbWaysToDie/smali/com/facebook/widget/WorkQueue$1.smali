@@ -44,7 +44,7 @@
 
     iget-object v1, p0, Lcom/facebook/widget/WorkQueue$1;->val$node:Lcom/facebook/widget/WorkQueue$WorkNode;
 
-    #calls: Lcom/facebook/widget/WorkQueue;->finishItemAndStartNew(Lcom/facebook/widget/WorkQueue$WorkNode;)V
+    # invokes: Lcom/facebook/widget/WorkQueue;->finishItemAndStartNew(Lcom/facebook/widget/WorkQueue$WorkNode;)V
     invoke-static {v0, v1}, Lcom/facebook/widget/WorkQueue;->access$000(Lcom/facebook/widget/WorkQueue;Lcom/facebook/widget/WorkQueue$WorkNode;)V
 
     return-void
@@ -56,7 +56,7 @@
 
     iget-object v2, p0, Lcom/facebook/widget/WorkQueue$1;->val$node:Lcom/facebook/widget/WorkQueue$WorkNode;
 
-    #calls: Lcom/facebook/widget/WorkQueue;->finishItemAndStartNew(Lcom/facebook/widget/WorkQueue$WorkNode;)V
+    # invokes: Lcom/facebook/widget/WorkQueue;->finishItemAndStartNew(Lcom/facebook/widget/WorkQueue$WorkNode;)V
     invoke-static {v1, v2}, Lcom/facebook/widget/WorkQueue;->access$000(Lcom/facebook/widget/WorkQueue;Lcom/facebook/widget/WorkQueue$WorkNode;)V
 
     throw v0

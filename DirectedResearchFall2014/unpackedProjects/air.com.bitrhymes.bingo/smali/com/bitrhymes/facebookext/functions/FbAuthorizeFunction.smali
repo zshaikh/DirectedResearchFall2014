@@ -37,7 +37,7 @@
     const-string v1, "read"
 
     .line 134
-    .local v1, type:Ljava/lang/String;
+    .local v1, "type":Ljava/lang/String;
     const-string v2, "FBAuthorization"
 
     iget-object v3, p0, Lcom/bitrhymes/facebookext/functions/FbAuthorizeFunction;->permissions:Ljava/lang/String;
@@ -62,7 +62,7 @@
     invoke-direct {v0, v2, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
     .line 137
-    .local v0, i:Landroid/content/Intent;
+    .local v0, "i":Landroid/content/Intent;
     const-string v2, "permissions"
 
     iget-object v3, p0, Lcom/bitrhymes/facebookext/functions/FbAuthorizeFunction;->permissions:Ljava/lang/String;
@@ -100,8 +100,8 @@
 
 .method public call(Lcom/adobe/fre/FREContext;[Lcom/adobe/fre/FREObject;)Lcom/adobe/fre/FREObject;
     .locals 13
-    .parameter "arg0"
-    .parameter "arg1"
+    .param p1, "arg0"    # Lcom/adobe/fre/FREContext;
+    .param p2, "arg1"    # [Lcom/adobe/fre/FREObject;
 
     .prologue
     const/4 v11, 0x0
@@ -247,7 +247,7 @@
     move-result-object v1
 
     .line 49
-    .local v1, context:Landroid/content/Context;
+    .local v1, "context":Landroid/content/Context;
     sget-object v8, Lcom/bitrhymes/facebookext/FacebookExtContext;->session:Lcom/facebook/Session;
 
     if-nez v8, :cond_1
@@ -268,7 +268,7 @@
     move-result-object v7
 
     .line 54
-    .local v7, session:Lcom/facebook/Session;
+    .local v7, "session":Lcom/facebook/Session;
     :goto_1
     new-instance v8, Ljava/lang/StringBuilder;
 
@@ -340,13 +340,13 @@
     move-result-object v6
 
     .line 66
-    .local v6, sdk2SavedSession:Landroid/content/SharedPreferences;
+    .local v6, "sdk2SavedSession":Landroid/content/SharedPreferences;
     invoke-interface {v6}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v3
 
     .line 67
-    .local v3, editor:Landroid/content/SharedPreferences$Editor;
+    .local v3, "editor":Landroid/content/SharedPreferences$Editor;
     const-string v8, "access_token"
 
     invoke-interface {v3, v8, v10}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
@@ -362,7 +362,7 @@
     move-result-object v0
 
     .line 77
-    .local v0, accessToken:Lcom/facebook/AccessToken;
+    .local v0, "accessToken":Lcom/facebook/AccessToken;
     :try_start_1
     const-string v8, "FBAuthorize, try"
 
@@ -378,9 +378,9 @@
     .catch Ljava/lang/UnsupportedOperationException; {:try_start_1 .. :try_end_1} :catch_1
 
     .line 122
-    .end local v0           #accessToken:Lcom/facebook/AccessToken;
-    .end local v3           #editor:Landroid/content/SharedPreferences$Editor;
-    .end local v6           #sdk2SavedSession:Landroid/content/SharedPreferences;
+    .end local v0    # "accessToken":Lcom/facebook/AccessToken;
+    .end local v3    # "editor":Landroid/content/SharedPreferences$Editor;
+    .end local v6    # "sdk2SavedSession":Landroid/content/SharedPreferences;
     :cond_0
     :goto_2
     invoke-static {v7}, Lcom/facebook/Session;->setActiveSession(Lcom/facebook/Session;)V
@@ -458,15 +458,15 @@
     return-object v10
 
     .line 36
-    .end local v1           #context:Landroid/content/Context;
-    .end local v7           #session:Lcom/facebook/Session;
+    .end local v1    # "context":Landroid/content/Context;
+    .end local v7    # "session":Lcom/facebook/Session;
     :catch_0
     move-exception v8
 
     move-object v2, v8
 
     .line 38
-    .local v2, e:Ljava/lang/Exception;
+    .local v2, "e":Ljava/lang/Exception;
     new-instance v8, Ljava/lang/StringBuilder;
 
     const-string v9, "FBAuthorize ERROR - "
@@ -490,25 +490,25 @@
     goto/16 :goto_0
 
     .line 52
-    .end local v2           #e:Ljava/lang/Exception;
-    .restart local v1       #context:Landroid/content/Context;
+    .end local v2    # "e":Ljava/lang/Exception;
+    .restart local v1    # "context":Landroid/content/Context;
     :cond_1
     sget-object v7, Lcom/bitrhymes/facebookext/FacebookExtContext;->session:Lcom/facebook/Session;
 
-    .restart local v7       #session:Lcom/facebook/Session;
+    .restart local v7    # "session":Lcom/facebook/Session;
     goto/16 :goto_1
 
     .line 115
-    .restart local v0       #accessToken:Lcom/facebook/AccessToken;
-    .restart local v3       #editor:Landroid/content/SharedPreferences$Editor;
-    .restart local v6       #sdk2SavedSession:Landroid/content/SharedPreferences;
+    .restart local v0    # "accessToken":Lcom/facebook/AccessToken;
+    .restart local v3    # "editor":Landroid/content/SharedPreferences$Editor;
+    .restart local v6    # "sdk2SavedSession":Landroid/content/SharedPreferences;
     :catch_1
     move-exception v8
 
     move-object v5, v8
 
     .line 117
-    .local v5, exception:Ljava/lang/UnsupportedOperationException;
+    .local v5, "exception":Ljava/lang/UnsupportedOperationException;
     if-eqz v5, :cond_2
 
     invoke-virtual {v5}, Ljava/lang/UnsupportedOperationException;->toString()Ljava/lang/String;
@@ -518,7 +518,7 @@
     move-object v4, v8
 
     .line 118
-    .local v4, error:Ljava/lang/String;
+    .local v4, "error":Ljava/lang/String;
     :goto_3
     new-instance v8, Ljava/lang/StringBuilder;
 
@@ -539,7 +539,7 @@
     goto/16 :goto_2
 
     .line 117
-    .end local v4           #error:Ljava/lang/String;
+    .end local v4    # "error":Ljava/lang/String;
     :cond_2
     const-string v8, "null exception"
 

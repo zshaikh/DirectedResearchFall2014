@@ -44,7 +44,7 @@
 
 .method public static get(Ljava/lang/String;)Lcom/tapjoy/TJEvent;
     .locals 1
-    .parameter "guid"
+    .param p0, "guid"    # Ljava/lang/String;
 
     .prologue
     .line 22
@@ -54,7 +54,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "guid":Ljava/lang/String;
     check-cast p0, Lcom/tapjoy/TJEvent;
 
     return-object p0
@@ -62,8 +62,8 @@
 
 .method public static put(Ljava/lang/String;Lcom/tapjoy/TJEvent;)V
     .locals 1
-    .parameter "guid"
-    .parameter "event"
+    .param p0, "guid"    # Ljava/lang/String;
+    .param p1, "event"    # Lcom/tapjoy/TJEvent;
 
     .prologue
     .line 27
@@ -77,7 +77,7 @@
 
 .method public static remove(Ljava/lang/String;)V
     .locals 1
-    .parameter "guid"
+    .param p0, "guid"    # Ljava/lang/String;
 
     .prologue
     .line 32

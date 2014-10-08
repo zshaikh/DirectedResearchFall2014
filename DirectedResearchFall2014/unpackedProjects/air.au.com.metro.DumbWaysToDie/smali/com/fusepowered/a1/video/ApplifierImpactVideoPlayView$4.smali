@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1
@@ -40,7 +39,7 @@
 # virtual methods
 .method public onPrepared(Landroid/media/MediaPlayer;)V
     .locals 2
-    .parameter "mp"
+    .param p1, "mp"    # Landroid/media/MediaPlayer;
 
     .prologue
     const/4 v1, 0x0
@@ -53,13 +52,12 @@
     .line 250
     iget-object v0, p0, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$4;->this$0:Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;
 
-    #setter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->_mediaPlayer:Landroid/media/MediaPlayer;
     invoke-static {v0, p1}, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->access$22(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;Landroid/media/MediaPlayer;)V
 
     .line 252
     iget-object v0, p0, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$4;->this$0:Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;
 
-    #getter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->_muted:Z
+    # getter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->_muted:Z
     invoke-static {v0}, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->access$23(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;)Z
 
     move-result v0
@@ -69,13 +67,13 @@
     .line 253
     iget-object v0, p0, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$4;->this$0:Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;
 
-    #calls: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->storeVolume()V
+    # invokes: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->storeVolume()V
     invoke-static {v0}, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->access$24(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;)V
 
     .line 254
     iget-object v0, p0, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$4;->this$0:Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;
 
-    #getter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->_mediaPlayer:Landroid/media/MediaPlayer;
+    # getter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->_mediaPlayer:Landroid/media/MediaPlayer;
     invoke-static {v0}, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->access$25(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;)Landroid/media/MediaPlayer;
 
     move-result-object v0
@@ -88,7 +86,6 @@
 
     const/4 v1, 0x1
 
-    #setter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->_videoPlayheadPrepared:Z
     invoke-static {v0, v1}, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->access$26(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;Z)V
 
     .line 258

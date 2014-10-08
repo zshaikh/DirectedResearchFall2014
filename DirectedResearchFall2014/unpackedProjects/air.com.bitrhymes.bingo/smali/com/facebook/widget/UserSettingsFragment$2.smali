@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/facebook/widget/UserSettingsFragment;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1
@@ -40,7 +39,7 @@
 # virtual methods
 .method public onCompleted(Lcom/facebook/internal/ImageResponse;)V
     .locals 2
-    .parameter "response"
+    .param p1, "response"    # Lcom/facebook/internal/ImageResponse;
 
     .prologue
     .line 430
@@ -48,7 +47,7 @@
 
     iget-object v1, p0, Lcom/facebook/widget/UserSettingsFragment$2;->this$0:Lcom/facebook/widget/UserSettingsFragment;
 
-    #getter for: Lcom/facebook/widget/UserSettingsFragment;->user:Lcom/facebook/model/GraphUser;
+    # getter for: Lcom/facebook/widget/UserSettingsFragment;->user:Lcom/facebook/model/GraphUser;
     invoke-static {v1}, Lcom/facebook/widget/UserSettingsFragment;->access$6(Lcom/facebook/widget/UserSettingsFragment;)Lcom/facebook/model/GraphUser;
 
     move-result-object v1
@@ -57,7 +56,7 @@
 
     move-result-object v1
 
-    #calls: Lcom/facebook/widget/UserSettingsFragment;->processImageResponse(Ljava/lang/String;Lcom/facebook/internal/ImageResponse;)V
+    # invokes: Lcom/facebook/widget/UserSettingsFragment;->processImageResponse(Ljava/lang/String;Lcom/facebook/internal/ImageResponse;)V
     invoke-static {v0, v1, p1}, Lcom/facebook/widget/UserSettingsFragment;->access$7(Lcom/facebook/widget/UserSettingsFragment;Ljava/lang/String;Lcom/facebook/internal/ImageResponse;)V
 
     .line 431

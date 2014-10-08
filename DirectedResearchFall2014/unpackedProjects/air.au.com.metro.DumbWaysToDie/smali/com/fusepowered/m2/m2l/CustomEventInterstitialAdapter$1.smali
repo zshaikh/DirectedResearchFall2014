@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m2/m2l/CustomEventInterstitialAdapter;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1

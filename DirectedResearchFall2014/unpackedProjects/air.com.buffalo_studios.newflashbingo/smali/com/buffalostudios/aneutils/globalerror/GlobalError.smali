@@ -24,8 +24,6 @@
 
 .method static synthetic access$0(Ljava/lang/Thread;Ljava/lang/Throwable;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 13
@@ -36,8 +34,8 @@
 
 .method private static showErrorDialog(Ljava/lang/Thread;Ljava/lang/Throwable;)V
     .locals 13
-    .parameter "t"
-    .parameter "e"
+    .param p0, "t"    # Ljava/lang/Thread;
+    .param p1, "e"    # Ljava/lang/Throwable;
 
     .prologue
     const-string v12, "    "
@@ -52,17 +50,17 @@
     const-string v1, "\n"
 
     .line 15
-    .local v1, SINGLE_LINE_SEP:Ljava/lang/String;
+    .local v1, "SINGLE_LINE_SEP":Ljava/lang/String;
     const-string v0, "\n\n"
 
     .line 17
-    .local v0, DOUBLE_LINE_SEP:Ljava/lang/String;
+    .local v0, "DOUBLE_LINE_SEP":Ljava/lang/String;
     invoke-virtual {p1}, Ljava/lang/Throwable;->getStackTrace()[Ljava/lang/StackTraceElement;
 
     move-result-object v3
 
     .line 18
-    .local v3, arr:[Ljava/lang/StackTraceElement;
+    .local v3, "arr":[Ljava/lang/StackTraceElement;
     new-instance v7, Ljava/lang/StringBuffer;
 
     invoke-virtual {p1}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
@@ -72,11 +70,11 @@
     invoke-direct {v7, v8}, Ljava/lang/StringBuffer;-><init>(Ljava/lang/String;)V
 
     .line 19
-    .local v7, report:Ljava/lang/StringBuffer;
+    .local v7, "report":Ljava/lang/StringBuffer;
     const-string v6, "-------------------------------\n\n"
 
     .line 20
-    .local v6, lineSeperator:Ljava/lang/String;
+    .local v6, "lineSeperator":Ljava/lang/String;
     const-string v8, "\n\n"
 
     invoke-virtual {v7, v11}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
@@ -89,7 +87,7 @@
     .line 22
     const/4 v5, 0x0
 
-    .local v5, i:I
+    .local v5, "i":I
     :goto_0
     array-length v8, v3
 
@@ -111,7 +109,7 @@
     move-result-object v4
 
     .line 33
-    .local v4, cause:Ljava/lang/Throwable;
+    .local v4, "cause":Ljava/lang/Throwable;
     if-eqz v4, :cond_0
 
     .line 34
@@ -295,7 +293,7 @@
     move-result-object v2
 
     .line 78
-    .local v2, activity:Landroid/app/Activity;
+    .local v2, "activity":Landroid/app/Activity;
     invoke-virtual {v7}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
     move-result-object v8
@@ -311,8 +309,8 @@
     return-void
 
     .line 23
-    .end local v2           #activity:Landroid/app/Activity;
-    .end local v4           #cause:Ljava/lang/Throwable;
+    .end local v2    # "activity":Landroid/app/Activity;
+    .end local v4    # "cause":Ljava/lang/Throwable;
     :cond_1
     const-string v8, "    "
 
@@ -338,7 +336,7 @@
     goto/16 :goto_0
 
     .line 38
-    .restart local v4       #cause:Ljava/lang/Throwable;
+    .restart local v4    # "cause":Ljava/lang/Throwable;
     :cond_2
     const-string v8, "    "
 

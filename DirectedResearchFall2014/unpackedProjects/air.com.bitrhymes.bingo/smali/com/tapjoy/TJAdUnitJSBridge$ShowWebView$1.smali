@@ -28,9 +28,6 @@
 # direct methods
 .method constructor <init>(Lcom/tapjoy/TJAdUnitJSBridge$ShowWebView;ZZ)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 1112
@@ -133,13 +130,13 @@
     invoke-virtual {v0, v1, v4}, Landroid/webkit/WebView;->setLayerType(ILandroid/graphics/Paint;)V
 
     .line 1164
-    .end local p0
+    .end local p0    # "this":Lcom/tapjoy/TJAdUnitJSBridge$ShowWebView$1;
     :cond_1
     :goto_0
     return-void
 
     .line 1138
-    .restart local p0
+    .restart local p0    # "this":Lcom/tapjoy/TJAdUnitJSBridge$ShowWebView$1;
     :cond_2
     iget-object v0, p0, Lcom/tapjoy/TJAdUnitJSBridge$ShowWebView$1;->this$1:Lcom/tapjoy/TJAdUnitJSBridge$ShowWebView;
 
@@ -251,7 +248,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/tapjoy/TJAdUnitJSBridge$ShowWebView$1;
     check-cast p0, Landroid/widget/RelativeLayout;
 
     invoke-virtual {p0, v2}, Landroid/widget/RelativeLayout;->setBackgroundColor(I)V

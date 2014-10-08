@@ -23,7 +23,7 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 2
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     .line 16
@@ -114,7 +114,7 @@
 
 .method public display(Z)Z
     .locals 4
-    .parameter "throwError"
+    .param p1, "throwError"    # Z
 
     .prologue
     const/4 v3, 0x0
@@ -148,7 +148,7 @@
 
     move-result v1
 
-    .local v1, error:I
+    .local v1, "error":I
     if-eqz v1, :cond_2
 
     .line 141
@@ -164,14 +164,14 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 146
-    .end local v1           #error:I
+    .end local v1    # "error":I
     :catch_0
     move-exception v2
 
     move-object v0, v2
 
     .line 148
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     if-eqz p1, :cond_1
 
     .line 150
@@ -188,8 +188,8 @@
     goto :goto_0
 
     .line 154
-    .end local v0           #e:Ljava/lang/Exception;
-    .restart local v1       #error:I
+    .end local v0    # "e":Ljava/lang/Exception;
+    .restart local v1    # "error":I
     :cond_2
     if-nez v1, :cond_3
 
@@ -244,7 +244,7 @@
     move-object v0, v1
 
     .line 168
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v1, "There was an exception displaying a cached ad. %s"
 
     const/4 v2, 0x1
@@ -265,7 +265,7 @@
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     .line 171
-    .end local v0           #e:Ljava/lang/Exception;
+    .end local v0    # "e":Ljava/lang/Exception;
     :cond_0
     const/16 v1, 0x64
 
@@ -311,7 +311,7 @@
 
 .method public fetch(Lcom/fusepowered/m1/android/MMRequest;)V
     .locals 1
-    .parameter "request"
+    .param p1, "request"    # Lcom/fusepowered/m1/android/MMRequest;
 
     .prologue
     .line 43
@@ -345,8 +345,8 @@
 
 .method public fetch(Lcom/fusepowered/m1/android/MMRequest;Lcom/fusepowered/m1/android/RequestListener;)V
     .locals 1
-    .parameter "request"
-    .parameter "listener"
+    .param p1, "request"    # Lcom/fusepowered/m1/android/MMRequest;
+    .param p2, "listener"    # Lcom/fusepowered/m1/android/RequestListener;
 
     .prologue
     .line 62
@@ -503,7 +503,7 @@
     move-object v0, v1
 
     .line 105
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v1, "There was an exception checking for a cached ad. %s"
 
     new-array v2, v3, [Ljava/lang/Object;
@@ -519,7 +519,7 @@
     .line 106
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .end local v0           #e:Ljava/lang/Exception;
+    .end local v0    # "e":Ljava/lang/Exception;
     :cond_2
     move v1, v4
 
@@ -529,7 +529,7 @@
 
 .method public setApid(Ljava/lang/String;)V
     .locals 1
-    .parameter "apid"
+    .param p1, "apid"    # Ljava/lang/String;
 
     .prologue
     .line 192
@@ -543,7 +543,7 @@
 
 .method public setIgnoresDensityScaling(Z)V
     .locals 1
-    .parameter "ignoresDensityScaling"
+    .param p1, "ignoresDensityScaling"    # Z
 
     .prologue
     .line 216
@@ -557,7 +557,7 @@
 
 .method public setListener(Lcom/fusepowered/m1/android/RequestListener;)V
     .locals 1
-    .parameter "listener"
+    .param p1, "listener"    # Lcom/fusepowered/m1/android/RequestListener;
 
     .prologue
     .line 204
@@ -571,7 +571,7 @@
 
 .method public setMMRequest(Lcom/fusepowered/m1/android/MMRequest;)V
     .locals 1
-    .parameter "request"
+    .param p1, "request"    # Lcom/fusepowered/m1/android/MMRequest;
 
     .prologue
     .line 228

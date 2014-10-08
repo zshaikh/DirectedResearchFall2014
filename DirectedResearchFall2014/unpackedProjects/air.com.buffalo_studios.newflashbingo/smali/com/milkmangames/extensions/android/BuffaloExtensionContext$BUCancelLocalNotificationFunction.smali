@@ -24,7 +24,6 @@
 # direct methods
 .method private constructor <init>(Lcom/milkmangames/extensions/android/BuffaloExtensionContext;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 735
@@ -37,8 +36,6 @@
 
 .method synthetic constructor <init>(Lcom/milkmangames/extensions/android/BuffaloExtensionContext;Lcom/milkmangames/extensions/android/BuffaloExtensionContext$BUCancelLocalNotificationFunction;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 735
@@ -51,8 +48,8 @@
 # virtual methods
 .method public call(Lcom/adobe/fre/FREContext;[Lcom/adobe/fre/FREObject;)Lcom/adobe/fre/FREObject;
     .locals 5
-    .parameter "context"
-    .parameter "args"
+    .param p1, "context"    # Lcom/adobe/fre/FREContext;
+    .param p2, "args"    # [Lcom/adobe/fre/FREObject;
 
     .prologue
     const/4 v4, 0x0
@@ -68,7 +65,7 @@
     move-result v1
 
     .line 743
-    .local v1, uid:I
+    .local v1, "uid":I
     iget-object v2, p0, Lcom/milkmangames/extensions/android/BuffaloExtensionContext$BUCancelLocalNotificationFunction;->this$0:Lcom/milkmangames/extensions/android/BuffaloExtensionContext;
 
     invoke-virtual {v2, v1}, Lcom/milkmangames/extensions/android/BuffaloExtensionContext;->cancelLocalNotification(I)V
@@ -78,7 +75,7 @@
     move-object v2, v4
 
     .line 750
-    .end local v1           #uid:I
+    .end local v1    # "uid":I
     :goto_0
     return-object v2
 
@@ -89,7 +86,7 @@
     move-object v0, v2
 
     .line 747
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v2, "[BUExtension]"
 
     const-string v3, "Parse exception"

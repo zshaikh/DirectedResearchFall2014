@@ -16,8 +16,6 @@
 
 .method static a(Landroid/content/Context;I)I
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     .line 226
@@ -45,10 +43,6 @@
 
 .method static a(Ljava/lang/String;IIZ)Lorg/apache/http/HttpResponse;
     .locals 6
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const/4 v4, 0x0
@@ -173,7 +167,6 @@
 
 .method static a(Ljava/io/Closeable;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 95
@@ -198,8 +191,6 @@
 
 .method static a(Landroid/content/Context;Landroid/content/Intent;)Z
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     .line 180
@@ -208,7 +199,7 @@
     move-result-object v0
 
     .line 181
-    const/high16 v1, 0x1
+    const/high16 v1, 0x10000
 
     invoke-virtual {v0, p1, v1}, Landroid/content/pm/PackageManager;->queryIntentActivities(Landroid/content/Intent;I)Ljava/util/List;
 
@@ -234,8 +225,6 @@
 
 .method static b(Landroid/content/Context;I)I
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     .line 235
@@ -263,7 +252,6 @@
 
 .method static b(J)Z
     .locals 3
-    .parameter
 
     .prologue
     .line 128
@@ -288,7 +276,6 @@
 
 .method static l(Landroid/content/Context;)I
     .locals 1
-    .parameter
 
     .prologue
     .line 241
@@ -308,7 +295,6 @@
 
 .method static m(Landroid/content/Context;)I
     .locals 1
-    .parameter
 
     .prologue
     .line 247
@@ -328,7 +314,6 @@
 
 .method static n(Landroid/content/Context;)I
     .locals 1
-    .parameter
 
     .prologue
     .line 268
@@ -345,7 +330,6 @@
 
 .method static o(Landroid/content/Context;)I
     .locals 1
-    .parameter
 
     .prologue
     .line 273
@@ -362,7 +346,6 @@
 
 .method static p(Ljava/lang/String;)Ljava/lang/String;
     .locals 3
-    .parameter
 
     .prologue
     .line 69
@@ -419,7 +402,6 @@
 
 .method private static q(Ljava/lang/String;)Ljava/lang/String;
     .locals 3
-    .parameter
 
     .prologue
     .line 82
@@ -476,7 +458,6 @@
 
 .method static r(Ljava/lang/String;)[B
     .locals 4
-    .parameter
 
     .prologue
     .line 114
@@ -550,7 +531,6 @@
 
 .method static s(Ljava/lang/String;)Ljava/lang/String;
     .locals 4
-    .parameter
 
     .prologue
     const-string v3, ""
@@ -593,7 +573,6 @@
 
 .method static sanitize(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
-    .parameter
 
     .prologue
     const/16 v1, 0xff
@@ -629,7 +608,6 @@
 
 .method static t(Ljava/lang/String;)Ljava/util/Map;
     .locals 8
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",

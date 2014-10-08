@@ -10,7 +10,7 @@
 # direct methods
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 0
-    .parameter "value"
+    .param p1, "value"    # Ljava/lang/String;
 
     .prologue
     .line 30
@@ -97,7 +97,7 @@
     move-object v0, v2
 
     .line 40
-    .local v0, e:Ljava/lang/NumberFormatException;
+    .local v0, "e":Ljava/lang/NumberFormatException;
     :try_start_1
     iget-object v2, p0, Lcom/fusepowered/m1/google/gson/internal/LazilyParsedNumber;->value:Ljava/lang/String;
 
@@ -118,7 +118,7 @@
     move-object v1, v2
 
     .line 42
-    .local v1, nfe:Ljava/lang/NumberFormatException;
+    .local v1, "nfe":Ljava/lang/NumberFormatException;
     new-instance v2, Ljava/math/BigInteger;
 
     iget-object v3, p0, Lcom/fusepowered/m1/google/gson/internal/LazilyParsedNumber;->value:Ljava/lang/String;
@@ -157,7 +157,7 @@
     move-object v0, v1
 
     .line 52
-    .local v0, e:Ljava/lang/NumberFormatException;
+    .local v0, "e":Ljava/lang/NumberFormatException;
     new-instance v1, Ljava/math/BigInteger;
 
     iget-object v2, p0, Lcom/fusepowered/m1/google/gson/internal/LazilyParsedNumber;->value:Ljava/lang/String;

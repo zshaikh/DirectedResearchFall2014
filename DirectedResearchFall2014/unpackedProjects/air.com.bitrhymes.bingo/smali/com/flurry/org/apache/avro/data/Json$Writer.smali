@@ -42,7 +42,7 @@
 # virtual methods
 .method public setSchema(Lcom/flurry/org/apache/avro/Schema;)V
     .locals 3
-    .parameter "schema"
+    .param p1, "schema"    # Lcom/flurry/org/apache/avro/Schema;
 
     .prologue
     .line 61
@@ -86,8 +86,8 @@
 
 .method public write(Lcom/flurry/org/codehaus/jackson/JsonNode;Lcom/flurry/org/apache/avro/io/Encoder;)V
     .locals 0
-    .parameter "datum"
-    .parameter "out"
+    .param p1, "datum"    # Lcom/flurry/org/codehaus/jackson/JsonNode;
+    .param p2, "out"    # Lcom/flurry/org/apache/avro/io/Encoder;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -104,8 +104,8 @@
 
 .method public bridge synthetic write(Ljava/lang/Object;Lcom/flurry/org/apache/avro/io/Encoder;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
+    .param p1, "x0"    # Ljava/lang/Object;
+    .param p2, "x1"    # Lcom/flurry/org/apache/avro/io/Encoder;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -116,7 +116,7 @@
     .line 58
     check-cast p1, Lcom/flurry/org/codehaus/jackson/JsonNode;
 
-    .end local p1
+    .end local p1    # "x0":Ljava/lang/Object;
     invoke-virtual {p0, p1, p2}, Lcom/flurry/org/apache/avro/data/Json$Writer;->write(Lcom/flurry/org/codehaus/jackson/JsonNode;Lcom/flurry/org/apache/avro/io/Encoder;)V
 
     return-void

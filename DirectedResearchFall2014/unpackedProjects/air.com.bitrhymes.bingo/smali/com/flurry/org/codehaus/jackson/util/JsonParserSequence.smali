@@ -12,7 +12,7 @@
 # direct methods
 .method protected constructor <init>([Lcom/flurry/org/codehaus/jackson/JsonParser;)V
     .locals 1
-    .parameter "parsers"
+    .param p1, "parsers"    # [Lcom/flurry/org/codehaus/jackson/JsonParser;
 
     .prologue
     .line 40
@@ -36,8 +36,8 @@
 
 .method public static createFlattened(Lcom/flurry/org/codehaus/jackson/JsonParser;Lcom/flurry/org/codehaus/jackson/JsonParser;)Lcom/flurry/org/codehaus/jackson/util/JsonParserSequence;
     .locals 4
-    .parameter "first"
-    .parameter "second"
+    .param p0, "first"    # Lcom/flurry/org/codehaus/jackson/JsonParser;
+    .param p1, "second"    # Lcom/flurry/org/codehaus/jackson/JsonParser;
 
     .prologue
     .line 56
@@ -67,21 +67,21 @@
     invoke-direct {v1, v2}, Lcom/flurry/org/codehaus/jackson/util/JsonParserSequence;-><init>([Lcom/flurry/org/codehaus/jackson/JsonParser;)V
 
     .line 71
-    .end local p0
-    .end local p1
+    .end local p0    # "first":Lcom/flurry/org/codehaus/jackson/JsonParser;
+    .end local p1    # "second":Lcom/flurry/org/codehaus/jackson/JsonParser;
     :goto_0
     return-object v1
 
     .line 60
-    .restart local p0
-    .restart local p1
+    .restart local p0    # "first":Lcom/flurry/org/codehaus/jackson/JsonParser;
+    .restart local p1    # "second":Lcom/flurry/org/codehaus/jackson/JsonParser;
     :cond_0
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     .line 61
-    .local v0, p:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/flurry/org/codehaus/jackson/JsonParser;>;"
+    .local v0, "p":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/flurry/org/codehaus/jackson/JsonParser;>;"
     instance-of v1, p0, Lcom/flurry/org/codehaus/jackson/util/JsonParserSequence;
 
     if-eqz v1, :cond_1
@@ -89,7 +89,7 @@
     .line 62
     check-cast p0, Lcom/flurry/org/codehaus/jackson/util/JsonParserSequence;
 
-    .end local p0
+    .end local p0    # "first":Lcom/flurry/org/codehaus/jackson/JsonParser;
     invoke-virtual {p0, v0}, Lcom/flurry/org/codehaus/jackson/util/JsonParserSequence;->addFlattenedActiveParsers(Ljava/util/List;)V
 
     .line 66
@@ -101,7 +101,7 @@
     .line 67
     check-cast p1, Lcom/flurry/org/codehaus/jackson/util/JsonParserSequence;
 
-    .end local p1
+    .end local p1    # "second":Lcom/flurry/org/codehaus/jackson/JsonParser;
     invoke-virtual {p1, v0}, Lcom/flurry/org/codehaus/jackson/util/JsonParserSequence;->addFlattenedActiveParsers(Ljava/util/List;)V
 
     .line 71
@@ -125,15 +125,15 @@
     goto :goto_0
 
     .line 64
-    .restart local p0
-    .restart local p1
+    .restart local p0    # "first":Lcom/flurry/org/codehaus/jackson/JsonParser;
+    .restart local p1    # "second":Lcom/flurry/org/codehaus/jackson/JsonParser;
     :cond_1
     invoke-virtual {v0, p0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
 
     .line 69
-    .end local p0
+    .end local p0    # "first":Lcom/flurry/org/codehaus/jackson/JsonParser;
     :cond_2
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -144,7 +144,6 @@
 # virtual methods
 .method protected addFlattenedActiveParsers(Ljava/util/List;)V
     .locals 5
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -157,19 +156,19 @@
 
     .prologue
     .line 76
-    .local p1, result:Ljava/util/List;,"Ljava/util/List<Lcom/flurry/org/codehaus/jackson/JsonParser;>;"
+    .local p1, "result":Ljava/util/List;, "Ljava/util/List<Lcom/flurry/org/codehaus/jackson/JsonParser;>;"
     iget v3, p0, Lcom/flurry/org/codehaus/jackson/util/JsonParserSequence;->_nextParser:I
 
     const/4 v4, 0x1
 
     sub-int v0, v3, v4
 
-    .local v0, i:I
+    .local v0, "i":I
     iget-object v3, p0, Lcom/flurry/org/codehaus/jackson/util/JsonParserSequence;->_parsers:[Lcom/flurry/org/codehaus/jackson/JsonParser;
 
     array-length v1, v3
 
-    .local v1, len:I
+    .local v1, "len":I
     :goto_0
     if-ge v0, v1, :cond_1
 
@@ -179,7 +178,7 @@
     aget-object v2, v3, v0
 
     .line 78
-    .local v2, p:Lcom/flurry/org/codehaus/jackson/JsonParser;
+    .local v2, "p":Lcom/flurry/org/codehaus/jackson/JsonParser;
     instance-of v3, v2, Lcom/flurry/org/codehaus/jackson/util/JsonParserSequence;
 
     if-eqz v3, :cond_0
@@ -187,7 +186,7 @@
     .line 79
     check-cast v2, Lcom/flurry/org/codehaus/jackson/util/JsonParserSequence;
 
-    .end local v2           #p:Lcom/flurry/org/codehaus/jackson/JsonParser;
+    .end local v2    # "p":Lcom/flurry/org/codehaus/jackson/JsonParser;
     invoke-virtual {v2, p1}, Lcom/flurry/org/codehaus/jackson/util/JsonParserSequence;->addFlattenedActiveParsers(Ljava/util/List;)V
 
     .line 76
@@ -197,14 +196,14 @@
     goto :goto_0
 
     .line 81
-    .restart local v2       #p:Lcom/flurry/org/codehaus/jackson/JsonParser;
+    .restart local v2    # "p":Lcom/flurry/org/codehaus/jackson/JsonParser;
     :cond_0
     invoke-interface {p1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
 
     .line 84
-    .end local v2           #p:Lcom/flurry/org/codehaus/jackson/JsonParser;
+    .end local v2    # "p":Lcom/flurry/org/codehaus/jackson/JsonParser;
     :cond_1
     return-void
 .end method
@@ -265,7 +264,7 @@
     move-result-object v0
 
     .line 105
-    .local v0, t:Lcom/flurry/org/codehaus/jackson/JsonToken;
+    .local v0, "t":Lcom/flurry/org/codehaus/jackson/JsonToken;
     if-eqz v0, :cond_0
 
     move-object v1, v0

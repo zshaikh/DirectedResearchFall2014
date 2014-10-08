@@ -21,7 +21,6 @@
 # direct methods
 .method public constructor <init>(Lcom/google/ads/n;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 162
@@ -36,11 +35,6 @@
 
 .method private static a(Landroid/app/AlertDialog$Builder;Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/webkit/JsPromptResult;)V
     .locals 4
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 394
@@ -90,7 +84,7 @@
 
     move-result-object v0
 
-    const/high16 v1, 0x104
+    const/high16 v1, 0x1040000
 
     new-instance v2, Lcom/google/ads/util/g$a$5;
 
@@ -120,9 +114,6 @@
 
 .method private static a(Landroid/app/AlertDialog$Builder;Ljava/lang/String;Landroid/webkit/JsResult;)V
     .locals 3
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 364
@@ -140,7 +131,7 @@
 
     move-result-object v0
 
-    const/high16 v1, 0x104
+    const/high16 v1, 0x1040000
 
     new-instance v2, Lcom/google/ads/util/g$a$2;
 
@@ -170,13 +161,6 @@
 
 .method private static a(Landroid/webkit/WebView;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/webkit/JsResult;Landroid/webkit/JsPromptResult;Z)Z
     .locals 2
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 339
@@ -234,7 +218,7 @@
 # virtual methods
 .method public onCloseWindow(Landroid/webkit/WebView;)V
     .locals 1
-    .parameter "webView"
+    .param p1, "webView"    # Landroid/webkit/WebView;
 
     .prologue
     .line 168
@@ -246,7 +230,7 @@
     check-cast p1, Lcom/google/ads/internal/AdWebView;
 
     .line 170
-    .end local p1
+    .end local p1    # "webView":Landroid/webkit/WebView;
     invoke-virtual {p1}, Lcom/google/ads/internal/AdWebView;->f()V
 
     .line 172
@@ -256,7 +240,7 @@
 
 .method public onConsoleMessage(Landroid/webkit/ConsoleMessage;)Z
     .locals 3
-    .parameter "consoleMessage"
+    .param p1, "consoleMessage"    # Landroid/webkit/ConsoleMessage;
 
     .prologue
     .line 176
@@ -378,12 +362,12 @@
 
 .method public onExceededDatabaseQuota(Ljava/lang/String;Ljava/lang/String;JJJLandroid/webkit/WebStorage$QuotaUpdater;)V
     .locals 5
-    .parameter "url"
-    .parameter "databaseIdentifier"
-    .parameter "currentQuota"
-    .parameter "estimatedSize"
-    .parameter "totalUsedQuota"
-    .parameter "quotaUpdater"
+    .param p1, "url"    # Ljava/lang/String;
+    .param p2, "databaseIdentifier"    # Ljava/lang/String;
+    .param p3, "currentQuota"    # J
+    .param p5, "estimatedSize"    # J
+    .param p7, "totalUsedQuota"    # J
+    .param p9, "quotaUpdater"    # Landroid/webkit/WebStorage$QuotaUpdater;
 
     .prologue
     const-wide/16 v3, 0x0
@@ -397,7 +381,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/google/ads/util/g$a;
     check-cast p0, Lcom/google/ads/m;
 
     iget-object v0, p0, Lcom/google/ads/m;->b:Lcom/google/ads/util/i$b;
@@ -557,10 +541,10 @@
 
 .method public onJsAlert(Landroid/webkit/WebView;Ljava/lang/String;Ljava/lang/String;Landroid/webkit/JsResult;)Z
     .locals 7
-    .parameter "view"
-    .parameter "url"
-    .parameter "message"
-    .parameter "result"
+    .param p1, "view"    # Landroid/webkit/WebView;
+    .param p2, "url"    # Ljava/lang/String;
+    .param p3, "message"    # Ljava/lang/String;
+    .param p4, "result"    # Landroid/webkit/JsResult;
 
     .prologue
     const/4 v3, 0x0
@@ -587,10 +571,10 @@
 
 .method public onJsBeforeUnload(Landroid/webkit/WebView;Ljava/lang/String;Ljava/lang/String;Landroid/webkit/JsResult;)Z
     .locals 7
-    .parameter "view"
-    .parameter "url"
-    .parameter "message"
-    .parameter "result"
+    .param p1, "view"    # Landroid/webkit/WebView;
+    .param p2, "url"    # Ljava/lang/String;
+    .param p3, "message"    # Ljava/lang/String;
+    .param p4, "result"    # Landroid/webkit/JsResult;
 
     .prologue
     const/4 v3, 0x0
@@ -617,10 +601,10 @@
 
 .method public onJsConfirm(Landroid/webkit/WebView;Ljava/lang/String;Ljava/lang/String;Landroid/webkit/JsResult;)Z
     .locals 7
-    .parameter "view"
-    .parameter "url"
-    .parameter "message"
-    .parameter "result"
+    .param p1, "view"    # Landroid/webkit/WebView;
+    .param p2, "url"    # Ljava/lang/String;
+    .param p3, "message"    # Ljava/lang/String;
+    .param p4, "result"    # Landroid/webkit/JsResult;
 
     .prologue
     const/4 v3, 0x0
@@ -647,11 +631,11 @@
 
 .method public onJsPrompt(Landroid/webkit/WebView;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/webkit/JsPromptResult;)Z
     .locals 7
-    .parameter "view"
-    .parameter "url"
-    .parameter "message"
-    .parameter "defaultValue"
-    .parameter "result"
+    .param p1, "view"    # Landroid/webkit/WebView;
+    .param p2, "url"    # Ljava/lang/String;
+    .param p3, "message"    # Ljava/lang/String;
+    .param p4, "defaultValue"    # Ljava/lang/String;
+    .param p5, "result"    # Landroid/webkit/JsPromptResult;
 
     .prologue
     .line 283
@@ -678,9 +662,9 @@
 
 .method public onReachedMaxAppCacheSize(JJLandroid/webkit/WebStorage$QuotaUpdater;)V
     .locals 4
-    .parameter "spaceNeeded"
-    .parameter "totalUsedQuota"
-    .parameter "quotaUpdater"
+    .param p1, "spaceNeeded"    # J
+    .param p3, "totalUsedQuota"    # J
+    .param p5, "quotaUpdater"    # Landroid/webkit/WebStorage$QuotaUpdater;
 
     .prologue
     .line 301
@@ -692,7 +676,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/google/ads/util/g$a;
     check-cast p0, Lcom/google/ads/m;
 
     iget-object v0, p0, Lcom/google/ads/m;->b:Lcom/google/ads/util/i$b;
@@ -756,8 +740,8 @@
 
 .method public onShowCustomView(Landroid/view/View;Landroid/webkit/WebChromeClient$CustomViewCallback;)V
     .locals 0
-    .parameter "view"
-    .parameter "callback"
+    .param p1, "view"    # Landroid/view/View;
+    .param p2, "callback"    # Landroid/webkit/WebChromeClient$CustomViewCallback;
 
     .prologue
     .line 322

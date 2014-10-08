@@ -22,15 +22,15 @@
 
 .field private static final MANAGE_PERMISSION_PREFIX:Ljava/lang/String; = "manage"
 
-.field private static final OTHER_PUBLISH_PERMISSIONS:Ljava/util/Set; = null
+.field private static final OTHER_PUBLISH_PERMISSIONS:Ljava/util/Set;
 
 .field private static final PUBLISH_PERMISSION_PREFIX:Ljava/lang/String; = "publish"
 
 .field private static final SESSION_BUNDLE_SAVE_KEY:Ljava/lang/String; = "com.facebook.sdk.Session.saveSessionKey"
 
-.field private static final STATIC_LOCK:Ljava/lang/Object; = null
+.field private static final STATIC_LOCK:Ljava/lang/Object;
 
-.field public static final TAG:Ljava/lang/String; = null
+.field public static final TAG:Ljava/lang/String;
 
 .field private static final TOKEN_EXTEND_RETRY_SECONDS:I = 0xe10
 
@@ -1515,7 +1515,7 @@
 
     if-eqz p1, :cond_0
 
-    #getter for: Lcom/facebook/Session$AuthorizationRequest;->isLegacy:Z
+    # getter for: Lcom/facebook/Session$AuthorizationRequest;->isLegacy:Z
     invoke-static {p1}, Lcom/facebook/Session$AuthorizationRequest;->access$100(Lcom/facebook/Session$AuthorizationRequest;)Z
 
     move-result v0
@@ -1772,7 +1772,7 @@
 
     if-nez v0, :cond_0
 
-    #getter for: Lcom/facebook/Session$AuthorizationRequest;->isLegacy:Z
+    # getter for: Lcom/facebook/Session$AuthorizationRequest;->isLegacy:Z
     invoke-static {p1}, Lcom/facebook/Session$AuthorizationRequest;->access$100(Lcom/facebook/Session$AuthorizationRequest;)Z
 
     move-result v1

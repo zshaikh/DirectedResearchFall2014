@@ -50,7 +50,7 @@
 
 .method public setDataByte([B)V
     .locals 2
-    .parameter "data"
+    .param p1, "data"    # [B
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/UnsupportedEncodingException;
@@ -73,7 +73,7 @@
 
 .method public setDataStr(Ljava/lang/String;)V
     .locals 0
-    .parameter "data"
+    .param p1, "data"    # Ljava/lang/String;
 
     .prologue
     .line 32
@@ -85,7 +85,7 @@
 
 .method public setResourceKey(Ljava/lang/String;)V
     .locals 0
-    .parameter "key"
+    .param p1, "key"    # Ljava/lang/String;
 
     .prologue
     .line 44

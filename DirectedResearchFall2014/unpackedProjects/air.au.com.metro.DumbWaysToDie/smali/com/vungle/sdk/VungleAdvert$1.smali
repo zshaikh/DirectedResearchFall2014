@@ -26,7 +26,6 @@
 # direct methods
 .method constructor <init>(Lcom/vungle/sdk/VungleAdvert;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 125
@@ -46,7 +45,6 @@
 # virtual methods
 .method public final a(Ljava/lang/String;)Ljava/lang/Runnable;
     .locals 0
-    .parameter
 
     .prologue
     .line 131
@@ -102,7 +100,7 @@
     invoke-direct {v1, v2, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
     .line 147
-    const/high16 v2, 0x1000
+    const/high16 v2, 0x10000000
 
     invoke-virtual {v1, v2}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 

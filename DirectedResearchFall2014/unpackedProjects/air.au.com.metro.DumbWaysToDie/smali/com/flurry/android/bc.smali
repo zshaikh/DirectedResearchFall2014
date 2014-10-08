@@ -32,7 +32,6 @@
 
 .method static b(Ljava/io/File;)Z
     .locals 5
-    .parameter
 
     .prologue
     const/4 v4, 0x0

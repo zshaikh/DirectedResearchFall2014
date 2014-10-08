@@ -21,7 +21,7 @@
 # direct methods
 .method private constructor <init>(Ljava/lang/String;)V
     .locals 1
-    .parameter "msg"
+    .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
     .line 399
@@ -38,8 +38,8 @@
 
 .method synthetic constructor <init>(Ljava/lang/String;Lcom/flurry/org/apache/avro/io/parsing/Symbol$1;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
+    .param p1, "x0"    # Ljava/lang/String;
+    .param p2, "x1"    # Lcom/flurry/org/apache/avro/io/parsing/Symbol$1;
 
     .prologue
     .line 397

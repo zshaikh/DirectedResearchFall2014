@@ -25,7 +25,7 @@
 # virtual methods
 .method public didCacheInterstitial(Ljava/lang/String;)V
     .locals 0
-    .parameter "location"
+    .param p1, "location"    # Ljava/lang/String;
 
     .prologue
     .line 75
@@ -42,7 +42,7 @@
 
 .method public didClickInterstitial(Ljava/lang/String;)V
     .locals 0
-    .parameter "location"
+    .param p1, "location"    # Ljava/lang/String;
 
     .prologue
     .line 95
@@ -59,7 +59,7 @@
 
 .method public didCloseInterstitial(Ljava/lang/String;)V
     .locals 0
-    .parameter "location"
+    .param p1, "location"    # Ljava/lang/String;
 
     .prologue
     .line 90
@@ -76,7 +76,7 @@
 
 .method public didDismissInterstitial(Ljava/lang/String;)V
     .locals 0
-    .parameter "location"
+    .param p1, "location"    # Ljava/lang/String;
 
     .prologue
     .line 85
@@ -93,7 +93,7 @@
 
 .method public didFailToLoadInterstitial(Ljava/lang/String;)V
     .locals 0
-    .parameter "location"
+    .param p1, "location"    # Ljava/lang/String;
 
     .prologue
     .line 80
@@ -110,7 +110,7 @@
 
 .method public didFailToLoadUrl(Ljava/lang/String;)V
     .locals 0
-    .parameter "url"
+    .param p1, "url"    # Ljava/lang/String;
 
     .prologue
     .line 155
@@ -119,7 +119,7 @@
 
 .method public didShowInterstitial(Ljava/lang/String;)V
     .locals 0
-    .parameter "location"
+    .param p1, "location"    # Ljava/lang/String;
 
     .prologue
     .line 100
@@ -166,7 +166,7 @@
 
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 3
-    .parameter "savedInstanceState"
+    .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
     .line 21
@@ -253,7 +253,7 @@
 
 .method public shouldDisplayInterstitial(Ljava/lang/String;)Z
     .locals 1
-    .parameter "location"
+    .param p1, "location"    # Ljava/lang/String;
 
     .prologue
     .line 69
@@ -284,7 +284,7 @@
 
 .method public shouldRequestInterstitial(Ljava/lang/String;)Z
     .locals 1
-    .parameter "location"
+    .param p1, "location"    # Ljava/lang/String;
 
     .prologue
     .line 64

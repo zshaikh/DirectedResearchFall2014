@@ -43,8 +43,6 @@
 
 .method private declared-synchronized c(Ljava/lang/String;I)V
     .locals 4
-    .parameter
-    .parameter
 
     .prologue
     .line 177
@@ -254,7 +252,6 @@
 
 .method private declared-synchronized c(Ljava/util/List;)Z
     .locals 2
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -349,8 +346,6 @@
 # virtual methods
 .method final declared-synchronized a(Ljava/lang/String;I)V
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     .line 73
@@ -437,8 +432,6 @@
 
 .method final declared-synchronized b(Ljava/lang/String;I)Ljava/util/List;
     .locals 5
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -571,8 +564,6 @@
 
 .method final declared-synchronized b(Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     .line 56
@@ -657,7 +648,6 @@
 
 .method final b(Ljava/util/List;)V
     .locals 13
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -827,7 +817,6 @@
 
 .method final declared-synchronized h(Ljava/lang/String;)Lcom/flurry/android/AdUnit;
     .locals 4
-    .parameter
 
     .prologue
     .line 98
@@ -920,7 +909,6 @@
 
 .method final declared-synchronized i(Ljava/lang/String;)Z
     .locals 4
-    .parameter
 
     .prologue
     .line 156

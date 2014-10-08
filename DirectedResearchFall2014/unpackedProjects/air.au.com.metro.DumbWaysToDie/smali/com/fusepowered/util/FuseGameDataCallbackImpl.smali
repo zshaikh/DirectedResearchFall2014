@@ -19,8 +19,8 @@
 # virtual methods
 .method public adAvailabilityResponse(II)V
     .locals 0
-    .parameter "available"
-    .parameter "error"
+    .param p1, "available"    # I
+    .param p2, "error"    # I
 
     .prologue
     .line 54
@@ -29,7 +29,7 @@
 
 .method public attackRobberyLogError(Lcom/fusepowered/util/FuseAttackErrors;)V
     .locals 0
-    .parameter "error"
+    .param p1, "error"    # Lcom/fusepowered/util/FuseAttackErrors;
 
     .prologue
     .line 45
@@ -38,7 +38,6 @@
 
 .method public attackRobberyLogReceived(Ljava/util/ArrayList;)V
     .locals 0
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -51,13 +50,13 @@
 
     .prologue
     .line 41
-    .local p1, attackRoberyLog:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/fusepowered/util/UserTransactionLog;>;"
+    .local p1, "attackRoberyLog":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/fusepowered/util/UserTransactionLog;>;"
     return-void
 .end method
 
 .method public enemiesListError(Lcom/fusepowered/util/FuseEnemiesListError;)V
     .locals 0
-    .parameter "error"
+    .param p1, "error"    # Lcom/fusepowered/util/FuseEnemiesListError;
 
     .prologue
     .line 37
@@ -66,7 +65,6 @@
 
 .method public enemiesListResult(Ljava/util/ArrayList;)V
     .locals 0
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -79,14 +77,14 @@
 
     .prologue
     .line 33
-    .local p1, enemiesList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/fusepowered/util/Player;>;"
+    .local p1, "enemiesList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/fusepowered/util/Player;>;"
     return-void
 .end method
 
 .method public friendsMigrated(Ljava/lang/String;Lcom/fusepowered/util/FuseMigrateFriendsError;)V
     .locals 0
-    .parameter "fuseId"
-    .parameter "migrateFriendsError"
+    .param p1, "fuseId"    # Ljava/lang/String;
+    .param p2, "migrateFriendsError"    # Lcom/fusepowered/util/FuseMigrateFriendsError;
 
     .prologue
     .line 50
@@ -95,7 +93,7 @@
 
 .method public gameDataError(Lcom/fusepowered/util/FuseGameDataError;)V
     .locals 0
-    .parameter "error"
+    .param p1, "error"    # Lcom/fusepowered/util/FuseGameDataError;
 
     .prologue
     .line 21
@@ -104,8 +102,8 @@
 
 .method public gameDataError(Lcom/fusepowered/util/FuseGameDataError;I)V
     .locals 0
-    .parameter "error"
-    .parameter "requestId"
+    .param p1, "error"    # Lcom/fusepowered/util/FuseGameDataError;
+    .param p2, "requestId"    # I
 
     .prologue
     .line 25
@@ -114,8 +112,8 @@
 
 .method public gameDataReceived(Ljava/lang/String;Lcom/fusepowered/util/GameKeyValuePairs;)V
     .locals 0
-    .parameter "fuseId"
-    .parameter "gameKeyValuePairs"
+    .param p1, "fuseId"    # Ljava/lang/String;
+    .param p2, "gameKeyValuePairs"    # Lcom/fusepowered/util/GameKeyValuePairs;
 
     .prologue
     .line 13
@@ -124,9 +122,9 @@
 
 .method public gameDataReceived(Ljava/lang/String;Lcom/fusepowered/util/GameKeyValuePairs;I)V
     .locals 0
-    .parameter "fuseId"
-    .parameter "gameKeyValuePairs"
-    .parameter "requestId"
+    .param p1, "fuseId"    # Ljava/lang/String;
+    .param p2, "gameKeyValuePairs"    # Lcom/fusepowered/util/GameKeyValuePairs;
+    .param p3, "requestId"    # I
 
     .prologue
     .line 17
@@ -135,7 +133,7 @@
 
 .method public gameDataSetAcknowledged(I)V
     .locals 0
-    .parameter "requestId"
+    .param p1, "requestId"    # I
 
     .prologue
     .line 29

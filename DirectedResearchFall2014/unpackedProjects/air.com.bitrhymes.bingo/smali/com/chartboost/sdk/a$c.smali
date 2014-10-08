@@ -24,7 +24,6 @@
 # direct methods
 .method private constructor <init>(Lcom/chartboost/sdk/a;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 172
@@ -37,8 +36,6 @@
 
 .method synthetic constructor <init>(Lcom/chartboost/sdk/a;Lcom/chartboost/sdk/a$c;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 172

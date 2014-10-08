@@ -25,8 +25,8 @@
 
 .method private storeOpenUDID(Landroid/content/Context;Ljava/lang/String;)V
     .locals 4
-    .parameter "context"
-    .parameter "androidID"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "androidID"    # Ljava/lang/String;
 
     .prologue
     .line 71
@@ -39,13 +39,13 @@
     move-result-object v1
 
     .line 72
-    .local v1, mPreferences:Landroid/content/SharedPreferences;
+    .local v1, "mPreferences":Landroid/content/SharedPreferences;
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
     .line 73
-    .local v0, e:Landroid/content/SharedPreferences$Editor;
+    .local v0, "e":Landroid/content/SharedPreferences$Editor;
     const-string v2, "androidid"
 
     invoke-interface {v0, v2, p2}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
@@ -61,8 +61,8 @@
 # virtual methods
 .method public call(Lcom/adobe/fre/FREContext;[Lcom/adobe/fre/FREObject;)Lcom/adobe/fre/FREObject;
     .locals 11
-    .parameter "arg0"
-    .parameter "arg1"
+    .param p1, "arg0"    # Lcom/adobe/fre/FREContext;
+    .param p2, "arg1"    # [Lcom/adobe/fre/FREObject;
 
     .prologue
     const/4 v10, 0x0
@@ -79,7 +79,7 @@
     const-string v0, ""
 
     .line 26
-    .local v0, androidID:Ljava/lang/String;
+    .local v0, "androidID":Ljava/lang/String;
     :try_start_0
     invoke-virtual {p1}, Lcom/adobe/fre/FREContext;->getActivity()Landroid/app/Activity;
 
@@ -94,7 +94,7 @@
     move-result-object v3
 
     .line 27
-    .local v3, mPreferences:Landroid/content/SharedPreferences;
+    .local v3, "mPreferences":Landroid/content/SharedPreferences;
     const-string v5, "androidid"
 
     const/4 v6, 0x0
@@ -325,7 +325,7 @@
     invoke-direct {v4}, Ljava/security/SecureRandom;-><init>()V
 
     .line 56
-    .local v4, random:Ljava/security/SecureRandom;
+    .local v4, "random":Ljava/security/SecureRandom;
     new-instance v5, Ljava/math/BigInteger;
 
     const/16 v6, 0x40
@@ -339,7 +339,7 @@
     move-result-object v0
 
     .line 58
-    .end local v4           #random:Ljava/security/SecureRandom;
+    .end local v4    # "random":Ljava/security/SecureRandom;
     :cond_2
     invoke-virtual {p1}, Lcom/adobe/fre/FREContext;->getActivity()Landroid/app/Activity;
 
@@ -352,7 +352,7 @@
     const/4 v1, 0x0
 
     .line 61
-    .local v1, deviceInfoObject:Lcom/adobe/fre/FREObject;
+    .local v1, "deviceInfoObject":Lcom/adobe/fre/FREObject;
     invoke-static {v0}, Lcom/adobe/fre/FREObject;->newObject(Ljava/lang/String;)Lcom/adobe/fre/FREObject;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -362,8 +362,8 @@
     move-object v5, v1
 
     .line 67
-    .end local v1           #deviceInfoObject:Lcom/adobe/fre/FREObject;
-    .end local v3           #mPreferences:Landroid/content/SharedPreferences;
+    .end local v1    # "deviceInfoObject":Lcom/adobe/fre/FREObject;
+    .end local v3    # "mPreferences":Landroid/content/SharedPreferences;
     :goto_0
     return-object v5
 
@@ -374,7 +374,7 @@
     move-object v2, v5
 
     .line 65
-    .local v2, e:Ljava/lang/Exception;
+    .local v2, "e":Ljava/lang/Exception;
     const-string v5, "ERROR_EVENT"
 
     new-instance v6, Ljava/lang/StringBuilder;

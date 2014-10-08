@@ -22,12 +22,12 @@
     invoke-direct {p0}, Lv2/com/playhaven/views/badge/AbstractBadgeRenderer;-><init>()V
 
     .line 24
-    const/high16 v0, 0x4188
+    const/high16 v0, 0x41880000
 
     iput v0, p0, Lv2/com/playhaven/views/badge/PHBadgeRenderer;->TEXT_SIZE:F
 
     .line 26
-    const/high16 v0, 0x4100
+    const/high16 v0, 0x41000000
 
     iput v0, p0, Lv2/com/playhaven/views/badge/PHBadgeRenderer;->TEXT_SIZE_REDUCE:F
 
@@ -37,7 +37,7 @@
 
 .method private getTextPaint(Landroid/content/Context;)Landroid/graphics/Paint;
     .locals 2
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     .line 61
@@ -69,7 +69,7 @@
     .line 65
     iget-object v0, p0, Lv2/com/playhaven/views/badge/PHBadgeRenderer;->whitePaint:Landroid/graphics/Paint;
 
-    const/high16 v1, 0x4188
+    const/high16 v1, 0x41880000
 
     invoke-static {p1, v1}, Lv2/com/playhaven/utils/PHConversionUtils;->dipToPixels(Landroid/content/Context;F)F
 
@@ -93,7 +93,7 @@
 
 .method private requestedValue(Lorg/json/JSONObject;)I
     .locals 2
-    .parameter "notificationData"
+    .param p1, "notificationData"    # Lorg/json/JSONObject;
 
     .prologue
     const-string v1, "value"
@@ -133,9 +133,9 @@
 # virtual methods
 .method public draw(Landroid/content/Context;Landroid/graphics/Canvas;Lorg/json/JSONObject;)V
     .locals 6
-    .parameter "context"
-    .parameter "canvas"
-    .parameter "notificationData"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "canvas"    # Landroid/graphics/Canvas;
+    .param p3, "notificationData"    # Lorg/json/JSONObject;
 
     .prologue
     .line 46
@@ -144,7 +144,7 @@
     move-result v1
 
     .line 47
-    .local v1, value:I
+    .local v1, "value":I
     if-nez v1, :cond_0
 
     .line 58
@@ -158,7 +158,7 @@
     move-result-object v0
 
     .line 50
-    .local v0, size:Landroid/graphics/Rect;
+    .local v0, "size":Landroid/graphics/Rect;
     iget-object v2, p0, Lv2/com/playhaven/views/badge/PHBadgeRenderer;->badgeImage:Landroid/graphics/drawable/NinePatchDrawable;
 
     invoke-virtual {v2, v0}, Landroid/graphics/drawable/NinePatchDrawable;->setBounds(Landroid/graphics/Rect;)V
@@ -173,14 +173,14 @@
 
     move-result-object v2
 
-    const/high16 v3, 0x4120
+    const/high16 v3, 0x41200000
 
     invoke-static {p1, v3}, Lv2/com/playhaven/utils/PHConversionUtils;->dipToPixels(Landroid/content/Context;F)F
 
     move-result v3
 
     .line 55
-    const/high16 v4, 0x4188
+    const/high16 v4, 0x41880000
 
     invoke-static {p1, v4}, Lv2/com/playhaven/utils/PHConversionUtils;->dipToPixels(Landroid/content/Context;F)F
 
@@ -199,8 +199,8 @@
 
 .method public loadResources(Landroid/content/Context;Landroid/content/res/Resources;)V
     .locals 4
-    .parameter "context"
-    .parameter "res"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "res"    # Landroid/content/res/Resources;
 
     .prologue
     .line 35
@@ -217,7 +217,7 @@
     check-cast v1, Lv2/com/playhaven/resources/types/PHNinePatchResource;
 
     .line 37
-    .local v1, ninePatchRes:Lv2/com/playhaven/resources/types/PHNinePatchResource;
+    .local v1, "ninePatchRes":Lv2/com/playhaven/resources/types/PHNinePatchResource;
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
@@ -227,7 +227,7 @@
     move-result-object v0
 
     .line 40
-    .local v0, dm:Landroid/util/DisplayMetrics;
+    .local v0, "dm":Landroid/util/DisplayMetrics;
     iget v2, v0, Landroid/util/DisplayMetrics;->densityDpi:I
 
     invoke-virtual {v1, p2, v2}, Lv2/com/playhaven/resources/types/PHNinePatchResource;->loadNinePatchDrawable(Landroid/content/res/Resources;I)Landroid/graphics/drawable/NinePatchDrawable;
@@ -249,8 +249,8 @@
 
 .method public size(Landroid/content/Context;Lorg/json/JSONObject;)Landroid/graphics/Rect;
     .locals 8
-    .parameter "context"
-    .parameter "data"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "data"    # Lorg/json/JSONObject;
 
     .prologue
     const/4 v7, 0x0
@@ -265,7 +265,7 @@
     int-to-float v3, v4
 
     .line 83
-    .local v3, width:F
+    .local v3, "width":F
     iget-object v4, p0, Lv2/com/playhaven/views/badge/PHBadgeRenderer;->badgeImage:Landroid/graphics/drawable/NinePatchDrawable;
 
     invoke-virtual {v4}, Landroid/graphics/drawable/NinePatchDrawable;->getMinimumHeight()I
@@ -275,13 +275,13 @@
     int-to-float v0, v4
 
     .line 85
-    .local v0, height:F
+    .local v0, "height":F
     invoke-direct {p0, p2}, Lv2/com/playhaven/views/badge/PHBadgeRenderer;->requestedValue(Lorg/json/JSONObject;)I
 
     move-result v1
 
     .line 86
-    .local v1, value:I
+    .local v1, "value":I
     if-nez v1, :cond_0
 
     new-instance v4, Landroid/graphics/Rect;
@@ -311,10 +311,10 @@
     move-result v2
 
     .line 89
-    .local v2, valueWidth:F
+    .local v2, "valueWidth":F
     add-float v4, v3, v2
 
-    const/high16 v5, 0x4100
+    const/high16 v5, 0x41000000
 
     invoke-static {p1, v5}, Lv2/com/playhaven/utils/PHConversionUtils;->dipToPixels(Landroid/content/Context;F)F
 

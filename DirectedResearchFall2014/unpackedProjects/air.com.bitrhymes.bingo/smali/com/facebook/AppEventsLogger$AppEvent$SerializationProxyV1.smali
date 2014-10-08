@@ -30,8 +30,8 @@
 # direct methods
 .method private constructor <init>(Ljava/lang/String;Z)V
     .locals 0
-    .parameter "jsonString"
-    .parameter "isImplicit"
+    .param p1, "jsonString"    # Ljava/lang/String;
+    .param p2, "isImplicit"    # Z
 
     .prologue
     .line 1220
@@ -49,9 +49,6 @@
 
 .method synthetic constructor <init>(Ljava/lang/String;ZLcom/facebook/AppEventsLogger$AppEvent$SerializationProxyV1;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 1220

@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/inmobi/activity/AdCreativeTesting;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1
@@ -40,7 +39,6 @@
 # virtual methods
 .method public onClick(Landroid/view/View;)V
     .locals 5
-    .parameter
 
     .prologue
     const/4 v1, 0x1

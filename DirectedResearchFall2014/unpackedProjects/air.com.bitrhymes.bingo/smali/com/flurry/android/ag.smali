@@ -10,7 +10,6 @@
 # direct methods
 .method constructor <init>(Lcom/flurry/android/FlurryAds;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 14
@@ -27,7 +26,6 @@
 # virtual methods
 .method final a(Ljava/util/List;)Ljava/util/List;
     .locals 11
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",

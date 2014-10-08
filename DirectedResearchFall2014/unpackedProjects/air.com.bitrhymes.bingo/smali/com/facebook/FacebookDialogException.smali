@@ -16,9 +16,9 @@
 # direct methods
 .method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
     .locals 0
-    .parameter "message"
-    .parameter "errorCode"
-    .parameter "failingUrl"
+    .param p1, "message"    # Ljava/lang/String;
+    .param p2, "errorCode"    # I
+    .param p3, "failingUrl"    # Ljava/lang/String;
 
     .prologue
     .line 31

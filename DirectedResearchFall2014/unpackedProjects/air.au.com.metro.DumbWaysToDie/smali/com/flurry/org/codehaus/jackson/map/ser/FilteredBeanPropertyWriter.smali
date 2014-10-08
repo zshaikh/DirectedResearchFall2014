@@ -26,8 +26,7 @@
 
 .method public static constructViewBased(Lcom/flurry/org/codehaus/jackson/map/ser/BeanPropertyWriter;[Ljava/lang/Class;)Lcom/flurry/org/codehaus/jackson/map/ser/BeanPropertyWriter;
     .locals 2
-    .parameter "base"
-    .parameter
+    .param p0, "base"    # Lcom/flurry/org/codehaus/jackson/map/ser/BeanPropertyWriter;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -41,7 +40,7 @@
 
     .prologue
     .line 18
-    .local p1, viewsToIncludeIn:[Ljava/lang/Class;,"[Ljava/lang/Class<*>;"
+    .local p1, "viewsToIncludeIn":[Ljava/lang/Class;, "[Ljava/lang/Class<*>;"
     array-length v0, p1
 
     const/4 v1, 0x1

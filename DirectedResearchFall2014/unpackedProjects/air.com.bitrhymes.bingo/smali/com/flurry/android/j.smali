@@ -81,10 +81,6 @@
 # virtual methods
 .method public final b(Landroid/content/Context;Lcom/flurry/android/FlurryAds;Lcom/flurry/android/cz;Lcom/flurry/android/AdUnit;)Lcom/flurry/android/p;
     .locals 5
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const/4 v2, 0x1

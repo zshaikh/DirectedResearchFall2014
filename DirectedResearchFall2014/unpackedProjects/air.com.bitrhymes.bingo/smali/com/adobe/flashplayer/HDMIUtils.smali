@@ -75,7 +75,6 @@
 
 .method private constructor <init>(Landroid/content/Context;)V
     .locals 3
-    .parameter
 
     .prologue
     const/4 v1, 0x0
@@ -180,7 +179,6 @@
 
 .method static synthetic access$000(Lcom/adobe/flashplayer/HDMIUtils;)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 16
@@ -191,8 +189,6 @@
 
 .method static synthetic access$002(Lcom/adobe/flashplayer/HDMIUtils;Z)Z
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 16
@@ -203,8 +199,6 @@
 
 .method static synthetic access$102(Lcom/adobe/flashplayer/HDMIUtils;Z)Z
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 16
@@ -215,7 +209,6 @@
 
 .method static synthetic access$200(Lcom/adobe/flashplayer/HDMIUtils;)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 16
@@ -226,8 +219,6 @@
 
 .method static synthetic access$202(Lcom/adobe/flashplayer/HDMIUtils;Z)Z
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 16
@@ -238,8 +229,6 @@
 
 .method static synthetic access$302(Lcom/adobe/flashplayer/HDMIUtils;Z)Z
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 16
@@ -360,7 +349,6 @@
 
 .method public static getHDMIState(Landroid/content/Context;)I
     .locals 1
-    .parameter
 
     .prologue
     .line 153
@@ -434,7 +422,6 @@
 
 .method public static initHelper(Landroid/content/Context;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 95

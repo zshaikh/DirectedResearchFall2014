@@ -24,7 +24,6 @@
 # direct methods
 .method private constructor <init>(Lcom/fusepowered/a1/ApplifierImpact;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 805
@@ -37,8 +36,6 @@
 
 .method synthetic constructor <init>(Lcom/fusepowered/a1/ApplifierImpact;Lcom/fusepowered/a1/ApplifierImpact$ApplifierImpactPlayVideoRunner;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 805
@@ -74,7 +71,7 @@
     invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
 
     .line 815
-    .local v0, data:Lorg/json/JSONObject;
+    .local v0, "data":Lorg/json/JSONObject;
     :try_start_0
     const-string v3, "textKey"
 
@@ -96,7 +93,7 @@
     .line 824
     iget-object v3, p0, Lcom/fusepowered/a1/ApplifierImpact$ApplifierImpactPlayVideoRunner;->this$0:Lcom/fusepowered/a1/ApplifierImpact;
 
-    #calls: Lcom/fusepowered/a1/ApplifierImpact;->createPauseScreenTimer()V
+    # invokes: Lcom/fusepowered/a1/ApplifierImpact;->createPauseScreenTimer()V
     invoke-static {v3}, Lcom/fusepowered/a1/ApplifierImpact;->access$2(Lcom/fusepowered/a1/ApplifierImpact;)V
 
     .line 826
@@ -133,7 +130,7 @@
     move-result-object v2
 
     .line 827
-    .local v2, playUrl:Ljava/lang/String;
+    .local v2, "playUrl":Ljava/lang/String;
     sget-object v3, Lcom/fusepowered/a1/properties/ApplifierImpactProperties;->SELECTED_CAMPAIGN:Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;
 
     invoke-virtual {v3}, Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;->getVideoFilename()Ljava/lang/String;
@@ -186,20 +183,20 @@
     invoke-virtual {v3, v2}, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->playVideo(Ljava/lang/String;)V
 
     .line 836
-    .end local v0           #data:Lorg/json/JSONObject;
-    .end local v2           #playUrl:Ljava/lang/String;
+    .end local v0    # "data":Lorg/json/JSONObject;
+    .end local v2    # "playUrl":Ljava/lang/String;
     :goto_0
     return-void
 
     .line 817
-    .restart local v0       #data:Lorg/json/JSONObject;
+    .restart local v0    # "data":Lorg/json/JSONObject;
     :catch_0
     move-exception v3
 
     move-object v1, v3
 
     .line 818
-    .local v1, e:Ljava/lang/Exception;
+    .local v1, "e":Ljava/lang/Exception;
     const-string v3, "Couldn\'t create data JSON"
 
     invoke-static {v3, p0}, Lcom/fusepowered/a1/ApplifierImpactUtils;->Log(Ljava/lang/String;Ljava/lang/Object;)V
@@ -207,8 +204,8 @@
     goto :goto_0
 
     .line 835
-    .end local v0           #data:Lorg/json/JSONObject;
-    .end local v1           #e:Ljava/lang/Exception;
+    .end local v0    # "data":Lorg/json/JSONObject;
+    .end local v1    # "e":Ljava/lang/Exception;
     :cond_1
     const-string v3, "Campaign is null"
 

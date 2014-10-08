@@ -418,9 +418,7 @@
 
 .method private constructor <init>(Ljava/lang/String;II)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter "apiLevel"
+    .param p3, "apiLevel"    # I
 
     .prologue
     .line 73
@@ -449,7 +447,7 @@
 
 .method private static forApiLevel(I)Lcom/fusepowered/m2/m2l/util/VersionCode;
     .locals 5
-    .parameter "targetApiLevel"
+    .param p0, "targetApiLevel"    # I
 
     .prologue
     .line 65
@@ -475,7 +473,7 @@
     aget-object v0, v1, v3
 
     .line 66
-    .local v0, versionCode:Lcom/fusepowered/m2/m2l/util/VersionCode;
+    .local v0, "versionCode":Lcom/fusepowered/m2/m2l/util/VersionCode;
     invoke-virtual {v0}, Lcom/fusepowered/m2/m2l/util/VersionCode;->getApiLevel()I
 
     move-result v4
@@ -496,7 +494,6 @@
 
 .method public static valueOf(Ljava/lang/String;)Lcom/fusepowered/m2/m2l/util/VersionCode;
     .locals 1
-    .parameter
 
     .prologue
     .line 1
@@ -543,7 +540,7 @@
 
 .method public isAtLeast(Lcom/fusepowered/m2/m2l/util/VersionCode;)Z
     .locals 2
-    .parameter "that"
+    .param p1, "that"    # Lcom/fusepowered/m2/m2l/util/VersionCode;
 
     .prologue
     .line 86
@@ -570,7 +567,7 @@
 
 .method public isAtMost(Lcom/fusepowered/m2/m2l/util/VersionCode;)Z
     .locals 2
-    .parameter "that"
+    .param p1, "that"    # Lcom/fusepowered/m2/m2l/util/VersionCode;
 
     .prologue
     .line 82
@@ -597,7 +594,7 @@
 
 .method public isBelow(Lcom/fusepowered/m2/m2l/util/VersionCode;)Z
     .locals 2
-    .parameter "that"
+    .param p1, "that"    # Lcom/fusepowered/m2/m2l/util/VersionCode;
 
     .prologue
     .line 90

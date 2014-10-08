@@ -54,7 +54,7 @@
 # virtual methods
 .method public add(Lcom/fusepowered/m1/google/gson/JsonElement;)V
     .locals 1
-    .parameter "element"
+    .param p1, "element"    # Lcom/fusepowered/m1/google/gson/JsonElement;
 
     .prologue
     .line 58
@@ -75,7 +75,7 @@
 
 .method public addAll(Lcom/fusepowered/m1/google/gson/JsonArray;)V
     .locals 2
-    .parameter "array"
+    .param p1, "array"    # Lcom/fusepowered/m1/google/gson/JsonArray;
 
     .prologue
     .line 70
@@ -99,14 +99,14 @@
     invoke-direct {v2}, Lcom/fusepowered/m1/google/gson/JsonArray;-><init>()V
 
     .line 46
-    .local v2, result:Lcom/fusepowered/m1/google/gson/JsonArray;
+    .local v2, "result":Lcom/fusepowered/m1/google/gson/JsonArray;
     iget-object v3, p0, Lcom/fusepowered/m1/google/gson/JsonArray;->elements:Ljava/util/List;
 
     invoke-interface {v3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
 
-    .local v1, i$:Ljava/util/Iterator;
+    .local v1, "i$":Ljava/util/Iterator;
     :goto_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
@@ -121,7 +121,7 @@
     check-cast v0, Lcom/fusepowered/m1/google/gson/JsonElement;
 
     .line 47
-    .local v0, element:Lcom/fusepowered/m1/google/gson/JsonElement;
+    .local v0, "element":Lcom/fusepowered/m1/google/gson/JsonElement;
     invoke-virtual {v0}, Lcom/fusepowered/m1/google/gson/JsonElement;->deepCopy()Lcom/fusepowered/m1/google/gson/JsonElement;
 
     move-result-object v3
@@ -131,7 +131,7 @@
     goto :goto_0
 
     .line 49
-    .end local v0           #element:Lcom/fusepowered/m1/google/gson/JsonElement;
+    .end local v0    # "element":Lcom/fusepowered/m1/google/gson/JsonElement;
     :cond_0
     return-object v2
 .end method
@@ -150,7 +150,7 @@
 
 .method public equals(Ljava/lang/Object;)Z
     .locals 2
-    .parameter "o"
+    .param p1, "o"    # Ljava/lang/Object;
 
     .prologue
     .line 284
@@ -162,7 +162,7 @@
 
     check-cast p1, Lcom/fusepowered/m1/google/gson/JsonArray;
 
-    .end local p1
+    .end local p1    # "o":Ljava/lang/Object;
     iget-object v0, p1, Lcom/fusepowered/m1/google/gson/JsonArray;->elements:Ljava/util/List;
 
     iget-object v1, p0, Lcom/fusepowered/m1/google/gson/JsonArray;->elements:Ljava/util/List;
@@ -187,7 +187,7 @@
 
 .method public get(I)Lcom/fusepowered/m1/google/gson/JsonElement;
     .locals 1
-    .parameter "i"
+    .param p1, "i"    # I
 
     .prologue
     .line 101
@@ -197,7 +197,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/fusepowered/m1/google/gson/JsonArray;
     check-cast p0, Lcom/fusepowered/m1/google/gson/JsonElement;
 
     return-object p0
@@ -227,7 +227,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/fusepowered/m1/google/gson/JsonArray;
     check-cast p0, Lcom/fusepowered/m1/google/gson/JsonElement;
 
     invoke-virtual {p0}, Lcom/fusepowered/m1/google/gson/JsonElement;->getAsBigDecimal()Ljava/math/BigDecimal;
@@ -237,7 +237,7 @@
     return-object v0
 
     .line 166
-    .restart local p0
+    .restart local p0    # "this":Lcom/fusepowered/m1/google/gson/JsonArray;
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -270,7 +270,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/fusepowered/m1/google/gson/JsonArray;
     check-cast p0, Lcom/fusepowered/m1/google/gson/JsonElement;
 
     invoke-virtual {p0}, Lcom/fusepowered/m1/google/gson/JsonElement;->getAsBigInteger()Ljava/math/BigInteger;
@@ -280,7 +280,7 @@
     return-object v0
 
     .line 183
-    .restart local p0
+    .restart local p0    # "this":Lcom/fusepowered/m1/google/gson/JsonArray;
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -313,7 +313,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/fusepowered/m1/google/gson/JsonArray;
     check-cast p0, Lcom/fusepowered/m1/google/gson/JsonElement;
 
     invoke-virtual {p0}, Lcom/fusepowered/m1/google/gson/JsonElement;->getAsBoolean()Z
@@ -323,7 +323,7 @@
     return v0
 
     .line 279
-    .restart local p0
+    .restart local p0    # "this":Lcom/fusepowered/m1/google/gson/JsonArray;
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -356,7 +356,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/fusepowered/m1/google/gson/JsonArray;
     check-cast p0, Lcom/fusepowered/m1/google/gson/JsonElement;
 
     invoke-virtual {p0}, Lcom/fusepowered/m1/google/gson/JsonElement;->getAsByte()B
@@ -366,7 +366,7 @@
     return v0
 
     .line 239
-    .restart local p0
+    .restart local p0    # "this":Lcom/fusepowered/m1/google/gson/JsonArray;
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -399,7 +399,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/fusepowered/m1/google/gson/JsonArray;
     check-cast p0, Lcom/fusepowered/m1/google/gson/JsonElement;
 
     invoke-virtual {p0}, Lcom/fusepowered/m1/google/gson/JsonElement;->getAsCharacter()C
@@ -409,7 +409,7 @@
     return v0
 
     .line 247
-    .restart local p0
+    .restart local p0    # "this":Lcom/fusepowered/m1/google/gson/JsonArray;
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -442,7 +442,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/fusepowered/m1/google/gson/JsonArray;
     check-cast p0, Lcom/fusepowered/m1/google/gson/JsonElement;
 
     invoke-virtual {p0}, Lcom/fusepowered/m1/google/gson/JsonElement;->getAsDouble()D
@@ -452,7 +452,7 @@
     return-wide v0
 
     .line 149
-    .restart local p0
+    .restart local p0    # "this":Lcom/fusepowered/m1/google/gson/JsonArray;
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -485,7 +485,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/fusepowered/m1/google/gson/JsonArray;
     check-cast p0, Lcom/fusepowered/m1/google/gson/JsonElement;
 
     invoke-virtual {p0}, Lcom/fusepowered/m1/google/gson/JsonElement;->getAsFloat()F
@@ -495,7 +495,7 @@
     return v0
 
     .line 199
-    .restart local p0
+    .restart local p0    # "this":Lcom/fusepowered/m1/google/gson/JsonArray;
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -528,7 +528,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/fusepowered/m1/google/gson/JsonArray;
     check-cast p0, Lcom/fusepowered/m1/google/gson/JsonElement;
 
     invoke-virtual {p0}, Lcom/fusepowered/m1/google/gson/JsonElement;->getAsInt()I
@@ -538,7 +538,7 @@
     return v0
 
     .line 231
-    .restart local p0
+    .restart local p0    # "this":Lcom/fusepowered/m1/google/gson/JsonArray;
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -571,7 +571,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/fusepowered/m1/google/gson/JsonArray;
     check-cast p0, Lcom/fusepowered/m1/google/gson/JsonElement;
 
     invoke-virtual {p0}, Lcom/fusepowered/m1/google/gson/JsonElement;->getAsLong()J
@@ -581,7 +581,7 @@
     return-wide v0
 
     .line 215
-    .restart local p0
+    .restart local p0    # "this":Lcom/fusepowered/m1/google/gson/JsonArray;
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -614,7 +614,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/fusepowered/m1/google/gson/JsonArray;
     check-cast p0, Lcom/fusepowered/m1/google/gson/JsonElement;
 
     invoke-virtual {p0}, Lcom/fusepowered/m1/google/gson/JsonElement;->getAsNumber()Ljava/lang/Number;
@@ -624,7 +624,7 @@
     return-object v0
 
     .line 117
-    .restart local p0
+    .restart local p0    # "this":Lcom/fusepowered/m1/google/gson/JsonArray;
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -657,7 +657,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/fusepowered/m1/google/gson/JsonArray;
     check-cast p0, Lcom/fusepowered/m1/google/gson/JsonElement;
 
     invoke-virtual {p0}, Lcom/fusepowered/m1/google/gson/JsonElement;->getAsShort()S
@@ -667,7 +667,7 @@
     return v0
 
     .line 263
-    .restart local p0
+    .restart local p0    # "this":Lcom/fusepowered/m1/google/gson/JsonArray;
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -700,7 +700,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/fusepowered/m1/google/gson/JsonArray;
     check-cast p0, Lcom/fusepowered/m1/google/gson/JsonElement;
 
     invoke-virtual {p0}, Lcom/fusepowered/m1/google/gson/JsonElement;->getAsString()Ljava/lang/String;
@@ -710,7 +710,7 @@
     return-object v0
 
     .line 133
-    .restart local p0
+    .restart local p0    # "this":Lcom/fusepowered/m1/google/gson/JsonArray;
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 

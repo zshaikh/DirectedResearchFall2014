@@ -16,7 +16,7 @@
 
 .method static encode(Ljava/lang/String;)Ljava/lang/String;
     .locals 4
-    .parameter "input"
+    .param p0, "input"    # Ljava/lang/String;
 
     .prologue
     .line 81
@@ -38,7 +38,7 @@
     move-object v0, v1
 
     .line 83
-    .local v0, e:Ljava/io/UnsupportedEncodingException;
+    .local v0, "e":Ljava/io/UnsupportedEncodingException;
     new-instance v1, Ljava/lang/AssertionError;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -66,8 +66,7 @@
 
 .method static generateHitParams(Lcom/google/analytics/tracking/android/MetaModel;Ljava/util/Map;)Ljava/util/Map;
     .locals 7
-    .parameter "metaModel"
-    .parameter
+    .param p0, "metaModel"    # Lcom/google/analytics/tracking/android/MetaModel;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -87,13 +86,13 @@
 
     .prologue
     .line 25
-    .local p1, hit:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p1, "hit":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     new-instance v3, Ljava/util/HashMap;
 
     invoke-direct {v3}, Ljava/util/HashMap;-><init>()V
 
     .line 26
-    .local v3, params:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v3, "params":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-interface {p1}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object v6
@@ -102,7 +101,7 @@
 
     move-result-object v1
 
-    .local v1, i$:Ljava/util/Iterator;
+    .local v1, "i$":Ljava/util/Iterator;
     :cond_0
     :goto_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
@@ -118,7 +117,7 @@
     check-cast v0, Ljava/util/Map$Entry;
 
     .line 27
-    .local v0, entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v0, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v6
@@ -130,7 +129,7 @@
     move-result-object v2
 
     .line 28
-    .local v2, metaInfo:Lcom/google/analytics/tracking/android/MetaModel$MetaInfo;
+    .local v2, "metaInfo":Lcom/google/analytics/tracking/android/MetaModel$MetaInfo;
     if-eqz v2, :cond_0
 
     .line 31
@@ -145,7 +144,7 @@
     move-result-object v4
 
     .line 32
-    .local v4, urlParam:Ljava/lang/String;
+    .local v4, "urlParam":Ljava/lang/String;
     if-eqz v4, :cond_0
 
     .line 38
@@ -156,7 +155,7 @@
     check-cast v5, Ljava/lang/String;
 
     .line 39
-    .local v5, value:Ljava/lang/String;
+    .local v5, "value":Ljava/lang/String;
     invoke-virtual {v2}, Lcom/google/analytics/tracking/android/MetaModel$MetaInfo;->getFormatter()Lcom/google/analytics/tracking/android/MetaModel$Formatter;
 
     move-result-object v6
@@ -192,18 +191,18 @@
     goto :goto_0
 
     .line 47
-    .end local v0           #entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
-    .end local v2           #metaInfo:Lcom/google/analytics/tracking/android/MetaModel$MetaInfo;
-    .end local v4           #urlParam:Ljava/lang/String;
-    .end local v5           #value:Ljava/lang/String;
+    .end local v0    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
+    .end local v2    # "metaInfo":Lcom/google/analytics/tracking/android/MetaModel$MetaInfo;
+    .end local v4    # "urlParam":Ljava/lang/String;
+    .end local v5    # "value":Ljava/lang/String;
     :cond_2
     return-object v3
 .end method
 
 .method static postProcessHit(Lcom/google/analytics/tracking/android/Hit;J)Ljava/lang/String;
     .locals 9
-    .parameter "hit"
-    .parameter "currentTimeMillis"
+    .param p0, "hit"    # Lcom/google/analytics/tracking/android/Hit;
+    .param p1, "currentTimeMillis"    # J
 
     .prologue
     const-wide/16 v5, 0x0
@@ -218,7 +217,7 @@
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     .line 60
-    .local v0, builder:Ljava/lang/StringBuilder;
+    .local v0, "builder":Ljava/lang/StringBuilder;
     invoke-virtual {p0}, Lcom/google/analytics/tracking/android/Hit;->getHitParams()Ljava/lang/String;
 
     move-result-object v3
@@ -242,7 +241,7 @@
     sub-long v1, p1, v3
 
     .line 65
-    .local v1, queueTime:J
+    .local v1, "queueTime":J
     cmp-long v3, v1, v5
 
     if-ltz v3, :cond_0
@@ -269,7 +268,7 @@
     invoke-virtual {v3, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     .line 74
-    .end local v1           #queueTime:J
+    .end local v1    # "queueTime":J
     :cond_0
     const-string v3, "&"
 

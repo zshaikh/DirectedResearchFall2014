@@ -21,7 +21,6 @@
 
 .method private constructor <init>(B)V
     .locals 0
-    .parameter
 
     .prologue
     .line 91
@@ -34,10 +33,6 @@
 # virtual methods
 .method public final b(Landroid/content/Context;Lcom/flurry/android/FlurryAds;Lcom/flurry/android/cz;Lcom/flurry/android/AdUnit;)Lcom/flurry/android/p;
     .locals 6
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 95

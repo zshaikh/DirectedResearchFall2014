@@ -169,9 +169,7 @@
 
 .method private constructor <init>(Ljava/lang/String;IZ)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter "canExtendToken"
+    .param p3, "canExtendToken"    # Z
 
     .prologue
     .line 60
@@ -186,7 +184,6 @@
 
 .method public static valueOf(Ljava/lang/String;)Lcom/facebook/AccessTokenSource;
     .locals 1
-    .parameter
 
     .prologue
     .line 1

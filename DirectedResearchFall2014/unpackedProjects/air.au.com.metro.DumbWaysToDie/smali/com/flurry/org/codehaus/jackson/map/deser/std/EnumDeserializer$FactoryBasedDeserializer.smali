@@ -39,8 +39,7 @@
 # direct methods
 .method public constructor <init>(Ljava/lang/Class;Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;)V
     .locals 1
-    .parameter
-    .parameter "f"
+    .param p2, "f"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -53,7 +52,7 @@
 
     .prologue
     .line 115
-    .local p1, cls:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p1, "cls":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const-class v0, Ljava/lang/Enum;
 
     invoke-direct {p0, v0}, Lcom/flurry/org/codehaus/jackson/map/deser/std/StdScalarDeserializer;-><init>(Ljava/lang/Class;)V
@@ -76,8 +75,8 @@
 # virtual methods
 .method public deserialize(Lcom/flurry/org/codehaus/jackson/JsonParser;Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;)Ljava/lang/Object;
     .locals 7
-    .parameter "jp"
-    .parameter "ctxt"
+    .param p1, "jp"    # Lcom/flurry/org/codehaus/jackson/JsonParser;
+    .param p2, "ctxt"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -92,7 +91,7 @@
     move-result-object v0
 
     .line 127
-    .local v0, curr:Lcom/flurry/org/codehaus/jackson/JsonToken;
+    .local v0, "curr":Lcom/flurry/org/codehaus/jackson/JsonToken;
     sget-object v3, Lcom/flurry/org/codehaus/jackson/JsonToken;->VALUE_STRING:Lcom/flurry/org/codehaus/jackson/JsonToken;
 
     if-eq v0, v3, :cond_0
@@ -117,7 +116,7 @@
     move-result-object v2
 
     .line 132
-    .local v2, value:Ljava/lang/String;
+    .local v2, "value":Ljava/lang/String;
     :try_start_0
     iget-object v3, p0, Lcom/flurry/org/codehaus/jackson/map/deser/std/EnumDeserializer$FactoryBasedDeserializer;->_factory:Ljava/lang/reflect/Method;
 
@@ -148,7 +147,7 @@
     move-object v1, v3
 
     .line 134
-    .local v1, e:Ljava/lang/Exception;
+    .local v1, "e":Ljava/lang/Exception;
     invoke-static {v1}, Lcom/flurry/org/codehaus/jackson/map/util/ClassUtil;->unwrapAndThrowAsIAE(Ljava/lang/Throwable;)V
 
     .line 136

@@ -167,11 +167,11 @@
 
 .method constructor <init>(Landroid/view/View;Lcom/fusepowered/m2/m2l/AdConfiguration;)V
     .locals 3
-    .parameter "view"
-    .parameter "adConfiguration"
+    .param p1, "view"    # Landroid/view/View;
+    .param p2, "adConfiguration"    # Lcom/fusepowered/m2/m2l/AdConfiguration;
 
     .prologue
-    const/high16 v2, 0x42c8
+    const/high16 v2, 0x42c80000
 
     .line 59
     invoke-direct {p0}, Landroid/view/GestureDetector$SimpleOnGestureListener;-><init>()V
@@ -200,7 +200,7 @@
 
     int-to-float v0, v0
 
-    const/high16 v1, 0x4040
+    const/high16 v1, 0x40400000
 
     div-float/2addr v0, v1
 
@@ -251,7 +251,7 @@
 
 .method private isMovingLeft(F)Z
     .locals 1
-    .parameter "currentPositionX"
+    .param p1, "currentPositionX"    # F
 
     .prologue
     .line 176
@@ -274,7 +274,7 @@
 
 .method private isMovingRight(F)Z
     .locals 1
-    .parameter "currentPositionX"
+    .param p1, "currentPositionX"    # F
 
     .prologue
     .line 172
@@ -297,8 +297,8 @@
 
 .method private isTouchOutOfBoundsOnYAxis(FF)Z
     .locals 2
-    .parameter "initialY"
-    .parameter "currentY"
+    .param p1, "initialY"    # F
+    .param p2, "currentY"    # F
 
     .prologue
     .line 116
@@ -308,7 +308,7 @@
 
     move-result v0
 
-    const/high16 v1, 0x4248
+    const/high16 v1, 0x42480000
 
     cmpl-float v0, v0, v1
 
@@ -327,7 +327,7 @@
 
 .method private leftThresholdReached(F)Z
     .locals 4
-    .parameter "currentPosition"
+    .param p1, "currentPosition"    # F
 
     .prologue
     const/4 v3, 0x0
@@ -380,7 +380,7 @@
 
 .method private rightThresholdReached(F)Z
     .locals 4
-    .parameter "currentPosition"
+    .param p1, "currentPosition"    # F
 
     .prologue
     const/4 v3, 0x0
@@ -430,7 +430,7 @@
 
 .method private updateInitialState(F)V
     .locals 1
-    .parameter "currentPositionX"
+    .param p1, "currentPositionX"    # F
 
     .prologue
     .line 120
@@ -452,7 +452,7 @@
 
 .method private updateZag(F)V
     .locals 1
-    .parameter "currentPositionX"
+    .param p1, "currentPositionX"    # F
 
     .prologue
     .line 133
@@ -483,7 +483,7 @@
 
 .method private updateZig(F)V
     .locals 1
-    .parameter "currentPositionX"
+    .param p1, "currentPositionX"    # F
 
     .prologue
     .line 126
@@ -605,10 +605,10 @@
 
 .method public onScroll(Landroid/view/MotionEvent;Landroid/view/MotionEvent;FF)Z
     .locals 2
-    .parameter "e1"
-    .parameter "e2"
-    .parameter "distanceX"
-    .parameter "distanceY"
+    .param p1, "e1"    # Landroid/view/MotionEvent;
+    .param p2, "e2"    # Landroid/view/MotionEvent;
+    .param p3, "distanceX"    # F
+    .param p4, "distanceY"    # F
 
     .prologue
     .line 69

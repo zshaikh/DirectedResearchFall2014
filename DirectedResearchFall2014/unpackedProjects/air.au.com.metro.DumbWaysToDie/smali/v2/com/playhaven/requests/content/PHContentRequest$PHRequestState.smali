@@ -129,8 +129,6 @@
 
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 79
@@ -141,7 +139,6 @@
 
 .method public static valueOf(Ljava/lang/String;)Lv2/com/playhaven/requests/content/PHContentRequest$PHRequestState;
     .locals 1
-    .parameter
 
     .prologue
     .line 1

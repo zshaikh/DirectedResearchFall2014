@@ -16,7 +16,7 @@
 
 .method private sanitize(Ljava/lang/String;)Ljava/lang/String;
     .locals 3
-    .parameter "str"
+    .param p1, "str"    # Ljava/lang/String;
 
     .prologue
     const-string v2, ""

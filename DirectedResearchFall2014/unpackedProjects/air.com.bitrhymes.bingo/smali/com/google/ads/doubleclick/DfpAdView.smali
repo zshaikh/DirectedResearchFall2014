@@ -6,9 +6,9 @@
 # direct methods
 .method public constructor <init>(Landroid/app/Activity;Lcom/google/ads/AdSize;Ljava/lang/String;)V
     .locals 0
-    .parameter "activity"
-    .parameter "adSize"
-    .parameter "adUnitId"
+    .param p1, "activity"    # Landroid/app/Activity;
+    .param p2, "adSize"    # Lcom/google/ads/AdSize;
+    .param p3, "adUnitId"    # Ljava/lang/String;
 
     .prologue
     .line 27
@@ -20,9 +20,9 @@
 
 .method public constructor <init>(Landroid/app/Activity;[Lcom/google/ads/AdSize;Ljava/lang/String;)V
     .locals 0
-    .parameter "activity"
-    .parameter "adSizes"
-    .parameter "adUnitId"
+    .param p1, "activity"    # Landroid/app/Activity;
+    .param p2, "adSizes"    # [Lcom/google/ads/AdSize;
+    .param p3, "adUnitId"    # Ljava/lang/String;
 
     .prologue
     .line 38
@@ -34,8 +34,8 @@
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
-    .parameter "context"
-    .parameter "attrs"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
     .line 48
@@ -47,9 +47,9 @@
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 0
-    .parameter "context"
-    .parameter "attrs"
-    .parameter "defStyle"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "attrs"    # Landroid/util/AttributeSet;
+    .param p3, "defStyle"    # I
 
     .prologue
     .line 59
@@ -63,7 +63,7 @@
 # virtual methods
 .method public enableManualImpressions(Z)V
     .locals 2
-    .parameter "useManualImpressions"
+    .param p1, "useManualImpressions"    # Z
 
     .prologue
     .line 85
@@ -100,7 +100,7 @@
 
 .method public resize(Lcom/google/ads/AdSize;)V
     .locals 1
-    .parameter "adSize"
+    .param p1, "adSize"    # Lcom/google/ads/AdSize;
 
     .prologue
     .line 101
@@ -125,7 +125,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/google/ads/doubleclick/DfpAdView;
     check-cast p0, Lcom/google/ads/internal/h;
 
     invoke-virtual {p0, p1}, Lcom/google/ads/internal/h;->b(Lcom/google/ads/AdSize;)V
@@ -136,7 +136,7 @@
 
 .method public setAppEventListener(Lcom/google/ads/AppEventListener;)V
     .locals 0
-    .parameter "appEventListener"
+    .param p1, "appEventListener"    # Lcom/google/ads/AppEventListener;
 
     .prologue
     .line 67
@@ -148,7 +148,7 @@
 
 .method public varargs setSupportedAdSizes([Lcom/google/ads/AdSize;)V
     .locals 0
-    .parameter "adSizes"
+    .param p1, "adSizes"    # [Lcom/google/ads/AdSize;
 
     .prologue
     .line 76

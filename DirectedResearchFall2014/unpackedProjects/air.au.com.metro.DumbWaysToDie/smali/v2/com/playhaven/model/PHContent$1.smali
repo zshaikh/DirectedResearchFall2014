@@ -43,7 +43,6 @@
 # virtual methods
 .method public bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 1
-    .parameter
 
     .prologue
     .line 1
@@ -56,7 +55,7 @@
 
 .method public createFromParcel(Landroid/os/Parcel;)Lv2/com/playhaven/model/PHContent;
     .locals 1
-    .parameter "in"
+    .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
     .line 108
@@ -69,7 +68,6 @@
 
 .method public bridge synthetic newArray(I)[Ljava/lang/Object;
     .locals 1
-    .parameter
 
     .prologue
     .line 1
@@ -82,7 +80,7 @@
 
 .method public newArray(I)[Lv2/com/playhaven/model/PHContent;
     .locals 1
-    .parameter "size"
+    .param p1, "size"    # I
 
     .prologue
     .line 112

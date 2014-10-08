@@ -32,7 +32,6 @@
 # direct methods
 .method private constructor <init>(Lcom/fusepowered/m2/m2l/util/vast/VastManager;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 152
@@ -45,8 +44,6 @@
 
 .method synthetic constructor <init>(Lcom/fusepowered/m2/m2l/util/vast/VastManager;Lcom/fusepowered/m2/m2l/util/vast/VastManager$ProcessVastBackgroundTask;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 152
@@ -59,7 +56,6 @@
 # virtual methods
 .method protected bridge varargs synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
-    .parameter
 
     .prologue
     .line 1
@@ -74,7 +70,7 @@
 
 .method protected varargs doInBackground([Ljava/lang/String;)Ljava/lang/Void;
     .locals 3
-    .parameter "strings"
+    .param p1, "strings"    # [Ljava/lang/String;
 
     .prologue
     .line 156
@@ -91,7 +87,7 @@
     aget-object v1, p1, v2
 
     .line 159
-    .local v1, vastXml:Ljava/lang/String;
+    .local v1, "vastXml":Ljava/lang/String;
     :goto_0
     if-eqz v1, :cond_0
 
@@ -108,7 +104,7 @@
     if-eqz v2, :cond_1
 
     .line 171
-    .end local v1           #vastXml:Ljava/lang/String;
+    .end local v1    # "vastXml":Ljava/lang/String;
     :cond_0
     :goto_1
     const/4 v2, 0x0
@@ -116,11 +112,11 @@
     return-object v2
 
     .line 160
-    .restart local v1       #vastXml:Ljava/lang/String;
+    .restart local v1    # "vastXml":Ljava/lang/String;
     :cond_1
     iget-object v2, p0, Lcom/fusepowered/m2/m2l/util/vast/VastManager$ProcessVastBackgroundTask;->this$0:Lcom/fusepowered/m2/m2l/util/vast/VastManager;
 
-    #calls: Lcom/fusepowered/m2/m2l/util/vast/VastManager;->processVastFollowingRedirect(Ljava/lang/String;)Ljava/lang/String;
+    # invokes: Lcom/fusepowered/m2/m2l/util/vast/VastManager;->processVastFollowingRedirect(Ljava/lang/String;)Ljava/lang/String;
     invoke-static {v2, v1}, Lcom/fusepowered/m2/m2l/util/vast/VastManager;->access$0(Lcom/fusepowered/m2/m2l/util/vast/VastManager;Ljava/lang/String;)Ljava/lang/String;
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
@@ -132,40 +128,40 @@
     goto :goto_0
 
     .line 163
-    .end local v1           #vastXml:Ljava/lang/String;
+    .end local v1    # "vastXml":Ljava/lang/String;
     :catch_0
     move-exception v2
 
     move-object v0, v2
 
     .line 164
-    .local v0, e:Ljava/io/IOException;
+    .local v0, "e":Ljava/io/IOException;
     invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
 
     goto :goto_1
 
     .line 165
-    .end local v0           #e:Ljava/io/IOException;
+    .end local v0    # "e":Ljava/io/IOException;
     :catch_1
     move-exception v2
 
     move-object v0, v2
 
     .line 166
-    .local v0, e:Lorg/xml/sax/SAXException;
+    .local v0, "e":Lorg/xml/sax/SAXException;
     invoke-virtual {v0}, Lorg/xml/sax/SAXException;->printStackTrace()V
 
     goto :goto_1
 
     .line 167
-    .end local v0           #e:Lorg/xml/sax/SAXException;
+    .end local v0    # "e":Lorg/xml/sax/SAXException;
     :catch_2
     move-exception v2
 
     move-object v0, v2
 
     .line 168
-    .local v0, e:Ljavax/xml/parsers/ParserConfigurationException;
+    .local v0, "e":Ljavax/xml/parsers/ParserConfigurationException;
     invoke-virtual {v0}, Ljavax/xml/parsers/ParserConfigurationException;->printStackTrace()V
 
     goto :goto_1
@@ -180,7 +176,7 @@
 
     const/4 v1, 0x1
 
-    #calls: Lcom/fusepowered/m2/m2l/util/vast/VastManager;->vastProcessComplete(Z)V
+    # invokes: Lcom/fusepowered/m2/m2l/util/vast/VastManager;->vastProcessComplete(Z)V
     invoke-static {v0, v1}, Lcom/fusepowered/m2/m2l/util/vast/VastManager;->access$1(Lcom/fusepowered/m2/m2l/util/vast/VastManager;Z)V
 
     .line 182
@@ -189,7 +185,6 @@
 
 .method protected bridge synthetic onPostExecute(Ljava/lang/Object;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1
@@ -202,7 +197,7 @@
 
 .method protected onPostExecute(Ljava/lang/Void;)V
     .locals 2
-    .parameter "aVoid"
+    .param p1, "aVoid"    # Ljava/lang/Void;
 
     .prologue
     .line 176
@@ -210,7 +205,7 @@
 
     const/4 v1, 0x0
 
-    #calls: Lcom/fusepowered/m2/m2l/util/vast/VastManager;->vastProcessComplete(Z)V
+    # invokes: Lcom/fusepowered/m2/m2l/util/vast/VastManager;->vastProcessComplete(Z)V
     invoke-static {v0, v1}, Lcom/fusepowered/m2/m2l/util/vast/VastManager;->access$1(Lcom/fusepowered/m2/m2l/util/vast/VastManager;Z)V
 
     .line 177

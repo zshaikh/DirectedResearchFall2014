@@ -43,7 +43,6 @@
 # direct methods
 .method constructor <init>(Lcom/facebook/widget/PickerFragment;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 828
@@ -56,7 +55,6 @@
 
 .method static synthetic access$0(Lcom/facebook/widget/PickerFragment$LoadingStrategy;)Lcom/facebook/widget/PickerFragment;
     .locals 1
-    .parameter
 
     .prologue
     .line 828
@@ -69,7 +67,6 @@
 # virtual methods
 .method public attach(Lcom/facebook/widget/GraphObjectAdapter;)V
     .locals 4
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -80,7 +77,7 @@
 
     .prologue
     .line 835
-    .local p1, adapter:Lcom/facebook/widget/GraphObjectAdapter;,"Lcom/facebook/widget/GraphObjectAdapter<TT;>;"
+    .local p1, "adapter":Lcom/facebook/widget/GraphObjectAdapter;, "Lcom/facebook/widget/GraphObjectAdapter<TT;>;"
     iget-object v0, p0, Lcom/facebook/widget/PickerFragment$LoadingStrategy;->this$0:Lcom/facebook/widget/PickerFragment;
 
     invoke-virtual {v0}, Lcom/facebook/widget/PickerFragment;->getLoaderManager()Landroid/support/v4/app/LoaderManager;
@@ -245,7 +242,7 @@
 
     iget-object v2, p0, Lcom/facebook/widget/PickerFragment$LoadingStrategy;->this$0:Lcom/facebook/widget/PickerFragment;
 
-    #getter for: Lcom/facebook/widget/PickerFragment;->graphObjectClass:Ljava/lang/Class;
+    # getter for: Lcom/facebook/widget/PickerFragment;->graphObjectClass:Ljava/lang/Class;
     invoke-static {v2}, Lcom/facebook/widget/PickerFragment;->access$2(Lcom/facebook/widget/PickerFragment;)Ljava/lang/Class;
 
     move-result-object v2
@@ -257,8 +254,6 @@
 
 .method protected onLoadFinished(Lcom/facebook/widget/GraphObjectPagingLoader;Lcom/facebook/widget/SimpleGraphObjectCursor;)V
     .locals 1
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -271,8 +266,8 @@
 
     .prologue
     .line 922
-    .local p1, loader:Lcom/facebook/widget/GraphObjectPagingLoader;,"Lcom/facebook/widget/GraphObjectPagingLoader<TT;>;"
-    .local p2, data:Lcom/facebook/widget/SimpleGraphObjectCursor;,"Lcom/facebook/widget/SimpleGraphObjectCursor<TT;>;"
+    .local p1, "loader":Lcom/facebook/widget/GraphObjectPagingLoader;, "Lcom/facebook/widget/GraphObjectPagingLoader<TT;>;"
+    .local p2, "data":Lcom/facebook/widget/SimpleGraphObjectCursor;, "Lcom/facebook/widget/SimpleGraphObjectCursor<TT;>;"
     iget-object v0, p0, Lcom/facebook/widget/PickerFragment$LoadingStrategy;->this$0:Lcom/facebook/widget/PickerFragment;
 
     invoke-virtual {v0, p2}, Lcom/facebook/widget/PickerFragment;->updateAdapter(Lcom/facebook/widget/SimpleGraphObjectCursor;)V
@@ -283,7 +278,6 @@
 
 .method protected onLoadReset(Lcom/facebook/widget/GraphObjectPagingLoader;)V
     .locals 2
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -294,7 +288,7 @@
 
     .prologue
     .line 918
-    .local p1, loader:Lcom/facebook/widget/GraphObjectPagingLoader;,"Lcom/facebook/widget/GraphObjectPagingLoader<TT;>;"
+    .local p1, "loader":Lcom/facebook/widget/GraphObjectPagingLoader;, "Lcom/facebook/widget/GraphObjectPagingLoader<TT;>;"
     iget-object v0, p0, Lcom/facebook/widget/PickerFragment$LoadingStrategy;->adapter:Lcom/facebook/widget/GraphObjectAdapter;
 
     const/4 v1, 0x0
@@ -307,8 +301,7 @@
 
 .method protected onStartLoading(Lcom/facebook/widget/GraphObjectPagingLoader;Lcom/facebook/Request;)V
     .locals 1
-    .parameter
-    .parameter "request"
+    .param p2, "request"    # Lcom/facebook/Request;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -321,7 +314,7 @@
 
     .prologue
     .line 914
-    .local p1, loader:Lcom/facebook/widget/GraphObjectPagingLoader;,"Lcom/facebook/widget/GraphObjectPagingLoader<TT;>;"
+    .local p1, "loader":Lcom/facebook/widget/GraphObjectPagingLoader;, "Lcom/facebook/widget/GraphObjectPagingLoader<TT;>;"
     iget-object v0, p0, Lcom/facebook/widget/PickerFragment$LoadingStrategy;->this$0:Lcom/facebook/widget/PickerFragment;
 
     invoke-virtual {v0}, Lcom/facebook/widget/PickerFragment;->displayActivityCircle()V
@@ -332,7 +325,7 @@
 
 .method public startLoading(Lcom/facebook/Request;)V
     .locals 2
-    .parameter "request"
+    .param p1, "request"    # Lcom/facebook/Request;
 
     .prologue
     .line 899

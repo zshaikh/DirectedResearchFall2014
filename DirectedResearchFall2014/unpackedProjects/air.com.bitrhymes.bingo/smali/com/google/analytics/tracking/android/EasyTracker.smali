@@ -130,8 +130,8 @@
 
 .method static synthetic access$102(Lcom/google/analytics/tracking/android/EasyTracker;Z)Z
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
+    .param p0, "x0"    # Lcom/google/analytics/tracking/android/EasyTracker;
+    .param p1, "x1"    # Z
 
     .prologue
     .line 90
@@ -196,7 +196,7 @@
 
 .method private getActivityName(Landroid/app/Activity;)Ljava/lang/String;
     .locals 3
-    .parameter "activity"
+    .param p1, "activity"    # Landroid/app/Activity;
 
     .prologue
     .line 422
@@ -209,7 +209,7 @@
     move-result-object v0
 
     .line 423
-    .local v0, canonicalName:Ljava/lang/String;
+    .local v0, "canonicalName":Ljava/lang/String;
     iget-object v2, p0, Lcom/google/analytics/tracking/android/EasyTracker;->mActivityNameMap:Ljava/util/Map;
 
     invoke-interface {v2, v0}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
@@ -225,7 +225,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/google/analytics/tracking/android/EasyTracker;
     check-cast p0, Ljava/lang/String;
 
     move-object v2, p0
@@ -235,7 +235,7 @@
     return-object v2
 
     .line 426
-    .restart local p0
+    .restart local p0    # "this":Lcom/google/analytics/tracking/android/EasyTracker;
     :cond_0
     iget-object v2, p0, Lcom/google/analytics/tracking/android/EasyTracker;->mParameterFetcher:Lcom/google/analytics/tracking/android/ParameterLoader;
 
@@ -244,7 +244,7 @@
     move-result-object v1
 
     .line 427
-    .local v1, name:Ljava/lang/String;
+    .local v1, "name":Ljava/lang/String;
     if-nez v1, :cond_1
 
     .line 428
@@ -638,7 +638,7 @@
     iget-object v0, p0, Lcom/google/analytics/tracking/android/EasyTracker;->mExceptionHandler:Ljava/lang/Thread$UncaughtExceptionHandler;
 
     .line 279
-    .local v0, newHandler:Ljava/lang/Thread$UncaughtExceptionHandler;
+    .local v0, "newHandler":Ljava/lang/Thread$UncaughtExceptionHandler;
     if-nez v0, :cond_6
 
     .line 280
@@ -657,18 +657,18 @@
     invoke-direct {v1, v2, v3, v4, v5}, Lcom/google/analytics/tracking/android/ExceptionReporter;-><init>(Lcom/google/analytics/tracking/android/Tracker;Lcom/google/analytics/tracking/android/ServiceManager;Ljava/lang/Thread$UncaughtExceptionHandler;Landroid/content/Context;)V
 
     .line 282
-    .local v1, reporter:Lcom/google/analytics/tracking/android/ExceptionReporter;
+    .local v1, "reporter":Lcom/google/analytics/tracking/android/ExceptionReporter;
     move-object v0, v1
 
     .line 284
-    .end local v1           #reporter:Lcom/google/analytics/tracking/android/ExceptionReporter;
+    .end local v1    # "reporter":Lcom/google/analytics/tracking/android/ExceptionReporter;
     :cond_6
     invoke-static {v0}, Ljava/lang/Thread;->setDefaultUncaughtExceptionHandler(Ljava/lang/Thread$UncaughtExceptionHandler;)V
 
     goto/16 :goto_0
 
     .line 254
-    .end local v0           #newHandler:Ljava/lang/Thread$UncaughtExceptionHandler;
+    .end local v0    # "newHandler":Ljava/lang/Thread$UncaughtExceptionHandler;
     :cond_7
     const/4 v2, 0x0
 
@@ -679,7 +679,7 @@
 # virtual methods
 .method public activityStart(Landroid/app/Activity;)V
     .locals 2
-    .parameter "activity"
+    .param p1, "activity"    # Landroid/app/Activity;
 
     .prologue
     const/4 v1, 0x1
@@ -756,7 +756,7 @@
 
 .method public activityStop(Landroid/app/Activity;)V
     .locals 4
-    .parameter "activity"
+    .param p1, "activity"    # Landroid/app/Activity;
 
     .prologue
     .line 375
@@ -920,7 +920,7 @@
 
 .method setClock(Lcom/google/analytics/tracking/android/Clock;)V
     .locals 0
-    .parameter "clock"
+    .param p1, "clock"    # Lcom/google/analytics/tracking/android/Clock;
     .annotation build Lcom/google/android/gms/common/util/VisibleForTesting;
     .end annotation
 
@@ -934,7 +934,7 @@
 
 .method public setContext(Landroid/content/Context;)V
     .locals 3
-    .parameter "ctx"
+    .param p1, "ctx"    # Landroid/content/Context;
 
     .prologue
     .line 304
@@ -956,7 +956,7 @@
     move-result-object v0
 
     .line 308
-    .local v0, sm:Lcom/google/analytics/tracking/android/ServiceManager;
+    .local v0, "sm":Lcom/google/analytics/tracking/android/ServiceManager;
     new-instance v1, Lcom/google/analytics/tracking/android/ParameterLoaderImpl;
 
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
@@ -980,10 +980,10 @@
 
 .method setContext(Landroid/content/Context;Lcom/google/analytics/tracking/android/ParameterLoader;Lcom/google/analytics/tracking/android/GoogleAnalytics;Lcom/google/analytics/tracking/android/ServiceManager;)V
     .locals 1
-    .parameter "ctx"
-    .parameter "parameterLoader"
-    .parameter "ga"
-    .parameter "serviceManager"
+    .param p1, "ctx"    # Landroid/content/Context;
+    .param p2, "parameterLoader"    # Lcom/google/analytics/tracking/android/ParameterLoader;
+    .param p3, "ga"    # Lcom/google/analytics/tracking/android/GoogleAnalytics;
+    .param p4, "serviceManager"    # Lcom/google/analytics/tracking/android/ServiceManager;
     .annotation build Lcom/google/android/gms/common/util/VisibleForTesting;
     .end annotation
 
@@ -1028,7 +1028,7 @@
 
 .method setUncaughtExceptionHandler(Ljava/lang/Thread$UncaughtExceptionHandler;)V
     .locals 0
-    .parameter "handler"
+    .param p1, "handler"    # Ljava/lang/Thread$UncaughtExceptionHandler;
     .annotation build Lcom/google/android/gms/common/util/VisibleForTesting;
     .end annotation
 

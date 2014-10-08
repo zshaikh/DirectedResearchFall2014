@@ -24,7 +24,6 @@
 # direct methods
 .method private constructor <init>(Lcom/adobe/air/AIRWindowSurfaceView;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1656
@@ -37,8 +36,6 @@
 
 .method synthetic constructor <init>(Lcom/adobe/air/AIRWindowSurfaceView;Lcom/adobe/air/AIRWindowSurfaceView$1;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 1656
@@ -51,7 +48,6 @@
 # virtual methods
 .method public onMenuItemClick(Landroid/view/MenuItem;)Z
     .locals 2
-    .parameter
 
     .prologue
     .line 1660

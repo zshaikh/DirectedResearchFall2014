@@ -17,7 +17,6 @@
 # direct methods
 .method public constructor <init>(Lcom/adobe/air/location/Geolocation;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 40
@@ -32,12 +31,6 @@
 
 .method private isRegionFullyContained(DDFDDF)Z
     .locals 9
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 195
@@ -90,7 +83,6 @@
 # virtual methods
 .method public onLocationChanged(Landroid/location/Location;)V
     .locals 25
-    .parameter
 
     .prologue
     .line 46
@@ -630,7 +622,6 @@
 
 .method public onProviderDisabled(Ljava/lang/String;)V
     .locals 4
-    .parameter
 
     .prologue
     const/4 v3, 0x0
@@ -730,7 +721,6 @@
 
 .method public onProviderEnabled(Ljava/lang/String;)V
     .locals 4
-    .parameter
 
     .prologue
     const/4 v3, 0x1
@@ -840,9 +830,6 @@
 
 .method public onStatusChanged(Ljava/lang/String;ILandroid/os/Bundle;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 190

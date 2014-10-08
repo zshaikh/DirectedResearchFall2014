@@ -39,8 +39,7 @@
 # direct methods
 .method public constructor <init>(Lcom/tapjoy/TJAdUnitJSBridge;Landroid/webkit/WebView;)V
     .locals 0
-    .parameter
-    .parameter "w"
+    .param p2, "w"    # Landroid/webkit/WebView;
 
     .prologue
     .line 1098
@@ -59,13 +58,13 @@
 # virtual methods
 .method protected bridge synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
-    .parameter "x0"
+    .param p1, "x0"    # [Ljava/lang/Object;
 
     .prologue
     .line 1092
     check-cast p1, [Ljava/lang/Boolean;
 
-    .end local p1
+    .end local p1    # "x0":[Ljava/lang/Object;
     invoke-virtual {p0, p1}, Lcom/tapjoy/TJAdUnitJSBridge$ShowWebView;->doInBackground([Ljava/lang/Boolean;)[Ljava/lang/Boolean;
 
     move-result-object v0
@@ -75,7 +74,7 @@
 
 .method protected varargs doInBackground([Ljava/lang/Boolean;)[Ljava/lang/Boolean;
     .locals 0
-    .parameter "params"
+    .param p1, "params"    # [Ljava/lang/Boolean;
 
     .prologue
     .line 1104
@@ -84,13 +83,13 @@
 
 .method protected bridge synthetic onPostExecute(Ljava/lang/Object;)V
     .locals 0
-    .parameter "x0"
+    .param p1, "x0"    # Ljava/lang/Object;
 
     .prologue
     .line 1092
     check-cast p1, [Ljava/lang/Boolean;
 
-    .end local p1
+    .end local p1    # "x0":Ljava/lang/Object;
     invoke-virtual {p0, p1}, Lcom/tapjoy/TJAdUnitJSBridge$ShowWebView;->onPostExecute([Ljava/lang/Boolean;)V
 
     return-void
@@ -98,7 +97,7 @@
 
 .method protected onPostExecute([Ljava/lang/Boolean;)V
     .locals 4
-    .parameter "params"
+    .param p1, "params"    # [Ljava/lang/Boolean;
 
     .prologue
     .line 1109
@@ -111,7 +110,7 @@
     move-result v1
 
     .line 1110
-    .local v1, visible:Z
+    .local v1, "visible":Z
     const/4 v2, 0x1
 
     aget-object v2, p1, v2
@@ -121,10 +120,10 @@
     move-result v0
 
     .line 1112
-    .local v0, transparent:Z
+    .local v0, "transparent":Z
     iget-object v2, p0, Lcom/tapjoy/TJAdUnitJSBridge$ShowWebView;->this$0:Lcom/tapjoy/TJAdUnitJSBridge;
 
-    #getter for: Lcom/tapjoy/TJAdUnitJSBridge;->context:Landroid/content/Context;
+    # getter for: Lcom/tapjoy/TJAdUnitJSBridge;->context:Landroid/content/Context;
     invoke-static {v2}, Lcom/tapjoy/TJAdUnitJSBridge;->access$200(Lcom/tapjoy/TJAdUnitJSBridge;)Landroid/content/Context;
 
     move-result-object v2

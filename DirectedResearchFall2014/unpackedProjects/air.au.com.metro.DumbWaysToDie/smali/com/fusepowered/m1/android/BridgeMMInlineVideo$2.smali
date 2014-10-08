@@ -34,7 +34,6 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m1/android/BridgeMMInlineVideo;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 38
@@ -63,7 +62,7 @@
     check-cast v1, Lcom/fusepowered/m1/android/MMWebView;
 
     .line 44
-    .local v1, webView:Lcom/fusepowered/m1/android/MMWebView;
+    .local v1, "webView":Lcom/fusepowered/m1/android/MMWebView;
     if-eqz v1, :cond_0
 
     .line 46
@@ -72,7 +71,7 @@
     move-result-object v0
 
     .line 48
-    .local v0, mmLayout:Lcom/fusepowered/m1/android/MMLayout;
+    .local v0, "mmLayout":Lcom/fusepowered/m1/android/MMLayout;
     if-eqz v0, :cond_0
 
     .line 50
@@ -84,7 +83,7 @@
     move-result-object v2
 
     .line 54
-    .end local v0           #mmLayout:Lcom/fusepowered/m1/android/MMLayout;
+    .end local v0    # "mmLayout":Lcom/fusepowered/m1/android/MMLayout;
     :goto_0
     return-object v2
 

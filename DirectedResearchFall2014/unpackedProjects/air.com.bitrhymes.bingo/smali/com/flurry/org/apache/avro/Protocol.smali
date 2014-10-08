@@ -14,7 +14,7 @@
 
 
 # static fields
-.field private static final MESSAGE_RESERVED:Ljava/util/Set; = null
+.field private static final MESSAGE_RESERVED:Ljava/util/Set;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Set",
@@ -25,7 +25,7 @@
     .end annotation
 .end field
 
-.field private static final PROTOCOL_RESERVED:Ljava/util/Set; = null
+.field private static final PROTOCOL_RESERVED:Ljava/util/Set;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Set",
@@ -36,9 +36,9 @@
     .end annotation
 .end field
 
-.field public static final SYSTEM_ERROR:Lcom/flurry/org/apache/avro/Schema; = null
+.field public static final SYSTEM_ERROR:Lcom/flurry/org/apache/avro/Schema;
 
-.field public static final SYSTEM_ERRORS:Lcom/flurry/org/apache/avro/Schema; = null
+.field public static final SYSTEM_ERRORS:Lcom/flurry/org/apache/avro/Schema;
 
 .field public static final VERSION:J = 0x1L
 
@@ -135,7 +135,7 @@
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     .line 217
-    .local v0, errors:Ljava/util/List;,"Ljava/util/List<Lcom/flurry/org/apache/avro/Schema;>;"
+    .local v0, "errors":Ljava/util/List;, "Ljava/util/List<Lcom/flurry/org/apache/avro/Schema;>;"
     sget-object v1, Lcom/flurry/org/apache/avro/Protocol;->SYSTEM_ERROR:Lcom/flurry/org/apache/avro/Schema;
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -229,8 +229,8 @@
 
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
-    .parameter "name"
-    .parameter "namespace"
+    .param p1, "name"    # Ljava/lang/String;
+    .param p2, "namespace"    # Ljava/lang/String;
 
     .prologue
     .line 237
@@ -244,9 +244,9 @@
 
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
-    .parameter "name"
-    .parameter "doc"
-    .parameter "namespace"
+    .param p1, "name"    # Ljava/lang/String;
+    .param p2, "doc"    # Ljava/lang/String;
+    .param p3, "namespace"    # Ljava/lang/String;
 
     .prologue
     .line 231
@@ -300,7 +300,7 @@
 
 .method static synthetic access$100(Lcom/flurry/org/apache/avro/Protocol;)Lcom/flurry/org/apache/avro/Schema$Names;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/flurry/org/apache/avro/Protocol;
 
     .prologue
     .line 61
@@ -311,7 +311,7 @@
 
 .method public static main([Ljava/lang/String;)V
     .locals 3
-    .parameter "args"
+    .param p0, "args"    # [Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/Exception;
@@ -342,7 +342,7 @@
 
 .method private static parse(Lcom/flurry/org/codehaus/jackson/JsonParser;)Lcom/flurry/org/apache/avro/Protocol;
     .locals 3
-    .parameter "parser"
+    .param p0, "parser"    # Lcom/flurry/org/codehaus/jackson/JsonParser;
 
     .prologue
     .line 411
@@ -352,7 +352,7 @@
     invoke-direct {v1}, Lcom/flurry/org/apache/avro/Protocol;-><init>()V
 
     .line 412
-    .local v1, protocol:Lcom/flurry/org/apache/avro/Protocol;
+    .local v1, "protocol":Lcom/flurry/org/apache/avro/Protocol;
     sget-object v2, Lcom/flurry/org/apache/avro/Schema;->MAPPER:Lcom/flurry/org/codehaus/jackson/map/ObjectMapper;
 
     invoke-virtual {v2, p0}, Lcom/flurry/org/codehaus/jackson/map/ObjectMapper;->readTree(Lcom/flurry/org/codehaus/jackson/JsonParser;)Lcom/flurry/org/codehaus/jackson/JsonNode;
@@ -367,14 +367,14 @@
     return-object v1
 
     .line 414
-    .end local v1           #protocol:Lcom/flurry/org/apache/avro/Protocol;
+    .end local v1    # "protocol":Lcom/flurry/org/apache/avro/Protocol;
     :catch_0
     move-exception v2
 
     move-object v0, v2
 
     .line 415
-    .local v0, e:Ljava/io/IOException;
+    .local v0, "e":Ljava/io/IOException;
     new-instance v2, Lcom/flurry/org/apache/avro/SchemaParseException;
 
     invoke-direct {v2, v0}, Lcom/flurry/org/apache/avro/SchemaParseException;-><init>(Ljava/lang/Throwable;)V
@@ -384,7 +384,7 @@
 
 .method public static parse(Ljava/io/File;)Lcom/flurry/org/apache/avro/Protocol;
     .locals 1
-    .parameter "file"
+    .param p0, "file"    # Ljava/io/File;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -408,7 +408,7 @@
 
 .method public static parse(Ljava/io/InputStream;)Lcom/flurry/org/apache/avro/Protocol;
     .locals 1
-    .parameter "stream"
+    .param p0, "stream"    # Ljava/io/InputStream;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -432,7 +432,7 @@
 
 .method public static parse(Ljava/lang/String;)Lcom/flurry/org/apache/avro/Protocol;
     .locals 4
-    .parameter "string"
+    .param p0, "string"    # Ljava/lang/String;
 
     .prologue
     .line 402
@@ -468,7 +468,7 @@
     move-object v0, v1
 
     .line 405
-    .local v0, e:Ljava/io/IOException;
+    .local v0, "e":Ljava/io/IOException;
     new-instance v1, Lcom/flurry/org/apache/avro/AvroRuntimeException;
 
     invoke-direct {v1, v0}, Lcom/flurry/org/apache/avro/AvroRuntimeException;-><init>(Ljava/lang/Throwable;)V
@@ -478,7 +478,7 @@
 
 .method private parse(Lcom/flurry/org/codehaus/jackson/JsonNode;)V
     .locals 0
-    .parameter "json"
+    .param p1, "json"    # Lcom/flurry/org/codehaus/jackson/JsonNode;
 
     .prologue
     .line 420
@@ -505,7 +505,7 @@
 
 .method private parseDoc(Lcom/flurry/org/codehaus/jackson/JsonNode;)V
     .locals 1
-    .parameter "json"
+    .param p1, "json"    # Lcom/flurry/org/codehaus/jackson/JsonNode;
 
     .prologue
     .line 436
@@ -521,7 +521,7 @@
 
 .method private parseDocNode(Lcom/flurry/org/codehaus/jackson/JsonNode;)Ljava/lang/String;
     .locals 2
-    .parameter "json"
+    .param p1, "json"    # Lcom/flurry/org/codehaus/jackson/JsonNode;
 
     .prologue
     .line 440
@@ -532,7 +532,7 @@
     move-result-object v0
 
     .line 441
-    .local v0, nameNode:Lcom/flurry/org/codehaus/jackson/JsonNode;
+    .local v0, "nameNode":Lcom/flurry/org/codehaus/jackson/JsonNode;
     if-nez v0, :cond_0
 
     const/4 v1, 0x0
@@ -551,8 +551,8 @@
 
 .method private parseMessage(Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/JsonNode;)Lcom/flurry/org/apache/avro/Protocol$Message;
     .locals 31
-    .parameter "messageName"
-    .parameter "json"
+    .param p1, "messageName"    # Ljava/lang/String;
+    .param p2, "json"    # Lcom/flurry/org/codehaus/jackson/JsonNode;
 
     .prologue
     .line 485
@@ -565,18 +565,18 @@
     move-result-object v8
 
     .line 487
-    .local v8, doc:Ljava/lang/String;
+    .local v8, "doc":Ljava/lang/String;
     new-instance v9, Ljava/util/LinkedHashMap;
 
     invoke-direct {v9}, Ljava/util/LinkedHashMap;-><init>()V
 
     .line 488
-    .local v9, mProps:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v9, "mProps":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-virtual/range {p2 .. p2}, Lcom/flurry/org/codehaus/jackson/JsonNode;->getFieldNames()Ljava/util/Iterator;
 
     move-result-object v21
 
-    .local v21, i:Ljava/util/Iterator;,"Ljava/util/Iterator<Ljava/lang/String;>;"
+    .local v21, "i":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/String;>;"
     :cond_0
     :goto_0
     invoke-interface/range {v21 .. v21}, Ljava/util/Iterator;->hasNext()Z
@@ -593,7 +593,7 @@
     check-cast v26, Ljava/lang/String;
 
     .line 490
-    .local v26, p:Ljava/lang/String;
+    .local v26, "p":Ljava/lang/String;
     sget-object v5, Lcom/flurry/org/apache/avro/Protocol;->MESSAGE_RESERVED:Ljava/util/Set;
 
     move-object v0, v5
@@ -616,7 +616,7 @@
     move-result-object v27
 
     .line 492
-    .local v27, prop:Lcom/flurry/org/codehaus/jackson/JsonNode;
+    .local v27, "prop":Lcom/flurry/org/codehaus/jackson/JsonNode;
     invoke-virtual/range {v27 .. v27}, Lcom/flurry/org/codehaus/jackson/JsonNode;->isValueNode()Z
 
     move-result v5
@@ -645,8 +645,8 @@
     goto :goto_0
 
     .line 497
-    .end local v26           #p:Ljava/lang/String;
-    .end local v27           #prop:Lcom/flurry/org/codehaus/jackson/JsonNode;
+    .end local v26    # "p":Ljava/lang/String;
+    .end local v27    # "prop":Lcom/flurry/org/codehaus/jackson/JsonNode;
     :cond_1
     const-string v5, "request"
 
@@ -659,7 +659,7 @@
     move-result-object v28
 
     .line 498
-    .local v28, requestNode:Lcom/flurry/org/codehaus/jackson/JsonNode;
+    .local v28, "requestNode":Lcom/flurry/org/codehaus/jackson/JsonNode;
     if-eqz v28, :cond_2
 
     invoke-virtual/range {v28 .. v28}, Lcom/flurry/org/codehaus/jackson/JsonNode;->isArray()Z
@@ -705,12 +705,12 @@
     invoke-direct/range {v20 .. v20}, Ljava/util/ArrayList;-><init>()V
 
     .line 501
-    .local v20, fields:Ljava/util/List;,"Ljava/util/List<Lcom/flurry/org/apache/avro/Schema$Field;>;"
+    .local v20, "fields":Ljava/util/List;, "Ljava/util/List<Lcom/flurry/org/apache/avro/Schema$Field;>;"
     invoke-virtual/range {v28 .. v28}, Lcom/flurry/org/codehaus/jackson/JsonNode;->iterator()Ljava/util/Iterator;
 
     move-result-object v22
 
-    .local v22, i$:Ljava/util/Iterator;
+    .local v22, "i$":Ljava/util/Iterator;
     :goto_1
     invoke-interface/range {v22 .. v22}, Ljava/util/Iterator;->hasNext()Z
 
@@ -725,7 +725,7 @@
     check-cast v17, Lcom/flurry/org/codehaus/jackson/JsonNode;
 
     .line 502
-    .local v17, field:Lcom/flurry/org/codehaus/jackson/JsonNode;
+    .local v17, "field":Lcom/flurry/org/codehaus/jackson/JsonNode;
     const-string v5, "name"
 
     move-object/from16 v0, v17
@@ -737,7 +737,7 @@
     move-result-object v18
 
     .line 503
-    .local v18, fieldNameNode:Lcom/flurry/org/codehaus/jackson/JsonNode;
+    .local v18, "fieldNameNode":Lcom/flurry/org/codehaus/jackson/JsonNode;
     if-nez v18, :cond_4
 
     .line 504
@@ -782,7 +782,7 @@
     move-result-object v19
 
     .line 506
-    .local v19, fieldTypeNode:Lcom/flurry/org/codehaus/jackson/JsonNode;
+    .local v19, "fieldTypeNode":Lcom/flurry/org/codehaus/jackson/JsonNode;
     if-nez v19, :cond_5
 
     .line 507
@@ -821,7 +821,7 @@
     move-result-object v23
 
     .line 509
-    .local v23, name:Ljava/lang/String;
+    .local v23, "name":Ljava/lang/String;
     new-instance v5, Lcom/flurry/org/apache/avro/Schema$Field;
 
     move-object/from16 v0, p0
@@ -871,21 +871,21 @@
     goto/16 :goto_1
 
     .line 513
-    .end local v17           #field:Lcom/flurry/org/codehaus/jackson/JsonNode;
-    .end local v18           #fieldNameNode:Lcom/flurry/org/codehaus/jackson/JsonNode;
-    .end local v19           #fieldTypeNode:Lcom/flurry/org/codehaus/jackson/JsonNode;
-    .end local v23           #name:Ljava/lang/String;
+    .end local v17    # "field":Lcom/flurry/org/codehaus/jackson/JsonNode;
+    .end local v18    # "fieldNameNode":Lcom/flurry/org/codehaus/jackson/JsonNode;
+    .end local v19    # "fieldTypeNode":Lcom/flurry/org/codehaus/jackson/JsonNode;
+    .end local v23    # "name":Ljava/lang/String;
     :cond_6
     invoke-static/range {v20 .. v20}, Lcom/flurry/org/apache/avro/Schema;->createRecord(Ljava/util/List;)Lcom/flurry/org/apache/avro/Schema;
 
     move-result-object v10
 
     .line 515
-    .local v10, request:Lcom/flurry/org/apache/avro/Schema;
+    .local v10, "request":Lcom/flurry/org/apache/avro/Schema;
     const/16 v24, 0x0
 
     .line 516
-    .local v24, oneWay:Z
+    .local v24, "oneWay":Z
     const-string v5, "one-way"
 
     move-object/from16 v0, p2
@@ -897,7 +897,7 @@
     move-result-object v25
 
     .line 517
-    .local v25, oneWayNode:Lcom/flurry/org/codehaus/jackson/JsonNode;
+    .local v25, "oneWayNode":Lcom/flurry/org/codehaus/jackson/JsonNode;
     if-eqz v25, :cond_8
 
     .line 518
@@ -955,7 +955,7 @@
     move-result-object v29
 
     .line 524
-    .local v29, responseNode:Lcom/flurry/org/codehaus/jackson/JsonNode;
+    .local v29, "responseNode":Lcom/flurry/org/codehaus/jackson/JsonNode;
     if-nez v24, :cond_9
 
     if-nez v29, :cond_9
@@ -1002,7 +1002,7 @@
     move-result-object v15
 
     .line 529
-    .local v15, decls:Lcom/flurry/org/codehaus/jackson/JsonNode;
+    .local v15, "decls":Lcom/flurry/org/codehaus/jackson/JsonNode;
     if-eqz v24, :cond_c
 
     .line 530
@@ -1125,13 +1125,13 @@
     move-result-object v11
 
     .line 540
-    .local v11, response:Lcom/flurry/org/apache/avro/Schema;
+    .local v11, "response":Lcom/flurry/org/apache/avro/Schema;
     new-instance v16, Ljava/util/ArrayList;
 
     invoke-direct/range {v16 .. v16}, Ljava/util/ArrayList;-><init>()V
 
     .line 541
-    .local v16, errs:Ljava/util/List;,"Ljava/util/List<Lcom/flurry/org/apache/avro/Schema;>;"
+    .local v16, "errs":Ljava/util/List;, "Ljava/util/List<Lcom/flurry/org/apache/avro/Schema;>;"
     sget-object v5, Lcom/flurry/org/apache/avro/Protocol;->SYSTEM_ERROR:Lcom/flurry/org/apache/avro/Schema;
 
     move-object/from16 v0, v16
@@ -1199,13 +1199,13 @@
     check-cast v14, Lcom/flurry/org/codehaus/jackson/JsonNode;
 
     .line 546
-    .local v14, decl:Lcom/flurry/org/codehaus/jackson/JsonNode;
+    .local v14, "decl":Lcom/flurry/org/codehaus/jackson/JsonNode;
     invoke-virtual {v14}, Lcom/flurry/org/codehaus/jackson/JsonNode;->getTextValue()Ljava/lang/String;
 
     move-result-object v23
 
     .line 547
-    .restart local v23       #name:Ljava/lang/String;
+    .restart local v23    # "name":Ljava/lang/String;
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/flurry/org/apache/avro/Protocol;->types:Lcom/flurry/org/apache/avro/Schema$Names;
@@ -1221,7 +1221,7 @@
     move-result-object v30
 
     .line 548
-    .local v30, schema:Lcom/flurry/org/apache/avro/Schema;
+    .local v30, "schema":Lcom/flurry/org/apache/avro/Schema;
     if-nez v30, :cond_e
 
     .line 549
@@ -1301,9 +1301,9 @@
     goto :goto_3
 
     .line 556
-    .end local v14           #decl:Lcom/flurry/org/codehaus/jackson/JsonNode;
-    .end local v23           #name:Ljava/lang/String;
-    .end local v30           #schema:Lcom/flurry/org/apache/avro/Schema;
+    .end local v14    # "decl":Lcom/flurry/org/codehaus/jackson/JsonNode;
+    .end local v23    # "name":Ljava/lang/String;
+    .end local v30    # "schema":Lcom/flurry/org/apache/avro/Schema;
     :cond_10
     new-instance v5, Lcom/flurry/org/apache/avro/Protocol$TwoWayMessage;
 
@@ -1324,7 +1324,7 @@
 
 .method private parseMessages(Lcom/flurry/org/codehaus/jackson/JsonNode;)V
     .locals 5
-    .parameter "json"
+    .param p1, "json"    # Lcom/flurry/org/codehaus/jackson/JsonNode;
 
     .prologue
     .line 476
@@ -1335,7 +1335,7 @@
     move-result-object v0
 
     .line 477
-    .local v0, defs:Lcom/flurry/org/codehaus/jackson/JsonNode;
+    .local v0, "defs":Lcom/flurry/org/codehaus/jackson/JsonNode;
     if-nez v0, :cond_1
 
     .line 482
@@ -1348,7 +1348,7 @@
 
     move-result-object v1
 
-    .local v1, i:Ljava/util/Iterator;,"Ljava/util/Iterator<Ljava/lang/String;>;"
+    .local v1, "i":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/String;>;"
     :goto_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
@@ -1364,7 +1364,7 @@
     check-cast v2, Ljava/lang/String;
 
     .line 480
-    .local v2, prop:Ljava/lang/String;
+    .local v2, "prop":Ljava/lang/String;
     iget-object v3, p0, Lcom/flurry/org/apache/avro/Protocol;->messages:Ljava/util/Map;
 
     invoke-virtual {v0, v2}, Lcom/flurry/org/codehaus/jackson/JsonNode;->get(Ljava/lang/String;)Lcom/flurry/org/codehaus/jackson/JsonNode;
@@ -1382,7 +1382,7 @@
 
 .method private parseName(Lcom/flurry/org/codehaus/jackson/JsonNode;)V
     .locals 4
-    .parameter "json"
+    .param p1, "json"    # Lcom/flurry/org/codehaus/jackson/JsonNode;
 
     .prologue
     .line 446
@@ -1393,7 +1393,7 @@
     move-result-object v0
 
     .line 447
-    .local v0, nameNode:Lcom/flurry/org/codehaus/jackson/JsonNode;
+    .local v0, "nameNode":Lcom/flurry/org/codehaus/jackson/JsonNode;
     if-nez v0, :cond_0
 
     .line 448
@@ -1435,7 +1435,7 @@
 
 .method private parseNamespace(Lcom/flurry/org/codehaus/jackson/JsonNode;)V
     .locals 3
-    .parameter "json"
+    .param p1, "json"    # Lcom/flurry/org/codehaus/jackson/JsonNode;
 
     .prologue
     .line 429
@@ -1446,7 +1446,7 @@
     move-result-object v0
 
     .line 430
-    .local v0, nameNode:Lcom/flurry/org/codehaus/jackson/JsonNode;
+    .local v0, "nameNode":Lcom/flurry/org/codehaus/jackson/JsonNode;
     if-nez v0, :cond_0
 
     .line 433
@@ -1473,7 +1473,7 @@
 
 .method private parseProps(Lcom/flurry/org/codehaus/jackson/JsonNode;)V
     .locals 4
-    .parameter "json"
+    .param p1, "json"    # Lcom/flurry/org/codehaus/jackson/JsonNode;
 
     .prologue
     .line 465
@@ -1481,7 +1481,7 @@
 
     move-result-object v0
 
-    .local v0, i:Ljava/util/Iterator;,"Ljava/util/Iterator<Ljava/lang/String;>;"
+    .local v0, "i":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/String;>;"
     :cond_0
     :goto_0
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
@@ -1498,7 +1498,7 @@
     check-cast v1, Ljava/lang/String;
 
     .line 467
-    .local v1, p:Ljava/lang/String;
+    .local v1, "p":Ljava/lang/String;
     sget-object v3, Lcom/flurry/org/apache/avro/Protocol;->PROTOCOL_RESERVED:Ljava/util/Set;
 
     invoke-interface {v3, v1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
@@ -1513,7 +1513,7 @@
     move-result-object v2
 
     .line 469
-    .local v2, prop:Lcom/flurry/org/codehaus/jackson/JsonNode;
+    .local v2, "prop":Lcom/flurry/org/codehaus/jackson/JsonNode;
     invoke-virtual {v2}, Lcom/flurry/org/codehaus/jackson/JsonNode;->isValueNode()Z
 
     move-result v3
@@ -1536,15 +1536,15 @@
     goto :goto_0
 
     .line 473
-    .end local v1           #p:Ljava/lang/String;
-    .end local v2           #prop:Lcom/flurry/org/codehaus/jackson/JsonNode;
+    .end local v1    # "p":Ljava/lang/String;
+    .end local v2    # "prop":Lcom/flurry/org/codehaus/jackson/JsonNode;
     :cond_1
     return-void
 .end method
 
 .method private parseTypes(Lcom/flurry/org/codehaus/jackson/JsonNode;)V
     .locals 6
-    .parameter "json"
+    .param p1, "json"    # Lcom/flurry/org/codehaus/jackson/JsonNode;
 
     .prologue
     .line 453
@@ -1555,7 +1555,7 @@
     move-result-object v0
 
     .line 454
-    .local v0, defs:Lcom/flurry/org/codehaus/jackson/JsonNode;
+    .local v0, "defs":Lcom/flurry/org/codehaus/jackson/JsonNode;
     if-nez v0, :cond_1
 
     .line 462
@@ -1601,7 +1601,7 @@
 
     move-result-object v1
 
-    .local v1, i$:Ljava/util/Iterator;
+    .local v1, "i$":Ljava/util/Iterator;
     :goto_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
@@ -1616,7 +1616,7 @@
     check-cast v2, Lcom/flurry/org/codehaus/jackson/JsonNode;
 
     .line 458
-    .local v2, type:Lcom/flurry/org/codehaus/jackson/JsonNode;
+    .local v2, "type":Lcom/flurry/org/codehaus/jackson/JsonNode;
     invoke-virtual {v2}, Lcom/flurry/org/codehaus/jackson/JsonNode;->isObject()Z
 
     move-result v3
@@ -1661,8 +1661,8 @@
 # virtual methods
 .method public declared-synchronized addProp(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
-    .parameter "name"
-    .parameter "value"
+    .param p1, "name"    # Ljava/lang/String;
+    .param p2, "value"    # Ljava/lang/String;
 
     .prologue
     .line 309
@@ -1691,9 +1691,9 @@
 
 .method public createMessage(Ljava/lang/String;Ljava/lang/String;Lcom/flurry/org/apache/avro/Schema;)Lcom/flurry/org/apache/avro/Protocol$Message;
     .locals 1
-    .parameter "name"
-    .parameter "doc"
-    .parameter "request"
+    .param p1, "name"    # Ljava/lang/String;
+    .param p2, "doc"    # Ljava/lang/String;
+    .param p3, "request"    # Lcom/flurry/org/apache/avro/Schema;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -1712,11 +1712,11 @@
 
 .method public createMessage(Ljava/lang/String;Ljava/lang/String;Lcom/flurry/org/apache/avro/Schema;Lcom/flurry/org/apache/avro/Schema;Lcom/flurry/org/apache/avro/Schema;)Lcom/flurry/org/apache/avro/Protocol$Message;
     .locals 7
-    .parameter "name"
-    .parameter "doc"
-    .parameter "request"
-    .parameter "response"
-    .parameter "errors"
+    .param p1, "name"    # Ljava/lang/String;
+    .param p2, "doc"    # Ljava/lang/String;
+    .param p3, "request"    # Lcom/flurry/org/apache/avro/Schema;
+    .param p4, "response"    # Lcom/flurry/org/apache/avro/Schema;
+    .param p5, "errors"    # Lcom/flurry/org/apache/avro/Schema;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -1747,10 +1747,9 @@
 
 .method public createMessage(Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;Lcom/flurry/org/apache/avro/Schema;)Lcom/flurry/org/apache/avro/Protocol$Message;
     .locals 7
-    .parameter "name"
-    .parameter "doc"
-    .parameter
-    .parameter "request"
+    .param p1, "name"    # Ljava/lang/String;
+    .param p2, "doc"    # Ljava/lang/String;
+    .param p4, "request"    # Lcom/flurry/org/apache/avro/Schema;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1769,7 +1768,7 @@
 
     .prologue
     .line 273
-    .local p3, propMap:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p3, "propMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     new-instance v0, Lcom/flurry/org/apache/avro/Protocol$Message;
 
     const/4 v6, 0x0
@@ -1791,12 +1790,11 @@
 
 .method public createMessage(Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;Lcom/flurry/org/apache/avro/Schema;Lcom/flurry/org/apache/avro/Schema;Lcom/flurry/org/apache/avro/Schema;)Lcom/flurry/org/apache/avro/Protocol$Message;
     .locals 9
-    .parameter "name"
-    .parameter "doc"
-    .parameter
-    .parameter "request"
-    .parameter "response"
-    .parameter "errors"
+    .param p1, "name"    # Ljava/lang/String;
+    .param p2, "doc"    # Ljava/lang/String;
+    .param p4, "request"    # Lcom/flurry/org/apache/avro/Schema;
+    .param p5, "response"    # Lcom/flurry/org/apache/avro/Schema;
+    .param p6, "errors"    # Lcom/flurry/org/apache/avro/Schema;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1817,7 +1815,7 @@
 
     .prologue
     .line 287
-    .local p3, propMap:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p3, "propMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     new-instance v0, Lcom/flurry/org/apache/avro/Protocol$TwoWayMessage;
 
     const/4 v8, 0x0
@@ -1843,7 +1841,7 @@
 
 .method public equals(Ljava/lang/Object;)Z
     .locals 6
-    .parameter "o"
+    .param p1, "o"    # Ljava/lang/Object;
 
     .prologue
     const/4 v5, 0x1
@@ -1878,7 +1876,7 @@
     move-object v1, v0
 
     .line 321
-    .local v1, that:Lcom/flurry/org/apache/avro/Protocol;
+    .local v1, "that":Lcom/flurry/org/apache/avro/Protocol;
     iget-object v2, p0, Lcom/flurry/org/apache/avro/Protocol;->name:Ljava/lang/String;
 
     iget-object v3, v1, Lcom/flurry/org/apache/avro/Protocol;->name:Ljava/lang/String;
@@ -1997,7 +1995,7 @@
     move-object v0, v1
 
     .line 384
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     new-instance v1, Lcom/flurry/org/apache/avro/AvroRuntimeException;
 
     invoke-direct {v1, v0}, Lcom/flurry/org/apache/avro/AvroRuntimeException;-><init>(Ljava/lang/Throwable;)V
@@ -2047,7 +2045,7 @@
 
 .method public declared-synchronized getProp(Ljava/lang/String;)Ljava/lang/String;
     .locals 1
-    .parameter "name"
+    .param p1, "name"    # Ljava/lang/String;
 
     .prologue
     .line 296
@@ -2102,7 +2100,7 @@
 
 .method public getType(Ljava/lang/String;)Lcom/flurry/org/apache/avro/Schema;
     .locals 1
-    .parameter "name"
+    .param p1, "name"    # Ljava/lang/String;
 
     .prologue
     .line 253
@@ -2186,7 +2184,6 @@
 
 .method public setTypes(Ljava/util/Collection;)V
     .locals 3
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -2199,7 +2196,7 @@
 
     .prologue
     .line 257
-    .local p1, newTypes:Ljava/util/Collection;,"Ljava/util/Collection<Lcom/flurry/org/apache/avro/Schema;>;"
+    .local p1, "newTypes":Ljava/util/Collection;, "Ljava/util/Collection<Lcom/flurry/org/apache/avro/Schema;>;"
     new-instance v2, Lcom/flurry/org/apache/avro/Schema$Names;
 
     invoke-direct {v2}, Lcom/flurry/org/apache/avro/Schema$Names;-><init>()V
@@ -2211,7 +2208,7 @@
 
     move-result-object v0
 
-    .local v0, i$:Ljava/util/Iterator;
+    .local v0, "i$":Ljava/util/Iterator;
     :goto_0
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
@@ -2226,7 +2223,7 @@
     check-cast v1, Lcom/flurry/org/apache/avro/Schema;
 
     .line 259
-    .local v1, s:Lcom/flurry/org/apache/avro/Schema;
+    .local v1, "s":Lcom/flurry/org/apache/avro/Schema;
     iget-object v2, p0, Lcom/flurry/org/apache/avro/Protocol;->types:Lcom/flurry/org/apache/avro/Schema$Names;
 
     invoke-virtual {v2, v1}, Lcom/flurry/org/apache/avro/Schema$Names;->add(Lcom/flurry/org/apache/avro/Schema;)V
@@ -2234,14 +2231,14 @@
     goto :goto_0
 
     .line 260
-    .end local v1           #s:Lcom/flurry/org/apache/avro/Schema;
+    .end local v1    # "s":Lcom/flurry/org/apache/avro/Schema;
     :cond_0
     return-void
 .end method
 
 .method toJson(Lcom/flurry/org/codehaus/jackson/JsonGenerator;)V
     .locals 6
-    .parameter "gen"
+    .param p1, "gen"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -2303,7 +2300,7 @@
     invoke-direct {v2, v4}, Lcom/flurry/org/apache/avro/Schema$Names;-><init>(Ljava/lang/String;)V
 
     .line 363
-    .local v2, resolved:Lcom/flurry/org/apache/avro/Schema$Names;
+    .local v2, "resolved":Lcom/flurry/org/apache/avro/Schema$Names;
     iget-object v4, p0, Lcom/flurry/org/apache/avro/Protocol;->types:Lcom/flurry/org/apache/avro/Schema$Names;
 
     invoke-virtual {v4}, Lcom/flurry/org/apache/avro/Schema$Names;->values()Ljava/util/Collection;
@@ -2314,7 +2311,7 @@
 
     move-result-object v1
 
-    .local v1, i$:Ljava/util/Iterator;
+    .local v1, "i$":Ljava/util/Iterator;
     :cond_1
     :goto_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
@@ -2330,7 +2327,7 @@
     check-cast v3, Lcom/flurry/org/apache/avro/Schema;
 
     .line 364
-    .local v3, type:Lcom/flurry/org/apache/avro/Schema;
+    .local v3, "type":Lcom/flurry/org/apache/avro/Schema;
     invoke-virtual {v2, v3}, Lcom/flurry/org/apache/avro/Schema$Names;->contains(Lcom/flurry/org/apache/avro/Schema;)Z
 
     move-result v4
@@ -2343,7 +2340,7 @@
     goto :goto_0
 
     .line 366
-    .end local v3           #type:Lcom/flurry/org/apache/avro/Schema;
+    .end local v3    # "type":Lcom/flurry/org/apache/avro/Schema;
     :cond_2
     invoke-virtual {p1}, Lcom/flurry/org/codehaus/jackson/JsonGenerator;->writeEndArray()V
 
@@ -2363,7 +2360,7 @@
 
     move-result-object v1
 
-    .end local p0
+    .end local p0    # "this":Lcom/flurry/org/apache/avro/Protocol;
     :goto_1
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
@@ -2378,7 +2375,7 @@
     check-cast v0, Ljava/util/Map$Entry;
 
     .line 370
-    .local v0, e:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Lcom/flurry/org/apache/avro/Protocol$Message;>;"
+    .local v0, "e":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Lcom/flurry/org/apache/avro/Protocol$Message;>;"
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object p0
@@ -2399,7 +2396,7 @@
     goto :goto_1
 
     .line 373
-    .end local v0           #e:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Lcom/flurry/org/apache/avro/Protocol$Message;>;"
+    .end local v0    # "e":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Lcom/flurry/org/apache/avro/Protocol$Message;>;"
     :cond_3
     invoke-virtual {p1}, Lcom/flurry/org/codehaus/jackson/JsonGenerator;->writeEndObject()V
 
@@ -2426,7 +2423,7 @@
 
 .method public toString(Z)Ljava/lang/String;
     .locals 4
-    .parameter "pretty"
+    .param p1, "pretty"    # Z
 
     .prologue
     .line 342
@@ -2436,7 +2433,7 @@
     invoke-direct {v2}, Ljava/io/StringWriter;-><init>()V
 
     .line 343
-    .local v2, writer:Ljava/io/StringWriter;
+    .local v2, "writer":Ljava/io/StringWriter;
     sget-object v3, Lcom/flurry/org/apache/avro/Schema;->FACTORY:Lcom/flurry/org/codehaus/jackson/JsonFactory;
 
     invoke-virtual {v3, v2}, Lcom/flurry/org/codehaus/jackson/JsonFactory;->createJsonGenerator(Ljava/io/Writer;)Lcom/flurry/org/codehaus/jackson/JsonGenerator;
@@ -2444,7 +2441,7 @@
     move-result-object v1
 
     .line 344
-    .local v1, gen:Lcom/flurry/org/codehaus/jackson/JsonGenerator;
+    .local v1, "gen":Lcom/flurry/org/codehaus/jackson/JsonGenerator;
     if-eqz p1, :cond_0
 
     invoke-virtual {v1}, Lcom/flurry/org/codehaus/jackson/JsonGenerator;->useDefaultPrettyPrinter()Lcom/flurry/org/codehaus/jackson/JsonGenerator;
@@ -2466,15 +2463,15 @@
     return-object v3
 
     .line 348
-    .end local v1           #gen:Lcom/flurry/org/codehaus/jackson/JsonGenerator;
-    .end local v2           #writer:Ljava/io/StringWriter;
+    .end local v1    # "gen":Lcom/flurry/org/codehaus/jackson/JsonGenerator;
+    .end local v2    # "writer":Ljava/io/StringWriter;
     :catch_0
     move-exception v3
 
     move-object v0, v3
 
     .line 349
-    .local v0, e:Ljava/io/IOException;
+    .local v0, "e":Ljava/io/IOException;
     new-instance v3, Lcom/flurry/org/apache/avro/AvroRuntimeException;
 
     invoke-direct {v3, v0}, Lcom/flurry/org/apache/avro/AvroRuntimeException;-><init>(Ljava/lang/Throwable;)V

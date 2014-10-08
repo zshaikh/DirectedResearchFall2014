@@ -69,8 +69,6 @@
 
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()V"
@@ -86,9 +84,9 @@
 
 .method synthetic constructor <init>(Ljava/lang/String;ILcom/fusepowered/m1/google/gson/LongSerializationPolicy$1;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
-    .parameter "x2"
+    .param p1, "x0"    # Ljava/lang/String;
+    .param p2, "x1"    # I
+    .param p3, "x2"    # Lcom/fusepowered/m1/google/gson/LongSerializationPolicy$1;
 
     .prologue
     .line 27
@@ -99,7 +97,7 @@
 
 .method public static valueOf(Ljava/lang/String;)Lcom/fusepowered/m1/google/gson/LongSerializationPolicy;
     .locals 1
-    .parameter "name"
+    .param p0, "name"    # Ljava/lang/String;
 
     .prologue
     .line 27
@@ -109,7 +107,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "name":Ljava/lang/String;
     check-cast p0, Lcom/fusepowered/m1/google/gson/LongSerializationPolicy;
 
     return-object p0

@@ -57,7 +57,7 @@
 
 .method public constructor <init>(I)V
     .locals 1
-    .parameter "requestCode"
+    .param p1, "requestCode"    # I
 
     .prologue
     .line 1087
@@ -79,7 +79,7 @@
 
 .method private constructor <init>(Landroid/os/Parcel;)V
     .locals 1
-    .parameter "in"
+    .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
     .line 1092
@@ -120,8 +120,6 @@
 
 .method synthetic constructor <init>(Landroid/os/Parcel;Lcom/facebook/widget/FacebookDialog$PendingCall;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 1092
@@ -132,8 +130,6 @@
 
 .method static synthetic access$0(Lcom/facebook/widget/FacebookDialog$PendingCall;I)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 1119
@@ -144,8 +140,6 @@
 
 .method static synthetic access$1(Lcom/facebook/widget/FacebookDialog$PendingCall;Landroid/content/Intent;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 1098
@@ -156,7 +150,7 @@
 
 .method private setRequestCode(I)V
     .locals 0
-    .parameter "requestCode"
+    .param p1, "requestCode"    # I
 
     .prologue
     .line 1120
@@ -168,7 +162,7 @@
 
 .method private setRequestIntent(Landroid/content/Intent;)V
     .locals 3
-    .parameter "requestIntent"
+    .param p1, "requestIntent"    # Landroid/content/Intent;
 
     .prologue
     .line 1099
@@ -235,8 +229,8 @@
 
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 2
-    .parameter "parcel"
-    .parameter "i"
+    .param p1, "parcel"    # Landroid/os/Parcel;
+    .param p2, "i"    # I
 
     .prologue
     .line 1139

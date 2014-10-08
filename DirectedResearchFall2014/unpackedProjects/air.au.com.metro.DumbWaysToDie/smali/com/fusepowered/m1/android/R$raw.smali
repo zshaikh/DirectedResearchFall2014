@@ -24,7 +24,7 @@
 
     .prologue
     .line 146
-    const/high16 v0, 0x7f03
+    const/high16 v0, 0x7f030000
 
     sput v0, Lcom/fusepowered/m1/android/R$raw;->mm_js_1_3:I
 

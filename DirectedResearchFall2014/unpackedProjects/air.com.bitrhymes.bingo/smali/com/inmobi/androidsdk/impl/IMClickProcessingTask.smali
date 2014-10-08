@@ -37,14 +37,6 @@
 # direct methods
 .method public constructor <init>(Lcom/inmobi/androidsdk/impl/IMAdUnit;Lcom/inmobi/androidsdk/impl/IMUserInfo;Landroid/content/Context;Landroid/view/MotionEvent;Landroid/os/Message;Landroid/os/Message;Landroid/os/Message;Lcom/inmobi/androidsdk/ai/container/IMWebView$IMWebViewListener;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 38
@@ -80,7 +72,6 @@
 
 .method private a(Ljava/lang/String;)V
     .locals 4
-    .parameter
 
     .prologue
     const-string v0, "android.intent.action.VIEW"
@@ -349,7 +340,7 @@
     invoke-direct {v2, v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
     .line 138
-    const/high16 v0, 0x1000
+    const/high16 v0, 0x10000000
 
     invoke-virtual {v2, v0}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
@@ -385,7 +376,7 @@
     invoke-direct {v2, v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
     .line 150
-    const/high16 v0, 0x1000
+    const/high16 v0, 0x10000000
 
     invoke-virtual {v2, v0}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
@@ -412,7 +403,6 @@
 
 .method private b(Ljava/lang/String;)V
     .locals 4
-    .parameter
 
     .prologue
     const/4 v2, 0x0
@@ -464,7 +454,7 @@
     invoke-direct {v2, v3, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
     .line 176
-    const/high16 v1, 0x1000
+    const/high16 v1, 0x10000000
 
     invoke-virtual {v2, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
@@ -510,7 +500,6 @@
 # virtual methods
 .method protected bridge varargs synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
-    .parameter
 
     .prologue
     .line 1
@@ -525,7 +514,6 @@
 
 .method protected varargs doInBackground([Ljava/lang/Void;)Ljava/lang/String;
     .locals 6
-    .parameter
 
     .prologue
     const/4 v5, 0x0
@@ -657,7 +645,6 @@
 
 .method protected bridge synthetic onPostExecute(Ljava/lang/Object;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1
@@ -670,7 +657,6 @@
 
 .method protected onPostExecute(Ljava/lang/String;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 80

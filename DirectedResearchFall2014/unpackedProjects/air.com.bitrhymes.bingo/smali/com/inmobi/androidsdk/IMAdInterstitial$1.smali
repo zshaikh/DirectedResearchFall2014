@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/inmobi/androidsdk/IMAdInterstitial;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1
@@ -40,8 +39,6 @@
 # virtual methods
 .method public notifyResult(ILjava/lang/Object;)V
     .locals 3
-    .parameter
-    .parameter
 
     .prologue
     .line 519

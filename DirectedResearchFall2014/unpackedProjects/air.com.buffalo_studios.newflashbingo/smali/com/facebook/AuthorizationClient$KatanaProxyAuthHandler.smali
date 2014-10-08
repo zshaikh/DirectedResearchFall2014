@@ -84,7 +84,7 @@
 
     iget-object v6, p0, Lcom/facebook/AuthorizationClient$KatanaProxyAuthHandler;->applicationId:Ljava/lang/String;
 
-    #calls: Lcom/facebook/AuthorizationClient;->logWebLoginCompleted(Ljava/lang/String;Ljava/lang/String;)V
+    # invokes: Lcom/facebook/AuthorizationClient;->logWebLoginCompleted(Ljava/lang/String;Ljava/lang/String;)V
     invoke-static {v5, v6, v4}, Lcom/facebook/AuthorizationClient;->access$200(Lcom/facebook/AuthorizationClient;Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_2
@@ -262,7 +262,7 @@
 
     iput-object v0, p0, Lcom/facebook/AuthorizationClient$KatanaProxyAuthHandler;->applicationId:Ljava/lang/String;
 
-    #calls: Lcom/facebook/AuthorizationClient;->getE2E()Ljava/lang/String;
+    # invokes: Lcom/facebook/AuthorizationClient;->getE2E()Ljava/lang/String;
     invoke-static {}, Lcom/facebook/AuthorizationClient;->access$100()Ljava/lang/String;
 
     move-result-object v0

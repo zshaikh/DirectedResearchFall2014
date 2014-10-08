@@ -24,10 +24,10 @@
 # direct methods
 .method public constructor <init>(Lcom/flurry/org/codehaus/jackson/map/DeserializationConfig;Lcom/flurry/org/codehaus/jackson/JsonParser;Lcom/flurry/org/codehaus/jackson/map/DeserializerProvider;Lcom/flurry/org/codehaus/jackson/map/InjectableValues;)V
     .locals 0
-    .parameter "config"
-    .parameter "jp"
-    .parameter "prov"
-    .parameter "injectableValues"
+    .param p1, "config"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationConfig;
+    .param p2, "jp"    # Lcom/flurry/org/codehaus/jackson/JsonParser;
+    .param p3, "prov"    # Lcom/flurry/org/codehaus/jackson/map/DeserializerProvider;
+    .param p4, "injectableValues"    # Lcom/flurry/org/codehaus/jackson/map/InjectableValues;
 
     .prologue
     .line 68
@@ -50,7 +50,6 @@
 # virtual methods
 .method protected _calcName(Ljava/lang/Class;)Ljava/lang/String;
     .locals 2
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -62,7 +61,7 @@
 
     .prologue
     .line 304
-    .local p1, cls:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p1, "cls":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-virtual {p1}, Ljava/lang/Class;->isArray()Z
 
     move-result v0
@@ -110,7 +109,7 @@
 
 .method protected _desc(Ljava/lang/String;)Ljava/lang/String;
     .locals 3
-    .parameter "desc"
+    .param p1, "desc"    # Ljava/lang/String;
 
     .prologue
     const/16 v2, 0x1f4
@@ -195,7 +194,7 @@
     move-object v0, v1
 
     .line 315
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v1, "[N/A]"
 
     goto :goto_0
@@ -203,7 +202,7 @@
 
 .method public constructCalendar(Ljava/util/Date;)Ljava/util/Calendar;
     .locals 1
-    .parameter "d"
+    .param p1, "d"    # Ljava/util/Date;
 
     .prologue
     .line 168
@@ -212,7 +211,7 @@
     move-result-object v0
 
     .line 169
-    .local v0, c:Ljava/util/Calendar;
+    .local v0, "c":Ljava/util/Calendar;
     invoke-virtual {v0, p1}, Ljava/util/Calendar;->setTime(Ljava/util/Date;)V
 
     .line 170
@@ -221,7 +220,7 @@
 
 .method protected determineClassName(Ljava/lang/Object;)Ljava/lang/String;
     .locals 1
-    .parameter "instance"
+    .param p1, "instance"    # Ljava/lang/Object;
 
     .prologue
     .line 293
@@ -234,9 +233,9 @@
 
 .method public findInjectableValue(Ljava/lang/Object;Lcom/flurry/org/codehaus/jackson/map/BeanProperty;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 3
-    .parameter "valueId"
-    .parameter "forProperty"
-    .parameter "beanInstance"
+    .param p1, "valueId"    # Ljava/lang/Object;
+    .param p2, "forProperty"    # Lcom/flurry/org/codehaus/jackson/map/BeanProperty;
+    .param p3, "beanInstance"    # Ljava/lang/Object;
 
     .prologue
     .line 100
@@ -362,10 +361,9 @@
 
 .method public handleUnknownProperty(Lcom/flurry/org/codehaus/jackson/JsonParser;Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;Ljava/lang/Object;Ljava/lang/String;)Z
     .locals 3
-    .parameter "jp"
-    .parameter
-    .parameter "instanceOrClass"
-    .parameter "propName"
+    .param p1, "jp"    # Lcom/flurry/org/codehaus/jackson/JsonParser;
+    .param p3, "instanceOrClass"    # Ljava/lang/Object;
+    .param p4, "propName"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -387,7 +385,7 @@
 
     .prologue
     .line 188
-    .local p2, deser:Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer<*>;"
+    .local p2, "deser":Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer<*>;"
     iget-object v2, p0, Lcom/flurry/org/codehaus/jackson/map/deser/StdDeserializationContext;->_config:Lcom/flurry/org/codehaus/jackson/map/DeserializationConfig;
 
     invoke-virtual {v2}, Lcom/flurry/org/codehaus/jackson/map/DeserializationConfig;->getProblemHandlers()Lcom/flurry/org/codehaus/jackson/map/util/LinkedNode;
@@ -395,14 +393,14 @@
     move-result-object v0
 
     .line 189
-    .local v0, h:Lcom/flurry/org/codehaus/jackson/map/util/LinkedNode;,"Lcom/flurry/org/codehaus/jackson/map/util/LinkedNode<Lcom/flurry/org/codehaus/jackson/map/DeserializationProblemHandler;>;"
+    .local v0, "h":Lcom/flurry/org/codehaus/jackson/map/util/LinkedNode;, "Lcom/flurry/org/codehaus/jackson/map/util/LinkedNode<Lcom/flurry/org/codehaus/jackson/map/DeserializationProblemHandler;>;"
     if-eqz v0, :cond_2
 
     .line 193
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/map/deser/StdDeserializationContext;->_parser:Lcom/flurry/org/codehaus/jackson/JsonParser;
 
     .line 194
-    .local v1, oldParser:Lcom/flurry/org/codehaus/jackson/JsonParser;
+    .local v1, "oldParser":Lcom/flurry/org/codehaus/jackson/JsonParser;
     iput-object p1, p0, Lcom/flurry/org/codehaus/jackson/map/deser/StdDeserializationContext;->_parser:Lcom/flurry/org/codehaus/jackson/JsonParser;
 
     .line 196
@@ -432,12 +430,12 @@
     iput-object v1, p0, Lcom/flurry/org/codehaus/jackson/map/deser/StdDeserializationContext;->_parser:Lcom/flurry/org/codehaus/jackson/JsonParser;
 
     .line 207
-    .end local v1           #oldParser:Lcom/flurry/org/codehaus/jackson/JsonParser;
+    .end local v1    # "oldParser":Lcom/flurry/org/codehaus/jackson/JsonParser;
     :goto_1
     return v2
 
     .line 201
-    .restart local v1       #oldParser:Lcom/flurry/org/codehaus/jackson/JsonParser;
+    .restart local v1    # "oldParser":Lcom/flurry/org/codehaus/jackson/JsonParser;
     :cond_0
     :try_start_1
     invoke-virtual {v0}, Lcom/flurry/org/codehaus/jackson/map/util/LinkedNode;->next()Lcom/flurry/org/codehaus/jackson/map/util/LinkedNode;
@@ -453,14 +451,14 @@
     iput-object v1, p0, Lcom/flurry/org/codehaus/jackson/map/deser/StdDeserializationContext;->_parser:Lcom/flurry/org/codehaus/jackson/JsonParser;
 
     .line 207
-    .end local v1           #oldParser:Lcom/flurry/org/codehaus/jackson/JsonParser;
+    .end local v1    # "oldParser":Lcom/flurry/org/codehaus/jackson/JsonParser;
     :cond_2
     const/4 v2, 0x0
 
     goto :goto_1
 
     .line 204
-    .restart local v1       #oldParser:Lcom/flurry/org/codehaus/jackson/JsonParser;
+    .restart local v1    # "oldParser":Lcom/flurry/org/codehaus/jackson/JsonParser;
     :catchall_0
     move-exception v2
 
@@ -471,8 +469,7 @@
 
 .method public instantiationException(Ljava/lang/Class;Ljava/lang/String;)Lcom/flurry/org/codehaus/jackson/map/JsonMappingException;
     .locals 3
-    .parameter
-    .parameter "msg"
+    .param p2, "msg"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -486,7 +483,7 @@
 
     .prologue
     .line 233
-    .local p1, instClass:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p1, "instClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/map/deser/StdDeserializationContext;->_parser:Lcom/flurry/org/codehaus/jackson/JsonParser;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -530,8 +527,7 @@
 
 .method public instantiationException(Ljava/lang/Class;Ljava/lang/Throwable;)Lcom/flurry/org/codehaus/jackson/map/JsonMappingException;
     .locals 3
-    .parameter
-    .parameter "t"
+    .param p2, "t"    # Ljava/lang/Throwable;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -545,7 +541,7 @@
 
     .prologue
     .line 225
-    .local p1, instClass:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p1, "instClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/map/deser/StdDeserializationContext;->_parser:Lcom/flurry/org/codehaus/jackson/JsonParser;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -599,17 +595,17 @@
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/map/deser/StdDeserializationContext;->_objectBuffer:Lcom/flurry/org/codehaus/jackson/map/util/ObjectBuffer;
 
     .line 116
-    .local v0, buf:Lcom/flurry/org/codehaus/jackson/map/util/ObjectBuffer;
+    .local v0, "buf":Lcom/flurry/org/codehaus/jackson/map/util/ObjectBuffer;
     if-nez v0, :cond_0
 
     .line 117
     new-instance v0, Lcom/flurry/org/codehaus/jackson/map/util/ObjectBuffer;
 
-    .end local v0           #buf:Lcom/flurry/org/codehaus/jackson/map/util/ObjectBuffer;
+    .end local v0    # "buf":Lcom/flurry/org/codehaus/jackson/map/util/ObjectBuffer;
     invoke-direct {v0}, Lcom/flurry/org/codehaus/jackson/map/util/ObjectBuffer;-><init>()V
 
     .line 121
-    .restart local v0       #buf:Lcom/flurry/org/codehaus/jackson/map/util/ObjectBuffer;
+    .restart local v0    # "buf":Lcom/flurry/org/codehaus/jackson/map/util/ObjectBuffer;
     :goto_0
     return-object v0
 
@@ -624,7 +620,6 @@
 
 .method public mappingException(Ljava/lang/Class;)Lcom/flurry/org/codehaus/jackson/map/JsonMappingException;
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -636,7 +631,7 @@
 
     .prologue
     .line 212
-    .local p1, targetClass:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p1, "targetClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/map/deser/StdDeserializationContext;->_parser:Lcom/flurry/org/codehaus/jackson/JsonParser;
 
     invoke-virtual {v0}, Lcom/flurry/org/codehaus/jackson/JsonParser;->getCurrentToken()Lcom/flurry/org/codehaus/jackson/JsonToken;
@@ -652,8 +647,7 @@
 
 .method public mappingException(Ljava/lang/Class;Lcom/flurry/org/codehaus/jackson/JsonToken;)Lcom/flurry/org/codehaus/jackson/map/JsonMappingException;
     .locals 4
-    .parameter
-    .parameter "token"
+    .param p2, "token"    # Lcom/flurry/org/codehaus/jackson/JsonToken;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -667,13 +661,13 @@
 
     .prologue
     .line 218
-    .local p1, targetClass:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p1, "targetClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-virtual {p0, p1}, Lcom/flurry/org/codehaus/jackson/map/deser/StdDeserializationContext;->_calcName(Ljava/lang/Class;)Ljava/lang/String;
 
     move-result-object v0
 
     .line 219
-    .local v0, clsName:Ljava/lang/String;
+    .local v0, "clsName":Ljava/lang/String;
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/map/deser/StdDeserializationContext;->_parser:Lcom/flurry/org/codehaus/jackson/JsonParser;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -719,7 +713,7 @@
 
 .method public parseDate(Ljava/lang/String;)Ljava/util/Date;
     .locals 3
-    .parameter "dateStr"
+    .param p1, "dateStr"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/IllegalArgumentException;
@@ -748,7 +742,7 @@
     move-object v0, v1
 
     .line 158
-    .local v0, pex:Ljava/text/ParseException;
+    .local v0, "pex":Ljava/text/ParseException;
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     invoke-virtual {v0}, Ljava/text/ParseException;->getMessage()Ljava/lang/String;
@@ -762,7 +756,7 @@
 
 .method public final returnObjectBuffer(Lcom/flurry/org/codehaus/jackson/map/util/ObjectBuffer;)V
     .locals 2
-    .parameter "buf"
+    .param p1, "buf"    # Lcom/flurry/org/codehaus/jackson/map/util/ObjectBuffer;
 
     .prologue
     .line 130
@@ -793,8 +787,8 @@
 
 .method public unknownFieldException(Ljava/lang/Object;Ljava/lang/String;)Lcom/flurry/org/codehaus/jackson/map/JsonMappingException;
     .locals 1
-    .parameter "instanceOrClass"
-    .parameter "fieldName"
+    .param p1, "instanceOrClass"    # Ljava/lang/Object;
+    .param p2, "fieldName"    # Ljava/lang/String;
 
     .prologue
     .line 267
@@ -809,8 +803,8 @@
 
 .method public unknownTypeException(Lcom/flurry/org/codehaus/jackson/type/JavaType;Ljava/lang/String;)Lcom/flurry/org/codehaus/jackson/map/JsonMappingException;
     .locals 3
-    .parameter "type"
-    .parameter "id"
+    .param p1, "type"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .param p2, "id"    # Ljava/lang/String;
 
     .prologue
     .line 273
@@ -853,9 +847,8 @@
 
 .method public weirdKeyException(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)Lcom/flurry/org/codehaus/jackson/map/JsonMappingException;
     .locals 3
-    .parameter
-    .parameter "keyValue"
-    .parameter "msg"
+    .param p2, "keyValue"    # Ljava/lang/String;
+    .param p3, "msg"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -870,7 +863,7 @@
 
     .prologue
     .line 255
-    .local p1, keyClass:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p1, "keyClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/map/deser/StdDeserializationContext;->_parser:Lcom/flurry/org/codehaus/jackson/JsonParser;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -928,8 +921,7 @@
 
 .method public weirdNumberException(Ljava/lang/Class;Ljava/lang/String;)Lcom/flurry/org/codehaus/jackson/map/JsonMappingException;
     .locals 3
-    .parameter
-    .parameter "msg"
+    .param p2, "msg"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -943,7 +935,7 @@
 
     .prologue
     .line 249
-    .local p1, instClass:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p1, "instClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/map/deser/StdDeserializationContext;->_parser:Lcom/flurry/org/codehaus/jackson/JsonParser;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1001,8 +993,7 @@
 
 .method public weirdStringException(Ljava/lang/Class;Ljava/lang/String;)Lcom/flurry/org/codehaus/jackson/map/JsonMappingException;
     .locals 3
-    .parameter
-    .parameter "msg"
+    .param p2, "msg"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1016,7 +1007,7 @@
 
     .prologue
     .line 243
-    .local p1, instClass:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p1, "instClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/map/deser/StdDeserializationContext;->_parser:Lcom/flurry/org/codehaus/jackson/JsonParser;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1074,9 +1065,9 @@
 
 .method public wrongTokenException(Lcom/flurry/org/codehaus/jackson/JsonParser;Lcom/flurry/org/codehaus/jackson/JsonToken;Ljava/lang/String;)Lcom/flurry/org/codehaus/jackson/map/JsonMappingException;
     .locals 2
-    .parameter "jp"
-    .parameter "expToken"
-    .parameter "msg"
+    .param p1, "jp"    # Lcom/flurry/org/codehaus/jackson/JsonParser;
+    .param p2, "expToken"    # Lcom/flurry/org/codehaus/jackson/JsonToken;
+    .param p3, "msg"    # Ljava/lang/String;
 
     .prologue
     .line 261

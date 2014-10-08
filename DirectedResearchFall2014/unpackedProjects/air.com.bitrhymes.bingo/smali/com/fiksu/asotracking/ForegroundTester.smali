@@ -36,8 +36,8 @@
 
 .method constructor <init>(Landroid/app/Application;Lcom/fiksu/asotracking/LaunchEventTracker;)V
     .locals 3
-    .parameter "application"
-    .parameter "launchEventTracker"
+    .param p1, "application"    # Landroid/app/Application;
+    .param p2, "launchEventTracker"    # Lcom/fiksu/asotracking/LaunchEventTracker;
 
     .prologue
     const/4 v0, 0x0
@@ -132,13 +132,13 @@
     check-cast v0, Landroid/app/ActivityManager;
 
     .line 47
-    .local v0, activityManager:Landroid/app/ActivityManager;
+    .local v0, "activityManager":Landroid/app/ActivityManager;
     invoke-virtual {v0}, Landroid/app/ActivityManager;->getRunningAppProcesses()Ljava/util/List;
 
     move-result-object v2
 
     .line 48
-    .local v2, appProcesses:Ljava/util/List;,"Ljava/util/List<Landroid/app/ActivityManager$RunningAppProcessInfo;>;"
+    .local v2, "appProcesses":Ljava/util/List;, "Ljava/util/List<Landroid/app/ActivityManager$RunningAppProcessInfo;>;"
     if-nez v2, :cond_0
 
     move v3, v6
@@ -174,7 +174,7 @@
     check-cast v1, Landroid/app/ActivityManager$RunningAppProcessInfo;
 
     .line 53
-    .local v1, appProcess:Landroid/app/ActivityManager$RunningAppProcessInfo;
+    .local v1, "appProcess":Landroid/app/ActivityManager$RunningAppProcessInfo;
     if-eqz v1, :cond_1
 
     .line 56
@@ -316,7 +316,7 @@
     move-object v0, v2
 
     .line 92
-    .local v0, ie:Ljava/lang/InterruptedException;
+    .local v0, "ie":Ljava/lang/InterruptedException;
     const-string v2, "FiksuTracking"
 
     .line 93
@@ -326,7 +326,7 @@
     invoke-static {v5, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 98
-    .end local v0           #ie:Ljava/lang/InterruptedException;
+    .end local v0    # "ie":Ljava/lang/InterruptedException;
     :goto_1
     return-void
 
@@ -360,7 +360,7 @@
     move-object v1, v2
 
     .line 95
-    .local v1, se:Ljava/lang/SecurityException;
+    .local v1, "se":Ljava/lang/SecurityException;
     const-string v2, "FiksuTracking"
 
     .line 96

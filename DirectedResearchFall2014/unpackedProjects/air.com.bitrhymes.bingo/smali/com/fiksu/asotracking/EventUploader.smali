@@ -15,7 +15,7 @@
 
 .field private static final FIKSU_SEPARATOR:Ljava/lang/String; = "<FIKSU>"
 
-.field private static final FIKSU_SEPARATOR_PATTERN:Ljava/util/regex/Pattern; = null
+.field private static final FIKSU_SEPARATOR_PATTERN:Ljava/util/regex/Pattern;
 
 .field private static final MAX_FAILED_URLS:I = 0xa
 
@@ -58,8 +58,7 @@
 
 .method public constructor <init>(Landroid/content/Context;Ljava/util/Map;)V
     .locals 0
-    .parameter "context"
-    .parameter
+    .param p1, "context"    # Landroid/content/Context;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -74,7 +73,7 @@
 
     .prologue
     .line 47
-    .local p2, parameters:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p2, "parameters":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 48
@@ -89,8 +88,8 @@
 
 .method private final appendParameterToUrl(Ljava/lang/StringBuilder;Lcom/fiksu/asotracking/FiksuEventParameter;)V
     .locals 3
-    .parameter "url"
-    .parameter "eventParameter"
+    .param p1, "url"    # Ljava/lang/StringBuilder;
+    .param p2, "eventParameter"    # Lcom/fiksu/asotracking/FiksuEventParameter;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/UnsupportedEncodingException;
@@ -112,7 +111,7 @@
     check-cast v0, Ljava/lang/String;
 
     .line 174
-    .local v0, parameterValue:Ljava/lang/String;
+    .local v0, "parameterValue":Ljava/lang/String;
     if-eqz v0, :cond_0
 
     .line 175
@@ -183,7 +182,7 @@
     const-string v5, "https://a.fiksu.com/"
 
     .line 82
-    .local v5, hostname:Ljava/lang/String;
+    .local v5, "hostname":Ljava/lang/String;
     iget-object v11, p0, Lcom/fiksu/asotracking/EventUploader;->mParameters:Ljava/util/Map;
 
     sget-object v12, Lcom/fiksu/asotracking/FiksuEventParameter;->EVENT:Lcom/fiksu/asotracking/FiksuEventParameter;
@@ -199,7 +198,7 @@
     check-cast v3, Ljava/lang/String;
 
     .line 85
-    .local v3, event:Ljava/lang/String;
+    .local v3, "event":Ljava/lang/String;
     sget-object v11, Lcom/fiksu/asotracking/FiksuEventType;->LAUNCH:Lcom/fiksu/asotracking/FiksuEventType;
 
     invoke-virtual {v11}, Lcom/fiksu/asotracking/FiksuEventType;->getName()Ljava/lang/String;
@@ -277,7 +276,7 @@
     move-result-object v8
 
     .line 95
-    .local v8, packageName:Ljava/lang/String;
+    .local v8, "packageName":Ljava/lang/String;
     new-instance v10, Ljava/lang/StringBuilder;
 
     new-instance v11, Ljava/lang/StringBuilder;
@@ -317,7 +316,7 @@
     invoke-direct {v10, v11}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     .line 99
-    .local v10, url:Ljava/lang/StringBuilder;
+    .local v10, "url":Ljava/lang/StringBuilder;
     :try_start_0
     new-instance v11, Ljava/lang/StringBuilder;
 
@@ -428,7 +427,7 @@
     move-result-object v1
 
     .line 107
-    .local v1, clientID:Ljava/lang/String;
+    .local v1, "clientID":Ljava/lang/String;
     invoke-virtual {v1}, Ljava/lang/String;->length()I
 
     move-result v11
@@ -480,7 +479,7 @@
     move-result-object v4
 
     .line 114
-    .local v4, facebookAttributionId:Ljava/lang/String;
+    .local v4, "facebookAttributionId":Ljava/lang/String;
     if-eqz v4, :cond_4
 
     .line 115
@@ -503,7 +502,7 @@
     .catch Ljava/io/UnsupportedEncodingException; {:try_start_0 .. :try_end_0} :catch_1
 
     .line 121
-    .end local v4           #facebookAttributionId:Ljava/lang/String;
+    .end local v4    # "facebookAttributionId":Ljava/lang/String;
     :cond_4
     :try_start_1
     iget-object v11, p0, Lcom/fiksu/asotracking/EventUploader;->mContext:Landroid/content/Context;
@@ -513,7 +512,7 @@
     move-result-object v7
 
     .line 122
-    .local v7, packageManager:Landroid/content/pm/PackageManager;
+    .local v7, "packageManager":Landroid/content/pm/PackageManager;
     new-instance v11, Ljava/lang/StringBuilder;
 
     const-string v12, "&app_version="
@@ -558,7 +557,7 @@
     move-result-object v0
 
     .line 125
-    .local v0, appName:Ljava/lang/String;
+    .local v0, "appName":Ljava/lang/String;
     if-eqz v0, :cond_5
 
     .line 126
@@ -586,8 +585,8 @@
     .catch Ljava/io/UnsupportedEncodingException; {:try_start_1 .. :try_end_1} :catch_1
 
     .line 133
-    .end local v0           #appName:Ljava/lang/String;
-    .end local v7           #packageManager:Landroid/content/pm/PackageManager;
+    .end local v0    # "appName":Ljava/lang/String;
+    .end local v7    # "packageManager":Landroid/content/pm/PackageManager;
     :cond_5
     :goto_1
     :try_start_2
@@ -646,7 +645,7 @@
     iget-object v6, v11, Landroid/content/res/Configuration;->locale:Ljava/util/Locale;
 
     .line 137
-    .local v6, locale:Ljava/util/Locale;
+    .local v6, "locale":Ljava/util/Locale;
     new-instance v11, Ljava/lang/StringBuilder;
 
     const-string v12, "&country="
@@ -833,14 +832,14 @@
     goto/16 :goto_0
 
     .line 128
-    .end local v6           #locale:Ljava/util/Locale;
+    .end local v6    # "locale":Ljava/util/Locale;
     :catch_0
     move-exception v11
 
     move-object v9, v11
 
     .line 129
-    .local v9, pnfe:Landroid/content/pm/PackageManager$NameNotFoundException;
+    .local v9, "pnfe":Landroid/content/pm/PackageManager$NameNotFoundException;
     :try_start_3
     const-string v11, "FiksuTracking"
 
@@ -865,15 +864,15 @@
     goto/16 :goto_1
 
     .line 156
-    .end local v1           #clientID:Ljava/lang/String;
-    .end local v9           #pnfe:Landroid/content/pm/PackageManager$NameNotFoundException;
+    .end local v1    # "clientID":Ljava/lang/String;
+    .end local v9    # "pnfe":Landroid/content/pm/PackageManager$NameNotFoundException;
     :catch_1
     move-exception v11
 
     move-object v2, v11
 
     .line 157
-    .local v2, e:Ljava/io/UnsupportedEncodingException;
+    .local v2, "e":Ljava/io/UnsupportedEncodingException;
     const-string v11, "FiksuTracking"
 
     const-string v12, "Problem creating URL"
@@ -886,9 +885,9 @@
     goto/16 :goto_0
 
     .line 154
-    .end local v2           #e:Ljava/io/UnsupportedEncodingException;
-    .restart local v1       #clientID:Ljava/lang/String;
-    .restart local v6       #locale:Ljava/util/Locale;
+    .end local v2    # "e":Ljava/io/UnsupportedEncodingException;
+    .restart local v1    # "clientID":Ljava/lang/String;
+    .restart local v6    # "locale":Ljava/util/Locale;
     :cond_7
     :try_start_4
     const-string v12, "0"
@@ -900,7 +899,7 @@
 
 .method private doUpload(Ljava/lang/String;)Z
     .locals 10
-    .parameter "url"
+    .param p1, "url"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/net/MalformedURLException;
@@ -921,7 +920,7 @@
     invoke-direct {v1, p1}, Ljava/net/URL;-><init>(Ljava/lang/String;)V
 
     .line 268
-    .local v1, fiksuUrl:Ljava/net/URL;
+    .local v1, "fiksuUrl":Ljava/net/URL;
     invoke-virtual {v1}, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;
 
     move-result-object v0
@@ -929,7 +928,7 @@
     check-cast v0, Ljava/net/HttpURLConnection;
 
     .line 270
-    .local v0, fiksuConnection:Ljava/net/HttpURLConnection;
+    .local v0, "fiksuConnection":Ljava/net/HttpURLConnection;
     if-nez v0, :cond_1
 
     .line 277
@@ -946,14 +945,14 @@
     move v4, v7
 
     .line 297
-    .end local v0           #fiksuConnection:Ljava/net/HttpURLConnection;
-    .end local v1           #fiksuUrl:Ljava/net/URL;
+    .end local v0    # "fiksuConnection":Ljava/net/HttpURLConnection;
+    .end local v1    # "fiksuUrl":Ljava/net/URL;
     :goto_0
     return v4
 
     .line 281
-    .restart local v0       #fiksuConnection:Ljava/net/HttpURLConnection;
-    .restart local v1       #fiksuUrl:Ljava/net/URL;
+    .restart local v0    # "fiksuConnection":Ljava/net/HttpURLConnection;
+    .restart local v1    # "fiksuUrl":Ljava/net/URL;
     :cond_0
     new-instance v4, Ljava/lang/RuntimeException;
 
@@ -980,15 +979,15 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 295
-    .end local v0           #fiksuConnection:Ljava/net/HttpURLConnection;
-    .end local v1           #fiksuUrl:Ljava/net/URL;
+    .end local v0    # "fiksuConnection":Ljava/net/HttpURLConnection;
+    .end local v1    # "fiksuUrl":Ljava/net/URL;
     :catch_0
     move-exception v4
 
     move-object v2, v4
 
     .line 296
-    .local v2, ioException:Ljava/io/IOException;
+    .local v2, "ioException":Ljava/io/IOException;
     const-string v4, "FiksuTracking"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -1035,9 +1034,9 @@
     goto :goto_0
 
     .line 285
-    .end local v2           #ioException:Ljava/io/IOException;
-    .restart local v0       #fiksuConnection:Ljava/net/HttpURLConnection;
-    .restart local v1       #fiksuUrl:Ljava/net/URL;
+    .end local v2    # "ioException":Ljava/io/IOException;
+    .restart local v0    # "fiksuConnection":Ljava/net/HttpURLConnection;
+    .restart local v1    # "fiksuUrl":Ljava/net/URL;
     :cond_1
     :try_start_1
     invoke-virtual {v0}, Ljava/net/HttpURLConnection;->getResponseCode()I
@@ -1045,7 +1044,7 @@
     move-result v3
 
     .line 287
-    .local v3, responseCode:I
+    .local v3, "responseCode":I
     const/16 v4, 0xc8
 
     if-ne v3, v4, :cond_2
@@ -1101,7 +1100,7 @@
 
 .method private encodeParameter(Ljava/lang/String;)Ljava/lang/String;
     .locals 1
-    .parameter "parameter"
+    .param p1, "parameter"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/UnsupportedEncodingException;
@@ -1150,7 +1149,7 @@
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
     .line 181
-    .local v4, urls:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
+    .local v4, "urls":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     iget-object v5, p0, Lcom/fiksu/asotracking/EventUploader;->mContext:Landroid/content/Context;
 
     invoke-static {v5}, Lcom/fiksu/asotracking/EventTracker;->getOurSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
@@ -1158,7 +1157,7 @@
     move-result-object v0
 
     .line 183
-    .local v0, preferences:Landroid/content/SharedPreferences;
+    .local v0, "preferences":Landroid/content/SharedPreferences;
     if-eqz v0, :cond_0
 
     .line 184
@@ -1171,7 +1170,7 @@
     move-result-object v1
 
     .line 185
-    .local v1, savedUrls:Ljava/lang/String;
+    .local v1, "savedUrls":Ljava/lang/String;
     if-eqz v1, :cond_0
 
     const-string v5, ""
@@ -1190,7 +1189,7 @@
     move-result-object v3
 
     .line 187
-    .local v3, urlArray:[Ljava/lang/String;
+    .local v3, "urlArray":[Ljava/lang/String;
     array-length v5, v3
 
     const/4 v6, 0x0
@@ -1199,19 +1198,19 @@
     if-lt v6, v5, :cond_1
 
     .line 192
-    .end local v1           #savedUrls:Ljava/lang/String;
-    .end local v3           #urlArray:[Ljava/lang/String;
+    .end local v1    # "savedUrls":Ljava/lang/String;
+    .end local v3    # "urlArray":[Ljava/lang/String;
     :cond_0
     return-object v4
 
     .line 187
-    .restart local v1       #savedUrls:Ljava/lang/String;
-    .restart local v3       #urlArray:[Ljava/lang/String;
+    .restart local v1    # "savedUrls":Ljava/lang/String;
+    .restart local v3    # "urlArray":[Ljava/lang/String;
     :cond_1
     aget-object v2, v3, v6
 
     .line 188
-    .local v2, tempUrl:Ljava/lang/String;
+    .local v2, "tempUrl":Ljava/lang/String;
     invoke-interface {v4, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 187
@@ -1240,7 +1239,7 @@
     move-result-object v2
 
     .line 62
-    .local v2, preferences:Landroid/content/SharedPreferences;
+    .local v2, "preferences":Landroid/content/SharedPreferences;
     if-nez v2, :cond_0
 
     .line 63
@@ -1263,7 +1262,7 @@
     move-result-wide v0
 
     .line 67
-    .local v0, now:J
+    .local v0, "now":J
     const-string v6, "Fiksu.cd2MessageTime"
 
     const-wide/16 v7, 0x0
@@ -1273,7 +1272,7 @@
     move-result-wide v3
 
     .line 68
-    .local v3, then:J
+    .local v3, "then":J
     sub-long v6, v0, v3
 
     const-wide/32 v8, 0x2bf20
@@ -1299,9 +1298,9 @@
     goto :goto_0
 
     .line 60
-    .end local v0           #now:J
-    .end local v2           #preferences:Landroid/content/SharedPreferences;
-    .end local v3           #then:J
+    .end local v0    # "now":J
+    .end local v2    # "preferences":Landroid/content/SharedPreferences;
+    .end local v3    # "then":J
     :catchall_0
     move-exception v6
 
@@ -1314,7 +1313,6 @@
 
 .method private saveFailedUrls(Ljava/util/List;)V
     .locals 7
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1326,7 +1324,7 @@
     .end annotation
 
     .prologue
-    .local p1, failedUrls:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
+    .local p1, "failedUrls":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     const/16 v6, 0xa
 
     .line 196
@@ -1355,20 +1353,20 @@
 
     invoke-direct {v1, v5}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .end local p1           #failedUrls:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
-    .local v1, failedUrls:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
+    .end local p1    # "failedUrls":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
+    .local v1, "failedUrls":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     move-object p1, v1
 
     .line 201
-    .end local v1           #failedUrls:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
-    .restart local p1       #failedUrls:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
+    .end local v1    # "failedUrls":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
+    .restart local p1    # "failedUrls":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     :cond_0
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
     .line 202
-    .local v4, urlsToSave:Ljava/lang/StringBuilder;
+    .local v4, "urlsToSave":Ljava/lang/StringBuilder;
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v5
@@ -1389,7 +1387,7 @@
     .line 204
     const/4 v2, 0x1
 
-    .local v2, i:I
+    .local v2, "i":I
     :goto_0
     invoke-interface {p1}, Ljava/util/List;->size()I
 
@@ -1398,7 +1396,7 @@
     if-lt v2, v5, :cond_2
 
     .line 209
-    .end local v2           #i:I
+    .end local v2    # "i":I
     :cond_1
     iget-object v5, p0, Lcom/fiksu/asotracking/EventUploader;->mContext:Landroid/content/Context;
 
@@ -1407,13 +1405,13 @@
     move-result-object v3
 
     .line 210
-    .local v3, preferences:Landroid/content/SharedPreferences;
+    .local v3, "preferences":Landroid/content/SharedPreferences;
     invoke-interface {v3}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
     .line 211
-    .local v0, editor:Landroid/content/SharedPreferences$Editor;
+    .local v0, "editor":Landroid/content/SharedPreferences$Editor;
     const-string v5, "Fiksu.savedUrls"
 
     invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -1429,9 +1427,9 @@
     return-void
 
     .line 205
-    .end local v0           #editor:Landroid/content/SharedPreferences$Editor;
-    .end local v3           #preferences:Landroid/content/SharedPreferences;
-    .restart local v2       #i:I
+    .end local v0    # "editor":Landroid/content/SharedPreferences$Editor;
+    .end local v3    # "preferences":Landroid/content/SharedPreferences;
+    .restart local v2    # "i":I
     :cond_2
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -1490,7 +1488,7 @@
     move-result-object v3
 
     .line 223
-    .local v3, url:Ljava/lang/String;
+    .local v3, "url":Ljava/lang/String;
     sget-object v6, Lcom/fiksu/asotracking/FiksuConstants;->SHARED_PREFERENCES_LOCK:Ljava/lang/Object;
 
     monitor-enter v6
@@ -1502,7 +1500,7 @@
     move-result-object v4
 
     .line 226
-    .local v4, urls:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
+    .local v4, "urls":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     if-eqz v3, :cond_1
 
     .line 227
@@ -1545,7 +1543,7 @@
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     .line 235
-    .local v1, failedUrls:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
+    .local v1, "failedUrls":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-interface {v4}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v5
@@ -1566,8 +1564,8 @@
 
     goto :goto_0
 
-    .end local v1           #failedUrls:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
-    .end local v4           #urls:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
+    .end local v1    # "failedUrls":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
+    .end local v4    # "urls":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     :catchall_0
     move-exception v5
 
@@ -1578,8 +1576,8 @@
     throw v5
 
     .line 235
-    .restart local v1       #failedUrls:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
-    .restart local v4       #urls:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
+    .restart local v1    # "failedUrls":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
+    .restart local v4    # "urls":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     :cond_3
     :try_start_1
     invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
@@ -1591,7 +1589,7 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     .line 237
-    .local v2, tempUrl:Ljava/lang/String;
+    .local v2, "tempUrl":Ljava/lang/String;
     :try_start_2
     invoke-direct {p0, v2}, Lcom/fiksu/asotracking/EventUploader;->doUpload(Ljava/lang/String;)Z
 
@@ -1621,8 +1619,8 @@
     .line 239
     invoke-interface {v1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
     :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
     .catch Ljava/net/MalformedURLException; {:try_start_2 .. :try_end_2} :catch_0
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
     goto :goto_1
 
@@ -1633,7 +1631,7 @@
     move-object v0, v7
 
     .line 242
-    .local v0, e:Ljava/net/MalformedURLException;
+    .local v0, "e":Ljava/net/MalformedURLException;
     :try_start_3
     const-string v7, "FiksuTracking"
 

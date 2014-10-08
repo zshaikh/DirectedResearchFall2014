@@ -74,7 +74,6 @@
 
 .method static synthetic a(Lcom/chartboost/sdk/Libraries/e;)Lcom/chartboost/sdk/Libraries/a;
     .locals 1
-    .parameter
 
     .prologue
     .line 55
@@ -85,7 +84,6 @@
 
 .method static synthetic a(Landroid/widget/ImageView;)Lcom/chartboost/sdk/Libraries/e$a;
     .locals 1
-    .parameter
 
     .prologue
     .line 232
@@ -138,7 +136,6 @@
 
 .method private static b(Landroid/widget/ImageView;)Lcom/chartboost/sdk/Libraries/e$a;
     .locals 1
-    .parameter
 
     .prologue
     .line 233
@@ -176,7 +173,6 @@
 # virtual methods
 .method protected a(Ljava/lang/String;)Lcom/chartboost/sdk/Libraries/a$a;
     .locals 9
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -375,11 +371,6 @@
 
 .method public a(Ljava/lang/String;Ljava/lang/String;Lcom/chartboost/sdk/Libraries/e$b;Landroid/widget/ImageView;Landroid/os/Bundle;)V
     .locals 9
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const/4 v7, 0x1
@@ -539,8 +530,6 @@
 
 .method protected a(Ljava/lang/String;Lcom/chartboost/sdk/Libraries/e$e;)Z
     .locals 5
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -584,8 +573,8 @@
 
     invoke-direct {v2, v0}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_4
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 315
     const/16 v0, 0x1000
@@ -597,8 +586,8 @@
     :goto_0
     invoke-virtual {p2, v0}, Lcom/chartboost/sdk/Libraries/e$e;->read([B)I
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     move-result v1
 
@@ -631,8 +620,8 @@
     :try_start_3
     invoke-virtual {v2, v0, v3, v1}, Ljava/io/FileOutputStream;->write([BII)V
     :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_0
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
     goto :goto_0
 

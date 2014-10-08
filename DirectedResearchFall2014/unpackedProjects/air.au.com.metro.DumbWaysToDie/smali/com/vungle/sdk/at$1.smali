@@ -42,7 +42,6 @@
 # virtual methods
 .method protected final synthetic a(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
-    .parameter
 
     .prologue
     .line 50

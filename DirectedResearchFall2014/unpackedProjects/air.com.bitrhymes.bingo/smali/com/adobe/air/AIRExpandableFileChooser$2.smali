@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/adobe/air/AIRExpandableFileChooser;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 347
@@ -39,9 +38,6 @@
 # virtual methods
 .method public onKey(Landroid/view/View;ILandroid/view/KeyEvent;)Z
     .locals 2
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 350
@@ -58,7 +54,7 @@
     .line 352
     iget-object v0, p0, Lcom/adobe/air/AIRExpandableFileChooser$2;->this$0:Lcom/adobe/air/AIRExpandableFileChooser;
 
-    #getter for: Lcom/adobe/air/AIRExpandableFileChooser;->mFileSaveName:Landroid/widget/EditText;
+    # getter for: Lcom/adobe/air/AIRExpandableFileChooser;->mFileSaveName:Landroid/widget/EditText;
     invoke-static {v0}, Lcom/adobe/air/AIRExpandableFileChooser;->access$700(Lcom/adobe/air/AIRExpandableFileChooser;)Landroid/widget/EditText;
 
     move-result-object v0
@@ -81,7 +77,7 @@
     .line 356
     iget-object v1, p0, Lcom/adobe/air/AIRExpandableFileChooser$2;->this$0:Lcom/adobe/air/AIRExpandableFileChooser;
 
-    #getter for: Lcom/adobe/air/AIRExpandableFileChooser;->mFilenames:Ljava/util/ArrayList;
+    # getter for: Lcom/adobe/air/AIRExpandableFileChooser;->mFilenames:Ljava/util/ArrayList;
     invoke-static {v1}, Lcom/adobe/air/AIRExpandableFileChooser;->access$800(Lcom/adobe/air/AIRExpandableFileChooser;)Ljava/util/ArrayList;
 
     move-result-object v1
@@ -91,7 +87,7 @@
     .line 357
     iget-object v1, p0, Lcom/adobe/air/AIRExpandableFileChooser$2;->this$0:Lcom/adobe/air/AIRExpandableFileChooser;
 
-    #getter for: Lcom/adobe/air/AIRExpandableFileChooser;->mFilenames:Ljava/util/ArrayList;
+    # getter for: Lcom/adobe/air/AIRExpandableFileChooser;->mFilenames:Ljava/util/ArrayList;
     invoke-static {v1}, Lcom/adobe/air/AIRExpandableFileChooser;->access$800(Lcom/adobe/air/AIRExpandableFileChooser;)Ljava/util/ArrayList;
 
     move-result-object v1
@@ -101,7 +97,7 @@
     .line 359
     iget-object v0, p0, Lcom/adobe/air/AIRExpandableFileChooser$2;->this$0:Lcom/adobe/air/AIRExpandableFileChooser;
 
-    #getter for: Lcom/adobe/air/AIRExpandableFileChooser;->mFileChooserStub:Lcom/adobe/air/FileChooserStub;
+    # getter for: Lcom/adobe/air/AIRExpandableFileChooser;->mFileChooserStub:Lcom/adobe/air/FileChooserStub;
     invoke-static {v0}, Lcom/adobe/air/AIRExpandableFileChooser;->access$600(Lcom/adobe/air/AIRExpandableFileChooser;)Lcom/adobe/air/FileChooserStub;
 
     move-result-object v0
@@ -115,18 +111,18 @@
 
     iget-object v1, p0, Lcom/adobe/air/AIRExpandableFileChooser$2;->this$0:Lcom/adobe/air/AIRExpandableFileChooser;
 
-    #getter for: Lcom/adobe/air/AIRExpandableFileChooser;->mFileSaveName:Landroid/widget/EditText;
+    # getter for: Lcom/adobe/air/AIRExpandableFileChooser;->mFileSaveName:Landroid/widget/EditText;
     invoke-static {v1}, Lcom/adobe/air/AIRExpandableFileChooser;->access$700(Lcom/adobe/air/AIRExpandableFileChooser;)Landroid/widget/EditText;
 
     move-result-object v1
 
-    #calls: Lcom/adobe/air/AIRExpandableFileChooser;->HideVirtualKeyboard(Landroid/view/View;)V
+    # invokes: Lcom/adobe/air/AIRExpandableFileChooser;->HideVirtualKeyboard(Landroid/view/View;)V
     invoke-static {v0, v1}, Lcom/adobe/air/AIRExpandableFileChooser;->access$900(Lcom/adobe/air/AIRExpandableFileChooser;Landroid/view/View;)V
 
     .line 364
     iget-object v0, p0, Lcom/adobe/air/AIRExpandableFileChooser$2;->this$0:Lcom/adobe/air/AIRExpandableFileChooser;
 
-    #getter for: Lcom/adobe/air/AIRExpandableFileChooser;->mFileChooserDialog:Lcom/adobe/air/AndroidAlertDialog;
+    # getter for: Lcom/adobe/air/AIRExpandableFileChooser;->mFileChooserDialog:Lcom/adobe/air/AndroidAlertDialog;
     invoke-static {v0}, Lcom/adobe/air/AIRExpandableFileChooser;->access$1000(Lcom/adobe/air/AIRExpandableFileChooser;)Lcom/adobe/air/AndroidAlertDialog;
 
     move-result-object v0

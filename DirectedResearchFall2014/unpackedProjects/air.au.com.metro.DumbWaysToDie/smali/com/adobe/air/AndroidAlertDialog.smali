@@ -12,7 +12,6 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
-    .parameter
 
     .prologue
     const/4 v0, 0x0

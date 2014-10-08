@@ -42,7 +42,6 @@
 # virtual methods
 .method public final a(Ljava/lang/String;)Lcom/vungle/sdk/z;
     .locals 14
-    .parameter
 
     .prologue
     const/4 v13, 0x1

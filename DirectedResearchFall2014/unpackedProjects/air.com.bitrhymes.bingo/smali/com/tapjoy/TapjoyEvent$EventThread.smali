@@ -36,8 +36,6 @@
 # direct methods
 .method public constructor <init>(Lcom/tapjoy/TapjoyEvent;Ljava/util/Map;)V
     .locals 0
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -51,7 +49,7 @@
 
     .prologue
     .line 98
-    .local p2, urlParams:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p2, "urlParams":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     iput-object p1, p0, Lcom/tapjoy/TapjoyEvent$EventThread;->this$0:Lcom/tapjoy/TapjoyEvent;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -95,7 +93,8 @@
     move-result-object v1
 
     .line 107
-    .local v1, url:Ljava/lang/String;
+    .local v1, "url":Ljava/lang/String;
+    # getter for: Lcom/tapjoy/TapjoyEvent;->tapjoyURLConnection:Lcom/tapjoy/TapjoyURLConnection;
     invoke-static {}, Lcom/tapjoy/TapjoyEvent;->access$000()Lcom/tapjoy/TapjoyURLConnection;
 
     move-result-object v2
@@ -109,7 +108,7 @@
     move-result-object v0
 
     .line 109
-    .local v0, httpResponse:Lcom/tapjoy/TapjoyHttpURLResponse;
+    .local v0, "httpResponse":Lcom/tapjoy/TapjoyHttpURLResponse;
     if-eqz v0, :cond_0
 
     .line 111

@@ -45,7 +45,7 @@
 
 .method public static getExceptionStackTraceAsString(Ljava/lang/Exception;)Ljava/lang/String;
     .locals 2
-    .parameter "exception"
+    .param p0, "exception"    # Ljava/lang/Exception;
 
     .prologue
     .line 13
@@ -54,7 +54,7 @@
     invoke-direct {v0}, Ljava/io/StringWriter;-><init>()V
 
     .line 14
-    .local v0, sw:Ljava/io/StringWriter;
+    .local v0, "sw":Ljava/io/StringWriter;
     new-instance v1, Ljava/io/PrintWriter;
 
     invoke-direct {v1, v0}, Ljava/io/PrintWriter;-><init>(Ljava/io/Writer;)V
@@ -91,7 +91,7 @@
 
 .method public static setFREContextObj(Lcom/adobe/fre/FREContext;)V
     .locals 0
-    .parameter "obj"
+    .param p0, "obj"    # Lcom/adobe/fre/FREContext;
 
     .prologue
     .line 22
@@ -103,7 +103,7 @@
 
 .method public static setInAppActivity(Lcom/bitrhymes/iab/functions/GoogleIABV3Activity;)V
     .locals 0
-    .parameter "activity"
+    .param p0, "activity"    # Lcom/bitrhymes/iab/functions/GoogleIABV3Activity;
 
     .prologue
     .line 34

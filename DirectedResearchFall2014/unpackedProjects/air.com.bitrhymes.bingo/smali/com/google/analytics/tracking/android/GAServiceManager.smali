@@ -94,10 +94,10 @@
 
 .method constructor <init>(Landroid/content/Context;Lcom/google/analytics/tracking/android/AnalyticsThread;Lcom/google/analytics/tracking/android/AnalyticsStore;Z)V
     .locals 2
-    .parameter "ctx"
-    .parameter "thread"
-    .parameter "store"
-    .parameter "listenForNetwork"
+    .param p1, "ctx"    # Landroid/content/Context;
+    .param p2, "thread"    # Lcom/google/analytics/tracking/android/AnalyticsThread;
+    .param p3, "store"    # Lcom/google/analytics/tracking/android/AnalyticsStore;
+    .param p4, "listenForNetwork"    # Z
     .annotation build Lcom/google/android/gms/common/util/VisibleForTesting;
     .end annotation
 
@@ -151,7 +151,7 @@
 
 .method static synthetic access$000(Lcom/google/analytics/tracking/android/GAServiceManager;)Z
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/google/analytics/tracking/android/GAServiceManager;
 
     .prologue
     .line 25
@@ -172,7 +172,7 @@
 
 .method static synthetic access$200(Lcom/google/analytics/tracking/android/GAServiceManager;)I
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/google/analytics/tracking/android/GAServiceManager;
 
     .prologue
     .line 25
@@ -183,7 +183,7 @@
 
 .method static synthetic access$300(Lcom/google/analytics/tracking/android/GAServiceManager;)Z
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/google/analytics/tracking/android/GAServiceManager;
 
     .prologue
     .line 25
@@ -194,7 +194,7 @@
 
 .method static synthetic access$400(Lcom/google/analytics/tracking/android/GAServiceManager;)Landroid/os/Handler;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/google/analytics/tracking/android/GAServiceManager;
 
     .prologue
     .line 25
@@ -295,7 +295,7 @@
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
     .line 94
-    .local v0, filter:Landroid/content/IntentFilter;
+    .local v0, "filter":Landroid/content/IntentFilter;
     const-string v1, "android.net.conn.CONNECTIVITY_CHANGE"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
@@ -468,8 +468,8 @@
 
 .method declared-synchronized initialize(Landroid/content/Context;Lcom/google/analytics/tracking/android/AnalyticsThread;)V
     .locals 1
-    .parameter "ctx"
-    .parameter "thread"
+    .param p1, "ctx"    # Landroid/content/Context;
+    .param p2, "thread"    # Lcom/google/analytics/tracking/android/AnalyticsThread;
 
     .prologue
     .line 132
@@ -529,7 +529,7 @@
 
 .method public declared-synchronized setDispatchPeriod(I)V
     .locals 4
-    .parameter "dispatchPeriodInSeconds"
+    .param p1, "dispatchPeriodInSeconds"    # I
 
     .prologue
     .line 189
@@ -639,7 +639,7 @@
 
 .method public declared-synchronized updateConnectivityStatus(Z)V
     .locals 1
-    .parameter "connected"
+    .param p1, "connected"    # Z
 
     .prologue
     .line 227
@@ -668,8 +668,8 @@
 
 .method declared-synchronized updatePowerSaveMode(ZZ)V
     .locals 4
-    .parameter "storeIsEmpty"
-    .parameter "connected"
+    .param p1, "storeIsEmpty"    # Z
+    .param p2, "connected"    # Z
     .annotation build Lcom/google/android/gms/common/util/VisibleForTesting;
     .end annotation
 

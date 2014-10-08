@@ -23,7 +23,6 @@
 
 .method static synthetic access$0(Lcom/bitrhyms/tapjoylib/ShowOffers;)Lcom/adobe/fre/FREContext;
     .locals 1
-    .parameter
 
     .prologue
     .line 14
@@ -36,8 +35,8 @@
 # virtual methods
 .method public call(Lcom/adobe/fre/FREContext;[Lcom/adobe/fre/FREObject;)Lcom/adobe/fre/FREObject;
     .locals 5
-    .parameter "context"
-    .parameter "args"
+    .param p1, "context"    # Lcom/adobe/fre/FREContext;
+    .param p2, "args"    # [Lcom/adobe/fre/FREObject;
 
     .prologue
     .line 19
@@ -86,7 +85,7 @@
     move-object v0, v1
 
     .line 40
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     iget-object v1, p0, Lcom/bitrhyms/tapjoylib/ShowOffers;->mContext:Lcom/adobe/fre/FREContext;
 
     const-string v2, "ERROR_EVENT"

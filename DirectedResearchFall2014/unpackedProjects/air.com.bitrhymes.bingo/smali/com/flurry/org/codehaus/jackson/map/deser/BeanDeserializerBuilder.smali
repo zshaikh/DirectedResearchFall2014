@@ -62,7 +62,7 @@
 # direct methods
 .method protected constructor <init>(Lcom/flurry/org/codehaus/jackson/map/deser/BeanDeserializerBuilder;)V
     .locals 2
-    .parameter "src"
+    .param p1, "src"    # Lcom/flurry/org/codehaus/jackson/map/deser/BeanDeserializerBuilder;
 
     .prologue
     .line 100
@@ -122,7 +122,7 @@
 
 .method public constructor <init>(Lcom/flurry/org/codehaus/jackson/map/introspect/BasicBeanDescription;)V
     .locals 1
-    .parameter "beanDesc"
+    .param p1, "beanDesc"    # Lcom/flurry/org/codehaus/jackson/map/introspect/BasicBeanDescription;
 
     .prologue
     .line 89
@@ -144,7 +144,6 @@
 
 .method private static _copy(Ljava/util/HashMap;)Ljava/util/HashMap;
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -163,7 +162,7 @@
 
     .prologue
     .line 115
-    .local p0, src:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/map/deser/SettableBeanProperty;>;"
+    .local p0, "src":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/map/deser/SettableBeanProperty;>;"
     if-nez p0, :cond_0
 
     .line 116
@@ -185,8 +184,8 @@
 # virtual methods
 .method public addBackReferenceProperty(Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/map/deser/SettableBeanProperty;)V
     .locals 2
-    .parameter "referenceName"
-    .parameter "prop"
+    .param p1, "referenceName"    # Ljava/lang/String;
+    .param p2, "prop"    # Lcom/flurry/org/codehaus/jackson/map/deser/SettableBeanProperty;
 
     .prologue
     .line 155
@@ -230,7 +229,7 @@
 
 .method public addCreatorProperty(Lcom/flurry/org/codehaus/jackson/map/BeanPropertyDefinition;)V
     .locals 0
-    .parameter "propDef"
+    .param p1, "propDef"    # Lcom/flurry/org/codehaus/jackson/map/BeanPropertyDefinition;
 
     .prologue
     .line 206
@@ -239,7 +238,7 @@
 
 .method public addIgnorable(Ljava/lang/String;)V
     .locals 1
-    .parameter "propName"
+    .param p1, "propName"    # Ljava/lang/String;
 
     .prologue
     .line 185
@@ -266,11 +265,11 @@
 
 .method public addInjectable(Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/type/JavaType;Lcom/flurry/org/codehaus/jackson/map/util/Annotations;Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMember;Ljava/lang/Object;)V
     .locals 7
-    .parameter "propertyName"
-    .parameter "propertyType"
-    .parameter "contextAnnotations"
-    .parameter "member"
-    .parameter "valueId"
+    .param p1, "propertyName"    # Ljava/lang/String;
+    .param p2, "propertyType"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .param p3, "contextAnnotations"    # Lcom/flurry/org/codehaus/jackson/map/util/Annotations;
+    .param p4, "member"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMember;
+    .param p5, "valueId"    # Ljava/lang/Object;
 
     .prologue
     .line 172
@@ -311,8 +310,8 @@
 
 .method public addOrReplaceProperty(Lcom/flurry/org/codehaus/jackson/map/deser/SettableBeanProperty;Z)V
     .locals 2
-    .parameter "prop"
-    .parameter "allowOverride"
+    .param p1, "prop"    # Lcom/flurry/org/codehaus/jackson/map/deser/SettableBeanProperty;
+    .param p2, "allowOverride"    # Z
 
     .prologue
     .line 132
@@ -330,7 +329,7 @@
 
 .method public addProperty(Lcom/flurry/org/codehaus/jackson/map/deser/SettableBeanProperty;)V
     .locals 4
-    .parameter "prop"
+    .param p1, "prop"    # Lcom/flurry/org/codehaus/jackson/map/deser/SettableBeanProperty;
 
     .prologue
     .line 142
@@ -347,7 +346,7 @@
     check-cast v0, Lcom/flurry/org/codehaus/jackson/map/deser/SettableBeanProperty;
 
     .line 143
-    .local v0, old:Lcom/flurry/org/codehaus/jackson/map/deser/SettableBeanProperty;
+    .local v0, "old":Lcom/flurry/org/codehaus/jackson/map/deser/SettableBeanProperty;
     if-eqz v0, :cond_0
 
     if-eq v0, p1, :cond_0
@@ -404,7 +403,7 @@
 
 .method public build(Lcom/flurry/org/codehaus/jackson/map/BeanProperty;)Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;
     .locals 10
-    .parameter "forProperty"
+    .param p1, "forProperty"    # Lcom/flurry/org/codehaus/jackson/map/BeanProperty;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -428,7 +427,7 @@
     invoke-direct {v4, v0}, Lcom/flurry/org/codehaus/jackson/map/deser/impl/BeanPropertyMap;-><init>(Ljava/util/Collection;)V
 
     .line 272
-    .local v4, propertyMap:Lcom/flurry/org/codehaus/jackson/map/deser/impl/BeanPropertyMap;
+    .local v4, "propertyMap":Lcom/flurry/org/codehaus/jackson/map/deser/impl/BeanPropertyMap;
     invoke-virtual {v4}, Lcom/flurry/org/codehaus/jackson/map/deser/impl/BeanPropertyMap;->assignIndexes()V
 
     .line 273
@@ -494,7 +493,7 @@
 
 .method public hasProperty(Ljava/lang/String;)Z
     .locals 1
-    .parameter "propertyName"
+    .param p1, "propertyName"    # Ljava/lang/String;
 
     .prologue
     .line 248
@@ -509,7 +508,7 @@
 
 .method public removeProperty(Ljava/lang/String;)Lcom/flurry/org/codehaus/jackson/map/deser/SettableBeanProperty;
     .locals 1
-    .parameter "name"
+    .param p1, "name"    # Ljava/lang/String;
 
     .prologue
     .line 253
@@ -519,7 +518,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/flurry/org/codehaus/jackson/map/deser/BeanDeserializerBuilder;
     check-cast p0, Lcom/flurry/org/codehaus/jackson/map/deser/SettableBeanProperty;
 
     return-object p0
@@ -527,7 +526,7 @@
 
 .method public setAnySetter(Lcom/flurry/org/codehaus/jackson/map/deser/SettableAnyProperty;)V
     .locals 2
-    .parameter "s"
+    .param p1, "s"    # Lcom/flurry/org/codehaus/jackson/map/deser/SettableAnyProperty;
 
     .prologue
     .line 210
@@ -556,7 +555,7 @@
 
 .method public setIgnoreUnknownProperties(Z)V
     .locals 0
-    .parameter "ignore"
+    .param p1, "ignore"    # Z
 
     .prologue
     .line 217
@@ -568,7 +567,7 @@
 
 .method public setValueInstantiator(Lcom/flurry/org/codehaus/jackson/map/deser/ValueInstantiator;)V
     .locals 0
-    .parameter "inst"
+    .param p1, "inst"    # Lcom/flurry/org/codehaus/jackson/map/deser/ValueInstantiator;
 
     .prologue
     .line 224

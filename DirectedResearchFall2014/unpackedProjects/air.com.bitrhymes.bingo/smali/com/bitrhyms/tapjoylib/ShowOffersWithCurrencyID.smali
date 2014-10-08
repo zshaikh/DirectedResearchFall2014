@@ -22,8 +22,8 @@
 # virtual methods
 .method public call(Lcom/adobe/fre/FREContext;[Lcom/adobe/fre/FREObject;)Lcom/adobe/fre/FREObject;
     .locals 4
-    .parameter "context"
-    .parameter "args"
+    .param p1, "context"    # Lcom/adobe/fre/FREContext;
+    .param p2, "args"    # [Lcom/adobe/fre/FREObject;
 
     .prologue
     .line 15
@@ -45,7 +45,7 @@
     move-result v1
 
     .line 20
-    .local v1, showTab:Z
+    .local v1, "showTab":Z
     invoke-static {}, Lcom/tapjoy/TapjoyConnect;->getTapjoyConnectInstance()Lcom/tapjoy/TapjoyConnect;
 
     move-result-object v2
@@ -77,7 +77,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 28
-    .end local v1           #showTab:Z
+    .end local v1    # "showTab":Z
     :cond_0
     :goto_0
     const/4 v2, 0x0
@@ -91,7 +91,7 @@
     move-object v0, v2
 
     .line 25
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v2, "ERROR_EVENT"
 
     invoke-virtual {v0}, Ljava/lang/Exception;->toString()Ljava/lang/String;
@@ -114,7 +114,7 @@
 
 .method public viewDidClose(I)V
     .locals 3
-    .parameter "arg0"
+    .param p1, "arg0"    # I
 
     .prologue
     .line 41
@@ -123,7 +123,7 @@
     move-result-object v0
 
     .line 42
-    .local v0, context:Lcom/adobe/fre/FREContext;
+    .local v0, "context":Lcom/adobe/fre/FREContext;
     if-eqz v0, :cond_0
 
     .line 43
@@ -140,7 +140,7 @@
 
 .method public viewDidOpen(I)V
     .locals 3
-    .parameter "arg0"
+    .param p1, "arg0"    # I
 
     .prologue
     .line 57
@@ -149,7 +149,7 @@
     move-result-object v0
 
     .line 58
-    .local v0, context:Lcom/adobe/fre/FREContext;
+    .local v0, "context":Lcom/adobe/fre/FREContext;
     if-eqz v0, :cond_0
 
     .line 59
@@ -166,7 +166,7 @@
 
 .method public viewWillClose(I)V
     .locals 3
-    .parameter "arg0"
+    .param p1, "arg0"    # I
 
     .prologue
     .line 33
@@ -175,7 +175,7 @@
     move-result-object v0
 
     .line 34
-    .local v0, context:Lcom/adobe/fre/FREContext;
+    .local v0, "context":Lcom/adobe/fre/FREContext;
     if-eqz v0, :cond_0
 
     .line 35
@@ -192,7 +192,7 @@
 
 .method public viewWillOpen(I)V
     .locals 3
-    .parameter "arg0"
+    .param p1, "arg0"    # I
 
     .prologue
     .line 49
@@ -201,7 +201,7 @@
     move-result-object v0
 
     .line 50
-    .local v0, context:Lcom/adobe/fre/FREContext;
+    .local v0, "context":Lcom/adobe/fre/FREContext;
     if-eqz v0, :cond_0
 
     .line 51

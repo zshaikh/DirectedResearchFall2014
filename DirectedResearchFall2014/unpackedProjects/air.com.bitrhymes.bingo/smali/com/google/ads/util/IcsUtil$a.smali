@@ -17,7 +17,6 @@
 # direct methods
 .method public constructor <init>(Lcom/google/ads/n;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 34
@@ -31,9 +30,9 @@
 # virtual methods
 .method public onShowCustomView(Landroid/view/View;ILandroid/webkit/WebChromeClient$CustomViewCallback;)V
     .locals 0
-    .parameter "view"
-    .parameter "requestedOrientation"
-    .parameter "callback"
+    .param p1, "view"    # Landroid/view/View;
+    .param p2, "requestedOrientation"    # I
+    .param p3, "callback"    # Landroid/webkit/WebChromeClient$CustomViewCallback;
 
     .prologue
     .line 44

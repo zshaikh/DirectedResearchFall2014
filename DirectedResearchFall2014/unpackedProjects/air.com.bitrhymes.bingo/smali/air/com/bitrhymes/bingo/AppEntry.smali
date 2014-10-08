@@ -69,8 +69,8 @@
 
 .method private BroadcastIntent(Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
-    .parameter "action"
-    .parameter "data"
+    .param p1, "action"    # Ljava/lang/String;
+    .param p2, "data"    # Ljava/lang/String;
 
     .prologue
     .line 69
@@ -85,7 +85,7 @@
 
     move-result-object v0
 
-    const/high16 v1, 0x1000
+    const/high16 v1, 0x10000000
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
@@ -115,8 +115,8 @@
 
 .method private varargs InvokeMethod(Ljava/lang/reflect/Method;[Ljava/lang/Object;)Ljava/lang/Object;
     .locals 3
-    .parameter "method"
-    .parameter "args"
+    .param p1, "method"    # Ljava/lang/reflect/Method;
+    .param p2, "args"    # [Ljava/lang/Object;
 
     .prologue
     .line 341
@@ -136,7 +136,7 @@
     const/4 v0, 0x0
 
     .line 347
-    .local v0, retval:Ljava/lang/Object;
+    .local v0, "retval":Ljava/lang/Object;
     if-eqz p2, :cond_1
 
     .line 348
@@ -147,7 +147,7 @@
 
     move-result-object v0
 
-    .end local v0           #retval:Ljava/lang/Object;
+    .end local v0    # "retval":Ljava/lang/Object;
     :goto_1
     move-object v1, v0
 
@@ -155,7 +155,7 @@
     goto :goto_0
 
     .line 350
-    .restart local v0       #retval:Ljava/lang/Object;
+    .restart local v0    # "retval":Ljava/lang/Object;
     :cond_1
     sget-object v1, Lair/com/bitrhymes/bingo/AppEntry;->sAndroidActivityWrapper:Ljava/lang/Object;
 
@@ -209,19 +209,19 @@
     move-result-object v4
 
     .line 324
-    .local v4, method:Ljava/lang/reflect/Method;
+    .local v4, "method":Ljava/lang/reflect/Method;
     const-string v6, ""
 
     .line 325
-    .local v6, xmlPath:Ljava/lang/String;
+    .local v6, "xmlPath":Ljava/lang/String;
     const-string v5, ""
 
     .line 326
-    .local v5, rootDirectory:Ljava/lang/String;
+    .local v5, "rootDirectory":Ljava/lang/String;
     const-string v1, "-nodebug"
 
     .line 327
-    .local v1, extraArgs:Ljava/lang/String;
+    .local v1, "extraArgs":Ljava/lang/String;
     new-instance v2, Ljava/lang/Boolean;
 
     const/4 v7, 0x0
@@ -229,7 +229,7 @@
     invoke-direct {v2, v7}, Ljava/lang/Boolean;-><init>(Z)V
 
     .line 328
-    .local v2, isADL:Ljava/lang/Boolean;
+    .local v2, "isADL":Ljava/lang/Boolean;
     new-instance v3, Ljava/lang/Boolean;
 
     const/4 v7, 0x0
@@ -237,7 +237,7 @@
     invoke-direct {v3, v7}, Ljava/lang/Boolean;-><init>(Z)V
 
     .line 329
-    .local v3, isDebuggerMode:Ljava/lang/Boolean;
+    .local v3, "isDebuggerMode":Ljava/lang/Boolean;
     const/4 v7, 0x5
 
     new-array v0, v7, [Ljava/lang/String;
@@ -271,7 +271,7 @@
     aput-object v8, v0, v7
 
     .line 331
-    .local v0, args:[Ljava/lang/String;
+    .local v0, "args":[Ljava/lang/String;
     const/4 v7, 0x2
 
     new-array v7, v7, [Ljava/lang/Object;
@@ -289,13 +289,13 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 337
-    .end local v0           #args:[Ljava/lang/String;
-    .end local v1           #extraArgs:Ljava/lang/String;
-    .end local v2           #isADL:Ljava/lang/Boolean;
-    .end local v3           #isDebuggerMode:Ljava/lang/Boolean;
-    .end local v4           #method:Ljava/lang/reflect/Method;
-    .end local v5           #rootDirectory:Ljava/lang/String;
-    .end local v6           #xmlPath:Ljava/lang/String;
+    .end local v0    # "args":[Ljava/lang/String;
+    .end local v1    # "extraArgs":Ljava/lang/String;
+    .end local v2    # "isADL":Ljava/lang/Boolean;
+    .end local v3    # "isDebuggerMode":Ljava/lang/Boolean;
+    .end local v4    # "method":Ljava/lang/reflect/Method;
+    .end local v5    # "rootDirectory":Ljava/lang/String;
+    .end local v6    # "xmlPath":Ljava/lang/String;
     :goto_0
     return-void
 
@@ -323,7 +323,7 @@
 
 .method static synthetic access$000(Lair/com/bitrhymes/bingo/AppEntry;)V
     .locals 0
-    .parameter "x0"
+    .param p0, "x0"    # Lair/com/bitrhymes/bingo/AppEntry;
 
     .prologue
     .line 55
@@ -334,7 +334,7 @@
 
 .method static synthetic access$100(Lair/com/bitrhymes/bingo/AppEntry;)V
     .locals 0
-    .parameter "x0"
+    .param p0, "x0"    # Lair/com/bitrhymes/bingo/AppEntry;
 
     .prologue
     .line 55
@@ -345,8 +345,8 @@
 
 .method static synthetic access$200(Lair/com/bitrhymes/bingo/AppEntry;Z)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
+    .param p0, "x0"    # Lair/com/bitrhymes/bingo/AppEntry;
+    .param p1, "x1"    # Z
 
     .prologue
     .line 55
@@ -367,7 +367,7 @@
 
 .method static synthetic access$400(Lair/com/bitrhymes/bingo/AppEntry;)V
     .locals 0
-    .parameter "x0"
+    .param p0, "x0"    # Lair/com/bitrhymes/bingo/AppEntry;
 
     .prologue
     .line 55
@@ -388,7 +388,7 @@
 
 .method private createActivityWrapper(Z)V
     .locals 6
-    .parameter "hasCaptiveRuntime"
+    .param p1, "hasCaptiveRuntime"    # Z
 
     .prologue
     const-string v1, "CreateAndroidActivityWrapper"
@@ -423,7 +423,7 @@
     move-result-object v0
 
     .line 612
-    .local v0, methodCreateAndroidActivityWrapper:Ljava/lang/reflect/Method;
+    .local v0, "methodCreateAndroidActivityWrapper":Ljava/lang/reflect/Method;
     const/4 v1, 0x0
 
     const/4 v2, 0x2
@@ -449,7 +449,7 @@
     sput-object v1, Lair/com/bitrhymes/bingo/AppEntry;->sAndroidActivityWrapper:Ljava/lang/Object;
 
     .line 624
-    .end local v0           #methodCreateAndroidActivityWrapper:Ljava/lang/reflect/Method;
+    .end local v0    # "methodCreateAndroidActivityWrapper":Ljava/lang/reflect/Method;
     :goto_0
     return-void
 
@@ -474,7 +474,7 @@
     move-result-object v0
 
     .line 617
-    .restart local v0       #methodCreateAndroidActivityWrapper:Ljava/lang/reflect/Method;
+    .restart local v0    # "methodCreateAndroidActivityWrapper":Ljava/lang/reflect/Method;
     const/4 v1, 0x0
 
     const/4 v2, 0x1
@@ -496,7 +496,7 @@
     goto :goto_0
 
     .line 620
-    .end local v0           #methodCreateAndroidActivityWrapper:Ljava/lang/reflect/Method;
+    .end local v0    # "methodCreateAndroidActivityWrapper":Ljava/lang/reflect/Method;
     :catch_0
     move-exception v1
 
@@ -513,7 +513,7 @@
     move-result-object v1
 
     .line 124
-    .local v1, pkgMgr:Landroid/content/pm/PackageManager;
+    .local v1, "pkgMgr":Landroid/content/pm/PackageManager;
     :try_start_0
     sget-object v2, Lair/com/bitrhymes/bingo/AppEntry;->RUNTIME_PACKAGE_ID:Ljava/lang/String;
 
@@ -536,7 +536,7 @@
     move-object v0, v2
 
     .line 129
-    .local v0, nfe:Landroid/content/pm/PackageManager$NameNotFoundException;
+    .local v0, "nfe":Landroid/content/pm/PackageManager$NameNotFoundException;
     const/4 v2, 0x0
 
     goto :goto_0
@@ -546,7 +546,7 @@
     .locals 5
 
     .prologue
-    const/high16 v4, 0x4
+    const/high16 v4, 0x40000
 
     .line 137
     invoke-virtual {p0}, Lair/com/bitrhymes/bingo/AppEntry;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -554,7 +554,7 @@
     move-result-object v1
 
     .line 142
-    .local v1, pkgMgr:Landroid/content/pm/PackageManager;
+    .local v1, "pkgMgr":Landroid/content/pm/PackageManager;
     :try_start_0
     sget-object v2, Lair/com/bitrhymes/bingo/AppEntry;->RUNTIME_PACKAGE_ID:Ljava/lang/String;
 
@@ -565,7 +565,7 @@
     move-result-object v0
 
     .line 143
-    .local v0, appInfo:Landroid/content/pm/ApplicationInfo;
+    .local v0, "appInfo":Landroid/content/pm/ApplicationInfo;
     iget v2, v0, Landroid/content/pm/ApplicationInfo;->flags:I
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
@@ -578,7 +578,7 @@
     const/4 v2, 0x1
 
     .line 151
-    .end local v0           #appInfo:Landroid/content/pm/ApplicationInfo;
+    .end local v0    # "appInfo":Landroid/content/pm/ApplicationInfo;
     :goto_0
     return v2
 
@@ -606,7 +606,7 @@
     invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
     .line 272
-    .local v1, intent:Landroid/content/Intent;
+    .local v1, "intent":Landroid/content/Intent;
     sget-object v2, Lair/com/bitrhymes/bingo/AppEntry;->RUNTIME_PACKAGE_ID:Ljava/lang/String;
 
     const-string v3, "com.adobe.air.AIRService"
@@ -619,7 +619,7 @@
     invoke-direct {v0, p0}, Lair/com/bitrhymes/bingo/AppEntry$4;-><init>(Lair/com/bitrhymes/bingo/AppEntry;)V
 
     .line 306
-    .local v0, conn:Landroid/content/ServiceConnection;
+    .local v0, "conn":Landroid/content/ServiceConnection;
     const/4 v2, 0x1
 
     invoke-virtual {p0, v1, v0, v2}, Lair/com/bitrhymes/bingo/AppEntry;->bindService(Landroid/content/Intent;Landroid/content/ServiceConnection;I)Z
@@ -627,8 +627,8 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 313
-    .end local v0           #conn:Landroid/content/ServiceConnection;
-    .end local v1           #intent:Landroid/content/Intent;
+    .end local v0    # "conn":Landroid/content/ServiceConnection;
+    .end local v1    # "intent":Landroid/content/Intent;
     :goto_0
     return-void
 
@@ -647,7 +647,7 @@
     const/4 v1, 0x0
 
     .line 88
-    .local v1, airDownloadURL:Ljava/lang/String;
+    .local v1, "airDownloadURL":Ljava/lang/String;
     :try_start_0
     invoke-virtual {p0}, Lair/com/bitrhymes/bingo/AppEntry;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -664,11 +664,11 @@
     move-result-object v2
 
     .line 89
-    .local v2, info:Landroid/content/pm/ActivityInfo;
+    .local v2, "info":Landroid/content/pm/ActivityInfo;
     iget-object v4, v2, Landroid/content/pm/ActivityInfo;->metaData:Landroid/os/Bundle;
 
     .line 92
-    .local v4, metadata:Landroid/os/Bundle;
+    .local v4, "metadata":Landroid/os/Bundle;
     if-eqz v4, :cond_0
 
     .line 94
@@ -687,14 +687,14 @@
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_1
 
     .line 104
-    .end local v2           #info:Landroid/content/pm/ActivityInfo;
-    .end local v4           #metadata:Landroid/os/Bundle;
+    .end local v2    # "info":Landroid/content/pm/ActivityInfo;
+    .end local v4    # "metadata":Landroid/os/Bundle;
     :cond_0
     :goto_0
     move-object v3, v1
 
     .line 105
-    .local v3, marketPlaceURL:Ljava/lang/String;
+    .local v3, "marketPlaceURL":Ljava/lang/String;
     if-nez v3, :cond_1
 
     .line 106
@@ -738,7 +738,7 @@
     goto :goto_1
 
     .line 98
-    .end local v3           #marketPlaceURL:Ljava/lang/String;
+    .end local v3    # "marketPlaceURL":Ljava/lang/String;
     :catch_1
     move-exception v5
 
@@ -753,7 +753,7 @@
     const/4 v0, 0x0
 
     .line 567
-    .local v0, hasCaptiveRuntime:Z
+    .local v0, "hasCaptiveRuntime":Z
     :try_start_0
     const-string v1, "com.adobe.air.AndroidActivityWrapper"
 
@@ -809,7 +809,7 @@
     move-result-object v0
 
     .line 588
-    .local v0, con:Landroid/content/Context;
+    .local v0, "con":Landroid/content/Context;
     new-instance v1, Ldalvik/system/DexClassLoader;
 
     sget-object v2, Lair/com/bitrhymes/bingo/AppEntry;->RUNTIME_PACKAGE_ID:Ljava/lang/String;
@@ -856,7 +856,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 604
-    .end local v0           #con:Landroid/content/Context;
+    .end local v0    # "con":Landroid/content/Context;
     :cond_0
     :goto_0
     return-void
@@ -870,10 +870,10 @@
 
 .method private showDialog(ILjava/lang/String;II)V
     .locals 2
-    .parameter "titleId"
-    .parameter "text"
-    .parameter "positiveButtonId"
-    .parameter "negativeButtonId"
+    .param p1, "titleId"    # I
+    .param p2, "text"    # Ljava/lang/String;
+    .param p3, "positiveButtonId"    # I
+    .param p4, "negativeButtonId"    # I
 
     .prologue
     .line 156
@@ -882,7 +882,7 @@
     invoke-direct {v0, p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
     .line 157
-    .local v0, alertDialogBuilder:Landroid/app/AlertDialog$Builder;
+    .local v0, "alertDialogBuilder":Landroid/app/AlertDialog$Builder;
     invoke-virtual {v0, p1}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
 
     .line 158
@@ -928,7 +928,7 @@
     invoke-direct {v0, v2}, Lcom/adobe/air/ResourceIdMap;-><init>(Ljava/lang/String;)V
 
     .line 190
-    .local v0, r:Lcom/adobe/air/ResourceIdMap;
+    .local v0, "r":Lcom/adobe/air/ResourceIdMap;
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -966,7 +966,7 @@
     move-result-object v1
 
     .line 191
-    .local v1, text:Ljava/lang/String;
+    .local v1, "text":Ljava/lang/String;
     const-string v2, "string.title_adobe_air"
 
     invoke-virtual {v0, v2}, Lcom/adobe/air/ResourceIdMap;->getId(Ljava/lang/String;)I
@@ -1003,7 +1003,7 @@
     invoke-direct {v0, v2}, Lcom/adobe/air/ResourceIdMap;-><init>(Ljava/lang/String;)V
 
     .line 200
-    .local v0, r:Lcom/adobe/air/ResourceIdMap;
+    .local v0, "r":Lcom/adobe/air/ResourceIdMap;
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1041,7 +1041,7 @@
     move-result-object v1
 
     .line 201
-    .local v1, text:Ljava/lang/String;
+    .local v1, "text":Ljava/lang/String;
     const-string v2, "string.title_adobe_air"
 
     invoke-virtual {v0, v2}, Lcom/adobe/air/ResourceIdMap;->getId(Ljava/lang/String;)I
@@ -1070,7 +1070,7 @@
 # virtual methods
 .method public dispatchGenericMotionEvent(Landroid/view/MotionEvent;)Z
     .locals 9
-    .parameter "event"
+    .param p1, "event"    # Landroid/view/MotionEvent;
 
     .prologue
     const/4 v8, 0x1
@@ -1081,7 +1081,7 @@
     const/4 v0, 0x0
 
     .line 495
-    .local v0, handled:Z
+    .local v0, "handled":Z
     :try_start_0
     sget-object v2, Lair/com/bitrhymes/bingo/AppEntry;->sAndroidActivityWrapperClass:Ljava/lang/Class;
 
@@ -1108,7 +1108,7 @@
     move-result-object v1
 
     .line 496
-    .local v1, method:Ljava/lang/reflect/Method;
+    .local v1, "method":Ljava/lang/reflect/Method;
     const/4 v2, 0x2
 
     new-array v2, v2, [Ljava/lang/Object;
@@ -1130,7 +1130,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 503
-    .end local v1           #method:Ljava/lang/reflect/Method;
+    .end local v1    # "method":Ljava/lang/reflect/Method;
     :goto_0
     if-nez v0, :cond_0
 
@@ -1160,7 +1160,7 @@
 
 .method public dispatchKeyEvent(Landroid/view/KeyEvent;)Z
     .locals 9
-    .parameter "event"
+    .param p1, "event"    # Landroid/view/KeyEvent;
 
     .prologue
     const/4 v8, 0x1
@@ -1171,7 +1171,7 @@
     const/4 v0, 0x0
 
     .line 477
-    .local v0, handled:Z
+    .local v0, "handled":Z
     :try_start_0
     sget-object v2, Lair/com/bitrhymes/bingo/AppEntry;->sAndroidActivityWrapperClass:Ljava/lang/Class;
 
@@ -1198,7 +1198,7 @@
     move-result-object v1
 
     .line 478
-    .local v1, method:Ljava/lang/reflect/Method;
+    .local v1, "method":Ljava/lang/reflect/Method;
     const/4 v2, 0x2
 
     new-array v2, v2, [Ljava/lang/Object;
@@ -1220,7 +1220,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 485
-    .end local v1           #method:Ljava/lang/reflect/Method;
+    .end local v1    # "method":Ljava/lang/reflect/Method;
     :goto_0
     if-nez v0, :cond_0
 
@@ -1250,8 +1250,8 @@
 
 .method public finishActivityFromChild(Landroid/app/Activity;I)V
     .locals 6
-    .parameter "child"
-    .parameter "requestCode"
+    .param p1, "child"    # Landroid/app/Activity;
+    .param p2, "requestCode"    # I
 
     .prologue
     .line 629
@@ -1284,7 +1284,7 @@
     move-result-object v0
 
     .line 634
-    .local v0, method:Ljava/lang/reflect/Method;
+    .local v0, "method":Ljava/lang/reflect/Method;
     const/4 v1, 0x2
 
     new-array v1, v1, [Ljava/lang/Object;
@@ -1306,7 +1306,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 640
-    .end local v0           #method:Ljava/lang/reflect/Method;
+    .end local v0    # "method":Ljava/lang/reflect/Method;
     :goto_0
     return-void
 
@@ -1319,7 +1319,7 @@
 
 .method public finishFromChild(Landroid/app/Activity;)V
     .locals 6
-    .parameter "child"
+    .param p1, "child"    # Landroid/app/Activity;
 
     .prologue
     .line 645
@@ -1346,7 +1346,7 @@
     move-result-object v0
 
     .line 650
-    .local v0, method:Ljava/lang/reflect/Method;
+    .local v0, "method":Ljava/lang/reflect/Method;
     const/4 v1, 0x1
 
     new-array v1, v1, [Ljava/lang/Object;
@@ -1360,7 +1360,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 656
-    .end local v0           #method:Ljava/lang/reflect/Method;
+    .end local v0    # "method":Ljava/lang/reflect/Method;
     :goto_0
     return-void
 
@@ -1373,9 +1373,9 @@
 
 .method protected onActivityResult(IILandroid/content/Intent;)V
     .locals 6
-    .parameter "requestCode"
-    .parameter "resultCode"
-    .parameter "data"
+    .param p1, "requestCode"    # I
+    .param p2, "resultCode"    # I
+    .param p3, "data"    # Landroid/content/Intent;
 
     .prologue
     .line 530
@@ -1416,7 +1416,7 @@
     move-result-object v0
 
     .line 533
-    .local v0, method:Ljava/lang/reflect/Method;
+    .local v0, "method":Ljava/lang/reflect/Method;
     const/4 v1, 0x3
 
     new-array v1, v1, [Ljava/lang/Object;
@@ -1446,7 +1446,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 540
-    .end local v0           #method:Ljava/lang/reflect/Method;
+    .end local v0    # "method":Ljava/lang/reflect/Method;
     :cond_0
     :goto_0
     return-void
@@ -1460,9 +1460,9 @@
 
 .method protected onApplyThemeResource(Landroid/content/res/Resources$Theme;IZ)V
     .locals 6
-    .parameter "theme"
-    .parameter "resid"
-    .parameter "first"
+    .param p1, "theme"    # Landroid/content/res/Resources$Theme;
+    .param p2, "resid"    # I
+    .param p3, "first"    # Z
 
     .prologue
     .line 1179
@@ -1501,7 +1501,7 @@
     move-result-object v0
 
     .line 1184
-    .local v0, method:Ljava/lang/reflect/Method;
+    .local v0, "method":Ljava/lang/reflect/Method;
     const/4 v1, 0x3
 
     new-array v1, v1, [Ljava/lang/Object;
@@ -1531,7 +1531,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 1190
-    .end local v0           #method:Ljava/lang/reflect/Method;
+    .end local v0    # "method":Ljava/lang/reflect/Method;
     :goto_0
     return-void
 
@@ -1564,7 +1564,7 @@
     move-result-object v0
 
     .line 666
-    .local v0, method:Ljava/lang/reflect/Method;
+    .local v0, "method":Ljava/lang/reflect/Method;
     const/4 v1, 0x0
 
     new-array v1, v1, [Ljava/lang/Object;
@@ -1574,7 +1574,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 672
-    .end local v0           #method:Ljava/lang/reflect/Method;
+    .end local v0    # "method":Ljava/lang/reflect/Method;
     :goto_0
     return-void
 
@@ -1607,7 +1607,7 @@
     move-result-object v0
 
     .line 682
-    .local v0, method:Ljava/lang/reflect/Method;
+    .local v0, "method":Ljava/lang/reflect/Method;
     const/4 v1, 0x0
 
     new-array v1, v1, [Ljava/lang/Object;
@@ -1617,7 +1617,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 688
-    .end local v0           #method:Ljava/lang/reflect/Method;
+    .end local v0    # "method":Ljava/lang/reflect/Method;
     :goto_0
     return-void
 
@@ -1630,8 +1630,8 @@
 
 .method protected onChildTitleChanged(Landroid/app/Activity;Ljava/lang/CharSequence;)V
     .locals 6
-    .parameter "childActivity"
-    .parameter "title"
+    .param p1, "childActivity"    # Landroid/app/Activity;
+    .param p2, "title"    # Ljava/lang/CharSequence;
 
     .prologue
     .line 1195
@@ -1664,7 +1664,7 @@
     move-result-object v0
 
     .line 1200
-    .local v0, method:Ljava/lang/reflect/Method;
+    .local v0, "method":Ljava/lang/reflect/Method;
     const/4 v1, 0x2
 
     new-array v1, v1, [Ljava/lang/Object;
@@ -1682,7 +1682,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 1206
-    .end local v0           #method:Ljava/lang/reflect/Method;
+    .end local v0    # "method":Ljava/lang/reflect/Method;
     :goto_0
     return-void
 
@@ -1695,7 +1695,7 @@
 
 .method public onConfigurationChanged(Landroid/content/res/Configuration;)V
     .locals 6
-    .parameter "newConfig"
+    .param p1, "newConfig"    # Landroid/content/res/Configuration;
 
     .prologue
     .line 458
@@ -1722,7 +1722,7 @@
     move-result-object v0
 
     .line 463
-    .local v0, method:Ljava/lang/reflect/Method;
+    .local v0, "method":Ljava/lang/reflect/Method;
     const/4 v1, 0x1
 
     new-array v1, v1, [Ljava/lang/Object;
@@ -1736,7 +1736,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 469
-    .end local v0           #method:Ljava/lang/reflect/Method;
+    .end local v0    # "method":Ljava/lang/reflect/Method;
     :goto_0
     return-void
 
@@ -1769,7 +1769,7 @@
     move-result-object v0
 
     .line 698
-    .local v0, method:Ljava/lang/reflect/Method;
+    .local v0, "method":Ljava/lang/reflect/Method;
     const/4 v1, 0x0
 
     new-array v1, v1, [Ljava/lang/Object;
@@ -1779,7 +1779,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 704
-    .end local v0           #method:Ljava/lang/reflect/Method;
+    .end local v0    # "method":Ljava/lang/reflect/Method;
     :goto_0
     return-void
 
@@ -1792,7 +1792,7 @@
 
 .method public onContextItemSelected(Landroid/view/MenuItem;)Z
     .locals 8
-    .parameter "item"
+    .param p1, "item"    # Landroid/view/MenuItem;
 
     .prologue
     .line 709
@@ -1801,7 +1801,7 @@
     move-result v2
 
     .line 713
-    .local v2, retval:Z
+    .local v2, "retval":Z
     :try_start_0
     sget-object v3, Lair/com/bitrhymes/bingo/AppEntry;->sAndroidActivityWrapperClass:Ljava/lang/Class;
 
@@ -1828,7 +1828,7 @@
     move-result-object v1
 
     .line 714
-    .local v1, method:Ljava/lang/reflect/Method;
+    .local v1, "method":Ljava/lang/reflect/Method;
     const/4 v3, 0x2
 
     new-array v3, v3, [Ljava/lang/Object;
@@ -1849,7 +1849,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lair/com/bitrhymes/bingo/AppEntry;
     check-cast p0, Ljava/lang/Boolean;
 
     invoke-virtual {p0}, Ljava/lang/Boolean;->booleanValue()Z
@@ -1859,7 +1859,7 @@
     move-result v3
 
     .line 719
-    .end local v1           #method:Ljava/lang/reflect/Method;
+    .end local v1    # "method":Ljava/lang/reflect/Method;
     :goto_0
     return v3
 
@@ -1869,7 +1869,7 @@
 
     move-object v0, v3
 
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     move v3, v2
 
     .line 719
@@ -1878,7 +1878,7 @@
 
 .method public onContextMenuClosed(Landroid/view/Menu;)V
     .locals 6
-    .parameter "menu"
+    .param p1, "menu"    # Landroid/view/Menu;
 
     .prologue
     .line 726
@@ -1905,7 +1905,7 @@
     move-result-object v0
 
     .line 731
-    .local v0, method:Ljava/lang/reflect/Method;
+    .local v0, "method":Ljava/lang/reflect/Method;
     const/4 v1, 0x1
 
     new-array v1, v1, [Ljava/lang/Object;
@@ -1919,7 +1919,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 737
-    .end local v0           #method:Ljava/lang/reflect/Method;
+    .end local v0    # "method":Ljava/lang/reflect/Method;
     :goto_0
     return-void
 
@@ -1932,7 +1932,7 @@
 
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 7
-    .parameter "savedInstanceState"
+    .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
     .line 211
@@ -1944,13 +1944,13 @@
     invoke-direct {v3}, Ljava/util/Date;-><init>()V
 
     .line 216
-    .local v3, t:Ljava/util/Date;
+    .local v3, "t":Ljava/util/Date;
     invoke-virtual {v3}, Ljava/util/Date;->getTime()J
 
     move-result-wide v1
 
     .line 217
-    .local v1, millis:J
+    .local v1, "millis":J
     const-string v4, "StartupTime1"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -1979,7 +1979,7 @@
     move-result v0
 
     .line 223
-    .local v0, hasCaptiveRuntime:Z
+    .local v0, "hasCaptiveRuntime":Z
     if-nez v0, :cond_2
 
     .line 225
@@ -2049,9 +2049,9 @@
 
 .method public onCreateContextMenu(Landroid/view/ContextMenu;Landroid/view/View;Landroid/view/ContextMenu$ContextMenuInfo;)V
     .locals 6
-    .parameter "menu"
-    .parameter "v"
-    .parameter "menuInfo"
+    .param p1, "menu"    # Landroid/view/ContextMenu;
+    .param p2, "v"    # Landroid/view/View;
+    .param p3, "menuInfo"    # Landroid/view/ContextMenu$ContextMenuInfo;
 
     .prologue
     .line 742
@@ -2090,7 +2090,7 @@
     move-result-object v0
 
     .line 747
-    .local v0, method:Ljava/lang/reflect/Method;
+    .local v0, "method":Ljava/lang/reflect/Method;
     const/4 v1, 0x3
 
     new-array v1, v1, [Ljava/lang/Object;
@@ -2112,7 +2112,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 753
-    .end local v0           #method:Ljava/lang/reflect/Method;
+    .end local v0    # "method":Ljava/lang/reflect/Method;
     :goto_0
     return-void
 
@@ -2133,7 +2133,7 @@
     move-result-object v2
 
     .line 762
-    .local v2, retval:Ljava/lang/CharSequence;
+    .local v2, "retval":Ljava/lang/CharSequence;
     :try_start_0
     sget-object v3, Lair/com/bitrhymes/bingo/AppEntry;->sAndroidActivityWrapperClass:Ljava/lang/Class;
 
@@ -2154,7 +2154,7 @@
     move-result-object v1
 
     .line 763
-    .local v1, method:Ljava/lang/reflect/Method;
+    .local v1, "method":Ljava/lang/reflect/Method;
     const/4 v3, 0x1
 
     new-array v3, v3, [Ljava/lang/Object;
@@ -2167,7 +2167,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lair/com/bitrhymes/bingo/AppEntry;
     check-cast p0, Ljava/lang/CharSequence;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -2175,7 +2175,7 @@
     move-object v3, p0
 
     .line 768
-    .end local v1           #method:Ljava/lang/reflect/Method;
+    .end local v1    # "method":Ljava/lang/reflect/Method;
     :goto_0
     return-object v3
 
@@ -2185,7 +2185,7 @@
 
     move-object v0, v3
 
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     move-object v3, v2
 
     .line 768
@@ -2194,7 +2194,7 @@
 
 .method protected onCreateDialog(I)Landroid/app/Dialog;
     .locals 8
-    .parameter "id"
+    .param p1, "id"    # I
 
     .prologue
     .line 1211
@@ -2203,7 +2203,7 @@
     move-result-object v2
 
     .line 1215
-    .local v2, retval:Landroid/app/Dialog;
+    .local v2, "retval":Landroid/app/Dialog;
     :try_start_0
     sget-object v3, Lair/com/bitrhymes/bingo/AppEntry;->sAndroidActivityWrapperClass:Ljava/lang/Class;
 
@@ -2230,7 +2230,7 @@
     move-result-object v1
 
     .line 1216
-    .local v1, method:Ljava/lang/reflect/Method;
+    .local v1, "method":Ljava/lang/reflect/Method;
     const/4 v3, 0x2
 
     new-array v3, v3, [Ljava/lang/Object;
@@ -2251,7 +2251,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lair/com/bitrhymes/bingo/AppEntry;
     check-cast p0, Landroid/app/Dialog;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -2259,7 +2259,7 @@
     move-object v3, p0
 
     .line 1221
-    .end local v1           #method:Ljava/lang/reflect/Method;
+    .end local v1    # "method":Ljava/lang/reflect/Method;
     :goto_0
     return-object v3
 
@@ -2269,7 +2269,7 @@
 
     move-object v0, v3
 
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     move-object v3, v2
 
     .line 1221
@@ -2278,8 +2278,8 @@
 
 .method protected onCreateDialog(ILandroid/os/Bundle;)Landroid/app/Dialog;
     .locals 8
-    .parameter "id"
-    .parameter "args"
+    .param p1, "id"    # I
+    .param p2, "args"    # Landroid/os/Bundle;
 
     .prologue
     .line 1228
@@ -2288,7 +2288,7 @@
     move-result-object v2
 
     .line 1232
-    .local v2, retval:Landroid/app/Dialog;
+    .local v2, "retval":Landroid/app/Dialog;
     :try_start_0
     sget-object v3, Lair/com/bitrhymes/bingo/AppEntry;->sAndroidActivityWrapperClass:Ljava/lang/Class;
 
@@ -2321,7 +2321,7 @@
     move-result-object v1
 
     .line 1233
-    .local v1, method:Ljava/lang/reflect/Method;
+    .local v1, "method":Ljava/lang/reflect/Method;
     const/4 v3, 0x3
 
     new-array v3, v3, [Ljava/lang/Object;
@@ -2346,7 +2346,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lair/com/bitrhymes/bingo/AppEntry;
     check-cast p0, Landroid/app/Dialog;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -2354,7 +2354,7 @@
     move-object v3, p0
 
     .line 1238
-    .end local v1           #method:Ljava/lang/reflect/Method;
+    .end local v1    # "method":Ljava/lang/reflect/Method;
     :goto_0
     return-object v3
 
@@ -2364,7 +2364,7 @@
 
     move-object v0, v3
 
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     move-object v3, v2
 
     .line 1238
@@ -2373,7 +2373,7 @@
 
 .method public onCreateOptionsMenu(Landroid/view/Menu;)Z
     .locals 8
-    .parameter "menu"
+    .param p1, "menu"    # Landroid/view/Menu;
 
     .prologue
     .line 775
@@ -2382,7 +2382,7 @@
     move-result v2
 
     .line 779
-    .local v2, retval:Z
+    .local v2, "retval":Z
     :try_start_0
     sget-object v3, Lair/com/bitrhymes/bingo/AppEntry;->sAndroidActivityWrapperClass:Ljava/lang/Class;
 
@@ -2409,7 +2409,7 @@
     move-result-object v1
 
     .line 780
-    .local v1, method:Ljava/lang/reflect/Method;
+    .local v1, "method":Ljava/lang/reflect/Method;
     const/4 v3, 0x2
 
     new-array v3, v3, [Ljava/lang/Object;
@@ -2430,7 +2430,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lair/com/bitrhymes/bingo/AppEntry;
     check-cast p0, Ljava/lang/Boolean;
 
     invoke-virtual {p0}, Ljava/lang/Boolean;->booleanValue()Z
@@ -2440,7 +2440,7 @@
     move-result v3
 
     .line 785
-    .end local v1           #method:Ljava/lang/reflect/Method;
+    .end local v1    # "method":Ljava/lang/reflect/Method;
     :goto_0
     return v3
 
@@ -2450,7 +2450,7 @@
 
     move-object v0, v3
 
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     move v3, v2
 
     .line 785
@@ -2459,8 +2459,8 @@
 
 .method public onCreatePanelMenu(ILandroid/view/Menu;)Z
     .locals 8
-    .parameter "featureId"
-    .parameter "menu"
+    .param p1, "featureId"    # I
+    .param p2, "menu"    # Landroid/view/Menu;
 
     .prologue
     .line 792
@@ -2469,7 +2469,7 @@
     move-result v2
 
     .line 796
-    .local v2, retval:Z
+    .local v2, "retval":Z
     :try_start_0
     sget-object v3, Lair/com/bitrhymes/bingo/AppEntry;->sAndroidActivityWrapperClass:Ljava/lang/Class;
 
@@ -2502,7 +2502,7 @@
     move-result-object v1
 
     .line 797
-    .local v1, method:Ljava/lang/reflect/Method;
+    .local v1, "method":Ljava/lang/reflect/Method;
     const/4 v3, 0x3
 
     new-array v3, v3, [Ljava/lang/Object;
@@ -2531,7 +2531,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lair/com/bitrhymes/bingo/AppEntry;
     check-cast p0, Ljava/lang/Boolean;
 
     invoke-virtual {p0}, Ljava/lang/Boolean;->booleanValue()Z
@@ -2541,7 +2541,7 @@
     move-result v3
 
     .line 802
-    .end local v1           #method:Ljava/lang/reflect/Method;
+    .end local v1    # "method":Ljava/lang/reflect/Method;
     :goto_0
     return v3
 
@@ -2551,7 +2551,7 @@
 
     move-object v0, v3
 
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     move v3, v2
 
     .line 802
@@ -2560,7 +2560,7 @@
 
 .method public onCreatePanelView(I)Landroid/view/View;
     .locals 8
-    .parameter "featureId"
+    .param p1, "featureId"    # I
 
     .prologue
     .line 809
@@ -2569,7 +2569,7 @@
     move-result-object v2
 
     .line 813
-    .local v2, retval:Landroid/view/View;
+    .local v2, "retval":Landroid/view/View;
     :try_start_0
     sget-object v3, Lair/com/bitrhymes/bingo/AppEntry;->sAndroidActivityWrapperClass:Ljava/lang/Class;
 
@@ -2596,7 +2596,7 @@
     move-result-object v1
 
     .line 814
-    .local v1, method:Ljava/lang/reflect/Method;
+    .local v1, "method":Ljava/lang/reflect/Method;
     const/4 v3, 0x2
 
     new-array v3, v3, [Ljava/lang/Object;
@@ -2617,7 +2617,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lair/com/bitrhymes/bingo/AppEntry;
     check-cast p0, Landroid/view/View;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -2625,7 +2625,7 @@
     move-object v3, p0
 
     .line 819
-    .end local v1           #method:Ljava/lang/reflect/Method;
+    .end local v1    # "method":Ljava/lang/reflect/Method;
     :goto_0
     return-object v3
 
@@ -2635,7 +2635,7 @@
 
     move-object v0, v3
 
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     move-object v3, v2
 
     .line 819
@@ -2644,8 +2644,8 @@
 
 .method public onCreateThumbnail(Landroid/graphics/Bitmap;Landroid/graphics/Canvas;)Z
     .locals 8
-    .parameter "outBitmap"
-    .parameter "canvas"
+    .param p1, "outBitmap"    # Landroid/graphics/Bitmap;
+    .param p2, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
     .line 826
@@ -2654,7 +2654,7 @@
     move-result v2
 
     .line 830
-    .local v2, retval:Z
+    .local v2, "retval":Z
     :try_start_0
     sget-object v3, Lair/com/bitrhymes/bingo/AppEntry;->sAndroidActivityWrapperClass:Ljava/lang/Class;
 
@@ -2687,7 +2687,7 @@
     move-result-object v1
 
     .line 831
-    .local v1, method:Ljava/lang/reflect/Method;
+    .local v1, "method":Ljava/lang/reflect/Method;
     const/4 v3, 0x3
 
     new-array v3, v3, [Ljava/lang/Object;
@@ -2712,7 +2712,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lair/com/bitrhymes/bingo/AppEntry;
     check-cast p0, Ljava/lang/Boolean;
 
     invoke-virtual {p0}, Ljava/lang/Boolean;->booleanValue()Z
@@ -2722,7 +2722,7 @@
     move-result v3
 
     .line 836
-    .end local v1           #method:Ljava/lang/reflect/Method;
+    .end local v1    # "method":Ljava/lang/reflect/Method;
     :goto_0
     return v3
 
@@ -2732,7 +2732,7 @@
 
     move-object v0, v3
 
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     move v3, v2
 
     .line 836
@@ -2741,9 +2741,9 @@
 
 .method public onCreateView(Ljava/lang/String;Landroid/content/Context;Landroid/util/AttributeSet;)Landroid/view/View;
     .locals 8
-    .parameter "name"
-    .parameter "context"
-    .parameter "attrs"
+    .param p1, "name"    # Ljava/lang/String;
+    .param p2, "context"    # Landroid/content/Context;
+    .param p3, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
     .line 843
@@ -2752,7 +2752,7 @@
     move-result-object v2
 
     .line 847
-    .local v2, retval:Landroid/view/View;
+    .local v2, "retval":Landroid/view/View;
     :try_start_0
     sget-object v3, Lair/com/bitrhymes/bingo/AppEntry;->sAndroidActivityWrapperClass:Ljava/lang/Class;
 
@@ -2791,7 +2791,7 @@
     move-result-object v1
 
     .line 848
-    .local v1, method:Ljava/lang/reflect/Method;
+    .local v1, "method":Ljava/lang/reflect/Method;
     const/4 v3, 0x4
 
     new-array v3, v3, [Ljava/lang/Object;
@@ -2816,7 +2816,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lair/com/bitrhymes/bingo/AppEntry;
     check-cast p0, Landroid/view/View;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -2824,7 +2824,7 @@
     move-object v3, p0
 
     .line 853
-    .end local v1           #method:Ljava/lang/reflect/Method;
+    .end local v1    # "method":Ljava/lang/reflect/Method;
     :goto_0
     return-object v3
 
@@ -2834,7 +2834,7 @@
 
     move-object v0, v3
 
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     move-object v3, v2
 
     .line 853
@@ -2863,7 +2863,7 @@
     move-result-object v0
 
     .line 446
-    .local v0, method:Ljava/lang/reflect/Method;
+    .local v0, "method":Ljava/lang/reflect/Method;
     const/4 v1, 0x0
 
     new-array v1, v1, [Ljava/lang/Object;
@@ -2873,7 +2873,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 452
-    .end local v0           #method:Ljava/lang/reflect/Method;
+    .end local v0    # "method":Ljava/lang/reflect/Method;
     :goto_0
     return-void
 
@@ -2906,7 +2906,7 @@
     move-result-object v0
 
     .line 865
-    .local v0, method:Ljava/lang/reflect/Method;
+    .local v0, "method":Ljava/lang/reflect/Method;
     const/4 v1, 0x0
 
     new-array v1, v1, [Ljava/lang/Object;
@@ -2916,7 +2916,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 871
-    .end local v0           #method:Ljava/lang/reflect/Method;
+    .end local v0    # "method":Ljava/lang/reflect/Method;
     :goto_0
     return-void
 
@@ -2929,8 +2929,8 @@
 
 .method public onKeyDown(ILandroid/view/KeyEvent;)Z
     .locals 8
-    .parameter "keyCode"
-    .parameter "event"
+    .param p1, "keyCode"    # I
+    .param p2, "event"    # Landroid/view/KeyEvent;
 
     .prologue
     .line 876
@@ -2939,7 +2939,7 @@
     move-result v2
 
     .line 880
-    .local v2, retval:Z
+    .local v2, "retval":Z
     :try_start_0
     sget-object v3, Lair/com/bitrhymes/bingo/AppEntry;->sAndroidActivityWrapperClass:Ljava/lang/Class;
 
@@ -2972,7 +2972,7 @@
     move-result-object v1
 
     .line 881
-    .local v1, method:Ljava/lang/reflect/Method;
+    .local v1, "method":Ljava/lang/reflect/Method;
     const/4 v3, 0x3
 
     new-array v3, v3, [Ljava/lang/Object;
@@ -3001,7 +3001,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lair/com/bitrhymes/bingo/AppEntry;
     check-cast p0, Ljava/lang/Boolean;
 
     invoke-virtual {p0}, Ljava/lang/Boolean;->booleanValue()Z
@@ -3011,7 +3011,7 @@
     move-result v3
 
     .line 886
-    .end local v1           #method:Ljava/lang/reflect/Method;
+    .end local v1    # "method":Ljava/lang/reflect/Method;
     :goto_0
     return v3
 
@@ -3021,7 +3021,7 @@
 
     move-object v0, v3
 
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     move v3, v2
 
     .line 886
@@ -3030,8 +3030,8 @@
 
 .method public onKeyLongPress(ILandroid/view/KeyEvent;)Z
     .locals 8
-    .parameter "keyCode"
-    .parameter "event"
+    .param p1, "keyCode"    # I
+    .param p2, "event"    # Landroid/view/KeyEvent;
 
     .prologue
     .line 893
@@ -3040,7 +3040,7 @@
     move-result v2
 
     .line 897
-    .local v2, retval:Z
+    .local v2, "retval":Z
     :try_start_0
     sget-object v3, Lair/com/bitrhymes/bingo/AppEntry;->sAndroidActivityWrapperClass:Ljava/lang/Class;
 
@@ -3073,7 +3073,7 @@
     move-result-object v1
 
     .line 898
-    .local v1, method:Ljava/lang/reflect/Method;
+    .local v1, "method":Ljava/lang/reflect/Method;
     const/4 v3, 0x3
 
     new-array v3, v3, [Ljava/lang/Object;
@@ -3102,7 +3102,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lair/com/bitrhymes/bingo/AppEntry;
     check-cast p0, Ljava/lang/Boolean;
 
     invoke-virtual {p0}, Ljava/lang/Boolean;->booleanValue()Z
@@ -3112,7 +3112,7 @@
     move-result v3
 
     .line 903
-    .end local v1           #method:Ljava/lang/reflect/Method;
+    .end local v1    # "method":Ljava/lang/reflect/Method;
     :goto_0
     return v3
 
@@ -3122,7 +3122,7 @@
 
     move-object v0, v3
 
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     move v3, v2
 
     .line 903
@@ -3131,9 +3131,9 @@
 
 .method public onKeyMultiple(IILandroid/view/KeyEvent;)Z
     .locals 8
-    .parameter "keyCode"
-    .parameter "repeatCount"
-    .parameter "event"
+    .param p1, "keyCode"    # I
+    .param p2, "repeatCount"    # I
+    .param p3, "event"    # Landroid/view/KeyEvent;
 
     .prologue
     .line 910
@@ -3142,7 +3142,7 @@
     move-result v2
 
     .line 914
-    .local v2, retval:Z
+    .local v2, "retval":Z
     :try_start_0
     sget-object v3, Lair/com/bitrhymes/bingo/AppEntry;->sAndroidActivityWrapperClass:Ljava/lang/Class;
 
@@ -3181,7 +3181,7 @@
     move-result-object v1
 
     .line 915
-    .local v1, method:Ljava/lang/reflect/Method;
+    .local v1, "method":Ljava/lang/reflect/Method;
     const/4 v3, 0x4
 
     new-array v3, v3, [Ljava/lang/Object;
@@ -3218,7 +3218,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lair/com/bitrhymes/bingo/AppEntry;
     check-cast p0, Ljava/lang/Boolean;
 
     invoke-virtual {p0}, Ljava/lang/Boolean;->booleanValue()Z
@@ -3228,7 +3228,7 @@
     move-result v3
 
     .line 920
-    .end local v1           #method:Ljava/lang/reflect/Method;
+    .end local v1    # "method":Ljava/lang/reflect/Method;
     :goto_0
     return v3
 
@@ -3238,7 +3238,7 @@
 
     move-object v0, v3
 
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     move v3, v2
 
     .line 920
@@ -3247,8 +3247,8 @@
 
 .method public onKeyUp(ILandroid/view/KeyEvent;)Z
     .locals 8
-    .parameter "keyCode"
-    .parameter "event"
+    .param p1, "keyCode"    # I
+    .param p2, "event"    # Landroid/view/KeyEvent;
 
     .prologue
     .line 927
@@ -3257,7 +3257,7 @@
     move-result v2
 
     .line 931
-    .local v2, retval:Z
+    .local v2, "retval":Z
     :try_start_0
     sget-object v3, Lair/com/bitrhymes/bingo/AppEntry;->sAndroidActivityWrapperClass:Ljava/lang/Class;
 
@@ -3290,7 +3290,7 @@
     move-result-object v1
 
     .line 932
-    .local v1, method:Ljava/lang/reflect/Method;
+    .local v1, "method":Ljava/lang/reflect/Method;
     const/4 v3, 0x3
 
     new-array v3, v3, [Ljava/lang/Object;
@@ -3319,7 +3319,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lair/com/bitrhymes/bingo/AppEntry;
     check-cast p0, Ljava/lang/Boolean;
 
     invoke-virtual {p0}, Ljava/lang/Boolean;->booleanValue()Z
@@ -3329,7 +3329,7 @@
     move-result v3
 
     .line 937
-    .end local v1           #method:Ljava/lang/reflect/Method;
+    .end local v1    # "method":Ljava/lang/reflect/Method;
     :goto_0
     return v3
 
@@ -3339,7 +3339,7 @@
 
     move-object v0, v3
 
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     move v3, v2
 
     .line 937
@@ -3365,7 +3365,7 @@
     move-result-object v0
 
     .line 517
-    .local v0, method:Ljava/lang/reflect/Method;
+    .local v0, "method":Ljava/lang/reflect/Method;
     const/4 v1, 0x0
 
     new-array v1, v1, [Ljava/lang/Object;
@@ -3375,7 +3375,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 523
-    .end local v0           #method:Ljava/lang/reflect/Method;
+    .end local v0    # "method":Ljava/lang/reflect/Method;
     :goto_0
     return-void
 
@@ -3388,8 +3388,8 @@
 
 .method public onMenuItemSelected(ILandroid/view/MenuItem;)Z
     .locals 8
-    .parameter "featureId"
-    .parameter "item"
+    .param p1, "featureId"    # I
+    .param p2, "item"    # Landroid/view/MenuItem;
 
     .prologue
     .line 944
@@ -3398,7 +3398,7 @@
     move-result v2
 
     .line 948
-    .local v2, retval:Z
+    .local v2, "retval":Z
     :try_start_0
     sget-object v3, Lair/com/bitrhymes/bingo/AppEntry;->sAndroidActivityWrapperClass:Ljava/lang/Class;
 
@@ -3431,7 +3431,7 @@
     move-result-object v1
 
     .line 949
-    .local v1, method:Ljava/lang/reflect/Method;
+    .local v1, "method":Ljava/lang/reflect/Method;
     const/4 v3, 0x3
 
     new-array v3, v3, [Ljava/lang/Object;
@@ -3460,7 +3460,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lair/com/bitrhymes/bingo/AppEntry;
     check-cast p0, Ljava/lang/Boolean;
 
     invoke-virtual {p0}, Ljava/lang/Boolean;->booleanValue()Z
@@ -3470,7 +3470,7 @@
     move-result v3
 
     .line 954
-    .end local v1           #method:Ljava/lang/reflect/Method;
+    .end local v1    # "method":Ljava/lang/reflect/Method;
     :goto_0
     return v3
 
@@ -3480,7 +3480,7 @@
 
     move-object v0, v3
 
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     move v3, v2
 
     .line 954
@@ -3489,8 +3489,8 @@
 
 .method public onMenuOpened(ILandroid/view/Menu;)Z
     .locals 8
-    .parameter "featureId"
-    .parameter "menu"
+    .param p1, "featureId"    # I
+    .param p2, "menu"    # Landroid/view/Menu;
 
     .prologue
     .line 961
@@ -3499,7 +3499,7 @@
     move-result v2
 
     .line 965
-    .local v2, retval:Z
+    .local v2, "retval":Z
     :try_start_0
     sget-object v3, Lair/com/bitrhymes/bingo/AppEntry;->sAndroidActivityWrapperClass:Ljava/lang/Class;
 
@@ -3532,7 +3532,7 @@
     move-result-object v1
 
     .line 966
-    .local v1, method:Ljava/lang/reflect/Method;
+    .local v1, "method":Ljava/lang/reflect/Method;
     const/4 v3, 0x3
 
     new-array v3, v3, [Ljava/lang/Object;
@@ -3561,7 +3561,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lair/com/bitrhymes/bingo/AppEntry;
     check-cast p0, Ljava/lang/Boolean;
 
     invoke-virtual {p0}, Ljava/lang/Boolean;->booleanValue()Z
@@ -3571,7 +3571,7 @@
     move-result v3
 
     .line 971
-    .end local v1           #method:Ljava/lang/reflect/Method;
+    .end local v1    # "method":Ljava/lang/reflect/Method;
     :goto_0
     return v3
 
@@ -3581,7 +3581,7 @@
 
     move-object v0, v3
 
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     move v3, v2
 
     .line 971
@@ -3590,14 +3590,14 @@
 
 .method protected onNewIntent(Landroid/content/Intent;)V
     .locals 7
-    .parameter "aIntent"
+    .param p1, "aIntent"    # Landroid/content/Intent;
 
     .prologue
     .line 545
     move-object v0, p1
 
     .line 546
-    .local v0, ii:Landroid/content/Intent;
+    .local v0, "ii":Landroid/content/Intent;
     invoke-super {p0, v0}, Landroid/app/Activity;->onNewIntent(Landroid/content/Intent;)V
 
     .line 552
@@ -3621,7 +3621,7 @@
     move-result-object v1
 
     .line 553
-    .local v1, method:Ljava/lang/reflect/Method;
+    .local v1, "method":Ljava/lang/reflect/Method;
     const/4 v2, 0x1
 
     new-array v2, v2, [Ljava/lang/Object;
@@ -3635,7 +3635,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 559
-    .end local v1           #method:Ljava/lang/reflect/Method;
+    .end local v1    # "method":Ljava/lang/reflect/Method;
     :goto_0
     return-void
 
@@ -3648,7 +3648,7 @@
 
 .method public onOptionsItemSelected(Landroid/view/MenuItem;)Z
     .locals 8
-    .parameter "item"
+    .param p1, "item"    # Landroid/view/MenuItem;
 
     .prologue
     .line 979
@@ -3657,7 +3657,7 @@
     move-result v2
 
     .line 983
-    .local v2, retval:Z
+    .local v2, "retval":Z
     :try_start_0
     sget-object v3, Lair/com/bitrhymes/bingo/AppEntry;->sAndroidActivityWrapperClass:Ljava/lang/Class;
 
@@ -3684,7 +3684,7 @@
     move-result-object v1
 
     .line 984
-    .local v1, method:Ljava/lang/reflect/Method;
+    .local v1, "method":Ljava/lang/reflect/Method;
     const/4 v3, 0x2
 
     new-array v3, v3, [Ljava/lang/Object;
@@ -3705,7 +3705,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lair/com/bitrhymes/bingo/AppEntry;
     check-cast p0, Ljava/lang/Boolean;
 
     invoke-virtual {p0}, Ljava/lang/Boolean;->booleanValue()Z
@@ -3715,7 +3715,7 @@
     move-result v3
 
     .line 989
-    .end local v1           #method:Ljava/lang/reflect/Method;
+    .end local v1    # "method":Ljava/lang/reflect/Method;
     :goto_0
     return v3
 
@@ -3725,7 +3725,7 @@
 
     move-object v0, v3
 
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     move v3, v2
 
     .line 989
@@ -3734,7 +3734,7 @@
 
 .method public onOptionsMenuClosed(Landroid/view/Menu;)V
     .locals 6
-    .parameter "menu"
+    .param p1, "menu"    # Landroid/view/Menu;
 
     .prologue
     .line 996
@@ -3761,7 +3761,7 @@
     move-result-object v0
 
     .line 1001
-    .local v0, method:Ljava/lang/reflect/Method;
+    .local v0, "method":Ljava/lang/reflect/Method;
     const/4 v1, 0x1
 
     new-array v1, v1, [Ljava/lang/Object;
@@ -3775,7 +3775,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 1007
-    .end local v0           #method:Ljava/lang/reflect/Method;
+    .end local v0    # "method":Ljava/lang/reflect/Method;
     :goto_0
     return-void
 
@@ -3788,8 +3788,8 @@
 
 .method public onPanelClosed(ILandroid/view/Menu;)V
     .locals 6
-    .parameter "featureId"
-    .parameter "menu"
+    .param p1, "featureId"    # I
+    .param p2, "menu"    # Landroid/view/Menu;
 
     .prologue
     .line 1012
@@ -3822,7 +3822,7 @@
     move-result-object v0
 
     .line 1017
-    .local v0, method:Ljava/lang/reflect/Method;
+    .local v0, "method":Ljava/lang/reflect/Method;
     const/4 v1, 0x2
 
     new-array v1, v1, [Ljava/lang/Object;
@@ -3844,7 +3844,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 1023
-    .end local v0           #method:Ljava/lang/reflect/Method;
+    .end local v0    # "method":Ljava/lang/reflect/Method;
     :goto_0
     return-void
 
@@ -3882,7 +3882,7 @@
     move-result-object v0
 
     .line 397
-    .local v0, method:Ljava/lang/reflect/Method;
+    .local v0, "method":Ljava/lang/reflect/Method;
     const/4 v1, 0x0
 
     new-array v1, v1, [Ljava/lang/Object;
@@ -3892,7 +3892,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 404
-    .end local v0           #method:Ljava/lang/reflect/Method;
+    .end local v0    # "method":Ljava/lang/reflect/Method;
     :cond_0
     :goto_0
     return-void
@@ -3906,7 +3906,7 @@
 
 .method protected onPostCreate(Landroid/os/Bundle;)V
     .locals 6
-    .parameter "savedInstanceState"
+    .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
     .line 1245
@@ -3933,7 +3933,7 @@
     move-result-object v0
 
     .line 1250
-    .local v0, method:Ljava/lang/reflect/Method;
+    .local v0, "method":Ljava/lang/reflect/Method;
     const/4 v1, 0x1
 
     new-array v1, v1, [Ljava/lang/Object;
@@ -3947,7 +3947,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 1256
-    .end local v0           #method:Ljava/lang/reflect/Method;
+    .end local v0    # "method":Ljava/lang/reflect/Method;
     :goto_0
     return-void
 
@@ -3980,7 +3980,7 @@
     move-result-object v0
 
     .line 1266
-    .local v0, method:Ljava/lang/reflect/Method;
+    .local v0, "method":Ljava/lang/reflect/Method;
     const/4 v1, 0x0
 
     new-array v1, v1, [Ljava/lang/Object;
@@ -3990,7 +3990,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 1272
-    .end local v0           #method:Ljava/lang/reflect/Method;
+    .end local v0    # "method":Ljava/lang/reflect/Method;
     :goto_0
     return-void
 
@@ -4003,8 +4003,8 @@
 
 .method protected onPrepareDialog(ILandroid/app/Dialog;)V
     .locals 6
-    .parameter "id"
-    .parameter "dialog"
+    .param p1, "id"    # I
+    .param p2, "dialog"    # Landroid/app/Dialog;
 
     .prologue
     .line 1277
@@ -4037,7 +4037,7 @@
     move-result-object v0
 
     .line 1282
-    .local v0, method:Ljava/lang/reflect/Method;
+    .local v0, "method":Ljava/lang/reflect/Method;
     const/4 v1, 0x2
 
     new-array v1, v1, [Ljava/lang/Object;
@@ -4059,7 +4059,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 1288
-    .end local v0           #method:Ljava/lang/reflect/Method;
+    .end local v0    # "method":Ljava/lang/reflect/Method;
     :goto_0
     return-void
 
@@ -4072,9 +4072,9 @@
 
 .method protected onPrepareDialog(ILandroid/app/Dialog;Landroid/os/Bundle;)V
     .locals 6
-    .parameter "id"
-    .parameter "dialog"
-    .parameter "args"
+    .param p1, "id"    # I
+    .param p2, "dialog"    # Landroid/app/Dialog;
+    .param p3, "args"    # Landroid/os/Bundle;
 
     .prologue
     .line 1293
@@ -4113,7 +4113,7 @@
     move-result-object v0
 
     .line 1298
-    .local v0, method:Ljava/lang/reflect/Method;
+    .local v0, "method":Ljava/lang/reflect/Method;
     const/4 v1, 0x3
 
     new-array v1, v1, [Ljava/lang/Object;
@@ -4139,7 +4139,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 1304
-    .end local v0           #method:Ljava/lang/reflect/Method;
+    .end local v0    # "method":Ljava/lang/reflect/Method;
     :goto_0
     return-void
 
@@ -4152,7 +4152,7 @@
 
 .method public onPrepareOptionsMenu(Landroid/view/Menu;)Z
     .locals 8
-    .parameter "menu"
+    .param p1, "menu"    # Landroid/view/Menu;
 
     .prologue
     .line 1028
@@ -4161,7 +4161,7 @@
     move-result v2
 
     .line 1032
-    .local v2, retval:Z
+    .local v2, "retval":Z
     :try_start_0
     sget-object v3, Lair/com/bitrhymes/bingo/AppEntry;->sAndroidActivityWrapperClass:Ljava/lang/Class;
 
@@ -4188,7 +4188,7 @@
     move-result-object v1
 
     .line 1033
-    .local v1, method:Ljava/lang/reflect/Method;
+    .local v1, "method":Ljava/lang/reflect/Method;
     const/4 v3, 0x2
 
     new-array v3, v3, [Ljava/lang/Object;
@@ -4209,7 +4209,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lair/com/bitrhymes/bingo/AppEntry;
     check-cast p0, Ljava/lang/Boolean;
 
     invoke-virtual {p0}, Ljava/lang/Boolean;->booleanValue()Z
@@ -4219,7 +4219,7 @@
     move-result v3
 
     .line 1038
-    .end local v1           #method:Ljava/lang/reflect/Method;
+    .end local v1    # "method":Ljava/lang/reflect/Method;
     :goto_0
     return v3
 
@@ -4229,7 +4229,7 @@
 
     move-object v0, v3
 
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     move v3, v2
 
     .line 1038
@@ -4238,9 +4238,9 @@
 
 .method public onPreparePanel(ILandroid/view/View;Landroid/view/Menu;)Z
     .locals 8
-    .parameter "featureId"
-    .parameter "view"
-    .parameter "menu"
+    .param p1, "featureId"    # I
+    .param p2, "view"    # Landroid/view/View;
+    .param p3, "menu"    # Landroid/view/Menu;
 
     .prologue
     .line 1045
@@ -4249,7 +4249,7 @@
     move-result v2
 
     .line 1049
-    .local v2, retval:Z
+    .local v2, "retval":Z
     :try_start_0
     sget-object v3, Lair/com/bitrhymes/bingo/AppEntry;->sAndroidActivityWrapperClass:Ljava/lang/Class;
 
@@ -4288,7 +4288,7 @@
     move-result-object v1
 
     .line 1050
-    .local v1, method:Ljava/lang/reflect/Method;
+    .local v1, "method":Ljava/lang/reflect/Method;
     const/4 v3, 0x4
 
     new-array v3, v3, [Ljava/lang/Object;
@@ -4321,7 +4321,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lair/com/bitrhymes/bingo/AppEntry;
     check-cast p0, Ljava/lang/Boolean;
 
     invoke-virtual {p0}, Ljava/lang/Boolean;->booleanValue()Z
@@ -4331,7 +4331,7 @@
     move-result v3
 
     .line 1055
-    .end local v1           #method:Ljava/lang/reflect/Method;
+    .end local v1    # "method":Ljava/lang/reflect/Method;
     :goto_0
     return v3
 
@@ -4341,7 +4341,7 @@
 
     move-object v0, v3
 
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     move v3, v2
 
     .line 1055
@@ -4375,7 +4375,7 @@
     move-result-object v0
 
     .line 379
-    .local v0, method:Ljava/lang/reflect/Method;
+    .local v0, "method":Ljava/lang/reflect/Method;
     const/4 v1, 0x0
 
     new-array v1, v1, [Ljava/lang/Object;
@@ -4385,7 +4385,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 386
-    .end local v0           #method:Ljava/lang/reflect/Method;
+    .end local v0    # "method":Ljava/lang/reflect/Method;
     :cond_0
     :goto_0
     return-void
@@ -4399,7 +4399,7 @@
 
 .method protected onRestoreInstanceState(Landroid/os/Bundle;)V
     .locals 6
-    .parameter "savedInstanceState"
+    .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
     .line 1309
@@ -4426,7 +4426,7 @@
     move-result-object v0
 
     .line 1314
-    .local v0, method:Ljava/lang/reflect/Method;
+    .local v0, "method":Ljava/lang/reflect/Method;
     const/4 v1, 0x1
 
     new-array v1, v1, [Ljava/lang/Object;
@@ -4440,7 +4440,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 1320
-    .end local v0           #method:Ljava/lang/reflect/Method;
+    .end local v0    # "method":Ljava/lang/reflect/Method;
     :goto_0
     return-void
 
@@ -4478,7 +4478,7 @@
     move-result-object v0
 
     .line 415
-    .local v0, method:Ljava/lang/reflect/Method;
+    .local v0, "method":Ljava/lang/reflect/Method;
     const/4 v1, 0x0
 
     new-array v1, v1, [Ljava/lang/Object;
@@ -4488,7 +4488,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 422
-    .end local v0           #method:Ljava/lang/reflect/Method;
+    .end local v0    # "method":Ljava/lang/reflect/Method;
     :cond_0
     :goto_0
     return-void
@@ -4510,7 +4510,7 @@
     move-result-object v2
 
     .line 1066
-    .local v2, retval:Ljava/lang/Object;
+    .local v2, "retval":Ljava/lang/Object;
     :try_start_0
     sget-object v3, Lair/com/bitrhymes/bingo/AppEntry;->sAndroidActivityWrapperClass:Ljava/lang/Class;
 
@@ -4531,7 +4531,7 @@
     move-result-object v1
 
     .line 1067
-    .local v1, method:Ljava/lang/reflect/Method;
+    .local v1, "method":Ljava/lang/reflect/Method;
     const/4 v3, 0x1
 
     new-array v3, v3, [Ljava/lang/Object;
@@ -4547,7 +4547,7 @@
     move-result-object v3
 
     .line 1072
-    .end local v1           #method:Ljava/lang/reflect/Method;
+    .end local v1    # "method":Ljava/lang/reflect/Method;
     :goto_0
     return-object v3
 
@@ -4557,7 +4557,7 @@
 
     move-object v0, v3
 
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     move-object v3, v2
 
     .line 1072
@@ -4566,7 +4566,7 @@
 
 .method protected onSaveInstanceState(Landroid/os/Bundle;)V
     .locals 6
-    .parameter "outState"
+    .param p1, "outState"    # Landroid/os/Bundle;
 
     .prologue
     .line 1325
@@ -4593,7 +4593,7 @@
     move-result-object v0
 
     .line 1330
-    .local v0, method:Ljava/lang/reflect/Method;
+    .local v0, "method":Ljava/lang/reflect/Method;
     const/4 v1, 0x1
 
     new-array v1, v1, [Ljava/lang/Object;
@@ -4607,7 +4607,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 1336
-    .end local v0           #method:Ljava/lang/reflect/Method;
+    .end local v0    # "method":Ljava/lang/reflect/Method;
     :goto_0
     return-void
 
@@ -4628,7 +4628,7 @@
     move-result v2
 
     .line 1083
-    .local v2, retval:Z
+    .local v2, "retval":Z
     :try_start_0
     sget-object v3, Lair/com/bitrhymes/bingo/AppEntry;->sAndroidActivityWrapperClass:Ljava/lang/Class;
 
@@ -4649,7 +4649,7 @@
     move-result-object v1
 
     .line 1084
-    .local v1, method:Ljava/lang/reflect/Method;
+    .local v1, "method":Ljava/lang/reflect/Method;
     const/4 v3, 0x1
 
     new-array v3, v3, [Ljava/lang/Object;
@@ -4666,7 +4666,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lair/com/bitrhymes/bingo/AppEntry;
     check-cast p0, Ljava/lang/Boolean;
 
     invoke-virtual {p0}, Ljava/lang/Boolean;->booleanValue()Z
@@ -4676,7 +4676,7 @@
     move-result v3
 
     .line 1089
-    .end local v1           #method:Ljava/lang/reflect/Method;
+    .end local v1    # "method":Ljava/lang/reflect/Method;
     :goto_0
     return v3
 
@@ -4686,7 +4686,7 @@
 
     move-object v0, v3
 
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     move v3, v2
 
     .line 1089
@@ -4726,7 +4726,7 @@
     move-result-object v0
 
     .line 431
-    .local v0, method:Ljava/lang/reflect/Method;
+    .local v0, "method":Ljava/lang/reflect/Method;
     const/4 v1, 0x0
 
     new-array v1, v1, [Ljava/lang/Object;
@@ -4736,7 +4736,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 437
-    .end local v0           #method:Ljava/lang/reflect/Method;
+    .end local v0    # "method":Ljava/lang/reflect/Method;
     :goto_0
     return-void
 
@@ -4749,8 +4749,8 @@
 
 .method protected onTitleChanged(Ljava/lang/CharSequence;I)V
     .locals 6
-    .parameter "title"
-    .parameter "color"
+    .param p1, "title"    # Ljava/lang/CharSequence;
+    .param p2, "color"    # I
 
     .prologue
     .line 1341
@@ -4783,7 +4783,7 @@
     move-result-object v0
 
     .line 1346
-    .local v0, method:Ljava/lang/reflect/Method;
+    .local v0, "method":Ljava/lang/reflect/Method;
     const/4 v1, 0x2
 
     new-array v1, v1, [Ljava/lang/Object;
@@ -4805,7 +4805,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 1352
-    .end local v0           #method:Ljava/lang/reflect/Method;
+    .end local v0    # "method":Ljava/lang/reflect/Method;
     :goto_0
     return-void
 
@@ -4818,7 +4818,7 @@
 
 .method public onTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 8
-    .parameter "event"
+    .param p1, "event"    # Landroid/view/MotionEvent;
 
     .prologue
     .line 1096
@@ -4827,7 +4827,7 @@
     move-result v2
 
     .line 1100
-    .local v2, retval:Z
+    .local v2, "retval":Z
     :try_start_0
     sget-object v3, Lair/com/bitrhymes/bingo/AppEntry;->sAndroidActivityWrapperClass:Ljava/lang/Class;
 
@@ -4854,7 +4854,7 @@
     move-result-object v1
 
     .line 1101
-    .local v1, method:Ljava/lang/reflect/Method;
+    .local v1, "method":Ljava/lang/reflect/Method;
     const/4 v3, 0x2
 
     new-array v3, v3, [Ljava/lang/Object;
@@ -4875,7 +4875,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lair/com/bitrhymes/bingo/AppEntry;
     check-cast p0, Ljava/lang/Boolean;
 
     invoke-virtual {p0}, Ljava/lang/Boolean;->booleanValue()Z
@@ -4885,7 +4885,7 @@
     move-result v3
 
     .line 1106
-    .end local v1           #method:Ljava/lang/reflect/Method;
+    .end local v1    # "method":Ljava/lang/reflect/Method;
     :goto_0
     return v3
 
@@ -4895,7 +4895,7 @@
 
     move-object v0, v3
 
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     move v3, v2
 
     .line 1106
@@ -4904,7 +4904,7 @@
 
 .method public onTrackballEvent(Landroid/view/MotionEvent;)Z
     .locals 8
-    .parameter "event"
+    .param p1, "event"    # Landroid/view/MotionEvent;
 
     .prologue
     .line 1113
@@ -4913,7 +4913,7 @@
     move-result v2
 
     .line 1117
-    .local v2, retval:Z
+    .local v2, "retval":Z
     :try_start_0
     sget-object v3, Lair/com/bitrhymes/bingo/AppEntry;->sAndroidActivityWrapperClass:Ljava/lang/Class;
 
@@ -4940,7 +4940,7 @@
     move-result-object v1
 
     .line 1118
-    .local v1, method:Ljava/lang/reflect/Method;
+    .local v1, "method":Ljava/lang/reflect/Method;
     const/4 v3, 0x2
 
     new-array v3, v3, [Ljava/lang/Object;
@@ -4961,7 +4961,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lair/com/bitrhymes/bingo/AppEntry;
     check-cast p0, Ljava/lang/Boolean;
 
     invoke-virtual {p0}, Ljava/lang/Boolean;->booleanValue()Z
@@ -4971,7 +4971,7 @@
     move-result v3
 
     .line 1124
-    .end local v1           #method:Ljava/lang/reflect/Method;
+    .end local v1    # "method":Ljava/lang/reflect/Method;
     :goto_0
     return v3
 
@@ -4981,7 +4981,7 @@
 
     move-object v0, v3
 
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     move v3, v2
 
     .line 1124
@@ -5010,7 +5010,7 @@
     move-result-object v0
 
     .line 1136
-    .local v0, method:Ljava/lang/reflect/Method;
+    .local v0, "method":Ljava/lang/reflect/Method;
     const/4 v1, 0x0
 
     new-array v1, v1, [Ljava/lang/Object;
@@ -5020,7 +5020,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 1142
-    .end local v0           #method:Ljava/lang/reflect/Method;
+    .end local v0    # "method":Ljava/lang/reflect/Method;
     :goto_0
     return-void
 
@@ -5053,7 +5053,7 @@
     move-result-object v0
 
     .line 1362
-    .local v0, method:Ljava/lang/reflect/Method;
+    .local v0, "method":Ljava/lang/reflect/Method;
     const/4 v1, 0x0
 
     new-array v1, v1, [Ljava/lang/Object;
@@ -5063,7 +5063,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 1368
-    .end local v0           #method:Ljava/lang/reflect/Method;
+    .end local v0    # "method":Ljava/lang/reflect/Method;
     :goto_0
     return-void
 
@@ -5076,7 +5076,7 @@
 
 .method public onWindowAttributesChanged(Landroid/view/WindowManager$LayoutParams;)V
     .locals 6
-    .parameter "params"
+    .param p1, "params"    # Landroid/view/WindowManager$LayoutParams;
 
     .prologue
     .line 1147
@@ -5103,7 +5103,7 @@
     move-result-object v0
 
     .line 1152
-    .local v0, method:Ljava/lang/reflect/Method;
+    .local v0, "method":Ljava/lang/reflect/Method;
     const/4 v1, 0x1
 
     new-array v1, v1, [Ljava/lang/Object;
@@ -5117,7 +5117,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 1158
-    .end local v0           #method:Ljava/lang/reflect/Method;
+    .end local v0    # "method":Ljava/lang/reflect/Method;
     :goto_0
     return-void
 
@@ -5130,7 +5130,7 @@
 
 .method public onWindowFocusChanged(Z)V
     .locals 6
-    .parameter "hasFocus"
+    .param p1, "hasFocus"    # Z
 
     .prologue
     .line 1163
@@ -5157,7 +5157,7 @@
     move-result-object v0
 
     .line 1168
-    .local v0, method:Ljava/lang/reflect/Method;
+    .local v0, "method":Ljava/lang/reflect/Method;
     const/4 v1, 0x1
 
     new-array v1, v1, [Ljava/lang/Object;
@@ -5175,7 +5175,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 1174
-    .end local v0           #method:Ljava/lang/reflect/Method;
+    .end local v0    # "method":Ljava/lang/reflect/Method;
     :goto_0
     return-void
 

@@ -89,7 +89,7 @@
 
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     .line 23
@@ -114,8 +114,8 @@
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
-    .parameter "context"
-    .parameter "attrs"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
     .line 28
@@ -140,9 +140,9 @@
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 1
-    .parameter "context"
-    .parameter "attrs"
-    .parameter "defStyle"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "attrs"    # Landroid/util/AttributeSet;
+    .param p3, "defStyle"    # I
 
     .prologue
     .line 34
@@ -175,7 +175,7 @@
     const-string v0, ""
 
     .line 47
-    .local v0, bitmapString:Ljava/lang/String;
+    .local v0, "bitmapString":Ljava/lang/String;
     iget-object v1, p0, Lcom/fusepowered/a1/view/ApplifierImpactMuteVideoButton;->_size:Lcom/fusepowered/a1/view/ApplifierImpactMuteVideoButton$ApplifierImpactMuteVideoButtonSize;
 
     if-eqz v1, :cond_0
@@ -307,7 +307,7 @@
 # virtual methods
 .method public setState(Lcom/fusepowered/a1/view/ApplifierImpactMuteVideoButton$ApplifierImpactMuteVideoButtonState;)V
     .locals 1
-    .parameter "state"
+    .param p1, "state"    # Lcom/fusepowered/a1/view/ApplifierImpactMuteVideoButton$ApplifierImpactMuteVideoButtonState;
 
     .prologue
     .line 39

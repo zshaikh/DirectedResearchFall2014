@@ -51,7 +51,7 @@
     move-object v0, v1
 
     .line 19
-    .local v0, e:Ljava/lang/ClassNotFoundException;
+    .local v0, "e":Ljava/lang/ClassNotFoundException;
     iput-boolean v2, p0, Lcom/google/analytics/tracking/android/AdHitIdGenerator;->mAdMobSdkInstalled:Z
 
     goto :goto_1
@@ -59,7 +59,7 @@
 
 .method constructor <init>(Z)V
     .locals 0
-    .parameter "adMobSdkInstalled"
+    .param p1, "adMobSdkInstalled"    # Z
     .annotation build Lcom/google/android/gms/common/util/VisibleForTesting;
     .end annotation
 

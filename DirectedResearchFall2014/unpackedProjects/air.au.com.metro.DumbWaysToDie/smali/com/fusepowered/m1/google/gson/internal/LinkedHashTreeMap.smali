@@ -141,7 +141,7 @@
 
     .prologue
     .line 61
-    .local p0, this:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap<TK;TV;>;"
+    .local p0, "this":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap<TK;TV;>;"
     sget-object v0, Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap;->NATURAL_ORDER:Ljava/util/Comparator;
 
     invoke-direct {p0, v0}, Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap;-><init>(Ljava/util/Comparator;)V
@@ -152,7 +152,6 @@
 
 .method public constructor <init>(Ljava/util/Comparator;)V
     .locals 2
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -162,8 +161,8 @@
     .end annotation
 
     .prologue
-    .local p0, this:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap<TK;TV;>;"
-    .local p1, comparator:Ljava/util/Comparator;,"Ljava/util/Comparator<-TK;>;"
+    .local p0, "this":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap<TK;TV;>;"
+    .local p1, "comparator":Ljava/util/Comparator;, "Ljava/util/Comparator<-TK;>;"
     const/4 v0, 0x0
 
     .line 72
@@ -229,7 +228,7 @@
 
     .prologue
     .line 558
-    .local p0, this:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap<TK;TV;>;"
+    .local p0, "this":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap<TK;TV;>;"
     iget-object v0, p0, Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap;->table:[Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;
 
     invoke-static {v0}, Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap;->doubleCapacity([Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;)[Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;
@@ -261,7 +260,6 @@
 
 .method static doubleCapacity([Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;)[Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;
     .locals 13
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<K:",
@@ -278,38 +276,38 @@
 
     .prologue
     .line 568
-    .local p0, oldTable:[Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;,"[Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
+    .local p0, "oldTable":[Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;, "[Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
     array-length v7, p0
 
     .line 570
-    .local v7, oldCapacity:I
+    .local v7, "oldCapacity":I
     mul-int/lit8 v12, v7, 0x2
 
     new-array v5, v12, [Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;
 
     .line 571
-    .local v5, newTable:[Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;,"[Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
+    .local v5, "newTable":[Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;, "[Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
     new-instance v1, Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$AvlIterator;
 
     invoke-direct {v1}, Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$AvlIterator;-><init>()V
 
     .line 572
-    .local v1, iterator:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$AvlIterator;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$AvlIterator<TK;TV;>;"
+    .local v1, "iterator":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$AvlIterator;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$AvlIterator<TK;TV;>;"
     new-instance v2, Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$AvlBuilder;
 
     invoke-direct {v2}, Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$AvlBuilder;-><init>()V
 
     .line 573
-    .local v2, leftBuilder:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$AvlBuilder;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$AvlBuilder<TK;TV;>;"
+    .local v2, "leftBuilder":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$AvlBuilder;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$AvlBuilder<TK;TV;>;"
     new-instance v8, Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$AvlBuilder;
 
     invoke-direct {v8}, Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$AvlBuilder;-><init>()V
 
     .line 576
-    .local v8, rightBuilder:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$AvlBuilder;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$AvlBuilder<TK;TV;>;"
+    .local v8, "rightBuilder":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$AvlBuilder;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$AvlBuilder<TK;TV;>;"
     const/4 v0, 0x0
 
-    .local v0, i:I
+    .local v0, "i":I
     :goto_0
     if-ge v0, v7, :cond_7
 
@@ -317,7 +315,7 @@
     aget-object v11, p0, v0
 
     .line 578
-    .local v11, root:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
+    .local v11, "root":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
     if-nez v11, :cond_0
 
     .line 576
@@ -334,17 +332,17 @@
     const/4 v4, 0x0
 
     .line 585
-    .local v4, leftSize:I
+    .local v4, "leftSize":I
     const/4 v10, 0x0
 
     .line 586
-    .local v10, rightSize:I
+    .local v10, "rightSize":I
     :goto_2
     invoke-virtual {v1}, Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$AvlIterator;->next()Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;
 
     move-result-object v6
 
-    .local v6, node:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
+    .local v6, "node":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
     if-eqz v6, :cond_2
 
     .line 587
@@ -370,11 +368,11 @@
     const/4 v3, 0x0
 
     .line 596
-    .local v3, leftRoot:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
+    .local v3, "leftRoot":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
     const/4 v9, 0x0
 
     .line 597
-    .local v9, rightRoot:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
+    .local v9, "rightRoot":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
     if-lez v4, :cond_5
 
     if-lez v10, :cond_5
@@ -452,24 +450,24 @@
     goto :goto_4
 
     .line 620
-    .end local v3           #leftRoot:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
-    .end local v4           #leftSize:I
-    .end local v6           #node:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
-    .end local v9           #rightRoot:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
-    .end local v10           #rightSize:I
-    .end local v11           #root:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
+    .end local v3    # "leftRoot":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
+    .end local v4    # "leftSize":I
+    .end local v6    # "node":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
+    .end local v9    # "rightRoot":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
+    .end local v10    # "rightSize":I
+    .end local v11    # "root":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
     :cond_7
     return-object v5
 .end method
 
 .method private equal(Ljava/lang/Object;Ljava/lang/Object;)Z
     .locals 1
-    .parameter "a"
-    .parameter "b"
+    .param p1, "a"    # Ljava/lang/Object;
+    .param p2, "b"    # Ljava/lang/Object;
 
     .prologue
     .line 224
-    .local p0, this:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap<TK;TV;>;"
+    .local p0, "this":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap<TK;TV;>;"
     if-eq p1, p2, :cond_0
 
     if-eqz p1, :cond_1
@@ -494,8 +492,7 @@
 
 .method private rebalance(Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;Z)V
     .locals 19
-    .parameter
-    .parameter "insert"
+    .param p2, "insert"    # Z
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -506,11 +503,11 @@
 
     .prologue
     .line 339
-    .local p0, this:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap<TK;TV;>;"
-    .local p1, unbalanced:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
+    .local p0, "this":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap<TK;TV;>;"
+    .local p1, "unbalanced":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
     move-object/from16 v10, p1
 
-    .local v10, node:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
+    .local v10, "node":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
     :goto_0
     if-eqz v10, :cond_1
 
@@ -518,11 +515,11 @@
     iget-object v3, v10, Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;->left:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;
 
     .line 341
-    .local v3, left:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
+    .local v3, "left":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
     iget-object v11, v10, Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;->right:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;
 
     .line 342
-    .local v11, right:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
+    .local v11, "right":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
     if-eqz v3, :cond_2
 
     move-object v0, v3
@@ -534,7 +531,7 @@
     move/from16 v5, v18
 
     .line 343
-    .local v5, leftHeight:I
+    .local v5, "leftHeight":I
     :goto_1
     if-eqz v11, :cond_3
 
@@ -547,12 +544,12 @@
     move/from16 v13, v18
 
     .line 345
-    .local v13, rightHeight:I
+    .local v13, "rightHeight":I
     :goto_2
     sub-int v2, v5, v13
 
     .line 346
-    .local v2, delta:I
+    .local v2, "delta":I
     const/16 v18, -0x2
 
     move v0, v2
@@ -565,7 +562,7 @@
     iget-object v14, v11, Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;->left:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;
 
     .line 348
-    .local v14, rightLeft:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
+    .local v14, "rightLeft":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
     move-object v0, v11
 
     iget-object v0, v0, Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;->right:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;
@@ -573,7 +570,7 @@
     move-object/from16 v16, v0
 
     .line 349
-    .local v16, rightRight:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
+    .local v16, "rightRight":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
     if-eqz v16, :cond_4
 
     move-object/from16 v0, v16
@@ -585,7 +582,7 @@
     move/from16 v17, v18
 
     .line 350
-    .local v17, rightRightHeight:I
+    .local v17, "rightRightHeight":I
     :goto_3
     if-eqz v14, :cond_5
 
@@ -598,12 +595,12 @@
     move/from16 v15, v18
 
     .line 352
-    .local v15, rightLeftHeight:I
+    .local v15, "rightLeftHeight":I
     :goto_4
     sub-int v12, v15, v17
 
     .line 353
-    .local v12, rightDelta:I
+    .local v12, "rightDelta":I
     const/16 v18, -0x1
 
     move v0, v12
@@ -629,23 +626,23 @@
     if-eqz p2, :cond_a
 
     .line 396
-    .end local v2           #delta:I
-    .end local v3           #left:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
-    .end local v5           #leftHeight:I
-    .end local v11           #right:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
-    .end local v12           #rightDelta:I
-    .end local v13           #rightHeight:I
-    .end local v14           #rightLeft:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
-    .end local v15           #rightLeftHeight:I
-    .end local v16           #rightRight:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
-    .end local v17           #rightRightHeight:I
+    .end local v2    # "delta":I
+    .end local v3    # "left":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
+    .end local v5    # "leftHeight":I
+    .end local v11    # "right":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
+    .end local v12    # "rightDelta":I
+    .end local v13    # "rightHeight":I
+    .end local v14    # "rightLeft":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
+    .end local v15    # "rightLeftHeight":I
+    .end local v16    # "rightRight":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
+    .end local v17    # "rightRightHeight":I
     :cond_1
     :goto_6
     return-void
 
     .line 342
-    .restart local v3       #left:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
-    .restart local v11       #right:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
+    .restart local v3    # "left":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
+    .restart local v11    # "right":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
     :cond_2
     const/16 v18, 0x0
 
@@ -654,7 +651,7 @@
     goto :goto_1
 
     .line 343
-    .restart local v5       #leftHeight:I
+    .restart local v5    # "leftHeight":I
     :cond_3
     const/16 v18, 0x0
 
@@ -663,10 +660,10 @@
     goto :goto_2
 
     .line 349
-    .restart local v2       #delta:I
-    .restart local v13       #rightHeight:I
-    .restart local v14       #rightLeft:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
-    .restart local v16       #rightRight:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
+    .restart local v2    # "delta":I
+    .restart local v13    # "rightHeight":I
+    .restart local v14    # "rightLeft":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
+    .restart local v16    # "rightRight":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
     :cond_4
     const/16 v18, 0x0
 
@@ -675,7 +672,7 @@
     goto :goto_3
 
     .line 350
-    .restart local v17       #rightRightHeight:I
+    .restart local v17    # "rightRightHeight":I
     :cond_5
     const/16 v18, 0x0
 
@@ -684,8 +681,8 @@
     goto :goto_4
 
     .line 356
-    .restart local v12       #rightDelta:I
-    .restart local v15       #rightLeftHeight:I
+    .restart local v12    # "rightDelta":I
+    .restart local v15    # "rightLeftHeight":I
     :cond_6
     sget-boolean v18, Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap;->$assertionsDisabled:Z
 
@@ -723,11 +720,11 @@
     goto :goto_5
 
     .line 364
-    .end local v12           #rightDelta:I
-    .end local v14           #rightLeft:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
-    .end local v15           #rightLeftHeight:I
-    .end local v16           #rightRight:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
-    .end local v17           #rightRightHeight:I
+    .end local v12    # "rightDelta":I
+    .end local v14    # "rightLeft":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
+    .end local v15    # "rightLeftHeight":I
+    .end local v16    # "rightRight":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
+    .end local v17    # "rightRightHeight":I
     :cond_8
     const/16 v18, 0x2
 
@@ -741,11 +738,11 @@
     iget-object v6, v3, Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;->left:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;
 
     .line 366
-    .local v6, leftLeft:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
+    .local v6, "leftLeft":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
     iget-object v8, v3, Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;->right:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;
 
     .line 367
-    .local v8, leftRight:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
+    .local v8, "leftRight":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
     if-eqz v8, :cond_b
 
     move-object v0, v8
@@ -757,7 +754,7 @@
     move/from16 v9, v18
 
     .line 368
-    .local v9, leftRightHeight:I
+    .local v9, "leftRightHeight":I
     :goto_7
     if-eqz v6, :cond_c
 
@@ -770,12 +767,12 @@
     move/from16 v7, v18
 
     .line 370
-    .local v7, leftLeftHeight:I
+    .local v7, "leftLeftHeight":I
     :goto_8
     sub-int v4, v7, v9
 
     .line 371
-    .local v4, leftDelta:I
+    .local v4, "leftDelta":I
     const/16 v18, 0x1
 
     move v0, v4
@@ -801,19 +798,19 @@
     if-nez p2, :cond_1
 
     .line 339
-    .end local v4           #leftDelta:I
-    .end local v6           #leftLeft:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
-    .end local v7           #leftLeftHeight:I
-    .end local v8           #leftRight:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
-    .end local v9           #leftRightHeight:I
+    .end local v4    # "leftDelta":I
+    .end local v6    # "leftLeft":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
+    .end local v7    # "leftLeftHeight":I
+    .end local v8    # "leftRight":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
+    .end local v9    # "leftRightHeight":I
     :cond_a
     iget-object v10, v10, Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;->parent:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;
 
     goto/16 :goto_0
 
     .line 367
-    .restart local v6       #leftLeft:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
-    .restart local v8       #leftRight:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
+    .restart local v6    # "leftLeft":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
+    .restart local v8    # "leftRight":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
     :cond_b
     const/16 v18, 0x0
 
@@ -822,7 +819,7 @@
     goto :goto_7
 
     .line 368
-    .restart local v9       #leftRightHeight:I
+    .restart local v9    # "leftRightHeight":I
     :cond_c
     const/16 v18, 0x0
 
@@ -831,8 +828,8 @@
     goto :goto_8
 
     .line 374
-    .restart local v4       #leftDelta:I
-    .restart local v7       #leftLeftHeight:I
+    .restart local v4    # "leftDelta":I
+    .restart local v7    # "leftLeftHeight":I
     :cond_d
     sget-boolean v18, Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap;->$assertionsDisabled:Z
 
@@ -870,11 +867,11 @@
     goto :goto_9
 
     .line 382
-    .end local v4           #leftDelta:I
-    .end local v6           #leftLeft:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
-    .end local v7           #leftLeftHeight:I
-    .end local v8           #leftRight:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
-    .end local v9           #leftRightHeight:I
+    .end local v4    # "leftDelta":I
+    .end local v6    # "leftLeft":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
+    .end local v7    # "leftLeftHeight":I
+    .end local v8    # "leftRight":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
+    .end local v9    # "leftRightHeight":I
     :cond_f
     if-nez v2, :cond_10
 
@@ -942,8 +939,6 @@
 
 .method private replaceInParent(Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;)V
     .locals 5
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -956,13 +951,13 @@
 
     .prologue
     .line 312
-    .local p0, this:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap<TK;TV;>;"
-    .local p1, node:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
-    .local p2, replacement:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
+    .local p0, "this":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap<TK;TV;>;"
+    .local p1, "node":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
+    .local p2, "replacement":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
     iget-object v1, p1, Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;->parent:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;
 
     .line 313
-    .local v1, parent:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
+    .local v1, "parent":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
     const/4 v2, 0x0
 
     iput-object v2, p1, Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;->parent:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;
@@ -1026,7 +1021,7 @@
     and-int v0, v2, v3
 
     .line 327
-    .local v0, index:I
+    .local v0, "index":I
     iget-object v2, p0, Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap;->table:[Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;
 
     aput-object p2, v2, v0
@@ -1036,7 +1031,6 @@
 
 .method private rotateLeft(Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;)V
     .locals 7
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1046,27 +1040,27 @@
     .end annotation
 
     .prologue
-    .local p0, this:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap<TK;TV;>;"
-    .local p1, root:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
+    .local p0, "this":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap<TK;TV;>;"
+    .local p1, "root":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
     const/4 v6, 0x0
 
     .line 402
     iget-object v0, p1, Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;->left:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;
 
     .line 403
-    .local v0, left:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
+    .local v0, "left":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
     iget-object v1, p1, Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;->right:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;
 
     .line 404
-    .local v1, pivot:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
+    .local v1, "pivot":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
     iget-object v2, v1, Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;->left:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;
 
     .line 405
-    .local v2, pivotLeft:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
+    .local v2, "pivotLeft":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
     iget-object v3, v1, Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;->right:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;
 
     .line 408
-    .local v3, pivotRight:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
+    .local v3, "pivotRight":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
     iput-object v2, p1, Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;->right:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;
 
     .line 409
@@ -1143,7 +1137,6 @@
 
 .method private rotateRight(Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;)V
     .locals 7
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1153,27 +1146,27 @@
     .end annotation
 
     .prologue
-    .local p0, this:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap<TK;TV;>;"
-    .local p1, root:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
+    .local p0, "this":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap<TK;TV;>;"
+    .local p1, "root":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
     const/4 v6, 0x0
 
     .line 430
     iget-object v0, p1, Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;->left:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;
 
     .line 431
-    .local v0, pivot:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
+    .local v0, "pivot":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
     iget-object v3, p1, Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;->right:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;
 
     .line 432
-    .local v3, right:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
+    .local v3, "right":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
     iget-object v1, v0, Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;->left:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;
 
     .line 433
-    .local v1, pivotLeft:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
+    .local v1, "pivotLeft":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
     iget-object v2, v0, Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;->right:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;
 
     .line 436
-    .local v2, pivotRight:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
+    .local v2, "pivotRight":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
     iput-object v2, p1, Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;->left:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;
 
     .line 437
@@ -1250,7 +1243,7 @@
 
 .method private static secondaryHash(I)I
     .locals 2
-    .parameter "h"
+    .param p0, "h"    # I
 
     .prologue
     .line 235
@@ -1284,7 +1277,7 @@
 
     .prologue
     .line 869
-    .local p0, this:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap<TK;TV;>;"
+    .local p0, "this":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap<TK;TV;>;"
     new-instance v0, Ljava/util/LinkedHashMap;
 
     invoke-direct {v0, p0}, Ljava/util/LinkedHashMap;-><init>(Ljava/util/Map;)V
@@ -1298,7 +1291,7 @@
     .locals 5
 
     .prologue
-    .local p0, this:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap<TK;TV;>;"
+    .local p0, "this":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap<TK;TV;>;"
     const/4 v4, 0x0
 
     .line 105
@@ -1322,10 +1315,10 @@
     iget-object v1, p0, Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap;->header:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;
 
     .line 111
-    .local v1, header:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
+    .local v1, "header":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
     iget-object v0, v1, Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;->next:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;
 
-    .local v0, e:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
+    .local v0, "e":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
     :goto_0
     if-eq v0, v1, :cond_0
 
@@ -1333,7 +1326,7 @@
     iget-object v2, v0, Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;->next:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;
 
     .line 113
-    .local v2, next:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
+    .local v2, "next":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
     iput-object v4, v0, Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;->prev:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;
 
     iput-object v4, v0, Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;->next:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;
@@ -1345,7 +1338,7 @@
     goto :goto_0
 
     .line 117
-    .end local v2           #next:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
+    .end local v2    # "next":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
     :cond_0
     iput-object v1, v1, Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;->prev:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;
 
@@ -1357,11 +1350,11 @@
 
 .method public containsKey(Ljava/lang/Object;)Z
     .locals 1
-    .parameter "key"
+    .param p1, "key"    # Ljava/lang/Object;
 
     .prologue
     .line 91
-    .local p0, this:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap<TK;TV;>;"
+    .local p0, "this":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap<TK;TV;>;"
     invoke-virtual {p0, p1}, Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap;->findByObject(Ljava/lang/Object;)Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;
 
     move-result-object v0
@@ -1393,11 +1386,11 @@
 
     .prologue
     .line 458
-    .local p0, this:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap<TK;TV;>;"
+    .local p0, "this":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap<TK;TV;>;"
     iget-object v0, p0, Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap;->entrySet:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$EntrySet;
 
     .line 459
-    .local v0, result:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$EntrySet;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap<TK;TV;>.EntrySet;"
+    .local v0, "result":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$EntrySet;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap<TK;TV;>.EntrySet;"
     if-eqz v0, :cond_0
 
     move-object v1, v0
@@ -1417,8 +1410,7 @@
 
 .method find(Ljava/lang/Object;Z)Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;
     .locals 14
-    .parameter
-    .parameter "create"
+    .param p2, "create"    # Z
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TK;Z)",
@@ -1428,8 +1420,8 @@
     .end annotation
 
     .prologue
-    .local p0, this:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap<TK;TV;>;"
-    .local p1, key:Ljava/lang/Object;,"TK;"
+    .local p0, "this":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap<TK;TV;>;"
+    .local p1, "key":Ljava/lang/Object;, "TK;"
     const/4 v6, 0x0
 
     const/4 v13, 0x1
@@ -1438,11 +1430,11 @@
     iget-object v9, p0, Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap;->comparator:Ljava/util/Comparator;
 
     .line 133
-    .local v9, comparator:Ljava/util/Comparator;,"Ljava/util/Comparator<-TK;>;"
+    .local v9, "comparator":Ljava/util/Comparator;, "Ljava/util/Comparator<-TK;>;"
     iget-object v12, p0, Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap;->table:[Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;
 
     .line 134
-    .local v12, table:[Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;,"[Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
+    .local v12, "table":[Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;, "[Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
     invoke-virtual {p1}, Ljava/lang/Object;->hashCode()I
 
     move-result v3
@@ -1452,7 +1444,7 @@
     move-result v4
 
     .line 135
-    .local v4, hash:I
+    .local v4, "hash":I
     array-length v3, v12
 
     sub-int/2addr v3, v13
@@ -1460,15 +1452,15 @@
     and-int v11, v4, v3
 
     .line 136
-    .local v11, index:I
+    .local v11, "index":I
     aget-object v2, v12, v11
 
     .line 137
-    .local v2, nearest:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
+    .local v2, "nearest":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
     const/4 v10, 0x0
 
     .line 139
-    .local v10, comparison:I
+    .local v10, "comparison":I
     if-eqz v2, :cond_3
 
     .line 142
@@ -1485,7 +1477,7 @@
     move-object v8, v3
 
     .line 147
-    .local v8, comparableKey:Ljava/lang/Comparable;,"Ljava/lang/Comparable<Ljava/lang/Object;>;"
+    .local v8, "comparableKey":Ljava/lang/Comparable;, "Ljava/lang/Comparable<Ljava/lang/Object;>;"
     :goto_0
     if-eqz v8, :cond_1
 
@@ -1504,7 +1496,7 @@
     move-object v3, v2
 
     .line 196
-    .end local v8           #comparableKey:Ljava/lang/Comparable;,"Ljava/lang/Comparable<Ljava/lang/Object;>;"
+    .end local v8    # "comparableKey":Ljava/lang/Comparable;, "Ljava/lang/Comparable<Ljava/lang/Object;>;"
     :goto_2
     return-object v3
 
@@ -1515,7 +1507,7 @@
     goto :goto_0
 
     .line 147
-    .restart local v8       #comparableKey:Ljava/lang/Comparable;,"Ljava/lang/Comparable<Ljava/lang/Object;>;"
+    .restart local v8    # "comparableKey":Ljava/lang/Comparable;, "Ljava/lang/Comparable<Ljava/lang/Object;>;"
     :cond_1
     iget-object v3, v2, Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;->key:Ljava/lang/Object;
 
@@ -1536,13 +1528,13 @@
     move-object v7, v3
 
     .line 158
-    .local v7, child:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
+    .local v7, "child":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
     :goto_3
     if-nez v7, :cond_5
 
     .line 167
-    .end local v7           #child:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
-    .end local v8           #comparableKey:Ljava/lang/Comparable;,"Ljava/lang/Comparable<Ljava/lang/Object;>;"
+    .end local v7    # "child":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
+    .end local v8    # "comparableKey":Ljava/lang/Comparable;, "Ljava/lang/Comparable<Ljava/lang/Object;>;"
     :cond_3
     if-nez p2, :cond_6
 
@@ -1552,7 +1544,7 @@
     goto :goto_2
 
     .line 157
-    .restart local v8       #comparableKey:Ljava/lang/Comparable;,"Ljava/lang/Comparable<Ljava/lang/Object;>;"
+    .restart local v8    # "comparableKey":Ljava/lang/Comparable;, "Ljava/lang/Comparable<Ljava/lang/Object;>;"
     :cond_4
     iget-object v3, v2, Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;->right:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;
 
@@ -1561,7 +1553,7 @@
     goto :goto_3
 
     .line 162
-    .restart local v7       #child:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
+    .restart local v7    # "child":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
     :cond_5
     move-object v2, v7
 
@@ -1569,13 +1561,13 @@
     goto :goto_0
 
     .line 172
-    .end local v7           #child:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
-    .end local v8           #comparableKey:Ljava/lang/Comparable;,"Ljava/lang/Comparable<Ljava/lang/Object;>;"
+    .end local v7    # "child":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
+    .end local v8    # "comparableKey":Ljava/lang/Comparable;, "Ljava/lang/Comparable<Ljava/lang/Object;>;"
     :cond_6
     iget-object v5, p0, Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap;->header:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;
 
     .line 174
-    .local v5, header:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
+    .local v5, "header":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
     if-nez v2, :cond_9
 
     .line 176
@@ -1631,7 +1623,7 @@
     invoke-direct/range {v1 .. v6}, Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;-><init>(Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;Ljava/lang/Object;ILcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;)V
 
     .line 180
-    .local v1, created:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
+    .local v1, "created":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
     aput-object v1, v12, v11
 
     .line 191
@@ -1663,7 +1655,7 @@
     goto :goto_2
 
     .line 182
-    .end local v1           #created:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
+    .end local v1    # "created":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
     :cond_9
     new-instance v1, Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;
 
@@ -1674,7 +1666,7 @@
     invoke-direct/range {v1 .. v6}, Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;-><init>(Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;Ljava/lang/Object;ILcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;)V
 
     .line 183
-    .restart local v1       #created:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
+    .restart local v1    # "created":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
     if-gez v10, :cond_a
 
     .line 184
@@ -1695,7 +1687,6 @@
 
 .method findByEntry(Ljava/util/Map$Entry;)Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;
     .locals 4
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1708,8 +1699,8 @@
 
     .prologue
     .line 218
-    .local p0, this:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap<TK;TV;>;"
-    .local p1, entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<**>;"
+    .local p0, "this":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap<TK;TV;>;"
+    .local p1, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<**>;"
     invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v2
@@ -1719,7 +1710,7 @@
     move-result-object v0
 
     .line 219
-    .local v0, mine:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
+    .local v0, "mine":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
     if-eqz v0, :cond_0
 
     iget-object v2, v0, Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;->value:Ljava/lang/Object;
@@ -1739,7 +1730,7 @@
     move v1, v2
 
     .line 220
-    .local v1, valuesEqual:Z
+    .local v1, "valuesEqual":Z
     :goto_0
     if-eqz v1, :cond_1
 
@@ -1749,7 +1740,7 @@
     return-object v2
 
     .line 219
-    .end local v1           #valuesEqual:Z
+    .end local v1    # "valuesEqual":Z
     :cond_0
     const/4 v2, 0x0
 
@@ -1758,7 +1749,7 @@
     goto :goto_0
 
     .line 220
-    .restart local v1       #valuesEqual:Z
+    .restart local v1    # "valuesEqual":Z
     :cond_1
     const/4 v2, 0x0
 
@@ -1767,7 +1758,7 @@
 
 .method findByObject(Ljava/lang/Object;)Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;
     .locals 3
-    .parameter "key"
+    .param p1, "key"    # Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1779,7 +1770,7 @@
     .end annotation
 
     .prologue
-    .local p0, this:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap<TK;TV;>;"
+    .local p0, "this":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap<TK;TV;>;"
     const/4 v2, 0x0
 
     .line 202
@@ -1808,7 +1799,7 @@
     :catch_0
     move-exception v0
 
-    .local v0, e:Ljava/lang/ClassCastException;
+    .local v0, "e":Ljava/lang/ClassCastException;
     move-object v1, v2
 
     .line 204
@@ -1817,7 +1808,7 @@
 
 .method public get(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
-    .parameter "key"
+    .param p1, "key"    # Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1828,13 +1819,13 @@
 
     .prologue
     .line 86
-    .local p0, this:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap<TK;TV;>;"
+    .local p0, "this":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap<TK;TV;>;"
     invoke-virtual {p0, p1}, Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap;->findByObject(Ljava/lang/Object;)Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;
 
     move-result-object v0
 
     .line 87
-    .local v0, node:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
+    .local v0, "node":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
     if-eqz v0, :cond_0
 
     iget-object v1, v0, Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;->value:Ljava/lang/Object;
@@ -1860,11 +1851,11 @@
 
     .prologue
     .line 463
-    .local p0, this:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap<TK;TV;>;"
+    .local p0, "this":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap<TK;TV;>;"
     iget-object v0, p0, Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap;->keySet:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$KeySet;
 
     .line 464
-    .local v0, result:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$KeySet;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap<TK;TV;>.KeySet;"
+    .local v0, "result":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$KeySet;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap<TK;TV;>.KeySet;"
     if-eqz v0, :cond_0
 
     move-object v1, v0
@@ -1884,8 +1875,6 @@
 
 .method public put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 4
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TK;TV;)TV;"
@@ -1894,9 +1883,9 @@
 
     .prologue
     .line 95
-    .local p0, this:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap<TK;TV;>;"
-    .local p1, key:Ljava/lang/Object;,"TK;"
-    .local p2, value:Ljava/lang/Object;,"TV;"
+    .local p0, "this":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap<TK;TV;>;"
+    .local p1, "key":Ljava/lang/Object;, "TK;"
+    .local p2, "value":Ljava/lang/Object;, "TV;"
     if-nez p1, :cond_0
 
     .line 96
@@ -1917,11 +1906,11 @@
     move-result-object v0
 
     .line 99
-    .local v0, created:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
+    .local v0, "created":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
     iget-object v1, v0, Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;->value:Ljava/lang/Object;
 
     .line 100
-    .local v1, result:Ljava/lang/Object;,"TV;"
+    .local v1, "result":Ljava/lang/Object;, "TV;"
     iput-object p2, v0, Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;->value:Ljava/lang/Object;
 
     .line 101
@@ -1930,7 +1919,7 @@
 
 .method public remove(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
-    .parameter "key"
+    .param p1, "key"    # Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1941,13 +1930,13 @@
 
     .prologue
     .line 121
-    .local p0, this:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap<TK;TV;>;"
+    .local p0, "this":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap<TK;TV;>;"
     invoke-virtual {p0, p1}, Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap;->removeInternalByKey(Ljava/lang/Object;)Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;
 
     move-result-object v0
 
     .line 122
-    .local v0, node:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
+    .local v0, "node":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
     if-eqz v0, :cond_0
 
     iget-object v1, v0, Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;->value:Ljava/lang/Object;
@@ -1963,8 +1952,7 @@
 
 .method removeInternal(Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;Z)V
     .locals 10
-    .parameter
-    .parameter "unlink"
+    .param p2, "unlink"    # Z
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1974,8 +1962,8 @@
     .end annotation
 
     .prologue
-    .local p0, this:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap<TK;TV;>;"
-    .local p1, node:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
+    .local p0, "this":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap<TK;TV;>;"
+    .local p1, "node":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
     const/4 v9, 0x0
 
     const/4 v8, 0x0
@@ -2007,15 +1995,15 @@
     iget-object v1, p1, Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;->left:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;
 
     .line 253
-    .local v1, left:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
+    .local v1, "left":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
     iget-object v4, p1, Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;->right:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;
 
     .line 254
-    .local v4, right:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
+    .local v4, "right":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
     iget-object v3, p1, Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;->parent:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;
 
     .line 255
-    .local v3, originalParent:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
+    .local v3, "originalParent":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
     if-eqz v1, :cond_4
 
     if-eqz v4, :cond_4
@@ -2034,7 +2022,7 @@
     move-object v0, v6
 
     .line 267
-    .local v0, adjacent:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
+    .local v0, "adjacent":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
     :goto_0
     invoke-virtual {p0, v0, v9}, Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap;->removeInternal(Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;Z)V
 
@@ -2042,7 +2030,7 @@
     const/4 v2, 0x0
 
     .line 270
-    .local v2, leftHeight:I
+    .local v2, "leftHeight":I
     iget-object v1, p1, Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;->left:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;
 
     .line 271
@@ -2065,7 +2053,7 @@
     const/4 v5, 0x0
 
     .line 278
-    .local v5, rightHeight:I
+    .local v5, "rightHeight":I
     iget-object v4, p1, Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;->right:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;
 
     .line 279
@@ -2097,9 +2085,9 @@
     invoke-direct {p0, p1, v0}, Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap;->replaceInParent(Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;)V
 
     .line 301
-    .end local v0           #adjacent:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
-    .end local v2           #leftHeight:I
-    .end local v5           #rightHeight:I
+    .end local v0    # "adjacent":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
+    .end local v2    # "leftHeight":I
+    .end local v5    # "rightHeight":I
     :goto_1
     return-void
 
@@ -2166,7 +2154,7 @@
 
 .method removeInternalByKey(Ljava/lang/Object;)Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;
     .locals 2
-    .parameter "key"
+    .param p1, "key"    # Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -2179,13 +2167,13 @@
 
     .prologue
     .line 304
-    .local p0, this:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap<TK;TV;>;"
+    .local p0, "this":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap<TK;TV;>;"
     invoke-virtual {p0, p1}, Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap;->findByObject(Ljava/lang/Object;)Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;
 
     move-result-object v0
 
     .line 305
-    .local v0, node:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
+    .local v0, "node":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
     if-eqz v0, :cond_0
 
     .line 306
@@ -2203,7 +2191,7 @@
 
     .prologue
     .line 82
-    .local p0, this:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap<TK;TV;>;"
+    .local p0, "this":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap<TK;TV;>;"
     iget v0, p0, Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap;->size:I
 
     return v0

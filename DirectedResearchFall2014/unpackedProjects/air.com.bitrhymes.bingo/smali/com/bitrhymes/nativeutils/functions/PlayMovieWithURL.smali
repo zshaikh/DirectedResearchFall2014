@@ -23,7 +23,6 @@
 
 .method static synthetic access$0(Lcom/bitrhymes/nativeutils/functions/PlayMovieWithURL;)Lcom/adobe/fre/FREContext;
     .locals 1
-    .parameter
 
     .prologue
     .line 22
@@ -36,8 +35,8 @@
 # virtual methods
 .method public call(Lcom/adobe/fre/FREContext;[Lcom/adobe/fre/FREObject;)Lcom/adobe/fre/FREObject;
     .locals 9
-    .parameter "context"
-    .parameter "args"
+    .param p1, "context"    # Lcom/adobe/fre/FREContext;
+    .param p2, "args"    # [Lcom/adobe/fre/FREObject;
 
     .prologue
     const-string v8, "ERROR_EVENT"
@@ -61,7 +60,7 @@
     move-result-object v2
 
     .line 32
-    .local v2, videoUrl:Ljava/lang/String;
+    .local v2, "videoUrl":Ljava/lang/String;
     new-instance v3, Landroid/widget/VideoView;
 
     invoke-virtual {p1}, Lcom/adobe/fre/FREContext;->getActivity()Landroid/app/Activity;
@@ -71,7 +70,7 @@
     invoke-direct {v3, v4}, Landroid/widget/VideoView;-><init>(Landroid/content/Context;)V
 
     .line 36
-    .local v3, videoView:Landroid/widget/VideoView;
+    .local v3, "videoView":Landroid/widget/VideoView;
     const-string v4, "video View "
 
     const-string v5, "set Url "
@@ -98,7 +97,7 @@
     invoke-direct {v0, v4}, Landroid/widget/MediaController;-><init>(Landroid/content/Context;)V
 
     .line 50
-    .local v0, ctlr:Landroid/widget/MediaController;
+    .local v0, "ctlr":Landroid/widget/MediaController;
     invoke-virtual {v0, v3}, Landroid/widget/MediaController;->setMediaPlayer(Landroid/widget/MediaController$MediaPlayerControl;)V
 
     .line 51
@@ -120,9 +119,9 @@
     .catch Lcom/adobe/fre/FREWrongThreadException; {:try_start_0 .. :try_end_0} :catch_3
 
     .line 70
-    .end local v0           #ctlr:Landroid/widget/MediaController;
-    .end local v2           #videoUrl:Ljava/lang/String;
-    .end local v3           #videoView:Landroid/widget/VideoView;
+    .end local v0    # "ctlr":Landroid/widget/MediaController;
+    .end local v2    # "videoUrl":Ljava/lang/String;
+    .end local v3    # "videoView":Landroid/widget/VideoView;
     :goto_0
     const/4 v4, 0x0
 
@@ -135,7 +134,7 @@
     move-object v1, v4
 
     .line 56
-    .local v1, e:Ljava/lang/IllegalStateException;
+    .local v1, "e":Ljava/lang/IllegalStateException;
     iget-object v4, p0, Lcom/bitrhymes/nativeutils/functions/PlayMovieWithURL;->mContext:Lcom/adobe/fre/FREContext;
 
     const-string v5, "ERROR_EVENT"
@@ -206,14 +205,14 @@
     goto :goto_0
 
     .line 58
-    .end local v1           #e:Ljava/lang/IllegalStateException;
+    .end local v1    # "e":Ljava/lang/IllegalStateException;
     :catch_1
     move-exception v4
 
     move-object v1, v4
 
     .line 59
-    .local v1, e:Lcom/adobe/fre/FRETypeMismatchException;
+    .local v1, "e":Lcom/adobe/fre/FRETypeMismatchException;
     iget-object v4, p0, Lcom/bitrhymes/nativeutils/functions/PlayMovieWithURL;->mContext:Lcom/adobe/fre/FREContext;
 
     const-string v5, "ERROR_EVENT"
@@ -284,14 +283,14 @@
     goto/16 :goto_0
 
     .line 61
-    .end local v1           #e:Lcom/adobe/fre/FRETypeMismatchException;
+    .end local v1    # "e":Lcom/adobe/fre/FRETypeMismatchException;
     :catch_2
     move-exception v4
 
     move-object v1, v4
 
     .line 62
-    .local v1, e:Lcom/adobe/fre/FREInvalidObjectException;
+    .local v1, "e":Lcom/adobe/fre/FREInvalidObjectException;
     iget-object v4, p0, Lcom/bitrhymes/nativeutils/functions/PlayMovieWithURL;->mContext:Lcom/adobe/fre/FREContext;
 
     const-string v5, "ERROR_EVENT"
@@ -362,14 +361,14 @@
     goto/16 :goto_0
 
     .line 64
-    .end local v1           #e:Lcom/adobe/fre/FREInvalidObjectException;
+    .end local v1    # "e":Lcom/adobe/fre/FREInvalidObjectException;
     :catch_3
     move-exception v4
 
     move-object v1, v4
 
     .line 65
-    .local v1, e:Lcom/adobe/fre/FREWrongThreadException;
+    .local v1, "e":Lcom/adobe/fre/FREWrongThreadException;
     iget-object v4, p0, Lcom/bitrhymes/nativeutils/functions/PlayMovieWithURL;->mContext:Lcom/adobe/fre/FREContext;
 
     const-string v5, "ERROR_EVENT"

@@ -21,8 +21,7 @@
 # direct methods
 .method public constructor <init>(Lcom/fusepowered/m1/android/MMLayout;Landroid/content/Context;)V
     .locals 2
-    .parameter
-    .parameter "context"
+    .param p2, "context"    # Landroid/content/Context;
 
     .prologue
     .line 419
@@ -50,8 +49,8 @@
 # virtual methods
 .method public addView(Lcom/fusepowered/m1/android/MMWebView;Landroid/widget/RelativeLayout$LayoutParams;)V
     .locals 2
-    .parameter "webView"
-    .parameter "webLayoutParams"
+    .param p1, "webView"    # Lcom/fusepowered/m1/android/MMWebView;
+    .param p2, "webLayoutParams"    # Landroid/widget/RelativeLayout$LayoutParams;
 
     .prologue
     .line 445
@@ -132,7 +131,7 @@
 
 .method public removeView(Lcom/fusepowered/m1/android/MMWebView;)V
     .locals 1
-    .parameter "mmWebView"
+    .param p1, "mmWebView"    # Lcom/fusepowered/m1/android/MMWebView;
 
     .prologue
     .line 439
@@ -146,7 +145,7 @@
 
 .method public setClickable(Z)V
     .locals 1
-    .parameter "clickable"
+    .param p1, "clickable"    # Z
 
     .prologue
     .line 433

@@ -114,8 +114,8 @@
 
 .method private checkTokenAndSecret(Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
-    .parameter "token"
-    .parameter "secret"
+    .param p1, "token"    # Ljava/lang/String;
+    .param p2, "secret"    # Ljava/lang/String;
 
     .prologue
     .line 81
@@ -154,7 +154,7 @@
 
 .method private hasValidTokenAndSecret(Landroid/content/Context;)Z
     .locals 3
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     .line 278
@@ -165,7 +165,7 @@
     move-result-object v1
 
     .line 279
-    .local v1, token:Ljava/lang/String;
+    .local v1, "token":Ljava/lang/String;
     iget-object v2, p0, Lv2/com/playhaven/requests/base/PHAPIRequest;->config:Lv2/com/playhaven/configuration/PHConfiguration;
 
     invoke-virtual {v2, p1}, Lv2/com/playhaven/configuration/PHConfiguration;->getSecret(Landroid/content/Context;)Ljava/lang/String;
@@ -173,7 +173,7 @@
     move-result-object v0
 
     .line 281
-    .local v0, secret:Ljava/lang/String;
+    .local v0, "secret":Ljava/lang/String;
     if-eqz v1, :cond_0
 
     invoke-virtual {v1}, Ljava/lang/String;->length()I
@@ -206,8 +206,8 @@
 
 .method private send(Landroid/content/Context;Lv2/com/playhaven/requests/base/PHAsyncRequest;)V
     .locals 5
-    .parameter "context"
-    .parameter "client"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "client"    # Lv2/com/playhaven/requests/base/PHAsyncRequest;
 
     .prologue
     .line 324
@@ -315,7 +315,7 @@
     move-object v0, v1
 
     .line 337
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v1, "PHAPIRequest - send()"
 
     .line 338
@@ -331,7 +331,7 @@
 # virtual methods
 .method public baseURL(Landroid/content/Context;)Ljava/lang/String;
     .locals 1
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     .line 417
@@ -378,8 +378,8 @@
 
 .method public createAPIURL(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
     .locals 2
-    .parameter "context"
-    .parameter "slug"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "slug"    # Ljava/lang/String;
 
     .prologue
     .line 409
@@ -445,7 +445,7 @@
 
 .method public getAdditionalParams(Landroid/content/Context;)Ljava/util/Hashtable;
     .locals 1
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -538,7 +538,7 @@
 
 .method public getSignedParams(Landroid/content/Context;)Ljava/util/HashMap;
     .locals 29
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -581,7 +581,7 @@
     move-result-object v8
 
     .line 136
-    .local v8, device:Ljava/lang/String;
+    .local v8, "device":Ljava/lang/String;
     if-nez v8, :cond_0
 
     .line 137
@@ -610,11 +610,11 @@
     move-result-object v13
 
     .line 141
-    .local v13, idiom:Ljava/lang/String;
+    .local v13, "idiom":Ljava/lang/String;
     const-string v15, "0"
 
     .line 146
-    .local v15, orientation:Ljava/lang/String;
+    .local v15, "orientation":Ljava/lang/String;
     invoke-static {}, Lv2/com/playhaven/utils/PHStringUtil;->generateUUID()Ljava/lang/String;
 
     move-result-object v25
@@ -624,7 +624,7 @@
     move-result-object v14
 
     .line 148
-    .local v14, nonce:Ljava/lang/String;
+    .local v14, "nonce":Ljava/lang/String;
     const-string v25, "%s:%s:%s:%s"
 
     const/16 v26, 0x4
@@ -698,13 +698,13 @@
     move-result-object v21
 
     .line 153
-    .local v21, sig:Ljava/lang/String;
+    .local v21, "sig":Ljava/lang/String;
     invoke-static/range {v21 .. v21}, Lv2/com/playhaven/utils/PHStringUtil;->hexDigest(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v22
 
     .line 156
-    .local v22, sigHash:Ljava/lang/String;
+    .local v22, "sigHash":Ljava/lang/String;
     :try_start_0
     invoke-virtual/range {p1 .. p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -721,7 +721,7 @@
     move-result-object v17
 
     .line 158
-    .local v17, pinfo:Landroid/content/pm/PackageInfo;
+    .local v17, "pinfo":Landroid/content/pm/PackageInfo;
     move-object/from16 v0, v17
 
     iget-object v0, v0, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
@@ -729,7 +729,7 @@
     move-object v5, v0
 
     .line 160
-    .local v5, appId:Ljava/lang/String;
+    .local v5, "appId":Ljava/lang/String;
     move-object/from16 v0, v17
 
     iget-object v0, v0, Landroid/content/pm/PackageInfo;->versionName:Ljava/lang/String;
@@ -739,13 +739,13 @@
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 169
-    .end local v17           #pinfo:Landroid/content/pm/PackageInfo;
-    .local v6, appVersion:Ljava/lang/String;
+    .end local v17    # "pinfo":Landroid/content/pm/PackageInfo;
+    .local v6, "appVersion":Ljava/lang/String;
     :goto_2
     sget-object v11, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
     .line 171
-    .local v11, hardware:Ljava/lang/String;
+    .local v11, "hardware":Ljava/lang/String;
     const-string v25, "%s %s"
 
     const/16 v26, 0x2
@@ -777,7 +777,7 @@
     move-result-object v16
 
     .line 173
-    .local v16, os:Ljava/lang/String;
+    .local v16, "os":Ljava/lang/String;
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lv2/com/playhaven/requests/base/PHAPIRequest;->config:Lv2/com/playhaven/configuration/PHConfiguration;
@@ -789,11 +789,11 @@
     move-result-object v20
 
     .line 175
-    .local v20, sdk_version:Ljava/lang/String;
+    .local v20, "sdk_version":Ljava/lang/String;
     const-string v19, "android"
 
     .line 177
-    .local v19, sdk_platform:Ljava/lang/String;
+    .local v19, "sdk_platform":Ljava/lang/String;
     invoke-virtual/range {p1 .. p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v25
@@ -803,7 +803,7 @@
     move-result-object v9
 
     .line 179
-    .local v9, dm:Landroid/util/DisplayMetrics;
+    .local v9, "dm":Landroid/util/DisplayMetrics;
     move-object v0, v9
 
     iget v0, v0, Landroid/util/DisplayMetrics;->widthPixels:I
@@ -815,7 +815,7 @@
     move-result-object v24
 
     .line 181
-    .local v24, width:Ljava/lang/String;
+    .local v24, "width":Ljava/lang/String;
     move-object v0, v9
 
     iget v0, v0, Landroid/util/DisplayMetrics;->heightPixels:I
@@ -827,7 +827,7 @@
     move-result-object v12
 
     .line 183
-    .local v12, height:Ljava/lang/String;
+    .local v12, "height":Ljava/lang/String;
     move-object v0, v9
 
     iget v0, v0, Landroid/util/DisplayMetrics;->densityDpi:I
@@ -839,13 +839,13 @@
     move-result-object v18
 
     .line 185
-    .local v18, screen_density:Ljava/lang/String;
+    .local v18, "screen_density":Ljava/lang/String;
     invoke-static/range {p1 .. p1}, Lv2/com/playhaven/utils/PHConnectionUtils;->getConnectionType(Landroid/content/Context;)Lv2/com/playhaven/configuration/PHConfiguration$ConnectionType;
 
     move-result-object v23
 
     .line 187
-    .local v23, type:Lv2/com/playhaven/configuration/PHConfiguration$ConnectionType;
+    .local v23, "type":Lv2/com/playhaven/configuration/PHConfiguration$ConnectionType;
     sget-object v25, Lv2/com/playhaven/configuration/PHConfiguration$ConnectionType;->NO_PERMISSION:Lv2/com/playhaven/configuration/PHConfiguration$ConnectionType;
 
     move-object/from16 v0, v23
@@ -859,14 +859,14 @@
     move-object/from16 v7, v25
 
     .line 190
-    .local v7, connection:Ljava/lang/String;
+    .local v7, "connection":Ljava/lang/String;
     :goto_3
     invoke-virtual/range {p0 .. p1}, Lv2/com/playhaven/requests/base/PHAPIRequest;->getAdditionalParams(Landroid/content/Context;)Ljava/util/Hashtable;
 
     move-result-object v4
 
     .line 201
-    .local v4, additionalParams:Ljava/util/Hashtable;,"Ljava/util/Hashtable<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v4, "additionalParams":Ljava/util/Hashtable;, "Ljava/util/Hashtable<Ljava/lang/String;Ljava/lang/String;>;"
     if-eqz v4, :cond_6
 
     new-instance v25, Ljava/util/HashMap;
@@ -881,7 +881,7 @@
     move-object/from16 v3, v25
 
     .line 204
-    .local v3, add_params:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v3, "add_params":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     :goto_4
     new-instance v25, Ljava/util/HashMap;
 
@@ -1217,26 +1217,26 @@
     iput-object v0, v1, Lv2/com/playhaven/requests/base/PHAPIRequest;->signedParams:Ljava/util/HashMap;
 
     .line 245
-    .end local v3           #add_params:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
-    .end local v4           #additionalParams:Ljava/util/Hashtable;,"Ljava/util/Hashtable<Ljava/lang/String;Ljava/lang/String;>;"
-    .end local v5           #appId:Ljava/lang/String;
-    .end local v6           #appVersion:Ljava/lang/String;
-    .end local v7           #connection:Ljava/lang/String;
-    .end local v8           #device:Ljava/lang/String;
-    .end local v9           #dm:Landroid/util/DisplayMetrics;
-    .end local v11           #hardware:Ljava/lang/String;
-    .end local v12           #height:Ljava/lang/String;
-    .end local v13           #idiom:Ljava/lang/String;
-    .end local v14           #nonce:Ljava/lang/String;
-    .end local v15           #orientation:Ljava/lang/String;
-    .end local v16           #os:Ljava/lang/String;
-    .end local v18           #screen_density:Ljava/lang/String;
-    .end local v19           #sdk_platform:Ljava/lang/String;
-    .end local v20           #sdk_version:Ljava/lang/String;
-    .end local v21           #sig:Ljava/lang/String;
-    .end local v22           #sigHash:Ljava/lang/String;
-    .end local v23           #type:Lv2/com/playhaven/configuration/PHConfiguration$ConnectionType;
-    .end local v24           #width:Ljava/lang/String;
+    .end local v3    # "add_params":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .end local v4    # "additionalParams":Ljava/util/Hashtable;, "Ljava/util/Hashtable<Ljava/lang/String;Ljava/lang/String;>;"
+    .end local v5    # "appId":Ljava/lang/String;
+    .end local v6    # "appVersion":Ljava/lang/String;
+    .end local v7    # "connection":Ljava/lang/String;
+    .end local v8    # "device":Ljava/lang/String;
+    .end local v9    # "dm":Landroid/util/DisplayMetrics;
+    .end local v11    # "hardware":Ljava/lang/String;
+    .end local v12    # "height":Ljava/lang/String;
+    .end local v13    # "idiom":Ljava/lang/String;
+    .end local v14    # "nonce":Ljava/lang/String;
+    .end local v15    # "orientation":Ljava/lang/String;
+    .end local v16    # "os":Ljava/lang/String;
+    .end local v18    # "screen_density":Ljava/lang/String;
+    .end local v19    # "sdk_platform":Ljava/lang/String;
+    .end local v20    # "sdk_version":Ljava/lang/String;
+    .end local v21    # "sig":Ljava/lang/String;
+    .end local v22    # "sigHash":Ljava/lang/String;
+    .end local v23    # "type":Lv2/com/playhaven/configuration/PHConfiguration$ConnectionType;
+    .end local v24    # "width":Ljava/lang/String;
     :cond_2
     move-object/from16 v0, p0
 
@@ -1247,10 +1247,10 @@
     return-object v25
 
     .line 149
-    .restart local v8       #device:Ljava/lang/String;
-    .restart local v13       #idiom:Ljava/lang/String;
-    .restart local v14       #nonce:Ljava/lang/String;
-    .restart local v15       #orientation:Ljava/lang/String;
+    .restart local v8    # "device":Ljava/lang/String;
+    .restart local v13    # "idiom":Ljava/lang/String;
+    .restart local v14    # "nonce":Ljava/lang/String;
+    .restart local v15    # "orientation":Ljava/lang/String;
     :cond_3
     const-string v28, ""
 
@@ -1263,35 +1263,35 @@
     goto/16 :goto_1
 
     .line 162
-    .restart local v21       #sig:Ljava/lang/String;
-    .restart local v22       #sigHash:Ljava/lang/String;
+    .restart local v21    # "sig":Ljava/lang/String;
+    .restart local v22    # "sigHash":Ljava/lang/String;
     :catch_0
     move-exception v25
 
     move-object/from16 v10, v25
 
     .line 164
-    .local v10, e:Landroid/content/pm/PackageManager$NameNotFoundException;
+    .local v10, "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     const-string v5, ""
 
     .line 166
-    .restart local v5       #appId:Ljava/lang/String;
+    .restart local v5    # "appId":Ljava/lang/String;
     const-string v6, ""
 
-    .restart local v6       #appVersion:Ljava/lang/String;
+    .restart local v6    # "appVersion":Ljava/lang/String;
     goto/16 :goto_2
 
     .line 187
-    .end local v10           #e:Landroid/content/pm/PackageManager$NameNotFoundException;
-    .restart local v9       #dm:Landroid/util/DisplayMetrics;
-    .restart local v11       #hardware:Ljava/lang/String;
-    .restart local v12       #height:Ljava/lang/String;
-    .restart local v16       #os:Ljava/lang/String;
-    .restart local v18       #screen_density:Ljava/lang/String;
-    .restart local v19       #sdk_platform:Ljava/lang/String;
-    .restart local v20       #sdk_version:Ljava/lang/String;
-    .restart local v23       #type:Lv2/com/playhaven/configuration/PHConfiguration$ConnectionType;
-    .restart local v24       #width:Ljava/lang/String;
+    .end local v10    # "e":Landroid/content/pm/PackageManager$NameNotFoundException;
+    .restart local v9    # "dm":Landroid/util/DisplayMetrics;
+    .restart local v11    # "hardware":Ljava/lang/String;
+    .restart local v12    # "height":Ljava/lang/String;
+    .restart local v16    # "os":Ljava/lang/String;
+    .restart local v18    # "screen_density":Ljava/lang/String;
+    .restart local v19    # "sdk_platform":Ljava/lang/String;
+    .restart local v20    # "sdk_version":Ljava/lang/String;
+    .restart local v23    # "type":Lv2/com/playhaven/configuration/PHConfiguration$ConnectionType;
+    .restart local v24    # "width":Ljava/lang/String;
     :cond_5
     invoke-virtual/range {v23 .. v23}, Lv2/com/playhaven/configuration/PHConfiguration$ConnectionType;->ordinal()I
 
@@ -1306,8 +1306,8 @@
     goto/16 :goto_3
 
     .line 202
-    .restart local v4       #additionalParams:Ljava/util/Hashtable;,"Ljava/util/Hashtable<Ljava/lang/String;Ljava/lang/String;>;"
-    .restart local v7       #connection:Ljava/lang/String;
+    .restart local v4    # "additionalParams":Ljava/util/Hashtable;, "Ljava/util/Hashtable<Ljava/lang/String;Ljava/lang/String;>;"
+    .restart local v7    # "connection":Ljava/lang/String;
     :cond_6
     new-instance v25, Ljava/util/HashMap;
 
@@ -1320,7 +1320,7 @@
 
 .method public getURL(Landroid/content/Context;)Ljava/lang/String;
     .locals 4
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/UnsupportedEncodingException;,
@@ -1372,7 +1372,7 @@
 
 .method public handleRequestFailure(Lv2/com/playhaven/model/PHError;)V
     .locals 2
-    .parameter "error"
+    .param p1, "error"    # Lv2/com/playhaven/model/PHError;
 
     .prologue
     .line 443
@@ -1396,7 +1396,7 @@
 
 .method public handleRequestSuccess(Lorg/json/JSONObject;)V
     .locals 2
-    .parameter "res"
+    .param p1, "res"    # Lorg/json/JSONObject;
 
     .prologue
     .line 433
@@ -1420,7 +1420,7 @@
 
 .method public onHttpRequestFailed(Lv2/com/playhaven/model/PHError;)V
     .locals 0
-    .parameter "e"
+    .param p1, "e"    # Lv2/com/playhaven/model/PHError;
 
     .prologue
     .line 553
@@ -1435,8 +1435,8 @@
 
 .method public onHttpRequestSucceeded(Ljava/nio/ByteBuffer;I)V
     .locals 6
-    .parameter "response"
-    .parameter "responseCode"
+    .param p1, "response"    # Ljava/nio/ByteBuffer;
+    .param p2, "responseCode"    # I
 
     .prologue
     .line 456
@@ -1503,11 +1503,11 @@
     invoke-direct {v1}, Lorg/json/JSONObject;-><init>()V
 
     .line 477
-    .local v1, json:Lorg/json/JSONObject;
+    .local v1, "json":Lorg/json/JSONObject;
     invoke-virtual {p0, v1}, Lv2/com/playhaven/requests/base/PHAPIRequest;->processRequestResponse(Lorg/json/JSONObject;)V
 
     .line 484
-    .end local v1           #json:Lorg/json/JSONObject;
+    .end local v1    # "json":Lorg/json/JSONObject;
     :cond_2
     :try_start_0
     new-instance v2, Ljava/lang/String;
@@ -1521,7 +1521,7 @@
     invoke-direct {v2, v3, v4}, Ljava/lang/String;-><init>([BLjava/lang/String;)V
 
     .line 486
-    .local v2, res_str:Ljava/lang/String;
+    .local v2, "res_str":Ljava/lang/String;
     new-instance v3, Ljava/lang/StringBuilder;
 
     const-string v4, "Unparsed JSON: "
@@ -1544,7 +1544,7 @@
     invoke-direct {v1, v2}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
     .line 492
-    .restart local v1       #json:Lorg/json/JSONObject;
+    .restart local v1    # "json":Lorg/json/JSONObject;
     invoke-virtual {p0, v1}, Lv2/com/playhaven/requests/base/PHAPIRequest;->processRequestResponse(Lorg/json/JSONObject;)V
     :try_end_0
     .catch Ljava/io/UnsupportedEncodingException; {:try_start_0 .. :try_end_0} :catch_0
@@ -1554,15 +1554,15 @@
     goto :goto_0
 
     .line 494
-    .end local v1           #json:Lorg/json/JSONObject;
-    .end local v2           #res_str:Ljava/lang/String;
+    .end local v1    # "json":Lorg/json/JSONObject;
+    .end local v2    # "res_str":Ljava/lang/String;
     :catch_0
     move-exception v3
 
     move-object v0, v3
 
     .line 497
-    .local v0, e:Ljava/io/UnsupportedEncodingException;
+    .local v0, "e":Ljava/io/UnsupportedEncodingException;
     new-instance v3, Lv2/com/playhaven/model/PHError;
 
     const-string v4, "Unsupported encoding when parsing JSON"
@@ -1574,14 +1574,14 @@
     goto :goto_0
 
     .line 499
-    .end local v0           #e:Ljava/io/UnsupportedEncodingException;
+    .end local v0    # "e":Ljava/io/UnsupportedEncodingException;
     :catch_1
     move-exception v3
 
     move-object v0, v3
 
     .line 502
-    .local v0, e:Lorg/json/JSONException;
+    .local v0, "e":Lorg/json/JSONException;
     new-instance v3, Lv2/com/playhaven/model/PHError;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -1609,14 +1609,14 @@
     goto :goto_0
 
     .line 504
-    .end local v0           #e:Lorg/json/JSONException;
+    .end local v0    # "e":Lorg/json/JSONException;
     :catch_2
     move-exception v3
 
     move-object v0, v3
 
     .line 505
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     .line 507
@@ -1649,7 +1649,7 @@
 
 .method public processRequestResponse(Lorg/json/JSONObject;)V
     .locals 5
-    .parameter "response"
+    .param p1, "response"    # Lorg/json/JSONObject;
 
     .prologue
     const-string v3, "error"
@@ -1662,7 +1662,7 @@
     move-result-object v0
 
     .line 521
-    .local v0, errmsg:Ljava/lang/String;
+    .local v0, "errmsg":Ljava/lang/String;
     const-string v2, "errobj"
 
     invoke-virtual {p1, v2}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
@@ -1670,7 +1670,7 @@
     move-result-object v1
 
     .line 527
-    .local v1, errobj:Lorg/json/JSONObject;
+    .local v1, "errobj":Lorg/json/JSONObject;
     sget-object v2, Lorg/json/JSONObject;->NULL:Ljava/lang/Object;
 
     invoke-virtual {v2, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
@@ -1778,7 +1778,7 @@
 
 .method public send(Landroid/content/Context;)V
     .locals 2
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     .line 297
@@ -1879,7 +1879,6 @@
 
 .method public setAdditionalParameters(Ljava/util/Hashtable;)V
     .locals 0
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1893,7 +1892,7 @@
 
     .prologue
     .line 250
-    .local p1, params:Ljava/util/Hashtable;,"Ljava/util/Hashtable<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p1, "params":Ljava/util/Hashtable;, "Ljava/util/Hashtable<Ljava/lang/String;Ljava/lang/String;>;"
     iput-object p1, p0, Lv2/com/playhaven/requests/base/PHAPIRequest;->additionalParams:Ljava/util/Hashtable;
 
     .line 251
@@ -1902,7 +1901,7 @@
 
 .method public setBaseURL(Ljava/lang/String;)V
     .locals 0
-    .parameter "url"
+    .param p1, "url"    # Ljava/lang/String;
 
     .prologue
     .line 422
@@ -1914,7 +1913,7 @@
 
 .method public setRequestTag(I)V
     .locals 0
-    .parameter "requestTag"
+    .param p1, "requestTag"    # I
 
     .prologue
     .line 96
@@ -1926,7 +1925,7 @@
 
 .method public signedParamsStr(Landroid/content/Context;)Ljava/lang/String;
     .locals 1
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/UnsupportedEncodingException;,

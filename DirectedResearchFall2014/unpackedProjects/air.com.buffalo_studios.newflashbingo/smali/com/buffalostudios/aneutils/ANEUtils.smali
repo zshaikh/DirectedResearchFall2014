@@ -43,7 +43,6 @@
 
 .method static synthetic access$0(Z)V
     .locals 0
-    .parameter
 
     .prologue
     .line 18
@@ -64,7 +63,7 @@
 
 .method private static setInForeground(Z)V
     .locals 0
-    .parameter "isInForeground"
+    .param p0, "isInForeground"    # Z
 
     .prologue
     .line 19

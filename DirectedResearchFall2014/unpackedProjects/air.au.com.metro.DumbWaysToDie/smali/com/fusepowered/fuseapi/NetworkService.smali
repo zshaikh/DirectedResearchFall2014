@@ -43,8 +43,8 @@
 
 .method private getB64Auth(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 5
-    .parameter "login"
-    .parameter "pass"
+    .param p1, "login"    # Ljava/lang/String;
+    .param p2, "pass"    # Ljava/lang/String;
 
     .prologue
     .line 271
@@ -67,7 +67,7 @@
     move-result-object v1
 
     .line 272
-    .local v1, source:Ljava/lang/String;
+    .local v1, "source":Ljava/lang/String;
     new-instance v2, Ljava/lang/StringBuilder;
 
     const-string v3, "Basic "
@@ -89,7 +89,7 @@
     move-result-object v0
 
     .line 273
-    .local v0, buf:Ljava/lang/StringBuilder;
+    .local v0, "buf":Ljava/lang/StringBuilder;
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v2
@@ -99,7 +99,7 @@
 
 .method public static getConnectionType(Landroid/content/Context;)Ljava/lang/String;
     .locals 4
-    .parameter "context"
+    .param p0, "context"    # Landroid/content/Context;
 
     .prologue
     .line 454
@@ -112,17 +112,17 @@
     check-cast v0, Landroid/net/ConnectivityManager;
 
     .line 455
-    .local v0, cm:Landroid/net/ConnectivityManager;
+    .local v0, "cm":Landroid/net/ConnectivityManager;
     invoke-virtual {v0}, Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;
 
     move-result-object v1
 
     .line 456
-    .local v1, netInfo:Landroid/net/NetworkInfo;
+    .local v1, "netInfo":Landroid/net/NetworkInfo;
     const-string v2, ""
 
     .line 457
-    .local v2, retValue:Ljava/lang/String;
+    .local v2, "retValue":Ljava/lang/String;
     if-eqz v1, :cond_0
 
     invoke-virtual {v1}, Landroid/net/NetworkInfo;->isConnectedOrConnecting()Z
@@ -150,7 +150,7 @@
 
 .method public static isWifiConnection(Landroid/content/Context;)Ljava/lang/String;
     .locals 4
-    .parameter "context"
+    .param p0, "context"    # Landroid/content/Context;
 
     .prologue
     .line 468
@@ -163,17 +163,17 @@
     check-cast v0, Landroid/net/ConnectivityManager;
 
     .line 469
-    .local v0, cm:Landroid/net/ConnectivityManager;
+    .local v0, "cm":Landroid/net/ConnectivityManager;
     invoke-virtual {v0}, Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;
 
     move-result-object v1
 
     .line 470
-    .local v1, netInfo:Landroid/net/NetworkInfo;
+    .local v1, "netInfo":Landroid/net/NetworkInfo;
     const-string v2, ""
 
     .line 471
-    .local v2, retValue:Ljava/lang/String;
+    .local v2, "retValue":Ljava/lang/String;
     if-eqz v1, :cond_0
 
     invoke-virtual {v1}, Landroid/net/NetworkInfo;->isConnectedOrConnecting()Z
@@ -211,7 +211,7 @@
 
 .method private openHttpConnection(Ljava/lang/String;)Ljava/net/HttpURLConnection;
     .locals 2
-    .parameter "urlString"
+    .param p1, "urlString"    # Ljava/lang/String;
 
     .prologue
     .line 135
@@ -246,7 +246,7 @@
 
 .method private openHttpConnection_AllOthers(Ljava/lang/String;)Ljava/net/HttpURLConnection;
     .locals 19
-    .parameter "urlString"
+    .param p1, "urlString"    # Ljava/lang/String;
 
     .prologue
     .line 151
@@ -261,7 +261,7 @@
     move-result v7
 
     .line 152
-    .local v7, marker:I
+    .local v7, "marker":I
     const/4 v13, -0x1
 
     if-le v7, v13, :cond_2
@@ -281,7 +281,7 @@
     move-object v5, v13
 
     .line 153
-    .local v5, host:Ljava/lang/String;
+    .local v5, "host":Ljava/lang/String;
     :goto_0
     const/4 v13, -0x1
 
@@ -306,32 +306,32 @@
     move-object v10, v13
 
     .line 155
-    .local v10, queryStr:Ljava/lang/String;
+    .local v10, "queryStr":Ljava/lang/String;
     :goto_1
     const/4 v6, 0x0
 
     .line 156
-    .local v6, httpConn:Ljava/net/HttpURLConnection;
+    .local v6, "httpConn":Ljava/net/HttpURLConnection;
     const/4 v8, 0x0
 
     .line 157
-    .local v8, osw:Ljava/io/OutputStreamWriter;
+    .local v8, "osw":Ljava/io/OutputStreamWriter;
     const/4 v11, -0x1
 
     .line 161
-    .local v11, responseCode:I
+    .local v11, "responseCode":I
     :try_start_0
     new-instance v12, Ljava/net/URL;
 
     invoke-direct {v12, v5}, Ljava/net/URL;-><init>(Ljava/lang/String;)V
 
     .line 162
-    .local v12, url:Ljava/net/URL;
+    .local v12, "url":Ljava/net/URL;
     invoke-virtual {v12}, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;
 
     move-result-object v7
 
-    .end local v7           #marker:I
+    .end local v7    # "marker":I
     move-object v0, v7
 
     check-cast v0, Ljava/net/HttpURLConnection;
@@ -401,7 +401,7 @@
     move-result-object v4
 
     .line 171
-    .local v4, encodedAuthorization:Ljava/lang/String;
+    .local v4, "encodedAuthorization":Ljava/lang/String;
     const-string v13, "Authorization"
 
     invoke-virtual {v6, v13, v4}, Ljava/net/HttpURLConnection;->setRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
@@ -423,12 +423,12 @@
 
     invoke-direct {v9, v13}, Ljava/io/OutputStreamWriter;-><init>(Ljava/io/OutputStream;)V
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 177
-    .end local v8           #osw:Ljava/io/OutputStreamWriter;
-    .local v9, osw:Ljava/io/OutputStreamWriter;
+    .end local v8    # "osw":Ljava/io/OutputStreamWriter;
+    .local v9, "osw":Ljava/io/OutputStreamWriter;
     :try_start_1
     invoke-virtual {v9, v10}, Ljava/io/OutputStreamWriter;->write(Ljava/lang/String;)V
 
@@ -438,8 +438,8 @@
     .line 181
     invoke-virtual {v6}, Ljava/net/HttpURLConnection;->getResponseCode()I
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_4
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     move-result v11
 
@@ -493,20 +493,20 @@
     move-object v8, v9
 
     .line 205
-    .end local v4           #encodedAuthorization:Ljava/lang/String;
-    .end local v9           #osw:Ljava/io/OutputStreamWriter;
-    .end local v12           #url:Ljava/net/URL;
-    .restart local v8       #osw:Ljava/io/OutputStreamWriter;
+    .end local v4    # "encodedAuthorization":Ljava/lang/String;
+    .end local v9    # "osw":Ljava/io/OutputStreamWriter;
+    .end local v12    # "url":Ljava/net/URL;
+    .restart local v8    # "osw":Ljava/io/OutputStreamWriter;
     :cond_1
     :goto_3
     return-object v6
 
-    .end local v5           #host:Ljava/lang/String;
-    .end local v6           #httpConn:Ljava/net/HttpURLConnection;
-    .end local v8           #osw:Ljava/io/OutputStreamWriter;
-    .end local v10           #queryStr:Ljava/lang/String;
-    .end local v11           #responseCode:I
-    .restart local v7       #marker:I
+    .end local v5    # "host":Ljava/lang/String;
+    .end local v6    # "httpConn":Ljava/net/HttpURLConnection;
+    .end local v8    # "osw":Ljava/io/OutputStreamWriter;
+    .end local v10    # "queryStr":Ljava/lang/String;
+    .end local v11    # "responseCode":I
+    .restart local v7    # "marker":I
     :cond_2
     move-object/from16 v5, p1
 
@@ -514,7 +514,7 @@
     goto/16 :goto_0
 
     .line 153
-    .restart local v5       #host:Ljava/lang/String;
+    .restart local v5    # "host":Ljava/lang/String;
     :cond_3
     const-string v13, ""
 
@@ -523,18 +523,18 @@
     goto/16 :goto_1
 
     .line 186
-    .end local v7           #marker:I
-    .restart local v6       #httpConn:Ljava/net/HttpURLConnection;
-    .restart local v8       #osw:Ljava/io/OutputStreamWriter;
-    .restart local v10       #queryStr:Ljava/lang/String;
-    .restart local v11       #responseCode:I
+    .end local v7    # "marker":I
+    .restart local v6    # "httpConn":Ljava/net/HttpURLConnection;
+    .restart local v8    # "osw":Ljava/io/OutputStreamWriter;
+    .restart local v10    # "queryStr":Ljava/lang/String;
+    .restart local v11    # "responseCode":I
     :catch_0
     move-exception v13
 
     move-object v3, v13
 
     .line 187
-    .local v3, e:Ljava/lang/Exception;
+    .local v3, "e":Ljava/lang/Exception;
     :goto_4
     :try_start_3
     const-string v13, "FuseAPI"
@@ -595,7 +595,7 @@
     goto :goto_3
 
     .line 191
-    .end local v3           #e:Ljava/lang/Exception;
+    .end local v3    # "e":Ljava/lang/Exception;
     :catchall_0
     move-exception v13
 
@@ -654,48 +654,48 @@
     throw v13
 
     .line 195
-    .end local v8           #osw:Ljava/io/OutputStreamWriter;
-    .restart local v4       #encodedAuthorization:Ljava/lang/String;
-    .restart local v9       #osw:Ljava/io/OutputStreamWriter;
-    .restart local v12       #url:Ljava/net/URL;
+    .end local v8    # "osw":Ljava/io/OutputStreamWriter;
+    .restart local v4    # "encodedAuthorization":Ljava/lang/String;
+    .restart local v9    # "osw":Ljava/io/OutputStreamWriter;
+    .restart local v12    # "url":Ljava/net/URL;
     :catch_1
     move-exception v13
 
     goto/16 :goto_2
 
-    .end local v4           #encodedAuthorization:Ljava/lang/String;
-    .end local v9           #osw:Ljava/io/OutputStreamWriter;
-    .end local v12           #url:Ljava/net/URL;
-    .restart local v3       #e:Ljava/lang/Exception;
-    .restart local v8       #osw:Ljava/io/OutputStreamWriter;
+    .end local v4    # "encodedAuthorization":Ljava/lang/String;
+    .end local v9    # "osw":Ljava/io/OutputStreamWriter;
+    .end local v12    # "url":Ljava/net/URL;
+    .restart local v3    # "e":Ljava/lang/Exception;
+    .restart local v8    # "osw":Ljava/io/OutputStreamWriter;
     :catch_2
     move-exception v13
 
     goto :goto_5
 
-    .end local v3           #e:Ljava/lang/Exception;
+    .end local v3    # "e":Ljava/lang/Exception;
     :catch_3
     move-exception v14
 
     goto :goto_7
 
     .line 191
-    .end local v8           #osw:Ljava/io/OutputStreamWriter;
-    .restart local v4       #encodedAuthorization:Ljava/lang/String;
-    .restart local v9       #osw:Ljava/io/OutputStreamWriter;
-    .restart local v12       #url:Ljava/net/URL;
+    .end local v8    # "osw":Ljava/io/OutputStreamWriter;
+    .restart local v4    # "encodedAuthorization":Ljava/lang/String;
+    .restart local v9    # "osw":Ljava/io/OutputStreamWriter;
+    .restart local v12    # "url":Ljava/net/URL;
     :catchall_1
     move-exception v13
 
     move-object v8, v9
 
-    .end local v9           #osw:Ljava/io/OutputStreamWriter;
-    .restart local v8       #osw:Ljava/io/OutputStreamWriter;
+    .end local v9    # "osw":Ljava/io/OutputStreamWriter;
+    .restart local v8    # "osw":Ljava/io/OutputStreamWriter;
     goto :goto_6
 
     .line 186
-    .end local v8           #osw:Ljava/io/OutputStreamWriter;
-    .restart local v9       #osw:Ljava/io/OutputStreamWriter;
+    .end local v8    # "osw":Ljava/io/OutputStreamWriter;
+    .restart local v9    # "osw":Ljava/io/OutputStreamWriter;
     :catch_4
     move-exception v13
 
@@ -703,23 +703,23 @@
 
     move-object v8, v9
 
-    .end local v9           #osw:Ljava/io/OutputStreamWriter;
-    .restart local v8       #osw:Ljava/io/OutputStreamWriter;
+    .end local v9    # "osw":Ljava/io/OutputStreamWriter;
+    .restart local v8    # "osw":Ljava/io/OutputStreamWriter;
     goto :goto_4
 
-    .end local v8           #osw:Ljava/io/OutputStreamWriter;
-    .restart local v9       #osw:Ljava/io/OutputStreamWriter;
+    .end local v8    # "osw":Ljava/io/OutputStreamWriter;
+    .restart local v9    # "osw":Ljava/io/OutputStreamWriter;
     :cond_7
     move-object v8, v9
 
-    .end local v9           #osw:Ljava/io/OutputStreamWriter;
-    .restart local v8       #osw:Ljava/io/OutputStreamWriter;
+    .end local v9    # "osw":Ljava/io/OutputStreamWriter;
+    .restart local v8    # "osw":Ljava/io/OutputStreamWriter;
     goto :goto_3
 .end method
 
 .method private openHttpConnection_HoneyCombMR2(Ljava/lang/String;)Ljava/net/HttpURLConnection;
     .locals 20
-    .parameter "urlString"
+    .param p1, "urlString"    # Ljava/lang/String;
 
     .prologue
     .line 210
@@ -734,7 +734,7 @@
     move-result v7
 
     .line 211
-    .local v7, marker:I
+    .local v7, "marker":I
     const/4 v14, -0x1
 
     if-le v7, v14, :cond_2
@@ -754,7 +754,7 @@
     move-object v5, v14
 
     .line 212
-    .local v5, host:Ljava/lang/String;
+    .local v5, "host":Ljava/lang/String;
     :goto_0
     const/4 v14, -0x1
 
@@ -779,32 +779,32 @@
     move-object v11, v14
 
     .line 214
-    .local v11, queryStr:Ljava/lang/String;
+    .local v11, "queryStr":Ljava/lang/String;
     :goto_1
     const/4 v6, 0x0
 
     .line 215
-    .local v6, httpConn:Ljava/net/HttpURLConnection;
+    .local v6, "httpConn":Ljava/net/HttpURLConnection;
     const/4 v8, 0x0
 
     .line 216
-    .local v8, out:Ljava/io/BufferedOutputStream;
+    .local v8, "out":Ljava/io/BufferedOutputStream;
     const/4 v12, -0x1
 
     .line 220
-    .local v12, responseCode:I
+    .local v12, "responseCode":I
     :try_start_0
     new-instance v13, Ljava/net/URL;
 
     invoke-direct {v13, v5}, Ljava/net/URL;-><init>(Ljava/lang/String;)V
 
     .line 221
-    .local v13, url:Ljava/net/URL;
+    .local v13, "url":Ljava/net/URL;
     invoke-virtual {v13}, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;
 
     move-result-object v7
 
-    .end local v7           #marker:I
+    .end local v7    # "marker":I
     move-object v0, v7
 
     check-cast v0, Ljava/net/HttpURLConnection;
@@ -857,7 +857,7 @@
     move-result-object v4
 
     .line 230
-    .local v4, encodedAuthorization:Ljava/lang/String;
+    .local v4, "encodedAuthorization":Ljava/lang/String;
     const-string v14, "Authorization"
 
     invoke-virtual {v6, v14, v4}, Ljava/net/HttpURLConnection;->setRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
@@ -882,7 +882,7 @@
     move-result-object v10
 
     .line 235
-    .local v10, queryBytes:[B
+    .local v10, "queryBytes":[B
     array-length v14, v10
 
     invoke-virtual {v6, v14}, Ljava/net/HttpURLConnection;->setFixedLengthStreamingMode(I)V
@@ -896,12 +896,12 @@
 
     invoke-direct {v9, v14}, Ljava/io/BufferedOutputStream;-><init>(Ljava/io/OutputStream;)V
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 239
-    .end local v8           #out:Ljava/io/BufferedOutputStream;
-    .local v9, out:Ljava/io/BufferedOutputStream;
+    .end local v8    # "out":Ljava/io/BufferedOutputStream;
+    .local v9, "out":Ljava/io/BufferedOutputStream;
     :try_start_1
     invoke-virtual {v9, v10}, Ljava/io/BufferedOutputStream;->write([B)V
 
@@ -911,8 +911,8 @@
     .line 243
     invoke-virtual {v6}, Ljava/net/HttpURLConnection;->getResponseCode()I
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_4
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     move-result v12
 
@@ -970,21 +970,21 @@
     move-object v8, v9
 
     .line 267
-    .end local v4           #encodedAuthorization:Ljava/lang/String;
-    .end local v9           #out:Ljava/io/BufferedOutputStream;
-    .end local v10           #queryBytes:[B
-    .end local v13           #url:Ljava/net/URL;
-    .restart local v8       #out:Ljava/io/BufferedOutputStream;
+    .end local v4    # "encodedAuthorization":Ljava/lang/String;
+    .end local v9    # "out":Ljava/io/BufferedOutputStream;
+    .end local v10    # "queryBytes":[B
+    .end local v13    # "url":Ljava/net/URL;
+    .restart local v8    # "out":Ljava/io/BufferedOutputStream;
     :cond_1
     :goto_3
     return-object v6
 
-    .end local v5           #host:Ljava/lang/String;
-    .end local v6           #httpConn:Ljava/net/HttpURLConnection;
-    .end local v8           #out:Ljava/io/BufferedOutputStream;
-    .end local v11           #queryStr:Ljava/lang/String;
-    .end local v12           #responseCode:I
-    .restart local v7       #marker:I
+    .end local v5    # "host":Ljava/lang/String;
+    .end local v6    # "httpConn":Ljava/net/HttpURLConnection;
+    .end local v8    # "out":Ljava/io/BufferedOutputStream;
+    .end local v11    # "queryStr":Ljava/lang/String;
+    .end local v12    # "responseCode":I
+    .restart local v7    # "marker":I
     :cond_2
     move-object/from16 v5, p1
 
@@ -992,7 +992,7 @@
     goto/16 :goto_0
 
     .line 212
-    .restart local v5       #host:Ljava/lang/String;
+    .restart local v5    # "host":Ljava/lang/String;
     :cond_3
     const-string v14, ""
 
@@ -1001,18 +1001,18 @@
     goto/16 :goto_1
 
     .line 248
-    .end local v7           #marker:I
-    .restart local v6       #httpConn:Ljava/net/HttpURLConnection;
-    .restart local v8       #out:Ljava/io/BufferedOutputStream;
-    .restart local v11       #queryStr:Ljava/lang/String;
-    .restart local v12       #responseCode:I
+    .end local v7    # "marker":I
+    .restart local v6    # "httpConn":Ljava/net/HttpURLConnection;
+    .restart local v8    # "out":Ljava/io/BufferedOutputStream;
+    .restart local v11    # "queryStr":Ljava/lang/String;
+    .restart local v12    # "responseCode":I
     :catch_0
     move-exception v14
 
     move-object v3, v14
 
     .line 249
-    .local v3, e:Ljava/lang/Exception;
+    .local v3, "e":Ljava/lang/Exception;
     :goto_4
     :try_start_3
     const-string v14, "FuseAPI"
@@ -1077,7 +1077,7 @@
     goto :goto_3
 
     .line 253
-    .end local v3           #e:Ljava/lang/Exception;
+    .end local v3    # "e":Ljava/lang/Exception;
     :catchall_0
     move-exception v14
 
@@ -1136,51 +1136,51 @@
     throw v14
 
     .line 257
-    .end local v8           #out:Ljava/io/BufferedOutputStream;
-    .restart local v4       #encodedAuthorization:Ljava/lang/String;
-    .restart local v9       #out:Ljava/io/BufferedOutputStream;
-    .restart local v10       #queryBytes:[B
-    .restart local v13       #url:Ljava/net/URL;
+    .end local v8    # "out":Ljava/io/BufferedOutputStream;
+    .restart local v4    # "encodedAuthorization":Ljava/lang/String;
+    .restart local v9    # "out":Ljava/io/BufferedOutputStream;
+    .restart local v10    # "queryBytes":[B
+    .restart local v13    # "url":Ljava/net/URL;
     :catch_1
     move-exception v14
 
     goto/16 :goto_2
 
-    .end local v4           #encodedAuthorization:Ljava/lang/String;
-    .end local v9           #out:Ljava/io/BufferedOutputStream;
-    .end local v10           #queryBytes:[B
-    .end local v13           #url:Ljava/net/URL;
-    .restart local v3       #e:Ljava/lang/Exception;
-    .restart local v8       #out:Ljava/io/BufferedOutputStream;
+    .end local v4    # "encodedAuthorization":Ljava/lang/String;
+    .end local v9    # "out":Ljava/io/BufferedOutputStream;
+    .end local v10    # "queryBytes":[B
+    .end local v13    # "url":Ljava/net/URL;
+    .restart local v3    # "e":Ljava/lang/Exception;
+    .restart local v8    # "out":Ljava/io/BufferedOutputStream;
     :catch_2
     move-exception v14
 
     goto :goto_5
 
-    .end local v3           #e:Ljava/lang/Exception;
+    .end local v3    # "e":Ljava/lang/Exception;
     :catch_3
     move-exception v15
 
     goto :goto_7
 
     .line 253
-    .end local v8           #out:Ljava/io/BufferedOutputStream;
-    .restart local v4       #encodedAuthorization:Ljava/lang/String;
-    .restart local v9       #out:Ljava/io/BufferedOutputStream;
-    .restart local v10       #queryBytes:[B
-    .restart local v13       #url:Ljava/net/URL;
+    .end local v8    # "out":Ljava/io/BufferedOutputStream;
+    .restart local v4    # "encodedAuthorization":Ljava/lang/String;
+    .restart local v9    # "out":Ljava/io/BufferedOutputStream;
+    .restart local v10    # "queryBytes":[B
+    .restart local v13    # "url":Ljava/net/URL;
     :catchall_1
     move-exception v14
 
     move-object v8, v9
 
-    .end local v9           #out:Ljava/io/BufferedOutputStream;
-    .restart local v8       #out:Ljava/io/BufferedOutputStream;
+    .end local v9    # "out":Ljava/io/BufferedOutputStream;
+    .restart local v8    # "out":Ljava/io/BufferedOutputStream;
     goto :goto_6
 
     .line 248
-    .end local v8           #out:Ljava/io/BufferedOutputStream;
-    .restart local v9       #out:Ljava/io/BufferedOutputStream;
+    .end local v8    # "out":Ljava/io/BufferedOutputStream;
+    .restart local v9    # "out":Ljava/io/BufferedOutputStream;
     :catch_4
     move-exception v14
 
@@ -1188,17 +1188,17 @@
 
     move-object v8, v9
 
-    .end local v9           #out:Ljava/io/BufferedOutputStream;
-    .restart local v8       #out:Ljava/io/BufferedOutputStream;
+    .end local v9    # "out":Ljava/io/BufferedOutputStream;
+    .restart local v8    # "out":Ljava/io/BufferedOutputStream;
     goto :goto_4
 
-    .end local v8           #out:Ljava/io/BufferedOutputStream;
-    .restart local v9       #out:Ljava/io/BufferedOutputStream;
+    .end local v8    # "out":Ljava/io/BufferedOutputStream;
+    .restart local v9    # "out":Ljava/io/BufferedOutputStream;
     :cond_7
     move-object v8, v9
 
-    .end local v9           #out:Ljava/io/BufferedOutputStream;
-    .restart local v8       #out:Ljava/io/BufferedOutputStream;
+    .end local v9    # "out":Ljava/io/BufferedOutputStream;
+    .restart local v8    # "out":Ljava/io/BufferedOutputStream;
     goto :goto_3
 .end method
 
@@ -1206,8 +1206,8 @@
 # virtual methods
 .method public createImageButton(Ljava/lang/String;Landroid/widget/ImageButton;)V
     .locals 3
-    .parameter "URL"
-    .parameter "imgB"
+    .param p1, "URL"    # Ljava/lang/String;
+    .param p2, "imgB"    # Landroid/widget/ImageButton;
 
     .prologue
     .line 397
@@ -1216,7 +1216,7 @@
     invoke-direct {v0, p0, p2}, Lcom/fusepowered/fuseapi/NetworkService$1;-><init>(Lcom/fusepowered/fuseapi/NetworkService;Landroid/widget/ImageButton;)V
 
     .line 449
-    .local v0, task:Landroid/os/AsyncTask;,"Landroid/os/AsyncTask<Ljava/lang/String;Ljava/lang/Integer;Landroid/graphics/Bitmap;>;"
+    .local v0, "task":Landroid/os/AsyncTask;, "Landroid/os/AsyncTask<Ljava/lang/String;Ljava/lang/Integer;Landroid/graphics/Bitmap;>;"
     const/4 v1, 0x1
 
     new-array v1, v1, [Ljava/lang/String;
@@ -1233,27 +1233,27 @@
 
 .method public downloadImage(Ljava/lang/String;)Landroid/graphics/Bitmap;
     .locals 8
-    .parameter "url"
+    .param p1, "url"    # Ljava/lang/String;
 
     .prologue
     .line 108
     const/4 v0, 0x0
 
     .line 109
-    .local v0, bitmap:Landroid/graphics/Bitmap;
+    .local v0, "bitmap":Landroid/graphics/Bitmap;
     invoke-direct {p0, p1}, Lcom/fusepowered/fuseapi/NetworkService;->openHttpConnection(Ljava/lang/String;)Ljava/net/HttpURLConnection;
 
     move-result-object v1
 
     .line 110
-    .local v1, conn:Ljava/net/HttpURLConnection;
+    .local v1, "conn":Ljava/net/HttpURLConnection;
     if-eqz v1, :cond_1
 
     .line 111
     const/4 v3, 0x0
 
     .line 113
-    .local v3, is:Ljava/io/InputStream;
+    .local v3, "is":Ljava/io/InputStream;
     :try_start_0
     invoke-virtual {v1}, Ljava/net/HttpURLConnection;->getInputStream()Ljava/io/InputStream;
 
@@ -1262,8 +1262,8 @@
     .line 114
     invoke-static {v3}, Landroid/graphics/BitmapFactory;->decodeStream(Ljava/io/InputStream;)Landroid/graphics/Bitmap;
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result-object v0
 
@@ -1282,20 +1282,20 @@
     invoke-virtual {v1}, Ljava/net/HttpURLConnection;->disconnect()V
 
     .line 130
-    .end local v3           #is:Ljava/io/InputStream;
+    .end local v3    # "is":Ljava/io/InputStream;
     :cond_1
     :goto_1
     return-object v0
 
     .line 116
-    .restart local v3       #is:Ljava/io/InputStream;
+    .restart local v3    # "is":Ljava/io/InputStream;
     :catch_0
     move-exception v4
 
     move-object v2, v4
 
     .line 117
-    .local v2, e:Ljava/io/IOException;
+    .local v2, "e":Ljava/io/IOException;
     :try_start_2
     const-string v4, "FuseAPI"
 
@@ -1334,7 +1334,7 @@
     goto :goto_1
 
     .line 120
-    .end local v2           #e:Ljava/io/IOException;
+    .end local v2    # "e":Ljava/io/IOException;
     :catchall_0
     move-exception v4
 
@@ -1359,13 +1359,13 @@
 
     goto :goto_0
 
-    .restart local v2       #e:Ljava/io/IOException;
+    .restart local v2    # "e":Ljava/io/IOException;
     :catch_2
     move-exception v4
 
     goto :goto_2
 
-    .end local v2           #e:Ljava/io/IOException;
+    .end local v2    # "e":Ljava/io/IOException;
     :catch_3
     move-exception v5
 
@@ -1374,7 +1374,7 @@
 
 .method public downloadImage2(Ljava/lang/String;)Landroid/graphics/Bitmap;
     .locals 14
-    .parameter "url"
+    .param p1, "url"    # Ljava/lang/String;
 
     .prologue
     const/4 v11, 0x0
@@ -1387,47 +1387,47 @@
     const/4 v0, 0x0
 
     .line 354
-    .local v0, bitmap:Landroid/graphics/Bitmap;
+    .local v0, "bitmap":Landroid/graphics/Bitmap;
     new-instance v4, Lorg/apache/http/impl/client/DefaultHttpClient;
 
     invoke-direct {v4}, Lorg/apache/http/impl/client/DefaultHttpClient;-><init>()V
 
     .line 356
-    .local v4, httpClient:Lorg/apache/http/client/HttpClient;
+    .local v4, "httpClient":Lorg/apache/http/client/HttpClient;
     :try_start_0
     new-instance v5, Lorg/apache/http/client/methods/HttpGet;
 
     invoke-direct {v5, p1}, Lorg/apache/http/client/methods/HttpGet;-><init>(Ljava/lang/String;)V
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_2
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 359
-    .local v5, request:Lorg/apache/http/client/methods/HttpUriRequest;
+    .local v5, "request":Lorg/apache/http/client/methods/HttpUriRequest;
     :try_start_1
     invoke-interface {v4, v5}, Lorg/apache/http/client/HttpClient;->execute(Lorg/apache/http/client/methods/HttpUriRequest;)Lorg/apache/http/HttpResponse;
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Lorg/apache/http/client/ClientProtocolException; {:try_start_1 .. :try_end_1} :catch_0
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     move-result-object v6
 
     .line 370
-    .local v6, response:Lorg/apache/http/HttpResponse;
+    .local v6, "response":Lorg/apache/http/HttpResponse;
     :try_start_2
     invoke-interface {v6}, Lorg/apache/http/HttpResponse;->getStatusLine()Lorg/apache/http/StatusLine;
 
     move-result-object v8
 
     .line 371
-    .local v8, statusLine:Lorg/apache/http/StatusLine;
+    .local v8, "statusLine":Lorg/apache/http/StatusLine;
     invoke-interface {v8}, Lorg/apache/http/StatusLine;->getStatusCode()I
 
     move-result v7
 
     .line 372
-    .local v7, statusCode:I
+    .local v7, "statusCode":I
     const/16 v9, 0xc8
 
     if-ne v7, v9, :cond_0
@@ -1438,27 +1438,27 @@
     move-result-object v3
 
     .line 374
-    .local v3, entity:Lorg/apache/http/HttpEntity;
+    .local v3, "entity":Lorg/apache/http/HttpEntity;
     invoke-static {v3}, Lorg/apache/http/util/EntityUtils;->toByteArray(Lorg/apache/http/HttpEntity;)[B
 
     move-result-object v1
 
     .line 375
-    .local v1, bytes:[B
+    .local v1, "bytes":[B
     const/4 v9, 0x0
 
     array-length v10, v1
 
     invoke-static {v1, v9, v10}, Landroid/graphics/BitmapFactory;->decodeByteArray([BII)Landroid/graphics/Bitmap;
     :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
     move-result-object v0
 
     .line 389
-    .end local v1           #bytes:[B
-    .end local v3           #entity:Lorg/apache/http/HttpEntity;
+    .end local v1    # "bytes":[B
+    .end local v3    # "entity":Lorg/apache/http/HttpEntity;
     :goto_0
     invoke-interface {v4}, Lorg/apache/http/client/HttpClient;->getConnectionManager()Lorg/apache/http/conn/ClientConnectionManager;
 
@@ -1466,10 +1466,10 @@
 
     invoke-interface {v9}, Lorg/apache/http/conn/ClientConnectionManager;->shutdown()V
 
-    .end local v5           #request:Lorg/apache/http/client/methods/HttpUriRequest;
-    .end local v6           #response:Lorg/apache/http/HttpResponse;
-    .end local v7           #statusCode:I
-    .end local v8           #statusLine:Lorg/apache/http/StatusLine;
+    .end local v5    # "request":Lorg/apache/http/client/methods/HttpUriRequest;
+    .end local v6    # "response":Lorg/apache/http/HttpResponse;
+    .end local v7    # "statusCode":I
+    .end local v8    # "statusLine":Lorg/apache/http/StatusLine;
     :goto_1
     move-object v9, v0
 
@@ -1478,12 +1478,12 @@
     return-object v9
 
     .line 361
-    .restart local v5       #request:Lorg/apache/http/client/methods/HttpUriRequest;
+    .restart local v5    # "request":Lorg/apache/http/client/methods/HttpUriRequest;
     :catch_0
     move-exception v2
 
     .line 362
-    .local v2, e:Lorg/apache/http/client/ClientProtocolException;
+    .local v2, "e":Lorg/apache/http/client/ClientProtocolException;
     :try_start_3
     const-string v9, "FuseAPI"
 
@@ -1491,8 +1491,8 @@
 
     invoke-static {v9, v10, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_2
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
     .line 389
     invoke-interface {v4}, Lorg/apache/http/client/HttpClient;->getConnectionManager()Lorg/apache/http/conn/ClientConnectionManager;
@@ -1506,12 +1506,12 @@
     goto :goto_2
 
     .line 365
-    .end local v2           #e:Lorg/apache/http/client/ClientProtocolException;
+    .end local v2    # "e":Lorg/apache/http/client/ClientProtocolException;
     :catch_1
     move-exception v2
 
     .line 366
-    .local v2, e:Ljava/io/IOException;
+    .local v2, "e":Ljava/io/IOException;
     :try_start_4
     const-string v9, "FuseAPI"
 
@@ -1519,8 +1519,8 @@
 
     invoke-static {v9, v10, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_0
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_2
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
     .line 389
     invoke-interface {v4}, Lorg/apache/http/client/HttpClient;->getConnectionManager()Lorg/apache/http/conn/ClientConnectionManager;
@@ -1534,10 +1534,10 @@
     goto :goto_2
 
     .line 378
-    .end local v2           #e:Ljava/io/IOException;
-    .restart local v6       #response:Lorg/apache/http/HttpResponse;
-    .restart local v7       #statusCode:I
-    .restart local v8       #statusLine:Lorg/apache/http/StatusLine;
+    .end local v2    # "e":Ljava/io/IOException;
+    .restart local v6    # "response":Lorg/apache/http/HttpResponse;
+    .restart local v7    # "statusCode":I
+    .restart local v8    # "statusLine":Lorg/apache/http/StatusLine;
     :cond_0
     :try_start_5
     const-string v9, "FuseAPI"
@@ -1570,23 +1570,23 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_0
     .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_2
+    .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
     goto :goto_0
 
     .line 382
-    .end local v5           #request:Lorg/apache/http/client/methods/HttpUriRequest;
-    .end local v6           #response:Lorg/apache/http/HttpResponse;
-    .end local v7           #statusCode:I
-    .end local v8           #statusLine:Lorg/apache/http/StatusLine;
+    .end local v5    # "request":Lorg/apache/http/client/methods/HttpUriRequest;
+    .end local v6    # "response":Lorg/apache/http/HttpResponse;
+    .end local v7    # "statusCode":I
+    .end local v8    # "statusLine":Lorg/apache/http/StatusLine;
     :catch_2
     move-exception v9
 
     move-object v2, v9
 
     .line 383
-    .restart local v2       #e:Ljava/io/IOException;
+    .restart local v2    # "e":Ljava/io/IOException;
     :try_start_6
     const-string v9, "FuseAPI"
 
@@ -1605,7 +1605,7 @@
 
     goto :goto_1
 
-    .end local v2           #e:Ljava/io/IOException;
+    .end local v2    # "e":Ljava/io/IOException;
     :catchall_0
     move-exception v9
 
@@ -1620,7 +1620,7 @@
 
 .method public sendRequest(Ljava/lang/String;)Ljava/lang/String;
     .locals 11
-    .parameter "url"
+    .param p1, "url"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -1636,26 +1636,26 @@
     const-string v7, ""
 
     .line 72
-    .local v7, response:Ljava/lang/String;
+    .local v7, "response":Ljava/lang/String;
     invoke-direct {p0, p1}, Lcom/fusepowered/fuseapi/NetworkService;->openHttpConnection(Ljava/lang/String;)Ljava/net/HttpURLConnection;
 
     move-result-object v3
 
     .line 73
-    .local v3, conn:Ljava/net/HttpURLConnection;
+    .local v3, "conn":Ljava/net/HttpURLConnection;
     if-eqz v3, :cond_3
 
     .line 74
     const/4 v5, 0x0
 
     .line 75
-    .local v5, in:Ljava/io/Reader;
+    .local v5, "in":Ljava/io/Reader;
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0, v8}, Ljava/lang/StringBuilder;-><init>(I)V
 
     .line 77
-    .local v0, buf:Ljava/lang/StringBuilder;
+    .local v0, "buf":Ljava/lang/StringBuilder;
     :try_start_0
     new-instance v6, Ljava/io/BufferedReader;
 
@@ -1672,19 +1672,19 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
     .line 78
-    .end local v5           #in:Ljava/io/Reader;
-    .local v6, in:Ljava/io/Reader;
+    .end local v5    # "in":Ljava/io/Reader;
+    .local v6, "in":Ljava/io/Reader;
     const/4 v2, 0x0
 
     .line 79
-    .local v2, charsRead:I
+    .local v2, "charsRead":I
     const/16 v8, 0x3e8
 
     :try_start_1
     new-array v1, v8, [C
 
     .line 80
-    .local v1, charBuf:[C
+    .local v1, "charBuf":[C
     :goto_0
     const/4 v8, 0x0
 
@@ -1708,15 +1708,15 @@
     goto :goto_0
 
     .line 85
-    .end local v1           #charBuf:[C
+    .end local v1    # "charBuf":[C
     :catchall_0
     move-exception v8
 
     move-object v5, v6
 
-    .end local v2           #charsRead:I
-    .end local v6           #in:Ljava/io/Reader;
-    .restart local v5       #in:Ljava/io/Reader;
+    .end local v2    # "charsRead":I
+    .end local v6    # "in":Ljava/io/Reader;
+    .restart local v5    # "in":Ljava/io/Reader;
     :goto_1
     if-eqz v5, :cond_0
 
@@ -1734,10 +1734,10 @@
     throw v8
 
     .line 85
-    .end local v5           #in:Ljava/io/Reader;
-    .restart local v1       #charBuf:[C
-    .restart local v2       #charsRead:I
-    .restart local v6       #in:Ljava/io/Reader;
+    .end local v5    # "in":Ljava/io/Reader;
+    .restart local v1    # "charBuf":[C
+    .restart local v2    # "charsRead":I
+    .restart local v6    # "in":Ljava/io/Reader;
     :cond_1
     if-eqz v6, :cond_2
 
@@ -1758,10 +1758,10 @@
     move-result-object v4
 
     .line 95
-    .local v4, encodedText:Ljava/lang/String;
+    .local v4, "encodedText":Ljava/lang/String;
     new-instance v7, Ljava/lang/String;
 
-    .end local v7           #response:Ljava/lang/String;
+    .end local v7    # "response":Ljava/lang/String;
     invoke-static {v4, v10}, Landroid/util/Base64;->decode(Ljava/lang/String;I)[B
 
     move-result-object v8
@@ -1769,29 +1769,29 @@
     invoke-direct {v7, v8}, Ljava/lang/String;-><init>([B)V
 
     .line 100
-    .end local v0           #buf:Ljava/lang/StringBuilder;
-    .end local v1           #charBuf:[C
-    .end local v2           #charsRead:I
-    .end local v4           #encodedText:Ljava/lang/String;
-    .end local v6           #in:Ljava/io/Reader;
-    .restart local v7       #response:Ljava/lang/String;
+    .end local v0    # "buf":Ljava/lang/StringBuilder;
+    .end local v1    # "charBuf":[C
+    .end local v2    # "charsRead":I
+    .end local v4    # "encodedText":Ljava/lang/String;
+    .end local v6    # "in":Ljava/io/Reader;
+    .restart local v7    # "response":Ljava/lang/String;
     :cond_3
     return-object v7
 
     .line 89
-    .restart local v0       #buf:Ljava/lang/StringBuilder;
-    .restart local v1       #charBuf:[C
-    .restart local v2       #charsRead:I
-    .restart local v6       #in:Ljava/io/Reader;
+    .restart local v0    # "buf":Ljava/lang/StringBuilder;
+    .restart local v1    # "charBuf":[C
+    .restart local v2    # "charsRead":I
+    .restart local v6    # "in":Ljava/io/Reader;
     :catch_0
     move-exception v8
 
     goto :goto_3
 
-    .end local v1           #charBuf:[C
-    .end local v2           #charsRead:I
-    .end local v6           #in:Ljava/io/Reader;
-    .restart local v5       #in:Ljava/io/Reader;
+    .end local v1    # "charBuf":[C
+    .end local v2    # "charsRead":I
+    .end local v6    # "in":Ljava/io/Reader;
+    .restart local v5    # "in":Ljava/io/Reader;
     :catch_1
     move-exception v9
 
@@ -1806,8 +1806,8 @@
 
 .method public sendRequest(Ljava/lang/String;Lcom/fusepowered/util/ActionType;)Ljava/lang/String;
     .locals 19
-    .parameter "json"
-    .parameter "actionType"
+    .param p1, "json"    # Ljava/lang/String;
+    .param p2, "actionType"    # Lcom/fusepowered/util/ActionType;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -1827,13 +1827,13 @@
     move-result-object v6
 
     .line 293
-    .local v6, encodedJson:Ljava/lang/String;
+    .local v6, "encodedJson":Ljava/lang/String;
     invoke-static/range {p2 .. p2}, Lcom/fusepowered/util/ActionType;->getServerUrlForActionCode(Lcom/fusepowered/util/ActionType;)Ljava/lang/String;
 
     move-result-object v9
 
     .line 294
-    .local v9, hostUrl:Ljava/lang/String;
+    .local v9, "hostUrl":Ljava/lang/String;
     const/16 v16, 0x3f
 
     move-object v0, v9
@@ -1845,7 +1845,7 @@
     move-result v10
 
     .line 295
-    .local v10, marker:I
+    .local v10, "marker":I
     const/16 v16, -0x1
 
     move v0, v10
@@ -1869,20 +1869,20 @@
     move-object/from16 v8, v16
 
     .line 297
-    .local v8, host:Ljava/lang/String;
+    .local v8, "host":Ljava/lang/String;
     :goto_0
     new-instance v3, Lorg/apache/http/impl/client/DefaultHttpClient;
 
     invoke-direct {v3}, Lorg/apache/http/impl/client/DefaultHttpClient;-><init>()V
 
     .line 298
-    .local v3, client:Lorg/apache/http/client/HttpClient;
+    .local v3, "client":Lorg/apache/http/client/HttpClient;
     invoke-interface {v3}, Lorg/apache/http/client/HttpClient;->getParams()Lorg/apache/http/params/HttpParams;
 
     move-result-object v12
 
     .line 299
-    .local v12, params:Lorg/apache/http/params/HttpParams;
+    .local v12, "params":Lorg/apache/http/params/HttpParams;
     const v16, 0xea60
 
     move-object v0, v12
@@ -1916,14 +1916,14 @@
     move-result-object v5
 
     .line 309
-    .local v5, encodedAuthorization:Ljava/lang/String;
+    .local v5, "encodedAuthorization":Ljava/lang/String;
     :try_start_0
     new-instance v13, Lorg/apache/http/client/methods/HttpPost;
 
     invoke-direct {v13, v8}, Lorg/apache/http/client/methods/HttpPost;-><init>(Ljava/lang/String;)V
 
     .line 310
-    .local v13, post:Lorg/apache/http/client/methods/HttpPost;
+    .local v13, "post":Lorg/apache/http/client/methods/HttpPost;
     const-string v16, "Authorization"
 
     move-object v0, v13
@@ -1953,7 +1953,7 @@
     invoke-direct {v11}, Ljava/util/ArrayList;-><init>()V
 
     .line 314
-    .local v11, nvps:Ljava/util/List;,"Ljava/util/List<Lorg/apache/http/NameValuePair;>;"
+    .local v11, "nvps":Ljava/util/List;, "Ljava/util/List<Lorg/apache/http/NameValuePair;>;"
     new-instance v16, Lorg/apache/http/message/BasicNameValuePair;
 
     const-string v17, "api_ver"
@@ -2001,7 +2001,7 @@
     invoke-direct {v0, v1, v2}, Lorg/apache/http/client/entity/UrlEncodedFormEntity;-><init>(Ljava/util/List;Ljava/lang/String;)V
 
     .line 321
-    .local v14, reqEntity:Lorg/apache/http/client/entity/UrlEncodedFormEntity;
+    .local v14, "reqEntity":Lorg/apache/http/client/entity/UrlEncodedFormEntity;
     invoke-virtual {v13, v14}, Lorg/apache/http/client/methods/HttpPost;->setEntity(Lorg/apache/http/HttpEntity;)V
 
     .line 324
@@ -2010,7 +2010,7 @@
     invoke-direct {v15}, Lorg/apache/http/impl/client/BasicResponseHandler;-><init>()V
 
     .line 325
-    .local v15, responseHandler:Lorg/apache/http/client/ResponseHandler;,"Lorg/apache/http/client/ResponseHandler<Ljava/lang/String;>;"
+    .local v15, "responseHandler":Lorg/apache/http/client/ResponseHandler;, "Lorg/apache/http/client/ResponseHandler<Ljava/lang/String;>;"
     invoke-interface {v3, v13, v15}, Lorg/apache/http/client/HttpClient;->execute(Lorg/apache/http/client/methods/HttpUriRequest;Lorg/apache/http/client/ResponseHandler;)Ljava/lang/Object;
 
     move-result-object v7
@@ -2020,7 +2020,7 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 334
-    .local v7, encodedResponse:Ljava/lang/String;
+    .local v7, "encodedResponse":Ljava/lang/String;
     invoke-interface {v3}, Lorg/apache/http/client/HttpClient;->getConnectionManager()Lorg/apache/http/conn/ClientConnectionManager;
 
     move-result-object v16
@@ -2047,19 +2047,19 @@
     invoke-direct {v0, v1}, Ljava/lang/String;-><init>([B)V
 
     .line 340
-    .local v4, decodedResponse:Ljava/lang/String;
+    .local v4, "decodedResponse":Ljava/lang/String;
     return-object v4
 
-    .end local v3           #client:Lorg/apache/http/client/HttpClient;
-    .end local v4           #decodedResponse:Ljava/lang/String;
-    .end local v5           #encodedAuthorization:Ljava/lang/String;
-    .end local v7           #encodedResponse:Ljava/lang/String;
-    .end local v8           #host:Ljava/lang/String;
-    .end local v11           #nvps:Ljava/util/List;,"Ljava/util/List<Lorg/apache/http/NameValuePair;>;"
-    .end local v12           #params:Lorg/apache/http/params/HttpParams;
-    .end local v13           #post:Lorg/apache/http/client/methods/HttpPost;
-    .end local v14           #reqEntity:Lorg/apache/http/client/entity/UrlEncodedFormEntity;
-    .end local v15           #responseHandler:Lorg/apache/http/client/ResponseHandler;,"Lorg/apache/http/client/ResponseHandler<Ljava/lang/String;>;"
+    .end local v3    # "client":Lorg/apache/http/client/HttpClient;
+    .end local v4    # "decodedResponse":Ljava/lang/String;
+    .end local v5    # "encodedAuthorization":Ljava/lang/String;
+    .end local v7    # "encodedResponse":Ljava/lang/String;
+    .end local v8    # "host":Ljava/lang/String;
+    .end local v11    # "nvps":Ljava/util/List;, "Ljava/util/List<Lorg/apache/http/NameValuePair;>;"
+    .end local v12    # "params":Lorg/apache/http/params/HttpParams;
+    .end local v13    # "post":Lorg/apache/http/client/methods/HttpPost;
+    .end local v14    # "reqEntity":Lorg/apache/http/client/entity/UrlEncodedFormEntity;
+    .end local v15    # "responseHandler":Lorg/apache/http/client/ResponseHandler;, "Lorg/apache/http/client/ResponseHandler<Ljava/lang/String;>;"
     :cond_0
     move-object v8, v9
 
@@ -2067,10 +2067,10 @@
     goto/16 :goto_0
 
     .line 334
-    .restart local v3       #client:Lorg/apache/http/client/HttpClient;
-    .restart local v5       #encodedAuthorization:Ljava/lang/String;
-    .restart local v8       #host:Ljava/lang/String;
-    .restart local v12       #params:Lorg/apache/http/params/HttpParams;
+    .restart local v3    # "client":Lorg/apache/http/client/HttpClient;
+    .restart local v5    # "encodedAuthorization":Ljava/lang/String;
+    .restart local v8    # "host":Ljava/lang/String;
+    .restart local v12    # "params":Lorg/apache/http/params/HttpParams;
     :catchall_0
     move-exception v16
 

@@ -12,7 +12,6 @@
 # direct methods
 .method public constructor <init>(Lcom/flurry/android/AdUnit;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 16

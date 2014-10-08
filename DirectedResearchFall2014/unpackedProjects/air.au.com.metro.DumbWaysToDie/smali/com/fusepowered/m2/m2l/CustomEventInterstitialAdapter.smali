@@ -61,9 +61,9 @@
 # direct methods
 .method public constructor <init>(Lcom/fusepowered/m2/m2l/MoPubInterstitial;Ljava/lang/String;Ljava/lang/String;)V
     .locals 5
-    .parameter "moPubInterstitial"
-    .parameter "className"
-    .parameter "jsonParams"
+    .param p1, "moPubInterstitial"    # Lcom/fusepowered/m2/m2l/MoPubInterstitial;
+    .param p2, "className"    # Ljava/lang/String;
+    .param p3, "jsonParams"    # Ljava/lang/String;
 
     .prologue
     const-string v4, "MoPub"
@@ -187,7 +187,7 @@
     move-result-object v0
 
     .line 98
-    .local v0, adViewController:Lcom/fusepowered/m2/m2l/AdViewController;
+    .local v0, "adViewController":Lcom/fusepowered/m2/m2l/AdViewController;
     if-eqz v0, :cond_2
 
     .line 99
@@ -206,14 +206,14 @@
     return-void
 
     .line 80
-    .end local v0           #adViewController:Lcom/fusepowered/m2/m2l/AdViewController;
+    .end local v0    # "adViewController":Lcom/fusepowered/m2/m2l/AdViewController;
     :catch_0
     move-exception v2
 
     move-object v1, v2
 
     .line 81
-    .local v1, exception:Ljava/lang/Exception;
+    .local v1, "exception":Ljava/lang/Exception;
     const-string v2, "MoPub"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -252,14 +252,14 @@
     goto :goto_0
 
     .line 88
-    .end local v1           #exception:Ljava/lang/Exception;
+    .end local v1    # "exception":Ljava/lang/Exception;
     :catch_1
     move-exception v2
 
     move-object v1, v2
 
     .line 89
-    .restart local v1       #exception:Ljava/lang/Exception;
+    .restart local v1    # "exception":Ljava/lang/Exception;
     const-string v2, "MoPub"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -519,7 +519,7 @@
 
 .method public onInterstitialFailed(Lcom/fusepowered/m2/m2l/MoPubErrorCode;)V
     .locals 1
-    .parameter "errorCode"
+    .param p1, "errorCode"    # Lcom/fusepowered/m2/m2l/MoPubErrorCode;
 
     .prologue
     .line 177
@@ -634,7 +634,7 @@
 
 .method setAdapterListener(Lcom/fusepowered/m2/m2l/CustomEventInterstitialAdapter$CustomEventInterstitialAdapterListener;)V
     .locals 0
-    .parameter "listener"
+    .param p1, "listener"    # Lcom/fusepowered/m2/m2l/CustomEventInterstitialAdapter$CustomEventInterstitialAdapterListener;
 
     .prologue
     .line 135
@@ -646,7 +646,7 @@
 
 .method setCustomEventInterstitial(Lcom/fusepowered/m2/m2l/CustomEventInterstitial;)V
     .locals 0
-    .parameter "interstitial"
+    .param p1, "interstitial"    # Lcom/fusepowered/m2/m2l/CustomEventInterstitial;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 

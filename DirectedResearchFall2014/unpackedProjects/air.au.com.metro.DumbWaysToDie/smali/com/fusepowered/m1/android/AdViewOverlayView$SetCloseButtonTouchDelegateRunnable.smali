@@ -32,11 +32,11 @@
 # direct methods
 .method constructor <init>(Landroid/widget/Button;IIII)V
     .locals 0
-    .parameter "closeButton"
-    .parameter "topMargin"
-    .parameter "leftMargin"
-    .parameter "bottomMargin"
-    .parameter "rightMargin"
+    .param p1, "closeButton"    # Landroid/widget/Button;
+    .param p2, "topMargin"    # I
+    .param p3, "leftMargin"    # I
+    .param p4, "bottomMargin"    # I
+    .param p5, "rightMargin"    # I
 
     .prologue
     .line 437
@@ -73,7 +73,7 @@
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     .line 449
-    .local v0, delegateArea:Landroid/graphics/Rect;
+    .local v0, "delegateArea":Landroid/graphics/Rect;
     iget-object v2, p0, Lcom/fusepowered/m1/android/AdViewOverlayView$SetCloseButtonTouchDelegateRunnable;->closeButton:Landroid/widget/Button;
 
     invoke-virtual {v2, v0}, Landroid/widget/Button;->getHitRect(Landroid/graphics/Rect;)V
@@ -122,7 +122,7 @@
     invoke-direct {v1, v0, v2}, Landroid/view/TouchDelegate;-><init>(Landroid/graphics/Rect;Landroid/view/View;)V
 
     .line 457
-    .local v1, expandedArea:Landroid/view/TouchDelegate;
+    .local v1, "expandedArea":Landroid/view/TouchDelegate;
     const-class v2, Landroid/view/View;
 
     iget-object v3, p0, Lcom/fusepowered/m1/android/AdViewOverlayView$SetCloseButtonTouchDelegateRunnable;->closeButton:Landroid/widget/Button;
@@ -144,7 +144,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/fusepowered/m1/android/AdViewOverlayView$SetCloseButtonTouchDelegateRunnable;
     check-cast p0, Landroid/view/View;
 
     invoke-virtual {p0, v1}, Landroid/view/View;->setTouchDelegate(Landroid/view/TouchDelegate;)V

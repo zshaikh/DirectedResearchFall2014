@@ -356,7 +356,7 @@
 .method private getScaledSize(IFII)I
     .locals 6
 
-    const-wide/high16 v4, 0x3fe0
+    const-wide/high16 v4, 0x3fe0000000000000L
 
     int-to-float v0, p1
 
@@ -366,7 +366,7 @@
 
     if-gt v0, p3, :cond_0
 
-    const-wide/high16 v0, 0x3ff0
+    const-wide/high16 v0, 0x3ff0000000000000L
 
     :goto_0
     int-to-double v2, p1
@@ -572,7 +572,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
-    const/high16 v1, -0x3400
+    const/high16 v1, -0x34000000
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setBackgroundColor(I)V
 

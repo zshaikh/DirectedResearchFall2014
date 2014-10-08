@@ -95,10 +95,8 @@
 
 .method private constructor <init>(Ljava/lang/String;IZZ)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter "allowsKatanaAuth"
-    .parameter "allowsWebViewAuth"
+    .param p3, "allowsKatanaAuth"    # Z
+    .param p4, "allowsWebViewAuth"    # Z
 
     .prologue
     .line 47
@@ -116,7 +114,6 @@
 
 .method public static valueOf(Ljava/lang/String;)Lcom/facebook/SessionLoginBehavior;
     .locals 1
-    .parameter
 
     .prologue
     .line 1

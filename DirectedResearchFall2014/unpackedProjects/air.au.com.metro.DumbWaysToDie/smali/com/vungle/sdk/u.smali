@@ -62,7 +62,6 @@
 
 .method public static a(Landroid/content/Context;)Lcom/vungle/sdk/ap;
     .locals 13
-    .parameter
 
     .prologue
     const/4 v12, 0x0

@@ -12,8 +12,8 @@
 # direct methods
 .method public constructor <init>(Ljava/lang/String;Z)V
     .locals 0
-    .parameter "value"
-    .parameter "isBinary"
+    .param p1, "value"    # Ljava/lang/String;
+    .param p2, "isBinary"    # Z
 
     .prologue
     .line 8
@@ -53,7 +53,7 @@
 
 .method public setBinary(Z)V
     .locals 0
-    .parameter "isBinary"
+    .param p1, "isBinary"    # Z
 
     .prologue
     .line 22
@@ -65,7 +65,7 @@
 
 .method public setValue(Ljava/lang/String;)V
     .locals 0
-    .parameter "value"
+    .param p1, "value"    # Ljava/lang/String;
 
     .prologue
     .line 16
@@ -111,7 +111,7 @@
     move-result-object v0
 
     .line 30
-    .local v0, buf:Ljava/lang/StringBuilder;
+    .local v0, "buf":Ljava/lang/StringBuilder;
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1

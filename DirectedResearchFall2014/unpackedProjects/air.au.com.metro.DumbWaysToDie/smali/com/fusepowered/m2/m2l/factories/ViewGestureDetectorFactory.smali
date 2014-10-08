@@ -34,9 +34,9 @@
 
 .method public static create(Landroid/content/Context;Landroid/view/View;Lcom/fusepowered/m2/m2l/AdConfiguration;)Lcom/fusepowered/m2/m2l/ViewGestureDetector;
     .locals 1
-    .parameter "context"
-    .parameter "view"
-    .parameter "adConfiguration"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "view"    # Landroid/view/View;
+    .param p2, "adConfiguration"    # Lcom/fusepowered/m2/m2l/AdConfiguration;
 
     .prologue
     .line 18
@@ -51,7 +51,7 @@
 
 .method public static setInstance(Lcom/fusepowered/m2/m2l/factories/ViewGestureDetectorFactory;)V
     .locals 0
-    .parameter "factory"
+    .param p0, "factory"    # Lcom/fusepowered/m2/m2l/factories/ViewGestureDetectorFactory;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -67,9 +67,9 @@
 # virtual methods
 .method protected internalCreate(Landroid/content/Context;Landroid/view/View;Lcom/fusepowered/m2/m2l/AdConfiguration;)Lcom/fusepowered/m2/m2l/ViewGestureDetector;
     .locals 1
-    .parameter "context"
-    .parameter "view"
-    .parameter "adConfiguration"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "view"    # Landroid/view/View;
+    .param p3, "adConfiguration"    # Lcom/fusepowered/m2/m2l/AdConfiguration;
 
     .prologue
     .line 22

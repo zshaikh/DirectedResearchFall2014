@@ -28,9 +28,6 @@
 # direct methods
 .method constructor <init>(Lcom/fiksu/asotracking/FiksuConfigurationManager;Landroid/content/Context;Ljava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 1
@@ -62,7 +59,7 @@
 
     iget-object v2, p0, Lcom/fiksu/asotracking/FiksuConfigurationManager$1;->val$url:Ljava/lang/String;
 
-    #calls: Lcom/fiksu/asotracking/FiksuConfigurationManager;->updateConfigurationFromServerBlocking(Landroid/content/Context;Ljava/lang/String;)Z
+    # invokes: Lcom/fiksu/asotracking/FiksuConfigurationManager;->updateConfigurationFromServerBlocking(Landroid/content/Context;Ljava/lang/String;)Z
     invoke-static {v0, v1, v2}, Lcom/fiksu/asotracking/FiksuConfigurationManager;->access$1(Lcom/fiksu/asotracking/FiksuConfigurationManager;Landroid/content/Context;Ljava/lang/String;)Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -70,7 +67,7 @@
     .line 129
     iget-object v0, p0, Lcom/fiksu/asotracking/FiksuConfigurationManager$1;->this$0:Lcom/fiksu/asotracking/FiksuConfigurationManager;
 
-    #getter for: Lcom/fiksu/asotracking/FiksuConfigurationManager;->mIsUpdatingConfiguration:Ljava/util/concurrent/atomic/AtomicBoolean;
+    # getter for: Lcom/fiksu/asotracking/FiksuConfigurationManager;->mIsUpdatingConfiguration:Ljava/util/concurrent/atomic/AtomicBoolean;
     invoke-static {v0}, Lcom/fiksu/asotracking/FiksuConfigurationManager;->access$0(Lcom/fiksu/asotracking/FiksuConfigurationManager;)Ljava/util/concurrent/atomic/AtomicBoolean;
 
     move-result-object v0
@@ -87,7 +84,7 @@
     .line 129
     iget-object v1, p0, Lcom/fiksu/asotracking/FiksuConfigurationManager$1;->this$0:Lcom/fiksu/asotracking/FiksuConfigurationManager;
 
-    #getter for: Lcom/fiksu/asotracking/FiksuConfigurationManager;->mIsUpdatingConfiguration:Ljava/util/concurrent/atomic/AtomicBoolean;
+    # getter for: Lcom/fiksu/asotracking/FiksuConfigurationManager;->mIsUpdatingConfiguration:Ljava/util/concurrent/atomic/AtomicBoolean;
     invoke-static {v1}, Lcom/fiksu/asotracking/FiksuConfigurationManager;->access$0(Lcom/fiksu/asotracking/FiksuConfigurationManager;)Ljava/util/concurrent/atomic/AtomicBoolean;
 
     move-result-object v1

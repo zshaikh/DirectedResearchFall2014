@@ -21,8 +21,6 @@
 # virtual methods
 .method public final checkClientTrusted([Ljava/security/cert/X509Certificate;Ljava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/security/cert/CertificateException;
@@ -36,8 +34,6 @@
 
 .method public final checkServerTrusted([Ljava/security/cert/X509Certificate;Ljava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/security/cert/CertificateException;

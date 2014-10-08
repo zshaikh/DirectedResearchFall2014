@@ -72,7 +72,6 @@
 
 .method protected static a(Lcom/chartboost/sdk/Chartboost$CBAPIResponseCallback;)V
     .locals 3
-    .parameter
 
     .prologue
     .line 55
@@ -102,8 +101,6 @@
 
 .method private a(Lcom/chartboost/sdk/impl/k;Lcom/chartboost/sdk/Chartboost$CBAPIResponseCallback;)V
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     .line 61
@@ -146,9 +143,6 @@
 
 .method protected static a(Ljava/lang/String;ILcom/chartboost/sdk/Chartboost$CBAPIResponseCallback;)V
     .locals 5
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const/16 v4, 0xa
@@ -222,8 +216,6 @@
 
 .method protected static a(Ljava/lang/String;Lcom/chartboost/sdk/Chartboost$CBAPIResponseCallback;)V
     .locals 4
-    .parameter
-    .parameter
 
     .prologue
     const/4 v3, 0x1
@@ -275,8 +267,6 @@
 
 .method protected static b(Ljava/lang/String;Lcom/chartboost/sdk/Chartboost$CBAPIResponseCallback;)V
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     .line 49

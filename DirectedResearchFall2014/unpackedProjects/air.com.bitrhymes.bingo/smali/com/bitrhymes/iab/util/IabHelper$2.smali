@@ -32,11 +32,6 @@
 # direct methods
 .method constructor <init>(Lcom/bitrhymes/iab/util/IabHelper;ZLjava/util/List;Landroid/os/Handler;Lcom/bitrhymes/iab/util/IabHelper$QueryInventoryFinishedListener;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 1
@@ -72,11 +67,11 @@
     invoke-direct {v3, v5, v6}, Lcom/bitrhymes/iab/util/IabResult;-><init>(ILjava/lang/String;)V
 
     .line 586
-    .local v3, result:Lcom/bitrhymes/iab/util/IabResult;
+    .local v3, "result":Lcom/bitrhymes/iab/util/IabResult;
     const/4 v1, 0x0
 
     .line 588
-    .local v1, inv:Lcom/bitrhymes/iab/util/Inventory;
+    .local v1, "inv":Lcom/bitrhymes/iab/util/Inventory;
     :try_start_0
     iget-object v5, p0, Lcom/bitrhymes/iab/util/IabHelper$2;->this$0:Lcom/bitrhymes/iab/util/IabHelper;
 
@@ -100,11 +95,11 @@
     move-object v4, v3
 
     .line 597
-    .local v4, result_f:Lcom/bitrhymes/iab/util/IabResult;
+    .local v4, "result_f":Lcom/bitrhymes/iab/util/IabResult;
     move-object v2, v1
 
     .line 598
-    .local v2, inv_f:Lcom/bitrhymes/iab/util/Inventory;
+    .local v2, "inv_f":Lcom/bitrhymes/iab/util/Inventory;
     iget-object v5, p0, Lcom/bitrhymes/iab/util/IabHelper$2;->val$handler:Landroid/os/Handler;
 
     new-instance v6, Lcom/bitrhymes/iab/util/IabHelper$2$1;
@@ -119,15 +114,15 @@
     return-void
 
     .line 590
-    .end local v2           #inv_f:Lcom/bitrhymes/iab/util/Inventory;
-    .end local v4           #result_f:Lcom/bitrhymes/iab/util/IabResult;
+    .end local v2    # "inv_f":Lcom/bitrhymes/iab/util/Inventory;
+    .end local v4    # "result_f":Lcom/bitrhymes/iab/util/IabResult;
     :catch_0
     move-exception v5
 
     move-object v0, v5
 
     .line 591
-    .local v0, ex:Lcom/bitrhymes/iab/util/IabException;
+    .local v0, "ex":Lcom/bitrhymes/iab/util/IabException;
     invoke-virtual {v0}, Lcom/bitrhymes/iab/util/IabException;->getResult()Lcom/bitrhymes/iab/util/IabResult;
 
     move-result-object v3

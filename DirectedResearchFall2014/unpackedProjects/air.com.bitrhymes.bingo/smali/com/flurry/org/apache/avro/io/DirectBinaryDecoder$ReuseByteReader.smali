@@ -23,8 +23,7 @@
 # direct methods
 .method public constructor <init>(Lcom/flurry/org/apache/avro/io/DirectBinaryDecoder;Lcom/flurry/org/apache/avro/util/ByteBufferInputStream;)V
     .locals 1
-    .parameter
-    .parameter "bbi"
+    .param p2, "bbi"    # Lcom/flurry/org/apache/avro/util/ByteBufferInputStream;
 
     .prologue
     .line 58
@@ -45,8 +44,8 @@
 # virtual methods
 .method public read(Ljava/nio/ByteBuffer;I)Ljava/nio/ByteBuffer;
     .locals 1
-    .parameter "old"
-    .parameter "length"
+    .param p1, "old"    # Ljava/nio/ByteBuffer;
+    .param p2, "length"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;

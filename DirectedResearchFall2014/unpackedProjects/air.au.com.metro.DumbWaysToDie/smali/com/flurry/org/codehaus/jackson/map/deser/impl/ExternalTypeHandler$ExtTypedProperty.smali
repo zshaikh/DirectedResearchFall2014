@@ -23,8 +23,8 @@
 # direct methods
 .method public constructor <init>(Lcom/flurry/org/codehaus/jackson/map/deser/SettableBeanProperty;Ljava/lang/String;)V
     .locals 0
-    .parameter "property"
-    .parameter "typePropertyName"
+    .param p1, "property"    # Lcom/flurry/org/codehaus/jackson/map/deser/SettableBeanProperty;
+    .param p2, "typePropertyName"    # Ljava/lang/String;
 
     .prologue
     .line 158
@@ -64,7 +64,7 @@
 
 .method public hasTypePropertyName(Ljava/lang/String;)Z
     .locals 1
-    .parameter "n"
+    .param p1, "n"    # Ljava/lang/String;
 
     .prologue
     .line 164

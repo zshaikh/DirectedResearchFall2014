@@ -26,8 +26,6 @@
 # direct methods
 .method constructor <init>(Landroid/content/Context;I)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 1
@@ -63,6 +61,7 @@
 
     .line 176
     :cond_0
+    # getter for: Lcom/AdX/tag/AdXConnect;->AdXURLConnection:Lcom/AdX/tag/AdXURLConnection;
     invoke-static {}, Lcom/AdX/tag/AdXConnect;->access$4()Lcom/AdX/tag/AdXURLConnection;
 
     move-result-object v0
@@ -78,6 +77,7 @@
 
     .line 179
     :cond_1
+    # getter for: Lcom/AdX/tag/AdXConnect;->AdXConnectInstance:Lcom/AdX/tag/AdXConnect;
     invoke-static {}, Lcom/AdX/tag/AdXConnect;->access$6()Lcom/AdX/tag/AdXConnect;
 
     move-result-object v0

@@ -46,10 +46,10 @@
 # direct methods
 .method private constructor <init>(Landroid/app/Activity;Landroid/support/v4/app/Fragment;Lcom/facebook/widget/FacebookDialog$PendingCall;Lcom/facebook/widget/FacebookDialog$OnPresentCallback;)V
     .locals 0
-    .parameter "activity"
-    .parameter "fragment"
-    .parameter "appCall"
-    .parameter "onPresentCallback"
+    .param p1, "activity"    # Landroid/app/Activity;
+    .param p2, "fragment"    # Landroid/support/v4/app/Fragment;
+    .param p3, "appCall"    # Lcom/facebook/widget/FacebookDialog$PendingCall;
+    .param p4, "onPresentCallback"    # Lcom/facebook/widget/FacebookDialog$OnPresentCallback;
 
     .prologue
     .line 186
@@ -73,11 +73,6 @@
 
 .method synthetic constructor <init>(Landroid/app/Activity;Landroid/support/v4/app/Fragment;Lcom/facebook/widget/FacebookDialog$PendingCall;Lcom/facebook/widget/FacebookDialog$OnPresentCallback;Lcom/facebook/widget/FacebookDialog;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 186
@@ -88,8 +83,6 @@
 
 .method static synthetic access$1(Landroid/content/Context;Ljava/lang/Integer;)I
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 286
@@ -114,8 +107,8 @@
 
 .method public static varargs canPresentOpenGraphActionDialog(Landroid/content/Context;[Lcom/facebook/widget/FacebookDialog$OpenGraphActionDialogFeature;)Z
     .locals 1
-    .parameter "context"
-    .parameter "features"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "features"    # [Lcom/facebook/widget/FacebookDialog$OpenGraphActionDialogFeature;
 
     .prologue
     .line 278
@@ -134,8 +127,8 @@
 
 .method public static varargs canPresentShareDialog(Landroid/content/Context;[Lcom/facebook/widget/FacebookDialog$ShareDialogFeature;)Z
     .locals 1
-    .parameter "context"
-    .parameter "features"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "features"    # [Lcom/facebook/widget/FacebookDialog$ShareDialogFeature;
 
     .prologue
     .line 263
@@ -177,7 +170,6 @@
 
 .method private static getMinVersionForFeatures(Ljava/lang/Iterable;)I
     .locals 4
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -190,11 +182,11 @@
 
     .prologue
     .line 297
-    .local p0, features:Ljava/lang/Iterable;,"Ljava/lang/Iterable<+Lcom/facebook/widget/FacebookDialog$DialogFeature;>;"
-    const/high16 v1, -0x8000
+    .local p0, "features":Ljava/lang/Iterable;, "Ljava/lang/Iterable<+Lcom/facebook/widget/FacebookDialog$DialogFeature;>;"
+    const/high16 v1, -0x80000000
 
     .line 298
-    .local v1, minVersion:I
+    .local v1, "minVersion":I
     invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
@@ -218,7 +210,7 @@
     check-cast v0, Lcom/facebook/widget/FacebookDialog$DialogFeature;
 
     .line 300
-    .local v0, feature:Lcom/facebook/widget/FacebookDialog$DialogFeature;
+    .local v0, "feature":Lcom/facebook/widget/FacebookDialog$DialogFeature;
     invoke-interface {v0}, Lcom/facebook/widget/FacebookDialog$DialogFeature;->getMinVersion()I
 
     move-result v3
@@ -232,7 +224,7 @@
 
 .method public static getNativeDialogCompletionGesture(Landroid/os/Bundle;)Ljava/lang/String;
     .locals 1
-    .parameter "result"
+    .param p0, "result"    # Landroid/os/Bundle;
 
     .prologue
     .line 167
@@ -247,7 +239,7 @@
 
 .method public static getNativeDialogDidComplete(Landroid/os/Bundle;)Z
     .locals 2
-    .parameter "result"
+    .param p0, "result"    # Landroid/os/Bundle;
 
     .prologue
     .line 156
@@ -264,7 +256,7 @@
 
 .method public static getNativeDialogPostId(Landroid/os/Bundle;)Ljava/lang/String;
     .locals 1
-    .parameter "result"
+    .param p0, "result"    # Landroid/os/Bundle;
 
     .prologue
     .line 178
@@ -279,8 +271,8 @@
 
 .method private static getProtocolVersionForNativeDialog(Landroid/content/Context;Ljava/lang/Integer;)I
     .locals 1
-    .parameter "context"
-    .parameter "requiredVersion"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "requiredVersion"    # Ljava/lang/Integer;
 
     .prologue
     .line 287
@@ -297,11 +289,11 @@
 
 .method public static handleActivityResult(Landroid/content/Context;Lcom/facebook/widget/FacebookDialog$PendingCall;ILandroid/content/Intent;Lcom/facebook/widget/FacebookDialog$Callback;)Z
     .locals 3
-    .parameter "context"
-    .parameter "appCall"
-    .parameter "requestCode"
-    .parameter "data"
-    .parameter "callback"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "appCall"    # Lcom/facebook/widget/FacebookDialog$PendingCall;
+    .param p2, "requestCode"    # I
+    .param p3, "data"    # Landroid/content/Intent;
+    .param p4, "callback"    # Lcom/facebook/widget/FacebookDialog$Callback;
 
     .prologue
     .line 231
@@ -350,7 +342,7 @@
     move-result-object v0
 
     .line 242
-    .local v0, error:Ljava/lang/Exception;
+    .local v0, "error":Ljava/lang/Exception;
     invoke-virtual {p3}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object v1
@@ -358,7 +350,7 @@
     invoke-interface {p4, p1, v0, v1}, Lcom/facebook/widget/FacebookDialog$Callback;->onError(Lcom/facebook/widget/FacebookDialog$PendingCall;Ljava/lang/Exception;Landroid/os/Bundle;)V
 
     .line 248
-    .end local v0           #error:Ljava/lang/Exception;
+    .end local v0    # "error":Ljava/lang/Exception;
     :cond_2
     :goto_1
     const/4 v1, 0x1
@@ -378,8 +370,7 @@
 
 .method private static handleCanPresent(Landroid/content/Context;Ljava/lang/Iterable;)Z
     .locals 2
-    .parameter "context"
-    .parameter
+    .param p0, "context"    # Landroid/content/Context;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -393,7 +384,7 @@
 
     .prologue
     .line 282
-    .local p1, features:Ljava/lang/Iterable;,"Ljava/lang/Iterable<+Lcom/facebook/widget/FacebookDialog$DialogFeature;>;"
+    .local p1, "features":Ljava/lang/Iterable;, "Ljava/lang/Iterable<+Lcom/facebook/widget/FacebookDialog$DialogFeature;>;"
     invoke-static {p1}, Lcom/facebook/widget/FacebookDialog;->getMinVersionForFeatures(Ljava/lang/Iterable;)I
 
     move-result v0
@@ -480,7 +471,7 @@
     move-object v0, v1
 
     .line 206
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     new-instance v1, Lcom/facebook/FacebookException;
 
     invoke-direct {v1, v0}, Lcom/facebook/FacebookException;-><init>(Ljava/lang/Throwable;)V
@@ -488,7 +479,7 @@
     throw v1
 
     .line 213
-    .end local v0           #e:Ljava/lang/Exception;
+    .end local v0    # "e":Ljava/lang/Exception;
     :cond_1
     iget-object v1, p0, Lcom/facebook/widget/FacebookDialog;->activity:Landroid/app/Activity;
 

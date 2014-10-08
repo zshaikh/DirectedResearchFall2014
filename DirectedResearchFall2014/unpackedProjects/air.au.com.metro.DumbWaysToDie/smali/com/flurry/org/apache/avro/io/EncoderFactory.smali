@@ -17,7 +17,7 @@
 
 .field private static final DEFAULT_BUFFER_SIZE:I = 0x800
 
-.field private static final DEFAULT_FACTORY:Lcom/flurry/org/apache/avro/io/EncoderFactory; = null
+.field private static final DEFAULT_FACTORY:Lcom/flurry/org/apache/avro/io/EncoderFactory;
 
 .field private static final MAX_BLOCK_BUFFER_SIZE:I = 0x40000000
 
@@ -60,7 +60,7 @@
     iput v0, p0, Lcom/flurry/org/apache/avro/io/EncoderFactory;->binaryBufferSize:I
 
     .line 53
-    const/high16 v0, 0x1
+    const/high16 v0, 0x10000
 
     iput v0, p0, Lcom/flurry/org/apache/avro/io/EncoderFactory;->binaryBlockSize:I
 
@@ -82,8 +82,8 @@
 # virtual methods
 .method public binaryEncoder(Ljava/io/OutputStream;Lcom/flurry/org/apache/avro/io/BinaryEncoder;)Lcom/flurry/org/apache/avro/io/BinaryEncoder;
     .locals 2
-    .parameter "out"
-    .parameter "reuse"
+    .param p1, "out"    # Ljava/io/OutputStream;
+    .param p2, "reuse"    # Lcom/flurry/org/apache/avro/io/BinaryEncoder;
 
     .prologue
     .line 171
@@ -110,15 +110,15 @@
     invoke-direct {v0, p1, v1}, Lcom/flurry/org/apache/avro/io/BufferedBinaryEncoder;-><init>(Ljava/io/OutputStream;I)V
 
     .line 174
-    .end local p2
+    .end local p2    # "reuse":Lcom/flurry/org/apache/avro/io/BinaryEncoder;
     :goto_0
     return-object v0
 
-    .restart local p2
+    .restart local p2    # "reuse":Lcom/flurry/org/apache/avro/io/BinaryEncoder;
     :cond_1
     check-cast p2, Lcom/flurry/org/apache/avro/io/BufferedBinaryEncoder;
 
-    .end local p2
+    .end local p2    # "reuse":Lcom/flurry/org/apache/avro/io/BinaryEncoder;
     iget v0, p0, Lcom/flurry/org/apache/avro/io/EncoderFactory;->binaryBufferSize:I
 
     invoke-virtual {p2, p1, v0}, Lcom/flurry/org/apache/avro/io/BufferedBinaryEncoder;->configure(Ljava/io/OutputStream;I)Lcom/flurry/org/apache/avro/io/BufferedBinaryEncoder;
@@ -130,8 +130,8 @@
 
 .method public blockingBinaryEncoder(Ljava/io/OutputStream;Lcom/flurry/org/apache/avro/io/BinaryEncoder;)Lcom/flurry/org/apache/avro/io/BinaryEncoder;
     .locals 3
-    .parameter "out"
-    .parameter "reuse"
+    .param p1, "out"    # Ljava/io/OutputStream;
+    .param p2, "reuse"    # Lcom/flurry/org/apache/avro/io/BinaryEncoder;
 
     .prologue
     const/16 v2, 0x20
@@ -160,15 +160,15 @@
     invoke-direct {v0, p1, v1, v2}, Lcom/flurry/org/apache/avro/io/BlockingBinaryEncoder;-><init>(Ljava/io/OutputStream;II)V
 
     .line 256
-    .end local p2
+    .end local p2    # "reuse":Lcom/flurry/org/apache/avro/io/BinaryEncoder;
     :goto_0
     return-object v0
 
-    .restart local p2
+    .restart local p2    # "reuse":Lcom/flurry/org/apache/avro/io/BinaryEncoder;
     :cond_1
     check-cast p2, Lcom/flurry/org/apache/avro/io/BlockingBinaryEncoder;
 
-    .end local p2
+    .end local p2    # "reuse":Lcom/flurry/org/apache/avro/io/BinaryEncoder;
     iget v0, p0, Lcom/flurry/org/apache/avro/io/EncoderFactory;->binaryBlockSize:I
 
     invoke-virtual {p2, p1, v0, v2}, Lcom/flurry/org/apache/avro/io/BlockingBinaryEncoder;->configure(Ljava/io/OutputStream;II)Lcom/flurry/org/apache/avro/io/BlockingBinaryEncoder;
@@ -180,7 +180,7 @@
 
 .method public configureBlockSize(I)Lcom/flurry/org/apache/avro/io/EncoderFactory;
     .locals 1
-    .parameter "size"
+    .param p1, "size"    # I
 
     .prologue
     .line 118
@@ -193,12 +193,12 @@
 
     .line 120
     :cond_0
-    const/high16 v0, 0x4000
+    const/high16 v0, 0x40000000
 
     if-le p1, v0, :cond_1
 
     .line 121
-    const/high16 p1, 0x4000
+    const/high16 p1, 0x40000000
 
     .line 122
     :cond_1
@@ -210,7 +210,7 @@
 
 .method public configureBufferSize(I)Lcom/flurry/org/apache/avro/io/EncoderFactory;
     .locals 1
-    .parameter "size"
+    .param p1, "size"    # I
 
     .prologue
     .line 82
@@ -223,12 +223,12 @@
 
     .line 84
     :cond_0
-    const/high16 v0, 0x100
+    const/high16 v0, 0x1000000
 
     if-le p1, v0, :cond_1
 
     .line 85
-    const/high16 p1, 0x100
+    const/high16 p1, 0x1000000
 
     .line 86
     :cond_1
@@ -240,8 +240,8 @@
 
 .method public directBinaryEncoder(Ljava/io/OutputStream;Lcom/flurry/org/apache/avro/io/BinaryEncoder;)Lcom/flurry/org/apache/avro/io/BinaryEncoder;
     .locals 2
-    .parameter "out"
-    .parameter "reuse"
+    .param p1, "out"    # Ljava/io/OutputStream;
+    .param p2, "reuse"    # Lcom/flurry/org/apache/avro/io/BinaryEncoder;
 
     .prologue
     .line 212
@@ -266,15 +266,15 @@
     invoke-direct {v0, p1}, Lcom/flurry/org/apache/avro/io/DirectBinaryEncoder;-><init>(Ljava/io/OutputStream;)V
 
     .line 215
-    .end local p2
+    .end local p2    # "reuse":Lcom/flurry/org/apache/avro/io/BinaryEncoder;
     :goto_0
     return-object v0
 
-    .restart local p2
+    .restart local p2    # "reuse":Lcom/flurry/org/apache/avro/io/BinaryEncoder;
     :cond_1
     check-cast p2, Lcom/flurry/org/apache/avro/io/DirectBinaryEncoder;
 
-    .end local p2
+    .end local p2    # "reuse":Lcom/flurry/org/apache/avro/io/BinaryEncoder;
     invoke-virtual {p2, p1}, Lcom/flurry/org/apache/avro/io/DirectBinaryEncoder;->configure(Ljava/io/OutputStream;)Lcom/flurry/org/apache/avro/io/DirectBinaryEncoder;
 
     move-result-object v0
@@ -304,8 +304,8 @@
 
 .method public jsonEncoder(Lcom/flurry/org/apache/avro/Schema;Lcom/flurry/org/codehaus/jackson/JsonGenerator;)Lcom/flurry/org/apache/avro/io/JsonEncoder;
     .locals 1
-    .parameter "schema"
-    .parameter "gen"
+    .param p1, "schema"    # Lcom/flurry/org/apache/avro/Schema;
+    .param p2, "gen"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -323,8 +323,8 @@
 
 .method public jsonEncoder(Lcom/flurry/org/apache/avro/Schema;Ljava/io/OutputStream;)Lcom/flurry/org/apache/avro/io/JsonEncoder;
     .locals 1
-    .parameter "schema"
-    .parameter "out"
+    .param p1, "schema"    # Lcom/flurry/org/apache/avro/Schema;
+    .param p2, "out"    # Ljava/io/OutputStream;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -342,8 +342,8 @@
 
 .method public validatingEncoder(Lcom/flurry/org/apache/avro/Schema;Lcom/flurry/org/apache/avro/io/Encoder;)Lcom/flurry/org/apache/avro/io/ValidatingEncoder;
     .locals 1
-    .parameter "schema"
-    .parameter "encoder"
+    .param p1, "schema"    # Lcom/flurry/org/apache/avro/Schema;
+    .param p2, "encoder"    # Lcom/flurry/org/apache/avro/io/Encoder;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;

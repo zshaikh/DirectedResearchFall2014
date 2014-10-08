@@ -20,8 +20,8 @@
 # direct methods
 .method public constructor <init>(ILcom/flurry/org/codehaus/jackson/node/NodeCursor;)V
     .locals 1
-    .parameter "contextType"
-    .parameter "p"
+    .param p1, "contextType"    # I
+    .param p2, "p"    # Lcom/flurry/org/codehaus/jackson/node/NodeCursor;
 
     .prologue
     .line 22
@@ -88,7 +88,7 @@
     move-result-object v0
 
     .line 60
-    .local v0, n:Lcom/flurry/org/codehaus/jackson/JsonNode;
+    .local v0, "n":Lcom/flurry/org/codehaus/jackson/JsonNode;
     if-nez v0, :cond_0
 
     new-instance v1, Ljava/lang/IllegalStateException;

@@ -25,7 +25,7 @@
 # virtual methods
 .method public didCacheInterstitial(Ljava/lang/String;)V
     .locals 0
-    .parameter "location"
+    .param p1, "location"    # Ljava/lang/String;
 
     .prologue
     .line 78
@@ -42,7 +42,7 @@
 
 .method public didClickInterstitial(Ljava/lang/String;)V
     .locals 0
-    .parameter "location"
+    .param p1, "location"    # Ljava/lang/String;
 
     .prologue
     .line 98
@@ -59,7 +59,7 @@
 
 .method public didCloseInterstitial(Ljava/lang/String;)V
     .locals 0
-    .parameter "location"
+    .param p1, "location"    # Ljava/lang/String;
 
     .prologue
     .line 93
@@ -76,7 +76,7 @@
 
 .method public didDismissInterstitial(Ljava/lang/String;)V
     .locals 0
-    .parameter "location"
+    .param p1, "location"    # Ljava/lang/String;
 
     .prologue
     .line 88
@@ -93,7 +93,7 @@
 
 .method public didFailToLoadInterstitial(Ljava/lang/String;)V
     .locals 0
-    .parameter "location"
+    .param p1, "location"    # Ljava/lang/String;
 
     .prologue
     .line 83
@@ -110,7 +110,7 @@
 
 .method public didFailToLoadUrl(Ljava/lang/String;)V
     .locals 0
-    .parameter "url"
+    .param p1, "url"    # Ljava/lang/String;
 
     .prologue
     .line 158
@@ -119,7 +119,7 @@
 
 .method public didShowInterstitial(Ljava/lang/String;)V
     .locals 0
-    .parameter "location"
+    .param p1, "location"    # Ljava/lang/String;
 
     .prologue
     .line 103
@@ -166,7 +166,7 @@
 
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 3
-    .parameter "savedInstanceState"
+    .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
     .line 23
@@ -260,7 +260,7 @@
 
 .method public shouldDisplayInterstitial(Ljava/lang/String;)Z
     .locals 1
-    .parameter "location"
+    .param p1, "location"    # Ljava/lang/String;
 
     .prologue
     .line 72
@@ -291,7 +291,7 @@
 
 .method public shouldRequestInterstitial(Ljava/lang/String;)Z
     .locals 1
-    .parameter "location"
+    .param p1, "location"    # Ljava/lang/String;
 
     .prologue
     .line 67

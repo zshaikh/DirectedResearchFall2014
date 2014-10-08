@@ -27,7 +27,7 @@
 
 .method static d(Ljava/lang/String;)V
     .locals 3
-    .parameter "message"
+    .param p0, "message"    # Ljava/lang/String;
 
     .prologue
     .line 247
@@ -67,8 +67,8 @@
 
 .method static varargs d(Ljava/lang/String;[Ljava/lang/Object;)V
     .locals 3
-    .parameter "format"
-    .parameter "args"
+    .param p0, "format"    # Ljava/lang/String;
+    .param p1, "args"    # [Ljava/lang/Object;
 
     .prologue
     .line 255
@@ -112,7 +112,7 @@
 
 .method static d(Ljava/lang/Throwable;)V
     .locals 2
-    .parameter "tr"
+    .param p0, "tr"    # Ljava/lang/Throwable;
 
     .prologue
     .line 263
@@ -136,7 +136,7 @@
 
 .method static e(Ljava/lang/String;)V
     .locals 1
-    .parameter "message"
+    .param p0, "message"    # Ljava/lang/String;
 
     .prologue
     .line 229
@@ -150,8 +150,8 @@
 
 .method static varargs e(Ljava/lang/String;[Ljava/lang/Object;)V
     .locals 2
-    .parameter "format"
-    .parameter "args"
+    .param p0, "format"    # Ljava/lang/String;
+    .param p1, "args"    # [Ljava/lang/Object;
 
     .prologue
     .line 234
@@ -169,7 +169,7 @@
 
 .method static e(Ljava/lang/Throwable;)V
     .locals 1
-    .parameter "tr"
+    .param p0, "tr"    # Ljava/lang/Throwable;
 
     .prologue
     .line 239
@@ -185,7 +185,7 @@
 
 .method static i(Ljava/lang/String;)V
     .locals 1
-    .parameter "message"
+    .param p0, "message"    # Ljava/lang/String;
 
     .prologue
     .line 197
@@ -199,8 +199,8 @@
 
 .method static varargs i(Ljava/lang/String;[Ljava/lang/Object;)V
     .locals 2
-    .parameter "format"
-    .parameter "args"
+    .param p0, "format"    # Ljava/lang/String;
+    .param p1, "args"    # [Ljava/lang/Object;
 
     .prologue
     .line 202
@@ -218,7 +218,7 @@
 
 .method static i(Ljava/lang/Throwable;)V
     .locals 1
-    .parameter "tr"
+    .param p0, "tr"    # Ljava/lang/Throwable;
 
     .prologue
     .line 207
@@ -234,7 +234,7 @@
 
 .method static p(Ljava/lang/String;)V
     .locals 3
-    .parameter "message"
+    .param p0, "message"    # Ljava/lang/String;
 
     .prologue
     .line 300
@@ -274,8 +274,8 @@
 
 .method static varargs p(Ljava/lang/String;[Ljava/lang/Object;)V
     .locals 3
-    .parameter "format"
-    .parameter "args"
+    .param p0, "format"    # Ljava/lang/String;
+    .param p1, "args"    # [Ljava/lang/Object;
 
     .prologue
     .line 308
@@ -319,7 +319,7 @@
 
 .method static p(Ljava/lang/Throwable;)V
     .locals 2
-    .parameter "tr"
+    .param p0, "tr"    # Ljava/lang/Throwable;
 
     .prologue
     .line 316
@@ -343,7 +343,7 @@
 
 .method static v(Ljava/lang/String;)V
     .locals 3
-    .parameter "message"
+    .param p0, "message"    # Ljava/lang/String;
 
     .prologue
     .line 275
@@ -383,8 +383,8 @@
 
 .method static varargs v(Ljava/lang/String;[Ljava/lang/Object;)V
     .locals 3
-    .parameter "format"
-    .parameter "args"
+    .param p0, "format"    # Ljava/lang/String;
+    .param p1, "args"    # [Ljava/lang/Object;
 
     .prologue
     .line 283
@@ -428,7 +428,7 @@
 
 .method static v(Ljava/lang/Throwable;)V
     .locals 2
-    .parameter "tr"
+    .param p0, "tr"    # Ljava/lang/Throwable;
 
     .prologue
     .line 291
@@ -452,7 +452,7 @@
 
 .method static w(Ljava/lang/String;)V
     .locals 1
-    .parameter "message"
+    .param p0, "message"    # Ljava/lang/String;
 
     .prologue
     .line 213
@@ -466,8 +466,8 @@
 
 .method static varargs w(Ljava/lang/String;[Ljava/lang/Object;)V
     .locals 2
-    .parameter "format"
-    .parameter "args"
+    .param p0, "format"    # Ljava/lang/String;
+    .param p1, "args"    # [Ljava/lang/Object;
 
     .prologue
     .line 218
@@ -485,7 +485,7 @@
 
 .method static w(Ljava/lang/Throwable;)V
     .locals 1
-    .parameter "tr"
+    .param p0, "tr"    # Ljava/lang/Throwable;
 
     .prologue
     .line 223

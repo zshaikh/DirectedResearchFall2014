@@ -12,9 +12,8 @@
 # direct methods
 .method protected constructor <init>(Ljava/lang/Class;Lcom/flurry/org/codehaus/jackson/type/JavaType;Lcom/flurry/org/codehaus/jackson/type/JavaType;)V
     .locals 3
-    .parameter
-    .parameter "keyT"
-    .parameter "valueT"
+    .param p2, "keyT"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .param p3, "valueT"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -30,7 +29,7 @@
     .end annotation
 
     .prologue
-    .local p1, mapType:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p1, "mapType":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const/4 v2, 0x0
 
     .line 38
@@ -58,11 +57,10 @@
 
 .method protected constructor <init>(Ljava/lang/Class;Lcom/flurry/org/codehaus/jackson/type/JavaType;Lcom/flurry/org/codehaus/jackson/type/JavaType;Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 2
-    .parameter
-    .parameter "keyT"
-    .parameter "valueT"
-    .parameter "valueHandler"
-    .parameter "typeHandler"
+    .param p2, "keyT"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .param p3, "valueT"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .param p4, "valueHandler"    # Ljava/lang/Object;
+    .param p5, "typeHandler"    # Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -78,7 +76,7 @@
 
     .prologue
     .line 46
-    .local p1, mapType:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p1, "mapType":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-virtual {p2}, Lcom/flurry/org/codehaus/jackson/type/JavaType;->hashCode()I
 
     move-result v0
@@ -103,9 +101,8 @@
 
 .method public static construct(Ljava/lang/Class;Lcom/flurry/org/codehaus/jackson/type/JavaType;Lcom/flurry/org/codehaus/jackson/type/JavaType;)Lcom/flurry/org/codehaus/jackson/map/type/MapLikeType;
     .locals 6
-    .parameter
-    .parameter "keyT"
-    .parameter "valueT"
+    .param p1, "keyT"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .param p2, "valueT"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -119,7 +116,7 @@
     .end annotation
 
     .prologue
-    .local p0, rawType:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p0, "rawType":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const/4 v4, 0x0
 
     .line 54
@@ -142,7 +139,6 @@
 # virtual methods
 .method protected _narrow(Ljava/lang/Class;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .locals 6
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -154,7 +150,7 @@
 
     .prologue
     .line 60
-    .local p1, subclass:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p1, "subclass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     new-instance v0, Lcom/flurry/org/codehaus/jackson/map/type/MapLikeType;
 
     iget-object v2, p0, Lcom/flurry/org/codehaus/jackson/map/type/MapLikeType;->_keyType:Lcom/flurry/org/codehaus/jackson/type/JavaType;
@@ -182,7 +178,7 @@
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     .line 138
-    .local v0, sb:Ljava/lang/StringBuilder;
+    .local v0, "sb":Ljava/lang/StringBuilder;
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/map/type/MapLikeType;->_class:Ljava/lang/Class;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -240,7 +236,7 @@
 
 .method public containedType(I)Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .locals 1
-    .parameter "index"
+    .param p1, "index"    # I
 
     .prologue
     .line 172
@@ -281,7 +277,7 @@
 
 .method public containedTypeName(I)Ljava/lang/String;
     .locals 1
-    .parameter "index"
+    .param p1, "index"    # I
 
     .prologue
     .line 184
@@ -312,7 +308,7 @@
 
 .method public equals(Ljava/lang/Object;)Z
     .locals 6
-    .parameter "o"
+    .param p1, "o"    # Ljava/lang/Object;
 
     .prologue
     const/4 v5, 0x1
@@ -361,7 +357,7 @@
     move-object v1, v0
 
     .line 260
-    .local v1, other:Lcom/flurry/org/codehaus/jackson/map/type/MapLikeType;
+    .local v1, "other":Lcom/flurry/org/codehaus/jackson/map/type/MapLikeType;
     iget-object v2, p0, Lcom/flurry/org/codehaus/jackson/map/type/MapLikeType;->_class:Ljava/lang/Class;
 
     iget-object v3, v1, Lcom/flurry/org/codehaus/jackson/map/type/MapLikeType;->_class:Ljava/lang/Class;
@@ -410,7 +406,7 @@
 
 .method public getErasedSignature(Ljava/lang/StringBuilder;)Ljava/lang/StringBuilder;
     .locals 2
-    .parameter "sb"
+    .param p1, "sb"    # Ljava/lang/StringBuilder;
 
     .prologue
     .line 191
@@ -427,7 +423,7 @@
 
 .method public getGenericSignature(Ljava/lang/StringBuilder;)Ljava/lang/StringBuilder;
     .locals 2
-    .parameter "sb"
+    .param p1, "sb"    # Ljava/lang/StringBuilder;
 
     .prologue
     .line 197
@@ -509,7 +505,6 @@
 
 .method public narrowContentsBy(Ljava/lang/Class;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .locals 6
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -521,7 +516,7 @@
 
     .prologue
     .line 67
-    .local p1, contentClass:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p1, "contentClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/map/type/MapLikeType;->_valueType:Lcom/flurry/org/codehaus/jackson/type/JavaType;
 
     invoke-virtual {v0}, Lcom/flurry/org/codehaus/jackson/type/JavaType;->getRawClass()Ljava/lang/Class;
@@ -560,7 +555,6 @@
 
 .method public narrowKey(Ljava/lang/Class;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .locals 6
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -572,7 +566,7 @@
 
     .prologue
     .line 87
-    .local p1, keySubclass:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p1, "keySubclass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/map/type/MapLikeType;->_keyType:Lcom/flurry/org/codehaus/jackson/type/JavaType;
 
     invoke-virtual {v0}, Lcom/flurry/org/codehaus/jackson/type/JavaType;->getRawClass()Ljava/lang/Class;
@@ -673,7 +667,6 @@
 
 .method public widenContentsBy(Ljava/lang/Class;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .locals 6
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -685,7 +678,7 @@
 
     .prologue
     .line 77
-    .local p1, contentClass:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p1, "contentClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/map/type/MapLikeType;->_valueType:Lcom/flurry/org/codehaus/jackson/type/JavaType;
 
     invoke-virtual {v0}, Lcom/flurry/org/codehaus/jackson/type/JavaType;->getRawClass()Ljava/lang/Class;
@@ -724,7 +717,6 @@
 
 .method public widenKey(Ljava/lang/Class;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .locals 6
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -736,7 +728,7 @@
 
     .prologue
     .line 100
-    .local p1, keySubclass:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p1, "keySubclass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/map/type/MapLikeType;->_keyType:Lcom/flurry/org/codehaus/jackson/type/JavaType;
 
     invoke-virtual {v0}, Lcom/flurry/org/codehaus/jackson/type/JavaType;->getRawClass()Ljava/lang/Class;
@@ -775,7 +767,7 @@
 
 .method public withContentTypeHandler(Ljava/lang/Object;)Lcom/flurry/org/codehaus/jackson/map/type/MapLikeType;
     .locals 6
-    .parameter "h"
+    .param p1, "h"    # Ljava/lang/Object;
 
     .prologue
     .line 118
@@ -802,7 +794,7 @@
 
 .method public bridge synthetic withContentTypeHandler(Ljava/lang/Object;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .locals 1
-    .parameter "x0"
+    .param p1, "x0"    # Ljava/lang/Object;
 
     .prologue
     .line 17
@@ -815,7 +807,7 @@
 
 .method public withContentValueHandler(Ljava/lang/Object;)Lcom/flurry/org/codehaus/jackson/map/type/MapLikeType;
     .locals 6
-    .parameter "h"
+    .param p1, "h"    # Ljava/lang/Object;
 
     .prologue
     .line 131
@@ -842,7 +834,7 @@
 
 .method public bridge synthetic withContentValueHandler(Ljava/lang/Object;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .locals 1
-    .parameter "x0"
+    .param p1, "x0"    # Ljava/lang/Object;
 
     .prologue
     .line 17
@@ -855,7 +847,7 @@
 
 .method public withKeyTypeHandler(Ljava/lang/Object;)Lcom/flurry/org/codehaus/jackson/map/type/MapLikeType;
     .locals 6
-    .parameter "h"
+    .param p1, "h"    # Ljava/lang/Object;
 
     .prologue
     .line 216
@@ -882,7 +874,7 @@
 
 .method public withKeyValueHandler(Ljava/lang/Object;)Lcom/flurry/org/codehaus/jackson/map/type/MapLikeType;
     .locals 6
-    .parameter "h"
+    .param p1, "h"    # Ljava/lang/Object;
 
     .prologue
     .line 224
@@ -909,7 +901,7 @@
 
 .method public withTypeHandler(Ljava/lang/Object;)Lcom/flurry/org/codehaus/jackson/map/type/MapLikeType;
     .locals 6
-    .parameter "h"
+    .param p1, "h"    # Ljava/lang/Object;
 
     .prologue
     .line 111
@@ -932,7 +924,7 @@
 
 .method public bridge synthetic withTypeHandler(Ljava/lang/Object;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .locals 1
-    .parameter "x0"
+    .param p1, "x0"    # Ljava/lang/Object;
 
     .prologue
     .line 17
@@ -945,7 +937,7 @@
 
 .method public withValueHandler(Ljava/lang/Object;)Lcom/flurry/org/codehaus/jackson/map/type/MapLikeType;
     .locals 6
-    .parameter "h"
+    .param p1, "h"    # Ljava/lang/Object;
 
     .prologue
     .line 125
@@ -968,7 +960,7 @@
 
 .method public bridge synthetic withValueHandler(Ljava/lang/Object;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .locals 1
-    .parameter "x0"
+    .param p1, "x0"    # Ljava/lang/Object;
 
     .prologue
     .line 17

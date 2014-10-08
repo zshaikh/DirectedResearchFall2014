@@ -59,8 +59,7 @@
 # direct methods
 .method constructor <init>(Ljava/util/HashMap;Landroid/content/Context;)V
     .locals 6
-    .parameter
-    .parameter "context"
+    .param p2, "context"    # Landroid/content/Context;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -75,7 +74,7 @@
     .end annotation
 
     .prologue
-    .local p1, parameters:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p1, "parameters":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v5, "showControls"
 
     const-string v4, "height"
@@ -369,7 +368,7 @@
 
 .method static getInlineParams(Ljava/lang/String;)Lcom/fusepowered/m1/android/InlineVideoView$InlineParams;
     .locals 2
-    .parameter "gson"
+    .param p0, "gson"    # Ljava/lang/String;
 
     .prologue
     .line 108
@@ -383,7 +382,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "gson":Ljava/lang/String;
     check-cast p0, Lcom/fusepowered/m1/android/InlineVideoView$InlineParams;
 
     return-object p0
@@ -393,7 +392,7 @@
 # virtual methods
 .method inflateFromGson(Ljava/lang/String;)V
     .locals 3
-    .parameter "gson"
+    .param p1, "gson"    # Ljava/lang/String;
 
     .prologue
     .line 119
@@ -410,7 +409,7 @@
     check-cast v0, Lcom/fusepowered/m1/android/InlineVideoView$InlineParams;
 
     .line 120
-    .local v0, params:Lcom/fusepowered/m1/android/InlineVideoView$InlineParams;
+    .local v0, "params":Lcom/fusepowered/m1/android/InlineVideoView$InlineParams;
     iget v1, v0, Lcom/fusepowered/m1/android/InlineVideoView$InlineParams;->x:I
 
     iput v1, p0, Lcom/fusepowered/m1/android/InlineVideoView$InlineParams;->x:I

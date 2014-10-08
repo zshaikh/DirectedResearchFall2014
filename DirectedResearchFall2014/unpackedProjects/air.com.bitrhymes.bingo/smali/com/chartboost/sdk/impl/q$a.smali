@@ -21,8 +21,6 @@
 # direct methods
 .method public constructor <init>(Lcom/chartboost/sdk/impl/q;Landroid/content/Context;)V
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 54
@@ -48,11 +46,11 @@
     .prologue
     const/4 v7, 0x1
 
-    const/high16 v3, -0x3400
+    const/high16 v3, -0x34000000
 
-    const/high16 v2, -0x7800
+    const/high16 v2, -0x78000000
 
-    const/high16 v6, 0x4000
+    const/high16 v6, 0x40000000
 
     .line 66
     iget-object v0, p0, Lcom/chartboost/sdk/impl/q$a;->a:Lcom/chartboost/sdk/impl/q;
@@ -160,10 +158,10 @@
 
 .method protected onSizeChanged(IIII)V
     .locals 0
-    .parameter "w"
-    .parameter "h"
-    .parameter "oldw"
-    .parameter "oldh"
+    .param p1, "w"    # I
+    .param p2, "h"    # I
+    .param p3, "oldw"    # I
+    .param p4, "oldh"    # I
 
     .prologue
     .line 61

@@ -53,7 +53,7 @@
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     .line 23
-    .local v0, functionMap:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Lcom/adobe/fre/FREFunction;>;"
+    .local v0, "functionMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Lcom/adobe/fre/FREFunction;>;"
     const-string v1, "LaunchEmail"
 
     new-instance v2, Lcom/bitrhymes/messaging/LaunchEmail;

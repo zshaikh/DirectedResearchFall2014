@@ -49,8 +49,8 @@
 # virtual methods
 .method public call(Lcom/adobe/fre/FREContext;[Lcom/adobe/fre/FREObject;)Lcom/adobe/fre/FREObject;
     .locals 9
-    .parameter "arg0"
-    .parameter "arg1"
+    .param p1, "arg0"    # Lcom/adobe/fre/FREContext;
+    .param p2, "arg1"    # [Lcom/adobe/fre/FREObject;
 
     .prologue
     const-string v8, ","
@@ -66,7 +66,7 @@
     move-result-object v4
 
     .line 23
-    .local v4, title:Ljava/lang/String;
+    .local v4, "title":Ljava/lang/String;
     const/4 v5, 0x1
 
     aget-object v5, p2, v5
@@ -76,7 +76,7 @@
     move-result-object v3
 
     .line 24
-    .local v3, message:Ljava/lang/String;
+    .local v3, "message":Ljava/lang/String;
     sget-object v5, Lcom/bitrhymes/nativeutils/functions/ShowAlertView;->TAG:Ljava/lang/String;
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -115,7 +115,7 @@
     invoke-direct {v1, v5}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
     .line 27
-    .local v1, dialogBuilder:Landroid/app/AlertDialog$Builder;
+    .local v1, "dialogBuilder":Landroid/app/AlertDialog$Builder;
     invoke-virtual {v1, v4}, Landroid/app/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
 
     .line 29
@@ -136,16 +136,16 @@
     move-result-object v0
 
     .line 39
-    .local v0, alertDialog:Landroid/app/AlertDialog;
+    .local v0, "alertDialog":Landroid/app/AlertDialog;
     invoke-virtual {v0}, Landroid/app/AlertDialog;->show()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 46
-    .end local v0           #alertDialog:Landroid/app/AlertDialog;
-    .end local v1           #dialogBuilder:Landroid/app/AlertDialog$Builder;
-    .end local v3           #message:Ljava/lang/String;
-    .end local v4           #title:Ljava/lang/String;
+    .end local v0    # "alertDialog":Landroid/app/AlertDialog;
+    .end local v1    # "dialogBuilder":Landroid/app/AlertDialog$Builder;
+    .end local v3    # "message":Ljava/lang/String;
+    .end local v4    # "title":Ljava/lang/String;
     :goto_0
     const/4 v5, 0x0
 
@@ -158,7 +158,7 @@
     move-object v2, v5
 
     .line 42
-    .local v2, e:Ljava/lang/Exception;
+    .local v2, "e":Ljava/lang/Exception;
     sget-object v5, Lcom/bitrhymes/nativeutils/functions/ShowAlertView;->TAG:Ljava/lang/String;
 
     new-instance v6, Ljava/lang/StringBuilder;

@@ -31,7 +31,7 @@
 
 .method protected constructor <init>(Landroid/os/Parcel;)V
     .locals 10
-    .parameter "in"
+    .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
     .line 353
@@ -41,13 +41,13 @@
     const/4 v4, 0x0
 
     .line 355
-    .local v4, fields:[Ljava/lang/reflect/Field;
+    .local v4, "fields":[Ljava/lang/reflect/Field;
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
 
     .line 356
-    .local v0, c:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local v0, "c":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-virtual {v0}, Ljava/lang/Class;->getDeclaredFields()[Ljava/lang/reflect/Field;
 
     move-result-object v4
@@ -56,10 +56,10 @@
     move-object v6, p0
 
     .line 360
-    .local v6, obj:Lcom/tapjoy/mraid/controller/Abstract$ReflectedParcelable;
+    .local v6, "obj":Lcom/tapjoy/mraid/controller/Abstract$ReflectedParcelable;
     const/4 v5, 0x0
 
-    .local v5, i:I
+    .local v5, "i":I
     :goto_0
     :try_start_0
     array-length v9, v4
@@ -70,13 +70,13 @@
     aget-object v3, v4, v5
 
     .line 363
-    .local v3, f:Ljava/lang/reflect/Field;
+    .local v3, "f":Ljava/lang/reflect/Field;
     invoke-virtual {v3}, Ljava/lang/reflect/Field;->getType()Ljava/lang/Class;
 
     move-result-object v7
 
     .line 365
-    .local v7, type:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local v7, "type":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-virtual {v7}, Ljava/lang/Class;->isEnum()Z
 
     move-result v9
@@ -89,7 +89,7 @@
     move-result-object v8
 
     .line 367
-    .local v8, typeStr:Ljava/lang/String;
+    .local v8, "typeStr":Ljava/lang/String;
     const-string v9, "class com.tapjoy.mraid.util.NavigationStringEnum"
 
     invoke-virtual {v8, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -110,7 +110,7 @@
     invoke-virtual {v3, v6, v9}, Ljava/lang/reflect/Field;->set(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 360
-    .end local v8           #typeStr:Ljava/lang/String;
+    .end local v8    # "typeStr":Ljava/lang/String;
     :cond_0
     :goto_1
     add-int/lit8 v5, v5, 0x1
@@ -118,7 +118,7 @@
     goto :goto_0
 
     .line 369
-    .restart local v8       #typeStr:Ljava/lang/String;
+    .restart local v8    # "typeStr":Ljava/lang/String;
     :cond_1
     const-string v9, "class com.tapjoy.mraid.util.TransitionStringEnum"
 
@@ -145,27 +145,27 @@
     goto :goto_1
 
     .line 380
-    .end local v3           #f:Ljava/lang/reflect/Field;
-    .end local v7           #type:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
-    .end local v8           #typeStr:Ljava/lang/String;
+    .end local v3    # "f":Ljava/lang/reflect/Field;
+    .end local v7    # "type":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
+    .end local v8    # "typeStr":Ljava/lang/String;
     :catch_0
     move-exception v9
 
     move-object v2, v9
 
     .line 382
-    .local v2, e:Ljava/lang/IllegalArgumentException;
+    .local v2, "e":Ljava/lang/IllegalArgumentException;
     invoke-virtual {v2}, Ljava/lang/IllegalArgumentException;->printStackTrace()V
 
     .line 388
-    .end local v2           #e:Ljava/lang/IllegalArgumentException;
+    .end local v2    # "e":Ljava/lang/IllegalArgumentException;
     :cond_2
     :goto_2
     return-void
 
     .line 373
-    .restart local v3       #f:Ljava/lang/reflect/Field;
-    .restart local v7       #type:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .restart local v3    # "f":Ljava/lang/reflect/Field;
+    .restart local v7    # "type":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     :cond_3
     :try_start_1
     invoke-virtual {v3, p0}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -173,7 +173,7 @@
     move-result-object v1
 
     .line 374
-    .local v1, dt:Ljava/lang/Object;
+    .local v1, "dt":Ljava/lang/Object;
     instance-of v9, v1, Landroid/os/Parcelable$Creator;
 
     if-nez v9, :cond_0
@@ -193,16 +193,16 @@
     goto :goto_1
 
     .line 383
-    .end local v1           #dt:Ljava/lang/Object;
-    .end local v3           #f:Ljava/lang/reflect/Field;
-    .end local v7           #type:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .end local v1    # "dt":Ljava/lang/Object;
+    .end local v3    # "f":Ljava/lang/reflect/Field;
+    .end local v7    # "type":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     :catch_1
     move-exception v9
 
     move-object v2, v9
 
     .line 385
-    .local v2, e:Ljava/lang/IllegalAccessException;
+    .local v2, "e":Ljava/lang/IllegalAccessException;
     invoke-virtual {v2}, Ljava/lang/IllegalAccessException;->printStackTrace()V
 
     goto :goto_2
@@ -222,21 +222,21 @@
 
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 9
-    .parameter "out"
-    .parameter "flags1"
+    .param p1, "out"    # Landroid/os/Parcel;
+    .param p2, "flags1"    # I
 
     .prologue
     .line 393
     const/4 v4, 0x0
 
     .line 394
-    .local v4, fields:[Ljava/lang/reflect/Field;
+    .local v4, "fields":[Ljava/lang/reflect/Field;
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
 
     .line 395
-    .local v0, c:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local v0, "c":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-virtual {v0}, Ljava/lang/Class;->getDeclaredFields()[Ljava/lang/reflect/Field;
 
     move-result-object v4
@@ -244,7 +244,7 @@
     .line 397
     const/4 v5, 0x0
 
-    .local v5, i:I
+    .local v5, "i":I
     :goto_0
     :try_start_0
     array-length v8, v4
@@ -255,13 +255,13 @@
     aget-object v3, v4, v5
 
     .line 399
-    .local v3, f:Ljava/lang/reflect/Field;
+    .local v3, "f":Ljava/lang/reflect/Field;
     invoke-virtual {v3}, Ljava/lang/reflect/Field;->getType()Ljava/lang/Class;
 
     move-result-object v6
 
     .line 401
-    .local v6, type:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local v6, "type":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-virtual {v6}, Ljava/lang/Class;->isEnum()Z
 
     move-result v8
@@ -274,7 +274,7 @@
     move-result-object v7
 
     .line 403
-    .local v7, typeStr:Ljava/lang/String;
+    .local v7, "typeStr":Ljava/lang/String;
     const-string v8, "class com.tapjoy.mraid.util.NavigationStringEnum"
 
     invoke-virtual {v7, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -297,7 +297,7 @@
     invoke-virtual {p1, v8}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     .line 397
-    .end local v7           #typeStr:Ljava/lang/String;
+    .end local v7    # "typeStr":Ljava/lang/String;
     :cond_0
     :goto_1
     add-int/lit8 v5, v5, 0x1
@@ -305,7 +305,7 @@
     goto :goto_0
 
     .line 405
-    .restart local v7       #typeStr:Ljava/lang/String;
+    .restart local v7    # "typeStr":Ljava/lang/String;
     :cond_1
     const-string v8, "class com.tapjoy.mraid.util.TransitionStringEnum"
 
@@ -334,27 +334,27 @@
     goto :goto_1
 
     .line 415
-    .end local v3           #f:Ljava/lang/reflect/Field;
-    .end local v6           #type:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
-    .end local v7           #typeStr:Ljava/lang/String;
+    .end local v3    # "f":Ljava/lang/reflect/Field;
+    .end local v6    # "type":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
+    .end local v7    # "typeStr":Ljava/lang/String;
     :catch_0
     move-exception v8
 
     move-object v2, v8
 
     .line 417
-    .local v2, e:Ljava/lang/IllegalArgumentException;
+    .local v2, "e":Ljava/lang/IllegalArgumentException;
     invoke-virtual {v2}, Ljava/lang/IllegalArgumentException;->printStackTrace()V
 
     .line 423
-    .end local v2           #e:Ljava/lang/IllegalArgumentException;
+    .end local v2    # "e":Ljava/lang/IllegalArgumentException;
     :cond_2
     :goto_2
     return-void
 
     .line 409
-    .restart local v3       #f:Ljava/lang/reflect/Field;
-    .restart local v6       #type:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .restart local v3    # "f":Ljava/lang/reflect/Field;
+    .restart local v6    # "type":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     :cond_3
     :try_start_1
     invoke-virtual {v3, p0}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -362,7 +362,7 @@
     move-result-object v1
 
     .line 410
-    .local v1, dt:Ljava/lang/Object;
+    .local v1, "dt":Ljava/lang/Object;
     instance-of v8, v1, Landroid/os/Parcelable$Creator;
 
     if-nez v8, :cond_0
@@ -376,16 +376,16 @@
     goto :goto_1
 
     .line 418
-    .end local v1           #dt:Ljava/lang/Object;
-    .end local v3           #f:Ljava/lang/reflect/Field;
-    .end local v6           #type:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .end local v1    # "dt":Ljava/lang/Object;
+    .end local v3    # "f":Ljava/lang/reflect/Field;
+    .end local v6    # "type":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     :catch_1
     move-exception v8
 
     move-object v2, v8
 
     .line 420
-    .local v2, e:Ljava/lang/IllegalAccessException;
+    .local v2, "e":Ljava/lang/IllegalAccessException;
     invoke-virtual {v2}, Ljava/lang/IllegalAccessException;->printStackTrace()V
 
     goto :goto_2

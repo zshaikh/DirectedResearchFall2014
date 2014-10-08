@@ -33,7 +33,7 @@
 # direct methods
 .method public constructor <init>(Lcom/fusepowered/m1/android/AdViewOverlayView;)V
     .locals 1
-    .parameter "videoView"
+    .param p1, "videoView"    # Lcom/fusepowered/m1/android/AdViewOverlayView;
 
     .prologue
     .line 388
@@ -54,7 +54,7 @@
 # virtual methods
 .method public onAnimationEnd(Landroid/view/animation/Animation;)V
     .locals 3
-    .parameter "animation"
+    .param p1, "animation"    # Landroid/view/animation/Animation;
 
     .prologue
     .line 406
@@ -67,7 +67,7 @@
     check-cast v1, Lcom/fusepowered/m1/android/AdViewOverlayView;
 
     .line 407
-    .local v1, overlayView:Lcom/fusepowered/m1/android/AdViewOverlayView;
+    .local v1, "overlayView":Lcom/fusepowered/m1/android/AdViewOverlayView;
     if-eqz v1, :cond_0
 
     .line 409
@@ -78,7 +78,7 @@
     check-cast v0, Landroid/app/Activity;
 
     .line 410
-    .local v0, activity:Landroid/app/Activity;
+    .local v0, "activity":Landroid/app/Activity;
     const-string v2, "Finishing overlay this is in w/ anim finishOverLayWithAnim()"
 
     invoke-static {v2}, Lcom/fusepowered/m1/android/MMSDK$Log;->d(Ljava/lang/String;)V
@@ -87,14 +87,14 @@
     invoke-virtual {v0}, Landroid/app/Activity;->finish()V
 
     .line 413
-    .end local v0           #activity:Landroid/app/Activity;
+    .end local v0    # "activity":Landroid/app/Activity;
     :cond_0
     return-void
 .end method
 
 .method public onAnimationRepeat(Landroid/view/animation/Animation;)V
     .locals 0
-    .parameter "animation"
+    .param p1, "animation"    # Landroid/view/animation/Animation;
 
     .prologue
     .line 418
@@ -103,7 +103,7 @@
 
 .method public onAnimationStart(Landroid/view/animation/Animation;)V
     .locals 3
-    .parameter "animation"
+    .param p1, "animation"    # Landroid/view/animation/Animation;
 
     .prologue
     .line 395
@@ -116,11 +116,11 @@
     check-cast v0, Lcom/fusepowered/m1/android/AdViewOverlayView;
 
     .line 396
-    .local v0, overlayView:Lcom/fusepowered/m1/android/AdViewOverlayView;
+    .local v0, "overlayView":Lcom/fusepowered/m1/android/AdViewOverlayView;
     if-eqz v0, :cond_0
 
     .line 398
-    #getter for: Lcom/fusepowered/m1/android/AdViewOverlayView;->mraidCloseButton:Landroid/widget/Button;
+    # getter for: Lcom/fusepowered/m1/android/AdViewOverlayView;->mraidCloseButton:Landroid/widget/Button;
     invoke-static {v0}, Lcom/fusepowered/m1/android/AdViewOverlayView;->access$300(Lcom/fusepowered/m1/android/AdViewOverlayView;)Landroid/widget/Button;
 
     move-result-object v1
@@ -128,7 +128,7 @@
     if-eqz v1, :cond_0
 
     .line 399
-    #getter for: Lcom/fusepowered/m1/android/AdViewOverlayView;->mraidCloseButton:Landroid/widget/Button;
+    # getter for: Lcom/fusepowered/m1/android/AdViewOverlayView;->mraidCloseButton:Landroid/widget/Button;
     invoke-static {v0}, Lcom/fusepowered/m1/android/AdViewOverlayView;->access$300(Lcom/fusepowered/m1/android/AdViewOverlayView;)Landroid/widget/Button;
 
     move-result-object v1

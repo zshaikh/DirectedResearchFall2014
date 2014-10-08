@@ -33,7 +33,6 @@
 # direct methods
 .method private constructor <init>(Lcom/chartboost/sdk/impl/ba;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 280
@@ -46,8 +45,6 @@
 
 .method synthetic constructor <init>(Lcom/chartboost/sdk/impl/ba;Lcom/chartboost/sdk/impl/ba$1;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 280
@@ -147,11 +144,11 @@
 
 .method public remove(Ljava/lang/Object;)Z
     .locals 1
-    .parameter "o"
+    .param p1, "o"    # Ljava/lang/Object;
 
     .prologue
     .line 303
-    .local p0, this:Lcom/chartboost/sdk/impl/ba$d;,"Lcom/chartboost/sdk/impl/ba<TK;TV;TM;>.d;"
+    .local p0, "this":Lcom/chartboost/sdk/impl/ba$d;, "Lcom/chartboost/sdk/impl/ba<TK;TV;TM;>.d;"
     iget-object v0, p0, Lcom/chartboost/sdk/impl/ba$d;->a:Lcom/chartboost/sdk/impl/ba;
 
     invoke-virtual {v0, p1}, Lcom/chartboost/sdk/impl/ba;->remove(Ljava/lang/Object;)Ljava/lang/Object;
@@ -173,7 +170,6 @@
 
 .method public removeAll(Ljava/util/Collection;)Z
     .locals 3
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -184,8 +180,8 @@
 
     .prologue
     .line 307
-    .local p0, this:Lcom/chartboost/sdk/impl/ba$d;,"Lcom/chartboost/sdk/impl/ba<TK;TV;TM;>.d;"
-    .local p1, c:Ljava/util/Collection;,"Ljava/util/Collection<*>;"
+    .local p0, "this":Lcom/chartboost/sdk/impl/ba$d;, "Lcom/chartboost/sdk/impl/ba<TK;TV;TM;>.d;"
+    .local p1, "c":Ljava/util/Collection;, "Ljava/util/Collection<*>;"
     iget-object v0, p0, Lcom/chartboost/sdk/impl/ba$d;->a:Lcom/chartboost/sdk/impl/ba;
 
     invoke-static {v0}, Lcom/chartboost/sdk/impl/ba;->b(Lcom/chartboost/sdk/impl/ba;)Ljava/util/concurrent/locks/Lock;
@@ -265,7 +261,6 @@
 
 .method public retainAll(Ljava/util/Collection;)Z
     .locals 3
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -276,8 +271,8 @@
 
     .prologue
     .line 321
-    .local p0, this:Lcom/chartboost/sdk/impl/ba$d;,"Lcom/chartboost/sdk/impl/ba<TK;TV;TM;>.d;"
-    .local p1, c:Ljava/util/Collection;,"Ljava/util/Collection<*>;"
+    .local p0, "this":Lcom/chartboost/sdk/impl/ba$d;, "Lcom/chartboost/sdk/impl/ba<TK;TV;TM;>.d;"
+    .local p1, "c":Ljava/util/Collection;, "Ljava/util/Collection<*>;"
     iget-object v0, p0, Lcom/chartboost/sdk/impl/ba$d;->a:Lcom/chartboost/sdk/impl/ba;
 
     invoke-static {v0}, Lcom/chartboost/sdk/impl/ba;->b(Lcom/chartboost/sdk/impl/ba;)Ljava/util/concurrent/locks/Lock;

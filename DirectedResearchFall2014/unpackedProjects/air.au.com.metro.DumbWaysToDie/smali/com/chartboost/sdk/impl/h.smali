@@ -74,7 +74,6 @@
 
 .method public constructor <init>(Lcom/chartboost/sdk/impl/a;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 344
@@ -98,7 +97,6 @@
 
 .method static synthetic a(Lcom/chartboost/sdk/impl/h;)Ljava/util/List;
     .locals 1
-    .parameter
 
     .prologue
     .line 49
@@ -109,8 +107,6 @@
 
 .method static synthetic a(Lcom/chartboost/sdk/impl/h;Lcom/chartboost/sdk/Libraries/a$a;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 1
@@ -121,7 +117,6 @@
 
 .method static synthetic b(Lcom/chartboost/sdk/impl/h;)Lcom/chartboost/sdk/Libraries/a$a;
     .locals 1
-    .parameter
 
     .prologue
     .line 53
@@ -132,8 +127,6 @@
 
 .method static synthetic b(Lcom/chartboost/sdk/impl/h;Lcom/chartboost/sdk/Libraries/a$a;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 51
@@ -144,7 +137,6 @@
 
 .method static synthetic c(Lcom/chartboost/sdk/impl/h;)Lcom/chartboost/sdk/Libraries/a$a;
     .locals 1
-    .parameter
 
     .prologue
     .line 52
@@ -155,8 +147,6 @@
 
 .method static synthetic c(Lcom/chartboost/sdk/impl/h;Lcom/chartboost/sdk/Libraries/a$a;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 52
@@ -167,7 +157,6 @@
 
 .method static synthetic d(Lcom/chartboost/sdk/impl/h;)Lcom/chartboost/sdk/Libraries/a$a;
     .locals 1
-    .parameter
 
     .prologue
     .line 51
@@ -178,8 +167,6 @@
 
 .method static synthetic d(Lcom/chartboost/sdk/impl/h;Lcom/chartboost/sdk/Libraries/a$a;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 53
@@ -190,7 +177,6 @@
 
 .method static synthetic e(Lcom/chartboost/sdk/impl/h;)Landroid/util/SparseArray;
     .locals 1
-    .parameter
 
     .prologue
     .line 54
@@ -233,7 +219,6 @@
 # virtual methods
 .method protected a(Landroid/content/Context;)Lcom/chartboost/sdk/b$b;
     .locals 2
-    .parameter
 
     .prologue
     .line 351
@@ -248,7 +233,6 @@
 
 .method public a(Lorg/json/JSONObject;)V
     .locals 8
-    .parameter
 
     .prologue
     const-string v7, "assets"

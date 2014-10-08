@@ -21,7 +21,7 @@
 # direct methods
 .method public constructor <init>(Lcom/facebook/android/Facebook;)V
     .locals 0
-    .parameter "fb"
+    .param p1, "fb"    # Lcom/facebook/android/Facebook;
 
     .prologue
     .line 54
@@ -38,8 +38,8 @@
 # virtual methods
 .method public logout(Landroid/content/Context;Lcom/facebook/android/AsyncFacebookRunner$RequestListener;)V
     .locals 1
-    .parameter "context"
-    .parameter "listener"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "listener"    # Lcom/facebook/android/AsyncFacebookRunner$RequestListener;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -55,9 +55,9 @@
 
 .method public logout(Landroid/content/Context;Lcom/facebook/android/AsyncFacebookRunner$RequestListener;Ljava/lang/Object;)V
     .locals 1
-    .parameter "context"
-    .parameter "listener"
-    .parameter "state"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "listener"    # Lcom/facebook/android/AsyncFacebookRunner$RequestListener;
+    .param p3, "state"    # Ljava/lang/Object;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -76,8 +76,8 @@
 
 .method public request(Landroid/os/Bundle;Lcom/facebook/android/AsyncFacebookRunner$RequestListener;)V
     .locals 6
-    .parameter "parameters"
-    .parameter "listener"
+    .param p1, "parameters"    # Landroid/os/Bundle;
+    .param p2, "listener"    # Lcom/facebook/android/AsyncFacebookRunner$RequestListener;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -103,9 +103,9 @@
 
 .method public request(Landroid/os/Bundle;Lcom/facebook/android/AsyncFacebookRunner$RequestListener;Ljava/lang/Object;)V
     .locals 6
-    .parameter "parameters"
-    .parameter "listener"
-    .parameter "state"
+    .param p1, "parameters"    # Landroid/os/Bundle;
+    .param p2, "listener"    # Lcom/facebook/android/AsyncFacebookRunner$RequestListener;
+    .param p3, "state"    # Ljava/lang/Object;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -131,9 +131,9 @@
 
 .method public request(Ljava/lang/String;Landroid/os/Bundle;Lcom/facebook/android/AsyncFacebookRunner$RequestListener;)V
     .locals 6
-    .parameter "graphPath"
-    .parameter "parameters"
-    .parameter "listener"
+    .param p1, "graphPath"    # Ljava/lang/String;
+    .param p2, "parameters"    # Landroid/os/Bundle;
+    .param p3, "listener"    # Lcom/facebook/android/AsyncFacebookRunner$RequestListener;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -159,10 +159,10 @@
 
 .method public request(Ljava/lang/String;Landroid/os/Bundle;Lcom/facebook/android/AsyncFacebookRunner$RequestListener;Ljava/lang/Object;)V
     .locals 6
-    .parameter "graphPath"
-    .parameter "parameters"
-    .parameter "listener"
-    .parameter "state"
+    .param p1, "graphPath"    # Ljava/lang/String;
+    .param p2, "parameters"    # Landroid/os/Bundle;
+    .param p3, "listener"    # Lcom/facebook/android/AsyncFacebookRunner$RequestListener;
+    .param p4, "state"    # Ljava/lang/Object;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -188,11 +188,11 @@
 
 .method public request(Ljava/lang/String;Landroid/os/Bundle;Ljava/lang/String;Lcom/facebook/android/AsyncFacebookRunner$RequestListener;Ljava/lang/Object;)V
     .locals 7
-    .parameter "graphPath"
-    .parameter "parameters"
-    .parameter "httpMethod"
-    .parameter "listener"
-    .parameter "state"
+    .param p1, "graphPath"    # Ljava/lang/String;
+    .param p2, "parameters"    # Landroid/os/Bundle;
+    .param p3, "httpMethod"    # Ljava/lang/String;
+    .param p4, "listener"    # Lcom/facebook/android/AsyncFacebookRunner$RequestListener;
+    .param p5, "state"    # Ljava/lang/Object;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -223,8 +223,8 @@
 
 .method public request(Ljava/lang/String;Lcom/facebook/android/AsyncFacebookRunner$RequestListener;)V
     .locals 6
-    .parameter "graphPath"
-    .parameter "listener"
+    .param p1, "graphPath"    # Ljava/lang/String;
+    .param p2, "listener"    # Lcom/facebook/android/AsyncFacebookRunner$RequestListener;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -252,9 +252,9 @@
 
 .method public request(Ljava/lang/String;Lcom/facebook/android/AsyncFacebookRunner$RequestListener;Ljava/lang/Object;)V
     .locals 6
-    .parameter "graphPath"
-    .parameter "listener"
-    .parameter "state"
+    .param p1, "graphPath"    # Ljava/lang/String;
+    .param p2, "listener"    # Lcom/facebook/android/AsyncFacebookRunner$RequestListener;
+    .param p3, "state"    # Ljava/lang/Object;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 

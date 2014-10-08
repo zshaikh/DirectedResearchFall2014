@@ -81,7 +81,6 @@
 
 .method static synthetic access$000(Lcom/adobe/air/RemoteDebuggerListenerDialog;)I
     .locals 1
-    .parameter
 
     .prologue
     .line 47
@@ -92,7 +91,6 @@
 
 .method static synthetic access$100(Lcom/adobe/air/RemoteDebuggerListenerDialog;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 47
@@ -103,7 +101,6 @@
 
 .method static synthetic access$200(Lcom/adobe/air/RemoteDebuggerListenerDialog;)Ljava/lang/Runnable;
     .locals 1
-    .parameter
 
     .prologue
     .line 47
@@ -114,7 +111,6 @@
 
 .method static synthetic access$300(Lcom/adobe/air/RemoteDebuggerListenerDialog;)Landroid/os/Handler;
     .locals 1
-    .parameter
 
     .prologue
     .line 47
@@ -125,7 +121,6 @@
 
 .method static synthetic access$400(Lcom/adobe/air/RemoteDebuggerListenerDialog;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 47
@@ -136,7 +131,6 @@
 
 .method static synthetic access$500(Lcom/adobe/air/RemoteDebuggerListenerDialog;)Landroid/content/BroadcastReceiver;
     .locals 1
-    .parameter
 
     .prologue
     .line 47
@@ -147,8 +141,6 @@
 
 .method static synthetic access$502(Lcom/adobe/air/RemoteDebuggerListenerDialog;Landroid/content/BroadcastReceiver;)Landroid/content/BroadcastReceiver;
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 47
@@ -159,7 +151,6 @@
 
 .method static synthetic access$600(Lcom/adobe/air/RemoteDebuggerListenerDialog;)I
     .locals 1
-    .parameter
 
     .prologue
     .line 47
@@ -170,7 +161,6 @@
 
 .method static synthetic access$608(Lcom/adobe/air/RemoteDebuggerListenerDialog;)I
     .locals 2
-    .parameter
 
     .prologue
     .line 47
@@ -185,7 +175,6 @@
 
 .method static synthetic access$700(Lcom/adobe/air/RemoteDebuggerListenerDialog;)Landroid/app/AlertDialog;
     .locals 1
-    .parameter
 
     .prologue
     .line 47
@@ -196,8 +185,6 @@
 
 .method static synthetic access$702(Lcom/adobe/air/RemoteDebuggerListenerDialog;Landroid/app/AlertDialog;)Landroid/app/AlertDialog;
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 47
@@ -208,12 +195,6 @@
 
 .method static synthetic access$800(Lcom/adobe/air/RemoteDebuggerListenerDialog;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;Landroid/content/DialogInterface$OnKeyListener;)Landroid/app/AlertDialog;
     .locals 1
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 47
@@ -256,11 +237,6 @@
 
 .method private createDialog(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;Landroid/content/DialogInterface$OnKeyListener;)Landroid/app/AlertDialog;
     .locals 2
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 174
@@ -348,7 +324,6 @@
 # virtual methods
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 9
-    .parameter
 
     .prologue
     const/4 v8, 0x0
@@ -511,8 +486,6 @@
 
 .method public onKeyDown(ILandroid/view/KeyEvent;)Z
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 218

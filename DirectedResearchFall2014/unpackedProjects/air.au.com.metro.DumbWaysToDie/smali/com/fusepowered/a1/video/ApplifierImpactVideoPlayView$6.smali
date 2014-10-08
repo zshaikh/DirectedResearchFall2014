@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1
@@ -40,8 +39,8 @@
 # virtual methods
 .method public onFocusChange(Landroid/view/View;Z)V
     .locals 1
-    .parameter "v"
-    .parameter "hasFocus"
+    .param p1, "v"    # Landroid/view/View;
+    .param p2, "hasFocus"    # Z
 
     .prologue
     .line 332

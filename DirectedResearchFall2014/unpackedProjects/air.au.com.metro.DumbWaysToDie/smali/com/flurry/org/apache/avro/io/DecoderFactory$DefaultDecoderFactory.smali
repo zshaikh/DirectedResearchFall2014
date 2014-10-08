@@ -27,7 +27,7 @@
 
 .method synthetic constructor <init>(Lcom/flurry/org/apache/avro/io/DecoderFactory$1;)V
     .locals 0
-    .parameter "x0"
+    .param p1, "x0"    # Lcom/flurry/org/apache/avro/io/DecoderFactory$1;
 
     .prologue
     .line 310
@@ -40,7 +40,7 @@
 # virtual methods
 .method public configureDecoderBufferSize(I)Lcom/flurry/org/apache/avro/io/DecoderFactory;
     .locals 2
-    .parameter "bufferSize"
+    .param p1, "bufferSize"    # I
 
     .prologue
     .line 313

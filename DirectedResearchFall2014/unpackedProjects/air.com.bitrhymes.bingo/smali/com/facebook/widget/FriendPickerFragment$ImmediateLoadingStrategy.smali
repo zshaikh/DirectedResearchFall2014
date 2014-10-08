@@ -31,7 +31,6 @@
 # direct methods
 .method private constructor <init>(Lcom/facebook/widget/FriendPickerFragment;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 241
@@ -44,8 +43,6 @@
 
 .method synthetic constructor <init>(Lcom/facebook/widget/FriendPickerFragment;Lcom/facebook/widget/FriendPickerFragment$ImmediateLoadingStrategy;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 241
@@ -76,8 +73,6 @@
 # virtual methods
 .method protected onLoadFinished(Lcom/facebook/widget/GraphObjectPagingLoader;Lcom/facebook/widget/SimpleGraphObjectCursor;)V
     .locals 2
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -94,8 +89,8 @@
 
     .prologue
     .line 245
-    .local p1, loader:Lcom/facebook/widget/GraphObjectPagingLoader;,"Lcom/facebook/widget/GraphObjectPagingLoader<Lcom/facebook/model/GraphUser;>;"
-    .local p2, data:Lcom/facebook/widget/SimpleGraphObjectCursor;,"Lcom/facebook/widget/SimpleGraphObjectCursor<Lcom/facebook/model/GraphUser;>;"
+    .local p1, "loader":Lcom/facebook/widget/GraphObjectPagingLoader;, "Lcom/facebook/widget/GraphObjectPagingLoader<Lcom/facebook/model/GraphUser;>;"
+    .local p2, "data":Lcom/facebook/widget/SimpleGraphObjectCursor;, "Lcom/facebook/widget/SimpleGraphObjectCursor<Lcom/facebook/model/GraphUser;>;"
     invoke-super {p0, p1, p2}, Lcom/facebook/widget/PickerFragment$LoadingStrategy;->onLoadFinished(Lcom/facebook/widget/GraphObjectPagingLoader;Lcom/facebook/widget/SimpleGraphObjectCursor;)V
 
     .line 249

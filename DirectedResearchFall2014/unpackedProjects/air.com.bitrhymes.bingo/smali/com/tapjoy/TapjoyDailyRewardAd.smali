@@ -42,7 +42,7 @@
 
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
-    .parameter "ctx"
+    .param p1, "ctx"    # Landroid/content/Context;
 
     .prologue
     .line 30
@@ -57,7 +57,7 @@
 
 .method static synthetic access$000(Lcom/tapjoy/TapjoyDailyRewardAd;)Ljava/util/Map;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/tapjoy/TapjoyDailyRewardAd;
 
     .prologue
     .line 14
@@ -68,7 +68,7 @@
 
 .method static synthetic access$102(Ljava/lang/String;)Ljava/lang/String;
     .locals 0
-    .parameter "x0"
+    .param p0, "x0"    # Ljava/lang/String;
 
     .prologue
     .line 14
@@ -91,7 +91,7 @@
 # virtual methods
 .method public getDailyRewardAd(Lcom/tapjoy/TapjoyDailyRewardAdNotifier;)V
     .locals 2
-    .parameter "notifier"
+    .param p1, "notifier"    # Lcom/tapjoy/TapjoyDailyRewardAdNotifier;
 
     .prologue
     .line 42
@@ -112,7 +112,7 @@
 
 .method public getDailyRewardAdLegacy(Ljava/lang/String;)V
     .locals 3
-    .parameter "currencyID"
+    .param p1, "currencyID"    # Ljava/lang/String;
 
     .prologue
     .line 88
@@ -148,8 +148,8 @@
 
 .method public getDailyRewardAdWithCurrencyID(Ljava/lang/String;Lcom/tapjoy/TapjoyDailyRewardAdNotifier;)V
     .locals 0
-    .parameter "currencyID"
-    .parameter "notifier"
+    .param p1, "currencyID"    # Ljava/lang/String;
+    .param p2, "notifier"    # Lcom/tapjoy/TapjoyDailyRewardAdNotifier;
 
     .prologue
     .line 55
@@ -196,8 +196,8 @@
     invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
     .line 73
-    .local v0, intent:Landroid/content/Intent;
-    const/high16 v1, 0x1000
+    .local v0, "intent":Landroid/content/Intent;
+    const/high16 v1, 0x10000000
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
@@ -230,7 +230,7 @@
     invoke-virtual {v1, v0}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
 
     .line 79
-    .end local v0           #intent:Landroid/content/Intent;
+    .end local v0    # "intent":Landroid/content/Intent;
     :cond_0
     return-void
 .end method

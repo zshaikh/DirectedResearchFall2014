@@ -48,9 +48,9 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Lcom/tapjoy/TJEventCallback;)V
     .locals 1
-    .parameter "c"
-    .parameter "eventName"
-    .parameter "cb"
+    .param p1, "c"    # Landroid/content/Context;
+    .param p2, "eventName"    # Ljava/lang/String;
+    .param p3, "cb"    # Lcom/tapjoy/TJEventCallback;
 
     .prologue
     .line 62
@@ -64,10 +64,10 @@
 
 .method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Lcom/tapjoy/TJEventCallback;)V
     .locals 2
-    .parameter "c"
-    .parameter "eventName"
-    .parameter "value"
-    .parameter "cb"
+    .param p1, "c"    # Landroid/content/Context;
+    .param p2, "eventName"    # Ljava/lang/String;
+    .param p3, "value"    # Ljava/lang/String;
+    .param p4, "cb"    # Lcom/tapjoy/TJEventCallback;
 
     .prologue
     const/4 v0, 0x0
@@ -163,7 +163,7 @@
 
 .method static synthetic access$000(Lcom/tapjoy/TJEvent;)Lcom/tapjoy/TJEventData;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/tapjoy/TJEvent;
 
     .prologue
     .line 29
@@ -174,7 +174,7 @@
 
 .method static synthetic access$100(Lcom/tapjoy/TJEvent;)Ljava/util/Map;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/tapjoy/TJEvent;
 
     .prologue
     .line 29
@@ -185,7 +185,7 @@
 
 .method static synthetic access$200(Lcom/tapjoy/TJEvent;)Lcom/tapjoy/TJEventCallback;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/tapjoy/TJEvent;
 
     .prologue
     .line 29
@@ -196,7 +196,7 @@
 
 .method static synthetic access$300(Lcom/tapjoy/TJEvent;)Z
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/tapjoy/TJEvent;
 
     .prologue
     .line 29
@@ -207,8 +207,8 @@
 
 .method static synthetic access$302(Lcom/tapjoy/TJEvent;Z)Z
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
+    .param p0, "x0"    # Lcom/tapjoy/TJEvent;
+    .param p1, "x1"    # Z
 
     .prologue
     .line 29
@@ -219,7 +219,7 @@
 
 .method static synthetic access$400(Lcom/tapjoy/TJEvent;)Z
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/tapjoy/TJEvent;
 
     .prologue
     .line 29
@@ -232,7 +232,7 @@
 # virtual methods
 .method public enableAutoPresent(Z)V
     .locals 0
-    .parameter "autoPresent"
+    .param p1, "autoPresent"    # Z
 
     .prologue
     .line 111
@@ -416,7 +416,7 @@
     const-string v0, "https://events.tapjoy.com/events?"
 
     .line 176
-    .local v0, path:Ljava/lang/String;
+    .local v0, "path":Ljava/lang/String;
     invoke-static {}, Lcom/tapjoy/TapjoyConnectCore;->getGenericURLParams()Ljava/util/Map;
 
     move-result-object v1
@@ -522,7 +522,6 @@
 
 .method public setParameters(Ljava/util/Map;)V
     .locals 0
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -536,7 +535,7 @@
 
     .prologue
     .line 247
-    .local p1, parameters:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p1, "parameters":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     iput-object p1, p0, Lcom/tapjoy/TJEvent;->eventParams:Ljava/util/Map;
 
     .line 248
@@ -624,7 +623,7 @@
     const/4 v0, 0x0
 
     .line 281
-    .local v0, intent:Landroid/content/Intent;
+    .local v0, "intent":Landroid/content/Intent;
     iget-object v1, p0, Lcom/tapjoy/TJEvent;->eventData:Lcom/tapjoy/TJEventData;
 
     iget-object v1, v1, Lcom/tapjoy/TJEventData;->name:Ljava/lang/String;
@@ -651,7 +650,7 @@
     .line 286
     new-instance v0, Landroid/content/Intent;
 
-    .end local v0           #intent:Landroid/content/Intent;
+    .end local v0    # "intent":Landroid/content/Intent;
     iget-object v1, p0, Lcom/tapjoy/TJEvent;->context:Landroid/content/Context;
 
     const-class v2, Lcom/tapjoy/TapjoyFeaturedAppWebView;
@@ -659,7 +658,7 @@
     invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
     .line 294
-    .restart local v0       #intent:Landroid/content/Intent;
+    .restart local v0    # "intent":Landroid/content/Intent;
     :goto_1
     const-string v1, "legacy_view"
 
@@ -682,7 +681,7 @@
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/io/Serializable;)Landroid/content/Intent;
 
     .line 313
-    const/high16 v1, 0x1000
+    const/high16 v1, 0x10000000
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
@@ -697,14 +696,14 @@
     :cond_3
     new-instance v0, Landroid/content/Intent;
 
-    .end local v0           #intent:Landroid/content/Intent;
+    .end local v0    # "intent":Landroid/content/Intent;
     iget-object v1, p0, Lcom/tapjoy/TJEvent;->context:Landroid/content/Context;
 
     const-class v2, Lcom/tapjoy/TapjoyFullScreenAdWebView;
 
     invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .restart local v0       #intent:Landroid/content/Intent;
+    .restart local v0    # "intent":Landroid/content/Intent;
     goto :goto_1
 
     .line 298
@@ -724,7 +723,7 @@
     .line 300
     new-instance v0, Landroid/content/Intent;
 
-    .end local v0           #intent:Landroid/content/Intent;
+    .end local v0    # "intent":Landroid/content/Intent;
     iget-object v1, p0, Lcom/tapjoy/TJEvent;->context:Landroid/content/Context;
 
     const-class v2, Lcom/tapjoy/TapjoyDailyRewardAdWebView;
@@ -732,7 +731,7 @@
     invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
     .line 301
-    .restart local v0       #intent:Landroid/content/Intent;
+    .restart local v0    # "intent":Landroid/content/Intent;
     const-string v1, "legacy_view"
 
     invoke-virtual {v0, v5, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
@@ -743,13 +742,13 @@
     :cond_5
     new-instance v0, Landroid/content/Intent;
 
-    .end local v0           #intent:Landroid/content/Intent;
+    .end local v0    # "intent":Landroid/content/Intent;
     iget-object v1, p0, Lcom/tapjoy/TJEvent;->context:Landroid/content/Context;
 
     const-class v2, Lcom/tapjoy/TJAdUnitView;
 
     invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .restart local v0       #intent:Landroid/content/Intent;
+    .restart local v0    # "intent":Landroid/content/Intent;
     goto :goto_2
 .end method

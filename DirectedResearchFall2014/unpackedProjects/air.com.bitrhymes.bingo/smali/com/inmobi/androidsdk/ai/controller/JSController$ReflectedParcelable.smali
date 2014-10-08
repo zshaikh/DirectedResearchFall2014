@@ -31,7 +31,6 @@
 
 .method protected constructor <init>(Landroid/os/Parcel;)V
     .locals 5
-    .parameter
 
     .prologue
     const/4 v0, 0x0
@@ -200,8 +199,6 @@
 
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 5
-    .parameter
-    .parameter
 
     .prologue
     .line 516

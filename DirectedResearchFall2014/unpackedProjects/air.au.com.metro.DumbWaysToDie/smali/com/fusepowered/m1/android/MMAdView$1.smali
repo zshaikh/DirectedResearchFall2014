@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m1/android/MMAdView;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 244
@@ -59,7 +58,7 @@
     iget v0, v1, Landroid/util/DisplayMetrics;->density:F
 
     .line 249
-    .local v0, density:F
+    .local v0, "density":F
     iget-object v1, p0, Lcom/fusepowered/m1/android/MMAdView$1;->this$0:Lcom/fusepowered/m1/android/MMAdView;
 
     iget v1, v1, Lcom/fusepowered/m1/android/MMAdView;->width:I

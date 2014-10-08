@@ -7,7 +7,7 @@
 
 
 # static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator; = null
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroid/os/Parcelable$Creator",
@@ -154,7 +154,7 @@
 
 .method constructor <init>(Landroid/os/Parcel;)V
     .locals 8
-    .parameter "in"
+    .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
     const-wide/16 v6, 0x0
@@ -206,7 +206,7 @@
     new-array v0, v2, [Z
 
     .line 64
-    .local v0, booleanValues:[Z
+    .local v0, "booleanValues":[Z
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->readBooleanArray([Z)V
 
     .line 65
@@ -349,12 +349,12 @@
     iput-object v2, p0, Lcom/fusepowered/m1/android/OverlaySettings;->mmHeaders:Lcom/fusepowered/m1/android/HttpMMHeaders;
 
     .line 88
-    .end local v0           #booleanValues:[Z
+    .end local v0    # "booleanValues":[Z
     :goto_1
     return-void
 
     .line 74
-    .restart local v0       #booleanValues:[Z
+    .restart local v0    # "booleanValues":[Z
     :cond_0
     iget-wide v2, p0, Lcom/fusepowered/m1/android/OverlaySettings;->transitionTimeInMillis:J
     :try_end_0
@@ -363,14 +363,14 @@
     goto :goto_0
 
     .line 84
-    .end local v0           #booleanValues:[Z
+    .end local v0    # "booleanValues":[Z
     :catch_0
     move-exception v2
 
     move-object v1, v2
 
     .line 86
-    .local v1, e:Ljava/lang/Exception;
+    .local v1, "e":Ljava/lang/Exception;
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_1
@@ -378,7 +378,7 @@
 
 .method static final createFromJson(Ljava/lang/String;)Lcom/fusepowered/m1/android/OverlaySettings;
     .locals 3
-    .parameter "json"
+    .param p0, "json"    # Ljava/lang/String;
 
     .prologue
     .line 52
@@ -387,7 +387,7 @@
     invoke-direct {v0}, Lcom/fusepowered/m1/google/gson/Gson;-><init>()V
 
     .line 53
-    .local v0, gson:Lcom/fusepowered/m1/google/gson/Gson;
+    .local v0, "gson":Lcom/fusepowered/m1/google/gson/Gson;
     const-class v2, Lcom/fusepowered/m1/android/OverlaySettings;
 
     invoke-virtual {v0, p0, v2}, Lcom/fusepowered/m1/google/gson/Gson;->fromJson(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
@@ -397,7 +397,7 @@
     check-cast v1, Lcom/fusepowered/m1/android/OverlaySettings;
 
     .line 54
-    .local v1, settings:Lcom/fusepowered/m1/android/OverlaySettings;
+    .local v1, "settings":Lcom/fusepowered/m1/android/OverlaySettings;
     return-object v1
 .end method
 
@@ -755,7 +755,7 @@
 
 .method setIsTransparent(Z)V
     .locals 0
-    .parameter "transparent"
+    .param p1, "transparent"    # Z
 
     .prologue
     .line 241
@@ -767,7 +767,7 @@
 
 .method setTransition(Ljava/lang/String;)V
     .locals 0
-    .parameter "trans"
+    .param p1, "trans"    # Ljava/lang/String;
 
     .prologue
     .line 221
@@ -779,7 +779,7 @@
 
 .method setTransitionDurationInMillis(J)V
     .locals 0
-    .parameter "transTimeMillis"
+    .param p1, "transTimeMillis"    # J
 
     .prologue
     .line 196
@@ -791,7 +791,7 @@
 
 .method setUseCustomClose(Z)V
     .locals 0
-    .parameter "isUseCustomClose"
+    .param p1, "isUseCustomClose"    # Z
 
     .prologue
     .line 231
@@ -803,7 +803,7 @@
 
 .method setWebMMHeaders(Lcom/fusepowered/m1/android/HttpMMHeaders;)V
     .locals 0
-    .parameter "headers"
+    .param p1, "headers"    # Lcom/fusepowered/m1/android/HttpMMHeaders;
 
     .prologue
     .line 180
@@ -931,8 +931,8 @@
 
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 3
-    .parameter "dest"
-    .parameter "flags"
+    .param p1, "dest"    # Landroid/os/Parcel;
+    .param p2, "flags"    # I
 
     .prologue
     .line 121
@@ -977,7 +977,7 @@
     aput-boolean v2, v0, v1
 
     .line 123
-    .local v0, booleanValues:[Z
+    .local v0, "booleanValues":[Z
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeBooleanArray([Z)V
 
     .line 124

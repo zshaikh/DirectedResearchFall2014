@@ -24,7 +24,7 @@
 # direct methods
 .method constructor <init>(Landroid/os/IBinder;)V
     .locals 0
-    .parameter "remote"
+    .param p1, "remote"    # Landroid/os/IBinder;
 
     .prologue
     .line 78
@@ -64,13 +64,13 @@
     move-result-object v0
 
     .line 124
-    .local v0, _data:Landroid/os/Parcel;
+    .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
     .line 126
-    .local v1, _reply:Landroid/os/Parcel;
+    .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string v2, "com.google.android.gms.analytics.internal.IAnalyticsService"
 
@@ -123,10 +123,9 @@
 
 .method public sendHit(Ljava/util/Map;JLjava/lang/String;Ljava/util/List;)V
     .locals 5
-    .parameter "wireParams"
-    .parameter "hitTimeInMilliseconds"
-    .parameter "path"
-    .parameter
+    .param p1, "wireParams"    # Ljava/util/Map;
+    .param p2, "hitTimeInMilliseconds"    # J
+    .param p4, "path"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -148,19 +147,19 @@
 
     .prologue
     .line 102
-    .local p5, commands:Ljava/util/List;,"Ljava/util/List<Lcom/google/android/gms/analytics/internal/Command;>;"
+    .local p5, "commands":Ljava/util/List;, "Ljava/util/List<Lcom/google/android/gms/analytics/internal/Command;>;"
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
     .line 103
-    .local v0, _data:Landroid/os/Parcel;
+    .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
     .line 105
-    .local v1, _reply:Landroid/os/Parcel;
+    .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string v2, "com.google.android.gms.analytics.internal.IAnalyticsService"
 

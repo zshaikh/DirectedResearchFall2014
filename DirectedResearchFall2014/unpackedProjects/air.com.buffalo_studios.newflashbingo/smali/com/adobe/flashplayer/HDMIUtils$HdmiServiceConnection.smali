@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/adobe/flashplayer/HDMIUtils;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 236
@@ -39,8 +38,6 @@
 # virtual methods
 .method public onServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 257
@@ -50,7 +47,6 @@
 
 .method public onServiceDisconnected(Landroid/content/ComponentName;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 264
@@ -58,7 +54,7 @@
 
     const/4 v1, 0x0
 
-    #setter for: Lcom/adobe/flashplayer/HDMIUtils;->mHdmiStatusKnown:Z
+    # setter for: Lcom/adobe/flashplayer/HDMIUtils;->mHdmiStatusKnown:Z
     invoke-static {v0, v1}, Lcom/adobe/flashplayer/HDMIUtils;->access$102(Lcom/adobe/flashplayer/HDMIUtils;Z)Z
 
     .line 265

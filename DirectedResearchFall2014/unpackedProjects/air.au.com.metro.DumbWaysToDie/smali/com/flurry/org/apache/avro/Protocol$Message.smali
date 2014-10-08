@@ -29,11 +29,9 @@
 # direct methods
 .method private constructor <init>(Lcom/flurry/org/apache/avro/Protocol;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;Lcom/flurry/org/apache/avro/Schema;)V
     .locals 4
-    .parameter
-    .parameter "name"
-    .parameter "doc"
-    .parameter
-    .parameter "request"
+    .param p2, "name"    # Ljava/lang/String;
+    .param p3, "doc"    # Ljava/lang/String;
+    .param p5, "request"    # Lcom/flurry/org/apache/avro/Schema;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -51,7 +49,7 @@
 
     .prologue
     .line 81
-    .local p4, propMap:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p4, "propMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     iput-object p1, p0, Lcom/flurry/org/apache/avro/Protocol$Message;->this$0:Lcom/flurry/org/apache/avro/Protocol;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -59,6 +57,7 @@
     .line 77
     new-instance v2, Lcom/flurry/org/apache/avro/Schema$Props;
 
+    # getter for: Lcom/flurry/org/apache/avro/Protocol;->MESSAGE_RESERVED:Ljava/util/Set;
     invoke-static {}, Lcom/flurry/org/apache/avro/Protocol;->access$000()Ljava/util/Set;
 
     move-result-object v3
@@ -88,7 +87,7 @@
 
     move-result-object v0
 
-    .local v0, i$:Ljava/util/Iterator;
+    .local v0, "i$":Ljava/util/Iterator;
     :goto_0
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
@@ -103,7 +102,7 @@
     check-cast v1, Ljava/util/Map$Entry;
 
     .line 88
-    .local v1, prop:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v1, "prop":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v2
@@ -121,20 +120,20 @@
     goto :goto_0
 
     .line 89
-    .end local v0           #i$:Ljava/util/Iterator;
-    .end local v1           #prop:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
+    .end local v0    # "i$":Ljava/util/Iterator;
+    .end local v1    # "prop":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
     :cond_0
     return-void
 .end method
 
 .method synthetic constructor <init>(Lcom/flurry/org/apache/avro/Protocol;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;Lcom/flurry/org/apache/avro/Schema;Lcom/flurry/org/apache/avro/Protocol$1;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
-    .parameter "x2"
-    .parameter "x3"
-    .parameter "x4"
-    .parameter "x5"
+    .param p1, "x0"    # Lcom/flurry/org/apache/avro/Protocol;
+    .param p2, "x1"    # Ljava/lang/String;
+    .param p3, "x2"    # Ljava/lang/String;
+    .param p4, "x3"    # Ljava/util/Map;
+    .param p5, "x4"    # Lcom/flurry/org/apache/avro/Schema;
+    .param p6, "x5"    # Lcom/flurry/org/apache/avro/Protocol$1;
 
     .prologue
     .line 73
@@ -147,8 +146,8 @@
 # virtual methods
 .method public declared-synchronized addProp(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
-    .parameter "name"
-    .parameter "value"
+    .param p1, "name"    # Ljava/lang/String;
+    .param p2, "value"    # Ljava/lang/String;
 
     .prologue
     .line 109
@@ -177,7 +176,7 @@
 
 .method public equals(Ljava/lang/Object;)Z
     .locals 6
-    .parameter "o"
+    .param p1, "o"    # Ljava/lang/Object;
 
     .prologue
     const/4 v5, 0x1
@@ -212,7 +211,7 @@
     move-object v1, v0
 
     .line 147
-    .local v1, that:Lcom/flurry/org/apache/avro/Protocol$Message;
+    .local v1, "that":Lcom/flurry/org/apache/avro/Protocol$Message;
     iget-object v2, p0, Lcom/flurry/org/apache/avro/Protocol$Message;->name:Ljava/lang/String;
 
     iget-object v3, v1, Lcom/flurry/org/apache/avro/Protocol$Message;->name:Ljava/lang/String;
@@ -291,7 +290,7 @@
 
 .method public declared-synchronized getProp(Ljava/lang/String;)Ljava/lang/String;
     .locals 1
-    .parameter "name"
+    .param p1, "name"    # Ljava/lang/String;
 
     .prologue
     .line 106
@@ -410,7 +409,7 @@
 
 .method toJson(Lcom/flurry/org/codehaus/jackson/JsonGenerator;)V
     .locals 2
-    .parameter "gen"
+    .param p1, "gen"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -448,7 +447,7 @@
 
     iget-object v1, p0, Lcom/flurry/org/apache/avro/Protocol$Message;->this$0:Lcom/flurry/org/apache/avro/Protocol;
 
-    #getter for: Lcom/flurry/org/apache/avro/Protocol;->types:Lcom/flurry/org/apache/avro/Schema$Names;
+    # getter for: Lcom/flurry/org/apache/avro/Protocol;->types:Lcom/flurry/org/apache/avro/Schema$Names;
     invoke-static {v1}, Lcom/flurry/org/apache/avro/Protocol;->access$100(Lcom/flurry/org/apache/avro/Protocol;)Lcom/flurry/org/apache/avro/Schema$Names;
 
     move-result-object v1
@@ -467,7 +466,7 @@
 
 .method toJson1(Lcom/flurry/org/codehaus/jackson/JsonGenerator;)V
     .locals 2
-    .parameter "gen"
+    .param p1, "gen"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -504,7 +503,7 @@
     invoke-direct {v2}, Ljava/io/StringWriter;-><init>()V
 
     .line 119
-    .local v2, writer:Ljava/io/StringWriter;
+    .local v2, "writer":Ljava/io/StringWriter;
     sget-object v3, Lcom/flurry/org/apache/avro/Schema;->FACTORY:Lcom/flurry/org/codehaus/jackson/JsonFactory;
 
     invoke-virtual {v3, v2}, Lcom/flurry/org/codehaus/jackson/JsonFactory;->createJsonGenerator(Ljava/io/Writer;)Lcom/flurry/org/codehaus/jackson/JsonGenerator;
@@ -512,7 +511,7 @@
     move-result-object v1
 
     .line 120
-    .local v1, gen:Lcom/flurry/org/codehaus/jackson/JsonGenerator;
+    .local v1, "gen":Lcom/flurry/org/codehaus/jackson/JsonGenerator;
     invoke-virtual {p0, v1}, Lcom/flurry/org/apache/avro/Protocol$Message;->toJson(Lcom/flurry/org/codehaus/jackson/JsonGenerator;)V
 
     .line 121
@@ -528,15 +527,15 @@
     return-object v3
 
     .line 123
-    .end local v1           #gen:Lcom/flurry/org/codehaus/jackson/JsonGenerator;
-    .end local v2           #writer:Ljava/io/StringWriter;
+    .end local v1    # "gen":Lcom/flurry/org/codehaus/jackson/JsonGenerator;
+    .end local v2    # "writer":Ljava/io/StringWriter;
     :catch_0
     move-exception v3
 
     move-object v0, v3
 
     .line 124
-    .local v0, e:Ljava/io/IOException;
+    .local v0, "e":Ljava/io/IOException;
     new-instance v3, Lcom/flurry/org/apache/avro/AvroRuntimeException;
 
     invoke-direct {v3, v0}, Lcom/flurry/org/apache/avro/AvroRuntimeException;-><init>(Ljava/lang/Throwable;)V

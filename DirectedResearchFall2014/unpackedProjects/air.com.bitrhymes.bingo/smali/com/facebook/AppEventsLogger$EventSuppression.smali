@@ -23,8 +23,8 @@
 # direct methods
 .method constructor <init>(ILcom/facebook/AppEventsLogger$SuppressionTimeoutBehavior;)V
     .locals 0
-    .parameter "timeoutPeriod"
-    .parameter "behavior"
+    .param p1, "timeoutPeriod"    # I
+    .param p2, "behavior"    # Lcom/facebook/AppEventsLogger$SuppressionTimeoutBehavior;
 
     .prologue
     .line 141

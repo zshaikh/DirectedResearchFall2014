@@ -53,7 +53,7 @@
     array-length v3, v5
 
     .line 13
-    .local v3, len:I
+    .local v3, "len":I
     new-array v5, v3, [B
 
     sput-object v5, Lcom/flurry/org/codehaus/jackson/util/CharTypes;->HEX_BYTES:[B
@@ -61,7 +61,7 @@
     .line 14
     const/4 v2, 0x0
 
-    .local v2, i:I
+    .local v2, "i":I
     :goto_0
     if-ge v2, v3, :cond_0
 
@@ -86,7 +86,7 @@
     new-array v4, v9, [I
 
     .line 32
-    .local v4, table:[I
+    .local v4, "table":[I
     const/4 v2, 0x0
 
     :goto_1
@@ -139,7 +139,7 @@
     .line 49
     const/16 v0, 0x80
 
-    .local v0, c:I
+    .local v0, "c":I
     :goto_2
     if-ge v0, v9, :cond_5
 
@@ -154,7 +154,7 @@
     const/4 v1, 0x2
 
     .line 64
-    .local v1, code:I
+    .local v1, "code":I
     :goto_3
     aput v1, v4, v0
 
@@ -164,7 +164,7 @@
     goto :goto_2
 
     .line 55
-    .end local v1           #code:I
+    .end local v1    # "code":I
     :cond_2
     and-int/lit16 v5, v0, 0xf0
 
@@ -175,11 +175,11 @@
     .line 56
     const/4 v1, 0x3
 
-    .restart local v1       #code:I
+    .restart local v1    # "code":I
     goto :goto_3
 
     .line 57
-    .end local v1           #code:I
+    .end local v1    # "code":I
     :cond_3
     and-int/lit16 v5, v0, 0xf8
 
@@ -190,19 +190,19 @@
     .line 59
     const/4 v1, 0x4
 
-    .restart local v1       #code:I
+    .restart local v1    # "code":I
     goto :goto_3
 
     .line 62
-    .end local v1           #code:I
+    .end local v1    # "code":I
     :cond_4
     const/4 v1, -0x1
 
-    .restart local v1       #code:I
+    .restart local v1    # "code":I
     goto :goto_3
 
     .line 66
-    .end local v1           #code:I
+    .end local v1    # "code":I
     :cond_5
     sput-object v4, Lcom/flurry/org/codehaus/jackson/util/CharTypes;->sInputCodesUtf8:[I
 
@@ -479,8 +479,8 @@
 
 .method public static appendQuoted(Ljava/lang/StringBuilder;Ljava/lang/String;)V
     .locals 10
-    .parameter "sb"
-    .parameter "content"
+    .param p0, "sb"    # Ljava/lang/StringBuilder;
+    .param p1, "content"    # Ljava/lang/String;
 
     .prologue
     const/16 v9, 0x30
@@ -489,19 +489,19 @@
     sget-object v2, Lcom/flurry/org/codehaus/jackson/util/CharTypes;->sOutputEscapes128:[I
 
     .line 198
-    .local v2, escCodes:[I
+    .local v2, "escCodes":[I
     array-length v3, v2
 
     .line 199
-    .local v3, escLen:I
+    .local v3, "escLen":I
     const/4 v4, 0x0
 
-    .local v4, i:I
+    .local v4, "i":I
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v5
 
-    .local v5, len:I
+    .local v5, "len":I
     :goto_0
     if-ge v4, v5, :cond_3
 
@@ -511,7 +511,7 @@
     move-result v0
 
     .line 201
-    .local v0, c:C
+    .local v0, "c":C
     if-ge v0, v3, :cond_0
 
     aget v7, v2, v0
@@ -538,7 +538,7 @@
     aget v1, v2, v0
 
     .line 207
-    .local v1, escCode:I
+    .local v1, "escCode":I
     if-gez v1, :cond_2
 
     .line 209
@@ -558,7 +558,7 @@
     neg-int v6, v7
 
     .line 213
-    .local v6, value:I
+    .local v6, "value":I
     sget-object v7, Lcom/flurry/org/codehaus/jackson/util/CharTypes;->HEX_CHARS:[C
 
     shr-int/lit8 v8, v6, 0x4
@@ -579,7 +579,7 @@
     goto :goto_1
 
     .line 216
-    .end local v6           #value:I
+    .end local v6    # "value":I
     :cond_2
     int-to-char v7, v1
 
@@ -588,15 +588,15 @@
     goto :goto_1
 
     .line 219
-    .end local v0           #c:C
-    .end local v1           #escCode:I
+    .end local v0    # "c":C
+    .end local v1    # "escCode":I
     :cond_3
     return-void
 .end method
 
 .method public static charToHex(I)I
     .locals 1
-    .parameter "ch"
+    .param p0, "ch"    # I
 
     .prologue
     .line 192

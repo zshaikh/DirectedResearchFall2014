@@ -46,7 +46,7 @@
     sput v0, Lcom/facebook/android/R$color;->com_facebook_loginview_text_color:I
 
     .line 156
-    const/high16 v0, 0x7f06
+    const/high16 v0, 0x7f060000
 
     sput v0, Lcom/facebook/android/R$color;->com_facebook_picker_search_bar_background:I
 

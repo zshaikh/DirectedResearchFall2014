@@ -46,8 +46,8 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Lcom/facebook/Session;)V
     .locals 2
-    .parameter "context"
-    .parameter "session"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "session"    # Lcom/facebook/Session;
 
     .prologue
     .line 588
@@ -63,9 +63,9 @@
 
 .method public constructor <init>(Landroid/content/Context;Lcom/facebook/Session;Landroid/os/Bundle;)V
     .locals 1
-    .parameter "context"
-    .parameter "session"
-    .parameter "parameters"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "session"    # Lcom/facebook/Session;
+    .param p3, "parameters"    # Landroid/os/Bundle;
 
     .prologue
     .line 604
@@ -93,7 +93,7 @@
 
 .method public setCaption(Ljava/lang/String;)Lcom/facebook/widget/WebDialog$FeedDialogBuilder;
     .locals 2
-    .parameter "caption"
+    .param p1, "caption"    # Ljava/lang/String;
 
     .prologue
     .line 684
@@ -111,7 +111,7 @@
 
 .method public setDescription(Ljava/lang/String;)Lcom/facebook/widget/WebDialog$FeedDialogBuilder;
     .locals 2
-    .parameter "description"
+    .param p1, "description"    # Ljava/lang/String;
 
     .prologue
     .line 695
@@ -129,7 +129,7 @@
 
 .method public setFrom(Ljava/lang/String;)Lcom/facebook/widget/WebDialog$FeedDialogBuilder;
     .locals 2
-    .parameter "id"
+    .param p1, "id"    # Ljava/lang/String;
 
     .prologue
     .line 616
@@ -147,7 +147,7 @@
 
 .method public setLink(Ljava/lang/String;)Lcom/facebook/widget/WebDialog$FeedDialogBuilder;
     .locals 2
-    .parameter "link"
+    .param p1, "link"    # Ljava/lang/String;
 
     .prologue
     .line 639
@@ -165,7 +165,7 @@
 
 .method public setName(Ljava/lang/String;)Lcom/facebook/widget/WebDialog$FeedDialogBuilder;
     .locals 2
-    .parameter "name"
+    .param p1, "name"    # Ljava/lang/String;
 
     .prologue
     .line 673
@@ -183,7 +183,6 @@
 
 .method public bridge synthetic setOnCompleteListener(Lcom/facebook/widget/WebDialog$OnCompleteListener;)Lcom/facebook/widget/WebDialog$BuilderBase;
     .locals 1
-    .parameter
 
     .prologue
     .line 1
@@ -196,7 +195,7 @@
 
 .method public setPicture(Ljava/lang/String;)Lcom/facebook/widget/WebDialog$FeedDialogBuilder;
     .locals 2
-    .parameter "picture"
+    .param p1, "picture"    # Ljava/lang/String;
 
     .prologue
     .line 650
@@ -214,7 +213,7 @@
 
 .method public setSource(Ljava/lang/String;)Lcom/facebook/widget/WebDialog$FeedDialogBuilder;
     .locals 2
-    .parameter "source"
+    .param p1, "source"    # Ljava/lang/String;
 
     .prologue
     .line 662
@@ -232,7 +231,6 @@
 
 .method public bridge synthetic setTheme(I)Lcom/facebook/widget/WebDialog$BuilderBase;
     .locals 1
-    .parameter
 
     .prologue
     .line 1
@@ -245,7 +243,7 @@
 
 .method public setTo(Ljava/lang/String;)Lcom/facebook/widget/WebDialog$FeedDialogBuilder;
     .locals 2
-    .parameter "id"
+    .param p1, "id"    # Ljava/lang/String;
 
     .prologue
     .line 628

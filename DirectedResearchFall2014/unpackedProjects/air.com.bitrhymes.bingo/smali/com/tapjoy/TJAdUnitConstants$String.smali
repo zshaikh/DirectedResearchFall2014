@@ -111,7 +111,6 @@
 # direct methods
 .method public constructor <init>(Lcom/tapjoy/TJAdUnitConstants;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 51

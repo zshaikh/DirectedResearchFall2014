@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/facebook/Session;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1
@@ -40,7 +39,7 @@
 # virtual methods
 .method public onCompleted(Lcom/facebook/AuthorizationClient$Result;)V
     .locals 3
-    .parameter "result"
+    .param p1, "result"    # Lcom/facebook/AuthorizationClient$Result;
 
     .prologue
     .line 1201
@@ -54,21 +53,21 @@
     const/4 v0, 0x0
 
     .line 1206
-    .local v0, activityResult:I
+    .local v0, "activityResult":I
     :goto_0
     iget-object v1, p0, Lcom/facebook/Session$2;->this$0:Lcom/facebook/Session;
 
-    #calls: Lcom/facebook/Session;->handleAuthorizationResult(ILcom/facebook/AuthorizationClient$Result;)V
+    # invokes: Lcom/facebook/Session;->handleAuthorizationResult(ILcom/facebook/AuthorizationClient$Result;)V
     invoke-static {v1, v0, p1}, Lcom/facebook/Session;->access$6(Lcom/facebook/Session;ILcom/facebook/AuthorizationClient$Result;)V
 
     .line 1207
     return-void
 
     .line 1204
-    .end local v0           #activityResult:I
+    .end local v0    # "activityResult":I
     :cond_0
     const/4 v0, -0x1
 
-    .restart local v0       #activityResult:I
+    .restart local v0    # "activityResult":I
     goto :goto_0
 .end method

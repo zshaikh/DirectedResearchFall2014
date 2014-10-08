@@ -63,7 +63,6 @@
 
 .method public static adActionNamefromString(Ljava/lang/String;)Lcom/inmobi/androidsdk/impl/IMAdUnit$AdActionNames;
     .locals 1
-    .parameter
 
     .prologue
     .line 55
@@ -203,7 +202,6 @@
 
 .method public static adTypefromString(Ljava/lang/String;)Lcom/inmobi/androidsdk/impl/IMAdUnit$AdTypes;
     .locals 2
-    .parameter
 
     .prologue
     .line 82
@@ -369,7 +367,6 @@
 
 .method public setAdActionName(Lcom/inmobi/androidsdk/impl/IMAdUnit$AdActionNames;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 109
@@ -381,7 +378,6 @@
 
 .method public setAdType(Lcom/inmobi/androidsdk/impl/IMAdUnit$AdTypes;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 124
@@ -393,7 +389,6 @@
 
 .method public setCDATABlock(Ljava/lang/String;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 177
@@ -405,7 +400,6 @@
 
 .method public setDefaultTargetUrl(Ljava/lang/String;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 201
@@ -417,7 +411,6 @@
 
 .method public setDeviceInfoUploadUrl(Ljava/lang/String;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 169
@@ -429,7 +422,6 @@
 
 .method public setHeight(I)V
     .locals 0
-    .parameter
 
     .prologue
     .line 193
@@ -441,7 +433,6 @@
 
 .method public setSendDeviceInfo(Z)V
     .locals 0
-    .parameter
 
     .prologue
     .line 154
@@ -453,7 +444,6 @@
 
 .method public setTargetUrl(Ljava/lang/String;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 139
@@ -465,7 +455,6 @@
 
 .method public setWidth(I)V
     .locals 0
-    .parameter
 
     .prologue
     .line 185

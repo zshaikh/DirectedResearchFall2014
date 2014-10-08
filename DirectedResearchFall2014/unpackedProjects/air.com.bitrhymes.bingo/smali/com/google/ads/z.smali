@@ -28,7 +28,6 @@
 
 .method public constructor <init>(Lcom/google/ads/AdActivity$StaticMethodWrapper;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 30
@@ -45,9 +44,6 @@
 # virtual methods
 .method public a(Lcom/google/ads/internal/d;Ljava/util/HashMap;Landroid/webkit/WebView;)V
     .locals 5
-    .parameter
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",

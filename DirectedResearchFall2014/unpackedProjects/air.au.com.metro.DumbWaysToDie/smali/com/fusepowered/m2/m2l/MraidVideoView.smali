@@ -6,9 +6,9 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Landroid/content/Intent;Lcom/fusepowered/m2/m2l/BaseVideoView$BaseVideoViewListener;)V
     .locals 1
-    .parameter "context"
-    .parameter "intent"
-    .parameter "baseVideoViewListener"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "intent"    # Landroid/content/Intent;
+    .param p3, "baseVideoViewListener"    # Lcom/fusepowered/m2/m2l/BaseVideoView$BaseVideoViewListener;
 
     .prologue
     .line 44

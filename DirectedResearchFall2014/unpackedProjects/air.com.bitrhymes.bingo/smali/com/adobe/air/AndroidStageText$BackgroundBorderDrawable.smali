@@ -31,7 +31,6 @@
 # direct methods
 .method public constructor <init>(Lcom/adobe/air/AndroidStageText;)V
     .locals 1
-    .parameter
 
     .prologue
     const/4 v0, 0x0
@@ -54,7 +53,7 @@
     iput v0, p0, Lcom/adobe/air/AndroidStageText$BackgroundBorderDrawable;->mBkgColor:I
 
     .line 162
-    const/high16 v0, -0x100
+    const/high16 v0, -0x1000000
 
     iput v0, p0, Lcom/adobe/air/AndroidStageText$BackgroundBorderDrawable;->mBorderColor:I
 
@@ -67,8 +66,6 @@
 
 .method public constructor <init>(Lcom/adobe/air/AndroidStageText;Landroid/graphics/drawable/shapes/Shape;)V
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     const/4 v0, 0x0
@@ -91,7 +88,7 @@
     iput v0, p0, Lcom/adobe/air/AndroidStageText$BackgroundBorderDrawable;->mBkgColor:I
 
     .line 162
-    const/high16 v0, -0x100
+    const/high16 v0, -0x1000000
 
     iput v0, p0, Lcom/adobe/air/AndroidStageText$BackgroundBorderDrawable;->mBorderColor:I
 
@@ -145,7 +142,7 @@
 
     move-result-object v0
 
-    const/high16 v1, 0x4040
+    const/high16 v1, 0x40400000
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
@@ -166,9 +163,6 @@
 # virtual methods
 .method protected onDraw(Landroid/graphics/drawable/shapes/Shape;Landroid/graphics/Canvas;Landroid/graphics/Paint;)V
     .locals 2
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 131
@@ -201,7 +195,6 @@
 
 .method public setBkgColor(I)V
     .locals 1
-    .parameter
 
     .prologue
     .line 149
@@ -218,7 +211,6 @@
 
 .method public setBorderColor(I)V
     .locals 1
-    .parameter
 
     .prologue
     .line 155

@@ -13,7 +13,7 @@
 
 
 # static fields
-.field private static final BYTES_CLASS:Ljava/lang/Class; = null
+.field private static final BYTES_CLASS:Ljava/lang/Class;
 
 .field static final CLASS_PROP:Ljava/lang/String; = "java-class"
 
@@ -109,15 +109,15 @@
 
 .method private static findField(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/reflect/Field;
     .locals 5
-    .parameter "original"
-    .parameter "name"
+    .param p0, "original"    # Ljava/lang/Class;
+    .param p1, "name"    # Ljava/lang/String;
 
     .prologue
     .line 177
     move-object v0, p0
 
     .line 180
-    .local v0, c:Ljava/lang/Class;
+    .local v0, "c":Ljava/lang/Class;
     :cond_0
     :try_start_0
     invoke-virtual {v0, p1}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
@@ -125,7 +125,7 @@
     move-result-object v1
 
     .line 181
-    .local v1, f:Ljava/lang/reflect/Field;
+    .local v1, "f":Ljava/lang/reflect/Field;
     const/4 v2, 0x1
 
     invoke-virtual {v1, v2}, Ljava/lang/reflect/Field;->setAccessible(Z)V
@@ -136,7 +136,7 @@
     return-object v1
 
     .line 183
-    .end local v1           #f:Ljava/lang/reflect/Field;
+    .end local v1    # "f":Ljava/lang/reflect/Field;
     :catch_0
     move-exception v2
 
@@ -196,8 +196,7 @@
 
 .method private getAnnotatedUnion(Lcom/flurry/org/apache/avro/reflect/Union;Ljava/util/Map;)Lcom/flurry/org/apache/avro/Schema;
     .locals 6
-    .parameter "union"
-    .parameter
+    .param p1, "union"    # Lcom/flurry/org/apache/avro/reflect/Union;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -213,31 +212,31 @@
 
     .prologue
     .line 348
-    .local p2, names:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Lcom/flurry/org/apache/avro/Schema;>;"
+    .local p2, "names":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Lcom/flurry/org/apache/avro/Schema;>;"
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
     .line 349
-    .local v2, branches:Ljava/util/List;,"Ljava/util/List<Lcom/flurry/org/apache/avro/Schema;>;"
+    .local v2, "branches":Ljava/util/List;, "Ljava/util/List<Lcom/flurry/org/apache/avro/Schema;>;"
     invoke-interface {p1}, Lcom/flurry/org/apache/avro/reflect/Union;->value()[Ljava/lang/Class;
 
     move-result-object v0
 
-    .local v0, arr$:[Ljava/lang/Class;
+    .local v0, "arr$":[Ljava/lang/Class;
     array-length v4, v0
 
-    .local v4, len$:I
+    .local v4, "len$":I
     const/4 v3, 0x0
 
-    .local v3, i$:I
+    .local v3, "i$":I
     :goto_0
     if-ge v3, v4, :cond_0
 
     aget-object v1, v0, v3
 
     .line 350
-    .local v1, branch:Ljava/lang/Class;
+    .local v1, "branch":Ljava/lang/Class;
     invoke-virtual {p0, v1, p2}, Lcom/flurry/org/apache/avro/reflect/ReflectData;->createSchema(Ljava/lang/reflect/Type;Ljava/util/Map;)Lcom/flurry/org/apache/avro/Schema;
 
     move-result-object v5
@@ -250,7 +249,7 @@
     goto :goto_0
 
     .line 351
-    .end local v1           #branch:Ljava/lang/Class;
+    .end local v1    # "branch":Ljava/lang/Class;
     :cond_0
     invoke-static {v2}, Lcom/flurry/org/apache/avro/Schema;->createUnion(Ljava/util/List;)Lcom/flurry/org/apache/avro/Schema;
 
@@ -261,8 +260,8 @@
 
 .method static getClassProp(Lcom/flurry/org/apache/avro/Schema;Ljava/lang/String;)Ljava/lang/Class;
     .locals 3
-    .parameter "schema"
-    .parameter "prop"
+    .param p0, "schema"    # Lcom/flurry/org/apache/avro/Schema;
+    .param p1, "prop"    # Ljava/lang/String;
 
     .prologue
     .line 193
@@ -271,7 +270,7 @@
     move-result-object v1
 
     .line 194
-    .local v1, name:Ljava/lang/String;
+    .local v1, "name":Ljava/lang/String;
     if-nez v1, :cond_0
 
     const/4 v2, 0x0
@@ -295,7 +294,7 @@
     move-exception v0
 
     .line 198
-    .local v0, e:Ljava/lang/ClassNotFoundException;
+    .local v0, "e":Ljava/lang/ClassNotFoundException;
     new-instance v2, Lcom/flurry/org/apache/avro/AvroRuntimeException;
 
     invoke-direct {v2, v0}, Lcom/flurry/org/apache/avro/AvroRuntimeException;-><init>(Ljava/lang/Throwable;)V
@@ -305,8 +304,8 @@
 
 .method private static getField(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/reflect/Field;
     .locals 3
-    .parameter "c"
-    .parameter "name"
+    .param p0, "c"    # Ljava/lang/Class;
+    .param p1, "name"    # Ljava/lang/String;
 
     .prologue
     .line 163
@@ -319,17 +318,17 @@
     check-cast v1, Ljava/util/Map;
 
     .line 164
-    .local v1, fields:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/reflect/Field;>;"
+    .local v1, "fields":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/reflect/Field;>;"
     if-nez v1, :cond_0
 
     .line 165
     new-instance v1, Ljava/util/concurrent/ConcurrentHashMap;
 
-    .end local v1           #fields:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/reflect/Field;>;"
+    .end local v1    # "fields":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/reflect/Field;>;"
     invoke-direct {v1}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
 
     .line 166
-    .restart local v1       #fields:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/reflect/Field;>;"
+    .restart local v1    # "fields":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/reflect/Field;>;"
     sget-object v2, Lcom/flurry/org/apache/avro/reflect/ReflectData;->FIELD_CACHE:Ljava/util/Map;
 
     invoke-interface {v2, p0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -343,7 +342,7 @@
     check-cast v0, Ljava/lang/reflect/Field;
 
     .line 169
-    .local v0, f:Ljava/lang/reflect/Field;
+    .local v0, "f":Ljava/lang/reflect/Field;
     if-nez v0, :cond_1
 
     .line 170
@@ -361,7 +360,7 @@
 
 .method private getFields(Ljava/lang/Class;)Ljava/util/Collection;
     .locals 9
-    .parameter "recordClass"
+    .param p1, "recordClass"    # Ljava/lang/Class;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -381,11 +380,11 @@
     invoke-direct {v3}, Ljava/util/LinkedHashMap;-><init>()V
 
     .line 364
-    .local v3, fields:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/reflect/Field;>;"
+    .local v3, "fields":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/reflect/Field;>;"
     move-object v1, p1
 
     .line 366
-    .local v1, c:Ljava/lang/Class;
+    .local v1, "c":Ljava/lang/Class;
     :cond_0
     invoke-virtual {v1}, Ljava/lang/Class;->getPackage()Ljava/lang/Package;
 
@@ -423,20 +422,20 @@
 
     move-result-object v0
 
-    .local v0, arr$:[Ljava/lang/reflect/Field;
+    .local v0, "arr$":[Ljava/lang/reflect/Field;
     array-length v5, v0
 
-    .local v5, len$:I
+    .local v5, "len$":I
     const/4 v4, 0x0
 
-    .local v4, i$:I
+    .local v4, "i$":I
     :goto_1
     if-ge v4, v5, :cond_3
 
     aget-object v2, v0, v4
 
     .line 370
-    .local v2, field:Ljava/lang/reflect/Field;
+    .local v2, "field":Ljava/lang/reflect/Field;
     invoke-virtual {v2}, Ljava/lang/reflect/Field;->getModifiers()I
 
     move-result v6
@@ -492,7 +491,7 @@
     goto :goto_1
 
     .line 373
-    .end local v2           #field:Ljava/lang/reflect/Field;
+    .end local v2    # "field":Ljava/lang/reflect/Field;
     :cond_3
     invoke-virtual {v1}, Ljava/lang/Class;->getSuperclass()Ljava/lang/Class;
 
@@ -506,9 +505,8 @@
 
 .method private getMessage(Ljava/lang/reflect/Method;Lcom/flurry/org/apache/avro/Protocol;Ljava/util/Map;)Lcom/flurry/org/apache/avro/Protocol$Message;
     .locals 25
-    .parameter "method"
-    .parameter "protocol"
-    .parameter
+    .param p1, "method"    # Ljava/lang/reflect/Method;
+    .param p2, "protocol"    # Lcom/flurry/org/apache/avro/Protocol;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -525,13 +523,13 @@
 
     .prologue
     .line 419
-    .local p3, names:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Lcom/flurry/org/apache/avro/Schema;>;"
+    .local p3, "names":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Lcom/flurry/org/apache/avro/Schema;>;"
     new-instance v15, Ljava/util/ArrayList;
 
     invoke-direct {v15}, Ljava/util/ArrayList;-><init>()V
 
     .line 420
-    .local v15, fields:Ljava/util/List;,"Ljava/util/List<Lcom/flurry/org/apache/avro/Schema$Field;>;"
+    .local v15, "fields":Ljava/util/List;, "Ljava/util/List<Lcom/flurry/org/apache/avro/Schema$Field;>;"
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/flurry/org/apache/avro/reflect/ReflectData;->paranamer:Lcom/thoughtworks/paranamer/Paranamer;
@@ -547,22 +545,22 @@
     move-result-object v21
 
     .line 421
-    .local v21, paramNames:[Ljava/lang/String;
+    .local v21, "paramNames":[Ljava/lang/String;
     invoke-virtual/range {p1 .. p1}, Ljava/lang/reflect/Method;->getGenericParameterTypes()[Ljava/lang/reflect/Type;
 
     move-result-object v23
 
     .line 422
-    .local v23, paramTypes:[Ljava/lang/reflect/Type;
+    .local v23, "paramTypes":[Ljava/lang/reflect/Type;
     invoke-virtual/range {p1 .. p1}, Ljava/lang/reflect/Method;->getParameterAnnotations()[[Ljava/lang/annotation/Annotation;
 
     move-result-object v11
 
     .line 423
-    .local v11, annotations:[[Ljava/lang/annotation/Annotation;
+    .local v11, "annotations":[[Ljava/lang/annotation/Annotation;
     const/16 v16, 0x0
 
-    .local v16, i:I
+    .local v16, "i":I
     :goto_0
     move-object/from16 v0, v23
 
@@ -590,10 +588,10 @@
     move-result-object v22
 
     .line 425
-    .local v22, paramSchema:Lcom/flurry/org/apache/avro/Schema;
+    .local v22, "paramSchema":Lcom/flurry/org/apache/avro/Schema;
     const/16 v18, 0x0
 
-    .local v18, j:I
+    .local v18, "j":I
     :goto_1
     aget-object v5, v11, v16
 
@@ -676,7 +674,7 @@
     move-object/from16 v20, v5
 
     .line 433
-    .local v20, paramName:Ljava/lang/String;
+    .local v20, "paramName":Ljava/lang/String;
     :goto_3
     new-instance v5, Lcom/flurry/org/apache/avro/Schema$Field;
 
@@ -704,7 +702,7 @@
     goto :goto_0
 
     .line 430
-    .end local v20           #paramName:Ljava/lang/String;
+    .end local v20    # "paramName":Ljava/lang/String;
     :cond_3
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -735,15 +733,15 @@
     goto :goto_3
 
     .line 436
-    .end local v18           #j:I
-    .end local v22           #paramSchema:Lcom/flurry/org/apache/avro/Schema;
+    .end local v18    # "j":I
+    .end local v22    # "paramSchema":Lcom/flurry/org/apache/avro/Schema;
     :cond_4
     invoke-static {v15}, Lcom/flurry/org/apache/avro/Schema;->createRecord(Ljava/util/List;)Lcom/flurry/org/apache/avro/Schema;
 
     move-result-object v8
 
     .line 438
-    .local v8, request:Lcom/flurry/org/apache/avro/Schema;
+    .local v8, "request":Lcom/flurry/org/apache/avro/Schema;
     const-class v5, Lcom/flurry/org/apache/avro/reflect/Union;
 
     move-object/from16 v0, p1
@@ -757,7 +755,7 @@
     check-cast v24, Lcom/flurry/org/apache/avro/reflect/Union;
 
     .line 439
-    .local v24, union:Lcom/flurry/org/apache/avro/reflect/Union;
+    .local v24, "union":Lcom/flurry/org/apache/avro/reflect/Union;
     if-nez v24, :cond_7
 
     invoke-virtual/range {p1 .. p1}, Ljava/lang/reflect/Method;->getGenericReturnType()Ljava/lang/reflect/Type;
@@ -777,7 +775,7 @@
     move-object v9, v5
 
     .line 442
-    .local v9, response:Lcom/flurry/org/apache/avro/Schema;
+    .local v9, "response":Lcom/flurry/org/apache/avro/Schema;
     :goto_4
     const-class v5, Lcom/flurry/org/apache/avro/reflect/Nullable;
 
@@ -803,7 +801,7 @@
     invoke-direct {v14}, Ljava/util/ArrayList;-><init>()V
 
     .line 446
-    .local v14, errs:Ljava/util/List;,"Ljava/util/List<Lcom/flurry/org/apache/avro/Schema;>;"
+    .local v14, "errs":Ljava/util/List;, "Ljava/util/List<Lcom/flurry/org/apache/avro/Schema;>;"
     sget-object v5, Lcom/flurry/org/apache/avro/Protocol;->SYSTEM_ERROR:Lcom/flurry/org/apache/avro/Schema;
 
     invoke-interface {v14, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -813,17 +811,17 @@
 
     move-result-object v12
 
-    .local v12, arr$:[Ljava/lang/reflect/Type;
+    .local v12, "arr$":[Ljava/lang/reflect/Type;
     move-object v0, v12
 
     array-length v0, v0
 
     move/from16 v19, v0
 
-    .local v19, len$:I
+    .local v19, "len$":I
     const/16 v17, 0x0
 
-    .local v17, i$:I
+    .local v17, "i$":I
     :goto_5
     move/from16 v0, v17
 
@@ -834,7 +832,7 @@
     aget-object v13, v12, v17
 
     .line 448
-    .local v13, err:Ljava/lang/reflect/Type;
+    .local v13, "err":Ljava/lang/reflect/Type;
     const-class v5, Lcom/flurry/org/apache/avro/AvroRemoteException;
 
     if-eq v13, v5, :cond_6
@@ -859,12 +857,12 @@
     goto :goto_5
 
     .line 439
-    .end local v9           #response:Lcom/flurry/org/apache/avro/Schema;
-    .end local v12           #arr$:[Ljava/lang/reflect/Type;
-    .end local v13           #err:Ljava/lang/reflect/Type;
-    .end local v14           #errs:Ljava/util/List;,"Ljava/util/List<Lcom/flurry/org/apache/avro/Schema;>;"
-    .end local v17           #i$:I
-    .end local v19           #len$:I
+    .end local v9    # "response":Lcom/flurry/org/apache/avro/Schema;
+    .end local v12    # "arr$":[Ljava/lang/reflect/Type;
+    .end local v13    # "err":Ljava/lang/reflect/Type;
+    .end local v14    # "errs":Ljava/util/List;, "Ljava/util/List<Lcom/flurry/org/apache/avro/Schema;>;"
+    .end local v17    # "i$":I
+    .end local v19    # "len$":I
     :cond_7
     move-object/from16 v0, p0
 
@@ -881,18 +879,18 @@
     goto :goto_4
 
     .line 450
-    .restart local v9       #response:Lcom/flurry/org/apache/avro/Schema;
-    .restart local v12       #arr$:[Ljava/lang/reflect/Type;
-    .restart local v14       #errs:Ljava/util/List;,"Ljava/util/List<Lcom/flurry/org/apache/avro/Schema;>;"
-    .restart local v17       #i$:I
-    .restart local v19       #len$:I
+    .restart local v9    # "response":Lcom/flurry/org/apache/avro/Schema;
+    .restart local v12    # "arr$":[Ljava/lang/reflect/Type;
+    .restart local v14    # "errs":Ljava/util/List;, "Ljava/util/List<Lcom/flurry/org/apache/avro/Schema;>;"
+    .restart local v17    # "i$":I
+    .restart local v19    # "len$":I
     :cond_8
     invoke-static {v14}, Lcom/flurry/org/apache/avro/Schema;->createUnion(Ljava/util/List;)Lcom/flurry/org/apache/avro/Schema;
 
     move-result-object v10
 
     .line 452
-    .local v10, errors:Lcom/flurry/org/apache/avro/Schema;
+    .local v10, "errors":Lcom/flurry/org/apache/avro/Schema;
     invoke-virtual/range {p1 .. p1}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
 
     move-result-object v6
@@ -910,8 +908,7 @@
 
 .method private getSchema(Ljava/lang/reflect/Type;Ljava/util/Map;)Lcom/flurry/org/apache/avro/Schema;
     .locals 4
-    .parameter "type"
-    .parameter
+    .param p1, "type"    # Ljava/lang/reflect/Type;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -927,7 +924,7 @@
 
     .prologue
     .line 457
-    .local p2, names:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Lcom/flurry/org/apache/avro/Schema;>;"
+    .local p2, "names":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Lcom/flurry/org/apache/avro/Schema;>;"
     :try_start_0
     invoke-virtual {p0, p1, p2}, Lcom/flurry/org/apache/avro/reflect/ReflectData;->createSchema(Ljava/lang/reflect/Type;Ljava/util/Map;)Lcom/flurry/org/apache/avro/Schema;
     :try_end_0
@@ -942,7 +939,7 @@
     move-exception v0
 
     .line 459
-    .local v0, e:Lcom/flurry/org/apache/avro/AvroTypeException;
+    .local v0, "e":Lcom/flurry/org/apache/avro/AvroTypeException;
     new-instance v1, Lcom/flurry/org/apache/avro/AvroTypeException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -984,7 +981,7 @@
 
 .method public static makeNullable(Lcom/flurry/org/apache/avro/Schema;)Lcom/flurry/org/apache/avro/Schema;
     .locals 3
-    .parameter "schema"
+    .param p0, "schema"    # Lcom/flurry/org/apache/avro/Schema;
 
     .prologue
     .line 356
@@ -1019,8 +1016,8 @@
 
 .method private setElement(Lcom/flurry/org/apache/avro/Schema;Ljava/lang/reflect/Type;)V
     .locals 5
-    .parameter "schema"
-    .parameter "element"
+    .param p1, "schema"    # Lcom/flurry/org/apache/avro/Schema;
+    .param p2, "element"    # Ljava/lang/reflect/Type;
 
     .prologue
     .line 339
@@ -1042,7 +1039,7 @@
     move-object v1, v0
 
     .line 341
-    .local v1, c:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local v1, "c":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const-class v3, Lcom/flurry/org/apache/avro/reflect/Union;
 
     invoke-virtual {v1, v3}, Ljava/lang/Class;->getAnnotation(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;
@@ -1052,7 +1049,7 @@
     check-cast v2, Lcom/flurry/org/apache/avro/reflect/Union;
 
     .line 342
-    .local v2, union:Lcom/flurry/org/apache/avro/reflect/Union;
+    .local v2, "union":Lcom/flurry/org/apache/avro/reflect/Union;
     if-eqz v2, :cond_0
 
     .line 343
@@ -1071,10 +1068,10 @@
 # virtual methods
 .method protected compare(Ljava/lang/Object;Ljava/lang/Object;Lcom/flurry/org/apache/avro/Schema;Z)I
     .locals 17
-    .parameter "o1"
-    .parameter "o2"
-    .parameter "s"
-    .parameter "equals"
+    .param p1, "o1"    # Ljava/lang/Object;
+    .param p2, "o2"    # Ljava/lang/Object;
+    .param p3, "s"    # Lcom/flurry/org/apache/avro/Schema;
+    .param p4, "equals"    # Z
 
     .prologue
     .line 466
@@ -1099,14 +1096,14 @@
 
     move-result v6
 
-    .end local p1
-    .end local p2
+    .end local p1    # "o1":Ljava/lang/Object;
+    .end local p2    # "o2":Ljava/lang/Object;
     :goto_0
     return v6
 
     .line 468
-    .restart local p1
-    .restart local p2
+    .restart local p1    # "o1":Ljava/lang/Object;
+    .restart local p2    # "o2":Ljava/lang/Object;
     :pswitch_1
     invoke-virtual/range {p1 .. p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -1124,28 +1121,28 @@
     move-result-object v12
 
     .line 471
-    .local v12, elementType:Lcom/flurry/org/apache/avro/Schema;
+    .local v12, "elementType":Lcom/flurry/org/apache/avro/Schema;
     invoke-static/range {p1 .. p1}, Ljava/lang/reflect/Array;->getLength(Ljava/lang/Object;)I
 
     move-result v15
 
     .line 472
-    .local v15, l1:I
+    .local v15, "l1":I
     invoke-static/range {p2 .. p2}, Ljava/lang/reflect/Array;->getLength(Ljava/lang/Object;)I
 
     move-result v16
 
     .line 473
-    .local v16, l2:I
+    .local v16, "l2":I
     invoke-static/range {v15 .. v16}, Ljava/lang/Math;->min(II)I
 
     move-result v14
 
     .line 474
-    .local v14, l:I
+    .local v14, "l":I
     const/4 v13, 0x0
 
-    .local v13, i:I
+    .local v13, "i":I
     :goto_1
     if-ge v13, v14, :cond_2
 
@@ -1181,7 +1178,7 @@
     move-result v11
 
     .line 478
-    .local v11, compare:I
+    .local v11, "compare":I
     if-eqz v11, :cond_1
 
     move v6, v11
@@ -1195,18 +1192,18 @@
     goto :goto_1
 
     .line 480
-    .end local v11           #compare:I
+    .end local v11    # "compare":I
     :cond_2
     sub-int v6, v15, v16
 
     goto :goto_0
 
     .line 482
-    .end local v12           #elementType:Lcom/flurry/org/apache/avro/Schema;
-    .end local v13           #i:I
-    .end local v14           #l:I
-    .end local v15           #l1:I
-    .end local v16           #l2:I
+    .end local v12    # "elementType":Lcom/flurry/org/apache/avro/Schema;
+    .end local v13    # "i":I
+    .end local v14    # "l":I
+    .end local v15    # "l1":I
+    .end local v16    # "l2":I
     :pswitch_2
     invoke-virtual/range {p1 .. p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -1221,7 +1218,7 @@
     .line 484
     check-cast p1, [B
 
-    .end local p1
+    .end local p1    # "o1":Ljava/lang/Object;
     move-object/from16 v0, p1
 
     check-cast v0, [B
@@ -1229,10 +1226,10 @@
     move-object v5, v0
 
     .line 485
-    .local v5, b1:[B
+    .local v5, "b1":[B
     check-cast p2, [B
 
-    .end local p2
+    .end local p2    # "o2":Ljava/lang/Object;
     move-object/from16 v0, p2
 
     check-cast v0, [B
@@ -1240,7 +1237,7 @@
     move-object v8, v0
 
     .line 486
-    .local v8, b2:[B
+    .local v8, "b2":[B
     const/4 v6, 0x0
 
     array-length v7, v5
@@ -1268,7 +1265,7 @@
 
 .method public createDatumReader(Lcom/flurry/org/apache/avro/Schema;)Lcom/flurry/org/apache/avro/io/DatumReader;
     .locals 1
-    .parameter "schema"
+    .param p1, "schema"    # Lcom/flurry/org/apache/avro/Schema;
 
     .prologue
     .line 84
@@ -1281,8 +1278,7 @@
 
 .method protected createFieldSchema(Ljava/lang/reflect/Field;Ljava/util/Map;)Lcom/flurry/org/apache/avro/Schema;
     .locals 2
-    .parameter "field"
-    .parameter
+    .param p1, "field"    # Ljava/lang/reflect/Field;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1298,7 +1294,7 @@
 
     .prologue
     .line 380
-    .local p2, names:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Lcom/flurry/org/apache/avro/Schema;>;"
+    .local p2, "names":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Lcom/flurry/org/apache/avro/Schema;>;"
     invoke-virtual {p1}, Ljava/lang/reflect/Field;->getGenericType()Ljava/lang/reflect/Type;
 
     move-result-object v1
@@ -1308,7 +1304,7 @@
     move-result-object v0
 
     .line 381
-    .local v0, schema:Lcom/flurry/org/apache/avro/Schema;
+    .local v0, "schema":Lcom/flurry/org/apache/avro/Schema;
     const-class v1, Lcom/flurry/org/apache/avro/reflect/Nullable;
 
     invoke-virtual {p1, v1}, Ljava/lang/reflect/Field;->isAnnotationPresent(Ljava/lang/Class;)Z
@@ -1329,8 +1325,7 @@
 
 .method protected createSchema(Ljava/lang/reflect/Type;Ljava/util/Map;)Lcom/flurry/org/apache/avro/Schema;
     .locals 34
-    .parameter "type"
-    .parameter
+    .param p1, "type"    # Ljava/lang/reflect/Type;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1346,7 +1341,7 @@
 
     .prologue
     .line 226
-    .local p2, names:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Lcom/flurry/org/apache/avro/Schema;>;"
+    .local p2, "names":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Lcom/flurry/org/apache/avro/Schema;>;"
     move-object/from16 v0, p1
 
     instance-of v0, v0, Ljava/lang/reflect/GenericArrayType;
@@ -1358,13 +1353,13 @@
     .line 227
     check-cast p1, Ljava/lang/reflect/GenericArrayType;
 
-    .end local p1
+    .end local p1    # "type":Ljava/lang/reflect/Type;
     invoke-interface/range {p1 .. p1}, Ljava/lang/reflect/GenericArrayType;->getGenericComponentType()Ljava/lang/reflect/Type;
 
     move-result-object v6
 
     .line 228
-    .local v6, component:Ljava/lang/reflect/Type;
+    .local v6, "component":Ljava/lang/reflect/Type;
     sget-object v29, Ljava/lang/Byte;->TYPE:Ljava/lang/Class;
 
     move-object v0, v6
@@ -1381,14 +1376,14 @@
     move-result-object v29
 
     .line 329
-    .end local v6           #component:Ljava/lang/reflect/Type;
-    .end local p0
+    .end local v6    # "component":Ljava/lang/reflect/Type;
+    .end local p0    # "this":Lcom/flurry/org/apache/avro/reflect/ReflectData;
     :goto_0
     return-object v29
 
     .line 230
-    .restart local v6       #component:Ljava/lang/reflect/Type;
-    .restart local p0
+    .restart local v6    # "component":Ljava/lang/reflect/Type;
+    .restart local p0    # "this":Lcom/flurry/org/apache/avro/reflect/ReflectData;
     :cond_0
     move-object/from16 v0, p0
 
@@ -1405,7 +1400,7 @@
     move-result-object v22
 
     .line 231
-    .local v22, result:Lcom/flurry/org/apache/avro/Schema;
+    .local v22, "result":Lcom/flurry/org/apache/avro/Schema;
     move-object/from16 v0, p0
 
     move-object/from16 v1, v22
@@ -1420,9 +1415,9 @@
     goto :goto_0
 
     .line 233
-    .end local v6           #component:Ljava/lang/reflect/Type;
-    .end local v22           #result:Lcom/flurry/org/apache/avro/Schema;
-    .restart local p1
+    .end local v6    # "component":Ljava/lang/reflect/Type;
+    .end local v22    # "result":Lcom/flurry/org/apache/avro/Schema;
+    .restart local p1    # "type":Ljava/lang/reflect/Type;
     :cond_1
     move-object/from16 v0, p1
 
@@ -1440,7 +1435,7 @@
     move-object/from16 v20, v0
 
     .line 235
-    .local v20, ptype:Ljava/lang/reflect/ParameterizedType;
+    .local v20, "ptype":Ljava/lang/reflect/ParameterizedType;
     invoke-interface/range {v20 .. v20}, Ljava/lang/reflect/ParameterizedType;->getRawType()Ljava/lang/reflect/Type;
 
     move-result-object v21
@@ -1448,13 +1443,13 @@
     check-cast v21, Ljava/lang/Class;
 
     .line 236
-    .local v21, raw:Ljava/lang/Class;
+    .local v21, "raw":Ljava/lang/Class;
     invoke-interface/range {v20 .. v20}, Ljava/lang/reflect/ParameterizedType;->getActualTypeArguments()[Ljava/lang/reflect/Type;
 
     move-result-object v19
 
     .line 237
-    .local v19, params:[Ljava/lang/reflect/Type;
+    .local v19, "params":[Ljava/lang/reflect/Type;
     const-class v29, Ljava/util/Map;
 
     move-object/from16 v0, v29
@@ -1473,13 +1468,13 @@
     aget-object v17, v19, v29
 
     .line 239
-    .local v17, key:Ljava/lang/reflect/Type;
+    .local v17, "key":Ljava/lang/reflect/Type;
     const/16 v29, 0x1
 
     aget-object v28, v19, v29
 
     .line 240
-    .local v28, value:Ljava/lang/reflect/Type;
+    .local v28, "value":Ljava/lang/reflect/Type;
     const-class v29, Ljava/lang/String;
 
     move-object/from16 v0, v17
@@ -1536,8 +1531,8 @@
     goto :goto_0
 
     .line 243
-    .end local v17           #key:Ljava/lang/reflect/Type;
-    .end local v28           #value:Ljava/lang/reflect/Type;
+    .end local v17    # "key":Ljava/lang/reflect/Type;
+    .end local v28    # "value":Ljava/lang/reflect/Type;
     :cond_3
     const-class v29, Ljava/util/Collection;
 
@@ -1596,7 +1591,7 @@
     move-result-object v23
 
     .line 247
-    .local v23, schema:Lcom/flurry/org/apache/avro/Schema;
+    .local v23, "schema":Lcom/flurry/org/apache/avro/Schema;
     const-string v29, "java-class"
 
     invoke-virtual/range {v21 .. v21}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -1617,10 +1612,10 @@
     goto/16 :goto_0
 
     .line 250
-    .end local v19           #params:[Ljava/lang/reflect/Type;
-    .end local v20           #ptype:Ljava/lang/reflect/ParameterizedType;
-    .end local v21           #raw:Ljava/lang/Class;
-    .end local v23           #schema:Lcom/flurry/org/apache/avro/Schema;
+    .end local v19    # "params":[Ljava/lang/reflect/Type;
+    .end local v20    # "ptype":Ljava/lang/reflect/ParameterizedType;
+    .end local v21    # "raw":Ljava/lang/Class;
+    .end local v23    # "schema":Lcom/flurry/org/apache/avro/Schema;
     :cond_5
     const-class v29, Ljava/lang/Byte;
 
@@ -1647,7 +1642,7 @@
     move-result-object v22
 
     .line 252
-    .restart local v22       #result:Lcom/flurry/org/apache/avro/Schema;
+    .restart local v22    # "result":Lcom/flurry/org/apache/avro/Schema;
     const-string v29, "java-class"
 
     const-class v30, Ljava/lang/Byte;
@@ -1670,7 +1665,7 @@
     goto/16 :goto_0
 
     .line 254
-    .end local v22           #result:Lcom/flurry/org/apache/avro/Schema;
+    .end local v22    # "result":Lcom/flurry/org/apache/avro/Schema;
     :cond_7
     const-class v29, Ljava/lang/Short;
 
@@ -1697,7 +1692,7 @@
     move-result-object v22
 
     .line 256
-    .restart local v22       #result:Lcom/flurry/org/apache/avro/Schema;
+    .restart local v22    # "result":Lcom/flurry/org/apache/avro/Schema;
     const-string v29, "java-class"
 
     const-class v30, Ljava/lang/Short;
@@ -1720,7 +1715,7 @@
     goto/16 :goto_0
 
     .line 258
-    .end local v22           #result:Lcom/flurry/org/apache/avro/Schema;
+    .end local v22    # "result":Lcom/flurry/org/apache/avro/Schema;
     :cond_9
     move-object/from16 v0, p1
 
@@ -1738,7 +1733,7 @@
     move-object v5, v0
 
     .line 260
-    .local v5, c:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local v5, "c":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-virtual {v5}, Ljava/lang/Class;->isPrimitive()Z
 
     move-result v29
@@ -1795,7 +1790,7 @@
     move-result-object v6
 
     .line 265
-    .local v6, component:Ljava/lang/Class;
+    .local v6, "component":Ljava/lang/Class;
     sget-object v29, Ljava/lang/Byte;->TYPE:Ljava/lang/Class;
 
     move-object v0, v6
@@ -1830,7 +1825,7 @@
     move-result-object v22
 
     .line 268
-    .restart local v22       #result:Lcom/flurry/org/apache/avro/Schema;
+    .restart local v22    # "result":Lcom/flurry/org/apache/avro/Schema;
     move-object/from16 v0, p0
 
     move-object/from16 v1, v22
@@ -1845,8 +1840,8 @@
     goto/16 :goto_0
 
     .line 271
-    .end local v6           #component:Ljava/lang/Class;
-    .end local v22           #result:Lcom/flurry/org/apache/avro/Schema;
+    .end local v6    # "component":Ljava/lang/Class;
+    .end local v22    # "result":Lcom/flurry/org/apache/avro/Schema;
     :cond_d
     const-class v29, Ljava/lang/CharSequence;
 
@@ -1922,7 +1917,7 @@
     move-result-object v14
 
     .line 278
-    .local v14, fullName:Ljava/lang/String;
+    .local v14, "fullName":Ljava/lang/String;
     move-object/from16 v0, p2
 
     move-object v1, v14
@@ -1934,7 +1929,7 @@
     check-cast v23, Lcom/flurry/org/apache/avro/Schema;
 
     .line 279
-    .restart local v23       #schema:Lcom/flurry/org/apache/avro/Schema;
+    .restart local v23    # "schema":Lcom/flurry/org/apache/avro/Schema;
     if-nez v23, :cond_16
 
     .line 280
@@ -1943,7 +1938,7 @@
     move-result-object v18
 
     .line 281
-    .local v18, name:Ljava/lang/String;
+    .local v18, "name":Ljava/lang/String;
     invoke-virtual {v5}, Ljava/lang/Class;->getPackage()Ljava/lang/Package;
 
     move-result-object v29
@@ -1955,7 +1950,7 @@
     move-object/from16 v25, v29
 
     .line 282
-    .local v25, space:Ljava/lang/String;
+    .local v25, "space":Ljava/lang/String;
     :goto_1
     invoke-virtual {v5}, Ljava/lang/Class;->getEnclosingClass()Ljava/lang/Class;
 
@@ -2005,7 +2000,7 @@
     check-cast v27, Lcom/flurry/org/apache/avro/reflect/Union;
 
     .line 285
-    .local v27, union:Lcom/flurry/org/apache/avro/reflect/Union;
+    .local v27, "union":Lcom/flurry/org/apache/avro/reflect/Union;
     if-eqz v27, :cond_13
 
     .line 286
@@ -2022,8 +2017,8 @@
     goto/16 :goto_0
 
     .line 281
-    .end local v25           #space:Ljava/lang/String;
-    .end local v27           #union:Lcom/flurry/org/apache/avro/reflect/Union;
+    .end local v25    # "space":Ljava/lang/String;
+    .end local v27    # "union":Lcom/flurry/org/apache/avro/reflect/Union;
     :cond_12
     invoke-virtual {v5}, Ljava/lang/Class;->getPackage()Ljava/lang/Package;
 
@@ -2038,8 +2033,8 @@
     goto :goto_1
 
     .line 287
-    .restart local v25       #space:Ljava/lang/String;
-    .restart local v27       #union:Lcom/flurry/org/apache/avro/reflect/Union;
+    .restart local v25    # "space":Ljava/lang/String;
+    .restart local v27    # "union":Lcom/flurry/org/apache/avro/reflect/Union;
     :cond_13
     const-class v29, Lcom/flurry/org/apache/avro/reflect/Stringable;
 
@@ -2061,7 +2056,7 @@
     move-result-object v22
 
     .line 289
-    .restart local v22       #result:Lcom/flurry/org/apache/avro/Schema;
+    .restart local v22    # "result":Lcom/flurry/org/apache/avro/Schema;
     const-string v29, "java-class"
 
     invoke-virtual {v5}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -2082,7 +2077,7 @@
     goto/16 :goto_0
 
     .line 291
-    .end local v22           #result:Lcom/flurry/org/apache/avro/Schema;
+    .end local v22    # "result":Lcom/flurry/org/apache/avro/Schema;
     :cond_14
     invoke-virtual {v5}, Ljava/lang/Class;->isEnum()Z
 
@@ -2096,12 +2091,12 @@
     invoke-direct/range {v26 .. v26}, Ljava/util/ArrayList;-><init>()V
 
     .line 293
-    .local v26, symbols:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
+    .local v26, "symbols":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-virtual {v5}, Ljava/lang/Class;->getEnumConstants()[Ljava/lang/Object;
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/flurry/org/apache/avro/reflect/ReflectData;
     check-cast p0, [Ljava/lang/Enum;
 
     move-object/from16 v0, p0
@@ -2111,10 +2106,10 @@
     move-object v7, v0
 
     .line 294
-    .local v7, constants:[Ljava/lang/Enum;
+    .local v7, "constants":[Ljava/lang/Enum;
     const/4 v15, 0x0
 
-    .local v15, i:I
+    .local v15, "i":I
     :goto_2
     move-object v0, v7
 
@@ -2163,9 +2158,9 @@
     move-result-object v23
 
     .line 325
-    .end local v7           #constants:[Ljava/lang/Enum;
-    .end local v15           #i:I
-    .end local v26           #symbols:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
+    .end local v7    # "constants":[Ljava/lang/Enum;
+    .end local v15    # "i":I
+    .end local v26    # "symbols":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     :goto_3
     move-object/from16 v0, p2
 
@@ -2175,9 +2170,9 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .end local v18           #name:Ljava/lang/String;
-    .end local v25           #space:Ljava/lang/String;
-    .end local v27           #union:Lcom/flurry/org/apache/avro/reflect/Union;
+    .end local v18    # "name":Ljava/lang/String;
+    .end local v25    # "space":Ljava/lang/String;
+    .end local v27    # "union":Lcom/flurry/org/apache/avro/reflect/Union;
     :cond_16
     move-object/from16 v29, v23
 
@@ -2185,10 +2180,10 @@
     goto/16 :goto_0
 
     .line 297
-    .restart local v18       #name:Ljava/lang/String;
-    .restart local v25       #space:Ljava/lang/String;
-    .restart local v27       #union:Lcom/flurry/org/apache/avro/reflect/Union;
-    .restart local p0
+    .restart local v18    # "name":Ljava/lang/String;
+    .restart local v25    # "space":Ljava/lang/String;
+    .restart local v27    # "union":Lcom/flurry/org/apache/avro/reflect/Union;
+    .restart local p0    # "this":Lcom/flurry/org/apache/avro/reflect/ReflectData;
     :cond_17
     const-class v29, Lcom/flurry/org/apache/avro/generic/GenericFixed;
 
@@ -2213,7 +2208,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/flurry/org/apache/avro/reflect/ReflectData;
     check-cast p0, Lcom/flurry/org/apache/avro/specific/FixedSize;
 
     invoke-interface/range {p0 .. p0}, Lcom/flurry/org/apache/avro/specific/FixedSize;->value()I
@@ -2221,7 +2216,7 @@
     move-result v24
 
     .line 299
-    .local v24, size:I
+    .local v24, "size":I
     const/16 v29, 0x0
 
     move-object/from16 v0, v18
@@ -2239,8 +2234,8 @@
     .line 300
     goto :goto_3
 
-    .end local v24           #size:I
-    .restart local p0
+    .end local v24    # "size":I
+    .restart local p0    # "this":Lcom/flurry/org/apache/avro/reflect/ReflectData;
     :cond_18
     const-class v29, Lcom/flurry/org/apache/avro/generic/IndexedRecord;
 
@@ -2268,7 +2263,7 @@
     invoke-direct {v13}, Ljava/util/ArrayList;-><init>()V
 
     .line 304
-    .local v13, fields:Ljava/util/List;,"Ljava/util/List<Lcom/flurry/org/apache/avro/Schema$Field;>;"
+    .local v13, "fields":Ljava/util/List;, "Ljava/util/List<Lcom/flurry/org/apache/avro/Schema$Field;>;"
     const-class v29, Ljava/lang/Throwable;
 
     move-object/from16 v0, v29
@@ -2280,7 +2275,7 @@
     move-result v10
 
     .line 305
-    .local v10, error:Z
+    .local v10, "error":Z
     const/16 v29, 0x0
 
     move-object/from16 v0, v18
@@ -2321,7 +2316,7 @@
 
     move-result-object v16
 
-    .local v16, i$:Ljava/util/Iterator;
+    .local v16, "i$":Ljava/util/Iterator;
     :cond_1a
     :goto_4
     invoke-interface/range {v16 .. v16}, Ljava/util/Iterator;->hasNext()Z
@@ -2337,7 +2332,7 @@
     check-cast v11, Ljava/lang/reflect/Field;
 
     .line 308
-    .local v11, field:Ljava/lang/reflect/Field;
+    .local v11, "field":Ljava/lang/reflect/Field;
     invoke-virtual {v11}, Ljava/lang/reflect/Field;->getModifiers()I
 
     move-result v29
@@ -2362,11 +2357,11 @@
     move-result-object v12
 
     .line 310
-    .local v12, fieldSchema:Lcom/flurry/org/apache/avro/Schema;
+    .local v12, "fieldSchema":Lcom/flurry/org/apache/avro/Schema;
     const/4 v9, 0x0
 
     .line 311
-    .local v9, defaultValue:Lcom/flurry/org/codehaus/jackson/JsonNode;
+    .local v9, "defaultValue":Lcom/flurry/org/codehaus/jackson/JsonNode;
     invoke-virtual {v12}, Lcom/flurry/org/apache/avro/Schema;->getType()Lcom/flurry/org/apache/avro/Schema$Type;
 
     move-result-object v29
@@ -2393,7 +2388,7 @@
     check-cast v8, Lcom/flurry/org/apache/avro/Schema;
 
     .line 313
-    .local v8, defaultType:Lcom/flurry/org/apache/avro/Schema;
+    .local v8, "defaultType":Lcom/flurry/org/apache/avro/Schema;
     invoke-virtual {v8}, Lcom/flurry/org/apache/avro/Schema;->getType()Lcom/flurry/org/apache/avro/Schema$Type;
 
     move-result-object v29
@@ -2412,7 +2407,7 @@
     move-result-object v9
 
     .line 317
-    .end local v8           #defaultType:Lcom/flurry/org/apache/avro/Schema;
+    .end local v8    # "defaultType":Lcom/flurry/org/apache/avro/Schema;
     :cond_1b
     new-instance v29, Lcom/flurry/org/apache/avro/Schema$Field;
 
@@ -2443,9 +2438,9 @@
     goto :goto_4
 
     .line 320
-    .end local v9           #defaultValue:Lcom/flurry/org/codehaus/jackson/JsonNode;
-    .end local v11           #field:Ljava/lang/reflect/Field;
-    .end local v12           #fieldSchema:Lcom/flurry/org/apache/avro/Schema;
+    .end local v9    # "defaultValue":Lcom/flurry/org/codehaus/jackson/JsonNode;
+    .end local v11    # "field":Ljava/lang/reflect/Field;
+    .end local v12    # "fieldSchema":Lcom/flurry/org/apache/avro/Schema;
     :cond_1c
     if-eqz v10, :cond_1d
 
@@ -2479,15 +2474,15 @@
     goto/16 :goto_3
 
     .line 329
-    .end local v5           #c:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
-    .end local v10           #error:Z
-    .end local v13           #fields:Ljava/util/List;,"Ljava/util/List<Lcom/flurry/org/apache/avro/Schema$Field;>;"
-    .end local v14           #fullName:Ljava/lang/String;
-    .end local v16           #i$:Ljava/util/Iterator;
-    .end local v18           #name:Ljava/lang/String;
-    .end local v23           #schema:Lcom/flurry/org/apache/avro/Schema;
-    .end local v25           #space:Ljava/lang/String;
-    .end local v27           #union:Lcom/flurry/org/apache/avro/reflect/Union;
+    .end local v5    # "c":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
+    .end local v10    # "error":Z
+    .end local v13    # "fields":Ljava/util/List;, "Ljava/util/List<Lcom/flurry/org/apache/avro/Schema$Field;>;"
+    .end local v14    # "fullName":Ljava/lang/String;
+    .end local v16    # "i$":Ljava/util/Iterator;
+    .end local v18    # "name":Ljava/lang/String;
+    .end local v23    # "schema":Lcom/flurry/org/apache/avro/Schema;
+    .end local v25    # "space":Ljava/lang/String;
+    .end local v27    # "union":Lcom/flurry/org/apache/avro/reflect/Union;
     :cond_1e
     invoke-super/range {p0 .. p2}, Lcom/flurry/org/apache/avro/specific/SpecificData;->createSchema(Ljava/lang/reflect/Type;Ljava/util/Map;)Lcom/flurry/org/apache/avro/Schema;
 
@@ -2498,7 +2493,7 @@
 
 .method public getClass(Lcom/flurry/org/apache/avro/Schema;)Ljava/lang/Class;
     .locals 5
-    .parameter "schema"
+    .param p1, "schema"    # Lcom/flurry/org/apache/avro/Schema;
 
     .prologue
     const-string v4, "java-class"
@@ -2536,7 +2531,7 @@
     move-result-object v0
 
     .line 209
-    .local v0, collectionClass:Ljava/lang/Class;
+    .local v0, "collectionClass":Ljava/lang/Class;
     if-eqz v0, :cond_1
 
     move-object v2, v0
@@ -2567,7 +2562,7 @@
     goto :goto_0
 
     .line 212
-    .end local v0           #collectionClass:Ljava/lang/Class;
+    .end local v0    # "collectionClass":Ljava/lang/Class;
     :pswitch_1
     const-class v2, Ljava/lang/String;
 
@@ -2588,7 +2583,7 @@
     move-result-object v1
 
     .line 216
-    .local v1, intClass:Ljava/lang/String;
+    .local v1, "intClass":Ljava/lang/String;
     const-class v2, Ljava/lang/Byte;
 
     invoke-virtual {v2}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -2635,9 +2630,9 @@
 
 .method public getField(Ljava/lang/Object;Ljava/lang/String;I)Ljava/lang/Object;
     .locals 2
-    .parameter "record"
-    .parameter "name"
-    .parameter "position"
+    .param p1, "record"    # Ljava/lang/Object;
+    .param p2, "name"    # Ljava/lang/String;
+    .param p3, "position"    # I
 
     .prologue
     .line 102
@@ -2679,7 +2674,7 @@
     move-object v0, v1
 
     .line 107
-    .local v0, e:Ljava/lang/IllegalAccessException;
+    .local v0, "e":Ljava/lang/IllegalAccessException;
     new-instance v1, Lcom/flurry/org/apache/avro/AvroRuntimeException;
 
     invoke-direct {v1, v0}, Lcom/flurry/org/apache/avro/AvroRuntimeException;-><init>(Ljava/lang/Throwable;)V
@@ -2689,7 +2684,7 @@
 
 .method public getProtocol(Ljava/lang/Class;)Lcom/flurry/org/apache/avro/Protocol;
     .locals 12
-    .parameter "iface"
+    .param p1, "iface"    # Ljava/lang/Class;
 
     .prologue
     .line 393
@@ -2711,37 +2706,37 @@
     invoke-direct {v7, v9, v10}, Lcom/flurry/org/apache/avro/Protocol;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 396
-    .local v7, protocol:Lcom/flurry/org/apache/avro/Protocol;
+    .local v7, "protocol":Lcom/flurry/org/apache/avro/Protocol;
     new-instance v6, Ljava/util/LinkedHashMap;
 
     invoke-direct {v6}, Ljava/util/LinkedHashMap;-><init>()V
 
     .line 397
-    .local v6, names:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Lcom/flurry/org/apache/avro/Schema;>;"
+    .local v6, "names":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Lcom/flurry/org/apache/avro/Schema;>;"
     invoke-virtual {v7}, Lcom/flurry/org/apache/avro/Protocol;->getMessages()Ljava/util/Map;
 
     move-result-object v3
 
     .line 398
-    .local v3, messages:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Lcom/flurry/org/apache/avro/Protocol$Message;>;"
+    .local v3, "messages":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Lcom/flurry/org/apache/avro/Protocol$Message;>;"
     invoke-virtual {p1}, Ljava/lang/Class;->getMethods()[Ljava/lang/reflect/Method;
 
     move-result-object v0
 
-    .local v0, arr$:[Ljava/lang/reflect/Method;
+    .local v0, "arr$":[Ljava/lang/reflect/Method;
     array-length v2, v0
 
-    .local v2, len$:I
+    .local v2, "len$":I
     const/4 v1, 0x0
 
-    .local v1, i$:I
+    .local v1, "i$":I
     :goto_1
     if-ge v1, v2, :cond_3
 
     aget-object v4, v0, v1
 
     .line 399
-    .local v4, method:Ljava/lang/reflect/Method;
+    .local v4, "method":Ljava/lang/reflect/Method;
     invoke-virtual {v4}, Ljava/lang/reflect/Method;->getModifiers()I
 
     move-result v9
@@ -2756,7 +2751,7 @@
     move-result-object v5
 
     .line 401
-    .local v5, name:Ljava/lang/String;
+    .local v5, "name":Ljava/lang/String;
     invoke-interface {v3, v5}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
     move-result v9
@@ -2789,14 +2784,14 @@
     throw v9
 
     .line 393
-    .end local v0           #arr$:[Ljava/lang/reflect/Method;
-    .end local v1           #i$:I
-    .end local v2           #len$:I
-    .end local v3           #messages:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Lcom/flurry/org/apache/avro/Protocol$Message;>;"
-    .end local v4           #method:Ljava/lang/reflect/Method;
-    .end local v5           #name:Ljava/lang/String;
-    .end local v6           #names:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Lcom/flurry/org/apache/avro/Schema;>;"
-    .end local v7           #protocol:Lcom/flurry/org/apache/avro/Protocol;
+    .end local v0    # "arr$":[Ljava/lang/reflect/Method;
+    .end local v1    # "i$":I
+    .end local v2    # "len$":I
+    .end local v3    # "messages":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Lcom/flurry/org/apache/avro/Protocol$Message;>;"
+    .end local v4    # "method":Ljava/lang/reflect/Method;
+    .end local v5    # "name":Ljava/lang/String;
+    .end local v6    # "names":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Lcom/flurry/org/apache/avro/Schema;>;"
+    .end local v7    # "protocol":Lcom/flurry/org/apache/avro/Protocol;
     :cond_0
     invoke-virtual {p1}, Ljava/lang/Class;->getPackage()Ljava/lang/Package;
 
@@ -2809,14 +2804,14 @@
     goto :goto_0
 
     .line 403
-    .restart local v0       #arr$:[Ljava/lang/reflect/Method;
-    .restart local v1       #i$:I
-    .restart local v2       #len$:I
-    .restart local v3       #messages:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Lcom/flurry/org/apache/avro/Protocol$Message;>;"
-    .restart local v4       #method:Ljava/lang/reflect/Method;
-    .restart local v5       #name:Ljava/lang/String;
-    .restart local v6       #names:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Lcom/flurry/org/apache/avro/Schema;>;"
-    .restart local v7       #protocol:Lcom/flurry/org/apache/avro/Protocol;
+    .restart local v0    # "arr$":[Ljava/lang/reflect/Method;
+    .restart local v1    # "i$":I
+    .restart local v2    # "len$":I
+    .restart local v3    # "messages":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Lcom/flurry/org/apache/avro/Protocol$Message;>;"
+    .restart local v4    # "method":Ljava/lang/reflect/Method;
+    .restart local v5    # "name":Ljava/lang/String;
+    .restart local v6    # "names":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Lcom/flurry/org/apache/avro/Schema;>;"
+    .restart local v7    # "protocol":Lcom/flurry/org/apache/avro/Protocol;
     :cond_1
     invoke-direct {p0, v4, v7, v6}, Lcom/flurry/org/apache/avro/reflect/ReflectData;->getMessage(Ljava/lang/reflect/Method;Lcom/flurry/org/apache/avro/Protocol;Ljava/util/Map;)Lcom/flurry/org/apache/avro/Protocol$Message;
 
@@ -2825,21 +2820,21 @@
     invoke-interface {v3, v5, v9}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 398
-    .end local v5           #name:Ljava/lang/String;
+    .end local v5    # "name":Ljava/lang/String;
     :cond_2
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
     .line 407
-    .end local v4           #method:Ljava/lang/reflect/Method;
+    .end local v4    # "method":Ljava/lang/reflect/Method;
     :cond_3
     new-instance v8, Ljava/util/ArrayList;
 
     invoke-direct {v8}, Ljava/util/ArrayList;-><init>()V
 
     .line 408
-    .local v8, types:Ljava/util/List;,"Ljava/util/List<Lcom/flurry/org/apache/avro/Schema;>;"
+    .local v8, "types":Ljava/util/List;, "Ljava/util/List<Lcom/flurry/org/apache/avro/Schema;>;"
     invoke-interface {v6}, Ljava/util/Map;->values()Ljava/util/Collection;
 
     move-result-object v9
@@ -2858,7 +2853,7 @@
 
 .method protected getRecordSchema(Ljava/lang/Object;)Lcom/flurry/org/apache/avro/Schema;
     .locals 1
-    .parameter "record"
+    .param p1, "record"    # Ljava/lang/Object;
 
     .prologue
     .line 135
@@ -2889,7 +2884,7 @@
 
 .method protected isArray(Ljava/lang/Object;)Z
     .locals 2
-    .parameter "datum"
+    .param p1, "datum"    # Ljava/lang/Object;
 
     .prologue
     const/4 v1, 0x0
@@ -2931,7 +2926,7 @@
 
 .method protected isBytes(Ljava/lang/Object;)Z
     .locals 5
-    .parameter "datum"
+    .param p1, "datum"    # Ljava/lang/Object;
 
     .prologue
     const/4 v4, 0x1
@@ -2966,7 +2961,7 @@
     move-result-object v0
 
     .line 130
-    .local v0, c:Ljava/lang/Class;
+    .local v0, "c":Ljava/lang/Class;
     invoke-virtual {v0}, Ljava/lang/Class;->isArray()Z
 
     move-result v1
@@ -2993,7 +2988,7 @@
 
 .method protected isRecord(Ljava/lang/Object;)Z
     .locals 4
-    .parameter "datum"
+    .param p1, "datum"    # Ljava/lang/Object;
 
     .prologue
     const/4 v3, 0x1
@@ -3061,10 +3056,10 @@
 
 .method public setField(Ljava/lang/Object;Ljava/lang/String;ILjava/lang/Object;)V
     .locals 2
-    .parameter "record"
-    .parameter "name"
-    .parameter "position"
-    .parameter "o"
+    .param p1, "record"    # Ljava/lang/Object;
+    .param p2, "name"    # Ljava/lang/String;
+    .param p3, "position"    # I
+    .param p4, "o"    # Ljava/lang/Object;
 
     .prologue
     .line 89
@@ -3103,7 +3098,7 @@
     move-object v0, v1
 
     .line 96
-    .local v0, e:Ljava/lang/IllegalAccessException;
+    .local v0, "e":Ljava/lang/IllegalAccessException;
     new-instance v1, Lcom/flurry/org/apache/avro/AvroRuntimeException;
 
     invoke-direct {v1, v0}, Lcom/flurry/org/apache/avro/AvroRuntimeException;-><init>(Ljava/lang/Throwable;)V
@@ -3113,8 +3108,8 @@
 
 .method public validate(Lcom/flurry/org/apache/avro/Schema;Ljava/lang/Object;)Z
     .locals 4
-    .parameter "schema"
-    .parameter "datum"
+    .param p1, "schema"    # Lcom/flurry/org/apache/avro/Schema;
+    .param p2, "datum"    # Ljava/lang/Object;
 
     .prologue
     .line 142
@@ -3166,10 +3161,10 @@
     move-result v1
 
     .line 147
-    .local v1, length:I
+    .local v1, "length":I
     const/4 v0, 0x0
 
-    .local v0, i:I
+    .local v0, "i":I
     :goto_1
     if-ge v0, v1, :cond_2
 

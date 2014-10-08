@@ -21,7 +21,6 @@
 # direct methods
 .method constructor <init>(Lcom/facebook/widget/PlacePickerFragment;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1
@@ -42,7 +41,7 @@
     .line 436
     iget-object v0, p0, Lcom/facebook/widget/PlacePickerFragment$2;->this$0:Lcom/facebook/widget/PlacePickerFragment;
 
-    #calls: Lcom/facebook/widget/PlacePickerFragment;->onSearchTextTimerTriggered()V
+    # invokes: Lcom/facebook/widget/PlacePickerFragment;->onSearchTextTimerTriggered()V
     invoke-static {v0}, Lcom/facebook/widget/PlacePickerFragment;->access$0(Lcom/facebook/widget/PlacePickerFragment;)V
 
     .line 437

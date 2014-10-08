@@ -74,7 +74,7 @@
 
 .method public readFixed([B)V
     .locals 2
-    .parameter "bytes"
+    .param p1, "bytes"    # [B
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;

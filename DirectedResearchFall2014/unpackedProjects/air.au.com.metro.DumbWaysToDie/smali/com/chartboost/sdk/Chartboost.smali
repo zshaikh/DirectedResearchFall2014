@@ -260,7 +260,6 @@
 
 .method static synthetic a(Lcom/chartboost/sdk/Chartboost;)Lcom/chartboost/sdk/a;
     .locals 1
-    .parameter
 
     .prologue
     .line 233
@@ -273,8 +272,6 @@
 
 .method private a(Landroid/app/Activity;Z)V
     .locals 3
-    .parameter
-    .parameter
 
     .prologue
     .line 204
@@ -308,8 +305,6 @@
 
 .method static synthetic a(Lcom/chartboost/sdk/Chartboost;Landroid/app/Activity;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 55
@@ -320,8 +315,6 @@
 
 .method static synthetic a(Lcom/chartboost/sdk/Chartboost;Lcom/chartboost/sdk/CBImpressionActivity;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 56
@@ -332,8 +325,6 @@
 
 .method static synthetic a(Lcom/chartboost/sdk/Chartboost;Lcom/chartboost/sdk/ChartboostDelegate;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 69
@@ -344,9 +335,6 @@
 
 .method static synthetic a(Lcom/chartboost/sdk/Chartboost;Lcom/chartboost/sdk/impl/a$c;Ljava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 781
@@ -357,8 +345,6 @@
 
 .method static synthetic a(Lcom/chartboost/sdk/Chartboost;Lcom/chartboost/sdk/impl/a;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 894
@@ -369,9 +355,6 @@
 
 .method static synthetic a(Lcom/chartboost/sdk/Chartboost;Ljava/lang/String;Z)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 800
@@ -382,11 +365,6 @@
 
 .method static synthetic a(Lcom/chartboost/sdk/Chartboost;Lorg/json/JSONObject;Lcom/chartboost/sdk/impl/a$c;ZLjava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 866
@@ -397,9 +375,6 @@
 
 .method static synthetic a(Lcom/chartboost/sdk/Chartboost;Lorg/json/JSONObject;Ljava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 890
@@ -410,8 +385,6 @@
 
 .method static synthetic a(Lcom/chartboost/sdk/Chartboost;Z)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 831
@@ -422,8 +395,6 @@
 
 .method private a(Lcom/chartboost/sdk/impl/a$c;Ljava/lang/String;)V
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     .line 782
@@ -497,8 +468,6 @@
 
 .method private a(Ljava/lang/String;Z)V
     .locals 3
-    .parameter
-    .parameter
 
     .prologue
     .line 801
@@ -607,10 +576,6 @@
 
 .method private a(Lorg/json/JSONObject;Lcom/chartboost/sdk/impl/a$c;ZLjava/lang/String;)V
     .locals 6
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const/4 v3, 0x1
@@ -742,8 +707,6 @@
 
 .method private a(Lorg/json/JSONObject;Ljava/lang/String;)V
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     .line 891
@@ -759,7 +722,6 @@
 
 .method private a(Z)V
     .locals 3
-    .parameter
 
     .prologue
     .line 833
@@ -875,7 +837,6 @@
 
 .method static synthetic b(Lcom/chartboost/sdk/Chartboost;)Ljava/util/Map;
     .locals 1
-    .parameter
 
     .prologue
     .line 59
@@ -886,8 +847,6 @@
 
 .method private b(Landroid/app/Activity;Z)V
     .locals 3
-    .parameter
-    .parameter
 
     .prologue
     .line 212
@@ -978,8 +937,6 @@
 
 .method static synthetic b(Lcom/chartboost/sdk/Chartboost;Lcom/chartboost/sdk/impl/a;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 917
@@ -990,7 +947,6 @@
 
 .method private b(Lcom/chartboost/sdk/impl/a;)V
     .locals 4
-    .parameter
 
     .prologue
     const-string v3, "ad_id"
@@ -1115,7 +1071,6 @@
 
 .method static synthetic c(Lcom/chartboost/sdk/Chartboost;)Lcom/chartboost/sdk/impl/a;
     .locals 1
-    .parameter
 
     .prologue
     .line 60
@@ -1126,7 +1081,6 @@
 
 .method private c(Landroid/app/Activity;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 185
@@ -1145,8 +1099,6 @@
 
 .method static synthetic c(Lcom/chartboost/sdk/Chartboost;Lcom/chartboost/sdk/impl/a;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 60
@@ -1157,7 +1109,6 @@
 
 .method private c(Lcom/chartboost/sdk/impl/a;)V
     .locals 5
-    .parameter
 
     .prologue
     const/4 v2, 0x1
@@ -1300,7 +1251,6 @@
 
 .method static synthetic d(Lcom/chartboost/sdk/Chartboost;)Landroid/app/Activity;
     .locals 1
-    .parameter
 
     .prologue
     .line 55
@@ -1311,8 +1261,6 @@
 
 .method static synthetic d(Lcom/chartboost/sdk/Chartboost;Lcom/chartboost/sdk/impl/a;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 61
@@ -1337,7 +1285,6 @@
 
 .method private d(Landroid/app/Activity;)Z
     .locals 3
-    .parameter
 
     .prologue
     const/4 v2, 0x0
@@ -1430,7 +1377,6 @@
 
 .method static synthetic e(Lcom/chartboost/sdk/Chartboost;)Lcom/chartboost/sdk/impl/j;
     .locals 1
-    .parameter
 
     .prologue
     .line 57
@@ -1441,7 +1387,6 @@
 
 .method static synthetic f(Lcom/chartboost/sdk/Chartboost;)Lcom/chartboost/sdk/CBImpressionActivity;
     .locals 1
-    .parameter
 
     .prologue
     .line 56
@@ -1476,7 +1421,6 @@
 
 .method static synthetic g(Lcom/chartboost/sdk/Chartboost;)Lcom/chartboost/sdk/ChartboostDelegate;
     .locals 1
-    .parameter
 
     .prologue
     .line 69
@@ -1529,7 +1473,6 @@
 # virtual methods
 .method protected a(Landroid/app/Activity;)V
     .locals 6
-    .parameter
 
     .prologue
     const/4 v5, 0x1
@@ -1708,7 +1651,6 @@
 
 .method protected a(Lcom/chartboost/sdk/CBImpressionActivity;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 716
@@ -1745,7 +1687,6 @@
 
 .method protected a(Lcom/chartboost/sdk/a$a;)V
     .locals 6
-    .parameter
 
     .prologue
     const/4 v5, 0x0
@@ -1923,7 +1864,6 @@
 
 .method protected a(Lcom/chartboost/sdk/impl/a;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 778
@@ -2016,7 +1956,6 @@
 
 .method protected b(Landroid/app/Activity;)V
     .locals 3
-    .parameter
 
     .prologue
     const/4 v2, 0x0
@@ -2131,7 +2070,7 @@
 
 .method public cacheInterstitial(Ljava/lang/String;)V
     .locals 4
-    .parameter "location"
+    .param p1, "location"    # Ljava/lang/String;
 
     .prologue
     const/4 v3, 0x1
@@ -2406,7 +2345,7 @@
 
 .method public hasCachedInterstitial(Ljava/lang/String;)Z
     .locals 6
-    .parameter "location"
+    .param p1, "location"    # Ljava/lang/String;
 
     .prologue
     const/4 v5, 0x0
@@ -2418,7 +2357,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/chartboost/sdk/Chartboost;
     check-cast p0, Lcom/chartboost/sdk/impl/a;
 
     .line 517
@@ -2581,10 +2520,10 @@
 
 .method public onCreate(Landroid/app/Activity;Ljava/lang/String;Ljava/lang/String;Lcom/chartboost/sdk/ChartboostDelegate;)V
     .locals 2
-    .parameter "activity"
-    .parameter "appId"
-    .parameter "appSignature"
-    .parameter "chartBoostDelegate"
+    .param p1, "activity"    # Landroid/app/Activity;
+    .param p2, "appId"    # Ljava/lang/String;
+    .param p3, "appSignature"    # Ljava/lang/String;
+    .param p4, "chartBoostDelegate"    # Lcom/chartboost/sdk/ChartboostDelegate;
 
     .prologue
     .line 162
@@ -2657,7 +2596,7 @@
 
 .method public onDestroy(Landroid/app/Activity;)V
     .locals 4
-    .parameter "activity"
+    .param p1, "activity"    # Landroid/app/Activity;
 
     .prologue
     .line 385
@@ -2675,7 +2614,7 @@
 
 .method public onStart(Landroid/app/Activity;)V
     .locals 2
-    .parameter "activity"
+    .param p1, "activity"    # Landroid/app/Activity;
 
     .prologue
     .line 241
@@ -2725,7 +2664,7 @@
 
 .method public onStop(Landroid/app/Activity;)V
     .locals 4
-    .parameter "activity"
+    .param p1, "activity"    # Landroid/app/Activity;
 
     .prologue
     .line 310
@@ -2837,7 +2776,7 @@
 
 .method public setAppID(Ljava/lang/String;)V
     .locals 0
-    .parameter "appId"
+    .param p1, "appId"    # Ljava/lang/String;
 
     .prologue
     .line 578
@@ -2849,7 +2788,7 @@
 
 .method public setAppSignature(Ljava/lang/String;)V
     .locals 0
-    .parameter "appSignature"
+    .param p1, "appSignature"    # Ljava/lang/String;
 
     .prologue
     .line 589
@@ -2861,7 +2800,7 @@
 
 .method public setDelegate(Lcom/chartboost/sdk/ChartboostDelegate;)V
     .locals 0
-    .parameter "delegate"
+    .param p1, "delegate"    # Lcom/chartboost/sdk/ChartboostDelegate;
 
     .prologue
     .line 600
@@ -2873,7 +2812,7 @@
 
 .method public setIdentityTrackingDisabledOnThisDevice(Z)V
     .locals 2
-    .parameter "disabled"
+    .param p1, "disabled"    # Z
 
     .prologue
     .line 631
@@ -2899,7 +2838,7 @@
 
 .method public setImpressionsUseActivities(Z)V
     .locals 0
-    .parameter "impressionsUseActivities"
+    .param p1, "impressionsUseActivities"    # Z
 
     .prologue
     .line 621
@@ -2911,7 +2850,7 @@
 
 .method public setOrientation(Lcom/chartboost/sdk/Libraries/CBOrientation;)V
     .locals 1
-    .parameter "_orientation"
+    .param p1, "_orientation"    # Lcom/chartboost/sdk/Libraries/CBOrientation;
 
     .prologue
     .line 653
@@ -2939,7 +2878,7 @@
 
 .method public setTimeout(I)V
     .locals 0
-    .parameter "timeout"
+    .param p1, "timeout"    # I
 
     .prologue
     .line 567
@@ -2964,7 +2903,7 @@
 
 .method public showInterstitial(Ljava/lang/String;)V
     .locals 3
-    .parameter "location"
+    .param p1, "location"    # Ljava/lang/String;
 
     .prologue
     .line 467

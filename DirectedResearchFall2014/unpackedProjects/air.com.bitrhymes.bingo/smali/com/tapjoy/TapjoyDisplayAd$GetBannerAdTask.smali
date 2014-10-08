@@ -32,7 +32,6 @@
 # direct methods
 .method private constructor <init>(Lcom/tapjoy/TapjoyDisplayAd;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 280
@@ -45,8 +44,8 @@
 
 .method synthetic constructor <init>(Lcom/tapjoy/TapjoyDisplayAd;Lcom/tapjoy/TapjoyDisplayAd$1;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
+    .param p1, "x0"    # Lcom/tapjoy/TapjoyDisplayAd;
+    .param p2, "x1"    # Lcom/tapjoy/TapjoyDisplayAd$1;
 
     .prologue
     .line 280
@@ -59,7 +58,7 @@
 # virtual methods
 .method protected varargs doInBackground([Ljava/lang/Object;)Lcom/tapjoy/TapjoyHttpURLResponse;
     .locals 4
-    .parameter "params"
+    .param p1, "params"    # [Ljava/lang/Object;
 
     .prologue
     .line 440
@@ -70,7 +69,7 @@
     check-cast v1, Ljava/lang/String;
 
     .line 441
-    .local v1, url:Ljava/lang/String;
+    .local v1, "url":Ljava/lang/String;
     const/4 v3, 0x1
 
     aget-object v2, p1, v3
@@ -78,7 +77,8 @@
     check-cast v2, Ljava/util/Map;
 
     .line 442
-    .local v2, urlParams:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v2, "urlParams":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    # getter for: Lcom/tapjoy/TapjoyDisplayAd;->tapjoyURLConnection:Lcom/tapjoy/TapjoyURLConnection;
     invoke-static {}, Lcom/tapjoy/TapjoyDisplayAd;->access$1000()Lcom/tapjoy/TapjoyURLConnection;
 
     move-result-object v3
@@ -88,13 +88,13 @@
     move-result-object v0
 
     .line 443
-    .local v0, httpResponse:Lcom/tapjoy/TapjoyHttpURLResponse;
+    .local v0, "httpResponse":Lcom/tapjoy/TapjoyHttpURLResponse;
     return-object v0
 .end method
 
 .method protected bridge synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
-    .parameter "x0"
+    .param p1, "x0"    # [Ljava/lang/Object;
 
     .prologue
     .line 280
@@ -107,7 +107,7 @@
 
 .method protected onPostExecute(Lcom/tapjoy/TapjoyHttpURLResponse;)V
     .locals 9
-    .parameter "httpResponse"
+    .param p1, "httpResponse"    # Lcom/tapjoy/TapjoyHttpURLResponse;
 
     .prologue
     const/4 v1, 0x0
@@ -125,6 +125,7 @@
     packed-switch v0, :pswitch_data_0
 
     .line 430
+    # getter for: Lcom/tapjoy/TapjoyDisplayAd;->displayAdNotifier:Lcom/tapjoy/TapjoyDisplayAdNotifier;
     invoke-static {}, Lcom/tapjoy/TapjoyDisplayAd;->access$300()Lcom/tapjoy/TapjoyDisplayAdNotifier;
 
     move-result-object v0
@@ -142,9 +143,11 @@
     :pswitch_0
     iget-object v0, p1, Lcom/tapjoy/TapjoyHttpURLResponse;->response:Ljava/lang/String;
 
+    # setter for: Lcom/tapjoy/TapjoyDisplayAd;->htmlData:Ljava/lang/String;
     invoke-static {v0}, Lcom/tapjoy/TapjoyDisplayAd;->access$402(Ljava/lang/String;)Ljava/lang/String;
 
     .line 299
+    # getter for: Lcom/tapjoy/TapjoyDisplayAd;->htmlData:Ljava/lang/String;
     invoke-static {}, Lcom/tapjoy/TapjoyDisplayAd;->access$400()Ljava/lang/String;
 
     move-result-object v0
@@ -159,6 +162,7 @@
     invoke-static {v8, v0}, Lcom/tapjoy/TapjoyLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 301
+    # getter for: Lcom/tapjoy/TapjoyDisplayAd;->displayAdNotifier:Lcom/tapjoy/TapjoyDisplayAdNotifier;
     invoke-static {}, Lcom/tapjoy/TapjoyDisplayAd;->access$300()Lcom/tapjoy/TapjoyDisplayAdNotifier;
 
     move-result-object v0
@@ -180,7 +184,7 @@
     move-result-object v7
 
     .line 307
-    .local v7, webSettings:Landroid/webkit/WebSettings;
+    .local v7, "webSettings":Landroid/webkit/WebSettings;
     const/4 v0, 0x1
 
     invoke-virtual {v7, v0}, Landroid/webkit/WebSettings;->setJavaScriptEnabled(Z)V
@@ -222,10 +226,12 @@
     .line 313
     new-instance v6, Landroid/widget/LinearLayout$LayoutParams;
 
+    # getter for: Lcom/tapjoy/TapjoyDisplayAd;->bannerWidth:I
     invoke-static {}, Lcom/tapjoy/TapjoyDisplayAd;->access$500()I
 
     move-result v0
 
+    # getter for: Lcom/tapjoy/TapjoyDisplayAd;->bannerHeight:I
     invoke-static {}, Lcom/tapjoy/TapjoyDisplayAd;->access$600()I
 
     move-result v2
@@ -233,7 +239,7 @@
     invoke-direct {v6, v0, v2}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
 
     .line 314
-    .local v6, layout:Landroid/widget/LinearLayout$LayoutParams;
+    .local v6, "layout":Landroid/widget/LinearLayout$LayoutParams;
     iget-object v0, p0, Lcom/tapjoy/TapjoyDisplayAd$GetBannerAdTask;->this$0:Lcom/tapjoy/TapjoyDisplayAd;
 
     iget-object v0, v0, Lcom/tapjoy/TapjoyDisplayAd;->webView:Lcom/tapjoy/mraid/view/MraidView;
@@ -358,6 +364,7 @@
     iput-object v2, v0, Lcom/tapjoy/TapjoyDisplayAd;->adView:Landroid/view/View;
 
     .line 409
+    # getter for: Lcom/tapjoy/TapjoyDisplayAd;->displayAdNotifier:Lcom/tapjoy/TapjoyDisplayAdNotifier;
     invoke-static {}, Lcom/tapjoy/TapjoyDisplayAd;->access$300()Lcom/tapjoy/TapjoyDisplayAdNotifier;
 
     move-result-object v0
@@ -391,7 +398,7 @@
     :cond_4
     iget-object v0, p0, Lcom/tapjoy/TapjoyDisplayAd$GetBannerAdTask;->this$0:Lcom/tapjoy/TapjoyDisplayAd;
 
-    #getter for: Lcom/tapjoy/TapjoyDisplayAd;->autoRefresh:Z
+    # getter for: Lcom/tapjoy/TapjoyDisplayAd;->autoRefresh:Z
     invoke-static {v0}, Lcom/tapjoy/TapjoyDisplayAd;->access$800(Lcom/tapjoy/TapjoyDisplayAd;)Z
 
     move-result v0
@@ -448,13 +455,13 @@
 
 .method protected bridge synthetic onPostExecute(Ljava/lang/Object;)V
     .locals 0
-    .parameter "x0"
+    .param p1, "x0"    # Ljava/lang/Object;
 
     .prologue
     .line 280
     check-cast p1, Lcom/tapjoy/TapjoyHttpURLResponse;
 
-    .end local p1
+    .end local p1    # "x0":Ljava/lang/Object;
     invoke-virtual {p0, p1}, Lcom/tapjoy/TapjoyDisplayAd$GetBannerAdTask;->onPostExecute(Lcom/tapjoy/TapjoyHttpURLResponse;)V
 
     return-void
@@ -462,13 +469,13 @@
 
 .method protected bridge synthetic onProgressUpdate([Ljava/lang/Object;)V
     .locals 0
-    .parameter "x0"
+    .param p1, "x0"    # [Ljava/lang/Object;
 
     .prologue
     .line 280
     check-cast p1, [Ljava/lang/Void;
 
-    .end local p1
+    .end local p1    # "x0":[Ljava/lang/Object;
     invoke-virtual {p0, p1}, Lcom/tapjoy/TapjoyDisplayAd$GetBannerAdTask;->onProgressUpdate([Ljava/lang/Void;)V
 
     return-void
@@ -476,7 +483,7 @@
 
 .method protected varargs onProgressUpdate([Ljava/lang/Void;)V
     .locals 0
-    .parameter "progress"
+    .param p1, "progress"    # [Ljava/lang/Void;
 
     .prologue
     .line 286

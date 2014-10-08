@@ -96,7 +96,6 @@
 
 .method public static a(Landroid/content/Context;)Ljava/lang/String;
     .locals 1
-    .parameter
 
     .prologue
     .line 208
@@ -134,8 +133,6 @@
 
 .method private static a(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
     .locals 6
-    .parameter
-    .parameter
 
     .prologue
     const/4 v4, 0x0
@@ -318,7 +315,6 @@
 
 .method public static a(Ljava/lang/String;)Ljava/lang/String;
     .locals 6
-    .parameter
 
     .prologue
     const/16 v5, 0x10
@@ -382,8 +378,6 @@
 
 .method private static a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 4
-    .parameter
-    .parameter
 
     .prologue
     .line 90
@@ -458,10 +452,6 @@
 
 .method public static a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Z)V
     .locals 1
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 574
@@ -492,9 +482,6 @@
 
 .method public static a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Z
     .locals 2
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const/4 v1, 0x0
@@ -539,7 +526,6 @@
 
 .method public static b(Landroid/content/Context;)Ljava/lang/String;
     .locals 2
-    .parameter
 
     .prologue
     .line 244
@@ -558,7 +544,6 @@
 
 .method public static b(Ljava/lang/String;)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 199
@@ -611,7 +596,6 @@
 
 .method public static c(Landroid/content/Context;)Ljava/lang/String;
     .locals 2
-    .parameter
 
     .prologue
     .line 248
@@ -642,7 +626,6 @@
 
 .method public static c(Ljava/lang/String;)Z
     .locals 4
-    .parameter
 
     .prologue
     const/4 v3, 0x0
@@ -725,7 +708,6 @@
 
 .method public static d(Landroid/content/Context;)Ljava/lang/String;
     .locals 2
-    .parameter
 
     .prologue
     .line 288
@@ -788,7 +770,6 @@
 
 .method public static d(Ljava/lang/String;)Ljava/lang/String;
     .locals 5
-    .parameter
 
     .prologue
     .line 611
@@ -881,7 +862,6 @@
 
 .method public static e(Landroid/content/Context;)Z
     .locals 2
-    .parameter
 
     .prologue
     .line 333
@@ -916,7 +896,6 @@
 
 .method private static e(Ljava/lang/String;)[B
     .locals 6
-    .parameter
 
     .prologue
     .line 114
@@ -1228,7 +1207,6 @@
 
 .method public static g(Landroid/content/Context;)V
     .locals 7
-    .parameter
 
     .prologue
     const-string v6, "Deleting : "
@@ -1384,8 +1362,8 @@
     :cond_2
     invoke-static {v1}, Lcom/vungle/sdk/ab;->a(Ljava/util/ArrayList;)V
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 516
     new-instance v0, Ljava/io/File;
@@ -1600,7 +1578,6 @@
 
 .method public static h(Landroid/content/Context;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 532
@@ -1753,7 +1730,6 @@
 
 .method public final f(Landroid/content/Context;)Ljava/lang/String;
     .locals 1
-    .parameter
 
     .prologue
     .line 352

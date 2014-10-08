@@ -21,8 +21,8 @@
 # virtual methods
 .method public call(Lcom/adobe/fre/FREContext;[Lcom/adobe/fre/FREObject;)Lcom/adobe/fre/FREObject;
     .locals 7
-    .parameter "arg0"
-    .parameter "arg1"
+    .param p1, "arg0"    # Lcom/adobe/fre/FREContext;
+    .param p2, "arg1"    # [Lcom/adobe/fre/FREObject;
 
     .prologue
     const-string v6, ","
@@ -37,11 +37,11 @@
     move-result-object v0
 
     .line 18
-    .local v0, countryCode:Ljava/lang/String;
+    .local v0, "countryCode":Ljava/lang/String;
     const/4 v1, 0x0
 
     .line 20
-    .local v1, deviceInfoObject:Lcom/adobe/fre/FREObject;
+    .local v1, "deviceInfoObject":Lcom/adobe/fre/FREObject;
     :try_start_0
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
@@ -79,7 +79,7 @@
     move-object v2, v3
 
     .line 25
-    .local v2, e:Lcom/adobe/fre/FREWrongThreadException;
+    .local v2, "e":Lcom/adobe/fre/FREWrongThreadException;
     invoke-virtual {v2}, Lcom/adobe/fre/FREWrongThreadException;->printStackTrace()V
 
     .line 26

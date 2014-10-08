@@ -40,8 +40,8 @@
 # virtual methods
 .method public bridge synthetic deserialize(Lcom/flurry/org/codehaus/jackson/JsonParser;Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;)Ljava/lang/Object;
     .locals 1
-    .parameter "x0"
-    .parameter "x1"
+    .param p1, "x0"    # Lcom/flurry/org/codehaus/jackson/JsonParser;
+    .param p2, "x1"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -60,8 +60,8 @@
 
 .method public deserialize(Lcom/flurry/org/codehaus/jackson/JsonParser;Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;)Ljava/lang/StackTraceElement;
     .locals 8
-    .parameter "jp"
-    .parameter "ctxt"
+    .param p1, "jp"    # Lcom/flurry/org/codehaus/jackson/JsonParser;
+    .param p2, "ctxt"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -76,7 +76,7 @@
     move-result-object v5
 
     .line 1107
-    .local v5, t:Lcom/flurry/org/codehaus/jackson/JsonToken;
+    .local v5, "t":Lcom/flurry/org/codehaus/jackson/JsonToken;
     sget-object v6, Lcom/flurry/org/codehaus/jackson/JsonToken;->START_OBJECT:Lcom/flurry/org/codehaus/jackson/JsonToken;
 
     if-ne v5, v6, :cond_7
@@ -84,18 +84,18 @@
     .line 1108
     const-string v0, ""
 
-    .local v0, className:Ljava/lang/String;
+    .local v0, "className":Ljava/lang/String;
     const-string v3, ""
 
-    .local v3, methodName:Ljava/lang/String;
+    .local v3, "methodName":Ljava/lang/String;
     const-string v1, ""
 
     .line 1109
-    .local v1, fileName:Ljava/lang/String;
+    .local v1, "fileName":Ljava/lang/String;
     const/4 v2, -0x1
 
     .line 1111
-    .local v2, lineNumber:I
+    .local v2, "lineNumber":I
     :cond_0
     :goto_0
     invoke-virtual {p1}, Lcom/flurry/org/codehaus/jackson/JsonParser;->nextValue()Lcom/flurry/org/codehaus/jackson/JsonToken;
@@ -112,7 +112,7 @@
     move-result-object v4
 
     .line 1113
-    .local v4, propName:Ljava/lang/String;
+    .local v4, "propName":Ljava/lang/String;
     const-string v6, "className"
 
     invoke-virtual {v6, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -236,7 +236,7 @@
     goto :goto_0
 
     .line 1131
-    .end local v4           #propName:Ljava/lang/String;
+    .end local v4    # "propName":Ljava/lang/String;
     :cond_6
     new-instance v6, Ljava/lang/StackTraceElement;
 
@@ -245,10 +245,10 @@
     return-object v6
 
     .line 1133
-    .end local v0           #className:Ljava/lang/String;
-    .end local v1           #fileName:Ljava/lang/String;
-    .end local v2           #lineNumber:I
-    .end local v3           #methodName:Ljava/lang/String;
+    .end local v0    # "className":Ljava/lang/String;
+    .end local v1    # "fileName":Ljava/lang/String;
+    .end local v2    # "lineNumber":I
+    .end local v3    # "methodName":Ljava/lang/String;
     :cond_7
     iget-object v6, p0, Lcom/flurry/org/codehaus/jackson/map/deser/std/StdDeserializer$StackTraceElementDeserializer;->_valueClass:Ljava/lang/Class;
 

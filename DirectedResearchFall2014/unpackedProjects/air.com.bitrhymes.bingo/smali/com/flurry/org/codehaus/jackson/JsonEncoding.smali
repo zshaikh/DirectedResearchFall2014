@@ -136,10 +136,8 @@
 
 .method private constructor <init>(Ljava/lang/String;ILjava/lang/String;Z)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter "javaName"
-    .parameter "bigEndian"
+    .param p3, "javaName"    # Ljava/lang/String;
+    .param p4, "bigEndian"    # Z
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -164,7 +162,7 @@
 
 .method public static valueOf(Ljava/lang/String;)Lcom/flurry/org/codehaus/jackson/JsonEncoding;
     .locals 1
-    .parameter "name"
+    .param p0, "name"    # Ljava/lang/String;
 
     .prologue
     .line 13
@@ -174,7 +172,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "name":Ljava/lang/String;
     check-cast p0, Lcom/flurry/org/codehaus/jackson/JsonEncoding;
 
     return-object p0

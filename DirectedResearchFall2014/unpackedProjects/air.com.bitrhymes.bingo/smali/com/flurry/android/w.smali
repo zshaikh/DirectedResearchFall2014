@@ -26,7 +26,6 @@
 
 .method constructor <init>(Lcom/flurry/android/FlurryAds;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 44
@@ -41,8 +40,6 @@
 
 .method private static a(Ljava/lang/String;Ljava/lang/String;)Z
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     .line 50
@@ -81,10 +78,6 @@
 # virtual methods
 .method final a(Lcom/flurry/android/cz;Lcom/flurry/android/AdUnit;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 6
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const/4 v5, 0x0

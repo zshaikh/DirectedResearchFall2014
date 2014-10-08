@@ -19,8 +19,8 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Lcom/fusepowered/m2/m2l/AdConfiguration;)V
     .locals 1
-    .parameter "context"
-    .parameter "adConfiguration"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "adConfiguration"    # Lcom/fusepowered/m2/m2l/AdConfiguration;
 
     .prologue
     .line 48
@@ -39,8 +39,6 @@
 
 .method static synthetic access$0(Lcom/fusepowered/m2/m2l/HtmlInterstitialWebView;Ljava/lang/Runnable;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 68
@@ -51,7 +49,7 @@
 
 .method private postHandlerRunnable(Ljava/lang/Runnable;)V
     .locals 1
-    .parameter "r"
+    .param p1, "r"    # Ljava/lang/Runnable;
 
     .prologue
     .line 69
@@ -67,7 +65,7 @@
 # virtual methods
 .method addMoPubUriJavascriptInterface(Lcom/fusepowered/m2/m2l/HtmlInterstitialWebView$MoPubUriJavascriptFireFinishLoadListener;)V
     .locals 2
-    .parameter "moPubUriJavascriptFireFinishLoadListener"
+    .param p1, "moPubUriJavascriptFireFinishLoadListener"    # Lcom/fusepowered/m2/m2l/HtmlInterstitialWebView$MoPubUriJavascriptFireFinishLoadListener;
 
     .prologue
     .line 97
@@ -85,10 +83,10 @@
 
 .method public init(Lcom/fusepowered/m2/m2l/CustomEventInterstitial$CustomEventInterstitialListener;ZLjava/lang/String;Ljava/lang/String;)V
     .locals 3
-    .parameter "customEventInterstitialListener"
-    .parameter "isScrollable"
-    .parameter "redirectUrl"
-    .parameter "clickthroughUrl"
+    .param p1, "customEventInterstitialListener"    # Lcom/fusepowered/m2/m2l/CustomEventInterstitial$CustomEventInterstitialListener;
+    .param p2, "isScrollable"    # Z
+    .param p3, "redirectUrl"    # Ljava/lang/String;
+    .param p4, "clickthroughUrl"    # Ljava/lang/String;
 
     .prologue
     .line 54
@@ -100,13 +98,13 @@
     invoke-direct {v0, p1}, Lcom/fusepowered/m2/m2l/HtmlInterstitialWebView$HtmlInterstitialWebViewListener;-><init>(Lcom/fusepowered/m2/m2l/CustomEventInterstitial$CustomEventInterstitialListener;)V
 
     .line 57
-    .local v0, htmlInterstitialWebViewListener:Lcom/fusepowered/m2/m2l/HtmlInterstitialWebView$HtmlInterstitialWebViewListener;
+    .local v0, "htmlInterstitialWebViewListener":Lcom/fusepowered/m2/m2l/HtmlInterstitialWebView$HtmlInterstitialWebViewListener;
     new-instance v1, Lcom/fusepowered/m2/m2l/HtmlWebViewClient;
 
     invoke-direct {v1, v0, p0, p4, p3}, Lcom/fusepowered/m2/m2l/HtmlWebViewClient;-><init>(Lcom/fusepowered/m2/m2l/HtmlWebViewListener;Lcom/fusepowered/m2/m2l/BaseHtmlWebView;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 58
-    .local v1, htmlWebViewClient:Lcom/fusepowered/m2/m2l/HtmlWebViewClient;
+    .local v1, "htmlWebViewClient":Lcom/fusepowered/m2/m2l/HtmlWebViewClient;
     invoke-virtual {p0, v1}, Lcom/fusepowered/m2/m2l/HtmlInterstitialWebView;->setWebViewClient(Landroid/webkit/WebViewClient;)V
 
     .line 60

@@ -16,9 +16,9 @@
 # direct methods
 .method constructor <init>(Ljava/lang/String;JJ)V
     .locals 0
-    .parameter "hitString"
-    .parameter "hitId"
-    .parameter "hitTime"
+    .param p1, "hitString"    # Ljava/lang/String;
+    .param p2, "hitId"    # J
+    .param p4, "hitTime"    # J
 
     .prologue
     .line 36
@@ -81,7 +81,7 @@
 
 .method setHitString(Ljava/lang/String;)V
     .locals 0
-    .parameter "hitString"
+    .param p1, "hitString"    # Ljava/lang/String;
 
     .prologue
     .line 25
@@ -93,7 +93,7 @@
 
 .method setHitUrl(Ljava/lang/String;)V
     .locals 0
-    .parameter "hitUrl"
+    .param p1, "hitUrl"    # Ljava/lang/String;
 
     .prologue
     .line 48

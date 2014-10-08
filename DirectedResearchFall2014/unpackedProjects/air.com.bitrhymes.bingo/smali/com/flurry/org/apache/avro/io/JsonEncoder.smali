@@ -17,8 +17,8 @@
 # direct methods
 .method constructor <init>(Lcom/flurry/org/apache/avro/Schema;Lcom/flurry/org/codehaus/jackson/JsonGenerator;)V
     .locals 2
-    .parameter "sc"
-    .parameter "out"
+    .param p1, "sc"    # Lcom/flurry/org/apache/avro/Schema;
+    .param p2, "out"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -60,8 +60,8 @@
 
 .method constructor <init>(Lcom/flurry/org/apache/avro/Schema;Ljava/io/OutputStream;)V
     .locals 1
-    .parameter "sc"
-    .parameter "out"
+    .param p1, "sc"    # Lcom/flurry/org/apache/avro/Schema;
+    .param p2, "out"    # Ljava/io/OutputStream;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -82,7 +82,7 @@
 
 .method private static getJsonGenerator(Ljava/io/OutputStream;)Lcom/flurry/org/codehaus/jackson/JsonGenerator;
     .locals 4
-    .parameter "out"
+    .param p0, "out"    # Ljava/io/OutputStream;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -115,13 +115,13 @@
     move-result-object v0
 
     .line 78
-    .local v0, g:Lcom/flurry/org/codehaus/jackson/JsonGenerator;
+    .local v0, "g":Lcom/flurry/org/codehaus/jackson/JsonGenerator;
     new-instance v1, Lcom/flurry/org/codehaus/jackson/util/MinimalPrettyPrinter;
 
     invoke-direct {v1}, Lcom/flurry/org/codehaus/jackson/util/MinimalPrettyPrinter;-><init>()V
 
     .line 79
-    .local v1, pp:Lcom/flurry/org/codehaus/jackson/util/MinimalPrettyPrinter;
+    .local v1, "pp":Lcom/flurry/org/codehaus/jackson/util/MinimalPrettyPrinter;
     const-string v2, "line.separator"
 
     invoke-static {v2}, Ljava/lang/System;->getProperty(Ljava/lang/String;)Ljava/lang/String;
@@ -139,9 +139,9 @@
 
 .method private writeByteArray([BII)V
     .locals 3
-    .parameter "bytes"
-    .parameter "start"
-    .parameter "len"
+    .param p1, "bytes"    # [B
+    .param p2, "start"    # I
+    .param p3, "len"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -168,7 +168,7 @@
 # virtual methods
 .method public configure(Lcom/flurry/org/codehaus/jackson/JsonGenerator;)Lcom/flurry/org/apache/avro/io/JsonEncoder;
     .locals 2
-    .parameter "generator"
+    .param p1, "generator"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -207,7 +207,7 @@
 
 .method public configure(Ljava/io/OutputStream;)Lcom/flurry/org/apache/avro/io/JsonEncoder;
     .locals 1
-    .parameter "out"
+    .param p1, "out"    # Ljava/io/OutputStream;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -228,8 +228,8 @@
 
 .method public doAction(Lcom/flurry/org/apache/avro/io/parsing/Symbol;Lcom/flurry/org/apache/avro/io/parsing/Symbol;)Lcom/flurry/org/apache/avro/io/parsing/Symbol;
     .locals 5
-    .parameter "input"
-    .parameter "top"
+    .param p1, "input"    # Lcom/flurry/org/apache/avro/io/parsing/Symbol;
+    .param p2, "top"    # Lcom/flurry/org/apache/avro/io/parsing/Symbol;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -250,7 +250,7 @@
     move-object v1, v0
 
     .line 291
-    .local v1, fa:Lcom/flurry/org/apache/avro/io/parsing/Symbol$FieldAdjustAction;
+    .local v1, "fa":Lcom/flurry/org/apache/avro/io/parsing/Symbol$FieldAdjustAction;
     iget-object v2, p0, Lcom/flurry/org/apache/avro/io/JsonEncoder;->out:Lcom/flurry/org/codehaus/jackson/JsonGenerator;
 
     iget-object v3, v1, Lcom/flurry/org/apache/avro/io/parsing/Symbol$FieldAdjustAction;->fname:Ljava/lang/String;
@@ -258,7 +258,7 @@
     invoke-virtual {v2, v3}, Lcom/flurry/org/codehaus/jackson/JsonGenerator;->writeFieldName(Ljava/lang/String;)V
 
     .line 299
-    .end local v1           #fa:Lcom/flurry/org/apache/avro/io/parsing/Symbol$FieldAdjustAction;
+    .end local v1    # "fa":Lcom/flurry/org/apache/avro/io/parsing/Symbol$FieldAdjustAction;
     :cond_0
     :goto_0
     const/4 v2, 0x0
@@ -487,7 +487,7 @@
 
 .method public writeBoolean(Z)V
     .locals 2
-    .parameter "b"
+    .param p1, "b"    # Z
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -513,7 +513,7 @@
 
 .method public writeBytes(Ljava/nio/ByteBuffer;)V
     .locals 5
-    .parameter "bytes"
+    .param p1, "bytes"    # Ljava/nio/ByteBuffer;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -556,10 +556,10 @@
     new-array v0, v2, [B
 
     .line 184
-    .local v0, b:[B
+    .local v0, "b":[B
     const/4 v1, 0x0
 
-    .local v1, i:I
+    .local v1, "i":I
     :goto_1
     array-length v2, v0
 
@@ -586,9 +586,9 @@
 
 .method public writeBytes([BII)V
     .locals 2
-    .parameter "bytes"
-    .parameter "start"
-    .parameter "len"
+    .param p1, "bytes"    # [B
+    .param p2, "start"    # I
+    .param p3, "len"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -612,7 +612,7 @@
 
 .method public writeDouble(D)V
     .locals 2
-    .parameter "d"
+    .param p1, "d"    # D
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -638,7 +638,7 @@
 
 .method public writeEnum(I)V
     .locals 4
-    .parameter "e"
+    .param p1, "e"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -663,7 +663,7 @@
     check-cast v0, Lcom/flurry/org/apache/avro/io/parsing/Symbol$EnumLabelsAction;
 
     .line 219
-    .local v0, top:Lcom/flurry/org/apache/avro/io/parsing/Symbol$EnumLabelsAction;
+    .local v0, "top":Lcom/flurry/org/apache/avro/io/parsing/Symbol$EnumLabelsAction;
     if-ltz p1, :cond_0
 
     iget v1, v0, Lcom/flurry/org/apache/avro/io/parsing/Symbol$EnumLabelsAction;->size:I
@@ -724,9 +724,9 @@
 
 .method public writeFixed([BII)V
     .locals 4
-    .parameter "bytes"
-    .parameter "start"
-    .parameter "len"
+    .param p1, "bytes"    # [B
+    .param p2, "start"    # I
+    .param p3, "len"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -751,7 +751,7 @@
     check-cast v0, Lcom/flurry/org/apache/avro/io/parsing/Symbol$IntCheckAction;
 
     .line 207
-    .local v0, top:Lcom/flurry/org/apache/avro/io/parsing/Symbol$IntCheckAction;
+    .local v0, "top":Lcom/flurry/org/apache/avro/io/parsing/Symbol$IntCheckAction;
     iget v1, v0, Lcom/flurry/org/apache/avro/io/parsing/Symbol$IntCheckAction;->size:I
 
     if-eq p3, v1, :cond_0
@@ -809,7 +809,7 @@
 
 .method public writeFloat(F)V
     .locals 2
-    .parameter "f"
+    .param p1, "f"    # F
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -835,7 +835,7 @@
 
 .method public writeIndex(I)V
     .locals 4
-    .parameter "unionIndex"
+    .param p1, "unionIndex"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -860,13 +860,13 @@
     check-cast v1, Lcom/flurry/org/apache/avro/io/parsing/Symbol$Alternative;
 
     .line 278
-    .local v1, top:Lcom/flurry/org/apache/avro/io/parsing/Symbol$Alternative;
+    .local v1, "top":Lcom/flurry/org/apache/avro/io/parsing/Symbol$Alternative;
     invoke-virtual {v1, p1}, Lcom/flurry/org/apache/avro/io/parsing/Symbol$Alternative;->getSymbol(I)Lcom/flurry/org/apache/avro/io/parsing/Symbol;
 
     move-result-object v0
 
     .line 279
-    .local v0, symbol:Lcom/flurry/org/apache/avro/io/parsing/Symbol;
+    .local v0, "symbol":Lcom/flurry/org/apache/avro/io/parsing/Symbol;
     sget-object v2, Lcom/flurry/org/apache/avro/io/parsing/Symbol;->NULL:Lcom/flurry/org/apache/avro/io/parsing/Symbol;
 
     if-eq v0, v2, :cond_0
@@ -904,7 +904,7 @@
 
 .method public writeInt(I)V
     .locals 2
-    .parameter "n"
+    .param p1, "n"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -930,7 +930,7 @@
 
 .method public writeLong(J)V
     .locals 2
-    .parameter "n"
+    .param p1, "n"    # J
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -1065,7 +1065,7 @@
 
 .method public writeString(Lcom/flurry/org/apache/avro/util/Utf8;)V
     .locals 1
-    .parameter "utf8"
+    .param p1, "utf8"    # Lcom/flurry/org/apache/avro/util/Utf8;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -1086,7 +1086,7 @@
 
 .method public writeString(Ljava/lang/String;)V
     .locals 2
-    .parameter "str"
+    .param p1, "str"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;

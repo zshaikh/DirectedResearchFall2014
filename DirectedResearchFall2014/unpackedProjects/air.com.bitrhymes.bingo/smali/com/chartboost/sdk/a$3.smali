@@ -28,9 +28,6 @@
 # direct methods
 .method constructor <init>(Lcom/chartboost/sdk/a;ZLjava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 1
@@ -50,8 +47,6 @@
 # virtual methods
 .method public a(Lcom/chartboost/sdk/impl/k;Ljava/lang/String;)V
     .locals 3
-    .parameter
-    .parameter
 
     .prologue
     .line 367
@@ -97,8 +92,6 @@
 
 .method public a(Lorg/json/JSONObject;Lcom/chartboost/sdk/impl/k;)V
     .locals 6
-    .parameter
-    .parameter
 
     .prologue
     .line 363

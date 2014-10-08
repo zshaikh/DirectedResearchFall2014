@@ -36,9 +36,6 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m1/google/gson/internal/ConstructorConstructor;Lcom/fusepowered/m1/google/gson/InstanceCreator;Ljava/lang/reflect/Type;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 73

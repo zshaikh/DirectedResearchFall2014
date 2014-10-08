@@ -17,7 +17,7 @@
 # direct methods
 .method private varargs constructor <init>([Lcom/flurry/org/apache/avro/io/parsing/Symbol;)V
     .locals 2
-    .parameter "symbols"
+    .param p1, "symbols"    # [Lcom/flurry/org/apache/avro/io/parsing/Symbol;
 
     .prologue
     .line 254
@@ -42,8 +42,8 @@
 
 .method synthetic constructor <init>([Lcom/flurry/org/apache/avro/io/parsing/Symbol;Lcom/flurry/org/apache/avro/io/parsing/Symbol$1;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
+    .param p1, "x0"    # [Lcom/flurry/org/apache/avro/io/parsing/Symbol;
+    .param p2, "x1"    # Lcom/flurry/org/apache/avro/io/parsing/Symbol$1;
 
     .prologue
     .line 252
@@ -54,7 +54,7 @@
 
 .method private static makeProduction([Lcom/flurry/org/apache/avro/io/parsing/Symbol;)[Lcom/flurry/org/apache/avro/io/parsing/Symbol;
     .locals 6
-    .parameter "symbols"
+    .param p0, "symbols"    # [Lcom/flurry/org/apache/avro/io/parsing/Symbol;
 
     .prologue
     const/4 v1, 0x0
@@ -69,7 +69,7 @@
     new-array v2, v0, [Lcom/flurry/org/apache/avro/io/parsing/Symbol;
 
     .line 260
-    .local v2, result:[Lcom/flurry/org/apache/avro/io/parsing/Symbol;
+    .local v2, "result":[Lcom/flurry/org/apache/avro/io/parsing/Symbol;
     const/4 v3, 0x1
 
     new-instance v4, Ljava/util/HashMap;

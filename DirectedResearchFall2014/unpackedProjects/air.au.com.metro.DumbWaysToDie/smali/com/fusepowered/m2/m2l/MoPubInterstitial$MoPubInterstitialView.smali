@@ -21,8 +21,7 @@
 # direct methods
 .method public constructor <init>(Lcom/fusepowered/m2/m2l/MoPubInterstitial;Landroid/content/Context;)V
     .locals 1
-    .parameter
-    .parameter "context"
+    .param p2, "context"    # Landroid/content/Context;
 
     .prologue
     .line 284
@@ -44,13 +43,13 @@
 # virtual methods
 .method protected adFailed(Lcom/fusepowered/m2/m2l/MoPubErrorCode;)V
     .locals 2
-    .parameter "errorCode"
+    .param p1, "errorCode"    # Lcom/fusepowered/m2/m2l/MoPubErrorCode;
 
     .prologue
     .line 318
     iget-object v0, p0, Lcom/fusepowered/m2/m2l/MoPubInterstitial$MoPubInterstitialView;->this$0:Lcom/fusepowered/m2/m2l/MoPubInterstitial;
 
-    #getter for: Lcom/fusepowered/m2/m2l/MoPubInterstitial;->mInterstitialAdListener:Lcom/fusepowered/m2/m2l/MoPubInterstitial$InterstitialAdListener;
+    # getter for: Lcom/fusepowered/m2/m2l/MoPubInterstitial;->mInterstitialAdListener:Lcom/fusepowered/m2/m2l/MoPubInterstitial$InterstitialAdListener;
     invoke-static {v0}, Lcom/fusepowered/m2/m2l/MoPubInterstitial;->access$2(Lcom/fusepowered/m2/m2l/MoPubInterstitial;)Lcom/fusepowered/m2/m2l/MoPubInterstitial$InterstitialAdListener;
 
     move-result-object v0
@@ -60,7 +59,7 @@
     .line 319
     iget-object v0, p0, Lcom/fusepowered/m2/m2l/MoPubInterstitial$MoPubInterstitialView;->this$0:Lcom/fusepowered/m2/m2l/MoPubInterstitial;
 
-    #getter for: Lcom/fusepowered/m2/m2l/MoPubInterstitial;->mInterstitialAdListener:Lcom/fusepowered/m2/m2l/MoPubInterstitial$InterstitialAdListener;
+    # getter for: Lcom/fusepowered/m2/m2l/MoPubInterstitial;->mInterstitialAdListener:Lcom/fusepowered/m2/m2l/MoPubInterstitial$InterstitialAdListener;
     invoke-static {v0}, Lcom/fusepowered/m2/m2l/MoPubInterstitial;->access$2(Lcom/fusepowered/m2/m2l/MoPubInterstitial;)Lcom/fusepowered/m2/m2l/MoPubInterstitial$InterstitialAdListener;
 
     move-result-object v0
@@ -76,7 +75,6 @@
 
 .method protected loadCustomEvent(Ljava/util/Map;)V
     .locals 4
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -89,7 +87,7 @@
     .end annotation
 
     .prologue
-    .local p1, paramsMap:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p1, "paramsMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v1, "MoPub"
 
     .line 291
@@ -115,7 +113,7 @@
     :cond_0
     iget-object v0, p0, Lcom/fusepowered/m2/m2l/MoPubInterstitial$MoPubInterstitialView;->this$0:Lcom/fusepowered/m2/m2l/MoPubInterstitial;
 
-    #getter for: Lcom/fusepowered/m2/m2l/MoPubInterstitial;->mCustomEventInterstitialAdapter:Lcom/fusepowered/m2/m2l/CustomEventInterstitialAdapter;
+    # getter for: Lcom/fusepowered/m2/m2l/MoPubInterstitial;->mCustomEventInterstitialAdapter:Lcom/fusepowered/m2/m2l/CustomEventInterstitialAdapter;
     invoke-static {v0}, Lcom/fusepowered/m2/m2l/MoPubInterstitial;->access$0(Lcom/fusepowered/m2/m2l/MoPubInterstitial;)Lcom/fusepowered/m2/m2l/CustomEventInterstitialAdapter;
 
     move-result-object v0
@@ -125,7 +123,7 @@
     .line 298
     iget-object v0, p0, Lcom/fusepowered/m2/m2l/MoPubInterstitial$MoPubInterstitialView;->this$0:Lcom/fusepowered/m2/m2l/MoPubInterstitial;
 
-    #getter for: Lcom/fusepowered/m2/m2l/MoPubInterstitial;->mCustomEventInterstitialAdapter:Lcom/fusepowered/m2/m2l/CustomEventInterstitialAdapter;
+    # getter for: Lcom/fusepowered/m2/m2l/MoPubInterstitial;->mCustomEventInterstitialAdapter:Lcom/fusepowered/m2/m2l/CustomEventInterstitialAdapter;
     invoke-static {v0}, Lcom/fusepowered/m2/m2l/MoPubInterstitial;->access$0(Lcom/fusepowered/m2/m2l/MoPubInterstitial;)Lcom/fusepowered/m2/m2l/CustomEventInterstitialAdapter;
 
     move-result-object v0
@@ -177,13 +175,12 @@
 
     move-result-object v0
 
-    #setter for: Lcom/fusepowered/m2/m2l/MoPubInterstitial;->mCustomEventInterstitialAdapter:Lcom/fusepowered/m2/m2l/CustomEventInterstitialAdapter;
     invoke-static {v2, v0}, Lcom/fusepowered/m2/m2l/MoPubInterstitial;->access$1(Lcom/fusepowered/m2/m2l/MoPubInterstitial;Lcom/fusepowered/m2/m2l/CustomEventInterstitialAdapter;)V
 
     .line 307
     iget-object v0, p0, Lcom/fusepowered/m2/m2l/MoPubInterstitial$MoPubInterstitialView;->this$0:Lcom/fusepowered/m2/m2l/MoPubInterstitial;
 
-    #getter for: Lcom/fusepowered/m2/m2l/MoPubInterstitial;->mCustomEventInterstitialAdapter:Lcom/fusepowered/m2/m2l/CustomEventInterstitialAdapter;
+    # getter for: Lcom/fusepowered/m2/m2l/MoPubInterstitial;->mCustomEventInterstitialAdapter:Lcom/fusepowered/m2/m2l/CustomEventInterstitialAdapter;
     invoke-static {v0}, Lcom/fusepowered/m2/m2l/MoPubInterstitial;->access$0(Lcom/fusepowered/m2/m2l/MoPubInterstitial;)Lcom/fusepowered/m2/m2l/CustomEventInterstitialAdapter;
 
     move-result-object v0
@@ -195,7 +192,7 @@
     .line 308
     iget-object v0, p0, Lcom/fusepowered/m2/m2l/MoPubInterstitial$MoPubInterstitialView;->this$0:Lcom/fusepowered/m2/m2l/MoPubInterstitial;
 
-    #getter for: Lcom/fusepowered/m2/m2l/MoPubInterstitial;->mCustomEventInterstitialAdapter:Lcom/fusepowered/m2/m2l/CustomEventInterstitialAdapter;
+    # getter for: Lcom/fusepowered/m2/m2l/MoPubInterstitial;->mCustomEventInterstitialAdapter:Lcom/fusepowered/m2/m2l/CustomEventInterstitialAdapter;
     invoke-static {v0}, Lcom/fusepowered/m2/m2l/MoPubInterstitial;->access$0(Lcom/fusepowered/m2/m2l/MoPubInterstitial;)Lcom/fusepowered/m2/m2l/CustomEventInterstitialAdapter;
 
     move-result-object v0

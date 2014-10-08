@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m1/android/NVASpeechKit;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 800
@@ -39,9 +38,9 @@
 # virtual methods
 .method public onSpeakingBegin(Lcom/nuance/nmdp/speechkit/Vocalizer;Ljava/lang/String;Ljava/lang/Object;)V
     .locals 2
-    .parameter "vocalizer"
-    .parameter "text"
-    .parameter "context"
+    .param p1, "vocalizer"    # Lcom/nuance/nmdp/speechkit/Vocalizer;
+    .param p2, "text"    # Ljava/lang/String;
+    .param p3, "context"    # Ljava/lang/Object;
 
     .prologue
     .line 804
@@ -70,7 +69,7 @@
 
     sget-object v1, Lcom/fusepowered/m1/android/NVASpeechKit$State;->VOCALIZING:Lcom/fusepowered/m1/android/NVASpeechKit$State;
 
-    #calls: Lcom/fusepowered/m1/android/NVASpeechKit;->setState(Lcom/fusepowered/m1/android/NVASpeechKit$State;)V
+    # invokes: Lcom/fusepowered/m1/android/NVASpeechKit;->setState(Lcom/fusepowered/m1/android/NVASpeechKit$State;)V
     invoke-static {v0, v1}, Lcom/fusepowered/m1/android/NVASpeechKit;->access$1100(Lcom/fusepowered/m1/android/NVASpeechKit;Lcom/fusepowered/m1/android/NVASpeechKit$State;)V
 
     .line 806
@@ -79,10 +78,10 @@
 
 .method public onSpeakingDone(Lcom/nuance/nmdp/speechkit/Vocalizer;Ljava/lang/String;Lcom/nuance/nmdp/speechkit/SpeechError;Ljava/lang/Object;)V
     .locals 2
-    .parameter "vocalizer"
-    .parameter "text"
-    .parameter "error"
-    .parameter "context"
+    .param p1, "vocalizer"    # Lcom/nuance/nmdp/speechkit/Vocalizer;
+    .param p2, "text"    # Ljava/lang/String;
+    .param p3, "error"    # Lcom/nuance/nmdp/speechkit/SpeechError;
+    .param p4, "context"    # Ljava/lang/Object;
 
     .prologue
     .line 811
@@ -121,7 +120,7 @@
     .line 815
     iget-object v0, p0, Lcom/fusepowered/m1/android/NVASpeechKit$6;->this$0:Lcom/fusepowered/m1/android/NVASpeechKit;
 
-    #calls: Lcom/fusepowered/m1/android/NVASpeechKit;->handleSpeechError(Lcom/nuance/nmdp/speechkit/SpeechError;)V
+    # invokes: Lcom/fusepowered/m1/android/NVASpeechKit;->handleSpeechError(Lcom/nuance/nmdp/speechkit/SpeechError;)V
     invoke-static {v0, p3}, Lcom/fusepowered/m1/android/NVASpeechKit;->access$1200(Lcom/fusepowered/m1/android/NVASpeechKit;Lcom/nuance/nmdp/speechkit/SpeechError;)V
 
     .line 821
@@ -134,7 +133,7 @@
 
     sget-object v1, Lcom/fusepowered/m1/android/NVASpeechKit$State;->READY:Lcom/fusepowered/m1/android/NVASpeechKit$State;
 
-    #calls: Lcom/fusepowered/m1/android/NVASpeechKit;->setState(Lcom/fusepowered/m1/android/NVASpeechKit$State;)V
+    # invokes: Lcom/fusepowered/m1/android/NVASpeechKit;->setState(Lcom/fusepowered/m1/android/NVASpeechKit$State;)V
     invoke-static {v0, v1}, Lcom/fusepowered/m1/android/NVASpeechKit;->access$1100(Lcom/fusepowered/m1/android/NVASpeechKit;Lcom/fusepowered/m1/android/NVASpeechKit$State;)V
 
     goto :goto_0

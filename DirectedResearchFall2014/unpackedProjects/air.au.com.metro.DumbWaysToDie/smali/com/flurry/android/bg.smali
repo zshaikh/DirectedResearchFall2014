@@ -13,7 +13,6 @@
 # direct methods
 .method constructor <init>(Lcom/flurry/android/bi;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 70
@@ -28,8 +27,6 @@
 # virtual methods
 .method public final MMAdCachingCompleted(Lcom/millennialmedia/android/MMAdView;Z)V
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     .line 114
@@ -47,7 +44,6 @@
 
 .method public final MMAdClickedToOverlay(Lcom/millennialmedia/android/MMAdView;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 95
@@ -74,7 +70,6 @@
 
 .method public final MMAdFailed(Lcom/millennialmedia/android/MMAdView;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 74
@@ -101,7 +96,6 @@
 
 .method public final MMAdOverlayLaunched(Lcom/millennialmedia/android/MMAdView;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 102
@@ -119,7 +113,6 @@
 
 .method public final MMAdRequestIsCaching(Lcom/millennialmedia/android/MMAdView;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 108
@@ -137,7 +130,6 @@
 
 .method public final MMAdReturned(Lcom/millennialmedia/android/MMAdView;)V
     .locals 4
-    .parameter
 
     .prologue
     .line 81

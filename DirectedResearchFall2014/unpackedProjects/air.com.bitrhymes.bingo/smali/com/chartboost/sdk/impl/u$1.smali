@@ -21,9 +21,6 @@
 # direct methods
 .method constructor <init>(Lcom/chartboost/sdk/impl/u;Landroid/content/Context;I)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 1
@@ -39,7 +36,7 @@
 # virtual methods
 .method public onOrientationChanged(I)V
     .locals 2
-    .parameter "orientation"
+    .param p1, "orientation"    # I
 
     .prologue
     .line 36

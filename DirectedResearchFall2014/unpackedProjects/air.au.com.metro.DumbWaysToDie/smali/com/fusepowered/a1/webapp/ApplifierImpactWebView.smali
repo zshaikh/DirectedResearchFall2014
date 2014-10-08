@@ -28,9 +28,9 @@
 # direct methods
 .method public constructor <init>(Landroid/app/Activity;Lcom/fusepowered/a1/webapp/IApplifierImpactWebViewListener;Lcom/fusepowered/a1/webapp/ApplifierImpactWebBridge;)V
     .locals 2
-    .parameter "activity"
-    .parameter "listener"
-    .parameter "webBridge"
+    .param p1, "activity"    # Landroid/app/Activity;
+    .param p2, "listener"    # Lcom/fusepowered/a1/webapp/IApplifierImpactWebViewListener;
+    .param p3, "webBridge"    # Lcom/fusepowered/a1/webapp/ApplifierImpactWebBridge;
 
     .prologue
     const/4 v1, 0x0
@@ -87,10 +87,10 @@
 
 .method public constructor <init>(Landroid/app/Activity;Ljava/lang/String;Lcom/fusepowered/a1/webapp/IApplifierImpactWebViewListener;Lcom/fusepowered/a1/webapp/ApplifierImpactWebBridge;)V
     .locals 2
-    .parameter "activity"
-    .parameter "url"
-    .parameter "listener"
-    .parameter "webBridge"
+    .param p1, "activity"    # Landroid/app/Activity;
+    .param p2, "url"    # Ljava/lang/String;
+    .param p3, "listener"    # Lcom/fusepowered/a1/webapp/IApplifierImpactWebViewListener;
+    .param p4, "webBridge"    # Lcom/fusepowered/a1/webapp/ApplifierImpactWebBridge;
 
     .prologue
     const/4 v1, 0x0
@@ -126,7 +126,7 @@
 
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 2
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     const/4 v1, 0x0
@@ -159,8 +159,8 @@
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 2
-    .parameter "context"
-    .parameter "attrs"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
     const/4 v1, 0x0
@@ -193,9 +193,9 @@
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 2
-    .parameter "context"
-    .parameter "attrs"
-    .parameter "defStyle"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "attrs"    # Landroid/util/AttributeSet;
+    .param p3, "defStyle"    # I
 
     .prologue
     const/4 v1, 0x0
@@ -228,7 +228,6 @@
 
 .method static synthetic access$0(Lcom/fusepowered/a1/webapp/ApplifierImpactWebView;)Lcom/fusepowered/a1/webapp/IApplifierImpactWebViewListener;
     .locals 1
-    .parameter
 
     .prologue
     .line 31
@@ -239,7 +238,6 @@
 
 .method static synthetic access$1(Lcom/fusepowered/a1/webapp/ApplifierImpactWebView;)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 32
@@ -250,8 +248,6 @@
 
 .method static synthetic access$2(Lcom/fusepowered/a1/webapp/ApplifierImpactWebView;Z)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 32
@@ -262,10 +258,10 @@
 
 .method private init(Landroid/app/Activity;Ljava/lang/String;Lcom/fusepowered/a1/webapp/IApplifierImpactWebViewListener;Lcom/fusepowered/a1/webapp/ApplifierImpactWebBridge;)V
     .locals 2
-    .parameter "activity"
-    .parameter "url"
-    .parameter "listener"
-    .parameter "webBridge"
+    .param p1, "activity"    # Landroid/app/Activity;
+    .param p2, "url"    # Ljava/lang/String;
+    .param p3, "listener"    # Lcom/fusepowered/a1/webapp/IApplifierImpactWebViewListener;
+    .param p4, "webBridge"    # Lcom/fusepowered/a1/webapp/ApplifierImpactWebBridge;
 
     .prologue
     .line 177
@@ -367,7 +363,7 @@
     const/4 v1, 0x0
 
     .line 213
-    .local v1, appCachePath:Ljava/lang/String;
+    .local v1, "appCachePath":Ljava/lang/String;
     invoke-virtual {p0}, Lcom/fusepowered/a1/webapp/ApplifierImpactWebView;->getContext()Landroid/content/Context;
 
     move-result-object v2
@@ -468,7 +464,7 @@
     invoke-virtual {p0, v4}, Lcom/fusepowered/a1/webapp/ApplifierImpactWebView;->setInitialScale(I)V
 
     .line 232
-    const/high16 v2, -0x100
+    const/high16 v2, -0x1000000
 
     invoke-virtual {p0, v2}, Lcom/fusepowered/a1/webapp/ApplifierImpactWebView;->setBackgroundColor(I)V
 
@@ -499,7 +495,7 @@
     const/4 v0, 0x1
 
     .line 242
-    .local v0, appCache:Z
+    .local v0, "appCache":Z
     sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/4 v3, 0x7
@@ -541,7 +537,7 @@
     invoke-virtual {v2, v1}, Landroid/webkit/WebSettings;->setAppCachePath(Ljava/lang/String;)V
 
     .line 252
-    .end local v0           #appCache:Z
+    .end local v0    # "appCache":Z
     :cond_2
     const-string v2, "Adding javascript interface"
 
@@ -558,7 +554,7 @@
     return-void
 
     .line 204
-    .end local v1           #appCachePath:Ljava/lang/String;
+    .end local v1    # "appCachePath":Ljava/lang/String;
     :cond_3
     sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -624,7 +620,7 @@
 
 .method public initWebApp(Lorg/json/JSONObject;)V
     .locals 7
-    .parameter "data"
+    .param p1, "data"    # Lorg/json/JSONObject;
 
     .prologue
     const-string v3, "unknown"
@@ -642,7 +638,7 @@
     invoke-direct {v1}, Lorg/json/JSONObject;-><init>()V
 
     .line 138
-    .local v1, initData:Lorg/json/JSONObject;
+    .local v1, "initData":Lorg/json/JSONObject;
     :try_start_0
     const-string v3, "campaignData"
 
@@ -835,7 +831,7 @@
     move-result-object v2
 
     .line 168
-    .local v2, initString:Ljava/lang/String;
+    .local v2, "initString":Ljava/lang/String;
     new-instance v3, Ljava/lang/StringBuilder;
 
     const-string v4, "Initializing WebView with JS call: "
@@ -862,21 +858,21 @@
     invoke-virtual {v3, v4}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
 
     .line 171
-    .end local v1           #initData:Lorg/json/JSONObject;
-    .end local v2           #initString:Ljava/lang/String;
+    .end local v1    # "initData":Lorg/json/JSONObject;
+    .end local v2    # "initString":Ljava/lang/String;
     :cond_3
     :goto_0
     return-void
 
     .line 162
-    .restart local v1       #initData:Lorg/json/JSONObject;
+    .restart local v1    # "initData":Lorg/json/JSONObject;
     :catch_0
     move-exception v3
 
     move-object v0, v3
 
     .line 163
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v3, "Error creating webview init params"
 
     invoke-static {v3, p0}, Lcom/fusepowered/a1/ApplifierImpactUtils;->Log(Ljava/lang/String;Ljava/lang/Object;)V
@@ -896,8 +892,8 @@
 
 .method public onKeyDown(ILandroid/view/KeyEvent;)Z
     .locals 1
-    .parameter "keyCode"
-    .parameter "event"
+    .param p1, "keyCode"    # I
+    .param p2, "event"    # Landroid/view/KeyEvent;
 
     .prologue
     .line 273
@@ -942,8 +938,8 @@
 
 .method public sendNativeEventToWebApp(Ljava/lang/String;Lorg/json/JSONObject;)V
     .locals 6
-    .parameter "eventType"
-    .parameter "data"
+    .param p1, "eventType"    # Ljava/lang/String;
+    .param p2, "data"    # Lorg/json/JSONObject;
 
     .prologue
     .line 120
@@ -957,7 +953,7 @@
     const-string v0, "{}"
 
     .line 123
-    .local v0, dataString:Ljava/lang/String;
+    .local v0, "dataString":Ljava/lang/String;
     if-eqz p2, :cond_0
 
     .line 124
@@ -998,7 +994,7 @@
     move-result-object v1
 
     .line 127
-    .local v1, javascriptString:Ljava/lang/String;
+    .local v1, "javascriptString":Ljava/lang/String;
     new-instance v2, Ljava/lang/StringBuilder;
 
     const-string v3, "Send native event to WebApp: "
@@ -1025,15 +1021,15 @@
     invoke-virtual {v2, v3}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
 
     .line 130
-    .end local v0           #dataString:Ljava/lang/String;
-    .end local v1           #javascriptString:Ljava/lang/String;
+    .end local v0    # "dataString":Ljava/lang/String;
+    .end local v1    # "javascriptString":Ljava/lang/String;
     :cond_1
     return-void
 .end method
 
 .method public setRenderMode(I)V
     .locals 7
-    .parameter "mode"
+    .param p1, "mode"    # I
 
     .prologue
     .line 261
@@ -1063,7 +1059,7 @@
     move-result-object v1
 
     .line 262
-    .local v1, layertype:Ljava/lang/reflect/Method;
+    .local v1, "layertype":Ljava/lang/reflect/Method;
     const/4 v2, 0x2
 
     new-array v2, v2, [Ljava/lang/Object;
@@ -1087,7 +1083,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 267
-    .end local v1           #layertype:Ljava/lang/reflect/Method;
+    .end local v1    # "layertype":Ljava/lang/reflect/Method;
     :goto_0
     return-void
 
@@ -1098,7 +1094,7 @@
     move-object v0, v2
 
     .line 265
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v2, "Could not invoke setLayerType"
 
     invoke-static {v2, p0}, Lcom/fusepowered/a1/ApplifierImpactUtils;->Log(Ljava/lang/String;Ljava/lang/Object;)V
@@ -1108,7 +1104,7 @@
 
 .method public setWebViewCurrentView(Ljava/lang/String;)V
     .locals 1
-    .parameter "view"
+    .param p1, "view"    # Ljava/lang/String;
 
     .prologue
     .line 76
@@ -1122,8 +1118,8 @@
 
 .method public setWebViewCurrentView(Ljava/lang/String;Lorg/json/JSONObject;)V
     .locals 10
-    .parameter "view"
-    .parameter "data"
+    .param p1, "view"    # Ljava/lang/String;
+    .param p2, "data"    # Lorg/json/JSONObject;
 
     .prologue
     const/4 v8, 0x0
@@ -1143,7 +1139,7 @@
     const-string v1, "{}"
 
     .line 83
-    .local v1, dataString:Ljava/lang/String;
+    .local v1, "dataString":Ljava/lang/String;
     if-eqz p2, :cond_0
 
     .line 84
@@ -1182,7 +1178,7 @@
     move-result-object v2
 
     .line 87
-    .local v2, javascriptString:Ljava/lang/String;
+    .local v2, "javascriptString":Ljava/lang/String;
     iput-object p1, p0, Lcom/fusepowered/a1/webapp/ApplifierImpactWebView;->_currentWebView:Ljava/lang/String;
 
     .line 88
@@ -1218,7 +1214,7 @@
     const-string v0, "test"
 
     .line 94
-    .local v0, action:Ljava/lang/String;
+    .local v0, "action":Ljava/lang/String;
     :try_start_0
     const-string v3, "action"
 
@@ -1418,16 +1414,16 @@
     sput-object v3, Lcom/fusepowered/a1/properties/ApplifierImpactProperties;->RUN_WEBVIEW_TESTS:Ljava/lang/Boolean;
 
     .line 117
-    .end local v0           #action:Ljava/lang/String;
-    .end local v1           #dataString:Ljava/lang/String;
-    .end local v2           #javascriptString:Ljava/lang/String;
+    .end local v0    # "action":Ljava/lang/String;
+    .end local v1    # "dataString":Ljava/lang/String;
+    .end local v2    # "javascriptString":Ljava/lang/String;
     :cond_1
     return-void
 
     .line 96
-    .restart local v0       #action:Ljava/lang/String;
-    .restart local v1       #dataString:Ljava/lang/String;
-    .restart local v2       #javascriptString:Ljava/lang/String;
+    .restart local v0    # "action":Ljava/lang/String;
+    .restart local v1    # "dataString":Ljava/lang/String;
+    .restart local v2    # "javascriptString":Ljava/lang/String;
     :catch_0
     move-exception v3
 

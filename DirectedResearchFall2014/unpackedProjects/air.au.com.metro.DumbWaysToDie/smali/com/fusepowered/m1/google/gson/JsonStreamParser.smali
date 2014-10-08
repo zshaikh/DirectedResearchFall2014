@@ -27,7 +27,7 @@
 # direct methods
 .method public constructor <init>(Ljava/io/Reader;)V
     .locals 2
-    .parameter "reader"
+    .param p1, "reader"    # Ljava/io/Reader;
 
     .prologue
     .line 68
@@ -60,7 +60,7 @@
 
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 1
-    .parameter "json"
+    .param p1, "json"    # Ljava/lang/String;
 
     .prologue
     .line 61
@@ -95,9 +95,9 @@
 
     sget-object v3, Lcom/fusepowered/m1/google/gson/stream/JsonToken;->END_DOCUMENT:Lcom/fusepowered/m1/google/gson/stream/JsonToken;
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Lcom/fusepowered/m1/google/gson/stream/MalformedJsonException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     if-eq v2, v3, :cond_0
 
@@ -121,7 +121,7 @@
     move-object v0, v2
 
     .line 107
-    .local v0, e:Lcom/fusepowered/m1/google/gson/stream/MalformedJsonException;
+    .local v0, "e":Lcom/fusepowered/m1/google/gson/stream/MalformedJsonException;
     new-instance v2, Lcom/fusepowered/m1/google/gson/JsonSyntaxException;
 
     invoke-direct {v2, v0}, Lcom/fusepowered/m1/google/gson/JsonSyntaxException;-><init>(Ljava/lang/Throwable;)V
@@ -129,7 +129,7 @@
     throw v2
 
     .line 111
-    .end local v0           #e:Lcom/fusepowered/m1/google/gson/stream/MalformedJsonException;
+    .end local v0    # "e":Lcom/fusepowered/m1/google/gson/stream/MalformedJsonException;
     :catchall_0
     move-exception v2
 
@@ -146,7 +146,7 @@
     move-object v0, v2
 
     .line 109
-    .local v0, e:Ljava/io/IOException;
+    .local v0, "e":Ljava/io/IOException;
     :try_start_2
     new-instance v2, Lcom/fusepowered/m1/google/gson/JsonIOException;
 
@@ -204,7 +204,7 @@
     move-object v0, v1
 
     .line 89
-    .local v0, e:Ljava/lang/StackOverflowError;
+    .local v0, "e":Ljava/lang/StackOverflowError;
     new-instance v1, Lcom/fusepowered/m1/google/gson/JsonParseException;
 
     const-string v2, "Failed parsing JSON source to Json"
@@ -214,14 +214,14 @@
     throw v1
 
     .line 90
-    .end local v0           #e:Ljava/lang/StackOverflowError;
+    .end local v0    # "e":Ljava/lang/StackOverflowError;
     :catch_1
     move-exception v1
 
     move-object v0, v1
 
     .line 91
-    .local v0, e:Ljava/lang/OutOfMemoryError;
+    .local v0, "e":Ljava/lang/OutOfMemoryError;
     new-instance v1, Lcom/fusepowered/m1/google/gson/JsonParseException;
 
     const-string v2, "Failed parsing JSON source to Json"
@@ -231,14 +231,14 @@
     throw v1
 
     .line 92
-    .end local v0           #e:Ljava/lang/OutOfMemoryError;
+    .end local v0    # "e":Ljava/lang/OutOfMemoryError;
     :catch_2
     move-exception v1
 
     move-object v0, v1
 
     .line 93
-    .local v0, e:Lcom/fusepowered/m1/google/gson/JsonParseException;
+    .local v0, "e":Lcom/fusepowered/m1/google/gson/JsonParseException;
     invoke-virtual {v0}, Lcom/fusepowered/m1/google/gson/JsonParseException;->getCause()Ljava/lang/Throwable;
 
     move-result-object v1

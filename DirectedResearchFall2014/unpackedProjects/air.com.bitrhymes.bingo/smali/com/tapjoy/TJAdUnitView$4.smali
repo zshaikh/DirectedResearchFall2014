@@ -23,8 +23,6 @@
 # direct methods
 .method constructor <init>(Lcom/tapjoy/TJAdUnitView;Lcom/tapjoy/TJAdUnitView$CLOSE_TYPES;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 799
@@ -64,7 +62,7 @@
 
     iget-object v1, p0, Lcom/tapjoy/TJAdUnitView$4;->val$handleCloseButton:Lcom/tapjoy/TJAdUnitView$CLOSE_TYPES;
 
-    #calls: Lcom/tapjoy/TJAdUnitView;->closeView(Lcom/tapjoy/TJAdUnitView$CLOSE_TYPES;)V
+    # invokes: Lcom/tapjoy/TJAdUnitView;->closeView(Lcom/tapjoy/TJAdUnitView$CLOSE_TYPES;)V
     invoke-static {v0, v1}, Lcom/tapjoy/TJAdUnitView;->access$700(Lcom/tapjoy/TJAdUnitView;Lcom/tapjoy/TJAdUnitView$CLOSE_TYPES;)V
 
     .line 808

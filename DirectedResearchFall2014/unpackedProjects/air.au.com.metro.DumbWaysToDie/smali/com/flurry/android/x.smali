@@ -16,10 +16,9 @@
 
 .method public static a(Landroid/view/Window;)V
     .locals 3
-    .parameter
 
     .prologue
-    const/high16 v2, 0x100
+    const/high16 v2, 0x1000000
 
     .line 24
     if-nez p0, :cond_1

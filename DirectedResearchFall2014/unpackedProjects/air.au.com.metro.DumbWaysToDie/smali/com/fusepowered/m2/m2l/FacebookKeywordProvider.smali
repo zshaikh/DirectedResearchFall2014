@@ -41,7 +41,7 @@
 
 .method public static getKeyword(Landroid/content/Context;)Ljava/lang/String;
     .locals 10
-    .parameter "context"
+    .param p0, "context"    # Landroid/content/Context;
 
     .prologue
     const/4 v9, 0x0
@@ -52,7 +52,7 @@
     const/4 v7, 0x0
 
     .line 57
-    .local v7, cursor:Landroid/database/Cursor;
+    .local v7, "cursor":Landroid/database/Cursor;
     const/4 v0, 0x1
 
     :try_start_0
@@ -65,7 +65,7 @@
     aput-object v1, v2, v0
 
     .line 58
-    .local v2, projection:[Ljava/lang/String;
+    .local v2, "projection":[Ljava/lang/String;
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
@@ -87,8 +87,8 @@
 
     invoke-interface {v7}, Landroid/database/Cursor;->moveToFirst()Z
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result v0
 
@@ -105,13 +105,13 @@
     move-object v0, v9
 
     .line 73
-    .end local v2           #projection:[Ljava/lang/String;
+    .end local v2    # "projection":[Ljava/lang/String;
     :cond_2
     :goto_0
     return-object v0
 
     .line 64
-    .restart local v2       #projection:[Ljava/lang/String;
+    .restart local v2    # "projection":[Ljava/lang/String;
     :cond_3
     :try_start_1
     const-string v0, "aid"
@@ -125,13 +125,13 @@
     move-result-object v6
 
     .line 66
-    .local v6, attributionId:Ljava/lang/String;
+    .local v6, "attributionId":Ljava/lang/String;
     if-eqz v6, :cond_4
 
     invoke-virtual {v6}, Ljava/lang/String;->length()I
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     move-result v0
 
@@ -165,8 +165,8 @@
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
     :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
     move-result-object v0
 
@@ -179,15 +179,15 @@
     goto :goto_0
 
     .line 71
-    .end local v2           #projection:[Ljava/lang/String;
-    .end local v6           #attributionId:Ljava/lang/String;
+    .end local v2    # "projection":[Ljava/lang/String;
+    .end local v6    # "attributionId":Ljava/lang/String;
     :catch_0
     move-exception v0
 
     move-object v8, v0
 
     .line 72
-    .local v8, exception:Ljava/lang/Exception;
+    .local v8, "exception":Ljava/lang/Exception;
     :try_start_3
     const-string v0, "MoPub"
 
@@ -226,7 +226,7 @@
     goto :goto_0
 
     .line 74
-    .end local v8           #exception:Ljava/lang/Exception;
+    .end local v8    # "exception":Ljava/lang/Exception;
     :catchall_0
     move-exception v0
 

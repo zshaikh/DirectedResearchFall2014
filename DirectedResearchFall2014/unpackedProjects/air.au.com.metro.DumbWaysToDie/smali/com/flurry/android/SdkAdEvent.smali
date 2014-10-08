@@ -64,7 +64,6 @@
 # virtual methods
 .method public final a(Ljava/lang/CharSequence;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 46
@@ -76,7 +75,6 @@
 
 .method public final a(Ljava/lang/Long;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 76
@@ -92,7 +90,6 @@
 
 .method public final a(Ljava/util/Map;)V
     .locals 0
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -114,7 +111,6 @@
 
 .method public get(I)Ljava/lang/Object;
     .locals 2
-    .parameter
 
     .prologue
     .line 16
@@ -174,8 +170,6 @@
 
 .method public put(ILjava/lang/Object;)V
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     .line 26

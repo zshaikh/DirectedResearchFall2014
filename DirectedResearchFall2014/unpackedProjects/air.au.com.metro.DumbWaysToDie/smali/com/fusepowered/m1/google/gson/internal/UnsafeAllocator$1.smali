@@ -23,8 +23,6 @@
 # direct methods
 .method constructor <init>(Ljava/lang/reflect/Method;Ljava/lang/Object;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 44
@@ -41,7 +39,6 @@
 # virtual methods
 .method public newInstance(Ljava/lang/Class;)Ljava/lang/Object;
     .locals 4
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -60,7 +57,7 @@
 
     .prologue
     .line 48
-    .local p1, c:Ljava/lang/Class;,"Ljava/lang/Class<TT;>;"
+    .local p1, "c":Ljava/lang/Class;, "Ljava/lang/Class<TT;>;"
     iget-object v0, p0, Lcom/fusepowered/m1/google/gson/internal/UnsafeAllocator$1;->val$allocateInstance:Ljava/lang/reflect/Method;
 
     iget-object v1, p0, Lcom/fusepowered/m1/google/gson/internal/UnsafeAllocator$1;->val$unsafe:Ljava/lang/Object;

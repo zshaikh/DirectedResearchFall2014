@@ -26,9 +26,9 @@
 # direct methods
 .method public constructor <init>(Lcom/flurry/org/codehaus/jackson/util/BufferRecycler;Ljava/lang/Object;Z)V
     .locals 1
-    .parameter "br"
-    .parameter "sourceRef"
-    .parameter "managedResource"
+    .param p1, "br"    # Lcom/flurry/org/codehaus/jackson/util/BufferRecycler;
+    .param p2, "sourceRef"    # Ljava/lang/Object;
+    .param p3, "managedResource"    # Z
 
     .prologue
     const/4 v0, 0x0
@@ -104,7 +104,7 @@
 
 .method public final allocNameCopyBuffer(I)[C
     .locals 2
-    .parameter "minSize"
+    .param p1, "minSize"    # I
 
     .prologue
     .line 168
@@ -293,7 +293,7 @@
 
 .method public final releaseConcatBuffer([C)V
     .locals 2
-    .parameter "buf"
+    .param p1, "buf"    # [C
 
     .prologue
     .line 220
@@ -333,7 +333,7 @@
 
 .method public final releaseNameCopyBuffer([C)V
     .locals 2
-    .parameter "buf"
+    .param p1, "buf"    # [C
 
     .prologue
     .line 231
@@ -373,7 +373,7 @@
 
 .method public final releaseReadIOBuffer([B)V
     .locals 2
-    .parameter "buf"
+    .param p1, "buf"    # [B
 
     .prologue
     .line 181
@@ -413,7 +413,7 @@
 
 .method public final releaseTokenBuffer([C)V
     .locals 2
-    .parameter "buf"
+    .param p1, "buf"    # [C
 
     .prologue
     .line 209
@@ -453,7 +453,7 @@
 
 .method public final releaseWriteEncodingBuffer([B)V
     .locals 2
-    .parameter "buf"
+    .param p1, "buf"    # [B
 
     .prologue
     .line 195
@@ -493,7 +493,7 @@
 
 .method public setEncoding(Lcom/flurry/org/codehaus/jackson/JsonEncoding;)V
     .locals 0
-    .parameter "enc"
+    .param p1, "enc"    # Lcom/flurry/org/codehaus/jackson/JsonEncoding;
 
     .prologue
     .line 102

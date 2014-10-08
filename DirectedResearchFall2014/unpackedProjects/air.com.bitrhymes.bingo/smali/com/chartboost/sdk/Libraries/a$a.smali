@@ -25,8 +25,6 @@
 # direct methods
 .method public constructor <init>(Landroid/graphics/Bitmap;I)V
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 86
@@ -96,7 +94,6 @@
 
 .method public a(I)V
     .locals 0
-    .parameter
 
     .prologue
     .line 119
@@ -108,7 +105,6 @@
 
 .method public a(Landroid/graphics/Bitmap;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 111
@@ -120,7 +116,6 @@
 
 .method public a(Z)V
     .locals 0
-    .parameter
 
     .prologue
     .line 135

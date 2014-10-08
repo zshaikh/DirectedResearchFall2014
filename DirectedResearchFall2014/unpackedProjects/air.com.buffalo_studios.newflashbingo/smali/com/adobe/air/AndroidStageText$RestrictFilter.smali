@@ -32,8 +32,6 @@
 # direct methods
 .method public constructor <init>(Lcom/adobe/air/AndroidStageText;Ljava/lang/String;)V
     .locals 10
-    .parameter
-    .parameter
 
     .prologue
     const/4 v0, 0x0
@@ -262,7 +260,6 @@
 # virtual methods
 .method IsCharAvailable(C)Z
     .locals 4
-    .parameter
 
     .prologue
     const/4 v3, 0x1
@@ -335,7 +332,6 @@
 
 .method SetAll(Z)V
     .locals 3
-    .parameter
 
     .prologue
     const/4 v1, 0x0
@@ -377,8 +373,6 @@
 
 .method SetCode(CZ)V
     .locals 5
-    .parameter
-    .parameter
 
     .prologue
     const/4 v4, 0x1
@@ -432,12 +426,6 @@
 
 .method public filter(Ljava/lang/CharSequence;IILandroid/text/Spanned;II)Ljava/lang/CharSequence;
     .locals 6
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 1221

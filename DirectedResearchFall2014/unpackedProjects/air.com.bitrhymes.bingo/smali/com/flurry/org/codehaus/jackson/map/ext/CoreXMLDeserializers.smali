@@ -55,7 +55,7 @@
     move-object v0, v1
 
     .line 40
-    .local v0, e:Ljavax/xml/datatype/DatatypeConfigurationException;
+    .local v0, "e":Ljavax/xml/datatype/DatatypeConfigurationException;
     new-instance v1, Ljava/lang/RuntimeException;
 
     invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V

@@ -76,7 +76,7 @@
 
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
-    .parameter "ctx"
+    .param p1, "ctx"    # Landroid/content/Context;
 
     .prologue
     .line 55
@@ -100,7 +100,7 @@
 
 .method static synthetic access$000(Lcom/tapjoy/TapjoyDisplayAd;)Landroid/app/Activity;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/tapjoy/TapjoyDisplayAd;
 
     .prologue
     .line 27
@@ -151,7 +151,7 @@
 
 .method static synthetic access$402(Ljava/lang/String;)Ljava/lang/String;
     .locals 0
-    .parameter "x0"
+    .param p0, "x0"    # Ljava/lang/String;
 
     .prologue
     .line 27
@@ -182,7 +182,7 @@
 
 .method static synthetic access$800(Lcom/tapjoy/TapjoyDisplayAd;)Z
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/tapjoy/TapjoyDisplayAd;
 
     .prologue
     .line 27
@@ -205,7 +205,7 @@
 # virtual methods
 .method public enableAutoRefresh(Z)V
     .locals 0
-    .parameter "shouldAutoRefresh"
+    .param p1, "shouldAutoRefresh"    # Z
 
     .prologue
     .line 137
@@ -229,8 +229,8 @@
 
 .method public getDisplayAd(Landroid/app/Activity;Lcom/tapjoy/TapjoyDisplayAdNotifier;)V
     .locals 2
-    .parameter "activity"
-    .parameter "notifier"
+    .param p1, "activity"    # Landroid/app/Activity;
+    .param p2, "notifier"    # Lcom/tapjoy/TapjoyDisplayAdNotifier;
 
     .prologue
     .line 148
@@ -251,9 +251,9 @@
 
 .method public getDisplayAd(Landroid/app/Activity;Ljava/lang/String;Lcom/tapjoy/TapjoyDisplayAdNotifier;)V
     .locals 6
-    .parameter "activity"
-    .parameter "currencyID"
-    .parameter "notifier"
+    .param p1, "activity"    # Landroid/app/Activity;
+    .param p2, "currencyID"    # Ljava/lang/String;
+    .param p3, "notifier"    # Lcom/tapjoy/TapjoyDisplayAdNotifier;
 
     .prologue
     const/4 v5, 0x1
@@ -412,7 +412,7 @@
 
 .method public setBannerAdSize(Ljava/lang/String;)V
     .locals 0
-    .parameter "dimensions"
+    .param p1, "dimensions"    # Ljava/lang/String;
 
     .prologue
     .line 115
@@ -424,7 +424,7 @@
 
 .method public setDisplayAdSize(Ljava/lang/String;)V
     .locals 1
-    .parameter "dimensions"
+    .param p1, "dimensions"    # Ljava/lang/String;
 
     .prologue
     .line 71

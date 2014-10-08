@@ -56,8 +56,8 @@
 
 .method constructor <init>(Lcom/flurry/org/apache/avro/Schema;Ljava/io/InputStream;)V
     .locals 1
-    .parameter "schema"
-    .parameter "in"
+    .param p1, "schema"    # Lcom/flurry/org/apache/avro/Schema;
+    .param p2, "in"    # Ljava/io/InputStream;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -78,8 +78,8 @@
 
 .method constructor <init>(Lcom/flurry/org/apache/avro/Schema;Ljava/lang/String;)V
     .locals 1
-    .parameter "schema"
-    .parameter "in"
+    .param p1, "schema"    # Lcom/flurry/org/apache/avro/Schema;
+    .param p2, "in"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -100,8 +100,8 @@
 
 .method private constructor <init>(Lcom/flurry/org/apache/avro/io/parsing/Symbol;Ljava/io/InputStream;)V
     .locals 1
-    .parameter "root"
-    .parameter "in"
+    .param p1, "root"    # Lcom/flurry/org/apache/avro/io/parsing/Symbol;
+    .param p2, "in"    # Ljava/io/InputStream;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -128,8 +128,8 @@
 
 .method private constructor <init>(Lcom/flurry/org/apache/avro/io/parsing/Symbol;Ljava/lang/String;)V
     .locals 1
-    .parameter "root"
-    .parameter "in"
+    .param p1, "root"    # Lcom/flurry/org/apache/avro/io/parsing/Symbol;
+    .param p2, "in"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -156,7 +156,7 @@
 
 .method private advance(Lcom/flurry/org/apache/avro/io/parsing/Symbol;)V
     .locals 2
-    .parameter "symbol"
+    .param p1, "symbol"    # Lcom/flurry/org/apache/avro/io/parsing/Symbol;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -207,7 +207,7 @@
 
 .method private checkFixed(I)V
     .locals 4
-    .parameter "size"
+    .param p1, "size"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -230,7 +230,7 @@
     check-cast v0, Lcom/flurry/org/apache/avro/io/parsing/Symbol$IntCheckAction;
 
     .line 281
-    .local v0, top:Lcom/flurry/org/apache/avro/io/parsing/Symbol$IntCheckAction;
+    .local v0, "top":Lcom/flurry/org/apache/avro/io/parsing/Symbol$IntCheckAction;
     iget v1, v0, Lcom/flurry/org/apache/avro/io/parsing/Symbol$IntCheckAction;->size:I
 
     if-eq p1, v1, :cond_0
@@ -373,7 +373,7 @@
 
 .method private doSkipFixed(I)V
     .locals 4
-    .parameter "length"
+    .param p1, "length"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -398,7 +398,7 @@
     move-result-object v0
 
     .line 313
-    .local v0, result:[B
+    .local v0, "result":[B
     iget-object v1, p0, Lcom/flurry/org/apache/avro/io/JsonDecoder;->in:Lcom/flurry/org/codehaus/jackson/JsonParser;
 
     invoke-virtual {v1}, Lcom/flurry/org/codehaus/jackson/JsonParser;->nextToken()Lcom/flurry/org/codehaus/jackson/JsonToken;
@@ -446,7 +446,7 @@
     throw v1
 
     .line 319
-    .end local v0           #result:[B
+    .end local v0    # "result":[B
     :cond_0
     const-string v1, "fixed"
 
@@ -457,14 +457,14 @@
     throw v1
 
     .line 321
-    .restart local v0       #result:[B
+    .restart local v0    # "result":[B
     :cond_1
     return-void
 .end method
 
 .method private error(Ljava/lang/String;)Lcom/flurry/org/apache/avro/AvroTypeException;
     .locals 3
-    .parameter "type"
+    .param p1, "type"    # Ljava/lang/String;
 
     .prologue
     .line 697
@@ -511,7 +511,7 @@
 
 .method private static getSymbol(Lcom/flurry/org/apache/avro/Schema;)Lcom/flurry/org/apache/avro/io/parsing/Symbol;
     .locals 2
-    .parameter "schema"
+    .param p0, "schema"    # Lcom/flurry/org/apache/avro/Schema;
 
     .prologue
     .line 85
@@ -541,7 +541,7 @@
 
 .method private static getVaueAsTree(Lcom/flurry/org/codehaus/jackson/JsonParser;)Ljava/util/List;
     .locals 5
-    .parameter "in"
+    .param p0, "in"    # Lcom/flurry/org/codehaus/jackson/JsonParser;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -565,20 +565,20 @@
     const/4 v0, 0x0
 
     .line 525
-    .local v0, level:I
+    .local v0, "level":I
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     .line 527
-    .local v1, result:Ljava/util/List;,"Ljava/util/List<Lcom/flurry/org/apache/avro/io/JsonDecoder$JsonElement;>;"
+    .local v1, "result":Ljava/util/List;, "Ljava/util/List<Lcom/flurry/org/apache/avro/io/JsonDecoder$JsonElement;>;"
     :cond_0
     invoke-virtual {p0}, Lcom/flurry/org/codehaus/jackson/JsonParser;->getCurrentToken()Lcom/flurry/org/codehaus/jackson/JsonToken;
 
     move-result-object v2
 
     .line 528
-    .local v2, t:Lcom/flurry/org/codehaus/jackson/JsonToken;
+    .local v2, "t":Lcom/flurry/org/codehaus/jackson/JsonToken;
     sget-object v3, Lcom/flurry/org/apache/avro/io/JsonDecoder$2;->$SwitchMap$org$codehaus$jackson$JsonToken:[I
 
     invoke-virtual {v2}, Lcom/flurry/org/codehaus/jackson/JsonToken;->ordinal()I
@@ -669,7 +669,6 @@
 
 .method private makeParser(Ljava/util/List;)Lcom/flurry/org/codehaus/jackson/JsonParser;
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -689,7 +688,7 @@
 
     .prologue
     .line 556
-    .local p1, elements:Ljava/util/List;,"Ljava/util/List<Lcom/flurry/org/apache/avro/io/JsonDecoder$JsonElement;>;"
+    .local p1, "elements":Ljava/util/List;, "Ljava/util/List<Lcom/flurry/org/apache/avro/io/JsonDecoder$JsonElement;>;"
     new-instance v0, Lcom/flurry/org/apache/avro/io/JsonDecoder$1;
 
     invoke-direct {v0, p0, p1}, Lcom/flurry/org/apache/avro/io/JsonDecoder$1;-><init>(Lcom/flurry/org/apache/avro/io/JsonDecoder;Ljava/util/List;)V
@@ -720,7 +719,7 @@
     move-result-object v0
 
     .line 265
-    .local v0, result:[B
+    .local v0, "result":[B
     return-object v0
 .end method
 
@@ -750,7 +749,7 @@
 
 .method public configure(Ljava/io/InputStream;)Lcom/flurry/org/apache/avro/io/JsonDecoder;
     .locals 2
-    .parameter "in"
+    .param p1, "in"    # Ljava/io/InputStream;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -796,7 +795,7 @@
 
 .method public configure(Ljava/lang/String;)Lcom/flurry/org/apache/avro/io/JsonDecoder;
     .locals 2
-    .parameter "in"
+    .param p1, "in"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -844,8 +843,8 @@
 
 .method public doAction(Lcom/flurry/org/apache/avro/io/parsing/Symbol;Lcom/flurry/org/apache/avro/io/parsing/Symbol;)Lcom/flurry/org/apache/avro/io/parsing/Symbol;
     .locals 8
-    .parameter "input"
-    .parameter "top"
+    .param p1, "input"    # Lcom/flurry/org/apache/avro/io/parsing/Symbol;
+    .param p2, "top"    # Lcom/flurry/org/apache/avro/io/parsing/Symbol;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -868,11 +867,11 @@
     move-object v1, v0
 
     .line 454
-    .local v1, fa:Lcom/flurry/org/apache/avro/io/parsing/Symbol$FieldAdjustAction;
+    .local v1, "fa":Lcom/flurry/org/apache/avro/io/parsing/Symbol$FieldAdjustAction;
     iget-object v3, v1, Lcom/flurry/org/apache/avro/io/parsing/Symbol$FieldAdjustAction;->fname:Ljava/lang/String;
 
     .line 455
-    .local v3, name:Ljava/lang/String;
+    .local v3, "name":Ljava/lang/String;
     iget-object v5, p0, Lcom/flurry/org/apache/avro/io/JsonDecoder;->currentReorderBuffer:Lcom/flurry/org/apache/avro/io/JsonDecoder$ReorderBuffer;
 
     if-eqz v5, :cond_0
@@ -889,7 +888,7 @@
     check-cast v4, Ljava/util/List;
 
     .line 457
-    .local v4, node:Ljava/util/List;,"Ljava/util/List<Lcom/flurry/org/apache/avro/io/JsonDecoder$JsonElement;>;"
+    .local v4, "node":Ljava/util/List;, "Ljava/util/List<Lcom/flurry/org/apache/avro/io/JsonDecoder$JsonElement;>;"
     if-eqz v4, :cond_0
 
     .line 458
@@ -916,15 +915,15 @@
     move-object v5, v7
 
     .line 507
-    .end local v1           #fa:Lcom/flurry/org/apache/avro/io/parsing/Symbol$FieldAdjustAction;
-    .end local v3           #name:Ljava/lang/String;
-    .end local v4           #node:Ljava/util/List;,"Ljava/util/List<Lcom/flurry/org/apache/avro/io/JsonDecoder$JsonElement;>;"
+    .end local v1    # "fa":Lcom/flurry/org/apache/avro/io/parsing/Symbol$FieldAdjustAction;
+    .end local v3    # "name":Ljava/lang/String;
+    .end local v4    # "node":Ljava/util/List;, "Ljava/util/List<Lcom/flurry/org/apache/avro/io/JsonDecoder$JsonElement;>;"
     :goto_0
     return-object v5
 
     .line 464
-    .restart local v1       #fa:Lcom/flurry/org/apache/avro/io/parsing/Symbol$FieldAdjustAction;
-    .restart local v3       #name:Ljava/lang/String;
+    .restart local v1    # "fa":Lcom/flurry/org/apache/avro/io/parsing/Symbol$FieldAdjustAction;
+    .restart local v3    # "name":Ljava/lang/String;
     :cond_0
     iget-object v5, p0, Lcom/flurry/org/apache/avro/io/JsonDecoder;->in:Lcom/flurry/org/codehaus/jackson/JsonParser;
 
@@ -945,7 +944,7 @@
     move-result-object v2
 
     .line 467
-    .local v2, fn:Ljava/lang/String;
+    .local v2, "fn":Ljava/lang/String;
     iget-object v5, p0, Lcom/flurry/org/apache/avro/io/JsonDecoder;->in:Lcom/flurry/org/codehaus/jackson/JsonParser;
 
     invoke-virtual {v5}, Lcom/flurry/org/codehaus/jackson/JsonParser;->nextToken()Lcom/flurry/org/codehaus/jackson/JsonToken;
@@ -1028,9 +1027,9 @@
     throw v5
 
     .line 479
-    .end local v1           #fa:Lcom/flurry/org/apache/avro/io/parsing/Symbol$FieldAdjustAction;
-    .end local v2           #fn:Ljava/lang/String;
-    .end local v3           #name:Ljava/lang/String;
+    .end local v1    # "fa":Lcom/flurry/org/apache/avro/io/parsing/Symbol$FieldAdjustAction;
+    .end local v2    # "fn":Ljava/lang/String;
+    .end local v3    # "name":Ljava/lang/String;
     :cond_4
     sget-object v5, Lcom/flurry/org/apache/avro/io/parsing/Symbol;->FIELD_END:Lcom/flurry/org/apache/avro/io/parsing/Symbol;
 
@@ -1343,7 +1342,7 @@
     move-result-object v0
 
     .line 156
-    .local v0, t:Lcom/flurry/org/codehaus/jackson/JsonToken;
+    .local v0, "t":Lcom/flurry/org/codehaus/jackson/JsonToken;
     sget-object v1, Lcom/flurry/org/codehaus/jackson/JsonToken;->VALUE_TRUE:Lcom/flurry/org/codehaus/jackson/JsonToken;
 
     if-eq v0, v1, :cond_0
@@ -1386,7 +1385,7 @@
 
 .method public readBytes(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
     .locals 3
-    .parameter "old"
+    .param p1, "old"    # Ljava/nio/ByteBuffer;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -1416,7 +1415,7 @@
     move-result-object v0
 
     .line 256
-    .local v0, result:[B
+    .local v0, "result":[B
     iget-object v1, p0, Lcom/flurry/org/apache/avro/io/JsonDecoder;->in:Lcom/flurry/org/codehaus/jackson/JsonParser;
 
     invoke-virtual {v1}, Lcom/flurry/org/codehaus/jackson/JsonParser;->nextToken()Lcom/flurry/org/codehaus/jackson/JsonToken;
@@ -1429,7 +1428,7 @@
     return-object v1
 
     .line 259
-    .end local v0           #result:[B
+    .end local v0    # "result":[B
     :cond_0
     const-string v1, "bytes"
 
@@ -1473,7 +1472,7 @@
     move-result-wide v0
 
     .line 205
-    .local v0, result:D
+    .local v0, "result":D
     iget-object v2, p0, Lcom/flurry/org/apache/avro/io/JsonDecoder;->in:Lcom/flurry/org/codehaus/jackson/JsonParser;
 
     invoke-virtual {v2}, Lcom/flurry/org/codehaus/jackson/JsonParser;->nextToken()Lcom/flurry/org/codehaus/jackson/JsonToken;
@@ -1482,7 +1481,7 @@
     return-wide v0
 
     .line 208
-    .end local v0           #result:D
+    .end local v0    # "result":D
     :cond_0
     const-string v2, "double"
 
@@ -1517,7 +1516,7 @@
     check-cast v1, Lcom/flurry/org/apache/avro/io/parsing/Symbol$EnumLabelsAction;
 
     .line 334
-    .local v1, top:Lcom/flurry/org/apache/avro/io/parsing/Symbol$EnumLabelsAction;
+    .local v1, "top":Lcom/flurry/org/apache/avro/io/parsing/Symbol$EnumLabelsAction;
     iget-object v2, p0, Lcom/flurry/org/apache/avro/io/JsonDecoder;->in:Lcom/flurry/org/codehaus/jackson/JsonParser;
 
     invoke-virtual {v2}, Lcom/flurry/org/codehaus/jackson/JsonParser;->getCurrentToken()Lcom/flurry/org/codehaus/jackson/JsonToken;
@@ -1545,7 +1544,7 @@
     move-result v0
 
     .line 337
-    .local v0, n:I
+    .local v0, "n":I
     if-ltz v0, :cond_0
 
     .line 338
@@ -1589,7 +1588,7 @@
     throw v2
 
     .line 343
-    .end local v0           #n:I
+    .end local v0    # "n":I
     :cond_1
     const-string v2, "fixed"
 
@@ -1602,9 +1601,9 @@
 
 .method public readFixed([BII)V
     .locals 4
-    .parameter "bytes"
-    .parameter "start"
-    .parameter "len"
+    .param p1, "bytes"    # [B
+    .param p2, "start"    # I
+    .param p3, "len"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -1632,7 +1631,7 @@
     move-result-object v0
 
     .line 293
-    .local v0, result:[B
+    .local v0, "result":[B
     iget-object v1, p0, Lcom/flurry/org/apache/avro/io/JsonDecoder;->in:Lcom/flurry/org/codehaus/jackson/JsonParser;
 
     invoke-virtual {v1}, Lcom/flurry/org/codehaus/jackson/JsonParser;->nextToken()Lcom/flurry/org/codehaus/jackson/JsonToken;
@@ -1689,7 +1688,7 @@
     return-void
 
     .line 300
-    .end local v0           #result:[B
+    .end local v0    # "result":[B
     :cond_1
     const-string v1, "fixed"
 
@@ -1733,7 +1732,7 @@
     move-result v0
 
     .line 193
-    .local v0, result:F
+    .local v0, "result":F
     iget-object v1, p0, Lcom/flurry/org/apache/avro/io/JsonDecoder;->in:Lcom/flurry/org/codehaus/jackson/JsonParser;
 
     invoke-virtual {v1}, Lcom/flurry/org/codehaus/jackson/JsonParser;->nextToken()Lcom/flurry/org/codehaus/jackson/JsonToken;
@@ -1742,7 +1741,7 @@
     return v0
 
     .line 196
-    .end local v0           #result:F
+    .end local v0    # "result":F
     :cond_0
     const-string v1, "float"
 
@@ -1777,7 +1776,7 @@
     check-cast v0, Lcom/flurry/org/apache/avro/io/parsing/Symbol$Alternative;
 
     .line 433
-    .local v0, a:Lcom/flurry/org/apache/avro/io/parsing/Symbol$Alternative;
+    .local v0, "a":Lcom/flurry/org/apache/avro/io/parsing/Symbol$Alternative;
     iget-object v3, p0, Lcom/flurry/org/apache/avro/io/JsonDecoder;->in:Lcom/flurry/org/codehaus/jackson/JsonParser;
 
     invoke-virtual {v3}, Lcom/flurry/org/codehaus/jackson/JsonParser;->getCurrentToken()Lcom/flurry/org/codehaus/jackson/JsonToken;
@@ -1792,14 +1791,14 @@
     const-string v1, "null"
 
     .line 443
-    .local v1, label:Ljava/lang/String;
+    .local v1, "label":Ljava/lang/String;
     :goto_0
     invoke-virtual {v0, v1}, Lcom/flurry/org/apache/avro/io/parsing/Symbol$Alternative;->findLabel(Ljava/lang/String;)I
 
     move-result v2
 
     .line 444
-    .local v2, n:I
+    .local v2, "n":I
     if-gez v2, :cond_2
 
     .line 445
@@ -1828,8 +1827,8 @@
     throw v3
 
     .line 435
-    .end local v1           #label:Ljava/lang/String;
-    .end local v2           #n:I
+    .end local v1    # "label":Ljava/lang/String;
+    .end local v2    # "n":I
     :cond_0
     iget-object v3, p0, Lcom/flurry/org/apache/avro/io/JsonDecoder;->in:Lcom/flurry/org/codehaus/jackson/JsonParser;
 
@@ -1859,7 +1858,7 @@
     move-result-object v1
 
     .line 438
-    .restart local v1       #label:Ljava/lang/String;
+    .restart local v1    # "label":Ljava/lang/String;
     iget-object v3, p0, Lcom/flurry/org/apache/avro/io/JsonDecoder;->in:Lcom/flurry/org/codehaus/jackson/JsonParser;
 
     invoke-virtual {v3}, Lcom/flurry/org/codehaus/jackson/JsonParser;->nextToken()Lcom/flurry/org/codehaus/jackson/JsonToken;
@@ -1874,7 +1873,7 @@
     goto :goto_0
 
     .line 441
-    .end local v1           #label:Ljava/lang/String;
+    .end local v1    # "label":Ljava/lang/String;
     :cond_1
     const-string v3, "start-union"
 
@@ -1885,8 +1884,8 @@
     throw v3
 
     .line 446
-    .restart local v1       #label:Ljava/lang/String;
-    .restart local v2       #n:I
+    .restart local v1    # "label":Ljava/lang/String;
+    .restart local v2    # "n":I
     :cond_2
     iget-object v3, p0, Lcom/flurry/org/apache/avro/io/JsonDecoder;->parser:Lcom/flurry/org/apache/avro/io/parsing/SkipParser;
 
@@ -1933,7 +1932,7 @@
     move-result v0
 
     .line 169
-    .local v0, result:I
+    .local v0, "result":I
     iget-object v1, p0, Lcom/flurry/org/apache/avro/io/JsonDecoder;->in:Lcom/flurry/org/codehaus/jackson/JsonParser;
 
     invoke-virtual {v1}, Lcom/flurry/org/codehaus/jackson/JsonParser;->nextToken()Lcom/flurry/org/codehaus/jackson/JsonToken;
@@ -1942,7 +1941,7 @@
     return v0
 
     .line 172
-    .end local v0           #result:I
+    .end local v0    # "result":I
     :cond_0
     const-string v1, "int"
 
@@ -1986,7 +1985,7 @@
     move-result-wide v0
 
     .line 181
-    .local v0, result:J
+    .local v0, "result":J
     iget-object v2, p0, Lcom/flurry/org/apache/avro/io/JsonDecoder;->in:Lcom/flurry/org/codehaus/jackson/JsonParser;
 
     invoke-virtual {v2}, Lcom/flurry/org/codehaus/jackson/JsonParser;->nextToken()Lcom/flurry/org/codehaus/jackson/JsonToken;
@@ -1995,7 +1994,7 @@
     return-wide v0
 
     .line 184
-    .end local v0           #result:J
+    .end local v0    # "result":J
     :cond_0
     const-string v2, "long"
 
@@ -2100,7 +2099,7 @@
 
 .method public readString(Lcom/flurry/org/apache/avro/util/Utf8;)Lcom/flurry/org/apache/avro/util/Utf8;
     .locals 2
-    .parameter "old"
+    .param p1, "old"    # Lcom/flurry/org/apache/avro/util/Utf8;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -2202,7 +2201,7 @@
     move-result-object v0
 
     .line 231
-    .local v0, result:Ljava/lang/String;
+    .local v0, "result":Ljava/lang/String;
     iget-object v1, p0, Lcom/flurry/org/apache/avro/io/JsonDecoder;->in:Lcom/flurry/org/codehaus/jackson/JsonParser;
 
     invoke-virtual {v1}, Lcom/flurry/org/codehaus/jackson/JsonParser;->nextToken()Lcom/flurry/org/codehaus/jackson/JsonToken;
@@ -2335,7 +2334,7 @@
     check-cast v0, Lcom/flurry/org/apache/avro/io/parsing/Symbol$IntCheckAction;
 
     .line 327
-    .local v0, top:Lcom/flurry/org/apache/avro/io/parsing/Symbol$IntCheckAction;
+    .local v0, "top":Lcom/flurry/org/apache/avro/io/parsing/Symbol$IntCheckAction;
     iget v1, v0, Lcom/flurry/org/apache/avro/io/parsing/Symbol$IntCheckAction;->size:I
 
     invoke-direct {p0, v1}, Lcom/flurry/org/apache/avro/io/JsonDecoder;->doSkipFixed(I)V
@@ -2346,7 +2345,7 @@
 
 .method public skipFixed(I)V
     .locals 0
-    .parameter "length"
+    .param p1, "length"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;

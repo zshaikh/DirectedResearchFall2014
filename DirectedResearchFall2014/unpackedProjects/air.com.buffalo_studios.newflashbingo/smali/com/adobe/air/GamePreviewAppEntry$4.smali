@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/adobe/air/GamePreviewAppEntry;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 269
@@ -39,8 +38,6 @@
 # virtual methods
 .method public onServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     .line 275
@@ -51,7 +48,7 @@
     .line 278
     iget-object v0, p0, Lcom/adobe/air/GamePreviewAppEntry$4;->this$0:Lcom/adobe/air/GamePreviewAppEntry;
 
-    #calls: Lcom/adobe/air/GamePreviewAppEntry;->loadSharedRuntimeDex()V
+    # invokes: Lcom/adobe/air/GamePreviewAppEntry;->loadSharedRuntimeDex()V
     invoke-static {v0}, Lcom/adobe/air/GamePreviewAppEntry;->access$100(Lcom/adobe/air/GamePreviewAppEntry;)V
 
     .line 279
@@ -59,10 +56,11 @@
 
     const/4 v1, 0x0
 
-    #calls: Lcom/adobe/air/GamePreviewAppEntry;->createActivityWrapper(Z)V
+    # invokes: Lcom/adobe/air/GamePreviewAppEntry;->createActivityWrapper(Z)V
     invoke-static {v0, v1}, Lcom/adobe/air/GamePreviewAppEntry;->access$200(Lcom/adobe/air/GamePreviewAppEntry;Z)V
 
     .line 281
+    # getter for: Lcom/adobe/air/GamePreviewAppEntry;->sRuntimeClassesLoaded:Z
     invoke-static {}, Lcom/adobe/air/GamePreviewAppEntry;->access$300()Z
 
     move-result v0
@@ -72,7 +70,7 @@
     .line 283
     iget-object v0, p0, Lcom/adobe/air/GamePreviewAppEntry$4;->this$0:Lcom/adobe/air/GamePreviewAppEntry;
 
-    #calls: Lcom/adobe/air/GamePreviewAppEntry;->InvokeWrapperOnCreate()V
+    # invokes: Lcom/adobe/air/GamePreviewAppEntry;->InvokeWrapperOnCreate()V
     invoke-static {v0}, Lcom/adobe/air/GamePreviewAppEntry;->access$400(Lcom/adobe/air/GamePreviewAppEntry;)V
 
     .line 290
@@ -81,7 +79,7 @@
 
     .line 288
     :cond_0
-    #calls: Lcom/adobe/air/GamePreviewAppEntry;->KillSelf()V
+    # invokes: Lcom/adobe/air/GamePreviewAppEntry;->KillSelf()V
     invoke-static {}, Lcom/adobe/air/GamePreviewAppEntry;->access$500()V
 
     goto :goto_0
@@ -89,7 +87,6 @@
 
 .method public onServiceDisconnected(Landroid/content/ComponentName;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 295

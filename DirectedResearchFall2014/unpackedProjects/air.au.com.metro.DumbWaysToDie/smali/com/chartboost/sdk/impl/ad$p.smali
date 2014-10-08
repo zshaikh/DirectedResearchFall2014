@@ -27,7 +27,6 @@
 
 .method synthetic constructor <init>(Lcom/chartboost/sdk/impl/ad$1;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 373
@@ -40,8 +39,6 @@
 # virtual methods
 .method public a(Ljava/lang/Object;Ljava/lang/StringBuilder;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 377

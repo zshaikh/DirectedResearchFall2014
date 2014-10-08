@@ -65,7 +65,6 @@
 
 .method static d(J)Z
     .locals 2
-    .parameter
 
     .prologue
     .line 153
@@ -94,7 +93,6 @@
 # virtual methods
 .method final a(Lcom/flurry/android/FlurryFreqCapInfo;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 36
@@ -458,7 +456,6 @@
 
 .method final y(Ljava/lang/String;)Lcom/flurry/android/FlurryFreqCapInfo;
     .locals 2
-    .parameter
 
     .prologue
     const/4 v1, 0x0
@@ -529,7 +526,6 @@
 
 .method final z(Ljava/lang/String;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 115

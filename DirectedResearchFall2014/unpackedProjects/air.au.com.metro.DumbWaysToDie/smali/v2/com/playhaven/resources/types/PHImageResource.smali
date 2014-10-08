@@ -64,7 +64,7 @@
 
 .method private getClosestImage(I)Landroid/graphics/Bitmap;
     .locals 9
-    .parameter "requestedDensity"
+    .param p1, "requestedDensity"    # I
 
     .prologue
     const/4 v8, 0x0
@@ -89,11 +89,11 @@
     const v5, 0x7fffffff
 
     .line 65
-    .local v5, minDiff:I
+    .local v5, "minDiff":I
     const/16 v1, 0xa0
 
     .line 67
-    .local v1, closestDensity:I
+    .local v1, "closestDensity":I
     iget-object v6, p0, Lv2/com/playhaven/resources/types/PHImageResource;->data_map:Ljava/util/Hashtable;
 
     invoke-virtual {v6}, Ljava/util/Hashtable;->keySet()Ljava/util/Set;
@@ -118,7 +118,7 @@
     move-result-object v0
 
     .line 78
-    .local v0, buffer:[B
+    .local v0, "buffer":[B
     if-nez v0, :cond_3
 
     move-object v6, v8
@@ -126,7 +126,7 @@
     goto :goto_0
 
     .line 67
-    .end local v0           #buffer:[B
+    .end local v0    # "buffer":[B
     :cond_2
     invoke-interface {v6}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -135,7 +135,7 @@
     check-cast v3, Ljava/lang/Integer;
 
     .line 68
-    .local v3, density:Ljava/lang/Integer;
+    .local v3, "density":Ljava/lang/Integer;
     invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
 
     move-result v7
@@ -147,7 +147,7 @@
     move-result v4
 
     .line 70
-    .local v4, diff:I
+    .local v4, "diff":I
     if-ge v4, v5, :cond_1
 
     .line 71
@@ -161,9 +161,9 @@
     goto :goto_1
 
     .line 80
-    .end local v3           #density:Ljava/lang/Integer;
-    .end local v4           #diff:I
-    .restart local v0       #buffer:[B
+    .end local v3    # "density":Ljava/lang/Integer;
+    .end local v4    # "diff":I
+    .restart local v0    # "buffer":[B
     :cond_3
     const/4 v6, 0x0
 
@@ -174,7 +174,7 @@
     move-result-object v2
 
     .line 81
-    .local v2, closestImage:Landroid/graphics/Bitmap;
+    .local v2, "closestImage":Landroid/graphics/Bitmap;
     if-eqz v2, :cond_4
 
     .line 82
@@ -212,7 +212,7 @@
     check-cast v0, Landroid/graphics/Bitmap;
 
     .line 91
-    .local v0, cached_image:Landroid/graphics/Bitmap;
+    .local v0, "cached_image":Landroid/graphics/Bitmap;
     if-nez v0, :cond_1
 
     .line 92
@@ -269,7 +269,7 @@
 
 .method public getData(I)[B
     .locals 3
-    .parameter "density"
+    .param p1, "density"    # I
 
     .prologue
     .line 28
@@ -286,7 +286,7 @@
     check-cast v0, Ljava/lang/String;
 
     .line 30
-    .local v0, dataStr:Ljava/lang/String;
+    .local v0, "dataStr":Ljava/lang/String;
     if-nez v0, :cond_0
 
     const/4 v1, 0x0
@@ -311,7 +311,7 @@
 
 .method public loadImage(I)Landroid/graphics/Bitmap;
     .locals 1
-    .parameter "densityType"
+    .param p1, "densityType"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/ArrayIndexOutOfBoundsException;
@@ -332,8 +332,8 @@
 
 .method public setDataStr(ILjava/lang/String;)V
     .locals 2
-    .parameter "density"
-    .parameter "data"
+    .param p1, "density"    # I
+    .param p2, "data"    # Ljava/lang/String;
 
     .prologue
     .line 37
@@ -355,7 +355,7 @@
 
 .method public setDataStr(Ljava/lang/String;)V
     .locals 2
-    .parameter "data"
+    .param p1, "data"    # Ljava/lang/String;
 
     .prologue
     .line 50
@@ -370,8 +370,8 @@
 
 .method public setDataStr([ILjava/lang/String;)V
     .locals 3
-    .parameter "densities"
-    .parameter "data"
+    .param p1, "densities"    # [I
+    .param p2, "data"    # Ljava/lang/String;
 
     .prologue
     .line 43
@@ -390,7 +390,7 @@
     aget v0, p1, v2
 
     .line 44
-    .local v0, density:I
+    .local v0, "density":I
     invoke-virtual {p0, v0, p2}, Lv2/com/playhaven/resources/types/PHImageResource;->setDataStr(ILjava/lang/String;)V
 
     .line 43

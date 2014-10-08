@@ -16,7 +16,6 @@
 
 .method public static asStringArrayList(Ljava/util/List;)Ljava/util/ArrayList;
     .locals 2
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -33,24 +32,24 @@
 
     .prologue
     .line 39
-    .local p0, list:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
+    .local p0, "list":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     .line 41
-    .local v0, result:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
+    .local v0, "result":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     if-nez p0, :cond_0
 
     move-object v1, v0
 
     .line 50
-    .end local p0           #list:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
+    .end local p0    # "list":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     :goto_0
     return-object v1
 
     .line 45
-    .restart local p0       #list:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
+    .restart local p0    # "list":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     :cond_0
     instance-of v1, p0, Ljava/util/ArrayList;
 
@@ -59,13 +58,13 @@
     .line 46
     check-cast p0, Ljava/util/ArrayList;
 
-    .end local p0           #list:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
+    .end local p0    # "list":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     move-object v1, p0
 
     goto :goto_0
 
     .line 49
-    .restart local p0       #list:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
+    .restart local p0    # "list":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     :cond_1
     invoke-static {p0, v0}, Ljava/util/Collections;->copy(Ljava/util/List;Ljava/util/List;)V
 

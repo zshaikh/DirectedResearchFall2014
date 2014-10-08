@@ -21,7 +21,6 @@
 # direct methods
 .method private constructor <init>(Lcom/tapjoy/TapjoyDisplayAd;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 199
@@ -34,8 +33,8 @@
 
 .method synthetic constructor <init>(Lcom/tapjoy/TapjoyDisplayAd;Lcom/tapjoy/TapjoyDisplayAd$1;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
+    .param p1, "x0"    # Lcom/tapjoy/TapjoyDisplayAd;
+    .param p2, "x1"    # Lcom/tapjoy/TapjoyDisplayAd$1;
 
     .prologue
     .line 199
@@ -93,15 +92,17 @@
 
     iget-object v1, p0, Lcom/tapjoy/TapjoyDisplayAd$RefreshTimer;->this$0:Lcom/tapjoy/TapjoyDisplayAd;
 
-    #getter for: Lcom/tapjoy/TapjoyDisplayAd;->activityContext:Landroid/app/Activity;
+    # getter for: Lcom/tapjoy/TapjoyDisplayAd;->activityContext:Landroid/app/Activity;
     invoke-static {v1}, Lcom/tapjoy/TapjoyDisplayAd;->access$000(Lcom/tapjoy/TapjoyDisplayAd;)Landroid/app/Activity;
 
     move-result-object v1
 
+    # getter for: Lcom/tapjoy/TapjoyDisplayAd;->lastCurrencyID:Ljava/lang/String;
     invoke-static {}, Lcom/tapjoy/TapjoyDisplayAd;->access$200()Ljava/lang/String;
 
     move-result-object v2
 
+    # getter for: Lcom/tapjoy/TapjoyDisplayAd;->displayAdNotifier:Lcom/tapjoy/TapjoyDisplayAdNotifier;
     invoke-static {}, Lcom/tapjoy/TapjoyDisplayAd;->access$300()Lcom/tapjoy/TapjoyDisplayAdNotifier;
 
     move-result-object v3

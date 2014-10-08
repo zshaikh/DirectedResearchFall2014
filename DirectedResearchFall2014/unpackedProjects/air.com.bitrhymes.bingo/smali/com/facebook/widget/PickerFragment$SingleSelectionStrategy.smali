@@ -30,7 +30,6 @@
 # direct methods
 .method constructor <init>(Lcom/facebook/widget/PickerFragment;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 944
@@ -109,7 +108,7 @@
 
 .method isSelected(Ljava/lang/String;)Z
     .locals 1
-    .parameter "id"
+    .param p1, "id"    # Ljava/lang/String;
 
     .prologue
     .line 953
@@ -140,8 +139,8 @@
 
 .method readSelectionFromBundle(Landroid/os/Bundle;Ljava/lang/String;)V
     .locals 1
-    .parameter "inBundle"
-    .parameter "key"
+    .param p1, "inBundle"    # Landroid/os/Bundle;
+    .param p2, "key"    # Ljava/lang/String;
 
     .prologue
     .line 974
@@ -161,8 +160,8 @@
 
 .method saveSelectionToBundle(Landroid/os/Bundle;Ljava/lang/String;)V
     .locals 1
-    .parameter "outBundle"
-    .parameter "key"
+    .param p1, "outBundle"    # Landroid/os/Bundle;
+    .param p2, "key"    # Ljava/lang/String;
 
     .prologue
     .line 967
@@ -196,7 +195,7 @@
 
 .method toggleSelection(Ljava/lang/String;)V
     .locals 1
-    .parameter "id"
+    .param p1, "id"    # Ljava/lang/String;
 
     .prologue
     .line 958

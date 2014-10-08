@@ -23,8 +23,8 @@
 # direct methods
 .method constructor <init>(Ljava/io/InputStream;Ljava/io/OutputStream;)V
     .locals 0
-    .parameter "input"
-    .parameter "output"
+    .param p1, "input"    # Ljava/io/InputStream;
+    .param p2, "output"    # Ljava/io/OutputStream;
 
     .prologue
     .line 469
@@ -101,7 +101,7 @@
 
 .method public mark(I)V
     .locals 1
-    .parameter "readlimit"
+    .param p1, "readlimit"    # I
 
     .prologue
     .line 496
@@ -139,7 +139,7 @@
     move-result v0
 
     .line 516
-    .local v0, b:I
+    .local v0, "b":I
     if-ltz v0, :cond_0
 
     .line 517
@@ -154,7 +154,7 @@
 
 .method public read([B)I
     .locals 3
-    .parameter "buffer"
+    .param p1, "buffer"    # [B
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -170,7 +170,7 @@
     move-result v0
 
     .line 507
-    .local v0, count:I
+    .local v0, "count":I
     if-lez v0, :cond_0
 
     .line 508
@@ -187,9 +187,9 @@
 
 .method public read([BII)I
     .locals 2
-    .parameter "buffer"
-    .parameter "offset"
-    .parameter "length"
+    .param p1, "buffer"    # [B
+    .param p2, "offset"    # I
+    .param p3, "length"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -205,7 +205,7 @@
     move-result v0
 
     .line 525
-    .local v0, count:I
+    .local v0, "count":I
     if-lez v0, :cond_0
 
     .line 526
@@ -244,7 +244,7 @@
 
 .method public skip(J)J
     .locals 9
-    .parameter "byteCount"
+    .param p1, "byteCount"    # J
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -258,11 +258,11 @@
     new-array v0, v4, [B
 
     .line 539
-    .local v0, buffer:[B
+    .local v0, "buffer":[B
     const-wide/16 v2, 0x0
 
     .line 540
-    .local v2, total:J
+    .local v2, "total":J
     :goto_0
     cmp-long v4, v2, p1
 
@@ -293,7 +293,7 @@
     move-result v1
 
     .line 542
-    .local v1, count:I
+    .local v1, "count":I
     if-ltz v1, :cond_0
 
     .line 545

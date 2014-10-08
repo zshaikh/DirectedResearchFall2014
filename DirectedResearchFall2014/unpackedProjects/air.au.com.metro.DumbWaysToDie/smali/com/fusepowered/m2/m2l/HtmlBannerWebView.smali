@@ -18,8 +18,8 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Lcom/fusepowered/m2/m2l/AdConfiguration;)V
     .locals 0
-    .parameter "context"
-    .parameter "adConfiguration"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "adConfiguration"    # Lcom/fusepowered/m2/m2l/AdConfiguration;
 
     .prologue
     .line 43
@@ -33,10 +33,10 @@
 # virtual methods
 .method public init(Lcom/fusepowered/m2/m2l/CustomEventBanner$CustomEventBannerListener;ZLjava/lang/String;Ljava/lang/String;)V
     .locals 2
-    .parameter "customEventBannerListener"
-    .parameter "isScrollable"
-    .parameter "redirectUrl"
-    .parameter "clickthroughUrl"
+    .param p1, "customEventBannerListener"    # Lcom/fusepowered/m2/m2l/CustomEventBanner$CustomEventBannerListener;
+    .param p2, "isScrollable"    # Z
+    .param p3, "redirectUrl"    # Ljava/lang/String;
+    .param p4, "clickthroughUrl"    # Ljava/lang/String;
 
     .prologue
     .line 47

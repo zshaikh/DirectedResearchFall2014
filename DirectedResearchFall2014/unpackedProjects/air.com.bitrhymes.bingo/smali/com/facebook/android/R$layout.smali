@@ -50,7 +50,7 @@
 
     .prologue
     .line 239
-    const/high16 v0, 0x7f03
+    const/high16 v0, 0x7f030000
 
     sput v0, Lcom/facebook/android/R$layout;->com_facebook_friendpickerfragment:I
 

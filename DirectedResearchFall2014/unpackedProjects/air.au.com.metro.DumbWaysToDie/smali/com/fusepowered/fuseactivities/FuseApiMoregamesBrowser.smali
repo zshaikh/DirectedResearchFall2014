@@ -68,7 +68,7 @@
 
     move-result-object v0
 
-    const/high16 v1, 0x4282
+    const/high16 v1, 0x42820000
 
     iget v2, v0, Landroid/util/DisplayMetrics;->density:F
 
@@ -82,7 +82,7 @@
 
     double-to-int v1, v1
 
-    const/high16 v2, 0x4234
+    const/high16 v2, 0x42340000
 
     iget v3, v0, Landroid/util/DisplayMetrics;->density:F
 
@@ -134,7 +134,7 @@
 
     const/4 v1, 0x0
 
-    const/high16 v2, 0x3f80
+    const/high16 v2, 0x3f800000
 
     invoke-direct {v0, v1, v2}, Landroid/view/animation/AlphaAnimation;-><init>(FF)V
 
@@ -156,7 +156,7 @@
 
     const/4 v5, 0x1
 
-    const/high16 v6, -0x4080
+    const/high16 v6, -0x40800000
 
     const/4 v7, 0x1
 
@@ -172,7 +172,7 @@
 
     new-instance v1, Landroid/view/animation/LayoutAnimationController;
 
-    const/high16 v2, 0x3e80
+    const/high16 v2, 0x3e800000
 
     invoke-direct {v1, v13, v2}, Landroid/view/animation/LayoutAnimationController;-><init>(Landroid/view/animation/Animation;F)V
 

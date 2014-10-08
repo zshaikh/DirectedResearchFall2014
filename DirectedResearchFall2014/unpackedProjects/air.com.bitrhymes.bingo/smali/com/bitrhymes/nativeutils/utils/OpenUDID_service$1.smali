@@ -21,7 +21,6 @@
 # direct methods
 .method constructor <init>(Lcom/bitrhymes/nativeutils/utils/OpenUDID_service;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1
@@ -37,10 +36,10 @@
 # virtual methods
 .method public onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
     .locals 4
-    .parameter "code"
-    .parameter "data"
-    .parameter "reply"
-    .parameter "flags"
+    .param p1, "code"    # I
+    .param p2, "data"    # Landroid/os/Parcel;
+    .param p3, "reply"    # Landroid/os/Parcel;
+    .param p4, "flags"    # I
 
     .prologue
     .line 28
@@ -55,7 +54,7 @@
     move-result-object v0
 
     .line 30
-    .local v0, preferences:Landroid/content/SharedPreferences;
+    .local v0, "preferences":Landroid/content/SharedPreferences;
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v1

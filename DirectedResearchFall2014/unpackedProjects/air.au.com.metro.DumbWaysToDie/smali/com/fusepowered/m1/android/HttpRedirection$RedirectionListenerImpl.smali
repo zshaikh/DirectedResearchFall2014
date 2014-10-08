@@ -84,7 +84,7 @@
 
 .method public isActivityStartable(Landroid/net/Uri;)Z
     .locals 1
-    .parameter "uri"
+    .param p1, "uri"    # Landroid/net/Uri;
 
     .prologue
     .line 146
@@ -105,7 +105,7 @@
 
 .method public isHandlingMMVideo(Landroid/net/Uri;)Z
     .locals 1
-    .parameter "uri"
+    .param p1, "uri"    # Landroid/net/Uri;
 
     .prologue
     .line 129
@@ -116,7 +116,7 @@
 
 .method public startingActivity(Landroid/net/Uri;)V
     .locals 3
-    .parameter "destinationUri"
+    .param p1, "destinationUri"    # Landroid/net/Uri;
 
     .prologue
     .line 140

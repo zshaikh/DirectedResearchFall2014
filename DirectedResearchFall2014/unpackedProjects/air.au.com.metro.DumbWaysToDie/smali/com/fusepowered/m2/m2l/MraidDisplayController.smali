@@ -15,7 +15,7 @@
 # static fields
 .field private static final CLOSE_BUTTON_SIZE_DP:I = 0x32
 
-.field private static final DATE_FORMATS:[Ljava/lang/String; = null
+.field private static final DATE_FORMATS:[Ljava/lang/String;
 
 .field private static final LOGTAG:Ljava/lang/String; = "MraidDisplayController"
 
@@ -97,9 +97,9 @@
 
 .method constructor <init>(Lcom/fusepowered/m2/m2l/MraidView;Lcom/fusepowered/m2/m2l/MraidView$ExpansionStyle;Lcom/fusepowered/m2/m2l/MraidView$NativeCloseButtonStyle;)V
     .locals 3
-    .parameter "view"
-    .parameter "expStyle"
-    .parameter "buttonStyle"
+    .param p1, "view"    # Lcom/fusepowered/m2/m2l/MraidView;
+    .param p2, "expStyle"    # Lcom/fusepowered/m2/m2l/MraidView$ExpansionStyle;
+    .param p3, "buttonStyle"    # Lcom/fusepowered/m2/m2l/MraidView$NativeCloseButtonStyle;
 
     .prologue
     const/4 v2, -0x1
@@ -151,7 +151,7 @@
     move-result-object v0
 
     .line 188
-    .local v0, context:Landroid/content/Context;
+    .local v0, "context":Landroid/content/Context;
     instance-of v1, v0, Landroid/app/Activity;
 
     if-eqz v1, :cond_0
@@ -159,7 +159,7 @@
     .line 189
     check-cast v0, Landroid/app/Activity;
 
-    .end local v0           #context:Landroid/content/Context;
+    .end local v0    # "context":Landroid/content/Context;
     invoke-virtual {v0}, Landroid/app/Activity;->getRequestedOrientation()I
 
     move-result v1
@@ -195,7 +195,7 @@
     .line 197
     return-void
 
-    .restart local v0       #context:Landroid/content/Context;
+    .restart local v0    # "context":Landroid/content/Context;
     :cond_0
     move v1, v2
 
@@ -205,7 +205,6 @@
 
 .method static synthetic access$0(Lcom/fusepowered/m2/m2l/MraidDisplayController;)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 132
@@ -216,8 +215,6 @@
 
 .method static synthetic access$1(Lcom/fusepowered/m2/m2l/MraidDisplayController;Z)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 132
@@ -228,7 +225,6 @@
 
 .method static synthetic access$2(Lcom/fusepowered/m2/m2l/MraidDisplayController;)Landroid/os/Handler;
     .locals 1
-    .parameter
 
     .prologue
     .line 148
@@ -239,7 +235,6 @@
 
 .method static synthetic access$3(Lcom/fusepowered/m2/m2l/MraidDisplayController;)I
     .locals 1
-    .parameter
 
     .prologue
     .line 235
@@ -252,8 +247,6 @@
 
 .method static synthetic access$4(Lcom/fusepowered/m2/m2l/MraidDisplayController;I)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 241
@@ -264,7 +257,6 @@
 
 .method static synthetic access$5(Lcom/fusepowered/m2/m2l/MraidDisplayController;)Landroid/content/Context;
     .locals 1
-    .parameter
 
     .prologue
     .line 789
@@ -277,9 +269,6 @@
 
 .method static synthetic access$6(Lcom/fusepowered/m2/m2l/MraidDisplayController;Ljava/net/URI;Lorg/apache/http/HttpResponse;)Ljava/lang/String;
     .locals 1
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 808
@@ -292,8 +281,6 @@
 
 .method static synthetic access$7(Lcom/fusepowered/m2/m2l/MraidDisplayController;Ljava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 366
@@ -304,8 +291,6 @@
 
 .method static synthetic access$8(Lcom/fusepowered/m2/m2l/MraidDisplayController;Ljava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 375
@@ -316,7 +301,7 @@
 
 .method private dayNumberToDayOfMonthString(I)Ljava/lang/String;
     .locals 4
-    .parameter "number"
+    .param p1, "number"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/IllegalArgumentException;
@@ -349,11 +334,11 @@
     move-result-object v0
 
     .line 674
-    .local v0, dayOfMonth:Ljava/lang/String;
+    .local v0, "dayOfMonth":Ljava/lang/String;
     return-object v0
 
     .line 672
-    .end local v0           #dayOfMonth:Ljava/lang/String;
+    .end local v0    # "dayOfMonth":Ljava/lang/String;
     :cond_0
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
@@ -378,7 +363,7 @@
 
 .method private dayNumberToDayOfWeekString(I)Ljava/lang/String;
     .locals 4
-    .parameter "number"
+    .param p1, "number"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/IllegalArgumentException;
@@ -415,56 +400,56 @@
     const-string v0, "SU"
 
     .line 663
-    .local v0, dayOfWeek:Ljava/lang/String;
+    .local v0, "dayOfWeek":Ljava/lang/String;
     :goto_0
     return-object v0
 
     .line 655
-    .end local v0           #dayOfWeek:Ljava/lang/String;
+    .end local v0    # "dayOfWeek":Ljava/lang/String;
     :pswitch_1
     const-string v0, "MO"
 
-    .restart local v0       #dayOfWeek:Ljava/lang/String;
+    .restart local v0    # "dayOfWeek":Ljava/lang/String;
     goto :goto_0
 
     .line 656
-    .end local v0           #dayOfWeek:Ljava/lang/String;
+    .end local v0    # "dayOfWeek":Ljava/lang/String;
     :pswitch_2
     const-string v0, "TU"
 
-    .restart local v0       #dayOfWeek:Ljava/lang/String;
+    .restart local v0    # "dayOfWeek":Ljava/lang/String;
     goto :goto_0
 
     .line 657
-    .end local v0           #dayOfWeek:Ljava/lang/String;
+    .end local v0    # "dayOfWeek":Ljava/lang/String;
     :pswitch_3
     const-string v0, "WE"
 
-    .restart local v0       #dayOfWeek:Ljava/lang/String;
+    .restart local v0    # "dayOfWeek":Ljava/lang/String;
     goto :goto_0
 
     .line 658
-    .end local v0           #dayOfWeek:Ljava/lang/String;
+    .end local v0    # "dayOfWeek":Ljava/lang/String;
     :pswitch_4
     const-string v0, "TH"
 
-    .restart local v0       #dayOfWeek:Ljava/lang/String;
+    .restart local v0    # "dayOfWeek":Ljava/lang/String;
     goto :goto_0
 
     .line 659
-    .end local v0           #dayOfWeek:Ljava/lang/String;
+    .end local v0    # "dayOfWeek":Ljava/lang/String;
     :pswitch_5
     const-string v0, "FR"
 
-    .restart local v0       #dayOfWeek:Ljava/lang/String;
+    .restart local v0    # "dayOfWeek":Ljava/lang/String;
     goto :goto_0
 
     .line 660
-    .end local v0           #dayOfWeek:Ljava/lang/String;
+    .end local v0    # "dayOfWeek":Ljava/lang/String;
     :pswitch_6
     const-string v0, "SA"
 
-    .restart local v0       #dayOfWeek:Ljava/lang/String;
+    .restart local v0    # "dayOfWeek":Ljava/lang/String;
     goto :goto_0
 
     .line 653
@@ -484,7 +469,7 @@
 
 .method private downloadImage(Ljava/lang/String;)V
     .locals 3
-    .parameter "uriString"
+    .param p1, "uriString"    # Ljava/lang/String;
 
     .prologue
     .line 376
@@ -493,7 +478,7 @@
     move-result-object v0
 
     .line 378
-    .local v0, pictureStoragePath:Ljava/io/File;
+    .local v0, "pictureStoragePath":Ljava/io/File;
     invoke-virtual {v0}, Ljava/io/File;->mkdirs()Z
 
     .line 380
@@ -514,28 +499,28 @@
 
 .method private expandLayouts(Landroid/view/View;II)V
     .locals 6
-    .parameter "expansionContentView"
-    .parameter "expandWidth"
-    .parameter "expandHeight"
+    .param p1, "expansionContentView"    # Landroid/view/View;
+    .param p2, "expandWidth"    # I
+    .param p3, "expandHeight"    # I
 
     .prologue
     const/4 v5, -0x1
 
     .line 694
-    const/high16 v3, 0x4248
+    const/high16 v3, 0x42480000
 
     iget v4, p0, Lcom/fusepowered/m2/m2l/MraidDisplayController;->mDensity:F
 
     mul-float/2addr v3, v4
 
-    const/high16 v4, 0x3f00
+    const/high16 v4, 0x3f000000
 
     add-float/2addr v3, v4
 
     float-to-int v0, v3
 
     .line 695
-    .local v0, closeButtonSize:I
+    .local v0, "closeButtonSize":I
     if-ge p2, v0, :cond_0
 
     move p2, v0
@@ -557,7 +542,7 @@
     invoke-direct {v1, v3}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
     .line 699
-    .local v1, dimmingView:Landroid/view/View;
+    .local v1, "dimmingView":Landroid/view/View;
     const/4 v3, 0x0
 
     invoke-virtual {v1, v3}, Landroid/view/View;->setBackgroundColor(I)V
@@ -597,7 +582,7 @@
     invoke-direct {v2, p2, p3}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
     .line 713
-    .local v2, lp:Landroid/widget/RelativeLayout$LayoutParams;
+    .local v2, "lp":Landroid/widget/RelativeLayout$LayoutParams;
     const/16 v3, 0xd
 
     invoke-virtual {v2, v3}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
@@ -649,7 +634,7 @@
     check-cast v0, Landroid/view/WindowManager;
 
     .line 238
-    .local v0, wm:Landroid/view/WindowManager;
+    .local v0, "wm":Landroid/view/WindowManager;
     invoke-interface {v0}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
 
     move-result-object v1
@@ -663,8 +648,8 @@
 
 .method private getFileNameForUriAndHttpResponse(Ljava/net/URI;Lorg/apache/http/HttpResponse;)Ljava/lang/String;
     .locals 9
-    .parameter "uri"
-    .parameter "response"
+    .param p1, "uri"    # Ljava/net/URI;
+    .param p2, "response"    # Lorg/apache/http/HttpResponse;
 
     .prologue
     .line 809
@@ -673,7 +658,7 @@
     move-result-object v5
 
     .line 811
-    .local v5, path:Ljava/lang/String;
+    .local v5, "path":Ljava/lang/String;
     if-nez v5, :cond_0
 
     .line 812
@@ -694,7 +679,7 @@
     move-result-object v3
 
     .line 817
-    .local v3, filename:Ljava/lang/String;
+    .local v3, "filename":Ljava/lang/String;
     const-string v6, "Content-Type"
 
     invoke-interface {p2, v6}, Lorg/apache/http/HttpResponse;->getFirstHeader(Ljava/lang/String;)Lorg/apache/http/Header;
@@ -702,7 +687,7 @@
     move-result-object v4
 
     .line 818
-    .local v4, header:Lorg/apache/http/Header;
+    .local v4, "header":Lorg/apache/http/Header;
     if-eqz v4, :cond_1
 
     .line 819
@@ -717,7 +702,7 @@
     move-result-object v2
 
     .line 820
-    .local v2, fields:[Ljava/lang/String;
+    .local v2, "fields":[Ljava/lang/String;
     array-length v6, v2
 
     const/4 v7, 0x0
@@ -725,7 +710,7 @@
     :goto_1
     if-lt v7, v6, :cond_2
 
-    .end local v2           #fields:[Ljava/lang/String;
+    .end local v2    # "fields":[Ljava/lang/String;
     :cond_1
     :goto_2
     move-object v6, v3
@@ -734,12 +719,12 @@
     goto :goto_0
 
     .line 820
-    .restart local v2       #fields:[Ljava/lang/String;
+    .restart local v2    # "fields":[Ljava/lang/String;
     :cond_2
     aget-object v1, v2, v7
 
     .line 822
-    .local v1, field:Ljava/lang/String;
+    .local v1, "field":Ljava/lang/String;
     const-string v8, "image/"
 
     invoke-virtual {v1, v8}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
@@ -774,7 +759,7 @@
     move-result-object v0
 
     .line 824
-    .local v0, extension:Ljava/lang/String;
+    .local v0, "extension":Ljava/lang/String;
     invoke-virtual {v3, v0}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
     move-result v6
@@ -802,7 +787,7 @@
     goto :goto_2
 
     .line 820
-    .end local v0           #extension:Ljava/lang/String;
+    .end local v0    # "extension":Ljava/lang/String;
     :cond_3
     add-int/lit8 v7, v7, 0x1
 
@@ -865,13 +850,13 @@
     move-result-object v4
 
     .line 208
-    .local v4, context:Landroid/content/Context;
+    .local v4, "context":Landroid/content/Context;
     new-instance v6, Landroid/util/DisplayMetrics;
 
     invoke-direct {v6}, Landroid/util/DisplayMetrics;-><init>()V
 
     .line 209
-    .local v6, metrics:Landroid/util/DisplayMetrics;
+    .local v6, "metrics":Landroid/util/DisplayMetrics;
     const-string v13, "window"
 
     invoke-virtual {v4, v13}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -881,7 +866,7 @@
     check-cast v12, Landroid/view/WindowManager;
 
     .line 210
-    .local v12, wm:Landroid/view/WindowManager;
+    .local v12, "wm":Landroid/view/WindowManager;
     invoke-interface {v12}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
 
     move-result-object v13
@@ -900,11 +885,11 @@
     .line 213
     const/4 v8, 0x0
 
-    .local v8, statusBarHeight:I
+    .local v8, "statusBarHeight":I
     const/4 v9, 0x0
 
     .line 214
-    .local v9, titleBarHeight:I
+    .local v9, "titleBarHeight":I
     instance-of v13, v4, Landroid/app/Activity;
 
     if-eqz v13, :cond_0
@@ -917,19 +902,19 @@
     move-object v2, v0
 
     .line 216
-    .local v2, activity:Landroid/app/Activity;
+    .local v2, "activity":Landroid/app/Activity;
     invoke-virtual {v2}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
 
     move-result-object v11
 
     .line 217
-    .local v11, window:Landroid/view/Window;
+    .local v11, "window":Landroid/view/Window;
     new-instance v7, Landroid/graphics/Rect;
 
     invoke-direct {v7}, Landroid/graphics/Rect;-><init>()V
 
     .line 218
-    .local v7, rect:Landroid/graphics/Rect;
+    .local v7, "rect":Landroid/graphics/Rect;
     invoke-virtual {v11}, Landroid/view/Window;->getDecorView()Landroid/view/View;
 
     move-result-object v13
@@ -951,19 +936,19 @@
     move-result v3
 
     .line 221
-    .local v3, contentViewTop:I
+    .local v3, "contentViewTop":I
     sub-int v9, v3, v8
 
     .line 224
-    .end local v2           #activity:Landroid/app/Activity;
-    .end local v3           #contentViewTop:I
-    .end local v7           #rect:Landroid/graphics/Rect;
-    .end local v11           #window:Landroid/view/Window;
+    .end local v2    # "activity":Landroid/app/Activity;
+    .end local v3    # "contentViewTop":I
+    .end local v7    # "rect":Landroid/graphics/Rect;
+    .end local v11    # "window":Landroid/view/Window;
     :cond_0
     iget v10, v6, Landroid/util/DisplayMetrics;->widthPixels:I
 
     .line 225
-    .local v10, widthPixels:I
+    .local v10, "widthPixels":I
     iget v13, v6, Landroid/util/DisplayMetrics;->heightPixels:I
 
     sub-int/2addr v13, v8
@@ -971,10 +956,10 @@
     sub-int v5, v13, v9
 
     .line 226
-    .local v5, heightPixels:I
+    .local v5, "heightPixels":I
     int-to-double v13, v10
 
-    const-wide/high16 v15, 0x4064
+    const-wide/high16 v15, 0x4064000000000000L
 
     move-object v0, v6
 
@@ -1003,7 +988,7 @@
     .line 227
     int-to-double v13, v5
 
-    const-wide/high16 v15, 0x4064
+    const-wide/high16 v15, 0x4064000000000000L
 
     move-object v0, v6
 
@@ -1057,7 +1042,7 @@
 
 .method private onOrientationChanged(I)V
     .locals 3
-    .parameter "currentRotation"
+    .param p1, "currentRotation"    # I
 
     .prologue
     .line 242
@@ -1086,17 +1071,17 @@
 
 .method private parseDate(Ljava/lang/String;)Ljava/util/Date;
     .locals 4
-    .parameter "dateTime"
+    .param p1, "dateTime"    # Ljava/lang/String;
 
     .prologue
     .line 554
     const/4 v1, 0x0
 
     .line 555
-    .local v1, result:Ljava/util/Date;
+    .local v1, "result":Ljava/util/Date;
     const/4 v0, 0x0
 
-    .local v0, i:I
+    .local v0, "i":I
     :goto_0
     sget-object v2, Lcom/fusepowered/m2/m2l/MraidDisplayController;->DATE_FORMATS:[Ljava/lang/String;
 
@@ -1143,7 +1128,6 @@
 
 .method private parseRecurrenceRule(Ljava/util/Map;)Ljava/lang/String;
     .locals 11
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1163,7 +1147,7 @@
     .end annotation
 
     .prologue
-    .local p1, params:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p1, "params":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     const/4 v6, -0x1
 
     const-string v10, "daysInWeek"
@@ -1180,7 +1164,7 @@
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
     .line 570
-    .local v3, rule:Ljava/lang/StringBuilder;
+    .local v3, "rule":Ljava/lang/StringBuilder;
     const-string v5, "frequency"
 
     invoke-interface {p1, v5}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
@@ -1199,11 +1183,11 @@
     check-cast v0, Ljava/lang/String;
 
     .line 572
-    .local v0, frequency:Ljava/lang/String;
+    .local v0, "frequency":Ljava/lang/String;
     const/4 v1, -0x1
 
     .line 573
-    .local v1, interval:I
+    .local v1, "interval":I
     const-string v5, "interval"
 
     invoke-interface {p1, v5}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
@@ -1267,8 +1251,8 @@
     invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 609
-    .end local v0           #frequency:Ljava/lang/String;
-    .end local v1           #interval:I
+    .end local v0    # "frequency":Ljava/lang/String;
+    .end local v1    # "interval":I
     :cond_1
     :goto_0
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -1278,8 +1262,8 @@
     return-object v5
 
     .line 581
-    .restart local v0       #frequency:Ljava/lang/String;
-    .restart local v1       #interval:I
+    .restart local v0    # "frequency":Ljava/lang/String;
+    .restart local v1    # "interval":I
     :cond_2
     const-string v5, "weekly"
 
@@ -1344,7 +1328,7 @@
     move-result-object v4
 
     .line 588
-    .local v4, weekdays:Ljava/lang/String;
+    .local v4, "weekdays":Ljava/lang/String;
     if-nez v4, :cond_4
 
     .line 589
@@ -1383,7 +1367,7 @@
     goto :goto_0
 
     .line 593
-    .end local v4           #weekdays:Ljava/lang/String;
+    .end local v4    # "weekdays":Ljava/lang/String;
     :cond_5
     const-string v5, "monthly"
 
@@ -1448,7 +1432,7 @@
     move-result-object v2
 
     .line 600
-    .local v2, monthDays:Ljava/lang/String;
+    .local v2, "monthDays":Ljava/lang/String;
     if-nez v2, :cond_7
 
     .line 601
@@ -1485,7 +1469,7 @@
     goto/16 :goto_0
 
     .line 606
-    .end local v2           #monthDays:Ljava/lang/String;
+    .end local v2    # "monthDays":Ljava/lang/String;
     :cond_8
     new-instance v5, Ljava/lang/IllegalArgumentException;
 
@@ -1539,7 +1523,7 @@
     check-cast v0, Landroid/view/ViewGroup;
 
     .line 299
-    .local v0, parent:Landroid/view/ViewGroup;
+    .local v0, "parent":Landroid/view/ViewGroup;
     invoke-virtual {p0}, Lcom/fusepowered/m2/m2l/MraidDisplayController;->getMraidView()Lcom/fusepowered/m2/m2l/MraidView;
 
     move-result-object v1
@@ -1562,7 +1546,7 @@
 
 .method private setOrientationLockEnabled(Z)V
     .locals 7
-    .parameter "enabled"
+    .param p1, "enabled"    # Z
 
     .prologue
     .line 718
@@ -1571,11 +1555,11 @@
     move-result-object v2
 
     .line 719
-    .local v2, context:Landroid/content/Context;
+    .local v2, "context":Landroid/content/Context;
     const/4 v1, 0x0
 
     .line 721
-    .local v1, activity:Landroid/app/Activity;
+    .local v1, "activity":Landroid/app/Activity;
     :try_start_0
     move-object v0, v2
 
@@ -1600,12 +1584,12 @@
     move v4, v5
 
     .line 725
-    .local v4, requestedOrientation:I
+    .local v4, "requestedOrientation":I
     :goto_0
     invoke-virtual {v1, v4}, Landroid/app/Activity;->setRequestedOrientation(I)V
 
     .line 729
-    .end local v4           #requestedOrientation:I
+    .end local v4    # "requestedOrientation":I
     :goto_1
     return-void
 
@@ -1626,7 +1610,7 @@
     move-object v3, v5
 
     .line 727
-    .local v3, e:Ljava/lang/ClassCastException;
+    .local v3, "e":Ljava/lang/ClassCastException;
     const-string v5, "MraidDisplayController"
 
     const-string v6, "Unable to modify device orientation."
@@ -1638,7 +1622,7 @@
 
 .method private showUserDialog(Ljava/lang/String;)V
     .locals 4
-    .parameter "imageUrl"
+    .param p1, "imageUrl"    # Ljava/lang/String;
 
     .prologue
     .line 434
@@ -1651,7 +1635,7 @@
     invoke-direct {v0, v1}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
     .line 436
-    .local v0, alertDialogDownloadImage:Landroid/app/AlertDialog$Builder;
+    .local v0, "alertDialogDownloadImage":Landroid/app/AlertDialog$Builder;
     const-string v1, "Save Image"
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
@@ -1701,7 +1685,7 @@
 
 .method private showUserToast(Ljava/lang/String;)V
     .locals 2
-    .parameter "message"
+    .param p1, "message"    # Ljava/lang/String;
 
     .prologue
     .line 367
@@ -1733,7 +1717,7 @@
     check-cast v2, Landroid/view/ViewGroup;
 
     .line 679
-    .local v2, parent:Landroid/view/ViewGroup;
+    .local v2, "parent":Landroid/view/ViewGroup;
     if-nez v2, :cond_0
 
     .line 691
@@ -1747,10 +1731,10 @@
     move-result v0
 
     .line 683
-    .local v0, count:I
+    .local v0, "count":I
     const/4 v1, 0x0
 
-    .local v1, index:I
+    .local v1, "index":I
     :goto_1
     if-lt v1, v0, :cond_2
 
@@ -1814,7 +1798,6 @@
 
 .method private translateJSParamsToAndroidCalendarEventMapping(Ljava/util/Map;)Ljava/util/Map;
     .locals 10
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1838,7 +1821,7 @@
     .end annotation
 
     .prologue
-    .local p1, params:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p1, "params":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v9, "summary"
 
     const-string v8, "location"
@@ -1855,7 +1838,7 @@
     invoke-direct {v2}, Ljava/util/HashMap;-><init>()V
 
     .line 505
-    .local v2, validatedParamsMapping:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
+    .local v2, "validatedParamsMapping":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
     const-string v3, "description"
 
     invoke-interface {p1, v6}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
@@ -1925,7 +1908,7 @@
     move-result-object v1
 
     .line 513
-    .local v1, startDateTime:Ljava/util/Date;
+    .local v1, "startDateTime":Ljava/util/Date;
     if-eqz v1, :cond_6
 
     .line 514
@@ -1972,7 +1955,7 @@
     move-result-object v0
 
     .line 524
-    .local v0, endDateTime:Ljava/util/Date;
+    .local v0, "endDateTime":Ljava/util/Date;
     if-eqz v0, :cond_8
 
     .line 525
@@ -1989,7 +1972,7 @@
     invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 531
-    .end local v0           #endDateTime:Ljava/util/Date;
+    .end local v0    # "endDateTime":Ljava/util/Date;
     :cond_2
     const-string v3, "location"
 
@@ -2097,7 +2080,7 @@
     throw v3
 
     .line 519
-    .end local v1           #startDateTime:Ljava/util/Date;
+    .end local v1    # "startDateTime":Ljava/util/Date;
     :cond_7
     new-instance v3, Ljava/lang/IllegalArgumentException;
 
@@ -2108,8 +2091,8 @@
     throw v3
 
     .line 527
-    .restart local v0       #endDateTime:Ljava/util/Date;
-    .restart local v1       #startDateTime:Ljava/util/Date;
+    .restart local v0    # "endDateTime":Ljava/util/Date;
+    .restart local v1    # "startDateTime":Ljava/util/Date;
     :cond_8
     new-instance v3, Ljava/lang/IllegalArgumentException;
 
@@ -2120,7 +2103,7 @@
     throw v3
 
     .line 544
-    .end local v0           #endDateTime:Ljava/util/Date;
+    .end local v0    # "endDateTime":Ljava/util/Date;
     :cond_9
     const/4 v3, 0x0
 
@@ -2129,7 +2112,7 @@
 
 .method private translateMonthIntegersToDays(Ljava/lang/String;)Ljava/lang/String;
     .locals 9
-    .parameter "expression"
+    .param p1, "expression"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/IllegalArgumentException;
@@ -2147,13 +2130,13 @@
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
     .line 634
-    .local v3, daysResult:Ljava/lang/StringBuilder;
+    .local v3, "daysResult":Ljava/lang/StringBuilder;
     const/16 v5, 0x3f
 
     new-array v2, v5, [Z
 
     .line 635
-    .local v2, daysAlreadyCounted:[Z
+    .local v2, "daysAlreadyCounted":[Z
     const-string v5, ","
 
     invoke-virtual {p1, v8}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
@@ -2161,10 +2144,10 @@
     move-result-object v1
 
     .line 637
-    .local v1, days:[Ljava/lang/String;
+    .local v1, "days":[Ljava/lang/String;
     const/4 v4, 0x0
 
-    .local v4, i:I
+    .local v4, "i":I
     :goto_0
     array-length v5, v1
 
@@ -2193,7 +2176,7 @@
     move-result v0
 
     .line 639
-    .local v0, dayNumber:I
+    .local v0, "dayNumber":I
     add-int/lit8 v5, v0, 0x1f
 
     aget-boolean v5, v2, v5
@@ -2237,7 +2220,7 @@
     goto :goto_0
 
     .line 647
-    .end local v0           #dayNumber:I
+    .end local v0    # "dayNumber":I
     :cond_2
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->length()I
 
@@ -2257,7 +2240,7 @@
 
 .method private translateWeekIntegersToDays(Ljava/lang/String;)Ljava/lang/String;
     .locals 10
-    .parameter "expression"
+    .param p1, "expression"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/IllegalArgumentException;
@@ -2277,11 +2260,11 @@
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
     .line 614
-    .local v3, daysResult:Ljava/lang/StringBuilder;
+    .local v3, "daysResult":Ljava/lang/StringBuilder;
     new-array v2, v8, [Z
 
     .line 615
-    .local v2, daysAlreadyCounted:[Z
+    .local v2, "daysAlreadyCounted":[Z
     const-string v5, ","
 
     invoke-virtual {p1, v9}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
@@ -2289,10 +2272,10 @@
     move-result-object v1
 
     .line 617
-    .local v1, days:[Ljava/lang/String;
+    .local v1, "days":[Ljava/lang/String;
     const/4 v4, 0x0
 
-    .local v4, i:I
+    .local v4, "i":I
     :goto_0
     array-length v5, v1
 
@@ -2321,7 +2304,7 @@
     move-result v0
 
     .line 619
-    .local v0, dayNumber:I
+    .local v0, "dayNumber":I
     if-ne v0, v8, :cond_1
 
     const/4 v5, 0x0
@@ -2369,7 +2352,7 @@
     goto :goto_0
 
     .line 628
-    .end local v0           #dayNumber:I
+    .end local v0    # "dayNumber":I
     :cond_3
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->length()I
 
@@ -2526,7 +2509,6 @@
 
 .method protected createCalendarEvent(Ljava/util/Map;)V
     .locals 13
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -2539,7 +2521,7 @@
     .end annotation
 
     .prologue
-    .local p1, params:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p1, "params":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v12, "could not create calendar event"
 
     const-string v11, "MraidDisplayController"
@@ -2554,7 +2536,7 @@
     move-result-object v2
 
     .line 471
-    .local v2, context:Landroid/content/Context;
+    .local v2, "context":Landroid/content/Context;
     invoke-static {v2}, Lcom/fusepowered/m2/m2l/util/Mraids;->isCalendarAvailable(Landroid/content/Context;)Z
 
     move-result v8
@@ -2568,7 +2550,7 @@
     move-result-object v1
 
     .line 474
-    .local v1, calendarParams:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
+    .local v1, "calendarParams":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
     new-instance v8, Landroid/content/Intent;
 
     const-string v9, "android.intent.action.INSERT"
@@ -2582,7 +2564,7 @@
     move-result-object v5
 
     .line 475
-    .local v5, intent:Landroid/content/Intent;
+    .local v5, "intent":Landroid/content/Intent;
     invoke-interface {v1}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
     move-result-object v8
@@ -2599,7 +2581,7 @@
     if-nez v9, :cond_0
 
     .line 485
-    const/high16 v8, 0x1000
+    const/high16 v8, 0x10000000
 
     invoke-virtual {v5, v8}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
@@ -2607,14 +2589,14 @@
     invoke-virtual {v2, v5}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
 
     .line 501
-    .end local v1           #calendarParams:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
-    .end local v5           #intent:Landroid/content/Intent;
+    .end local v1    # "calendarParams":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
+    .end local v5    # "intent":Landroid/content/Intent;
     :goto_1
     return-void
 
     .line 475
-    .restart local v1       #calendarParams:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
-    .restart local v5       #intent:Landroid/content/Intent;
+    .restart local v1    # "calendarParams":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
+    .restart local v5    # "intent":Landroid/content/Intent;
     :cond_0
     invoke-interface {v8}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -2623,13 +2605,13 @@
     check-cast v6, Ljava/lang/String;
 
     .line 476
-    .local v6, key:Ljava/lang/String;
+    .local v6, "key":Ljava/lang/String;
     invoke-interface {v1, v6}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v7
 
     .line 477
-    .local v7, value:Ljava/lang/Object;
+    .local v7, "value":Ljava/lang/Object;
     instance-of v9, v7, Ljava/lang/Long;
 
     if-eqz v9, :cond_1
@@ -2637,7 +2619,7 @@
     .line 478
     check-cast v7, Ljava/lang/Long;
 
-    .end local v7           #value:Ljava/lang/Object;
+    .end local v7    # "value":Ljava/lang/Object;
     invoke-virtual {v7}, Ljava/lang/Long;->longValue()J
 
     move-result-wide v9
@@ -2651,16 +2633,16 @@
     goto :goto_0
 
     .line 487
-    .end local v1           #calendarParams:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
-    .end local v5           #intent:Landroid/content/Intent;
-    .end local v6           #key:Ljava/lang/String;
+    .end local v1    # "calendarParams":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
+    .end local v5    # "intent":Landroid/content/Intent;
+    .end local v6    # "key":Ljava/lang/String;
     :catch_0
     move-exception v8
 
     move-object v0, v8
 
     .line 488
-    .local v0, anfe:Landroid/content/ActivityNotFoundException;
+    .local v0, "anfe":Landroid/content/ActivityNotFoundException;
     const-string v8, "MraidDisplayController"
 
     const-string v8, "no calendar app installed"
@@ -2681,11 +2663,11 @@
     goto :goto_1
 
     .line 479
-    .end local v0           #anfe:Landroid/content/ActivityNotFoundException;
-    .restart local v1       #calendarParams:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
-    .restart local v5       #intent:Landroid/content/Intent;
-    .restart local v6       #key:Ljava/lang/String;
-    .restart local v7       #value:Ljava/lang/Object;
+    .end local v0    # "anfe":Landroid/content/ActivityNotFoundException;
+    .restart local v1    # "calendarParams":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
+    .restart local v5    # "intent":Landroid/content/Intent;
+    .restart local v6    # "key":Ljava/lang/String;
+    .restart local v7    # "value":Ljava/lang/Object;
     :cond_1
     :try_start_1
     instance-of v9, v7, Ljava/lang/Integer;
@@ -2695,7 +2677,7 @@
     .line 480
     check-cast v7, Ljava/lang/Integer;
 
-    .end local v7           #value:Ljava/lang/Object;
+    .end local v7    # "value":Ljava/lang/Object;
     invoke-virtual {v7}, Ljava/lang/Integer;->intValue()I
 
     move-result v9
@@ -2709,16 +2691,16 @@
     goto :goto_0
 
     .line 490
-    .end local v1           #calendarParams:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
-    .end local v5           #intent:Landroid/content/Intent;
-    .end local v6           #key:Ljava/lang/String;
+    .end local v1    # "calendarParams":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
+    .end local v5    # "intent":Landroid/content/Intent;
+    .end local v6    # "key":Ljava/lang/String;
     :catch_1
     move-exception v8
 
     move-object v4, v8
 
     .line 491
-    .local v4, iae:Ljava/lang/IllegalArgumentException;
+    .local v4, "iae":Ljava/lang/IllegalArgumentException;
     const-string v8, "MraidDisplayController"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -2757,16 +2739,16 @@
     goto :goto_1
 
     .line 482
-    .end local v4           #iae:Ljava/lang/IllegalArgumentException;
-    .restart local v1       #calendarParams:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
-    .restart local v5       #intent:Landroid/content/Intent;
-    .restart local v6       #key:Ljava/lang/String;
-    .restart local v7       #value:Ljava/lang/Object;
+    .end local v4    # "iae":Ljava/lang/IllegalArgumentException;
+    .restart local v1    # "calendarParams":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
+    .restart local v5    # "intent":Landroid/content/Intent;
+    .restart local v6    # "key":Ljava/lang/String;
+    .restart local v7    # "value":Ljava/lang/Object;
     :cond_2
     :try_start_2
     check-cast v7, Ljava/lang/String;
 
-    .end local v7           #value:Ljava/lang/Object;
+    .end local v7    # "value":Ljava/lang/Object;
     invoke-virtual {v5, v6, v7}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
     :try_end_2
     .catch Landroid/content/ActivityNotFoundException; {:try_start_2 .. :try_end_2} :catch_0
@@ -2776,16 +2758,16 @@
     goto :goto_0
 
     .line 493
-    .end local v1           #calendarParams:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
-    .end local v5           #intent:Landroid/content/Intent;
-    .end local v6           #key:Ljava/lang/String;
+    .end local v1    # "calendarParams":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
+    .end local v5    # "intent":Landroid/content/Intent;
+    .end local v6    # "key":Ljava/lang/String;
     :catch_2
     move-exception v8
 
     move-object v3, v8
 
     .line 494
-    .local v3, exception:Ljava/lang/Exception;
+    .local v3, "exception":Ljava/lang/Exception;
     const-string v8, "MraidDisplayController"
 
     const-string v8, "could not create calendar event"
@@ -2806,7 +2788,7 @@
     goto :goto_1
 
     .line 498
-    .end local v3           #exception:Ljava/lang/Exception;
+    .end local v3    # "exception":Ljava/lang/Exception;
     :cond_3
     const-string v8, "MraidDisplayController"
 
@@ -2890,7 +2872,7 @@
     move-object v0, v1
 
     .line 252
-    .local v0, e:Ljava/lang/IllegalArgumentException;
+    .local v0, "e":Ljava/lang/IllegalArgumentException;
     invoke-virtual {v0}, Ljava/lang/IllegalArgumentException;->getMessage()Ljava/lang/String;
 
     move-result-object v1
@@ -2909,11 +2891,11 @@
 
 .method protected expand(Ljava/lang/String;IIZZ)V
     .locals 8
-    .parameter "url"
-    .parameter "width"
-    .parameter "height"
-    .parameter "shouldUseCustomClose"
-    .parameter "shouldLockOrientation"
+    .param p1, "url"    # Ljava/lang/String;
+    .param p2, "width"    # I
+    .param p3, "height"    # I
+    .param p4, "shouldUseCustomClose"    # Z
+    .param p5, "shouldLockOrientation"    # Z
 
     .prologue
     const/4 v7, -0x1
@@ -2988,7 +2970,7 @@
     move-result-object v6
 
     .line 323
-    .local v6, expansionContentView:Landroid/view/View;
+    .local v6, "expansionContentView":Landroid/view/View;
     if-eqz p1, :cond_3
 
     .line 324
@@ -3226,7 +3208,7 @@
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     .line 260
-    .local v0, properties:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/fusepowered/m2/m2l/MraidProperty;>;"
+    .local v0, "properties":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/fusepowered/m2/m2l/MraidProperty;>;"
     iget v1, p0, Lcom/fusepowered/m2/m2l/MraidDisplayController;->mScreenWidth:I
 
     iget v2, p0, Lcom/fusepowered/m2/m2l/MraidDisplayController;->mScreenHeight:I
@@ -3288,7 +3270,7 @@
     move-result-object v0
 
     .line 795
-    .local v0, context:Landroid/content/Context;
+    .local v0, "context":Landroid/content/Context;
     invoke-virtual {p0}, Lcom/fusepowered/m2/m2l/MraidDisplayController;->getMraidView()Lcom/fusepowered/m2/m2l/MraidView;
 
     move-result-object v1
@@ -3374,7 +3356,7 @@
 
 .method protected setNativeCloseButtonEnabled(Z)V
     .locals 9
-    .parameter "enabled"
+    .param p1, "enabled"    # Z
 
     .prologue
     const/4 v8, 0x1
@@ -3406,7 +3388,7 @@
     invoke-direct {v2}, Landroid/graphics/drawable/StateListDrawable;-><init>()V
 
     .line 737
-    .local v2, states:Landroid/graphics/drawable/StateListDrawable;
+    .local v2, "states":Landroid/graphics/drawable/StateListDrawable;
     new-array v4, v8, [I
 
     const v5, -0x10100a7
@@ -3481,22 +3463,22 @@
     invoke-virtual {v4, v5}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 749
-    .end local v2           #states:Landroid/graphics/drawable/StateListDrawable;
+    .end local v2    # "states":Landroid/graphics/drawable/StateListDrawable;
     :cond_2
-    const/high16 v4, 0x4248
+    const/high16 v4, 0x42480000
 
     iget v5, p0, Lcom/fusepowered/m2/m2l/MraidDisplayController;->mDensity:F
 
     mul-float/2addr v4, v5
 
-    const/high16 v5, 0x3f00
+    const/high16 v5, 0x3f000000
 
     add-float/2addr v4, v5
 
     float-to-int v1, v4
 
     .line 750
-    .local v1, buttonSize:I
+    .local v1, "buttonSize":I
     new-instance v0, Landroid/widget/FrameLayout$LayoutParams;
 
     .line 751
@@ -3506,7 +3488,7 @@
     invoke-direct {v0, v1, v1, v4}, Landroid/widget/FrameLayout$LayoutParams;-><init>(III)V
 
     .line 752
-    .local v0, buttonLayout:Landroid/widget/FrameLayout$LayoutParams;
+    .local v0, "buttonLayout":Landroid/widget/FrameLayout$LayoutParams;
     iget-object v4, p0, Lcom/fusepowered/m2/m2l/MraidDisplayController;->mAdContainerLayout:Landroid/widget/FrameLayout;
 
     iget-object v5, p0, Lcom/fusepowered/m2/m2l/MraidDisplayController;->mCloseButton:Landroid/widget/ImageView;
@@ -3514,15 +3496,15 @@
     invoke-virtual {v4, v5, v0}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 757
-    .end local v0           #buttonLayout:Landroid/widget/FrameLayout$LayoutParams;
-    .end local v1           #buttonSize:I
+    .end local v0    # "buttonLayout":Landroid/widget/FrameLayout$LayoutParams;
+    .end local v1    # "buttonSize":I
     :goto_1
     invoke-virtual {p0}, Lcom/fusepowered/m2/m2l/MraidDisplayController;->getMraidView()Lcom/fusepowered/m2/m2l/MraidView;
 
     move-result-object v3
 
     .line 758
-    .local v3, view:Lcom/fusepowered/m2/m2l/MraidView;
+    .local v3, "view":Lcom/fusepowered/m2/m2l/MraidView;
     invoke-virtual {v3}, Lcom/fusepowered/m2/m2l/MraidView;->getOnCloseButtonStateChangeListener()Lcom/fusepowered/m2/m2l/MraidView$OnCloseButtonStateChangeListener;
 
     move-result-object v4
@@ -3539,7 +3521,7 @@
     goto :goto_0
 
     .line 754
-    .end local v3           #view:Lcom/fusepowered/m2/m2l/MraidView;
+    .end local v3    # "view":Lcom/fusepowered/m2/m2l/MraidView;
     :cond_3
     iget-object v4, p0, Lcom/fusepowered/m2/m2l/MraidDisplayController;->mAdContainerLayout:Landroid/widget/FrameLayout;
 
@@ -3552,7 +3534,7 @@
 
 .method protected showUserDownloadImageAlert(Ljava/lang/String;)V
     .locals 5
-    .parameter "imageUrl"
+    .param p1, "imageUrl"    # Ljava/lang/String;
 
     .prologue
     const-string v4, "Error downloading file - the device does not have an SD card mounted, or the Android permission is not granted."
@@ -3563,7 +3545,7 @@
     move-result-object v0
 
     .line 352
-    .local v0, context:Landroid/content/Context;
+    .local v0, "context":Landroid/content/Context;
     invoke-static {v0}, Lcom/fusepowered/m2/m2l/util/Mraids;->isStorePictureSupported(Landroid/content/Context;)Z
 
     move-result v1
@@ -3617,7 +3599,7 @@
 
 .method protected showVideo(Ljava/lang/String;)V
     .locals 1
-    .parameter "videoUrl"
+    .param p1, "videoUrl"    # Ljava/lang/String;
 
     .prologue
     .line 450
@@ -3633,7 +3615,7 @@
 
 .method protected useCustomClose(Z)V
     .locals 3
-    .parameter "shouldUseCustomCloseButton"
+    .param p1, "shouldUseCustomCloseButton"    # Z
 
     .prologue
     .line 764
@@ -3645,7 +3627,7 @@
     move-result-object v1
 
     .line 767
-    .local v1, view:Lcom/fusepowered/m2/m2l/MraidView;
+    .local v1, "view":Lcom/fusepowered/m2/m2l/MraidView;
     if-eqz p1, :cond_1
 
     const/4 v2, 0x0
@@ -3653,7 +3635,7 @@
     move v0, v2
 
     .line 768
-    .local v0, enabled:Z
+    .local v0, "enabled":Z
     :goto_0
     invoke-virtual {v1}, Lcom/fusepowered/m2/m2l/MraidView;->getOnCloseButtonStateChangeListener()Lcom/fusepowered/m2/m2l/MraidView$OnCloseButtonStateChangeListener;
 
@@ -3673,7 +3655,7 @@
     return-void
 
     .line 767
-    .end local v0           #enabled:Z
+    .end local v0    # "enabled":Z
     :cond_1
     const/4 v2, 0x1
 

@@ -29,9 +29,6 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/Object;)V
     .locals 4
-    .parameter
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lcom/vungle/sdk/g$a;

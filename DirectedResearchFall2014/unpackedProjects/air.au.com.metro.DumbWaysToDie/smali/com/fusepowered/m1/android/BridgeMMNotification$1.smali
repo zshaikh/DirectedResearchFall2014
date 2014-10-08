@@ -36,8 +36,6 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m1/android/BridgeMMNotification;Ljava/util/HashMap;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 45
@@ -78,7 +76,7 @@
     check-cast v4, Lcom/fusepowered/m1/android/MMWebView;
 
     .line 50
-    .local v4, mmWebView:Lcom/fusepowered/m1/android/MMWebView;
+    .local v4, "mmWebView":Lcom/fusepowered/m1/android/MMWebView;
     if-eqz v4, :cond_6
 
     .line 52
@@ -87,11 +85,11 @@
     move-result-object v0
 
     .line 53
-    .local v0, activity:Landroid/app/Activity;
+    .local v0, "activity":Landroid/app/Activity;
     iget-object v3, p0, Lcom/fusepowered/m1/android/BridgeMMNotification$1;->val$arguments:Ljava/util/HashMap;
 
     .line 55
-    .local v3, finalArguments:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v3, "finalArguments":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     if-eqz v0, :cond_6
 
     .line 57
@@ -111,7 +109,7 @@
     move-result-object v1
 
     .line 60
-    .local v1, alertDialog:Landroid/app/AlertDialog;
+    .local v1, "alertDialog":Landroid/app/AlertDialog;
     const-string v6, "title"
 
     invoke-virtual {v3, v11}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
@@ -203,7 +201,7 @@
     move-result-object v2
 
     .line 69
-    .local v2, buttons:[Ljava/lang/String;
+    .local v2, "buttons":[Ljava/lang/String;
     array-length v6, v2
 
     if-lez v6, :cond_3
@@ -235,25 +233,25 @@
     invoke-virtual {v1, v6, v7, v8}, Landroid/app/AlertDialog;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
 
     .line 74
-    .end local v2           #buttons:[Ljava/lang/String;
+    .end local v2    # "buttons":[Ljava/lang/String;
     :cond_4
     invoke-virtual {v1}, Landroid/app/AlertDialog;->show()V
 
     .line 77
-    .end local v1           #alertDialog:Landroid/app/AlertDialog;
+    .end local v1    # "alertDialog":Landroid/app/AlertDialog;
     :cond_5
     new-instance v5, Lcom/fusepowered/m1/android/MMJSResponse;
 
     invoke-direct {v5}, Lcom/fusepowered/m1/android/MMJSResponse;-><init>()V
 
     .line 78
-    .local v5, response:Lcom/fusepowered/m1/android/MMJSResponse;
+    .local v5, "response":Lcom/fusepowered/m1/android/MMJSResponse;
     iput v9, v5, Lcom/fusepowered/m1/android/MMJSResponse;->result:I
 
     .line 79
     iget-object v6, p0, Lcom/fusepowered/m1/android/BridgeMMNotification$1;->this$0:Lcom/fusepowered/m1/android/BridgeMMNotification;
 
-    #getter for: Lcom/fusepowered/m1/android/BridgeMMNotification;->index:I
+    # getter for: Lcom/fusepowered/m1/android/BridgeMMNotification;->index:I
     invoke-static {v6}, Lcom/fusepowered/m1/android/BridgeMMNotification;->access$000(Lcom/fusepowered/m1/android/BridgeMMNotification;)I
 
     move-result v6
@@ -267,9 +265,9 @@
     move-object v6, v5
 
     .line 83
-    .end local v0           #activity:Landroid/app/Activity;
-    .end local v3           #finalArguments:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
-    .end local v5           #response:Lcom/fusepowered/m1/android/MMJSResponse;
+    .end local v0    # "activity":Landroid/app/Activity;
+    .end local v3    # "finalArguments":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .end local v5    # "response":Lcom/fusepowered/m1/android/MMJSResponse;
     :goto_0
     return-object v6
 

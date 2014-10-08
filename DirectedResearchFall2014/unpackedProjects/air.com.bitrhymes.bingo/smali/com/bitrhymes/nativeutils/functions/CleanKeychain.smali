@@ -21,8 +21,8 @@
 # virtual methods
 .method public call(Lcom/adobe/fre/FREContext;[Lcom/adobe/fre/FREObject;)Lcom/adobe/fre/FREObject;
     .locals 6
-    .parameter "context"
-    .parameter "arg1"
+    .param p1, "context"    # Lcom/adobe/fre/FREContext;
+    .param p2, "arg1"    # [Lcom/adobe/fre/FREObject;
 
     .prologue
     const-string v5, ","
@@ -42,7 +42,7 @@
     move-result-object v1
 
     .line 19
-    .local v1, preferences:Landroid/content/SharedPreferences;
+    .local v1, "preferences":Landroid/content/SharedPreferences;
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v2
@@ -58,7 +58,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 26
-    .end local v1           #preferences:Landroid/content/SharedPreferences;
+    .end local v1    # "preferences":Landroid/content/SharedPreferences;
     :goto_0
     const/4 v2, 0x0
 
@@ -71,7 +71,7 @@
     move-object v0, v2
 
     .line 24
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v2, "ERROR_EVENT"
 
     new-instance v3, Ljava/lang/StringBuilder;

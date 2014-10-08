@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/facebook/Request$GraphPlaceListCallback;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1
@@ -40,7 +39,7 @@
 # virtual methods
 .method public onCompleted(Lcom/facebook/Response;)V
     .locals 2
-    .parameter "response"
+    .param p1, "response"    # Lcom/facebook/Response;
 
     .prologue
     .line 409
@@ -53,7 +52,7 @@
 
     const-class v1, Lcom/facebook/model/GraphPlace;
 
-    #calls: Lcom/facebook/Request;->typedListFromResponse(Lcom/facebook/Response;Ljava/lang/Class;)Ljava/util/List;
+    # invokes: Lcom/facebook/Request;->typedListFromResponse(Lcom/facebook/Response;Ljava/lang/Class;)Ljava/util/List;
     invoke-static {p1, v1}, Lcom/facebook/Request;->access$2(Lcom/facebook/Response;Ljava/lang/Class;)Ljava/util/List;
 
     move-result-object v1

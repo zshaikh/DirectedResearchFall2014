@@ -12,7 +12,7 @@
 # direct methods
 .method public constructor <init>(Lv2/com/playhaven/listeners/PHSubContentRequestListener;)V
     .locals 0
-    .parameter "listener"
+    .param p1, "listener"    # Lv2/com/playhaven/listeners/PHSubContentRequestListener;
 
     .prologue
     .line 33
@@ -39,7 +39,7 @@
 
 .method public getURL(Landroid/content/Context;)Ljava/lang/String;
     .locals 1
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     .line 88
@@ -73,7 +73,7 @@
 
 .method public handleRequestFailure(Lv2/com/playhaven/model/PHError;)V
     .locals 1
-    .parameter "error"
+    .param p1, "error"    # Lv2/com/playhaven/model/PHError;
 
     .prologue
     .line 81
@@ -93,7 +93,7 @@
 
 .method public handleRequestSuccess(Lorg/json/JSONObject;)V
     .locals 1
-    .parameter "json"
+    .param p1, "json"    # Lorg/json/JSONObject;
 
     .prologue
     .line 75
@@ -113,7 +113,7 @@
 
 .method public send(Landroid/content/Context;)V
     .locals 2
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     .line 98
@@ -157,7 +157,7 @@
 
 .method public setSubContentReuqestListener(Lv2/com/playhaven/listeners/PHSubContentRequestListener;)V
     .locals 0
-    .parameter "listener"
+    .param p1, "listener"    # Lv2/com/playhaven/listeners/PHSubContentRequestListener;
 
     .prologue
     .line 43
@@ -169,7 +169,7 @@
 
 .method public setWebviewCallback(Ljava/lang/String;)V
     .locals 0
-    .parameter "callback"
+    .param p1, "callback"    # Ljava/lang/String;
 
     .prologue
     .line 59

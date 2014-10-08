@@ -18,11 +18,11 @@
 # direct methods
 .method protected constructor <init>(Ljava/io/InputStream;[BILcom/flurry/org/codehaus/jackson/JsonFactory;Lcom/flurry/org/codehaus/jackson/format/MatchStrength;)V
     .locals 0
-    .parameter "in"
-    .parameter "buffered"
-    .parameter "bufferedLength"
-    .parameter "match"
-    .parameter "strength"
+    .param p1, "in"    # Ljava/io/InputStream;
+    .param p2, "buffered"    # [B
+    .param p3, "bufferedLength"    # I
+    .param p4, "match"    # Lcom/flurry/org/codehaus/jackson/JsonFactory;
+    .param p5, "strength"    # Lcom/flurry/org/codehaus/jackson/format/MatchStrength;
 
     .prologue
     .line 39

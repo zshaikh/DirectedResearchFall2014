@@ -26,8 +26,6 @@
 # direct methods
 .method constructor <init>(Lcom/adobe/air/AndroidStageText;Z)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 797
@@ -49,7 +47,7 @@
     .line 801
     iget-object v0, p0, Lcom/adobe/air/AndroidStageText$2;->this$0:Lcom/adobe/air/AndroidStageText;
 
-    #getter for: Lcom/adobe/air/AndroidStageText;->mView:Lcom/adobe/air/AndroidStageText$AndroidStageTextImpl;
+    # getter for: Lcom/adobe/air/AndroidStageText;->mView:Lcom/adobe/air/AndroidStageText$AndroidStageTextImpl;
     invoke-static {v0}, Lcom/adobe/air/AndroidStageText;->access$500(Lcom/adobe/air/AndroidStageText;)Lcom/adobe/air/AndroidStageText$AndroidStageTextImpl;
 
     move-result-object v0
@@ -67,7 +65,7 @@
 
     iget-object v1, p0, Lcom/adobe/air/AndroidStageText$2;->this$0:Lcom/adobe/air/AndroidStageText;
 
-    #getter for: Lcom/adobe/air/AndroidStageText;->mGlobalBounds:Landroid/graphics/Rect;
+    # getter for: Lcom/adobe/air/AndroidStageText;->mGlobalBounds:Landroid/graphics/Rect;
     invoke-static {v1}, Lcom/adobe/air/AndroidStageText;->access$1600(Lcom/adobe/air/AndroidStageText;)Landroid/graphics/Rect;
 
     move-result-object v1
@@ -78,7 +76,7 @@
 
     iget-object v2, p0, Lcom/adobe/air/AndroidStageText$2;->this$0:Lcom/adobe/air/AndroidStageText;
 
-    #getter for: Lcom/adobe/air/AndroidStageText;->mGlobalBounds:Landroid/graphics/Rect;
+    # getter for: Lcom/adobe/air/AndroidStageText;->mGlobalBounds:Landroid/graphics/Rect;
     invoke-static {v2}, Lcom/adobe/air/AndroidStageText;->access$1600(Lcom/adobe/air/AndroidStageText;)Landroid/graphics/Rect;
 
     move-result-object v2
@@ -92,7 +90,7 @@
     .line 807
     iget-object v1, p0, Lcom/adobe/air/AndroidStageText$2;->this$0:Lcom/adobe/air/AndroidStageText;
 
-    #getter for: Lcom/adobe/air/AndroidStageText;->mGlobalBounds:Landroid/graphics/Rect;
+    # getter for: Lcom/adobe/air/AndroidStageText;->mGlobalBounds:Landroid/graphics/Rect;
     invoke-static {v1}, Lcom/adobe/air/AndroidStageText;->access$1600(Lcom/adobe/air/AndroidStageText;)Landroid/graphics/Rect;
 
     move-result-object v1
@@ -104,7 +102,7 @@
     .line 808
     iget-object v1, p0, Lcom/adobe/air/AndroidStageText$2;->this$0:Lcom/adobe/air/AndroidStageText;
 
-    #getter for: Lcom/adobe/air/AndroidStageText;->mGlobalBounds:Landroid/graphics/Rect;
+    # getter for: Lcom/adobe/air/AndroidStageText;->mGlobalBounds:Landroid/graphics/Rect;
     invoke-static {v1}, Lcom/adobe/air/AndroidStageText;->access$1600(Lcom/adobe/air/AndroidStageText;)Landroid/graphics/Rect;
 
     move-result-object v1
@@ -116,7 +114,7 @@
     .line 810
     iget-object v1, p0, Lcom/adobe/air/AndroidStageText$2;->this$0:Lcom/adobe/air/AndroidStageText;
 
-    #getter for: Lcom/adobe/air/AndroidStageText;->mView:Lcom/adobe/air/AndroidStageText$AndroidStageTextImpl;
+    # getter for: Lcom/adobe/air/AndroidStageText;->mView:Lcom/adobe/air/AndroidStageText$AndroidStageTextImpl;
     invoke-static {v1}, Lcom/adobe/air/AndroidStageText;->access$500(Lcom/adobe/air/AndroidStageText;)Lcom/adobe/air/AndroidStageText$AndroidStageTextImpl;
 
     move-result-object v1
@@ -126,7 +124,7 @@
     .line 814
     iget-object v0, p0, Lcom/adobe/air/AndroidStageText$2;->this$0:Lcom/adobe/air/AndroidStageText;
 
-    #getter for: Lcom/adobe/air/AndroidStageText;->mView:Lcom/adobe/air/AndroidStageText$AndroidStageTextImpl;
+    # getter for: Lcom/adobe/air/AndroidStageText;->mView:Lcom/adobe/air/AndroidStageText$AndroidStageTextImpl;
     invoke-static {v0}, Lcom/adobe/air/AndroidStageText;->access$500(Lcom/adobe/air/AndroidStageText;)Lcom/adobe/air/AndroidStageText$AndroidStageTextImpl;
 
     move-result-object v0
@@ -143,7 +141,7 @@
 
     const/4 v1, 0x1
 
-    #setter for: Lcom/adobe/air/AndroidStageText;->mNotifyLayoutComplete:Z
+    # setter for: Lcom/adobe/air/AndroidStageText;->mNotifyLayoutComplete:Z
     invoke-static {v0, v1}, Lcom/adobe/air/AndroidStageText;->access$002(Lcom/adobe/air/AndroidStageText;Z)Z
 
     goto :goto_0

@@ -26,7 +26,7 @@
 
     .prologue
     .line 34
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/ClassIntrospector;,"Lcom/flurry/org/codehaus/jackson/map/ClassIntrospector<TT;>;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/ClassIntrospector;, "Lcom/flurry/org/codehaus/jackson/map/ClassIntrospector<TT;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -49,9 +49,7 @@
 
 .method public forClassAnnotations(Lcom/flurry/org/codehaus/jackson/map/MapperConfig;Ljava/lang/Class;Lcom/flurry/org/codehaus/jackson/map/ClassIntrospector$MixInResolver;)Lcom/flurry/org/codehaus/jackson/map/BeanDescription;
     .locals 1
-    .parameter
-    .parameter
-    .parameter "r"
+    .param p3, "r"    # Lcom/flurry/org/codehaus/jackson/map/ClassIntrospector$MixInResolver;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -69,9 +67,9 @@
 
     .prologue
     .line 99
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/ClassIntrospector;,"Lcom/flurry/org/codehaus/jackson/map/ClassIntrospector<TT;>;"
-    .local p1, cfg:Lcom/flurry/org/codehaus/jackson/map/MapperConfig;,"Lcom/flurry/org/codehaus/jackson/map/MapperConfig<*>;"
-    .local p2, cls:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/ClassIntrospector;, "Lcom/flurry/org/codehaus/jackson/map/ClassIntrospector<TT;>;"
+    .local p1, "cfg":Lcom/flurry/org/codehaus/jackson/map/MapperConfig;, "Lcom/flurry/org/codehaus/jackson/map/MapperConfig<*>;"
+    .local p2, "cls":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-virtual {p1, p2}, Lcom/flurry/org/codehaus/jackson/map/MapperConfig;->constructType(Ljava/lang/Class;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
 
     move-result-object v0
@@ -122,9 +120,7 @@
 
 .method public forDirectClassAnnotations(Lcom/flurry/org/codehaus/jackson/map/MapperConfig;Ljava/lang/Class;Lcom/flurry/org/codehaus/jackson/map/ClassIntrospector$MixInResolver;)Lcom/flurry/org/codehaus/jackson/map/BeanDescription;
     .locals 1
-    .parameter
-    .parameter
-    .parameter "r"
+    .param p3, "r"    # Lcom/flurry/org/codehaus/jackson/map/ClassIntrospector$MixInResolver;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -142,9 +138,9 @@
 
     .prologue
     .line 114
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/ClassIntrospector;,"Lcom/flurry/org/codehaus/jackson/map/ClassIntrospector<TT;>;"
-    .local p1, cfg:Lcom/flurry/org/codehaus/jackson/map/MapperConfig;,"Lcom/flurry/org/codehaus/jackson/map/MapperConfig<*>;"
-    .local p2, cls:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/ClassIntrospector;, "Lcom/flurry/org/codehaus/jackson/map/ClassIntrospector<TT;>;"
+    .local p1, "cfg":Lcom/flurry/org/codehaus/jackson/map/MapperConfig;, "Lcom/flurry/org/codehaus/jackson/map/MapperConfig<*>;"
+    .local p2, "cls":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-virtual {p1, p2}, Lcom/flurry/org/codehaus/jackson/map/MapperConfig;->constructType(Ljava/lang/Class;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
 
     move-result-object v0

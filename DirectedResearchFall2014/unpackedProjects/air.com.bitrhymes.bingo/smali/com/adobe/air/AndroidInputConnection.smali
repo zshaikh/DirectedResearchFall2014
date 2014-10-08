@@ -20,7 +20,6 @@
 # direct methods
 .method public constructor <init>(Lcom/adobe/air/AIRWindowSurfaceView;)V
     .locals 2
-    .parameter
 
     .prologue
     const/4 v1, 0x0
@@ -60,7 +59,6 @@
 
 .method private writeText(Ljava/lang/CharSequence;)V
     .locals 11
-    .parameter
 
     .prologue
     .line 280
@@ -299,8 +297,6 @@
 
 .method public commitText(Ljava/lang/CharSequence;I)Z
     .locals 3
-    .parameter
-    .parameter
 
     .prologue
     .line 272
@@ -342,8 +338,6 @@
 
 .method public deleteSurroundingText(II)Z
     .locals 9
-    .parameter
-    .parameter
 
     .prologue
     .line 58
@@ -521,8 +515,6 @@
 
 .method public getExtractedText(Landroid/view/inputmethod/ExtractedTextRequest;I)Landroid/view/inputmethod/ExtractedText;
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     .line 93
@@ -585,8 +577,6 @@
 
 .method public getTextAfterCursor(II)Ljava/lang/CharSequence;
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 80
@@ -599,8 +589,6 @@
 
 .method public getTextBeforeCursor(II)Ljava/lang/CharSequence;
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 86
@@ -613,7 +601,6 @@
 
 .method public performContextMenuAction(I)Z
     .locals 2
-    .parameter
 
     .prologue
     const/4 v0, 0x0
@@ -726,7 +713,6 @@
 
 .method public performEditorAction(I)Z
     .locals 2
-    .parameter
 
     .prologue
     const/4 v1, 0x0
@@ -761,8 +747,6 @@
 
 .method public setComposingRegion(II)Z
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 182
@@ -789,8 +773,6 @@
 
 .method public setComposingText(Ljava/lang/CharSequence;I)Z
     .locals 10
-    .parameter
-    .parameter
 
     .prologue
     .line 191
@@ -1094,8 +1076,6 @@
 
 .method public setSelection(II)Z
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 265

@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/google/analytics/tracking/android/EasyTracker;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 96

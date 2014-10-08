@@ -17,7 +17,7 @@
 
 
 # static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator; = null
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroid/os/Parcelable$Creator",
@@ -137,7 +137,7 @@
 
 .method constructor <init>(Landroid/os/Parcel;)V
     .locals 5
-    .parameter "in"
+    .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
     .line 67
@@ -164,7 +164,7 @@
     move-result v2
 
     .line 72
-    .local v2, len:I
+    .local v2, "len":I
     new-array v3, v2, [Ljava/lang/String;
 
     iput-object v3, p0, Lcom/fusepowered/m1/android/VideoAd;->startActivity:[Ljava/lang/String;
@@ -195,7 +195,7 @@
     new-array v0, v3, [Z
 
     .line 78
-    .local v0, boolArray:[Z
+    .local v0, "boolArray":[Z
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->readBooleanArray([Z)V
 
     .line 79
@@ -363,8 +363,8 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 108
-    .end local v0           #boolArray:[Z
-    .end local v2           #len:I
+    .end local v0    # "boolArray":[Z
+    .end local v2    # "len":I
     :goto_0
     return-void
 
@@ -375,7 +375,7 @@
     move-object v1, v3
 
     .line 106
-    .local v1, e:Ljava/lang/Exception;
+    .local v1, "e":Ljava/lang/Exception;
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0
@@ -383,7 +383,7 @@
 
 .method constructor <init>(Ljava/lang/String;)V
     .locals 5
-    .parameter "jsonString"
+    .param p1, "jsonString"    # Ljava/lang/String;
 
     .prologue
     .line 116
@@ -410,7 +410,7 @@
     const/4 v1, 0x0
 
     .line 124
-    .local v1, jsonAdObject:Lorg/json/JSONObject;
+    .local v1, "jsonAdObject":Lorg/json/JSONObject;
     :try_start_0
     new-instance v2, Lorg/json/JSONObject;
 
@@ -418,13 +418,13 @@
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .end local v1           #jsonAdObject:Lorg/json/JSONObject;
-    .local v2, jsonAdObject:Lorg/json/JSONObject;
+    .end local v1    # "jsonAdObject":Lorg/json/JSONObject;
+    .local v2, "jsonAdObject":Lorg/json/JSONObject;
     move-object v1, v2
 
     .line 131
-    .end local v2           #jsonAdObject:Lorg/json/JSONObject;
-    .restart local v1       #jsonAdObject:Lorg/json/JSONObject;
+    .end local v2    # "jsonAdObject":Lorg/json/JSONObject;
+    .restart local v1    # "jsonAdObject":Lorg/json/JSONObject;
     :goto_0
     if-eqz v1, :cond_0
 
@@ -432,7 +432,7 @@
     const/4 v3, 0x0
 
     .line 134
-    .local v3, videoObject:Lorg/json/JSONObject;
+    .local v3, "videoObject":Lorg/json/JSONObject;
     const-string v4, "video"
 
     invoke-virtual {v1, v4}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
@@ -446,20 +446,20 @@
     invoke-virtual {p0, v3}, Lcom/fusepowered/m1/android/VideoAd;->deserializeFromObj(Lorg/json/JSONObject;)V
 
     .line 139
-    .end local v1           #jsonAdObject:Lorg/json/JSONObject;
-    .end local v3           #videoObject:Lorg/json/JSONObject;
+    .end local v1    # "jsonAdObject":Lorg/json/JSONObject;
+    .end local v3    # "videoObject":Lorg/json/JSONObject;
     :cond_0
     return-void
 
     .line 126
-    .restart local v1       #jsonAdObject:Lorg/json/JSONObject;
+    .restart local v1    # "jsonAdObject":Lorg/json/JSONObject;
     :catch_0
     move-exception v4
 
     move-object v0, v4
 
     .line 128
-    .local v0, e:Lorg/json/JSONException;
+    .local v0, "e":Lorg/json/JSONException;
     invoke-virtual {v0}, Lorg/json/JSONException;->printStackTrace()V
 
     goto :goto_0
@@ -467,7 +467,7 @@
 
 .method static synthetic access$000(Lcom/fusepowered/m1/android/VideoAd;)Ljava/lang/String;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/fusepowered/m1/android/VideoAd;
 
     .prologue
     .line 27
@@ -478,9 +478,9 @@
 
 .method static downloadVideoFile(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Z
     .locals 7
-    .parameter "context"
-    .parameter "contentUrl"
-    .parameter "videoFileId"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "contentUrl"    # Ljava/lang/String;
+    .param p2, "videoFileId"    # Ljava/lang/String;
 
     .prologue
     const/4 v6, 0x1
@@ -495,7 +495,7 @@
     move-result-object v0
 
     .line 274
-    .local v0, dir:Ljava/io/File;
+    .local v0, "dir":Ljava/io/File;
     if-eqz v0, :cond_0
 
     invoke-virtual {v0}, Ljava/io/File;->isDirectory()Z
@@ -573,7 +573,7 @@
     move-result v1
 
     .line 281
-    .local v1, success:Z
+    .local v1, "success":Z
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -622,8 +622,8 @@
 
 .method static getVideoUri(Landroid/content/Context;Ljava/lang/String;)Landroid/net/Uri;
     .locals 2
-    .parameter "context"
-    .parameter "videoFileId"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "videoFileId"    # Ljava/lang/String;
 
     .prologue
     .line 292
@@ -658,7 +658,7 @@
 
 .method private handleSharedVideoFile(Landroid/content/Context;)V
     .locals 2
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     .line 355
@@ -676,8 +676,8 @@
 
 .method static hasVideoFile(Landroid/content/Context;Ljava/lang/String;)Z
     .locals 2
-    .parameter "context"
-    .parameter "videoFileId"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "videoFileId"    # Ljava/lang/String;
 
     .prologue
     .line 287
@@ -708,9 +708,9 @@
 
 .method static playAd(Landroid/content/Context;Ljava/lang/String;Lcom/fusepowered/m1/android/HttpRedirection$RedirectionListenerImpl;)V
     .locals 4
-    .parameter "context"
-    .parameter "id"
-    .parameter "listener"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "id"    # Ljava/lang/String;
+    .param p2, "listener"    # Lcom/fusepowered/m1/android/HttpRedirection$RedirectionListenerImpl;
 
     .prologue
     const/4 v2, 0x1
@@ -728,7 +728,7 @@
     check-cast v0, Lcom/fusepowered/m1/android/VideoAd;
 
     .line 689
-    .local v0, videoAd:Lcom/fusepowered/m1/android/VideoAd;
+    .local v0, "videoAd":Lcom/fusepowered/m1/android/VideoAd;
     if-eqz v0, :cond_1
 
     const/4 v1, 0x0
@@ -760,13 +760,13 @@
     invoke-virtual {p2}, Lcom/fusepowered/m1/android/HttpRedirection$RedirectionListenerImpl;->startingVideo()V
 
     .line 701
-    .end local v0           #videoAd:Lcom/fusepowered/m1/android/VideoAd;
+    .end local v0    # "videoAd":Lcom/fusepowered/m1/android/VideoAd;
     :cond_0
     :goto_0
     return-void
 
     .line 698
-    .restart local v0       #videoAd:Lcom/fusepowered/m1/android/VideoAd;
+    .restart local v0    # "videoAd":Lcom/fusepowered/m1/android/VideoAd;
     :cond_1
     const-string v1, "mmvideo: Ad %s cannot be shown at this time."
 
@@ -783,9 +783,9 @@
 # virtual methods
 .method canShow(Landroid/content/Context;Lcom/fusepowered/m1/android/MMAdImpl;Z)Z
     .locals 6
-    .parameter "context"
-    .parameter "adImpl"
-    .parameter "checkDeferredViewStart"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "adImpl"    # Lcom/fusepowered/m1/android/MMAdImpl;
+    .param p3, "checkDeferredViewStart"    # Z
 
     .prologue
     const/4 v5, 0x1
@@ -860,7 +860,7 @@
 
 .method delete(Landroid/content/Context;)V
     .locals 4
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     .line 347
@@ -907,7 +907,7 @@
 
 .method protected deserializeFromObj(Lorg/json/JSONObject;)V
     .locals 9
-    .parameter "videoObject"
+    .param p1, "videoObject"    # Lorg/json/JSONObject;
 
     .prologue
     const/4 v8, 0x0
@@ -925,7 +925,7 @@
     move-result-object v1
 
     .line 153
-    .local v1, jsonArray:Lorg/json/JSONArray;
+    .local v1, "jsonArray":Lorg/json/JSONArray;
     const-string v5, "overlayURL"
 
     invoke-virtual {p1, v5, v8}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
@@ -976,7 +976,7 @@
     .line 160
     const/4 v0, 0x0
 
-    .local v0, i:I
+    .local v0, "i":I
     :goto_0
     invoke-virtual {v1}, Lorg/json/JSONArray;->length()I
 
@@ -999,7 +999,7 @@
     goto :goto_0
 
     .line 165
-    .end local v0           #i:I
+    .end local v0    # "i":I
     :cond_0
     new-array v5, v7, [Ljava/lang/String;
 
@@ -1028,7 +1028,7 @@
     .line 171
     const/4 v0, 0x0
 
-    .restart local v0       #i:I
+    .restart local v0    # "i":I
     :goto_1
     invoke-virtual {v1}, Lorg/json/JSONArray;->length()I
 
@@ -1051,7 +1051,7 @@
     goto :goto_1
 
     .line 176
-    .end local v0           #i:I
+    .end local v0    # "i":I
     :cond_2
     new-array v5, v7, [Ljava/lang/String;
 
@@ -1080,7 +1080,7 @@
     .line 182
     const/4 v0, 0x0
 
-    .restart local v0       #i:I
+    .restart local v0    # "i":I
     :goto_2
     invoke-virtual {v1}, Lorg/json/JSONArray;->length()I
 
@@ -1103,7 +1103,7 @@
     goto :goto_2
 
     .line 187
-    .end local v0           #i:I
+    .end local v0    # "i":I
     :cond_4
     new-array v5, v7, [Ljava/lang/String;
 
@@ -1132,7 +1132,7 @@
     .line 193
     const/4 v0, 0x0
 
-    .restart local v0       #i:I
+    .restart local v0    # "i":I
     :goto_3
     invoke-virtual {v1}, Lorg/json/JSONArray;->length()I
 
@@ -1155,7 +1155,7 @@
     goto :goto_3
 
     .line 198
-    .end local v0           #i:I
+    .end local v0    # "i":I
     :cond_6
     new-array v5, v7, [Ljava/lang/String;
 
@@ -1184,7 +1184,7 @@
     .line 204
     const/4 v0, 0x0
 
-    .restart local v0       #i:I
+    .restart local v0    # "i":I
     :goto_4
     invoke-virtual {v1}, Lorg/json/JSONArray;->length()I
 
@@ -1207,7 +1207,7 @@
     goto :goto_4
 
     .line 209
-    .end local v0           #i:I
+    .end local v0    # "i":I
     :cond_8
     new-array v5, v7, [Ljava/lang/String;
 
@@ -1249,7 +1249,7 @@
     move-result-object v2
 
     .line 215
-    .local v2, jsonObject:Lorg/json/JSONObject;
+    .local v2, "jsonObject":Lorg/json/JSONObject;
     if-eqz v2, :cond_a
 
     .line 217
@@ -1319,7 +1319,7 @@
     .line 226
     const/4 v0, 0x0
 
-    .restart local v0       #i:I
+    .restart local v0    # "i":I
     :goto_5
     invoke-virtual {v1}, Lorg/json/JSONArray;->length()I
 
@@ -1341,20 +1341,20 @@
     invoke-direct {v3, v2}, Lcom/fusepowered/m1/android/VideoImage;-><init>(Lorg/json/JSONObject;)V
 
     .line 232
-    .local v3, vb:Lcom/fusepowered/m1/android/VideoImage;
+    .local v3, "vb":Lcom/fusepowered/m1/android/VideoImage;
     iget-object v5, p0, Lcom/fusepowered/m1/android/VideoAd;->buttons:Ljava/util/ArrayList;
 
     invoke-virtual {v5, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 226
-    .end local v3           #vb:Lcom/fusepowered/m1/android/VideoImage;
+    .end local v3    # "vb":Lcom/fusepowered/m1/android/VideoImage;
     :cond_b
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_5
 
     .line 236
-    .end local v0           #i:I
+    .end local v0    # "i":I
     :cond_c
     const-string v5, "log"
 
@@ -1368,7 +1368,7 @@
     .line 239
     const/4 v0, 0x0
 
-    .restart local v0       #i:I
+    .restart local v0    # "i":I
     :goto_6
     invoke-virtual {v1}, Lorg/json/JSONArray;->length()I
 
@@ -1390,27 +1390,27 @@
     invoke-direct {v4, v2}, Lcom/fusepowered/m1/android/VideoLogEvent;-><init>(Lorg/json/JSONObject;)V
 
     .line 245
-    .local v4, videoLogEvent:Lcom/fusepowered/m1/android/VideoLogEvent;
+    .local v4, "videoLogEvent":Lcom/fusepowered/m1/android/VideoLogEvent;
     iget-object v5, p0, Lcom/fusepowered/m1/android/VideoAd;->activities:Ljava/util/ArrayList;
 
     invoke-virtual {v5, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 239
-    .end local v4           #videoLogEvent:Lcom/fusepowered/m1/android/VideoLogEvent;
+    .end local v4    # "videoLogEvent":Lcom/fusepowered/m1/android/VideoLogEvent;
     :cond_d
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_6
 
     .line 249
-    .end local v0           #i:I
+    .end local v0    # "i":I
     :cond_e
     return-void
 .end method
 
 .method download(Landroid/content/Context;)Z
     .locals 9
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     const/4 v8, 0x1
@@ -1421,13 +1421,13 @@
     const/4 v3, 0x0
 
     .line 302
-    .local v3, success:Z
+    .local v3, "success":Z
     invoke-static {p1}, Lcom/fusepowered/m1/android/AdCache;->getCacheDirectory(Landroid/content/Context;)Ljava/io/File;
 
     move-result-object v1
 
     .line 304
-    .local v1, dir:Ljava/io/File;
+    .local v1, "dir":Ljava/io/File;
     if-eqz v1, :cond_0
 
     invoke-virtual {v1}, Ljava/io/File;->isDirectory()Z
@@ -1493,7 +1493,7 @@
     .line 316
     const/4 v2, 0x0
 
-    .local v2, i:I
+    .local v2, "i":I
     :goto_1
     iget-object v4, p0, Lcom/fusepowered/m1/android/VideoAd;->buttons:Ljava/util/ArrayList;
 
@@ -1513,7 +1513,7 @@
     check-cast v0, Lcom/fusepowered/m1/android/VideoImage;
 
     .line 319
-    .local v0, button:Lcom/fusepowered/m1/android/VideoImage;
+    .local v0, "button":Lcom/fusepowered/m1/android/VideoImage;
     iget-object v4, v0, Lcom/fusepowered/m1/android/VideoImage;->imageUrl:Ljava/lang/String;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -1548,8 +1548,8 @@
     if-nez v3, :cond_5
 
     .line 325
-    .end local v0           #button:Lcom/fusepowered/m1/android/VideoImage;
-    .end local v2           #i:I
+    .end local v0    # "button":Lcom/fusepowered/m1/android/VideoImage;
+    .end local v2    # "i":I
     :cond_2
     if-nez v3, :cond_6
 
@@ -1588,16 +1588,16 @@
     goto :goto_0
 
     .line 316
-    .restart local v0       #button:Lcom/fusepowered/m1/android/VideoImage;
-    .restart local v2       #i:I
+    .restart local v0    # "button":Lcom/fusepowered/m1/android/VideoImage;
+    .restart local v2    # "i":I
     :cond_5
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
     .line 331
-    .end local v0           #button:Lcom/fusepowered/m1/android/VideoImage;
-    .end local v2           #i:I
+    .end local v0    # "button":Lcom/fusepowered/m1/android/VideoImage;
+    .end local v2    # "i":I
     :cond_6
     if-eqz v3, :cond_4
 
@@ -1650,8 +1650,8 @@
 
 .method getVideoExtrasIntent(Landroid/content/Context;J)Landroid/content/Intent;
     .locals 4
-    .parameter "context"
-    .parameter "adImplInternalId"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "adImplInternalId"    # J
 
     .prologue
     .line 497
@@ -1660,7 +1660,7 @@
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
     .line 498
-    .local v0, intent:Landroid/content/Intent;
+    .local v0, "intent":Landroid/content/Intent;
     const-string v2, "videoId"
 
     invoke-virtual {p0}, Lcom/fusepowered/m1/android/VideoAd;->getId()Ljava/lang/String;
@@ -1722,7 +1722,7 @@
     move-result-object v1
 
     .line 502
-    .local v1, internalVideoAd:Ljava/lang/String;
+    .local v1, "internalVideoAd":Ljava/lang/String;
     invoke-static {v1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v2
@@ -1744,7 +1744,7 @@
 
     move-result-object v1
 
-    .local v1, i$:Ljava/util/Iterator;
+    .local v1, "i$":Ljava/util/Iterator;
     :cond_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
@@ -1759,7 +1759,7 @@
     check-cast v0, Lcom/fusepowered/m1/android/VideoImage;
 
     .line 714
-    .local v0, button:Lcom/fusepowered/m1/android/VideoImage;
+    .local v0, "button":Lcom/fusepowered/m1/android/VideoImage;
     iget-boolean v2, v0, Lcom/fusepowered/m1/android/VideoImage;->isLeaveBehind:Z
 
     if-eqz v2, :cond_0
@@ -1768,7 +1768,7 @@
     const/4 v2, 0x1
 
     .line 719
-    .end local v0           #button:Lcom/fusepowered/m1/android/VideoImage;
+    .end local v0    # "button":Lcom/fusepowered/m1/android/VideoImage;
     :goto_0
     return v2
 
@@ -1780,20 +1780,20 @@
 
 .method isOnDisk(Landroid/content/Context;)Z
     .locals 9
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     .line 421
     const/4 v2, 0x0
 
     .line 424
-    .local v2, existsInFilesystem:Z
+    .local v2, "existsInFilesystem":Z
     invoke-static {p1}, Lcom/fusepowered/m1/android/AdCache;->getCacheDirectory(Landroid/content/Context;)Ljava/io/File;
 
     move-result-object v0
 
     .line 427
-    .local v0, adDir:Ljava/io/File;
+    .local v0, "adDir":Ljava/io/File;
     if-eqz v0, :cond_1
 
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
@@ -1812,7 +1812,7 @@
     move-result-object v5
 
     .line 430
-    .local v5, list:[Ljava/lang/String;
+    .local v5, "list":[Ljava/lang/String;
     if-eqz v5, :cond_0
 
     array-length v7, v5
@@ -1860,7 +1860,7 @@
     invoke-direct {v6, v0, v7}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
     .line 435
-    .local v6, videoFile:Ljava/io/File;
+    .local v6, "videoFile":Ljava/io/File;
     invoke-virtual {v6}, Ljava/io/File;->exists()Z
 
     move-result v7
@@ -1871,15 +1871,15 @@
     const/4 v2, 0x0
 
     .line 453
-    .end local v5           #list:[Ljava/lang/String;
-    .end local v6           #videoFile:Ljava/io/File;
+    .end local v5    # "list":[Ljava/lang/String;
+    .end local v6    # "videoFile":Ljava/io/File;
     :cond_1
     :goto_0
     return v2
 
     .line 441
-    .restart local v5       #list:[Ljava/lang/String;
-    .restart local v6       #videoFile:Ljava/io/File;
+    .restart local v5    # "list":[Ljava/lang/String;
+    .restart local v6    # "videoFile":Ljava/io/File;
     :cond_2
     iget-object v7, p0, Lcom/fusepowered/m1/android/VideoAd;->buttons:Ljava/util/ArrayList;
 
@@ -1887,7 +1887,7 @@
 
     move-result-object v3
 
-    .local v3, i$:Ljava/util/Iterator;
+    .local v3, "i$":Ljava/util/Iterator;
     :cond_3
     invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
 
@@ -1902,7 +1902,7 @@
     check-cast v1, Lcom/fusepowered/m1/android/VideoImage;
 
     .line 443
-    .local v1, button:Lcom/fusepowered/m1/android/VideoImage;
+    .local v1, "button":Lcom/fusepowered/m1/android/VideoImage;
     new-instance v4, Ljava/io/File;
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -1932,7 +1932,7 @@
     invoke-direct {v4, v0, v7}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
     .line 444
-    .local v4, imageFile:Ljava/io/File;
+    .local v4, "imageFile":Ljava/io/File;
     invoke-virtual {v4}, Ljava/io/File;->exists()Z
 
     move-result v7
@@ -1963,7 +1963,7 @@
     .line 665
     const/4 v0, 0x0
 
-    .local v0, i:I
+    .local v0, "i":I
     :goto_0
     iget-object v1, p0, Lcom/fusepowered/m1/android/VideoAd;->startActivity:[Ljava/lang/String;
 
@@ -1984,7 +1984,7 @@
     goto :goto_0
 
     .line 668
-    .end local v0           #i:I
+    .end local v0    # "i":I
     :cond_0
     return-void
 .end method
@@ -2006,7 +2006,7 @@
     .line 679
     const/4 v0, 0x0
 
-    .local v0, i:I
+    .local v0, "i":I
     :goto_0
     iget-object v1, p0, Lcom/fusepowered/m1/android/VideoAd;->endActivity:[Ljava/lang/String;
 
@@ -2027,14 +2027,14 @@
     goto :goto_0
 
     .line 682
-    .end local v0           #i:I
+    .end local v0    # "i":I
     :cond_0
     return-void
 .end method
 
 .method public readExternal(Ljava/io/ObjectInput;)V
     .locals 6
-    .parameter "input"
+    .param p1, "input"    # Ljava/io/ObjectInput;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -2125,7 +2125,7 @@
     move-result v0
 
     .line 575
-    .local v0, count:I
+    .local v0, "count":I
     new-array v4, v0, [Ljava/lang/String;
 
     iput-object v4, p0, Lcom/fusepowered/m1/android/VideoAd;->startActivity:[Ljava/lang/String;
@@ -2133,7 +2133,7 @@
     .line 576
     const/4 v1, 0x0
 
-    .local v1, i:I
+    .local v1, "i":I
     :goto_0
     if-ge v1, v0, :cond_0
 
@@ -2338,7 +2338,7 @@
     check-cast v2, Lcom/fusepowered/m1/android/VideoImage;
 
     .line 604
-    .local v2, videoImage:Lcom/fusepowered/m1/android/VideoImage;
+    .local v2, "videoImage":Lcom/fusepowered/m1/android/VideoImage;
     iget-object v4, p0, Lcom/fusepowered/m1/android/VideoAd;->buttons:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -2349,7 +2349,7 @@
     goto :goto_5
 
     .line 607
-    .end local v2           #videoImage:Lcom/fusepowered/m1/android/VideoImage;
+    .end local v2    # "videoImage":Lcom/fusepowered/m1/android/VideoImage;
     :cond_5
     iget-object v4, p0, Lcom/fusepowered/m1/android/VideoAd;->activities:Ljava/util/ArrayList;
 
@@ -2374,7 +2374,7 @@
     check-cast v3, Lcom/fusepowered/m1/android/VideoLogEvent;
 
     .line 612
-    .local v3, videoLogEvent:Lcom/fusepowered/m1/android/VideoLogEvent;
+    .local v3, "videoLogEvent":Lcom/fusepowered/m1/android/VideoLogEvent;
     iget-object v4, p0, Lcom/fusepowered/m1/android/VideoAd;->activities:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -2385,14 +2385,14 @@
     goto :goto_6
 
     .line 614
-    .end local v3           #videoLogEvent:Lcom/fusepowered/m1/android/VideoLogEvent;
+    .end local v3    # "videoLogEvent":Lcom/fusepowered/m1/android/VideoLogEvent;
     :cond_6
     return-void
 .end method
 
 .method saveAssets(Landroid/content/Context;)Z
     .locals 1
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     .line 266
@@ -2403,7 +2403,7 @@
 
 .method setDtoCachedVideo(Lcom/fusepowered/m1/android/DTOCachedVideo;)V
     .locals 0
-    .parameter "dto"
+    .param p1, "dto"    # Lcom/fusepowered/m1/android/DTOCachedVideo;
 
     .prologue
     .line 707
@@ -2415,8 +2415,8 @@
 
 .method show(Landroid/content/Context;J)V
     .locals 1
-    .parameter "context"
-    .parameter "adImplInternalId"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "adImplInternalId"    # J
 
     .prologue
     .line 492
@@ -2432,7 +2432,7 @@
 
 .method public writeExternal(Ljava/io/ObjectOutput;)V
     .locals 12
-    .parameter "output"
+    .param p1, "output"    # Ljava/io/ObjectOutput;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -2498,20 +2498,20 @@
     .line 630
     iget-object v0, p0, Lcom/fusepowered/m1/android/VideoAd;->startActivity:[Ljava/lang/String;
 
-    .local v0, arr$:[Ljava/lang/String;
+    .local v0, "arr$":[Ljava/lang/String;
     array-length v6, v0
 
-    .local v6, len$:I
+    .local v6, "len$":I
     const/4 v5, 0x0
 
-    .local v5, i$:I
+    .local v5, "i$":I
     :goto_0
     if-ge v5, v6, :cond_0
 
     aget-object v8, v0, v5
 
     .line 631
-    .local v8, sa:Ljava/lang/String;
+    .local v8, "sa":Ljava/lang/String;
     invoke-interface {p1, v8}, Ljava/io/ObjectOutput;->writeObject(Ljava/lang/Object;)V
 
     .line 630
@@ -2520,7 +2520,7 @@
     goto :goto_0
 
     .line 632
-    .end local v8           #sa:Ljava/lang/String;
+    .end local v8    # "sa":Ljava/lang/String;
     :cond_0
     iget-object v10, p0, Lcom/fusepowered/m1/android/VideoAd;->endActivity:[Ljava/lang/String;
 
@@ -2541,7 +2541,7 @@
     aget-object v4, v0, v5
 
     .line 634
-    .local v4, ea:Ljava/lang/String;
+    .local v4, "ea":Ljava/lang/String;
     invoke-interface {p1, v4}, Ljava/io/ObjectOutput;->writeObject(Ljava/lang/Object;)V
 
     .line 633
@@ -2550,7 +2550,7 @@
     goto :goto_1
 
     .line 635
-    .end local v4           #ea:Ljava/lang/String;
+    .end local v4    # "ea":Ljava/lang/String;
     :cond_1
     iget-wide v10, p0, Lcom/fusepowered/m1/android/VideoAd;->duration:J
 
@@ -2591,7 +2591,7 @@
     aget-object v2, v0, v5
 
     .line 641
-    .local v2, cc:Ljava/lang/String;
+    .local v2, "cc":Ljava/lang/String;
     invoke-interface {p1, v2}, Ljava/io/ObjectOutput;->writeObject(Ljava/lang/Object;)V
 
     .line 640
@@ -2600,7 +2600,7 @@
     goto :goto_2
 
     .line 642
-    .end local v2           #cc:Ljava/lang/String;
+    .end local v2    # "cc":Ljava/lang/String;
     :cond_2
     iget-object v10, p0, Lcom/fusepowered/m1/android/VideoAd;->cacheFailed:[Ljava/lang/String;
 
@@ -2621,7 +2621,7 @@
     aget-object v3, v0, v5
 
     .line 644
-    .local v3, cf:Ljava/lang/String;
+    .local v3, "cf":Ljava/lang/String;
     invoke-interface {p1, v3}, Ljava/io/ObjectOutput;->writeObject(Ljava/lang/Object;)V
 
     .line 643
@@ -2630,7 +2630,7 @@
     goto :goto_3
 
     .line 645
-    .end local v3           #cf:Ljava/lang/String;
+    .end local v3    # "cf":Ljava/lang/String;
     :cond_3
     iget-object v10, p0, Lcom/fusepowered/m1/android/VideoAd;->videoError:[Ljava/lang/String;
 
@@ -2651,7 +2651,7 @@
     aget-object v9, v0, v5
 
     .line 647
-    .local v9, ve:Ljava/lang/String;
+    .local v9, "ve":Ljava/lang/String;
     invoke-interface {p1, v9}, Ljava/io/ObjectOutput;->writeObject(Ljava/lang/Object;)V
 
     .line 646
@@ -2660,7 +2660,7 @@
     goto :goto_4
 
     .line 648
-    .end local v9           #ve:Ljava/lang/String;
+    .end local v9    # "ve":Ljava/lang/String;
     :cond_4
     iget-object v10, p0, Lcom/fusepowered/m1/android/VideoAd;->buttons:Ljava/util/ArrayList;
 
@@ -2677,7 +2677,7 @@
 
     move-result-object v5
 
-    .local v5, i$:Ljava/util/Iterator;
+    .local v5, "i$":Ljava/util/Iterator;
     :goto_5
     invoke-interface {v5}, Ljava/util/Iterator;->hasNext()Z
 
@@ -2692,13 +2692,13 @@
     check-cast v1, Lcom/fusepowered/m1/android/VideoImage;
 
     .line 650
-    .local v1, button:Lcom/fusepowered/m1/android/VideoImage;
+    .local v1, "button":Lcom/fusepowered/m1/android/VideoImage;
     invoke-interface {p1, v1}, Ljava/io/ObjectOutput;->writeObject(Ljava/lang/Object;)V
 
     goto :goto_5
 
     .line 651
-    .end local v1           #button:Lcom/fusepowered/m1/android/VideoImage;
+    .end local v1    # "button":Lcom/fusepowered/m1/android/VideoImage;
     :cond_5
     iget-object v10, p0, Lcom/fusepowered/m1/android/VideoAd;->activities:Ljava/util/ArrayList;
 
@@ -2729,21 +2729,21 @@
     check-cast v7, Lcom/fusepowered/m1/android/VideoLogEvent;
 
     .line 653
-    .local v7, logEvent:Lcom/fusepowered/m1/android/VideoLogEvent;
+    .local v7, "logEvent":Lcom/fusepowered/m1/android/VideoLogEvent;
     invoke-interface {p1, v7}, Ljava/io/ObjectOutput;->writeObject(Ljava/lang/Object;)V
 
     goto :goto_6
 
     .line 654
-    .end local v7           #logEvent:Lcom/fusepowered/m1/android/VideoLogEvent;
+    .end local v7    # "logEvent":Lcom/fusepowered/m1/android/VideoLogEvent;
     :cond_6
     return-void
 .end method
 
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 3
-    .parameter "dest"
-    .parameter "flags"
+    .param p1, "dest"    # Landroid/os/Parcel;
+    .param p2, "flags"    # I
 
     .prologue
     .line 517

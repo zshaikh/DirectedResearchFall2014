@@ -26,8 +26,8 @@
 # direct methods
 .method public constructor <init>(Lcom/tapjoy/mraid/view/MraidView;Landroid/content/Context;)V
     .locals 3
-    .parameter "adView"
-    .parameter "c"
+    .param p1, "adView"    # Lcom/tapjoy/mraid/view/MraidView;
+    .param p2, "c"    # Landroid/content/Context;
 
     .prologue
     const/4 v2, -0x1
@@ -55,7 +55,7 @@
     invoke-direct {v0}, Landroid/util/DisplayMetrics;-><init>()V
 
     .line 57
-    .local v0, metrics:Landroid/util/DisplayMetrics;
+    .local v0, "metrics":Landroid/util/DisplayMetrics;
     const-string v1, "window"
 
     invoke-virtual {p2, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -86,7 +86,7 @@
 
 .method private getDeviceDimensions(Lcom/tapjoy/mraid/controller/Abstract$Dimensions;)Lcom/tapjoy/mraid/controller/Abstract$Dimensions;
     .locals 4
-    .parameter "d"
+    .param p1, "d"    # Lcom/tapjoy/mraid/controller/Abstract$Dimensions;
 
     .prologue
     .line 288
@@ -189,7 +189,7 @@
     new-array v0, v2, [I
 
     .line 297
-    .local v0, loc:[I
+    .local v0, "loc":[I
     iget-object v2, p0, Lcom/tapjoy/mraid/controller/Display;->mMraidView:Lcom/tapjoy/mraid/view/MraidView;
 
     invoke-virtual {v2, v0}, Lcom/tapjoy/mraid/view/MraidView;->getLocationInWindow([I)V
@@ -216,7 +216,7 @@
     const/4 v1, 0x0
 
     .line 302
-    .local v1, topStuff:I
+    .local v1, "topStuff":I
     const/4 v2, 0x1
 
     aget v2, v0, v2
@@ -226,7 +226,7 @@
     iput v2, p1, Lcom/tapjoy/mraid/controller/Abstract$Dimensions;->y:I
 
     .line 304
-    .end local v1           #topStuff:I
+    .end local v1    # "topStuff":I
     :cond_3
     return-object p1
 .end method
@@ -395,8 +395,8 @@
 
 .method public expand(Ljava/lang/String;Ljava/lang/String;)V
     .locals 8
-    .parameter "URL"
-    .parameter "properties"
+    .param p1, "URL"    # Ljava/lang/String;
+    .param p2, "properties"    # Ljava/lang/String;
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 
@@ -445,13 +445,13 @@
     invoke-direct {v3, p2}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
     .line 323
-    .local v3, propertiesJSON:Lorg/json/JSONObject;
+    .local v3, "propertiesJSON":Lorg/json/JSONObject;
     new-instance v1, Lorg/json/JSONObject;
 
     invoke-direct {v1}, Lorg/json/JSONObject;-><init>()V
 
     .line 324
-    .local v1, dimensions:Lorg/json/JSONObject;
+    .local v1, "dimensions":Lorg/json/JSONObject;
     const-string v4, "width"
 
     const-string v5, "width"
@@ -497,7 +497,7 @@
     check-cast v0, Lcom/tapjoy/mraid/controller/Abstract$Dimensions;
 
     .line 332
-    .local v0, d:Lcom/tapjoy/mraid/controller/Abstract$Dimensions;
+    .local v0, "d":Lcom/tapjoy/mraid/controller/Abstract$Dimensions;
     iget-object v4, p0, Lcom/tapjoy/mraid/controller/Display;->mMraidView:Lcom/tapjoy/mraid/view/MraidView;
 
     invoke-direct {p0, v0}, Lcom/tapjoy/mraid/controller/Display;->getDeviceDimensions(Lcom/tapjoy/mraid/controller/Abstract$Dimensions;)Lcom/tapjoy/mraid/controller/Abstract$Dimensions;
@@ -514,7 +514,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/tapjoy/mraid/controller/Display;
     check-cast p0, Lcom/tapjoy/mraid/controller/Abstract$Properties;
 
     invoke-virtual {v4, v5, p1, p0}, Lcom/tapjoy/mraid/view/MraidView;->expand(Lcom/tapjoy/mraid/controller/Abstract$Dimensions;Ljava/lang/String;Lcom/tapjoy/mraid/controller/Abstract$Properties;)V
@@ -526,9 +526,9 @@
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_4
 
     .line 354
-    .end local v0           #d:Lcom/tapjoy/mraid/controller/Abstract$Dimensions;
-    .end local v1           #dimensions:Lorg/json/JSONObject;
-    .end local v3           #propertiesJSON:Lorg/json/JSONObject;
+    .end local v0    # "d":Lcom/tapjoy/mraid/controller/Abstract$Dimensions;
+    .end local v1    # "dimensions":Lorg/json/JSONObject;
+    .end local v3    # "propertiesJSON":Lorg/json/JSONObject;
     :goto_0
     return-void
 
@@ -539,59 +539,59 @@
     move-object v2, v4
 
     .line 340
-    .local v2, e:Ljava/lang/NumberFormatException;
+    .local v2, "e":Ljava/lang/NumberFormatException;
     invoke-virtual {v2}, Ljava/lang/NumberFormatException;->printStackTrace()V
 
     goto :goto_0
 
     .line 341
-    .end local v2           #e:Ljava/lang/NumberFormatException;
+    .end local v2    # "e":Ljava/lang/NumberFormatException;
     :catch_1
     move-exception v4
 
     move-object v2, v4
 
     .line 343
-    .local v2, e:Ljava/lang/NullPointerException;
+    .local v2, "e":Ljava/lang/NullPointerException;
     invoke-virtual {v2}, Ljava/lang/NullPointerException;->printStackTrace()V
 
     goto :goto_0
 
     .line 344
-    .end local v2           #e:Ljava/lang/NullPointerException;
+    .end local v2    # "e":Ljava/lang/NullPointerException;
     :catch_2
     move-exception v4
 
     move-object v2, v4
 
     .line 346
-    .local v2, e:Ljava/lang/IllegalAccessException;
+    .local v2, "e":Ljava/lang/IllegalAccessException;
     invoke-virtual {v2}, Ljava/lang/IllegalAccessException;->printStackTrace()V
 
     goto :goto_0
 
     .line 347
-    .end local v2           #e:Ljava/lang/IllegalAccessException;
+    .end local v2    # "e":Ljava/lang/IllegalAccessException;
     :catch_3
     move-exception v4
 
     move-object v2, v4
 
     .line 349
-    .local v2, e:Ljava/lang/InstantiationException;
+    .local v2, "e":Ljava/lang/InstantiationException;
     invoke-virtual {v2}, Ljava/lang/InstantiationException;->printStackTrace()V
 
     goto :goto_0
 
     .line 350
-    .end local v2           #e:Ljava/lang/InstantiationException;
+    .end local v2    # "e":Ljava/lang/InstantiationException;
     :catch_4
     move-exception v4
 
     move-object v2, v4
 
     .line 352
-    .local v2, e:Lorg/json/JSONException;
+    .local v2, "e":Lorg/json/JSONException;
     invoke-virtual {v2}, Lorg/json/JSONException;->printStackTrace()V
 
     goto :goto_0
@@ -679,11 +679,11 @@
     move-result v0
 
     .line 412
-    .local v0, orientation:I
+    .local v0, "orientation":I
     const/4 v1, -0x1
 
     .line 413
-    .local v1, ret:I
+    .local v1, "ret":I
     packed-switch v0, :pswitch_data_0
 
     .line 430
@@ -760,7 +760,7 @@
     invoke-direct {v0}, Landroid/util/DisplayMetrics;-><init>()V
 
     .line 441
-    .local v0, metrics:Landroid/util/DisplayMetrics;
+    .local v0, "metrics":Landroid/util/DisplayMetrics;
     iget-object v1, p0, Lcom/tapjoy/mraid/controller/Display;->mWindowManager:Landroid/view/WindowManager;
 
     invoke-interface {v1}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
@@ -907,7 +907,7 @@
 
 .method public logHTML(Ljava/lang/String;)V
     .locals 1
-    .parameter "html"
+    .param p1, "html"    # Ljava/lang/String;
 
     .prologue
     .line 505
@@ -921,7 +921,7 @@
 
 .method public onOrientationChanged(I)V
     .locals 3
-    .parameter "orientation"
+    .param p1, "orientation"    # I
 
     .prologue
     .line 492
@@ -950,7 +950,7 @@
     move-result-object v0
 
     .line 494
-    .local v0, script:Ljava/lang/String;
+    .local v0, "script":Ljava/lang/String;
     const-string v1, "MRAID Display"
 
     invoke-static {v1, v0}, Lcom/tapjoy/TapjoyLog;->d(Ljava/lang/String;Ljava/lang/String;)V
@@ -966,10 +966,10 @@
 
 .method public open(Ljava/lang/String;ZZZ)V
     .locals 7
-    .parameter "url"
-    .parameter "back"
-    .parameter "forward"
-    .parameter "refresh"
+    .param p1, "url"    # Ljava/lang/String;
+    .param p2, "back"    # Z
+    .param p3, "forward"    # Z
+    .param p4, "refresh"    # Z
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 
@@ -1057,7 +1057,7 @@
     invoke-direct {v1, v3, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
     .line 119
-    .local v1, intent:Landroid/content/Intent;
+    .local v1, "intent":Landroid/content/Intent;
     iget-object v3, p0, Lcom/tapjoy/mraid/controller/Display;->context:Landroid/content/Context;
 
     invoke-virtual {v3}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -1071,7 +1071,7 @@
     move-result-object v2
 
     .line 122
-    .local v2, resInfo:Ljava/util/List;,"Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
+    .local v2, "resInfo":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     invoke-interface {v2}, Ljava/util/List;->size()I
 
     move-result v3
@@ -1084,16 +1084,16 @@
     invoke-virtual {v3, v1}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
 
     .line 144
-    .end local v1           #intent:Landroid/content/Intent;
-    .end local v2           #resInfo:Ljava/util/List;,"Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
-    .end local p0
+    .end local v1    # "intent":Landroid/content/Intent;
+    .end local v2    # "resInfo":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
+    .end local p0    # "this":Lcom/tapjoy/mraid/controller/Display;
     :goto_0
     return-void
 
     .line 128
-    .restart local v1       #intent:Landroid/content/Intent;
-    .restart local v2       #resInfo:Ljava/util/List;,"Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
-    .restart local p0
+    .restart local v1    # "intent":Landroid/content/Intent;
+    .restart local v2    # "resInfo":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
+    .restart local p0    # "this":Lcom/tapjoy/mraid/controller/Display;
     :cond_0
     invoke-interface {v2}, Ljava/util/List;->size()I
 
@@ -1109,10 +1109,10 @@
     move-result-object v0
 
     .line 131
-    .local v0, i:Landroid/content/Intent;
+    .local v0, "i":Landroid/content/Intent;
     iget-object p0, p0, Lcom/tapjoy/mraid/controller/Display;->context:Landroid/content/Context;
 
-    .end local p0
+    .end local p0    # "this":Lcom/tapjoy/mraid/controller/Display;
     check-cast p0, Landroid/app/Activity;
 
     invoke-virtual {p0, v0}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
@@ -1120,8 +1120,8 @@
     goto :goto_0
 
     .line 136
-    .end local v0           #i:Landroid/content/Intent;
-    .restart local p0
+    .end local v0    # "i":Landroid/content/Intent;
+    .restart local p0    # "this":Lcom/tapjoy/mraid/controller/Display;
     :cond_1
     iget-object v3, p0, Lcom/tapjoy/mraid/controller/Display;->mMraidView:Lcom/tapjoy/mraid/view/MraidView;
 
@@ -1134,8 +1134,8 @@
     goto :goto_0
 
     .line 141
-    .end local v1           #intent:Landroid/content/Intent;
-    .end local v2           #resInfo:Ljava/util/List;,"Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
+    .end local v1    # "intent":Landroid/content/Intent;
+    .end local v2    # "resInfo":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     :cond_2
     iget-object v3, p0, Lcom/tapjoy/mraid/controller/Display;->mMraidView:Lcom/tapjoy/mraid/view/MraidView;
 
@@ -1146,8 +1146,8 @@
 
 .method public openMap(Ljava/lang/String;Z)V
     .locals 3
-    .parameter "url"
-    .parameter "fullscreen"
+    .param p1, "url"    # Ljava/lang/String;
+    .param p2, "fullscreen"    # Z
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 
@@ -1186,13 +1186,13 @@
 
 .method public playAudio(Ljava/lang/String;ZZZZLjava/lang/String;Ljava/lang/String;)V
     .locals 8
-    .parameter "url"
-    .parameter "autoPlay"
-    .parameter "controls"
-    .parameter "loop"
-    .parameter "position"
-    .parameter "startStyle"
-    .parameter "stopStyle"
+    .param p1, "url"    # Ljava/lang/String;
+    .param p2, "autoPlay"    # Z
+    .param p3, "controls"    # Z
+    .param p4, "loop"    # Z
+    .param p5, "position"    # Z
+    .param p6, "startStyle"    # Ljava/lang/String;
+    .param p7, "stopStyle"    # Ljava/lang/String;
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 
@@ -1325,14 +1325,14 @@
 
 .method public playVideo(Ljava/lang/String;ZZZZ[ILjava/lang/String;Ljava/lang/String;)V
     .locals 18
-    .parameter "url"
-    .parameter "audioMuted"
-    .parameter "autoPlay"
-    .parameter "controls"
-    .parameter "loop"
-    .parameter "position"
-    .parameter "startStyle"
-    .parameter "stopStyle"
+    .param p1, "url"    # Ljava/lang/String;
+    .param p2, "audioMuted"    # Z
+    .param p3, "autoPlay"    # Z
+    .param p4, "controls"    # Z
+    .param p5, "loop"    # Z
+    .param p6, "position"    # [I
+    .param p7, "startStyle"    # Ljava/lang/String;
+    .param p8, "stopStyle"    # Ljava/lang/String;
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 
@@ -1508,7 +1508,7 @@
     const/4 v9, 0x0
 
     .line 248
-    .local v9, d:Lcom/tapjoy/mraid/controller/Abstract$Dimensions;
+    .local v9, "d":Lcom/tapjoy/mraid/controller/Abstract$Dimensions;
     const/4 v3, 0x0
 
     aget v3, p6, v3
@@ -1520,11 +1520,11 @@
     .line 249
     new-instance v9, Lcom/tapjoy/mraid/controller/Abstract$Dimensions;
 
-    .end local v9           #d:Lcom/tapjoy/mraid/controller/Abstract$Dimensions;
+    .end local v9    # "d":Lcom/tapjoy/mraid/controller/Abstract$Dimensions;
     invoke-direct {v9}, Lcom/tapjoy/mraid/controller/Abstract$Dimensions;-><init>()V
 
     .line 250
-    .restart local v9       #d:Lcom/tapjoy/mraid/controller/Abstract$Dimensions;
+    .restart local v9    # "d":Lcom/tapjoy/mraid/controller/Abstract$Dimensions;
     const/4 v3, 0x0
 
     aget v3, p6, v3
@@ -1566,11 +1566,11 @@
     const/4 v15, 0x0
 
     .line 258
-    .local v15, fileName:Ljava/lang/String;
+    .local v15, "fileName":Ljava/lang/String;
     const/4 v14, 0x0
 
     .line 260
-    .local v14, field:I
+    .local v14, "field":I
     const-string v3, "android.resource"
 
     move-object/from16 v0, p1
@@ -1597,7 +1597,7 @@
     add-int/lit8 v17, v3, 0x1
 
     .line 263
-    .local v17, start:I
+    .local v17, "start":I
     const-string v3, "."
 
     move-object/from16 v0, p1
@@ -1609,7 +1609,7 @@
     move-result v13
 
     .line 264
-    .local v13, end:I
+    .local v13, "end":I
     move-object/from16 v0, p1
 
     move/from16 v1, v17
@@ -1649,7 +1649,7 @@
     move-result-object v16
 
     .line 272
-    .local v16, packageName:Ljava/lang/String;
+    .local v16, "packageName":Ljava/lang/String;
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1683,9 +1683,9 @@
     move-result-object p1
 
     .line 276
-    .end local v13           #end:I
-    .end local v16           #packageName:Ljava/lang/String;
-    .end local v17           #start:I
+    .end local v13    # "end":I
+    .end local v16    # "packageName":Ljava/lang/String;
+    .end local v17    # "start":I
     :cond_1
     move-object/from16 v0, p0
 
@@ -1713,15 +1713,15 @@
     return-void
 
     .line 267
-    .restart local v13       #end:I
-    .restart local v17       #start:I
+    .restart local v13    # "end":I
+    .restart local v17    # "start":I
     :catch_0
     move-exception v3
 
     move-object v12, v3
 
     .line 269
-    .local v12, e:Ljava/lang/Exception;
+    .local v12, "e":Ljava/lang/Exception;
     invoke-virtual {v12}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0
@@ -1729,7 +1729,7 @@
 
 .method public resize(Ljava/lang/String;)V
     .locals 11
-    .parameter "properties"
+    .param p1, "properties"    # Ljava/lang/String;
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 
@@ -1737,32 +1737,32 @@
     .line 75
     const/4 v9, 0x0
 
-    .local v9, width:I
+    .local v9, "width":I
     const/4 v7, 0x0
 
-    .local v7, height:I
+    .local v7, "height":I
     const/4 v3, 0x0
 
-    .local v3, offsetX:I
+    .local v3, "offsetX":I
     const/4 v4, 0x0
 
     .line 76
-    .local v4, offsetY:I
+    .local v4, "offsetY":I
     const/4 v5, 0x0
 
     .line 77
-    .local v5, customClosePosition:Ljava/lang/String;
+    .local v5, "customClosePosition":Ljava/lang/String;
     const/4 v6, 0x1
 
     .line 81
-    .local v6, allowOffScreen:Z
+    .local v6, "allowOffScreen":Z
     :try_start_0
     new-instance v8, Lorg/json/JSONObject;
 
     invoke-direct {v8, p1}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
     .line 82
-    .local v8, propertiesJSON:Lorg/json/JSONObject;
+    .local v8, "propertiesJSON":Lorg/json/JSONObject;
     const-string v0, "width"
 
     invoke-virtual {v8, v0}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
@@ -1807,7 +1807,7 @@
     move-result v6
 
     .line 91
-    .end local v8           #propertiesJSON:Lorg/json/JSONObject;
+    .end local v8    # "propertiesJSON":Lorg/json/JSONObject;
     :goto_0
     iget-object v0, p0, Lcom/tapjoy/mraid/controller/Display;->mMraidView:Lcom/tapjoy/mraid/view/MraidView;
 
@@ -1841,8 +1841,8 @@
 
 .method public setMaxSize(II)V
     .locals 3
-    .parameter "w"
-    .parameter "h"
+    .param p1, "w"    # I
+    .param p2, "h"    # I
 
     .prologue
     .line 479
@@ -1895,8 +1895,8 @@
 
 .method public setOrientationProperties(ZLjava/lang/String;)V
     .locals 3
-    .parameter "allowOrientationChange"
-    .parameter "forceOrientation"
+    .param p1, "allowOrientationChange"    # Z
+    .param p2, "forceOrientation"    # Ljava/lang/String;
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 
@@ -2056,7 +2056,7 @@
 
 .method public useCustomClose(Z)V
     .locals 1
-    .parameter "input"
+    .param p1, "input"    # Z
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 

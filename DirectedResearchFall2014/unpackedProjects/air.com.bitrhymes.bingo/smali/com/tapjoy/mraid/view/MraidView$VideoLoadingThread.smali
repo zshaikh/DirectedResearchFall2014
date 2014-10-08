@@ -30,7 +30,6 @@
 # direct methods
 .method public constructor <init>(Lcom/tapjoy/mraid/view/MraidView;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1302
@@ -51,12 +50,12 @@
     const/4 v0, 0x0
 
     .line 1310
-    .local v0, elapsed:I
+    .local v0, "elapsed":I
     :cond_0
     :goto_0
     iget-object v1, p0, Lcom/tapjoy/mraid/view/MraidView$VideoLoadingThread;->this$0:Lcom/tapjoy/mraid/view/MraidView;
 
-    #getter for: Lcom/tapjoy/mraid/view/MraidView;->videoView:Landroid/widget/VideoView;
+    # getter for: Lcom/tapjoy/mraid/view/MraidView;->videoView:Landroid/widget/VideoView;
     invoke-static {v1}, Lcom/tapjoy/mraid/view/MraidView;->access$1600(Lcom/tapjoy/mraid/view/MraidView;)Landroid/widget/VideoView;
 
     move-result-object v1
@@ -65,7 +64,7 @@
 
     iget-object v1, p0, Lcom/tapjoy/mraid/view/MraidView$VideoLoadingThread;->this$0:Lcom/tapjoy/mraid/view/MraidView;
 
-    #getter for: Lcom/tapjoy/mraid/view/MraidView;->videoView:Landroid/widget/VideoView;
+    # getter for: Lcom/tapjoy/mraid/view/MraidView;->videoView:Landroid/widget/VideoView;
     invoke-static {v1}, Lcom/tapjoy/mraid/view/MraidView;->access$1600(Lcom/tapjoy/mraid/view/MraidView;)Landroid/widget/VideoView;
 
     move-result-object v1
@@ -96,7 +95,7 @@
     :cond_1
     iget-object v1, p0, Lcom/tapjoy/mraid/view/MraidView$VideoLoadingThread;->this$0:Lcom/tapjoy/mraid/view/MraidView;
 
-    #getter for: Lcom/tapjoy/mraid/view/MraidView;->ctx:Landroid/content/Context;
+    # getter for: Lcom/tapjoy/mraid/view/MraidView;->ctx:Landroid/content/Context;
     invoke-static {v1}, Lcom/tapjoy/mraid/view/MraidView;->access$1500(Lcom/tapjoy/mraid/view/MraidView;)Landroid/content/Context;
 
     move-result-object v1

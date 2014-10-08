@@ -46,7 +46,7 @@
 # virtual methods
 .method public asDouble(D)D
     .locals 2
-    .parameter "defaultValue"
+    .param p1, "defaultValue"    # D
 
     .prologue
     .line 43
@@ -57,7 +57,7 @@
 
 .method public asInt(I)I
     .locals 1
-    .parameter "defaultValue"
+    .param p1, "defaultValue"    # I
 
     .prologue
     .line 35
@@ -68,7 +68,7 @@
 
 .method public asLong(J)J
     .locals 2
-    .parameter "defaultValue"
+    .param p1, "defaultValue"    # J
 
     .prologue
     .line 39
@@ -99,7 +99,7 @@
 
 .method public equals(Ljava/lang/Object;)Z
     .locals 1
-    .parameter "o"
+    .param p1, "o"    # Ljava/lang/Object;
 
     .prologue
     .line 56
@@ -128,8 +128,8 @@
 
 .method public final serialize(Lcom/flurry/org/codehaus/jackson/JsonGenerator;Lcom/flurry/org/codehaus/jackson/map/SerializerProvider;)V
     .locals 0
-    .parameter "jg"
-    .parameter "provider"
+    .param p1, "jg"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator;
+    .param p2, "provider"    # Lcom/flurry/org/codehaus/jackson/map/SerializerProvider;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,

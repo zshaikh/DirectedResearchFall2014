@@ -26,8 +26,6 @@
 # direct methods
 .method constructor <init>(Lcom/facebook/AuthorizationClient$WebViewAuthHandler;Lcom/facebook/AuthorizationClient$AuthorizationRequest;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 1
@@ -45,8 +43,8 @@
 # virtual methods
 .method public onComplete(Landroid/os/Bundle;Lcom/facebook/FacebookException;)V
     .locals 2
-    .parameter "values"
-    .parameter "error"
+    .param p1, "values"    # Landroid/os/Bundle;
+    .param p2, "error"    # Lcom/facebook/FacebookException;
 
     .prologue
     .line 629

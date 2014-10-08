@@ -29,8 +29,6 @@
 # direct methods
 .method constructor <init>(Lcom/adobe/air/AndroidWebView;Lcom/adobe/air/AndroidWebView;)V
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     const/4 v0, 0x0
@@ -58,9 +56,6 @@
 # virtual methods
 .method public doUpdateVisitedHistory(Landroid/webkit/WebView;Ljava/lang/String;Z)V
     .locals 1
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 553
@@ -88,8 +83,6 @@
 
 .method public onPageFinished(Landroid/webkit/WebView;Ljava/lang/String;)V
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 502
@@ -130,9 +123,6 @@
 
 .method public onPageStarted(Landroid/webkit/WebView;Ljava/lang/String;Landroid/graphics/Bitmap;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 471
@@ -150,10 +140,6 @@
 
 .method public onReceivedError(Landroid/webkit/WebView;ILjava/lang/String;Ljava/lang/String;)V
     .locals 6
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const-string v5, "] "
@@ -270,9 +256,6 @@
 
 .method public onReceivedSslError(Landroid/webkit/WebView;Landroid/webkit/SslErrorHandler;Landroid/net/http/SslError;)V
     .locals 2
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 517
@@ -308,8 +291,6 @@
 
 .method public shouldOverrideUrlLoading(Landroid/webkit/WebView;Ljava/lang/String;)Z
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 488

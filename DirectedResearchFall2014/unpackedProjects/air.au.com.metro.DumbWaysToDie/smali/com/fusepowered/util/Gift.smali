@@ -27,10 +27,10 @@
 
 .method public constructor <init>(ILjava/lang/String;Ljava/lang/String;I)V
     .locals 0
-    .parameter "id"
-    .parameter "name"
-    .parameter "url"
-    .parameter "amount"
+    .param p1, "id"    # I
+    .param p2, "name"    # Ljava/lang/String;
+    .param p3, "url"    # Ljava/lang/String;
+    .param p4, "amount"    # I
 
     .prologue
     .line 13
@@ -96,7 +96,7 @@
 
 .method public setAmount(I)V
     .locals 0
-    .parameter "amount"
+    .param p1, "amount"    # I
 
     .prologue
     .line 49
@@ -108,7 +108,7 @@
 
 .method public setId(I)V
     .locals 0
-    .parameter "id"
+    .param p1, "id"    # I
 
     .prologue
     .line 25
@@ -120,7 +120,7 @@
 
 .method public setName(Ljava/lang/String;)V
     .locals 0
-    .parameter "name"
+    .param p1, "name"    # Ljava/lang/String;
 
     .prologue
     .line 33
@@ -132,7 +132,7 @@
 
 .method public setUrl(Ljava/lang/String;)V
     .locals 0
-    .parameter "url"
+    .param p1, "url"    # Ljava/lang/String;
 
     .prologue
     .line 41
@@ -202,7 +202,7 @@
     move-result-object v0
 
     .line 59
-    .local v0, buf:Ljava/lang/StringBuilder;
+    .local v0, "buf":Ljava/lang/StringBuilder;
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1

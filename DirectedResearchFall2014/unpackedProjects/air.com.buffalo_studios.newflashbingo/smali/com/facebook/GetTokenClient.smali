@@ -6,7 +6,7 @@
 .method constructor <init>(Landroid/content/Context;Ljava/lang/String;)V
     .locals 6
 
-    const/high16 v2, 0x1
+    const/high16 v2, 0x10000
 
     const v3, 0x10001
 

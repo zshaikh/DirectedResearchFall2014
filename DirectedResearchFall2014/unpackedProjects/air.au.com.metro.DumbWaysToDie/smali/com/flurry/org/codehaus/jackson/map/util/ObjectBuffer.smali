@@ -44,10 +44,10 @@
 # virtual methods
 .method protected final _copyTo(Ljava/lang/Object;I[Ljava/lang/Object;I)V
     .locals 7
-    .parameter "resultArray"
-    .parameter "totalSize"
-    .parameter "lastChunk"
-    .parameter "lastChunkEntries"
+    .param p1, "resultArray"    # Ljava/lang/Object;
+    .param p2, "totalSize"    # I
+    .param p3, "lastChunk"    # [Ljava/lang/Object;
+    .param p4, "lastChunkEntries"    # I
 
     .prologue
     const/4 v4, 0x0
@@ -56,10 +56,10 @@
     const/4 v3, 0x0
 
     .line 208
-    .local v3, ptr:I
+    .local v3, "ptr":I
     iget-object v2, p0, Lcom/flurry/org/codehaus/jackson/map/util/ObjectBuffer;->_bufferHead:Lcom/flurry/org/codehaus/jackson/map/util/ObjectBuffer$Node;
 
-    .local v2, n:Lcom/flurry/org/codehaus/jackson/map/util/ObjectBuffer$Node;
+    .local v2, "n":Lcom/flurry/org/codehaus/jackson/map/util/ObjectBuffer$Node;
     :goto_0
     if-eqz v2, :cond_0
 
@@ -69,11 +69,11 @@
     move-result-object v0
 
     .line 210
-    .local v0, curr:[Ljava/lang/Object;
+    .local v0, "curr":[Ljava/lang/Object;
     array-length v1, v0
 
     .line 211
-    .local v1, len:I
+    .local v1, "len":I
     invoke-static {v0, v4, p1, v3, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
     .line 212
@@ -87,8 +87,8 @@
     goto :goto_0
 
     .line 214
-    .end local v0           #curr:[Ljava/lang/Object;
-    .end local v1           #len:I
+    .end local v0    # "curr":[Ljava/lang/Object;
+    .end local v1    # "len":I
     :cond_0
     invoke-static {p3, v4, p1, v3, p4}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
@@ -175,7 +175,7 @@
 
 .method public appendCompletedChunk([Ljava/lang/Object;)[Ljava/lang/Object;
     .locals 3
-    .parameter "fullChunk"
+    .param p1, "fullChunk"    # [Ljava/lang/Object;
 
     .prologue
     .line 96
@@ -184,7 +184,7 @@
     invoke-direct {v1, p1}, Lcom/flurry/org/codehaus/jackson/map/util/ObjectBuffer$Node;-><init>([Ljava/lang/Object;)V
 
     .line 97
-    .local v1, next:Lcom/flurry/org/codehaus/jackson/map/util/ObjectBuffer$Node;
+    .local v1, "next":Lcom/flurry/org/codehaus/jackson/map/util/ObjectBuffer$Node;
     iget-object v2, p0, Lcom/flurry/org/codehaus/jackson/map/util/ObjectBuffer;->_bufferHead:Lcom/flurry/org/codehaus/jackson/map/util/ObjectBuffer$Node;
 
     if-nez v2, :cond_0
@@ -199,7 +199,7 @@
     array-length v0, p1
 
     .line 104
-    .local v0, len:I
+    .local v0, "len":I
     iget v2, p0, Lcom/flurry/org/codehaus/jackson/map/util/ObjectBuffer;->_bufferedEntryCount:I
 
     add-int/2addr v2, v0
@@ -221,7 +221,7 @@
     return-object v2
 
     .line 100
-    .end local v0           #len:I
+    .end local v0    # "len":I
     :cond_0
     iget-object v2, p0, Lcom/flurry/org/codehaus/jackson/map/util/ObjectBuffer;->_bufferTail:Lcom/flurry/org/codehaus/jackson/map/util/ObjectBuffer$Node;
 
@@ -233,7 +233,7 @@
     goto :goto_0
 
     .line 109
-    .restart local v0       #len:I
+    .restart local v0    # "len":I
     :cond_1
     shr-int/lit8 v2, v0, 0x2
 
@@ -254,9 +254,8 @@
 
 .method public completeAndClearBuffer([Ljava/lang/Object;ILjava/util/List;)V
     .locals 5
-    .parameter "lastChunk"
-    .parameter "lastChunkEntries"
-    .parameter
+    .param p1, "lastChunk"    # [Ljava/lang/Object;
+    .param p2, "lastChunkEntries"    # I
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "([",
@@ -271,10 +270,10 @@
 
     .prologue
     .line 157
-    .local p3, resultList:Ljava/util/List;,"Ljava/util/List<Ljava/lang/Object;>;"
+    .local p3, "resultList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Object;>;"
     iget-object v3, p0, Lcom/flurry/org/codehaus/jackson/map/util/ObjectBuffer;->_bufferHead:Lcom/flurry/org/codehaus/jackson/map/util/ObjectBuffer$Node;
 
-    .local v3, n:Lcom/flurry/org/codehaus/jackson/map/util/ObjectBuffer$Node;
+    .local v3, "n":Lcom/flurry/org/codehaus/jackson/map/util/ObjectBuffer$Node;
     :goto_0
     if-eqz v3, :cond_1
 
@@ -284,13 +283,13 @@
     move-result-object v0
 
     .line 159
-    .local v0, curr:[Ljava/lang/Object;
+    .local v0, "curr":[Ljava/lang/Object;
     const/4 v1, 0x0
 
-    .local v1, i:I
+    .local v1, "i":I
     array-length v2, v0
 
-    .local v2, len:I
+    .local v2, "len":I
     :goto_1
     if-ge v1, v2, :cond_0
 
@@ -313,13 +312,13 @@
     goto :goto_0
 
     .line 164
-    .end local v0           #curr:[Ljava/lang/Object;
-    .end local v1           #i:I
-    .end local v2           #len:I
+    .end local v0    # "curr":[Ljava/lang/Object;
+    .end local v1    # "i":I
+    .end local v2    # "len":I
     :cond_1
     const/4 v1, 0x0
 
-    .restart local v1       #i:I
+    .restart local v1    # "i":I
     :goto_2
     if-ge v1, p2, :cond_2
 
@@ -340,8 +339,8 @@
 
 .method public completeAndClearBuffer([Ljava/lang/Object;I)[Ljava/lang/Object;
     .locals 3
-    .parameter "lastChunk"
-    .parameter "lastChunkEntries"
+    .param p1, "lastChunk"    # [Ljava/lang/Object;
+    .param p2, "lastChunkEntries"    # I
 
     .prologue
     .line 126
@@ -350,11 +349,11 @@
     add-int v1, p2, v2
 
     .line 127
-    .local v1, totalSize:I
+    .local v1, "totalSize":I
     new-array v0, v1, [Ljava/lang/Object;
 
     .line 128
-    .local v0, result:[Ljava/lang/Object;
+    .local v0, "result":[Ljava/lang/Object;
     invoke-virtual {p0, v0, v1, p1, p2}, Lcom/flurry/org/codehaus/jackson/map/util/ObjectBuffer;->_copyTo(Ljava/lang/Object;I[Ljava/lang/Object;I)V
 
     .line 129
@@ -363,9 +362,8 @@
 
 .method public completeAndClearBuffer([Ljava/lang/Object;ILjava/lang/Class;)[Ljava/lang/Object;
     .locals 4
-    .parameter "lastChunk"
-    .parameter "lastChunkEntries"
-    .parameter
+    .param p1, "lastChunk"    # [Ljava/lang/Object;
+    .param p2, "lastChunkEntries"    # I
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -380,13 +378,13 @@
 
     .prologue
     .line 142
-    .local p3, componentType:Ljava/lang/Class;,"Ljava/lang/Class<TT;>;"
+    .local p3, "componentType":Ljava/lang/Class;, "Ljava/lang/Class<TT;>;"
     iget v3, p0, Lcom/flurry/org/codehaus/jackson/map/util/ObjectBuffer;->_bufferedEntryCount:I
 
     add-int v2, p2, v3
 
     .line 144
-    .local v2, totalSize:I
+    .local v2, "totalSize":I
     invoke-static {p3, v2}, Ljava/lang/reflect/Array;->newInstance(Ljava/lang/Class;I)Ljava/lang/Object;
 
     move-result-object v3
@@ -400,7 +398,7 @@
     move-object v1, v0
 
     .line 145
-    .local v1, result:[Ljava/lang/Object;,"[TT;"
+    .local v1, "result":[Ljava/lang/Object;, "[TT;"
     invoke-virtual {p0, v1, v2, p1, p2}, Lcom/flurry/org/codehaus/jackson/map/util/ObjectBuffer;->_copyTo(Ljava/lang/Object;I[Ljava/lang/Object;I)V
 
     .line 146

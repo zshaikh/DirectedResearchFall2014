@@ -26,7 +26,7 @@
 # direct methods
 .method public constructor <init>(Lcom/flurry/org/codehaus/jackson/JsonNode;)V
     .locals 1
-    .parameter "n"
+    .param p1, "n"    # Lcom/flurry/org/codehaus/jackson/JsonNode;
 
     .prologue
     .line 66
@@ -39,8 +39,8 @@
 
 .method public constructor <init>(Lcom/flurry/org/codehaus/jackson/JsonNode;Lcom/flurry/org/codehaus/jackson/ObjectCodec;)V
     .locals 2
-    .parameter "n"
-    .parameter "codec"
+    .param p1, "n"    # Lcom/flurry/org/codehaus/jackson/JsonNode;
+    .param p2, "codec"    # Lcom/flurry/org/codehaus/jackson/ObjectCodec;
 
     .prologue
     const/4 v1, 0x0
@@ -205,7 +205,7 @@
     move-result-object v0
 
     .line 372
-    .local v0, n:Lcom/flurry/org/codehaus/jackson/JsonNode;
+    .local v0, "n":Lcom/flurry/org/codehaus/jackson/JsonNode;
     if-eqz v0, :cond_0
 
     invoke-virtual {v0}, Lcom/flurry/org/codehaus/jackson/JsonNode;->isNumber()Z
@@ -223,7 +223,7 @@
     move-object v1, v2
 
     .line 374
-    .local v1, t:Lcom/flurry/org/codehaus/jackson/JsonToken;
+    .local v1, "t":Lcom/flurry/org/codehaus/jackson/JsonToken;
     :goto_0
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -256,7 +256,7 @@
     throw v2
 
     .line 373
-    .end local v1           #t:Lcom/flurry/org/codehaus/jackson/JsonToken;
+    .end local v1    # "t":Lcom/flurry/org/codehaus/jackson/JsonToken;
     :cond_1
     invoke-virtual {v0}, Lcom/flurry/org/codehaus/jackson/JsonNode;->asToken()Lcom/flurry/org/codehaus/jackson/JsonToken;
 
@@ -295,7 +295,7 @@
 
 .method public getBinaryValue(Lcom/flurry/org/codehaus/jackson/Base64Variant;)[B
     .locals 4
-    .parameter "b64variant"
+    .param p1, "b64variant"    # Lcom/flurry/org/codehaus/jackson/Base64Variant;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -310,7 +310,7 @@
     move-result-object v1
 
     .line 337
-    .local v1, n:Lcom/flurry/org/codehaus/jackson/JsonNode;
+    .local v1, "n":Lcom/flurry/org/codehaus/jackson/JsonNode;
     if-eqz v1, :cond_1
 
     .line 338
@@ -319,20 +319,20 @@
     move-result-object v0
 
     .line 340
-    .local v0, data:[B
+    .local v0, "data":[B
     if-eqz v0, :cond_0
 
     move-object v3, v0
 
     .line 352
-    .end local v0           #data:[B
-    .end local v1           #n:Lcom/flurry/org/codehaus/jackson/JsonNode;
+    .end local v0    # "data":[B
+    .end local v1    # "n":Lcom/flurry/org/codehaus/jackson/JsonNode;
     :goto_0
     return-object v3
 
     .line 344
-    .restart local v0       #data:[B
-    .restart local v1       #n:Lcom/flurry/org/codehaus/jackson/JsonNode;
+    .restart local v0    # "data":[B
+    .restart local v1    # "n":Lcom/flurry/org/codehaus/jackson/JsonNode;
     :cond_0
     invoke-virtual {v1}, Lcom/flurry/org/codehaus/jackson/JsonNode;->isPojo()Z
 
@@ -343,13 +343,13 @@
     .line 345
     check-cast v1, Lcom/flurry/org/codehaus/jackson/node/POJONode;
 
-    .end local v1           #n:Lcom/flurry/org/codehaus/jackson/JsonNode;
+    .end local v1    # "n":Lcom/flurry/org/codehaus/jackson/JsonNode;
     invoke-virtual {v1}, Lcom/flurry/org/codehaus/jackson/node/POJONode;->getPojo()Ljava/lang/Object;
 
     move-result-object v2
 
     .line 346
-    .local v2, ob:Ljava/lang/Object;
+    .local v2, "ob":Ljava/lang/Object;
     instance-of v3, v2, [B
 
     if-eqz v3, :cond_1
@@ -357,7 +357,7 @@
     .line 347
     check-cast v2, [B
 
-    .end local v2           #ob:Ljava/lang/Object;
+    .end local v2    # "ob":Ljava/lang/Object;
     check-cast v2, [B
 
     move-object v3, v2
@@ -365,7 +365,7 @@
     goto :goto_0
 
     .line 352
-    .end local v0           #data:[B
+    .end local v0    # "data":[B
     :cond_1
     const/4 v3, 0x0
 
@@ -475,7 +475,7 @@
     move-result-object v0
 
     .line 313
-    .local v0, n:Lcom/flurry/org/codehaus/jackson/JsonNode;
+    .local v0, "n":Lcom/flurry/org/codehaus/jackson/JsonNode;
     if-eqz v0, :cond_1
 
     .line 314
@@ -488,7 +488,7 @@
     .line 315
     check-cast v0, Lcom/flurry/org/codehaus/jackson/node/POJONode;
 
-    .end local v0           #n:Lcom/flurry/org/codehaus/jackson/JsonNode;
+    .end local v0    # "n":Lcom/flurry/org/codehaus/jackson/JsonNode;
     invoke-virtual {v0}, Lcom/flurry/org/codehaus/jackson/node/POJONode;->getPojo()Ljava/lang/Object;
 
     move-result-object v1
@@ -498,7 +498,7 @@
     return-object v1
 
     .line 317
-    .restart local v0       #n:Lcom/flurry/org/codehaus/jackson/JsonNode;
+    .restart local v0    # "n":Lcom/flurry/org/codehaus/jackson/JsonNode;
     :cond_0
     invoke-virtual {v0}, Lcom/flurry/org/codehaus/jackson/JsonNode;->isBinary()Z
 
@@ -509,7 +509,7 @@
     .line 318
     check-cast v0, Lcom/flurry/org/codehaus/jackson/node/BinaryNode;
 
-    .end local v0           #n:Lcom/flurry/org/codehaus/jackson/JsonNode;
+    .end local v0    # "n":Lcom/flurry/org/codehaus/jackson/JsonNode;
     invoke-virtual {v0}, Lcom/flurry/org/codehaus/jackson/node/BinaryNode;->getBinaryValue()[B
 
     move-result-object v1
@@ -607,7 +607,7 @@
     move-result-object v0
 
     .line 269
-    .local v0, n:Lcom/flurry/org/codehaus/jackson/JsonNode;
+    .local v0, "n":Lcom/flurry/org/codehaus/jackson/JsonNode;
     if-nez v0, :cond_0
 
     const/4 v1, 0x0
@@ -741,7 +741,7 @@
     move-result-object v0
 
     .line 228
-    .local v0, n:Lcom/flurry/org/codehaus/jackson/JsonNode;
+    .local v0, "n":Lcom/flurry/org/codehaus/jackson/JsonNode;
     if-eqz v0, :cond_1
 
     invoke-virtual {v0}, Lcom/flurry/org/codehaus/jackson/JsonNode;->isBinary()Z
@@ -758,7 +758,7 @@
     goto :goto_0
 
     .line 234
-    .end local v0           #n:Lcom/flurry/org/codehaus/jackson/JsonNode;
+    .end local v0    # "n":Lcom/flurry/org/codehaus/jackson/JsonNode;
     :cond_2
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/node/TreeTraversingParser;->_currToken:Lcom/flurry/org/codehaus/jackson/JsonToken;
 
@@ -1069,7 +1069,7 @@
 
 .method public setCodec(Lcom/flurry/org/codehaus/jackson/ObjectCodec;)V
     .locals 0
-    .parameter "c"
+    .param p1, "c"    # Lcom/flurry/org/codehaus/jackson/ObjectCodec;
 
     .prologue
     .line 85

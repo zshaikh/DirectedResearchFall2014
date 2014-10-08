@@ -29,8 +29,6 @@
 # direct methods
 .method public constructor <init>(Lcom/adobe/air/AndroidWebView;Landroid/content/Context;)V
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     const/4 v1, 0x0
@@ -61,9 +59,6 @@
 
 .method public constructor <init>(Lcom/adobe/air/AndroidWebView;Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 2
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const/4 v1, 0x0
@@ -94,10 +89,6 @@
 
 .method public constructor <init>(Lcom/adobe/air/AndroidWebView;Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 2
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const/4 v1, 0x0
@@ -128,8 +119,6 @@
 
 .method private dispatchFocusEvent(ZI)V
     .locals 7
-    .parameter
-    .parameter
 
     .prologue
     const/4 v6, 0x2
@@ -154,7 +143,7 @@
     iget-object v0, p0, Lcom/adobe/air/AndroidWebView$AndroidWebViewImpl;->this$0:Lcom/adobe/air/AndroidWebView;
 
     .line 271
-    #getter for: Lcom/adobe/air/AndroidWebView;->mInternalReference:J
+    # getter for: Lcom/adobe/air/AndroidWebView;->mInternalReference:J
     invoke-static {v0}, Lcom/adobe/air/AndroidWebView;->access$200(Lcom/adobe/air/AndroidWebView;)J
 
     move-result-wide v1
@@ -168,7 +157,7 @@
     .line 278
     iget-object v1, p0, Lcom/adobe/air/AndroidWebView$AndroidWebViewImpl;->this$0:Lcom/adobe/air/AndroidWebView;
 
-    #getter for: Lcom/adobe/air/AndroidWebView;->mAIRSurface:Lcom/adobe/air/AIRWindowSurfaceView;
+    # getter for: Lcom/adobe/air/AndroidWebView;->mAIRSurface:Lcom/adobe/air/AIRWindowSurfaceView;
     invoke-static {v1}, Lcom/adobe/air/AndroidWebView;->access$300(Lcom/adobe/air/AndroidWebView;)Lcom/adobe/air/AIRWindowSurfaceView;
 
     move-result-object v1
@@ -178,7 +167,7 @@
     .line 279
     iget-object v1, p0, Lcom/adobe/air/AndroidWebView$AndroidWebViewImpl;->this$0:Lcom/adobe/air/AndroidWebView;
 
-    #getter for: Lcom/adobe/air/AndroidWebView;->mAIRSurface:Lcom/adobe/air/AIRWindowSurfaceView;
+    # getter for: Lcom/adobe/air/AndroidWebView;->mAIRSurface:Lcom/adobe/air/AIRWindowSurfaceView;
     invoke-static {v1}, Lcom/adobe/air/AndroidWebView;->access$300(Lcom/adobe/air/AndroidWebView;)Lcom/adobe/air/AIRWindowSurfaceView;
 
     move-result-object v1
@@ -203,12 +192,12 @@
     .line 302
     iget-object v2, p0, Lcom/adobe/air/AndroidWebView$AndroidWebViewImpl;->this$0:Lcom/adobe/air/AndroidWebView;
 
-    #getter for: Lcom/adobe/air/AndroidWebView;->mInternalReference:J
+    # getter for: Lcom/adobe/air/AndroidWebView;->mInternalReference:J
     invoke-static {v2}, Lcom/adobe/air/AndroidWebView;->access$200(Lcom/adobe/air/AndroidWebView;)J
 
     move-result-wide v2
 
-    #calls: Lcom/adobe/air/AndroidWebView;->dispatchFocusIn(JI)V
+    # invokes: Lcom/adobe/air/AndroidWebView;->dispatchFocusIn(JI)V
     invoke-static {v0, v2, v3, v1}, Lcom/adobe/air/AndroidWebView;->access$400(Lcom/adobe/air/AndroidWebView;JI)V
 
     goto :goto_0
@@ -228,12 +217,12 @@
     :cond_4
     iget-object v2, p0, Lcom/adobe/air/AndroidWebView$AndroidWebViewImpl;->this$0:Lcom/adobe/air/AndroidWebView;
 
-    #getter for: Lcom/adobe/air/AndroidWebView;->mInternalReference:J
+    # getter for: Lcom/adobe/air/AndroidWebView;->mInternalReference:J
     invoke-static {v2}, Lcom/adobe/air/AndroidWebView;->access$200(Lcom/adobe/air/AndroidWebView;)J
 
     move-result-wide v2
 
-    #calls: Lcom/adobe/air/AndroidWebView;->dispatchFocusOut(JI)V
+    # invokes: Lcom/adobe/air/AndroidWebView;->dispatchFocusOut(JI)V
     invoke-static {v0, v2, v3, v1}, Lcom/adobe/air/AndroidWebView;->access$500(Lcom/adobe/air/AndroidWebView;JI)V
 
     goto :goto_0
@@ -246,7 +235,6 @@
 
 .method private setRealFocus(Z)V
     .locals 2
-    .parameter
 
     .prologue
     const/4 v1, 0x0
@@ -272,7 +260,6 @@
 # virtual methods
 .method public clearChildFocus(Landroid/view/View;)V
     .locals 2
-    .parameter
 
     .prologue
     const/4 v1, 0x0
@@ -331,7 +318,7 @@
     .line 233
     iget-object v0, p0, Lcom/adobe/air/AndroidWebView$AndroidWebViewImpl;->this$0:Lcom/adobe/air/AndroidWebView;
 
-    #getter for: Lcom/adobe/air/AndroidWebView;->mView:Lcom/adobe/air/AndroidWebView$AndroidWebViewImpl;
+    # getter for: Lcom/adobe/air/AndroidWebView;->mView:Lcom/adobe/air/AndroidWebView$AndroidWebViewImpl;
     invoke-static {v0}, Lcom/adobe/air/AndroidWebView;->access$100(Lcom/adobe/air/AndroidWebView;)Lcom/adobe/air/AndroidWebView$AndroidWebViewImpl;
 
     move-result-object v0
@@ -364,7 +351,6 @@
 
 .method public dispatchKeyEvent(Landroid/view/KeyEvent;)Z
     .locals 4
-    .parameter
 
     .prologue
     .line 339
@@ -440,7 +426,7 @@
     .line 368
     iget-object v0, p0, Lcom/adobe/air/AndroidWebView$AndroidWebViewImpl;->this$0:Lcom/adobe/air/AndroidWebView;
 
-    #getter for: Lcom/adobe/air/AndroidWebView;->mAIRSurface:Lcom/adobe/air/AIRWindowSurfaceView;
+    # getter for: Lcom/adobe/air/AndroidWebView;->mAIRSurface:Lcom/adobe/air/AIRWindowSurfaceView;
     invoke-static {v0}, Lcom/adobe/air/AndroidWebView;->access$300(Lcom/adobe/air/AndroidWebView;)Lcom/adobe/air/AIRWindowSurfaceView;
 
     move-result-object v0
@@ -454,7 +440,6 @@
 
 .method public dispatchTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 174
@@ -507,9 +492,6 @@
 
 .method protected onFocusChanged(ZILandroid/graphics/Rect;)V
     .locals 2
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 313
@@ -560,8 +542,6 @@
 
 .method public requestChildFocus(Landroid/view/View;Landroid/view/View;)V
     .locals 3
-    .parameter
-    .parameter
 
     .prologue
     const/4 v2, 0x1

@@ -46,7 +46,6 @@
 # direct methods
 .method protected constructor <init>(Ljava/lang/Object;)V
     .locals 0
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TSTATE;)V"
@@ -55,8 +54,8 @@
 
     .prologue
     .line 443
-    .local p0, this:Lcom/facebook/model/GraphObject$Factory$ProxyBase;,"Lcom/facebook/model/GraphObject$Factory$ProxyBase<TSTATE;>;"
-    .local p1, state:Ljava/lang/Object;,"TSTATE;"
+    .local p0, "this":Lcom/facebook/model/GraphObject$Factory$ProxyBase;, "Lcom/facebook/model/GraphObject$Factory$ProxyBase<TSTATE;>;"
+    .local p1, "state":Ljava/lang/Object;, "TSTATE;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 444
@@ -70,9 +69,9 @@
 # virtual methods
 .method protected final proxyObjectMethods(Ljava/lang/Object;Ljava/lang/reflect/Method;[Ljava/lang/Object;)Ljava/lang/Object;
     .locals 7
-    .parameter "proxy"
-    .parameter "method"
-    .parameter "args"
+    .param p1, "proxy"    # Ljava/lang/Object;
+    .param p2, "method"    # Ljava/lang/reflect/Method;
+    .param p3, "args"    # [Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/Throwable;
@@ -80,7 +79,7 @@
     .end annotation
 
     .prologue
-    .local p0, this:Lcom/facebook/model/GraphObject$Factory$ProxyBase;,"Lcom/facebook/model/GraphObject$Factory$ProxyBase<TSTATE;>;"
+    .local p0, "this":Lcom/facebook/model/GraphObject$Factory$ProxyBase;, "Lcom/facebook/model/GraphObject$Factory$ProxyBase<TSTATE;>;"
     const/4 v6, 0x0
 
     .line 454
@@ -89,7 +88,7 @@
     move-result-object v2
 
     .line 455
-    .local v2, methodName:Ljava/lang/String;
+    .local v2, "methodName":Ljava/lang/String;
     const-string v5, "equals"
 
     invoke-virtual {v2, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -102,7 +101,7 @@
     aget-object v3, p3, v6
 
     .line 458
-    .local v3, other:Ljava/lang/Object;
+    .local v3, "other":Ljava/lang/Object;
     if-nez v3, :cond_0
 
     .line 459
@@ -111,19 +110,19 @@
     move-result-object v5
 
     .line 473
-    .end local v3           #other:Ljava/lang/Object;
+    .end local v3    # "other":Ljava/lang/Object;
     :goto_0
     return-object v5
 
     .line 462
-    .restart local v3       #other:Ljava/lang/Object;
+    .restart local v3    # "other":Ljava/lang/Object;
     :cond_0
     invoke-static {v3}, Ljava/lang/reflect/Proxy;->getInvocationHandler(Ljava/lang/Object;)Ljava/lang/reflect/InvocationHandler;
 
     move-result-object v1
 
     .line 463
-    .local v1, handler:Ljava/lang/reflect/InvocationHandler;
+    .local v1, "handler":Ljava/lang/reflect/InvocationHandler;
     instance-of v5, v1, Lcom/facebook/model/GraphObject$Factory$GraphObjectProxy;
 
     if-nez v5, :cond_1
@@ -144,7 +143,7 @@
     move-object v4, v0
 
     .line 467
-    .local v4, otherProxy:Lcom/facebook/model/GraphObject$Factory$GraphObjectProxy;
+    .local v4, "otherProxy":Lcom/facebook/model/GraphObject$Factory$GraphObjectProxy;
     iget-object v5, p0, Lcom/facebook/model/GraphObject$Factory$ProxyBase;->state:Ljava/lang/Object;
 
     iget-object v6, v4, Lcom/facebook/model/GraphObject$Factory$GraphObjectProxy;->state:Ljava/lang/Object;
@@ -160,9 +159,9 @@
     goto :goto_0
 
     .line 468
-    .end local v1           #handler:Ljava/lang/reflect/InvocationHandler;
-    .end local v3           #other:Ljava/lang/Object;
-    .end local v4           #otherProxy:Lcom/facebook/model/GraphObject$Factory$GraphObjectProxy;
+    .end local v1    # "handler":Ljava/lang/reflect/InvocationHandler;
+    .end local v3    # "other":Ljava/lang/Object;
+    .end local v4    # "otherProxy":Lcom/facebook/model/GraphObject$Factory$GraphObjectProxy;
     :cond_2
     const-string v5, "toString"
 
@@ -192,11 +191,11 @@
 
 .method protected final throwUnexpectedMethodSignature(Ljava/lang/reflect/Method;)Ljava/lang/Object;
     .locals 3
-    .parameter "method"
+    .param p1, "method"    # Ljava/lang/reflect/Method;
 
     .prologue
     .line 449
-    .local p0, this:Lcom/facebook/model/GraphObject$Factory$ProxyBase;,"Lcom/facebook/model/GraphObject$Factory$ProxyBase<TSTATE;>;"
+    .local p0, "this":Lcom/facebook/model/GraphObject$Factory$ProxyBase;, "Lcom/facebook/model/GraphObject$Factory$ProxyBase<TSTATE;>;"
     new-instance v0, Lcom/facebook/FacebookGraphObjectException;
 
     new-instance v1, Ljava/lang/StringBuilder;

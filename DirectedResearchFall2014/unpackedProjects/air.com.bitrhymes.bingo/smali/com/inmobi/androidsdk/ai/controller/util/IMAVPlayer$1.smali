@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/inmobi/androidsdk/ai/controller/util/IMAVPlayer;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1
@@ -38,7 +37,6 @@
 
 .method static synthetic a(Lcom/inmobi/androidsdk/ai/controller/util/IMAVPlayer$1;)Lcom/inmobi/androidsdk/ai/controller/util/IMAVPlayer;
     .locals 1
-    .parameter
 
     .prologue
     .line 121
@@ -51,10 +49,6 @@
 # virtual methods
 .method public surfaceChanged(Landroid/view/SurfaceHolder;III)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 142
@@ -63,7 +57,6 @@
 
 .method public surfaceCreated(Landroid/view/SurfaceHolder;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 137
@@ -72,7 +65,6 @@
 
 .method public surfaceDestroyed(Landroid/view/SurfaceHolder;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 125

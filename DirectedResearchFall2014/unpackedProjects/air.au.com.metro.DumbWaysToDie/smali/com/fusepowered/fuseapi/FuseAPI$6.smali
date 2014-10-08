@@ -26,8 +26,6 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/util/Message;I)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 2250
@@ -44,8 +42,8 @@
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 2
-    .parameter "dialog"
-    .parameter "whichButton"
+    .param p1, "dialog"    # Landroid/content/DialogInterface;
+    .param p2, "whichButton"    # I
 
     .prologue
     .line 2256
@@ -62,13 +60,13 @@
 
     move-result v0
 
-    #calls: Lcom/fusepowered/fuseapi/FuseAPI;->notificationView(I)V
+    # invokes: Lcom/fusepowered/fuseapi/FuseAPI;->notificationView(I)V
     invoke-static {v0}, Lcom/fusepowered/fuseapi/FuseAPI;->access$200(I)V
 
     .line 2258
     iget v0, p0, Lcom/fusepowered/fuseapi/FuseAPI$6;->val$next:I
 
-    #calls: Lcom/fusepowered/fuseapi/FuseAPI;->showNextMessage(I)V
+    # invokes: Lcom/fusepowered/fuseapi/FuseAPI;->showNextMessage(I)V
     invoke-static {v0}, Lcom/fusepowered/fuseapi/FuseAPI;->access$500(I)V
 
     .line 2259

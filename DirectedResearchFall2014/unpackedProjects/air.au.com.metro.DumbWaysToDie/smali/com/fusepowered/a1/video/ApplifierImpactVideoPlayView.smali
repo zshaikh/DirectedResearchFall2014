@@ -76,8 +76,8 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 5
-    .parameter "context"
-    .parameter "attrs"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
     const-wide/16 v3, 0x0
@@ -157,7 +157,7 @@
     iput-boolean v2, p0, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->_muted:Z
 
     .line 59
-    const/high16 v0, 0x3f00
+    const/high16 v0, 0x3f000000
 
     iput v0, p0, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->_volumeBeforeMute:F
 
@@ -170,9 +170,9 @@
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 5
-    .parameter "context"
-    .parameter "attrs"
-    .parameter "defStyle"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "attrs"    # Landroid/util/AttributeSet;
+    .param p3, "defStyle"    # I
 
     .prologue
     const-wide/16 v3, 0x0
@@ -252,7 +252,7 @@
     iput-boolean v2, p0, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->_muted:Z
 
     .line 59
-    const/high16 v0, 0x3f00
+    const/high16 v0, 0x3f000000
 
     iput v0, p0, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->_volumeBeforeMute:F
 
@@ -265,8 +265,8 @@
 
 .method public constructor <init>(Landroid/content/Context;Lcom/fusepowered/a1/video/IApplifierImpactVideoPlayerListener;)V
     .locals 5
-    .parameter "context"
-    .parameter "listener"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "listener"    # Lcom/fusepowered/a1/video/IApplifierImpactVideoPlayerListener;
 
     .prologue
     const-wide/16 v3, 0x0
@@ -346,7 +346,7 @@
     iput-boolean v2, p0, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->_muted:Z
 
     .line 59
-    const/high16 v0, 0x3f00
+    const/high16 v0, 0x3f000000
 
     iput v0, p0, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->_volumeBeforeMute:F
 
@@ -362,7 +362,6 @@
 
 .method static synthetic access$0(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;)Landroid/widget/VideoView;
     .locals 1
-    .parameter
 
     .prologue
     .line 48
@@ -373,7 +372,6 @@
 
 .method static synthetic access$1(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;)Landroid/widget/TextView;
     .locals 1
-    .parameter
 
     .prologue
     .line 34
@@ -384,7 +382,6 @@
 
 .method static synthetic access$10(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;)Lcom/fusepowered/a1/video/IApplifierImpactVideoPlayerListener;
     .locals 1
-    .parameter
 
     .prologue
     .line 46
@@ -395,7 +392,6 @@
 
 .method static synthetic access$11(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;)J
     .locals 2
-    .parameter
 
     .prologue
     .line 42
@@ -406,7 +402,6 @@
 
 .method static synthetic access$12(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 193
@@ -417,7 +412,6 @@
 
 .method static synthetic access$13(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 387
@@ -428,7 +422,6 @@
 
 .method static synthetic access$14(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 53
@@ -439,7 +432,6 @@
 
 .method static synthetic access$15(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 462
@@ -450,7 +442,6 @@
 
 .method static synthetic access$16(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 55
@@ -461,8 +452,6 @@
 
 .method static synthetic access$17(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;Z)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 55
@@ -473,8 +462,6 @@
 
 .method static synthetic access$18(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;J)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 43
@@ -485,8 +472,6 @@
 
 .method static synthetic access$19(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;J)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 44
@@ -497,7 +482,6 @@
 
 .method static synthetic access$2(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 399
@@ -510,7 +494,6 @@
 
 .method static synthetic access$20(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;)J
     .locals 2
-    .parameter
 
     .prologue
     .line 43
@@ -521,7 +504,6 @@
 
 .method static synthetic access$21(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 376
@@ -532,8 +514,6 @@
 
 .method static synthetic access$22(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;Landroid/media/MediaPlayer;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 57
@@ -544,7 +524,6 @@
 
 .method static synthetic access$23(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 58
@@ -555,7 +534,6 @@
 
 .method static synthetic access$24(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 179
@@ -566,7 +544,6 @@
 
 .method static synthetic access$25(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;)Landroid/media/MediaPlayer;
     .locals 1
-    .parameter
 
     .prologue
     .line 57
@@ -577,8 +554,6 @@
 
 .method static synthetic access$26(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;Z)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 53
@@ -589,7 +564,6 @@
 
 .method static synthetic access$27(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 467
@@ -600,7 +574,6 @@
 
 .method static synthetic access$28(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 203
@@ -611,8 +584,6 @@
 
 .method static synthetic access$29(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;Z)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 58
@@ -623,10 +594,6 @@
 
 .method static synthetic access$3(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;IZZ)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 479
@@ -637,7 +604,6 @@
 
 .method static synthetic access$30(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;)Lcom/fusepowered/a1/view/ApplifierImpactMuteVideoButton;
     .locals 1
-    .parameter
 
     .prologue
     .line 52
@@ -648,7 +614,6 @@
 
 .method static synthetic access$31(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;)F
     .locals 1
-    .parameter
 
     .prologue
     .line 59
@@ -659,7 +624,6 @@
 
 .method static synthetic access$32(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;)Landroid/widget/RelativeLayout;
     .locals 1
-    .parameter
 
     .prologue
     .line 40
@@ -670,7 +634,6 @@
 
 .method static synthetic access$33(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 410
@@ -681,7 +644,6 @@
 
 .method static synthetic access$34(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 449
@@ -692,7 +654,6 @@
 
 .method static synthetic access$4(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;)I
     .locals 1
-    .parameter
 
     .prologue
     .line 38
@@ -703,7 +664,6 @@
 
 .method static synthetic access$5(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 438
@@ -714,7 +674,6 @@
 
 .method static synthetic access$6(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;)Landroid/widget/TextView;
     .locals 1
-    .parameter
 
     .prologue
     .line 37
@@ -725,7 +684,6 @@
 
 .method static synthetic access$7(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;)Landroid/widget/RelativeLayout;
     .locals 1
-    .parameter
 
     .prologue
     .line 36
@@ -736,7 +694,6 @@
 
 .method static synthetic access$8(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 472
@@ -747,7 +704,6 @@
 
 .method static synthetic access$9(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;)Ljava/util/Map;
     .locals 1
-    .parameter
 
     .prologue
     .line 54
@@ -798,7 +754,7 @@
     invoke-direct {v0, v3, v3}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
     .line 394
-    .local v0, bufferingLayoutParams:Landroid/widget/RelativeLayout$LayoutParams;
+    .local v0, "bufferingLayoutParams":Landroid/widget/RelativeLayout$LayoutParams;
     const/16 v1, 0xd
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
@@ -809,7 +765,7 @@
     invoke-virtual {p0, v1, v0}, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 397
-    .end local v0           #bufferingLayoutParams:Landroid/widget/RelativeLayout$LayoutParams;
+    .end local v0    # "bufferingLayoutParams":Landroid/widget/RelativeLayout$LayoutParams;
     :cond_1
     return-void
 .end method
@@ -826,7 +782,7 @@
     invoke-direct {v0, v1, v1}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
     .line 344
-    .local v0, muteButtonParams:Landroid/widget/RelativeLayout$LayoutParams;
+    .local v0, "muteButtonParams":Landroid/widget/RelativeLayout$LayoutParams;
     const/16 v1, 0xc
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
@@ -925,7 +881,7 @@
     invoke-direct {v0, v3, v3}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
     .line 382
-    .local v0, pausedViewParams:Landroid/widget/RelativeLayout$LayoutParams;
+    .local v0, "pausedViewParams":Landroid/widget/RelativeLayout$LayoutParams;
     const/16 v1, 0xd
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
@@ -936,7 +892,7 @@
     invoke-virtual {p0, v1, v0}, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 385
-    .end local v0           #pausedViewParams:Landroid/widget/RelativeLayout$LayoutParams;
+    .end local v0    # "pausedViewParams":Landroid/widget/RelativeLayout$LayoutParams;
     :cond_1
     return-void
 .end method
@@ -973,7 +929,7 @@
     invoke-direct {v0, v3, v3}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
     .line 414
-    .local v0, skipTextParams:Landroid/widget/RelativeLayout$LayoutParams;
+    .local v0, "skipTextParams":Landroid/widget/RelativeLayout$LayoutParams;
     const/16 v1, 0xa
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
@@ -1130,7 +1086,7 @@
     invoke-static {v8, p0}, Lcom/fusepowered/a1/ApplifierImpactUtils;->Log(Ljava/lang/String;Ljava/lang/Object;)V
 
     .line 237
-    const/high16 v8, -0x100
+    const/high16 v8, -0x1000000
 
     invoke-virtual {p0, v8}, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->setBackgroundColor(I)V
 
@@ -1158,7 +1114,7 @@
     invoke-direct {v7, v11, v11}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
     .line 241
-    .local v7, videoLayoutParams:Landroid/widget/RelativeLayout$LayoutParams;
+    .local v7, "videoLayoutParams":Landroid/widget/RelativeLayout$LayoutParams;
     const/16 v8, 0xd
 
     invoke-virtual {v7, v8}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
@@ -1218,7 +1174,7 @@
     invoke-direct {v0, v10, v10}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
     .line 264
-    .local v0, bufferingTextParams:Landroid/widget/RelativeLayout$LayoutParams;
+    .local v0, "bufferingTextParams":Landroid/widget/RelativeLayout$LayoutParams;
     const/16 v8, 0xa
 
     invoke-virtual {v0, v8}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
@@ -1247,7 +1203,7 @@
     invoke-direct {v1, v8}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
     .line 271
-    .local v1, bufferingTextView:Landroid/widget/TextView;
+    .local v1, "bufferingTextView":Landroid/widget/TextView;
     invoke-virtual {v1, v11}, Landroid/widget/TextView;->setTextColor(I)V
 
     .line 272
@@ -1294,7 +1250,7 @@
     invoke-direct {v2, v10, v10}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
     .line 281
-    .local v2, countDownParams:Landroid/widget/RelativeLayout$LayoutParams;
+    .local v2, "countDownParams":Landroid/widget/RelativeLayout$LayoutParams;
     const/16 v8, 0xc
 
     invoke-virtual {v2, v8}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
@@ -1323,7 +1279,7 @@
     invoke-direct {v3, v8}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
     .line 288
-    .local v3, tv:Landroid/widget/TextView;
+    .local v3, "tv":Landroid/widget/TextView;
     invoke-virtual {v3, v11}, Landroid/widget/TextView;->setTextColor(I)V
 
     .line 289
@@ -1372,7 +1328,7 @@
     invoke-direct {v4, v10, v10}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
     .line 297
-    .local v4, tv2params:Landroid/widget/RelativeLayout$LayoutParams;
+    .local v4, "tv2params":Landroid/widget/RelativeLayout$LayoutParams;
     const/16 v8, 0x2711
 
     invoke-virtual {v4, v12, v8}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
@@ -1395,7 +1351,7 @@
     invoke-direct {v5, v8}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
     .line 302
-    .local v5, tv3:Landroid/widget/TextView;
+    .local v5, "tv3":Landroid/widget/TextView;
     invoke-virtual {v5, v11}, Landroid/widget/TextView;->setTextColor(I)V
 
     .line 303
@@ -1409,7 +1365,7 @@
     invoke-direct {v6, v10, v10}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
     .line 305
-    .local v6, tv3params:Landroid/widget/RelativeLayout$LayoutParams;
+    .local v6, "tv3params":Landroid/widget/RelativeLayout$LayoutParams;
     const/16 v8, 0x2712
 
     invoke-virtual {v6, v12, v8}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
@@ -1749,9 +1705,9 @@
 
 .method private setBufferingTextVisibility(IZZ)V
     .locals 2
-    .parameter "visibility"
-    .parameter "hasSkip"
-    .parameter "canSkip"
+    .param p1, "visibility"    # I
+    .param p2, "hasSkip"    # Z
+    .param p3, "canSkip"    # Z
 
     .prologue
     .line 480
@@ -1838,15 +1794,15 @@
     check-cast v0, Landroid/media/AudioManager;
 
     .line 181
-    .local v0, am:Landroid/media/AudioManager;
+    .local v0, "am":Landroid/media/AudioManager;
     const/4 v1, 0x0
 
     .line 182
-    .local v1, curVol:I
+    .local v1, "curVol":I
     const/4 v2, 0x0
 
     .line 184
-    .local v2, maxVol:I
+    .local v2, "maxVol":I
     if-eqz v0, :cond_0
 
     .line 185
@@ -1860,14 +1816,14 @@
     move-result v2
 
     .line 187
-    const/high16 v4, 0x3f80
+    const/high16 v4, 0x3f800000
 
     int-to-float v5, v2
 
     div-float v3, v4, v5
 
     .line 188
-    .local v3, parts:F
+    .local v3, "parts":F
     int-to-float v4, v1
 
     mul-float/2addr v4, v3
@@ -1924,7 +1880,7 @@
     invoke-static {v4, p0}, Lcom/fusepowered/a1/ApplifierImpactUtils;->Log(Ljava/lang/String;Ljava/lang/Object;)V
 
     .line 191
-    .end local v3           #parts:F
+    .end local v3    # "parts":F
     :cond_0
     return-void
 .end method
@@ -2088,7 +2044,7 @@
     const/4 v0, 0x0
 
     .line 165
-    .local v0, timeUntilBackButton:I
+    .local v0, "timeUntilBackButton":I
     sget v1, Lcom/fusepowered/a1/properties/ApplifierImpactProperties;->ALLOW_BACK_BUTTON_SKIP:I
 
     if-lez v1, :cond_1
@@ -2169,19 +2125,19 @@
 
 .method public onKeyDown(ILandroid/view/KeyEvent;)Z
     .locals 5
-    .parameter "keyCode"
-    .parameter "event"
+    .param p1, "keyCode"    # I
+    .param p2, "event"    # Landroid/view/KeyEvent;
 
     .prologue
     .line 508
     const-wide/16 v0, 0x0
 
     .line 509
-    .local v0, bufferingDuration:J
+    .local v0, "bufferingDuration":J
     const/4 v2, 0x0
 
     .line 511
-    .local v2, values:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
+    .local v2, "values":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
     packed-switch p1, :pswitch_data_0
 
     .line 531
@@ -2223,11 +2179,11 @@
     .line 519
     new-instance v2, Ljava/util/HashMap;
 
-    .end local v2           #values:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
+    .end local v2    # "values":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
     invoke-direct {v2}, Ljava/util/HashMap;-><init>()V
 
     .line 520
-    .restart local v2       #values:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
+    .restart local v2    # "values":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
     const-string v3, "bufferingDuration"
 
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -2314,7 +2270,7 @@
 
 .method public playVideo(Ljava/lang/String;)V
     .locals 5
-    .parameter "fileName"
+    .param p1, "fileName"    # Ljava/lang/String;
 
     .prologue
     .line 79
@@ -2431,7 +2387,7 @@
     move-object v0, v1
 
     .line 98
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v1, "For some reason the device failed to play the video, a crash was prevented."
 
     invoke-static {v1, p0}, Lcom/fusepowered/a1/ApplifierImpactUtils;->Log(Ljava/lang/String;Ljava/lang/Object;)V

@@ -150,12 +150,11 @@
 # direct methods
 .method public constructor <init>(Z)V
     .locals 8
-    .parameter
 
     .prologue
     const/4 v7, -0x1
 
-    const/high16 v1, -0x100
+    const/high16 v1, -0x1000000
 
     const/4 v6, 0x1
 
@@ -261,7 +260,7 @@
     iput-boolean v4, p0, Lcom/adobe/air/AndroidStageText;->mNotifyLayoutComplete:Z
 
     .line 1623
-    const-wide/high16 v0, 0x3ff0
+    const-wide/high16 v0, 0x3ff0000000000000L
 
     iput-wide v0, p0, Lcom/adobe/air/AndroidStageText;->mScaleFactor:D
 
@@ -385,7 +384,6 @@
 
 .method static synthetic access$000(Lcom/adobe/air/AndroidStageText;)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 71
@@ -396,8 +394,6 @@
 
 .method static synthetic access$002(Lcom/adobe/air/AndroidStageText;Z)Z
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 71
@@ -408,7 +404,6 @@
 
 .method static synthetic access$100(Lcom/adobe/air/AndroidStageText;)J
     .locals 2
-    .parameter
 
     .prologue
     .line 71
@@ -419,8 +414,6 @@
 
 .method static synthetic access$1000(Lcom/adobe/air/AndroidStageText;J)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 71
@@ -431,7 +424,6 @@
 
 .method static synthetic access$1100(Lcom/adobe/air/AndroidStageText;)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 71
@@ -442,8 +434,6 @@
 
 .method static synthetic access$1102(Lcom/adobe/air/AndroidStageText;Z)Z
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 71
@@ -454,7 +444,6 @@
 
 .method static synthetic access$1200(Lcom/adobe/air/AndroidStageText;)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 71
@@ -465,8 +454,6 @@
 
 .method static synthetic access$1202(Lcom/adobe/air/AndroidStageText;Z)Z
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 71
@@ -477,7 +464,6 @@
 
 .method static synthetic access$1300(Lcom/adobe/air/AndroidStageText;)Lcom/adobe/air/AndroidStageText$AndroidStageTextEditText;
     .locals 1
-    .parameter
 
     .prologue
     .line 71
@@ -488,7 +474,6 @@
 
 .method static synthetic access$1400(Lcom/adobe/air/AndroidStageText;)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 71
@@ -499,8 +484,6 @@
 
 .method static synthetic access$1402(Lcom/adobe/air/AndroidStageText;Z)Z
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 71
@@ -511,10 +494,6 @@
 
 .method static synthetic access$1500(Lcom/adobe/air/AndroidStageText;JII)Z
     .locals 1
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 71
@@ -527,7 +506,6 @@
 
 .method static synthetic access$1600(Lcom/adobe/air/AndroidStageText;)Landroid/graphics/Rect;
     .locals 1
-    .parameter
 
     .prologue
     .line 71
@@ -538,8 +516,6 @@
 
 .method static synthetic access$200(Lcom/adobe/air/AndroidStageText;J)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 71
@@ -550,7 +526,6 @@
 
 .method static synthetic access$300(Lcom/adobe/air/AndroidStageText;)Landroid/graphics/Rect;
     .locals 1
-    .parameter
 
     .prologue
     .line 71
@@ -561,7 +536,6 @@
 
 .method static synthetic access$400(Lcom/adobe/air/AndroidStageText;)Landroid/graphics/Rect;
     .locals 1
-    .parameter
 
     .prologue
     .line 71
@@ -572,7 +546,6 @@
 
 .method static synthetic access$500(Lcom/adobe/air/AndroidStageText;)Lcom/adobe/air/AndroidStageText$AndroidStageTextImpl;
     .locals 1
-    .parameter
 
     .prologue
     .line 71
@@ -583,7 +556,6 @@
 
 .method static synthetic access$600(Lcom/adobe/air/AndroidStageText;)Lcom/adobe/air/AIRWindowSurfaceView;
     .locals 1
-    .parameter
 
     .prologue
     .line 71
@@ -594,9 +566,6 @@
 
 .method static synthetic access$700(Lcom/adobe/air/AndroidStageText;JI)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 71
@@ -607,8 +576,6 @@
 
 .method static synthetic access$800(Lcom/adobe/air/AndroidStageText;J)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 71
@@ -619,7 +586,6 @@
 
 .method static synthetic access$900(Lcom/adobe/air/AndroidStageText;)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 71
@@ -630,8 +596,6 @@
 
 .method static synthetic access$902(Lcom/adobe/air/AndroidStageText;Z)Z
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 71
@@ -735,7 +699,6 @@
 
 .method private getShapeForBounds(Landroid/graphics/Rect;)Landroid/graphics/drawable/shapes/RectShape;
     .locals 3
-    .parameter
 
     .prologue
     .line 1032
@@ -770,7 +733,6 @@
 
 .method private refreshGlobalBounds(Z)V
     .locals 2
-    .parameter
 
     .prologue
     .line 793
@@ -852,7 +814,7 @@
     if-eqz v1, :cond_2
 
     .line 978
-    const/high16 v1, 0x2
+    const/high16 v1, 0x20000
 
     or-int/2addr v0, v1
 
@@ -955,7 +917,6 @@
 # virtual methods
 .method public addToStage(Lcom/adobe/air/AIRWindowSurfaceView;)V
     .locals 5
-    .parameter
 
     .prologue
     .line 642
@@ -1025,11 +986,6 @@
 
 .method public adjustViewBounds(DDDDD)V
     .locals 6
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 828
@@ -1128,13 +1084,11 @@
 
 .method public captureSnapshot(II)Landroid/graphics/Bitmap;
     .locals 10
-    .parameter
-    .parameter
 
     .prologue
     const/4 v9, 0x0
 
-    const-wide/high16 v7, 0x3ff0
+    const-wide/high16 v7, 0x3ff0000000000000L
 
     const/4 v6, 0x0
 
@@ -1531,7 +1485,6 @@
 
 .method public onActivityStateChanged(Lcom/adobe/air/AndroidActivityWrapper$ActivityState;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 613
@@ -1540,7 +1493,6 @@
 
 .method public onConfigurationChanged(Landroid/content/res/Configuration;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 618
@@ -1653,8 +1605,6 @@
 
 .method public selectRange(II)V
     .locals 3
-    .parameter
-    .parameter
 
     .prologue
     const/4 v2, 0x0
@@ -1717,7 +1667,6 @@
 
 .method public setAlign(I)V
     .locals 2
-    .parameter
 
     .prologue
     .line 1381
@@ -1780,7 +1729,6 @@
 
 .method public setAutoCapitalize(I)V
     .locals 1
-    .parameter
 
     .prologue
     .line 1087
@@ -1801,7 +1749,6 @@
 
 .method public setAutoCorrect(Z)V
     .locals 1
-    .parameter
 
     .prologue
     .line 1103
@@ -1822,7 +1769,6 @@
 
 .method public setBackground(Z)V
     .locals 1
-    .parameter
 
     .prologue
     .line 1053
@@ -1849,10 +1795,6 @@
 
 .method public setBackgroundColor(IIII)V
     .locals 2
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 1040
@@ -1875,7 +1817,6 @@
 
 .method public setBold(Z)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1421
@@ -1890,7 +1831,6 @@
 
 .method public setBorder(Z)V
     .locals 1
-    .parameter
 
     .prologue
     .line 1077
@@ -1917,10 +1857,6 @@
 
 .method public setBorderColor(IIII)V
     .locals 2
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 1063
@@ -1943,10 +1879,6 @@
 
 .method public setClipBounds(DDDD)V
     .locals 6
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 852
@@ -1989,7 +1921,6 @@
 
 .method public setDisableInteraction(Z)V
     .locals 4
-    .parameter
 
     .prologue
     const/4 v3, 0x0
@@ -2070,7 +2001,6 @@
 
 .method public setDisplayAsPassword(Z)V
     .locals 2
-    .parameter
 
     .prologue
     .line 905
@@ -2125,7 +2055,6 @@
 
 .method public setEditable(Z)V
     .locals 3
-    .parameter
 
     .prologue
     .line 986
@@ -2190,7 +2119,6 @@
 
 .method public setFontFamily(Ljava/lang/String;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1436
@@ -2205,7 +2133,6 @@
 
 .method public setFontSize(I)V
     .locals 4
-    .parameter
 
     .prologue
     .line 1404
@@ -2218,7 +2145,7 @@
 
     mul-double/2addr v0, v2
 
-    const-wide/high16 v2, 0x3fe0
+    const-wide/high16 v2, 0x3fe0000000000000L
 
     add-double/2addr v0, v2
 
@@ -2244,7 +2171,6 @@
 
 .method public setInternalReference(J)V
     .locals 0
-    .parameter
 
     .prologue
     .line 622
@@ -2256,7 +2182,6 @@
 
 .method public setItalic(Z)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1429
@@ -2271,7 +2196,6 @@
 
 .method public setKeyboardType(I)V
     .locals 0
-    .parameter
 
     .prologue
     .line 891
@@ -2286,7 +2210,6 @@
 
 .method public setLocale(Ljava/lang/String;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1370
@@ -2298,7 +2221,6 @@
 
 .method public setMaxChars(I)V
     .locals 1
-    .parameter
 
     .prologue
     .line 1355
@@ -2319,7 +2241,6 @@
 
 .method public setRestrict(Ljava/lang/String;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1344
@@ -2334,7 +2255,6 @@
 
 .method public setReturnKeyLabel(I)V
     .locals 2
-    .parameter
 
     .prologue
     const/4 v0, 0x0
@@ -2396,7 +2316,6 @@
 
 .method public setText(Ljava/lang/String;)V
     .locals 3
-    .parameter
 
     .prologue
     .line 874
@@ -2448,10 +2367,6 @@
 
 .method public setTextColor(IIII)V
     .locals 2
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 1018
@@ -2479,7 +2394,6 @@
 
 .method public setVisibility(Z)V
     .locals 2
-    .parameter
 
     .prologue
     .line 716
@@ -2604,7 +2518,6 @@
 
 .method public updateViewBoundsWithKeyboard(I)J
     .locals 7
-    .parameter
 
     .prologue
     const-wide/16 v5, 0x0

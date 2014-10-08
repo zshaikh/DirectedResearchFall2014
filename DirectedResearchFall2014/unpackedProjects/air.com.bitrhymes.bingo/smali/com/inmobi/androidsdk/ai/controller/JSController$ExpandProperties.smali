@@ -160,7 +160,6 @@
 
 .method protected constructor <init>(Landroid/os/Parcel;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 246

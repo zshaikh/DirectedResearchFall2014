@@ -105,9 +105,7 @@
 
 .method private constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter "type"
+    .param p3, "type"    # Ljava/lang/String;
 
     .prologue
     .line 46
@@ -122,7 +120,6 @@
 
 .method public static valueOf(Ljava/lang/String;)Lcom/playhaven/src/publishersdk/content/PHPurchase$Resolution;
     .locals 1
-    .parameter
 
     .prologue
     .line 1

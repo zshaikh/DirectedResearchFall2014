@@ -3,8 +3,8 @@
 .source "ArrayBuilders.java"
 
 # interfaces
-.implements Ljava/util/Iterator;
 .implements Ljava/lang/Iterable;
+.implements Ljava/util/Iterator;
 
 
 # annotations
@@ -46,7 +46,6 @@
 # direct methods
 .method public constructor <init>([Ljava/lang/Object;)V
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "([TT;)V"
@@ -55,8 +54,8 @@
 
     .prologue
     .line 266
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/util/ArrayBuilders$ArrayIterator;,"Lcom/flurry/org/codehaus/jackson/map/util/ArrayBuilders$ArrayIterator<TT;>;"
-    .local p1, array:[Ljava/lang/Object;,"[TT;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/util/ArrayBuilders$ArrayIterator;, "Lcom/flurry/org/codehaus/jackson/map/util/ArrayBuilders$ArrayIterator<TT;>;"
+    .local p1, "array":[Ljava/lang/Object;, "[TT;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 267
@@ -78,7 +77,7 @@
 
     .prologue
     .line 272
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/util/ArrayBuilders$ArrayIterator;,"Lcom/flurry/org/codehaus/jackson/map/util/ArrayBuilders$ArrayIterator<TT;>;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/util/ArrayBuilders$ArrayIterator;, "Lcom/flurry/org/codehaus/jackson/map/util/ArrayBuilders$ArrayIterator<TT;>;"
     iget v0, p0, Lcom/flurry/org/codehaus/jackson/map/util/ArrayBuilders$ArrayIterator;->_index:I
 
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/map/util/ArrayBuilders$ArrayIterator;->_array:[Ljava/lang/Object;
@@ -110,7 +109,7 @@
 
     .prologue
     .line 290
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/util/ArrayBuilders$ArrayIterator;,"Lcom/flurry/org/codehaus/jackson/map/util/ArrayBuilders$ArrayIterator<TT;>;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/util/ArrayBuilders$ArrayIterator;, "Lcom/flurry/org/codehaus/jackson/map/util/ArrayBuilders$ArrayIterator<TT;>;"
     return-object p0
 .end method
 
@@ -124,7 +123,7 @@
 
     .prologue
     .line 278
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/util/ArrayBuilders$ArrayIterator;,"Lcom/flurry/org/codehaus/jackson/map/util/ArrayBuilders$ArrayIterator<TT;>;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/util/ArrayBuilders$ArrayIterator;, "Lcom/flurry/org/codehaus/jackson/map/util/ArrayBuilders$ArrayIterator<TT;>;"
     iget v0, p0, Lcom/flurry/org/codehaus/jackson/map/util/ArrayBuilders$ArrayIterator;->_index:I
 
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/map/util/ArrayBuilders$ArrayIterator;->_array:[Ljava/lang/Object;
@@ -160,7 +159,7 @@
 
     .prologue
     .line 285
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/util/ArrayBuilders$ArrayIterator;,"Lcom/flurry/org/codehaus/jackson/map/util/ArrayBuilders$ArrayIterator<TT;>;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/util/ArrayBuilders$ArrayIterator;, "Lcom/flurry/org/codehaus/jackson/map/util/ArrayBuilders$ArrayIterator<TT;>;"
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V

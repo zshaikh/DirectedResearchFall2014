@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m1/android/CachedAd;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 156
@@ -39,7 +38,7 @@
 # virtual methods
 .method public accept(Ljava/io/File;)Z
     .locals 2
-    .parameter "file"
+    .param p1, "file"    # Ljava/io/File;
 
     .prologue
     .line 160
@@ -55,7 +54,7 @@
 
     iget-object v1, p0, Lcom/fusepowered/m1/android/CachedAd$1;->this$0:Lcom/fusepowered/m1/android/CachedAd;
 
-    #getter for: Lcom/fusepowered/m1/android/CachedAd;->id:Ljava/lang/String;
+    # getter for: Lcom/fusepowered/m1/android/CachedAd;->id:Ljava/lang/String;
     invoke-static {v1}, Lcom/fusepowered/m1/android/CachedAd;->access$000(Lcom/fusepowered/m1/android/CachedAd;)Ljava/lang/String;
 
     move-result-object v1

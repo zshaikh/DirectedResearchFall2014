@@ -48,7 +48,7 @@
 
 .method public constructor <init>(Lcom/flurry/org/apache/avro/Schema;)V
     .locals 0
-    .parameter "schema"
+    .param p1, "schema"    # Lcom/flurry/org/apache/avro/Schema;
 
     .prologue
     .line 238
@@ -61,8 +61,8 @@
 
 .method public constructor <init>(Lcom/flurry/org/apache/avro/Schema;[B)V
     .locals 0
-    .parameter "schema"
-    .parameter "bytes"
+    .param p1, "schema"    # Lcom/flurry/org/apache/avro/Schema;
+    .param p2, "bytes"    # [B
 
     .prologue
     .line 240
@@ -82,7 +82,7 @@
 # virtual methods
 .method public bytes([B)V
     .locals 0
-    .parameter "bytes"
+    .param p1, "bytes"    # [B
 
     .prologue
     .line 254
@@ -103,7 +103,7 @@
 
 .method public compareTo(Lcom/flurry/org/apache/avro/generic/GenericData$Fixed;)I
     .locals 6
-    .parameter "that"
+    .param p1, "that"    # Lcom/flurry/org/apache/avro/generic/GenericData$Fixed;
 
     .prologue
     const/4 v1, 0x0
@@ -132,13 +132,13 @@
 
 .method public bridge synthetic compareTo(Ljava/lang/Object;)I
     .locals 1
-    .parameter "x0"
+    .param p1, "x0"    # Ljava/lang/Object;
 
     .prologue
     .line 234
     check-cast p1, Lcom/flurry/org/apache/avro/generic/GenericData$Fixed;
 
-    .end local p1
+    .end local p1    # "x0":Ljava/lang/Object;
     invoke-virtual {p0, p1}, Lcom/flurry/org/apache/avro/generic/GenericData$Fixed;->compareTo(Lcom/flurry/org/apache/avro/generic/GenericData$Fixed;)I
 
     move-result v0
@@ -148,7 +148,7 @@
 
 .method public equals(Ljava/lang/Object;)Z
     .locals 3
-    .parameter "o"
+    .param p1, "o"    # Ljava/lang/Object;
 
     .prologue
     const/4 v2, 0x1
@@ -159,11 +159,11 @@
     move v0, v2
 
     .line 261
-    .end local p1
+    .end local p1    # "o":Ljava/lang/Object;
     :goto_0
     return v0
 
-    .restart local p1
+    .restart local p1    # "o":Ljava/lang/Object;
     :cond_0
     instance-of v0, p1, Lcom/flurry/org/apache/avro/generic/GenericFixed;
 
@@ -173,7 +173,7 @@
 
     check-cast p1, Lcom/flurry/org/apache/avro/generic/GenericFixed;
 
-    .end local p1
+    .end local p1    # "o":Ljava/lang/Object;
     invoke-interface {p1}, Lcom/flurry/org/apache/avro/generic/GenericFixed;->bytes()[B
 
     move-result-object v1
@@ -220,7 +220,7 @@
 
 .method protected setSchema(Lcom/flurry/org/apache/avro/Schema;)V
     .locals 1
-    .parameter "schema"
+    .param p1, "schema"    # Lcom/flurry/org/apache/avro/Schema;
 
     .prologue
     .line 248

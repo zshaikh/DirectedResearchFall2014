@@ -97,7 +97,7 @@
 
     iget-object v0, p0, Lcom/applovin/impl/adview/AppLovinVideoOverlayImpl;->e:Landroid/widget/RelativeLayout;
 
-    const/high16 v1, -0x100
+    const/high16 v1, -0x1000000
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->setBackgroundColor(I)V
 
@@ -245,7 +245,7 @@
 
     div-double/2addr v0, v2
 
-    const-wide/high16 v2, 0x4059
+    const-wide/high16 v2, 0x4059000000000000L
 
     mul-double/2addr v0, v2
 

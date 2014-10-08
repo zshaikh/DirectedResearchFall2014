@@ -13,7 +13,7 @@
 # direct methods
 .method public constructor <init>(Lcom/playhaven/src/common/PHAPIRequest$Delegate;)V
     .locals 0
-    .parameter "delegate"
+    .param p1, "delegate"    # Lcom/playhaven/src/common/PHAPIRequest$Delegate;
 
     .prologue
     .line 16
@@ -30,8 +30,8 @@
 # virtual methods
 .method public onBadgeRequestFailed(Lv2/com/playhaven/requests/badge/PHBadgeRequest;Lv2/com/playhaven/model/PHError;)V
     .locals 3
-    .parameter "request"
-    .parameter "error"
+    .param p1, "request"    # Lv2/com/playhaven/requests/badge/PHBadgeRequest;
+    .param p2, "error"    # Lv2/com/playhaven/model/PHError;
 
     .prologue
     .line 27
@@ -39,7 +39,7 @@
 
     check-cast p1, Lcom/playhaven/src/publishersdk/metadata/PHPublisherMetadataRequest;
 
-    .end local p1
+    .end local p1    # "request":Lv2/com/playhaven/requests/badge/PHBadgeRequest;
     new-instance v1, Ljava/lang/Exception;
 
     invoke-virtual {p2}, Lv2/com/playhaven/model/PHError;->getMessage()Ljava/lang/String;
@@ -56,8 +56,8 @@
 
 .method public onBadgeRequestSucceeded(Lv2/com/playhaven/requests/badge/PHBadgeRequest;Lorg/json/JSONObject;)V
     .locals 1
-    .parameter "request"
-    .parameter "responseData"
+    .param p1, "request"    # Lv2/com/playhaven/requests/badge/PHBadgeRequest;
+    .param p2, "responseData"    # Lorg/json/JSONObject;
 
     .prologue
     .line 22
@@ -65,7 +65,7 @@
 
     check-cast p1, Lcom/playhaven/src/publishersdk/metadata/PHPublisherMetadataRequest;
 
-    .end local p1
+    .end local p1    # "request":Lv2/com/playhaven/requests/badge/PHBadgeRequest;
     invoke-interface {v0, p1, p2}, Lcom/playhaven/src/common/PHAPIRequest$Delegate;->requestSucceeded(Lcom/playhaven/src/common/PHAPIRequest;Lorg/json/JSONObject;)V
 
     .line 23

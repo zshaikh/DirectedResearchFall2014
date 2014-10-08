@@ -45,7 +45,7 @@
 
 .method public constructor <init>(Lcom/flurry/org/codehaus/jackson/map/introspect/BasicBeanDescription;)V
     .locals 0
-    .parameter "beanDesc"
+    .param p1, "beanDesc"    # Lcom/flurry/org/codehaus/jackson/map/introspect/BasicBeanDescription;
 
     .prologue
     .line 62
@@ -60,7 +60,7 @@
 
 .method protected constructor <init>(Lcom/flurry/org/codehaus/jackson/map/ser/BeanSerializerBuilder;)V
     .locals 1
-    .parameter "src"
+    .param p1, "src"    # Lcom/flurry/org/codehaus/jackson/map/ser/BeanSerializerBuilder;
 
     .prologue
     .line 69
@@ -139,7 +139,7 @@
     sget-object v2, Lcom/flurry/org/codehaus/jackson/map/ser/BeanSerializerBuilder;->NO_PROPERTIES:[Lcom/flurry/org/codehaus/jackson/map/ser/BeanPropertyWriter;
 
     .line 128
-    .local v2, properties:[Lcom/flurry/org/codehaus/jackson/map/ser/BeanPropertyWriter;
+    .local v2, "properties":[Lcom/flurry/org/codehaus/jackson/map/ser/BeanPropertyWriter;
     :goto_1
     new-instance v0, Lcom/flurry/org/codehaus/jackson/map/ser/BeanSerializer;
 
@@ -160,7 +160,7 @@
     goto :goto_0
 
     .line 125
-    .end local v2           #properties:[Lcom/flurry/org/codehaus/jackson/map/ser/BeanPropertyWriter;
+    .end local v2    # "properties":[Lcom/flurry/org/codehaus/jackson/map/ser/BeanPropertyWriter;
     :cond_2
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/map/ser/BeanSerializerBuilder;->_properties:Ljava/util/List;
 
@@ -178,7 +178,7 @@
 
     check-cast v2, [Lcom/flurry/org/codehaus/jackson/map/ser/BeanPropertyWriter;
 
-    .restart local v2       #properties:[Lcom/flurry/org/codehaus/jackson/map/ser/BeanPropertyWriter;
+    .restart local v2    # "properties":[Lcom/flurry/org/codehaus/jackson/map/ser/BeanPropertyWriter;
     goto :goto_1
 .end method
 
@@ -269,7 +269,7 @@
 
 .method public setAnyGetter(Lcom/flurry/org/codehaus/jackson/map/ser/AnyGetterWriter;)V
     .locals 0
-    .parameter "anyGetter"
+    .param p1, "anyGetter"    # Lcom/flurry/org/codehaus/jackson/map/ser/AnyGetterWriter;
 
     .prologue
     .line 97
@@ -281,7 +281,7 @@
 
 .method public setFilterId(Ljava/lang/Object;)V
     .locals 0
-    .parameter "filterId"
+    .param p1, "filterId"    # Ljava/lang/Object;
 
     .prologue
     .line 101
@@ -293,7 +293,7 @@
 
 .method public setFilteredProperties([Lcom/flurry/org/codehaus/jackson/map/ser/BeanPropertyWriter;)V
     .locals 0
-    .parameter "properties"
+    .param p1, "properties"    # [Lcom/flurry/org/codehaus/jackson/map/ser/BeanPropertyWriter;
 
     .prologue
     .line 93
@@ -305,7 +305,6 @@
 
 .method public setProperties(Ljava/util/List;)V
     .locals 0
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -318,7 +317,7 @@
 
     .prologue
     .line 89
-    .local p1, properties:Ljava/util/List;,"Ljava/util/List<Lcom/flurry/org/codehaus/jackson/map/ser/BeanPropertyWriter;>;"
+    .local p1, "properties":Ljava/util/List;, "Ljava/util/List<Lcom/flurry/org/codehaus/jackson/map/ser/BeanPropertyWriter;>;"
     iput-object p1, p0, Lcom/flurry/org/codehaus/jackson/map/ser/BeanSerializerBuilder;->_properties:Ljava/util/List;
 
     .line 90

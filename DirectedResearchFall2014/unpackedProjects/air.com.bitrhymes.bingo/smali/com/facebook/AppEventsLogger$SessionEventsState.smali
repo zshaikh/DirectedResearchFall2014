@@ -57,8 +57,8 @@
 # direct methods
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
-    .parameter "attributionId"
-    .parameter "packageName"
+    .param p1, "attributionId"    # Ljava/lang/String;
+    .param p2, "packageName"    # Ljava/lang/String;
 
     .prologue
     .line 986
@@ -95,14 +95,14 @@
 
 .method private getStringAsByteArray(Ljava/lang/String;)[B
     .locals 3
-    .parameter "jsonString"
+    .param p1, "jsonString"    # Ljava/lang/String;
 
     .prologue
     .line 1088
     const/4 v1, 0x0
 
     .line 1090
-    .local v1, jsonUtf8:[B
+    .local v1, "jsonUtf8":[B
     :try_start_0
     const-string v2, "UTF-8"
 
@@ -123,7 +123,7 @@
     move-object v0, v2
 
     .line 1093
-    .local v0, e:Ljava/io/UnsupportedEncodingException;
+    .local v0, "e":Ljava/io/UnsupportedEncodingException;
     const-string v2, "Encoding exception: "
 
     invoke-static {v2, v0}, Lcom/facebook/internal/Utility;->logd(Ljava/lang/String;Ljava/lang/Exception;)V
@@ -133,11 +133,11 @@
 
 .method private populateRequest(Lcom/facebook/Request;ILorg/json/JSONArray;ZZ)V
     .locals 5
-    .parameter "request"
-    .parameter "numSkipped"
-    .parameter "events"
-    .parameter "includeAttribution"
-    .parameter "limitEventUsage"
+    .param p1, "request"    # Lcom/facebook/Request;
+    .param p2, "numSkipped"    # I
+    .param p3, "events"    # Lorg/json/JSONArray;
+    .param p4, "includeAttribution"    # Z
+    .param p5, "limitEventUsage"    # Z
 
     .prologue
     .line 1058
@@ -146,7 +146,7 @@
     move-result-object v1
 
     .line 1059
-    .local v1, publishParams:Lcom/facebook/model/GraphObject;
+    .local v1, "publishParams":Lcom/facebook/model/GraphObject;
     const-string v3, "event"
 
     const-string v4, "CUSTOM_APP_EVENTS"
@@ -213,24 +213,24 @@
     move-result-object v2
 
     .line 1075
-    .local v2, requestParameters:Landroid/os/Bundle;
+    .local v2, "requestParameters":Landroid/os/Bundle;
     if-nez v2, :cond_2
 
     .line 1076
     new-instance v2, Landroid/os/Bundle;
 
-    .end local v2           #requestParameters:Landroid/os/Bundle;
+    .end local v2    # "requestParameters":Landroid/os/Bundle;
     invoke-direct {v2}, Landroid/os/Bundle;-><init>()V
 
     .line 1079
-    .restart local v2       #requestParameters:Landroid/os/Bundle;
+    .restart local v2    # "requestParameters":Landroid/os/Bundle;
     :cond_2
     invoke-virtual {p3}, Lorg/json/JSONArray;->toString()Ljava/lang/String;
 
     move-result-object v0
 
     .line 1080
-    .local v0, jsonString:Ljava/lang/String;
+    .local v0, "jsonString":Ljava/lang/String;
     if-eqz v0, :cond_3
 
     .line 1081
@@ -253,8 +253,8 @@
     return-void
 
     .line 1069
-    .end local v0           #jsonString:Ljava/lang/String;
-    .end local v2           #requestParameters:Landroid/os/Bundle;
+    .end local v0    # "jsonString":Ljava/lang/String;
+    .end local v2    # "requestParameters":Landroid/os/Bundle;
     :cond_4
     const/4 v4, 0x1
 
@@ -265,7 +265,6 @@
 # virtual methods
 .method public declared-synchronized accumulatePersistedEvents(Ljava/util/List;)V
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -278,7 +277,7 @@
 
     .prologue
     .line 1053
-    .local p1, events:Ljava/util/List;,"Ljava/util/List<Lcom/facebook/AppEventsLogger$AppEvent;>;"
+    .local p1, "events":Ljava/util/List;, "Ljava/util/List<Lcom/facebook/AppEventsLogger$AppEvent;>;"
     monitor-enter p0
 
     :try_start_0
@@ -304,7 +303,7 @@
 
 .method public declared-synchronized addEvent(Lcom/facebook/AppEventsLogger$AppEvent;)V
     .locals 2
-    .parameter "event"
+    .param p1, "event"    # Lcom/facebook/AppEventsLogger$AppEvent;
 
     .prologue
     .line 994
@@ -366,7 +365,7 @@
 
 .method public declared-synchronized clearInFlightAndStats(Z)V
     .locals 2
-    .parameter "moveToAccumulated"
+    .param p1, "moveToAccumulated"    # Z
 
     .prologue
     .line 1006
@@ -457,7 +456,7 @@
     iget-object v0, p0, Lcom/facebook/AppEventsLogger$SessionEventsState;->accumulatedEvents:Ljava/util/List;
 
     .line 1046
-    .local v0, result:Ljava/util/List;,"Ljava/util/List<Lcom/facebook/AppEventsLogger$AppEvent;>;"
+    .local v0, "result":Ljava/util/List;, "Ljava/util/List<Lcom/facebook/AppEventsLogger$AppEvent;>;"
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
@@ -472,7 +471,7 @@
     return-object v0
 
     .line 1045
-    .end local v0           #result:Ljava/util/List;,"Ljava/util/List<Lcom/facebook/AppEventsLogger$AppEvent;>;"
+    .end local v0    # "result":Ljava/util/List;, "Ljava/util/List<Lcom/facebook/AppEventsLogger$AppEvent;>;"
     :catchall_0
     move-exception v1
 
@@ -483,10 +482,10 @@
 
 .method public populateRequest(Lcom/facebook/Request;ZZZ)I
     .locals 7
-    .parameter "request"
-    .parameter "includeImplicitEvents"
-    .parameter "includeAttribution"
-    .parameter "limitEventUsage"
+    .param p1, "request"    # Lcom/facebook/Request;
+    .param p2, "includeImplicitEvents"    # Z
+    .param p3, "includeAttribution"    # Z
+    .param p4, "limitEventUsage"    # Z
 
     .prologue
     .line 1018
@@ -497,7 +496,7 @@
     iget v2, p0, Lcom/facebook/AppEventsLogger$SessionEventsState;->numSkippedEventsDueToFullBuffer:I
 
     .line 1022
-    .local v2, numSkipped:I
+    .local v2, "numSkipped":I
     iget-object v0, p0, Lcom/facebook/AppEventsLogger$SessionEventsState;->inFlightEvents:Ljava/util/List;
 
     iget-object v1, p0, Lcom/facebook/AppEventsLogger$SessionEventsState;->accumulatedEvents:Ljava/util/List;
@@ -515,7 +514,7 @@
     invoke-direct {v3}, Lorg/json/JSONArray;-><init>()V
 
     .line 1026
-    .local v3, jsonArray:Lorg/json/JSONArray;
+    .local v3, "jsonArray":Lorg/json/JSONArray;
     iget-object v0, p0, Lcom/facebook/AppEventsLogger$SessionEventsState;->inFlightEvents:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -555,7 +554,7 @@
     check-cast v6, Lcom/facebook/AppEventsLogger$AppEvent;
 
     .line 1027
-    .local v6, event:Lcom/facebook/AppEventsLogger$AppEvent;
+    .local v6, "event":Lcom/facebook/AppEventsLogger$AppEvent;
     if-nez p2, :cond_2
 
     invoke-virtual {v6}, Lcom/facebook/AppEventsLogger$AppEvent;->getIsImplicit()Z
@@ -575,9 +574,9 @@
     goto :goto_0
 
     .line 1018
-    .end local v2           #numSkipped:I
-    .end local v3           #jsonArray:Lorg/json/JSONArray;
-    .end local v6           #event:Lcom/facebook/AppEventsLogger$AppEvent;
+    .end local v2    # "numSkipped":I
+    .end local v3    # "jsonArray":Lorg/json/JSONArray;
+    .end local v6    # "event":Lcom/facebook/AppEventsLogger$AppEvent;
     :catchall_0
     move-exception v0
 
@@ -587,8 +586,8 @@
 
     throw v0
 
-    .restart local v2       #numSkipped:I
-    .restart local v3       #jsonArray:Lorg/json/JSONArray;
+    .restart local v2    # "numSkipped":I
+    .restart local v3    # "jsonArray":Lorg/json/JSONArray;
     :cond_3
     :try_start_1
     monitor-exit p0

@@ -21,7 +21,6 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/util/FuseAdCallback;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 1686

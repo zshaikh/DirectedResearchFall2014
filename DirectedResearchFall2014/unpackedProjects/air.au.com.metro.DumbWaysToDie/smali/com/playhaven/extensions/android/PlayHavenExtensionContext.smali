@@ -3,10 +3,10 @@
 .source "PlayHavenExtensionContext.java"
 
 # interfaces
-.implements Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest$FailureDelegate;
 .implements Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest$ContentDelegate;
-.implements Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest$RewardDelegate;
+.implements Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest$FailureDelegate;
 .implements Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest$PurchaseDelegate;
+.implements Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest$RewardDelegate;
 
 
 # annotations
@@ -181,9 +181,6 @@
 
 .method static synthetic access$0(Lcom/playhaven/extensions/android/PlayHavenExtensionContext;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 454
@@ -194,8 +191,8 @@
 
 .method private dispatchFlashEvent(Ljava/lang/String;Ljava/lang/String;)V
     .locals 3
-    .parameter "eventId"
-    .parameter "level"
+    .param p1, "eventId"    # Ljava/lang/String;
+    .param p2, "level"    # Ljava/lang/String;
 
     .prologue
     .line 456
@@ -238,8 +235,8 @@
 # virtual methods
 .method public contentDidFail(Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest;Ljava/lang/Exception;)V
     .locals 3
-    .parameter "request"
-    .parameter "e"
+    .param p1, "request"    # Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest;
+    .param p2, "e"    # Ljava/lang/Exception;
 
     .prologue
     .line 446
@@ -272,7 +269,7 @@
     move-result-object v0
 
     .line 447
-    .local v0, level:Ljava/lang/String;
+    .local v0, "level":Ljava/lang/String;
     const-string v1, "CONTENT_FAILED"
 
     invoke-direct {p0, v1, v0}, Lcom/playhaven/extensions/android/PlayHavenExtensionContext;->dispatchFlashEvent(Ljava/lang/String;Ljava/lang/String;)V
@@ -283,15 +280,15 @@
 
 .method public didDismissContent(Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest;Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest$PHDismissType;)V
     .locals 3
-    .parameter "request"
-    .parameter "type"
+    .param p1, "request"    # Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest;
+    .param p2, "type"    # Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest$PHDismissType;
 
     .prologue
     .line 415
     const-string v0, "unknown"
 
     .line 416
-    .local v0, level:Ljava/lang/String;
+    .local v0, "level":Ljava/lang/String;
     invoke-static {}, Lcom/playhaven/extensions/android/PlayHavenExtensionContext;->$SWITCH_TABLE$com$playhaven$src$publishersdk$content$PHPublisherContentRequest$PHDismissType()[I
 
     move-result-object v1
@@ -354,8 +351,8 @@
 
 .method public didDisplayContent(Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest;Lcom/playhaven/src/publishersdk/content/PHContent;)V
     .locals 2
-    .parameter "request"
-    .parameter "content"
+    .param p1, "request"    # Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest;
+    .param p2, "content"    # Lcom/playhaven/src/publishersdk/content/PHContent;
 
     .prologue
     .line 407
@@ -371,8 +368,8 @@
 
 .method public didFail(Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest;Ljava/lang/String;)V
     .locals 3
-    .parameter "request"
-    .parameter "error"
+    .param p1, "request"    # Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest;
+    .param p2, "error"    # Ljava/lang/String;
 
     .prologue
     .line 439
@@ -401,7 +398,7 @@
     move-result-object v0
 
     .line 440
-    .local v0, level:Ljava/lang/String;
+    .local v0, "level":Ljava/lang/String;
     const-string v1, "CONTENT_FAILED"
 
     invoke-direct {p0, v1, v0}, Lcom/playhaven/extensions/android/PlayHavenExtensionContext;->dispatchFlashEvent(Ljava/lang/String;Ljava/lang/String;)V
@@ -420,9 +417,9 @@
 
 .method public ffiInitPlayHaven(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
-    .parameter "token"
-    .parameter "secret"
-    .parameter "tag"
+    .param p1, "token"    # Ljava/lang/String;
+    .param p2, "secret"    # Ljava/lang/String;
+    .param p3, "tag"    # Ljava/lang/String;
 
     .prologue
     .line 70
@@ -457,8 +454,8 @@
 
 .method public ffiMoveNotification(FF)Z
     .locals 1
-    .parameter "centerX"
-    .parameter "centerY"
+    .param p1, "centerX"    # F
+    .param p2, "centerY"    # F
 
     .prologue
     .line 313
@@ -469,7 +466,7 @@
 
 .method public ffiPreloadContentRequest(Ljava/lang/String;)V
     .locals 2
-    .parameter "placementId"
+    .param p1, "placementId"    # Ljava/lang/String;
 
     .prologue
     .line 129
@@ -482,7 +479,7 @@
     invoke-direct {v0, v1, p1}, Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest;-><init>(Landroid/app/Activity;Ljava/lang/String;)V
 
     .line 130
-    .local v0, request:Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest;
+    .local v0, "request":Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest;
     iget-object v1, p0, Lcom/playhaven/extensions/android/PlayHavenExtensionContext;->preloadMap:Ljava/util/HashMap;
 
     invoke-virtual {v1, p1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -508,7 +505,7 @@
 
 .method public ffiRefreshNotification(Z)Z
     .locals 1
-    .parameter "isTestMode"
+    .param p1, "isTestMode"    # Z
 
     .prologue
     .line 300
@@ -543,7 +540,7 @@
     const/4 v2, 0x0
 
     .line 268
-    .local v2, res:Z
+    .local v2, "res":Z
     iget-object v5, p0, Lcom/playhaven/extensions/android/PlayHavenExtensionContext;->notifyView:Lcom/playhaven/src/publishersdk/metadata/PHNotificationView;
 
     if-eqz v5, :cond_2
@@ -559,7 +556,7 @@
     check-cast v4, Landroid/view/ViewGroup;
 
     .line 273
-    .local v4, vg:Landroid/view/ViewGroup;
+    .local v4, "vg":Landroid/view/ViewGroup;
     invoke-virtual {v4}, Landroid/view/ViewGroup;->getParent()Landroid/view/ViewParent;
 
     move-result-object v1
@@ -567,7 +564,7 @@
     check-cast v1, Landroid/view/ViewGroup;
 
     .line 274
-    .local v1, outerVg:Landroid/view/ViewGroup;
+    .local v1, "outerVg":Landroid/view/ViewGroup;
     invoke-virtual {v1}, Landroid/view/ViewGroup;->getParent()Landroid/view/ViewParent;
 
     move-result-object v3
@@ -575,7 +572,7 @@
     check-cast v3, Landroid/view/ViewGroup;
 
     .line 275
-    .local v3, superVg:Landroid/view/ViewGroup;
+    .local v3, "superVg":Landroid/view/ViewGroup;
     iget-object v5, p0, Lcom/playhaven/extensions/android/PlayHavenExtensionContext;->notifyView:Lcom/playhaven/src/publishersdk/metadata/PHNotificationView;
 
     invoke-virtual {v4, v5}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
@@ -609,9 +606,9 @@
     const/4 v2, 0x1
 
     .line 294
-    .end local v1           #outerVg:Landroid/view/ViewGroup;
-    .end local v3           #superVg:Landroid/view/ViewGroup;
-    .end local v4           #vg:Landroid/view/ViewGroup;
+    .end local v1    # "outerVg":Landroid/view/ViewGroup;
+    .end local v3    # "superVg":Landroid/view/ViewGroup;
+    .end local v4    # "vg":Landroid/view/ViewGroup;
     :cond_2
     :goto_0
     return v2
@@ -623,7 +620,7 @@
     move-object v0, v5
 
     .line 288
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     .line 289
@@ -634,8 +631,8 @@
 
 .method public ffiReportPurchaseResolution(Ljava/lang/String;Ljava/lang/String;)V
     .locals 7
-    .parameter "receipt"
-    .parameter "strResolution"
+    .param p1, "receipt"    # Ljava/lang/String;
+    .param p2, "strResolution"    # Ljava/lang/String;
 
     .prologue
     const-string v6, "PURCHASE_REPORT_FAILED"
@@ -644,7 +641,7 @@
     const/4 v0, 0x0
 
     .line 175
-    .local v0, purchase:Lcom/playhaven/src/publishersdk/content/PHPurchase;
+    .local v0, "purchase":Lcom/playhaven/src/publishersdk/content/PHPurchase;
     iget-object v4, p0, Lcom/playhaven/extensions/android/PlayHavenExtensionContext;->purchaseMap:Ljava/util/HashMap;
 
     invoke-virtual {v4, p1}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
@@ -660,11 +657,11 @@
 
     move-result-object v0
 
-    .end local v0           #purchase:Lcom/playhaven/src/publishersdk/content/PHPurchase;
+    .end local v0    # "purchase":Lcom/playhaven/src/publishersdk/content/PHPurchase;
     check-cast v0, Lcom/playhaven/src/publishersdk/content/PHPurchase;
 
     .line 180
-    .restart local v0       #purchase:Lcom/playhaven/src/publishersdk/content/PHPurchase;
+    .restart local v0    # "purchase":Lcom/playhaven/src/publishersdk/content/PHPurchase;
     :cond_0
     if-nez v0, :cond_1
 
@@ -700,7 +697,7 @@
     sget-object v3, Lcom/playhaven/src/publishersdk/content/PHPurchase$Resolution;->Error:Lcom/playhaven/src/publishersdk/content/PHPurchase$Resolution;
 
     .line 189
-    .local v3, resolution:Lcom/playhaven/src/publishersdk/content/PHPurchase$Resolution;
+    .local v3, "resolution":Lcom/playhaven/src/publishersdk/content/PHPurchase$Resolution;
     const-string v4, "buy"
 
     invoke-virtual {p2, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -730,7 +727,7 @@
     invoke-direct {v2, v4, v0}, Lcom/playhaven/src/publishersdk/purchases/PHPublisherIAPTrackingRequest;-><init>(Landroid/content/Context;Lcom/playhaven/src/publishersdk/content/PHPurchase;)V
 
     .line 209
-    .local v2, request:Lcom/playhaven/src/publishersdk/purchases/PHPublisherIAPTrackingRequest;
+    .local v2, "request":Lcom/playhaven/src/publishersdk/purchases/PHPublisherIAPTrackingRequest;
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -744,7 +741,7 @@
     move-result-object v1
 
     .line 211
-    .local v1, purchaseReceiptId:Ljava/lang/String;
+    .local v1, "purchaseReceiptId":Ljava/lang/String;
     new-instance v4, Lcom/playhaven/extensions/android/PlayHavenExtensionContext$2;
 
     invoke-direct {v4, p0, v1}, Lcom/playhaven/extensions/android/PlayHavenExtensionContext$2;-><init>(Lcom/playhaven/extensions/android/PlayHavenExtensionContext;Ljava/lang/String;)V
@@ -757,8 +754,8 @@
     goto :goto_0
 
     .line 193
-    .end local v1           #purchaseReceiptId:Ljava/lang/String;
-    .end local v2           #request:Lcom/playhaven/src/publishersdk/purchases/PHPublisherIAPTrackingRequest;
+    .end local v1    # "purchaseReceiptId":Ljava/lang/String;
+    .end local v2    # "request":Lcom/playhaven/src/publishersdk/purchases/PHPublisherIAPTrackingRequest;
     :cond_2
     const-string v4, "cancel"
 
@@ -823,8 +820,8 @@
 
 .method public ffiSendContentRequest(Ljava/lang/String;Z)V
     .locals 4
-    .parameter "placementId"
-    .parameter "showImmediately"
+    .param p1, "placementId"    # Ljava/lang/String;
+    .param p2, "showImmediately"    # Z
 
     .prologue
     const-string v3, "[PHExtension]"
@@ -833,7 +830,7 @@
     const/4 v0, 0x0
 
     .line 107
-    .local v0, request:Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest;
+    .local v0, "request":Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest;
     iget-object v1, p0, Lcom/playhaven/extensions/android/PlayHavenExtensionContext;->preloadMap:Ljava/util/HashMap;
 
     invoke-virtual {v1, p1}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
@@ -849,11 +846,11 @@
 
     move-result-object v0
 
-    .end local v0           #request:Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest;
+    .end local v0    # "request":Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest;
     check-cast v0, Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest;
 
     .line 110
-    .restart local v0       #request:Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest;
+    .restart local v0    # "request":Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest;
     const-string v1, "[PHExtension]"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -907,7 +904,7 @@
     :cond_0
     new-instance v0, Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest;
 
-    .end local v0           #request:Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest;
+    .end local v0    # "request":Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest;
     invoke-virtual {p0}, Lcom/playhaven/extensions/android/PlayHavenExtensionContext;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
@@ -915,7 +912,7 @@
     invoke-direct {v0, v1, p1}, Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest;-><init>(Landroid/app/Activity;Ljava/lang/String;)V
 
     .line 116
-    .restart local v0       #request:Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest;
+    .restart local v0    # "request":Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest;
     invoke-virtual {v0, p0}, Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest;->setOnContentListener(Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest$ContentDelegate;)V
 
     .line 117
@@ -944,7 +941,7 @@
     invoke-direct {v0, v1}, Lcom/playhaven/src/publishersdk/open/PHPublisherOpenRequest;-><init>(Landroid/content/Context;)V
 
     .line 91
-    .local v0, request:Lcom/playhaven/src/publishersdk/open/PHPublisherOpenRequest;
+    .local v0, "request":Lcom/playhaven/src/publishersdk/open/PHPublisherOpenRequest;
     invoke-virtual {v0}, Lcom/playhaven/src/publishersdk/open/PHPublisherOpenRequest;->send()V
 
     .line 92
@@ -953,7 +950,7 @@
 
 .method public ffiSendMetaDataRequest(Ljava/lang/String;)V
     .locals 5
-    .parameter "placementId"
+    .param p1, "placementId"    # Ljava/lang/String;
 
     .prologue
     .line 142
@@ -985,7 +982,7 @@
     invoke-direct {v1, v2, p1}, Lcom/playhaven/src/publishersdk/metadata/PHPublisherMetadataRequest;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
     .line 145
-    .local v1, request:Lcom/playhaven/src/publishersdk/metadata/PHPublisherMetadataRequest;
+    .local v1, "request":Lcom/playhaven/src/publishersdk/metadata/PHPublisherMetadataRequest;
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -999,7 +996,7 @@
     move-result-object v0
 
     .line 147
-    .local v0, outPlacementId:Ljava/lang/String;
+    .local v0, "outPlacementId":Ljava/lang/String;
     new-instance v2, Lcom/playhaven/extensions/android/PlayHavenExtensionContext$1;
 
     invoke-direct {v2, p0, v0}, Lcom/playhaven/extensions/android/PlayHavenExtensionContext$1;-><init>(Lcom/playhaven/extensions/android/PlayHavenExtensionContext;Ljava/lang/String;)V
@@ -1015,7 +1012,7 @@
 
 .method public ffiSetOptOutStatus(Z)V
     .locals 2
-    .parameter "shouldOptOut"
+    .param p1, "shouldOptOut"    # Z
 
     .prologue
     .line 98
@@ -1031,9 +1028,9 @@
 
 .method public ffiShowNotification(Ljava/lang/String;DD)V
     .locals 8
-    .parameter "placementId"
-    .parameter "centerX"
-    .parameter "centerY"
+    .param p1, "placementId"    # Ljava/lang/String;
+    .param p2, "centerX"    # D
+    .param p4, "centerY"    # D
 
     .prologue
     const/4 v7, -0x1
@@ -1055,19 +1052,19 @@
     move-result-object v0
 
     .line 243
-    .local v0, activity:Landroid/app/Activity;
+    .local v0, "activity":Landroid/app/Activity;
     new-instance v2, Landroid/widget/RelativeLayout$LayoutParams;
 
     invoke-direct {v2, v6, v6}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
     .line 244
-    .local v2, innerParams:Landroid/widget/RelativeLayout$LayoutParams;
+    .local v2, "innerParams":Landroid/widget/RelativeLayout$LayoutParams;
     new-instance v1, Landroid/widget/RelativeLayout;
 
     invoke-direct {v1, v0}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;)V
 
     .line 246
-    .local v1, innerLayout:Landroid/widget/RelativeLayout;
+    .local v1, "innerLayout":Landroid/widget/RelativeLayout;
     new-instance v5, Lcom/playhaven/src/publishersdk/metadata/PHNotificationView;
 
     invoke-virtual {p0}, Lcom/playhaven/extensions/android/PlayHavenExtensionContext;->getActivity()Landroid/app/Activity;
@@ -1089,13 +1086,13 @@
     invoke-direct {v3, v0}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;)V
 
     .line 250
-    .local v3, outerLayout:Landroid/widget/RelativeLayout;
+    .local v3, "outerLayout":Landroid/widget/RelativeLayout;
     new-instance v4, Landroid/widget/RelativeLayout$LayoutParams;
 
     invoke-direct {v4, v7, v7}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
     .line 253
-    .local v4, outerParams:Landroid/widget/RelativeLayout$LayoutParams;
+    .local v4, "outerParams":Landroid/widget/RelativeLayout$LayoutParams;
     const/16 v5, 0x9
 
     invoke-virtual {v2, v5}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
@@ -1155,7 +1152,7 @@
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     .line 471
-    .local v0, functionMap:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Lcom/adobe/fre/FREFunction;>;"
+    .local v0, "functionMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Lcom/adobe/fre/FREFunction;>;"
     const-string v1, "ffiInitPlayHaven"
 
     new-instance v2, Lcom/playhaven/extensions/android/PlayHavenExtensionContext$PHInitFunction;
@@ -1279,8 +1276,8 @@
 
 .method public requestFailed(Lcom/playhaven/src/common/PHAPIRequest;Ljava/lang/Exception;)V
     .locals 0
-    .parameter "request"
-    .parameter "e"
+    .param p1, "request"    # Lcom/playhaven/src/common/PHAPIRequest;
+    .param p2, "e"    # Ljava/lang/Exception;
 
     .prologue
     .line 386
@@ -1289,8 +1286,8 @@
 
 .method public requestSucceeded(Lcom/playhaven/src/common/PHAPIRequest;Lorg/json/JSONObject;)V
     .locals 0
-    .parameter "request"
-    .parameter "responseData"
+    .param p1, "request"    # Lcom/playhaven/src/common/PHAPIRequest;
+    .param p2, "responseData"    # Lorg/json/JSONObject;
 
     .prologue
     .line 379
@@ -1299,8 +1296,8 @@
 
 .method public shouldMakePurchase(Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest;Lcom/playhaven/src/publishersdk/content/PHPurchase;)V
     .locals 5
-    .parameter "request"
-    .parameter "purchase"
+    .param p1, "request"    # Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest;
+    .param p2, "purchase"    # Lcom/playhaven/src/publishersdk/content/PHPurchase;
 
     .prologue
     .line 324
@@ -1309,11 +1306,11 @@
     invoke-direct {v1}, Lorg/json/JSONObject;-><init>()V
 
     .line 325
-    .local v1, jsonLevel:Lorg/json/JSONObject;
+    .local v1, "jsonLevel":Lorg/json/JSONObject;
     const-string v2, "{}"
 
     .line 329
-    .local v2, levelString:Ljava/lang/String;
+    .local v2, "levelString":Ljava/lang/String;
     :try_start_0
     const-string v3, "productId"
 
@@ -1365,7 +1362,7 @@
     move-object v0, v3
 
     .line 336
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     new-instance v3, Ljava/lang/StringBuilder;
 
     iget-object v4, p1, Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest;->placement:Ljava/lang/String;
@@ -1396,8 +1393,8 @@
 
 .method public unlockedReward(Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest;Lcom/playhaven/src/publishersdk/content/PHReward;)V
     .locals 5
-    .parameter "request"
-    .parameter "reward"
+    .param p1, "request"    # Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest;
+    .param p2, "reward"    # Lcom/playhaven/src/publishersdk/content/PHReward;
 
     .prologue
     .line 354
@@ -1406,11 +1403,11 @@
     invoke-direct {v1}, Lorg/json/JSONObject;-><init>()V
 
     .line 355
-    .local v1, jsonLevel:Lorg/json/JSONObject;
+    .local v1, "jsonLevel":Lorg/json/JSONObject;
     const-string v2, "{}"
 
     .line 358
-    .local v2, levelString:Ljava/lang/String;
+    .local v2, "levelString":Ljava/lang/String;
     :try_start_0
     const-string v3, "name"
 
@@ -1455,7 +1452,7 @@
     move-object v0, v3
 
     .line 365
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     new-instance v3, Ljava/lang/StringBuilder;
 
     iget-object v4, p1, Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest;->placement:Ljava/lang/String;
@@ -1486,8 +1483,8 @@
 
 .method public willDisplayContent(Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest;Lcom/playhaven/src/publishersdk/content/PHContent;)V
     .locals 2
-    .parameter "request"
-    .parameter "content"
+    .param p1, "request"    # Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest;
+    .param p2, "content"    # Lcom/playhaven/src/publishersdk/content/PHContent;
 
     .prologue
     .line 399
@@ -1503,7 +1500,7 @@
 
 .method public willGetContent(Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest;)V
     .locals 2
-    .parameter "request"
+    .param p1, "request"    # Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest;
 
     .prologue
     .line 391

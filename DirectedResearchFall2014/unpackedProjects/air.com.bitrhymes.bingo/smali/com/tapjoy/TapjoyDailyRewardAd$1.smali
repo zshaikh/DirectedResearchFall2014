@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/tapjoy/TapjoyDailyRewardAd;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 92
@@ -70,7 +69,7 @@
 
     iget-object v3, p0, Lcom/tapjoy/TapjoyDailyRewardAd$1;->this$0:Lcom/tapjoy/TapjoyDailyRewardAd;
 
-    #getter for: Lcom/tapjoy/TapjoyDailyRewardAd;->legacyDailyRewardAdParams:Ljava/util/Map;
+    # getter for: Lcom/tapjoy/TapjoyDailyRewardAd;->legacyDailyRewardAdParams:Ljava/util/Map;
     invoke-static {v3}, Lcom/tapjoy/TapjoyDailyRewardAd;->access$000(Lcom/tapjoy/TapjoyDailyRewardAd;)Ljava/util/Map;
 
     move-result-object v3
@@ -80,7 +79,7 @@
     move-result-object v0
 
     .line 97
-    .local v0, httpResponse:Lcom/tapjoy/TapjoyHttpURLResponse;
+    .local v0, "httpResponse":Lcom/tapjoy/TapjoyHttpURLResponse;
     if-eqz v0, :cond_0
 
     .line 99
@@ -96,9 +95,11 @@
     :sswitch_0
     iget-object v1, v0, Lcom/tapjoy/TapjoyHttpURLResponse;->response:Ljava/lang/String;
 
+    # setter for: Lcom/tapjoy/TapjoyDailyRewardAd;->htmlResponseData:Ljava/lang/String;
     invoke-static {v1}, Lcom/tapjoy/TapjoyDailyRewardAd;->access$102(Ljava/lang/String;)Ljava/lang/String;
 
     .line 105
+    # getter for: Lcom/tapjoy/TapjoyDailyRewardAd;->dailyRewardNotifier:Lcom/tapjoy/TapjoyDailyRewardAdNotifier;
     invoke-static {}, Lcom/tapjoy/TapjoyDailyRewardAd;->access$200()Lcom/tapjoy/TapjoyDailyRewardAdNotifier;
 
     move-result-object v1
@@ -109,6 +110,7 @@
 
     .line 110
     :sswitch_1
+    # getter for: Lcom/tapjoy/TapjoyDailyRewardAd;->dailyRewardNotifier:Lcom/tapjoy/TapjoyDailyRewardAdNotifier;
     invoke-static {}, Lcom/tapjoy/TapjoyDailyRewardAd;->access$200()Lcom/tapjoy/TapjoyDailyRewardAdNotifier;
 
     move-result-object v1
@@ -121,6 +123,7 @@
 
     .line 116
     :cond_0
+    # getter for: Lcom/tapjoy/TapjoyDailyRewardAd;->dailyRewardNotifier:Lcom/tapjoy/TapjoyDailyRewardAdNotifier;
     invoke-static {}, Lcom/tapjoy/TapjoyDailyRewardAd;->access$200()Lcom/tapjoy/TapjoyDailyRewardAdNotifier;
 
     move-result-object v1

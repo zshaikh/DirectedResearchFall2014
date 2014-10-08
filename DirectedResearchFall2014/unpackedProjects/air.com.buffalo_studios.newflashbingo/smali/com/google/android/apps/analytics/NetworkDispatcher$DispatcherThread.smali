@@ -94,7 +94,7 @@
 
     new-instance v0, Lcom/google/android/apps/analytics/PipelinedRequester;
 
-    #getter for: Lcom/google/android/apps/analytics/NetworkDispatcher;->googleAnalyticsHost:Lorg/apache/http/HttpHost;
+    # getter for: Lcom/google/android/apps/analytics/NetworkDispatcher;->googleAnalyticsHost:Lorg/apache/http/HttpHost;
     invoke-static {p3}, Lcom/google/android/apps/analytics/NetworkDispatcher;->access$200(Lcom/google/android/apps/analytics/NetworkDispatcher;)Lorg/apache/http/HttpHost;
 
     move-result-object v1

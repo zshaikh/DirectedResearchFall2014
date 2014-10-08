@@ -36,7 +36,6 @@
 
 .method private constructor <init>(Ljava/util/HashMap;)V
     .locals 0
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -53,7 +52,7 @@
 
     .prologue
     .line 19
-    .local p1, a:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/Class<+Ljava/lang/annotation/Annotation;>;Ljava/lang/annotation/Annotation;>;"
+    .local p1, "a":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/Class<+Ljava/lang/annotation/Annotation;>;Ljava/lang/annotation/Annotation;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 20
@@ -65,8 +64,8 @@
 
 .method public static merge(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;)Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;
     .locals 4
-    .parameter "primary"
-    .parameter "secondary"
+    .param p0, "primary"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;
+    .param p1, "secondary"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;
 
     .prologue
     .line 35
@@ -120,7 +119,7 @@
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
     .line 44
-    .local v1, annotations:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/Class<+Ljava/lang/annotation/Annotation;>;Ljava/lang/annotation/Annotation;>;"
+    .local v1, "annotations":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/Class<+Ljava/lang/annotation/Annotation;>;Ljava/lang/annotation/Annotation;>;"
     iget-object v3, p1, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;->_annotations:Ljava/util/HashMap;
 
     invoke-virtual {v3}, Ljava/util/HashMap;->values()Ljava/util/Collection;
@@ -131,7 +130,7 @@
 
     move-result-object v2
 
-    .local v2, i$:Ljava/util/Iterator;
+    .local v2, "i$":Ljava/util/Iterator;
     :goto_1
     invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
@@ -146,7 +145,7 @@
     check-cast v0, Ljava/lang/annotation/Annotation;
 
     .line 45
-    .local v0, ann:Ljava/lang/annotation/Annotation;
+    .local v0, "ann":Ljava/lang/annotation/Annotation;
     invoke-interface {v0}, Ljava/lang/annotation/Annotation;->annotationType()Ljava/lang/Class;
 
     move-result-object v3
@@ -156,7 +155,7 @@
     goto :goto_1
 
     .line 48
-    .end local v0           #ann:Ljava/lang/annotation/Annotation;
+    .end local v0    # "ann":Ljava/lang/annotation/Annotation;
     :cond_4
     iget-object v3, p0, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;->_annotations:Ljava/util/HashMap;
 
@@ -182,7 +181,7 @@
     check-cast v0, Ljava/lang/annotation/Annotation;
 
     .line 49
-    .restart local v0       #ann:Ljava/lang/annotation/Annotation;
+    .restart local v0    # "ann":Ljava/lang/annotation/Annotation;
     invoke-interface {v0}, Ljava/lang/annotation/Annotation;->annotationType()Ljava/lang/Class;
 
     move-result-object v3
@@ -192,7 +191,7 @@
     goto :goto_2
 
     .line 51
-    .end local v0           #ann:Ljava/lang/annotation/Annotation;
+    .end local v0    # "ann":Ljava/lang/annotation/Annotation;
     :cond_5
     new-instance v3, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;
 
@@ -205,7 +204,7 @@
 # virtual methods
 .method protected final _add(Ljava/lang/annotation/Annotation;)V
     .locals 2
-    .parameter "ann"
+    .param p1, "ann"    # Ljava/lang/annotation/Annotation;
 
     .prologue
     .line 94
@@ -236,7 +235,7 @@
 
 .method public add(Ljava/lang/annotation/Annotation;)V
     .locals 0
-    .parameter "ann"
+    .param p1, "ann"    # Ljava/lang/annotation/Annotation;
 
     .prologue
     .line 74
@@ -248,7 +247,7 @@
 
 .method public addIfNotPresent(Ljava/lang/annotation/Annotation;)V
     .locals 2
-    .parameter "ann"
+    .param p1, "ann"    # Ljava/lang/annotation/Annotation;
 
     .prologue
     .line 65
@@ -279,7 +278,6 @@
 
 .method public get(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<A::",
@@ -292,7 +290,7 @@
 
     .prologue
     .line 27
-    .local p1, cls:Ljava/lang/Class;,"Ljava/lang/Class<TA;>;"
+    .local p1, "cls":Ljava/lang/Class;, "Ljava/lang/Class<TA;>;"
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;->_annotations:Ljava/util/HashMap;
 
     if-nez v0, :cond_0
@@ -301,11 +299,11 @@
     const/4 v0, 0x0
 
     .line 30
-    .end local p0
+    .end local p0    # "this":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;
     :goto_0
     return-object v0
 
-    .restart local p0
+    .restart local p0    # "this":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;
     :cond_0
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;->_annotations:Ljava/util/HashMap;
 
@@ -313,7 +311,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;
     check-cast p0, Ljava/lang/annotation/Annotation;
 
     move-object v0, p0

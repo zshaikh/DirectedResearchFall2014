@@ -33,10 +33,6 @@
 # direct methods
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/ClassLoader;Ljava/lang/String;)V
     .locals 2
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 29
@@ -60,7 +56,6 @@
 # virtual methods
 .method public final a(Lcom/vungle/sdk/av;)V
     .locals 3
-    .parameter
 
     .prologue
     .line 35
@@ -82,7 +77,6 @@
 
 .method public final a(Ljava/lang/Object;)V
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;)V"

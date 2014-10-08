@@ -38,9 +38,6 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m1/google/gson/internal/ConstructorConstructor;Ljava/lang/Class;Ljava/lang/reflect/Type;)V
     .locals 1
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 211
@@ -86,18 +83,18 @@
     move-result-object v1
 
     .line 218
-    .local v1, newInstance:Ljava/lang/Object;
+    .local v1, "newInstance":Ljava/lang/Object;
     return-object v1
 
     .line 219
-    .end local v1           #newInstance:Ljava/lang/Object;
+    .end local v1    # "newInstance":Ljava/lang/Object;
     :catch_0
     move-exception v2
 
     move-object v0, v2
 
     .line 220
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     new-instance v2, Ljava/lang/RuntimeException;
 
     new-instance v3, Ljava/lang/StringBuilder;

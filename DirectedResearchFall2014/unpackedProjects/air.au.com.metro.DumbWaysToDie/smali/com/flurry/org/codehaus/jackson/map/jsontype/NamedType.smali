@@ -21,7 +21,6 @@
 # direct methods
 .method public constructor <init>(Ljava/lang/Class;)V
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -32,7 +31,7 @@
 
     .prologue
     .line 17
-    .local p1, c:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p1, "c":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
@@ -42,8 +41,7 @@
 
 .method public constructor <init>(Ljava/lang/Class;Ljava/lang/String;)V
     .locals 1
-    .parameter
-    .parameter "name"
+    .param p2, "name"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -56,7 +54,7 @@
 
     .prologue
     .line 20
-    .local p1, c:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p1, "c":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 21
@@ -84,7 +82,7 @@
 # virtual methods
 .method public equals(Ljava/lang/Object;)Z
     .locals 4
-    .parameter "o"
+    .param p1, "o"    # Ljava/lang/Object;
 
     .prologue
     const/4 v3, 0x1
@@ -97,12 +95,12 @@
     move v0, v3
 
     .line 43
-    .end local p1
+    .end local p1    # "o":Ljava/lang/Object;
     :goto_0
     return v0
 
     .line 41
-    .restart local p1
+    .restart local p1    # "o":Ljava/lang/Object;
     :cond_0
     if-nez p1, :cond_1
 
@@ -132,7 +130,7 @@
 
     check-cast p1, Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;
 
-    .end local p1
+    .end local p1    # "o":Ljava/lang/Object;
     iget-object v1, p1, Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;->_class:Ljava/lang/Class;
 
     if-ne v0, v1, :cond_3
@@ -206,7 +204,7 @@
 
 .method public setName(Ljava/lang/String;)V
     .locals 1
-    .parameter "name"
+    .param p1, "name"    # Ljava/lang/String;
 
     .prologue
     .line 29

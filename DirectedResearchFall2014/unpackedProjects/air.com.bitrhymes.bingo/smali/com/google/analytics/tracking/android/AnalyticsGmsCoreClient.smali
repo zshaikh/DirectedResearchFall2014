@@ -45,9 +45,9 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Lcom/google/analytics/tracking/android/AnalyticsGmsCoreClient$OnConnectedListener;Lcom/google/analytics/tracking/android/AnalyticsGmsCoreClient$OnConnectionFailedListener;)V
     .locals 2
-    .parameter "context"
-    .parameter "onConnectedListener"
-    .parameter "onConnectionFailedListener"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "onConnectedListener"    # Lcom/google/analytics/tracking/android/AnalyticsGmsCoreClient$OnConnectedListener;
+    .param p3, "onConnectionFailedListener"    # Lcom/google/analytics/tracking/android/AnalyticsGmsCoreClient$OnConnectionFailedListener;
 
     .prologue
     .line 57
@@ -94,8 +94,8 @@
 
 .method static synthetic access$002(Lcom/google/analytics/tracking/android/AnalyticsGmsCoreClient;Lcom/google/android/gms/analytics/internal/IAnalyticsService;)Lcom/google/android/gms/analytics/internal/IAnalyticsService;
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
+    .param p0, "x0"    # Lcom/google/analytics/tracking/android/AnalyticsGmsCoreClient;
+    .param p1, "x1"    # Lcom/google/android/gms/analytics/internal/IAnalyticsService;
 
     .prologue
     .line 24
@@ -106,7 +106,7 @@
 
 .method static synthetic access$100(Lcom/google/analytics/tracking/android/AnalyticsGmsCoreClient;)V
     .locals 0
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/google/analytics/tracking/android/AnalyticsGmsCoreClient;
 
     .prologue
     .line 24
@@ -117,7 +117,7 @@
 
 .method static synthetic access$200(Lcom/google/analytics/tracking/android/AnalyticsGmsCoreClient;)Landroid/content/Context;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/google/analytics/tracking/android/AnalyticsGmsCoreClient;
 
     .prologue
     .line 24
@@ -128,8 +128,8 @@
 
 .method static synthetic access$302(Lcom/google/analytics/tracking/android/AnalyticsGmsCoreClient;Landroid/content/ServiceConnection;)Landroid/content/ServiceConnection;
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
+    .param p0, "x0"    # Lcom/google/analytics/tracking/android/AnalyticsGmsCoreClient;
+    .param p1, "x1"    # Landroid/content/ServiceConnection;
 
     .prologue
     .line 24
@@ -140,7 +140,7 @@
 
 .method static synthetic access$400(Lcom/google/analytics/tracking/android/AnalyticsGmsCoreClient;)Lcom/google/analytics/tracking/android/AnalyticsGmsCoreClient$OnConnectionFailedListener;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/google/analytics/tracking/android/AnalyticsGmsCoreClient;
 
     .prologue
     .line 24
@@ -151,7 +151,7 @@
 
 .method static synthetic access$500(Lcom/google/analytics/tracking/android/AnalyticsGmsCoreClient;)Lcom/google/analytics/tracking/android/AnalyticsGmsCoreClient$OnConnectedListener;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/google/analytics/tracking/android/AnalyticsGmsCoreClient;
 
     .prologue
     .line 24
@@ -249,7 +249,7 @@
     move-object v0, v1
 
     .line 139
-    .local v0, e:Landroid/os/RemoteException;
+    .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -287,7 +287,7 @@
     invoke-direct {v0, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
     .line 76
-    .local v0, intent:Landroid/content/Intent;
+    .local v0, "intent":Landroid/content/Intent;
     const-string v2, "app_package_name"
 
     iget-object v3, p0, Lcom/google/analytics/tracking/android/AnalyticsGmsCoreClient;->mContext:Landroid/content/Context;
@@ -333,7 +333,7 @@
     move-result v1
 
     .line 84
-    .local v1, result:Z
+    .local v1, "result":Z
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -453,10 +453,8 @@
 
 .method public sendHit(Ljava/util/Map;JLjava/lang/String;Ljava/util/List;)V
     .locals 7
-    .parameter
-    .parameter "hitTimeInMilliseconds"
-    .parameter "path"
-    .parameter
+    .param p2, "hitTimeInMilliseconds"    # J
+    .param p4, "path"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -475,8 +473,8 @@
 
     .prologue
     .line 128
-    .local p1, wireParams:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
-    .local p5, commands:Ljava/util/List;,"Ljava/util/List<Lcom/google/android/gms/analytics/internal/Command;>;"
+    .local p1, "wireParams":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p5, "commands":Ljava/util/List;, "Ljava/util/List<Lcom/google/android/gms/analytics/internal/Command;>;"
     :try_start_0
     invoke-direct {p0}, Lcom/google/analytics/tracking/android/AnalyticsGmsCoreClient;->getService()Lcom/google/android/gms/analytics/internal/IAnalyticsService;
 
@@ -505,7 +503,7 @@
     move-object v6, v0
 
     .line 130
-    .local v6, e:Landroid/os/RemoteException;
+    .local v6, "e":Landroid/os/RemoteException;
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

@@ -109,8 +109,6 @@
 
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()V"
@@ -126,7 +124,7 @@
 
 .method public static valueOf(Ljava/lang/String;)Lv2/com/playhaven/requests/base/PHAsyncRequest$RequestType;
     .locals 1
-    .parameter "name"
+    .param p0, "name"    # Ljava/lang/String;
 
     .prologue
     .line 61
@@ -136,7 +134,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "name":Ljava/lang/String;
     check-cast p0, Lv2/com/playhaven/requests/base/PHAsyncRequest$RequestType;
 
     return-object p0

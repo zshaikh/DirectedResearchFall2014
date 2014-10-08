@@ -12,8 +12,6 @@
 # direct methods
 .method public constructor <init>(Lcom/inmobi/androidsdk/IMAdView;Landroid/view/animation/Animation$AnimationListener;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 20
@@ -33,7 +31,6 @@
 # virtual methods
 .method public a(Lcom/inmobi/androidsdk/IMAdView$AnimationType;)V
     .locals 8
-    .parameter
 
     .prologue
     .line 29
@@ -46,16 +43,16 @@
 
     const/4 v1, 0x0
 
-    const/high16 v2, 0x3f00
+    const/high16 v2, 0x3f000000
 
     invoke-direct {v0, v1, v2}, Landroid/view/animation/AlphaAnimation;-><init>(FF)V
 
     .line 31
     new-instance v1, Landroid/view/animation/AlphaAnimation;
 
-    const/high16 v2, 0x3f00
+    const/high16 v2, 0x3f000000
 
-    const/high16 v3, 0x3f80
+    const/high16 v3, 0x3f800000
 
     invoke-direct {v1, v2, v3}, Landroid/view/animation/AlphaAnimation;-><init>(FF)V
 
@@ -140,7 +137,7 @@
 
     const/4 v1, 0x0
 
-    const/high16 v2, 0x42b4
+    const/high16 v2, 0x42b40000
 
     .line 45
     iget-object v3, p0, Lcom/inmobi/androidsdk/a;->a:Lcom/inmobi/androidsdk/IMAdView;
@@ -151,7 +148,7 @@
 
     int-to-float v3, v3
 
-    const/high16 v4, 0x4000
+    const/high16 v4, 0x40000000
 
     div-float/2addr v3, v4
 
@@ -163,7 +160,7 @@
 
     int-to-float v4, v4
 
-    const/high16 v5, 0x4000
+    const/high16 v5, 0x40000000
 
     div-float/2addr v4, v5
 
@@ -178,9 +175,9 @@
     .line 47
     new-instance v1, Lcom/inmobi/androidsdk/impl/anim/IMRotate3dAnimation;
 
-    const/high16 v2, 0x4387
+    const/high16 v2, 0x43870000
 
-    const/high16 v3, 0x43b4
+    const/high16 v3, 0x43b40000
 
     .line 48
     iget-object v4, p0, Lcom/inmobi/androidsdk/a;->a:Lcom/inmobi/androidsdk/IMAdView;
@@ -191,7 +188,7 @@
 
     int-to-float v4, v4
 
-    const/high16 v5, 0x4000
+    const/high16 v5, 0x40000000
 
     div-float/2addr v4, v5
 
@@ -203,7 +200,7 @@
 
     int-to-float v5, v5
 
-    const/high16 v6, 0x4000
+    const/high16 v6, 0x40000000
 
     div-float/2addr v5, v6
 
@@ -282,7 +279,7 @@
 
     const/4 v1, 0x0
 
-    const/high16 v2, 0x42b4
+    const/high16 v2, 0x42b40000
 
     .line 64
     iget-object v3, p0, Lcom/inmobi/androidsdk/a;->a:Lcom/inmobi/androidsdk/IMAdView;
@@ -293,7 +290,7 @@
 
     int-to-float v3, v3
 
-    const/high16 v4, 0x4000
+    const/high16 v4, 0x40000000
 
     div-float/2addr v3, v4
 
@@ -305,7 +302,7 @@
 
     int-to-float v4, v4
 
-    const/high16 v5, 0x4000
+    const/high16 v5, 0x40000000
 
     div-float/2addr v4, v5
 
@@ -320,9 +317,9 @@
     .line 66
     new-instance v1, Lcom/inmobi/androidsdk/impl/anim/IMRotate3dAnimationVert;
 
-    const/high16 v2, 0x4387
+    const/high16 v2, 0x43870000
 
-    const/high16 v3, 0x43b4
+    const/high16 v3, 0x43b40000
 
     .line 67
     iget-object v4, p0, Lcom/inmobi/androidsdk/a;->a:Lcom/inmobi/androidsdk/IMAdView;
@@ -333,7 +330,7 @@
 
     int-to-float v4, v4
 
-    const/high16 v5, 0x4000
+    const/high16 v5, 0x40000000
 
     div-float/2addr v4, v5
 
@@ -345,7 +342,7 @@
 
     int-to-float v5, v5
 
-    const/high16 v6, 0x4000
+    const/high16 v6, 0x40000000
 
     div-float/2addr v5, v6
 

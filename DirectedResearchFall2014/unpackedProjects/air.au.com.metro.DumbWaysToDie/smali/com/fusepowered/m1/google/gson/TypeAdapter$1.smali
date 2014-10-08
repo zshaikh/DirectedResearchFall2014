@@ -28,11 +28,10 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m1/google/gson/TypeAdapter;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 187
-    .local p0, this:Lcom/fusepowered/m1/google/gson/TypeAdapter$1;,"Lcom/fusepowered/m1/google/gson/TypeAdapter.1;"
+    .local p0, "this":Lcom/fusepowered/m1/google/gson/TypeAdapter$1;, "Lcom/fusepowered/m1/google/gson/TypeAdapter.1;"
     iput-object p1, p0, Lcom/fusepowered/m1/google/gson/TypeAdapter$1;->this$0:Lcom/fusepowered/m1/google/gson/TypeAdapter;
 
     invoke-direct {p0}, Lcom/fusepowered/m1/google/gson/TypeAdapter;-><init>()V
@@ -44,7 +43,7 @@
 # virtual methods
 .method public read(Lcom/fusepowered/m1/google/gson/stream/JsonReader;)Ljava/lang/Object;
     .locals 2
-    .parameter "reader"
+    .param p1, "reader"    # Lcom/fusepowered/m1/google/gson/stream/JsonReader;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -61,7 +60,7 @@
 
     .prologue
     .line 196
-    .local p0, this:Lcom/fusepowered/m1/google/gson/TypeAdapter$1;,"Lcom/fusepowered/m1/google/gson/TypeAdapter.1;"
+    .local p0, "this":Lcom/fusepowered/m1/google/gson/TypeAdapter$1;, "Lcom/fusepowered/m1/google/gson/TypeAdapter.1;"
     invoke-virtual {p1}, Lcom/fusepowered/m1/google/gson/stream/JsonReader;->peek()Lcom/fusepowered/m1/google/gson/stream/JsonToken;
 
     move-result-object v0
@@ -92,8 +91,7 @@
 
 .method public write(Lcom/fusepowered/m1/google/gson/stream/JsonWriter;Ljava/lang/Object;)V
     .locals 1
-    .parameter "out"
-    .parameter
+    .param p1, "out"    # Lcom/fusepowered/m1/google/gson/stream/JsonWriter;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -110,8 +108,8 @@
 
     .prologue
     .line 189
-    .local p0, this:Lcom/fusepowered/m1/google/gson/TypeAdapter$1;,"Lcom/fusepowered/m1/google/gson/TypeAdapter.1;"
-    .local p2, value:Ljava/lang/Object;,"TT;"
+    .local p0, "this":Lcom/fusepowered/m1/google/gson/TypeAdapter$1;, "Lcom/fusepowered/m1/google/gson/TypeAdapter.1;"
+    .local p2, "value":Ljava/lang/Object;, "TT;"
     if-nez p2, :cond_0
 
     .line 190

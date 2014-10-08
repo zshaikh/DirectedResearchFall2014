@@ -21,7 +21,6 @@
 # direct methods
 .method constructor <init>(Landroid/content/Context;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 445
@@ -36,12 +35,12 @@
 # virtual methods
 .method callback(Ljava/lang/String;ILjava/util/Date;Ljava/lang/String;JLjava/io/ObjectInputStream;)Z
     .locals 8
-    .parameter "id"
-    .parameter "type"
-    .parameter "expiration"
-    .parameter "acid"
-    .parameter "deferredViewStart"
-    .parameter "objectInputStream"
+    .param p1, "id"    # Ljava/lang/String;
+    .param p2, "type"    # I
+    .param p3, "expiration"    # Ljava/util/Date;
+    .param p4, "acid"    # Ljava/lang/String;
+    .param p5, "deferredViewStart"    # J
+    .param p7, "objectInputStream"    # Ljava/io/ObjectInputStream;
 
     .prologue
     const/4 v7, 0x0
@@ -72,7 +71,7 @@
     check-cast v0, Lcom/fusepowered/m1/android/CachedAd;
 
     .line 456
-    .local v0, ad:Lcom/fusepowered/m1/android/CachedAd;
+    .local v0, "ad":Lcom/fusepowered/m1/android/CachedAd;
     const-string v2, "Deleting expired ad %s."
 
     const/4 v3, 0x1
@@ -97,7 +96,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 465
-    .end local v0           #ad:Lcom/fusepowered/m1/android/CachedAd;
+    .end local v0    # "ad":Lcom/fusepowered/m1/android/CachedAd;
     :cond_0
     :goto_0
     return v6
@@ -109,7 +108,7 @@
     move-object v1, v2
 
     .line 461
-    .local v1, e:Ljava/lang/Exception;
+    .local v1, "e":Ljava/lang/Exception;
     const-string v2, "There was a problem reading the cached ad %s."
 
     new-array v3, v6, [Ljava/lang/Object;

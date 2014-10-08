@@ -15,8 +15,6 @@
 # direct methods
 .method public constructor <init>(Ljava/lang/String;Landroid/content/Context;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 32
@@ -36,7 +34,6 @@
 # virtual methods
 .method protected a(Ljava/net/URL;)Ljava/net/HttpURLConnection;
     .locals 0
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;

@@ -43,8 +43,8 @@
 # virtual methods
 .method public bridge synthetic deserialize(Lcom/flurry/org/codehaus/jackson/JsonParser;Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;)Ljava/lang/Object;
     .locals 1
-    .parameter "x0"
-    .parameter "x1"
+    .param p1, "x0"    # Lcom/flurry/org/codehaus/jackson/JsonParser;
+    .param p2, "x1"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -63,8 +63,8 @@
 
 .method public deserialize(Lcom/flurry/org/codehaus/jackson/JsonParser;Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;)Ljava/math/BigDecimal;
     .locals 5
-    .parameter "jp"
-    .parameter "ctxt"
+    .param p1, "jp"    # Lcom/flurry/org/codehaus/jackson/JsonParser;
+    .param p2, "ctxt"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -79,7 +79,7 @@
     move-result-object v1
 
     .line 1002
-    .local v1, t:Lcom/flurry/org/codehaus/jackson/JsonToken;
+    .local v1, "t":Lcom/flurry/org/codehaus/jackson/JsonToken;
     sget-object v3, Lcom/flurry/org/codehaus/jackson/JsonToken;->VALUE_NUMBER_INT:Lcom/flurry/org/codehaus/jackson/JsonToken;
 
     if-eq v1, v3, :cond_0
@@ -114,7 +114,7 @@
     move-result-object v2
 
     .line 1008
-    .local v2, text:Ljava/lang/String;
+    .local v2, "text":Ljava/lang/String;
     invoke-virtual {v2}, Ljava/lang/String;->length()I
 
     move-result v3
@@ -144,7 +144,7 @@
     move-object v0, v3
 
     .line 1014
-    .local v0, iae:Ljava/lang/IllegalArgumentException;
+    .local v0, "iae":Ljava/lang/IllegalArgumentException;
     iget-object v3, p0, Lcom/flurry/org/codehaus/jackson/map/deser/std/StdDeserializer$BigDecimalDeserializer;->_valueClass:Ljava/lang/Class;
 
     const-string v4, "not a valid representation"
@@ -156,8 +156,8 @@
     throw v3
 
     .line 1018
-    .end local v0           #iae:Ljava/lang/IllegalArgumentException;
-    .end local v2           #text:Ljava/lang/String;
+    .end local v0    # "iae":Ljava/lang/IllegalArgumentException;
+    .end local v2    # "text":Ljava/lang/String;
     :cond_3
     iget-object v3, p0, Lcom/flurry/org/codehaus/jackson/map/deser/std/StdDeserializer$BigDecimalDeserializer;->_valueClass:Ljava/lang/Class;
 

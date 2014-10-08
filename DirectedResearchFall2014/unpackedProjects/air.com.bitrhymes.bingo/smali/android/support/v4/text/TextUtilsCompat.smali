@@ -54,7 +54,7 @@
 
 .method private static getLayoutDirectionFromFirstChar(Ljava/util/Locale;)I
     .locals 2
-    .parameter "locale"
+    .param p0, "locale"    # Ljava/util/Locale;
 
     .prologue
     const/4 v1, 0x0
@@ -96,7 +96,7 @@
 
 .method public static getLayoutDirectionFromLocale(Ljava/util/Locale;)I
     .locals 2
-    .parameter "locale"
+    .param p0, "locale"    # Ljava/util/Locale;
 
     .prologue
     .line 73
@@ -124,7 +124,7 @@
     move-result-object v0
 
     .line 76
-    .local v0, scriptSubtag:Ljava/lang/String;
+    .local v0, "scriptSubtag":Ljava/lang/String;
     if-nez v0, :cond_0
 
     invoke-static {p0}, Landroid/support/v4/text/TextUtilsCompat;->getLayoutDirectionFromFirstChar(Ljava/util/Locale;)I
@@ -132,12 +132,12 @@
     move-result v1
 
     .line 84
-    .end local v0           #scriptSubtag:Ljava/lang/String;
+    .end local v0    # "scriptSubtag":Ljava/lang/String;
     :goto_0
     return v1
 
     .line 78
-    .restart local v0       #scriptSubtag:Ljava/lang/String;
+    .restart local v0    # "scriptSubtag":Ljava/lang/String;
     :cond_0
     sget-object v1, Landroid/support/v4/text/TextUtilsCompat;->ARAB_SCRIPT_SUBTAG:Ljava/lang/String;
 
@@ -162,7 +162,7 @@
     goto :goto_0
 
     .line 84
-    .end local v0           #scriptSubtag:Ljava/lang/String;
+    .end local v0    # "scriptSubtag":Ljava/lang/String;
     :cond_2
     const/4 v1, 0x0
 
@@ -171,7 +171,7 @@
 
 .method public static htmlEncode(Ljava/lang/String;)Ljava/lang/String;
     .locals 4
-    .parameter "s"
+    .param p0, "s"    # Ljava/lang/String;
 
     .prologue
     .line 31
@@ -180,10 +180,10 @@
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
     .line 33
-    .local v2, sb:Ljava/lang/StringBuilder;
+    .local v2, "sb":Ljava/lang/StringBuilder;
     const/4 v1, 0x0
 
-    .local v1, i:I
+    .local v1, "i":I
     :goto_0
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
@@ -197,7 +197,7 @@
     move-result v0
 
     .line 35
-    .local v0, c:C
+    .local v0, "c":C
     sparse-switch v0, :sswitch_data_0
 
     .line 56
@@ -250,7 +250,7 @@
     goto :goto_1
 
     .line 59
-    .end local v0           #c:C
+    .end local v0    # "c":C
     :cond_0
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 

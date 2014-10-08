@@ -52,7 +52,7 @@
 
 .method public static completeWakefulIntent(Landroid/content/Intent;)Z
     .locals 7
-    .parameter "intent"
+    .param p0, "intent"    # Landroid/content/Intent;
 
     .prologue
     const/4 v6, 0x1
@@ -67,7 +67,7 @@
     move-result v0
 
     .line 114
-    .local v0, id:I
+    .local v0, "id":I
     if-nez v0, :cond_0
 
     move v2, v3
@@ -93,7 +93,7 @@
     check-cast v1, Landroid/os/PowerManager$WakeLock;
 
     .line 119
-    .local v1, wl:Landroid/os/PowerManager$WakeLock;
+    .local v1, "wl":Landroid/os/PowerManager$WakeLock;
     if-eqz v1, :cond_1
 
     .line 120
@@ -143,7 +143,7 @@
     goto :goto_0
 
     .line 132
-    .end local v1           #wl:Landroid/os/PowerManager$WakeLock;
+    .end local v1    # "wl":Landroid/os/PowerManager$WakeLock;
     :catchall_0
     move-exception v3
 
@@ -156,8 +156,8 @@
 
 .method public static startWakefulService(Landroid/content/Context;Landroid/content/Intent;)Landroid/content/ComponentName;
     .locals 8
-    .parameter "context"
-    .parameter "intent"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "intent"    # Landroid/content/Intent;
 
     .prologue
     .line 81
@@ -170,7 +170,7 @@
     sget v1, Landroid/support/v4/content/WakefulBroadcastReceiver;->mNextId:I
 
     .line 83
-    .local v1, id:I
+    .local v1, "id":I
     sget v5, Landroid/support/v4/content/WakefulBroadcastReceiver;->mNextId:I
 
     add-int/lit8 v5, v5, 0x1
@@ -199,7 +199,7 @@
     move-result-object v0
 
     .line 90
-    .local v0, comp:Landroid/content/ComponentName;
+    .local v0, "comp":Landroid/content/ComponentName;
     if-nez v0, :cond_1
 
     .line 91
@@ -224,7 +224,7 @@
     check-cast v2, Landroid/os/PowerManager;
 
     .line 95
-    .local v2, pm:Landroid/os/PowerManager;
+    .local v2, "pm":Landroid/os/PowerManager;
     const/4 v5, 0x1
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -254,7 +254,7 @@
     move-result-object v3
 
     .line 97
-    .local v3, wl:Landroid/os/PowerManager$WakeLock;
+    .local v3, "wl":Landroid/os/PowerManager$WakeLock;
     const/4 v5, 0x0
 
     invoke-virtual {v3, v5}, Landroid/os/PowerManager$WakeLock;->setReferenceCounted(Z)V
@@ -277,10 +277,10 @@
     goto :goto_0
 
     .line 101
-    .end local v0           #comp:Landroid/content/ComponentName;
-    .end local v1           #id:I
-    .end local v2           #pm:Landroid/os/PowerManager;
-    .end local v3           #wl:Landroid/os/PowerManager$WakeLock;
+    .end local v0    # "comp":Landroid/content/ComponentName;
+    .end local v1    # "id":I
+    .end local v2    # "pm":Landroid/os/PowerManager;
+    .end local v3    # "wl":Landroid/os/PowerManager$WakeLock;
     :catchall_0
     move-exception v5
 

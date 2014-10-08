@@ -152,7 +152,7 @@
 
     move-result-object v0
 
-    const/high16 v1, 0x1000
+    const/high16 v1, 0x10000000
 
     invoke-static {v0, v1}, Landroid/os/ParcelFileDescriptor;->open(Ljava/io/File;I)Landroid/os/ParcelFileDescriptor;
     :try_end_0

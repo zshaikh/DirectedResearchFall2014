@@ -16,7 +16,7 @@
 
 .method public static jsonArrayToStringArray(Ljava/lang/String;)[Ljava/lang/String;
     .locals 7
-    .parameter "jsonString"
+    .param p0, "jsonString"    # Ljava/lang/String;
 
     .prologue
     .line 85
@@ -53,7 +53,7 @@
     check-cast v3, Lorg/json/JSONObject;
 
     .line 89
-    .local v3, jsonObject:Lorg/json/JSONObject;
+    .local v3, "jsonObject":Lorg/json/JSONObject;
     const-string v5, "key"
 
     invoke-virtual {v3, v5}, Lorg/json/JSONObject;->getJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
@@ -61,7 +61,7 @@
     move-result-object v2
 
     .line 91
-    .local v2, jsonArray:Lorg/json/JSONArray;
+    .local v2, "jsonArray":Lorg/json/JSONArray;
     invoke-virtual {v2}, Lorg/json/JSONArray;->length()I
 
     move-result v5
@@ -69,10 +69,10 @@
     new-array v4, v5, [Ljava/lang/String;
 
     .line 92
-    .local v4, result:[Ljava/lang/String;
+    .local v4, "result":[Ljava/lang/String;
     const/4 v1, 0x0
 
-    .local v1, i:I
+    .local v1, "i":I
     :goto_0
     array-length v5, v4
 
@@ -81,18 +81,18 @@
     move-object v5, v4
 
     .line 98
-    .end local v1           #i:I
-    .end local v2           #jsonArray:Lorg/json/JSONArray;
-    .end local v3           #jsonObject:Lorg/json/JSONObject;
-    .end local v4           #result:[Ljava/lang/String;
+    .end local v1    # "i":I
+    .end local v2    # "jsonArray":Lorg/json/JSONArray;
+    .end local v3    # "jsonObject":Lorg/json/JSONObject;
+    .end local v4    # "result":[Ljava/lang/String;
     :goto_1
     return-object v5
 
     .line 93
-    .restart local v1       #i:I
-    .restart local v2       #jsonArray:Lorg/json/JSONArray;
-    .restart local v3       #jsonObject:Lorg/json/JSONObject;
-    .restart local v4       #result:[Ljava/lang/String;
+    .restart local v1    # "i":I
+    .restart local v2    # "jsonArray":Lorg/json/JSONArray;
+    .restart local v3    # "jsonObject":Lorg/json/JSONObject;
+    .restart local v4    # "result":[Ljava/lang/String;
     :cond_0
     invoke-virtual {v2, v1}, Lorg/json/JSONArray;->getString(I)Ljava/lang/String;
 
@@ -108,17 +108,17 @@
     goto :goto_0
 
     .line 97
-    .end local v1           #i:I
-    .end local v2           #jsonArray:Lorg/json/JSONArray;
-    .end local v3           #jsonObject:Lorg/json/JSONObject;
-    .end local v4           #result:[Ljava/lang/String;
+    .end local v1    # "i":I
+    .end local v2    # "jsonArray":Lorg/json/JSONArray;
+    .end local v3    # "jsonObject":Lorg/json/JSONObject;
+    .end local v4    # "result":[Ljava/lang/String;
     :catch_0
     move-exception v5
 
     move-object v0, v5
 
     .line 98
-    .local v0, exception:Lorg/json/JSONException;
+    .local v0, "exception":Lorg/json/JSONException;
     const/4 v5, 0x0
 
     new-array v5, v5, [Ljava/lang/String;
@@ -128,7 +128,7 @@
 
 .method public static jsonStringToMap(Ljava/lang/String;)Ljava/util/Map;
     .locals 5
-    .parameter "jsonParams"
+    .param p0, "jsonParams"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -155,7 +155,7 @@
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     .line 46
-    .local v0, jsonMap:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v0, "jsonMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     if-eqz p0, :cond_0
 
     const-string v4, ""
@@ -183,13 +183,13 @@
     check-cast v1, Lorg/json/JSONObject;
 
     .line 49
-    .local v1, jsonObject:Lorg/json/JSONObject;
+    .local v1, "jsonObject":Lorg/json/JSONObject;
     invoke-virtual {v1}, Lorg/json/JSONObject;->keys()Ljava/util/Iterator;
 
     move-result-object v3
 
     .line 51
-    .local v3, keys:Ljava/util/Iterator;,"Ljava/util/Iterator<*>;"
+    .local v3, "keys":Ljava/util/Iterator;, "Ljava/util/Iterator<*>;"
     :goto_0
     invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
 
@@ -205,7 +205,7 @@
     check-cast v2, Ljava/lang/String;
 
     .line 53
-    .local v2, key:Ljava/lang/String;
+    .local v2, "key":Ljava/lang/String;
     invoke-virtual {v1, v2}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
@@ -217,7 +217,6 @@
 
 .method public static mapToJsonString(Ljava/util/Map;)Ljava/lang/String;
     .locals 6
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -231,7 +230,7 @@
     .end annotation
 
     .prologue
-    .local p0, map:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p0, "map":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v5, "\""
 
     .line 60
@@ -241,19 +240,19 @@
     const-string v3, "{}"
 
     .line 81
-    .end local p0           #map:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .end local p0    # "map":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     :goto_0
     return-object v3
 
     .line 64
-    .restart local p0       #map:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .restart local p0    # "map":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     .line 65
-    .local v0, builder:Ljava/lang/StringBuilder;
+    .local v0, "builder":Ljava/lang/StringBuilder;
     const-string v3, "{"
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -262,7 +261,7 @@
     const/4 v2, 0x1
 
     .line 68
-    .local v2, first:Z
+    .local v2, "first":Z
     invoke-interface {p0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object v3
@@ -271,7 +270,7 @@
 
     move-result-object v3
 
-    .end local p0           #map:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .end local p0    # "map":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     :goto_1
     invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
 
@@ -300,7 +299,7 @@
     check-cast v1, Ljava/util/Map$Entry;
 
     .line 69
-    .local v1, entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v1, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
     if-nez v2, :cond_2
 
     .line 70

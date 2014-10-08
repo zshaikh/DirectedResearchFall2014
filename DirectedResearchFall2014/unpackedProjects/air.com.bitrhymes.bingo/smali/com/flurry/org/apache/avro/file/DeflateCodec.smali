@@ -26,7 +26,7 @@
 # direct methods
 .method public constructor <init>(I)V
     .locals 1
-    .parameter "compressionLevel"
+    .param p1, "compressionLevel"    # I
 
     .prologue
     .line 61
@@ -108,7 +108,7 @@
 
 .method private getOutputBuffer(I)Ljava/io/ByteArrayOutputStream;
     .locals 1
-    .parameter "suggestedLength"
+    .param p1, "suggestedLength"    # I
 
     .prologue
     .line 119
@@ -137,8 +137,8 @@
 
 .method private writeAndClose(Ljava/nio/ByteBuffer;Ljava/io/OutputStream;)V
     .locals 5
-    .parameter "data"
-    .parameter "to"
+    .param p1, "data"    # Ljava/nio/ByteBuffer;
+    .param p2, "to"    # Ljava/io/OutputStream;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -152,7 +152,7 @@
     move-result-object v0
 
     .line 90
-    .local v0, input:[B
+    .local v0, "input":[B
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->arrayOffset()I
 
     move-result v3
@@ -164,13 +164,13 @@
     add-int v2, v3, v4
 
     .line 91
-    .local v2, offset:I
+    .local v2, "offset":I
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->remaining()I
 
     move-result v1
 
     .line 93
-    .local v1, length:I
+    .local v1, "length":I
     :try_start_0
     invoke-virtual {p2, v0, v2, v1}, Ljava/io/OutputStream;->write([BII)V
     :try_end_0
@@ -195,7 +195,7 @@
 # virtual methods
 .method compress(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
     .locals 4
-    .parameter "data"
+    .param p1, "data"    # Ljava/nio/ByteBuffer;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -213,7 +213,7 @@
     move-result-object v0
 
     .line 73
-    .local v0, baos:Ljava/io/ByteArrayOutputStream;
+    .local v0, "baos":Ljava/io/ByteArrayOutputStream;
     new-instance v1, Ljava/util/zip/DeflaterOutputStream;
 
     invoke-direct {p0}, Lcom/flurry/org/apache/avro/file/DeflateCodec;->getDeflater()Ljava/util/zip/Deflater;
@@ -223,7 +223,7 @@
     invoke-direct {v1, v0, v3}, Ljava/util/zip/DeflaterOutputStream;-><init>(Ljava/io/OutputStream;Ljava/util/zip/Deflater;)V
 
     .line 74
-    .local v1, ios:Ljava/util/zip/DeflaterOutputStream;
+    .local v1, "ios":Ljava/util/zip/DeflaterOutputStream;
     invoke-direct {p0, p1, v1}, Lcom/flurry/org/apache/avro/file/DeflateCodec;->writeAndClose(Ljava/nio/ByteBuffer;Ljava/io/OutputStream;)V
 
     .line 75
@@ -236,13 +236,13 @@
     move-result-object v2
 
     .line 76
-    .local v2, result:Ljava/nio/ByteBuffer;
+    .local v2, "result":Ljava/nio/ByteBuffer;
     return-object v2
 .end method
 
 .method decompress(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
     .locals 4
-    .parameter "data"
+    .param p1, "data"    # Ljava/nio/ByteBuffer;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -260,7 +260,7 @@
     move-result-object v0
 
     .line 82
-    .local v0, baos:Ljava/io/ByteArrayOutputStream;
+    .local v0, "baos":Ljava/io/ByteArrayOutputStream;
     new-instance v1, Ljava/util/zip/InflaterOutputStream;
 
     invoke-direct {p0}, Lcom/flurry/org/apache/avro/file/DeflateCodec;->getInflater()Ljava/util/zip/Inflater;
@@ -270,7 +270,7 @@
     invoke-direct {v1, v0, v3}, Ljava/util/zip/InflaterOutputStream;-><init>(Ljava/io/OutputStream;Ljava/util/zip/Inflater;)V
 
     .line 83
-    .local v1, ios:Ljava/util/zip/InflaterOutputStream;
+    .local v1, "ios":Ljava/util/zip/InflaterOutputStream;
     invoke-direct {p0, p1, v1}, Lcom/flurry/org/apache/avro/file/DeflateCodec;->writeAndClose(Ljava/nio/ByteBuffer;Ljava/io/OutputStream;)V
 
     .line 84
@@ -283,13 +283,13 @@
     move-result-object v2
 
     .line 85
-    .local v2, result:Ljava/nio/ByteBuffer;
+    .local v2, "result":Ljava/nio/ByteBuffer;
     return-object v2
 .end method
 
 .method public equals(Ljava/lang/Object;)Z
     .locals 6
-    .parameter "obj"
+    .param p1, "obj"    # Ljava/lang/Object;
 
     .prologue
     const/4 v5, 0x1
@@ -331,7 +331,7 @@
     move-object v1, v0
 
     .line 138
-    .local v1, other:Lcom/flurry/org/apache/avro/file/DeflateCodec;
+    .local v1, "other":Lcom/flurry/org/apache/avro/file/DeflateCodec;
     iget-boolean v2, p0, Lcom/flurry/org/apache/avro/file/DeflateCodec;->nowrap:Z
 
     iget-boolean v3, v1, Lcom/flurry/org/apache/avro/file/DeflateCodec;->nowrap:Z

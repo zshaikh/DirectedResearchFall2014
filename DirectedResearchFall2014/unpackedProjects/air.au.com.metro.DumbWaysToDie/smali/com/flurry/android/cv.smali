@@ -10,7 +10,6 @@
 # direct methods
 .method public constructor <init>(Ljava/security/KeyStore;)V
     .locals 5
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/security/NoSuchAlgorithmException;,
@@ -84,10 +83,6 @@
 
 .method public final createSocket(Ljava/net/Socket;Ljava/lang/String;IZ)Ljava/net/Socket;
     .locals 1
-    .parameter
-    .parameter
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,

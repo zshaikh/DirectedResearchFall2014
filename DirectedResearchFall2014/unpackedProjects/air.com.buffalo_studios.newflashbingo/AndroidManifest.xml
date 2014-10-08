@@ -1,63 +1,62 @@
-<?xml version="1.0" encoding="utf-8"?>
-<manifest android:versionCode="2061000" android:versionName="2.61.0" android:installLocation="auto" package="air.com.buffalo_studios.newflashbingo"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <application android:label="@string/app_name" android:icon="@drawable/icon" android:hardwareAccelerated="false">
-        <activity android:theme="@style/Theme.NoShadow" android:label="@string/app_name" android:name=".AppEntry" android:launchMode="singleTask" android:screenOrientation="user" android:configChanges="keyboardHidden|orientation|screenSize" android:windowSoftInputMode="stateHidden|adjustResize">
-            <meta-data android:name="namespaceVersion" android:value="4.0" />
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="auto" package="air.com.buffalo_studios.newflashbingo">
+    <application android:hardwareAccelerated="false" android:icon="@drawable/icon" android:label="@string/app_name">
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/app_name" android:launchMode="singleTask" android:name=".AppEntry" android:screenOrientation="user" android:theme="@style/Theme.NoShadow" android:windowSoftInputMode="stateHidden|adjustResize">
+            <meta-data android:name="namespaceVersion" android:value="4.0"/>
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
             <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-                <category android:name="android.intent.category.BROWSABLE" />
-                <category android:name="android.intent.category.DEFAULT" />
-                <data android:scheme="fb108854979142742" />
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="fb108854979142742"/>
             </intent-filter>
-            <meta-data android:name="aspectRatio" android:value="landscape" />
-            <meta-data android:name="autoOrients" android:value="true" />
-            <meta-data android:name="fullScreen" android:value="true" />
-            <meta-data android:name="uniqueappversionid" android:value="0857a854-81ff-4a19-84e9-840b42148bdf" />
-            <meta-data android:name="initialcontent" android:value="MOBILE.swf" />
-            <meta-data android:name="containsVideo" android:value="false" />
+            <meta-data android:name="aspectRatio" android:value="landscape"/>
+            <meta-data android:name="autoOrients" android:value="true"/>
+            <meta-data android:name="fullScreen" android:value="true"/>
+            <meta-data android:name="uniqueappversionid" android:value="0857a854-81ff-4a19-84e9-840b42148bdf"/>
+            <meta-data android:name="initialcontent" android:value="MOBILE.swf"/>
+            <meta-data android:name="containsVideo" android:value="false"/>
         </activity>
         <receiver android:name="com.amazon.inapp.purchasing.ResponseReceiver">
             <intent-filter>
-                <action android:name="com.amazon.inapp.purchasing.NOTIFY" android:permission="com.amazon.inapp.purchasing.Permission.NOTIFY" />
+                <action android:name="com.amazon.inapp.purchasing.NOTIFY" android:permission="com.amazon.inapp.purchasing.Permission.NOTIFY"/>
             </intent-filter>
         </receiver>
-        <receiver android:name="com.AdX.tag.AdXAppTracker" android:exported="true">
+        <receiver android:exported="true" android:name="com.AdX.tag.AdXAppTracker">
             <intent-filter>
-                <action android:name="com.android.vending.INSTALL_REFERRER" />
+                <action android:name="com.android.vending.INSTALL_REFERRER"/>
             </intent-filter>
         </receiver>
-        <meta-data android:name="APP_NAME" android:value="air.com.buffalo_studios.newflashbingo" />
-        <meta-data android:name="ADX_CLIENT_ID" android:value="PTKjudkBUFkjasdPH" />
-        <meta-data android:name="NOIMEI" android:value="ON" />
+        <meta-data android:name="APP_NAME" android:value="air.com.buffalo_studios.newflashbingo"/>
+        <meta-data android:name="ADX_CLIENT_ID" android:value="PTKjudkBUFkjasdPH"/>
+        <meta-data android:name="NOIMEI" android:value="ON"/>
         <receiver android:name="com.milkmangames.extensions.android.GCMBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
             <intent-filter>
-                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
-                <category android:name="air.com.buffalo_studios.newflashbingo" />
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION"/>
+                <category android:name="air.com.buffalo_studios.newflashbingo"/>
             </intent-filter>
         </receiver>
-        <receiver android:name="com.milkmangames.extensions.android.LocalReceiver" />
-        <service android:name="com.milkmangames.extensions.android.GCMIntentService" />
-        <activity android:name="com.milkmangames.extensions.android.MsgWrapActivity" android:configChanges="keyboardHidden|orientation|screenSize" />
-        <activity android:name="com.milkmangames.extensions.android.FacebookWrapActivity" android:configChanges="keyboardHidden|orientation|screenSize" />
-        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:label="Login" android:name="com.facebook.LoginActivity" />
-        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar.Fullscreen" android:name="com.buffalostudios.aneutils.loadingspinner.LoadingSpinnerActivity" android:process=":loadingspinner" />
+        <receiver android:name="com.milkmangames.extensions.android.LocalReceiver"/>
+        <service android:name="com.milkmangames.extensions.android.GCMIntentService"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.milkmangames.extensions.android.MsgWrapActivity"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.milkmangames.extensions.android.FacebookWrapActivity"/>
+        <activity android:label="Login" android:name="com.facebook.LoginActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:name="com.buffalostudios.aneutils.loadingspinner.LoadingSpinnerActivity" android:process=":loadingspinner" android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"/>
     </application>
-    <supports-screens android:smallScreens="false" android:normalScreens="true" android:largeScreens="true" android:xlargeScreens="true" />
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="com.android.vending.BILLING" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <uses-permission android:name="android.permission.VIBRATE" />
-    <permission android:name="air.com.buffalo_studios.newflashbingo.permission.C2D_MESSAGE" android:protectionLevel="signature" />
-    <uses-permission android:name="air.com.buffalo_studios.newflashbingo.permission.C2D_MESSAGE" />
-    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
-    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
-    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <supports-screens android:largeScreens="true" android:normalScreens="true" android:smallScreens="false" android:xlargeScreens="true"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="com.android.vending.BILLING"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <permission android:name="air.com.buffalo_studios.newflashbingo.permission.C2D_MESSAGE" android:protectionLevel="signature"/>
+    <uses-permission android:name="air.com.buffalo_studios.newflashbingo.permission.C2D_MESSAGE"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
 </manifest>

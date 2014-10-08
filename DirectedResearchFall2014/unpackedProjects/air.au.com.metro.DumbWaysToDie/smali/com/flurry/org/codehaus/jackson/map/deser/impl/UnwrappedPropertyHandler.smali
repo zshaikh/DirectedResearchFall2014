@@ -39,7 +39,7 @@
 # virtual methods
 .method public addProperty(Lcom/flurry/org/codehaus/jackson/map/deser/SettableBeanProperty;)V
     .locals 1
-    .parameter "property"
+    .param p1, "property"    # Lcom/flurry/org/codehaus/jackson/map/deser/SettableBeanProperty;
 
     .prologue
     .line 26
@@ -53,10 +53,10 @@
 
 .method public processUnwrapped(Lcom/flurry/org/codehaus/jackson/JsonParser;Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;Ljava/lang/Object;Lcom/flurry/org/codehaus/jackson/util/TokenBuffer;)Ljava/lang/Object;
     .locals 5
-    .parameter "originalParser"
-    .parameter "ctxt"
-    .parameter "bean"
-    .parameter "buffered"
+    .param p1, "originalParser"    # Lcom/flurry/org/codehaus/jackson/JsonParser;
+    .param p2, "ctxt"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;
+    .param p3, "bean"    # Ljava/lang/Object;
+    .param p4, "buffered"    # Lcom/flurry/org/codehaus/jackson/util/TokenBuffer;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -68,14 +68,14 @@
     .line 33
     const/4 v0, 0x0
 
-    .local v0, i:I
+    .local v0, "i":I
     iget-object v4, p0, Lcom/flurry/org/codehaus/jackson/map/deser/impl/UnwrappedPropertyHandler;->_properties:Ljava/util/ArrayList;
 
     invoke-virtual {v4}, Ljava/util/ArrayList;->size()I
 
     move-result v2
 
-    .local v2, len:I
+    .local v2, "len":I
     :goto_0
     if-ge v0, v2, :cond_0
 
@@ -89,13 +89,13 @@
     check-cast v3, Lcom/flurry/org/codehaus/jackson/map/deser/SettableBeanProperty;
 
     .line 35
-    .local v3, prop:Lcom/flurry/org/codehaus/jackson/map/deser/SettableBeanProperty;
+    .local v3, "prop":Lcom/flurry/org/codehaus/jackson/map/deser/SettableBeanProperty;
     invoke-virtual {p4}, Lcom/flurry/org/codehaus/jackson/util/TokenBuffer;->asParser()Lcom/flurry/org/codehaus/jackson/JsonParser;
 
     move-result-object v1
 
     .line 36
-    .local v1, jp:Lcom/flurry/org/codehaus/jackson/JsonParser;
+    .local v1, "jp":Lcom/flurry/org/codehaus/jackson/JsonParser;
     invoke-virtual {v1}, Lcom/flurry/org/codehaus/jackson/JsonParser;->nextToken()Lcom/flurry/org/codehaus/jackson/JsonToken;
 
     .line 37
@@ -107,8 +107,8 @@
     goto :goto_0
 
     .line 39
-    .end local v1           #jp:Lcom/flurry/org/codehaus/jackson/JsonParser;
-    .end local v3           #prop:Lcom/flurry/org/codehaus/jackson/map/deser/SettableBeanProperty;
+    .end local v1    # "jp":Lcom/flurry/org/codehaus/jackson/JsonParser;
+    .end local v3    # "prop":Lcom/flurry/org/codehaus/jackson/map/deser/SettableBeanProperty;
     :cond_0
     return-object p3
 .end method

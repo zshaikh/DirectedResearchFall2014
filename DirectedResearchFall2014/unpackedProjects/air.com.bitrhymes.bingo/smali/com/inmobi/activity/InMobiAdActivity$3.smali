@@ -21,7 +21,6 @@
 # direct methods
 .method constructor <init>(Lcom/inmobi/activity/InMobiAdActivity;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1

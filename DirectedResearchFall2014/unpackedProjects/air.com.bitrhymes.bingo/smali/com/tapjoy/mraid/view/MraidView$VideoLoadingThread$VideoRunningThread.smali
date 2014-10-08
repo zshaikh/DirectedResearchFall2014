@@ -26,7 +26,6 @@
 # direct methods
 .method public constructor <init>(Lcom/tapjoy/mraid/view/MraidView$VideoLoadingThread;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 1344
@@ -56,7 +55,7 @@
 
     iget-object v1, v1, Lcom/tapjoy/mraid/view/MraidView$VideoLoadingThread;->this$0:Lcom/tapjoy/mraid/view/MraidView;
 
-    #getter for: Lcom/tapjoy/mraid/view/MraidView;->videoView:Landroid/widget/VideoView;
+    # getter for: Lcom/tapjoy/mraid/view/MraidView;->videoView:Landroid/widget/VideoView;
     invoke-static {v1}, Lcom/tapjoy/mraid/view/MraidView;->access$1600(Lcom/tapjoy/mraid/view/MraidView;)Landroid/widget/VideoView;
 
     move-result-object v1
@@ -76,7 +75,7 @@
 
     iget-object v2, v2, Lcom/tapjoy/mraid/view/MraidView$VideoLoadingThread;->this$0:Lcom/tapjoy/mraid/view/MraidView;
 
-    #getter for: Lcom/tapjoy/mraid/view/MraidView;->videoView:Landroid/widget/VideoView;
+    # getter for: Lcom/tapjoy/mraid/view/MraidView;->videoView:Landroid/widget/VideoView;
     invoke-static {v2}, Lcom/tapjoy/mraid/view/MraidView;->access$1600(Lcom/tapjoy/mraid/view/MraidView;)Landroid/widget/VideoView;
 
     move-result-object v2
@@ -92,7 +91,7 @@
 
     iget-object v1, v1, Lcom/tapjoy/mraid/view/MraidView$VideoLoadingThread;->this$0:Lcom/tapjoy/mraid/view/MraidView;
 
-    #getter for: Lcom/tapjoy/mraid/view/MraidView;->videoView:Landroid/widget/VideoView;
+    # getter for: Lcom/tapjoy/mraid/view/MraidView;->videoView:Landroid/widget/VideoView;
     invoke-static {v1}, Lcom/tapjoy/mraid/view/MraidView;->access$1600(Lcom/tapjoy/mraid/view/MraidView;)Landroid/widget/VideoView;
 
     move-result-object v1
@@ -113,7 +112,7 @@
     move-object v0, v1
 
     .line 1356
-    .local v0, eventName:Ljava/lang/String;
+    .local v0, "eventName":Ljava/lang/String;
     :goto_1
     iget-object v1, p0, Lcom/tapjoy/mraid/view/MraidView$VideoLoadingThread$VideoRunningThread;->this$1:Lcom/tapjoy/mraid/view/MraidView$VideoLoadingThread;
 
@@ -148,7 +147,7 @@
     goto :goto_0
 
     .line 1359
-    .end local v0           #eventName:Ljava/lang/String;
+    .end local v0    # "eventName":Ljava/lang/String;
     :catch_0
     move-exception v1
 

@@ -58,8 +58,8 @@
 # virtual methods
 .method public deserialize(Lcom/flurry/org/codehaus/jackson/JsonParser;Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;)Ljava/lang/Object;
     .locals 2
-    .parameter "jp"
-    .parameter "ctxt"
+    .param p1, "jp"    # Lcom/flurry/org/codehaus/jackson/JsonParser;
+    .param p2, "ctxt"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -229,9 +229,9 @@
 
 .method public deserializeWithType(Lcom/flurry/org/codehaus/jackson/JsonParser;Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;Lcom/flurry/org/codehaus/jackson/map/TypeDeserializer;)Ljava/lang/Object;
     .locals 3
-    .parameter "jp"
-    .parameter "ctxt"
-    .parameter "typeDeserializer"
+    .param p1, "jp"    # Lcom/flurry/org/codehaus/jackson/JsonParser;
+    .param p2, "ctxt"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;
+    .param p3, "typeDeserializer"    # Lcom/flurry/org/codehaus/jackson/map/TypeDeserializer;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -246,7 +246,7 @@
     move-result-object v0
 
     .line 98
-    .local v0, t:Lcom/flurry/org/codehaus/jackson/JsonToken;
+    .local v0, "t":Lcom/flurry/org/codehaus/jackson/JsonToken;
     sget-object v1, Lcom/flurry/org/codehaus/jackson/map/deser/std/UntypedObjectDeserializer$1;->$SwitchMap$org$codehaus$jackson$JsonToken:[I
 
     invoke-virtual {v0}, Lcom/flurry/org/codehaus/jackson/JsonToken;->ordinal()I
@@ -391,8 +391,8 @@
 
 .method protected mapArray(Lcom/flurry/org/codehaus/jackson/JsonParser;Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;)Ljava/lang/Object;
     .locals 9
-    .parameter "jp"
-    .parameter "ctxt"
+    .param p1, "jp"    # Lcom/flurry/org/codehaus/jackson/JsonParser;
+    .param p2, "ctxt"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -445,28 +445,28 @@
     move-result-object v0
 
     .line 161
-    .local v0, buffer:Lcom/flurry/org/codehaus/jackson/map/util/ObjectBuffer;
+    .local v0, "buffer":Lcom/flurry/org/codehaus/jackson/map/util/ObjectBuffer;
     invoke-virtual {v0}, Lcom/flurry/org/codehaus/jackson/map/util/ObjectBuffer;->resetAndStart()[Ljava/lang/Object;
 
     move-result-object v6
 
     .line 162
-    .local v6, values:[Ljava/lang/Object;
+    .local v6, "values":[Ljava/lang/Object;
     const/4 v1, 0x0
 
     .line 163
-    .local v1, ptr:I
+    .local v1, "ptr":I
     const/4 v4, 0x0
 
     .line 165
-    .local v4, totalSize:I
+    .local v4, "totalSize":I
     :goto_1
     invoke-virtual {p0, p1, p2}, Lcom/flurry/org/codehaus/jackson/map/deser/std/UntypedObjectDeserializer;->deserialize(Lcom/flurry/org/codehaus/jackson/JsonParser;Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;)Ljava/lang/Object;
 
     move-result-object v5
 
     .line 166
-    .local v5, value:Ljava/lang/Object;
+    .local v5, "value":Ljava/lang/Object;
     add-int/lit8 v4, v4, 0x1
 
     .line 167
@@ -486,8 +486,8 @@
     :cond_2
     add-int/lit8 v2, v1, 0x1
 
-    .end local v1           #ptr:I
-    .local v2, ptr:I
+    .end local v1    # "ptr":I
+    .local v2, "ptr":I
     aput-object v5, v6, v1
 
     .line 172
@@ -511,7 +511,7 @@
     invoke-direct {v3, v7}, Ljava/util/ArrayList;-><init>(I)V
 
     .line 175
-    .local v3, result:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/Object;>;"
+    .local v3, "result":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Object;>;"
     invoke-virtual {v0, v6, v2, v3}, Lcom/flurry/org/codehaus/jackson/map/util/ObjectBuffer;->completeAndClearBuffer([Ljava/lang/Object;ILjava/util/List;)V
 
     move-object v7, v3
@@ -519,19 +519,19 @@
     .line 176
     goto :goto_0
 
-    .end local v3           #result:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/Object;>;"
+    .end local v3    # "result":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Object;>;"
     :cond_3
     move v1, v2
 
-    .end local v2           #ptr:I
-    .restart local v1       #ptr:I
+    .end local v2    # "ptr":I
+    .restart local v1    # "ptr":I
     goto :goto_1
 .end method
 
 .method protected mapArrayToArray(Lcom/flurry/org/codehaus/jackson/JsonParser;Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;)[Ljava/lang/Object;
     .locals 7
-    .parameter "jp"
-    .parameter "ctxt"
+    .param p1, "jp"    # Lcom/flurry/org/codehaus/jackson/JsonParser;
+    .param p2, "ctxt"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -563,24 +563,24 @@
     move-result-object v0
 
     .line 236
-    .local v0, buffer:Lcom/flurry/org/codehaus/jackson/map/util/ObjectBuffer;
+    .local v0, "buffer":Lcom/flurry/org/codehaus/jackson/map/util/ObjectBuffer;
     invoke-virtual {v0}, Lcom/flurry/org/codehaus/jackson/map/util/ObjectBuffer;->resetAndStart()[Ljava/lang/Object;
 
     move-result-object v4
 
     .line 237
-    .local v4, values:[Ljava/lang/Object;
+    .local v4, "values":[Ljava/lang/Object;
     const/4 v1, 0x0
 
     .line 239
-    .local v1, ptr:I
+    .local v1, "ptr":I
     :goto_1
     invoke-virtual {p0, p1, p2}, Lcom/flurry/org/codehaus/jackson/map/deser/std/UntypedObjectDeserializer;->deserialize(Lcom/flurry/org/codehaus/jackson/JsonParser;Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;)Ljava/lang/Object;
 
     move-result-object v3
 
     .line 240
-    .local v3, value:Ljava/lang/Object;
+    .local v3, "value":Ljava/lang/Object;
     array-length v5, v4
 
     if-lt v1, v5, :cond_1
@@ -597,8 +597,8 @@
     :cond_1
     add-int/lit8 v2, v1, 0x1
 
-    .end local v1           #ptr:I
-    .local v2, ptr:I
+    .end local v1    # "ptr":I
+    .local v2, "ptr":I
     aput-object v3, v4, v1
 
     .line 245
@@ -620,15 +620,15 @@
     :cond_2
     move v1, v2
 
-    .end local v2           #ptr:I
-    .restart local v1       #ptr:I
+    .end local v2    # "ptr":I
+    .restart local v1    # "ptr":I
     goto :goto_1
 .end method
 
 .method protected mapObject(Lcom/flurry/org/codehaus/jackson/JsonParser;Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;)Ljava/lang/Object;
     .locals 10
-    .parameter "jp"
-    .parameter "ctxt"
+    .param p1, "jp"    # Lcom/flurry/org/codehaus/jackson/JsonParser;
+    .param p2, "ctxt"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -645,7 +645,7 @@
     move-result-object v4
 
     .line 186
-    .local v4, t:Lcom/flurry/org/codehaus/jackson/JsonToken;
+    .local v4, "t":Lcom/flurry/org/codehaus/jackson/JsonToken;
     sget-object v7, Lcom/flurry/org/codehaus/jackson/JsonToken;->START_OBJECT:Lcom/flurry/org/codehaus/jackson/JsonToken;
 
     if-ne v4, v7, :cond_0
@@ -677,7 +677,7 @@
     move-result-object v0
 
     .line 195
-    .local v0, field1:Ljava/lang/String;
+    .local v0, "field1":Ljava/lang/String;
     invoke-virtual {p1}, Lcom/flurry/org/codehaus/jackson/JsonParser;->nextToken()Lcom/flurry/org/codehaus/jackson/JsonToken;
 
     .line 196
@@ -686,7 +686,7 @@
     move-result-object v5
 
     .line 197
-    .local v5, value1:Ljava/lang/Object;
+    .local v5, "value1":Ljava/lang/Object;
     invoke-virtual {p1}, Lcom/flurry/org/codehaus/jackson/JsonParser;->nextToken()Lcom/flurry/org/codehaus/jackson/JsonToken;
 
     move-result-object v7
@@ -701,7 +701,7 @@
     invoke-direct {v3, v9}, Ljava/util/LinkedHashMap;-><init>(I)V
 
     .line 199
-    .local v3, result:Ljava/util/LinkedHashMap;,"Ljava/util/LinkedHashMap<Ljava/lang/String;Ljava/lang/Object;>;"
+    .local v3, "result":Ljava/util/LinkedHashMap;, "Ljava/util/LinkedHashMap<Ljava/lang/String;Ljava/lang/Object;>;"
     invoke-virtual {v3, v0, v5}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-object v7, v3
@@ -710,14 +710,14 @@
     goto :goto_0
 
     .line 202
-    .end local v3           #result:Ljava/util/LinkedHashMap;,"Ljava/util/LinkedHashMap<Ljava/lang/String;Ljava/lang/Object;>;"
+    .end local v3    # "result":Ljava/util/LinkedHashMap;, "Ljava/util/LinkedHashMap<Ljava/lang/String;Ljava/lang/Object;>;"
     :cond_2
     invoke-virtual {p1}, Lcom/flurry/org/codehaus/jackson/JsonParser;->getText()Ljava/lang/String;
 
     move-result-object v1
 
     .line 203
-    .local v1, field2:Ljava/lang/String;
+    .local v1, "field2":Ljava/lang/String;
     invoke-virtual {p1}, Lcom/flurry/org/codehaus/jackson/JsonParser;->nextToken()Lcom/flurry/org/codehaus/jackson/JsonToken;
 
     .line 204
@@ -726,7 +726,7 @@
     move-result-object v6
 
     .line 205
-    .local v6, value2:Ljava/lang/Object;
+    .local v6, "value2":Ljava/lang/Object;
     invoke-virtual {p1}, Lcom/flurry/org/codehaus/jackson/JsonParser;->nextToken()Lcom/flurry/org/codehaus/jackson/JsonToken;
 
     move-result-object v7
@@ -741,7 +741,7 @@
     invoke-direct {v3, v9}, Ljava/util/LinkedHashMap;-><init>(I)V
 
     .line 207
-    .restart local v3       #result:Ljava/util/LinkedHashMap;,"Ljava/util/LinkedHashMap<Ljava/lang/String;Ljava/lang/Object;>;"
+    .restart local v3    # "result":Ljava/util/LinkedHashMap;, "Ljava/util/LinkedHashMap<Ljava/lang/String;Ljava/lang/Object;>;"
     invoke-virtual {v3, v0, v5}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 208
@@ -753,14 +753,14 @@
     goto :goto_0
 
     .line 212
-    .end local v3           #result:Ljava/util/LinkedHashMap;,"Ljava/util/LinkedHashMap<Ljava/lang/String;Ljava/lang/Object;>;"
+    .end local v3    # "result":Ljava/util/LinkedHashMap;, "Ljava/util/LinkedHashMap<Ljava/lang/String;Ljava/lang/Object;>;"
     :cond_3
     new-instance v3, Ljava/util/LinkedHashMap;
 
     invoke-direct {v3}, Ljava/util/LinkedHashMap;-><init>()V
 
     .line 213
-    .restart local v3       #result:Ljava/util/LinkedHashMap;,"Ljava/util/LinkedHashMap<Ljava/lang/String;Ljava/lang/Object;>;"
+    .restart local v3    # "result":Ljava/util/LinkedHashMap;, "Ljava/util/LinkedHashMap<Ljava/lang/String;Ljava/lang/Object;>;"
     invoke-virtual {v3, v0, v5}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 214
@@ -773,7 +773,7 @@
     move-result-object v2
 
     .line 217
-    .local v2, fieldName:Ljava/lang/String;
+    .local v2, "fieldName":Ljava/lang/String;
     invoke-virtual {p1}, Lcom/flurry/org/codehaus/jackson/JsonParser;->nextToken()Lcom/flurry/org/codehaus/jackson/JsonToken;
 
     .line 218

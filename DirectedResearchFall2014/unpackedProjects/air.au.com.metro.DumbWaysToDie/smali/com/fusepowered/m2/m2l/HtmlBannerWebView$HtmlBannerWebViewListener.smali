@@ -24,7 +24,7 @@
 # direct methods
 .method public constructor <init>(Lcom/fusepowered/m2/m2l/CustomEventBanner$CustomEventBannerListener;)V
     .locals 0
-    .parameter "customEventBannerListener"
+    .param p1, "customEventBannerListener"    # Lcom/fusepowered/m2/m2l/CustomEventBanner$CustomEventBannerListener;
 
     .prologue
     .line 55
@@ -67,7 +67,7 @@
 
 .method public onFailed(Lcom/fusepowered/m2/m2l/MoPubErrorCode;)V
     .locals 1
-    .parameter "errorCode"
+    .param p1, "errorCode"    # Lcom/fusepowered/m2/m2l/MoPubErrorCode;
 
     .prologue
     .line 66
@@ -81,7 +81,7 @@
 
 .method public onLoaded(Lcom/fusepowered/m2/m2l/BaseHtmlWebView;)V
     .locals 1
-    .parameter "htmlWebView"
+    .param p1, "htmlWebView"    # Lcom/fusepowered/m2/m2l/BaseHtmlWebView;
 
     .prologue
     .line 61

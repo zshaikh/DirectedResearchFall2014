@@ -143,9 +143,7 @@
 
 .method private constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter "defProp"
+    .param p3, "defProp"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -167,7 +165,7 @@
 
 .method public static valueOf(Ljava/lang/String;)Lcom/flurry/org/codehaus/jackson/annotate/JsonTypeInfo$Id;
     .locals 1
-    .parameter "name"
+    .param p0, "name"    # Ljava/lang/String;
 
     .prologue
     .line 60
@@ -177,7 +175,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "name":Ljava/lang/String;
     check-cast p0, Lcom/flurry/org/codehaus/jackson/annotate/JsonTypeInfo$Id;
 
     return-object p0

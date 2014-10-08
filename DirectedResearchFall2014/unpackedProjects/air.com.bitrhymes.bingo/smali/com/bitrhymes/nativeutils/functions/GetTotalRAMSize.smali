@@ -36,13 +36,13 @@
     invoke-direct {v2, v3, v4}, Ljava/io/RandomAccessFile;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 41
-    .local v2, reader:Ljava/io/RandomAccessFile;
+    .local v2, "reader":Ljava/io/RandomAccessFile;
     invoke-virtual {v2}, Ljava/io/RandomAccessFile;->readLine()Ljava/lang/String;
 
     move-result-object v1
 
     .line 43
-    .local v1, load:Ljava/lang/String;
+    .local v1, "load":Ljava/lang/String;
     const-string v3, "GetTotalRAMSize"
 
     invoke-static {v3, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
@@ -52,8 +52,8 @@
     move-object v3, v1
 
     .line 75
-    .end local v1           #load:Ljava/lang/String;
-    .end local v2           #reader:Ljava/io/RandomAccessFile;
+    .end local v1    # "load":Ljava/lang/String;
+    .end local v2    # "reader":Ljava/io/RandomAccessFile;
     :goto_0
     return-object v3
 
@@ -64,7 +64,7 @@
     move-object v0, v3
 
     .line 72
-    .local v0, ex:Ljava/io/IOException;
+    .local v0, "ex":Ljava/io/IOException;
     invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
 
     .line 75
@@ -77,8 +77,8 @@
 # virtual methods
 .method public call(Lcom/adobe/fre/FREContext;[Lcom/adobe/fre/FREObject;)Lcom/adobe/fre/FREObject;
     .locals 7
-    .parameter "arg0"
-    .parameter "arg1"
+    .param p1, "arg0"    # Lcom/adobe/fre/FREContext;
+    .param p2, "arg1"    # [Lcom/adobe/fre/FREObject;
 
     .prologue
     const-string v6, ","
@@ -87,7 +87,7 @@
     const/4 v0, 0x0
 
     .line 24
-    .local v0, deviceInfoObject:Lcom/adobe/fre/FREObject;
+    .local v0, "deviceInfoObject":Lcom/adobe/fre/FREObject;
     :try_start_0
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -106,7 +106,7 @@
     move-result-object v2
 
     .line 25
-    .local v2, memSize:Ljava/lang/String;
+    .local v2, "memSize":Ljava/lang/String;
     invoke-virtual {v2}, Ljava/lang/String;->length()I
 
     move-result v3
@@ -121,12 +121,12 @@
     move-result-object v0
 
     .line 33
-    .end local v2           #memSize:Ljava/lang/String;
+    .end local v2    # "memSize":Ljava/lang/String;
     :goto_0
     return-object v0
 
     .line 28
-    .restart local v2       #memSize:Ljava/lang/String;
+    .restart local v2    # "memSize":Ljava/lang/String;
     :cond_0
     const-string v3, ""
 
@@ -139,14 +139,14 @@
     goto :goto_0
 
     .line 29
-    .end local v2           #memSize:Ljava/lang/String;
+    .end local v2    # "memSize":Ljava/lang/String;
     :catch_0
     move-exception v3
 
     move-object v1, v3
 
     .line 30
-    .local v1, e:Lcom/adobe/fre/FREWrongThreadException;
+    .local v1, "e":Lcom/adobe/fre/FREWrongThreadException;
     invoke-virtual {v1}, Lcom/adobe/fre/FREWrongThreadException;->printStackTrace()V
 
     .line 31

@@ -20,11 +20,6 @@
 # direct methods
 .method public constructor <init>(FFFFZ)V
     .locals 1
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 17
@@ -58,8 +53,8 @@
 # virtual methods
 .method protected applyTransformation(FLandroid/view/animation/Transformation;)V
     .locals 4
-    .parameter "interpolatedTime"
-    .parameter "t"
+    .param p1, "interpolatedTime"    # F
+    .param p2, "t"    # Landroid/view/animation/Transformation;
 
     .prologue
     .line 33
@@ -131,10 +126,10 @@
 
 .method public initialize(IIII)V
     .locals 1
-    .parameter "width"
-    .parameter "height"
-    .parameter "parentWidth"
-    .parameter "parentHeight"
+    .param p1, "width"    # I
+    .param p2, "height"    # I
+    .param p3, "parentWidth"    # I
+    .param p4, "parentHeight"    # I
 
     .prologue
     .line 27

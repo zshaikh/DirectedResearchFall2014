@@ -16,7 +16,7 @@
 
 .method public static main([Ljava/lang/String;)V
     .locals 2
-    .parameter "args"
+    .param p0, "args"    # [Ljava/lang/String;
 
     .prologue
     .line 22

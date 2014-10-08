@@ -25,6 +25,7 @@
 .method public run()V
     .locals 4
 
+    # getter for: Lcom/applovin/impl/adview/AdViewControllerJsInterface;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/applovin/impl/adview/AdViewControllerJsInterface;->access$400()Ljava/lang/String;
 
     move-result-object v0
@@ -37,7 +38,7 @@
 
     const/4 v1, 0x1
 
-    #setter for: Lcom/applovin/impl/adview/AdViewControllerJsInterface;->currentlyWaiting:Z
+    # setter for: Lcom/applovin/impl/adview/AdViewControllerJsInterface;->currentlyWaiting:Z
     invoke-static {v0, v1}, Lcom/applovin/impl/adview/AdViewControllerJsInterface;->access$502(Lcom/applovin/impl/adview/AdViewControllerJsInterface;Z)Z
 
     new-instance v0, Ljava/util/Timer;
@@ -55,7 +56,7 @@
     :cond_0
     iget-object v0, p0, Lcom/applovin/impl/adview/p;->a:Lcom/applovin/impl/adview/AdViewControllerJsInterface;
 
-    #getter for: Lcom/applovin/impl/adview/AdViewControllerJsInterface;->videoOverlay:Lcom/applovin/impl/adview/AppLovinVideoOverlay;
+    # getter for: Lcom/applovin/impl/adview/AdViewControllerJsInterface;->videoOverlay:Lcom/applovin/impl/adview/AppLovinVideoOverlay;
     invoke-static {v0}, Lcom/applovin/impl/adview/AdViewControllerJsInterface;->access$300(Lcom/applovin/impl/adview/AdViewControllerJsInterface;)Lcom/applovin/impl/adview/AppLovinVideoOverlay;
 
     move-result-object v0
@@ -68,7 +69,7 @@
 
     iget-object v0, p0, Lcom/applovin/impl/adview/p;->a:Lcom/applovin/impl/adview/AdViewControllerJsInterface;
 
-    #getter for: Lcom/applovin/impl/adview/AdViewControllerJsInterface;->interruptNotify:Z
+    # getter for: Lcom/applovin/impl/adview/AdViewControllerJsInterface;->interruptNotify:Z
     invoke-static {v0}, Lcom/applovin/impl/adview/AdViewControllerJsInterface;->access$600(Lcom/applovin/impl/adview/AdViewControllerJsInterface;)Z
 
     move-result v0
@@ -78,7 +79,7 @@
     :cond_1
     iget-object v0, p0, Lcom/applovin/impl/adview/p;->a:Lcom/applovin/impl/adview/AdViewControllerJsInterface;
 
-    #getter for: Lcom/applovin/impl/adview/AdViewControllerJsInterface;->interruptNotify:Z
+    # getter for: Lcom/applovin/impl/adview/AdViewControllerJsInterface;->interruptNotify:Z
     invoke-static {v0}, Lcom/applovin/impl/adview/AdViewControllerJsInterface;->access$600(Lcom/applovin/impl/adview/AdViewControllerJsInterface;)Z
 
     move-result v0
@@ -89,9 +90,10 @@
 
     const/4 v1, 0x0
 
-    #setter for: Lcom/applovin/impl/adview/AdViewControllerJsInterface;->currentlyWaiting:Z
+    # setter for: Lcom/applovin/impl/adview/AdViewControllerJsInterface;->currentlyWaiting:Z
     invoke-static {v0, v1}, Lcom/applovin/impl/adview/AdViewControllerJsInterface;->access$502(Lcom/applovin/impl/adview/AdViewControllerJsInterface;Z)Z
 
+    # getter for: Lcom/applovin/impl/adview/AdViewControllerJsInterface;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/applovin/impl/adview/AdViewControllerJsInterface;->access$400()Ljava/lang/String;
 
     move-result-object v0
@@ -108,7 +110,7 @@
 
     iget-object v2, p0, Lcom/applovin/impl/adview/p;->a:Lcom/applovin/impl/adview/AdViewControllerJsInterface;
 
-    #getter for: Lcom/applovin/impl/adview/AdViewControllerJsInterface;->videoOverlay:Lcom/applovin/impl/adview/AppLovinVideoOverlay;
+    # getter for: Lcom/applovin/impl/adview/AdViewControllerJsInterface;->videoOverlay:Lcom/applovin/impl/adview/AppLovinVideoOverlay;
     invoke-static {v2}, Lcom/applovin/impl/adview/AdViewControllerJsInterface;->access$300(Lcom/applovin/impl/adview/AdViewControllerJsInterface;)Lcom/applovin/impl/adview/AppLovinVideoOverlay;
 
     move-result-object v2
@@ -129,7 +131,7 @@
 
     iget-object v0, p0, Lcom/applovin/impl/adview/p;->a:Lcom/applovin/impl/adview/AdViewControllerJsInterface;
 
-    #getter for: Lcom/applovin/impl/adview/AdViewControllerJsInterface;->parentActivity:Landroid/app/Activity;
+    # getter for: Lcom/applovin/impl/adview/AdViewControllerJsInterface;->parentActivity:Landroid/app/Activity;
     invoke-static {v0}, Lcom/applovin/impl/adview/AdViewControllerJsInterface;->access$700(Lcom/applovin/impl/adview/AdViewControllerJsInterface;)Landroid/app/Activity;
 
     move-result-object v0
@@ -146,6 +148,7 @@
     return-void
 
     :cond_2
+    # getter for: Lcom/applovin/impl/adview/AdViewControllerJsInterface;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/applovin/impl/adview/AdViewControllerJsInterface;->access$400()Ljava/lang/String;
 
     move-result-object v0

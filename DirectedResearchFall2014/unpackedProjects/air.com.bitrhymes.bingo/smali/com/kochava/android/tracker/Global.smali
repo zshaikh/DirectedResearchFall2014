@@ -4,7 +4,7 @@
 
 
 # static fields
-.field protected static final CURRENCYLIST:Ljava/util/List; = null
+.field protected static final CURRENCYLIST:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List",

@@ -12,8 +12,8 @@
 # direct methods
 .method constructor <init>(II)V
     .locals 0
-    .parameter "width"
-    .parameter "height"
+    .param p1, "width"    # I
+    .param p2, "height"    # I
 
     .prologue
     .line 73
@@ -31,8 +31,8 @@
 
 .method public static createWithSize(II)Lcom/fusepowered/m2/m2l/MraidScreenSizeProperty;
     .locals 1
-    .parameter "width"
-    .parameter "height"
+    .param p0, "width"    # I
+    .param p1, "height"    # I
 
     .prologue
     .line 79

@@ -21,7 +21,6 @@
 # direct methods
 .method constructor <init>(Lcom/tapjoy/TJEvent;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 194
@@ -44,10 +43,10 @@
     invoke-direct {v1}, Lcom/tapjoy/TapjoyURLConnection;-><init>()V
 
     .line 199
-    .local v1, tapjoyConnection:Lcom/tapjoy/TapjoyURLConnection;
+    .local v1, "tapjoyConnection":Lcom/tapjoy/TapjoyURLConnection;
     iget-object v2, p0, Lcom/tapjoy/TJEvent$1;->this$0:Lcom/tapjoy/TJEvent;
 
-    #getter for: Lcom/tapjoy/TJEvent;->eventData:Lcom/tapjoy/TJEventData;
+    # getter for: Lcom/tapjoy/TJEvent;->eventData:Lcom/tapjoy/TJEventData;
     invoke-static {v2}, Lcom/tapjoy/TJEvent;->access$000(Lcom/tapjoy/TJEvent;)Lcom/tapjoy/TJEventData;
 
     move-result-object v2
@@ -56,7 +55,7 @@
 
     iget-object v3, p0, Lcom/tapjoy/TJEvent$1;->this$0:Lcom/tapjoy/TJEvent;
 
-    #getter for: Lcom/tapjoy/TJEvent;->urlParams:Ljava/util/Map;
+    # getter for: Lcom/tapjoy/TJEvent;->urlParams:Ljava/util/Map;
     invoke-static {v3}, Lcom/tapjoy/TJEvent;->access$100(Lcom/tapjoy/TJEvent;)Ljava/util/Map;
 
     move-result-object v3
@@ -66,10 +65,10 @@
     move-result-object v0
 
     .line 201
-    .local v0, result:Lcom/tapjoy/TapjoyHttpURLResponse;
+    .local v0, "result":Lcom/tapjoy/TapjoyHttpURLResponse;
     iget-object v2, p0, Lcom/tapjoy/TJEvent$1;->this$0:Lcom/tapjoy/TJEvent;
 
-    #getter for: Lcom/tapjoy/TJEvent;->eventData:Lcom/tapjoy/TJEventData;
+    # getter for: Lcom/tapjoy/TJEvent;->eventData:Lcom/tapjoy/TJEventData;
     invoke-static {v2}, Lcom/tapjoy/TJEvent;->access$000(Lcom/tapjoy/TJEvent;)Lcom/tapjoy/TJEventData;
 
     move-result-object v2
@@ -81,7 +80,7 @@
     .line 202
     iget-object v2, p0, Lcom/tapjoy/TJEvent$1;->this$0:Lcom/tapjoy/TJEvent;
 
-    #getter for: Lcom/tapjoy/TJEvent;->eventData:Lcom/tapjoy/TJEventData;
+    # getter for: Lcom/tapjoy/TJEvent;->eventData:Lcom/tapjoy/TJEventData;
     invoke-static {v2}, Lcom/tapjoy/TJEvent;->access$000(Lcom/tapjoy/TJEvent;)Lcom/tapjoy/TJEventData;
 
     move-result-object v2
@@ -96,7 +95,7 @@
     .line 206
     iget-object v2, p0, Lcom/tapjoy/TJEvent$1;->this$0:Lcom/tapjoy/TJEvent;
 
-    #getter for: Lcom/tapjoy/TJEvent;->callback:Lcom/tapjoy/TJEventCallback;
+    # getter for: Lcom/tapjoy/TJEvent;->callback:Lcom/tapjoy/TJEventCallback;
     invoke-static {v2}, Lcom/tapjoy/TJEvent;->access$200(Lcom/tapjoy/TJEvent;)Lcom/tapjoy/TJEventCallback;
 
     move-result-object v2
@@ -111,7 +110,7 @@
     .line 232
     iget-object v2, p0, Lcom/tapjoy/TJEvent$1;->this$0:Lcom/tapjoy/TJEvent;
 
-    #getter for: Lcom/tapjoy/TJEvent;->callback:Lcom/tapjoy/TJEventCallback;
+    # getter for: Lcom/tapjoy/TJEvent;->callback:Lcom/tapjoy/TJEventCallback;
     invoke-static {v2}, Lcom/tapjoy/TJEvent;->access$200(Lcom/tapjoy/TJEvent;)Lcom/tapjoy/TJEventCallback;
 
     move-result-object v2
@@ -120,7 +119,7 @@
 
     iget-object v4, p0, Lcom/tapjoy/TJEvent$1;->this$0:Lcom/tapjoy/TJEvent;
 
-    #getter for: Lcom/tapjoy/TJEvent;->contentAvailable:Z
+    # getter for: Lcom/tapjoy/TJEvent;->contentAvailable:Z
     invoke-static {v4}, Lcom/tapjoy/TJEvent;->access$300(Lcom/tapjoy/TJEvent;)Z
 
     move-result v4
@@ -138,13 +137,13 @@
 
     const/4 v3, 0x1
 
-    #setter for: Lcom/tapjoy/TJEvent;->contentAvailable:Z
+    # setter for: Lcom/tapjoy/TJEvent;->contentAvailable:Z
     invoke-static {v2, v3}, Lcom/tapjoy/TJEvent;->access$302(Lcom/tapjoy/TJEvent;Z)Z
 
     .line 213
     iget-object v2, p0, Lcom/tapjoy/TJEvent$1;->this$0:Lcom/tapjoy/TJEvent;
 
-    #getter for: Lcom/tapjoy/TJEvent;->callback:Lcom/tapjoy/TJEventCallback;
+    # getter for: Lcom/tapjoy/TJEvent;->callback:Lcom/tapjoy/TJEventCallback;
     invoke-static {v2}, Lcom/tapjoy/TJEvent;->access$200(Lcom/tapjoy/TJEvent;)Lcom/tapjoy/TJEventCallback;
 
     move-result-object v2
@@ -153,7 +152,7 @@
 
     iget-object v4, p0, Lcom/tapjoy/TJEvent$1;->this$0:Lcom/tapjoy/TJEvent;
 
-    #getter for: Lcom/tapjoy/TJEvent;->contentAvailable:Z
+    # getter for: Lcom/tapjoy/TJEvent;->contentAvailable:Z
     invoke-static {v4}, Lcom/tapjoy/TJEvent;->access$300(Lcom/tapjoy/TJEvent;)Z
 
     move-result v4
@@ -163,7 +162,7 @@
     .line 216
     iget-object v2, p0, Lcom/tapjoy/TJEvent$1;->this$0:Lcom/tapjoy/TJEvent;
 
-    #getter for: Lcom/tapjoy/TJEvent;->autoShowContent:Z
+    # getter for: Lcom/tapjoy/TJEvent;->autoShowContent:Z
     invoke-static {v2}, Lcom/tapjoy/TJEvent;->access$400(Lcom/tapjoy/TJEvent;)Z
 
     move-result v2
@@ -181,7 +180,7 @@
     :sswitch_1
     iget-object v2, p0, Lcom/tapjoy/TJEvent$1;->this$0:Lcom/tapjoy/TJEvent;
 
-    #getter for: Lcom/tapjoy/TJEvent;->callback:Lcom/tapjoy/TJEventCallback;
+    # getter for: Lcom/tapjoy/TJEvent;->callback:Lcom/tapjoy/TJEventCallback;
     invoke-static {v2}, Lcom/tapjoy/TJEvent;->access$200(Lcom/tapjoy/TJEvent;)Lcom/tapjoy/TJEventCallback;
 
     move-result-object v2
@@ -201,7 +200,7 @@
     .line 225
     iget-object v2, p0, Lcom/tapjoy/TJEvent$1;->this$0:Lcom/tapjoy/TJEvent;
 
-    #getter for: Lcom/tapjoy/TJEvent;->urlParams:Ljava/util/Map;
+    # getter for: Lcom/tapjoy/TJEvent;->urlParams:Ljava/util/Map;
     invoke-static {v2}, Lcom/tapjoy/TJEvent;->access$100(Lcom/tapjoy/TJEvent;)Ljava/util/Map;
 
     move-result-object v2
@@ -213,7 +212,7 @@
     .line 226
     iget-object v2, p0, Lcom/tapjoy/TJEvent$1;->this$0:Lcom/tapjoy/TJEvent;
 
-    #getter for: Lcom/tapjoy/TJEvent;->urlParams:Ljava/util/Map;
+    # getter for: Lcom/tapjoy/TJEvent;->urlParams:Ljava/util/Map;
     invoke-static {v2}, Lcom/tapjoy/TJEvent;->access$100(Lcom/tapjoy/TJEvent;)Ljava/util/Map;
 
     move-result-object v2
@@ -229,7 +228,7 @@
 
     iget-object v3, p0, Lcom/tapjoy/TJEvent$1;->this$0:Lcom/tapjoy/TJEvent;
 
-    #getter for: Lcom/tapjoy/TJEvent;->eventData:Lcom/tapjoy/TJEventData;
+    # getter for: Lcom/tapjoy/TJEvent;->eventData:Lcom/tapjoy/TJEventData;
     invoke-static {v3}, Lcom/tapjoy/TJEvent;->access$000(Lcom/tapjoy/TJEvent;)Lcom/tapjoy/TJEventData;
 
     move-result-object v3
@@ -242,7 +241,7 @@
 
     iget-object v3, p0, Lcom/tapjoy/TJEvent$1;->this$0:Lcom/tapjoy/TJEvent;
 
-    #getter for: Lcom/tapjoy/TJEvent;->urlParams:Ljava/util/Map;
+    # getter for: Lcom/tapjoy/TJEvent;->urlParams:Ljava/util/Map;
     invoke-static {v3}, Lcom/tapjoy/TJEvent;->access$100(Lcom/tapjoy/TJEvent;)Ljava/util/Map;
 
     move-result-object v3

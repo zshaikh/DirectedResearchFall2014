@@ -23,8 +23,8 @@
 # direct methods
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
-    .parameter "eventId"
-    .parameter "eventData"
+    .param p1, "eventId"    # Ljava/lang/String;
+    .param p2, "eventData"    # Ljava/lang/String;
 
     .prologue
     .line 639

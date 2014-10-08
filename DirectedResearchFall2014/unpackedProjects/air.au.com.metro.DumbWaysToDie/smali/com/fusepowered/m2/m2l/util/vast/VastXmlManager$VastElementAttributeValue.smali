@@ -143,9 +143,7 @@
 
 .method private constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter "value"
+    .param p3, "value"    # Ljava/lang/String;
 
     .prologue
     .line 67
@@ -160,7 +158,6 @@
 
 .method public static valueOf(Ljava/lang/String;)Lcom/fusepowered/m2/m2l/util/vast/VastXmlManager$VastElementAttributeValue;
     .locals 1
-    .parameter
 
     .prologue
     .line 1

@@ -270,7 +270,6 @@
 
 .method public setErrors(Ljava/util/List;)Lcom/flurry/android/SdkLogResponse$Builder;
     .locals 2
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -310,7 +309,6 @@
 
 .method public setResult(Ljava/lang/CharSequence;)Lcom/flurry/android/SdkLogResponse$Builder;
     .locals 3
-    .parameter
 
     .prologue
     const/4 v2, 0x0

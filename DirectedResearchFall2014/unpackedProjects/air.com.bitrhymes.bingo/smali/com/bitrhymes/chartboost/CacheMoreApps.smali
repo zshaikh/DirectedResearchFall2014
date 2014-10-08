@@ -25,8 +25,8 @@
 # virtual methods
 .method public call(Lcom/adobe/fre/FREContext;[Lcom/adobe/fre/FREObject;)Lcom/adobe/fre/FREObject;
     .locals 6
-    .parameter "context"
-    .parameter "arg1"
+    .param p1, "context"    # Lcom/adobe/fre/FREContext;
+    .param p2, "arg1"    # [Lcom/adobe/fre/FREObject;
 
     .prologue
     const-string v4, "Chartboost"
@@ -47,13 +47,13 @@
     move-result-object v0
 
     .line 21
-    .local v0, _cb:Lcom/chartboost/sdk/Chartboost;
+    .local v0, "_cb":Lcom/chartboost/sdk/Chartboost;
     invoke-virtual {v0}, Lcom/chartboost/sdk/Chartboost;->cacheMoreApps()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 28
-    .end local v0           #_cb:Lcom/chartboost/sdk/Chartboost;
+    .end local v0    # "_cb":Lcom/chartboost/sdk/Chartboost;
     :goto_0
     const/4 v2, 0x0
 
@@ -66,7 +66,7 @@
     move-object v1, v2
 
     .line 24
-    .local v1, e:Ljava/lang/Exception;
+    .local v1, "e":Ljava/lang/Exception;
     const-string v2, "Chartboost"
 
     new-instance v2, Ljava/lang/StringBuilder;

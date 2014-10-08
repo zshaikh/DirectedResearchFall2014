@@ -17,10 +17,6 @@
 # direct methods
 .method public constructor <init>(Lcom/google/ads/internal/d;Ljava/util/Map;ZZ)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -43,8 +39,6 @@
 
 .method private static a(Ljava/lang/String;Landroid/content/Context;)Landroid/webkit/WebResourceResponse;
     .locals 4
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -126,8 +120,8 @@
 # virtual methods
 .method public shouldInterceptRequest(Landroid/webkit/WebView;Ljava/lang/String;)Landroid/webkit/WebResourceResponse;
     .locals 3
-    .parameter "view"
-    .parameter "url"
+    .param p1, "view"    # Landroid/webkit/WebView;
+    .param p2, "url"    # Ljava/lang/String;
 
     .prologue
     const-string v0, "shouldInterceptRequest("

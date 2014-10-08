@@ -242,8 +242,6 @@
 
 .method static synthetic access$0(Lcom/fusepowered/a1/webapp/ApplifierImpactWebData;Lcom/fusepowered/a1/webapp/ApplifierImpactWebData$ApplifierImpactUrlLoader;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 294
@@ -254,7 +252,6 @@
 
 .method static synthetic access$1(Lcom/fusepowered/a1/webapp/ApplifierImpactWebData;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 301
@@ -265,7 +262,6 @@
 
 .method static synthetic access$2(Lcom/fusepowered/a1/webapp/ApplifierImpactWebData;)I
     .locals 1
-    .parameter
 
     .prologue
     .line 40
@@ -276,8 +272,6 @@
 
 .method static synthetic access$3(Lcom/fusepowered/a1/webapp/ApplifierImpactWebData;I)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 40
@@ -288,7 +282,6 @@
 
 .method static synthetic access$4(Lcom/fusepowered/a1/webapp/ApplifierImpactWebData;)I
     .locals 1
-    .parameter
 
     .prologue
     .line 41
@@ -299,8 +292,6 @@
 
 .method static synthetic access$5(Lcom/fusepowered/a1/webapp/ApplifierImpactWebData;I)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 41
@@ -311,8 +302,6 @@
 
 .method static synthetic access$6(Lcom/fusepowered/a1/webapp/ApplifierImpactWebData;Lcom/fusepowered/a1/webapp/ApplifierImpactWebData$ApplifierImpactUrlLoader;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 337
@@ -323,8 +312,6 @@
 
 .method static synthetic access$7(Lcom/fusepowered/a1/webapp/ApplifierImpactWebData;Lcom/fusepowered/a1/webapp/ApplifierImpactWebData$ApplifierImpactUrlLoader;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 309
@@ -335,7 +322,7 @@
 
 .method private addLoader(Lcom/fusepowered/a1/webapp/ApplifierImpactWebData$ApplifierImpactUrlLoader;)V
     .locals 1
-    .parameter "loader"
+    .param p1, "loader"    # Lcom/fusepowered/a1/webapp/ApplifierImpactWebData$ApplifierImpactUrlLoader;
 
     .prologue
     .line 295
@@ -381,7 +368,7 @@
 
 .method private campaignDataReceived(Ljava/lang/String;)V
     .locals 14
-    .parameter "json"
+    .param p1, "json"    # Ljava/lang/String;
 
     .prologue
     const/4 v10, 0x0
@@ -402,7 +389,7 @@
     move-result-object v7
 
     .line 440
-    .local v7, validData:Ljava/lang/Boolean;
+    .local v7, "validData":Ljava/lang/Boolean;
     :try_start_0
     new-instance v8, Lorg/json/JSONObject;
 
@@ -414,7 +401,7 @@
     const/4 v2, 0x0
 
     .line 443
-    .local v2, data:Lorg/json/JSONObject;
+    .local v2, "data":Lorg/json/JSONObject;
     iget-object v8, p0, Lcom/fusepowered/a1/webapp/ApplifierImpactWebData;->_campaignJson:Lorg/json/JSONObject;
 
     const-string v9, "data"
@@ -607,7 +594,7 @@
     move-result-object v0
 
     .line 472
-    .local v0, campaigns:Lorg/json/JSONArray;
+    .local v0, "campaigns":Lorg/json/JSONArray;
     if-eqz v0, :cond_7
 
     .line 473
@@ -618,7 +605,7 @@
     iput-object v8, p0, Lcom/fusepowered/a1/webapp/ApplifierImpactWebData;->_campaigns:Ljava/util/ArrayList;
 
     .line 477
-    .end local v0           #campaigns:Lorg/json/JSONArray;
+    .end local v0    # "campaigns":Lorg/json/JSONArray;
     :cond_7
     iget-object v8, p0, Lcom/fusepowered/a1/webapp/ApplifierImpactWebData;->_campaigns:Ljava/util/ArrayList;
 
@@ -694,19 +681,19 @@
     invoke-direct {p0}, Lcom/fusepowered/a1/webapp/ApplifierImpactWebData;->campaignDataFailed()V
 
     .line 541
-    .end local v2           #data:Lorg/json/JSONObject;
+    .end local v2    # "data":Lorg/json/JSONObject;
     :goto_1
     return-void
 
     .line 447
-    .restart local v2       #data:Lorg/json/JSONObject;
+    .restart local v2    # "data":Lorg/json/JSONObject;
     :catch_0
     move-exception v8
 
     move-object v3, v8
 
     .line 448
-    .local v3, e:Ljava/lang/Exception;
+    .local v3, "e":Ljava/lang/Exception;
     const-string v8, "Malformed data JSON"
 
     invoke-static {v8, p0}, Lcom/fusepowered/a1/ApplifierImpactUtils;->Log(Ljava/lang/String;Ljava/lang/Object;)V
@@ -716,15 +703,15 @@
     goto/16 :goto_0
 
     .line 521
-    .end local v2           #data:Lorg/json/JSONObject;
-    .end local v3           #e:Ljava/lang/Exception;
+    .end local v2    # "data":Lorg/json/JSONObject;
+    .end local v3    # "e":Ljava/lang/Exception;
     :catch_1
     move-exception v8
 
     move-object v3, v8
 
     .line 522
-    .restart local v3       #e:Ljava/lang/Exception;
+    .restart local v3    # "e":Ljava/lang/Exception;
     new-instance v8, Ljava/lang/StringBuilder;
 
     const-string v9, "Malformed JSON: "
@@ -769,8 +756,8 @@
     goto :goto_1
 
     .line 490
-    .end local v3           #e:Ljava/lang/Exception;
-    .restart local v2       #data:Lorg/json/JSONObject;
+    .end local v3    # "e":Ljava/lang/Exception;
+    .restart local v2    # "data":Lorg/json/JSONObject;
     :cond_a
     :try_start_3
     new-instance v8, Ljava/lang/StringBuilder;
@@ -859,14 +846,14 @@
     move-result-object v6
 
     .line 501
-    .local v6, rewardItems:Lorg/json/JSONArray;
+    .local v6, "rewardItems":Lorg/json/JSONArray;
     const/4 v1, 0x0
 
     .line 503
-    .local v1, currentRewardItem:Lcom/fusepowered/a1/campaign/ApplifierImpactRewardItem;
+    .local v1, "currentRewardItem":Lcom/fusepowered/a1/campaign/ApplifierImpactRewardItem;
     const/4 v5, 0x0
 
-    .local v5, i:I
+    .local v5, "i":I
     :goto_3
     invoke-virtual {v6}, Lorg/json/JSONArray;->length()I
 
@@ -906,9 +893,9 @@
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_1
 
     .line 534
-    .end local v1           #currentRewardItem:Lcom/fusepowered/a1/campaign/ApplifierImpactRewardItem;
-    .end local v5           #i:I
-    .end local v6           #rewardItems:Lorg/json/JSONArray;
+    .end local v1    # "currentRewardItem":Lcom/fusepowered/a1/campaign/ApplifierImpactRewardItem;
+    .end local v5    # "i":I
+    .end local v6    # "rewardItems":Lorg/json/JSONArray;
     :cond_d
     iget-object v8, p0, Lcom/fusepowered/a1/webapp/ApplifierImpactWebData;->_listener:Lcom/fusepowered/a1/webapp/IApplifierImpactWebDataListener;
 
@@ -957,14 +944,14 @@
     goto/16 :goto_1
 
     .line 504
-    .restart local v1       #currentRewardItem:Lcom/fusepowered/a1/campaign/ApplifierImpactRewardItem;
-    .restart local v5       #i:I
-    .restart local v6       #rewardItems:Lorg/json/JSONArray;
+    .restart local v1    # "currentRewardItem":Lcom/fusepowered/a1/campaign/ApplifierImpactRewardItem;
+    .restart local v5    # "i":I
+    .restart local v6    # "rewardItems":Lorg/json/JSONArray;
     :cond_e
     :try_start_4
     new-instance v1, Lcom/fusepowered/a1/campaign/ApplifierImpactRewardItem;
 
-    .end local v1           #currentRewardItem:Lcom/fusepowered/a1/campaign/ApplifierImpactRewardItem;
+    .end local v1    # "currentRewardItem":Lcom/fusepowered/a1/campaign/ApplifierImpactRewardItem;
     invoke-virtual {v6, v5}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
 
     move-result-object v8
@@ -972,7 +959,7 @@
     invoke-direct {v1, v8}, Lcom/fusepowered/a1/campaign/ApplifierImpactRewardItem;-><init>(Lorg/json/JSONObject;)V
 
     .line 505
-    .restart local v1       #currentRewardItem:Lcom/fusepowered/a1/campaign/ApplifierImpactRewardItem;
+    .restart local v1    # "currentRewardItem":Lcom/fusepowered/a1/campaign/ApplifierImpactRewardItem;
     invoke-virtual {v1}, Lcom/fusepowered/a1/campaign/ApplifierImpactRewardItem;->hasValidData()Z
 
     move-result v8
@@ -1004,9 +991,9 @@
     goto :goto_3
 
     .line 517
-    .end local v1           #currentRewardItem:Lcom/fusepowered/a1/campaign/ApplifierImpactRewardItem;
-    .end local v5           #i:I
-    .end local v6           #rewardItems:Lorg/json/JSONArray;
+    .end local v1    # "currentRewardItem":Lcom/fusepowered/a1/campaign/ApplifierImpactRewardItem;
+    .end local v5    # "i":I
+    .end local v6    # "rewardItems":Lorg/json/JSONArray;
     :cond_11
     invoke-direct {p0}, Lcom/fusepowered/a1/webapp/ApplifierImpactWebData;->campaignDataFailed()V
     :try_end_4
@@ -1015,13 +1002,13 @@
     goto/16 :goto_1
 
     .line 525
-    .end local v2           #data:Lorg/json/JSONObject;
-    .restart local v3       #e:Ljava/lang/Exception;
+    .end local v2    # "data":Lorg/json/JSONObject;
+    .restart local v3    # "e":Ljava/lang/Exception;
     :cond_12
     aget-object v4, v8, v10
 
     .line 526
-    .local v4, element:Ljava/lang/StackTraceElement;
+    .local v4, "element":Ljava/lang/StackTraceElement;
     new-instance v11, Ljava/lang/StringBuilder;
 
     const-string v12, "Malformed JSON: "
@@ -1048,9 +1035,9 @@
     goto/16 :goto_2
 
     .line 540
-    .end local v3           #e:Ljava/lang/Exception;
-    .end local v4           #element:Ljava/lang/StackTraceElement;
-    .restart local v2       #data:Lorg/json/JSONObject;
+    .end local v3    # "e":Ljava/lang/Exception;
+    .end local v4    # "element":Ljava/lang/StackTraceElement;
+    .restart local v2    # "data":Lorg/json/JSONObject;
     :cond_13
     invoke-direct {p0}, Lcom/fusepowered/a1/webapp/ApplifierImpactWebData;->campaignDataFailed()V
 
@@ -1095,7 +1082,7 @@
     invoke-direct {v11, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
     .line 363
-    .local v11, pendingRequestFile:Ljava/io/File;
+    .local v11, "pendingRequestFile":Ljava/io/File;
     invoke-virtual {v11}, Ljava/io/File;->exists()Z
 
     move-result v1
@@ -1110,15 +1097,15 @@
     move-result-object v7
 
     .line 365
-    .local v7, contents:Ljava/lang/String;
+    .local v7, "contents":Ljava/lang/String;
     const/4 v13, 0x0
 
     .line 366
-    .local v13, pendingRequestsJson:Lorg/json/JSONObject;
+    .local v13, "pendingRequestsJson":Lorg/json/JSONObject;
     const/4 v12, 0x0
 
     .line 370
-    .local v12, pendingRequestsArray:Lorg/json/JSONArray;
+    .local v12, "pendingRequestsArray":Lorg/json/JSONArray;
     :try_start_0
     new-instance v14, Lorg/json/JSONObject;
 
@@ -1127,8 +1114,8 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 371
-    .end local v13           #pendingRequestsJson:Lorg/json/JSONObject;
-    .local v14, pendingRequestsJson:Lorg/json/JSONObject;
+    .end local v13    # "pendingRequestsJson":Lorg/json/JSONObject;
+    .local v14, "pendingRequestsJson":Lorg/json/JSONObject;
     :try_start_1
     const-string v1, "data"
 
@@ -1148,7 +1135,7 @@
     .line 374
     const/4 v10, 0x0
 
-    .local v10, i:I
+    .local v10, "i":I
     :goto_0
     invoke-virtual {v12}, Lorg/json/JSONArray;->length()I
     :try_end_1
@@ -1161,9 +1148,9 @@
     move-object v13, v14
 
     .line 393
-    .end local v10           #i:I
-    .end local v14           #pendingRequestsJson:Lorg/json/JSONObject;
-    .restart local v13       #pendingRequestsJson:Lorg/json/JSONObject;
+    .end local v10    # "i":I
+    .end local v14    # "pendingRequestsJson":Lorg/json/JSONObject;
+    .restart local v13    # "pendingRequestsJson":Lorg/json/JSONObject;
     :goto_1
     invoke-virtual {v11}, Ljava/io/File;->toString()Ljava/lang/String;
 
@@ -1172,9 +1159,9 @@
     invoke-static {v1}, Lcom/fusepowered/a1/ApplifierImpactUtils;->removeFile(Ljava/lang/String;)V
 
     .line 396
-    .end local v7           #contents:Ljava/lang/String;
-    .end local v12           #pendingRequestsArray:Lorg/json/JSONArray;
-    .end local v13           #pendingRequestsJson:Lorg/json/JSONObject;
+    .end local v7    # "contents":Ljava/lang/String;
+    .end local v12    # "pendingRequestsArray":Lorg/json/JSONArray;
+    .end local v13    # "pendingRequestsJson":Lorg/json/JSONObject;
     :cond_0
     invoke-direct {p0}, Lcom/fusepowered/a1/webapp/ApplifierImpactWebData;->startNextLoader()V
 
@@ -1182,10 +1169,10 @@
     return-void
 
     .line 375
-    .restart local v7       #contents:Ljava/lang/String;
-    .restart local v10       #i:I
-    .restart local v12       #pendingRequestsArray:Lorg/json/JSONArray;
-    .restart local v14       #pendingRequestsJson:Lorg/json/JSONObject;
+    .restart local v7    # "contents":Ljava/lang/String;
+    .restart local v10    # "i":I
+    .restart local v12    # "pendingRequestsArray":Lorg/json/JSONArray;
+    .restart local v14    # "pendingRequestsJson":Lorg/json/JSONObject;
     :cond_1
     :try_start_2
     invoke-virtual {v12, v10}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
@@ -1193,7 +1180,7 @@
     move-result-object v9
 
     .line 377
-    .local v9, failedUrl:Lorg/json/JSONObject;
+    .local v9, "failedUrl":Lorg/json/JSONObject;
     new-instance v0, Lcom/fusepowered/a1/webapp/ApplifierImpactWebData$ApplifierImpactUrlLoaderCreator;
 
     .line 378
@@ -1243,7 +1230,7 @@
     invoke-direct/range {v0 .. v6}, Lcom/fusepowered/a1/webapp/ApplifierImpactWebData$ApplifierImpactUrlLoaderCreator;-><init>(Lcom/fusepowered/a1/webapp/ApplifierImpactWebData;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/fusepowered/a1/webapp/ApplifierImpactWebData$ApplifierImpactRequestType;I)V
 
     .line 384
-    .local v0, ulc:Lcom/fusepowered/a1/webapp/ApplifierImpactWebData$ApplifierImpactUrlLoaderCreator;
+    .local v0, "ulc":Lcom/fusepowered/a1/webapp/ApplifierImpactWebData$ApplifierImpactUrlLoaderCreator;
     sget-object v1, Lcom/fusepowered/a1/properties/ApplifierImpactProperties;->CURRENT_ACTIVITY:Landroid/app/Activity;
 
     if-eqz v1, :cond_2
@@ -1262,18 +1249,18 @@
     goto :goto_0
 
     .line 389
-    .end local v0           #ulc:Lcom/fusepowered/a1/webapp/ApplifierImpactWebData$ApplifierImpactUrlLoaderCreator;
-    .end local v9           #failedUrl:Lorg/json/JSONObject;
-    .end local v10           #i:I
-    .end local v14           #pendingRequestsJson:Lorg/json/JSONObject;
-    .restart local v13       #pendingRequestsJson:Lorg/json/JSONObject;
+    .end local v0    # "ulc":Lcom/fusepowered/a1/webapp/ApplifierImpactWebData$ApplifierImpactUrlLoaderCreator;
+    .end local v9    # "failedUrl":Lorg/json/JSONObject;
+    .end local v10    # "i":I
+    .end local v14    # "pendingRequestsJson":Lorg/json/JSONObject;
+    .restart local v13    # "pendingRequestsJson":Lorg/json/JSONObject;
     :catch_0
     move-exception v1
 
     move-object v8, v1
 
     .line 390
-    .local v8, e:Ljava/lang/Exception;
+    .local v8, "e":Ljava/lang/Exception;
     :goto_2
     const-string v1, "Problems while sending some of the failed urls."
 
@@ -1282,9 +1269,9 @@
     goto :goto_1
 
     .line 389
-    .end local v8           #e:Ljava/lang/Exception;
-    .end local v13           #pendingRequestsJson:Lorg/json/JSONObject;
-    .restart local v14       #pendingRequestsJson:Lorg/json/JSONObject;
+    .end local v8    # "e":Ljava/lang/Exception;
+    .end local v13    # "pendingRequestsJson":Lorg/json/JSONObject;
+    .restart local v14    # "pendingRequestsJson":Lorg/json/JSONObject;
     :catch_1
     move-exception v1
 
@@ -1292,23 +1279,23 @@
 
     move-object v13, v14
 
-    .end local v14           #pendingRequestsJson:Lorg/json/JSONObject;
-    .restart local v13       #pendingRequestsJson:Lorg/json/JSONObject;
+    .end local v14    # "pendingRequestsJson":Lorg/json/JSONObject;
+    .restart local v13    # "pendingRequestsJson":Lorg/json/JSONObject;
     goto :goto_2
 
-    .end local v13           #pendingRequestsJson:Lorg/json/JSONObject;
-    .restart local v14       #pendingRequestsJson:Lorg/json/JSONObject;
+    .end local v13    # "pendingRequestsJson":Lorg/json/JSONObject;
+    .restart local v14    # "pendingRequestsJson":Lorg/json/JSONObject;
     :cond_3
     move-object v13, v14
 
-    .end local v14           #pendingRequestsJson:Lorg/json/JSONObject;
-    .restart local v13       #pendingRequestsJson:Lorg/json/JSONObject;
+    .end local v14    # "pendingRequestsJson":Lorg/json/JSONObject;
+    .restart local v13    # "pendingRequestsJson":Lorg/json/JSONObject;
     goto :goto_1
 .end method
 
 .method private deserializeCampaigns(Lorg/json/JSONArray;)Ljava/util/ArrayList;
     .locals 7
-    .parameter "campaignsArray"
+    .param p1, "campaignsArray"    # Lorg/json/JSONArray;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1335,16 +1322,16 @@
     const/4 v0, 0x0
 
     .line 553
-    .local v0, campaign:Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;
+    .local v0, "campaign":Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;
     new-instance v5, Ljava/util/ArrayList;
 
     invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
 
     .line 555
-    .local v5, retList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;>;"
+    .local v5, "retList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;>;"
     const/4 v3, 0x0
 
-    .local v3, i:I
+    .local v3, "i":I
     :goto_0
     invoke-virtual {p1}, Lorg/json/JSONArray;->length()I
 
@@ -1355,16 +1342,16 @@
     move-object v6, v5
 
     .line 573
-    .end local v0           #campaign:Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;
-    .end local v3           #i:I
-    .end local v5           #retList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;>;"
+    .end local v0    # "campaign":Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;
+    .end local v3    # "i":I
+    .end local v5    # "retList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;>;"
     :goto_1
     return-object v6
 
     .line 557
-    .restart local v0       #campaign:Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;
-    .restart local v3       #i:I
-    .restart local v5       #retList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;>;"
+    .restart local v0    # "campaign":Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;
+    .restart local v3    # "i":I
+    .restart local v5    # "retList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;>;"
     :cond_0
     :try_start_0
     invoke-virtual {p1, v3}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
@@ -1372,7 +1359,7 @@
     move-result-object v4
 
     .line 558
-    .local v4, jsonCampaign:Lorg/json/JSONObject;
+    .local v4, "jsonCampaign":Lorg/json/JSONObject;
     new-instance v1, Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;
 
     invoke-direct {v1, v4}, Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;-><init>(Lorg/json/JSONObject;)V
@@ -1380,8 +1367,8 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 560
-    .end local v0           #campaign:Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;
-    .local v1, campaign:Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;
+    .end local v0    # "campaign":Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;
+    .local v1, "campaign":Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;
     :try_start_1
     invoke-virtual {v1}, Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;->hasValidData()Z
 
@@ -1402,9 +1389,9 @@
     move-object v0, v1
 
     .line 555
-    .end local v1           #campaign:Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;
-    .end local v4           #jsonCampaign:Lorg/json/JSONObject;
-    .restart local v0       #campaign:Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;
+    .end local v1    # "campaign":Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;
+    .end local v4    # "jsonCampaign":Lorg/json/JSONObject;
+    .restart local v0    # "campaign":Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;
     :goto_2
     add-int/lit8 v3, v3, 0x1
 
@@ -1417,7 +1404,7 @@
     move-object v2, v6
 
     .line 566
-    .local v2, e:Ljava/lang/Exception;
+    .local v2, "e":Ljava/lang/Exception;
     :goto_3
     const-string v6, "Problem with the campaign, skipping."
 
@@ -1426,20 +1413,20 @@
     goto :goto_2
 
     .line 573
-    .end local v0           #campaign:Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;
-    .end local v2           #e:Ljava/lang/Exception;
-    .end local v3           #i:I
-    .end local v5           #retList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;>;"
+    .end local v0    # "campaign":Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;
+    .end local v2    # "e":Ljava/lang/Exception;
+    .end local v3    # "i":I
+    .end local v5    # "retList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;>;"
     :cond_1
     const/4 v6, 0x0
 
     goto :goto_1
 
     .line 565
-    .restart local v1       #campaign:Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;
-    .restart local v3       #i:I
-    .restart local v4       #jsonCampaign:Lorg/json/JSONObject;
-    .restart local v5       #retList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;>;"
+    .restart local v1    # "campaign":Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;
+    .restart local v3    # "i":I
+    .restart local v4    # "jsonCampaign":Lorg/json/JSONObject;
+    .restart local v5    # "retList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;>;"
     :catch_1
     move-exception v6
 
@@ -1447,17 +1434,17 @@
 
     move-object v0, v1
 
-    .end local v1           #campaign:Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;
-    .restart local v0       #campaign:Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;
+    .end local v1    # "campaign":Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;
+    .restart local v0    # "campaign":Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;
     goto :goto_3
 
-    .end local v0           #campaign:Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;
-    .restart local v1       #campaign:Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;
+    .end local v0    # "campaign":Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;
+    .restart local v1    # "campaign":Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;
     :cond_2
     move-object v0, v1
 
-    .end local v1           #campaign:Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;
-    .restart local v0       #campaign:Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;
+    .end local v1    # "campaign":Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;
+    .restart local v0    # "campaign":Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;
     goto :goto_2
 .end method
 
@@ -1520,7 +1507,7 @@
 
 .method private urlLoadCompleted(Lcom/fusepowered/a1/webapp/ApplifierImpactWebData$ApplifierImpactUrlLoader;)V
     .locals 2
-    .parameter "loader"
+    .param p1, "loader"    # Lcom/fusepowered/a1/webapp/ApplifierImpactWebData$ApplifierImpactUrlLoader;
 
     .prologue
     .line 310
@@ -1623,7 +1610,7 @@
 
 .method private urlLoadFailed(Lcom/fusepowered/a1/webapp/ApplifierImpactWebData$ApplifierImpactUrlLoader;)V
     .locals 2
-    .parameter "loader"
+    .param p1, "loader"    # Lcom/fusepowered/a1/webapp/ApplifierImpactWebData$ApplifierImpactUrlLoader;
 
     .prologue
     .line 338
@@ -1702,7 +1689,7 @@
 
 .method private writeFailedUrl(Lcom/fusepowered/a1/webapp/ApplifierImpactWebData$ApplifierImpactUrlLoader;)V
     .locals 10
-    .parameter "loader"
+    .param p1, "loader"    # Lcom/fusepowered/a1/webapp/ApplifierImpactWebData$ApplifierImpactUrlLoader;
 
     .prologue
     .line 400
@@ -1748,17 +1735,17 @@
     invoke-direct {v5}, Lorg/json/JSONObject;-><init>()V
 
     .line 409
-    .local v5, failedUrlsJson:Lorg/json/JSONObject;
+    .local v5, "failedUrlsJson":Lorg/json/JSONObject;
     new-instance v4, Lorg/json/JSONArray;
 
     invoke-direct {v4}, Lorg/json/JSONArray;-><init>()V
 
     .line 412
-    .local v4, failedUrlsArray:Lorg/json/JSONArray;
+    .local v4, "failedUrlsArray":Lorg/json/JSONArray;
     const/4 v2, 0x0
 
     .line 413
-    .local v2, failedUrl:Lorg/json/JSONObject;
+    .local v2, "failedUrl":Lorg/json/JSONObject;
     :try_start_0
     iget-object v7, p0, Lcom/fusepowered/a1/webapp/ApplifierImpactWebData;->_failedUrlLoaders:Ljava/util/ArrayList;
 
@@ -1770,8 +1757,8 @@
 
     move-object v3, v2
 
-    .end local v2           #failedUrl:Lorg/json/JSONObject;
-    .local v3, failedUrl:Lorg/json/JSONObject;
+    .end local v2    # "failedUrl":Lorg/json/JSONObject;
+    .local v3, "failedUrl":Lorg/json/JSONObject;
     :goto_1
     :try_start_1
     invoke-interface {v7}, Ljava/util/Iterator;->hasNext()Z
@@ -1788,7 +1775,7 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
     .line 430
-    .end local v3           #failedUrl:Lorg/json/JSONObject;
+    .end local v3    # "failedUrl":Lorg/json/JSONObject;
     :goto_2
     iget-object v7, p0, Lcom/fusepowered/a1/webapp/ApplifierImpactWebData;->_failedUrlLoaders:Ljava/util/ArrayList;
 
@@ -1842,7 +1829,7 @@
     invoke-direct {v6, v7}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
     .line 432
-    .local v6, pendingRequestFile:Ljava/io/File;
+    .local v6, "pendingRequestFile":Ljava/io/File;
     invoke-virtual {v5}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
 
     move-result-object v7
@@ -1852,8 +1839,8 @@
     goto :goto_0
 
     .line 413
-    .end local v6           #pendingRequestFile:Ljava/io/File;
-    .restart local v3       #failedUrl:Lorg/json/JSONObject;
+    .end local v6    # "pendingRequestFile":Ljava/io/File;
+    .restart local v3    # "failedUrl":Lorg/json/JSONObject;
     :cond_4
     :try_start_2
     invoke-interface {v7}, Ljava/util/Iterator;->next()Ljava/lang/Object;
@@ -1863,7 +1850,7 @@
     check-cast v1, Lcom/fusepowered/a1/webapp/ApplifierImpactWebData$ApplifierImpactUrlLoader;
 
     .line 414
-    .local v1, failedLoader:Lcom/fusepowered/a1/webapp/ApplifierImpactWebData$ApplifierImpactUrlLoader;
+    .local v1, "failedLoader":Lcom/fusepowered/a1/webapp/ApplifierImpactWebData$ApplifierImpactUrlLoader;
     new-instance v2, Lorg/json/JSONObject;
 
     invoke-direct {v2}, Lorg/json/JSONObject;-><init>()V
@@ -1871,8 +1858,8 @@
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
 
     .line 415
-    .end local v3           #failedUrl:Lorg/json/JSONObject;
-    .restart local v2       #failedUrl:Lorg/json/JSONObject;
+    .end local v3    # "failedUrl":Lorg/json/JSONObject;
+    .restart local v2    # "failedUrl":Lorg/json/JSONObject;
     :try_start_3
     const-string v8, "url"
 
@@ -1925,21 +1912,21 @@
 
     move-object v3, v2
 
-    .end local v2           #failedUrl:Lorg/json/JSONObject;
-    .restart local v3       #failedUrl:Lorg/json/JSONObject;
+    .end local v2    # "failedUrl":Lorg/json/JSONObject;
+    .restart local v3    # "failedUrl":Lorg/json/JSONObject;
     goto/16 :goto_1
 
     .line 426
-    .end local v1           #failedLoader:Lcom/fusepowered/a1/webapp/ApplifierImpactWebData$ApplifierImpactUrlLoader;
-    .end local v3           #failedUrl:Lorg/json/JSONObject;
-    .restart local v2       #failedUrl:Lorg/json/JSONObject;
+    .end local v1    # "failedLoader":Lcom/fusepowered/a1/webapp/ApplifierImpactWebData$ApplifierImpactUrlLoader;
+    .end local v3    # "failedUrl":Lorg/json/JSONObject;
+    .restart local v2    # "failedUrl":Lorg/json/JSONObject;
     :catch_0
     move-exception v7
 
     move-object v0, v7
 
     .line 427
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     :goto_3
     const-string v7, "Error collecting failed urls"
 
@@ -1948,9 +1935,9 @@
     goto/16 :goto_2
 
     .line 426
-    .end local v0           #e:Ljava/lang/Exception;
-    .end local v2           #failedUrl:Lorg/json/JSONObject;
-    .restart local v3       #failedUrl:Lorg/json/JSONObject;
+    .end local v0    # "e":Ljava/lang/Exception;
+    .end local v2    # "failedUrl":Lorg/json/JSONObject;
+    .restart local v3    # "failedUrl":Lorg/json/JSONObject;
     :catch_1
     move-exception v7
 
@@ -1958,8 +1945,8 @@
 
     move-object v2, v3
 
-    .end local v3           #failedUrl:Lorg/json/JSONObject;
-    .restart local v2       #failedUrl:Lorg/json/JSONObject;
+    .end local v3    # "failedUrl":Lorg/json/JSONObject;
+    .restart local v2    # "failedUrl":Lorg/json/JSONObject;
     goto :goto_3
 .end method
 
@@ -2056,7 +2043,7 @@
     check-cast v0, Lcom/fusepowered/a1/campaign/ApplifierImpactRewardItem;
 
     .line 208
-    .local v0, rewardItem:Lcom/fusepowered/a1/campaign/ApplifierImpactRewardItem;
+    .local v0, "rewardItem":Lcom/fusepowered/a1/campaign/ApplifierImpactRewardItem;
     invoke-virtual {v0}, Lcom/fusepowered/a1/campaign/ApplifierImpactRewardItem;->clearData()V
 
     goto :goto_0
@@ -2064,7 +2051,7 @@
 
 .method public getCampaignById(Ljava/lang/String;)Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;
     .locals 2
-    .parameter "campaignId"
+    .param p1, "campaignId"    # Ljava/lang/String;
 
     .prologue
     .line 107
@@ -2077,7 +2064,7 @@
     .line 108
     const/4 v0, 0x0
 
-    .local v0, i:I
+    .local v0, "i":I
     :goto_0
     iget-object v1, p0, Lcom/fusepowered/a1/webapp/ApplifierImpactWebData;->_campaigns:Ljava/util/ArrayList;
 
@@ -2088,17 +2075,17 @@
     if-lt v0, v1, :cond_1
 
     .line 114
-    .end local v0           #i:I
+    .end local v0    # "i":I
     :cond_0
     const/4 v1, 0x0
 
-    .end local p0
+    .end local p0    # "this":Lcom/fusepowered/a1/webapp/ApplifierImpactWebData;
     :goto_1
     return-object v1
 
     .line 109
-    .restart local v0       #i:I
-    .restart local p0
+    .restart local v0    # "i":I
+    .restart local p0    # "this":Lcom/fusepowered/a1/webapp/ApplifierImpactWebData;
     :cond_1
     iget-object v1, p0, Lcom/fusepowered/a1/webapp/ApplifierImpactWebData;->_campaigns:Ljava/util/ArrayList;
 
@@ -2147,7 +2134,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/fusepowered/a1/webapp/ApplifierImpactWebData;
     check-cast p0, Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;
 
     move-object v1, p0
@@ -2155,7 +2142,7 @@
     goto :goto_1
 
     .line 108
-    .restart local p0
+    .restart local p0    # "this":Lcom/fusepowered/a1/webapp/ApplifierImpactWebData;
     :cond_2
     add-int/lit8 v0, v0, 0x1
 
@@ -2210,7 +2197,7 @@
 
 .method public getRewardItemByKey(Ljava/lang/String;)Lcom/fusepowered/a1/campaign/ApplifierImpactRewardItem;
     .locals 3
-    .parameter "rewardItemKey"
+    .param p1, "rewardItemKey"    # Ljava/lang/String;
 
     .prologue
     .line 269
@@ -2266,7 +2253,7 @@
     check-cast v0, Lcom/fusepowered/a1/campaign/ApplifierImpactRewardItem;
 
     .line 271
-    .local v0, rewardItem:Lcom/fusepowered/a1/campaign/ApplifierImpactRewardItem;
+    .local v0, "rewardItem":Lcom/fusepowered/a1/campaign/ApplifierImpactRewardItem;
     invoke-virtual {v0}, Lcom/fusepowered/a1/campaign/ApplifierImpactRewardItem;->getKey()Ljava/lang/String;
 
     move-result-object v2
@@ -2283,7 +2270,7 @@
     goto :goto_0
 
     .line 279
-    .end local v0           #rewardItem:Lcom/fusepowered/a1/campaign/ApplifierImpactRewardItem;
+    .end local v0    # "rewardItem":Lcom/fusepowered/a1/campaign/ApplifierImpactRewardItem;
     :cond_3
     const/4 v1, 0x0
 
@@ -2371,11 +2358,11 @@
     const/4 v2, 0x0
 
     .line 119
-    .local v2, viewableCampaigns:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;>;"
+    .local v2, "viewableCampaigns":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;>;"
     const/4 v0, 0x0
 
     .line 121
-    .local v0, currentCampaign:Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;
+    .local v0, "currentCampaign":Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;
     iget-object v3, p0, Lcom/fusepowered/a1/webapp/ApplifierImpactWebData;->_campaigns:Ljava/util/ArrayList;
 
     if-eqz v3, :cond_0
@@ -2383,14 +2370,14 @@
     .line 122
     new-instance v2, Ljava/util/ArrayList;
 
-    .end local v2           #viewableCampaigns:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;>;"
+    .end local v2    # "viewableCampaigns":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;>;"
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
     .line 123
-    .restart local v2       #viewableCampaigns:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;>;"
+    .restart local v2    # "viewableCampaigns":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;>;"
     const/4 v1, 0x0
 
-    .local v1, i:I
+    .local v1, "i":I
     :goto_0
     iget-object v3, p0, Lcom/fusepowered/a1/webapp/ApplifierImpactWebData;->_campaigns:Ljava/util/ArrayList;
 
@@ -2401,12 +2388,12 @@
     if-lt v1, v3, :cond_1
 
     .line 130
-    .end local v1           #i:I
+    .end local v1    # "i":I
     :cond_0
     return-object v2
 
     .line 124
-    .restart local v1       #i:I
+    .restart local v1    # "i":I
     :cond_1
     iget-object v3, p0, Lcom/fusepowered/a1/webapp/ApplifierImpactWebData;->_campaigns:Ljava/util/ArrayList;
 
@@ -2414,11 +2401,11 @@
 
     move-result-object v0
 
-    .end local v0           #currentCampaign:Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;
+    .end local v0    # "currentCampaign":Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;
     check-cast v0, Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;
 
     .line 125
-    .restart local v0       #currentCampaign:Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;
+    .restart local v0    # "currentCampaign":Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;
     if-eqz v0, :cond_2
 
     invoke-virtual {v0}, Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;->getCampaignStatus()Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign$ApplifierImpactCampaignStatus;
@@ -2482,7 +2469,7 @@
     move-result-object v8
 
     .line 140
-    .local v8, url:Ljava/lang/String;
+    .local v8, "url":Ljava/lang/String;
     const-string v1, "\\?"
 
     invoke-virtual {v8, v1}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
@@ -2490,7 +2477,7 @@
     move-result-object v7
 
     .line 142
-    .local v7, parts:[Ljava/lang/String;
+    .local v7, "parts":[Ljava/lang/String;
     new-instance v0, Lcom/fusepowered/a1/webapp/ApplifierImpactWebData$ApplifierImpactUrlLoaderCreator;
 
     aget-object v2, v7, v6
@@ -2506,7 +2493,7 @@
     invoke-direct/range {v0 .. v6}, Lcom/fusepowered/a1/webapp/ApplifierImpactWebData$ApplifierImpactUrlLoaderCreator;-><init>(Lcom/fusepowered/a1/webapp/ApplifierImpactWebData;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/fusepowered/a1/webapp/ApplifierImpactWebData$ApplifierImpactRequestType;I)V
 
     .line 143
-    .local v0, ulc:Lcom/fusepowered/a1/webapp/ApplifierImpactWebData$ApplifierImpactUrlLoaderCreator;
+    .local v0, "ulc":Lcom/fusepowered/a1/webapp/ApplifierImpactWebData$ApplifierImpactUrlLoaderCreator;
     sget-object v1, Lcom/fusepowered/a1/properties/ApplifierImpactProperties;->CURRENT_ACTIVITY:Landroid/app/Activity;
 
     if-eqz v1, :cond_1
@@ -2528,8 +2515,8 @@
 
 .method public sendAnalyticsRequest(Ljava/lang/String;Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;)V
     .locals 11
-    .parameter "eventType"
-    .parameter "campaign"
+    .param p1, "eventType"    # Ljava/lang/String;
+    .param p2, "campaign"    # Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;
 
     .prologue
     const/4 v9, 0x3
@@ -2559,7 +2546,7 @@
     move-result-object v2
 
     .line 180
-    .local v2, viewUrl:Ljava/lang/String;
+    .local v2, "viewUrl":Ljava/lang/String;
     const-string v1, "%s=%s"
 
     new-array v4, v8, [Ljava/lang/Object;
@@ -2577,7 +2564,7 @@
     move-result-object v3
 
     .line 181
-    .local v3, analyticsUrl:Ljava/lang/String;
+    .local v3, "analyticsUrl":Ljava/lang/String;
     const-string v1, "%s&%s=%s"
 
     new-array v1, v9, [Ljava/lang/Object;
@@ -2692,7 +2679,7 @@
     invoke-direct/range {v0 .. v6}, Lcom/fusepowered/a1/webapp/ApplifierImpactWebData$ApplifierImpactUrlLoaderCreator;-><init>(Lcom/fusepowered/a1/webapp/ApplifierImpactWebData;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/fusepowered/a1/webapp/ApplifierImpactWebData$ApplifierImpactRequestType;I)V
 
     .line 190
-    .local v0, ulc:Lcom/fusepowered/a1/webapp/ApplifierImpactWebData$ApplifierImpactUrlLoaderCreator;
+    .local v0, "ulc":Lcom/fusepowered/a1/webapp/ApplifierImpactWebData$ApplifierImpactUrlLoaderCreator;
     sget-object v1, Lcom/fusepowered/a1/properties/ApplifierImpactProperties;->CURRENT_ACTIVITY:Landroid/app/Activity;
 
     if-eqz v1, :cond_1
@@ -2703,17 +2690,17 @@
     invoke-virtual {v1, v0}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
 
     .line 193
-    .end local v0           #ulc:Lcom/fusepowered/a1/webapp/ApplifierImpactWebData$ApplifierImpactUrlLoaderCreator;
-    .end local v2           #viewUrl:Ljava/lang/String;
-    .end local v3           #analyticsUrl:Ljava/lang/String;
+    .end local v0    # "ulc":Lcom/fusepowered/a1/webapp/ApplifierImpactWebData$ApplifierImpactUrlLoaderCreator;
+    .end local v2    # "viewUrl":Ljava/lang/String;
+    .end local v3    # "analyticsUrl":Ljava/lang/String;
     :cond_1
     return-void
 .end method
 
 .method public sendCampaignViewProgress(Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;Lcom/fusepowered/a1/webapp/ApplifierImpactWebData$ApplifierVideoPosition;)Z
     .locals 12
-    .parameter "campaign"
-    .parameter "position"
+    .param p1, "campaign"    # Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;
+    .param p2, "position"    # Lcom/fusepowered/a1/webapp/ApplifierImpactWebData$ApplifierVideoPosition;
 
     .prologue
     const/4 v11, 0x3
@@ -2728,20 +2715,20 @@
     const/4 v7, 0x0
 
     .line 153
-    .local v7, progressSent:Z
+    .local v7, "progressSent":Z
     if-nez p1, :cond_0
 
     move v8, v7
 
     .line 174
-    .end local v7           #progressSent:Z
-    .local v8, progressSent:I
+    .end local v7    # "progressSent":Z
+    .local v8, "progressSent":I
     :goto_0
     return v8
 
     .line 155
-    .end local v8           #progressSent:I
-    .restart local v7       #progressSent:Z
+    .end local v8    # "progressSent":I
+    .restart local v7    # "progressSent":Z
     :cond_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -2800,7 +2787,7 @@
     move-result-object v2
 
     .line 159
-    .local v2, viewUrl:Ljava/lang/String;
+    .local v2, "viewUrl":Ljava/lang/String;
     const-string v1, "%s%s/video/%s/%s"
 
     const/4 v4, 0x4
@@ -2864,7 +2851,7 @@
     move-result-object v3
 
     .line 164
-    .local v3, queryParams:Ljava/lang/String;
+    .local v3, "queryParams":Ljava/lang/String;
     sget-object v1, Lcom/fusepowered/a1/properties/ApplifierImpactProperties;->GAMER_SID:Ljava/lang/String;
 
     if-eqz v1, :cond_1
@@ -2901,7 +2888,7 @@
     invoke-direct/range {v0 .. v6}, Lcom/fusepowered/a1/webapp/ApplifierImpactWebData$ApplifierImpactUrlLoaderCreator;-><init>(Lcom/fusepowered/a1/webapp/ApplifierImpactWebData;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/fusepowered/a1/webapp/ApplifierImpactWebData$ApplifierImpactRequestType;I)V
 
     .line 168
-    .local v0, ulc:Lcom/fusepowered/a1/webapp/ApplifierImpactWebData$ApplifierImpactUrlLoaderCreator;
+    .local v0, "ulc":Lcom/fusepowered/a1/webapp/ApplifierImpactWebData$ApplifierImpactUrlLoaderCreator;
     sget-object v1, Lcom/fusepowered/a1/properties/ApplifierImpactProperties;->CURRENT_ACTIVITY:Landroid/app/Activity;
 
     if-eqz v1, :cond_2
@@ -2915,20 +2902,20 @@
     :cond_2
     const/4 v7, 0x1
 
-    .end local v0           #ulc:Lcom/fusepowered/a1/webapp/ApplifierImpactWebData$ApplifierImpactUrlLoaderCreator;
-    .end local v2           #viewUrl:Ljava/lang/String;
-    .end local v3           #queryParams:Ljava/lang/String;
+    .end local v0    # "ulc":Lcom/fusepowered/a1/webapp/ApplifierImpactWebData$ApplifierImpactUrlLoaderCreator;
+    .end local v2    # "viewUrl":Ljava/lang/String;
+    .end local v3    # "queryParams":Ljava/lang/String;
     :cond_3
     move v8, v7
 
     .line 174
-    .restart local v8       #progressSent:I
+    .restart local v8    # "progressSent":I
     goto/16 :goto_0
 .end method
 
 .method public setCurrentRewardItem(Lcom/fusepowered/a1/campaign/ApplifierImpactRewardItem;)V
     .locals 2
-    .parameter "rewardItem"
+    .param p1, "rewardItem"    # Lcom/fusepowered/a1/campaign/ApplifierImpactRewardItem;
 
     .prologue
     .line 283
@@ -2986,7 +2973,7 @@
 
 .method public setWebDataListener(Lcom/fusepowered/a1/webapp/IApplifierImpactWebDataListener;)V
     .locals 0
-    .parameter "listener"
+    .param p1, "listener"    # Lcom/fusepowered/a1/webapp/IApplifierImpactWebDataListener;
 
     .prologue
     .line 99

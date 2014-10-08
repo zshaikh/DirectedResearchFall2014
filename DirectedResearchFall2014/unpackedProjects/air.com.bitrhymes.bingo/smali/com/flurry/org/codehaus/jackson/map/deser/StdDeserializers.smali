@@ -53,7 +53,7 @@
     invoke-direct {v2}, Lcom/flurry/org/codehaus/jackson/map/deser/std/StringDeserializer;-><init>()V
 
     .line 38
-    .local v2, strDeser:Lcom/flurry/org/codehaus/jackson/map/deser/std/StdDeserializer;,"Lcom/flurry/org/codehaus/jackson/map/deser/std/StdDeserializer<*>;"
+    .local v2, "strDeser":Lcom/flurry/org/codehaus/jackson/map/deser/std/StdDeserializer;, "Lcom/flurry/org/codehaus/jackson/map/deser/std/StdDeserializer<*>;"
     const-class v3, Ljava/lang/String;
 
     invoke-direct {p0, v2, v3}, Lcom/flurry/org/codehaus/jackson/map/deser/StdDeserializers;->add(Lcom/flurry/org/codehaus/jackson/map/deser/std/StdDeserializer;Ljava/lang/Class;)V
@@ -319,7 +319,7 @@
 
     move-result-object v1
 
-    .local v1, i$:Ljava/util/Iterator;
+    .local v1, "i$":Ljava/util/Iterator;
     :goto_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
@@ -334,13 +334,13 @@
     check-cast v0, Lcom/flurry/org/codehaus/jackson/map/deser/std/FromStringDeserializer;
 
     .line 81
-    .local v0, deser:Lcom/flurry/org/codehaus/jackson/map/deser/std/StdDeserializer;,"Lcom/flurry/org/codehaus/jackson/map/deser/std/StdDeserializer<*>;"
+    .local v0, "deser":Lcom/flurry/org/codehaus/jackson/map/deser/std/StdDeserializer;, "Lcom/flurry/org/codehaus/jackson/map/deser/std/StdDeserializer<*>;"
     invoke-direct {p0, v0}, Lcom/flurry/org/codehaus/jackson/map/deser/StdDeserializers;->add(Lcom/flurry/org/codehaus/jackson/map/deser/std/StdDeserializer;)V
 
     goto :goto_0
 
     .line 87
-    .end local v0           #deser:Lcom/flurry/org/codehaus/jackson/map/deser/std/StdDeserializer;,"Lcom/flurry/org/codehaus/jackson/map/deser/std/StdDeserializer<*>;"
+    .end local v0    # "deser":Lcom/flurry/org/codehaus/jackson/map/deser/std/StdDeserializer;, "Lcom/flurry/org/codehaus/jackson/map/deser/std/StdDeserializer<*>;"
     :cond_0
     new-instance v3, Lcom/flurry/org/codehaus/jackson/map/deser/std/StdDeserializer$StackTraceElementDeserializer;
 
@@ -375,7 +375,6 @@
 
 .method private add(Lcom/flurry/org/codehaus/jackson/map/deser/std/StdDeserializer;)V
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -386,7 +385,7 @@
 
     .prologue
     .line 108
-    .local p1, stdDeser:Lcom/flurry/org/codehaus/jackson/map/deser/std/StdDeserializer;,"Lcom/flurry/org/codehaus/jackson/map/deser/std/StdDeserializer<*>;"
+    .local p1, "stdDeser":Lcom/flurry/org/codehaus/jackson/map/deser/std/StdDeserializer;, "Lcom/flurry/org/codehaus/jackson/map/deser/std/StdDeserializer<*>;"
     invoke-virtual {p1}, Lcom/flurry/org/codehaus/jackson/map/deser/std/StdDeserializer;->getValueClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -399,8 +398,6 @@
 
 .method private add(Lcom/flurry/org/codehaus/jackson/map/deser/std/StdDeserializer;Ljava/lang/Class;)V
     .locals 3
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -413,12 +410,12 @@
 
     .prologue
     .line 115
-    .local p1, stdDeser:Lcom/flurry/org/codehaus/jackson/map/deser/std/StdDeserializer;,"Lcom/flurry/org/codehaus/jackson/map/deser/std/StdDeserializer<*>;"
-    .local p2, valueClass:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p1, "stdDeser":Lcom/flurry/org/codehaus/jackson/map/deser/std/StdDeserializer;, "Lcom/flurry/org/codehaus/jackson/map/deser/std/StdDeserializer<*>;"
+    .local p2, "valueClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     move-object v0, p1
 
     .line 117
-    .local v0, deser:Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer<Ljava/lang/Object;>;"
+    .local v0, "deser":Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer<Ljava/lang/Object;>;"
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/map/deser/StdDeserializers;->_deserializers:Ljava/util/HashMap;
 
     new-instance v2, Lcom/flurry/org/codehaus/jackson/map/type/ClassKey;

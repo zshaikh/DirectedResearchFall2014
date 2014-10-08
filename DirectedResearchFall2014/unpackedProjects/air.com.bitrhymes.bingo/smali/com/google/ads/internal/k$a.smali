@@ -28,9 +28,6 @@
 # direct methods
 .method public constructor <init>(Landroid/app/Activity;Lcom/google/ads/internal/d;Landroid/gesture/GestureStore;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 67
@@ -51,7 +48,6 @@
 
 .method static synthetic a(Lcom/google/ads/internal/k$a;)Lcom/google/ads/internal/d;
     .locals 1
-    .parameter
 
     .prologue
     .line 62
@@ -62,7 +58,6 @@
 
 .method static synthetic b(Lcom/google/ads/internal/k$a;)Landroid/app/Activity;
     .locals 1
-    .parameter
 
     .prologue
     .line 62
@@ -75,8 +70,8 @@
 # virtual methods
 .method public onGesturePerformed(Landroid/gesture/GestureOverlayView;Landroid/gesture/Gesture;)V
     .locals 7
-    .parameter "overlay"
-    .parameter "gesture"
+    .param p1, "overlay"    # Landroid/gesture/GestureOverlayView;
+    .param p2, "gesture"    # Landroid/gesture/Gesture;
 
     .prologue
     const/4 v6, 0x0
@@ -171,7 +166,7 @@
 
     iget-wide v2, v0, Landroid/gesture/Prediction;->score:D
 
-    const-wide/high16 v4, 0x4000
+    const-wide/high16 v4, 0x4000000000000000L
 
     cmpl-double v0, v2, v4
 

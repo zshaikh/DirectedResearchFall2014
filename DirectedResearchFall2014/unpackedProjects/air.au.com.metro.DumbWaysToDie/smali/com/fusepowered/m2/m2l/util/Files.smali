@@ -16,7 +16,7 @@
 
 .method public static createDirectory(Ljava/lang/String;)Ljava/io/File;
     .locals 3
-    .parameter "absolutePath"
+    .param p0, "absolutePath"    # Ljava/lang/String;
 
     .prologue
     const/4 v2, 0x0
@@ -37,7 +37,7 @@
     invoke-direct {v0, p0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
     .line 13
-    .local v0, directory:Ljava/io/File;
+    .local v0, "directory":Ljava/io/File;
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result v1
@@ -79,7 +79,7 @@
 
 .method public static intLength(Ljava/io/File;)I
     .locals 4
-    .parameter "file"
+    .param p0, "file"    # Ljava/io/File;
 
     .prologue
     .line 22
@@ -99,7 +99,7 @@
     move-result-wide v0
 
     .line 28
-    .local v0, length:J
+    .local v0, "length":J
     const-wide/32 v2, 0x7fffffff
 
     cmp-long v2, v0, v2

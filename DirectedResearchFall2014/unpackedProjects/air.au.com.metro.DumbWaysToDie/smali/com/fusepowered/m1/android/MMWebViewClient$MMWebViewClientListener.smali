@@ -29,7 +29,7 @@
 # virtual methods
 .method onPageFinished(Ljava/lang/String;)V
     .locals 0
-    .parameter "url"
+    .param p1, "url"    # Ljava/lang/String;
 
     .prologue
     .line 91
@@ -38,7 +38,7 @@
 
 .method onPageStarted(Ljava/lang/String;)V
     .locals 0
-    .parameter "url"
+    .param p1, "url"    # Ljava/lang/String;
 
     .prologue
     .line 95

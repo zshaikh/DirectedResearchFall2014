@@ -4,9 +4,9 @@
 
 
 # static fields
-.field private static final HEX_BYTES:[B = null
+.field private static final HEX_BYTES:[B
 
-.field private static final HEX_CHARS:[C = null
+.field private static final HEX_CHARS:[C
 
 .field private static final INT_0:I = 0x30
 
@@ -118,10 +118,10 @@
 
 .method private _appendByteEscape(IILcom/flurry/org/codehaus/jackson/util/ByteArrayBuilder;I)I
     .locals 3
-    .parameter "ch"
-    .parameter "escCode"
-    .parameter "byteBuilder"
-    .parameter "ptr"
+    .param p1, "ch"    # I
+    .param p2, "escCode"    # I
+    .param p3, "byteBuilder"    # Lcom/flurry/org/codehaus/jackson/util/ByteArrayBuilder;
+    .param p4, "ptr"    # I
 
     .prologue
     const/16 v2, 0x30
@@ -151,7 +151,7 @@
     shr-int/lit8 v0, p1, 0x8
 
     .line 366
-    .local v0, hi:I
+    .local v0, "hi":I
     sget-object v1, Lcom/flurry/org/codehaus/jackson/io/JsonStringEncoder;->HEX_BYTES:[B
 
     shr-int/lit8 v2, v0, 0x4
@@ -173,7 +173,7 @@
     and-int/lit16 p1, p1, 0xff
 
     .line 373
-    .end local v0           #hi:I
+    .end local v0    # "hi":I
     :goto_0
     sget-object v1, Lcom/flurry/org/codehaus/jackson/io/JsonStringEncoder;->HEX_BYTES:[B
 
@@ -220,8 +220,8 @@
 
 .method private _appendSingleEscape(I[C)I
     .locals 4
-    .parameter "escCode"
-    .parameter "quoteBuffer"
+    .param p1, "escCode"    # I
+    .param p2, "quoteBuffer"    # [C
 
     .prologue
     const/4 v2, 0x1
@@ -235,7 +235,7 @@
     neg-int v0, v1
 
     .line 348
-    .local v0, value:I
+    .local v0, "value":I
     const/16 v1, 0x75
 
     aput-char v1, p2, v2
@@ -266,7 +266,7 @@
     const/4 v1, 0x6
 
     .line 355
-    .end local v0           #value:I
+    .end local v0    # "value":I
     :goto_0
     return v1
 
@@ -284,8 +284,8 @@
 
 .method private _convertSurrogate(II)I
     .locals 3
-    .parameter "firstPart"
-    .parameter "secondPart"
+    .param p1, "firstPart"    # I
+    .param p2, "secondPart"    # I
 
     .prologue
     const v2, 0xdc00
@@ -349,7 +349,7 @@
 
     .line 390
     :cond_1
-    const/high16 v0, 0x1
+    const/high16 v0, 0x10000
 
     const v1, 0xd800
 
@@ -368,7 +368,7 @@
 
 .method private _throwIllegalSurrogate(I)V
     .locals 5
-    .parameter "code"
+    .param p1, "code"    # I
 
     .prologue
     const-string v4, "Illegal character point (0x"
@@ -548,7 +548,7 @@
     check-cast v1, Ljava/lang/ref/SoftReference;
 
     .line 81
-    .local v1, ref:Ljava/lang/ref/SoftReference;,"Ljava/lang/ref/SoftReference<Lcom/flurry/org/codehaus/jackson/io/JsonStringEncoder;>;"
+    .local v1, "ref":Ljava/lang/ref/SoftReference;, "Ljava/lang/ref/SoftReference<Lcom/flurry/org/codehaus/jackson/io/JsonStringEncoder;>;"
     if-nez v1, :cond_1
 
     const/4 v2, 0x0
@@ -556,18 +556,18 @@
     move-object v0, v2
 
     .line 83
-    .local v0, enc:Lcom/flurry/org/codehaus/jackson/io/JsonStringEncoder;
+    .local v0, "enc":Lcom/flurry/org/codehaus/jackson/io/JsonStringEncoder;
     :goto_0
     if-nez v0, :cond_0
 
     .line 84
     new-instance v0, Lcom/flurry/org/codehaus/jackson/io/JsonStringEncoder;
 
-    .end local v0           #enc:Lcom/flurry/org/codehaus/jackson/io/JsonStringEncoder;
+    .end local v0    # "enc":Lcom/flurry/org/codehaus/jackson/io/JsonStringEncoder;
     invoke-direct {v0}, Lcom/flurry/org/codehaus/jackson/io/JsonStringEncoder;-><init>()V
 
     .line 85
-    .restart local v0       #enc:Lcom/flurry/org/codehaus/jackson/io/JsonStringEncoder;
+    .restart local v0    # "enc":Lcom/flurry/org/codehaus/jackson/io/JsonStringEncoder;
     sget-object v2, Lcom/flurry/org/codehaus/jackson/io/JsonStringEncoder;->_threadEncoder:Ljava/lang/ThreadLocal;
 
     new-instance v3, Ljava/lang/ref/SoftReference;
@@ -581,7 +581,7 @@
     return-object v0
 
     .line 81
-    .end local v0           #enc:Lcom/flurry/org/codehaus/jackson/io/JsonStringEncoder;
+    .end local v0    # "enc":Lcom/flurry/org/codehaus/jackson/io/JsonStringEncoder;
     :cond_1
     invoke-virtual {v1}, Ljava/lang/ref/SoftReference;->get()Ljava/lang/Object;
 
@@ -596,25 +596,25 @@
 # virtual methods
 .method public encodeAsUTF8(Ljava/lang/String;)[B
     .locals 10
-    .parameter "text"
+    .param p1, "text"    # Ljava/lang/String;
 
     .prologue
     .line 254
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/io/JsonStringEncoder;->_byteBuilder:Lcom/flurry/org/codehaus/jackson/util/ByteArrayBuilder;
 
     .line 255
-    .local v0, byteBuilder:Lcom/flurry/org/codehaus/jackson/util/ByteArrayBuilder;
+    .local v0, "byteBuilder":Lcom/flurry/org/codehaus/jackson/util/ByteArrayBuilder;
     if-nez v0, :cond_0
 
     .line 257
     new-instance v0, Lcom/flurry/org/codehaus/jackson/util/ByteArrayBuilder;
 
-    .end local v0           #byteBuilder:Lcom/flurry/org/codehaus/jackson/util/ByteArrayBuilder;
+    .end local v0    # "byteBuilder":Lcom/flurry/org/codehaus/jackson/util/ByteArrayBuilder;
     const/4 v9, 0x0
 
     invoke-direct {v0, v9}, Lcom/flurry/org/codehaus/jackson/util/ByteArrayBuilder;-><init>(Lcom/flurry/org/codehaus/jackson/util/BufferRecycler;)V
 
-    .restart local v0       #byteBuilder:Lcom/flurry/org/codehaus/jackson/util/ByteArrayBuilder;
+    .restart local v0    # "byteBuilder":Lcom/flurry/org/codehaus/jackson/util/ByteArrayBuilder;
     iput-object v0, p0, Lcom/flurry/org/codehaus/jackson/io/JsonStringEncoder;->_byteBuilder:Lcom/flurry/org/codehaus/jackson/util/ByteArrayBuilder;
 
     .line 259
@@ -622,49 +622,49 @@
     const/4 v3, 0x0
 
     .line 260
-    .local v3, inputPtr:I
+    .local v3, "inputPtr":I
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v2
 
     .line 261
-    .local v2, inputEnd:I
+    .local v2, "inputEnd":I
     const/4 v7, 0x0
 
     .line 262
-    .local v7, outputPtr:I
+    .local v7, "outputPtr":I
     invoke-virtual {v0}, Lcom/flurry/org/codehaus/jackson/util/ByteArrayBuilder;->resetAndGetFirstSegment()[B
 
     move-result-object v5
 
     .line 263
-    .local v5, outputBuffer:[B
+    .local v5, "outputBuffer":[B
     array-length v6, v5
 
-    .local v6, outputEnd:I
+    .local v6, "outputEnd":I
     move v4, v3
 
     .line 266
-    .end local v3           #inputPtr:I
-    .local v4, inputPtr:I
+    .end local v3    # "inputPtr":I
+    .local v4, "inputPtr":I
     :goto_0
     if-ge v4, v2, :cond_f
 
     .line 267
     add-int/lit8 v3, v4, 0x1
 
-    .end local v4           #inputPtr:I
-    .restart local v3       #inputPtr:I
+    .end local v4    # "inputPtr":I
+    .restart local v3    # "inputPtr":I
     invoke-virtual {p1, v4}, Ljava/lang/String;->charAt(I)C
 
     move-result v1
 
-    .local v1, c:I
+    .local v1, "c":I
     move v4, v3
 
     .line 270
-    .end local v3           #inputPtr:I
-    .restart local v4       #inputPtr:I
+    .end local v3    # "inputPtr":I
+    .restart local v4    # "inputPtr":I
     :goto_1
     const/16 v9, 0x7f
 
@@ -688,8 +688,8 @@
     :cond_1
     add-int/lit8 v8, v7, 0x1
 
-    .end local v7           #outputPtr:I
-    .local v8, outputPtr:I
+    .end local v7    # "outputPtr":I
+    .local v8, "outputPtr":I
     int-to-byte v9, v1
 
     aput-byte v9, v5, v7
@@ -699,14 +699,14 @@
 
     move v7, v8
 
-    .end local v8           #outputPtr:I
-    .restart local v7       #outputPtr:I
+    .end local v8    # "outputPtr":I
+    .restart local v7    # "outputPtr":I
     move v3, v4
 
     .line 335
-    .end local v1           #c:I
-    .end local v4           #inputPtr:I
-    .restart local v3       #inputPtr:I
+    .end local v1    # "c":I
+    .end local v4    # "inputPtr":I
+    .restart local v3    # "inputPtr":I
     :goto_2
     iget-object v9, p0, Lcom/flurry/org/codehaus/jackson/io/JsonStringEncoder;->_byteBuilder:Lcom/flurry/org/codehaus/jackson/util/ByteArrayBuilder;
 
@@ -717,28 +717,28 @@
     return-object v9
 
     .line 280
-    .end local v3           #inputPtr:I
-    .end local v7           #outputPtr:I
-    .restart local v1       #c:I
-    .restart local v4       #inputPtr:I
-    .restart local v8       #outputPtr:I
+    .end local v3    # "inputPtr":I
+    .end local v7    # "outputPtr":I
+    .restart local v1    # "c":I
+    .restart local v4    # "inputPtr":I
+    .restart local v8    # "outputPtr":I
     :cond_2
     add-int/lit8 v3, v4, 0x1
 
-    .end local v4           #inputPtr:I
-    .restart local v3       #inputPtr:I
+    .end local v4    # "inputPtr":I
+    .restart local v3    # "inputPtr":I
     invoke-virtual {p1, v4}, Ljava/lang/String;->charAt(I)C
 
     move-result v1
 
     move v7, v8
 
-    .end local v8           #outputPtr:I
-    .restart local v7       #outputPtr:I
+    .end local v8    # "outputPtr":I
+    .restart local v7    # "outputPtr":I
     move v4, v3
 
-    .end local v3           #inputPtr:I
-    .restart local v4       #inputPtr:I
+    .end local v3    # "inputPtr":I
+    .restart local v4    # "inputPtr":I
     goto :goto_1
 
     .line 284
@@ -759,8 +759,8 @@
     move v8, v7
 
     .line 289
-    .end local v7           #outputPtr:I
-    .restart local v8       #outputPtr:I
+    .end local v7    # "outputPtr":I
+    .restart local v8    # "outputPtr":I
     :goto_3
     const/16 v9, 0x800
 
@@ -769,8 +769,8 @@
     .line 290
     add-int/lit8 v7, v8, 0x1
 
-    .end local v8           #outputPtr:I
-    .restart local v7       #outputPtr:I
+    .end local v8    # "outputPtr":I
+    .restart local v7    # "outputPtr":I
     shr-int/lit8 v9, v1, 0x6
 
     or-int/lit16 v9, v9, 0xc0
@@ -782,8 +782,8 @@
     move v3, v4
 
     .line 328
-    .end local v4           #inputPtr:I
-    .restart local v3       #inputPtr:I
+    .end local v4    # "inputPtr":I
+    .restart local v3    # "inputPtr":I
     :goto_4
     if-lt v7, v6, :cond_4
 
@@ -802,8 +802,8 @@
     :cond_4
     add-int/lit8 v8, v7, 0x1
 
-    .end local v7           #outputPtr:I
-    .restart local v8       #outputPtr:I
+    .end local v7    # "outputPtr":I
+    .restart local v8    # "outputPtr":I
     and-int/lit8 v9, v1, 0x3f
 
     or-int/lit16 v9, v9, 0x80
@@ -814,18 +814,18 @@
 
     move v7, v8
 
-    .end local v8           #outputPtr:I
-    .restart local v7       #outputPtr:I
+    .end local v8    # "outputPtr":I
+    .restart local v7    # "outputPtr":I
     move v4, v3
 
     .line 334
-    .end local v3           #inputPtr:I
-    .restart local v4       #inputPtr:I
+    .end local v3    # "inputPtr":I
+    .restart local v4    # "inputPtr":I
     goto :goto_0
 
     .line 293
-    .end local v7           #outputPtr:I
-    .restart local v8       #outputPtr:I
+    .end local v7    # "outputPtr":I
+    .restart local v8    # "outputPtr":I
     :cond_5
     const v9, 0xd800
 
@@ -839,8 +839,8 @@
     :cond_6
     add-int/lit8 v7, v8, 0x1
 
-    .end local v8           #outputPtr:I
-    .restart local v7       #outputPtr:I
+    .end local v8    # "outputPtr":I
+    .restart local v7    # "outputPtr":I
     shr-int/lit8 v9, v1, 0xc
 
     or-int/lit16 v9, v9, 0xe0
@@ -867,8 +867,8 @@
     :cond_7
     add-int/lit8 v8, v7, 0x1
 
-    .end local v7           #outputPtr:I
-    .restart local v8       #outputPtr:I
+    .end local v7    # "outputPtr":I
+    .restart local v8    # "outputPtr":I
     shr-int/lit8 v9, v1, 0x6
 
     and-int/lit8 v9, v9, 0x3f
@@ -881,19 +881,19 @@
 
     move v7, v8
 
-    .end local v8           #outputPtr:I
-    .restart local v7       #outputPtr:I
+    .end local v8    # "outputPtr":I
+    .restart local v7    # "outputPtr":I
     move v3, v4
 
-    .end local v4           #inputPtr:I
-    .restart local v3       #inputPtr:I
+    .end local v4    # "inputPtr":I
+    .restart local v3    # "inputPtr":I
     goto :goto_4
 
     .line 302
-    .end local v3           #inputPtr:I
-    .end local v7           #outputPtr:I
-    .restart local v4       #inputPtr:I
-    .restart local v8       #outputPtr:I
+    .end local v3    # "inputPtr":I
+    .end local v7    # "outputPtr":I
+    .restart local v4    # "inputPtr":I
+    .restart local v8    # "outputPtr":I
     :cond_8
     const v9, 0xdbff
 
@@ -913,8 +913,8 @@
     :cond_a
     add-int/lit8 v3, v4, 0x1
 
-    .end local v4           #inputPtr:I
-    .restart local v3       #inputPtr:I
+    .end local v4    # "inputPtr":I
+    .restart local v3    # "inputPtr":I
     invoke-virtual {p1, v4}, Ljava/lang/String;->charAt(I)C
 
     move-result v9
@@ -935,8 +935,8 @@
     :cond_b
     add-int/lit8 v7, v8, 0x1
 
-    .end local v8           #outputPtr:I
-    .restart local v7       #outputPtr:I
+    .end local v8    # "outputPtr":I
+    .restart local v7    # "outputPtr":I
     shr-int/lit8 v9, v1, 0x12
 
     or-int/lit16 v9, v9, 0xf0
@@ -963,8 +963,8 @@
     :cond_c
     add-int/lit8 v8, v7, 0x1
 
-    .end local v7           #outputPtr:I
-    .restart local v8       #outputPtr:I
+    .end local v7    # "outputPtr":I
+    .restart local v8    # "outputPtr":I
     shr-int/lit8 v9, v1, 0xc
 
     and-int/lit8 v9, v9, 0x3f
@@ -990,13 +990,13 @@
     const/4 v7, 0x0
 
     .line 325
-    .end local v8           #outputPtr:I
-    .restart local v7       #outputPtr:I
+    .end local v8    # "outputPtr":I
+    .restart local v7    # "outputPtr":I
     :goto_5
     add-int/lit8 v8, v7, 0x1
 
-    .end local v7           #outputPtr:I
-    .restart local v8       #outputPtr:I
+    .end local v7    # "outputPtr":I
+    .restart local v8    # "outputPtr":I
     shr-int/lit8 v9, v1, 0x6
 
     and-int/lit8 v9, v9, 0x3f
@@ -1009,42 +1009,42 @@
 
     move v7, v8
 
-    .end local v8           #outputPtr:I
-    .restart local v7       #outputPtr:I
+    .end local v8    # "outputPtr":I
+    .restart local v7    # "outputPtr":I
     goto/16 :goto_4
 
-    .end local v7           #outputPtr:I
-    .restart local v8       #outputPtr:I
+    .end local v7    # "outputPtr":I
+    .restart local v8    # "outputPtr":I
     :cond_d
     move v7, v8
 
-    .end local v8           #outputPtr:I
-    .restart local v7       #outputPtr:I
+    .end local v8    # "outputPtr":I
+    .restart local v7    # "outputPtr":I
     goto :goto_5
 
-    .end local v3           #inputPtr:I
-    .restart local v4       #inputPtr:I
+    .end local v3    # "inputPtr":I
+    .restart local v4    # "inputPtr":I
     :cond_e
     move v8, v7
 
-    .end local v7           #outputPtr:I
-    .restart local v8       #outputPtr:I
+    .end local v7    # "outputPtr":I
+    .restart local v8    # "outputPtr":I
     goto/16 :goto_3
 
-    .end local v1           #c:I
-    .end local v8           #outputPtr:I
-    .restart local v7       #outputPtr:I
+    .end local v1    # "c":I
+    .end local v8    # "outputPtr":I
+    .restart local v7    # "outputPtr":I
     :cond_f
     move v3, v4
 
-    .end local v4           #inputPtr:I
-    .restart local v3       #inputPtr:I
+    .end local v4    # "inputPtr":I
+    .restart local v3    # "inputPtr":I
     goto/16 :goto_2
 .end method
 
 .method public quoteAsString(Ljava/lang/String;)[C
     .locals 21
-    .parameter "input"
+    .param p1, "input"    # Ljava/lang/String;
 
     .prologue
     .line 102
@@ -1055,18 +1055,18 @@
     move-object/from16 v18, v0
 
     .line 103
-    .local v18, textBuffer:Lcom/flurry/org/codehaus/jackson/util/TextBuffer;
+    .local v18, "textBuffer":Lcom/flurry/org/codehaus/jackson/util/TextBuffer;
     if-nez v18, :cond_0
 
     .line 105
     new-instance v18, Lcom/flurry/org/codehaus/jackson/util/TextBuffer;
 
-    .end local v18           #textBuffer:Lcom/flurry/org/codehaus/jackson/util/TextBuffer;
+    .end local v18    # "textBuffer":Lcom/flurry/org/codehaus/jackson/util/TextBuffer;
     const/16 v19, 0x0
 
     invoke-direct/range {v18 .. v19}, Lcom/flurry/org/codehaus/jackson/util/TextBuffer;-><init>(Lcom/flurry/org/codehaus/jackson/util/BufferRecycler;)V
 
-    .restart local v18       #textBuffer:Lcom/flurry/org/codehaus/jackson/util/TextBuffer;
+    .restart local v18    # "textBuffer":Lcom/flurry/org/codehaus/jackson/util/TextBuffer;
     move-object/from16 v0, v18
 
     move-object/from16 v1, p0
@@ -1080,31 +1080,31 @@
     move-result-object v16
 
     .line 108
-    .local v16, outputBuffer:[C
+    .local v16, "outputBuffer":[C
     invoke-static {}, Lcom/flurry/org/codehaus/jackson/util/CharTypes;->get7BitOutputEscapes()[I
 
     move-result-object v8
 
     .line 109
-    .local v8, escCodes:[I
+    .local v8, "escCodes":[I
     array-length v7, v8
 
     .line 110
-    .local v7, escCodeCount:I
+    .local v7, "escCodeCount":I
     const/4 v10, 0x0
 
     .line 111
-    .local v10, inPtr:I
+    .local v10, "inPtr":I
     invoke-virtual/range {p1 .. p1}, Ljava/lang/String;->length()I
 
     move-result v12
 
     .line 112
-    .local v12, inputLen:I
+    .local v12, "inputLen":I
     const/4 v14, 0x0
 
     .line 115
-    .local v14, outPtr:I
+    .local v14, "outPtr":I
     :goto_0
     if-ge v10, v12, :cond_4
 
@@ -1119,7 +1119,7 @@
     move-result v5
 
     .line 119
-    .local v5, c:C
+    .local v5, "c":C
     if-ge v5, v7, :cond_2
 
     aget v19, v8, v5
@@ -1129,8 +1129,8 @@
     .line 132
     add-int/lit8 v11, v10, 0x1
 
-    .end local v10           #inPtr:I
-    .local v11, inPtr:I
+    .end local v10    # "inPtr":I
+    .local v11, "inPtr":I
     move-object/from16 v0, p1
 
     move v1, v10
@@ -1142,7 +1142,7 @@
     aget v6, v8, v19
 
     .line 133
-    .local v6, escCode:I
+    .local v6, "escCode":I
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/flurry/org/codehaus/jackson/io/JsonStringEncoder;->_quoteBuffer:[C
@@ -1160,7 +1160,7 @@
     move-result v13
 
     .line 134
-    .local v13, length:I
+    .local v13, "length":I
     add-int v19, v14, v13
 
     move-object/from16 v0, v16
@@ -1185,7 +1185,7 @@
     sub-int v9, v19, v14
 
     .line 136
-    .local v9, first:I
+    .local v9, "first":I
     if-lez v9, :cond_1
 
     .line 137
@@ -1219,7 +1219,7 @@
     sub-int v17, v13, v9
 
     .line 141
-    .local v17, second:I
+    .local v17, "second":I
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/flurry/org/codehaus/jackson/io/JsonStringEncoder;->_quoteBuffer:[C
@@ -1241,19 +1241,19 @@
     .line 142
     add-int v14, v14, v17
 
-    .end local v9           #first:I
-    .end local v17           #second:I
+    .end local v9    # "first":I
+    .end local v17    # "second":I
     :goto_2
     move v10, v11
 
     .line 148
-    .end local v11           #inPtr:I
-    .restart local v10       #inPtr:I
+    .end local v11    # "inPtr":I
+    .restart local v10    # "inPtr":I
     goto :goto_0
 
     .line 122
-    .end local v6           #escCode:I
-    .end local v13           #length:I
+    .end local v6    # "escCode":I
+    .end local v13    # "length":I
     :cond_2
     move-object/from16 v0, v16
 
@@ -1279,8 +1279,8 @@
     :cond_3
     add-int/lit8 v15, v14, 0x1
 
-    .end local v14           #outPtr:I
-    .local v15, outPtr:I
+    .end local v14    # "outPtr":I
+    .local v15, "outPtr":I
     aput-char v5, v16, v14
 
     .line 127
@@ -1291,9 +1291,9 @@
     move v14, v15
 
     .line 149
-    .end local v5           #c:C
-    .end local v15           #outPtr:I
-    .restart local v14       #outPtr:I
+    .end local v5    # "c":C
+    .end local v15    # "outPtr":I
+    .restart local v14    # "outPtr":I
     :cond_4
     move-object/from16 v0, v18
 
@@ -1308,22 +1308,22 @@
 
     return-object v19
 
-    .end local v14           #outPtr:I
-    .restart local v5       #c:C
-    .restart local v15       #outPtr:I
+    .end local v14    # "outPtr":I
+    .restart local v5    # "c":C
+    .restart local v15    # "outPtr":I
     :cond_5
     move v14, v15
 
     .line 130
-    .end local v15           #outPtr:I
-    .restart local v14       #outPtr:I
+    .end local v15    # "outPtr":I
+    .restart local v14    # "outPtr":I
     goto/16 :goto_1
 
     .line 144
-    .end local v10           #inPtr:I
-    .restart local v6       #escCode:I
-    .restart local v11       #inPtr:I
-    .restart local v13       #length:I
+    .end local v10    # "inPtr":I
+    .restart local v6    # "escCode":I
+    .restart local v11    # "inPtr":I
+    .restart local v13    # "length":I
     :cond_6
     move-object/from16 v0, p0
 
@@ -1353,7 +1353,7 @@
 
 .method public quoteAsUTF8(Ljava/lang/String;)[B
     .locals 12
-    .parameter "text"
+    .param p1, "text"    # Ljava/lang/String;
 
     .prologue
     const/16 v11, 0x7f
@@ -1362,18 +1362,18 @@
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/io/JsonStringEncoder;->_byteBuilder:Lcom/flurry/org/codehaus/jackson/util/ByteArrayBuilder;
 
     .line 160
-    .local v0, byteBuilder:Lcom/flurry/org/codehaus/jackson/util/ByteArrayBuilder;
+    .local v0, "byteBuilder":Lcom/flurry/org/codehaus/jackson/util/ByteArrayBuilder;
     if-nez v0, :cond_0
 
     .line 162
     new-instance v0, Lcom/flurry/org/codehaus/jackson/util/ByteArrayBuilder;
 
-    .end local v0           #byteBuilder:Lcom/flurry/org/codehaus/jackson/util/ByteArrayBuilder;
+    .end local v0    # "byteBuilder":Lcom/flurry/org/codehaus/jackson/util/ByteArrayBuilder;
     const/4 v10, 0x0
 
     invoke-direct {v0, v10}, Lcom/flurry/org/codehaus/jackson/util/ByteArrayBuilder;-><init>(Lcom/flurry/org/codehaus/jackson/util/BufferRecycler;)V
 
-    .restart local v0       #byteBuilder:Lcom/flurry/org/codehaus/jackson/util/ByteArrayBuilder;
+    .restart local v0    # "byteBuilder":Lcom/flurry/org/codehaus/jackson/util/ByteArrayBuilder;
     iput-object v0, p0, Lcom/flurry/org/codehaus/jackson/io/JsonStringEncoder;->_byteBuilder:Lcom/flurry/org/codehaus/jackson/util/ByteArrayBuilder;
 
     .line 164
@@ -1381,23 +1381,23 @@
     const/4 v5, 0x0
 
     .line 165
-    .local v5, inputPtr:I
+    .local v5, "inputPtr":I
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v4
 
     .line 166
-    .local v4, inputEnd:I
+    .local v4, "inputEnd":I
     const/4 v8, 0x0
 
     .line 167
-    .local v8, outputPtr:I
+    .local v8, "outputPtr":I
     invoke-virtual {v0}, Lcom/flurry/org/codehaus/jackson/util/ByteArrayBuilder;->resetAndGetFirstSegment()[B
 
     move-result-object v7
 
     .line 170
-    .local v7, outputBuffer:[B
+    .local v7, "outputBuffer":[B
     :goto_0
     if-ge v5, v4, :cond_5
 
@@ -1407,14 +1407,14 @@
     move-result-object v2
 
     .line 175
-    .local v2, escCodes:[I
+    .local v2, "escCodes":[I
     :goto_1
     invoke-virtual {p1, v5}, Ljava/lang/String;->charAt(I)C
 
     move-result v1
 
     .line 176
-    .local v1, ch:I
+    .local v1, "ch":I
     if-gt v1, v11, :cond_1
 
     aget v10, v2, v1
@@ -1439,8 +1439,8 @@
     :cond_2
     add-int/lit8 v6, v5, 0x1
 
-    .end local v5           #inputPtr:I
-    .local v6, inputPtr:I
+    .end local v5    # "inputPtr":I
+    .local v6, "inputPtr":I
     invoke-virtual {p1, v5}, Ljava/lang/String;->charAt(I)C
 
     move-result v1
@@ -1452,7 +1452,7 @@
     aget v3, v2, v1
 
     .line 197
-    .local v3, escape:I
+    .local v3, "escape":I
     invoke-direct {p0, v1, v3, v0, v8}, Lcom/flurry/org/codehaus/jackson/io/JsonStringEncoder;->_appendByteEscape(IILcom/flurry/org/codehaus/jackson/util/ByteArrayBuilder;I)I
 
     move-result v8
@@ -1465,12 +1465,12 @@
     move v5, v6
 
     .line 199
-    .end local v6           #inputPtr:I
-    .restart local v5       #inputPtr:I
+    .end local v6    # "inputPtr":I
+    .restart local v5    # "inputPtr":I
     goto :goto_0
 
     .line 179
-    .end local v3           #escape:I
+    .end local v3    # "escape":I
     :cond_3
     array-length v10, v7
 
@@ -1488,8 +1488,8 @@
     :cond_4
     add-int/lit8 v9, v8, 0x1
 
-    .end local v8           #outputPtr:I
-    .local v9, outputPtr:I
+    .end local v8    # "outputPtr":I
+    .local v9, "outputPtr":I
     int-to-byte v10, v1
 
     aput-byte v10, v7, v8
@@ -1502,10 +1502,10 @@
     move v8, v9
 
     .line 245
-    .end local v1           #ch:I
-    .end local v2           #escCodes:[I
-    .end local v9           #outputPtr:I
-    .restart local v8       #outputPtr:I
+    .end local v1    # "ch":I
+    .end local v2    # "escCodes":[I
+    .end local v9    # "outputPtr":I
+    .restart local v8    # "outputPtr":I
     :cond_5
     iget-object v10, p0, Lcom/flurry/org/codehaus/jackson/io/JsonStringEncoder;->_byteBuilder:Lcom/flurry/org/codehaus/jackson/util/ByteArrayBuilder;
 
@@ -1515,21 +1515,21 @@
 
     return-object v10
 
-    .end local v8           #outputPtr:I
-    .restart local v1       #ch:I
-    .restart local v2       #escCodes:[I
-    .restart local v9       #outputPtr:I
+    .end local v8    # "outputPtr":I
+    .restart local v1    # "ch":I
+    .restart local v2    # "escCodes":[I
+    .restart local v9    # "outputPtr":I
     :cond_6
     move v8, v9
 
     .line 187
-    .end local v9           #outputPtr:I
-    .restart local v8       #outputPtr:I
+    .end local v9    # "outputPtr":I
+    .restart local v8    # "outputPtr":I
     goto :goto_1
 
     .line 200
-    .end local v5           #inputPtr:I
-    .restart local v6       #inputPtr:I
+    .end local v5    # "inputPtr":I
+    .restart local v6    # "inputPtr":I
     :cond_7
     const/16 v10, 0x7ff
 
@@ -1538,8 +1538,8 @@
     .line 201
     add-int/lit8 v9, v8, 0x1
 
-    .end local v8           #outputPtr:I
-    .restart local v9       #outputPtr:I
+    .end local v8    # "outputPtr":I
+    .restart local v9    # "outputPtr":I
     shr-int/lit8 v10, v1, 0x6
 
     or-int/lit16 v10, v10, 0xc0
@@ -1555,13 +1555,13 @@
 
     move v8, v9
 
-    .end local v9           #outputPtr:I
-    .restart local v8       #outputPtr:I
+    .end local v9    # "outputPtr":I
+    .restart local v8    # "outputPtr":I
     move v5, v6
 
     .line 239
-    .end local v6           #inputPtr:I
-    .restart local v5       #inputPtr:I
+    .end local v6    # "inputPtr":I
+    .restart local v5    # "inputPtr":I
     :goto_2
     array-length v10, v7
 
@@ -1579,8 +1579,8 @@
     :cond_8
     add-int/lit8 v9, v8, 0x1
 
-    .end local v8           #outputPtr:I
-    .restart local v9       #outputPtr:I
+    .end local v8    # "outputPtr":I
+    .restart local v9    # "outputPtr":I
     int-to-byte v10, v1
 
     aput-byte v10, v7, v8
@@ -1588,13 +1588,13 @@
     move v8, v9
 
     .line 244
-    .end local v9           #outputPtr:I
-    .restart local v8       #outputPtr:I
+    .end local v9    # "outputPtr":I
+    .restart local v8    # "outputPtr":I
     goto :goto_0
 
     .line 205
-    .end local v5           #inputPtr:I
-    .restart local v6       #inputPtr:I
+    .end local v5    # "inputPtr":I
+    .restart local v6    # "inputPtr":I
     :cond_9
     const v10, 0xd800
 
@@ -1608,8 +1608,8 @@
     :cond_a
     add-int/lit8 v9, v8, 0x1
 
-    .end local v8           #outputPtr:I
-    .restart local v9       #outputPtr:I
+    .end local v8    # "outputPtr":I
+    .restart local v9    # "outputPtr":I
     shr-int/lit8 v10, v1, 0xc
 
     or-int/lit16 v10, v10, 0xe0
@@ -1632,13 +1632,13 @@
     const/4 v8, 0x0
 
     .line 211
-    .end local v9           #outputPtr:I
-    .restart local v8       #outputPtr:I
+    .end local v9    # "outputPtr":I
+    .restart local v8    # "outputPtr":I
     :goto_3
     add-int/lit8 v9, v8, 0x1
 
-    .end local v8           #outputPtr:I
-    .restart local v9       #outputPtr:I
+    .end local v8    # "outputPtr":I
+    .restart local v9    # "outputPtr":I
     shr-int/lit8 v10, v1, 0x6
 
     and-int/lit8 v10, v10, 0x3f
@@ -1656,17 +1656,17 @@
 
     move v8, v9
 
-    .end local v9           #outputPtr:I
-    .restart local v8       #outputPtr:I
+    .end local v9    # "outputPtr":I
+    .restart local v8    # "outputPtr":I
     move v5, v6
 
-    .end local v6           #inputPtr:I
-    .restart local v5       #inputPtr:I
+    .end local v6    # "inputPtr":I
+    .restart local v5    # "inputPtr":I
     goto :goto_2
 
     .line 214
-    .end local v5           #inputPtr:I
-    .restart local v6       #inputPtr:I
+    .end local v5    # "inputPtr":I
+    .restart local v6    # "inputPtr":I
     :cond_b
     const v10, 0xdbff
 
@@ -1686,8 +1686,8 @@
     :cond_d
     add-int/lit8 v5, v6, 0x1
 
-    .end local v6           #inputPtr:I
-    .restart local v5       #inputPtr:I
+    .end local v6    # "inputPtr":I
+    .restart local v5    # "inputPtr":I
     invoke-virtual {p1, v6}, Ljava/lang/String;->charAt(I)C
 
     move-result v10
@@ -1708,8 +1708,8 @@
     :cond_e
     add-int/lit8 v9, v8, 0x1
 
-    .end local v8           #outputPtr:I
-    .restart local v9       #outputPtr:I
+    .end local v8    # "outputPtr":I
+    .restart local v9    # "outputPtr":I
     shr-int/lit8 v10, v1, 0x12
 
     or-int/lit16 v10, v10, 0xf0
@@ -1732,13 +1732,13 @@
     const/4 v8, 0x0
 
     .line 230
-    .end local v9           #outputPtr:I
-    .restart local v8       #outputPtr:I
+    .end local v9    # "outputPtr":I
+    .restart local v8    # "outputPtr":I
     :goto_4
     add-int/lit8 v9, v8, 0x1
 
-    .end local v8           #outputPtr:I
-    .restart local v9       #outputPtr:I
+    .end local v8    # "outputPtr":I
+    .restart local v9    # "outputPtr":I
     shr-int/lit8 v10, v1, 0xc
 
     and-int/lit8 v10, v10, 0x3f
@@ -1763,13 +1763,13 @@
     const/4 v8, 0x0
 
     .line 235
-    .end local v9           #outputPtr:I
-    .restart local v8       #outputPtr:I
+    .end local v9    # "outputPtr":I
+    .restart local v8    # "outputPtr":I
     :goto_5
     add-int/lit8 v9, v8, 0x1
 
-    .end local v8           #outputPtr:I
-    .restart local v9       #outputPtr:I
+    .end local v8    # "outputPtr":I
+    .restart local v9    # "outputPtr":I
     shr-int/lit8 v10, v1, 0x6
 
     and-int/lit8 v10, v10, 0x3f
@@ -1787,36 +1787,36 @@
 
     move v8, v9
 
-    .end local v9           #outputPtr:I
-    .restart local v8       #outputPtr:I
+    .end local v9    # "outputPtr":I
+    .restart local v8    # "outputPtr":I
     goto/16 :goto_2
 
-    .end local v8           #outputPtr:I
-    .restart local v9       #outputPtr:I
+    .end local v8    # "outputPtr":I
+    .restart local v9    # "outputPtr":I
     :cond_f
     move v8, v9
 
-    .end local v9           #outputPtr:I
-    .restart local v8       #outputPtr:I
+    .end local v9    # "outputPtr":I
+    .restart local v8    # "outputPtr":I
     goto :goto_5
 
-    .end local v8           #outputPtr:I
-    .restart local v9       #outputPtr:I
+    .end local v8    # "outputPtr":I
+    .restart local v9    # "outputPtr":I
     :cond_10
     move v8, v9
 
-    .end local v9           #outputPtr:I
-    .restart local v8       #outputPtr:I
+    .end local v9    # "outputPtr":I
+    .restart local v8    # "outputPtr":I
     goto :goto_4
 
-    .end local v5           #inputPtr:I
-    .end local v8           #outputPtr:I
-    .restart local v6       #inputPtr:I
-    .restart local v9       #outputPtr:I
+    .end local v5    # "inputPtr":I
+    .end local v8    # "outputPtr":I
+    .restart local v6    # "inputPtr":I
+    .restart local v9    # "outputPtr":I
     :cond_11
     move v8, v9
 
-    .end local v9           #outputPtr:I
-    .restart local v8       #outputPtr:I
+    .end local v9    # "outputPtr":I
+    .restart local v8    # "outputPtr":I
     goto :goto_3
 .end method

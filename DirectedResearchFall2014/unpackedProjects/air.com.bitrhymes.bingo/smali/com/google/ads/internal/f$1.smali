@@ -32,7 +32,6 @@
 # virtual methods
 .method public a(Ljava/net/URL;)Ljava/net/HttpURLConnection;
     .locals 0
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;

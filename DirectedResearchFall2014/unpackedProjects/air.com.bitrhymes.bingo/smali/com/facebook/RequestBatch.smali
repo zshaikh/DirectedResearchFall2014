@@ -127,7 +127,7 @@
 
 .method public constructor <init>(Lcom/facebook/RequestBatch;)V
     .locals 2
-    .parameter "requests"
+    .param p1, "requests"    # Lcom/facebook/RequestBatch;
 
     .prologue
     .line 64
@@ -201,7 +201,6 @@
 
 .method public constructor <init>(Ljava/util/Collection;)V
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -214,7 +213,7 @@
 
     .prologue
     .line 48
-    .local p1, requests:Ljava/util/Collection;,"Ljava/util/Collection<Lcom/facebook/Request;>;"
+    .local p1, "requests":Ljava/util/Collection;, "Ljava/util/Collection<Lcom/facebook/Request;>;"
     invoke-direct {p0}, Ljava/util/AbstractList;-><init>()V
 
     .line 31
@@ -266,7 +265,7 @@
 
 .method public varargs constructor <init>([Lcom/facebook/Request;)V
     .locals 1
-    .parameter "requests"
+    .param p1, "requests"    # [Lcom/facebook/Request;
 
     .prologue
     .line 56
@@ -323,8 +322,8 @@
 # virtual methods
 .method public final add(ILcom/facebook/Request;)V
     .locals 1
-    .parameter "location"
-    .parameter "request"
+    .param p1, "location"    # I
+    .param p2, "request"    # Lcom/facebook/Request;
 
     .prologue
     .line 117
@@ -338,8 +337,6 @@
 
 .method public bridge synthetic add(ILjava/lang/Object;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 1
@@ -352,7 +349,7 @@
 
 .method public final add(Lcom/facebook/Request;)Z
     .locals 1
-    .parameter "request"
+    .param p1, "request"    # Lcom/facebook/Request;
 
     .prologue
     .line 112
@@ -367,7 +364,6 @@
 
 .method public bridge synthetic add(Ljava/lang/Object;)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 1
@@ -382,7 +378,7 @@
 
 .method public addCallback(Lcom/facebook/RequestBatch$Callback;)V
     .locals 1
-    .parameter "callback"
+    .param p1, "callback"    # Lcom/facebook/RequestBatch$Callback;
 
     .prologue
     .line 96
@@ -485,7 +481,7 @@
 
 .method public final get(I)Lcom/facebook/Request;
     .locals 1
-    .parameter "i"
+    .param p1, "i"    # I
 
     .prologue
     .line 127
@@ -495,7 +491,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/facebook/RequestBatch;
     check-cast p0, Lcom/facebook/Request;
 
     return-object p0
@@ -503,7 +499,6 @@
 
 .method public bridge synthetic get(I)Ljava/lang/Object;
     .locals 1
-    .parameter
 
     .prologue
     .line 1
@@ -594,7 +589,7 @@
 
 .method public final remove(I)Lcom/facebook/Request;
     .locals 1
-    .parameter "location"
+    .param p1, "location"    # I
 
     .prologue
     .line 132
@@ -604,7 +599,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/facebook/RequestBatch;
     check-cast p0, Lcom/facebook/Request;
 
     return-object p0
@@ -612,7 +607,6 @@
 
 .method public bridge synthetic remove(I)Ljava/lang/Object;
     .locals 1
-    .parameter
 
     .prologue
     .line 1
@@ -625,7 +619,7 @@
 
 .method public removeCallback(Lcom/facebook/RequestBatch$Callback;)V
     .locals 1
-    .parameter "callback"
+    .param p1, "callback"    # Lcom/facebook/RequestBatch$Callback;
 
     .prologue
     .line 107
@@ -639,8 +633,8 @@
 
 .method public final set(ILcom/facebook/Request;)Lcom/facebook/Request;
     .locals 1
-    .parameter "location"
-    .parameter "request"
+    .param p1, "location"    # I
+    .param p2, "request"    # Lcom/facebook/Request;
 
     .prologue
     .line 137
@@ -650,7 +644,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/facebook/RequestBatch;
     check-cast p0, Lcom/facebook/Request;
 
     return-object p0
@@ -658,8 +652,6 @@
 
 .method public bridge synthetic set(ILjava/lang/Object;)Ljava/lang/Object;
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 1
@@ -674,7 +666,7 @@
 
 .method final setBatchApplicationId(Ljava/lang/String;)V
     .locals 0
-    .parameter "batchApplicationId"
+    .param p1, "batchApplicationId"    # Ljava/lang/String;
 
     .prologue
     .line 170
@@ -686,7 +678,7 @@
 
 .method final setCallbackHandler(Landroid/os/Handler;)V
     .locals 0
-    .parameter "callbackHandler"
+    .param p1, "callbackHandler"    # Landroid/os/Handler;
 
     .prologue
     .line 154
@@ -698,7 +690,7 @@
 
 .method public setTimeout(I)V
     .locals 2
-    .parameter "timeoutInMilliseconds"
+    .param p1, "timeoutInMilliseconds"    # I
 
     .prologue
     .line 84

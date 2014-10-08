@@ -40,8 +40,8 @@
 # virtual methods
 .method protected bridge synthetic _deserialize(Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;)Ljava/lang/Object;
     .locals 1
-    .parameter "x0"
-    .parameter "x1"
+    .param p1, "x0"    # Ljava/lang/String;
+    .param p2, "x1"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -60,8 +60,8 @@
 
 .method protected _deserialize(Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;)Ljava/util/UUID;
     .locals 1
-    .parameter "value"
-    .parameter "ctxt"
+    .param p1, "value"    # Ljava/lang/String;
+    .param p2, "ctxt"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -80,8 +80,8 @@
 
 .method protected bridge synthetic _deserializeEmbedded(Ljava/lang/Object;Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;)Ljava/lang/Object;
     .locals 1
-    .parameter "x0"
-    .parameter "x1"
+    .param p1, "x0"    # Ljava/lang/Object;
+    .param p2, "x1"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -100,8 +100,8 @@
 
 .method protected _deserializeEmbedded(Ljava/lang/Object;Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;)Ljava/util/UUID;
     .locals 9
-    .parameter "ob"
-    .parameter "ctxt"
+    .param p1, "ob"    # Ljava/lang/Object;
+    .param p2, "ctxt"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -118,7 +118,7 @@
     .line 118
     check-cast p1, [B
 
-    .end local p1
+    .end local p1    # "ob":Ljava/lang/Object;
     move-object v0, p1
 
     check-cast v0, [B
@@ -126,7 +126,7 @@
     move-object v1, v0
 
     .line 119
-    .local v1, bytes:[B
+    .local v1, "bytes":[B
     array-length v7, v1
 
     const/16 v8, 0x10
@@ -173,33 +173,33 @@
     invoke-direct {v2, v7}, Ljava/io/DataInputStream;-><init>(Ljava/io/InputStream;)V
 
     .line 124
-    .local v2, in:Ljava/io/DataInputStream;
+    .local v2, "in":Ljava/io/DataInputStream;
     invoke-virtual {v2}, Ljava/io/DataInputStream;->readLong()J
 
     move-result-wide v3
 
     .line 125
-    .local v3, l1:J
+    .local v3, "l1":J
     invoke-virtual {v2}, Ljava/io/DataInputStream;->readLong()J
 
     move-result-wide v5
 
     .line 126
-    .local v5, l2:J
+    .local v5, "l2":J
     new-instance v7, Ljava/util/UUID;
 
     invoke-direct {v7, v3, v4, v5, v6}, Ljava/util/UUID;-><init>(JJ)V
 
     .line 129
-    .end local v1           #bytes:[B
-    .end local v2           #in:Ljava/io/DataInputStream;
-    .end local v3           #l1:J
-    .end local v5           #l2:J
+    .end local v1    # "bytes":[B
+    .end local v2    # "in":Ljava/io/DataInputStream;
+    .end local v3    # "l1":J
+    .end local v5    # "l2":J
     :goto_0
     return-object v7
 
     .line 128
-    .restart local p1
+    .restart local p1    # "ob":Ljava/lang/Object;
     :cond_1
     invoke-super {p0, p1, p2}, Lcom/flurry/org/codehaus/jackson/map/deser/std/FromStringDeserializer;->_deserializeEmbedded(Ljava/lang/Object;Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;)Ljava/lang/Object;
 

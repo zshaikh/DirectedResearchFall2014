@@ -18,7 +18,7 @@
 # direct methods
 .method public constructor <init>(Lorg/json/JSONObject;)V
     .locals 3
-    .parameter "fromJSON"
+    .param p1, "fromJSON"    # Lorg/json/JSONObject;
 
     .prologue
     const/4 v0, 0x0
@@ -109,7 +109,7 @@
     aget-object v0, v1, v3
 
     .line 75
-    .local v0, key:Ljava/lang/String;
+    .local v0, "key":Ljava/lang/String;
     iget-object v4, p0, Lcom/fusepowered/a1/campaign/ApplifierImpactRewardItem;->_rewardItemJSON:Lorg/json/JSONObject;
 
     invoke-virtual {v4, v0}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
@@ -129,7 +129,7 @@
 
     goto :goto_0
 
-    .end local v0           #key:Ljava/lang/String;
+    .end local v0    # "key":Ljava/lang/String;
     :cond_2
     move v1, v5
 
@@ -188,7 +188,7 @@
     move-object v0, v1
 
     .line 68
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v1, "Problem parsing campaign values"
 
     invoke-static {v1, p0}, Lcom/fusepowered/a1/ApplifierImpactUtils;->Log(Ljava/lang/String;Ljava/lang/Object;)V
@@ -243,7 +243,7 @@
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     .line 54
-    .local v0, returnMap:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v0, "returnMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v1, "name"
 
     invoke-virtual {p0}, Lcom/fusepowered/a1/campaign/ApplifierImpactRewardItem;->getName()Ljava/lang/String;

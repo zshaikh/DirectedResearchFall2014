@@ -8,7 +8,7 @@
 
 
 # static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator; = null
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroid/os/Parcelable$Creator",
@@ -85,7 +85,7 @@
     .locals 2
 
     .prologue
-    const/high16 v1, 0x3f80
+    const/high16 v1, 0x3f800000
 
     const/4 v0, 0x0
 
@@ -121,12 +121,12 @@
 
 .method constructor <init>(Landroid/os/Parcel;)V
     .locals 6
-    .parameter "in"
+    .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
     const/4 v5, 0x1
 
-    const/high16 v2, 0x3f80
+    const/high16 v2, 0x3f800000
 
     const/4 v4, 0x0
 
@@ -177,7 +177,7 @@
     move-result v1
 
     .line 89
-    .local v1, len:I
+    .local v1, "len":I
     new-array v2, v1, [Ljava/lang/String;
 
     iput-object v2, p0, Lcom/fusepowered/m1/android/VideoImage;->eventLoggingUrls:[Ljava/lang/String;
@@ -307,11 +307,11 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 112
-    .end local v1           #len:I
+    .end local v1    # "len":I
     :goto_1
     return-void
 
-    .restart local v1       #len:I
+    .restart local v1    # "len":I
     :cond_0
     move v2, v4
 
@@ -319,14 +319,14 @@
     goto :goto_0
 
     .line 108
-    .end local v1           #len:I
+    .end local v1    # "len":I
     :catch_0
     move-exception v2
 
     move-object v0, v2
 
     .line 110
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_1
@@ -334,10 +334,10 @@
 
 .method constructor <init>(Lorg/json/JSONObject;)V
     .locals 2
-    .parameter "imageObject"
+    .param p1, "imageObject"    # Lorg/json/JSONObject;
 
     .prologue
-    const/high16 v1, 0x3f80
+    const/high16 v1, 0x3f800000
 
     const/4 v0, 0x0
 
@@ -376,7 +376,7 @@
 
 .method private deserializeFromObj(Lorg/json/JSONObject;)V
     .locals 12
-    .parameter "imageObject"
+    .param p1, "imageObject"    # Lorg/json/JSONObject;
 
     .prologue
     const-wide/16 v10, 0x0
@@ -385,7 +385,7 @@
 
     const-wide v7, 0x408f400000000000L
 
-    const-wide/high16 v5, 0x3ff0
+    const-wide/high16 v5, 0x3ff0000000000000L
 
     .line 122
     if-nez p1, :cond_0
@@ -421,7 +421,7 @@
     move-result-object v1
 
     .line 128
-    .local v1, jsonArray:Lorg/json/JSONArray;
+    .local v1, "jsonArray":Lorg/json/JSONArray;
     if-eqz v1, :cond_1
 
     .line 130
@@ -436,7 +436,7 @@
     .line 131
     const/4 v0, 0x0
 
-    .local v0, i:I
+    .local v0, "i":I
     :goto_1
     invoke-virtual {v1}, Lorg/json/JSONArray;->length()I
 
@@ -459,7 +459,7 @@
     goto :goto_1
 
     .line 136
-    .end local v0           #i:I
+    .end local v0    # "i":I
     :cond_1
     const/4 v3, 0x0
 
@@ -592,7 +592,7 @@
     move-result-object v2
 
     .line 151
-    .local v2, opacityObject:Lorg/json/JSONObject;
+    .local v2, "opacityObject":Lorg/json/JSONObject;
     if-eqz v2, :cond_3
 
     .line 153
@@ -663,7 +663,7 @@
     const/4 v0, 0x0
 
     .line 58
-    .local v0, temp:Landroid/net/Uri;
+    .local v0, "temp":Landroid/net/Uri;
     iget-object v1, p0, Lcom/fusepowered/m1/android/VideoImage;->imageUrl:Ljava/lang/String;
 
     if-eqz v1, :cond_0
@@ -709,7 +709,7 @@
 
 .method public readExternal(Ljava/io/ObjectInput;)V
     .locals 4
-    .parameter "input"
+    .param p1, "input"    # Ljava/io/ObjectInput;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -740,7 +740,7 @@
     move-result v0
 
     .line 217
-    .local v0, count:I
+    .local v0, "count":I
     new-array v2, v0, [Ljava/lang/String;
 
     iput-object v2, p0, Lcom/fusepowered/m1/android/VideoImage;->eventLoggingUrls:[Ljava/lang/String;
@@ -748,7 +748,7 @@
     .line 218
     const/4 v1, 0x0
 
-    .local v1, i:I
+    .local v1, "i":I
     :goto_0
     if-ge v1, v0, :cond_0
 
@@ -891,7 +891,7 @@
 
 .method public writeExternal(Ljava/io/ObjectOutput;)V
     .locals 6
-    .parameter "output"
+    .param p1, "output"    # Ljava/io/ObjectOutput;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -919,20 +919,20 @@
     .line 244
     iget-object v0, p0, Lcom/fusepowered/m1/android/VideoImage;->eventLoggingUrls:[Ljava/lang/String;
 
-    .local v0, arr$:[Ljava/lang/String;
+    .local v0, "arr$":[Ljava/lang/String;
     array-length v2, v0
 
-    .local v2, len$:I
+    .local v2, "len$":I
     const/4 v1, 0x0
 
-    .local v1, i$:I
+    .local v1, "i$":I
     :goto_0
     if-ge v1, v2, :cond_0
 
     aget-object v3, v0, v1
 
     .line 245
-    .local v3, temp:Ljava/lang/String;
+    .local v3, "temp":Ljava/lang/String;
     invoke-interface {p1, v3}, Ljava/io/ObjectOutput;->writeObject(Ljava/lang/Object;)V
 
     .line 244
@@ -941,7 +941,7 @@
     goto :goto_0
 
     .line 246
-    .end local v3           #temp:Ljava/lang/String;
+    .end local v3    # "temp":Ljava/lang/String;
     :cond_0
     iget-object v4, p0, Lcom/fusepowered/m1/android/VideoImage;->linkUrl:Ljava/lang/String;
 
@@ -1028,8 +1028,8 @@
 
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 2
-    .parameter "dest"
-    .parameter "flags"
+    .param p1, "dest"    # Landroid/os/Parcel;
+    .param p2, "flags"    # I
 
     .prologue
     .line 171

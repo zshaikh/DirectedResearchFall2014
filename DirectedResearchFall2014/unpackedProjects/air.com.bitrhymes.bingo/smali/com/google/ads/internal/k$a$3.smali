@@ -26,8 +26,6 @@
 # direct methods
 .method constructor <init>(Lcom/google/ads/internal/k$a;Ljava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 92
@@ -44,8 +42,8 @@
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 4
-    .parameter "dialog"
-    .parameter "which"
+    .param p1, "dialog"    # Landroid/content/DialogInterface;
+    .param p2, "which"    # I
 
     .prologue
     .line 95

@@ -26,8 +26,8 @@
 # direct methods
 .method public constructor <init>(Lcom/flurry/org/apache/avro/Schema;Ljava/lang/String;)V
     .locals 0
-    .parameter "schema"
-    .parameter "symbol"
+    .param p1, "schema"    # Lcom/flurry/org/apache/avro/Schema;
+    .param p2, "symbol"    # Ljava/lang/String;
 
     .prologue
     .line 282
@@ -47,7 +47,7 @@
 # virtual methods
 .method public equals(Ljava/lang/Object;)Z
     .locals 3
-    .parameter "o"
+    .param p1, "o"    # Ljava/lang/Object;
 
     .prologue
     const/4 v2, 0x1

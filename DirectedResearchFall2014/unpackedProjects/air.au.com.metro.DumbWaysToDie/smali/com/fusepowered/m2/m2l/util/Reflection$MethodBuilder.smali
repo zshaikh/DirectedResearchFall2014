@@ -56,8 +56,8 @@
 # direct methods
 .method public constructor <init>(Ljava/lang/Object;Ljava/lang/String;)V
     .locals 1
-    .parameter "instance"
-    .parameter "methodName"
+    .param p1, "instance"    # Ljava/lang/Object;
+    .param p2, "methodName"    # Ljava/lang/String;
 
     .prologue
     .line 48
@@ -107,8 +107,6 @@
 # virtual methods
 .method public addParam(Ljava/lang/Class;Ljava/lang/Object;)Lcom/fusepowered/m2/m2l/util/Reflection$MethodBuilder;
     .locals 1
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -122,8 +120,8 @@
 
     .prologue
     .line 59
-    .local p1, clazz:Ljava/lang/Class;,"Ljava/lang/Class<TT;>;"
-    .local p2, parameter:Ljava/lang/Object;,"TT;"
+    .local p1, "clazz":Ljava/lang/Class;, "Ljava/lang/Class<TT;>;"
+    .local p2, "parameter":Ljava/lang/Object;, "TT;"
     iget-object v0, p0, Lcom/fusepowered/m2/m2l/util/Reflection$MethodBuilder;->mParameterClasses:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -156,7 +154,7 @@
     new-array v0, v4, [Ljava/lang/Class;
 
     .line 73
-    .local v0, classArray:[Ljava/lang/Class;
+    .local v0, "classArray":[Ljava/lang/Class;
     iget-object v4, p0, Lcom/fusepowered/m2/m2l/util/Reflection$MethodBuilder;->mParameterClasses:Ljava/util/List;
 
     invoke-interface {v4, v0}, Ljava/util/List;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
@@ -166,7 +164,7 @@
     check-cast v2, [Ljava/lang/Class;
 
     .line 75
-    .local v2, parameterTypes:[Ljava/lang/Class;
+    .local v2, "parameterTypes":[Ljava/lang/Class;
     iget-object v4, p0, Lcom/fusepowered/m2/m2l/util/Reflection$MethodBuilder;->mClass:Ljava/lang/Class;
 
     iget-object v5, p0, Lcom/fusepowered/m2/m2l/util/Reflection$MethodBuilder;->mMethodName:Ljava/lang/String;
@@ -176,7 +174,7 @@
     move-result-object v1
 
     .line 77
-    .local v1, method:Ljava/lang/reflect/Method;
+    .local v1, "method":Ljava/lang/reflect/Method;
     iget-boolean v4, p0, Lcom/fusepowered/m2/m2l/util/Reflection$MethodBuilder;->mIsAccessible:Z
 
     if-eqz v4, :cond_0
@@ -195,7 +193,7 @@
     move-result-object v3
 
     .line 82
-    .local v3, parameters:[Ljava/lang/Object;
+    .local v3, "parameters":[Ljava/lang/Object;
     iget-object v4, p0, Lcom/fusepowered/m2/m2l/util/Reflection$MethodBuilder;->mInstance:Ljava/lang/Object;
 
     invoke-virtual {v1, v4, v3}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;

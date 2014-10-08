@@ -36,7 +36,7 @@
 # virtual methods
 .method public charAt(I)C
     .locals 1
-    .parameter "i"
+    .param p1, "i"    # I
 
     .prologue
     .line 109
@@ -61,8 +61,8 @@
 
 .method public subSequence(II)Ljava/lang/CharSequence;
     .locals 3
-    .parameter "start"
-    .parameter "end"
+    .param p1, "start"    # I
+    .param p2, "end"    # I
 
     .prologue
     .line 112

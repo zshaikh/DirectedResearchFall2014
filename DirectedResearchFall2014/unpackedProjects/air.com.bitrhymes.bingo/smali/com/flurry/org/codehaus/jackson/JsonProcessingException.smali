@@ -14,7 +14,7 @@
 # direct methods
 .method protected constructor <init>(Ljava/lang/String;)V
     .locals 0
-    .parameter "msg"
+    .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
     .line 31
@@ -26,8 +26,8 @@
 
 .method protected constructor <init>(Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/JsonLocation;)V
     .locals 1
-    .parameter "msg"
-    .parameter "loc"
+    .param p1, "msg"    # Ljava/lang/String;
+    .param p2, "loc"    # Lcom/flurry/org/codehaus/jackson/JsonLocation;
 
     .prologue
     .line 36
@@ -41,9 +41,9 @@
 
 .method protected constructor <init>(Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/JsonLocation;Ljava/lang/Throwable;)V
     .locals 0
-    .parameter "msg"
-    .parameter "loc"
-    .parameter "rootCause"
+    .param p1, "msg"    # Ljava/lang/String;
+    .param p2, "loc"    # Lcom/flurry/org/codehaus/jackson/JsonLocation;
+    .param p3, "rootCause"    # Ljava/lang/Throwable;
 
     .prologue
     .line 22
@@ -65,8 +65,8 @@
 
 .method protected constructor <init>(Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 1
-    .parameter "msg"
-    .parameter "rootCause"
+    .param p1, "msg"    # Ljava/lang/String;
+    .param p2, "rootCause"    # Ljava/lang/Throwable;
 
     .prologue
     .line 41
@@ -80,7 +80,7 @@
 
 .method protected constructor <init>(Ljava/lang/Throwable;)V
     .locals 1
-    .parameter "rootCause"
+    .param p1, "rootCause"    # Ljava/lang/Throwable;
 
     .prologue
     const/4 v0, 0x0
@@ -114,7 +114,7 @@
     move-result-object v1
 
     .line 61
-    .local v1, msg:Ljava/lang/String;
+    .local v1, "msg":Ljava/lang/String;
     if-nez v1, :cond_0
 
     .line 62
@@ -127,7 +127,7 @@
     move-result-object v0
 
     .line 65
-    .local v0, loc:Lcom/flurry/org/codehaus/jackson/JsonLocation;
+    .local v0, "loc":Lcom/flurry/org/codehaus/jackson/JsonLocation;
     if-eqz v0, :cond_1
 
     .line 66
@@ -136,7 +136,7 @@
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
     .line 67
-    .local v2, sb:Ljava/lang/StringBuilder;
+    .local v2, "sb":Ljava/lang/StringBuilder;
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 68
@@ -162,7 +162,7 @@
     move-result-object v3
 
     .line 73
-    .end local v2           #sb:Ljava/lang/StringBuilder;
+    .end local v2    # "sb":Ljava/lang/StringBuilder;
     :goto_0
     return-object v3
 

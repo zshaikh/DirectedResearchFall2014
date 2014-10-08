@@ -20,10 +20,6 @@
 # direct methods
 .method public constructor <init>(Lcom/adobe/air/ControlType;IFF)V
     .locals 2
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const/4 v1, 0x0
@@ -160,7 +156,6 @@
 
 .method public setData(F)V
     .locals 3
-    .parameter
 
     .prologue
     .line 440
@@ -187,7 +182,6 @@
 
 .method public setInternalReference(J)V
     .locals 0
-    .parameter
 
     .prologue
     .line 404

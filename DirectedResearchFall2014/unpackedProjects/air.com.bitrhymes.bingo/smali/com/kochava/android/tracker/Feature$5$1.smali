@@ -29,11 +29,6 @@
 # direct methods
 .method constructor <init>(Lcom/kochava/android/tracker/Feature$5;Landroid/webkit/WebView;Ljava/lang/String;Landroid/app/Activity;Ljava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 1

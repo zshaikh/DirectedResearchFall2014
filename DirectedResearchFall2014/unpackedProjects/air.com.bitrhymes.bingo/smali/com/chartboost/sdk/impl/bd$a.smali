@@ -17,7 +17,6 @@
 # direct methods
 .method constructor <init>(Ljava/lang/String;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 45

@@ -49,13 +49,12 @@
 # direct methods
 .method private constructor <init>(Lcom/facebook/SessionLoginBehavior;ILjava/util/List;Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;)V
     .locals 0
-    .parameter "loginBehavior"
-    .parameter "requestCode"
-    .parameter
-    .parameter "defaultAudience"
-    .parameter "isLegacy"
-    .parameter "applicationId"
-    .parameter "validateSameFbidAsToken"
+    .param p1, "loginBehavior"    # Lcom/facebook/SessionLoginBehavior;
+    .param p2, "requestCode"    # I
+    .param p4, "defaultAudience"    # Ljava/lang/String;
+    .param p5, "isLegacy"    # Z
+    .param p6, "applicationId"    # Ljava/lang/String;
+    .param p7, "validateSameFbidAsToken"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -75,7 +74,7 @@
 
     .prologue
     .line 1843
-    .local p3, permissions:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
+    .local p3, "permissions":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1846
@@ -105,14 +104,6 @@
 
 .method synthetic constructor <init>(Lcom/facebook/SessionLoginBehavior;ILjava/util/List;Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;Lcom/facebook/Session$AuthorizationRequest$AuthRequestSerializationProxyV1;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 1843

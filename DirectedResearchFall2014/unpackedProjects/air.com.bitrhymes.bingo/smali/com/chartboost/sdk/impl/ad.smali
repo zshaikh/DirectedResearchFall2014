@@ -39,8 +39,6 @@
 # virtual methods
 .method a(Ljava/lang/Class;Lcom/chartboost/sdk/impl/ah;)V
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 44
@@ -54,8 +52,6 @@
 
 .method public a(Ljava/lang/Object;Ljava/lang/StringBuilder;)V
     .locals 4
-    .parameter
-    .parameter
 
     .prologue
     .line 55

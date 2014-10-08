@@ -46,7 +46,6 @@
 
 .method private constructor <init>(B)V
     .locals 1
-    .parameter
 
     .prologue
     .line 125
@@ -447,7 +446,6 @@
 
 .method public setScreenHeight(I)Lcom/flurry/android/AdViewContainer$Builder;
     .locals 3
-    .parameter
 
     .prologue
     const/4 v2, 0x3
@@ -483,7 +481,6 @@
 
 .method public setScreenWidth(I)Lcom/flurry/android/AdViewContainer$Builder;
     .locals 3
-    .parameter
 
     .prologue
     const/4 v2, 0x2
@@ -519,7 +516,6 @@
 
 .method public setViewHeight(I)Lcom/flurry/android/AdViewContainer$Builder;
     .locals 3
-    .parameter
 
     .prologue
     const/4 v2, 0x1
@@ -553,7 +549,6 @@
 
 .method public setViewWidth(I)Lcom/flurry/android/AdViewContainer$Builder;
     .locals 3
-    .parameter
 
     .prologue
     const/4 v2, 0x0

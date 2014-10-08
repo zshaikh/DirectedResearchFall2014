@@ -30,7 +30,7 @@
 # direct methods
 .method public constructor <init>(Lcom/fusepowered/m1/android/MMLayout;)V
     .locals 1
-    .parameter "layout"
+    .param p1, "layout"    # Lcom/fusepowered/m1/android/MMLayout;
 
     .prologue
     .line 103
@@ -51,10 +51,10 @@
 # virtual methods
 .method public onFling(Landroid/view/MotionEvent;Landroid/view/MotionEvent;FF)Z
     .locals 5
-    .parameter "e1"
-    .parameter "e2"
-    .parameter "velocityX"
-    .parameter "velocityY"
+    .param p1, "e1"    # Landroid/view/MotionEvent;
+    .param p2, "e2"    # Landroid/view/MotionEvent;
+    .param p3, "velocityX"    # F
+    .param p4, "velocityY"    # F
 
     .prologue
     const/4 v4, 0x0
@@ -86,7 +86,7 @@
     float-to-int v0, v2
 
     .line 113
-    .local v0, dx:I
+    .local v0, "dx":I
     invoke-static {v0}, Ljava/lang/Math;->abs(I)I
 
     move-result v2
@@ -158,7 +158,7 @@
     check-cast v1, Lcom/fusepowered/m1/android/MMLayout;
 
     .line 131
-    .local v1, layout:Lcom/fusepowered/m1/android/MMLayout;
+    .local v1, "layout":Lcom/fusepowered/m1/android/MMLayout;
     if-eqz v1, :cond_2
 
     .line 133
@@ -168,7 +168,7 @@
 
     goto :goto_1
 
-    .end local v1           #layout:Lcom/fusepowered/m1/android/MMLayout;
+    .end local v1    # "layout":Lcom/fusepowered/m1/android/MMLayout;
     :cond_5
     move v2, v4
 

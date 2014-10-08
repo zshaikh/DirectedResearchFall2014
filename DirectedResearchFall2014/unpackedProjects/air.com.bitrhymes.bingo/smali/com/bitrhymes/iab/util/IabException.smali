@@ -14,8 +14,8 @@
 # direct methods
 .method public constructor <init>(ILjava/lang/String;)V
     .locals 1
-    .parameter "response"
-    .parameter "message"
+    .param p1, "response"    # I
+    .param p2, "message"    # Ljava/lang/String;
 
     .prologue
     .line 18
@@ -31,9 +31,9 @@
 
 .method public constructor <init>(ILjava/lang/String;Ljava/lang/Exception;)V
     .locals 1
-    .parameter "response"
-    .parameter "message"
-    .parameter "cause"
+    .param p1, "response"    # I
+    .param p2, "message"    # Ljava/lang/String;
+    .param p3, "cause"    # Ljava/lang/Exception;
 
     .prologue
     .line 27
@@ -49,7 +49,7 @@
 
 .method public constructor <init>(Lcom/bitrhymes/iab/util/IabResult;)V
     .locals 1
-    .parameter "r"
+    .param p1, "r"    # Lcom/bitrhymes/iab/util/IabResult;
 
     .prologue
     .line 14
@@ -63,8 +63,8 @@
 
 .method public constructor <init>(Lcom/bitrhymes/iab/util/IabResult;Ljava/lang/Exception;)V
     .locals 1
-    .parameter "r"
-    .parameter "cause"
+    .param p1, "r"    # Lcom/bitrhymes/iab/util/IabResult;
+    .param p2, "cause"    # Ljava/lang/Exception;
 
     .prologue
     .line 22

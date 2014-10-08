@@ -36,8 +36,6 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m1/android/BridgeMMPasteboard;Landroid/content/Context;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 24
@@ -69,17 +67,17 @@
     check-cast v1, Landroid/text/ClipboardManager;
 
     .line 31
-    .local v1, clipboard:Landroid/text/ClipboardManager;
+    .local v1, "clipboard":Landroid/text/ClipboardManager;
     invoke-virtual {v1}, Landroid/text/ClipboardManager;->getText()Ljava/lang/CharSequence;
 
     move-result-object v0
 
     .line 32
-    .local v0, chars:Ljava/lang/CharSequence;
+    .local v0, "chars":Ljava/lang/CharSequence;
     const/4 v3, 0x0
 
     .line 33
-    .local v3, message:Ljava/lang/String;
+    .local v3, "message":Ljava/lang/String;
     if-eqz v0, :cond_0
 
     .line 34
@@ -99,9 +97,9 @@
     move-result-object v4
 
     .line 44
-    .end local v0           #chars:Ljava/lang/CharSequence;
-    .end local v1           #clipboard:Landroid/text/ClipboardManager;
-    .end local v3           #message:Ljava/lang/String;
+    .end local v0    # "chars":Ljava/lang/CharSequence;
+    .end local v1    # "clipboard":Landroid/text/ClipboardManager;
+    .end local v3    # "message":Ljava/lang/String;
     :goto_0
     return-object v4
 
@@ -112,11 +110,11 @@
     move-object v2, v4
 
     .line 42
-    .local v2, e:Ljava/lang/Exception;
+    .local v2, "e":Ljava/lang/Exception;
     invoke-virtual {v2}, Ljava/lang/Exception;->printStackTrace()V
 
     .line 44
-    .end local v2           #e:Ljava/lang/Exception;
+    .end local v2    # "e":Ljava/lang/Exception;
     :cond_1
     const/4 v4, 0x0
 

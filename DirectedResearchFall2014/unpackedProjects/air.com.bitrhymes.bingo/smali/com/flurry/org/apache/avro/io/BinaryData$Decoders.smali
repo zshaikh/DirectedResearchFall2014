@@ -76,7 +76,7 @@
 
 .method static synthetic access$000(Lcom/flurry/org/apache/avro/io/BinaryData$Decoders;)Lcom/flurry/org/apache/avro/io/BinaryDecoder;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/flurry/org/apache/avro/io/BinaryData$Decoders;
 
     .prologue
     .line 33
@@ -87,7 +87,7 @@
 
 .method static synthetic access$100(Lcom/flurry/org/apache/avro/io/BinaryData$Decoders;)Lcom/flurry/org/apache/avro/io/BinaryDecoder;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/flurry/org/apache/avro/io/BinaryData$Decoders;
 
     .prologue
     .line 33
@@ -98,7 +98,7 @@
 
 .method static synthetic access$200(Lcom/flurry/org/apache/avro/io/BinaryData$Decoders;)Lcom/flurry/org/apache/avro/io/BinaryDecoder$BufferAccessor;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/flurry/org/apache/avro/io/BinaryData$Decoders;
 
     .prologue
     .line 33
@@ -109,7 +109,7 @@
 
 .method static synthetic access$300(Lcom/flurry/org/apache/avro/io/BinaryData$Decoders;)Lcom/flurry/org/apache/avro/io/BinaryDecoder$BufferAccessor;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/flurry/org/apache/avro/io/BinaryData$Decoders;
 
     .prologue
     .line 33
@@ -122,12 +122,12 @@
 # virtual methods
 .method public set([BII[BII)V
     .locals 1
-    .parameter "data1"
-    .parameter "off1"
-    .parameter "len1"
-    .parameter "data2"
-    .parameter "off2"
-    .parameter "len2"
+    .param p1, "data1"    # [B
+    .param p2, "off1"    # I
+    .param p3, "len1"    # I
+    .param p4, "data2"    # [B
+    .param p5, "off2"    # I
+    .param p6, "len2"    # I
 
     .prologue
     .line 44

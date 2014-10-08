@@ -18,7 +18,6 @@
 # virtual methods
 .method public onClickAdURLTesting(Landroid/view/View;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 24
@@ -39,7 +38,6 @@
 
 .method public onClickInmobiAd(Landroid/view/View;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 18
@@ -60,7 +58,6 @@
 
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 12

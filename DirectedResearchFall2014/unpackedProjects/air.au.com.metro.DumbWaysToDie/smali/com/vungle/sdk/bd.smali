@@ -32,8 +32,6 @@
 # virtual methods
 .method public final put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 4
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TK;TV;)TV;"
@@ -42,9 +40,9 @@
 
     .prologue
     .line 26
-    .local p0, this:Lcom/vungle/sdk/bd;,"Lcom/vungle/sdk/bd<TK;TV;>;"
-    .local p1, key:Ljava/lang/Object;,"TK;"
-    .local p2, value:Ljava/lang/Object;,"TV;"
+    .local p0, "this":Lcom/vungle/sdk/bd;, "Lcom/vungle/sdk/bd<TK;TV;>;"
+    .local p1, "key":Ljava/lang/Object;, "TK;"
+    .local p2, "value":Ljava/lang/Object;, "TV;"
     invoke-super {p0, p1, p2}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -95,7 +93,6 @@
 
 .method public final putAll(Ljava/util/Map;)V
     .locals 3
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -106,8 +103,8 @@
 
     .prologue
     .line 34
-    .local p0, this:Lcom/vungle/sdk/bd;,"Lcom/vungle/sdk/bd<TK;TV;>;"
-    .local p1, map:Ljava/util/Map;,"Ljava/util/Map<+TK;+TV;>;"
+    .local p0, "this":Lcom/vungle/sdk/bd;, "Lcom/vungle/sdk/bd<TK;TV;>;"
+    .local p1, "map":Ljava/util/Map;, "Ljava/util/Map<+TK;+TV;>;"
     invoke-interface {p1}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object v0

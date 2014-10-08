@@ -27,7 +27,7 @@
 
     iget-object v0, p0, Lcom/facebook/internal/FileLruCache$2;->this$0:Lcom/facebook/internal/FileLruCache;
 
-    #calls: Lcom/facebook/internal/FileLruCache;->trim()V
+    # invokes: Lcom/facebook/internal/FileLruCache;->trim()V
     invoke-static {v0}, Lcom/facebook/internal/FileLruCache;->access$100(Lcom/facebook/internal/FileLruCache;)V
 
     return-void

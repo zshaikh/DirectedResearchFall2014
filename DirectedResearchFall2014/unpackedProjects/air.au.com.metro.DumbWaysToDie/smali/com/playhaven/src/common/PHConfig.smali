@@ -53,7 +53,7 @@
 
 .method public static cacheDeviceInfo(Landroid/content/Context;)V
     .locals 0
-    .parameter "context"
+    .param p0, "context"    # Landroid/content/Context;
 
     .prologue
     .line 31

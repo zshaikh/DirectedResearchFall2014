@@ -23,8 +23,8 @@
 # direct methods
 .method constructor <init>(Ljava/io/OutputStream;Lcom/facebook/internal/FileLruCache$StreamCloseCallback;)V
     .locals 0
-    .parameter "innerStream"
-    .parameter "callback"
+    .param p1, "innerStream"    # Ljava/io/OutputStream;
+    .param p2, "callback"    # Lcom/facebook/internal/FileLruCache$StreamCloseCallback;
 
     .prologue
     .line 430
@@ -100,7 +100,7 @@
 
 .method public write(I)V
     .locals 1
-    .parameter "oneByte"
+    .param p1, "oneByte"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -119,7 +119,7 @@
 
 .method public write([B)V
     .locals 1
-    .parameter "buffer"
+    .param p1, "buffer"    # [B
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -138,9 +138,9 @@
 
 .method public write([BII)V
     .locals 1
-    .parameter "buffer"
-    .parameter "offset"
-    .parameter "count"
+    .param p1, "buffer"    # [B
+    .param p2, "offset"    # I
+    .param p3, "count"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;

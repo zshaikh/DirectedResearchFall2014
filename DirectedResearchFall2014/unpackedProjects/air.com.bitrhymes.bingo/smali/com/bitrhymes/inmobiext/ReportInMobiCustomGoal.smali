@@ -25,8 +25,8 @@
 # virtual methods
 .method public call(Lcom/adobe/fre/FREContext;[Lcom/adobe/fre/FREObject;)Lcom/adobe/fre/FREObject;
     .locals 5
-    .parameter "context"
-    .parameter "arg1"
+    .param p1, "context"    # Lcom/adobe/fre/FREContext;
+    .param p2, "arg1"    # [Lcom/adobe/fre/FREObject;
 
     .prologue
     .line 20
@@ -52,7 +52,7 @@
     move-result-object v0
 
     .line 23
-    .local v0, appID:Ljava/lang/String;
+    .local v0, "appID":Ljava/lang/String;
     const/4 v3, 0x1
 
     aget-object v3, p2, v3
@@ -62,7 +62,7 @@
     move-result-object v1
 
     .line 24
-    .local v1, customGoalStr:Ljava/lang/String;
+    .local v1, "customGoalStr":Ljava/lang/String;
     invoke-static {}, Lcom/inmobi/adtracker/androidsdk/IMAdTracker;->getInstance()Lcom/inmobi/adtracker/androidsdk/IMAdTracker;
 
     move-result-object v3
@@ -87,8 +87,8 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 30
-    .end local v0           #appID:Ljava/lang/String;
-    .end local v1           #customGoalStr:Ljava/lang/String;
+    .end local v0    # "appID":Ljava/lang/String;
+    .end local v1    # "customGoalStr":Ljava/lang/String;
     :goto_0
     const/4 v3, 0x0
 
@@ -101,7 +101,7 @@
     move-object v2, v3
 
     .line 27
-    .local v2, e:Ljava/lang/Exception;
+    .local v2, "e":Ljava/lang/Exception;
     invoke-virtual {v2}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0

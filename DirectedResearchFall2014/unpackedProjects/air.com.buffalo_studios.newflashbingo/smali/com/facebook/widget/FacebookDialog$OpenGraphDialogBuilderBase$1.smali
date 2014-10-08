@@ -27,7 +27,7 @@
 
     iget-object v0, p0, Lcom/facebook/widget/FacebookDialog$OpenGraphDialogBuilderBase$1;->this$0:Lcom/facebook/widget/FacebookDialog$OpenGraphDialogBuilderBase;
 
-    #getter for: Lcom/facebook/widget/FacebookDialog$OpenGraphDialogBuilderBase;->imageAttachments:Ljava/util/HashMap;
+    # getter for: Lcom/facebook/widget/FacebookDialog$OpenGraphDialogBuilderBase;->imageAttachments:Ljava/util/HashMap;
     invoke-static {v0}, Lcom/facebook/widget/FacebookDialog$OpenGraphDialogBuilderBase;->access$700(Lcom/facebook/widget/FacebookDialog$OpenGraphDialogBuilderBase;)Ljava/util/HashMap;
 
     move-result-object v0
@@ -36,7 +36,7 @@
 
     iget-object v0, p0, Lcom/facebook/widget/FacebookDialog$OpenGraphDialogBuilderBase$1;->this$0:Lcom/facebook/widget/FacebookDialog$OpenGraphDialogBuilderBase;
 
-    #getter for: Lcom/facebook/widget/FacebookDialog$OpenGraphDialogBuilderBase;->imageAttachments:Ljava/util/HashMap;
+    # getter for: Lcom/facebook/widget/FacebookDialog$OpenGraphDialogBuilderBase;->imageAttachments:Ljava/util/HashMap;
     invoke-static {v0}, Lcom/facebook/widget/FacebookDialog$OpenGraphDialogBuilderBase;->access$700(Lcom/facebook/widget/FacebookDialog$OpenGraphDialogBuilderBase;)Ljava/util/HashMap;
 
     move-result-object v0
@@ -47,7 +47,7 @@
 
     if-lez v0, :cond_0
 
-    #calls: Lcom/facebook/widget/FacebookDialog;->getAttachmentStore()Lcom/facebook/NativeAppCallAttachmentStore;
+    # invokes: Lcom/facebook/widget/FacebookDialog;->getAttachmentStore()Lcom/facebook/NativeAppCallAttachmentStore;
     invoke-static {}, Lcom/facebook/widget/FacebookDialog;->access$800()Lcom/facebook/NativeAppCallAttachmentStore;
 
     move-result-object v0
@@ -62,7 +62,7 @@
 
     iget-object v2, p0, Lcom/facebook/widget/FacebookDialog$OpenGraphDialogBuilderBase$1;->this$0:Lcom/facebook/widget/FacebookDialog$OpenGraphDialogBuilderBase;
 
-    #getter for: Lcom/facebook/widget/FacebookDialog$OpenGraphDialogBuilderBase;->imageAttachments:Ljava/util/HashMap;
+    # getter for: Lcom/facebook/widget/FacebookDialog$OpenGraphDialogBuilderBase;->imageAttachments:Ljava/util/HashMap;
     invoke-static {v2}, Lcom/facebook/widget/FacebookDialog$OpenGraphDialogBuilderBase;->access$700(Lcom/facebook/widget/FacebookDialog$OpenGraphDialogBuilderBase;)Ljava/util/HashMap;
 
     move-result-object v2
@@ -72,7 +72,7 @@
     :cond_0
     iget-object v0, p0, Lcom/facebook/widget/FacebookDialog$OpenGraphDialogBuilderBase$1;->this$0:Lcom/facebook/widget/FacebookDialog$OpenGraphDialogBuilderBase;
 
-    #getter for: Lcom/facebook/widget/FacebookDialog$OpenGraphDialogBuilderBase;->imageAttachmentFiles:Ljava/util/HashMap;
+    # getter for: Lcom/facebook/widget/FacebookDialog$OpenGraphDialogBuilderBase;->imageAttachmentFiles:Ljava/util/HashMap;
     invoke-static {v0}, Lcom/facebook/widget/FacebookDialog$OpenGraphDialogBuilderBase;->access$900(Lcom/facebook/widget/FacebookDialog$OpenGraphDialogBuilderBase;)Ljava/util/HashMap;
 
     move-result-object v0
@@ -81,7 +81,7 @@
 
     iget-object v0, p0, Lcom/facebook/widget/FacebookDialog$OpenGraphDialogBuilderBase$1;->this$0:Lcom/facebook/widget/FacebookDialog$OpenGraphDialogBuilderBase;
 
-    #getter for: Lcom/facebook/widget/FacebookDialog$OpenGraphDialogBuilderBase;->imageAttachmentFiles:Ljava/util/HashMap;
+    # getter for: Lcom/facebook/widget/FacebookDialog$OpenGraphDialogBuilderBase;->imageAttachmentFiles:Ljava/util/HashMap;
     invoke-static {v0}, Lcom/facebook/widget/FacebookDialog$OpenGraphDialogBuilderBase;->access$900(Lcom/facebook/widget/FacebookDialog$OpenGraphDialogBuilderBase;)Ljava/util/HashMap;
 
     move-result-object v0
@@ -92,7 +92,7 @@
 
     if-lez v0, :cond_1
 
-    #calls: Lcom/facebook/widget/FacebookDialog;->getAttachmentStore()Lcom/facebook/NativeAppCallAttachmentStore;
+    # invokes: Lcom/facebook/widget/FacebookDialog;->getAttachmentStore()Lcom/facebook/NativeAppCallAttachmentStore;
     invoke-static {}, Lcom/facebook/widget/FacebookDialog;->access$800()Lcom/facebook/NativeAppCallAttachmentStore;
 
     move-result-object v0
@@ -107,7 +107,7 @@
 
     iget-object v2, p0, Lcom/facebook/widget/FacebookDialog$OpenGraphDialogBuilderBase$1;->this$0:Lcom/facebook/widget/FacebookDialog$OpenGraphDialogBuilderBase;
 
-    #getter for: Lcom/facebook/widget/FacebookDialog$OpenGraphDialogBuilderBase;->imageAttachmentFiles:Ljava/util/HashMap;
+    # getter for: Lcom/facebook/widget/FacebookDialog$OpenGraphDialogBuilderBase;->imageAttachmentFiles:Ljava/util/HashMap;
     invoke-static {v2}, Lcom/facebook/widget/FacebookDialog$OpenGraphDialogBuilderBase;->access$900(Lcom/facebook/widget/FacebookDialog$OpenGraphDialogBuilderBase;)Ljava/util/HashMap;
 
     move-result-object v2

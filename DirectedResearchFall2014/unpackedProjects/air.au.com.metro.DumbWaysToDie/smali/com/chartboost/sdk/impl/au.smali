@@ -23,7 +23,7 @@
 
 .method public equals(Ljava/lang/Object;)Z
     .locals 2
-    .parameter "o"
+    .param p1, "o"    # Ljava/lang/Object;
 
     .prologue
     .line 42
@@ -35,17 +35,17 @@
     const/4 v0, 0x0
 
     .line 46
-    .end local p1
+    .end local p1    # "o":Ljava/lang/Object;
     :goto_0
     return v0
 
     .line 45
-    .restart local p1
+    .restart local p1    # "o":Ljava/lang/Object;
     :cond_0
     check-cast p1, Lcom/chartboost/sdk/impl/au;
 
     .line 46
-    .end local p1
+    .end local p1    # "o":Ljava/lang/Object;
     iget-object v0, p0, Lcom/chartboost/sdk/impl/au;->a:Ljava/lang/String;
 
     iget-object v1, p1, Lcom/chartboost/sdk/impl/au;->a:Ljava/lang/String;

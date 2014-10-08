@@ -88,8 +88,6 @@
 
 .method public constructor <init>(Lcom/flurry/android/p;Lcom/flurry/android/AdUnit;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 26
@@ -106,8 +104,6 @@
 # virtual methods
 .method public final a(Landroid/content/Context;Landroid/view/ViewGroup;)V
     .locals 8
-    .parameter
-    .parameter
 
     .prologue
     const/4 v6, 0x1

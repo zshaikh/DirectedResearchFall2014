@@ -48,7 +48,7 @@
 
 .method static responseWithError(Ljava/lang/String;)Lcom/fusepowered/m1/android/MMJSResponse;
     .locals 2
-    .parameter "error"
+    .param p0, "error"    # Ljava/lang/String;
 
     .prologue
     .line 49
@@ -57,7 +57,7 @@
     invoke-direct {v0}, Lcom/fusepowered/m1/android/MMJSResponse;-><init>()V
 
     .line 50
-    .local v0, response:Lcom/fusepowered/m1/android/MMJSResponse;
+    .local v0, "response":Lcom/fusepowered/m1/android/MMJSResponse;
     const/4 v1, 0x0
 
     iput v1, v0, Lcom/fusepowered/m1/android/MMJSResponse;->result:I
@@ -85,7 +85,7 @@
 
 .method static responseWithSuccess(Ljava/lang/String;)Lcom/fusepowered/m1/android/MMJSResponse;
     .locals 2
-    .parameter "success"
+    .param p0, "success"    # Ljava/lang/String;
 
     .prologue
     .line 34
@@ -94,7 +94,7 @@
     invoke-direct {v0}, Lcom/fusepowered/m1/android/MMJSResponse;-><init>()V
 
     .line 35
-    .local v0, response:Lcom/fusepowered/m1/android/MMJSResponse;
+    .local v0, "response":Lcom/fusepowered/m1/android/MMJSResponse;
     const/4 v1, 0x1
 
     iput v1, v0, Lcom/fusepowered/m1/android/MMJSResponse;->result:I
@@ -123,7 +123,7 @@
     invoke-direct {v1}, Lorg/json/JSONObject;-><init>()V
 
     .line 62
-    .local v1, object:Lorg/json/JSONObject;
+    .local v1, "object":Lorg/json/JSONObject;
     iget-object v2, p0, Lcom/fusepowered/m1/android/MMJSResponse;->className:Ljava/lang/String;
 
     if-eqz v2, :cond_0
@@ -176,12 +176,12 @@
 
     move-result-object v2
 
-    .end local v1           #object:Lorg/json/JSONObject;
+    .end local v1    # "object":Lorg/json/JSONObject;
     :goto_1
     return-object v2
 
     .line 69
-    .restart local v1       #object:Lorg/json/JSONObject;
+    .restart local v1    # "object":Lorg/json/JSONObject;
     :cond_2
     :try_start_1
     iget-object v2, p0, Lcom/fusepowered/m1/android/MMJSResponse;->dataResponse:[B
@@ -206,14 +206,14 @@
     goto :goto_0
 
     .line 76
-    .end local v1           #object:Lorg/json/JSONObject;
+    .end local v1    # "object":Lorg/json/JSONObject;
     :catch_0
     move-exception v2
 
     move-object v0, v2
 
     .line 78
-    .local v0, jsonException:Lorg/json/JSONException;
+    .local v0, "jsonException":Lorg/json/JSONException;
     invoke-virtual {v0}, Lorg/json/JSONException;->getMessage()Ljava/lang/String;
 
     move-result-object v2
@@ -228,8 +228,8 @@
     goto :goto_1
 
     .line 74
-    .end local v0           #jsonException:Lorg/json/JSONException;
-    .restart local v1       #object:Lorg/json/JSONObject;
+    .end local v0    # "jsonException":Lorg/json/JSONException;
+    .restart local v1    # "object":Lorg/json/JSONObject;
     :cond_3
     :try_start_2
     const-string v2, ""

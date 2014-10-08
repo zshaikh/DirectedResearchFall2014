@@ -22,9 +22,9 @@
 # direct methods
 .method private constructor <init>(Landroid/content/Context;Landroid/view/View;Lcom/fusepowered/m2/m2l/AdAlertGestureListener;)V
     .locals 1
-    .parameter "context"
-    .parameter "view"
-    .parameter "adAlertGestureListener"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "view"    # Landroid/view/View;
+    .param p3, "adAlertGestureListener"    # Lcom/fusepowered/m2/m2l/AdAlertGestureListener;
 
     .prologue
     .line 58
@@ -47,9 +47,9 @@
 
 .method public constructor <init>(Landroid/content/Context;Landroid/view/View;Lcom/fusepowered/m2/m2l/AdConfiguration;)V
     .locals 1
-    .parameter "context"
-    .parameter "view"
-    .parameter "adConfiguration"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "view"    # Landroid/view/View;
+    .param p3, "adConfiguration"    # Lcom/fusepowered/m2/m2l/AdConfiguration;
 
     .prologue
     .line 54
@@ -65,8 +65,8 @@
 
 .method private isMotionEventInView(Landroid/view/MotionEvent;Landroid/view/View;)Z
     .locals 5
-    .parameter "motionEvent"
-    .parameter "view"
+    .param p1, "motionEvent"    # Landroid/view/MotionEvent;
+    .param p2, "view"    # Landroid/view/View;
 
     .prologue
     const/4 v4, 0x0
@@ -92,13 +92,13 @@
     move-result v0
 
     .line 108
-    .local v0, x:F
+    .local v0, "x":F
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
     move-result v1
 
     .line 110
-    .local v1, y:F
+    .local v1, "y":F
     cmpl-float v2, v0, v3
 
     if-ltz v2, :cond_2
@@ -156,7 +156,7 @@
 
 .method sendTouchEvent(Landroid/view/MotionEvent;)V
     .locals 2
-    .parameter "motionEvent"
+    .param p1, "motionEvent"    # Landroid/view/MotionEvent;
 
     .prologue
     .line 67
@@ -239,7 +239,7 @@
 
 .method setAdAlertGestureListener(Lcom/fusepowered/m2/m2l/AdAlertGestureListener;)V
     .locals 0
-    .parameter "adAlertGestureListener"
+    .param p1, "adAlertGestureListener"    # Lcom/fusepowered/m2/m2l/AdAlertGestureListener;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -253,7 +253,7 @@
 
 .method setUserClickListener(Lcom/fusepowered/m2/m2l/ViewGestureDetector$UserClickListener;)V
     .locals 0
-    .parameter "listener"
+    .param p1, "listener"    # Lcom/fusepowered/m2/m2l/ViewGestureDetector$UserClickListener;
 
     .prologue
     .line 95

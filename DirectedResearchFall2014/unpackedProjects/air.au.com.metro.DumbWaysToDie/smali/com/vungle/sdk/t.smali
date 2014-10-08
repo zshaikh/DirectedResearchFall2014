@@ -51,8 +51,6 @@
 
 .method private static a(ZLjava/lang/String;)Ljava/lang/String;
     .locals 4
-    .parameter
-    .parameter
 
     .prologue
     .line 120
@@ -216,8 +214,6 @@
 
 .method private static a(Ljava/lang/String;Ljava/lang/String;)V
     .locals 3
-    .parameter
-    .parameter
 
     .prologue
     .line 112

@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/adobe/air/RemoteDebuggerListenerDialog;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 94
@@ -39,21 +38,19 @@
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     .line 96
     iget-object v0, p0, Lcom/adobe/air/RemoteDebuggerListenerDialog$2;->this$0:Lcom/adobe/air/RemoteDebuggerListenerDialog;
 
-    #getter for: Lcom/adobe/air/RemoteDebuggerListenerDialog;->mHandler:Landroid/os/Handler;
+    # getter for: Lcom/adobe/air/RemoteDebuggerListenerDialog;->mHandler:Landroid/os/Handler;
     invoke-static {v0}, Lcom/adobe/air/RemoteDebuggerListenerDialog;->access$300(Lcom/adobe/air/RemoteDebuggerListenerDialog;)Landroid/os/Handler;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/adobe/air/RemoteDebuggerListenerDialog$2;->this$0:Lcom/adobe/air/RemoteDebuggerListenerDialog;
 
-    #getter for: Lcom/adobe/air/RemoteDebuggerListenerDialog;->mCheckAgain:Ljava/lang/Runnable;
+    # getter for: Lcom/adobe/air/RemoteDebuggerListenerDialog;->mCheckAgain:Ljava/lang/Runnable;
     invoke-static {v1}, Lcom/adobe/air/RemoteDebuggerListenerDialog;->access$200(Lcom/adobe/air/RemoteDebuggerListenerDialog;)Ljava/lang/Runnable;
 
     move-result-object v1
@@ -63,7 +60,7 @@
     .line 97
     iget-object v0, p0, Lcom/adobe/air/RemoteDebuggerListenerDialog$2;->this$0:Lcom/adobe/air/RemoteDebuggerListenerDialog;
 
-    #calls: Lcom/adobe/air/RemoteDebuggerListenerDialog;->closeListeningDebuggerSocket()V
+    # invokes: Lcom/adobe/air/RemoteDebuggerListenerDialog;->closeListeningDebuggerSocket()V
     invoke-static {v0}, Lcom/adobe/air/RemoteDebuggerListenerDialog;->access$400(Lcom/adobe/air/RemoteDebuggerListenerDialog;)V
 
     .line 98
@@ -71,7 +68,7 @@
 
     iget-object v1, p0, Lcom/adobe/air/RemoteDebuggerListenerDialog$2;->this$0:Lcom/adobe/air/RemoteDebuggerListenerDialog;
 
-    #getter for: Lcom/adobe/air/RemoteDebuggerListenerDialog;->mReceiver:Landroid/content/BroadcastReceiver;
+    # getter for: Lcom/adobe/air/RemoteDebuggerListenerDialog;->mReceiver:Landroid/content/BroadcastReceiver;
     invoke-static {v1}, Lcom/adobe/air/RemoteDebuggerListenerDialog;->access$500(Lcom/adobe/air/RemoteDebuggerListenerDialog;)Landroid/content/BroadcastReceiver;
 
     move-result-object v1
@@ -83,7 +80,7 @@
 
     const/4 v1, 0x0
 
-    #setter for: Lcom/adobe/air/RemoteDebuggerListenerDialog;->mReceiver:Landroid/content/BroadcastReceiver;
+    # setter for: Lcom/adobe/air/RemoteDebuggerListenerDialog;->mReceiver:Landroid/content/BroadcastReceiver;
     invoke-static {v0, v1}, Lcom/adobe/air/RemoteDebuggerListenerDialog;->access$502(Lcom/adobe/air/RemoteDebuggerListenerDialog;Landroid/content/BroadcastReceiver;)Landroid/content/BroadcastReceiver;
 
     .line 100

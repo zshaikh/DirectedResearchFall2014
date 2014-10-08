@@ -22,8 +22,7 @@
 # direct methods
 .method protected constructor <init>(Ljava/lang/Class;Lcom/flurry/org/codehaus/jackson/map/BeanProperty;)V
     .locals 1
-    .parameter
-    .parameter "property"
+    .param p2, "property"    # Lcom/flurry/org/codehaus/jackson/map/BeanProperty;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -36,8 +35,8 @@
 
     .prologue
     .line 27
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/ser/std/StaticListSerializerBase;,"Lcom/flurry/org/codehaus/jackson/map/ser/std/StaticListSerializerBase<TT;>;"
-    .local p1, cls:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/ser/std/StaticListSerializerBase;, "Lcom/flurry/org/codehaus/jackson/map/ser/std/StaticListSerializerBase<TT;>;"
+    .local p1, "cls":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Lcom/flurry/org/codehaus/jackson/map/ser/std/SerializerBase;-><init>(Ljava/lang/Class;Z)V
@@ -56,12 +55,12 @@
 
 .method public getSchema(Lcom/flurry/org/codehaus/jackson/map/SerializerProvider;Ljava/lang/reflect/Type;)Lcom/flurry/org/codehaus/jackson/JsonNode;
     .locals 3
-    .parameter "provider"
-    .parameter "typeHint"
+    .param p1, "provider"    # Lcom/flurry/org/codehaus/jackson/map/SerializerProvider;
+    .param p2, "typeHint"    # Ljava/lang/reflect/Type;
 
     .prologue
     .line 34
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/ser/std/StaticListSerializerBase;,"Lcom/flurry/org/codehaus/jackson/map/ser/std/StaticListSerializerBase<TT;>;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/ser/std/StaticListSerializerBase;, "Lcom/flurry/org/codehaus/jackson/map/ser/std/StaticListSerializerBase<TT;>;"
     const-string v1, "array"
 
     const/4 v2, 0x1
@@ -71,7 +70,7 @@
     move-result-object v0
 
     .line 35
-    .local v0, o:Lcom/flurry/org/codehaus/jackson/node/ObjectNode;
+    .local v0, "o":Lcom/flurry/org/codehaus/jackson/node/ObjectNode;
     const-string v1, "items"
 
     invoke-virtual {p0}, Lcom/flurry/org/codehaus/jackson/map/ser/std/StaticListSerializerBase;->contentSchema()Lcom/flurry/org/codehaus/jackson/JsonNode;

@@ -54,7 +54,7 @@
 
 .method protected static getAttributionId(Landroid/content/ContentResolver;)Ljava/lang/String;
     .locals 10
-    .parameter "contentResolver"
+    .param p0, "contentResolver"    # Landroid/content/ContentResolver;
 
     .prologue
     const/4 v9, 0x0
@@ -65,7 +65,7 @@
     const/4 v6, 0x0
 
     .line 43
-    .local v6, c:Landroid/database/Cursor;
+    .local v6, "c":Landroid/database/Cursor;
     :try_start_0
     sget-object v1, Lcom/fiksu/asotracking/FacebookAttribution;->ATTRIBUTION_ID_CONTENT_URI:Landroid/net/Uri;
 
@@ -88,9 +88,9 @@
 
     invoke-interface {v6}, Landroid/database/Cursor;->moveToFirst()Z
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_1
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result v0
 
@@ -122,9 +122,9 @@
 
     invoke-interface {v6, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Ljava/lang/NullPointerException; {:try_start_1 .. :try_end_1} :catch_0
     .catch Ljava/lang/IllegalStateException; {:try_start_1 .. :try_end_1} :catch_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     move-result-object v0
 
@@ -143,7 +143,7 @@
     move-object v8, v0
 
     .line 50
-    .local v8, nullPointerException:Ljava/lang/NullPointerException;
+    .local v8, "nullPointerException":Ljava/lang/NullPointerException;
     :try_start_2
     const-string v0, "FiksuTracking"
 
@@ -166,14 +166,14 @@
     goto :goto_0
 
     .line 52
-    .end local v8           #nullPointerException:Ljava/lang/NullPointerException;
+    .end local v8    # "nullPointerException":Ljava/lang/NullPointerException;
     :catch_1
     move-exception v0
 
     move-object v7, v0
 
     .line 68
-    .local v7, illegalStateException:Ljava/lang/IllegalStateException;
+    .local v7, "illegalStateException":Ljava/lang/IllegalStateException;
     :try_start_3
     const-string v0, "FiksuTracking"
 
@@ -196,7 +196,7 @@
     goto :goto_0
 
     .line 70
-    .end local v7           #illegalStateException:Ljava/lang/IllegalStateException;
+    .end local v7    # "illegalStateException":Ljava/lang/IllegalStateException;
     :catchall_0
     move-exception v0
 
@@ -213,7 +213,7 @@
 
 .method protected static getAttributionId(Landroid/content/Context;)Ljava/lang/String;
     .locals 1
-    .parameter "context"
+    .param p0, "context"    # Landroid/content/Context;
 
     .prologue
     .line 37

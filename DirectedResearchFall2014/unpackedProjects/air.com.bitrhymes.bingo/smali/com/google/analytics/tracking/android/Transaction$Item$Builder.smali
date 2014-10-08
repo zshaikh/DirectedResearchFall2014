@@ -29,10 +29,10 @@
 # direct methods
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;JJ)V
     .locals 2
-    .parameter "SKU"
-    .parameter "name"
-    .parameter "priceInMicros"
-    .parameter "quantity"
+    .param p1, "SKU"    # Ljava/lang/String;
+    .param p2, "name"    # Ljava/lang/String;
+    .param p3, "priceInMicros"    # J
+    .param p5, "quantity"    # J
 
     .prologue
     .line 258
@@ -95,7 +95,7 @@
 
 .method static synthetic access$1000(Lcom/google/analytics/tracking/android/Transaction$Item$Builder;)Ljava/lang/String;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/google/analytics/tracking/android/Transaction$Item$Builder;
 
     .prologue
     .line 243
@@ -106,7 +106,7 @@
 
 .method static synthetic access$1100(Lcom/google/analytics/tracking/android/Transaction$Item$Builder;)Ljava/lang/String;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/google/analytics/tracking/android/Transaction$Item$Builder;
 
     .prologue
     .line 243
@@ -117,7 +117,7 @@
 
 .method static synthetic access$700(Lcom/google/analytics/tracking/android/Transaction$Item$Builder;)Ljava/lang/String;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/google/analytics/tracking/android/Transaction$Item$Builder;
 
     .prologue
     .line 243
@@ -128,7 +128,7 @@
 
 .method static synthetic access$800(Lcom/google/analytics/tracking/android/Transaction$Item$Builder;)J
     .locals 2
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/google/analytics/tracking/android/Transaction$Item$Builder;
 
     .prologue
     .line 243
@@ -139,7 +139,7 @@
 
 .method static synthetic access$900(Lcom/google/analytics/tracking/android/Transaction$Item$Builder;)J
     .locals 2
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/google/analytics/tracking/android/Transaction$Item$Builder;
 
     .prologue
     .line 243
@@ -166,7 +166,7 @@
 
 .method public setProductCategory(Ljava/lang/String;)Lcom/google/analytics/tracking/android/Transaction$Item$Builder;
     .locals 0
-    .parameter "productCategory"
+    .param p1, "productCategory"    # Ljava/lang/String;
 
     .prologue
     .line 279

@@ -42,8 +42,8 @@
 # direct methods
 .method public constructor <init>(Lcom/flurry/org/codehaus/jackson/io/IOContext;Ljava/io/InputStream;)V
     .locals 3
-    .parameter "ctxt"
-    .parameter "in"
+    .param p1, "ctxt"    # Lcom/flurry/org/codehaus/jackson/io/IOContext;
+    .param p2, "in"    # Ljava/io/InputStream;
 
     .prologue
     const/4 v2, 0x1
@@ -89,10 +89,10 @@
 
 .method public constructor <init>(Lcom/flurry/org/codehaus/jackson/io/IOContext;[BII)V
     .locals 2
-    .parameter "ctxt"
-    .parameter "inputBuffer"
-    .parameter "inputStart"
-    .parameter "inputLen"
+    .param p1, "ctxt"    # Lcom/flurry/org/codehaus/jackson/io/IOContext;
+    .param p2, "inputBuffer"    # [B
+    .param p3, "inputStart"    # I
+    .param p4, "inputLen"    # I
 
     .prologue
     const/4 v1, 0x0
@@ -141,7 +141,7 @@
 
 .method private checkUTF16(I)Z
     .locals 3
-    .parameter "i16"
+    .param p1, "i16"    # I
 
     .prologue
     const/4 v2, 0x1
@@ -190,7 +190,7 @@
 
 .method private checkUTF32(I)Z
     .locals 3
-    .parameter "quad"
+    .param p1, "quad"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -274,7 +274,7 @@
 
 .method private handleBOM(I)Z
     .locals 6
-    .parameter "quad"
+    .param p1, "quad"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -298,7 +298,7 @@
     ushr-int/lit8 v0, p1, 0x10
 
     .line 415
-    .local v0, msw:I
+    .local v0, "msw":I
     const v1, 0xfeff
 
     if-ne v0, v1, :cond_0
@@ -319,7 +319,7 @@
     move v1, v3
 
     .line 434
-    .end local v0           #msw:I
+    .end local v0    # "msw":I
     :goto_1
     return v1
 
@@ -376,7 +376,7 @@
     goto :goto_0
 
     .line 421
-    .restart local v0       #msw:I
+    .restart local v0    # "msw":I
     :cond_0
     const v1, 0xfffe
 
@@ -446,7 +446,7 @@
 
 .method public static hasJSONFormat(Lcom/flurry/org/codehaus/jackson/format/InputAccessor;)Lcom/flurry/org/codehaus/jackson/format/MatchStrength;
     .locals 9
-    .parameter "acc"
+    .param p0, "acc"    # Lcom/flurry/org/codehaus/jackson/format/InputAccessor;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -483,7 +483,7 @@
     move-result v0
 
     .line 265
-    .local v0, b:B
+    .local v0, "b":B
     const/16 v3, -0x11
 
     if-ne v0, v3, :cond_6
@@ -569,7 +569,7 @@
     move-result v1
 
     .line 285
-    .local v1, ch:I
+    .local v1, "ch":I
     if-gez v1, :cond_7
 
     .line 286
@@ -658,7 +658,7 @@
     sget-object v2, Lcom/flurry/org/codehaus/jackson/format/MatchStrength;->WEAK_MATCH:Lcom/flurry/org/codehaus/jackson/format/MatchStrength;
 
     .line 318
-    .local v2, strength:Lcom/flurry/org/codehaus/jackson/format/MatchStrength;
+    .local v2, "strength":Lcom/flurry/org/codehaus/jackson/format/MatchStrength;
     if-ne v1, v5, :cond_10
 
     move-object v3, v2
@@ -765,7 +765,7 @@
 
 .method private reportWeirdUCS4(Ljava/lang/String;)V
     .locals 3
-    .parameter "type"
+    .param p1, "type"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -807,7 +807,7 @@
 
 .method private static final skipSpace(Lcom/flurry/org/codehaus/jackson/format/InputAccessor;)I
     .locals 1
-    .parameter "acc"
+    .param p0, "acc"    # Lcom/flurry/org/codehaus/jackson/format/InputAccessor;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -843,8 +843,8 @@
 
 .method private static final skipSpace(Lcom/flurry/org/codehaus/jackson/format/InputAccessor;B)I
     .locals 2
-    .parameter "acc"
-    .parameter "b"
+    .param p0, "acc"    # Lcom/flurry/org/codehaus/jackson/format/InputAccessor;
+    .param p1, "b"    # B
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -857,7 +857,7 @@
     and-int/lit16 v0, p1, 0xff
 
     .line 370
-    .local v0, ch:I
+    .local v0, "ch":I
     const/16 v1, 0x20
 
     if-eq v0, v1, :cond_0
@@ -908,9 +908,9 @@
 
 .method private static final tryMatch(Lcom/flurry/org/codehaus/jackson/format/InputAccessor;Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/format/MatchStrength;)Lcom/flurry/org/codehaus/jackson/format/MatchStrength;
     .locals 4
-    .parameter "acc"
-    .parameter "matchStr"
-    .parameter "fullMatchStrength"
+    .param p0, "acc"    # Lcom/flurry/org/codehaus/jackson/format/InputAccessor;
+    .param p1, "matchStr"    # Ljava/lang/String;
+    .param p2, "fullMatchStrength"    # Lcom/flurry/org/codehaus/jackson/format/MatchStrength;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -921,12 +921,12 @@
     .line 347
     const/4 v0, 0x0
 
-    .local v0, i:I
+    .local v0, "i":I
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v1
 
-    .local v1, len:I
+    .local v1, "len":I
     :goto_0
     if-ge v0, v1, :cond_2
 
@@ -978,10 +978,10 @@
 # virtual methods
 .method public constructParser(ILcom/flurry/org/codehaus/jackson/ObjectCodec;Lcom/flurry/org/codehaus/jackson/sym/BytesToNameCanonicalizer;Lcom/flurry/org/codehaus/jackson/sym/CharsToNameCanonicalizer;)Lcom/flurry/org/codehaus/jackson/JsonParser;
     .locals 18
-    .parameter "features"
-    .parameter "codec"
-    .parameter "rootByteSymbols"
-    .parameter "rootCharSymbols"
+    .param p1, "features"    # I
+    .param p2, "codec"    # Lcom/flurry/org/codehaus/jackson/ObjectCodec;
+    .param p3, "rootByteSymbols"    # Lcom/flurry/org/codehaus/jackson/sym/BytesToNameCanonicalizer;
+    .param p4, "rootCharSymbols"    # Lcom/flurry/org/codehaus/jackson/sym/CharsToNameCanonicalizer;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -996,7 +996,7 @@
     move-result-object v16
 
     .line 227
-    .local v16, enc:Lcom/flurry/org/codehaus/jackson/JsonEncoding;
+    .local v16, "enc":Lcom/flurry/org/codehaus/jackson/JsonEncoding;
     sget-object v3, Lcom/flurry/org/codehaus/jackson/JsonParser$Feature;->CANONICALIZE_FIELD_NAMES:Lcom/flurry/org/codehaus/jackson/JsonParser$Feature;
 
     move-object v0, v3
@@ -1008,7 +1008,7 @@
     move-result v15
 
     .line 228
-    .local v15, canonicalize:Z
+    .local v15, "canonicalize":Z
     sget-object v3, Lcom/flurry/org/codehaus/jackson/JsonParser$Feature;->INTERN_FIELD_NAMES:Lcom/flurry/org/codehaus/jackson/JsonParser$Feature;
 
     move-object v0, v3
@@ -1020,7 +1020,7 @@
     move-result v17
 
     .line 229
-    .local v17, intern:Z
+    .local v17, "intern":Z
     sget-object v3, Lcom/flurry/org/codehaus/jackson/JsonEncoding;->UTF8:Lcom/flurry/org/codehaus/jackson/JsonEncoding;
 
     move-object/from16 v0, v16
@@ -1044,7 +1044,7 @@
     move-result-object v8
 
     .line 235
-    .local v8, can:Lcom/flurry/org/codehaus/jackson/sym/BytesToNameCanonicalizer;
+    .local v8, "can":Lcom/flurry/org/codehaus/jackson/sym/BytesToNameCanonicalizer;
     new-instance v3, Lcom/flurry/org/codehaus/jackson/impl/Utf8StreamParser;
 
     move-object/from16 v0, p0
@@ -1090,7 +1090,7 @@
     invoke-direct/range {v3 .. v12}, Lcom/flurry/org/codehaus/jackson/impl/Utf8StreamParser;-><init>(Lcom/flurry/org/codehaus/jackson/io/IOContext;ILjava/io/InputStream;Lcom/flurry/org/codehaus/jackson/ObjectCodec;Lcom/flurry/org/codehaus/jackson/sym/BytesToNameCanonicalizer;[BIIZ)V
 
     .line 238
-    .end local v8           #can:Lcom/flurry/org/codehaus/jackson/sym/BytesToNameCanonicalizer;
+    .end local v8    # "can":Lcom/flurry/org/codehaus/jackson/sym/BytesToNameCanonicalizer;
     :goto_0
     return-object v3
 
@@ -1145,7 +1145,7 @@
     move-result-object v7
 
     .line 192
-    .local v7, enc:Lcom/flurry/org/codehaus/jackson/JsonEncoding;
+    .local v7, "enc":Lcom/flurry/org/codehaus/jackson/JsonEncoding;
     sget-object v1, Lcom/flurry/org/codehaus/jackson/impl/ByteSourceBootstrapper$1;->$SwitchMap$org$codehaus$jackson$JsonEncoding:[I
 
     invoke-virtual {v7}, Lcom/flurry/org/codehaus/jackson/JsonEncoding;->ordinal()I
@@ -1202,7 +1202,7 @@
     iget-object v2, p0, Lcom/flurry/org/codehaus/jackson/impl/ByteSourceBootstrapper;->_in:Ljava/io/InputStream;
 
     .line 205
-    .local v2, in:Ljava/io/InputStream;
+    .local v2, "in":Ljava/io/InputStream;
     if-nez v2, :cond_0
 
     .line 206
@@ -1217,8 +1217,8 @@
     invoke-direct {v0, v1, v3, v4}, Ljava/io/ByteArrayInputStream;-><init>([BII)V
 
     .line 215
-    .end local v2           #in:Ljava/io/InputStream;
-    .local v0, in:Ljava/io/InputStream;
+    .end local v2    # "in":Ljava/io/InputStream;
+    .local v0, "in":Ljava/io/InputStream;
     :goto_1
     new-instance v1, Ljava/io/InputStreamReader;
 
@@ -1231,8 +1231,8 @@
     goto :goto_0
 
     .line 211
-    .end local v0           #in:Ljava/io/InputStream;
-    .restart local v2       #in:Ljava/io/InputStream;
+    .end local v0    # "in":Ljava/io/InputStream;
+    .restart local v2    # "in":Ljava/io/InputStream;
     :cond_0
     iget v1, p0, Lcom/flurry/org/codehaus/jackson/impl/ByteSourceBootstrapper;->_inputPtr:I
 
@@ -1253,17 +1253,17 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/flurry/org/codehaus/jackson/io/MergedStream;-><init>(Lcom/flurry/org/codehaus/jackson/io/IOContext;Ljava/io/InputStream;[BII)V
 
-    .end local v2           #in:Ljava/io/InputStream;
-    .restart local v0       #in:Ljava/io/InputStream;
+    .end local v2    # "in":Ljava/io/InputStream;
+    .restart local v0    # "in":Ljava/io/InputStream;
     goto :goto_1
 
-    .end local v0           #in:Ljava/io/InputStream;
-    .restart local v2       #in:Ljava/io/InputStream;
+    .end local v0    # "in":Ljava/io/InputStream;
+    .restart local v2    # "in":Ljava/io/InputStream;
     :cond_1
     move-object v0, v2
 
-    .end local v2           #in:Ljava/io/InputStream;
-    .restart local v0       #in:Ljava/io/InputStream;
+    .end local v2    # "in":Ljava/io/InputStream;
+    .restart local v0    # "in":Ljava/io/InputStream;
     goto :goto_1
 
     .line 192
@@ -1293,7 +1293,7 @@
     const/4 v1, 0x0
 
     .line 129
-    .local v1, foundEncoding:Z
+    .local v1, "foundEncoding":Z
     const/4 v4, 0x4
 
     invoke-virtual {p0, v4}, Lcom/flurry/org/codehaus/jackson/impl/ByteSourceBootstrapper;->ensureLoaded(I)Z
@@ -1352,7 +1352,7 @@
     or-int v3, v4, v5
 
     .line 135
-    .local v3, quad:I
+    .local v3, "quad":I
     invoke-direct {p0, v3}, Lcom/flurry/org/codehaus/jackson/impl/ByteSourceBootstrapper;->handleBOM(I)Z
 
     move-result v4
@@ -1363,7 +1363,7 @@
     const/4 v1, 0x1
 
     .line 161
-    .end local v3           #quad:I
+    .end local v3    # "quad":I
     :cond_0
     :goto_0
     if-nez v1, :cond_4
@@ -1372,7 +1372,7 @@
     sget-object v0, Lcom/flurry/org/codehaus/jackson/JsonEncoding;->UTF8:Lcom/flurry/org/codehaus/jackson/JsonEncoding;
 
     .line 178
-    .local v0, enc:Lcom/flurry/org/codehaus/jackson/JsonEncoding;
+    .local v0, "enc":Lcom/flurry/org/codehaus/jackson/JsonEncoding;
     :goto_1
     iget-object v4, p0, Lcom/flurry/org/codehaus/jackson/impl/ByteSourceBootstrapper;->_context:Lcom/flurry/org/codehaus/jackson/io/IOContext;
 
@@ -1382,8 +1382,8 @@
     return-object v0
 
     .line 144
-    .end local v0           #enc:Lcom/flurry/org/codehaus/jackson/JsonEncoding;
-    .restart local v3       #quad:I
+    .end local v0    # "enc":Lcom/flurry/org/codehaus/jackson/JsonEncoding;
+    .restart local v3    # "quad":I
     :cond_1
     invoke-direct {p0, v3}, Lcom/flurry/org/codehaus/jackson/impl/ByteSourceBootstrapper;->checkUTF32(I)Z
 
@@ -1412,7 +1412,7 @@
     goto :goto_0
 
     .line 150
-    .end local v3           #quad:I
+    .end local v3    # "quad":I
     :cond_3
     const/4 v4, 0x2
 
@@ -1446,7 +1446,7 @@
     or-int v2, v4, v5
 
     .line 153
-    .local v2, i16:I
+    .local v2, "i16":I
     invoke-direct {p0, v2}, Lcom/flurry/org/codehaus/jackson/impl/ByteSourceBootstrapper;->checkUTF16(I)Z
 
     move-result v4
@@ -1459,7 +1459,7 @@
     goto :goto_0
 
     .line 164
-    .end local v2           #i16:I
+    .end local v2    # "i16":I
     :cond_4
     iget v4, p0, Lcom/flurry/org/codehaus/jackson/impl/ByteSourceBootstrapper;->_bytesPerChar:I
 
@@ -1480,11 +1480,11 @@
     sget-object v0, Lcom/flurry/org/codehaus/jackson/JsonEncoding;->UTF8:Lcom/flurry/org/codehaus/jackson/JsonEncoding;
 
     .line 167
-    .restart local v0       #enc:Lcom/flurry/org/codehaus/jackson/JsonEncoding;
+    .restart local v0    # "enc":Lcom/flurry/org/codehaus/jackson/JsonEncoding;
     goto :goto_1
 
     .line 169
-    .end local v0           #enc:Lcom/flurry/org/codehaus/jackson/JsonEncoding;
+    .end local v0    # "enc":Lcom/flurry/org/codehaus/jackson/JsonEncoding;
     :pswitch_2
     iget-boolean v4, p0, Lcom/flurry/org/codehaus/jackson/impl/ByteSourceBootstrapper;->_bigEndian:Z
 
@@ -1495,12 +1495,12 @@
     move-object v0, v4
 
     .line 170
-    .restart local v0       #enc:Lcom/flurry/org/codehaus/jackson/JsonEncoding;
+    .restart local v0    # "enc":Lcom/flurry/org/codehaus/jackson/JsonEncoding;
     :goto_2
     goto :goto_1
 
     .line 169
-    .end local v0           #enc:Lcom/flurry/org/codehaus/jackson/JsonEncoding;
+    .end local v0    # "enc":Lcom/flurry/org/codehaus/jackson/JsonEncoding;
     :cond_5
     sget-object v4, Lcom/flurry/org/codehaus/jackson/JsonEncoding;->UTF16_LE:Lcom/flurry/org/codehaus/jackson/JsonEncoding;
 
@@ -1519,12 +1519,12 @@
     move-object v0, v4
 
     .line 173
-    .restart local v0       #enc:Lcom/flurry/org/codehaus/jackson/JsonEncoding;
+    .restart local v0    # "enc":Lcom/flurry/org/codehaus/jackson/JsonEncoding;
     :goto_3
     goto :goto_1
 
     .line 172
-    .end local v0           #enc:Lcom/flurry/org/codehaus/jackson/JsonEncoding;
+    .end local v0    # "enc":Lcom/flurry/org/codehaus/jackson/JsonEncoding;
     :cond_6
     sget-object v4, Lcom/flurry/org/codehaus/jackson/JsonEncoding;->UTF32_LE:Lcom/flurry/org/codehaus/jackson/JsonEncoding;
 
@@ -1544,7 +1544,7 @@
 
 .method protected ensureLoaded(I)Z
     .locals 8
-    .parameter "minimum"
+    .param p1, "minimum"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -1562,7 +1562,7 @@
     sub-int v1, v2, v3
 
     .line 501
-    .local v1, gotten:I
+    .local v1, "gotten":I
     :goto_0
     if-ge v1, p1, :cond_2
 
@@ -1575,7 +1575,7 @@
     const/4 v0, -0x1
 
     .line 509
-    .local v0, count:I
+    .local v0, "count":I
     :goto_1
     if-ge v0, v7, :cond_1
 
@@ -1583,7 +1583,7 @@
     const/4 v2, 0x0
 
     .line 515
-    .end local v0           #count:I
+    .end local v0    # "count":I
     :goto_2
     return v2
 
@@ -1607,7 +1607,7 @@
 
     move-result v0
 
-    .restart local v0       #count:I
+    .restart local v0    # "count":I
     goto :goto_1
 
     .line 512
@@ -1624,7 +1624,7 @@
     .line 514
     goto :goto_0
 
-    .end local v0           #count:I
+    .end local v0    # "count":I
     :cond_2
     move v2, v7
 

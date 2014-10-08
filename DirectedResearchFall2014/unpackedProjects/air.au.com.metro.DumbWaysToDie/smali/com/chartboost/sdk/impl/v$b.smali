@@ -21,8 +21,6 @@
 # direct methods
 .method public constructor <init>(Lcom/chartboost/sdk/impl/v;Landroid/content/Context;)V
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     const/4 v1, -0x1
@@ -62,8 +60,8 @@
 # virtual methods
 .method public onKeyDown(ILandroid/view/KeyEvent;)Z
     .locals 1
-    .parameter "keyCode"
-    .parameter "event"
+    .param p1, "keyCode"    # I
+    .param p2, "event"    # Landroid/view/KeyEvent;
 
     .prologue
     .line 78

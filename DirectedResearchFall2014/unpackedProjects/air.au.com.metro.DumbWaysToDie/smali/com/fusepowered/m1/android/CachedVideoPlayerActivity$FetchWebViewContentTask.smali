@@ -36,8 +36,7 @@
 # direct methods
 .method public constructor <init>(Lcom/fusepowered/m1/android/CachedVideoPlayerActivity;Ljava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter "baseUrl"
+    .param p2, "baseUrl"    # Ljava/lang/String;
 
     .prologue
     .line 773
@@ -56,13 +55,13 @@
 # virtual methods
 .method protected bridge synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
-    .parameter "x0"
+    .param p1, "x0"    # [Ljava/lang/Object;
 
     .prologue
     .line 766
     check-cast p1, [Ljava/lang/Void;
 
-    .end local p1
+    .end local p1    # "x0":[Ljava/lang/Object;
     invoke-virtual {p0, p1}, Lcom/fusepowered/m1/android/CachedVideoPlayerActivity$FetchWebViewContentTask;->doInBackground([Ljava/lang/Void;)Ljava/lang/String;
 
     move-result-object v0
@@ -72,7 +71,7 @@
 
 .method protected varargs doInBackground([Ljava/lang/Void;)Ljava/lang/String;
     .locals 7
-    .parameter "arg0"
+    .param p1, "arg0"    # [Ljava/lang/Void;
 
     .prologue
     .line 796
@@ -88,13 +87,13 @@
     move-result-object v2
 
     .line 797
-    .local v2, httpResponse:Lorg/apache/http/HttpResponse;
+    .local v2, "httpResponse":Lorg/apache/http/HttpResponse;
     invoke-interface {v2}, Lorg/apache/http/HttpResponse;->getStatusLine()Lorg/apache/http/StatusLine;
 
     move-result-object v3
 
     .line 798
-    .local v3, statusLine:Lorg/apache/http/StatusLine;
+    .local v3, "statusLine":Lorg/apache/http/StatusLine;
     if-eqz v2, :cond_0
 
     if-eqz v3, :cond_0
@@ -113,7 +112,7 @@
     move-result-object v1
 
     .line 802
-    .local v1, httpEntity:Lorg/apache/http/HttpEntity;
+    .local v1, "httpEntity":Lorg/apache/http/HttpEntity;
     if-eqz v1, :cond_1
 
     .line 804
@@ -125,20 +124,20 @@
 
     move-result-object v4
 
-    .local v4, webContent:Ljava/lang/String;
+    .local v4, "webContent":Ljava/lang/String;
     move-object v5, v4
 
     .line 818
-    .end local v1           #httpEntity:Lorg/apache/http/HttpEntity;
-    .end local v2           #httpResponse:Lorg/apache/http/HttpResponse;
-    .end local v3           #statusLine:Lorg/apache/http/StatusLine;
-    .end local v4           #webContent:Ljava/lang/String;
+    .end local v1    # "httpEntity":Lorg/apache/http/HttpEntity;
+    .end local v2    # "httpResponse":Lorg/apache/http/HttpResponse;
+    .end local v3    # "statusLine":Lorg/apache/http/StatusLine;
+    .end local v4    # "webContent":Ljava/lang/String;
     :goto_0
     return-object v5
 
     .line 811
-    .restart local v2       #httpResponse:Lorg/apache/http/HttpResponse;
-    .restart local v3       #statusLine:Lorg/apache/http/StatusLine;
+    .restart local v2    # "httpResponse":Lorg/apache/http/HttpResponse;
+    .restart local v3    # "statusLine":Lorg/apache/http/StatusLine;
     :cond_0
     const/4 v5, 0x1
 
@@ -147,8 +146,8 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 818
-    .end local v2           #httpResponse:Lorg/apache/http/HttpResponse;
-    .end local v3           #statusLine:Lorg/apache/http/StatusLine;
+    .end local v2    # "httpResponse":Lorg/apache/http/HttpResponse;
+    .end local v3    # "statusLine":Lorg/apache/http/StatusLine;
     :cond_1
     :goto_1
     const/4 v5, 0x0
@@ -162,7 +161,7 @@
     move-object v0, v5
 
     .line 816
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_1
@@ -170,13 +169,13 @@
 
 .method protected bridge synthetic onPostExecute(Ljava/lang/Object;)V
     .locals 0
-    .parameter "x0"
+    .param p1, "x0"    # Ljava/lang/Object;
 
     .prologue
     .line 766
     check-cast p1, Ljava/lang/String;
 
-    .end local p1
+    .end local p1    # "x0":Ljava/lang/Object;
     invoke-virtual {p0, p1}, Lcom/fusepowered/m1/android/CachedVideoPlayerActivity$FetchWebViewContentTask;->onPostExecute(Ljava/lang/String;)V
 
     return-void
@@ -184,7 +183,7 @@
 
 .method protected onPostExecute(Ljava/lang/String;)V
     .locals 3
-    .parameter "webContent"
+    .param p1, "webContent"    # Ljava/lang/String;
 
     .prologue
     .line 780
@@ -203,7 +202,7 @@
 
     iget-object v0, p0, Lcom/fusepowered/m1/android/CachedVideoPlayerActivity$FetchWebViewContentTask;->this$0:Lcom/fusepowered/m1/android/CachedVideoPlayerActivity;
 
-    #getter for: Lcom/fusepowered/m1/android/CachedVideoPlayerActivity;->mWebView:Lcom/fusepowered/m1/android/MMWebView;
+    # getter for: Lcom/fusepowered/m1/android/CachedVideoPlayerActivity;->mWebView:Lcom/fusepowered/m1/android/MMWebView;
     invoke-static {v0}, Lcom/fusepowered/m1/android/CachedVideoPlayerActivity;->access$100(Lcom/fusepowered/m1/android/CachedVideoPlayerActivity;)Lcom/fusepowered/m1/android/MMWebView;
 
     move-result-object v0
@@ -213,7 +212,7 @@
     .line 786
     iget-object v0, p0, Lcom/fusepowered/m1/android/CachedVideoPlayerActivity$FetchWebViewContentTask;->this$0:Lcom/fusepowered/m1/android/CachedVideoPlayerActivity;
 
-    #getter for: Lcom/fusepowered/m1/android/CachedVideoPlayerActivity;->mWebView:Lcom/fusepowered/m1/android/MMWebView;
+    # getter for: Lcom/fusepowered/m1/android/CachedVideoPlayerActivity;->mWebView:Lcom/fusepowered/m1/android/MMWebView;
     invoke-static {v0}, Lcom/fusepowered/m1/android/CachedVideoPlayerActivity;->access$100(Lcom/fusepowered/m1/android/CachedVideoPlayerActivity;)Lcom/fusepowered/m1/android/MMWebView;
 
     move-result-object v0

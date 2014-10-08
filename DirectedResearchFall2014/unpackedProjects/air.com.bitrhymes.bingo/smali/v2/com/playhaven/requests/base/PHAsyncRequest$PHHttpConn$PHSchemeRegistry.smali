@@ -40,7 +40,7 @@
 # virtual methods
 .method public get(Ljava/lang/String;)Lorg/apache/http/conn/scheme/Scheme;
     .locals 1
-    .parameter "name"
+    .param p1, "name"    # Ljava/lang/String;
 
     .prologue
     .line 127

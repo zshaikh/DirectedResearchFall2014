@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/bitrhyms/tapjoylib/ShowOffers;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1
@@ -52,7 +51,7 @@
     .line 35
     iget-object v0, p0, Lcom/bitrhyms/tapjoylib/ShowOffers$1;->this$0:Lcom/bitrhyms/tapjoylib/ShowOffers;
 
-    #getter for: Lcom/bitrhyms/tapjoylib/ShowOffers;->mContext:Lcom/adobe/fre/FREContext;
+    # getter for: Lcom/bitrhyms/tapjoylib/ShowOffers;->mContext:Lcom/adobe/fre/FREContext;
     invoke-static {v0}, Lcom/bitrhyms/tapjoylib/ShowOffers;->access$0(Lcom/bitrhyms/tapjoylib/ShowOffers;)Lcom/adobe/fre/FREContext;
 
     move-result-object v0
@@ -69,7 +68,7 @@
 
 .method public getOffersResponseFailed(Ljava/lang/String;)V
     .locals 3
-    .parameter "arg0"
+    .param p1, "arg0"    # Ljava/lang/String;
 
     .prologue
     .line 28
@@ -82,7 +81,7 @@
     .line 29
     iget-object v0, p0, Lcom/bitrhyms/tapjoylib/ShowOffers$1;->this$0:Lcom/bitrhyms/tapjoylib/ShowOffers;
 
-    #getter for: Lcom/bitrhyms/tapjoylib/ShowOffers;->mContext:Lcom/adobe/fre/FREContext;
+    # getter for: Lcom/bitrhyms/tapjoylib/ShowOffers;->mContext:Lcom/adobe/fre/FREContext;
     invoke-static {v0}, Lcom/bitrhyms/tapjoylib/ShowOffers;->access$0(Lcom/bitrhyms/tapjoylib/ShowOffers;)Lcom/adobe/fre/FREContext;
 
     move-result-object v0

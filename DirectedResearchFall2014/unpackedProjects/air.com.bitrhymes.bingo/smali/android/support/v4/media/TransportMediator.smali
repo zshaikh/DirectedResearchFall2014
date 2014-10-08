@@ -59,8 +59,8 @@
 # direct methods
 .method public constructor <init>(Landroid/app/Activity;Landroid/support/v4/media/TransportPerformer;)V
     .locals 1
-    .parameter "activity"
-    .parameter "callbacks"
+    .param p1, "activity"    # Landroid/app/Activity;
+    .param p2, "callbacks"    # Landroid/support/v4/media/TransportPerformer;
 
     .prologue
     .line 152
@@ -74,9 +74,9 @@
 
 .method private constructor <init>(Landroid/app/Activity;Landroid/view/View;Landroid/support/v4/media/TransportPerformer;)V
     .locals 5
-    .parameter "activity"
-    .parameter "view"
-    .parameter "callbacks"
+    .param p1, "activity"    # Landroid/app/Activity;
+    .param p2, "view"    # Landroid/view/View;
+    .param p3, "callbacks"    # Landroid/support/v4/media/TransportPerformer;
 
     .prologue
     .line 159
@@ -201,8 +201,8 @@
 
 .method public constructor <init>(Landroid/view/View;Landroid/support/v4/media/TransportPerformer;)V
     .locals 1
-    .parameter "view"
-    .parameter "callbacks"
+    .param p1, "view"    # Landroid/view/View;
+    .param p2, "callbacks"    # Landroid/support/v4/media/TransportPerformer;
 
     .prologue
     .line 156
@@ -245,7 +245,7 @@
     new-array v0, v1, [Landroid/support/v4/media/TransportStateListener;
 
     .line 216
-    .local v0, listeners:[Landroid/support/v4/media/TransportStateListener;
+    .local v0, "listeners":[Landroid/support/v4/media/TransportStateListener;
     iget-object v1, p0, Landroid/support/v4/media/TransportMediator;->mListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
@@ -258,7 +258,7 @@
 
 .method static isMediaKey(I)Z
     .locals 1
-    .parameter "keyCode"
+    .param p0, "keyCode"    # I
 
     .prologue
     .line 112
@@ -342,26 +342,26 @@
     move-result-object v4
 
     .line 222
-    .local v4, listeners:[Landroid/support/v4/media/TransportStateListener;
+    .local v4, "listeners":[Landroid/support/v4/media/TransportStateListener;
     if-eqz v4, :cond_0
 
     .line 223
     move-object v0, v4
 
-    .local v0, arr$:[Landroid/support/v4/media/TransportStateListener;
+    .local v0, "arr$":[Landroid/support/v4/media/TransportStateListener;
     array-length v2, v0
 
-    .local v2, len$:I
+    .local v2, "len$":I
     const/4 v1, 0x0
 
-    .local v1, i$:I
+    .local v1, "i$":I
     :goto_0
     if-ge v1, v2, :cond_0
 
     aget-object v3, v0, v1
 
     .line 224
-    .local v3, listener:Landroid/support/v4/media/TransportStateListener;
+    .local v3, "listener":Landroid/support/v4/media/TransportStateListener;
     invoke-virtual {v3, p0}, Landroid/support/v4/media/TransportStateListener;->onPlayingChanged(Landroid/support/v4/media/TransportController;)V
 
     .line 223
@@ -370,10 +370,10 @@
     goto :goto_0
 
     .line 227
-    .end local v0           #arr$:[Landroid/support/v4/media/TransportStateListener;
-    .end local v1           #i$:I
-    .end local v2           #len$:I
-    .end local v3           #listener:Landroid/support/v4/media/TransportStateListener;
+    .end local v0    # "arr$":[Landroid/support/v4/media/TransportStateListener;
+    .end local v1    # "i$":I
+    .end local v2    # "len$":I
+    .end local v3    # "listener":Landroid/support/v4/media/TransportStateListener;
     :cond_0
     return-void
 .end method
@@ -388,26 +388,26 @@
     move-result-object v4
 
     .line 231
-    .local v4, listeners:[Landroid/support/v4/media/TransportStateListener;
+    .local v4, "listeners":[Landroid/support/v4/media/TransportStateListener;
     if-eqz v4, :cond_0
 
     .line 232
     move-object v0, v4
 
-    .local v0, arr$:[Landroid/support/v4/media/TransportStateListener;
+    .local v0, "arr$":[Landroid/support/v4/media/TransportStateListener;
     array-length v2, v0
 
-    .local v2, len$:I
+    .local v2, "len$":I
     const/4 v1, 0x0
 
-    .local v1, i$:I
+    .local v1, "i$":I
     :goto_0
     if-ge v1, v2, :cond_0
 
     aget-object v3, v0, v1
 
     .line 233
-    .local v3, listener:Landroid/support/v4/media/TransportStateListener;
+    .local v3, "listener":Landroid/support/v4/media/TransportStateListener;
     invoke-virtual {v3, p0}, Landroid/support/v4/media/TransportStateListener;->onTransportControlsChanged(Landroid/support/v4/media/TransportController;)V
 
     .line 232
@@ -416,10 +416,10 @@
     goto :goto_0
 
     .line 236
-    .end local v0           #arr$:[Landroid/support/v4/media/TransportStateListener;
-    .end local v1           #i$:I
-    .end local v2           #len$:I
-    .end local v3           #listener:Landroid/support/v4/media/TransportStateListener;
+    .end local v0    # "arr$":[Landroid/support/v4/media/TransportStateListener;
+    .end local v1    # "i$":I
+    .end local v2    # "len$":I
+    .end local v3    # "listener":Landroid/support/v4/media/TransportStateListener;
     :cond_0
     return-void
 .end method
@@ -441,7 +441,7 @@
 
 .method public dispatchKeyEvent(Landroid/view/KeyEvent;)Z
     .locals 2
-    .parameter "event"
+    .param p1, "event"    # Landroid/view/KeyEvent;
 
     .prologue
     .line 200
@@ -599,7 +599,7 @@
 
 .method public registerStateListener(Landroid/support/v4/media/TransportStateListener;)V
     .locals 1
-    .parameter "listener"
+    .param p1, "listener"    # Landroid/support/v4/media/TransportStateListener;
 
     .prologue
     .line 204
@@ -613,7 +613,7 @@
 
 .method public seekTo(J)V
     .locals 1
-    .parameter "pos"
+    .param p1, "pos"    # J
 
     .prologue
     .line 306
@@ -687,7 +687,7 @@
 
 .method public unregisterStateListener(Landroid/support/v4/media/TransportStateListener;)V
     .locals 1
-    .parameter "listener"
+    .param p1, "listener"    # Landroid/support/v4/media/TransportStateListener;
 
     .prologue
     .line 208

@@ -32,7 +32,7 @@
 
 .method synthetic constructor <init>(Lcom/fusepowered/m1/android/BridgeMMSpeechkit$1;)V
     .locals 0
-    .parameter "x0"
+    .param p1, "x0"    # Lcom/fusepowered/m1/android/BridgeMMSpeechkit$1;
 
     .prologue
     .line 359
@@ -43,7 +43,7 @@
 
 .method static synthetic access$000(Lcom/fusepowered/m1/android/BridgeMMSpeechkit$SpeechKitHolder;)Lcom/fusepowered/m1/android/NVASpeechKit;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/fusepowered/m1/android/BridgeMMSpeechkit$SpeechKitHolder;
 
     .prologue
     .line 359
@@ -54,8 +54,8 @@
 
 .method static synthetic access$002(Lcom/fusepowered/m1/android/BridgeMMSpeechkit$SpeechKitHolder;Lcom/fusepowered/m1/android/NVASpeechKit;)Lcom/fusepowered/m1/android/NVASpeechKit;
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
+    .param p0, "x0"    # Lcom/fusepowered/m1/android/BridgeMMSpeechkit$SpeechKitHolder;
+    .param p1, "x1"    # Lcom/fusepowered/m1/android/NVASpeechKit;
 
     .prologue
     .line 359
@@ -108,7 +108,7 @@
 
 .method public setSpeechKit(Lcom/fusepowered/m1/android/NVASpeechKit;)V
     .locals 0
-    .parameter "speechKit"
+    .param p1, "speechKit"    # Lcom/fusepowered/m1/android/NVASpeechKit;
 
     .prologue
     .line 399

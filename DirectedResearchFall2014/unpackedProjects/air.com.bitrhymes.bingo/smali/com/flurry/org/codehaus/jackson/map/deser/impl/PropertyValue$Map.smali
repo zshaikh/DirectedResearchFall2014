@@ -21,9 +21,9 @@
 # direct methods
 .method public constructor <init>(Lcom/flurry/org/codehaus/jackson/map/deser/impl/PropertyValue;Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 0
-    .parameter "next"
-    .parameter "value"
-    .parameter "key"
+    .param p1, "next"    # Lcom/flurry/org/codehaus/jackson/map/deser/impl/PropertyValue;
+    .param p2, "value"    # Ljava/lang/Object;
+    .param p3, "key"    # Ljava/lang/Object;
 
     .prologue
     .line 104
@@ -40,7 +40,7 @@
 # virtual methods
 .method public assign(Ljava/lang/Object;)V
     .locals 2
-    .parameter "bean"
+    .param p1, "bean"    # Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -52,7 +52,7 @@
     .line 113
     check-cast p1, Ljava/util/Map;
 
-    .end local p1
+    .end local p1    # "bean":Ljava/lang/Object;
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/map/deser/impl/PropertyValue$Map;->_key:Ljava/lang/Object;
 
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/map/deser/impl/PropertyValue$Map;->value:Ljava/lang/Object;

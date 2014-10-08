@@ -19,8 +19,8 @@
 # direct methods
 .method public constructor <init>(Lcom/adobe/fre/FREContext;Lcom/google/ads/InterstitialAd;)V
     .locals 0
-    .parameter "contextObj"
-    .parameter "interstitialObj"
+    .param p1, "contextObj"    # Lcom/adobe/fre/FREContext;
+    .param p2, "interstitialObj"    # Lcom/google/ads/InterstitialAd;
 
     .prologue
     .line 17
@@ -40,7 +40,7 @@
 # virtual methods
 .method public onDismissScreen(Lcom/google/ads/Ad;)V
     .locals 3
-    .parameter "arg0"
+    .param p1, "arg0"    # Lcom/google/ads/Ad;
 
     .prologue
     .line 25
@@ -75,8 +75,8 @@
 
 .method public onFailedToReceiveAd(Lcom/google/ads/Ad;Lcom/google/ads/AdRequest$ErrorCode;)V
     .locals 3
-    .parameter "arg0"
-    .parameter "error"
+    .param p1, "arg0"    # Lcom/google/ads/Ad;
+    .param p2, "error"    # Lcom/google/ads/AdRequest$ErrorCode;
 
     .prologue
     .line 34
@@ -111,7 +111,7 @@
 
 .method public onLeaveApplication(Lcom/google/ads/Ad;)V
     .locals 2
-    .parameter "arg0"
+    .param p1, "arg0"    # Lcom/google/ads/Ad;
 
     .prologue
     .line 43
@@ -127,7 +127,7 @@
 
 .method public onPresentScreen(Lcom/google/ads/Ad;)V
     .locals 3
-    .parameter "arg0"
+    .param p1, "arg0"    # Lcom/google/ads/Ad;
 
     .prologue
     .line 48
@@ -162,7 +162,7 @@
 
 .method public onReceiveAd(Lcom/google/ads/Ad;)V
     .locals 3
-    .parameter "ad"
+    .param p1, "ad"    # Lcom/google/ads/Ad;
 
     .prologue
     .line 57

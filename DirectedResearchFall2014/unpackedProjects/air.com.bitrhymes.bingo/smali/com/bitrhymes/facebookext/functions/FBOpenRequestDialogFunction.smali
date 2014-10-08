@@ -19,7 +19,7 @@
 
 .method private checkFriendsList(Ljava/lang/String;)Ljava/lang/String;
     .locals 6
-    .parameter "suggestionIds"
+    .param p1, "suggestionIds"    # Ljava/lang/String;
     .annotation build Landroid/annotation/SuppressLint;
         value = {
             "NewApi"
@@ -33,11 +33,11 @@
     const/4 v1, 0x0
 
     .line 69
-    .local v1, finalListLength:I
+    .local v1, "finalListLength":I
     const/16 v2, 0x32
 
     .line 70
-    .local v2, limit:I
+    .local v2, "limit":I
     const-string v4, ","
 
     invoke-virtual {p1, v5}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
@@ -45,7 +45,7 @@
     move-result-object v3
 
     .line 71
-    .local v3, suggestedFriends:[Ljava/lang/String;
+    .local v3, "suggestedFriends":[Ljava/lang/String;
     const-string v4, ","
 
     invoke-static {v5, v3}, Landroid/text/TextUtils;->join(Ljava/lang/CharSequence;[Ljava/lang/Object;)Ljava/lang/String;
@@ -53,7 +53,7 @@
     move-result-object v0
 
     .line 72
-    .local v0, finalList:Ljava/lang/String;
+    .local v0, "finalList":Ljava/lang/String;
     new-instance v4, Ljava/lang/StringBuilder;
 
     const-string v5, "length : "
@@ -112,8 +112,8 @@
 
 .method private makeFinal([Ljava/lang/String;I)Ljava/lang/String;
     .locals 4
-    .parameter "suggestedFriends"
-    .parameter "limit"
+    .param p1, "suggestedFriends"    # [Ljava/lang/String;
+    .param p2, "limit"    # I
 
     .prologue
     .line 84
@@ -143,7 +143,7 @@
     check-cast v0, [Ljava/lang/String;
 
     .line 86
-    .local v0, arr2:[Ljava/lang/String;
+    .local v0, "arr2":[Ljava/lang/String;
     const-string v2, ","
 
     invoke-static {v2, v0}, Landroid/text/TextUtils;->join(Ljava/lang/CharSequence;[Ljava/lang/Object;)Ljava/lang/String;
@@ -151,7 +151,7 @@
     move-result-object v1
 
     .line 87
-    .local v1, finalList:Ljava/lang/String;
+    .local v1, "finalList":Ljava/lang/String;
     return-object v1
 .end method
 
@@ -159,8 +159,8 @@
 # virtual methods
 .method public call(Lcom/adobe/fre/FREContext;[Lcom/adobe/fre/FREObject;)Lcom/adobe/fre/FREObject;
     .locals 19
-    .parameter "context"
-    .parameter "args"
+    .param p1, "context"    # Lcom/adobe/fre/FREContext;
+    .param p2, "args"    # [Lcom/adobe/fre/FREObject;
 
     .prologue
     .line 21
@@ -182,7 +182,7 @@
     move-result-object v3
 
     .line 25
-    .local v3, appAccessToken:Ljava/lang/String;
+    .local v3, "appAccessToken":Ljava/lang/String;
     const/16 v16, 0x1
 
     aget-object v16, p2, v16
@@ -192,7 +192,7 @@
     move-result-object v4
 
     .line 26
-    .local v4, appId:Ljava/lang/String;
+    .local v4, "appId":Ljava/lang/String;
     const/16 v16, 0x2
 
     aget-object v16, p2, v16
@@ -202,7 +202,7 @@
     move-result-object v10
 
     .line 27
-    .local v10, message:Ljava/lang/String;
+    .local v10, "message":Ljava/lang/String;
     const/16 v16, 0x3
 
     aget-object v16, p2, v16
@@ -212,7 +212,7 @@
     move-result-object v12
 
     .line 28
-    .local v12, notificationText:Ljava/lang/String;
+    .local v12, "notificationText":Ljava/lang/String;
     const/16 v16, 0x4
 
     aget-object v16, p2, v16
@@ -222,7 +222,7 @@
     move-result-object v14
 
     .line 29
-    .local v14, suggestionIds:Ljava/lang/String;
+    .local v14, "suggestionIds":Ljava/lang/String;
     const/16 v16, 0x5
 
     aget-object v16, p2, v16
@@ -232,7 +232,7 @@
     move-result-object v6
 
     .line 30
-    .local v6, excludeIds:Ljava/lang/String;
+    .local v6, "excludeIds":Ljava/lang/String;
     const/16 v16, 0x6
 
     aget-object v16, p2, v16
@@ -242,7 +242,7 @@
     move-result-object v15
 
     .line 31
-    .local v15, title:Ljava/lang/String;
+    .local v15, "title":Ljava/lang/String;
     const/16 v16, 0x7
 
     aget-object v16, p2, v16
@@ -252,7 +252,7 @@
     move-result-object v5
 
     .line 33
-    .local v5, data:Ljava/lang/String;
+    .local v5, "data":Ljava/lang/String;
     const/16 v16, 0x8
 
     aget-object v16, p2, v16
@@ -262,7 +262,7 @@
     move-result-object v7
 
     .line 35
-    .local v7, expiresTime:Ljava/lang/String;
+    .local v7, "expiresTime":Ljava/lang/String;
     invoke-static {v3, v7, v4}, Lcom/bitrhymes/facebookext/FacebookExtContext;->updateFBSession(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 37
@@ -275,7 +275,7 @@
     move-result-object v8
 
     .line 38
-    .local v8, finalList:Ljava/lang/String;
+    .local v8, "finalList":Ljava/lang/String;
     new-instance v16, Ljava/lang/StringBuilder;
 
     const-string v17, "suggestedFriends : "
@@ -302,7 +302,7 @@
     invoke-direct {v13}, Landroid/os/Bundle;-><init>()V
 
     .line 41
-    .local v13, params:Landroid/os/Bundle;
+    .local v13, "params":Landroid/os/Bundle;
     const-string v16, "title"
 
     move-object v0, v13
@@ -433,7 +433,7 @@
     const-string v11, "apprequests"
 
     .line 53
-    .local v11, method:Ljava/lang/String;
+    .local v11, "method":Ljava/lang/String;
     new-instance v9, Landroid/content/Intent;
 
     invoke-virtual/range {p1 .. p1}, Lcom/adobe/fre/FREContext;->getActivity()Landroid/app/Activity;
@@ -455,7 +455,7 @@
     invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
     .line 54
-    .local v9, i:Landroid/content/Intent;
+    .local v9, "i":Landroid/content/Intent;
     new-instance v16, Ljava/lang/StringBuilder;
 
     sget-object v17, Lcom/bitrhymes/facebookext/DialogActivity;->extraPrefix:Ljava/lang/String;
@@ -558,19 +558,19 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 62
-    .end local v3           #appAccessToken:Ljava/lang/String;
-    .end local v4           #appId:Ljava/lang/String;
-    .end local v5           #data:Ljava/lang/String;
-    .end local v6           #excludeIds:Ljava/lang/String;
-    .end local v7           #expiresTime:Ljava/lang/String;
-    .end local v8           #finalList:Ljava/lang/String;
-    .end local v9           #i:Landroid/content/Intent;
-    .end local v10           #message:Ljava/lang/String;
-    .end local v11           #method:Ljava/lang/String;
-    .end local v12           #notificationText:Ljava/lang/String;
-    .end local v13           #params:Landroid/os/Bundle;
-    .end local v14           #suggestionIds:Ljava/lang/String;
-    .end local v15           #title:Ljava/lang/String;
+    .end local v3    # "appAccessToken":Ljava/lang/String;
+    .end local v4    # "appId":Ljava/lang/String;
+    .end local v5    # "data":Ljava/lang/String;
+    .end local v6    # "excludeIds":Ljava/lang/String;
+    .end local v7    # "expiresTime":Ljava/lang/String;
+    .end local v8    # "finalList":Ljava/lang/String;
+    .end local v9    # "i":Landroid/content/Intent;
+    .end local v10    # "message":Ljava/lang/String;
+    .end local v11    # "method":Ljava/lang/String;
+    .end local v12    # "notificationText":Ljava/lang/String;
+    .end local v13    # "params":Landroid/os/Bundle;
+    .end local v14    # "suggestionIds":Ljava/lang/String;
+    .end local v15    # "title":Ljava/lang/String;
     :goto_0
     const/16 v16, 0x0
 

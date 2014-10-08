@@ -26,8 +26,6 @@
 # direct methods
 .method constructor <init>(Lcom/adobe/air/AIRWindowSurfaceView;I)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 1025
@@ -60,7 +58,7 @@
 
     iget v1, p0, Lcom/adobe/air/AIRWindowSurfaceView$2;->val$format:I
 
-    #setter for: Lcom/adobe/air/AIRWindowSurfaceView;->mCurrentSurfaceFormat:I
+    # setter for: Lcom/adobe/air/AIRWindowSurfaceView;->mCurrentSurfaceFormat:I
     invoke-static {v0, v1}, Lcom/adobe/air/AIRWindowSurfaceView;->access$802(Lcom/adobe/air/AIRWindowSurfaceView;I)I
 
     .line 1029

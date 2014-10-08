@@ -18,7 +18,6 @@
 # direct methods
 .method public constructor <init>(Lcom/chartboost/sdk/impl/n$a;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 24
@@ -33,9 +32,6 @@
 
 .method static synthetic a(Lcom/chartboost/sdk/impl/n;Ljava/lang/String;Landroid/content/Context;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 97
@@ -46,8 +42,6 @@
 
 .method private a(Ljava/lang/String;Landroid/content/Context;)V
     .locals 5
-    .parameter
-    .parameter
 
     .prologue
     const/4 v4, 0x0
@@ -100,7 +94,7 @@
     if-nez v2, :cond_2
 
     .line 113
-    const/high16 v2, 0x1000
+    const/high16 v2, 0x10000000
 
     invoke-virtual {v1, v2}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
@@ -185,7 +179,7 @@
     if-nez v3, :cond_3
 
     .line 122
-    const/high16 v3, 0x1000
+    const/high16 v3, 0x10000000
 
     invoke-virtual {v2, v3}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
@@ -259,8 +253,6 @@
 # virtual methods
 .method public a(Ljava/lang/String;Landroid/app/Activity;)V
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     const/4 v1, 0x0

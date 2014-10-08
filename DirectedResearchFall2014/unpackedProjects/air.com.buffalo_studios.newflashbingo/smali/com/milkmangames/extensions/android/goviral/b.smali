@@ -178,7 +178,7 @@
         }
     .end annotation
 
-    const/high16 v5, 0x1
+    const/high16 v5, 0x10000
 
     const-string v8, "[GVExtension]"
 
@@ -2994,7 +2994,7 @@
 
     move-result-object v1
 
-    const/high16 v2, 0x1
+    const/high16 v2, 0x10000
 
     invoke-virtual {v1, v0, v2}, Landroid/content/pm/PackageManager;->queryIntentActivities(Landroid/content/Intent;I)Ljava/util/List;
 
@@ -3824,7 +3824,7 @@
 
     move-result-object v1
 
-    const/high16 v2, 0x1
+    const/high16 v2, 0x10000
 
     invoke-virtual {v1, v0, v2}, Landroid/content/pm/PackageManager;->queryIntentActivities(Landroid/content/Intent;I)Ljava/util/List;
 

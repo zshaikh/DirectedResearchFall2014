@@ -25,7 +25,6 @@
 # direct methods
 .method private constructor <init>(Lcom/fusepowered/m1/android/MMAdView$BannerBounds;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 804
@@ -38,8 +37,8 @@
 
 .method synthetic constructor <init>(Lcom/fusepowered/m1/android/MMAdView$BannerBounds;Lcom/fusepowered/m1/android/MMAdView$1;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
+    .param p1, "x0"    # Lcom/fusepowered/m1/android/MMAdView$BannerBounds;
+    .param p2, "x1"    # Lcom/fusepowered/m1/android/MMAdView$1;
 
     .prologue
     .line 804

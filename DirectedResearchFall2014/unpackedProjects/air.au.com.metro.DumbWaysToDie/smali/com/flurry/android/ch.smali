@@ -13,7 +13,6 @@
 # direct methods
 .method synthetic constructor <init>(Lcom/flurry/android/ak;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 50
@@ -26,8 +25,6 @@
 
 .method private constructor <init>(Lcom/flurry/android/ak;B)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 50
@@ -42,7 +39,6 @@
 # virtual methods
 .method public final onDismissScreen(Lcom/google/ads/Ad;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 74
@@ -69,8 +65,6 @@
 
 .method public final onFailedToReceiveAd(Lcom/google/ads/Ad;Lcom/google/ads/AdRequest$ErrorCode;)V
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     .line 63
@@ -97,7 +91,6 @@
 
 .method public final onLeaveApplication(Lcom/google/ads/Ad;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 80
@@ -124,7 +117,6 @@
 
 .method public final onPresentScreen(Lcom/google/ads/Ad;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 69
@@ -142,7 +134,6 @@
 
 .method public final onReceiveAd(Lcom/google/ads/Ad;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 53

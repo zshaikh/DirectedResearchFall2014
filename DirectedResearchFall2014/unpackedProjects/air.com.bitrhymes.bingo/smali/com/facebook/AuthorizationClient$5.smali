@@ -30,10 +30,6 @@
 # direct methods
 .method constructor <init>(Lcom/facebook/AuthorizationClient;Ljava/util/ArrayList;Lcom/facebook/AuthorizationClient$Result;Ljava/util/ArrayList;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 1
@@ -55,14 +51,14 @@
 # virtual methods
 .method public onBatchCompleted(Lcom/facebook/RequestBatch;)V
     .locals 7
-    .parameter "batch"
+    .param p1, "batch"    # Lcom/facebook/RequestBatch;
 
     .prologue
     .line 423
     const/4 v1, 0x0
 
     .line 424
-    .local v1, result:Lcom/facebook/AuthorizationClient$Result;
+    .local v1, "result":Lcom/facebook/AuthorizationClient$Result;
     :try_start_0
     iget-object v3, p0, Lcom/facebook/AuthorizationClient$5;->val$fbids:Ljava/util/ArrayList;
 
@@ -133,7 +129,7 @@
     move-result-object v2
 
     .line 430
-    .local v2, tokenWithPermissions:Lcom/facebook/AccessToken;
+    .local v2, "tokenWithPermissions":Lcom/facebook/AccessToken;
     iget-object v3, p0, Lcom/facebook/AuthorizationClient$5;->this$0:Lcom/facebook/AuthorizationClient;
 
     iget-object v3, v3, Lcom/facebook/AuthorizationClient;->pendingRequest:Lcom/facebook/AuthorizationClient$AuthorizationRequest;
@@ -143,19 +139,19 @@
     move-result-object v1
 
     .line 435
-    .end local v2           #tokenWithPermissions:Lcom/facebook/AccessToken;
+    .end local v2    # "tokenWithPermissions":Lcom/facebook/AccessToken;
     :goto_0
     iget-object v3, p0, Lcom/facebook/AuthorizationClient$5;->this$0:Lcom/facebook/AuthorizationClient;
 
     invoke-virtual {v3, v1}, Lcom/facebook/AuthorizationClient;->complete(Lcom/facebook/AuthorizationClient$Result;)V
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 439
     iget-object v3, p0, Lcom/facebook/AuthorizationClient$5;->this$0:Lcom/facebook/AuthorizationClient;
 
-    #calls: Lcom/facebook/AuthorizationClient;->notifyBackgroundProcessingStop()V
+    # invokes: Lcom/facebook/AuthorizationClient;->notifyBackgroundProcessingStop()V
     invoke-static {v3}, Lcom/facebook/AuthorizationClient;->access$3(Lcom/facebook/AuthorizationClient;)V
 
     .line 441
@@ -175,8 +171,8 @@
 
     invoke-static {v3, v4, v5}, Lcom/facebook/AuthorizationClient$Result;->createErrorResult(Lcom/facebook/AuthorizationClient$AuthorizationRequest;Ljava/lang/String;Ljava/lang/String;)Lcom/facebook/AuthorizationClient$Result;
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     move-result-object v1
 
@@ -190,7 +186,7 @@
     move-object v0, v3
 
     .line 437
-    .local v0, ex:Ljava/lang/Exception;
+    .local v0, "ex":Ljava/lang/Exception;
     :try_start_2
     iget-object v3, p0, Lcom/facebook/AuthorizationClient$5;->this$0:Lcom/facebook/AuthorizationClient;
 
@@ -215,20 +211,20 @@
     .line 439
     iget-object v3, p0, Lcom/facebook/AuthorizationClient$5;->this$0:Lcom/facebook/AuthorizationClient;
 
-    #calls: Lcom/facebook/AuthorizationClient;->notifyBackgroundProcessingStop()V
+    # invokes: Lcom/facebook/AuthorizationClient;->notifyBackgroundProcessingStop()V
     invoke-static {v3}, Lcom/facebook/AuthorizationClient;->access$3(Lcom/facebook/AuthorizationClient;)V
 
     goto :goto_1
 
     .line 438
-    .end local v0           #ex:Ljava/lang/Exception;
+    .end local v0    # "ex":Ljava/lang/Exception;
     :catchall_0
     move-exception v3
 
     .line 439
     iget-object v4, p0, Lcom/facebook/AuthorizationClient$5;->this$0:Lcom/facebook/AuthorizationClient;
 
-    #calls: Lcom/facebook/AuthorizationClient;->notifyBackgroundProcessingStop()V
+    # invokes: Lcom/facebook/AuthorizationClient;->notifyBackgroundProcessingStop()V
     invoke-static {v4}, Lcom/facebook/AuthorizationClient;->access$3(Lcom/facebook/AuthorizationClient;)V
 
     .line 440

@@ -52,7 +52,7 @@
 
 .method protected constructor <init>(Lcom/flurry/org/codehaus/jackson/map/DeserializerFactory$Config;)V
     .locals 1
-    .parameter "config"
+    .param p1, "config"    # Lcom/flurry/org/codehaus/jackson/map/DeserializerFactory$Config;
 
     .prologue
     .line 92
@@ -71,8 +71,6 @@
 # virtual methods
 .method public addMixInAnnotationMapping(Ljava/lang/Class;Ljava/lang/Class;)V
     .locals 2
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -85,8 +83,8 @@
 
     .prologue
     .line 157
-    .local p1, destinationClass:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
-    .local p2, classWithMixIns:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p1, "destinationClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
+    .local p2, "classWithMixIns":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/map/deser/CustomDeserializerFactory;->_mixInAnnotations:Ljava/util/HashMap;
 
     if-nez v0, :cond_0
@@ -114,8 +112,6 @@
 
 .method public addSpecificMapping(Ljava/lang/Class;Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;)V
     .locals 2
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -130,14 +126,14 @@
 
     .prologue
     .line 132
-    .local p1, forClass:Ljava/lang/Class;,"Ljava/lang/Class<TT;>;"
-    .local p2, deser:Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer<+TT;>;"
+    .local p1, "forClass":Ljava/lang/Class;, "Ljava/lang/Class<TT;>;"
+    .local p2, "deser":Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer<+TT;>;"
     new-instance v0, Lcom/flurry/org/codehaus/jackson/map/type/ClassKey;
 
     invoke-direct {v0, p1}, Lcom/flurry/org/codehaus/jackson/map/type/ClassKey;-><init>(Ljava/lang/Class;)V
 
     .line 133
-    .local v0, key:Lcom/flurry/org/codehaus/jackson/map/type/ClassKey;
+    .local v0, "key":Lcom/flurry/org/codehaus/jackson/map/type/ClassKey;
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/map/deser/CustomDeserializerFactory;->_directClassMappings:Ljava/util/HashMap;
 
     if-nez v1, :cond_0
@@ -161,10 +157,10 @@
 
 .method public createArrayDeserializer(Lcom/flurry/org/codehaus/jackson/map/DeserializationConfig;Lcom/flurry/org/codehaus/jackson/map/DeserializerProvider;Lcom/flurry/org/codehaus/jackson/map/type/ArrayType;Lcom/flurry/org/codehaus/jackson/map/BeanProperty;)Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;
     .locals 3
-    .parameter "config"
-    .parameter "p"
-    .parameter "type"
-    .parameter "property"
+    .param p1, "config"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationConfig;
+    .param p2, "p"    # Lcom/flurry/org/codehaus/jackson/map/DeserializerProvider;
+    .param p3, "type"    # Lcom/flurry/org/codehaus/jackson/map/type/ArrayType;
+    .param p4, "property"    # Lcom/flurry/org/codehaus/jackson/map/BeanProperty;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -195,7 +191,7 @@
     invoke-direct {v1, v2}, Lcom/flurry/org/codehaus/jackson/map/type/ClassKey;-><init>(Ljava/lang/Class;)V
 
     .line 194
-    .local v1, key:Lcom/flurry/org/codehaus/jackson/map/type/ClassKey;
+    .local v1, "key":Lcom/flurry/org/codehaus/jackson/map/type/ClassKey;
     iget-object v2, p0, Lcom/flurry/org/codehaus/jackson/map/deser/CustomDeserializerFactory;->_directClassMappings:Ljava/util/HashMap;
 
     if-eqz v2, :cond_0
@@ -210,13 +206,13 @@
     check-cast v0, Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;
 
     .line 196
-    .local v0, deser:Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer<Ljava/lang/Object;>;"
+    .local v0, "deser":Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer<Ljava/lang/Object;>;"
     if-eqz v0, :cond_0
 
     move-object v2, v0
 
     .line 200
-    .end local v0           #deser:Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer<Ljava/lang/Object;>;"
+    .end local v0    # "deser":Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer<Ljava/lang/Object;>;"
     :goto_0
     return-object v2
 
@@ -230,10 +226,10 @@
 
 .method public createBeanDeserializer(Lcom/flurry/org/codehaus/jackson/map/DeserializationConfig;Lcom/flurry/org/codehaus/jackson/map/DeserializerProvider;Lcom/flurry/org/codehaus/jackson/type/JavaType;Lcom/flurry/org/codehaus/jackson/map/BeanProperty;)Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;
     .locals 4
-    .parameter "config"
-    .parameter "p"
-    .parameter "type"
-    .parameter "property"
+    .param p1, "config"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationConfig;
+    .param p2, "p"    # Lcom/flurry/org/codehaus/jackson/map/DeserializerProvider;
+    .param p3, "type"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .param p4, "property"    # Lcom/flurry/org/codehaus/jackson/map/BeanProperty;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -262,13 +258,13 @@
     move-result-object v0
 
     .line 175
-    .local v0, cls:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local v0, "cls":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     new-instance v2, Lcom/flurry/org/codehaus/jackson/map/type/ClassKey;
 
     invoke-direct {v2, v0}, Lcom/flurry/org/codehaus/jackson/map/type/ClassKey;-><init>(Ljava/lang/Class;)V
 
     .line 178
-    .local v2, key:Lcom/flurry/org/codehaus/jackson/map/type/ClassKey;
+    .local v2, "key":Lcom/flurry/org/codehaus/jackson/map/type/ClassKey;
     iget-object v3, p0, Lcom/flurry/org/codehaus/jackson/map/deser/CustomDeserializerFactory;->_directClassMappings:Ljava/util/HashMap;
 
     if-eqz v3, :cond_0
@@ -283,13 +279,13 @@
     check-cast v1, Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;
 
     .line 180
-    .local v1, deser:Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer<Ljava/lang/Object;>;"
+    .local v1, "deser":Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer<Ljava/lang/Object;>;"
     if-eqz v1, :cond_0
 
     move-object v3, v1
 
     .line 185
-    .end local v1           #deser:Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer<Ljava/lang/Object;>;"
+    .end local v1    # "deser":Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer<Ljava/lang/Object;>;"
     :goto_0
     return-object v3
 
@@ -303,10 +299,10 @@
 
 .method public createEnumDeserializer(Lcom/flurry/org/codehaus/jackson/map/DeserializationConfig;Lcom/flurry/org/codehaus/jackson/map/DeserializerProvider;Lcom/flurry/org/codehaus/jackson/type/JavaType;Lcom/flurry/org/codehaus/jackson/map/BeanProperty;)Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;
     .locals 3
-    .parameter "config"
-    .parameter "p"
-    .parameter "enumType"
-    .parameter "property"
+    .param p1, "config"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationConfig;
+    .param p2, "p"    # Lcom/flurry/org/codehaus/jackson/map/DeserializerProvider;
+    .param p3, "enumType"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .param p4, "property"    # Lcom/flurry/org/codehaus/jackson/map/BeanProperty;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -342,7 +338,7 @@
     invoke-direct {v1, v2}, Lcom/flurry/org/codehaus/jackson/map/type/ClassKey;-><init>(Ljava/lang/Class;)V
 
     .line 216
-    .local v1, key:Lcom/flurry/org/codehaus/jackson/map/type/ClassKey;
+    .local v1, "key":Lcom/flurry/org/codehaus/jackson/map/type/ClassKey;
     iget-object v2, p0, Lcom/flurry/org/codehaus/jackson/map/deser/CustomDeserializerFactory;->_directClassMappings:Ljava/util/HashMap;
 
     invoke-virtual {v2, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -352,14 +348,14 @@
     check-cast v0, Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;
 
     .line 217
-    .local v0, deser:Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer<*>;"
+    .local v0, "deser":Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer<*>;"
     if-eqz v0, :cond_0
 
     move-object v2, v0
 
     .line 221
-    .end local v0           #deser:Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer<*>;"
-    .end local v1           #key:Lcom/flurry/org/codehaus/jackson/map/type/ClassKey;
+    .end local v0    # "deser":Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer<*>;"
+    .end local v1    # "key":Lcom/flurry/org/codehaus/jackson/map/type/ClassKey;
     :goto_0
     return-object v2
 
@@ -373,7 +369,7 @@
 
 .method public withConfig(Lcom/flurry/org/codehaus/jackson/map/DeserializerFactory$Config;)Lcom/flurry/org/codehaus/jackson/map/DeserializerFactory;
     .locals 3
-    .parameter "config"
+    .param p1, "config"    # Lcom/flurry/org/codehaus/jackson/map/DeserializerFactory$Config;
 
     .prologue
     .line 99

@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/bitrhymes/applovin/ShowOverInterstitialAd;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1
@@ -40,7 +39,7 @@
 # virtual methods
 .method public adDisplayed(Lcom/applovin/sdk/AppLovinAd;)V
     .locals 2
-    .parameter "ad"
+    .param p1, "ad"    # Lcom/applovin/sdk/AppLovinAd;
 
     .prologue
     .line 36
@@ -56,7 +55,7 @@
 
 .method public adHidden(Lcom/applovin/sdk/AppLovinAd;)V
     .locals 3
-    .parameter "ad"
+    .param p1, "ad"    # Lcom/applovin/sdk/AppLovinAd;
 
     .prologue
     const/4 v2, 0x0

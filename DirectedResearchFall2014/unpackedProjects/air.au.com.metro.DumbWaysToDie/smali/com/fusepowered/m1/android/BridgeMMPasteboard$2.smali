@@ -38,9 +38,6 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m1/android/BridgeMMPasteboard;Landroid/content/Context;Ljava/util/HashMap;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 63
@@ -74,7 +71,7 @@
     check-cast v0, Landroid/text/ClipboardManager;
 
     .line 70
-    .local v0, clipboard:Landroid/text/ClipboardManager;
+    .local v0, "clipboard":Landroid/text/ClipboardManager;
     iget-object v3, p0, Lcom/fusepowered/m1/android/BridgeMMPasteboard$2;->val$arguments:Ljava/util/HashMap;
 
     const-string v4, "data"
@@ -86,7 +83,7 @@
     check-cast v2, Ljava/lang/String;
 
     .line 71
-    .local v2, message:Ljava/lang/String;
+    .local v2, "message":Ljava/lang/String;
     invoke-virtual {v0, v2}, Landroid/text/ClipboardManager;->setText(Ljava/lang/CharSequence;)V
 
     .line 72
@@ -97,8 +94,8 @@
     move-result-object v3
 
     .line 79
-    .end local v0           #clipboard:Landroid/text/ClipboardManager;
-    .end local v2           #message:Ljava/lang/String;
+    .end local v0    # "clipboard":Landroid/text/ClipboardManager;
+    .end local v2    # "message":Ljava/lang/String;
     :goto_0
     return-object v3
 
@@ -109,7 +106,7 @@
     move-object v1, v3
 
     .line 77
-    .local v1, e:Ljava/lang/Exception;
+    .local v1, "e":Ljava/lang/Exception;
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
     .line 79

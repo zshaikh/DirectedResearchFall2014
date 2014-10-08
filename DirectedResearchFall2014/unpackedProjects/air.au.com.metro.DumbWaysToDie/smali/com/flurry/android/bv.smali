@@ -13,7 +13,6 @@
 # direct methods
 .method constructor <init>(Lcom/flurry/android/bn;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1047
@@ -28,7 +27,6 @@
 # virtual methods
 .method public final onDismiss(Landroid/content/DialogInterface;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 1050

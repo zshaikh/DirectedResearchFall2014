@@ -10,11 +10,10 @@
 # direct methods
 .method public constructor <init>(Lcom/flurry/org/codehaus/jackson/type/JavaType;Lcom/flurry/org/codehaus/jackson/map/jsontype/TypeIdResolver;Lcom/flurry/org/codehaus/jackson/map/BeanProperty;Ljava/lang/Class;Ljava/lang/String;)V
     .locals 0
-    .parameter "bt"
-    .parameter "idRes"
-    .parameter "property"
-    .parameter
-    .parameter "typePropName"
+    .param p1, "bt"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .param p2, "idRes"    # Lcom/flurry/org/codehaus/jackson/map/jsontype/TypeIdResolver;
+    .param p3, "property"    # Lcom/flurry/org/codehaus/jackson/map/BeanProperty;
+    .param p5, "typePropName"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -30,7 +29,7 @@
 
     .prologue
     .line 26
-    .local p4, defaultImpl:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p4, "defaultImpl":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/flurry/org/codehaus/jackson/map/jsontype/impl/AsArrayTypeDeserializer;-><init>(Lcom/flurry/org/codehaus/jackson/type/JavaType;Lcom/flurry/org/codehaus/jackson/map/jsontype/TypeIdResolver;Lcom/flurry/org/codehaus/jackson/map/BeanProperty;Ljava/lang/Class;)V
 
     .line 27

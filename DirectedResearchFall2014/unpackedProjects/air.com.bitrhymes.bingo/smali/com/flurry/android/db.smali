@@ -47,9 +47,6 @@
 
 .method private static a(ILjava/lang/String;Ljava/lang/String;)V
     .locals 4
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const/4 v1, 0x0
@@ -119,10 +116,6 @@
 
 .method static a(ILjava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 2
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 91
@@ -156,9 +149,6 @@
 
 .method static a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 1
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 51
@@ -198,10 +188,6 @@
 
 .method private static b(ILjava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 2
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 99
@@ -239,9 +225,6 @@
 
 .method static b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 1
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 59
@@ -255,8 +238,6 @@
 
 .method static c(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 55
@@ -270,8 +251,6 @@
 
 .method static d(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 63
@@ -285,8 +264,6 @@
 
 .method static e(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 71
@@ -300,8 +277,6 @@
 
 .method static f(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 79
@@ -315,8 +290,6 @@
 
 .method static g(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 87
@@ -330,7 +303,6 @@
 
 .method static setLogLevel(I)V
     .locals 0
-    .parameter
 
     .prologue
     .line 43

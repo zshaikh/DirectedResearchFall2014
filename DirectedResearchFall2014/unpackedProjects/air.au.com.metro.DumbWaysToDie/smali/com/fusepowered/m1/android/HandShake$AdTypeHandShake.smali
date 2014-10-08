@@ -27,7 +27,6 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m1/android/HandShake;)V
     .locals 2
-    .parameter
 
     .prologue
     const-wide/16 v0, 0x0
@@ -51,7 +50,7 @@
 # virtual methods
 .method canDisplayCachedAd(J)Z
     .locals 4
-    .parameter "cachedTime"
+    .param p1, "cachedTime"    # J
 
     .prologue
     .line 540
@@ -63,7 +62,7 @@
 
     iget-object v2, p0, Lcom/fusepowered/m1/android/HandShake$AdTypeHandShake;->this$0:Lcom/fusepowered/m1/android/HandShake;
 
-    #getter for: Lcom/fusepowered/m1/android/HandShake;->deferredViewTimeout:J
+    # getter for: Lcom/fusepowered/m1/android/HandShake;->deferredViewTimeout:J
     invoke-static {v2}, Lcom/fusepowered/m1/android/HandShake;->access$1100(Lcom/fusepowered/m1/android/HandShake;)J
 
     move-result-wide v2
@@ -85,7 +84,7 @@
 
 .method canRequestVideo(Landroid/content/Context;)Z
     .locals 11
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     const/4 v10, 0x1
@@ -182,7 +181,7 @@
 
 .method deserializeFromObj(Lorg/json/JSONObject;)V
     .locals 4
-    .parameter "adTypeObject"
+    .param p1, "adTypeObject"    # Lorg/json/JSONObject;
 
     .prologue
     .line 553
@@ -211,8 +210,8 @@
 
 .method load(Landroid/content/SharedPreferences;Ljava/lang/String;)Z
     .locals 5
-    .parameter "settings"
-    .parameter "adType"
+    .param p1, "settings"    # Landroid/content/SharedPreferences;
+    .param p2, "adType"    # Ljava/lang/String;
 
     .prologue
     const-string v4, "handshake_videointerval_"
@@ -223,7 +222,7 @@
     const/4 v0, 0x0
 
     .line 564
-    .local v0, settingsFound:Z
+    .local v0, "settingsFound":Z
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -341,8 +340,8 @@
 
 .method loadLastVideo(Landroid/content/Context;Ljava/lang/String;)V
     .locals 4
-    .parameter "context"
-    .parameter "adType"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "adType"    # Ljava/lang/String;
 
     .prologue
     const-string v3, "handshake_lastvideo_"
@@ -357,7 +356,7 @@
     move-result-object v0
 
     .line 583
-    .local v0, settings:Landroid/content/SharedPreferences;
+    .local v0, "settings":Landroid/content/SharedPreferences;
     if-eqz v0, :cond_0
 
     .line 585
@@ -419,8 +418,8 @@
 
 .method save(Landroid/content/Context;Ljava/lang/String;)V
     .locals 4
-    .parameter "context"
-    .parameter "adType"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "adType"    # Ljava/lang/String;
 
     .prologue
     .line 600
@@ -433,13 +432,13 @@
     move-result-object v1
 
     .line 601
-    .local v1, settings:Landroid/content/SharedPreferences;
+    .local v1, "settings":Landroid/content/SharedPreferences;
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
     .line 602
-    .local v0, editor:Landroid/content/SharedPreferences$Editor;
+    .local v0, "editor":Landroid/content/SharedPreferences$Editor;
     invoke-virtual {p0, v0, p2}, Lcom/fusepowered/m1/android/HandShake$AdTypeHandShake;->save(Landroid/content/SharedPreferences$Editor;Ljava/lang/String;)V
 
     .line 603
@@ -451,8 +450,8 @@
 
 .method save(Landroid/content/SharedPreferences$Editor;Ljava/lang/String;)V
     .locals 3
-    .parameter "editor"
-    .parameter "adType"
+    .param p1, "editor"    # Landroid/content/SharedPreferences$Editor;
+    .param p2, "adType"    # Ljava/lang/String;
 
     .prologue
     .line 593
@@ -507,8 +506,8 @@
 
 .method updateLastVideoViewedTime(Landroid/content/Context;Ljava/lang/String;)V
     .locals 2
-    .parameter "context"
-    .parameter "adType"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "adType"    # Ljava/lang/String;
 
     .prologue
     .line 546

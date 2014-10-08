@@ -172,7 +172,7 @@
 
 .method static byteArrayToString([B)Ljava/lang/String;
     .locals 6
-    .parameter "ba"
+    .param p0, "ba"    # [B
 
     .prologue
     .line 843
@@ -185,10 +185,10 @@
     invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(I)V
 
     .line 844
-    .local v0, hex:Ljava/lang/StringBuilder;
+    .local v0, "hex":Ljava/lang/StringBuilder;
     const/4 v1, 0x0
 
-    .local v1, i:I
+    .local v1, "i":I
     :goto_0
     array-length v2, p0
 
@@ -233,7 +233,7 @@
 
 .method static checkActivity(Landroid/content/Context;)V
     .locals 4
-    .parameter "context"
+    .param p0, "context"    # Landroid/content/Context;
 
     .prologue
     .line 903
@@ -242,7 +242,7 @@
     move-result-object v2
 
     .line 908
-    .local v2, pm:Landroid/content/pm/PackageManager;
+    .local v2, "pm":Landroid/content/pm/PackageManager;
     :try_start_0
     new-instance v0, Landroid/content/ComponentName;
 
@@ -251,7 +251,7 @@
     invoke-direct {v0, p0, v3}, Landroid/content/ComponentName;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
     .line 909
-    .local v0, cn:Landroid/content/ComponentName;
+    .local v0, "cn":Landroid/content/ComponentName;
     const/16 v3, 0x80
 
     invoke-virtual {v2, v0, v3}, Landroid/content/pm/PackageManager;->getActivityInfo(Landroid/content/ComponentName;I)Landroid/content/pm/ActivityInfo;
@@ -259,7 +259,7 @@
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 916
-    .end local v0           #cn:Landroid/content/ComponentName;
+    .end local v0    # "cn":Landroid/content/ComponentName;
     :goto_0
     return-void
 
@@ -270,7 +270,7 @@
     move-object v1, v3
 
     .line 912
-    .local v1, e:Landroid/content/pm/PackageManager$NameNotFoundException;
+    .local v1, "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     const-string v3, "Activity MMActivity not declared in AndroidManifest.xml"
 
     invoke-static {v3}, Lcom/fusepowered/m1/android/MMSDK$Log;->e(Ljava/lang/String;)V
@@ -292,7 +292,7 @@
 
 .method static checkPermissions(Landroid/content/Context;)V
     .locals 2
-    .parameter "context"
+    .param p0, "context"    # Landroid/content/Context;
 
     .prologue
     const/4 v1, -0x1
@@ -341,8 +341,8 @@
 
 .method private static createMissingPermissionDialog(Landroid/content/Context;Ljava/lang/String;)Landroid/app/AlertDialog;
     .locals 4
-    .parameter "context"
-    .parameter "permission"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "permission"    # Ljava/lang/String;
 
     .prologue
     .line 885
@@ -355,7 +355,7 @@
     move-result-object v0
 
     .line 886
-    .local v0, dialog:Landroid/app/AlertDialog;
+    .local v0, "dialog":Landroid/app/AlertDialog;
     const-string v1, "Whoops!"
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog;->setTitle(Ljava/lang/CharSequence;)V
@@ -407,7 +407,7 @@
 
 .method static getConfiguration(Landroid/content/Context;)Landroid/content/res/Configuration;
     .locals 1
-    .parameter "context"
+    .param p0, "context"    # Landroid/content/Context;
 
     .prologue
     .line 957
@@ -424,7 +424,7 @@
 
 .method static getConnectionType(Landroid/content/Context;)Ljava/lang/String;
     .locals 6
-    .parameter "context"
+    .param p0, "context"    # Landroid/content/Context;
 
     .prologue
     const/4 v5, 0x1
@@ -439,7 +439,7 @@
     check-cast v1, Landroid/net/ConnectivityManager;
 
     .line 721
-    .local v1, connectivityManager:Landroid/net/ConnectivityManager;
+    .local v1, "connectivityManager":Landroid/net/ConnectivityManager;
     if-nez v1, :cond_0
 
     .line 723
@@ -477,7 +477,7 @@
     move-result v3
 
     .line 729
-    .local v3, type:I
+    .local v3, "type":I
     invoke-virtual {v1}, Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;
 
     move-result-object v4
@@ -487,15 +487,15 @@
     move-result v2
 
     .line 730
-    .local v2, subType:I
+    .local v2, "subType":I
     if-ne v3, v5, :cond_1
 
     .line 732
     const-string v0, "wifi"
 
-    .end local v2           #subType:I
-    .end local v3           #type:I
-    .local v0, connectionType:Ljava/lang/String;
+    .end local v2    # "subType":I
+    .end local v3    # "type":I
+    .local v0, "connectionType":Ljava/lang/String;
     :goto_1
     move-object v4, v0
 
@@ -503,9 +503,9 @@
     goto :goto_0
 
     .line 733
-    .end local v0           #connectionType:Ljava/lang/String;
-    .restart local v2       #subType:I
-    .restart local v3       #type:I
+    .end local v0    # "connectionType":Ljava/lang/String;
+    .restart local v2    # "subType":I
+    .restart local v3    # "type":I
     :cond_1
     if-nez v3, :cond_2
 
@@ -516,160 +516,160 @@
     const-string v0, "unknown"
 
     .line 783
-    .restart local v0       #connectionType:Ljava/lang/String;
+    .restart local v0    # "connectionType":Ljava/lang/String;
     goto :goto_1
 
     .line 737
-    .end local v0           #connectionType:Ljava/lang/String;
+    .end local v0    # "connectionType":Ljava/lang/String;
     :pswitch_0
     const-string v0, "1xrtt"
 
     .line 738
-    .restart local v0       #connectionType:Ljava/lang/String;
+    .restart local v0    # "connectionType":Ljava/lang/String;
     goto :goto_1
 
     .line 740
-    .end local v0           #connectionType:Ljava/lang/String;
+    .end local v0    # "connectionType":Ljava/lang/String;
     :pswitch_1
     const-string v0, "cdma"
 
     .line 741
-    .restart local v0       #connectionType:Ljava/lang/String;
+    .restart local v0    # "connectionType":Ljava/lang/String;
     goto :goto_1
 
     .line 743
-    .end local v0           #connectionType:Ljava/lang/String;
+    .end local v0    # "connectionType":Ljava/lang/String;
     :pswitch_2
     const-string v0, "edge"
 
     .line 744
-    .restart local v0       #connectionType:Ljava/lang/String;
+    .restart local v0    # "connectionType":Ljava/lang/String;
     goto :goto_1
 
     .line 746
-    .end local v0           #connectionType:Ljava/lang/String;
+    .end local v0    # "connectionType":Ljava/lang/String;
     :pswitch_3
     const-string v0, "ehrpd"
 
     .line 747
-    .restart local v0       #connectionType:Ljava/lang/String;
+    .restart local v0    # "connectionType":Ljava/lang/String;
     goto :goto_1
 
     .line 749
-    .end local v0           #connectionType:Ljava/lang/String;
+    .end local v0    # "connectionType":Ljava/lang/String;
     :pswitch_4
     const-string v0, "evdo_0"
 
     .line 750
-    .restart local v0       #connectionType:Ljava/lang/String;
+    .restart local v0    # "connectionType":Ljava/lang/String;
     goto :goto_1
 
     .line 752
-    .end local v0           #connectionType:Ljava/lang/String;
+    .end local v0    # "connectionType":Ljava/lang/String;
     :pswitch_5
     const-string v0, "evdo_a"
 
     .line 753
-    .restart local v0       #connectionType:Ljava/lang/String;
+    .restart local v0    # "connectionType":Ljava/lang/String;
     goto :goto_1
 
     .line 755
-    .end local v0           #connectionType:Ljava/lang/String;
+    .end local v0    # "connectionType":Ljava/lang/String;
     :pswitch_6
     const-string v0, "evdo_b"
 
     .line 756
-    .restart local v0       #connectionType:Ljava/lang/String;
+    .restart local v0    # "connectionType":Ljava/lang/String;
     goto :goto_1
 
     .line 758
-    .end local v0           #connectionType:Ljava/lang/String;
+    .end local v0    # "connectionType":Ljava/lang/String;
     :pswitch_7
     const-string v0, "gprs"
 
     .line 759
-    .restart local v0       #connectionType:Ljava/lang/String;
+    .restart local v0    # "connectionType":Ljava/lang/String;
     goto :goto_1
 
     .line 761
-    .end local v0           #connectionType:Ljava/lang/String;
+    .end local v0    # "connectionType":Ljava/lang/String;
     :pswitch_8
     const-string v0, "hsdpa"
 
     .line 762
-    .restart local v0       #connectionType:Ljava/lang/String;
+    .restart local v0    # "connectionType":Ljava/lang/String;
     goto :goto_1
 
     .line 764
-    .end local v0           #connectionType:Ljava/lang/String;
+    .end local v0    # "connectionType":Ljava/lang/String;
     :pswitch_9
     const-string v0, "hspa"
 
     .line 765
-    .restart local v0       #connectionType:Ljava/lang/String;
+    .restart local v0    # "connectionType":Ljava/lang/String;
     goto :goto_1
 
     .line 767
-    .end local v0           #connectionType:Ljava/lang/String;
+    .end local v0    # "connectionType":Ljava/lang/String;
     :pswitch_a
     const-string v0, "hspap"
 
     .line 768
-    .restart local v0       #connectionType:Ljava/lang/String;
+    .restart local v0    # "connectionType":Ljava/lang/String;
     goto :goto_1
 
     .line 770
-    .end local v0           #connectionType:Ljava/lang/String;
+    .end local v0    # "connectionType":Ljava/lang/String;
     :pswitch_b
     const-string v0, "hsupa"
 
     .line 771
-    .restart local v0       #connectionType:Ljava/lang/String;
+    .restart local v0    # "connectionType":Ljava/lang/String;
     goto :goto_1
 
     .line 773
-    .end local v0           #connectionType:Ljava/lang/String;
+    .end local v0    # "connectionType":Ljava/lang/String;
     :pswitch_c
     const-string v0, "iden"
 
     .line 774
-    .restart local v0       #connectionType:Ljava/lang/String;
+    .restart local v0    # "connectionType":Ljava/lang/String;
     goto :goto_1
 
     .line 776
-    .end local v0           #connectionType:Ljava/lang/String;
+    .end local v0    # "connectionType":Ljava/lang/String;
     :pswitch_d
     const-string v0, "lte"
 
     .line 777
-    .restart local v0       #connectionType:Ljava/lang/String;
+    .restart local v0    # "connectionType":Ljava/lang/String;
     goto :goto_1
 
     .line 779
-    .end local v0           #connectionType:Ljava/lang/String;
+    .end local v0    # "connectionType":Ljava/lang/String;
     :pswitch_e
     const-string v0, "umts"
 
     .line 780
-    .restart local v0       #connectionType:Ljava/lang/String;
+    .restart local v0    # "connectionType":Ljava/lang/String;
     goto :goto_1
 
     .line 787
-    .end local v0           #connectionType:Ljava/lang/String;
+    .end local v0    # "connectionType":Ljava/lang/String;
     :cond_2
     const-string v0, "unknown"
 
-    .restart local v0       #connectionType:Ljava/lang/String;
+    .restart local v0    # "connectionType":Ljava/lang/String;
     goto :goto_1
 
     .line 791
-    .end local v0           #connectionType:Ljava/lang/String;
-    .end local v2           #subType:I
-    .end local v3           #type:I
+    .end local v0    # "connectionType":Ljava/lang/String;
+    .end local v2    # "subType":I
+    .end local v3    # "type":I
     :cond_3
     const-string v0, "offline"
 
-    .restart local v0       #connectionType:Ljava/lang/String;
+    .restart local v0    # "connectionType":Ljava/lang/String;
     goto :goto_1
 
     .line 735
@@ -729,7 +729,7 @@
 
 .method static getDensity(Landroid/content/Context;)F
     .locals 2
-    .parameter "context"
+    .param p0, "context"    # Landroid/content/Context;
 
     .prologue
     .line 862
@@ -738,11 +738,11 @@
     move-result-object v0
 
     .line 863
-    .local v0, metrics:Landroid/util/DisplayMetrics;
+    .local v0, "metrics":Landroid/util/DisplayMetrics;
     if-nez v0, :cond_0
 
     .line 865
-    const/high16 v1, 0x3f80
+    const/high16 v1, 0x3f800000
 
     .line 867
     :goto_0
@@ -756,7 +756,7 @@
 
 .method private static getDensityString(Landroid/content/Context;)Ljava/lang/String;
     .locals 2
-    .parameter "context"
+    .param p0, "context"    # Landroid/content/Context;
 
     .prologue
     .line 856
@@ -765,7 +765,7 @@
     move-result v0
 
     .line 857
-    .local v0, density:F
+    .local v0, "density":F
     invoke-static {v0}, Ljava/lang/Float;->toString(F)Ljava/lang/String;
 
     move-result-object v1
@@ -775,7 +775,7 @@
 
 .method static getDpiHeight(Landroid/content/Context;)Ljava/lang/String;
     .locals 3
-    .parameter "context"
+    .param p0, "context"    # Landroid/content/Context;
 
     .prologue
     .line 1148
@@ -793,7 +793,7 @@
     move-result-object v0
 
     .line 1151
-    .local v0, height:Ljava/lang/String;
+    .local v0, "height":Ljava/lang/String;
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v2
@@ -803,7 +803,7 @@
     move-object v2, v0
 
     .line 1158
-    .end local v0           #height:Ljava/lang/String;
+    .end local v0    # "height":Ljava/lang/String;
     :goto_0
     return-object v2
 
@@ -814,7 +814,7 @@
     move-result-object v1
 
     .line 1158
-    .local v1, metrics:Landroid/util/DisplayMetrics;
+    .local v1, "metrics":Landroid/util/DisplayMetrics;
     invoke-static {v1}, Lcom/fusepowered/m1/android/MMSDK;->getDpiHeightFrom(Landroid/util/DisplayMetrics;)Ljava/lang/String;
 
     move-result-object v2
@@ -824,7 +824,7 @@
 
 .method private static getDpiHeightFrom(Landroid/util/DisplayMetrics;)Ljava/lang/String;
     .locals 1
-    .parameter "metrics"
+    .param p0, "metrics"    # Landroid/util/DisplayMetrics;
 
     .prologue
     .line 1192
@@ -839,7 +839,7 @@
 
 .method static getDpiWidth(Landroid/content/Context;)Ljava/lang/String;
     .locals 3
-    .parameter "context"
+    .param p0, "context"    # Landroid/content/Context;
 
     .prologue
     .line 1116
@@ -857,7 +857,7 @@
     move-result-object v1
 
     .line 1119
-    .local v1, width:Ljava/lang/String;
+    .local v1, "width":Ljava/lang/String;
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v2
@@ -867,7 +867,7 @@
     move-object v2, v1
 
     .line 1126
-    .end local v1           #width:Ljava/lang/String;
+    .end local v1    # "width":Ljava/lang/String;
     :goto_0
     return-object v2
 
@@ -878,7 +878,7 @@
     move-result-object v0
 
     .line 1126
-    .local v0, metrics:Landroid/util/DisplayMetrics;
+    .local v0, "metrics":Landroid/util/DisplayMetrics;
     invoke-static {v0}, Lcom/fusepowered/m1/android/MMSDK;->getDpiWidthFrom(Landroid/util/DisplayMetrics;)Ljava/lang/String;
 
     move-result-object v2
@@ -888,7 +888,7 @@
 
 .method private static getDpiWidthFrom(Landroid/util/DisplayMetrics;)Ljava/lang/String;
     .locals 1
-    .parameter "metrics"
+    .param p0, "metrics"    # Landroid/util/DisplayMetrics;
 
     .prologue
     .line 1197
@@ -903,7 +903,7 @@
 
 .method static getIpAddress(Landroid/content/Context;)Ljava/lang/String;
     .locals 11
-    .parameter "context"
+    .param p0, "context"    # Landroid/content/Context;
 
     .prologue
     .line 673
@@ -913,12 +913,12 @@
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
     .line 674
-    .local v7, ips:Ljava/lang/StringBuilder;
+    .local v7, "ips":Ljava/lang/StringBuilder;
     invoke-static {}, Ljava/net/NetworkInterface;->getNetworkInterfaces()Ljava/util/Enumeration;
 
     move-result-object v1
 
-    .local v1, en:Ljava/util/Enumeration;,"Ljava/util/Enumeration<Ljava/net/NetworkInterface;>;"
+    .local v1, "en":Ljava/util/Enumeration;, "Ljava/util/Enumeration<Ljava/net/NetworkInterface;>;"
     :cond_0
     invoke-interface {v1}, Ljava/util/Enumeration;->hasMoreElements()Z
 
@@ -934,12 +934,12 @@
     check-cast v6, Ljava/net/NetworkInterface;
 
     .line 677
-    .local v6, intf:Ljava/net/NetworkInterface;
+    .local v6, "intf":Ljava/net/NetworkInterface;
     invoke-virtual {v6}, Ljava/net/NetworkInterface;->getInetAddresses()Ljava/util/Enumeration;
 
     move-result-object v2
 
-    .local v2, enumIpAddr:Ljava/util/Enumeration;,"Ljava/util/Enumeration<Ljava/net/InetAddress;>;"
+    .local v2, "enumIpAddr":Ljava/util/Enumeration;, "Ljava/util/Enumeration<Ljava/net/InetAddress;>;"
     :cond_1
     :goto_0
     invoke-interface {v2}, Ljava/util/Enumeration;->hasMoreElements()Z
@@ -956,7 +956,7 @@
     check-cast v4, Ljava/net/InetAddress;
 
     .line 680
-    .local v4, inetAddress:Ljava/net/InetAddress;
+    .local v4, "inetAddress":Ljava/net/InetAddress;
     invoke-virtual {v4}, Ljava/net/InetAddress;->isLoopbackAddress()Z
 
     move-result v10
@@ -986,13 +986,13 @@
     move-result-object v5
 
     .line 688
-    .local v5, inetAddressHost:Ljava/lang/String;
+    .local v5, "inetAddressHost":Ljava/lang/String;
     invoke-static {v5}, Lorg/apache/http/conn/util/InetAddressUtils;->isIPv4Address(Ljava/lang/String;)Z
 
     move-result v8
 
     .line 690
-    .local v8, isIPv4:Z
+    .local v8, "isIPv4":Z
     if-eqz v8, :cond_3
 
     .line 692
@@ -1003,37 +1003,37 @@
     goto :goto_0
 
     .line 707
-    .end local v1           #en:Ljava/util/Enumeration;,"Ljava/util/Enumeration<Ljava/net/NetworkInterface;>;"
-    .end local v2           #enumIpAddr:Ljava/util/Enumeration;,"Ljava/util/Enumeration<Ljava/net/InetAddress;>;"
-    .end local v4           #inetAddress:Ljava/net/InetAddress;
-    .end local v5           #inetAddressHost:Ljava/lang/String;
-    .end local v6           #intf:Ljava/net/NetworkInterface;
-    .end local v7           #ips:Ljava/lang/StringBuilder;
-    .end local v8           #isIPv4:Z
+    .end local v1    # "en":Ljava/util/Enumeration;, "Ljava/util/Enumeration<Ljava/net/NetworkInterface;>;"
+    .end local v2    # "enumIpAddr":Ljava/util/Enumeration;, "Ljava/util/Enumeration<Ljava/net/InetAddress;>;"
+    .end local v4    # "inetAddress":Ljava/net/InetAddress;
+    .end local v5    # "inetAddressHost":Ljava/lang/String;
+    .end local v6    # "intf":Ljava/net/NetworkInterface;
+    .end local v7    # "ips":Ljava/lang/StringBuilder;
+    .end local v8    # "isIPv4":Z
     :catch_0
     move-exception v10
 
     move-object v3, v10
 
     .line 709
-    .local v3, ex:Ljava/lang/Exception;
+    .local v3, "ex":Ljava/lang/Exception;
     invoke-static {v3}, Lcom/fusepowered/m1/android/MMSDK$Log;->e(Ljava/lang/Throwable;)V
 
     .line 711
     const-string v10, ""
 
-    .end local v3           #ex:Ljava/lang/Exception;
+    .end local v3    # "ex":Ljava/lang/Exception;
     :goto_1
     return-object v10
 
     .line 695
-    .restart local v1       #en:Ljava/util/Enumeration;,"Ljava/util/Enumeration<Ljava/net/NetworkInterface;>;"
-    .restart local v2       #enumIpAddr:Ljava/util/Enumeration;,"Ljava/util/Enumeration<Ljava/net/InetAddress;>;"
-    .restart local v4       #inetAddress:Ljava/net/InetAddress;
-    .restart local v5       #inetAddressHost:Ljava/lang/String;
-    .restart local v6       #intf:Ljava/net/NetworkInterface;
-    .restart local v7       #ips:Ljava/lang/StringBuilder;
-    .restart local v8       #isIPv4:Z
+    .restart local v1    # "en":Ljava/util/Enumeration;, "Ljava/util/Enumeration<Ljava/net/NetworkInterface;>;"
+    .restart local v2    # "enumIpAddr":Ljava/util/Enumeration;, "Ljava/util/Enumeration<Ljava/net/InetAddress;>;"
+    .restart local v4    # "inetAddress":Ljava/net/InetAddress;
+    .restart local v5    # "inetAddressHost":Ljava/lang/String;
+    .restart local v6    # "intf":Ljava/net/NetworkInterface;
+    .restart local v7    # "ips":Ljava/lang/StringBuilder;
+    .restart local v8    # "isIPv4":Z
     :cond_3
     const/16 v10, 0x25
 
@@ -1043,20 +1043,20 @@
     move-result v0
 
     .line 699
-    .local v0, delim:I
+    .local v0, "delim":I
     if-gez v0, :cond_4
 
     move-object v9, v5
 
     .line 700
-    .local v9, noInterfaceNameAddress:Ljava/lang/String;
+    .local v9, "noInterfaceNameAddress":Ljava/lang/String;
     :goto_2
     invoke-virtual {v7, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_0
 
     .line 699
-    .end local v9           #noInterfaceNameAddress:Ljava/lang/String;
+    .end local v9    # "noInterfaceNameAddress":Ljava/lang/String;
     :cond_4
     const/4 v10, 0x0
 
@@ -1069,12 +1069,12 @@
     goto :goto_2
 
     .line 706
-    .end local v0           #delim:I
-    .end local v2           #enumIpAddr:Ljava/util/Enumeration;,"Ljava/util/Enumeration<Ljava/net/InetAddress;>;"
-    .end local v4           #inetAddress:Ljava/net/InetAddress;
-    .end local v5           #inetAddressHost:Ljava/lang/String;
-    .end local v6           #intf:Ljava/net/NetworkInterface;
-    .end local v8           #isIPv4:Z
+    .end local v0    # "delim":I
+    .end local v2    # "enumIpAddr":Ljava/util/Enumeration;, "Ljava/util/Enumeration<Ljava/net/InetAddress;>;"
+    .end local v4    # "inetAddress":Ljava/net/InetAddress;
+    .end local v5    # "inetAddressHost":Ljava/lang/String;
+    .end local v6    # "intf":Ljava/net/NetworkInterface;
+    .end local v8    # "isIPv4":Z
     :cond_5
     invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
     :try_end_1
@@ -1097,7 +1097,7 @@
 
 .method static declared-synchronized getMMdid(Landroid/content/Context;)Ljava/lang/String;
     .locals 9
-    .parameter "context"
+    .param p0, "context"    # Landroid/content/Context;
 
     .prologue
     const/4 v8, 0x0
@@ -1137,7 +1137,7 @@
     move-result-object v3
 
     .line 812
-    .local v3, mmdid:Ljava/lang/String;
+    .local v3, "mmdid":Ljava/lang/String;
     if-nez v3, :cond_1
 
     move-object v6, v8
@@ -1156,7 +1156,7 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     .line 820
-    .local v4, mmdidBuilder:Ljava/lang/StringBuilder;
+    .local v4, "mmdidBuilder":Ljava/lang/StringBuilder;
     :try_start_2
     const-string v6, "MD5"
 
@@ -1165,7 +1165,7 @@
     move-result-object v2
 
     .line 821
-    .local v2, md:Ljava/security/MessageDigest;
+    .local v2, "md":Ljava/security/MessageDigest;
     invoke-virtual {v3}, Ljava/lang/String;->getBytes()[B
 
     move-result-object v6
@@ -1175,7 +1175,7 @@
     move-result-object v1
 
     .line 822
-    .local v1, hashBytes:[B
+    .local v1, "hashBytes":[B
     invoke-static {v1}, Lcom/fusepowered/m1/android/MMSDK;->byteArrayToString([B)Ljava/lang/String;
 
     move-result-object v6
@@ -1210,8 +1210,8 @@
 
     invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
     :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
     .line 833
     :try_start_3
@@ -1226,10 +1226,10 @@
     goto :goto_0
 
     .line 805
-    .end local v1           #hashBytes:[B
-    .end local v2           #md:Ljava/security/MessageDigest;
-    .end local v3           #mmdid:Ljava/lang/String;
-    .end local v4           #mmdidBuilder:Ljava/lang/StringBuilder;
+    .end local v1    # "hashBytes":[B
+    .end local v2    # "md":Ljava/security/MessageDigest;
+    .end local v3    # "mmdid":Ljava/lang/String;
+    .end local v4    # "mmdidBuilder":Ljava/lang/StringBuilder;
     :catchall_0
     move-exception v6
 
@@ -1238,15 +1238,15 @@
     throw v6
 
     .line 828
-    .restart local v3       #mmdid:Ljava/lang/String;
-    .restart local v4       #mmdidBuilder:Ljava/lang/StringBuilder;
+    .restart local v3    # "mmdid":Ljava/lang/String;
+    .restart local v4    # "mmdidBuilder":Ljava/lang/StringBuilder;
     :catch_0
     move-exception v6
 
     move-object v0, v6
 
     .line 830
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     :try_start_4
     invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
@@ -1264,20 +1264,20 @@
 
 .method static getMcc(Landroid/content/Context;)Ljava/lang/String;
     .locals 4
-    .parameter "context"
+    .param p0, "context"    # Landroid/content/Context;
 
     .prologue
     .line 925
     const/4 v1, 0x0
 
     .line 926
-    .local v1, networkOperator:Ljava/lang/String;
+    .local v1, "networkOperator":Ljava/lang/String;
     invoke-static {p0}, Lcom/fusepowered/m1/android/MMSDK;->getConfiguration(Landroid/content/Context;)Landroid/content/res/Configuration;
 
     move-result-object v0
 
     .line 928
-    .local v0, config:Landroid/content/res/Configuration;
+    .local v0, "config":Landroid/content/res/Configuration;
     iget v2, v0, Landroid/content/res/Configuration;->mcc:I
 
     if-nez v2, :cond_0
@@ -1323,7 +1323,7 @@
 
 .method static getMediaVolume(Landroid/content/Context;)I
     .locals 3
-    .parameter "context"
+    .param p0, "context"    # Landroid/content/Context;
 
     .prologue
     .line 1307
@@ -1340,7 +1340,7 @@
     check-cast v0, Landroid/media/AudioManager;
 
     .line 1308
-    .local v0, am:Landroid/media/AudioManager;
+    .local v0, "am":Landroid/media/AudioManager;
     const/4 v1, 0x3
 
     invoke-virtual {v0, v1}, Landroid/media/AudioManager;->getStreamVolume(I)I
@@ -1352,7 +1352,7 @@
 
 .method static getMetrics(Landroid/content/Context;)Landroid/util/DisplayMetrics;
     .locals 5
-    .parameter "context"
+    .param p0, "context"    # Landroid/content/Context;
 
     .prologue
     .line 1131
@@ -1365,7 +1365,7 @@
     move-result-object v1
 
     .line 1133
-    .local v1, metrics:Landroid/util/DisplayMetrics;
+    .local v1, "metrics":Landroid/util/DisplayMetrics;
     invoke-static {}, Lcom/fusepowered/m1/android/MMSDK;->needsRealDisplayMethod()Z
 
     move-result v2
@@ -1387,7 +1387,7 @@
     move-result-object v0
 
     .line 1138
-    .local v0, getRealMetrics:Ljava/lang/reflect/Method;
+    .local v0, "getRealMetrics":Ljava/lang/reflect/Method;
     const/4 v2, 0x0
 
     new-array v2, v2, [Ljava/lang/Object;
@@ -1397,7 +1397,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 1143
-    .end local v0           #getRealMetrics:Ljava/lang/reflect/Method;
+    .end local v0    # "getRealMetrics":Ljava/lang/reflect/Method;
     :cond_0
     :goto_0
     return-object v1
@@ -1411,20 +1411,20 @@
 
 .method static getMnc(Landroid/content/Context;)Ljava/lang/String;
     .locals 4
-    .parameter "context"
+    .param p0, "context"    # Landroid/content/Context;
 
     .prologue
     .line 941
     const/4 v1, 0x0
 
     .line 942
-    .local v1, networkOperator:Ljava/lang/String;
+    .local v1, "networkOperator":Ljava/lang/String;
     invoke-static {p0}, Lcom/fusepowered/m1/android/MMSDK;->getConfiguration(Landroid/content/Context;)Landroid/content/res/Configuration;
 
     move-result-object v0
 
     .line 944
-    .local v0, config:Landroid/content/res/Configuration;
+    .local v0, "config":Landroid/content/res/Configuration;
     iget v2, v0, Landroid/content/res/Configuration;->mnc:I
 
     if-nez v2, :cond_0
@@ -1468,7 +1468,7 @@
 
 .method static getNetworkOperator(Landroid/content/Context;)Ljava/lang/String;
     .locals 2
-    .parameter "context"
+    .param p0, "context"    # Landroid/content/Context;
 
     .prologue
     .line 962
@@ -1481,7 +1481,7 @@
     check-cast v0, Landroid/telephony/TelephonyManager;
 
     .line 963
-    .local v0, tel:Landroid/telephony/TelephonyManager;
+    .local v0, "tel":Landroid/telephony/TelephonyManager;
     invoke-virtual {v0}, Landroid/telephony/TelephonyManager;->getNetworkOperator()Ljava/lang/String;
 
     move-result-object v1
@@ -1491,7 +1491,7 @@
 
 .method static getOrientation(Landroid/content/Context;)Ljava/lang/String;
     .locals 1
-    .parameter "context"
+    .param p0, "context"    # Landroid/content/Context;
 
     .prologue
     .line 1370
@@ -1544,7 +1544,7 @@
 
 .method static final getOrientationLocked(Landroid/content/Context;)Ljava/lang/String;
     .locals 2
-    .parameter "context"
+    .param p0, "context"    # Landroid/content/Context;
 
     .prologue
     .line 1383
@@ -1579,15 +1579,15 @@
 
 .method private static getRawSize(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
     .locals 8
-    .parameter "context"
-    .parameter "functionName"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "functionName"    # Ljava/lang/String;
 
     .prologue
     .line 1163
     const/4 v5, 0x0
 
     .line 1164
-    .local v5, size:Ljava/lang/String;
+    .local v5, "size":Ljava/lang/String;
     instance-of v6, p0, Landroid/app/Activity;
 
     if-eqz v6, :cond_0
@@ -1600,7 +1600,7 @@
     move-object v1, v0
 
     .line 1167
-    .local v1, activity:Landroid/app/Activity;
+    .local v1, "activity":Landroid/app/Activity;
     invoke-virtual {v1}, Landroid/app/Activity;->getWindowManager()Landroid/view/WindowManager;
 
     move-result-object v6
@@ -1610,7 +1610,7 @@
     move-result-object v2
 
     .line 1170
-    .local v2, display:Landroid/view/Display;
+    .local v2, "display":Landroid/view/Display;
     :try_start_0
     const-class v6, Landroid/view/Display;
 
@@ -1623,7 +1623,7 @@
     move-result-object v3
 
     .line 1171
-    .local v3, mGetRawSize:Ljava/lang/reflect/Method;
+    .local v3, "mGetRawSize":Ljava/lang/reflect/Method;
     const/4 v6, 0x0
 
     new-array v6, v6, [Ljava/lang/Object;
@@ -1632,7 +1632,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "context":Landroid/content/Context;
     check-cast p0, Ljava/lang/Integer;
 
     invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
@@ -1640,7 +1640,7 @@
     move-result v4
 
     .line 1172
-    .local v4, rawSize:I
+    .local v4, "rawSize":I
     invoke-static {v4}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -1648,17 +1648,17 @@
     move-result-object v5
 
     .line 1177
-    .end local v1           #activity:Landroid/app/Activity;
-    .end local v2           #display:Landroid/view/Display;
-    .end local v3           #mGetRawSize:Ljava/lang/reflect/Method;
-    .end local v4           #rawSize:I
+    .end local v1    # "activity":Landroid/app/Activity;
+    .end local v2    # "display":Landroid/view/Display;
+    .end local v3    # "mGetRawSize":Ljava/lang/reflect/Method;
+    .end local v4    # "rawSize":I
     :cond_0
     :goto_0
     return-object v5
 
     .line 1173
-    .restart local v1       #activity:Landroid/app/Activity;
-    .restart local v2       #display:Landroid/view/Display;
+    .restart local v1    # "activity":Landroid/app/Activity;
+    .restart local v2    # "display":Landroid/view/Display;
     :catch_0
     move-exception v6
 
@@ -1667,7 +1667,7 @@
 
 .method static getSupportsSms(Landroid/content/Context;)Ljava/lang/String;
     .locals 2
-    .parameter "context"
+    .param p0, "context"    # Landroid/content/Context;
 
     .prologue
     .line 1358
@@ -1676,7 +1676,7 @@
     move-result-object v0
 
     .line 1359
-    .local v0, pm:Landroid/content/pm/PackageManager;
+    .local v0, "pm":Landroid/content/pm/PackageManager;
     const-string v1, "android.hardware.telephony"
 
     invoke-virtual {v0, v1}, Landroid/content/pm/PackageManager;->hasSystemFeature(Ljava/lang/String;)Z
@@ -1692,7 +1692,7 @@
 
 .method static getSupportsTel(Landroid/content/Context;)Ljava/lang/String;
     .locals 2
-    .parameter "context"
+    .param p0, "context"    # Landroid/content/Context;
 
     .prologue
     .line 1364
@@ -1701,7 +1701,7 @@
     move-result-object v0
 
     .line 1365
-    .local v0, pm:Landroid/content/pm/PackageManager;
+    .local v0, "pm":Landroid/content/pm/PackageManager;
     const-string v1, "android.hardware.telephony"
 
     invoke-virtual {v0, v1}, Landroid/content/pm/PackageManager;->hasSystemFeature(Ljava/lang/String;)Z
@@ -1743,7 +1743,7 @@
 
 .method private static hasSpeechKit(Landroid/content/Context;)Ljava/lang/String;
     .locals 1
-    .parameter "context"
+    .param p0, "context"    # Landroid/content/Context;
 
     .prologue
     .line 1263
@@ -1766,7 +1766,7 @@
 
 .method static hasVoiceAbility(Landroid/content/Context;)Ljava/lang/String;
     .locals 5
-    .parameter "context"
+    .param p0, "context"    # Landroid/content/Context;
 
     .prologue
     const-string v4, "false"
@@ -1823,13 +1823,13 @@
     check-cast v0, Landroid/media/AudioManager;
 
     .line 1296
-    .local v0, am:Landroid/media/AudioManager;
+    .local v0, "am":Landroid/media/AudioManager;
     invoke-virtual {v0}, Landroid/media/AudioManager;->getRingerMode()I
 
     move-result v1
 
     .line 1297
-    .local v1, ringermode:I
+    .local v1, "ringermode":I
     if-eqz v1, :cond_2
 
     const/4 v2, 0x1
@@ -1853,7 +1853,7 @@
 
 .method public static initialize(Landroid/content/Context;)V
     .locals 1
-    .parameter "context"
+    .param p0, "context"    # Landroid/content/Context;
 
     .prologue
     .line 1273
@@ -1862,7 +1862,7 @@
     move-result-object v0
 
     .line 1274
-    .local v0, handShake:Lcom/fusepowered/m1/android/HandShake;
+    .local v0, "handShake":Lcom/fusepowered/m1/android/HandShake;
     invoke-virtual {v0}, Lcom/fusepowered/m1/android/HandShake;->sendInitRequest()V
 
     .line 1275
@@ -1874,8 +1874,7 @@
 
 .method static insertUrlCommonValues(Landroid/content/Context;Ljava/util/Map;)V
     .locals 7
-    .parameter "context"
-    .parameter
+    .param p0, "context"    # Landroid/content/Context;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1890,7 +1889,7 @@
 
     .prologue
     .line 980
-    .local p1, paramsMap:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p1, "paramsMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v0, "density"
 
     invoke-static {p0}, Lcom/fusepowered/m1/android/MMSDK;->getDensityString(Landroid/content/Context;)Ljava/lang/String;
@@ -2000,7 +1999,7 @@
     move-result-object v0
 
     .line 1009
-    .local v0, mmdid:Ljava/lang/String;
+    .local v0, "mmdid":Ljava/lang/String;
     if-eqz v0, :cond_2
 
     .line 1011
@@ -2012,7 +2011,7 @@
     :cond_2
     const-string v0, "sdkversion"
 
-    .end local v0           #mmdid:Ljava/lang/String;
+    .end local v0    # "mmdid":Ljava/lang/String;
     const-string v1, "5.1.0-13.08.12.a"
 
     invoke-interface {p1, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -2048,7 +2047,7 @@
     move-result-object v0
 
     .line 1018
-    .local v0, locale:Ljava/util/Locale;
+    .local v0, "locale":Ljava/util/Locale;
     if-eqz v0, :cond_3
 
     .line 1020
@@ -2067,7 +2066,7 @@
 
     move-result-object v0
 
-    .end local v0           #locale:Ljava/util/Locale;
+    .end local v0    # "locale":Ljava/util/Locale;
     invoke-interface {p1, v1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 1026
@@ -2078,7 +2077,7 @@
     move-result-object v0
 
     .line 1027
-    .local v0, pkid:Ljava/lang/String;
+    .local v0, "pkid":Ljava/lang/String;
     const-string v1, "pkid"
 
     invoke-interface {p1, v1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -2089,7 +2088,7 @@
     move-result-object v1
 
     .line 1029
-    .local v1, pm:Landroid/content/pm/PackageManager;
+    .local v1, "pm":Landroid/content/pm/PackageManager;
     const/4 v2, 0x0
 
     invoke-virtual {v1, v0, v2}, Landroid/content/pm/PackageManager;->getApplicationInfo(Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;
@@ -2097,14 +2096,14 @@
     move-result-object v0
 
     .line 1030
-    .local v0, ai:Landroid/content/pm/ApplicationInfo;
+    .local v0, "ai":Landroid/content/pm/ApplicationInfo;
     const-string v2, "pknm"
 
     invoke-virtual {v1, v0}, Landroid/content/pm/PackageManager;->getApplicationLabel(Landroid/content/pm/ApplicationInfo;)Ljava/lang/CharSequence;
 
     move-result-object v0
 
-    .end local v0           #ai:Landroid/content/pm/ApplicationInfo;
+    .end local v0    # "ai":Landroid/content/pm/ApplicationInfo;
     invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v0
@@ -2114,7 +2113,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
     .line 1035
-    .end local v1           #pm:Landroid/content/pm/PackageManager;
+    .end local v1    # "pm":Landroid/content/pm/PackageManager;
     :goto_1
     sget-boolean v0, Lcom/fusepowered/m1/android/MMSDK;->debugMode:Z
 
@@ -2138,7 +2137,7 @@
     move-result-object v0
 
     .line 1041
-    .local v0, schemes:Ljava/lang/String;
+    .local v0, "schemes":Ljava/lang/String;
     if-eqz v0, :cond_5
 
     .line 1043
@@ -2153,7 +2152,7 @@
     move-result-object v0
 
     .line 1047
-    .local v0, vid:Ljava/lang/String;
+    .local v0, "vid":Ljava/lang/String;
     if-eqz v0, :cond_6
 
     .line 1049
@@ -2169,7 +2168,7 @@
     move-result-object v0
 
     .line 1060
-    .local v0, connectionType:Ljava/lang/String;
+    .local v0, "connectionType":Ljava/lang/String;
     invoke-static {p0}, Lcom/fusepowered/m1/android/AdCache;->isExternalStorageAvailable(Landroid/content/Context;)Z
 
     move-result v1
@@ -2190,7 +2189,7 @@
     invoke-direct {v1, v2}, Landroid/os/StatFs;-><init>(Ljava/lang/String;)V
 
     .line 1067
-    .local v1, stat:Landroid/os/StatFs;
+    .local v1, "stat":Landroid/os/StatFs;
     :goto_2
     invoke-virtual {v1}, Landroid/os/StatFs;->getAvailableBlocks()I
 
@@ -2202,7 +2201,7 @@
 
     move-result v1
 
-    .end local v1           #stat:Landroid/os/StatFs;
+    .end local v1    # "stat":Landroid/os/StatFs;
     int-to-long v4, v1
 
     mul-long v1, v2, v4
@@ -2212,15 +2211,15 @@
     move-result-object v3
 
     .line 1070
-    .local v3, freeSpace:Ljava/lang/String;
+    .local v3, "freeSpace":Ljava/lang/String;
     const/4 v2, 0x0
 
     .line 1071
-    .local v2, devicePluggedIn:Ljava/lang/String;
+    .local v2, "devicePluggedIn":Ljava/lang/String;
     const/4 v1, 0x0
 
     .line 1072
-    .local v1, deviceBatteryLevel:Ljava/lang/String;
+    .local v1, "deviceBatteryLevel":Ljava/lang/String;
     const/4 v4, 0x0
 
     new-instance v5, Landroid/content/IntentFilter;
@@ -2234,18 +2233,18 @@
     move-result-object v4
 
     .line 1073
-    .local v4, intent:Landroid/content/Intent;
+    .local v4, "intent":Landroid/content/Intent;
     if-eqz v4, :cond_7
 
     .line 1077
     const-string v1, "plugged"
 
-    .end local v1           #deviceBatteryLevel:Ljava/lang/String;
+    .end local v1    # "deviceBatteryLevel":Ljava/lang/String;
     const/4 v2, 0x0
 
     invoke-virtual {v4, v1, v2}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
-    .end local v2           #devicePluggedIn:Ljava/lang/String;
+    .end local v2    # "devicePluggedIn":Ljava/lang/String;
     move-result v1
 
     if-nez v1, :cond_f
@@ -2255,7 +2254,7 @@
     move-object v2, v1
 
     .line 1078
-    .restart local v2       #devicePluggedIn:Ljava/lang/String;
+    .restart local v2    # "devicePluggedIn":Ljava/lang/String;
     :goto_3
     const-string v1, "scale"
 
@@ -2266,15 +2265,15 @@
     move-result v1
 
     .line 1079
-    .local v1, scale:I
-    const/high16 v5, 0x42c8
+    .local v1, "scale":I
+    const/high16 v5, 0x42c80000
 
     int-to-float v1, v1
 
     div-float v1, v5, v1
 
     .line 1080
-    .local v1, ratio:F
+    .local v1, "ratio":F
     const-string v5, "level"
 
     const/4 v6, 0x0
@@ -2283,7 +2282,7 @@
 
     move-result v4
 
-    .end local v4           #intent:Landroid/content/Intent;
+    .end local v4    # "intent":Landroid/content/Intent;
     int-to-float v4, v4
 
     mul-float/2addr v1, v4
@@ -2291,13 +2290,13 @@
     float-to-int v1, v1
 
     .line 1081
-    .local v1, level:I
+    .local v1, "level":I
     invoke-static {v1}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object v1
 
     .line 1084
-    .local v1, deviceBatteryLevel:Ljava/lang/String;
+    .local v1, "deviceBatteryLevel":Ljava/lang/String;
     :cond_7
     if-eqz v1, :cond_8
 
@@ -2320,7 +2319,7 @@
 
     move-result v1
 
-    .end local v1           #deviceBatteryLevel:Ljava/lang/String;
+    .end local v1    # "deviceBatteryLevel":Ljava/lang/String;
     if-lez v1, :cond_9
 
     .line 1090
@@ -2356,16 +2355,16 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "context":Landroid/content/Context;
     const-string v0, "UTF-8"
 
-    .end local v0           #connectionType:Ljava/lang/String;
+    .end local v0    # "connectionType":Ljava/lang/String;
     invoke-static {p0, v0}, Ljava/net/URLEncoder;->encode(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
     .line 1101
-    .local p0, ip:Ljava/lang/String;
+    .local p0, "ip":Ljava/lang/String;
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -2380,9 +2379,9 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
     .line 1111
-    .end local v2           #devicePluggedIn:Ljava/lang/String;
-    .end local v3           #freeSpace:Ljava/lang/String;
-    .end local p0           #ip:Ljava/lang/String;
+    .end local v2    # "devicePluggedIn":Ljava/lang/String;
+    .end local v3    # "freeSpace":Ljava/lang/String;
+    .end local p0    # "ip":Ljava/lang/String;
     :cond_c
     :goto_4
     invoke-static {p1}, Lcom/fusepowered/m1/android/MMRequest;->insertLocation(Ljava/util/Map;)V
@@ -2391,7 +2390,7 @@
     return-void
 
     .line 996
-    .local p0, context:Landroid/content/Context;
+    .local p0, "context":Landroid/content/Context;
     :cond_d
     const-string v0, "cachedvideo"
 
@@ -2402,7 +2401,7 @@
     goto/16 :goto_0
 
     .line 1065
-    .restart local v0       #connectionType:Ljava/lang/String;
+    .restart local v0    # "connectionType":Ljava/lang/String;
     :cond_e
     :try_start_2
     new-instance v1, Landroid/os/StatFs;
@@ -2417,13 +2416,13 @@
 
     invoke-direct {v1, v2}, Landroid/os/StatFs;-><init>(Ljava/lang/String;)V
 
-    .local v1, stat:Landroid/os/StatFs;
+    .local v1, "stat":Landroid/os/StatFs;
     goto/16 :goto_2
 
     .line 1077
-    .end local v1           #stat:Landroid/os/StatFs;
-    .restart local v3       #freeSpace:Ljava/lang/String;
-    .restart local v4       #intent:Landroid/content/Intent;
+    .end local v1    # "stat":Landroid/os/StatFs;
+    .restart local v3    # "freeSpace":Ljava/lang/String;
+    .restart local v4    # "intent":Landroid/content/Intent;
     :cond_f
     const-string v1, "true"
     :try_end_2
@@ -2434,21 +2433,21 @@
     goto :goto_3
 
     .line 1105
-    .end local v0           #connectionType:Ljava/lang/String;
-    .end local v3           #freeSpace:Ljava/lang/String;
-    .end local v4           #intent:Landroid/content/Intent;
-    .end local p0           #context:Landroid/content/Context;
+    .end local v0    # "connectionType":Ljava/lang/String;
+    .end local v3    # "freeSpace":Ljava/lang/String;
+    .end local v4    # "intent":Landroid/content/Intent;
+    .end local p0    # "context":Landroid/content/Context;
     :catch_0
     move-exception p0
 
     .line 1107
-    .local p0, e:Ljava/lang/Exception;
+    .local p0, "e":Ljava/lang/Exception;
     invoke-static {p0}, Lcom/fusepowered/m1/android/MMSDK$Log;->v(Ljava/lang/Throwable;)V
 
     goto :goto_4
 
     .line 1031
-    .local p0, context:Landroid/content/Context;
+    .local p0, "context":Landroid/content/Context;
     :catch_1
     move-exception v0
 
@@ -2457,7 +2456,7 @@
 
 .method static isCachedVideoSupportedOnDevice(Landroid/content/Context;)Z
     .locals 2
-    .parameter "context"
+    .param p0, "context"    # Landroid/content/Context;
 
     .prologue
     .line 920
@@ -2511,7 +2510,7 @@
 
 .method static isConnected(Landroid/content/Context;)Z
     .locals 4
-    .parameter "context"
+    .param p0, "context"    # Landroid/content/Context;
 
     .prologue
     const/4 v3, 0x1
@@ -2528,7 +2527,7 @@
     check-cast v0, Landroid/net/ConnectivityManager;
 
     .line 662
-    .local v0, connectivityManager:Landroid/net/ConnectivityManager;
+    .local v0, "connectivityManager":Landroid/net/ConnectivityManager;
     if-nez v0, :cond_0
 
     move v1, v2
@@ -2656,7 +2655,7 @@
 
 .method static printDiagnostics(Lcom/fusepowered/m1/android/MMAdImpl;)V
     .locals 10
-    .parameter "adImpl"
+    .param p0, "adImpl"    # Lcom/fusepowered/m1/android/MMAdImpl;
 
     .prologue
     const/4 v9, -0x1
@@ -2684,7 +2683,7 @@
     move-result-object v0
 
     .line 1320
-    .local v0, context:Landroid/content/Context;
+    .local v0, "context":Landroid/content/Context;
     const-string v1, "MMAd External ID: %d"
 
     new-array v2, v6, [Ljava/lang/Object;
@@ -3014,7 +3013,7 @@
 
 .method public static resetCache(Landroid/content/Context;)V
     .locals 0
-    .parameter "context"
+    .param p0, "context"    # Landroid/content/Context;
 
     .prologue
     .line 144
@@ -3026,7 +3025,7 @@
 
 .method static runOnUiThread(Ljava/lang/Runnable;)V
     .locals 1
-    .parameter "action"
+    .param p0, "action"    # Ljava/lang/Runnable;
 
     .prologue
     .line 639
@@ -3054,8 +3053,8 @@
 
 .method static runOnUiThreadDelayed(Ljava/lang/Runnable;J)V
     .locals 1
-    .parameter "action"
-    .parameter "delayMillis"
+    .param p0, "action"    # Ljava/lang/Runnable;
+    .param p1, "delayMillis"    # J
 
     .prologue
     .line 650
@@ -3069,7 +3068,7 @@
 
 .method public static setBroadcastEvents(Z)V
     .locals 0
-    .parameter "enable"
+    .param p0, "enable"    # Z
 
     .prologue
     .line 155
@@ -3081,7 +3080,7 @@
 
 .method public static setLogLevel(I)V
     .locals 0
-    .parameter "level"
+    .param p0, "level"    # I
 
     .prologue
     .line 176
@@ -3093,7 +3092,7 @@
 
 .method static declared-synchronized setMMdid(Ljava/lang/String;)V
     .locals 2
-    .parameter "value"
+    .param p0, "value"    # Ljava/lang/String;
 
     .prologue
     .line 838
@@ -3148,8 +3147,8 @@
 
 .method public static trackConversion(Landroid/content/Context;Ljava/lang/String;)V
     .locals 1
-    .parameter "context"
-    .parameter "goalId"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "goalId"    # Ljava/lang/String;
 
     .prologue
     .line 1231
@@ -3163,9 +3162,9 @@
 
 .method public static trackConversion(Landroid/content/Context;Ljava/lang/String;Lcom/fusepowered/m1/android/MMRequest;)V
     .locals 0
-    .parameter "context"
-    .parameter "goalId"
-    .parameter "request"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "goalId"    # Ljava/lang/String;
+    .param p2, "request"    # Lcom/fusepowered/m1/android/MMRequest;
 
     .prologue
     .line 1246
@@ -3177,8 +3176,8 @@
 
 .method public static trackEvent(Landroid/content/Context;Ljava/lang/String;)V
     .locals 4
-    .parameter "context"
-    .parameter "eventId"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "eventId"    # Ljava/lang/String;
 
     .prologue
     .line 1210
@@ -3194,7 +3193,7 @@
     move-result-object v0
 
     .line 1213
-    .local v0, mmdid:Ljava/lang/String;
+    .local v0, "mmdid":Ljava/lang/String;
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v2
@@ -3231,12 +3230,12 @@
     move-result-object v1
 
     .line 1216
-    .local v1, trackEventUrl:Ljava/lang/String;
+    .local v1, "trackEventUrl":Ljava/lang/String;
     invoke-static {v1}, Lcom/fusepowered/m1/android/Utils$HttpUtils;->executeUrl(Ljava/lang/String;)V
 
     .line 1219
-    .end local v0           #mmdid:Ljava/lang/String;
-    .end local v1           #trackEventUrl:Ljava/lang/String;
+    .end local v0    # "mmdid":Ljava/lang/String;
+    .end local v1    # "trackEventUrl":Ljava/lang/String;
     :cond_0
     return-void
 .end method

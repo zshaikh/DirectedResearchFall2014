@@ -24,7 +24,7 @@
 
     iget-object v0, p0, Lcom/facebook/GetTokenClient$1;->this$0:Lcom/facebook/GetTokenClient;
 
-    #calls: Lcom/facebook/GetTokenClient;->handleMessage(Landroid/os/Message;)V
+    # invokes: Lcom/facebook/GetTokenClient;->handleMessage(Landroid/os/Message;)V
     invoke-static {v0, p1}, Lcom/facebook/GetTokenClient;->access$000(Lcom/facebook/GetTokenClient;Landroid/os/Message;)V
 
     return-void

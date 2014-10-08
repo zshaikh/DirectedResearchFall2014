@@ -105,9 +105,7 @@
 
 .method private constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter "type"
+    .param p3, "type"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -129,7 +127,7 @@
 
 .method public static valueOf(Ljava/lang/String;)Lcom/playhaven/src/publishersdk/content/PHPurchase$Resolution;
     .locals 1
-    .parameter "name"
+    .param p0, "name"    # Ljava/lang/String;
 
     .prologue
     .line 38
@@ -139,7 +137,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "name":Ljava/lang/String;
     check-cast p0, Lcom/playhaven/src/publishersdk/content/PHPurchase$Resolution;
 
     return-object p0

@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/tapjoy/TJAdUnitJSBridge;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 584
@@ -39,13 +38,13 @@
 # virtual methods
 .method public onLocationChanged(Landroid/location/Location;)V
     .locals 4
-    .parameter "location"
+    .param p1, "location"    # Landroid/location/Location;
 
     .prologue
     .line 588
     iget-object v1, p0, Lcom/tapjoy/TJAdUnitJSBridge$4;->this$0:Lcom/tapjoy/TJAdUnitJSBridge;
 
-    #getter for: Lcom/tapjoy/TJAdUnitJSBridge;->context:Landroid/content/Context;
+    # getter for: Lcom/tapjoy/TJAdUnitJSBridge;->context:Landroid/content/Context;
     invoke-static {v1}, Lcom/tapjoy/TJAdUnitJSBridge;->access$200(Lcom/tapjoy/TJAdUnitJSBridge;)Landroid/content/Context;
 
     move-result-object v1
@@ -54,7 +53,7 @@
 
     iget-object v1, p0, Lcom/tapjoy/TJAdUnitJSBridge$4;->this$0:Lcom/tapjoy/TJAdUnitJSBridge;
 
-    #getter for: Lcom/tapjoy/TJAdUnitJSBridge;->webView:Landroid/webkit/WebView;
+    # getter for: Lcom/tapjoy/TJAdUnitJSBridge;->webView:Landroid/webkit/WebView;
     invoke-static {v1}, Lcom/tapjoy/TJAdUnitJSBridge;->access$300(Lcom/tapjoy/TJAdUnitJSBridge;)Landroid/webkit/WebView;
 
     move-result-object v1
@@ -65,7 +64,7 @@
     :cond_0
     iget-object v1, p0, Lcom/tapjoy/TJAdUnitJSBridge$4;->this$0:Lcom/tapjoy/TJAdUnitJSBridge;
 
-    #getter for: Lcom/tapjoy/TJAdUnitJSBridge;->locationManager:Landroid/location/LocationManager;
+    # getter for: Lcom/tapjoy/TJAdUnitJSBridge;->locationManager:Landroid/location/LocationManager;
     invoke-static {v1}, Lcom/tapjoy/TJAdUnitJSBridge;->access$400(Lcom/tapjoy/TJAdUnitJSBridge;)Landroid/location/LocationManager;
 
     move-result-object v1
@@ -74,7 +73,7 @@
 
     iget-object v1, p0, Lcom/tapjoy/TJAdUnitJSBridge$4;->this$0:Lcom/tapjoy/TJAdUnitJSBridge;
 
-    #getter for: Lcom/tapjoy/TJAdUnitJSBridge;->locationListener:Landroid/location/LocationListener;
+    # getter for: Lcom/tapjoy/TJAdUnitJSBridge;->locationListener:Landroid/location/LocationListener;
     invoke-static {v1}, Lcom/tapjoy/TJAdUnitJSBridge;->access$500(Lcom/tapjoy/TJAdUnitJSBridge;)Landroid/location/LocationListener;
 
     move-result-object v1
@@ -91,14 +90,14 @@
     .line 593
     iget-object v1, p0, Lcom/tapjoy/TJAdUnitJSBridge$4;->this$0:Lcom/tapjoy/TJAdUnitJSBridge;
 
-    #getter for: Lcom/tapjoy/TJAdUnitJSBridge;->locationManager:Landroid/location/LocationManager;
+    # getter for: Lcom/tapjoy/TJAdUnitJSBridge;->locationManager:Landroid/location/LocationManager;
     invoke-static {v1}, Lcom/tapjoy/TJAdUnitJSBridge;->access$400(Lcom/tapjoy/TJAdUnitJSBridge;)Landroid/location/LocationManager;
 
     move-result-object v1
 
     iget-object v2, p0, Lcom/tapjoy/TJAdUnitJSBridge$4;->this$0:Lcom/tapjoy/TJAdUnitJSBridge;
 
-    #getter for: Lcom/tapjoy/TJAdUnitJSBridge;->locationListener:Landroid/location/LocationListener;
+    # getter for: Lcom/tapjoy/TJAdUnitJSBridge;->locationListener:Landroid/location/LocationListener;
     invoke-static {v2}, Lcom/tapjoy/TJAdUnitJSBridge;->access$500(Lcom/tapjoy/TJAdUnitJSBridge;)Landroid/location/LocationListener;
 
     move-result-object v2
@@ -120,7 +119,7 @@
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     .line 601
-    .local v0, result:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/Object;>;"
+    .local v0, "result":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/Object;>;"
     const-string v1, "lat"
 
     invoke-virtual {p1}, Landroid/location/Location;->getLatitude()D
@@ -210,7 +209,7 @@
 
 .method public onProviderDisabled(Ljava/lang/String;)V
     .locals 0
-    .parameter "p"
+    .param p1, "p"    # Ljava/lang/String;
 
     .prologue
     .line 613
@@ -219,7 +218,7 @@
 
 .method public onProviderEnabled(Ljava/lang/String;)V
     .locals 0
-    .parameter "p"
+    .param p1, "p"    # Ljava/lang/String;
 
     .prologue
     .line 611
@@ -228,9 +227,9 @@
 
 .method public onStatusChanged(Ljava/lang/String;ILandroid/os/Bundle;)V
     .locals 0
-    .parameter "p"
-    .parameter "status"
-    .parameter "extras"
+    .param p1, "p"    # Ljava/lang/String;
+    .param p2, "status"    # I
+    .param p3, "extras"    # Landroid/os/Bundle;
 
     .prologue
     .line 615

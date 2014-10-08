@@ -33,7 +33,7 @@
 
     iget-object v0, p0, Lcom/facebook/widget/PickerFragment$4;->this$0:Lcom/facebook/widget/PickerFragment;
 
-    #calls: Lcom/facebook/widget/PickerFragment;->clearResults()V
+    # invokes: Lcom/facebook/widget/PickerFragment;->clearResults()V
     invoke-static {v0}, Lcom/facebook/widget/PickerFragment;->access$100(Lcom/facebook/widget/PickerFragment;)V
 
     :cond_0

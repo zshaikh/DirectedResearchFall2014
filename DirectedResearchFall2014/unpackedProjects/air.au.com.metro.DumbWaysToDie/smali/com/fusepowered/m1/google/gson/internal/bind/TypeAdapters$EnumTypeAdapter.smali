@@ -51,7 +51,6 @@
 # direct methods
 .method public constructor <init>(Ljava/lang/Class;)V
     .locals 9
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -62,8 +61,8 @@
 
     .prologue
     .line 721
-    .local p0, this:Lcom/fusepowered/m1/google/gson/internal/bind/TypeAdapters$EnumTypeAdapter;,"Lcom/fusepowered/m1/google/gson/internal/bind/TypeAdapters$EnumTypeAdapter<TT;>;"
-    .local p1, classOfT:Ljava/lang/Class;,"Ljava/lang/Class<TT;>;"
+    .local p0, "this":Lcom/fusepowered/m1/google/gson/internal/bind/TypeAdapters$EnumTypeAdapter;, "Lcom/fusepowered/m1/google/gson/internal/bind/TypeAdapters$EnumTypeAdapter<TT;>;"
+    .local p1, "classOfT":Ljava/lang/Class;, "Ljava/lang/Class<TT;>;"
     invoke-direct {p0}, Lcom/fusepowered/m1/google/gson/TypeAdapter;-><init>()V
 
     .line 718
@@ -88,26 +87,26 @@
 
     check-cast v1, [Ljava/lang/Enum;
 
-    .local v1, arr$:[Ljava/lang/Enum;
+    .local v1, "arr$":[Ljava/lang/Enum;
     array-length v5, v1
 
-    .local v5, len$:I
+    .local v5, "len$":I
     const/4 v4, 0x0
 
-    .local v4, i$:I
+    .local v4, "i$":I
     :goto_0
     if-ge v4, v5, :cond_1
 
     aget-object v2, v1, v4
 
     .line 724
-    .local v2, constant:Ljava/lang/Enum;,"TT;"
+    .local v2, "constant":Ljava/lang/Enum;, "TT;"
     invoke-virtual {v2}, Ljava/lang/Enum;->name()Ljava/lang/String;
 
     move-result-object v6
 
     .line 725
-    .local v6, name:Ljava/lang/String;
+    .local v6, "name":Ljava/lang/String;
     invoke-virtual {p1, v6}, Ljava/lang/Class;->getField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v7
@@ -121,7 +120,7 @@
     check-cast v0, Lcom/fusepowered/m1/google/gson/annotations/SerializedName;
 
     .line 726
-    .local v0, annotation:Lcom/fusepowered/m1/google/gson/annotations/SerializedName;
+    .local v0, "annotation":Lcom/fusepowered/m1/google/gson/annotations/SerializedName;
     if-eqz v0, :cond_0
 
     .line 727
@@ -148,19 +147,19 @@
     goto :goto_0
 
     .line 732
-    .end local v0           #annotation:Lcom/fusepowered/m1/google/gson/annotations/SerializedName;
-    .end local v1           #arr$:[Ljava/lang/Enum;
-    .end local v2           #constant:Ljava/lang/Enum;,"TT;"
-    .end local v4           #i$:I
-    .end local v5           #len$:I
-    .end local v6           #name:Ljava/lang/String;
+    .end local v0    # "annotation":Lcom/fusepowered/m1/google/gson/annotations/SerializedName;
+    .end local v1    # "arr$":[Ljava/lang/Enum;
+    .end local v2    # "constant":Ljava/lang/Enum;, "TT;"
+    .end local v4    # "i$":I
+    .end local v5    # "len$":I
+    .end local v6    # "name":Ljava/lang/String;
     :catch_0
     move-exception v7
 
     move-object v3, v7
 
     .line 733
-    .local v3, e:Ljava/lang/NoSuchFieldException;
+    .local v3, "e":Ljava/lang/NoSuchFieldException;
     new-instance v7, Ljava/lang/AssertionError;
 
     invoke-direct {v7}, Ljava/lang/AssertionError;-><init>()V
@@ -168,10 +167,10 @@
     throw v7
 
     .line 735
-    .end local v3           #e:Ljava/lang/NoSuchFieldException;
-    .restart local v1       #arr$:[Ljava/lang/Enum;
-    .restart local v4       #i$:I
-    .restart local v5       #len$:I
+    .end local v3    # "e":Ljava/lang/NoSuchFieldException;
+    .restart local v1    # "arr$":[Ljava/lang/Enum;
+    .restart local v4    # "i$":I
+    .restart local v5    # "len$":I
     :cond_1
     return-void
 .end method
@@ -180,7 +179,7 @@
 # virtual methods
 .method public read(Lcom/fusepowered/m1/google/gson/stream/JsonReader;)Ljava/lang/Enum;
     .locals 2
-    .parameter "in"
+    .param p1, "in"    # Lcom/fusepowered/m1/google/gson/stream/JsonReader;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -197,7 +196,7 @@
 
     .prologue
     .line 737
-    .local p0, this:Lcom/fusepowered/m1/google/gson/internal/bind/TypeAdapters$EnumTypeAdapter;,"Lcom/fusepowered/m1/google/gson/internal/bind/TypeAdapters$EnumTypeAdapter<TT;>;"
+    .local p0, "this":Lcom/fusepowered/m1/google/gson/internal/bind/TypeAdapters$EnumTypeAdapter;, "Lcom/fusepowered/m1/google/gson/internal/bind/TypeAdapters$EnumTypeAdapter<TT;>;"
     invoke-virtual {p1}, Lcom/fusepowered/m1/google/gson/stream/JsonReader;->peek()Lcom/fusepowered/m1/google/gson/stream/JsonToken;
 
     move-result-object v0
@@ -213,11 +212,11 @@
     const/4 v0, 0x0
 
     .line 741
-    .end local p0           #this:Lcom/fusepowered/m1/google/gson/internal/bind/TypeAdapters$EnumTypeAdapter;,"Lcom/fusepowered/m1/google/gson/internal/bind/TypeAdapters$EnumTypeAdapter<TT;>;"
+    .end local p0    # "this":Lcom/fusepowered/m1/google/gson/internal/bind/TypeAdapters$EnumTypeAdapter;, "Lcom/fusepowered/m1/google/gson/internal/bind/TypeAdapters$EnumTypeAdapter<TT;>;"
     :goto_0
     return-object v0
 
-    .restart local p0       #this:Lcom/fusepowered/m1/google/gson/internal/bind/TypeAdapters$EnumTypeAdapter;,"Lcom/fusepowered/m1/google/gson/internal/bind/TypeAdapters$EnumTypeAdapter<TT;>;"
+    .restart local p0    # "this":Lcom/fusepowered/m1/google/gson/internal/bind/TypeAdapters$EnumTypeAdapter;, "Lcom/fusepowered/m1/google/gson/internal/bind/TypeAdapters$EnumTypeAdapter<TT;>;"
     :cond_0
     iget-object v0, p0, Lcom/fusepowered/m1/google/gson/internal/bind/TypeAdapters$EnumTypeAdapter;->nameToConstant:Ljava/util/Map;
 
@@ -229,7 +228,7 @@
 
     move-result-object p0
 
-    .end local p0           #this:Lcom/fusepowered/m1/google/gson/internal/bind/TypeAdapters$EnumTypeAdapter;,"Lcom/fusepowered/m1/google/gson/internal/bind/TypeAdapters$EnumTypeAdapter<TT;>;"
+    .end local p0    # "this":Lcom/fusepowered/m1/google/gson/internal/bind/TypeAdapters$EnumTypeAdapter;, "Lcom/fusepowered/m1/google/gson/internal/bind/TypeAdapters$EnumTypeAdapter<TT;>;"
     check-cast p0, Ljava/lang/Enum;
 
     move-object v0, p0
@@ -239,7 +238,7 @@
 
 .method public bridge synthetic read(Lcom/fusepowered/m1/google/gson/stream/JsonReader;)Ljava/lang/Object;
     .locals 1
-    .parameter "x0"
+    .param p1, "x0"    # Lcom/fusepowered/m1/google/gson/stream/JsonReader;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -248,7 +247,7 @@
 
     .prologue
     .line 717
-    .local p0, this:Lcom/fusepowered/m1/google/gson/internal/bind/TypeAdapters$EnumTypeAdapter;,"Lcom/fusepowered/m1/google/gson/internal/bind/TypeAdapters$EnumTypeAdapter<TT;>;"
+    .local p0, "this":Lcom/fusepowered/m1/google/gson/internal/bind/TypeAdapters$EnumTypeAdapter;, "Lcom/fusepowered/m1/google/gson/internal/bind/TypeAdapters$EnumTypeAdapter<TT;>;"
     invoke-virtual {p0, p1}, Lcom/fusepowered/m1/google/gson/internal/bind/TypeAdapters$EnumTypeAdapter;->read(Lcom/fusepowered/m1/google/gson/stream/JsonReader;)Ljava/lang/Enum;
 
     move-result-object v0
@@ -258,8 +257,7 @@
 
 .method public write(Lcom/fusepowered/m1/google/gson/stream/JsonWriter;Ljava/lang/Enum;)V
     .locals 1
-    .parameter "out"
-    .parameter
+    .param p1, "out"    # Lcom/fusepowered/m1/google/gson/stream/JsonWriter;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -276,13 +274,13 @@
 
     .prologue
     .line 745
-    .local p0, this:Lcom/fusepowered/m1/google/gson/internal/bind/TypeAdapters$EnumTypeAdapter;,"Lcom/fusepowered/m1/google/gson/internal/bind/TypeAdapters$EnumTypeAdapter<TT;>;"
-    .local p2, value:Ljava/lang/Enum;,"TT;"
+    .local p0, "this":Lcom/fusepowered/m1/google/gson/internal/bind/TypeAdapters$EnumTypeAdapter;, "Lcom/fusepowered/m1/google/gson/internal/bind/TypeAdapters$EnumTypeAdapter<TT;>;"
+    .local p2, "value":Ljava/lang/Enum;, "TT;"
     if-nez p2, :cond_0
 
     const/4 v0, 0x0
 
-    .end local p0           #this:Lcom/fusepowered/m1/google/gson/internal/bind/TypeAdapters$EnumTypeAdapter;,"Lcom/fusepowered/m1/google/gson/internal/bind/TypeAdapters$EnumTypeAdapter<TT;>;"
+    .end local p0    # "this":Lcom/fusepowered/m1/google/gson/internal/bind/TypeAdapters$EnumTypeAdapter;, "Lcom/fusepowered/m1/google/gson/internal/bind/TypeAdapters$EnumTypeAdapter<TT;>;"
     :goto_0
     invoke-virtual {p1, v0}, Lcom/fusepowered/m1/google/gson/stream/JsonWriter;->value(Ljava/lang/String;)Lcom/fusepowered/m1/google/gson/stream/JsonWriter;
 
@@ -290,7 +288,7 @@
     return-void
 
     .line 745
-    .restart local p0       #this:Lcom/fusepowered/m1/google/gson/internal/bind/TypeAdapters$EnumTypeAdapter;,"Lcom/fusepowered/m1/google/gson/internal/bind/TypeAdapters$EnumTypeAdapter<TT;>;"
+    .restart local p0    # "this":Lcom/fusepowered/m1/google/gson/internal/bind/TypeAdapters$EnumTypeAdapter;, "Lcom/fusepowered/m1/google/gson/internal/bind/TypeAdapters$EnumTypeAdapter<TT;>;"
     :cond_0
     iget-object v0, p0, Lcom/fusepowered/m1/google/gson/internal/bind/TypeAdapters$EnumTypeAdapter;->constantToName:Ljava/util/Map;
 
@@ -298,7 +296,7 @@
 
     move-result-object p0
 
-    .end local p0           #this:Lcom/fusepowered/m1/google/gson/internal/bind/TypeAdapters$EnumTypeAdapter;,"Lcom/fusepowered/m1/google/gson/internal/bind/TypeAdapters$EnumTypeAdapter<TT;>;"
+    .end local p0    # "this":Lcom/fusepowered/m1/google/gson/internal/bind/TypeAdapters$EnumTypeAdapter;, "Lcom/fusepowered/m1/google/gson/internal/bind/TypeAdapters$EnumTypeAdapter<TT;>;"
     check-cast p0, Ljava/lang/String;
 
     move-object v0, p0
@@ -308,8 +306,8 @@
 
 .method public bridge synthetic write(Lcom/fusepowered/m1/google/gson/stream/JsonWriter;Ljava/lang/Object;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
+    .param p1, "x0"    # Lcom/fusepowered/m1/google/gson/stream/JsonWriter;
+    .param p2, "x1"    # Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -318,10 +316,10 @@
 
     .prologue
     .line 717
-    .local p0, this:Lcom/fusepowered/m1/google/gson/internal/bind/TypeAdapters$EnumTypeAdapter;,"Lcom/fusepowered/m1/google/gson/internal/bind/TypeAdapters$EnumTypeAdapter<TT;>;"
+    .local p0, "this":Lcom/fusepowered/m1/google/gson/internal/bind/TypeAdapters$EnumTypeAdapter;, "Lcom/fusepowered/m1/google/gson/internal/bind/TypeAdapters$EnumTypeAdapter<TT;>;"
     check-cast p2, Ljava/lang/Enum;
 
-    .end local p2
+    .end local p2    # "x1":Ljava/lang/Object;
     invoke-virtual {p0, p1, p2}, Lcom/fusepowered/m1/google/gson/internal/bind/TypeAdapters$EnumTypeAdapter;->write(Lcom/fusepowered/m1/google/gson/stream/JsonWriter;Ljava/lang/Enum;)V
 
     return-void

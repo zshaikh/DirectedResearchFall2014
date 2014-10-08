@@ -18,10 +18,10 @@
 # direct methods
 .method public constructor <init>(Lcom/flurry/org/codehaus/jackson/impl/JsonReadContext;III)V
     .locals 1
-    .parameter "parent"
-    .parameter "type"
-    .parameter "lineNr"
-    .parameter "colNr"
+    .param p1, "parent"    # Lcom/flurry/org/codehaus/jackson/impl/JsonReadContext;
+    .param p2, "type"    # I
+    .param p3, "lineNr"    # I
+    .param p4, "colNr"    # I
 
     .prologue
     .line 44
@@ -73,8 +73,8 @@
 
 .method public static createRootContext(II)Lcom/flurry/org/codehaus/jackson/impl/JsonReadContext;
     .locals 3
-    .parameter "lineNr"
-    .parameter "colNr"
+    .param p0, "lineNr"    # I
+    .param p1, "colNr"    # I
 
     .prologue
     .line 65
@@ -93,8 +93,8 @@
 # virtual methods
 .method public final createChildArrayContext(II)Lcom/flurry/org/codehaus/jackson/impl/JsonReadContext;
     .locals 3
-    .parameter "lineNr"
-    .parameter "colNr"
+    .param p1, "lineNr"    # I
+    .param p2, "colNr"    # I
 
     .prologue
     const/4 v2, 0x1
@@ -103,43 +103,43 @@
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/impl/JsonReadContext;->_child:Lcom/flurry/org/codehaus/jackson/impl/JsonReadContext;
 
     .line 79
-    .local v0, ctxt:Lcom/flurry/org/codehaus/jackson/impl/JsonReadContext;
+    .local v0, "ctxt":Lcom/flurry/org/codehaus/jackson/impl/JsonReadContext;
     if-nez v0, :cond_0
 
     .line 80
     new-instance v0, Lcom/flurry/org/codehaus/jackson/impl/JsonReadContext;
 
-    .end local v0           #ctxt:Lcom/flurry/org/codehaus/jackson/impl/JsonReadContext;
+    .end local v0    # "ctxt":Lcom/flurry/org/codehaus/jackson/impl/JsonReadContext;
     invoke-direct {v0, p0, v2, p1, p2}, Lcom/flurry/org/codehaus/jackson/impl/JsonReadContext;-><init>(Lcom/flurry/org/codehaus/jackson/impl/JsonReadContext;III)V
 
-    .restart local v0       #ctxt:Lcom/flurry/org/codehaus/jackson/impl/JsonReadContext;
+    .restart local v0    # "ctxt":Lcom/flurry/org/codehaus/jackson/impl/JsonReadContext;
     iput-object v0, p0, Lcom/flurry/org/codehaus/jackson/impl/JsonReadContext;->_child:Lcom/flurry/org/codehaus/jackson/impl/JsonReadContext;
 
     move-object v1, v0
 
     .line 84
-    .end local v0           #ctxt:Lcom/flurry/org/codehaus/jackson/impl/JsonReadContext;
-    .local v1, ctxt:Ljava/lang/Object;
+    .end local v0    # "ctxt":Lcom/flurry/org/codehaus/jackson/impl/JsonReadContext;
+    .local v1, "ctxt":Ljava/lang/Object;
     :goto_0
     return-object v1
 
     .line 83
-    .end local v1           #ctxt:Ljava/lang/Object;
-    .restart local v0       #ctxt:Lcom/flurry/org/codehaus/jackson/impl/JsonReadContext;
+    .end local v1    # "ctxt":Ljava/lang/Object;
+    .restart local v0    # "ctxt":Lcom/flurry/org/codehaus/jackson/impl/JsonReadContext;
     :cond_0
     invoke-virtual {v0, v2, p1, p2}, Lcom/flurry/org/codehaus/jackson/impl/JsonReadContext;->reset(III)V
 
     move-object v1, v0
 
     .line 84
-    .restart local v1       #ctxt:Ljava/lang/Object;
+    .restart local v1    # "ctxt":Ljava/lang/Object;
     goto :goto_0
 .end method
 
 .method public final createChildObjectContext(II)Lcom/flurry/org/codehaus/jackson/impl/JsonReadContext;
     .locals 3
-    .parameter "lineNr"
-    .parameter "colNr"
+    .param p1, "lineNr"    # I
+    .param p2, "colNr"    # I
 
     .prologue
     const/4 v2, 0x2
@@ -148,36 +148,36 @@
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/impl/JsonReadContext;->_child:Lcom/flurry/org/codehaus/jackson/impl/JsonReadContext;
 
     .line 90
-    .local v0, ctxt:Lcom/flurry/org/codehaus/jackson/impl/JsonReadContext;
+    .local v0, "ctxt":Lcom/flurry/org/codehaus/jackson/impl/JsonReadContext;
     if-nez v0, :cond_0
 
     .line 91
     new-instance v0, Lcom/flurry/org/codehaus/jackson/impl/JsonReadContext;
 
-    .end local v0           #ctxt:Lcom/flurry/org/codehaus/jackson/impl/JsonReadContext;
+    .end local v0    # "ctxt":Lcom/flurry/org/codehaus/jackson/impl/JsonReadContext;
     invoke-direct {v0, p0, v2, p1, p2}, Lcom/flurry/org/codehaus/jackson/impl/JsonReadContext;-><init>(Lcom/flurry/org/codehaus/jackson/impl/JsonReadContext;III)V
 
-    .restart local v0       #ctxt:Lcom/flurry/org/codehaus/jackson/impl/JsonReadContext;
+    .restart local v0    # "ctxt":Lcom/flurry/org/codehaus/jackson/impl/JsonReadContext;
     iput-object v0, p0, Lcom/flurry/org/codehaus/jackson/impl/JsonReadContext;->_child:Lcom/flurry/org/codehaus/jackson/impl/JsonReadContext;
 
     move-object v1, v0
 
     .line 95
-    .end local v0           #ctxt:Lcom/flurry/org/codehaus/jackson/impl/JsonReadContext;
-    .local v1, ctxt:Ljava/lang/Object;
+    .end local v0    # "ctxt":Lcom/flurry/org/codehaus/jackson/impl/JsonReadContext;
+    .local v1, "ctxt":Ljava/lang/Object;
     :goto_0
     return-object v1
 
     .line 94
-    .end local v1           #ctxt:Ljava/lang/Object;
-    .restart local v0       #ctxt:Lcom/flurry/org/codehaus/jackson/impl/JsonReadContext;
+    .end local v1    # "ctxt":Ljava/lang/Object;
+    .restart local v0    # "ctxt":Lcom/flurry/org/codehaus/jackson/impl/JsonReadContext;
     :cond_0
     invoke-virtual {v0, v2, p1, p2}, Lcom/flurry/org/codehaus/jackson/impl/JsonReadContext;->reset(III)V
 
     move-object v1, v0
 
     .line 95
-    .restart local v1       #ctxt:Ljava/lang/Object;
+    .restart local v1    # "ctxt":Ljava/lang/Object;
     goto :goto_0
 .end method
 
@@ -193,7 +193,7 @@
     iput v0, p0, Lcom/flurry/org/codehaus/jackson/impl/JsonReadContext;->_index:I
 
     .line 143
-    .local v0, ix:I
+    .local v0, "ix":I
     iget v1, p0, Lcom/flurry/org/codehaus/jackson/impl/JsonReadContext;->_type:I
 
     if-eqz v1, :cond_0
@@ -245,14 +245,14 @@
 
 .method public final getStartLocation(Ljava/lang/Object;)Lcom/flurry/org/codehaus/jackson/JsonLocation;
     .locals 6
-    .parameter "srcRef"
+    .param p1, "srcRef"    # Ljava/lang/Object;
 
     .prologue
     .line 125
     const-wide/16 v2, -0x1
 
     .line 127
-    .local v2, totalChars:J
+    .local v2, "totalChars":J
     new-instance v0, Lcom/flurry/org/codehaus/jackson/JsonLocation;
 
     iget v4, p0, Lcom/flurry/org/codehaus/jackson/impl/JsonReadContext;->_lineNr:I
@@ -268,9 +268,9 @@
 
 .method protected final reset(III)V
     .locals 1
-    .parameter "type"
-    .parameter "lineNr"
-    .parameter "colNr"
+    .param p1, "type"    # I
+    .param p2, "lineNr"    # I
+    .param p3, "colNr"    # I
 
     .prologue
     .line 54
@@ -298,7 +298,7 @@
 
 .method public setCurrentName(Ljava/lang/String;)V
     .locals 0
-    .parameter "name"
+    .param p1, "name"    # Ljava/lang/String;
 
     .prologue
     .line 148
@@ -322,7 +322,7 @@
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
     .line 165
-    .local v0, sb:Ljava/lang/StringBuilder;
+    .local v0, "sb":Ljava/lang/StringBuilder;
     iget v1, p0, Lcom/flurry/org/codehaus/jackson/impl/JsonReadContext;->_type:I
 
     packed-switch v1, :pswitch_data_0

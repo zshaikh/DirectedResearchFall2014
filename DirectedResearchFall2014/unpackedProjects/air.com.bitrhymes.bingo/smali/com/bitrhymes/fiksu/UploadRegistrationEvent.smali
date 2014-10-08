@@ -21,8 +21,8 @@
 # virtual methods
 .method public call(Lcom/adobe/fre/FREContext;[Lcom/adobe/fre/FREObject;)Lcom/adobe/fre/FREObject;
     .locals 6
-    .parameter "arg0"
-    .parameter "arg1"
+    .param p1, "arg0"    # Lcom/adobe/fre/FREContext;
+    .param p2, "arg1"    # [Lcom/adobe/fre/FREObject;
 
     .prologue
     const-string v5, "ERROR_EVENT"
@@ -40,7 +40,7 @@
     move-result-object v1
 
     .line 16
-    .local v1, userName:Ljava/lang/String;
+    .local v1, "userName":Ljava/lang/String;
     invoke-virtual {p1}, Lcom/adobe/fre/FREContext;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
@@ -51,7 +51,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
     .line 24
-    .end local v1           #userName:Ljava/lang/String;
+    .end local v1    # "userName":Ljava/lang/String;
     :goto_0
     const/4 v2, 0x0
 
@@ -64,7 +64,7 @@
     move-object v0, v2
 
     .line 18
-    .local v0, e:Ljava/lang/IllegalStateException;
+    .local v0, "e":Ljava/lang/IllegalStateException;
     invoke-virtual {v0}, Ljava/lang/IllegalStateException;->printStackTrace()V
 
     .line 19
@@ -133,14 +133,14 @@
     goto :goto_0
 
     .line 20
-    .end local v0           #e:Ljava/lang/IllegalStateException;
+    .end local v0    # "e":Ljava/lang/IllegalStateException;
     :catch_1
     move-exception v2
 
     move-object v0, v2
 
     .line 21
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     .line 22

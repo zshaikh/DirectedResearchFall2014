@@ -16,7 +16,7 @@
 
 .method public static getArrayComparator(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
-    .parameter "defaultValue"
+    .param p0, "defaultValue"    # Ljava/lang/Object;
 
     .prologue
     .line 24
@@ -25,7 +25,7 @@
     move-result v0
 
     .line 25
-    .local v0, length:I
+    .local v0, "length":I
     new-instance v1, Lcom/flurry/org/codehaus/jackson/map/util/Comparators$1;
 
     invoke-direct {v1, p0, v0}, Lcom/flurry/org/codehaus/jackson/map/util/Comparators$1;-><init>(Ljava/lang/Object;I)V

@@ -44,8 +44,7 @@
 
 .method public static gaInstrumentationVideoAbort(Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;Ljava/util/Map;)V
     .locals 2
-    .parameter "campaignPlaying"
-    .parameter
+    .param p0, "campaignPlaying"    # Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -60,13 +59,13 @@
 
     .prologue
     .line 190
-    .local p1, additionalValues:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
+    .local p1, "additionalValues":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
     invoke-static {p0}, Lcom/fusepowered/a1/webapp/ApplifierImpactInstrumentation;->getBasicGAVideoProperties(Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;)Lorg/json/JSONObject;
 
     move-result-object v0
 
     .line 191
-    .local v0, data:Lorg/json/JSONObject;
+    .local v0, "data":Lorg/json/JSONObject;
     invoke-static {p1}, Lcom/fusepowered/a1/webapp/ApplifierImpactInstrumentation;->mapToJSON(Ljava/util/Map;)Lorg/json/JSONObject;
 
     move-result-object v1
@@ -89,8 +88,7 @@
 
 .method public static gaInstrumentationVideoCaching(Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;Ljava/util/Map;)V
     .locals 2
-    .parameter "campaignPlaying"
-    .parameter
+    .param p0, "campaignPlaying"    # Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -105,13 +103,13 @@
 
     .prologue
     .line 197
-    .local p1, additionalValues:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
+    .local p1, "additionalValues":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
     invoke-static {p0}, Lcom/fusepowered/a1/webapp/ApplifierImpactInstrumentation;->getBasicGAVideoProperties(Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;)Lorg/json/JSONObject;
 
     move-result-object v0
 
     .line 198
-    .local v0, data:Lorg/json/JSONObject;
+    .local v0, "data":Lorg/json/JSONObject;
     invoke-static {p1}, Lcom/fusepowered/a1/webapp/ApplifierImpactInstrumentation;->mapToJSON(Ljava/util/Map;)Lorg/json/JSONObject;
 
     move-result-object v1
@@ -134,8 +132,7 @@
 
 .method public static gaInstrumentationVideoError(Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;Ljava/util/Map;)V
     .locals 2
-    .parameter "campaignPlaying"
-    .parameter
+    .param p0, "campaignPlaying"    # Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -150,13 +147,13 @@
 
     .prologue
     .line 183
-    .local p1, additionalValues:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
+    .local p1, "additionalValues":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
     invoke-static {p0}, Lcom/fusepowered/a1/webapp/ApplifierImpactInstrumentation;->getBasicGAVideoProperties(Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;)Lorg/json/JSONObject;
 
     move-result-object v0
 
     .line 184
-    .local v0, data:Lorg/json/JSONObject;
+    .local v0, "data":Lorg/json/JSONObject;
     invoke-static {p1}, Lcom/fusepowered/a1/webapp/ApplifierImpactInstrumentation;->mapToJSON(Ljava/util/Map;)Lorg/json/JSONObject;
 
     move-result-object v1
@@ -179,8 +176,7 @@
 
 .method public static gaInstrumentationVideoPlay(Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;Ljava/util/Map;)V
     .locals 2
-    .parameter "campaignPlaying"
-    .parameter
+    .param p0, "campaignPlaying"    # Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -195,13 +191,13 @@
 
     .prologue
     .line 176
-    .local p1, additionalValues:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
+    .local p1, "additionalValues":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
     invoke-static {p0}, Lcom/fusepowered/a1/webapp/ApplifierImpactInstrumentation;->getBasicGAVideoProperties(Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;)Lorg/json/JSONObject;
 
     move-result-object v0
 
     .line 177
-    .local v0, data:Lorg/json/JSONObject;
+    .local v0, "data":Lorg/json/JSONObject;
     invoke-static {p1}, Lcom/fusepowered/a1/webapp/ApplifierImpactInstrumentation;->mapToJSON(Ljava/util/Map;)Lorg/json/JSONObject;
 
     move-result-object v1
@@ -224,7 +220,7 @@
 
 .method private static getBasicGAVideoProperties(Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;)Lorg/json/JSONObject;
     .locals 7
-    .parameter "campaignPlaying"
+    .param p0, "campaignPlaying"    # Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;
 
     .prologue
     const/4 v6, 0x0
@@ -236,7 +232,7 @@
     const-string v3, "stream"
 
     .line 77
-    .local v3, videoPlayType:Ljava/lang/String;
+    .local v3, "videoPlayType":Ljava/lang/String;
     invoke-virtual {p0}, Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;->shouldCacheVideo()Ljava/lang/Boolean;
 
     move-result-object v4
@@ -263,13 +259,13 @@
     move-result-object v0
 
     .line 83
-    .local v0, connectionType:Ljava/lang/String;
+    .local v0, "connectionType":Ljava/lang/String;
     new-instance v2, Lorg/json/JSONObject;
 
     invoke-direct {v2}, Lorg/json/JSONObject;-><init>()V
 
     .line 86
-    .local v2, retJsonObject:Lorg/json/JSONObject;
+    .local v2, "retJsonObject":Lorg/json/JSONObject;
     :try_start_0
     const-string v4, "videoPlaybackType"
 
@@ -294,23 +290,23 @@
     move-object v4, v2
 
     .line 98
-    .end local v0           #connectionType:Ljava/lang/String;
-    .end local v2           #retJsonObject:Lorg/json/JSONObject;
-    .end local v3           #videoPlayType:Ljava/lang/String;
+    .end local v0    # "connectionType":Ljava/lang/String;
+    .end local v2    # "retJsonObject":Lorg/json/JSONObject;
+    .end local v3    # "videoPlayType":Ljava/lang/String;
     :goto_0
     return-object v4
 
     .line 90
-    .restart local v0       #connectionType:Ljava/lang/String;
-    .restart local v2       #retJsonObject:Lorg/json/JSONObject;
-    .restart local v3       #videoPlayType:Ljava/lang/String;
+    .restart local v0    # "connectionType":Ljava/lang/String;
+    .restart local v2    # "retJsonObject":Lorg/json/JSONObject;
+    .restart local v3    # "videoPlayType":Ljava/lang/String;
     :catch_0
     move-exception v4
 
     move-object v1, v4
 
     .line 91
-    .local v1, e:Ljava/lang/Exception;
+    .local v1, "e":Ljava/lang/Exception;
     const-string v4, "Could not create instrumentation JSON"
 
     const-class v5, Lcom/fusepowered/a1/webapp/ApplifierImpactInstrumentation;
@@ -322,10 +318,10 @@
     .line 92
     goto :goto_0
 
-    .end local v0           #connectionType:Ljava/lang/String;
-    .end local v1           #e:Ljava/lang/Exception;
-    .end local v2           #retJsonObject:Lorg/json/JSONObject;
-    .end local v3           #videoPlayType:Ljava/lang/String;
+    .end local v0    # "connectionType":Ljava/lang/String;
+    .end local v1    # "e":Ljava/lang/Exception;
+    .end local v2    # "retJsonObject":Lorg/json/JSONObject;
+    .end local v3    # "videoPlayType":Ljava/lang/String;
     :cond_1
     move-object v4, v6
 
@@ -346,7 +342,6 @@
 
 .method private static mapToJSON(Ljava/util/Map;)Lorg/json/JSONObject;
     .locals 7
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -361,7 +356,7 @@
 
     .prologue
     .line 23
-    .local p0, mapWithValues:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
+    .local p0, "mapWithValues":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
     if-eqz p0, :cond_2
 
     .line 24
@@ -370,19 +365,19 @@
     invoke-direct {v4}, Lorg/json/JSONObject;-><init>()V
 
     .line 26
-    .local v4, retJsonObject:Lorg/json/JSONObject;
+    .local v4, "retJsonObject":Lorg/json/JSONObject;
     invoke-interface {p0}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
     move-result-object v3
 
     .line 27
-    .local v3, keySet:Ljava/util/Set;,"Ljava/util/Set<Ljava/lang/String;>;"
+    .local v3, "keySet":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     invoke-interface {v3}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
 
     .line 28
-    .local v1, i:Ljava/util/Iterator;,"Ljava/util/Iterator<Ljava/lang/String;>;"
+    .local v1, "i":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/String;>;"
     :cond_0
     :goto_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
@@ -394,16 +389,16 @@
     move-object v5, v4
 
     .line 44
-    .end local v1           #i:Ljava/util/Iterator;,"Ljava/util/Iterator<Ljava/lang/String;>;"
-    .end local v3           #keySet:Ljava/util/Set;,"Ljava/util/Set<Ljava/lang/String;>;"
-    .end local v4           #retJsonObject:Lorg/json/JSONObject;
+    .end local v1    # "i":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/String;>;"
+    .end local v3    # "keySet":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
+    .end local v4    # "retJsonObject":Lorg/json/JSONObject;
     :goto_1
     return-object v5
 
     .line 29
-    .restart local v1       #i:Ljava/util/Iterator;,"Ljava/util/Iterator<Ljava/lang/String;>;"
-    .restart local v3       #keySet:Ljava/util/Set;,"Ljava/util/Set<Ljava/lang/String;>;"
-    .restart local v4       #retJsonObject:Lorg/json/JSONObject;
+    .restart local v1    # "i":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/String;>;"
+    .restart local v3    # "keySet":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
+    .restart local v4    # "retJsonObject":Lorg/json/JSONObject;
     :cond_1
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -412,7 +407,7 @@
     check-cast v2, Ljava/lang/String;
 
     .line 31
-    .local v2, key:Ljava/lang/String;
+    .local v2, "key":Ljava/lang/String;
     invoke-interface {p0, v2}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
     move-result v5
@@ -444,7 +439,7 @@
     move-object v0, v5
 
     .line 36
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     new-instance v5, Ljava/lang/StringBuilder;
 
     const-string v6, "Could not add value: "
@@ -466,11 +461,11 @@
     goto :goto_0
 
     .line 44
-    .end local v0           #e:Ljava/lang/Exception;
-    .end local v1           #i:Ljava/util/Iterator;,"Ljava/util/Iterator<Ljava/lang/String;>;"
-    .end local v2           #key:Ljava/lang/String;
-    .end local v3           #keySet:Ljava/util/Set;,"Ljava/util/Set<Ljava/lang/String;>;"
-    .end local v4           #retJsonObject:Lorg/json/JSONObject;
+    .end local v0    # "e":Ljava/lang/Exception;
+    .end local v1    # "i":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/String;>;"
+    .end local v2    # "key":Ljava/lang/String;
+    .end local v3    # "keySet":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
+    .end local v4    # "retJsonObject":Lorg/json/JSONObject;
     :cond_2
     const/4 v5, 0x0
 
@@ -479,8 +474,8 @@
 
 .method private static mergeJSON(Lorg/json/JSONObject;Lorg/json/JSONObject;)Lorg/json/JSONObject;
     .locals 6
-    .parameter "json1"
-    .parameter "json2"
+    .param p0, "json1"    # Lorg/json/JSONObject;
+    .param p1, "json2"    # Lorg/json/JSONObject;
 
     .prologue
     .line 48
@@ -494,7 +489,7 @@
     move-result-object v2
 
     .line 51
-    .local v2, keyIterator:Ljava/util/Iterator;
+    .local v2, "keyIterator":Ljava/util/Iterator;
     :goto_0
     invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
@@ -505,12 +500,12 @@
     move-object v4, p0
 
     .line 70
-    .end local v2           #keyIterator:Ljava/util/Iterator;
+    .end local v2    # "keyIterator":Ljava/util/Iterator;
     :goto_1
     return-object v4
 
     .line 53
-    .restart local v2       #keyIterator:Ljava/util/Iterator;
+    .restart local v2    # "keyIterator":Ljava/util/Iterator;
     :cond_0
     :try_start_0
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
@@ -522,13 +517,13 @@
     move-result-object v1
 
     .line 54
-    .local v1, key:Ljava/lang/String;
+    .local v1, "key":Ljava/lang/String;
     invoke-virtual {p1, v1}, Lorg/json/JSONObject;->get(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v3
 
     .line 55
-    .local v3, value:Ljava/lang/Object;
+    .local v3, "value":Ljava/lang/Object;
     invoke-virtual {p0, v1, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -536,15 +531,15 @@
     goto :goto_0
 
     .line 57
-    .end local v1           #key:Ljava/lang/String;
-    .end local v3           #value:Ljava/lang/Object;
+    .end local v1    # "key":Ljava/lang/String;
+    .end local v3    # "value":Ljava/lang/Object;
     :catch_0
     move-exception v4
 
     move-object v0, v4
 
     .line 58
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v4, "Problems creating JSON"
 
     const-class v5, Lcom/fusepowered/a1/webapp/ApplifierImpactInstrumentation;
@@ -554,8 +549,8 @@
     goto :goto_0
 
     .line 65
-    .end local v0           #e:Ljava/lang/Exception;
-    .end local v2           #keyIterator:Ljava/util/Iterator;
+    .end local v0    # "e":Ljava/lang/Exception;
+    .end local v2    # "keyIterator":Ljava/util/Iterator;
     :cond_1
     if-eqz p0, :cond_2
 
@@ -582,8 +577,8 @@
 
 .method private static sendGAInstrumentationEvent(Ljava/lang/String;Lorg/json/JSONObject;)V
     .locals 8
-    .parameter "eventType"
-    .parameter "data"
+    .param p0, "eventType"    # Ljava/lang/String;
+    .param p1, "data"    # Lorg/json/JSONObject;
 
     .prologue
     const-class v7, Lcom/fusepowered/a1/webapp/ApplifierImpactInstrumentation;
@@ -594,19 +589,19 @@
     invoke-direct {v2}, Lorg/json/JSONObject;-><init>()V
 
     .line 145
-    .local v2, finalData:Lorg/json/JSONObject;
+    .local v2, "finalData":Lorg/json/JSONObject;
     new-instance v4, Lorg/json/JSONArray;
 
     invoke-direct {v4}, Lorg/json/JSONArray;-><init>()V
 
     .line 146
-    .local v4, wrapArray:Lorg/json/JSONArray;
+    .local v4, "wrapArray":Lorg/json/JSONArray;
     new-instance v1, Lorg/json/JSONObject;
 
     invoke-direct {v1}, Lorg/json/JSONObject;-><init>()V
 
     .line 149
-    .local v1, events:Lorg/json/JSONObject;
+    .local v1, "events":Lorg/json/JSONObject;
     :try_start_0
     const-string v5, "eventType"
 
@@ -676,7 +671,7 @@
     move-object v0, v5
 
     .line 155
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v5, "Couldn\'t create final data"
 
     const-class v6, Lcom/fusepowered/a1/webapp/ApplifierImpactInstrumentation;
@@ -686,7 +681,7 @@
     goto :goto_0
 
     .line 163
-    .end local v0           #e:Ljava/lang/Exception;
+    .end local v0    # "e":Ljava/lang/Exception;
     :cond_0
     const-string v5, "WebApp not initialized, could not send event!"
 
@@ -713,7 +708,7 @@
     invoke-direct {v3}, Ljava/util/HashMap;-><init>()V
 
     .line 170
-    .local v3, tmpData:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Lorg/json/JSONObject;>;"
+    .local v3, "tmpData":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Lorg/json/JSONObject;>;"
     invoke-interface {v3, p0, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 171
@@ -732,19 +727,19 @@
     const/4 v3, 0x0
 
     .line 107
-    .local v3, finalData:Lorg/json/JSONObject;
+    .local v3, "finalData":Lorg/json/JSONObject;
     new-instance v6, Lorg/json/JSONArray;
 
     invoke-direct {v6}, Lorg/json/JSONArray;-><init>()V
 
     .line 108
-    .local v6, wrapArray:Lorg/json/JSONArray;
+    .local v6, "wrapArray":Lorg/json/JSONArray;
     new-instance v4, Lorg/json/JSONObject;
 
     invoke-direct {v4}, Lorg/json/JSONObject;-><init>()V
 
     .line 110
-    .local v4, finalEvents:Lorg/json/JSONObject;
+    .local v4, "finalEvents":Lorg/json/JSONObject;
     sget-object v7, Lcom/fusepowered/a1/webapp/ApplifierImpactInstrumentation;->_unsentEvents:Ljava/util/ArrayList;
 
     if-eqz v7, :cond_0
@@ -823,14 +818,14 @@
     check-cast v5, Ljava/util/Map;
 
     .line 112
-    .local v5, map:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Lorg/json/JSONObject;>;"
+    .local v5, "map":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Lorg/json/JSONObject;>;"
     new-instance v3, Lorg/json/JSONObject;
 
-    .end local v3           #finalData:Lorg/json/JSONObject;
+    .end local v3    # "finalData":Lorg/json/JSONObject;
     invoke-direct {v3}, Lorg/json/JSONObject;-><init>()V
 
     .line 113
-    .restart local v3       #finalData:Lorg/json/JSONObject;
+    .restart local v3    # "finalData":Lorg/json/JSONObject;
     invoke-interface {v5}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
     move-result-object v8
@@ -846,7 +841,7 @@
     check-cast v2, Ljava/lang/String;
 
     .line 114
-    .local v2, eventType:Ljava/lang/String;
+    .local v2, "eventType":Ljava/lang/String;
     invoke-interface {v5, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -854,7 +849,7 @@
     check-cast v0, Lorg/json/JSONObject;
 
     .line 117
-    .local v0, data:Lorg/json/JSONObject;
+    .local v0, "data":Lorg/json/JSONObject;
     :try_start_0
     const-string v8, "eventType"
 
@@ -893,6 +888,6 @@
     move-object v1, v8
 
     .line 121
-    .local v1, e:Ljava/lang/Exception;
+    .local v1, "e":Ljava/lang/Exception;
     goto :goto_0
 .end method

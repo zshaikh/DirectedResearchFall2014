@@ -29,7 +29,7 @@
     move-result-object v6
 
     .line 40
-    .local v6, unsafeClass:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local v6, "unsafeClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const-string v7, "theUnsafe"
 
     invoke-virtual {v6, v7}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
@@ -37,7 +37,7 @@
     move-result-object v2
 
     .line 41
-    .local v2, f:Ljava/lang/reflect/Field;
+    .local v2, "f":Ljava/lang/reflect/Field;
     const/4 v7, 0x1
 
     invoke-virtual {v2, v7}, Ljava/lang/reflect/Field;->setAccessible(Z)V
@@ -50,7 +50,7 @@
     move-result-object v5
 
     .line 43
-    .local v5, unsafe:Ljava/lang/Object;
+    .local v5, "unsafe":Ljava/lang/Object;
     const-string v7, "allocateInstance"
 
     const/4 v8, 0x1
@@ -68,7 +68,7 @@
     move-result-object v0
 
     .line 44
-    .local v0, allocateInstance:Ljava/lang/reflect/Method;
+    .local v0, "allocateInstance":Ljava/lang/reflect/Method;
     new-instance v7, Lcom/fusepowered/m1/google/gson/internal/UnsafeAllocator$1;
 
     invoke-direct {v7, v0, v5}, Lcom/fusepowered/m1/google/gson/internal/UnsafeAllocator$1;-><init>(Ljava/lang/reflect/Method;Ljava/lang/Object;)V
@@ -76,10 +76,10 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 97
-    .end local v0           #allocateInstance:Ljava/lang/reflect/Method;
-    .end local v2           #f:Ljava/lang/reflect/Field;
-    .end local v5           #unsafe:Ljava/lang/Object;
-    .end local v6           #unsafeClass:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .end local v0    # "allocateInstance":Ljava/lang/reflect/Method;
+    .end local v2    # "f":Ljava/lang/reflect/Field;
+    .end local v5    # "unsafe":Ljava/lang/Object;
+    .end local v6    # "unsafeClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     :goto_0
     return-object v7
 
@@ -114,7 +114,7 @@
     move-result-object v4
 
     .line 62
-    .local v4, newInstance:Ljava/lang/reflect/Method;
+    .local v4, "newInstance":Ljava/lang/reflect/Method;
     const/4 v7, 0x1
 
     invoke-virtual {v4, v7}, Ljava/lang/reflect/Method;->setAccessible(Z)V
@@ -129,7 +129,7 @@
     goto :goto_0
 
     .line 70
-    .end local v4           #newInstance:Ljava/lang/reflect/Method;
+    .end local v4    # "newInstance":Ljava/lang/reflect/Method;
     :catch_1
     move-exception v7
 
@@ -154,7 +154,7 @@
     move-result-object v3
 
     .line 81
-    .local v3, getConstructorId:Ljava/lang/reflect/Method;
+    .local v3, "getConstructorId":Ljava/lang/reflect/Method;
     const/4 v7, 0x1
 
     invoke-virtual {v3, v7}, Ljava/lang/reflect/Method;->setAccessible(Z)V
@@ -183,7 +183,7 @@
     move-result v1
 
     .line 83
-    .local v1, constructorId:I
+    .local v1, "constructorId":I
     const-class v7, Ljava/io/ObjectStreamClass;
 
     const-string v8, "newInstance"
@@ -209,7 +209,7 @@
     move-result-object v4
 
     .line 85
-    .restart local v4       #newInstance:Ljava/lang/reflect/Method;
+    .restart local v4    # "newInstance":Ljava/lang/reflect/Method;
     const/4 v7, 0x1
 
     invoke-virtual {v4, v7}, Ljava/lang/reflect/Method;->setAccessible(Z)V
@@ -224,9 +224,9 @@
     goto :goto_0
 
     .line 93
-    .end local v1           #constructorId:I
-    .end local v3           #getConstructorId:Ljava/lang/reflect/Method;
-    .end local v4           #newInstance:Ljava/lang/reflect/Method;
+    .end local v1    # "constructorId":I
+    .end local v3    # "getConstructorId":Ljava/lang/reflect/Method;
+    .end local v4    # "newInstance":Ljava/lang/reflect/Method;
     :catch_2
     move-exception v7
 

@@ -10,7 +10,6 @@
 # direct methods
 .method synthetic constructor <init>(Lcom/flurry/android/ac;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 126
@@ -23,8 +22,6 @@
 
 .method private constructor <init>(Lcom/flurry/android/ac;B)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 126

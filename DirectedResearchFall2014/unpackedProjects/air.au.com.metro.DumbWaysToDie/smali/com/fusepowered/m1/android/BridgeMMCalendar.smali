@@ -19,7 +19,6 @@
 # virtual methods
 .method public addEvent(Ljava/util/HashMap;)Lcom/fusepowered/m1/android/MMJSResponse;
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -34,7 +33,7 @@
 
     .prologue
     .line 14
-    .local p1, parameters:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p1, "parameters":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v0, "Not supported"
 
     invoke-static {v0}, Lcom/fusepowered/m1/android/MMJSResponse;->responseWithError(Ljava/lang/String;)Lcom/fusepowered/m1/android/MMJSResponse;

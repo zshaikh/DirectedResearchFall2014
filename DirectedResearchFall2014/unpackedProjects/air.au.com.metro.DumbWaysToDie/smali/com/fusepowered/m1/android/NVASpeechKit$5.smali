@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m1/android/NVASpeechKit;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 345
@@ -39,7 +38,7 @@
 # virtual methods
 .method public onAudioLevelUpdate(D)V
     .locals 1
-    .parameter "audioLevel"
+    .param p1, "audioLevel"    # D
 
     .prologue
     .line 403
@@ -53,7 +52,7 @@
 
 .method public onAudioSampleUpdate(D)V
     .locals 1
-    .parameter "averageAudioLevel"
+    .param p1, "averageAudioLevel"    # D
 
     .prologue
     .line 397
@@ -102,13 +101,13 @@
 
     move-result-object v2
 
-    #calls: Lcom/fusepowered/m1/android/NVASpeechKit;->resultsToJSON([Lcom/fusepowered/m1/android/NVASpeechKit$Result;)Lorg/json/JSONArray;
+    # invokes: Lcom/fusepowered/m1/android/NVASpeechKit;->resultsToJSON([Lcom/fusepowered/m1/android/NVASpeechKit$Result;)Lorg/json/JSONArray;
     invoke-static {v1, v2}, Lcom/fusepowered/m1/android/NVASpeechKit;->access$1000(Lcom/fusepowered/m1/android/NVASpeechKit;[Lcom/fusepowered/m1/android/NVASpeechKit$Result;)Lorg/json/JSONArray;
 
     move-result-object v0
 
     .line 376
-    .local v0, jsonArray:Lorg/json/JSONArray;
+    .local v0, "jsonArray":Lorg/json/JSONArray;
     iget-object v1, p0, Lcom/fusepowered/m1/android/NVASpeechKit$5;->this$0:Lcom/fusepowered/m1/android/NVASpeechKit;
 
     invoke-virtual {v0}, Lorg/json/JSONArray;->toString()Ljava/lang/String;
@@ -123,7 +122,7 @@
 
 .method public onStateChange(Lcom/fusepowered/m1/android/NVASpeechKit$State;)V
     .locals 2
-    .parameter "state"
+    .param p1, "state"    # Lcom/fusepowered/m1/android/NVASpeechKit$State;
 
     .prologue
     .line 350

@@ -31,11 +31,9 @@
 # virtual methods
 .method protected _collectAndResolve(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;Lcom/flurry/org/codehaus/jackson/map/MapperConfig;Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;Ljava/util/HashMap;)V
     .locals 15
-    .parameter "annotatedType"
-    .parameter "namedType"
-    .parameter
-    .parameter "ai"
-    .parameter
+    .param p1, "annotatedType"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;
+    .param p2, "namedType"    # Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;
+    .param p4, "ai"    # Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -54,8 +52,8 @@
 
     .prologue
     .line 119
-    .local p3, config:Lcom/flurry/org/codehaus/jackson/map/MapperConfig;,"Lcom/flurry/org/codehaus/jackson/map/MapperConfig<*>;"
-    .local p5, collectedSubtypes:Ljava/util/HashMap;,"Ljava/util/HashMap<Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;>;"
+    .local p3, "config":Lcom/flurry/org/codehaus/jackson/map/MapperConfig;, "Lcom/flurry/org/codehaus/jackson/map/MapperConfig<*>;"
+    .local p5, "collectedSubtypes":Ljava/util/HashMap;, "Ljava/util/HashMap<Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;>;"
     invoke-virtual/range {p2 .. p2}, Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;->hasName()Z
 
     move-result v3
@@ -72,7 +70,7 @@
     move-result-object v10
 
     .line 121
-    .local v10, name:Ljava/lang/String;
+    .local v10, "name":Ljava/lang/String;
     if-eqz v10, :cond_0
 
     .line 122
@@ -84,14 +82,14 @@
 
     invoke-direct {v11, v3, v10}, Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
 
-    .end local p2
-    .local v11, namedType:Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;
+    .end local p2    # "namedType":Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;
+    .local v11, "namedType":Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;
     move-object/from16 p2, v11
 
     .line 127
-    .end local v10           #name:Ljava/lang/String;
-    .end local v11           #namedType:Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;
-    .restart local p2
+    .end local v10    # "name":Ljava/lang/String;
+    .end local v11    # "namedType":Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;
+    .restart local p2    # "namedType":Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;
     :cond_0
     move-object/from16 v0, p5
 
@@ -122,7 +120,7 @@
     check-cast v12, Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;
 
     .line 131
-    .local v12, prev:Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;
+    .local v12, "prev":Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;
     invoke-virtual {v12}, Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;->hasName()Z
 
     move-result v3
@@ -139,7 +137,7 @@
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 150
-    .end local v12           #prev:Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;
+    .end local v12    # "prev":Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;
     :cond_1
     return-void
 
@@ -163,7 +161,7 @@
     move-result-object v13
 
     .line 140
-    .local v13, st:Ljava/util/Collection;,"Ljava/util/Collection<Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;>;"
+    .local v13, "st":Ljava/util/Collection;, "Ljava/util/Collection<Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;>;"
     if-eqz v13, :cond_1
 
     invoke-interface {v13}, Ljava/util/Collection;->isEmpty()Z
@@ -177,7 +175,7 @@
 
     move-result-object v9
 
-    .local v9, i$:Ljava/util/Iterator;
+    .local v9, "i$":Ljava/util/Iterator;
     :goto_0
     invoke-interface {v9}, Ljava/util/Iterator;->hasNext()Z
 
@@ -192,7 +190,7 @@
     check-cast v5, Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;
 
     .line 142
-    .local v5, subtype:Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;
+    .local v5, "subtype":Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;
     invoke-virtual {v5}, Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;->getType()Ljava/lang/Class;
 
     move-result-object v3
@@ -208,7 +206,7 @@
     move-result-object v4
 
     .line 144
-    .local v4, subtypeClass:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;
+    .local v4, "subtypeClass":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;
     invoke-virtual {v5}, Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;->hasName()Z
 
     move-result v3
@@ -230,14 +228,14 @@
 
     move-result-object v5
 
-    .end local v5           #subtype:Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;
+    .end local v5    # "subtype":Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;
     invoke-direct {v14, v3, v5}, Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
 
-    .local v14, subtype:Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;
+    .local v14, "subtype":Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;
     move-object v5, v14
 
-    .end local v14           #subtype:Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;
-    .restart local v5       #subtype:Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;
+    .end local v14    # "subtype":Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;
+    .restart local v5    # "subtype":Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;
     :cond_3
     move-object v3, p0
 
@@ -255,9 +253,8 @@
 
 .method public collectAndResolveSubtypes(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;Lcom/flurry/org/codehaus/jackson/map/MapperConfig;Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;)Ljava/util/Collection;
     .locals 17
-    .parameter "type"
-    .parameter
-    .parameter "ai"
+    .param p1, "type"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;
+    .param p3, "ai"    # Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -275,13 +272,13 @@
 
     .prologue
     .line 89
-    .local p2, config:Lcom/flurry/org/codehaus/jackson/map/MapperConfig;,"Lcom/flurry/org/codehaus/jackson/map/MapperConfig<*>;"
+    .local p2, "config":Lcom/flurry/org/codehaus/jackson/map/MapperConfig;, "Lcom/flurry/org/codehaus/jackson/map/MapperConfig<*>;"
     new-instance v8, Ljava/util/HashMap;
 
     invoke-direct {v8}, Ljava/util/HashMap;-><init>()V
 
     .line 91
-    .local v8, subtypes:Ljava/util/HashMap;,"Ljava/util/HashMap<Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;>;"
+    .local v8, "subtypes":Ljava/util/HashMap;, "Ljava/util/HashMap<Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;>;"
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/flurry/org/codehaus/jackson/map/jsontype/impl/StdSubtypeResolver;->_registeredSubtypes:Ljava/util/LinkedHashSet;
@@ -296,7 +293,7 @@
     move-result-object v16
 
     .line 93
-    .local v16, rawBase:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local v16, "rawBase":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/flurry/org/codehaus/jackson/map/jsontype/impl/StdSubtypeResolver;->_registeredSubtypes:Ljava/util/LinkedHashSet;
@@ -307,7 +304,7 @@
 
     move-result-object v15
 
-    .local v15, i$:Ljava/util/Iterator;
+    .local v15, "i$":Ljava/util/Iterator;
     :cond_0
     :goto_0
     invoke-interface {v15}, Ljava/util/Iterator;->hasNext()Z
@@ -323,7 +320,7 @@
     check-cast v5, Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;
 
     .line 95
-    .local v5, subtype:Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;
+    .local v5, "subtype":Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;
     invoke-virtual {v5}, Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;->getType()Ljava/lang/Class;
 
     move-result-object v3
@@ -353,7 +350,7 @@
 
     move-result-object v4
 
-    .local v4, curr:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;
+    .local v4, "curr":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;
     move-object/from16 v3, p0
 
     move-object/from16 v6, p2
@@ -366,10 +363,10 @@
     goto :goto_0
 
     .line 102
-    .end local v4           #curr:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;
-    .end local v5           #subtype:Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;
-    .end local v15           #i$:Ljava/util/Iterator;
-    .end local v16           #rawBase:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .end local v4    # "curr":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;
+    .end local v5    # "subtype":Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;
+    .end local v15    # "i$":Ljava/util/Iterator;
+    .end local v16    # "rawBase":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     :cond_1
     new-instance v11, Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;
 
@@ -381,7 +378,7 @@
 
     invoke-direct {v11, v3, v4}, Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
 
-    .local v11, rootType:Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;
+    .local v11, "rootType":Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;
     move-object/from16 v9, p0
 
     move-object/from16 v10, p1
@@ -409,9 +406,8 @@
 
 .method public collectAndResolveSubtypes(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMember;Lcom/flurry/org/codehaus/jackson/map/MapperConfig;Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;)Ljava/util/Collection;
     .locals 21
-    .parameter "property"
-    .parameter
-    .parameter "ai"
+    .param p1, "property"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMember;
+    .param p3, "ai"    # Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -429,13 +425,13 @@
 
     .prologue
     .line 56
-    .local p2, config:Lcom/flurry/org/codehaus/jackson/map/MapperConfig;,"Lcom/flurry/org/codehaus/jackson/map/MapperConfig<*>;"
+    .local p2, "config":Lcom/flurry/org/codehaus/jackson/map/MapperConfig;, "Lcom/flurry/org/codehaus/jackson/map/MapperConfig<*>;"
     new-instance v8, Ljava/util/HashMap;
 
     invoke-direct {v8}, Ljava/util/HashMap;-><init>()V
 
     .line 58
-    .local v8, collected:Ljava/util/HashMap;,"Ljava/util/HashMap<Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;>;"
+    .local v8, "collected":Ljava/util/HashMap;, "Ljava/util/HashMap<Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;>;"
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/flurry/org/codehaus/jackson/map/jsontype/impl/StdSubtypeResolver;->_registeredSubtypes:Ljava/util/LinkedHashSet;
@@ -450,7 +446,7 @@
     move-result-object v19
 
     .line 60
-    .local v19, rawBase:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local v19, "rawBase":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/flurry/org/codehaus/jackson/map/jsontype/impl/StdSubtypeResolver;->_registeredSubtypes:Ljava/util/LinkedHashSet;
@@ -461,7 +457,7 @@
 
     move-result-object v18
 
-    .local v18, i$:Ljava/util/Iterator;
+    .local v18, "i$":Ljava/util/Iterator;
     :cond_0
     :goto_0
     invoke-interface/range {v18 .. v18}, Ljava/util/Iterator;->hasNext()Z
@@ -477,7 +473,7 @@
     check-cast v5, Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;
 
     .line 62
-    .local v5, subtype:Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;
+    .local v5, "subtype":Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;
     invoke-virtual {v5}, Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;->getType()Ljava/lang/Class;
 
     move-result-object v3
@@ -507,7 +503,7 @@
 
     move-result-object v4
 
-    .local v4, curr:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;
+    .local v4, "curr":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;
     move-object/from16 v3, p0
 
     move-object/from16 v6, p2
@@ -520,10 +516,10 @@
     goto :goto_0
 
     .line 70
-    .end local v4           #curr:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;
-    .end local v5           #subtype:Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;
-    .end local v18           #i$:Ljava/util/Iterator;
-    .end local v19           #rawBase:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .end local v4    # "curr":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;
+    .end local v5    # "subtype":Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;
+    .end local v18    # "i$":Ljava/util/Iterator;
+    .end local v19    # "rawBase":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     :cond_1
     move-object/from16 v0, p3
 
@@ -534,7 +530,7 @@
     move-result-object v20
 
     .line 71
-    .local v20, st:Ljava/util/Collection;,"Ljava/util/Collection<Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;>;"
+    .local v20, "st":Ljava/util/Collection;, "Ljava/util/Collection<Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;>;"
     if-eqz v20, :cond_2
 
     .line 72
@@ -542,7 +538,7 @@
 
     move-result-object v18
 
-    .restart local v18       #i$:Ljava/util/Iterator;
+    .restart local v18    # "i$":Ljava/util/Iterator;
     :goto_1
     invoke-interface/range {v18 .. v18}, Ljava/util/Iterator;->hasNext()Z
 
@@ -557,7 +553,7 @@
     check-cast v11, Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;
 
     .line 73
-    .local v11, nt:Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;
+    .local v11, "nt":Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;
     invoke-virtual {v11}, Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;->getType()Ljava/lang/Class;
 
     move-result-object v3
@@ -572,7 +568,7 @@
 
     move-result-object v10
 
-    .local v10, ac:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;
+    .local v10, "ac":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;
     move-object/from16 v9, p0
 
     move-object/from16 v12, p2
@@ -587,9 +583,9 @@
     goto :goto_1
 
     .line 77
-    .end local v10           #ac:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;
-    .end local v11           #nt:Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;
-    .end local v18           #i$:Ljava/util/Iterator;
+    .end local v10    # "ac":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;
+    .end local v11    # "nt":Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;
+    .end local v18    # "i$":Ljava/util/Iterator;
     :cond_2
     new-instance v14, Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;
 
@@ -602,7 +598,7 @@
     invoke-direct {v14, v3, v4}, Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
 
     .line 78
-    .local v14, rootType:Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;
+    .local v14, "rootType":Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;
     invoke-virtual/range {p1 .. p1}, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMember;->getRawType()Ljava/lang/Class;
 
     move-result-object v3
@@ -617,7 +613,7 @@
 
     move-result-object v10
 
-    .restart local v10       #ac:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;
+    .restart local v10    # "ac":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;
     move-object/from16 v12, p0
 
     move-object v13, v10
@@ -645,7 +641,7 @@
 
 .method public varargs registerSubtypes([Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;)V
     .locals 5
-    .parameter "types"
+    .param p1, "types"    # [Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;
 
     .prologue
     .line 29
@@ -664,20 +660,20 @@
     :cond_0
     move-object v0, p1
 
-    .local v0, arr$:[Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;
+    .local v0, "arr$":[Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;
     array-length v2, v0
 
-    .local v2, len$:I
+    .local v2, "len$":I
     const/4 v1, 0x0
 
-    .local v1, i$:I
+    .local v1, "i$":I
     :goto_0
     if-ge v1, v2, :cond_1
 
     aget-object v3, v0, v1
 
     .line 33
-    .local v3, type:Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;
+    .local v3, "type":Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;
     iget-object v4, p0, Lcom/flurry/org/codehaus/jackson/map/jsontype/impl/StdSubtypeResolver;->_registeredSubtypes:Ljava/util/LinkedHashSet;
 
     invoke-virtual {v4, v3}, Ljava/util/LinkedHashSet;->add(Ljava/lang/Object;)Z
@@ -688,14 +684,13 @@
     goto :goto_0
 
     .line 35
-    .end local v3           #type:Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;
+    .end local v3    # "type":Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;
     :cond_1
     return-void
 .end method
 
 .method public varargs registerSubtypes([Ljava/lang/Class;)V
     .locals 5
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "([",
@@ -706,19 +701,19 @@
 
     .prologue
     .line 40
-    .local p1, classes:[Ljava/lang/Class;,"[Ljava/lang/Class<*>;"
+    .local p1, "classes":[Ljava/lang/Class;, "[Ljava/lang/Class<*>;"
     array-length v3, p1
 
     new-array v2, v3, [Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;
 
     .line 41
-    .local v2, types:[Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;
+    .local v2, "types":[Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;
     const/4 v0, 0x0
 
-    .local v0, i:I
+    .local v0, "i":I
     array-length v1, p1
 
-    .local v1, len:I
+    .local v1, "len":I
     :goto_0
     if-ge v0, v1, :cond_0
 

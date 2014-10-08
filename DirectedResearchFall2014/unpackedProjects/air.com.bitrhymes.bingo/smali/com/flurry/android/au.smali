@@ -13,7 +13,6 @@
 # direct methods
 .method constructor <init>(Lcom/flurry/android/cg;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 30
@@ -47,7 +46,6 @@
 
 .method public final onDismissAd(Lcom/mobclix/android/sdk/MobclixFullScreenAdView;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 33
@@ -74,8 +72,6 @@
 
 .method public final onFailedLoad(Lcom/mobclix/android/sdk/MobclixFullScreenAdView;I)V
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     .line 39
@@ -102,7 +98,6 @@
 
 .method public final onFinishLoad(Lcom/mobclix/android/sdk/MobclixFullScreenAdView;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 45
@@ -129,7 +124,6 @@
 
 .method public final onPresentAd(Lcom/mobclix/android/sdk/MobclixFullScreenAdView;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 51

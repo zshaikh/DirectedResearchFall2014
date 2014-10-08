@@ -17,9 +17,9 @@
 # direct methods
 .method protected constructor <init>(Lcom/flurry/org/codehaus/jackson/io/IOContext;ILjava/io/Reader;)V
     .locals 1
-    .parameter "ctxt"
-    .parameter "features"
-    .parameter "r"
+    .param p1, "ctxt"    # Lcom/flurry/org/codehaus/jackson/io/IOContext;
+    .param p2, "features"    # I
+    .param p3, "r"    # Ljava/io/Reader;
 
     .prologue
     .line 57
@@ -91,8 +91,8 @@
 
 .method protected final _matchToken(Ljava/lang/String;I)Z
     .locals 7
-    .parameter "matchStr"
-    .parameter "i"
+    .param p1, "matchStr"    # Ljava/lang/String;
+    .param p2, "i"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -113,7 +113,7 @@
     move-result v1
 
     .line 179
-    .local v1, len:I
+    .local v1, "len":I
     :cond_0
     iget v2, p0, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParserBase;->_inputPtr:I
 
@@ -196,7 +196,7 @@
     aget-char v0, v2, v3
 
     .line 198
-    .local v0, c:C
+    .local v0, "c":C
     invoke-static {v0}, Ljava/lang/Character;->isJavaIdentifierPart(C)Z
 
     move-result v2
@@ -242,7 +242,7 @@
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParserBase;->_inputBuffer:[C
 
     .line 156
-    .local v0, buf:[C
+    .local v0, "buf":[C
     if-eqz v0, :cond_0
 
     .line 157
@@ -262,8 +262,8 @@
 
 .method protected _reportInvalidToken(Ljava/lang/String;Ljava/lang/String;)V
     .locals 4
-    .parameter "matchedPart"
-    .parameter "msg"
+    .param p1, "matchedPart"    # Ljava/lang/String;
+    .param p2, "msg"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -278,7 +278,7 @@
     invoke-direct {v1, p1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     .line 214
-    .local v1, sb:Ljava/lang/StringBuilder;
+    .local v1, "sb":Ljava/lang/StringBuilder;
     :goto_0
     iget v2, p0, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParserBase;->_inputPtr:I
 
@@ -337,7 +337,7 @@
     aget-char v0, v2, v3
 
     .line 220
-    .local v0, c:C
+    .local v0, "c":C
     invoke-static {v0}, Ljava/lang/Character;->isJavaIdentifierPart(C)Z
 
     move-result v2
@@ -369,7 +369,7 @@
 
 .method protected getNextChar(Ljava/lang/String;)C
     .locals 3
-    .parameter "eofMsg"
+    .param p1, "eofMsg"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -460,7 +460,7 @@
     move-result v0
 
     .line 100
-    .local v0, count:I
+    .local v0, "count":I
     if-lez v0, :cond_0
 
     .line 101
@@ -473,12 +473,12 @@
     const/4 v1, 0x1
 
     .line 112
-    .end local v0           #count:I
+    .end local v0    # "count":I
     :goto_0
     return v1
 
     .line 106
-    .restart local v0       #count:I
+    .restart local v0    # "count":I
     :cond_0
     invoke-virtual {p0}, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParserBase;->_closeInput()V
 
@@ -512,7 +512,7 @@
 
     throw v1
 
-    .end local v0           #count:I
+    .end local v0    # "count":I
     :cond_1
     move v1, v5
 
@@ -522,7 +522,7 @@
 
 .method public releaseBuffered(Ljava/io/Writer;)I
     .locals 4
-    .parameter "w"
+    .param p1, "w"    # Ljava/io/Writer;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -538,7 +538,7 @@
     sub-int v0, v2, v3
 
     .line 72
-    .local v0, count:I
+    .local v0, "count":I
     const/4 v2, 0x1
 
     if-ge v0, v2, :cond_0
@@ -555,7 +555,7 @@
     iget v1, p0, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParserBase;->_inputPtr:I
 
     .line 77
-    .local v1, origPtr:I
+    .local v1, "origPtr":I
     iget-object v2, p0, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParserBase;->_inputBuffer:[C
 
     invoke-virtual {p1, v2, v1, v0}, Ljava/io/Writer;->write([CII)V

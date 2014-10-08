@@ -70,7 +70,7 @@
 
 .method private cacheAllImagesInContent(Lorg/json/JSONObject;)V
     .locals 4
-    .parameter "contentJSON"
+    .param p1, "contentJSON"    # Lorg/json/JSONObject;
 
     .prologue
     .line 288
@@ -93,7 +93,7 @@
     invoke-direct {v1}, Ljava/util/LinkedList;-><init>()V
 
     .line 296
-    .local v1, queue:Ljava/util/LinkedList;,"Ljava/util/LinkedList<Lv2/com/playhaven/cache/PHImageCache$JSONNode;>;"
+    .local v1, "queue":Ljava/util/LinkedList;, "Ljava/util/LinkedList<Lv2/com/playhaven/cache/PHImageCache$JSONNode;>;"
     new-instance v2, Lv2/com/playhaven/cache/PHImageCache$JSONNode;
 
     sget-object v3, Lv2/com/playhaven/cache/PHImageCache;->NO_NAME:Ljava/lang/String;
@@ -118,7 +118,7 @@
     check-cast v0, Lv2/com/playhaven/cache/PHImageCache$JSONNode;
 
     .line 305
-    .local v0, cur_node:Lv2/com/playhaven/cache/PHImageCache$JSONNode;
+    .local v0, "cur_node":Lv2/com/playhaven/cache/PHImageCache$JSONNode;
     invoke-direct {p0, v0}, Lv2/com/playhaven/cache/PHImageCache;->convertNodeToCached(Lv2/com/playhaven/cache/PHImageCache$JSONNode;)V
 
     .line 309
@@ -129,7 +129,7 @@
 
 .method private cacheImageEntry(Lorg/json/JSONObject;)V
     .locals 5
-    .parameter "imageEntry"
+    .param p1, "imageEntry"    # Lorg/json/JSONObject;
 
     .prologue
     .line 167
@@ -140,7 +140,7 @@
     move-result-object v1
 
     .line 168
-    .local v1, portrait:Lorg/json/JSONObject;
+    .local v1, "portrait":Lorg/json/JSONObject;
     sget-object v2, Lv2/com/playhaven/cache/PHImageCache;->LANDSCAPE_KEY:Ljava/lang/String;
 
     invoke-virtual {p1, v2}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
@@ -148,7 +148,7 @@
     move-result-object v0
 
     .line 173
-    .local v0, landscape:Lorg/json/JSONObject;
+    .local v0, "landscape":Lorg/json/JSONObject;
     if-eqz v1, :cond_0
 
     .line 175
@@ -206,7 +206,7 @@
 
 .method private cacheResource(Ljava/lang/String;)Ljava/lang/String;
     .locals 4
-    .parameter "url"
+    .param p1, "url"    # Ljava/lang/String;
 
     .prologue
     .line 135
@@ -236,7 +236,7 @@
     move-result-object v0
 
     .line 141
-    .local v0, local_url:Ljava/lang/String;
+    .local v0, "local_url":Ljava/lang/String;
     new-instance v2, Ljava/lang/StringBuilder;
 
     const-string v3, "Checking for image url in cache: "
@@ -294,7 +294,7 @@
     invoke-direct {v1}, Lv2/com/playhaven/requests/open/PHPrefetchTask;-><init>()V
 
     .line 154
-    .local v1, task:Lv2/com/playhaven/requests/open/PHPrefetchTask;
+    .local v1, "task":Lv2/com/playhaven/requests/open/PHPrefetchTask;
     invoke-virtual {v1, p1}, Lv2/com/playhaven/requests/open/PHPrefetchTask;->setURL(Ljava/lang/String;)V
 
     .line 155
@@ -312,7 +312,7 @@
 
 .method private convertNodeToCached(Lv2/com/playhaven/cache/PHImageCache$JSONNode;)V
     .locals 1
-    .parameter "node"
+    .param p1, "node"    # Lv2/com/playhaven/cache/PHImageCache$JSONNode;
 
     .prologue
     .line 193
@@ -342,8 +342,7 @@
 
 .method private enqueueNodeChildren(Lv2/com/playhaven/cache/PHImageCache$JSONNode;Ljava/util/LinkedList;)V
     .locals 11
-    .parameter "node"
-    .parameter
+    .param p1, "node"    # Lv2/com/playhaven/cache/PHImageCache$JSONNode;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -357,7 +356,7 @@
 
     .prologue
     .line 209
-    .local p2, queue:Ljava/util/LinkedList;,"Ljava/util/LinkedList<Lv2/com/playhaven/cache/PHImageCache$JSONNode;>;"
+    .local p2, "queue":Ljava/util/LinkedList;, "Ljava/util/LinkedList<Lv2/com/playhaven/cache/PHImageCache$JSONNode;>;"
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Lv2/com/playhaven/cache/PHImageCache$JSONNode;->children()I
@@ -382,10 +381,10 @@
     iget-object v0, p1, Lv2/com/playhaven/cache/PHImageCache$JSONNode;->array:Lorg/json/JSONArray;
 
     .line 217
-    .local v0, array:Lorg/json/JSONArray;
+    .local v0, "array":Lorg/json/JSONArray;
     const/4 v5, 0x0
 
-    .local v5, i:I
+    .local v5, "i":I
     :goto_0
     invoke-virtual {v0}, Lorg/json/JSONArray;->length()I
 
@@ -399,7 +398,7 @@
     move-result-object v2
 
     .line 223
-    .local v2, childObject:Lorg/json/JSONObject;
+    .local v2, "childObject":Lorg/json/JSONObject;
     if-eqz v2, :cond_3
 
     .line 225
@@ -425,7 +424,7 @@
     move-result-object v1
 
     .line 232
-    .local v1, childArray:Lorg/json/JSONArray;
+    .local v1, "childArray":Lorg/json/JSONArray;
     if-eqz v1, :cond_2
 
     .line 234
@@ -440,10 +439,10 @@
     goto :goto_1
 
     .line 243
-    .end local v0           #array:Lorg/json/JSONArray;
-    .end local v1           #childArray:Lorg/json/JSONArray;
-    .end local v2           #childObject:Lorg/json/JSONObject;
-    .end local v5           #i:I
+    .end local v0    # "array":Lorg/json/JSONArray;
+    .end local v1    # "childArray":Lorg/json/JSONArray;
+    .end local v2    # "childObject":Lorg/json/JSONObject;
+    .end local v5    # "i":I
     :cond_4
     invoke-virtual {p1}, Lv2/com/playhaven/cache/PHImageCache$JSONNode;->isObject()Z
 
@@ -455,13 +454,13 @@
     iget-object v8, p1, Lv2/com/playhaven/cache/PHImageCache$JSONNode;->object:Lorg/json/JSONObject;
 
     .line 247
-    .local v8, object:Lorg/json/JSONObject;
+    .local v8, "object":Lorg/json/JSONObject;
     invoke-virtual {v8}, Lorg/json/JSONObject;->keys()Ljava/util/Iterator;
 
     move-result-object v7
 
     .line 249
-    .local v7, keys:Ljava/util/Iterator;,"Ljava/util/Iterator<Ljava/lang/String;>;"
+    .local v7, "keys":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/String;>;"
     :cond_5
     :goto_2
     invoke-interface {v7}, Ljava/util/Iterator;->hasNext()Z
@@ -478,13 +477,13 @@
     check-cast v6, Ljava/lang/String;
 
     .line 253
-    .local v6, key:Ljava/lang/String;
+    .local v6, "key":Ljava/lang/String;
     invoke-virtual {v8, v6}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
 
     move-result-object v4
 
     .line 255
-    .local v4, cur_obj:Lorg/json/JSONObject;
+    .local v4, "cur_obj":Lorg/json/JSONObject;
     if-eqz v4, :cond_6
 
     .line 257
@@ -503,7 +502,7 @@
     move-result-object v3
 
     .line 264
-    .local v3, cur_array:Lorg/json/JSONArray;
+    .local v3, "cur_array":Lorg/json/JSONArray;
     if-eqz v3, :cond_5
 
     .line 266
@@ -561,7 +560,7 @@
 # virtual methods
 .method public cacheImages(Lv2/com/playhaven/model/PHContent;)Lv2/com/playhaven/model/PHContent;
     .locals 1
-    .parameter "content"
+    .param p1, "content"    # Lv2/com/playhaven/model/PHContent;
 
     .prologue
     .line 117

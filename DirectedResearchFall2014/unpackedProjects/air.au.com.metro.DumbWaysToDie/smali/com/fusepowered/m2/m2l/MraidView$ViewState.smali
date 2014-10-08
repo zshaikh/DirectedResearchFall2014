@@ -112,8 +112,6 @@
 
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 84
@@ -124,7 +122,6 @@
 
 .method public static valueOf(Ljava/lang/String;)Lcom/fusepowered/m2/m2l/MraidView$ViewState;
     .locals 1
-    .parameter
 
     .prologue
     .line 1

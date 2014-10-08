@@ -16,7 +16,7 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
-    .parameter "ctx"
+    .param p1, "ctx"    # Landroid/content/Context;
 
     .prologue
     .line 29
@@ -50,7 +50,7 @@
 
 .method public static getOffersNotifierResponseFailed(Ljava/lang/String;)V
     .locals 1
-    .parameter "error"
+    .param p0, "error"    # Ljava/lang/String;
 
     .prologue
     .line 118
@@ -72,7 +72,7 @@
 # virtual methods
 .method public showOffers(Lcom/tapjoy/TapjoyOffersNotifier;)V
     .locals 2
-    .parameter "notifier"
+    .param p1, "notifier"    # Lcom/tapjoy/TapjoyOffersNotifier;
 
     .prologue
     .line 38
@@ -88,11 +88,11 @@
 
 .method public showOffersWithCurrencyID(Ljava/lang/String;ZLcom/tapjoy/TJEventData;Ljava/lang/String;Lcom/tapjoy/TapjoyOffersNotifier;)V
     .locals 7
-    .parameter "currencyID"
-    .parameter "enableCurrencySelector"
-    .parameter "eventData"
-    .parameter "callbackID"
-    .parameter "notifier"
+    .param p1, "currencyID"    # Ljava/lang/String;
+    .param p2, "enableCurrencySelector"    # Z
+    .param p3, "eventData"    # Lcom/tapjoy/TJEventData;
+    .param p4, "callbackID"    # Ljava/lang/String;
+    .param p5, "notifier"    # Lcom/tapjoy/TapjoyOffersNotifier;
 
     .prologue
     const/4 v6, 0x1
@@ -108,7 +108,7 @@
     move-object v1, v3
 
     .line 68
-    .local v1, multipleCurrencySelector:Ljava/lang/String;
+    .local v1, "multipleCurrencySelector":Ljava/lang/String;
     :goto_0
     new-instance v2, Ljava/util/HashMap;
 
@@ -119,7 +119,7 @@
     invoke-direct {v2, v3}, Ljava/util/HashMap;-><init>(Ljava/util/Map;)V
 
     .line 70
-    .local v2, offersURLParams:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v2, "offersURLParams":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v3, "currency_id"
 
     invoke-static {v2, v3, p1, v6}, Lcom/tapjoy/TapjoyUtil;->safePut(Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;Z)V
@@ -146,7 +146,7 @@
     invoke-direct {v0, v3, v4}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
     .line 78
-    .local v0, intent:Landroid/content/Intent;
+    .local v0, "intent":Landroid/content/Intent;
     if-eqz p3, :cond_0
 
     .line 80
@@ -222,7 +222,7 @@
     .line 94
     iget-object p0, p0, Lcom/tapjoy/TJCOffers;->context:Landroid/content/Context;
 
-    .end local p0
+    .end local p0    # "this":Lcom/tapjoy/TJCOffers;
     check-cast p0, Landroid/app/Activity;
 
     const/4 v3, 0x0
@@ -234,10 +234,10 @@
     return-void
 
     .line 65
-    .end local v0           #intent:Landroid/content/Intent;
-    .end local v1           #multipleCurrencySelector:Ljava/lang/String;
-    .end local v2           #offersURLParams:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
-    .restart local p0
+    .end local v0    # "intent":Landroid/content/Intent;
+    .end local v1    # "multipleCurrencySelector":Ljava/lang/String;
+    .end local v2    # "offersURLParams":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .restart local p0    # "this":Lcom/tapjoy/TJCOffers;
     :cond_2
     const-string v3, "0"
 
@@ -246,11 +246,11 @@
     goto :goto_0
 
     .line 98
-    .restart local v0       #intent:Landroid/content/Intent;
-    .restart local v1       #multipleCurrencySelector:Ljava/lang/String;
-    .restart local v2       #offersURLParams:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .restart local v0    # "intent":Landroid/content/Intent;
+    .restart local v1    # "multipleCurrencySelector":Ljava/lang/String;
+    .restart local v2    # "offersURLParams":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     :cond_3
-    const/high16 v3, 0x1000
+    const/high16 v3, 0x10000000
 
     invoke-virtual {v0, v3}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
@@ -264,9 +264,9 @@
 
 .method public showOffersWithCurrencyID(Ljava/lang/String;ZLcom/tapjoy/TapjoyOffersNotifier;)V
     .locals 6
-    .parameter "currencyID"
-    .parameter "enableCurrencySelector"
-    .parameter "notifier"
+    .param p1, "currencyID"    # Ljava/lang/String;
+    .param p2, "enableCurrencySelector"    # Z
+    .param p3, "notifier"    # Lcom/tapjoy/TapjoyOffersNotifier;
 
     .prologue
     const/4 v3, 0x0

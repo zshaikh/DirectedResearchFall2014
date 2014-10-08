@@ -88,7 +88,7 @@
 
 .method private constructor <init>(Lcom/fusepowered/m1/android/MMAdImpl;)V
     .locals 4
-    .parameter "adImpl"
+    .param p1, "adImpl"    # Lcom/fusepowered/m1/android/MMAdImpl;
 
     .prologue
     .line 61
@@ -188,7 +188,7 @@
 
 .method static declared-synchronized assignAdViewController(Lcom/fusepowered/m1/android/MMAdImpl;)V
     .locals 7
-    .parameter "adImpl"
+    .param p0, "adImpl"    # Lcom/fusepowered/m1/android/MMAdImpl;
 
     .prologue
     .line 102
@@ -375,7 +375,7 @@
     check-cast v0, Lcom/fusepowered/m1/android/MMAdImplController;
 
     .line 120
-    .local v0, controller:Lcom/fusepowered/m1/android/MMAdImplController;
+    .local v0, "controller":Lcom/fusepowered/m1/android/MMAdImplController;
     if-nez v0, :cond_5
 
     .line 122
@@ -394,7 +394,7 @@
     check-cast v1, Ljava/lang/ref/WeakReference;
 
     .line 123
-    .local v1, controllerRef:Ljava/lang/ref/WeakReference;,"Ljava/lang/ref/WeakReference<Lcom/fusepowered/m1/android/MMAdImplController;>;"
+    .local v1, "controllerRef":Ljava/lang/ref/WeakReference;, "Ljava/lang/ref/WeakReference<Lcom/fusepowered/m1/android/MMAdImplController;>;"
     if-eqz v1, :cond_4
 
     .line 124
@@ -402,22 +402,22 @@
 
     move-result-object v0
 
-    .end local v0           #controller:Lcom/fusepowered/m1/android/MMAdImplController;
+    .end local v0    # "controller":Lcom/fusepowered/m1/android/MMAdImplController;
     check-cast v0, Lcom/fusepowered/m1/android/MMAdImplController;
 
     .line 125
-    .restart local v0       #controller:Lcom/fusepowered/m1/android/MMAdImplController;
+    .restart local v0    # "controller":Lcom/fusepowered/m1/android/MMAdImplController;
     :cond_4
     if-nez v0, :cond_5
 
     .line 127
     new-instance v0, Lcom/fusepowered/m1/android/MMAdImplController;
 
-    .end local v0           #controller:Lcom/fusepowered/m1/android/MMAdImplController;
+    .end local v0    # "controller":Lcom/fusepowered/m1/android/MMAdImplController;
     invoke-direct {v0, p0}, Lcom/fusepowered/m1/android/MMAdImplController;-><init>(Lcom/fusepowered/m1/android/MMAdImpl;)V
 
     .line 128
-    .restart local v0       #controller:Lcom/fusepowered/m1/android/MMAdImplController;
+    .restart local v0    # "controller":Lcom/fusepowered/m1/android/MMAdImplController;
     invoke-virtual {p0}, Lcom/fusepowered/m1/android/MMAdImpl;->isLifecycleObservable()Z
 
     move-result v3
@@ -436,7 +436,7 @@
     invoke-interface {v3, v4, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 136
-    .end local v1           #controllerRef:Ljava/lang/ref/WeakReference;,"Ljava/lang/ref/WeakReference<Lcom/fusepowered/m1/android/MMAdImplController;>;"
+    .end local v1    # "controllerRef":Ljava/lang/ref/WeakReference;, "Ljava/lang/ref/WeakReference<Lcom/fusepowered/m1/android/MMAdImplController;>;"
     :cond_5
     :goto_2
     iput-object v0, p0, Lcom/fusepowered/m1/android/MMAdImpl;->controller:Lcom/fusepowered/m1/android/MMAdImplController;
@@ -463,7 +463,7 @@
     goto/16 :goto_1
 
     .line 131
-    .restart local v1       #controllerRef:Ljava/lang/ref/WeakReference;,"Ljava/lang/ref/WeakReference<Lcom/fusepowered/m1/android/MMAdImplController;>;"
+    .restart local v1    # "controllerRef":Ljava/lang/ref/WeakReference;, "Ljava/lang/ref/WeakReference<Lcom/fusepowered/m1/android/MMAdImplController;>;"
     :cond_6
     sget-object v3, Lcom/fusepowered/m1/android/MMAdImplController;->weakUnsaveableAdRef:Ljava/util/Map;
 
@@ -486,7 +486,7 @@
 
 .method static declared-synchronized attachWebViewFromOverlay(Lcom/fusepowered/m1/android/MMAdImpl;)Z
     .locals 5
-    .parameter "overlayAdImpl"
+    .param p0, "overlayAdImpl"    # Lcom/fusepowered/m1/android/MMAdImpl;
 
     .prologue
     const/4 v4, 0x0
@@ -556,7 +556,7 @@
     move-result-object v0
 
     .line 176
-    .local v0, bannerAdImpl:Lcom/fusepowered/m1/android/MMAdImpl;
+    .local v0, "bannerAdImpl":Lcom/fusepowered/m1/android/MMAdImpl;
     if-eqz v0, :cond_3
 
     iget-object v2, v0, Lcom/fusepowered/m1/android/MMAdImpl;->controller:Lcom/fusepowered/m1/android/MMAdImplController;
@@ -626,7 +626,7 @@
     goto :goto_0
 
     .line 170
-    .end local v0           #bannerAdImpl:Lcom/fusepowered/m1/android/MMAdImpl;
+    .end local v0    # "bannerAdImpl":Lcom/fusepowered/m1/android/MMAdImpl;
     :catchall_0
     move-exception v2
 
@@ -679,7 +679,7 @@
 
 .method static destroyOtherInlineVideo(Landroid/content/Context;)V
     .locals 8
-    .parameter "context"
+    .param p0, "context"    # Landroid/content/Context;
 
     .prologue
     .line 861
@@ -693,7 +693,7 @@
 
     move-result-object v5
 
-    .local v5, i$:Ljava/util/Iterator;
+    .local v5, "i$":Ljava/util/Iterator;
     :cond_0
     :goto_0
     invoke-interface {v5}, Ljava/util/Iterator;->hasNext()Z
@@ -709,7 +709,7 @@
     check-cast v4, Ljava/util/Map$Entry;
 
     .line 863
-    .local v4, entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/Long;Lcom/fusepowered/m1/android/MMAdImplController;>;"
+    .local v4, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/Long;Lcom/fusepowered/m1/android/MMAdImplController;>;"
     invoke-interface {v4}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v3
@@ -717,7 +717,7 @@
     check-cast v3, Lcom/fusepowered/m1/android/MMAdImplController;
 
     .line 864
-    .local v3, controller:Lcom/fusepowered/m1/android/MMAdImplController;
+    .local v3, "controller":Lcom/fusepowered/m1/android/MMAdImplController;
     if-eqz v3, :cond_0
 
     .line 866
@@ -730,7 +730,7 @@
     check-cast v2, Lcom/fusepowered/m1/android/MMAdImpl;
 
     .line 867
-    .local v2, adImpl:Lcom/fusepowered/m1/android/MMAdImpl;
+    .local v2, "adImpl":Lcom/fusepowered/m1/android/MMAdImpl;
     if-eqz v2, :cond_0
 
     .line 869
@@ -739,7 +739,7 @@
     move-result-object v1
 
     .line 870
-    .local v1, ad:Lcom/fusepowered/m1/android/MMAd;
+    .local v1, "ad":Lcom/fusepowered/m1/android/MMAd;
     if-eqz v1, :cond_0
 
     instance-of v7, v1, Lcom/fusepowered/m1/android/MMLayout;
@@ -754,24 +754,24 @@
     move-object v6, v0
 
     .line 873
-    .local v6, layout:Lcom/fusepowered/m1/android/MMLayout;
+    .local v6, "layout":Lcom/fusepowered/m1/android/MMLayout;
     invoke-virtual {v6}, Lcom/fusepowered/m1/android/MMLayout;->removeVideo()V
 
     goto :goto_0
 
     .line 879
-    .end local v1           #ad:Lcom/fusepowered/m1/android/MMAd;
-    .end local v2           #adImpl:Lcom/fusepowered/m1/android/MMAdImpl;
-    .end local v3           #controller:Lcom/fusepowered/m1/android/MMAdImplController;
-    .end local v4           #entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/Long;Lcom/fusepowered/m1/android/MMAdImplController;>;"
-    .end local v6           #layout:Lcom/fusepowered/m1/android/MMLayout;
+    .end local v1    # "ad":Lcom/fusepowered/m1/android/MMAd;
+    .end local v2    # "adImpl":Lcom/fusepowered/m1/android/MMAdImpl;
+    .end local v3    # "controller":Lcom/fusepowered/m1/android/MMAdImplController;
+    .end local v4    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/Long;Lcom/fusepowered/m1/android/MMAdImplController;>;"
+    .end local v6    # "layout":Lcom/fusepowered/m1/android/MMLayout;
     :cond_1
     return-void
 .end method
 
 .method static declared-synchronized getAdImplWithId(J)Lcom/fusepowered/m1/android/MMAdImpl;
     .locals 6
-    .parameter "internalId"
+    .param p0, "internalId"    # J
 
     .prologue
     const/4 v5, 0x0
@@ -790,14 +790,14 @@
     move-object v3, v5
 
     .line 218
-    .end local p0
+    .end local p0    # "internalId":J
     :goto_0
     monitor-exit v2
 
     return-object v3
 
     .line 209
-    .restart local p0
+    .restart local p0    # "internalId":J
     :cond_0
     :try_start_0
     sget-object v3, Lcom/fusepowered/m1/android/MMAdImplController;->saveableControllers:Ljava/util/Map;
@@ -813,7 +813,7 @@
     check-cast v0, Lcom/fusepowered/m1/android/MMAdImplController;
 
     .line 210
-    .local v0, controller:Lcom/fusepowered/m1/android/MMAdImplController;
+    .local v0, "controller":Lcom/fusepowered/m1/android/MMAdImplController;
     if-nez v0, :cond_1
 
     .line 212
@@ -830,7 +830,7 @@
     check-cast v1, Ljava/lang/ref/WeakReference;
 
     .line 213
-    .local v1, controllerRef:Ljava/lang/ref/WeakReference;,"Ljava/lang/ref/WeakReference<Lcom/fusepowered/m1/android/MMAdImplController;>;"
+    .local v1, "controllerRef":Ljava/lang/ref/WeakReference;, "Ljava/lang/ref/WeakReference<Lcom/fusepowered/m1/android/MMAdImplController;>;"
     if-eqz v1, :cond_1
 
     .line 214
@@ -838,12 +838,12 @@
 
     move-result-object v0
 
-    .end local v0           #controller:Lcom/fusepowered/m1/android/MMAdImplController;
+    .end local v0    # "controller":Lcom/fusepowered/m1/android/MMAdImplController;
     check-cast v0, Lcom/fusepowered/m1/android/MMAdImplController;
 
     .line 216
-    .end local v1           #controllerRef:Ljava/lang/ref/WeakReference;,"Ljava/lang/ref/WeakReference<Lcom/fusepowered/m1/android/MMAdImplController;>;"
-    .restart local v0       #controller:Lcom/fusepowered/m1/android/MMAdImplController;
+    .end local v1    # "controllerRef":Ljava/lang/ref/WeakReference;, "Ljava/lang/ref/WeakReference<Lcom/fusepowered/m1/android/MMAdImplController;>;"
+    .restart local v0    # "controller":Lcom/fusepowered/m1/android/MMAdImplController;
     :cond_1
     if-eqz v0, :cond_2
 
@@ -854,7 +854,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "internalId":J
     check-cast p0, Lcom/fusepowered/m1/android/MMAdImpl;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -863,7 +863,7 @@
 
     goto :goto_0
 
-    .restart local p0
+    .restart local p0    # "internalId":J
     :cond_2
     move-object v3, v5
 
@@ -871,8 +871,8 @@
     goto :goto_0
 
     .line 207
-    .end local v0           #controller:Lcom/fusepowered/m1/android/MMAdImplController;
-    .end local p0
+    .end local v0    # "controller":Lcom/fusepowered/m1/android/MMAdImplController;
+    .end local p0    # "internalId":J
     :catchall_0
     move-exception v3
 
@@ -883,7 +883,7 @@
 
 .method static declared-synchronized getWebViewFromExistingAdImpl(Lcom/fusepowered/m1/android/MMAdImpl;)Lcom/fusepowered/m1/android/MMWebView;
     .locals 6
-    .parameter "requestorAdImpl"
+    .param p0, "requestorAdImpl"    # Lcom/fusepowered/m1/android/MMAdImpl;
 
     .prologue
     .line 194
@@ -936,7 +936,7 @@
     const/4 v1, 0x0
 
     .line 196
-    .local v1, mmWebView:Lcom/fusepowered/m1/android/MMWebView;
+    .local v1, "mmWebView":Lcom/fusepowered/m1/android/MMWebView;
     iget-wide v3, p0, Lcom/fusepowered/m1/android/MMAdImpl;->linkForExpansionId:J
 
     invoke-static {v3, v4}, Lcom/fusepowered/m1/android/MMAdImplController;->getAdImplWithId(J)Lcom/fusepowered/m1/android/MMAdImpl;
@@ -944,7 +944,7 @@
     move-result-object v0
 
     .line 197
-    .local v0, holderAdImpl:Lcom/fusepowered/m1/android/MMAdImpl;
+    .local v0, "holderAdImpl":Lcom/fusepowered/m1/android/MMAdImpl;
     if-eqz v0, :cond_0
 
     iget-object v3, v0, Lcom/fusepowered/m1/android/MMAdImpl;->controller:Lcom/fusepowered/m1/android/MMAdImplController;
@@ -972,8 +972,8 @@
     return-object v1
 
     .line 194
-    .end local v0           #holderAdImpl:Lcom/fusepowered/m1/android/MMAdImpl;
-    .end local v1           #mmWebView:Lcom/fusepowered/m1/android/MMWebView;
+    .end local v0    # "holderAdImpl":Lcom/fusepowered/m1/android/MMAdImpl;
+    .end local v1    # "mmWebView":Lcom/fusepowered/m1/android/MMWebView;
     :catchall_0
     move-exception v3
 
@@ -984,7 +984,7 @@
 
 .method private declared-synchronized isDownloadingCachedAd(Lcom/fusepowered/m1/android/MMAdImpl;)Z
     .locals 5
-    .parameter "adImpl"
+    .param p1, "adImpl"    # Lcom/fusepowered/m1/android/MMAdImpl;
 
     .prologue
     const/4 v4, 0x1
@@ -998,7 +998,7 @@
     move-result-object v0
 
     .line 340
-    .local v0, context:Landroid/content/Context;
+    .local v0, "context":Landroid/content/Context;
     invoke-static {v0}, Lcom/fusepowered/m1/android/HandShake;->sharedHandShake(Landroid/content/Context;)Lcom/fusepowered/m1/android/HandShake;
 
     move-result-object v2
@@ -1052,7 +1052,7 @@
     move-result-object v1
 
     .line 353
-    .local v1, incompleteAd:Lcom/fusepowered/m1/android/CachedAd;
+    .local v1, "incompleteAd":Lcom/fusepowered/m1/android/CachedAd;
     if-eqz v1, :cond_1
 
     .line 356
@@ -1089,8 +1089,8 @@
     goto :goto_0
 
     .line 338
-    .end local v0           #context:Landroid/content/Context;
-    .end local v1           #incompleteAd:Lcom/fusepowered/m1/android/CachedAd;
+    .end local v0    # "context":Landroid/content/Context;
+    .end local v1    # "incompleteAd":Lcom/fusepowered/m1/android/CachedAd;
     :catchall_0
     move-exception v2
 
@@ -1101,7 +1101,7 @@
 
 .method static declared-synchronized removeAdViewController(Lcom/fusepowered/m1/android/MMAdImpl;)V
     .locals 6
-    .parameter "adImpl"
+    .param p0, "adImpl"    # Lcom/fusepowered/m1/android/MMAdImpl;
 
     .prologue
     .line 229
@@ -1226,7 +1226,7 @@
     iget-object v0, p0, Lcom/fusepowered/m1/android/MMAdImpl;->controller:Lcom/fusepowered/m1/android/MMAdImplController;
 
     .line 250
-    .local v0, controller:Lcom/fusepowered/m1/android/MMAdImplController;
+    .local v0, "controller":Lcom/fusepowered/m1/android/MMAdImplController;
     const/4 v2, 0x0
 
     iput-object v2, p0, Lcom/fusepowered/m1/android/MMAdImpl;->controller:Lcom/fusepowered/m1/android/MMAdImplController;
@@ -1326,7 +1326,7 @@
     goto/16 :goto_0
 
     .line 229
-    .end local v0           #controller:Lcom/fusepowered/m1/android/MMAdImplController;
+    .end local v0    # "controller":Lcom/fusepowered/m1/android/MMAdImplController;
     :catchall_0
     move-exception v2
 
@@ -1360,7 +1360,7 @@
 
 .method private requestAdInternal(Lcom/fusepowered/m1/android/MMAdImpl;)V
     .locals 3
-    .parameter "adImpl"
+    .param p1, "adImpl"    # Lcom/fusepowered/m1/android/MMAdImpl;
 
     .prologue
     .line 312
@@ -1378,14 +1378,14 @@
     invoke-direct {v0, v1, v2}, Lcom/fusepowered/m1/android/MMException;-><init>(Ljava/lang/String;I)V
 
     .line 315
-    .local v0, error:Lcom/fusepowered/m1/android/MMException;
+    .local v0, "error":Lcom/fusepowered/m1/android/MMException;
     invoke-static {v0}, Lcom/fusepowered/m1/android/MMSDK$Log;->e(Ljava/lang/Throwable;)V
 
     .line 316
     invoke-static {p1, v0}, Lcom/fusepowered/m1/android/MMSDK$Event;->requestFailed(Lcom/fusepowered/m1/android/MMAdImpl;Lcom/fusepowered/m1/android/MMException;)V
 
     .line 334
-    .end local v0           #error:Lcom/fusepowered/m1/android/MMException;
+    .end local v0    # "error":Lcom/fusepowered/m1/android/MMException;
     :cond_0
     :goto_0
     return-void
@@ -1473,7 +1473,7 @@
 
 .method private static declared-synchronized setupWebView(Lcom/fusepowered/m1/android/MMAdImpl;)V
     .locals 6
-    .parameter "adImpl"
+    .param p0, "adImpl"    # Lcom/fusepowered/m1/android/MMAdImpl;
 
     .prologue
     .line 147
@@ -1485,7 +1485,7 @@
     iget-object v0, p0, Lcom/fusepowered/m1/android/MMAdImpl;->controller:Lcom/fusepowered/m1/android/MMAdImplController;
 
     .line 148
-    .local v0, controller:Lcom/fusepowered/m1/android/MMAdImplController;
+    .local v0, "controller":Lcom/fusepowered/m1/android/MMAdImplController;
     iget-object v3, v0, Lcom/fusepowered/m1/android/MMAdImplController;->webView:Lcom/fusepowered/m1/android/MMWebView;
 
     invoke-virtual {p0}, Lcom/fusepowered/m1/android/MMAdImpl;->getMMWebViewClient()Lcom/fusepowered/m1/android/MMWebViewClient;
@@ -1509,7 +1509,7 @@
     const/4 v1, 0x0
 
     .line 152
-    .local v1, layoutParams:Landroid/widget/RelativeLayout$LayoutParams;
+    .local v1, "layoutParams":Landroid/widget/RelativeLayout$LayoutParams;
     invoke-virtual {p0}, Lcom/fusepowered/m1/android/MMAdImpl;->isBanner()Z
 
     move-result v3
@@ -1519,7 +1519,7 @@
     .line 154
     new-instance v1, Landroid/widget/RelativeLayout$LayoutParams;
 
-    .end local v1           #layoutParams:Landroid/widget/RelativeLayout$LayoutParams;
+    .end local v1    # "layoutParams":Landroid/widget/RelativeLayout$LayoutParams;
     const/4 v3, -0x2
 
     const/4 v4, -0x2
@@ -1527,7 +1527,7 @@
     invoke-direct {v1, v3, v4}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
     .line 155
-    .restart local v1       #layoutParams:Landroid/widget/RelativeLayout$LayoutParams;
+    .restart local v1    # "layoutParams":Landroid/widget/RelativeLayout$LayoutParams;
     iget-object v3, v0, Lcom/fusepowered/m1/android/MMAdImplController;->webView:Lcom/fusepowered/m1/android/MMWebView;
 
     invoke-virtual {v3}, Lcom/fusepowered/m1/android/MMWebView;->isMraidResized()Z
@@ -1556,19 +1556,19 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 165
-    .end local v1           #layoutParams:Landroid/widget/RelativeLayout$LayoutParams;
+    .end local v1    # "layoutParams":Landroid/widget/RelativeLayout$LayoutParams;
     :cond_1
     monitor-exit v2
 
     return-void
 
     .line 160
-    .restart local v1       #layoutParams:Landroid/widget/RelativeLayout$LayoutParams;
+    .restart local v1    # "layoutParams":Landroid/widget/RelativeLayout$LayoutParams;
     :cond_2
     :try_start_1
     new-instance v1, Landroid/widget/RelativeLayout$LayoutParams;
 
-    .end local v1           #layoutParams:Landroid/widget/RelativeLayout$LayoutParams;
+    .end local v1    # "layoutParams":Landroid/widget/RelativeLayout$LayoutParams;
     const/4 v3, -0x2
 
     const/4 v4, -0x1
@@ -1577,12 +1577,12 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .restart local v1       #layoutParams:Landroid/widget/RelativeLayout$LayoutParams;
+    .restart local v1    # "layoutParams":Landroid/widget/RelativeLayout$LayoutParams;
     goto :goto_0
 
     .line 147
-    .end local v0           #controller:Lcom/fusepowered/m1/android/MMAdImplController;
-    .end local v1           #layoutParams:Landroid/widget/RelativeLayout$LayoutParams;
+    .end local v0    # "controller":Lcom/fusepowered/m1/android/MMAdImplController;
+    .end local v1    # "layoutParams":Landroid/widget/RelativeLayout$LayoutParams;
     :catchall_0
     move-exception v3
 
@@ -1595,8 +1595,8 @@
 # virtual methods
 .method checkReason(Lcom/fusepowered/m1/android/MMAdImpl;Lcom/fusepowered/m1/android/CachedAd;)I
     .locals 6
-    .parameter "adImpl"
-    .parameter "ad"
+    .param p1, "adImpl"    # Lcom/fusepowered/m1/android/MMAdImpl;
+    .param p2, "ad"    # Lcom/fusepowered/m1/android/CachedAd;
 
     .prologue
     const/4 v5, 0x1
@@ -1707,7 +1707,7 @@
 
 .method display(Lcom/fusepowered/m1/android/MMAdImpl;)I
     .locals 4
-    .parameter "adImpl"
+    .param p1, "adImpl"    # Lcom/fusepowered/m1/android/MMAdImpl;
 
     .prologue
     .line 430
@@ -1724,7 +1724,7 @@
     move-result-object v0
 
     .line 431
-    .local v0, ad:Lcom/fusepowered/m1/android/CachedAd;
+    .local v0, "ad":Lcom/fusepowered/m1/android/CachedAd;
     if-eqz v0, :cond_1
 
     .line 433
@@ -1806,8 +1806,8 @@
 
 .method public downloadCompleted(Lcom/fusepowered/m1/android/CachedAd;Z)V
     .locals 4
-    .parameter "ad"
-    .parameter "success"
+    .param p1, "ad"    # Lcom/fusepowered/m1/android/CachedAd;
+    .param p2, "success"    # Z
 
     .prologue
     .line 377
@@ -1820,7 +1820,7 @@
     check-cast v0, Lcom/fusepowered/m1/android/MMAdImpl;
 
     .line 378
-    .local v0, adImpl:Lcom/fusepowered/m1/android/MMAdImpl;
+    .local v0, "adImpl":Lcom/fusepowered/m1/android/MMAdImpl;
     if-nez v0, :cond_0
 
     .line 380
@@ -1879,7 +1879,7 @@
 
 .method public downloadStart(Lcom/fusepowered/m1/android/CachedAd;)V
     .locals 0
-    .parameter "ad"
+    .param p1, "ad"    # Lcom/fusepowered/m1/android/CachedAd;
 
     .prologue
     .line 840
@@ -1888,7 +1888,7 @@
 
 .method public getDefaultUserAgentString(Landroid/content/Context;)Ljava/lang/String;
     .locals 1
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     .line 796
@@ -1935,7 +1935,7 @@
     const/4 v2, 0x0
 
     .line 802
-    .local v2, userAgent:Ljava/lang/String;
+    .local v2, "userAgent":Ljava/lang/String;
     iget-object v3, p0, Lcom/fusepowered/m1/android/MMAdImplController;->adImplRef:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v3}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -1945,7 +1945,7 @@
     check-cast v0, Lcom/fusepowered/m1/android/MMAdImpl;
 
     .line 803
-    .local v0, adImpl:Lcom/fusepowered/m1/android/MMAdImpl;
+    .local v0, "adImpl":Lcom/fusepowered/m1/android/MMAdImpl;
     if-eqz v0, :cond_0
 
     .line 805
@@ -1954,7 +1954,7 @@
     move-result-object v1
 
     .line 806
-    .local v1, context:Landroid/content/Context;
+    .local v1, "context":Landroid/content/Context;
     if-eqz v1, :cond_0
 
     .line 808
@@ -1963,7 +1963,7 @@
     move-result-object v2
 
     .line 811
-    .end local v1           #context:Landroid/content/Context;
+    .end local v1    # "context":Landroid/content/Context;
     :cond_0
     invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -1981,7 +1981,7 @@
 
 .method isAdAvailable(Lcom/fusepowered/m1/android/MMAdImpl;)I
     .locals 3
-    .parameter "adImpl"
+    .param p1, "adImpl"    # Lcom/fusepowered/m1/android/MMAdImpl;
 
     .prologue
     .line 413
@@ -1998,7 +1998,7 @@
     move-result-object v0
 
     .line 414
-    .local v0, ad:Lcom/fusepowered/m1/android/CachedAd;
+    .local v0, "ad":Lcom/fusepowered/m1/android/CachedAd;
     if-eqz v0, :cond_1
 
     .line 416
@@ -2043,7 +2043,7 @@
 
 .method linkForExpansion(Lcom/fusepowered/m1/android/MMAdImpl;)V
     .locals 4
-    .parameter "expansionAdImpl"
+    .param p1, "expansionAdImpl"    # Lcom/fusepowered/m1/android/MMAdImpl;
 
     .prologue
     .line 87
@@ -2054,7 +2054,7 @@
     move-result-object v0
 
     .line 88
-    .local v0, adImpl:Lcom/fusepowered/m1/android/MMAdImpl;
+    .local v0, "adImpl":Lcom/fusepowered/m1/android/MMAdImpl;
     if-eqz v0, :cond_0
 
     .line 90
@@ -2081,7 +2081,7 @@
 
 .method loadUrl(Ljava/lang/String;)V
     .locals 1
-    .parameter "url"
+    .param p1, "url"    # Ljava/lang/String;
 
     .prologue
     .line 370
@@ -2107,8 +2107,8 @@
 
 .method loadWebContent(Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
-    .parameter "content"
-    .parameter "adUrl"
+    .param p1, "content"    # Ljava/lang/String;
+    .param p2, "adUrl"    # Ljava/lang/String;
 
     .prologue
     .line 852
@@ -2121,7 +2121,7 @@
     check-cast v0, Lcom/fusepowered/m1/android/MMAdImpl;
 
     .line 853
-    .local v0, adImpl:Lcom/fusepowered/m1/android/MMAdImpl;
+    .local v0, "adImpl":Lcom/fusepowered/m1/android/MMAdImpl;
     if-eqz v0, :cond_0
 
     iget-object v1, p0, Lcom/fusepowered/m1/android/MMAdImplController;->webView:Lcom/fusepowered/m1/android/MMWebView;
@@ -2158,7 +2158,7 @@
     check-cast v0, Lcom/fusepowered/m1/android/MMAdImpl;
 
     .line 271
-    .local v0, adImpl:Lcom/fusepowered/m1/android/MMAdImpl;
+    .local v0, "adImpl":Lcom/fusepowered/m1/android/MMAdImpl;
     if-nez v0, :cond_0
 
     .line 273
@@ -2269,7 +2269,7 @@
     move-object v1, v2
 
     .line 304
-    .local v1, e:Ljava/lang/Exception;
+    .local v1, "e":Ljava/lang/Exception;
     const-string v2, "There was an exception with the ad request. %s"
 
     const/4 v3, 0x1
@@ -2294,7 +2294,7 @@
 
 .method setLastHeaders(Lcom/fusepowered/m1/android/HttpMMHeaders;)V
     .locals 1
-    .parameter "lastHeaders"
+    .param p1, "lastHeaders"    # Lcom/fusepowered/m1/android/HttpMMHeaders;
 
     .prologue
     .line 783
@@ -2314,8 +2314,8 @@
 
 .method setWebViewContent(Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
-    .parameter "webContent"
-    .parameter "url"
+    .param p1, "webContent"    # Ljava/lang/String;
+    .param p2, "url"    # Ljava/lang/String;
 
     .prologue
     .line 775
@@ -2332,7 +2332,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/fusepowered/m1/android/MMAdImplController;
     check-cast p0, Lcom/fusepowered/m1/android/MMAdImpl;
 
     invoke-virtual {v0, p1, p2, p0}, Lcom/fusepowered/m1/android/MMWebView;->setWebViewContent(Ljava/lang/String;Ljava/lang/String;Lcom/fusepowered/m1/android/MMAdImpl;)V
@@ -2356,13 +2356,13 @@
     check-cast v0, Lcom/fusepowered/m1/android/MMAdImpl;
 
     .line 827
-    .local v0, adImpl:Lcom/fusepowered/m1/android/MMAdImpl;
+    .local v0, "adImpl":Lcom/fusepowered/m1/android/MMAdImpl;
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
     .line 828
-    .local v1, sb:Ljava/lang/StringBuilder;
+    .local v1, "sb":Ljava/lang/StringBuilder;
     if-eqz v0, :cond_0
 
     .line 830
@@ -2443,7 +2443,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/fusepowered/m1/android/MMAdImplController;
     check-cast p0, Lcom/fusepowered/m1/android/MMAdImpl;
 
     invoke-virtual {v0, p0}, Lcom/fusepowered/m1/android/MMWebView;->unresizeToDefault(Lcom/fusepowered/m1/android/MMAdImpl;)V

@@ -46,11 +46,6 @@
 # direct methods
 .method constructor <init>(IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 25

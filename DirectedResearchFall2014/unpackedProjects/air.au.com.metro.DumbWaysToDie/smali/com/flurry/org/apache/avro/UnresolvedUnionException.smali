@@ -12,8 +12,8 @@
 # direct methods
 .method public constructor <init>(Lcom/flurry/org/apache/avro/Schema;Ljava/lang/Object;)V
     .locals 2
-    .parameter "unionSchema"
-    .parameter "unresolvedDatum"
+    .param p1, "unionSchema"    # Lcom/flurry/org/apache/avro/Schema;
+    .param p2, "unresolvedDatum"    # Ljava/lang/Object;
 
     .prologue
     .line 27

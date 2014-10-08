@@ -56,7 +56,7 @@
 
 .method public setId(I)V
     .locals 0
-    .parameter "id"
+    .param p1, "id"    # I
 
     .prologue
     .line 13
@@ -68,7 +68,7 @@
 
 .method public setKey(Ljava/lang/String;)V
     .locals 0
-    .parameter "key"
+    .param p1, "key"    # Ljava/lang/String;
 
     .prologue
     .line 19
@@ -80,7 +80,7 @@
 
 .method public setValue(Ljava/lang/String;)V
     .locals 0
-    .parameter "value"
+    .param p1, "value"    # Ljava/lang/String;
 
     .prologue
     .line 25
@@ -138,7 +138,7 @@
     move-result-object v0
 
     .line 34
-    .local v0, buf:Ljava/lang/StringBuilder;
+    .local v0, "buf":Ljava/lang/StringBuilder;
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1

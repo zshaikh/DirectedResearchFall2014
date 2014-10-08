@@ -4,12 +4,11 @@
 
 
 # static fields
-#the value of this static final field might be set in the static constructor
-.field static final synthetic $assertionsDisabled:Z = false
+.field static final synthetic $assertionsDisabled:Z
 
-.field private static final ALPHABET:[B = null
+.field private static final ALPHABET:[B
 
-.field private static final DECODABET:[B = null
+.field private static final DECODABET:[B
 
 .field public static final DECODE:Z = false
 
@@ -21,9 +20,9 @@
 
 .field private static final NEW_LINE:B = 0xat
 
-.field private static final WEBSAFE_ALPHABET:[B = null
+.field private static final WEBSAFE_ALPHABET:[B
 
-.field private static final WEBSAFE_DECODABET:[B = null
+.field private static final WEBSAFE_DECODABET:[B
 
 .field private static final WHITE_SPACE_ENC:B = -0x5t
 
@@ -1395,7 +1394,7 @@
     nop
 
     :array_0
-    .array-data 0x1
+    .array-data 1
         0x41t
         0x42t
         0x43t
@@ -1464,7 +1463,7 @@
 
     .line 76
     :array_1
-    .array-data 0x1
+    .array-data 1
         0x41t
         0x42t
         0x43t
@@ -1545,7 +1544,7 @@
 
 .method public static decode(Ljava/lang/String;)[B
     .locals 3
-    .parameter "s"
+    .param p0, "s"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lcom/bitrhymes/iab/util/Base64DecoderException;
@@ -1559,7 +1558,7 @@
     move-result-object v0
 
     .line 420
-    .local v0, bytes:[B
+    .local v0, "bytes":[B
     const/4 v1, 0x0
 
     array-length v2, v0
@@ -1573,7 +1572,7 @@
 
 .method public static decode([B)[B
     .locals 2
-    .parameter "source"
+    .param p0, "source"    # [B
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lcom/bitrhymes/iab/util/Base64DecoderException;
@@ -1595,9 +1594,9 @@
 
 .method public static decode([BII)[B
     .locals 1
-    .parameter "source"
-    .parameter "off"
-    .parameter "len"
+    .param p0, "source"    # [B
+    .param p1, "off"    # I
+    .param p2, "len"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lcom/bitrhymes/iab/util/Base64DecoderException;
@@ -1617,10 +1616,10 @@
 
 .method public static decode([BII[B)[B
     .locals 10
-    .parameter "source"
-    .parameter "off"
-    .parameter "len"
-    .parameter "decodabet"
+    .param p0, "source"    # [B
+    .param p1, "off"    # I
+    .param p2, "len"    # I
+    .param p3, "decodabet"    # [B
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lcom/bitrhymes/iab/util/Base64DecoderException;
@@ -1634,74 +1633,74 @@
     div-int/lit8 v0, v0, 0x4
 
     .line 505
-    .local v0, len34:I
+    .local v0, "len34":I
     add-int/lit8 v0, v0, 0x2
 
     new-array v4, v0, [B
 
     .line 506
-    .end local v0           #len34:I
-    .local v4, outBuff:[B
+    .end local v0    # "len34":I
+    .local v4, "outBuff":[B
     const/4 v3, 0x0
 
     .line 508
-    .local v3, outBuffPosn:I
+    .local v3, "outBuffPosn":I
     const/4 v0, 0x4
 
     new-array v0, v0, [B
 
     .line 509
-    .local v0, b4:[B
+    .local v0, "b4":[B
     const/4 v1, 0x0
 
     .line 510
-    .local v1, b4Posn:I
+    .local v1, "b4Posn":I
     const/4 v2, 0x0
 
     .line 511
-    .local v2, i:I
+    .local v2, "i":I
     const/4 v5, 0x0
 
     .line 512
-    .local v5, sbiCrop:B
+    .local v5, "sbiCrop":B
     const/4 v6, 0x0
 
     .line 513
-    .local v6, sbiDecode:B
+    .local v6, "sbiDecode":B
     const/4 v2, 0x0
 
     move v9, v5
 
-    .end local v5           #sbiCrop:B
-    .local v9, sbiCrop:B
+    .end local v5    # "sbiCrop":B
+    .local v9, "sbiCrop":B
     move v5, v3
 
-    .end local v3           #outBuffPosn:I
-    .local v5, outBuffPosn:I
+    .end local v3    # "outBuffPosn":I
+    .local v5, "outBuffPosn":I
     move v3, v2
 
-    .end local v2           #i:I
-    .local v3, i:I
+    .end local v2    # "i":I
+    .local v3, "i":I
     move v2, v1
 
-    .end local v1           #b4Posn:I
-    .local v2, b4Posn:I
+    .end local v1    # "b4Posn":I
+    .local v2, "b4Posn":I
     move v1, v9
 
-    .end local v9           #sbiCrop:B
-    .local v1, sbiCrop:B
+    .end local v9    # "sbiCrop":B
+    .local v1, "sbiCrop":B
     :goto_0
     if-lt v3, p2, :cond_0
 
     move p1, v6
 
-    .end local v6           #sbiDecode:B
-    .local p1, sbiDecode:B
+    .end local v6    # "sbiDecode":B
+    .local p1, "sbiDecode":B
     move p0, v1
 
     .line 557
-    .end local v1           #sbiCrop:B
-    .local p0, sbiCrop:B
+    .end local v1    # "sbiCrop":B
+    .local p0, "sbiCrop":B
     :goto_1
     if-eqz v2, :cond_a
 
@@ -1711,15 +1710,15 @@
     if-ne v2, p0, :cond_9
 
     .line 559
-    .end local p0           #sbiCrop:B
+    .end local p0    # "sbiCrop":B
     new-instance p0, Lcom/bitrhymes/iab/util/Base64DecoderException;
 
     new-instance p1, Ljava/lang/StringBuilder;
 
-    .end local p1           #sbiDecode:B
+    .end local p1    # "sbiDecode":B
     const-string p3, "single trailing character at offset "
 
-    .end local p3
+    .end local p3    # "decodabet":[B
     invoke-direct {p1, p3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     .line 560
@@ -1729,7 +1728,7 @@
 
     invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .end local p2
+    .end local p2    # "len":I
     move-result-object p1
 
     invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -1742,28 +1741,28 @@
     throw p0
 
     .line 514
-    .restart local v1       #sbiCrop:B
-    .restart local v6       #sbiDecode:B
-    .local p0, source:[B
-    .local p1, off:I
-    .restart local p2
-    .restart local p3
+    .restart local v1    # "sbiCrop":B
+    .restart local v6    # "sbiDecode":B
+    .local p0, "source":[B
+    .local p1, "off":I
+    .restart local p2    # "len":I
+    .restart local p3    # "decodabet":[B
     :cond_0
     add-int v1, v3, p1
 
     aget-byte v1, p0, v1
 
-    .end local v1           #sbiCrop:B
+    .end local v1    # "sbiCrop":B
     and-int/lit8 v1, v1, 0x7f
 
     int-to-byte v6, v1
 
     .line 515
-    .local v6, sbiCrop:B
+    .local v6, "sbiCrop":B
     aget-byte v7, p3, v6
 
     .line 517
-    .local v7, sbiDecode:B
+    .local v7, "sbiDecode":B
     const/4 v1, -0x5
 
     if-lt v7, v1, :cond_8
@@ -1782,7 +1781,7 @@
     sub-int v1, p2, v3
 
     .line 523
-    .local v1, bytesLeft:I
+    .local v1, "bytesLeft":I
     const/4 v8, 0x1
 
     sub-int v8, p2, v8
@@ -1791,14 +1790,14 @@
 
     aget-byte p0, p0, p1
 
-    .end local p0           #source:[B
-    .end local p1           #off:I
+    .end local p0    # "source":[B
+    .end local p1    # "off":I
     and-int/lit8 p0, p0, 0x7f
 
     int-to-byte p0, p0
 
     .line 524
-    .local p0, lastByte:B
+    .local p0, "lastByte":B
     if-eqz v2, :cond_1
 
     const/4 p1, 0x1
@@ -1810,12 +1809,12 @@
     new-instance p0, Lcom/bitrhymes/iab/util/Base64DecoderException;
 
     .line 526
-    .end local p0           #lastByte:B
+    .end local p0    # "lastByte":B
     new-instance p1, Ljava/lang/StringBuilder;
 
     const-string p2, "invalid padding byte \'=\' at byte offset "
 
-    .end local p2
+    .end local p2    # "len":I
     invoke-direct {p1, p2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {p1, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
@@ -1832,8 +1831,8 @@
     throw p0
 
     .line 527
-    .restart local p0       #lastByte:B
-    .restart local p2
+    .restart local p0    # "lastByte":B
+    .restart local p2    # "len":I
     :cond_2
     const/4 p1, 0x3
 
@@ -1858,12 +1857,12 @@
     new-instance p0, Lcom/bitrhymes/iab/util/Base64DecoderException;
 
     .line 530
-    .end local p0           #lastByte:B
+    .end local p0    # "lastByte":B
     new-instance p1, Ljava/lang/StringBuilder;
 
     const-string p2, "padding byte \'=\' falsely signals end of encoded value at offset "
 
-    .end local p2
+    .end local p2    # "len":I
     invoke-direct {p1, p2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     .line 531
@@ -1882,8 +1881,8 @@
     throw p0
 
     .line 532
-    .restart local p0       #lastByte:B
-    .restart local p2
+    .restart local p0    # "lastByte":B
+    .restart local p2    # "len":I
     :cond_5
     const/16 p1, 0x3d
 
@@ -1897,7 +1896,7 @@
     new-instance p0, Lcom/bitrhymes/iab/util/Base64DecoderException;
 
     .line 534
-    .end local p0           #lastByte:B
+    .end local p0    # "lastByte":B
     const-string p1, "encoded value has invalid trailing byte"
 
     .line 533
@@ -1906,14 +1905,14 @@
     throw p0
 
     .line 539
-    .end local v1           #bytesLeft:I
-    .local p0, source:[B
-    .restart local p1       #off:I
+    .end local v1    # "bytesLeft":I
+    .local p0, "source":[B
+    .restart local p1    # "off":I
     :cond_6
     add-int/lit8 v1, v2, 0x1
 
-    .end local v2           #b4Posn:I
-    .local v1, b4Posn:I
+    .end local v2    # "b4Posn":I
+    .local v1, "b4Posn":I
     aput-byte v6, v0, v2
 
     .line 540
@@ -1926,60 +1925,60 @@
 
     invoke-static {v0, v1, v4, v5, p3}, Lcom/bitrhymes/iab/util/Base64;->decode4to3([BI[BI[B)I
 
-    .end local v1           #b4Posn:I
+    .end local v1    # "b4Posn":I
     move-result v1
 
     add-int v2, v5, v1
 
     .line 542
-    .end local v5           #outBuffPosn:I
-    .local v2, outBuffPosn:I
+    .end local v5    # "outBuffPosn":I
+    .local v2, "outBuffPosn":I
     const/4 v1, 0x0
 
-    .restart local v1       #b4Posn:I
+    .restart local v1    # "b4Posn":I
     move v5, v2
 
     .line 513
-    .end local v2           #outBuffPosn:I
-    .restart local v5       #outBuffPosn:I
+    .end local v2    # "outBuffPosn":I
+    .restart local v5    # "outBuffPosn":I
     :cond_7
     :goto_2
     add-int/lit8 v2, v3, 0x1
 
-    .end local v3           #i:I
-    .local v2, i:I
+    .end local v3    # "i":I
+    .local v2, "i":I
     move v3, v2
 
-    .end local v2           #i:I
-    .restart local v3       #i:I
+    .end local v2    # "i":I
+    .restart local v3    # "i":I
     move v2, v1
 
-    .end local v1           #b4Posn:I
-    .local v2, b4Posn:I
+    .end local v1    # "b4Posn":I
+    .local v2, "b4Posn":I
     move v1, v6
 
-    .end local v6           #sbiCrop:B
-    .local v1, sbiCrop:B
+    .end local v6    # "sbiCrop":B
+    .local v1, "sbiCrop":B
     move v6, v7
 
-    .end local v7           #sbiDecode:B
-    .local v6, sbiDecode:B
+    .end local v7    # "sbiDecode":B
+    .local v6, "sbiDecode":B
     goto/16 :goto_0
 
     .line 546
-    .end local v1           #sbiCrop:B
-    .local v6, sbiCrop:B
-    .restart local v7       #sbiDecode:B
+    .end local v1    # "sbiCrop":B
+    .local v6, "sbiCrop":B
+    .restart local v7    # "sbiDecode":B
     :cond_8
     new-instance p2, Lcom/bitrhymes/iab/util/Base64DecoderException;
 
-    .end local p2
+    .end local p2    # "len":I
     new-instance p3, Ljava/lang/StringBuilder;
 
-    .end local p3
+    .end local p3    # "decodabet":[B
     const-string v0, "Bad Base64 input character at "
 
-    .end local v0           #b4:[B
+    .end local v0    # "b4":[B
     invoke-direct {p3, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {p3, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
@@ -1997,8 +1996,8 @@
 
     aget-byte p0, p0, p1
 
-    .end local p0           #source:[B
-    .end local p1           #off:I
+    .end local p0    # "source":[B
+    .end local p1    # "off":I
     invoke-virtual {p3, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object p0
@@ -2019,23 +2018,23 @@
     throw p2
 
     .line 562
-    .end local v6           #sbiCrop:B
-    .end local v7           #sbiDecode:B
-    .restart local v0       #b4:[B
-    .local p1, sbiDecode:B
-    .restart local p2
-    .restart local p3
+    .end local v6    # "sbiCrop":B
+    .end local v7    # "sbiDecode":B
+    .restart local v0    # "b4":[B
+    .local p1, "sbiDecode":B
+    .restart local p2    # "len":I
+    .restart local p3    # "decodabet":[B
     :cond_9
     add-int/lit8 p0, v2, 0x1
 
-    .end local v2           #b4Posn:I
-    .local p0, b4Posn:I
+    .end local v2    # "b4Posn":I
+    .local p0, "b4Posn":I
     const/16 p1, 0x3d
 
     aput-byte p1, v0, v2
 
     .line 563
-    .end local p1           #sbiDecode:B
+    .end local p1    # "sbiDecode":B
     const/4 p1, 0x0
 
     invoke-static {v0, p1, v4, v5, p3}, Lcom/bitrhymes/iab/util/Base64;->decode4to3([BI[BI[B)I
@@ -2045,13 +2044,13 @@
     add-int/2addr p1, v5
 
     .line 566
-    .end local v5           #outBuffPosn:I
-    .local p1, outBuffPosn:I
+    .end local v5    # "outBuffPosn":I
+    .local p1, "outBuffPosn":I
     :goto_3
     new-array p0, p1, [B
 
     .line 567
-    .local p0, out:[B
+    .local p0, "out":[B
     const/4 p2, 0x0
 
     const/4 p3, 0x0
@@ -2059,65 +2058,65 @@
     invoke-static {v4, p2, p0, p3, p1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
     .line 568
-    .end local p2
-    .end local p3
+    .end local p2    # "len":I
+    .end local p3    # "decodabet":[B
     return-object p0
 
-    .restart local v2       #b4Posn:I
-    .restart local v5       #outBuffPosn:I
-    .local p0, sbiCrop:B
-    .local p1, sbiDecode:B
-    .restart local p2
-    .restart local p3
+    .restart local v2    # "b4Posn":I
+    .restart local v5    # "outBuffPosn":I
+    .local p0, "sbiCrop":B
+    .local p1, "sbiDecode":B
+    .restart local p2    # "len":I
+    .restart local p3    # "decodabet":[B
     :cond_a
     move p0, v2
 
-    .end local v2           #b4Posn:I
-    .local p0, b4Posn:I
+    .end local v2    # "b4Posn":I
+    .local p0, "b4Posn":I
     move p1, v5
 
-    .end local v5           #outBuffPosn:I
-    .local p1, outBuffPosn:I
+    .end local v5    # "outBuffPosn":I
+    .local p1, "outBuffPosn":I
     goto :goto_3
 
-    .end local p1           #outBuffPosn:I
-    .local v1, bytesLeft:I
-    .restart local v2       #b4Posn:I
-    .restart local v5       #outBuffPosn:I
-    .restart local v6       #sbiCrop:B
-    .restart local v7       #sbiDecode:B
-    .local p0, lastByte:B
+    .end local p1    # "outBuffPosn":I
+    .local v1, "bytesLeft":I
+    .restart local v2    # "b4Posn":I
+    .restart local v5    # "outBuffPosn":I
+    .restart local v6    # "sbiCrop":B
+    .restart local v7    # "sbiDecode":B
+    .local p0, "lastByte":B
     :cond_b
     move p1, v7
 
-    .end local v7           #sbiDecode:B
-    .local p1, sbiDecode:B
+    .end local v7    # "sbiDecode":B
+    .local p1, "sbiDecode":B
     move p0, v6
 
-    .end local v6           #sbiCrop:B
-    .local p0, sbiCrop:B
+    .end local v6    # "sbiCrop":B
+    .local p0, "sbiCrop":B
     goto/16 :goto_1
 
-    .end local v1           #bytesLeft:I
-    .restart local v6       #sbiCrop:B
-    .restart local v7       #sbiDecode:B
-    .local p0, source:[B
-    .local p1, off:I
+    .end local v1    # "bytesLeft":I
+    .restart local v6    # "sbiCrop":B
+    .restart local v7    # "sbiDecode":B
+    .local p0, "source":[B
+    .local p1, "off":I
     :cond_c
     move v1, v2
 
-    .end local v2           #b4Posn:I
-    .local v1, b4Posn:I
+    .end local v2    # "b4Posn":I
+    .local v1, "b4Posn":I
     goto :goto_2
 .end method
 
 .method private static decode4to3([BI[BI[B)I
     .locals 3
-    .parameter "source"
-    .parameter "srcOffset"
-    .parameter "destination"
-    .parameter "destOffset"
-    .parameter "decodabet"
+    .param p0, "source"    # [B
+    .param p1, "srcOffset"    # I
+    .param p2, "destination"    # [B
+    .param p3, "destOffset"    # I
+    .param p4, "decodabet"    # [B
 
     .prologue
     const/16 v2, 0x3d
@@ -2153,7 +2152,7 @@
     or-int v0, v1, v2
 
     .line 383
-    .local v0, outBuff:I
+    .local v0, "outBuff":I
     ushr-int/lit8 v1, v0, 0x10
 
     int-to-byte v1, v1
@@ -2168,7 +2167,7 @@
     return v1
 
     .line 385
-    .end local v0           #outBuff:I
+    .end local v0    # "outBuff":I
     :cond_0
     add-int/lit8 v1, p1, 0x3
 
@@ -2214,7 +2213,7 @@
     or-int v0, v1, v2
 
     .line 392
-    .restart local v0       #outBuff:I
+    .restart local v0    # "outBuff":I
     ushr-int/lit8 v1, v0, 0x10
 
     int-to-byte v1, v1
@@ -2236,7 +2235,7 @@
     goto :goto_0
 
     .line 398
-    .end local v0           #outBuff:I
+    .end local v0    # "outBuff":I
     :cond_1
     aget-byte v1, p0, p1
 
@@ -2289,7 +2288,7 @@
     or-int v0, v1, v2
 
     .line 403
-    .restart local v0       #outBuff:I
+    .restart local v0    # "outBuff":I
     shr-int/lit8 v1, v0, 0x10
 
     int-to-byte v1, v1
@@ -2320,7 +2319,7 @@
 
 .method public static decodeWebSafe(Ljava/lang/String;)[B
     .locals 3
-    .parameter "s"
+    .param p0, "s"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lcom/bitrhymes/iab/util/Base64DecoderException;
@@ -2334,7 +2333,7 @@
     move-result-object v0
 
     .line 432
-    .local v0, bytes:[B
+    .local v0, "bytes":[B
     const/4 v1, 0x0
 
     array-length v2, v0
@@ -2348,7 +2347,7 @@
 
 .method public static decodeWebSafe([B)[B
     .locals 2
-    .parameter "source"
+    .param p0, "source"    # [B
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lcom/bitrhymes/iab/util/Base64DecoderException;
@@ -2370,9 +2369,9 @@
 
 .method public static decodeWebSafe([BII)[B
     .locals 1
-    .parameter "source"
-    .parameter "off"
-    .parameter "len"
+    .param p0, "source"    # [B
+    .param p1, "off"    # I
+    .param p2, "len"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lcom/bitrhymes/iab/util/Base64DecoderException;
@@ -2392,7 +2391,7 @@
 
 .method public static encode([B)Ljava/lang/String;
     .locals 4
-    .parameter "source"
+    .param p0, "source"    # [B
 
     .prologue
     .line 247
@@ -2413,11 +2412,11 @@
 
 .method public static encode([BII[BZ)Ljava/lang/String;
     .locals 4
-    .parameter "source"
-    .parameter "off"
-    .parameter "len"
-    .parameter "alphabet"
-    .parameter "doPadding"
+    .param p0, "source"    # [B
+    .param p1, "off"    # I
+    .param p2, "len"    # I
+    .param p3, "alphabet"    # [B
+    .param p4, "doPadding"    # Z
 
     .prologue
     .line 274
@@ -2428,11 +2427,11 @@
     move-result-object v0
 
     .line 275
-    .local v0, outBuff:[B
+    .local v0, "outBuff":[B
     array-length v1, v0
 
     .line 279
-    .local v1, outLen:I
+    .local v1, "outLen":I
     :goto_0
     if-nez p4, :cond_0
 
@@ -2468,11 +2467,11 @@
 
 .method public static encode([BII[BI)[B
     .locals 8
-    .parameter "source"
-    .parameter "off"
-    .parameter "len"
-    .parameter "alphabet"
-    .parameter "maxLineLength"
+    .param p0, "source"    # [B
+    .param p1, "off"    # I
+    .param p2, "len"    # I
+    .param p3, "alphabet"    # [B
+    .param p4, "maxLineLength"    # I
 
     .prologue
     .line 301
@@ -2481,11 +2480,11 @@
     div-int/lit8 v0, v0, 0x3
 
     .line 302
-    .local v0, lenDiv3:I
+    .local v0, "lenDiv3":I
     mul-int/lit8 v0, v0, 0x4
 
     .line 304
-    .local v0, len43:I
+    .local v0, "len43":I
     div-int v1, v0, p4
 
     .line 303
@@ -2494,30 +2493,30 @@
     new-array v3, v0, [B
 
     .line 306
-    .end local v0           #len43:I
-    .local v3, outBuff:[B
+    .end local v0    # "len43":I
+    .local v3, "outBuff":[B
     const/4 v0, 0x0
 
     .line 307
-    .local v0, d:I
+    .local v0, "d":I
     const/4 v4, 0x0
 
     .line 308
-    .local v4, e:I
+    .local v4, "e":I
     const/4 v1, 0x2
 
     sub-int v2, p2, v1
 
     .line 309
-    .local v2, len2:I
+    .local v2, "len2":I
     const/4 v1, 0x0
 
-    .local v1, lineLength:I
+    .local v1, "lineLength":I
     move v6, v1
 
     .line 310
-    .end local v1           #lineLength:I
-    .local v6, lineLength:I
+    .end local v1    # "lineLength":I
+    .local v6, "lineLength":I
     :goto_0
     if-lt v0, v2, :cond_1
 
@@ -2536,13 +2535,13 @@
     invoke-static/range {v0 .. v5}, Lcom/bitrhymes/iab/util/Base64;->encode3to4([BII[BI[B)[B
 
     .line 335
-    .end local v0           #d:I
-    .end local v2           #len2:I
+    .end local v0    # "d":I
+    .end local v2    # "len2":I
     add-int/lit8 p0, v6, 0x4
 
     .line 336
-    .end local v6           #lineLength:I
-    .local p0, lineLength:I
+    .end local v6    # "lineLength":I
+    .local p0, "lineLength":I
     if-ne p0, p4, :cond_0
 
     .line 338
@@ -2553,8 +2552,8 @@
     aput-byte p2, v3, p1
 
     .line 339
-    .end local p1
-    .end local p2
+    .end local p1    # "off":I
+    .end local p2    # "len":I
     add-int/lit8 v4, v4, 0x1
 
     .line 341
@@ -2565,7 +2564,7 @@
     :goto_1
     sget-boolean p0, Lcom/bitrhymes/iab/util/Base64;->$assertionsDisabled:Z
 
-    .end local p0           #lineLength:I
+    .end local p0    # "lineLength":I
     if-nez p0, :cond_3
 
     array-length p0, v3
@@ -2579,12 +2578,12 @@
     throw p0
 
     .line 316
-    .restart local v0       #d:I
-    .restart local v2       #len2:I
-    .restart local v6       #lineLength:I
-    .local p0, source:[B
-    .restart local p1
-    .restart local p2
+    .restart local v0    # "d":I
+    .restart local v2    # "len2":I
+    .restart local v6    # "lineLength":I
+    .local p0, "source":[B
+    .restart local p1    # "off":I
+    .restart local p2    # "len":I
     :cond_1
     add-int v1, v0, p1
 
@@ -2623,7 +2622,7 @@
     or-int/2addr v1, v5
 
     .line 319
-    .local v1, inBuff:I
+    .local v1, "inBuff":I
     ushr-int/lit8 v5, v1, 0x12
 
     aget-byte v5, p3, v5
@@ -2659,15 +2658,15 @@
 
     aget-byte v1, p3, v1
 
-    .end local v1           #inBuff:I
+    .end local v1    # "inBuff":I
     aput-byte v1, v3, v5
 
     .line 324
     add-int/lit8 v1, v6, 0x4
 
     .line 325
-    .end local v6           #lineLength:I
-    .local v1, lineLength:I
+    .end local v6    # "lineLength":I
+    .local v1, "lineLength":I
     if-ne v1, p4, :cond_2
 
     .line 326
@@ -2678,14 +2677,14 @@
     aput-byte v5, v3, v1
 
     .line 327
-    .end local v1           #lineLength:I
+    .end local v1    # "lineLength":I
     add-int/lit8 v4, v4, 0x1
 
     .line 328
     const/4 v1, 0x0
 
     .line 310
-    .restart local v1       #lineLength:I
+    .restart local v1    # "lineLength":I
     :cond_2
     add-int/lit8 v0, v0, 0x3
 
@@ -2693,42 +2692,42 @@
 
     move v6, v1
 
-    .end local v1           #lineLength:I
-    .restart local v6       #lineLength:I
+    .end local v1    # "lineLength":I
+    .restart local v6    # "lineLength":I
     goto :goto_0
 
     .line 345
-    .end local v0           #d:I
-    .end local v2           #len2:I
-    .end local v6           #lineLength:I
-    .end local p0           #source:[B
-    .end local p1
-    .end local p2
+    .end local v0    # "d":I
+    .end local v2    # "len2":I
+    .end local v6    # "lineLength":I
+    .end local p0    # "source":[B
+    .end local p1    # "off":I
+    .end local p2    # "len":I
     :cond_3
     return-object v3
 
-    .restart local v0       #d:I
-    .restart local v2       #len2:I
-    .restart local v6       #lineLength:I
-    .restart local p0       #source:[B
-    .restart local p1
-    .restart local p2
+    .restart local v0    # "d":I
+    .restart local v2    # "len2":I
+    .restart local v6    # "lineLength":I
+    .restart local p0    # "source":[B
+    .restart local p1    # "off":I
+    .restart local p2    # "len":I
     :cond_4
     move p0, v6
 
-    .end local v6           #lineLength:I
-    .local p0, lineLength:I
+    .end local v6    # "lineLength":I
+    .local p0, "lineLength":I
     goto :goto_1
 .end method
 
 .method private static encode3to4([BII[BI[B)[B
     .locals 5
-    .parameter "source"
-    .parameter "srcOffset"
-    .parameter "numSigBytes"
-    .parameter "destination"
-    .parameter "destOffset"
-    .parameter "alphabet"
+    .param p0, "source"    # [B
+    .param p1, "srcOffset"    # I
+    .param p2, "numSigBytes"    # I
+    .param p3, "destination"    # [B
+    .param p4, "destOffset"    # I
+    .param p5, "alphabet"    # [B
 
     .prologue
     const/16 v4, 0x3d
@@ -2780,14 +2779,14 @@
     or-int v0, v1, v2
 
     .line 214
-    .local v0, inBuff:I
+    .local v0, "inBuff":I
     packed-switch p2, :pswitch_data_0
 
     .line 234
     :goto_3
     return-object p3
 
-    .end local v0           #inBuff:I
+    .end local v0    # "inBuff":I
     :cond_0
     move v1, v3
 
@@ -2807,7 +2806,7 @@
     goto :goto_2
 
     .line 216
-    .restart local v0       #inBuff:I
+    .restart local v0    # "inBuff":I
     :pswitch_0
     ushr-int/lit8 v1, v0, 0x12
 
@@ -2929,8 +2928,8 @@
 
 .method public static encodeWebSafe([BZ)Ljava/lang/String;
     .locals 3
-    .parameter "source"
-    .parameter "doPadding"
+    .param p0, "source"    # [B
+    .param p1, "doPadding"    # Z
 
     .prologue
     .line 258

@@ -40,8 +40,7 @@
 # virtual methods
 .method public addValueInstantiator(Ljava/lang/Class;Lcom/flurry/org/codehaus/jackson/map/deser/ValueInstantiator;)Lcom/flurry/org/codehaus/jackson/map/module/SimpleValueInstantiators;
     .locals 2
-    .parameter
-    .parameter "inst"
+    .param p2, "inst"    # Lcom/flurry/org/codehaus/jackson/map/deser/ValueInstantiator;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -55,7 +54,7 @@
 
     .prologue
     .line 34
-    .local p1, forType:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p1, "forType":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/map/module/SimpleValueInstantiators;->_classMappings:Ljava/util/HashMap;
 
     new-instance v1, Lcom/flurry/org/codehaus/jackson/map/type/ClassKey;
@@ -70,9 +69,9 @@
 
 .method public findValueInstantiator(Lcom/flurry/org/codehaus/jackson/map/DeserializationConfig;Lcom/flurry/org/codehaus/jackson/map/BeanDescription;Lcom/flurry/org/codehaus/jackson/map/deser/ValueInstantiator;)Lcom/flurry/org/codehaus/jackson/map/deser/ValueInstantiator;
     .locals 4
-    .parameter "config"
-    .parameter "beanDesc"
-    .parameter "defaultInstantiator"
+    .param p1, "config"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationConfig;
+    .param p2, "beanDesc"    # Lcom/flurry/org/codehaus/jackson/map/BeanDescription;
+    .param p3, "defaultInstantiator"    # Lcom/flurry/org/codehaus/jackson/map/deser/ValueInstantiator;
 
     .prologue
     .line 42
@@ -93,7 +92,7 @@
     check-cast v0, Lcom/flurry/org/codehaus/jackson/map/deser/ValueInstantiator;
 
     .line 43
-    .local v0, inst:Lcom/flurry/org/codehaus/jackson/map/deser/ValueInstantiator;
+    .local v0, "inst":Lcom/flurry/org/codehaus/jackson/map/deser/ValueInstantiator;
     if-nez v0, :cond_0
 
     move-object v1, p3

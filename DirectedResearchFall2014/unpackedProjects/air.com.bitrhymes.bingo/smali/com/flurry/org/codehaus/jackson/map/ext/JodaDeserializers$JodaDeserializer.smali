@@ -45,7 +45,6 @@
 
 .method protected constructor <init>(Ljava/lang/Class;)V
     .locals 0
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -56,8 +55,8 @@
 
     .prologue
     .line 48
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/ext/JodaDeserializers$JodaDeserializer;,"Lcom/flurry/org/codehaus/jackson/map/ext/JodaDeserializers$JodaDeserializer<TT;>;"
-    .local p1, cls:Ljava/lang/Class;,"Ljava/lang/Class<TT;>;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/ext/JodaDeserializers$JodaDeserializer;, "Lcom/flurry/org/codehaus/jackson/map/ext/JodaDeserializers$JodaDeserializer<TT;>;"
+    .local p1, "cls":Ljava/lang/Class;, "Ljava/lang/Class<TT;>;"
     invoke-direct {p0, p1}, Lcom/flurry/org/codehaus/jackson/map/deser/std/StdScalarDeserializer;-><init>(Ljava/lang/Class;)V
 
     return-void
@@ -67,7 +66,7 @@
 # virtual methods
 .method protected parseLocal(Lcom/flurry/org/codehaus/jackson/JsonParser;)Lorg/joda/time/DateTime;
     .locals 2
-    .parameter "jp"
+    .param p1, "jp"    # Lcom/flurry/org/codehaus/jackson/JsonParser;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -77,7 +76,7 @@
 
     .prologue
     .line 53
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/ext/JodaDeserializers$JodaDeserializer;,"Lcom/flurry/org/codehaus/jackson/map/ext/JodaDeserializers$JodaDeserializer<TT;>;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/ext/JodaDeserializers$JodaDeserializer;, "Lcom/flurry/org/codehaus/jackson/map/ext/JodaDeserializers$JodaDeserializer<TT;>;"
     invoke-virtual {p1}, Lcom/flurry/org/codehaus/jackson/JsonParser;->getText()Ljava/lang/String;
 
     move-result-object v1
@@ -87,7 +86,7 @@
     move-result-object v0
 
     .line 54
-    .local v0, str:Ljava/lang/String;
+    .local v0, "str":Ljava/lang/String;
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
     move-result v1

@@ -16,7 +16,7 @@
 # direct methods
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 1
-    .parameter "message"
+    .param p1, "message"    # Ljava/lang/String;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -35,9 +35,9 @@
 
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;I)V
     .locals 1
-    .parameter "message"
-    .parameter "type"
-    .parameter "code"
+    .param p1, "message"    # Ljava/lang/String;
+    .param p2, "type"    # Ljava/lang/String;
+    .param p3, "code"    # I
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 

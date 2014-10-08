@@ -213,11 +213,11 @@
     .line 105
     check-cast p0, Lcom/fusepowered/m1/google/gson/JsonArray;
 
-    .end local p0
+    .end local p0    # "this":Lcom/fusepowered/m1/google/gson/JsonElement;
     return-object p0
 
     .line 107
-    .restart local p0
+    .restart local p0    # "this":Lcom/fusepowered/m1/google/gson/JsonElement;
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -242,11 +242,11 @@
     .line 138
     check-cast p0, Lcom/fusepowered/m1/google/gson/JsonNull;
 
-    .end local p0
+    .end local p0    # "this":Lcom/fusepowered/m1/google/gson/JsonElement;
     return-object p0
 
     .line 140
-    .restart local p0
+    .restart local p0    # "this":Lcom/fusepowered/m1/google/gson/JsonElement;
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -271,11 +271,11 @@
     .line 89
     check-cast p0, Lcom/fusepowered/m1/google/gson/JsonObject;
 
-    .end local p0
+    .end local p0    # "this":Lcom/fusepowered/m1/google/gson/JsonElement;
     return-object p0
 
     .line 91
-    .restart local p0
+    .restart local p0    # "this":Lcom/fusepowered/m1/google/gson/JsonElement;
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -316,11 +316,11 @@
     .line 121
     check-cast p0, Lcom/fusepowered/m1/google/gson/JsonPrimitive;
 
-    .end local p0
+    .end local p0    # "this":Lcom/fusepowered/m1/google/gson/JsonElement;
     return-object p0
 
     .line 123
-    .restart local p0
+    .restart local p0    # "this":Lcom/fusepowered/m1/google/gson/JsonElement;
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -462,13 +462,13 @@
     invoke-direct {v2}, Ljava/io/StringWriter;-><init>()V
 
     .line 323
-    .local v2, stringWriter:Ljava/io/StringWriter;
+    .local v2, "stringWriter":Ljava/io/StringWriter;
     new-instance v1, Lcom/fusepowered/m1/google/gson/stream/JsonWriter;
 
     invoke-direct {v1, v2}, Lcom/fusepowered/m1/google/gson/stream/JsonWriter;-><init>(Ljava/io/Writer;)V
 
     .line 324
-    .local v1, jsonWriter:Lcom/fusepowered/m1/google/gson/stream/JsonWriter;
+    .local v1, "jsonWriter":Lcom/fusepowered/m1/google/gson/stream/JsonWriter;
     const/4 v3, 0x1
 
     invoke-virtual {v1, v3}, Lcom/fusepowered/m1/google/gson/stream/JsonWriter;->setLenient(Z)V
@@ -486,15 +486,15 @@
     return-object v3
 
     .line 327
-    .end local v1           #jsonWriter:Lcom/fusepowered/m1/google/gson/stream/JsonWriter;
-    .end local v2           #stringWriter:Ljava/io/StringWriter;
+    .end local v1    # "jsonWriter":Lcom/fusepowered/m1/google/gson/stream/JsonWriter;
+    .end local v2    # "stringWriter":Ljava/io/StringWriter;
     :catch_0
     move-exception v3
 
     move-object v0, v3
 
     .line 328
-    .local v0, e:Ljava/io/IOException;
+    .local v0, "e":Ljava/io/IOException;
     new-instance v3, Ljava/lang/AssertionError;
 
     invoke-direct {v3, v0}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V

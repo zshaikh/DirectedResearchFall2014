@@ -13,8 +13,7 @@
 
 
 # static fields
-#the value of this static final field might be set in the static constructor
-.field static final synthetic $assertionsDisabled:Z = false
+.field static final synthetic $assertionsDisabled:Z
 
 .field private static final STACK_STEP:I = 0xa
 
@@ -60,9 +59,9 @@
 
 .method constructor <init>(Ljava/io/OutputStream;II)V
     .locals 4
-    .parameter "out"
-    .parameter "blockBufferSize"
-    .parameter "binaryEncoderBufferSize"
+    .param p1, "out"    # Ljava/io/OutputStream;
+    .param p2, "blockBufferSize"    # I
+    .param p3, "binaryEncoderBufferSize"    # I
 
     .prologue
     const/4 v3, 0x0
@@ -110,7 +109,7 @@
     aget-object v0, v1, v2
 
     .line 210
-    .local v0, bv:Lcom/flurry/org/apache/avro/io/BlockingBinaryEncoder$BlockedValue;
+    .local v0, "bv":Lcom/flurry/org/apache/avro/io/BlockingBinaryEncoder$BlockedValue;
     const/4 v1, 0x0
 
     iput-object v1, v0, Lcom/flurry/org/apache/avro/io/BlockingBinaryEncoder$BlockedValue;->type:Lcom/flurry/org/apache/avro/Schema$Type;
@@ -256,10 +255,10 @@
     const/4 v1, 0x0
 
     .line 194
-    .local v1, prev:Lcom/flurry/org/apache/avro/io/BlockingBinaryEncoder$BlockedValue;
+    .local v1, "prev":Lcom/flurry/org/apache/avro/io/BlockingBinaryEncoder$BlockedValue;
     const/4 v0, 0x0
 
-    .local v0, i:I
+    .local v0, "i":I
     :goto_0
     iget v3, p0, Lcom/flurry/org/apache/avro/io/BlockingBinaryEncoder;->stackTop:I
 
@@ -271,7 +270,7 @@
     aget-object v2, v3, v0
 
     .line 196
-    .local v2, v:Lcom/flurry/org/apache/avro/io/BlockingBinaryEncoder$BlockedValue;
+    .local v2, "v":Lcom/flurry/org/apache/avro/io/BlockingBinaryEncoder$BlockedValue;
     iget v3, p0, Lcom/flurry/org/apache/avro/io/BlockingBinaryEncoder;->pos:I
 
     invoke-virtual {v2, v1, v3}, Lcom/flurry/org/apache/avro/io/BlockingBinaryEncoder$BlockedValue;->check(Lcom/flurry/org/apache/avro/io/BlockingBinaryEncoder$BlockedValue;I)Z
@@ -285,7 +284,7 @@
     goto :goto_0
 
     .line 199
-    .end local v2           #v:Lcom/flurry/org/apache/avro/io/BlockingBinaryEncoder$BlockedValue;
+    .end local v2    # "v":Lcom/flurry/org/apache/avro/io/BlockingBinaryEncoder$BlockedValue;
     :cond_4
     const/4 v3, 0x1
 
@@ -327,10 +326,10 @@
     const/4 v4, 0x0
 
     .line 510
-    .local v4, s:Lcom/flurry/org/apache/avro/io/BlockingBinaryEncoder$BlockedValue;
+    .local v4, "s":Lcom/flurry/org/apache/avro/io/BlockingBinaryEncoder$BlockedValue;
     const/4 v1, 0x1
 
-    .local v1, i:I
+    .local v1, "i":I
     :goto_0
     iget v5, p0, Lcom/flurry/org/apache/avro/io/BlockingBinaryEncoder;->stackTop:I
 
@@ -440,7 +439,7 @@
     move-object v3, v5
 
     .line 543
-    .local v3, n:Lcom/flurry/org/apache/avro/io/BlockingBinaryEncoder$BlockedValue;
+    .local v3, "n":Lcom/flurry/org/apache/avro/io/BlockingBinaryEncoder$BlockedValue;
     :goto_1
     if-nez v3, :cond_6
 
@@ -449,7 +448,7 @@
     move v0, v5
 
     .line 544
-    .local v0, end:I
+    .local v0, "end":I
     :goto_2
     iget-object v5, p0, Lcom/flurry/org/apache/avro/io/BlockingBinaryEncoder;->buf:[B
 
@@ -475,7 +474,7 @@
     .line 548
     add-int/lit8 v2, v1, 0x1
 
-    .local v2, j:I
+    .local v2, "j":I
     :goto_3
     iget v5, p0, Lcom/flurry/org/apache/avro/io/BlockingBinaryEncoder;->stackTop:I
 
@@ -506,9 +505,9 @@
     goto :goto_3
 
     .line 541
-    .end local v0           #end:I
-    .end local v2           #j:I
-    .end local v3           #n:Lcom/flurry/org/apache/avro/io/BlockingBinaryEncoder$BlockedValue;
+    .end local v0    # "end":I
+    .end local v2    # "j":I
+    .end local v3    # "n":Lcom/flurry/org/apache/avro/io/BlockingBinaryEncoder$BlockedValue;
     :cond_5
     const/4 v5, 0x0
 
@@ -517,7 +516,7 @@
     goto :goto_1
 
     .line 543
-    .restart local v3       #n:Lcom/flurry/org/apache/avro/io/BlockingBinaryEncoder$BlockedValue;
+    .restart local v3    # "n":Lcom/flurry/org/apache/avro/io/BlockingBinaryEncoder$BlockedValue;
     :cond_6
     iget v5, v3, Lcom/flurry/org/apache/avro/io/BlockingBinaryEncoder$BlockedValue;->start:I
 
@@ -526,8 +525,8 @@
     goto :goto_2
 
     .line 553
-    .restart local v0       #end:I
-    .restart local v2       #j:I
+    .restart local v0    # "end":I
+    .restart local v2    # "j":I
     :cond_7
     iget v5, p0, Lcom/flurry/org/apache/avro/io/BlockingBinaryEncoder;->pos:I
 
@@ -585,9 +584,9 @@
 
 .method private doWriteBytes([BII)V
     .locals 2
-    .parameter "bytes"
-    .parameter "start"
-    .parameter "len"
+    .param p1, "bytes"    # [B
+    .param p2, "start"    # I
+    .param p3, "len"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -713,7 +712,7 @@
     aget-object v3, v4, v5
 
     .line 393
-    .local v3, t:Lcom/flurry/org/apache/avro/io/BlockingBinaryEncoder$BlockedValue;
+    .local v3, "t":Lcom/flurry/org/apache/avro/io/BlockingBinaryEncoder$BlockedValue;
     sget-boolean v4, Lcom/flurry/org/apache/avro/io/BlockingBinaryEncoder;->$assertionsDisabled:Z
 
     if-nez v4, :cond_1
@@ -773,7 +772,7 @@
     sub-int v0, v4, v5
 
     .line 400
-    .local v0, byteCount:I
+    .local v0, "byteCount":I
     iget v4, v3, Lcom/flurry/org/apache/avro/io/BlockingBinaryEncoder$BlockedValue;->start:I
 
     if-nez v4, :cond_5
@@ -803,7 +802,7 @@
     invoke-super {p0, v0}, Lcom/flurry/org/apache/avro/io/BufferedBinaryEncoder;->writeInt(I)V
 
     .line 420
-    .end local v0           #byteCount:I
+    .end local v0    # "byteCount":I
     :cond_4
     :goto_1
     iget v4, p0, Lcom/flurry/org/apache/avro/io/BlockingBinaryEncoder;->stackTop:I
@@ -844,12 +843,12 @@
     throw v4
 
     .line 406
-    .restart local v0       #byteCount:I
+    .restart local v0    # "byteCount":I
     :cond_5
     const/4 v1, 0x0
 
     .line 407
-    .local v1, headerSize:I
+    .local v1, "headerSize":I
     iget v4, v3, Lcom/flurry/org/apache/avro/io/BlockingBinaryEncoder$BlockedValue;->items:I
 
     neg-int v4, v4
@@ -893,7 +892,7 @@
     iget v2, v3, Lcom/flurry/org/apache/avro/io/BlockingBinaryEncoder$BlockedValue;->start:I
 
     .line 412
-    .local v2, m:I
+    .local v2, "m":I
     iget-object v4, p0, Lcom/flurry/org/apache/avro/io/BlockingBinaryEncoder;->buf:[B
 
     iget-object v5, p0, Lcom/flurry/org/apache/avro/io/BlockingBinaryEncoder;->buf:[B
@@ -912,15 +911,15 @@
     goto :goto_1
 
     .line 415
-    .end local v2           #m:I
+    .end local v2    # "m":I
     :cond_6
     invoke-direct {p0}, Lcom/flurry/org/apache/avro/io/BlockingBinaryEncoder;->compact()V
 
     goto/16 :goto_0
 
     .line 424
-    .end local v0           #byteCount:I
-    .end local v1           #headerSize:I
+    .end local v0    # "byteCount":I
+    .end local v1    # "headerSize":I
     :cond_7
     iget-object v4, p0, Lcom/flurry/org/apache/avro/io/BlockingBinaryEncoder;->blockStack:[Lcom/flurry/org/apache/avro/io/BlockingBinaryEncoder$BlockedValue;
 
@@ -944,7 +943,7 @@
 
 .method private ensureBounds(I)V
     .locals 3
-    .parameter "l"
+    .param p1, "l"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -1012,7 +1011,7 @@
     array-length v1, v2
 
     .line 220
-    .local v1, oldLength:I
+    .local v1, "oldLength":I
     iget-object v2, p0, Lcom/flurry/org/apache/avro/io/BlockingBinaryEncoder;->blockStack:[Lcom/flurry/org/apache/avro/io/BlockingBinaryEncoder$BlockedValue;
 
     iget-object v3, p0, Lcom/flurry/org/apache/avro/io/BlockingBinaryEncoder;->blockStack:[Lcom/flurry/org/apache/avro/io/BlockingBinaryEncoder$BlockedValue;
@@ -1032,7 +1031,7 @@
     .line 222
     move v0, v1
 
-    .local v0, i:I
+    .local v0, "i":I
     :goto_0
     iget-object v2, p0, Lcom/flurry/org/apache/avro/io/BlockingBinaryEncoder;->blockStack:[Lcom/flurry/org/apache/avro/io/BlockingBinaryEncoder$BlockedValue;
 
@@ -1078,7 +1077,7 @@
     aget-object v0, v1, v2
 
     .line 439
-    .local v0, s:Lcom/flurry/org/apache/avro/io/BlockingBinaryEncoder$BlockedValue;
+    .local v0, "s":Lcom/flurry/org/apache/avro/io/BlockingBinaryEncoder$BlockedValue;
     iget-object v1, v0, Lcom/flurry/org/apache/avro/io/BlockingBinaryEncoder$BlockedValue;->state:Lcom/flurry/org/apache/avro/io/BlockingBinaryEncoder$BlockedValue$State;
 
     sget-object v2, Lcom/flurry/org/apache/avro/io/BlockingBinaryEncoder$BlockedValue$State;->OVERFLOW:Lcom/flurry/org/apache/avro/io/BlockingBinaryEncoder$BlockedValue$State;
@@ -1160,9 +1159,9 @@
 
 .method private write([BII)V
     .locals 3
-    .parameter "b"
-    .parameter "off"
-    .parameter "len"
+    .param p1, "b"    # [B
+    .param p2, "off"    # I
+    .param p3, "len"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -1323,9 +1322,9 @@
 
 .method configure(Ljava/io/OutputStream;II)Lcom/flurry/org/apache/avro/io/BlockingBinaryEncoder;
     .locals 1
-    .parameter "out"
-    .parameter "blockBufferSize"
-    .parameter "binaryEncoderBufferSize"
+    .param p1, "out"    # Ljava/io/OutputStream;
+    .param p2, "blockBufferSize"    # I
+    .param p3, "binaryEncoderBufferSize"    # I
 
     .prologue
     const/4 v0, 0x0
@@ -1398,7 +1397,7 @@
     aget-object v0, v1, v2
 
     .line 243
-    .local v0, bv:Lcom/flurry/org/apache/avro/io/BlockingBinaryEncoder$BlockedValue;
+    .local v0, "bv":Lcom/flurry/org/apache/avro/io/BlockingBinaryEncoder$BlockedValue;
     iget-object v1, v0, Lcom/flurry/org/apache/avro/io/BlockingBinaryEncoder$BlockedValue;->state:Lcom/flurry/org/apache/avro/io/BlockingBinaryEncoder$BlockedValue$State;
 
     sget-object v2, Lcom/flurry/org/apache/avro/io/BlockingBinaryEncoder$BlockedValue$State;->ROOT:Lcom/flurry/org/apache/avro/io/BlockingBinaryEncoder$BlockedValue$State;
@@ -1457,7 +1456,7 @@
 
 .method public setItemCount(J)V
     .locals 5
-    .parameter "itemCount"
+    .param p1, "itemCount"    # J
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -1473,7 +1472,7 @@
     aget-object v0, v1, v2
 
     .line 315
-    .local v0, v:Lcom/flurry/org/apache/avro/io/BlockingBinaryEncoder$BlockedValue;
+    .local v0, "v":Lcom/flurry/org/apache/avro/io/BlockingBinaryEncoder$BlockedValue;
     sget-boolean v1, Lcom/flurry/org/apache/avro/io/BlockingBinaryEncoder;->$assertionsDisabled:Z
 
     if-nez v1, :cond_0
@@ -1576,7 +1575,7 @@
     aget-object v0, v1, v2
 
     .line 328
-    .local v0, t:Lcom/flurry/org/apache/avro/io/BlockingBinaryEncoder$BlockedValue;
+    .local v0, "t":Lcom/flurry/org/apache/avro/io/BlockingBinaryEncoder$BlockedValue;
     iget v1, v0, Lcom/flurry/org/apache/avro/io/BlockingBinaryEncoder$BlockedValue;->items:I
 
     add-int/lit8 v1, v1, 0x1
@@ -1636,7 +1635,7 @@
     aget-object v0, v1, v2
 
     .line 338
-    .local v0, top:Lcom/flurry/org/apache/avro/io/BlockingBinaryEncoder$BlockedValue;
+    .local v0, "top":Lcom/flurry/org/apache/avro/io/BlockingBinaryEncoder$BlockedValue;
     iget-object v1, v0, Lcom/flurry/org/apache/avro/io/BlockingBinaryEncoder$BlockedValue;->type:Lcom/flurry/org/apache/avro/Schema$Type;
 
     sget-object v2, Lcom/flurry/org/apache/avro/Schema$Type;->ARRAY:Lcom/flurry/org/apache/avro/Schema$Type;
@@ -1733,7 +1732,7 @@
     aget-object v0, v1, v2
 
     .line 304
-    .local v0, bv:Lcom/flurry/org/apache/avro/io/BlockingBinaryEncoder$BlockedValue;
+    .local v0, "bv":Lcom/flurry/org/apache/avro/io/BlockingBinaryEncoder$BlockedValue;
     sget-object v1, Lcom/flurry/org/apache/avro/Schema$Type;->ARRAY:Lcom/flurry/org/apache/avro/Schema$Type;
 
     iput-object v1, v0, Lcom/flurry/org/apache/avro/io/BlockingBinaryEncoder$BlockedValue;->type:Lcom/flurry/org/apache/avro/Schema$Type;
@@ -1779,7 +1778,7 @@
 
 .method public writeBoolean(Z)V
     .locals 3
-    .parameter "b"
+    .param p1, "b"    # Z
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -1813,7 +1812,7 @@
 
 .method public writeDouble(D)V
     .locals 3
-    .parameter "d"
+    .param p1, "d"    # D
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -1847,9 +1846,9 @@
 
 .method public writeFixed([BII)V
     .locals 0
-    .parameter "bytes"
-    .parameter "start"
-    .parameter "len"
+    .param p1, "bytes"    # [B
+    .param p2, "start"    # I
+    .param p3, "len"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -1866,7 +1865,7 @@
 
 .method public writeFloat(F)V
     .locals 3
-    .parameter "f"
+    .param p1, "f"    # F
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -1900,7 +1899,7 @@
 
 .method public writeIndex(I)V
     .locals 3
-    .parameter "unionIndex"
+    .param p1, "unionIndex"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -1934,7 +1933,7 @@
 
 .method public writeInt(I)V
     .locals 3
-    .parameter "n"
+    .param p1, "n"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -1968,7 +1967,7 @@
 
 .method public writeLong(J)V
     .locals 3
-    .parameter "n"
+    .param p1, "n"    # J
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -2017,7 +2016,7 @@
     aget-object v0, v1, v2
 
     .line 367
-    .local v0, top:Lcom/flurry/org/apache/avro/io/BlockingBinaryEncoder$BlockedValue;
+    .local v0, "top":Lcom/flurry/org/apache/avro/io/BlockingBinaryEncoder$BlockedValue;
     iget-object v1, v0, Lcom/flurry/org/apache/avro/io/BlockingBinaryEncoder$BlockedValue;->type:Lcom/flurry/org/apache/avro/Schema$Type;
 
     sget-object v2, Lcom/flurry/org/apache/avro/Schema$Type;->MAP:Lcom/flurry/org/apache/avro/Schema$Type;
@@ -2114,7 +2113,7 @@
     aget-object v0, v1, v2
 
     .line 356
-    .local v0, bv:Lcom/flurry/org/apache/avro/io/BlockingBinaryEncoder$BlockedValue;
+    .local v0, "bv":Lcom/flurry/org/apache/avro/io/BlockingBinaryEncoder$BlockedValue;
     sget-object v1, Lcom/flurry/org/apache/avro/Schema$Type;->MAP:Lcom/flurry/org/apache/avro/Schema$Type;
 
     iput-object v1, v0, Lcom/flurry/org/apache/avro/io/BlockingBinaryEncoder$BlockedValue;->type:Lcom/flurry/org/apache/avro/Schema$Type;

@@ -20,7 +20,7 @@
 
 .method public static onPause(Landroid/webkit/WebView;)V
     .locals 5
-    .parameter "webView"
+    .param p0, "webView"    # Landroid/webkit/WebView;
 
     .prologue
     .line 48
@@ -38,7 +38,7 @@
     move-result-object v1
 
     .line 49
-    .local v1, onPause:Ljava/lang/reflect/Method;
+    .local v1, "onPause":Ljava/lang/reflect/Method;
     const/4 v2, 0x0
 
     new-array v2, v2, [Ljava/lang/Object;
@@ -48,7 +48,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 54
-    .end local v1           #onPause:Ljava/lang/reflect/Method;
+    .end local v1    # "onPause":Ljava/lang/reflect/Method;
     :goto_0
     return-void
 
@@ -59,13 +59,13 @@
     move-object v0, v2
 
     .line 52
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     goto :goto_0
 .end method
 
 .method public static onResume(Landroid/webkit/WebView;)V
     .locals 5
-    .parameter "webView"
+    .param p0, "webView"    # Landroid/webkit/WebView;
 
     .prologue
     .line 58
@@ -83,7 +83,7 @@
     move-result-object v1
 
     .line 59
-    .local v1, onResume:Ljava/lang/reflect/Method;
+    .local v1, "onResume":Ljava/lang/reflect/Method;
     const/4 v2, 0x0
 
     new-array v2, v2, [Ljava/lang/Object;
@@ -93,7 +93,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 64
-    .end local v1           #onResume:Ljava/lang/reflect/Method;
+    .end local v1    # "onResume":Ljava/lang/reflect/Method;
     :goto_0
     return-void
 
@@ -104,13 +104,13 @@
     move-object v0, v2
 
     .line 62
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     goto :goto_0
 .end method
 
 .method public static setDisableJSChromeClient(Landroid/webkit/WebView;)V
     .locals 1
-    .parameter "webView"
+    .param p0, "webView"    # Landroid/webkit/WebView;
 
     .prologue
     .line 67

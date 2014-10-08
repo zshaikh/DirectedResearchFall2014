@@ -26,7 +26,7 @@
 # direct methods
 .method public constructor <init>(Lcom/fusepowered/util/FuseAdCallback;)V
     .locals 1
-    .parameter "adCallback"
+    .param p1, "adCallback"    # Lcom/fusepowered/util/FuseAdCallback;
 
     .prologue
     .line 894
@@ -58,7 +58,7 @@
 
 .method public onInterstitialClicked(Lcom/fusepowered/m2/m2l/MoPubInterstitial;)V
     .locals 1
-    .parameter "arg0"
+    .param p1, "arg0"    # Lcom/fusepowered/m2/m2l/MoPubInterstitial;
 
     .prologue
     .line 938
@@ -72,7 +72,7 @@
 
 .method public onInterstitialDismissed(Lcom/fusepowered/m2/m2l/MoPubInterstitial;)V
     .locals 2
-    .parameter "arg0"
+    .param p1, "arg0"    # Lcom/fusepowered/m2/m2l/MoPubInterstitial;
 
     .prologue
     .line 933
@@ -93,8 +93,8 @@
 
 .method public onInterstitialFailed(Lcom/fusepowered/m2/m2l/MoPubInterstitial;Lcom/fusepowered/m2/m2l/MoPubErrorCode;)V
     .locals 3
-    .parameter "arg0"
-    .parameter "arg1"
+    .param p1, "arg0"    # Lcom/fusepowered/m2/m2l/MoPubInterstitial;
+    .param p2, "arg1"    # Lcom/fusepowered/m2/m2l/MoPubErrorCode;
 
     .prologue
     const/4 v2, 0x0
@@ -132,7 +132,7 @@
 
 .method public onInterstitialLoaded(Lcom/fusepowered/m2/m2l/MoPubInterstitial;)V
     .locals 1
-    .parameter "interstitial"
+    .param p1, "interstitial"    # Lcom/fusepowered/m2/m2l/MoPubInterstitial;
 
     .prologue
     .line 910
@@ -165,7 +165,7 @@
 
 .method public onInterstitialShown(Lcom/fusepowered/m2/m2l/MoPubInterstitial;)V
     .locals 1
-    .parameter "arg0"
+    .param p1, "arg0"    # Lcom/fusepowered/m2/m2l/MoPubInterstitial;
 
     .prologue
     .line 906
@@ -179,7 +179,7 @@
 
 .method public setIsWaitingForAd(Z)V
     .locals 0
-    .parameter "isWaitingForAd"
+    .param p1, "isWaitingForAd"    # Z
 
     .prologue
     .line 899

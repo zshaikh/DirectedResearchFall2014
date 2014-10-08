@@ -36,7 +36,6 @@
 # direct methods
 .method constructor <init>(Lcom/flurry/org/apache/avro/io/parsing/Symbol$Sequence;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 281

@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/adobe/air/AndroidStageText;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 653
@@ -39,9 +38,6 @@
 # virtual methods
 .method public onEditorAction(Landroid/widget/TextView;ILandroid/view/KeyEvent;)Z
     .locals 7
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const/16 v6, 0x57
@@ -69,12 +65,12 @@
 
     iget-object v1, p0, Lcom/adobe/air/AndroidStageText$1;->this$0:Lcom/adobe/air/AndroidStageText;
 
-    #getter for: Lcom/adobe/air/AndroidStageText;->mInternalReference:J
+    # getter for: Lcom/adobe/air/AndroidStageText;->mInternalReference:J
     invoke-static {v1}, Lcom/adobe/air/AndroidStageText;->access$100(Lcom/adobe/air/AndroidStageText;)J
 
     move-result-wide v1
 
-    #calls: Lcom/adobe/air/AndroidStageText;->handleKeyEvent(JII)Z
+    # invokes: Lcom/adobe/air/AndroidStageText;->handleKeyEvent(JII)Z
     invoke-static {v0, v1, v2, v3, v6}, Lcom/adobe/air/AndroidStageText;->access$1500(Lcom/adobe/air/AndroidStageText;JII)Z
 
     move-result v0
@@ -84,12 +80,12 @@
 
     iget-object v2, p0, Lcom/adobe/air/AndroidStageText$1;->this$0:Lcom/adobe/air/AndroidStageText;
 
-    #getter for: Lcom/adobe/air/AndroidStageText;->mInternalReference:J
+    # getter for: Lcom/adobe/air/AndroidStageText;->mInternalReference:J
     invoke-static {v2}, Lcom/adobe/air/AndroidStageText;->access$100(Lcom/adobe/air/AndroidStageText;)J
 
     move-result-wide v2
 
-    #calls: Lcom/adobe/air/AndroidStageText;->handleKeyEvent(JII)Z
+    # invokes: Lcom/adobe/air/AndroidStageText;->handleKeyEvent(JII)Z
     invoke-static {v1, v2, v3, v4, v6}, Lcom/adobe/air/AndroidStageText;->access$1500(Lcom/adobe/air/AndroidStageText;JII)Z
 
     goto :goto_1
@@ -98,7 +94,7 @@
     :pswitch_2
     iget-object v0, p0, Lcom/adobe/air/AndroidStageText$1;->this$0:Lcom/adobe/air/AndroidStageText;
 
-    #setter for: Lcom/adobe/air/AndroidStageText;->enterKeyDispatched:Z
+    # setter for: Lcom/adobe/air/AndroidStageText;->enterKeyDispatched:Z
     invoke-static {v0, v4}, Lcom/adobe/air/AndroidStageText;->access$1402(Lcom/adobe/air/AndroidStageText;Z)Z
 
     .line 672
@@ -106,12 +102,12 @@
 
     iget-object v1, p0, Lcom/adobe/air/AndroidStageText$1;->this$0:Lcom/adobe/air/AndroidStageText;
 
-    #getter for: Lcom/adobe/air/AndroidStageText;->mInternalReference:J
+    # getter for: Lcom/adobe/air/AndroidStageText;->mInternalReference:J
     invoke-static {v1}, Lcom/adobe/air/AndroidStageText;->access$100(Lcom/adobe/air/AndroidStageText;)J
 
     move-result-wide v1
 
-    #calls: Lcom/adobe/air/AndroidStageText;->handleKeyEvent(JII)Z
+    # invokes: Lcom/adobe/air/AndroidStageText;->handleKeyEvent(JII)Z
     invoke-static {v0, v1, v2, v3, v5}, Lcom/adobe/air/AndroidStageText;->access$1500(Lcom/adobe/air/AndroidStageText;JII)Z
 
     move-result v0
@@ -121,12 +117,12 @@
 
     iget-object v2, p0, Lcom/adobe/air/AndroidStageText$1;->this$0:Lcom/adobe/air/AndroidStageText;
 
-    #getter for: Lcom/adobe/air/AndroidStageText;->mInternalReference:J
+    # getter for: Lcom/adobe/air/AndroidStageText;->mInternalReference:J
     invoke-static {v2}, Lcom/adobe/air/AndroidStageText;->access$100(Lcom/adobe/air/AndroidStageText;)J
 
     move-result-wide v2
 
-    #calls: Lcom/adobe/air/AndroidStageText;->handleKeyEvent(JII)Z
+    # invokes: Lcom/adobe/air/AndroidStageText;->handleKeyEvent(JII)Z
     invoke-static {v1, v2, v3, v4, v5}, Lcom/adobe/air/AndroidStageText;->access$1500(Lcom/adobe/air/AndroidStageText;JII)Z
 
     goto :goto_1
@@ -135,7 +131,7 @@
     :pswitch_3
     iget-object v0, p0, Lcom/adobe/air/AndroidStageText$1;->this$0:Lcom/adobe/air/AndroidStageText;
 
-    #getter for: Lcom/adobe/air/AndroidStageText;->mAIRSurface:Lcom/adobe/air/AIRWindowSurfaceView;
+    # getter for: Lcom/adobe/air/AndroidStageText;->mAIRSurface:Lcom/adobe/air/AIRWindowSurfaceView;
     invoke-static {v0}, Lcom/adobe/air/AndroidStageText;->access$600(Lcom/adobe/air/AndroidStageText;)Lcom/adobe/air/AIRWindowSurfaceView;
 
     move-result-object v0

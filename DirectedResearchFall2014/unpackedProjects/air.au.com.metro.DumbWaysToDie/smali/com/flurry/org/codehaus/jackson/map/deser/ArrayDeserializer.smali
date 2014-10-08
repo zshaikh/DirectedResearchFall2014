@@ -11,8 +11,7 @@
 # direct methods
 .method public constructor <init>(Lcom/flurry/org/codehaus/jackson/map/type/ArrayType;Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;)V
     .locals 1
-    .parameter "arrayType"
-    .parameter
+    .param p1, "arrayType"    # Lcom/flurry/org/codehaus/jackson/map/type/ArrayType;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -29,7 +28,7 @@
 
     .prologue
     .line 19
-    .local p2, elemDeser:Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer<Ljava/lang/Object;>;"
+    .local p2, "elemDeser":Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer<Ljava/lang/Object;>;"
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0}, Lcom/flurry/org/codehaus/jackson/map/deser/ArrayDeserializer;-><init>(Lcom/flurry/org/codehaus/jackson/map/type/ArrayType;Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;Lcom/flurry/org/codehaus/jackson/map/TypeDeserializer;)V
@@ -40,9 +39,8 @@
 
 .method public constructor <init>(Lcom/flurry/org/codehaus/jackson/map/type/ArrayType;Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;Lcom/flurry/org/codehaus/jackson/map/TypeDeserializer;)V
     .locals 0
-    .parameter "arrayType"
-    .parameter
-    .parameter "elemTypeDeser"
+    .param p1, "arrayType"    # Lcom/flurry/org/codehaus/jackson/map/type/ArrayType;
+    .param p3, "elemTypeDeser"    # Lcom/flurry/org/codehaus/jackson/map/TypeDeserializer;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -58,7 +56,7 @@
 
     .prologue
     .line 25
-    .local p2, elemDeser:Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer<Ljava/lang/Object;>;"
+    .local p2, "elemDeser":Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer<Ljava/lang/Object;>;"
     invoke-direct {p0, p1, p2, p3}, Lcom/flurry/org/codehaus/jackson/map/deser/std/ObjectArrayDeserializer;-><init>(Lcom/flurry/org/codehaus/jackson/map/type/ArrayType;Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;Lcom/flurry/org/codehaus/jackson/map/TypeDeserializer;)V
 
     .line 26

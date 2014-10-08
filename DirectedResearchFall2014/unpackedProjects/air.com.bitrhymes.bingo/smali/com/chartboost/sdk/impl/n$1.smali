@@ -28,9 +28,6 @@
 # direct methods
 .method constructor <init>(Lcom/chartboost/sdk/impl/n;Ljava/lang/String;Landroid/app/Activity;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 1
@@ -48,7 +45,6 @@
 
 .method static synthetic a(Lcom/chartboost/sdk/impl/n$1;)Lcom/chartboost/sdk/impl/n;
     .locals 1
-    .parameter
 
     .prologue
     .line 53
@@ -61,7 +57,6 @@
 # virtual methods
 .method public a(Ljava/lang/String;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 83
@@ -137,8 +132,8 @@
 
     check-cast v0, Ljava/net/HttpURLConnection;
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 64
     const/4 v2, 0x0
@@ -165,8 +160,8 @@
 
     invoke-virtual {v0, v2}, Ljava/net/HttpURLConnection;->getHeaderField(Ljava/lang/String;)Ljava/lang/String;
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     move-result-object v2
 

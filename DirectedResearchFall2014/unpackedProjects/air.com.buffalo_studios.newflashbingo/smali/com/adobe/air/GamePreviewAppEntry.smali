@@ -75,8 +75,6 @@
 
 .method private BroadcastIntent(Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     .line 70
@@ -91,7 +89,7 @@
 
     move-result-object v0
 
-    const/high16 v1, 0x1000
+    const/high16 v1, 0x10000000
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
@@ -121,8 +119,6 @@
 
 .method private varargs InvokeMethod(Ljava/lang/reflect/Method;[Ljava/lang/Object;)Ljava/lang/Object;
     .locals 3
-    .parameter
-    .parameter
 
     .prologue
     const/4 v2, 0x0
@@ -323,7 +319,6 @@
 
 .method static synthetic access$000(Lcom/adobe/air/GamePreviewAppEntry;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 54
@@ -334,7 +329,6 @@
 
 .method static synthetic access$100(Lcom/adobe/air/GamePreviewAppEntry;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 54
@@ -345,8 +339,6 @@
 
 .method static synthetic access$200(Lcom/adobe/air/GamePreviewAppEntry;Z)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 54
@@ -367,7 +359,6 @@
 
 .method static synthetic access$400(Lcom/adobe/air/GamePreviewAppEntry;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 54
@@ -388,7 +379,6 @@
 
 .method private createActivityWrapper(Z)V
     .locals 5
-    .parameter
 
     .prologue
     const-string v0, "CreateAndroidActivityWrapper"
@@ -538,7 +528,7 @@
     .locals 4
 
     .prologue
-    const/high16 v3, 0x4
+    const/high16 v3, 0x40000
 
     .line 138
     invoke-virtual {p0}, Lcom/adobe/air/GamePreviewAppEntry;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -855,10 +845,6 @@
 
 .method private showDialog(ILjava/lang/String;II)V
     .locals 2
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 157
@@ -1050,7 +1036,6 @@
 # virtual methods
 .method public dispatchGenericMotionEvent(Landroid/view/MotionEvent;)Z
     .locals 8
-    .parameter
 
     .prologue
     const/4 v7, 0x1
@@ -1137,7 +1122,6 @@
 
 .method public dispatchKeyEvent(Landroid/view/KeyEvent;)Z
     .locals 8
-    .parameter
 
     .prologue
     const/4 v7, 0x1
@@ -1224,8 +1208,6 @@
 
 .method public finishActivityFromChild(Landroid/app/Activity;I)V
     .locals 5
-    .parameter
-    .parameter
 
     .prologue
     .line 623
@@ -1291,7 +1273,6 @@
 
 .method public finishFromChild(Landroid/app/Activity;)V
     .locals 5
-    .parameter
 
     .prologue
     .line 639
@@ -1343,9 +1324,6 @@
 
 .method protected onActivityResult(IILandroid/content/Intent;)V
     .locals 5
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 524
@@ -1428,9 +1406,6 @@
 
 .method protected onApplyThemeResource(Landroid/content/res/Resources$Theme;IZ)V
     .locals 5
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 1173
@@ -1592,8 +1567,6 @@
 
 .method protected onChildTitleChanged(Landroid/app/Activity;Ljava/lang/CharSequence;)V
     .locals 5
-    .parameter
-    .parameter
 
     .prologue
     .line 1189
@@ -1655,7 +1628,6 @@
 
 .method public onConfigurationChanged(Landroid/content/res/Configuration;)V
     .locals 5
-    .parameter
 
     .prologue
     .line 452
@@ -1748,7 +1720,6 @@
 
 .method public onContextItemSelected(Landroid/view/MenuItem;)Z
     .locals 6
-    .parameter
 
     .prologue
     .line 703
@@ -1824,7 +1795,6 @@
 
 .method public onContextMenuClosed(Landroid/view/Menu;)V
     .locals 5
-    .parameter
 
     .prologue
     .line 720
@@ -1876,7 +1846,6 @@
 
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 212
@@ -1957,9 +1926,6 @@
 
 .method public onCreateContextMenu(Landroid/view/ContextMenu;Landroid/view/View;Landroid/view/ContextMenu$ContextMenuInfo;)V
     .locals 5
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 736
@@ -2090,7 +2056,6 @@
 
 .method protected onCreateDialog(I)Landroid/app/Dialog;
     .locals 6
-    .parameter
 
     .prologue
     .line 1205
@@ -2164,8 +2129,6 @@
 
 .method protected onCreateDialog(ILandroid/os/Bundle;)Landroid/app/Dialog;
     .locals 6
-    .parameter
-    .parameter
 
     .prologue
     .line 1222
@@ -2249,7 +2212,6 @@
 
 .method public onCreateOptionsMenu(Landroid/view/Menu;)Z
     .locals 6
-    .parameter
 
     .prologue
     .line 769
@@ -2325,8 +2287,6 @@
 
 .method public onCreatePanelMenu(ILandroid/view/Menu;)Z
     .locals 6
-    .parameter
-    .parameter
 
     .prologue
     .line 786
@@ -2416,7 +2376,6 @@
 
 .method public onCreatePanelView(I)Landroid/view/View;
     .locals 6
-    .parameter
 
     .prologue
     .line 803
@@ -2490,8 +2449,6 @@
 
 .method public onCreateThumbnail(Landroid/graphics/Bitmap;Landroid/graphics/Canvas;)Z
     .locals 6
-    .parameter
-    .parameter
 
     .prologue
     .line 820
@@ -2577,9 +2534,6 @@
 
 .method public onCreateView(Ljava/lang/String;Landroid/content/Context;Landroid/util/AttributeSet;)Landroid/view/View;
     .locals 6
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 837
@@ -2751,8 +2705,6 @@
 
 .method public onKeyDown(ILandroid/view/KeyEvent;)Z
     .locals 6
-    .parameter
-    .parameter
 
     .prologue
     .line 870
@@ -2842,8 +2794,6 @@
 
 .method public onKeyLongPress(ILandroid/view/KeyEvent;)Z
     .locals 6
-    .parameter
-    .parameter
 
     .prologue
     .line 887
@@ -2933,9 +2883,6 @@
 
 .method public onKeyMultiple(IILandroid/view/KeyEvent;)Z
     .locals 6
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 904
@@ -3039,8 +2986,6 @@
 
 .method public onKeyUp(ILandroid/view/KeyEvent;)Z
     .locals 6
-    .parameter
-    .parameter
 
     .prologue
     .line 921
@@ -3168,8 +3113,6 @@
 
 .method public onMenuItemSelected(ILandroid/view/MenuItem;)Z
     .locals 6
-    .parameter
-    .parameter
 
     .prologue
     .line 938
@@ -3259,8 +3202,6 @@
 
 .method public onMenuOpened(ILandroid/view/Menu;)Z
     .locals 6
-    .parameter
-    .parameter
 
     .prologue
     .line 955
@@ -3350,7 +3291,6 @@
 
 .method protected onNewIntent(Landroid/content/Intent;)V
     .locals 5
-    .parameter
 
     .prologue
     .line 539
@@ -3403,7 +3343,6 @@
 
 .method public onOptionsItemSelected(Landroid/view/MenuItem;)Z
     .locals 6
-    .parameter
 
     .prologue
     .line 973
@@ -3479,7 +3418,6 @@
 
 .method public onOptionsMenuClosed(Landroid/view/Menu;)V
     .locals 5
-    .parameter
 
     .prologue
     .line 990
@@ -3531,8 +3469,6 @@
 
 .method public onPanelClosed(ILandroid/view/Menu;)V
     .locals 5
-    .parameter
-    .parameter
 
     .prologue
     .line 1006
@@ -3645,7 +3581,6 @@
 
 .method protected onPostCreate(Landroid/os/Bundle;)V
     .locals 5
-    .parameter
 
     .prologue
     .line 1239
@@ -3738,8 +3673,6 @@
 
 .method protected onPrepareDialog(ILandroid/app/Dialog;)V
     .locals 5
-    .parameter
-    .parameter
 
     .prologue
     .line 1271
@@ -3805,9 +3738,6 @@
 
 .method protected onPrepareDialog(ILandroid/app/Dialog;Landroid/os/Bundle;)V
     .locals 5
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 1287
@@ -3883,7 +3813,6 @@
 
 .method public onPrepareOptionsMenu(Landroid/view/Menu;)Z
     .locals 6
-    .parameter
 
     .prologue
     .line 1022
@@ -3959,9 +3888,6 @@
 
 .method public onPreparePanel(ILandroid/view/View;Landroid/view/Menu;)Z
     .locals 6
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 1039
@@ -4108,7 +4034,6 @@
 
 .method protected onRestoreInstanceState(Landroid/os/Bundle;)V
     .locals 5
-    .parameter
 
     .prologue
     .line 1303
@@ -4262,7 +4187,6 @@
 
 .method protected onSaveInstanceState(Landroid/os/Bundle;)V
     .locals 5
-    .parameter
 
     .prologue
     .line 1319
@@ -4431,8 +4355,6 @@
 
 .method protected onTitleChanged(Ljava/lang/CharSequence;I)V
     .locals 5
-    .parameter
-    .parameter
 
     .prologue
     .line 1335
@@ -4498,7 +4420,6 @@
 
 .method public onTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 6
-    .parameter
 
     .prologue
     .line 1090
@@ -4574,7 +4495,6 @@
 
 .method public onTrackballEvent(Landroid/view/MotionEvent;)Z
     .locals 6
-    .parameter
 
     .prologue
     .line 1107
@@ -4732,7 +4652,6 @@
 
 .method public onWindowAttributesChanged(Landroid/view/WindowManager$LayoutParams;)V
     .locals 5
-    .parameter
 
     .prologue
     .line 1141
@@ -4784,7 +4703,6 @@
 
 .method public onWindowFocusChanged(Z)V
     .locals 5
-    .parameter
 
     .prologue
     .line 1157

@@ -21,7 +21,6 @@
 # direct methods
 .method private constructor <init>(Lv2/com/playhaven/requests/base/PHAsyncRequest$PHHttpConn;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 113
@@ -34,8 +33,8 @@
 
 .method synthetic constructor <init>(Lv2/com/playhaven/requests/base/PHAsyncRequest$PHHttpConn;Lv2/com/playhaven/requests/base/PHAsyncRequest$1;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
+    .param p1, "x0"    # Lv2/com/playhaven/requests/base/PHAsyncRequest$PHHttpConn;
+    .param p2, "x1"    # Lv2/com/playhaven/requests/base/PHAsyncRequest$1;
 
     .prologue
     .line 113
@@ -48,8 +47,8 @@
 # virtual methods
 .method public isRedirectRequested(Lorg/apache/http/HttpResponse;Lorg/apache/http/protocol/HttpContext;)Z
     .locals 1
-    .parameter "response"
-    .parameter "context"
+    .param p1, "response"    # Lorg/apache/http/HttpResponse;
+    .param p2, "context"    # Lorg/apache/http/protocol/HttpContext;
 
     .prologue
     .line 116

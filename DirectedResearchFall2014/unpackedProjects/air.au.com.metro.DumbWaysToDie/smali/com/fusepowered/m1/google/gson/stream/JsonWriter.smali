@@ -48,7 +48,7 @@
     .line 146
     const/4 v0, 0x0
 
-    .local v0, i:I
+    .local v0, "i":I
     :goto_0
     const/16 v1, 0x1f
 
@@ -153,7 +153,7 @@
 
     move-result-object v0
 
-    .end local v0           #i:I
+    .end local v0    # "i":I
     check-cast v0, [Ljava/lang/String;
 
     sput-object v0, Lcom/fusepowered/m1/google/gson/stream/JsonWriter;->HTML_SAFE_REPLACEMENT_CHARS:[Ljava/lang/String;
@@ -209,7 +209,7 @@
 
 .method public constructor <init>(Ljava/io/Writer;)V
     .locals 2
-    .parameter "out"
+    .param p1, "out"    # Ljava/io/Writer;
 
     .prologue
     .line 197
@@ -277,7 +277,7 @@
     move-result v0
 
     .line 581
-    .local v0, context:I
+    .local v0, "context":I
     const/4 v1, 0x5
 
     if-ne v0, v1, :cond_1
@@ -319,7 +319,7 @@
 
 .method private beforeValue(Z)V
     .locals 2
-    .parameter "root"
+    .param p1, "root"    # Z
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -443,9 +443,9 @@
 
 .method private close(IILjava/lang/String;)Lcom/fusepowered/m1/google/gson/stream/JsonWriter;
     .locals 4
-    .parameter "empty"
-    .parameter "nonempty"
-    .parameter "closeBracket"
+    .param p1, "empty"    # I
+    .param p2, "nonempty"    # I
+    .param p3, "closeBracket"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -459,7 +459,7 @@
     move-result v0
 
     .line 338
-    .local v0, context:I
+    .local v0, "context":I
     if-eq v0, p2, :cond_0
 
     if-eq v0, p1, :cond_0
@@ -561,10 +561,10 @@
     .line 570
     const/4 v0, 0x1
 
-    .local v0, i:I
+    .local v0, "i":I
     iget v1, p0, Lcom/fusepowered/m1/google/gson/stream/JsonWriter;->stackSize:I
 
-    .local v1, size:I
+    .local v1, "size":I
     :goto_0
     if-ge v0, v1, :cond_0
 
@@ -583,8 +583,8 @@
 
 .method private open(ILjava/lang/String;)Lcom/fusepowered/m1/google/gson/stream/JsonWriter;
     .locals 1
-    .parameter "empty"
-    .parameter "openBracket"
+    .param p1, "empty"    # I
+    .param p2, "openBracket"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -644,7 +644,7 @@
 
 .method private push(I)V
     .locals 4
-    .parameter "newTop"
+    .param p1, "newTop"    # I
 
     .prologue
     const/4 v3, 0x0
@@ -666,7 +666,7 @@
     new-array v0, v1, [I
 
     .line 356
-    .local v0, newStack:[I
+    .local v0, "newStack":[I
     iget-object v1, p0, Lcom/fusepowered/m1/google/gson/stream/JsonWriter;->stack:[I
 
     iget v2, p0, Lcom/fusepowered/m1/google/gson/stream/JsonWriter;->stackSize:I
@@ -677,7 +677,7 @@
     iput-object v0, p0, Lcom/fusepowered/m1/google/gson/stream/JsonWriter;->stack:[I
 
     .line 359
-    .end local v0           #newStack:[I
+    .end local v0    # "newStack":[I
     :cond_0
     iget-object v1, p0, Lcom/fusepowered/m1/google/gson/stream/JsonWriter;->stack:[I
 
@@ -695,7 +695,7 @@
 
 .method private replaceTop(I)V
     .locals 3
-    .parameter "topOfStack"
+    .param p1, "topOfStack"    # I
 
     .prologue
     .line 376
@@ -715,7 +715,7 @@
 
 .method private string(Ljava/lang/String;)V
     .locals 9
-    .parameter "value"
+    .param p1, "value"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -735,7 +735,7 @@
     move-object v5, v6
 
     .line 534
-    .local v5, replacements:[Ljava/lang/String;
+    .local v5, "replacements":[Ljava/lang/String;
     :goto_0
     iget-object v6, p0, Lcom/fusepowered/m1/google/gson/stream/JsonWriter;->out:Ljava/io/Writer;
 
@@ -747,16 +747,16 @@
     const/4 v2, 0x0
 
     .line 536
-    .local v2, last:I
+    .local v2, "last":I
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v3
 
     .line 537
-    .local v3, length:I
+    .local v3, "length":I
     const/4 v1, 0x0
 
-    .local v1, i:I
+    .local v1, "i":I
     :goto_1
     if-ge v1, v3, :cond_6
 
@@ -766,7 +766,7 @@
     move-result v0
 
     .line 540
-    .local v0, c:C
+    .local v0, "c":C
     const/16 v6, 0x80
 
     if-ge v0, v6, :cond_2
@@ -775,11 +775,11 @@
     aget-object v4, v5, v0
 
     .line 542
-    .local v4, replacement:Ljava/lang/String;
+    .local v4, "replacement":Ljava/lang/String;
     if-nez v4, :cond_3
 
     .line 537
-    .end local v4           #replacement:Ljava/lang/String;
+    .end local v4    # "replacement":Ljava/lang/String;
     :cond_0
     :goto_2
     add-int/lit8 v1, v1, 0x1
@@ -787,11 +787,11 @@
     goto :goto_1
 
     .line 533
-    .end local v0           #c:C
-    .end local v1           #i:I
-    .end local v2           #last:I
-    .end local v3           #length:I
-    .end local v5           #replacements:[Ljava/lang/String;
+    .end local v0    # "c":C
+    .end local v1    # "i":I
+    .end local v2    # "last":I
+    .end local v3    # "length":I
+    .end local v5    # "replacements":[Ljava/lang/String;
     :cond_1
     sget-object v6, Lcom/fusepowered/m1/google/gson/stream/JsonWriter;->REPLACEMENT_CHARS:[Ljava/lang/String;
 
@@ -800,11 +800,11 @@
     goto :goto_0
 
     .line 545
-    .restart local v0       #c:C
-    .restart local v1       #i:I
-    .restart local v2       #last:I
-    .restart local v3       #length:I
-    .restart local v5       #replacements:[Ljava/lang/String;
+    .restart local v0    # "c":C
+    .restart local v1    # "i":I
+    .restart local v2    # "last":I
+    .restart local v3    # "length":I
+    .restart local v5    # "replacements":[Ljava/lang/String;
     :cond_2
     const/16 v6, 0x2028
 
@@ -814,7 +814,7 @@
     const-string v4, "\\u2028"
 
     .line 552
-    .restart local v4       #replacement:Ljava/lang/String;
+    .restart local v4    # "replacement":Ljava/lang/String;
     :cond_3
     :goto_3
     if-ge v2, v1, :cond_4
@@ -838,7 +838,7 @@
     goto :goto_2
 
     .line 547
-    .end local v4           #replacement:Ljava/lang/String;
+    .end local v4    # "replacement":Ljava/lang/String;
     :cond_5
     const/16 v6, 0x2029
 
@@ -847,12 +847,12 @@
     .line 548
     const-string v4, "\\u2029"
 
-    .restart local v4       #replacement:Ljava/lang/String;
+    .restart local v4    # "replacement":Ljava/lang/String;
     goto :goto_3
 
     .line 558
-    .end local v0           #c:C
-    .end local v4           #replacement:Ljava/lang/String;
+    .end local v0    # "c":C
+    .end local v4    # "replacement":Ljava/lang/String;
     :cond_6
     if-ge v2, v3, :cond_7
 
@@ -977,7 +977,7 @@
     iget v0, p0, Lcom/fusepowered/m1/google/gson/stream/JsonWriter;->stackSize:I
 
     .line 526
-    .local v0, size:I
+    .local v0, "size":I
     if-gt v0, v2, :cond_0
 
     if-ne v0, v2, :cond_1
@@ -1123,7 +1123,7 @@
 
 .method public name(Ljava/lang/String;)Lcom/fusepowered/m1/google/gson/stream/JsonWriter;
     .locals 2
-    .parameter "name"
+    .param p1, "name"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -1229,7 +1229,7 @@
 
 .method public final setHtmlSafe(Z)V
     .locals 0
-    .parameter "htmlSafe"
+    .param p1, "htmlSafe"    # Z
 
     .prologue
     .line 253
@@ -1241,7 +1241,7 @@
 
 .method public final setIndent(Ljava/lang/String;)V
     .locals 1
-    .parameter "indent"
+    .param p1, "indent"    # Ljava/lang/String;
 
     .prologue
     .line 213
@@ -1279,7 +1279,7 @@
 
 .method public final setLenient(Z)V
     .locals 0
-    .parameter "lenient"
+    .param p1, "lenient"    # Z
 
     .prologue
     .line 235
@@ -1291,7 +1291,7 @@
 
 .method public final setSerializeNulls(Z)V
     .locals 0
-    .parameter "serializeNulls"
+    .param p1, "serializeNulls"    # Z
 
     .prologue
     .line 269
@@ -1303,7 +1303,7 @@
 
 .method public value(D)Lcom/fusepowered/m1/google/gson/stream/JsonWriter;
     .locals 3
-    .parameter "value"
+    .param p1, "value"    # D
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -1374,7 +1374,7 @@
 
 .method public value(J)Lcom/fusepowered/m1/google/gson/stream/JsonWriter;
     .locals 2
-    .parameter "value"
+    .param p1, "value"    # J
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -1405,7 +1405,7 @@
 
 .method public value(Ljava/lang/Number;)Lcom/fusepowered/m1/google/gson/stream/JsonWriter;
     .locals 4
-    .parameter "value"
+    .param p1, "value"    # Ljava/lang/Number;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -1435,7 +1435,7 @@
     move-result-object v0
 
     .line 497
-    .local v0, string:Ljava/lang/String;
+    .local v0, "string":Ljava/lang/String;
     iget-boolean v1, p0, Lcom/fusepowered/m1/google/gson/stream/JsonWriter;->lenient:Z
 
     if-nez v1, :cond_2
@@ -1509,7 +1509,7 @@
 
 .method public value(Ljava/lang/String;)Lcom/fusepowered/m1/google/gson/stream/JsonWriter;
     .locals 1
-    .parameter "value"
+    .param p1, "value"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -1549,7 +1549,7 @@
 
 .method public value(Z)Lcom/fusepowered/m1/google/gson/stream/JsonWriter;
     .locals 2
-    .parameter "value"
+    .param p1, "value"    # Z
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;

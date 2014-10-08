@@ -33,7 +33,6 @@
 # virtual methods
 .method public final a(Lcom/vungle/sdk/av;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 53
@@ -68,7 +67,6 @@
 
 .method public final synthetic a(Ljava/lang/Object;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 29
@@ -83,8 +81,6 @@
 
 .method public final a(Ljava/util/Set;Ljava/util/Set;)V
     .locals 1
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",

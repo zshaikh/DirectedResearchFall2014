@@ -32,6 +32,7 @@
 
     .prologue
     .line 31
+    # getter for: Lcom/flurry/org/apache/avro/file/NullCodec;->INSTANCE:Lcom/flurry/org/apache/avro/file/NullCodec;
     invoke-static {}, Lcom/flurry/org/apache/avro/file/NullCodec;->access$000()Lcom/flurry/org/apache/avro/file/NullCodec;
 
     move-result-object v0

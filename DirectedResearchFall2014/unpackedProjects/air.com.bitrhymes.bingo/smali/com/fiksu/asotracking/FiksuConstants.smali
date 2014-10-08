@@ -24,7 +24,7 @@
 
 .field public static final SECOND_IN_MILLISECONDS:J = 0x3e8L
 
-.field protected static final SHARED_PREFERENCES_LOCK:Ljava/lang/Object; = null
+.field protected static final SHARED_PREFERENCES_LOCK:Ljava/lang/Object;
 
 .field public static final WEEK_IN_MILLISECONDS:J = 0x240c8400L
 

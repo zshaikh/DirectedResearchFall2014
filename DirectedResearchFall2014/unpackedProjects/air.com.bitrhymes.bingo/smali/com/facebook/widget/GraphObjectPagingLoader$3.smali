@@ -26,8 +26,6 @@
 # direct methods
 .method constructor <init>(Lcom/facebook/widget/GraphObjectPagingLoader;Lcom/facebook/RequestBatch;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 1

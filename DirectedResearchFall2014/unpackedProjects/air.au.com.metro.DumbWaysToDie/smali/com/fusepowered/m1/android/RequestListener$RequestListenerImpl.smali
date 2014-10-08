@@ -32,7 +32,7 @@
 # virtual methods
 .method public MMAdOverlayClosed(Lcom/fusepowered/m1/android/MMAd;)V
     .locals 2
-    .parameter "mmAd"
+    .param p1, "mmAd"    # Lcom/fusepowered/m1/android/MMAd;
 
     .prologue
     .line 76
@@ -48,7 +48,7 @@
 
 .method public MMAdOverlayLaunched(Lcom/fusepowered/m1/android/MMAd;)V
     .locals 2
-    .parameter "mmAd"
+    .param p1, "mmAd"    # Lcom/fusepowered/m1/android/MMAd;
 
     .prologue
     .line 70
@@ -64,7 +64,7 @@
 
 .method public MMAdRequestIsCaching(Lcom/fusepowered/m1/android/MMAd;)V
     .locals 2
-    .parameter "mmAd"
+    .param p1, "mmAd"    # Lcom/fusepowered/m1/android/MMAd;
 
     .prologue
     .line 82
@@ -80,7 +80,7 @@
 
 .method public onSingleTap(Lcom/fusepowered/m1/android/MMAd;)V
     .locals 2
-    .parameter "mmAd"
+    .param p1, "mmAd"    # Lcom/fusepowered/m1/android/MMAd;
 
     .prologue
     .line 100
@@ -96,7 +96,7 @@
 
 .method public requestCompleted(Lcom/fusepowered/m1/android/MMAd;)V
     .locals 2
-    .parameter "mmAd"
+    .param p1, "mmAd"    # Lcom/fusepowered/m1/android/MMAd;
 
     .prologue
     .line 88
@@ -112,8 +112,8 @@
 
 .method public requestFailed(Lcom/fusepowered/m1/android/MMAd;Lcom/fusepowered/m1/android/MMException;)V
     .locals 5
-    .parameter "mmAd"
-    .parameter "error"
+    .param p1, "mmAd"    # Lcom/fusepowered/m1/android/MMAd;
+    .param p2, "error"    # Lcom/fusepowered/m1/android/MMException;
 
     .prologue
     .line 94

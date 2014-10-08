@@ -108,8 +108,6 @@
 
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 75
@@ -120,7 +118,7 @@
 
 .method public static getValueOf(Ljava/lang/String;)Lcom/fusepowered/a1/webapp/ApplifierImpactWebData$ApplifierImpactRequestType;
     .locals 2
-    .parameter "value"
+    .param p0, "value"    # Ljava/lang/String;
 
     .prologue
     .line 84
@@ -202,7 +200,6 @@
 
 .method public static valueOf(Ljava/lang/String;)Lcom/fusepowered/a1/webapp/ApplifierImpactWebData$ApplifierImpactRequestType;
     .locals 1
-    .parameter
 
     .prologue
     .line 1
@@ -260,6 +257,6 @@
     move-result-object v0
 
     .line 80
-    .local v0, output:Ljava/lang/String;
+    .local v0, "output":Ljava/lang/String;
     return-object v0
 .end method

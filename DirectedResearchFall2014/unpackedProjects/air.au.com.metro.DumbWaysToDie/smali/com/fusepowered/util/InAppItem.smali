@@ -44,15 +44,13 @@
 # direct methods
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;FLjava/lang/String;Ljava/lang/String;ZLjava/util/ArrayList;ZLjava/util/ArrayList;)V
     .locals 0
-    .parameter "id"
-    .parameter "name"
-    .parameter "price"
-    .parameter "publishState"
-    .parameter "purchaseState"
-    .parameter "autotranslate"
-    .parameter
-    .parameter "autofill"
-    .parameter
+    .param p1, "id"    # Ljava/lang/String;
+    .param p2, "name"    # Ljava/lang/String;
+    .param p3, "price"    # F
+    .param p4, "publishState"    # Ljava/lang/String;
+    .param p5, "purchaseState"    # Ljava/lang/String;
+    .param p6, "autotranslate"    # Z
+    .param p8, "autofill"    # Z
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -75,8 +73,8 @@
 
     .prologue
     .line 21
-    .local p7, localeList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/fusepowered/util/Locale;>;"
-    .local p9, inappCountryPrices:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/fusepowered/util/InappCountryPrice;>;"
+    .local p7, "localeList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/fusepowered/util/Locale;>;"
+    .local p9, "inappCountryPrices":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/fusepowered/util/InappCountryPrice;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 22
@@ -222,7 +220,7 @@
 
 .method public setAutofill(Z)V
     .locals 0
-    .parameter "autofill"
+    .param p1, "autofill"    # Z
 
     .prologue
     .line 79
@@ -234,7 +232,7 @@
 
 .method public setAutotranslate(Z)V
     .locals 0
-    .parameter "autotranslate"
+    .param p1, "autotranslate"    # Z
 
     .prologue
     .line 67
@@ -246,7 +244,7 @@
 
 .method public setId(Ljava/lang/String;)V
     .locals 0
-    .parameter "id"
+    .param p1, "id"    # Ljava/lang/String;
 
     .prologue
     .line 37
@@ -258,7 +256,6 @@
 
 .method public setInappCountryPrices(Ljava/util/ArrayList;)V
     .locals 0
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -271,7 +268,7 @@
 
     .prologue
     .line 86
-    .local p1, inappCountryPrices:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/fusepowered/util/InappCountryPrice;>;"
+    .local p1, "inappCountryPrices":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/fusepowered/util/InappCountryPrice;>;"
     iput-object p1, p0, Lcom/fusepowered/util/InAppItem;->inappCountryPrices:Ljava/util/ArrayList;
 
     .line 87
@@ -280,7 +277,6 @@
 
 .method public setLocaleList(Ljava/util/ArrayList;)V
     .locals 0
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -293,7 +289,7 @@
 
     .prologue
     .line 73
-    .local p1, localeList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/fusepowered/util/Locale;>;"
+    .local p1, "localeList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/fusepowered/util/Locale;>;"
     iput-object p1, p0, Lcom/fusepowered/util/InAppItem;->localeList:Ljava/util/ArrayList;
 
     .line 74
@@ -302,7 +298,7 @@
 
 .method public setName(Ljava/lang/String;)V
     .locals 0
-    .parameter "name"
+    .param p1, "name"    # Ljava/lang/String;
 
     .prologue
     .line 43
@@ -314,7 +310,7 @@
 
 .method public setPrice(F)V
     .locals 0
-    .parameter "price"
+    .param p1, "price"    # F
 
     .prologue
     .line 49
@@ -326,7 +322,7 @@
 
 .method public setPublishState(Ljava/lang/String;)V
     .locals 0
-    .parameter "publishState"
+    .param p1, "publishState"    # Ljava/lang/String;
 
     .prologue
     .line 55
@@ -338,7 +334,7 @@
 
 .method public setPurchaseState(Ljava/lang/String;)V
     .locals 0
-    .parameter "purchaseState"
+    .param p1, "purchaseState"    # Ljava/lang/String;
 
     .prologue
     .line 61
@@ -468,7 +464,7 @@
     move-result-object v0
 
     .line 101
-    .local v0, buf:Ljava/lang/StringBuilder;
+    .local v0, "buf":Ljava/lang/StringBuilder;
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1

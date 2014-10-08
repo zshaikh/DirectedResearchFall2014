@@ -41,14 +41,14 @@
 # direct methods
 .method private constructor <init>(Lcom/facebook/internal/ImageRequest$Builder;)V
     .locals 1
-    .parameter "builder"
+    .param p1, "builder"    # Lcom/facebook/internal/ImageRequest$Builder;
 
     .prologue
     .line 81
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 82
-    #getter for: Lcom/facebook/internal/ImageRequest$Builder;->context:Landroid/content/Context;
+    # getter for: Lcom/facebook/internal/ImageRequest$Builder;->context:Landroid/content/Context;
     invoke-static {p1}, Lcom/facebook/internal/ImageRequest$Builder;->access$0(Lcom/facebook/internal/ImageRequest$Builder;)Landroid/content/Context;
 
     move-result-object v0
@@ -56,7 +56,7 @@
     iput-object v0, p0, Lcom/facebook/internal/ImageRequest;->context:Landroid/content/Context;
 
     .line 83
-    #getter for: Lcom/facebook/internal/ImageRequest$Builder;->imageUrl:Ljava/net/URI;
+    # getter for: Lcom/facebook/internal/ImageRequest$Builder;->imageUrl:Ljava/net/URI;
     invoke-static {p1}, Lcom/facebook/internal/ImageRequest$Builder;->access$1(Lcom/facebook/internal/ImageRequest$Builder;)Ljava/net/URI;
 
     move-result-object v0
@@ -64,7 +64,7 @@
     iput-object v0, p0, Lcom/facebook/internal/ImageRequest;->imageUri:Ljava/net/URI;
 
     .line 84
-    #getter for: Lcom/facebook/internal/ImageRequest$Builder;->callback:Lcom/facebook/internal/ImageRequest$Callback;
+    # getter for: Lcom/facebook/internal/ImageRequest$Builder;->callback:Lcom/facebook/internal/ImageRequest$Callback;
     invoke-static {p1}, Lcom/facebook/internal/ImageRequest$Builder;->access$2(Lcom/facebook/internal/ImageRequest$Builder;)Lcom/facebook/internal/ImageRequest$Callback;
 
     move-result-object v0
@@ -72,7 +72,7 @@
     iput-object v0, p0, Lcom/facebook/internal/ImageRequest;->callback:Lcom/facebook/internal/ImageRequest$Callback;
 
     .line 85
-    #getter for: Lcom/facebook/internal/ImageRequest$Builder;->allowCachedRedirects:Z
+    # getter for: Lcom/facebook/internal/ImageRequest$Builder;->allowCachedRedirects:Z
     invoke-static {p1}, Lcom/facebook/internal/ImageRequest$Builder;->access$3(Lcom/facebook/internal/ImageRequest$Builder;)Z
 
     move-result v0
@@ -80,7 +80,7 @@
     iput-boolean v0, p0, Lcom/facebook/internal/ImageRequest;->allowCachedRedirects:Z
 
     .line 86
-    #getter for: Lcom/facebook/internal/ImageRequest$Builder;->callerTag:Ljava/lang/Object;
+    # getter for: Lcom/facebook/internal/ImageRequest$Builder;->callerTag:Ljava/lang/Object;
     invoke-static {p1}, Lcom/facebook/internal/ImageRequest$Builder;->access$4(Lcom/facebook/internal/ImageRequest$Builder;)Ljava/lang/Object;
 
     move-result-object v0
@@ -99,7 +99,7 @@
 
     .line 86
     :cond_0
-    #getter for: Lcom/facebook/internal/ImageRequest$Builder;->callerTag:Ljava/lang/Object;
+    # getter for: Lcom/facebook/internal/ImageRequest$Builder;->callerTag:Ljava/lang/Object;
     invoke-static {p1}, Lcom/facebook/internal/ImageRequest$Builder;->access$4(Lcom/facebook/internal/ImageRequest$Builder;)Ljava/lang/Object;
 
     move-result-object v0
@@ -109,8 +109,6 @@
 
 .method synthetic constructor <init>(Lcom/facebook/internal/ImageRequest$Builder;Lcom/facebook/internal/ImageRequest;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 81
@@ -121,9 +119,9 @@
 
 .method public static getProfilePictureUrl(Ljava/lang/String;II)Ljava/net/URI;
     .locals 5
-    .parameter "userId"
-    .parameter "width"
-    .parameter "height"
+    .param p0, "userId"    # Ljava/lang/String;
+    .param p1, "width"    # I
+    .param p2, "height"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/net/URISyntaxException;
@@ -185,7 +183,7 @@
     move-result-object v0
 
     .line 68
-    .local v0, builder:Landroid/net/Uri$Builder;
+    .local v0, "builder":Landroid/net/Uri$Builder;
     if-eqz p2, :cond_1
 
     .line 69

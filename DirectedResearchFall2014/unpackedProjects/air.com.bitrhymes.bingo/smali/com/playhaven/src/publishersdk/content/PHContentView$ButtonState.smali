@@ -86,9 +86,7 @@
 
 .method private constructor <init>(Ljava/lang/String;II)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter "android_state"
+    .param p3, "android_state"    # I
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I)V"
@@ -108,7 +106,7 @@
 
 .method public static valueOf(Ljava/lang/String;)Lcom/playhaven/src/publishersdk/content/PHContentView$ButtonState;
     .locals 1
-    .parameter "name"
+    .param p0, "name"    # Ljava/lang/String;
 
     .prologue
     .line 18
@@ -118,7 +116,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "name":Ljava/lang/String;
     check-cast p0, Lcom/playhaven/src/publishersdk/content/PHContentView$ButtonState;
 
     return-object p0

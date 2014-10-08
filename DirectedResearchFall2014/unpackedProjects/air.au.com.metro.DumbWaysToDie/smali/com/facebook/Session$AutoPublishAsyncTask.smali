@@ -92,7 +92,7 @@
 
     const/4 v2, 0x0
 
-    #setter for: Lcom/facebook/Session;->autoPublishAsyncTask:Lcom/facebook/Session$AutoPublishAsyncTask;
+    # setter for: Lcom/facebook/Session;->autoPublishAsyncTask:Lcom/facebook/Session$AutoPublishAsyncTask;
     invoke-static {v1, v2}, Lcom/facebook/Session;->access$902(Lcom/facebook/Session;Lcom/facebook/Session$AutoPublishAsyncTask;)Lcom/facebook/Session$AutoPublishAsyncTask;
 
     monitor-exit v0

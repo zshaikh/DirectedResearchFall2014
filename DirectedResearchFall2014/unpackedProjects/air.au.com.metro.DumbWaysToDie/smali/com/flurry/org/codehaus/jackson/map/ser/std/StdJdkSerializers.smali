@@ -72,11 +72,11 @@
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     .line 33
-    .local v0, sers:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/Class<*>;Ljava/lang/Object;>;"
+    .local v0, "sers":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/Class<*>;Ljava/lang/Object;>;"
     sget-object v1, Lcom/flurry/org/codehaus/jackson/map/ser/std/ToStringSerializer;->instance:Lcom/flurry/org/codehaus/jackson/map/ser/std/ToStringSerializer;
 
     .line 35
-    .local v1, sls:Lcom/flurry/org/codehaus/jackson/map/ser/std/ToStringSerializer;
+    .local v1, "sls":Lcom/flurry/org/codehaus/jackson/map/ser/std/ToStringSerializer;
     const-class v2, Ljava/net/URL;
 
     invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;

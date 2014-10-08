@@ -3,13 +3,13 @@
 
 
 # static fields
-.field public static final BANNER:Lcom/applovin/sdk/AppLovinAdSize; = null
+.field public static final BANNER:Lcom/applovin/sdk/AppLovinAdSize;
 
-.field public static final INTERSTITIAL:Lcom/applovin/sdk/AppLovinAdSize; = null
+.field public static final INTERSTITIAL:Lcom/applovin/sdk/AppLovinAdSize;
 
-.field public static final LEADER:Lcom/applovin/sdk/AppLovinAdSize; = null
+.field public static final LEADER:Lcom/applovin/sdk/AppLovinAdSize;
 
-.field public static final MREC:Lcom/applovin/sdk/AppLovinAdSize; = null
+.field public static final MREC:Lcom/applovin/sdk/AppLovinAdSize;
 
 .field public static final SPAN:I = -0x1
 

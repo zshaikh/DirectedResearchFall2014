@@ -585,7 +585,7 @@
 
 .method public static convertToNewBillingResult(Lcom/playhaven/src/publishersdk/content/PHPurchase$Resolution;)Lv2/com/playhaven/model/PHPurchase$AndroidBillingResult;
     .locals 3
-    .parameter "resolution"
+    .param p0, "resolution"    # Lcom/playhaven/src/publishersdk/content/PHPurchase$Resolution;
 
     .prologue
     const/4 v2, 0x0
@@ -649,7 +649,7 @@
 
 .method public static convertToNewButtonState(Lcom/playhaven/src/publishersdk/content/PHContentView$ButtonState;)Lv2/com/playhaven/views/interstitial/PHCloseButton$CloseButtonState;
     .locals 3
-    .parameter "state"
+    .param p0, "state"    # Lcom/playhaven/src/publishersdk/content/PHContentView$ButtonState;
 
     .prologue
     const/4 v2, 0x0
@@ -704,7 +704,7 @@
 
 .method public static convertToNewOrigin(Lcom/playhaven/src/publishersdk/purchases/PHPublisherIAPTrackingRequest$PHPurchaseOrigin;)Lv2/com/playhaven/model/PHPurchase$PHMarketplaceOrigin;
     .locals 3
-    .parameter "origin"
+    .param p0, "origin"    # Lcom/playhaven/src/publishersdk/purchases/PHPublisherIAPTrackingRequest$PHPurchaseOrigin;
 
     .prologue
     const/4 v2, 0x0
@@ -782,7 +782,7 @@
 
 .method public static convertToOldBillingResult(Lv2/com/playhaven/model/PHPurchase$AndroidBillingResult;)Lcom/playhaven/src/publishersdk/content/PHPurchase$Resolution;
     .locals 3
-    .parameter "resolution"
+    .param p0, "resolution"    # Lv2/com/playhaven/model/PHPurchase$AndroidBillingResult;
 
     .prologue
     const/4 v2, 0x0
@@ -846,7 +846,7 @@
 
 .method public static convertToOldDismiss(Lv2/com/playhaven/requests/content/PHContentRequest$PHDismissType;)Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest$PHDismissType;
     .locals 3
-    .parameter "type"
+    .param p0, "type"    # Lv2/com/playhaven/requests/content/PHContentRequest$PHDismissType;
 
     .prologue
     const/4 v2, 0x0
@@ -910,7 +910,7 @@
 
 .method public static convertToOldOrigin(Lv2/com/playhaven/model/PHPurchase$PHMarketplaceOrigin;)Lcom/playhaven/src/publishersdk/purchases/PHPublisherIAPTrackingRequest$PHPurchaseOrigin;
     .locals 3
-    .parameter "origin"
+    .param p0, "origin"    # Lv2/com/playhaven/model/PHPurchase$PHMarketplaceOrigin;
 
     .prologue
     const/4 v2, 0x0

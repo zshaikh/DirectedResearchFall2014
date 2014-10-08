@@ -51,12 +51,12 @@
 
 .method public constructor <init>(ILjava/lang/String;Ljava/lang/String;ILjava/lang/String;I)V
     .locals 0
-    .parameter "id"
-    .parameter "alias"
-    .parameter "fuseId"
-    .parameter "level"
-    .parameter "message"
-    .parameter "date"
+    .param p1, "id"    # I
+    .param p2, "alias"    # Ljava/lang/String;
+    .param p3, "fuseId"    # Ljava/lang/String;
+    .param p4, "level"    # I
+    .param p5, "message"    # Ljava/lang/String;
+    .param p6, "date"    # I
 
     .prologue
     .line 22
@@ -148,7 +148,7 @@
 
 .method public setAlias(Ljava/lang/String;)V
     .locals 0
-    .parameter "alias"
+    .param p1, "alias"    # Ljava/lang/String;
 
     .prologue
     .line 58
@@ -160,7 +160,7 @@
 
 .method public setDate(I)V
     .locals 0
-    .parameter "date"
+    .param p1, "date"    # I
 
     .prologue
     .line 47
@@ -172,7 +172,7 @@
 
 .method public setFuseId(Ljava/lang/String;)V
     .locals 0
-    .parameter "fuseId"
+    .param p1, "fuseId"    # Ljava/lang/String;
 
     .prologue
     .line 70
@@ -184,7 +184,7 @@
 
 .method public setId(I)V
     .locals 0
-    .parameter "id"
+    .param p1, "id"    # I
 
     .prologue
     .line 91
@@ -196,7 +196,7 @@
 
 .method public setLevel(I)V
     .locals 0
-    .parameter "level"
+    .param p1, "level"    # I
 
     .prologue
     .line 37
@@ -208,7 +208,7 @@
 
 .method public setMessage(Ljava/lang/String;)V
     .locals 0
-    .parameter "message"
+    .param p1, "message"    # Ljava/lang/String;
 
     .prologue
     .line 82
@@ -232,13 +232,13 @@
     mul-long v3, v5, v7
 
     .line 97
-    .local v3, ms:J
+    .local v3, "ms":J
     new-instance v1, Ljava/util/Date;
 
     invoke-direct {v1, v3, v4}, Ljava/util/Date;-><init>(J)V
 
     .line 98
-    .local v1, d:Ljava/util/Date;
+    .local v1, "d":Ljava/util/Date;
     new-instance v5, Ljava/lang/StringBuilder;
 
     sget-object v6, Lcom/fusepowered/util/ChatMessage;->sdf:Ljava/text/SimpleDateFormat;
@@ -260,7 +260,7 @@
     move-result-object v2
 
     .line 100
-    .local v2, displayDate:Ljava/lang/String;
+    .local v2, "displayDate":Ljava/lang/String;
     new-instance v5, Ljava/lang/StringBuilder;
 
     const-string v6, "ChatMessage [id="
@@ -338,7 +338,7 @@
     move-result-object v0
 
     .line 107
-    .local v0, buf:Ljava/lang/StringBuilder;
+    .local v0, "buf":Ljava/lang/StringBuilder;
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v5

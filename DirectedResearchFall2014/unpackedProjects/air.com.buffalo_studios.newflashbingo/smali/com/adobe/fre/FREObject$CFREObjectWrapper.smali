@@ -21,7 +21,7 @@
 # direct methods
 .method private constructor <init>(J)V
     .locals 0
-    .parameter "obj"
+    .param p1, "obj"    # J
 
     .prologue
     .line 25
@@ -36,7 +36,7 @@
 
 .method static synthetic access$000(Lcom/adobe/fre/FREObject$CFREObjectWrapper;)J
     .locals 2
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/adobe/fre/FREObject$CFREObjectWrapper;
 
     .prologue
     .line 21

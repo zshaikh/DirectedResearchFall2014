@@ -28,11 +28,11 @@
 # direct methods
 .method protected constructor <init>(Lcom/flurry/org/codehaus/jackson/io/IOContext;Ljava/io/InputStream;[BII)V
     .locals 1
-    .parameter "context"
-    .parameter "in"
-    .parameter "buf"
-    .parameter "ptr"
-    .parameter "len"
+    .param p1, "context"    # Lcom/flurry/org/codehaus/jackson/io/IOContext;
+    .param p2, "in"    # Ljava/io/InputStream;
+    .param p3, "buf"    # [B
+    .param p4, "ptr"    # I
+    .param p5, "len"    # I
 
     .prologue
     .line 41
@@ -77,7 +77,7 @@
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/io/BaseReader;->_in:Ljava/io/InputStream;
 
     .line 60
-    .local v0, in:Ljava/io/InputStream;
+    .local v0, "in":Ljava/io/InputStream;
     if-eqz v0, :cond_0
 
     .line 61
@@ -104,7 +104,7 @@
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/io/BaseReader;->_buffer:[B
 
     .line 100
-    .local v0, buf:[B
+    .local v0, "buf":[B
     if-eqz v0, :cond_0
 
     .line 101
@@ -172,9 +172,9 @@
 
 .method protected reportBounds([CII)V
     .locals 3
-    .parameter "cbuf"
-    .parameter "start"
-    .parameter "len"
+    .param p1, "cbuf"    # [C
+    .param p2, "start"    # I
+    .param p3, "len"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;

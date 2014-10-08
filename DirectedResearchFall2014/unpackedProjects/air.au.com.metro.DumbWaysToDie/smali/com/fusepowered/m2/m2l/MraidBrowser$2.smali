@@ -21,7 +21,6 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m2/m2l/M2RBrowser;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1
@@ -37,8 +36,8 @@
 # virtual methods
 .method public onProgressChanged(Landroid/webkit/WebView;I)V
     .locals 2
-    .parameter "view"
-    .parameter "progress"
+    .param p1, "view"    # Landroid/webkit/WebView;
+    .param p2, "progress"    # I
 
     .prologue
     .line 163
@@ -49,7 +48,7 @@
     check-cast v0, Landroid/app/Activity;
 
     .line 164
-    .local v0, a:Landroid/app/Activity;
+    .local v0, "a":Landroid/app/Activity;
     const-string v1, "Loading..."
 
     invoke-virtual {v0, v1}, Landroid/app/Activity;->setTitle(Ljava/lang/CharSequence;)V

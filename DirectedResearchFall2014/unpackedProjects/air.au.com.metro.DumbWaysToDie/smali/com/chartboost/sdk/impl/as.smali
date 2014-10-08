@@ -104,7 +104,6 @@
 
 .method public a(Lcom/chartboost/sdk/impl/as;)I
     .locals 2
-    .parameter
 
     .prologue
     .line 65
@@ -159,13 +158,13 @@
 
 .method public synthetic compareTo(Ljava/lang/Object;)I
     .locals 1
-    .parameter "x0"
+    .param p1, "x0"    # Ljava/lang/Object;
 
     .prologue
     .line 30
     check-cast p1, Lcom/chartboost/sdk/impl/as;
 
-    .end local p1
+    .end local p1    # "x0":Ljava/lang/Object;
     invoke-virtual {p0, p1}, Lcom/chartboost/sdk/impl/as;->a(Lcom/chartboost/sdk/impl/as;)I
 
     move-result v0
@@ -175,7 +174,7 @@
 
 .method public equals(Ljava/lang/Object;)Z
     .locals 4
-    .parameter "obj"
+    .param p1, "obj"    # Ljava/lang/Object;
 
     .prologue
     const/4 v3, 0x1
@@ -188,12 +187,12 @@
     move v0, v3
 
     .line 90
-    .end local p1
+    .end local p1    # "obj":Ljava/lang/Object;
     :goto_0
     return v0
 
     .line 86
-    .restart local p1
+    .restart local p1    # "obj":Ljava/lang/Object;
     :cond_0
     instance-of v0, p1, Lcom/chartboost/sdk/impl/as;
 
@@ -203,7 +202,7 @@
     check-cast p1, Lcom/chartboost/sdk/impl/as;
 
     .line 88
-    .end local p1
+    .end local p1    # "obj":Ljava/lang/Object;
     invoke-virtual {p0}, Lcom/chartboost/sdk/impl/as;->a()I
 
     move-result v0
@@ -233,7 +232,7 @@
 
     goto :goto_0
 
-    .restart local p1
+    .restart local p1    # "obj":Ljava/lang/Object;
     :cond_2
     move v0, v2
 

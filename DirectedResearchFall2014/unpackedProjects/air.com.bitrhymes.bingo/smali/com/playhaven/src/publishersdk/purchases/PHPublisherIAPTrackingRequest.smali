@@ -72,7 +72,7 @@
 
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 2
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     .line 65
@@ -116,8 +116,8 @@
 
 .method public constructor <init>(Landroid/content/Context;Lcom/playhaven/src/common/PHAPIRequest$Delegate;)V
     .locals 2
-    .parameter "context"
-    .parameter "delegate"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "delegate"    # Lcom/playhaven/src/common/PHAPIRequest$Delegate;
 
     .prologue
     .line 70
@@ -158,8 +158,8 @@
 
 .method public constructor <init>(Landroid/content/Context;Lcom/playhaven/src/publishersdk/content/PHPurchase;)V
     .locals 3
-    .parameter "context"
-    .parameter "purchase"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "purchase"    # Lcom/playhaven/src/publishersdk/content/PHPurchase;
 
     .prologue
     .line 83
@@ -177,10 +177,10 @@
 
 .method public constructor <init>(Landroid/content/Context;Ljava/lang/String;ILcom/playhaven/src/publishersdk/content/PHPurchase$Resolution;)V
     .locals 2
-    .parameter "context"
-    .parameter "product_id"
-    .parameter "quantity"
-    .parameter "resolution"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "product_id"    # Ljava/lang/String;
+    .param p3, "quantity"    # I
+    .param p4, "resolution"    # Lcom/playhaven/src/publishersdk/content/PHPurchase$Resolution;
 
     .prologue
     .line 94
@@ -192,7 +192,7 @@
     invoke-direct {v0}, Lv2/com/playhaven/model/PHPurchase;-><init>()V
 
     .line 98
-    .local v0, purchase:Lv2/com/playhaven/model/PHPurchase;
+    .local v0, "purchase":Lv2/com/playhaven/model/PHPurchase;
     iput-object p2, v0, Lv2/com/playhaven/model/PHPurchase;->product:Ljava/lang/String;
 
     .line 99
@@ -223,8 +223,8 @@
 
 .method public constructor <init>(Landroid/content/Context;Lv2/com/playhaven/model/PHError;)V
     .locals 1
-    .parameter "context"
-    .parameter "error"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "error"    # Lv2/com/playhaven/model/PHError;
 
     .prologue
     .line 74
@@ -236,7 +236,7 @@
     invoke-direct {v0}, Lv2/com/playhaven/model/PHPurchase;-><init>()V
 
     .line 77
-    .local v0, purchase:Lv2/com/playhaven/model/PHPurchase;
+    .local v0, "purchase":Lv2/com/playhaven/model/PHPurchase;
     iput-object p2, v0, Lv2/com/playhaven/model/PHPurchase;->error:Lv2/com/playhaven/model/PHError;
 
     .line 79
@@ -250,7 +250,7 @@
 # virtual methods
 .method public getAdditionalParams(Landroid/content/Context;)Ljava/util/Hashtable;
     .locals 3
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -271,7 +271,7 @@
     invoke-direct {v0}, Lv2/com/playhaven/model/PHPurchase;-><init>()V
 
     .line 135
-    .local v0, purchase:Lv2/com/playhaven/model/PHPurchase;
+    .local v0, "purchase":Lv2/com/playhaven/model/PHPurchase;
     iget-object v1, p0, Lcom/playhaven/src/publishersdk/purchases/PHPublisherIAPTrackingRequest;->error:Lv2/com/playhaven/model/PHError;
 
     iput-object v1, v0, Lv2/com/playhaven/model/PHPurchase;->error:Lv2/com/playhaven/model/PHError;
@@ -321,7 +321,7 @@
     invoke-direct {v0}, Lv2/com/playhaven/configuration/PHConfiguration;-><init>()V
 
     .line 123
-    .local v0, config:Lv2/com/playhaven/configuration/PHConfiguration;
+    .local v0, "config":Lv2/com/playhaven/configuration/PHConfiguration;
     iget-object v1, p0, Lcom/playhaven/src/publishersdk/purchases/PHPublisherIAPTrackingRequest;->context:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -353,7 +353,7 @@
 
 .method public setDelegate(Lcom/playhaven/src/common/PHAPIRequest$Delegate;)V
     .locals 1
-    .parameter "delegate"
+    .param p1, "delegate"    # Lcom/playhaven/src/common/PHAPIRequest$Delegate;
 
     .prologue
     .line 113

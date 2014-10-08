@@ -26,8 +26,6 @@
 # direct methods
 .method private constructor <init>(Ljava/io/OutputStream;[B)V
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     const/4 v0, 0x0
@@ -58,7 +56,6 @@
 
 .method public static a(Ljava/io/OutputStream;)Lcom/google/ads/au;
     .locals 1
-    .parameter
 
     .prologue
     .line 69
@@ -73,8 +70,6 @@
 
 .method public static a(Ljava/io/OutputStream;I)Lcom/google/ads/au;
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     .line 78
@@ -153,7 +148,6 @@
 
 .method public a(B)V
     .locals 3
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -196,7 +190,6 @@
 
 .method public a(I)V
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -215,8 +208,6 @@
 
 .method public a(II)V
     .locals 1
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -237,8 +228,6 @@
 
 .method public a(IJ)V
     .locals 1
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -260,8 +249,6 @@
 
 .method public a(ILjava/lang/String;)V
     .locals 1
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -283,7 +270,6 @@
 
 .method public a(J)V
     .locals 0
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -300,7 +286,6 @@
 
 .method public a(Ljava/lang/String;)V
     .locals 2
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -329,7 +314,6 @@
 
 .method public a([B)V
     .locals 2
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -350,9 +334,6 @@
 
 .method public a([BII)V
     .locals 4
-    .parameter
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -466,7 +447,6 @@
 
 .method public b(I)V
     .locals 2
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -504,7 +484,6 @@
 
 .method public b(J)V
     .locals 6
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;

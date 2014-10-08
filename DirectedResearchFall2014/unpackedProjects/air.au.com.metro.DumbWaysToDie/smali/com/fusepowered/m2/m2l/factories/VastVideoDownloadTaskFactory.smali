@@ -34,8 +34,8 @@
 
 .method public static create(Lcom/fusepowered/m2/m2l/VastVideoDownloadTask$OnDownloadCompleteListener;Lcom/fusepowered/m2/m2l/DiskLruCache;)Lcom/fusepowered/m2/m2l/VastVideoDownloadTask;
     .locals 1
-    .parameter "onDownloadCompleteListener"
-    .parameter "diskLruCache"
+    .param p0, "onDownloadCompleteListener"    # Lcom/fusepowered/m2/m2l/VastVideoDownloadTask$OnDownloadCompleteListener;
+    .param p1, "diskLruCache"    # Lcom/fusepowered/m2/m2l/DiskLruCache;
 
     .prologue
     .line 49
@@ -50,7 +50,7 @@
 
 .method public static setInstance(Lcom/fusepowered/m2/m2l/factories/VastVideoDownloadTaskFactory;)V
     .locals 0
-    .parameter "factory"
+    .param p0, "factory"    # Lcom/fusepowered/m2/m2l/factories/VastVideoDownloadTaskFactory;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -66,8 +66,8 @@
 # virtual methods
 .method protected internalCreate(Lcom/fusepowered/m2/m2l/VastVideoDownloadTask$OnDownloadCompleteListener;Lcom/fusepowered/m2/m2l/DiskLruCache;)Lcom/fusepowered/m2/m2l/VastVideoDownloadTask;
     .locals 1
-    .parameter "onDownloadCompleteListener"
-    .parameter "diskLruCache"
+    .param p1, "onDownloadCompleteListener"    # Lcom/fusepowered/m2/m2l/VastVideoDownloadTask$OnDownloadCompleteListener;
+    .param p2, "diskLruCache"    # Lcom/fusepowered/m2/m2l/DiskLruCache;
 
     .prologue
     .line 53

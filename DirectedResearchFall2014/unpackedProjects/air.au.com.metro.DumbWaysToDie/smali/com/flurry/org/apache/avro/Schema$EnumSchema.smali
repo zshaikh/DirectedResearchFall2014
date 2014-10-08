@@ -42,9 +42,8 @@
 # direct methods
 .method public constructor <init>(Lcom/flurry/org/apache/avro/Schema$Name;Ljava/lang/String;Lcom/flurry/org/apache/avro/Schema$LockableArrayList;)V
     .locals 7
-    .parameter "name"
-    .parameter "doc"
-    .parameter
+    .param p1, "name"    # Lcom/flurry/org/apache/avro/Schema$Name;
+    .param p2, "doc"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -59,7 +58,7 @@
 
     .prologue
     .line 714
-    .local p3, symbols:Lcom/flurry/org/apache/avro/Schema$LockableArrayList;,"Lcom/flurry/org/apache/avro/Schema$LockableArrayList<Ljava/lang/String;>;"
+    .local p3, "symbols":Lcom/flurry/org/apache/avro/Schema$LockableArrayList;, "Lcom/flurry/org/apache/avro/Schema$LockableArrayList<Ljava/lang/String;>;"
     sget-object v4, Lcom/flurry/org/apache/avro/Schema$Type;->ENUM:Lcom/flurry/org/apache/avro/Schema$Type;
 
     invoke-direct {p0, v4, p1, p2}, Lcom/flurry/org/apache/avro/Schema$NamedSchema;-><init>(Lcom/flurry/org/apache/avro/Schema$Type;Lcom/flurry/org/apache/avro/Schema$Name;Ljava/lang/String;)V
@@ -82,12 +81,12 @@
     const/4 v0, 0x0
 
     .line 718
-    .local v0, i:I
+    .local v0, "i":I
     invoke-virtual {p3}, Lcom/flurry/org/apache/avro/Schema$LockableArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
 
-    .local v2, i$:Ljava/util/Iterator;
+    .local v2, "i$":Ljava/util/Iterator;
     :goto_0
     invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
@@ -102,18 +101,18 @@
     check-cast v3, Ljava/lang/String;
 
     .line 719
-    .local v3, symbol:Ljava/lang/String;
+    .local v3, "symbol":Ljava/lang/String;
     iget-object v4, p0, Lcom/flurry/org/apache/avro/Schema$EnumSchema;->ordinals:Ljava/util/Map;
 
-    #calls: Lcom/flurry/org/apache/avro/Schema;->validateName(Ljava/lang/String;)Ljava/lang/String;
+    # invokes: Lcom/flurry/org/apache/avro/Schema;->validateName(Ljava/lang/String;)Ljava/lang/String;
     invoke-static {v3}, Lcom/flurry/org/apache/avro/Schema;->access$200(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
     add-int/lit8 v1, v0, 0x1
 
-    .end local v0           #i:I
-    .local v1, i:I
+    .end local v0    # "i":I
+    .local v1, "i":I
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v6
@@ -153,12 +152,12 @@
     move v0, v1
 
     .line 719
-    .end local v1           #i:I
-    .restart local v0       #i:I
+    .end local v1    # "i":I
+    .restart local v0    # "i":I
     goto :goto_0
 
     .line 721
-    .end local v3           #symbol:Ljava/lang/String;
+    .end local v3    # "symbol":Ljava/lang/String;
     :cond_1
     return-void
 .end method
@@ -187,7 +186,7 @@
 
 .method public equals(Ljava/lang/Object;)Z
     .locals 6
-    .parameter "o"
+    .param p1, "o"    # Ljava/lang/Object;
 
     .prologue
     const/4 v5, 0x1
@@ -222,7 +221,7 @@
     move-object v1, v0
 
     .line 730
-    .local v1, that:Lcom/flurry/org/apache/avro/Schema$EnumSchema;
+    .local v1, "that":Lcom/flurry/org/apache/avro/Schema$EnumSchema;
     invoke-virtual {p0, v1}, Lcom/flurry/org/apache/avro/Schema$EnumSchema;->equalCachedHash(Lcom/flurry/org/apache/avro/Schema;)Z
 
     move-result v2
@@ -267,7 +266,7 @@
 
 .method public getEnumOrdinal(Ljava/lang/String;)I
     .locals 1
-    .parameter "symbol"
+    .param p1, "symbol"    # Ljava/lang/String;
 
     .prologue
     .line 725
@@ -277,7 +276,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/flurry/org/apache/avro/Schema$EnumSchema;
     check-cast p0, Ljava/lang/Integer;
 
     invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
@@ -308,7 +307,7 @@
 
 .method public hasEnumSymbol(Ljava/lang/String;)Z
     .locals 1
-    .parameter "symbol"
+    .param p1, "symbol"    # Ljava/lang/String;
 
     .prologue
     .line 724
@@ -323,8 +322,8 @@
 
 .method toJson(Lcom/flurry/org/apache/avro/Schema$Names;Lcom/flurry/org/codehaus/jackson/JsonGenerator;)V
     .locals 4
-    .parameter "names"
-    .parameter "gen"
+    .param p1, "names"    # Lcom/flurry/org/apache/avro/Schema$Names;
+    .param p2, "gen"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -386,7 +385,7 @@
 
     move-result-object v0
 
-    .local v0, i$:Ljava/util/Iterator;
+    .local v0, "i$":Ljava/util/Iterator;
     :goto_1
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
@@ -401,13 +400,13 @@
     check-cast v1, Ljava/lang/String;
 
     .line 745
-    .local v1, symbol:Ljava/lang/String;
+    .local v1, "symbol":Ljava/lang/String;
     invoke-virtual {p2, v1}, Lcom/flurry/org/codehaus/jackson/JsonGenerator;->writeString(Ljava/lang/String;)V
 
     goto :goto_1
 
     .line 746
-    .end local v1           #symbol:Ljava/lang/String;
+    .end local v1    # "symbol":Ljava/lang/String;
     :cond_2
     invoke-virtual {p2}, Lcom/flurry/org/codehaus/jackson/JsonGenerator;->writeEndArray()V
 

@@ -12,10 +12,9 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 2
-    .parameter
 
     .prologue
-    const-wide/high16 v0, 0x3ff0
+    const-wide/high16 v0, 0x3ff0000000000000L
 
     .line 15
     invoke-direct {p0, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
@@ -34,11 +33,11 @@
 # virtual methods
 .method protected final onMeasure(II)V
     .locals 8
-    .parameter "widthMeasureSpec"
-    .parameter "heightMeasureSpec"
+    .param p1, "widthMeasureSpec"    # I
+    .param p2, "heightMeasureSpec"    # I
 
     .prologue
-    const/high16 v6, 0x4000
+    const/high16 v6, 0x40000000
 
     .line 28
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I

@@ -62,7 +62,6 @@
 
 .method static synthetic access$002(Ljava/lang/String;)Ljava/lang/String;
     .locals 0
-    .parameter
 
     .prologue
     .line 35
@@ -73,7 +72,6 @@
 
 .method static synthetic access$100(Lcom/adobe/air/AdobeAIR;)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 35
@@ -84,8 +82,6 @@
 
 .method static synthetic access$102(Lcom/adobe/air/AdobeAIR;Z)Z
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 35
@@ -96,7 +92,6 @@
 
 .method static synthetic access$200(Lcom/adobe/air/AdobeAIR;)Landroid/webkit/WebView;
     .locals 1
-    .parameter
 
     .prologue
     .line 35
@@ -109,7 +104,6 @@
 # virtual methods
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 3
-    .parameter
 
     .prologue
     const/4 v2, 0x1

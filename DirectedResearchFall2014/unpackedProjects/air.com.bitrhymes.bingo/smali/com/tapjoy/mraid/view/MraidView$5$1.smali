@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/tapjoy/mraid/view/MraidView$5;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1118
@@ -39,7 +38,7 @@
 # virtual methods
 .method public onPrepared(Landroid/media/MediaPlayer;)V
     .locals 3
-    .parameter "mp"
+    .param p1, "mp"    # Landroid/media/MediaPlayer;
 
     .prologue
     const-string v2, "MRAIDView"

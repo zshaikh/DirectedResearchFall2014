@@ -37,8 +37,6 @@
 
 .method public static a(II)V
     .locals 3
-    .parameter
-    .parameter
 
     .prologue
     .line 58

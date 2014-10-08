@@ -64,9 +64,9 @@
 
 .method static cacheUriRedirect(Landroid/content/Context;Ljava/net/URI;Ljava/net/URI;)V
     .locals 4
-    .parameter "context"
-    .parameter "fromUri"
-    .parameter "toUri"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "fromUri"    # Ljava/net/URI;
+    .param p2, "toUri"    # Ljava/net/URI;
 
     .prologue
     .line 85
@@ -84,14 +84,14 @@
     const/4 v1, 0x0
 
     .line 91
-    .local v1, redirectStream:Ljava/io/OutputStream;
+    .local v1, "redirectStream":Ljava/io/OutputStream;
     :try_start_0
     invoke-static {p0}, Lcom/facebook/internal/UrlRedirectCache;->getCache(Landroid/content/Context;)Lcom/facebook/internal/FileLruCache;
 
     move-result-object v0
 
     .line 92
-    .local v0, cache:Lcom/facebook/internal/FileLruCache;
+    .local v0, "cache":Lcom/facebook/internal/FileLruCache;
     invoke-virtual {p1}, Ljava/net/URI;->toString()Ljava/lang/String;
 
     move-result-object v2
@@ -113,8 +113,8 @@
 
     invoke-virtual {v1, v2}, Ljava/io/OutputStream;->write([B)V
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 97
     invoke-static {v1}, Lcom/facebook/internal/Utility;->closeQuietly(Ljava/io/Closeable;)V
@@ -122,7 +122,7 @@
     goto :goto_0
 
     .line 94
-    .end local v0           #cache:Lcom/facebook/internal/FileLruCache;
+    .end local v0    # "cache":Lcom/facebook/internal/FileLruCache;
     :catch_0
     move-exception v2
 
@@ -144,7 +144,7 @@
 
 .method static clearCache(Landroid/content/Context;)V
     .locals 6
-    .parameter "context"
+    .param p0, "context"    # Landroid/content/Context;
 
     .prologue
     .line 103
@@ -168,7 +168,7 @@
     move-object v0, v1
 
     .line 105
-    .local v0, e:Ljava/io/IOException;
+    .local v0, "e":Ljava/io/IOException;
     sget-object v1, Lcom/facebook/LoggingBehavior;->CACHE:Lcom/facebook/LoggingBehavior;
 
     const/4 v2, 0x5
@@ -200,7 +200,7 @@
 
 .method static declared-synchronized getCache(Landroid/content/Context;)Lcom/facebook/internal/FileLruCache;
     .locals 5
-    .parameter "context"
+    .param p0, "context"    # Landroid/content/Context;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -256,8 +256,8 @@
 
 .method static getRedirectedUri(Landroid/content/Context;Ljava/net/URI;)Ljava/net/URI;
     .locals 12
-    .parameter "context"
-    .parameter "uri"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "uri"    # Ljava/net/URI;
 
     .prologue
     const/4 v11, 0x0
@@ -278,30 +278,30 @@
     move-result-object v7
 
     .line 49
-    .local v7, uriString:Ljava/lang/String;
+    .local v7, "uriString":Ljava/lang/String;
     const/4 v3, 0x0
 
     .line 52
-    .local v3, reader:Ljava/io/InputStreamReader;
+    .local v3, "reader":Ljava/io/InputStreamReader;
     :try_start_0
     invoke-static {p0}, Lcom/facebook/internal/UrlRedirectCache;->getCache(Landroid/content/Context;)Lcom/facebook/internal/FileLruCache;
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/net/URISyntaxException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result-object v2
 
     .line 53
-    .local v2, cache:Lcom/facebook/internal/FileLruCache;
+    .local v2, "cache":Lcom/facebook/internal/FileLruCache;
     const/4 v5, 0x0
 
-    .local v5, redirectExists:Z
+    .local v5, "redirectExists":Z
     move-object v4, v3
 
     .line 54
-    .end local v3           #reader:Ljava/io/InputStreamReader;
-    .local v4, reader:Ljava/io/InputStreamReader;
+    .end local v3    # "reader":Ljava/io/InputStreamReader;
+    .local v4, "reader":Ljava/io/InputStreamReader;
     :goto_1
     :try_start_1
     sget-object v9, Lcom/facebook/internal/UrlRedirectCache;->REDIRECT_CONTENT_TAG:Ljava/lang/String;
@@ -310,7 +310,7 @@
 
     move-result-object v6
 
-    .local v6, stream:Ljava/io/InputStream;
+    .local v6, "stream":Ljava/io/InputStream;
     if-nez v6, :cond_1
 
     .line 71
@@ -321,9 +321,9 @@
 
     invoke-direct {v9, v7}, Ljava/net/URI;-><init>(Ljava/lang/String;)V
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
     .catch Ljava/net/URISyntaxException; {:try_start_1 .. :try_end_1} :catch_3
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_2
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     .line 78
     invoke-static {v4}, Lcom/facebook/internal/Utility;->closeQuietly(Ljava/io/Closeable;)V
@@ -340,26 +340,26 @@
 
     invoke-direct {v3, v6}, Ljava/io/InputStreamReader;-><init>(Ljava/io/InputStream;)V
     :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
     .catch Ljava/net/URISyntaxException; {:try_start_2 .. :try_end_2} :catch_3
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
     .line 59
-    .end local v4           #reader:Ljava/io/InputStreamReader;
-    .restart local v3       #reader:Ljava/io/InputStreamReader;
+    .end local v4    # "reader":Ljava/io/InputStreamReader;
+    .restart local v3    # "reader":Ljava/io/InputStreamReader;
     const/16 v9, 0x80
 
     :try_start_3
     new-array v0, v9, [C
 
     .line 61
-    .local v0, buffer:[C
+    .local v0, "buffer":[C
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
 
     .line 62
-    .local v8, urlBuilder:Ljava/lang/StringBuilder;
+    .local v8, "urlBuilder":Ljava/lang/StringBuilder;
     :goto_2
     const/4 v9, 0x0
 
@@ -369,7 +369,7 @@
 
     move-result v1
 
-    .local v1, bufferLength:I
+    .local v1, "bufferLength":I
     if-gtz v1, :cond_2
 
     .line 65
@@ -382,31 +382,31 @@
 
     move-object v4, v3
 
-    .end local v3           #reader:Ljava/io/InputStreamReader;
-    .restart local v4       #reader:Ljava/io/InputStreamReader;
+    .end local v3    # "reader":Ljava/io/InputStreamReader;
+    .restart local v4    # "reader":Ljava/io/InputStreamReader;
     goto :goto_1
 
     .line 63
-    .end local v4           #reader:Ljava/io/InputStreamReader;
-    .restart local v3       #reader:Ljava/io/InputStreamReader;
+    .end local v4    # "reader":Ljava/io/InputStreamReader;
+    .restart local v3    # "reader":Ljava/io/InputStreamReader;
     :cond_2
     const/4 v9, 0x0
 
     invoke-virtual {v8, v0, v9, v1}, Ljava/lang/StringBuilder;->append([CII)Ljava/lang/StringBuilder;
     :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
     .catch Ljava/net/URISyntaxException; {:try_start_3 .. :try_end_3} :catch_0
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_1
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
     goto :goto_2
 
     .line 74
-    .end local v0           #buffer:[C
-    .end local v1           #bufferLength:I
-    .end local v2           #cache:Lcom/facebook/internal/FileLruCache;
-    .end local v5           #redirectExists:Z
-    .end local v6           #stream:Ljava/io/InputStream;
-    .end local v8           #urlBuilder:Ljava/lang/StringBuilder;
+    .end local v0    # "buffer":[C
+    .end local v1    # "bufferLength":I
+    .end local v2    # "cache":Lcom/facebook/internal/FileLruCache;
+    .end local v5    # "redirectExists":Z
+    .end local v6    # "stream":Ljava/io/InputStream;
+    .end local v8    # "urlBuilder":Ljava/lang/StringBuilder;
     :catch_0
     move-exception v9
 
@@ -442,54 +442,54 @@
     throw v9
 
     .line 78
-    .end local v3           #reader:Ljava/io/InputStreamReader;
-    .restart local v2       #cache:Lcom/facebook/internal/FileLruCache;
-    .restart local v4       #reader:Ljava/io/InputStreamReader;
-    .restart local v5       #redirectExists:Z
-    .restart local v6       #stream:Ljava/io/InputStream;
+    .end local v3    # "reader":Ljava/io/InputStreamReader;
+    .restart local v2    # "cache":Lcom/facebook/internal/FileLruCache;
+    .restart local v4    # "reader":Ljava/io/InputStreamReader;
+    .restart local v5    # "redirectExists":Z
+    .restart local v6    # "stream":Ljava/io/InputStream;
     :cond_3
     invoke-static {v4}, Lcom/facebook/internal/Utility;->closeQuietly(Ljava/io/Closeable;)V
 
     move-object v3, v4
 
-    .end local v4           #reader:Ljava/io/InputStreamReader;
-    .restart local v3       #reader:Ljava/io/InputStreamReader;
+    .end local v4    # "reader":Ljava/io/InputStreamReader;
+    .restart local v3    # "reader":Ljava/io/InputStreamReader;
     goto :goto_4
 
     .line 77
-    .end local v3           #reader:Ljava/io/InputStreamReader;
-    .end local v6           #stream:Ljava/io/InputStream;
-    .restart local v4       #reader:Ljava/io/InputStreamReader;
+    .end local v3    # "reader":Ljava/io/InputStreamReader;
+    .end local v6    # "stream":Ljava/io/InputStream;
+    .restart local v4    # "reader":Ljava/io/InputStreamReader;
     :catchall_1
     move-exception v9
 
     move-object v3, v4
 
-    .end local v4           #reader:Ljava/io/InputStreamReader;
-    .restart local v3       #reader:Ljava/io/InputStreamReader;
+    .end local v4    # "reader":Ljava/io/InputStreamReader;
+    .restart local v3    # "reader":Ljava/io/InputStreamReader;
     goto :goto_6
 
     .line 76
-    .end local v3           #reader:Ljava/io/InputStreamReader;
-    .restart local v4       #reader:Ljava/io/InputStreamReader;
+    .end local v3    # "reader":Ljava/io/InputStreamReader;
+    .restart local v4    # "reader":Ljava/io/InputStreamReader;
     :catch_2
     move-exception v9
 
     move-object v3, v4
 
-    .end local v4           #reader:Ljava/io/InputStreamReader;
-    .restart local v3       #reader:Ljava/io/InputStreamReader;
+    .end local v4    # "reader":Ljava/io/InputStreamReader;
+    .restart local v3    # "reader":Ljava/io/InputStreamReader;
     goto :goto_5
 
     .line 74
-    .end local v3           #reader:Ljava/io/InputStreamReader;
-    .restart local v4       #reader:Ljava/io/InputStreamReader;
+    .end local v3    # "reader":Ljava/io/InputStreamReader;
+    .restart local v4    # "reader":Ljava/io/InputStreamReader;
     :catch_3
     move-exception v9
 
     move-object v3, v4
 
-    .end local v4           #reader:Ljava/io/InputStreamReader;
-    .restart local v3       #reader:Ljava/io/InputStreamReader;
+    .end local v4    # "reader":Ljava/io/InputStreamReader;
+    .restart local v3    # "reader":Ljava/io/InputStreamReader;
     goto :goto_3
 .end method

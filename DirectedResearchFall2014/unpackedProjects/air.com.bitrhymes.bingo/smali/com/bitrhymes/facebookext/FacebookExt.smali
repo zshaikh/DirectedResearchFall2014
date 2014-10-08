@@ -49,7 +49,7 @@
 
 .method public static log(Ljava/lang/String;)V
     .locals 2
-    .parameter "message"
+    .param p0, "message"    # Ljava/lang/String;
 
     .prologue
     .line 28
@@ -90,7 +90,7 @@
 # virtual methods
 .method public createContext(Ljava/lang/String;)Lcom/adobe/fre/FREContext;
     .locals 1
-    .parameter "extId"
+    .param p1, "extId"    # Ljava/lang/String;
 
     .prologue
     .line 16

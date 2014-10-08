@@ -10,7 +10,7 @@
 # direct methods
 .method public constructor <init>(Ljava/lang/reflect/Field;)V
     .locals 0
-    .parameter "f"
+    .param p1, "f"    # Ljava/lang/reflect/Field;
 
     .prologue
     .line 45
@@ -30,7 +30,7 @@
 # virtual methods
 .method get(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
-    .parameter "instance"
+    .param p1, "instance"    # Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/IllegalAccessException;
@@ -50,7 +50,6 @@
 
 .method public getAnnotation(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T::",
@@ -63,7 +62,7 @@
 
     .prologue
     .line 112
-    .local p1, annotation:Ljava/lang/Class;,"Ljava/lang/Class<TT;>;"
+    .local p1, "annotation":Ljava/lang/Class;, "Ljava/lang/Class<TT;>;"
     iget-object v0, p0, Lcom/fusepowered/m1/google/gson/FieldAttributes;->field:Ljava/lang/reflect/Field;
 
     invoke-virtual {v0, p1}, Ljava/lang/reflect/Field;->getAnnotation(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;
@@ -172,7 +171,7 @@
 
 .method public hasModifier(I)Z
     .locals 1
-    .parameter "modifier"
+    .param p1, "modifier"    # I
 
     .prologue
     .line 136

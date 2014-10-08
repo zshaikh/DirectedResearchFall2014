@@ -41,7 +41,7 @@
 # direct methods
 .method public constructor <init>(Landroid/app/Activity;)V
     .locals 7
-    .parameter "activity"
+    .param p1, "activity"    # Landroid/app/Activity;
 
     .prologue
     .line 40
@@ -85,7 +85,7 @@
     move-result-object v1
 
     .line 46
-    .local v1, packageManager:Landroid/content/pm/PackageManager;
+    .local v1, "packageManager":Landroid/content/pm/PackageManager;
     iget-object v4, p0, Lcom/fiksu/asotracking/RatingPrompter;->mActivity:Landroid/app/Activity;
 
     invoke-virtual {v4}, Landroid/app/Activity;->getPackageName()Ljava/lang/String;
@@ -93,11 +93,11 @@
     move-result-object v2
 
     .line 47
-    .local v2, packageName:Ljava/lang/String;
+    .local v2, "packageName":Ljava/lang/String;
     const/4 v0, 0x0
 
     .line 49
-    .local v0, appName:Ljava/lang/String;
+    .local v0, "appName":Ljava/lang/String;
     const/4 v4, 0x0
 
     :try_start_0
@@ -129,7 +129,7 @@
     move-object v3, v4
 
     .line 51
-    .local v3, pnfe:Landroid/content/pm/PackageManager$NameNotFoundException;
+    .local v3, "pnfe":Landroid/content/pm/PackageManager$NameNotFoundException;
     const-string v4, "FiksuTracking"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -153,7 +153,6 @@
 
 .method static synthetic access$0(Lcom/fiksu/asotracking/RatingPrompter;)Landroid/app/Activity;
     .locals 1
-    .parameter
 
     .prologue
     .line 38
@@ -164,7 +163,6 @@
 
 .method static synthetic access$1(Lcom/fiksu/asotracking/RatingPrompter;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 65
@@ -189,13 +187,13 @@
     check-cast v0, Landroid/net/ConnectivityManager;
 
     .line 102
-    .local v0, connectivityManager:Landroid/net/ConnectivityManager;
+    .local v0, "connectivityManager":Landroid/net/ConnectivityManager;
     invoke-virtual {v0}, Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;
 
     move-result-object v1
 
     .line 103
-    .local v1, networkInfo:Landroid/net/NetworkInfo;
+    .local v1, "networkInfo":Landroid/net/NetworkInfo;
     if-eqz v1, :cond_0
 
     invoke-virtual {v1}, Landroid/net/NetworkInfo;->isAvailable()Z
@@ -223,8 +221,8 @@
 
 .method private enoughTimeSinceFirstLaunch(Landroid/content/SharedPreferences;Landroid/content/SharedPreferences$Editor;)Z
     .locals 9
-    .parameter "preferences"
-    .parameter "editor"
+    .param p1, "preferences"    # Landroid/content/SharedPreferences;
+    .param p2, "editor"    # Landroid/content/SharedPreferences$Editor;
 
     .prologue
     const-string v8, "Fiksu.firstLaunchedAt"
@@ -235,7 +233,7 @@
     invoke-direct {v3}, Ljava/util/Date;-><init>()V
 
     .line 117
-    .local v3, now:Ljava/util/Date;
+    .local v3, "now":Ljava/util/Date;
     const-string v4, "Fiksu.firstLaunchedAt"
 
     invoke-virtual {v3}, Ljava/util/Date;->getTime()J
@@ -247,7 +245,7 @@
     move-result-wide v1
 
     .line 118
-    .local v1, firstLaunchedAtMillis:J
+    .local v1, "firstLaunchedAtMillis":J
     invoke-virtual {v3}, Ljava/util/Date;->getTime()J
 
     move-result-wide v4
@@ -265,7 +263,7 @@
     move v0, v4
 
     .line 120
-    .local v0, enoughTimeHasPassed:Z
+    .local v0, "enoughTimeHasPassed":Z
     :goto_0
     invoke-virtual {v3}, Ljava/util/Date;->getTime()J
 
@@ -289,7 +287,7 @@
     return v0
 
     .line 118
-    .end local v0           #enoughTimeHasPassed:Z
+    .end local v0    # "enoughTimeHasPassed":Z
     :cond_1
     const/4 v4, 0x0
 
@@ -300,8 +298,8 @@
 
 .method private getNumberOfLaunches(Landroid/content/SharedPreferences;Landroid/content/SharedPreferences$Editor;)I
     .locals 3
-    .parameter "preferences"
-    .parameter "editor"
+    .param p1, "preferences"    # Landroid/content/SharedPreferences;
+    .param p2, "editor"    # Landroid/content/SharedPreferences$Editor;
 
     .prologue
     const-string v2, "Fiksu.numberOfLaunches"
@@ -316,7 +314,7 @@
     move-result v0
 
     .line 108
-    .local v0, numberOfLaunches:I
+    .local v0, "numberOfLaunches":I
     add-int/lit8 v0, v0, 0x1
 
     .line 110
@@ -344,13 +342,13 @@
     move-result-object v1
 
     .line 67
-    .local v1, preferences:Landroid/content/SharedPreferences;
+    .local v1, "preferences":Landroid/content/SharedPreferences;
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
     .line 68
-    .local v0, editor:Landroid/content/SharedPreferences$Editor;
+    .local v0, "editor":Landroid/content/SharedPreferences$Editor;
     const-string v2, "Fiksu.alreadyRated"
 
     const/4 v3, 0x1
@@ -405,7 +403,7 @@
     move-result-object v3
 
     .line 138
-    .local v3, preferences:Landroid/content/SharedPreferences;
+    .local v3, "preferences":Landroid/content/SharedPreferences;
     const-string v4, "Fiksu.alreadyRated"
 
     invoke-interface {v3, v4, v6}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
@@ -426,19 +424,19 @@
     move-result-object v0
 
     .line 144
-    .local v0, editor:Landroid/content/SharedPreferences$Editor;
+    .local v0, "editor":Landroid/content/SharedPreferences$Editor;
     invoke-direct {p0, v3, v0}, Lcom/fiksu/asotracking/RatingPrompter;->getNumberOfLaunches(Landroid/content/SharedPreferences;Landroid/content/SharedPreferences$Editor;)I
 
     move-result v2
 
     .line 146
-    .local v2, numberOfLaunches:I
+    .local v2, "numberOfLaunches":I
     invoke-direct {p0, v3, v0}, Lcom/fiksu/asotracking/RatingPrompter;->enoughTimeSinceFirstLaunch(Landroid/content/SharedPreferences;Landroid/content/SharedPreferences$Editor;)Z
 
     move-result v1
 
     .line 148
-    .local v1, enoughTimeHasPassed:Z
+    .local v1, "enoughTimeHasPassed":Z
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     .line 150
@@ -487,7 +485,7 @@
     invoke-direct {v0, v1}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
     .line 163
-    .local v0, ratingDialogBuilder:Landroid/app/AlertDialog$Builder;
+    .local v0, "ratingDialogBuilder":Landroid/app/AlertDialog$Builder;
     new-instance v1, Ljava/lang/StringBuilder;
 
     const-string v2, "Enjoying "

@@ -26,8 +26,6 @@
 # direct methods
 .method constructor <init>(Lv2/com/playhaven/views/interstitial/PHCloseButton;Lv2/com/playhaven/views/interstitial/PHCloseButton$Listener;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 63
@@ -44,7 +42,7 @@
 # virtual methods
 .method public onClick(Landroid/view/View;)V
     .locals 2
-    .parameter "v"
+    .param p1, "v"    # Landroid/view/View;
 
     .prologue
     .line 67

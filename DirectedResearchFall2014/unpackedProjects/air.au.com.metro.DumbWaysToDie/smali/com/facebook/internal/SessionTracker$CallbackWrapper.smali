@@ -48,7 +48,7 @@
     :cond_0
     iget-object v0, p0, Lcom/facebook/internal/SessionTracker$CallbackWrapper;->this$0:Lcom/facebook/internal/SessionTracker;
 
-    #getter for: Lcom/facebook/internal/SessionTracker;->session:Lcom/facebook/Session;
+    # getter for: Lcom/facebook/internal/SessionTracker;->session:Lcom/facebook/Session;
     invoke-static {v0}, Lcom/facebook/internal/SessionTracker;->access$200(Lcom/facebook/internal/SessionTracker;)Lcom/facebook/Session;
 
     move-result-object v0

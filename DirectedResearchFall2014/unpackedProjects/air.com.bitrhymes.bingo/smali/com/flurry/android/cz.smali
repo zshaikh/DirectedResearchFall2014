@@ -41,8 +41,6 @@
 
 .method constructor <init>(JLjava/lang/String;)V
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     .line 18
@@ -76,7 +74,6 @@
 
 .method constructor <init>(Ljava/io/DataInput;)V
     .locals 4
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -151,7 +148,6 @@
 # virtual methods
 .method final a(Lcom/flurry/android/bu;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 40
@@ -165,7 +161,6 @@
 
 .method final a(Ljava/io/DataOutput;)V
     .locals 2
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;

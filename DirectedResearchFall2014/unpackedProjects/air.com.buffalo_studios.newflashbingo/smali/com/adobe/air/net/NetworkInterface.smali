@@ -88,7 +88,6 @@
 # virtual methods
 .method public GetAddress(I)Lcom/adobe/air/net/InterfaceAddress;
     .locals 1
-    .parameter
 
     .prologue
     .line 40
@@ -119,7 +118,6 @@
 
 .method public addAddress(Lcom/adobe/air/net/InterfaceAddress;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 30

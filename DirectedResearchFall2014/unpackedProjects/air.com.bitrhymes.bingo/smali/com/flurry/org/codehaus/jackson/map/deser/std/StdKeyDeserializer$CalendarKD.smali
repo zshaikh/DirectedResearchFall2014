@@ -32,8 +32,8 @@
 # virtual methods
 .method public bridge synthetic _parse(Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;)Ljava/lang/Object;
     .locals 1
-    .parameter "x0"
-    .parameter "x1"
+    .param p1, "x0"    # Ljava/lang/String;
+    .param p2, "x1"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/Exception;
@@ -51,8 +51,8 @@
 
 .method public _parse(Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;)Ljava/util/Calendar;
     .locals 2
-    .parameter "key"
-    .parameter "ctxt"
+    .param p1, "key"    # Ljava/lang/String;
+    .param p2, "ctxt"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/IllegalArgumentException;,
@@ -67,7 +67,7 @@
     move-result-object v0
 
     .line 321
-    .local v0, date:Ljava/util/Date;
+    .local v0, "date":Ljava/util/Date;
     if-nez v0, :cond_0
 
     const/4 v1, 0x0

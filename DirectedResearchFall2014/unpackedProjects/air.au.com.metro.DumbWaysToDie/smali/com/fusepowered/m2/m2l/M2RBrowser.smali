@@ -34,7 +34,6 @@
 
 .method static synthetic access$0(Lcom/fusepowered/m2/m2l/M2RBrowser;)Landroid/widget/ImageButton;
     .locals 1
-    .parameter
 
     .prologue
     .line 74
@@ -45,7 +44,6 @@
 
 .method static synthetic access$1(Lcom/fusepowered/m2/m2l/M2RBrowser;)Landroid/widget/ImageButton;
     .locals 1
-    .parameter
 
     .prologue
     .line 73
@@ -56,7 +54,6 @@
 
 .method static synthetic access$2(Lcom/fusepowered/m2/m2l/M2RBrowser;)Landroid/webkit/WebView;
     .locals 1
-    .parameter
 
     .prologue
     .line 72
@@ -85,7 +82,7 @@
 
 .method private getButton(Landroid/graphics/drawable/Drawable;)Landroid/widget/ImageButton;
     .locals 4
-    .parameter "drawable"
+    .param p1, "drawable"    # Landroid/graphics/drawable/Drawable;
 
     .prologue
     const/4 v3, -0x2
@@ -96,15 +93,15 @@
     invoke-direct {v0, p0}, Landroid/widget/ImageButton;-><init>(Landroid/content/Context;)V
 
     .line 259
-    .local v0, imageButton:Landroid/widget/ImageButton;
+    .local v0, "imageButton":Landroid/widget/ImageButton;
     new-instance v1, Landroid/widget/LinearLayout$LayoutParams;
 
-    const/high16 v2, 0x3f80
+    const/high16 v2, 0x3f800000
 
     invoke-direct {v1, v3, v3, v2}, Landroid/widget/LinearLayout$LayoutParams;-><init>(IIF)V
 
     .line 260
-    .local v1, layoutParams:Landroid/widget/LinearLayout$LayoutParams;
+    .local v1, "layoutParams":Landroid/widget/LinearLayout$LayoutParams;
     const/16 v2, 0x10
 
     iput v2, v1, Landroid/widget/LinearLayout$LayoutParams;->gravity:I
@@ -135,13 +132,13 @@
     invoke-direct {v4, p0}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
 
     .line 220
-    .local v4, mraidBrowserView:Landroid/widget/LinearLayout;
+    .local v4, "mraidBrowserView":Landroid/widget/LinearLayout;
     new-instance v0, Landroid/widget/LinearLayout$LayoutParams;
 
     invoke-direct {v0, v8, v8}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
 
     .line 221
-    .local v0, browserLayoutParams:Landroid/widget/LinearLayout$LayoutParams;
+    .local v0, "browserLayoutParams":Landroid/widget/LinearLayout$LayoutParams;
     invoke-virtual {v4, v0}, Landroid/widget/LinearLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 222
@@ -153,13 +150,13 @@
     invoke-direct {v5, p0}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;)V
 
     .line 225
-    .local v5, outerLayout:Landroid/widget/RelativeLayout;
+    .local v5, "outerLayout":Landroid/widget/RelativeLayout;
     new-instance v6, Landroid/widget/LinearLayout$LayoutParams;
 
     invoke-direct {v6, v8, v7}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
 
     .line 226
-    .local v6, outerLayoutParams:Landroid/widget/LinearLayout$LayoutParams;
+    .local v6, "outerLayoutParams":Landroid/widget/LinearLayout$LayoutParams;
     invoke-virtual {v5, v6}, Landroid/widget/RelativeLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 227
@@ -171,7 +168,7 @@
     invoke-direct {v1, p0}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
 
     .line 230
-    .local v1, innerLayout:Landroid/widget/LinearLayout;
+    .local v1, "innerLayout":Landroid/widget/LinearLayout;
     invoke-virtual {v1, v9}, Landroid/widget/LinearLayout;->setId(I)V
 
     .line 231
@@ -180,7 +177,7 @@
     invoke-direct {v2, v8, v7}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
     .line 232
-    .local v2, innerLayoutParams:Landroid/widget/RelativeLayout$LayoutParams;
+    .local v2, "innerLayoutParams":Landroid/widget/RelativeLayout$LayoutParams;
     const/16 v7, 0xc
 
     invoke-virtual {v2, v7}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
@@ -285,7 +282,7 @@
     invoke-direct {v3, v8, v8}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
     .line 249
-    .local v3, layoutParams:Landroid/widget/RelativeLayout$LayoutParams;
+    .local v3, "layoutParams":Landroid/widget/RelativeLayout$LayoutParams;
     const/4 v7, 0x2
 
     invoke-virtual {v3, v7, v9}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
@@ -372,7 +369,7 @@
 
 .method private initializeWebView(Landroid/content/Intent;)V
     .locals 3
-    .parameter "intent"
+    .param p1, "intent"    # Landroid/content/Intent;
 
     .prologue
     const/4 v2, 0x1
@@ -385,7 +382,7 @@
     move-result-object v0
 
     .line 96
-    .local v0, webSettings:Landroid/webkit/WebSettings;
+    .local v0, "webSettings":Landroid/webkit/WebSettings;
     invoke-virtual {v0, v2}, Landroid/webkit/WebSettings;->setJavaScriptEnabled(Z)V
 
     .line 102
@@ -434,7 +431,7 @@
 # virtual methods
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 4
-    .parameter "savedInstanceState"
+    .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
     const/4 v3, 0x2
@@ -471,7 +468,7 @@
     move-result-object v0
 
     .line 88
-    .local v0, intent:Landroid/content/Intent;
+    .local v0, "intent":Landroid/content/Intent;
     invoke-direct {p0, v0}, Lcom/fusepowered/m2/m2l/M2RBrowser;->initializeWebView(Landroid/content/Intent;)V
 
     .line 89

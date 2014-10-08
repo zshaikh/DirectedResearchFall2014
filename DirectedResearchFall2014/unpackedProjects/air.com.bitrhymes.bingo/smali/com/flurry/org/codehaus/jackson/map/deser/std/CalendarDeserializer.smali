@@ -45,7 +45,6 @@
 
 .method public constructor <init>(Ljava/lang/Class;)V
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -58,7 +57,7 @@
 
     .prologue
     .line 24
-    .local p1, cc:Ljava/lang/Class;,"Ljava/lang/Class<+Ljava/util/Calendar;>;"
+    .local p1, "cc":Ljava/lang/Class;, "Ljava/lang/Class<+Ljava/util/Calendar;>;"
     const-class v0, Ljava/util/Calendar;
 
     invoke-direct {p0, v0}, Lcom/flurry/org/codehaus/jackson/map/deser/std/StdScalarDeserializer;-><init>(Ljava/lang/Class;)V
@@ -74,8 +73,8 @@
 # virtual methods
 .method public bridge synthetic deserialize(Lcom/flurry/org/codehaus/jackson/JsonParser;Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;)Ljava/lang/Object;
     .locals 1
-    .parameter "x0"
-    .parameter "x1"
+    .param p1, "x0"    # Lcom/flurry/org/codehaus/jackson/JsonParser;
+    .param p2, "x1"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -94,8 +93,8 @@
 
 .method public deserialize(Lcom/flurry/org/codehaus/jackson/JsonParser;Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;)Ljava/util/Calendar;
     .locals 5
-    .parameter "jp"
-    .parameter "ctxt"
+    .param p1, "jp"    # Lcom/flurry/org/codehaus/jackson/JsonParser;
+    .param p2, "ctxt"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -110,7 +109,7 @@
     move-result-object v1
 
     .line 33
-    .local v1, d:Ljava/util/Date;
+    .local v1, "d":Ljava/util/Date;
     if-nez v1, :cond_0
 
     .line 34
@@ -145,7 +144,7 @@
     check-cast v0, Ljava/util/Calendar;
 
     .line 41
-    .local v0, c:Ljava/util/Calendar;
+    .local v0, "c":Ljava/util/Calendar;
     invoke-virtual {v1}, Ljava/util/Date;->getTime()J
 
     move-result-wide v3
@@ -160,14 +159,14 @@
     goto :goto_0
 
     .line 43
-    .end local v0           #c:Ljava/util/Calendar;
+    .end local v0    # "c":Ljava/util/Calendar;
     :catch_0
     move-exception v3
 
     move-object v2, v3
 
     .line 44
-    .local v2, e:Ljava/lang/Exception;
+    .local v2, "e":Ljava/lang/Exception;
     iget-object v3, p0, Lcom/flurry/org/codehaus/jackson/map/deser/std/CalendarDeserializer;->_calendarClass:Ljava/lang/Class;
 
     invoke-virtual {p2, v3, v2}, Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;->instantiationException(Ljava/lang/Class;Ljava/lang/Throwable;)Lcom/flurry/org/codehaus/jackson/map/JsonMappingException;

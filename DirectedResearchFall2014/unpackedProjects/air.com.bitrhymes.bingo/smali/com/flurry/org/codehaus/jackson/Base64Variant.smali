@@ -30,9 +30,9 @@
 # direct methods
 .method public constructor <init>(Lcom/flurry/org/codehaus/jackson/Base64Variant;Ljava/lang/String;I)V
     .locals 6
-    .parameter "base"
-    .parameter "name"
-    .parameter "maxLineLength"
+    .param p1, "base"    # Lcom/flurry/org/codehaus/jackson/Base64Variant;
+    .param p2, "name"    # Ljava/lang/String;
+    .param p3, "maxLineLength"    # I
 
     .prologue
     .line 147
@@ -56,11 +56,11 @@
 
 .method public constructor <init>(Lcom/flurry/org/codehaus/jackson/Base64Variant;Ljava/lang/String;ZCI)V
     .locals 6
-    .parameter "base"
-    .parameter "name"
-    .parameter "usesPadding"
-    .parameter "paddingChar"
-    .parameter "maxLineLength"
+    .param p1, "base"    # Lcom/flurry/org/codehaus/jackson/Base64Variant;
+    .param p2, "name"    # Ljava/lang/String;
+    .param p3, "usesPadding"    # Z
+    .param p4, "paddingChar"    # C
+    .param p5, "maxLineLength"    # I
 
     .prologue
     const/16 v4, 0x40
@@ -94,7 +94,7 @@
     iget-object v0, p1, Lcom/flurry/org/codehaus/jackson/Base64Variant;->_base64ToAsciiB:[B
 
     .line 159
-    .local v0, srcB:[B
+    .local v0, "srcB":[B
     iget-object v3, p0, Lcom/flurry/org/codehaus/jackson/Base64Variant;->_base64ToAsciiB:[B
 
     array-length v4, v0
@@ -105,7 +105,7 @@
     iget-object v1, p1, Lcom/flurry/org/codehaus/jackson/Base64Variant;->_base64ToAsciiC:[C
 
     .line 161
-    .local v1, srcC:[C
+    .local v1, "srcC":[C
     iget-object v3, p0, Lcom/flurry/org/codehaus/jackson/Base64Variant;->_base64ToAsciiC:[C
 
     array-length v4, v1
@@ -116,7 +116,7 @@
     iget-object v2, p1, Lcom/flurry/org/codehaus/jackson/Base64Variant;->_asciiToBase64:[I
 
     .line 163
-    .local v2, srcV:[I
+    .local v2, "srcV":[I
     iget-object v3, p0, Lcom/flurry/org/codehaus/jackson/Base64Variant;->_asciiToBase64:[I
 
     array-length v4, v2
@@ -138,11 +138,11 @@
 
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;ZCI)V
     .locals 6
-    .parameter "name"
-    .parameter "base64Alphabet"
-    .parameter "usesPadding"
-    .parameter "paddingChar"
-    .parameter "maxLineLength"
+    .param p1, "name"    # Ljava/lang/String;
+    .param p2, "base64Alphabet"    # Ljava/lang/String;
+    .param p3, "usesPadding"    # Z
+    .param p4, "paddingChar"    # C
+    .param p5, "maxLineLength"    # I
 
     .prologue
     const/4 v5, 0x0
@@ -187,7 +187,7 @@
     move-result v1
 
     .line 121
-    .local v1, alphaLen:I
+    .local v1, "alphaLen":I
     if-eq v1, v4, :cond_0
 
     .line 122
@@ -237,7 +237,7 @@
     .line 128
     const/4 v2, 0x0
 
-    .local v2, i:I
+    .local v2, "i":I
     :goto_0
     if-ge v2, v1, :cond_1
 
@@ -247,7 +247,7 @@
     aget-char v0, v3, v2
 
     .line 130
-    .local v0, alpha:C
+    .local v0, "alpha":C
     iget-object v3, p0, Lcom/flurry/org/codehaus/jackson/Base64Variant;->_base64ToAsciiB:[B
 
     int-to-byte v4, v0
@@ -265,7 +265,7 @@
     goto :goto_0
 
     .line 135
-    .end local v0           #alpha:C
+    .end local v0    # "alpha":C
     :cond_1
     if-eqz p3, :cond_2
 
@@ -285,14 +285,14 @@
 # virtual methods
 .method public decodeBase64Byte(B)I
     .locals 2
-    .parameter "b"
+    .param p1, "b"    # B
 
     .prologue
     .line 208
     move v0, p1
 
     .line 209
-    .local v0, ch:I
+    .local v0, "ch":I
     const/16 v1, 0x7f
 
     if-gt v0, v1, :cond_0
@@ -312,14 +312,14 @@
 
 .method public decodeBase64Char(C)I
     .locals 2
-    .parameter "c"
+    .param p1, "c"    # C
 
     .prologue
     .line 197
     move v0, p1
 
     .line 198
-    .local v0, ch:I
+    .local v0, "ch":I
     const/16 v1, 0x7f
 
     if-gt v0, v1, :cond_0
@@ -339,7 +339,7 @@
 
 .method public decodeBase64Char(I)I
     .locals 1
-    .parameter "ch"
+    .param p1, "ch"    # I
 
     .prologue
     .line 203
@@ -362,7 +362,7 @@
 
 .method public encode([B)Ljava/lang/String;
     .locals 1
-    .parameter "input"
+    .param p1, "input"    # [B
 
     .prologue
     .line 341
@@ -377,8 +377,8 @@
 
 .method public encode([BZ)Ljava/lang/String;
     .locals 12
-    .parameter "input"
-    .parameter "addQuotes"
+    .param p1, "input"    # [B
+    .param p2, "addQuotes"    # Z
 
     .prologue
     const/16 v11, 0x22
@@ -387,7 +387,7 @@
     array-length v2, p1
 
     .line 361
-    .local v2, inputEnd:I
+    .local v2, "inputEnd":I
     shr-int/lit8 v9, v2, 0x2
 
     add-int/2addr v9, v2
@@ -397,13 +397,13 @@
     add-int v6, v9, v10
 
     .line 362
-    .local v6, outputLen:I
+    .local v6, "outputLen":I
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8, v6}, Ljava/lang/StringBuilder;-><init>(I)V
 
     .line 364
-    .local v8, sb:Ljava/lang/StringBuilder;
+    .local v8, "sb":Ljava/lang/StringBuilder;
     if-eqz p2, :cond_0
 
     .line 365
@@ -418,39 +418,39 @@
     shr-int/lit8 v1, v9, 0x2
 
     .line 371
-    .local v1, chunksBeforeLF:I
+    .local v1, "chunksBeforeLF":I
     const/4 v4, 0x0
 
     .line 372
-    .local v4, inputPtr:I
+    .local v4, "inputPtr":I
     const/4 v9, 0x3
 
     sub-int v7, v2, v9
 
-    .local v7, safeInputEnd:I
+    .local v7, "safeInputEnd":I
     move v5, v4
 
     .line 374
-    .end local v4           #inputPtr:I
-    .local v5, inputPtr:I
+    .end local v4    # "inputPtr":I
+    .local v5, "inputPtr":I
     :goto_0
     if-gt v5, v7, :cond_2
 
     .line 376
     add-int/lit8 v4, v5, 0x1
 
-    .end local v5           #inputPtr:I
-    .restart local v4       #inputPtr:I
+    .end local v5    # "inputPtr":I
+    .restart local v4    # "inputPtr":I
     aget-byte v9, p1, v5
 
     shl-int/lit8 v0, v9, 0x8
 
     .line 377
-    .local v0, b24:I
+    .local v0, "b24":I
     add-int/lit8 v5, v4, 0x1
 
-    .end local v4           #inputPtr:I
-    .restart local v5       #inputPtr:I
+    .end local v4    # "inputPtr":I
+    .restart local v5    # "inputPtr":I
     aget-byte v9, p1, v4
 
     and-int/lit16 v9, v9, 0xff
@@ -462,8 +462,8 @@
 
     add-int/lit8 v4, v5, 0x1
 
-    .end local v5           #inputPtr:I
-    .restart local v4       #inputPtr:I
+    .end local v5    # "inputPtr":I
+    .restart local v4    # "inputPtr":I
     aget-byte v10, p1, v5
 
     and-int/lit16 v10, v10, 0xff
@@ -499,30 +499,30 @@
     move v5, v4
 
     .line 386
-    .end local v4           #inputPtr:I
-    .restart local v5       #inputPtr:I
+    .end local v4    # "inputPtr":I
+    .restart local v5    # "inputPtr":I
     goto :goto_0
 
     .line 389
-    .end local v0           #b24:I
+    .end local v0    # "b24":I
     :cond_2
     sub-int v3, v2, v5
 
     .line 390
-    .local v3, inputLeft:I
+    .local v3, "inputLeft":I
     if-lez v3, :cond_5
 
     .line 391
     add-int/lit8 v4, v5, 0x1
 
-    .end local v5           #inputPtr:I
-    .restart local v4       #inputPtr:I
+    .end local v5    # "inputPtr":I
+    .restart local v4    # "inputPtr":I
     aget-byte v9, p1, v5
 
     shl-int/lit8 v0, v9, 0x10
 
     .line 392
-    .restart local v0       #b24:I
+    .restart local v0    # "b24":I
     const/4 v9, 0x2
 
     if-ne v3, v9, :cond_3
@@ -530,8 +530,8 @@
     .line 393
     add-int/lit8 v5, v4, 0x1
 
-    .end local v4           #inputPtr:I
-    .restart local v5       #inputPtr:I
+    .end local v4    # "inputPtr":I
+    .restart local v5    # "inputPtr":I
     aget-byte v9, p1, v4
 
     and-int/lit16 v9, v9, 0xff
@@ -543,13 +543,13 @@
     move v4, v5
 
     .line 395
-    .end local v5           #inputPtr:I
-    .restart local v4       #inputPtr:I
+    .end local v5    # "inputPtr":I
+    .restart local v4    # "inputPtr":I
     :cond_3
     invoke-virtual {p0, v8, v0, v3}, Lcom/flurry/org/codehaus/jackson/Base64Variant;->encodeBase64Partial(Ljava/lang/StringBuilder;II)V
 
     .line 398
-    .end local v0           #b24:I
+    .end local v0    # "b24":I
     :goto_1
     if-eqz p2, :cond_4
 
@@ -564,19 +564,19 @@
 
     return-object v9
 
-    .end local v4           #inputPtr:I
-    .restart local v5       #inputPtr:I
+    .end local v4    # "inputPtr":I
+    .restart local v5    # "inputPtr":I
     :cond_5
     move v4, v5
 
-    .end local v5           #inputPtr:I
-    .restart local v4       #inputPtr:I
+    .end local v5    # "inputPtr":I
+    .restart local v4    # "inputPtr":I
     goto :goto_1
 .end method
 
 .method public encodeBase64BitsAsByte(I)B
     .locals 1
-    .parameter "value"
+    .param p1, "value"    # I
 
     .prologue
     .line 289
@@ -589,7 +589,7 @@
 
 .method public encodeBase64BitsAsChar(I)C
     .locals 1
-    .parameter "value"
+    .param p1, "value"    # I
 
     .prologue
     .line 223
@@ -602,16 +602,16 @@
 
 .method public encodeBase64Chunk(I[BI)I
     .locals 3
-    .parameter "b24"
-    .parameter "buffer"
-    .parameter "ptr"
+    .param p1, "b24"    # I
+    .param p2, "buffer"    # [B
+    .param p3, "ptr"    # I
 
     .prologue
     .line 298
     add-int/lit8 v0, p3, 0x1
 
-    .end local p3
-    .local v0, ptr:I
+    .end local p3    # "ptr":I
+    .local v0, "ptr":I
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/Base64Variant;->_base64ToAsciiB:[B
 
     shr-int/lit8 v2, p1, 0x12
@@ -625,8 +625,8 @@
     .line 299
     add-int/lit8 p3, v0, 0x1
 
-    .end local v0           #ptr:I
-    .restart local p3
+    .end local v0    # "ptr":I
+    .restart local p3    # "ptr":I
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/Base64Variant;->_base64ToAsciiB:[B
 
     shr-int/lit8 v2, p1, 0xc
@@ -640,8 +640,8 @@
     .line 300
     add-int/lit8 v0, p3, 0x1
 
-    .end local p3
-    .restart local v0       #ptr:I
+    .end local p3    # "ptr":I
+    .restart local v0    # "ptr":I
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/Base64Variant;->_base64ToAsciiB:[B
 
     shr-int/lit8 v2, p1, 0x6
@@ -655,8 +655,8 @@
     .line 301
     add-int/lit8 p3, v0, 0x1
 
-    .end local v0           #ptr:I
-    .restart local p3
+    .end local v0    # "ptr":I
+    .restart local p3    # "ptr":I
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/Base64Variant;->_base64ToAsciiB:[B
 
     and-int/lit8 v2, p1, 0x3f
@@ -671,16 +671,16 @@
 
 .method public encodeBase64Chunk(I[CI)I
     .locals 3
-    .parameter "b24"
-    .parameter "buffer"
-    .parameter "ptr"
+    .param p1, "b24"    # I
+    .param p2, "buffer"    # [C
+    .param p3, "ptr"    # I
 
     .prologue
     .line 232
     add-int/lit8 v0, p3, 0x1
 
-    .end local p3
-    .local v0, ptr:I
+    .end local p3    # "ptr":I
+    .local v0, "ptr":I
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/Base64Variant;->_base64ToAsciiC:[C
 
     shr-int/lit8 v2, p1, 0x12
@@ -694,8 +694,8 @@
     .line 233
     add-int/lit8 p3, v0, 0x1
 
-    .end local v0           #ptr:I
-    .restart local p3
+    .end local v0    # "ptr":I
+    .restart local p3    # "ptr":I
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/Base64Variant;->_base64ToAsciiC:[C
 
     shr-int/lit8 v2, p1, 0xc
@@ -709,8 +709,8 @@
     .line 234
     add-int/lit8 v0, p3, 0x1
 
-    .end local p3
-    .restart local v0       #ptr:I
+    .end local p3    # "ptr":I
+    .restart local v0    # "ptr":I
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/Base64Variant;->_base64ToAsciiC:[C
 
     shr-int/lit8 v2, p1, 0x6
@@ -724,8 +724,8 @@
     .line 235
     add-int/lit8 p3, v0, 0x1
 
-    .end local v0           #ptr:I
-    .restart local p3
+    .end local v0    # "ptr":I
+    .restart local p3    # "ptr":I
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/Base64Variant;->_base64ToAsciiC:[C
 
     and-int/lit8 v2, p1, 0x3f
@@ -740,8 +740,8 @@
 
 .method public encodeBase64Chunk(Ljava/lang/StringBuilder;I)V
     .locals 2
-    .parameter "sb"
-    .parameter "b24"
+    .param p1, "sb"    # Ljava/lang/StringBuilder;
+    .param p2, "b24"    # I
 
     .prologue
     .line 241
@@ -792,10 +792,10 @@
 
 .method public encodeBase64Partial(II[BI)I
     .locals 5
-    .parameter "bits"
-    .parameter "outputBytes"
-    .parameter "buffer"
-    .parameter "outPtr"
+    .param p1, "bits"    # I
+    .param p2, "outputBytes"    # I
+    .param p3, "buffer"    # [B
+    .param p4, "outPtr"    # I
 
     .prologue
     const/4 v4, 0x2
@@ -803,8 +803,8 @@
     .line 315
     add-int/lit8 v0, p4, 0x1
 
-    .end local p4
-    .local v0, outPtr:I
+    .end local p4    # "outPtr":I
+    .local v0, "outPtr":I
     iget-object v2, p0, Lcom/flurry/org/codehaus/jackson/Base64Variant;->_base64ToAsciiB:[B
 
     shr-int/lit8 v3, p1, 0x12
@@ -818,8 +818,8 @@
     .line 316
     add-int/lit8 p4, v0, 0x1
 
-    .end local v0           #outPtr:I
-    .restart local p4
+    .end local v0    # "outPtr":I
+    .restart local p4    # "outPtr":I
     iget-object v2, p0, Lcom/flurry/org/codehaus/jackson/Base64Variant;->_base64ToAsciiB:[B
 
     shr-int/lit8 v3, p1, 0xc
@@ -841,11 +841,11 @@
     int-to-byte v1, v2
 
     .line 319
-    .local v1, pb:B
+    .local v1, "pb":B
     add-int/lit8 v0, p4, 0x1
 
-    .end local p4
-    .restart local v0       #outPtr:I
+    .end local p4    # "outPtr":I
+    .restart local v0    # "outPtr":I
     if-ne p2, v4, :cond_1
 
     iget-object v2, p0, Lcom/flurry/org/codehaus/jackson/Base64Variant;->_base64ToAsciiB:[B
@@ -862,19 +862,19 @@
     .line 321
     add-int/lit8 p4, v0, 0x1
 
-    .end local v0           #outPtr:I
-    .restart local p4
+    .end local v0    # "outPtr":I
+    .restart local p4    # "outPtr":I
     aput-byte v1, p3, v0
 
     .line 327
-    .end local v1           #pb:B
+    .end local v1    # "pb":B
     :cond_0
     :goto_1
     return p4
 
-    .end local p4
-    .restart local v0       #outPtr:I
-    .restart local v1       #pb:B
+    .end local p4    # "outPtr":I
+    .restart local v0    # "outPtr":I
+    .restart local v1    # "pb":B
     :cond_1
     move v2, v1
 
@@ -882,17 +882,17 @@
     goto :goto_0
 
     .line 323
-    .end local v0           #outPtr:I
-    .end local v1           #pb:B
-    .restart local p4
+    .end local v0    # "outPtr":I
+    .end local v1    # "pb":B
+    .restart local p4    # "outPtr":I
     :cond_2
     if-ne p2, v4, :cond_0
 
     .line 324
     add-int/lit8 v0, p4, 0x1
 
-    .end local p4
-    .restart local v0       #outPtr:I
+    .end local p4    # "outPtr":I
+    .restart local v0    # "outPtr":I
     iget-object v2, p0, Lcom/flurry/org/codehaus/jackson/Base64Variant;->_base64ToAsciiB:[B
 
     shr-int/lit8 v3, p1, 0x6
@@ -905,17 +905,17 @@
 
     move p4, v0
 
-    .end local v0           #outPtr:I
-    .restart local p4
+    .end local v0    # "outPtr":I
+    .restart local p4    # "outPtr":I
     goto :goto_1
 .end method
 
 .method public encodeBase64Partial(II[CI)I
     .locals 4
-    .parameter "bits"
-    .parameter "outputBytes"
-    .parameter "buffer"
-    .parameter "outPtr"
+    .param p1, "bits"    # I
+    .param p2, "outputBytes"    # I
+    .param p3, "buffer"    # [C
+    .param p4, "outPtr"    # I
 
     .prologue
     const/4 v3, 0x2
@@ -923,8 +923,8 @@
     .line 257
     add-int/lit8 v0, p4, 0x1
 
-    .end local p4
-    .local v0, outPtr:I
+    .end local p4    # "outPtr":I
+    .local v0, "outPtr":I
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/Base64Variant;->_base64ToAsciiC:[C
 
     shr-int/lit8 v2, p1, 0x12
@@ -938,8 +938,8 @@
     .line 258
     add-int/lit8 p4, v0, 0x1
 
-    .end local v0           #outPtr:I
-    .restart local p4
+    .end local v0    # "outPtr":I
+    .restart local p4    # "outPtr":I
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/Base64Variant;->_base64ToAsciiC:[C
 
     shr-int/lit8 v2, p1, 0xc
@@ -958,8 +958,8 @@
     .line 260
     add-int/lit8 v0, p4, 0x1
 
-    .end local p4
-    .restart local v0       #outPtr:I
+    .end local p4    # "outPtr":I
+    .restart local v0    # "outPtr":I
     if-ne p2, v3, :cond_1
 
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/Base64Variant;->_base64ToAsciiC:[C
@@ -976,8 +976,8 @@
     .line 262
     add-int/lit8 p4, v0, 0x1
 
-    .end local v0           #outPtr:I
-    .restart local p4
+    .end local v0    # "outPtr":I
+    .restart local p4    # "outPtr":I
     iget-char v1, p0, Lcom/flurry/org/codehaus/jackson/Base64Variant;->_paddingChar:C
 
     aput-char v1, p3, v0
@@ -988,24 +988,24 @@
     return p4
 
     .line 260
-    .end local p4
-    .restart local v0       #outPtr:I
+    .end local p4    # "outPtr":I
+    .restart local v0    # "outPtr":I
     :cond_1
     iget-char v1, p0, Lcom/flurry/org/codehaus/jackson/Base64Variant;->_paddingChar:C
 
     goto :goto_0
 
     .line 264
-    .end local v0           #outPtr:I
-    .restart local p4
+    .end local v0    # "outPtr":I
+    .restart local p4    # "outPtr":I
     :cond_2
     if-ne p2, v3, :cond_0
 
     .line 265
     add-int/lit8 v0, p4, 0x1
 
-    .end local p4
-    .restart local v0       #outPtr:I
+    .end local p4    # "outPtr":I
+    .restart local v0    # "outPtr":I
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/Base64Variant;->_base64ToAsciiC:[C
 
     shr-int/lit8 v2, p1, 0x6
@@ -1018,16 +1018,16 @@
 
     move p4, v0
 
-    .end local v0           #outPtr:I
-    .restart local p4
+    .end local v0    # "outPtr":I
+    .restart local p4    # "outPtr":I
     goto :goto_1
 .end method
 
 .method public encodeBase64Partial(Ljava/lang/StringBuilder;II)V
     .locals 3
-    .parameter "sb"
-    .parameter "bits"
-    .parameter "outputBytes"
+    .param p1, "sb"    # Ljava/lang/StringBuilder;
+    .param p2, "bits"    # I
+    .param p3, "outputBytes"    # I
 
     .prologue
     const/4 v2, 0x2
@@ -1171,7 +1171,7 @@
 
 .method public usesPaddingChar(C)Z
     .locals 1
-    .parameter "c"
+    .param p1, "c"    # C
 
     .prologue
     .line 179
@@ -1192,7 +1192,7 @@
 
 .method public usesPaddingChar(I)Z
     .locals 1
-    .parameter "ch"
+    .param p1, "ch"    # I
 
     .prologue
     .line 180

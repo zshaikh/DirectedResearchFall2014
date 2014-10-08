@@ -33,8 +33,6 @@
 # virtual methods
 .method public uncaughtException(Ljava/lang/Thread;Ljava/lang/Throwable;)V
     .locals 3
-    .parameter
-    .parameter
 
     .prologue
     .line 213

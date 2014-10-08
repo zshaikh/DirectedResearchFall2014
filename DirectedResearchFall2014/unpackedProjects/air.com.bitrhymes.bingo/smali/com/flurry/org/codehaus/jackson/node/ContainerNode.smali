@@ -19,7 +19,7 @@
 # direct methods
 .method protected constructor <init>(Lcom/flurry/org/codehaus/jackson/node/JsonNodeFactory;)V
     .locals 0
-    .parameter "nc"
+    .param p1, "nc"    # Lcom/flurry/org/codehaus/jackson/node/JsonNodeFactory;
 
     .prologue
     .line 26
@@ -36,7 +36,7 @@
 # virtual methods
 .method public final POJONode(Ljava/lang/Object;)Lcom/flurry/org/codehaus/jackson/node/POJONode;
     .locals 1
-    .parameter "pojo"
+    .param p1, "pojo"    # Ljava/lang/Object;
 
     .prologue
     .line 121
@@ -78,7 +78,7 @@
 
 .method public final binaryNode([B)Lcom/flurry/org/codehaus/jackson/node/BinaryNode;
     .locals 1
-    .parameter "data"
+    .param p1, "data"    # [B
 
     .prologue
     .line 118
@@ -93,9 +93,9 @@
 
 .method public final binaryNode([BII)Lcom/flurry/org/codehaus/jackson/node/BinaryNode;
     .locals 1
-    .parameter "data"
-    .parameter "offset"
-    .parameter "length"
+    .param p1, "data"    # [B
+    .param p2, "offset"    # I
+    .param p3, "length"    # I
 
     .prologue
     .line 119
@@ -110,7 +110,7 @@
 
 .method public final booleanNode(Z)Lcom/flurry/org/codehaus/jackson/node/BooleanNode;
     .locals 1
-    .parameter "v"
+    .param p1, "v"    # Z
 
     .prologue
     .line 106
@@ -125,7 +125,7 @@
 
 .method public bridge synthetic findParent(Ljava/lang/String;)Lcom/flurry/org/codehaus/jackson/JsonNode;
     .locals 1
-    .parameter "x0"
+    .param p1, "x0"    # Ljava/lang/String;
 
     .prologue
     .line 15
@@ -235,7 +235,7 @@
 
 .method public final numberNode(B)Lcom/flurry/org/codehaus/jackson/node/NumericNode;
     .locals 1
-    .parameter "v"
+    .param p1, "v"    # B
 
     .prologue
     .line 108
@@ -250,7 +250,7 @@
 
 .method public final numberNode(D)Lcom/flurry/org/codehaus/jackson/node/NumericNode;
     .locals 1
-    .parameter "v"
+    .param p1, "v"    # D
 
     .prologue
     .line 113
@@ -265,7 +265,7 @@
 
 .method public final numberNode(F)Lcom/flurry/org/codehaus/jackson/node/NumericNode;
     .locals 1
-    .parameter "v"
+    .param p1, "v"    # F
 
     .prologue
     .line 112
@@ -280,7 +280,7 @@
 
 .method public final numberNode(I)Lcom/flurry/org/codehaus/jackson/node/NumericNode;
     .locals 1
-    .parameter "v"
+    .param p1, "v"    # I
 
     .prologue
     .line 110
@@ -295,7 +295,7 @@
 
 .method public final numberNode(J)Lcom/flurry/org/codehaus/jackson/node/NumericNode;
     .locals 1
-    .parameter "v"
+    .param p1, "v"    # J
 
     .prologue
     .line 111
@@ -310,7 +310,7 @@
 
 .method public final numberNode(Ljava/math/BigDecimal;)Lcom/flurry/org/codehaus/jackson/node/NumericNode;
     .locals 1
-    .parameter "v"
+    .param p1, "v"    # Ljava/math/BigDecimal;
 
     .prologue
     .line 114
@@ -325,7 +325,7 @@
 
 .method public final numberNode(S)Lcom/flurry/org/codehaus/jackson/node/NumericNode;
     .locals 1
-    .parameter "v"
+    .param p1, "v"    # S
 
     .prologue
     .line 109
@@ -360,7 +360,7 @@
 
 .method public final textNode(Ljava/lang/String;)Lcom/flurry/org/codehaus/jackson/node/TextNode;
     .locals 1
-    .parameter "text"
+    .param p1, "text"    # Ljava/lang/String;
 
     .prologue
     .line 116

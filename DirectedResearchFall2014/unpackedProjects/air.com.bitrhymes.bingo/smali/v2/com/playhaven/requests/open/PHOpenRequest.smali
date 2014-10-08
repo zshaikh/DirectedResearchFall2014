@@ -64,7 +64,7 @@
 
 .method public constructor <init>(Lv2/com/playhaven/listeners/PHOpenRequestListener;)V
     .locals 0
-    .parameter "listener"
+    .param p1, "listener"    # Lv2/com/playhaven/listeners/PHOpenRequestListener;
 
     .prologue
     .line 70
@@ -81,7 +81,7 @@
 # virtual methods
 .method public baseURL(Landroid/content/Context;)Ljava/lang/String;
     .locals 1
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     .line 87
@@ -96,7 +96,7 @@
 
 .method public getAdditionalParams(Landroid/content/Context;)Ljava/util/Hashtable;
     .locals 4
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -117,7 +117,7 @@
     invoke-direct {v0}, Ljava/util/Hashtable;-><init>()V
 
     .line 218
-    .local v0, params:Ljava/util/Hashtable;,"Ljava/util/Hashtable<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v0, "params":Ljava/util/Hashtable;, "Ljava/util/Hashtable<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v1, "ssum"
 
     iget-object v2, p0, Lv2/com/playhaven/requests/open/PHOpenRequest;->session:Lv2/com/playhaven/requests/open/PHSession;
@@ -215,7 +215,7 @@
 
 .method public handleRequestFailure(Lv2/com/playhaven/model/PHError;)V
     .locals 1
-    .parameter "e"
+    .param p1, "e"    # Lv2/com/playhaven/model/PHError;
 
     .prologue
     .line 128
@@ -235,7 +235,7 @@
 
 .method public handleRequestSuccess(Lorg/json/JSONObject;)V
     .locals 7
-    .parameter "res"
+    .param p1, "res"    # Lorg/json/JSONObject;
 
     .prologue
     const-string v6, "precache"
@@ -291,13 +291,13 @@
     move-result-object v1
 
     .line 149
-    .local v1, precached:Lorg/json/JSONArray;
+    .local v1, "precached":Lorg/json/JSONArray;
     if-eqz v1, :cond_1
 
     .line 151
     const/4 v0, 0x0
 
-    .local v0, i:I
+    .local v0, "i":I
     :goto_0
     invoke-virtual {v1}, Lorg/json/JSONArray;->length()I
 
@@ -311,7 +311,7 @@
     move-result-object v3
 
     .line 155
-    .local v3, url:Ljava/lang/String;
+    .local v3, "url":Ljava/lang/String;
     if-eqz v3, :cond_0
 
     .line 156
@@ -320,7 +320,7 @@
     invoke-direct {v2}, Lv2/com/playhaven/requests/open/PHPrefetchTask;-><init>()V
 
     .line 157
-    .local v2, task:Lv2/com/playhaven/requests/open/PHPrefetchTask;
+    .local v2, "task":Lv2/com/playhaven/requests/open/PHPrefetchTask;
     invoke-virtual {v2, p0}, Lv2/com/playhaven/requests/open/PHPrefetchTask;->setPrefetchListener(Lv2/com/playhaven/listeners/PHPrefetchTaskListener;)V
 
     .line 159
@@ -332,15 +332,15 @@
     invoke-virtual {v4, v2}, Ljava/util/concurrent/ConcurrentLinkedQueue;->add(Ljava/lang/Object;)Z
 
     .line 151
-    .end local v2           #task:Lv2/com/playhaven/requests/open/PHPrefetchTask;
+    .end local v2    # "task":Lv2/com/playhaven/requests/open/PHPrefetchTask;
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
     .line 169
-    .end local v0           #i:I
-    .end local v3           #url:Ljava/lang/String;
+    .end local v0    # "i":I
+    .end local v3    # "url":Ljava/lang/String;
     :cond_1
     iget-boolean v4, p0, Lv2/com/playhaven/requests/open/PHOpenRequest;->startPrecachingImmediately:Z
 
@@ -350,7 +350,7 @@
     invoke-virtual {p0}, Lv2/com/playhaven/requests/open/PHOpenRequest;->startNextPrefetch()V
 
     .line 173
-    .end local v1           #precached:Lorg/json/JSONArray;
+    .end local v1    # "precached":Lorg/json/JSONArray;
     :cond_2
     iget-object v4, p0, Lv2/com/playhaven/requests/open/PHOpenRequest;->session:Lv2/com/playhaven/requests/open/PHSession;
 
@@ -373,7 +373,7 @@
 
 .method public onPrefetchDone(I)V
     .locals 3
-    .parameter "result"
+    .param p1, "result"    # I
 
     .prologue
     .line 194
@@ -455,7 +455,7 @@
     move-object v0, v1
 
     .line 209
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v1, "PHOpenRequest - prefetchDone"
 
     sget-object v2, Lv2/com/playhaven/requests/crashreport/PHCrashReport$Urgency;->low:Lv2/com/playhaven/requests/crashreport/PHCrashReport$Urgency;
@@ -467,7 +467,7 @@
 
 .method public send(Landroid/content/Context;)V
     .locals 5
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     .line 95
@@ -535,13 +535,13 @@
     move-result-object v1
 
     .line 114
-    .local v1, prefs:Landroid/content/SharedPreferences;
+    .local v1, "prefs":Landroid/content/SharedPreferences;
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
     .line 115
-    .local v0, editor:Landroid/content/SharedPreferences$Editor;
+    .local v0, "editor":Landroid/content/SharedPreferences$Editor;
     const-string v2, "com_playhaven_time_in_game_ssum"
 
     iget-object v3, p0, Lv2/com/playhaven/requests/open/PHOpenRequest;->session:Lv2/com/playhaven/requests/open/PHSession;
@@ -573,8 +573,8 @@
     return-void
 
     .line 103
-    .end local v0           #editor:Landroid/content/SharedPreferences$Editor;
-    .end local v1           #prefs:Landroid/content/SharedPreferences;
+    .end local v0    # "editor":Landroid/content/SharedPreferences$Editor;
+    .end local v1    # "prefs":Landroid/content/SharedPreferences;
     :catchall_0
     move-exception v4
 
@@ -599,7 +599,7 @@
 
 .method public setOpenRequestListener(Lv2/com/playhaven/listeners/PHOpenRequestListener;)V
     .locals 0
-    .parameter "listener"
+    .param p1, "listener"    # Lv2/com/playhaven/listeners/PHOpenRequestListener;
 
     .prologue
     .line 50
@@ -611,7 +611,7 @@
 
 .method public setPrefetchListener(Lv2/com/playhaven/listeners/PHPrefetchListener;)V
     .locals 0
-    .parameter "listener"
+    .param p1, "listener"    # Lv2/com/playhaven/listeners/PHPrefetchListener;
 
     .prologue
     .line 46
@@ -668,7 +668,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lv2/com/playhaven/requests/open/PHOpenRequest;
     check-cast p0, Lv2/com/playhaven/requests/open/PHPrefetchTask;
 
     const/4 v0, 0x0

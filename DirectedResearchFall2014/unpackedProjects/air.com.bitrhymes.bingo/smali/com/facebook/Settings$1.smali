@@ -46,7 +46,7 @@
 # virtual methods
 .method public newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;
     .locals 3
-    .parameter "runnable"
+    .param p1, "runnable"    # Ljava/lang/Runnable;
 
     .prologue
     .line 75

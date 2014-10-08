@@ -139,9 +139,7 @@
 
 .method private constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter "name"
+    .param p3, "name"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -163,7 +161,7 @@
 
 .method public static valueOf(Ljava/lang/String;)Lcom/fusepowered/m1/android/NVASpeechKit$State;
     .locals 1
-    .parameter "name"
+    .param p0, "name"    # Ljava/lang/String;
 
     .prologue
     .line 64
@@ -173,7 +171,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "name":Ljava/lang/String;
     check-cast p0, Lcom/fusepowered/m1/android/NVASpeechKit$State;
 
     return-object p0

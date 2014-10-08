@@ -73,15 +73,6 @@
 # direct methods
 .method private constructor <init>(Ljava/lang/String;Ljava/lang/String;ZLjava/lang/Class;[Ljava/lang/reflect/Field;Ljava/lang/reflect/Constructor;ILjava/lang/Class;[Ljava/lang/String;)V
     .locals 1
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -141,8 +132,6 @@
 
 .method public static a(Ljava/lang/Class;Z)Lcom/vungle/sdk/aq;
     .locals 14
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -623,7 +612,6 @@
 # virtual methods
 .method public final a(Lcom/vungle/sdk/av;)V
     .locals 7
-    .parameter
 
     .prologue
     const/4 v6, 0x0
@@ -759,7 +747,6 @@
 
 .method public final a(Ljava/lang/Object;)V
     .locals 3
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;)V"
@@ -829,8 +816,6 @@
 
 .method public final a(Ljava/util/Set;Ljava/util/Set;)V
     .locals 1
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",

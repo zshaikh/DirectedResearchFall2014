@@ -102,8 +102,8 @@
 # virtual methods
 .method public check(Lcom/flurry/org/apache/avro/io/BlockingBinaryEncoder$BlockedValue;I)Z
     .locals 3
-    .parameter "prev"
-    .parameter "pos"
+    .param p1, "prev"    # Lcom/flurry/org/apache/avro/io/BlockingBinaryEncoder$BlockedValue;
+    .param p2, "pos"    # I
 
     .prologue
     const/4 v2, 0x1

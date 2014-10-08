@@ -29,7 +29,7 @@
 # virtual methods
 .method public equals(Ljava/lang/Object;)Z
     .locals 1
-    .parameter "other"
+    .param p1, "other"    # Ljava/lang/Object;
 
     .prologue
     .line 343
@@ -37,7 +37,7 @@
 
     check-cast p1, Ljava/util/Map;
 
-    .end local p1
+    .end local p1    # "other":Ljava/lang/Object;
     invoke-interface {p1}, Ljava/util/Map;->size()I
 
     move-result v0

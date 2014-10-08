@@ -26,7 +26,6 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 42
@@ -41,7 +40,6 @@
 
 .method static synthetic a(Lcom/chartboost/sdk/impl/f;)Landroid/graphics/Path;
     .locals 1
-    .parameter
 
     .prologue
     .line 35
@@ -136,33 +134,32 @@
     nop
 
     :array_0
-    .array-data 0x4
-        0x2at 0xc2t 0xfet 0xfft
-        0x0t 0xa2t 0xfet 0xfft
-        0x0t 0x84t 0xfet 0xfft
+    .array-data 4
+        -0x13dd6
+        -0x15e00
+        -0x17c00
     .end array-data
 
     .line 183
     :array_1
-    .array-data 0x4
-        0x0t 0x84t 0xfet 0xfft
-        0x0t 0xa2t 0xfet 0xfft
-        0x2at 0xc2t 0xfet 0xfft
+    .array-data 4
+        -0x17c00
+        -0x15e00
+        -0x13dd6
     .end array-data
 .end method
 
 .method private a(Landroid/content/Context;)V
     .locals 9
-    .parameter
 
     .prologue
     const/4 v8, -0x1
 
-    const/high16 v7, 0x4140
+    const/high16 v7, 0x41400000
 
-    const/high16 v6, 0x40a0
+    const/high16 v6, 0x40a00000
 
-    const/high16 v3, 0x3f80
+    const/high16 v3, 0x3f800000
 
     const/4 v5, 0x1
 
@@ -180,7 +177,7 @@
     .line 59
     const/4 v1, 0x2
 
-    const/high16 v2, 0x4150
+    const/high16 v2, 0x41500000
 
     invoke-virtual {p0, v1, v2}, Lcom/chartboost/sdk/impl/f;->setTextSize(IF)V
 
@@ -327,7 +324,6 @@
 
 .method static synthetic b(Lcom/chartboost/sdk/impl/f;)Landroid/graphics/RectF;
     .locals 1
-    .parameter
 
     .prologue
     .line 36
@@ -338,7 +334,6 @@
 
 .method static synthetic c(Lcom/chartboost/sdk/impl/f;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 171
@@ -349,7 +344,6 @@
 
 .method static synthetic d(Lcom/chartboost/sdk/impl/f;)Landroid/graphics/Paint;
     .locals 1
-    .parameter
 
     .prologue
     .line 37
@@ -360,7 +354,6 @@
 
 .method static synthetic e(Lcom/chartboost/sdk/impl/f;)Landroid/graphics/Shader;
     .locals 1
-    .parameter
 
     .prologue
     .line 38
@@ -371,7 +364,6 @@
 
 .method static synthetic f(Lcom/chartboost/sdk/impl/f;)Landroid/graphics/Shader;
     .locals 1
-    .parameter
 
     .prologue
     .line 38
@@ -382,7 +374,6 @@
 
 .method static synthetic g(Lcom/chartboost/sdk/impl/f;)Landroid/graphics/Path;
     .locals 1
-    .parameter
 
     .prologue
     .line 35
@@ -393,7 +384,6 @@
 
 .method static synthetic h(Lcom/chartboost/sdk/impl/f;)Landroid/graphics/Path;
     .locals 1
-    .parameter
 
     .prologue
     .line 35
@@ -404,7 +394,6 @@
 
 .method static synthetic i(Lcom/chartboost/sdk/impl/f;)Landroid/graphics/Paint;
     .locals 1
-    .parameter
 
     .prologue
     .line 37

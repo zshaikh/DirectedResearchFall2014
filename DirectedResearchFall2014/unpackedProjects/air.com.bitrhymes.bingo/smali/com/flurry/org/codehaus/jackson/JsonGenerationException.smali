@@ -10,7 +10,7 @@
 # direct methods
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 1
-    .parameter "msg"
+    .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
     .line 21
@@ -26,8 +26,8 @@
 
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 1
-    .parameter "msg"
-    .parameter "rootCause"
+    .param p1, "msg"    # Ljava/lang/String;
+    .param p2, "rootCause"    # Ljava/lang/Throwable;
 
     .prologue
     .line 26
@@ -43,7 +43,7 @@
 
 .method public constructor <init>(Ljava/lang/Throwable;)V
     .locals 0
-    .parameter "rootCause"
+    .param p1, "rootCause"    # Ljava/lang/Throwable;
 
     .prologue
     .line 16

@@ -30,8 +30,8 @@
 # direct methods
 .method public constructor <init>(Lcom/flurry/org/codehaus/jackson/map/introspect/BasicBeanDescription;Z)V
     .locals 1
-    .parameter "beanDesc"
-    .parameter "canFixAccess"
+    .param p1, "beanDesc"    # Lcom/flurry/org/codehaus/jackson/map/introspect/BasicBeanDescription;
+    .param p2, "canFixAccess"    # Z
 
     .prologue
     .line 42
@@ -56,7 +56,7 @@
 # virtual methods
 .method public addBooleanCreator(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedWithParams;)V
     .locals 2
-    .parameter "creator"
+    .param p1, "creator"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedWithParams;
 
     .prologue
     .line 97
@@ -76,7 +76,7 @@
 
 .method public addDelegatingCreator(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedWithParams;)V
     .locals 2
-    .parameter "creator"
+    .param p1, "creator"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedWithParams;
 
     .prologue
     .line 101
@@ -96,7 +96,7 @@
 
 .method public addDoubleCreator(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedWithParams;)V
     .locals 2
-    .parameter "creator"
+    .param p1, "creator"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedWithParams;
 
     .prologue
     .line 94
@@ -116,7 +116,7 @@
 
 .method public addIntCreator(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedWithParams;)V
     .locals 2
-    .parameter "creator"
+    .param p1, "creator"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedWithParams;
 
     .prologue
     .line 88
@@ -136,7 +136,7 @@
 
 .method public addLongCreator(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedWithParams;)V
     .locals 2
-    .parameter "creator"
+    .param p1, "creator"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedWithParams;
 
     .prologue
     .line 91
@@ -156,8 +156,8 @@
 
 .method public addPropertyCreator(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedWithParams;[Lcom/flurry/org/codehaus/jackson/map/deser/impl/CreatorProperty;)V
     .locals 8
-    .parameter "creator"
-    .parameter "properties"
+    .param p1, "creator"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedWithParams;
+    .param p2, "properties"    # [Lcom/flurry/org/codehaus/jackson/map/deser/impl/CreatorProperty;
 
     .prologue
     .line 106
@@ -184,13 +184,13 @@
     invoke-direct {v3}, Ljava/util/HashMap;-><init>()V
 
     .line 110
-    .local v3, names:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/Integer;>;"
+    .local v3, "names":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/Integer;>;"
     const/4 v0, 0x0
 
-    .local v0, i:I
+    .local v0, "i":I
     array-length v1, p2
 
-    .local v1, len:I
+    .local v1, "len":I
     :goto_0
     if-ge v0, v1, :cond_1
 
@@ -202,7 +202,7 @@
     move-result-object v2
 
     .line 112
-    .local v2, name:Ljava/lang/String;
+    .local v2, "name":Ljava/lang/String;
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v5
@@ -214,7 +214,7 @@
     check-cast v4, Ljava/lang/Integer;
 
     .line 113
-    .local v4, old:Ljava/lang/Integer;
+    .local v4, "old":Ljava/lang/Integer;
     if-eqz v4, :cond_0
 
     .line 114
@@ -275,11 +275,11 @@
     goto :goto_0
 
     .line 118
-    .end local v0           #i:I
-    .end local v1           #len:I
-    .end local v2           #name:Ljava/lang/String;
-    .end local v3           #names:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/Integer;>;"
-    .end local v4           #old:Ljava/lang/Integer;
+    .end local v0    # "i":I
+    .end local v1    # "len":I
+    .end local v2    # "name":Ljava/lang/String;
+    .end local v3    # "names":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/Integer;>;"
+    .end local v4    # "old":Ljava/lang/Integer;
     :cond_1
     iput-object p2, p0, Lcom/flurry/org/codehaus/jackson/map/deser/impl/CreatorCollector;->_propertyBasedArgs:[Lcom/flurry/org/codehaus/jackson/map/deser/impl/CreatorProperty;
 
@@ -289,7 +289,7 @@
 
 .method public addStringCreator(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedWithParams;)V
     .locals 2
-    .parameter "creator"
+    .param p1, "creator"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedWithParams;
 
     .prologue
     .line 85
@@ -309,7 +309,7 @@
 
 .method public constructValueInstantiator(Lcom/flurry/org/codehaus/jackson/map/DeserializationConfig;)Lcom/flurry/org/codehaus/jackson/map/deser/ValueInstantiator;
     .locals 7
-    .parameter "config"
+    .param p1, "config"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationConfig;
 
     .prologue
     .line 52
@@ -324,7 +324,7 @@
     invoke-direct {v0, p1, v1}, Lcom/flurry/org/codehaus/jackson/map/deser/std/StdValueInstantiator;-><init>(Lcom/flurry/org/codehaus/jackson/map/DeserializationConfig;Lcom/flurry/org/codehaus/jackson/type/JavaType;)V
 
     .line 56
-    .local v0, inst:Lcom/flurry/org/codehaus/jackson/map/deser/std/StdValueInstantiator;
+    .local v0, "inst":Lcom/flurry/org/codehaus/jackson/map/deser/std/StdValueInstantiator;
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/map/deser/impl/CreatorCollector;->_delegateCreator:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedWithParams;
 
     if-nez v1, :cond_0
@@ -333,7 +333,7 @@
     const/4 v3, 0x0
 
     .line 63
-    .local v3, delegateType:Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .local v3, "delegateType":Lcom/flurry/org/codehaus/jackson/type/JavaType;
     :goto_0
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/map/deser/impl/CreatorCollector;->_defaultConstructor:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedConstructor;
 
@@ -374,7 +374,7 @@
     return-object v0
 
     .line 59
-    .end local v3           #delegateType:Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .end local v3    # "delegateType":Lcom/flurry/org/codehaus/jackson/type/JavaType;
     :cond_0
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/map/deser/impl/CreatorCollector;->_beanDesc:Lcom/flurry/org/codehaus/jackson/map/introspect/BasicBeanDescription;
 
@@ -383,7 +383,7 @@
     move-result-object v6
 
     .line 60
-    .local v6, bindings:Lcom/flurry/org/codehaus/jackson/map/type/TypeBindings;
+    .local v6, "bindings":Lcom/flurry/org/codehaus/jackson/map/type/TypeBindings;
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/map/deser/impl/CreatorCollector;->_delegateCreator:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedWithParams;
 
     const/4 v2, 0x0
@@ -396,13 +396,13 @@
 
     move-result-object v3
 
-    .restart local v3       #delegateType:Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .restart local v3    # "delegateType":Lcom/flurry/org/codehaus/jackson/type/JavaType;
     goto :goto_0
 .end method
 
 .method public setDefaultConstructor(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedConstructor;)V
     .locals 0
-    .parameter "ctor"
+    .param p1, "ctor"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedConstructor;
 
     .prologue
     .line 81
@@ -414,9 +414,9 @@
 
 .method protected verifyNonDup(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedWithParams;Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedWithParams;Ljava/lang/String;)Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedWithParams;
     .locals 3
-    .parameter "newOne"
-    .parameter "oldOne"
-    .parameter "type"
+    .param p1, "newOne"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedWithParams;
+    .param p2, "oldOne"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedWithParams;
+    .param p3, "type"    # Ljava/lang/String;
 
     .prologue
     .line 130
@@ -489,7 +489,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/flurry/org/codehaus/jackson/map/deser/impl/CreatorCollector;
     check-cast p0, Ljava/lang/reflect/Member;
 
     invoke-static {p0}, Lcom/flurry/org/codehaus/jackson/map/util/ClassUtil;->checkAndFixAccess(Ljava/lang/reflect/Member;)V

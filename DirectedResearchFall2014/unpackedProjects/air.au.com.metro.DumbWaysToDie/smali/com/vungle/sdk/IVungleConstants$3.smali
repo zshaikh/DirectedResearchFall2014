@@ -23,7 +23,6 @@
 # direct methods
 .method constructor <init>(Lcom/vungle/sdk/VunglePub$EventListener;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 297
@@ -36,8 +35,6 @@
 # virtual methods
 .method public final a(DD)Lcom/vungle/sdk/IVungleConstants$a;
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 300

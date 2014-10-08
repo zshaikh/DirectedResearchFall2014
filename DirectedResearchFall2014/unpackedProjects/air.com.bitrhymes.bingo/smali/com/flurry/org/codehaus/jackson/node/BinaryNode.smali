@@ -32,7 +32,7 @@
 
 .method public constructor <init>([B)V
     .locals 0
-    .parameter "data"
+    .param p1, "data"    # [B
 
     .prologue
     .line 27
@@ -47,9 +47,9 @@
 
 .method public constructor <init>([BII)V
     .locals 2
-    .parameter "data"
-    .parameter "offset"
-    .parameter "length"
+    .param p1, "data"    # [B
+    .param p2, "offset"    # I
+    .param p3, "length"    # I
 
     .prologue
     .line 32
@@ -87,7 +87,7 @@
 
 .method public static valueOf([B)Lcom/flurry/org/codehaus/jackson/node/BinaryNode;
     .locals 1
-    .parameter "data"
+    .param p0, "data"    # [B
 
     .prologue
     .line 43
@@ -122,9 +122,9 @@
 
 .method public static valueOf([BII)Lcom/flurry/org/codehaus/jackson/node/BinaryNode;
     .locals 1
-    .parameter "data"
-    .parameter "offset"
-    .parameter "length"
+    .param p0, "data"    # [B
+    .param p1, "offset"    # I
+    .param p2, "length"    # I
 
     .prologue
     .line 54
@@ -189,7 +189,7 @@
 
 .method public equals(Ljava/lang/Object;)Z
     .locals 3
-    .parameter "o"
+    .param p1, "o"    # Ljava/lang/Object;
 
     .prologue
     const/4 v2, 0x0
@@ -200,12 +200,12 @@
     const/4 v0, 0x1
 
     .line 119
-    .end local p1
+    .end local p1    # "o":Ljava/lang/Object;
     :goto_0
     return v0
 
     .line 115
-    .restart local p1
+    .restart local p1    # "o":Ljava/lang/Object;
     :cond_0
     if-nez p1, :cond_1
 
@@ -234,7 +234,7 @@
     :cond_2
     check-cast p1, Lcom/flurry/org/codehaus/jackson/node/BinaryNode;
 
-    .end local p1
+    .end local p1    # "o":Ljava/lang/Object;
     iget-object v0, p1, Lcom/flurry/org/codehaus/jackson/node/BinaryNode;->_data:[B
 
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/node/BinaryNode;->_data:[B
@@ -290,8 +290,8 @@
 
 .method public final serialize(Lcom/flurry/org/codehaus/jackson/JsonGenerator;Lcom/flurry/org/codehaus/jackson/map/SerializerProvider;)V
     .locals 1
-    .parameter "jg"
-    .parameter "provider"
+    .param p1, "jg"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator;
+    .param p2, "provider"    # Lcom/flurry/org/codehaus/jackson/map/SerializerProvider;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,

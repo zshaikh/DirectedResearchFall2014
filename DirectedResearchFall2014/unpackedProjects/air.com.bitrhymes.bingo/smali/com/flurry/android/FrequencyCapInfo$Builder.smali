@@ -52,7 +52,6 @@
 
 .method private constructor <init>(B)V
     .locals 1
-    .parameter
 
     .prologue
     .line 182
@@ -711,7 +710,6 @@
 
 .method public setExpirationTime(J)Lcom/flurry/android/FrequencyCapInfo$Builder;
     .locals 3
-    .parameter
 
     .prologue
     const/4 v2, 0x2
@@ -747,7 +745,6 @@
 
 .method public setIdHash(Ljava/lang/CharSequence;)Lcom/flurry/android/FrequencyCapInfo$Builder;
     .locals 3
-    .parameter
 
     .prologue
     const/4 v2, 0x0
@@ -779,7 +776,6 @@
 
 .method public setNewCap(I)Lcom/flurry/android/FrequencyCapInfo$Builder;
     .locals 3
-    .parameter
 
     .prologue
     const/4 v2, 0x4
@@ -815,7 +811,6 @@
 
 .method public setPreviousCap(I)Lcom/flurry/android/FrequencyCapInfo$Builder;
     .locals 3
-    .parameter
 
     .prologue
     const/4 v2, 0x5
@@ -851,7 +846,6 @@
 
 .method public setPreviousCapType(I)Lcom/flurry/android/FrequencyCapInfo$Builder;
     .locals 3
-    .parameter
 
     .prologue
     const/4 v2, 0x6
@@ -887,7 +881,6 @@
 
 .method public setServeTime(J)Lcom/flurry/android/FrequencyCapInfo$Builder;
     .locals 3
-    .parameter
 
     .prologue
     const/4 v2, 0x1
@@ -921,7 +914,6 @@
 
 .method public setViews(I)Lcom/flurry/android/FrequencyCapInfo$Builder;
     .locals 3
-    .parameter
 
     .prologue
     const/4 v2, 0x3

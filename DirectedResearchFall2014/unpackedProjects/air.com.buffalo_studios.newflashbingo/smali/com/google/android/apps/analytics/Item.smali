@@ -31,42 +31,42 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    #getter for: Lcom/google/android/apps/analytics/Item$Builder;->orderId:Ljava/lang/String;
+    # getter for: Lcom/google/android/apps/analytics/Item$Builder;->orderId:Ljava/lang/String;
     invoke-static {p1}, Lcom/google/android/apps/analytics/Item$Builder;->access$000(Lcom/google/android/apps/analytics/Item$Builder;)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/android/apps/analytics/Item;->orderId:Ljava/lang/String;
 
-    #getter for: Lcom/google/android/apps/analytics/Item$Builder;->itemSKU:Ljava/lang/String;
+    # getter for: Lcom/google/android/apps/analytics/Item$Builder;->itemSKU:Ljava/lang/String;
     invoke-static {p1}, Lcom/google/android/apps/analytics/Item$Builder;->access$100(Lcom/google/android/apps/analytics/Item$Builder;)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/android/apps/analytics/Item;->itemSKU:Ljava/lang/String;
 
-    #getter for: Lcom/google/android/apps/analytics/Item$Builder;->itemPrice:D
+    # getter for: Lcom/google/android/apps/analytics/Item$Builder;->itemPrice:D
     invoke-static {p1}, Lcom/google/android/apps/analytics/Item$Builder;->access$200(Lcom/google/android/apps/analytics/Item$Builder;)D
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/google/android/apps/analytics/Item;->itemPrice:D
 
-    #getter for: Lcom/google/android/apps/analytics/Item$Builder;->itemCount:J
+    # getter for: Lcom/google/android/apps/analytics/Item$Builder;->itemCount:J
     invoke-static {p1}, Lcom/google/android/apps/analytics/Item$Builder;->access$300(Lcom/google/android/apps/analytics/Item$Builder;)J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/google/android/apps/analytics/Item;->itemCount:J
 
-    #getter for: Lcom/google/android/apps/analytics/Item$Builder;->itemName:Ljava/lang/String;
+    # getter for: Lcom/google/android/apps/analytics/Item$Builder;->itemName:Ljava/lang/String;
     invoke-static {p1}, Lcom/google/android/apps/analytics/Item$Builder;->access$400(Lcom/google/android/apps/analytics/Item$Builder;)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/android/apps/analytics/Item;->itemName:Ljava/lang/String;
 
-    #getter for: Lcom/google/android/apps/analytics/Item$Builder;->itemCategory:Ljava/lang/String;
+    # getter for: Lcom/google/android/apps/analytics/Item$Builder;->itemCategory:Ljava/lang/String;
     invoke-static {p1}, Lcom/google/android/apps/analytics/Item$Builder;->access$500(Lcom/google/android/apps/analytics/Item$Builder;)Ljava/lang/String;
 
     move-result-object v0

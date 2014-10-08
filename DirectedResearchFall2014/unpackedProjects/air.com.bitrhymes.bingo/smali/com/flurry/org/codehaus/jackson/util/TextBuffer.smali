@@ -59,7 +59,7 @@
 
 .method public constructor <init>(Lcom/flurry/org/codehaus/jackson/util/BufferRecycler;)V
     .locals 1
-    .parameter "allocator"
+    .param p1, "allocator"    # Lcom/flurry/org/codehaus/jackson/util/BufferRecycler;
 
     .prologue
     .line 121
@@ -79,7 +79,7 @@
 
 .method private final _charArray(I)[C
     .locals 1
-    .parameter "len"
+    .param p1, "len"    # I
 
     .prologue
     .line 705
@@ -137,7 +137,7 @@
     move-result-object v6
 
     .line 682
-    .local v6, result:[C
+    .local v6, "result":[C
     iget-object v8, p0, Lcom/flurry/org/codehaus/jackson/util/TextBuffer;->_inputBuffer:[C
 
     iget v9, p0, Lcom/flurry/org/codehaus/jackson/util/TextBuffer;->_inputStart:I
@@ -153,14 +153,14 @@
     goto :goto_0
 
     .line 685
-    .end local v6           #result:[C
+    .end local v6    # "result":[C
     :cond_2
     invoke-virtual {p0}, Lcom/flurry/org/codehaus/jackson/util/TextBuffer;->size()I
 
     move-result v7
 
     .line 686
-    .local v7, size:I
+    .local v7, "size":I
     if-ge v7, v9, :cond_3
 
     .line 687
@@ -173,13 +173,13 @@
     const/4 v5, 0x0
 
     .line 690
-    .local v5, offset:I
+    .local v5, "offset":I
     invoke-direct {p0, v7}, Lcom/flurry/org/codehaus/jackson/util/TextBuffer;->_charArray(I)[C
 
     move-result-object v6
 
     .line 691
-    .restart local v6       #result:[C
+    .restart local v6    # "result":[C
     iget-object v8, p0, Lcom/flurry/org/codehaus/jackson/util/TextBuffer;->_segments:Ljava/util/ArrayList;
 
     if-eqz v8, :cond_4
@@ -187,14 +187,14 @@
     .line 692
     const/4 v3, 0x0
 
-    .local v3, i:I
+    .local v3, "i":I
     iget-object v8, p0, Lcom/flurry/org/codehaus/jackson/util/TextBuffer;->_segments:Ljava/util/ArrayList;
 
     invoke-virtual {v8}, Ljava/util/ArrayList;->size()I
 
     move-result v4
 
-    .local v4, len:I
+    .local v4, "len":I
     :goto_2
     if-ge v3, v4, :cond_4
 
@@ -214,11 +214,11 @@
     move-object v1, v0
 
     .line 694
-    .local v1, curr:[C
+    .local v1, "curr":[C
     array-length v2, v1
 
     .line 695
-    .local v2, currLen:I
+    .local v2, "currLen":I
     invoke-static {v1, v11, v6, v5, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
     .line 696
@@ -230,10 +230,10 @@
     goto :goto_2
 
     .line 699
-    .end local v1           #curr:[C
-    .end local v2           #currLen:I
-    .end local v3           #i:I
-    .end local v4           #len:I
+    .end local v1    # "curr":[C
+    .end local v2    # "currLen":I
+    .end local v3    # "i":I
+    .end local v4    # "len":I
     :cond_4
     iget-object v8, p0, Lcom/flurry/org/codehaus/jackson/util/TextBuffer;->_currentSegment:[C
 
@@ -269,7 +269,7 @@
 
 .method private expand(I)V
     .locals 5
-    .parameter "minNewSegmentSize"
+    .param p1, "minNewSegmentSize"    # I
 
     .prologue
     .line 651
@@ -289,7 +289,7 @@
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/util/TextBuffer;->_currentSegment:[C
 
     .line 655
-    .local v0, curr:[C
+    .local v0, "curr":[C
     const/4 v3, 0x1
 
     iput-boolean v3, p0, Lcom/flurry/org/codehaus/jackson/util/TextBuffer;->_hasSegments:Z
@@ -312,11 +312,11 @@
     array-length v1, v0
 
     .line 660
-    .local v1, oldLen:I
+    .local v1, "oldLen":I
     shr-int/lit8 v2, v1, 0x1
 
     .line 661
-    .local v2, sizeAddition:I
+    .local v2, "sizeAddition":I
     if-ge v2, p1, :cond_1
 
     .line 662
@@ -324,7 +324,7 @@
 
     .line 664
     :cond_1
-    const/high16 v3, 0x4
+    const/high16 v3, 0x40000
 
     add-int v4, v1, v2
 
@@ -350,7 +350,7 @@
 
 .method private final findBuffer(I)[C
     .locals 2
-    .parameter "needed"
+    .param p1, "needed"    # I
 
     .prologue
     .line 234
@@ -385,7 +385,7 @@
 
 .method private unshare(I)V
     .locals 6
-    .parameter "needExtra"
+    .param p1, "needExtra"    # I
 
     .prologue
     const/4 v5, 0x0
@@ -394,14 +394,14 @@
     iget v2, p0, Lcom/flurry/org/codehaus/jackson/util/TextBuffer;->_inputLen:I
 
     .line 626
-    .local v2, sharedLen:I
+    .local v2, "sharedLen":I
     iput v5, p0, Lcom/flurry/org/codehaus/jackson/util/TextBuffer;->_inputLen:I
 
     .line 627
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/util/TextBuffer;->_inputBuffer:[C
 
     .line 628
-    .local v0, inputBuf:[C
+    .local v0, "inputBuf":[C
     const/4 v4, 0x0
 
     iput-object v4, p0, Lcom/flurry/org/codehaus/jackson/util/TextBuffer;->_inputBuffer:[C
@@ -410,7 +410,7 @@
     iget v3, p0, Lcom/flurry/org/codehaus/jackson/util/TextBuffer;->_inputStart:I
 
     .line 630
-    .local v3, start:I
+    .local v3, "start":I
     const/4 v4, -0x1
 
     iput v4, p0, Lcom/flurry/org/codehaus/jackson/util/TextBuffer;->_inputStart:I
@@ -419,7 +419,7 @@
     add-int v1, v2, p1
 
     .line 634
-    .local v1, needed:I
+    .local v1, "needed":I
     iget-object v4, p0, Lcom/flurry/org/codehaus/jackson/util/TextBuffer;->_currentSegment:[C
 
     if-eqz v4, :cond_0
@@ -462,7 +462,7 @@
 # virtual methods
 .method public append(C)V
     .locals 3
-    .parameter "c"
+    .param p1, "c"    # C
 
     .prologue
     const/4 v2, 0x0
@@ -488,7 +488,7 @@
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/util/TextBuffer;->_currentSegment:[C
 
     .line 437
-    .local v0, curr:[C
+    .local v0, "curr":[C
     iget v1, p0, Lcom/flurry/org/codehaus/jackson/util/TextBuffer;->_currentSize:I
 
     array-length v2, v0
@@ -519,9 +519,9 @@
 
 .method public append(Ljava/lang/String;II)V
     .locals 5
-    .parameter "str"
-    .parameter "offset"
-    .parameter "len"
+    .param p1, "str"    # Ljava/lang/String;
+    .param p2, "offset"    # I
+    .param p3, "len"    # I
 
     .prologue
     const/4 v3, 0x0
@@ -545,7 +545,7 @@
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/util/TextBuffer;->_currentSegment:[C
 
     .line 486
-    .local v0, curr:[C
+    .local v0, "curr":[C
     array-length v2, v0
 
     iget v3, p0, Lcom/flurry/org/codehaus/jackson/util/TextBuffer;->_currentSize:I
@@ -553,7 +553,7 @@
     sub-int v1, v2, v3
 
     .line 487
-    .local v1, max:I
+    .local v1, "max":I
     if-lt v1, p3, :cond_1
 
     .line 488
@@ -612,9 +612,9 @@
 
 .method public append([CII)V
     .locals 4
-    .parameter "c"
-    .parameter "start"
-    .parameter "len"
+    .param p1, "c"    # [C
+    .param p2, "start"    # I
+    .param p3, "len"    # I
 
     .prologue
     const/4 v3, 0x0
@@ -638,7 +638,7 @@
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/util/TextBuffer;->_currentSegment:[C
 
     .line 455
-    .local v0, curr:[C
+    .local v0, "curr":[C
     array-length v2, v0
 
     iget v3, p0, Lcom/flurry/org/codehaus/jackson/util/TextBuffer;->_currentSize:I
@@ -646,7 +646,7 @@
     sub-int v1, v2, v3
 
     .line 457
-    .local v1, max:I
+    .local v1, "max":I
     if-lt v1, p3, :cond_1
 
     .line 458
@@ -705,7 +705,7 @@
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/util/TextBuffer;->_resultArray:[C
 
     .line 373
-    .local v0, result:[C
+    .local v0, "result":[C
     if-nez v0, :cond_0
 
     .line 374
@@ -895,11 +895,11 @@
     iget v5, p0, Lcom/flurry/org/codehaus/jackson/util/TextBuffer;->_segmentSize:I
 
     .line 347
-    .local v5, segLen:I
+    .local v5, "segLen":I
     iget v1, p0, Lcom/flurry/org/codehaus/jackson/util/TextBuffer;->_currentSize:I
 
     .line 349
-    .local v1, currLen:I
+    .local v1, "currLen":I
     if-nez v5, :cond_5
 
     .line 350
@@ -932,7 +932,7 @@
     invoke-direct {v4, v6}, Ljava/lang/StringBuilder;-><init>(I)V
 
     .line 354
-    .local v4, sb:Ljava/lang/StringBuilder;
+    .local v4, "sb":Ljava/lang/StringBuilder;
     iget-object v6, p0, Lcom/flurry/org/codehaus/jackson/util/TextBuffer;->_segments:Ljava/util/ArrayList;
 
     if-eqz v6, :cond_6
@@ -940,14 +940,14 @@
     .line 355
     const/4 v2, 0x0
 
-    .local v2, i:I
+    .local v2, "i":I
     iget-object v6, p0, Lcom/flurry/org/codehaus/jackson/util/TextBuffer;->_segments:Ljava/util/ArrayList;
 
     invoke-virtual {v6}, Ljava/util/ArrayList;->size()I
 
     move-result v3
 
-    .local v3, len:I
+    .local v3, "len":I
     :goto_3
     if-ge v2, v3, :cond_6
 
@@ -961,7 +961,7 @@
     check-cast v0, [C
 
     .line 357
-    .local v0, curr:[C
+    .local v0, "curr":[C
     array-length v6, v0
 
     invoke-virtual {v4, v0, v8, v6}, Ljava/lang/StringBuilder;->append([CII)Ljava/lang/StringBuilder;
@@ -972,9 +972,9 @@
     goto :goto_3
 
     .line 361
-    .end local v0           #curr:[C
-    .end local v2           #i:I
-    .end local v3           #len:I
+    .end local v0    # "curr":[C
+    .end local v2    # "i":I
+    .end local v3    # "len":I
     :cond_6
     iget-object v6, p0, Lcom/flurry/org/codehaus/jackson/util/TextBuffer;->_currentSegment:[C
 
@@ -1033,7 +1033,7 @@
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/util/TextBuffer;->_currentSegment:[C
 
     .line 548
-    .local v0, curr:[C
+    .local v0, "curr":[C
     if-nez v0, :cond_1
 
     .line 549
@@ -1071,7 +1071,7 @@
     .locals 6
 
     .prologue
-    const/high16 v5, 0x4
+    const/high16 v5, 0x40000
 
     const/4 v4, 0x0
 
@@ -1079,11 +1079,11 @@
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/util/TextBuffer;->_currentSegment:[C
 
     .line 588
-    .local v0, curr:[C
+    .local v0, "curr":[C
     array-length v1, v0
 
     .line 590
-    .local v1, len:I
+    .local v1, "len":I
     if-ne v1, v5, :cond_0
 
     const v3, 0x40001
@@ -1091,7 +1091,7 @@
     move v2, v3
 
     .line 592
-    .local v2, newLen:I
+    .local v2, "newLen":I
     :goto_0
     invoke-direct {p0, v2}, Lcom/flurry/org/codehaus/jackson/util/TextBuffer;->_charArray(I)[C
 
@@ -1110,7 +1110,7 @@
     return-object v3
 
     .line 590
-    .end local v2           #newLen:I
+    .end local v2    # "newLen":I
     :cond_0
     shr-int/lit8 v3, v1, 0x1
 
@@ -1160,7 +1160,7 @@
     array-length v2, v3
 
     .line 570
-    .local v2, oldLen:I
+    .local v2, "oldLen":I
     iget v3, p0, Lcom/flurry/org/codehaus/jackson/util/TextBuffer;->_segmentSize:I
 
     add-int/2addr v3, v2
@@ -1172,20 +1172,20 @@
 
     add-int/2addr v3, v2
 
-    const/high16 v4, 0x4
+    const/high16 v4, 0x40000
 
     invoke-static {v3, v4}, Ljava/lang/Math;->min(II)I
 
     move-result v1
 
     .line 573
-    .local v1, newLen:I
+    .local v1, "newLen":I
     invoke-direct {p0, v1}, Lcom/flurry/org/codehaus/jackson/util/TextBuffer;->_charArray(I)[C
 
     move-result-object v0
 
     .line 574
-    .local v0, curr:[C
+    .local v0, "curr":[C
     const/4 v3, 0x0
 
     iput v3, p0, Lcom/flurry/org/codehaus/jackson/util/TextBuffer;->_currentSize:I
@@ -1223,7 +1223,7 @@
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/util/TextBuffer;->_currentSegment:[C
 
     .line 522
-    .local v0, curr:[C
+    .local v0, "curr":[C
     if-nez v0, :cond_2
 
     .line 523
@@ -1415,7 +1415,7 @@
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/util/TextBuffer;->_currentSegment:[C
 
     .line 144
-    .local v0, buf:[C
+    .local v0, "buf":[C
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/flurry/org/codehaus/jackson/util/TextBuffer;->_currentSegment:[C
@@ -1432,9 +1432,9 @@
 
 .method public resetWithCopy([CII)V
     .locals 3
-    .parameter "buf"
-    .parameter "start"
-    .parameter "len"
+    .param p1, "buf"    # [C
+    .param p2, "start"    # I
+    .param p3, "len"    # I
 
     .prologue
     const/4 v2, 0x0
@@ -1538,9 +1538,9 @@
 
 .method public resetWithShared([CII)V
     .locals 1
-    .parameter "buf"
-    .parameter "start"
-    .parameter "len"
+    .param p1, "buf"    # [C
+    .param p2, "start"    # I
+    .param p3, "len"    # I
 
     .prologue
     const/4 v0, 0x0
@@ -1575,7 +1575,7 @@
 
 .method public resetWithString(Ljava/lang/String;)V
     .locals 3
-    .parameter "value"
+    .param p1, "value"    # Ljava/lang/String;
 
     .prologue
     const/4 v2, 0x0
@@ -1617,7 +1617,7 @@
 
 .method public setCurrentLength(I)V
     .locals 0
-    .parameter "len"
+    .param p1, "len"    # I
 
     .prologue
     .line 559

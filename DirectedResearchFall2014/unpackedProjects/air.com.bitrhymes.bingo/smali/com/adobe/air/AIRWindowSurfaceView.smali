@@ -194,8 +194,6 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Lcom/adobe/air/AndroidActivityWrapper;)V
     .locals 5
-    .parameter
-    .parameter
 
     .prologue
     const/4 v4, 0x1
@@ -219,7 +217,7 @@
     iput v0, p0, Lcom/adobe/air/AIRWindowSurfaceView;->kMultitouchGesture:I
 
     .line 71
-    const/high16 v0, 0x4080
+    const/high16 v0, 0x40800000
 
     iput v0, p0, Lcom/adobe/air/AIRWindowSurfaceView;->kSampleSize:F
 
@@ -433,7 +431,6 @@
 
 .method private AllowOSToHandleKeys(I)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 1905
@@ -480,9 +477,6 @@
 
 .method private GetMetaKeyState(Lcom/adobe/air/AIRWindowSurfaceView$MetaKeyState;ZZ)Lcom/adobe/air/AIRWindowSurfaceView$MetaKeyState;
     .locals 2
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 1857
@@ -596,7 +590,6 @@
 
 .method private HandleMetaKeyAction(Landroid/view/KeyEvent;)V
     .locals 4
-    .parameter
 
     .prologue
     const/4 v3, 0x1
@@ -699,8 +692,6 @@
 
 .method private HandleShortCuts(ILandroid/view/KeyEvent;)Z
     .locals 3
-    .parameter
-    .parameter
 
     .prologue
     const/4 v2, 0x1
@@ -841,9 +832,6 @@
 
 .method private IsPointInTextBox(FFI)Z
     .locals 2
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 1807
@@ -924,9 +912,6 @@
 
 .method private IsTouchEventHandlingAllowed(IFF)Z
     .locals 4
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const/4 v3, 0x1
@@ -1023,8 +1008,6 @@
 
 .method private IsTouchMove(FF)Z
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     .line 1795
@@ -1076,8 +1059,6 @@
 
 .method static synthetic access$002(Lcom/adobe/air/AIRWindowSurfaceView;Z)Z
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 64
@@ -1088,7 +1069,6 @@
 
 .method static synthetic access$100(Lcom/adobe/air/AIRWindowSurfaceView;)F
     .locals 1
-    .parameter
 
     .prologue
     .line 64
@@ -1099,7 +1079,6 @@
 
 .method static synthetic access$200(Lcom/adobe/air/AIRWindowSurfaceView;)F
     .locals 1
-    .parameter
 
     .prologue
     .line 64
@@ -1110,7 +1089,6 @@
 
 .method static synthetic access$300(Lcom/adobe/air/AIRWindowSurfaceView;)I
     .locals 1
-    .parameter
 
     .prologue
     .line 64
@@ -1121,7 +1099,6 @@
 
 .method static synthetic access$400(Lcom/adobe/air/AIRWindowSurfaceView;)Lcom/adobe/air/AIRWindowSurfaceView$HoverTimeoutHandler;
     .locals 1
-    .parameter
 
     .prologue
     .line 64
@@ -1132,8 +1109,6 @@
 
 .method static synthetic access$500(Lcom/adobe/air/AIRWindowSurfaceView;Z)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 64
@@ -1144,7 +1119,6 @@
 
 .method static synthetic access$600(Lcom/adobe/air/AIRWindowSurfaceView;)Lcom/adobe/air/AndroidWebView;
     .locals 1
-    .parameter
 
     .prologue
     .line 64
@@ -1155,8 +1129,6 @@
 
 .method static synthetic access$602(Lcom/adobe/air/AIRWindowSurfaceView;Lcom/adobe/air/AndroidWebView;)Lcom/adobe/air/AndroidWebView;
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 64
@@ -1167,7 +1139,6 @@
 
 .method static synthetic access$700(Lcom/adobe/air/AIRWindowSurfaceView;)Lcom/adobe/air/AndroidStageText;
     .locals 1
-    .parameter
 
     .prologue
     .line 64
@@ -1178,8 +1149,6 @@
 
 .method static synthetic access$702(Lcom/adobe/air/AIRWindowSurfaceView;Lcom/adobe/air/AndroidStageText;)Lcom/adobe/air/AndroidStageText;
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 64
@@ -1190,8 +1159,6 @@
 
 .method static synthetic access$802(Lcom/adobe/air/AIRWindowSurfaceView;I)I
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 64
@@ -1202,8 +1169,6 @@
 
 .method static synthetic access$900(Lcom/adobe/air/AIRWindowSurfaceView;Z)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 64
@@ -1214,7 +1179,6 @@
 
 .method private hasStatusBar(Landroid/view/Window;)Z
     .locals 2
-    .parameter
 
     .prologue
     .line 1290
@@ -1341,8 +1305,6 @@
 
 .method private setSurfaceFormatImpl(ZI)V
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 1022
@@ -1478,7 +1440,6 @@
 
 .method GetMetaKeyCharacter(Landroid/view/KeyEvent;)I
     .locals 3
-    .parameter
 
     .prologue
     .line 1894
@@ -1688,7 +1649,6 @@
 
 .method public SetSelectionMode(Z)V
     .locals 0
-    .parameter
 
     .prologue
     .line 2009
@@ -1700,7 +1660,6 @@
 
 .method public SetSurfaceChangedForSoftKeyboard(Z)V
     .locals 0
-    .parameter
 
     .prologue
     .line 2052
@@ -1788,11 +1747,6 @@
 
 .method protected draw(IIIILandroid/graphics/Bitmap;)V
     .locals 8
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const/4 v6, 0x0
@@ -1918,8 +1872,8 @@
 
     monitor-enter v3
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_1
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
     .line 1127
     :try_start_1
@@ -1933,7 +1887,7 @@
     if-eqz v2, :cond_4
 
     .line 1131
-    const/high16 v2, -0x100
+    const/high16 v2, -0x1000000
 
     invoke-virtual {v0, v2}, Landroid/graphics/Canvas;->drawColor(I)V
 
@@ -2061,8 +2015,8 @@
     :try_start_3
     throw v1
     :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_0
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
     .line 1151
     :catch_0
@@ -2092,11 +2046,6 @@
 
 .method public drawBitmap(IIIILandroid/graphics/Bitmap;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 1264
@@ -2108,17 +2057,6 @@
 
 .method public drawBitmap(IIIILandroid/graphics/Bitmap;IIIIZI)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 1269
@@ -2130,17 +2068,6 @@
 
 .method protected drawScaled(IIIILandroid/graphics/Bitmap;IIIIZI)V
     .locals 14
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 1171
@@ -2216,8 +2143,8 @@
     .line 1193
     invoke-static {v6, v9}, Landroid/graphics/Rect;->intersects(Landroid/graphics/Rect;Landroid/graphics/Rect;)Z
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_2
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_2
 
     move-result v10
 
@@ -2254,8 +2181,8 @@
 
     invoke-direct {v0, v1, v2, v3, v4}, Landroid/graphics/Rect;-><init>(IIII)V
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_2
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_2
 
     goto :goto_1
 
@@ -2361,8 +2288,8 @@
 
     invoke-interface {v9, v6}, Landroid/view/SurfaceHolder;->lockCanvas(Landroid/graphics/Rect;)Landroid/graphics/Canvas;
     :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
+    .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
     move-result-object v5
 
@@ -2372,8 +2299,8 @@
 
     monitor-enter v6
     :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_0
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
     .line 1221
     if-eqz p10, :cond_6
@@ -2488,8 +2415,8 @@
     :try_start_6
     throw v7
     :try_end_6
-    .catchall {:try_start_6 .. :try_end_6} :catchall_1
     .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_0
+    .catchall {:try_start_6 .. :try_end_6} :catchall_1
 
     .line 1254
     :catchall_1
@@ -2581,7 +2508,6 @@
 
 .method public gatherTransparentRegion(Landroid/graphics/Region;)Z
     .locals 7
-    .parameter
 
     .prologue
     const/4 v6, 0x0
@@ -2931,7 +2857,6 @@
 
 .method protected onCreateContextMenu(Landroid/view/ContextMenu;)V
     .locals 8
-    .parameter
 
     .prologue
     const/4 v7, 0x1
@@ -3250,7 +3175,6 @@
 
 .method public onCreateInputConnection(Landroid/view/inputmethod/EditorInfo;)Landroid/view/inputmethod/InputConnection;
     .locals 3
-    .parameter
 
     .prologue
     const/4 v2, -0x1
@@ -3273,7 +3197,7 @@
     .line 1483
     iget v0, p1, Landroid/view/inputmethod/EditorInfo;->imeOptions:I
 
-    const/high16 v1, 0x4000
+    const/high16 v1, 0x40000000
 
     or-int/2addr v0, v1
 
@@ -3318,7 +3242,7 @@
     .line 1493
     iget v0, p1, Landroid/view/inputmethod/EditorInfo;->inputType:I
 
-    const/high16 v1, 0x2
+    const/high16 v1, 0x20000
 
     or-int/2addr v0, v1
 
@@ -3360,9 +3284,6 @@
 
 .method protected onFocusChanged(ZILandroid/graphics/Rect;)V
     .locals 3
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const/4 v2, 0x1
@@ -3401,7 +3322,6 @@
 
 .method public onGenericMotionEvent(Landroid/view/MotionEvent;)Z
     .locals 2
-    .parameter
 
     .prologue
     .line 405
@@ -3447,8 +3367,6 @@
 
 .method public onKeyDown(ILandroid/view/KeyEvent;)Z
     .locals 7
-    .parameter
-    .parameter
 
     .prologue
     const/4 v4, 0x0
@@ -3592,8 +3510,6 @@
 
 .method public onKeyPreIme(ILandroid/view/KeyEvent;)Z
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 2015
@@ -3619,8 +3535,6 @@
 
 .method public onKeyUp(ILandroid/view/KeyEvent;)Z
     .locals 8
-    .parameter
-    .parameter
 
     .prologue
     const/4 v7, 0x0
@@ -3795,10 +3709,6 @@
 
 .method protected onSizeChanged(IIII)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 693
@@ -3810,7 +3720,6 @@
 
 .method public onTextBoxContextMenuItem(I)Z
     .locals 5
-    .parameter
 
     .prologue
     const/4 v4, 0x1
@@ -4060,7 +3969,6 @@
 
 .method public onTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 24
-    .parameter
 
     .prologue
     .line 430
@@ -4408,7 +4316,7 @@
     if-ne v12, v13, :cond_d
 
     .line 521
-    const/high16 v12, 0x400
+    const/high16 v12, 0x4000000
 
     or-int/2addr v11, v12
 
@@ -4424,7 +4332,7 @@
     if-eqz v12, :cond_9
 
     .line 526
-    const/high16 v12, 0x800
+    const/high16 v12, 0x8000000
 
     or-int/2addr v11, v12
 
@@ -4650,7 +4558,7 @@
     if-ne v12, v13, :cond_8
 
     .line 524
-    const/high16 v12, 0x200
+    const/high16 v12, 0x2000000
 
     or-int/2addr v11, v12
 
@@ -5201,7 +5109,6 @@
 
 .method public onWindowFocusChanged(Z)V
     .locals 3
-    .parameter
 
     .prologue
     const/4 v2, 0x0
@@ -5423,7 +5330,6 @@
 
 .method public setCompositingHint(Z)V
     .locals 3
-    .parameter
 
     .prologue
     const/4 v2, 0x1
@@ -5461,7 +5367,6 @@
 
 .method public setFlashEGL(Lcom/adobe/air/FlashEGL;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1983
@@ -5569,7 +5474,6 @@
 
 .method public setInputConnection(Lcom/adobe/air/AndroidInputConnection;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1978
@@ -5581,7 +5485,6 @@
 
 .method public setMultitouchMode(I)V
     .locals 0
-    .parameter
 
     .prologue
     .line 699
@@ -5593,7 +5496,6 @@
 
 .method public setScrollTo(I)Z
     .locals 2
-    .parameter
 
     .prologue
     .line 992
@@ -5627,7 +5529,6 @@
 
 .method public setSurfaceFormat(Z)V
     .locals 2
-    .parameter
 
     .prologue
     const/4 v1, 0x1
@@ -5759,7 +5660,6 @@
 
 .method public showSoftKeyboard(Z)V
     .locals 0
-    .parameter
 
     .prologue
     .line 895
@@ -5771,8 +5671,6 @@
 
 .method public showSoftKeyboard(ZLandroid/view/View;)V
     .locals 4
-    .parameter
-    .parameter
 
     .prologue
     const/4 v3, 0x0
@@ -5853,10 +5751,6 @@
 
 .method public surfaceChanged(Landroid/view/SurfaceHolder;III)V
     .locals 4
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const/4 v2, 0x1
@@ -6060,7 +5954,6 @@
 
 .method public surfaceCreated(Landroid/view/SurfaceHolder;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 710
@@ -6105,7 +5998,6 @@
 
 .method public surfaceDestroyed(Landroid/view/SurfaceHolder;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 837
@@ -6139,8 +6031,6 @@
 
 .method public updateFocusedStageText(Lcom/adobe/air/AndroidStageText;Z)V
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 944
@@ -6170,8 +6060,6 @@
 
 .method public updateFocusedStageWebView(Lcom/adobe/air/AndroidWebView;Z)V
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 900

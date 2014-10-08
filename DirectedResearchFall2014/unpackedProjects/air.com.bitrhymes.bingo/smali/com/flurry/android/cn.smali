@@ -16,7 +16,6 @@
 
 .method static declared-synchronized a(Lorg/apache/http/params/HttpParams;)Lorg/apache/http/client/HttpClient;
     .locals 7
-    .parameter
 
     .prologue
     .line 81
@@ -86,8 +85,8 @@
 
     invoke-direct {v1, v2, p0}, Lorg/apache/http/impl/client/DefaultHttpClient;-><init>(Lorg/apache/http/conn/ClientConnectionManager;Lorg/apache/http/params/HttpParams;)V
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 98
     :goto_0

@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lair/com/bitrhymes/bingo/AppEntry;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 160
@@ -39,14 +38,14 @@
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 1
-    .parameter "dialog"
-    .parameter "which"
+    .param p1, "dialog"    # Landroid/content/DialogInterface;
+    .param p2, "which"    # I
 
     .prologue
     .line 162
     iget-object v0, p0, Lair/com/bitrhymes/bingo/AppEntry$1;->this$0:Lair/com/bitrhymes/bingo/AppEntry;
 
-    #calls: Lair/com/bitrhymes/bingo/AppEntry;->launchMarketPlaceForAIR()V
+    # invokes: Lair/com/bitrhymes/bingo/AppEntry;->launchMarketPlaceForAIR()V
     invoke-static {v0}, Lair/com/bitrhymes/bingo/AppEntry;->access$000(Lair/com/bitrhymes/bingo/AppEntry;)V
 
     .line 163

@@ -110,7 +110,6 @@
 
 .method private constructor <init>(Landroid/content/Context;)V
     .locals 1
-    .parameter
 
     .prologue
     const/4 v0, 0x0
@@ -141,8 +140,6 @@
 
 .method public constructor <init>(Landroid/content/Context;Lcom/inmobi/androidsdk/ai/container/IMWebView;)V
     .locals 3
-    .parameter
-    .parameter
 
     .prologue
     const/4 v2, 0x1
@@ -212,7 +209,6 @@
 
 .method private static a(Ljava/lang/String;)Ljava/lang/String;
     .locals 5
-    .parameter
 
     .prologue
     .line 202
@@ -354,7 +350,6 @@
 
 .method private a(I)V
     .locals 3
-    .parameter
 
     .prologue
     .line 486
@@ -411,8 +406,6 @@
 
 .method private a(II)V
     .locals 3
-    .parameter
-    .parameter
 
     .prologue
     .line 495
@@ -483,8 +476,6 @@
 
 .method static synthetic a(Lcom/inmobi/androidsdk/ai/controller/util/IMAVPlayer;I)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 78
@@ -495,9 +486,6 @@
 
 .method static synthetic a(Lcom/inmobi/androidsdk/ai/controller/util/IMAVPlayer;II)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 493
@@ -508,8 +496,6 @@
 
 .method private a(ZI)V
     .locals 3
-    .parameter
-    .parameter
 
     .prologue
     .line 508
@@ -577,7 +563,6 @@
 
 .method static synthetic a(Lcom/inmobi/androidsdk/ai/controller/util/IMAVPlayer;)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 613
@@ -590,7 +575,6 @@
 
 .method private b(I)I
     .locals 2
-    .parameter
 
     .prologue
     .line 712
@@ -611,7 +595,6 @@
 
 .method static synthetic b(Lcom/inmobi/androidsdk/ai/controller/util/IMAVPlayer;)Landroid/media/AudioManager;
     .locals 1
-    .parameter
 
     .prologue
     .line 44
@@ -673,8 +656,6 @@
 
 .method static synthetic b(Lcom/inmobi/androidsdk/ai/controller/util/IMAVPlayer;I)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 78
@@ -685,7 +666,6 @@
 
 .method private b(Ljava/lang/String;)V
     .locals 3
-    .parameter
 
     .prologue
     .line 477
@@ -742,7 +722,6 @@
 
 .method static synthetic c(Lcom/inmobi/androidsdk/ai/controller/util/IMAVPlayer;)I
     .locals 1
-    .parameter
 
     .prologue
     .line 78
@@ -820,8 +799,6 @@
 
 .method static synthetic c(Lcom/inmobi/androidsdk/ai/controller/util/IMAVPlayer;I)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 78
@@ -871,7 +848,6 @@
 
 .method static synthetic d(Lcom/inmobi/androidsdk/ai/controller/util/IMAVPlayer;)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 84
@@ -909,7 +885,7 @@
     .line 395
     iget-object v0, p0, Lcom/inmobi/androidsdk/ai/controller/util/IMAVPlayer;->e:Landroid/widget/RelativeLayout;
 
-    const/high16 v1, -0x100
+    const/high16 v1, -0x1000000
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->setBackgroundColor(I)V
 
@@ -965,7 +941,6 @@
 
 .method static synthetic e(Lcom/inmobi/androidsdk/ai/controller/util/IMAVPlayer;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 516
@@ -976,7 +951,6 @@
 
 .method static synthetic f(Lcom/inmobi/androidsdk/ai/controller/util/IMAVPlayer;)I
     .locals 1
-    .parameter
 
     .prologue
     .line 78
@@ -1519,7 +1493,6 @@
 
 .method public onCompletion(Landroid/media/MediaPlayer;)V
     .locals 3
-    .parameter
 
     .prologue
     const-string v2, "InMobiAndroidSDK_3.6.2"
@@ -1633,9 +1606,6 @@
 
 .method public onError(Landroid/media/MediaPlayer;II)Z
     .locals 4
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const/4 v3, 0x0
@@ -1697,7 +1667,6 @@
 
 .method public onPrepared(Landroid/media/MediaPlayer;)V
     .locals 4
-    .parameter
 
     .prologue
     const-string v3, "InMobiAndroidSDK_3.6.2"
@@ -1772,7 +1741,6 @@
 
 .method protected onWindowVisibilityChanged(I)V
     .locals 3
-    .parameter
 
     .prologue
     .line 804
@@ -1876,7 +1844,6 @@
 
 .method public releasePlayer(Z)V
     .locals 3
-    .parameter
 
     .prologue
     const/4 v2, -0x1
@@ -1996,7 +1963,6 @@
 
 .method public seekPlayer(I)V
     .locals 1
-    .parameter
 
     .prologue
     .line 746
@@ -2016,7 +1982,6 @@
 
 .method public setBackGroundLayout(Landroid/view/ViewGroup;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 757
@@ -2028,7 +1993,6 @@
 
 .method public setListener(Lcom/inmobi/androidsdk/ai/controller/util/IMAVPlayerListener;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 248
@@ -2040,8 +2004,6 @@
 
 .method public setPlayData(Lcom/inmobi/androidsdk/ai/controller/JSController$PlayerProperties;Ljava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 154
@@ -2056,7 +2018,6 @@
 
 .method public setPlayDimensions(Lcom/inmobi/androidsdk/ai/controller/JSController$Dimensions;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 793
@@ -2068,7 +2029,6 @@
 
 .method public setVolume(I)V
     .locals 4
-    .parameter
 
     .prologue
     .line 685
@@ -2268,9 +2228,9 @@
     :try_start_0
     iget-object v0, p0, Lcom/inmobi/androidsdk/ai/controller/util/IMAVPlayer;->s:Landroid/media/MediaPlayer;
 
-    const/high16 v1, 0x3f80
+    const/high16 v1, 0x3f800000
 
-    const/high16 v2, 0x3f80
+    const/high16 v2, 0x3f800000
 
     invoke-virtual {v0, v1, v2}, Landroid/media/MediaPlayer;->setVolume(FF)V
     :try_end_0

@@ -187,7 +187,7 @@
 
 .method public createFromBoolean(Z)Ljava/lang/Object;
     .locals 3
-    .parameter "value"
+    .param p1, "value"    # Z
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -234,7 +234,7 @@
 
 .method public createFromDouble(D)Ljava/lang/Object;
     .locals 3
-    .parameter "value"
+    .param p1, "value"    # D
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -281,7 +281,7 @@
 
 .method public createFromInt(I)Ljava/lang/Object;
     .locals 3
-    .parameter "value"
+    .param p1, "value"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -328,7 +328,7 @@
 
 .method public createFromLong(J)Ljava/lang/Object;
     .locals 3
-    .parameter "value"
+    .param p1, "value"    # J
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -375,7 +375,7 @@
 
 .method public createFromObjectWith([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 3
-    .parameter "args"
+    .param p1, "args"    # [Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -422,7 +422,7 @@
 
 .method public createFromString(Ljava/lang/String;)Ljava/lang/Object;
     .locals 3
-    .parameter "value"
+    .param p1, "value"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -515,7 +515,7 @@
 
 .method public createUsingDelegate(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 3
-    .parameter "delegate"
+    .param p1, "delegate"    # Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,

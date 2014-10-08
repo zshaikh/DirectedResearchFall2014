@@ -18,8 +18,8 @@
 # virtual methods
 .method protected onError(Landroid/content/Context;Ljava/lang/String;)V
     .locals 3
-    .parameter "arg0"
-    .parameter "arg1"
+    .param p1, "arg0"    # Landroid/content/Context;
+    .param p2, "arg1"    # Ljava/lang/String;
 
     .prologue
     .line 24
@@ -51,8 +51,8 @@
 
 .method protected onMessage(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 12
-    .parameter "arg0"
-    .parameter "arg1"
+    .param p1, "arg0"    # Landroid/content/Context;
+    .param p2, "arg1"    # Landroid/content/Intent;
 
     .prologue
     const/4 v11, 0x0
@@ -65,7 +65,7 @@
     move-result-object v7
 
     .line 32
-    .local v7, title:Ljava/lang/String;
+    .local v7, "title":Ljava/lang/String;
     const-string v9, "text"
 
     invoke-virtual {p2, v9}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
@@ -73,7 +73,7 @@
     move-result-object v2
 
     .line 33
-    .local v2, msg:Ljava/lang/String;
+    .local v2, "msg":Ljava/lang/String;
     const-string v9, "name"
 
     invoke-virtual {p2, v9}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
@@ -81,7 +81,7 @@
     move-result-object v3
 
     .line 35
-    .local v3, name:Ljava/lang/String;
+    .local v3, "name":Ljava/lang/String;
     if-eqz v3, :cond_0
 
     invoke-virtual {v3}, Ljava/lang/String;->length()I
@@ -101,7 +101,7 @@
     invoke-direct {v5, p1}, Lcom/fusepowered/push/FuseNotificationCompat$Builder;-><init>(Landroid/content/Context;)V
 
     .line 40
-    .local v5, notibuilder:Lcom/fusepowered/push/FuseNotificationCompat$Builder;
+    .local v5, "notibuilder":Lcom/fusepowered/push/FuseNotificationCompat$Builder;
     invoke-virtual {v5, v7}, Lcom/fusepowered/push/FuseNotificationCompat$Builder;->setContentTitle(Ljava/lang/CharSequence;)Lcom/fusepowered/push/FuseNotificationCompat$Builder;
 
     .line 41
@@ -149,7 +149,7 @@
     move-result-object v1
 
     .line 45
-    .local v1, intentString:Ljava/lang/String;
+    .local v1, "intentString":Ljava/lang/String;
     new-instance v9, Landroid/content/Intent;
 
     invoke-direct {v9, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
@@ -159,7 +159,7 @@
     move-result-object v0
 
     .line 46
-    .local v0, intent:Landroid/app/PendingIntent;
+    .local v0, "intent":Landroid/app/PendingIntent;
     invoke-virtual {v5, v0}, Lcom/fusepowered/push/FuseNotificationCompat$Builder;->setContentIntent(Landroid/app/PendingIntent;)Lcom/fusepowered/push/FuseNotificationCompat$Builder;
 
     .line 48
@@ -183,11 +183,11 @@
     move-result-object v8
 
     .line 51
-    .local v8, x:Landroid/graphics/Bitmap;
+    .local v8, "x":Landroid/graphics/Bitmap;
     invoke-virtual {v5, v8}, Lcom/fusepowered/push/FuseNotificationCompat$Builder;->setLargeIcon(Landroid/graphics/Bitmap;)Lcom/fusepowered/push/FuseNotificationCompat$Builder;
 
     .line 53
-    .end local v8           #x:Landroid/graphics/Bitmap;
+    .end local v8    # "x":Landroid/graphics/Bitmap;
     :cond_2
     const-string v9, "notification_id"
 
@@ -232,13 +232,13 @@
     check-cast v6, Landroid/app/NotificationManager;
 
     .line 58
-    .local v6, notifManager:Landroid/app/NotificationManager;
+    .local v6, "notifManager":Landroid/app/NotificationManager;
     invoke-virtual {v5}, Lcom/fusepowered/push/FuseNotificationCompat$Builder;->build()Landroid/app/Notification;
 
     move-result-object v4
 
     .line 60
-    .local v4, note:Landroid/app/Notification;
+    .local v4, "note":Landroid/app/Notification;
     const/16 v9, 0x14
 
     iput v9, v4, Landroid/app/Notification;->flags:I
@@ -258,8 +258,8 @@
 
 .method protected onRegistered(Landroid/content/Context;Ljava/lang/String;)V
     .locals 0
-    .parameter "arg0"
-    .parameter "arg1"
+    .param p1, "arg0"    # Landroid/content/Context;
+    .param p2, "arg1"    # Ljava/lang/String;
 
     .prologue
     .line 69
@@ -271,8 +271,8 @@
 
 .method protected onUnregistered(Landroid/content/Context;Ljava/lang/String;)V
     .locals 0
-    .parameter "arg0"
-    .parameter "arg1"
+    .param p1, "arg0"    # Landroid/content/Context;
+    .param p2, "arg1"    # Ljava/lang/String;
 
     .prologue
     .line 77

@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/bitrhymes/iab/functions/GoogleIABV3Activity;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1
@@ -40,7 +39,7 @@
 # virtual methods
 .method public onIabSetupFinished(Lcom/bitrhymes/iab/util/IabResult;)V
     .locals 4
-    .parameter "result"
+    .param p1, "result"    # Lcom/bitrhymes/iab/util/IabResult;
 
     .prologue
     const-string v3, "IAP_SUPPORT_STATUS"

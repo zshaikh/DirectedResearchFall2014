@@ -158,7 +158,7 @@
 
 .method public setItemCount(J)V
     .locals 4
-    .parameter "itemCount"
+    .param p1, "itemCount"    # J
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;

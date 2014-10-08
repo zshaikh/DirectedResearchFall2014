@@ -26,8 +26,6 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m1/google/gson/reflect/TypeToken;Lcom/fusepowered/m1/google/gson/TypeAdapter;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 769
@@ -44,8 +42,7 @@
 # virtual methods
 .method public create(Lcom/fusepowered/m1/google/gson/Gson;Lcom/fusepowered/m1/google/gson/reflect/TypeToken;)Lcom/fusepowered/m1/google/gson/TypeAdapter;
     .locals 1
-    .parameter "gson"
-    .parameter
+    .param p1, "gson"    # Lcom/fusepowered/m1/google/gson/Gson;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -61,7 +58,7 @@
 
     .prologue
     .line 772
-    .local p2, typeToken:Lcom/fusepowered/m1/google/gson/reflect/TypeToken;,"Lcom/fusepowered/m1/google/gson/reflect/TypeToken<TT;>;"
+    .local p2, "typeToken":Lcom/fusepowered/m1/google/gson/reflect/TypeToken;, "Lcom/fusepowered/m1/google/gson/reflect/TypeToken<TT;>;"
     iget-object v0, p0, Lcom/fusepowered/m1/google/gson/internal/bind/TypeAdapters$27;->val$type:Lcom/fusepowered/m1/google/gson/reflect/TypeToken;
 
     invoke-virtual {p2, v0}, Lcom/fusepowered/m1/google/gson/reflect/TypeToken;->equals(Ljava/lang/Object;)Z

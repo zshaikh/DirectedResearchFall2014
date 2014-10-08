@@ -27,7 +27,7 @@
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     .line 66
-    .local v0, version:I
+    .local v0, "version":I
     const/16 v1, 0xe
 
     if-lt v0, v1, :cond_0
@@ -82,9 +82,9 @@
 
 .method public static onRequestSendAccessibilityEvent(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)Z
     .locals 1
-    .parameter "group"
-    .parameter "child"
-    .parameter "event"
+    .param p0, "group"    # Landroid/view/ViewGroup;
+    .param p1, "child"    # Landroid/view/View;
+    .param p2, "event"    # Landroid/view/accessibility/AccessibilityEvent;
 
     .prologue
     .line 99
@@ -99,8 +99,8 @@
 
 .method public static setMotionEventSplittingEnabled(Landroid/view/ViewGroup;Z)V
     .locals 1
-    .parameter "group"
-    .parameter "split"
+    .param p0, "group"    # Landroid/view/ViewGroup;
+    .param p1, "split"    # Z
 
     .prologue
     .line 119

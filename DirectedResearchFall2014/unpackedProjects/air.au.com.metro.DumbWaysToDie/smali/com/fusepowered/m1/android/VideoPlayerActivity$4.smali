@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m1/android/VideoPlayerActivity;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 304
@@ -39,7 +38,7 @@
 # virtual methods
 .method public onClick(Landroid/view/View;)V
     .locals 2
-    .parameter "view"
+    .param p1, "view"    # Landroid/view/View;
 
     .prologue
     .line 308
@@ -54,7 +53,7 @@
 
     const/4 v1, 0x1
 
-    #setter for: Lcom/fusepowered/m1/android/VideoPlayerActivity;->shouldSetUri:Z
+    # setter for: Lcom/fusepowered/m1/android/VideoPlayerActivity;->shouldSetUri:Z
     invoke-static {v0, v1}, Lcom/fusepowered/m1/android/VideoPlayerActivity;->access$102(Lcom/fusepowered/m1/android/VideoPlayerActivity;Z)Z
 
     .line 311

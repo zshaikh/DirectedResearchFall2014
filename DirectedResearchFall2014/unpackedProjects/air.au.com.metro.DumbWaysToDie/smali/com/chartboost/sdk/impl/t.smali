@@ -18,7 +18,6 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 4
-    .parameter
 
     .prologue
     const/4 v3, 0x0
@@ -78,8 +77,6 @@
 
 .method public constructor <init>(Landroid/content/Context;Landroid/view/View;)V
     .locals 3
-    .parameter
-    .parameter
 
     .prologue
     const/4 v2, 0x0
@@ -140,7 +137,6 @@
 
 .method public a(Landroid/view/View;)V
     .locals 2
-    .parameter
 
     .prologue
     const/4 v1, -0x2
@@ -158,8 +154,6 @@
 
 .method public a(Landroid/view/View;Landroid/widget/RelativeLayout$LayoutParams;)V
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     .line 48
@@ -188,14 +182,14 @@
 
 .method protected dispatchDraw(Landroid/graphics/Canvas;)V
     .locals 10
-    .parameter "canvas"
+    .param p1, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
     const/4 v9, 0x0
 
     const/4 v1, 0x0
 
-    const/high16 v8, 0x4000
+    const/high16 v8, 0x40000000
 
     .line 93
     invoke-static {}, Lcom/chartboost/sdk/Chartboost;->sharedChartboost()Lcom/chartboost/sdk/Chartboost;
@@ -459,7 +453,7 @@
 
 .method public dispatchTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 4
-    .parameter "event"
+    .param p1, "event"    # Landroid/view/MotionEvent;
 
     .prologue
     const/4 v3, 0x1
@@ -529,8 +523,8 @@
 
 .method protected onMeasure(II)V
     .locals 2
-    .parameter "widthMeasureSpec"
-    .parameter "heightMeasureSpec"
+    .param p1, "widthMeasureSpec"    # I
+    .param p2, "heightMeasureSpec"    # I
 
     .prologue
     .line 80
@@ -576,13 +570,13 @@
 
 .method public onSizeChanged(IIII)V
     .locals 6
-    .parameter "w"
-    .parameter "h"
-    .parameter "oldw"
-    .parameter "oldh"
+    .param p1, "w"    # I
+    .param p2, "h"    # I
+    .param p3, "oldw"    # I
+    .param p4, "oldh"    # I
 
     .prologue
-    const/high16 v5, 0x4000
+    const/high16 v5, 0x40000000
 
     const/4 v4, 0x0
 

@@ -26,7 +26,6 @@
 # direct methods
 .method constructor <init>(Lcom/vungle/sdk/VungleAdvert;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 406
@@ -116,7 +115,6 @@
 
 .method public final a(Ljava/lang/String;)V
     .locals 3
-    .parameter
 
     .prologue
     const/4 v2, 0x4
@@ -136,8 +134,8 @@
 
     invoke-virtual {v0, v1}, Lcom/vungle/sdk/x;->a(Ljava/lang/String;)V
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 496
     iget-object v0, p0, Lcom/vungle/sdk/VungleAdvert$4;->a:Lcom/vungle/sdk/VungleAdvert;
@@ -193,8 +191,8 @@
 
     invoke-virtual {v0, v1}, Lcom/vungle/sdk/x;->a(Ljava/lang/String;)V
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 447
     iget-object v0, p0, Lcom/vungle/sdk/VungleAdvert$4;->a:Lcom/vungle/sdk/VungleAdvert;
@@ -279,8 +277,8 @@
 
     invoke-static {v0, v1}, Lcom/vungle/sdk/net/http/HttpGateway;->a(Ljava/util/Map;[Ljava/lang/String;)V
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 467
     :cond_0
@@ -337,8 +335,8 @@
 
     invoke-virtual {v0, v1}, Lcom/vungle/sdk/x;->a(Ljava/lang/String;)V
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 481
     iget-object v0, p0, Lcom/vungle/sdk/VungleAdvert$4;->a:Lcom/vungle/sdk/VungleAdvert;

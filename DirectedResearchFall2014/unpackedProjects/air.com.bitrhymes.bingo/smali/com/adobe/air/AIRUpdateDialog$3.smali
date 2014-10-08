@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/adobe/air/AIRUpdateDialog;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 42
@@ -39,9 +38,6 @@
 # virtual methods
 .method public onKey(Landroid/content/DialogInterface;ILandroid/view/KeyEvent;)Z
     .locals 1
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 45

@@ -30,10 +30,6 @@
 # direct methods
 .method constructor <init>(Lcom/facebook/AppEventsLogger$AccessTokenAppIdPair;Lcom/facebook/Request;Lcom/facebook/AppEventsLogger$SessionEventsState;Lcom/facebook/AppEventsLogger$FlushStatistics;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 1
@@ -55,7 +51,7 @@
 # virtual methods
 .method public onCompleted(Lcom/facebook/Response;)V
     .locals 4
-    .parameter "response"
+    .param p1, "response"    # Lcom/facebook/Response;
 
     .prologue
     .line 880
@@ -67,7 +63,7 @@
 
     iget-object v3, p0, Lcom/facebook/AppEventsLogger$5;->val$flushState:Lcom/facebook/AppEventsLogger$FlushStatistics;
 
-    #calls: Lcom/facebook/AppEventsLogger;->handleResponse(Lcom/facebook/AppEventsLogger$AccessTokenAppIdPair;Lcom/facebook/Request;Lcom/facebook/Response;Lcom/facebook/AppEventsLogger$SessionEventsState;Lcom/facebook/AppEventsLogger$FlushStatistics;)V
+    # invokes: Lcom/facebook/AppEventsLogger;->handleResponse(Lcom/facebook/AppEventsLogger$AccessTokenAppIdPair;Lcom/facebook/Request;Lcom/facebook/Response;Lcom/facebook/AppEventsLogger$SessionEventsState;Lcom/facebook/AppEventsLogger$FlushStatistics;)V
     invoke-static {v0, v1, p1, v2, v3}, Lcom/facebook/AppEventsLogger;->access$4(Lcom/facebook/AppEventsLogger$AccessTokenAppIdPair;Lcom/facebook/Request;Lcom/facebook/Response;Lcom/facebook/AppEventsLogger$SessionEventsState;Lcom/facebook/AppEventsLogger$FlushStatistics;)V
 
     .line 881

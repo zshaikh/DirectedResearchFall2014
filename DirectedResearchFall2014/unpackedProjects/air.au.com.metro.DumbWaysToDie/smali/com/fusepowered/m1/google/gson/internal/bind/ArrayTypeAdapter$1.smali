@@ -32,8 +32,7 @@
 # virtual methods
 .method public create(Lcom/fusepowered/m1/google/gson/Gson;Lcom/fusepowered/m1/google/gson/reflect/TypeToken;)Lcom/fusepowered/m1/google/gson/TypeAdapter;
     .locals 6
-    .parameter "gson"
-    .parameter
+    .param p1, "gson"    # Lcom/fusepowered/m1/google/gson/Gson;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -49,13 +48,13 @@
 
     .prologue
     .line 42
-    .local p2, typeToken:Lcom/fusepowered/m1/google/gson/reflect/TypeToken;,"Lcom/fusepowered/m1/google/gson/reflect/TypeToken<TT;>;"
+    .local p2, "typeToken":Lcom/fusepowered/m1/google/gson/reflect/TypeToken;, "Lcom/fusepowered/m1/google/gson/reflect/TypeToken<TT;>;"
     invoke-virtual {p2}, Lcom/fusepowered/m1/google/gson/reflect/TypeToken;->getType()Ljava/lang/reflect/Type;
 
     move-result-object v3
 
     .line 43
-    .local v3, type:Ljava/lang/reflect/Type;
+    .local v3, "type":Ljava/lang/reflect/Type;
     instance-of v4, v3, Ljava/lang/reflect/GenericArrayType;
 
     if-nez v4, :cond_1
@@ -91,7 +90,7 @@
     move-result-object v1
 
     .line 48
-    .local v1, componentType:Ljava/lang/reflect/Type;
+    .local v1, "componentType":Ljava/lang/reflect/Type;
     invoke-static {v1}, Lcom/fusepowered/m1/google/gson/reflect/TypeToken;->get(Ljava/lang/reflect/Type;)Lcom/fusepowered/m1/google/gson/reflect/TypeToken;
 
     move-result-object v4
@@ -101,7 +100,7 @@
     move-result-object v2
 
     .line 49
-    .local v2, componentTypeAdapter:Lcom/fusepowered/m1/google/gson/TypeAdapter;,"Lcom/fusepowered/m1/google/gson/TypeAdapter<*>;"
+    .local v2, "componentTypeAdapter":Lcom/fusepowered/m1/google/gson/TypeAdapter;, "Lcom/fusepowered/m1/google/gson/TypeAdapter<*>;"
     new-instance v4, Lcom/fusepowered/m1/google/gson/internal/bind/ArrayTypeAdapter;
 
     invoke-static {v1}, Lcom/fusepowered/m1/google/gson/internal/$Gson$Types;->getRawType(Ljava/lang/reflect/Type;)Ljava/lang/Class;

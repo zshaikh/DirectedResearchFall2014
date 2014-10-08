@@ -29,7 +29,7 @@
 # virtual methods
 .method public equals(Ljava/lang/Object;)Z
     .locals 1
-    .parameter "other"
+    .param p1, "other"    # Ljava/lang/Object;
 
     .prologue
     .line 369
@@ -37,7 +37,7 @@
 
     check-cast p1, Ljava/lang/String;
 
-    .end local p1
+    .end local p1    # "other":Ljava/lang/Object;
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v0

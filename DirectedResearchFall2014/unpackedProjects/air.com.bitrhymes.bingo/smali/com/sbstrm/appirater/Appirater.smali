@@ -68,14 +68,14 @@
 
 .method public static appLaunched(Landroid/content/Context;)V
     .locals 11
-    .parameter "mContext"
+    .param p0, "mContext"    # Landroid/content/Context;
 
     .prologue
     .line 35
     const/4 v0, 0x0
 
     .line 36
-    .local v0, testMode:I
+    .local v0, "testMode":I
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
@@ -105,7 +105,7 @@
     move-result-object v8
 
     .line 37
-    .local v8, prefs:Landroid/content/SharedPreferences;
+    .local v8, "prefs":Landroid/content/SharedPreferences;
     if-nez v0, :cond_1
 
     const-string v1, "dontshow"
@@ -129,22 +129,22 @@
     if-eqz v1, :cond_1
 
     .line 89
-    .end local v0           #testMode:I
-    .end local v8           #prefs:Landroid/content/SharedPreferences;
+    .end local v0    # "testMode":I
+    .end local v8    # "prefs":Landroid/content/SharedPreferences;
     :cond_0
     :goto_0
     return-void
 
     .line 39
-    .restart local v0       #testMode:I
-    .restart local v8       #prefs:Landroid/content/SharedPreferences;
+    .restart local v0    # "testMode":I
+    .restart local v8    # "prefs":Landroid/content/SharedPreferences;
     :cond_1
     invoke-interface {v8}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v5
 
     .line 41
-    .local v5, editor:Landroid/content/SharedPreferences$Editor;
+    .local v5, "editor":Landroid/content/SharedPreferences$Editor;
     const/4 v1, 0x1
 
     if-ne v0, v1, :cond_2
@@ -158,7 +158,7 @@
     :cond_2
     const-string v0, "launch_count"
 
-    .end local v0           #testMode:I
+    .end local v0    # "testMode":I
     const-wide/16 v1, 0x0
 
     invoke-interface {v8, v0, v1, v2}, Landroid/content/SharedPreferences;->getLong(Ljava/lang/String;J)J
@@ -166,7 +166,7 @@
     move-result-wide v6
 
     .line 49
-    .local v6, launch_count:J
+    .local v6, "launch_count":J
     const-string v0, "date_firstlaunch"
 
     const-wide/16 v1, 0x0
@@ -176,7 +176,7 @@
     move-result-wide v1
 
     .line 52
-    .local v1, date_firstLaunch:J
+    .local v1, "date_firstLaunch":J
     const-string v0, "date_reminder_pressed"
 
     const-wide/16 v3, 0x0
@@ -186,7 +186,7 @@
     move-result-wide v3
 
     .line 55
-    .local v3, date_reminder_pressed:J
+    .local v3, "date_reminder_pressed":J
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -205,7 +205,7 @@
     iget v0, v0, Landroid/content/pm/PackageInfo;->versionCode:I
 
     .line 56
-    .local v0, appVersionCode:I
+    .local v0, "appVersionCode":I
     const-string v9, "versioncode"
 
     const/4 v10, 0x0
@@ -214,7 +214,7 @@
 
     move-result v8
 
-    .end local v8           #prefs:Landroid/content/SharedPreferences;
+    .end local v8    # "prefs":Landroid/content/SharedPreferences;
     if-eq v8, v0, :cond_3
 
     .line 58
@@ -229,7 +229,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 65
-    .end local v0           #appVersionCode:I
+    .end local v0    # "appVersionCode":I
     :goto_1
     const-wide/16 v8, 0x1
 
@@ -253,8 +253,8 @@
     move-result-wide v0
 
     .line 70
-    .end local v1           #date_firstLaunch:J
-    .local v0, date_firstLaunch:J
+    .end local v1    # "date_firstLaunch":J
+    .local v0, "date_firstLaunch":J
     const-string v2, "date_firstlaunch"
 
     invoke-interface {v5, v2, v0, v1}, Landroid/content/SharedPreferences$Editor;->putLong(Ljava/lang/String;J)Landroid/content/SharedPreferences$Editor;
@@ -271,7 +271,7 @@
     const-wide/32 v6, 0xa4cb800
 
     .line 76
-    .local v6, millisecondsToWait:J
+    .local v6, "millisecondsToWait":J
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v8
@@ -283,7 +283,7 @@
     if-ltz v0, :cond_4
 
     .line 77
-    .end local v0           #date_firstLaunch:J
+    .end local v0    # "date_firstLaunch":J
     const-wide/16 v0, 0x0
 
     cmp-long v0, v3, v0
@@ -294,7 +294,7 @@
     invoke-static {p0, v5}, Lcom/sbstrm/appirater/Appirater;->showRateDialog(Landroid/content/Context;Landroid/content/SharedPreferences$Editor;)V
 
     .line 88
-    .end local v6           #millisecondsToWait:J
+    .end local v6    # "millisecondsToWait":J
     :cond_4
     :goto_3
     invoke-interface {v5}, Landroid/content/SharedPreferences$Editor;->commit()Z
@@ -302,17 +302,17 @@
     goto :goto_0
 
     .line 80
-    .restart local v6       #millisecondsToWait:J
+    .restart local v6    # "millisecondsToWait":J
     :cond_5
     const-wide/32 v0, 0x5265c00
 
     .line 81
-    .local v0, remindMillisecondsToWait:J
+    .local v0, "remindMillisecondsToWait":J
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v6
 
-    .end local v6           #millisecondsToWait:J
+    .end local v6    # "millisecondsToWait":J
     add-long/2addr v0, v3
 
     cmp-long v0, v6, v0
@@ -320,14 +320,14 @@
     if-ltz v0, :cond_4
 
     .line 82
-    .end local v0           #remindMillisecondsToWait:J
+    .end local v0    # "remindMillisecondsToWait":J
     invoke-static {p0, v5}, Lcom/sbstrm/appirater/Appirater;->showRateDialog(Landroid/content/Context;Landroid/content/SharedPreferences$Editor;)V
 
     goto :goto_3
 
     .line 61
-    .restart local v1       #date_firstLaunch:J
-    .local v6, launch_count:J
+    .restart local v1    # "date_firstLaunch":J
+    .local v6, "launch_count":J
     :catch_0
     move-exception v0
 
@@ -336,15 +336,15 @@
     :cond_6
     move-wide v0, v1
 
-    .end local v1           #date_firstLaunch:J
-    .local v0, date_firstLaunch:J
+    .end local v1    # "date_firstLaunch":J
+    .local v0, "date_firstLaunch":J
     goto :goto_2
 .end method
 
 .method private static showRateDialog(Landroid/content/Context;Landroid/content/SharedPreferences$Editor;)V
     .locals 13
-    .parameter "mContext"
-    .parameter "editor"
+    .param p0, "mContext"    # Landroid/content/Context;
+    .param p1, "editor"    # Landroid/content/SharedPreferences$Editor;
 
     .prologue
     const/4 v12, 0x1
@@ -355,17 +355,17 @@
     sget-object v0, Lcom/sbstrm/appirater/Appirater;->APP_TITLE:Ljava/lang/String;
 
     .line 93
-    .local v0, appName:Ljava/lang/String;
+    .local v0, "appName":Ljava/lang/String;
     new-instance v1, Landroid/app/AlertDialog$Builder;
 
     invoke-direct {v1, p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
     .line 95
-    .local v1, builderInvite:Landroid/app/AlertDialog$Builder;
+    .local v1, "builderInvite":Landroid/app/AlertDialog$Builder;
     const-string v6, ""
 
     .line 97
-    .local v6, packageName:Ljava/lang/String;
+    .local v6, "packageName":Ljava/lang/String;
     const-string v8, "Rate %s"
 
     new-array v9, v12, [Ljava/lang/Object;
@@ -385,7 +385,7 @@
     move-result-object v4
 
     .line 100
-    .local v4, manager:Landroid/content/pm/PackageManager;
+    .local v4, "manager":Landroid/content/pm/PackageManager;
     invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object v8
@@ -397,14 +397,14 @@
     move-result-object v3
 
     .line 101
-    .local v3, info:Landroid/content/pm/PackageInfo;
+    .local v3, "info":Landroid/content/pm/PackageInfo;
     iget-object v6, v3, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 107
-    .end local v3           #info:Landroid/content/pm/PackageInfo;
-    .end local v4           #manager:Landroid/content/pm/PackageManager;
+    .end local v3    # "info":Landroid/content/pm/PackageInfo;
+    .end local v4    # "manager":Landroid/content/pm/PackageManager;
     :goto_0
     const-string v8, "Appirater"
 
@@ -442,7 +442,7 @@
     move-result-object v5
 
     .line 109
-    .local v5, marketLink:Ljava/lang/String;
+    .local v5, "marketLink":Ljava/lang/String;
     const-string v8, "If you enjoy using %s, would you mind taking a moment to rate it? Thanks for your support!"
 
     new-array v9, v12, [Ljava/lang/Object;
@@ -454,7 +454,7 @@
     move-result-object v7
 
     .line 110
-    .local v7, title:Ljava/lang/String;
+    .local v7, "title":Ljava/lang/String;
     invoke-virtual {v1, v7}, Landroid/app/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
 
     .line 111
@@ -499,15 +499,15 @@
     return-void
 
     .line 104
-    .end local v5           #marketLink:Ljava/lang/String;
-    .end local v7           #title:Ljava/lang/String;
+    .end local v5    # "marketLink":Ljava/lang/String;
+    .end local v7    # "title":Ljava/lang/String;
     :catch_0
     move-exception v8
 
     move-object v2, v8
 
     .line 105
-    .local v2, e:Ljava/lang/Exception;
+    .local v2, "e":Ljava/lang/Exception;
     invoke-virtual {v2}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0

@@ -46,10 +46,8 @@
 # direct methods
 .method public constructor <init>(Ljava/util/Map;JLjava/lang/String;Ljava/util/List;)V
     .locals 0
-    .parameter
-    .parameter "hitTimeInMilliseconds"
-    .parameter "path"
-    .parameter
+    .param p2, "hitTimeInMilliseconds"    # J
+    .param p4, "path"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -68,8 +66,8 @@
 
     .prologue
     .line 385
-    .local p1, wireFormatParams:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
-    .local p5, commands:Ljava/util/List;,"Ljava/util/List<Lcom/google/android/gms/analytics/internal/Command;>;"
+    .local p1, "wireFormatParams":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p5, "commands":Ljava/util/List;, "Ljava/util/List<Lcom/google/android/gms/analytics/internal/Command;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 386

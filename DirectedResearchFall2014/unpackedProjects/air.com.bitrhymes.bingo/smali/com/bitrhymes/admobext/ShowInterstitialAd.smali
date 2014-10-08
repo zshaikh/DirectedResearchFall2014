@@ -25,8 +25,8 @@
 # virtual methods
 .method public call(Lcom/adobe/fre/FREContext;[Lcom/adobe/fre/FREObject;)Lcom/adobe/fre/FREObject;
     .locals 8
-    .parameter "context"
-    .parameter "arg1"
+    .param p1, "context"    # Lcom/adobe/fre/FREContext;
+    .param p2, "arg1"    # [Lcom/adobe/fre/FREObject;
 
     .prologue
     const-string v7, "ERROR_EVENT"
@@ -47,7 +47,7 @@
     move-result-object v1
 
     .line 23
-    .local v1, admobId:Ljava/lang/String;
+    .local v1, "admobId":Ljava/lang/String;
     new-instance v4, Lcom/google/ads/InterstitialAd;
 
     invoke-virtual {p1}, Lcom/adobe/fre/FREContext;->getActivity()Landroid/app/Activity;
@@ -64,7 +64,7 @@
     invoke-direct {v0}, Lcom/google/ads/AdRequest;-><init>()V
 
     .line 25
-    .local v0, adRequest:Lcom/google/ads/AdRequest;
+    .local v0, "adRequest":Lcom/google/ads/AdRequest;
     const-string v4, "6957C567D0FBC01297253A353BB5BD71"
 
     invoke-virtual {v0, v4}, Lcom/google/ads/AdRequest;->addTestDevice(Ljava/lang/String;)Lcom/google/ads/AdRequest;
@@ -82,7 +82,7 @@
     invoke-direct {v3, p1, v4}, Lcom/bitrhymes/admobext/AdMobExtAdListener;-><init>(Lcom/adobe/fre/FREContext;Lcom/google/ads/InterstitialAd;)V
 
     .line 28
-    .local v3, listObj:Lcom/bitrhymes/admobext/AdMobExtAdListener;
+    .local v3, "listObj":Lcom/bitrhymes/admobext/AdMobExtAdListener;
     iget-object v4, p0, Lcom/bitrhymes/admobext/ShowInterstitialAd;->interstitial:Lcom/google/ads/InterstitialAd;
 
     invoke-virtual {v4, v3}, Lcom/google/ads/InterstitialAd;->setAdListener(Lcom/google/ads/AdListener;)V
@@ -97,9 +97,9 @@
     .catch Lcom/adobe/fre/FREWrongThreadException; {:try_start_0 .. :try_end_0} :catch_2
 
     .line 38
-    .end local v0           #adRequest:Lcom/google/ads/AdRequest;
-    .end local v1           #admobId:Ljava/lang/String;
-    .end local v3           #listObj:Lcom/bitrhymes/admobext/AdMobExtAdListener;
+    .end local v0    # "adRequest":Lcom/google/ads/AdRequest;
+    .end local v1    # "admobId":Ljava/lang/String;
+    .end local v3    # "listObj":Lcom/bitrhymes/admobext/AdMobExtAdListener;
     :goto_0
     const/4 v4, 0x0
 
@@ -112,7 +112,7 @@
     move-object v2, v4
 
     .line 32
-    .local v2, e:Lcom/adobe/fre/FRETypeMismatchException;
+    .local v2, "e":Lcom/adobe/fre/FRETypeMismatchException;
     const-string v4, "ERROR_EVENT"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -178,14 +178,14 @@
     goto :goto_0
 
     .line 33
-    .end local v2           #e:Lcom/adobe/fre/FRETypeMismatchException;
+    .end local v2    # "e":Lcom/adobe/fre/FRETypeMismatchException;
     :catch_1
     move-exception v4
 
     move-object v2, v4
 
     .line 34
-    .local v2, e:Lcom/adobe/fre/FREInvalidObjectException;
+    .local v2, "e":Lcom/adobe/fre/FREInvalidObjectException;
     const-string v4, "ERROR_EVENT"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -251,14 +251,14 @@
     goto/16 :goto_0
 
     .line 35
-    .end local v2           #e:Lcom/adobe/fre/FREInvalidObjectException;
+    .end local v2    # "e":Lcom/adobe/fre/FREInvalidObjectException;
     :catch_2
     move-exception v4
 
     move-object v2, v4
 
     .line 36
-    .local v2, e:Lcom/adobe/fre/FREWrongThreadException;
+    .local v2, "e":Lcom/adobe/fre/FREWrongThreadException;
     const-string v4, "ERROR_EVENT"
 
     new-instance v4, Ljava/lang/StringBuilder;

@@ -34,15 +34,15 @@
     move-result-object v0
 
     .line 68
-    .local v0, esc:[I
+    .local v0, "esc":[I
     array-length v1, v0
 
     .line 69
-    .local v1, len:I
+    .local v1, "len":I
     new-array v2, v1, [I
 
     .line 70
-    .local v2, result:[I
+    .local v2, "result":[I
     array-length v3, v0
 
     invoke-static {v0, v4, v2, v4, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V

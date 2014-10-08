@@ -32,11 +32,6 @@
 
 .method constructor <init>(Landroid/content/Context;Lcom/flurry/android/FlurryAds;Lcom/flurry/android/cz;Lcom/flurry/android/AdCreative;Landroid/os/Bundle;)V
     .locals 1
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 27
@@ -83,12 +78,11 @@
 # virtual methods
 .method public final initLayout(Landroid/content/Context;)V
     .locals 9
-    .parameter
 
     .prologue
     const/16 v7, 0xa
 
-    const/high16 v6, 0x3f00
+    const/high16 v6, 0x3f000000
 
     const/16 v4, 0x140
 

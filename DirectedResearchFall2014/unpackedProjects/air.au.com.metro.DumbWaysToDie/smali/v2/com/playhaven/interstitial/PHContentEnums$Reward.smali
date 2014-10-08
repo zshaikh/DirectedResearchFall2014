@@ -124,9 +124,7 @@
 
 .method private constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter "key"
+    .param p3, "key"    # Ljava/lang/String;
 
     .prologue
     .line 49
@@ -141,7 +139,6 @@
 
 .method public static valueOf(Ljava/lang/String;)Lv2/com/playhaven/interstitial/PHContentEnums$Reward;
     .locals 1
-    .parameter
 
     .prologue
     .line 1

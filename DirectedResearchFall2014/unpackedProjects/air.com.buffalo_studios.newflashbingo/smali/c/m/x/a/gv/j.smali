@@ -267,7 +267,7 @@
 
     if-eqz v2, :cond_0
 
-    const/high16 v3, -0x100
+    const/high16 v3, -0x1000000
 
     and-int/2addr v3, v1
 
@@ -630,7 +630,7 @@
     return-void
 
     :cond_0
-    const/high16 v0, -0x1
+    const/high16 v0, -0x10000
 
     and-int/2addr v0, p3
 
@@ -2066,7 +2066,7 @@
 
     if-eq p2, v0, :cond_0
 
-    const/high16 v0, -0x1
+    const/high16 v0, -0x10000
 
     and-int/2addr v0, p2
 

@@ -8,7 +8,7 @@
 
 
 # static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator; = null
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroid/os/Parcelable$Creator",
@@ -62,7 +62,7 @@
 
 .method constructor <init>(Landroid/os/Parcel;)V
     .locals 2
-    .parameter "in"
+    .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
     .line 33
@@ -111,7 +111,7 @@
     move-object v0, v1
 
     .line 42
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0
@@ -119,8 +119,8 @@
 
 .method private getExpandExtrasIntent(Landroid/content/Context;J)Landroid/content/Intent;
     .locals 3
-    .parameter "context"
-    .parameter "adImplInternalId"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "adImplInternalId"    # J
 
     .prologue
     .line 97
@@ -129,13 +129,13 @@
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
     .line 98
-    .local v0, intent:Landroid/content/Intent;
+    .local v0, "intent":Landroid/content/Intent;
     new-instance v1, Lcom/fusepowered/m1/android/OverlaySettings;
 
     invoke-direct {v1}, Lcom/fusepowered/m1/android/OverlaySettings;-><init>()V
 
     .line 99
-    .local v1, settings:Lcom/fusepowered/m1/android/OverlaySettings;
+    .local v1, "settings":Lcom/fusepowered/m1/android/OverlaySettings;
     iput-wide p2, v1, Lcom/fusepowered/m1/android/OverlaySettings;->creatorAdImplId:J
 
     .line 100
@@ -176,9 +176,9 @@
 # virtual methods
 .method canShow(Landroid/content/Context;Lcom/fusepowered/m1/android/MMAdImpl;Z)Z
     .locals 6
-    .parameter "context"
-    .parameter "adImpl"
-    .parameter "checkDeferredViewStart"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "adImpl"    # Lcom/fusepowered/m1/android/MMAdImpl;
+    .param p3, "checkDeferredViewStart"    # Z
 
     .prologue
     const/4 v5, 0x1
@@ -287,7 +287,7 @@
 
 .method download(Landroid/content/Context;)Z
     .locals 1
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     .line 67
@@ -318,7 +318,7 @@
 
 .method isOnDisk(Landroid/content/Context;)Z
     .locals 1
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     .line 73
@@ -329,7 +329,7 @@
 
 .method public readExternal(Ljava/io/ObjectInput;)V
     .locals 1
-    .parameter "input"
+    .param p1, "input"    # Ljava/io/ObjectInput;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -374,7 +374,7 @@
 
 .method saveAssets(Landroid/content/Context;)Z
     .locals 1
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     .line 61
@@ -385,8 +385,8 @@
 
 .method show(Landroid/content/Context;J)V
     .locals 1
-    .parameter "context"
-    .parameter "adImplInternalId"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "adImplInternalId"    # J
 
     .prologue
     .line 92
@@ -402,7 +402,7 @@
 
 .method public writeExternal(Ljava/io/ObjectOutput;)V
     .locals 1
-    .parameter "output"
+    .param p1, "output"    # Ljava/io/ObjectOutput;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -434,8 +434,8 @@
 
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 1
-    .parameter "dest"
-    .parameter "flags"
+    .param p1, "dest"    # Landroid/os/Parcel;
+    .param p2, "flags"    # I
 
     .prologue
     .line 120

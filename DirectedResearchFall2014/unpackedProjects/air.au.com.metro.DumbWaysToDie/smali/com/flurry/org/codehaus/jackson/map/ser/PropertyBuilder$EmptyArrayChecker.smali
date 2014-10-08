@@ -29,7 +29,7 @@
 # virtual methods
 .method public equals(Ljava/lang/Object;)Z
     .locals 1
-    .parameter "other"
+    .param p1, "other"    # Ljava/lang/Object;
 
     .prologue
     .line 356

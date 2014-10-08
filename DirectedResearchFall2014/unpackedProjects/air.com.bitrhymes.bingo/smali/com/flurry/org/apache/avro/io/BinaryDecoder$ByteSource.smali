@@ -34,8 +34,8 @@
 # virtual methods
 .method protected attach(ILcom/flurry/org/apache/avro/io/BinaryDecoder;)V
     .locals 2
-    .parameter "bufferSize"
-    .parameter "decoder"
+    .param p1, "bufferSize"    # I
+    .param p2, "decoder"    # Lcom/flurry/org/apache/avro/io/BinaryDecoder;
 
     .prologue
     const/4 v1, 0x0
@@ -43,19 +43,19 @@
     .line 599
     new-array v0, p1, [B
 
-    #setter for: Lcom/flurry/org/apache/avro/io/BinaryDecoder;->buf:[B
+    # setter for: Lcom/flurry/org/apache/avro/io/BinaryDecoder;->buf:[B
     invoke-static {p2, v0}, Lcom/flurry/org/apache/avro/io/BinaryDecoder;->access$302(Lcom/flurry/org/apache/avro/io/BinaryDecoder;[B)[B
 
     .line 600
-    #setter for: Lcom/flurry/org/apache/avro/io/BinaryDecoder;->pos:I
+    # setter for: Lcom/flurry/org/apache/avro/io/BinaryDecoder;->pos:I
     invoke-static {p2, v1}, Lcom/flurry/org/apache/avro/io/BinaryDecoder;->access$402(Lcom/flurry/org/apache/avro/io/BinaryDecoder;I)I
 
     .line 601
-    #setter for: Lcom/flurry/org/apache/avro/io/BinaryDecoder;->minPos:I
+    # setter for: Lcom/flurry/org/apache/avro/io/BinaryDecoder;->minPos:I
     invoke-static {p2, v1}, Lcom/flurry/org/apache/avro/io/BinaryDecoder;->access$602(Lcom/flurry/org/apache/avro/io/BinaryDecoder;I)I
 
     .line 602
-    #setter for: Lcom/flurry/org/apache/avro/io/BinaryDecoder;->limit:I
+    # setter for: Lcom/flurry/org/apache/avro/io/BinaryDecoder;->limit:I
     invoke-static {p2, v1}, Lcom/flurry/org/apache/avro/io/BinaryDecoder;->access$502(Lcom/flurry/org/apache/avro/io/BinaryDecoder;I)I
 
     .line 603
@@ -100,10 +100,10 @@
 
 .method protected compactAndFill([BIII)V
     .locals 3
-    .parameter "buf"
-    .parameter "pos"
-    .parameter "minPos"
-    .parameter "remaining"
+    .param p1, "buf"    # [B
+    .param p2, "pos"    # I
+    .param p3, "minPos"    # I
+    .param p4, "remaining"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -133,7 +133,7 @@
     add-int v0, p4, v1
 
     .line 681
-    .local v0, newLimit:I
+    .local v0, "newLimit":I
     iget-object v1, p0, Lcom/flurry/org/apache/avro/io/BinaryDecoder$ByteSource;->ba:Lcom/flurry/org/apache/avro/io/BinaryDecoder$BufferAccessor;
 
     invoke-virtual {v1, v0}, Lcom/flurry/org/apache/avro/io/BinaryDecoder$BufferAccessor;->setLimit(I)V
@@ -160,9 +160,9 @@
 
 .method public read([BII)I
     .locals 7
-    .parameter "b"
-    .parameter "off"
-    .parameter "len"
+    .param p1, "b"    # [B
+    .param p2, "off"    # I
+    .param p3, "len"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -178,7 +178,7 @@
     move-result v2
 
     .line 687
-    .local v2, lim:I
+    .local v2, "lim":I
     iget-object v5, p0, Lcom/flurry/org/apache/avro/io/BinaryDecoder$ByteSource;->ba:Lcom/flurry/org/apache/avro/io/BinaryDecoder$BufferAccessor;
 
     invoke-virtual {v5}, Lcom/flurry/org/apache/avro/io/BinaryDecoder$BufferAccessor;->getPos()I
@@ -186,7 +186,7 @@
     move-result v3
 
     .line 688
-    .local v3, pos:I
+    .local v3, "pos":I
     iget-object v5, p0, Lcom/flurry/org/apache/avro/io/BinaryDecoder$ByteSource;->ba:Lcom/flurry/org/apache/avro/io/BinaryDecoder$BufferAccessor;
 
     invoke-virtual {v5}, Lcom/flurry/org/apache/avro/io/BinaryDecoder$BufferAccessor;->getBuf()[B
@@ -194,11 +194,11 @@
     move-result-object v0
 
     .line 689
-    .local v0, buf:[B
+    .local v0, "buf":[B
     sub-int v4, v2, v3
 
     .line 690
-    .local v4, remaining:I
+    .local v4, "remaining":I
     if-lt v4, p3, :cond_0
 
     .line 691
@@ -242,7 +242,7 @@
     add-int v1, v4, v5
 
     .line 703
-    .local v1, inputRead:I
+    .local v1, "inputRead":I
     if-nez v1, :cond_1
 
     .line 704
@@ -267,7 +267,7 @@
 
 .method public skip(J)J
     .locals 7
-    .parameter "n"
+    .param p1, "n"    # J
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -283,7 +283,7 @@
     move-result v2
 
     .line 714
-    .local v2, lim:I
+    .local v2, "lim":I
     iget-object v5, p0, Lcom/flurry/org/apache/avro/io/BinaryDecoder$ByteSource;->ba:Lcom/flurry/org/apache/avro/io/BinaryDecoder$BufferAccessor;
 
     invoke-virtual {v5}, Lcom/flurry/org/apache/avro/io/BinaryDecoder$BufferAccessor;->getPos()I
@@ -291,11 +291,11 @@
     move-result v3
 
     .line 715
-    .local v3, pos:I
+    .local v3, "pos":I
     sub-int v4, v2, v3
 
     .line 716
-    .local v4, remaining:I
+    .local v4, "remaining":I
     int-to-long v5, v4
 
     cmp-long v5, v5, p1
@@ -339,7 +339,7 @@
     move-result-wide v0
 
     .line 724
-    .local v0, isSkipCount:J
+    .local v0, "isSkipCount":J
     int-to-long v5, v4
 
     add-long/2addr v5, v0

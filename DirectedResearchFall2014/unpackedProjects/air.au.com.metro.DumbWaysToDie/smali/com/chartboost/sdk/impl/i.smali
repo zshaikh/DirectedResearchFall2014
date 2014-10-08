@@ -13,7 +13,6 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 3
-    .parameter
 
     .prologue
     const/4 v2, -0x1
@@ -81,8 +80,6 @@
 
 .method public a(Lorg/json/JSONObject;I)V
     .locals 6
-    .parameter
-    .parameter
 
     .prologue
     .line 45

@@ -33,9 +33,9 @@
 
 .method private createImage(II[I)Landroid/graphics/drawable/Drawable;
     .locals 3
-    .parameter "width"
-    .parameter "height"
-    .parameter "pixels"
+    .param p1, "width"    # I
+    .param p2, "height"    # I
+    .param p3, "pixels"    # [I
 
     .prologue
     .line 104
@@ -62,7 +62,7 @@
     move-result-object v0
 
     .line 109
-    .local v0, bitmap:Landroid/graphics/Bitmap;
+    .local v0, "bitmap":Landroid/graphics/Bitmap;
     new-instance v1, Landroid/graphics/drawable/BitmapDrawable;
 
     invoke-virtual {p0}, Lcom/buffalostudios/aneutils/loadingspinner/LoadingSpinnerActivity;->getResources()Landroid/content/res/Resources;
@@ -71,7 +71,7 @@
 
     invoke-direct {v1, v2, v0}, Landroid/graphics/drawable/BitmapDrawable;-><init>(Landroid/content/res/Resources;Landroid/graphics/Bitmap;)V
 
-    .local v1, image:Landroid/graphics/drawable/BitmapDrawable;
+    .local v1, "image":Landroid/graphics/drawable/BitmapDrawable;
     move-object v2, v1
 
     .line 110
@@ -80,13 +80,13 @@
 
 .method public static start(Landroid/app/Activity;IIIII[I)V
     .locals 2
-    .parameter "activity"
-    .parameter "screenX"
-    .parameter "screenY"
-    .parameter "backgroundColor"
-    .parameter "imageWidth"
-    .parameter "imageHeight"
-    .parameter "imagePixels"
+    .param p0, "activity"    # Landroid/app/Activity;
+    .param p1, "screenX"    # I
+    .param p2, "screenY"    # I
+    .param p3, "backgroundColor"    # I
+    .param p4, "imageWidth"    # I
+    .param p5, "imageHeight"    # I
+    .param p6, "imagePixels"    # [I
 
     .prologue
     .line 46
@@ -97,7 +97,7 @@
     invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
     .line 47
-    .local v0, intent:Landroid/content/Intent;
+    .local v0, "intent":Landroid/content/Intent;
     const-string v1, "com.buffalostudios.aneutils.SCREEN_X"
 
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
@@ -138,7 +138,7 @@
 
 .method public static stop(Landroid/app/Activity;)V
     .locals 1
-    .parameter "activity"
+    .param p0, "activity"    # Landroid/app/Activity;
 
     .prologue
     .line 60
@@ -162,7 +162,7 @@
 
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 11
-    .parameter "savedInstanceState"
+    .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
     .line 65
@@ -179,27 +179,27 @@
     const/4 v6, 0x0
 
     .line 71
-    .local v6, screenX:I
+    .local v6, "screenX":I
     const/4 v7, 0x0
 
     .line 72
-    .local v7, screenY:I
+    .local v7, "screenY":I
     const/4 v0, 0x0
 
     .line 73
-    .local v0, backgroundColor:I
+    .local v0, "backgroundColor":I
     const/4 v5, 0x0
 
     .line 74
-    .local v5, imageWidth:I
+    .local v5, "imageWidth":I
     const/4 v3, 0x0
 
     .line 75
-    .local v3, imageHeight:I
+    .local v3, "imageHeight":I
     const/4 v4, 0x0
 
     .line 77
-    .local v4, imagePixels:[I
+    .local v4, "imagePixels":[I
     invoke-virtual {p0}, Lcom/buffalostudios/aneutils/loadingspinner/LoadingSpinnerActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v9
@@ -209,7 +209,7 @@
     move-result-object v1
 
     .line 79
-    .local v1, bundle:Landroid/os/Bundle;
+    .local v1, "bundle":Landroid/os/Bundle;
     if-eqz v1, :cond_0
 
     .line 80
@@ -263,7 +263,7 @@
     move-result-object v8
 
     .line 90
-    .local v8, view:Landroid/view/View;
+    .local v8, "view":Landroid/view/View;
     if-eqz v8, :cond_1
 
     .line 91
@@ -276,7 +276,7 @@
     move-result-object v2
 
     .line 99
-    .local v2, image:Landroid/graphics/drawable/Drawable;
+    .local v2, "image":Landroid/graphics/drawable/Drawable;
     new-instance v9, Lcom/buffalostudios/aneutils/loadingspinner/LoadingSpinnerActivity$Task;
 
     invoke-direct {v9, p0, v6, v7, v2}, Lcom/buffalostudios/aneutils/loadingspinner/LoadingSpinnerActivity$Task;-><init>(Landroid/app/Activity;IILandroid/graphics/drawable/Drawable;)V

@@ -29,8 +29,8 @@
 # direct methods
 .method constructor <init>(Ljava/net/URI;Ljava/lang/Object;)V
     .locals 0
-    .parameter "url"
-    .parameter "tag"
+    .param p1, "url"    # Ljava/net/URI;
+    .param p2, "tag"    # Ljava/lang/Object;
 
     .prologue
     .line 294
@@ -50,14 +50,14 @@
 # virtual methods
 .method public equals(Ljava/lang/Object;)Z
     .locals 5
-    .parameter "o"
+    .param p1, "o"    # Ljava/lang/Object;
 
     .prologue
     .line 311
     const/4 v2, 0x0
 
     .line 313
-    .local v2, isEqual:Z
+    .local v2, "isEqual":Z
     if-eqz p1, :cond_0
 
     instance-of v3, p1, Lcom/facebook/internal/ImageDownloader$RequestKey;
@@ -72,7 +72,7 @@
     move-object v1, v0
 
     .line 315
-    .local v1, compareTo:Lcom/facebook/internal/ImageDownloader$RequestKey;
+    .local v1, "compareTo":Lcom/facebook/internal/ImageDownloader$RequestKey;
     iget-object v3, v1, Lcom/facebook/internal/ImageDownloader$RequestKey;->uri:Ljava/net/URI;
 
     iget-object v4, p0, Lcom/facebook/internal/ImageDownloader$RequestKey;->uri:Ljava/net/URI;
@@ -90,13 +90,13 @@
     move v2, v3
 
     .line 318
-    .end local v1           #compareTo:Lcom/facebook/internal/ImageDownloader$RequestKey;
+    .end local v1    # "compareTo":Lcom/facebook/internal/ImageDownloader$RequestKey;
     :cond_0
     :goto_0
     return v2
 
     .line 315
-    .restart local v1       #compareTo:Lcom/facebook/internal/ImageDownloader$RequestKey;
+    .restart local v1    # "compareTo":Lcom/facebook/internal/ImageDownloader$RequestKey;
     :cond_1
     const/4 v3, 0x0
 
@@ -113,7 +113,7 @@
     const/16 v0, 0x1d
 
     .line 303
-    .local v0, result:I
+    .local v0, "result":I
     mul-int/lit8 v1, v0, 0x25
 
     iget-object v1, p0, Lcom/facebook/internal/ImageDownloader$RequestKey;->uri:Ljava/net/URI;

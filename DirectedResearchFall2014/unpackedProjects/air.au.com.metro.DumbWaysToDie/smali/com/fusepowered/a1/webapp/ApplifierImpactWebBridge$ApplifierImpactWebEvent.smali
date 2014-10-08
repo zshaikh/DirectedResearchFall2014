@@ -284,8 +284,6 @@
 
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 14
@@ -296,7 +294,6 @@
 
 .method public static valueOf(Ljava/lang/String;)Lcom/fusepowered/a1/webapp/ApplifierImpactWebBridge$ApplifierImpactWebEvent;
     .locals 1
-    .parameter
 
     .prologue
     .line 1
@@ -339,7 +336,7 @@
     const/4 v0, 0x0
 
     .line 18
-    .local v0, retVal:Ljava/lang/String;
+    .local v0, "retVal":Ljava/lang/String;
     invoke-static {}, Lcom/fusepowered/a1/webapp/ApplifierImpactWebBridge$ApplifierImpactWebEvent;->$SWITCH_TABLE$com$applifier$impact$android$webapp$ApplifierImpactWebBridge$ApplifierImpactWebEvent()[I
 
     move-result-object v1

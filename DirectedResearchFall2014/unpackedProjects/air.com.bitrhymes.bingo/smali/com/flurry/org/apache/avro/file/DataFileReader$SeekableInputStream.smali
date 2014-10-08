@@ -26,7 +26,7 @@
 # direct methods
 .method constructor <init>(Lcom/flurry/org/apache/avro/file/SeekableInput;)V
     .locals 1
-    .parameter "in"
+    .param p1, "in"    # Lcom/flurry/org/apache/avro/file/SeekableInput;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -78,7 +78,7 @@
     sub-long v0, v2, v4
 
     .line 246
-    .local v0, remaining:J
+    .local v0, "remaining":J
     const-wide/32 v2, 0x7fffffff
 
     cmp-long v2, v0, v2
@@ -157,7 +157,7 @@
     move-result v0
 
     .line 216
-    .local v0, n:I
+    .local v0, "n":I
     if-ne v0, v3, :cond_0
 
     .line 217
@@ -179,7 +179,7 @@
 
 .method public read([B)I
     .locals 3
-    .parameter "b"
+    .param p1, "b"    # [B
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -203,9 +203,9 @@
 
 .method public read([BII)I
     .locals 1
-    .parameter "b"
-    .parameter "off"
-    .parameter "len"
+    .param p1, "b"    # [B
+    .param p2, "off"    # I
+    .param p3, "len"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -225,7 +225,7 @@
 
 .method public seek(J)V
     .locals 3
-    .parameter "p"
+    .param p1, "p"    # J
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -277,7 +277,7 @@
 
 .method public skip(J)J
     .locals 8
-    .parameter "skip"
+    .param p1, "skip"    # J
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -293,7 +293,7 @@
     move-result-wide v2
 
     .line 226
-    .local v2, position:J
+    .local v2, "position":J
     iget-object v6, p0, Lcom/flurry/org/apache/avro/file/DataFileReader$SeekableInputStream;->in:Lcom/flurry/org/apache/avro/file/SeekableInput;
 
     invoke-interface {v6}, Lcom/flurry/org/apache/avro/file/SeekableInput;->length()J
@@ -301,11 +301,11 @@
     move-result-wide v0
 
     .line 227
-    .local v0, length:J
+    .local v0, "length":J
     sub-long v4, v0, v2
 
     .line 228
-    .local v4, remaining:J
+    .local v4, "remaining":J
     cmp-long v6, v4, p1
 
     if-lez v6, :cond_0

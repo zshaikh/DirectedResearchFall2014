@@ -13,7 +13,6 @@
 # direct methods
 .method constructor <init>(Lcom/google/ads/h;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 22
@@ -30,7 +29,6 @@
 # virtual methods
 .method public onDismissScreen(Lcom/google/ads/mediation/MediationInterstitialAdapter;)V
     .locals 3
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -41,7 +39,7 @@
 
     .prologue
     .line 74
-    .local p1, adapter:Lcom/google/ads/mediation/MediationInterstitialAdapter;,"Lcom/google/ads/mediation/MediationInterstitialAdapter<**>;"
+    .local p1, "adapter":Lcom/google/ads/mediation/MediationInterstitialAdapter;, "Lcom/google/ads/mediation/MediationInterstitialAdapter<**>;"
     iget-object v0, p0, Lcom/google/ads/k;->a:Lcom/google/ads/h;
 
     monitor-enter v0
@@ -77,8 +75,7 @@
 
 .method public onFailedToReceiveAd(Lcom/google/ads/mediation/MediationInterstitialAdapter;Lcom/google/ads/AdRequest$ErrorCode;)V
     .locals 4
-    .parameter
-    .parameter "error"
+    .param p2, "error"    # Lcom/google/ads/AdRequest$ErrorCode;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -91,7 +88,7 @@
 
     .prologue
     .line 45
-    .local p1, adapter:Lcom/google/ads/mediation/MediationInterstitialAdapter;,"Lcom/google/ads/mediation/MediationInterstitialAdapter<**>;"
+    .local p1, "adapter":Lcom/google/ads/mediation/MediationInterstitialAdapter;, "Lcom/google/ads/mediation/MediationInterstitialAdapter<**>;"
     iget-object v0, p0, Lcom/google/ads/k;->a:Lcom/google/ads/h;
 
     monitor-enter v0
@@ -205,7 +202,6 @@
 
 .method public onLeaveApplication(Lcom/google/ads/mediation/MediationInterstitialAdapter;)V
     .locals 3
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -216,7 +212,7 @@
 
     .prologue
     .line 81
-    .local p1, adapter:Lcom/google/ads/mediation/MediationInterstitialAdapter;,"Lcom/google/ads/mediation/MediationInterstitialAdapter<**>;"
+    .local p1, "adapter":Lcom/google/ads/mediation/MediationInterstitialAdapter;, "Lcom/google/ads/mediation/MediationInterstitialAdapter<**>;"
     iget-object v0, p0, Lcom/google/ads/k;->a:Lcom/google/ads/h;
 
     monitor-enter v0
@@ -252,7 +248,6 @@
 
 .method public onPresentScreen(Lcom/google/ads/mediation/MediationInterstitialAdapter;)V
     .locals 3
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -263,7 +258,7 @@
 
     .prologue
     .line 66
-    .local p1, adapter:Lcom/google/ads/mediation/MediationInterstitialAdapter;,"Lcom/google/ads/mediation/MediationInterstitialAdapter<**>;"
+    .local p1, "adapter":Lcom/google/ads/mediation/MediationInterstitialAdapter;, "Lcom/google/ads/mediation/MediationInterstitialAdapter<**>;"
     iget-object v0, p0, Lcom/google/ads/k;->a:Lcom/google/ads/h;
 
     monitor-enter v0
@@ -299,7 +294,6 @@
 
 .method public onReceivedAd(Lcom/google/ads/mediation/MediationInterstitialAdapter;)V
     .locals 4
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -310,7 +304,7 @@
 
     .prologue
     .line 29
-    .local p1, adapter:Lcom/google/ads/mediation/MediationInterstitialAdapter;,"Lcom/google/ads/mediation/MediationInterstitialAdapter<**>;"
+    .local p1, "adapter":Lcom/google/ads/mediation/MediationInterstitialAdapter;, "Lcom/google/ads/mediation/MediationInterstitialAdapter<**>;"
     iget-object v0, p0, Lcom/google/ads/k;->a:Lcom/google/ads/h;
 
     monitor-enter v0

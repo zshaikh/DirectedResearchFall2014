@@ -26,8 +26,6 @@
 # direct methods
 .method constructor <init>(Lcom/tapjoy/TJAdUnitJSBridge;Lorg/json/JSONObject;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 370
@@ -50,7 +48,7 @@
     const/4 v2, 0x0
 
     .line 378
-    .local v2, html:Ljava/lang/String;
+    .local v2, "html":Ljava/lang/String;
     :try_start_0
     iget-object v1, p0, Lcom/tapjoy/TJAdUnitJSBridge$3;->val$json:Lorg/json/JSONObject;
 
@@ -66,7 +64,7 @@
     :goto_0
     iget-object v1, p0, Lcom/tapjoy/TJAdUnitJSBridge$3;->this$0:Lcom/tapjoy/TJAdUnitJSBridge;
 
-    #getter for: Lcom/tapjoy/TJAdUnitJSBridge;->bannerView:Landroid/view/View;
+    # getter for: Lcom/tapjoy/TJAdUnitJSBridge;->bannerView:Landroid/view/View;
     invoke-static {v1}, Lcom/tapjoy/TJAdUnitJSBridge;->access$100(Lcom/tapjoy/TJAdUnitJSBridge;)Landroid/view/View;
 
     move-result-object v1
@@ -76,7 +74,7 @@
     .line 388
     iget-object v1, p0, Lcom/tapjoy/TJAdUnitJSBridge$3;->this$0:Lcom/tapjoy/TJAdUnitJSBridge;
 
-    #getter for: Lcom/tapjoy/TJAdUnitJSBridge;->bannerView:Landroid/view/View;
+    # getter for: Lcom/tapjoy/TJAdUnitJSBridge;->bannerView:Landroid/view/View;
     invoke-static {v1}, Lcom/tapjoy/TJAdUnitJSBridge;->access$100(Lcom/tapjoy/TJAdUnitJSBridge;)Landroid/view/View;
 
     move-result-object v1
@@ -90,7 +88,7 @@
     .line 390
     iget-object v1, p0, Lcom/tapjoy/TJAdUnitJSBridge$3;->this$0:Lcom/tapjoy/TJAdUnitJSBridge;
 
-    #getter for: Lcom/tapjoy/TJAdUnitJSBridge;->bannerView:Landroid/view/View;
+    # getter for: Lcom/tapjoy/TJAdUnitJSBridge;->bannerView:Landroid/view/View;
     invoke-static {v1}, Lcom/tapjoy/TJAdUnitJSBridge;->access$100(Lcom/tapjoy/TJAdUnitJSBridge;)Landroid/view/View;
 
     move-result-object v1
@@ -103,7 +101,7 @@
 
     iget-object v1, p0, Lcom/tapjoy/TJAdUnitJSBridge$3;->this$0:Lcom/tapjoy/TJAdUnitJSBridge;
 
-    #getter for: Lcom/tapjoy/TJAdUnitJSBridge;->bannerView:Landroid/view/View;
+    # getter for: Lcom/tapjoy/TJAdUnitJSBridge;->bannerView:Landroid/view/View;
     invoke-static {v1}, Lcom/tapjoy/TJAdUnitJSBridge;->access$100(Lcom/tapjoy/TJAdUnitJSBridge;)Landroid/view/View;
 
     move-result-object v1
@@ -116,7 +114,7 @@
 
     iget-object v1, p0, Lcom/tapjoy/TJAdUnitJSBridge$3;->this$0:Lcom/tapjoy/TJAdUnitJSBridge;
 
-    #getter for: Lcom/tapjoy/TJAdUnitJSBridge;->context:Landroid/content/Context;
+    # getter for: Lcom/tapjoy/TJAdUnitJSBridge;->context:Landroid/content/Context;
     invoke-static {v1}, Lcom/tapjoy/TJAdUnitJSBridge;->access$200(Lcom/tapjoy/TJAdUnitJSBridge;)Landroid/content/Context;
 
     move-result-object v1
@@ -124,10 +122,10 @@
     invoke-direct {v0, v1}, Lcom/tapjoy/mraid/view/MraidView;-><init>(Landroid/content/Context;)V
 
     .line 395
-    .local v0, banner:Lcom/tapjoy/mraid/view/MraidView;
+    .local v0, "banner":Lcom/tapjoy/mraid/view/MraidView;
     iget-object v1, p0, Lcom/tapjoy/TJAdUnitJSBridge$3;->this$0:Lcom/tapjoy/TJAdUnitJSBridge;
 
-    #getter for: Lcom/tapjoy/TJAdUnitJSBridge;->webView:Landroid/webkit/WebView;
+    # getter for: Lcom/tapjoy/TJAdUnitJSBridge;->webView:Landroid/webkit/WebView;
     invoke-static {v1}, Lcom/tapjoy/TJAdUnitJSBridge;->access$300(Lcom/tapjoy/TJAdUnitJSBridge;)Landroid/webkit/WebView;
 
     move-result-object v1
@@ -137,7 +135,7 @@
     move-result-object v9
 
     .line 396
-    .local v9, webSettings:Landroid/webkit/WebSettings;
+    .local v9, "webSettings":Landroid/webkit/WebSettings;
     const/4 v1, 0x1
 
     invoke-virtual {v9, v1}, Landroid/webkit/WebSettings;->setJavaScriptEnabled(Z)V
@@ -157,7 +155,7 @@
     invoke-direct {v7, v1, v3}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
 
     .line 401
-    .local v7, layout:Landroid/view/ViewGroup$LayoutParams;
+    .local v7, "layout":Landroid/view/ViewGroup$LayoutParams;
     invoke-virtual {v0, v7}, Lcom/tapjoy/mraid/view/MraidView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 404
@@ -184,7 +182,7 @@
     .line 410
     iget-object v1, p0, Lcom/tapjoy/TJAdUnitJSBridge$3;->this$0:Lcom/tapjoy/TJAdUnitJSBridge;
 
-    #getter for: Lcom/tapjoy/TJAdUnitJSBridge;->context:Landroid/content/Context;
+    # getter for: Lcom/tapjoy/TJAdUnitJSBridge;->context:Landroid/content/Context;
     invoke-static {v1}, Lcom/tapjoy/TJAdUnitJSBridge;->access$200(Lcom/tapjoy/TJAdUnitJSBridge;)Landroid/content/Context;
 
     move-result-object v1
@@ -193,7 +191,7 @@
 
     const-string v2, "window"
 
-    .end local v2           #html:Ljava/lang/String;
+    .end local v2    # "html":Ljava/lang/String;
     invoke-virtual {v1, v2}, Landroid/app/Activity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v10
@@ -201,7 +199,7 @@
     check-cast v10, Landroid/view/WindowManager;
 
     .line 412
-    .local v10, windowManager:Landroid/view/WindowManager;
+    .local v10, "windowManager":Landroid/view/WindowManager;
     invoke-interface {v10}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
 
     move-result-object v1
@@ -211,41 +209,41 @@
     move-result v8
 
     .line 413
-    .local v8, screenWidth:I
+    .local v8, "screenWidth":I
     iget-object v1, p0, Lcom/tapjoy/TJAdUnitJSBridge$3;->this$0:Lcom/tapjoy/TJAdUnitJSBridge;
 
     invoke-static {v0, v8}, Lcom/tapjoy/TapjoyUtil;->scaleDisplayAd(Landroid/view/View;I)Landroid/view/View;
 
     move-result-object v2
 
-    #setter for: Lcom/tapjoy/TJAdUnitJSBridge;->bannerView:Landroid/view/View;
+    # setter for: Lcom/tapjoy/TJAdUnitJSBridge;->bannerView:Landroid/view/View;
     invoke-static {v1, v2}, Lcom/tapjoy/TJAdUnitJSBridge;->access$102(Lcom/tapjoy/TJAdUnitJSBridge;Landroid/view/View;)Landroid/view/View;
 
     .line 415
     iget-object v1, p0, Lcom/tapjoy/TJAdUnitJSBridge$3;->this$0:Lcom/tapjoy/TJAdUnitJSBridge;
 
-    #getter for: Lcom/tapjoy/TJAdUnitJSBridge;->context:Landroid/content/Context;
+    # getter for: Lcom/tapjoy/TJAdUnitJSBridge;->context:Landroid/content/Context;
     invoke-static {v1}, Lcom/tapjoy/TJAdUnitJSBridge;->access$200(Lcom/tapjoy/TJAdUnitJSBridge;)Landroid/content/Context;
 
     move-result-object v0
 
-    .end local v0           #banner:Lcom/tapjoy/mraid/view/MraidView;
+    .end local v0    # "banner":Lcom/tapjoy/mraid/view/MraidView;
     check-cast v0, Landroid/app/Activity;
 
     iget-object v1, p0, Lcom/tapjoy/TJAdUnitJSBridge$3;->this$0:Lcom/tapjoy/TJAdUnitJSBridge;
 
-    #getter for: Lcom/tapjoy/TJAdUnitJSBridge;->bannerView:Landroid/view/View;
+    # getter for: Lcom/tapjoy/TJAdUnitJSBridge;->bannerView:Landroid/view/View;
     invoke-static {v1}, Lcom/tapjoy/TJAdUnitJSBridge;->access$100(Lcom/tapjoy/TJAdUnitJSBridge;)Landroid/view/View;
 
     move-result-object v1
 
     new-instance v2, Landroid/view/ViewGroup$LayoutParams;
 
-    const-wide/high16 v3, 0x4059
+    const-wide/high16 v3, 0x4059000000000000L
 
     int-to-double v5, v8
 
-    const-wide/high16 v9, 0x4084
+    const-wide/high16 v9, 0x4084000000000000L
 
     div-double/2addr v5, v9
 
@@ -255,24 +253,24 @@
 
     invoke-direct {v2, v8, v3}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
 
-    .end local v9           #webSettings:Landroid/webkit/WebSettings;
+    .end local v9    # "webSettings":Landroid/webkit/WebSettings;
     invoke-virtual {v0, v1, v2}, Landroid/app/Activity;->addContentView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 416
     return-void
 
     .line 380
-    .end local v7           #layout:Landroid/view/ViewGroup$LayoutParams;
-    .end local v8           #screenWidth:I
-    .end local v10           #windowManager:Landroid/view/WindowManager;
-    .restart local v2       #html:Ljava/lang/String;
+    .end local v7    # "layout":Landroid/view/ViewGroup$LayoutParams;
+    .end local v8    # "screenWidth":I
+    .end local v10    # "windowManager":Landroid/view/WindowManager;
+    .restart local v2    # "html":Ljava/lang/String;
     :catch_0
     move-exception v1
 
     move-object v6, v1
 
     .line 382
-    .local v6, e:Ljava/lang/Exception;
+    .local v6, "e":Ljava/lang/Exception;
     invoke-virtual {v6}, Ljava/lang/Exception;->printStackTrace()V
 
     goto/16 :goto_0

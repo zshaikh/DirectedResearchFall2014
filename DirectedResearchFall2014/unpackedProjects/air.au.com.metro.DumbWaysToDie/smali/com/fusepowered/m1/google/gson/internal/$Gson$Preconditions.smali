@@ -16,7 +16,7 @@
 
 .method public static checkArgument(Z)V
     .locals 1
-    .parameter "condition"
+    .param p0, "condition"    # Z
 
     .prologue
     .line 41
@@ -36,7 +36,6 @@
 
 .method public static checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -47,7 +46,7 @@
 
     .prologue
     .line 34
-    .local p0, obj:Ljava/lang/Object;,"TT;"
+    .local p0, "obj":Ljava/lang/Object;, "TT;"
     if-nez p0, :cond_0
 
     .line 35

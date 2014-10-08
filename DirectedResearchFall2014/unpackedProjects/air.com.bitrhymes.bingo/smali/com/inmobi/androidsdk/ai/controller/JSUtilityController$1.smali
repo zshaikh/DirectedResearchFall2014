@@ -32,11 +32,6 @@
 # direct methods
 .method constructor <init>(Lcom/inmobi/androidsdk/ai/controller/JSUtilityController;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 1
@@ -60,8 +55,6 @@
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 5
-    .parameter
-    .parameter
 
     .prologue
     .line 264

@@ -160,9 +160,9 @@
 
     const/4 v4, 0x0
 
-    const/high16 v3, 0x4020
+    const/high16 v3, 0x40200000
 
-    const/high16 v2, 0x3fc0
+    const/high16 v2, 0x3fc00000
 
     sput-boolean v4, Lc/m/x/a/gv/o;->a:Z
 
@@ -258,7 +258,7 @@
 
     const/4 v5, 0x1
 
-    const/high16 v6, 0x3f00
+    const/high16 v6, 0x3f000000
 
     new-instance v9, Landroid/view/animation/AnimationSet;
 
@@ -314,7 +314,7 @@
 
     const/4 v3, 0x0
 
-    const/high16 v2, 0x3f80
+    const/high16 v2, 0x3f800000
 
     iget v0, p1, Lc/m/x/a/gv/e;->mNextAnim:I
 
@@ -433,7 +433,7 @@
     :pswitch_0
     iget-object v0, p0, Lc/m/x/a/gv/o;->o:Lc/m/x/a/gv/j;
 
-    const/high16 v0, 0x3f90
+    const/high16 v0, 0x3f900000
 
     invoke-static {v0, v2, v3, v2}, Lc/m/x/a/gv/o;->a(FFFF)Landroid/view/animation/Animation;
 

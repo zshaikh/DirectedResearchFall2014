@@ -33,7 +33,7 @@
 # direct methods
 .method public constructor <init>(Lcom/fusepowered/m1/android/InlineVideoView;)V
     .locals 1
-    .parameter "videoView"
+    .param p1, "videoView"    # Lcom/fusepowered/m1/android/InlineVideoView;
 
     .prologue
     .line 377
@@ -54,8 +54,8 @@
 # virtual methods
 .method public onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
     .locals 2
-    .parameter "v"
-    .parameter "event"
+    .param p1, "v"    # Landroid/view/View;
+    .param p2, "event"    # Landroid/view/MotionEvent;
 
     .prologue
     .line 384
@@ -68,7 +68,7 @@
     check-cast v0, Lcom/fusepowered/m1/android/InlineVideoView;
 
     .line 385
-    .local v0, inlineView:Lcom/fusepowered/m1/android/InlineVideoView;
+    .local v0, "inlineView":Lcom/fusepowered/m1/android/InlineVideoView;
     if-eqz v0, :cond_0
 
     .line 387

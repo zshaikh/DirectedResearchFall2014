@@ -31,8 +31,8 @@
 # direct methods
 .method public constructor <init>(Ljava/lang/String;J)V
     .locals 3
-    .parameter "transactionId"
-    .parameter "totalCostInMicros"
+    .param p1, "transactionId"    # Ljava/lang/String;
+    .param p2, "totalCostInMicros"    # J
 
     .prologue
     const-wide/16 v1, 0x0
@@ -83,7 +83,7 @@
 
 .method static synthetic access$000(Lcom/google/analytics/tracking/android/Transaction$Builder;)Ljava/lang/String;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/google/analytics/tracking/android/Transaction$Builder;
 
     .prologue
     .line 106
@@ -94,7 +94,7 @@
 
 .method static synthetic access$100(Lcom/google/analytics/tracking/android/Transaction$Builder;)J
     .locals 2
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/google/analytics/tracking/android/Transaction$Builder;
 
     .prologue
     .line 106
@@ -105,7 +105,7 @@
 
 .method static synthetic access$200(Lcom/google/analytics/tracking/android/Transaction$Builder;)Ljava/lang/String;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/google/analytics/tracking/android/Transaction$Builder;
 
     .prologue
     .line 106
@@ -116,7 +116,7 @@
 
 .method static synthetic access$300(Lcom/google/analytics/tracking/android/Transaction$Builder;)J
     .locals 2
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/google/analytics/tracking/android/Transaction$Builder;
 
     .prologue
     .line 106
@@ -127,7 +127,7 @@
 
 .method static synthetic access$400(Lcom/google/analytics/tracking/android/Transaction$Builder;)J
     .locals 2
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/google/analytics/tracking/android/Transaction$Builder;
 
     .prologue
     .line 106
@@ -138,7 +138,7 @@
 
 .method static synthetic access$500(Lcom/google/analytics/tracking/android/Transaction$Builder;)Ljava/lang/String;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/google/analytics/tracking/android/Transaction$Builder;
 
     .prologue
     .line 106
@@ -165,7 +165,7 @@
 
 .method public setAffiliation(Ljava/lang/String;)Lcom/google/analytics/tracking/android/Transaction$Builder;
     .locals 0
-    .parameter "affiliation"
+    .param p1, "affiliation"    # Ljava/lang/String;
 
     .prologue
     .line 136
@@ -177,7 +177,7 @@
 
 .method public setCurrencyCode(Ljava/lang/String;)Lcom/google/analytics/tracking/android/Transaction$Builder;
     .locals 0
-    .parameter "currencyCode"
+    .param p1, "currencyCode"    # Ljava/lang/String;
 
     .prologue
     .line 171
@@ -189,7 +189,7 @@
 
 .method public setShippingCostInMicros(J)Lcom/google/analytics/tracking/android/Transaction$Builder;
     .locals 0
-    .parameter "shippingCostInMicros"
+    .param p1, "shippingCostInMicros"    # J
 
     .prologue
     .line 160
@@ -201,7 +201,7 @@
 
 .method public setTotalTaxInMicros(J)Lcom/google/analytics/tracking/android/Transaction$Builder;
     .locals 0
-    .parameter "totalTaxInMicros"
+    .param p1, "totalTaxInMicros"    # J
 
     .prologue
     .line 148

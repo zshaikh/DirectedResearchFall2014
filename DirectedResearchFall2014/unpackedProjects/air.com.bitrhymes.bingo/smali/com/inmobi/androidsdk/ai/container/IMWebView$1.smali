@@ -21,7 +21,6 @@
 # direct methods
 .method constructor <init>(Lcom/inmobi/androidsdk/ai/container/IMWebView;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1
@@ -37,8 +36,6 @@
 # virtual methods
 .method public onLoadResource(Landroid/webkit/WebView;Ljava/lang/String;)V
     .locals 3
-    .parameter
-    .parameter
 
     .prologue
     const-string v2, "InMobiAndroidSDK_3.6.2"
@@ -163,8 +160,6 @@
 
 .method public onPageFinished(Landroid/webkit/WebView;Ljava/lang/String;)V
     .locals 4
-    .parameter
-    .parameter
 
     .prologue
     const-string v3, "InMobiAndroidSDK_3.6.2"
@@ -435,9 +430,6 @@
 
 .method public onPageStarted(Landroid/webkit/WebView;Ljava/lang/String;Landroid/graphics/Bitmap;)V
     .locals 3
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 1273
@@ -491,10 +483,6 @@
 
 .method public onReceivedError(Landroid/webkit/WebView;ILjava/lang/String;Ljava/lang/String;)V
     .locals 3
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const-string v2, "InMobiAndroidSDK_3.6.2"
@@ -609,8 +597,6 @@
 
 .method public shouldOverrideUrlLoading(Landroid/webkit/WebView;Ljava/lang/String;)Z
     .locals 8
-    .parameter
-    .parameter
 
     .prologue
     const/4 v6, 0x0
@@ -702,7 +688,7 @@
     invoke-direct {v1, v2, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
     .line 1397
-    const/high16 v2, 0x1000
+    const/high16 v2, 0x10000000
 
     invoke-virtual {v1, v2}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
@@ -749,7 +735,7 @@
     invoke-direct {v1, v2, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
     .line 1406
-    const/high16 v2, 0x1000
+    const/high16 v2, 0x10000000
 
     invoke-virtual {v1, v2}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
@@ -953,7 +939,7 @@
     invoke-virtual {v1, v0}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
 
     .line 1456
-    const/high16 v2, 0x1000
+    const/high16 v2, 0x10000000
 
     invoke-virtual {v1, v2}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
@@ -1146,7 +1132,7 @@
     invoke-virtual {v1, v0}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
 
     .line 1491
-    const/high16 v0, 0x1000
+    const/high16 v0, 0x10000000
 
     invoke-virtual {v1, v0}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 

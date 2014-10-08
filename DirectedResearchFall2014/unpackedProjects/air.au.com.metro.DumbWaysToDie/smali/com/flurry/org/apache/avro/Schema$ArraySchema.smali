@@ -21,7 +21,7 @@
 # direct methods
 .method public constructor <init>(Lcom/flurry/org/apache/avro/Schema;)V
     .locals 1
-    .parameter "elementType"
+    .param p1, "elementType"    # Lcom/flurry/org/apache/avro/Schema;
 
     .prologue
     .line 756
@@ -60,7 +60,7 @@
 
 .method public equals(Ljava/lang/Object;)Z
     .locals 6
-    .parameter "o"
+    .param p1, "o"    # Ljava/lang/Object;
 
     .prologue
     const/4 v5, 0x1
@@ -95,7 +95,7 @@
     move-object v1, v0
 
     .line 764
-    .local v1, that:Lcom/flurry/org/apache/avro/Schema$ArraySchema;
+    .local v1, "that":Lcom/flurry/org/apache/avro/Schema$ArraySchema;
     invoke-virtual {p0, v1}, Lcom/flurry/org/apache/avro/Schema$ArraySchema;->equalCachedHash(Lcom/flurry/org/apache/avro/Schema;)Z
 
     move-result v2
@@ -144,8 +144,8 @@
 
 .method toJson(Lcom/flurry/org/apache/avro/Schema$Names;Lcom/flurry/org/codehaus/jackson/JsonGenerator;)V
     .locals 2
-    .parameter "names"
-    .parameter "gen"
+    .param p1, "names"    # Lcom/flurry/org/apache/avro/Schema$Names;
+    .param p2, "gen"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;

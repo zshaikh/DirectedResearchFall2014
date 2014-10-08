@@ -54,9 +54,9 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Landroid/webkit/WebView;Lcom/tapjoy/TJEventData;)V
     .locals 4
-    .parameter "c"
-    .parameter "w"
-    .parameter "e"
+    .param p1, "c"    # Landroid/content/Context;
+    .param p2, "w"    # Landroid/webkit/WebView;
+    .param p3, "e"    # Lcom/tapjoy/TJEventData;
 
     .prologue
     const/4 v2, 0x0
@@ -151,7 +151,7 @@
 
 .method static synthetic access$000(Lcom/tapjoy/TJAdUnitJSBridge;)Lcom/tapjoy/TJAdUnitJSBridge;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/tapjoy/TJAdUnitJSBridge;
 
     .prologue
     .line 52
@@ -162,7 +162,7 @@
 
 .method static synthetic access$100(Lcom/tapjoy/TJAdUnitJSBridge;)Landroid/view/View;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/tapjoy/TJAdUnitJSBridge;
 
     .prologue
     .line 52
@@ -173,8 +173,8 @@
 
 .method static synthetic access$102(Lcom/tapjoy/TJAdUnitJSBridge;Landroid/view/View;)Landroid/view/View;
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
+    .param p0, "x0"    # Lcom/tapjoy/TJAdUnitJSBridge;
+    .param p1, "x1"    # Landroid/view/View;
 
     .prologue
     .line 52
@@ -185,7 +185,7 @@
 
 .method static synthetic access$200(Lcom/tapjoy/TJAdUnitJSBridge;)Landroid/content/Context;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/tapjoy/TJAdUnitJSBridge;
 
     .prologue
     .line 52
@@ -196,7 +196,7 @@
 
 .method static synthetic access$300(Lcom/tapjoy/TJAdUnitJSBridge;)Landroid/webkit/WebView;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/tapjoy/TJAdUnitJSBridge;
 
     .prologue
     .line 52
@@ -207,7 +207,7 @@
 
 .method static synthetic access$400(Lcom/tapjoy/TJAdUnitJSBridge;)Landroid/location/LocationManager;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/tapjoy/TJAdUnitJSBridge;
 
     .prologue
     .line 52
@@ -218,7 +218,7 @@
 
 .method static synthetic access$500(Lcom/tapjoy/TJAdUnitJSBridge;)Landroid/location/LocationListener;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/tapjoy/TJAdUnitJSBridge;
 
     .prologue
     .line 52
@@ -229,7 +229,7 @@
 
 .method private downloadFileFromURL(Ljava/lang/String;)Ljava/io/File;
     .locals 12
-    .parameter "url"
+    .param p1, "url"    # Ljava/lang/String;
     .annotation build Landroid/annotation/SuppressLint;
         value = {
             "WorldReadableFiles"
@@ -243,7 +243,7 @@
     const/4 v4, 0x0
 
     .line 512
-    .local v4, file:Ljava/io/File;
+    .local v4, "file":Ljava/io/File;
     const/16 v8, 0x2e
 
     invoke-virtual {p1, v8}, Ljava/lang/String;->lastIndexOf(I)I
@@ -255,18 +255,18 @@
     move-result-object v3
 
     .line 514
-    .local v3, ext:Ljava/lang/String;
+    .local v3, "ext":Ljava/lang/String;
     const/4 v6, 0x0
 
     .line 520
-    .local v6, input:Ljava/io/InputStream;
+    .local v6, "input":Ljava/io/InputStream;
     :try_start_0
     new-instance v5, Ljava/net/URL;
 
     invoke-direct {v5, p1}, Ljava/net/URL;-><init>(Ljava/lang/String;)V
 
     .line 521
-    .local v5, fileURL:Ljava/net/URL;
+    .local v5, "fileURL":Ljava/net/URL;
     invoke-virtual {v5}, Ljava/net/URL;->openStream()Ljava/io/InputStream;
 
     move-result-object v6
@@ -299,17 +299,17 @@
     move-result-object v7
 
     .line 526
-    .local v7, output:Ljava/io/OutputStream;
+    .local v7, "output":Ljava/io/OutputStream;
     const/16 v8, 0x1000
 
     new-array v0, v8, [B
 
     .line 527
-    .local v0, buffer:[B
+    .local v0, "buffer":[B
     const/4 v1, 0x0
 
     .line 528
-    .local v1, bytesRead:I
+    .local v1, "bytesRead":I
     :goto_0
     const/4 v8, 0x0
 
@@ -331,25 +331,25 @@
     goto :goto_0
 
     .line 540
-    .end local v0           #buffer:[B
-    .end local v1           #bytesRead:I
-    .end local v5           #fileURL:Ljava/net/URL;
-    .end local v7           #output:Ljava/io/OutputStream;
+    .end local v0    # "buffer":[B
+    .end local v1    # "bytesRead":I
+    .end local v5    # "fileURL":Ljava/net/URL;
+    .end local v7    # "output":Ljava/io/OutputStream;
     :catch_0
     move-exception v8
 
     move-object v2, v8
 
     .line 542
-    .local v2, e:Ljava/lang/Exception;
+    .local v2, "e":Ljava/lang/Exception;
     invoke-virtual {v2}, Ljava/lang/Exception;->printStackTrace()V
 
     .line 545
-    .end local v2           #e:Ljava/lang/Exception;
+    .end local v2    # "e":Ljava/lang/Exception;
     :goto_1
     new-instance v4, Ljava/io/File;
 
-    .end local v4           #file:Ljava/io/File;
+    .end local v4    # "file":Ljava/io/File;
     iget-object v8, p0, Lcom/tapjoy/TJAdUnitJSBridge;->context:Landroid/content/Context;
 
     invoke-virtual {v8}, Landroid/content/Context;->getFilesDir()Ljava/io/File;
@@ -377,14 +377,14 @@
     invoke-direct {v4, v8, v9}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
     .line 546
-    .restart local v4       #file:Ljava/io/File;
+    .restart local v4    # "file":Ljava/io/File;
     return-object v4
 
     .line 535
-    .restart local v0       #buffer:[B
-    .restart local v1       #bytesRead:I
-    .restart local v5       #fileURL:Ljava/net/URL;
-    .restart local v7       #output:Ljava/io/OutputStream;
+    .restart local v0    # "buffer":[B
+    .restart local v1    # "bytesRead":I
+    .restart local v5    # "fileURL":Ljava/net/URL;
+    .restart local v7    # "output":Ljava/io/OutputStream;
     :cond_0
     :try_start_1
     invoke-virtual {v7}, Ljava/io/OutputStream;->close()V
@@ -407,8 +407,8 @@
 # virtual methods
 .method public alert(Lorg/json/JSONObject;Ljava/lang/String;)V
     .locals 13
-    .parameter "json"
-    .parameter "callbackID"
+    .param p1, "json"    # Lorg/json/JSONObject;
+    .param p2, "callbackID"    # Ljava/lang/String;
 
     .prologue
     const/4 v12, 0x1
@@ -442,15 +442,15 @@
     const-string v7, ""
 
     .line 141
-    .local v7, title:Ljava/lang/String;
+    .local v7, "title":Ljava/lang/String;
     const-string v6, ""
 
     .line 142
-    .local v6, message:Ljava/lang/String;
+    .local v6, "message":Ljava/lang/String;
     const/4 v2, 0x0
 
     .line 146
-    .local v2, buttons:Lorg/json/JSONArray;
+    .local v2, "buttons":Lorg/json/JSONArray;
     :try_start_0
     const-string v8, "title"
 
@@ -495,7 +495,7 @@
     move-result-object v3
 
     .line 158
-    .local v3, dialog:Landroid/app/AlertDialog;
+    .local v3, "dialog":Landroid/app/AlertDialog;
     if-eqz v2, :cond_0
 
     invoke-virtual {v2}, Lorg/json/JSONArray;->length()I
@@ -519,14 +519,14 @@
     return-void
 
     .line 150
-    .end local v3           #dialog:Landroid/app/AlertDialog;
+    .end local v3    # "dialog":Landroid/app/AlertDialog;
     :catch_0
     move-exception v8
 
     move-object v4, v8
 
     .line 152
-    .local v4, e:Ljava/lang/Exception;
+    .local v4, "e":Ljava/lang/Exception;
     new-array v8, v12, [Ljava/lang/Object;
 
     sget-object v9, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
@@ -541,18 +541,18 @@
     goto :goto_0
 
     .line 165
-    .end local v4           #e:Ljava/lang/Exception;
-    .restart local v3       #dialog:Landroid/app/AlertDialog;
+    .end local v4    # "e":Ljava/lang/Exception;
+    .restart local v3    # "dialog":Landroid/app/AlertDialog;
     :cond_1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     .line 167
-    .local v0, b:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
+    .local v0, "b":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     const/4 v5, 0x0
 
-    .local v5, i:I
+    .local v5, "i":I
     :goto_2
     invoke-virtual {v2}, Lorg/json/JSONArray;->length()I
 
@@ -567,7 +567,7 @@
     const/4 v1, -0x1
 
     .line 187
-    .local v1, buttonType:I
+    .local v1, "buttonType":I
     :goto_3
     :try_start_1
     invoke-virtual {v2, v5}, Lorg/json/JSONArray;->getString(I)Ljava/lang/String;
@@ -598,21 +598,21 @@
     goto :goto_2
 
     .line 174
-    .end local v1           #buttonType:I
+    .end local v1    # "buttonType":I
     :pswitch_0
     const/4 v1, -0x2
 
     .line 175
-    .restart local v1       #buttonType:I
+    .restart local v1    # "buttonType":I
     goto :goto_3
 
     .line 177
-    .end local v1           #buttonType:I
+    .end local v1    # "buttonType":I
     :pswitch_1
     const/4 v1, -0x3
 
     .line 178
-    .restart local v1       #buttonType:I
+    .restart local v1    # "buttonType":I
     goto :goto_3
 
     .line 189
@@ -622,14 +622,14 @@
     move-object v4, v8
 
     .line 191
-    .restart local v4       #e:Ljava/lang/Exception;
+    .restart local v4    # "e":Ljava/lang/Exception;
     invoke-virtual {v4}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_4
 
     .line 227
-    .end local v1           #buttonType:I
-    .end local v4           #e:Ljava/lang/Exception;
+    .end local v1    # "buttonType":I
+    .end local v4    # "e":Ljava/lang/Exception;
     :cond_2
     invoke-virtual {v3}, Landroid/app/AlertDialog;->show()V
 
@@ -647,8 +647,8 @@
 
 .method public checkAppInstalled(Lorg/json/JSONObject;Ljava/lang/String;)V
     .locals 8
-    .parameter "json"
-    .parameter "callbackID"
+    .param p1, "json"    # Lorg/json/JSONObject;
+    .param p2, "callbackID"    # Ljava/lang/String;
 
     .prologue
     const/4 v6, 0x1
@@ -659,7 +659,7 @@
     const-string v4, ""
 
     .line 242
-    .local v4, packageName:Ljava/lang/String;
+    .local v4, "packageName":Ljava/lang/String;
     :try_start_0
     const-string v5, "bundle"
 
@@ -691,12 +691,12 @@
     move-result-object v1
 
     .line 254
-    .local v1, applications:Ljava/util/List;,"Ljava/util/List<Landroid/content/pm/ApplicationInfo;>;"
+    .local v1, "applications":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ApplicationInfo;>;"
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
 
-    .local v3, i$:Ljava/util/Iterator;
+    .local v3, "i$":Ljava/util/Iterator;
     :cond_0
     invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
 
@@ -711,7 +711,7 @@
     check-cast v0, Landroid/content/pm/ApplicationInfo;
 
     .line 257
-    .local v0, appInfo:Landroid/content/pm/ApplicationInfo;
+    .local v0, "appInfo":Landroid/content/pm/ApplicationInfo;
     iget-object v5, v0, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
 
     invoke-virtual {v5, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -730,9 +730,9 @@
     invoke-virtual {p0, p2, v5}, Lcom/tapjoy/TJAdUnitJSBridge;->invokeJSCallback(Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 267
-    .end local v0           #appInfo:Landroid/content/pm/ApplicationInfo;
-    .end local v1           #applications:Ljava/util/List;,"Ljava/util/List<Landroid/content/pm/ApplicationInfo;>;"
-    .end local v3           #i$:Ljava/util/Iterator;
+    .end local v0    # "appInfo":Landroid/content/pm/ApplicationInfo;
+    .end local v1    # "applications":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ApplicationInfo;>;"
+    .end local v3    # "i$":Ljava/util/Iterator;
     :goto_1
     return-void
 
@@ -743,13 +743,13 @@
     move-object v2, v5
 
     .line 246
-    .local v2, e:Ljava/lang/Exception;
+    .local v2, "e":Ljava/lang/Exception;
     invoke-virtual {v2}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0
 
     .line 266
-    .end local v2           #e:Ljava/lang/Exception;
+    .end local v2    # "e":Ljava/lang/Exception;
     :cond_1
     new-array v5, v6, [Ljava/lang/Object;
 
@@ -819,8 +819,8 @@
 
 .method public dismiss(Lorg/json/JSONObject;Ljava/lang/String;)V
     .locals 3
-    .parameter "json"
-    .parameter "callbackID"
+    .param p1, "json"    # Lorg/json/JSONObject;
+    .param p2, "callbackID"    # Ljava/lang/String;
 
     .prologue
     .line 298
@@ -846,7 +846,7 @@
     .line 301
     iget-object p0, p0, Lcom/tapjoy/TJAdUnitJSBridge;->context:Landroid/content/Context;
 
-    .end local p0
+    .end local p0    # "this":Lcom/tapjoy/TJAdUnitJSBridge;
     check-cast p0, Landroid/app/Activity;
 
     invoke-virtual {p0}, Landroid/app/Activity;->finish()V
@@ -875,15 +875,15 @@
 
 .method public displayOffers(Lorg/json/JSONObject;Ljava/lang/String;)V
     .locals 7
-    .parameter "json"
-    .parameter "callbackID"
+    .param p1, "json"    # Lorg/json/JSONObject;
+    .param p2, "callbackID"    # Ljava/lang/String;
 
     .prologue
     .line 320
     const/4 v1, 0x0
 
     .line 324
-    .local v1, currencyID:Ljava/lang/String;
+    .local v1, "currencyID":Ljava/lang/String;
     :try_start_0
     const-string v0, "currencyId"
 
@@ -921,7 +921,7 @@
     move-object v6, v0
 
     .line 328
-    .local v6, e:Ljava/lang/Exception;
+    .local v6, "e":Ljava/lang/Exception;
     const-string v0, "TJAdUnitJSBridge"
 
     const-string v2, "no currencyID for showOfferWall"
@@ -933,8 +933,8 @@
 
 .method public displayRichMedia(Lorg/json/JSONObject;Ljava/lang/String;)V
     .locals 8
-    .parameter "json"
-    .parameter "callbackID"
+    .param p1, "json"    # Lorg/json/JSONObject;
+    .param p2, "callbackID"    # Ljava/lang/String;
 
     .prologue
     const/4 v6, 0x0
@@ -945,11 +945,11 @@
     const/4 v2, 0x0
 
     .line 341
-    .local v2, inline:Z
+    .local v2, "inline":Z
     const/4 v1, 0x0
 
     .line 345
-    .local v1, html:Ljava/lang/String;
+    .local v1, "html":Ljava/lang/String;
     :try_start_0
     const-string v4, "inline"
 
@@ -986,25 +986,25 @@
     invoke-virtual {p0, p2, v4}, Lcom/tapjoy/TJAdUnitJSBridge;->invokeJSCallback(Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 431
-    .end local p0
+    .end local p0    # "this":Lcom/tapjoy/TJAdUnitJSBridge;
     :goto_2
     return-void
 
     .line 353
-    .restart local p0
+    .restart local p0    # "this":Lcom/tapjoy/TJAdUnitJSBridge;
     :catch_0
     move-exception v4
 
     move-object v0, v4
 
     .line 355
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_1
 
     .line 366
-    .end local v0           #e:Ljava/lang/Exception;
+    .end local v0    # "e":Ljava/lang/Exception;
     :cond_0
     if-eqz v2, :cond_1
 
@@ -1032,7 +1032,7 @@
     invoke-direct {v3, v4, v5}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
     .line 423
-    .local v3, intent:Landroid/content/Intent;
+    .local v3, "intent":Landroid/content/Intent;
     const-string v4, "tjevent"
 
     iget-object v5, p0, Lcom/tapjoy/TJAdUnitJSBridge;->eventData:Lcom/tapjoy/TJEventData;
@@ -1068,7 +1068,7 @@
     .line 428
     iget-object p0, p0, Lcom/tapjoy/TJAdUnitJSBridge;->context:Landroid/content/Context;
 
-    .end local p0
+    .end local p0    # "this":Lcom/tapjoy/TJAdUnitJSBridge;
     check-cast p0, Landroid/app/Activity;
 
     invoke-virtual {p0, v3, v6}, Landroid/app/Activity;->startActivityForResult(Landroid/content/Intent;I)V
@@ -1076,8 +1076,8 @@
     goto :goto_2
 
     .line 347
-    .end local v3           #intent:Landroid/content/Intent;
-    .restart local p0
+    .end local v3    # "intent":Landroid/content/Intent;
+    .restart local p0    # "this":Lcom/tapjoy/TJAdUnitJSBridge;
     :catch_1
     move-exception v4
 
@@ -1086,8 +1086,8 @@
 
 .method public displayStoreURL(Lorg/json/JSONObject;Ljava/lang/String;)V
     .locals 0
-    .parameter "json"
-    .parameter "callbackID"
+    .param p1, "json"    # Lorg/json/JSONObject;
+    .param p2, "callbackID"    # Ljava/lang/String;
 
     .prologue
     .line 442
@@ -1099,8 +1099,8 @@
 
 .method public displayURL(Lorg/json/JSONObject;Ljava/lang/String;)V
     .locals 6
-    .parameter "json"
-    .parameter "callbackID"
+    .param p1, "json"    # Lorg/json/JSONObject;
+    .param p2, "callbackID"    # Ljava/lang/String;
 
     .prologue
     const/4 v5, 0x1
@@ -1114,7 +1114,7 @@
     move-result-object v2
 
     .line 452
-    .local v2, url:Ljava/lang/String;
+    .local v2, "url":Ljava/lang/String;
     const/4 v3, 0x1
 
     iput-boolean v3, p0, Lcom/tapjoy/TJAdUnitJSBridge;->didLaunchOtherActivity:Z
@@ -1134,7 +1134,7 @@
     invoke-direct {v1, v3, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
     .line 455
-    .local v1, intent:Landroid/content/Intent;
+    .local v1, "intent":Landroid/content/Intent;
     iget-object v3, p0, Lcom/tapjoy/TJAdUnitJSBridge;->context:Landroid/content/Context;
 
     check-cast v3, Landroid/app/Activity;
@@ -1144,8 +1144,8 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 462
-    .end local v1           #intent:Landroid/content/Intent;
-    .end local v2           #url:Ljava/lang/String;
+    .end local v1    # "intent":Landroid/content/Intent;
+    .end local v2    # "url":Ljava/lang/String;
     :goto_0
     return-void
 
@@ -1156,7 +1156,7 @@
     move-object v0, v3
 
     .line 459
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     new-array v3, v5, [Ljava/lang/Object;
 
     const/4 v4, 0x0
@@ -1175,8 +1175,8 @@
 
 .method public displayVideo(Lorg/json/JSONObject;Ljava/lang/String;)V
     .locals 8
-    .parameter "json"
-    .parameter "callbackID"
+    .param p1, "json"    # Lorg/json/JSONObject;
+    .param p2, "callbackID"    # Ljava/lang/String;
 
     .prologue
     const/4 v7, 0x1
@@ -1187,11 +1187,11 @@
     const-string v2, ""
 
     .line 471
-    .local v2, url:Ljava/lang/String;
+    .local v2, "url":Ljava/lang/String;
     const-string v0, ""
 
     .line 475
-    .local v0, cancelMessage:Ljava/lang/String;
+    .local v0, "cancelMessage":Ljava/lang/String;
     :try_start_0
     const-string v4, "cancelMessage"
 
@@ -1220,7 +1220,7 @@
     invoke-direct {v3, v4, v5}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
     .line 488
-    .local v3, videoIntent:Landroid/content/Intent;
+    .local v3, "videoIntent":Landroid/content/Intent;
     const-string v4, "VIDEO_URL"
 
     invoke-virtual {v3, v4, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
@@ -1254,7 +1254,7 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
     .line 499
-    .end local v3           #videoIntent:Landroid/content/Intent;
+    .end local v3    # "videoIntent":Landroid/content/Intent;
     :goto_1
     return-void
 
@@ -1265,7 +1265,7 @@
     move-object v1, v4
 
     .line 479
-    .local v1, e:Ljava/lang/Exception;
+    .local v1, "e":Ljava/lang/Exception;
     const-string v4, "TJAdUnitJSBridge"
 
     const-string v5, "no cancelMessage"
@@ -1275,14 +1275,14 @@
     goto :goto_0
 
     .line 494
-    .end local v1           #e:Ljava/lang/Exception;
+    .end local v1    # "e":Ljava/lang/Exception;
     :catch_1
     move-exception v4
 
     move-object v1, v4
 
     .line 496
-    .restart local v1       #e:Ljava/lang/Exception;
+    .restart local v1    # "e":Ljava/lang/Exception;
     new-array v4, v7, [Ljava/lang/Object;
 
     sget-object v5, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
@@ -1299,8 +1299,8 @@
 
 .method public getLocation(Lorg/json/JSONObject;Ljava/lang/String;)V
     .locals 11
-    .parameter "json"
-    .parameter "callbackID"
+    .param p1, "json"    # Lorg/json/JSONObject;
+    .param p2, "callbackID"    # Ljava/lang/String;
 
     .prologue
     const/4 v10, 0x1
@@ -1308,14 +1308,14 @@
     const/4 v9, 0x0
 
     .line 557
-    const/high16 v4, 0x42c8
+    const/high16 v4, 0x42c80000
 
     .line 558
-    .local v4, accuracy:F
+    .local v4, "accuracy":F
     const/4 v8, 0x0
 
     .line 563
-    .local v8, enable:Z
+    .local v8, "enable":Z
     :try_start_0
     const-string v0, "gpsAccuracy"
 
@@ -1372,7 +1372,7 @@
     invoke-direct {v6}, Landroid/location/Criteria;-><init>()V
 
     .line 579
-    .local v6, criteria:Landroid/location/Criteria;
+    .local v6, "criteria":Landroid/location/Criteria;
     iget-object v0, p0, Lcom/tapjoy/TJAdUnitJSBridge;->locationManager:Landroid/location/LocationManager;
 
     invoke-virtual {v0, v6, v9}, Landroid/location/LocationManager;->getBestProvider(Landroid/location/Criteria;Z)Ljava/lang/String;
@@ -1380,7 +1380,7 @@
     move-result-object v1
 
     .line 581
-    .local v1, bestProvider:Ljava/lang/String;
+    .local v1, "bestProvider":Ljava/lang/String;
     iget-object v0, p0, Lcom/tapjoy/TJAdUnitJSBridge;->locationListener:Landroid/location/LocationListener;
 
     if-nez v0, :cond_0
@@ -1422,23 +1422,23 @@
     return-void
 
     .line 572
-    .end local v1           #bestProvider:Ljava/lang/String;
-    .end local v6           #criteria:Landroid/location/Criteria;
+    .end local v1    # "bestProvider":Ljava/lang/String;
+    .end local v6    # "criteria":Landroid/location/Criteria;
     :catch_0
     move-exception v0
 
     move-object v7, v0
 
     .line 574
-    .local v7, e:Ljava/lang/Exception;
+    .local v7, "e":Ljava/lang/Exception;
     invoke-virtual {v7}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_1
 
     .line 627
-    .end local v7           #e:Ljava/lang/Exception;
-    .restart local v1       #bestProvider:Ljava/lang/String;
-    .restart local v6       #criteria:Landroid/location/Criteria;
+    .end local v7    # "e":Ljava/lang/Exception;
+    .restart local v1    # "bestProvider":Ljava/lang/String;
+    .restart local v6    # "criteria":Landroid/location/Criteria;
     :cond_1
     new-array v0, v10, [Ljava/lang/Object;
 
@@ -1480,8 +1480,8 @@
     goto :goto_2
 
     .line 565
-    .end local v1           #bestProvider:Ljava/lang/String;
-    .end local v6           #criteria:Landroid/location/Criteria;
+    .end local v1    # "bestProvider":Ljava/lang/String;
+    .end local v6    # "criteria":Landroid/location/Criteria;
     :catch_1
     move-exception v0
 
@@ -1490,8 +1490,7 @@
 
 .method public invokeJSAdunitMethod(Ljava/lang/String;Ljava/util/Map;)V
     .locals 2
-    .parameter "methodName"
-    .parameter
+    .param p1, "methodName"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1506,7 +1505,7 @@
 
     .prologue
     .line 760
-    .local p2, arguments:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
+    .local p2, "arguments":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
     iget-object v0, p0, Lcom/tapjoy/TJAdUnitJSBridge;->jsBridge:Lcom/tapjoy/TJWebViewJSInterface;
 
     const/4 v1, 0x0
@@ -1519,8 +1518,8 @@
 
 .method public varargs invokeJSAdunitMethod(Ljava/lang/String;[Ljava/lang/Object;)V
     .locals 3
-    .parameter "methodName"
-    .parameter "args"
+    .param p1, "methodName"    # Ljava/lang/String;
+    .param p2, "args"    # [Ljava/lang/Object;
 
     .prologue
     .line 749
@@ -1533,7 +1532,7 @@
     invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
     .line 750
-    .local v0, arguments:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/Object;>;"
+    .local v0, "arguments":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Object;>;"
     iget-object v1, p0, Lcom/tapjoy/TJAdUnitJSBridge;->jsBridge:Lcom/tapjoy/TJWebViewJSInterface;
 
     const/4 v2, 0x0
@@ -1546,8 +1545,7 @@
 
 .method public invokeJSCallback(Ljava/lang/String;Ljava/util/Map;)V
     .locals 2
-    .parameter "callbackID"
-    .parameter
+    .param p1, "callbackID"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1562,7 +1560,7 @@
 
     .prologue
     .line 783
-    .local p2, arguments:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
+    .local p2, "arguments":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
     iget-object v0, p0, Lcom/tapjoy/TJAdUnitJSBridge;->jsBridge:Lcom/tapjoy/TJWebViewJSInterface;
 
     const-string v1, ""
@@ -1575,8 +1573,8 @@
 
 .method public varargs invokeJSCallback(Ljava/lang/String;[Ljava/lang/Object;)V
     .locals 3
-    .parameter "callbackID"
-    .parameter "argArray"
+    .param p1, "callbackID"    # Ljava/lang/String;
+    .param p2, "argArray"    # [Ljava/lang/Object;
 
     .prologue
     .line 771
@@ -1589,7 +1587,7 @@
     invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
     .line 772
-    .local v0, arguments:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/Object;>;"
+    .local v0, "arguments":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Object;>;"
     iget-object v1, p0, Lcom/tapjoy/TJAdUnitJSBridge;->jsBridge:Lcom/tapjoy/TJWebViewJSInterface;
 
     const-string v2, ""
@@ -1602,8 +1600,8 @@
 
 .method public log(Lorg/json/JSONObject;Ljava/lang/String;)V
     .locals 6
-    .parameter "json"
-    .parameter "callbackID"
+    .param p1, "json"    # Lorg/json/JSONObject;
+    .param p2, "callbackID"    # Ljava/lang/String;
 
     .prologue
     const/4 v5, 0x1
@@ -1648,7 +1646,7 @@
     move-object v0, v1
 
     .line 653
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     new-array v1, v5, [Ljava/lang/Object;
 
     sget-object v2, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
@@ -1665,8 +1663,8 @@
 
 .method public nativeEval(Lorg/json/JSONObject;Ljava/lang/String;)V
     .locals 2
-    .parameter "json"
-    .parameter "callbackID"
+    .param p1, "json"    # Lorg/json/JSONObject;
+    .param p2, "callbackID"    # Ljava/lang/String;
 
     .prologue
     .line 687
@@ -1686,8 +1684,8 @@
 
 .method public openApp(Lorg/json/JSONObject;Ljava/lang/String;)V
     .locals 8
-    .parameter "json"
-    .parameter "callbackID"
+    .param p1, "json"    # Lorg/json/JSONObject;
+    .param p2, "callbackID"    # Ljava/lang/String;
 
     .prologue
     const/4 v7, 0x1
@@ -1703,7 +1701,7 @@
     move-result-object v2
 
     .line 668
-    .local v2, packageName:Ljava/lang/String;
+    .local v2, "packageName":Ljava/lang/String;
     iget-object v3, p0, Lcom/tapjoy/TJAdUnitJSBridge;->context:Landroid/content/Context;
 
     invoke-virtual {v3}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -1715,7 +1713,7 @@
     move-result-object v1
 
     .line 669
-    .local v1, intent:Landroid/content/Intent;
+    .local v1, "intent":Landroid/content/Intent;
     iget-object v3, p0, Lcom/tapjoy/TJAdUnitJSBridge;->context:Landroid/content/Context;
 
     invoke-virtual {v3, v1}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
@@ -1736,8 +1734,8 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 677
-    .end local v1           #intent:Landroid/content/Intent;
-    .end local v2           #packageName:Ljava/lang/String;
+    .end local v1    # "intent":Landroid/content/Intent;
+    .end local v2    # "packageName":Ljava/lang/String;
     :goto_0
     return-void
 
@@ -1748,7 +1746,7 @@
     move-object v0, v3
 
     .line 674
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     new-array v3, v7, [Ljava/lang/Object;
 
     sget-object v4, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
@@ -1765,8 +1763,8 @@
 
 .method public present(Lorg/json/JSONObject;Ljava/lang/String;)V
     .locals 8
-    .parameter "json"
-    .parameter "callbackID"
+    .param p1, "json"    # Lorg/json/JSONObject;
+    .param p2, "callbackID"    # Ljava/lang/String;
 
     .prologue
     const/4 v7, 0x1
@@ -1782,7 +1780,7 @@
     move-result-object v2
 
     .line 714
-    .local v2, visible:Ljava/lang/Boolean;
+    .local v2, "visible":Ljava/lang/Boolean;
     const/4 v3, 0x0
 
     invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -1790,7 +1788,7 @@
     move-result-object v1
 
     .line 716
-    .local v1, transparent:Ljava/lang/Boolean;
+    .local v1, "transparent":Ljava/lang/Boolean;
     const-string v3, "visible"
 
     invoke-virtual {p1, v3}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -1877,8 +1875,8 @@
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_0
 
     .line 740
-    .end local v1           #transparent:Ljava/lang/Boolean;
-    .end local v2           #visible:Ljava/lang/Boolean;
+    .end local v1    # "transparent":Ljava/lang/Boolean;
+    .end local v2    # "visible":Ljava/lang/Boolean;
     :goto_2
     return-void
 
@@ -1889,7 +1887,7 @@
     move-object v0, v3
 
     .line 737
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     new-array v3, v7, [Ljava/lang/Object;
 
     sget-object v4, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
@@ -1904,9 +1902,9 @@
     goto :goto_2
 
     .line 728
-    .end local v0           #e:Ljava/lang/Exception;
-    .restart local v1       #transparent:Ljava/lang/Boolean;
-    .restart local v2       #visible:Ljava/lang/Boolean;
+    .end local v0    # "e":Ljava/lang/Exception;
+    .restart local v1    # "transparent":Ljava/lang/Boolean;
+    .restart local v2    # "visible":Ljava/lang/Boolean;
     :catch_1
     move-exception v3
 
@@ -1921,8 +1919,8 @@
 
 .method public sendActionCallback(Lorg/json/JSONObject;Ljava/lang/String;)V
     .locals 9
-    .parameter "json"
-    .parameter "callbackID"
+    .param p1, "json"    # Lorg/json/JSONObject;
+    .param p2, "callbackID"    # Ljava/lang/String;
 
     .prologue
     const/4 v7, 0x0
@@ -1937,11 +1935,11 @@
     invoke-direct {v2}, Lcom/tapjoy/TJEventRequest;-><init>()V
 
     .line 792
-    .local v2, request:Lcom/tapjoy/TJEventRequest;
+    .local v2, "request":Lcom/tapjoy/TJEventRequest;
     const/4 v3, 0x0
 
     .line 796
-    .local v3, type:Ljava/lang/String;
+    .local v3, "type":Ljava/lang/String;
     :try_start_0
     const-string v4, "type"
 
@@ -2022,39 +2020,39 @@
     move-object v0, v4
 
     .line 800
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0
 
     .line 807
-    .end local v0           #e:Ljava/lang/Exception;
+    .end local v0    # "e":Ljava/lang/Exception;
     :catch_1
     move-exception v4
 
     move-object v0, v4
 
     .line 809
-    .restart local v0       #e:Ljava/lang/Exception;
+    .restart local v0    # "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_1
 
     .line 816
-    .end local v0           #e:Ljava/lang/Exception;
+    .end local v0    # "e":Ljava/lang/Exception;
     :catch_2
     move-exception v4
 
     move-object v0, v4
 
     .line 818
-    .restart local v0       #e:Ljava/lang/Exception;
+    .restart local v0    # "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_2
 
     .line 829
-    .end local v0           #e:Ljava/lang/Exception;
+    .end local v0    # "e":Ljava/lang/Exception;
     :cond_2
     const-string v4, "currency"
 
@@ -2177,7 +2175,7 @@
     move-result-object v1
 
     .line 874
-    .local v1, event:Lcom/tapjoy/TJEvent;
+    .local v1, "event":Lcom/tapjoy/TJEvent;
     if-eqz v1, :cond_1
 
     .line 875
@@ -2192,15 +2190,15 @@
 
 .method public setAllowRedirect(Lorg/json/JSONObject;Ljava/lang/String;)V
     .locals 4
-    .parameter "json"
-    .parameter "callbackID"
+    .param p1, "json"    # Lorg/json/JSONObject;
+    .param p2, "callbackID"    # Ljava/lang/String;
 
     .prologue
     .line 885
     const/4 v0, 0x1
 
     .line 889
-    .local v0, enabled:Z
+    .local v0, "enabled":Z
     :try_start_0
     const-string v1, "enabled"
 
@@ -2239,7 +2237,7 @@
 
 .method public setContext(Landroid/content/Context;)V
     .locals 0
-    .parameter "c"
+    .param p1, "c"    # Landroid/content/Context;
 
     .prologue
     .line 904
@@ -2251,8 +2249,8 @@
 
 .method public setSpinnerVisible(Lorg/json/JSONObject;Ljava/lang/String;)V
     .locals 9
-    .parameter "json"
-    .parameter "callbackID"
+    .param p1, "json"    # Lorg/json/JSONObject;
+    .param p2, "callbackID"    # Ljava/lang/String;
 
     .prologue
     const/4 v8, 0x1
@@ -2263,15 +2261,15 @@
     const/4 v3, 0x0
 
     .line 915
-    .local v3, visible:Z
+    .local v3, "visible":Z
     const-string v2, "Loading..."
 
     .line 916
-    .local v2, title:Ljava/lang/String;
+    .local v2, "title":Ljava/lang/String;
     const-string v1, ""
 
     .line 920
-    .local v1, message:Ljava/lang/String;
+    .local v1, "message":Ljava/lang/String;
     :try_start_0
     const-string v4, "visible"
 
@@ -2353,7 +2351,7 @@
     move-object v0, v4
 
     .line 941
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     new-array v4, v8, [Ljava/lang/Object;
 
     sget-object v5, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
@@ -2368,7 +2366,7 @@
     goto :goto_2
 
     .line 925
-    .end local v0           #e:Ljava/lang/Exception;
+    .end local v0    # "e":Ljava/lang/Exception;
     :catch_1
     move-exception v4
 
@@ -2377,8 +2375,8 @@
 
 .method public share(Lorg/json/JSONObject;Ljava/lang/String;)V
     .locals 19
-    .parameter "json"
-    .parameter "callbackID"
+    .param p1, "json"    # Lorg/json/JSONObject;
+    .param p2, "callbackID"    # Ljava/lang/String;
 
     .prologue
     .line 958
@@ -2394,7 +2392,7 @@
     move-result-object v13
 
     .line 959
-    .local v13, network:Ljava/lang/String;
+    .local v13, "network":Ljava/lang/String;
     const-string v16, "message"
 
     move-object/from16 v0, p1
@@ -2406,23 +2404,23 @@
     move-result-object v12
 
     .line 960
-    .local v12, message:Ljava/lang/String;
+    .local v12, "message":Ljava/lang/String;
     const/4 v7, 0x0
 
     .line 961
-    .local v7, imageURL:Ljava/lang/String;
+    .local v7, "imageURL":Ljava/lang/String;
     const/4 v9, 0x0
 
     .line 962
-    .local v9, linkURL:Ljava/lang/String;
+    .local v9, "linkURL":Ljava/lang/String;
     const/4 v11, 0x0
 
     .line 963
-    .local v11, localImageURL:Ljava/lang/String;
+    .local v11, "localImageURL":Ljava/lang/String;
     const/4 v4, 0x0
 
     .line 964
-    .local v4, found:Z
+    .local v4, "found":Z
     new-instance v15, Landroid/content/Intent;
 
     const-string v16, "android.intent.action.SEND"
@@ -2432,7 +2430,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
     .line 968
-    .local v15, share:Landroid/content/Intent;
+    .local v15, "share":Landroid/content/Intent;
     :try_start_1
     const-string v16, "imageURL"
 
@@ -2476,7 +2474,7 @@
     move-result-object v10
 
     .line 990
-    .local v10, localFile:Ljava/io/File;
+    .local v10, "localFile":Ljava/io/File;
     if-eqz v10, :cond_0
 
     .line 991
@@ -2503,7 +2501,7 @@
     move-result-object v11
 
     .line 995
-    .end local v10           #localFile:Ljava/io/File;
+    .end local v10    # "localFile":Ljava/io/File;
     :cond_0
     if-eqz v9, :cond_1
 
@@ -2608,12 +2606,12 @@
     move-result-object v14
 
     .line 1031
-    .local v14, resInfo:Ljava/util/List;,"Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
+    .local v14, "resInfo":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     invoke-interface {v14}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v6
 
-    .local v6, i$:Ljava/util/Iterator;
+    .local v6, "i$":Ljava/util/Iterator;
     :cond_3
     invoke-interface {v6}, Ljava/util/Iterator;->hasNext()Z
 
@@ -2628,7 +2626,7 @@
     check-cast v8, Landroid/content/pm/ResolveInfo;
 
     .line 1033
-    .local v8, info:Landroid/content/pm/ResolveInfo;
+    .local v8, "info":Landroid/content/pm/ResolveInfo;
     move-object v0, v8
 
     iget-object v0, v0, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
@@ -2705,7 +2703,7 @@
     const/4 v4, 0x1
 
     .line 1042
-    .end local v8           #info:Landroid/content/pm/ResolveInfo;
+    .end local v8    # "info":Landroid/content/pm/ResolveInfo;
     :cond_5
     if-nez v4, :cond_8
 
@@ -2733,35 +2731,35 @@
     invoke-virtual {v0, v1, v2}, Lcom/tapjoy/TJAdUnitJSBridge;->invokeJSCallback(Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 1059
-    .end local v4           #found:Z
-    .end local v6           #i$:Ljava/util/Iterator;
-    .end local v7           #imageURL:Ljava/lang/String;
-    .end local v9           #linkURL:Ljava/lang/String;
-    .end local v11           #localImageURL:Ljava/lang/String;
-    .end local v12           #message:Ljava/lang/String;
-    .end local v13           #network:Ljava/lang/String;
-    .end local v14           #resInfo:Ljava/util/List;,"Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
-    .end local v15           #share:Landroid/content/Intent;
-    .end local p1
+    .end local v4    # "found":Z
+    .end local v6    # "i$":Ljava/util/Iterator;
+    .end local v7    # "imageURL":Ljava/lang/String;
+    .end local v9    # "linkURL":Ljava/lang/String;
+    .end local v11    # "localImageURL":Ljava/lang/String;
+    .end local v12    # "message":Ljava/lang/String;
+    .end local v13    # "network":Ljava/lang/String;
+    .end local v14    # "resInfo":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
+    .end local v15    # "share":Landroid/content/Intent;
+    .end local p1    # "json":Lorg/json/JSONObject;
     :goto_3
     return-void
 
     .line 970
-    .restart local v4       #found:Z
-    .restart local v7       #imageURL:Ljava/lang/String;
-    .restart local v9       #linkURL:Ljava/lang/String;
-    .restart local v11       #localImageURL:Ljava/lang/String;
-    .restart local v12       #message:Ljava/lang/String;
-    .restart local v13       #network:Ljava/lang/String;
-    .restart local v15       #share:Landroid/content/Intent;
-    .restart local p1
+    .restart local v4    # "found":Z
+    .restart local v7    # "imageURL":Ljava/lang/String;
+    .restart local v9    # "linkURL":Ljava/lang/String;
+    .restart local v11    # "localImageURL":Ljava/lang/String;
+    .restart local v12    # "message":Ljava/lang/String;
+    .restart local v13    # "network":Ljava/lang/String;
+    .restart local v15    # "share":Landroid/content/Intent;
+    .restart local p1    # "json":Lorg/json/JSONObject;
     :catch_0
     move-exception v16
 
     move-object/from16 v3, v16
 
     .line 972
-    .local v3, e:Ljava/lang/Exception;
+    .local v3, "e":Ljava/lang/Exception;
     const-string v16, "TJAdUnitJSBridge"
 
     const-string v17, "no imageURL"
@@ -2773,22 +2771,22 @@
     goto/16 :goto_0
 
     .line 1054
-    .end local v3           #e:Ljava/lang/Exception;
-    .end local v4           #found:Z
-    .end local v7           #imageURL:Ljava/lang/String;
-    .end local v9           #linkURL:Ljava/lang/String;
-    .end local v11           #localImageURL:Ljava/lang/String;
-    .end local v12           #message:Ljava/lang/String;
-    .end local v13           #network:Ljava/lang/String;
-    .end local v15           #share:Landroid/content/Intent;
-    .end local p1
+    .end local v3    # "e":Ljava/lang/Exception;
+    .end local v4    # "found":Z
+    .end local v7    # "imageURL":Ljava/lang/String;
+    .end local v9    # "linkURL":Ljava/lang/String;
+    .end local v11    # "localImageURL":Ljava/lang/String;
+    .end local v12    # "message":Ljava/lang/String;
+    .end local v13    # "network":Ljava/lang/String;
+    .end local v15    # "share":Landroid/content/Intent;
+    .end local p1    # "json":Lorg/json/JSONObject;
     :catch_1
     move-exception v16
 
     move-object/from16 v3, v16
 
     .line 1056
-    .restart local v3       #e:Ljava/lang/Exception;
+    .restart local v3    # "e":Ljava/lang/Exception;
     const/16 v16, 0x1
 
     move/from16 v0, v16
@@ -2817,22 +2815,22 @@
     goto :goto_3
 
     .line 979
-    .end local v3           #e:Ljava/lang/Exception;
-    .restart local v4       #found:Z
-    .restart local v7       #imageURL:Ljava/lang/String;
-    .restart local v9       #linkURL:Ljava/lang/String;
-    .restart local v11       #localImageURL:Ljava/lang/String;
-    .restart local v12       #message:Ljava/lang/String;
-    .restart local v13       #network:Ljava/lang/String;
-    .restart local v15       #share:Landroid/content/Intent;
-    .restart local p1
+    .end local v3    # "e":Ljava/lang/Exception;
+    .restart local v4    # "found":Z
+    .restart local v7    # "imageURL":Ljava/lang/String;
+    .restart local v9    # "linkURL":Ljava/lang/String;
+    .restart local v11    # "localImageURL":Ljava/lang/String;
+    .restart local v12    # "message":Ljava/lang/String;
+    .restart local v13    # "network":Ljava/lang/String;
+    .restart local v15    # "share":Landroid/content/Intent;
+    .restart local p1    # "json":Lorg/json/JSONObject;
     :catch_2
     move-exception v16
 
     move-object/from16 v3, v16
 
     .line 981
-    .restart local v3       #e:Ljava/lang/Exception;
+    .restart local v3    # "e":Ljava/lang/Exception;
     :try_start_4
     const-string v16, "TJAdUnitJSBridge"
 
@@ -2843,7 +2841,7 @@
     goto/16 :goto_1
 
     .line 1013
-    .end local v3           #e:Ljava/lang/Exception;
+    .end local v3    # "e":Ljava/lang/Exception;
     :cond_6
     const-string v16, "text/plain"
 
@@ -2887,8 +2885,8 @@
     goto/16 :goto_2
 
     .line 1049
-    .restart local v6       #i$:Ljava/util/Iterator;
-    .restart local v14       #resInfo:Ljava/util/List;,"Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
+    .restart local v6    # "i$":Ljava/util/Iterator;
+    .restart local v14    # "resInfo":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     :cond_8
     const/16 v16, 0x1
 
@@ -2913,14 +2911,14 @@
     move-result-object v5
 
     .line 1052
-    .local v5, i:Landroid/content/Intent;
+    .local v5, "i":Landroid/content/Intent;
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/tapjoy/TJAdUnitJSBridge;->context:Landroid/content/Context;
 
     move-object/from16 p1, v0
 
-    .end local p1
+    .end local p1    # "json":Lorg/json/JSONObject;
     check-cast p1, Landroid/app/Activity;
 
     move-object/from16 v0, p1
@@ -2936,8 +2934,8 @@
 
 .method public shouldClose(Lorg/json/JSONObject;Ljava/lang/String;)V
     .locals 7
-    .parameter "json"
-    .parameter "callbackID"
+    .param p1, "json"    # Lorg/json/JSONObject;
+    .param p2, "callbackID"    # Ljava/lang/String;
 
     .prologue
     const/4 v6, 0x1
@@ -2953,7 +2951,7 @@
     move-result-object v0
 
     .line 1070
-    .local v0, close:Ljava/lang/Boolean;
+    .local v0, "close":Ljava/lang/Boolean;
     const-string v2, "close"
 
     invoke-virtual {p1, v2}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -3001,7 +2999,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 1089
-    .end local v0           #close:Ljava/lang/Boolean;
+    .end local v0    # "close":Ljava/lang/Boolean;
     :goto_0
     iput-boolean v5, p0, Lcom/tapjoy/TJAdUnitJSBridge;->shouldClose:Z
 
@@ -3015,7 +3013,7 @@
     move-object v1, v2
 
     .line 1082
-    .local v1, e:Ljava/lang/Exception;
+    .local v1, "e":Ljava/lang/Exception;
     new-array v2, v6, [Ljava/lang/Object;
 
     sget-object v3, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;

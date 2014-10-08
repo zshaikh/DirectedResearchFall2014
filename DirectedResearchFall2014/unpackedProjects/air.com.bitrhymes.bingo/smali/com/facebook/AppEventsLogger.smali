@@ -148,9 +148,9 @@
 
 .method private constructor <init>(Landroid/content/Context;Ljava/lang/String;Lcom/facebook/Session;)V
     .locals 2
-    .parameter "context"
-    .parameter "applicationId"
-    .parameter "session"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "applicationId"    # Ljava/lang/String;
+    .param p3, "session"    # Lcom/facebook/Session;
 
     .prologue
     .line 609
@@ -259,7 +259,6 @@
 
 .method static synthetic access$1(Lcom/facebook/AppEventsLogger$FlushReason;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 777
@@ -290,11 +289,6 @@
 
 .method static synthetic access$4(Lcom/facebook/AppEventsLogger$AccessTokenAppIdPair;Lcom/facebook/Request;Lcom/facebook/Response;Lcom/facebook/AppEventsLogger$SessionEventsState;Lcom/facebook/AppEventsLogger$FlushStatistics;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 887
@@ -315,11 +309,11 @@
     move-result-object v2
 
     .line 946
-    .local v2, persistedEvents:Lcom/facebook/AppEventsLogger$PersistedEvents;
+    .local v2, "persistedEvents":Lcom/facebook/AppEventsLogger$PersistedEvents;
     const/4 v3, 0x0
 
     .line 947
-    .local v3, result:I
+    .local v3, "result":I
     invoke-virtual {v2}, Lcom/facebook/AppEventsLogger$PersistedEvents;->keySet()Ljava/util/Set;
 
     move-result-object v5
@@ -347,7 +341,7 @@
     check-cast v0, Lcom/facebook/AppEventsLogger$AccessTokenAppIdPair;
 
     .line 948
-    .local v0, accessTokenAppId:Lcom/facebook/AppEventsLogger$AccessTokenAppIdPair;
+    .local v0, "accessTokenAppId":Lcom/facebook/AppEventsLogger$AccessTokenAppIdPair;
     sget-object v6, Lcom/facebook/AppEventsLogger;->applicationContext:Landroid/content/Context;
 
     invoke-static {v6, v0}, Lcom/facebook/AppEventsLogger;->getSessionEventsState(Landroid/content/Context;Lcom/facebook/AppEventsLogger$AccessTokenAppIdPair;)Lcom/facebook/AppEventsLogger$SessionEventsState;
@@ -355,13 +349,13 @@
     move-result-object v4
 
     .line 950
-    .local v4, sessionEventsState:Lcom/facebook/AppEventsLogger$SessionEventsState;
+    .local v4, "sessionEventsState":Lcom/facebook/AppEventsLogger$SessionEventsState;
     invoke-virtual {v2, v0}, Lcom/facebook/AppEventsLogger$PersistedEvents;->getEvents(Lcom/facebook/AppEventsLogger$AccessTokenAppIdPair;)Ljava/util/List;
 
     move-result-object v1
 
     .line 951
-    .local v1, events:Ljava/util/List;,"Ljava/util/List<Lcom/facebook/AppEventsLogger$AppEvent;>;"
+    .local v1, "events":Ljava/util/List;, "Ljava/util/List<Lcom/facebook/AppEventsLogger$AppEvent;>;"
     invoke-virtual {v4, v1}, Lcom/facebook/AppEventsLogger$SessionEventsState;->accumulatePersistedEvents(Ljava/util/List;)V
 
     .line 952
@@ -376,7 +370,7 @@
 
 .method public static activateApp(Landroid/content/Context;)V
     .locals 1
-    .parameter "context"
+    .param p0, "context"    # Landroid/content/Context;
 
     .prologue
     .line 292
@@ -392,8 +386,8 @@
 
 .method public static activateApp(Landroid/content/Context;Ljava/lang/String;)V
     .locals 3
-    .parameter "context"
-    .parameter "applicationId"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "applicationId"    # Ljava/lang/String;
 
     .prologue
     .line 307
@@ -423,7 +417,7 @@
     invoke-direct {v0, p0, p1, v1}, Lcom/facebook/AppEventsLogger;-><init>(Landroid/content/Context;Ljava/lang/String;Lcom/facebook/Session;)V
 
     .line 316
-    .local v0, logger:Lcom/facebook/AppEventsLogger;
+    .local v0, "logger":Lcom/facebook/AppEventsLogger;
     const-string v1, "fb_mobile_activate_app"
 
     invoke-virtual {v0, v1}, Lcom/facebook/AppEventsLogger;->logEvent(Ljava/lang/String;)V
@@ -434,8 +428,7 @@
 
 .method private static buildAndExecuteRequests(Lcom/facebook/AppEventsLogger$FlushReason;Ljava/util/Set;)Lcom/facebook/AppEventsLogger$FlushStatistics;
     .locals 12
-    .parameter "reason"
-    .parameter
+    .param p0, "reason"    # Lcom/facebook/AppEventsLogger$FlushReason;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -449,7 +442,7 @@
     .end annotation
 
     .prologue
-    .local p1, keysToFlush:Ljava/util/Set;,"Ljava/util/Set<Lcom/facebook/AppEventsLogger$AccessTokenAppIdPair;>;"
+    .local p1, "keysToFlush":Ljava/util/Set;, "Ljava/util/Set<Lcom/facebook/AppEventsLogger$AccessTokenAppIdPair;>;"
     const/4 v8, 0x0
 
     .line 810
@@ -458,7 +451,7 @@
     invoke-direct {v1, v8}, Lcom/facebook/AppEventsLogger$FlushStatistics;-><init>(Lcom/facebook/AppEventsLogger$FlushStatistics;)V
 
     .line 812
-    .local v1, flushResults:Lcom/facebook/AppEventsLogger$FlushStatistics;
+    .local v1, "flushResults":Lcom/facebook/AppEventsLogger$FlushStatistics;
     sget-object v6, Lcom/facebook/AppEventsLogger;->applicationContext:Landroid/content/Context;
 
     invoke-static {v6}, Lcom/facebook/AppEventsLogger;->getLimitEventUsage(Landroid/content/Context;)Z
@@ -466,13 +459,13 @@
     move-result v2
 
     .line 814
-    .local v2, limitEventUsage:Z
+    .local v2, "limitEventUsage":Z
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
     .line 815
-    .local v4, requestsToExecute:Ljava/util/List;,"Ljava/util/List<Lcom/facebook/Request;>;"
+    .local v4, "requestsToExecute":Ljava/util/List;, "Ljava/util/List<Lcom/facebook/Request;>;"
     invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v6
@@ -553,13 +546,13 @@
     check-cast v0, Lcom/facebook/AppEventsLogger$AccessTokenAppIdPair;
 
     .line 816
-    .local v0, accessTokenAppId:Lcom/facebook/AppEventsLogger$AccessTokenAppIdPair;
+    .local v0, "accessTokenAppId":Lcom/facebook/AppEventsLogger$AccessTokenAppIdPair;
     invoke-static {v0}, Lcom/facebook/AppEventsLogger;->getSessionEventsState(Lcom/facebook/AppEventsLogger$AccessTokenAppIdPair;)Lcom/facebook/AppEventsLogger$SessionEventsState;
 
     move-result-object v5
 
     .line 817
-    .local v5, sessionEventsState:Lcom/facebook/AppEventsLogger$SessionEventsState;
+    .local v5, "sessionEventsState":Lcom/facebook/AppEventsLogger$SessionEventsState;
     if-eqz v5, :cond_0
 
     .line 821
@@ -568,7 +561,7 @@
     move-result-object v3
 
     .line 823
-    .local v3, request:Lcom/facebook/Request;
+    .local v3, "request":Lcom/facebook/Request;
     if-eqz v3, :cond_0
 
     .line 824
@@ -577,9 +570,9 @@
     goto :goto_0
 
     .line 833
-    .end local v0           #accessTokenAppId:Lcom/facebook/AppEventsLogger$AccessTokenAppIdPair;
-    .end local v3           #request:Lcom/facebook/Request;
-    .end local v5           #sessionEventsState:Lcom/facebook/AppEventsLogger$SessionEventsState;
+    .end local v0    # "accessTokenAppId":Lcom/facebook/AppEventsLogger$AccessTokenAppIdPair;
+    .end local v3    # "request":Lcom/facebook/Request;
+    .end local v5    # "sessionEventsState":Lcom/facebook/AppEventsLogger$SessionEventsState;
     :cond_2
     invoke-interface {v6}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -588,12 +581,12 @@
     check-cast v3, Lcom/facebook/Request;
 
     .line 836
-    .restart local v3       #request:Lcom/facebook/Request;
+    .restart local v3    # "request":Lcom/facebook/Request;
     invoke-virtual {v3}, Lcom/facebook/Request;->executeAndWait()Lcom/facebook/Response;
 
     goto :goto_1
 
-    .end local v3           #request:Lcom/facebook/Request;
+    .end local v3    # "request":Lcom/facebook/Request;
     :cond_3
     move-object v6, v8
 
@@ -603,10 +596,10 @@
 
 .method private static buildRequestForSession(Lcom/facebook/AppEventsLogger$AccessTokenAppIdPair;Lcom/facebook/AppEventsLogger$SessionEventsState;ZLcom/facebook/AppEventsLogger$FlushStatistics;)Lcom/facebook/Request;
     .locals 9
-    .parameter "accessTokenAppId"
-    .parameter "sessionEventsState"
-    .parameter "limitEventUsage"
-    .parameter "flushState"
+    .param p0, "accessTokenAppId"    # Lcom/facebook/AppEventsLogger$AccessTokenAppIdPair;
+    .param p1, "sessionEventsState"    # Lcom/facebook/AppEventsLogger$SessionEventsState;
+    .param p2, "limitEventUsage"    # Z
+    .param p3, "flushState"    # Lcom/facebook/AppEventsLogger$FlushStatistics;
 
     .prologue
     const/4 v8, 0x0
@@ -619,13 +612,13 @@
     move-result-object v0
 
     .line 854
-    .local v0, applicationId:Ljava/lang/String;
+    .local v0, "applicationId":Ljava/lang/String;
     invoke-static {v0, v8}, Lcom/facebook/internal/Utility;->queryAppSettings(Ljava/lang/String;Z)Lcom/facebook/internal/Utility$FetchedAppSettings;
 
     move-result-object v1
 
     .line 858
-    .local v1, fetchedAppSettings:Lcom/facebook/internal/Utility$FetchedAppSettings;
+    .local v1, "fetchedAppSettings":Lcom/facebook/internal/Utility$FetchedAppSettings;
     const-string v5, "%s/activities"
 
     const/4 v6, 0x1
@@ -644,23 +637,23 @@
     move-result-object v3
 
     .line 862
-    .local v3, postRequest:Lcom/facebook/Request;
+    .local v3, "postRequest":Lcom/facebook/Request;
     invoke-virtual {v3}, Lcom/facebook/Request;->getParameters()Landroid/os/Bundle;
 
     move-result-object v4
 
     .line 863
-    .local v4, requestParameters:Landroid/os/Bundle;
+    .local v4, "requestParameters":Landroid/os/Bundle;
     if-nez v4, :cond_0
 
     .line 864
     new-instance v4, Landroid/os/Bundle;
 
-    .end local v4           #requestParameters:Landroid/os/Bundle;
+    .end local v4    # "requestParameters":Landroid/os/Bundle;
     invoke-direct {v4}, Landroid/os/Bundle;-><init>()V
 
     .line 866
-    .restart local v4       #requestParameters:Landroid/os/Bundle;
+    .restart local v4    # "requestParameters":Landroid/os/Bundle;
     :cond_0
     const-string v5, "access_token"
 
@@ -689,7 +682,7 @@
     move-result v2
 
     .line 871
-    .local v2, numEvents:I
+    .local v2, "numEvents":I
     if-nez v2, :cond_1
 
     move-object v5, v7
@@ -744,7 +737,7 @@
 
 .method private static flush(Lcom/facebook/AppEventsLogger$FlushReason;)V
     .locals 2
-    .parameter "reason"
+    .param p0, "reason"    # Lcom/facebook/AppEventsLogger$FlushReason;
 
     .prologue
     .line 769
@@ -764,7 +757,7 @@
 
 .method private static flushAndWait(Lcom/facebook/AppEventsLogger$FlushReason;)V
     .locals 7
-    .parameter "reason"
+    .param p0, "reason"    # Lcom/facebook/AppEventsLogger$FlushReason;
 
     .prologue
     .line 780
@@ -804,7 +797,7 @@
     invoke-direct {v3, v5}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
 
     .line 780
-    .local v3, keysToFlush:Ljava/util/Set;,"Ljava/util/Set<Lcom/facebook/AppEventsLogger$AccessTokenAppIdPair;>;"
+    .local v3, "keysToFlush":Ljava/util/Set;, "Ljava/util/Set<Lcom/facebook/AppEventsLogger$AccessTokenAppIdPair;>;"
     monitor-exit v4
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -816,7 +809,7 @@
     const/4 v1, 0x0
 
     .line 792
-    .local v1, flushResults:Lcom/facebook/AppEventsLogger$FlushStatistics;
+    .local v1, "flushResults":Lcom/facebook/AppEventsLogger$FlushStatistics;
     :try_start_1
     invoke-static {p0, v3}, Lcom/facebook/AppEventsLogger;->buildAndExecuteRequests(Lcom/facebook/AppEventsLogger$FlushReason;Ljava/util/Set;)Lcom/facebook/AppEventsLogger$FlushStatistics;
     :try_end_1
@@ -852,7 +845,7 @@
     invoke-direct {v2, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
     .line 803
-    .local v2, intent:Landroid/content/Intent;
+    .local v2, "intent":Landroid/content/Intent;
     const-string v4, "com.facebook.sdk.APP_EVENTS_NUM_EVENTS_FLUSHED"
 
     iget v5, v1, Lcom/facebook/AppEventsLogger$FlushStatistics;->numEvents:I
@@ -878,9 +871,9 @@
     goto :goto_0
 
     .line 780
-    .end local v1           #flushResults:Lcom/facebook/AppEventsLogger$FlushStatistics;
-    .end local v2           #intent:Landroid/content/Intent;
-    .end local v3           #keysToFlush:Ljava/util/Set;,"Ljava/util/Set<Lcom/facebook/AppEventsLogger$AccessTokenAppIdPair;>;"
+    .end local v1    # "flushResults":Lcom/facebook/AppEventsLogger$FlushStatistics;
+    .end local v2    # "intent":Landroid/content/Intent;
+    .end local v3    # "keysToFlush":Ljava/util/Set;, "Ljava/util/Set<Lcom/facebook/AppEventsLogger$AccessTokenAppIdPair;>;"
     :catchall_0
     move-exception v5
 
@@ -892,13 +885,13 @@
     throw v5
 
     .line 793
-    .restart local v1       #flushResults:Lcom/facebook/AppEventsLogger$FlushStatistics;
-    .restart local v3       #keysToFlush:Ljava/util/Set;,"Ljava/util/Set<Lcom/facebook/AppEventsLogger$AccessTokenAppIdPair;>;"
+    .restart local v1    # "flushResults":Lcom/facebook/AppEventsLogger$FlushStatistics;
+    .restart local v3    # "keysToFlush":Ljava/util/Set;, "Ljava/util/Set<Lcom/facebook/AppEventsLogger$AccessTokenAppIdPair;>;"
     :catch_0
     move-exception v0
 
     .line 794
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     sget-object v4, Lcom/facebook/AppEventsLogger;->TAG:Ljava/lang/String;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -924,7 +917,7 @@
     goto :goto_1
 
     .line 797
-    .end local v0           #e:Ljava/lang/Exception;
+    .end local v0    # "e":Ljava/lang/Exception;
     :catchall_1
     move-exception v5
 
@@ -1000,7 +993,7 @@
     const/4 v0, 0x0
 
     .line 739
-    .local v0, result:I
+    .local v0, "result":I
     :try_start_0
     sget-object v3, Lcom/facebook/AppEventsLogger;->stateMap:Ljava/util/Map;
 
@@ -1033,7 +1026,7 @@
     check-cast v1, Lcom/facebook/AppEventsLogger$SessionEventsState;
 
     .line 740
-    .local v1, state:Lcom/facebook/AppEventsLogger$SessionEventsState;
+    .local v1, "state":Lcom/facebook/AppEventsLogger$SessionEventsState;
     invoke-virtual {v1}, Lcom/facebook/AppEventsLogger$SessionEventsState;->getAccumulatedEventCount()I
 
     move-result v4
@@ -1043,7 +1036,7 @@
     goto :goto_0
 
     .line 736
-    .end local v1           #state:Lcom/facebook/AppEventsLogger$SessionEventsState;
+    .end local v1    # "state":Lcom/facebook/AppEventsLogger$SessionEventsState;
     :catchall_0
     move-exception v3
 
@@ -1084,7 +1077,7 @@
 
 .method public static getLimitEventUsage(Landroid/content/Context;)Z
     .locals 3
-    .parameter "context"
+    .param p0, "context"    # Landroid/content/Context;
 
     .prologue
     const/4 v2, 0x0
@@ -1097,7 +1090,7 @@
     move-result-object v0
 
     .line 260
-    .local v0, preferences:Landroid/content/SharedPreferences;
+    .local v0, "preferences":Landroid/content/SharedPreferences;
     const-string v1, "limitEventUsage"
 
     invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
@@ -1109,8 +1102,8 @@
 
 .method private static getSessionEventsState(Landroid/content/Context;Lcom/facebook/AppEventsLogger$AccessTokenAppIdPair;)Lcom/facebook/AppEventsLogger$SessionEventsState;
     .locals 4
-    .parameter "context"
-    .parameter "accessTokenAppId"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "accessTokenAppId"    # Lcom/facebook/AppEventsLogger$AccessTokenAppIdPair;
 
     .prologue
     .line 748
@@ -1129,7 +1122,7 @@
     check-cast v1, Lcom/facebook/AppEventsLogger$SessionEventsState;
 
     .line 750
-    .local v1, state:Lcom/facebook/AppEventsLogger$SessionEventsState;
+    .local v1, "state":Lcom/facebook/AppEventsLogger$SessionEventsState;
     if-nez v1, :cond_0
 
     .line 752
@@ -1142,10 +1135,10 @@
     move-result-object v0
 
     .line 754
-    .local v0, attributionId:Ljava/lang/String;
+    .local v0, "attributionId":Ljava/lang/String;
     new-instance v1, Lcom/facebook/AppEventsLogger$SessionEventsState;
 
-    .end local v1           #state:Lcom/facebook/AppEventsLogger$SessionEventsState;
+    .end local v1    # "state":Lcom/facebook/AppEventsLogger$SessionEventsState;
     invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object v3
@@ -1153,20 +1146,20 @@
     invoke-direct {v1, v0, v3}, Lcom/facebook/AppEventsLogger$SessionEventsState;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 755
-    .restart local v1       #state:Lcom/facebook/AppEventsLogger$SessionEventsState;
+    .restart local v1    # "state":Lcom/facebook/AppEventsLogger$SessionEventsState;
     sget-object v3, Lcom/facebook/AppEventsLogger;->stateMap:Ljava/util/Map;
 
     invoke-interface {v3, p1, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 757
-    .end local v0           #attributionId:Ljava/lang/String;
+    .end local v0    # "attributionId":Ljava/lang/String;
     :cond_0
     monitor-exit v2
 
     return-object v1
 
     .line 748
-    .end local v1           #state:Lcom/facebook/AppEventsLogger$SessionEventsState;
+    .end local v1    # "state":Lcom/facebook/AppEventsLogger$SessionEventsState;
     :catchall_0
     move-exception v3
 
@@ -1179,7 +1172,7 @@
 
 .method private static getSessionEventsState(Lcom/facebook/AppEventsLogger$AccessTokenAppIdPair;)Lcom/facebook/AppEventsLogger$SessionEventsState;
     .locals 2
-    .parameter "accessTokenAppId"
+    .param p0, "accessTokenAppId"    # Lcom/facebook/AppEventsLogger$AccessTokenAppIdPair;
 
     .prologue
     .line 762
@@ -1195,7 +1188,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "accessTokenAppId":Lcom/facebook/AppEventsLogger$AccessTokenAppIdPair;
     check-cast p0, Lcom/facebook/AppEventsLogger$SessionEventsState;
 
     monitor-exit v0
@@ -1215,11 +1208,11 @@
 
 .method private static handleResponse(Lcom/facebook/AppEventsLogger$AccessTokenAppIdPair;Lcom/facebook/Request;Lcom/facebook/Response;Lcom/facebook/AppEventsLogger$SessionEventsState;Lcom/facebook/AppEventsLogger$FlushStatistics;)V
     .locals 8
-    .parameter "accessTokenAppId"
-    .parameter "request"
-    .parameter "response"
-    .parameter "sessionEventsState"
-    .parameter "flushState"
+    .param p0, "accessTokenAppId"    # Lcom/facebook/AppEventsLogger$AccessTokenAppIdPair;
+    .param p1, "request"    # Lcom/facebook/Request;
+    .param p2, "response"    # Lcom/facebook/Response;
+    .param p3, "sessionEventsState"    # Lcom/facebook/AppEventsLogger$SessionEventsState;
+    .param p4, "flushState"    # Lcom/facebook/AppEventsLogger$FlushStatistics;
 
     .prologue
     .line 889
@@ -1228,49 +1221,49 @@
     move-result-object v1
 
     .line 890
-    .local v1, error:Lcom/facebook/FacebookRequestError;
+    .local v1, "error":Lcom/facebook/FacebookRequestError;
     const-string v2, "Success"
 
     .line 892
-    .local v2, resultDescription:Ljava/lang/String;
+    .local v2, "resultDescription":Ljava/lang/String;
     sget-object v0, Lcom/facebook/AppEventsLogger$FlushResult;->SUCCESS:Lcom/facebook/AppEventsLogger$FlushResult;
 
     .line 894
-    .local v0, flushResult:Lcom/facebook/AppEventsLogger$FlushResult;
+    .local v0, "flushResult":Lcom/facebook/AppEventsLogger$FlushResult;
     if-eqz v1, :cond_5
 
     .line 895
     const/4 v0, -0x1
 
     .line 896
-    .local v0, NO_CONNECTIVITY_ERROR_CODE:I
+    .local v0, "NO_CONNECTIVITY_ERROR_CODE":I
     invoke-virtual {v1}, Lcom/facebook/FacebookRequestError;->getErrorCode()I
 
     move-result v0
 
-    .end local v0           #NO_CONNECTIVITY_ERROR_CODE:I
+    .end local v0    # "NO_CONNECTIVITY_ERROR_CODE":I
     const/4 v2, -0x1
 
     if-ne v0, v2, :cond_3
 
     .line 897
-    .end local v2           #resultDescription:Ljava/lang/String;
+    .end local v2    # "resultDescription":Ljava/lang/String;
     const-string v0, "Failed: No Connectivity"
 
     .line 898
-    .local v0, resultDescription:Ljava/lang/String;
+    .local v0, "resultDescription":Ljava/lang/String;
     sget-object p2, Lcom/facebook/AppEventsLogger$FlushResult;->NO_CONNECTIVITY:Lcom/facebook/AppEventsLogger$FlushResult;
 
-    .local p2, flushResult:Lcom/facebook/AppEventsLogger$FlushResult;
+    .local p2, "flushResult":Lcom/facebook/AppEventsLogger$FlushResult;
     move-object v3, v0
 
-    .end local v0           #resultDescription:Ljava/lang/String;
-    .local v3, resultDescription:Ljava/lang/String;
+    .end local v0    # "resultDescription":Ljava/lang/String;
+    .local v3, "resultDescription":Ljava/lang/String;
     move-object v0, p2
 
     .line 907
-    .end local p2           #flushResult:Lcom/facebook/AppEventsLogger$FlushResult;
-    .local v0, flushResult:Lcom/facebook/AppEventsLogger$FlushResult;
+    .end local p2    # "flushResult":Lcom/facebook/AppEventsLogger$FlushResult;
+    .local v0, "flushResult":Lcom/facebook/AppEventsLogger$FlushResult;
     :goto_0
     sget-object p2, Lcom/facebook/LoggingBehavior;->APP_EVENTS:Lcom/facebook/LoggingBehavior;
 
@@ -1288,26 +1281,26 @@
     check-cast p2, Ljava/lang/String;
 
     .line 912
-    .local p2, eventsJsonString:Ljava/lang/String;
+    .local p2, "eventsJsonString":Ljava/lang/String;
     :try_start_0
     new-instance v2, Lorg/json/JSONArray;
 
     invoke-direct {v2, p2}, Lorg/json/JSONArray;-><init>(Ljava/lang/String;)V
 
     .line 913
-    .local v2, jsonArray:Lorg/json/JSONArray;
+    .local v2, "jsonArray":Lorg/json/JSONArray;
     const/4 p2, 0x2
 
     invoke-virtual {v2, p2}, Lorg/json/JSONArray;->toString(I)Ljava/lang/String;
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .end local p2           #eventsJsonString:Ljava/lang/String;
+    .end local p2    # "eventsJsonString":Ljava/lang/String;
     move-result-object p2
 
     .line 918
-    .end local v2           #jsonArray:Lorg/json/JSONArray;
-    .local p2, prettyPrintedEvents:Ljava/lang/String;
+    .end local v2    # "jsonArray":Lorg/json/JSONArray;
+    .local p2, "prettyPrintedEvents":Ljava/lang/String;
     :goto_1
     sget-object v2, Lcom/facebook/LoggingBehavior;->APP_EVENTS:Lcom/facebook/LoggingBehavior;
 
@@ -1327,7 +1320,7 @@
 
     move-result-object p1
 
-    .end local p1
+    .end local p1    # "request":Lcom/facebook/Request;
     invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object p1
@@ -1348,7 +1341,7 @@
     invoke-static {v2, v4, v5, v6}, Lcom/facebook/internal/Logger;->log(Lcom/facebook/LoggingBehavior;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 925
-    .end local p2           #prettyPrintedEvents:Ljava/lang/String;
+    .end local p2    # "prettyPrintedEvents":Ljava/lang/String;
     :cond_0
     if-eqz v1, :cond_4
 
@@ -1371,7 +1364,7 @@
     :cond_1
     sget-object p0, Lcom/facebook/AppEventsLogger$FlushResult;->SUCCESS:Lcom/facebook/AppEventsLogger$FlushResult;
 
-    .end local p0
+    .end local p0    # "accessTokenAppId":Lcom/facebook/AppEventsLogger$AccessTokenAppIdPair;
     if-eq v0, p0, :cond_2
 
     .line 937
@@ -1389,11 +1382,11 @@
     return-void
 
     .line 900
-    .end local v0           #flushResult:Lcom/facebook/AppEventsLogger$FlushResult;
-    .end local v3           #resultDescription:Ljava/lang/String;
-    .restart local p0
-    .restart local p1
-    .local p2, response:Lcom/facebook/Response;
+    .end local v0    # "flushResult":Lcom/facebook/AppEventsLogger$FlushResult;
+    .end local v3    # "resultDescription":Ljava/lang/String;
+    .restart local p0    # "accessTokenAppId":Lcom/facebook/AppEventsLogger$AccessTokenAppIdPair;
+    .restart local p1    # "request":Lcom/facebook/Request;
+    .local p2, "response":Lcom/facebook/Response;
     :cond_3
     const-string v0, "Failed:\n  Response: %s\n  Error %s"
 
@@ -1408,7 +1401,7 @@
 
     move-result-object p2
 
-    .end local p2           #response:Lcom/facebook/Response;
+    .end local p2    # "response":Lcom/facebook/Response;
     aput-object p2, v2, v3
 
     const/4 p2, 0x1
@@ -1426,18 +1419,18 @@
     move-result-object v0
 
     .line 903
-    .local v0, resultDescription:Ljava/lang/String;
+    .local v0, "resultDescription":Ljava/lang/String;
     sget-object p2, Lcom/facebook/AppEventsLogger$FlushResult;->SERVER_ERROR:Lcom/facebook/AppEventsLogger$FlushResult;
 
-    .local p2, flushResult:Lcom/facebook/AppEventsLogger$FlushResult;
+    .local p2, "flushResult":Lcom/facebook/AppEventsLogger$FlushResult;
     move-object v3, v0
 
-    .end local v0           #resultDescription:Ljava/lang/String;
-    .restart local v3       #resultDescription:Ljava/lang/String;
+    .end local v0    # "resultDescription":Ljava/lang/String;
+    .restart local v3    # "resultDescription":Ljava/lang/String;
     move-object v0, p2
 
-    .end local p2           #flushResult:Lcom/facebook/AppEventsLogger$FlushResult;
-    .local v0, flushResult:Lcom/facebook/AppEventsLogger$FlushResult;
+    .end local p2    # "flushResult":Lcom/facebook/AppEventsLogger$FlushResult;
+    .local v0, "flushResult":Lcom/facebook/AppEventsLogger$FlushResult;
     goto :goto_0
 
     .line 914
@@ -1445,29 +1438,29 @@
     move-exception p2
 
     .line 915
-    .local p2, exc:Lorg/json/JSONException;
+    .local p2, "exc":Lorg/json/JSONException;
     const-string p2, "<Can\'t encode events for debug logging>"
 
-    .local p2, prettyPrintedEvents:Ljava/lang/String;
+    .local p2, "prettyPrintedEvents":Ljava/lang/String;
     goto :goto_1
 
     .line 925
-    .end local p1
-    .end local p2           #prettyPrintedEvents:Ljava/lang/String;
+    .end local p1    # "request":Lcom/facebook/Request;
+    .end local p2    # "prettyPrintedEvents":Ljava/lang/String;
     :cond_4
     const/4 p1, 0x0
 
     goto :goto_2
 
-    .end local v3           #resultDescription:Ljava/lang/String;
-    .local v2, resultDescription:Ljava/lang/String;
-    .restart local p1
-    .local p2, response:Lcom/facebook/Response;
+    .end local v3    # "resultDescription":Ljava/lang/String;
+    .local v2, "resultDescription":Ljava/lang/String;
+    .restart local p1    # "request":Lcom/facebook/Request;
+    .local p2, "response":Lcom/facebook/Response;
     :cond_5
     move-object v3, v2
 
-    .end local v2           #resultDescription:Ljava/lang/String;
-    .restart local v3       #resultDescription:Ljava/lang/String;
+    .end local v2    # "resultDescription":Ljava/lang/String;
+    .restart local v3    # "resultDescription":Ljava/lang/String;
     goto :goto_0
 .end method
 
@@ -1559,9 +1552,9 @@
 
 .method private static logEvent(Landroid/content/Context;Lcom/facebook/AppEventsLogger$AppEvent;Lcom/facebook/AppEventsLogger$AccessTokenAppIdPair;)V
     .locals 2
-    .parameter "context"
-    .parameter "event"
-    .parameter "accessTokenAppId"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "event"    # Lcom/facebook/AppEventsLogger$AppEvent;
+    .param p2, "accessTokenAppId"    # Lcom/facebook/AppEventsLogger$AccessTokenAppIdPair;
 
     .prologue
     .line 683
@@ -1582,7 +1575,7 @@
     move-result-object v0
 
     .line 688
-    .local v0, state:Lcom/facebook/AppEventsLogger$SessionEventsState;
+    .local v0, "state":Lcom/facebook/AppEventsLogger$SessionEventsState;
     invoke-virtual {v0, p1}, Lcom/facebook/AppEventsLogger$SessionEventsState;->addEvent(Lcom/facebook/AppEventsLogger$AppEvent;)V
 
     .line 690
@@ -1593,10 +1586,10 @@
 
 .method private logEvent(Ljava/lang/String;Ljava/lang/Double;Landroid/os/Bundle;Z)V
     .locals 3
-    .parameter "eventName"
-    .parameter "valueToSum"
-    .parameter "parameters"
-    .parameter "isImplicitlyLogged"
+    .param p1, "eventName"    # Ljava/lang/String;
+    .param p2, "valueToSum"    # Ljava/lang/Double;
+    .param p3, "parameters"    # Landroid/os/Bundle;
+    .param p4, "isImplicitlyLogged"    # Z
 
     .prologue
     .line 678
@@ -1605,7 +1598,7 @@
     invoke-direct {v0, p1, p2, p3, p4}, Lcom/facebook/AppEventsLogger$AppEvent;-><init>(Ljava/lang/String;Ljava/lang/Double;Landroid/os/Bundle;Z)V
 
     .line 679
-    .local v0, event:Lcom/facebook/AppEventsLogger$AppEvent;
+    .local v0, "event":Lcom/facebook/AppEventsLogger$AppEvent;
     iget-object v1, p0, Lcom/facebook/AppEventsLogger;->context:Landroid/content/Context;
 
     iget-object v2, p0, Lcom/facebook/AppEventsLogger;->accessTokenAppId:Lcom/facebook/AppEventsLogger$AccessTokenAppIdPair;
@@ -1618,7 +1611,7 @@
 
 .method public static newLogger(Landroid/content/Context;)Lcom/facebook/AppEventsLogger;
     .locals 2
-    .parameter "context"
+    .param p0, "context"    # Landroid/content/Context;
 
     .prologue
     const/4 v1, 0x0
@@ -1633,8 +1626,8 @@
 
 .method public static newLogger(Landroid/content/Context;Lcom/facebook/Session;)Lcom/facebook/AppEventsLogger;
     .locals 2
-    .parameter "context"
-    .parameter "session"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "session"    # Lcom/facebook/Session;
 
     .prologue
     .line 347
@@ -1649,8 +1642,8 @@
 
 .method public static newLogger(Landroid/content/Context;Ljava/lang/String;)Lcom/facebook/AppEventsLogger;
     .locals 2
-    .parameter "context"
-    .parameter "applicationId"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "applicationId"    # Ljava/lang/String;
 
     .prologue
     .line 382
@@ -1665,9 +1658,9 @@
 
 .method public static newLogger(Landroid/content/Context;Ljava/lang/String;Lcom/facebook/Session;)Lcom/facebook/AppEventsLogger;
     .locals 1
-    .parameter "context"
-    .parameter "applicationId"
-    .parameter "session"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "applicationId"    # Ljava/lang/String;
+    .param p2, "session"    # Lcom/facebook/Session;
 
     .prologue
     .line 365
@@ -1680,7 +1673,7 @@
 
 .method private static notifyDeveloperError(Ljava/lang/String;)V
     .locals 2
-    .parameter "message"
+    .param p0, "message"    # Ljava/lang/String;
 
     .prologue
     .line 964
@@ -1711,7 +1704,7 @@
 
 .method public static setFlushBehavior(Lcom/facebook/AppEventsLogger$FlushBehavior;)V
     .locals 2
-    .parameter "flushBehavior"
+    .param p0, "flushBehavior"    # Lcom/facebook/AppEventsLogger$FlushBehavior;
 
     .prologue
     .line 416
@@ -1742,8 +1735,8 @@
 
 .method public static setLimitEventUsage(Landroid/content/Context;Z)V
     .locals 4
-    .parameter "context"
-    .parameter "limitEventUsage"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "limitEventUsage"    # Z
 
     .prologue
     .line 274
@@ -1756,13 +1749,13 @@
     move-result-object v1
 
     .line 275
-    .local v1, preferences:Landroid/content/SharedPreferences;
+    .local v1, "preferences":Landroid/content/SharedPreferences;
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
     .line 276
-    .local v0, editor:Landroid/content/SharedPreferences$Editor;
+    .local v0, "editor":Landroid/content/SharedPreferences$Editor;
     const-string v2, "limitEventUsage"
 
     invoke-interface {v0, v2, p1}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
@@ -1776,7 +1769,7 @@
 
 .method private static shouldSuppressEvent(Lcom/facebook/AppEventsLogger$AppEvent;)Z
     .locals 10
-    .parameter "event"
+    .param p0, "event"    # Lcom/facebook/AppEventsLogger$AppEvent;
 
     .prologue
     const/4 v9, 0x0
@@ -1795,7 +1788,7 @@
     check-cast v3, Lcom/facebook/AppEventsLogger$EventSuppression;
 
     .line 696
-    .local v3, suppressionInfo:Lcom/facebook/AppEventsLogger$EventSuppression;
+    .local v3, "suppressionInfo":Lcom/facebook/AppEventsLogger$EventSuppression;
     if-nez v3, :cond_0
 
     move v5, v9
@@ -1819,14 +1812,14 @@
     check-cast v4, Ljava/util/Date;
 
     .line 702
-    .local v4, timestamp:Ljava/util/Date;
+    .local v4, "timestamp":Ljava/util/Date;
     if-nez v4, :cond_3
 
     .line 703
     const/4 v2, 0x0
 
     .line 711
-    .local v2, suppressed:Z
+    .local v2, "suppressed":Z
     :goto_1
     if-eqz v2, :cond_1
 
@@ -1860,7 +1853,7 @@
     goto :goto_0
 
     .line 705
-    .end local v2           #suppressed:Z
+    .end local v2    # "suppressed":Z
     :cond_3
     new-instance v5, Ljava/util/Date;
 
@@ -1877,7 +1870,7 @@
     sub-long v0, v5, v7
 
     .line 706
-    .local v0, delta:J
+    .local v0, "delta":J
     invoke-virtual {v3}, Lcom/facebook/AppEventsLogger$EventSuppression;->getTimeoutPeriod()I
 
     move-result v5
@@ -1894,11 +1887,11 @@
 
     move v2, v5
 
-    .restart local v2       #suppressed:Z
+    .restart local v2    # "suppressed":Z
     :goto_2
     goto :goto_1
 
-    .end local v2           #suppressed:Z
+    .end local v2    # "suppressed":Z
     :cond_4
     move v2, v9
 
@@ -1936,7 +1929,7 @@
 
 .method isValidForSession(Lcom/facebook/Session;)Z
     .locals 2
-    .parameter "session"
+    .param p1, "session"    # Lcom/facebook/Session;
 
     .prologue
     .line 567
@@ -1945,7 +1938,7 @@
     invoke-direct {v0, p1}, Lcom/facebook/AppEventsLogger$AccessTokenAppIdPair;-><init>(Lcom/facebook/Session;)V
 
     .line 568
-    .local v0, other:Lcom/facebook/AppEventsLogger$AccessTokenAppIdPair;
+    .local v0, "other":Lcom/facebook/AppEventsLogger$AccessTokenAppIdPair;
     iget-object v1, p0, Lcom/facebook/AppEventsLogger;->accessTokenAppId:Lcom/facebook/AppEventsLogger$AccessTokenAppIdPair;
 
     invoke-virtual {v1, v0}, Lcom/facebook/AppEventsLogger$AccessTokenAppIdPair;->equals(Ljava/lang/Object;)Z
@@ -1957,7 +1950,7 @@
 
 .method public logEvent(Ljava/lang/String;)V
     .locals 1
-    .parameter "eventName"
+    .param p1, "eventName"    # Ljava/lang/String;
 
     .prologue
     .line 433
@@ -1971,8 +1964,8 @@
 
 .method public logEvent(Ljava/lang/String;D)V
     .locals 1
-    .parameter "eventName"
-    .parameter "valueToSum"
+    .param p1, "eventName"    # Ljava/lang/String;
+    .param p2, "valueToSum"    # D
 
     .prologue
     .line 451
@@ -1986,9 +1979,9 @@
 
 .method public logEvent(Ljava/lang/String;DLandroid/os/Bundle;)V
     .locals 2
-    .parameter "eventName"
-    .parameter "valueToSum"
-    .parameter "parameters"
+    .param p1, "eventName"    # Ljava/lang/String;
+    .param p2, "valueToSum"    # D
+    .param p4, "parameters"    # Landroid/os/Bundle;
 
     .prologue
     .line 495
@@ -2006,8 +1999,8 @@
 
 .method public logEvent(Ljava/lang/String;Landroid/os/Bundle;)V
     .locals 2
-    .parameter "eventName"
-    .parameter "parameters"
+    .param p1, "eventName"    # Ljava/lang/String;
+    .param p2, "parameters"    # Landroid/os/Bundle;
 
     .prologue
     .line 472
@@ -2023,8 +2016,8 @@
 
 .method public logPurchase(Ljava/math/BigDecimal;Ljava/util/Currency;)V
     .locals 1
-    .parameter "purchaseAmount"
-    .parameter "currency"
+    .param p1, "purchaseAmount"    # Ljava/math/BigDecimal;
+    .param p2, "currency"    # Ljava/util/Currency;
 
     .prologue
     .line 508
@@ -2038,9 +2031,9 @@
 
 .method public logPurchase(Ljava/math/BigDecimal;Ljava/util/Currency;Landroid/os/Bundle;)V
     .locals 3
-    .parameter "purchaseAmount"
-    .parameter "currency"
-    .parameter "parameters"
+    .param p1, "purchaseAmount"    # Ljava/math/BigDecimal;
+    .param p2, "currency"    # Ljava/util/Currency;
+    .param p3, "parameters"    # Landroid/os/Bundle;
 
     .prologue
     .line 525
@@ -2073,11 +2066,11 @@
     .line 534
     new-instance p3, Landroid/os/Bundle;
 
-    .end local p3
+    .end local p3    # "parameters":Landroid/os/Bundle;
     invoke-direct {p3}, Landroid/os/Bundle;-><init>()V
 
     .line 536
-    .restart local p3
+    .restart local p3    # "parameters":Landroid/os/Bundle;
     :cond_2
     const-string v0, "fb_currency"
 
@@ -2104,9 +2097,9 @@
 
 .method public logSdkEvent(Ljava/lang/String;Ljava/lang/Double;Landroid/os/Bundle;)V
     .locals 1
-    .parameter "eventName"
-    .parameter "valueToSum"
-    .parameter "parameters"
+    .param p1, "eventName"    # Ljava/lang/String;
+    .param p2, "valueToSum"    # Ljava/lang/Double;
+    .param p3, "parameters"    # Landroid/os/Bundle;
 
     .prologue
     .line 575

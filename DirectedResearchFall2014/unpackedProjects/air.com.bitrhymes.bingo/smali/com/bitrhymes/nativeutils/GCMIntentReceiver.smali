@@ -18,7 +18,7 @@
 # virtual methods
 .method protected getGCMIntentServiceClassName(Landroid/content/Context;)Ljava/lang/String;
     .locals 2
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     .line 12

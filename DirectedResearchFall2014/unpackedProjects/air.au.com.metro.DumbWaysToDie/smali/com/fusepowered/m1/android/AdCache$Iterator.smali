@@ -37,7 +37,7 @@
 # virtual methods
 .method callback(Lcom/fusepowered/m1/android/CachedAd;)Z
     .locals 1
-    .parameter "ad"
+    .param p1, "ad"    # Lcom/fusepowered/m1/android/CachedAd;
 
     .prologue
     .line 330
@@ -48,7 +48,7 @@
 
 .method callback(Ljava/lang/String;)Z
     .locals 1
-    .parameter "id"
+    .param p1, "id"    # Ljava/lang/String;
 
     .prologue
     .line 320
@@ -59,12 +59,12 @@
 
 .method callback(Ljava/lang/String;ILjava/util/Date;Ljava/lang/String;JLjava/io/ObjectInputStream;)Z
     .locals 1
-    .parameter "id"
-    .parameter "type"
-    .parameter "expiration"
-    .parameter "acid"
-    .parameter "deferredViewStart"
-    .parameter "objectInputStream"
+    .param p1, "id"    # Ljava/lang/String;
+    .param p2, "type"    # I
+    .param p3, "expiration"    # Ljava/util/Date;
+    .param p4, "acid"    # Ljava/lang/String;
+    .param p5, "deferredViewStart"    # J
+    .param p7, "objectInputStream"    # Ljava/io/ObjectInputStream;
 
     .prologue
     .line 325

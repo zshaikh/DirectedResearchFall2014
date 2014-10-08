@@ -92,10 +92,10 @@
 
 .method private constructor <init>(Landroid/content/Context;Ljava/lang/String;II)V
     .locals 10
-    .parameter "context"
-    .parameter "vungleAppId"
-    .parameter "age"
-    .parameter "gender"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "vungleAppId"    # Ljava/lang/String;
+    .param p3, "age"    # I
+    .param p4, "gender"    # I
 
     .prologue
     const-wide/16 v6, 0x0
@@ -346,9 +346,6 @@
 
 .method private static a(ZLjava/lang/String;Z)Z
     .locals 7
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const/4 v6, 0x0
@@ -769,7 +766,7 @@
     invoke-direct {v0, v2, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
     .line 579
-    const/high16 v2, 0x1000
+    const/high16 v2, 0x10000000
 
     invoke-virtual {v0, v2}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
@@ -861,8 +858,8 @@
 
 .method public static declared-synchronized displayIncentivizedAdvert(Ljava/lang/String;Z)Z
     .locals 2
-    .parameter "name"
-    .parameter "showCloseButton"
+    .param p0, "name"    # Ljava/lang/String;
+    .param p1, "showCloseButton"    # Z
 
     .prologue
     .line 373
@@ -908,7 +905,7 @@
 
 .method public static declared-synchronized displayIncentivizedAdvert(Z)Z
     .locals 3
-    .parameter "showCloseButton"
+    .param p0, "showCloseButton"    # Z
 
     .prologue
     .line 359
@@ -1010,8 +1007,8 @@
 
 .method public static declared-synchronized init(Landroid/content/Context;Ljava/lang/String;)V
     .locals 3
-    .parameter "context"
-    .parameter "appId"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "appId"    # Ljava/lang/String;
 
     .prologue
     .line 170
@@ -1044,10 +1041,10 @@
 
 .method public static declared-synchronized init(Landroid/content/Context;Ljava/lang/String;II)V
     .locals 3
-    .parameter "context"
-    .parameter "vungleAppId"
-    .parameter "age"
-    .parameter "gender"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "vungleAppId"    # Ljava/lang/String;
+    .param p2, "age"    # I
+    .param p3, "gender"    # I
 
     .prologue
     const/4 v2, 0x1
@@ -1108,7 +1105,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "context":Landroid/content/Context;
     check-cast p0, Lcom/vungle/sdk/VungleConnectionHandler;
 
     invoke-virtual {p0}, Lcom/vungle/sdk/VungleConnectionHandler;->b()V
@@ -1122,13 +1119,13 @@
     return-void
 
     .line 188
-    .restart local p0
+    .restart local p0    # "context":Landroid/content/Context;
     :cond_1
     const/4 v1, 0x0
 
     goto :goto_0
 
-    .end local p0
+    .end local p0    # "context":Landroid/content/Context;
     :catchall_0
     move-exception v1
 
@@ -1288,7 +1285,7 @@
 
 .method public static declared-synchronized isVideoAvailable(Z)Z
     .locals 3
-    .parameter "debug"
+    .param p0, "debug"    # Z
 
     .prologue
     .line 433
@@ -1424,7 +1421,7 @@
 
 .method public static declared-synchronized setAutoRotation(Z)V
     .locals 2
-    .parameter "shouldAutoRotate"
+    .param p0, "shouldAutoRotate"    # Z
 
     .prologue
     .line 295
@@ -1453,7 +1450,7 @@
 
 .method public static declared-synchronized setBackButtonEnabled(Z)V
     .locals 2
-    .parameter "isBackButtonEnabled"
+    .param p0, "isBackButtonEnabled"    # Z
 
     .prologue
     .line 252
@@ -1496,7 +1493,7 @@
 
 .method public static declared-synchronized setEventListener(Lcom/vungle/sdk/VunglePub$EventListener;)V
     .locals 2
-    .parameter "el"
+    .param p0, "el"    # Lcom/vungle/sdk/VunglePub$EventListener;
 
     .prologue
     .line 561
@@ -1539,7 +1536,7 @@
 
 .method public static declared-synchronized setIncentivizedBackButtonEnabled(Z)V
     .locals 2
-    .parameter "isBackButtonEnabled"
+    .param p0, "isBackButtonEnabled"    # Z
 
     .prologue
     .line 269
@@ -1582,7 +1579,7 @@
 
 .method public static declared-synchronized setSoundEnabled(Z)V
     .locals 2
-    .parameter "isSoundEnabled"
+    .param p0, "isSoundEnabled"    # Z
 
     .prologue
     .line 235
@@ -1625,7 +1622,7 @@
 
 .method public static declared-synchronized setVungleBitmapFactory(Lcom/vungle/sdk/VungleBitmapFactory;)V
     .locals 2
-    .parameter "vungleBitmapFactory"
+    .param p0, "vungleBitmapFactory"    # Lcom/vungle/sdk/VungleBitmapFactory;
 
     .prologue
     .line 567

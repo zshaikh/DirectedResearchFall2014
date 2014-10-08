@@ -32,9 +32,7 @@
 # direct methods
 .method constructor <init>(Lcom/facebook/widget/FriendPickerFragment;Lcom/facebook/widget/PickerFragment;Landroid/content/Context;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter "$anonymous0"
+    .param p3, "$anonymous0"    # Landroid/content/Context;
 
     .prologue
     .line 1
@@ -66,7 +64,6 @@
 
 .method protected bridge synthetic getGraphObjectRowLayoutId(Lcom/facebook/model/GraphObject;)I
     .locals 1
-    .parameter
 
     .prologue
     .line 1
@@ -81,7 +78,7 @@
 
 .method protected getGraphObjectRowLayoutId(Lcom/facebook/model/GraphUser;)I
     .locals 2
-    .parameter "graphObject"
+    .param p1, "graphObject"    # Lcom/facebook/model/GraphUser;
 
     .prologue
     .line 151

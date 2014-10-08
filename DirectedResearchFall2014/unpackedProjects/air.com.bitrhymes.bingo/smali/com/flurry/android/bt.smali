@@ -17,9 +17,6 @@
 # direct methods
 .method constructor <init>(Lcom/flurry/android/bn;Lcom/flurry/android/cw;I)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 849
@@ -38,8 +35,6 @@
 # virtual methods
 .method public final onClick(Landroid/content/DialogInterface;I)V
     .locals 7
-    .parameter
-    .parameter
 
     .prologue
     .line 852

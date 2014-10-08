@@ -51,7 +51,6 @@
 
 .method protected constructor <init>(Ljava/lang/Class;)V
     .locals 0
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -62,8 +61,8 @@
 
     .prologue
     .line 27
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/ext/DOMDeserializer;,"Lcom/flurry/org/codehaus/jackson/map/ext/DOMDeserializer<TT;>;"
-    .local p1, cls:Ljava/lang/Class;,"Ljava/lang/Class<TT;>;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/ext/DOMDeserializer;, "Lcom/flurry/org/codehaus/jackson/map/ext/DOMDeserializer<TT;>;"
+    .local p1, "cls":Ljava/lang/Class;, "Ljava/lang/Class<TT;>;"
     invoke-direct {p0, p1}, Lcom/flurry/org/codehaus/jackson/map/deser/std/FromStringDeserializer;-><init>(Ljava/lang/Class;)V
 
     return-void
@@ -84,7 +83,7 @@
 
 .method protected final parse(Ljava/lang/String;)Lorg/w3c/dom/Document;
     .locals 4
-    .parameter "value"
+    .param p1, "value"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/IllegalArgumentException;
@@ -93,7 +92,7 @@
 
     .prologue
     .line 35
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/ext/DOMDeserializer;,"Lcom/flurry/org/codehaus/jackson/map/ext/DOMDeserializer<TT;>;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/ext/DOMDeserializer;, "Lcom/flurry/org/codehaus/jackson/map/ext/DOMDeserializer<TT;>;"
     :try_start_0
     sget-object v1, Lcom/flurry/org/codehaus/jackson/map/ext/DOMDeserializer;->_parserFactory:Ljavax/xml/parsers/DocumentBuilderFactory;
 
@@ -124,7 +123,7 @@
     move-object v0, v1
 
     .line 37
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     new-instance v2, Ljava/lang/StringBuilder;

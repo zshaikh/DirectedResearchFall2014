@@ -37,7 +37,6 @@
 
 .method static synthetic access$0(Lcom/adobe/fre/FREContext;)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 166
@@ -50,7 +49,6 @@
 
 .method static synthetic access$1(Lcom/adobe/fre/FREContext;)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 157
@@ -63,7 +61,6 @@
 
 .method static synthetic access$2(Lcom/adobe/fre/FREContext;)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 161
@@ -76,8 +73,6 @@
 
 .method static synthetic access$3(Lcom/adobe/fre/FREContext;Z)Z
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 141
@@ -90,7 +85,6 @@
 
 .method static synthetic access$4(Lcom/adobe/fre/FREContext;)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 149
@@ -103,7 +97,6 @@
 
 .method static synthetic access$5(Ljava/lang/String;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 191
@@ -114,7 +107,7 @@
 
 .method public static getGCMSenderIds(Landroid/content/Context;)[Ljava/lang/String;
     .locals 6
-    .parameter "context"
+    .param p0, "context"    # Landroid/content/Context;
 
     .prologue
     const/4 v5, 0x0
@@ -125,7 +118,7 @@
     new-array v2, v3, [Ljava/lang/String;
 
     .line 128
-    .local v2, sendersStrings:[Ljava/lang/String;
+    .local v2, "sendersStrings":[Ljava/lang/String;
     sget-object v3, Lcom/buffalostudios/aneutils/notifier/PushNotifier;->_lastGCMSender:Ljava/lang/String;
 
     if-eqz v3, :cond_0
@@ -153,7 +146,7 @@
     move-result-object v1
 
     .line 135
-    .local v1, prefs:Landroid/content/SharedPreferences;
+    .local v1, "prefs":Landroid/content/SharedPreferences;
     const-string v3, "lklast"
 
     const-string v4, ""
@@ -163,7 +156,7 @@
     move-result-object v0
 
     .line 136
-    .local v0, lastId:Ljava/lang/String;
+    .local v0, "lastId":Ljava/lang/String;
     sput-object v0, Lcom/buffalostudios/aneutils/notifier/PushNotifier;->_lastGCMSender:Ljava/lang/String;
 
     .line 137
@@ -176,7 +169,7 @@
 
 .method private static initGCM(Ljava/lang/String;)V
     .locals 8
-    .parameter "GCMSender"
+    .param p0, "GCMSender"    # Ljava/lang/String;
 
     .prologue
     const/4 v7, 0x0
@@ -189,7 +182,7 @@
     move-result-object v0
 
     .line 194
-    .local v0, context:Lcom/adobe/fre/FREContext;
+    .local v0, "context":Lcom/adobe/fre/FREContext;
     sput-object p0, Lcom/buffalostudios/aneutils/notifier/PushNotifier;->_lastGCMSender:Ljava/lang/String;
 
     .line 196
@@ -209,13 +202,13 @@
     move-result-object v2
 
     .line 198
-    .local v2, prefs:Landroid/content/SharedPreferences;
+    .local v2, "prefs":Landroid/content/SharedPreferences;
     invoke-interface {v2}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v1
 
     .line 199
-    .local v1, prefEditor:Landroid/content/SharedPreferences$Editor;
+    .local v1, "prefEditor":Landroid/content/SharedPreferences$Editor;
     const-string v4, "lklast"
 
     sget-object v5, Lcom/buffalostudios/aneutils/notifier/PushNotifier;->_lastGCMSender:Ljava/lang/String;
@@ -242,7 +235,7 @@
     move-result-object v3
 
     .line 207
-    .local v3, regId:Ljava/lang/String;
+    .local v3, "regId":Ljava/lang/String;
     const-string v4, "PushNotifier"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -331,7 +324,7 @@
 
 .method private static isGCMAvailable(Lcom/adobe/fre/FREContext;)Z
     .locals 5
-    .parameter "context"
+    .param p0, "context"    # Lcom/adobe/fre/FREContext;
 
     .prologue
     const/4 v4, 0x0
@@ -413,7 +406,7 @@
     move-object v0, v1
 
     .line 172
-    .local v0, e:Ljava/lang/UnsupportedOperationException;
+    .local v0, "e":Ljava/lang/UnsupportedOperationException;
     const-string v1, "PushNotifier"
 
     const-string v1, "Device fail: unsupported."
@@ -433,14 +426,14 @@
     goto :goto_0
 
     .line 181
-    .end local v0           #e:Ljava/lang/UnsupportedOperationException;
+    .end local v0    # "e":Ljava/lang/UnsupportedOperationException;
     :catch_1
     move-exception v1
 
     move-object v0, v1
 
     .line 182
-    .local v0, e:Ljava/lang/IllegalStateException;
+    .local v0, "e":Ljava/lang/IllegalStateException;
     const-string v1, "PushNotifier"
 
     const-string v1, "Manifest failed configuration."
@@ -462,7 +455,7 @@
 
 .method private static isGCMRegistered(Lcom/adobe/fre/FREContext;)Z
     .locals 1
-    .parameter "context"
+    .param p0, "context"    # Lcom/adobe/fre/FREContext;
 
     .prologue
     .line 158
@@ -479,7 +472,7 @@
 
 .method private static isGCMRegisteredOnServer(Lcom/adobe/fre/FREContext;)Z
     .locals 1
-    .parameter "context"
+    .param p0, "context"    # Lcom/adobe/fre/FREContext;
 
     .prologue
     .line 162
@@ -496,8 +489,8 @@
 
 .method public static onGCMError(Landroid/content/Context;Ljava/lang/String;)V
     .locals 3
-    .parameter "context"
-    .parameter "errorId"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "errorId"    # Ljava/lang/String;
 
     .prologue
     .line 111
@@ -530,8 +523,8 @@
 
 .method public static onGCMMessage(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 10
-    .parameter "context"
-    .parameter "intent"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "intent"    # Landroid/content/Intent;
 
     .prologue
     .line 36
@@ -554,7 +547,7 @@
     move-result-object v2
 
     .line 40
-    .local v2, message:Ljava/lang/String;
+    .local v2, "message":Ljava/lang/String;
     const-string v0, "PushNotifier"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -588,10 +581,10 @@
     .line 44
     const-string p0, "PushNotifier"
 
-    .end local p0
+    .end local p0    # "context":Landroid/content/Context;
     const-string p1, "GCM = in foreground."
 
-    .end local p1
+    .end local p1    # "intent":Landroid/content/Intent;
     invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 108
@@ -599,8 +592,8 @@
     return-void
 
     .line 50
-    .restart local p0
-    .restart local p1
+    .restart local p0    # "context":Landroid/content/Context;
+    .restart local p1    # "intent":Landroid/content/Intent;
     :cond_0
     const-string v0, "notification"
 
@@ -612,25 +605,25 @@
     check-cast v4, Landroid/app/NotificationManager;
 
     .line 51
-    .local v4, notificationManager:Landroid/app/NotificationManager;
+    .local v4, "notificationManager":Landroid/app/NotificationManager;
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v5
 
     .line 52
-    .local v5, packageManager:Landroid/content/pm/PackageManager;
+    .local v5, "packageManager":Landroid/content/pm/PackageManager;
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
 
     .line 53
-    .local v0, appContext:Landroid/content/Context;
+    .local v0, "appContext":Landroid/content/Context;
     invoke-virtual {v0}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
 
     move-result-object v1
 
     .line 56
-    .local v1, applicationInfo:Landroid/content/pm/ApplicationInfo;
+    .local v1, "applicationInfo":Landroid/content/pm/ApplicationInfo;
     invoke-virtual {p1}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object v3
@@ -642,17 +635,17 @@
     move-result-object v3
 
     .line 57
-    .local v3, rawJson:Ljava/lang/String;
+    .local v3, "rawJson":Ljava/lang/String;
     move-object v6, v3
 
     .line 58
-    .local v6, tickerText:Ljava/lang/String;
+    .local v6, "tickerText":Ljava/lang/String;
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v3
 
     .line 59
-    .end local v3           #rawJson:Ljava/lang/String;
+    .end local v3    # "rawJson":Ljava/lang/String;
     invoke-virtual {v3}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
 
     move-result-object v3
@@ -662,13 +655,13 @@
     move-result-object v3
 
     .line 61
-    .local v3, title:Ljava/lang/CharSequence;
+    .local v3, "title":Ljava/lang/CharSequence;
     :try_start_0
     invoke-virtual {p1}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object p1
 
-    .end local p1
+    .end local p1    # "intent":Landroid/content/Intent;
     const-string v7, "title"
 
     invoke-virtual {p1, v7}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -677,13 +670,13 @@
 
     move-result-object p1
 
-    .end local v3           #title:Ljava/lang/CharSequence;
-    .local p1, title:Ljava/lang/CharSequence;
+    .end local v3    # "title":Ljava/lang/CharSequence;
+    .local p1, "title":Ljava/lang/CharSequence;
     move-object v7, p1
 
     .line 66
-    .end local p1           #title:Ljava/lang/CharSequence;
-    .local v7, title:Ljava/lang/CharSequence;
+    .end local p1    # "title":Ljava/lang/CharSequence;
+    .local v7, "title":Ljava/lang/CharSequence;
     :goto_1
     new-instance v3, Landroid/app/Notification;
 
@@ -698,7 +691,7 @@
     invoke-direct {v3, p1, v6, v8, v9}, Landroid/app/Notification;-><init>(ILjava/lang/CharSequence;J)V
 
     .line 68
-    .local v3, notification:Landroid/app/Notification;
+    .local v3, "notification":Landroid/app/Notification;
     iget p1, v3, Landroid/app/Notification;->flags:I
 
     or-int/lit8 p1, p1, 0x1f
@@ -747,13 +740,13 @@
     move-result-object p1
 
     .line 81
-    .local p1, packageName:Ljava/lang/String;
+    .local p1, "packageName":Ljava/lang/String;
     const-string v0, "PushNotifier"
 
-    .end local v0           #appContext:Landroid/content/Context;
+    .end local v0    # "appContext":Landroid/content/Context;
     new-instance v1, Ljava/lang/StringBuilder;
 
-    .end local v1           #applicationInfo:Landroid/content/pm/ApplicationInfo;
+    .end local v1    # "applicationInfo":Landroid/content/pm/ApplicationInfo;
     const-string v8, "MPN:"
 
     invoke-direct {v1, v8}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
@@ -774,25 +767,25 @@
     move-result-object p1
 
     .line 84
-    .local p1, launchIntent:Landroid/content/Intent;
+    .local p1, "launchIntent":Landroid/content/Intent;
     invoke-virtual {p1}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
 
     move-result-object p1
 
-    .end local p1           #launchIntent:Landroid/content/Intent;
+    .end local p1    # "launchIntent":Landroid/content/Intent;
     invoke-virtual {p1}, Landroid/content/ComponentName;->getClassName()Ljava/lang/String;
 
     move-result-object p1
 
     .line 85
-    .local p1, launchClassName:Ljava/lang/String;
+    .local p1, "launchClassName":Ljava/lang/String;
     const-string v0, "PushNotifier"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     const-string v5, "LCN:"
 
-    .end local v5           #packageManager:Landroid/content/pm/PackageManager;
+    .end local v5    # "packageManager":Landroid/content/pm/PackageManager;
     invoke-direct {v1, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -815,19 +808,19 @@
     move-result-object p1
 
     .line 88
-    .end local p1           #launchClassName:Ljava/lang/String;
+    .end local p1    # "launchClassName":Ljava/lang/String;
     invoke-direct {v0, p0, p1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
     .line 96
-    .local v0, notificationIntent:Landroid/content/Intent;
+    .local v0, "notificationIntent":Landroid/content/Intent;
     const-string p1, "bufGcm"
 
     invoke-virtual {v0, p1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 99
-    const/high16 p1, 0x2400
+    const/high16 p1, 0x24000000
 
     invoke-virtual {v0, p1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
@@ -835,7 +828,7 @@
     const/4 p1, 0x0
 
     .line 101
-    const/high16 v1, 0x800
+    const/high16 v1, 0x8000000
 
     .line 100
     invoke-static {p0, p1, v0, v1}, Landroid/app/PendingIntent;->getActivity(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
@@ -843,13 +836,13 @@
     move-result-object p1
 
     .line 102
-    .local p1, pendingIntent:Landroid/app/PendingIntent;
+    .local p1, "pendingIntent":Landroid/app/PendingIntent;
     invoke-virtual {v3, p0, v7, v6, p1}, Landroid/app/Notification;->setLatestEventInfo(Landroid/content/Context;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Landroid/app/PendingIntent;)V
 
     .line 103
     iget p0, v3, Landroid/app/Notification;->flags:I
 
-    .end local p0
+    .end local p0    # "context":Landroid/content/Context;
     or-int/lit8 p0, p0, 0x10
 
     iput p0, v3, Landroid/app/Notification;->flags:I
@@ -864,7 +857,7 @@
 
     const-string p1, "release lock"
 
-    .end local p1           #pendingIntent:Landroid/app/PendingIntent;
+    .end local p1    # "pendingIntent":Landroid/app/PendingIntent;
     invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 107
@@ -873,17 +866,17 @@
     goto/16 :goto_0
 
     .line 62
-    .end local v7           #title:Ljava/lang/CharSequence;
-    .local v0, appContext:Landroid/content/Context;
-    .restart local v1       #applicationInfo:Landroid/content/pm/ApplicationInfo;
-    .local v3, title:Ljava/lang/CharSequence;
-    .restart local v5       #packageManager:Landroid/content/pm/PackageManager;
-    .restart local p0
+    .end local v7    # "title":Ljava/lang/CharSequence;
+    .local v0, "appContext":Landroid/content/Context;
+    .restart local v1    # "applicationInfo":Landroid/content/pm/ApplicationInfo;
+    .local v3, "title":Ljava/lang/CharSequence;
+    .restart local v5    # "packageManager":Landroid/content/pm/PackageManager;
+    .restart local p0    # "context":Landroid/content/Context;
     :catch_0
     move-exception p1
 
     .line 63
-    .local p1, e:Ljava/lang/Exception;
+    .local p1, "e":Ljava/lang/Exception;
     const-string v7, "PushNotifier"
 
     const-string v8, "Message parse failed."
@@ -895,21 +888,21 @@
 
     move-object v7, v3
 
-    .end local v3           #title:Ljava/lang/CharSequence;
-    .restart local v7       #title:Ljava/lang/CharSequence;
+    .end local v3    # "title":Ljava/lang/CharSequence;
+    .restart local v7    # "title":Ljava/lang/CharSequence;
     goto/16 :goto_1
 
     .line 90
-    .end local v0           #appContext:Landroid/content/Context;
-    .end local v1           #applicationInfo:Landroid/content/pm/ApplicationInfo;
-    .end local v5           #packageManager:Landroid/content/pm/PackageManager;
-    .end local p1           #e:Ljava/lang/Exception;
-    .local v3, notification:Landroid/app/Notification;
+    .end local v0    # "appContext":Landroid/content/Context;
+    .end local v1    # "applicationInfo":Landroid/content/pm/ApplicationInfo;
+    .end local v5    # "packageManager":Landroid/content/pm/PackageManager;
+    .end local p1    # "e":Ljava/lang/Exception;
+    .local v3, "notification":Landroid/app/Notification;
     :catch_1
     move-exception p0
 
     .line 91
-    .local p0, e:Ljava/lang/Exception;
+    .local p0, "e":Ljava/lang/Exception;
     const-string p1, "PushNotifier"
 
     const-string v0, "Failed to locate the air main intent."
@@ -924,8 +917,8 @@
 
 .method public static onGCMRegistered(Landroid/content/Context;Ljava/lang/String;)V
     .locals 3
-    .parameter "context"
-    .parameter "registrationId"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "registrationId"    # Ljava/lang/String;
 
     .prologue
     .line 116
@@ -958,8 +951,8 @@
 
 .method public static onGCMUnregistered(Landroid/content/Context;Ljava/lang/String;)V
     .locals 3
-    .parameter "context"
-    .parameter "registrationId"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "registrationId"    # Ljava/lang/String;
 
     .prologue
     .line 121
@@ -992,8 +985,8 @@
 
 .method private static setGCMRegisteredOnServer(Lcom/adobe/fre/FREContext;Z)Z
     .locals 1
-    .parameter "context"
-    .parameter "isRegistered"
+    .param p0, "context"    # Lcom/adobe/fre/FREContext;
+    .param p1, "isRegistered"    # Z
 
     .prologue
     .line 142
@@ -1029,7 +1022,7 @@
 
 .method private static unregisterGCM(Lcom/adobe/fre/FREContext;)Z
     .locals 1
-    .parameter "context"
+    .param p0, "context"    # Lcom/adobe/fre/FREContext;
 
     .prologue
     .line 150

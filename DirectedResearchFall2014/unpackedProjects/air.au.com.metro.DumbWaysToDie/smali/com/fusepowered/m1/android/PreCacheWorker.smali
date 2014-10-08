@@ -20,9 +20,9 @@
 # direct methods
 .method private constructor <init>([Lcom/fusepowered/m1/android/DTOCachedVideo;Landroid/content/Context;Ljava/lang/String;)V
     .locals 1
-    .parameter "cachedVideos"
-    .parameter "context"
-    .parameter "noVideosToCacheURL"
+    .param p1, "cachedVideos"    # [Lcom/fusepowered/m1/android/DTOCachedVideo;
+    .param p2, "context"    # Landroid/content/Context;
+    .param p3, "noVideosToCacheURL"    # Ljava/lang/String;
 
     .prologue
     .line 43
@@ -52,7 +52,7 @@
 
 .method static synthetic access$000(Lcom/fusepowered/m1/android/PreCacheWorker;)Landroid/content/Context;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/fusepowered/m1/android/PreCacheWorker;
 
     .prologue
     .line 16
@@ -63,8 +63,8 @@
 
 .method static synthetic access$102(Lcom/fusepowered/m1/android/PreCacheWorker;Z)Z
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
+    .param p0, "x0"    # Lcom/fusepowered/m1/android/PreCacheWorker;
+    .param p1, "x1"    # Z
 
     .prologue
     .line 16
@@ -75,8 +75,8 @@
 
 .method private handleContent(Lcom/fusepowered/m1/android/DTOCachedVideo;Lorg/apache/http/HttpEntity;)V
     .locals 3
-    .parameter "cachedVideo"
-    .parameter "httpEntity"
+    .param p1, "cachedVideo"    # Lcom/fusepowered/m1/android/DTOCachedVideo;
+    .param p2, "httpEntity"    # Lorg/apache/http/HttpEntity;
 
     .prologue
     .line 97
@@ -85,7 +85,7 @@
     move-result-object v1
 
     .line 98
-    .local v1, httpHeader:Lorg/apache/http/Header;
+    .local v1, "httpHeader":Lorg/apache/http/Header;
     if-eqz v1, :cond_0
 
     .line 99
@@ -94,7 +94,7 @@
     move-result-object v0
 
     .line 100
-    .local v0, contentType:Ljava/lang/String;
+    .local v0, "contentType":Ljava/lang/String;
     if-eqz v0, :cond_1
 
     const-string v2, "application/json"
@@ -109,13 +109,13 @@
     invoke-direct {p0, p1, p2}, Lcom/fusepowered/m1/android/PreCacheWorker;->handleJson(Lcom/fusepowered/m1/android/DTOCachedVideo;Lorg/apache/http/HttpEntity;)V
 
     .line 107
-    .end local v0           #contentType:Ljava/lang/String;
+    .end local v0    # "contentType":Ljava/lang/String;
     :cond_0
     :goto_0
     return-void
 
     .line 103
-    .restart local v0       #contentType:Ljava/lang/String;
+    .restart local v0    # "contentType":Ljava/lang/String;
     :cond_1
     if-eqz v0, :cond_0
 
@@ -135,8 +135,8 @@
 
 .method private handleJson(Lcom/fusepowered/m1/android/DTOCachedVideo;Lorg/apache/http/HttpEntity;)V
     .locals 9
-    .parameter "cachedVideo"
-    .parameter "httpEntity"
+    .param p1, "cachedVideo"    # Lcom/fusepowered/m1/android/DTOCachedVideo;
+    .param p2, "httpEntity"    # Lorg/apache/http/HttpEntity;
 
     .prologue
     const/4 v8, 0x1
@@ -147,7 +147,7 @@
     const/4 v3, 0x0
 
     .line 115
-    .local v3, videoAd:Lcom/fusepowered/m1/android/VideoAd;
+    .local v3, "videoAd":Lcom/fusepowered/m1/android/VideoAd;
     :try_start_0
     invoke-interface {p2}, Lorg/apache/http/HttpEntity;->getContent()Ljava/io/InputStream;
 
@@ -158,7 +158,7 @@
     move-result-object v2
 
     .line 117
-    .local v2, json:Ljava/lang/String;
+    .local v2, "json":Ljava/lang/String;
     invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v5
@@ -173,13 +173,13 @@
     .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .end local v3           #videoAd:Lcom/fusepowered/m1/android/VideoAd;
-    .local v4, videoAd:Lcom/fusepowered/m1/android/VideoAd;
+    .end local v3    # "videoAd":Lcom/fusepowered/m1/android/VideoAd;
+    .local v4, "videoAd":Lcom/fusepowered/m1/android/VideoAd;
     move-object v3, v4
 
     .line 131
-    .end local v4           #videoAd:Lcom/fusepowered/m1/android/VideoAd;
-    .restart local v3       #videoAd:Lcom/fusepowered/m1/android/VideoAd;
+    .end local v4    # "videoAd":Lcom/fusepowered/m1/android/VideoAd;
+    .restart local v3    # "videoAd":Lcom/fusepowered/m1/android/VideoAd;
     :cond_0
     if-eqz v3, :cond_1
 
@@ -216,7 +216,7 @@
     .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_2
 
     .line 168
-    .end local v2           #json:Ljava/lang/String;
+    .end local v2    # "json":Ljava/lang/String;
     :cond_1
     :goto_0
     return-void
@@ -228,7 +228,7 @@
     move-object v1, v5
 
     .line 120
-    .local v1, e1:Ljava/lang/IllegalStateException;
+    .local v1, "e1":Ljava/lang/IllegalStateException;
     invoke-virtual {v1}, Ljava/lang/IllegalStateException;->printStackTrace()V
 
     .line 121
@@ -239,14 +239,14 @@
     goto :goto_0
 
     .line 124
-    .end local v1           #e1:Ljava/lang/IllegalStateException;
+    .end local v1    # "e1":Ljava/lang/IllegalStateException;
     :catch_1
     move-exception v5
 
     move-object v1, v5
 
     .line 125
-    .local v1, e1:Ljava/io/IOException;
+    .local v1, "e1":Ljava/io/IOException;
     invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
 
     .line 126
@@ -257,8 +257,8 @@
     goto :goto_0
 
     .line 159
-    .end local v1           #e1:Ljava/io/IOException;
-    .restart local v2       #json:Ljava/lang/String;
+    .end local v1    # "e1":Ljava/io/IOException;
+    .restart local v2    # "json":Ljava/lang/String;
     :cond_2
     :try_start_2
     iget-object v5, p1, Lcom/fusepowered/m1/android/DTOCachedVideo;->preCacheStartURL:Ljava/lang/String;
@@ -281,7 +281,7 @@
     move-object v0, v5
 
     .line 163
-    .local v0, e:Ljava/lang/InterruptedException;
+    .local v0, "e":Ljava/lang/InterruptedException;
     invoke-virtual {v0}, Ljava/lang/InterruptedException;->printStackTrace()V
 
     .line 164
@@ -304,8 +304,8 @@
 
 .method private handleVideoFile(Lcom/fusepowered/m1/android/DTOCachedVideo;Lorg/apache/http/HttpEntity;)V
     .locals 3
-    .parameter "cachedVideo"
-    .parameter "httpEntity"
+    .param p1, "cachedVideo"    # Lcom/fusepowered/m1/android/DTOCachedVideo;
+    .param p2, "httpEntity"    # Lorg/apache/http/HttpEntity;
 
     .prologue
     .line 172
@@ -374,9 +374,9 @@
 
 .method static declared-synchronized preCacheVideos([Lcom/fusepowered/m1/android/DTOCachedVideo;Landroid/content/Context;Ljava/lang/String;)V
     .locals 3
-    .parameter "cachedVideos"
-    .parameter "context"
-    .parameter "noVideosToCacheURL"
+    .param p0, "cachedVideos"    # [Lcom/fusepowered/m1/android/DTOCachedVideo;
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "noVideosToCacheURL"    # Ljava/lang/String;
 
     .prologue
     .line 34
@@ -400,13 +400,13 @@
     invoke-direct {v0, p0, p1, p2}, Lcom/fusepowered/m1/android/PreCacheWorker;-><init>([Lcom/fusepowered/m1/android/DTOCachedVideo;Landroid/content/Context;Ljava/lang/String;)V
 
     .line 38
-    .local v0, preCacheWorker:Lcom/fusepowered/m1/android/PreCacheWorker;
+    .local v0, "preCacheWorker":Lcom/fusepowered/m1/android/PreCacheWorker;
     invoke-virtual {v0}, Lcom/fusepowered/m1/android/PreCacheWorker;->start()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 40
-    .end local v0           #preCacheWorker:Lcom/fusepowered/m1/android/PreCacheWorker;
+    .end local v0    # "preCacheWorker":Lcom/fusepowered/m1/android/PreCacheWorker;
     :cond_0
     monitor-exit v1
 
@@ -440,13 +440,13 @@
     .line 55
     iget-object v0, p0, Lcom/fusepowered/m1/android/PreCacheWorker;->cachedVideos:[Lcom/fusepowered/m1/android/DTOCachedVideo;
 
-    .local v0, arr$:[Lcom/fusepowered/m1/android/DTOCachedVideo;
+    .local v0, "arr$":[Lcom/fusepowered/m1/android/DTOCachedVideo;
     array-length v7, v0
 
-    .local v7, len$:I
+    .local v7, "len$":I
     const/4 v6, 0x0
 
-    .local v6, i$:I
+    .local v6, "i$":I
     :goto_0
     if-ge v6, v7, :cond_4
 
@@ -455,14 +455,14 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 57
-    .local v1, cachedVideo:Lcom/fusepowered/m1/android/DTOCachedVideo;
+    .local v1, "cachedVideo":Lcom/fusepowered/m1/android/DTOCachedVideo;
     :try_start_1
     new-instance v4, Lcom/fusepowered/m1/android/HttpGetRequest;
 
     invoke-direct {v4}, Lcom/fusepowered/m1/android/HttpGetRequest;-><init>()V
 
     .line 58
-    .local v4, httpGetRequest:Lcom/fusepowered/m1/android/HttpGetRequest;
+    .local v4, "httpGetRequest":Lcom/fusepowered/m1/android/HttpGetRequest;
     iget-object v8, v1, Lcom/fusepowered/m1/android/DTOCachedVideo;->url:Ljava/lang/String;
 
     invoke-virtual {v4, v8}, Lcom/fusepowered/m1/android/HttpGetRequest;->get(Ljava/lang/String;)Lorg/apache/http/HttpResponse;
@@ -470,7 +470,7 @@
     move-result-object v5
 
     .line 59
-    .local v5, httpResponse:Lorg/apache/http/HttpResponse;
+    .local v5, "httpResponse":Lorg/apache/http/HttpResponse;
     if-nez v5, :cond_0
 
     .line 60
@@ -479,26 +479,26 @@
     invoke-static {v8}, Lcom/fusepowered/m1/android/MMSDK$Log;->d(Ljava/lang/String;)V
 
     .line 55
-    .end local v4           #httpGetRequest:Lcom/fusepowered/m1/android/HttpGetRequest;
-    .end local v5           #httpResponse:Lorg/apache/http/HttpResponse;
+    .end local v4    # "httpGetRequest":Lcom/fusepowered/m1/android/HttpGetRequest;
+    .end local v5    # "httpResponse":Lorg/apache/http/HttpResponse;
     :goto_1
     add-int/lit8 v6, v6, 0x1
 
     goto :goto_0
 
     .line 64
-    .restart local v4       #httpGetRequest:Lcom/fusepowered/m1/android/HttpGetRequest;
-    .restart local v5       #httpResponse:Lorg/apache/http/HttpResponse;
+    .restart local v4    # "httpGetRequest":Lcom/fusepowered/m1/android/HttpGetRequest;
+    .restart local v5    # "httpResponse":Lorg/apache/http/HttpResponse;
     :cond_0
     invoke-interface {v5}, Lorg/apache/http/HttpResponse;->getEntity()Lorg/apache/http/HttpEntity;
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     move-result-object v3
 
     .line 71
-    .local v3, httpEntity:Lorg/apache/http/HttpEntity;
+    .local v3, "httpEntity":Lorg/apache/http/HttpEntity;
     if-nez v3, :cond_2
 
     .line 72
@@ -512,13 +512,13 @@
     goto :goto_1
 
     .line 85
-    .end local v0           #arr$:[Lcom/fusepowered/m1/android/DTOCachedVideo;
-    .end local v1           #cachedVideo:Lcom/fusepowered/m1/android/DTOCachedVideo;
-    .end local v3           #httpEntity:Lorg/apache/http/HttpEntity;
-    .end local v4           #httpGetRequest:Lcom/fusepowered/m1/android/HttpGetRequest;
-    .end local v5           #httpResponse:Lorg/apache/http/HttpResponse;
-    .end local v6           #i$:I
-    .end local v7           #len$:I
+    .end local v0    # "arr$":[Lcom/fusepowered/m1/android/DTOCachedVideo;
+    .end local v1    # "cachedVideo":Lcom/fusepowered/m1/android/DTOCachedVideo;
+    .end local v3    # "httpEntity":Lorg/apache/http/HttpEntity;
+    .end local v4    # "httpGetRequest":Lcom/fusepowered/m1/android/HttpGetRequest;
+    .end local v5    # "httpResponse":Lorg/apache/http/HttpResponse;
+    .end local v6    # "i$":I
+    .end local v7    # "len$":I
     :catchall_0
     move-exception v8
 
@@ -577,17 +577,17 @@
     throw v8
 
     .line 65
-    .restart local v0       #arr$:[Lcom/fusepowered/m1/android/DTOCachedVideo;
-    .restart local v1       #cachedVideo:Lcom/fusepowered/m1/android/DTOCachedVideo;
-    .restart local v6       #i$:I
-    .restart local v7       #len$:I
+    .restart local v0    # "arr$":[Lcom/fusepowered/m1/android/DTOCachedVideo;
+    .restart local v1    # "cachedVideo":Lcom/fusepowered/m1/android/DTOCachedVideo;
+    .restart local v6    # "i$":I
+    .restart local v7    # "len$":I
     :catch_0
     move-exception v8
 
     move-object v2, v8
 
     .line 66
-    .local v2, e:Ljava/lang/Exception;
+    .local v2, "e":Ljava/lang/Exception;
     :try_start_6
     const-string v8, "Pre cache worker HTTP error: %s"
 
@@ -608,10 +608,10 @@
     goto :goto_1
 
     .line 76
-    .end local v2           #e:Ljava/lang/Exception;
-    .restart local v3       #httpEntity:Lorg/apache/http/HttpEntity;
-    .restart local v4       #httpGetRequest:Lcom/fusepowered/m1/android/HttpGetRequest;
-    .restart local v5       #httpResponse:Lorg/apache/http/HttpResponse;
+    .end local v2    # "e":Ljava/lang/Exception;
+    .restart local v3    # "httpEntity":Lorg/apache/http/HttpEntity;
+    .restart local v4    # "httpGetRequest":Lcom/fusepowered/m1/android/HttpGetRequest;
+    .restart local v5    # "httpResponse":Lorg/apache/http/HttpResponse;
     :cond_2
     invoke-interface {v3}, Lorg/apache/http/HttpEntity;->getContentLength()J
 
@@ -639,13 +639,13 @@
     goto :goto_1
 
     .line 85
-    .end local v0           #arr$:[Lcom/fusepowered/m1/android/DTOCachedVideo;
-    .end local v1           #cachedVideo:Lcom/fusepowered/m1/android/DTOCachedVideo;
-    .end local v3           #httpEntity:Lorg/apache/http/HttpEntity;
-    .end local v4           #httpGetRequest:Lcom/fusepowered/m1/android/HttpGetRequest;
-    .end local v5           #httpResponse:Lorg/apache/http/HttpResponse;
-    .end local v6           #i$:I
-    .end local v7           #len$:I
+    .end local v0    # "arr$":[Lcom/fusepowered/m1/android/DTOCachedVideo;
+    .end local v1    # "cachedVideo":Lcom/fusepowered/m1/android/DTOCachedVideo;
+    .end local v3    # "httpEntity":Lorg/apache/http/HttpEntity;
+    .end local v4    # "httpGetRequest":Lcom/fusepowered/m1/android/HttpGetRequest;
+    .end local v5    # "httpResponse":Lorg/apache/http/HttpResponse;
+    .end local v6    # "i$":I
+    .end local v7    # "len$":I
     :cond_4
     :try_start_7
     const-class v8, Lcom/fusepowered/m1/android/PreCacheWorker;

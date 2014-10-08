@@ -27,7 +27,7 @@
 
 .method static executeUrl(Ljava/lang/String;)V
     .locals 1
-    .parameter "url"
+    .param p0, "url"    # Ljava/lang/String;
 
     .prologue
     .line 40

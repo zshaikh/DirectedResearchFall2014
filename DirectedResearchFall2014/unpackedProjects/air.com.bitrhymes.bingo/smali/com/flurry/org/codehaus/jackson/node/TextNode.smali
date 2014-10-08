@@ -4,7 +4,7 @@
 
 
 # static fields
-.field static final EMPTY_STRING_NODE:Lcom/flurry/org/codehaus/jackson/node/TextNode; = null
+.field static final EMPTY_STRING_NODE:Lcom/flurry/org/codehaus/jackson/node/TextNode;
 
 .field static final INT_SPACE:I = 0x20
 
@@ -32,7 +32,7 @@
 
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 0
-    .parameter "v"
+    .param p1, "v"    # Ljava/lang/String;
 
     .prologue
     .line 23
@@ -45,8 +45,8 @@
 
 .method protected static appendQuoted(Ljava/lang/StringBuilder;Ljava/lang/String;)V
     .locals 1
-    .parameter "sb"
-    .parameter "content"
+    .param p0, "sb"    # Ljava/lang/StringBuilder;
+    .param p1, "content"    # Ljava/lang/String;
 
     .prologue
     const/16 v0, 0x22
@@ -66,7 +66,7 @@
 
 .method public static valueOf(Ljava/lang/String;)Lcom/flurry/org/codehaus/jackson/node/TextNode;
     .locals 1
-    .parameter "v"
+    .param p0, "v"    # Ljava/lang/String;
 
     .prologue
     .line 36
@@ -126,9 +126,9 @@
 
 .method protected _reportInvalidBase64(Lcom/flurry/org/codehaus/jackson/Base64Variant;CI)V
     .locals 1
-    .parameter "b64variant"
-    .parameter "ch"
-    .parameter "bindex"
+    .param p1, "b64variant"    # Lcom/flurry/org/codehaus/jackson/Base64Variant;
+    .param p2, "ch"    # C
+    .param p3, "bindex"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lcom/flurry/org/codehaus/jackson/JsonParseException;
@@ -147,10 +147,10 @@
 
 .method protected _reportInvalidBase64(Lcom/flurry/org/codehaus/jackson/Base64Variant;CILjava/lang/String;)V
     .locals 4
-    .parameter "b64variant"
-    .parameter "ch"
-    .parameter "bindex"
-    .parameter "msg"
+    .param p1, "b64variant"    # Lcom/flurry/org/codehaus/jackson/Base64Variant;
+    .param p2, "ch"    # C
+    .param p3, "bindex"    # I
+    .param p4, "msg"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lcom/flurry/org/codehaus/jackson/JsonParseException;
@@ -207,7 +207,7 @@
     move-result-object v0
 
     .line 288
-    .local v0, base:Ljava/lang/String;
+    .local v0, "base":Ljava/lang/String;
     :goto_0
     if-eqz p4, :cond_0
 
@@ -245,7 +245,7 @@
     throw v1
 
     .line 280
-    .end local v0           #base:Ljava/lang/String;
+    .end local v0    # "base":Ljava/lang/String;
     :cond_1
     invoke-virtual {p1, p2}, Lcom/flurry/org/codehaus/jackson/Base64Variant;->usesPaddingChar(C)Z
 
@@ -294,11 +294,11 @@
 
     move-result-object v0
 
-    .restart local v0       #base:Ljava/lang/String;
+    .restart local v0    # "base":Ljava/lang/String;
     goto :goto_0
 
     .line 282
-    .end local v0           #base:Ljava/lang/String;
+    .end local v0    # "base":Ljava/lang/String;
     :cond_2
     invoke-static {p2}, Ljava/lang/Character;->isDefined(C)Z
 
@@ -342,11 +342,11 @@
 
     move-result-object v0
 
-    .restart local v0       #base:Ljava/lang/String;
+    .restart local v0    # "base":Ljava/lang/String;
     goto :goto_0
 
     .line 286
-    .end local v0           #base:Ljava/lang/String;
+    .end local v0    # "base":Ljava/lang/String;
     :cond_4
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -386,13 +386,13 @@
 
     move-result-object v0
 
-    .restart local v0       #base:Ljava/lang/String;
+    .restart local v0    # "base":Ljava/lang/String;
     goto/16 :goto_0
 .end method
 
 .method public asBoolean(Z)Z
     .locals 2
-    .parameter "defaultValue"
+    .param p1, "defaultValue"    # Z
 
     .prologue
     .line 178
@@ -430,7 +430,7 @@
 
 .method public asDouble(D)D
     .locals 2
-    .parameter "defaultValue"
+    .param p1, "defaultValue"    # D
 
     .prologue
     .line 198
@@ -445,7 +445,7 @@
 
 .method public asInt(I)I
     .locals 1
-    .parameter "defaultValue"
+    .param p1, "defaultValue"    # I
 
     .prologue
     .line 188
@@ -460,7 +460,7 @@
 
 .method public asLong(J)J
     .locals 2
-    .parameter "defaultValue"
+    .param p1, "defaultValue"    # J
 
     .prologue
     .line 193
@@ -495,7 +495,7 @@
 
 .method public equals(Ljava/lang/Object;)Z
     .locals 3
-    .parameter "o"
+    .param p1, "o"    # Ljava/lang/Object;
 
     .prologue
     const/4 v2, 0x0
@@ -506,12 +506,12 @@
     const/4 v0, 0x1
 
     .line 232
-    .end local p1
+    .end local p1    # "o":Ljava/lang/Object;
     :goto_0
     return v0
 
     .line 228
-    .restart local p1
+    .restart local p1    # "o":Ljava/lang/Object;
     :cond_0
     if-nez p1, :cond_1
 
@@ -540,7 +540,7 @@
     :cond_2
     check-cast p1, Lcom/flurry/org/codehaus/jackson/node/TextNode;
 
-    .end local p1
+    .end local p1    # "o":Ljava/lang/Object;
     iget-object v0, p1, Lcom/flurry/org/codehaus/jackson/node/TextNode;->_value:Ljava/lang/String;
 
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/node/TextNode;->_value:Ljava/lang/String;
@@ -575,7 +575,7 @@
 
 .method public getBinaryValue(Lcom/flurry/org/codehaus/jackson/Base64Variant;)[B
     .locals 12
-    .parameter "b64variant"
+    .param p1, "b64variant"    # Lcom/flurry/org/codehaus/jackson/Base64Variant;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -595,21 +595,21 @@
     invoke-direct {v1, v8}, Lcom/flurry/org/codehaus/jackson/util/ByteArrayBuilder;-><init>(I)V
 
     .line 67
-    .local v1, builder:Lcom/flurry/org/codehaus/jackson/util/ByteArrayBuilder;
+    .local v1, "builder":Lcom/flurry/org/codehaus/jackson/util/ByteArrayBuilder;
     iget-object v7, p0, Lcom/flurry/org/codehaus/jackson/node/TextNode;->_value:Ljava/lang/String;
 
     .line 68
-    .local v7, str:Ljava/lang/String;
+    .local v7, "str":Ljava/lang/String;
     const/4 v5, 0x0
 
     .line 69
-    .local v5, ptr:I
+    .local v5, "ptr":I
     invoke-virtual {v7}, Ljava/lang/String;->length()I
 
     move-result v4
 
     .line 72
-    .local v4, len:I
+    .local v4, "len":I
     :goto_0
     if-ge v5, v4, :cond_0
 
@@ -617,22 +617,22 @@
     :goto_1
     add-int/lit8 v6, v5, 0x1
 
-    .end local v5           #ptr:I
-    .local v6, ptr:I
+    .end local v5    # "ptr":I
+    .local v6, "ptr":I
     invoke-virtual {v7, v5}, Ljava/lang/String;->charAt(I)C
 
     move-result v2
 
     .line 77
-    .local v2, ch:C
+    .local v2, "ch":C
     if-lt v6, v4, :cond_1
 
     move v5, v6
 
     .line 154
-    .end local v2           #ch:C
-    .end local v6           #ptr:I
-    .restart local v5       #ptr:I
+    .end local v2    # "ch":C
+    .end local v6    # "ptr":I
+    .restart local v5    # "ptr":I
     :cond_0
     :goto_2
     invoke-virtual {v1}, Lcom/flurry/org/codehaus/jackson/util/ByteArrayBuilder;->toByteArray()[B
@@ -642,9 +642,9 @@
     return-object v8
 
     .line 80
-    .end local v5           #ptr:I
-    .restart local v2       #ch:C
-    .restart local v6       #ptr:I
+    .end local v5    # "ptr":I
+    .restart local v2    # "ch":C
+    .restart local v6    # "ptr":I
     :cond_1
     const/16 v8, 0x20
 
@@ -656,7 +656,7 @@
     move-result v0
 
     .line 82
-    .local v0, bits:I
+    .local v0, "bits":I
     if-gez v0, :cond_2
 
     .line 83
@@ -669,7 +669,7 @@
     move v3, v0
 
     .line 87
-    .local v3, decodedData:I
+    .local v3, "decodedData":I
     if-lt v6, v4, :cond_3
 
     .line 88
@@ -679,8 +679,8 @@
     :cond_3
     add-int/lit8 v5, v6, 0x1
 
-    .end local v6           #ptr:I
-    .restart local v5       #ptr:I
+    .end local v6    # "ptr":I
+    .restart local v5    # "ptr":I
     invoke-virtual {v7, v6}, Ljava/lang/String;->charAt(I)C
 
     move-result v2
@@ -730,8 +730,8 @@
     :cond_6
     add-int/lit8 v6, v5, 0x1
 
-    .end local v5           #ptr:I
-    .restart local v6       #ptr:I
+    .end local v5    # "ptr":I
+    .restart local v6    # "ptr":I
     invoke-virtual {v7, v5}, Ljava/lang/String;->charAt(I)C
 
     move-result v2
@@ -763,8 +763,8 @@
     :cond_8
     add-int/lit8 v5, v6, 0x1
 
-    .end local v6           #ptr:I
-    .restart local v5       #ptr:I
+    .end local v6    # "ptr":I
+    .restart local v5    # "ptr":I
     invoke-virtual {v7, v6}, Ljava/lang/String;->charAt(I)C
 
     move-result v2
@@ -817,8 +817,8 @@
     goto/16 :goto_0
 
     .line 129
-    .end local v5           #ptr:I
-    .restart local v6       #ptr:I
+    .end local v5    # "ptr":I
+    .restart local v6    # "ptr":I
     :cond_a
     shl-int/lit8 v8, v3, 0x6
 
@@ -843,13 +843,13 @@
     move v5, v6
 
     .line 136
-    .end local v6           #ptr:I
-    .restart local v5       #ptr:I
+    .end local v6    # "ptr":I
+    .restart local v5    # "ptr":I
     goto/16 :goto_2
 
     .line 138
-    .end local v5           #ptr:I
-    .restart local v6       #ptr:I
+    .end local v5    # "ptr":I
+    .restart local v6    # "ptr":I
     :cond_b
     invoke-virtual {p0}, Lcom/flurry/org/codehaus/jackson/node/TextNode;->_reportBase64EOF()V
 
@@ -857,8 +857,8 @@
     :cond_c
     add-int/lit8 v5, v6, 0x1
 
-    .end local v6           #ptr:I
-    .restart local v5       #ptr:I
+    .end local v6    # "ptr":I
+    .restart local v5    # "ptr":I
     invoke-virtual {v7, v6}, Ljava/lang/String;->charAt(I)C
 
     move-result v2
@@ -897,15 +897,15 @@
 
     goto/16 :goto_0
 
-    .end local v0           #bits:I
-    .end local v3           #decodedData:I
-    .end local v5           #ptr:I
-    .restart local v6       #ptr:I
+    .end local v0    # "bits":I
+    .end local v3    # "decodedData":I
+    .end local v5    # "ptr":I
+    .restart local v6    # "ptr":I
     :cond_f
     move v5, v6
 
-    .end local v6           #ptr:I
-    .restart local v5       #ptr:I
+    .end local v6    # "ptr":I
+    .restart local v5    # "ptr":I
     goto/16 :goto_1
 .end method
 
@@ -945,8 +945,8 @@
 
 .method public final serialize(Lcom/flurry/org/codehaus/jackson/JsonGenerator;Lcom/flurry/org/codehaus/jackson/map/SerializerProvider;)V
     .locals 1
-    .parameter "jg"
-    .parameter "provider"
+    .param p1, "jg"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator;
+    .param p2, "provider"    # Lcom/flurry/org/codehaus/jackson/map/SerializerProvider;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -988,7 +988,7 @@
     move-result v0
 
     .line 245
-    .local v0, len:I
+    .local v0, "len":I
     add-int/lit8 v2, v0, 0x2
 
     shr-int/lit8 v3, v0, 0x4
@@ -1001,7 +1001,7 @@
     invoke-direct {v1, v0}, Ljava/lang/StringBuilder;-><init>(I)V
 
     .line 247
-    .local v1, sb:Ljava/lang/StringBuilder;
+    .local v1, "sb":Ljava/lang/StringBuilder;
     iget-object v2, p0, Lcom/flurry/org/codehaus/jackson/node/TextNode;->_value:Ljava/lang/String;
 
     invoke-static {v1, v2}, Lcom/flurry/org/codehaus/jackson/node/TextNode;->appendQuoted(Ljava/lang/StringBuilder;Ljava/lang/String;)V

@@ -12,13 +12,13 @@
 
 .field public static final ENABLE_LOGGING:Ljava/lang/String; = "enable_logging"
 
-.field public static final FLAG_ARRAY:[Ljava/lang/String; = null
+.field public static final FLAG_ARRAY:[Ljava/lang/String;
 
 .field public static final HOST_URL:Ljava/lang/String; = "TJC_SERVICE_URL"
 
 .field public static final SHA_2_UDID:Ljava/lang/String; = "sha_2_udid"
 
-.field public static final STORE_ARRAY:[Ljava/lang/String; = null
+.field public static final STORE_ARRAY:[Ljava/lang/String;
 
 .field public static final STORE_GFAN:Ljava/lang/String; = "gfan"
 

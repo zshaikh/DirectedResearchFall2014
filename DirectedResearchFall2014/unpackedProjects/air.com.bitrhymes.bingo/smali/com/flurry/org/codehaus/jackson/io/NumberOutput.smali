@@ -67,7 +67,7 @@
     sput-wide v0, Lcom/flurry/org/codehaus/jackson/io/NumberOutput;->MAX_INT_AS_LONG:J
 
     .line 15
-    const-wide/high16 v0, -0x8000
+    const-wide/high16 v0, -0x8000000000000000L
 
     invoke-static {v0, v1}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
 
@@ -93,18 +93,18 @@
     const/4 v1, 0x0
 
     .line 24
-    .local v1, ix:I
+    .local v1, "ix":I
     const/4 v0, 0x0
 
-    .local v0, i1:I
+    .local v0, "i1":I
     move v3, v0
 
-    .end local v0           #i1:I
-    .local v3, i1:I
+    .end local v0    # "i1":I
+    .local v3, "i1":I
     move v2, v1
 
-    .end local v1           #ix:I
-    .local v2, ix:I
+    .end local v1    # "ix":I
+    .local v2, "ix":I
     :goto_0
     const/16 v0, 0xa
 
@@ -116,7 +116,7 @@
     int-to-char v0, v0
 
     .line 26
-    .local v0, f1:C
+    .local v0, "f1":C
     if-nez v3, :cond_0
 
     const/4 v1, 0x0
@@ -124,19 +124,19 @@
     move v7, v1
 
     .line 27
-    .local v7, l1:C
+    .local v7, "l1":C
     :goto_1
     const/4 v1, 0x0
 
-    .local v1, i2:I
+    .local v1, "i2":I
     move v4, v1
 
-    .end local v1           #i2:I
-    .local v4, i2:I
+    .end local v1    # "i2":I
+    .local v4, "i2":I
     move v5, v2
 
-    .end local v2           #ix:I
-    .local v5, ix:I
+    .end local v2    # "ix":I
+    .local v5, "ix":I
     :goto_2
     const/16 v1, 0xa
 
@@ -148,7 +148,7 @@
     int-to-char v1, v1
 
     .line 29
-    .local v1, f2:C
+    .local v1, "f2":C
     if-nez v3, :cond_1
 
     if-nez v4, :cond_1
@@ -158,19 +158,19 @@
     move v8, v2
 
     .line 30
-    .local v8, l2:C
+    .local v8, "l2":C
     :goto_3
     const/4 v2, 0x0
 
-    .local v2, i3:I
+    .local v2, "i3":I
     move v6, v5
 
-    .end local v5           #ix:I
-    .local v6, ix:I
+    .end local v5    # "ix":I
+    .local v6, "ix":I
     move v5, v2
 
-    .end local v2           #i3:I
-    .local v5, i3:I
+    .end local v2    # "i3":I
+    .local v5, "i3":I
     :goto_4
     const/16 v2, 0xa
 
@@ -182,7 +182,7 @@
     int-to-char v2, v2
 
     .line 33
-    .local v2, f3:C
+    .local v2, "f3":C
     sget-object v9, Lcom/flurry/org/codehaus/jackson/io/NumberOutput;->LEADING_TRIPLETS:[C
 
     aput-char v7, v9, v6
@@ -226,32 +226,32 @@
     .line 30
     add-int/lit8 v2, v5, 0x1
 
-    .end local v5           #i3:I
-    .local v2, i3:I
+    .end local v5    # "i3":I
+    .local v2, "i3":I
     move v5, v2
 
-    .end local v2           #i3:I
-    .restart local v5       #i3:I
+    .end local v2    # "i3":I
+    .restart local v5    # "i3":I
     goto :goto_4
 
-    .end local v1           #f2:C
-    .end local v4           #i2:I
-    .end local v5           #i3:I
-    .end local v6           #ix:I
-    .end local v7           #l1:C
-    .end local v8           #l2:C
-    .local v2, ix:I
+    .end local v1    # "f2":C
+    .end local v4    # "i2":I
+    .end local v5    # "i3":I
+    .end local v6    # "ix":I
+    .end local v7    # "l1":C
+    .end local v8    # "l2":C
+    .local v2, "ix":I
     :cond_0
     move v7, v0
 
     .line 26
     goto :goto_1
 
-    .end local v2           #ix:I
-    .restart local v1       #f2:C
-    .restart local v4       #i2:I
-    .local v5, ix:I
-    .restart local v7       #l1:C
+    .end local v2    # "ix":I
+    .restart local v1    # "f2":C
+    .restart local v4    # "i2":I
+    .local v5, "ix":I
+    .restart local v7    # "l1":C
     :cond_1
     move v8, v1
 
@@ -259,44 +259,44 @@
     goto :goto_3
 
     .line 27
-    .local v5, i3:I
-    .restart local v6       #ix:I
-    .restart local v8       #l2:C
+    .local v5, "i3":I
+    .restart local v6    # "ix":I
+    .restart local v8    # "l2":C
     :cond_2
     add-int/lit8 v1, v4, 0x1
 
-    .end local v4           #i2:I
-    .local v1, i2:I
+    .end local v4    # "i2":I
+    .local v1, "i2":I
     move v4, v1
 
-    .end local v1           #i2:I
-    .restart local v4       #i2:I
+    .end local v1    # "i2":I
+    .restart local v4    # "i2":I
     move v5, v6
 
-    .end local v6           #ix:I
-    .local v5, ix:I
+    .end local v6    # "ix":I
+    .local v5, "ix":I
     goto :goto_2
 
     .line 24
-    .end local v8           #l2:C
+    .end local v8    # "l2":C
     :cond_3
     add-int/lit8 v0, v3, 0x1
 
-    .end local v3           #i1:I
-    .local v0, i1:I
+    .end local v3    # "i1":I
+    .local v0, "i1":I
     move v3, v0
 
-    .end local v0           #i1:I
-    .restart local v3       #i1:I
+    .end local v0    # "i1":I
+    .restart local v3    # "i1":I
     move v2, v5
 
-    .end local v5           #ix:I
-    .restart local v2       #ix:I
+    .end local v5    # "ix":I
+    .restart local v2    # "ix":I
     goto :goto_0
 
     .line 45
-    .end local v4           #i2:I
-    .end local v7           #l1:C
+    .end local v4    # "i2":I
+    .end local v7    # "l1":C
     :cond_4
     const/16 v0, 0xfa0
 
@@ -307,8 +307,8 @@
     .line 47
     const/4 v0, 0x0
 
-    .end local v2           #ix:I
-    .local v0, i:I
+    .end local v2    # "ix":I
+    .local v0, "i":I
     :goto_5
     const/16 v1, 0xfa0
 
@@ -336,7 +336,7 @@
 
     new-array v0, v0, [Ljava/lang/String;
 
-    .end local v0           #i:I
+    .end local v0    # "i":I
     const/4 v1, 0x0
 
     const-string v2, "0"
@@ -487,18 +487,18 @@
 
 .method private static calcLongStrLength(J)I
     .locals 7
-    .parameter "posValue"
+    .param p0, "posValue"    # J
 
     .prologue
     .line 385
     const/16 v2, 0xa
 
     .line 386
-    .local v2, len:I
+    .local v2, "len":I
     sget-wide v0, Lcom/flurry/org/codehaus/jackson/io/NumberOutput;->TEN_BILLION_L:J
 
     .line 389
-    .local v0, comp:J
+    .local v0, "comp":J
     :goto_0
     cmp-long v3, p0, v0
 
@@ -533,26 +533,26 @@
 
 .method private static outputFullTriplet(I[BI)I
     .locals 4
-    .parameter "triplet"
-    .parameter "buffer"
-    .parameter "offset"
+    .param p0, "triplet"    # I
+    .param p1, "buffer"    # [B
+    .param p2, "offset"    # I
 
     .prologue
     .line 371
     shl-int/lit8 v0, p0, 0x2
 
     .line 372
-    .local v0, digitOffset:I
+    .local v0, "digitOffset":I
     add-int/lit8 v2, p2, 0x1
 
-    .end local p2
-    .local v2, offset:I
+    .end local p2    # "offset":I
+    .local v2, "offset":I
     sget-object v3, Lcom/flurry/org/codehaus/jackson/io/NumberOutput;->FULL_TRIPLETS_B:[B
 
     add-int/lit8 v1, v0, 0x1
 
-    .end local v0           #digitOffset:I
-    .local v1, digitOffset:I
+    .end local v0    # "digitOffset":I
+    .local v1, "digitOffset":I
     aget-byte v3, v3, v0
 
     aput-byte v3, p1, p2
@@ -560,14 +560,14 @@
     .line 373
     add-int/lit8 p2, v2, 0x1
 
-    .end local v2           #offset:I
-    .restart local p2
+    .end local v2    # "offset":I
+    .restart local p2    # "offset":I
     sget-object v3, Lcom/flurry/org/codehaus/jackson/io/NumberOutput;->FULL_TRIPLETS_B:[B
 
     add-int/lit8 v0, v1, 0x1
 
-    .end local v1           #digitOffset:I
-    .restart local v0       #digitOffset:I
+    .end local v1    # "digitOffset":I
+    .restart local v0    # "digitOffset":I
     aget-byte v3, v3, v1
 
     aput-byte v3, p1, v2
@@ -575,8 +575,8 @@
     .line 374
     add-int/lit8 v2, p2, 0x1
 
-    .end local p2
-    .restart local v2       #offset:I
+    .end local p2    # "offset":I
+    .restart local v2    # "offset":I
     sget-object v3, Lcom/flurry/org/codehaus/jackson/io/NumberOutput;->FULL_TRIPLETS_B:[B
 
     aget-byte v3, v3, v0
@@ -589,26 +589,26 @@
 
 .method private static outputFullTriplet(I[CI)I
     .locals 4
-    .parameter "triplet"
-    .parameter "buffer"
-    .parameter "offset"
+    .param p0, "triplet"    # I
+    .param p1, "buffer"    # [C
+    .param p2, "offset"    # I
 
     .prologue
     .line 362
     shl-int/lit8 v0, p0, 0x2
 
     .line 363
-    .local v0, digitOffset:I
+    .local v0, "digitOffset":I
     add-int/lit8 v2, p2, 0x1
 
-    .end local p2
-    .local v2, offset:I
+    .end local p2    # "offset":I
+    .local v2, "offset":I
     sget-object v3, Lcom/flurry/org/codehaus/jackson/io/NumberOutput;->FULL_TRIPLETS:[C
 
     add-int/lit8 v1, v0, 0x1
 
-    .end local v0           #digitOffset:I
-    .local v1, digitOffset:I
+    .end local v0    # "digitOffset":I
+    .local v1, "digitOffset":I
     aget-char v3, v3, v0
 
     aput-char v3, p1, p2
@@ -616,14 +616,14 @@
     .line 364
     add-int/lit8 p2, v2, 0x1
 
-    .end local v2           #offset:I
-    .restart local p2
+    .end local v2    # "offset":I
+    .restart local p2    # "offset":I
     sget-object v3, Lcom/flurry/org/codehaus/jackson/io/NumberOutput;->FULL_TRIPLETS:[C
 
     add-int/lit8 v0, v1, 0x1
 
-    .end local v1           #digitOffset:I
-    .restart local v0       #digitOffset:I
+    .end local v1    # "digitOffset":I
+    .restart local v0    # "digitOffset":I
     aget-char v3, v3, v1
 
     aput-char v3, p1, v2
@@ -631,8 +631,8 @@
     .line 365
     add-int/lit8 v2, p2, 0x1
 
-    .end local p2
-    .restart local v2       #offset:I
+    .end local p2    # "offset":I
+    .restart local v2    # "offset":I
     sget-object v3, Lcom/flurry/org/codehaus/jackson/io/NumberOutput;->FULL_TRIPLETS:[C
 
     aget-char v3, v3, v0
@@ -645,16 +645,16 @@
 
 .method public static outputInt(I[BI)I
     .locals 7
-    .parameter "value"
-    .parameter "buffer"
-    .parameter "offset"
+    .param p0, "value"    # I
+    .param p1, "buffer"    # [B
+    .param p2, "offset"    # I
 
     .prologue
     .line 131
     if-gez p0, :cond_1
 
     .line 132
-    const/high16 v5, -0x8000
+    const/high16 v5, -0x80000000
 
     if-ne p0, v5, :cond_0
 
@@ -673,8 +673,8 @@
     :cond_0
     add-int/lit8 v2, p2, 0x1
 
-    .end local p2
-    .local v2, offset:I
+    .end local p2    # "offset":I
+    .local v2, "offset":I
     const/16 v5, 0x2d
 
     aput-byte v5, p1, p2
@@ -685,8 +685,8 @@
     move p2, v2
 
     .line 139
-    .end local v2           #offset:I
-    .restart local p2
+    .end local v2    # "offset":I
+    .restart local p2    # "offset":I
     :cond_1
     sget v5, Lcom/flurry/org/codehaus/jackson/io/NumberOutput;->MILLION:I
 
@@ -705,8 +705,8 @@
     .line 142
     add-int/lit8 v2, p2, 0x1
 
-    .end local p2
-    .restart local v2       #offset:I
+    .end local p2    # "offset":I
+    .restart local v2    # "offset":I
     add-int/lit8 v5, p0, 0x30
 
     int-to-byte v5, v5
@@ -715,8 +715,8 @@
 
     move p2, v2
 
-    .end local v2           #offset:I
-    .restart local p2
+    .end local v2    # "offset":I
+    .restart local p2    # "offset":I
     :goto_1
     move v5, p2
 
@@ -736,7 +736,7 @@
     div-int/lit16 v4, p0, 0x3e8
 
     .line 148
-    .local v4, thousands:I
+    .local v4, "thousands":I
     mul-int/lit16 v5, v4, 0x3e8
 
     sub-int/2addr p0, v5
@@ -754,7 +754,7 @@
     goto :goto_1
 
     .line 154
-    .end local v4           #thousands:I
+    .end local v4    # "thousands":I
     :cond_4
     sget v5, Lcom/flurry/org/codehaus/jackson/io/NumberOutput;->BILLION:I
 
@@ -765,7 +765,7 @@
     move v0, v5
 
     .line 155
-    .local v0, hasBillions:Z
+    .local v0, "hasBillions":Z
     :goto_2
     if-eqz v0, :cond_5
 
@@ -787,8 +787,8 @@
     .line 159
     add-int/lit8 v2, p2, 0x1
 
-    .end local p2
-    .restart local v2       #offset:I
+    .end local p2    # "offset":I
+    .restart local v2    # "offset":I
     const/16 v5, 0x32
 
     aput-byte v5, p1, p2
@@ -796,20 +796,20 @@
     move p2, v2
 
     .line 164
-    .end local v2           #offset:I
-    .restart local p2
+    .end local v2    # "offset":I
+    .restart local p2    # "offset":I
     :cond_5
     :goto_3
     div-int/lit16 v1, p0, 0x3e8
 
     .line 165
-    .local v1, newValue:I
+    .local v1, "newValue":I
     mul-int/lit16 v5, v1, 0x3e8
 
     sub-int v3, p0, v5
 
     .line 166
-    .local v3, ones:I
+    .local v3, "ones":I
     move p0, v1
 
     .line 167
@@ -821,7 +821,7 @@
     sub-int v4, p0, v5
 
     .line 170
-    .restart local v4       #thousands:I
+    .restart local v4    # "thousands":I
     if-eqz v0, :cond_8
 
     .line 171
@@ -846,10 +846,10 @@
     goto :goto_0
 
     .line 154
-    .end local v0           #hasBillions:Z
-    .end local v1           #newValue:I
-    .end local v3           #ones:I
-    .end local v4           #thousands:I
+    .end local v0    # "hasBillions":Z
+    .end local v1    # "newValue":I
+    .end local v3    # "ones":I
+    .end local v4    # "thousands":I
     :cond_6
     const/4 v5, 0x0
 
@@ -858,26 +858,26 @@
     goto :goto_2
 
     .line 161
-    .restart local v0       #hasBillions:Z
+    .restart local v0    # "hasBillions":Z
     :cond_7
     add-int/lit8 v2, p2, 0x1
 
-    .end local p2
-    .restart local v2       #offset:I
+    .end local p2    # "offset":I
+    .restart local v2    # "offset":I
     const/16 v5, 0x31
 
     aput-byte v5, p1, p2
 
     move p2, v2
 
-    .end local v2           #offset:I
-    .restart local p2
+    .end local v2    # "offset":I
+    .restart local p2    # "offset":I
     goto :goto_3
 
     .line 173
-    .restart local v1       #newValue:I
-    .restart local v3       #ones:I
-    .restart local v4       #thousands:I
+    .restart local v1    # "newValue":I
+    .restart local v3    # "ones":I
+    .restart local v4    # "thousands":I
     :cond_8
     invoke-static {v1, p1, p2}, Lcom/flurry/org/codehaus/jackson/io/NumberOutput;->outputLeadingTriplet(I[BI)I
 
@@ -888,16 +888,16 @@
 
 .method public static outputInt(I[CI)I
     .locals 7
-    .parameter "value"
-    .parameter "buffer"
-    .parameter "offset"
+    .param p0, "value"    # I
+    .param p1, "buffer"    # [C
+    .param p2, "offset"    # I
 
     .prologue
     .line 70
     if-gez p0, :cond_1
 
     .line 71
-    const/high16 v5, -0x8000
+    const/high16 v5, -0x80000000
 
     if-ne p0, v5, :cond_0
 
@@ -916,8 +916,8 @@
     :cond_0
     add-int/lit8 v2, p2, 0x1
 
-    .end local p2
-    .local v2, offset:I
+    .end local p2    # "offset":I
+    .local v2, "offset":I
     const/16 v5, 0x2d
 
     aput-char v5, p1, p2
@@ -928,8 +928,8 @@
     move p2, v2
 
     .line 81
-    .end local v2           #offset:I
-    .restart local p2
+    .end local v2    # "offset":I
+    .restart local p2    # "offset":I
     :cond_1
     sget v5, Lcom/flurry/org/codehaus/jackson/io/NumberOutput;->MILLION:I
 
@@ -948,8 +948,8 @@
     .line 84
     add-int/lit8 v2, p2, 0x1
 
-    .end local p2
-    .restart local v2       #offset:I
+    .end local p2    # "offset":I
+    .restart local v2    # "offset":I
     add-int/lit8 v5, p0, 0x30
 
     int-to-char v5, v5
@@ -958,8 +958,8 @@
 
     move p2, v2
 
-    .end local v2           #offset:I
-    .restart local p2
+    .end local v2    # "offset":I
+    .restart local p2    # "offset":I
     :goto_1
     move v5, p2
 
@@ -979,7 +979,7 @@
     div-int/lit16 v4, p0, 0x3e8
 
     .line 90
-    .local v4, thousands:I
+    .local v4, "thousands":I
     mul-int/lit16 v5, v4, 0x3e8
 
     sub-int/2addr p0, v5
@@ -997,7 +997,7 @@
     goto :goto_1
 
     .line 102
-    .end local v4           #thousands:I
+    .end local v4    # "thousands":I
     :cond_4
     sget v5, Lcom/flurry/org/codehaus/jackson/io/NumberOutput;->BILLION:I
 
@@ -1008,7 +1008,7 @@
     move v0, v5
 
     .line 103
-    .local v0, hasBillions:Z
+    .local v0, "hasBillions":Z
     :goto_2
     if-eqz v0, :cond_5
 
@@ -1030,8 +1030,8 @@
     .line 107
     add-int/lit8 v2, p2, 0x1
 
-    .end local p2
-    .restart local v2       #offset:I
+    .end local p2    # "offset":I
+    .restart local v2    # "offset":I
     const/16 v5, 0x32
 
     aput-char v5, p1, p2
@@ -1039,20 +1039,20 @@
     move p2, v2
 
     .line 112
-    .end local v2           #offset:I
-    .restart local p2
+    .end local v2    # "offset":I
+    .restart local p2    # "offset":I
     :cond_5
     :goto_3
     div-int/lit16 v1, p0, 0x3e8
 
     .line 113
-    .local v1, newValue:I
+    .local v1, "newValue":I
     mul-int/lit16 v5, v1, 0x3e8
 
     sub-int v3, p0, v5
 
     .line 114
-    .local v3, ones:I
+    .local v3, "ones":I
     move p0, v1
 
     .line 115
@@ -1064,7 +1064,7 @@
     sub-int v4, p0, v5
 
     .line 119
-    .restart local v4       #thousands:I
+    .restart local v4    # "thousands":I
     if-eqz v0, :cond_8
 
     .line 120
@@ -1089,10 +1089,10 @@
     goto :goto_0
 
     .line 102
-    .end local v0           #hasBillions:Z
-    .end local v1           #newValue:I
-    .end local v3           #ones:I
-    .end local v4           #thousands:I
+    .end local v0    # "hasBillions":Z
+    .end local v1    # "newValue":I
+    .end local v3    # "ones":I
+    .end local v4    # "thousands":I
     :cond_6
     const/4 v5, 0x0
 
@@ -1101,26 +1101,26 @@
     goto :goto_2
 
     .line 109
-    .restart local v0       #hasBillions:Z
+    .restart local v0    # "hasBillions":Z
     :cond_7
     add-int/lit8 v2, p2, 0x1
 
-    .end local p2
-    .restart local v2       #offset:I
+    .end local p2    # "offset":I
+    .restart local v2    # "offset":I
     const/16 v5, 0x31
 
     aput-char v5, p1, p2
 
     move p2, v2
 
-    .end local v2           #offset:I
-    .restart local p2
+    .end local v2    # "offset":I
+    .restart local p2    # "offset":I
     goto :goto_3
 
     .line 122
-    .restart local v1       #newValue:I
-    .restart local v3       #ones:I
-    .restart local v4       #thousands:I
+    .restart local v1    # "newValue":I
+    .restart local v3    # "ones":I
+    .restart local v4    # "thousands":I
     :cond_8
     invoke-static {v1, p1, p2}, Lcom/flurry/org/codehaus/jackson/io/NumberOutput;->outputLeadingTriplet(I[CI)I
 
@@ -1131,33 +1131,33 @@
 
 .method private static outputLeadingTriplet(I[BI)I
     .locals 5
-    .parameter "triplet"
-    .parameter "buffer"
-    .parameter "offset"
+    .param p0, "triplet"    # I
+    .param p1, "buffer"    # [B
+    .param p2, "offset"    # I
 
     .prologue
     .line 346
     shl-int/lit8 v1, p0, 0x2
 
     .line 347
-    .local v1, digitOffset:I
+    .local v1, "digitOffset":I
     sget-object v4, Lcom/flurry/org/codehaus/jackson/io/NumberOutput;->LEADING_TRIPLETS:[C
 
     add-int/lit8 v2, v1, 0x1
 
-    .end local v1           #digitOffset:I
-    .local v2, digitOffset:I
+    .end local v1    # "digitOffset":I
+    .local v2, "digitOffset":I
     aget-char v0, v4, v1
 
     .line 348
-    .local v0, c:C
+    .local v0, "c":C
     if-eqz v0, :cond_0
 
     .line 349
     add-int/lit8 v3, p2, 0x1
 
-    .end local p2
-    .local v3, offset:I
+    .end local p2    # "offset":I
+    .local v3, "offset":I
     int-to-byte v4, v0
 
     aput-byte v4, p1, p2
@@ -1165,15 +1165,15 @@
     move p2, v3
 
     .line 351
-    .end local v3           #offset:I
-    .restart local p2
+    .end local v3    # "offset":I
+    .restart local p2    # "offset":I
     :cond_0
     sget-object v4, Lcom/flurry/org/codehaus/jackson/io/NumberOutput;->LEADING_TRIPLETS:[C
 
     add-int/lit8 v1, v2, 0x1
 
-    .end local v2           #digitOffset:I
-    .restart local v1       #digitOffset:I
+    .end local v2    # "digitOffset":I
+    .restart local v1    # "digitOffset":I
     aget-char v0, v4, v2
 
     .line 352
@@ -1182,8 +1182,8 @@
     .line 353
     add-int/lit8 v3, p2, 0x1
 
-    .end local p2
-    .restart local v3       #offset:I
+    .end local p2    # "offset":I
+    .restart local v3    # "offset":I
     int-to-byte v4, v0
 
     aput-byte v4, p1, p2
@@ -1191,13 +1191,13 @@
     move p2, v3
 
     .line 356
-    .end local v3           #offset:I
-    .restart local p2
+    .end local v3    # "offset":I
+    .restart local p2    # "offset":I
     :cond_1
     add-int/lit8 v3, p2, 0x1
 
-    .end local p2
-    .restart local v3       #offset:I
+    .end local p2    # "offset":I
+    .restart local v3    # "offset":I
     sget-object v4, Lcom/flurry/org/codehaus/jackson/io/NumberOutput;->LEADING_TRIPLETS:[C
 
     aget-char v4, v4, v1
@@ -1212,47 +1212,47 @@
 
 .method private static outputLeadingTriplet(I[CI)I
     .locals 5
-    .parameter "triplet"
-    .parameter "buffer"
-    .parameter "offset"
+    .param p0, "triplet"    # I
+    .param p1, "buffer"    # [C
+    .param p2, "offset"    # I
 
     .prologue
     .line 330
     shl-int/lit8 v1, p0, 0x2
 
     .line 331
-    .local v1, digitOffset:I
+    .local v1, "digitOffset":I
     sget-object v4, Lcom/flurry/org/codehaus/jackson/io/NumberOutput;->LEADING_TRIPLETS:[C
 
     add-int/lit8 v2, v1, 0x1
 
-    .end local v1           #digitOffset:I
-    .local v2, digitOffset:I
+    .end local v1    # "digitOffset":I
+    .local v2, "digitOffset":I
     aget-char v0, v4, v1
 
     .line 332
-    .local v0, c:C
+    .local v0, "c":C
     if-eqz v0, :cond_0
 
     .line 333
     add-int/lit8 v3, p2, 0x1
 
-    .end local p2
-    .local v3, offset:I
+    .end local p2    # "offset":I
+    .local v3, "offset":I
     aput-char v0, p1, p2
 
     move p2, v3
 
     .line 335
-    .end local v3           #offset:I
-    .restart local p2
+    .end local v3    # "offset":I
+    .restart local p2    # "offset":I
     :cond_0
     sget-object v4, Lcom/flurry/org/codehaus/jackson/io/NumberOutput;->LEADING_TRIPLETS:[C
 
     add-int/lit8 v1, v2, 0x1
 
-    .end local v2           #digitOffset:I
-    .restart local v1       #digitOffset:I
+    .end local v2    # "digitOffset":I
+    .restart local v1    # "digitOffset":I
     aget-char v0, v4, v2
 
     .line 336
@@ -1261,20 +1261,20 @@
     .line 337
     add-int/lit8 v3, p2, 0x1
 
-    .end local p2
-    .restart local v3       #offset:I
+    .end local p2    # "offset":I
+    .restart local v3    # "offset":I
     aput-char v0, p1, p2
 
     move p2, v3
 
     .line 340
-    .end local v3           #offset:I
-    .restart local p2
+    .end local v3    # "offset":I
+    .restart local p2    # "offset":I
     :cond_1
     add-int/lit8 v3, p2, 0x1
 
-    .end local p2
-    .restart local v3       #offset:I
+    .end local p2    # "offset":I
+    .restart local v3    # "offset":I
     sget-object v4, Lcom/flurry/org/codehaus/jackson/io/NumberOutput;->LEADING_TRIPLETS:[C
 
     aget-char v4, v4, v1
@@ -1287,9 +1287,9 @@
 
 .method public static outputLong(J[BI)I
     .locals 11
-    .parameter "value"
-    .parameter "buffer"
-    .parameter "offset"
+    .param p0, "value"    # J
+    .param p2, "buffer"    # [B
+    .param p3, "offset"    # I
 
     .prologue
     .line 239
@@ -1319,7 +1319,7 @@
 
     .line 243
     :cond_0
-    const-wide/high16 v9, -0x8000
+    const-wide/high16 v9, -0x8000000000000000L
 
     cmp-long v9, p0, v9
 
@@ -1333,22 +1333,22 @@
     move-result v2
 
     .line 246
-    .local v2, len:I
+    .local v2, "len":I
     const/4 v0, 0x0
 
-    .local v0, i:I
+    .local v0, "i":I
     move v5, p3
 
-    .end local p3
-    .local v5, offset:I
+    .end local p3    # "offset":I
+    .local v5, "offset":I
     :goto_1
     if-ge v0, v2, :cond_1
 
     .line 247
     add-int/lit8 p3, v5, 0x1
 
-    .end local v5           #offset:I
-    .restart local p3
+    .end local v5    # "offset":I
+    .restart local p3    # "offset":I
     sget-object v9, Lcom/flurry/org/codehaus/jackson/io/NumberOutput;->SMALLEST_LONG:Ljava/lang/String;
 
     invoke-virtual {v9, v0}, Ljava/lang/String;->charAt(I)C
@@ -1364,28 +1364,28 @@
 
     move v5, p3
 
-    .end local p3
-    .restart local v5       #offset:I
+    .end local p3    # "offset":I
+    .restart local v5    # "offset":I
     goto :goto_1
 
     :cond_1
     move p3, v5
 
-    .end local v5           #offset:I
-    .restart local p3
+    .end local v5    # "offset":I
+    .restart local p3    # "offset":I
     move v9, v5
 
     .line 249
     goto :goto_0
 
     .line 251
-    .end local v0           #i:I
-    .end local v2           #len:I
+    .end local v0    # "i":I
+    .end local v2    # "len":I
     :cond_2
     add-int/lit8 v5, p3, 0x1
 
-    .end local p3
-    .restart local v5       #offset:I
+    .end local p3    # "offset":I
+    .restart local v5    # "offset":I
     const/16 v9, 0x2d
 
     aput-byte v9, p2, p3
@@ -1396,13 +1396,13 @@
     move p3, v5
 
     .line 258
-    .end local v5           #offset:I
-    .restart local p3
+    .end local v5    # "offset":I
+    .restart local p3    # "offset":I
     :cond_3
     move v6, p3
 
     .line 259
-    .local v6, origOffset:I
+    .local v6, "origOffset":I
     invoke-static {p0, p1}, Lcom/flurry/org/codehaus/jackson/io/NumberOutput;->calcLongStrLength(J)I
 
     move-result v9
@@ -1413,7 +1413,7 @@
     move v7, p3
 
     .line 263
-    .local v7, ptr:I
+    .local v7, "ptr":I
     :goto_2
     sget-wide v9, Lcom/flurry/org/codehaus/jackson/io/NumberOutput;->MAX_INT_AS_LONG:J
 
@@ -1430,7 +1430,7 @@
     div-long v3, p0, v9
 
     .line 266
-    .local v3, newValue:J
+    .local v3, "newValue":J
     sget-wide v9, Lcom/flurry/org/codehaus/jackson/io/NumberOutput;->THOUSAND_L:J
 
     mul-long/2addr v9, v3
@@ -1440,7 +1440,7 @@
     long-to-int v8, v9
 
     .line 267
-    .local v8, triplet:I
+    .local v8, "triplet":I
     invoke-static {v8, p2, v7}, Lcom/flurry/org/codehaus/jackson/io/NumberOutput;->outputFullTriplet(I[BI)I
 
     .line 268
@@ -1450,10 +1450,10 @@
     goto :goto_2
 
     .line 254
-    .end local v3           #newValue:J
-    .end local v6           #origOffset:I
-    .end local v7           #ptr:I
-    .end local v8           #triplet:I
+    .end local v3    # "newValue":J
+    .end local v6    # "origOffset":I
+    .end local v7    # "ptr":I
+    .end local v8    # "triplet":I
     :cond_4
     sget-wide v9, Lcom/flurry/org/codehaus/jackson/io/NumberOutput;->MAX_INT_AS_LONG:J
 
@@ -1471,13 +1471,13 @@
     goto :goto_0
 
     .line 271
-    .restart local v6       #origOffset:I
-    .restart local v7       #ptr:I
+    .restart local v6    # "origOffset":I
+    .restart local v7    # "ptr":I
     :cond_5
     long-to-int v1, p0
 
     .line 272
-    .local v1, ivalue:I
+    .local v1, "ivalue":I
     :goto_3
     const/16 v9, 0x3e8
 
@@ -1490,13 +1490,13 @@
     div-int/lit16 v3, v1, 0x3e8
 
     .line 275
-    .local v3, newValue:I
+    .local v3, "newValue":I
     mul-int/lit16 v9, v3, 0x3e8
 
     sub-int v8, v1, v9
 
     .line 276
-    .restart local v8       #triplet:I
+    .restart local v8    # "triplet":I
     invoke-static {v8, p2, v7}, Lcom/flurry/org/codehaus/jackson/io/NumberOutput;->outputFullTriplet(I[BI)I
 
     .line 277
@@ -1506,8 +1506,8 @@
     goto :goto_3
 
     .line 279
-    .end local v3           #newValue:I
-    .end local v8           #triplet:I
+    .end local v3    # "newValue":I
+    .end local v8    # "triplet":I
     :cond_6
     invoke-static {v1, p2, v6}, Lcom/flurry/org/codehaus/jackson/io/NumberOutput;->outputLeadingTriplet(I[BI)I
 
@@ -1519,9 +1519,9 @@
 
 .method public static outputLong(J[CI)I
     .locals 10
-    .parameter "value"
-    .parameter "buffer"
-    .parameter "offset"
+    .param p0, "value"    # J
+    .param p2, "buffer"    # [C
+    .param p3, "offset"    # I
 
     .prologue
     .line 186
@@ -1551,7 +1551,7 @@
 
     .line 193
     :cond_0
-    const-wide/high16 v8, -0x8000
+    const-wide/high16 v8, -0x8000000000000000L
 
     cmp-long v8, p0, v8
 
@@ -1565,7 +1565,7 @@
     move-result v1
 
     .line 196
-    .local v1, len:I
+    .local v1, "len":I
     sget-object v8, Lcom/flurry/org/codehaus/jackson/io/NumberOutput;->SMALLEST_LONG:Ljava/lang/String;
 
     const/4 v9, 0x0
@@ -1578,12 +1578,12 @@
     goto :goto_0
 
     .line 199
-    .end local v1           #len:I
+    .end local v1    # "len":I
     :cond_1
     add-int/lit8 v4, p3, 0x1
 
-    .end local p3
-    .local v4, offset:I
+    .end local p3    # "offset":I
+    .local v4, "offset":I
     const/16 v8, 0x2d
 
     aput-char v8, p2, p3
@@ -1594,13 +1594,13 @@
     move p3, v4
 
     .line 210
-    .end local v4           #offset:I
-    .restart local p3
+    .end local v4    # "offset":I
+    .restart local p3    # "offset":I
     :cond_2
     move v5, p3
 
     .line 211
-    .local v5, origOffset:I
+    .local v5, "origOffset":I
     invoke-static {p0, p1}, Lcom/flurry/org/codehaus/jackson/io/NumberOutput;->calcLongStrLength(J)I
 
     move-result v8
@@ -1611,7 +1611,7 @@
     move v6, p3
 
     .line 215
-    .local v6, ptr:I
+    .local v6, "ptr":I
     :goto_1
     sget-wide v8, Lcom/flurry/org/codehaus/jackson/io/NumberOutput;->MAX_INT_AS_LONG:J
 
@@ -1628,7 +1628,7 @@
     div-long v2, p0, v8
 
     .line 218
-    .local v2, newValue:J
+    .local v2, "newValue":J
     sget-wide v8, Lcom/flurry/org/codehaus/jackson/io/NumberOutput;->THOUSAND_L:J
 
     mul-long/2addr v8, v2
@@ -1638,7 +1638,7 @@
     long-to-int v7, v8
 
     .line 219
-    .local v7, triplet:I
+    .local v7, "triplet":I
     invoke-static {v7, p2, v6}, Lcom/flurry/org/codehaus/jackson/io/NumberOutput;->outputFullTriplet(I[CI)I
 
     .line 220
@@ -1648,10 +1648,10 @@
     goto :goto_1
 
     .line 202
-    .end local v2           #newValue:J
-    .end local v5           #origOffset:I
-    .end local v6           #ptr:I
-    .end local v7           #triplet:I
+    .end local v2    # "newValue":J
+    .end local v5    # "origOffset":I
+    .end local v6    # "ptr":I
+    .end local v7    # "triplet":I
     :cond_3
     sget-wide v8, Lcom/flurry/org/codehaus/jackson/io/NumberOutput;->MAX_INT_AS_LONG:J
 
@@ -1669,13 +1669,13 @@
     goto :goto_0
 
     .line 223
-    .restart local v5       #origOffset:I
-    .restart local v6       #ptr:I
+    .restart local v5    # "origOffset":I
+    .restart local v6    # "ptr":I
     :cond_4
     long-to-int v0, p0
 
     .line 224
-    .local v0, ivalue:I
+    .local v0, "ivalue":I
     :goto_2
     const/16 v8, 0x3e8
 
@@ -1688,13 +1688,13 @@
     div-int/lit16 v2, v0, 0x3e8
 
     .line 227
-    .local v2, newValue:I
+    .local v2, "newValue":I
     mul-int/lit16 v8, v2, 0x3e8
 
     sub-int v7, v0, v8
 
     .line 228
-    .restart local v7       #triplet:I
+    .restart local v7    # "triplet":I
     invoke-static {v7, p2, v6}, Lcom/flurry/org/codehaus/jackson/io/NumberOutput;->outputFullTriplet(I[CI)I
 
     .line 229
@@ -1704,8 +1704,8 @@
     goto :goto_2
 
     .line 232
-    .end local v2           #newValue:I
-    .end local v7           #triplet:I
+    .end local v2    # "newValue":I
+    .end local v7    # "triplet":I
     :cond_5
     invoke-static {v0, p2, v5}, Lcom/flurry/org/codehaus/jackson/io/NumberOutput;->outputLeadingTriplet(I[CI)I
 
@@ -1717,7 +1717,7 @@
 
 .method public static toString(D)Ljava/lang/String;
     .locals 1
-    .parameter "value"
+    .param p0, "value"    # D
 
     .prologue
     .line 319
@@ -1730,7 +1730,7 @@
 
 .method public static toString(I)Ljava/lang/String;
     .locals 3
-    .parameter "value"
+    .param p0, "value"    # I
 
     .prologue
     .line 296
@@ -1761,7 +1761,7 @@
     sub-int v0, v1, v2
 
     .line 301
-    .local v0, v2:I
+    .local v0, "v2":I
     sget-object v1, Lcom/flurry/org/codehaus/jackson/io/NumberOutput;->sSmallIntStrs2:[Ljava/lang/String;
 
     array-length v1, v1
@@ -1776,7 +1776,7 @@
     goto :goto_0
 
     .line 305
-    .end local v0           #v2:I
+    .end local v0    # "v2":I
     :cond_1
     invoke-static {p0}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
@@ -1787,7 +1787,7 @@
 
 .method public static toString(J)Ljava/lang/String;
     .locals 2
-    .parameter "value"
+    .param p0, "value"    # J
 
     .prologue
     .line 310

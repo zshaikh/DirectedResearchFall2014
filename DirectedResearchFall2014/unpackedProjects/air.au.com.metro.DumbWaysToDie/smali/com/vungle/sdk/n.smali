@@ -90,9 +90,9 @@
     .locals 6
 
     .prologue
-    const/high16 v5, 0x4407
+    const/high16 v5, 0x44070000
 
-    const/high16 v4, 0x3f80
+    const/high16 v4, 0x3f800000
 
     const/4 v3, 0x1
 
@@ -191,7 +191,7 @@
     sput-boolean v1, Lcom/vungle/sdk/n;->u:Z
 
     .line 79
-    const/high16 v0, 0x4470
+    const/high16 v0, 0x44700000
 
     sput v0, Lcom/vungle/sdk/n;->v:F
 
@@ -199,7 +199,7 @@
     sput v5, Lcom/vungle/sdk/n;->w:F
 
     .line 81
-    const/high16 v0, 0x4470
+    const/high16 v0, 0x44700000
 
     sput v0, Lcom/vungle/sdk/n;->x:F
 
@@ -289,7 +289,6 @@
 
 .method public static a(I)V
     .locals 0
-    .parameter
 
     .prologue
     .line 157
@@ -301,7 +300,6 @@
 
 .method public static a(J)V
     .locals 2
-    .parameter
 
     .prologue
     .line 139
@@ -326,7 +324,6 @@
 
 .method public static a(Landroid/content/Context;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 213
@@ -342,7 +339,6 @@
 
 .method public static a(Z)V
     .locals 2
-    .parameter
 
     .prologue
     .line 194
@@ -396,7 +392,6 @@
 
 .method public static b(J)V
     .locals 0
-    .parameter
 
     .prologue
     .line 165

@@ -30,7 +30,7 @@
 # direct methods
 .method public constructor <init>(Lcom/fusepowered/m1/android/MMAdImpl;)V
     .locals 2
-    .parameter "adImpl"
+    .param p1, "adImpl"    # Lcom/fusepowered/m1/android/MMAdImpl;
 
     .prologue
     .line 345
@@ -72,7 +72,7 @@
     check-cast v0, Lcom/fusepowered/m1/android/MMAdImpl;
 
     .line 400
-    .local v0, adImpl:Lcom/fusepowered/m1/android/MMAdImpl;
+    .local v0, "adImpl":Lcom/fusepowered/m1/android/MMAdImpl;
     if-eqz v0, :cond_0
 
     .line 402
@@ -92,7 +92,7 @@
 
 .method public isActivityStartable(Landroid/net/Uri;)Z
     .locals 5
-    .parameter "uri"
+    .param p1, "uri"    # Landroid/net/Uri;
 
     .prologue
     .line 366
@@ -105,7 +105,7 @@
     check-cast v2, Lcom/fusepowered/m1/android/MMAdImpl;
 
     .line 367
-    .local v2, adImpl:Lcom/fusepowered/m1/android/MMAdImpl;
+    .local v2, "adImpl":Lcom/fusepowered/m1/android/MMAdImpl;
     if-eqz v2, :cond_0
 
     .line 369
@@ -114,7 +114,7 @@
     move-result-object v3
 
     .line 370
-    .local v3, c:Landroid/content/Context;
+    .local v3, "c":Landroid/content/Context;
     if-eqz v3, :cond_0
 
     instance-of v4, v3, Landroid/app/Activity;
@@ -129,7 +129,7 @@
     move-object v1, v0
 
     .line 373
-    .local v1, a:Landroid/app/Activity;
+    .local v1, "a":Landroid/app/Activity;
     invoke-virtual {v1}, Landroid/app/Activity;->isFinishing()Z
 
     move-result v4
@@ -140,8 +140,8 @@
     const/4 v4, 0x0
 
     .line 379
-    .end local v1           #a:Landroid/app/Activity;
-    .end local v3           #c:Landroid/content/Context;
+    .end local v1    # "a":Landroid/app/Activity;
+    .end local v3    # "c":Landroid/content/Context;
     :goto_0
     return v4
 
@@ -153,7 +153,7 @@
 
 .method public startingActivity(Landroid/net/Uri;)V
     .locals 3
-    .parameter "destinationUri"
+    .param p1, "destinationUri"    # Landroid/net/Uri;
 
     .prologue
     .line 385
@@ -195,14 +195,14 @@
     check-cast v0, Lcom/fusepowered/m1/android/MMAdImpl;
 
     .line 389
-    .local v0, adImpl:Lcom/fusepowered/m1/android/MMAdImpl;
+    .local v0, "adImpl":Lcom/fusepowered/m1/android/MMAdImpl;
     if-eqz v0, :cond_1
 
     .line 391
     invoke-static {v0}, Lcom/fusepowered/m1/android/MMSDK$Event;->overlayOpened(Lcom/fusepowered/m1/android/MMAdImpl;)V
 
     .line 394
-    .end local v0           #adImpl:Lcom/fusepowered/m1/android/MMAdImpl;
+    .end local v0    # "adImpl":Lcom/fusepowered/m1/android/MMAdImpl;
     :cond_1
     return-void
 .end method
@@ -221,7 +221,7 @@
     check-cast v0, Lcom/fusepowered/m1/android/MMAdImpl;
 
     .line 358
-    .local v0, adImpl:Lcom/fusepowered/m1/android/MMAdImpl;
+    .local v0, "adImpl":Lcom/fusepowered/m1/android/MMAdImpl;
     if-eqz v0, :cond_0
 
     .line 359

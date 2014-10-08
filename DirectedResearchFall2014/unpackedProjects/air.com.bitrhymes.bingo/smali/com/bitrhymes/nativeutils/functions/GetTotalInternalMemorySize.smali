@@ -21,8 +21,8 @@
 # virtual methods
 .method public call(Lcom/adobe/fre/FREContext;[Lcom/adobe/fre/FREObject;)Lcom/adobe/fre/FREObject;
     .locals 13
-    .parameter "arg0"
-    .parameter "arg1"
+    .param p1, "arg0"    # Lcom/adobe/fre/FREContext;
+    .param p2, "arg1"    # [Lcom/adobe/fre/FREObject;
 
     .prologue
     const-string v12, ","
@@ -31,14 +31,14 @@
     const/4 v2, 0x0
 
     .line 23
-    .local v2, deviceInfoObject:Lcom/adobe/fre/FREObject;
+    .local v2, "deviceInfoObject":Lcom/adobe/fre/FREObject;
     :try_start_0
     invoke-static {}, Landroid/os/Environment;->getDataDirectory()Ljava/io/File;
 
     move-result-object v5
 
     .line 24
-    .local v5, path:Ljava/io/File;
+    .local v5, "path":Ljava/io/File;
     new-instance v6, Landroid/os/StatFs;
 
     invoke-virtual {v5}, Ljava/io/File;->getPath()Ljava/lang/String;
@@ -48,7 +48,7 @@
     invoke-direct {v6, v9}, Landroid/os/StatFs;-><init>(Ljava/lang/String;)V
 
     .line 25
-    .local v6, stat:Landroid/os/StatFs;
+    .local v6, "stat":Landroid/os/StatFs;
     invoke-virtual {v6}, Landroid/os/StatFs;->getBlockSize()I
 
     move-result v9
@@ -56,7 +56,7 @@
     int-to-long v0, v9
 
     .line 26
-    .local v0, blockSize:J
+    .local v0, "blockSize":J
     invoke-virtual {v6}, Landroid/os/StatFs;->getBlockCount()I
 
     move-result v9
@@ -64,7 +64,7 @@
     int-to-long v7, v9
 
     .line 27
-    .local v7, totalBlocks:J
+    .local v7, "totalBlocks":J
     mul-long v9, v7, v0
 
     invoke-static {v9, v10}, Lcom/bitrhymes/nativeutils/utils/Utils;->formatSize(J)Ljava/lang/String;
@@ -72,7 +72,7 @@
     move-result-object v4
 
     .line 28
-    .local v4, memSize:Ljava/lang/String;
+    .local v4, "memSize":Ljava/lang/String;
     invoke-virtual {v4}, Ljava/lang/String;->length()I
 
     move-result v9
@@ -87,20 +87,20 @@
     move-result-object v2
 
     .line 36
-    .end local v0           #blockSize:J
-    .end local v4           #memSize:Ljava/lang/String;
-    .end local v5           #path:Ljava/io/File;
-    .end local v6           #stat:Landroid/os/StatFs;
-    .end local v7           #totalBlocks:J
+    .end local v0    # "blockSize":J
+    .end local v4    # "memSize":Ljava/lang/String;
+    .end local v5    # "path":Ljava/io/File;
+    .end local v6    # "stat":Landroid/os/StatFs;
+    .end local v7    # "totalBlocks":J
     :goto_0
     return-object v2
 
     .line 31
-    .restart local v0       #blockSize:J
-    .restart local v4       #memSize:Ljava/lang/String;
-    .restart local v5       #path:Ljava/io/File;
-    .restart local v6       #stat:Landroid/os/StatFs;
-    .restart local v7       #totalBlocks:J
+    .restart local v0    # "blockSize":J
+    .restart local v4    # "memSize":Ljava/lang/String;
+    .restart local v5    # "path":Ljava/io/File;
+    .restart local v6    # "stat":Landroid/os/StatFs;
+    .restart local v7    # "totalBlocks":J
     :cond_0
     const-string v9, ""
 
@@ -113,18 +113,18 @@
     goto :goto_0
 
     .line 32
-    .end local v0           #blockSize:J
-    .end local v4           #memSize:Ljava/lang/String;
-    .end local v5           #path:Ljava/io/File;
-    .end local v6           #stat:Landroid/os/StatFs;
-    .end local v7           #totalBlocks:J
+    .end local v0    # "blockSize":J
+    .end local v4    # "memSize":Ljava/lang/String;
+    .end local v5    # "path":Ljava/io/File;
+    .end local v6    # "stat":Landroid/os/StatFs;
+    .end local v7    # "totalBlocks":J
     :catch_0
     move-exception v9
 
     move-object v3, v9
 
     .line 33
-    .local v3, e:Lcom/adobe/fre/FREWrongThreadException;
+    .local v3, "e":Lcom/adobe/fre/FREWrongThreadException;
     invoke-virtual {v3}, Lcom/adobe/fre/FREWrongThreadException;->printStackTrace()V
 
     .line 34

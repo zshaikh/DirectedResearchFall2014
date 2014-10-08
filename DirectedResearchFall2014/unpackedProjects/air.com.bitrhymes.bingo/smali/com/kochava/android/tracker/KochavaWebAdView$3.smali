@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/kochava/android/tracker/KochavaWebAdView;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1
@@ -40,7 +39,7 @@
 # virtual methods
 .method public onCancel(Landroid/content/DialogInterface;)V
     .locals 2
-    .parameter "arg0"
+    .param p1, "arg0"    # Landroid/content/DialogInterface;
 
     .prologue
     .line 193

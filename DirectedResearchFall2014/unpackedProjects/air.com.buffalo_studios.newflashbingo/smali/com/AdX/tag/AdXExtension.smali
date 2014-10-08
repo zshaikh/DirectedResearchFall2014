@@ -21,7 +21,7 @@
 # virtual methods
 .method public createContext(Ljava/lang/String;)Lcom/adobe/fre/FREContext;
     .locals 2
-    .parameter "extId"
+    .param p1, "extId"    # Ljava/lang/String;
 
     .prologue
     .line 27

@@ -28,7 +28,6 @@
 # direct methods
 .method public constructor <init>(Ljava/lang/Class;)V
     .locals 0
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -86,7 +85,6 @@
 
 .method public a(Ljava/lang/Object;)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 46

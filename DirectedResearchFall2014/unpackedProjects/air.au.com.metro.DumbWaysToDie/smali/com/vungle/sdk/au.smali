@@ -53,10 +53,6 @@
 
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/ClassLoader;Ljava/lang/String;)V
     .locals 2
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 33
@@ -90,7 +86,6 @@
 # virtual methods
 .method public final a(Lcom/vungle/sdk/av;)V
     .locals 3
-    .parameter
 
     .prologue
     .line 41
@@ -112,7 +107,6 @@
 
 .method public final synthetic a(Ljava/lang/Object;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 24

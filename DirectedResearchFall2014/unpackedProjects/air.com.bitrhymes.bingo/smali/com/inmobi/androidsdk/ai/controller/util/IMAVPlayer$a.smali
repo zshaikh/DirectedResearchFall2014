@@ -30,7 +30,6 @@
 # direct methods
 .method public constructor <init>(Lcom/inmobi/androidsdk/ai/controller/util/IMAVPlayer;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 537
@@ -51,7 +50,6 @@
 # virtual methods
 .method public handleMessage(Landroid/os/Message;)V
     .locals 4
-    .parameter
 
     .prologue
     .line 544

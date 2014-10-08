@@ -32,11 +32,6 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/fuseapi/FuseAPI$MoPubCallBackInterceptor;[IILcom/fusepowered/activities/FuseApiBrowser;Lcom/fusepowered/util/FuseAdCallback;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 1188
@@ -95,7 +90,7 @@
 
     iget-object v3, p0, Lcom/fusepowered/fuseapi/FuseAPI$2;->val$adCallback:Lcom/fusepowered/util/FuseAdCallback;
 
-    #calls: Lcom/fusepowered/fuseapi/FuseAPI;->displayAdFromWaterfall([IILcom/fusepowered/activities/FuseApiBrowser;Lcom/fusepowered/util/FuseAdCallback;)V
+    # invokes: Lcom/fusepowered/fuseapi/FuseAPI;->displayAdFromWaterfall([IILcom/fusepowered/activities/FuseApiBrowser;Lcom/fusepowered/util/FuseAdCallback;)V
     invoke-static {v0, v1, v2, v3}, Lcom/fusepowered/fuseapi/FuseAPI;->access$000([IILcom/fusepowered/activities/FuseApiBrowser;Lcom/fusepowered/util/FuseAdCallback;)V
 
     .line 1202

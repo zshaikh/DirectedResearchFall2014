@@ -75,8 +75,6 @@
 
 .method private static RefreshAppCache(Ljava/lang/String;Ljava/lang/String;)V
     .locals 3
-    .parameter
-    .parameter
 
     .prologue
     .line 448
@@ -166,7 +164,6 @@
 
 .method private closeInputStream(Ljava/io/InputStream;)V
     .locals 0
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/Exception;
@@ -183,7 +180,6 @@
 
 .method private closeOutputStream(Ljava/io/OutputStream;)V
     .locals 0
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/Exception;
@@ -203,7 +199,6 @@
 
 .method public static deleteDir(Ljava/io/File;)Z
     .locals 5
-    .parameter
 
     .prologue
     const/4 v4, 0x0
@@ -271,7 +266,6 @@
 
 .method public static deleteUnzippedContents(Ljava/lang/String;)Z
     .locals 4
-    .parameter
 
     .prologue
     .line 153
@@ -444,7 +438,6 @@
 
 .method public static processAndroidDataPath(Ljava/lang/String;)V
     .locals 6
-    .parameter
 
     .prologue
     const-string v5, "app"
@@ -690,7 +683,6 @@
 
 .method public static setAndroidAPKPath(Ljava/lang/String;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 89
@@ -702,7 +694,6 @@
 
 .method private static setAndroidDataPath(Ljava/lang/String;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 94
@@ -714,7 +705,6 @@
 
 .method public static setAndroidPackageName(Ljava/lang/String;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 84
@@ -726,7 +716,6 @@
 
 .method private static setInitialContentName(Ljava/lang/String;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 135
@@ -740,7 +729,6 @@
 # virtual methods
 .method public addToCache(Ljava/lang/String;)Z
     .locals 2
-    .parameter
 
     .prologue
     .line 248
@@ -774,7 +762,6 @@
 
 .method public appDirectoryNameList(Ljava/lang/String;)[Ljava/lang/String;
     .locals 6
-    .parameter
 
     .prologue
     const-string v2, "assets"
@@ -917,7 +904,6 @@
 
 .method public appDirectoryTypeList(Ljava/lang/String;)[Z
     .locals 7
-    .parameter
 
     .prologue
     const-string v2, "assets"
@@ -1091,7 +1077,6 @@
 
 .method public copyFolder(Ljava/lang/String;)V
     .locals 7
-    .parameter
 
     .prologue
     const-string v2, "assets"
@@ -1322,7 +1307,6 @@
 
 .method public deleteFile(Ljava/lang/String;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 168
@@ -1339,7 +1323,6 @@
 
 .method public fileExists(Ljava/lang/String;)Z
     .locals 3
-    .parameter
 
     .prologue
     const-string v2, "assets"
@@ -1409,7 +1392,6 @@
 
 .method public getLSize(Ljava/lang/String;)J
     .locals 4
-    .parameter
 
     .prologue
     .line 236
@@ -1472,7 +1454,6 @@
 
 .method public isDirectory(Ljava/lang/String;)Z
     .locals 3
-    .parameter
 
     .prologue
     const-string v2, "assets"
@@ -1549,7 +1530,6 @@
 
 .method public procZipContents(Ljava/io/File;)V
     .locals 8
-    .parameter
 
     .prologue
     const-string v0, "assets"
@@ -1708,7 +1688,6 @@
 
 .method public readFileName(Ljava/lang/String;)Z
     .locals 10
-    .parameter
 
     .prologue
     const/4 v9, 0x1
@@ -1812,8 +1791,8 @@
 
     invoke-direct {v5, v0}, Ljava/util/zip/ZipFile;-><init>(Ljava/io/File;)V
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_1
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_4
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
     .line 277
     :try_start_1
@@ -1917,8 +1896,8 @@
 
     invoke-virtual {v1, v2, v4, v3}, Ljava/io/BufferedOutputStream;->write([BII)V
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     goto :goto_1
 
@@ -1953,8 +1932,8 @@
     .line 303
     invoke-direct {p0, v1}, Lcom/adobe/air/ApplicationFileManager;->closeOutputStream(Ljava/io/OutputStream;)V
     :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_0
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
     .line 321
     :cond_4
@@ -2026,8 +2005,8 @@
     .line 311
     invoke-virtual {v0}, Ljava/io/File;->mkdirs()Z
     :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_0
+    .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
     goto :goto_4
 

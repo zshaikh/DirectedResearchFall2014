@@ -34,7 +34,6 @@
 # direct methods
 .method constructor <init>(Lcom/facebook/NativeAppCallAttachmentStore;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1
@@ -50,8 +49,8 @@
 # virtual methods
 .method public processAttachment(Landroid/graphics/Bitmap;Ljava/io/File;)V
     .locals 3
-    .parameter "attachment"
-    .parameter "outputFile"
+    .param p1, "attachment"    # Landroid/graphics/Bitmap;
+    .param p2, "outputFile"    # Ljava/io/File;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -65,7 +64,7 @@
     invoke-direct {v0, p2}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
 
     .line 67
-    .local v0, outputStream:Ljava/io/FileOutputStream;
+    .local v0, "outputStream":Ljava/io/FileOutputStream;
     :try_start_0
     sget-object v1, Landroid/graphics/Bitmap$CompressFormat;->JPEG:Landroid/graphics/Bitmap$CompressFormat;
 
@@ -94,8 +93,6 @@
 
 .method public bridge synthetic processAttachment(Ljava/lang/Object;Ljava/io/File;)V
     .locals 0
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;

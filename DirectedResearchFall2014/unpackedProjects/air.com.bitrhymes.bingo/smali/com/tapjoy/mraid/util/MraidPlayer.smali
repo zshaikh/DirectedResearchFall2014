@@ -52,7 +52,7 @@
 
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 2
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     .line 50
@@ -127,7 +127,7 @@
     invoke-direct {v2, v3}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
     .line 227
-    .local v2, transientView:Landroid/widget/TextView;
+    .local v2, "transientView":Landroid/widget/TextView;
     sget-object v3, Lcom/tapjoy/mraid/util/MraidPlayer;->transientText:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
@@ -143,7 +143,7 @@
     invoke-direct {v0, v5, v5}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
     .line 231
-    .local v0, msgparams:Landroid/widget/RelativeLayout$LayoutParams;
+    .local v0, "msgparams":Landroid/widget/RelativeLayout$LayoutParams;
     const/16 v3, 0xd
 
     invoke-virtual {v0, v3}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
@@ -161,7 +161,7 @@
     check-cast v1, Landroid/view/ViewGroup;
 
     .line 235
-    .local v1, parent:Landroid/view/ViewGroup;
+    .local v1, "parent":Landroid/view/ViewGroup;
     iget-object v3, p0, Lcom/tapjoy/mraid/util/MraidPlayer;->transientLayout:Landroid/widget/RelativeLayout;
 
     invoke-virtual {v1, v3}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
@@ -186,13 +186,13 @@
     check-cast v0, Landroid/view/ViewGroup;
 
     .line 244
-    .local v0, parent:Landroid/view/ViewGroup;
+    .local v0, "parent":Landroid/view/ViewGroup;
     iget-object v1, p0, Lcom/tapjoy/mraid/util/MraidPlayer;->transientLayout:Landroid/widget/RelativeLayout;
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
 
     .line 246
-    .end local v0           #parent:Landroid/view/ViewGroup;
+    .end local v0    # "parent":Landroid/view/ViewGroup;
     :cond_0
     return-void
 .end method
@@ -220,14 +220,14 @@
     invoke-direct {v0, v1}, Landroid/widget/MediaController;-><init>(Landroid/content/Context;)V
 
     .line 84
-    .local v0, ctrl:Landroid/widget/MediaController;
+    .local v0, "ctrl":Landroid/widget/MediaController;
     invoke-virtual {p0, v0}, Lcom/tapjoy/mraid/util/MraidPlayer;->setMediaController(Landroid/widget/MediaController;)V
 
     .line 85
     invoke-virtual {v0, p0}, Landroid/widget/MediaController;->setAnchorView(Landroid/view/View;)V
 
     .line 88
-    .end local v0           #ctrl:Landroid/widget/MediaController;
+    .end local v0    # "ctrl":Landroid/widget/MediaController;
     :cond_0
     return-void
 .end method
@@ -321,7 +321,7 @@
 
 .method public onCompletion(Landroid/media/MediaPlayer;)V
     .locals 1
-    .parameter "mp"
+    .param p1, "mp"    # Landroid/media/MediaPlayer;
 
     .prologue
     .line 161
@@ -366,9 +366,9 @@
 
 .method public onError(Landroid/media/MediaPlayer;II)Z
     .locals 3
-    .parameter "mp"
-    .parameter "what"
-    .parameter "extra"
+    .param p1, "mp"    # Landroid/media/MediaPlayer;
+    .param p2, "what"    # I
+    .param p3, "extra"    # I
 
     .prologue
     .line 171
@@ -419,7 +419,7 @@
 
 .method public onPrepared(Landroid/media/MediaPlayer;)V
     .locals 1
-    .parameter "mp"
+    .param p1, "mp"    # Landroid/media/MediaPlayer;
 
     .prologue
     .line 181
@@ -560,7 +560,7 @@
     check-cast v0, Landroid/view/ViewGroup;
 
     .line 192
-    .local v0, parent:Landroid/view/ViewGroup;
+    .local v0, "parent":Landroid/view/ViewGroup;
     if-eqz v0, :cond_0
 
     .line 193
@@ -573,7 +573,7 @@
 
 .method public setListener(Lcom/tapjoy/mraid/listener/Player;)V
     .locals 0
-    .parameter "listener"
+    .param p1, "listener"    # Lcom/tapjoy/mraid/listener/Player;
 
     .prologue
     .line 156
@@ -585,8 +585,8 @@
 
 .method public setPlayData(Lcom/tapjoy/mraid/controller/Abstract$PlayerProperties;Ljava/lang/String;)V
     .locals 1
-    .parameter "properties"
-    .parameter "url"
+    .param p1, "properties"    # Lcom/tapjoy/mraid/controller/Abstract$PlayerProperties;
+    .param p2, "url"    # Ljava/lang/String;
 
     .prologue
     .line 60

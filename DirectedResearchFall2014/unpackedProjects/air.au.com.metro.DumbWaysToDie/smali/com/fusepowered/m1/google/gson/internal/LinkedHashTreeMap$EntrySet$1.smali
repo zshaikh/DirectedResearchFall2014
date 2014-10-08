@@ -32,11 +32,10 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$EntrySet;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 807
-    .local p0, this:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$EntrySet$1;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$EntrySet.1;"
+    .local p0, "this":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$EntrySet$1;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$EntrySet.1;"
     iput-object p1, p0, Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$EntrySet$1;->this$1:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$EntrySet;
 
     iget-object v0, p1, Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$EntrySet;->this$0:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap;
@@ -55,7 +54,7 @@
 
     .prologue
     .line 807
-    .local p0, this:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$EntrySet$1;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$EntrySet.1;"
+    .local p0, "this":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$EntrySet$1;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$EntrySet.1;"
     invoke-virtual {p0}, Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$EntrySet$1;->next()Ljava/util/Map$Entry;
 
     move-result-object v0
@@ -75,7 +74,7 @@
 
     .prologue
     .line 809
-    .local p0, this:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$EntrySet$1;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$EntrySet.1;"
+    .local p0, "this":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$EntrySet$1;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$EntrySet.1;"
     invoke-virtual {p0}, Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$EntrySet$1;->nextNode()Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;
 
     move-result-object v0

@@ -40,9 +40,9 @@
 
 .method constructor <init>(Lcom/flurry/org/apache/avro/Schema;Lcom/flurry/org/apache/avro/Schema;Lcom/flurry/org/apache/avro/io/Decoder;)V
     .locals 1
-    .parameter "writer"
-    .parameter "reader"
-    .parameter "in"
+    .param p1, "writer"    # Lcom/flurry/org/apache/avro/Schema;
+    .param p2, "reader"    # Lcom/flurry/org/apache/avro/Schema;
+    .param p3, "in"    # Lcom/flurry/org/apache/avro/io/Decoder;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -63,8 +63,8 @@
 
 .method private constructor <init>(Ljava/lang/Object;Lcom/flurry/org/apache/avro/io/Decoder;)V
     .locals 0
-    .parameter "resolver"
-    .parameter "in"
+    .param p1, "resolver"    # Ljava/lang/Object;
+    .param p2, "in"    # Lcom/flurry/org/apache/avro/io/Decoder;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -75,7 +75,7 @@
     .line 59
     check-cast p1, Lcom/flurry/org/apache/avro/io/parsing/Symbol;
 
-    .end local p1
+    .end local p1    # "resolver":Ljava/lang/Object;
     invoke-direct {p0, p1, p2}, Lcom/flurry/org/apache/avro/io/ValidatingDecoder;-><init>(Lcom/flurry/org/apache/avro/io/parsing/Symbol;Lcom/flurry/org/apache/avro/io/Decoder;)V
 
     .line 60
@@ -84,8 +84,8 @@
 
 .method public static resolve(Lcom/flurry/org/apache/avro/Schema;Lcom/flurry/org/apache/avro/Schema;)Ljava/lang/Object;
     .locals 2
-    .parameter "writer"
-    .parameter "reader"
+    .param p0, "writer"    # Lcom/flurry/org/apache/avro/Schema;
+    .param p1, "reader"    # Lcom/flurry/org/apache/avro/Schema;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -135,8 +135,8 @@
 # virtual methods
 .method public doAction(Lcom/flurry/org/apache/avro/io/parsing/Symbol;Lcom/flurry/org/apache/avro/io/parsing/Symbol;)Lcom/flurry/org/apache/avro/io/parsing/Symbol;
     .locals 8
-    .parameter "input"
-    .parameter "top"
+    .param p1, "input"    # Lcom/flurry/org/apache/avro/io/parsing/Symbol;
+    .param p2, "top"    # Lcom/flurry/org/apache/avro/io/parsing/Symbol;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -159,11 +159,11 @@
     move-object v5, p2
 
     .line 242
-    .end local p2
+    .end local p2    # "top":Lcom/flurry/org/apache/avro/io/parsing/Symbol;
     :goto_0
     return-object v5
 
-    .restart local p2
+    .restart local p2    # "top":Lcom/flurry/org/apache/avro/io/parsing/Symbol;
     :cond_0
     move-object v5, v7
 
@@ -184,7 +184,7 @@
     move-object v4, v0
 
     .line 218
-    .local v4, t:Lcom/flurry/org/apache/avro/io/parsing/Symbol$ResolvingAction;
+    .local v4, "t":Lcom/flurry/org/apache/avro/io/parsing/Symbol$ResolvingAction;
     iget-object v5, v4, Lcom/flurry/org/apache/avro/io/parsing/Symbol$ResolvingAction;->reader:Lcom/flurry/org/apache/avro/io/parsing/Symbol;
 
     if-eq v5, p1, :cond_2
@@ -233,7 +233,7 @@
     goto :goto_0
 
     .line 224
-    .end local v4           #t:Lcom/flurry/org/apache/avro/io/parsing/Symbol$ResolvingAction;
+    .end local v4    # "t":Lcom/flurry/org/apache/avro/io/parsing/Symbol$ResolvingAction;
     :cond_3
     instance-of v5, p2, Lcom/flurry/org/apache/avro/io/parsing/Symbol$SkipAction;
 
@@ -242,16 +242,16 @@
     .line 225
     check-cast p2, Lcom/flurry/org/apache/avro/io/parsing/Symbol$SkipAction;
 
-    .end local p2
+    .end local p2    # "top":Lcom/flurry/org/apache/avro/io/parsing/Symbol;
     iget-object v3, p2, Lcom/flurry/org/apache/avro/io/parsing/Symbol$SkipAction;->symToSkip:Lcom/flurry/org/apache/avro/io/parsing/Symbol;
 
     .line 226
-    .local v3, symToSkip:Lcom/flurry/org/apache/avro/io/parsing/Symbol;
+    .local v3, "symToSkip":Lcom/flurry/org/apache/avro/io/parsing/Symbol;
     iget-object v5, p0, Lcom/flurry/org/apache/avro/io/ResolvingDecoder;->parser:Lcom/flurry/org/apache/avro/io/parsing/SkipParser;
 
     invoke-virtual {v5, v3}, Lcom/flurry/org/apache/avro/io/parsing/SkipParser;->skipSymbol(Lcom/flurry/org/apache/avro/io/parsing/Symbol;)V
 
-    .end local v3           #symToSkip:Lcom/flurry/org/apache/avro/io/parsing/Symbol;
+    .end local v3    # "symToSkip":Lcom/flurry/org/apache/avro/io/parsing/Symbol;
     :goto_1
     move-object v5, v7
 
@@ -259,7 +259,7 @@
     goto :goto_0
 
     .line 227
-    .restart local p2
+    .restart local p2    # "top":Lcom/flurry/org/apache/avro/io/parsing/Symbol;
     :cond_4
     instance-of v5, p2, Lcom/flurry/org/apache/avro/io/parsing/Symbol$WriterUnionAction;
 
@@ -275,7 +275,7 @@
     check-cast v1, Lcom/flurry/org/apache/avro/io/parsing/Symbol$Alternative;
 
     .line 229
-    .local v1, branches:Lcom/flurry/org/apache/avro/io/parsing/Symbol$Alternative;
+    .local v1, "branches":Lcom/flurry/org/apache/avro/io/parsing/Symbol$Alternative;
     iget-object v5, p0, Lcom/flurry/org/apache/avro/io/ResolvingDecoder;->parser:Lcom/flurry/org/apache/avro/io/parsing/SkipParser;
 
     iget-object v6, p0, Lcom/flurry/org/apache/avro/io/ResolvingDecoder;->in:Lcom/flurry/org/apache/avro/io/Decoder;
@@ -293,7 +293,7 @@
     goto :goto_1
 
     .line 230
-    .end local v1           #branches:Lcom/flurry/org/apache/avro/io/parsing/Symbol$Alternative;
+    .end local v1    # "branches":Lcom/flurry/org/apache/avro/io/parsing/Symbol$Alternative;
     :cond_5
     instance-of v5, p2, Lcom/flurry/org/apache/avro/io/parsing/Symbol$ErrorAction;
 
@@ -304,7 +304,7 @@
 
     check-cast p2, Lcom/flurry/org/apache/avro/io/parsing/Symbol$ErrorAction;
 
-    .end local p2
+    .end local p2    # "top":Lcom/flurry/org/apache/avro/io/parsing/Symbol;
     iget-object v6, p2, Lcom/flurry/org/apache/avro/io/parsing/Symbol$ErrorAction;->msg:Ljava/lang/String;
 
     invoke-direct {v5, v6}, Lcom/flurry/org/apache/avro/AvroTypeException;-><init>(Ljava/lang/String;)V
@@ -312,7 +312,7 @@
     throw v5
 
     .line 232
-    .restart local p2
+    .restart local p2    # "top":Lcom/flurry/org/apache/avro/io/parsing/Symbol;
     :cond_6
     instance-of v5, p2, Lcom/flurry/org/apache/avro/io/parsing/Symbol$DefaultStartAction;
 
@@ -326,7 +326,7 @@
     move-object v2, v0
 
     .line 234
-    .local v2, dsa:Lcom/flurry/org/apache/avro/io/parsing/Symbol$DefaultStartAction;
+    .local v2, "dsa":Lcom/flurry/org/apache/avro/io/parsing/Symbol$DefaultStartAction;
     iget-object v5, p0, Lcom/flurry/org/apache/avro/io/ResolvingDecoder;->in:Lcom/flurry/org/apache/avro/io/Decoder;
 
     iput-object v5, p0, Lcom/flurry/org/apache/avro/io/ResolvingDecoder;->backup:Lcom/flurry/org/apache/avro/io/Decoder;
@@ -347,7 +347,7 @@
     goto :goto_1
 
     .line 237
-    .end local v2           #dsa:Lcom/flurry/org/apache/avro/io/parsing/Symbol$DefaultStartAction;
+    .end local v2    # "dsa":Lcom/flurry/org/apache/avro/io/parsing/Symbol$DefaultStartAction;
     :cond_7
     sget-object v5, Lcom/flurry/org/apache/avro/io/parsing/Symbol;->DEFAULT_END_ACTION:Lcom/flurry/org/apache/avro/io/parsing/Symbol;
 
@@ -424,7 +424,7 @@
     move-result-object v0
 
     .line 179
-    .local v0, actual:Lcom/flurry/org/apache/avro/io/parsing/Symbol;
+    .local v0, "actual":Lcom/flurry/org/apache/avro/io/parsing/Symbol;
     sget-object v1, Lcom/flurry/org/apache/avro/io/parsing/Symbol;->INT:Lcom/flurry/org/apache/avro/io/parsing/Symbol;
 
     if-ne v0, v1, :cond_0
@@ -529,7 +529,7 @@
     check-cast v2, Lcom/flurry/org/apache/avro/io/parsing/Symbol$EnumAdjustAction;
 
     .line 195
-    .local v2, top:Lcom/flurry/org/apache/avro/io/parsing/Symbol$EnumAdjustAction;
+    .local v2, "top":Lcom/flurry/org/apache/avro/io/parsing/Symbol$EnumAdjustAction;
     iget-object v3, p0, Lcom/flurry/org/apache/avro/io/ResolvingDecoder;->in:Lcom/flurry/org/apache/avro/io/Decoder;
 
     invoke-virtual {v3}, Lcom/flurry/org/apache/avro/io/Decoder;->readEnum()I
@@ -537,13 +537,13 @@
     move-result v0
 
     .line 196
-    .local v0, n:I
+    .local v0, "n":I
     iget-object v3, v2, Lcom/flurry/org/apache/avro/io/parsing/Symbol$EnumAdjustAction;->adjustments:[Ljava/lang/Object;
 
     aget-object v1, v3, v0
 
     .line 197
-    .local v1, o:Ljava/lang/Object;
+    .local v1, "o":Ljava/lang/Object;
     instance-of v3, v1, Ljava/lang/Integer;
 
     if-eqz v3, :cond_0
@@ -551,7 +551,7 @@
     .line 198
     check-cast v1, Ljava/lang/Integer;
 
-    .end local v1           #o:Ljava/lang/Object;
+    .end local v1    # "o":Ljava/lang/Object;
     invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
 
     move-result v3
@@ -559,13 +559,13 @@
     return v3
 
     .line 200
-    .restart local v1       #o:Ljava/lang/Object;
+    .restart local v1    # "o":Ljava/lang/Object;
     :cond_0
     new-instance v3, Lcom/flurry/org/apache/avro/AvroTypeException;
 
     check-cast v1, Ljava/lang/String;
 
-    .end local v1           #o:Ljava/lang/Object;
+    .end local v1    # "o":Ljava/lang/Object;
     invoke-direct {v3, v1}, Lcom/flurry/org/apache/avro/AvroTypeException;-><init>(Ljava/lang/String;)V
 
     throw v3
@@ -589,7 +589,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/flurry/org/apache/avro/io/ResolvingDecoder;
     check-cast p0, Lcom/flurry/org/apache/avro/io/parsing/Symbol$FieldOrderAction;
 
     iget-object v0, p0, Lcom/flurry/org/apache/avro/io/parsing/Symbol$FieldOrderAction;->fields:[Lcom/flurry/org/apache/avro/Schema$Field;
@@ -616,7 +616,7 @@
     move-result-object v0
 
     .line 166
-    .local v0, actual:Lcom/flurry/org/apache/avro/io/parsing/Symbol;
+    .local v0, "actual":Lcom/flurry/org/apache/avro/io/parsing/Symbol;
     sget-object v1, Lcom/flurry/org/apache/avro/io/parsing/Symbol;->INT:Lcom/flurry/org/apache/avro/io/parsing/Symbol;
 
     if-ne v0, v1, :cond_0
@@ -704,7 +704,7 @@
     check-cast v0, Lcom/flurry/org/apache/avro/io/parsing/Symbol$UnionAdjustAction;
 
     .line 208
-    .local v0, top:Lcom/flurry/org/apache/avro/io/parsing/Symbol$UnionAdjustAction;
+    .local v0, "top":Lcom/flurry/org/apache/avro/io/parsing/Symbol$UnionAdjustAction;
     iget-object v1, p0, Lcom/flurry/org/apache/avro/io/ResolvingDecoder;->parser:Lcom/flurry/org/apache/avro/io/parsing/SkipParser;
 
     iget-object v2, v0, Lcom/flurry/org/apache/avro/io/parsing/Symbol$UnionAdjustAction;->symToParse:Lcom/flurry/org/apache/avro/io/parsing/Symbol;
@@ -736,7 +736,7 @@
     move-result-object v0
 
     .line 153
-    .local v0, actual:Lcom/flurry/org/apache/avro/io/parsing/Symbol;
+    .local v0, "actual":Lcom/flurry/org/apache/avro/io/parsing/Symbol;
     sget-object v1, Lcom/flurry/org/apache/avro/io/parsing/Symbol;->INT:Lcom/flurry/org/apache/avro/io/parsing/Symbol;
 
     if-ne v0, v1, :cond_0
@@ -815,7 +815,7 @@
     move-result-object v3
 
     .line 248
-    .local v3, top:Lcom/flurry/org/apache/avro/io/parsing/Symbol;
+    .local v3, "top":Lcom/flurry/org/apache/avro/io/parsing/Symbol;
     instance-of v4, v3, Lcom/flurry/org/apache/avro/io/parsing/Symbol$ResolvingAction;
 
     if-eqz v4, :cond_1
@@ -825,7 +825,7 @@
 
     check-cast v3, Lcom/flurry/org/apache/avro/io/parsing/Symbol$ResolvingAction;
 
-    .end local v3           #top:Lcom/flurry/org/apache/avro/io/parsing/Symbol;
+    .end local v3    # "top":Lcom/flurry/org/apache/avro/io/parsing/Symbol;
     iget-object v5, v3, Lcom/flurry/org/apache/avro/io/parsing/Symbol$ResolvingAction;->writer:Lcom/flurry/org/apache/avro/io/parsing/Symbol;
 
     invoke-virtual {v4, v5}, Lcom/flurry/org/apache/avro/io/parsing/SkipParser;->pushSymbol(Lcom/flurry/org/apache/avro/io/parsing/Symbol;)V
@@ -836,7 +836,7 @@
     return-void
 
     .line 250
-    .restart local v3       #top:Lcom/flurry/org/apache/avro/io/parsing/Symbol;
+    .restart local v3    # "top":Lcom/flurry/org/apache/avro/io/parsing/Symbol;
     :cond_1
     instance-of v4, v3, Lcom/flurry/org/apache/avro/io/parsing/Symbol$SkipAction;
 
@@ -847,7 +847,7 @@
 
     check-cast v3, Lcom/flurry/org/apache/avro/io/parsing/Symbol$SkipAction;
 
-    .end local v3           #top:Lcom/flurry/org/apache/avro/io/parsing/Symbol;
+    .end local v3    # "top":Lcom/flurry/org/apache/avro/io/parsing/Symbol;
     iget-object v5, v3, Lcom/flurry/org/apache/avro/io/parsing/Symbol$SkipAction;->symToSkip:Lcom/flurry/org/apache/avro/io/parsing/Symbol;
 
     invoke-virtual {v4, v5}, Lcom/flurry/org/apache/avro/io/parsing/SkipParser;->pushSymbol(Lcom/flurry/org/apache/avro/io/parsing/Symbol;)V
@@ -855,7 +855,7 @@
     goto :goto_0
 
     .line 252
-    .restart local v3       #top:Lcom/flurry/org/apache/avro/io/parsing/Symbol;
+    .restart local v3    # "top":Lcom/flurry/org/apache/avro/io/parsing/Symbol;
     :cond_2
     instance-of v4, v3, Lcom/flurry/org/apache/avro/io/parsing/Symbol$WriterUnionAction;
 
@@ -871,7 +871,7 @@
     check-cast v1, Lcom/flurry/org/apache/avro/io/parsing/Symbol$Alternative;
 
     .line 254
-    .local v1, branches:Lcom/flurry/org/apache/avro/io/parsing/Symbol$Alternative;
+    .local v1, "branches":Lcom/flurry/org/apache/avro/io/parsing/Symbol$Alternative;
     iget-object v4, p0, Lcom/flurry/org/apache/avro/io/ResolvingDecoder;->parser:Lcom/flurry/org/apache/avro/io/parsing/SkipParser;
 
     iget-object v5, p0, Lcom/flurry/org/apache/avro/io/ResolvingDecoder;->in:Lcom/flurry/org/apache/avro/io/Decoder;
@@ -889,7 +889,7 @@
     goto :goto_0
 
     .line 255
-    .end local v1           #branches:Lcom/flurry/org/apache/avro/io/parsing/Symbol$Alternative;
+    .end local v1    # "branches":Lcom/flurry/org/apache/avro/io/parsing/Symbol$Alternative;
     :cond_3
     instance-of v4, v3, Lcom/flurry/org/apache/avro/io/parsing/Symbol$ErrorAction;
 
@@ -900,7 +900,7 @@
 
     check-cast v3, Lcom/flurry/org/apache/avro/io/parsing/Symbol$ErrorAction;
 
-    .end local v3           #top:Lcom/flurry/org/apache/avro/io/parsing/Symbol;
+    .end local v3    # "top":Lcom/flurry/org/apache/avro/io/parsing/Symbol;
     iget-object v5, v3, Lcom/flurry/org/apache/avro/io/parsing/Symbol$ErrorAction;->msg:Ljava/lang/String;
 
     invoke-direct {v4, v5}, Lcom/flurry/org/apache/avro/AvroTypeException;-><init>(Ljava/lang/String;)V
@@ -908,7 +908,7 @@
     throw v4
 
     .line 257
-    .restart local v3       #top:Lcom/flurry/org/apache/avro/io/parsing/Symbol;
+    .restart local v3    # "top":Lcom/flurry/org/apache/avro/io/parsing/Symbol;
     :cond_4
     instance-of v4, v3, Lcom/flurry/org/apache/avro/io/parsing/Symbol$DefaultStartAction;
 
@@ -922,7 +922,7 @@
     move-object v2, v0
 
     .line 259
-    .local v2, dsa:Lcom/flurry/org/apache/avro/io/parsing/Symbol$DefaultStartAction;
+    .local v2, "dsa":Lcom/flurry/org/apache/avro/io/parsing/Symbol$DefaultStartAction;
     iget-object v4, p0, Lcom/flurry/org/apache/avro/io/ResolvingDecoder;->in:Lcom/flurry/org/apache/avro/io/Decoder;
 
     iput-object v4, p0, Lcom/flurry/org/apache/avro/io/ResolvingDecoder;->backup:Lcom/flurry/org/apache/avro/io/Decoder;
@@ -945,7 +945,7 @@
     goto :goto_0
 
     .line 262
-    .end local v2           #dsa:Lcom/flurry/org/apache/avro/io/parsing/Symbol$DefaultStartAction;
+    .end local v2    # "dsa":Lcom/flurry/org/apache/avro/io/parsing/Symbol$DefaultStartAction;
     :cond_5
     sget-object v4, Lcom/flurry/org/apache/avro/io/parsing/Symbol;->DEFAULT_END_ACTION:Lcom/flurry/org/apache/avro/io/parsing/Symbol;
 

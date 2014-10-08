@@ -33,8 +33,7 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m1/android/MMAdView;Lcom/fusepowered/m1/android/DTOResizeParameters;)V
     .locals 1
-    .parameter
-    .parameter "resizeParams"
+    .param p2, "resizeParams"    # Lcom/fusepowered/m1/android/DTOResizeParameters;
 
     .prologue
     .line 744
@@ -61,21 +60,21 @@
 
 .method private calculateBounds(IIII)Lcom/fusepowered/m1/android/MMAdView$BannerBounds$BoundsResult;
     .locals 4
-    .parameter "screenPos"
-    .parameter "offset"
-    .parameter "size"
-    .parameter "max"
+    .param p1, "screenPos"    # I
+    .param p2, "offset"    # I
+    .param p3, "size"    # I
+    .param p4, "max"    # I
 
     .prologue
     .line 780
     move v1, p1
 
     .line 781
-    .local v1, newStart:I
+    .local v1, "newStart":I
     move v0, p3
 
     .line 782
-    .local v0, newSize:I
+    .local v0, "newSize":I
     add-int v3, p1, p3
 
     add-int/2addr v3, p2
@@ -106,7 +105,7 @@
     invoke-direct {v2, p0, v3}, Lcom/fusepowered/m1/android/MMAdView$BannerBounds$BoundsResult;-><init>(Lcom/fusepowered/m1/android/MMAdView$BannerBounds;Lcom/fusepowered/m1/android/MMAdView$1;)V
 
     .line 799
-    .local v2, result:Lcom/fusepowered/m1/android/MMAdView$BannerBounds$BoundsResult;
+    .local v2, "result":Lcom/fusepowered/m1/android/MMAdView$BannerBounds$BoundsResult;
     sub-int v3, v1, p1
 
     iput v3, v2, Lcom/fusepowered/m1/android/MMAdView$BannerBounds$BoundsResult;->translation:I
@@ -118,7 +117,7 @@
     return-object v2
 
     .line 789
-    .end local v2           #result:Lcom/fusepowered/m1/android/MMAdView$BannerBounds$BoundsResult;
+    .end local v2    # "result":Lcom/fusepowered/m1/android/MMAdView$BannerBounds$BoundsResult;
     :cond_1
     add-int v3, v1, p3
 
@@ -149,7 +148,7 @@
     new-array v0, v3, [I
 
     .line 759
-    .local v0, loc:[I
+    .local v0, "loc":[I
     iget-object v3, p0, Lcom/fusepowered/m1/android/MMAdView$BannerBounds;->this$0:Lcom/fusepowered/m1/android/MMAdView;
 
     invoke-virtual {v3, v0}, Lcom/fusepowered/m1/android/MMAdView;->getLocationInWindow([I)V
@@ -160,7 +159,7 @@
     aget v2, v0, v3
 
     .line 762
-    .local v2, xLoc:I
+    .local v2, "xLoc":I
     iget-object v3, p0, Lcom/fusepowered/m1/android/MMAdView$BannerBounds;->resizeParams:Lcom/fusepowered/m1/android/DTOResizeParameters;
 
     iget v3, v3, Lcom/fusepowered/m1/android/DTOResizeParameters;->offsetX:I
@@ -178,7 +177,7 @@
     move-result-object v1
 
     .line 763
-    .local v1, resultX:Lcom/fusepowered/m1/android/MMAdView$BannerBounds$BoundsResult;
+    .local v1, "resultX":Lcom/fusepowered/m1/android/MMAdView$BannerBounds$BoundsResult;
     iget-object v3, p0, Lcom/fusepowered/m1/android/MMAdView$BannerBounds;->resizeParams:Lcom/fusepowered/m1/android/DTOResizeParameters;
 
     iget v4, v1, Lcom/fusepowered/m1/android/MMAdView$BannerBounds$BoundsResult;->size:I
@@ -204,7 +203,7 @@
     new-array v0, v3, [I
 
     .line 770
-    .local v0, loc:[I
+    .local v0, "loc":[I
     iget-object v3, p0, Lcom/fusepowered/m1/android/MMAdView$BannerBounds;->this$0:Lcom/fusepowered/m1/android/MMAdView;
 
     invoke-virtual {v3, v0}, Lcom/fusepowered/m1/android/MMAdView;->getLocationInWindow([I)V
@@ -215,7 +214,7 @@
     aget v2, v0, v3
 
     .line 773
-    .local v2, yLoc:I
+    .local v2, "yLoc":I
     iget-object v3, p0, Lcom/fusepowered/m1/android/MMAdView$BannerBounds;->resizeParams:Lcom/fusepowered/m1/android/DTOResizeParameters;
 
     iget v3, v3, Lcom/fusepowered/m1/android/DTOResizeParameters;->offsetY:I
@@ -233,7 +232,7 @@
     move-result-object v1
 
     .line 774
-    .local v1, resultY:Lcom/fusepowered/m1/android/MMAdView$BannerBounds$BoundsResult;
+    .local v1, "resultY":Lcom/fusepowered/m1/android/MMAdView$BannerBounds$BoundsResult;
     iget-object v3, p0, Lcom/fusepowered/m1/android/MMAdView$BannerBounds;->resizeParams:Lcom/fusepowered/m1/android/DTOResizeParameters;
 
     iget v4, v1, Lcom/fusepowered/m1/android/MMAdView$BannerBounds$BoundsResult;->size:I
@@ -267,7 +266,7 @@
 
 .method modifyLayoutParams(Landroid/view/ViewGroup$LayoutParams;)Landroid/view/ViewGroup$LayoutParams;
     .locals 1
-    .parameter "oldParams"
+    .param p1, "oldParams"    # Landroid/view/ViewGroup$LayoutParams;
 
     .prologue
     .line 812

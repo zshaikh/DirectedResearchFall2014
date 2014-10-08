@@ -53,7 +53,7 @@
 
     iget-object v0, p0, Lcom/facebook/AuthorizationClient$GetTokenAuthHandler;->this$0:Lcom/facebook/AuthorizationClient;
 
-    #calls: Lcom/facebook/AuthorizationClient;->notifyBackgroundProcessingStop()V
+    # invokes: Lcom/facebook/AuthorizationClient;->notifyBackgroundProcessingStop()V
     invoke-static {v0}, Lcom/facebook/AuthorizationClient;->access$000(Lcom/facebook/AuthorizationClient;)V
 
     if-eqz p2, :cond_4
@@ -173,7 +173,7 @@
     :cond_0
     iget-object v0, p0, Lcom/facebook/AuthorizationClient$GetTokenAuthHandler;->this$0:Lcom/facebook/AuthorizationClient;
 
-    #calls: Lcom/facebook/AuthorizationClient;->notifyBackgroundProcessingStart()V
+    # invokes: Lcom/facebook/AuthorizationClient;->notifyBackgroundProcessingStart()V
     invoke-static {v0}, Lcom/facebook/AuthorizationClient;->access$100(Lcom/facebook/AuthorizationClient;)V
 
     new-instance v0, Lcom/facebook/AuthorizationClient$GetTokenAuthHandler$1;

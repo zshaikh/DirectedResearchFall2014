@@ -22,7 +22,6 @@
 
 .method static synthetic access$0(Lcom/fusepowered/m2/m2l/MraidBanner;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 79
@@ -33,7 +32,6 @@
 
 .method static synthetic access$1(Lcom/fusepowered/m2/m2l/MraidBanner;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 83
@@ -44,7 +42,6 @@
 
 .method static synthetic access$2(Lcom/fusepowered/m2/m2l/MraidBanner;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 87
@@ -55,7 +52,6 @@
 
 .method static synthetic access$3(Lcom/fusepowered/m2/m2l/MraidBanner;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 92
@@ -66,7 +62,6 @@
 
 .method private extrasAreValid(Ljava/util/Map;)Z
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -80,7 +75,7 @@
 
     .prologue
     .line 97
-    .local p1, serverExtras:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p1, "serverExtras":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v0, "Html-Response-Body"
 
     invoke-interface {p1, v0}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
@@ -187,10 +182,8 @@
 # virtual methods
 .method protected loadBanner(Landroid/content/Context;Lcom/fusepowered/m2/m2l/CustomEventBanner$CustomEventBannerListener;Ljava/util/Map;Ljava/util/Map;)V
     .locals 4
-    .parameter "context"
-    .parameter "customEventBannerListener"
-    .parameter
-    .parameter
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "customEventBannerListener"    # Lcom/fusepowered/m2/m2l/CustomEventBanner$CustomEventBannerListener;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -211,8 +204,8 @@
 
     .prologue
     .line 55
-    .local p3, localExtras:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
-    .local p4, serverExtras:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p3, "localExtras":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
+    .local p4, "serverExtras":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     iput-object p2, p0, Lcom/fusepowered/m2/m2l/MraidBanner;->mBannerListener:Lcom/fusepowered/m2/m2l/CustomEventBanner$CustomEventBannerListener;
 
     .line 58
@@ -236,13 +229,13 @@
     move-result-object v1
 
     .line 65
-    .local v1, htmlData:Ljava/lang/String;
+    .local v1, "htmlData":Ljava/lang/String;
     invoke-static {p3}, Lcom/fusepowered/m2/m2l/AdConfiguration;->extractFromMap(Ljava/util/Map;)Lcom/fusepowered/m2/m2l/AdConfiguration;
 
     move-result-object v0
 
     .line 66
-    .local v0, adConfiguration:Lcom/fusepowered/m2/m2l/AdConfiguration;
+    .local v0, "adConfiguration":Lcom/fusepowered/m2/m2l/AdConfiguration;
     invoke-static {p1, v0}, Lcom/fusepowered/m2/m2l/factories/MraidViewFactory;->create(Landroid/content/Context;Lcom/fusepowered/m2/m2l/AdConfiguration;)Lcom/fusepowered/m2/m2l/MraidView;
 
     move-result-object v2
@@ -258,8 +251,8 @@
     invoke-direct {p0}, Lcom/fusepowered/m2/m2l/MraidBanner;->initMraidListener()V
 
     .line 69
-    .end local v0           #adConfiguration:Lcom/fusepowered/m2/m2l/AdConfiguration;
-    .end local v1           #htmlData:Ljava/lang/String;
+    .end local v0    # "adConfiguration":Lcom/fusepowered/m2/m2l/AdConfiguration;
+    .end local v1    # "htmlData":Ljava/lang/String;
     :goto_0
     return-void
 

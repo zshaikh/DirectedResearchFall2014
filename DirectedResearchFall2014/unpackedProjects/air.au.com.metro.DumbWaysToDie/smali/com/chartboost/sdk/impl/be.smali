@@ -47,8 +47,6 @@
 # direct methods
 .method constructor <init>(Ljava/util/concurrent/ConcurrentMap;Lcom/chartboost/sdk/impl/bg;)V
     .locals 1
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -91,7 +89,6 @@
 
 .method public static a(Lcom/chartboost/sdk/impl/bg;)Ljava/util/Map;
     .locals 2
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<K:",
@@ -123,7 +120,6 @@
 # virtual methods
 .method public a(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TK;)TV;"
@@ -154,11 +150,11 @@
 
 .method public containsKey(Ljava/lang/Object;)Z
     .locals 1
-    .parameter "key"
+    .param p1, "key"    # Ljava/lang/Object;
 
     .prologue
     .line 67
-    .local p0, this:Lcom/chartboost/sdk/impl/be;,"Lcom/chartboost/sdk/impl/be<TK;TV;>;"
+    .local p0, "this":Lcom/chartboost/sdk/impl/be;, "Lcom/chartboost/sdk/impl/be<TK;TV;>;"
     iget-object v0, p0, Lcom/chartboost/sdk/impl/be;->a:Ljava/util/concurrent/ConcurrentMap;
 
     invoke-interface {v0, p1}, Ljava/util/concurrent/ConcurrentMap;->containsKey(Ljava/lang/Object;)Z
@@ -170,11 +166,11 @@
 
 .method public containsValue(Ljava/lang/Object;)Z
     .locals 1
-    .parameter "value"
+    .param p1, "value"    # Ljava/lang/Object;
 
     .prologue
     .line 71
-    .local p0, this:Lcom/chartboost/sdk/impl/be;,"Lcom/chartboost/sdk/impl/be<TK;TV;>;"
+    .local p0, "this":Lcom/chartboost/sdk/impl/be;, "Lcom/chartboost/sdk/impl/be<TK;TV;>;"
     iget-object v0, p0, Lcom/chartboost/sdk/impl/be;->a:Ljava/util/concurrent/ConcurrentMap;
 
     invoke-interface {v0, p1}, Ljava/util/concurrent/ConcurrentMap;->containsValue(Ljava/lang/Object;)Z
@@ -209,11 +205,11 @@
 
 .method public equals(Ljava/lang/Object;)Z
     .locals 1
-    .parameter "o"
+    .param p1, "o"    # Ljava/lang/Object;
 
     .prologue
     .line 103
-    .local p0, this:Lcom/chartboost/sdk/impl/be;,"Lcom/chartboost/sdk/impl/be<TK;TV;>;"
+    .local p0, "this":Lcom/chartboost/sdk/impl/be;, "Lcom/chartboost/sdk/impl/be<TK;TV;>;"
     iget-object v0, p0, Lcom/chartboost/sdk/impl/be;->a:Ljava/util/concurrent/ConcurrentMap;
 
     invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
@@ -225,7 +221,7 @@
 
 .method public get(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
-    .parameter "key"
+    .param p1, "key"    # Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -236,7 +232,7 @@
 
     .prologue
     .line 26
-    .local p0, this:Lcom/chartboost/sdk/impl/be;,"Lcom/chartboost/sdk/impl/be<TK;TV;>;"
+    .local p0, "this":Lcom/chartboost/sdk/impl/be;, "Lcom/chartboost/sdk/impl/be<TK;TV;>;"
     :goto_0
     iget-object v0, p0, Lcom/chartboost/sdk/impl/be;->a:Ljava/util/concurrent/ConcurrentMap;
 
@@ -327,8 +323,6 @@
 
 .method public put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TK;TV;)TV;"
@@ -337,9 +331,9 @@
 
     .prologue
     .line 75
-    .local p0, this:Lcom/chartboost/sdk/impl/be;,"Lcom/chartboost/sdk/impl/be<TK;TV;>;"
-    .local p1, key:Ljava/lang/Object;,"TK;"
-    .local p2, value:Ljava/lang/Object;,"TV;"
+    .local p0, "this":Lcom/chartboost/sdk/impl/be;, "Lcom/chartboost/sdk/impl/be<TK;TV;>;"
+    .local p1, "key":Ljava/lang/Object;, "TK;"
+    .local p2, "value":Ljava/lang/Object;, "TV;"
     iget-object v0, p0, Lcom/chartboost/sdk/impl/be;->a:Ljava/util/concurrent/ConcurrentMap;
 
     invoke-interface {v0, p1, p2}, Ljava/util/concurrent/ConcurrentMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -351,7 +345,6 @@
 
 .method public putAll(Ljava/util/Map;)V
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -362,8 +355,8 @@
 
     .prologue
     .line 83
-    .local p0, this:Lcom/chartboost/sdk/impl/be;,"Lcom/chartboost/sdk/impl/be<TK;TV;>;"
-    .local p1, m:Ljava/util/Map;,"Ljava/util/Map<+TK;+TV;>;"
+    .local p0, "this":Lcom/chartboost/sdk/impl/be;, "Lcom/chartboost/sdk/impl/be<TK;TV;>;"
+    .local p1, "m":Ljava/util/Map;, "Ljava/util/Map<+TK;+TV;>;"
     iget-object v0, p0, Lcom/chartboost/sdk/impl/be;->a:Ljava/util/concurrent/ConcurrentMap;
 
     invoke-interface {v0, p1}, Ljava/util/concurrent/ConcurrentMap;->putAll(Ljava/util/Map;)V
@@ -374,7 +367,7 @@
 
 .method public remove(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
-    .parameter "key"
+    .param p1, "key"    # Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -385,7 +378,7 @@
 
     .prologue
     .line 79
-    .local p0, this:Lcom/chartboost/sdk/impl/be;,"Lcom/chartboost/sdk/impl/be<TK;TV;>;"
+    .local p0, "this":Lcom/chartboost/sdk/impl/be;, "Lcom/chartboost/sdk/impl/be<TK;TV;>;"
     iget-object v0, p0, Lcom/chartboost/sdk/impl/be;->a:Ljava/util/concurrent/ConcurrentMap;
 
     invoke-interface {v0, p1}, Ljava/util/concurrent/ConcurrentMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;

@@ -21,27 +21,27 @@
 # virtual methods
 .method public call(Lcom/adobe/fre/FREContext;[Lcom/adobe/fre/FREObject;)Lcom/adobe/fre/FREObject;
     .locals 8
-    .parameter "arg0"
-    .parameter "arg1"
+    .param p1, "arg0"    # Lcom/adobe/fre/FREContext;
+    .param p2, "arg1"    # [Lcom/adobe/fre/FREObject;
 
     .prologue
     .line 19
     const/4 v5, 0x0
 
     .line 20
-    .local v5, purchaseAmountStr:Ljava/lang/String;
+    .local v5, "purchaseAmountStr":Ljava/lang/String;
     const/4 v1, 0x0
 
     .line 21
-    .local v1, currencyStr:Ljava/lang/String;
+    .local v1, "currencyStr":Ljava/lang/String;
     const/4 v3, 0x0
 
     .line 22
-    .local v3, purchaseAmount:Ljava/math/BigDecimal;
+    .local v3, "purchaseAmount":Ljava/math/BigDecimal;
     const/4 v0, 0x0
 
     .line 25
-    .local v0, currency:Ljava/util/Currency;
+    .local v0, "currency":Ljava/util/Currency;
     const/4 v6, 0x0
 
     :try_start_0
@@ -74,13 +74,13 @@
 
     invoke-direct {v4, v5}, Ljava/math/BigDecimal;-><init>(Ljava/lang/String;)V
 
-    .end local v3           #purchaseAmount:Ljava/math/BigDecimal;
-    .local v4, purchaseAmount:Ljava/math/BigDecimal;
+    .end local v3    # "purchaseAmount":Ljava/math/BigDecimal;
+    .local v4, "purchaseAmount":Ljava/math/BigDecimal;
     move-object v3, v4
 
     .line 33
-    .end local v4           #purchaseAmount:Ljava/math/BigDecimal;
-    .restart local v3       #purchaseAmount:Ljava/math/BigDecimal;
+    .end local v4    # "purchaseAmount":Ljava/math/BigDecimal;
+    .restart local v3    # "purchaseAmount":Ljava/math/BigDecimal;
     :goto_0
     if-eqz v1, :cond_1
 
@@ -131,12 +131,12 @@
     .catch Lcom/adobe/fre/FREInvalidObjectException; {:try_start_1 .. :try_end_1} :catch_2
     .catch Lcom/adobe/fre/FREWrongThreadException; {:try_start_1 .. :try_end_1} :catch_3
 
-    .end local v3           #purchaseAmount:Ljava/math/BigDecimal;
-    .restart local v4       #purchaseAmount:Ljava/math/BigDecimal;
+    .end local v3    # "purchaseAmount":Ljava/math/BigDecimal;
+    .restart local v4    # "purchaseAmount":Ljava/math/BigDecimal;
     move-object v3, v4
 
-    .end local v4           #purchaseAmount:Ljava/math/BigDecimal;
-    .restart local v3       #purchaseAmount:Ljava/math/BigDecimal;
+    .end local v4    # "purchaseAmount":Ljava/math/BigDecimal;
+    .restart local v3    # "purchaseAmount":Ljava/math/BigDecimal;
     goto :goto_0
 
     .line 38
@@ -152,46 +152,46 @@
     move-object v2, v6
 
     .line 41
-    .local v2, e:Ljava/lang/IllegalStateException;
+    .local v2, "e":Ljava/lang/IllegalStateException;
     invoke-virtual {v2}, Ljava/lang/IllegalStateException;->printStackTrace()V
 
     goto :goto_1
 
     .line 42
-    .end local v2           #e:Ljava/lang/IllegalStateException;
+    .end local v2    # "e":Ljava/lang/IllegalStateException;
     :catch_1
     move-exception v6
 
     move-object v2, v6
 
     .line 43
-    .local v2, e:Lcom/adobe/fre/FRETypeMismatchException;
+    .local v2, "e":Lcom/adobe/fre/FRETypeMismatchException;
     invoke-virtual {v2}, Lcom/adobe/fre/FRETypeMismatchException;->printStackTrace()V
 
     goto :goto_1
 
     .line 44
-    .end local v2           #e:Lcom/adobe/fre/FRETypeMismatchException;
+    .end local v2    # "e":Lcom/adobe/fre/FRETypeMismatchException;
     :catch_2
     move-exception v6
 
     move-object v2, v6
 
     .line 45
-    .local v2, e:Lcom/adobe/fre/FREInvalidObjectException;
+    .local v2, "e":Lcom/adobe/fre/FREInvalidObjectException;
     invoke-virtual {v2}, Lcom/adobe/fre/FREInvalidObjectException;->printStackTrace()V
 
     goto :goto_1
 
     .line 46
-    .end local v2           #e:Lcom/adobe/fre/FREInvalidObjectException;
+    .end local v2    # "e":Lcom/adobe/fre/FREInvalidObjectException;
     :catch_3
     move-exception v6
 
     move-object v2, v6
 
     .line 47
-    .local v2, e:Lcom/adobe/fre/FREWrongThreadException;
+    .local v2, "e":Lcom/adobe/fre/FREWrongThreadException;
     invoke-virtual {v2}, Lcom/adobe/fre/FREWrongThreadException;->printStackTrace()V
 
     goto :goto_1

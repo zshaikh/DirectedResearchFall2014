@@ -94,7 +94,7 @@
 
 .method private constructor <init>(Landroid/content/Context;)V
     .locals 2
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     .line 720
@@ -124,7 +124,7 @@
 
 .method static synthetic access$100(Lcom/fusepowered/m1/android/BridgeMMMedia$Audio;)Landroid/media/MediaPlayer;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/fusepowered/m1/android/BridgeMMMedia$Audio;
 
     .prologue
     .line 704
@@ -135,7 +135,7 @@
 
 .method static synthetic access$200(Lcom/fusepowered/m1/android/BridgeMMMedia$Audio;)Ljava/lang/ref/WeakReference;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/fusepowered/m1/android/BridgeMMMedia$Audio;
 
     .prologue
     .line 704
@@ -146,7 +146,7 @@
 
 .method static declared-synchronized sharedAudio(Landroid/content/Context;)Lcom/fusepowered/m1/android/BridgeMMMedia$Audio;
     .locals 2
-    .parameter "context"
+    .param p0, "context"    # Landroid/content/Context;
 
     .prologue
     .line 767
@@ -189,7 +189,7 @@
 # virtual methods
 .method addCompletionListener(Landroid/media/MediaPlayer$OnCompletionListener;)Z
     .locals 1
-    .parameter "listener"
+    .param p1, "listener"    # Landroid/media/MediaPlayer$OnCompletionListener;
 
     .prologue
     .line 728
@@ -233,7 +233,7 @@
 
 .method addPeriodicListener(Lcom/fusepowered/m1/android/BridgeMMMedia$Audio$PeriodicListener;)Z
     .locals 1
-    .parameter "listener"
+    .param p1, "listener"    # Lcom/fusepowered/m1/android/BridgeMMMedia$Audio$PeriodicListener;
 
     .prologue
     .line 748
@@ -319,7 +319,7 @@
 
 .method public declared-synchronized onCompletion(Landroid/media/MediaPlayer;)V
     .locals 3
-    .parameter "mp"
+    .param p1, "mp"    # Landroid/media/MediaPlayer;
 
     .prologue
     .line 782
@@ -337,7 +337,7 @@
 
     move-result-object v0
 
-    .local v0, i$:Ljava/util/Iterator;
+    .local v0, "i$":Ljava/util/Iterator;
     :goto_0
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
@@ -352,7 +352,7 @@
     check-cast v1, Landroid/media/MediaPlayer$OnCompletionListener;
 
     .line 786
-    .local v1, listener:Landroid/media/MediaPlayer$OnCompletionListener;
+    .local v1, "listener":Landroid/media/MediaPlayer$OnCompletionListener;
     iget-object v2, p0, Lcom/fusepowered/m1/android/BridgeMMMedia$Audio;->mediaPlayer:Landroid/media/MediaPlayer;
 
     invoke-interface {v1, v2}, Landroid/media/MediaPlayer$OnCompletionListener;->onCompletion(Landroid/media/MediaPlayer;)V
@@ -362,8 +362,8 @@
     goto :goto_0
 
     .line 782
-    .end local v0           #i$:Ljava/util/Iterator;
-    .end local v1           #listener:Landroid/media/MediaPlayer$OnCompletionListener;
+    .end local v0    # "i$":Ljava/util/Iterator;
+    .end local v1    # "listener":Landroid/media/MediaPlayer$OnCompletionListener;
     :catchall_0
     move-exception v2
 
@@ -399,8 +399,8 @@
 
 .method declared-synchronized playAudio(Landroid/net/Uri;Z)Lcom/fusepowered/m1/android/MMJSResponse;
     .locals 2
-    .parameter "uri"
-    .parameter "loop"
+    .param p1, "uri"    # Landroid/net/Uri;
+    .param p2, "loop"    # Z
 
     .prologue
     .line 801
@@ -457,8 +457,8 @@
 
     invoke-static {v1}, Lcom/fusepowered/m1/android/MMSDK;->runOnUiThread(Ljava/lang/Runnable;)V
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 816
     :goto_0
@@ -482,7 +482,7 @@
     move-object v0, v1
 
     .line 814
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     :try_start_2
     invoke-virtual {v0}, Ljava/lang/Exception;->getCause()Ljava/lang/Throwable;
 
@@ -495,7 +495,7 @@
     goto :goto_0
 
     .line 801
-    .end local v0           #e:Ljava/lang/Exception;
+    .end local v0    # "e":Ljava/lang/Exception;
     :catchall_0
     move-exception v1
 
@@ -506,7 +506,7 @@
 
 .method declared-synchronized playSound(Ljava/io/File;)Lcom/fusepowered/m1/android/MMJSResponse;
     .locals 4
-    .parameter "file"
+    .param p1, "file"    # Ljava/io/File;
 
     .prologue
     .line 853
@@ -557,8 +557,8 @@
 
     invoke-virtual {v0, v1}, Lcom/fusepowered/m1/android/BridgeMMMedia$Audio$OnLoadCompleteListener;->testSample(I)V
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 881
     :goto_0
@@ -592,7 +592,7 @@
 
 .method removeCompletionListener(Landroid/media/MediaPlayer$OnCompletionListener;)Z
     .locals 1
-    .parameter "listener"
+    .param p1, "listener"    # Landroid/media/MediaPlayer$OnCompletionListener;
 
     .prologue
     .line 739
@@ -619,7 +619,7 @@
 
 .method removePeriodicListener(Lcom/fusepowered/m1/android/BridgeMMMedia$Audio$PeriodicListener;)Z
     .locals 1
-    .parameter "listener"
+    .param p1, "listener"    # Lcom/fusepowered/m1/android/BridgeMMMedia$Audio$PeriodicListener;
 
     .prologue
     .line 759

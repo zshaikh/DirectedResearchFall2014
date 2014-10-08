@@ -12,7 +12,7 @@
 # direct methods
 .method constructor <init>(Ljava/io/OutputStream;)V
     .locals 1
-    .parameter "out"
+    .param p1, "out"    # Ljava/io/OutputStream;
 
     .prologue
     .line 48
@@ -46,7 +46,7 @@
 
 .method configure(Ljava/io/OutputStream;)Lcom/flurry/org/apache/avro/io/DirectBinaryEncoder;
     .locals 2
-    .parameter "out"
+    .param p1, "out"    # Ljava/io/OutputStream;
 
     .prologue
     .line 53
@@ -88,7 +88,7 @@
 
 .method public writeBoolean(Z)V
     .locals 2
-    .parameter "b"
+    .param p1, "b"    # Z
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -118,7 +118,7 @@
 
 .method public writeDouble(D)V
     .locals 4
-    .parameter "d"
+    .param p1, "d"    # D
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -134,13 +134,13 @@
     new-array v0, v2, [B
 
     .line 114
-    .local v0, buf:[B
+    .local v0, "buf":[B
     invoke-static {p1, p2, v0, v3}, Lcom/flurry/org/apache/avro/io/BinaryData;->encodeDouble(D[BI)I
 
     move-result v1
 
     .line 115
-    .local v1, len:I
+    .local v1, "len":I
     iget-object v2, p0, Lcom/flurry/org/apache/avro/io/DirectBinaryEncoder;->out:Ljava/io/OutputStream;
 
     invoke-virtual {v2, v0, v3, v1}, Ljava/io/OutputStream;->write([BII)V
@@ -151,9 +151,9 @@
 
 .method public writeFixed([BII)V
     .locals 1
-    .parameter "bytes"
-    .parameter "start"
-    .parameter "len"
+    .param p1, "bytes"    # [B
+    .param p2, "start"    # I
+    .param p3, "len"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -172,7 +172,7 @@
 
 .method public writeFloat(F)V
     .locals 4
-    .parameter "f"
+    .param p1, "f"    # F
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -190,7 +190,7 @@
     move-result v0
 
     .line 108
-    .local v0, len:I
+    .local v0, "len":I
     iget-object v1, p0, Lcom/flurry/org/apache/avro/io/DirectBinaryEncoder;->out:Ljava/io/OutputStream;
 
     iget-object v2, p0, Lcom/flurry/org/apache/avro/io/DirectBinaryEncoder;->buf:[B
@@ -203,7 +203,7 @@
 
 .method public writeInt(I)V
     .locals 5
-    .parameter "n"
+    .param p1, "n"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -221,7 +221,7 @@
     xor-int v1, v2, v3
 
     .line 74
-    .local v1, val:I
+    .local v1, "val":I
     and-int/lit8 v2, v1, -0x80
 
     if-nez v2, :cond_0
@@ -266,7 +266,7 @@
     move-result v0
 
     .line 83
-    .local v0, len:I
+    .local v0, "len":I
     iget-object v2, p0, Lcom/flurry/org/apache/avro/io/DirectBinaryEncoder;->out:Ljava/io/OutputStream;
 
     iget-object v3, p0, Lcom/flurry/org/apache/avro/io/DirectBinaryEncoder;->buf:[B
@@ -278,7 +278,7 @@
 
 .method public writeLong(J)V
     .locals 9
-    .parameter "n"
+    .param p1, "n"    # J
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -300,7 +300,7 @@
     xor-long v2, v4, v6
 
     .line 92
-    .local v2, val:J
+    .local v2, "val":J
     const-wide/32 v4, -0x80000000
 
     and-long/2addr v4, v2
@@ -315,7 +315,7 @@
     long-to-int v0, v2
 
     .line 94
-    .local v0, i:I
+    .local v0, "i":I
     :goto_0
     and-int/lit8 v4, v0, -0x80
 
@@ -346,7 +346,7 @@
     invoke-virtual {v4, v5}, Ljava/io/OutputStream;->write(I)V
 
     .line 103
-    .end local v0           #i:I
+    .end local v0    # "i":I
     :goto_1
     return-void
 
@@ -359,7 +359,7 @@
     move-result v1
 
     .line 102
-    .local v1, len:I
+    .local v1, "len":I
     iget-object v4, p0, Lcom/flurry/org/apache/avro/io/DirectBinaryEncoder;->out:Ljava/io/OutputStream;
 
     iget-object v5, p0, Lcom/flurry/org/apache/avro/io/DirectBinaryEncoder;->buf:[B

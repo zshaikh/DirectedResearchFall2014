@@ -82,7 +82,6 @@
 
 .method final a(Landroid/os/Parcel;)Lcom/vungle/sdk/al;
     .locals 2
-    .parameter
 
     .prologue
     .line 91
@@ -194,8 +193,7 @@
 
 .method public final writeToParcel(Landroid/os/Parcel;I)V
     .locals 2
-    .parameter "parcel"
-    .parameter
+    .param p1, "parcel"    # Landroid/os/Parcel;
 
     .prologue
     .line 84

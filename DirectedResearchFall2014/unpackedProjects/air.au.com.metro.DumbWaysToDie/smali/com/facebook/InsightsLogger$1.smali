@@ -47,7 +47,7 @@
 
     iget-object v3, p0, Lcom/facebook/InsightsLogger$1;->val$parameters:Landroid/os/Bundle;
 
-    #calls: Lcom/facebook/InsightsLogger;->buildJSONForEvent(Ljava/lang/String;DLandroid/os/Bundle;)Ljava/lang/String;
+    # invokes: Lcom/facebook/InsightsLogger;->buildJSONForEvent(Ljava/lang/String;DLandroid/os/Bundle;)Ljava/lang/String;
     invoke-static {v0, v1, v2, v3}, Lcom/facebook/InsightsLogger;->access$000(Ljava/lang/String;DLandroid/os/Bundle;)Ljava/lang/String;
 
     move-result-object v0
@@ -75,7 +75,7 @@
 
     iget-object v2, p0, Lcom/facebook/InsightsLogger$1;->this$0:Lcom/facebook/InsightsLogger;
 
-    #getter for: Lcom/facebook/InsightsLogger;->applicationId:Ljava/lang/String;
+    # getter for: Lcom/facebook/InsightsLogger;->applicationId:Ljava/lang/String;
     invoke-static {v2}, Lcom/facebook/InsightsLogger;->access$100(Lcom/facebook/InsightsLogger;)Ljava/lang/String;
 
     move-result-object v2
@@ -88,7 +88,7 @@
 
     iget-object v2, p0, Lcom/facebook/InsightsLogger$1;->this$0:Lcom/facebook/InsightsLogger;
 
-    #getter for: Lcom/facebook/InsightsLogger;->context:Landroid/content/Context;
+    # getter for: Lcom/facebook/InsightsLogger;->context:Landroid/content/Context;
     invoke-static {v2}, Lcom/facebook/InsightsLogger;->access$200(Lcom/facebook/InsightsLogger;)Landroid/content/Context;
 
     move-result-object v2
@@ -114,7 +114,7 @@
 
     iget-object v4, p0, Lcom/facebook/InsightsLogger$1;->this$0:Lcom/facebook/InsightsLogger;
 
-    #getter for: Lcom/facebook/InsightsLogger;->applicationId:Ljava/lang/String;
+    # getter for: Lcom/facebook/InsightsLogger;->applicationId:Ljava/lang/String;
     invoke-static {v4}, Lcom/facebook/InsightsLogger;->access$100(Lcom/facebook/InsightsLogger;)Ljava/lang/String;
 
     move-result-object v4
@@ -128,7 +128,7 @@
     :try_start_0
     iget-object v3, p0, Lcom/facebook/InsightsLogger$1;->this$0:Lcom/facebook/InsightsLogger;
 
-    #calls: Lcom/facebook/InsightsLogger;->sessionToLogTo()Lcom/facebook/Session;
+    # invokes: Lcom/facebook/InsightsLogger;->sessionToLogTo()Lcom/facebook/Session;
     invoke-static {v3}, Lcom/facebook/InsightsLogger;->access$300(Lcom/facebook/InsightsLogger;)Lcom/facebook/Session;
 
     move-result-object v3
@@ -195,7 +195,7 @@
 
     move-result-object v0
 
-    #calls: Lcom/facebook/InsightsLogger;->notifyDeveloperError(Ljava/lang/String;)V
+    # invokes: Lcom/facebook/InsightsLogger;->notifyDeveloperError(Ljava/lang/String;)V
     invoke-static {v0}, Lcom/facebook/InsightsLogger;->access$400(Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0

@@ -332,7 +332,6 @@
 
 .method public declared-synchronized a(Lcom/google/ads/g$a;)V
     .locals 5
-    .parameter
 
     .prologue
     .line 192
@@ -378,7 +377,6 @@
 
 .method public a(Ljava/lang/String;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 412

@@ -10,7 +10,7 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m2/m2l/MraidView$ViewState;)V
     .locals 0
-    .parameter "viewState"
+    .param p1, "viewState"    # Lcom/fusepowered/m2/m2l/MraidView$ViewState;
 
     .prologue
     .line 91
@@ -25,7 +25,7 @@
 
 .method public static createWithViewState(Lcom/fusepowered/m2/m2l/MraidView$ViewState;)Lcom/fusepowered/m2/m2l/MraidStateProperty;
     .locals 1
-    .parameter "viewState"
+    .param p0, "viewState"    # Lcom/fusepowered/m2/m2l/MraidView$ViewState;
 
     .prologue
     .line 96

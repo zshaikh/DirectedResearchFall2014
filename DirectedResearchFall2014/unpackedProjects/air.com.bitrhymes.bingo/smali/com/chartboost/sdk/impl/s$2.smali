@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/chartboost/sdk/impl/s;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1
@@ -40,8 +39,8 @@
 # virtual methods
 .method public onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
     .locals 4
-    .parameter "view"
-    .parameter "ev"
+    .param p1, "view"    # Landroid/view/View;
+    .param p2, "ev"    # Landroid/view/MotionEvent;
 
     .prologue
     const/4 v3, 0x0
@@ -87,7 +86,7 @@
     move-result-object p0
 
     .line 72
-    .end local p0
+    .end local p0    # "this":Lcom/chartboost/sdk/impl/s$2;
     check-cast p0, Landroid/view/inputmethod/InputMethodManager;
 
     .line 75

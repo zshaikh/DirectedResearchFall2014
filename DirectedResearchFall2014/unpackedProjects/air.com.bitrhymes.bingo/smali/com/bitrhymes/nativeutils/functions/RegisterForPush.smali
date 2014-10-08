@@ -21,8 +21,8 @@
 # virtual methods
 .method public call(Lcom/adobe/fre/FREContext;[Lcom/adobe/fre/FREObject;)Lcom/adobe/fre/FREObject;
     .locals 9
-    .parameter "context"
-    .parameter "arg1"
+    .param p1, "context"    # Lcom/adobe/fre/FREContext;
+    .param p2, "arg1"    # [Lcom/adobe/fre/FREObject;
 
     .prologue
     const-string v8, "RegisterForPush : "
@@ -54,7 +54,7 @@
     move-result-object v3
 
     .line 24
-    .local v3, senderID:Ljava/lang/String;
+    .local v3, "senderID":Ljava/lang/String;
     sput-object v3, Lcom/bitrhymes/nativeutils/utils/Utils;->PUSH_SENDER_ID:Ljava/lang/String;
 
     .line 27
@@ -86,7 +86,7 @@
     move-result-object v2
 
     .line 29
-    .local v2, regId:Ljava/lang/String;
+    .local v2, "regId":Ljava/lang/String;
     const-string v4, "RegisterForPush"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -147,8 +147,8 @@
     invoke-static {v4, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 48
-    .end local v2           #regId:Ljava/lang/String;
-    .end local v3           #senderID:Ljava/lang/String;
+    .end local v2    # "regId":Ljava/lang/String;
+    .end local v3    # "senderID":Ljava/lang/String;
     :goto_0
     const/4 v4, 0x0
 
@@ -156,8 +156,8 @@
     return-object v4
 
     .line 36
-    .restart local v2       #regId:Ljava/lang/String;
-    .restart local v3       #senderID:Ljava/lang/String;
+    .restart local v2    # "regId":Ljava/lang/String;
+    .restart local v3    # "senderID":Ljava/lang/String;
     :cond_1
     const-string v4, "RegisterForPush"
 
@@ -181,7 +181,7 @@
     const/4 v0, 0x0
 
     .line 38
-    .local v0, deviceInfoObject:Lcom/adobe/fre/FREObject;
+    .local v0, "deviceInfoObject":Lcom/adobe/fre/FREObject;
     invoke-static {v2}, Lcom/adobe/fre/FREObject;->newObject(Ljava/lang/String;)Lcom/adobe/fre/FREObject;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -194,16 +194,16 @@
     goto :goto_1
 
     .line 42
-    .end local v0           #deviceInfoObject:Lcom/adobe/fre/FREObject;
-    .end local v2           #regId:Ljava/lang/String;
-    .end local v3           #senderID:Ljava/lang/String;
+    .end local v0    # "deviceInfoObject":Lcom/adobe/fre/FREObject;
+    .end local v2    # "regId":Ljava/lang/String;
+    .end local v3    # "senderID":Ljava/lang/String;
     :catch_0
     move-exception v4
 
     move-object v1, v4
 
     .line 44
-    .local v1, e:Ljava/lang/Exception;
+    .local v1, "e":Ljava/lang/Exception;
     const-string v4, "RegisterForPush : "
 
     new-instance v4, Ljava/lang/StringBuilder;

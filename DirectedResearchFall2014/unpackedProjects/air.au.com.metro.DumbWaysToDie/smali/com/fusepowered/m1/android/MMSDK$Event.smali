@@ -51,7 +51,7 @@
 
 .method static adSingleTap(Lcom/fusepowered/m1/android/MMAdImpl;)V
     .locals 4
-    .parameter "adImpl"
+    .param p0, "adImpl"    # Lcom/fusepowered/m1/android/MMAdImpl;
 
     .prologue
     .line 382
@@ -71,6 +71,7 @@
     invoke-static {v0}, Lcom/fusepowered/m1/android/MMSDK;->runOnUiThread(Ljava/lang/Runnable;)V
 
     .line 405
+    # getter for: Lcom/fusepowered/m1/android/MMSDK;->isBroadcastingEvents:Z
     invoke-static {}, Lcom/fusepowered/m1/android/MMSDK;->access$000()Z
 
     move-result v0
@@ -112,7 +113,7 @@
 
 .method static displayStarted(Lcom/fusepowered/m1/android/MMAdImpl;)V
     .locals 4
-    .parameter "adImpl"
+    .param p0, "adImpl"    # Lcom/fusepowered/m1/android/MMAdImpl;
 
     .prologue
     .line 456
@@ -129,6 +130,7 @@
 
     .line 461
     :cond_0
+    # getter for: Lcom/fusepowered/m1/android/MMSDK;->isBroadcastingEvents:Z
     invoke-static {}, Lcom/fusepowered/m1/android/MMSDK;->access$000()Z
 
     move-result v0
@@ -159,7 +161,7 @@
 
 .method static fetchStartedCaching(Lcom/fusepowered/m1/android/MMAdImpl;)V
     .locals 4
-    .parameter "adImpl"
+    .param p0, "adImpl"    # Lcom/fusepowered/m1/android/MMAdImpl;
 
     .prologue
     .line 424
@@ -184,6 +186,7 @@
     invoke-static {v0}, Lcom/fusepowered/m1/android/MMSDK;->runOnUiThread(Ljava/lang/Runnable;)V
 
     .line 448
+    # getter for: Lcom/fusepowered/m1/android/MMSDK;->isBroadcastingEvents:Z
     invoke-static {}, Lcom/fusepowered/m1/android/MMSDK;->access$000()Z
 
     move-result v0
@@ -210,12 +213,13 @@
 
 .method static intentStarted(Landroid/content/Context;Ljava/lang/String;J)V
     .locals 2
-    .parameter "context"
-    .parameter "intentType"
-    .parameter "adImplId"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "intentType"    # Ljava/lang/String;
+    .param p2, "adImplId"    # J
 
     .prologue
     .line 415
+    # getter for: Lcom/fusepowered/m1/android/MMSDK;->isBroadcastingEvents:Z
     invoke-static {}, Lcom/fusepowered/m1/android/MMSDK;->access$000()Z
 
     move-result v0
@@ -246,7 +250,7 @@
 
 .method protected static logEvent(Ljava/lang/String;)V
     .locals 3
-    .parameter "logString"
+    .param p0, "logString"    # Ljava/lang/String;
 
     .prologue
     .line 361
@@ -275,7 +279,7 @@
 
 .method static overlayClosed(Lcom/fusepowered/m1/android/MMAdImpl;)V
     .locals 4
-    .parameter "adImpl"
+    .param p0, "adImpl"    # Lcom/fusepowered/m1/android/MMAdImpl;
 
     .prologue
     .line 512
@@ -300,6 +304,7 @@
     invoke-static {v0}, Lcom/fusepowered/m1/android/MMSDK;->runOnUiThread(Ljava/lang/Runnable;)V
 
     .line 536
+    # getter for: Lcom/fusepowered/m1/android/MMSDK;->isBroadcastingEvents:Z
     invoke-static {}, Lcom/fusepowered/m1/android/MMSDK;->access$000()Z
 
     move-result v0
@@ -332,7 +337,7 @@
 
 .method static overlayOpened(Lcom/fusepowered/m1/android/MMAdImpl;)V
     .locals 3
-    .parameter "adImpl"
+    .param p0, "adImpl"    # Lcom/fusepowered/m1/android/MMAdImpl;
 
     .prologue
     .line 471
@@ -369,11 +374,12 @@
 
 .method static overlayOpenedBroadCast(Landroid/content/Context;J)V
     .locals 2
-    .parameter "context"
-    .parameter "adImplId"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "adImplId"    # J
 
     .prologue
     .line 503
+    # getter for: Lcom/fusepowered/m1/android/MMSDK;->isBroadcastingEvents:Z
     invoke-static {}, Lcom/fusepowered/m1/android/MMSDK;->access$000()Z
 
     move-result v0
@@ -396,7 +402,7 @@
 
 .method static requestCompleted(Lcom/fusepowered/m1/android/MMAdImpl;)V
     .locals 5
-    .parameter "adImpl"
+    .param p0, "adImpl"    # Lcom/fusepowered/m1/android/MMAdImpl;
 
     .prologue
     .line 545
@@ -421,6 +427,7 @@
     invoke-static {v1}, Lcom/fusepowered/m1/android/MMSDK;->runOnUiThread(Ljava/lang/Runnable;)V
 
     .line 568
+    # getter for: Lcom/fusepowered/m1/android/MMSDK;->isBroadcastingEvents:Z
     invoke-static {}, Lcom/fusepowered/m1/android/MMSDK;->access$000()Z
 
     move-result v1
@@ -433,7 +440,7 @@
     move-result-object v0
 
     .line 571
-    .local v0, action:Ljava/lang/String;
+    .local v0, "action":Ljava/lang/String;
     invoke-virtual {p0}, Lcom/fusepowered/m1/android/MMAdImpl;->getContext()Landroid/content/Context;
 
     move-result-object v1
@@ -451,8 +458,8 @@
 
 .method static requestFailed(Lcom/fusepowered/m1/android/MMAdImpl;Lcom/fusepowered/m1/android/MMException;)V
     .locals 5
-    .parameter "adImpl"
-    .parameter "error"
+    .param p0, "adImpl"    # Lcom/fusepowered/m1/android/MMAdImpl;
+    .param p1, "error"    # Lcom/fusepowered/m1/android/MMException;
 
     .prologue
     .line 580
@@ -477,6 +484,7 @@
     invoke-static {v1}, Lcom/fusepowered/m1/android/MMSDK;->runOnUiThread(Ljava/lang/Runnable;)V
 
     .line 603
+    # getter for: Lcom/fusepowered/m1/android/MMSDK;->isBroadcastingEvents:Z
     invoke-static {}, Lcom/fusepowered/m1/android/MMSDK;->access$000()Z
 
     move-result v1
@@ -489,7 +497,7 @@
     move-result-object v0
 
     .line 606
-    .local v0, action:Ljava/lang/String;
+    .local v0, "action":Ljava/lang/String;
     invoke-virtual {p0}, Lcom/fusepowered/m1/android/MMAdImpl;->getContext()Landroid/content/Context;
 
     move-result-object v1
@@ -513,9 +521,9 @@
 
 .method private static final sendIntent(Landroid/content/Context;Landroid/content/Intent;J)V
     .locals 4
-    .parameter "context"
-    .parameter "intent"
-    .parameter "adImplId"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "intent"    # Landroid/content/Intent;
+    .param p2, "adImplId"    # J
 
     .prologue
     .line 612
@@ -556,7 +564,7 @@
     move-result-object v0
 
     .line 622
-    .local v0, type:Ljava/lang/String;
+    .local v0, "type":Ljava/lang/String;
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -628,12 +636,12 @@
     invoke-virtual {p0, p1}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
     .line 632
-    .end local v0           #type:Ljava/lang/String;
+    .end local v0    # "type":Ljava/lang/String;
     :cond_1
     return-void
 
     .line 627
-    .restart local v0       #type:Ljava/lang/String;
+    .restart local v0    # "type":Ljava/lang/String;
     :cond_2
     const-string v0, ""
 

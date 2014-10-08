@@ -30,10 +30,6 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m1/android/MMWebView;Lcom/fusepowered/m1/android/MMAdImpl;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 279
@@ -85,7 +81,7 @@
     move-result-object v6
 
     .line 290
-    .local v6, ad:Lcom/fusepowered/m1/android/MMAd;
+    .local v6, "ad":Lcom/fusepowered/m1/android/MMAd;
     if-eqz v6, :cond_0
 
     instance-of v0, v6, Lcom/fusepowered/m1/android/MMLayout;
@@ -95,7 +91,7 @@
     .line 291
     check-cast v6, Lcom/fusepowered/m1/android/MMLayout;
 
-    .end local v6           #ad:Lcom/fusepowered/m1/android/MMAd;
+    .end local v6    # "ad":Lcom/fusepowered/m1/android/MMAd;
     invoke-virtual {v6}, Lcom/fusepowered/m1/android/MMLayout;->removeVideo()V
 
     .line 293

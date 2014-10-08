@@ -32,7 +32,6 @@
 # direct methods
 .method private constructor <init>(Lcom/fusepowered/fuseapi/FuseAPI;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 158
@@ -47,13 +46,13 @@
 # virtual methods
 .method protected bridge synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
-    .parameter "x0"
+    .param p1, "x0"    # [Ljava/lang/Object;
 
     .prologue
     .line 158
     check-cast p1, [Ljava/lang/String;
 
-    .end local p1
+    .end local p1    # "x0":[Ljava/lang/Object;
     invoke-virtual {p0, p1}, Lcom/fusepowered/fuseapi/FuseAPI$PostTask;->doInBackground([Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -63,7 +62,7 @@
 
 .method protected varargs doInBackground([Ljava/lang/String;)Ljava/lang/String;
     .locals 1
-    .parameter "params"
+    .param p1, "params"    # [Ljava/lang/String;
 
     .prologue
     .line 162

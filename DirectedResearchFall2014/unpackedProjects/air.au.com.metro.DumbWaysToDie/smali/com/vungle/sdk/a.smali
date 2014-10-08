@@ -27,7 +27,6 @@
 
 .method synthetic constructor <init>(B)V
     .locals 0
-    .parameter
 
     .prologue
     .line 12
@@ -50,7 +49,7 @@
 # virtual methods
 .method public final getBitmap(Ljava/lang/String;)Landroid/graphics/Bitmap;
     .locals 1
-    .parameter "path"
+    .param p1, "path"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;

@@ -24,7 +24,7 @@
 # direct methods
 .method public constructor <init>(Lcom/fusepowered/m2/m2l/CustomEventInterstitial$CustomEventInterstitialListener;)V
     .locals 0
-    .parameter "customEventInterstitialListener"
+    .param p1, "customEventInterstitialListener"    # Lcom/fusepowered/m2/m2l/CustomEventInterstitial$CustomEventInterstitialListener;
 
     .prologue
     .line 103
@@ -62,7 +62,7 @@
 
 .method public onFailed(Lcom/fusepowered/m2/m2l/MoPubErrorCode;)V
     .locals 1
-    .parameter "errorCode"
+    .param p1, "errorCode"    # Lcom/fusepowered/m2/m2l/MoPubErrorCode;
 
     .prologue
     .line 114
@@ -76,7 +76,7 @@
 
 .method public onLoaded(Lcom/fusepowered/m2/m2l/BaseHtmlWebView;)V
     .locals 1
-    .parameter "mHtmlWebView"
+    .param p1, "mHtmlWebView"    # Lcom/fusepowered/m2/m2l/BaseHtmlWebView;
 
     .prologue
     .line 109

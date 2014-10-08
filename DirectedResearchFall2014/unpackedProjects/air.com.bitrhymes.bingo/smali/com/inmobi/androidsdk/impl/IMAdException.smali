@@ -30,8 +30,6 @@
 # direct methods
 .method public constructor <init>(Ljava/lang/String;I)V
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 39
@@ -51,9 +49,6 @@
 
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/Exception;I)V
     .locals 1
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 34
@@ -85,7 +80,6 @@
 
 .method public setCode(I)V
     .locals 0
-    .parameter
 
     .prologue
     .line 49

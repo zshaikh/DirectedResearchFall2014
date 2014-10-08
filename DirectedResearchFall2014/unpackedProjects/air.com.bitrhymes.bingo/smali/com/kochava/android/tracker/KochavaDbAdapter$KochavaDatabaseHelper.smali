@@ -17,7 +17,7 @@
 # direct methods
 .method constructor <init>(Landroid/content/Context;)V
     .locals 3
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     .line 59
@@ -37,7 +37,7 @@
 # virtual methods
 .method public onCreate(Landroid/database/sqlite/SQLiteDatabase;)V
     .locals 2
-    .parameter "db"
+    .param p1, "db"    # Landroid/database/sqlite/SQLiteDatabase;
 
     .prologue
     const-string v1, "KochavaDbAdapter"
@@ -89,9 +89,9 @@
 
 .method public onUpgrade(Landroid/database/sqlite/SQLiteDatabase;II)V
     .locals 3
-    .parameter "db"
-    .parameter "oldVersion"
-    .parameter "newVersion"
+    .param p1, "db"    # Landroid/database/sqlite/SQLiteDatabase;
+    .param p2, "oldVersion"    # I
+    .param p3, "newVersion"    # I
 
     .prologue
     .line 83

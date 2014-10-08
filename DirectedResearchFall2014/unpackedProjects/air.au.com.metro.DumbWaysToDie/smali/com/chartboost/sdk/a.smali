@@ -33,8 +33,6 @@
 # direct methods
 .method protected constructor <init>(Lcom/chartboost/sdk/Chartboost;Landroid/app/Activity;)V
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     const/4 v0, 0x0
@@ -63,7 +61,6 @@
 
 .method static synthetic a(Lcom/chartboost/sdk/a;)Lcom/chartboost/sdk/Chartboost;
     .locals 1
-    .parameter
 
     .prologue
     .line 22
@@ -157,7 +154,6 @@
 
 .method private b(Lcom/chartboost/sdk/impl/a;)V
     .locals 6
-    .parameter
 
     .prologue
     const/4 v4, 0x1
@@ -394,7 +390,6 @@
 
 .method private c(Lcom/chartboost/sdk/impl/a;)Lcom/chartboost/sdk/impl/n$a;
     .locals 1
-    .parameter
 
     .prologue
     .line 234
@@ -410,7 +405,6 @@
 # virtual methods
 .method protected a(Landroid/app/Activity;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 40
@@ -422,7 +416,6 @@
 
 .method protected a(Lcom/chartboost/sdk/a$a;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 47
@@ -454,7 +447,6 @@
 
 .method public a(Lcom/chartboost/sdk/impl/a;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 131
@@ -525,8 +517,6 @@
 
 .method public a(Lcom/chartboost/sdk/impl/a;Z)V
     .locals 4
-    .parameter
-    .parameter
 
     .prologue
     const-string v3, "animation"
@@ -604,7 +594,6 @@
 
 .method public a(Z)V
     .locals 3
-    .parameter
 
     .prologue
     const/4 v2, 0x0
@@ -708,8 +697,6 @@
 
 .method public b(Lcom/chartboost/sdk/impl/a;Z)V
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     .line 193

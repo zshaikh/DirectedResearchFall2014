@@ -23,8 +23,6 @@
 # direct methods
 .method constructor <init>(Lcom/inmobi/androidsdk/ai/controller/JSUtilityController;Ljava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 1
@@ -92,8 +90,8 @@
 
     check-cast v0, Ljava/net/HttpURLConnection;
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 495
     const/16 v1, 0x4e20
@@ -147,8 +145,8 @@
     .line 501
     invoke-static {v1, v2}, Lcom/inmobi/commons/internal/IMLog;->debug(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     .line 506
     if-eqz v0, :cond_1

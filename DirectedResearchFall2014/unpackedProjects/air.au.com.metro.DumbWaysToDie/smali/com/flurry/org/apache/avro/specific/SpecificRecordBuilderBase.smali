@@ -18,11 +18,11 @@
 # direct methods
 .method protected constructor <init>(Lcom/flurry/org/apache/avro/Schema;)V
     .locals 1
-    .parameter "schema"
+    .param p1, "schema"    # Lcom/flurry/org/apache/avro/Schema;
 
     .prologue
     .line 35
-    .local p0, this:Lcom/flurry/org/apache/avro/specific/SpecificRecordBuilderBase;,"Lcom/flurry/org/apache/avro/specific/SpecificRecordBuilderBase<TT;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/specific/SpecificRecordBuilderBase;, "Lcom/flurry/org/apache/avro/specific/SpecificRecordBuilderBase<TT;>;"
     invoke-static {}, Lcom/flurry/org/apache/avro/specific/SpecificData;->get()Lcom/flurry/org/apache/avro/specific/SpecificData;
 
     move-result-object v0
@@ -35,7 +35,6 @@
 
 .method protected constructor <init>(Lcom/flurry/org/apache/avro/specific/SpecificRecord;)V
     .locals 2
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;)V"
@@ -44,8 +43,8 @@
 
     .prologue
     .line 51
-    .local p0, this:Lcom/flurry/org/apache/avro/specific/SpecificRecordBuilderBase;,"Lcom/flurry/org/apache/avro/specific/SpecificRecordBuilderBase<TT;>;"
-    .local p1, other:Lcom/flurry/org/apache/avro/specific/SpecificRecord;,"TT;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/specific/SpecificRecordBuilderBase;, "Lcom/flurry/org/apache/avro/specific/SpecificRecordBuilderBase<TT;>;"
+    .local p1, "other":Lcom/flurry/org/apache/avro/specific/SpecificRecord;, "TT;"
     invoke-interface {p1}, Lcom/flurry/org/apache/avro/specific/SpecificRecord;->getSchema()Lcom/flurry/org/apache/avro/Schema;
 
     move-result-object v0
@@ -62,7 +61,6 @@
 
 .method protected constructor <init>(Lcom/flurry/org/apache/avro/specific/SpecificRecordBuilderBase;)V
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -73,8 +71,8 @@
 
     .prologue
     .line 43
-    .local p0, this:Lcom/flurry/org/apache/avro/specific/SpecificRecordBuilderBase;,"Lcom/flurry/org/apache/avro/specific/SpecificRecordBuilderBase<TT;>;"
-    .local p1, other:Lcom/flurry/org/apache/avro/specific/SpecificRecordBuilderBase;,"Lcom/flurry/org/apache/avro/specific/SpecificRecordBuilderBase<TT;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/specific/SpecificRecordBuilderBase;, "Lcom/flurry/org/apache/avro/specific/SpecificRecordBuilderBase<TT;>;"
+    .local p1, "other":Lcom/flurry/org/apache/avro/specific/SpecificRecordBuilderBase;, "Lcom/flurry/org/apache/avro/specific/SpecificRecordBuilderBase<TT;>;"
     invoke-static {}, Lcom/flurry/org/apache/avro/specific/SpecificData;->get()Lcom/flurry/org/apache/avro/specific/SpecificData;
 
     move-result-object v0

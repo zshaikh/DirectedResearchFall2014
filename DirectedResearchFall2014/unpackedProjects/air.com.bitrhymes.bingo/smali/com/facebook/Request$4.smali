@@ -26,8 +26,6 @@
 # direct methods
 .method constructor <init>(Ljava/util/ArrayList;Lcom/facebook/RequestBatch;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 1
@@ -69,7 +67,7 @@
     move-result-object v1
 
     .line 1673
-    .local v1, batchCallbacks:Ljava/util/List;,"Ljava/util/List<Lcom/facebook/RequestBatch$Callback;>;"
+    .local v1, "batchCallbacks":Ljava/util/List;, "Ljava/util/List<Lcom/facebook/RequestBatch$Callback;>;"
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
@@ -85,7 +83,7 @@
     return-void
 
     .line 1668
-    .end local v1           #batchCallbacks:Ljava/util/List;,"Ljava/util/List<Lcom/facebook/RequestBatch$Callback;>;"
+    .end local v1    # "batchCallbacks":Ljava/util/List;, "Ljava/util/List<Lcom/facebook/RequestBatch$Callback;>;"
     :cond_0
     invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -94,7 +92,7 @@
     check-cast v2, Landroid/util/Pair;
 
     .line 1669
-    .local v2, pair:Landroid/util/Pair;,"Landroid/util/Pair<Lcom/facebook/Request$Callback;Lcom/facebook/Response;>;"
+    .local v2, "pair":Landroid/util/Pair;, "Landroid/util/Pair<Lcom/facebook/Request$Callback;Lcom/facebook/Response;>;"
     iget-object v3, v2, Landroid/util/Pair;->first:Ljava/lang/Object;
 
     check-cast v3, Lcom/facebook/Request$Callback;
@@ -108,8 +106,8 @@
     goto :goto_0
 
     .line 1673
-    .end local v2           #pair:Landroid/util/Pair;,"Landroid/util/Pair<Lcom/facebook/Request$Callback;Lcom/facebook/Response;>;"
-    .restart local v1       #batchCallbacks:Ljava/util/List;,"Ljava/util/List<Lcom/facebook/RequestBatch$Callback;>;"
+    .end local v2    # "pair":Landroid/util/Pair;, "Landroid/util/Pair<Lcom/facebook/Request$Callback;Lcom/facebook/Response;>;"
+    .restart local v1    # "batchCallbacks":Ljava/util/List;, "Ljava/util/List<Lcom/facebook/RequestBatch$Callback;>;"
     :cond_1
     invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -118,7 +116,7 @@
     check-cast v0, Lcom/facebook/RequestBatch$Callback;
 
     .line 1674
-    .local v0, batchCallback:Lcom/facebook/RequestBatch$Callback;
+    .local v0, "batchCallback":Lcom/facebook/RequestBatch$Callback;
     iget-object v4, p0, Lcom/facebook/Request$4;->val$requests:Lcom/facebook/RequestBatch;
 
     invoke-interface {v0, v4}, Lcom/facebook/RequestBatch$Callback;->onBatchCompleted(Lcom/facebook/RequestBatch;)V

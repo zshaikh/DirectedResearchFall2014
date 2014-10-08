@@ -21,7 +21,6 @@
 # direct methods
 .method public constructor <init>(Lcom/bitrhymes/nativeutils/functions/LoadWebviewWithInApp;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 45
@@ -36,8 +35,8 @@
 # virtual methods
 .method public onPageFinished(Landroid/webkit/WebView;Ljava/lang/String;)V
     .locals 0
-    .parameter "view"
-    .parameter "url"
+    .param p1, "view"    # Landroid/webkit/WebView;
+    .param p2, "url"    # Ljava/lang/String;
 
     .prologue
     .line 61
@@ -49,9 +48,9 @@
 
 .method public onPageStarted(Landroid/webkit/WebView;Ljava/lang/String;Landroid/graphics/Bitmap;)V
     .locals 0
-    .parameter "view"
-    .parameter "url"
-    .parameter "favicon"
+    .param p1, "view"    # Landroid/webkit/WebView;
+    .param p2, "url"    # Ljava/lang/String;
+    .param p3, "favicon"    # Landroid/graphics/Bitmap;
 
     .prologue
     .line 48
@@ -63,8 +62,8 @@
 
 .method public shouldOverrideUrlLoading(Landroid/webkit/WebView;Ljava/lang/String;)Z
     .locals 1
-    .parameter "view"
-    .parameter "url"
+    .param p1, "view"    # Landroid/webkit/WebView;
+    .param p2, "url"    # Ljava/lang/String;
 
     .prologue
     .line 54

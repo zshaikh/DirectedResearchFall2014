@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/tapjoy/mraid/view/MraidView;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1765
@@ -57,7 +56,7 @@
     check-cast v0, Landroid/widget/FrameLayout;
 
     .line 1780
-    .local v0, background:Landroid/widget/FrameLayout;
+    .local v0, "background":Landroid/widget/FrameLayout;
     invoke-virtual {v0}, Landroid/widget/FrameLayout;->getParent()Landroid/view/ViewParent;
 
     move-result-object v1

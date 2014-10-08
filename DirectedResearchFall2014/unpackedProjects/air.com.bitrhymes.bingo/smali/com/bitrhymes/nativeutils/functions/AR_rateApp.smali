@@ -21,8 +21,8 @@
 # virtual methods
 .method public call(Lcom/adobe/fre/FREContext;[Lcom/adobe/fre/FREObject;)Lcom/adobe/fre/FREObject;
     .locals 8
-    .parameter "freContext"
-    .parameter "args"
+    .param p1, "freContext"    # Lcom/adobe/fre/FREContext;
+    .param p2, "args"    # [Lcom/adobe/fre/FREObject;
 
     .prologue
     const-string v4, "Appirater : AR_appLaunched,"
@@ -40,7 +40,7 @@
     move-result-object v1
 
     .line 22
-    .local v1, appTitle:Ljava/lang/String;
+    .local v1, "appTitle":Ljava/lang/String;
     const/4 v4, 0x1
 
     aget-object v4, p2, v4
@@ -50,7 +50,7 @@
     move-result-object v0
 
     .line 24
-    .local v0, appID:Ljava/lang/String;
+    .local v0, "appID":Ljava/lang/String;
     const-string v4, "Appirater : AR_appLaunched,"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -138,8 +138,8 @@
     invoke-direct {v3, v4, v5}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
     .line 33
-    .local v3, marketIntent:Landroid/content/Intent;
-    const/high16 v4, 0x4008
+    .local v3, "marketIntent":Landroid/content/Intent;
+    const/high16 v4, 0x40080000
 
     invoke-virtual {v3, v4}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
@@ -153,9 +153,9 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 39
-    .end local v0           #appID:Ljava/lang/String;
-    .end local v1           #appTitle:Ljava/lang/String;
-    .end local v3           #marketIntent:Landroid/content/Intent;
+    .end local v0    # "appID":Ljava/lang/String;
+    .end local v1    # "appTitle":Ljava/lang/String;
+    .end local v3    # "marketIntent":Landroid/content/Intent;
     :goto_0
     const/4 v4, 0x0
 
@@ -168,7 +168,7 @@
     move-object v2, v4
 
     .line 36
-    .local v2, e:Ljava/lang/Exception;
+    .local v2, "e":Ljava/lang/Exception;
     invoke-virtual {v2}, Ljava/lang/Exception;->printStackTrace()V
 
     .line 37

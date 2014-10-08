@@ -37,8 +37,8 @@
 # virtual methods
 .method public handleWebViewOnPageFinished(Landroid/webkit/WebView;Ljava/lang/String;)V
     .locals 2
-    .parameter "view"
-    .parameter "url"
+    .param p1, "view"    # Landroid/webkit/WebView;
+    .param p2, "url"    # Ljava/lang/String;
 
     .prologue
     .line 78
@@ -74,10 +74,10 @@
 
 .method public handleWebViewOnReceivedError(Landroid/webkit/WebView;ILjava/lang/String;Ljava/lang/String;)V
     .locals 2
-    .parameter "view"
-    .parameter "errorCode"
-    .parameter "description"
-    .parameter "failingUrl"
+    .param p1, "view"    # Landroid/webkit/WebView;
+    .param p2, "errorCode"    # I
+    .param p3, "description"    # Ljava/lang/String;
+    .param p4, "failingUrl"    # Ljava/lang/String;
 
     .prologue
     .line 61
@@ -118,7 +118,7 @@
 
 .method protected onCreate(Landroid/os/Bundle;)V
     .locals 1
-    .parameter "savedInstanceState"
+    .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
     const/4 v0, 0x0

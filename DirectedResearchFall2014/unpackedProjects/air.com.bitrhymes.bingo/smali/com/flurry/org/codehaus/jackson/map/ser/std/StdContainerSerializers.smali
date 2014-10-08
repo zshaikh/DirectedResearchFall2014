@@ -25,11 +25,10 @@
 
 .method public static collectionSerializer(Lcom/flurry/org/codehaus/jackson/type/JavaType;ZLcom/flurry/org/codehaus/jackson/map/TypeSerializer;Lcom/flurry/org/codehaus/jackson/map/BeanProperty;Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;)Lcom/flurry/org/codehaus/jackson/map/ser/std/ContainerSerializerBase;
     .locals 6
-    .parameter "elemType"
-    .parameter "staticTyping"
-    .parameter "vts"
-    .parameter "property"
-    .parameter
+    .param p0, "elemType"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .param p1, "staticTyping"    # Z
+    .param p2, "vts"    # Lcom/flurry/org/codehaus/jackson/map/TypeSerializer;
+    .param p3, "property"    # Lcom/flurry/org/codehaus/jackson/map/BeanProperty;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -48,7 +47,7 @@
 
     .prologue
     .line 40
-    .local p4, valueSerializer:Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
+    .local p4, "valueSerializer":Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
     new-instance v0, Lcom/flurry/org/codehaus/jackson/map/ser/std/CollectionSerializer;
 
     move-object v1, p0
@@ -68,8 +67,8 @@
 
 .method public static enumSetSerializer(Lcom/flurry/org/codehaus/jackson/type/JavaType;Lcom/flurry/org/codehaus/jackson/map/BeanProperty;)Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;
     .locals 1
-    .parameter "enumType"
-    .parameter "property"
+    .param p0, "enumType"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .param p1, "property"    # Lcom/flurry/org/codehaus/jackson/map/BeanProperty;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -92,11 +91,10 @@
 
 .method public static indexedListSerializer(Lcom/flurry/org/codehaus/jackson/type/JavaType;ZLcom/flurry/org/codehaus/jackson/map/TypeSerializer;Lcom/flurry/org/codehaus/jackson/map/BeanProperty;Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;)Lcom/flurry/org/codehaus/jackson/map/ser/std/ContainerSerializerBase;
     .locals 6
-    .parameter "elemType"
-    .parameter "staticTyping"
-    .parameter "vts"
-    .parameter "property"
-    .parameter
+    .param p0, "elemType"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .param p1, "staticTyping"    # Z
+    .param p2, "vts"    # Lcom/flurry/org/codehaus/jackson/map/TypeSerializer;
+    .param p3, "property"    # Lcom/flurry/org/codehaus/jackson/map/BeanProperty;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -115,7 +113,7 @@
 
     .prologue
     .line 33
-    .local p4, valueSerializer:Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
+    .local p4, "valueSerializer":Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
     new-instance v0, Lcom/flurry/org/codehaus/jackson/map/ser/std/StdContainerSerializers$IndexedListSerializer;
 
     move-object v1, p0
@@ -135,10 +133,10 @@
 
 .method public static iterableSerializer(Lcom/flurry/org/codehaus/jackson/type/JavaType;ZLcom/flurry/org/codehaus/jackson/map/TypeSerializer;Lcom/flurry/org/codehaus/jackson/map/BeanProperty;)Lcom/flurry/org/codehaus/jackson/map/ser/std/ContainerSerializerBase;
     .locals 1
-    .parameter "elemType"
-    .parameter "staticTyping"
-    .parameter "vts"
-    .parameter "property"
+    .param p0, "elemType"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .param p1, "staticTyping"    # Z
+    .param p2, "vts"    # Lcom/flurry/org/codehaus/jackson/map/TypeSerializer;
+    .param p3, "property"    # Lcom/flurry/org/codehaus/jackson/map/BeanProperty;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -163,10 +161,10 @@
 
 .method public static iteratorSerializer(Lcom/flurry/org/codehaus/jackson/type/JavaType;ZLcom/flurry/org/codehaus/jackson/map/TypeSerializer;Lcom/flurry/org/codehaus/jackson/map/BeanProperty;)Lcom/flurry/org/codehaus/jackson/map/ser/std/ContainerSerializerBase;
     .locals 1
-    .parameter "elemType"
-    .parameter "staticTyping"
-    .parameter "vts"
-    .parameter "property"
+    .param p0, "elemType"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .param p1, "staticTyping"    # Z
+    .param p2, "vts"    # Lcom/flurry/org/codehaus/jackson/map/TypeSerializer;
+    .param p3, "property"    # Lcom/flurry/org/codehaus/jackson/map/BeanProperty;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",

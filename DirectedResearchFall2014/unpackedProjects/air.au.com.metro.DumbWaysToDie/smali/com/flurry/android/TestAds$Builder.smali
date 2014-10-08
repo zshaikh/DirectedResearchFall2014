@@ -40,7 +40,6 @@
 
 .method private constructor <init>(B)V
     .locals 1
-    .parameter
 
     .prologue
     .line 68
@@ -180,7 +179,6 @@
 
 .method public setAdspacePlacement(I)Lcom/flurry/android/TestAds$Builder;
     .locals 3
-    .parameter
 
     .prologue
     const/4 v2, 0x0

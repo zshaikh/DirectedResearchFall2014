@@ -21,7 +21,7 @@
 # direct methods
 .method private constructor <init>(Ljava/io/OutputStream;)V
     .locals 0
-    .parameter "out"
+    .param p1, "out"    # Ljava/io/OutputStream;
 
     .prologue
     .line 192
@@ -36,8 +36,8 @@
 
 .method synthetic constructor <init>(Ljava/io/OutputStream;Lcom/flurry/org/apache/avro/io/BufferedBinaryEncoder$1;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
+    .param p1, "x0"    # Ljava/io/OutputStream;
+    .param p2, "x1"    # Lcom/flurry/org/apache/avro/io/BufferedBinaryEncoder$1;
 
     .prologue
     .line 189
@@ -68,9 +68,9 @@
 
 .method protected innerWrite([BII)V
     .locals 1
-    .parameter "bytes"
-    .parameter "off"
-    .parameter "len"
+    .param p1, "bytes"    # [B
+    .param p2, "off"    # I
+    .param p3, "len"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;

@@ -62,8 +62,8 @@
 
 .method static synthetic access$000(Lcom/fusepowered/m1/android/CachedVideoPlayerActivity;Ljava/lang/String;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
+    .param p0, "x0"    # Lcom/fusepowered/m1/android/CachedVideoPlayerActivity;
+    .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
     .line 36
@@ -74,7 +74,7 @@
 
 .method static synthetic access$100(Lcom/fusepowered/m1/android/CachedVideoPlayerActivity;)Lcom/fusepowered/m1/android/MMWebView;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/fusepowered/m1/android/CachedVideoPlayerActivity;
 
     .prologue
     .line 36
@@ -135,7 +135,7 @@
 
 .method private dismissAfter(J)V
     .locals 2
-    .parameter "delayMillis"
+    .param p1, "delayMillis"    # J
 
     .prologue
     .line 177
@@ -153,7 +153,7 @@
 
 .method private fadeButton(Lcom/fusepowered/m1/android/VideoImage;)V
     .locals 5
-    .parameter "image"
+    .param p1, "image"    # Lcom/fusepowered/m1/android/VideoImage;
 
     .prologue
     const/4 v4, 0x1
@@ -162,7 +162,7 @@
     move-object v1, p1
 
     .line 504
-    .local v1, videoImage:Lcom/fusepowered/m1/android/VideoImage;
+    .local v1, "videoImage":Lcom/fusepowered/m1/android/VideoImage;
     new-instance v0, Landroid/view/animation/AlphaAnimation;
 
     iget v2, v1, Lcom/fusepowered/m1/android/VideoImage;->fromAlpha:F
@@ -172,7 +172,7 @@
     invoke-direct {v0, v2, v3}, Landroid/view/animation/AlphaAnimation;-><init>(FF)V
 
     .line 505
-    .local v0, animation:Landroid/view/animation/AlphaAnimation;
+    .local v0, "animation":Landroid/view/animation/AlphaAnimation;
     iget-wide v2, v1, Lcom/fusepowered/m1/android/VideoImage;->fadeDuration:J
 
     invoke-virtual {v0, v2, v3}, Landroid/view/animation/AlphaAnimation;->setDuration(J)V
@@ -213,7 +213,7 @@
     .line 214
     const/4 v0, 0x0
 
-    .local v0, i:I
+    .local v0, "i":I
     :goto_0
     iget-object v3, p0, Lcom/fusepowered/m1/android/CachedVideoPlayerActivity;->videoAd:Lcom/fusepowered/m1/android/VideoAd;
 
@@ -237,7 +237,7 @@
     check-cast v2, Lcom/fusepowered/m1/android/VideoImage;
 
     .line 217
-    .local v2, videoImage:Lcom/fusepowered/m1/android/VideoImage;
+    .local v2, "videoImage":Lcom/fusepowered/m1/android/VideoImage;
     iget-boolean v3, v2, Lcom/fusepowered/m1/android/VideoImage;->isLeaveBehind:Z
 
     if-nez v3, :cond_0
@@ -272,7 +272,7 @@
     :cond_1
     const/4 v1, 0x0
 
-    .local v1, j:I
+    .local v1, "j":I
     :goto_1
     iget-object v3, p0, Lcom/fusepowered/m1/android/CachedVideoPlayerActivity;->videoAd:Lcom/fusepowered/m1/android/VideoAd;
 
@@ -340,9 +340,9 @@
     goto :goto_0
 
     .line 226
-    .end local v0           #i:I
-    .end local v1           #j:I
-    .end local v2           #videoImage:Lcom/fusepowered/m1/android/VideoImage;
+    .end local v0    # "i":I
+    .end local v1    # "j":I
+    .end local v2    # "videoImage":Lcom/fusepowered/m1/android/VideoImage;
     :cond_3
     return-void
 .end method
@@ -381,7 +381,7 @@
 
 .method private initHudSeconds(Landroid/view/ViewGroup;)V
     .locals 6
-    .parameter "parent"
+    .param p1, "parent"    # Landroid/view/ViewGroup;
 
     .prologue
     const/4 v5, -0x2
@@ -423,9 +423,9 @@
     .line 669
     iget-object v1, p0, Lcom/fusepowered/m1/android/CachedVideoPlayerActivity;->hudSeconds:Landroid/widget/TextView;
 
-    const/high16 v2, 0x3f80
+    const/high16 v2, 0x3f800000
 
-    const/high16 v3, -0x100
+    const/high16 v3, -0x1000000
 
     invoke-virtual {v1, v2, v4, v4, v3}, Landroid/widget/TextView;->setShadowLayer(FFFI)V
 
@@ -435,7 +435,7 @@
     invoke-direct {v0, v5, v5}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
     .line 672
-    .local v0, hudSecLp:Landroid/widget/RelativeLayout$LayoutParams;
+    .local v0, "hudSecLp":Landroid/widget/RelativeLayout$LayoutParams;
     const/16 v1, 0xa
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
@@ -458,7 +458,7 @@
 
 .method private initHudStaticText(Landroid/view/ViewGroup;)V
     .locals 6
-    .parameter "parent"
+    .param p1, "parent"    # Landroid/view/ViewGroup;
 
     .prologue
     const/4 v5, -0x2
@@ -507,9 +507,9 @@
     .line 655
     iget-object v1, p0, Lcom/fusepowered/m1/android/CachedVideoPlayerActivity;->hudStaticText:Landroid/widget/TextView;
 
-    const/high16 v2, 0x3f80
+    const/high16 v2, 0x3f800000
 
-    const/high16 v3, -0x100
+    const/high16 v3, -0x1000000
 
     invoke-virtual {v1, v2, v4, v4, v3}, Landroid/widget/TextView;->setShadowLayer(FFFI)V
 
@@ -519,7 +519,7 @@
     invoke-direct {v0, v5, v5}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
     .line 658
-    .local v0, hudLp:Landroid/widget/RelativeLayout$LayoutParams;
+    .local v0, "hudLp":Landroid/widget/RelativeLayout$LayoutParams;
     const/16 v1, 0xa
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
@@ -570,7 +570,7 @@
     invoke-direct {v0, p0}, Lcom/fusepowered/m1/android/CachedVideoPlayerActivity$CachedVideoWebViewClientListener;-><init>(Lcom/fusepowered/m1/android/CachedVideoPlayerActivity;)V
 
     .line 396
-    .local v0, basicListener:Lcom/fusepowered/m1/android/MMWebViewClient$MMWebViewClientListener;
+    .local v0, "basicListener":Lcom/fusepowered/m1/android/MMWebViewClient$MMWebViewClientListener;
     iget-object v2, p0, Lcom/fusepowered/m1/android/CachedVideoPlayerActivity;->mWebView:Lcom/fusepowered/m1/android/MMWebView;
 
     new-instance v3, Lcom/fusepowered/m1/android/InterstitialWebViewClient;
@@ -587,7 +587,7 @@
     invoke-direct {v1, v6, v6}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
     .line 398
-    .local v1, webLayoutParams:Landroid/widget/RelativeLayout$LayoutParams;
+    .local v1, "webLayoutParams":Landroid/widget/RelativeLayout$LayoutParams;
     const/16 v2, 0xd
 
     invoke-virtual {v1, v2}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
@@ -617,7 +617,7 @@
 
 .method private onPageFinished(Ljava/lang/String;)V
     .locals 1
-    .parameter "url"
+    .param p1, "url"    # Ljava/lang/String;
 
     .prologue
     .line 384
@@ -739,7 +739,7 @@
 
 .method public dispatchTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 9
-    .parameter "ev"
+    .param p1, "ev"    # Landroid/view/MotionEvent;
 
     .prologue
     const/4 v8, 0x1
@@ -768,7 +768,7 @@
     .line 724
     const/4 v1, 0x0
 
-    .local v1, i:I
+    .local v1, "i":I
     :goto_0
     iget-object v4, p0, Lcom/fusepowered/m1/android/CachedVideoPlayerActivity;->videoAd:Lcom/fusepowered/m1/android/VideoAd;
 
@@ -792,7 +792,7 @@
     check-cast v3, Lcom/fusepowered/m1/android/VideoImage;
 
     .line 727
-    .local v3, videoImage:Lcom/fusepowered/m1/android/VideoImage;
+    .local v3, "videoImage":Lcom/fusepowered/m1/android/VideoImage;
     iget-object v4, v3, Lcom/fusepowered/m1/android/VideoImage;->button:Landroid/widget/ImageButton;
 
     iget v5, v3, Lcom/fusepowered/m1/android/VideoImage;->fromAlpha:F
@@ -816,7 +816,7 @@
     move-result-object v2
 
     .line 732
-    .local v2, message:Landroid/os/Message;
+    .local v2, "message":Landroid/os/Message;
     iget-object v4, p0, Lcom/fusepowered/m1/android/CachedVideoPlayerActivity;->logTimeAndEventhandler:Landroid/os/Handler;
 
     iget-wide v5, v3, Lcom/fusepowered/m1/android/VideoImage;->inactivityTimeout:J
@@ -824,7 +824,7 @@
     invoke-virtual {v4, v2, v5, v6}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
     .line 724
-    .end local v2           #message:Landroid/os/Message;
+    .end local v2    # "message":Landroid/os/Message;
     :cond_1
     :goto_1
     add-int/lit8 v1, v1, 0x1
@@ -856,7 +856,7 @@
     invoke-direct {v0, v4, v5}, Landroid/view/animation/AlphaAnimation;-><init>(FF)V
 
     .line 742
-    .local v0, animation:Landroid/view/animation/AlphaAnimation;
+    .local v0, "animation":Landroid/view/animation/AlphaAnimation;
     iget-wide v4, v3, Lcom/fusepowered/m1/android/VideoImage;->fadeDuration:J
 
     invoke-virtual {v0, v4, v5}, Landroid/view/animation/AlphaAnimation;->setDuration(J)V
@@ -878,7 +878,7 @@
     goto :goto_1
 
     .line 749
-    .end local v0           #animation:Landroid/view/animation/AlphaAnimation;
+    .end local v0    # "animation":Landroid/view/animation/AlphaAnimation;
     :cond_3
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
@@ -896,8 +896,8 @@
     goto :goto_1
 
     .line 757
-    .end local v1           #i:I
-    .end local v3           #videoImage:Lcom/fusepowered/m1/android/VideoImage;
+    .end local v1    # "i":I
+    .end local v3    # "videoImage":Lcom/fusepowered/m1/android/VideoImage;
     :cond_4
     invoke-super {p0, p1}, Lcom/fusepowered/m1/android/VideoPlayerActivity;->dispatchTouchEvent(Landroid/view/MotionEvent;)Z
 
@@ -943,7 +943,7 @@
 
     move-result-object v0
 
-    .local v0, i$:Ljava/util/Iterator;
+    .local v0, "i$":Ljava/util/Iterator;
     :cond_2
     :goto_0
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
@@ -959,7 +959,7 @@
     check-cast v1, Lcom/fusepowered/m1/android/VideoImage;
 
     .line 706
-    .local v1, image:Lcom/fusepowered/m1/android/VideoImage;
+    .local v1, "image":Lcom/fusepowered/m1/android/VideoImage;
     iget-object v2, v1, Lcom/fusepowered/m1/android/VideoImage;->button:Landroid/widget/ImageButton;
 
     if-eqz v2, :cond_2
@@ -976,7 +976,7 @@
 
 .method protected errorPlayVideo(Ljava/lang/String;)V
     .locals 3
-    .parameter "error"
+    .param p1, "error"    # Ljava/lang/String;
 
     .prologue
     .line 107
@@ -1036,7 +1036,7 @@
 
 .method public handleMessage(Landroid/os/Message;)Z
     .locals 13
-    .parameter "msg"
+    .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
     .line 415
@@ -1045,7 +1045,7 @@
     packed-switch v8, :pswitch_data_0
 
     .line 498
-    .end local p1
+    .end local p1    # "msg":Landroid/os/Message;
     :cond_0
     :goto_0
     const/4 v8, 0x1
@@ -1053,7 +1053,7 @@
     return v8
 
     .line 418
-    .restart local p1
+    .restart local p1    # "msg":Landroid/os/Message;
     :pswitch_0
     invoke-virtual {p0}, Lcom/fusepowered/m1/android/CachedVideoPlayerActivity;->canFadeButtons()Z
 
@@ -1064,7 +1064,7 @@
     .line 420
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .end local p1
+    .end local p1    # "msg":Landroid/os/Message;
     check-cast p1, Lcom/fusepowered/m1/android/VideoImage;
 
     invoke-direct {p0, p1}, Lcom/fusepowered/m1/android/CachedVideoPlayerActivity;->fadeButton(Lcom/fusepowered/m1/android/VideoImage;)V
@@ -1072,14 +1072,14 @@
     goto :goto_0
 
     .line 424
-    .restart local p1
+    .restart local p1    # "msg":Landroid/os/Message;
     :pswitch_1
     iget-object v3, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v3, Lcom/fusepowered/m1/android/VideoImage;
 
     .line 427
-    .local v3, image:Lcom/fusepowered/m1/android/VideoImage;
+    .local v3, "image":Lcom/fusepowered/m1/android/VideoImage;
     :try_start_0
     iget-object v8, p0, Lcom/fusepowered/m1/android/CachedVideoPlayerActivity;->buttonsLayout:Landroid/widget/RelativeLayout;
 
@@ -1170,14 +1170,14 @@
     move-object v1, v8
 
     .line 432
-    .local v1, e:Ljava/lang/IllegalStateException;
+    .local v1, "e":Ljava/lang/IllegalStateException;
     invoke-virtual {v1}, Ljava/lang/IllegalStateException;->printStackTrace()V
 
     goto :goto_1
 
     .line 444
-    .end local v1           #e:Ljava/lang/IllegalStateException;
-    .end local v3           #image:Lcom/fusepowered/m1/android/VideoImage;
+    .end local v1    # "e":Ljava/lang/IllegalStateException;
+    .end local v3    # "image":Lcom/fusepowered/m1/android/VideoImage;
     :pswitch_2
     :try_start_1
     iget-object v8, p0, Lcom/fusepowered/m1/android/CachedVideoPlayerActivity;->mVideoView:Landroid/widget/VideoView;
@@ -1200,7 +1200,7 @@
     move-result v0
 
     .line 448
-    .local v0, currentPosition:I
+    .local v0, "currentPosition":I
     iget v8, p0, Lcom/fusepowered/m1/android/CachedVideoPlayerActivity;->lastVideoPosition:I
 
     if-le v0, v8, :cond_5
@@ -1224,7 +1224,7 @@
     :cond_2
     const/4 v2, 0x0
 
-    .local v2, i:I
+    .local v2, "i":I
     :goto_2
     iget-object v8, p0, Lcom/fusepowered/m1/android/CachedVideoPlayerActivity;->videoAd:Lcom/fusepowered/m1/android/VideoAd;
 
@@ -1248,7 +1248,7 @@
     check-cast v7, Lcom/fusepowered/m1/android/VideoLogEvent;
 
     .line 457
-    .local v7, videoEvent:Lcom/fusepowered/m1/android/VideoLogEvent;
+    .local v7, "videoEvent":Lcom/fusepowered/m1/android/VideoLogEvent;
     if-eqz v7, :cond_3
 
     .line 459
@@ -1273,7 +1273,7 @@
     .line 461
     const/4 v4, 0x0
 
-    .local v4, j:I
+    .local v4, "j":I
     :goto_3
     iget-object v8, v7, Lcom/fusepowered/m1/android/VideoLogEvent;->activities:[Ljava/lang/String;
 
@@ -1294,15 +1294,15 @@
     goto :goto_3
 
     .line 454
-    .end local v4           #j:I
+    .end local v4    # "j":I
     :cond_3
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_2
 
     .line 469
-    .end local v2           #i:I
-    .end local v7           #videoEvent:Lcom/fusepowered/m1/android/VideoLogEvent;
+    .end local v2    # "i":I
+    .end local v7    # "videoEvent":Lcom/fusepowered/m1/android/VideoLogEvent;
     :cond_4
     iput v0, p0, Lcom/fusepowered/m1/android/CachedVideoPlayerActivity;->lastVideoPosition:I
 
@@ -1331,7 +1331,7 @@
 
     int-to-float v10, v0
 
-    const/high16 v11, 0x447a
+    const/high16 v11, 0x447a0000
 
     div-float/2addr v10, v11
 
@@ -1379,7 +1379,7 @@
     div-long v5, v8, v10
 
     .line 478
-    .local v5, seconds:J
+    .local v5, "seconds":J
     const-wide/16 v8, 0x0
 
     cmp-long v8, v5, v8
@@ -1401,8 +1401,8 @@
     invoke-virtual {v8, v9}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 489
-    .end local v0           #currentPosition:I
-    .end local v5           #seconds:J
+    .end local v0    # "currentPosition":I
+    .end local v5    # "seconds":J
     :cond_7
     :goto_4
     iget-object v8, p0, Lcom/fusepowered/m1/android/CachedVideoPlayerActivity;->logTimeAndEventhandler:Landroid/os/Handler;
@@ -1430,15 +1430,15 @@
     move-object v1, v8
 
     .line 493
-    .restart local v1       #e:Ljava/lang/IllegalStateException;
+    .restart local v1    # "e":Ljava/lang/IllegalStateException;
     invoke-virtual {v1}, Ljava/lang/IllegalStateException;->printStackTrace()V
 
     goto/16 :goto_0
 
     .line 485
-    .end local v1           #e:Ljava/lang/IllegalStateException;
-    .restart local v0       #currentPosition:I
-    .restart local v5       #seconds:J
+    .end local v1    # "e":Ljava/lang/IllegalStateException;
+    .restart local v0    # "currentPosition":I
+    .restart local v5    # "seconds":J
     :cond_8
     :try_start_2
     invoke-direct {p0}, Lcom/fusepowered/m1/android/CachedVideoPlayerActivity;->hideHud()V
@@ -1468,7 +1468,7 @@
     move-result-object v9
 
     .line 233
-    .local v9, parent:Landroid/widget/RelativeLayout;
+    .local v9, "parent":Landroid/widget/RelativeLayout;
     new-instance v10, Landroid/os/Handler;
 
     invoke-direct {v10, p0}, Landroid/os/Handler;-><init>(Landroid/os/Handler$Callback;)V
@@ -1555,7 +1555,7 @@
     const/4 v3, 0x0
 
     .line 259
-    .local v3, buttons:Ljava/util/List;,"Ljava/util/List<Lcom/fusepowered/m1/android/VideoImage;>;"
+    .local v3, "buttons":Ljava/util/List;, "Ljava/util/List<Lcom/fusepowered/m1/android/VideoImage;>;"
     iget-object v10, p0, Lcom/fusepowered/m1/android/CachedVideoPlayerActivity;->videoAd:Lcom/fusepowered/m1/android/VideoAd;
 
     if-eqz v10, :cond_3
@@ -1577,10 +1577,10 @@
     move-result-object v0
 
     .line 266
-    .local v0, adDir:Ljava/io/File;
+    .local v0, "adDir":Ljava/io/File;
     const/4 v5, 0x0
 
-    .local v5, i:I
+    .local v5, "i":I
     :goto_1
     invoke-interface {v3}, Ljava/util/List;->size()I
 
@@ -1596,14 +1596,14 @@
     check-cast v2, Lcom/fusepowered/m1/android/VideoImage;
 
     .line 272
-    .local v2, button:Lcom/fusepowered/m1/android/VideoImage;
+    .local v2, "button":Lcom/fusepowered/m1/android/VideoImage;
     new-instance v7, Landroid/widget/ImageButton;
 
     iget-object v10, p0, Lcom/fusepowered/m1/android/CachedVideoPlayerActivity;->activity:Lcom/fusepowered/m1/android/MMActivity;
 
     invoke-direct {v7, v10}, Landroid/widget/ImageButton;-><init>(Landroid/content/Context;)V
 
-    .local v7, newButton:Landroid/widget/ImageButton;
+    .local v7, "newButton":Landroid/widget/ImageButton;
     iput-object v7, v2, Lcom/fusepowered/m1/android/VideoImage;->button:Landroid/widget/ImageButton;
 
     .line 275
@@ -1667,7 +1667,7 @@
     move-result-object v1
 
     .line 277
-    .local v1, bitmap:Landroid/graphics/Bitmap;
+    .local v1, "bitmap":Landroid/graphics/Bitmap;
     if-eqz v1, :cond_6
 
     .line 278
@@ -1676,7 +1676,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 290
-    .end local v1           #bitmap:Landroid/graphics/Bitmap;
+    .end local v1    # "bitmap":Landroid/graphics/Bitmap;
     :goto_2
     iget v10, v2, Lcom/fusepowered/m1/android/VideoImage;->fromAlpha:F
 
@@ -1709,7 +1709,7 @@
     invoke-virtual {v7, v10}, Landroid/widget/ImageButton;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
 
     .line 297
-    const/high16 v10, -0x100
+    const/high16 v10, -0x1000000
 
     invoke-virtual {v7, v10}, Landroid/widget/ImageButton;->setBackgroundColor(I)V
 
@@ -1723,7 +1723,7 @@
     invoke-direct {v8, v10, v11}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
     .line 310
-    .local v8, newButtonLp:Landroid/widget/RelativeLayout$LayoutParams;
+    .local v8, "newButtonLp":Landroid/widget/RelativeLayout$LayoutParams;
     :goto_3
     iget-object v10, v2, Lcom/fusepowered/m1/android/VideoImage;->linkUrl:Ljava/lang/String;
 
@@ -1763,7 +1763,7 @@
     move-result-object v6
 
     .line 332
-    .local v6, message:Landroid/os/Message;
+    .local v6, "message":Landroid/os/Message;
     iget-object v10, p0, Lcom/fusepowered/m1/android/CachedVideoPlayerActivity;->logTimeAndEventhandler:Landroid/os/Handler;
 
     iget-wide v11, v2, Lcom/fusepowered/m1/android/VideoImage;->appearanceDelay:J
@@ -1771,7 +1771,7 @@
     invoke-virtual {v10, v6, v11, v12}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
     .line 340
-    .end local v6           #message:Landroid/os/Message;
+    .end local v6    # "message":Landroid/os/Message;
     :goto_4
     iget-wide v10, v2, Lcom/fusepowered/m1/android/VideoImage;->inactivityTimeout:J
 
@@ -1791,7 +1791,7 @@
     move-result-object v6
 
     .line 343
-    .restart local v6       #message:Landroid/os/Message;
+    .restart local v6    # "message":Landroid/os/Message;
     iget-object v10, p0, Lcom/fusepowered/m1/android/CachedVideoPlayerActivity;->logTimeAndEventhandler:Landroid/os/Handler;
 
     iget-wide v11, v2, Lcom/fusepowered/m1/android/VideoImage;->inactivityTimeout:J
@@ -1807,15 +1807,15 @@
     invoke-virtual {v10, v6, v11, v12}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
     .line 266
-    .end local v6           #message:Landroid/os/Message;
+    .end local v6    # "message":Landroid/os/Message;
     :cond_5
     add-int/lit8 v5, v5, 0x1
 
     goto/16 :goto_1
 
     .line 281
-    .end local v8           #newButtonLp:Landroid/widget/RelativeLayout$LayoutParams;
-    .restart local v1       #bitmap:Landroid/graphics/Bitmap;
+    .end local v8    # "newButtonLp":Landroid/widget/RelativeLayout$LayoutParams;
+    .restart local v1    # "bitmap":Landroid/graphics/Bitmap;
     :cond_6
     :try_start_1
     new-instance v10, Ljava/lang/StringBuilder;
@@ -1883,20 +1883,20 @@
     goto/16 :goto_2
 
     .line 284
-    .end local v1           #bitmap:Landroid/graphics/Bitmap;
+    .end local v1    # "bitmap":Landroid/graphics/Bitmap;
     :catch_0
     move-exception v10
 
     move-object v4, v10
 
     .line 286
-    .local v4, e:Ljava/lang/Exception;
+    .local v4, "e":Ljava/lang/Exception;
     invoke-static {v4}, Lcom/fusepowered/m1/android/MMSDK$Log;->e(Ljava/lang/Throwable;)V
 
     goto/16 :goto_2
 
     .line 302
-    .end local v4           #e:Ljava/lang/Exception;
+    .end local v4    # "e":Ljava/lang/Exception;
     :cond_7
     const/4 v10, 0x0
 
@@ -1912,7 +1912,7 @@
     invoke-direct {v8, v10, v11}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
     .line 304
-    .restart local v8       #newButtonLp:Landroid/widget/RelativeLayout$LayoutParams;
+    .restart local v8    # "newButtonLp":Landroid/widget/RelativeLayout$LayoutParams;
     const-string v10, "Button: %d Anchor: %d Position: %d Anchor2: %d Position2: %d"
 
     const/4 v11, 0x5
@@ -2009,9 +2009,9 @@
     goto/16 :goto_4
 
     .line 348
-    .end local v2           #button:Lcom/fusepowered/m1/android/VideoImage;
-    .end local v7           #newButton:Landroid/widget/ImageButton;
-    .end local v8           #newButtonLp:Landroid/widget/RelativeLayout$LayoutParams;
+    .end local v2    # "button":Lcom/fusepowered/m1/android/VideoImage;
+    .end local v7    # "newButton":Landroid/widget/ImageButton;
+    .end local v8    # "newButtonLp":Landroid/widget/RelativeLayout$LayoutParams;
     :cond_9
     iget-object v10, p0, Lcom/fusepowered/m1/android/CachedVideoPlayerActivity;->buttonsLayout:Landroid/widget/RelativeLayout;
 
@@ -2026,8 +2026,8 @@
     invoke-virtual {v9, v10, v11}, Landroid/widget/RelativeLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 350
-    .end local v0           #adDir:Ljava/io/File;
-    .end local v5           #i:I
+    .end local v0    # "adDir":Ljava/io/File;
+    .end local v5    # "i":I
     :cond_a
     iget-object v10, p0, Lcom/fusepowered/m1/android/CachedVideoPlayerActivity;->buttonsLayout:Landroid/widget/RelativeLayout;
 
@@ -2054,7 +2054,7 @@
 
 .method protected initSavedInstance(Landroid/os/Bundle;)V
     .locals 3
-    .parameter "savedInstanceState"
+    .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
     .line 62
@@ -2075,7 +2075,7 @@
     move-result-object v0
 
     .line 66
-    .local v0, videoId:Ljava/lang/String;
+    .local v0, "videoId":Ljava/lang/String;
     iget-object v1, p0, Lcom/fusepowered/m1/android/CachedVideoPlayerActivity;->activity:Lcom/fusepowered/m1/android/MMActivity;
 
     invoke-static {v1, v0}, Lcom/fusepowered/m1/android/AdCache;->load(Landroid/content/Context;Ljava/lang/String;)Lcom/fusepowered/m1/android/CachedAd;
@@ -2106,7 +2106,7 @@
     iput-boolean v1, p0, Lcom/fusepowered/m1/android/CachedVideoPlayerActivity;->hasCountdownHud:Z
 
     .line 82
-    .end local v0           #videoId:Ljava/lang/String;
+    .end local v0    # "videoId":Ljava/lang/String;
     :cond_0
     :goto_0
     return-void
@@ -2162,7 +2162,7 @@
 
 .method loadUrlForMraidInjection(Ljava/lang/String;)V
     .locals 2
-    .parameter "url"
+    .param p1, "url"    # Ljava/lang/String;
 
     .prologue
     .line 407
@@ -2171,7 +2171,7 @@
     invoke-direct {v0, p0, p1}, Lcom/fusepowered/m1/android/CachedVideoPlayerActivity$FetchWebViewContentTask;-><init>(Lcom/fusepowered/m1/android/CachedVideoPlayerActivity;Ljava/lang/String;)V
 
     .line 408
-    .local v0, task:Lcom/fusepowered/m1/android/CachedVideoPlayerActivity$FetchWebViewContentTask;
+    .local v0, "task":Lcom/fusepowered/m1/android/CachedVideoPlayerActivity$FetchWebViewContentTask;
     const/4 v1, 0x0
 
     new-array v1, v1, [Ljava/lang/Void;
@@ -2184,7 +2184,7 @@
 
 .method public onCompletion(Landroid/media/MediaPlayer;)V
     .locals 1
-    .parameter "mp"
+    .param p1, "mp"    # Landroid/media/MediaPlayer;
 
     .prologue
     .line 87
@@ -2218,7 +2218,7 @@
 
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 2
-    .parameter "savedInstanceState"
+    .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
     .line 54
@@ -2244,9 +2244,9 @@
 
 .method public onError(Landroid/media/MediaPlayer;II)Z
     .locals 4
-    .parameter "mp"
-    .parameter "what"
-    .parameter "extra"
+    .param p1, "mp"    # Landroid/media/MediaPlayer;
+    .param p2, "what"    # I
+    .param p3, "extra"    # I
 
     .prologue
     .line 99
@@ -2288,7 +2288,7 @@
 
 .method protected onRestoreInstanceState(Landroid/os/Bundle;)V
     .locals 1
-    .parameter "savedInstanceState"
+    .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
     .line 126
@@ -2344,7 +2344,7 @@
 
 .method protected onSaveInstanceState(Landroid/os/Bundle;)V
     .locals 2
-    .parameter "outState"
+    .param p1, "outState"    # Landroid/os/Bundle;
 
     .prologue
     .line 119
@@ -2431,7 +2431,7 @@
 
 .method protected playVideo(I)V
     .locals 4
-    .parameter "position"
+    .param p1, "position"    # I
 
     .prologue
     const/4 v2, 0x2
@@ -2550,7 +2550,7 @@
     iget-object v2, v5, Lcom/fusepowered/m1/android/VideoAd;->buttons:Ljava/util/ArrayList;
 
     .line 599
-    .local v2, buttons:Ljava/util/List;,"Ljava/util/List<Lcom/fusepowered/m1/android/VideoImage;>;"
+    .local v2, "buttons":Ljava/util/List;, "Ljava/util/List<Lcom/fusepowered/m1/android/VideoImage;>;"
     iget-object v5, p0, Lcom/fusepowered/m1/android/CachedVideoPlayerActivity;->logTimeAndEventhandler:Landroid/os/Handler;
 
     invoke-virtual {v5, v10}, Landroid/os/Handler;->removeMessages(I)V
@@ -2582,7 +2582,7 @@
     .line 607
     const/4 v3, 0x0
 
-    .local v3, i:I
+    .local v3, "i":I
     :goto_0
     invoke-interface {v2}, Ljava/util/List;->size()I
 
@@ -2598,7 +2598,7 @@
     check-cast v1, Lcom/fusepowered/m1/android/VideoImage;
 
     .line 611
-    .local v1, buttonData:Lcom/fusepowered/m1/android/VideoImage;
+    .local v1, "buttonData":Lcom/fusepowered/m1/android/VideoImage;
     if-eqz v1, :cond_3
 
     .line 613
@@ -2612,7 +2612,7 @@
     iget-object v0, v1, Lcom/fusepowered/m1/android/VideoImage;->button:Landroid/widget/ImageButton;
 
     .line 616
-    .local v0, button:Landroid/widget/ImageButton;
+    .local v0, "button":Landroid/widget/ImageButton;
     iget-object v5, p0, Lcom/fusepowered/m1/android/CachedVideoPlayerActivity;->buttonsLayout:Landroid/widget/RelativeLayout;
 
     invoke-virtual {v5, v0}, Landroid/widget/RelativeLayout;->removeView(Landroid/view/View;)V
@@ -2625,7 +2625,7 @@
     move-result-object v4
 
     .line 618
-    .local v4, message:Landroid/os/Message;
+    .local v4, "message":Landroid/os/Message;
     iget-object v5, p0, Lcom/fusepowered/m1/android/CachedVideoPlayerActivity;->logTimeAndEventhandler:Landroid/os/Handler;
 
     iget-wide v6, v1, Lcom/fusepowered/m1/android/VideoImage;->appearanceDelay:J
@@ -2633,8 +2633,8 @@
     invoke-virtual {v5, v4, v6, v7}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
     .line 622
-    .end local v0           #button:Landroid/widget/ImageButton;
-    .end local v4           #message:Landroid/os/Message;
+    .end local v0    # "button":Landroid/widget/ImageButton;
+    .end local v4    # "message":Landroid/os/Message;
     :cond_2
     iget-wide v5, v1, Lcom/fusepowered/m1/android/VideoImage;->inactivityTimeout:J
 
@@ -2650,7 +2650,7 @@
     move-result-object v4
 
     .line 625
-    .restart local v4       #message:Landroid/os/Message;
+    .restart local v4    # "message":Landroid/os/Message;
     iget-object v5, p0, Lcom/fusepowered/m1/android/CachedVideoPlayerActivity;->logTimeAndEventhandler:Landroid/os/Handler;
 
     iget-wide v6, v1, Lcom/fusepowered/m1/android/VideoImage;->inactivityTimeout:J
@@ -2666,15 +2666,15 @@
     invoke-virtual {v5, v4, v6, v7}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
     .line 607
-    .end local v4           #message:Landroid/os/Message;
+    .end local v4    # "message":Landroid/os/Message;
     :cond_3
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
     .line 631
-    .end local v1           #buttonData:Lcom/fusepowered/m1/android/VideoImage;
-    .end local v3           #i:I
+    .end local v1    # "buttonData":Lcom/fusepowered/m1/android/VideoImage;
+    .end local v3    # "i":I
     :cond_4
     iget-object v5, p0, Lcom/fusepowered/m1/android/CachedVideoPlayerActivity;->logTimeAndEventhandler:Landroid/os/Handler;
 
@@ -2703,7 +2703,7 @@
     invoke-direct {p0}, Lcom/fusepowered/m1/android/CachedVideoPlayerActivity;->showHud()V
 
     .line 637
-    .end local v2           #buttons:Ljava/util/List;,"Ljava/util/List<Lcom/fusepowered/m1/android/VideoImage;>;"
+    .end local v2    # "buttons":Ljava/util/List;, "Ljava/util/List<Lcom/fusepowered/m1/android/VideoImage;>;"
     :cond_6
     invoke-super {p0}, Lcom/fusepowered/m1/android/VideoPlayerActivity;->restartVideo()V
 
@@ -2773,7 +2773,7 @@
     div-long v5, v7, v9
 
     .line 533
-    .local v5, seconds:J
+    .local v5, "seconds":J
     const-wide/16 v7, 0x0
 
     cmp-long v7, v5, v7
@@ -2795,7 +2795,7 @@
     invoke-virtual {v7, v8}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 543
-    .end local v5           #seconds:J
+    .end local v5    # "seconds":J
     :cond_1
     :goto_0
     iget-object v7, p0, Lcom/fusepowered/m1/android/CachedVideoPlayerActivity;->videoAd:Lcom/fusepowered/m1/android/VideoAd;
@@ -2807,7 +2807,7 @@
     .line 545
     const/4 v3, 0x0
 
-    .local v3, i:I
+    .local v3, "i":I
     :goto_1
     iget-object v7, p0, Lcom/fusepowered/m1/android/CachedVideoPlayerActivity;->videoAd:Lcom/fusepowered/m1/android/VideoAd;
 
@@ -2831,11 +2831,11 @@
     check-cast v0, Lcom/fusepowered/m1/android/VideoImage;
 
     .line 548
-    .local v0, button:Lcom/fusepowered/m1/android/VideoImage;
+    .local v0, "button":Lcom/fusepowered/m1/android/VideoImage;
     const-wide/16 v1, 0x0
 
     .line 550
-    .local v1, delay:J
+    .local v1, "delay":J
     iget-wide v7, v0, Lcom/fusepowered/m1/android/VideoImage;->appearanceDelay:J
 
     const-wide/16 v9, 0x0
@@ -2866,7 +2866,7 @@
     move-result-object v4
 
     .line 553
-    .local v4, message:Landroid/os/Message;
+    .local v4, "message":Landroid/os/Message;
     iget-wide v7, v0, Lcom/fusepowered/m1/android/VideoImage;->appearanceDelay:J
 
     iget v9, p0, Lcom/fusepowered/m1/android/CachedVideoPlayerActivity;->currentVideoPosition:I
@@ -2892,7 +2892,7 @@
     invoke-virtual {v7, v4, v1, v2}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
     .line 559
-    .end local v4           #message:Landroid/os/Message;
+    .end local v4    # "message":Landroid/os/Message;
     :cond_3
     iget-wide v7, v0, Lcom/fusepowered/m1/android/VideoImage;->inactivityTimeout:J
 
@@ -2912,7 +2912,7 @@
     move-result-object v4
 
     .line 562
-    .restart local v4       #message:Landroid/os/Message;
+    .restart local v4    # "message":Landroid/os/Message;
     iget-object v7, p0, Lcom/fusepowered/m1/android/CachedVideoPlayerActivity;->logTimeAndEventhandler:Landroid/os/Handler;
 
     iget-wide v8, v0, Lcom/fusepowered/m1/android/VideoImage;->inactivityTimeout:J
@@ -2926,24 +2926,24 @@
     invoke-virtual {v7, v4, v8, v9}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
     .line 545
-    .end local v4           #message:Landroid/os/Message;
+    .end local v4    # "message":Landroid/os/Message;
     :cond_4
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_1
 
     .line 540
-    .end local v0           #button:Lcom/fusepowered/m1/android/VideoImage;
-    .end local v1           #delay:J
-    .end local v3           #i:I
-    .restart local v5       #seconds:J
+    .end local v0    # "button":Lcom/fusepowered/m1/android/VideoImage;
+    .end local v1    # "delay":J
+    .end local v3    # "i":I
+    .restart local v5    # "seconds":J
     :cond_5
     invoke-direct {p0}, Lcom/fusepowered/m1/android/CachedVideoPlayerActivity;->hideHud()V
 
     goto :goto_0
 
     .line 568
-    .end local v5           #seconds:J
+    .end local v5    # "seconds":J
     :cond_6
     invoke-super {p0}, Lcom/fusepowered/m1/android/VideoPlayerActivity;->resumeVideo()V
 
@@ -2953,7 +2953,7 @@
 
 .method protected videoPlayerOnCompletion(Ljava/lang/String;)V
     .locals 4
-    .parameter "url"
+    .param p1, "url"    # Ljava/lang/String;
 
     .prologue
     .line 132

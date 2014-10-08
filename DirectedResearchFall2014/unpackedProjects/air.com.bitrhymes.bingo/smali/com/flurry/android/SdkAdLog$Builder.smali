@@ -359,7 +359,6 @@
 
 .method public setAdLogGUID(Ljava/lang/CharSequence;)Lcom/flurry/android/SdkAdLog$Builder;
     .locals 2
-    .parameter
 
     .prologue
     const/4 v1, 0x1
@@ -389,7 +388,6 @@
 
 .method public setSdkAdEvents(Ljava/util/List;)Lcom/flurry/android/SdkAdLog$Builder;
     .locals 3
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -431,7 +429,6 @@
 
 .method public setSessionId(J)Lcom/flurry/android/SdkAdLog$Builder;
     .locals 3
-    .parameter
 
     .prologue
     const/4 v2, 0x0

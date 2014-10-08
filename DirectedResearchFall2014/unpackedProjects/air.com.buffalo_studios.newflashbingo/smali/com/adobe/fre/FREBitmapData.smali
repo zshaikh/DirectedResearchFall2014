@@ -10,7 +10,7 @@
 # direct methods
 .method private constructor <init>(Lcom/adobe/fre/FREObject$CFREObjectWrapper;)V
     .locals 0
-    .parameter "obj"
+    .param p1, "obj"    # Lcom/adobe/fre/FREObject$CFREObjectWrapper;
 
     .prologue
     .line 24
@@ -22,7 +22,7 @@
 
 .method protected constructor <init>([Lcom/adobe/fre/FREObject;)V
     .locals 1
-    .parameter "constructorArgs"
+    .param p1, "constructorArgs"    # [Lcom/adobe/fre/FREObject;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lcom/adobe/fre/FRETypeMismatchException;,
@@ -46,10 +46,10 @@
 
 .method public static newBitmapData(IIZ[Ljava/lang/Byte;)Lcom/adobe/fre/FREBitmapData;
     .locals 9
-    .parameter "width"
-    .parameter "height"
-    .parameter "transparent"
-    .parameter "fillColor"
+    .param p0, "width"    # I
+    .param p1, "height"    # I
+    .param p2, "transparent"    # Z
+    .param p3, "fillColor"    # [Ljava/lang/Byte;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lcom/adobe/fre/FREASErrorException;,
@@ -82,7 +82,7 @@
     new-array v0, v7, [Lcom/adobe/fre/FREObject;
 
     .line 68
-    .local v0, array:[Lcom/adobe/fre/FREObject;
+    .local v0, "array":[Lcom/adobe/fre/FREObject;
     const/4 v5, 0x0
 
     new-instance v6, Lcom/adobe/fre/FREObject;
@@ -113,14 +113,14 @@
     const/4 v2, 0x0
 
     .line 72
-    .local v2, color:I
+    .local v2, "color":I
     const/4 v4, -0x1
 
     .line 73
-    .local v4, signMask:I
+    .local v4, "signMask":I
     const/4 v3, 0x0
 
-    .local v3, i:I
+    .local v3, "i":I
     :goto_0
     if-ge v3, v7, :cond_1
 
@@ -130,7 +130,7 @@
     mul-int/lit8 v1, v5, 0x8
 
     .line 77
-    .local v1, cShiftCount:I
+    .local v1, "cShiftCount":I
     aget-object v5, p3, v3
 
     invoke-virtual {v5}, Ljava/lang/Byte;->byteValue()B
@@ -152,7 +152,7 @@
     goto :goto_0
 
     .line 80
-    .end local v1           #cShiftCount:I
+    .end local v1    # "cShiftCount":I
     :cond_1
     new-instance v5, Lcom/adobe/fre/FREObject;
 

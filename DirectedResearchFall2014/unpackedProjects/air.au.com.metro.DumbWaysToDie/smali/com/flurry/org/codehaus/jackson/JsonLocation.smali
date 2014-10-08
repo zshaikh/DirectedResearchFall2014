@@ -7,7 +7,7 @@
 
 
 # static fields
-.field public static final NA:Lcom/flurry/org/codehaus/jackson/JsonLocation; = null
+.field public static final NA:Lcom/flurry/org/codehaus/jackson/JsonLocation;
 
 .field private static final serialVersionUID:J = 0x1L
 
@@ -51,10 +51,10 @@
 
 .method public constructor <init>(Ljava/lang/Object;JII)V
     .locals 8
-    .parameter "srcRef"
-    .parameter "totalChars"
-    .parameter "lineNr"
-    .parameter "colNr"
+    .param p1, "srcRef"    # Ljava/lang/Object;
+    .param p2, "totalChars"    # J
+    .param p4, "lineNr"    # I
+    .param p5, "colNr"    # I
 
     .prologue
     .line 42
@@ -78,31 +78,31 @@
 
 .method public constructor <init>(Ljava/lang/Object;JJII)V
     .locals 0
-    .parameter "sourceRef"
+    .param p1, "sourceRef"    # Ljava/lang/Object;
         .annotation runtime Lcom/flurry/org/codehaus/jackson/annotate/JsonProperty;
             value = "sourceRef"
         .end annotation
-    .end parameter
-    .parameter "totalBytes"
+    .end param
+    .param p2, "totalBytes"    # J
         .annotation runtime Lcom/flurry/org/codehaus/jackson/annotate/JsonProperty;
             value = "byteOffset"
         .end annotation
-    .end parameter
-    .parameter "totalChars"
+    .end param
+    .param p4, "totalChars"    # J
         .annotation runtime Lcom/flurry/org/codehaus/jackson/annotate/JsonProperty;
             value = "charOffset"
         .end annotation
-    .end parameter
-    .parameter "lineNr"
+    .end param
+    .param p6, "lineNr"    # I
         .annotation runtime Lcom/flurry/org/codehaus/jackson/annotate/JsonProperty;
             value = "lineNr"
         .end annotation
-    .end parameter
-    .parameter "columnNr"
+    .end param
+    .param p7, "columnNr"    # I
         .annotation runtime Lcom/flurry/org/codehaus/jackson/annotate/JsonProperty;
             value = "columnNr"
         .end annotation
-    .end parameter
+    .end param
     .annotation runtime Lcom/flurry/org/codehaus/jackson/annotate/JsonCreator;
     .end annotation
 
@@ -133,7 +133,7 @@
 # virtual methods
 .method public equals(Ljava/lang/Object;)Z
     .locals 8
-    .parameter "other"
+    .param p1, "other"    # Ljava/lang/Object;
 
     .prologue
     const/4 v7, 0x1
@@ -176,7 +176,7 @@
     move-object v1, v0
 
     .line 131
-    .local v1, otherLoc:Lcom/flurry/org/codehaus/jackson/JsonLocation;
+    .local v1, "otherLoc":Lcom/flurry/org/codehaus/jackson/JsonLocation;
     iget-object v2, p0, Lcom/flurry/org/codehaus/jackson/JsonLocation;->_sourceRef:Ljava/lang/Object;
 
     if-nez v2, :cond_3
@@ -314,7 +314,7 @@
     move v0, v1
 
     .line 116
-    .local v0, hash:I
+    .local v0, "hash":I
     :goto_0
     iget v1, p0, Lcom/flurry/org/codehaus/jackson/JsonLocation;->_lineNr:I
 
@@ -343,7 +343,7 @@
     return v0
 
     .line 115
-    .end local v0           #hash:I
+    .end local v0    # "hash":I
     :cond_0
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/JsonLocation;->_sourceRef:Ljava/lang/Object;
 
@@ -368,7 +368,7 @@
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
     .line 98
-    .local v0, sb:Ljava/lang/StringBuilder;
+    .local v0, "sb":Ljava/lang/StringBuilder;
     const-string v1, "[Source: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;

@@ -4,7 +4,7 @@
 
 
 # static fields
-.field private static final BUFFER_SIZE:Ljava/lang/Integer; = null
+.field private static final BUFFER_SIZE:Ljava/lang/Integer;
 
 .field private static final CACHE_DIR:Ljava/lang/String; = "playhaven.cache"
 
@@ -48,7 +48,7 @@
 
 .method public constructor <init>(Ljava/io/File;)V
     .locals 1
-    .parameter "cacheDirectory"
+    .param p1, "cacheDirectory"    # Ljava/io/File;
 
     .prologue
     .line 92
@@ -127,7 +127,7 @@
 
 .method public static installCache(Landroid/content/Context;)V
     .locals 3
-    .parameter "context"
+    .param p0, "context"    # Landroid/content/Context;
 
     .prologue
     .line 82
@@ -164,7 +164,7 @@
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
     .line 85
-    .local v0, dir:Ljava/io/File;
+    .local v0, "dir":Ljava/io/File;
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result v1
@@ -188,7 +188,7 @@
 
 .method public static useTestingCache(Lv2/com/playhaven/cache/PHCache;)V
     .locals 0
-    .parameter "testing_cache"
+    .param p0, "testing_cache"    # Lv2/com/playhaven/cache/PHCache;
 
     .prologue
     .line 74
@@ -202,9 +202,9 @@
 # virtual methods
 .method public cacheFile(Ljava/net/URL;Ljava/io/InputStream;Z)V
     .locals 7
-    .parameter "requestUrl"
-    .parameter "content"
-    .parameter "isCompressed"
+    .param p1, "requestUrl"    # Ljava/net/URL;
+    .param p2, "content"    # Ljava/io/InputStream;
+    .param p3, "isCompressed"    # Z
 
     .prologue
     .line 141
@@ -213,7 +213,7 @@
     move-result-object v4
 
     .line 143
-    .local v4, outputFile:Ljava/io/File;
+    .local v4, "outputFile":Ljava/io/File;
     new-instance v5, Ljava/lang/StringBuilder;
 
     const-string v6, "Caching url: "
@@ -249,13 +249,13 @@
 
     invoke-direct {v3, p2}, Ljava/util/zip/GZIPInputStream;-><init>(Ljava/io/InputStream;)V
 
-    .end local p2
-    .local v3, content:Ljava/io/InputStream;
+    .end local p2    # "content":Ljava/io/InputStream;
+    .local v3, "content":Ljava/io/InputStream;
     move-object p2, v3
 
     .line 153
-    .end local v3           #content:Ljava/io/InputStream;
-    .restart local p2
+    .end local v3    # "content":Ljava/io/InputStream;
+    .restart local p2    # "content":Ljava/io/InputStream;
     :cond_0
     new-instance v2, Ljava/io/BufferedOutputStream;
 
@@ -268,7 +268,7 @@
     invoke-direct {v2, v5}, Ljava/io/BufferedOutputStream;-><init>(Ljava/io/OutputStream;)V
 
     .line 155
-    .local v2, cachedFile:Ljava/io/BufferedOutputStream;
+    .local v2, "cachedFile":Ljava/io/BufferedOutputStream;
     sget-object v5, Lv2/com/playhaven/cache/PHCache;->BUFFER_SIZE:Ljava/lang/Integer;
 
     invoke-virtual {v5}, Ljava/lang/Integer;->intValue()I
@@ -278,13 +278,13 @@
     new-array v0, v5, [B
 
     .line 158
-    .local v0, buffer:[B
+    .local v0, "buffer":[B
     :goto_0
     invoke-virtual {p2, v0}, Ljava/io/InputStream;->read([B)I
 
     move-result v1
 
-    .local v1, bytesRead:I
+    .local v1, "bytesRead":I
     const/4 v5, -0x1
 
     if-ne v1, v5, :cond_1
@@ -299,16 +299,16 @@
     invoke-virtual {p2}, Ljava/io/InputStream;->close()V
 
     .line 170
-    .end local v0           #buffer:[B
-    .end local v1           #bytesRead:I
-    .end local v2           #cachedFile:Ljava/io/BufferedOutputStream;
+    .end local v0    # "buffer":[B
+    .end local v1    # "bytesRead":I
+    .end local v2    # "cachedFile":Ljava/io/BufferedOutputStream;
     :goto_1
     return-void
 
     .line 159
-    .restart local v0       #buffer:[B
-    .restart local v1       #bytesRead:I
-    .restart local v2       #cachedFile:Ljava/io/BufferedOutputStream;
+    .restart local v0    # "buffer":[B
+    .restart local v1    # "bytesRead":I
+    .restart local v2    # "cachedFile":Ljava/io/BufferedOutputStream;
     :cond_1
     const/4 v5, 0x0
 
@@ -319,9 +319,9 @@
     goto :goto_0
 
     .line 167
-    .end local v0           #buffer:[B
-    .end local v1           #bytesRead:I
-    .end local v2           #cachedFile:Ljava/io/BufferedOutputStream;
+    .end local v0    # "buffer":[B
+    .end local v1    # "bytesRead":I
+    .end local v2    # "cachedFile":Ljava/io/BufferedOutputStream;
     :catch_0
     move-exception v5
 
@@ -330,7 +330,7 @@
 
 .method public convertToFilename(Ljava/net/URL;)Ljava/io/File;
     .locals 5
-    .parameter "url"
+    .param p1, "url"    # Ljava/net/URL;
 
     .prologue
     .line 120
@@ -347,7 +347,7 @@
     move-result-object v0
 
     .line 123
-    .local v0, clean_slug:Ljava/lang/String;
+    .local v0, "clean_slug":Ljava/lang/String;
     new-instance v1, Ljava/io/File;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -385,13 +385,13 @@
     invoke-direct {v1, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
     .line 126
-    .local v1, new_file:Ljava/io/File;
+    .local v1, "new_file":Ljava/io/File;
     return-object v1
 .end method
 
 .method public getCachedFile(Ljava/net/URL;)Ljava/io/File;
     .locals 3
-    .parameter "url"
+    .param p1, "url"    # Ljava/net/URL;
 
     .prologue
     .line 179
@@ -404,7 +404,7 @@
     check-cast v0, Ljava/io/File;
 
     .line 181
-    .local v0, file:Ljava/io/File;
+    .local v0, "file":Ljava/io/File;
     new-instance v1, Ljava/lang/StringBuilder;
 
     const-string v2, "Checking cache for URL: "
@@ -479,7 +479,7 @@
 
 .method public getCachedFile(Ljava/lang/String;)Ljava/lang/String;
     .locals 5
-    .parameter "url"
+    .param p1, "url"    # Ljava/lang/String;
 
     .prologue
     const/4 v4, 0x0
@@ -495,18 +495,18 @@
     move-result-object v1
 
     .line 215
-    .local v1, file:Ljava/io/File;
+    .local v1, "file":Ljava/io/File;
     if-nez v1, :cond_0
 
     move-object v2, v4
 
     .line 222
-    .end local v1           #file:Ljava/io/File;
+    .end local v1    # "file":Ljava/io/File;
     :goto_0
     return-object v2
 
     .line 218
-    .restart local v1       #file:Ljava/io/File;
+    .restart local v1    # "file":Ljava/io/File;
     :cond_0
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -531,13 +531,13 @@
     goto :goto_0
 
     .line 220
-    .end local v1           #file:Ljava/io/File;
+    .end local v1    # "file":Ljava/io/File;
     :catch_0
     move-exception v2
 
     move-object v0, v2
 
-    .local v0, e:Ljava/net/MalformedURLException;
+    .local v0, "e":Ljava/net/MalformedURLException;
     move-object v2, v4
 
     .line 222

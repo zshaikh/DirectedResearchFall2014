@@ -158,7 +158,7 @@
 
 .method public constructor <init>(Ljava/lang/ClassLoader;)V
     .locals 1
-    .parameter "classLoader"
+    .param p1, "classLoader"    # Ljava/lang/ClassLoader;
 
     .prologue
     .line 54
@@ -197,7 +197,7 @@
 
 .method public static getClassName(Lcom/flurry/org/apache/avro/Schema;)Ljava/lang/String;
     .locals 5
-    .parameter "schema"
+    .param p0, "schema"    # Lcom/flurry/org/apache/avro/Schema;
 
     .prologue
     const-string v4, ""
@@ -208,13 +208,13 @@
     move-result-object v2
 
     .line 126
-    .local v2, namespace:Ljava/lang/String;
+    .local v2, "namespace":Ljava/lang/String;
     invoke-virtual {p0}, Lcom/flurry/org/apache/avro/Schema;->getName()Ljava/lang/String;
 
     move-result-object v1
 
     .line 127
-    .local v1, name:Ljava/lang/String;
+    .local v1, "name":Ljava/lang/String;
     if-eqz v2, :cond_0
 
     const-string v3, ""
@@ -247,7 +247,7 @@
     move-object v0, v4
 
     .line 130
-    .local v0, dot:Ljava/lang/String;
+    .local v0, "dot":Ljava/lang/String;
     :goto_1
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -272,7 +272,7 @@
     goto :goto_0
 
     .line 129
-    .end local v0           #dot:Ljava/lang/String;
+    .end local v0    # "dot":Ljava/lang/String;
     :cond_2
     const-string v3, "."
 
@@ -283,8 +283,8 @@
 
 .method public static newInstance(Ljava/lang/Class;Lcom/flurry/org/apache/avro/Schema;)Ljava/lang/Object;
     .locals 6
-    .parameter "c"
-    .parameter "s"
+    .param p0, "c"    # Ljava/lang/Class;
+    .param p1, "s"    # Lcom/flurry/org/apache/avro/Schema;
 
     .prologue
     .line 241
@@ -295,7 +295,7 @@
     move-result v3
 
     .line 244
-    .local v3, useSchema:Z
+    .local v3, "useSchema":Z
     :try_start_0
     sget-object v4, Lcom/flurry/org/apache/avro/specific/SpecificData;->CTOR_CACHE:Ljava/util/Map;
 
@@ -306,7 +306,7 @@
     check-cast v1, Ljava/lang/reflect/Constructor;
 
     .line 245
-    .local v1, meth:Ljava/lang/reflect/Constructor;
+    .local v1, "meth":Ljava/lang/reflect/Constructor;
     if-nez v1, :cond_0
 
     .line 246
@@ -341,19 +341,19 @@
 
     aput-object p1, v4, v5
 
-    .end local p0
+    .end local p0    # "c":Ljava/lang/Class;
     :goto_1
     invoke-virtual {v1, v4}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v2
 
     .line 254
-    .local v2, result:Ljava/lang/Object;
+    .local v2, "result":Ljava/lang/Object;
     return-object v2
 
     .line 246
-    .end local v2           #result:Ljava/lang/Object;
-    .restart local p0
+    .end local v2    # "result":Ljava/lang/Object;
+    .restart local p0    # "c":Ljava/lang/Class;
     :cond_1
     sget-object v4, Lcom/flurry/org/apache/avro/specific/SpecificData;->NO_ARG:[Ljava/lang/Class;
 
@@ -367,20 +367,20 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .end local p0
+    .end local p0    # "c":Ljava/lang/Class;
     move-object v4, p0
 
     goto :goto_1
 
     .line 251
-    .end local v1           #meth:Ljava/lang/reflect/Constructor;
+    .end local v1    # "meth":Ljava/lang/reflect/Constructor;
     :catch_0
     move-exception v4
 
     move-object v0, v4
 
     .line 252
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     new-instance v4, Ljava/lang/RuntimeException;
 
     invoke-direct {v4, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
@@ -392,10 +392,10 @@
 # virtual methods
 .method protected compare(Ljava/lang/Object;Ljava/lang/Object;Lcom/flurry/org/apache/avro/Schema;Z)I
     .locals 2
-    .parameter "o1"
-    .parameter "o2"
-    .parameter "s"
-    .parameter "eq"
+    .param p1, "o1"    # Ljava/lang/Object;
+    .param p2, "o2"    # Ljava/lang/Object;
+    .param p3, "s"    # Lcom/flurry/org/apache/avro/Schema;
+    .param p4, "eq"    # Z
 
     .prologue
     .line 227
@@ -419,14 +419,14 @@
 
     move-result v0
 
-    .end local p1
-    .end local p2
+    .end local p1    # "o1":Ljava/lang/Object;
+    .end local p2    # "o2":Ljava/lang/Object;
     :goto_0
     return v0
 
     .line 229
-    .restart local p1
-    .restart local p2
+    .restart local p1    # "o1":Ljava/lang/Object;
+    .restart local p2    # "o2":Ljava/lang/Object;
     :pswitch_0
     instance-of v0, p1, Ljava/lang/Enum;
 
@@ -435,14 +435,14 @@
     .line 230
     check-cast p1, Ljava/lang/Enum;
 
-    .end local p1
+    .end local p1    # "o1":Ljava/lang/Object;
     invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v0
 
     check-cast p2, Ljava/lang/Enum;
 
-    .end local p2
+    .end local p2    # "o2":Ljava/lang/Object;
     invoke-virtual {p2}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
@@ -460,7 +460,7 @@
 
 .method public createDatumReader(Lcom/flurry/org/apache/avro/Schema;)Lcom/flurry/org/apache/avro/io/DatumReader;
     .locals 1
-    .parameter "schema"
+    .param p1, "schema"    # Lcom/flurry/org/apache/avro/Schema;
 
     .prologue
     .line 60
@@ -473,8 +473,8 @@
 
 .method public createFixed(Ljava/lang/Object;Lcom/flurry/org/apache/avro/Schema;)Ljava/lang/Object;
     .locals 2
-    .parameter "old"
-    .parameter "schema"
+    .param p1, "old"    # Ljava/lang/Object;
+    .param p2, "schema"    # Lcom/flurry/org/apache/avro/Schema;
 
     .prologue
     .line 259
@@ -487,7 +487,7 @@
     move-result-object v0
 
     .line 260
-    .local v0, c:Ljava/lang/Class;
+    .local v0, "c":Ljava/lang/Class;
     if-nez v0, :cond_0
 
     invoke-super {p0, p1, p2}, Lcom/flurry/org/apache/avro/generic/GenericData;->createFixed(Ljava/lang/Object;Lcom/flurry/org/apache/avro/Schema;)Ljava/lang/Object;
@@ -519,8 +519,7 @@
 
 .method protected createSchema(Ljava/lang/reflect/Type;Ljava/util/Map;)Lcom/flurry/org/apache/avro/Schema;
     .locals 16
-    .parameter "type"
-    .parameter
+    .param p1, "type"    # Ljava/lang/reflect/Type;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -535,7 +534,7 @@
     .end annotation
 
     .prologue
-    .local p2, names:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Lcom/flurry/org/apache/avro/Schema;>;"
+    .local p2, "names":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Lcom/flurry/org/apache/avro/Schema;>;"
     const/4 v14, 0x1
 
     const/4 v13, 0x0
@@ -573,14 +572,14 @@
     move-result-object v12
 
     .line 204
-    .end local p0
-    .end local p1
+    .end local p0    # "this":Lcom/flurry/org/apache/avro/specific/SpecificData;
+    .end local p1    # "type":Ljava/lang/reflect/Type;
     :goto_0
     return-object v12
 
     .line 153
-    .restart local p0
-    .restart local p1
+    .restart local p0    # "this":Lcom/flurry/org/apache/avro/specific/SpecificData;
+    .restart local p1    # "type":Ljava/lang/reflect/Type;
     :cond_0
     const-class v12, Ljava/nio/ByteBuffer;
 
@@ -785,7 +784,7 @@
     move-object v8, v0
 
     .line 169
-    .local v8, ptype:Ljava/lang/reflect/ParameterizedType;
+    .local v8, "ptype":Ljava/lang/reflect/ParameterizedType;
     invoke-interface {v8}, Ljava/lang/reflect/ParameterizedType;->getRawType()Ljava/lang/reflect/Type;
 
     move-result-object v9
@@ -793,13 +792,13 @@
     check-cast v9, Ljava/lang/Class;
 
     .line 170
-    .local v9, raw:Ljava/lang/Class;
+    .local v9, "raw":Ljava/lang/Class;
     invoke-interface {v8}, Ljava/lang/reflect/ParameterizedType;->getActualTypeArguments()[Ljava/lang/reflect/Type;
 
     move-result-object v7
 
     .line 171
-    .local v7, params:[Ljava/lang/reflect/Type;
+    .local v7, "params":[Ljava/lang/reflect/Type;
     const-class v12, Ljava/util/Collection;
 
     invoke-virtual {v12, v9}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
@@ -856,11 +855,11 @@
     aget-object v6, v7, v13
 
     .line 177
-    .local v6, key:Ljava/lang/reflect/Type;
+    .local v6, "key":Ljava/lang/reflect/Type;
     aget-object v11, v7, v14
 
     .line 178
-    .local v11, value:Ljava/lang/reflect/Type;
+    .local v11, "value":Ljava/lang/reflect/Type;
     move-object/from16 v0, p1
 
     instance-of v0, v0, Ljava/lang/Class;
@@ -873,7 +872,7 @@
 
     check-cast p1, Ljava/lang/Class;
 
-    .end local p1
+    .end local p1    # "type":Ljava/lang/reflect/Type;
     move-object v0, v15
 
     move-object/from16 v1, p1
@@ -929,9 +928,9 @@
     goto/16 :goto_0
 
     .line 183
-    .end local v6           #key:Ljava/lang/reflect/Type;
-    .end local v11           #value:Ljava/lang/reflect/Type;
-    .restart local p1
+    .end local v6    # "key":Ljava/lang/reflect/Type;
+    .end local v11    # "value":Ljava/lang/reflect/Type;
+    .restart local p1    # "type":Ljava/lang/reflect/Type;
     :cond_12
     move-object/from16 v0, p0
 
@@ -946,9 +945,9 @@
     goto/16 :goto_0
 
     .line 185
-    .end local v7           #params:[Ljava/lang/reflect/Type;
-    .end local v8           #ptype:Ljava/lang/reflect/ParameterizedType;
-    .end local v9           #raw:Ljava/lang/Class;
+    .end local v7    # "params":[Ljava/lang/reflect/Type;
+    .end local v8    # "ptype":Ljava/lang/reflect/ParameterizedType;
+    .end local v9    # "raw":Ljava/lang/Class;
     :cond_13
     move-object/from16 v0, p1
 
@@ -966,13 +965,13 @@
     move-object v3, v0
 
     .line 187
-    .local v3, c:Ljava/lang/Class;
+    .local v3, "c":Ljava/lang/Class;
     invoke-virtual {v3}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object v5
 
     .line 188
-    .local v5, fullName:Ljava/lang/String;
+    .local v5, "fullName":Ljava/lang/String;
     move-object/from16 v0, p2
 
     move-object v1, v5
@@ -984,7 +983,7 @@
     check-cast v10, Lcom/flurry/org/apache/avro/Schema;
 
     .line 189
-    .local v10, schema:Lcom/flurry/org/apache/avro/Schema;
+    .local v10, "schema":Lcom/flurry/org/apache/avro/Schema;
     if-nez v10, :cond_14
 
     .line 191
@@ -1001,7 +1000,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/flurry/org/apache/avro/specific/SpecificData;
     check-cast p0, Lcom/flurry/org/apache/avro/Schema;
 
     move-object/from16 v0, p0
@@ -1071,7 +1070,7 @@
     move-object v4, v12
 
     .line 199
-    .local v4, e:Ljava/lang/NoSuchFieldException;
+    .local v4, "e":Ljava/lang/NoSuchFieldException;
     new-instance v12, Lcom/flurry/org/apache/avro/AvroRuntimeException;
 
     new-instance v13, Ljava/lang/StringBuilder;
@@ -1097,14 +1096,14 @@
     throw v12
 
     .line 200
-    .end local v4           #e:Ljava/lang/NoSuchFieldException;
+    .end local v4    # "e":Ljava/lang/NoSuchFieldException;
     :catch_1
     move-exception v12
 
     move-object v4, v12
 
     .line 201
-    .local v4, e:Ljava/lang/IllegalAccessException;
+    .local v4, "e":Ljava/lang/IllegalAccessException;
     new-instance v12, Lcom/flurry/org/apache/avro/AvroRuntimeException;
 
     invoke-direct {v12, v4}, Lcom/flurry/org/apache/avro/AvroRuntimeException;-><init>(Ljava/lang/Throwable;)V
@@ -1112,11 +1111,11 @@
     throw v12
 
     .line 206
-    .end local v3           #c:Ljava/lang/Class;
-    .end local v4           #e:Ljava/lang/IllegalAccessException;
-    .end local v5           #fullName:Ljava/lang/String;
-    .end local v10           #schema:Lcom/flurry/org/apache/avro/Schema;
-    .restart local p0
+    .end local v3    # "c":Ljava/lang/Class;
+    .end local v4    # "e":Ljava/lang/IllegalAccessException;
+    .end local v5    # "fullName":Ljava/lang/String;
+    .end local v10    # "schema":Lcom/flurry/org/apache/avro/Schema;
+    .restart local p0    # "this":Lcom/flurry/org/apache/avro/specific/SpecificData;
     :cond_15
     new-instance v12, Lcom/flurry/org/apache/avro/AvroTypeException;
 
@@ -1149,7 +1148,7 @@
 
 .method public getClass(Lcom/flurry/org/apache/avro/Schema;)Ljava/lang/Class;
     .locals 8
-    .parameter "schema"
+    .param p1, "schema"    # Lcom/flurry/org/apache/avro/Schema;
 
     .prologue
     const/4 v7, 0x0
@@ -1203,18 +1202,18 @@
     move-result-object v2
 
     .line 90
-    .local v2, name:Ljava/lang/String;
+    .local v2, "name":Ljava/lang/String;
     if-nez v2, :cond_0
 
     move-object v4, v7
 
     .line 118
-    .end local v2           #name:Ljava/lang/String;
+    .end local v2    # "name":Ljava/lang/String;
     :goto_0
     return-object v4
 
     .line 91
-    .restart local v2       #name:Ljava/lang/String;
+    .restart local v2    # "name":Ljava/lang/String;
     :cond_0
     iget-object v4, p0, Lcom/flurry/org/apache/avro/specific/SpecificData;->classCache:Ljava/util/Map;
 
@@ -1225,7 +1224,7 @@
     check-cast v0, Ljava/lang/Class;
 
     .line 92
-    .local v0, c:Ljava/lang/Class;
+    .local v0, "c":Ljava/lang/Class;
     if-nez v0, :cond_1
 
     .line 94
@@ -1265,12 +1264,12 @@
     move-object v1, v4
 
     .line 96
-    .local v1, e:Ljava/lang/ClassNotFoundException;
+    .local v1, "e":Ljava/lang/ClassNotFoundException;
     sget-object v0, Lcom/flurry/org/apache/avro/specific/SpecificData;->NO_CLASS:Ljava/lang/Class;
 
     goto :goto_1
 
-    .end local v1           #e:Ljava/lang/ClassNotFoundException;
+    .end local v1    # "e":Ljava/lang/ClassNotFoundException;
     :cond_2
     move-object v4, v0
 
@@ -1278,8 +1277,8 @@
     goto :goto_0
 
     .line 101
-    .end local v0           #c:Ljava/lang/Class;
-    .end local v2           #name:Ljava/lang/String;
+    .end local v0    # "c":Ljava/lang/Class;
+    .end local v2    # "name":Ljava/lang/String;
     :pswitch_1
     const-class v4, Ljava/util/List;
 
@@ -1298,7 +1297,7 @@
     move-result-object v3
 
     .line 105
-    .local v3, types:Ljava/util/List;,"Ljava/util/List<Lcom/flurry/org/apache/avro/Schema;>;"
+    .local v3, "types":Ljava/util/List;, "Ljava/util/List<Lcom/flurry/org/apache/avro/Schema;>;"
     invoke-interface {v3}, Ljava/util/List;->size()I
 
     move-result v4
@@ -1357,7 +1356,7 @@
     goto :goto_0
 
     .line 109
-    .end local v3           #types:Ljava/util/List;,"Ljava/util/List<Lcom/flurry/org/apache/avro/Schema;>;"
+    .end local v3    # "types":Ljava/util/List;, "Ljava/util/List<Lcom/flurry/org/apache/avro/Schema;>;"
     :pswitch_4
     const-string v4, "String"
 
@@ -1448,7 +1447,7 @@
 
 .method protected getEnumSchema(Ljava/lang/Object;)Lcom/flurry/org/apache/avro/Schema;
     .locals 1
-    .parameter "datum"
+    .param p1, "datum"    # Ljava/lang/Object;
 
     .prologue
     .line 73
@@ -1477,7 +1476,7 @@
 
 .method public getProtocol(Ljava/lang/Class;)Lcom/flurry/org/apache/avro/Protocol;
     .locals 6
-    .parameter "iface"
+    .param p1, "iface"    # Ljava/lang/Class;
 
     .prologue
     .line 212
@@ -1494,7 +1493,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/flurry/org/apache/avro/specific/SpecificData;
     check-cast p0, Lcom/flurry/org/apache/avro/Protocol;
 
     move-object v0, p0
@@ -1504,7 +1503,7 @@
     move-object v2, v0
 
     .line 213
-    .local v2, p:Lcom/flurry/org/apache/avro/Protocol;
+    .local v2, "p":Lcom/flurry/org/apache/avro/Protocol;
     invoke-virtual {v2}, Lcom/flurry/org/apache/avro/Protocol;->getNamespace()Ljava/lang/String;
 
     move-result-object v3
@@ -1556,14 +1555,14 @@
     return-object v2
 
     .line 218
-    .end local v2           #p:Lcom/flurry/org/apache/avro/Protocol;
+    .end local v2    # "p":Lcom/flurry/org/apache/avro/Protocol;
     :catch_0
     move-exception v3
 
     move-object v1, v3
 
     .line 219
-    .local v1, e:Ljava/lang/NoSuchFieldException;
+    .local v1, "e":Ljava/lang/NoSuchFieldException;
     new-instance v3, Lcom/flurry/org/apache/avro/AvroRuntimeException;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -1589,14 +1588,14 @@
     throw v3
 
     .line 220
-    .end local v1           #e:Ljava/lang/NoSuchFieldException;
+    .end local v1    # "e":Ljava/lang/NoSuchFieldException;
     :catch_1
     move-exception v3
 
     move-object v1, v3
 
     .line 221
-    .local v1, e:Ljava/lang/IllegalAccessException;
+    .local v1, "e":Ljava/lang/IllegalAccessException;
     new-instance v3, Lcom/flurry/org/apache/avro/AvroRuntimeException;
 
     invoke-direct {v3, v1}, Lcom/flurry/org/apache/avro/AvroRuntimeException;-><init>(Ljava/lang/Throwable;)V
@@ -1606,7 +1605,7 @@
 
 .method public getSchema(Ljava/lang/reflect/Type;)Lcom/flurry/org/apache/avro/Schema;
     .locals 2
-    .parameter "type"
+    .param p1, "type"    # Ljava/lang/reflect/Type;
 
     .prologue
     .line 138
@@ -1619,7 +1618,7 @@
     check-cast v0, Lcom/flurry/org/apache/avro/Schema;
 
     .line 139
-    .local v0, schema:Lcom/flurry/org/apache/avro/Schema;
+    .local v0, "schema":Lcom/flurry/org/apache/avro/Schema;
     if-nez v0, :cond_0
 
     .line 140
@@ -1643,7 +1642,7 @@
 
 .method protected isEnum(Ljava/lang/Object;)Z
     .locals 1
-    .parameter "datum"
+    .param p1, "datum"    # Ljava/lang/Object;
 
     .prologue
     .line 68
@@ -1671,8 +1670,8 @@
 
 .method public newRecord(Ljava/lang/Object;Lcom/flurry/org/apache/avro/Schema;)Ljava/lang/Object;
     .locals 2
-    .parameter "old"
-    .parameter "schema"
+    .param p1, "old"    # Ljava/lang/Object;
+    .param p2, "schema"    # Lcom/flurry/org/apache/avro/Schema;
 
     .prologue
     .line 266
@@ -1685,7 +1684,7 @@
     move-result-object v0
 
     .line 267
-    .local v0, c:Ljava/lang/Class;
+    .local v0, "c":Ljava/lang/Class;
     if-nez v0, :cond_0
 
     invoke-super {p0, p1, p2}, Lcom/flurry/org/apache/avro/generic/GenericData;->newRecord(Ljava/lang/Object;Lcom/flurry/org/apache/avro/Schema;)Ljava/lang/Object;

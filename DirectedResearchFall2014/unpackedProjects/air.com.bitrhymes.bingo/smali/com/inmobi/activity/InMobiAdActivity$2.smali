@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/inmobi/activity/InMobiAdActivity;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1
@@ -40,8 +39,6 @@
 # virtual methods
 .method public onAdRequestFailed(Lcom/inmobi/androidsdk/IMAdInterstitial;Lcom/inmobi/androidsdk/IMAdRequest$ErrorCode;)V
     .locals 3
-    .parameter
-    .parameter
 
     .prologue
     .line 180
@@ -102,7 +99,6 @@
 
 .method public onAdRequestLoaded(Lcom/inmobi/androidsdk/IMAdInterstitial;)V
     .locals 3
-    .parameter
 
     .prologue
     .line 190
@@ -150,7 +146,6 @@
 
 .method public onDismissAdScreen(Lcom/inmobi/androidsdk/IMAdInterstitial;)V
     .locals 3
-    .parameter
 
     .prologue
     .line 169
@@ -198,7 +193,6 @@
 
 .method public onLeaveApplication(Lcom/inmobi/androidsdk/IMAdInterstitial;)V
     .locals 3
-    .parameter
 
     .prologue
     .line 199
@@ -246,7 +240,6 @@
 
 .method public onShowAdScreen(Lcom/inmobi/androidsdk/IMAdInterstitial;)V
     .locals 3
-    .parameter
 
     .prologue
     .line 160

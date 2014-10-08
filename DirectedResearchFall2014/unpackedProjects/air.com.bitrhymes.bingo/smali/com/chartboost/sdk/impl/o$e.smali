@@ -17,7 +17,6 @@
 # direct methods
 .method public constructor <init>(Ljava/io/InputStream;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 367
@@ -31,7 +30,7 @@
 # virtual methods
 .method public skip(J)J
     .locals 7
-    .parameter "n"
+    .param p1, "n"    # J
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;

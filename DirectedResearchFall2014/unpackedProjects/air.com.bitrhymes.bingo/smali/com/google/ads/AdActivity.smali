@@ -147,10 +147,6 @@
 
 .method private a(IIII)Landroid/widget/RelativeLayout$LayoutParams;
     .locals 2
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const/4 v1, 0x0
@@ -189,7 +185,6 @@
 
 .method private a(Ljava/lang/String;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 283
@@ -204,8 +199,6 @@
 
 .method private a(Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 294
@@ -230,7 +223,6 @@
 
 .method static synthetic b(Lcom/google/ads/internal/d;)Lcom/google/ads/internal/d;
     .locals 0
-    .parameter
 
     .prologue
     .line 52
@@ -518,8 +510,8 @@
 
 .method public static launchAdActivity(Lcom/google/ads/internal/d;Lcom/google/ads/internal/e;)V
     .locals 1
-    .parameter "adManager"
-    .parameter "adOpener"
+    .param p0, "adManager"    # Lcom/google/ads/internal/d;
+    .param p1, "adOpener"    # Lcom/google/ads/internal/e;
 
     .prologue
     .line 359
@@ -549,8 +541,6 @@
 # virtual methods
 .method protected a(IZ)Landroid/view/View;
     .locals 3
-    .parameter
-    .parameter
 
     .prologue
     .line 262
@@ -615,7 +605,6 @@
 
 .method protected a(Landroid/app/Activity;)Lcom/google/ads/internal/AdVideoView;
     .locals 2
-    .parameter
 
     .prologue
     .line 509
@@ -630,11 +619,6 @@
 
 .method protected a(Lcom/google/ads/internal/AdWebView;ZIZZ)V
     .locals 8
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const/16 v7, 0xb
@@ -812,7 +796,7 @@
 
     move-result-object v0
 
-    const/high16 v1, -0x100
+    const/high16 v1, -0x1000000
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundColor(I)V
 
@@ -846,7 +830,6 @@
 
 .method protected a(Lcom/google/ads/internal/d;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 492
@@ -903,8 +886,6 @@
 
 .method protected a(Ljava/util/HashMap;Lcom/google/ads/internal/d;)V
     .locals 12
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1565,10 +1546,10 @@
 
 .method public moveAdVideoView(IIII)V
     .locals 2
-    .parameter "x"
-    .parameter "y"
-    .parameter "width"
-    .parameter "height"
+    .param p1, "x"    # I
+    .param p2, "y"    # I
+    .param p3, "width"    # I
+    .param p4, "height"    # I
 
     .prologue
     .line 517
@@ -1597,10 +1578,10 @@
 
 .method public newAdVideoView(IIII)V
     .locals 4
-    .parameter "x"
-    .parameter "y"
-    .parameter "width"
-    .parameter "height"
+    .param p1, "x"    # I
+    .param p2, "y"    # I
+    .param p3, "width"    # I
+    .param p4, "height"    # I
 
     .prologue
     const/4 v3, 0x0
@@ -1682,7 +1663,7 @@
 
 .method public onClick(Landroid/view/View;)V
     .locals 0
-    .parameter "v"
+    .param p1, "v"    # Landroid/view/View;
 
     .prologue
     .line 571
@@ -1694,7 +1675,7 @@
 
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 13
-    .parameter "savedInstanceState"
+    .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
     const/4 v5, 0x0
@@ -2436,7 +2417,7 @@
 
 .method public onWindowFocusChanged(Z)V
     .locals 4
-    .parameter "hasFocus"
+    .param p1, "hasFocus"    # Z
 
     .prologue
     .line 986
@@ -2479,7 +2460,7 @@
 
 .method public setCustomClose(Z)V
     .locals 5
-    .parameter "useCustomClose"
+    .param p1, "useCustomClose"    # Z
 
     .prologue
     const/4 v2, 0x0

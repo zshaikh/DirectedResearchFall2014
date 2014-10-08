@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/facebook/AppLinkData$CompletionHandler;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1
@@ -40,7 +39,7 @@
 # virtual methods
 .method public completed(Landroid/os/Bundle;)V
     .locals 9
-    .parameter "result"
+    .param p1, "result"    # Landroid/os/Bundle;
 
     .prologue
     const-wide/16 v6, -0x1
@@ -51,7 +50,7 @@
     const/4 v1, 0x0
 
     .line 96
-    .local v1, appLinkData:Lcom/facebook/AppLinkData;
+    .local v1, "appLinkData":Lcom/facebook/AppLinkData;
     if-eqz p1, :cond_0
 
     .line 97
@@ -62,7 +61,7 @@
     move-result-object v0
 
     .line 98
-    .local v0, appLinkArgsJsonString:Ljava/lang/String;
+    .local v0, "appLinkArgsJsonString":Ljava/lang/String;
     const-string v5, "com.facebook.platform.APPLINK_TAP_TIME_UTC"
 
     invoke-virtual {p1, v8, v6, v7}, Landroid/os/Bundle;->getLong(Ljava/lang/String;J)J
@@ -70,8 +69,8 @@
     move-result-wide v3
 
     .line 101
-    .local v3, tapTimeUtc:J
-    #calls: Lcom/facebook/AppLinkData;->createFromJson(Ljava/lang/String;)Lcom/facebook/AppLinkData;
+    .local v3, "tapTimeUtc":J
+    # invokes: Lcom/facebook/AppLinkData;->createFromJson(Ljava/lang/String;)Lcom/facebook/AppLinkData;
     invoke-static {v0}, Lcom/facebook/AppLinkData;->access$0(Ljava/lang/String;)Lcom/facebook/AppLinkData;
 
     move-result-object v1
@@ -94,8 +93,8 @@
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 110
-    .end local v0           #appLinkArgsJsonString:Ljava/lang/String;
-    .end local v3           #tapTimeUtc:J
+    .end local v0    # "appLinkArgsJsonString":Ljava/lang/String;
+    .end local v3    # "tapTimeUtc":J
     :cond_0
     :goto_0
     iget-object v5, p0, Lcom/facebook/AppLinkData$1;->val$completionHandler:Lcom/facebook/AppLinkData$CompletionHandler;
@@ -106,15 +105,16 @@
     return-void
 
     .line 105
-    .restart local v0       #appLinkArgsJsonString:Ljava/lang/String;
-    .restart local v3       #tapTimeUtc:J
+    .restart local v0    # "appLinkArgsJsonString":Ljava/lang/String;
+    .restart local v3    # "tapTimeUtc":J
     :catch_0
     move-exception v5
 
     move-object v2, v5
 
     .line 106
-    .local v2, e:Lorg/json/JSONException;
+    .local v2, "e":Lorg/json/JSONException;
+    # getter for: Lcom/facebook/AppLinkData;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/facebook/AppLinkData;->access$1()Ljava/lang/String;
 
     move-result-object v5

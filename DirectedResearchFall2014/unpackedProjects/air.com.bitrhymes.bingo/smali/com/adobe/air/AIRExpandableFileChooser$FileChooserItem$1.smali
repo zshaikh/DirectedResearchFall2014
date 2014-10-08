@@ -26,8 +26,6 @@
 # direct methods
 .method constructor <init>(Lcom/adobe/air/AIRExpandableFileChooser$FileChooserItem;Lcom/adobe/air/AIRExpandableFileChooser;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 115
@@ -44,14 +42,12 @@
 # virtual methods
 .method public onCheckedChanged(Landroid/widget/CompoundButton;Z)V
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     .line 118
     iget-object v0, p0, Lcom/adobe/air/AIRExpandableFileChooser$FileChooserItem$1;->this$1:Lcom/adobe/air/AIRExpandableFileChooser$FileChooserItem;
 
-    #getter for: Lcom/adobe/air/AIRExpandableFileChooser$FileChooserItem;->mListFlatPosition:I
+    # getter for: Lcom/adobe/air/AIRExpandableFileChooser$FileChooserItem;->mListFlatPosition:I
     invoke-static {v0}, Lcom/adobe/air/AIRExpandableFileChooser$FileChooserItem;->access$200(Lcom/adobe/air/AIRExpandableFileChooser$FileChooserItem;)I
 
     move-result v0
@@ -71,14 +67,14 @@
 
     iget-object v0, v0, Lcom/adobe/air/AIRExpandableFileChooser$FileChooserItem;->this$0:Lcom/adobe/air/AIRExpandableFileChooser;
 
-    #getter for: Lcom/adobe/air/AIRExpandableFileChooser;->mCheckedFiles:Landroid/util/SparseBooleanArray;
+    # getter for: Lcom/adobe/air/AIRExpandableFileChooser;->mCheckedFiles:Landroid/util/SparseBooleanArray;
     invoke-static {v0}, Lcom/adobe/air/AIRExpandableFileChooser;->access$300(Lcom/adobe/air/AIRExpandableFileChooser;)Landroid/util/SparseBooleanArray;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/adobe/air/AIRExpandableFileChooser$FileChooserItem$1;->this$1:Lcom/adobe/air/AIRExpandableFileChooser$FileChooserItem;
 
-    #getter for: Lcom/adobe/air/AIRExpandableFileChooser$FileChooserItem;->mListFlatPosition:I
+    # getter for: Lcom/adobe/air/AIRExpandableFileChooser$FileChooserItem;->mListFlatPosition:I
     invoke-static {v1}, Lcom/adobe/air/AIRExpandableFileChooser$FileChooserItem;->access$200(Lcom/adobe/air/AIRExpandableFileChooser$FileChooserItem;)I
 
     move-result v1
@@ -93,14 +89,14 @@
 
     iget-object v0, v0, Lcom/adobe/air/AIRExpandableFileChooser$FileChooserItem;->this$0:Lcom/adobe/air/AIRExpandableFileChooser;
 
-    #getter for: Lcom/adobe/air/AIRExpandableFileChooser;->mCheckedFiles:Landroid/util/SparseBooleanArray;
+    # getter for: Lcom/adobe/air/AIRExpandableFileChooser;->mCheckedFiles:Landroid/util/SparseBooleanArray;
     invoke-static {v0}, Lcom/adobe/air/AIRExpandableFileChooser;->access$300(Lcom/adobe/air/AIRExpandableFileChooser;)Landroid/util/SparseBooleanArray;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/adobe/air/AIRExpandableFileChooser$FileChooserItem$1;->this$1:Lcom/adobe/air/AIRExpandableFileChooser$FileChooserItem;
 
-    #getter for: Lcom/adobe/air/AIRExpandableFileChooser$FileChooserItem;->mListFlatPosition:I
+    # getter for: Lcom/adobe/air/AIRExpandableFileChooser$FileChooserItem;->mListFlatPosition:I
     invoke-static {v1}, Lcom/adobe/air/AIRExpandableFileChooser$FileChooserItem;->access$200(Lcom/adobe/air/AIRExpandableFileChooser$FileChooserItem;)I
 
     move-result v1

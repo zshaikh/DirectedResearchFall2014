@@ -36,7 +36,7 @@
 
 .method public save(Landroid/os/Bundle;)V
     .locals 0
-    .parameter "bundle"
+    .param p1, "bundle"    # Landroid/os/Bundle;
 
     .prologue
     .line 34

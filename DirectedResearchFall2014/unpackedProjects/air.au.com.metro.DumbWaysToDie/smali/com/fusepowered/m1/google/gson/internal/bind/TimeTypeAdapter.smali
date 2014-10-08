@@ -60,7 +60,7 @@
 # virtual methods
 .method public bridge synthetic read(Lcom/fusepowered/m1/google/gson/stream/JsonReader;)Ljava/lang/Object;
     .locals 1
-    .parameter "x0"
+    .param p1, "x0"    # Lcom/fusepowered/m1/google/gson/stream/JsonReader;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -78,7 +78,7 @@
 
 .method public declared-synchronized read(Lcom/fusepowered/m1/google/gson/stream/JsonReader;)Ljava/sql/Time;
     .locals 5
-    .parameter "in"
+    .param p1, "in"    # Lcom/fusepowered/m1/google/gson/stream/JsonReader;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -126,7 +126,7 @@
     move-result-object v0
 
     .line 58
-    .local v0, date:Ljava/util/Date;
+    .local v0, "date":Ljava/util/Date;
     new-instance v2, Ljava/sql/Time;
 
     invoke-virtual {v0}, Ljava/util/Date;->getTime()J
@@ -135,20 +135,20 @@
 
     invoke-direct {v2, v3, v4}, Ljava/sql/Time;-><init>(J)V
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Ljava/text/ParseException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     goto :goto_0
 
     .line 59
-    .end local v0           #date:Ljava/util/Date;
+    .end local v0    # "date":Ljava/util/Date;
     :catch_0
     move-exception v2
 
     move-object v1, v2
 
     .line 60
-    .local v1, e:Ljava/text/ParseException;
+    .local v1, "e":Ljava/text/ParseException;
     :try_start_2
     new-instance v2, Lcom/fusepowered/m1/google/gson/JsonSyntaxException;
 
@@ -159,7 +159,7 @@
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
     .line 52
-    .end local v1           #e:Ljava/text/ParseException;
+    .end local v1    # "e":Ljava/text/ParseException;
     :catchall_0
     move-exception v2
 
@@ -170,8 +170,8 @@
 
 .method public bridge synthetic write(Lcom/fusepowered/m1/google/gson/stream/JsonWriter;Ljava/lang/Object;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
+    .param p1, "x0"    # Lcom/fusepowered/m1/google/gson/stream/JsonWriter;
+    .param p2, "x1"    # Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -182,7 +182,7 @@
     .line 41
     check-cast p2, Ljava/sql/Time;
 
-    .end local p2
+    .end local p2    # "x1":Ljava/lang/Object;
     invoke-virtual {p0, p1, p2}, Lcom/fusepowered/m1/google/gson/internal/bind/TimeTypeAdapter;->write(Lcom/fusepowered/m1/google/gson/stream/JsonWriter;Ljava/sql/Time;)V
 
     return-void
@@ -190,8 +190,8 @@
 
 .method public declared-synchronized write(Lcom/fusepowered/m1/google/gson/stream/JsonWriter;Ljava/sql/Time;)V
     .locals 1
-    .parameter "out"
-    .parameter "value"
+    .param p1, "out"    # Lcom/fusepowered/m1/google/gson/stream/JsonWriter;
+    .param p2, "value"    # Ljava/sql/Time;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;

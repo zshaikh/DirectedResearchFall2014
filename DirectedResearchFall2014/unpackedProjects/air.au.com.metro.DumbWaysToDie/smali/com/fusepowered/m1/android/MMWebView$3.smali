@@ -36,8 +36,6 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m1/android/MMWebView;Lcom/fusepowered/m1/android/MMAdImpl;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 360
@@ -87,7 +85,7 @@
     move-result-object v1
 
     .line 367
-    .local v1, cache:Landroid/graphics/Bitmap;
+    .local v1, "cache":Landroid/graphics/Bitmap;
     if-eqz v1, :cond_0
 
     .line 368
@@ -96,13 +94,13 @@
     move-result-object v0
 
     .line 369
-    .local v0, bitmap:Landroid/graphics/Bitmap;
+    .local v0, "bitmap":Landroid/graphics/Bitmap;
     iget-object v3, p0, Lcom/fusepowered/m1/android/MMWebView$3;->val$adImpl:Lcom/fusepowered/m1/android/MMAdImpl;
 
     invoke-virtual {v3, v0}, Lcom/fusepowered/m1/android/MMAdImpl;->prepareTransition(Landroid/graphics/Bitmap;)V
 
     .line 371
-    .end local v0           #bitmap:Landroid/graphics/Bitmap;
+    .end local v0    # "bitmap":Landroid/graphics/Bitmap;
     :cond_0
     iget-object v3, p0, Lcom/fusepowered/m1/android/MMWebView$3;->this$0:Lcom/fusepowered/m1/android/MMWebView;
 
@@ -111,7 +109,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 375
-    .end local v1           #cache:Landroid/graphics/Bitmap;
+    .end local v1    # "cache":Landroid/graphics/Bitmap;
     :goto_0
     const/4 v3, 0x0
 
@@ -124,7 +122,7 @@
     move-object v2, v3
 
     .line 373
-    .local v2, e:Ljava/lang/Exception;
+    .local v2, "e":Ljava/lang/Exception;
     invoke-static {v2}, Lcom/fusepowered/m1/android/MMSDK$Log;->d(Ljava/lang/Throwable;)V
 
     goto :goto_0

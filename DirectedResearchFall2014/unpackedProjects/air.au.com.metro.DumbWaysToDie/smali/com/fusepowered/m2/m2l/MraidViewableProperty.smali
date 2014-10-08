@@ -10,7 +10,7 @@
 # direct methods
 .method constructor <init>(Z)V
     .locals 0
-    .parameter "viewable"
+    .param p1, "viewable"    # Z
 
     .prologue
     .line 108
@@ -25,7 +25,7 @@
 
 .method public static createWithViewable(Z)Lcom/fusepowered/m2/m2l/MraidViewableProperty;
     .locals 1
-    .parameter "viewable"
+    .param p0, "viewable"    # Z
 
     .prologue
     .line 113

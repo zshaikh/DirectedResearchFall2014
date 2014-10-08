@@ -34,8 +34,7 @@
 # direct methods
 .method public constructor <init>(Lcom/tapjoy/TJWebViewJSInterface;Landroid/webkit/WebView;)V
     .locals 0
-    .parameter
-    .parameter "w"
+    .param p2, "w"    # Landroid/webkit/WebView;
 
     .prologue
     .line 189
@@ -54,13 +53,13 @@
 # virtual methods
 .method protected bridge synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
-    .parameter "x0"
+    .param p1, "x0"    # [Ljava/lang/Object;
 
     .prologue
     .line 184
     check-cast p1, [Ljava/lang/String;
 
-    .end local p1
+    .end local p1    # "x0":[Ljava/lang/Object;
     invoke-virtual {p0, p1}, Lcom/tapjoy/TJWebViewJSInterface$LoadJSTask;->doInBackground([Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -70,7 +69,7 @@
 
 .method protected varargs doInBackground([Ljava/lang/String;)Ljava/lang/String;
     .locals 1
-    .parameter "params"
+    .param p1, "params"    # [Ljava/lang/String;
 
     .prologue
     .line 195
@@ -83,13 +82,13 @@
 
 .method protected bridge synthetic onPostExecute(Ljava/lang/Object;)V
     .locals 0
-    .parameter "x0"
+    .param p1, "x0"    # Ljava/lang/Object;
 
     .prologue
     .line 184
     check-cast p1, Ljava/lang/String;
 
-    .end local p1
+    .end local p1    # "x0":Ljava/lang/Object;
     invoke-virtual {p0, p1}, Lcom/tapjoy/TJWebViewJSInterface$LoadJSTask;->onPostExecute(Ljava/lang/String;)V
 
     return-void
@@ -97,7 +96,7 @@
 
 .method protected onPostExecute(Ljava/lang/String;)V
     .locals 1
-    .parameter "result"
+    .param p1, "result"    # Ljava/lang/String;
 
     .prologue
     .line 201

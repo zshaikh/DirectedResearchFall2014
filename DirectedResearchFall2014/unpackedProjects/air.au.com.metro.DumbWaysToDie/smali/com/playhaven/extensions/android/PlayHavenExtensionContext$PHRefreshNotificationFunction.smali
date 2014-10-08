@@ -24,7 +24,6 @@
 # direct methods
 .method private constructor <init>(Lcom/playhaven/extensions/android/PlayHavenExtensionContext;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 666
@@ -37,8 +36,6 @@
 
 .method synthetic constructor <init>(Lcom/playhaven/extensions/android/PlayHavenExtensionContext;Lcom/playhaven/extensions/android/PlayHavenExtensionContext$PHRefreshNotificationFunction;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 666
@@ -51,19 +48,19 @@
 # virtual methods
 .method public call(Lcom/adobe/fre/FREContext;[Lcom/adobe/fre/FREObject;)Lcom/adobe/fre/FREObject;
     .locals 6
-    .parameter "arg0"
-    .parameter "args"
+    .param p1, "arg0"    # Lcom/adobe/fre/FREContext;
+    .param p2, "args"    # [Lcom/adobe/fre/FREObject;
 
     .prologue
     .line 670
     const/4 v2, 0x0
 
     .line 671
-    .local v2, res:Z
+    .local v2, "res":Z
     const/4 v3, 0x0
 
     .line 674
-    .local v3, resFreObject:Lcom/adobe/fre/FREObject;
+    .local v3, "resFreObject":Lcom/adobe/fre/FREObject;
     const/4 v4, 0x0
 
     :try_start_0
@@ -74,7 +71,7 @@
     move-result v1
 
     .line 675
-    .local v1, isTestMode:Z
+    .local v1, "isTestMode":Z
     iget-object v4, p0, Lcom/playhaven/extensions/android/PlayHavenExtensionContext$PHRefreshNotificationFunction;->this$0:Lcom/playhaven/extensions/android/PlayHavenExtensionContext;
 
     invoke-virtual {v4, v1}, Lcom/playhaven/extensions/android/PlayHavenExtensionContext;->ffiRefreshNotification(Z)Z
@@ -89,7 +86,7 @@
     move-result-object v3
 
     .line 682
-    .end local v1           #isTestMode:Z
+    .end local v1    # "isTestMode":Z
     :goto_0
     return-object v3
 
@@ -100,7 +97,7 @@
     move-object v0, v4
 
     .line 680
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v4, "[PHExtension]"
 
     invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;

@@ -36,8 +36,6 @@
 # direct methods
 .method public constructor <init>(Lcom/tapjoy/TapjoyConnectCore;Ljava/util/Map;)V
     .locals 0
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -51,7 +49,7 @@
 
     .prologue
     .line 1975
-    .local p2, urlParams:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p2, "urlParams":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     iput-object p1, p0, Lcom/tapjoy/TapjoyConnectCore$PPAThread;->this$0:Lcom/tapjoy/TapjoyConnectCore;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -70,6 +68,7 @@
 
     .prologue
     .line 1982
+    # getter for: Lcom/tapjoy/TapjoyConnectCore;->tapjoyURLConnection:Lcom/tapjoy/TapjoyURLConnection;
     invoke-static {}, Lcom/tapjoy/TapjoyConnectCore;->access$300()Lcom/tapjoy/TapjoyURLConnection;
 
     move-result-object v1
@@ -103,7 +102,7 @@
     move-result-object v0
 
     .line 1985
-    .local v0, response:Lcom/tapjoy/TapjoyHttpURLResponse;
+    .local v0, "response":Lcom/tapjoy/TapjoyHttpURLResponse;
     iget-object v1, v0, Lcom/tapjoy/TapjoyHttpURLResponse;->response:Ljava/lang/String;
 
     if-eqz v1, :cond_0
@@ -113,7 +112,7 @@
 
     iget-object v2, v0, Lcom/tapjoy/TapjoyHttpURLResponse;->response:Ljava/lang/String;
 
-    #calls: Lcom/tapjoy/TapjoyConnectCore;->handlePayPerActionResponse(Ljava/lang/String;)Z
+    # invokes: Lcom/tapjoy/TapjoyConnectCore;->handlePayPerActionResponse(Ljava/lang/String;)Z
     invoke-static {v1, v2}, Lcom/tapjoy/TapjoyConnectCore;->access$900(Lcom/tapjoy/TapjoyConnectCore;Ljava/lang/String;)Z
 
     .line 1987

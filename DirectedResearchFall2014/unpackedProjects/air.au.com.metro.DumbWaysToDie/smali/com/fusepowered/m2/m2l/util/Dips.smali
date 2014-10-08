@@ -16,8 +16,8 @@
 
 .method public static asFloatPixels(FLandroid/content/Context;)F
     .locals 2
-    .parameter "dips"
-    .parameter "context"
+    .param p0, "dips"    # F
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     .line 41
@@ -30,7 +30,7 @@
     move-result-object v0
 
     .line 42
-    .local v0, displayMetrics:Landroid/util/DisplayMetrics;
+    .local v0, "displayMetrics":Landroid/util/DisplayMetrics;
     const/4 v1, 0x1
 
     invoke-static {v1, p0, v0}, Landroid/util/TypedValue;->applyDimension(IFLandroid/util/DisplayMetrics;)F
@@ -42,8 +42,8 @@
 
 .method public static asIntPixels(FLandroid/content/Context;)I
     .locals 2
-    .parameter "dips"
-    .parameter "context"
+    .param p0, "dips"    # F
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     .line 46
@@ -51,7 +51,7 @@
 
     move-result v0
 
-    const/high16 v1, 0x3f00
+    const/high16 v1, 0x3f000000
 
     add-float/2addr v0, v1
 

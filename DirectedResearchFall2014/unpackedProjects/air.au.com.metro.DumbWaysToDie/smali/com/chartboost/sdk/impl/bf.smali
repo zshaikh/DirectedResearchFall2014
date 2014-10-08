@@ -29,8 +29,6 @@
 # direct methods
 .method protected constructor <init>(Ljava/util/Map;Lcom/chartboost/sdk/impl/ba$h$a;)V
     .locals 0
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",

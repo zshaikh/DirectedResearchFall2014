@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/bitrhymes/applovin/InitializeAppLovinSdk;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1
@@ -40,7 +39,7 @@
 # virtual methods
 .method public adReceived(Lcom/applovin/sdk/AppLovinAd;)V
     .locals 3
-    .parameter "ad"
+    .param p1, "ad"    # Lcom/applovin/sdk/AppLovinAd;
 
     .prologue
     .line 31
@@ -56,7 +55,7 @@
     move-result-object v0
 
     .line 34
-    .local v0, mContext:Lcom/adobe/fre/FREContext;
+    .local v0, "mContext":Lcom/adobe/fre/FREContext;
     if-eqz v0, :cond_0
 
     .line 35
@@ -73,7 +72,7 @@
 
 .method public failedToReceiveAd(I)V
     .locals 4
-    .parameter "errorCode"
+    .param p1, "errorCode"    # I
 
     .prologue
     .line 40
@@ -101,7 +100,7 @@
     move-result-object v0
 
     .line 42
-    .local v0, mContext:Lcom/adobe/fre/FREContext;
+    .local v0, "mContext":Lcom/adobe/fre/FREContext;
     if-eqz v0, :cond_0
 
     .line 43

@@ -33,7 +33,6 @@
 
 .method constructor <init>(Ljava/io/DataInput;)V
     .locals 2
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -99,12 +98,6 @@
 
 .method constructor <init>(Ljava/lang/String;JJIII)V
     .locals 1
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 22
@@ -141,7 +134,6 @@
 # virtual methods
 .method final a(Ljava/io/DataOutput;)V
     .locals 2
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -304,7 +296,6 @@
 
 .method public setIdHash(Ljava/lang/String;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 67
@@ -316,7 +307,6 @@
 
 .method public setViews(I)V
     .locals 0
-    .parameter
 
     .prologue
     .line 75

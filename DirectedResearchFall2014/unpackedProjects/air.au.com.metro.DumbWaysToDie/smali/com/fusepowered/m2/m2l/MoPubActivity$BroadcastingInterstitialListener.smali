@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m2/m2l/M2Activity;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 132
@@ -62,7 +61,7 @@
 
 .method public onInterstitialFailed(Lcom/fusepowered/m2/m2l/MoPubErrorCode;)V
     .locals 2
-    .parameter "errorCode"
+    .param p1, "errorCode"    # Lcom/fusepowered/m2/m2l/MoPubErrorCode;
 
     .prologue
     .line 140
@@ -88,7 +87,7 @@
     .line 135
     iget-object v0, p0, Lcom/fusepowered/m2/m2l/MoPubActivity$BroadcastingInterstitialListener;->this$0:Lcom/fusepowered/m2/m2l/M2Activity;
 
-    #getter for: Lcom/fusepowered/m2/m2l/M2Activity;->mHtmlInterstitialWebView:Lcom/fusepowered/m2/m2l/HtmlInterstitialWebView;
+    # getter for: Lcom/fusepowered/m2/m2l/M2Activity;->mHtmlInterstitialWebView:Lcom/fusepowered/m2/m2l/HtmlInterstitialWebView;
     invoke-static {v0}, Lcom/fusepowered/m2/m2l/M2Activity;->access$0(Lcom/fusepowered/m2/m2l/M2Activity;)Lcom/fusepowered/m2/m2l/HtmlInterstitialWebView;
 
     move-result-object v0

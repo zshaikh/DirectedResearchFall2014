@@ -61,7 +61,7 @@
 
 .method constructor <init>(Landroid/os/Parcel;)V
     .locals 0
-    .parameter "in"
+    .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
     .line 70
@@ -76,9 +76,9 @@
 
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
-    .parameter "id"
-    .parameter "urlParam"
-    .parameter "value"
+    .param p1, "id"    # Ljava/lang/String;
+    .param p2, "urlParam"    # Ljava/lang/String;
+    .param p3, "value"    # Ljava/lang/String;
 
     .prologue
     .line 36
@@ -99,7 +99,7 @@
 
 .method private readFromParcel(Landroid/os/Parcel;)V
     .locals 1
-    .parameter "in"
+    .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
     .line 87
@@ -171,8 +171,8 @@
 
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 1
-    .parameter "out"
-    .parameter "flags"
+    .param p1, "out"    # Landroid/os/Parcel;
+    .param p2, "flags"    # I
 
     .prologue
     .line 81

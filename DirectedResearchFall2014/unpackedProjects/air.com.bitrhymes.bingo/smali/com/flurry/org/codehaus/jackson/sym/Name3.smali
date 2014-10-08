@@ -14,11 +14,11 @@
 # direct methods
 .method constructor <init>(Ljava/lang/String;IIII)V
     .locals 0
-    .parameter "name"
-    .parameter "hash"
-    .parameter "q1"
-    .parameter "q2"
-    .parameter "q3"
+    .param p1, "name"    # Ljava/lang/String;
+    .param p2, "hash"    # I
+    .param p3, "q1"    # I
+    .param p4, "q2"    # I
+    .param p5, "q3"    # I
 
     .prologue
     .line 17
@@ -41,7 +41,7 @@
 # virtual methods
 .method public equals(I)Z
     .locals 1
-    .parameter "quad"
+    .param p1, "quad"    # I
 
     .prologue
     .line 25
@@ -52,8 +52,8 @@
 
 .method public equals(II)Z
     .locals 1
-    .parameter "quad1"
-    .parameter "quad2"
+    .param p1, "quad1"    # I
+    .param p2, "quad2"    # I
 
     .prologue
     .line 29
@@ -64,8 +64,8 @@
 
 .method public equals([II)Z
     .locals 4
-    .parameter "quads"
-    .parameter "qlen"
+    .param p1, "quads"    # [I
+    .param p2, "qlen"    # I
 
     .prologue
     const/4 v3, 0x1

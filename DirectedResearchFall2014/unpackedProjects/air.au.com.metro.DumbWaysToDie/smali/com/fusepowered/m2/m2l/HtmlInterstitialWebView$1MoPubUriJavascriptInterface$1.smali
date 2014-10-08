@@ -26,8 +26,6 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m2/m2l/HtmlInterstitialWebView$1MoPubUriJavascriptInterface;Lcom/fusepowered/m2/m2l/HtmlInterstitialWebView$MoPubUriJavascriptFireFinishLoadListener;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 1

@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/facebook/widget/PickerFragment;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1
@@ -40,16 +39,16 @@
 # virtual methods
 .method public onScroll(Landroid/widget/AbsListView;III)V
     .locals 1
-    .parameter "view"
-    .parameter "firstVisibleItem"
-    .parameter "visibleItemCount"
-    .parameter "totalItemCount"
+    .param p1, "view"    # Landroid/widget/AbsListView;
+    .param p2, "firstVisibleItem"    # I
+    .param p3, "visibleItemCount"    # I
+    .param p4, "totalItemCount"    # I
 
     .prologue
     .line 763
     iget-object v0, p0, Lcom/facebook/widget/PickerFragment$1;->this$0:Lcom/facebook/widget/PickerFragment;
 
-    #calls: Lcom/facebook/widget/PickerFragment;->reprioritizeDownloads()V
+    # invokes: Lcom/facebook/widget/PickerFragment;->reprioritizeDownloads()V
     invoke-static {v0}, Lcom/facebook/widget/PickerFragment;->access$0(Lcom/facebook/widget/PickerFragment;)V
 
     .line 764
@@ -58,8 +57,8 @@
 
 .method public onScrollStateChanged(Landroid/widget/AbsListView;I)V
     .locals 0
-    .parameter "view"
-    .parameter "scrollState"
+    .param p1, "view"    # Landroid/widget/AbsListView;
+    .param p2, "scrollState"    # I
 
     .prologue
     .line 759

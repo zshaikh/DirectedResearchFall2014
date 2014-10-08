@@ -105,7 +105,7 @@
 
 .method private static encodeNotificationIntent(Landroid/content/Intent;)Lorg/json/JSONObject;
     .locals 8
-    .parameter "intent"
+    .param p0, "intent"    # Landroid/content/Intent;
 
     .prologue
     const-string v7, "[BUExtension]"
@@ -116,13 +116,13 @@
     invoke-direct {v2}, Lorg/json/JSONObject;-><init>()V
 
     .line 607
-    .local v2, jsonObject:Lorg/json/JSONObject;
+    .local v2, "jsonObject":Lorg/json/JSONObject;
     new-instance v1, Lorg/json/JSONObject;
 
     invoke-direct {v1}, Lorg/json/JSONObject;-><init>()V
 
     .line 609
-    .local v1, extrasJsonObject:Lorg/json/JSONObject;
+    .local v1, "extrasJsonObject":Lorg/json/JSONObject;
     invoke-virtual {p0}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object v5
@@ -132,7 +132,7 @@
     move-result-object v4
 
     .line 610
-    .local v4, keySet:Ljava/util/Set;,"Ljava/util/Set<Ljava/lang/String;>;"
+    .local v4, "keySet":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     invoke-interface {v4}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v5
@@ -165,7 +165,7 @@
     check-cast v3, Ljava/lang/String;
 
     .line 614
-    .local v3, key:Ljava/lang/String;
+    .local v3, "key":Ljava/lang/String;
     :try_start_1
     invoke-virtual {p0}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
@@ -188,7 +188,7 @@
     move-object v0, v6
 
     .line 617
-    .local v0, e:Lorg/json/JSONException;
+    .local v0, "e":Lorg/json/JSONException;
     const-string v6, "[BUExtension]"
 
     const-string v6, "Failed posting extra to callback"
@@ -201,15 +201,15 @@
     goto :goto_0
 
     .line 625
-    .end local v0           #e:Lorg/json/JSONException;
-    .end local v3           #key:Ljava/lang/String;
+    .end local v0    # "e":Lorg/json/JSONException;
+    .end local v3    # "key":Ljava/lang/String;
     :catch_1
     move-exception v5
 
     move-object v0, v5
 
     .line 627
-    .restart local v0       #e:Lorg/json/JSONException;
+    .restart local v0    # "e":Lorg/json/JSONException;
     const-string v5, "[BUExtension]"
 
     const-string v5, "Failed posting extras obj to callback"
@@ -224,8 +224,8 @@
 
 .method public static enqueueFlashEvent(Ljava/lang/String;Ljava/lang/String;)V
     .locals 3
-    .parameter "eventId"
-    .parameter "eventData"
+    .param p0, "eventId"    # Ljava/lang/String;
+    .param p1, "eventData"    # Ljava/lang/String;
 
     .prologue
     .line 399
@@ -290,7 +290,7 @@
 
 .method public static getInstance(Z)Lcom/milkmangames/extensions/android/BuffaloExtensionContext;
     .locals 1
-    .parameter "isFlashInitialized"
+    .param p0, "isFlashInitialized"    # Z
 
     .prologue
     .line 98
@@ -319,7 +319,7 @@
 
 .method public static getSenderIds(Landroid/content/Context;)[Ljava/lang/String;
     .locals 6
-    .parameter "context"
+    .param p0, "context"    # Landroid/content/Context;
 
     .prologue
     const/4 v5, 0x0
@@ -330,7 +330,7 @@
     new-array v2, v3, [Ljava/lang/String;
 
     .line 243
-    .local v2, sendersStrings:[Ljava/lang/String;
+    .local v2, "sendersStrings":[Ljava/lang/String;
     sget-object v3, Lcom/milkmangames/extensions/android/BuffaloExtensionContext;->instance:Lcom/milkmangames/extensions/android/BuffaloExtensionContext;
 
     if-eqz v3, :cond_0
@@ -366,7 +366,7 @@
     move-result-object v1
 
     .line 253
-    .local v1, prefs:Landroid/content/SharedPreferences;
+    .local v1, "prefs":Landroid/content/SharedPreferences;
     const-string v3, "lklast"
 
     const-string v4, ""
@@ -376,7 +376,7 @@
     move-result-object v0
 
     .line 254
-    .local v0, lastId:Ljava/lang/String;
+    .local v0, "lastId":Ljava/lang/String;
     sget-object v3, Lcom/milkmangames/extensions/android/BuffaloExtensionContext;->instance:Lcom/milkmangames/extensions/android/BuffaloExtensionContext;
 
     iput-object v0, v3, Lcom/milkmangames/extensions/android/BuffaloExtensionContext;->lastGCMSender:Ljava/lang/String;
@@ -393,8 +393,8 @@
 
 .method public static onGCMError(Landroid/content/Context;Ljava/lang/String;)V
     .locals 3
-    .parameter "context"
-    .parameter "errorId"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "errorId"    # Ljava/lang/String;
 
     .prologue
     .line 572
@@ -427,8 +427,8 @@
 
 .method public static onGCMMessage(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 10
-    .parameter "context"
-    .parameter "intent"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "intent"    # Landroid/content/Intent;
 
     .prologue
     .line 499
@@ -441,7 +441,7 @@
     move-result-object v2
 
     .line 500
-    .local v2, message:Ljava/lang/String;
+    .local v2, "message":Ljava/lang/String;
     const-string v0, "[BUExtension]"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -473,10 +473,10 @@
     .line 505
     const-string p0, "[BUExtension]"
 
-    .end local p0
+    .end local p0    # "context":Landroid/content/Context;
     const-string p1, "GCM = in foreground."
 
-    .end local p1
+    .end local p1    # "intent":Landroid/content/Intent;
     invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 567
@@ -484,8 +484,8 @@
     return-void
 
     .line 510
-    .restart local p0
-    .restart local p1
+    .restart local p0    # "context":Landroid/content/Context;
+    .restart local p1    # "intent":Landroid/content/Intent;
     :cond_0
     const-string v0, "notification"
 
@@ -496,25 +496,25 @@
     check-cast v4, Landroid/app/NotificationManager;
 
     .line 511
-    .local v4, notificationManager:Landroid/app/NotificationManager;
+    .local v4, "notificationManager":Landroid/app/NotificationManager;
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v5
 
     .line 512
-    .local v5, packageManager:Landroid/content/pm/PackageManager;
+    .local v5, "packageManager":Landroid/content/pm/PackageManager;
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
 
     .line 513
-    .local v0, appContext:Landroid/content/Context;
+    .local v0, "appContext":Landroid/content/Context;
     invoke-virtual {v0}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
 
     move-result-object v1
 
     .line 516
-    .local v1, applicationInfo:Landroid/content/pm/ApplicationInfo;
+    .local v1, "applicationInfo":Landroid/content/pm/ApplicationInfo;
     invoke-virtual {p1}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object v3
@@ -526,16 +526,16 @@
     move-result-object v3
 
     .line 517
-    .local v3, rawJson:Ljava/lang/String;
+    .local v3, "rawJson":Ljava/lang/String;
     move-object v6, v3
 
     .line 518
-    .local v6, tickerText:Ljava/lang/String;
+    .local v6, "tickerText":Ljava/lang/String;
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v3
 
-    .end local v3           #rawJson:Ljava/lang/String;
+    .end local v3    # "rawJson":Ljava/lang/String;
     invoke-virtual {v3}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
 
     move-result-object v3
@@ -545,13 +545,13 @@
     move-result-object v3
 
     .line 521
-    .local v3, title:Ljava/lang/CharSequence;
+    .local v3, "title":Ljava/lang/CharSequence;
     :try_start_0
     invoke-virtual {p1}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object p1
 
-    .end local p1
+    .end local p1    # "intent":Landroid/content/Intent;
     const-string v7, "title"
 
     invoke-virtual {p1, v7}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -560,13 +560,13 @@
 
     move-result-object p1
 
-    .end local v3           #title:Ljava/lang/CharSequence;
-    .local p1, title:Ljava/lang/CharSequence;
+    .end local v3    # "title":Ljava/lang/CharSequence;
+    .local p1, "title":Ljava/lang/CharSequence;
     move-object v7, p1
 
     .line 528
-    .end local p1           #title:Ljava/lang/CharSequence;
-    .local v7, title:Ljava/lang/CharSequence;
+    .end local p1    # "title":Ljava/lang/CharSequence;
+    .local v7, "title":Ljava/lang/CharSequence;
     :goto_1
     new-instance v3, Landroid/app/Notification;
 
@@ -579,7 +579,7 @@
     invoke-direct {v3, p1, v6, v8, v9}, Landroid/app/Notification;-><init>(ILjava/lang/CharSequence;J)V
 
     .line 529
-    .local v3, notification:Landroid/app/Notification;
+    .local v3, "notification":Landroid/app/Notification;
     iget p1, v3, Landroid/app/Notification;->flags:I
 
     or-int/lit8 p1, p1, 0x1f
@@ -628,13 +628,13 @@
     move-result-object p1
 
     .line 538
-    .local p1, packageName:Ljava/lang/String;
+    .local p1, "packageName":Ljava/lang/String;
     const-string v0, "[BUExtension]"
 
-    .end local v0           #appContext:Landroid/content/Context;
+    .end local v0    # "appContext":Landroid/content/Context;
     new-instance v1, Ljava/lang/StringBuilder;
 
-    .end local v1           #applicationInfo:Landroid/content/pm/ApplicationInfo;
+    .end local v1    # "applicationInfo":Landroid/content/pm/ApplicationInfo;
     const-string v8, "MPN:"
 
     invoke-direct {v1, v8}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
@@ -655,25 +655,25 @@
     move-result-object p1
 
     .line 540
-    .local p1, launchIntent:Landroid/content/Intent;
+    .local p1, "launchIntent":Landroid/content/Intent;
     invoke-virtual {p1}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
 
     move-result-object p1
 
-    .end local p1           #launchIntent:Landroid/content/Intent;
+    .end local p1    # "launchIntent":Landroid/content/Intent;
     invoke-virtual {p1}, Landroid/content/ComponentName;->getClassName()Ljava/lang/String;
 
     move-result-object p1
 
     .line 541
-    .local p1, launchClassName:Ljava/lang/String;
+    .local p1, "launchClassName":Ljava/lang/String;
     const-string v0, "[BUExtension]"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     const-string v5, "LCN:"
 
-    .end local v5           #packageManager:Landroid/content/pm/PackageManager;
+    .end local v5    # "packageManager":Landroid/content/pm/PackageManager;
     invoke-direct {v1, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -694,39 +694,39 @@
 
     move-result-object p1
 
-    .end local p1           #launchClassName:Ljava/lang/String;
+    .end local p1    # "launchClassName":Ljava/lang/String;
     invoke-direct {v0, p0, p1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
     .line 554
-    .local v0, notificationIntent:Landroid/content/Intent;
+    .local v0, "notificationIntent":Landroid/content/Intent;
     const-string p1, "bufGcm"
 
     invoke-virtual {v0, p1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 557
-    const/high16 p1, 0x2400
+    const/high16 p1, 0x24000000
 
     invoke-virtual {v0, p1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
     .line 559
     const/4 p1, 0x0
 
-    const/high16 v1, 0x800
+    const/high16 v1, 0x8000000
 
     invoke-static {p0, p1, v0, v1}, Landroid/app/PendingIntent;->getActivity(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
 
     move-result-object p1
 
     .line 560
-    .local p1, pendingIntent:Landroid/app/PendingIntent;
+    .local p1, "pendingIntent":Landroid/app/PendingIntent;
     invoke-virtual {v3, p0, v7, v6, p1}, Landroid/app/Notification;->setLatestEventInfo(Landroid/content/Context;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Landroid/app/PendingIntent;)V
 
     .line 561
     iget p0, v3, Landroid/app/Notification;->flags:I
 
-    .end local p0
+    .end local p0    # "context":Landroid/content/Context;
     or-int/lit8 p0, p0, 0x10
 
     iput p0, v3, Landroid/app/Notification;->flags:I
@@ -741,7 +741,7 @@
 
     const-string p1, "release lock"
 
-    .end local p1           #pendingIntent:Landroid/app/PendingIntent;
+    .end local p1    # "pendingIntent":Landroid/app/PendingIntent;
     invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 565
@@ -750,17 +750,17 @@
     goto/16 :goto_0
 
     .line 523
-    .end local v7           #title:Ljava/lang/CharSequence;
-    .local v0, appContext:Landroid/content/Context;
-    .restart local v1       #applicationInfo:Landroid/content/pm/ApplicationInfo;
-    .local v3, title:Ljava/lang/CharSequence;
-    .restart local v5       #packageManager:Landroid/content/pm/PackageManager;
-    .restart local p0
+    .end local v7    # "title":Ljava/lang/CharSequence;
+    .local v0, "appContext":Landroid/content/Context;
+    .restart local v1    # "applicationInfo":Landroid/content/pm/ApplicationInfo;
+    .local v3, "title":Ljava/lang/CharSequence;
+    .restart local v5    # "packageManager":Landroid/content/pm/PackageManager;
+    .restart local p0    # "context":Landroid/content/Context;
     :catch_0
     move-exception p1
 
     .line 525
-    .local p1, e:Ljava/lang/Exception;
+    .local p1, "e":Ljava/lang/Exception;
     const-string v7, "[BUExtension]"
 
     const-string v8, "Message parse failed."
@@ -772,21 +772,21 @@
 
     move-object v7, v3
 
-    .end local v3           #title:Ljava/lang/CharSequence;
-    .restart local v7       #title:Ljava/lang/CharSequence;
+    .end local v3    # "title":Ljava/lang/CharSequence;
+    .restart local v7    # "title":Ljava/lang/CharSequence;
     goto/16 :goto_1
 
     .line 547
-    .end local v0           #appContext:Landroid/content/Context;
-    .end local v1           #applicationInfo:Landroid/content/pm/ApplicationInfo;
-    .end local v5           #packageManager:Landroid/content/pm/PackageManager;
-    .end local p1           #e:Ljava/lang/Exception;
-    .local v3, notification:Landroid/app/Notification;
+    .end local v0    # "appContext":Landroid/content/Context;
+    .end local v1    # "applicationInfo":Landroid/content/pm/ApplicationInfo;
+    .end local v5    # "packageManager":Landroid/content/pm/PackageManager;
+    .end local p1    # "e":Ljava/lang/Exception;
+    .local v3, "notification":Landroid/app/Notification;
     :catch_1
     move-exception p0
 
     .line 549
-    .local p0, e:Ljava/lang/Exception;
+    .local p0, "e":Ljava/lang/Exception;
     const-string p1, "[BUExtension]"
 
     const-string v0, "Failed to locate the air main intent."
@@ -801,8 +801,8 @@
 
 .method public static onGCMRegistered(Landroid/content/Context;Ljava/lang/String;)V
     .locals 3
-    .parameter "context"
-    .parameter "registrationId"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "registrationId"    # Ljava/lang/String;
 
     .prologue
     .line 579
@@ -835,8 +835,8 @@
 
 .method public static onGCMUnregistered(Landroid/content/Context;Ljava/lang/String;)V
     .locals 3
-    .parameter "context"
-    .parameter "registrationId"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "registrationId"    # Ljava/lang/String;
 
     .prologue
     .line 586
@@ -869,8 +869,8 @@
 
 .method public static onLocalMessage(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 10
-    .parameter "context"
-    .parameter "intent"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "intent"    # Landroid/content/Intent;
 
     .prologue
     .line 416
@@ -883,7 +883,7 @@
     move-result-object v2
 
     .line 417
-    .local v2, message:Ljava/lang/String;
+    .local v2, "message":Ljava/lang/String;
     const-string v0, "[BUExtension]"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -915,10 +915,10 @@
     .line 422
     const-string p0, "[BUExtension]"
 
-    .end local p0
+    .end local p0    # "context":Landroid/content/Context;
     const-string p1, "LN = in foreground."
 
-    .end local p1
+    .end local p1    # "intent":Landroid/content/Intent;
     invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 486
@@ -926,8 +926,8 @@
     return-void
 
     .line 427
-    .restart local p0
-    .restart local p1
+    .restart local p0    # "context":Landroid/content/Context;
+    .restart local p1    # "intent":Landroid/content/Intent;
     :cond_0
     const-string v0, "notification"
 
@@ -938,25 +938,25 @@
     check-cast v4, Landroid/app/NotificationManager;
 
     .line 428
-    .local v4, notificationManager:Landroid/app/NotificationManager;
+    .local v4, "notificationManager":Landroid/app/NotificationManager;
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v5
 
     .line 429
-    .local v5, packageManager:Landroid/content/pm/PackageManager;
+    .local v5, "packageManager":Landroid/content/pm/PackageManager;
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
 
     .line 430
-    .local v0, appContext:Landroid/content/Context;
+    .local v0, "appContext":Landroid/content/Context;
     invoke-virtual {v0}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
 
     move-result-object v1
 
     .line 433
-    .local v1, applicationInfo:Landroid/content/pm/ApplicationInfo;
+    .local v1, "applicationInfo":Landroid/content/pm/ApplicationInfo;
     invoke-virtual {p1}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object v3
@@ -968,16 +968,16 @@
     move-result-object v3
 
     .line 434
-    .local v3, rawJson:Ljava/lang/String;
+    .local v3, "rawJson":Ljava/lang/String;
     move-object v6, v3
 
     .line 435
-    .local v6, tickerText:Ljava/lang/String;
+    .local v6, "tickerText":Ljava/lang/String;
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v3
 
-    .end local v3           #rawJson:Ljava/lang/String;
+    .end local v3    # "rawJson":Ljava/lang/String;
     invoke-virtual {v3}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
 
     move-result-object v3
@@ -987,13 +987,13 @@
     move-result-object v3
 
     .line 438
-    .local v3, title:Ljava/lang/CharSequence;
+    .local v3, "title":Ljava/lang/CharSequence;
     :try_start_0
     invoke-virtual {p1}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object p1
 
-    .end local p1
+    .end local p1    # "intent":Landroid/content/Intent;
     const-string v7, "title"
 
     invoke-virtual {p1, v7}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -1002,13 +1002,13 @@
 
     move-result-object p1
 
-    .end local v3           #title:Ljava/lang/CharSequence;
-    .local p1, title:Ljava/lang/CharSequence;
+    .end local v3    # "title":Ljava/lang/CharSequence;
+    .local p1, "title":Ljava/lang/CharSequence;
     move-object v7, p1
 
     .line 445
-    .end local p1           #title:Ljava/lang/CharSequence;
-    .local v7, title:Ljava/lang/CharSequence;
+    .end local p1    # "title":Ljava/lang/CharSequence;
+    .local v7, "title":Ljava/lang/CharSequence;
     :goto_1
     new-instance v3, Landroid/app/Notification;
 
@@ -1021,7 +1021,7 @@
     invoke-direct {v3, p1, v6, v8, v9}, Landroid/app/Notification;-><init>(ILjava/lang/CharSequence;J)V
 
     .line 446
-    .local v3, notification:Landroid/app/Notification;
+    .local v3, "notification":Landroid/app/Notification;
     iget p1, v3, Landroid/app/Notification;->flags:I
 
     or-int/lit8 p1, p1, 0x1f
@@ -1070,13 +1070,13 @@
     move-result-object p1
 
     .line 457
-    .local p1, packageName:Ljava/lang/String;
+    .local p1, "packageName":Ljava/lang/String;
     const-string v0, "[BUExtension]"
 
-    .end local v0           #appContext:Landroid/content/Context;
+    .end local v0    # "appContext":Landroid/content/Context;
     new-instance v1, Ljava/lang/StringBuilder;
 
-    .end local v1           #applicationInfo:Landroid/content/pm/ApplicationInfo;
+    .end local v1    # "applicationInfo":Landroid/content/pm/ApplicationInfo;
     const-string v8, "LMPN:"
 
     invoke-direct {v1, v8}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
@@ -1097,25 +1097,25 @@
     move-result-object p1
 
     .line 459
-    .local p1, launchIntent:Landroid/content/Intent;
+    .local p1, "launchIntent":Landroid/content/Intent;
     invoke-virtual {p1}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
 
     move-result-object p1
 
-    .end local p1           #launchIntent:Landroid/content/Intent;
+    .end local p1    # "launchIntent":Landroid/content/Intent;
     invoke-virtual {p1}, Landroid/content/ComponentName;->getClassName()Ljava/lang/String;
 
     move-result-object p1
 
     .line 460
-    .local p1, launchClassName:Ljava/lang/String;
+    .local p1, "launchClassName":Ljava/lang/String;
     const-string v0, "[BUExtension]"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     const-string v5, "LLCN:"
 
-    .end local v5           #packageManager:Landroid/content/pm/PackageManager;
+    .end local v5    # "packageManager":Landroid/content/pm/PackageManager;
     invoke-direct {v1, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -1136,39 +1136,39 @@
 
     move-result-object p1
 
-    .end local p1           #launchClassName:Ljava/lang/String;
+    .end local p1    # "launchClassName":Ljava/lang/String;
     invoke-direct {v0, p0, p1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
     .line 473
-    .local v0, notificationIntent:Landroid/content/Intent;
+    .local v0, "notificationIntent":Landroid/content/Intent;
     const-string p1, "bufLocal"
 
     invoke-virtual {v0, p1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 476
-    const/high16 p1, 0x2400
+    const/high16 p1, 0x24000000
 
     invoke-virtual {v0, p1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
     .line 478
     const/4 p1, 0x0
 
-    const/high16 v1, 0x800
+    const/high16 v1, 0x8000000
 
     invoke-static {p0, p1, v0, v1}, Landroid/app/PendingIntent;->getActivity(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
 
     move-result-object p1
 
     .line 480
-    .local p1, pendingIntent:Landroid/app/PendingIntent;
+    .local p1, "pendingIntent":Landroid/app/PendingIntent;
     invoke-virtual {v3, p0, v7, v6, p1}, Landroid/app/Notification;->setLatestEventInfo(Landroid/content/Context;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Landroid/app/PendingIntent;)V
 
     .line 481
     iget p0, v3, Landroid/app/Notification;->flags:I
 
-    .end local p0
+    .end local p0    # "context":Landroid/content/Context;
     or-int/lit8 p0, p0, 0x10
 
     iput p0, v3, Landroid/app/Notification;->flags:I
@@ -1183,7 +1183,7 @@
 
     const-string p1, "release lock"
 
-    .end local p1           #pendingIntent:Landroid/app/PendingIntent;
+    .end local p1    # "pendingIntent":Landroid/app/PendingIntent;
     invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 485
@@ -1192,17 +1192,17 @@
     goto/16 :goto_0
 
     .line 440
-    .end local v7           #title:Ljava/lang/CharSequence;
-    .local v0, appContext:Landroid/content/Context;
-    .restart local v1       #applicationInfo:Landroid/content/pm/ApplicationInfo;
-    .local v3, title:Ljava/lang/CharSequence;
-    .restart local v5       #packageManager:Landroid/content/pm/PackageManager;
-    .restart local p0
+    .end local v7    # "title":Ljava/lang/CharSequence;
+    .local v0, "appContext":Landroid/content/Context;
+    .restart local v1    # "applicationInfo":Landroid/content/pm/ApplicationInfo;
+    .local v3, "title":Ljava/lang/CharSequence;
+    .restart local v5    # "packageManager":Landroid/content/pm/PackageManager;
+    .restart local p0    # "context":Landroid/content/Context;
     :catch_0
     move-exception p1
 
     .line 442
-    .local p1, e:Ljava/lang/Exception;
+    .local p1, "e":Ljava/lang/Exception;
     const-string v7, "[BUExtension]"
 
     const-string v8, "Local Message parse failed."
@@ -1214,21 +1214,21 @@
 
     move-object v7, v3
 
-    .end local v3           #title:Ljava/lang/CharSequence;
-    .restart local v7       #title:Ljava/lang/CharSequence;
+    .end local v3    # "title":Ljava/lang/CharSequence;
+    .restart local v7    # "title":Ljava/lang/CharSequence;
     goto/16 :goto_1
 
     .line 466
-    .end local v0           #appContext:Landroid/content/Context;
-    .end local v1           #applicationInfo:Landroid/content/pm/ApplicationInfo;
-    .end local v5           #packageManager:Landroid/content/pm/PackageManager;
-    .end local p1           #e:Ljava/lang/Exception;
-    .local v3, notification:Landroid/app/Notification;
+    .end local v0    # "appContext":Landroid/content/Context;
+    .end local v1    # "applicationInfo":Landroid/content/pm/ApplicationInfo;
+    .end local v5    # "packageManager":Landroid/content/pm/PackageManager;
+    .end local p1    # "e":Ljava/lang/Exception;
+    .local v3, "notification":Landroid/app/Notification;
     :catch_1
     move-exception p0
 
     .line 468
-    .local p0, e:Ljava/lang/Exception;
+    .local p0, "e":Ljava/lang/Exception;
     const-string p1, "[BUExtension]"
 
     const-string v0, "Failed to locate the air main intent."
@@ -1243,7 +1243,7 @@
 
 .method public static onReferrerReceived(Ljava/lang/String;)V
     .locals 3
-    .parameter "referrerId"
+    .param p0, "referrerId"    # Ljava/lang/String;
 
     .prologue
     .line 491
@@ -1283,7 +1283,7 @@
 # virtual methods
 .method public cancelLocalNotification(I)V
     .locals 6
-    .parameter "uid"
+    .param p1, "uid"    # I
 
     .prologue
     .line 164
@@ -1298,7 +1298,7 @@
     invoke-direct {v1, v3, v4}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
     .line 165
-    .local v1, intent:Landroid/content/Intent;
+    .local v1, "intent":Landroid/content/Intent;
     invoke-virtual {p0}, Lcom/milkmangames/extensions/android/BuffaloExtensionContext;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
@@ -1307,14 +1307,14 @@
 
     add-int/2addr v4, p1
 
-    const/high16 v5, 0x800
+    const/high16 v5, 0x8000000
 
     invoke-static {v3, v4, v1, v5}, Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
 
     move-result-object v2
 
     .line 166
-    .local v2, pendingIntent:Landroid/app/PendingIntent;
+    .local v2, "pendingIntent":Landroid/app/PendingIntent;
     invoke-virtual {p0}, Lcom/milkmangames/extensions/android/BuffaloExtensionContext;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
@@ -1328,7 +1328,7 @@
     check-cast v0, Landroid/app/AlarmManager;
 
     .line 167
-    .local v0, alarmManager:Landroid/app/AlarmManager;
+    .local v0, "alarmManager":Landroid/app/AlarmManager;
     invoke-virtual {v0, v2}, Landroid/app/AlarmManager;->cancel(Landroid/app/PendingIntent;)V
 
     .line 168
@@ -1337,8 +1337,8 @@
 
 .method public dispatchFlashEvent(Ljava/lang/String;Ljava/lang/String;)V
     .locals 3
-    .parameter "eventId"
-    .parameter "eventData"
+    .param p1, "eventId"    # Ljava/lang/String;
+    .param p2, "eventData"    # Ljava/lang/String;
 
     .prologue
     .line 381
@@ -1402,7 +1402,7 @@
     check-cast v0, Lcom/milkmangames/extensions/android/BuffaloExtensionContext$PendingFlashEvent;
 
     .line 391
-    .local v0, e:Lcom/milkmangames/extensions/android/BuffaloExtensionContext$PendingFlashEvent;
+    .local v0, "e":Lcom/milkmangames/extensions/android/BuffaloExtensionContext$PendingFlashEvent;
     iget-object v2, v0, Lcom/milkmangames/extensions/android/BuffaloExtensionContext$PendingFlashEvent;->eventId:Ljava/lang/String;
 
     iget-object v3, v0, Lcom/milkmangames/extensions/android/BuffaloExtensionContext$PendingFlashEvent;->eventData:Ljava/lang/String;
@@ -1444,7 +1444,7 @@
     move-result-object v0
 
     .line 351
-    .local v0, androidIdString:Ljava/lang/String;
+    .local v0, "androidIdString":Ljava/lang/String;
     return-object v0
 .end method
 
@@ -1480,7 +1480,7 @@
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     .line 681
-    .local v0, functionMap:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Lcom/adobe/fre/FREFunction;>;"
+    .local v0, "functionMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Lcom/adobe/fre/FREFunction;>;"
     const-string v1, "ffiInitBuffalo"
 
     new-instance v2, Lcom/milkmangames/extensions/android/BuffaloExtensionContext$BUInitFunction;
@@ -1674,7 +1674,7 @@
     const-string v1, "unavailable"
 
     .line 333
-    .local v1, res:Ljava/lang/String;
+    .local v1, "res":Ljava/lang/String;
     :try_start_0
     invoke-virtual {p0}, Lcom/milkmangames/extensions/android/BuffaloExtensionContext;->getActivity()Landroid/app/Activity;
 
@@ -1689,7 +1689,7 @@
     check-cast v2, Landroid/net/wifi/WifiManager;
 
     .line 334
-    .local v2, wifiManager:Landroid/net/wifi/WifiManager;
+    .local v2, "wifiManager":Landroid/net/wifi/WifiManager;
     invoke-virtual {v2}, Landroid/net/wifi/WifiManager;->getConnectionInfo()Landroid/net/wifi/WifiInfo;
 
     move-result-object v3
@@ -1701,7 +1701,7 @@
     move-result-object v1
 
     .line 342
-    .end local v2           #wifiManager:Landroid/net/wifi/WifiManager;
+    .end local v2    # "wifiManager":Landroid/net/wifi/WifiManager;
     :goto_0
     const-string v3, "[BUExtension]"
 
@@ -1719,7 +1719,7 @@
     move-object v0, v3
 
     .line 338
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v3, "[BUExtension]"
 
     const-string v3, "Wifi access failed->"
@@ -1762,13 +1762,13 @@
     invoke-direct {v0, p0}, Lcom/milkmangames/extensions/android/BuffaloExtensionContext$1;-><init>(Lcom/milkmangames/extensions/android/BuffaloExtensionContext;)V
 
     .line 128
-    .local v0, connectivityReceiver:Landroid/content/BroadcastReceiver;
+    .local v0, "connectivityReceiver":Landroid/content/BroadcastReceiver;
     new-instance v1, Landroid/content/IntentFilter;
 
     invoke-direct {v1}, Landroid/content/IntentFilter;-><init>()V
 
     .line 129
-    .local v1, intentFilter:Landroid/content/IntentFilter;
+    .local v1, "intentFilter":Landroid/content/IntentFilter;
     const-string v2, "android.net.conn.CONNECTIVITY_CHANGE"
 
     invoke-virtual {v1, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
@@ -1786,7 +1786,7 @@
 
 .method public initGCM(Ljava/lang/String;)V
     .locals 7
-    .parameter "GCMSender"
+    .param p1, "GCMSender"    # Ljava/lang/String;
 
     .prologue
     const/4 v6, 0x0
@@ -1812,13 +1812,13 @@
     move-result-object v1
 
     .line 208
-    .local v1, prefs:Landroid/content/SharedPreferences;
+    .local v1, "prefs":Landroid/content/SharedPreferences;
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
     .line 209
-    .local v0, prefEditor:Landroid/content/SharedPreferences$Editor;
+    .local v0, "prefEditor":Landroid/content/SharedPreferences$Editor;
     const-string v3, "lklast"
 
     iget-object v4, p0, Lcom/milkmangames/extensions/android/BuffaloExtensionContext;->lastGCMSender:Ljava/lang/String;
@@ -1845,7 +1845,7 @@
     move-result-object v2
 
     .line 216
-    .local v2, regId:Ljava/lang/String;
+    .local v2, "regId":Ljava/lang/String;
     const-string v3, "[BUExtension]"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -2045,7 +2045,7 @@
     move-object v0, v1
 
     .line 300
-    .local v0, e:Ljava/lang/UnsupportedOperationException;
+    .local v0, "e":Ljava/lang/UnsupportedOperationException;
     const-string v1, "[BUExtension]"
 
     const-string v1, "Device fail: unsupported."
@@ -2065,14 +2065,14 @@
     goto :goto_0
 
     .line 310
-    .end local v0           #e:Ljava/lang/UnsupportedOperationException;
+    .end local v0    # "e":Ljava/lang/UnsupportedOperationException;
     :catch_1
     move-exception v1
 
     move-object v0, v1
 
     .line 312
-    .local v0, e:Ljava/lang/IllegalStateException;
+    .local v0, "e":Ljava/lang/IllegalStateException;
     const-string v1, "[BUExtension]"
 
     const-string v1, "Manifest failed configuration."
@@ -2110,13 +2110,13 @@
     check-cast v1, Landroid/net/ConnectivityManager;
 
     .line 650
-    .local v1, connectivityManager:Landroid/net/ConnectivityManager;
+    .local v1, "connectivityManager":Landroid/net/ConnectivityManager;
     invoke-virtual {v1}, Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;
 
     move-result-object v0
 
     .line 651
-    .local v0, activeNetworkInfo:Landroid/net/NetworkInfo;
+    .local v0, "activeNetworkInfo":Landroid/net/NetworkInfo;
     if-eqz v0, :cond_0
 
     const/4 v2, 0x1
@@ -2148,13 +2148,13 @@
     check-cast v0, Landroid/net/ConnectivityManager;
 
     .line 658
-    .local v0, cManager:Landroid/net/ConnectivityManager;
+    .local v0, "cManager":Landroid/net/ConnectivityManager;
     invoke-virtual {v0}, Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;
 
     move-result-object v1
 
     .line 659
-    .local v1, networkInfo:Landroid/net/NetworkInfo;
+    .local v1, "networkInfo":Landroid/net/NetworkInfo;
     if-eqz v1, :cond_0
 
     invoke-virtual {v1}, Landroid/net/NetworkInfo;->isConnectedOrConnecting()Z
@@ -2220,11 +2220,11 @@
 
 .method public scheduleOnceLocalNotification(IJLjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 6
-    .parameter "uid"
-    .parameter "timeSeconds"
-    .parameter "title"
-    .parameter "message"
-    .parameter "extraData"
+    .param p1, "uid"    # I
+    .param p2, "timeSeconds"    # J
+    .param p4, "title"    # Ljava/lang/String;
+    .param p5, "message"    # Ljava/lang/String;
+    .param p6, "extraData"    # Ljava/lang/String;
 
     .prologue
     .line 151
@@ -2239,7 +2239,7 @@
     invoke-direct {v1, v3, v4}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
     .line 152
-    .local v1, intent:Landroid/content/Intent;
+    .local v1, "intent":Landroid/content/Intent;
     const-string v3, "message"
 
     invoke-virtual {v1, v3, p5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
@@ -2263,14 +2263,14 @@
 
     add-int/2addr v4, p1
 
-    const/high16 v5, 0x800
+    const/high16 v5, 0x8000000
 
     invoke-static {v3, v4, v1, v5}, Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
 
     move-result-object v2
 
     .line 157
-    .local v2, pendingIntent:Landroid/app/PendingIntent;
+    .local v2, "pendingIntent":Landroid/app/PendingIntent;
     invoke-virtual {p0}, Lcom/milkmangames/extensions/android/BuffaloExtensionContext;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
@@ -2284,7 +2284,7 @@
     check-cast v0, Landroid/app/AlarmManager;
 
     .line 158
-    .local v0, alarmManager:Landroid/app/AlarmManager;
+    .local v0, "alarmManager":Landroid/app/AlarmManager;
     const/4 v3, 0x0
 
     const-wide/16 v4, 0x3e8
@@ -2299,12 +2299,12 @@
 
 .method public scheduleRepeatingLocalNotification(IJJLjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 11
-    .parameter "uid"
-    .parameter "firstTimeSeconds"
-    .parameter "thenEverySeconds"
-    .parameter "title"
-    .parameter "message"
-    .parameter "extraData"
+    .param p1, "uid"    # I
+    .param p2, "firstTimeSeconds"    # J
+    .param p4, "thenEverySeconds"    # J
+    .param p6, "title"    # Ljava/lang/String;
+    .param p7, "message"    # Ljava/lang/String;
+    .param p8, "extraData"    # Ljava/lang/String;
 
     .prologue
     .line 138
@@ -2319,7 +2319,7 @@
     invoke-direct {v10, v4, v5}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
     .line 139
-    .local v10, intent:Landroid/content/Intent;
+    .local v10, "intent":Landroid/content/Intent;
     const-string v4, "message"
 
     move-object v0, v10
@@ -2361,14 +2361,14 @@
 
     add-int/2addr v5, p1
 
-    const/high16 v6, 0x800
+    const/high16 v6, 0x8000000
 
     invoke-static {v4, v5, v10, v6}, Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
 
     move-result-object v9
 
     .line 144
-    .local v9, pendingIntent:Landroid/app/PendingIntent;
+    .local v9, "pendingIntent":Landroid/app/PendingIntent;
     invoke-virtual {p0}, Lcom/milkmangames/extensions/android/BuffaloExtensionContext;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
@@ -2382,7 +2382,7 @@
     check-cast v3, Landroid/app/AlarmManager;
 
     .line 145
-    .local v3, alarmManager:Landroid/app/AlarmManager;
+    .local v3, "alarmManager":Landroid/app/AlarmManager;
     const/4 v4, 0x0
 
     const-wide/16 v5, 0x3e8
@@ -2401,7 +2401,7 @@
 
 .method public setInForeground(Z)V
     .locals 0
-    .parameter "isInForeground"
+    .param p1, "isInForeground"    # Z
 
     .prologue
     .line 173
@@ -2413,7 +2413,7 @@
 
 .method public setServerRegistration(Z)Z
     .locals 1
-    .parameter "isRegistered"
+    .param p1, "isRegistered"    # Z
 
     .prologue
     .line 261
@@ -2474,7 +2474,7 @@
     move-result-object v2
 
     .line 181
-    .local v2, inIntent:Landroid/content/Intent;
+    .local v2, "inIntent":Landroid/content/Intent;
     const-string v4, "[BUExtension]"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -2499,7 +2499,7 @@
     move-result-object v0
 
     .line 183
-    .local v0, extras:Landroid/os/Bundle;
+    .local v0, "extras":Landroid/os/Bundle;
     const-string v4, "[BUExtension]"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -2538,13 +2538,13 @@
     move-result-object v3
 
     .line 189
-    .local v3, msg:Ljava/lang/String;
+    .local v3, "msg":Ljava/lang/String;
     const-string v4, "LOCAL_MESSAGE_SELECTED"
 
     invoke-static {v4, v3}, Lcom/milkmangames/extensions/android/BuffaloExtensionContext;->enqueueFlashEvent(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 191
-    .end local v3           #msg:Ljava/lang/String;
+    .end local v3    # "msg":Ljava/lang/String;
     :cond_0
     const-string v4, "bufGcm"
 
@@ -2562,13 +2562,13 @@
     move-result-object v1
 
     .line 194
-    .local v1, gcmMsg:Ljava/lang/String;
+    .local v1, "gcmMsg":Ljava/lang/String;
     const-string v4, "GCM_MESSAGE_SELECTED"
 
     invoke-static {v4, v1}, Lcom/milkmangames/extensions/android/BuffaloExtensionContext;->enqueueFlashEvent(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 198
-    .end local v1           #gcmMsg:Ljava/lang/String;
+    .end local v1    # "gcmMsg":Ljava/lang/String;
     :cond_1
     return-void
 .end method

@@ -21,7 +21,7 @@
 
     .prologue
     .line 29
-    .local p0, this:Lcom/flurry/org/apache/avro/specific/SpecificDatumWriter;,"Lcom/flurry/org/apache/avro/specific/SpecificDatumWriter<TT;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/specific/SpecificDatumWriter;, "Lcom/flurry/org/apache/avro/specific/SpecificDatumWriter<TT;>;"
     invoke-static {}, Lcom/flurry/org/apache/avro/specific/SpecificData;->get()Lcom/flurry/org/apache/avro/specific/SpecificData;
 
     move-result-object v0
@@ -34,11 +34,11 @@
 
 .method public constructor <init>(Lcom/flurry/org/apache/avro/Schema;)V
     .locals 1
-    .parameter "schema"
+    .param p1, "schema"    # Lcom/flurry/org/apache/avro/Schema;
 
     .prologue
     .line 37
-    .local p0, this:Lcom/flurry/org/apache/avro/specific/SpecificDatumWriter;,"Lcom/flurry/org/apache/avro/specific/SpecificDatumWriter<TT;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/specific/SpecificDatumWriter;, "Lcom/flurry/org/apache/avro/specific/SpecificDatumWriter<TT;>;"
     invoke-static {}, Lcom/flurry/org/apache/avro/specific/SpecificData;->get()Lcom/flurry/org/apache/avro/specific/SpecificData;
 
     move-result-object v0
@@ -51,12 +51,12 @@
 
 .method protected constructor <init>(Lcom/flurry/org/apache/avro/Schema;Lcom/flurry/org/apache/avro/specific/SpecificData;)V
     .locals 0
-    .parameter "root"
-    .parameter "specificData"
+    .param p1, "root"    # Lcom/flurry/org/apache/avro/Schema;
+    .param p2, "specificData"    # Lcom/flurry/org/apache/avro/specific/SpecificData;
 
     .prologue
     .line 41
-    .local p0, this:Lcom/flurry/org/apache/avro/specific/SpecificDatumWriter;,"Lcom/flurry/org/apache/avro/specific/SpecificDatumWriter<TT;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/specific/SpecificDatumWriter;, "Lcom/flurry/org/apache/avro/specific/SpecificDatumWriter<TT;>;"
     invoke-direct {p0, p1, p2}, Lcom/flurry/org/apache/avro/generic/GenericDatumWriter;-><init>(Lcom/flurry/org/apache/avro/Schema;Lcom/flurry/org/apache/avro/generic/GenericData;)V
 
     .line 42
@@ -65,11 +65,11 @@
 
 .method protected constructor <init>(Lcom/flurry/org/apache/avro/specific/SpecificData;)V
     .locals 0
-    .parameter "specificData"
+    .param p1, "specificData"    # Lcom/flurry/org/apache/avro/specific/SpecificData;
 
     .prologue
     .line 45
-    .local p0, this:Lcom/flurry/org/apache/avro/specific/SpecificDatumWriter;,"Lcom/flurry/org/apache/avro/specific/SpecificDatumWriter<TT;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/specific/SpecificDatumWriter;, "Lcom/flurry/org/apache/avro/specific/SpecificDatumWriter<TT;>;"
     invoke-direct {p0, p1}, Lcom/flurry/org/apache/avro/generic/GenericDatumWriter;-><init>(Lcom/flurry/org/apache/avro/generic/GenericData;)V
 
     .line 46
@@ -78,7 +78,6 @@
 
 .method public constructor <init>(Ljava/lang/Class;)V
     .locals 2
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -89,8 +88,8 @@
 
     .prologue
     .line 33
-    .local p0, this:Lcom/flurry/org/apache/avro/specific/SpecificDatumWriter;,"Lcom/flurry/org/apache/avro/specific/SpecificDatumWriter<TT;>;"
-    .local p1, c:Ljava/lang/Class;,"Ljava/lang/Class<TT;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/specific/SpecificDatumWriter;, "Lcom/flurry/org/apache/avro/specific/SpecificDatumWriter<TT;>;"
+    .local p1, "c":Ljava/lang/Class;, "Ljava/lang/Class<TT;>;"
     invoke-static {}, Lcom/flurry/org/apache/avro/specific/SpecificData;->get()Lcom/flurry/org/apache/avro/specific/SpecificData;
 
     move-result-object v0
@@ -113,9 +112,9 @@
 # virtual methods
 .method protected writeEnum(Lcom/flurry/org/apache/avro/Schema;Ljava/lang/Object;Lcom/flurry/org/apache/avro/io/Encoder;)V
     .locals 1
-    .parameter "schema"
-    .parameter "datum"
-    .parameter "out"
+    .param p1, "schema"    # Lcom/flurry/org/apache/avro/Schema;
+    .param p2, "datum"    # Ljava/lang/Object;
+    .param p3, "out"    # Lcom/flurry/org/apache/avro/io/Encoder;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -124,7 +123,7 @@
 
     .prologue
     .line 51
-    .local p0, this:Lcom/flurry/org/apache/avro/specific/SpecificDatumWriter;,"Lcom/flurry/org/apache/avro/specific/SpecificDatumWriter<TT;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/specific/SpecificDatumWriter;, "Lcom/flurry/org/apache/avro/specific/SpecificDatumWriter<TT;>;"
     instance-of v0, p2, Ljava/lang/Enum;
 
     if-nez v0, :cond_0
@@ -133,16 +132,16 @@
     invoke-super {p0, p1, p2, p3}, Lcom/flurry/org/apache/avro/generic/GenericDatumWriter;->writeEnum(Lcom/flurry/org/apache/avro/Schema;Ljava/lang/Object;Lcom/flurry/org/apache/avro/io/Encoder;)V
 
     .line 55
-    .end local p2
+    .end local p2    # "datum":Ljava/lang/Object;
     :goto_0
     return-void
 
     .line 54
-    .restart local p2
+    .restart local p2    # "datum":Ljava/lang/Object;
     :cond_0
     check-cast p2, Ljava/lang/Enum;
 
-    .end local p2
+    .end local p2    # "datum":Ljava/lang/Object;
     invoke-virtual {p2}, Ljava/lang/Enum;->ordinal()I
 
     move-result v0

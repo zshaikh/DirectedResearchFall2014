@@ -33,33 +33,33 @@
 
 .method private getMaxCompressedSize(II)I
     .locals 6
-    .parameter "width"
-    .parameter "height"
+    .param p1, "width"    # I
+    .param p2, "height"    # I
 
     .prologue
     .line 76
     const/4 v2, 0x4
 
     .line 78
-    .local v2, sizePixel:I
+    .local v2, "sizePixel":I
     const/16 v1, 0x8
 
     .line 79
-    .local v1, sizeHeader:I
+    .local v1, "sizeHeader":I
     mul-int v5, p1, p2
 
     mul-int v3, v5, v2
 
     .line 80
-    .local v3, sizePixels:I
+    .local v3, "sizePixels":I
     add-int v4, v1, v3
 
     .line 84
-    .local v4, sizeUncompressed:I
+    .local v4, "sizeUncompressed":I
     mul-int/lit8 v0, v4, 0x2
 
     .line 86
-    .local v0, sizeCompressed:I
+    .local v0, "sizeCompressed":I
     return v0
 .end method
 
@@ -73,8 +73,8 @@
 # virtual methods
 .method public call(Lcom/adobe/fre/FREContext;[Lcom/adobe/fre/FREObject;)Lcom/adobe/fre/FREObject;
     .locals 9
-    .parameter "context"
-    .parameter "args"
+    .param p1, "context"    # Lcom/adobe/fre/FREContext;
+    .param p2, "args"    # [Lcom/adobe/fre/FREObject;
 
     .prologue
     const/4 v8, 0x0
@@ -85,19 +85,19 @@
     check-cast v2, Lcom/adobe/fre/FREBitmapData;
 
     .line 48
-    .local v2, freBitmapData:Lcom/adobe/fre/FREBitmapData;
+    .local v2, "freBitmapData":Lcom/adobe/fre/FREBitmapData;
     invoke-static {v2}, Lcom/buffalostudios/aneutils/common/ANEHelper;->getFREBitmapDataWidth(Lcom/adobe/fre/FREBitmapData;)I
 
     move-result v5
 
     .line 49
-    .local v5, imageWidth:I
+    .local v5, "imageWidth":I
     invoke-static {v2}, Lcom/buffalostudios/aneutils/common/ANEHelper;->getFREBitmapDataHeight(Lcom/adobe/fre/FREBitmapData;)I
 
     move-result v3
 
     .line 50
-    .local v3, imageHeight:I
+    .local v3, "imageHeight":I
     const/4 v7, 0x1
 
     invoke-static {v2, v7}, Lcom/buffalostudios/aneutils/common/ANEHelper;->getFREBitmapDataPixels(Lcom/adobe/fre/FREBitmapData;Z)Ljava/nio/ByteBuffer;
@@ -105,25 +105,25 @@
     move-result-object v4
 
     .line 53
-    .local v4, imagePixels:Ljava/nio/ByteBuffer;
+    .local v4, "imagePixels":Ljava/nio/ByteBuffer;
     invoke-direct {p0, v5, v3}, Lcom/buffalostudios/aneutils/bitmaputil/BitmapUtil$Compress;->getMaxCompressedSize(II)I
 
     move-result v6
 
     .line 54
-    .local v6, maxCompressedSize:I
+    .local v6, "maxCompressedSize":I
     invoke-static {v6}, Ljava/nio/ByteBuffer;->allocateDirect(I)Ljava/nio/ByteBuffer;
 
     move-result-object v0
 
     .line 57
-    .local v0, compressedData:Ljava/nio/ByteBuffer;
+    .local v0, "compressedData":Ljava/nio/ByteBuffer;
     invoke-direct {p0, v5, v3, v4, v0}, Lcom/buffalostudios/aneutils/bitmaputil/BitmapUtil$Compress;->compress(IILjava/nio/ByteBuffer;Ljava/nio/ByteBuffer;)I
 
     move-result v1
 
     .line 58
-    .local v1, compressedSize:I
+    .local v1, "compressedSize":I
     const/4 v7, -0x1
 
     if-ne v1, v7, :cond_0

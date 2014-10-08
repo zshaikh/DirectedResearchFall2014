@@ -12,8 +12,8 @@
 # direct methods
 .method public constructor <init>(ILjava/lang/String;)V
     .locals 2
-    .parameter "response"
-    .parameter "message"
+    .param p1, "response"    # I
+    .param p2, "message"    # Ljava/lang/String;
 
     .prologue
     .line 15

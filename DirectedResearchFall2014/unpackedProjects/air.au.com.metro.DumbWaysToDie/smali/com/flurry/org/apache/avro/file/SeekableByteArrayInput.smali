@@ -9,7 +9,7 @@
 # direct methods
 .method public constructor <init>([B)V
     .locals 0
-    .parameter "data"
+    .param p1, "data"    # [B
 
     .prologue
     .line 27
@@ -40,7 +40,7 @@
 
 .method public seek(J)V
     .locals 0
-    .parameter "p"
+    .param p1, "p"    # J
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;

@@ -21,7 +21,6 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/a1/ApplifierImpact;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1
@@ -54,7 +53,7 @@
     invoke-direct {v0, v1, v2}, Lcom/fusepowered/a1/ApplifierImpact$ApplifierImpactPlayVideoRunner;-><init>(Lcom/fusepowered/a1/ApplifierImpact;Lcom/fusepowered/a1/ApplifierImpact$ApplifierImpactPlayVideoRunner;)V
 
     .line 683
-    .local v0, playVideoRunner:Lcom/fusepowered/a1/ApplifierImpact$ApplifierImpactPlayVideoRunner;
+    .local v0, "playVideoRunner":Lcom/fusepowered/a1/ApplifierImpact$ApplifierImpactPlayVideoRunner;
     sget-object v1, Lcom/fusepowered/a1/properties/ApplifierImpactProperties;->CURRENT_ACTIVITY:Landroid/app/Activity;
 
     if-eqz v1, :cond_0

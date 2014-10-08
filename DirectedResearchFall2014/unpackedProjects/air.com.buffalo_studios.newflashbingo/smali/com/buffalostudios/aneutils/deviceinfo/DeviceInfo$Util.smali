@@ -27,14 +27,14 @@
 
 .method public static getAsInt(Lcom/adobe/fre/FREObject;)I
     .locals 3
-    .parameter "arg"
+    .param p0, "arg"    # Lcom/adobe/fre/FREObject;
 
     .prologue
     .line 27
     const/4 v1, 0x0
 
     .line 30
-    .local v1, value:I
+    .local v1, "value":I
     :try_start_0
     invoke-virtual {p0}, Lcom/adobe/fre/FREObject;->getAsInt()I
     :try_end_0
@@ -54,7 +54,7 @@
     move-exception v0
 
     .line 32
-    .local v0, e:Ljava/lang/IllegalStateException;
+    .local v0, "e":Ljava/lang/IllegalStateException;
     const-string v2, "ERROR: IllegalStateException in DeviceInfoUtil#getAsInt"
 
     invoke-static {v2}, Lcom/buffalostudios/aneutils/deviceinfo/DeviceInfo$Util;->onError(Ljava/lang/String;)V
@@ -62,12 +62,12 @@
     goto :goto_0
 
     .line 33
-    .end local v0           #e:Ljava/lang/IllegalStateException;
+    .end local v0    # "e":Ljava/lang/IllegalStateException;
     :catch_1
     move-exception v0
 
     .line 34
-    .local v0, e:Lcom/adobe/fre/FRETypeMismatchException;
+    .local v0, "e":Lcom/adobe/fre/FRETypeMismatchException;
     const-string v2, "ERROR: FRETypeMismatchException in DeviceInfoUtil#getAsInt"
 
     invoke-static {v2}, Lcom/buffalostudios/aneutils/deviceinfo/DeviceInfo$Util;->onError(Ljava/lang/String;)V
@@ -75,12 +75,12 @@
     goto :goto_0
 
     .line 35
-    .end local v0           #e:Lcom/adobe/fre/FRETypeMismatchException;
+    .end local v0    # "e":Lcom/adobe/fre/FRETypeMismatchException;
     :catch_2
     move-exception v0
 
     .line 36
-    .local v0, e:Lcom/adobe/fre/FREInvalidObjectException;
+    .local v0, "e":Lcom/adobe/fre/FREInvalidObjectException;
     const-string v2, "ERROR: FREInvalidObjectException in DeviceInfoUtil#getAsInt"
 
     invoke-static {v2}, Lcom/buffalostudios/aneutils/deviceinfo/DeviceInfo$Util;->onError(Ljava/lang/String;)V
@@ -88,12 +88,12 @@
     goto :goto_0
 
     .line 37
-    .end local v0           #e:Lcom/adobe/fre/FREInvalidObjectException;
+    .end local v0    # "e":Lcom/adobe/fre/FREInvalidObjectException;
     :catch_3
     move-exception v0
 
     .line 38
-    .local v0, e:Lcom/adobe/fre/FREWrongThreadException;
+    .local v0, "e":Lcom/adobe/fre/FREWrongThreadException;
     const-string v2, "ERROR: FREWrongThreadException in DeviceInfoUtil#getAsInt"
 
     invoke-static {v2}, Lcom/buffalostudios/aneutils/deviceinfo/DeviceInfo$Util;->onError(Ljava/lang/String;)V
@@ -103,7 +103,7 @@
 
 .method private static onError(Ljava/lang/String;)V
     .locals 0
-    .parameter "message"
+    .param p0, "message"    # Ljava/lang/String;
 
     .prologue
     .line 46

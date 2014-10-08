@@ -21,7 +21,6 @@
 # direct methods
 .method constructor <init>(Lcom/facebook/internal/PlatformServiceClient;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1
@@ -37,7 +36,7 @@
 # virtual methods
 .method public handleMessage(Landroid/os/Message;)V
     .locals 1
-    .parameter "message"
+    .param p1, "message"    # Landroid/os/Message;
 
     .prologue
     .line 54

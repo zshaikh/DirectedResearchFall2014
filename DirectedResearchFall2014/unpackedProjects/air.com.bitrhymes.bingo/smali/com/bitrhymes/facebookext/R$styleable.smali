@@ -15,11 +15,11 @@
 
 
 # static fields
-.field public static final com_facebook_friend_picker_fragment:[I = null
+.field public static final com_facebook_friend_picker_fragment:[I
 
 .field public static final com_facebook_friend_picker_fragment_multi_select:I = 0x0
 
-.field public static final com_facebook_login_view:[I = null
+.field public static final com_facebook_login_view:[I
 
 .field public static final com_facebook_login_view_confirm_logout:I = 0x0
 
@@ -29,7 +29,7 @@
 
 .field public static final com_facebook_login_view_logout_text:I = 0x3
 
-.field public static final com_facebook_picker_fragment:[I = null
+.field public static final com_facebook_picker_fragment:[I
 
 .field public static final com_facebook_picker_fragment_done_button_background:I = 0x6
 
@@ -45,7 +45,7 @@
 
 .field public static final com_facebook_picker_fragment_title_text:I = 0x3
 
-.field public static final com_facebook_place_picker_fragment:[I = null
+.field public static final com_facebook_place_picker_fragment:[I
 
 .field public static final com_facebook_place_picker_fragment_radius_in_meters:I = 0x0
 
@@ -55,7 +55,7 @@
 
 .field public static final com_facebook_place_picker_fragment_show_search_box:I = 0x3
 
-.field public static final com_facebook_profile_picture_view:[I = null
+.field public static final com_facebook_profile_picture_view:[I
 
 .field public static final com_facebook_profile_picture_view_is_cropped:I = 0x1
 
@@ -123,39 +123,39 @@
     nop
 
     :array_0
-    .array-data 0x4
-        0xct 0x0t 0x1t 0x7ft
-        0xdt 0x0t 0x1t 0x7ft
-        0xet 0x0t 0x1t 0x7ft
-        0xft 0x0t 0x1t 0x7ft
+    .array-data 4
+        0x7f01000c
+        0x7f01000d
+        0x7f01000e
+        0x7f01000f
     .end array-data
 
     .line 417
     :array_1
-    .array-data 0x4
-        0x0t 0x0t 0x1t 0x7ft
-        0x1t 0x0t 0x1t 0x7ft
-        0x2t 0x0t 0x1t 0x7ft
-        0x3t 0x0t 0x1t 0x7ft
-        0x4t 0x0t 0x1t 0x7ft
-        0x5t 0x0t 0x1t 0x7ft
-        0x6t 0x0t 0x1t 0x7ft
+    .array-data 4
+        0x7f010000
+        0x7f010001
+        0x7f010002
+        0x7f010003
+        0x7f010004
+        0x7f010005
+        0x7f010006
     .end array-data
 
     .line 527
     :array_2
-    .array-data 0x4
-        0x8t 0x0t 0x1t 0x7ft
-        0x9t 0x0t 0x1t 0x7ft
-        0xat 0x0t 0x1t 0x7ft
-        0xbt 0x0t 0x1t 0x7ft
+    .array-data 4
+        0x7f010008
+        0x7f010009
+        0x7f01000a
+        0x7f01000b
     .end array-data
 
     .line 598
     :array_3
-    .array-data 0x4
-        0x10t 0x0t 0x1t 0x7ft
-        0x11t 0x0t 0x1t 0x7ft
+    .array-data 4
+        0x7f010010
+        0x7f010011
     .end array-data
 .end method
 

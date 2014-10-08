@@ -16,7 +16,7 @@
 
 .method public static inputStreamToString(Ljava/io/InputStream;)Ljava/lang/String;
     .locals 5
-    .parameter "stream"
+    .param p0, "stream"    # Ljava/io/InputStream;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -34,17 +34,17 @@
     invoke-direct {v0, v3}, Ljava/io/BufferedReader;-><init>(Ljava/io/Reader;)V
 
     .line 19
-    .local v0, br:Ljava/io/BufferedReader;
+    .local v0, "br":Ljava/io/BufferedReader;
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
     .line 20
-    .local v2, sb:Ljava/lang/StringBuilder;
+    .local v2, "sb":Ljava/lang/StringBuilder;
     const/4 v1, 0x0
 
     .line 21
-    .local v1, line:Ljava/lang/String;
+    .local v1, "line":Ljava/lang/String;
     :goto_0
     invoke-virtual {v0}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 

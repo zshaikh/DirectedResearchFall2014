@@ -21,7 +21,7 @@
 # direct methods
 .method public constructor <init>(Lcom/flurry/org/apache/avro/io/parsing/Symbol;)V
     .locals 2
-    .parameter "symToSkip"
+    .param p1, "symToSkip"    # Lcom/flurry/org/apache/avro/io/parsing/Symbol;
 
     .prologue
     .line 443
@@ -42,8 +42,6 @@
 # virtual methods
 .method public flatten(Ljava/util/Map;Ljava/util/Map;)Lcom/flurry/org/apache/avro/io/parsing/Symbol$SkipAction;
     .locals 2
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -65,8 +63,8 @@
 
     .prologue
     .line 450
-    .local p1, map:Ljava/util/Map;,"Ljava/util/Map<Lcom/flurry/org/apache/avro/io/parsing/Symbol$Sequence;Lcom/flurry/org/apache/avro/io/parsing/Symbol$Sequence;>;"
-    .local p2, map2:Ljava/util/Map;,"Ljava/util/Map<Lcom/flurry/org/apache/avro/io/parsing/Symbol$Sequence;Ljava/util/List<Lcom/flurry/org/apache/avro/io/parsing/Symbol$Fixup;>;>;"
+    .local p1, "map":Ljava/util/Map;, "Ljava/util/Map<Lcom/flurry/org/apache/avro/io/parsing/Symbol$Sequence;Lcom/flurry/org/apache/avro/io/parsing/Symbol$Sequence;>;"
+    .local p2, "map2":Ljava/util/Map;, "Ljava/util/Map<Lcom/flurry/org/apache/avro/io/parsing/Symbol$Sequence;Ljava/util/List<Lcom/flurry/org/apache/avro/io/parsing/Symbol$Fixup;>;>;"
     new-instance v0, Lcom/flurry/org/apache/avro/io/parsing/Symbol$SkipAction;
 
     iget-object v1, p0, Lcom/flurry/org/apache/avro/io/parsing/Symbol$SkipAction;->symToSkip:Lcom/flurry/org/apache/avro/io/parsing/Symbol;
@@ -82,8 +80,8 @@
 
 .method public bridge synthetic flatten(Ljava/util/Map;Ljava/util/Map;)Lcom/flurry/org/apache/avro/io/parsing/Symbol;
     .locals 1
-    .parameter "x0"
-    .parameter "x1"
+    .param p1, "x0"    # Ljava/util/Map;
+    .param p2, "x1"    # Ljava/util/Map;
 
     .prologue
     .line 440

@@ -35,7 +35,6 @@
 
 .method static synthetic access$0(Lcom/fusepowered/m2/m2l/MraidView$MraidListenerInfo;)Lcom/fusepowered/m2/m2l/MraidView$MraidListener;
     .locals 1
-    .parameter
 
     .prologue
     .line 78
@@ -46,8 +45,6 @@
 
 .method static synthetic access$1(Lcom/fusepowered/m2/m2l/MraidView$MraidListenerInfo;Lcom/fusepowered/m2/m2l/MraidView$MraidListener;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 78
@@ -58,8 +55,6 @@
 
 .method static synthetic access$2(Lcom/fusepowered/m2/m2l/MraidView$MraidListenerInfo;Lcom/fusepowered/m2/m2l/MraidView$OnCloseButtonStateChangeListener;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 79
@@ -70,7 +65,6 @@
 
 .method static synthetic access$3(Lcom/fusepowered/m2/m2l/MraidView$MraidListenerInfo;)Lcom/fusepowered/m2/m2l/MraidView$OnCloseButtonStateChangeListener;
     .locals 1
-    .parameter
 
     .prologue
     .line 79
@@ -81,8 +75,6 @@
 
 .method static synthetic access$4(Lcom/fusepowered/m2/m2l/MraidView$MraidListenerInfo;Lcom/fusepowered/m2/m2l/MraidView$OnOpenListener;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 80
@@ -93,7 +85,6 @@
 
 .method static synthetic access$5(Lcom/fusepowered/m2/m2l/MraidView$MraidListenerInfo;)Lcom/fusepowered/m2/m2l/MraidView$OnOpenListener;
     .locals 1
-    .parameter
 
     .prologue
     .line 80

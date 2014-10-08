@@ -50,7 +50,7 @@
 
     iget-object v1, p0, Lcom/facebook/internal/SessionTracker$ActiveSessionBroadcastReceiver;->this$0:Lcom/facebook/internal/SessionTracker;
 
-    #getter for: Lcom/facebook/internal/SessionTracker;->callback:Lcom/facebook/Session$StatusCallback;
+    # getter for: Lcom/facebook/internal/SessionTracker;->callback:Lcom/facebook/Session$StatusCallback;
     invoke-static {v1}, Lcom/facebook/internal/SessionTracker;->access$100(Lcom/facebook/internal/SessionTracker;)Lcom/facebook/Session$StatusCallback;
 
     move-result-object v1

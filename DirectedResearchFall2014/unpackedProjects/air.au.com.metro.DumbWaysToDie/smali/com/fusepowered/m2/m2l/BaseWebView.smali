@@ -6,7 +6,7 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     .line 50
@@ -46,7 +46,7 @@
 
 .method protected enablePlugins(Z)V
     .locals 11
-    .parameter "enabled"
+    .param p1, "enabled"    # Z
 
     .prologue
     const-string v10, "MoPub"
@@ -107,7 +107,7 @@
     move-result-object v1
 
     .line 66
-    .local v1, method:Ljava/lang/reflect/Method;
+    .local v1, "method":Ljava/lang/reflect/Method;
     invoke-virtual {p0}, Lcom/fusepowered/m2/m2l/BaseWebView;->getSettings()Landroid/webkit/WebSettings;
 
     move-result-object v5
@@ -131,14 +131,14 @@
     goto :goto_0
 
     .line 67
-    .end local v1           #method:Ljava/lang/reflect/Method;
+    .end local v1    # "method":Ljava/lang/reflect/Method;
     :catch_0
     move-exception v5
 
     move-object v0, v5
 
     .line 68
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v5, "MoPub"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -176,7 +176,7 @@
     goto :goto_1
 
     .line 73
-    .end local v0           #e:Ljava/lang/Exception;
+    .end local v0    # "e":Ljava/lang/Exception;
     :cond_2
     :try_start_1
     const-string v5, "android.webkit.WebSettings$PluginState"
@@ -186,7 +186,7 @@
     move-result-object v4
 
     .line 75
-    .local v4, pluginStateClass:Ljava/lang/Class;,"Ljava/lang/Class<Ljava/lang/Enum;>;"
+    .local v4, "pluginStateClass":Ljava/lang/Class;, "Ljava/lang/Class<Ljava/lang/Enum;>;"
     const/4 v5, 0x1
 
     new-array v2, v5, [Ljava/lang/Class;
@@ -196,7 +196,7 @@
     aput-object v4, v2, v5
 
     .line 76
-    .local v2, parameters:[Ljava/lang/Class;
+    .local v2, "parameters":[Ljava/lang/Class;
     invoke-virtual {p0}, Lcom/fusepowered/m2/m2l/BaseWebView;->getSettings()Landroid/webkit/WebSettings;
 
     move-result-object v5
@@ -212,7 +212,7 @@
     move-result-object v1
 
     .line 78
-    .restart local v1       #method:Ljava/lang/reflect/Method;
+    .restart local v1    # "method":Ljava/lang/reflect/Method;
     if-eqz p1, :cond_3
 
     const-string v5, "ON"
@@ -223,7 +223,7 @@
     move-result-object v3
 
     .line 79
-    .local v3, pluginState:Ljava/lang/Enum;
+    .local v3, "pluginState":Ljava/lang/Enum;
     invoke-virtual {p0}, Lcom/fusepowered/m2/m2l/BaseWebView;->getSettings()Landroid/webkit/WebSettings;
 
     move-result-object v5
@@ -243,17 +243,17 @@
     goto/16 :goto_0
 
     .line 80
-    .end local v1           #method:Ljava/lang/reflect/Method;
-    .end local v2           #parameters:[Ljava/lang/Class;
-    .end local v3           #pluginState:Ljava/lang/Enum;
-    .end local v4           #pluginStateClass:Ljava/lang/Class;,"Ljava/lang/Class<Ljava/lang/Enum;>;"
+    .end local v1    # "method":Ljava/lang/reflect/Method;
+    .end local v2    # "parameters":[Ljava/lang/Class;
+    .end local v3    # "pluginState":Ljava/lang/Enum;
+    .end local v4    # "pluginStateClass":Ljava/lang/Class;, "Ljava/lang/Class<Ljava/lang/Enum;>;"
     :catch_1
     move-exception v5
 
     move-object v0, v5
 
     .line 81
-    .restart local v0       #e:Ljava/lang/Exception;
+    .restart local v0    # "e":Ljava/lang/Exception;
     const-string v5, "MoPub"
 
     const-string v5, "Unable to modify WebView plugin state."
@@ -263,10 +263,10 @@
     goto/16 :goto_0
 
     .line 78
-    .end local v0           #e:Ljava/lang/Exception;
-    .restart local v1       #method:Ljava/lang/reflect/Method;
-    .restart local v2       #parameters:[Ljava/lang/Class;
-    .restart local v4       #pluginStateClass:Ljava/lang/Class;,"Ljava/lang/Class<Ljava/lang/Enum;>;"
+    .end local v0    # "e":Ljava/lang/Exception;
+    .restart local v1    # "method":Ljava/lang/reflect/Method;
+    .restart local v2    # "parameters":[Ljava/lang/Class;
+    .restart local v4    # "pluginStateClass":Ljava/lang/Class;, "Ljava/lang/Class<Ljava/lang/Enum;>;"
     :cond_3
     :try_start_2
     const-string v5, "OFF"

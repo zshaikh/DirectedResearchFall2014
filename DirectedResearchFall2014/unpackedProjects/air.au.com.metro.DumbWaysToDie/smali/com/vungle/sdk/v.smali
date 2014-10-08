@@ -6,8 +6,6 @@
 # direct methods
 .method public static a(Lorg/json/JSONObject;Ljava/lang/String;)[Ljava/lang/String;
     .locals 5
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lorg/json/JSONException;

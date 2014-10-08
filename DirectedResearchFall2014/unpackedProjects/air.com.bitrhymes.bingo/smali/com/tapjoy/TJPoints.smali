@@ -26,7 +26,7 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
-    .parameter "applicationContext"
+    .param p1, "applicationContext"    # Landroid/content/Context;
 
     .prologue
     .line 30
@@ -51,8 +51,8 @@
 
 .method static synthetic access$000(Lcom/tapjoy/TJPoints;Ljava/lang/String;)Z
     .locals 1
-    .parameter "x0"
-    .parameter "x1"
+    .param p0, "x0"    # Lcom/tapjoy/TJPoints;
+    .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
     .line 11
@@ -75,8 +75,8 @@
 
 .method static synthetic access$200(Lcom/tapjoy/TJPoints;Ljava/lang/String;)Z
     .locals 1
-    .parameter "x0"
-    .parameter "x1"
+    .param p0, "x0"    # Lcom/tapjoy/TJPoints;
+    .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
     .line 11
@@ -99,8 +99,8 @@
 
 .method static synthetic access$400(Lcom/tapjoy/TJPoints;Ljava/lang/String;)Z
     .locals 1
-    .parameter "x0"
-    .parameter "x1"
+    .param p0, "x0"    # Lcom/tapjoy/TJPoints;
+    .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
     .line 11
@@ -123,7 +123,7 @@
 
 .method private handleAwardPointsResponse(Ljava/lang/String;)Z
     .locals 8
-    .parameter "response"
+    .param p1, "response"    # Ljava/lang/String;
 
     .prologue
     const/4 v7, 0x1
@@ -134,13 +134,13 @@
     const-string v2, ""
 
     .line 345
-    .local v2, message:Ljava/lang/String;
+    .local v2, "message":Ljava/lang/String;
     invoke-static {p1}, Lcom/tapjoy/TapjoyUtil;->buildDocument(Ljava/lang/String;)Lorg/w3c/dom/Document;
 
     move-result-object v1
 
     .line 347
-    .local v1, document:Lorg/w3c/dom/Document;
+    .local v1, "document":Lorg/w3c/dom/Document;
     if-eqz v1, :cond_1
 
     .line 349
@@ -155,7 +155,7 @@
     move-result-object v3
 
     .line 352
-    .local v3, nodeValue:Ljava/lang/String;
+    .local v3, "nodeValue":Ljava/lang/String;
     if-eqz v3, :cond_2
 
     const-string v5, "true"
@@ -178,7 +178,7 @@
     move-result-object v4
 
     .line 357
-    .local v4, pointsTotal:Ljava/lang/String;
+    .local v4, "pointsTotal":Ljava/lang/String;
     const-string v5, "CurrencyName"
 
     invoke-interface {v1, v5}, Lorg/w3c/dom/Document;->getElementsByTagName(Ljava/lang/String;)Lorg/w3c/dom/NodeList;
@@ -190,7 +190,7 @@
     move-result-object v0
 
     .line 360
-    .local v0, currencyName:Ljava/lang/String;
+    .local v0, "currencyName":Ljava/lang/String;
     if-eqz v4, :cond_0
 
     if-eqz v0, :cond_0
@@ -214,16 +214,16 @@
     move v5, v7
 
     .line 393
-    .end local v0           #currencyName:Ljava/lang/String;
-    .end local v3           #nodeValue:Ljava/lang/String;
-    .end local v4           #pointsTotal:Ljava/lang/String;
+    .end local v0    # "currencyName":Ljava/lang/String;
+    .end local v3    # "nodeValue":Ljava/lang/String;
+    .end local v4    # "pointsTotal":Ljava/lang/String;
     :goto_0
     return v5
 
     .line 374
-    .restart local v0       #currencyName:Ljava/lang/String;
-    .restart local v3       #nodeValue:Ljava/lang/String;
-    .restart local v4       #pointsTotal:Ljava/lang/String;
+    .restart local v0    # "currencyName":Ljava/lang/String;
+    .restart local v3    # "nodeValue":Ljava/lang/String;
+    .restart local v4    # "pointsTotal":Ljava/lang/String;
     :cond_0
     const-string v5, "TapjoyPoints"
 
@@ -232,9 +232,9 @@
     invoke-static {v6, v5}, Lcom/tapjoy/TapjoyLog;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 393
-    .end local v0           #currencyName:Ljava/lang/String;
-    .end local v3           #nodeValue:Ljava/lang/String;
-    .end local v4           #pointsTotal:Ljava/lang/String;
+    .end local v0    # "currencyName":Ljava/lang/String;
+    .end local v3    # "nodeValue":Ljava/lang/String;
+    .end local v4    # "pointsTotal":Ljava/lang/String;
     :cond_1
     :goto_1
     const/4 v5, 0x0
@@ -242,7 +242,7 @@
     goto :goto_0
 
     .line 379
-    .restart local v3       #nodeValue:Ljava/lang/String;
+    .restart local v3    # "nodeValue":Ljava/lang/String;
     :cond_2
     if-eqz v3, :cond_3
 
@@ -293,7 +293,7 @@
 
 .method private declared-synchronized handleGetPointsResponse(Ljava/lang/String;)Z
     .locals 10
-    .parameter "response"
+    .param p1, "response"    # Ljava/lang/String;
 
     .prologue
     const-string v7, "TapjoyPoints"
@@ -307,7 +307,7 @@
     move-result-object v0
 
     .line 205
-    .local v0, document:Lorg/w3c/dom/Document;
+    .local v0, "document":Lorg/w3c/dom/Document;
     if-eqz v0, :cond_1
 
     .line 207
@@ -322,7 +322,7 @@
     move-result-object v4
 
     .line 210
-    .local v4, nodeValue:Ljava/lang/String;
+    .local v4, "nodeValue":Ljava/lang/String;
     if-eqz v4, :cond_3
 
     const-string v7, "true"
@@ -345,7 +345,7 @@
     move-result-object v6
 
     .line 215
-    .local v6, points:Ljava/lang/String;
+    .local v6, "points":Ljava/lang/String;
     const-string v7, "CurrencyName"
 
     invoke-interface {v0, v7}, Lorg/w3c/dom/Document;->getElementsByTagName(Ljava/lang/String;)Lorg/w3c/dom/NodeList;
@@ -359,7 +359,7 @@
     move-result-object v3
 
     .line 218
-    .local v3, name:Ljava/lang/String;
+    .local v3, "name":Ljava/lang/String;
     if-eqz v6, :cond_2
 
     if-eqz v3, :cond_2
@@ -371,13 +371,13 @@
     move-result v5
 
     .line 224
-    .local v5, pointTotal:I
+    .local v5, "pointTotal":I
     invoke-virtual {p0}, Lcom/tapjoy/TJPoints;->getLocalTapPointsTotal()I
 
     move-result v2
 
     .line 231
-    .local v2, lastLocalPointTotal:I
+    .local v2, "lastLocalPointTotal":I
     sget-object v7, Lcom/tapjoy/TJPoints;->tapjoyEarnedPointsNotifier:Lcom/tapjoy/TapjoyEarnedPointsNotifier;
 
     if-eqz v7, :cond_0
@@ -439,34 +439,34 @@
 
     invoke-interface {v7, v3, v8}, Lcom/tapjoy/TapjoyNotifier;->getUpdatePoints(Ljava/lang/String;I)V
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     .line 251
     const/4 v7, 0x1
 
     .line 269
-    .end local v2           #lastLocalPointTotal:I
-    .end local v3           #name:Ljava/lang/String;
-    .end local v4           #nodeValue:Ljava/lang/String;
-    .end local v5           #pointTotal:I
-    .end local v6           #points:Ljava/lang/String;
+    .end local v2    # "lastLocalPointTotal":I
+    .end local v3    # "name":Ljava/lang/String;
+    .end local v4    # "nodeValue":Ljava/lang/String;
+    .end local v5    # "pointTotal":I
+    .end local v6    # "points":Ljava/lang/String;
     :goto_0
     monitor-exit p0
 
     return v7
 
     .line 253
-    .restart local v3       #name:Ljava/lang/String;
-    .restart local v4       #nodeValue:Ljava/lang/String;
-    .restart local v6       #points:Ljava/lang/String;
+    .restart local v3    # "name":Ljava/lang/String;
+    .restart local v4    # "nodeValue":Ljava/lang/String;
+    .restart local v6    # "points":Ljava/lang/String;
     :catch_0
     move-exception v7
 
     move-object v1, v7
 
     .line 255
-    .local v1, e:Ljava/lang/Exception;
+    .local v1, "e":Ljava/lang/Exception;
     :try_start_2
     const-string v7, "TapjoyPoints"
 
@@ -495,10 +495,10 @@
     invoke-static {v7, v8}, Lcom/tapjoy/TapjoyLog;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 269
-    .end local v1           #e:Ljava/lang/Exception;
-    .end local v3           #name:Ljava/lang/String;
-    .end local v4           #nodeValue:Ljava/lang/String;
-    .end local v6           #points:Ljava/lang/String;
+    .end local v1    # "e":Ljava/lang/Exception;
+    .end local v3    # "name":Ljava/lang/String;
+    .end local v4    # "nodeValue":Ljava/lang/String;
+    .end local v6    # "points":Ljava/lang/String;
     :cond_1
     :goto_1
     const/4 v7, 0x0
@@ -506,9 +506,9 @@
     goto :goto_0
 
     .line 260
-    .restart local v3       #name:Ljava/lang/String;
-    .restart local v4       #nodeValue:Ljava/lang/String;
-    .restart local v6       #points:Ljava/lang/String;
+    .restart local v3    # "name":Ljava/lang/String;
+    .restart local v4    # "nodeValue":Ljava/lang/String;
+    .restart local v6    # "points":Ljava/lang/String;
     :cond_2
     const-string v7, "TapjoyPoints"
 
@@ -521,10 +521,10 @@
     goto :goto_1
 
     .line 203
-    .end local v0           #document:Lorg/w3c/dom/Document;
-    .end local v3           #name:Ljava/lang/String;
-    .end local v4           #nodeValue:Ljava/lang/String;
-    .end local v6           #points:Ljava/lang/String;
+    .end local v0    # "document":Lorg/w3c/dom/Document;
+    .end local v3    # "name":Ljava/lang/String;
+    .end local v4    # "nodeValue":Ljava/lang/String;
+    .end local v6    # "points":Ljava/lang/String;
     :catchall_0
     move-exception v7
 
@@ -533,8 +533,8 @@
     throw v7
 
     .line 265
-    .restart local v0       #document:Lorg/w3c/dom/Document;
-    .restart local v4       #nodeValue:Ljava/lang/String;
+    .restart local v0    # "document":Lorg/w3c/dom/Document;
+    .restart local v4    # "nodeValue":Ljava/lang/String;
     :cond_3
     :try_start_3
     const-string v7, "TapjoyPoints"
@@ -550,7 +550,7 @@
 
 .method private handleSpendPointsResponse(Ljava/lang/String;)Z
     .locals 8
-    .parameter "response"
+    .param p1, "response"    # Ljava/lang/String;
 
     .prologue
     const/4 v7, 0x1
@@ -561,13 +561,13 @@
     const-string v2, ""
 
     .line 283
-    .local v2, message:Ljava/lang/String;
+    .local v2, "message":Ljava/lang/String;
     invoke-static {p1}, Lcom/tapjoy/TapjoyUtil;->buildDocument(Ljava/lang/String;)Lorg/w3c/dom/Document;
 
     move-result-object v1
 
     .line 285
-    .local v1, document:Lorg/w3c/dom/Document;
+    .local v1, "document":Lorg/w3c/dom/Document;
     if-eqz v1, :cond_1
 
     .line 287
@@ -582,7 +582,7 @@
     move-result-object v3
 
     .line 290
-    .local v3, nodeValue:Ljava/lang/String;
+    .local v3, "nodeValue":Ljava/lang/String;
     if-eqz v3, :cond_2
 
     const-string v5, "true"
@@ -605,7 +605,7 @@
     move-result-object v4
 
     .line 295
-    .local v4, pointsTotal:Ljava/lang/String;
+    .local v4, "pointsTotal":Ljava/lang/String;
     const-string v5, "CurrencyName"
 
     invoke-interface {v1, v5}, Lorg/w3c/dom/Document;->getElementsByTagName(Ljava/lang/String;)Lorg/w3c/dom/NodeList;
@@ -617,7 +617,7 @@
     move-result-object v0
 
     .line 298
-    .local v0, currencyName:Ljava/lang/String;
+    .local v0, "currencyName":Ljava/lang/String;
     if-eqz v4, :cond_0
 
     if-eqz v0, :cond_0
@@ -641,16 +641,16 @@
     move v5, v7
 
     .line 331
-    .end local v0           #currencyName:Ljava/lang/String;
-    .end local v3           #nodeValue:Ljava/lang/String;
-    .end local v4           #pointsTotal:Ljava/lang/String;
+    .end local v0    # "currencyName":Ljava/lang/String;
+    .end local v3    # "nodeValue":Ljava/lang/String;
+    .end local v4    # "pointsTotal":Ljava/lang/String;
     :goto_0
     return v5
 
     .line 312
-    .restart local v0       #currencyName:Ljava/lang/String;
-    .restart local v3       #nodeValue:Ljava/lang/String;
-    .restart local v4       #pointsTotal:Ljava/lang/String;
+    .restart local v0    # "currencyName":Ljava/lang/String;
+    .restart local v3    # "nodeValue":Ljava/lang/String;
+    .restart local v4    # "pointsTotal":Ljava/lang/String;
     :cond_0
     const-string v5, "TapjoyPoints"
 
@@ -659,9 +659,9 @@
     invoke-static {v6, v5}, Lcom/tapjoy/TapjoyLog;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 331
-    .end local v0           #currencyName:Ljava/lang/String;
-    .end local v3           #nodeValue:Ljava/lang/String;
-    .end local v4           #pointsTotal:Ljava/lang/String;
+    .end local v0    # "currencyName":Ljava/lang/String;
+    .end local v3    # "nodeValue":Ljava/lang/String;
+    .end local v4    # "pointsTotal":Ljava/lang/String;
     :cond_1
     :goto_1
     const/4 v5, 0x0
@@ -669,7 +669,7 @@
     goto :goto_0
 
     .line 317
-    .restart local v3       #nodeValue:Ljava/lang/String;
+    .restart local v3    # "nodeValue":Ljava/lang/String;
     :cond_2
     if-eqz v3, :cond_3
 
@@ -722,8 +722,8 @@
 # virtual methods
 .method public awardTapPoints(ILcom/tapjoy/TapjoyAwardPointsNotifier;)V
     .locals 2
-    .parameter "amount"
-    .parameter "notifier"
+    .param p1, "amount"    # I
+    .param p2, "notifier"    # Lcom/tapjoy/TapjoyAwardPointsNotifier;
 
     .prologue
     .line 142
@@ -777,7 +777,7 @@
     move-result-object v0
 
     .line 57
-    .local v0, settings:Landroid/content/SharedPreferences;
+    .local v0, "settings":Landroid/content/SharedPreferences;
     const-string v2, "last_tap_points"
 
     const/16 v3, -0x270f
@@ -787,13 +787,13 @@
     move-result v1
 
     .line 58
-    .local v1, total:I
+    .local v1, "total":I
     return v1
 .end method
 
 .method public getTapPoints(Lcom/tapjoy/TapjoyNotifier;)V
     .locals 2
-    .parameter "notifier"
+    .param p1, "notifier"    # Lcom/tapjoy/TapjoyNotifier;
 
     .prologue
     .line 68
@@ -816,7 +816,7 @@
 
 .method public saveTapPointsTotal(I)V
     .locals 5
-    .parameter "total"
+    .param p1, "total"    # I
 
     .prologue
     .line 40
@@ -831,13 +831,13 @@
     move-result-object v1
 
     .line 43
-    .local v1, settings:Landroid/content/SharedPreferences;
+    .local v1, "settings":Landroid/content/SharedPreferences;
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
     .line 44
-    .local v0, editor:Landroid/content/SharedPreferences$Editor;
+    .local v0, "editor":Landroid/content/SharedPreferences$Editor;
     const-string v2, "last_tap_points"
 
     invoke-interface {v0, v2, p1}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
@@ -851,7 +851,7 @@
 
 .method public setEarnedPointsNotifier(Lcom/tapjoy/TapjoyEarnedPointsNotifier;)V
     .locals 0
-    .parameter "notifier"
+    .param p1, "notifier"    # Lcom/tapjoy/TapjoyEarnedPointsNotifier;
 
     .prologue
     .line 191
@@ -863,8 +863,8 @@
 
 .method public spendTapPoints(ILcom/tapjoy/TapjoySpendPointsNotifier;)V
     .locals 2
-    .parameter "amount"
-    .parameter "notifier"
+    .param p1, "amount"    # I
+    .param p2, "notifier"    # Lcom/tapjoy/TapjoySpendPointsNotifier;
 
     .prologue
     .line 100

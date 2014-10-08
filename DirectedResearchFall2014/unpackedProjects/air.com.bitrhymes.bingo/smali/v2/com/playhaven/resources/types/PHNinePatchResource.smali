@@ -62,7 +62,7 @@
     check-cast v0, Landroid/graphics/NinePatch;
 
     .line 30
-    .local v0, cachedNinePatch:Landroid/graphics/NinePatch;
+    .local v0, "cachedNinePatch":Landroid/graphics/NinePatch;
     if-nez v0, :cond_1
 
     .line 32
@@ -73,13 +73,13 @@
     move-result-object v2
 
     .line 35
-    .local v2, image:Landroid/graphics/Bitmap;
+    .local v2, "image":Landroid/graphics/Bitmap;
     invoke-virtual {v2}, Landroid/graphics/Bitmap;->getNinePatchChunk()[B
 
     move-result-object v1
 
     .line 37
-    .local v1, chunk:[B
+    .local v1, "chunk":[B
     invoke-static {v1}, Landroid/graphics/NinePatch;->isNinePatchChunk([B)Z
 
     move-result v3
@@ -89,22 +89,22 @@
     move-object v3, v5
 
     .line 45
-    .end local v1           #chunk:[B
-    .end local v2           #image:Landroid/graphics/Bitmap;
+    .end local v1    # "chunk":[B
+    .end local v2    # "image":Landroid/graphics/Bitmap;
     :goto_0
     return-object v3
 
     .line 40
-    .restart local v1       #chunk:[B
-    .restart local v2       #image:Landroid/graphics/Bitmap;
+    .restart local v1    # "chunk":[B
+    .restart local v2    # "image":Landroid/graphics/Bitmap;
     :cond_0
     new-instance v0, Landroid/graphics/NinePatch;
 
-    .end local v0           #cachedNinePatch:Landroid/graphics/NinePatch;
+    .end local v0    # "cachedNinePatch":Landroid/graphics/NinePatch;
     invoke-direct {v0, v2, v1, v5}, Landroid/graphics/NinePatch;-><init>(Landroid/graphics/Bitmap;[BLjava/lang/String;)V
 
     .line 42
-    .restart local v0       #cachedNinePatch:Landroid/graphics/NinePatch;
+    .restart local v0    # "cachedNinePatch":Landroid/graphics/NinePatch;
     iget-object v3, p0, Lv2/com/playhaven/resources/types/PHNinePatchResource;->nine_patch_cache:Ljava/util/HashMap;
 
     iget v4, p0, Lv2/com/playhaven/resources/types/PHNinePatchResource;->densityType:I
@@ -115,8 +115,8 @@
 
     invoke-virtual {v3, v4, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .end local v1           #chunk:[B
-    .end local v2           #image:Landroid/graphics/Bitmap;
+    .end local v1    # "chunk":[B
+    .end local v2    # "image":Landroid/graphics/Bitmap;
     :cond_1
     move-object v3, v0
 
@@ -128,7 +128,7 @@
 # virtual methods
 .method public loadNinePatch(I)Landroid/graphics/NinePatch;
     .locals 1
-    .parameter "densityType"
+    .param p1, "densityType"    # I
 
     .prologue
     .line 22
@@ -144,8 +144,8 @@
 
 .method public loadNinePatchDrawable(Landroid/content/res/Resources;I)Landroid/graphics/drawable/NinePatchDrawable;
     .locals 2
-    .parameter "res"
-    .parameter "densityType"
+    .param p1, "res"    # Landroid/content/res/Resources;
+    .param p2, "densityType"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/ArrayIndexOutOfBoundsException;

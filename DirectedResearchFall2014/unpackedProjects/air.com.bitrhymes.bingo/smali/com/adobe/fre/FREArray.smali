@@ -6,7 +6,7 @@
 # direct methods
 .method private constructor <init>(Lcom/adobe/fre/FREObject$CFREObjectWrapper;)V
     .locals 0
-    .parameter "obj"
+    .param p1, "obj"    # Lcom/adobe/fre/FREObject$CFREObjectWrapper;
 
     .prologue
     .line 23
@@ -18,8 +18,8 @@
 
 .method protected constructor <init>(Ljava/lang/String;[Lcom/adobe/fre/FREObject;)V
     .locals 2
-    .parameter "base"
-    .parameter "constructorArgs"
+    .param p1, "base"    # Ljava/lang/String;
+    .param p2, "constructorArgs"    # [Lcom/adobe/fre/FREObject;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lcom/adobe/fre/FRETypeMismatchException;,
@@ -64,7 +64,7 @@
 
 .method protected constructor <init>([Lcom/adobe/fre/FREObject;)V
     .locals 1
-    .parameter "constructorArgs"
+    .param p1, "constructorArgs"    # [Lcom/adobe/fre/FREObject;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lcom/adobe/fre/FRETypeMismatchException;,
@@ -87,7 +87,7 @@
 
 .method public static newArray(I)Lcom/adobe/fre/FREArray;
     .locals 3
-    .parameter "numElements"
+    .param p0, "numElements"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lcom/adobe/fre/FREASErrorException;,
@@ -103,7 +103,7 @@
     new-array v0, v1, [Lcom/adobe/fre/FREObject;
 
     .line 108
-    .local v0, args:[Lcom/adobe/fre/FREObject;
+    .local v0, "args":[Lcom/adobe/fre/FREObject;
     const/4 v1, 0x0
 
     new-instance v2, Lcom/adobe/fre/FREObject;
@@ -151,9 +151,9 @@
 
 .method public static newArray(Ljava/lang/String;IZ)Lcom/adobe/fre/FREArray;
     .locals 3
-    .parameter "classname"
-    .parameter "numElements"
-    .parameter "fixed"
+    .param p0, "classname"    # Ljava/lang/String;
+    .param p1, "numElements"    # I
+    .param p2, "fixed"    # Z
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lcom/adobe/fre/FREASErrorException;,
@@ -170,7 +170,7 @@
     new-array v0, v1, [Lcom/adobe/fre/FREObject;
 
     .line 81
-    .local v0, args:[Lcom/adobe/fre/FREObject;
+    .local v0, "args":[Lcom/adobe/fre/FREObject;
     const/4 v1, 0x0
 
     new-instance v2, Lcom/adobe/fre/FREObject;

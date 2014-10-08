@@ -32,10 +32,6 @@
 # direct methods
 .method public constructor <init>(Lcom/chartboost/sdk/impl/j;ILcom/chartboost/sdk/impl/k;Lcom/chartboost/sdk/impl/j$b;)V
     .locals 1
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 98
@@ -67,7 +63,6 @@
 
 .method static synthetic a(Lcom/chartboost/sdk/impl/j$a;)Lcom/chartboost/sdk/impl/k;
     .locals 1
-    .parameter
 
     .prologue
     .line 93
@@ -78,8 +73,6 @@
 
 .method static synthetic a(Lcom/chartboost/sdk/impl/j$a;Lorg/json/JSONObject;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 94
@@ -90,7 +83,6 @@
 
 .method static synthetic b(Lcom/chartboost/sdk/impl/j$a;)Ljava/lang/Integer;
     .locals 1
-    .parameter
 
     .prologue
     .line 95
@@ -101,7 +93,6 @@
 
 .method static synthetic c(Lcom/chartboost/sdk/impl/j$a;)Lorg/json/JSONObject;
     .locals 1
-    .parameter
 
     .prologue
     .line 94
@@ -112,7 +103,6 @@
 
 .method static synthetic d(Lcom/chartboost/sdk/impl/j$a;)Lcom/chartboost/sdk/impl/j$b;
     .locals 1
-    .parameter
 
     .prologue
     .line 96
@@ -125,7 +115,6 @@
 # virtual methods
 .method public a(Ljava/lang/String;)V
     .locals 5
-    .parameter
 
     .prologue
     .line 106

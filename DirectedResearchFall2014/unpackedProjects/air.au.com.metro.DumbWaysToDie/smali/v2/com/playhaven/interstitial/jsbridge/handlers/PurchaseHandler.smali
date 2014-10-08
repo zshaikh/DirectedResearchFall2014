@@ -16,7 +16,7 @@
 
 .method private validatePurchase(Lorg/json/JSONObject;)Z
     .locals 11
-    .parameter "data"
+    .param p1, "data"    # Lorg/json/JSONObject;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/security/NoSuchAlgorithmException;,
@@ -50,12 +50,12 @@
     move v6, v9
 
     .line 101
-    .end local p0
+    .end local p0    # "this":Lv2/com/playhaven/interstitial/jsbridge/handlers/PurchaseHandler;
     :goto_0
     return v6
 
     .line 79
-    .restart local p0
+    .restart local p0    # "this":Lv2/com/playhaven/interstitial/jsbridge/handlers/PurchaseHandler;
     :cond_1
     sget-object v6, Lv2/com/playhaven/interstitial/PHContentEnums$Purchase;->ProductIDKey:Lv2/com/playhaven/interstitial/PHContentEnums$Purchase;
 
@@ -70,7 +70,7 @@
     move-result-object v3
 
     .line 81
-    .local v3, productID:Ljava/lang/String;
+    .local v3, "productID":Ljava/lang/String;
     sget-object v6, Lv2/com/playhaven/interstitial/PHContentEnums$Purchase;->NameKey:Lv2/com/playhaven/interstitial/PHContentEnums$Purchase;
 
     invoke-virtual {v6}, Lv2/com/playhaven/interstitial/PHContentEnums$Purchase;->key()Ljava/lang/String;
@@ -84,7 +84,7 @@
     move-result-object v2
 
     .line 83
-    .local v2, name:Ljava/lang/String;
+    .local v2, "name":Ljava/lang/String;
     sget-object v6, Lv2/com/playhaven/interstitial/PHContentEnums$Purchase;->ReceiptKey:Lv2/com/playhaven/interstitial/PHContentEnums$Purchase;
 
     invoke-virtual {v6}, Lv2/com/playhaven/interstitial/PHContentEnums$Purchase;->key()Ljava/lang/String;
@@ -98,7 +98,7 @@
     move-result-object v4
 
     .line 85
-    .local v4, receipt:Ljava/lang/String;
+    .local v4, "receipt":Ljava/lang/String;
     sget-object v6, Lv2/com/playhaven/interstitial/PHContentEnums$Purchase;->SignatureKey:Lv2/com/playhaven/interstitial/PHContentEnums$Purchase;
 
     invoke-virtual {v6}, Lv2/com/playhaven/interstitial/PHContentEnums$Purchase;->key()Ljava/lang/String;
@@ -112,13 +112,13 @@
     move-result-object v5
 
     .line 87
-    .local v5, signature:Ljava/lang/String;
+    .local v5, "signature":Ljava/lang/String;
     new-instance v0, Lv2/com/playhaven/configuration/PHConfiguration;
 
     invoke-direct {v0}, Lv2/com/playhaven/configuration/PHConfiguration;-><init>()V
 
     .line 91
-    .local v0, config:Lv2/com/playhaven/configuration/PHConfiguration;
+    .local v0, "config":Lv2/com/playhaven/configuration/PHConfiguration;
     const-string v7, "%s:%s:%s:%s:%s:%s"
 
     const/4 v6, 0x6
@@ -170,7 +170,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lv2/com/playhaven/interstitial/jsbridge/handlers/PurchaseHandler;
     check-cast p0, Lv2/com/playhaven/interstitial/jsbridge/ManipulatableContentDisplayer;
 
     invoke-interface {p0}, Lv2/com/playhaven/interstitial/jsbridge/ManipulatableContentDisplayer;->getSecret()Ljava/lang/String;
@@ -190,7 +190,7 @@
     move-result-object v1
 
     .line 99
-    .local v1, generatedSig:Ljava/lang/String;
+    .local v1, "generatedSig":Ljava/lang/String;
     new-instance v6, Ljava/lang/StringBuilder;
 
     const-string v7, "Checking purchase signature:  "
@@ -229,7 +229,7 @@
 # virtual methods
 .method public handle(Lorg/json/JSONObject;)V
     .locals 12
-    .parameter "jsonPayload"
+    .param p1, "jsonPayload"    # Lorg/json/JSONObject;
 
     .prologue
     const-string v9, "purchases"
@@ -264,11 +264,11 @@
     move-object v8, v9
 
     .line 34
-    .local v8, purchases:Lorg/json/JSONArray;
+    .local v8, "purchases":Lorg/json/JSONArray;
     :goto_1
     const/4 v3, 0x0
 
-    .local v3, i:I
+    .local v3, "i":I
     :goto_2
     invoke-virtual {v8}, Lorg/json/JSONArray;->length()I
 
@@ -296,15 +296,15 @@
     goto :goto_0
 
     .line 69
-    .end local v3           #i:I
-    .end local v8           #purchases:Lorg/json/JSONArray;
+    .end local v3    # "i":I
+    .end local v8    # "purchases":Lorg/json/JSONArray;
     :catch_0
     move-exception v9
 
     move-object v1, v9
 
     .line 70
-    .local v1, e:Ljava/lang/Exception;
+    .local v1, "e":Ljava/lang/Exception;
     const-string v9, "PHInterstitialActivity - handlePurchase"
 
     sget-object v10, Lv2/com/playhaven/requests/crashreport/PHCrashReport$Urgency;->critical:Lv2/com/playhaven/requests/crashreport/PHCrashReport$Urgency;
@@ -314,7 +314,7 @@
     goto :goto_0
 
     .line 31
-    .end local v1           #e:Ljava/lang/Exception;
+    .end local v1    # "e":Ljava/lang/Exception;
     :cond_1
     :try_start_1
     const-string v9, "purchases"
@@ -328,15 +328,15 @@
     goto :goto_1
 
     .line 36
-    .restart local v3       #i:I
-    .restart local v8       #purchases:Lorg/json/JSONArray;
+    .restart local v3    # "i":I
+    .restart local v8    # "purchases":Lorg/json/JSONArray;
     :cond_2
     invoke-virtual {v8, v3}, Lorg/json/JSONArray;->optJSONObject(I)Lorg/json/JSONObject;
 
     move-result-object v6
 
     .line 38
-    .local v6, purchase:Lorg/json/JSONObject;
+    .local v6, "purchase":Lorg/json/JSONObject;
     invoke-direct {p0, v6}, Lv2/com/playhaven/interstitial/jsbridge/handlers/PurchaseHandler;->validatePurchase(Lorg/json/JSONObject;)Z
 
     move-result v9
@@ -361,7 +361,7 @@
     invoke-direct {v5, v9}, Lv2/com/playhaven/model/PHPurchase;-><init>(Ljava/lang/String;)V
 
     .line 43
-    .local v5, p:Lv2/com/playhaven/model/PHPurchase;
+    .local v5, "p":Lv2/com/playhaven/model/PHPurchase;
     sget-object v9, Lv2/com/playhaven/interstitial/PHContentEnums$Purchase;->ProductIDKey:Lv2/com/playhaven/interstitial/PHContentEnums$Purchase;
 
     invoke-virtual {v9}, Lv2/com/playhaven/interstitial/PHContentEnums$Purchase;->key()Ljava/lang/String;
@@ -429,7 +429,7 @@
     move-result-object v0
 
     .line 53
-    .local v0, cookie:Ljava/lang/String;
+    .local v0, "cookie":Ljava/lang/String;
     iget-object v9, v5, Lv2/com/playhaven/model/PHPurchase;->product:Ljava/lang/String;
 
     invoke-static {v9, v0}, Lv2/com/playhaven/requests/purchases/PHIAPTrackingRequest;->setConversionCookie(Ljava/lang/String;Ljava/lang/String;)V
@@ -440,7 +440,7 @@
     invoke-direct {v4}, Landroid/os/Bundle;-><init>()V
 
     .line 57
-    .local v4, message:Landroid/os/Bundle;
+    .local v4, "message":Landroid/os/Bundle;
     sget-object v9, Lv2/com/playhaven/interstitial/requestbridge/bridges/ContentRequestToInterstitialBridge$InterstitialEventArgument;->Purchase:Lv2/com/playhaven/interstitial/requestbridge/bridges/ContentRequestToInterstitialBridge$InterstitialEventArgument;
 
     invoke-virtual {v9}, Lv2/com/playhaven/interstitial/requestbridge/bridges/ContentRequestToInterstitialBridge$InterstitialEventArgument;->getKey()Ljava/lang/String;
@@ -448,7 +448,7 @@
     move-result-object v7
 
     .line 58
-    .local v7, purchase_key:Ljava/lang/String;
+    .local v7, "purchase_key":Ljava/lang/String;
     invoke-virtual {v4, v7, v5}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
     .line 60
@@ -459,7 +459,7 @@
     move-result-object v2
 
     .line 62
-    .local v2, event:Ljava/lang/String;
+    .local v2, "event":Ljava/lang/String;
     iget-object v9, p0, Lv2/com/playhaven/interstitial/jsbridge/handlers/PurchaseHandler;->contentDisplayer:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v9}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -473,11 +473,11 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
     .line 34
-    .end local v0           #cookie:Ljava/lang/String;
-    .end local v2           #event:Ljava/lang/String;
-    .end local v4           #message:Landroid/os/Bundle;
-    .end local v5           #p:Lv2/com/playhaven/model/PHPurchase;
-    .end local v7           #purchase_key:Ljava/lang/String;
+    .end local v0    # "cookie":Ljava/lang/String;
+    .end local v2    # "event":Ljava/lang/String;
+    .end local v4    # "message":Landroid/os/Bundle;
+    .end local v5    # "p":Lv2/com/playhaven/model/PHPurchase;
+    .end local v7    # "purchase_key":Ljava/lang/String;
     :cond_3
     add-int/lit8 v3, v3, 0x1
 

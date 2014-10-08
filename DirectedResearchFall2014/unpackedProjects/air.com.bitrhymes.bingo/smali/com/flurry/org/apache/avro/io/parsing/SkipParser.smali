@@ -48,9 +48,9 @@
 
 .method public constructor <init>(Lcom/flurry/org/apache/avro/io/parsing/Symbol;Lcom/flurry/org/apache/avro/io/parsing/Parser$ActionHandler;Lcom/flurry/org/apache/avro/io/parsing/SkipParser$SkipHandler;)V
     .locals 0
-    .parameter "root"
-    .parameter "symbolHandler"
-    .parameter "skipHandler"
+    .param p1, "root"    # Lcom/flurry/org/apache/avro/io/parsing/Symbol;
+    .param p2, "symbolHandler"    # Lcom/flurry/org/apache/avro/io/parsing/Parser$ActionHandler;
+    .param p3, "skipHandler"    # Lcom/flurry/org/apache/avro/io/parsing/SkipParser$SkipHandler;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -83,7 +83,7 @@
     iget v1, p0, Lcom/flurry/org/apache/avro/io/parsing/SkipParser;->pos:I
 
     .line 80
-    .local v1, target:I
+    .local v1, "target":I
     iget-object v2, p0, Lcom/flurry/org/apache/avro/io/parsing/SkipParser;->stack:[Lcom/flurry/org/apache/avro/io/parsing/Symbol;
 
     iget v3, p0, Lcom/flurry/org/apache/avro/io/parsing/SkipParser;->pos:I
@@ -97,7 +97,7 @@
     aget-object v0, v2, v3
 
     .line 81
-    .local v0, repeater:Lcom/flurry/org/apache/avro/io/parsing/Symbol;
+    .local v0, "repeater":Lcom/flurry/org/apache/avro/io/parsing/Symbol;
     sget-boolean v2, Lcom/flurry/org/apache/avro/io/parsing/SkipParser;->$assertionsDisabled:Z
 
     if-nez v2, :cond_0
@@ -127,7 +127,7 @@
 
 .method public final skipSymbol(Lcom/flurry/org/apache/avro/io/parsing/Symbol;)V
     .locals 1
-    .parameter "symToSkip"
+    .param p1, "symToSkip"    # Lcom/flurry/org/apache/avro/io/parsing/Symbol;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -139,7 +139,7 @@
     iget v0, p0, Lcom/flurry/org/apache/avro/io/parsing/SkipParser;->pos:I
 
     .line 92
-    .local v0, target:I
+    .local v0, "target":I
     invoke-virtual {p0, p1}, Lcom/flurry/org/apache/avro/io/parsing/SkipParser;->pushSymbol(Lcom/flurry/org/apache/avro/io/parsing/Symbol;)V
 
     .line 93
@@ -151,7 +151,7 @@
 
 .method public final skipTo(I)V
     .locals 4
-    .parameter "target"
+    .param p1, "target"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -177,7 +177,7 @@
     aget-object v0, v1, v2
 
     .line 61
-    .local v0, top:Lcom/flurry/org/apache/avro/io/parsing/Symbol;
+    .local v0, "top":Lcom/flurry/org/apache/avro/io/parsing/Symbol;
     iget-object v1, v0, Lcom/flurry/org/apache/avro/io/parsing/Symbol;->kind:Lcom/flurry/org/apache/avro/io/parsing/Symbol$Kind;
 
     sget-object v2, Lcom/flurry/org/apache/avro/io/parsing/Symbol$Kind;->TERMINAL:Lcom/flurry/org/apache/avro/io/parsing/Symbol$Kind;
@@ -227,7 +227,7 @@
     goto :goto_0
 
     .line 73
-    .end local v0           #top:Lcom/flurry/org/apache/avro/io/parsing/Symbol;
+    .end local v0    # "top":Lcom/flurry/org/apache/avro/io/parsing/Symbol;
     :cond_3
     return-void
 .end method

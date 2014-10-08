@@ -49,8 +49,6 @@
 
 .method public static copyTimestamp(Ljava/lang/String;Ljava/lang/String;)V
     .locals 4
-    .parameter
-    .parameter
 
     .prologue
     .line 304
@@ -93,8 +91,6 @@
 
 .method private static dumpAcceptedIssuersToFile(Ljavax/net/ssl/X509TrustManager;Ljava/io/RandomAccessFile;)I
     .locals 4
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/security/cert/CertificateEncodingException;,
@@ -153,8 +149,6 @@
 
 .method public static enumerateRootCAs(Ljava/lang/String;Ljava/lang/String;)Z
     .locals 6
-    .parameter
-    .parameter
 
     .prologue
     const/4 v5, 0x0
@@ -430,7 +424,6 @@
 
 .method private static isAirCertBundleStale(Ljava/lang/String;)Z
     .locals 6
-    .parameter
 
     .prologue
     const/4 v5, 0x1

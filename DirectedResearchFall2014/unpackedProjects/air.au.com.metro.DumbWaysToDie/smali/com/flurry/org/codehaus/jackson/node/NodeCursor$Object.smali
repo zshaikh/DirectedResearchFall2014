@@ -47,8 +47,8 @@
 # direct methods
 .method public constructor <init>(Lcom/flurry/org/codehaus/jackson/JsonNode;Lcom/flurry/org/codehaus/jackson/node/NodeCursor;)V
     .locals 1
-    .parameter "n"
-    .parameter "p"
+    .param p1, "n"    # Lcom/flurry/org/codehaus/jackson/JsonNode;
+    .param p2, "p"    # Lcom/flurry/org/codehaus/jackson/node/NodeCursor;
 
     .prologue
     .line 172
@@ -59,7 +59,7 @@
     .line 173
     check-cast p1, Lcom/flurry/org/codehaus/jackson/node/ObjectNode;
 
-    .end local p1
+    .end local p1    # "n":Lcom/flurry/org/codehaus/jackson/JsonNode;
     invoke-virtual {p1}, Lcom/flurry/org/codehaus/jackson/node/ObjectNode;->getFields()Ljava/util/Iterator;
 
     move-result-object v0
@@ -86,7 +86,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/flurry/org/codehaus/jackson/node/NodeCursor$Object;
     check-cast p0, Lcom/flurry/org/codehaus/jackson/node/ContainerNode;
 
     invoke-virtual {p0}, Lcom/flurry/org/codehaus/jackson/node/ContainerNode;->size()I
@@ -117,11 +117,11 @@
 
     const/4 v0, 0x0
 
-    .end local p0
+    .end local p0    # "this":Lcom/flurry/org/codehaus/jackson/node/NodeCursor$Object;
     :goto_0
     return-object v0
 
-    .restart local p0
+    .restart local p0    # "this":Lcom/flurry/org/codehaus/jackson/node/NodeCursor$Object;
     :cond_0
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/node/NodeCursor$Object;->_current:Ljava/util/Map$Entry;
 
@@ -129,7 +129,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/flurry/org/codehaus/jackson/node/NodeCursor$Object;
     check-cast p0, Lcom/flurry/org/codehaus/jackson/JsonNode;
 
     move-object v0, p0
@@ -158,11 +158,11 @@
 
     const/4 v0, 0x0
 
-    .end local p0
+    .end local p0    # "this":Lcom/flurry/org/codehaus/jackson/node/NodeCursor$Object;
     :goto_0
     return-object v0
 
-    .restart local p0
+    .restart local p0    # "this":Lcom/flurry/org/codehaus/jackson/node/NodeCursor$Object;
     :cond_0
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/node/NodeCursor$Object;->_current:Ljava/util/Map$Entry;
 
@@ -170,7 +170,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/flurry/org/codehaus/jackson/node/NodeCursor$Object;
     check-cast p0, Ljava/lang/String;
 
     move-object v0, p0
@@ -216,12 +216,12 @@
     move-object v0, v1
 
     .line 196
-    .end local p0
+    .end local p0    # "this":Lcom/flurry/org/codehaus/jackson/node/NodeCursor$Object;
     :goto_0
     return-object v0
 
     .line 191
-    .restart local p0
+    .restart local p0    # "this":Lcom/flurry/org/codehaus/jackson/node/NodeCursor$Object;
     :cond_0
     const/4 v0, 0x0
 
@@ -256,7 +256,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/flurry/org/codehaus/jackson/node/NodeCursor$Object;
     check-cast p0, Lcom/flurry/org/codehaus/jackson/JsonNode;
 
     invoke-virtual {p0}, Lcom/flurry/org/codehaus/jackson/JsonNode;->asToken()Lcom/flurry/org/codehaus/jackson/JsonToken;
@@ -276,7 +276,7 @@
     move-result-object v0
 
     .line 203
-    .local v0, t:Lcom/flurry/org/codehaus/jackson/JsonToken;
+    .local v0, "t":Lcom/flurry/org/codehaus/jackson/JsonToken;
     sget-object v1, Lcom/flurry/org/codehaus/jackson/JsonToken;->FIELD_NAME:Lcom/flurry/org/codehaus/jackson/JsonToken;
 
     if-ne v0, v1, :cond_0

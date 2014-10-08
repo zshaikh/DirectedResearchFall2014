@@ -205,8 +205,8 @@
 
 .method private constructor <init>(Landroid/content/Context;I)V
     .locals 7
-    .parameter "ctx"
-    .parameter "update"
+    .param p1, "ctx"    # Landroid/content/Context;
+    .param p2, "update"    # I
 
     .prologue
     const/4 v6, 0x0
@@ -355,7 +355,7 @@
     move-result-object v1
 
     .line 247
-    .local v1, settings:Landroid/content/SharedPreferences;
+    .local v1, "settings":Landroid/content/SharedPreferences;
     iget-object v2, p0, Lcom/AdX/tag/AdXConnect;->SEND_TAG:Ljava/lang/String;
 
     invoke-interface {v1, v2, v5}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
@@ -363,7 +363,7 @@
     move-result-object v0
 
     .line 248
-    .local v0, sendTag:Ljava/lang/String;
+    .local v0, "sendTag":Ljava/lang/String;
     if-eqz v0, :cond_1
 
     const-string v2, "stop"
@@ -1114,9 +1114,6 @@
 
 .method synthetic constructor <init>(Landroid/content/Context;ILcom/AdX/tag/AdXConnect;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 241
@@ -1127,10 +1124,10 @@
 
 .method private constructor <init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 6
-    .parameter "ctx"
-    .parameter "event"
-    .parameter "data"
-    .parameter "currency"
+    .param p1, "ctx"    # Landroid/content/Context;
+    .param p2, "event"    # Ljava/lang/String;
+    .param p3, "data"    # Ljava/lang/String;
+    .param p4, "currency"    # Ljava/lang/String;
 
     .prologue
     const/4 v5, 0x0
@@ -1872,7 +1869,6 @@
 
 .method static synthetic access$0(Lcom/AdX/tag/AdXConnect;)Ljava/lang/String;
     .locals 1
-    .parameter
 
     .prologue
     .line 69
@@ -1893,8 +1889,6 @@
 
 .method static synthetic access$2(Lcom/AdX/tag/AdXConnect;Ljava/lang/String;)Z
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 648
@@ -1907,7 +1901,6 @@
 
 .method static synthetic access$3(Lcom/AdX/tag/AdXConnect;)Ljava/lang/String;
     .locals 1
-    .parameter
 
     .prologue
     .line 62
@@ -1928,7 +1921,6 @@
 
 .method static synthetic access$5(Lcom/AdX/tag/AdXURLConnection;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 50
@@ -1949,7 +1941,6 @@
 
 .method static synthetic access$8(Lcom/AdX/tag/AdXConnect;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 48
@@ -1960,21 +1951,21 @@
 
 .method private buildDocument(Ljava/lang/String;)Lorg/w3c/dom/Document;
     .locals 8
-    .parameter "xml"
+    .param p1, "xml"    # Ljava/lang/String;
 
     .prologue
     .line 704
     const/4 v0, 0x0
 
     .line 708
-    .local v0, document:Lorg/w3c/dom/Document;
+    .local v0, "document":Lorg/w3c/dom/Document;
     :try_start_0
     invoke-static {}, Ljavax/xml/parsers/DocumentBuilderFactory;->newInstance()Ljavax/xml/parsers/DocumentBuilderFactory;
 
     move-result-object v3
 
     .line 712
-    .local v3, factory:Ljavax/xml/parsers/DocumentBuilderFactory;
+    .local v3, "factory":Ljavax/xml/parsers/DocumentBuilderFactory;
     new-instance v4, Ljava/io/ByteArrayInputStream;
 
     const-string v5, "UTF-8"
@@ -1986,13 +1977,13 @@
     invoke-direct {v4, v5}, Ljava/io/ByteArrayInputStream;-><init>([B)V
 
     .line 714
-    .local v4, is:Ljava/io/InputStream;
+    .local v4, "is":Ljava/io/InputStream;
     invoke-virtual {v3}, Ljavax/xml/parsers/DocumentBuilderFactory;->newDocumentBuilder()Ljavax/xml/parsers/DocumentBuilder;
 
     move-result-object v1
 
     .line 715
-    .local v1, documentBuilder:Ljavax/xml/parsers/DocumentBuilder;
+    .local v1, "documentBuilder":Ljavax/xml/parsers/DocumentBuilder;
     invoke-virtual {v1, v4}, Ljavax/xml/parsers/DocumentBuilder;->parse(Ljava/io/InputStream;)Lorg/w3c/dom/Document;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -2000,9 +1991,9 @@
     move-result-object v0
 
     .line 722
-    .end local v1           #documentBuilder:Ljavax/xml/parsers/DocumentBuilder;
-    .end local v3           #factory:Ljavax/xml/parsers/DocumentBuilderFactory;
-    .end local v4           #is:Ljava/io/InputStream;
+    .end local v1    # "documentBuilder":Ljavax/xml/parsers/DocumentBuilder;
+    .end local v3    # "factory":Ljavax/xml/parsers/DocumentBuilderFactory;
+    .end local v4    # "is":Ljava/io/InputStream;
     :cond_0
     :goto_0
     return-object v0
@@ -2014,7 +2005,7 @@
     move-object v2, v5
 
     .line 719
-    .local v2, e:Ljava/lang/Exception;
+    .local v2, "e":Ljava/lang/Exception;
     sget-boolean v5, Lcom/AdX/tag/AdXConnect;->DEBUG:Z
 
     if-eqz v5, :cond_0
@@ -2046,7 +2037,7 @@
 
 .method public static doBroadcastConnectInstance(Landroid/content/Context;)V
     .locals 5
-    .parameter "context"
+    .param p0, "context"    # Landroid/content/Context;
 
     .prologue
     const/4 v4, 0x0
@@ -2097,13 +2088,13 @@
     move-result-object v1
 
     .line 202
-    .local v1, settings:Landroid/content/SharedPreferences;
+    .local v1, "settings":Landroid/content/SharedPreferences;
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
     .line 203
-    .local v0, editor:Landroid/content/SharedPreferences$Editor;
+    .local v0, "editor":Landroid/content/SharedPreferences$Editor;
     sget-object v2, Lcom/AdX/tag/AdXConnect;->RECEIVER_DONE:Ljava/lang/String;
 
     const-string v3, "done"
@@ -2119,10 +2110,10 @@
 
 .method public static getAdXConnectEventInstance(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
-    .parameter "context"
-    .parameter "event"
-    .parameter "data"
-    .parameter "currency"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "event"    # Ljava/lang/String;
+    .param p2, "data"    # Ljava/lang/String;
+    .param p3, "currency"    # Ljava/lang/String;
 
     .prologue
     .line 210
@@ -2161,9 +2152,9 @@
 
 .method public static getAdXConnectInstance(Landroid/content/Context;ZI)Lcom/AdX/tag/AdXConnect;
     .locals 6
-    .parameter "context"
-    .parameter "update"
-    .parameter "loglevel"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "update"    # Z
+    .param p2, "loglevel"    # I
 
     .prologue
     .line 108
@@ -2172,7 +2163,7 @@
     .line 109
     sget-object p2, Lcom/AdX/tag/AdXConnect;->AdX_PREFERENCE:Ljava/lang/String;
 
-    .end local p2
+    .end local p2    # "loglevel":I
     const/4 v0, 0x0
 
     invoke-virtual {p0, p2, v0}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
@@ -2180,13 +2171,13 @@
     move-result-object v1
 
     .line 110
-    .local v1, settings:Landroid/content/SharedPreferences;
+    .local v1, "settings":Landroid/content/SharedPreferences;
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object p2
 
     .line 112
-    .local p2, editor:Landroid/content/SharedPreferences$Editor;
+    .local p2, "editor":Landroid/content/SharedPreferences$Editor;
     sget-object v0, Lcom/AdX/tag/AdXConnect;->UPDATE:Ljava/lang/String;
 
     const/4 v2, -0x1
@@ -2196,7 +2187,7 @@
     move-result v0
 
     .line 113
-    .local v0, updateValue:I
+    .local v0, "updateValue":I
     if-gez v0, :cond_a
 
     .line 115
@@ -2204,16 +2195,16 @@
 
     sget-object p1, Lcom/AdX/tag/AdXConnect;->UPDATE:Ljava/lang/String;
 
-    .end local p1
+    .end local p1    # "update":Z
     const/4 v0, 0x1
 
     invoke-interface {p2, p1, v0}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .end local v0           #updateValue:I
+    .end local v0    # "updateValue":I
     const/4 p1, 0x1
 
     .line 117
-    .local p1, updateValue:I
+    .local p1, "updateValue":I
     :goto_0
     sget-boolean v0, Lcom/AdX/tag/AdXConnect;->DEBUG:Z
 
@@ -2241,8 +2232,8 @@
     move v2, p1
 
     .line 121
-    .end local p1           #updateValue:I
-    .local v2, updateValue:I
+    .end local p1    # "updateValue":I
+    .local v2, "updateValue":I
     :goto_1
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -2250,7 +2241,7 @@
     move-result-object p1
 
     .line 122
-    .local p1, manager:Landroid/content/pm/PackageManager;
+    .local p1, "manager":Landroid/content/pm/PackageManager;
     invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object v0
@@ -2262,7 +2253,7 @@
     move-result-object p1
 
     .line 124
-    .local p1, info:Landroid/content/pm/ApplicationInfo;
+    .local p1, "info":Landroid/content/pm/ApplicationInfo;
     iget-object v0, p1, Landroid/content/pm/ApplicationInfo;->metaData:Landroid/os/Bundle;
 
     const-string v3, "OTHERSTORE"
@@ -2272,7 +2263,7 @@
     move-result-object v0
 
     .line 125
-    .local v0, metaDataValue:Ljava/lang/String;
+    .local v0, "metaDataValue":Ljava/lang/String;
     const-string v3, "AdXAppTracker"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -2300,7 +2291,7 @@
 
     move-result v0
 
-    .end local v0           #metaDataValue:Ljava/lang/String;
+    .end local v0    # "metaDataValue":Ljava/lang/String;
     if-nez v0, :cond_1
 
     .line 127
@@ -2324,7 +2315,7 @@
     move-result-object v0
 
     .line 132
-    .restart local v0       #metaDataValue:Ljava/lang/String;
+    .restart local v0    # "metaDataValue":Ljava/lang/String;
     if-eqz v0, :cond_2
 
     const-string v3, ""
@@ -2341,10 +2332,10 @@
     move-result-object v0
 
     .line 135
-    .local v0, network:Ljava/lang/String;
+    .local v0, "network":Ljava/lang/String;
     iget-object p1, p1, Landroid/content/pm/ApplicationInfo;->metaData:Landroid/os/Bundle;
 
-    .end local p1           #info:Landroid/content/pm/ApplicationInfo;
+    .end local p1    # "info":Landroid/content/pm/ApplicationInfo;
     const-string v3, "REFERENCE"
 
     invoke-virtual {p1, v3}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -2352,13 +2343,13 @@
     move-result-object p1
 
     .line 136
-    .local p1, metaDataValue:Ljava/lang/String;
+    .local p1, "metaDataValue":Ljava/lang/String;
     invoke-virtual {p1}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object p1
 
     .line 138
-    .local p1, reference:Ljava/lang/String;
+    .local p1, "reference":Ljava/lang/String;
     new-instance v3, Ljava/lang/StringBuilder;
 
     const-string v4, "referrer=utm_source%3D"
@@ -2369,7 +2360,7 @@
 
     move-result-object v0
 
-    .end local v0           #network:Ljava/lang/String;
+    .end local v0    # "network":Ljava/lang/String;
     const-string v3, "%26utm_medium%3Dcpc%26utm_campaign%3D"
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -2380,13 +2371,13 @@
 
     move-result-object p1
 
-    .end local p1           #reference:Ljava/lang/String;
+    .end local p1    # "reference":Ljava/lang/String;
     invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
     .line 140
-    .local p1, uri:Ljava/lang/String;
+    .local p1, "uri":Ljava/lang/String;
     sget-object v0, Lcom/AdX/tag/AdXConnect;->REFERRAL_URL:Ljava/lang/String;
 
     invoke-interface {p2, v0, p1}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
@@ -2394,7 +2385,7 @@
     .line 141
     sget-object p1, Lcom/AdX/tag/AdXConnect;->RECEIVER_DONE:Ljava/lang/String;
 
-    .end local p1           #uri:Ljava/lang/String;
+    .end local p1    # "uri":Ljava/lang/String;
     const-string v0, "done"
 
     invoke-interface {p2, p1, v0}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
@@ -2416,7 +2407,7 @@
     move-result-object p1
 
     .line 148
-    .local p1, receiverDone:Ljava/lang/String;
+    .local p1, "receiverDone":Ljava/lang/String;
     const/4 v0, 0x1
 
     if-eq v2, v0, :cond_3
@@ -2429,7 +2420,7 @@
 
     move-result p1
 
-    .end local p1           #receiverDone:Ljava/lang/String;
+    .end local p1    # "receiverDone":Ljava/lang/String;
     if-eqz p1, :cond_8
 
     .line 150
@@ -2442,7 +2433,7 @@
 
     const-string p2, "Sending to AdX"
 
-    .end local p2           #editor:Landroid/content/SharedPreferences$Editor;
+    .end local p2    # "editor":Landroid/content/SharedPreferences$Editor;
     invoke-static {p1, p2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 151
@@ -2476,37 +2467,37 @@
     sget-object p0, Lcom/AdX/tag/AdXConnect;->AdXConnectInstance:Lcom/AdX/tag/AdXConnect;
 
     .line 185
-    .end local p0
+    .end local p0    # "context":Landroid/content/Context;
     :goto_3
     return-object p0
 
     .line 116
-    .end local v2           #updateValue:I
-    .local v0, updateValue:I
-    .restart local p0
-    .local p1, update:Z
-    .restart local p2       #editor:Landroid/content/SharedPreferences$Editor;
+    .end local v2    # "updateValue":I
+    .local v0, "updateValue":I
+    .restart local p0    # "context":Landroid/content/Context;
+    .local p1, "update":Z
+    .restart local p2    # "editor":Landroid/content/SharedPreferences$Editor;
     :cond_7
     sget-object p1, Lcom/AdX/tag/AdXConnect;->UPDATE:Ljava/lang/String;
 
-    .end local p1           #update:Z
+    .end local p1    # "update":Z
     const/4 v0, 0x0
 
     invoke-interface {p2, p1, v0}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .end local v0           #updateValue:I
+    .end local v0    # "updateValue":I
     const/4 p1, 0x0
 
-    .local p1, updateValue:I
+    .local p1, "updateValue":I
     goto/16 :goto_0
 
     .line 144
-    .end local p1           #updateValue:I
-    .restart local v2       #updateValue:I
+    .end local p1    # "updateValue":I
+    .restart local v2    # "updateValue":I
     :catch_0
     move-exception p1
 
-    .local p1, e:Ljava/lang/Exception;
+    .local p1, "e":Ljava/lang/Exception;
     sget-boolean v0, Lcom/AdX/tag/AdXConnect;->WARN:Z
 
     if-eqz v0, :cond_2
@@ -2523,7 +2514,7 @@
 
     move-result-object p1
 
-    .end local p1           #e:Ljava/lang/Exception;
+    .end local p1    # "e":Ljava/lang/Exception;
     invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object p1
@@ -2563,14 +2554,14 @@
     move-object p0, p0
 
     .line 171
-    .local p0, ctx:Landroid/content/Context;
+    .local p0, "ctx":Landroid/content/Context;
     move p1, v2
 
     .line 172
-    .local p1, isUpdate:I
+    .local p1, "isUpdate":I
     new-instance p2, Lcom/AdX/tag/AdXConnect$1;
 
-    .end local p2           #editor:Landroid/content/SharedPreferences$Editor;
+    .end local p2    # "editor":Landroid/content/SharedPreferences$Editor;
     invoke-direct {p2, p0, p1}, Lcom/AdX/tag/AdXConnect$1;-><init>(Landroid/content/Context;I)V
 
     .line 182
@@ -2578,7 +2569,7 @@
 
     invoke-static {p0, p1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    .end local p0           #ctx:Landroid/content/Context;
+    .end local p0    # "ctx":Landroid/content/Context;
     move-result-object p0
 
     .line 172
@@ -2589,23 +2580,23 @@
 
     goto :goto_3
 
-    .end local v2           #updateValue:I
-    .restart local v0       #updateValue:I
-    .local p0, context:Landroid/content/Context;
-    .local p1, update:Z
-    .restart local p2       #editor:Landroid/content/SharedPreferences$Editor;
+    .end local v2    # "updateValue":I
+    .restart local v0    # "updateValue":I
+    .local p0, "context":Landroid/content/Context;
+    .local p1, "update":Z
+    .restart local p2    # "editor":Landroid/content/SharedPreferences$Editor;
     :cond_a
     move v2, v0
 
-    .end local v0           #updateValue:I
-    .restart local v2       #updateValue:I
+    .end local v0    # "updateValue":I
+    .restart local v2    # "updateValue":I
     goto/16 :goto_1
 .end method
 
 .method public static getAdXReferral(Landroid/content/Context;I)Ljava/lang/String;
     .locals 6
-    .parameter "context"
-    .parameter "timeout"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "timeout"    # I
 
     .prologue
     const/4 v5, 0x0
@@ -2620,7 +2611,7 @@
     move-result-object v1
 
     .line 221
-    .local v1, settings:Landroid/content/SharedPreferences;
+    .local v1, "settings":Landroid/content/SharedPreferences;
     sget-object v3, Lcom/AdX/tag/AdXConnect;->MODREFERRAL:Ljava/lang/String;
 
     invoke-interface {v1, v3, v5}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
@@ -2628,11 +2619,11 @@
     move-result-object v2
 
     .line 222
-    .local v2, tempReferralURL:Ljava/lang/String;
+    .local v2, "tempReferralURL":Ljava/lang/String;
     const/4 v0, 0x0
 
     .line 223
-    .local v0, count:I
+    .local v0, "count":I
     :cond_0
     :goto_0
     if-ge v0, p1, :cond_1
@@ -2730,7 +2721,7 @@
     move-result-object v12
 
     .line 372
-    .local v12, manager:Landroid/content/pm/PackageManager;
+    .local v12, "manager":Landroid/content/pm/PackageManager;
     :try_start_0
     move-object/from16 v0, p0
 
@@ -2778,7 +2769,7 @@
     move-result-object v10
 
     .line 375
-    .local v10, info:Landroid/content/pm/ApplicationInfo;
+    .local v10, "info":Landroid/content/pm/ApplicationInfo;
     if-eqz v10, :cond_1d
 
     move-object v0, v10
@@ -2803,7 +2794,7 @@
     move-result-object v13
 
     .line 379
-    .local v13, metaDataValue:Ljava/lang/String;
+    .local v13, "metaDataValue":Ljava/lang/String;
     if-eqz v13, :cond_10
 
     const-string v24, ""
@@ -2919,7 +2910,7 @@
     invoke-direct {v0, v1}, Landroid/webkit/WebView;-><init>(Landroid/content/Context;)V
 
     .line 406
-    .local v20, webview:Landroid/webkit/WebView;
+    .local v20, "webview":Landroid/webkit/WebView;
     invoke-virtual/range {v20 .. v20}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
 
     move-result-object v24
@@ -2935,7 +2926,7 @@
     iput-object v0, v1, Lcom/AdX/tag/AdXConnect;->userAgent:Ljava/lang/String;
 
     .line 408
-    .end local v20           #webview:Landroid/webkit/WebView;
+    .end local v20    # "webview":Landroid/webkit/WebView;
     :cond_0
     move-object v0, v10
 
@@ -2996,7 +2987,7 @@
     move-result-object v15
 
     .line 416
-    .local v15, packageInfo:Landroid/content/pm/PackageInfo;
+    .local v15, "packageInfo":Landroid/content/pm/PackageInfo;
     move-object v0, v15
 
     iget-object v0, v0, Landroid/content/pm/PackageInfo;->versionName:Ljava/lang/String;
@@ -3095,7 +3086,7 @@
     move-result-object v17
 
     .line 437
-    .local v17, settings:Landroid/content/SharedPreferences;
+    .local v17, "settings":Landroid/content/SharedPreferences;
     move-object v0, v10
 
     iget-object v0, v0, Landroid/content/pm/ApplicationInfo;->metaData:Landroid/os/Bundle;
@@ -3141,7 +3132,7 @@
     invoke-direct {v14}, Landroid/util/DisplayMetrics;-><init>()V
 
     .line 540
-    .local v14, metrics:Landroid/util/DisplayMetrics;
+    .local v14, "metrics":Landroid/util/DisplayMetrics;
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/AdX/tag/AdXConnect;->context:Landroid/content/Context;
@@ -3157,7 +3148,7 @@
     check-cast v23, Landroid/view/WindowManager;
 
     .line 541
-    .local v23, windowManager:Landroid/view/WindowManager;
+    .local v23, "windowManager":Landroid/view/WindowManager;
     invoke-interface/range {v23 .. v23}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
 
     move-result-object v24
@@ -3172,8 +3163,8 @@
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_1 .. :try_end_1} :catch_0
 
     .line 551
-    .end local v14           #metrics:Landroid/util/DisplayMetrics;
-    .end local v23           #windowManager:Landroid/view/WindowManager;
+    .end local v14    # "metrics":Landroid/util/DisplayMetrics;
+    .end local v23    # "windowManager":Landroid/view/WindowManager;
     :cond_3
     :goto_1
     :try_start_2
@@ -3192,7 +3183,7 @@
     move-result-object v19
 
     .line 552
-    .local v19, tempReferralURL:Ljava/lang/String;
+    .local v19, "tempReferralURL":Ljava/lang/String;
     if-eqz v19, :cond_4
 
     const-string v24, ""
@@ -3579,18 +3570,18 @@
     invoke-static/range {v24 .. v25}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 585
-    .end local v10           #info:Landroid/content/pm/ApplicationInfo;
-    .end local v13           #metaDataValue:Ljava/lang/String;
-    .end local v15           #packageInfo:Landroid/content/pm/PackageInfo;
-    .end local v17           #settings:Landroid/content/SharedPreferences;
-    .end local v19           #tempReferralURL:Ljava/lang/String;
+    .end local v10    # "info":Landroid/content/pm/ApplicationInfo;
+    .end local v13    # "metaDataValue":Ljava/lang/String;
+    .end local v15    # "packageInfo":Landroid/content/pm/PackageInfo;
+    .end local v17    # "settings":Landroid/content/SharedPreferences;
+    .end local v19    # "tempReferralURL":Ljava/lang/String;
     :cond_f
     :goto_2
     return-void
 
     .line 385
-    .restart local v10       #info:Landroid/content/pm/ApplicationInfo;
-    .restart local v13       #metaDataValue:Ljava/lang/String;
+    .restart local v10    # "info":Landroid/content/pm/ApplicationInfo;
+    .restart local v13    # "metaDataValue":Ljava/lang/String;
     :cond_10
     sget-boolean v24, Lcom/AdX/tag/AdXConnect;->WARN:Z
 
@@ -3607,15 +3598,15 @@
     goto :goto_2
 
     .line 581
-    .end local v10           #info:Landroid/content/pm/ApplicationInfo;
-    .end local v13           #metaDataValue:Ljava/lang/String;
+    .end local v10    # "info":Landroid/content/pm/ApplicationInfo;
+    .end local v13    # "metaDataValue":Ljava/lang/String;
     :catch_0
     move-exception v24
 
     move-object/from16 v7, v24
 
     .line 583
-    .local v7, e:Landroid/content/pm/PackageManager$NameNotFoundException;
+    .local v7, "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     sget-boolean v24, Lcom/AdX/tag/AdXConnect;->WARN:Z
 
     if-eqz v24, :cond_f
@@ -3629,9 +3620,9 @@
     goto :goto_2
 
     .line 397
-    .end local v7           #e:Landroid/content/pm/PackageManager$NameNotFoundException;
-    .restart local v10       #info:Landroid/content/pm/ApplicationInfo;
-    .restart local v13       #metaDataValue:Ljava/lang/String;
+    .end local v7    # "e":Landroid/content/pm/PackageManager$NameNotFoundException;
+    .restart local v10    # "info":Landroid/content/pm/ApplicationInfo;
+    .restart local v13    # "metaDataValue":Ljava/lang/String;
     :cond_11
     :try_start_3
     sget-boolean v24, Lcom/AdX/tag/AdXConnect;->WARN:Z
@@ -3649,8 +3640,8 @@
     goto :goto_2
 
     .line 449
-    .restart local v15       #packageInfo:Landroid/content/pm/PackageInfo;
-    .restart local v17       #settings:Landroid/content/SharedPreferences;
+    .restart local v15    # "packageInfo":Landroid/content/pm/PackageInfo;
+    .restart local v17    # "settings":Landroid/content/SharedPreferences;
     :cond_12
     :try_start_4
     move-object/from16 v0, p0
@@ -3668,13 +3659,13 @@
     check-cast v22, Landroid/net/wifi/WifiManager;
 
     .line 450
-    .local v22, wifiMan:Landroid/net/wifi/WifiManager;
+    .local v22, "wifiMan":Landroid/net/wifi/WifiManager;
     invoke-virtual/range {v22 .. v22}, Landroid/net/wifi/WifiManager;->getConnectionInfo()Landroid/net/wifi/WifiInfo;
 
     move-result-object v21
 
     .line 451
-    .local v21, wifiInf:Landroid/net/wifi/WifiInfo;
+    .local v21, "wifiInf":Landroid/net/wifi/WifiInfo;
     invoke-virtual/range {v21 .. v21}, Landroid/net/wifi/WifiInfo;->getMacAddress()Ljava/lang/String;
 
     move-result-object v24
@@ -3728,7 +3719,7 @@
     const/4 v11, 0x0
 
     .line 471
-    .local v11, invalidDeviceID:Z
+    .local v11, "invalidDeviceID":Z
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/AdX/tag/AdXConnect;->deviceID:Ljava/lang/String;
@@ -3762,7 +3753,7 @@
     invoke-direct {v3}, Ljava/lang/StringBuffer;-><init>()V
 
     .line 498
-    .local v3, buff:Ljava/lang/StringBuffer;
+    .local v3, "buff":Ljava/lang/StringBuffer;
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/AdX/tag/AdXConnect;->androidID:Ljava/lang/String;
@@ -3791,7 +3782,7 @@
     move-result-object v6
 
     .line 502
-    .local v6, deviceId:Ljava/lang/String;
+    .local v6, "deviceId":Ljava/lang/String;
     if-eqz v6, :cond_1b
 
     const-string v24, ""
@@ -3819,18 +3810,18 @@
     goto/16 :goto_0
 
     .line 527
-    .end local v3           #buff:Ljava/lang/StringBuffer;
-    .end local v6           #deviceId:Ljava/lang/String;
-    .end local v11           #invalidDeviceID:Z
-    .end local v21           #wifiInf:Landroid/net/wifi/WifiInfo;
-    .end local v22           #wifiMan:Landroid/net/wifi/WifiManager;
+    .end local v3    # "buff":Ljava/lang/StringBuffer;
+    .end local v6    # "deviceId":Ljava/lang/String;
+    .end local v11    # "invalidDeviceID":Z
+    .end local v21    # "wifiInf":Landroid/net/wifi/WifiInfo;
+    .end local v22    # "wifiMan":Landroid/net/wifi/WifiManager;
     :catch_1
     move-exception v24
 
     move-object/from16 v7, v24
 
     .line 529
-    .local v7, e:Ljava/lang/Exception;
+    .local v7, "e":Ljava/lang/Exception;
     :try_start_5
     sget-boolean v24, Lcom/AdX/tag/AdXConnect;->DEBUG:Z
 
@@ -3873,9 +3864,9 @@
     goto/16 :goto_0
 
     .line 457
-    .end local v7           #e:Ljava/lang/Exception;
-    .restart local v21       #wifiInf:Landroid/net/wifi/WifiInfo;
-    .restart local v22       #wifiMan:Landroid/net/wifi/WifiManager;
+    .end local v7    # "e":Ljava/lang/Exception;
+    .restart local v21    # "wifiInf":Landroid/net/wifi/WifiInfo;
+    .restart local v22    # "wifiMan":Landroid/net/wifi/WifiManager;
     :cond_16
     :try_start_6
     move-object/from16 v0, p0
@@ -3893,7 +3884,7 @@
     check-cast v18, Landroid/telephony/TelephonyManager;
 
     .line 459
-    .local v18, telephonyManager:Landroid/telephony/TelephonyManager;
+    .local v18, "telephonyManager":Landroid/telephony/TelephonyManager;
     if-eqz v18, :cond_13
 
     .line 460
@@ -3910,8 +3901,8 @@
     goto/16 :goto_3
 
     .line 480
-    .end local v18           #telephonyManager:Landroid/telephony/TelephonyManager;
-    .restart local v11       #invalidDeviceID:Z
+    .end local v18    # "telephonyManager":Landroid/telephony/TelephonyManager;
+    .restart local v11    # "invalidDeviceID":Z
     :cond_17
     move-object/from16 v0, p0
 
@@ -3992,16 +3983,16 @@
     goto/16 :goto_4
 
     .line 509
-    .restart local v3       #buff:Ljava/lang/StringBuffer;
-    .restart local v6       #deviceId:Ljava/lang/String;
+    .restart local v3    # "buff":Ljava/lang/StringBuffer;
+    .restart local v6    # "deviceId":Ljava/lang/String;
     :cond_1b
     const-string v5, "1234567890abcdefghijklmnopqrstuvw"
 
     .line 511
-    .local v5, constantChars:Ljava/lang/String;
+    .local v5, "constantChars":Ljava/lang/String;
     const/4 v9, 0x0
 
-    .local v9, i:I
+    .local v9, "i":I
     :goto_5
     const/16 v24, 0x10
 
@@ -4032,7 +4023,7 @@
     move-result-object v8
 
     .line 522
-    .local v8, editor:Landroid/content/SharedPreferences$Editor;
+    .local v8, "editor":Landroid/content/SharedPreferences$Editor;
     const-string v24, "emulatorDeviceId"
 
     move-object/from16 v0, p0
@@ -4055,13 +4046,13 @@
     goto/16 :goto_0
 
     .line 513
-    .end local v8           #editor:Landroid/content/SharedPreferences$Editor;
+    .end local v8    # "editor":Landroid/content/SharedPreferences$Editor;
     :cond_1c
     invoke-static {}, Ljava/lang/Math;->random()D
 
     move-result-wide v24
 
-    const-wide/high16 v26, 0x4059
+    const-wide/high16 v26, 0x4059000000000000L
 
     mul-double v24, v24, v26
 
@@ -4072,11 +4063,11 @@
     move/from16 v16, v0
 
     .line 514
-    .local v16, randomChar:I
+    .local v16, "randomChar":I
     rem-int/lit8 v4, v16, 0x1e
 
     .line 515
-    .local v4, ch:I
+    .local v4, "ch":I
     invoke-virtual {v5, v4}, Ljava/lang/String;->charAt(I)C
 
     move-result v24
@@ -4096,22 +4087,22 @@
     goto :goto_5
 
     .line 545
-    .end local v3           #buff:Ljava/lang/StringBuffer;
-    .end local v4           #ch:I
-    .end local v5           #constantChars:Ljava/lang/String;
-    .end local v6           #deviceId:Ljava/lang/String;
-    .end local v9           #i:I
-    .end local v11           #invalidDeviceID:Z
-    .end local v16           #randomChar:I
-    .end local v21           #wifiInf:Landroid/net/wifi/WifiInfo;
-    .end local v22           #wifiMan:Landroid/net/wifi/WifiManager;
+    .end local v3    # "buff":Ljava/lang/StringBuffer;
+    .end local v4    # "ch":I
+    .end local v5    # "constantChars":Ljava/lang/String;
+    .end local v6    # "deviceId":Ljava/lang/String;
+    .end local v9    # "i":I
+    .end local v11    # "invalidDeviceID":Z
+    .end local v16    # "randomChar":I
+    .end local v21    # "wifiInf":Landroid/net/wifi/WifiInfo;
+    .end local v22    # "wifiMan":Landroid/net/wifi/WifiManager;
     :catch_2
     move-exception v24
 
     move-object/from16 v7, v24
 
     .line 547
-    .restart local v7       #e:Ljava/lang/Exception;
+    .restart local v7    # "e":Ljava/lang/Exception;
     :try_start_7
     sget-boolean v24, Lcom/AdX/tag/AdXConnect;->DEBUG:Z
 
@@ -4142,10 +4133,10 @@
     goto/16 :goto_1
 
     .line 577
-    .end local v7           #e:Ljava/lang/Exception;
-    .end local v13           #metaDataValue:Ljava/lang/String;
-    .end local v15           #packageInfo:Landroid/content/pm/PackageInfo;
-    .end local v17           #settings:Landroid/content/SharedPreferences;
+    .end local v7    # "e":Ljava/lang/Exception;
+    .end local v13    # "metaDataValue":Ljava/lang/String;
+    .end local v15    # "packageInfo":Landroid/content/pm/PackageInfo;
+    .end local v17    # "settings":Landroid/content/SharedPreferences;
     :cond_1d
     sget-boolean v24, Lcom/AdX/tag/AdXConnect;->WARN:Z
 
@@ -4164,7 +4155,7 @@
 
 .method public static getFacebookAttributionId(Landroid/content/Context;)Ljava/lang/String;
     .locals 12
-    .parameter "context"
+    .param p0, "context"    # Landroid/content/Context;
 
     .prologue
     const/4 v10, 0x0
@@ -4185,11 +4176,11 @@
     aput-object v3, v2, v0
 
     .line 335
-    .local v2, projection:[Ljava/lang/String;
+    .local v2, "projection":[Ljava/lang/String;
     const-string v6, ""
 
     .line 337
-    .local v6, attributionId:Ljava/lang/String;
+    .local v6, "attributionId":Ljava/lang/String;
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -4208,7 +4199,7 @@
     move-result-object v7
 
     .line 340
-    .local v7, c:Landroid/database/Cursor;
+    .local v7, "c":Landroid/database/Cursor;
     if-eqz v7, :cond_0
 
     invoke-interface {v7}, Landroid/database/Cursor;->moveToFirst()Z
@@ -4221,12 +4212,12 @@
     move-object v0, v10
 
     .line 354
-    .end local v7           #c:Landroid/database/Cursor;
+    .end local v7    # "c":Landroid/database/Cursor;
     :goto_0
     return-object v0
 
     .line 341
-    .restart local v7       #c:Landroid/database/Cursor;
+    .restart local v7    # "c":Landroid/database/Cursor;
     :cond_1
     const-string v0, "aid"
 
@@ -4240,7 +4231,7 @@
 
     move-result-object v6
 
-    .end local v7           #c:Landroid/database/Cursor;
+    .end local v7    # "c":Landroid/database/Cursor;
     :cond_2
     :goto_1
     move-object v0, v6
@@ -4255,7 +4246,7 @@
     move-object v8, v0
 
     .line 344
-    .local v8, e:Ljava/lang/Exception;
+    .local v8, "e":Ljava/lang/Exception;
     sget-boolean v0, Lcom/AdX/tag/AdXConnect;->WARN:Z
 
     if-eqz v0, :cond_3
@@ -4300,7 +4291,7 @@
     move-result-object v7
 
     .line 349
-    .restart local v7       #c:Landroid/database/Cursor;
+    .restart local v7    # "c":Landroid/database/Cursor;
     if-eqz v7, :cond_5
 
     invoke-interface {v7}, Landroid/database/Cursor;->moveToFirst()Z
@@ -4331,13 +4322,13 @@
     goto :goto_1
 
     .line 352
-    .end local v7           #c:Landroid/database/Cursor;
+    .end local v7    # "c":Landroid/database/Cursor;
     :catch_1
     move-exception v0
 
     move-object v9, v0
 
-    .local v9, e2:Ljava/lang/Exception;
+    .local v9, "e2":Ljava/lang/Exception;
     sget-boolean v0, Lcom/AdX/tag/AdXConnect;->WARN:Z
 
     if-eqz v0, :cond_2
@@ -4355,7 +4346,7 @@
 
 .method private getNodeTrimValue(Lorg/w3c/dom/NodeList;)Ljava/lang/String;
     .locals 9
-    .parameter "nodeList"
+    .param p1, "nodeList"    # Lorg/w3c/dom/NodeList;
 
     .prologue
     const/4 v8, 0x0
@@ -4370,11 +4361,11 @@
     check-cast v0, Lorg/w3c/dom/Element;
 
     .line 736
-    .local v0, element:Lorg/w3c/dom/Element;
+    .local v0, "element":Lorg/w3c/dom/Element;
     const-string v5, ""
 
     .line 737
-    .local v5, nodeValue:Ljava/lang/String;
+    .local v5, "nodeValue":Ljava/lang/String;
     if-eqz v0, :cond_3
 
     .line 739
@@ -4383,16 +4374,16 @@
     move-result-object v2
 
     .line 741
-    .local v2, itemNodeList:Lorg/w3c/dom/NodeList;
+    .local v2, "itemNodeList":Lorg/w3c/dom/NodeList;
     invoke-interface {v2}, Lorg/w3c/dom/NodeList;->getLength()I
 
     move-result v3
 
     .line 742
-    .local v3, length:I
+    .local v3, "length":I
     const/4 v1, 0x0
 
-    .local v1, i:I
+    .local v1, "i":I
     :goto_0
     if-lt v1, v3, :cond_0
 
@@ -4413,23 +4404,23 @@
     move-result-object v6
 
     .line 758
-    .end local v1           #i:I
-    .end local v2           #itemNodeList:Lorg/w3c/dom/NodeList;
-    .end local v3           #length:I
+    .end local v1    # "i":I
+    .end local v2    # "itemNodeList":Lorg/w3c/dom/NodeList;
+    .end local v3    # "length":I
     :goto_1
     return-object v6
 
     .line 744
-    .restart local v1       #i:I
-    .restart local v2       #itemNodeList:Lorg/w3c/dom/NodeList;
-    .restart local v3       #length:I
+    .restart local v1    # "i":I
+    .restart local v2    # "itemNodeList":Lorg/w3c/dom/NodeList;
+    .restart local v3    # "length":I
     :cond_0
     invoke-interface {v2, v1}, Lorg/w3c/dom/NodeList;->item(I)Lorg/w3c/dom/Node;
 
     move-result-object v4
 
     .line 745
-    .local v4, node:Lorg/w3c/dom/Node;
+    .local v4, "node":Lorg/w3c/dom/Node;
     if-eqz v4, :cond_1
 
     .line 746
@@ -4459,16 +4450,16 @@
 
     goto :goto_0
 
-    .end local v4           #node:Lorg/w3c/dom/Node;
+    .end local v4    # "node":Lorg/w3c/dom/Node;
     :cond_2
     move-object v6, v8
 
     .line 755
     goto :goto_1
 
-    .end local v1           #i:I
-    .end local v2           #itemNodeList:Lorg/w3c/dom/NodeList;
-    .end local v3           #length:I
+    .end local v1    # "i":I
+    .end local v2    # "itemNodeList":Lorg/w3c/dom/NodeList;
+    .end local v3    # "length":I
     :cond_3
     move-object v6, v8
 
@@ -4478,7 +4469,7 @@
 
 .method private handleConnectResponse(Ljava/lang/String;)Z
     .locals 11
-    .parameter "response"
+    .param p1, "response"    # Ljava/lang/String;
 
     .prologue
     const/4 v9, 0x1
@@ -4495,7 +4486,7 @@
     move-result-object v0
 
     .line 655
-    .local v0, document:Lorg/w3c/dom/Document;
+    .local v0, "document":Lorg/w3c/dom/Document;
     if-eqz v0, :cond_6
 
     .line 657
@@ -4510,7 +4501,7 @@
     move-result-object v3
 
     .line 660
-    .local v3, nodeValue1:Ljava/lang/String;
+    .local v3, "nodeValue1":Ljava/lang/String;
     if-eqz v3, :cond_1
 
     .line 663
@@ -4547,13 +4538,13 @@
     move-result-object v4
 
     .line 665
-    .local v4, settings:Landroid/content/SharedPreferences;
+    .local v4, "settings":Landroid/content/SharedPreferences;
     invoke-interface {v4}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v1
 
     .line 666
-    .local v1, editor:Landroid/content/SharedPreferences$Editor;
+    .local v1, "editor":Landroid/content/SharedPreferences$Editor;
     sget-object v5, Lcom/AdX/tag/AdXConnect;->MODREFERRAL:Ljava/lang/String;
 
     invoke-interface {v1, v5, v3}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
@@ -4562,8 +4553,8 @@
     invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     .line 670
-    .end local v1           #editor:Landroid/content/SharedPreferences$Editor;
-    .end local v4           #settings:Landroid/content/SharedPreferences;
+    .end local v1    # "editor":Landroid/content/SharedPreferences$Editor;
+    .end local v4    # "settings":Landroid/content/SharedPreferences;
     :cond_1
     const-string v5, "Success"
 
@@ -4576,7 +4567,7 @@
     move-result-object v2
 
     .line 673
-    .local v2, nodeValue:Ljava/lang/String;
+    .local v2, "nodeValue":Ljava/lang/String;
     if-eqz v2, :cond_3
 
     const-string v5, "true"
@@ -4602,14 +4593,14 @@
     move v5, v9
 
     .line 693
-    .end local v2           #nodeValue:Ljava/lang/String;
-    .end local v3           #nodeValue1:Ljava/lang/String;
+    .end local v2    # "nodeValue":Ljava/lang/String;
+    .end local v3    # "nodeValue1":Ljava/lang/String;
     :goto_0
     return v5
 
     .line 678
-    .restart local v2       #nodeValue:Ljava/lang/String;
-    .restart local v3       #nodeValue1:Ljava/lang/String;
+    .restart local v2    # "nodeValue":Ljava/lang/String;
+    .restart local v3    # "nodeValue1":Ljava/lang/String;
     :cond_3
     if-eqz v2, :cond_5
 
@@ -4643,13 +4634,13 @@
     move-result-object v4
 
     .line 682
-    .restart local v4       #settings:Landroid/content/SharedPreferences;
+    .restart local v4    # "settings":Landroid/content/SharedPreferences;
     invoke-interface {v4}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v1
 
     .line 683
-    .restart local v1       #editor:Landroid/content/SharedPreferences$Editor;
+    .restart local v1    # "editor":Landroid/content/SharedPreferences$Editor;
     iget-object v5, p0, Lcom/AdX/tag/AdXConnect;->SEND_TAG:Ljava/lang/String;
 
     const-string v6, "stop"
@@ -4665,8 +4656,8 @@
     goto :goto_0
 
     .line 689
-    .end local v1           #editor:Landroid/content/SharedPreferences$Editor;
-    .end local v4           #settings:Landroid/content/SharedPreferences;
+    .end local v1    # "editor":Landroid/content/SharedPreferences$Editor;
+    .end local v4    # "settings":Landroid/content/SharedPreferences;
     :cond_5
     sget-boolean v5, Lcom/AdX/tag/AdXConnect;->DEBUG:Z
 
@@ -4678,8 +4669,8 @@
 
     invoke-static {v7, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .end local v2           #nodeValue:Ljava/lang/String;
-    .end local v3           #nodeValue1:Ljava/lang/String;
+    .end local v2    # "nodeValue":Ljava/lang/String;
+    .end local v3    # "nodeValue1":Ljava/lang/String;
     :cond_6
     move v5, v8
 
@@ -4689,8 +4680,8 @@
 
 .method public static schedule(Ljava/lang/Runnable;Ljava/lang/Long;)V
     .locals 4
-    .parameter "runnable"
-    .parameter "delaySeconds"
+    .param p0, "runnable"    # Ljava/lang/Runnable;
+    .param p1, "delaySeconds"    # Ljava/lang/Long;
 
     .prologue
     .line 189

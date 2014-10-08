@@ -20,7 +20,7 @@
 
 .method public static isCalendarAvailable(Landroid/content/Context;)Z
     .locals 3
-    .parameter "context"
+    .param p0, "context"    # Landroid/content/Context;
 
     .prologue
     .line 69
@@ -37,7 +37,7 @@
     move-result-object v0
 
     .line 71
-    .local v0, calendarIntent:Landroid/content/Intent;
+    .local v0, "calendarIntent":Landroid/content/Intent;
     invoke-static {}, Lcom/fusepowered/m2/m2l/util/VersionCode;->currentApiLevel()Lcom/fusepowered/m2/m2l/util/VersionCode;
 
     move-result-object v1
@@ -71,7 +71,7 @@
 
 .method public static isInlineVideoAvailable(Landroid/content/Context;)Z
     .locals 2
-    .parameter "context"
+    .param p0, "context"    # Landroid/content/Context;
 
     .prologue
     .line 76
@@ -82,7 +82,7 @@
     invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
     .line 78
-    .local v0, mraidVideoIntent:Landroid/content/Intent;
+    .local v0, "mraidVideoIntent":Landroid/content/Intent;
     invoke-static {p0, v0}, Lcom/fusepowered/m2/m2l/Utils;->deviceCanHandleIntent(Landroid/content/Context;Landroid/content/Intent;)Z
 
     move-result v1
@@ -92,7 +92,7 @@
 
 .method public static isSmsAvailable(Landroid/content/Context;)Z
     .locals 2
-    .parameter "context"
+    .param p0, "context"    # Landroid/content/Context;
 
     .prologue
     .line 57
@@ -103,7 +103,7 @@
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
     .line 58
-    .local v0, smsIntent:Landroid/content/Intent;
+    .local v0, "smsIntent":Landroid/content/Intent;
     const-string v1, "sms:"
 
     invoke-static {v1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -122,7 +122,7 @@
 
 .method public static isStorePictureSupported(Landroid/content/Context;)Z
     .locals 2
-    .parameter "context"
+    .param p0, "context"    # Landroid/content/Context;
 
     .prologue
     .line 64
@@ -161,7 +161,7 @@
 
 .method public static isTelAvailable(Landroid/content/Context;)Z
     .locals 2
-    .parameter "context"
+    .param p0, "context"    # Landroid/content/Context;
 
     .prologue
     .line 50
@@ -172,7 +172,7 @@
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
     .line 51
-    .local v0, telIntent:Landroid/content/Intent;
+    .local v0, "telIntent":Landroid/content/Intent;
     const-string v1, "tel:"
 
     invoke-static {v1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;

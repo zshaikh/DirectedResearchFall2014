@@ -26,8 +26,6 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m2/m2l/VastVideoView;Ljava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 1
@@ -66,7 +64,7 @@
     move-object v0, v1
 
     .line 239
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v1, "MoPub"
 
     new-instance v2, Ljava/lang/StringBuilder;

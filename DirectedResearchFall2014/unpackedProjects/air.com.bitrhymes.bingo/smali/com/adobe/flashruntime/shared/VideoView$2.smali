@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/adobe/flashruntime/shared/VideoView;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 129
@@ -46,28 +45,28 @@
 
     iget-object v1, p0, Lcom/adobe/flashruntime/shared/VideoView$2;->this$0:Lcom/adobe/flashruntime/shared/VideoView;
 
-    #getter for: Lcom/adobe/flashruntime/shared/VideoView;->mXmin:I
+    # getter for: Lcom/adobe/flashruntime/shared/VideoView;->mXmin:I
     invoke-static {v1}, Lcom/adobe/flashruntime/shared/VideoView;->access$200(Lcom/adobe/flashruntime/shared/VideoView;)I
 
     move-result v1
 
     iget-object v2, p0, Lcom/adobe/flashruntime/shared/VideoView$2;->this$0:Lcom/adobe/flashruntime/shared/VideoView;
 
-    #getter for: Lcom/adobe/flashruntime/shared/VideoView;->mYmin:I
+    # getter for: Lcom/adobe/flashruntime/shared/VideoView;->mYmin:I
     invoke-static {v2}, Lcom/adobe/flashruntime/shared/VideoView;->access$400(Lcom/adobe/flashruntime/shared/VideoView;)I
 
     move-result v2
 
     iget-object v3, p0, Lcom/adobe/flashruntime/shared/VideoView$2;->this$0:Lcom/adobe/flashruntime/shared/VideoView;
 
-    #getter for: Lcom/adobe/flashruntime/shared/VideoView;->mXmax:I
+    # getter for: Lcom/adobe/flashruntime/shared/VideoView;->mXmax:I
     invoke-static {v3}, Lcom/adobe/flashruntime/shared/VideoView;->access$100(Lcom/adobe/flashruntime/shared/VideoView;)I
 
     move-result v3
 
     iget-object v4, p0, Lcom/adobe/flashruntime/shared/VideoView$2;->this$0:Lcom/adobe/flashruntime/shared/VideoView;
 
-    #getter for: Lcom/adobe/flashruntime/shared/VideoView;->mYmax:I
+    # getter for: Lcom/adobe/flashruntime/shared/VideoView;->mYmax:I
     invoke-static {v4}, Lcom/adobe/flashruntime/shared/VideoView;->access$300(Lcom/adobe/flashruntime/shared/VideoView;)I
 
     move-result v4

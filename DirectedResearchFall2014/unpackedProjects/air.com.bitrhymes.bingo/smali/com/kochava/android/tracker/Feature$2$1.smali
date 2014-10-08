@@ -21,7 +21,6 @@
 # direct methods
 .method constructor <init>(Lcom/kochava/android/tracker/Feature$2;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1
@@ -42,7 +41,7 @@
     .line 1040
     iget-object v0, p0, Lcom/kochava/android/tracker/Feature$2$1;->this$1:Lcom/kochava/android/tracker/Feature$2;
 
-    #getter for: Lcom/kochava/android/tracker/Feature$2;->this$0:Lcom/kochava/android/tracker/Feature;
+    # getter for: Lcom/kochava/android/tracker/Feature$2;->this$0:Lcom/kochava/android/tracker/Feature;
     invoke-static {v0}, Lcom/kochava/android/tracker/Feature$2;->access$0(Lcom/kochava/android/tracker/Feature$2;)Lcom/kochava/android/tracker/Feature;
 
     move-result-object v0

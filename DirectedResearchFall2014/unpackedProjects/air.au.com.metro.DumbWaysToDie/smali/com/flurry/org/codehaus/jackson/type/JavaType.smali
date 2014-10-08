@@ -23,8 +23,7 @@
 # direct methods
 .method protected constructor <init>(Ljava/lang/Class;I)V
     .locals 2
-    .parameter
-    .parameter "additionalHash"
+    .param p2, "additionalHash"    # I
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -34,7 +33,7 @@
     .end annotation
 
     .prologue
-    .local p1, raw:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p1, "raw":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const/4 v1, 0x0
 
     .line 64
@@ -70,8 +69,6 @@
 # virtual methods
 .method protected _assertSubclass(Ljava/lang/Class;Ljava/lang/Class;)V
     .locals 3
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -84,8 +81,8 @@
 
     .prologue
     .line 484
-    .local p1, subclass:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
-    .local p2, superClass:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p1, "subclass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
+    .local p2, "superClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/type/JavaType;->_class:Ljava/lang/Class;
 
     invoke-virtual {v0, p1}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
@@ -157,7 +154,6 @@
 
 .method protected _widen(Ljava/lang/Class;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -169,7 +165,7 @@
 
     .prologue
     .line 227
-    .local p1, superclass:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p1, "superclass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-virtual {p0, p1}, Lcom/flurry/org/codehaus/jackson/type/JavaType;->_narrow(Ljava/lang/Class;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
 
     move-result-object v0
@@ -179,7 +175,7 @@
 
 .method public containedType(I)Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .locals 1
-    .parameter "index"
+    .param p1, "index"    # I
 
     .prologue
     .line 363
@@ -200,7 +196,7 @@
 
 .method public containedTypeName(I)Ljava/lang/String;
     .locals 1
-    .parameter "index"
+    .param p1, "index"    # I
 
     .prologue
     .line 378
@@ -214,7 +210,6 @@
 
 .method public forcedNarrowBy(Ljava/lang/Class;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .locals 3
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -226,7 +221,7 @@
 
     .prologue
     .line 185
-    .local p1, subclass:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p1, "subclass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/type/JavaType;->_class:Ljava/lang/Class;
 
     if-ne p1, v1, :cond_0
@@ -244,7 +239,7 @@
     move-result-object v0
 
     .line 190
-    .local v0, result:Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .local v0, "result":Lcom/flurry/org/codehaus/jackson/type/JavaType;
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/type/JavaType;->_valueHandler:Ljava/lang/Object;
 
     invoke-virtual {v0}, Lcom/flurry/org/codehaus/jackson/type/JavaType;->getValueHandler()Ljava/lang/Object;
@@ -306,7 +301,7 @@
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
     .line 457
-    .local v0, sb:Ljava/lang/StringBuilder;
+    .local v0, "sb":Ljava/lang/StringBuilder;
     invoke-virtual {p0, v0}, Lcom/flurry/org/codehaus/jackson/type/JavaType;->getErasedSignature(Ljava/lang/StringBuilder;)Ljava/lang/StringBuilder;
 
     .line 458
@@ -332,7 +327,7 @@
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
     .line 432
-    .local v0, sb:Ljava/lang/StringBuilder;
+    .local v0, "sb":Ljava/lang/StringBuilder;
     invoke-virtual {p0, v0}, Lcom/flurry/org/codehaus/jackson/type/JavaType;->getGenericSignature(Ljava/lang/StringBuilder;)Ljava/lang/StringBuilder;
 
     .line 433
@@ -431,7 +426,6 @@
 
 .method public final hasRawClass(Ljava/lang/Class;)Z
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -442,7 +436,7 @@
 
     .prologue
     .line 251
-    .local p1, clz:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p1, "clz":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/type/JavaType;->_class:Ljava/lang/Class;
 
     if-ne v0, p1, :cond_0
@@ -520,7 +514,7 @@
     move-result v0
 
     .line 263
-    .local v0, mod:I
+    .local v0, "mod":I
     and-int/lit16 v1, v0, 0x600
 
     if-nez v1, :cond_0
@@ -644,7 +638,6 @@
 
 .method public narrowBy(Ljava/lang/Class;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .locals 3
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -656,7 +649,7 @@
 
     .prologue
     .line 159
-    .local p1, subclass:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p1, "subclass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/type/JavaType;->_class:Ljava/lang/Class;
 
     if-ne p1, v1, :cond_0
@@ -679,7 +672,7 @@
     move-result-object v0
 
     .line 167
-    .local v0, result:Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .local v0, "result":Lcom/flurry/org/codehaus/jackson/type/JavaType;
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/type/JavaType;->_valueHandler:Ljava/lang/Object;
 
     invoke-virtual {v0}, Lcom/flurry/org/codehaus/jackson/type/JavaType;->getValueHandler()Ljava/lang/Object;
@@ -732,7 +725,7 @@
 
 .method public setValueHandler(Ljava/lang/Object;)V
     .locals 3
-    .parameter "h"
+    .param p1, "h"    # Ljava/lang/Object;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -827,7 +820,6 @@
 
 .method public widenBy(Ljava/lang/Class;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -839,7 +831,7 @@
 
     .prologue
     .line 211
-    .local p1, superclass:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p1, "superclass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/type/JavaType;->_class:Ljava/lang/Class;
 
     if-ne p1, v0, :cond_0
@@ -880,7 +872,7 @@
 
 .method public withContentValueHandler(Ljava/lang/Object;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .locals 1
-    .parameter "h"
+    .param p1, "h"    # Ljava/lang/Object;
 
     .prologue
     .line 118
@@ -899,7 +891,7 @@
 
 .method public withValueHandler(Ljava/lang/Object;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .locals 0
-    .parameter "h"
+    .param p1, "h"    # Ljava/lang/Object;
 
     .prologue
     .line 103

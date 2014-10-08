@@ -26,8 +26,6 @@
 # direct methods
 .method constructor <init>(Lcom/inmobi/androidsdk/ai/container/IMWebView;Ljava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 1
@@ -77,7 +75,7 @@
     invoke-virtual {v1, v0}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
 
     .line 2119
-    const/high16 v0, 0x1000
+    const/high16 v0, 0x10000000
 
     invoke-virtual {v1, v0}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 

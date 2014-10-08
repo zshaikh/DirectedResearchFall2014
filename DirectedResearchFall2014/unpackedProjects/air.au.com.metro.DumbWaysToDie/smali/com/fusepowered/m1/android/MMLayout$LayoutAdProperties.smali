@@ -21,8 +21,7 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m1/android/MMLayout;Landroid/content/Context;)V
     .locals 0
-    .parameter
-    .parameter "context"
+    .param p2, "context"    # Landroid/content/Context;
 
     .prologue
     .line 459
@@ -51,7 +50,7 @@
     move-result v0
 
     .line 467
-    .local v0, density:F
+    .local v0, "density":F
     iget-object v2, p0, Lcom/fusepowered/m1/android/MMLayout$LayoutAdProperties;->this$0:Lcom/fusepowered/m1/android/MMLayout;
 
     invoke-virtual {v2}, Lcom/fusepowered/m1/android/MMLayout;->getHeight()I
@@ -65,7 +64,7 @@
     float-to-int v1, v2
 
     .line 468
-    .local v1, height:I
+    .local v1, "height":I
     invoke-static {v1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v2
@@ -87,7 +86,7 @@
     move-result v0
 
     .line 475
-    .local v0, density:F
+    .local v0, "density":F
     iget-object v2, p0, Lcom/fusepowered/m1/android/MMLayout$LayoutAdProperties;->this$0:Lcom/fusepowered/m1/android/MMLayout;
 
     invoke-virtual {v2}, Lcom/fusepowered/m1/android/MMLayout;->getWidth()I
@@ -101,7 +100,7 @@
     float-to-int v1, v2
 
     .line 476
-    .local v1, width:I
+    .local v1, "width":I
     invoke-static {v1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v2

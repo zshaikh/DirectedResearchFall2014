@@ -27,7 +27,6 @@
 
 .method synthetic constructor <init>(Lcom/chartboost/sdk/Libraries/e$f;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 85
@@ -50,7 +49,6 @@
 
 .method public a(Ljava/lang/Object;)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 87

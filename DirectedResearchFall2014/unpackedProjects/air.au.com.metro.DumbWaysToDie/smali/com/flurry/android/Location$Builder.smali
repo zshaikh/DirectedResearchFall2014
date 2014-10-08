@@ -42,7 +42,6 @@
 
 .method private constructor <init>(B)V
     .locals 1
-    .parameter
 
     .prologue
     .line 87
@@ -269,7 +268,6 @@
 
 .method public setLat(F)Lcom/flurry/android/Location$Builder;
     .locals 3
-    .parameter
 
     .prologue
     const/4 v2, 0x0
@@ -305,7 +303,6 @@
 
 .method public setLon(F)Lcom/flurry/android/Location$Builder;
     .locals 3
-    .parameter
 
     .prologue
     const/4 v2, 0x1

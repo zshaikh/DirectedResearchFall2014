@@ -22,9 +22,9 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Lcom/playhaven/src/common/PHAPIRequest$Delegate;Ljava/lang/String;)V
     .locals 1
-    .parameter "context"
-    .parameter "delegate"
-    .parameter "placement"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "delegate"    # Lcom/playhaven/src/common/PHAPIRequest$Delegate;
+    .param p3, "placement"    # Ljava/lang/String;
 
     .prologue
     .line 26
@@ -43,8 +43,8 @@
 
 .method public constructor <init>(Landroid/content/Context;Ljava/lang/String;)V
     .locals 1
-    .parameter "context"
-    .parameter "placement"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "placement"    # Ljava/lang/String;
 
     .prologue
     .line 20
@@ -73,7 +73,7 @@
     invoke-direct {v0}, Lv2/com/playhaven/configuration/PHConfiguration;-><init>()V
 
     .line 36
-    .local v0, config:Lv2/com/playhaven/configuration/PHConfiguration;
+    .local v0, "config":Lv2/com/playhaven/configuration/PHConfiguration;
     iget-object v1, p0, Lcom/playhaven/src/publishersdk/metadata/PHPublisherMetadataRequest;->context:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -105,7 +105,7 @@
 
 .method public setDelegate(Lcom/playhaven/src/common/PHAPIRequest$Delegate;)V
     .locals 1
-    .parameter "delegate"
+    .param p1, "delegate"    # Lcom/playhaven/src/common/PHAPIRequest$Delegate;
 
     .prologue
     .line 43

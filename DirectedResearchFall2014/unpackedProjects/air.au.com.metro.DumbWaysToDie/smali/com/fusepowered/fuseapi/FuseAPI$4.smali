@@ -26,8 +26,6 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/fuseapi/FuseAPI$MopubCheckAdCallback;Lcom/fusepowered/util/FuseAdCallback;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 1710

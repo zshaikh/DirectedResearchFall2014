@@ -28,7 +28,7 @@
 
 .field private static final FOOTER_BLOCK:J = -0x1L
 
-.field static final MAGIC:[B = null
+.field static final MAGIC:[B
 
 .field private static final NULL_CODEC:Ljava/lang/String; = "null"
 
@@ -108,7 +108,7 @@
     nop
 
     :array_0
-    .array-data 0x1
+    .array-data 1
         0x4ft
         0x62t
         0x6at
@@ -118,8 +118,7 @@
 
 .method public constructor <init>(Lcom/flurry/org/apache/avro/file/SeekableInput;Lcom/flurry/org/apache/avro/io/DatumReader;)V
     .locals 18
-    .parameter "sin"
-    .parameter
+    .param p1, "sin"    # Lcom/flurry/org/apache/avro/file/SeekableInput;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -137,8 +136,8 @@
 
     .prologue
     .line 65
-    .local p0, this:Lcom/flurry/org/apache/avro/file/DataFileReader12;,"Lcom/flurry/org/apache/avro/file/DataFileReader12<TD;>;"
-    .local p2, reader:Lcom/flurry/org/apache/avro/io/DatumReader;,"Lcom/flurry/org/apache/avro/io/DatumReader<TD;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/file/DataFileReader12;, "Lcom/flurry/org/apache/avro/file/DataFileReader12<TD;>;"
+    .local p2, "reader":Lcom/flurry/org/apache/avro/io/DatumReader;, "Lcom/flurry/org/apache/avro/io/DatumReader<TD;>;"
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     .line 55
@@ -195,7 +194,7 @@
     new-array v13, v15, [B
 
     .line 69
-    .local v13, magic:[B
+    .local v13, "magic":[B
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/flurry/org/apache/avro/file/DataFileReader12;->in:Lcom/flurry/org/apache/avro/file/DataFileReader$SeekableInputStream;
@@ -235,7 +234,7 @@
     move-result-wide v11
 
     .line 74
-    .local v11, length:J
+    .local v11, "length":J
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/flurry/org/apache/avro/file/DataFileReader12;->in:Lcom/flurry/org/apache/avro/file/DataFileReader$SeekableInputStream;
@@ -302,7 +301,7 @@
     add-int v5, v15, v16
 
     .line 76
-    .local v5, footerSize:I
+    .local v5, "footerSize":I
     int-to-long v15, v5
 
     sub-long v15, v11, v15
@@ -325,7 +324,7 @@
     move-result-wide v9
 
     .line 78
-    .local v9, l:J
+    .local v9, "l":J
     const-wide/16 v15, 0x0
 
     cmp-long v15, v9, v15
@@ -336,7 +335,7 @@
     :cond_1
     const-wide/16 v6, 0x0
 
-    .local v6, i:J
+    .local v6, "i":J
     :goto_0
     cmp-long v15, v6, v9
 
@@ -360,7 +359,7 @@
     move-result-object v8
 
     .line 82
-    .local v8, key:Ljava/lang/String;
+    .local v8, "key":Ljava/lang/String;
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/flurry/org/apache/avro/file/DataFileReader12;->vin:Lcom/flurry/org/apache/avro/io/BinaryDecoder;
@@ -374,7 +373,7 @@
     move-result-object v14
 
     .line 83
-    .local v14, value:Ljava/nio/ByteBuffer;
+    .local v14, "value":Ljava/nio/ByteBuffer;
     invoke-virtual {v14}, Ljava/nio/ByteBuffer;->remaining()I
 
     move-result v15
@@ -382,7 +381,7 @@
     new-array v3, v15, [B
 
     .line 84
-    .local v3, bb:[B
+    .local v3, "bb":[B
     invoke-virtual {v14, v3}, Ljava/nio/ByteBuffer;->get([B)Ljava/nio/ByteBuffer;
 
     .line 85
@@ -402,9 +401,9 @@
     goto :goto_0
 
     .line 87
-    .end local v3           #bb:[B
-    .end local v8           #key:Ljava/lang/String;
-    .end local v14           #value:Ljava/nio/ByteBuffer;
+    .end local v3    # "bb":[B
+    .end local v8    # "key":Ljava/lang/String;
+    .end local v14    # "value":Ljava/nio/ByteBuffer;
     :cond_2
     move-object/from16 v0, p0
 
@@ -423,7 +422,7 @@
     if-nez v15, :cond_1
 
     .line 90
-    .end local v6           #i:J
+    .end local v6    # "i":J
     :cond_3
     const-string v15, "sync"
 
@@ -470,7 +469,7 @@
     move-result-object v4
 
     .line 93
-    .local v4, codec:Ljava/lang/String;
+    .local v4, "codec":Ljava/lang/String;
     if-eqz v4, :cond_4
 
     const-string v15, "null"
@@ -579,7 +578,7 @@
 
     .prologue
     .line 173
-    .local p0, this:Lcom/flurry/org/apache/avro/file/DataFileReader12;,"Lcom/flurry/org/apache/avro/file/DataFileReader12<TD;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/file/DataFileReader12;, "Lcom/flurry/org/apache/avro/file/DataFileReader12<TD;>;"
     iget-object v0, p0, Lcom/flurry/org/apache/avro/file/DataFileReader12;->vin:Lcom/flurry/org/apache/avro/io/BinaryDecoder;
 
     iget-object v1, p0, Lcom/flurry/org/apache/avro/file/DataFileReader12;->syncBuffer:[B
@@ -623,7 +622,7 @@
 
     .prologue
     .line 224
-    .local p0, this:Lcom/flurry/org/apache/avro/file/DataFileReader12;,"Lcom/flurry/org/apache/avro/file/DataFileReader12<TD;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/file/DataFileReader12;, "Lcom/flurry/org/apache/avro/file/DataFileReader12<TD;>;"
     monitor-enter p0
 
     :try_start_0
@@ -649,11 +648,11 @@
 
 .method public declared-synchronized getMeta(Ljava/lang/String;)[B
     .locals 1
-    .parameter "key"
+    .param p1, "key"    # Ljava/lang/String;
 
     .prologue
     .line 106
-    .local p0, this:Lcom/flurry/org/apache/avro/file/DataFileReader12;,"Lcom/flurry/org/apache/avro/file/DataFileReader12<TD;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/file/DataFileReader12;, "Lcom/flurry/org/apache/avro/file/DataFileReader12<TD;>;"
     monitor-enter p0
 
     :try_start_0
@@ -681,11 +680,11 @@
 
 .method public declared-synchronized getMetaLong(Ljava/lang/String;)J
     .locals 2
-    .parameter "key"
+    .param p1, "key"    # Ljava/lang/String;
 
     .prologue
     .line 122
-    .local p0, this:Lcom/flurry/org/apache/avro/file/DataFileReader12;,"Lcom/flurry/org/apache/avro/file/DataFileReader12<TD;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/file/DataFileReader12;, "Lcom/flurry/org/apache/avro/file/DataFileReader12<TD;>;"
     monitor-enter p0
 
     :try_start_0
@@ -713,11 +712,11 @@
 
 .method public declared-synchronized getMetaString(Ljava/lang/String;)Ljava/lang/String;
     .locals 4
-    .parameter "key"
+    .param p1, "key"    # Ljava/lang/String;
 
     .prologue
     .line 110
-    .local p0, this:Lcom/flurry/org/apache/avro/file/DataFileReader12;,"Lcom/flurry/org/apache/avro/file/DataFileReader12<TD;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/file/DataFileReader12;, "Lcom/flurry/org/apache/avro/file/DataFileReader12<TD;>;"
     monitor-enter p0
 
     :try_start_0
@@ -728,7 +727,7 @@
     move-result-object v1
 
     .line 111
-    .local v1, value:[B
+    .local v1, "value":[B
     if-nez v1, :cond_0
 
     .line 112
@@ -748,8 +747,8 @@
 
     invoke-direct {v2, v1, v3}, Ljava/lang/String;-><init>([BLjava/lang/String;)V
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Ljava/io/UnsupportedEncodingException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     goto :goto_0
 
@@ -760,7 +759,7 @@
     move-object v0, v2
 
     .line 117
-    .local v0, e:Ljava/io/UnsupportedEncodingException;
+    .local v0, "e":Ljava/io/UnsupportedEncodingException;
     :try_start_2
     new-instance v2, Ljava/lang/RuntimeException;
 
@@ -771,8 +770,8 @@
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
     .line 110
-    .end local v0           #e:Ljava/io/UnsupportedEncodingException;
-    .end local v1           #value:[B
+    .end local v0    # "e":Ljava/io/UnsupportedEncodingException;
+    .end local v1    # "value":[B
     :catchall_0
     move-exception v2
 
@@ -786,7 +785,7 @@
 
     .prologue
     .line 127
-    .local p0, this:Lcom/flurry/org/apache/avro/file/DataFileReader12;,"Lcom/flurry/org/apache/avro/file/DataFileReader12<TD;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/file/DataFileReader12;, "Lcom/flurry/org/apache/avro/file/DataFileReader12<TD;>;"
     iget-object v0, p0, Lcom/flurry/org/apache/avro/file/DataFileReader12;->schema:Lcom/flurry/org/apache/avro/Schema;
 
     return-object v0
@@ -796,7 +795,7 @@
     .locals 5
 
     .prologue
-    .local p0, this:Lcom/flurry/org/apache/avro/file/DataFileReader12;,"Lcom/flurry/org/apache/avro/file/DataFileReader12<TD;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/file/DataFileReader12;, "Lcom/flurry/org/apache/avro/file/DataFileReader12<TD;>;"
     const/4 v4, 0x1
 
     .line 133
@@ -854,7 +853,7 @@
 
     .prologue
     .line 131
-    .local p0, this:Lcom/flurry/org/apache/avro/file/DataFileReader12;,"Lcom/flurry/org/apache/avro/file/DataFileReader12<TD;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/file/DataFileReader12;, "Lcom/flurry/org/apache/avro/file/DataFileReader12<TD;>;"
     return-object p0
 .end method
 
@@ -867,7 +866,7 @@
     .end annotation
 
     .prologue
-    .local p0, this:Lcom/flurry/org/apache/avro/file/DataFileReader12;,"Lcom/flurry/org/apache/avro/file/DataFileReader12<TD;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/file/DataFileReader12;, "Lcom/flurry/org/apache/avro/file/DataFileReader12<TD;>;"
     const/4 v3, 0x0
 
     .line 139
@@ -879,13 +878,13 @@
     iget-object v1, p0, Lcom/flurry/org/apache/avro/file/DataFileReader12;->peek:Ljava/lang/Object;
 
     .line 141
-    .local v1, result:Ljava/lang/Object;,"TD;"
+    .local v1, "result":Ljava/lang/Object;, "TD;"
     iput-object v3, p0, Lcom/flurry/org/apache/avro/file/DataFileReader12;->peek:Ljava/lang/Object;
 
     move-object v2, v1
 
     .line 145
-    .end local v1           #result:Ljava/lang/Object;,"TD;"
+    .end local v1    # "result":Ljava/lang/Object;, "TD;"
     :goto_0
     return-object v2
 
@@ -906,7 +905,7 @@
     move-exception v0
 
     .line 147
-    .local v0, e:Ljava/io/IOException;
+    .local v0, "e":Ljava/io/IOException;
     new-instance v2, Ljava/lang/RuntimeException;
 
     invoke-direct {v2, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
@@ -916,7 +915,6 @@
 
 .method public declared-synchronized next(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 4
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TD;)TD;"
@@ -931,8 +929,8 @@
 
     .prologue
     .line 155
-    .local p0, this:Lcom/flurry/org/apache/avro/file/DataFileReader12;,"Lcom/flurry/org/apache/avro/file/DataFileReader12<TD;>;"
-    .local p1, reuse:Ljava/lang/Object;,"TD;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/file/DataFileReader12;, "Lcom/flurry/org/apache/avro/file/DataFileReader12<TD;>;"
+    .local p1, "reuse":Ljava/lang/Object;, "TD;"
     monitor-enter p0
 
     :cond_0
@@ -1053,7 +1051,7 @@
 
 .method public pastSync(J)Z
     .locals 4
-    .parameter "position"
+    .param p1, "position"    # J
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -1062,7 +1060,7 @@
 
     .prologue
     .line 214
-    .local p0, this:Lcom/flurry/org/apache/avro/file/DataFileReader12;,"Lcom/flurry/org/apache/avro/file/DataFileReader12<TD;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/file/DataFileReader12;, "Lcom/flurry/org/apache/avro/file/DataFileReader12<TD;>;"
     iget-wide v0, p0, Lcom/flurry/org/apache/avro/file/DataFileReader12;->blockStart:J
 
     const-wide/16 v2, 0x10
@@ -1102,7 +1100,7 @@
 
     .prologue
     .line 150
-    .local p0, this:Lcom/flurry/org/apache/avro/file/DataFileReader12;,"Lcom/flurry/org/apache/avro/file/DataFileReader12<TD;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/file/DataFileReader12;, "Lcom/flurry/org/apache/avro/file/DataFileReader12<TD;>;"
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -1112,7 +1110,7 @@
 
 .method public declared-synchronized seek(J)V
     .locals 3
-    .parameter "position"
+    .param p1, "position"    # J
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -1121,7 +1119,7 @@
 
     .prologue
     .line 181
-    .local p0, this:Lcom/flurry/org/apache/avro/file/DataFileReader12;,"Lcom/flurry/org/apache/avro/file/DataFileReader12<TD;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/file/DataFileReader12;, "Lcom/flurry/org/apache/avro/file/DataFileReader12<TD;>;"
     monitor-enter p0
 
     :try_start_0
@@ -1170,7 +1168,7 @@
 
 .method public declared-synchronized sync(J)V
     .locals 8
-    .parameter "position"
+    .param p1, "position"    # J
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -1178,7 +1176,7 @@
     .end annotation
 
     .prologue
-    .local p0, this:Lcom/flurry/org/apache/avro/file/DataFileReader12;,"Lcom/flurry/org/apache/avro/file/DataFileReader12<TD;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/file/DataFileReader12;, "Lcom/flurry/org/apache/avro/file/DataFileReader12<TD;>;"
     const-wide/16 v6, 0x10
 
     .line 190
@@ -1237,7 +1235,7 @@
     .line 196
     const/4 v0, 0x0
 
-    .local v0, i:I
+    .local v0, "i":I
     :goto_1
     iget-object v2, p0, Lcom/flurry/org/apache/avro/file/DataFileReader12;->in:Lcom/flurry/org/apache/avro/file/DataFileReader$SeekableInputStream;
 
@@ -1259,7 +1257,7 @@
     const/4 v1, 0x0
 
     .line 198
-    .local v1, j:I
+    .local v1, "j":I
     :goto_2
     iget-object v2, p0, Lcom/flurry/org/apache/avro/file/DataFileReader12;->sync:[B
 
@@ -1310,8 +1308,8 @@
     goto :goto_0
 
     .line 190
-    .end local v0           #i:I
-    .end local v1           #j:I
+    .end local v0    # "i":I
+    .end local v1    # "j":I
     :catchall_0
     move-exception v2
 
@@ -1320,8 +1318,8 @@
     throw v2
 
     .line 198
-    .restart local v0       #i:I
-    .restart local v1       #j:I
+    .restart local v0    # "i":I
+    .restart local v1    # "j":I
     :cond_2
     add-int/lit8 v1, v1, 0x1
 
@@ -1354,7 +1352,7 @@
     goto :goto_1
 
     .line 208
-    .end local v1           #j:I
+    .end local v1    # "j":I
     :cond_4
     iget-object v2, p0, Lcom/flurry/org/apache/avro/file/DataFileReader12;->in:Lcom/flurry/org/apache/avro/file/DataFileReader$SeekableInputStream;
 
@@ -1379,7 +1377,7 @@
 
     .prologue
     .line 219
-    .local p0, this:Lcom/flurry/org/apache/avro/file/DataFileReader12;,"Lcom/flurry/org/apache/avro/file/DataFileReader12<TD;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/file/DataFileReader12;, "Lcom/flurry/org/apache/avro/file/DataFileReader12<TD;>;"
     iget-object v0, p0, Lcom/flurry/org/apache/avro/file/DataFileReader12;->in:Lcom/flurry/org/apache/avro/file/DataFileReader$SeekableInputStream;
 
     invoke-virtual {v0}, Lcom/flurry/org/apache/avro/file/DataFileReader$SeekableInputStream;->tell()J

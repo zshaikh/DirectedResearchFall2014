@@ -365,9 +365,7 @@
 
 .method private constructor <init>(Ljava/lang/String;IZ)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter "defaultState"
+    .param p3, "defaultState"    # Z
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(Z)V"
@@ -387,7 +385,7 @@
 
 .method public static valueOf(Ljava/lang/String;)Lcom/flurry/org/codehaus/jackson/map/DeserializationConfig$Feature;
     .locals 1
-    .parameter "name"
+    .param p0, "name"    # Ljava/lang/String;
 
     .prologue
     .line 48
@@ -397,7 +395,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "name":Ljava/lang/String;
     check-cast p0, Lcom/flurry/org/codehaus/jackson/map/DeserializationConfig$Feature;
 
     return-object p0

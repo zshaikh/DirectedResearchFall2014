@@ -57,7 +57,7 @@
 
     const/4 v1, 0x0
 
-    const/high16 v2, 0x3f40
+    const/high16 v2, 0x3f400000
 
     const/4 v3, 0x1
 
@@ -71,7 +71,6 @@
 
 .method private a(I)V
     .locals 3
-    .parameter
 
     .prologue
     .line 141
@@ -220,7 +219,6 @@
 # virtual methods
 .method protected a(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TK;)TV;"
@@ -236,7 +234,6 @@
 
 .method public final b(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 3
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TK;)TV;"

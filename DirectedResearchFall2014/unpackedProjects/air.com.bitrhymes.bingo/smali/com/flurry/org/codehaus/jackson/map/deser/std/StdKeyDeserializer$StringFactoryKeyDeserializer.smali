@@ -21,7 +21,7 @@
 # direct methods
 .method public constructor <init>(Ljava/lang/reflect/Method;)V
     .locals 1
-    .parameter "fm"
+    .param p1, "fm"    # Ljava/lang/reflect/Method;
 
     .prologue
     .line 283
@@ -42,8 +42,8 @@
 # virtual methods
 .method public _parse(Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;)Ljava/lang/Object;
     .locals 4
-    .parameter "key"
-    .parameter "ctxt"
+    .param p1, "key"    # Ljava/lang/String;
+    .param p2, "ctxt"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/Exception;

@@ -31,8 +31,8 @@
 # virtual methods
 .method public accountLoginComplete(ILjava/lang/String;)V
     .locals 0
-    .parameter "accountType"
-    .parameter "accountId"
+    .param p1, "accountType"    # I
+    .param p2, "accountId"    # Ljava/lang/String;
 
     .prologue
     .line 30
@@ -41,8 +41,8 @@
 
 .method public adAvailabilityResponse(II)V
     .locals 0
-    .parameter "available"
-    .parameter "error"
+    .param p1, "available"    # I
+    .param p2, "error"    # I
 
     .prologue
     .line 99
@@ -74,7 +74,7 @@
 
 .method public chatListError(Lcom/fusepowered/util/FuseChatError;)V
     .locals 0
-    .parameter "error"
+    .param p1, "error"    # Lcom/fusepowered/util/FuseChatError;
 
     .prologue
     .line 82
@@ -83,8 +83,7 @@
 
 .method public chatListReceived(Ljava/util/ArrayList;Ljava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter "fuse_id"
+    .param p2, "fuse_id"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -99,7 +98,7 @@
 
     .prologue
     .line 78
-    .local p1, chatMessages:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/fusepowered/util/ChatMessage;>;"
+    .local p1, "chatMessages":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/fusepowered/util/ChatMessage;>;"
     return-void
 .end method
 
@@ -120,8 +119,8 @@
 
 .method public friendAccepted(Ljava/lang/String;Lcom/fusepowered/util/FuseAcceptFriendError;)V
     .locals 0
-    .parameter "fuse_id"
-    .parameter "error"
+    .param p1, "fuse_id"    # Ljava/lang/String;
+    .param p2, "error"    # Lcom/fusepowered/util/FuseAcceptFriendError;
 
     .prologue
     .line 58
@@ -130,8 +129,8 @@
 
 .method public friendAdded(Ljava/lang/String;Lcom/fusepowered/util/FuseAddFriendError;)V
     .locals 0
-    .parameter "fuse_id"
-    .parameter "error"
+    .param p1, "fuse_id"    # Ljava/lang/String;
+    .param p2, "error"    # Lcom/fusepowered/util/FuseAddFriendError;
 
     .prologue
     .line 50
@@ -140,8 +139,8 @@
 
 .method public friendRejected(Ljava/lang/String;Lcom/fusepowered/util/FuseRejectFriendError;)V
     .locals 0
-    .parameter "fuse_id"
-    .parameter "error"
+    .param p1, "fuse_id"    # Ljava/lang/String;
+    .param p2, "error"    # Lcom/fusepowered/util/FuseRejectFriendError;
 
     .prologue
     .line 62
@@ -150,8 +149,8 @@
 
 .method public friendRemoved(Ljava/lang/String;Lcom/fusepowered/util/FuseRemoveFriendError;)V
     .locals 0
-    .parameter "fuse_id"
-    .parameter "error"
+    .param p1, "fuse_id"    # Ljava/lang/String;
+    .param p2, "error"    # Lcom/fusepowered/util/FuseRemoveFriendError;
 
     .prologue
     .line 54
@@ -160,7 +159,7 @@
 
 .method public friendsListError(Lcom/fusepowered/util/FuseFriendsListError;)V
     .locals 0
-    .parameter "error"
+    .param p1, "error"    # Lcom/fusepowered/util/FuseFriendsListError;
 
     .prologue
     .line 74
@@ -169,7 +168,6 @@
 
 .method public friendsListUpdated(Ljava/util/ArrayList;)V
     .locals 0
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -182,14 +180,14 @@
 
     .prologue
     .line 70
-    .local p1, friendsList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/fusepowered/util/Player;>;"
+    .local p1, "friendsList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/fusepowered/util/Player;>;"
     return-void
 .end method
 
 .method public friendsMigrated(Ljava/lang/String;Lcom/fusepowered/util/FuseMigrateFriendsError;)V
     .locals 0
-    .parameter "fuseId"
-    .parameter "migrateFriendsError"
+    .param p1, "fuseId"    # Ljava/lang/String;
+    .param p2, "migrateFriendsError"    # Lcom/fusepowered/util/FuseMigrateFriendsError;
 
     .prologue
     .line 66
@@ -221,7 +219,7 @@
 
 .method public incentiveActionCompletedStatus(Ljava/lang/String;)V
     .locals 0
-    .parameter "status"
+    .param p1, "status"    # Ljava/lang/String;
 
     .prologue
     .line 38
@@ -230,9 +228,9 @@
 
 .method public mailAcknowledged(ILjava/lang/String;I)V
     .locals 0
-    .parameter "messageId"
-    .parameter "fuse_id"
-    .parameter "requestID"
+    .param p1, "messageId"    # I
+    .param p2, "fuse_id"    # Ljava/lang/String;
+    .param p3, "requestID"    # I
 
     .prologue
     .line 94
@@ -241,8 +239,8 @@
 
 .method public mailError(Lcom/fusepowered/util/FuseMailError;I)V
     .locals 0
-    .parameter "error"
-    .parameter "requestID"
+    .param p1, "error"    # Lcom/fusepowered/util/FuseMailError;
+    .param p2, "requestID"    # I
 
     .prologue
     .line 103
@@ -251,7 +249,7 @@
 
 .method public mailListError(Lcom/fusepowered/util/FuseMailError;)V
     .locals 0
-    .parameter "error"
+    .param p1, "error"    # Lcom/fusepowered/util/FuseMailError;
 
     .prologue
     .line 90
@@ -260,8 +258,7 @@
 
 .method public mailListReceived(Ljava/util/ArrayList;Ljava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter "fuse_id"
+    .param p2, "fuse_id"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -276,13 +273,13 @@
 
     .prologue
     .line 86
-    .local p1, mailMessages:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/fusepowered/util/Mail;>;"
+    .local p1, "mailMessages":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/fusepowered/util/Mail;>;"
     return-void
 .end method
 
 .method public notificationAction(Ljava/lang/String;)V
     .locals 0
-    .parameter "action"
+    .param p1, "action"    # Ljava/lang/String;
 
     .prologue
     .line 34
@@ -291,10 +288,10 @@
 
 .method public rewardRedeemed(IILjava/lang/String;Ljava/lang/String;)V
     .locals 0
-    .parameter "incentiveId"
-    .parameter "amount"
-    .parameter "rewardItemId"
-    .parameter "rewardItemName"
+    .param p1, "incentiveId"    # I
+    .param p2, "amount"    # I
+    .param p3, "rewardItemId"    # Ljava/lang/String;
+    .param p4, "rewardItemName"    # Ljava/lang/String;
 
     .prologue
     .line 42
@@ -303,7 +300,7 @@
 
 .method public sessionLoginError(Lcom/fusepowered/util/FuseLoginError;)V
     .locals 0
-    .parameter "error"
+    .param p1, "error"    # Lcom/fusepowered/util/FuseLoginError;
 
     .prologue
     .line 22
@@ -320,7 +317,7 @@
 
 .method public setFuseGameDataError(Lcom/fusepowered/util/FuseGameDataError;)V
     .locals 0
-    .parameter "error"
+    .param p1, "error"    # Lcom/fusepowered/util/FuseGameDataError;
 
     .prologue
     .line 151
@@ -335,8 +332,8 @@
 
 .method public setFuseGameDataError(Lcom/fusepowered/util/FuseGameDataError;I)V
     .locals 0
-    .parameter "error"
-    .parameter "requestId"
+    .param p1, "error"    # Lcom/fusepowered/util/FuseGameDataError;
+    .param p2, "requestId"    # I
 
     .prologue
     .line 145
@@ -354,8 +351,8 @@
 
 .method public setGameData(Ljava/lang/String;Lcom/fusepowered/util/GameKeyValuePairs;)V
     .locals 6
-    .parameter "fuseId"
-    .parameter "gameKeyValuePairs"
+    .param p1, "fuseId"    # Ljava/lang/String;
+    .param p2, "gameKeyValuePairs"    # Lcom/fusepowered/util/GameKeyValuePairs;
 
     .prologue
     .line 124
@@ -374,7 +371,7 @@
     move-result-object v3
 
     .line 127
-    .local v3, requestIdEntries:Ljava/util/Set;,"Ljava/util/Set<Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;>;"
+    .local v3, "requestIdEntries":Ljava/util/Set;, "Ljava/util/Set<Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;>;"
     invoke-interface {v3}, Ljava/util/Set;->size()I
 
     move-result v5
@@ -386,7 +383,7 @@
 
     move-result-object v1
 
-    .local v1, i$:Ljava/util/Iterator;
+    .local v1, "i$":Ljava/util/Iterator;
     :goto_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
@@ -401,7 +398,7 @@
     check-cast v0, Ljava/util/Map$Entry;
 
     .line 131
-    .local v0, entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v0, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v2
@@ -409,7 +406,7 @@
     check-cast v2, Ljava/lang/String;
 
     .line 132
-    .local v2, requestId:Ljava/lang/String;
+    .local v2, "requestId":Ljava/lang/String;
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v4
@@ -417,7 +414,7 @@
     check-cast v4, Ljava/lang/String;
 
     .line 133
-    .local v4, rowKey:Ljava/lang/String;
+    .local v4, "rowKey":Ljava/lang/String;
     invoke-virtual {p2, v2}, Lcom/fusepowered/util/GameKeyValuePairs;->setReqId(Ljava/lang/String;)V
 
     .line 134
@@ -433,10 +430,10 @@
     goto :goto_0
 
     .line 140
-    .end local v0           #entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
-    .end local v1           #i$:Ljava/util/Iterator;
-    .end local v2           #requestId:Ljava/lang/String;
-    .end local v4           #rowKey:Ljava/lang/String;
+    .end local v0    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
+    .end local v1    # "i$":Ljava/util/Iterator;
+    .end local v2    # "requestId":Ljava/lang/String;
+    .end local v4    # "rowKey":Ljava/lang/String;
     :cond_0
     invoke-virtual {p0, p1, p2}, Lcom/fusepowered/util/FuseGameDataCallback;->gameDataReceived(Ljava/lang/String;Lcom/fusepowered/util/GameKeyValuePairs;)V
 
@@ -447,7 +444,7 @@
 
 .method public timeUpdated(I)V
     .locals 0
-    .parameter "timestamp"
+    .param p1, "timestamp"    # I
 
     .prologue
     .line 26

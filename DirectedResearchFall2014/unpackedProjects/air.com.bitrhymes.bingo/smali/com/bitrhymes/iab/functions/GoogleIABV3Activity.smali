@@ -246,9 +246,9 @@
 # virtual methods
 .method protected onActivityResult(IILandroid/content/Intent;)V
     .locals 4
-    .parameter "requestCode"
-    .parameter "resultCode"
-    .parameter "data"
+    .param p1, "requestCode"    # I
+    .param p2, "resultCode"    # I
+    .param p3, "data"    # Landroid/content/Intent;
 
     .prologue
     const-string v3, "InApp"
@@ -323,7 +323,7 @@
 
 .method protected onCreate(Landroid/os/Bundle;)V
     .locals 2
-    .parameter "savedInstanceState"
+    .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
     .line 36
@@ -408,8 +408,8 @@
 
 .method public onKeyDown(ILandroid/view/KeyEvent;)Z
     .locals 1
-    .parameter "keyCode"
-    .parameter "event"
+    .param p1, "keyCode"    # I
+    .param p2, "event"    # Landroid/view/KeyEvent;
 
     .prologue
     .line 357
@@ -570,7 +570,7 @@
     move-object v0, v1
 
     .line 414
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v1, "InApp"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -599,7 +599,7 @@
     goto :goto_0
 
     .line 406
-    .end local v0           #e:Ljava/lang/Exception;
+    .end local v0    # "e":Ljava/lang/Exception;
     :cond_2
     :try_start_1
     iget-object v1, p0, Lcom/bitrhymes/iab/functions/GoogleIABV3Activity;->method:Ljava/lang/String;

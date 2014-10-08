@@ -37,20 +37,20 @@
 # direct methods
 .method public constructor <init>(Lv2/com/playhaven/interstitial/jsbridge/ManipulatableContentDisplayer;Landroid/content/Context;Lv2/com/playhaven/model/PHContent;Lv2/com/playhaven/views/interstitial/PHContentView$Listener;Lv2/com/playhaven/interstitial/jsbridge/PHJSBridge;Landroid/graphics/drawable/BitmapDrawable;Landroid/graphics/drawable/BitmapDrawable;)V
     .locals 1
-    .parameter "contentDisplayer"
-    .parameter "context"
-    .parameter "content"
-    .parameter "listener"
-    .parameter "bridge"
-    .parameter "custom_active"
-    .parameter "custom_inactive"
+    .param p1, "contentDisplayer"    # Lv2/com/playhaven/interstitial/jsbridge/ManipulatableContentDisplayer;
+    .param p2, "context"    # Landroid/content/Context;
+    .param p3, "content"    # Lv2/com/playhaven/model/PHContent;
+    .param p4, "listener"    # Lv2/com/playhaven/views/interstitial/PHContentView$Listener;
+    .param p5, "bridge"    # Lv2/com/playhaven/interstitial/jsbridge/PHJSBridge;
+    .param p6, "custom_active"    # Landroid/graphics/drawable/BitmapDrawable;
+    .param p7, "custom_inactive"    # Landroid/graphics/drawable/BitmapDrawable;
 
     .prologue
     .line 93
     invoke-direct {p0, p2}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;)V
 
     .line 56
-    const/high16 v0, 0x4000
+    const/high16 v0, 0x40000000
 
     iput v0, p0, Lv2/com/playhaven/views/interstitial/PHContentView;->CLOSE_BUTTON_MARGIN:F
 
@@ -72,8 +72,8 @@
 
 .method private setupCloseButton(Landroid/graphics/drawable/BitmapDrawable;Landroid/graphics/drawable/BitmapDrawable;)V
     .locals 6
-    .parameter "custom_active"
-    .parameter "custom_inactive"
+    .param p1, "custom_active"    # Landroid/graphics/drawable/BitmapDrawable;
+    .param p2, "custom_inactive"    # Landroid/graphics/drawable/BitmapDrawable;
 
     .prologue
     const/4 v5, 0x0
@@ -85,14 +85,14 @@
 
     move-result-object v2
 
-    const/high16 v3, 0x4000
+    const/high16 v3, 0x40000000
 
     invoke-static {v2, v3}, Lv2/com/playhaven/utils/PHConversionUtils;->dipToPixels(Landroid/content/Context;F)F
 
     move-result v1
 
     .line 138
-    .local v1, marginInPixels:F
+    .local v1, "marginInPixels":F
     if-eqz p1, :cond_0
 
     if-nez p2, :cond_1
@@ -116,7 +116,7 @@
     invoke-direct {v0, v4, v4}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
     .line 149
-    .local v0, closeLayoutParams:Landroid/widget/RelativeLayout$LayoutParams;
+    .local v0, "closeLayoutParams":Landroid/widget/RelativeLayout$LayoutParams;
     const/16 v2, 0xb
 
     invoke-virtual {v0, v2}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
@@ -154,7 +154,7 @@
     return-void
 
     .line 141
-    .end local v0           #closeLayoutParams:Landroid/widget/RelativeLayout$LayoutParams;
+    .end local v0    # "closeLayoutParams":Landroid/widget/RelativeLayout$LayoutParams;
     :cond_1
     new-instance v2, Lv2/com/playhaven/views/interstitial/PHCloseButton;
 
@@ -171,9 +171,9 @@
 
 .method private setupWebview(Landroid/content/Context;Lv2/com/playhaven/interstitial/jsbridge/PHJSBridge;Lv2/com/playhaven/interstitial/jsbridge/ManipulatableContentDisplayer;)V
     .locals 8
-    .parameter "context"
-    .parameter "bridge"
-    .parameter "contentDisplayer"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "bridge"    # Lv2/com/playhaven/interstitial/jsbridge/PHJSBridge;
+    .param p3, "contentDisplayer"    # Lv2/com/playhaven/interstitial/jsbridge/ManipulatableContentDisplayer;
 
     .prologue
     const/4 v7, -0x1
@@ -186,13 +186,13 @@
     invoke-direct {v3, p3, p2, v0}, Lv2/com/playhaven/interstitial/webview/PHWebViewClient;-><init>(Lv2/com/playhaven/interstitial/jsbridge/ManipulatableContentDisplayer;Lv2/com/playhaven/interstitial/jsbridge/PHJSBridge;Lv2/com/playhaven/model/PHContent;)V
 
     .line 172
-    .local v3, client:Lv2/com/playhaven/interstitial/webview/PHWebViewClient;
+    .local v3, "client":Lv2/com/playhaven/interstitial/webview/PHWebViewClient;
     new-instance v4, Lv2/com/playhaven/interstitial/webview/PHWebViewChrome;
 
     invoke-direct {v4}, Lv2/com/playhaven/interstitial/webview/PHWebViewChrome;-><init>()V
 
     .line 174
-    .local v4, chrome:Lv2/com/playhaven/interstitial/webview/PHWebViewChrome;
+    .local v4, "chrome":Lv2/com/playhaven/interstitial/webview/PHWebViewChrome;
     new-instance v0, Lv2/com/playhaven/views/interstitial/PHWebView;
 
     invoke-virtual {p0}, Lv2/com/playhaven/views/interstitial/PHContentView;->getContext()Landroid/content/Context;
@@ -213,7 +213,7 @@
     invoke-direct {v6, v7, v7}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
     .line 180
-    .local v6, params:Landroid/widget/RelativeLayout$LayoutParams;
+    .local v6, "params":Landroid/widget/RelativeLayout$LayoutParams;
     iget-object v0, p0, Lv2/com/playhaven/views/interstitial/PHContentView;->webview:Lv2/com/playhaven/views/interstitial/PHWebView;
 
     invoke-virtual {v0, v6}, Lv2/com/playhaven/views/interstitial/PHWebView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
@@ -372,7 +372,7 @@
 
 .method public onClose(Lv2/com/playhaven/views/interstitial/PHCloseButton;)V
     .locals 1
-    .parameter "button"
+    .param p1, "button"    # Lv2/com/playhaven/views/interstitial/PHCloseButton;
 
     .prologue
     .line 203

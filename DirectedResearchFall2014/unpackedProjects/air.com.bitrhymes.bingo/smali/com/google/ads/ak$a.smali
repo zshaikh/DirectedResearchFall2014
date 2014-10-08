@@ -28,7 +28,6 @@
 
 .method public constructor <init>(Ljava/lang/Throwable;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 56

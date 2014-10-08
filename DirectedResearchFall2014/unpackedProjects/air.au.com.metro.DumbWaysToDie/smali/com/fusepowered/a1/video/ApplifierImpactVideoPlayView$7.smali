@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1
@@ -40,7 +39,7 @@
 # virtual methods
 .method public onClick(Landroid/view/View;)V
     .locals 3
-    .parameter "v"
+    .param p1, "v"    # Landroid/view/View;
 
     .prologue
     const/4 v2, 0x0
@@ -48,7 +47,7 @@
     .line 357
     iget-object v0, p0, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$7;->this$0:Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;
 
-    #getter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->_videoPlayheadPrepared:Z
+    # getter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->_videoPlayheadPrepared:Z
     invoke-static {v0}, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->access$14(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;)Z
 
     move-result v0
@@ -57,7 +56,7 @@
 
     iget-object v0, p0, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$7;->this$0:Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;
 
-    #getter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->_videoPlaybackStartedSent:Z
+    # getter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->_videoPlaybackStartedSent:Z
     invoke-static {v0}, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->access$16(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;)Z
 
     move-result v0
@@ -67,7 +66,7 @@
     .line 358
     iget-object v0, p0, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$7;->this$0:Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;
 
-    #getter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->_muted:Z
+    # getter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->_muted:Z
     invoke-static {v0}, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->access$23(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;)Z
 
     move-result v0
@@ -79,13 +78,12 @@
 
     const/4 v1, 0x0
 
-    #setter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->_muted:Z
     invoke-static {v0, v1}, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->access$29(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;Z)V
 
     .line 360
     iget-object v0, p0, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$7;->this$0:Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;
 
-    #getter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->_muteButton:Lcom/fusepowered/a1/view/ApplifierImpactMuteVideoButton;
+    # getter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->_muteButton:Lcom/fusepowered/a1/view/ApplifierImpactMuteVideoButton;
     invoke-static {v0}, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->access$30(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;)Lcom/fusepowered/a1/view/ApplifierImpactMuteVideoButton;
 
     move-result-object v0
@@ -97,21 +95,21 @@
     .line 361
     iget-object v0, p0, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$7;->this$0:Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;
 
-    #getter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->_mediaPlayer:Landroid/media/MediaPlayer;
+    # getter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->_mediaPlayer:Landroid/media/MediaPlayer;
     invoke-static {v0}, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->access$25(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;)Landroid/media/MediaPlayer;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$7;->this$0:Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;
 
-    #getter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->_volumeBeforeMute:F
+    # getter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->_volumeBeforeMute:F
     invoke-static {v1}, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->access$31(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;)F
 
     move-result v1
 
     iget-object v2, p0, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$7;->this$0:Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;
 
-    #getter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->_volumeBeforeMute:F
+    # getter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->_volumeBeforeMute:F
     invoke-static {v2}, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->access$31(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;)F
 
     move-result v2
@@ -129,13 +127,12 @@
 
     const/4 v1, 0x1
 
-    #setter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->_muted:Z
     invoke-static {v0, v1}, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->access$29(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;Z)V
 
     .line 365
     iget-object v0, p0, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$7;->this$0:Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;
 
-    #getter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->_muteButton:Lcom/fusepowered/a1/view/ApplifierImpactMuteVideoButton;
+    # getter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->_muteButton:Lcom/fusepowered/a1/view/ApplifierImpactMuteVideoButton;
     invoke-static {v0}, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->access$30(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;)Lcom/fusepowered/a1/view/ApplifierImpactMuteVideoButton;
 
     move-result-object v0
@@ -147,13 +144,13 @@
     .line 366
     iget-object v0, p0, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$7;->this$0:Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;
 
-    #calls: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->storeVolume()V
+    # invokes: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->storeVolume()V
     invoke-static {v0}, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->access$24(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;)V
 
     .line 367
     iget-object v0, p0, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$7;->this$0:Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;
 
-    #getter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->_mediaPlayer:Landroid/media/MediaPlayer;
+    # getter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->_mediaPlayer:Landroid/media/MediaPlayer;
     invoke-static {v0}, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->access$25(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;)Landroid/media/MediaPlayer;
 
     move-result-object v0

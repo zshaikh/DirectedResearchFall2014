@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/facebook/widget/PlacePickerFragment;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1
@@ -54,7 +53,7 @@
     const/4 v1, 0x0
 
     .line 451
-    .local v1, error:Lcom/facebook/FacebookException;
+    .local v1, "error":Lcom/facebook/FacebookException;
     :try_start_0
     iget-object v5, p0, Lcom/facebook/widget/PlacePickerFragment$3;->this$0:Lcom/facebook/widget/PlacePickerFragment;
 
@@ -62,9 +61,9 @@
 
     invoke-virtual {v5, v6}, Lcom/facebook/widget/PlacePickerFragment;->loadData(Z)V
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Lcom/facebook/FacebookException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 457
     if-eqz v1, :cond_0
@@ -77,7 +76,7 @@
     move-result-object v4
 
     .line 459
-    .local v4, onErrorListener:Lcom/facebook/widget/PickerFragment$OnErrorListener;,"Lcom/facebook/widget/PickerFragment$OnErrorListener;"
+    .local v4, "onErrorListener":Lcom/facebook/widget/PickerFragment$OnErrorListener;, "Lcom/facebook/widget/PickerFragment$OnErrorListener;"
     if-eqz v4, :cond_5
 
     .line 460
@@ -86,7 +85,7 @@
     invoke-interface {v4, v5, v1}, Lcom/facebook/widget/PickerFragment$OnErrorListener;->onError(Lcom/facebook/widget/PickerFragment;Lcom/facebook/FacebookException;)V
 
     .line 466
-    .end local v4           #onErrorListener:Lcom/facebook/widget/PickerFragment$OnErrorListener;,"Lcom/facebook/widget/PickerFragment$OnErrorListener;"
+    .end local v4    # "onErrorListener":Lcom/facebook/widget/PickerFragment$OnErrorListener;, "Lcom/facebook/widget/PickerFragment$OnErrorListener;"
     :cond_0
     :goto_0
     return-void
@@ -98,7 +97,7 @@
     move-object v3, v5
 
     .line 453
-    .local v3, fe:Lcom/facebook/FacebookException;
+    .local v3, "fe":Lcom/facebook/FacebookException;
     move-object v1, v3
 
     .line 457
@@ -112,7 +111,7 @@
     move-result-object v4
 
     .line 459
-    .restart local v4       #onErrorListener:Lcom/facebook/widget/PickerFragment$OnErrorListener;,"Lcom/facebook/widget/PickerFragment$OnErrorListener;"
+    .restart local v4    # "onErrorListener":Lcom/facebook/widget/PickerFragment$OnErrorListener;, "Lcom/facebook/widget/PickerFragment$OnErrorListener;"
     if-eqz v4, :cond_1
 
     .line 460
@@ -139,15 +138,15 @@
     goto :goto_0
 
     .line 454
-    .end local v3           #fe:Lcom/facebook/FacebookException;
-    .end local v4           #onErrorListener:Lcom/facebook/widget/PickerFragment$OnErrorListener;,"Lcom/facebook/widget/PickerFragment$OnErrorListener;"
+    .end local v3    # "fe":Lcom/facebook/FacebookException;
+    .end local v4    # "onErrorListener":Lcom/facebook/widget/PickerFragment$OnErrorListener;, "Lcom/facebook/widget/PickerFragment$OnErrorListener;"
     :catch_1
     move-exception v5
 
     move-object v0, v5
 
     .line 455
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     :try_start_1
     new-instance v2, Lcom/facebook/FacebookException;
 
@@ -156,8 +155,8 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     .line 457
-    .end local v1           #error:Lcom/facebook/FacebookException;
-    .local v2, error:Lcom/facebook/FacebookException;
+    .end local v1    # "error":Lcom/facebook/FacebookException;
+    .local v2, "error":Lcom/facebook/FacebookException;
     if-eqz v2, :cond_6
 
     .line 458
@@ -168,7 +167,7 @@
     move-result-object v4
 
     .line 459
-    .restart local v4       #onErrorListener:Lcom/facebook/widget/PickerFragment$OnErrorListener;,"Lcom/facebook/widget/PickerFragment$OnErrorListener;"
+    .restart local v4    # "onErrorListener":Lcom/facebook/widget/PickerFragment$OnErrorListener;, "Lcom/facebook/widget/PickerFragment$OnErrorListener;"
     if-eqz v4, :cond_2
 
     .line 460
@@ -179,13 +178,13 @@
     move-object v1, v2
 
     .line 461
-    .end local v2           #error:Lcom/facebook/FacebookException;
-    .restart local v1       #error:Lcom/facebook/FacebookException;
+    .end local v2    # "error":Lcom/facebook/FacebookException;
+    .restart local v1    # "error":Lcom/facebook/FacebookException;
     goto :goto_0
 
     .line 462
-    .end local v1           #error:Lcom/facebook/FacebookException;
-    .restart local v2       #error:Lcom/facebook/FacebookException;
+    .end local v1    # "error":Lcom/facebook/FacebookException;
+    .restart local v2    # "error":Lcom/facebook/FacebookException;
     :cond_2
     sget-object v5, Lcom/facebook/LoggingBehavior;->REQUESTS:Lcom/facebook/LoggingBehavior;
 
@@ -201,13 +200,13 @@
 
     move-object v1, v2
 
-    .end local v2           #error:Lcom/facebook/FacebookException;
-    .restart local v1       #error:Lcom/facebook/FacebookException;
+    .end local v2    # "error":Lcom/facebook/FacebookException;
+    .restart local v1    # "error":Lcom/facebook/FacebookException;
     goto :goto_0
 
     .line 456
-    .end local v0           #e:Ljava/lang/Exception;
-    .end local v4           #onErrorListener:Lcom/facebook/widget/PickerFragment$OnErrorListener;,"Lcom/facebook/widget/PickerFragment$OnErrorListener;"
+    .end local v0    # "e":Ljava/lang/Exception;
+    .end local v4    # "onErrorListener":Lcom/facebook/widget/PickerFragment$OnErrorListener;, "Lcom/facebook/widget/PickerFragment$OnErrorListener;"
     :catchall_0
     move-exception v5
 
@@ -222,7 +221,7 @@
     move-result-object v4
 
     .line 459
-    .restart local v4       #onErrorListener:Lcom/facebook/widget/PickerFragment$OnErrorListener;,"Lcom/facebook/widget/PickerFragment$OnErrorListener;"
+    .restart local v4    # "onErrorListener":Lcom/facebook/widget/PickerFragment$OnErrorListener;, "Lcom/facebook/widget/PickerFragment$OnErrorListener;"
     if-eqz v4, :cond_4
 
     .line 460
@@ -231,13 +230,13 @@
     invoke-interface {v4, v6, v1}, Lcom/facebook/widget/PickerFragment$OnErrorListener;->onError(Lcom/facebook/widget/PickerFragment;Lcom/facebook/FacebookException;)V
 
     .line 465
-    .end local v4           #onErrorListener:Lcom/facebook/widget/PickerFragment$OnErrorListener;,"Lcom/facebook/widget/PickerFragment$OnErrorListener;"
+    .end local v4    # "onErrorListener":Lcom/facebook/widget/PickerFragment$OnErrorListener;, "Lcom/facebook/widget/PickerFragment$OnErrorListener;"
     :cond_3
     :goto_1
     throw v5
 
     .line 462
-    .restart local v4       #onErrorListener:Lcom/facebook/widget/PickerFragment$OnErrorListener;,"Lcom/facebook/widget/PickerFragment$OnErrorListener;"
+    .restart local v4    # "onErrorListener":Lcom/facebook/widget/PickerFragment$OnErrorListener;, "Lcom/facebook/widget/PickerFragment$OnErrorListener;"
     :cond_4
     sget-object v6, Lcom/facebook/LoggingBehavior;->REQUESTS:Lcom/facebook/LoggingBehavior;
 
@@ -268,14 +267,14 @@
 
     goto :goto_0
 
-    .end local v1           #error:Lcom/facebook/FacebookException;
-    .end local v4           #onErrorListener:Lcom/facebook/widget/PickerFragment$OnErrorListener;,"Lcom/facebook/widget/PickerFragment$OnErrorListener;"
-    .restart local v0       #e:Ljava/lang/Exception;
-    .restart local v2       #error:Lcom/facebook/FacebookException;
+    .end local v1    # "error":Lcom/facebook/FacebookException;
+    .end local v4    # "onErrorListener":Lcom/facebook/widget/PickerFragment$OnErrorListener;, "Lcom/facebook/widget/PickerFragment$OnErrorListener;"
+    .restart local v0    # "e":Ljava/lang/Exception;
+    .restart local v2    # "error":Lcom/facebook/FacebookException;
     :cond_6
     move-object v1, v2
 
-    .end local v2           #error:Lcom/facebook/FacebookException;
-    .restart local v1       #error:Lcom/facebook/FacebookException;
+    .end local v2    # "error":Lcom/facebook/FacebookException;
+    .restart local v1    # "error":Lcom/facebook/FacebookException;
     goto :goto_0
 .end method

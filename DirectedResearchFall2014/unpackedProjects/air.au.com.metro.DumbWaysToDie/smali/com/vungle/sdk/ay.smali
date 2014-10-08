@@ -55,9 +55,6 @@
 # direct methods
 .method public constructor <init>([Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Class;)V
     .locals 2
-    .parameter
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "([",
@@ -119,7 +116,6 @@
 
 .method public a(Ljava/util/Map;)V
     .locals 0
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",

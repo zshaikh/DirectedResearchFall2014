@@ -33,9 +33,9 @@
 
 .method public constructor <init>(Ljava/lang/Exception;Ljava/lang/String;Lv2/com/playhaven/requests/crashreport/PHCrashReport$Urgency;)V
     .locals 0
-    .parameter "e"
-    .parameter "tag"
-    .parameter "level"
+    .param p1, "e"    # Ljava/lang/Exception;
+    .param p2, "tag"    # Ljava/lang/String;
+    .param p3, "level"    # Lv2/com/playhaven/requests/crashreport/PHCrashReport$Urgency;
 
     .prologue
     .line 24
@@ -47,8 +47,8 @@
 
 .method public constructor <init>(Ljava/lang/Exception;Lv2/com/playhaven/requests/crashreport/PHCrashReport$Urgency;)V
     .locals 0
-    .parameter "e"
-    .parameter "level"
+    .param p1, "e"    # Ljava/lang/Exception;
+    .param p2, "level"    # Lv2/com/playhaven/requests/crashreport/PHCrashReport$Urgency;
 
     .prologue
     .line 19
@@ -60,9 +60,9 @@
 
 .method public static reportCrash(Ljava/lang/Exception;Ljava/lang/String;Lv2/com/playhaven/requests/crashreport/PHCrashReport$Urgency;)Lcom/playhaven/src/common/PHCrashReport;
     .locals 1
-    .parameter "e"
-    .parameter "tag"
-    .parameter "level"
+    .param p0, "e"    # Ljava/lang/Exception;
+    .param p1, "tag"    # Ljava/lang/String;
+    .param p2, "level"    # Lv2/com/playhaven/requests/crashreport/PHCrashReport$Urgency;
 
     .prologue
     .line 32
@@ -73,8 +73,8 @@
 
 .method public static reportCrash(Ljava/lang/Exception;Lv2/com/playhaven/requests/crashreport/PHCrashReport$Urgency;)Lcom/playhaven/src/common/PHCrashReport;
     .locals 1
-    .parameter "e"
-    .parameter "level"
+    .param p0, "e"    # Ljava/lang/Exception;
+    .param p1, "level"    # Lv2/com/playhaven/requests/crashreport/PHCrashReport$Urgency;
 
     .prologue
     .line 38
@@ -85,9 +85,6 @@
 
 .method public static bridge synthetic reportCrash(Ljava/lang/Exception;Ljava/lang/String;Lv2/com/playhaven/requests/crashreport/PHCrashReport$Urgency;)Lv2/com/playhaven/requests/crashreport/PHCrashReport;
     .locals 1
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 1
@@ -100,8 +97,6 @@
 
 .method public static bridge synthetic reportCrash(Ljava/lang/Exception;Lv2/com/playhaven/requests/crashreport/PHCrashReport$Urgency;)Lv2/com/playhaven/requests/crashreport/PHCrashReport;
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 1
@@ -124,7 +119,7 @@
 
 .method public setDelegate(Lcom/playhaven/src/common/PHAPIRequest$Delegate;)V
     .locals 0
-    .parameter "delegate"
+    .param p1, "delegate"    # Lcom/playhaven/src/common/PHAPIRequest$Delegate;
 
     .prologue
     .line 44

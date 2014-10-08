@@ -16,7 +16,7 @@
 
 .method public static closeStream(Ljava/io/Closeable;)V
     .locals 1
-    .parameter "stream"
+    .param p0, "stream"    # Ljava/io/Closeable;
 
     .prologue
     .line 72
@@ -44,8 +44,8 @@
 
 .method public static copyContent(Ljava/io/InputStream;Ljava/io/OutputStream;)V
     .locals 4
-    .parameter "in"
-    .parameter "out"
+    .param p0, "in"    # Ljava/io/InputStream;
+    .param p1, "out"    # Ljava/io/OutputStream;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -70,18 +70,18 @@
 
     .line 43
     :cond_1
-    const/high16 v2, 0x1
+    const/high16 v2, 0x10000
 
     new-array v0, v2, [B
 
     .line 46
-    .local v0, buffer:[B
+    .local v0, "buffer":[B
     :goto_0
     invoke-virtual {p0, v0}, Ljava/io/InputStream;->read([B)I
 
     move-result v1
 
-    .local v1, length:I
+    .local v1, "length":I
     const/4 v2, -0x1
 
     if-ne v1, v2, :cond_2
@@ -100,9 +100,9 @@
 
 .method public static copyContent(Ljava/io/InputStream;Ljava/io/OutputStream;J)V
     .locals 7
-    .parameter "in"
-    .parameter "out"
-    .parameter "maxBytes"
+    .param p0, "in"    # Ljava/io/InputStream;
+    .param p1, "out"    # Ljava/io/OutputStream;
+    .param p2, "maxBytes"    # J
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -127,22 +127,22 @@
 
     .line 56
     :cond_1
-    const/high16 v4, 0x1
+    const/high16 v4, 0x10000
 
     new-array v0, v4, [B
 
     .line 58
-    .local v0, buffer:[B
+    .local v0, "buffer":[B
     const-wide/16 v2, 0x0
 
     .line 60
-    .local v2, totalRead:J
+    .local v2, "totalRead":J
     :goto_0
     invoke-virtual {p0, v0}, Ljava/io/InputStream;->read([B)I
 
     move-result v1
 
-    .local v1, length:I
+    .local v1, "length":I
     const/4 v4, -0x1
 
     if-ne v1, v4, :cond_2

@@ -40,7 +40,7 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     .line 91
@@ -61,7 +61,7 @@
 # virtual methods
 .method public addEvent(Lorg/json/JSONObject;)I
     .locals 8
-    .parameter "j"
+    .param p1, "j"    # Lorg/json/JSONObject;
 
     .prologue
     const-string v5, "addEvent"
@@ -90,11 +90,11 @@
     const/4 v0, 0x0
 
     .line 106
-    .local v0, c:Landroid/database/Cursor;
+    .local v0, "c":Landroid/database/Cursor;
     const/4 v1, -0x1
 
     .line 109
-    .local v1, count:I
+    .local v1, "count":I
     :try_start_1
     iget-object v5, p0, Lcom/kochava/android/tracker/KochavaDbAdapter;->kDb:Lcom/kochava/android/tracker/KochavaDbAdapter$KochavaDatabaseHelper;
 
@@ -103,13 +103,13 @@
     move-result-object v3
 
     .line 111
-    .local v3, db:Landroid/database/sqlite/SQLiteDatabase;
+    .local v3, "db":Landroid/database/sqlite/SQLiteDatabase;
     new-instance v2, Landroid/content/ContentValues;
 
     invoke-direct {v2}, Landroid/content/ContentValues;-><init>()V
 
     .line 112
-    .local v2, cv:Landroid/content/ContentValues;
+    .local v2, "cv":Landroid/content/ContentValues;
     const-string v5, "data"
 
     invoke-virtual {p1}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
@@ -150,8 +150,8 @@
     .line 117
     invoke-interface {v0}, Landroid/database/Cursor;->getCount()I
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
     .catch Landroid/database/sqlite/SQLiteException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     move-result v1
 
@@ -168,8 +168,8 @@
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
 
     .line 126
-    .end local v2           #cv:Landroid/content/ContentValues;
-    .end local v3           #db:Landroid/database/sqlite/SQLiteDatabase;
+    .end local v2    # "cv":Landroid/content/ContentValues;
+    .end local v3    # "db":Landroid/database/sqlite/SQLiteDatabase;
     :cond_1
     :goto_0
     monitor-exit p0
@@ -185,7 +185,7 @@
     move-object v4, v5
 
     .line 119
-    .local v4, e:Landroid/database/sqlite/SQLiteException;
+    .local v4, "e":Landroid/database/sqlite/SQLiteException;
     :try_start_3
     sget-boolean v5, Lcom/kochava/android/tracker/Global;->DEBUG:Z
 
@@ -215,9 +215,9 @@
     goto :goto_0
 
     .line 101
-    .end local v0           #c:Landroid/database/Cursor;
-    .end local v1           #count:I
-    .end local v4           #e:Landroid/database/sqlite/SQLiteException;
+    .end local v0    # "c":Landroid/database/Cursor;
+    .end local v1    # "count":I
+    .end local v4    # "e":Landroid/database/sqlite/SQLiteException;
     :catchall_0
     move-exception v5
 
@@ -228,8 +228,8 @@
     throw v5
 
     .line 120
-    .restart local v0       #c:Landroid/database/Cursor;
-    .restart local v1       #count:I
+    .restart local v0    # "c":Landroid/database/Cursor;
+    .restart local v1    # "count":I
     :catchall_1
     move-exception v5
 
@@ -254,7 +254,7 @@
 
 .method public cleanupEvents(J)V
     .locals 5
-    .parameter "time"
+    .param p1, "time"    # J
 
     .prologue
     const-string v2, "KochavaDbAdapter"
@@ -286,7 +286,7 @@
     move-result-object v0
 
     .line 142
-    .local v0, db:Landroid/database/sqlite/SQLiteDatabase;
+    .local v0, "db":Landroid/database/sqlite/SQLiteDatabase;
     const-string v2, "events"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -307,8 +307,8 @@
 
     invoke-virtual {v0, v2, v3, v4}, Landroid/database/sqlite/SQLiteDatabase;->delete(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
     .catch Landroid/database/sqlite/SQLiteException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     .line 147
     :try_start_2
@@ -317,7 +317,7 @@
     invoke-virtual {v2}, Lcom/kochava/android/tracker/KochavaDbAdapter$KochavaDatabaseHelper;->close()V
 
     .line 136
-    .end local v0           #db:Landroid/database/sqlite/SQLiteDatabase;
+    .end local v0    # "db":Landroid/database/sqlite/SQLiteDatabase;
     :goto_0
     monitor-exit p0
     :try_end_2
@@ -333,7 +333,7 @@
     move-object v1, v2
 
     .line 145
-    .local v1, e:Landroid/database/sqlite/SQLiteException;
+    .local v1, "e":Landroid/database/sqlite/SQLiteException;
     :try_start_3
     sget-boolean v2, Lcom/kochava/android/tracker/Global;->DEBUG:Z
 
@@ -357,7 +357,7 @@
     goto :goto_0
 
     .line 136
-    .end local v1           #e:Landroid/database/sqlite/SQLiteException;
+    .end local v1    # "e":Landroid/database/sqlite/SQLiteException;
     :catchall_0
     move-exception v2
 
@@ -398,15 +398,15 @@
     const/4 v1, 0x0
 
     .line 258
-    .local v1, c:Landroid/database/Cursor;
+    .local v1, "c":Landroid/database/Cursor;
     const/4 v2, 0x0
 
     .line 259
-    .local v2, data:Ljava/lang/String;
+    .local v2, "data":Ljava/lang/String;
     const/4 v6, 0x0
 
     .line 262
-    .local v6, timestamp:Ljava/lang/String;
+    .local v6, "timestamp":Ljava/lang/String;
     :try_start_0
     iget-object v7, p0, Lcom/kochava/android/tracker/KochavaDbAdapter;->kDb:Lcom/kochava/android/tracker/KochavaDbAdapter$KochavaDatabaseHelper;
 
@@ -415,7 +415,7 @@
     move-result-object v3
 
     .line 263
-    .local v3, db:Landroid/database/sqlite/SQLiteDatabase;
+    .local v3, "db":Landroid/database/sqlite/SQLiteDatabase;
     const-string v7, "SELECT * FROM events ORDER BY created_at ASC"
 
     .line 264
@@ -432,7 +432,7 @@
     invoke-direct {v0}, Lorg/json/JSONArray;-><init>()V
 
     .line 267
-    .local v0, arr:Lorg/json/JSONArray;
+    .local v0, "arr":Lorg/json/JSONArray;
     :goto_0
     invoke-interface {v1}, Landroid/database/Cursor;->moveToNext()Z
 
@@ -483,8 +483,8 @@
 
     invoke-static {v7}, Lcom/kochava/android/util/Base64Coder;->encodeString(Ljava/lang/String;)Ljava/lang/String;
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_1
     .catch Landroid/database/sqlite/SQLiteException; {:try_start_0 .. :try_end_0} :catch_1
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
     move-result-object v2
 
@@ -502,8 +502,8 @@
     invoke-interface {v1}, Landroid/database/Cursor;->close()V
 
     .line 296
-    .end local v0           #arr:Lorg/json/JSONArray;
-    .end local v3           #db:Landroid/database/sqlite/SQLiteDatabase;
+    .end local v0    # "arr":Lorg/json/JSONArray;
+    .end local v3    # "db":Landroid/database/sqlite/SQLiteDatabase;
     :cond_2
     :goto_1
     if-eqz v6, :cond_7
@@ -542,8 +542,8 @@
     return-object v7
 
     .line 268
-    .restart local v0       #arr:Lorg/json/JSONArray;
-    .restart local v3       #db:Landroid/database/sqlite/SQLiteDatabase;
+    .restart local v0    # "arr":Lorg/json/JSONArray;
+    .restart local v3    # "db":Landroid/database/sqlite/SQLiteDatabase;
     :cond_3
     :try_start_2
     invoke-interface {v1}, Landroid/database/Cursor;->isLast()Z
@@ -561,8 +561,8 @@
 
     invoke-interface {v1, v7}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
     :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
     .catch Landroid/database/sqlite/SQLiteException; {:try_start_2 .. :try_end_2} :catch_1
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
     move-result-object v6
 
@@ -584,32 +584,32 @@
     invoke-direct {v5, v7}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
     .line 273
-    .local v5, j:Lorg/json/JSONObject;
+    .local v5, "j":Lorg/json/JSONObject;
     invoke-virtual {v0, v5}, Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;
     :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
     .catch Lorg/json/JSONException; {:try_start_3 .. :try_end_3} :catch_0
     .catch Landroid/database/sqlite/SQLiteException; {:try_start_3 .. :try_end_3} :catch_1
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
     goto :goto_0
 
     .line 274
-    .end local v5           #j:Lorg/json/JSONObject;
+    .end local v5    # "j":Lorg/json/JSONObject;
     :catch_0
     move-exception v7
 
     goto :goto_0
 
     .line 287
-    .end local v0           #arr:Lorg/json/JSONArray;
-    .end local v3           #db:Landroid/database/sqlite/SQLiteDatabase;
+    .end local v0    # "arr":Lorg/json/JSONArray;
+    .end local v3    # "db":Landroid/database/sqlite/SQLiteDatabase;
     :catch_1
     move-exception v7
 
     move-object v4, v7
 
     .line 288
-    .local v4, e:Landroid/database/sqlite/SQLiteException;
+    .local v4, "e":Landroid/database/sqlite/SQLiteException;
     :try_start_4
     sget-boolean v7, Lcom/kochava/android/tracker/Global;->DEBUG:Z
 
@@ -639,7 +639,7 @@
     goto :goto_1
 
     .line 256
-    .end local v4           #e:Landroid/database/sqlite/SQLiteException;
+    .end local v4    # "e":Landroid/database/sqlite/SQLiteException;
     :catchall_0
     move-exception v7
 
@@ -682,7 +682,7 @@
 
 .method public getApplicationData(Ljava/lang/String;)Ljava/lang/String;
     .locals 6
-    .parameter "id"
+    .param p1, "id"    # Ljava/lang/String;
 
     .prologue
     const/4 v5, 0x0
@@ -721,7 +721,7 @@
     const/4 v0, 0x0
 
     .line 219
-    .local v0, c:Landroid/database/Cursor;
+    .local v0, "c":Landroid/database/Cursor;
     :try_start_1
     iget-object v3, p0, Lcom/kochava/android/tracker/KochavaDbAdapter;->kDb:Lcom/kochava/android/tracker/KochavaDbAdapter$KochavaDatabaseHelper;
 
@@ -730,7 +730,7 @@
     move-result-object v1
 
     .line 220
-    .local v1, db:Landroid/database/sqlite/SQLiteDatabase;
+    .local v1, "db":Landroid/database/sqlite/SQLiteDatabase;
     new-instance v3, Ljava/lang/StringBuilder;
 
     const-string v4, "SELECT * FROM keys WHERE id=\'"
@@ -773,8 +773,8 @@
 
     invoke-interface {v0, v3}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
     .catch Landroid/database/sqlite/SQLiteException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     move-result-object v3
 
@@ -797,8 +797,8 @@
     goto :goto_0
 
     .line 212
-    .end local v0           #c:Landroid/database/Cursor;
-    .end local v1           #db:Landroid/database/sqlite/SQLiteDatabase;
+    .end local v0    # "c":Landroid/database/Cursor;
+    .end local v1    # "db":Landroid/database/sqlite/SQLiteDatabase;
     :catchall_0
     move-exception v3
 
@@ -809,14 +809,14 @@
     throw v3
 
     .line 226
-    .restart local v0       #c:Landroid/database/Cursor;
+    .restart local v0    # "c":Landroid/database/Cursor;
     :catch_0
     move-exception v3
 
     move-object v2, v3
 
     .line 228
-    .local v2, e:Landroid/database/sqlite/SQLiteException;
+    .local v2, "e":Landroid/database/sqlite/SQLiteException;
     :try_start_3
     sget-boolean v3, Lcom/kochava/android/tracker/Global;->DEBUG:Z
 
@@ -844,7 +844,7 @@
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
 
     .line 237
-    .end local v2           #e:Landroid/database/sqlite/SQLiteException;
+    .end local v2    # "e":Landroid/database/sqlite/SQLiteException;
     :cond_4
     :goto_1
     monitor-exit p0
@@ -874,7 +874,7 @@
     throw v3
 
     .line 232
-    .restart local v1       #db:Landroid/database/sqlite/SQLiteDatabase;
+    .restart local v1    # "db":Landroid/database/sqlite/SQLiteDatabase;
     :cond_6
     iget-object v3, p0, Lcom/kochava/android/tracker/KochavaDbAdapter;->kDb:Lcom/kochava/android/tracker/KochavaDbAdapter$KochavaDatabaseHelper;
 
@@ -893,8 +893,8 @@
 
 .method public insertApplicationData(Ljava/lang/String;Ljava/lang/String;)V
     .locals 6
-    .parameter "id"
-    .parameter "data"
+    .param p1, "id"    # Ljava/lang/String;
+    .param p2, "data"    # Ljava/lang/String;
 
     .prologue
     .line 183
@@ -929,7 +929,7 @@
     const/4 v0, 0x0
 
     .line 190
-    .local v0, c:Landroid/database/Cursor;
+    .local v0, "c":Landroid/database/Cursor;
     :try_start_1
     iget-object v4, p0, Lcom/kochava/android/tracker/KochavaDbAdapter;->kDb:Lcom/kochava/android/tracker/KochavaDbAdapter$KochavaDatabaseHelper;
 
@@ -938,13 +938,13 @@
     move-result-object v2
 
     .line 191
-    .local v2, db:Landroid/database/sqlite/SQLiteDatabase;
+    .local v2, "db":Landroid/database/sqlite/SQLiteDatabase;
     new-instance v1, Landroid/content/ContentValues;
 
     invoke-direct {v1}, Landroid/content/ContentValues;-><init>()V
 
     .line 192
-    .local v1, cv:Landroid/content/ContentValues;
+    .local v1, "cv":Landroid/content/ContentValues;
     const-string v4, "id"
 
     invoke-virtual {v1, v4, p1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
@@ -961,8 +961,8 @@
 
     invoke-virtual {v2, v4, v5, v1}, Landroid/database/sqlite/SQLiteDatabase;->insert(Ljava/lang/String;Ljava/lang/String;Landroid/content/ContentValues;)J
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
     .catch Landroid/database/sqlite/SQLiteException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     .line 202
     :try_start_2
@@ -977,15 +977,15 @@
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
 
     .line 183
-    .end local v1           #cv:Landroid/content/ContentValues;
-    .end local v2           #db:Landroid/database/sqlite/SQLiteDatabase;
+    .end local v1    # "cv":Landroid/content/ContentValues;
+    .end local v2    # "db":Landroid/database/sqlite/SQLiteDatabase;
     :cond_2
     :goto_1
     monitor-exit p0
 
     goto :goto_0
 
-    .end local v0           #c:Landroid/database/Cursor;
+    .end local v0    # "c":Landroid/database/Cursor;
     :catchall_0
     move-exception v4
 
@@ -996,14 +996,14 @@
     throw v4
 
     .line 196
-    .restart local v0       #c:Landroid/database/Cursor;
+    .restart local v0    # "c":Landroid/database/Cursor;
     :catch_0
     move-exception v4
 
     move-object v3, v4
 
     .line 198
-    .local v3, e:Landroid/database/sqlite/SQLiteException;
+    .local v3, "e":Landroid/database/sqlite/SQLiteException;
     :try_start_3
     sget-boolean v4, Lcom/kochava/android/tracker/Global;->DEBUG:Z
 
@@ -1033,7 +1033,7 @@
     goto :goto_1
 
     .line 201
-    .end local v3           #e:Landroid/database/sqlite/SQLiteException;
+    .end local v3    # "e":Landroid/database/sqlite/SQLiteException;
     :catchall_1
     move-exception v4
 
@@ -1057,8 +1057,8 @@
 
 .method public updateApplicationData(Ljava/lang/String;Ljava/lang/String;)V
     .locals 7
-    .parameter "id"
-    .parameter "data"
+    .param p1, "id"    # Ljava/lang/String;
+    .param p2, "data"    # Ljava/lang/String;
 
     .prologue
     .line 153
@@ -1093,7 +1093,7 @@
     const/4 v0, 0x0
 
     .line 160
-    .local v0, c:Landroid/database/Cursor;
+    .local v0, "c":Landroid/database/Cursor;
     :try_start_1
     iget-object v5, p0, Lcom/kochava/android/tracker/KochavaDbAdapter;->kDb:Lcom/kochava/android/tracker/KochavaDbAdapter$KochavaDatabaseHelper;
 
@@ -1102,13 +1102,13 @@
     move-result-object v2
 
     .line 161
-    .local v2, db:Landroid/database/sqlite/SQLiteDatabase;
+    .local v2, "db":Landroid/database/sqlite/SQLiteDatabase;
     new-instance v1, Landroid/content/ContentValues;
 
     invoke-direct {v1}, Landroid/content/ContentValues;-><init>()V
 
     .line 162
-    .local v1, cv:Landroid/content/ContentValues;
+    .local v1, "cv":Landroid/content/ContentValues;
     const-string v5, "data"
 
     invoke-virtual {v1, v5, p2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
@@ -1135,15 +1135,15 @@
     move-result-object v4
 
     .line 165
-    .local v4, whereClause:Ljava/lang/String;
+    .local v4, "whereClause":Ljava/lang/String;
     const-string v5, "keys"
 
     const/4 v6, 0x0
 
     invoke-virtual {v2, v5, v1, v4, v6}, Landroid/database/sqlite/SQLiteDatabase;->update(Ljava/lang/String;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
     .catch Landroid/database/sqlite/SQLiteException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     .line 173
     :try_start_2
@@ -1158,16 +1158,16 @@
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
 
     .line 153
-    .end local v1           #cv:Landroid/content/ContentValues;
-    .end local v2           #db:Landroid/database/sqlite/SQLiteDatabase;
-    .end local v4           #whereClause:Ljava/lang/String;
+    .end local v1    # "cv":Landroid/content/ContentValues;
+    .end local v2    # "db":Landroid/database/sqlite/SQLiteDatabase;
+    .end local v4    # "whereClause":Ljava/lang/String;
     :cond_2
     :goto_1
     monitor-exit p0
 
     goto :goto_0
 
-    .end local v0           #c:Landroid/database/Cursor;
+    .end local v0    # "c":Landroid/database/Cursor;
     :catchall_0
     move-exception v5
 
@@ -1178,14 +1178,14 @@
     throw v5
 
     .line 167
-    .restart local v0       #c:Landroid/database/Cursor;
+    .restart local v0    # "c":Landroid/database/Cursor;
     :catch_0
     move-exception v5
 
     move-object v3, v5
 
     .line 169
-    .local v3, e:Landroid/database/sqlite/SQLiteException;
+    .local v3, "e":Landroid/database/sqlite/SQLiteException;
     :try_start_3
     sget-boolean v5, Lcom/kochava/android/tracker/Global;->DEBUG:Z
 
@@ -1215,7 +1215,7 @@
     goto :goto_1
 
     .line 172
-    .end local v3           #e:Landroid/database/sqlite/SQLiteException;
+    .end local v3    # "e":Landroid/database/sqlite/SQLiteException;
     :catchall_1
     move-exception v5
 

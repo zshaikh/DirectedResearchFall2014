@@ -47,13 +47,11 @@
 
 .method protected constructor <init>(Ljava/util/HashSet;Lcom/flurry/org/codehaus/jackson/type/JavaType;Lcom/flurry/org/codehaus/jackson/type/JavaType;ZLcom/flurry/org/codehaus/jackson/map/TypeSerializer;Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;Lcom/flurry/org/codehaus/jackson/map/BeanProperty;)V
     .locals 9
-    .parameter
-    .parameter "keyType"
-    .parameter "valueType"
-    .parameter "valueTypeIsStatic"
-    .parameter "vts"
-    .parameter
-    .parameter "property"
+    .param p2, "keyType"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .param p3, "valueType"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .param p4, "valueTypeIsStatic"    # Z
+    .param p5, "vts"    # Lcom/flurry/org/codehaus/jackson/map/TypeSerializer;
+    .param p7, "property"    # Lcom/flurry/org/codehaus/jackson/map/BeanProperty;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -79,8 +77,8 @@
 
     .prologue
     .line 46
-    .local p1, ignoredEntries:Ljava/util/HashSet;,"Ljava/util/HashSet<Ljava/lang/String;>;"
-    .local p6, keySerializer:Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
+    .local p1, "ignoredEntries":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/String;>;"
+    .local p6, "keySerializer":Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
     const/4 v7, 0x0
 
     move-object v0, p0
@@ -107,14 +105,11 @@
 
 .method protected constructor <init>(Ljava/util/HashSet;Lcom/flurry/org/codehaus/jackson/type/JavaType;Lcom/flurry/org/codehaus/jackson/type/JavaType;ZLcom/flurry/org/codehaus/jackson/map/TypeSerializer;Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;Lcom/flurry/org/codehaus/jackson/map/BeanProperty;)V
     .locals 0
-    .parameter
-    .parameter "keyType"
-    .parameter "valueType"
-    .parameter "valueTypeIsStatic"
-    .parameter "vts"
-    .parameter
-    .parameter
-    .parameter "property"
+    .param p2, "keyType"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .param p3, "valueType"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .param p4, "valueTypeIsStatic"    # Z
+    .param p5, "vts"    # Lcom/flurry/org/codehaus/jackson/map/TypeSerializer;
+    .param p8, "property"    # Lcom/flurry/org/codehaus/jackson/map/BeanProperty;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -141,9 +136,9 @@
 
     .prologue
     .line 55
-    .local p1, ignoredEntries:Ljava/util/HashSet;,"Ljava/util/HashSet<Ljava/lang/String;>;"
-    .local p6, keySerializer:Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
-    .local p7, valueSerializer:Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
+    .local p1, "ignoredEntries":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/String;>;"
+    .local p6, "keySerializer":Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
+    .local p7, "valueSerializer":Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
     invoke-direct/range {p0 .. p8}, Lcom/flurry/org/codehaus/jackson/map/ser/std/MapSerializer;-><init>(Ljava/util/HashSet;Lcom/flurry/org/codehaus/jackson/type/JavaType;Lcom/flurry/org/codehaus/jackson/type/JavaType;ZLcom/flurry/org/codehaus/jackson/map/TypeSerializer;Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;Lcom/flurry/org/codehaus/jackson/map/BeanProperty;)V
 
     .line 57
@@ -152,10 +147,9 @@
 
 .method protected constructor <init>(Ljava/util/HashSet;Lcom/flurry/org/codehaus/jackson/type/JavaType;ZLcom/flurry/org/codehaus/jackson/map/TypeSerializer;)V
     .locals 9
-    .parameter
-    .parameter "valueType"
-    .parameter "valueTypeIsStatic"
-    .parameter "vts"
+    .param p2, "valueType"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .param p3, "valueTypeIsStatic"    # Z
+    .param p4, "vts"    # Lcom/flurry/org/codehaus/jackson/map/TypeSerializer;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -174,7 +168,7 @@
     .end annotation
 
     .prologue
-    .local p1, ignoredEntries:Ljava/util/HashSet;,"Ljava/util/HashSet<Ljava/lang/String;>;"
+    .local p1, "ignoredEntries":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/String;>;"
     const/4 v6, 0x0
 
     .line 33

@@ -21,7 +21,7 @@
 # direct methods
 .method public constructor <init>(Lcom/flurry/org/codehaus/jackson/map/ObjectMapper$DefaultTyping;)V
     .locals 0
-    .parameter "t"
+    .param p1, "t"    # Lcom/flurry/org/codehaus/jackson/map/ObjectMapper$DefaultTyping;
 
     .prologue
     .line 128
@@ -38,10 +38,9 @@
 # virtual methods
 .method public buildTypeDeserializer(Lcom/flurry/org/codehaus/jackson/map/DeserializationConfig;Lcom/flurry/org/codehaus/jackson/type/JavaType;Ljava/util/Collection;Lcom/flurry/org/codehaus/jackson/map/BeanProperty;)Lcom/flurry/org/codehaus/jackson/map/TypeDeserializer;
     .locals 1
-    .parameter "config"
-    .parameter "baseType"
-    .parameter
-    .parameter "property"
+    .param p1, "config"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationConfig;
+    .param p2, "baseType"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .param p4, "property"    # Lcom/flurry/org/codehaus/jackson/map/BeanProperty;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -59,7 +58,7 @@
 
     .prologue
     .line 136
-    .local p3, subtypes:Ljava/util/Collection;,"Ljava/util/Collection<Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;>;"
+    .local p3, "subtypes":Ljava/util/Collection;, "Ljava/util/Collection<Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;>;"
     invoke-virtual {p0, p2}, Lcom/flurry/org/codehaus/jackson/map/ObjectMapper$DefaultTypeResolverBuilder;->useForType(Lcom/flurry/org/codehaus/jackson/type/JavaType;)Z
 
     move-result v0
@@ -81,10 +80,9 @@
 
 .method public buildTypeSerializer(Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;Lcom/flurry/org/codehaus/jackson/type/JavaType;Ljava/util/Collection;Lcom/flurry/org/codehaus/jackson/map/BeanProperty;)Lcom/flurry/org/codehaus/jackson/map/TypeSerializer;
     .locals 1
-    .parameter "config"
-    .parameter "baseType"
-    .parameter
-    .parameter "property"
+    .param p1, "config"    # Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;
+    .param p2, "baseType"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .param p4, "property"    # Lcom/flurry/org/codehaus/jackson/map/BeanProperty;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -102,7 +100,7 @@
 
     .prologue
     .line 143
-    .local p3, subtypes:Ljava/util/Collection;,"Ljava/util/Collection<Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;>;"
+    .local p3, "subtypes":Ljava/util/Collection;, "Ljava/util/Collection<Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;>;"
     invoke-virtual {p0, p2}, Lcom/flurry/org/codehaus/jackson/map/ObjectMapper$DefaultTypeResolverBuilder;->useForType(Lcom/flurry/org/codehaus/jackson/type/JavaType;)Z
 
     move-result v0
@@ -124,7 +122,7 @@
 
 .method public useForType(Lcom/flurry/org/codehaus/jackson/type/JavaType;)Z
     .locals 5
-    .parameter "t"
+    .param p1, "t"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
 
     .prologue
     const/4 v3, 0x1

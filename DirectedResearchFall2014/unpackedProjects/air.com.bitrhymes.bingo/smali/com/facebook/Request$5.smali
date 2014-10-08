@@ -26,8 +26,6 @@
 # direct methods
 .method constructor <init>(Lcom/facebook/Request;Ljava/util/ArrayList;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 1
@@ -45,8 +43,8 @@
 # virtual methods
 .method public writeString(Ljava/lang/String;Ljava/lang/String;)V
     .locals 5
-    .parameter "key"
-    .parameter "value"
+    .param p1, "key"    # Ljava/lang/String;
+    .param p2, "value"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;

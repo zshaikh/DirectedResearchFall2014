@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/adobe/air/AIRWindowSurfaceView;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1648

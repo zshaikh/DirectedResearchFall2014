@@ -17,9 +17,9 @@
 # direct methods
 .method public constructor <init>(Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest$ContentDelegate;Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest$FailureDelegate;Lcom/playhaven/src/common/PHAPIRequest$Delegate;)V
     .locals 0
-    .parameter "content_delegate"
-    .parameter "failure_delegate"
-    .parameter "delegate"
+    .param p1, "content_delegate"    # Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest$ContentDelegate;
+    .param p2, "failure_delegate"    # Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest$FailureDelegate;
+    .param p3, "delegate"    # Lcom/playhaven/src/common/PHAPIRequest$Delegate;
 
     .prologue
     .line 30
@@ -132,8 +132,8 @@
 
 .method public onDismissedContent(Lv2/com/playhaven/requests/content/PHContentRequest;Lv2/com/playhaven/requests/content/PHContentRequest$PHDismissType;)V
     .locals 2
-    .parameter "request"
-    .parameter "type"
+    .param p1, "request"    # Lv2/com/playhaven/requests/content/PHContentRequest;
+    .param p2, "type"    # Lv2/com/playhaven/requests/content/PHContentRequest$PHDismissType;
 
     .prologue
     .line 94
@@ -146,7 +146,7 @@
 
     check-cast p1, Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest;
 
-    .end local p1
+    .end local p1    # "request":Lv2/com/playhaven/requests/content/PHContentRequest;
     invoke-static {p2}, Lcom/playhaven/src/utils/EnumConversion;->convertToOldDismiss(Lv2/com/playhaven/requests/content/PHContentRequest$PHDismissType;)Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest$PHDismissType;
 
     move-result-object v1
@@ -160,8 +160,8 @@
 
 .method public onDisplayedContent(Lv2/com/playhaven/requests/content/PHContentRequest;Lv2/com/playhaven/model/PHContent;)V
     .locals 2
-    .parameter "request"
-    .parameter "content"
+    .param p1, "request"    # Lv2/com/playhaven/requests/content/PHContentRequest;
+    .param p2, "content"    # Lv2/com/playhaven/model/PHContent;
 
     .prologue
     .line 87
@@ -174,7 +174,7 @@
 
     check-cast p1, Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest;
 
-    .end local p1
+    .end local p1    # "request":Lv2/com/playhaven/requests/content/PHContentRequest;
     new-instance v1, Lcom/playhaven/src/publishersdk/content/PHContent;
 
     invoke-direct {v1, p2}, Lcom/playhaven/src/publishersdk/content/PHContent;-><init>(Lv2/com/playhaven/model/PHContent;)V
@@ -188,8 +188,8 @@
 
 .method public onFailedToDisplayContent(Lv2/com/playhaven/requests/content/PHContentRequest;Lv2/com/playhaven/model/PHError;)V
     .locals 4
-    .parameter "request"
-    .parameter "error"
+    .param p1, "request"    # Lv2/com/playhaven/requests/content/PHContentRequest;
+    .param p2, "error"    # Lv2/com/playhaven/model/PHError;
 
     .prologue
     .line 104
@@ -217,7 +217,7 @@
 
     check-cast p1, Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest;
 
-    .end local p1
+    .end local p1    # "request":Lv2/com/playhaven/requests/content/PHContentRequest;
     new-instance v2, Ljava/lang/Exception;
 
     invoke-virtual {p2}, Lv2/com/playhaven/model/PHError;->getMessage()Ljava/lang/String;
@@ -234,7 +234,7 @@
     return-void
 
     .line 108
-    .restart local p1
+    .restart local p1    # "request":Lv2/com/playhaven/requests/content/PHContentRequest;
     :cond_1
     iget-object v1, p0, Lcom/playhaven/src/publishersdk/content/adapters/ContentDelegateAdapter;->request_delegate:Lcom/playhaven/src/common/PHAPIRequest$Delegate;
 
@@ -245,7 +245,7 @@
 
     check-cast p1, Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest;
 
-    .end local p1
+    .end local p1    # "request":Lv2/com/playhaven/requests/content/PHContentRequest;
     new-instance v2, Ljava/lang/Exception;
 
     invoke-virtual {p2}, Lv2/com/playhaven/model/PHError;->getMessage()Ljava/lang/String;
@@ -259,7 +259,7 @@
     goto :goto_0
 
     .line 112
-    .restart local p1
+    .restart local p1    # "request":Lv2/com/playhaven/requests/content/PHContentRequest;
     :cond_2
     iget-object v1, p0, Lcom/playhaven/src/publishersdk/content/adapters/ContentDelegateAdapter;->content_delegate:Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest$ContentDelegate;
 
@@ -270,7 +270,7 @@
 
     check-cast p1, Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest;
 
-    .end local p1
+    .end local p1    # "request":Lv2/com/playhaven/requests/content/PHContentRequest;
     new-instance v2, Ljava/lang/Exception;
 
     invoke-virtual {p2}, Lv2/com/playhaven/model/PHError;->getMessage()Ljava/lang/String;
@@ -286,7 +286,7 @@
 
 .method public onNoContent(Lv2/com/playhaven/requests/content/PHContentRequest;)V
     .locals 2
-    .parameter "request"
+    .param p1, "request"    # Lv2/com/playhaven/requests/content/PHContentRequest;
 
     .prologue
     .line 119
@@ -299,7 +299,7 @@
 
     check-cast p1, Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest;
 
-    .end local p1
+    .end local p1    # "request":Lv2/com/playhaven/requests/content/PHContentRequest;
     sget-object v1, Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest$PHDismissType;->NoContentTriggered:Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest$PHDismissType;
 
     invoke-interface {v0, p1, v1}, Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest$ContentDelegate;->didDismissContent(Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest;Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest$PHDismissType;)V
@@ -311,8 +311,8 @@
 
 .method public onReceivedContent(Lv2/com/playhaven/requests/content/PHContentRequest;Lv2/com/playhaven/model/PHContent;)V
     .locals 2
-    .parameter "request"
-    .parameter "content"
+    .param p1, "request"    # Lv2/com/playhaven/requests/content/PHContentRequest;
+    .param p2, "content"    # Lv2/com/playhaven/model/PHContent;
 
     .prologue
     .line 72
@@ -325,7 +325,7 @@
 
     check-cast p1, Lcom/playhaven/src/common/PHAPIRequest;
 
-    .end local p1
+    .end local p1    # "request":Lv2/com/playhaven/requests/content/PHContentRequest;
     iget-object v1, p2, Lv2/com/playhaven/model/PHContent;->context:Lorg/json/JSONObject;
 
     invoke-interface {v0, p1, v1}, Lcom/playhaven/src/common/PHAPIRequest$Delegate;->requestSucceeded(Lcom/playhaven/src/common/PHAPIRequest;Lorg/json/JSONObject;)V
@@ -336,7 +336,7 @@
     return-void
 
     .line 75
-    .restart local p1
+    .restart local p1    # "request":Lv2/com/playhaven/requests/content/PHContentRequest;
     :cond_1
     iget-object v0, p0, Lcom/playhaven/src/publishersdk/content/adapters/ContentDelegateAdapter;->content_delegate:Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest$ContentDelegate;
 
@@ -347,7 +347,7 @@
 
     check-cast p1, Lcom/playhaven/src/common/PHAPIRequest;
 
-    .end local p1
+    .end local p1    # "request":Lv2/com/playhaven/requests/content/PHContentRequest;
     iget-object v1, p2, Lv2/com/playhaven/model/PHContent;->context:Lorg/json/JSONObject;
 
     invoke-interface {v0, p1, v1}, Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest$ContentDelegate;->requestSucceeded(Lcom/playhaven/src/common/PHAPIRequest;Lorg/json/JSONObject;)V
@@ -357,7 +357,7 @@
 
 .method public onSentContentRequest(Lv2/com/playhaven/requests/content/PHContentRequest;)V
     .locals 1
-    .parameter "request"
+    .param p1, "request"    # Lv2/com/playhaven/requests/content/PHContentRequest;
 
     .prologue
     .line 64
@@ -370,7 +370,7 @@
 
     check-cast p1, Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest;
 
-    .end local p1
+    .end local p1    # "request":Lv2/com/playhaven/requests/content/PHContentRequest;
     invoke-interface {v0, p1}, Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest$ContentDelegate;->willGetContent(Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest;)V
 
     .line 66
@@ -380,8 +380,8 @@
 
 .method public onWillDisplayContent(Lv2/com/playhaven/requests/content/PHContentRequest;Lv2/com/playhaven/model/PHContent;)V
     .locals 2
-    .parameter "request"
-    .parameter "content"
+    .param p1, "request"    # Lv2/com/playhaven/requests/content/PHContentRequest;
+    .param p2, "content"    # Lv2/com/playhaven/model/PHContent;
 
     .prologue
     .line 81
@@ -394,7 +394,7 @@
 
     check-cast p1, Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest;
 
-    .end local p1
+    .end local p1    # "request":Lv2/com/playhaven/requests/content/PHContentRequest;
     new-instance v1, Lcom/playhaven/src/publishersdk/content/PHContent;
 
     invoke-direct {v1, p2}, Lcom/playhaven/src/publishersdk/content/PHContent;-><init>(Lv2/com/playhaven/model/PHContent;)V

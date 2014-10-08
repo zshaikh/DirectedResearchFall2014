@@ -24,7 +24,6 @@
 # direct methods
 .method private constructor <init>(Lcom/kochava/android/tracker/Feature;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 2279
@@ -37,8 +36,6 @@
 
 .method synthetic constructor <init>(Lcom/kochava/android/tracker/Feature;Lcom/kochava/android/tracker/Feature$TrackTask;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 2279
@@ -56,7 +53,7 @@
     .line 2284
     iget-object v0, p0, Lcom/kochava/android/tracker/Feature$TrackTask;->this$0:Lcom/kochava/android/tracker/Feature;
 
-    #calls: Lcom/kochava/android/tracker/Feature;->postEvent()Ljava/lang/String;
+    # invokes: Lcom/kochava/android/tracker/Feature;->postEvent()Ljava/lang/String;
     invoke-static {v0}, Lcom/kochava/android/tracker/Feature;->access$34(Lcom/kochava/android/tracker/Feature;)Ljava/lang/String;
 
     .line 2285

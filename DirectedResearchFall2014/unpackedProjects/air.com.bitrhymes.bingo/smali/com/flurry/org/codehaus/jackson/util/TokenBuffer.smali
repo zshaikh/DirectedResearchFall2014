@@ -50,7 +50,7 @@
 
 .method public constructor <init>(Lcom/flurry/org/codehaus/jackson/ObjectCodec;)V
     .locals 1
-    .parameter "codec"
+    .param p1, "codec"    # Lcom/flurry/org/codehaus/jackson/ObjectCodec;
 
     .prologue
     .line 97
@@ -93,7 +93,7 @@
 # virtual methods
 .method protected final _append(Lcom/flurry/org/codehaus/jackson/JsonToken;)V
     .locals 3
-    .parameter "type"
+    .param p1, "type"    # Lcom/flurry/org/codehaus/jackson/JsonToken;
 
     .prologue
     .line 726
@@ -106,7 +106,7 @@
     move-result-object v0
 
     .line 727
-    .local v0, next:Lcom/flurry/org/codehaus/jackson/util/TokenBuffer$Segment;
+    .local v0, "next":Lcom/flurry/org/codehaus/jackson/util/TokenBuffer$Segment;
     if-nez v0, :cond_0
 
     .line 728
@@ -134,8 +134,8 @@
 
 .method protected final _append(Lcom/flurry/org/codehaus/jackson/JsonToken;Ljava/lang/Object;)V
     .locals 3
-    .parameter "type"
-    .parameter "value"
+    .param p1, "type"    # Lcom/flurry/org/codehaus/jackson/JsonToken;
+    .param p2, "value"    # Ljava/lang/Object;
 
     .prologue
     .line 736
@@ -148,7 +148,7 @@
     move-result-object v0
 
     .line 737
-    .local v0, next:Lcom/flurry/org/codehaus/jackson/util/TokenBuffer$Segment;
+    .local v0, "next":Lcom/flurry/org/codehaus/jackson/util/TokenBuffer$Segment;
     if-nez v0, :cond_0
 
     .line 738
@@ -204,7 +204,7 @@
 
 .method public asParser(Lcom/flurry/org/codehaus/jackson/JsonParser;)Lcom/flurry/org/codehaus/jackson/JsonParser;
     .locals 3
-    .parameter "src"
+    .param p1, "src"    # Lcom/flurry/org/codehaus/jackson/JsonParser;
 
     .prologue
     .line 145
@@ -219,7 +219,7 @@
     invoke-direct {v0, v1, v2}, Lcom/flurry/org/codehaus/jackson/util/TokenBuffer$Parser;-><init>(Lcom/flurry/org/codehaus/jackson/util/TokenBuffer$Segment;Lcom/flurry/org/codehaus/jackson/ObjectCodec;)V
 
     .line 146
-    .local v0, p:Lcom/flurry/org/codehaus/jackson/util/TokenBuffer$Parser;
+    .local v0, "p":Lcom/flurry/org/codehaus/jackson/util/TokenBuffer$Parser;
     invoke-virtual {p1}, Lcom/flurry/org/codehaus/jackson/JsonParser;->getTokenLocation()Lcom/flurry/org/codehaus/jackson/JsonLocation;
 
     move-result-object v1
@@ -232,7 +232,7 @@
 
 .method public asParser(Lcom/flurry/org/codehaus/jackson/ObjectCodec;)Lcom/flurry/org/codehaus/jackson/JsonParser;
     .locals 2
-    .parameter "codec"
+    .param p1, "codec"    # Lcom/flurry/org/codehaus/jackson/ObjectCodec;
 
     .prologue
     .line 136
@@ -265,7 +265,7 @@
 
 .method public copyCurrentEvent(Lcom/flurry/org/codehaus/jackson/JsonParser;)V
     .locals 3
-    .parameter "jp"
+    .param p1, "jp"    # Lcom/flurry/org/codehaus/jackson/JsonParser;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -527,7 +527,7 @@
 
 .method public copyCurrentStructure(Lcom/flurry/org/codehaus/jackson/JsonParser;)V
     .locals 3
-    .parameter "jp"
+    .param p1, "jp"    # Lcom/flurry/org/codehaus/jackson/JsonParser;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -542,7 +542,7 @@
     move-result-object v0
 
     .line 694
-    .local v0, t:Lcom/flurry/org/codehaus/jackson/JsonToken;
+    .local v0, "t":Lcom/flurry/org/codehaus/jackson/JsonToken;
     sget-object v1, Lcom/flurry/org/codehaus/jackson/JsonToken;->FIELD_NAME:Lcom/flurry/org/codehaus/jackson/JsonToken;
 
     if-ne v0, v1, :cond_0
@@ -640,7 +640,7 @@
 
 .method public disable(Lcom/flurry/org/codehaus/jackson/JsonGenerator$Feature;)Lcom/flurry/org/codehaus/jackson/JsonGenerator;
     .locals 2
-    .parameter "f"
+    .param p1, "f"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator$Feature;
 
     .prologue
     .line 313
@@ -662,7 +662,7 @@
 
 .method public enable(Lcom/flurry/org/codehaus/jackson/JsonGenerator$Feature;)Lcom/flurry/org/codehaus/jackson/JsonGenerator;
     .locals 2
-    .parameter "f"
+    .param p1, "f"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator$Feature;
 
     .prologue
     .line 307
@@ -737,7 +737,7 @@
 
 .method public isEnabled(Lcom/flurry/org/codehaus/jackson/JsonGenerator$Feature;)Z
     .locals 2
-    .parameter "f"
+    .param p1, "f"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator$Feature;
 
     .prologue
     .line 321
@@ -764,7 +764,7 @@
 
 .method public serialize(Lcom/flurry/org/codehaus/jackson/JsonGenerator;)V
     .locals 8
-    .parameter "jgen"
+    .param p1, "jgen"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -777,11 +777,11 @@
     iget-object v3, p0, Lcom/flurry/org/codehaus/jackson/util/TokenBuffer;->_first:Lcom/flurry/org/codehaus/jackson/util/TokenBuffer$Segment;
 
     .line 170
-    .local v3, segment:Lcom/flurry/org/codehaus/jackson/util/TokenBuffer$Segment;
+    .local v3, "segment":Lcom/flurry/org/codehaus/jackson/util/TokenBuffer$Segment;
     const/4 v2, -0x1
 
     .line 173
-    .local v2, ptr:I
+    .local v2, "ptr":I
     :goto_0
     add-int/lit8 v2, v2, 0x1
 
@@ -811,7 +811,7 @@
     move-result-object v4
 
     .line 179
-    .local v4, t:Lcom/flurry/org/codehaus/jackson/JsonToken;
+    .local v4, "t":Lcom/flurry/org/codehaus/jackson/JsonToken;
     if-eqz v4, :cond_0
 
     .line 182
@@ -865,7 +865,7 @@
     move-result-object v1
 
     .line 199
-    .local v1, ob:Ljava/lang/Object;
+    .local v1, "ob":Ljava/lang/Object;
     instance-of v5, v1, Lcom/flurry/org/codehaus/jackson/SerializableString;
 
     if-eqz v5, :cond_2
@@ -873,17 +873,17 @@
     .line 200
     check-cast v1, Lcom/flurry/org/codehaus/jackson/SerializableString;
 
-    .end local v1           #ob:Ljava/lang/Object;
+    .end local v1    # "ob":Ljava/lang/Object;
     invoke-virtual {p1, v1}, Lcom/flurry/org/codehaus/jackson/JsonGenerator;->writeFieldName(Lcom/flurry/org/codehaus/jackson/SerializableString;)V
 
     goto :goto_0
 
     .line 202
-    .restart local v1       #ob:Ljava/lang/Object;
+    .restart local v1    # "ob":Ljava/lang/Object;
     :cond_2
     check-cast v1, Ljava/lang/String;
 
-    .end local v1           #ob:Ljava/lang/Object;
+    .end local v1    # "ob":Ljava/lang/Object;
     invoke-virtual {p1, v1}, Lcom/flurry/org/codehaus/jackson/JsonGenerator;->writeFieldName(Ljava/lang/String;)V
 
     goto :goto_0
@@ -895,7 +895,7 @@
     move-result-object v1
 
     .line 209
-    .restart local v1       #ob:Ljava/lang/Object;
+    .restart local v1    # "ob":Ljava/lang/Object;
     instance-of v5, v1, Lcom/flurry/org/codehaus/jackson/SerializableString;
 
     if-eqz v5, :cond_3
@@ -903,17 +903,17 @@
     .line 210
     check-cast v1, Lcom/flurry/org/codehaus/jackson/SerializableString;
 
-    .end local v1           #ob:Ljava/lang/Object;
+    .end local v1    # "ob":Ljava/lang/Object;
     invoke-virtual {p1, v1}, Lcom/flurry/org/codehaus/jackson/JsonGenerator;->writeString(Lcom/flurry/org/codehaus/jackson/SerializableString;)V
 
     goto :goto_0
 
     .line 212
-    .restart local v1       #ob:Ljava/lang/Object;
+    .restart local v1    # "ob":Ljava/lang/Object;
     :cond_3
     check-cast v1, Ljava/lang/String;
 
-    .end local v1           #ob:Ljava/lang/Object;
+    .end local v1    # "ob":Ljava/lang/Object;
     invoke-virtual {p1, v1}, Lcom/flurry/org/codehaus/jackson/JsonGenerator;->writeString(Ljava/lang/String;)V
 
     goto :goto_0
@@ -927,7 +927,7 @@
     check-cast v0, Ljava/lang/Number;
 
     .line 219
-    .local v0, n:Ljava/lang/Number;
+    .local v0, "n":Ljava/lang/Number;
     instance-of v5, v0, Ljava/math/BigInteger;
 
     if-eqz v5, :cond_4
@@ -935,13 +935,13 @@
     .line 220
     check-cast v0, Ljava/math/BigInteger;
 
-    .end local v0           #n:Ljava/lang/Number;
+    .end local v0    # "n":Ljava/lang/Number;
     invoke-virtual {p1, v0}, Lcom/flurry/org/codehaus/jackson/JsonGenerator;->writeNumber(Ljava/math/BigInteger;)V
 
     goto :goto_0
 
     .line 221
-    .restart local v0       #n:Ljava/lang/Number;
+    .restart local v0    # "n":Ljava/lang/Number;
     :cond_4
     instance-of v5, v0, Ljava/lang/Long;
 
@@ -967,14 +967,14 @@
     goto/16 :goto_0
 
     .line 230
-    .end local v0           #n:Ljava/lang/Number;
+    .end local v0    # "n":Ljava/lang/Number;
     :pswitch_7
     invoke-virtual {v3, v2}, Lcom/flurry/org/codehaus/jackson/util/TokenBuffer$Segment;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
     .line 231
-    .local v0, n:Ljava/lang/Object;
+    .local v0, "n":Ljava/lang/Object;
     instance-of v5, v0, Ljava/math/BigDecimal;
 
     if-eqz v5, :cond_6
@@ -982,13 +982,13 @@
     .line 232
     check-cast v0, Ljava/math/BigDecimal;
 
-    .end local v0           #n:Ljava/lang/Object;
+    .end local v0    # "n":Ljava/lang/Object;
     invoke-virtual {p1, v0}, Lcom/flurry/org/codehaus/jackson/JsonGenerator;->writeNumber(Ljava/math/BigDecimal;)V
 
     goto/16 :goto_0
 
     .line 233
-    .restart local v0       #n:Ljava/lang/Object;
+    .restart local v0    # "n":Ljava/lang/Object;
     :cond_6
     instance-of v5, v0, Ljava/lang/Float;
 
@@ -997,7 +997,7 @@
     .line 234
     check-cast v0, Ljava/lang/Float;
 
-    .end local v0           #n:Ljava/lang/Object;
+    .end local v0    # "n":Ljava/lang/Object;
     invoke-virtual {v0}, Ljava/lang/Float;->floatValue()F
 
     move-result v5
@@ -1007,7 +1007,7 @@
     goto/16 :goto_0
 
     .line 235
-    .restart local v0       #n:Ljava/lang/Object;
+    .restart local v0    # "n":Ljava/lang/Object;
     :cond_7
     instance-of v5, v0, Ljava/lang/Double;
 
@@ -1016,7 +1016,7 @@
     .line 236
     check-cast v0, Ljava/lang/Double;
 
-    .end local v0           #n:Ljava/lang/Object;
+    .end local v0    # "n":Ljava/lang/Object;
     invoke-virtual {v0}, Ljava/lang/Double;->doubleValue()D
 
     move-result-wide v5
@@ -1026,7 +1026,7 @@
     goto/16 :goto_0
 
     .line 237
-    .restart local v0       #n:Ljava/lang/Object;
+    .restart local v0    # "n":Ljava/lang/Object;
     :cond_8
     if-nez v0, :cond_9
 
@@ -1044,13 +1044,13 @@
     .line 240
     check-cast v0, Ljava/lang/String;
 
-    .end local v0           #n:Ljava/lang/Object;
+    .end local v0    # "n":Ljava/lang/Object;
     invoke-virtual {p1, v0}, Lcom/flurry/org/codehaus/jackson/JsonGenerator;->writeNumber(Ljava/lang/String;)V
 
     goto/16 :goto_0
 
     .line 242
-    .restart local v0       #n:Ljava/lang/Object;
+    .restart local v0    # "n":Ljava/lang/Object;
     :cond_a
     new-instance v5, Lcom/flurry/org/codehaus/jackson/JsonGenerationException;
 
@@ -1091,7 +1091,7 @@
     throw v5
 
     .line 247
-    .end local v0           #n:Ljava/lang/Object;
+    .end local v0    # "n":Ljava/lang/Object;
     :pswitch_8
     const/4 v5, 0x1
 
@@ -1145,7 +1145,7 @@
 
 .method public setCodec(Lcom/flurry/org/codehaus/jackson/ObjectCodec;)Lcom/flurry/org/codehaus/jackson/JsonGenerator;
     .locals 0
-    .parameter "oc"
+    .param p1, "oc"    # Lcom/flurry/org/codehaus/jackson/ObjectCodec;
 
     .prologue
     .line 332
@@ -1165,13 +1165,13 @@
     const/16 v0, 0x64
 
     .line 270
-    .local v0, MAX_COUNT:I
+    .local v0, "MAX_COUNT":I
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
     .line 271
-    .local v4, sb:Ljava/lang/StringBuilder;
+    .local v4, "sb":Ljava/lang/StringBuilder;
     const-string v6, "[TokenBuffer: "
 
     invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -1182,11 +1182,11 @@
     move-result-object v3
 
     .line 273
-    .local v3, jp:Lcom/flurry/org/codehaus/jackson/JsonParser;
+    .local v3, "jp":Lcom/flurry/org/codehaus/jackson/JsonParser;
     const/4 v1, 0x0
 
     .line 278
-    .local v1, count:I
+    .local v1, "count":I
     :goto_0
     :try_start_0
     invoke-virtual {v3}, Lcom/flurry/org/codehaus/jackson/JsonParser;->nextToken()Lcom/flurry/org/codehaus/jackson/JsonToken;
@@ -1196,7 +1196,7 @@
     move-result-object v5
 
     .line 282
-    .local v5, t:Lcom/flurry/org/codehaus/jackson/JsonToken;
+    .local v5, "t":Lcom/flurry/org/codehaus/jackson/JsonToken;
     if-nez v5, :cond_1
 
     .line 292
@@ -1233,12 +1233,12 @@
     return-object v6
 
     .line 279
-    .end local v5           #t:Lcom/flurry/org/codehaus/jackson/JsonToken;
+    .end local v5    # "t":Lcom/flurry/org/codehaus/jackson/JsonToken;
     :catch_0
     move-exception v2
 
     .line 280
-    .local v2, ioe:Ljava/io/IOException;
+    .local v2, "ioe":Ljava/io/IOException;
     new-instance v6, Ljava/lang/IllegalStateException;
 
     invoke-direct {v6, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/Throwable;)V
@@ -1246,8 +1246,8 @@
     throw v6
 
     .line 283
-    .end local v2           #ioe:Ljava/io/IOException;
-    .restart local v5       #t:Lcom/flurry/org/codehaus/jackson/JsonToken;
+    .end local v2    # "ioe":Ljava/io/IOException;
+    .restart local v5    # "t":Lcom/flurry/org/codehaus/jackson/JsonToken;
     :cond_1
     if-ge v1, v7, :cond_3
 
@@ -1285,10 +1285,10 @@
 
 .method public writeBinary(Lcom/flurry/org/codehaus/jackson/Base64Variant;[BII)V
     .locals 2
-    .parameter "b64variant"
-    .parameter "data"
-    .parameter "offset"
-    .parameter "len"
+    .param p1, "b64variant"    # Lcom/flurry/org/codehaus/jackson/Base64Variant;
+    .param p2, "data"    # [B
+    .param p3, "offset"    # I
+    .param p4, "len"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -1301,7 +1301,7 @@
     new-array v0, p4, [B
 
     .line 612
-    .local v0, copy:[B
+    .local v0, "copy":[B
     const/4 v1, 0x0
 
     invoke-static {p2, p3, v0, v1, p4}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
@@ -1315,7 +1315,7 @@
 
 .method public writeBoolean(Z)V
     .locals 1
-    .parameter "state"
+    .param p1, "state"    # Z
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -1365,7 +1365,7 @@
     move-result-object v0
 
     .line 380
-    .local v0, c:Lcom/flurry/org/codehaus/jackson/impl/JsonWriteContext;
+    .local v0, "c":Lcom/flurry/org/codehaus/jackson/impl/JsonWriteContext;
     if-eqz v0, :cond_0
 
     .line 381
@@ -1399,7 +1399,7 @@
     move-result-object v0
 
     .line 400
-    .local v0, c:Lcom/flurry/org/codehaus/jackson/impl/JsonWriteContext;
+    .local v0, "c":Lcom/flurry/org/codehaus/jackson/impl/JsonWriteContext;
     if-eqz v0, :cond_0
 
     .line 401
@@ -1412,7 +1412,7 @@
 
 .method public writeFieldName(Lcom/flurry/org/codehaus/jackson/SerializableString;)V
     .locals 2
-    .parameter "name"
+    .param p1, "name"    # Lcom/flurry/org/codehaus/jackson/SerializableString;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -1441,7 +1441,7 @@
 
 .method public writeFieldName(Lcom/flurry/org/codehaus/jackson/io/SerializedString;)V
     .locals 2
-    .parameter "name"
+    .param p1, "name"    # Lcom/flurry/org/codehaus/jackson/io/SerializedString;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -1470,7 +1470,7 @@
 
 .method public final writeFieldName(Ljava/lang/String;)V
     .locals 1
-    .parameter "name"
+    .param p1, "name"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -1514,7 +1514,7 @@
 
 .method public writeNumber(D)V
     .locals 2
-    .parameter "d"
+    .param p1, "d"    # D
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -1538,7 +1538,7 @@
 
 .method public writeNumber(F)V
     .locals 2
-    .parameter "f"
+    .param p1, "f"    # F
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -1562,7 +1562,7 @@
 
 .method public writeNumber(I)V
     .locals 2
-    .parameter "i"
+    .param p1, "i"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -1586,7 +1586,7 @@
 
 .method public writeNumber(J)V
     .locals 2
-    .parameter "l"
+    .param p1, "l"    # J
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -1610,7 +1610,7 @@
 
 .method public writeNumber(Ljava/lang/String;)V
     .locals 1
-    .parameter "encodedValue"
+    .param p1, "encodedValue"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -1630,7 +1630,7 @@
 
 .method public writeNumber(Ljava/math/BigDecimal;)V
     .locals 1
-    .parameter "dec"
+    .param p1, "dec"    # Ljava/math/BigDecimal;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -1660,7 +1660,7 @@
 
 .method public writeNumber(Ljava/math/BigInteger;)V
     .locals 1
-    .parameter "v"
+    .param p1, "v"    # Ljava/math/BigInteger;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -1690,7 +1690,7 @@
 
 .method public writeObject(Ljava/lang/Object;)V
     .locals 1
-    .parameter "value"
+    .param p1, "value"    # Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -1710,7 +1710,7 @@
 
 .method public writeRaw(C)V
     .locals 0
-    .parameter "c"
+    .param p1, "c"    # C
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -1728,7 +1728,7 @@
 
 .method public writeRaw(Ljava/lang/String;)V
     .locals 0
-    .parameter "text"
+    .param p1, "text"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -1746,9 +1746,9 @@
 
 .method public writeRaw(Ljava/lang/String;II)V
     .locals 0
-    .parameter "text"
-    .parameter "offset"
-    .parameter "len"
+    .param p1, "text"    # Ljava/lang/String;
+    .param p2, "offset"    # I
+    .param p3, "len"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -1766,9 +1766,9 @@
 
 .method public writeRaw([CII)V
     .locals 0
-    .parameter "text"
-    .parameter "offset"
-    .parameter "len"
+    .param p1, "text"    # [C
+    .param p2, "offset"    # I
+    .param p3, "len"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -1786,9 +1786,9 @@
 
 .method public writeRawUTF8String([BII)V
     .locals 0
-    .parameter "text"
-    .parameter "offset"
-    .parameter "length"
+    .param p1, "text"    # [B
+    .param p2, "offset"    # I
+    .param p3, "length"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -1806,7 +1806,7 @@
 
 .method public writeRawValue(Ljava/lang/String;)V
     .locals 0
-    .parameter "text"
+    .param p1, "text"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -1824,9 +1824,9 @@
 
 .method public writeRawValue(Ljava/lang/String;II)V
     .locals 0
-    .parameter "text"
-    .parameter "offset"
-    .parameter "len"
+    .param p1, "text"    # Ljava/lang/String;
+    .param p2, "offset"    # I
+    .param p3, "len"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -1844,9 +1844,9 @@
 
 .method public writeRawValue([CII)V
     .locals 0
-    .parameter "text"
-    .parameter "offset"
-    .parameter "len"
+    .param p1, "text"    # [C
+    .param p2, "offset"    # I
+    .param p3, "len"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -1920,7 +1920,7 @@
 
 .method public writeString(Lcom/flurry/org/codehaus/jackson/SerializableString;)V
     .locals 1
-    .parameter "text"
+    .param p1, "text"    # Lcom/flurry/org/codehaus/jackson/SerializableString;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -1950,7 +1950,7 @@
 
 .method public writeString(Ljava/lang/String;)V
     .locals 1
-    .parameter "text"
+    .param p1, "text"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -1980,9 +1980,9 @@
 
 .method public writeString([CII)V
     .locals 1
-    .parameter "text"
-    .parameter "offset"
-    .parameter "len"
+    .param p1, "text"    # [C
+    .param p2, "offset"    # I
+    .param p3, "len"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -2004,7 +2004,7 @@
 
 .method public writeTree(Lcom/flurry/org/codehaus/jackson/JsonNode;)V
     .locals 1
-    .parameter "rootNode"
+    .param p1, "rootNode"    # Lcom/flurry/org/codehaus/jackson/JsonNode;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -2024,9 +2024,9 @@
 
 .method public writeUTF8String([BII)V
     .locals 0
-    .parameter "text"
-    .parameter "offset"
-    .parameter "length"
+    .param p1, "text"    # [B
+    .param p2, "offset"    # I
+    .param p3, "length"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,

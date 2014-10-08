@@ -22,7 +22,7 @@
 # virtual methods
 .method public dispatchTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 1
-    .parameter "ev"
+    .param p1, "ev"    # Landroid/view/MotionEvent;
 
     .prologue
     .line 84
@@ -106,7 +106,7 @@
 
 .method public getSystemService(Ljava/lang/String;)Ljava/lang/Object;
     .locals 1
-    .parameter "name"
+    .param p1, "name"    # Ljava/lang/String;
 
     .prologue
     .line 101
@@ -135,9 +135,9 @@
 
 .method protected onActivityResult(IILandroid/content/Intent;)V
     .locals 1
-    .parameter "requestCode"
-    .parameter "resultCode"
-    .parameter "data"
+    .param p1, "requestCode"    # I
+    .param p2, "resultCode"    # I
+    .param p3, "data"    # Landroid/content/Intent;
 
     .prologue
     .line 74
@@ -151,7 +151,7 @@
 
 .method public onConfigurationChanged(Landroid/content/res/Configuration;)V
     .locals 1
-    .parameter "newConfig"
+    .param p1, "newConfig"    # Landroid/content/res/Configuration;
 
     .prologue
     .line 181
@@ -165,7 +165,7 @@
 
 .method protected onCreate(Landroid/os/Bundle;)V
     .locals 1
-    .parameter "savedInstanceState"
+    .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
     .line 24
@@ -192,8 +192,8 @@
 
 .method public onKeyDown(ILandroid/view/KeyEvent;)Z
     .locals 1
-    .parameter "keyCode"
-    .parameter "event"
+    .param p1, "keyCode"    # I
+    .param p2, "event"    # Landroid/view/KeyEvent;
 
     .prologue
     .line 79
@@ -234,7 +234,7 @@
 
 .method protected onRestoreInstanceState(Landroid/os/Bundle;)V
     .locals 1
-    .parameter "savedInstanceState"
+    .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
     .line 64
@@ -275,7 +275,7 @@
 
 .method protected onSaveInstanceState(Landroid/os/Bundle;)V
     .locals 1
-    .parameter "outState"
+    .param p1, "outState"    # Landroid/os/Bundle;
 
     .prologue
     .line 59
@@ -315,7 +315,7 @@
 
 .method public onWindowFocusChanged(Z)V
     .locals 1
-    .parameter "hasFocus"
+    .param p1, "hasFocus"    # Z
 
     .prologue
     .line 176
@@ -329,8 +329,8 @@
 
 .method public registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
     .locals 1
-    .parameter "receiver"
-    .parameter "filter"
+    .param p1, "receiver"    # Landroid/content/BroadcastReceiver;
+    .param p2, "filter"    # Landroid/content/IntentFilter;
 
     .prologue
     .line 136
@@ -345,7 +345,7 @@
 
 .method public final requestWindowFeature(I)Z
     .locals 1
-    .parameter "featureId"
+    .param p1, "featureId"    # I
 
     .prologue
     .line 171
@@ -360,7 +360,7 @@
 
 .method public final runOnUiThread(Ljava/lang/Runnable;)V
     .locals 1
-    .parameter "action"
+    .param p1, "action"    # Ljava/lang/Runnable;
 
     .prologue
     .line 166
@@ -374,7 +374,7 @@
 
 .method public setContentView(Landroid/view/View;)V
     .locals 1
-    .parameter "view"
+    .param p1, "view"    # Landroid/view/View;
 
     .prologue
     .line 116
@@ -388,7 +388,7 @@
 
 .method public setRequestedOrientation(I)V
     .locals 1
-    .parameter "requestedOrientation"
+    .param p1, "requestedOrientation"    # I
 
     .prologue
     .line 121
@@ -402,7 +402,7 @@
 
 .method public final setResult(I)V
     .locals 1
-    .parameter "resultCode"
+    .param p1, "resultCode"    # I
 
     .prologue
     .line 126
@@ -416,7 +416,7 @@
 
 .method public setTheme(I)V
     .locals 1
-    .parameter "resid"
+    .param p1, "resid"    # I
 
     .prologue
     .line 131
@@ -430,7 +430,7 @@
 
 .method public startActivity(Landroid/content/Intent;)V
     .locals 1
-    .parameter "intent"
+    .param p1, "intent"    # Landroid/content/Intent;
 
     .prologue
     .line 151
@@ -444,8 +444,8 @@
 
 .method public startActivityForResult(Landroid/content/Intent;I)V
     .locals 1
-    .parameter "intent"
-    .parameter "requestCode"
+    .param p1, "intent"    # Landroid/content/Intent;
+    .param p2, "requestCode"    # I
 
     .prologue
     .line 156
@@ -459,7 +459,7 @@
 
 .method public unregisterReceiver(Landroid/content/BroadcastReceiver;)V
     .locals 1
-    .parameter "receiver"
+    .param p1, "receiver"    # Landroid/content/BroadcastReceiver;
 
     .prologue
     .line 141

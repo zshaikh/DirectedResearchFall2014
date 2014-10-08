@@ -44,8 +44,8 @@
 
 .method public static attachDisplayer(Ljava/lang/String;Lv2/com/playhaven/interstitial/requestbridge/base/ContentDisplayer;)V
     .locals 2
-    .parameter "tag"
-    .parameter "displayer"
+    .param p0, "tag"    # Ljava/lang/String;
+    .param p1, "displayer"    # Lv2/com/playhaven/interstitial/requestbridge/base/ContentDisplayer;
 
     .prologue
     .line 84
@@ -58,7 +58,7 @@
     check-cast v0, Lv2/com/playhaven/interstitial/requestbridge/base/RequestBridge;
 
     .line 86
-    .local v0, bridge:Lv2/com/playhaven/interstitial/requestbridge/base/RequestBridge;
+    .local v0, "bridge":Lv2/com/playhaven/interstitial/requestbridge/base/RequestBridge;
     if-nez v0, :cond_0
 
     .line 89
@@ -74,8 +74,8 @@
 
 .method public static attachRequester(Ljava/lang/String;Lv2/com/playhaven/interstitial/requestbridge/base/ContentRequester;)V
     .locals 2
-    .parameter "tag"
-    .parameter "requester"
+    .param p0, "tag"    # Ljava/lang/String;
+    .param p1, "requester"    # Lv2/com/playhaven/interstitial/requestbridge/base/ContentRequester;
 
     .prologue
     .line 60
@@ -88,7 +88,7 @@
     check-cast v0, Lv2/com/playhaven/interstitial/requestbridge/base/RequestBridge;
 
     .line 62
-    .local v0, bridge:Lv2/com/playhaven/interstitial/requestbridge/base/RequestBridge;
+    .local v0, "bridge":Lv2/com/playhaven/interstitial/requestbridge/base/RequestBridge;
     if-nez v0, :cond_0
 
     .line 65
@@ -104,7 +104,7 @@
 
 .method public static closeBridge(Ljava/lang/String;)V
     .locals 2
-    .parameter "tag"
+    .param p0, "tag"    # Ljava/lang/String;
 
     .prologue
     .line 39
@@ -117,7 +117,7 @@
     check-cast v0, Lv2/com/playhaven/interstitial/requestbridge/base/RequestBridge;
 
     .line 41
-    .local v0, bridge:Lv2/com/playhaven/interstitial/requestbridge/base/RequestBridge;
+    .local v0, "bridge":Lv2/com/playhaven/interstitial/requestbridge/base/RequestBridge;
     if-nez v0, :cond_0
 
     .line 51
@@ -135,7 +135,7 @@
 
 .method public static detachDisplayer(Ljava/lang/String;)V
     .locals 2
-    .parameter "tag"
+    .param p0, "tag"    # Ljava/lang/String;
 
     .prologue
     .line 114
@@ -148,7 +148,7 @@
     check-cast v0, Lv2/com/playhaven/interstitial/requestbridge/base/RequestBridge;
 
     .line 116
-    .local v0, bridge:Lv2/com/playhaven/interstitial/requestbridge/base/RequestBridge;
+    .local v0, "bridge":Lv2/com/playhaven/interstitial/requestbridge/base/RequestBridge;
     if-nez v0, :cond_0
 
     .line 119
@@ -164,7 +164,7 @@
 
 .method public static detachRequester(Ljava/lang/String;)V
     .locals 2
-    .parameter "tag"
+    .param p0, "tag"    # Ljava/lang/String;
 
     .prologue
     .line 68
@@ -177,7 +177,7 @@
     check-cast v0, Lv2/com/playhaven/interstitial/requestbridge/base/RequestBridge;
 
     .line 70
-    .local v0, bridge:Lv2/com/playhaven/interstitial/requestbridge/base/RequestBridge;
+    .local v0, "bridge":Lv2/com/playhaven/interstitial/requestbridge/base/RequestBridge;
     if-nez v0, :cond_0
 
     .line 73
@@ -193,7 +193,7 @@
 
 .method public static getBridge(Ljava/lang/String;)Lv2/com/playhaven/interstitial/requestbridge/base/RequestBridge;
     .locals 1
-    .parameter "tag"
+    .param p0, "tag"    # Ljava/lang/String;
 
     .prologue
     .line 130
@@ -203,7 +203,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "tag":Ljava/lang/String;
     check-cast p0, Lv2/com/playhaven/interstitial/requestbridge/base/RequestBridge;
 
     return-object p0
@@ -211,7 +211,7 @@
 
 .method public static getDisplayer(Ljava/lang/String;)Lv2/com/playhaven/interstitial/requestbridge/base/ContentDisplayer;
     .locals 2
-    .parameter "tag"
+    .param p0, "tag"    # Ljava/lang/String;
 
     .prologue
     .line 122
@@ -224,7 +224,7 @@
     check-cast v0, Lv2/com/playhaven/interstitial/requestbridge/base/RequestBridge;
 
     .line 124
-    .local v0, bridge:Lv2/com/playhaven/interstitial/requestbridge/base/RequestBridge;
+    .local v0, "bridge":Lv2/com/playhaven/interstitial/requestbridge/base/RequestBridge;
     if-nez v0, :cond_0
 
     const/4 v1, 0x0
@@ -243,7 +243,7 @@
 
 .method public static getRequester(Ljava/lang/String;)Lv2/com/playhaven/interstitial/requestbridge/base/ContentRequester;
     .locals 2
-    .parameter "tag"
+    .param p0, "tag"    # Ljava/lang/String;
 
     .prologue
     .line 76
@@ -256,7 +256,7 @@
     check-cast v0, Lv2/com/playhaven/interstitial/requestbridge/base/RequestBridge;
 
     .line 78
-    .local v0, bridge:Lv2/com/playhaven/interstitial/requestbridge/base/RequestBridge;
+    .local v0, "bridge":Lv2/com/playhaven/interstitial/requestbridge/base/RequestBridge;
     if-nez v0, :cond_0
 
     const/4 v1, 0x0
@@ -275,8 +275,8 @@
 
 .method public static openBridge(Ljava/lang/String;Lv2/com/playhaven/interstitial/requestbridge/base/RequestBridge;)V
     .locals 1
-    .parameter "tag"
-    .parameter "bridge"
+    .param p0, "tag"    # Ljava/lang/String;
+    .param p1, "bridge"    # Lv2/com/playhaven/interstitial/requestbridge/base/RequestBridge;
 
     .prologue
     .line 34
@@ -290,11 +290,11 @@
 
 .method private static sendBroadcast(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;Landroid/content/Context;)V
     .locals 2
-    .parameter "intentFilter"
-    .parameter "tag"
-    .parameter "event"
-    .parameter "message"
-    .parameter "context"
+    .param p0, "intentFilter"    # Ljava/lang/String;
+    .param p1, "tag"    # Ljava/lang/String;
+    .param p2, "event"    # Ljava/lang/String;
+    .param p3, "message"    # Landroid/os/Bundle;
+    .param p4, "context"    # Landroid/content/Context;
 
     .prologue
     .line 137
@@ -303,7 +303,7 @@
     invoke-direct {v0, p0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
     .line 140
-    .local v0, intent:Landroid/content/Intent;
+    .local v0, "intent":Landroid/content/Intent;
     sget-object v1, Lv2/com/playhaven/interstitial/requestbridge/base/RequestBridge$Message;->Tag:Lv2/com/playhaven/interstitial/requestbridge/base/RequestBridge$Message;
 
     invoke-virtual {v1}, Lv2/com/playhaven/interstitial/requestbridge/base/RequestBridge$Message;->getKey()Ljava/lang/String;
@@ -339,10 +339,10 @@
 
 .method public static sendMessageFromDisplayer(Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;Landroid/content/Context;)V
     .locals 3
-    .parameter "tag"
-    .parameter "event"
-    .parameter "message"
-    .parameter "context"
+    .param p0, "tag"    # Ljava/lang/String;
+    .param p1, "event"    # Ljava/lang/String;
+    .param p2, "message"    # Landroid/os/Bundle;
+    .param p3, "context"    # Landroid/content/Context;
 
     .prologue
     .line 177
@@ -355,7 +355,7 @@
     check-cast v0, Lv2/com/playhaven/interstitial/requestbridge/base/RequestBridge;
 
     .line 179
-    .local v0, bridge:Lv2/com/playhaven/interstitial/requestbridge/base/RequestBridge;
+    .local v0, "bridge":Lv2/com/playhaven/interstitial/requestbridge/base/RequestBridge;
     if-nez v0, :cond_0
 
     .line 185
@@ -392,10 +392,10 @@
 
 .method public static sendMessageFromRequester(Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;Landroid/content/Context;)V
     .locals 2
-    .parameter "tag"
-    .parameter "event"
-    .parameter "message"
-    .parameter "context"
+    .param p0, "tag"    # Ljava/lang/String;
+    .param p1, "event"    # Ljava/lang/String;
+    .param p2, "message"    # Landroid/os/Bundle;
+    .param p3, "context"    # Landroid/content/Context;
 
     .prologue
     .line 159
@@ -408,7 +408,7 @@
     check-cast v0, Lv2/com/playhaven/interstitial/requestbridge/base/RequestBridge;
 
     .line 161
-    .local v0, bridge:Lv2/com/playhaven/interstitial/requestbridge/base/RequestBridge;
+    .local v0, "bridge":Lv2/com/playhaven/interstitial/requestbridge/base/RequestBridge;
     if-nez v0, :cond_0
 
     .line 165
@@ -428,8 +428,8 @@
 
 .method public static transferBridge(Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
-    .parameter "old_tag"
-    .parameter "new_tag"
+    .param p0, "old_tag"    # Ljava/lang/String;
+    .param p1, "new_tag"    # Ljava/lang/String;
 
     .prologue
     .line 100
@@ -442,7 +442,7 @@
     check-cast v0, Lv2/com/playhaven/interstitial/requestbridge/base/RequestBridge;
 
     .line 102
-    .local v0, bridge:Lv2/com/playhaven/interstitial/requestbridge/base/RequestBridge;
+    .local v0, "bridge":Lv2/com/playhaven/interstitial/requestbridge/base/RequestBridge;
     if-nez v0, :cond_0
 
     .line 112

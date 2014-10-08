@@ -16,7 +16,7 @@
 
 .method public static safeShutdown(Lorg/apache/http/client/HttpClient;)V
     .locals 2
-    .parameter "httpClient"
+    .param p0, "httpClient"    # Lorg/apache/http/client/HttpClient;
 
     .prologue
     .line 7

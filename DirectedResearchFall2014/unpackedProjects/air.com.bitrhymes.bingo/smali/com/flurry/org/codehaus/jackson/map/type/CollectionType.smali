@@ -6,10 +6,9 @@
 # direct methods
 .method private constructor <init>(Ljava/lang/Class;Lcom/flurry/org/codehaus/jackson/type/JavaType;Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 0
-    .parameter
-    .parameter "elemT"
-    .parameter "valueHandler"
-    .parameter "typeHandler"
+    .param p2, "elemT"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .param p3, "valueHandler"    # Ljava/lang/Object;
+    .param p4, "typeHandler"    # Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -24,7 +23,7 @@
 
     .prologue
     .line 20
-    .local p1, collT:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p1, "collT":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/flurry/org/codehaus/jackson/map/type/CollectionLikeType;-><init>(Ljava/lang/Class;Lcom/flurry/org/codehaus/jackson/type/JavaType;Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 21
@@ -33,8 +32,7 @@
 
 .method public static construct(Ljava/lang/Class;Lcom/flurry/org/codehaus/jackson/type/JavaType;)Lcom/flurry/org/codehaus/jackson/map/type/CollectionType;
     .locals 2
-    .parameter
-    .parameter "elemT"
+    .param p1, "elemT"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -47,7 +45,7 @@
     .end annotation
 
     .prologue
-    .local p0, rawType:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p0, "rawType":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const/4 v1, 0x0
 
     .line 53
@@ -62,7 +60,6 @@
 # virtual methods
 .method protected _narrow(Ljava/lang/Class;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .locals 3
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -73,7 +70,7 @@
     .end annotation
 
     .prologue
-    .local p1, subclass:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p1, "subclass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const/4 v2, 0x0
 
     .line 25
@@ -88,7 +85,6 @@
 
 .method public narrowContentsBy(Ljava/lang/Class;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .locals 5
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -100,7 +96,7 @@
 
     .prologue
     .line 32
-    .local p1, contentClass:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p1, "contentClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/map/type/CollectionType;->_elementType:Lcom/flurry/org/codehaus/jackson/type/JavaType;
 
     invoke-virtual {v0}, Lcom/flurry/org/codehaus/jackson/type/JavaType;->getRawClass()Ljava/lang/Class;
@@ -187,7 +183,6 @@
 
 .method public widenContentsBy(Ljava/lang/Class;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .locals 5
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -199,7 +194,7 @@
 
     .prologue
     .line 43
-    .local p1, contentClass:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p1, "contentClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/map/type/CollectionType;->_elementType:Lcom/flurry/org/codehaus/jackson/type/JavaType;
 
     invoke-virtual {v0}, Lcom/flurry/org/codehaus/jackson/type/JavaType;->getRawClass()Ljava/lang/Class;
@@ -236,7 +231,7 @@
 
 .method public bridge synthetic withContentTypeHandler(Ljava/lang/Object;)Lcom/flurry/org/codehaus/jackson/map/type/CollectionLikeType;
     .locals 1
-    .parameter "x0"
+    .param p1, "x0"    # Ljava/lang/Object;
 
     .prologue
     .line 8
@@ -249,7 +244,7 @@
 
 .method public withContentTypeHandler(Ljava/lang/Object;)Lcom/flurry/org/codehaus/jackson/map/type/CollectionType;
     .locals 5
-    .parameter "h"
+    .param p1, "h"    # Ljava/lang/Object;
 
     .prologue
     .line 66
@@ -274,7 +269,7 @@
 
 .method public bridge synthetic withContentTypeHandler(Ljava/lang/Object;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .locals 1
-    .parameter "x0"
+    .param p1, "x0"    # Ljava/lang/Object;
 
     .prologue
     .line 8
@@ -287,7 +282,7 @@
 
 .method public bridge synthetic withContentValueHandler(Ljava/lang/Object;)Lcom/flurry/org/codehaus/jackson/map/type/CollectionLikeType;
     .locals 1
-    .parameter "x0"
+    .param p1, "x0"    # Ljava/lang/Object;
 
     .prologue
     .line 8
@@ -300,7 +295,7 @@
 
 .method public withContentValueHandler(Ljava/lang/Object;)Lcom/flurry/org/codehaus/jackson/map/type/CollectionType;
     .locals 5
-    .parameter "h"
+    .param p1, "h"    # Ljava/lang/Object;
 
     .prologue
     .line 79
@@ -325,7 +320,7 @@
 
 .method public bridge synthetic withContentValueHandler(Ljava/lang/Object;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .locals 1
-    .parameter "x0"
+    .param p1, "x0"    # Ljava/lang/Object;
 
     .prologue
     .line 8
@@ -338,7 +333,7 @@
 
 .method public bridge synthetic withTypeHandler(Ljava/lang/Object;)Lcom/flurry/org/codehaus/jackson/map/type/CollectionLikeType;
     .locals 1
-    .parameter "x0"
+    .param p1, "x0"    # Ljava/lang/Object;
 
     .prologue
     .line 8
@@ -351,7 +346,7 @@
 
 .method public withTypeHandler(Ljava/lang/Object;)Lcom/flurry/org/codehaus/jackson/map/type/CollectionType;
     .locals 4
-    .parameter "h"
+    .param p1, "h"    # Ljava/lang/Object;
 
     .prologue
     .line 59
@@ -370,7 +365,7 @@
 
 .method public bridge synthetic withTypeHandler(Ljava/lang/Object;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .locals 1
-    .parameter "x0"
+    .param p1, "x0"    # Ljava/lang/Object;
 
     .prologue
     .line 8
@@ -383,7 +378,7 @@
 
 .method public bridge synthetic withValueHandler(Ljava/lang/Object;)Lcom/flurry/org/codehaus/jackson/map/type/CollectionLikeType;
     .locals 1
-    .parameter "x0"
+    .param p1, "x0"    # Ljava/lang/Object;
 
     .prologue
     .line 8
@@ -396,7 +391,7 @@
 
 .method public withValueHandler(Ljava/lang/Object;)Lcom/flurry/org/codehaus/jackson/map/type/CollectionType;
     .locals 4
-    .parameter "h"
+    .param p1, "h"    # Ljava/lang/Object;
 
     .prologue
     .line 73
@@ -415,7 +410,7 @@
 
 .method public bridge synthetic withValueHandler(Ljava/lang/Object;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .locals 1
-    .parameter "x0"
+    .param p1, "x0"    # Ljava/lang/Object;
 
     .prologue
     .line 8

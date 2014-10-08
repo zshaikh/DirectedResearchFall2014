@@ -20,12 +20,12 @@
 # direct methods
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;JLjava/lang/String;)V
     .locals 0
-    .parameter "purchaseState"
-    .parameter "purchaseToken"
-    .parameter "productId"
-    .parameter "orderId"
-    .parameter "purchaseTime"
-    .parameter "developerPayload"
+    .param p1, "purchaseState"    # Ljava/lang/String;
+    .param p2, "purchaseToken"    # Ljava/lang/String;
+    .param p3, "productId"    # Ljava/lang/String;
+    .param p4, "orderId"    # Ljava/lang/String;
+    .param p5, "purchaseTime"    # J
+    .param p7, "developerPayload"    # Ljava/lang/String;
 
     .prologue
     .line 14
@@ -117,7 +117,7 @@
 
 .method public setDeveloperPayload(Ljava/lang/String;)V
     .locals 0
-    .parameter "developerPayload"
+    .param p1, "developerPayload"    # Ljava/lang/String;
 
     .prologue
     .line 68
@@ -129,7 +129,7 @@
 
 .method public setOrderId(Ljava/lang/String;)V
     .locals 0
-    .parameter "orderId"
+    .param p1, "orderId"    # Ljava/lang/String;
 
     .prologue
     .line 52
@@ -141,7 +141,7 @@
 
 .method public setProductId(Ljava/lang/String;)V
     .locals 0
-    .parameter "productId"
+    .param p1, "productId"    # Ljava/lang/String;
 
     .prologue
     .line 44
@@ -153,7 +153,7 @@
 
 .method public setPurchaseState(Ljava/lang/String;)V
     .locals 0
-    .parameter "purchaseState"
+    .param p1, "purchaseState"    # Ljava/lang/String;
 
     .prologue
     .line 28
@@ -165,7 +165,7 @@
 
 .method public setPurchaseTime(J)V
     .locals 0
-    .parameter "purchaseTime"
+    .param p1, "purchaseTime"    # J
 
     .prologue
     .line 60
@@ -177,7 +177,7 @@
 
 .method public setPurchaseToken(Ljava/lang/String;)V
     .locals 0
-    .parameter "purchaseToken"
+    .param p1, "purchaseToken"    # Ljava/lang/String;
 
     .prologue
     .line 36
@@ -271,7 +271,7 @@
     move-result-object v0
 
     .line 80
-    .local v0, buf:Ljava/lang/StringBuilder;
+    .local v0, "buf":Ljava/lang/StringBuilder;
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1

@@ -21,7 +21,6 @@
 # direct methods
 .method constructor <init>(Lcom/tapjoy/mraid/view/MraidView;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 652
@@ -36,7 +35,7 @@
 # virtual methods
 .method public handleMessage(Landroid/os/Message;)V
     .locals 12
-    .parameter "msg"
+    .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
     const-string v11, "resize_width"
@@ -55,7 +54,7 @@
     move-result-object v1
 
     .line 658
-    .local v1, data:Landroid/os/Bundle;
+    .local v1, "data":Landroid/os/Bundle;
     iget v5, p1, Landroid/os/Message;->what:I
 
     packed-switch v5, :pswitch_data_0
@@ -72,7 +71,7 @@
     :pswitch_0
     iget-object v5, p0, Lcom/tapjoy/mraid/view/MraidView$2;->this$0:Lcom/tapjoy/mraid/view/MraidView;
 
-    #getter for: Lcom/tapjoy/mraid/view/MraidView;->mListener:Lcom/tapjoy/mraid/listener/MraidViewListener;
+    # getter for: Lcom/tapjoy/mraid/view/MraidView;->mListener:Lcom/tapjoy/mraid/listener/MraidViewListener;
     invoke-static {v5}, Lcom/tapjoy/mraid/view/MraidView;->access$200(Lcom/tapjoy/mraid/view/MraidView;)Lcom/tapjoy/mraid/listener/MraidViewListener;
 
     move-result-object v5
@@ -82,7 +81,7 @@
     .line 662
     iget-object v5, p0, Lcom/tapjoy/mraid/view/MraidView$2;->this$0:Lcom/tapjoy/mraid/view/MraidView;
 
-    #getter for: Lcom/tapjoy/mraid/view/MraidView;->mListener:Lcom/tapjoy/mraid/listener/MraidViewListener;
+    # getter for: Lcom/tapjoy/mraid/view/MraidView;->mListener:Lcom/tapjoy/mraid/listener/MraidViewListener;
     invoke-static {v5}, Lcom/tapjoy/mraid/view/MraidView;->access$200(Lcom/tapjoy/mraid/view/MraidView;)Lcom/tapjoy/mraid/listener/MraidViewListener;
 
     move-result-object v5
@@ -102,7 +101,7 @@
     check-cast v3, Landroid/view/ViewGroup$MarginLayoutParams;
 
     .line 670
-    .local v3, lp:Landroid/view/ViewGroup$MarginLayoutParams;
+    .local v3, "lp":Landroid/view/ViewGroup$MarginLayoutParams;
     if-eqz v3, :cond_1
 
     .line 672
@@ -115,7 +114,7 @@
 
     sget-object v6, Lcom/tapjoy/mraid/view/MraidView$VIEW_STATE;->RESIZED:Lcom/tapjoy/mraid/view/MraidView$VIEW_STATE;
 
-    #setter for: Lcom/tapjoy/mraid/view/MraidView;->mViewState:Lcom/tapjoy/mraid/view/MraidView$VIEW_STATE;
+    # setter for: Lcom/tapjoy/mraid/view/MraidView;->mViewState:Lcom/tapjoy/mraid/view/MraidView$VIEW_STATE;
     invoke-static {v5, v6}, Lcom/tapjoy/mraid/view/MraidView;->access$302(Lcom/tapjoy/mraid/view/MraidView;Lcom/tapjoy/mraid/view/MraidView$VIEW_STATE;)Lcom/tapjoy/mraid/view/MraidView$VIEW_STATE;
 
     .line 675
@@ -244,7 +243,7 @@
     move-result-object v2
 
     .line 690
-    .local v2, injection:Ljava/lang/String;
+    .local v2, "injection":Ljava/lang/String;
     iget-object v5, p0, Lcom/tapjoy/mraid/view/MraidView$2;->this$0:Lcom/tapjoy/mraid/view/MraidView;
 
     invoke-virtual {v5, v2}, Lcom/tapjoy/mraid/view/MraidView;->injectMraidJavaScript(Ljava/lang/String;)V
@@ -263,7 +262,7 @@
 
     move-result-object v6
 
-    #calls: Lcom/tapjoy/mraid/view/MraidView;->repositionCloseButton(Ljava/lang/String;)V
+    # invokes: Lcom/tapjoy/mraid/view/MraidView;->repositionCloseButton(Ljava/lang/String;)V
     invoke-static {v5, v6}, Lcom/tapjoy/mraid/view/MraidView;->access$400(Lcom/tapjoy/mraid/view/MraidView;Ljava/lang/String;)V
 
     .line 695
@@ -272,11 +271,11 @@
     invoke-virtual {v5}, Lcom/tapjoy/mraid/view/MraidView;->showCloseImageButton()V
 
     .line 698
-    .end local v2           #injection:Ljava/lang/String;
+    .end local v2    # "injection":Ljava/lang/String;
     :cond_1
     iget-object v5, p0, Lcom/tapjoy/mraid/view/MraidView$2;->this$0:Lcom/tapjoy/mraid/view/MraidView;
 
-    #getter for: Lcom/tapjoy/mraid/view/MraidView;->mListener:Lcom/tapjoy/mraid/listener/MraidViewListener;
+    # getter for: Lcom/tapjoy/mraid/view/MraidView;->mListener:Lcom/tapjoy/mraid/listener/MraidViewListener;
     invoke-static {v5}, Lcom/tapjoy/mraid/view/MraidView;->access$200(Lcom/tapjoy/mraid/view/MraidView;)Lcom/tapjoy/mraid/listener/MraidViewListener;
 
     move-result-object v5
@@ -286,7 +285,7 @@
     .line 699
     iget-object v5, p0, Lcom/tapjoy/mraid/view/MraidView$2;->this$0:Lcom/tapjoy/mraid/view/MraidView;
 
-    #getter for: Lcom/tapjoy/mraid/view/MraidView;->mListener:Lcom/tapjoy/mraid/listener/MraidViewListener;
+    # getter for: Lcom/tapjoy/mraid/view/MraidView;->mListener:Lcom/tapjoy/mraid/listener/MraidViewListener;
     invoke-static {v5}, Lcom/tapjoy/mraid/view/MraidView;->access$200(Lcom/tapjoy/mraid/view/MraidView;)Lcom/tapjoy/mraid/listener/MraidViewListener;
 
     move-result-object v5
@@ -296,7 +295,7 @@
     goto/16 :goto_0
 
     .line 706
-    .end local v3           #lp:Landroid/view/ViewGroup$MarginLayoutParams;
+    .end local v3    # "lp":Landroid/view/ViewGroup$MarginLayoutParams;
     :pswitch_2
     iget-object v5, p0, Lcom/tapjoy/mraid/view/MraidView$2;->this$0:Lcom/tapjoy/mraid/view/MraidView;
 
@@ -307,7 +306,7 @@
     check-cast v3, Landroid/view/ViewGroup$MarginLayoutParams;
 
     .line 709
-    .restart local v3       #lp:Landroid/view/ViewGroup$MarginLayoutParams;
+    .restart local v3    # "lp":Landroid/view/ViewGroup$MarginLayoutParams;
     if-eqz v3, :cond_2
 
     .line 711
@@ -376,7 +375,7 @@
 
     iget-object v7, p0, Lcom/tapjoy/mraid/view/MraidView$2;->this$0:Lcom/tapjoy/mraid/view/MraidView;
 
-    #getter for: Lcom/tapjoy/mraid/view/MraidView;->mDensity:F
+    # getter for: Lcom/tapjoy/mraid/view/MraidView;->mDensity:F
     invoke-static {v7}, Lcom/tapjoy/mraid/view/MraidView;->access$500(Lcom/tapjoy/mraid/view/MraidView;)F
 
     move-result v7
@@ -407,7 +406,7 @@
 
     iget-object v7, p0, Lcom/tapjoy/mraid/view/MraidView$2;->this$0:Lcom/tapjoy/mraid/view/MraidView;
 
-    #getter for: Lcom/tapjoy/mraid/view/MraidView;->mDensity:F
+    # getter for: Lcom/tapjoy/mraid/view/MraidView;->mDensity:F
     invoke-static {v7}, Lcom/tapjoy/mraid/view/MraidView;->access$500(Lcom/tapjoy/mraid/view/MraidView;)F
 
     move-result v7
@@ -437,7 +436,7 @@
     move-result-object v2
 
     .line 724
-    .restart local v2       #injection:Ljava/lang/String;
+    .restart local v2    # "injection":Ljava/lang/String;
     const-string v5, "MRAIDView"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -479,13 +478,13 @@
 
     move-result-object v6
 
-    #calls: Lcom/tapjoy/mraid/view/MraidView;->repositionCloseButton(Ljava/lang/String;)V
+    # invokes: Lcom/tapjoy/mraid/view/MraidView;->repositionCloseButton(Ljava/lang/String;)V
     invoke-static {v5, v6}, Lcom/tapjoy/mraid/view/MraidView;->access$400(Lcom/tapjoy/mraid/view/MraidView;Ljava/lang/String;)V
 
     .line 730
     iget-object v5, p0, Lcom/tapjoy/mraid/view/MraidView$2;->this$0:Lcom/tapjoy/mraid/view/MraidView;
 
-    #getter for: Lcom/tapjoy/mraid/view/MraidView;->placement:Lcom/tapjoy/mraid/view/MraidView$PLACEMENT_TYPE;
+    # getter for: Lcom/tapjoy/mraid/view/MraidView;->placement:Lcom/tapjoy/mraid/view/MraidView$PLACEMENT_TYPE;
     invoke-static {v5}, Lcom/tapjoy/mraid/view/MraidView;->access$600(Lcom/tapjoy/mraid/view/MraidView;)Lcom/tapjoy/mraid/view/MraidView$PLACEMENT_TYPE;
 
     move-result-object v5
@@ -496,7 +495,7 @@
 
     iget-object v5, p0, Lcom/tapjoy/mraid/view/MraidView$2;->this$0:Lcom/tapjoy/mraid/view/MraidView;
 
-    #getter for: Lcom/tapjoy/mraid/view/MraidView;->closeButtonState:Lcom/tapjoy/mraid/view/MraidView$customCloseState;
+    # getter for: Lcom/tapjoy/mraid/view/MraidView;->closeButtonState:Lcom/tapjoy/mraid/view/MraidView$customCloseState;
     invoke-static {v5}, Lcom/tapjoy/mraid/view/MraidView;->access$700(Lcom/tapjoy/mraid/view/MraidView;)Lcom/tapjoy/mraid/view/MraidView$customCloseState;
 
     move-result-object v5
@@ -511,11 +510,11 @@
     invoke-virtual {v5}, Lcom/tapjoy/mraid/view/MraidView;->showCloseImageButton()V
 
     .line 735
-    .end local v2           #injection:Ljava/lang/String;
+    .end local v2    # "injection":Ljava/lang/String;
     :cond_2
     iget-object v5, p0, Lcom/tapjoy/mraid/view/MraidView$2;->this$0:Lcom/tapjoy/mraid/view/MraidView;
 
-    #getter for: Lcom/tapjoy/mraid/view/MraidView;->mListener:Lcom/tapjoy/mraid/listener/MraidViewListener;
+    # getter for: Lcom/tapjoy/mraid/view/MraidView;->mListener:Lcom/tapjoy/mraid/listener/MraidViewListener;
     invoke-static {v5}, Lcom/tapjoy/mraid/view/MraidView;->access$200(Lcom/tapjoy/mraid/view/MraidView;)Lcom/tapjoy/mraid/listener/MraidViewListener;
 
     move-result-object v5
@@ -525,7 +524,7 @@
     .line 736
     iget-object v5, p0, Lcom/tapjoy/mraid/view/MraidView$2;->this$0:Lcom/tapjoy/mraid/view/MraidView;
 
-    #getter for: Lcom/tapjoy/mraid/view/MraidView;->mListener:Lcom/tapjoy/mraid/listener/MraidViewListener;
+    # getter for: Lcom/tapjoy/mraid/view/MraidView;->mListener:Lcom/tapjoy/mraid/listener/MraidViewListener;
     invoke-static {v5}, Lcom/tapjoy/mraid/view/MraidView;->access$200(Lcom/tapjoy/mraid/view/MraidView;)Lcom/tapjoy/mraid/listener/MraidViewListener;
 
     move-result-object v5
@@ -535,13 +534,13 @@
     goto/16 :goto_0
 
     .line 742
-    .end local v3           #lp:Landroid/view/ViewGroup$MarginLayoutParams;
+    .end local v3    # "lp":Landroid/view/ViewGroup$MarginLayoutParams;
     :pswitch_3
     sget-object v5, Lcom/tapjoy/mraid/view/MraidView$7;->$SwitchMap$com$tapjoy$mraid$view$MraidView$VIEW_STATE:[I
 
     iget-object v6, p0, Lcom/tapjoy/mraid/view/MraidView$2;->this$0:Lcom/tapjoy/mraid/view/MraidView;
 
-    #getter for: Lcom/tapjoy/mraid/view/MraidView;->mViewState:Lcom/tapjoy/mraid/view/MraidView$VIEW_STATE;
+    # getter for: Lcom/tapjoy/mraid/view/MraidView;->mViewState:Lcom/tapjoy/mraid/view/MraidView$VIEW_STATE;
     invoke-static {v6}, Lcom/tapjoy/mraid/view/MraidView;->access$300(Lcom/tapjoy/mraid/view/MraidView;)Lcom/tapjoy/mraid/view/MraidView$VIEW_STATE;
 
     move-result-object v6
@@ -560,7 +559,7 @@
     :pswitch_4
     iget-object v5, p0, Lcom/tapjoy/mraid/view/MraidView$2;->this$0:Lcom/tapjoy/mraid/view/MraidView;
 
-    #calls: Lcom/tapjoy/mraid/view/MraidView;->closeResized()V
+    # invokes: Lcom/tapjoy/mraid/view/MraidView;->closeResized()V
     invoke-static {v5}, Lcom/tapjoy/mraid/view/MraidView;->access$800(Lcom/tapjoy/mraid/view/MraidView;)V
 
     goto/16 :goto_0
@@ -577,7 +576,7 @@
     :pswitch_6
     iget-object v5, p0, Lcom/tapjoy/mraid/view/MraidView$2;->this$0:Lcom/tapjoy/mraid/view/MraidView;
 
-    #getter for: Lcom/tapjoy/mraid/view/MraidView;->placement:Lcom/tapjoy/mraid/view/MraidView$PLACEMENT_TYPE;
+    # getter for: Lcom/tapjoy/mraid/view/MraidView;->placement:Lcom/tapjoy/mraid/view/MraidView$PLACEMENT_TYPE;
     invoke-static {v5}, Lcom/tapjoy/mraid/view/MraidView;->access$600(Lcom/tapjoy/mraid/view/MraidView;)Lcom/tapjoy/mraid/view/MraidView$PLACEMENT_TYPE;
 
     move-result-object v5
@@ -589,7 +588,7 @@
     .line 752
     iget-object v5, p0, Lcom/tapjoy/mraid/view/MraidView$2;->this$0:Lcom/tapjoy/mraid/view/MraidView;
 
-    #calls: Lcom/tapjoy/mraid/view/MraidView;->closeWindow()V
+    # invokes: Lcom/tapjoy/mraid/view/MraidView;->closeWindow()V
     invoke-static {v5}, Lcom/tapjoy/mraid/view/MraidView;->access$900(Lcom/tapjoy/mraid/view/MraidView;)V
 
     goto/16 :goto_0
@@ -606,7 +605,7 @@
     const-string v2, "window.mraidview.fireChangeEvent({ state: \'hidden\' });"
 
     .line 761
-    .restart local v2       #injection:Ljava/lang/String;
+    .restart local v2    # "injection":Ljava/lang/String;
     iget-object v5, p0, Lcom/tapjoy/mraid/view/MraidView$2;->this$0:Lcom/tapjoy/mraid/view/MraidView;
 
     invoke-virtual {v5, v2}, Lcom/tapjoy/mraid/view/MraidView;->injectMraidJavaScript(Ljava/lang/String;)V
@@ -614,12 +613,12 @@
     goto/16 :goto_0
 
     .line 767
-    .end local v2           #injection:Ljava/lang/String;
+    .end local v2    # "injection":Ljava/lang/String;
     :pswitch_8
     const-string v2, "window.mraidview.fireChangeEvent({ state: \'default\' });"
 
     .line 768
-    .restart local v2       #injection:Ljava/lang/String;
+    .restart local v2    # "injection":Ljava/lang/String;
     iget-object v5, p0, Lcom/tapjoy/mraid/view/MraidView$2;->this$0:Lcom/tapjoy/mraid/view/MraidView;
 
     invoke-virtual {v5, v2}, Lcom/tapjoy/mraid/view/MraidView;->injectMraidJavaScript(Ljava/lang/String;)V
@@ -634,11 +633,11 @@
     goto/16 :goto_0
 
     .line 775
-    .end local v2           #injection:Ljava/lang/String;
+    .end local v2    # "injection":Ljava/lang/String;
     :pswitch_9
     iget-object v5, p0, Lcom/tapjoy/mraid/view/MraidView$2;->this$0:Lcom/tapjoy/mraid/view/MraidView;
 
-    #calls: Lcom/tapjoy/mraid/view/MraidView;->doExpand(Landroid/os/Bundle;)V
+    # invokes: Lcom/tapjoy/mraid/view/MraidView;->doExpand(Landroid/os/Bundle;)V
     invoke-static {v5, v1}, Lcom/tapjoy/mraid/view/MraidView;->access$1000(Lcom/tapjoy/mraid/view/MraidView;Landroid/os/Bundle;)V
 
     goto/16 :goto_0
@@ -649,7 +648,7 @@
 
     sget-object v6, Lcom/tapjoy/mraid/view/MraidView$VIEW_STATE;->LEFT_BEHIND:Lcom/tapjoy/mraid/view/MraidView$VIEW_STATE;
 
-    #setter for: Lcom/tapjoy/mraid/view/MraidView;->mViewState:Lcom/tapjoy/mraid/view/MraidView$VIEW_STATE;
+    # setter for: Lcom/tapjoy/mraid/view/MraidView;->mViewState:Lcom/tapjoy/mraid/view/MraidView$VIEW_STATE;
     invoke-static {v5, v6}, Lcom/tapjoy/mraid/view/MraidView;->access$302(Lcom/tapjoy/mraid/view/MraidView;Lcom/tapjoy/mraid/view/MraidView$VIEW_STATE;)Lcom/tapjoy/mraid/view/MraidView$VIEW_STATE;
 
     goto/16 :goto_0
@@ -679,7 +678,7 @@
     move-result-object v4
 
     .line 800
-    .local v4, strMsg:Ljava/lang/String;
+    .local v4, "strMsg":Ljava/lang/String;
     const-string v5, "action"
 
     invoke-virtual {v1, v5}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -687,7 +686,7 @@
     move-result-object v0
 
     .line 801
-    .local v0, action:Ljava/lang/String;
+    .local v0, "action":Ljava/lang/String;
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -723,7 +722,7 @@
     move-result-object v2
 
     .line 803
-    .restart local v2       #injection:Ljava/lang/String;
+    .restart local v2    # "injection":Ljava/lang/String;
     iget-object v5, p0, Lcom/tapjoy/mraid/view/MraidView$2;->this$0:Lcom/tapjoy/mraid/view/MraidView;
 
     invoke-virtual {v5, v2}, Lcom/tapjoy/mraid/view/MraidView;->injectMraidJavaScript(Ljava/lang/String;)V

@@ -9,7 +9,7 @@
 
 .field private static final HASH_ALGORITHM_MD5:Ljava/lang/String; = "MD5"
 
-.field private static final LOCK:Ljava/lang/Object; = null
+.field private static final LOCK:Ljava/lang/Object;
 
 .field static final LOG_TAG:Ljava/lang/String; = "FacebookSDK"
 

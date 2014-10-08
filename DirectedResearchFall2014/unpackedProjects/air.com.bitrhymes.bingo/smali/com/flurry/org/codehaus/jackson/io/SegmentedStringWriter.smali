@@ -10,7 +10,7 @@
 # direct methods
 .method public constructor <init>(Lcom/flurry/org/codehaus/jackson/util/BufferRecycler;)V
     .locals 1
-    .parameter "br"
+    .param p1, "br"    # Lcom/flurry/org/codehaus/jackson/util/BufferRecycler;
 
     .prologue
     .line 25
@@ -31,7 +31,7 @@
 # virtual methods
 .method public append(C)Ljava/io/Writer;
     .locals 0
-    .parameter "c"
+    .param p1, "c"    # C
 
     .prologue
     .line 38
@@ -43,7 +43,7 @@
 
 .method public append(Ljava/lang/CharSequence;)Ljava/io/Writer;
     .locals 4
-    .parameter "csq"
+    .param p1, "csq"    # Ljava/lang/CharSequence;
 
     .prologue
     .line 45
@@ -52,7 +52,7 @@
     move-result-object v0
 
     .line 46
-    .local v0, str:Ljava/lang/String;
+    .local v0, "str":Ljava/lang/String;
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/io/SegmentedStringWriter;->_buffer:Lcom/flurry/org/codehaus/jackson/util/TextBuffer;
 
     const/4 v2, 0x0
@@ -69,9 +69,9 @@
 
 .method public append(Ljava/lang/CharSequence;II)Ljava/io/Writer;
     .locals 4
-    .parameter "csq"
-    .parameter "start"
-    .parameter "end"
+    .param p1, "csq"    # Ljava/lang/CharSequence;
+    .param p2, "start"    # I
+    .param p3, "end"    # I
 
     .prologue
     .line 53
@@ -84,7 +84,7 @@
     move-result-object v0
 
     .line 54
-    .local v0, str:Ljava/lang/String;
+    .local v0, "str":Ljava/lang/String;
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/io/SegmentedStringWriter;->_buffer:Lcom/flurry/org/codehaus/jackson/util/TextBuffer;
 
     const/4 v2, 0x0
@@ -101,7 +101,7 @@
 
 .method public bridge synthetic append(C)Ljava/lang/Appendable;
     .locals 1
-    .parameter "x0"
+    .param p1, "x0"    # C
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -119,7 +119,7 @@
 
 .method public bridge synthetic append(Ljava/lang/CharSequence;)Ljava/lang/Appendable;
     .locals 1
-    .parameter "x0"
+    .param p1, "x0"    # Ljava/lang/CharSequence;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -137,9 +137,9 @@
 
 .method public bridge synthetic append(Ljava/lang/CharSequence;II)Ljava/lang/Appendable;
     .locals 1
-    .parameter "x0"
-    .parameter "x1"
-    .parameter "x2"
+    .param p1, "x0"    # Ljava/lang/CharSequence;
+    .param p2, "x1"    # I
+    .param p3, "x2"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -183,7 +183,7 @@
     move-result-object v0
 
     .line 101
-    .local v0, result:Ljava/lang/String;
+    .local v0, "result":Ljava/lang/String;
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/io/SegmentedStringWriter;->_buffer:Lcom/flurry/org/codehaus/jackson/util/TextBuffer;
 
     invoke-virtual {v1}, Lcom/flurry/org/codehaus/jackson/util/TextBuffer;->releaseBuffers()V
@@ -194,7 +194,7 @@
 
 .method public write(I)V
     .locals 2
-    .parameter "c"
+    .param p1, "c"    # I
 
     .prologue
     .line 74
@@ -210,7 +210,7 @@
 
 .method public write(Ljava/lang/String;)V
     .locals 3
-    .parameter "str"
+    .param p1, "str"    # Ljava/lang/String;
 
     .prologue
     .line 78
@@ -229,9 +229,9 @@
 
 .method public write(Ljava/lang/String;II)V
     .locals 3
-    .parameter "str"
-    .parameter "off"
-    .parameter "len"
+    .param p1, "str"    # Ljava/lang/String;
+    .param p2, "off"    # I
+    .param p3, "len"    # I
 
     .prologue
     .line 82
@@ -251,7 +251,7 @@
 
 .method public write([C)V
     .locals 3
-    .parameter "cbuf"
+    .param p1, "cbuf"    # [C
 
     .prologue
     .line 64
@@ -269,9 +269,9 @@
 
 .method public write([CII)V
     .locals 1
-    .parameter "cbuf"
-    .parameter "off"
-    .parameter "len"
+    .param p1, "cbuf"    # [C
+    .param p2, "off"    # I
+    .param p3, "len"    # I
 
     .prologue
     .line 69

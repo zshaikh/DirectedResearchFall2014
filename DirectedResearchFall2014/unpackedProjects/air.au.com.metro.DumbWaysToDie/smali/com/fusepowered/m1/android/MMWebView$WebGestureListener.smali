@@ -30,7 +30,7 @@
 # direct methods
 .method public constructor <init>(Lcom/fusepowered/m1/android/MMWebView;)V
     .locals 1
-    .parameter "webView"
+    .param p1, "webView"    # Lcom/fusepowered/m1/android/MMWebView;
 
     .prologue
     .line 134
@@ -51,7 +51,7 @@
 # virtual methods
 .method public onSingleTapConfirmed(Landroid/view/MotionEvent;)Z
     .locals 3
-    .parameter "e"
+    .param p1, "e"    # Landroid/view/MotionEvent;
 
     .prologue
     .line 125
@@ -64,7 +64,7 @@
     check-cast v0, Lcom/fusepowered/m1/android/MMWebView;
 
     .line 126
-    .local v0, webView:Lcom/fusepowered/m1/android/MMWebView;
+    .local v0, "webView":Lcom/fusepowered/m1/android/MMWebView;
     if-eqz v0, :cond_0
 
     .line 127

@@ -21,8 +21,8 @@
 # virtual methods
 .method public call(Lcom/adobe/fre/FREContext;[Lcom/adobe/fre/FREObject;)Lcom/adobe/fre/FREObject;
     .locals 8
-    .parameter "freContext"
-    .parameter "arg1"
+    .param p1, "freContext"    # Lcom/adobe/fre/FREContext;
+    .param p2, "arg1"    # [Lcom/adobe/fre/FREObject;
 
     .prologue
     const-string v7, "ERROR_EVENT"
@@ -40,7 +40,7 @@
     move-result-object v1
 
     .line 19
-    .local v1, key:Ljava/lang/String;
+    .local v1, "key":Ljava/lang/String;
     const/4 v4, 0x1
 
     aget-object v4, p2, v4
@@ -50,13 +50,13 @@
     move-result-object v3
 
     .line 20
-    .local v3, value:Ljava/lang/String;
+    .local v3, "value":Ljava/lang/String;
     new-instance v2, Ljava/util/HashMap;
 
     invoke-direct {v2}, Ljava/util/HashMap;-><init>()V
 
     .line 21
-    .local v2, mapObj:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v2, "mapObj":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-virtual {v2, v1, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 23
@@ -69,9 +69,9 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_4
 
     .line 41
-    .end local v1           #key:Ljava/lang/String;
-    .end local v2           #mapObj:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
-    .end local v3           #value:Ljava/lang/String;
+    .end local v1    # "key":Ljava/lang/String;
+    .end local v2    # "mapObj":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .end local v3    # "value":Ljava/lang/String;
     :goto_0
     const/4 v4, 0x0
 
@@ -84,7 +84,7 @@
     move-object v0, v4
 
     .line 26
-    .local v0, e:Ljava/lang/IllegalStateException;
+    .local v0, "e":Ljava/lang/IllegalStateException;
     invoke-virtual {v0}, Ljava/lang/IllegalStateException;->printStackTrace()V
 
     .line 27
@@ -153,14 +153,14 @@
     goto :goto_0
 
     .line 28
-    .end local v0           #e:Ljava/lang/IllegalStateException;
+    .end local v0    # "e":Ljava/lang/IllegalStateException;
     :catch_1
     move-exception v4
 
     move-object v0, v4
 
     .line 29
-    .local v0, e:Lcom/adobe/fre/FRETypeMismatchException;
+    .local v0, "e":Lcom/adobe/fre/FRETypeMismatchException;
     invoke-virtual {v0}, Lcom/adobe/fre/FRETypeMismatchException;->printStackTrace()V
 
     .line 30
@@ -229,14 +229,14 @@
     goto/16 :goto_0
 
     .line 31
-    .end local v0           #e:Lcom/adobe/fre/FRETypeMismatchException;
+    .end local v0    # "e":Lcom/adobe/fre/FRETypeMismatchException;
     :catch_2
     move-exception v4
 
     move-object v0, v4
 
     .line 32
-    .local v0, e:Lcom/adobe/fre/FREInvalidObjectException;
+    .local v0, "e":Lcom/adobe/fre/FREInvalidObjectException;
     invoke-virtual {v0}, Lcom/adobe/fre/FREInvalidObjectException;->printStackTrace()V
 
     .line 33
@@ -305,14 +305,14 @@
     goto/16 :goto_0
 
     .line 34
-    .end local v0           #e:Lcom/adobe/fre/FREInvalidObjectException;
+    .end local v0    # "e":Lcom/adobe/fre/FREInvalidObjectException;
     :catch_3
     move-exception v4
 
     move-object v0, v4
 
     .line 35
-    .local v0, e:Lcom/adobe/fre/FREWrongThreadException;
+    .local v0, "e":Lcom/adobe/fre/FREWrongThreadException;
     invoke-virtual {v0}, Lcom/adobe/fre/FREWrongThreadException;->printStackTrace()V
 
     .line 36
@@ -381,14 +381,14 @@
     goto/16 :goto_0
 
     .line 37
-    .end local v0           #e:Lcom/adobe/fre/FREWrongThreadException;
+    .end local v0    # "e":Lcom/adobe/fre/FREWrongThreadException;
     :catch_4
     move-exception v4
 
     move-object v0, v4
 
     .line 38
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     .line 39

@@ -21,7 +21,6 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/a1/ApplifierImpact$ApplifierImpactCloseRunner;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1
@@ -35,7 +34,6 @@
 
 .method static synthetic access$0(Lcom/fusepowered/a1/ApplifierImpact$ApplifierImpactCloseRunner$1;)Lcom/fusepowered/a1/ApplifierImpact$ApplifierImpactCloseRunner;
     .locals 1
-    .parameter
 
     .prologue
     .line 777

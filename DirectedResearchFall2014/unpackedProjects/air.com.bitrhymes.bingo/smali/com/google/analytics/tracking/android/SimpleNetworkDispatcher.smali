@@ -21,9 +21,9 @@
 # direct methods
 .method constructor <init>(Lcom/google/analytics/tracking/android/AnalyticsStore;Lcom/google/analytics/tracking/android/HttpClientFactory;Landroid/content/Context;)V
     .locals 0
-    .parameter "store"
-    .parameter "httpClientFactory"
-    .parameter "ctx"
+    .param p1, "store"    # Lcom/google/analytics/tracking/android/AnalyticsStore;
+    .param p2, "httpClientFactory"    # Lcom/google/analytics/tracking/android/HttpClientFactory;
+    .param p3, "ctx"    # Landroid/content/Context;
 
     .prologue
     .line 48
@@ -35,8 +35,8 @@
 
 .method constructor <init>(Lcom/google/analytics/tracking/android/HttpClientFactory;Landroid/content/Context;)V
     .locals 7
-    .parameter "httpClientFactory"
-    .parameter "ctx"
+    .param p1, "httpClientFactory"    # Lcom/google/analytics/tracking/android/HttpClientFactory;
+    .param p2, "ctx"    # Landroid/content/Context;
 
     .prologue
     .line 51
@@ -85,8 +85,8 @@
 
 .method private buildRequest(Ljava/lang/String;Ljava/lang/String;)Lorg/apache/http/HttpEntityEnclosingRequest;
     .locals 6
-    .parameter "params"
-    .parameter "path"
+    .param p1, "params"    # Ljava/lang/String;
+    .param p2, "path"    # Ljava/lang/String;
 
     .prologue
     const/4 v5, 0x0
@@ -134,7 +134,7 @@
     move-result-object v1
 
     .line 161
-    .local v1, full:Ljava/lang/String;
+    .local v1, "full":Ljava/lang/String;
     invoke-virtual {v1}, Ljava/lang/String;->length()I
 
     move-result v3
@@ -151,7 +151,7 @@
     invoke-direct {v2, v3, v1}, Lorg/apache/http/message/BasicHttpEntityEnclosingRequest;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 173
-    .local v2, request:Lorg/apache/http/HttpEntityEnclosingRequest;
+    .local v2, "request":Lorg/apache/http/HttpEntityEnclosingRequest;
     :goto_1
     const-string v3, "User-Agent"
 
@@ -165,7 +165,7 @@
     goto :goto_0
 
     .line 164
-    .end local v2           #request:Lorg/apache/http/HttpEntityEnclosingRequest;
+    .end local v2    # "request":Lorg/apache/http/HttpEntityEnclosingRequest;
     :cond_1
     new-instance v2, Lorg/apache/http/message/BasicHttpEntityEnclosingRequest;
 
@@ -174,7 +174,7 @@
     invoke-direct {v2, v3, p2}, Lorg/apache/http/message/BasicHttpEntityEnclosingRequest;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 166
-    .restart local v2       #request:Lorg/apache/http/HttpEntityEnclosingRequest;
+    .restart local v2    # "request":Lorg/apache/http/HttpEntityEnclosingRequest;
     :try_start_0
     new-instance v3, Lorg/apache/http/entity/StringEntity;
 
@@ -193,7 +193,7 @@
     move-object v0, v3
 
     .line 169
-    .local v0, e:Ljava/io/UnsupportedEncodingException;
+    .local v0, "e":Ljava/io/UnsupportedEncodingException;
     const-string v3, "Encoding error, discarding hit"
 
     invoke-static {v3}, Lcom/google/analytics/tracking/android/Log;->w(Ljava/lang/String;)I
@@ -206,7 +206,7 @@
 
 .method private getUrl(Lcom/google/analytics/tracking/android/Hit;)Ljava/net/URL;
     .locals 5
-    .parameter "hit"
+    .param p1, "hit"    # Lcom/google/analytics/tracking/android/Hit;
 
     .prologue
     const/4 v4, 0x0
@@ -250,7 +250,7 @@
     move-object v0, v2
 
     .line 233
-    .local v0, e:Ljava/net/MalformedURLException;
+    .local v0, "e":Ljava/net/MalformedURLException;
     :try_start_1
     new-instance v2, Ljava/net/URL;
 
@@ -268,7 +268,7 @@
 
     move-object v1, v2
 
-    .local v1, e1:Ljava/net/MalformedURLException;
+    .local v1, "e1":Ljava/net/MalformedURLException;
     move-object v2, v4
 
     .line 235
@@ -277,8 +277,8 @@
 
 .method private logDebugInformation(ZLorg/apache/http/HttpEntityEnclosingRequest;)V
     .locals 12
-    .parameter "debug"
-    .parameter "request"
+    .param p1, "debug"    # Z
+    .param p2, "request"    # Lorg/apache/http/HttpEntityEnclosingRequest;
 
     .prologue
     const-string v11, "\n"
@@ -292,25 +292,25 @@
     invoke-direct {v5}, Ljava/lang/StringBuffer;-><init>()V
 
     .line 186
-    .local v5, httpHeaders:Ljava/lang/StringBuffer;
+    .local v5, "httpHeaders":Ljava/lang/StringBuffer;
     invoke-interface {p2}, Lorg/apache/http/HttpEntityEnclosingRequest;->getAllHeaders()[Lorg/apache/http/Header;
 
     move-result-object v0
 
-    .local v0, arr$:[Lorg/apache/http/Header;
+    .local v0, "arr$":[Lorg/apache/http/Header;
     array-length v8, v0
 
-    .local v8, len$:I
+    .local v8, "len$":I
     const/4 v6, 0x0
 
-    .local v6, i$:I
+    .local v6, "i$":I
     :goto_0
     if-ge v6, v8, :cond_0
 
     aget-object v4, v0, v6
 
     .line 187
-    .local v4, header:Lorg/apache/http/Header;
+    .local v4, "header":Lorg/apache/http/Header;
     invoke-virtual {v4}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v9
@@ -329,7 +329,7 @@
     goto :goto_0
 
     .line 189
-    .end local v4           #header:Lorg/apache/http/Header;
+    .end local v4    # "header":Lorg/apache/http/Header;
     :cond_0
     invoke-interface {p2}, Lorg/apache/http/HttpEntityEnclosingRequest;->getRequestLine()Lorg/apache/http/RequestLine;
 
@@ -365,7 +365,7 @@
     move-result-object v7
 
     .line 193
-    .local v7, is:Ljava/io/InputStream;
+    .local v7, "is":Ljava/io/InputStream;
     if-eqz v7, :cond_1
 
     .line 194
@@ -374,14 +374,14 @@
     move-result v1
 
     .line 195
-    .local v1, avail:I
+    .local v1, "avail":I
     if-lez v1, :cond_1
 
     .line 196
     new-array v2, v1, [B
 
     .line 197
-    .local v2, b:[B
+    .local v2, "b":[B
     invoke-virtual {v7, v2}, Ljava/io/InputStream;->read([B)I
 
     .line 198
@@ -405,9 +405,9 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 206
-    .end local v1           #avail:I
-    .end local v2           #b:[B
-    .end local v7           #is:Ljava/io/InputStream;
+    .end local v1    # "avail":I
+    .end local v2    # "b":[B
+    .end local v7    # "is":Ljava/io/InputStream;
     :cond_1
     :goto_1
     invoke-virtual {v5}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
@@ -417,25 +417,25 @@
     invoke-static {v9}, Lcom/google/analytics/tracking/android/Log;->i(Ljava/lang/String;)I
 
     .line 208
-    .end local v0           #arr$:[Lorg/apache/http/Header;
-    .end local v5           #httpHeaders:Ljava/lang/StringBuffer;
-    .end local v6           #i$:I
-    .end local v8           #len$:I
+    .end local v0    # "arr$":[Lorg/apache/http/Header;
+    .end local v5    # "httpHeaders":Ljava/lang/StringBuffer;
+    .end local v6    # "i$":I
+    .end local v8    # "len$":I
     :cond_2
     return-void
 
     .line 202
-    .restart local v0       #arr$:[Lorg/apache/http/Header;
-    .restart local v5       #httpHeaders:Ljava/lang/StringBuffer;
-    .restart local v6       #i$:I
-    .restart local v8       #len$:I
+    .restart local v0    # "arr$":[Lorg/apache/http/Header;
+    .restart local v5    # "httpHeaders":Ljava/lang/StringBuffer;
+    .restart local v6    # "i$":I
+    .restart local v8    # "len$":I
     :catch_0
     move-exception v9
 
     move-object v3, v9
 
     .line 203
-    .local v3, e:Ljava/io/IOException;
+    .local v3, "e":Ljava/io/IOException;
     const-string v9, "Error Writing hit to log..."
 
     invoke-static {v9}, Lcom/google/analytics/tracking/android/Log;->w(Ljava/lang/String;)I
@@ -447,12 +447,12 @@
 # virtual methods
 .method createUserAgentString(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 3
-    .parameter "product"
-    .parameter "version"
-    .parameter "release"
-    .parameter "language"
-    .parameter "model"
-    .parameter "id"
+    .param p1, "product"    # Ljava/lang/String;
+    .param p2, "version"    # Ljava/lang/String;
+    .param p3, "release"    # Ljava/lang/String;
+    .param p4, "language"    # Ljava/lang/String;
+    .param p5, "model"    # Ljava/lang/String;
+    .param p6, "id"    # Ljava/lang/String;
 
     .prologue
     .line 217
@@ -495,7 +495,6 @@
 
 .method public dispatchHits(Ljava/util/List;)I
     .locals 19
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -508,11 +507,11 @@
 
     .prologue
     .line 83
-    .local p1, hits:Ljava/util/List;,"Ljava/util/List<Lcom/google/analytics/tracking/android/Hit;>;"
+    .local p1, "hits":Ljava/util/List;, "Ljava/util/List<Lcom/google/analytics/tracking/android/Hit;>;"
     const/4 v7, 0x0
 
     .line 85
-    .local v7, hitsDispatched:I
+    .local v7, "hitsDispatched":I
     invoke-interface/range {p1 .. p1}, Ljava/util/List;->size()I
 
     move-result v16
@@ -524,10 +523,10 @@
     move-result v9
 
     .line 86
-    .local v9, maxHits:I
+    .local v9, "maxHits":I
     const/4 v8, 0x0
 
-    .local v8, i:I
+    .local v8, "i":I
     :goto_0
     if-ge v8, v9, :cond_6
 
@@ -543,7 +542,7 @@
     move-result-object v4
 
     .line 88
-    .local v4, client:Lorg/apache/http/client/HttpClient;
+    .local v4, "client":Lorg/apache/http/client/HttpClient;
     move-object/from16 v0, p1
 
     move v1, v8
@@ -555,7 +554,7 @@
     check-cast v6, Lcom/google/analytics/tracking/android/Hit;
 
     .line 89
-    .local v6, hit:Lcom/google/analytics/tracking/android/Hit;
+    .local v6, "hit":Lcom/google/analytics/tracking/android/Hit;
     move-object/from16 v0, p0
 
     move-object v1, v6
@@ -565,7 +564,7 @@
     move-result-object v15
 
     .line 91
-    .local v15, url:Ljava/net/URL;
+    .local v15, "url":Ljava/net/URL;
     if-nez v15, :cond_1
 
     .line 92
@@ -645,13 +644,13 @@
     invoke-direct {v0, v1, v2, v3}, Lorg/apache/http/HttpHost;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     .line 103
-    .local v14, targetHost:Lorg/apache/http/HttpHost;
+    .local v14, "targetHost":Lorg/apache/http/HttpHost;
     invoke-virtual {v15}, Ljava/net/URL;->getPath()Ljava/lang/String;
 
     move-result-object v11
 
     .line 111
-    .local v11, path:Ljava/lang/String;
+    .local v11, "path":Ljava/lang/String;
     invoke-virtual {v6}, Lcom/google/analytics/tracking/android/Hit;->getHitParams()Ljava/lang/String;
 
     move-result-object v16
@@ -667,7 +666,7 @@
     move-object/from16 v10, v16
 
     .line 114
-    .local v10, params:Ljava/lang/String;
+    .local v10, "params":Ljava/lang/String;
     :goto_3
     move-object/from16 v0, p0
 
@@ -680,7 +679,7 @@
     move-result-object v12
 
     .line 115
-    .local v12, request:Lorg/apache/http/HttpEntityEnclosingRequest;
+    .local v12, "request":Lorg/apache/http/HttpEntityEnclosingRequest;
     if-nez v12, :cond_3
 
     .line 116
@@ -690,8 +689,8 @@
     goto :goto_2
 
     .line 111
-    .end local v10           #params:Ljava/lang/String;
-    .end local v12           #request:Lorg/apache/http/HttpEntityEnclosingRequest;
+    .end local v10    # "params":Ljava/lang/String;
+    .end local v12    # "request":Lorg/apache/http/HttpEntityEnclosingRequest;
     :cond_2
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -710,8 +709,8 @@
     goto :goto_3
 
     .line 119
-    .restart local v10       #params:Ljava/lang/String;
-    .restart local v12       #request:Lorg/apache/http/HttpEntityEnclosingRequest;
+    .restart local v10    # "params":Ljava/lang/String;
+    .restart local v12    # "request":Lorg/apache/http/HttpEntityEnclosingRequest;
     :cond_3
     const-string v16, "Host"
 
@@ -773,7 +772,7 @@
     move-result-object v13
 
     .line 127
-    .local v13, response:Lorg/apache/http/HttpResponse;
+    .local v13, "response":Lorg/apache/http/HttpResponse;
     invoke-interface {v13}, Lorg/apache/http/HttpResponse;->getStatusLine()Lorg/apache/http/StatusLine;
 
     move-result-object v16
@@ -823,33 +822,33 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
 
     .line 143
-    .end local v4           #client:Lorg/apache/http/client/HttpClient;
-    .end local v6           #hit:Lcom/google/analytics/tracking/android/Hit;
-    .end local v10           #params:Ljava/lang/String;
-    .end local v11           #path:Ljava/lang/String;
-    .end local v12           #request:Lorg/apache/http/HttpEntityEnclosingRequest;
-    .end local v13           #response:Lorg/apache/http/HttpResponse;
-    .end local v14           #targetHost:Lorg/apache/http/HttpHost;
-    .end local v15           #url:Ljava/net/URL;
+    .end local v4    # "client":Lorg/apache/http/client/HttpClient;
+    .end local v6    # "hit":Lcom/google/analytics/tracking/android/Hit;
+    .end local v10    # "params":Ljava/lang/String;
+    .end local v11    # "path":Ljava/lang/String;
+    .end local v12    # "request":Lorg/apache/http/HttpEntityEnclosingRequest;
+    .end local v13    # "response":Lorg/apache/http/HttpResponse;
+    .end local v14    # "targetHost":Lorg/apache/http/HttpHost;
+    .end local v15    # "url":Ljava/net/URL;
     :cond_6
     :goto_5
     return v7
 
     .line 131
-    .restart local v4       #client:Lorg/apache/http/client/HttpClient;
-    .restart local v6       #hit:Lcom/google/analytics/tracking/android/Hit;
-    .restart local v10       #params:Ljava/lang/String;
-    .restart local v11       #path:Ljava/lang/String;
-    .restart local v12       #request:Lorg/apache/http/HttpEntityEnclosingRequest;
-    .restart local v14       #targetHost:Lorg/apache/http/HttpHost;
-    .restart local v15       #url:Ljava/net/URL;
+    .restart local v4    # "client":Lorg/apache/http/client/HttpClient;
+    .restart local v6    # "hit":Lcom/google/analytics/tracking/android/Hit;
+    .restart local v10    # "params":Ljava/lang/String;
+    .restart local v11    # "path":Ljava/lang/String;
+    .restart local v12    # "request":Lorg/apache/http/HttpEntityEnclosingRequest;
+    .restart local v14    # "targetHost":Lorg/apache/http/HttpHost;
+    .restart local v15    # "url":Ljava/net/URL;
     :catch_0
     move-exception v16
 
     move-object/from16 v5, v16
 
     .line 134
-    .local v5, e:Lorg/apache/http/client/ClientProtocolException;
+    .local v5, "e":Lorg/apache/http/client/ClientProtocolException;
     const-string v16, "ClientProtocolException sending hit; discarding hit..."
 
     invoke-static/range {v16 .. v16}, Lcom/google/analytics/tracking/android/Log;->w(Ljava/lang/String;)I
@@ -857,14 +856,14 @@
     goto :goto_4
 
     .line 135
-    .end local v5           #e:Lorg/apache/http/client/ClientProtocolException;
+    .end local v5    # "e":Lorg/apache/http/client/ClientProtocolException;
     :catch_1
     move-exception v16
 
     move-object/from16 v5, v16
 
     .line 136
-    .local v5, e:Ljava/io/IOException;
+    .local v5, "e":Ljava/io/IOException;
     new-instance v16, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v16 .. v16}, Ljava/lang/StringBuilder;-><init>()V
@@ -919,13 +918,13 @@
     check-cast v0, Landroid/net/ConnectivityManager;
 
     .line 69
-    .local v0, cm:Landroid/net/ConnectivityManager;
+    .local v0, "cm":Landroid/net/ConnectivityManager;
     invoke-virtual {v0}, Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;
 
     move-result-object v1
 
     .line 74
-    .local v1, network:Landroid/net/NetworkInfo;
+    .local v1, "network":Landroid/net/NetworkInfo;
     if-eqz v1, :cond_0
 
     invoke-virtual {v1}, Landroid/net/NetworkInfo;->isConnected()Z

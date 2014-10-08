@@ -21,8 +21,8 @@
 # virtual methods
 .method public call(Lcom/adobe/fre/FREContext;[Lcom/adobe/fre/FREObject;)Lcom/adobe/fre/FREObject;
     .locals 25
-    .parameter "context"
-    .parameter "args"
+    .param p1, "context"    # Lcom/adobe/fre/FREContext;
+    .param p2, "args"    # [Lcom/adobe/fre/FREObject;
 
     .prologue
     .line 23
@@ -36,7 +36,7 @@
     move-result-object v17
 
     .line 24
-    .local v17, orderId:Ljava/lang/String;
+    .local v17, "orderId":Ljava/lang/String;
     const/4 v4, 0x1
 
     aget-object v4, p2, v4
@@ -50,7 +50,7 @@
     move-result-wide v21
 
     .line 25
-    .local v21, totalPrice:D
+    .local v21, "totalPrice":D
     const/4 v4, 0x2
 
     aget-object v4, p2, v4
@@ -60,7 +60,7 @@
     move-result-object v20
 
     .line 26
-    .local v20, storeName:Ljava/lang/String;
+    .local v20, "storeName":Ljava/lang/String;
     const/4 v4, 0x3
 
     aget-object v4, p2, v4
@@ -74,7 +74,7 @@
     move-result-wide v18
 
     .line 27
-    .local v18, shippingCost:D
+    .local v18, "shippingCost":D
     const/4 v4, 0x4
 
     aget-object v4, p2, v4
@@ -88,7 +88,7 @@
     move-result-wide v23
 
     .line 29
-    .local v23, totalTax:D
+    .local v23, "totalTax":D
     const/4 v4, 0x5
 
     aget-object v4, p2, v4
@@ -98,7 +98,7 @@
     move-result-object v5
 
     .line 30
-    .local v5, itemSku:Ljava/lang/String;
+    .local v5, "itemSku":Ljava/lang/String;
     const/4 v4, 0x6
 
     aget-object v4, p2, v4
@@ -112,7 +112,7 @@
     move-result-wide v13
 
     .line 31
-    .local v13, itemPrice:D
+    .local v13, "itemPrice":D
     const/4 v4, 0x7
 
     aget-object v4, p2, v4
@@ -128,7 +128,7 @@
     int-to-long v9, v4
 
     .line 32
-    .local v9, itemCount:J
+    .local v9, "itemCount":J
     const/16 v4, 0x8
 
     aget-object v4, p2, v4
@@ -138,7 +138,7 @@
     move-result-object v6
 
     .line 33
-    .local v6, itemName:Ljava/lang/String;
+    .local v6, "itemName":Ljava/lang/String;
     const/16 v4, 0x9
 
     aget-object v4, p2, v4
@@ -148,7 +148,7 @@
     move-result-object v12
 
     .line 35
-    .local v12, itemCategory:Ljava/lang/String;
+    .local v12, "itemCategory":Ljava/lang/String;
     new-instance v4, Lcom/google/analytics/tracking/android/Transaction$Builder;
 
     .line 36
@@ -204,7 +204,7 @@
     move-result-object v16
 
     .line 42
-    .local v16, myTrans:Lcom/google/analytics/tracking/android/Transaction;
+    .local v16, "myTrans":Lcom/google/analytics/tracking/android/Transaction;
     new-instance v4, Lcom/google/analytics/tracking/android/Transaction$Item$Builder;
 
     .line 44
@@ -240,7 +240,7 @@
     move-result-object v15
 
     .line 50
-    .local v15, myTracker:Lcom/google/analytics/tracking/android/Tracker;
+    .local v15, "myTracker":Lcom/google/analytics/tracking/android/Tracker;
     invoke-virtual/range {v15 .. v16}, Lcom/google/analytics/tracking/android/Tracker;->sendTransaction(Lcom/google/analytics/tracking/android/Transaction;)V
     :try_end_0
     .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
@@ -251,18 +251,18 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_5
 
     .line 66
-    .end local v5           #itemSku:Ljava/lang/String;
-    .end local v6           #itemName:Ljava/lang/String;
-    .end local v9           #itemCount:J
-    .end local v12           #itemCategory:Ljava/lang/String;
-    .end local v13           #itemPrice:D
-    .end local v15           #myTracker:Lcom/google/analytics/tracking/android/Tracker;
-    .end local v16           #myTrans:Lcom/google/analytics/tracking/android/Transaction;
-    .end local v17           #orderId:Ljava/lang/String;
-    .end local v18           #shippingCost:D
-    .end local v20           #storeName:Ljava/lang/String;
-    .end local v21           #totalPrice:D
-    .end local v23           #totalTax:D
+    .end local v5    # "itemSku":Ljava/lang/String;
+    .end local v6    # "itemName":Ljava/lang/String;
+    .end local v9    # "itemCount":J
+    .end local v12    # "itemCategory":Ljava/lang/String;
+    .end local v13    # "itemPrice":D
+    .end local v15    # "myTracker":Lcom/google/analytics/tracking/android/Tracker;
+    .end local v16    # "myTrans":Lcom/google/analytics/tracking/android/Transaction;
+    .end local v17    # "orderId":Ljava/lang/String;
+    .end local v18    # "shippingCost":D
+    .end local v20    # "storeName":Ljava/lang/String;
+    .end local v21    # "totalPrice":D
+    .end local v23    # "totalTax":D
     :goto_0
     const/4 v4, 0x0
 
@@ -275,7 +275,7 @@
     move-object v11, v4
 
     .line 53
-    .local v11, e:Ljava/lang/IllegalStateException;
+    .local v11, "e":Ljava/lang/IllegalStateException;
     const-string v4, "ERROR_EVENT"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -347,14 +347,14 @@
     goto :goto_0
 
     .line 54
-    .end local v11           #e:Ljava/lang/IllegalStateException;
+    .end local v11    # "e":Ljava/lang/IllegalStateException;
     :catch_1
     move-exception v4
 
     move-object v11, v4
 
     .line 55
-    .local v11, e:Lcom/adobe/fre/FRETypeMismatchException;
+    .local v11, "e":Lcom/adobe/fre/FRETypeMismatchException;
     const-string v4, "ERROR_EVENT"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -426,14 +426,14 @@
     goto/16 :goto_0
 
     .line 56
-    .end local v11           #e:Lcom/adobe/fre/FRETypeMismatchException;
+    .end local v11    # "e":Lcom/adobe/fre/FRETypeMismatchException;
     :catch_2
     move-exception v4
 
     move-object v11, v4
 
     .line 57
-    .local v11, e:Lcom/adobe/fre/FREInvalidObjectException;
+    .local v11, "e":Lcom/adobe/fre/FREInvalidObjectException;
     const-string v4, "ERROR_EVENT"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -505,14 +505,14 @@
     goto/16 :goto_0
 
     .line 58
-    .end local v11           #e:Lcom/adobe/fre/FREInvalidObjectException;
+    .end local v11    # "e":Lcom/adobe/fre/FREInvalidObjectException;
     :catch_3
     move-exception v4
 
     move-object v11, v4
 
     .line 59
-    .local v11, e:Lcom/adobe/fre/FREWrongThreadException;
+    .local v11, "e":Lcom/adobe/fre/FREWrongThreadException;
     const-string v4, "ERROR_EVENT"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -584,14 +584,14 @@
     goto/16 :goto_0
 
     .line 60
-    .end local v11           #e:Lcom/adobe/fre/FREWrongThreadException;
+    .end local v11    # "e":Lcom/adobe/fre/FREWrongThreadException;
     :catch_4
     move-exception v4
 
     move-object v11, v4
 
     .line 61
-    .local v11, e:Ljava/lang/NumberFormatException;
+    .local v11, "e":Ljava/lang/NumberFormatException;
     const-string v4, "ERROR_EVENT"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -663,14 +663,14 @@
     goto/16 :goto_0
 
     .line 62
-    .end local v11           #e:Ljava/lang/NumberFormatException;
+    .end local v11    # "e":Ljava/lang/NumberFormatException;
     :catch_5
     move-exception v4
 
     move-object v11, v4
 
     .line 64
-    .local v11, e:Ljava/lang/Exception;
+    .local v11, "e":Ljava/lang/Exception;
     const-string v4, "ERROR_EVENT"
 
     new-instance v5, Ljava/lang/StringBuilder;

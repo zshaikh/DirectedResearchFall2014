@@ -26,7 +26,6 @@
 # direct methods
 .method public constructor <init>(Lcom/chartboost/sdk/impl/a;)V
     .locals 2
-    .parameter
 
     .prologue
     const/4 v1, 0x0
@@ -60,7 +59,6 @@
 
 .method static synthetic a(Lcom/chartboost/sdk/impl/b;)Lorg/json/JSONObject;
     .locals 1
-    .parameter
 
     .prologue
     .line 27
@@ -71,8 +69,6 @@
 
 .method static synthetic a(Lcom/chartboost/sdk/impl/b;Lcom/chartboost/sdk/Libraries/a$a;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 1
@@ -85,7 +81,6 @@
 # virtual methods
 .method protected a(Landroid/content/Context;)Lcom/chartboost/sdk/c$b;
     .locals 2
-    .parameter
 
     .prologue
     .line 175
@@ -100,7 +95,6 @@
 
 .method public a(Lorg/json/JSONObject;)V
     .locals 7
-    .parameter
 
     .prologue
     const/4 v6, 0x1

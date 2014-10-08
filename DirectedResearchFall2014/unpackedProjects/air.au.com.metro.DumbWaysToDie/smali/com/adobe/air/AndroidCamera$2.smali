@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/adobe/air/AndroidCamera;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 567
@@ -39,13 +38,12 @@
 # virtual methods
 .method public onActivityStateChanged(Lcom/adobe/air/AndroidActivityWrapper$ActivityState;)V
     .locals 4
-    .parameter
 
     .prologue
     .line 570
     iget-object v0, p0, Lcom/adobe/air/AndroidCamera$2;->this$0:Lcom/adobe/air/AndroidCamera;
 
-    #getter for: Lcom/adobe/air/AndroidCamera;->mClientId:J
+    # getter for: Lcom/adobe/air/AndroidCamera;->mClientId:J
     invoke-static {v0}, Lcom/adobe/air/AndroidCamera;->access$000(Lcom/adobe/air/AndroidCamera;)J
 
     move-result-wide v0
@@ -58,7 +56,7 @@
 
     iget-object v0, p0, Lcom/adobe/air/AndroidCamera$2;->this$0:Lcom/adobe/air/AndroidCamera;
 
-    #getter for: Lcom/adobe/air/AndroidCamera;->mCallbacksRegistered:Z
+    # getter for: Lcom/adobe/air/AndroidCamera;->mCallbacksRegistered:Z
     invoke-static {v0}, Lcom/adobe/air/AndroidCamera;->access$100(Lcom/adobe/air/AndroidCamera;)Z
 
     move-result v0
@@ -72,7 +70,7 @@
 
     iget-object v0, p0, Lcom/adobe/air/AndroidCamera$2;->this$0:Lcom/adobe/air/AndroidCamera;
 
-    #getter for: Lcom/adobe/air/AndroidCamera;->mPreviewSurfaceValid:Z
+    # getter for: Lcom/adobe/air/AndroidCamera;->mPreviewSurfaceValid:Z
     invoke-static {v0}, Lcom/adobe/air/AndroidCamera;->access$700(Lcom/adobe/air/AndroidCamera;)Z
 
     move-result v0
@@ -84,12 +82,12 @@
 
     iget-object v1, p0, Lcom/adobe/air/AndroidCamera$2;->this$0:Lcom/adobe/air/AndroidCamera;
 
-    #getter for: Lcom/adobe/air/AndroidCamera;->mClientId:J
+    # getter for: Lcom/adobe/air/AndroidCamera;->mClientId:J
     invoke-static {v1}, Lcom/adobe/air/AndroidCamera;->access$000(Lcom/adobe/air/AndroidCamera;)J
 
     move-result-wide v1
 
-    #calls: Lcom/adobe/air/AndroidCamera;->nativeOnCanOpenCamera(J)V
+    # invokes: Lcom/adobe/air/AndroidCamera;->nativeOnCanOpenCamera(J)V
     invoke-static {v0, v1, v2}, Lcom/adobe/air/AndroidCamera;->access$800(Lcom/adobe/air/AndroidCamera;J)V
 
     .line 578
@@ -108,12 +106,12 @@
 
     iget-object v1, p0, Lcom/adobe/air/AndroidCamera$2;->this$0:Lcom/adobe/air/AndroidCamera;
 
-    #getter for: Lcom/adobe/air/AndroidCamera;->mClientId:J
+    # getter for: Lcom/adobe/air/AndroidCamera;->mClientId:J
     invoke-static {v1}, Lcom/adobe/air/AndroidCamera;->access$000(Lcom/adobe/air/AndroidCamera;)J
 
     move-result-wide v1
 
-    #calls: Lcom/adobe/air/AndroidCamera;->nativeOnShouldCloseCamera(J)V
+    # invokes: Lcom/adobe/air/AndroidCamera;->nativeOnShouldCloseCamera(J)V
     invoke-static {v0, v1, v2}, Lcom/adobe/air/AndroidCamera;->access$900(Lcom/adobe/air/AndroidCamera;J)V
 
     goto :goto_0
@@ -121,7 +119,6 @@
 
 .method public onConfigurationChanged(Landroid/content/res/Configuration;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 583

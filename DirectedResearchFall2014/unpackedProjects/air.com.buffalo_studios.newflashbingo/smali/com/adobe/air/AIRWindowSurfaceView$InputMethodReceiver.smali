@@ -21,7 +21,6 @@
 # direct methods
 .method public constructor <init>(Lcom/adobe/air/AIRWindowSurfaceView;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 851
@@ -42,8 +41,6 @@
 # virtual methods
 .method protected onReceiveResult(ILandroid/os/Bundle;)V
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     const/4 v1, 0x1
@@ -69,7 +66,7 @@
     :cond_1
     iget-object v0, p0, Lcom/adobe/air/AIRWindowSurfaceView$InputMethodReceiver;->this$0:Lcom/adobe/air/AIRWindowSurfaceView;
 
-    #calls: Lcom/adobe/air/AIRWindowSurfaceView;->nativeSetKeyboardVisible(Z)V
+    # invokes: Lcom/adobe/air/AIRWindowSurfaceView;->nativeSetKeyboardVisible(Z)V
     invoke-static {v0, v1}, Lcom/adobe/air/AIRWindowSurfaceView;->access$500(Lcom/adobe/air/AIRWindowSurfaceView;Z)V
 
     goto :goto_0

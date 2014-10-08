@@ -31,8 +31,7 @@
 # direct methods
 .method public constructor <init>(Lcom/fusepowered/m2/m2l/AdViewController;Ljava/util/Map;)V
     .locals 0
-    .parameter "adViewController"
-    .parameter
+    .param p1, "adViewController"    # Lcom/fusepowered/m2/m2l/AdViewController;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -47,7 +46,7 @@
 
     .prologue
     .line 184
-    .local p2, paramsMap:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p2, "paramsMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-direct {p0, p1}, Lcom/fusepowered/m2/m2l/AdLoadTask;-><init>(Lcom/fusepowered/m2/m2l/AdViewController;)V
 
     .line 185
@@ -86,7 +85,7 @@
     check-cast v0, Lcom/fusepowered/m2/m2l/AdViewController;
 
     .line 192
-    .local v0, adViewController:Lcom/fusepowered/m2/m2l/AdViewController;
+    .local v0, "adViewController":Lcom/fusepowered/m2/m2l/AdViewController;
     if-eqz v0, :cond_0
 
     invoke-virtual {v0}, Lcom/fusepowered/m2/m2l/AdViewController;->isDestroyed()Z

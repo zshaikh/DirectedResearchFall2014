@@ -21,7 +21,6 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 23
@@ -36,7 +35,6 @@
 
 .method private a(Landroid/content/Context;)V
     .locals 4
-    .parameter
 
     .prologue
     const/16 v3, 0x11
@@ -67,7 +65,7 @@
 
     const/4 v1, 0x2
 
-    const/high16 v2, 0x4180
+    const/high16 v2, 0x41800000
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/TextView;->setTextSize(IF)V
 
@@ -241,7 +239,7 @@
 
     const/4 v7, -0x2
 
-    const/high16 v6, 0x4200
+    const/high16 v6, 0x42000000
 
     const/4 v5, 0x0
 
@@ -273,7 +271,7 @@
     iget v0, v0, Landroid/util/DisplayMetrics;->density:F
 
     .line 56
-    const/high16 v1, 0x41a0
+    const/high16 v1, 0x41a00000
 
     mul-float/2addr v1, v0
 

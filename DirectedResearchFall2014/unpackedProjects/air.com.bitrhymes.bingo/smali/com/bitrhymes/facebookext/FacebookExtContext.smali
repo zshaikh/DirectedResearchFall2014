@@ -24,9 +24,9 @@
 
 .method public static updateFBSession(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 12
-    .parameter "accessTokenStr"
-    .parameter "expiryTimeStr"
-    .parameter "appID"
+    .param p0, "accessTokenStr"    # Ljava/lang/String;
+    .param p1, "expiryTimeStr"    # Ljava/lang/String;
+    .param p2, "appID"    # Ljava/lang/String;
 
     .prologue
     const/4 v11, 0x0
@@ -43,7 +43,7 @@
     move-result-object v1
 
     .line 71
-    .local v1, context:Landroid/content/Context;
+    .local v1, "context":Landroid/content/Context;
     sget-object v7, Lcom/bitrhymes/facebookext/FacebookExtContext;->session:Lcom/facebook/Session;
 
     if-eqz v7, :cond_0
@@ -75,7 +75,7 @@
     move-result-object v6
 
     .line 76
-    .local v6, session:Lcom/facebook/Session;
+    .local v6, "session":Lcom/facebook/Session;
     if-eqz p0, :cond_1
 
     invoke-virtual {p0}, Ljava/lang/String;->length()I
@@ -99,13 +99,13 @@
     move-result-object v5
 
     .line 83
-    .local v5, sdk2SavedSession:Landroid/content/SharedPreferences;
+    .local v5, "sdk2SavedSession":Landroid/content/SharedPreferences;
     invoke-interface {v5}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v2
 
     .line 84
-    .local v2, editor:Landroid/content/SharedPreferences$Editor;
+    .local v2, "editor":Landroid/content/SharedPreferences$Editor;
     const-string v7, "access_token"
 
     invoke-interface {v2, v7, v11}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
@@ -119,7 +119,7 @@
     move-result-object v0
 
     .line 94
-    .local v0, accessToken:Lcom/facebook/AccessToken;
+    .local v0, "accessToken":Lcom/facebook/AccessToken;
     :try_start_0
     invoke-virtual {v6}, Lcom/facebook/Session;->isOpened()Z
 
@@ -137,25 +137,25 @@
     .catch Ljava/lang/UnsupportedOperationException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 129
-    .end local v0           #accessToken:Lcom/facebook/AccessToken;
-    .end local v2           #editor:Landroid/content/SharedPreferences$Editor;
-    .end local v5           #sdk2SavedSession:Landroid/content/SharedPreferences;
+    .end local v0    # "accessToken":Lcom/facebook/AccessToken;
+    .end local v2    # "editor":Landroid/content/SharedPreferences$Editor;
+    .end local v5    # "sdk2SavedSession":Landroid/content/SharedPreferences;
     :cond_1
     sput-object v6, Lcom/bitrhymes/facebookext/FacebookExtContext;->session:Lcom/facebook/Session;
 
     goto :goto_0
 
     .line 120
-    .restart local v0       #accessToken:Lcom/facebook/AccessToken;
-    .restart local v2       #editor:Landroid/content/SharedPreferences$Editor;
-    .restart local v5       #sdk2SavedSession:Landroid/content/SharedPreferences;
+    .restart local v0    # "accessToken":Lcom/facebook/AccessToken;
+    .restart local v2    # "editor":Landroid/content/SharedPreferences$Editor;
+    .restart local v5    # "sdk2SavedSession":Landroid/content/SharedPreferences;
     :catch_0
     move-exception v7
 
     move-object v4, v7
 
     .line 122
-    .local v4, exception:Ljava/lang/UnsupportedOperationException;
+    .local v4, "exception":Ljava/lang/UnsupportedOperationException;
     if-eqz v4, :cond_2
 
     invoke-virtual {v4}, Ljava/lang/UnsupportedOperationException;->toString()Ljava/lang/String;
@@ -165,7 +165,7 @@
     move-object v3, v7
 
     .line 123
-    .local v3, error:Ljava/lang/String;
+    .local v3, "error":Ljava/lang/String;
     :goto_1
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -214,7 +214,7 @@
     goto :goto_0
 
     .line 122
-    .end local v3           #error:Ljava/lang/String;
+    .end local v3    # "error":Ljava/lang/String;
     :cond_2
     const-string v7, "null exception"
 
@@ -258,7 +258,7 @@
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     .line 50
-    .local v0, functions:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Lcom/adobe/fre/FREFunction;>;"
+    .local v0, "functions":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Lcom/adobe/fre/FREFunction;>;"
     const-string v1, "fbLogout"
 
     new-instance v2, Lcom/bitrhymes/facebookext/functions/FBLogout;

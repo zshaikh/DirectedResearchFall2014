@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/adobe/air/GamePreviewAppEntry;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 160
@@ -39,14 +38,12 @@
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 163
     iget-object v0, p0, Lcom/adobe/air/GamePreviewAppEntry$1;->this$0:Lcom/adobe/air/GamePreviewAppEntry;
 
-    #calls: Lcom/adobe/air/GamePreviewAppEntry;->launchMarketPlaceForAIR()V
+    # invokes: Lcom/adobe/air/GamePreviewAppEntry;->launchMarketPlaceForAIR()V
     invoke-static {v0}, Lcom/adobe/air/GamePreviewAppEntry;->access$000(Lcom/adobe/air/GamePreviewAppEntry;)V
 
     .line 164

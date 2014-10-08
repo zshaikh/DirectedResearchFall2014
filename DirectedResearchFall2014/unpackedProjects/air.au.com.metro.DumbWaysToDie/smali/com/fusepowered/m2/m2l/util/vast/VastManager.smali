@@ -181,8 +181,6 @@
 
 .method static synthetic access$0(Lcom/fusepowered/m2/m2l/util/vast/VastManager;Ljava/lang/String;)Ljava/lang/String;
     .locals 1
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -202,8 +200,6 @@
 
 .method static synthetic access$1(Lcom/fusepowered/m2/m2l/util/vast/VastManager;Z)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 99
@@ -214,7 +210,7 @@
 
 .method private loadVastDataFromXml(Lcom/fusepowered/m2/m2l/util/vast/VastXmlManager;)V
     .locals 2
-    .parameter "xmlManager"
+    .param p1, "xmlManager"    # Lcom/fusepowered/m2/m2l/util/vast/VastXmlManager;
 
     .prologue
     .line 111
@@ -312,7 +308,7 @@
 
 .method private processVastFollowingRedirect(Ljava/lang/String;)Ljava/lang/String;
     .locals 8
-    .parameter "vastXml"
+    .param p1, "vastXml"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -330,7 +326,7 @@
     invoke-direct {v4}, Lcom/fusepowered/m2/m2l/util/vast/VastXmlManager;-><init>()V
 
     .line 130
-    .local v4, xmlManager:Lcom/fusepowered/m2/m2l/util/vast/VastXmlManager;
+    .local v4, "xmlManager":Lcom/fusepowered/m2/m2l/util/vast/VastXmlManager;
     invoke-virtual {v4, p1}, Lcom/fusepowered/m2/m2l/util/vast/VastXmlManager;->parseVastXml(Ljava/lang/String;)V
 
     .line 133
@@ -342,7 +338,7 @@
     move-result-object v2
 
     .line 136
-    .local v2, redirectUrl:Ljava/lang/String;
+    .local v2, "redirectUrl":Ljava/lang/String;
     if-eqz v2, :cond_1
 
     iget v5, p0, Lcom/fusepowered/m2/m2l/util/vast/VastManager;->mTimesFollowedVastRedirect:I
@@ -364,7 +360,7 @@
     invoke-direct {v1, v2}, Lorg/apache/http/client/methods/HttpGet;-><init>(Ljava/lang/String;)V
 
     .line 140
-    .local v1, httpget:Lorg/apache/http/client/methods/HttpGet;
+    .local v1, "httpget":Lorg/apache/http/client/methods/HttpGet;
     iget-object v5, p0, Lcom/fusepowered/m2/m2l/util/vast/VastManager;->mHttpClient:Lorg/apache/http/client/HttpClient;
 
     invoke-interface {v5, v1}, Lorg/apache/http/client/HttpClient;->execute(Lorg/apache/http/client/methods/HttpUriRequest;)Lorg/apache/http/HttpResponse;
@@ -372,13 +368,13 @@
     move-result-object v3
 
     .line 141
-    .local v3, response:Lorg/apache/http/HttpResponse;
+    .local v3, "response":Lorg/apache/http/HttpResponse;
     invoke-interface {v3}, Lorg/apache/http/HttpResponse;->getEntity()Lorg/apache/http/HttpEntity;
 
     move-result-object v0
 
     .line 142
-    .local v0, entity:Lorg/apache/http/HttpEntity;
+    .local v0, "entity":Lorg/apache/http/HttpEntity;
     if-eqz v0, :cond_0
 
     invoke-interface {v0}, Lorg/apache/http/HttpEntity;->getContent()Ljava/io/InputStream;
@@ -390,24 +386,24 @@
     move-result-object v5
 
     .line 145
-    .end local v0           #entity:Lorg/apache/http/HttpEntity;
-    .end local v1           #httpget:Lorg/apache/http/client/methods/HttpGet;
-    .end local v3           #response:Lorg/apache/http/HttpResponse;
+    .end local v0    # "entity":Lorg/apache/http/HttpEntity;
+    .end local v1    # "httpget":Lorg/apache/http/client/methods/HttpGet;
+    .end local v3    # "response":Lorg/apache/http/HttpResponse;
     :goto_0
     return-object v5
 
-    .restart local v0       #entity:Lorg/apache/http/HttpEntity;
-    .restart local v1       #httpget:Lorg/apache/http/client/methods/HttpGet;
-    .restart local v3       #response:Lorg/apache/http/HttpResponse;
+    .restart local v0    # "entity":Lorg/apache/http/HttpEntity;
+    .restart local v1    # "httpget":Lorg/apache/http/client/methods/HttpGet;
+    .restart local v3    # "response":Lorg/apache/http/HttpResponse;
     :cond_0
     move-object v5, v7
 
     .line 142
     goto :goto_0
 
-    .end local v0           #entity:Lorg/apache/http/HttpEntity;
-    .end local v1           #httpget:Lorg/apache/http/client/methods/HttpGet;
-    .end local v3           #response:Lorg/apache/http/HttpResponse;
+    .end local v0    # "entity":Lorg/apache/http/HttpEntity;
+    .end local v1    # "httpget":Lorg/apache/http/client/methods/HttpGet;
+    .end local v3    # "response":Lorg/apache/http/HttpResponse;
     :cond_1
     move-object v5, v7
 
@@ -417,7 +413,7 @@
 
 .method private vastProcessComplete(Z)V
     .locals 1
-    .parameter "canceled"
+    .param p1, "canceled"    # Z
 
     .prologue
     .line 100
@@ -626,8 +622,8 @@
 
 .method public processVast(Ljava/lang/String;Lcom/fusepowered/m2/m2l/util/vast/VastManager$VastManagerListener;)V
     .locals 3
-    .parameter "vastXml"
-    .parameter "listener"
+    .param p1, "vastXml"    # Ljava/lang/String;
+    .param p2, "listener"    # Lcom/fusepowered/m2/m2l/util/vast/VastManager$VastManagerListener;
 
     .prologue
     .line 50
@@ -667,7 +663,7 @@
 
 .method setTimesFollowedVastRedirect(I)V
     .locals 0
-    .parameter "timesFollowedVastRedirect"
+    .param p1, "timesFollowedVastRedirect"    # I
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 

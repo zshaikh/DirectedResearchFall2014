@@ -38,7 +38,7 @@
 # virtual methods
 .method public read(Lcom/fusepowered/m1/google/gson/stream/JsonReader;)Lcom/fusepowered/m1/google/gson/JsonElement;
     .locals 5
-    .parameter "in"
+    .param p1, "in"    # Lcom/fusepowered/m1/google/gson/stream/JsonReader;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -89,7 +89,7 @@
     move-result-object v1
 
     .line 649
-    .local v1, number:Ljava/lang/String;
+    .local v1, "number":Ljava/lang/String;
     new-instance v3, Lcom/fusepowered/m1/google/gson/JsonPrimitive;
 
     new-instance v4, Lcom/fusepowered/m1/google/gson/internal/LazilyParsedNumber;
@@ -101,7 +101,7 @@
     goto :goto_0
 
     .line 651
-    .end local v1           #number:Ljava/lang/String;
+    .end local v1    # "number":Ljava/lang/String;
     :pswitch_2
     new-instance v3, Lcom/fusepowered/m1/google/gson/JsonPrimitive;
 
@@ -133,7 +133,7 @@
     invoke-direct {v0}, Lcom/fusepowered/m1/google/gson/JsonArray;-><init>()V
 
     .line 657
-    .local v0, array:Lcom/fusepowered/m1/google/gson/JsonArray;
+    .local v0, "array":Lcom/fusepowered/m1/google/gson/JsonArray;
     invoke-virtual {p1}, Lcom/fusepowered/m1/google/gson/stream/JsonReader;->beginArray()V
 
     .line 658
@@ -163,14 +163,14 @@
     goto :goto_0
 
     .line 664
-    .end local v0           #array:Lcom/fusepowered/m1/google/gson/JsonArray;
+    .end local v0    # "array":Lcom/fusepowered/m1/google/gson/JsonArray;
     :pswitch_5
     new-instance v2, Lcom/fusepowered/m1/google/gson/JsonObject;
 
     invoke-direct {v2}, Lcom/fusepowered/m1/google/gson/JsonObject;-><init>()V
 
     .line 665
-    .local v2, object:Lcom/fusepowered/m1/google/gson/JsonObject;
+    .local v2, "object":Lcom/fusepowered/m1/google/gson/JsonObject;
     invoke-virtual {p1}, Lcom/fusepowered/m1/google/gson/stream/JsonReader;->beginObject()V
 
     .line 666
@@ -217,7 +217,7 @@
 
 .method public bridge synthetic read(Lcom/fusepowered/m1/google/gson/stream/JsonReader;)Ljava/lang/Object;
     .locals 1
-    .parameter "x0"
+    .param p1, "x0"    # Lcom/fusepowered/m1/google/gson/stream/JsonReader;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -235,8 +235,8 @@
 
 .method public write(Lcom/fusepowered/m1/google/gson/stream/JsonWriter;Lcom/fusepowered/m1/google/gson/JsonElement;)V
     .locals 7
-    .parameter "out"
-    .parameter "value"
+    .param p1, "out"    # Lcom/fusepowered/m1/google/gson/stream/JsonWriter;
+    .param p2, "value"    # Lcom/fusepowered/m1/google/gson/JsonElement;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -275,7 +275,7 @@
     move-result-object v3
 
     .line 685
-    .local v3, primitive:Lcom/fusepowered/m1/google/gson/JsonPrimitive;
+    .local v3, "primitive":Lcom/fusepowered/m1/google/gson/JsonPrimitive;
     invoke-virtual {v3}, Lcom/fusepowered/m1/google/gson/JsonPrimitive;->isNumber()Z
 
     move-result v4
@@ -319,7 +319,7 @@
     goto :goto_0
 
     .line 693
-    .end local v3           #primitive:Lcom/fusepowered/m1/google/gson/JsonPrimitive;
+    .end local v3    # "primitive":Lcom/fusepowered/m1/google/gson/JsonPrimitive;
     :cond_4
     invoke-virtual {p2}, Lcom/fusepowered/m1/google/gson/JsonElement;->isJsonArray()Z
 
@@ -339,7 +339,7 @@
 
     move-result-object v2
 
-    .local v2, i$:Ljava/util/Iterator;
+    .local v2, "i$":Ljava/util/Iterator;
     :goto_1
     invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
@@ -354,20 +354,20 @@
     check-cast v0, Lcom/fusepowered/m1/google/gson/JsonElement;
 
     .line 696
-    .local v0, e:Lcom/fusepowered/m1/google/gson/JsonElement;
+    .local v0, "e":Lcom/fusepowered/m1/google/gson/JsonElement;
     invoke-virtual {p0, p1, v0}, Lcom/fusepowered/m1/google/gson/internal/bind/TypeAdapters$25;->write(Lcom/fusepowered/m1/google/gson/stream/JsonWriter;Lcom/fusepowered/m1/google/gson/JsonElement;)V
 
     goto :goto_1
 
     .line 698
-    .end local v0           #e:Lcom/fusepowered/m1/google/gson/JsonElement;
+    .end local v0    # "e":Lcom/fusepowered/m1/google/gson/JsonElement;
     :cond_5
     invoke-virtual {p1}, Lcom/fusepowered/m1/google/gson/stream/JsonWriter;->endArray()Lcom/fusepowered/m1/google/gson/stream/JsonWriter;
 
     goto :goto_0
 
     .line 700
-    .end local v2           #i$:Ljava/util/Iterator;
+    .end local v2    # "i$":Ljava/util/Iterator;
     :cond_6
     invoke-virtual {p2}, Lcom/fusepowered/m1/google/gson/JsonElement;->isJsonObject()Z
 
@@ -391,7 +391,7 @@
 
     move-result-object v2
 
-    .restart local v2       #i$:Ljava/util/Iterator;
+    .restart local v2    # "i$":Ljava/util/Iterator;
     :goto_2
     invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
@@ -406,7 +406,7 @@
     check-cast v1, Ljava/util/Map$Entry;
 
     .line 703
-    .local v1, e:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Lcom/fusepowered/m1/google/gson/JsonElement;>;"
+    .local v1, "e":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Lcom/fusepowered/m1/google/gson/JsonElement;>;"
     invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v4
@@ -427,14 +427,14 @@
     goto :goto_2
 
     .line 706
-    .end local v1           #e:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Lcom/fusepowered/m1/google/gson/JsonElement;>;"
+    .end local v1    # "e":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Lcom/fusepowered/m1/google/gson/JsonElement;>;"
     :cond_7
     invoke-virtual {p1}, Lcom/fusepowered/m1/google/gson/stream/JsonWriter;->endObject()Lcom/fusepowered/m1/google/gson/stream/JsonWriter;
 
     goto/16 :goto_0
 
     .line 709
-    .end local v2           #i$:Ljava/util/Iterator;
+    .end local v2    # "i$":Ljava/util/Iterator;
     :cond_8
     new-instance v4, Ljava/lang/IllegalArgumentException;
 
@@ -467,8 +467,8 @@
 
 .method public bridge synthetic write(Lcom/fusepowered/m1/google/gson/stream/JsonWriter;Ljava/lang/Object;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
+    .param p1, "x0"    # Lcom/fusepowered/m1/google/gson/stream/JsonWriter;
+    .param p2, "x1"    # Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -479,7 +479,7 @@
     .line 642
     check-cast p2, Lcom/fusepowered/m1/google/gson/JsonElement;
 
-    .end local p2
+    .end local p2    # "x1":Ljava/lang/Object;
     invoke-virtual {p0, p1, p2}, Lcom/fusepowered/m1/google/gson/internal/bind/TypeAdapters$25;->write(Lcom/fusepowered/m1/google/gson/stream/JsonWriter;Lcom/fusepowered/m1/google/gson/JsonElement;)V
 
     return-void

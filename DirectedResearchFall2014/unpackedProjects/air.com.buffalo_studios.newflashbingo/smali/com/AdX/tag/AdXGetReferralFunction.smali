@@ -21,15 +21,15 @@
 # virtual methods
 .method public call(Lcom/adobe/fre/FREContext;[Lcom/adobe/fre/FREObject;)Lcom/adobe/fre/FREObject;
     .locals 8
-    .parameter "context"
-    .parameter "passedArgs"
+    .param p1, "context"    # Lcom/adobe/fre/FREContext;
+    .param p2, "passedArgs"    # [Lcom/adobe/fre/FREObject;
 
     .prologue
     .line 31
     const/4 v5, 0x0
 
     .line 33
-    .local v5, result:Lcom/adobe/fre/FREObject;
+    .local v5, "result":Lcom/adobe/fre/FREObject;
     const-string v6, "AdXGetReferralFunction"
 
     const-string v7, "call"
@@ -44,14 +44,14 @@
     move-object v2, v0
 
     .line 39
-    .local v2, adxExtContext:Lcom/AdX/tag/AdXExtensionContext;
+    .local v2, "adxExtContext":Lcom/AdX/tag/AdXExtensionContext;
     :try_start_0
     invoke-virtual {v2}, Lcom/AdX/tag/AdXExtensionContext;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
     .line 40
-    .local v1, a:Landroid/app/Activity;
+    .local v1, "a":Landroid/app/Activity;
     invoke-virtual {v1}, Landroid/app/Activity;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v6
@@ -63,7 +63,7 @@
     move-result-object v4
 
     .line 41
-    .local v4, referral:Ljava/lang/String;
+    .local v4, "referral":Ljava/lang/String;
     invoke-static {v4}, Lcom/adobe/fre/FREObject;->newObject(Ljava/lang/String;)Lcom/adobe/fre/FREObject;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -71,8 +71,8 @@
     move-result-object v5
 
     .line 49
-    .end local v1           #a:Landroid/app/Activity;
-    .end local v4           #referral:Ljava/lang/String;
+    .end local v1    # "a":Landroid/app/Activity;
+    .end local v4    # "referral":Ljava/lang/String;
     :goto_0
     return-object v5
 
@@ -83,7 +83,7 @@
     move-object v3, v6
 
     .line 46
-    .local v3, e:Ljava/lang/Exception;
+    .local v3, "e":Ljava/lang/Exception;
     const-string v6, "AdXFunction"
 
     invoke-virtual {v3}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;

@@ -34,35 +34,35 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    #getter for: Lcom/facebook/internal/ImageRequest$Builder;->context:Landroid/content/Context;
+    # getter for: Lcom/facebook/internal/ImageRequest$Builder;->context:Landroid/content/Context;
     invoke-static {p1}, Lcom/facebook/internal/ImageRequest$Builder;->access$000(Lcom/facebook/internal/ImageRequest$Builder;)Landroid/content/Context;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/facebook/internal/ImageRequest;->context:Landroid/content/Context;
 
-    #getter for: Lcom/facebook/internal/ImageRequest$Builder;->imageUrl:Ljava/net/URI;
+    # getter for: Lcom/facebook/internal/ImageRequest$Builder;->imageUrl:Ljava/net/URI;
     invoke-static {p1}, Lcom/facebook/internal/ImageRequest$Builder;->access$100(Lcom/facebook/internal/ImageRequest$Builder;)Ljava/net/URI;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/facebook/internal/ImageRequest;->imageUri:Ljava/net/URI;
 
-    #getter for: Lcom/facebook/internal/ImageRequest$Builder;->callback:Lcom/facebook/internal/ImageRequest$Callback;
+    # getter for: Lcom/facebook/internal/ImageRequest$Builder;->callback:Lcom/facebook/internal/ImageRequest$Callback;
     invoke-static {p1}, Lcom/facebook/internal/ImageRequest$Builder;->access$200(Lcom/facebook/internal/ImageRequest$Builder;)Lcom/facebook/internal/ImageRequest$Callback;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/facebook/internal/ImageRequest;->callback:Lcom/facebook/internal/ImageRequest$Callback;
 
-    #getter for: Lcom/facebook/internal/ImageRequest$Builder;->allowCachedRedirects:Z
+    # getter for: Lcom/facebook/internal/ImageRequest$Builder;->allowCachedRedirects:Z
     invoke-static {p1}, Lcom/facebook/internal/ImageRequest$Builder;->access$300(Lcom/facebook/internal/ImageRequest$Builder;)Z
 
     move-result v0
 
     iput-boolean v0, p0, Lcom/facebook/internal/ImageRequest;->allowCachedRedirects:Z
 
-    #getter for: Lcom/facebook/internal/ImageRequest$Builder;->callerTag:Ljava/lang/Object;
+    # getter for: Lcom/facebook/internal/ImageRequest$Builder;->callerTag:Ljava/lang/Object;
     invoke-static {p1}, Lcom/facebook/internal/ImageRequest$Builder;->access$400(Lcom/facebook/internal/ImageRequest$Builder;)Ljava/lang/Object;
 
     move-result-object v0
@@ -79,7 +79,7 @@
     return-void
 
     :cond_0
-    #getter for: Lcom/facebook/internal/ImageRequest$Builder;->callerTag:Ljava/lang/Object;
+    # getter for: Lcom/facebook/internal/ImageRequest$Builder;->callerTag:Ljava/lang/Object;
     invoke-static {p1}, Lcom/facebook/internal/ImageRequest$Builder;->access$400(Lcom/facebook/internal/ImageRequest$Builder;)Ljava/lang/Object;
 
     move-result-object v0

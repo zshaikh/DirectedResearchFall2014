@@ -33,14 +33,12 @@
 # direct methods
 .method protected constructor <init>(Lcom/flurry/org/codehaus/jackson/map/ClassIntrospector;Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;Lcom/flurry/org/codehaus/jackson/map/introspect/VisibilityChecker;Lcom/flurry/org/codehaus/jackson/map/jsontype/SubtypeResolver;Lcom/flurry/org/codehaus/jackson/map/PropertyNamingStrategy;Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;Lcom/flurry/org/codehaus/jackson/map/HandlerInstantiator;I)V
     .locals 0
-    .parameter
-    .parameter "ai"
-    .parameter
-    .parameter "str"
-    .parameter "pns"
-    .parameter "tf"
-    .parameter "hi"
-    .parameter "defaultFeatures"
+    .param p2, "ai"    # Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;
+    .param p4, "str"    # Lcom/flurry/org/codehaus/jackson/map/jsontype/SubtypeResolver;
+    .param p5, "pns"    # Lcom/flurry/org/codehaus/jackson/map/PropertyNamingStrategy;
+    .param p6, "tf"    # Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;
+    .param p7, "hi"    # Lcom/flurry/org/codehaus/jackson/map/HandlerInstantiator;
+    .param p8, "defaultFeatures"    # I
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -61,9 +59,9 @@
 
     .prologue
     .line 1025
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Impl;,"Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Impl<TCFG;TT;>;"
-    .local p1, ci:Lcom/flurry/org/codehaus/jackson/map/ClassIntrospector;,"Lcom/flurry/org/codehaus/jackson/map/ClassIntrospector<+Lcom/flurry/org/codehaus/jackson/map/BeanDescription;>;"
-    .local p3, vc:Lcom/flurry/org/codehaus/jackson/map/introspect/VisibilityChecker;,"Lcom/flurry/org/codehaus/jackson/map/introspect/VisibilityChecker<*>;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Impl;, "Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Impl<TCFG;TT;>;"
+    .local p1, "ci":Lcom/flurry/org/codehaus/jackson/map/ClassIntrospector;, "Lcom/flurry/org/codehaus/jackson/map/ClassIntrospector<+Lcom/flurry/org/codehaus/jackson/map/BeanDescription;>;"
+    .local p3, "vc":Lcom/flurry/org/codehaus/jackson/map/introspect/VisibilityChecker;, "Lcom/flurry/org/codehaus/jackson/map/introspect/VisibilityChecker<*>;"
     invoke-direct/range {p0 .. p7}, Lcom/flurry/org/codehaus/jackson/map/MapperConfig;-><init>(Lcom/flurry/org/codehaus/jackson/map/ClassIntrospector;Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;Lcom/flurry/org/codehaus/jackson/map/introspect/VisibilityChecker;Lcom/flurry/org/codehaus/jackson/map/jsontype/SubtypeResolver;Lcom/flurry/org/codehaus/jackson/map/PropertyNamingStrategy;Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;Lcom/flurry/org/codehaus/jackson/map/HandlerInstantiator;)V
 
     .line 1026
@@ -75,7 +73,6 @@
 
 .method protected constructor <init>(Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Impl;)V
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -86,8 +83,8 @@
 
     .prologue
     .line 1030
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Impl;,"Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Impl<TCFG;TT;>;"
-    .local p1, src:Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Impl;,"Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Impl<TCFG;TT;>;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Impl;, "Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Impl<TCFG;TT;>;"
+    .local p1, "src":Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Impl;, "Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Impl<TCFG;TT;>;"
     invoke-direct {p0, p1}, Lcom/flurry/org/codehaus/jackson/map/MapperConfig;-><init>(Lcom/flurry/org/codehaus/jackson/map/MapperConfig;)V
 
     .line 1031
@@ -101,8 +98,7 @@
 
 .method protected constructor <init>(Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Impl;I)V
     .locals 0
-    .parameter
-    .parameter "features"
+    .param p2, "features"    # I
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -113,8 +109,8 @@
 
     .prologue
     .line 1035
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Impl;,"Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Impl<TCFG;TT;>;"
-    .local p1, src:Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Impl;,"Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Impl<TCFG;TT;>;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Impl;, "Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Impl<TCFG;TT;>;"
+    .local p1, "src":Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Impl;, "Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Impl<TCFG;TT;>;"
     invoke-direct {p0, p1}, Lcom/flurry/org/codehaus/jackson/map/MapperConfig;-><init>(Lcom/flurry/org/codehaus/jackson/map/MapperConfig;)V
 
     .line 1036
@@ -126,9 +122,8 @@
 
 .method protected constructor <init>(Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Impl;Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Base;Lcom/flurry/org/codehaus/jackson/map/jsontype/SubtypeResolver;)V
     .locals 1
-    .parameter
-    .parameter "base"
-    .parameter "str"
+    .param p2, "base"    # Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Base;
+    .param p3, "str"    # Lcom/flurry/org/codehaus/jackson/map/jsontype/SubtypeResolver;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -142,8 +137,8 @@
 
     .prologue
     .line 1044
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Impl;,"Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Impl<TCFG;TT;>;"
-    .local p1, src:Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Impl;,"Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Impl<TCFG;TT;>;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Impl;, "Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Impl<TCFG;TT;>;"
+    .local p1, "src":Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Impl;, "Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Impl<TCFG;TT;>;"
     invoke-direct {p0, p1, p2, p3}, Lcom/flurry/org/codehaus/jackson/map/MapperConfig;-><init>(Lcom/flurry/org/codehaus/jackson/map/MapperConfig;Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Base;Lcom/flurry/org/codehaus/jackson/map/jsontype/SubtypeResolver;)V
 
     .line 1045
@@ -157,7 +152,6 @@
 
 .method static collectFeatureDefaults(Ljava/lang/Class;)I
     .locals 7
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<F:",
@@ -172,31 +166,31 @@
 
     .prologue
     .line 1054
-    .local p0, enumClass:Ljava/lang/Class;,"Ljava/lang/Class<TF;>;"
+    .local p0, "enumClass":Ljava/lang/Class;, "Ljava/lang/Class<TF;>;"
     const/4 v2, 0x0
 
     .line 1055
-    .local v2, flags:I
+    .local v2, "flags":I
     invoke-virtual {p0}, Ljava/lang/Class;->getEnumConstants()[Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, [Ljava/lang/Enum;
 
-    .local v1, arr$:[Ljava/lang/Enum;
+    .local v1, "arr$":[Ljava/lang/Enum;
     array-length v4, v1
 
-    .local v4, len$:I
+    .local v4, "len$":I
     const/4 v3, 0x0
 
-    .local v3, i$:I
+    .local v3, "i$":I
     :goto_0
     if-ge v3, v4, :cond_1
 
     aget-object v5, v1, v3
 
     .line 1056
-    .local v5, value:Ljava/lang/Enum;,"TF;"
+    .local v5, "value":Ljava/lang/Enum;, "TF;"
     move-object v0, v5
 
     check-cast v0, Lcom/flurry/org/codehaus/jackson/map/MapperConfig$ConfigFeature;
@@ -212,7 +206,7 @@
     .line 1057
     check-cast v5, Lcom/flurry/org/codehaus/jackson/map/MapperConfig$ConfigFeature;
 
-    .end local v5           #value:Ljava/lang/Enum;,"TF;"
+    .end local v5    # "value":Ljava/lang/Enum;, "TF;"
     invoke-interface {v5}, Lcom/flurry/org/codehaus/jackson/map/MapperConfig$ConfigFeature;->getMask()I
 
     move-result v6
@@ -234,7 +228,6 @@
 # virtual methods
 .method public disable(Lcom/flurry/org/codehaus/jackson/map/MapperConfig$ConfigFeature;)V
     .locals 2
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TCFG;)V"
@@ -246,8 +239,8 @@
 
     .prologue
     .line 1132
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Impl;,"Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Impl<TCFG;TT;>;"
-    .local p1, f:Lcom/flurry/org/codehaus/jackson/map/MapperConfig$ConfigFeature;,"TCFG;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Impl;, "Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Impl<TCFG;TT;>;"
+    .local p1, "f":Lcom/flurry/org/codehaus/jackson/map/MapperConfig$ConfigFeature;, "TCFG;"
     iget v0, p0, Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Impl;->_featureFlags:I
 
     invoke-interface {p1}, Lcom/flurry/org/codehaus/jackson/map/MapperConfig$ConfigFeature;->getMask()I
@@ -266,7 +259,6 @@
 
 .method public enable(Lcom/flurry/org/codehaus/jackson/map/MapperConfig$ConfigFeature;)V
     .locals 2
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TCFG;)V"
@@ -278,8 +270,8 @@
 
     .prologue
     .line 1120
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Impl;,"Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Impl<TCFG;TT;>;"
-    .local p1, f:Lcom/flurry/org/codehaus/jackson/map/MapperConfig$ConfigFeature;,"TCFG;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Impl;, "Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Impl<TCFG;TT;>;"
+    .local p1, "f":Lcom/flurry/org/codehaus/jackson/map/MapperConfig$ConfigFeature;, "TCFG;"
     iget v0, p0, Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Impl;->_featureFlags:I
 
     invoke-interface {p1}, Lcom/flurry/org/codehaus/jackson/map/MapperConfig$ConfigFeature;->getMask()I
@@ -296,11 +288,11 @@
 
 .method public isEnabled(Lcom/flurry/org/codehaus/jackson/map/MapperConfig$ConfigFeature;)Z
     .locals 2
-    .parameter "f"
+    .param p1, "f"    # Lcom/flurry/org/codehaus/jackson/map/MapperConfig$ConfigFeature;
 
     .prologue
     .line 1102
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Impl;,"Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Impl<TCFG;TT;>;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Impl;, "Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Impl<TCFG;TT;>;"
     iget v0, p0, Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Impl;->_featureFlags:I
 
     invoke-interface {p1}, Lcom/flurry/org/codehaus/jackson/map/MapperConfig$ConfigFeature;->getMask()I
@@ -324,8 +316,7 @@
 
 .method public set(Lcom/flurry/org/codehaus/jackson/map/MapperConfig$ConfigFeature;Z)V
     .locals 0
-    .parameter
-    .parameter "state"
+    .param p2, "state"    # Z
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TCFG;Z)V"
@@ -337,8 +328,8 @@
 
     .prologue
     .line 1147
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Impl;,"Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Impl<TCFG;TT;>;"
-    .local p1, f:Lcom/flurry/org/codehaus/jackson/map/MapperConfig$ConfigFeature;,"TCFG;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Impl;, "Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Impl<TCFG;TT;>;"
+    .local p1, "f":Lcom/flurry/org/codehaus/jackson/map/MapperConfig$ConfigFeature;, "TCFG;"
     if-eqz p2, :cond_0
 
     .line 1148

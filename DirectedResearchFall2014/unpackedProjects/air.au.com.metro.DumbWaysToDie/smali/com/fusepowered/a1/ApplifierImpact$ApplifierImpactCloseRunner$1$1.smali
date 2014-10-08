@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/a1/ApplifierImpact$ApplifierImpactCloseRunner$1;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1
@@ -51,7 +50,7 @@
 
     iget-object v1, p0, Lcom/fusepowered/a1/ApplifierImpact$ApplifierImpactCloseRunner$1$1;->this$2:Lcom/fusepowered/a1/ApplifierImpact$ApplifierImpactCloseRunner$1;
 
-    #getter for: Lcom/fusepowered/a1/ApplifierImpact$ApplifierImpactCloseRunner$1;->this$1:Lcom/fusepowered/a1/ApplifierImpact$ApplifierImpactCloseRunner;
+    # getter for: Lcom/fusepowered/a1/ApplifierImpact$ApplifierImpactCloseRunner$1;->this$1:Lcom/fusepowered/a1/ApplifierImpact$ApplifierImpactCloseRunner;
     invoke-static {v1}, Lcom/fusepowered/a1/ApplifierImpact$ApplifierImpactCloseRunner$1;->access$0(Lcom/fusepowered/a1/ApplifierImpact$ApplifierImpactCloseRunner$1;)Lcom/fusepowered/a1/ApplifierImpact$ApplifierImpactCloseRunner;
 
     move-result-object v1
@@ -115,33 +114,32 @@
     .line 792
     iget-object v0, p0, Lcom/fusepowered/a1/ApplifierImpact$ApplifierImpactCloseRunner$1$1;->this$2:Lcom/fusepowered/a1/ApplifierImpact$ApplifierImpactCloseRunner$1;
 
-    #getter for: Lcom/fusepowered/a1/ApplifierImpact$ApplifierImpactCloseRunner$1;->this$1:Lcom/fusepowered/a1/ApplifierImpact$ApplifierImpactCloseRunner;
+    # getter for: Lcom/fusepowered/a1/ApplifierImpact$ApplifierImpactCloseRunner$1;->this$1:Lcom/fusepowered/a1/ApplifierImpact$ApplifierImpactCloseRunner;
     invoke-static {v0}, Lcom/fusepowered/a1/ApplifierImpact$ApplifierImpactCloseRunner$1;->access$0(Lcom/fusepowered/a1/ApplifierImpact$ApplifierImpactCloseRunner$1;)Lcom/fusepowered/a1/ApplifierImpact$ApplifierImpactCloseRunner;
 
     move-result-object v0
 
-    #getter for: Lcom/fusepowered/a1/ApplifierImpact$ApplifierImpactCloseRunner;->this$0:Lcom/fusepowered/a1/ApplifierImpact;
+    # getter for: Lcom/fusepowered/a1/ApplifierImpact$ApplifierImpactCloseRunner;->this$0:Lcom/fusepowered/a1/ApplifierImpact;
     invoke-static {v0}, Lcom/fusepowered/a1/ApplifierImpact$ApplifierImpactCloseRunner;->access$1(Lcom/fusepowered/a1/ApplifierImpact$ApplifierImpactCloseRunner;)Lcom/fusepowered/a1/ApplifierImpact;
 
     move-result-object v0
 
-    #setter for: Lcom/fusepowered/a1/ApplifierImpact;->_showingImpact:Z
     invoke-static {v0, v2}, Lcom/fusepowered/a1/ApplifierImpact;->access$0(Lcom/fusepowered/a1/ApplifierImpact;Z)V
 
     .line 794
     iget-object v0, p0, Lcom/fusepowered/a1/ApplifierImpact$ApplifierImpactCloseRunner$1$1;->this$2:Lcom/fusepowered/a1/ApplifierImpact$ApplifierImpactCloseRunner$1;
 
-    #getter for: Lcom/fusepowered/a1/ApplifierImpact$ApplifierImpactCloseRunner$1;->this$1:Lcom/fusepowered/a1/ApplifierImpact$ApplifierImpactCloseRunner;
+    # getter for: Lcom/fusepowered/a1/ApplifierImpact$ApplifierImpactCloseRunner$1;->this$1:Lcom/fusepowered/a1/ApplifierImpact$ApplifierImpactCloseRunner;
     invoke-static {v0}, Lcom/fusepowered/a1/ApplifierImpact$ApplifierImpactCloseRunner$1;->access$0(Lcom/fusepowered/a1/ApplifierImpact$ApplifierImpactCloseRunner$1;)Lcom/fusepowered/a1/ApplifierImpact$ApplifierImpactCloseRunner;
 
     move-result-object v0
 
-    #getter for: Lcom/fusepowered/a1/ApplifierImpact$ApplifierImpactCloseRunner;->this$0:Lcom/fusepowered/a1/ApplifierImpact;
+    # getter for: Lcom/fusepowered/a1/ApplifierImpact$ApplifierImpactCloseRunner;->this$0:Lcom/fusepowered/a1/ApplifierImpact;
     invoke-static {v0}, Lcom/fusepowered/a1/ApplifierImpact$ApplifierImpactCloseRunner;->access$1(Lcom/fusepowered/a1/ApplifierImpact$ApplifierImpactCloseRunner;)Lcom/fusepowered/a1/ApplifierImpact;
 
     move-result-object v0
 
-    #getter for: Lcom/fusepowered/a1/ApplifierImpact;->_impactListener:Lcom/fusepowered/a1/IApplifierImpactListener;
+    # getter for: Lcom/fusepowered/a1/ApplifierImpact;->_impactListener:Lcom/fusepowered/a1/IApplifierImpactListener;
     invoke-static {v0}, Lcom/fusepowered/a1/ApplifierImpact;->access$1(Lcom/fusepowered/a1/ApplifierImpact;)Lcom/fusepowered/a1/IApplifierImpactListener;
 
     move-result-object v0
@@ -151,17 +149,17 @@
     .line 795
     iget-object v0, p0, Lcom/fusepowered/a1/ApplifierImpact$ApplifierImpactCloseRunner$1$1;->this$2:Lcom/fusepowered/a1/ApplifierImpact$ApplifierImpactCloseRunner$1;
 
-    #getter for: Lcom/fusepowered/a1/ApplifierImpact$ApplifierImpactCloseRunner$1;->this$1:Lcom/fusepowered/a1/ApplifierImpact$ApplifierImpactCloseRunner;
+    # getter for: Lcom/fusepowered/a1/ApplifierImpact$ApplifierImpactCloseRunner$1;->this$1:Lcom/fusepowered/a1/ApplifierImpact$ApplifierImpactCloseRunner;
     invoke-static {v0}, Lcom/fusepowered/a1/ApplifierImpact$ApplifierImpactCloseRunner$1;->access$0(Lcom/fusepowered/a1/ApplifierImpact$ApplifierImpactCloseRunner$1;)Lcom/fusepowered/a1/ApplifierImpact$ApplifierImpactCloseRunner;
 
     move-result-object v0
 
-    #getter for: Lcom/fusepowered/a1/ApplifierImpact$ApplifierImpactCloseRunner;->this$0:Lcom/fusepowered/a1/ApplifierImpact;
+    # getter for: Lcom/fusepowered/a1/ApplifierImpact$ApplifierImpactCloseRunner;->this$0:Lcom/fusepowered/a1/ApplifierImpact;
     invoke-static {v0}, Lcom/fusepowered/a1/ApplifierImpact$ApplifierImpactCloseRunner;->access$1(Lcom/fusepowered/a1/ApplifierImpact$ApplifierImpactCloseRunner;)Lcom/fusepowered/a1/ApplifierImpact;
 
     move-result-object v0
 
-    #getter for: Lcom/fusepowered/a1/ApplifierImpact;->_impactListener:Lcom/fusepowered/a1/IApplifierImpactListener;
+    # getter for: Lcom/fusepowered/a1/ApplifierImpact;->_impactListener:Lcom/fusepowered/a1/IApplifierImpactListener;
     invoke-static {v0}, Lcom/fusepowered/a1/ApplifierImpact;->access$1(Lcom/fusepowered/a1/ApplifierImpact;)Lcom/fusepowered/a1/IApplifierImpactListener;
 
     move-result-object v0

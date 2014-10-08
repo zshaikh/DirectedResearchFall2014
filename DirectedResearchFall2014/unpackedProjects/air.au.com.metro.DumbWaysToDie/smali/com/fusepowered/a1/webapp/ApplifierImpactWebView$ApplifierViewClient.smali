@@ -21,7 +21,6 @@
 # direct methods
 .method private constructor <init>(Lcom/fusepowered/a1/webapp/ApplifierImpactWebView;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 310
@@ -34,8 +33,6 @@
 
 .method synthetic constructor <init>(Lcom/fusepowered/a1/webapp/ApplifierImpactWebView;Lcom/fusepowered/a1/webapp/ApplifierImpactWebView$ApplifierViewClient;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 310
@@ -48,8 +45,8 @@
 # virtual methods
 .method public onLoadResource(Landroid/webkit/WebView;Ljava/lang/String;)V
     .locals 0
-    .parameter "view"
-    .parameter "url"
+    .param p1, "view"    # Landroid/webkit/WebView;
+    .param p2, "url"    # Ljava/lang/String;
 
     .prologue
     .line 335
@@ -61,8 +58,8 @@
 
 .method public onPageFinished(Landroid/webkit/WebView;Ljava/lang/String;)V
     .locals 2
-    .parameter "webview"
-    .parameter "url"
+    .param p1, "webview"    # Landroid/webkit/WebView;
+    .param p2, "url"    # Ljava/lang/String;
 
     .prologue
     .line 313
@@ -88,7 +85,7 @@
     .line 315
     iget-object v0, p0, Lcom/fusepowered/a1/webapp/ApplifierImpactWebView$ApplifierViewClient;->this$0:Lcom/fusepowered/a1/webapp/ApplifierImpactWebView;
 
-    #getter for: Lcom/fusepowered/a1/webapp/ApplifierImpactWebView;->_listener:Lcom/fusepowered/a1/webapp/IApplifierImpactWebViewListener;
+    # getter for: Lcom/fusepowered/a1/webapp/ApplifierImpactWebView;->_listener:Lcom/fusepowered/a1/webapp/IApplifierImpactWebViewListener;
     invoke-static {v0}, Lcom/fusepowered/a1/webapp/ApplifierImpactWebView;->access$0(Lcom/fusepowered/a1/webapp/ApplifierImpactWebView;)Lcom/fusepowered/a1/webapp/IApplifierImpactWebViewListener;
 
     move-result-object v0
@@ -97,7 +94,7 @@
 
     iget-object v0, p0, Lcom/fusepowered/a1/webapp/ApplifierImpactWebView$ApplifierViewClient;->this$0:Lcom/fusepowered/a1/webapp/ApplifierImpactWebView;
 
-    #getter for: Lcom/fusepowered/a1/webapp/ApplifierImpactWebView;->_webAppLoaded:Z
+    # getter for: Lcom/fusepowered/a1/webapp/ApplifierImpactWebView;->_webAppLoaded:Z
     invoke-static {v0}, Lcom/fusepowered/a1/webapp/ApplifierImpactWebView;->access$1(Lcom/fusepowered/a1/webapp/ApplifierImpactWebView;)Z
 
     move-result v0
@@ -109,13 +106,12 @@
 
     const/4 v1, 0x1
 
-    #setter for: Lcom/fusepowered/a1/webapp/ApplifierImpactWebView;->_webAppLoaded:Z
     invoke-static {v0, v1}, Lcom/fusepowered/a1/webapp/ApplifierImpactWebView;->access$2(Lcom/fusepowered/a1/webapp/ApplifierImpactWebView;Z)V
 
     .line 317
     iget-object v0, p0, Lcom/fusepowered/a1/webapp/ApplifierImpactWebView$ApplifierViewClient;->this$0:Lcom/fusepowered/a1/webapp/ApplifierImpactWebView;
 
-    #getter for: Lcom/fusepowered/a1/webapp/ApplifierImpactWebView;->_listener:Lcom/fusepowered/a1/webapp/IApplifierImpactWebViewListener;
+    # getter for: Lcom/fusepowered/a1/webapp/ApplifierImpactWebView;->_listener:Lcom/fusepowered/a1/webapp/IApplifierImpactWebViewListener;
     invoke-static {v0}, Lcom/fusepowered/a1/webapp/ApplifierImpactWebView;->access$0(Lcom/fusepowered/a1/webapp/ApplifierImpactWebView;)Lcom/fusepowered/a1/webapp/IApplifierImpactWebViewListener;
 
     move-result-object v0
@@ -129,10 +125,10 @@
 
 .method public onReceivedError(Landroid/webkit/WebView;ILjava/lang/String;Ljava/lang/String;)V
     .locals 2
-    .parameter "view"
-    .parameter "errorCode"
-    .parameter "description"
-    .parameter "failingUrl"
+    .param p1, "view"    # Landroid/webkit/WebView;
+    .param p2, "errorCode"    # I
+    .param p3, "description"    # Ljava/lang/String;
+    .param p4, "failingUrl"    # Ljava/lang/String;
 
     .prologue
     .line 329
@@ -181,8 +177,8 @@
 
 .method public shouldOverrideUrlLoading(Landroid/webkit/WebView;Ljava/lang/String;)Z
     .locals 2
-    .parameter "view"
-    .parameter "url"
+    .param p1, "view"    # Landroid/webkit/WebView;
+    .param p2, "url"    # Ljava/lang/String;
 
     .prologue
     .line 323

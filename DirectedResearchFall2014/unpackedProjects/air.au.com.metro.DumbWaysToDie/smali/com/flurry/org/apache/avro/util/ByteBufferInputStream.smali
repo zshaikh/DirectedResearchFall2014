@@ -21,7 +21,6 @@
 # direct methods
 .method public constructor <init>(Ljava/util/List;)V
     .locals 0
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -34,7 +33,7 @@
 
     .prologue
     .line 32
-    .local p1, buffers:Ljava/util/List;,"Ljava/util/List<Ljava/nio/ByteBuffer;>;"
+    .local p1, "buffers":Ljava/util/List;, "Ljava/util/List<Ljava/nio/ByteBuffer;>;"
     invoke-direct {p0}, Ljava/io/InputStream;-><init>()V
 
     .line 33
@@ -77,7 +76,7 @@
     check-cast v0, Ljava/nio/ByteBuffer;
 
     .line 82
-    .local v0, buffer:Ljava/nio/ByteBuffer;
+    .local v0, "buffer":Ljava/nio/ByteBuffer;
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->hasRemaining()Z
 
     move-result v1
@@ -98,7 +97,7 @@
     goto :goto_0
 
     .line 86
-    .end local v0           #buffer:Ljava/nio/ByteBuffer;
+    .end local v0    # "buffer":Ljava/nio/ByteBuffer;
     :cond_1
     new-instance v1, Ljava/io/EOFException;
 
@@ -134,9 +133,9 @@
 
 .method public read([BII)I
     .locals 3
-    .parameter "b"
-    .parameter "off"
-    .parameter "len"
+    .param p1, "b"    # [B
+    .param p2, "off"    # I
+    .param p3, "len"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -160,13 +159,13 @@
     move-result-object v0
 
     .line 49
-    .local v0, buffer:Ljava/nio/ByteBuffer;
+    .local v0, "buffer":Ljava/nio/ByteBuffer;
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->remaining()I
 
     move-result v1
 
     .line 50
-    .local v1, remaining:I
+    .local v1, "remaining":I
     if-le p3, v1, :cond_1
 
     .line 51
@@ -189,7 +188,7 @@
 
 .method public readBuffer(I)Ljava/nio/ByteBuffer;
     .locals 5
-    .parameter "length"
+    .param p1, "length"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -217,7 +216,7 @@
     move-result-object v0
 
     .line 64
-    .local v0, buffer:Ljava/nio/ByteBuffer;
+    .local v0, "buffer":Ljava/nio/ByteBuffer;
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->remaining()I
 
     move-result v3
@@ -243,11 +242,11 @@
     move-result-object v1
 
     .line 70
-    .local v1, result:Ljava/nio/ByteBuffer;
+    .local v1, "result":Ljava/nio/ByteBuffer;
     const/4 v2, 0x0
 
     .line 71
-    .local v2, start:I
+    .local v2, "start":I
     :goto_1
     if-ge v2, p1, :cond_2
 

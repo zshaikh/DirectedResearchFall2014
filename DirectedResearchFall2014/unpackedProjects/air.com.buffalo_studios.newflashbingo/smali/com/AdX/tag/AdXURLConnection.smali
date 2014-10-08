@@ -17,8 +17,8 @@
 
 .method public static connectToURL(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 12
-    .parameter "url"
-    .parameter "params"
+    .param p0, "url"    # Ljava/lang/String;
+    .param p1, "params"    # Ljava/lang/String;
 
     .prologue
     const-string v8, "--------------------"
@@ -29,7 +29,7 @@
     const/4 v5, 0x0
 
     .line 37
-    .local v5, httpResponse:Ljava/lang/String;
+    .local v5, "httpResponse":Ljava/lang/String;
     :try_start_0
     new-instance v8, Ljava/lang/StringBuilder;
 
@@ -48,7 +48,7 @@
     move-result-object v6
 
     .line 40
-    .local v6, requestURL:Ljava/lang/String;
+    .local v6, "requestURL":Ljava/lang/String;
     const-string v8, " "
 
     const-string v9, "%20"
@@ -63,13 +63,13 @@
     invoke-direct {v3, v6}, Lorg/apache/http/client/methods/HttpGet;-><init>(Ljava/lang/String;)V
 
     .line 48
-    .local v3, http:Lorg/apache/http/client/methods/HttpGet;
+    .local v3, "http":Lorg/apache/http/client/methods/HttpGet;
     new-instance v4, Lorg/apache/http/params/BasicHttpParams;
 
     invoke-direct {v4}, Lorg/apache/http/params/BasicHttpParams;-><init>()V
 
     .line 51
-    .local v4, httpParameters:Lorg/apache/http/params/HttpParams;
+    .local v4, "httpParameters":Lorg/apache/http/params/HttpParams;
     const/16 v8, 0x3a98
 
     invoke-static {v4, v8}, Lorg/apache/http/params/HttpConnectionParams;->setConnectionTimeout(Lorg/apache/http/params/HttpParams;I)V
@@ -85,19 +85,19 @@
     invoke-direct {v0, v4}, Lorg/apache/http/impl/client/DefaultHttpClient;-><init>(Lorg/apache/http/params/HttpParams;)V
 
     .line 59
-    .local v0, client:Lorg/apache/http/client/HttpClient;
+    .local v0, "client":Lorg/apache/http/client/HttpClient;
     invoke-interface {v0, v3}, Lorg/apache/http/client/HttpClient;->execute(Lorg/apache/http/client/methods/HttpUriRequest;)Lorg/apache/http/HttpResponse;
 
     move-result-object v7
 
     .line 60
-    .local v7, response:Lorg/apache/http/HttpResponse;
+    .local v7, "response":Lorg/apache/http/HttpResponse;
     invoke-interface {v7}, Lorg/apache/http/HttpResponse;->getEntity()Lorg/apache/http/HttpEntity;
 
     move-result-object v2
 
     .line 62
-    .local v2, entity:Lorg/apache/http/HttpEntity;
+    .local v2, "entity":Lorg/apache/http/HttpEntity;
     invoke-static {v2}, Lorg/apache/http/util/EntityUtils;->toString(Lorg/apache/http/HttpEntity;)Ljava/lang/String;
 
     move-result-object v5
@@ -193,12 +193,12 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 76
-    .end local v0           #client:Lorg/apache/http/client/HttpClient;
-    .end local v2           #entity:Lorg/apache/http/HttpEntity;
-    .end local v3           #http:Lorg/apache/http/client/methods/HttpGet;
-    .end local v4           #httpParameters:Lorg/apache/http/params/HttpParams;
-    .end local v6           #requestURL:Ljava/lang/String;
-    .end local v7           #response:Lorg/apache/http/HttpResponse;
+    .end local v0    # "client":Lorg/apache/http/client/HttpClient;
+    .end local v2    # "entity":Lorg/apache/http/HttpEntity;
+    .end local v3    # "http":Lorg/apache/http/client/methods/HttpGet;
+    .end local v4    # "httpParameters":Lorg/apache/http/params/HttpParams;
+    .end local v6    # "requestURL":Ljava/lang/String;
+    .end local v7    # "response":Lorg/apache/http/HttpResponse;
     :goto_0
     return-object v5
 
@@ -209,7 +209,7 @@
     move-object v1, v8
 
     .line 73
-    .local v1, e:Ljava/lang/Exception;
+    .local v1, "e":Ljava/lang/Exception;
     const-string v8, "AdXAppTracker"
 
     new-instance v8, Ljava/lang/StringBuilder;

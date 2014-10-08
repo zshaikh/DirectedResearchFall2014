@@ -36,7 +36,7 @@
 # direct methods
 .method constructor <init>(Lcom/facebook/Session;)V
     .locals 2
-    .parameter "session"
+    .param p1, "session"    # Lcom/facebook/Session;
 
     .prologue
     .line 197
@@ -56,8 +56,8 @@
 
 .method constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
-    .parameter "accessToken"
-    .parameter "applicationId"
+    .param p1, "accessToken"    # Ljava/lang/String;
+    .param p2, "applicationId"    # Ljava/lang/String;
 
     .prologue
     .line 200
@@ -110,7 +110,7 @@
 # virtual methods
 .method public equals(Ljava/lang/Object;)Z
     .locals 5
-    .parameter "o"
+    .param p1, "o"    # Ljava/lang/Object;
 
     .prologue
     const/4 v4, 0x0
@@ -135,7 +135,7 @@
     move-object v1, v0
 
     .line 225
-    .local v1, p:Lcom/facebook/AppEventsLogger$AccessTokenAppIdPair;
+    .local v1, "p":Lcom/facebook/AppEventsLogger$AccessTokenAppIdPair;
     iget-object v2, v1, Lcom/facebook/AppEventsLogger$AccessTokenAppIdPair;->accessToken:Ljava/lang/String;
 
     iget-object v3, p0, Lcom/facebook/AppEventsLogger$AccessTokenAppIdPair;->accessToken:Ljava/lang/String;

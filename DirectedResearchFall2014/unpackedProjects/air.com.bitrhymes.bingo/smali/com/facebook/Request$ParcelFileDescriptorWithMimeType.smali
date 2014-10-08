@@ -55,7 +55,7 @@
 
 .method private constructor <init>(Landroid/os/Parcel;)V
     .locals 1
-    .parameter "in"
+    .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
     .line 2300
@@ -81,8 +81,6 @@
 
 .method synthetic constructor <init>(Landroid/os/Parcel;Lcom/facebook/Request$ParcelFileDescriptorWithMimeType;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 2300
@@ -93,8 +91,8 @@
 
 .method public constructor <init>(Landroid/os/ParcelFileDescriptor;Ljava/lang/String;)V
     .locals 0
-    .parameter "fileDescriptor"
-    .parameter "mimeType"
+    .param p1, "fileDescriptor"    # Landroid/os/ParcelFileDescriptor;
+    .param p2, "mimeType"    # Ljava/lang/String;
 
     .prologue
     .line 2295
@@ -144,8 +142,8 @@
 
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 1
-    .parameter "out"
-    .parameter "flags"
+    .param p1, "out"    # Landroid/os/Parcel;
+    .param p2, "flags"    # I
 
     .prologue
     .line 2279

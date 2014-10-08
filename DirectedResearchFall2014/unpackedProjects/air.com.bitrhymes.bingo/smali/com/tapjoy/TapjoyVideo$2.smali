@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/tapjoy/TapjoyVideo;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 543
@@ -56,20 +55,20 @@
     const-wide/16 v0, 0x1f4
 
     .line 550
-    .local v0, SLEEP_TIME:J
+    .local v0, "SLEEP_TIME":J
     const-wide/16 v2, 0x2710
 
     .line 551
-    .local v2, TIMEOUT:J
+    .local v2, "TIMEOUT":J
     const/4 v5, 0x0
 
     .line 554
-    .local v5, elapsed:I
+    .local v5, "elapsed":I
     :cond_0
     :goto_0
     iget-object v8, p0, Lcom/tapjoy/TapjoyVideo$2;->this$0:Lcom/tapjoy/TapjoyVideo;
 
-    #getter for: Lcom/tapjoy/TapjoyVideo;->initialized:Z
+    # getter for: Lcom/tapjoy/TapjoyVideo;->initialized:Z
     invoke-static {v8}, Lcom/tapjoy/TapjoyVideo;->access$400(Lcom/tapjoy/TapjoyVideo;)Z
 
     move-result v8
@@ -118,7 +117,7 @@
     move-object v4, v8
 
     .line 570
-    .local v4, e:Ljava/lang/Exception;
+    .local v4, "e":Ljava/lang/Exception;
     const-string v8, "TapjoyVideo"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -148,7 +147,7 @@
     goto :goto_0
 
     .line 574
-    .end local v4           #e:Ljava/lang/Exception;
+    .end local v4    # "e":Ljava/lang/Exception;
     :cond_1
     const-string v8, "TapjoyVideo"
 
@@ -191,7 +190,7 @@
 
     iget-object v9, p0, Lcom/tapjoy/TapjoyVideo$2;->this$0:Lcom/tapjoy/TapjoyVideo;
 
-    #getter for: Lcom/tapjoy/TapjoyVideo;->cache3g:Z
+    # getter for: Lcom/tapjoy/TapjoyVideo;->cache3g:Z
     invoke-static {v9}, Lcom/tapjoy/TapjoyVideo;->access$600(Lcom/tapjoy/TapjoyVideo;)Z
 
     move-result v9
@@ -221,7 +220,7 @@
 
     iget-object v9, p0, Lcom/tapjoy/TapjoyVideo$2;->this$0:Lcom/tapjoy/TapjoyVideo;
 
-    #getter for: Lcom/tapjoy/TapjoyVideo;->cacheWifi:Z
+    # getter for: Lcom/tapjoy/TapjoyVideo;->cacheWifi:Z
     invoke-static {v9}, Lcom/tapjoy/TapjoyVideo;->access$700(Lcom/tapjoy/TapjoyVideo;)Z
 
     move-result v9
@@ -239,7 +238,7 @@
     .line 579
     iget-object v8, p0, Lcom/tapjoy/TapjoyVideo$2;->this$0:Lcom/tapjoy/TapjoyVideo;
 
-    #getter for: Lcom/tapjoy/TapjoyVideo;->cache3g:Z
+    # getter for: Lcom/tapjoy/TapjoyVideo;->cache3g:Z
     invoke-static {v8}, Lcom/tapjoy/TapjoyVideo;->access$600(Lcom/tapjoy/TapjoyVideo;)Z
 
     move-result v8
@@ -261,7 +260,7 @@
     :cond_2
     iget-object v8, p0, Lcom/tapjoy/TapjoyVideo$2;->this$0:Lcom/tapjoy/TapjoyVideo;
 
-    #getter for: Lcom/tapjoy/TapjoyVideo;->cacheWifi:Z
+    # getter for: Lcom/tapjoy/TapjoyVideo;->cacheWifi:Z
     invoke-static {v8}, Lcom/tapjoy/TapjoyVideo;->access$700(Lcom/tapjoy/TapjoyVideo;)Z
 
     move-result v8
@@ -287,7 +286,7 @@
     move-result-object v6
 
     .line 585
-    .local v6, state:Ljava/lang/String;
+    .local v6, "state":Ljava/lang/String;
     const-string v8, "mounted"
 
     invoke-virtual {v8, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -315,7 +314,7 @@
     :goto_2
     iget-object v8, p0, Lcom/tapjoy/TapjoyVideo$2;->this$0:Lcom/tapjoy/TapjoyVideo;
 
-    #getter for: Lcom/tapjoy/TapjoyVideo;->cachedVideos:Ljava/util/Hashtable;
+    # getter for: Lcom/tapjoy/TapjoyVideo;->cachedVideos:Ljava/util/Hashtable;
     invoke-static {v8}, Lcom/tapjoy/TapjoyVideo;->access$800(Lcom/tapjoy/TapjoyVideo;)Ljava/util/Hashtable;
 
     move-result-object v8
@@ -326,7 +325,7 @@
 
     iget-object v9, p0, Lcom/tapjoy/TapjoyVideo$2;->this$0:Lcom/tapjoy/TapjoyVideo;
 
-    #getter for: Lcom/tapjoy/TapjoyVideo;->videoCacheLimit:I
+    # getter for: Lcom/tapjoy/TapjoyVideo;->videoCacheLimit:I
     invoke-static {v9}, Lcom/tapjoy/TapjoyVideo;->access$900(Lcom/tapjoy/TapjoyVideo;)I
 
     move-result v9
@@ -335,7 +334,7 @@
 
     iget-object v8, p0, Lcom/tapjoy/TapjoyVideo$2;->this$0:Lcom/tapjoy/TapjoyVideo;
 
-    #getter for: Lcom/tapjoy/TapjoyVideo;->videoQueue:Ljava/util/Vector;
+    # getter for: Lcom/tapjoy/TapjoyVideo;->videoQueue:Ljava/util/Vector;
     invoke-static {v8}, Lcom/tapjoy/TapjoyVideo;->access$1000(Lcom/tapjoy/TapjoyVideo;)Ljava/util/Vector;
 
     move-result-object v8
@@ -349,14 +348,14 @@
     .line 597
     iget-object v8, p0, Lcom/tapjoy/TapjoyVideo$2;->this$0:Lcom/tapjoy/TapjoyVideo;
 
-    #getter for: Lcom/tapjoy/TapjoyVideo;->uncachedVideos:Ljava/util/Hashtable;
+    # getter for: Lcom/tapjoy/TapjoyVideo;->uncachedVideos:Ljava/util/Hashtable;
     invoke-static {v8}, Lcom/tapjoy/TapjoyVideo;->access$1100(Lcom/tapjoy/TapjoyVideo;)Ljava/util/Hashtable;
 
     move-result-object v8
 
     iget-object v9, p0, Lcom/tapjoy/TapjoyVideo$2;->this$0:Lcom/tapjoy/TapjoyVideo;
 
-    #getter for: Lcom/tapjoy/TapjoyVideo;->videoQueue:Ljava/util/Vector;
+    # getter for: Lcom/tapjoy/TapjoyVideo;->videoQueue:Ljava/util/Vector;
     invoke-static {v9}, Lcom/tapjoy/TapjoyVideo;->access$1000(Lcom/tapjoy/TapjoyVideo;)Ljava/util/Vector;
 
     move-result-object v9
@@ -376,17 +375,17 @@
     iget-object v7, v8, Lcom/tapjoy/TapjoyVideoObject;->videoURL:Ljava/lang/String;
 
     .line 598
-    .local v7, url:Ljava/lang/String;
+    .local v7, "url":Ljava/lang/String;
     iget-object v8, p0, Lcom/tapjoy/TapjoyVideo$2;->this$0:Lcom/tapjoy/TapjoyVideo;
 
-    #calls: Lcom/tapjoy/TapjoyVideo;->cacheVideoFromURL(Ljava/lang/String;)V
+    # invokes: Lcom/tapjoy/TapjoyVideo;->cacheVideoFromURL(Ljava/lang/String;)V
     invoke-static {v8, v7}, Lcom/tapjoy/TapjoyVideo;->access$1200(Lcom/tapjoy/TapjoyVideo;Ljava/lang/String;)V
 
     goto :goto_2
 
     .line 603
-    .end local v6           #state:Ljava/lang/String;
-    .end local v7           #url:Ljava/lang/String;
+    .end local v6    # "state":Ljava/lang/String;
+    .end local v7    # "url":Ljava/lang/String;
     :cond_5
     const-string v8, "TapjoyVideo"
 
@@ -398,7 +397,7 @@
     :cond_6
     iget-object v8, p0, Lcom/tapjoy/TapjoyVideo$2;->this$0:Lcom/tapjoy/TapjoyVideo;
 
-    #calls: Lcom/tapjoy/TapjoyVideo;->printCachedVideos()V
+    # invokes: Lcom/tapjoy/TapjoyVideo;->printCachedVideos()V
     invoke-static {v8}, Lcom/tapjoy/TapjoyVideo;->access$1300(Lcom/tapjoy/TapjoyVideo;)V
 
     goto/16 :goto_1

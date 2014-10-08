@@ -37,7 +37,7 @@
     move-result-object v1
 
     .line 29
-    .local v1, registry:Lorg/w3c/dom/bootstrap/DOMImplementationRegistry;
+    .local v1, "registry":Lorg/w3c/dom/bootstrap/DOMImplementationRegistry;
     const-string v2, "LS"
 
     invoke-virtual {v1, v2}, Lorg/w3c/dom/bootstrap/DOMImplementationRegistry;->getDOMImplementation(Ljava/lang/String;)Lorg/w3c/dom/DOMImplementation;
@@ -52,12 +52,12 @@
     return-void
 
     .line 26
-    .end local v1           #registry:Lorg/w3c/dom/bootstrap/DOMImplementationRegistry;
+    .end local v1    # "registry":Lorg/w3c/dom/bootstrap/DOMImplementationRegistry;
     :catch_0
     move-exception v0
 
     .line 27
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     new-instance v2, Ljava/lang/IllegalStateException;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -91,8 +91,8 @@
 # virtual methods
 .method public getSchema(Lcom/flurry/org/codehaus/jackson/map/SerializerProvider;Ljava/lang/reflect/Type;)Lcom/flurry/org/codehaus/jackson/JsonNode;
     .locals 2
-    .parameter "provider"
-    .parameter "typeHint"
+    .param p1, "provider"    # Lcom/flurry/org/codehaus/jackson/map/SerializerProvider;
+    .param p2, "typeHint"    # Ljava/lang/reflect/Type;
 
     .prologue
     .line 45
@@ -109,9 +109,9 @@
 
 .method public bridge synthetic serialize(Ljava/lang/Object;Lcom/flurry/org/codehaus/jackson/JsonGenerator;Lcom/flurry/org/codehaus/jackson/map/SerializerProvider;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
-    .parameter "x2"
+    .param p1, "x0"    # Ljava/lang/Object;
+    .param p2, "x1"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator;
+    .param p3, "x2"    # Lcom/flurry/org/codehaus/jackson/map/SerializerProvider;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -123,7 +123,7 @@
     .line 15
     check-cast p1, Lorg/w3c/dom/Node;
 
-    .end local p1
+    .end local p1    # "x0":Ljava/lang/Object;
     invoke-virtual {p0, p1, p2, p3}, Lcom/flurry/org/codehaus/jackson/map/ext/DOMSerializer;->serialize(Lorg/w3c/dom/Node;Lcom/flurry/org/codehaus/jackson/JsonGenerator;Lcom/flurry/org/codehaus/jackson/map/SerializerProvider;)V
 
     return-void
@@ -131,9 +131,9 @@
 
 .method public serialize(Lorg/w3c/dom/Node;Lcom/flurry/org/codehaus/jackson/JsonGenerator;Lcom/flurry/org/codehaus/jackson/map/SerializerProvider;)V
     .locals 3
-    .parameter "value"
-    .parameter "jgen"
-    .parameter "provider"
+    .param p1, "value"    # Lorg/w3c/dom/Node;
+    .param p2, "jgen"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator;
+    .param p3, "provider"    # Lcom/flurry/org/codehaus/jackson/map/SerializerProvider;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -164,7 +164,7 @@
     move-result-object v0
 
     .line 38
-    .local v0, writer:Lorg/w3c/dom/ls/LSSerializer;
+    .local v0, "writer":Lorg/w3c/dom/ls/LSSerializer;
     invoke-interface {v0, p1}, Lorg/w3c/dom/ls/LSSerializer;->writeToString(Lorg/w3c/dom/Node;)Ljava/lang/String;
 
     move-result-object v1

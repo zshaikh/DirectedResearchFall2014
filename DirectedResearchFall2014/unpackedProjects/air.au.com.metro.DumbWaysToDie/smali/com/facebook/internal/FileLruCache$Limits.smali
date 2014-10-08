@@ -18,7 +18,7 @@
 
     iput v0, p0, Lcom/facebook/internal/FileLruCache$Limits;->fileCount:I
 
-    const/high16 v0, 0x10
+    const/high16 v0, 0x100000
 
     iput v0, p0, Lcom/facebook/internal/FileLruCache$Limits;->byteCount:I
 

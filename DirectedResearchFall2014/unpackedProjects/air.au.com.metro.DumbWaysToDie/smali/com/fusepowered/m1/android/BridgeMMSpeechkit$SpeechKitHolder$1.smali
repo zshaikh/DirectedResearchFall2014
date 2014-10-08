@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m1/android/BridgeMMSpeechkit$SpeechKitHolder;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 373
@@ -50,7 +49,7 @@
     :try_start_0
     iget-object v1, p0, Lcom/fusepowered/m1/android/BridgeMMSpeechkit$SpeechKitHolder$1;->this$0:Lcom/fusepowered/m1/android/BridgeMMSpeechkit$SpeechKitHolder;
 
-    #getter for: Lcom/fusepowered/m1/android/BridgeMMSpeechkit$SpeechKitHolder;->_speechKit:Lcom/fusepowered/m1/android/NVASpeechKit;
+    # getter for: Lcom/fusepowered/m1/android/BridgeMMSpeechkit$SpeechKitHolder;->_speechKit:Lcom/fusepowered/m1/android/NVASpeechKit;
     invoke-static {v1}, Lcom/fusepowered/m1/android/BridgeMMSpeechkit$SpeechKitHolder;->access$000(Lcom/fusepowered/m1/android/BridgeMMSpeechkit$SpeechKitHolder;)Lcom/fusepowered/m1/android/NVASpeechKit;
 
     move-result-object v1
@@ -60,7 +59,7 @@
     .line 381
     iget-object v1, p0, Lcom/fusepowered/m1/android/BridgeMMSpeechkit$SpeechKitHolder$1;->this$0:Lcom/fusepowered/m1/android/BridgeMMSpeechkit$SpeechKitHolder;
 
-    #getter for: Lcom/fusepowered/m1/android/BridgeMMSpeechkit$SpeechKitHolder;->_speechKit:Lcom/fusepowered/m1/android/NVASpeechKit;
+    # getter for: Lcom/fusepowered/m1/android/BridgeMMSpeechkit$SpeechKitHolder;->_speechKit:Lcom/fusepowered/m1/android/NVASpeechKit;
     invoke-static {v1}, Lcom/fusepowered/m1/android/BridgeMMSpeechkit$SpeechKitHolder;->access$000(Lcom/fusepowered/m1/android/BridgeMMSpeechkit$SpeechKitHolder;)Lcom/fusepowered/m1/android/NVASpeechKit;
 
     move-result-object v1
@@ -70,7 +69,7 @@
     .line 382
     iget-object v1, p0, Lcom/fusepowered/m1/android/BridgeMMSpeechkit$SpeechKitHolder$1;->this$0:Lcom/fusepowered/m1/android/BridgeMMSpeechkit$SpeechKitHolder;
 
-    #getter for: Lcom/fusepowered/m1/android/BridgeMMSpeechkit$SpeechKitHolder;->_speechKit:Lcom/fusepowered/m1/android/NVASpeechKit;
+    # getter for: Lcom/fusepowered/m1/android/BridgeMMSpeechkit$SpeechKitHolder;->_speechKit:Lcom/fusepowered/m1/android/NVASpeechKit;
     invoke-static {v1}, Lcom/fusepowered/m1/android/BridgeMMSpeechkit$SpeechKitHolder;->access$000(Lcom/fusepowered/m1/android/BridgeMMSpeechkit$SpeechKitHolder;)Lcom/fusepowered/m1/android/NVASpeechKit;
 
     move-result-object v1
@@ -82,7 +81,7 @@
 
     const/4 v2, 0x0
 
-    #setter for: Lcom/fusepowered/m1/android/BridgeMMSpeechkit$SpeechKitHolder;->_speechKit:Lcom/fusepowered/m1/android/NVASpeechKit;
+    # setter for: Lcom/fusepowered/m1/android/BridgeMMSpeechkit$SpeechKitHolder;->_speechKit:Lcom/fusepowered/m1/android/NVASpeechKit;
     invoke-static {v1, v2}, Lcom/fusepowered/m1/android/BridgeMMSpeechkit$SpeechKitHolder;->access$002(Lcom/fusepowered/m1/android/BridgeMMSpeechkit$SpeechKitHolder;Lcom/fusepowered/m1/android/NVASpeechKit;)Lcom/fusepowered/m1/android/NVASpeechKit;
 
     .line 385

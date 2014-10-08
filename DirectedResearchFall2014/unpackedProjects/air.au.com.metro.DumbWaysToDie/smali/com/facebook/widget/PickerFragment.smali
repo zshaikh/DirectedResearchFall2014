@@ -820,7 +820,7 @@
 
     if-nez v0, :cond_0
 
-    const/high16 v0, 0x3e80
+    const/high16 v0, 0x3e800000
 
     :goto_0
     iget-object v1, p0, Lcom/facebook/widget/PickerFragment;->activityCircle:Landroid/widget/ProgressBar;
@@ -830,7 +830,7 @@
     return-void
 
     :cond_0
-    const/high16 v0, 0x3f80
+    const/high16 v0, 0x3f800000
 
     goto :goto_0
 .end method

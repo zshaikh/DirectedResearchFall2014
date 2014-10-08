@@ -3,8 +3,8 @@
 .source "AIRGestureListener.java"
 
 # interfaces
-.implements Landroid/view/GestureDetector$OnGestureListener;
 .implements Landroid/view/GestureDetector$OnDoubleTapListener;
+.implements Landroid/view/GestureDetector$OnGestureListener;
 .implements Landroid/view/ScaleGestureDetector$OnScaleGestureListener;
 
 
@@ -107,8 +107,6 @@
 
 .method public constructor <init>(Landroid/content/Context;Lcom/adobe/air/AIRWindowSurfaceView;)V
     .locals 4
-    .parameter
-    .parameter
 
     .prologue
     const/4 v3, 0x2
@@ -213,19 +211,17 @@
 
 .method private distanceBetweenPoints(Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;)D
     .locals 6
-    .parameter
-    .parameter
 
     .prologue
-    const-wide/high16 v4, 0x4000
+    const-wide/high16 v4, 0x4000000000000000L
 
     .line 883
-    #getter for: Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->x:F
+    # getter for: Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->x:F
     invoke-static {p2}, Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->access$200(Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;)F
 
     move-result v0
 
-    #getter for: Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->x:F
+    # getter for: Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->x:F
     invoke-static {p1}, Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->access$200(Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;)F
 
     move-result v1
@@ -238,12 +234,12 @@
 
     move-result-wide v0
 
-    #getter for: Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->y:F
+    # getter for: Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->y:F
     invoke-static {p2}, Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->access$300(Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;)F
 
     move-result v2
 
-    #getter for: Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->y:F
+    # getter for: Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->y:F
     invoke-static {p1}, Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->access$300(Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;)F
 
     move-result v3
@@ -271,7 +267,7 @@
     .prologue
     const/4 v2, 0x1
 
-    const/high16 v6, 0x3f80
+    const/high16 v6, 0x3f800000
 
     const/4 v8, 0x0
 
@@ -337,7 +333,7 @@
     .prologue
     const/4 v2, 0x2
 
-    const/high16 v6, 0x3f80
+    const/high16 v6, 0x3f800000
 
     const/4 v8, 0x0
 
@@ -399,7 +395,7 @@
     .locals 11
 
     .prologue
-    const/high16 v6, 0x3f80
+    const/high16 v6, 0x3f800000
 
     const/4 v8, 0x0
 
@@ -467,10 +463,6 @@
 
 .method private getRotation(Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;)F
     .locals 10
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const-wide v8, 0x4066800000000000L
@@ -481,24 +473,24 @@
     const/4 v0, 0x0
 
     .line 826
-    #getter for: Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->pid:I
+    # getter for: Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->pid:I
     invoke-static {p1}, Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->access$100(Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;)I
 
     move-result v1
 
-    #getter for: Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->pid:I
+    # getter for: Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->pid:I
     invoke-static {p3}, Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->access$100(Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;)I
 
     move-result v2
 
     if-ne v1, v2, :cond_0
 
-    #getter for: Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->pid:I
+    # getter for: Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->pid:I
     invoke-static {p2}, Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->access$100(Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;)I
 
     move-result v1
 
-    #getter for: Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->pid:I
+    # getter for: Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->pid:I
     invoke-static {p4}, Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->access$100(Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;)I
 
     move-result v2
@@ -506,12 +498,12 @@
     if-ne v1, v2, :cond_0
 
     .line 829
-    #getter for: Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->y:F
+    # getter for: Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->y:F
     invoke-static {p2}, Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->access$300(Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;)F
 
     move-result v0
 
-    #getter for: Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->y:F
+    # getter for: Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->y:F
     invoke-static {p1}, Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->access$300(Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;)F
 
     move-result v1
@@ -520,12 +512,12 @@
 
     float-to-double v0, v0
 
-    #getter for: Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->x:F
+    # getter for: Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->x:F
     invoke-static {p2}, Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->access$200(Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;)F
 
     move-result v2
 
-    #getter for: Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->x:F
+    # getter for: Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->x:F
     invoke-static {p1}, Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->access$200(Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;)F
 
     move-result v3
@@ -543,12 +535,12 @@
     div-double/2addr v0, v6
 
     .line 831
-    #getter for: Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->y:F
+    # getter for: Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->y:F
     invoke-static {p4}, Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->access$300(Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;)F
 
     move-result v2
 
-    #getter for: Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->y:F
+    # getter for: Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->y:F
     invoke-static {p3}, Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->access$300(Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;)F
 
     move-result v3
@@ -557,12 +549,12 @@
 
     float-to-double v2, v2
 
-    #getter for: Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->x:F
+    # getter for: Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->x:F
     invoke-static {p4}, Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->access$200(Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;)F
 
     move-result v4
 
-    #getter for: Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->x:F
+    # getter for: Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->x:F
     invoke-static {p3}, Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->access$200(Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;)F
 
     move-result v5
@@ -591,21 +583,17 @@
 
 .method private isPanGesture(Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;)Z
     .locals 8
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const/4 v7, 0x0
 
     .line 850
-    #getter for: Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->x:F
+    # getter for: Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->x:F
     invoke-static {p3}, Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->access$200(Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;)F
 
     move-result v0
 
-    #getter for: Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->x:F
+    # getter for: Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->x:F
     invoke-static {p1}, Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->access$200(Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;)F
 
     move-result v1
@@ -613,12 +601,12 @@
     sub-float/2addr v0, v1
 
     .line 851
-    #getter for: Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->y:F
+    # getter for: Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->y:F
     invoke-static {p3}, Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->access$300(Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;)F
 
     move-result v1
 
-    #getter for: Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->y:F
+    # getter for: Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->y:F
     invoke-static {p1}, Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->access$300(Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;)F
 
     move-result v2
@@ -626,12 +614,12 @@
     sub-float/2addr v1, v2
 
     .line 853
-    #getter for: Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->x:F
+    # getter for: Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->x:F
     invoke-static {p4}, Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->access$200(Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;)F
 
     move-result v2
 
-    #getter for: Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->x:F
+    # getter for: Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->x:F
     invoke-static {p2}, Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->access$200(Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;)F
 
     move-result v3
@@ -639,12 +627,12 @@
     sub-float/2addr v2, v3
 
     .line 854
-    #getter for: Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->y:F
+    # getter for: Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->y:F
     invoke-static {p4}, Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->access$300(Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;)F
 
     move-result v3
 
-    #getter for: Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->y:F
+    # getter for: Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->y:F
     invoke-static {p2}, Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->access$300(Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;)F
 
     move-result v4
@@ -731,7 +719,7 @@
 
     if-nez v0, :cond_4
 
-    const/high16 v0, 0x4040
+    const/high16 v0, 0x40400000
 
     sget v1, Lcom/adobe/air/gestures/AIRGestureListener;->screenPPI:I
 
@@ -830,7 +818,6 @@
 
 .method public getDownTouchPoint(I)Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;
     .locals 1
-    .parameter
 
     .prologue
     .line 171
@@ -882,7 +869,6 @@
 
 .method public onDoubleTap(Landroid/view/MotionEvent;)Z
     .locals 5
-    .parameter
 
     .prologue
     const/4 v4, 0x1
@@ -936,7 +922,6 @@
 
 .method public onDoubleTapEvent(Landroid/view/MotionEvent;)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 672
@@ -947,7 +932,6 @@
 
 .method public onDown(Landroid/view/MotionEvent;)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 328
@@ -958,10 +942,6 @@
 
 .method public onFling(Landroid/view/MotionEvent;Landroid/view/MotionEvent;FF)Z
     .locals 1
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 336
@@ -972,7 +952,6 @@
 
 .method public onLongPress(Landroid/view/MotionEvent;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 344
@@ -981,7 +960,6 @@
 
 .method public onScale(Landroid/view/ScaleGestureDetector;)Z
     .locals 25
-    .parameter
 
     .prologue
     .line 703
@@ -1032,10 +1010,10 @@
     move-result v7
 
     .line 714
-    const/high16 v5, 0x3f80
+    const/high16 v5, 0x3f800000
 
     .line 715
-    const/high16 v8, 0x3f80
+    const/high16 v8, 0x3f800000
 
     .line 716
     const/4 v10, 0x0
@@ -1155,7 +1133,7 @@
 
     div-double/2addr v13, v15
 
-    const-wide/high16 v15, 0x4020
+    const-wide/high16 v15, 0x4020000000000000L
 
     cmpl-double v3, v13, v15
 
@@ -1232,7 +1210,7 @@
 
     div-double/2addr v13, v15
 
-    const-wide/high16 v15, 0x4008
+    const-wide/high16 v15, 0x4008000000000000L
 
     cmpl-double v2, v13, v15
 
@@ -1303,7 +1281,7 @@
 
     div-double/2addr v13, v15
 
-    const-wide/high16 v15, 0x4008
+    const-wide/high16 v15, 0x4008000000000000L
 
     cmpl-double v5, v13, v15
 
@@ -1419,7 +1397,6 @@
 
 .method public onScaleBegin(Landroid/view/ScaleGestureDetector;)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 684
@@ -1439,7 +1416,6 @@
 
 .method public onScaleEnd(Landroid/view/ScaleGestureDetector;)V
     .locals 11
-    .parameter
 
     .prologue
     const/4 v8, 0x0
@@ -1501,10 +1477,6 @@
 
 .method public onScroll(Landroid/view/MotionEvent;Landroid/view/MotionEvent;FF)Z
     .locals 20
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 352
@@ -1539,10 +1511,10 @@
 
     .line 364
     :cond_0
-    const/high16 v11, 0x3f80
+    const/high16 v11, 0x3f800000
 
     .line 365
-    const/high16 v12, 0x3f80
+    const/high16 v12, 0x3f800000
 
     .line 366
     const/4 v13, 0x0
@@ -1588,7 +1560,7 @@
 
     add-float/2addr v6, v7
 
-    const/high16 v7, 0x4000
+    const/high16 v7, 0x40000000
 
     div-float v9, v6, v7
 
@@ -1615,7 +1587,7 @@
 
     add-float/2addr v6, v7
 
-    const/high16 v7, 0x4000
+    const/high16 v7, 0x40000000
 
     div-float v10, v6, v7
 
@@ -1688,7 +1660,7 @@
 
     aget-object v6, v16, v6
 
-    #getter for: Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->pid:I
+    # getter for: Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->pid:I
     invoke-static {v6}, Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->access$100(Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;)I
 
     move-result v17
@@ -1698,7 +1670,7 @@
 
     aget-object v6, v16, v6
 
-    #getter for: Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->pid:I
+    # getter for: Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->pid:I
     invoke-static {v6}, Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->access$100(Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;)I
 
     move-result v18
@@ -1777,7 +1749,7 @@
 
     move-result v7
 
-    const/high16 v8, 0x4334
+    const/high16 v8, 0x43340000
 
     cmpl-float v7, v7, v8
 
@@ -1790,11 +1762,11 @@
 
     if-lez v7, :cond_7
 
-    const/high16 v7, 0x43b4
+    const/high16 v7, 0x43b40000
 
     sub-float v6, v7, v6
 
-    const/high16 v7, -0x4080
+    const/high16 v7, -0x40800000
 
     mul-float/2addr v6, v7
 
@@ -1815,7 +1787,7 @@
 
     move-result v6
 
-    const/high16 v7, 0x4170
+    const/high16 v7, 0x41700000
 
     cmpl-float v6, v6, v7
 
@@ -1872,7 +1844,7 @@
 
     move-result v13
 
-    const/high16 v19, 0x4334
+    const/high16 v19, 0x43340000
 
     cmpl-float v13, v13, v19
 
@@ -1885,11 +1857,11 @@
 
     if-lez v13, :cond_8
 
-    const/high16 v13, 0x43b4
+    const/high16 v13, 0x43b40000
 
     sub-float v5, v13, v5
 
-    const/high16 v13, -0x4080
+    const/high16 v13, -0x40800000
 
     mul-float/2addr v5, v13
 
@@ -2019,12 +1991,12 @@
     move v6, v5
 
     .line 478
-    const/high16 v5, -0x4080
+    const/high16 v5, -0x40800000
 
     mul-float v14, v5, p3
 
     .line 479
-    const/high16 v5, -0x4080
+    const/high16 v5, -0x40800000
 
     mul-float v15, v5, p4
 
@@ -2058,7 +2030,7 @@
 
     .line 419
     :cond_7
-    const/high16 v7, 0x43b4
+    const/high16 v7, 0x43b40000
 
     add-float/2addr v6, v7
 
@@ -2066,7 +2038,7 @@
 
     .line 442
     :cond_8
-    const/high16 v13, 0x43b4
+    const/high16 v13, 0x43b40000
 
     add-float/2addr v5, v13
 
@@ -2090,7 +2062,7 @@
 
     aget-object v5, v16, v5
 
-    #getter for: Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->x:F
+    # getter for: Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->x:F
     invoke-static {v5}, Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->access$200(Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;)F
 
     move-result v5
@@ -2099,7 +2071,7 @@
 
     aget-object v6, v16, v6
 
-    #getter for: Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->y:F
+    # getter for: Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->y:F
     invoke-static {v6}, Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->access$300(Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;)F
 
     move-result v6
@@ -2108,7 +2080,7 @@
 
     aget-object v7, v16, v7
 
-    #getter for: Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->pid:I
+    # getter for: Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->pid:I
     invoke-static {v7}, Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->access$100(Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;)I
 
     move-result v7
@@ -2128,7 +2100,7 @@
 
     aget-object v5, v16, v5
 
-    #getter for: Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->x:F
+    # getter for: Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->x:F
     invoke-static {v5}, Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->access$200(Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;)F
 
     move-result v5
@@ -2137,7 +2109,7 @@
 
     aget-object v6, v16, v6
 
-    #getter for: Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->y:F
+    # getter for: Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->y:F
     invoke-static {v6}, Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->access$300(Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;)F
 
     move-result v6
@@ -2146,7 +2118,7 @@
 
     aget-object v7, v16, v7
 
-    #getter for: Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->pid:I
+    # getter for: Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->pid:I
     invoke-static {v7}, Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->access$100(Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;)I
 
     move-result v7
@@ -2228,7 +2200,7 @@
 
     aget-object v7, v7, v5
 
-    #getter for: Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->x:F
+    # getter for: Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->x:F
     invoke-static {v7}, Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->access$200(Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;)F
 
     move-result v7
@@ -2254,7 +2226,7 @@
 
     aget-object v5, v8, v5
 
-    #getter for: Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->y:F
+    # getter for: Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->y:F
     invoke-static {v5}, Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->access$300(Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;)F
 
     move-result v5
@@ -2276,7 +2248,7 @@
 
     div-float/2addr v7, v8
 
-    const/high16 v8, 0x4120
+    const/high16 v8, 0x41200000
 
     cmpl-float v7, v7, v8
 
@@ -2296,7 +2268,7 @@
 
     div-float/2addr v7, v8
 
-    const/high16 v8, 0x40a0
+    const/high16 v8, 0x40a00000
 
     cmpg-float v7, v7, v8
 
@@ -2312,7 +2284,7 @@
 
     if-lez v6, :cond_b
 
-    const/high16 v6, 0x3f80
+    const/high16 v6, 0x3f800000
 
     .line 538
     :goto_7
@@ -2374,7 +2346,7 @@
 
     .line 537
     :cond_b
-    const/high16 v6, -0x4080
+    const/high16 v6, -0x40800000
 
     goto :goto_7
 
@@ -2394,7 +2366,7 @@
 
     div-float/2addr v7, v8
 
-    const/high16 v8, 0x4120
+    const/high16 v8, 0x41200000
 
     cmpl-float v7, v7, v8
 
@@ -2414,7 +2386,7 @@
 
     div-float/2addr v6, v7
 
-    const/high16 v7, 0x40a0
+    const/high16 v7, 0x40a00000
 
     cmpg-float v6, v6, v7
 
@@ -2433,7 +2405,7 @@
 
     if-lez v5, :cond_d
 
-    const/high16 v5, 0x3f80
+    const/high16 v5, 0x3f800000
 
     :goto_9
     move v15, v5
@@ -2445,7 +2417,7 @@
     goto :goto_8
 
     :cond_d
-    const/high16 v5, -0x4080
+    const/high16 v5, -0x40800000
 
     goto :goto_9
 
@@ -2468,7 +2440,6 @@
 
 .method public onShowPress(Landroid/view/MotionEvent;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 599
@@ -2477,12 +2448,11 @@
 
 .method public onSingleTapConfirmed(Landroid/view/MotionEvent;)Z
     .locals 12
-    .parameter
 
     .prologue
-    const/high16 v7, 0x4000
+    const/high16 v7, 0x40000000
 
-    const/high16 v6, 0x3f80
+    const/high16 v6, 0x3f800000
 
     const/4 v11, 0x1
 
@@ -2543,7 +2513,7 @@
     .line 628
     iget-object v0, p0, Lcom/adobe/air/gestures/AIRGestureListener;->mSecondaryPointOfTwoFingerTap:Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;
 
-    #getter for: Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->x:F
+    # getter for: Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->x:F
     invoke-static {v0}, Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->access$200(Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;)F
 
     move-result v0
@@ -2559,7 +2529,7 @@
     .line 629
     iget-object v0, p0, Lcom/adobe/air/gestures/AIRGestureListener;->mSecondaryPointOfTwoFingerTap:Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;
 
-    #getter for: Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->y:F
+    # getter for: Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->y:F
     invoke-static {v0}, Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->access$300(Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;)F
 
     move-result v0
@@ -2611,7 +2581,6 @@
 
 .method public onSingleTapUp(Landroid/view/MotionEvent;)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 646
@@ -2622,7 +2591,6 @@
 
 .method public setCheckForSwipe(Z)V
     .locals 0
-    .parameter
 
     .prologue
     .line 223
@@ -2634,7 +2602,6 @@
 
 .method public setCouldBeTwoFingerTap(I)V
     .locals 0
-    .parameter
 
     .prologue
     .line 194
@@ -2646,9 +2613,6 @@
 
 .method public setDownTouchPoint(FFI)V
     .locals 1
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 186
@@ -2663,7 +2627,7 @@
 
     aget-object v0, v0, p3
 
-    #calls: Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->assign(FFI)V
+    # invokes: Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->assign(FFI)V
     invoke-static {v0, p1, p2, p3}, Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;->access$000(Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;FFI)V
 
     .line 190
@@ -2673,7 +2637,6 @@
 
 .method public setSecondaryPointOfTwoFingerTap(Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 204

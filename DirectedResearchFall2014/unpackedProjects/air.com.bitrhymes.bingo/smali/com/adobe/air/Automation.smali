@@ -18,13 +18,6 @@
 # virtual methods
 .method public dispatchKeyEvent(Lcom/adobe/air/AIRWindowSurfaceView;IIIZZZ)Z
     .locals 9
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 38
@@ -148,17 +141,6 @@
 
 .method public dispatchTouchEvent(Lcom/adobe/air/AIRWindowSurfaceView;IFFFIFFZ[FI)Z
     .locals 8
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 20

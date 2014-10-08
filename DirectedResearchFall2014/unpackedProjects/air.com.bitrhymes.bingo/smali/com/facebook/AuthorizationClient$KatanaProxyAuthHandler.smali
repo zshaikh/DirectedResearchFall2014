@@ -27,7 +27,6 @@
 # direct methods
 .method constructor <init>(Lcom/facebook/AuthorizationClient;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 917
@@ -40,7 +39,7 @@
 
 .method private handleResultOk(Landroid/content/Intent;)Lcom/facebook/AuthorizationClient$Result;
     .locals 9
-    .parameter "data"
+    .param p1, "data"    # Landroid/content/Intent;
 
     .prologue
     const/4 v8, 0x0
@@ -51,7 +50,7 @@
     move-result-object v4
 
     .line 965
-    .local v4, extras:Landroid/os/Bundle;
+    .local v4, "extras":Landroid/os/Bundle;
     const-string v6, "error"
 
     invoke-virtual {v4, v6}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -59,7 +58,7 @@
     move-result-object v1
 
     .line 966
-    .local v1, error:Ljava/lang/String;
+    .local v1, "error":Ljava/lang/String;
     if-nez v1, :cond_0
 
     .line 967
@@ -78,7 +77,7 @@
     move-result-object v2
 
     .line 970
-    .local v2, errorCode:Ljava/lang/String;
+    .local v2, "errorCode":Ljava/lang/String;
     const-string v6, "error_message"
 
     invoke-virtual {v4, v6}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -86,7 +85,7 @@
     move-result-object v3
 
     .line 971
-    .local v3, errorMessage:Ljava/lang/String;
+    .local v3, "errorMessage":Ljava/lang/String;
     if-nez v3, :cond_1
 
     .line 972
@@ -105,7 +104,7 @@
     move-result-object v0
 
     .line 976
-    .local v0, e2e:Ljava/lang/String;
+    .local v0, "e2e":Ljava/lang/String;
     invoke-static {v0}, Lcom/facebook/internal/Utility;->isNullOrEmpty(Ljava/lang/String;)Z
 
     move-result v6
@@ -117,7 +116,7 @@
 
     iget-object v7, p0, Lcom/facebook/AuthorizationClient$KatanaProxyAuthHandler;->applicationId:Ljava/lang/String;
 
-    #calls: Lcom/facebook/AuthorizationClient;->logWebLoginCompleted(Ljava/lang/String;Ljava/lang/String;)V
+    # invokes: Lcom/facebook/AuthorizationClient;->logWebLoginCompleted(Ljava/lang/String;Ljava/lang/String;)V
     invoke-static {v6, v7, v0}, Lcom/facebook/AuthorizationClient;->access$1(Lcom/facebook/AuthorizationClient;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 980
@@ -146,7 +145,7 @@
     move-result-object v5
 
     .line 983
-    .local v5, token:Lcom/facebook/AccessToken;
+    .local v5, "token":Lcom/facebook/AccessToken;
     iget-object v6, p0, Lcom/facebook/AuthorizationClient$KatanaProxyAuthHandler;->this$0:Lcom/facebook/AuthorizationClient;
 
     iget-object v6, v6, Lcom/facebook/AuthorizationClient;->pendingRequest:Lcom/facebook/AuthorizationClient$AuthorizationRequest;
@@ -156,7 +155,7 @@
     move-result-object v6
 
     .line 989
-    .end local v5           #token:Lcom/facebook/AccessToken;
+    .end local v5    # "token":Lcom/facebook/AccessToken;
     :goto_0
     return-object v6
 
@@ -223,9 +222,9 @@
 
 .method onActivityResult(IILandroid/content/Intent;)Z
     .locals 4
-    .parameter "requestCode"
-    .parameter "resultCode"
-    .parameter "data"
+    .param p1, "requestCode"    # I
+    .param p2, "resultCode"    # I
+    .param p3, "data"    # Landroid/content/Intent;
 
     .prologue
     .line 944
@@ -243,7 +242,7 @@
     move-result-object v0
 
     .line 955
-    .local v0, outcome:Lcom/facebook/AuthorizationClient$Result;
+    .local v0, "outcome":Lcom/facebook/AuthorizationClient$Result;
     :goto_0
     if-eqz v0, :cond_3
 
@@ -259,7 +258,7 @@
     return v1
 
     .line 947
-    .end local v0           #outcome:Lcom/facebook/AuthorizationClient$Result;
+    .end local v0    # "outcome":Lcom/facebook/AuthorizationClient$Result;
     :cond_0
     if-nez p2, :cond_1
 
@@ -279,10 +278,10 @@
     move-result-object v0
 
     .line 949
-    .restart local v0       #outcome:Lcom/facebook/AuthorizationClient$Result;
+    .restart local v0    # "outcome":Lcom/facebook/AuthorizationClient$Result;
     goto :goto_0
 
-    .end local v0           #outcome:Lcom/facebook/AuthorizationClient$Result;
+    .end local v0    # "outcome":Lcom/facebook/AuthorizationClient$Result;
     :cond_1
     const/4 v1, -0x1
 
@@ -302,17 +301,17 @@
     move-result-object v0
 
     .line 951
-    .restart local v0       #outcome:Lcom/facebook/AuthorizationClient$Result;
+    .restart local v0    # "outcome":Lcom/facebook/AuthorizationClient$Result;
     goto :goto_0
 
     .line 952
-    .end local v0           #outcome:Lcom/facebook/AuthorizationClient$Result;
+    .end local v0    # "outcome":Lcom/facebook/AuthorizationClient$Result;
     :cond_2
     invoke-direct {p0, p3}, Lcom/facebook/AuthorizationClient$KatanaProxyAuthHandler;->handleResultOk(Landroid/content/Intent;)Lcom/facebook/AuthorizationClient$Result;
 
     move-result-object v0
 
-    .restart local v0       #outcome:Lcom/facebook/AuthorizationClient$Result;
+    .restart local v0    # "outcome":Lcom/facebook/AuthorizationClient$Result;
     goto :goto_0
 
     .line 958
@@ -326,7 +325,7 @@
 
 .method tryAuthorize(Lcom/facebook/AuthorizationClient$AuthorizationRequest;)Z
     .locals 5
-    .parameter "request"
+    .param p1, "request"    # Lcom/facebook/AuthorizationClient$AuthorizationRequest;
 
     .prologue
     .line 928
@@ -337,13 +336,13 @@
     iput-object v2, p0, Lcom/facebook/AuthorizationClient$KatanaProxyAuthHandler;->applicationId:Ljava/lang/String;
 
     .line 930
-    #calls: Lcom/facebook/AuthorizationClient;->getE2E()Ljava/lang/String;
+    # invokes: Lcom/facebook/AuthorizationClient;->getE2E()Ljava/lang/String;
     invoke-static {}, Lcom/facebook/AuthorizationClient;->access$0()Ljava/lang/String;
 
     move-result-object v0
 
     .line 931
-    .local v0, e2e:Ljava/lang/String;
+    .local v0, "e2e":Ljava/lang/String;
     iget-object v2, p0, Lcom/facebook/AuthorizationClient$KatanaProxyAuthHandler;->this$0:Lcom/facebook/AuthorizationClient;
 
     iget-object v2, v2, Lcom/facebook/AuthorizationClient;->context:Landroid/content/Context;
@@ -363,7 +362,7 @@
     move-result-object v1
 
     .line 934
-    .local v1, intent:Landroid/content/Intent;
+    .local v1, "intent":Landroid/content/Intent;
     const-string v2, "e2e"
 
     invoke-virtual {p0, v2, v0}, Lcom/facebook/AuthorizationClient$KatanaProxyAuthHandler;->addLoggingExtra(Ljava/lang/String;Ljava/lang/Object;)V

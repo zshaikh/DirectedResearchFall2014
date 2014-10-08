@@ -59,7 +59,7 @@
 
     iget-object v2, p0, Lcom/facebook/android/Facebook$TokenRefreshServiceConnection;->this$0:Lcom/facebook/android/Facebook;
 
-    #getter for: Lcom/facebook/android/Facebook;->accessToken:Ljava/lang/String;
+    # getter for: Lcom/facebook/android/Facebook;->accessToken:Ljava/lang/String;
     invoke-static {v2}, Lcom/facebook/android/Facebook;->access$100(Lcom/facebook/android/Facebook;)Ljava/lang/String;
 
     move-result-object v2

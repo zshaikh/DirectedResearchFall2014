@@ -45,11 +45,6 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m1/google/gson/internal/Excluder;ZZLcom/fusepowered/m1/google/gson/Gson;Lcom/fusepowered/m1/google/gson/reflect/TypeToken;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 121
@@ -83,7 +78,7 @@
     iget-object v0, p0, Lcom/fusepowered/m1/google/gson/internal/Excluder$1;->delegate:Lcom/fusepowered/m1/google/gson/TypeAdapter;
 
     .line 143
-    .local v0, d:Lcom/fusepowered/m1/google/gson/TypeAdapter;,"Lcom/fusepowered/m1/google/gson/TypeAdapter<TT;>;"
+    .local v0, "d":Lcom/fusepowered/m1/google/gson/TypeAdapter;, "Lcom/fusepowered/m1/google/gson/TypeAdapter<TT;>;"
     if-eqz v0, :cond_0
 
     move-object v1, v0
@@ -111,7 +106,7 @@
 # virtual methods
 .method public read(Lcom/fusepowered/m1/google/gson/stream/JsonReader;)Ljava/lang/Object;
     .locals 1
-    .parameter "in"
+    .param p1, "in"    # Lcom/fusepowered/m1/google/gson/stream/JsonReader;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -156,8 +151,7 @@
 
 .method public write(Lcom/fusepowered/m1/google/gson/stream/JsonWriter;Ljava/lang/Object;)V
     .locals 1
-    .parameter "out"
-    .parameter
+    .param p1, "out"    # Lcom/fusepowered/m1/google/gson/stream/JsonWriter;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -174,7 +168,7 @@
 
     .prologue
     .line 134
-    .local p2, value:Ljava/lang/Object;,"TT;"
+    .local p2, "value":Ljava/lang/Object;, "TT;"
     iget-boolean v0, p0, Lcom/fusepowered/m1/google/gson/internal/Excluder$1;->val$skipSerialize:Z
 
     if-eqz v0, :cond_0

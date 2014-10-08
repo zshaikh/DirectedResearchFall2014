@@ -38,7 +38,6 @@
 # direct methods
 .method private constructor <init>(Lcom/tapjoy/mraid/view/MraidView;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 2040
@@ -51,8 +50,8 @@
 
 .method synthetic constructor <init>(Lcom/tapjoy/mraid/view/MraidView;Lcom/tapjoy/mraid/view/MraidView$1;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
+    .param p1, "x0"    # Lcom/tapjoy/mraid/view/MraidView;
+    .param p2, "x1"    # Lcom/tapjoy/mraid/view/MraidView$1;
 
     .prologue
     .line 2040
@@ -65,13 +64,13 @@
 # virtual methods
 .method protected bridge synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
-    .parameter "x0"
+    .param p1, "x0"    # [Ljava/lang/Object;
 
     .prologue
     .line 2040
     check-cast p1, [Ljava/lang/String;
 
-    .end local p1
+    .end local p1    # "x0":[Ljava/lang/Object;
     invoke-virtual {p0, p1}, Lcom/tapjoy/mraid/view/MraidView$MraidHTTPTask;->doInBackground([Ljava/lang/String;)Ljava/lang/Void;
 
     move-result-object v0
@@ -81,7 +80,7 @@
 
 .method protected varargs doInBackground([Ljava/lang/String;)Ljava/lang/Void;
     .locals 3
-    .parameter "params"
+    .param p1, "params"    # [Ljava/lang/String;
 
     .prologue
     .line 2049
@@ -125,7 +124,7 @@
     move-object v0, v1
 
     .line 2058
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0
@@ -133,13 +132,13 @@
 
 .method protected bridge synthetic onPostExecute(Ljava/lang/Object;)V
     .locals 0
-    .parameter "x0"
+    .param p1, "x0"    # Ljava/lang/Object;
 
     .prologue
     .line 2040
     check-cast p1, Ljava/lang/Void;
 
-    .end local p1
+    .end local p1    # "x0":Ljava/lang/Object;
     invoke-virtual {p0, p1}, Lcom/tapjoy/mraid/view/MraidView$MraidHTTPTask;->onPostExecute(Ljava/lang/Void;)V
 
     return-void
@@ -147,7 +146,7 @@
 
 .method protected onPostExecute(Ljava/lang/Void;)V
     .locals 8
-    .parameter "result"
+    .param p1, "result"    # Ljava/lang/Void;
 
     .prologue
     const-string v0, "Connection not properly established"
@@ -179,7 +178,7 @@
     .line 2073
     iget-object v0, p0, Lcom/tapjoy/mraid/view/MraidView$MraidHTTPTask;->this$0:Lcom/tapjoy/mraid/view/MraidView;
 
-    #getter for: Lcom/tapjoy/mraid/view/MraidView;->mListener:Lcom/tapjoy/mraid/listener/MraidViewListener;
+    # getter for: Lcom/tapjoy/mraid/view/MraidView;->mListener:Lcom/tapjoy/mraid/listener/MraidViewListener;
     invoke-static {v0}, Lcom/tapjoy/mraid/view/MraidView;->access$200(Lcom/tapjoy/mraid/view/MraidView;)Lcom/tapjoy/mraid/listener/MraidViewListener;
 
     move-result-object v0
@@ -189,7 +188,7 @@
     .line 2075
     iget-object v0, p0, Lcom/tapjoy/mraid/view/MraidView$MraidHTTPTask;->this$0:Lcom/tapjoy/mraid/view/MraidView;
 
-    #getter for: Lcom/tapjoy/mraid/view/MraidView;->mListener:Lcom/tapjoy/mraid/listener/MraidViewListener;
+    # getter for: Lcom/tapjoy/mraid/view/MraidView;->mListener:Lcom/tapjoy/mraid/listener/MraidViewListener;
     invoke-static {v0}, Lcom/tapjoy/mraid/view/MraidView;->access$200(Lcom/tapjoy/mraid/view/MraidView;)Lcom/tapjoy/mraid/listener/MraidViewListener;
 
     move-result-object v0
@@ -282,7 +281,7 @@
     move-object v6, v0
 
     .line 2093
-    .local v6, e:Ljava/lang/Exception;
+    .local v6, "e":Ljava/lang/Exception;
     const-string v0, "MRAIDView"
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -311,7 +310,7 @@
     goto :goto_0
 
     .line 2088
-    .end local v6           #e:Ljava/lang/Exception;
+    .end local v6    # "e":Ljava/lang/Exception;
     :cond_3
     :try_start_1
     iget-object v0, p0, Lcom/tapjoy/mraid/view/MraidView$MraidHTTPTask;->this$0:Lcom/tapjoy/mraid/view/MraidView;

@@ -17,8 +17,8 @@
 # direct methods
 .method public constructor <init>(Lcom/google/ads/n;Lcom/google/ads/AdSize;)V
     .locals 0
-    .parameter "slotState"
-    .parameter "adSize"
+    .param p1, "slotState"    # Lcom/google/ads/n;
+    .param p2, "adSize"    # Lcom/google/ads/AdSize;
 
     .prologue
     .line 54
@@ -32,7 +32,7 @@
 # virtual methods
 .method public canScrollHorizontally(I)Z
     .locals 1
-    .parameter "direction"
+    .param p1, "direction"    # I
 
     .prologue
     .line 59
@@ -55,7 +55,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/google/ads/util/IcsUtil$IcsAdWebView;
     check-cast p0, Lcom/google/ads/internal/ActivationOverlay;
 
     invoke-virtual {p0}, Lcom/google/ads/internal/ActivationOverlay;->b()Z
@@ -77,7 +77,7 @@
     goto :goto_0
 
     .line 62
-    .restart local p0
+    .restart local p0    # "this":Lcom/google/ads/util/IcsUtil$IcsAdWebView;
     :cond_1
     invoke-super {p0, p1}, Lcom/google/ads/internal/AdWebView;->canScrollHorizontally(I)Z
 
@@ -88,7 +88,7 @@
 
 .method public canScrollVertically(I)Z
     .locals 1
-    .parameter "direction"
+    .param p1, "direction"    # I
 
     .prologue
     .line 69
@@ -111,7 +111,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/google/ads/util/IcsUtil$IcsAdWebView;
     check-cast p0, Lcom/google/ads/internal/ActivationOverlay;
 
     invoke-virtual {p0}, Lcom/google/ads/internal/ActivationOverlay;->b()Z
@@ -133,7 +133,7 @@
     goto :goto_0
 
     .line 72
-    .restart local p0
+    .restart local p0    # "this":Lcom/google/ads/util/IcsUtil$IcsAdWebView;
     :cond_1
     invoke-super {p0, p1}, Lcom/google/ads/internal/AdWebView;->canScrollVertically(I)Z
 

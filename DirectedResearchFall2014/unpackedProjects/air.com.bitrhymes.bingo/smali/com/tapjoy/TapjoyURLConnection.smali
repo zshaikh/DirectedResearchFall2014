@@ -40,7 +40,7 @@
 # virtual methods
 .method public getContentLength(Ljava/lang/String;)Ljava/lang/String;
     .locals 9
-    .parameter "url"
+    .param p1, "url"    # Ljava/lang/String;
 
     .prologue
     const-string v8, "TapjoyURLConnection"
@@ -49,11 +49,11 @@
     const/4 v1, 0x0
 
     .line 214
-    .local v1, contentLength:Ljava/lang/String;
+    .local v1, "contentLength":Ljava/lang/String;
     move-object v4, p1
 
     .line 217
-    .local v4, requestURL:Ljava/lang/String;
+    .local v4, "requestURL":Ljava/lang/String;
     :try_start_0
     const-string v5, " "
 
@@ -92,7 +92,7 @@
     invoke-direct {v3, v4}, Ljava/net/URL;-><init>(Ljava/lang/String;)V
 
     .line 222
-    .local v3, httpURL:Ljava/net/URL;
+    .local v3, "httpURL":Ljava/net/URL;
     invoke-virtual {v3}, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;
 
     move-result-object v0
@@ -100,7 +100,7 @@
     check-cast v0, Ljava/net/HttpURLConnection;
 
     .line 223
-    .local v0, connection:Ljava/net/HttpURLConnection;
+    .local v0, "connection":Ljava/net/HttpURLConnection;
     const/16 v5, 0x3a98
 
     invoke-virtual {v0, v5}, Ljava/net/HttpURLConnection;->setConnectTimeout(I)V
@@ -120,8 +120,8 @@
     move-result-object v1
 
     .line 232
-    .end local v0           #connection:Ljava/net/HttpURLConnection;
-    .end local v3           #httpURL:Ljava/net/URL;
+    .end local v0    # "connection":Ljava/net/HttpURLConnection;
+    .end local v3    # "httpURL":Ljava/net/URL;
     :goto_0
     const-string v5, "TapjoyURLConnection"
 
@@ -155,7 +155,7 @@
     move-object v2, v5
 
     .line 229
-    .local v2, e:Ljava/lang/Exception;
+    .local v2, "e":Ljava/lang/Exception;
     const-string v5, "TapjoyURLConnection"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -187,7 +187,7 @@
 
 .method public getRedirectFromURL(Ljava/lang/String;)Lcom/tapjoy/TapjoyHttpURLResponse;
     .locals 3
-    .parameter "url"
+    .param p1, "url"    # Ljava/lang/String;
 
     .prologue
     .line 33
@@ -206,7 +206,7 @@
 
 .method public getResponseFromURL(Ljava/lang/String;)Lcom/tapjoy/TapjoyHttpURLResponse;
     .locals 2
-    .parameter "url"
+    .param p1, "url"    # Ljava/lang/String;
 
     .prologue
     .line 48
@@ -223,8 +223,8 @@
 
 .method public getResponseFromURL(Ljava/lang/String;Ljava/lang/String;)Lcom/tapjoy/TapjoyHttpURLResponse;
     .locals 1
-    .parameter "url"
-    .parameter "params"
+    .param p1, "url"    # Ljava/lang/String;
+    .param p2, "params"    # Ljava/lang/String;
 
     .prologue
     .line 53
@@ -239,9 +239,9 @@
 
 .method public getResponseFromURL(Ljava/lang/String;Ljava/lang/String;I)Lcom/tapjoy/TapjoyHttpURLResponse;
     .locals 1
-    .parameter "url"
-    .parameter "params"
-    .parameter "type"
+    .param p1, "url"    # Ljava/lang/String;
+    .param p2, "params"    # Ljava/lang/String;
+    .param p3, "type"    # I
 
     .prologue
     const/4 v0, 0x0
@@ -256,10 +256,10 @@
 
 .method public getResponseFromURL(Ljava/lang/String;Ljava/lang/String;IZ)Lcom/tapjoy/TapjoyHttpURLResponse;
     .locals 20
-    .parameter "url"
-    .parameter "params"
-    .parameter "type"
-    .parameter "getRedirectOnly"
+    .param p1, "url"    # Ljava/lang/String;
+    .param p2, "params"    # Ljava/lang/String;
+    .param p3, "type"    # I
+    .param p4, "getRedirectOnly"    # Z
 
     .prologue
     .line 63
@@ -268,23 +268,23 @@
     invoke-direct/range {v16 .. v16}, Lcom/tapjoy/TapjoyHttpURLResponse;-><init>()V
 
     .line 64
-    .local v16, tapjoyResponse:Lcom/tapjoy/TapjoyHttpURLResponse;
+    .local v16, "tapjoyResponse":Lcom/tapjoy/TapjoyHttpURLResponse;
     const/4 v3, 0x0
 
     .line 65
-    .local v3, connection:Ljava/net/HttpURLConnection;
+    .local v3, "connection":Ljava/net/HttpURLConnection;
     const/4 v9, 0x0
 
     .line 66
-    .local v9, rd:Ljava/io/BufferedReader;
+    .local v9, "rd":Ljava/io/BufferedReader;
     const/4 v14, 0x0
 
     .line 67
-    .local v14, sb:Ljava/lang/StringBuilder;
+    .local v14, "sb":Ljava/lang/StringBuilder;
     const/4 v8, 0x0
 
     .line 71
-    .local v8, line:Ljava/lang/String;
+    .local v8, "line":Ljava/lang/String;
     :try_start_0
     new-instance v17, Ljava/lang/StringBuilder;
 
@@ -311,7 +311,7 @@
     move-result-object v12
 
     .line 73
-    .local v12, requestURL:Ljava/lang/String;
+    .local v12, "requestURL":Ljava/lang/String;
     const-string v17, "TapjoyURLConnection"
 
     new-instance v18, Ljava/lang/StringBuilder;
@@ -364,7 +364,7 @@
     invoke-direct {v2}, Lorg/apache/http/impl/client/DefaultHttpClient;-><init>()V
 
     .line 81
-    .local v2, client:Lorg/apache/http/client/HttpClient;
+    .local v2, "client":Lorg/apache/http/client/HttpClient;
     const/16 v17, 0x1
 
     move/from16 v0, p3
@@ -379,14 +379,14 @@
     invoke-direct {v11, v12}, Lorg/apache/http/client/methods/HttpPost;-><init>(Ljava/lang/String;)V
 
     .line 84
-    .local v11, request:Lorg/apache/http/client/methods/HttpPost;
+    .local v11, "request":Lorg/apache/http/client/methods/HttpPost;
     invoke-interface {v2, v11}, Lorg/apache/http/client/HttpClient;->execute(Lorg/apache/http/client/methods/HttpUriRequest;)Lorg/apache/http/HttpResponse;
 
     move-result-object v13
 
     .line 92
-    .end local v11           #request:Lorg/apache/http/client/methods/HttpPost;
-    .local v13, response:Lorg/apache/http/HttpResponse;
+    .end local v11    # "request":Lorg/apache/http/client/methods/HttpPost;
+    .local v13, "response":Lorg/apache/http/HttpResponse;
     :goto_1
     invoke-interface {v13}, Lorg/apache/http/HttpResponse;->getStatusLine()Lorg/apache/http/StatusLine;
 
@@ -423,15 +423,15 @@
 
     invoke-direct {v0, v1}, Ljava/io/BufferedReader;-><init>(Ljava/io/Reader;)V
 
-    .end local v9           #rd:Ljava/io/BufferedReader;
-    .local v10, rd:Ljava/io/BufferedReader;
+    .end local v9    # "rd":Ljava/io/BufferedReader;
+    .local v10, "rd":Ljava/io/BufferedReader;
     move-object v9, v10
 
     .line 127
-    .end local v2           #client:Lorg/apache/http/client/HttpClient;
-    .end local v10           #rd:Ljava/io/BufferedReader;
-    .end local v13           #response:Lorg/apache/http/HttpResponse;
-    .restart local v9       #rd:Ljava/io/BufferedReader;
+    .end local v2    # "client":Lorg/apache/http/client/HttpClient;
+    .end local v10    # "rd":Ljava/io/BufferedReader;
+    .end local v13    # "response":Lorg/apache/http/HttpResponse;
+    .restart local v9    # "rd":Ljava/io/BufferedReader;
     :cond_0
     :goto_2
     if-nez p4, :cond_8
@@ -444,8 +444,8 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_3
 
     .line 131
-    .end local v14           #sb:Ljava/lang/StringBuilder;
-    .local v15, sb:Ljava/lang/StringBuilder;
+    .end local v14    # "sb":Ljava/lang/StringBuilder;
+    .local v15, "sb":Ljava/lang/StringBuilder;
     :goto_3
     :try_start_1
     invoke-virtual {v9}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
@@ -496,10 +496,10 @@
     move-object v10, v9
 
     .line 166
-    .end local v9           #rd:Ljava/io/BufferedReader;
-    .end local v12           #requestURL:Ljava/lang/String;
-    .local v5, e:Ljava/lang/Exception;
-    .restart local v10       #rd:Ljava/io/BufferedReader;
+    .end local v9    # "rd":Ljava/io/BufferedReader;
+    .end local v12    # "requestURL":Ljava/lang/String;
+    .local v5, "e":Ljava/lang/Exception;
+    .restart local v10    # "rd":Ljava/io/BufferedReader;
     :goto_4
     const-string v17, "TapjoyURLConnection"
 
@@ -559,8 +559,8 @@
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_4
 
     .line 176
-    .end local v10           #rd:Ljava/io/BufferedReader;
-    .restart local v9       #rd:Ljava/io/BufferedReader;
+    .end local v10    # "rd":Ljava/io/BufferedReader;
+    .restart local v9    # "rd":Ljava/io/BufferedReader;
     :try_start_3
     new-instance v14, Ljava/lang/StringBuilder;
 
@@ -569,8 +569,8 @@
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_5
 
     .line 178
-    .end local v15           #sb:Ljava/lang/StringBuilder;
-    .restart local v14       #sb:Ljava/lang/StringBuilder;
+    .end local v15    # "sb":Ljava/lang/StringBuilder;
+    .restart local v14    # "sb":Ljava/lang/StringBuilder;
     :goto_5
     :try_start_4
     invoke-virtual {v9}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
@@ -619,7 +619,7 @@
     move-object/from16 v6, v17
 
     .line 188
-    .local v6, ex:Ljava/lang/Exception;
+    .local v6, "ex":Ljava/lang/Exception;
     :goto_6
     const-string v17, "TapjoyURLConnection"
 
@@ -648,8 +648,8 @@
     invoke-static/range {v17 .. v18}, Lcom/tapjoy/TapjoyLog;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 192
-    .end local v5           #e:Ljava/lang/Exception;
-    .end local v6           #ex:Ljava/lang/Exception;
+    .end local v5    # "e":Ljava/lang/Exception;
+    .end local v6    # "ex":Ljava/lang/Exception;
     :goto_7
     const-string v17, "TapjoyURLConnection"
 
@@ -813,7 +813,7 @@
     return-object v16
 
     .line 73
-    .restart local v12       #requestURL:Ljava/lang/String;
+    .restart local v12    # "requestURL":Ljava/lang/String;
     :cond_2
     :try_start_5
     const-string v19, "post"
@@ -821,32 +821,32 @@
     goto/16 :goto_0
 
     .line 88
-    .restart local v2       #client:Lorg/apache/http/client/HttpClient;
+    .restart local v2    # "client":Lorg/apache/http/client/HttpClient;
     :cond_3
     new-instance v11, Lorg/apache/http/client/methods/HttpGet;
 
     invoke-direct {v11, v12}, Lorg/apache/http/client/methods/HttpGet;-><init>(Ljava/lang/String;)V
 
     .line 89
-    .local v11, request:Lorg/apache/http/client/methods/HttpGet;
+    .local v11, "request":Lorg/apache/http/client/methods/HttpGet;
     invoke-interface {v2, v11}, Lorg/apache/http/client/HttpClient;->execute(Lorg/apache/http/client/methods/HttpUriRequest;)Lorg/apache/http/HttpResponse;
 
     move-result-object v13
 
-    .restart local v13       #response:Lorg/apache/http/HttpResponse;
+    .restart local v13    # "response":Lorg/apache/http/HttpResponse;
     goto/16 :goto_1
 
     .line 98
-    .end local v2           #client:Lorg/apache/http/client/HttpClient;
-    .end local v11           #request:Lorg/apache/http/client/methods/HttpGet;
-    .end local v13           #response:Lorg/apache/http/HttpResponse;
+    .end local v2    # "client":Lorg/apache/http/client/HttpClient;
+    .end local v11    # "request":Lorg/apache/http/client/methods/HttpGet;
+    .end local v13    # "response":Lorg/apache/http/HttpResponse;
     :cond_4
     new-instance v7, Ljava/net/URL;
 
     invoke-direct {v7, v12}, Ljava/net/URL;-><init>(Ljava/lang/String;)V
 
     .line 99
-    .local v7, httpURL:Ljava/net/URL;
+    .local v7, "httpURL":Ljava/net/URL;
     invoke-virtual {v7}, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;
 
     move-result-object v4
@@ -943,18 +943,18 @@
     :try_end_5
     .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_3
 
-    .end local v9           #rd:Ljava/io/BufferedReader;
-    .restart local v10       #rd:Ljava/io/BufferedReader;
+    .end local v9    # "rd":Ljava/io/BufferedReader;
+    .restart local v10    # "rd":Ljava/io/BufferedReader;
     move-object v9, v10
 
-    .end local v10           #rd:Ljava/io/BufferedReader;
-    .restart local v9       #rd:Ljava/io/BufferedReader;
+    .end local v10    # "rd":Ljava/io/BufferedReader;
+    .restart local v9    # "rd":Ljava/io/BufferedReader;
     goto/16 :goto_2
 
     .line 136
-    .end local v7           #httpURL:Ljava/net/URL;
-    .end local v14           #sb:Ljava/lang/StringBuilder;
-    .restart local v15       #sb:Ljava/lang/StringBuilder;
+    .end local v7    # "httpURL":Ljava/net/URL;
+    .end local v14    # "sb":Ljava/lang/StringBuilder;
+    .restart local v15    # "sb":Ljava/lang/StringBuilder;
     :cond_7
     :try_start_6
     invoke-virtual {v15}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -972,8 +972,8 @@
     move-object v14, v15
 
     .line 139
-    .end local v15           #sb:Ljava/lang/StringBuilder;
-    .restart local v14       #sb:Ljava/lang/StringBuilder;
+    .end local v15    # "sb":Ljava/lang/StringBuilder;
+    .restart local v14    # "sb":Ljava/lang/StringBuilder;
     :cond_8
     :try_start_7
     move-object/from16 v0, v16
@@ -1022,7 +1022,7 @@
     move-result-object v4
 
     .line 144
-    .local v4, contentLength:Ljava/lang/String;
+    .local v4, "contentLength":Ljava/lang/String;
     if-eqz v4, :cond_a
 
     .line 148
@@ -1068,7 +1068,7 @@
     move-object/from16 v5, v17
 
     .line 152
-    .restart local v5       #e:Ljava/lang/Exception;
+    .restart local v5    # "e":Ljava/lang/Exception;
     const-string v17, "TapjoyURLConnection"
 
     new-instance v18, Ljava/lang/StringBuilder;
@@ -1100,9 +1100,9 @@
     goto :goto_8
 
     .line 164
-    .end local v4           #contentLength:Ljava/lang/String;
-    .end local v5           #e:Ljava/lang/Exception;
-    .end local v12           #requestURL:Ljava/lang/String;
+    .end local v4    # "contentLength":Ljava/lang/String;
+    .end local v5    # "e":Ljava/lang/Exception;
+    .end local v12    # "requestURL":Ljava/lang/String;
     :catch_3
     move-exception v17
 
@@ -1110,20 +1110,20 @@
 
     move-object v15, v14
 
-    .end local v14           #sb:Ljava/lang/StringBuilder;
-    .restart local v15       #sb:Ljava/lang/StringBuilder;
+    .end local v14    # "sb":Ljava/lang/StringBuilder;
+    .restart local v15    # "sb":Ljava/lang/StringBuilder;
     move-object v10, v9
 
-    .end local v9           #rd:Ljava/io/BufferedReader;
-    .restart local v10       #rd:Ljava/io/BufferedReader;
+    .end local v9    # "rd":Ljava/io/BufferedReader;
+    .restart local v10    # "rd":Ljava/io/BufferedReader;
     goto/16 :goto_4
 
     .line 183
-    .end local v10           #rd:Ljava/io/BufferedReader;
-    .end local v15           #sb:Ljava/lang/StringBuilder;
-    .restart local v5       #e:Ljava/lang/Exception;
-    .restart local v9       #rd:Ljava/io/BufferedReader;
-    .restart local v14       #sb:Ljava/lang/StringBuilder;
+    .end local v10    # "rd":Ljava/io/BufferedReader;
+    .end local v15    # "sb":Ljava/lang/StringBuilder;
+    .restart local v5    # "e":Ljava/lang/Exception;
+    .restart local v9    # "rd":Ljava/io/BufferedReader;
+    .restart local v14    # "sb":Ljava/lang/StringBuilder;
     :cond_c
     :try_start_a
     invoke-virtual {v14}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -1141,10 +1141,10 @@
     goto/16 :goto_7
 
     .line 186
-    .end local v9           #rd:Ljava/io/BufferedReader;
-    .end local v14           #sb:Ljava/lang/StringBuilder;
-    .restart local v10       #rd:Ljava/io/BufferedReader;
-    .restart local v15       #sb:Ljava/lang/StringBuilder;
+    .end local v9    # "rd":Ljava/io/BufferedReader;
+    .end local v14    # "sb":Ljava/lang/StringBuilder;
+    .restart local v10    # "rd":Ljava/io/BufferedReader;
+    .restart local v15    # "sb":Ljava/lang/StringBuilder;
     :catch_4
     move-exception v17
 
@@ -1152,16 +1152,16 @@
 
     move-object v14, v15
 
-    .end local v15           #sb:Ljava/lang/StringBuilder;
-    .restart local v14       #sb:Ljava/lang/StringBuilder;
+    .end local v15    # "sb":Ljava/lang/StringBuilder;
+    .restart local v14    # "sb":Ljava/lang/StringBuilder;
     move-object v9, v10
 
-    .end local v10           #rd:Ljava/io/BufferedReader;
-    .restart local v9       #rd:Ljava/io/BufferedReader;
+    .end local v10    # "rd":Ljava/io/BufferedReader;
+    .restart local v9    # "rd":Ljava/io/BufferedReader;
     goto/16 :goto_6
 
-    .end local v14           #sb:Ljava/lang/StringBuilder;
-    .restart local v15       #sb:Ljava/lang/StringBuilder;
+    .end local v14    # "sb":Ljava/lang/StringBuilder;
+    .restart local v15    # "sb":Ljava/lang/StringBuilder;
     :catch_5
     move-exception v17
 
@@ -1169,30 +1169,29 @@
 
     move-object v14, v15
 
-    .end local v15           #sb:Ljava/lang/StringBuilder;
-    .restart local v14       #sb:Ljava/lang/StringBuilder;
+    .end local v15    # "sb":Ljava/lang/StringBuilder;
+    .restart local v14    # "sb":Ljava/lang/StringBuilder;
     goto/16 :goto_6
 
-    .end local v9           #rd:Ljava/io/BufferedReader;
-    .end local v14           #sb:Ljava/lang/StringBuilder;
-    .restart local v10       #rd:Ljava/io/BufferedReader;
-    .restart local v15       #sb:Ljava/lang/StringBuilder;
+    .end local v9    # "rd":Ljava/io/BufferedReader;
+    .end local v14    # "sb":Ljava/lang/StringBuilder;
+    .restart local v10    # "rd":Ljava/io/BufferedReader;
+    .restart local v15    # "sb":Ljava/lang/StringBuilder;
     :cond_d
     move-object v14, v15
 
-    .end local v15           #sb:Ljava/lang/StringBuilder;
-    .restart local v14       #sb:Ljava/lang/StringBuilder;
+    .end local v15    # "sb":Ljava/lang/StringBuilder;
+    .restart local v14    # "sb":Ljava/lang/StringBuilder;
     move-object v9, v10
 
-    .end local v10           #rd:Ljava/io/BufferedReader;
-    .restart local v9       #rd:Ljava/io/BufferedReader;
+    .end local v10    # "rd":Ljava/io/BufferedReader;
+    .restart local v9    # "rd":Ljava/io/BufferedReader;
     goto/16 :goto_7
 .end method
 
 .method public getResponseFromURL(Ljava/lang/String;Ljava/util/Map;)Lcom/tapjoy/TapjoyHttpURLResponse;
     .locals 2
-    .parameter "url"
-    .parameter
+    .param p1, "url"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1207,7 +1206,7 @@
     .end annotation
 
     .prologue
-    .local p2, params:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p2, "params":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     const/4 v1, 0x0
 
     .line 38
@@ -1224,9 +1223,8 @@
 
 .method public getResponseFromURL(Ljava/lang/String;Ljava/util/Map;I)Lcom/tapjoy/TapjoyHttpURLResponse;
     .locals 1
-    .parameter "url"
-    .parameter
-    .parameter "type"
+    .param p1, "url"    # Ljava/lang/String;
+    .param p3, "type"    # I
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1242,7 +1240,7 @@
 
     .prologue
     .line 43
-    .local p2, params:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p2, "params":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     const/4 v0, 0x0
 
     invoke-static {p2, v0}, Lcom/tapjoy/TapjoyUtil;->convertURLParams(Ljava/util/Map;Z)Ljava/lang/String;

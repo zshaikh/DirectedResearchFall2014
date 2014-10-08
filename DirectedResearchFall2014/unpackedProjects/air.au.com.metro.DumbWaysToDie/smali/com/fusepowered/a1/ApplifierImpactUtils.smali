@@ -36,8 +36,8 @@
 
 .method public static Log(Ljava/lang/String;Ljava/lang/Class;)V
     .locals 3
-    .parameter "message"
-    .parameter "cls"
+    .param p0, "message"    # Ljava/lang/String;
+    .param p1, "cls"    # Ljava/lang/Class;
 
     .prologue
     .line 38
@@ -87,8 +87,8 @@
 
 .method public static Log(Ljava/lang/String;Ljava/lang/Object;)V
     .locals 3
-    .parameter "message"
-    .parameter "obj"
+    .param p0, "message"    # Ljava/lang/String;
+    .param p1, "obj"    # Ljava/lang/Object;
 
     .prologue
     .line 44
@@ -142,7 +142,7 @@
 
 .method public static Md5(Ljava/lang/String;)Ljava/lang/String;
     .locals 9
-    .parameter "input"
+    .param p0, "input"    # Ljava/lang/String;
     .annotation build Landroid/annotation/SuppressLint;
         value = {
             "DefaultLocale"
@@ -154,7 +154,7 @@
     const/4 v3, 0x0
 
     .line 112
-    .local v3, m:Ljava/security/MessageDigest;
+    .local v3, "m":Ljava/security/MessageDigest;
     :try_start_0
     const-string v6, "MD5"
 
@@ -184,16 +184,16 @@
     move-result-object v5
 
     .line 119
-    .local v5, p_md5Data:[B
+    .local v5, "p_md5Data":[B
     new-instance v4, Ljava/lang/String;
 
     invoke-direct {v4}, Ljava/lang/String;-><init>()V
 
     .line 120
-    .local v4, mOutput:Ljava/lang/String;
+    .local v4, "mOutput":Ljava/lang/String;
     const/4 v2, 0x0
 
-    .local v2, i:I
+    .local v2, "i":I
     :goto_1
     array-length v6, v5
 
@@ -207,32 +207,32 @@
     return-object v6
 
     .line 113
-    .end local v2           #i:I
-    .end local v4           #mOutput:Ljava/lang/String;
-    .end local v5           #p_md5Data:[B
+    .end local v2    # "i":I
+    .end local v4    # "mOutput":Ljava/lang/String;
+    .end local v5    # "p_md5Data":[B
     :catch_0
     move-exception v6
 
     move-object v1, v6
 
     .line 114
-    .local v1, e:Ljava/security/NoSuchAlgorithmException;
+    .local v1, "e":Ljava/security/NoSuchAlgorithmException;
     invoke-virtual {v1}, Ljava/security/NoSuchAlgorithmException;->printStackTrace()V
 
     goto :goto_0
 
     .line 121
-    .end local v1           #e:Ljava/security/NoSuchAlgorithmException;
-    .restart local v2       #i:I
-    .restart local v4       #mOutput:Ljava/lang/String;
-    .restart local v5       #p_md5Data:[B
+    .end local v1    # "e":Ljava/security/NoSuchAlgorithmException;
+    .restart local v2    # "i":I
+    .restart local v4    # "mOutput":Ljava/lang/String;
+    .restart local v5    # "p_md5Data":[B
     :cond_0
     aget-byte v6, v5, v2
 
     and-int/lit16 v0, v6, 0xff
 
     .line 123
-    .local v0, b:I
+    .local v0, "b":I
     const/16 v6, 0xf
 
     if-gt v0, v6, :cond_1
@@ -285,7 +285,7 @@
 
 .method public static SHA1(Ljava/lang/String;)Ljava/lang/String;
     .locals 5
-    .parameter "text"
+    .param p0, "text"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/security/NoSuchAlgorithmException;,
@@ -302,7 +302,7 @@
     move-result-object v0
 
     .line 103
-    .local v0, md:Ljava/security/MessageDigest;
+    .local v0, "md":Ljava/security/MessageDigest;
     const-string v2, "iso-8859-1"
 
     invoke-virtual {p0, v2}, Ljava/lang/String;->getBytes(Ljava/lang/String;)[B
@@ -323,7 +323,7 @@
     move-result-object v1
 
     .line 105
-    .local v1, sha1hash:[B
+    .local v1, "sha1hash":[B
     invoke-static {v1}, Lcom/fusepowered/a1/ApplifierImpactUtils;->convertToHex([B)Ljava/lang/String;
 
     move-result-object v2
@@ -341,7 +341,7 @@
     move-result-object v0
 
     .line 221
-    .local v0, state:Ljava/lang/String;
+    .local v0, "state":Ljava/lang/String;
     const-string v1, "mounted"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -365,7 +365,7 @@
 
 .method private static convertToHex([B)Ljava/lang/String;
     .locals 8
-    .parameter "data"
+    .param p0, "data"    # [B
 
     .prologue
     .line 89
@@ -374,7 +374,7 @@
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
     .line 90
-    .local v1, buf:Ljava/lang/StringBuilder;
+    .local v1, "buf":Ljava/lang/StringBuilder;
     array-length v5, p0
 
     const/4 v6, 0x0
@@ -394,21 +394,21 @@
     aget-byte v0, p0, v6
 
     .line 91
-    .local v0, b:B
+    .local v0, "b":B
     ushr-int/lit8 v7, v0, 0x4
 
     and-int/lit8 v2, v7, 0xf
 
     .line 92
-    .local v2, halfbyte:I
+    .local v2, "halfbyte":I
     const/4 v3, 0x0
 
-    .local v3, two_halfs:I
+    .local v3, "two_halfs":I
     move v4, v3
 
     .line 94
-    .end local v3           #two_halfs:I
-    .local v4, two_halfs:I
+    .end local v3    # "two_halfs":I
+    .local v4, "two_halfs":I
     :goto_1
     if-ltz v2, :cond_1
 
@@ -429,8 +429,8 @@
     .line 96
     add-int/lit8 v3, v4, 0x1
 
-    .end local v4           #two_halfs:I
-    .restart local v3       #two_halfs:I
+    .end local v4    # "two_halfs":I
+    .restart local v3    # "two_halfs":I
     const/4 v7, 0x1
 
     .line 93
@@ -442,8 +442,8 @@
     goto :goto_0
 
     .line 94
-    .end local v3           #two_halfs:I
-    .restart local v4       #two_halfs:I
+    .end local v3    # "two_halfs":I
+    .restart local v4    # "two_halfs":I
     :cond_1
     const/16 v7, 0xa
 
@@ -455,13 +455,13 @@
 
     goto :goto_2
 
-    .end local v4           #two_halfs:I
-    .restart local v3       #two_halfs:I
+    .end local v4    # "two_halfs":I
+    .restart local v3    # "two_halfs":I
     :cond_2
     move v4, v3
 
-    .end local v3           #two_halfs:I
-    .restart local v4       #two_halfs:I
+    .end local v3    # "two_halfs":I
+    .restart local v4    # "two_halfs":I
     goto :goto_1
 .end method
 
@@ -479,7 +479,7 @@
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
     .line 229
-    .local v0, tdir:Ljava/io/File;
+    .local v0, "tdir":Ljava/io/File;
     invoke-virtual {v0}, Ljava/io/File;->mkdirs()Z
 
     .line 231
@@ -563,7 +563,7 @@
 
 .method public static getSizeForLocalFile(Ljava/lang/String;)J
     .locals 6
-    .parameter "fileName"
+    .param p0, "fileName"    # Ljava/lang/String;
 
     .prologue
     .line 204
@@ -572,7 +572,7 @@
     invoke-direct {v1, p0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
     .line 205
-    .local v1, removeFile:Ljava/io/File;
+    .local v1, "removeFile":Ljava/io/File;
     new-instance v0, Ljava/io/File;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -608,11 +608,11 @@
     invoke-direct {v0, v4}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
     .line 206
-    .local v0, cachedVideoFile:Ljava/io/File;
+    .local v0, "cachedVideoFile":Ljava/io/File;
     const-wide/16 v2, -0x1
 
     .line 208
-    .local v2, size:J
+    .local v2, "size":J
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result v4
@@ -631,7 +631,7 @@
 
 .method public static isDebuggable(Landroid/content/Context;)Z
     .locals 14
-    .parameter "ctx"
+    .param p0, "ctx"    # Landroid/content/Context;
 
     .prologue
     const/4 v13, 0x0
@@ -640,17 +640,17 @@
     const/4 v3, 0x0
 
     .line 51
-    .local v3, debuggable:Z
+    .local v3, "debuggable":Z
     const/4 v8, 0x0
 
     .line 53
-    .local v8, problemsWithData:Z
+    .local v8, "problemsWithData":Z
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v7
 
     .line 55
-    .local v7, pm:Landroid/content/pm/PackageManager;
+    .local v7, "pm":Landroid/content/pm/PackageManager;
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
@@ -663,7 +663,7 @@
     move-result-object v0
 
     .line 56
-    .local v0, appinfo:Landroid/content/pm/ApplicationInfo;
+    .local v0, "appinfo":Landroid/content/pm/ApplicationInfo;
     iget v11, v0, Landroid/content/pm/ApplicationInfo;->flags:I
 
     and-int/lit8 v11, v11, 0x2
@@ -679,7 +679,7 @@
     move v3, v11
 
     .line 62
-    .end local v0           #appinfo:Landroid/content/pm/ApplicationInfo;
+    .end local v0    # "appinfo":Landroid/content/pm/ApplicationInfo;
     :goto_0
     if-eqz v8, :cond_0
 
@@ -703,28 +703,28 @@
     move-result-object v6
 
     .line 66
-    .local v6, pinfo:Landroid/content/pm/PackageInfo;
+    .local v6, "pinfo":Landroid/content/pm/PackageInfo;
     iget-object v9, v6, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
 
     .line 68
-    .local v9, signatures:[Landroid/content/pm/Signature;
+    .local v9, "signatures":[Landroid/content/pm/Signature;
     const/4 v5, 0x0
 
-    .local v5, i:I
+    .local v5, "i":I
     :goto_1
     array-length v11, v9
 
     if-lt v5, v11, :cond_2
 
     .line 85
-    .end local v5           #i:I
-    .end local v6           #pinfo:Landroid/content/pm/PackageInfo;
-    .end local v9           #signatures:[Landroid/content/pm/Signature;
+    .end local v5    # "i":I
+    .end local v6    # "pinfo":Landroid/content/pm/PackageInfo;
+    .end local v9    # "signatures":[Landroid/content/pm/Signature;
     :cond_0
     :goto_2
     return v3
 
-    .restart local v0       #appinfo:Landroid/content/pm/ApplicationInfo;
+    .restart local v0    # "appinfo":Landroid/content/pm/ApplicationInfo;
     :cond_1
     move v3, v13
 
@@ -732,23 +732,23 @@
     goto :goto_0
 
     .line 58
-    .end local v0           #appinfo:Landroid/content/pm/ApplicationInfo;
+    .end local v0    # "appinfo":Landroid/content/pm/ApplicationInfo;
     :catch_0
     move-exception v11
 
     move-object v4, v11
 
     .line 59
-    .local v4, e:Landroid/content/pm/PackageManager$NameNotFoundException;
+    .local v4, "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     const/4 v8, 0x1
 
     goto :goto_0
 
     .line 69
-    .end local v4           #e:Landroid/content/pm/PackageManager$NameNotFoundException;
-    .restart local v5       #i:I
-    .restart local v6       #pinfo:Landroid/content/pm/PackageInfo;
-    .restart local v9       #signatures:[Landroid/content/pm/Signature;
+    .end local v4    # "e":Landroid/content/pm/PackageManager$NameNotFoundException;
+    .restart local v5    # "i":I
+    .restart local v6    # "pinfo":Landroid/content/pm/PackageInfo;
+    .restart local v9    # "signatures":[Landroid/content/pm/Signature;
     :cond_2
     const-string v11, "X.509"
 
@@ -757,7 +757,7 @@
     move-result-object v2
 
     .line 70
-    .local v2, cf:Ljava/security/cert/CertificateFactory;
+    .local v2, "cf":Ljava/security/cert/CertificateFactory;
     new-instance v10, Ljava/io/ByteArrayInputStream;
 
     aget-object v11, v9, v5
@@ -769,7 +769,7 @@
     invoke-direct {v10, v11}, Ljava/io/ByteArrayInputStream;-><init>([B)V
 
     .line 71
-    .local v10, stream:Ljava/io/ByteArrayInputStream;
+    .local v10, "stream":Ljava/io/ByteArrayInputStream;
     invoke-virtual {v2, v10}, Ljava/security/cert/CertificateFactory;->generateCertificate(Ljava/io/InputStream;)Ljava/security/cert/Certificate;
 
     move-result-object v1
@@ -777,7 +777,7 @@
     check-cast v1, Ljava/security/cert/X509Certificate;
 
     .line 72
-    .local v1, cert:Ljava/security/cert/X509Certificate;
+    .local v1, "cert":Ljava/security/cert/X509Certificate;
     invoke-virtual {v1}, Ljava/security/cert/X509Certificate;->getSubjectX500Principal()Ljavax/security/auth/x500/X500Principal;
 
     move-result-object v11
@@ -800,32 +800,32 @@
     goto :goto_1
 
     .line 77
-    .end local v1           #cert:Ljava/security/cert/X509Certificate;
-    .end local v2           #cf:Ljava/security/cert/CertificateFactory;
-    .end local v5           #i:I
-    .end local v6           #pinfo:Landroid/content/pm/PackageInfo;
-    .end local v9           #signatures:[Landroid/content/pm/Signature;
-    .end local v10           #stream:Ljava/io/ByteArrayInputStream;
+    .end local v1    # "cert":Ljava/security/cert/X509Certificate;
+    .end local v2    # "cf":Ljava/security/cert/CertificateFactory;
+    .end local v5    # "i":I
+    .end local v6    # "pinfo":Landroid/content/pm/PackageInfo;
+    .end local v9    # "signatures":[Landroid/content/pm/Signature;
+    .end local v10    # "stream":Ljava/io/ByteArrayInputStream;
     :catch_1
     move-exception v11
 
     move-object v4, v11
 
     .line 78
-    .restart local v4       #e:Landroid/content/pm/PackageManager$NameNotFoundException;
+    .restart local v4    # "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     const/4 v8, 0x1
 
     goto :goto_2
 
     .line 80
-    .end local v4           #e:Landroid/content/pm/PackageManager$NameNotFoundException;
+    .end local v4    # "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     :catch_2
     move-exception v11
 
     move-object v4, v11
 
     .line 81
-    .local v4, e:Ljava/security/cert/CertificateException;
+    .local v4, "e":Ljava/security/cert/CertificateException;
     const/4 v8, 0x1
 
     goto :goto_2
@@ -833,7 +833,7 @@
 
 .method public static isFileInCache(Ljava/lang/String;)Z
     .locals 4
-    .parameter "fileName"
+    .param p0, "fileName"    # Ljava/lang/String;
 
     .prologue
     .line 256
@@ -842,7 +842,7 @@
     invoke-direct {v0, p0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
     .line 257
-    .local v0, targetFile:Ljava/io/File;
+    .local v0, "targetFile":Ljava/io/File;
     new-instance v1, Ljava/io/File;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -878,7 +878,7 @@
     invoke-direct {v1, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
     .line 258
-    .local v1, testFile:Ljava/io/File;
+    .local v1, "testFile":Ljava/io/File;
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
     move-result v2
@@ -888,8 +888,7 @@
 
 .method public static isFileRequiredByCampaigns(Ljava/lang/String;Ljava/util/ArrayList;)Z
     .locals 8
-    .parameter "fileName"
-    .parameter
+    .param p0, "fileName"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -902,7 +901,7 @@
     .end annotation
 
     .prologue
-    .local p1, campaigns:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;>;"
+    .local p1, "campaigns":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;>;"
     const/4 v7, 0x1
 
     const/4 v6, 0x0
@@ -926,7 +925,7 @@
     invoke-direct {v2, p0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
     .line 243
-    .local v2, seekFile:Ljava/io/File;
+    .local v2, "seekFile":Ljava/io/File;
     invoke-virtual {v2}, Ljava/io/File;->getName()Ljava/lang/String;
 
     move-result-object v3
@@ -971,7 +970,7 @@
     check-cast v0, Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;
 
     .line 247
-    .local v0, campaign:Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;
+    .local v0, "campaign":Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;
     new-instance v1, Ljava/io/File;
 
     invoke-virtual {v0}, Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;->getVideoFilename()Ljava/lang/String;
@@ -981,7 +980,7 @@
     invoke-direct {v1, v4}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
     .line 248
-    .local v1, matchFile:Ljava/io/File;
+    .local v1, "matchFile":Ljava/io/File;
     invoke-virtual {v2}, Ljava/io/File;->getName()Ljava/lang/String;
 
     move-result-object v4
@@ -1004,8 +1003,8 @@
 
 .method public static readFile(Ljava/io/File;Z)Ljava/lang/String;
     .locals 9
-    .parameter "fileToRead"
-    .parameter "addLineBreaks"
+    .param p0, "fileToRead"    # Ljava/io/File;
+    .param p1, "addLineBreaks"    # Z
 
     .prologue
     const/4 v8, 0x0
@@ -1016,11 +1015,11 @@
     const-string v3, ""
 
     .line 133
-    .local v3, fileContent:Ljava/lang/String;
+    .local v3, "fileContent":Ljava/lang/String;
     const/4 v0, 0x0
 
     .line 135
-    .local v0, br:Ljava/io/BufferedReader;
+    .local v0, "br":Ljava/io/BufferedReader;
     invoke-virtual {p0}, Ljava/io/File;->exists()Z
 
     move-result v5
@@ -1046,12 +1045,12 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 138
-    .end local v0           #br:Ljava/io/BufferedReader;
-    .local v1, br:Ljava/io/BufferedReader;
+    .end local v0    # "br":Ljava/io/BufferedReader;
+    .local v1, "br":Ljava/io/BufferedReader;
     const/4 v4, 0x0
 
     .line 140
-    .local v4, line:Ljava/lang/String;
+    .local v4, "line":Ljava/lang/String;
     :cond_0
     :goto_0
     :try_start_1
@@ -1072,19 +1071,19 @@
     :goto_1
     move-object v0, v1
 
-    .end local v1           #br:Ljava/io/BufferedReader;
-    .restart local v0       #br:Ljava/io/BufferedReader;
+    .end local v1    # "br":Ljava/io/BufferedReader;
+    .restart local v0    # "br":Ljava/io/BufferedReader;
     move-object v5, v3
 
     .line 164
-    .end local v4           #line:Ljava/lang/String;
+    .end local v4    # "line":Ljava/lang/String;
     :goto_2
     return-object v5
 
     .line 141
-    .end local v0           #br:Ljava/io/BufferedReader;
-    .restart local v1       #br:Ljava/io/BufferedReader;
-    .restart local v4       #line:Ljava/lang/String;
+    .end local v0    # "br":Ljava/io/BufferedReader;
+    .restart local v1    # "br":Ljava/io/BufferedReader;
+    .restart local v4    # "line":Ljava/lang/String;
     :cond_1
     :try_start_3
     invoke-virtual {v3, v4}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
@@ -1106,16 +1105,16 @@
     goto :goto_0
 
     .line 146
-    .end local v1           #br:Ljava/io/BufferedReader;
-    .end local v4           #line:Ljava/lang/String;
-    .restart local v0       #br:Ljava/io/BufferedReader;
+    .end local v1    # "br":Ljava/io/BufferedReader;
+    .end local v4    # "line":Ljava/lang/String;
+    .restart local v0    # "br":Ljava/io/BufferedReader;
     :catch_0
     move-exception v5
 
     move-object v2, v5
 
     .line 147
-    .local v2, e:Ljava/lang/Exception;
+    .local v2, "e":Ljava/lang/Exception;
     :goto_3
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -1145,15 +1144,15 @@
     goto :goto_2
 
     .line 154
-    .end local v0           #br:Ljava/io/BufferedReader;
-    .end local v2           #e:Ljava/lang/Exception;
-    .restart local v1       #br:Ljava/io/BufferedReader;
-    .restart local v4       #line:Ljava/lang/String;
+    .end local v0    # "br":Ljava/io/BufferedReader;
+    .end local v2    # "e":Ljava/lang/Exception;
+    .restart local v1    # "br":Ljava/io/BufferedReader;
+    .restart local v4    # "line":Ljava/lang/String;
     :catch_1
     move-exception v2
 
     .line 155
-    .restart local v2       #e:Ljava/lang/Exception;
+    .restart local v2    # "e":Ljava/lang/Exception;
     new-instance v5, Ljava/lang/StringBuilder;
 
     const-string v6, "Problem closing reader: "
@@ -1179,10 +1178,10 @@
     goto :goto_1
 
     .line 161
-    .end local v1           #br:Ljava/io/BufferedReader;
-    .end local v2           #e:Ljava/lang/Exception;
-    .end local v4           #line:Ljava/lang/String;
-    .restart local v0       #br:Ljava/io/BufferedReader;
+    .end local v1    # "br":Ljava/io/BufferedReader;
+    .end local v2    # "e":Ljava/lang/Exception;
+    .end local v4    # "line":Ljava/lang/String;
+    .restart local v0    # "br":Ljava/io/BufferedReader;
     :cond_2
     const-string v5, "File did not exist or couldn\'t be read"
 
@@ -1196,9 +1195,9 @@
     goto :goto_2
 
     .line 146
-    .end local v0           #br:Ljava/io/BufferedReader;
-    .restart local v1       #br:Ljava/io/BufferedReader;
-    .restart local v4       #line:Ljava/lang/String;
+    .end local v0    # "br":Ljava/io/BufferedReader;
+    .restart local v1    # "br":Ljava/io/BufferedReader;
+    .restart local v4    # "line":Ljava/lang/String;
     :catch_2
     move-exception v5
 
@@ -1206,14 +1205,14 @@
 
     move-object v0, v1
 
-    .end local v1           #br:Ljava/io/BufferedReader;
-    .restart local v0       #br:Ljava/io/BufferedReader;
+    .end local v1    # "br":Ljava/io/BufferedReader;
+    .restart local v0    # "br":Ljava/io/BufferedReader;
     goto :goto_3
 .end method
 
 .method public static removeFile(Ljava/lang/String;)V
     .locals 5
-    .parameter "fileName"
+    .param p0, "fileName"    # Ljava/lang/String;
 
     .prologue
     const-class v4, Lcom/fusepowered/a1/ApplifierImpactUtils;
@@ -1227,7 +1226,7 @@
     invoke-direct {v1, p0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
     .line 189
-    .local v1, removeFile:Ljava/io/File;
+    .local v1, "removeFile":Ljava/io/File;
     new-instance v0, Ljava/io/File;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1263,7 +1262,7 @@
     invoke-direct {v0, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
     .line 191
-    .local v0, cachedVideoFile:Ljava/io/File;
+    .local v0, "cachedVideoFile":Ljava/io/File;
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result v2
@@ -1301,15 +1300,15 @@
     invoke-static {v2, v4}, Lcom/fusepowered/a1/ApplifierImpactUtils;->Log(Ljava/lang/String;Ljava/lang/Class;)V
 
     .line 201
-    .end local v0           #cachedVideoFile:Ljava/io/File;
-    .end local v1           #removeFile:Ljava/io/File;
+    .end local v0    # "cachedVideoFile":Ljava/io/File;
+    .end local v1    # "removeFile":Ljava/io/File;
     :cond_0
     :goto_0
     return-void
 
     .line 195
-    .restart local v0       #cachedVideoFile:Ljava/io/File;
-    .restart local v1       #removeFile:Ljava/io/File;
+    .restart local v0    # "cachedVideoFile":Ljava/io/File;
+    .restart local v1    # "removeFile":Ljava/io/File;
     :cond_1
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -1370,8 +1369,8 @@
 
 .method public static writeFile(Ljava/io/File;Ljava/lang/String;)Z
     .locals 6
-    .parameter "fileToWrite"
-    .parameter "content"
+    .param p0, "fileToWrite"    # Ljava/io/File;
+    .param p1, "content"    # Ljava/lang/String;
 
     .prologue
     const-class v5, Lcom/fusepowered/a1/ApplifierImpactUtils;
@@ -1380,7 +1379,7 @@
     const/4 v1, 0x0
 
     .line 171
-    .local v1, fos:Ljava/io/FileOutputStream;
+    .local v1, "fos":Ljava/io/FileOutputStream;
     :try_start_0
     new-instance v2, Ljava/io/FileOutputStream;
 
@@ -1389,8 +1388,8 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 172
-    .end local v1           #fos:Ljava/io/FileOutputStream;
-    .local v2, fos:Ljava/io/FileOutputStream;
+    .end local v1    # "fos":Ljava/io/FileOutputStream;
+    .local v2, "fos":Ljava/io/FileOutputStream;
     :try_start_1
     invoke-virtual {p1}, Ljava/lang/String;->getBytes()[B
 
@@ -1434,8 +1433,8 @@
 
     move-object v1, v2
 
-    .end local v2           #fos:Ljava/io/FileOutputStream;
-    .restart local v1       #fos:Ljava/io/FileOutputStream;
+    .end local v2    # "fos":Ljava/io/FileOutputStream;
+    .restart local v1    # "fos":Ljava/io/FileOutputStream;
     :goto_0
     return v3
 
@@ -1446,7 +1445,7 @@
     move-object v0, v3
 
     .line 177
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     :goto_1
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -1476,9 +1475,9 @@
     goto :goto_0
 
     .line 176
-    .end local v0           #e:Ljava/lang/Exception;
-    .end local v1           #fos:Ljava/io/FileOutputStream;
-    .restart local v2       #fos:Ljava/io/FileOutputStream;
+    .end local v0    # "e":Ljava/lang/Exception;
+    .end local v1    # "fos":Ljava/io/FileOutputStream;
+    .restart local v2    # "fos":Ljava/io/FileOutputStream;
     :catch_1
     move-exception v3
 
@@ -1486,7 +1485,7 @@
 
     move-object v1, v2
 
-    .end local v2           #fos:Ljava/io/FileOutputStream;
-    .restart local v1       #fos:Ljava/io/FileOutputStream;
+    .end local v2    # "fos":Ljava/io/FileOutputStream;
+    .restart local v1    # "fos":Ljava/io/FileOutputStream;
     goto :goto_1
 .end method

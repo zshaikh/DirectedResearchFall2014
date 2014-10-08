@@ -39,8 +39,6 @@
 # direct methods
 .method public constructor <init>(Ljava/lang/Class;Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;)V
     .locals 0
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -55,8 +53,8 @@
 
     .prologue
     .line 88
-    .local p1, type:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
-    .local p2, serializer:Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
+    .local p1, "type":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
+    .local p2, "serializer":Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 89

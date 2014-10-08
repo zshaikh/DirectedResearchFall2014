@@ -63,7 +63,7 @@
 
 .method public static valueOf(Z)Lcom/flurry/org/codehaus/jackson/node/BooleanNode;
     .locals 1
-    .parameter "b"
+    .param p0, "b"    # Z
 
     .prologue
     .line 26
@@ -104,7 +104,7 @@
 
 .method public asBoolean(Z)Z
     .locals 1
-    .parameter "defaultValue"
+    .param p1, "defaultValue"    # Z
 
     .prologue
     .line 53
@@ -125,7 +125,7 @@
 
 .method public asDouble(D)D
     .locals 2
-    .parameter "defaultValue"
+    .param p1, "defaultValue"    # D
 
     .prologue
     .line 66
@@ -133,7 +133,7 @@
 
     if-ne p0, v0, :cond_0
 
-    const-wide/high16 v0, 0x3ff0
+    const-wide/high16 v0, 0x3ff0000000000000L
 
     :goto_0
     return-wide v0
@@ -146,7 +146,7 @@
 
 .method public asInt(I)I
     .locals 1
-    .parameter "defaultValue"
+    .param p1, "defaultValue"    # I
 
     .prologue
     .line 58
@@ -167,7 +167,7 @@
 
 .method public asLong(J)J
     .locals 2
-    .parameter "defaultValue"
+    .param p1, "defaultValue"    # J
 
     .prologue
     .line 62
@@ -228,7 +228,7 @@
 
 .method public equals(Ljava/lang/Object;)Z
     .locals 1
-    .parameter "o"
+    .param p1, "o"    # Ljava/lang/Object;
 
     .prologue
     .line 82
@@ -277,8 +277,8 @@
 
 .method public final serialize(Lcom/flurry/org/codehaus/jackson/JsonGenerator;Lcom/flurry/org/codehaus/jackson/map/SerializerProvider;)V
     .locals 1
-    .parameter "jg"
-    .parameter "provider"
+    .param p1, "jg"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator;
+    .param p2, "provider"    # Lcom/flurry/org/codehaus/jackson/map/SerializerProvider;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,

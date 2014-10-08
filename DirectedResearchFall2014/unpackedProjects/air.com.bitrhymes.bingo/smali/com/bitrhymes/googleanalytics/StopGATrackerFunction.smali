@@ -21,8 +21,8 @@
 # virtual methods
 .method public call(Lcom/adobe/fre/FREContext;[Lcom/adobe/fre/FREObject;)Lcom/adobe/fre/FREObject;
     .locals 6
-    .parameter "arg0"
-    .parameter "arg1"
+    .param p1, "arg0"    # Lcom/adobe/fre/FREContext;
+    .param p2, "arg1"    # [Lcom/adobe/fre/FREObject;
 
     .prologue
     const-string v5, ","
@@ -44,7 +44,7 @@
     move-result-object v1
 
     .line 20
-    .local v1, tracker:Lcom/google/analytics/tracking/android/Tracker;
+    .local v1, "tracker":Lcom/google/analytics/tracking/android/Tracker;
     invoke-virtual {p1}, Lcom/adobe/fre/FREContext;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
@@ -71,7 +71,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 27
-    .end local v1           #tracker:Lcom/google/analytics/tracking/android/Tracker;
+    .end local v1    # "tracker":Lcom/google/analytics/tracking/android/Tracker;
     :goto_0
     const/4 v2, 0x0
 
@@ -84,7 +84,7 @@
     move-object v0, v2
 
     .line 25
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v2, "ERROR_EVENT"
 
     new-instance v3, Ljava/lang/StringBuilder;

@@ -23,8 +23,8 @@
 # direct methods
 .method private constructor <init>(Lcom/flurry/org/apache/avro/io/parsing/Symbol;Lcom/flurry/org/apache/avro/io/parsing/Symbol;)V
     .locals 1
-    .parameter "writer"
-    .parameter "reader"
+    .param p1, "writer"    # Lcom/flurry/org/apache/avro/io/parsing/Symbol;
+    .param p2, "reader"    # Lcom/flurry/org/apache/avro/io/parsing/Symbol;
 
     .prologue
     .line 426
@@ -44,9 +44,9 @@
 
 .method synthetic constructor <init>(Lcom/flurry/org/apache/avro/io/parsing/Symbol;Lcom/flurry/org/apache/avro/io/parsing/Symbol;Lcom/flurry/org/apache/avro/io/parsing/Symbol$1;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
-    .parameter "x2"
+    .param p1, "x0"    # Lcom/flurry/org/apache/avro/io/parsing/Symbol;
+    .param p2, "x1"    # Lcom/flurry/org/apache/avro/io/parsing/Symbol;
+    .param p3, "x2"    # Lcom/flurry/org/apache/avro/io/parsing/Symbol$1;
 
     .prologue
     .line 423
@@ -59,8 +59,6 @@
 # virtual methods
 .method public flatten(Ljava/util/Map;Ljava/util/Map;)Lcom/flurry/org/apache/avro/io/parsing/Symbol$ResolvingAction;
     .locals 3
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -82,8 +80,8 @@
 
     .prologue
     .line 434
-    .local p1, map:Ljava/util/Map;,"Ljava/util/Map<Lcom/flurry/org/apache/avro/io/parsing/Symbol$Sequence;Lcom/flurry/org/apache/avro/io/parsing/Symbol$Sequence;>;"
-    .local p2, map2:Ljava/util/Map;,"Ljava/util/Map<Lcom/flurry/org/apache/avro/io/parsing/Symbol$Sequence;Ljava/util/List<Lcom/flurry/org/apache/avro/io/parsing/Symbol$Fixup;>;>;"
+    .local p1, "map":Ljava/util/Map;, "Ljava/util/Map<Lcom/flurry/org/apache/avro/io/parsing/Symbol$Sequence;Lcom/flurry/org/apache/avro/io/parsing/Symbol$Sequence;>;"
+    .local p2, "map2":Ljava/util/Map;, "Ljava/util/Map<Lcom/flurry/org/apache/avro/io/parsing/Symbol$Sequence;Ljava/util/List<Lcom/flurry/org/apache/avro/io/parsing/Symbol$Fixup;>;>;"
     new-instance v0, Lcom/flurry/org/apache/avro/io/parsing/Symbol$ResolvingAction;
 
     iget-object v1, p0, Lcom/flurry/org/apache/avro/io/parsing/Symbol$ResolvingAction;->writer:Lcom/flurry/org/apache/avro/io/parsing/Symbol;
@@ -105,8 +103,8 @@
 
 .method public bridge synthetic flatten(Ljava/util/Map;Ljava/util/Map;)Lcom/flurry/org/apache/avro/io/parsing/Symbol;
     .locals 1
-    .parameter "x0"
-    .parameter "x1"
+    .param p1, "x0"    # Ljava/util/Map;
+    .param p2, "x1"    # Ljava/util/Map;
 
     .prologue
     .line 423

@@ -193,7 +193,7 @@
 
 .method static synthetic access$300(Lcom/tapjoy/TapjoyVideoView;)Z
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/tapjoy/TapjoyVideoView;
 
     .prologue
     .line 36
@@ -204,8 +204,8 @@
 
 .method static synthetic access$302(Lcom/tapjoy/TapjoyVideoView;Z)Z
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
+    .param p0, "x0"    # Lcom/tapjoy/TapjoyVideoView;
+    .param p1, "x1"    # Z
 
     .prologue
     .line 36
@@ -216,7 +216,7 @@
 
 .method static synthetic access$400(Lcom/tapjoy/TapjoyVideoView;)I
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/tapjoy/TapjoyVideoView;
 
     .prologue
     .line 36
@@ -229,7 +229,7 @@
 
 .method static synthetic access$500(Lcom/tapjoy/TapjoyVideoView;)Landroid/widget/TextView;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/tapjoy/TapjoyVideoView;
 
     .prologue
     .line 36
@@ -240,7 +240,7 @@
 
 .method static synthetic access$600(Lcom/tapjoy/TapjoyVideoView;)I
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/tapjoy/TapjoyVideoView;
 
     .prologue
     .line 36
@@ -251,7 +251,7 @@
 
 .method static synthetic access$700(Lcom/tapjoy/TapjoyVideoView;)Landroid/widget/VideoView;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/tapjoy/TapjoyVideoView;
 
     .prologue
     .line 36
@@ -262,8 +262,8 @@
 
 .method static synthetic access$802(Lcom/tapjoy/TapjoyVideoView;Z)Z
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
+    .param p0, "x0"    # Lcom/tapjoy/TapjoyVideoView;
+    .param p1, "x1"    # Z
 
     .prologue
     .line 36
@@ -274,8 +274,8 @@
 
 .method static synthetic access$900(Lcom/tapjoy/TapjoyVideoView;Z)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
+    .param p0, "x0"    # Lcom/tapjoy/TapjoyVideoView;
+    .param p1, "x1"    # Z
 
     .prologue
     .line 36
@@ -286,10 +286,10 @@
 
 .method private finishWithResult(Z)V
     .locals 5
-    .parameter "result"
+    .param p1, "result"    # Z
 
     .prologue
-    const/high16 v3, 0x447a
+    const/high16 v3, 0x447a0000
 
     const-string v4, "callback_id"
 
@@ -299,7 +299,7 @@
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
     .line 448
-    .local v0, returnIntent:Landroid/content/Intent;
+    .local v0, "returnIntent":Landroid/content/Intent;
     const-string v1, "result"
 
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
@@ -391,7 +391,7 @@
     div-int/lit16 v0, v1, 0x3e8
 
     .line 465
-    .local v0, timeRemaining:I
+    .local v0, "timeRemaining":I
     if-gez v0, :cond_0
 
     .line 466
@@ -422,7 +422,7 @@
     .line 295
     iget-object v3, p0, Lcom/tapjoy/TapjoyVideoView;->relativeLayout:Landroid/widget/RelativeLayout;
 
-    const/high16 v4, -0x100
+    const/high16 v4, -0x1000000
 
     invoke-virtual {v3, v4}, Landroid/widget/RelativeLayout;->setBackgroundColor(I)V
 
@@ -468,7 +468,7 @@
     invoke-direct {v0, v5, v5}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
     .line 311
-    .local v0, imageParams:Landroid/widget/RelativeLayout$LayoutParams;
+    .local v0, "imageParams":Landroid/widget/RelativeLayout$LayoutParams;
     invoke-virtual {v0, v8}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
 
     .line 312
@@ -551,7 +551,7 @@
     invoke-direct {v1, v5, v5}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
     .line 335
-    .local v1, layoutParams:Landroid/widget/RelativeLayout$LayoutParams;
+    .local v1, "layoutParams":Landroid/widget/RelativeLayout$LayoutParams;
     const/16 v3, 0xd
 
     invoke-virtual {v1, v3}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
@@ -659,7 +659,7 @@
     invoke-direct {v2, v5, v5}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
     .line 351
-    .local v2, textParams:Landroid/widget/RelativeLayout$LayoutParams;
+    .local v2, "textParams":Landroid/widget/RelativeLayout$LayoutParams;
     invoke-virtual {v2, v8}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
 
     .line 352
@@ -668,9 +668,9 @@
     invoke-virtual {v3, v2}, Landroid/widget/TextView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 355
-    .end local v0           #imageParams:Landroid/widget/RelativeLayout$LayoutParams;
-    .end local v1           #layoutParams:Landroid/widget/RelativeLayout$LayoutParams;
-    .end local v2           #textParams:Landroid/widget/RelativeLayout$LayoutParams;
+    .end local v0    # "imageParams":Landroid/widget/RelativeLayout$LayoutParams;
+    .end local v1    # "layoutParams":Landroid/widget/RelativeLayout$LayoutParams;
+    .end local v2    # "textParams":Landroid/widget/RelativeLayout$LayoutParams;
     :cond_1
     invoke-direct {p0}, Lcom/tapjoy/TapjoyVideoView;->startVideo()V
 
@@ -699,7 +699,7 @@
     return-void
 
     .line 330
-    .restart local v0       #imageParams:Landroid/widget/RelativeLayout$LayoutParams;
+    .restart local v0    # "imageParams":Landroid/widget/RelativeLayout$LayoutParams;
     :cond_2
     const-string v3, "VideoView"
 
@@ -762,7 +762,7 @@
     invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
     .line 372
-    .local v0, intent:Landroid/content/Intent;
+    .local v0, "intent":Landroid/content/Intent;
     const-string v1, "view_type"
 
     const/4 v2, 0x4
@@ -909,9 +909,9 @@
 # virtual methods
 .method protected onActivityResult(IILandroid/content/Intent;)V
     .locals 5
-    .parameter "requestCode"
-    .parameter "resultCode"
-    .parameter "data"
+    .param p1, "requestCode"    # I
+    .param p2, "resultCode"    # I
+    .param p3, "data"    # Landroid/content/Intent;
 
     .prologue
     .line 268
@@ -954,7 +954,7 @@
     const/4 v0, 0x0
 
     .line 274
-    .local v0, extras:Landroid/os/Bundle;
+    .local v0, "extras":Landroid/os/Bundle;
     if-eqz p3, :cond_0
 
     .line 275
@@ -975,7 +975,7 @@
     move-object v1, v2
 
     .line 280
-    .local v1, result:Ljava/lang/String;
+    .local v1, "result":Ljava/lang/String;
     :goto_0
     if-eqz v1, :cond_1
 
@@ -1005,7 +1005,7 @@
     return-void
 
     .line 277
-    .end local v1           #result:Ljava/lang/String;
+    .end local v1    # "result":Ljava/lang/String;
     :cond_3
     const/4 v2, 0x0
 
@@ -1014,7 +1014,7 @@
     goto :goto_0
 
     .line 286
-    .restart local v1       #result:Ljava/lang/String;
+    .restart local v1    # "result":Ljava/lang/String;
     :cond_4
     const-string v2, "tjvideo"
 
@@ -1032,7 +1032,7 @@
 
 .method public onCompletion(Landroid/media/MediaPlayer;)V
     .locals 2
-    .parameter "mp"
+    .param p1, "mp"    # Landroid/media/MediaPlayer;
 
     .prologue
     .line 531
@@ -1092,7 +1092,7 @@
 
 .method protected onCreate(Landroid/os/Bundle;)V
     .locals 11
-    .parameter "savedInstanceState"
+    .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
     const/4 v10, -0x1
@@ -1157,7 +1157,7 @@
     move-result-object v2
 
     .line 103
-    .local v2, extras:Landroid/os/Bundle;
+    .local v2, "extras":Landroid/os/Bundle;
     if-eqz v2, :cond_2
 
     .line 105
@@ -1397,7 +1397,7 @@
     invoke-direct {v3, v10, v10}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
     .line 160
-    .local v3, params:Landroid/widget/RelativeLayout$LayoutParams;
+    .local v3, "params":Landroid/widget/RelativeLayout$LayoutParams;
     iget-object v4, p0, Lcom/tapjoy/TapjoyVideoView;->relativeLayout:Landroid/widget/RelativeLayout;
 
     invoke-virtual {v4, v3}, Landroid/widget/RelativeLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
@@ -1418,13 +1418,13 @@
     invoke-direct {v1, p0}, Lcom/tapjoy/TapjoyDisplayMetricsUtil;-><init>(Landroid/content/Context;)V
 
     .line 168
-    .local v1, displayMetricsUtil:Lcom/tapjoy/TapjoyDisplayMetricsUtil;
+    .local v1, "displayMetricsUtil":Lcom/tapjoy/TapjoyDisplayMetricsUtil;
     invoke-virtual {v1}, Lcom/tapjoy/TapjoyDisplayMetricsUtil;->getScreenLayoutSize()I
 
     move-result v0
 
     .line 170
-    .local v0, deviceScreenLayoutSize:I
+    .local v0, "deviceScreenLayoutSize":I
     const-string v4, "VideoView"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -1458,8 +1458,8 @@
     sput v4, Lcom/tapjoy/TapjoyVideoView;->textSize:I
 
     .line 183
-    .end local v0           #deviceScreenLayoutSize:I
-    .end local v1           #displayMetricsUtil:Lcom/tapjoy/TapjoyDisplayMetricsUtil;
+    .end local v0    # "deviceScreenLayoutSize":I
+    .end local v1    # "displayMetricsUtil":Lcom/tapjoy/TapjoyDisplayMetricsUtil;
     :cond_7
     new-instance v4, Lcom/tapjoy/TapjoyVideoView$TapjoyVideoBroadcastReceiver;
 
@@ -1496,7 +1496,7 @@
     goto/16 :goto_0
 
     .line 148
-    .end local v3           #params:Landroid/widget/RelativeLayout$LayoutParams;
+    .end local v3    # "params":Landroid/widget/RelativeLayout$LayoutParams;
     :cond_8
     iget-object v4, p0, Lcom/tapjoy/TapjoyVideoView;->videoURL:Ljava/lang/String;
 
@@ -1538,7 +1538,7 @@
 
 .method protected onCreateDialog(I)Landroid/app/Dialog;
     .locals 4
-    .parameter "id"
+    .param p1, "id"    # I
 
     .prologue
     const/4 v3, 0x1
@@ -1737,9 +1737,9 @@
 
 .method public onError(Landroid/media/MediaPlayer;II)Z
     .locals 4
-    .parameter "mp"
-    .parameter "what"
-    .parameter "extra"
+    .param p1, "mp"    # Landroid/media/MediaPlayer;
+    .param p2, "what"    # I
+    .param p3, "extra"    # I
 
     .prologue
     const/4 v3, 0x1
@@ -1820,8 +1820,8 @@
 
 .method public onKeyDown(ILandroid/view/KeyEvent;)Z
     .locals 5
-    .parameter "keyCode"
-    .parameter "event"
+    .param p1, "keyCode"    # I
+    .param p2, "event"    # Landroid/view/KeyEvent;
 
     .prologue
     const/4 v3, 0x1
@@ -2094,7 +2094,7 @@
 
 .method public onPrepared(Landroid/media/MediaPlayer;)V
     .locals 2
-    .parameter "mp"
+    .param p1, "mp"    # Landroid/media/MediaPlayer;
 
     .prologue
     .line 502
@@ -2196,7 +2196,7 @@
 
 .method protected onSaveInstanceState(Landroid/os/Bundle;)V
     .locals 3
-    .parameter "outState"
+    .param p1, "outState"    # Landroid/os/Bundle;
 
     .prologue
     const-string v2, "VideoView"
@@ -2268,7 +2268,7 @@
 
 .method public onWindowFocusChanged(Z)V
     .locals 2
-    .parameter "hasFocus"
+    .param p1, "hasFocus"    # Z
 
     .prologue
     .line 260

@@ -10,7 +10,6 @@
 # direct methods
 .method synthetic constructor <init>(Lcom/flurry/android/cl;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 134
@@ -23,8 +22,6 @@
 
 .method private constructor <init>(Lcom/flurry/android/cl;B)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 134
@@ -73,9 +70,6 @@
 
 .method public final onShowCustomView(Landroid/view/View;ILandroid/webkit/WebChromeClient$CustomViewCallback;)V
     .locals 3
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 150
@@ -116,8 +110,6 @@
 
 .method public final onShowCustomView(Landroid/view/View;Landroid/webkit/WebChromeClient$CustomViewCallback;)V
     .locals 4
-    .parameter
-    .parameter
 
     .prologue
     .line 138

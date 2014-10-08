@@ -203,7 +203,6 @@
 
 .method public final a(Ljava/lang/String;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 106

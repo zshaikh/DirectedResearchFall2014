@@ -34,8 +34,8 @@
 # direct methods
 .method public constructor <init>(Landroid/app/Activity;Lcom/facebook/Session$StatusCallback;)V
     .locals 2
-    .parameter "activity"
-    .parameter "callback"
+    .param p1, "activity"    # Landroid/app/Activity;
+    .param p2, "callback"    # Lcom/facebook/Session$StatusCallback;
 
     .prologue
     .line 65
@@ -82,7 +82,6 @@
 
 .method static synthetic access$0(Lcom/facebook/UiLifecycleHelper;)Lcom/facebook/Session$StatusCallback;
     .locals 1
-    .parameter
 
     .prologue
     .line 51
@@ -93,7 +92,7 @@
 
 .method private cancelPendingAppCall(Lcom/facebook/widget/FacebookDialog$Callback;)V
     .locals 6
-    .parameter "facebookDialogCallback"
+    .param p1, "facebookDialogCallback"    # Lcom/facebook/widget/FacebookDialog$Callback;
 
     .prologue
     const-string v5, "com.facebook.platform.protocol.PROTOCOL_VERSION"
@@ -113,13 +112,13 @@
     move-result-object v1
 
     .line 295
-    .local v1, pendingIntent:Landroid/content/Intent;
+    .local v1, "pendingIntent":Landroid/content/Intent;
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
     .line 296
-    .local v0, cancelIntent:Landroid/content/Intent;
+    .local v0, "cancelIntent":Landroid/content/Intent;
     const-string v2, "com.facebook.platform.protocol.CALL_ID"
 
     .line 297
@@ -183,8 +182,8 @@
     invoke-static {v2, v3, v4, v0, p1}, Lcom/facebook/widget/FacebookDialog;->handleActivityResult(Landroid/content/Context;Lcom/facebook/widget/FacebookDialog$PendingCall;ILandroid/content/Intent;Lcom/facebook/widget/FacebookDialog$Callback;)Z
 
     .line 307
-    .end local v0           #cancelIntent:Landroid/content/Intent;
-    .end local v1           #pendingIntent:Landroid/content/Intent;
+    .end local v0    # "cancelIntent":Landroid/content/Intent;
+    .end local v1    # "pendingIntent":Landroid/content/Intent;
     :cond_0
     const/4 v2, 0x0
 
@@ -196,10 +195,10 @@
 
 .method private handleFacebookDialogActivityResult(IILandroid/content/Intent;Lcom/facebook/widget/FacebookDialog$Callback;)Z
     .locals 5
-    .parameter "requestCode"
-    .parameter "resultCode"
-    .parameter "data"
-    .parameter "facebookDialogCallback"
+    .param p1, "requestCode"    # I
+    .param p2, "resultCode"    # I
+    .param p3, "data"    # Landroid/content/Intent;
+    .param p4, "facebookDialogCallback"    # Lcom/facebook/widget/FacebookDialog$Callback;
 
     .prologue
     const/4 v4, 0x1
@@ -246,11 +245,11 @@
     move-result-object v1
 
     .line 268
-    .local v1, callIdString:Ljava/lang/String;
+    .local v1, "callIdString":Ljava/lang/String;
     const/4 v0, 0x0
 
     .line 269
-    .local v0, callId:Ljava/util/UUID;
+    .local v0, "callId":Ljava/util/UUID;
     if-eqz v1, :cond_3
 
     .line 271
@@ -321,7 +320,7 @@
     move-result-object v0
 
     .line 217
-    .local v0, session:Lcom/facebook/Session;
+    .local v0, "session":Lcom/facebook/Session;
     if-nez v0, :cond_0
 
     .line 218
@@ -373,9 +372,9 @@
 
 .method public onActivityResult(IILandroid/content/Intent;)V
     .locals 1
-    .parameter "requestCode"
-    .parameter "resultCode"
-    .parameter "data"
+    .param p1, "requestCode"    # I
+    .param p2, "resultCode"    # I
+    .param p3, "data"    # Landroid/content/Intent;
 
     .prologue
     .line 128
@@ -389,10 +388,10 @@
 
 .method public onActivityResult(IILandroid/content/Intent;Lcom/facebook/widget/FacebookDialog$Callback;)V
     .locals 2
-    .parameter "requestCode"
-    .parameter "resultCode"
-    .parameter "data"
-    .parameter "facebookDialogCallback"
+    .param p1, "requestCode"    # I
+    .param p2, "resultCode"    # I
+    .param p3, "data"    # Landroid/content/Intent;
+    .param p4, "facebookDialogCallback"    # Lcom/facebook/widget/FacebookDialog$Callback;
 
     .prologue
     .line 142
@@ -401,7 +400,7 @@
     move-result-object v0
 
     .line 143
-    .local v0, session:Lcom/facebook/Session;
+    .local v0, "session":Lcom/facebook/Session;
     if-eqz v0, :cond_0
 
     .line 144
@@ -419,7 +418,7 @@
 
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 4
-    .parameter "savedInstanceState"
+    .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
     .line 81
@@ -428,7 +427,7 @@
     move-result-object v0
 
     .line 82
-    .local v0, session:Lcom/facebook/Session;
+    .local v0, "session":Lcom/facebook/Session;
     if-nez v0, :cond_2
 
     .line 83
@@ -452,13 +451,13 @@
     .line 87
     new-instance v0, Lcom/facebook/Session;
 
-    .end local v0           #session:Lcom/facebook/Session;
+    .end local v0    # "session":Lcom/facebook/Session;
     iget-object v1, p0, Lcom/facebook/UiLifecycleHelper;->activity:Landroid/app/Activity;
 
     invoke-direct {v0, v1}, Lcom/facebook/Session;-><init>(Landroid/content/Context;)V
 
     .line 89
-    .restart local v0       #session:Lcom/facebook/Session;
+    .restart local v0    # "session":Lcom/facebook/Session;
     :cond_1
     invoke-static {v0}, Lcom/facebook/Session;->setActiveSession(Lcom/facebook/Session;)V
 
@@ -512,7 +511,7 @@
     move-result-object v0
 
     .line 169
-    .local v0, session:Lcom/facebook/Session;
+    .local v0, "session":Lcom/facebook/Session;
     if-eqz v0, :cond_0
 
     .line 170
@@ -521,7 +520,7 @@
     invoke-virtual {v0, v1}, Lcom/facebook/Session;->removeCallback(Lcom/facebook/Session$StatusCallback;)V
 
     .line 173
-    .end local v0           #session:Lcom/facebook/Session;
+    .end local v0    # "session":Lcom/facebook/Session;
     :cond_0
     return-void
 .end method
@@ -536,7 +535,7 @@
     move-result-object v1
 
     .line 101
-    .local v1, session:Lcom/facebook/Session;
+    .local v1, "session":Lcom/facebook/Session;
     if-eqz v1, :cond_1
 
     .line 102
@@ -575,7 +574,7 @@
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
     .line 112
-    .local v0, filter:Landroid/content/IntentFilter;
+    .local v0, "filter":Landroid/content/IntentFilter;
     const-string v2, "com.facebook.sdk.ACTIVE_SESSION_SET"
 
     invoke-virtual {v0, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
@@ -598,7 +597,7 @@
 
 .method public onSaveInstanceState(Landroid/os/Bundle;)V
     .locals 2
-    .parameter "outState"
+    .param p1, "outState"    # Landroid/os/Bundle;
 
     .prologue
     .line 156
@@ -632,7 +631,7 @@
 
 .method public trackPendingDialogCall(Lcom/facebook/widget/FacebookDialog$PendingCall;)V
     .locals 2
-    .parameter "pendingCall"
+    .param p1, "pendingCall"    # Lcom/facebook/widget/FacebookDialog$PendingCall;
 
     .prologue
     .line 196

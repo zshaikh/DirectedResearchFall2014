@@ -21,7 +21,6 @@
 # direct methods
 .method private constructor <init>(Lcom/flurry/org/apache/avro/io/DirectBinaryDecoder;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 40
@@ -34,8 +33,8 @@
 
 .method synthetic constructor <init>(Lcom/flurry/org/apache/avro/io/DirectBinaryDecoder;Lcom/flurry/org/apache/avro/io/DirectBinaryDecoder$1;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
+    .param p1, "x0"    # Lcom/flurry/org/apache/avro/io/DirectBinaryDecoder;
+    .param p2, "x1"    # Lcom/flurry/org/apache/avro/io/DirectBinaryDecoder$1;
 
     .prologue
     .line 40
@@ -48,8 +47,8 @@
 # virtual methods
 .method public read(Ljava/nio/ByteBuffer;I)Ljava/nio/ByteBuffer;
     .locals 4
-    .parameter "old"
-    .parameter "length"
+    .param p1, "old"    # Ljava/nio/ByteBuffer;
+    .param p2, "length"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -70,7 +69,7 @@
     move-object v0, p1
 
     .line 45
-    .local v0, result:Ljava/nio/ByteBuffer;
+    .local v0, "result":Ljava/nio/ByteBuffer;
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->clear()Ljava/nio/Buffer;
 
     .line 49
@@ -94,12 +93,12 @@
     return-object v0
 
     .line 47
-    .end local v0           #result:Ljava/nio/ByteBuffer;
+    .end local v0    # "result":Ljava/nio/ByteBuffer;
     :cond_0
     invoke-static {p2}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
 
     move-result-object v0
 
-    .restart local v0       #result:Ljava/nio/ByteBuffer;
+    .restart local v0    # "result":Ljava/nio/ByteBuffer;
     goto :goto_0
 .end method

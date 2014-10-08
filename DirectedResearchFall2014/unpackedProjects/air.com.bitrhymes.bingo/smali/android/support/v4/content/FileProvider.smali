@@ -17,9 +17,9 @@
 
 .field private static final ATTR_PATH:Ljava/lang/String; = "path"
 
-.field private static final COLUMNS:[Ljava/lang/String; = null
+.field private static final COLUMNS:[Ljava/lang/String;
 
-.field private static final DEVICE_ROOT:Ljava/io/File; = null
+.field private static final DEVICE_ROOT:Ljava/io/File;
 
 .field private static final META_DATA_FILE_PROVIDER_PATHS:Ljava/lang/String; = "android.support.FILE_PROVIDER_PATHS"
 
@@ -104,35 +104,35 @@
 
 .method private static varargs buildPath(Ljava/io/File;[Ljava/lang/String;)Ljava/io/File;
     .locals 6
-    .parameter "base"
-    .parameter "segments"
+    .param p0, "base"    # Ljava/io/File;
+    .param p1, "segments"    # [Ljava/lang/String;
 
     .prologue
     .line 436
     move-object v1, p0
 
     .line 437
-    .local v1, cur:Ljava/io/File;
+    .local v1, "cur":Ljava/io/File;
     move-object v0, p1
 
-    .local v0, arr$:[Ljava/lang/String;
+    .local v0, "arr$":[Ljava/lang/String;
     array-length v4, v0
 
-    .local v4, len$:I
+    .local v4, "len$":I
     const/4 v3, 0x0
 
-    .local v3, i$:I
+    .local v3, "i$":I
     move-object v2, v1
 
-    .end local v1           #cur:Ljava/io/File;
-    .local v2, cur:Ljava/io/File;
+    .end local v1    # "cur":Ljava/io/File;
+    .local v2, "cur":Ljava/io/File;
     :goto_0
     if-ge v3, v4, :cond_0
 
     aget-object v5, v0, v3
 
     .line 438
-    .local v5, segment:Ljava/lang/String;
+    .local v5, "segment":Ljava/lang/String;
     if-eqz v5, :cond_1
 
     .line 439
@@ -141,35 +141,35 @@
     invoke-direct {v1, v2, v5}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
     .line 437
-    .end local v2           #cur:Ljava/io/File;
-    .restart local v1       #cur:Ljava/io/File;
+    .end local v2    # "cur":Ljava/io/File;
+    .restart local v1    # "cur":Ljava/io/File;
     :goto_1
     add-int/lit8 v3, v3, 0x1
 
     move-object v2, v1
 
-    .end local v1           #cur:Ljava/io/File;
-    .restart local v2       #cur:Ljava/io/File;
+    .end local v1    # "cur":Ljava/io/File;
+    .restart local v2    # "cur":Ljava/io/File;
     goto :goto_0
 
     .line 442
-    .end local v5           #segment:Ljava/lang/String;
+    .end local v5    # "segment":Ljava/lang/String;
     :cond_0
     return-object v2
 
-    .restart local v5       #segment:Ljava/lang/String;
+    .restart local v5    # "segment":Ljava/lang/String;
     :cond_1
     move-object v1, v2
 
-    .end local v2           #cur:Ljava/io/File;
-    .restart local v1       #cur:Ljava/io/File;
+    .end local v2    # "cur":Ljava/io/File;
+    .restart local v1    # "cur":Ljava/io/File;
     goto :goto_1
 .end method
 
 .method private static copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
     .locals 2
-    .parameter "original"
-    .parameter "newLength"
+    .param p0, "original"    # [Ljava/lang/Object;
+    .param p1, "newLength"    # I
 
     .prologue
     const/4 v1, 0x0
@@ -178,7 +178,7 @@
     new-array v0, p1, [Ljava/lang/Object;
 
     .line 453
-    .local v0, result:[Ljava/lang/Object;
+    .local v0, "result":[Ljava/lang/Object;
     invoke-static {p0, v1, v0, v1, p1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
     .line 454
@@ -187,8 +187,8 @@
 
 .method private static copyOf([Ljava/lang/String;I)[Ljava/lang/String;
     .locals 2
-    .parameter "original"
-    .parameter "newLength"
+    .param p0, "original"    # [Ljava/lang/String;
+    .param p1, "newLength"    # I
 
     .prologue
     const/4 v1, 0x0
@@ -197,7 +197,7 @@
     new-array v0, p1, [Ljava/lang/String;
 
     .line 447
-    .local v0, result:[Ljava/lang/String;
+    .local v0, "result":[Ljava/lang/String;
     invoke-static {p0, v1, v0, v1, p1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
     .line 448
@@ -206,8 +206,8 @@
 
 .method private static getPathStrategy(Landroid/content/Context;Ljava/lang/String;)Landroid/support/v4/content/FileProvider$PathStrategy;
     .locals 5
-    .parameter "context"
-    .parameter "authority"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "authority"    # Ljava/lang/String;
 
     .prologue
     const-string v2, "Failed to parse android.support.FILE_PROVIDER_PATHS meta-data"
@@ -230,16 +230,16 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 215
-    .local v1, strat:Landroid/support/v4/content/FileProvider$PathStrategy;
+    .local v1, "strat":Landroid/support/v4/content/FileProvider$PathStrategy;
     if-nez v1, :cond_0
 
     .line 217
     :try_start_1
     invoke-static {p0, p1}, Landroid/support/v4/content/FileProvider;->parsePathStrategy(Landroid/content/Context;Ljava/lang/String;)Landroid/support/v4/content/FileProvider$PathStrategy;
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
     .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_1 .. :try_end_1} :catch_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     move-result-object v1
 
@@ -261,7 +261,7 @@
     move-exception v0
 
     .line 219
-    .local v0, e:Ljava/io/IOException;
+    .local v0, "e":Ljava/io/IOException;
     new-instance v3, Ljava/lang/IllegalArgumentException;
 
     const-string v4, "Failed to parse android.support.FILE_PROVIDER_PATHS meta-data"
@@ -271,8 +271,8 @@
     throw v3
 
     .line 227
-    .end local v0           #e:Ljava/io/IOException;
-    .end local v1           #strat:Landroid/support/v4/content/FileProvider$PathStrategy;
+    .end local v0    # "e":Ljava/io/IOException;
+    .end local v1    # "strat":Landroid/support/v4/content/FileProvider$PathStrategy;
     :catchall_0
     move-exception v3
 
@@ -283,12 +283,12 @@
     throw v3
 
     .line 221
-    .restart local v1       #strat:Landroid/support/v4/content/FileProvider$PathStrategy;
+    .restart local v1    # "strat":Landroid/support/v4/content/FileProvider$PathStrategy;
     :catch_1
     move-exception v0
 
     .line 222
-    .local v0, e:Lorg/xmlpull/v1/XmlPullParserException;
+    .local v0, "e":Lorg/xmlpull/v1/XmlPullParserException;
     :try_start_3
     new-instance v3, Ljava/lang/IllegalArgumentException;
 
@@ -303,9 +303,9 @@
 
 .method public static getUriForFile(Landroid/content/Context;Ljava/lang/String;Ljava/io/File;)Landroid/net/Uri;
     .locals 2
-    .parameter "context"
-    .parameter "authority"
-    .parameter "file"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "authority"    # Ljava/lang/String;
+    .param p2, "file"    # Ljava/io/File;
 
     .prologue
     .line 130
@@ -314,7 +314,7 @@
     move-result-object v0
 
     .line 131
-    .local v0, strategy:Landroid/support/v4/content/FileProvider$PathStrategy;
+    .local v0, "strategy":Landroid/support/v4/content/FileProvider$PathStrategy;
     invoke-interface {v0, p2}, Landroid/support/v4/content/FileProvider$PathStrategy;->getUriForFile(Ljava/io/File;)Landroid/net/Uri;
 
     move-result-object v1
@@ -324,7 +324,7 @@
 
 .method private static modeToMode(Ljava/lang/String;)I
     .locals 4
-    .parameter "mode"
+    .param p0, "mode"    # Ljava/lang/String;
 
     .prologue
     .line 412
@@ -337,15 +337,15 @@
     if-eqz v1, :cond_0
 
     .line 413
-    const/high16 v0, 0x1000
+    const/high16 v0, 0x10000000
 
     .line 432
-    .local v0, modeBits:I
+    .local v0, "modeBits":I
     :goto_0
     return v0
 
     .line 414
-    .end local v0           #modeBits:I
+    .end local v0    # "modeBits":I
     :cond_0
     const-string v1, "w"
 
@@ -365,13 +365,13 @@
 
     .line 415
     :cond_1
-    const/high16 v0, 0x2c00
+    const/high16 v0, 0x2c000000
 
-    .restart local v0       #modeBits:I
+    .restart local v0    # "modeBits":I
     goto :goto_0
 
     .line 418
-    .end local v0           #modeBits:I
+    .end local v0    # "modeBits":I
     :cond_2
     const-string v1, "wa"
 
@@ -382,13 +382,13 @@
     if-eqz v1, :cond_3
 
     .line 419
-    const/high16 v0, 0x2a00
+    const/high16 v0, 0x2a000000
 
-    .restart local v0       #modeBits:I
+    .restart local v0    # "modeBits":I
     goto :goto_0
 
     .line 422
-    .end local v0           #modeBits:I
+    .end local v0    # "modeBits":I
     :cond_3
     const-string v1, "rw"
 
@@ -399,13 +399,13 @@
     if-eqz v1, :cond_4
 
     .line 423
-    const/high16 v0, 0x3800
+    const/high16 v0, 0x38000000
 
-    .restart local v0       #modeBits:I
+    .restart local v0    # "modeBits":I
     goto :goto_0
 
     .line 425
-    .end local v0           #modeBits:I
+    .end local v0    # "modeBits":I
     :cond_4
     const-string v1, "rwt"
 
@@ -416,13 +416,13 @@
     if-eqz v1, :cond_5
 
     .line 426
-    const/high16 v0, 0x3c00
+    const/high16 v0, 0x3c000000
 
-    .restart local v0       #modeBits:I
+    .restart local v0    # "modeBits":I
     goto :goto_0
 
     .line 430
-    .end local v0           #modeBits:I
+    .end local v0    # "modeBits":I
     :cond_5
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
@@ -451,8 +451,8 @@
 
 .method private static parsePathStrategy(Landroid/content/Context;Ljava/lang/String;)Landroid/support/v4/content/FileProvider$PathStrategy;
     .locals 13
-    .parameter "context"
-    .parameter "authority"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "authority"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -473,7 +473,7 @@
     invoke-direct {v4, p1}, Landroid/support/v4/content/FileProvider$SimplePathStrategy;-><init>(Ljava/lang/String;)V
 
     .line 241
-    .local v4, strat:Landroid/support/v4/content/FileProvider$SimplePathStrategy;
+    .local v4, "strat":Landroid/support/v4/content/FileProvider$SimplePathStrategy;
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v8
@@ -485,7 +485,7 @@
     move-result-object v1
 
     .line 243
-    .local v1, info:Landroid/content/pm/ProviderInfo;
+    .local v1, "info":Landroid/content/pm/ProviderInfo;
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v8
@@ -497,7 +497,7 @@
     move-result-object v0
 
     .line 245
-    .local v0, in:Landroid/content/res/XmlResourceParser;
+    .local v0, "in":Landroid/content/res/XmlResourceParser;
     if-nez v0, :cond_0
 
     .line 246
@@ -516,7 +516,7 @@
 
     move-result v7
 
-    .local v7, type:I
+    .local v7, "type":I
     if-eq v7, v10, :cond_5
 
     .line 252
@@ -530,7 +530,7 @@
     move-result-object v5
 
     .line 255
-    .local v5, tag:Ljava/lang/String;
+    .local v5, "tag":Ljava/lang/String;
     const-string v8, "name"
 
     invoke-interface {v0, v12, v8}, Landroid/content/res/XmlResourceParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
@@ -538,7 +538,7 @@
     move-result-object v2
 
     .line 256
-    .local v2, name:Ljava/lang/String;
+    .local v2, "name":Ljava/lang/String;
     const-string v8, "path"
 
     invoke-interface {v0, v12, v8}, Landroid/content/res/XmlResourceParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
@@ -546,11 +546,11 @@
     move-result-object v3
 
     .line 258
-    .local v3, path:Ljava/lang/String;
+    .local v3, "path":Ljava/lang/String;
     const/4 v6, 0x0
 
     .line 259
-    .local v6, target:Ljava/io/File;
+    .local v6, "target":Ljava/io/File;
     const-string v8, "root-path"
 
     invoke-virtual {v8, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -656,10 +656,10 @@
     goto :goto_1
 
     .line 275
-    .end local v2           #name:Ljava/lang/String;
-    .end local v3           #path:Ljava/lang/String;
-    .end local v5           #tag:Ljava/lang/String;
-    .end local v6           #target:Ljava/io/File;
+    .end local v2    # "name":Ljava/lang/String;
+    .end local v3    # "path":Ljava/lang/String;
+    .end local v5    # "tag":Ljava/lang/String;
+    .end local v6    # "target":Ljava/io/File;
     :cond_5
     return-object v4
 .end method
@@ -668,8 +668,8 @@
 # virtual methods
 .method public attachInfo(Landroid/content/Context;Landroid/content/pm/ProviderInfo;)V
     .locals 2
-    .parameter "context"
-    .parameter "info"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "info"    # Landroid/content/pm/ProviderInfo;
 
     .prologue
     .line 103
@@ -720,9 +720,9 @@
 
 .method public delete(Landroid/net/Uri;Ljava/lang/String;[Ljava/lang/String;)I
     .locals 2
-    .parameter "uri"
-    .parameter "selection"
-    .parameter "selectionArgs"
+    .param p1, "uri"    # Landroid/net/Uri;
+    .param p2, "selection"    # Ljava/lang/String;
+    .param p3, "selectionArgs"    # [Ljava/lang/String;
 
     .prologue
     .line 195
@@ -733,7 +733,7 @@
     move-result-object v0
 
     .line 196
-    .local v0, file:Ljava/io/File;
+    .local v0, "file":Ljava/io/File;
     invoke-virtual {v0}, Ljava/io/File;->delete()Z
 
     move-result v1
@@ -753,7 +753,7 @@
 
 .method public getType(Landroid/net/Uri;)Ljava/lang/String;
     .locals 6
-    .parameter "uri"
+    .param p1, "uri"    # Landroid/net/Uri;
 
     .prologue
     .line 168
@@ -764,7 +764,7 @@
     move-result-object v1
 
     .line 170
-    .local v1, file:Ljava/io/File;
+    .local v1, "file":Ljava/io/File;
     invoke-virtual {v1}, Ljava/io/File;->getName()Ljava/lang/String;
 
     move-result-object v4
@@ -776,7 +776,7 @@
     move-result v2
 
     .line 171
-    .local v2, lastDot:I
+    .local v2, "lastDot":I
     if-ltz v2, :cond_0
 
     .line 172
@@ -791,7 +791,7 @@
     move-result-object v0
 
     .line 173
-    .local v0, extension:Ljava/lang/String;
+    .local v0, "extension":Ljava/lang/String;
     invoke-static {}, Landroid/webkit/MimeTypeMap;->getSingleton()Landroid/webkit/MimeTypeMap;
 
     move-result-object v4
@@ -801,14 +801,14 @@
     move-result-object v3
 
     .line 174
-    .local v3, mime:Ljava/lang/String;
+    .local v3, "mime":Ljava/lang/String;
     if-eqz v3, :cond_0
 
     move-object v4, v3
 
     .line 179
-    .end local v0           #extension:Ljava/lang/String;
-    .end local v3           #mime:Ljava/lang/String;
+    .end local v0    # "extension":Ljava/lang/String;
+    .end local v3    # "mime":Ljava/lang/String;
     :goto_0
     return-object v4
 
@@ -820,8 +820,8 @@
 
 .method public insert(Landroid/net/Uri;Landroid/content/ContentValues;)Landroid/net/Uri;
     .locals 2
-    .parameter "uri"
-    .parameter "values"
+    .param p1, "uri"    # Landroid/net/Uri;
+    .param p2, "values"    # Landroid/content/ContentValues;
 
     .prologue
     .line 184
@@ -846,8 +846,8 @@
 
 .method public openFile(Landroid/net/Uri;Ljava/lang/String;)Landroid/os/ParcelFileDescriptor;
     .locals 3
-    .parameter "uri"
-    .parameter "mode"
+    .param p1, "uri"    # Landroid/net/Uri;
+    .param p2, "mode"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/FileNotFoundException;
@@ -863,13 +863,13 @@
     move-result-object v0
 
     .line 203
-    .local v0, file:Ljava/io/File;
+    .local v0, "file":Ljava/io/File;
     invoke-static {p2}, Landroid/support/v4/content/FileProvider;->modeToMode(Ljava/lang/String;)I
 
     move-result v1
 
     .line 204
-    .local v1, fileMode:I
+    .local v1, "fileMode":I
     invoke-static {v0, v1}, Landroid/os/ParcelFileDescriptor;->open(Ljava/io/File;I)Landroid/os/ParcelFileDescriptor;
 
     move-result-object v2
@@ -879,11 +879,11 @@
 
 .method public query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
     .locals 12
-    .parameter "uri"
-    .parameter "projection"
-    .parameter "selection"
-    .parameter "selectionArgs"
-    .parameter "sortOrder"
+    .param p1, "uri"    # Landroid/net/Uri;
+    .param p2, "projection"    # [Ljava/lang/String;
+    .param p3, "selection"    # Ljava/lang/String;
+    .param p4, "selectionArgs"    # [Ljava/lang/String;
+    .param p5, "sortOrder"    # Ljava/lang/String;
 
     .prologue
     .line 138
@@ -894,7 +894,7 @@
     move-result-object v4
 
     .line 140
-    .local v4, file:Ljava/io/File;
+    .local v4, "file":Ljava/io/File;
     if-nez p2, :cond_0
 
     .line 141
@@ -907,37 +907,37 @@
     new-array v2, v10, [Ljava/lang/String;
 
     .line 145
-    .local v2, cols:[Ljava/lang/String;
+    .local v2, "cols":[Ljava/lang/String;
     array-length v10, p2
 
     new-array v9, v10, [Ljava/lang/Object;
 
     .line 146
-    .local v9, values:[Ljava/lang/Object;
+    .local v9, "values":[Ljava/lang/Object;
     const/4 v5, 0x0
 
     .line 147
-    .local v5, i:I
+    .local v5, "i":I
     move-object v0, p2
 
-    .local v0, arr$:[Ljava/lang/String;
+    .local v0, "arr$":[Ljava/lang/String;
     array-length v8, v0
 
-    .local v8, len$:I
+    .local v8, "len$":I
     const/4 v7, 0x0
 
-    .local v7, i$:I
+    .local v7, "i$":I
     move v6, v5
 
-    .end local v5           #i:I
-    .local v6, i:I
+    .end local v5    # "i":I
+    .local v6, "i":I
     :goto_0
     if-ge v7, v8, :cond_2
 
     aget-object v1, v0, v7
 
     .line 148
-    .local v1, col:Ljava/lang/String;
+    .local v1, "col":Ljava/lang/String;
     const-string v10, "_display_name"
 
     invoke-virtual {v10, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -954,8 +954,8 @@
     .line 150
     add-int/lit8 v5, v6, 0x1
 
-    .end local v6           #i:I
-    .restart local v5       #i:I
+    .end local v6    # "i":I
+    .restart local v5    # "i":I
     invoke-virtual {v4}, Ljava/io/File;->getName()Ljava/lang/String;
 
     move-result-object v10
@@ -968,8 +968,8 @@
 
     move v6, v5
 
-    .end local v5           #i:I
-    .restart local v6       #i:I
+    .end local v5    # "i":I
+    .restart local v6    # "i":I
     goto :goto_0
 
     .line 151
@@ -990,8 +990,8 @@
     .line 153
     add-int/lit8 v5, v6, 0x1
 
-    .end local v6           #i:I
-    .restart local v5       #i:I
+    .end local v6    # "i":I
+    .restart local v5    # "i":I
     invoke-virtual {v4}, Ljava/io/File;->length()J
 
     move-result-wide v10
@@ -1005,9 +1005,9 @@
     goto :goto_1
 
     .line 157
-    .end local v1           #col:Ljava/lang/String;
-    .end local v5           #i:I
-    .restart local v6       #i:I
+    .end local v1    # "col":Ljava/lang/String;
+    .end local v5    # "i":I
+    .restart local v6    # "i":I
     :cond_2
     invoke-static {v2, v6}, Landroid/support/v4/content/FileProvider;->copyOf([Ljava/lang/String;I)[Ljava/lang/String;
 
@@ -1026,28 +1026,28 @@
     invoke-direct {v3, v2, v10}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;I)V
 
     .line 161
-    .local v3, cursor:Landroid/database/MatrixCursor;
+    .local v3, "cursor":Landroid/database/MatrixCursor;
     invoke-virtual {v3, v9}, Landroid/database/MatrixCursor;->addRow([Ljava/lang/Object;)V
 
     .line 162
     return-object v3
 
-    .end local v3           #cursor:Landroid/database/MatrixCursor;
-    .restart local v1       #col:Ljava/lang/String;
+    .end local v3    # "cursor":Landroid/database/MatrixCursor;
+    .restart local v1    # "col":Ljava/lang/String;
     :cond_3
     move v5, v6
 
-    .end local v6           #i:I
-    .restart local v5       #i:I
+    .end local v6    # "i":I
+    .restart local v5    # "i":I
     goto :goto_1
 .end method
 
 .method public update(Landroid/net/Uri;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
     .locals 2
-    .parameter "uri"
-    .parameter "values"
-    .parameter "selection"
-    .parameter "selectionArgs"
+    .param p1, "uri"    # Landroid/net/Uri;
+    .param p2, "values"    # Landroid/content/ContentValues;
+    .param p3, "selection"    # Ljava/lang/String;
+    .param p4, "selectionArgs"    # [Ljava/lang/String;
 
     .prologue
     .line 189

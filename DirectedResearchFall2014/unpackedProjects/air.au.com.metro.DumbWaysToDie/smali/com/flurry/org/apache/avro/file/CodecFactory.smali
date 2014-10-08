@@ -76,8 +76,8 @@
 
 .method public static addCodec(Ljava/lang/String;Lcom/flurry/org/apache/avro/file/CodecFactory;)Lcom/flurry/org/apache/avro/file/CodecFactory;
     .locals 1
-    .parameter "name"
-    .parameter "c"
+    .param p0, "name"    # Ljava/lang/String;
+    .param p1, "c"    # Lcom/flurry/org/apache/avro/file/CodecFactory;
 
     .prologue
     .line 92
@@ -87,7 +87,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "name":Ljava/lang/String;
     check-cast p0, Lcom/flurry/org/apache/avro/file/CodecFactory;
 
     return-object p0
@@ -95,7 +95,7 @@
 
 .method public static deflateCodec(I)Lcom/flurry/org/apache/avro/file/CodecFactory;
     .locals 1
-    .parameter "compressionLevel"
+    .param p0, "compressionLevel"    # I
 
     .prologue
     .line 47
@@ -108,7 +108,7 @@
 
 .method public static fromString(Ljava/lang/String;)Lcom/flurry/org/apache/avro/file/CodecFactory;
     .locals 4
-    .parameter "s"
+    .param p0, "s"    # Ljava/lang/String;
 
     .prologue
     .line 82
@@ -121,7 +121,7 @@
     check-cast v0, Lcom/flurry/org/apache/avro/file/CodecFactory;
 
     .line 83
-    .local v0, o:Lcom/flurry/org/apache/avro/file/CodecFactory;
+    .local v0, "o":Lcom/flurry/org/apache/avro/file/CodecFactory;
     if-nez v0, :cond_0
 
     .line 84
@@ -191,7 +191,7 @@
     move-result-object v0
 
     .line 98
-    .local v0, instance:Lcom/flurry/org/apache/avro/file/Codec;
+    .local v0, "instance":Lcom/flurry/org/apache/avro/file/Codec;
     invoke-virtual {v0}, Lcom/flurry/org/apache/avro/file/Codec;->toString()Ljava/lang/String;
 
     move-result-object v1

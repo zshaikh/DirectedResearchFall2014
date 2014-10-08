@@ -22,15 +22,15 @@
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 4
-    .parameter "context"
-    .parameter "intent"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
     .line 24
     const-string v1, ""
 
     .line 28
-    .local v1, referrerId:Ljava/lang/String;
+    .local v1, "referrerId":Ljava/lang/String;
     :try_start_0
     const-string v2, "referrer"
 
@@ -54,7 +54,7 @@
     move-object v0, v2
 
     .line 32
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v2, "[BURefReceiver]"
 
     const-string v3, "Failed to parse referrer."

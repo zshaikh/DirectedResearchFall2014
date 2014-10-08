@@ -57,7 +57,7 @@
 # virtual methods
 .method public declared-synchronized intern(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
-    .parameter "input"
+    .param p1, "input"    # Ljava/lang/String;
 
     .prologue
     .line 39
@@ -71,7 +71,7 @@
     check-cast v0, Ljava/lang/String;
 
     .line 40
-    .local v0, result:Ljava/lang/String;
+    .local v0, "result":Ljava/lang/String;
     if-nez v0, :cond_0
 
     .line 41
@@ -91,7 +91,7 @@
     return-object v0
 
     .line 39
-    .end local v0           #result:Ljava/lang/String;
+    .end local v0    # "result":Ljava/lang/String;
     :catchall_0
     move-exception v1
 
@@ -102,7 +102,6 @@
 
 .method protected removeEldestEntry(Ljava/util/Map$Entry;)Z
     .locals 2
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -116,7 +115,7 @@
 
     .prologue
     .line 34
-    .local p1, eldest:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p1, "eldest":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-virtual {p0}, Lcom/flurry/org/codehaus/jackson/util/InternCache;->size()I
 
     move-result v0

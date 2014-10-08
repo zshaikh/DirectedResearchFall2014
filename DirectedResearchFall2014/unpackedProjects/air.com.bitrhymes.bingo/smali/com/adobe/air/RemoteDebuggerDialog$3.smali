@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/adobe/air/RemoteDebuggerDialog;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 91
@@ -39,7 +38,6 @@
 # virtual methods
 .method public onCancel(Landroid/content/DialogInterface;)V
     .locals 3
-    .parameter
 
     .prologue
     .line 94

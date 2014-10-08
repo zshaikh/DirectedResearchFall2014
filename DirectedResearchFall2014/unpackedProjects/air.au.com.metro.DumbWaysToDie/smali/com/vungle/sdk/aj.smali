@@ -39,7 +39,6 @@
 
 .method private constructor <init>(I)V
     .locals 1
-    .parameter
 
     .prologue
     .line 80
@@ -53,8 +52,6 @@
 
 .method private constructor <init>(ILjava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 83
@@ -72,7 +69,6 @@
 
 .method static a(I)Lcom/vungle/sdk/aj;
     .locals 1
-    .parameter
 
     .prologue
     .line 35
@@ -87,8 +83,6 @@
 
 .method static a(ILjava/lang/String;)Lcom/vungle/sdk/aj;
     .locals 4
-    .parameter
-    .parameter
 
     .prologue
     const-string v3, ")"

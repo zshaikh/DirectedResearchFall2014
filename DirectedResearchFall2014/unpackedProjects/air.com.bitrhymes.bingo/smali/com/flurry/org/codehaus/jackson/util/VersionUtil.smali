@@ -38,7 +38,7 @@
 
 .method public static parseVersion(Ljava/lang/String;)Lcom/flurry/org/codehaus/jackson/Version;
     .locals 10
-    .parameter "versionStr"
+    .param p0, "versionStr"    # Ljava/lang/String;
 
     .prologue
     const/4 v9, 0x3
@@ -84,7 +84,7 @@
     move-result-object v2
 
     .line 57
-    .local v2, parts:[Ljava/lang/String;
+    .local v2, "parts":[Ljava/lang/String;
     array-length v5, v2
 
     if-ge v5, v7, :cond_2
@@ -103,7 +103,7 @@
     move-result v0
 
     .line 61
-    .local v0, major:I
+    .local v0, "major":I
     const/4 v5, 0x1
 
     aget-object v5, v2, v5
@@ -113,7 +113,7 @@
     move-result v1
 
     .line 62
-    .local v1, minor:I
+    .local v1, "minor":I
     array-length v5, v2
 
     if-le v5, v7, :cond_3
@@ -127,7 +127,7 @@
     move v3, v5
 
     .line 63
-    .local v3, patch:I
+    .local v3, "patch":I
     :goto_1
     array-length v5, v2
 
@@ -138,7 +138,7 @@
     move-object v4, v5
 
     .line 64
-    .local v4, snapshot:Ljava/lang/String;
+    .local v4, "snapshot":Ljava/lang/String;
     :goto_2
     new-instance v5, Lcom/flurry/org/codehaus/jackson/Version;
 
@@ -146,15 +146,15 @@
 
     goto :goto_0
 
-    .end local v3           #patch:I
-    .end local v4           #snapshot:Ljava/lang/String;
+    .end local v3    # "patch":I
+    .end local v4    # "snapshot":Ljava/lang/String;
     :cond_3
     move v3, v8
 
     .line 62
     goto :goto_1
 
-    .restart local v3       #patch:I
+    .restart local v3    # "patch":I
     :cond_4
     move-object v4, v6
 
@@ -164,7 +164,7 @@
 
 .method protected static parseVersionPart(Ljava/lang/String;)I
     .locals 7
-    .parameter "partStr"
+    .param p0, "partStr"    # Ljava/lang/String;
 
     .prologue
     const/16 v6, 0x30
@@ -180,14 +180,14 @@
     move-result v2
 
     .line 71
-    .local v2, len:I
+    .local v2, "len":I
     const/4 v3, 0x0
 
     .line 72
-    .local v3, number:I
+    .local v3, "number":I
     const/4 v1, 0x0
 
-    .local v1, i:I
+    .local v1, "i":I
     :goto_0
     if-ge v1, v2, :cond_0
 
@@ -197,7 +197,7 @@
     move-result v0
 
     .line 74
-    .local v0, c:C
+    .local v0, "c":C
     const/16 v4, 0x39
 
     if-gt v0, v4, :cond_0
@@ -205,12 +205,12 @@
     if-ge v0, v6, :cond_1
 
     .line 77
-    .end local v0           #c:C
+    .end local v0    # "c":C
     :cond_0
     return v3
 
     .line 75
-    .restart local v0       #c:C
+    .restart local v0    # "c":C
     :cond_1
     mul-int/lit8 v4, v3, 0xa
 
@@ -226,7 +226,6 @@
 
 .method public static versionFor(Ljava/lang/Class;)Lcom/flurry/org/codehaus/jackson/Version;
     .locals 6
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -238,11 +237,11 @@
 
     .prologue
     .line 30
-    .local p0, cls:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p0, "cls":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const/4 v3, 0x0
 
     .line 33
-    .local v3, version:Lcom/flurry/org/codehaus/jackson/Version;
+    .local v3, "version":Lcom/flurry/org/codehaus/jackson/Version;
     :try_start_0
     const-string v4, "VERSION.txt"
 
@@ -253,7 +252,7 @@
     move-result-object v2
 
     .line 34
-    .local v2, in:Ljava/io/InputStream;
+    .local v2, "in":Ljava/io/InputStream;
     if-eqz v2, :cond_0
 
     .line 36
@@ -269,7 +268,7 @@
     invoke-direct {v0, v4}, Ljava/io/BufferedReader;-><init>(Ljava/io/Reader;)V
 
     .line 37
-    .local v0, br:Ljava/io/BufferedReader;
+    .local v0, "br":Ljava/io/BufferedReader;
     invoke-virtual {v0}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
     move-result-object v4
@@ -287,8 +286,8 @@
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
 
     .line 47
-    .end local v0           #br:Ljava/io/BufferedReader;
-    .end local v2           #in:Ljava/io/InputStream;
+    .end local v0    # "br":Ljava/io/BufferedReader;
+    .end local v2    # "in":Ljava/io/InputStream;
     :cond_0
     :goto_0
     if-nez v3, :cond_1
@@ -301,13 +300,13 @@
     return-object v4
 
     .line 41
-    .restart local v0       #br:Ljava/io/BufferedReader;
-    .restart local v2       #in:Ljava/io/InputStream;
+    .restart local v0    # "br":Ljava/io/BufferedReader;
+    .restart local v2    # "in":Ljava/io/InputStream;
     :catch_0
     move-exception v1
 
     .line 42
-    .local v1, e:Ljava/io/IOException;
+    .local v1, "e":Ljava/io/IOException;
     :try_start_3
     new-instance v4, Ljava/lang/RuntimeException;
 
@@ -318,16 +317,16 @@
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_1
 
     .line 46
-    .end local v0           #br:Ljava/io/BufferedReader;
-    .end local v1           #e:Ljava/io/IOException;
-    .end local v2           #in:Ljava/io/InputStream;
+    .end local v0    # "br":Ljava/io/BufferedReader;
+    .end local v1    # "e":Ljava/io/IOException;
+    .end local v2    # "in":Ljava/io/InputStream;
     :catch_1
     move-exception v4
 
     goto :goto_0
 
     .line 39
-    .restart local v2       #in:Ljava/io/InputStream;
+    .restart local v2    # "in":Ljava/io/InputStream;
     :catchall_0
     move-exception v4
 
@@ -346,7 +345,7 @@
     move-exception v1
 
     .line 42
-    .restart local v1       #e:Ljava/io/IOException;
+    .restart local v1    # "e":Ljava/io/IOException;
     new-instance v4, Ljava/lang/RuntimeException;
 
     invoke-direct {v4, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
@@ -355,8 +354,8 @@
     :try_end_5
     .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_1
 
-    .end local v1           #e:Ljava/io/IOException;
-    .end local v2           #in:Ljava/io/InputStream;
+    .end local v1    # "e":Ljava/io/IOException;
+    .end local v2    # "in":Ljava/io/InputStream;
     :cond_1
     move-object v4, v3
 

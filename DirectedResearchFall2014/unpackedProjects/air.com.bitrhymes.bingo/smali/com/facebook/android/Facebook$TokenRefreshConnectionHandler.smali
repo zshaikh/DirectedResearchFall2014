@@ -41,8 +41,8 @@
 # direct methods
 .method constructor <init>(Lcom/facebook/android/Facebook;Lcom/facebook/android/Facebook$TokenRefreshServiceConnection;)V
     .locals 1
-    .parameter "facebook"
-    .parameter "connection"
+    .param p1, "facebook"    # Lcom/facebook/android/Facebook;
+    .param p2, "connection"    # Lcom/facebook/android/Facebook$TokenRefreshServiceConnection;
 
     .prologue
     .line 565
@@ -70,7 +70,7 @@
 # virtual methods
 .method public handleMessage(Landroid/os/Message;)V
     .locals 13
-    .parameter "msg"
+    .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
     .line 573
@@ -83,7 +83,7 @@
     check-cast v5, Lcom/facebook/android/Facebook;
 
     .line 574
-    .local v5, facebook:Lcom/facebook/android/Facebook;
+    .local v5, "facebook":Lcom/facebook/android/Facebook;
     iget-object v9, p0, Lcom/facebook/android/Facebook$TokenRefreshConnectionHandler;->connectionWeakReference:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v9}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -93,7 +93,7 @@
     check-cast v0, Lcom/facebook/android/Facebook$TokenRefreshServiceConnection;
 
     .line 575
-    .local v0, connection:Lcom/facebook/android/Facebook$TokenRefreshServiceConnection;
+    .local v0, "connection":Lcom/facebook/android/Facebook$TokenRefreshServiceConnection;
     if-eqz v5, :cond_0
 
     if-nez v0, :cond_1
@@ -116,7 +116,7 @@
     move-result-object v8
 
     .line 582
-    .local v8, token:Ljava/lang/String;
+    .local v8, "token":Ljava/lang/String;
     invoke-virtual {p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
     move-result-object v9
@@ -132,7 +132,7 @@
     mul-long v3, v9, v11
 
     .line 584
-    .local v3, expiresAtMsecFromEpoch:J
+    .local v3, "expiresAtMsecFromEpoch":J
     if-eqz v8, :cond_4
 
     .line 585
@@ -142,13 +142,13 @@
     invoke-virtual {v5, v3, v4}, Lcom/facebook/android/Facebook;->setAccessExpires(J)V
 
     .line 588
-    #getter for: Lcom/facebook/android/Facebook;->session:Lcom/facebook/Session;
+    # getter for: Lcom/facebook/android/Facebook;->session:Lcom/facebook/Session;
     invoke-static {v5}, Lcom/facebook/android/Facebook;->access$1(Lcom/facebook/android/Facebook;)Lcom/facebook/Session;
 
     move-result-object v6
 
     .line 589
-    .local v6, refreshSession:Lcom/facebook/Session;
+    .local v6, "refreshSession":Lcom/facebook/Session;
     if-eqz v6, :cond_2
 
     .line 592
@@ -176,7 +176,7 @@
     check-cast v7, Landroid/os/Bundle;
 
     .line 600
-    .local v7, resultBundle:Landroid/os/Bundle;
+    .local v7, "resultBundle":Landroid/os/Bundle;
     const-string v9, "expires_in"
 
     invoke-virtual {v7, v9, v3, v4}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
@@ -187,8 +187,8 @@
     invoke-interface {v9, v7}, Lcom/facebook/android/Facebook$ServiceListener;->onComplete(Landroid/os/Bundle;)V
 
     .line 617
-    .end local v6           #refreshSession:Lcom/facebook/Session;
-    .end local v7           #resultBundle:Landroid/os/Bundle;
+    .end local v6    # "refreshSession":Lcom/facebook/Session;
+    .end local v7    # "resultBundle":Landroid/os/Bundle;
     :cond_3
     :goto_1
     iget-object v9, v0, Lcom/facebook/android/Facebook$TokenRefreshServiceConnection;->applicationsContext:Landroid/content/Context;
@@ -215,7 +215,7 @@
     move-result-object v1
 
     .line 607
-    .local v1, error:Ljava/lang/String;
+    .local v1, "error":Ljava/lang/String;
     invoke-virtual {p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
     move-result-object v9
@@ -240,7 +240,7 @@
     move-result v2
 
     .line 609
-    .local v2, errorCode:I
+    .local v2, "errorCode":I
     iget-object v9, v0, Lcom/facebook/android/Facebook$TokenRefreshServiceConnection;->serviceListener:Lcom/facebook/android/Facebook$ServiceListener;
 
     new-instance v10, Lcom/facebook/android/FacebookError;
@@ -254,7 +254,7 @@
     goto :goto_1
 
     .line 611
-    .end local v2           #errorCode:I
+    .end local v2    # "errorCode":I
     :cond_5
     iget-object v9, v0, Lcom/facebook/android/Facebook$TokenRefreshServiceConnection;->serviceListener:Lcom/facebook/android/Facebook$ServiceListener;
 

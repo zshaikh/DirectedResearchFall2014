@@ -30,7 +30,6 @@
 # direct methods
 .method public constructor <init>(Lcom/inmobi/androidsdk/impl/IMNiceInfo;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 245
@@ -51,7 +50,6 @@
 # virtual methods
 .method public handleMessage(Landroid/os/Message;)V
     .locals 6
-    .parameter
 
     .prologue
     .line 250

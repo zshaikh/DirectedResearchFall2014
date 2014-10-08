@@ -75,7 +75,7 @@
     aget-object v0, v2, v4
 
     .line 47
-    .local v0, method:Ljava/lang/reflect/Method;
+    .local v0, "method":Ljava/lang/reflect/Method;
     const-string v5, "executeOnExecutor"
 
     invoke-virtual {v0}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
@@ -94,7 +94,7 @@
     move-result-object v1
 
     .line 49
-    .local v1, parameters:[Ljava/lang/Class;
+    .local v1, "parameters":[Ljava/lang/Class;
     array-length v5, v1
 
     const/4 v6, 0x2
@@ -123,7 +123,7 @@
     goto :goto_1
 
     .line 46
-    .end local v1           #parameters:[Ljava/lang/Class;
+    .end local v1    # "parameters":[Ljava/lang/Class;
     :cond_1
     add-int/lit8 v4, v4, 0x1
 
@@ -132,7 +132,7 @@
 
 .method public constructor <init>(Lcom/facebook/RequestBatch;)V
     .locals 1
-    .parameter "requests"
+    .param p1, "requests"    # Lcom/facebook/RequestBatch;
 
     .prologue
     .line 84
@@ -146,8 +146,8 @@
 
 .method public constructor <init>(Ljava/net/HttpURLConnection;Lcom/facebook/RequestBatch;)V
     .locals 0
-    .parameter "connection"
-    .parameter "requests"
+    .param p1, "connection"    # Ljava/net/HttpURLConnection;
+    .param p2, "requests"    # Lcom/facebook/RequestBatch;
 
     .prologue
     .line 122
@@ -165,8 +165,7 @@
 
 .method public constructor <init>(Ljava/net/HttpURLConnection;Ljava/util/Collection;)V
     .locals 1
-    .parameter "connection"
-    .parameter
+    .param p1, "connection"    # Ljava/net/HttpURLConnection;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -180,7 +179,7 @@
 
     .prologue
     .line 110
-    .local p2, requests:Ljava/util/Collection;,"Ljava/util/Collection<Lcom/facebook/Request;>;"
+    .local p2, "requests":Ljava/util/Collection;, "Ljava/util/Collection<Lcom/facebook/Request;>;"
     new-instance v0, Lcom/facebook/RequestBatch;
 
     invoke-direct {v0, p2}, Lcom/facebook/RequestBatch;-><init>(Ljava/util/Collection;)V
@@ -193,8 +192,8 @@
 
 .method public varargs constructor <init>(Ljava/net/HttpURLConnection;[Lcom/facebook/Request;)V
     .locals 1
-    .parameter "connection"
-    .parameter "requests"
+    .param p1, "connection"    # Ljava/net/HttpURLConnection;
+    .param p2, "requests"    # [Lcom/facebook/Request;
 
     .prologue
     .line 97
@@ -210,7 +209,6 @@
 
 .method public constructor <init>(Ljava/util/Collection;)V
     .locals 2
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -223,7 +221,7 @@
 
     .prologue
     .line 74
-    .local p1, requests:Ljava/util/Collection;,"Ljava/util/Collection<Lcom/facebook/Request;>;"
+    .local p1, "requests":Ljava/util/Collection;, "Ljava/util/Collection<Lcom/facebook/Request;>;"
     const/4 v0, 0x0
 
     new-instance v1, Lcom/facebook/RequestBatch;
@@ -238,7 +236,7 @@
 
 .method public varargs constructor <init>([Lcom/facebook/Request;)V
     .locals 2
-    .parameter "requests"
+    .param p1, "requests"    # [Lcom/facebook/Request;
 
     .prologue
     .line 64
@@ -258,7 +256,6 @@
 # virtual methods
 .method protected bridge varargs synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
-    .parameter
 
     .prologue
     .line 1
@@ -273,7 +270,7 @@
 
 .method protected varargs doInBackground([Ljava/lang/Void;)Ljava/util/List;
     .locals 3
-    .parameter "params"
+    .param p1, "params"    # [Ljava/lang/Void;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "([",
@@ -325,7 +322,7 @@
     move-object v0, v1
 
     .line 169
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     iput-object v0, p0, Lcom/facebook/RequestAsyncTask;->exception:Ljava/lang/Exception;
 
     .line 170
@@ -418,7 +415,6 @@
 
 .method protected bridge synthetic onPostExecute(Ljava/lang/Object;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1
@@ -431,7 +427,6 @@
 
 .method protected onPostExecute(Ljava/util/List;)V
     .locals 5
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -444,7 +439,7 @@
 
     .prologue
     .line 153
-    .local p1, result:Ljava/util/List;,"Ljava/util/List<Lcom/facebook/Response;>;"
+    .local p1, "result":Ljava/util/List;, "Ljava/util/List<Lcom/facebook/Response;>;"
     invoke-super {p0, p1}, Landroid/os/AsyncTask;->onPostExecute(Ljava/lang/Object;)V
 
     .line 155

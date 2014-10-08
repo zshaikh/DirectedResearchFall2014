@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m1/android/NVASpeechKit;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 211
@@ -44,7 +43,7 @@
     .line 215
     iget-object v2, p0, Lcom/fusepowered/m1/android/NVASpeechKit$2;->this$0:Lcom/fusepowered/m1/android/NVASpeechKit;
 
-    #getter for: Lcom/fusepowered/m1/android/NVASpeechKit;->skCurrentRecognizer:Lcom/nuance/nmdp/speechkit/Recognizer;
+    # getter for: Lcom/fusepowered/m1/android/NVASpeechKit;->skCurrentRecognizer:Lcom/nuance/nmdp/speechkit/Recognizer;
     invoke-static {v2}, Lcom/fusepowered/m1/android/NVASpeechKit;->access$000(Lcom/fusepowered/m1/android/NVASpeechKit;)Lcom/nuance/nmdp/speechkit/Recognizer;
 
     move-result-object v2
@@ -54,7 +53,7 @@
     .line 218
     iget-object v2, p0, Lcom/fusepowered/m1/android/NVASpeechKit$2;->this$0:Lcom/fusepowered/m1/android/NVASpeechKit;
 
-    #getter for: Lcom/fusepowered/m1/android/NVASpeechKit;->skCurrentRecognizer:Lcom/nuance/nmdp/speechkit/Recognizer;
+    # getter for: Lcom/fusepowered/m1/android/NVASpeechKit;->skCurrentRecognizer:Lcom/nuance/nmdp/speechkit/Recognizer;
     invoke-static {v2}, Lcom/fusepowered/m1/android/NVASpeechKit;->access$000(Lcom/fusepowered/m1/android/NVASpeechKit;)Lcom/nuance/nmdp/speechkit/Recognizer;
 
     move-result-object v2
@@ -65,13 +64,13 @@
 
     float-to-double v2, v2
 
-    #calls: Lcom/fusepowered/m1/android/NVASpeechKit$AudioLevelTracker;->normalize(D)D
+    # invokes: Lcom/fusepowered/m1/android/NVASpeechKit$AudioLevelTracker;->normalize(D)D
     invoke-static {v2, v3}, Lcom/fusepowered/m1/android/NVASpeechKit$AudioLevelTracker;->access$100(D)D
 
     move-result-wide v0
 
     .line 219
-    .local v0, normalizedLevel:D
+    .local v0, "normalizedLevel":D
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -95,7 +94,7 @@
     .line 222
     iget-object v2, p0, Lcom/fusepowered/m1/android/NVASpeechKit$2;->this$0:Lcom/fusepowered/m1/android/NVASpeechKit;
 
-    #getter for: Lcom/fusepowered/m1/android/NVASpeechKit;->audioLevelTracker:Lcom/fusepowered/m1/android/NVASpeechKit$AudioLevelTracker;
+    # getter for: Lcom/fusepowered/m1/android/NVASpeechKit;->audioLevelTracker:Lcom/fusepowered/m1/android/NVASpeechKit$AudioLevelTracker;
     invoke-static {v2}, Lcom/fusepowered/m1/android/NVASpeechKit;->access$200(Lcom/fusepowered/m1/android/NVASpeechKit;)Lcom/fusepowered/m1/android/NVASpeechKit$AudioLevelTracker;
 
     move-result-object v2
@@ -109,7 +108,7 @@
     .line 224
     iget-object v2, p0, Lcom/fusepowered/m1/android/NVASpeechKit$2;->this$0:Lcom/fusepowered/m1/android/NVASpeechKit;
 
-    #getter for: Lcom/fusepowered/m1/android/NVASpeechKit;->speechKitListener:Lcom/fusepowered/m1/android/NVASpeechKit$Listener;
+    # getter for: Lcom/fusepowered/m1/android/NVASpeechKit;->speechKitListener:Lcom/fusepowered/m1/android/NVASpeechKit$Listener;
     invoke-static {v2}, Lcom/fusepowered/m1/android/NVASpeechKit;->access$300(Lcom/fusepowered/m1/android/NVASpeechKit;)Lcom/fusepowered/m1/android/NVASpeechKit$Listener;
 
     move-result-object v2
@@ -119,7 +118,7 @@
     .line 226
     iget-object v2, p0, Lcom/fusepowered/m1/android/NVASpeechKit$2;->this$0:Lcom/fusepowered/m1/android/NVASpeechKit;
 
-    #getter for: Lcom/fusepowered/m1/android/NVASpeechKit;->speechKitListener:Lcom/fusepowered/m1/android/NVASpeechKit$Listener;
+    # getter for: Lcom/fusepowered/m1/android/NVASpeechKit;->speechKitListener:Lcom/fusepowered/m1/android/NVASpeechKit$Listener;
     invoke-static {v2}, Lcom/fusepowered/m1/android/NVASpeechKit;->access$300(Lcom/fusepowered/m1/android/NVASpeechKit;)Lcom/fusepowered/m1/android/NVASpeechKit$Listener;
 
     move-result-object v2
@@ -130,7 +129,7 @@
     :cond_0
     iget-object v2, p0, Lcom/fusepowered/m1/android/NVASpeechKit$2;->this$0:Lcom/fusepowered/m1/android/NVASpeechKit;
 
-    #getter for: Lcom/fusepowered/m1/android/NVASpeechKit;->state:Lcom/fusepowered/m1/android/NVASpeechKit$State;
+    # getter for: Lcom/fusepowered/m1/android/NVASpeechKit;->state:Lcom/fusepowered/m1/android/NVASpeechKit$State;
     invoke-static {v2}, Lcom/fusepowered/m1/android/NVASpeechKit;->access$400(Lcom/fusepowered/m1/android/NVASpeechKit;)Lcom/fusepowered/m1/android/NVASpeechKit$State;
 
     move-result-object v2
@@ -141,7 +140,7 @@
 
     iget-object v2, p0, Lcom/fusepowered/m1/android/NVASpeechKit$2;->this$0:Lcom/fusepowered/m1/android/NVASpeechKit;
 
-    #getter for: Lcom/fusepowered/m1/android/NVASpeechKit;->audioLevelTracker:Lcom/fusepowered/m1/android/NVASpeechKit$AudioLevelTracker;
+    # getter for: Lcom/fusepowered/m1/android/NVASpeechKit;->audioLevelTracker:Lcom/fusepowered/m1/android/NVASpeechKit$AudioLevelTracker;
     invoke-static {v2}, Lcom/fusepowered/m1/android/NVASpeechKit;->access$200(Lcom/fusepowered/m1/android/NVASpeechKit;)Lcom/fusepowered/m1/android/NVASpeechKit$AudioLevelTracker;
 
     move-result-object v2
@@ -154,14 +153,14 @@
     :cond_1
     iget-object v2, p0, Lcom/fusepowered/m1/android/NVASpeechKit$2;->this$0:Lcom/fusepowered/m1/android/NVASpeechKit;
 
-    #getter for: Lcom/fusepowered/m1/android/NVASpeechKit;->speeckKitHandler:Landroid/os/Handler;
+    # getter for: Lcom/fusepowered/m1/android/NVASpeechKit;->speeckKitHandler:Landroid/os/Handler;
     invoke-static {v2}, Lcom/fusepowered/m1/android/NVASpeechKit;->access$600(Lcom/fusepowered/m1/android/NVASpeechKit;)Landroid/os/Handler;
 
     move-result-object v2
 
     iget-object v3, p0, Lcom/fusepowered/m1/android/NVASpeechKit$2;->this$0:Lcom/fusepowered/m1/android/NVASpeechKit;
 
-    #getter for: Lcom/fusepowered/m1/android/NVASpeechKit;->audioLevelCallback:Ljava/lang/Runnable;
+    # getter for: Lcom/fusepowered/m1/android/NVASpeechKit;->audioLevelCallback:Ljava/lang/Runnable;
     invoke-static {v3}, Lcom/fusepowered/m1/android/NVASpeechKit;->access$500(Lcom/fusepowered/m1/android/NVASpeechKit;)Ljava/lang/Runnable;
 
     move-result-object v3
@@ -171,7 +170,7 @@
     invoke-virtual {v2, v3, v4, v5}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
     .line 234
-    .end local v0           #normalizedLevel:D
+    .end local v0    # "normalizedLevel":D
     :cond_2
     return-void
 .end method

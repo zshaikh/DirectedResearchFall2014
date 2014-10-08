@@ -43,8 +43,8 @@
 
 .method public friendsMigrated(Ljava/lang/String;Lcom/fusepowered/util/FuseMigrateFriendsError;)V
     .locals 0
-    .parameter "fuseId"
-    .parameter "migrateFriendsError"
+    .param p1, "fuseId"    # Ljava/lang/String;
+    .param p2, "migrateFriendsError"    # Lcom/fusepowered/util/FuseMigrateFriendsError;
 
     .prologue
     .line 25

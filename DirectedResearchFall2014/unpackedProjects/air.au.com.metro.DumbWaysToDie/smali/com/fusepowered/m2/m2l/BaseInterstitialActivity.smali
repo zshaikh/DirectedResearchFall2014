@@ -73,7 +73,7 @@
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
     .line 138
-    .local v0, intentFilter:Landroid/content/IntentFilter;
+    .local v0, "intentFilter":Landroid/content/IntentFilter;
     const-string v1, "com.mopub.action.interstitial.fail"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
@@ -118,7 +118,7 @@
     invoke-direct {v1}, Landroid/graphics/drawable/StateListDrawable;-><init>()V
 
     .line 148
-    .local v1, states:Landroid/graphics/drawable/StateListDrawable;
+    .local v1, "states":Landroid/graphics/drawable/StateListDrawable;
     new-array v2, v5, [I
 
     const v3, -0x10100a7
@@ -179,7 +179,7 @@
     invoke-direct {v0, v2, v3}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
     .line 159
-    .local v0, buttonLayout:Landroid/widget/RelativeLayout$LayoutParams;
+    .local v0, "buttonLayout":Landroid/widget/RelativeLayout$LayoutParams;
     const/16 v2, 0xb
 
     invoke-virtual {v0, v2}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
@@ -206,7 +206,7 @@
 # virtual methods
 .method protected broadcastInterstitialAction(Ljava/lang/String;)V
     .locals 2
-    .parameter "action"
+    .param p1, "action"    # Ljava/lang/String;
 
     .prologue
     .line 122
@@ -215,7 +215,7 @@
     invoke-direct {v0, p1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
     .line 123
-    .local v0, intent:Landroid/content/Intent;
+    .local v0, "intent":Landroid/content/Intent;
     invoke-static {p0}, Landroid/support/v4/content/LocalBroadcastManager;->getInstance(Landroid/content/Context;)Landroid/support/v4/content/LocalBroadcastManager;
 
     move-result-object v1
@@ -247,22 +247,22 @@
     .catch Ljava/lang/ClassCastException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 133
-    .local v0, adConfiguration:Lcom/fusepowered/m2/m2l/AdConfiguration;
+    .local v0, "adConfiguration":Lcom/fusepowered/m2/m2l/AdConfiguration;
     :goto_0
     return-object v0
 
     .line 130
-    .end local v0           #adConfiguration:Lcom/fusepowered/m2/m2l/AdConfiguration;
+    .end local v0    # "adConfiguration":Lcom/fusepowered/m2/m2l/AdConfiguration;
     :catch_0
     move-exception v2
 
     move-object v1, v2
 
     .line 131
-    .local v1, e:Ljava/lang/ClassCastException;
+    .local v1, "e":Ljava/lang/ClassCastException;
     const/4 v0, 0x0
 
-    .restart local v0       #adConfiguration:Lcom/fusepowered/m2/m2l/AdConfiguration;
+    .restart local v0    # "adConfiguration":Lcom/fusepowered/m2/m2l/AdConfiguration;
     goto :goto_0
 .end method
 
@@ -286,7 +286,7 @@
 
 .method protected onCreate(Landroid/os/Bundle;)V
     .locals 3
-    .parameter "savedInstanceState"
+    .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
     .line 89
@@ -307,7 +307,7 @@
     invoke-virtual {v1, v2}, Landroid/view/Window;->addFlags(I)V
 
     .line 94
-    const/high16 v1, 0x4248
+    const/high16 v1, 0x42480000
 
     invoke-static {v1, p0}, Lcom/fusepowered/m2/m2l/util/Dips;->asIntPixels(FLandroid/content/Context;)I
 
@@ -316,7 +316,7 @@
     iput v1, p0, Lcom/fusepowered/m2/m2l/BaseInterstitialActivity;->mButtonSize:I
 
     .line 95
-    const/high16 v1, 0x4100
+    const/high16 v1, 0x41000000
 
     invoke-static {v1, p0}, Lcom/fusepowered/m2/m2l/util/Dips;->asIntPixels(FLandroid/content/Context;)I
 
@@ -343,7 +343,7 @@
     invoke-direct {v0, v1, v2}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
     .line 100
-    .local v0, adViewLayout:Landroid/widget/RelativeLayout$LayoutParams;
+    .local v0, "adViewLayout":Landroid/widget/RelativeLayout$LayoutParams;
     const/16 v1, 0xd
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V

@@ -45,7 +45,6 @@
 
 .method private a(Lcom/inmobi/androidsdk/impl/IMUserInfo;)Lcom/inmobi/androidsdk/impl/IMAdUnit;
     .locals 6
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lcom/inmobi/androidsdk/impl/IMAdException;,
@@ -346,8 +345,6 @@
 
 .method static synthetic a(Lcom/inmobi/androidsdk/impl/net/IMRequestResponseManager;Lcom/inmobi/androidsdk/impl/IMUserInfo;)Lcom/inmobi/androidsdk/impl/IMAdUnit;
     .locals 1
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lcom/inmobi/androidsdk/impl/IMAdException;,
@@ -366,9 +363,6 @@
 
 .method private a(Lcom/inmobi/androidsdk/impl/IMUserInfo;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 1
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 147
@@ -394,10 +388,6 @@
 
 .method static synthetic a(Lcom/inmobi/androidsdk/impl/net/IMRequestResponseManager;Lcom/inmobi/androidsdk/impl/IMUserInfo;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 1
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 146
@@ -410,8 +400,6 @@
 
 .method private a(Ljava/net/HttpURLConnection;Ljava/lang/String;)Ljava/lang/String;
     .locals 6
-    .parameter
-    .parameter
 
     .prologue
     const-string v5, "action-name"
@@ -585,7 +573,6 @@
 
 .method static synthetic a(Lcom/inmobi/androidsdk/impl/net/IMRequestResponseManager;)Ljava/net/HttpURLConnection;
     .locals 1
-    .parameter
 
     .prologue
     .line 45
@@ -596,10 +583,6 @@
 
 .method static synthetic a(Lcom/inmobi/androidsdk/impl/net/IMRequestResponseManager;Ljava/lang/String;Lcom/inmobi/androidsdk/impl/IMUserInfo;Lcom/inmobi/androidsdk/impl/net/IMRequestResponseManager$ActionType;)Ljava/net/HttpURLConnection;
     .locals 1
-    .parameter
-    .parameter
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -617,9 +600,6 @@
 
 .method private a(Ljava/lang/String;Lcom/inmobi/androidsdk/impl/IMUserInfo;Lcom/inmobi/androidsdk/impl/net/IMRequestResponseManager$ActionType;)Ljava/net/HttpURLConnection;
     .locals 1
-    .parameter
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -654,9 +634,6 @@
 
 .method private a(ILjava/lang/Object;Lcom/inmobi/androidsdk/impl/net/IMHttpRequestCallback;)V
     .locals 1
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 59
@@ -685,9 +662,6 @@
 
 .method private a(Lcom/inmobi/androidsdk/impl/IMAdUnit;Lcom/inmobi/androidsdk/impl/IMUserInfo;Ljava/lang/String;)V
     .locals 1
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 335
@@ -711,10 +685,6 @@
 
 .method static synthetic a(Lcom/inmobi/androidsdk/impl/net/IMRequestResponseManager;ILjava/lang/Object;Lcom/inmobi/androidsdk/impl/net/IMHttpRequestCallback;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 58
@@ -725,8 +695,6 @@
 
 .method static synthetic a(Lcom/inmobi/androidsdk/impl/net/IMRequestResponseManager;Ljava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -742,8 +710,6 @@
 
 .method static synthetic a(Lcom/inmobi/androidsdk/impl/net/IMRequestResponseManager;Ljava/net/HttpURLConnection;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 45
@@ -754,7 +720,6 @@
 
 .method private a(Ljava/io/Closeable;)V
     .locals 4
-    .parameter
 
     .prologue
     .line 209
@@ -801,7 +766,6 @@
 
 .method private a(Ljava/lang/String;)V
     .locals 5
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -887,9 +851,6 @@
 
 .method private static a(Ljava/net/HttpURLConnection;Lcom/inmobi/androidsdk/impl/IMUserInfo;Lcom/inmobi/androidsdk/impl/net/IMRequestResponseManager$ActionType;)V
     .locals 3
-    .parameter
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/net/ProtocolException;
@@ -1020,12 +981,6 @@
 # virtual methods
 .method public asyncRequestAd(Lcom/inmobi/androidsdk/impl/IMUserInfo;Lcom/inmobi/androidsdk/impl/IMNiceInfo;Lcom/inmobi/androidsdk/impl/net/IMRequestResponseManager$ActionType;Ljava/lang/String;Ljava/lang/String;Lcom/inmobi/androidsdk/impl/net/IMHttpRequestCallback;)V
     .locals 8
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 70
@@ -1092,10 +1047,6 @@
 
 .method public initiateClick(Ljava/lang/String;Lcom/inmobi/androidsdk/impl/IMUserInfo;Landroid/view/MotionEvent;Ljava/util/List;)Ljava/lang/String;
     .locals 5
-    .parameter
-    .parameter
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1216,7 +1167,6 @@
 
 .method public setNewAdActionType(Ljava/lang/String;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 378

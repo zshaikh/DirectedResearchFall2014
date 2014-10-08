@@ -36,8 +36,8 @@
 
 .method public static pair(Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;)Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;
     .locals 1
-    .parameter "a1"
-    .parameter "a2"
+    .param p0, "a1"    # Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;
+    .param p1, "a2"    # Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;
 
     .prologue
     .line 99
@@ -73,7 +73,6 @@
 
 .method public allIntrospectors(Ljava/util/Collection;)Ljava/util/Collection;
     .locals 0
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -90,7 +89,7 @@
 
     .prologue
     .line 134
-    .local p1, result:Ljava/util/Collection;,"Ljava/util/Collection<Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;>;"
+    .local p1, "result":Ljava/util/Collection;, "Ljava/util/Collection<Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;>;"
     invoke-interface {p1, p0}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
     .line 135
@@ -99,8 +98,7 @@
 
 .method public findAutoDetectVisibility(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;Lcom/flurry/org/codehaus/jackson/map/introspect/VisibilityChecker;)Lcom/flurry/org/codehaus/jackson/map/introspect/VisibilityChecker;
     .locals 0
-    .parameter "ac"
-    .parameter
+    .param p1, "ac"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -114,13 +112,13 @@
 
     .prologue
     .line 248
-    .local p2, checker:Lcom/flurry/org/codehaus/jackson/map/introspect/VisibilityChecker;,"Lcom/flurry/org/codehaus/jackson/map/introspect/VisibilityChecker<*>;"
+    .local p2, "checker":Lcom/flurry/org/codehaus/jackson/map/introspect/VisibilityChecker;, "Lcom/flurry/org/codehaus/jackson/map/introspect/VisibilityChecker<*>;"
     return-object p2
 .end method
 
 .method public findCachability(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;)Ljava/lang/Boolean;
     .locals 1
-    .parameter "ac"
+    .param p1, "ac"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;
 
     .prologue
     .line 172
@@ -145,7 +143,7 @@
 
 .method public findContentSerializer(Lcom/flurry/org/codehaus/jackson/map/introspect/Annotated;)Ljava/lang/Class;
     .locals 1
-    .parameter "am"
+    .param p1, "am"    # Lcom/flurry/org/codehaus/jackson/map/introspect/Annotated;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -226,7 +224,7 @@
 
 .method public findFilterId(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;)Ljava/lang/Object;
     .locals 1
-    .parameter "ac"
+    .param p1, "ac"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;
 
     .prologue
     .line 229
@@ -243,7 +241,7 @@
 
 .method public findInjectableValueId(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMember;)Ljava/lang/Object;
     .locals 1
-    .parameter "m"
+    .param p1, "m"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMember;
 
     .prologue
     .line 421
@@ -268,7 +266,7 @@
 
 .method public findKeySerializer(Lcom/flurry/org/codehaus/jackson/map/introspect/Annotated;)Ljava/lang/Class;
     .locals 1
-    .parameter "am"
+    .param p1, "am"    # Lcom/flurry/org/codehaus/jackson/map/introspect/Annotated;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -293,9 +291,8 @@
 
 .method public findPropertyContentTypeResolver(Lcom/flurry/org/codehaus/jackson/map/MapperConfig;Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMember;Lcom/flurry/org/codehaus/jackson/type/JavaType;)Lcom/flurry/org/codehaus/jackson/map/jsontype/TypeResolverBuilder;
     .locals 1
-    .parameter
-    .parameter "am"
-    .parameter "containerType"
+    .param p2, "am"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMember;
+    .param p3, "containerType"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -311,7 +308,7 @@
 
     .prologue
     .line 321
-    .local p1, config:Lcom/flurry/org/codehaus/jackson/map/MapperConfig;,"Lcom/flurry/org/codehaus/jackson/map/MapperConfig<*>;"
+    .local p1, "config":Lcom/flurry/org/codehaus/jackson/map/MapperConfig;, "Lcom/flurry/org/codehaus/jackson/map/MapperConfig<*>;"
     const/4 v0, 0x0
 
     return-object v0
@@ -322,9 +319,8 @@
 
 .method public findPropertyTypeResolver(Lcom/flurry/org/codehaus/jackson/map/MapperConfig;Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMember;Lcom/flurry/org/codehaus/jackson/type/JavaType;)Lcom/flurry/org/codehaus/jackson/map/jsontype/TypeResolverBuilder;
     .locals 1
-    .parameter
-    .parameter "am"
-    .parameter "baseType"
+    .param p2, "am"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMember;
+    .param p3, "baseType"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -340,7 +336,7 @@
 
     .prologue
     .line 297
-    .local p1, config:Lcom/flurry/org/codehaus/jackson/map/MapperConfig;,"Lcom/flurry/org/codehaus/jackson/map/MapperConfig<*>;"
+    .local p1, "config":Lcom/flurry/org/codehaus/jackson/map/MapperConfig;, "Lcom/flurry/org/codehaus/jackson/map/MapperConfig<*>;"
     const/4 v0, 0x0
 
     return-object v0
@@ -348,7 +344,7 @@
 
 .method public findReferenceType(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMember;)Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector$ReferenceProperty;
     .locals 1
-    .parameter "member"
+    .param p1, "member"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMember;
 
     .prologue
     .line 363
@@ -365,8 +361,8 @@
 
 .method public findSerializationContentType(Lcom/flurry/org/codehaus/jackson/map/introspect/Annotated;Lcom/flurry/org/codehaus/jackson/type/JavaType;)Ljava/lang/Class;
     .locals 1
-    .parameter "am"
-    .parameter "baseType"
+    .param p1, "am"    # Lcom/flurry/org/codehaus/jackson/map/introspect/Annotated;
+    .param p2, "baseType"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -387,8 +383,8 @@
 
 .method public findSerializationInclusion(Lcom/flurry/org/codehaus/jackson/map/introspect/Annotated;Lcom/flurry/org/codehaus/jackson/map/annotate/JsonSerialize$Inclusion;)Lcom/flurry/org/codehaus/jackson/map/annotate/JsonSerialize$Inclusion;
     .locals 0
-    .parameter "a"
-    .parameter "defValue"
+    .param p1, "a"    # Lcom/flurry/org/codehaus/jackson/map/introspect/Annotated;
+    .param p2, "defValue"    # Lcom/flurry/org/codehaus/jackson/map/annotate/JsonSerialize$Inclusion;
 
     .prologue
     .line 520
@@ -397,8 +393,8 @@
 
 .method public findSerializationKeyType(Lcom/flurry/org/codehaus/jackson/map/introspect/Annotated;Lcom/flurry/org/codehaus/jackson/type/JavaType;)Ljava/lang/Class;
     .locals 1
-    .parameter "am"
-    .parameter "baseType"
+    .param p1, "am"    # Lcom/flurry/org/codehaus/jackson/map/introspect/Annotated;
+    .param p2, "baseType"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -458,7 +454,7 @@
 
 .method public findSubtypes(Lcom/flurry/org/codehaus/jackson/map/introspect/Annotated;)Ljava/util/List;
     .locals 1
-    .parameter "a"
+    .param p1, "a"    # Lcom/flurry/org/codehaus/jackson/map/introspect/Annotated;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -480,7 +476,7 @@
 
 .method public findTypeName(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;)Ljava/lang/String;
     .locals 1
-    .parameter "ac"
+    .param p1, "ac"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;
 
     .prologue
     .line 347
@@ -491,9 +487,8 @@
 
 .method public findTypeResolver(Lcom/flurry/org/codehaus/jackson/map/MapperConfig;Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;Lcom/flurry/org/codehaus/jackson/type/JavaType;)Lcom/flurry/org/codehaus/jackson/map/jsontype/TypeResolverBuilder;
     .locals 1
-    .parameter
-    .parameter "ac"
-    .parameter "baseType"
+    .param p2, "ac"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;
+    .param p3, "baseType"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -509,7 +504,7 @@
 
     .prologue
     .line 275
-    .local p1, config:Lcom/flurry/org/codehaus/jackson/map/MapperConfig;,"Lcom/flurry/org/codehaus/jackson/map/MapperConfig<*>;"
+    .local p1, "config":Lcom/flurry/org/codehaus/jackson/map/MapperConfig;, "Lcom/flurry/org/codehaus/jackson/map/MapperConfig<*>;"
     const/4 v0, 0x0
 
     return-object v0
@@ -517,7 +512,7 @@
 
 .method public findValueInstantiator(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;)Ljava/lang/Object;
     .locals 1
-    .parameter "ac"
+    .param p1, "ac"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;
 
     .prologue
     .line 769
@@ -528,7 +523,7 @@
 
 .method public hasAnyGetterAnnotation(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;)Z
     .locals 1
-    .parameter "am"
+    .param p1, "am"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
 
     .prologue
     .line 815
@@ -539,7 +534,7 @@
 
 .method public hasAnySetterAnnotation(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;)Z
     .locals 1
-    .parameter "am"
+    .param p1, "am"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
 
     .prologue
     .line 800
@@ -553,7 +548,7 @@
 
 .method public hasCreatorAnnotation(Lcom/flurry/org/codehaus/jackson/map/introspect/Annotated;)Z
     .locals 1
-    .parameter "a"
+    .param p1, "a"    # Lcom/flurry/org/codehaus/jackson/map/introspect/Annotated;
 
     .prologue
     .line 829
@@ -564,7 +559,7 @@
 
 .method public hasIgnoreMarker(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMember;)Z
     .locals 1
-    .parameter "m"
+    .param p1, "m"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMember;
 
     .prologue
     .line 395
@@ -575,7 +570,7 @@
     .line 396
     check-cast p1, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
 
-    .end local p1
+    .end local p1    # "m":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMember;
     invoke-virtual {p0, p1}, Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;->isIgnorableMethod(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;)Z
 
     move-result v0
@@ -585,7 +580,7 @@
     return v0
 
     .line 398
-    .restart local p1
+    .restart local p1    # "m":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMember;
     :cond_0
     instance-of v0, p1, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedField;
 
@@ -594,7 +589,7 @@
     .line 399
     check-cast p1, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedField;
 
-    .end local p1
+    .end local p1    # "m":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMember;
     invoke-virtual {p0, p1}, Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;->isIgnorableField(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedField;)Z
 
     move-result v0
@@ -602,7 +597,7 @@
     goto :goto_0
 
     .line 401
-    .restart local p1
+    .restart local p1    # "m":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMember;
     :cond_1
     instance-of v0, p1, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedConstructor;
 
@@ -611,7 +606,7 @@
     .line 402
     check-cast p1, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedConstructor;
 
-    .end local p1
+    .end local p1    # "m":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMember;
     invoke-virtual {p0, p1}, Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;->isIgnorableConstructor(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedConstructor;)Z
 
     move-result v0
@@ -619,7 +614,7 @@
     goto :goto_0
 
     .line 404
-    .restart local p1
+    .restart local p1    # "m":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMember;
     :cond_2
     const/4 v0, 0x0
 
@@ -640,7 +635,7 @@
 
 .method public isIgnorableType(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;)Ljava/lang/Boolean;
     .locals 1
-    .parameter "ac"
+    .param p1, "ac"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;
 
     .prologue
     .line 218
@@ -651,7 +646,7 @@
 
 .method public shouldUnwrapProperty(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMember;)Ljava/lang/Boolean;
     .locals 1
-    .parameter "member"
+    .param p1, "member"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMember;
 
     .prologue
     .line 374

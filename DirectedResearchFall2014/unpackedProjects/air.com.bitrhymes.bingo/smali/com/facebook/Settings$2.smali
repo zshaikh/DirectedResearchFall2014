@@ -28,9 +28,6 @@
 # direct methods
 .method constructor <init>(Landroid/content/Context;Ljava/lang/String;Lcom/facebook/Request$Callback;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 1
@@ -62,7 +59,7 @@
     move-result-object v1
 
     .line 268
-    .local v1, response:Lcom/facebook/Response;
+    .local v1, "response":Lcom/facebook/Response;
     iget-object v2, p0, Lcom/facebook/Settings$2;->val$callback:Lcom/facebook/Request$Callback;
 
     if-eqz v2, :cond_0
@@ -77,7 +74,7 @@
     invoke-direct {v0, v2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
     .line 271
-    .local v0, handler:Landroid/os/Handler;
+    .local v0, "handler":Landroid/os/Handler;
     new-instance v2, Lcom/facebook/Settings$2$1;
 
     iget-object v3, p0, Lcom/facebook/Settings$2;->val$callback:Lcom/facebook/Request$Callback;
@@ -87,7 +84,7 @@
     invoke-virtual {v0, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     .line 278
-    .end local v0           #handler:Landroid/os/Handler;
+    .end local v0    # "handler":Landroid/os/Handler;
     :cond_0
     return-void
 .end method

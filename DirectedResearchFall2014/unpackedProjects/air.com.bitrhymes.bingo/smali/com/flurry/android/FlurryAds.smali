@@ -1011,8 +1011,6 @@
 
 .method private a(Landroid/content/Context;Lcom/flurry/android/AdUnit;)Lcom/flurry/android/bf;
     .locals 18
-    .parameter
-    .parameter
 
     .prologue
     const/16 v17, 0x1
@@ -1384,9 +1382,6 @@
 
 .method private declared-synchronized a(Ljava/lang/String;ZLjava/util/Map;)Lcom/flurry/android/bu;
     .locals 6
-    .parameter
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1436,8 +1431,6 @@
 
 .method private static a([BLjava/lang/Class;)Lcom/flurry/org/apache/avro/specific/SpecificRecordBase;
     .locals 6
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<A:",
@@ -1617,7 +1610,6 @@
 
 .method static synthetic a(Lcom/flurry/android/FlurryAds;)Ljava/io/File;
     .locals 1
-    .parameter
 
     .prologue
     .line 75
@@ -1628,10 +1620,6 @@
 
 .method private a(Lcom/flurry/android/cz;Lcom/flurry/android/AdUnit;Lcom/flurry/android/af;Ljava/lang/String;)Ljava/lang/String;
     .locals 6
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 1607
@@ -1689,8 +1677,6 @@
 
 .method private static a(Lcom/flurry/android/AdFrame;Lcom/flurry/android/cw;)Ljava/util/List;
     .locals 9
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1863,10 +1849,6 @@
 
 .method private a(Landroid/content/Context;Ljava/lang/String;ZLcom/flurry/android/AdUnit;)V
     .locals 7
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 1411
@@ -1894,8 +1876,6 @@
 
 .method private declared-synchronized a(Lcom/flurry/android/FlurryFreqCapManager;Ljava/io/DataOutputStream;)V
     .locals 5
-    .parameter
-    .parameter
 
     .prologue
     .line 2307
@@ -1934,8 +1914,8 @@
     .line 2312
     invoke-virtual {v0, p2}, Lcom/flurry/android/FlurryFreqCapInfo;->a(Ljava/io/DataOutput;)V
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     goto :goto_0
 
@@ -1991,7 +1971,6 @@
 
 .method private declared-synchronized a(Lcom/flurry/android/SdkLogResponse;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 1626
@@ -2040,8 +2019,6 @@
 
 .method private declared-synchronized a(Ljava/util/List;Ljava/io/DataOutputStream;)V
     .locals 5
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -2083,8 +2060,8 @@
 
     invoke-virtual {v0, p2}, Lcom/flurry/android/cz;->a(Ljava/io/DataOutput;)V
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     .line 2172
     :goto_1
@@ -2152,10 +2129,6 @@
 
 .method private a(Landroid/content/Context;Ljava/lang/String;Lcom/flurry/android/FlurryAdSize;J)Z
     .locals 9
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const/4 v8, 0x1
@@ -2261,9 +2234,6 @@
 
 .method static a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Z
     .locals 2
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 1169
@@ -2288,7 +2258,6 @@
 
 .method private static a(Ljava/io/InputStream;)[B
     .locals 4
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -2334,13 +2303,6 @@
 
 .method private a(Ljava/lang/String;IIIIZLcom/flurry/android/FlurryAdSize;)[B
     .locals 8
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const/4 v7, 0x0
@@ -2724,7 +2686,6 @@
 
 .method private static b([B)I
     .locals 1
-    .parameter
 
     .prologue
     .line 2012
@@ -2745,7 +2706,6 @@
 
 .method static synthetic b(Lcom/flurry/android/FlurryAds;)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 75
@@ -2756,8 +2716,6 @@
 
 .method private b([BLjava/lang/String;)Z
     .locals 4
-    .parameter
-    .parameter
 
     .prologue
     .line 1878
@@ -2931,7 +2889,6 @@
 
 .method static synthetic c(Lcom/flurry/android/FlurryAds;)Ljava/io/File;
     .locals 1
-    .parameter
 
     .prologue
     .line 75
@@ -2942,7 +2899,6 @@
 
 .method private c([B)V
     .locals 3
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -3040,8 +2996,6 @@
 
 .method private c([BLjava/lang/String;)[B
     .locals 8
-    .parameter
-    .parameter
 
     .prologue
     const-string v5, "avro/binary"
@@ -3346,7 +3300,6 @@
 
 .method static synthetic d(Lcom/flurry/android/FlurryAds;)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 75
@@ -3357,9 +3310,6 @@
 
 .method public static displayAd(Landroid/content/Context;Ljava/lang/String;Landroid/view/ViewGroup;)V
     .locals 4
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 506
@@ -3497,8 +3447,6 @@
 
 .method static e(Landroid/content/Context;Ljava/lang/String;)Z
     .locals 5
-    .parameter
-    .parameter
 
     .prologue
     const/4 v4, 0x0
@@ -3607,7 +3555,6 @@
 
 .method public static enableTestAds(Z)V
     .locals 1
-    .parameter
 
     .prologue
     .line 924
@@ -3623,10 +3570,6 @@
 
 .method public static fetchAd(Landroid/content/Context;Ljava/lang/String;Landroid/view/ViewGroup;Lcom/flurry/android/FlurryAdSize;)V
     .locals 8
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 451
@@ -3781,7 +3724,6 @@
 
 .method private declared-synchronized g(Landroid/content/Context;)V
     .locals 3
-    .parameter
 
     .prologue
     .line 241
@@ -3943,11 +3885,6 @@
 
 .method public static getAd(Landroid/content/Context;Ljava/lang/String;Landroid/view/ViewGroup;Lcom/flurry/android/FlurryAdSize;J)Z
     .locals 8
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const/4 v7, 0x0
@@ -4108,7 +4045,6 @@
 
 .method private static h(Landroid/content/Context;)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 791
@@ -4131,7 +4067,6 @@
 
 .method private static i(Landroid/content/Context;)Z
     .locals 3
-    .parameter
 
     .prologue
     const/4 v2, 0x1
@@ -4207,7 +4142,6 @@
 
 .method private i(Ljava/lang/String;)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 2996
@@ -4222,7 +4156,6 @@
 
 .method public static initializeAds(Landroid/content/Context;)V
     .locals 4
-    .parameter
 
     .prologue
     .line 344
@@ -4298,10 +4231,6 @@
 
 .method public static isAdAvailable(Landroid/content/Context;Ljava/lang/String;Lcom/flurry/android/FlurryAdSize;J)Z
     .locals 7
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const/4 v6, 0x0
@@ -4421,7 +4350,6 @@
 
 .method static synthetic j(Landroid/content/Context;)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 75
@@ -4434,7 +4362,6 @@
 
 .method static synthetic k(Landroid/content/Context;)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 75
@@ -4447,7 +4374,6 @@
 
 .method private l(Ljava/lang/String;)Lcom/flurry/android/AdUnit;
     .locals 1
-    .parameter
 
     .prologue
     .line 1693
@@ -4463,7 +4389,6 @@
 
 .method private n(Ljava/lang/String;)Lcom/flurry/android/bf;
     .locals 1
-    .parameter
 
     .prologue
     .line 3006
@@ -4478,7 +4403,6 @@
 
 .method private o(Ljava/lang/String;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 3011
@@ -4492,9 +4416,6 @@
 
 .method public static removeAd(Landroid/content/Context;Ljava/lang/String;Landroid/view/ViewGroup;)V
     .locals 3
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 557
@@ -4588,7 +4509,6 @@
 
 .method public static setAdListener(Lcom/flurry/android/FlurryAdListener;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 602
@@ -4604,7 +4524,6 @@
 
 .method public static setAdLogUrl(Ljava/lang/String;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 738
@@ -4620,7 +4539,6 @@
 
 .method public static setAdServerUrl(Ljava/lang/String;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 733
@@ -4636,7 +4554,6 @@
 
 .method public static setCustomAdNetworkHandler(Lcom/flurry/android/ICustomAdNetworkHandler;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 622
@@ -4666,8 +4583,6 @@
 
 .method public static setLocation(FF)V
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 616
@@ -4690,7 +4605,6 @@
 
 .method public static setTargetingKeywords(Ljava/util/Map;)V
     .locals 2
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -4734,7 +4648,6 @@
 
 .method public static setUserCookies(Ljava/util/Map;)V
     .locals 5
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -5029,8 +4942,8 @@
 
     invoke-static {v0}, Lcom/flurry/android/bc;->b(Ljava/io/File;)Z
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_2
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_1
+    .catchall {:try_start_0 .. :try_end_0} :catchall_2
 
     move-result v0
 
@@ -5065,8 +4978,8 @@
 
     invoke-direct {v1, v0}, Ljava/io/DataOutputStream;-><init>(Ljava/io/OutputStream;)V
     :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_2
     .catch Ljava/lang/Throwable; {:try_start_2 .. :try_end_2} :catch_1
+    .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
     .line 2053
     const v0, 0xb5fa
@@ -5079,8 +4992,8 @@
 
     monitor-enter v0
     :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_3
     .catch Ljava/lang/Throwable; {:try_start_3 .. :try_end_3} :catch_0
+    .catchall {:try_start_3 .. :try_end_3} :catchall_3
 
     .line 2056
     :try_start_4
@@ -5099,8 +5012,8 @@
     :try_start_5
     invoke-virtual {v1, v0}, Ljava/io/DataOutputStream;->writeShort(I)V
     :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_3
     .catch Ljava/lang/Throwable; {:try_start_5 .. :try_end_5} :catch_0
+    .catchall {:try_start_5 .. :try_end_5} :catchall_3
 
     .line 2066
     :try_start_6
@@ -5130,8 +5043,8 @@
     :try_start_8
     throw v2
     :try_end_8
-    .catchall {:try_start_8 .. :try_end_8} :catchall_3
     .catch Ljava/lang/Throwable; {:try_start_8 .. :try_end_8} :catch_0
+    .catchall {:try_start_8 .. :try_end_8} :catchall_3
 
     .line 2060
     :catch_0
@@ -5202,8 +5115,8 @@
 
     invoke-static {v0}, Lcom/flurry/android/bc;->b(Ljava/io/File;)Z
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_2
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_2
 
     move-result v0
 
@@ -5238,8 +5151,8 @@
 
     invoke-direct {v1, v0}, Ljava/io/DataOutputStream;-><init>(Ljava/io/OutputStream;)V
     :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_2
     .catch Ljava/lang/Throwable; {:try_start_3 .. :try_end_3} :catch_1
+    .catchall {:try_start_3 .. :try_end_3} :catchall_2
 
     .line 2199
     :try_start_4
@@ -5247,8 +5160,8 @@
 
     monitor-enter v0
     :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_3
     .catch Ljava/lang/Throwable; {:try_start_4 .. :try_end_4} :catch_0
+    .catchall {:try_start_4 .. :try_end_4} :catchall_3
 
     .line 2201
     :try_start_5
@@ -5267,8 +5180,8 @@
     :try_start_6
     invoke-virtual {v1, v0}, Ljava/io/DataOutputStream;->writeShort(I)V
     :try_end_6
-    .catchall {:try_start_6 .. :try_end_6} :catchall_3
     .catch Ljava/lang/Throwable; {:try_start_6 .. :try_end_6} :catch_0
+    .catchall {:try_start_6 .. :try_end_6} :catchall_3
 
     .line 2211
     :try_start_7
@@ -5298,8 +5211,8 @@
     :try_start_9
     throw v2
     :try_end_9
-    .catchall {:try_start_9 .. :try_end_9} :catchall_3
     .catch Ljava/lang/Throwable; {:try_start_9 .. :try_end_9} :catch_0
+    .catchall {:try_start_9 .. :try_end_9} :catchall_3
 
     .line 2205
     :catch_0
@@ -5370,10 +5283,6 @@
 
 .method final declared-synchronized a(Lcom/flurry/android/cz;Ljava/lang/String;ZLjava/util/Map;)Lcom/flurry/android/cz;
     .locals 2
-    .parameter
-    .parameter
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -5529,11 +5438,6 @@
 
 .method final a(Landroid/content/Context;Ljava/lang/String;Landroid/view/ViewGroup;ZLcom/flurry/android/FlurryAdSize;)Ljava/util/List;
     .locals 9
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -5980,9 +5884,6 @@
 
 .method final a(Landroid/content/Context;JJ)V
     .locals 2
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 743
@@ -6009,9 +5910,6 @@
 
 .method final a(Landroid/content/Context;Ljava/lang/String;Lcom/flurry/android/AdUnit;)V
     .locals 4
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const-string v2, "market://details?id="
@@ -6139,7 +6037,6 @@
 
 .method final a(Lcom/flurry/android/AdUnit;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 2362
@@ -6151,7 +6048,6 @@
 
 .method final declared-synchronized a(Lcom/flurry/android/cz;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 929
@@ -6201,9 +6097,6 @@
 
 .method final a(Landroid/content/Context;Landroid/content/Intent;Ljava/lang/String;)Z
     .locals 4
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const/4 v3, 0x0
@@ -6313,9 +6206,6 @@
 
 .method final a(Landroid/content/Context;Ljava/lang/String;Landroid/view/ViewGroup;)Z
     .locals 1
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 1081
@@ -6348,11 +6238,6 @@
 
 .method final a(Landroid/content/Context;Ljava/lang/String;Lcom/flurry/android/FlurryAdSize;Landroid/view/ViewGroup;J)Z
     .locals 8
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 1005
@@ -6551,7 +6436,6 @@
 
 .method final b(Lcom/flurry/android/cz;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 2352
@@ -6563,7 +6447,6 @@
 
 .method final declared-synchronized b(Ljava/io/DataInputStream;)V
     .locals 3
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -6642,8 +6525,6 @@
 
 .method final b(Ljava/lang/String;Z)V
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     .line 761
@@ -6691,7 +6572,6 @@
 
 .method final b(Ljava/util/Map;)V
     .locals 0
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -6713,9 +6593,6 @@
 
 .method final b(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Z
     .locals 2
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 1229
@@ -6743,8 +6620,6 @@
 
 .method final c(Landroid/content/Context;Ljava/lang/String;)V
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     .line 1057
@@ -6809,7 +6684,6 @@
 
 .method final declared-synchronized c(Ljava/io/DataInputStream;)V
     .locals 3
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -6888,8 +6762,6 @@
 
 .method final d(Landroid/content/Context;Ljava/lang/String;)V
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     .line 1134
@@ -6974,7 +6846,6 @@
 
 .method final d(Ljava/util/List;)V
     .locals 0
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -6995,7 +6866,6 @@
 
 .method final e(Ljava/util/List;)V
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -7028,7 +6898,6 @@
 
 .method final j(Ljava/lang/String;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 776
@@ -7062,7 +6931,6 @@
 
 .method final k(Ljava/lang/String;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 856
@@ -7074,7 +6942,6 @@
 
 .method final m(Ljava/lang/String;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 1715
@@ -7095,9 +6962,6 @@
 
 .method public onEvent(Lcom/flurry/android/cw;Lcom/flurry/android/bm;I)V
     .locals 10
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const-string v9, "logEvent"
@@ -7568,9 +7432,6 @@
 
 .method public performAction$3deb3ec3(Lcom/flurry/android/af;Lcom/flurry/android/FlurryAds;I)V
     .locals 11
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const/4 v10, 0x1

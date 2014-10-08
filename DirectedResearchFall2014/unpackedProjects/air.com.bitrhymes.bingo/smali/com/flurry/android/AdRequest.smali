@@ -135,7 +135,6 @@
 # virtual methods
 .method public final a(Lcom/flurry/android/TestAds;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 289
@@ -147,7 +146,6 @@
 
 .method public final a(Ljava/lang/Boolean;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 319
@@ -163,7 +161,6 @@
 
 .method public final b(Ljava/lang/CharSequence;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 124
@@ -175,7 +172,6 @@
 
 .method public final c(Ljava/util/Map;)V
     .locals 0
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -197,7 +193,6 @@
 
 .method public get(I)Ljava/lang/Object;
     .locals 2
-    .parameter
 
     .prologue
     .line 32
@@ -385,8 +380,6 @@
 
 .method public put(ILjava/lang/Object;)V
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     .line 58

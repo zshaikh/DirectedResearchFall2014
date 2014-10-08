@@ -32,10 +32,6 @@
 # direct methods
 .method public constructor <init>(FFFF)V
     .locals 2
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const/4 v1, 0x0
@@ -99,14 +95,6 @@
 
 .method public constructor <init>(IFIFIFIF)V
     .locals 2
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const/4 v1, 0x0
@@ -172,8 +160,6 @@
 # virtual methods
 .method protected applyTransformation(FLandroid/view/animation/Transformation;)V
     .locals 4
-    .parameter
-    .parameter
 
     .prologue
     .line 62
@@ -241,10 +227,6 @@
 
 .method public initialize(IIII)V
     .locals 2
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 54

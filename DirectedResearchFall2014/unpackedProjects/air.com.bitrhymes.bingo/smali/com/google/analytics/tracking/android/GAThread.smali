@@ -63,7 +63,7 @@
 # direct methods
 .method private constructor <init>(Landroid/content/Context;)V
     .locals 2
-    .parameter "ctx"
+    .param p1, "ctx"    # Landroid/content/Context;
 
     .prologue
     const/4 v1, 0x0
@@ -112,8 +112,8 @@
 
 .method constructor <init>(Landroid/content/Context;Lcom/google/analytics/tracking/android/ServiceProxy;)V
     .locals 2
-    .parameter "ctx"
-    .parameter "proxy"
+    .param p1, "ctx"    # Landroid/content/Context;
+    .param p2, "proxy"    # Lcom/google/analytics/tracking/android/ServiceProxy;
     .annotation build Lcom/google/android/gms/common/util/VisibleForTesting;
     .end annotation
 
@@ -167,7 +167,7 @@
 
 .method static synthetic access$000(Lcom/google/analytics/tracking/android/GAThread;)Ljava/lang/String;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/google/analytics/tracking/android/GAThread;
 
     .prologue
     .line 36
@@ -178,7 +178,7 @@
 
 .method static synthetic access$100(Lcom/google/analytics/tracking/android/GAThread;)Z
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/google/analytics/tracking/android/GAThread;
 
     .prologue
     .line 36
@@ -189,7 +189,7 @@
 
 .method static synthetic access$1000(Lcom/google/analytics/tracking/android/GAThread;)Lcom/google/analytics/tracking/android/ServiceProxy;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/google/analytics/tracking/android/GAThread;
 
     .prologue
     .line 36
@@ -200,8 +200,8 @@
 
 .method static synthetic access$102(Lcom/google/analytics/tracking/android/GAThread;Z)Z
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
+    .param p0, "x0"    # Lcom/google/analytics/tracking/android/GAThread;
+    .param p1, "x1"    # Z
 
     .prologue
     .line 36
@@ -212,7 +212,7 @@
 
 .method static synthetic access$1100(Lcom/google/analytics/tracking/android/GAThread;)Landroid/content/Context;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/google/analytics/tracking/android/GAThread;
 
     .prologue
     .line 36
@@ -223,8 +223,8 @@
 
 .method static synthetic access$200(Lcom/google/analytics/tracking/android/GAThread;Ljava/util/Map;)Z
     .locals 1
-    .parameter "x0"
-    .parameter "x1"
+    .param p0, "x0"    # Lcom/google/analytics/tracking/android/GAThread;
+    .param p1, "x1"    # Ljava/util/Map;
 
     .prologue
     .line 36
@@ -237,7 +237,7 @@
 
 .method static synthetic access$300(Lcom/google/analytics/tracking/android/GAThread;)Ljava/lang/String;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/google/analytics/tracking/android/GAThread;
 
     .prologue
     .line 36
@@ -248,8 +248,8 @@
 
 .method static synthetic access$302(Lcom/google/analytics/tracking/android/GAThread;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
+    .param p0, "x0"    # Lcom/google/analytics/tracking/android/GAThread;
+    .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
     .line 36
@@ -260,8 +260,8 @@
 
 .method static synthetic access$400(Lcom/google/analytics/tracking/android/GAThread;Ljava/util/Map;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
+    .param p0, "x0"    # Lcom/google/analytics/tracking/android/GAThread;
+    .param p1, "x1"    # Ljava/util/Map;
 
     .prologue
     .line 36
@@ -272,8 +272,8 @@
 
 .method static synthetic access$500(Lcom/google/analytics/tracking/android/GAThread;Ljava/util/Map;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
+    .param p0, "x0"    # Lcom/google/analytics/tracking/android/GAThread;
+    .param p1, "x1"    # Ljava/util/Map;
 
     .prologue
     .line 36
@@ -284,8 +284,8 @@
 
 .method static synthetic access$600(Lcom/google/analytics/tracking/android/GAThread;Ljava/util/Map;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
+    .param p0, "x0"    # Lcom/google/analytics/tracking/android/GAThread;
+    .param p1, "x1"    # Ljava/util/Map;
 
     .prologue
     .line 36
@@ -296,7 +296,7 @@
 
 .method static synthetic access$700(Lcom/google/analytics/tracking/android/GAThread;)Lcom/google/analytics/tracking/android/MetaModel;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/google/analytics/tracking/android/GAThread;
 
     .prologue
     .line 36
@@ -307,8 +307,8 @@
 
 .method static synthetic access$800(Lcom/google/analytics/tracking/android/GAThread;Ljava/util/Map;)Ljava/lang/String;
     .locals 1
-    .parameter "x0"
-    .parameter "x1"
+    .param p0, "x0"    # Lcom/google/analytics/tracking/android/GAThread;
+    .param p1, "x1"    # Ljava/util/Map;
 
     .prologue
     .line 36
@@ -321,7 +321,7 @@
 
 .method static synthetic access$900(Lcom/google/analytics/tracking/android/GAThread;)Ljava/util/List;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/google/analytics/tracking/android/GAThread;
 
     .prologue
     .line 36
@@ -332,7 +332,6 @@
 
 .method private fillAppParameters(Ljava/util/Map;)V
     .locals 9
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -346,7 +345,7 @@
 
     .prologue
     .line 210
-    .local p1, hit:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p1, "hit":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     iget-object v7, p0, Lcom/google/analytics/tracking/android/GAThread;->mContext:Landroid/content/Context;
 
     invoke-virtual {v7}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -354,7 +353,7 @@
     move-result-object v6
 
     .line 211
-    .local v6, pm:Landroid/content/pm/PackageManager;
+    .local v6, "pm":Landroid/content/pm/PackageManager;
     iget-object v7, p0, Lcom/google/analytics/tracking/android/GAThread;->mContext:Landroid/content/Context;
 
     invoke-virtual {v7}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
@@ -362,21 +361,21 @@
     move-result-object v0
 
     .line 212
-    .local v0, appId:Ljava/lang/String;
+    .local v0, "appId":Ljava/lang/String;
     invoke-virtual {v6, v0}, Landroid/content/pm/PackageManager;->getInstallerPackageName(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     .line 214
-    .local v1, appInstallerId:Ljava/lang/String;
+    .local v1, "appInstallerId":Ljava/lang/String;
     move-object v2, v0
 
     .line 215
-    .local v2, appName:Ljava/lang/String;
+    .local v2, "appName":Ljava/lang/String;
     const/4 v3, 0x0
 
     .line 217
-    .local v3, appVersion:Ljava/lang/String;
+    .local v3, "appVersion":Ljava/lang/String;
     :try_start_0
     iget-object v7, p0, Lcom/google/analytics/tracking/android/GAThread;->mContext:Landroid/content/Context;
 
@@ -391,7 +390,7 @@
     move-result-object v5
 
     .line 218
-    .local v5, packageInfo:Landroid/content/pm/PackageInfo;
+    .local v5, "packageInfo":Landroid/content/pm/PackageInfo;
     if-eqz v5, :cond_0
 
     .line 219
@@ -411,7 +410,7 @@
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 225
-    .end local v5           #packageInfo:Landroid/content/pm/PackageInfo;
+    .end local v5    # "packageInfo":Landroid/content/pm/PackageInfo;
     :cond_0
     :goto_0
     const-string v7, "appName"
@@ -450,7 +449,7 @@
     move-object v4, v7
 
     .line 223
-    .local v4, exception:Landroid/content/pm/PackageManager$NameNotFoundException;
+    .local v4, "exception":Landroid/content/pm/PackageManager$NameNotFoundException;
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -476,7 +475,6 @@
 
 .method private fillCampaignParameters(Ljava/util/Map;)V
     .locals 7
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -489,7 +487,7 @@
     .end annotation
 
     .prologue
-    .local p1, hit:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p1, "hit":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v6, "gmob_t"
 
     const-string v5, "gclid"
@@ -503,7 +501,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/google/analytics/tracking/android/GAThread;
     check-cast p0, Ljava/lang/String;
 
     invoke-static {p0}, Lcom/google/analytics/tracking/android/Utils;->filterCampaign(Ljava/lang/String;)Ljava/lang/String;
@@ -511,7 +509,7 @@
     move-result-object v0
 
     .line 240
-    .local v0, campaign:Ljava/lang/String;
+    .local v0, "campaign":Ljava/lang/String;
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v2
@@ -529,7 +527,7 @@
     move-result-object v1
 
     .line 251
-    .local v1, paramsMap:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v1, "paramsMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v2, "campaignContent"
 
     const-string v3, "utm_content"
@@ -633,7 +631,6 @@
 
 .method private fillExceptionParameters(Ljava/util/Map;)V
     .locals 12
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -646,7 +643,7 @@
     .end annotation
 
     .prologue
-    .local p1, hit:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p1, "hit":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v11, "rawException"
 
     .line 157
@@ -659,17 +656,17 @@
     check-cast v7, Ljava/lang/String;
 
     .line 158
-    .local v7, rawExceptionString:Ljava/lang/String;
+    .local v7, "rawExceptionString":Ljava/lang/String;
     if-nez v7, :cond_1
 
     .line 187
-    .end local p0
+    .end local p0    # "this":Lcom/google/analytics/tracking/android/GAThread;
     :cond_0
     :goto_0
     return-void
 
     .line 161
-    .restart local p0
+    .restart local p0    # "this":Lcom/google/analytics/tracking/android/GAThread;
     :cond_1
     const-string v10, "rawException"
 
@@ -681,26 +678,26 @@
     move-result-object v8
 
     .line 163
-    .local v8, rawExceptionStringBytes:[B
+    .local v8, "rawExceptionStringBytes":[B
     new-instance v2, Ljava/io/ByteArrayInputStream;
 
     invoke-direct {v2, v8}, Ljava/io/ByteArrayInputStream;-><init>([B)V
 
     .line 166
-    .local v2, byteStream:Ljava/io/ByteArrayInputStream;
+    .local v2, "byteStream":Ljava/io/ByteArrayInputStream;
     :try_start_0
     new-instance v6, Ljava/io/ObjectInputStream;
 
     invoke-direct {v6, v2}, Ljava/io/ObjectInputStream;-><init>(Ljava/io/InputStream;)V
 
     .line 167
-    .local v6, objectInputStream:Ljava/io/ObjectInputStream;
+    .local v6, "objectInputStream":Ljava/io/ObjectInputStream;
     invoke-virtual {v6}, Ljava/io/ObjectInputStream;->readObject()Ljava/lang/Object;
 
     move-result-object v9
 
     .line 168
-    .local v9, readObject:Ljava/lang/Object;
+    .local v9, "readObject":Ljava/lang/Object;
     invoke-virtual {v6}, Ljava/io/ObjectInputStream;->close()V
 
     .line 169
@@ -719,13 +716,13 @@
     .catch Ljava/lang/ClassNotFoundException; {:try_start_0 .. :try_end_0} :catch_1
 
     .line 183
-    .local v4, exception:Ljava/lang/Throwable;
+    .local v4, "exception":Ljava/lang/Throwable;
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     .line 184
-    .local v1, additionalPackages:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
+    .local v1, "additionalPackages":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     new-instance v5, Lcom/google/analytics/tracking/android/StandardExceptionParser;
 
     iget-object v10, p0, Lcom/google/analytics/tracking/android/GAThread;->mContext:Landroid/content/Context;
@@ -733,7 +730,7 @@
     invoke-direct {v5, v10, v1}, Lcom/google/analytics/tracking/android/StandardExceptionParser;-><init>(Landroid/content/Context;Ljava/util/Collection;)V
 
     .line 185
-    .local v5, exceptionParser:Lcom/google/analytics/tracking/android/ExceptionParser;
+    .local v5, "exceptionParser":Lcom/google/analytics/tracking/android/ExceptionParser;
     const-string v10, "exDescription"
 
     const-string v11, "exceptionThreadName"
@@ -742,7 +739,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/google/analytics/tracking/android/GAThread;
     check-cast p0, Ljava/lang/String;
 
     invoke-interface {v5, p0, v4}, Lcom/google/analytics/tracking/android/ExceptionParser;->getDescription(Ljava/lang/String;Ljava/lang/Throwable;)Ljava/lang/String;
@@ -754,19 +751,19 @@
     goto :goto_0
 
     .line 174
-    .end local v1           #additionalPackages:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
-    .end local v4           #exception:Ljava/lang/Throwable;
-    .end local v5           #exceptionParser:Lcom/google/analytics/tracking/android/ExceptionParser;
-    .end local v6           #objectInputStream:Ljava/io/ObjectInputStream;
-    .end local v9           #readObject:Ljava/lang/Object;
-    .restart local p0
+    .end local v1    # "additionalPackages":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
+    .end local v4    # "exception":Ljava/lang/Throwable;
+    .end local v5    # "exceptionParser":Lcom/google/analytics/tracking/android/ExceptionParser;
+    .end local v6    # "objectInputStream":Ljava/io/ObjectInputStream;
+    .end local v9    # "readObject":Ljava/lang/Object;
+    .restart local p0    # "this":Lcom/google/analytics/tracking/android/GAThread;
     :catch_0
     move-exception v10
 
     move-object v3, v10
 
     .line 175
-    .local v3, e:Ljava/io/IOException;
+    .local v3, "e":Ljava/io/IOException;
     const-string v10, "IOException reading exception"
 
     invoke-static {v10}, Lcom/google/analytics/tracking/android/Log;->w(Ljava/lang/String;)I
@@ -774,14 +771,14 @@
     goto :goto_0
 
     .line 177
-    .end local v3           #e:Ljava/io/IOException;
+    .end local v3    # "e":Ljava/io/IOException;
     :catch_1
     move-exception v10
 
     move-object v3, v10
 
     .line 178
-    .local v3, e:Ljava/lang/ClassNotFoundException;
+    .local v3, "e":Ljava/lang/ClassNotFoundException;
     const-string v10, "ClassNotFoundException reading exception"
 
     invoke-static {v10}, Lcom/google/analytics/tracking/android/Log;->w(Ljava/lang/String;)I
@@ -807,7 +804,7 @@
     move-result-object v0
 
     .line 367
-    .local v0, result:Ljava/lang/String;
+    .local v0, "result":Ljava/lang/String;
     invoke-direct {p0, v0}, Lcom/google/analytics/tracking/android/GAThread;->storeClientId(Ljava/lang/String;)Z
 
     move-result v1
@@ -824,7 +821,7 @@
 
 .method static getAndClearCampaign(Landroid/content/Context;)Ljava/lang/String;
     .locals 9
-    .parameter "context"
+    .param p0, "context"    # Landroid/content/Context;
     .annotation build Lcom/google/android/gms/common/util/VisibleForTesting;
     .end annotation
 
@@ -842,13 +839,13 @@
     move-result-object v2
 
     .line 432
-    .local v2, input:Ljava/io/FileInputStream;
+    .local v2, "input":Ljava/io/FileInputStream;
     const/16 v5, 0x2000
 
     new-array v3, v5, [B
 
     .line 433
-    .local v3, inputBytes:[B
+    .local v3, "inputBytes":[B
     const/4 v5, 0x0
 
     const/16 v6, 0x2000
@@ -858,7 +855,7 @@
     move-result v4
 
     .line 434
-    .local v4, readLen:I
+    .local v4, "readLen":I
     invoke-virtual {v2}, Ljava/io/FileInputStream;->available()I
 
     move-result v5
@@ -881,16 +878,16 @@
     move-object v5, v7
 
     .line 461
-    .end local v2           #input:Ljava/io/FileInputStream;
-    .end local v3           #inputBytes:[B
-    .end local v4           #readLen:I
+    .end local v2    # "input":Ljava/io/FileInputStream;
+    .end local v3    # "inputBytes":[B
+    .end local v4    # "readLen":I
     :goto_0
     return-object v5
 
     .line 442
-    .restart local v2       #input:Ljava/io/FileInputStream;
-    .restart local v3       #inputBytes:[B
-    .restart local v4       #readLen:I
+    .restart local v2    # "input":Ljava/io/FileInputStream;
+    .restart local v3    # "inputBytes":[B
+    .restart local v4    # "readLen":I
     :cond_0
     invoke-virtual {v2}, Ljava/io/FileInputStream;->close()V
 
@@ -921,7 +918,7 @@
     invoke-direct {v0, v3, v5, v4}, Ljava/lang/String;-><init>([BII)V
 
     .line 449
-    .local v0, campaignString:Ljava/lang/String;
+    .local v0, "campaignString":Ljava/lang/String;
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -951,17 +948,17 @@
     goto :goto_0
 
     .line 452
-    .end local v0           #campaignString:Ljava/lang/String;
-    .end local v2           #input:Ljava/io/FileInputStream;
-    .end local v3           #inputBytes:[B
-    .end local v4           #readLen:I
+    .end local v0    # "campaignString":Ljava/lang/String;
+    .end local v2    # "input":Ljava/io/FileInputStream;
+    .end local v3    # "inputBytes":[B
+    .end local v4    # "readLen":I
     :catch_0
     move-exception v5
 
     move-object v1, v5
 
     .line 454
-    .local v1, e:Ljava/io/FileNotFoundException;
+    .local v1, "e":Ljava/io/FileNotFoundException;
     const-string v5, "No campaign data found."
 
     invoke-static {v5}, Lcom/google/analytics/tracking/android/Log;->i(Ljava/lang/String;)I
@@ -972,14 +969,14 @@
     goto :goto_0
 
     .line 456
-    .end local v1           #e:Ljava/io/FileNotFoundException;
+    .end local v1    # "e":Ljava/io/FileNotFoundException;
     :catch_1
     move-exception v5
 
     move-object v1, v5
 
     .line 459
-    .local v1, e:Ljava/io/IOException;
+    .local v1, "e":Ljava/io/IOException;
     const-string v5, "Error reading campaign data."
 
     invoke-static {v5}, Lcom/google/analytics/tracking/android/Log;->e(Ljava/lang/String;)I
@@ -997,7 +994,6 @@
 
 .method private getHostUrl(Ljava/util/Map;)Ljava/lang/String;
     .locals 3
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1011,7 +1007,7 @@
     .end annotation
 
     .prologue
-    .local p1, hit:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p1, "hit":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v2, "useSecure"
 
     .line 139
@@ -1024,7 +1020,7 @@
     check-cast v0, Ljava/lang/String;
 
     .line 140
-    .local v0, hitUrl:Ljava/lang/String;
+    .local v0, "hitUrl":Ljava/lang/String;
     if-nez v0, :cond_0
 
     .line 141
@@ -1043,7 +1039,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/google/analytics/tracking/android/GAThread;
     check-cast p0, Ljava/lang/String;
 
     invoke-static {p0}, Lcom/google/analytics/tracking/android/Utils;->safeParseBoolean(Ljava/lang/String;)Z
@@ -1070,7 +1066,7 @@
     goto :goto_0
 
     .line 147
-    .restart local p0
+    .restart local p0    # "this":Lcom/google/analytics/tracking/android/GAThread;
     :cond_2
     const-string v0, "https://ssl.google-analytics.com/collect"
 
@@ -1079,7 +1075,7 @@
 
 .method static getInstance(Landroid/content/Context;)Lcom/google/analytics/tracking/android/GAThread;
     .locals 1
-    .parameter "ctx"
+    .param p0, "ctx"    # Landroid/content/Context;
 
     .prologue
     .line 65
@@ -1178,7 +1174,6 @@
 
 .method private isSampledOut(Ljava/util/Map;)Z
     .locals 8
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1191,10 +1186,10 @@
     .end annotation
 
     .prologue
-    .local p1, hit:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p1, "hit":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     const/4 v7, 0x1
 
-    const-wide/high16 v5, 0x4059
+    const-wide/high16 v5, 0x4059000000000000L
 
     const-string v4, "sampleRate"
 
@@ -1214,7 +1209,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/google/analytics/tracking/android/GAThread;
     check-cast p0, Ljava/lang/String;
 
     invoke-static {p0}, Lcom/google/analytics/tracking/android/Utils;->safeParseDouble(Ljava/lang/String;)D
@@ -1222,7 +1217,7 @@
     move-result-wide v1
 
     .line 194
-    .local v1, sampleRate:D
+    .local v1, "sampleRate":D
     const-wide/16 v3, 0x0
 
     cmpg-double v3, v1, v3
@@ -1232,12 +1227,12 @@
     move v3, v7
 
     .line 205
-    .end local v1           #sampleRate:D
+    .end local v1    # "sampleRate":D
     :goto_0
     return v3
 
     .line 197
-    .restart local v1       #sampleRate:D
+    .restart local v1    # "sampleRate":D
     :cond_0
     cmpg-double v3, v1, v5
 
@@ -1253,7 +1248,7 @@
     check-cast v0, Ljava/lang/String;
 
     .line 199
-    .local v0, clientId:Ljava/lang/String;
+    .local v0, "clientId":Ljava/lang/String;
     if-eqz v0, :cond_1
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
@@ -1280,8 +1275,8 @@
     goto :goto_0
 
     .line 205
-    .end local v0           #clientId:Ljava/lang/String;
-    .end local v1           #sampleRate:D
+    .end local v0    # "clientId":Ljava/lang/String;
+    .end local v1    # "sampleRate":D
     :cond_1
     const/4 v3, 0x0
 
@@ -1310,7 +1305,7 @@
 
 .method private printStackTrace(Ljava/lang/Throwable;)Ljava/lang/String;
     .locals 4
-    .parameter "t"
+    .param p1, "t"    # Ljava/lang/Throwable;
 
     .prologue
     .line 466
@@ -1319,13 +1314,13 @@
     invoke-direct {v0}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
     .line 467
-    .local v0, baos:Ljava/io/ByteArrayOutputStream;
+    .local v0, "baos":Ljava/io/ByteArrayOutputStream;
     new-instance v1, Ljava/io/PrintStream;
 
     invoke-direct {v1, v0}, Ljava/io/PrintStream;-><init>(Ljava/io/OutputStream;)V
 
     .line 468
-    .local v1, stream:Ljava/io/PrintStream;
+    .local v1, "stream":Ljava/io/PrintStream;
     invoke-virtual {p1, v1}, Ljava/lang/Throwable;->printStackTrace(Ljava/io/PrintStream;)V
 
     .line 469
@@ -1345,9 +1340,8 @@
 
 .method private putIfAbsent(Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
-    .parameter
-    .parameter "key"
-    .parameter "value"
+    .param p2, "key"    # Ljava/lang/String;
+    .param p3, "value"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1364,7 +1358,7 @@
 
     .prologue
     .line 233
-    .local p1, hit:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p1, "hit":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-interface {p1, p2}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
     move-result v0
@@ -1381,7 +1375,7 @@
 
 .method private queueToThread(Ljava/lang/Runnable;)V
     .locals 1
-    .parameter "r"
+    .param p1, "r"    # Ljava/lang/Runnable;
 
     .prologue
     .line 327
@@ -1395,7 +1389,7 @@
 
 .method private storeClientId(Ljava/lang/String;)Z
     .locals 6
-    .parameter "clientId"
+    .param p1, "clientId"    # Ljava/lang/String;
 
     .prologue
     const/4 v5, 0x0
@@ -1413,7 +1407,7 @@
     move-result-object v1
 
     .line 348
-    .local v1, fos:Ljava/io/FileOutputStream;
+    .local v1, "fos":Ljava/io/FileOutputStream;
     invoke-virtual {p1}, Ljava/lang/String;->getBytes()[B
 
     move-result-object v2
@@ -1430,7 +1424,7 @@
     const/4 v2, 0x1
 
     .line 356
-    .end local v1           #fos:Ljava/io/FileOutputStream;
+    .end local v1    # "fos":Ljava/io/FileOutputStream;
     :goto_0
     return v2
 
@@ -1441,7 +1435,7 @@
     move-object v0, v2
 
     .line 352
-    .local v0, e:Ljava/io/FileNotFoundException;
+    .local v0, "e":Ljava/io/FileNotFoundException;
     const-string v2, "Error creating clientId file."
 
     invoke-static {v2}, Lcom/google/analytics/tracking/android/Log;->e(Ljava/lang/String;)I
@@ -1452,14 +1446,14 @@
     goto :goto_0
 
     .line 354
-    .end local v0           #e:Ljava/io/FileNotFoundException;
+    .end local v0    # "e":Ljava/io/FileNotFoundException;
     :catch_1
     move-exception v2
 
     move-object v0, v2
 
     .line 355
-    .local v0, e:Ljava/io/IOException;
+    .local v0, "e":Ljava/io/IOException;
     const-string v2, "Error writing to clientId file."
 
     invoke-static {v2}, Lcom/google/analytics/tracking/android/Log;->e(Ljava/lang/String;)I
@@ -1544,7 +1538,7 @@
     const/4 v4, 0x0
 
     .line 384
-    .local v4, rslt:Ljava/lang/String;
+    .local v4, "rslt":Ljava/lang/String;
     :try_start_0
     iget-object v6, p0, Lcom/google/analytics/tracking/android/GAThread;->mContext:Landroid/content/Context;
 
@@ -1555,13 +1549,13 @@
     move-result-object v2
 
     .line 385
-    .local v2, input:Ljava/io/FileInputStream;
+    .local v2, "input":Ljava/io/FileInputStream;
     const/16 v6, 0x80
 
     new-array v0, v6, [B
 
     .line 386
-    .local v0, bytes:[B
+    .local v0, "bytes":[B
     const/4 v6, 0x0
 
     const/16 v7, 0x80
@@ -1571,7 +1565,7 @@
     move-result v3
 
     .line 387
-    .local v3, readLen:I
+    .local v3, "readLen":I
     invoke-virtual {v2}, Ljava/io/FileInputStream;->available()I
 
     move-result v6
@@ -1617,9 +1611,9 @@
     .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_1
 
     .line 412
-    .end local v0           #bytes:[B
-    .end local v2           #input:Ljava/io/FileInputStream;
-    .end local v3           #readLen:I
+    .end local v0    # "bytes":[B
+    .end local v2    # "input":Ljava/io/FileInputStream;
+    .end local v3    # "readLen":I
     :goto_0
     if-nez v4, :cond_1
 
@@ -1633,9 +1627,9 @@
     return-object v4
 
     .line 399
-    .restart local v0       #bytes:[B
-    .restart local v2       #input:Ljava/io/FileInputStream;
-    .restart local v3       #readLen:I
+    .restart local v0    # "bytes":[B
+    .restart local v2    # "input":Ljava/io/FileInputStream;
+    .restart local v3    # "readLen":I
     :cond_2
     :try_start_1
     new-instance v5, Ljava/lang/String;
@@ -1649,8 +1643,8 @@
     .catch Ljava/lang/NumberFormatException; {:try_start_1 .. :try_end_1} :catch_1
 
     .line 400
-    .end local v4           #rslt:Ljava/lang/String;
-    .local v5, rslt:Ljava/lang/String;
+    .end local v4    # "rslt":Ljava/lang/String;
+    .local v5, "rslt":Ljava/lang/String;
     :try_start_2
     invoke-virtual {v2}, Ljava/io/FileInputStream;->close()V
     :try_end_2
@@ -1660,21 +1654,21 @@
 
     move-object v4, v5
 
-    .end local v5           #rslt:Ljava/lang/String;
-    .restart local v4       #rslt:Ljava/lang/String;
+    .end local v5    # "rslt":Ljava/lang/String;
+    .restart local v4    # "rslt":Ljava/lang/String;
     goto :goto_0
 
     .line 404
-    .end local v0           #bytes:[B
-    .end local v2           #input:Ljava/io/FileInputStream;
-    .end local v3           #readLen:I
+    .end local v0    # "bytes":[B
+    .end local v2    # "input":Ljava/io/FileInputStream;
+    .end local v3    # "readLen":I
     :catch_0
     move-exception v6
 
     move-object v1, v6
 
     .line 405
-    .local v1, e:Ljava/io/IOException;
+    .local v1, "e":Ljava/io/IOException;
     :goto_1
     const-string v6, "Error reading clientId file, deleting it."
 
@@ -1690,14 +1684,14 @@
     goto :goto_0
 
     .line 407
-    .end local v1           #e:Ljava/io/IOException;
+    .end local v1    # "e":Ljava/io/IOException;
     :catch_1
     move-exception v6
 
     move-object v1, v6
 
     .line 408
-    .local v1, e:Ljava/lang/NumberFormatException;
+    .local v1, "e":Ljava/lang/NumberFormatException;
     :goto_2
     const-string v6, "cliendId file doesn\'t have long value, deleting it."
 
@@ -1713,12 +1707,12 @@
     goto :goto_0
 
     .line 407
-    .end local v1           #e:Ljava/lang/NumberFormatException;
-    .end local v4           #rslt:Ljava/lang/String;
-    .restart local v0       #bytes:[B
-    .restart local v2       #input:Ljava/io/FileInputStream;
-    .restart local v3       #readLen:I
-    .restart local v5       #rslt:Ljava/lang/String;
+    .end local v1    # "e":Ljava/lang/NumberFormatException;
+    .end local v4    # "rslt":Ljava/lang/String;
+    .restart local v0    # "bytes":[B
+    .restart local v2    # "input":Ljava/io/FileInputStream;
+    .restart local v3    # "readLen":I
+    .restart local v5    # "rslt":Ljava/lang/String;
     :catch_2
     move-exception v6
 
@@ -1726,13 +1720,13 @@
 
     move-object v4, v5
 
-    .end local v5           #rslt:Ljava/lang/String;
-    .restart local v4       #rslt:Ljava/lang/String;
+    .end local v5    # "rslt":Ljava/lang/String;
+    .restart local v4    # "rslt":Ljava/lang/String;
     goto :goto_2
 
     .line 404
-    .end local v4           #rslt:Ljava/lang/String;
-    .restart local v5       #rslt:Ljava/lang/String;
+    .end local v4    # "rslt":Ljava/lang/String;
+    .restart local v5    # "rslt":Ljava/lang/String;
     :catch_3
     move-exception v6
 
@@ -1740,31 +1734,31 @@
 
     move-object v4, v5
 
-    .end local v5           #rslt:Ljava/lang/String;
-    .restart local v4       #rslt:Ljava/lang/String;
+    .end local v5    # "rslt":Ljava/lang/String;
+    .restart local v4    # "rslt":Ljava/lang/String;
     goto :goto_1
 
     .line 402
-    .end local v0           #bytes:[B
-    .end local v2           #input:Ljava/io/FileInputStream;
-    .end local v3           #readLen:I
+    .end local v0    # "bytes":[B
+    .end local v2    # "input":Ljava/io/FileInputStream;
+    .end local v3    # "readLen":I
     :catch_4
     move-exception v6
 
     goto :goto_0
 
-    .end local v4           #rslt:Ljava/lang/String;
-    .restart local v0       #bytes:[B
-    .restart local v2       #input:Ljava/io/FileInputStream;
-    .restart local v3       #readLen:I
-    .restart local v5       #rslt:Ljava/lang/String;
+    .end local v4    # "rslt":Ljava/lang/String;
+    .restart local v0    # "bytes":[B
+    .restart local v2    # "input":Ljava/io/FileInputStream;
+    .restart local v3    # "readLen":I
+    .restart local v5    # "rslt":Ljava/lang/String;
     :catch_5
     move-exception v6
 
     move-object v4, v5
 
-    .end local v5           #rslt:Ljava/lang/String;
-    .restart local v4       #rslt:Ljava/lang/String;
+    .end local v5    # "rslt":Ljava/lang/String;
+    .restart local v4    # "rslt":Ljava/lang/String;
     goto :goto_0
 .end method
 
@@ -1782,7 +1776,7 @@
 
 .method public requestAppOptOut(Lcom/google/analytics/tracking/android/GoogleAnalytics$AppOptOutCallback;)V
     .locals 1
-    .parameter "callback"
+    .param p1, "callback"    # Lcom/google/analytics/tracking/android/GoogleAnalytics$AppOptOutCallback;
 
     .prologue
     .line 304
@@ -1798,7 +1792,7 @@
 
 .method public requestClientId(Lcom/google/analytics/tracking/android/AnalyticsThread$ClientIdCallback;)V
     .locals 1
-    .parameter "callback"
+    .param p1, "callback"    # Lcom/google/analytics/tracking/android/AnalyticsThread$ClientIdCallback;
 
     .prologue
     .line 316
@@ -1889,7 +1883,7 @@
     check-cast v1, Ljava/lang/Runnable;
 
     .line 519
-    .local v1, r:Ljava/lang/Runnable;
+    .local v1, "r":Ljava/lang/Runnable;
     iget-boolean v3, p0, Lcom/google/analytics/tracking/android/GAThread;->mDisabled:Z
 
     if-nez v3, :cond_1
@@ -1903,14 +1897,14 @@
     goto :goto_1
 
     .line 522
-    .end local v1           #r:Ljava/lang/Runnable;
+    .end local v1    # "r":Ljava/lang/Runnable;
     :catch_0
     move-exception v3
 
     move-object v0, v3
 
     .line 523
-    .local v0, e:Ljava/lang/InterruptedException;
+    .local v0, "e":Ljava/lang/InterruptedException;
     :try_start_3
     invoke-virtual {v0}, Ljava/lang/InterruptedException;->toString()Ljava/lang/String;
 
@@ -1923,14 +1917,14 @@
     goto :goto_1
 
     .line 525
-    .end local v0           #e:Ljava/lang/InterruptedException;
+    .end local v0    # "e":Ljava/lang/InterruptedException;
     :catch_1
     move-exception v3
 
     move-object v2, v3
 
     .line 526
-    .local v2, t:Ljava/lang/Throwable;
+    .local v2, "t":Ljava/lang/Throwable;
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1966,12 +1960,12 @@
     goto :goto_1
 
     .line 483
-    .end local v2           #t:Ljava/lang/Throwable;
+    .end local v2    # "t":Ljava/lang/Throwable;
     :catch_2
     move-exception v0
 
     .line 485
-    .restart local v0       #e:Ljava/lang/InterruptedException;
+    .restart local v0    # "e":Ljava/lang/InterruptedException;
     const-string v3, "sleep interrupted in GAThread initialize"
 
     invoke-static {v3}, Lcom/google/analytics/tracking/android/Log;->w(Ljava/lang/String;)I
@@ -1979,14 +1973,14 @@
     goto :goto_0
 
     .line 505
-    .end local v0           #e:Ljava/lang/InterruptedException;
+    .end local v0    # "e":Ljava/lang/InterruptedException;
     :catch_3
     move-exception v3
 
     move-object v2, v3
 
     .line 506
-    .restart local v2       #t:Ljava/lang/Throwable;
+    .restart local v2    # "t":Ljava/lang/Throwable;
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -2022,14 +2016,13 @@
     goto :goto_1
 
     .line 533
-    .end local v2           #t:Ljava/lang/Throwable;
+    .end local v2    # "t":Ljava/lang/Throwable;
     :cond_2
     return-void
 .end method
 
 .method public sendHit(Ljava/util/Map;)V
     .locals 5
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -2043,19 +2036,19 @@
 
     .prologue
     .line 106
-    .local p1, hit:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p1, "hit":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0, p1}, Ljava/util/HashMap;-><init>(Ljava/util/Map;)V
 
     .line 107
-    .local v0, hitCopy:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v0, "hitCopy":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v1
 
     .line 108
-    .local v1, hitTime:J
+    .local v1, "hitTime":J
     const-string v3, "hitTime"
 
     invoke-static {v1, v2}, Ljava/lang/Long;->toString(J)Ljava/lang/String;
@@ -2077,7 +2070,7 @@
 
 .method public setAppOptOut(Z)V
     .locals 1
-    .parameter "appOptOut"
+    .param p1, "appOptOut"    # Z
 
     .prologue
     .line 275

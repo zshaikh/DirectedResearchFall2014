@@ -104,8 +104,6 @@
 # virtual methods
 .method public addIDType(Lcom/inmobi/androidsdk/IMAdRequest$IMIDType;Ljava/lang/String;)V
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 476
@@ -195,7 +193,6 @@
 
 .method public getIDType(Lcom/inmobi/androidsdk/IMAdRequest$IMIDType;)Ljava/lang/String;
     .locals 1
-    .parameter
 
     .prologue
     .line 490
@@ -326,7 +323,6 @@
 
 .method public removeIDType(Lcom/inmobi/androidsdk/IMAdRequest$IMIDType;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 505
@@ -346,7 +342,6 @@
 
 .method public setAge(I)V
     .locals 0
-    .parameter
 
     .prologue
     .line 423
@@ -358,7 +353,6 @@
 
 .method public setAreaCode(Ljava/lang/String;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 258
@@ -370,7 +364,6 @@
 
 .method public setCurrentLocation(Landroid/location/Location;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 175
@@ -382,7 +375,6 @@
 
 .method public setDateOfBirth(Ljava/util/Calendar;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 267
@@ -394,7 +386,6 @@
 
 .method public setDateOfBirth(Ljava/util/Date;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 288
@@ -421,7 +412,6 @@
 
 .method public setEducation(Lcom/inmobi/androidsdk/IMAdRequest$EducationType;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 385
@@ -433,7 +423,6 @@
 
 .method public setEthnicity(Lcom/inmobi/androidsdk/IMAdRequest$EthnicityType;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 404
@@ -445,7 +434,6 @@
 
 .method public setGender(Lcom/inmobi/androidsdk/IMAdRequest$GenderType;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 309
@@ -457,7 +445,6 @@
 
 .method public setIncome(I)V
     .locals 0
-    .parameter
 
     .prologue
     .line 366
@@ -469,7 +456,6 @@
 
 .method public setInterests(Ljava/lang/String;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 442
@@ -481,7 +467,6 @@
 
 .method public setKeywords(Ljava/lang/String;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 328
@@ -493,7 +478,6 @@
 
 .method public setLocationInquiryAllowed(Z)V
     .locals 0
-    .parameter
 
     .prologue
     .line 156
@@ -505,9 +489,6 @@
 
 .method public setLocationWithCityStateCountry(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 3
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const-string v2, "-"
@@ -553,7 +534,6 @@
 
 .method public setPostalCode(Ljava/lang/String;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 239
@@ -565,7 +545,6 @@
 
 .method public setRequestParams(Ljava/util/Map;)V
     .locals 0
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -587,7 +566,6 @@
 
 .method public setSearchString(Ljava/lang/String;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 347
@@ -599,7 +577,6 @@
 
 .method public setTestMode(Z)V
     .locals 0
-    .parameter
 
     .prologue
     .line 220

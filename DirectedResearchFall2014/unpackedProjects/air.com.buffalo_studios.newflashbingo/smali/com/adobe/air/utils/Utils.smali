@@ -36,9 +36,6 @@
 
 .method public static GetLayoutViewFromRuntime(Ljava/lang/String;Landroid/content/res/Resources;Landroid/view/LayoutInflater;)Landroid/view/View;
     .locals 3
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const/4 v2, 0x0
@@ -72,7 +69,6 @@
 
 .method public static GetLibCorePath(Landroid/content/Context;)Ljava/lang/String;
     .locals 1
-    .parameter
 
     .prologue
     .line 251
@@ -87,7 +83,6 @@
 
 .method public static GetLibSTLPath(Landroid/content/Context;)Ljava/lang/String;
     .locals 1
-    .parameter
 
     .prologue
     .line 256
@@ -102,8 +97,6 @@
 
 .method public static GetNativeExtensionPath(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
     .locals 7
-    .parameter
-    .parameter
 
     .prologue
     const-class v0, Landroid/content/pm/ApplicationInfo;
@@ -308,8 +301,6 @@
 
 .method public static GetNativeLibraryPath(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
     .locals 5
-    .parameter
-    .parameter
 
     .prologue
     const-class v0, Landroid/content/pm/ApplicationInfo;
@@ -501,8 +492,6 @@
 
 .method public static GetResourceStringFromRuntime(Ljava/lang/String;Landroid/content/res/Resources;)Ljava/lang/String;
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     .line 219
@@ -540,9 +529,6 @@
 
 .method public static GetTelemetrySettings(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 5
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const/4 v3, 0x0
@@ -562,8 +548,8 @@
 
     invoke-virtual {v0, p1, v1}, Landroid/content/res/AssetManager;->open(Ljava/lang/String;I)Ljava/io/InputStream;
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result-object v0
 
@@ -573,8 +559,8 @@
 
     invoke-direct {v1}, Ljava/io/ByteArrayOutputStream;-><init>()V
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_5
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     .line 359
     :try_start_2
@@ -583,8 +569,8 @@
     .line 361
     invoke-virtual {v1}, Ljava/io/ByteArrayOutputStream;->toString()Ljava/lang/String;
     :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_6
+    .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
     move-result-object v2
 
@@ -778,9 +764,6 @@
 
 .method public static GetWidgetInViewByName(Ljava/lang/String;Landroid/content/res/Resources;Landroid/view/View;)Landroid/view/View;
     .locals 2
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 225
@@ -817,7 +800,6 @@
 
 .method public static ReplaceTextContentWithStars(Ljava/lang/String;)Ljava/lang/String;
     .locals 4
-    .parameter
 
     .prologue
     .line 209
@@ -856,8 +838,6 @@
 
 .method public static copyTo(Ljava/io/File;Ljava/io/File;)V
     .locals 6
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -933,8 +913,6 @@
 
 .method public static copyTo(Ljava/io/InputStream;Ljava/io/OutputStream;)V
     .locals 3
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -1008,8 +986,6 @@
 
 .method public static parseKeyValuePairFile(Ljava/io/File;Ljava/lang/String;)Ljava/util/HashMap;
     .locals 1
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1046,8 +1022,6 @@
 
 .method public static parseKeyValuePairFile(Ljava/io/InputStream;Ljava/lang/String;)Ljava/util/HashMap;
     .locals 5
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1143,7 +1117,6 @@
 
 .method public static setRuntimePackageName(Ljava/lang/String;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 65
@@ -1155,8 +1128,6 @@
 
 .method public static writeBufferToFile(Ljava/lang/StringBuffer;Ljava/io/File;)V
     .locals 2
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -1185,8 +1156,6 @@
 
 .method public static writeOut(Ljava/io/InputStream;Ljava/io/File;)V
     .locals 1
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -1211,8 +1180,6 @@
 
 .method public static writeStringToFile(Ljava/lang/String;Ljava/io/File;)V
     .locals 1
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -1237,8 +1204,6 @@
 
 .method public static writeStringToFile(Ljava/lang/String;Ljava/lang/String;)Z
     .locals 5
-    .parameter
-    .parameter
 
     .prologue
     const/4 v4, 0x0
@@ -1312,8 +1277,6 @@
 
 .method public static writeThrough(Ljava/io/InputStream;Ljava/io/OutputStream;)V
     .locals 3
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;

@@ -71,8 +71,6 @@
 
 .method public static addToList(Ljava/util/List;Ljava/lang/Object;)Ljava/util/List;
     .locals 0
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -87,18 +85,18 @@
 
     .prologue
     .line 170
-    .local p0, list:Ljava/util/List;,"Ljava/util/List<TT;>;"
-    .local p1, element:Ljava/lang/Object;,"TT;"
+    .local p0, "list":Ljava/util/List;, "Ljava/util/List<TT;>;"
+    .local p1, "element":Ljava/lang/Object;, "TT;"
     if-nez p0, :cond_0
 
     .line 171
     new-instance p0, Ljava/util/ArrayList;
 
-    .end local p0           #list:Ljava/util/List;,"Ljava/util/List<TT;>;"
+    .end local p0    # "list":Ljava/util/List;, "Ljava/util/List<TT;>;"
     invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
 
     .line 173
-    .restart local p0       #list:Ljava/util/List;,"Ljava/util/List<TT;>;"
+    .restart local p0    # "list":Ljava/util/List;, "Ljava/util/List<TT;>;"
     :cond_0
     invoke-interface {p0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -108,7 +106,6 @@
 
 .method public static arrayAsIterable([Ljava/lang/Object;)Ljava/lang/Iterable;
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -121,7 +118,7 @@
 
     .prologue
     .line 244
-    .local p0, array:[Ljava/lang/Object;,"[TT;"
+    .local p0, "array":[Ljava/lang/Object;, "[TT;"
     new-instance v0, Lcom/flurry/org/codehaus/jackson/map/util/ArrayBuilders$ArrayIterator;
 
     invoke-direct {v0, p0}, Lcom/flurry/org/codehaus/jackson/map/util/ArrayBuilders$ArrayIterator;-><init>([Ljava/lang/Object;)V
@@ -131,7 +128,6 @@
 
 .method public static arrayAsIterator([Ljava/lang/Object;)Ljava/util/Iterator;
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -144,7 +140,7 @@
 
     .prologue
     .line 239
-    .local p0, array:[Ljava/lang/Object;,"[TT;"
+    .local p0, "array":[Ljava/lang/Object;, "[TT;"
     new-instance v0, Lcom/flurry/org/codehaus/jackson/map/util/ArrayBuilders$ArrayIterator;
 
     invoke-direct {v0, p0}, Lcom/flurry/org/codehaus/jackson/map/util/ArrayBuilders$ArrayIterator;-><init>([Ljava/lang/Object;)V
@@ -154,7 +150,6 @@
 
 .method public static arrayToSet([Ljava/lang/Object;)Ljava/util/HashSet;
     .locals 5
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -167,32 +162,32 @@
 
     .prologue
     .line 147
-    .local p0, elements:[Ljava/lang/Object;,"[TT;"
+    .local p0, "elements":[Ljava/lang/Object;, "[TT;"
     new-instance v4, Ljava/util/HashSet;
 
     invoke-direct {v4}, Ljava/util/HashSet;-><init>()V
 
     .line 148
-    .local v4, result:Ljava/util/HashSet;,"Ljava/util/HashSet<TT;>;"
+    .local v4, "result":Ljava/util/HashSet;, "Ljava/util/HashSet<TT;>;"
     if-eqz p0, :cond_0
 
     .line 149
     move-object v0, p0
 
-    .local v0, arr$:[Ljava/lang/Object;
+    .local v0, "arr$":[Ljava/lang/Object;
     array-length v3, v0
 
-    .local v3, len$:I
+    .local v3, "len$":I
     const/4 v2, 0x0
 
-    .local v2, i$:I
+    .local v2, "i$":I
     :goto_0
     if-ge v2, v3, :cond_0
 
     aget-object v1, v0, v2
 
     .line 150
-    .local v1, elem:Ljava/lang/Object;,"TT;"
+    .local v1, "elem":Ljava/lang/Object;, "TT;"
     invoke-virtual {v4, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
     .line 149
@@ -201,18 +196,16 @@
     goto :goto_0
 
     .line 153
-    .end local v0           #arr$:[Ljava/lang/Object;
-    .end local v1           #elem:Ljava/lang/Object;,"TT;"
-    .end local v2           #i$:I
-    .end local v3           #len$:I
+    .end local v0    # "arr$":[Ljava/lang/Object;
+    .end local v1    # "elem":Ljava/lang/Object;, "TT;"
+    .end local v2    # "i$":I
+    .end local v3    # "len$":I
     :cond_0
     return-object v4
 .end method
 
 .method public static insertInList([Ljava/lang/Object;Ljava/lang/Object;)[Ljava/lang/Object;
     .locals 6
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -222,15 +215,15 @@
     .end annotation
 
     .prologue
-    .local p0, array:[Ljava/lang/Object;,"[TT;"
-    .local p1, element:Ljava/lang/Object;,"TT;"
+    .local p0, "array":[Ljava/lang/Object;, "[TT;"
+    .local p1, "element":Ljava/lang/Object;, "TT;"
     const/4 v5, 0x0
 
     .line 184
     array-length v1, p0
 
     .line 186
-    .local v1, len:I
+    .local v1, "len":I
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v3
@@ -254,7 +247,7 @@
     move-object v2, v0
 
     .line 187
-    .local v2, result:[Ljava/lang/Object;,"[TT;"
+    .local v2, "result":[Ljava/lang/Object;, "[TT;"
     if-lez v1, :cond_0
 
     .line 188
@@ -272,8 +265,6 @@
 
 .method public static insertInListNoDup([Ljava/lang/Object;Ljava/lang/Object;)[Ljava/lang/Object;
     .locals 8
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -283,8 +274,8 @@
     .end annotation
 
     .prologue
-    .local p0, array:[Ljava/lang/Object;,"[TT;"
-    .local p1, element:Ljava/lang/Object;,"TT;"
+    .local p0, "array":[Ljava/lang/Object;, "[TT;"
+    .local p1, "element":Ljava/lang/Object;, "TT;"
     const/4 v7, 0x1
 
     const/4 v6, 0x0
@@ -293,10 +284,10 @@
     array-length v2, p0
 
     .line 208
-    .local v2, len:I
+    .local v2, "len":I
     const/4 v1, 0x0
 
-    .local v1, ix:I
+    .local v1, "ix":I
     :goto_0
     if-ge v1, v2, :cond_2
 
@@ -337,7 +328,7 @@
     move-object v3, v0
 
     .line 216
-    .local v3, result:[Ljava/lang/Object;,"[TT;"
+    .local v3, "result":[Ljava/lang/Object;, "[TT;"
     invoke-static {p0, v6, v3, v7, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
     .line 217
@@ -349,7 +340,7 @@
     goto :goto_1
 
     .line 208
-    .end local v3           #result:[Ljava/lang/Object;,"[TT;"
+    .end local v3    # "result":[Ljava/lang/Object;, "[TT;"
     :cond_1
     add-int/lit8 v1, v1, 0x1
 
@@ -380,7 +371,7 @@
     move-object v3, v0
 
     .line 224
-    .restart local v3       #result:[Ljava/lang/Object;,"[TT;"
+    .restart local v3    # "result":[Ljava/lang/Object;, "[TT;"
     if-lez v2, :cond_3
 
     .line 225

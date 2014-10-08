@@ -10,7 +10,7 @@
 # direct methods
 .method public constructor <init>(Lcom/tapjoy/mraid/controller/Network;)V
     .locals 0
-    .parameter "mraidNetworkController"
+    .param p1, "mraidNetworkController"    # Lcom/tapjoy/mraid/controller/Network;
 
     .prologue
     .line 24
@@ -27,8 +27,8 @@
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 2
-    .parameter "context"
-    .parameter "intent"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
     .line 33
@@ -37,7 +37,7 @@
     move-result-object v0
 
     .line 34
-    .local v0, action:Ljava/lang/String;
+    .local v0, "action":Ljava/lang/String;
     const-string v1, "android.net.conn.CONNECTIVITY_CHANGE"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z

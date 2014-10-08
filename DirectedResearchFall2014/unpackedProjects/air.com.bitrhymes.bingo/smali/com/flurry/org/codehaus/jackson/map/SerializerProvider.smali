@@ -43,7 +43,7 @@
 
 .method protected constructor <init>(Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;)V
     .locals 1
-    .parameter "config"
+    .param p1, "config"    # Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;
 
     .prologue
     .line 38
@@ -81,8 +81,7 @@
 
 .method public constructSpecializedType(Lcom/flurry/org/codehaus/jackson/type/JavaType;Ljava/lang/Class;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .locals 1
-    .parameter "baseType"
-    .parameter
+    .param p1, "baseType"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -95,7 +94,7 @@
 
     .prologue
     .line 190
-    .local p2, subclass:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p2, "subclass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/map/SerializerProvider;->_config:Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;
 
     invoke-virtual {v0, p1, p2}, Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;->constructSpecializedType(Lcom/flurry/org/codehaus/jackson/type/JavaType;Ljava/lang/Class;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
@@ -107,7 +106,7 @@
 
 .method public constructType(Ljava/lang/reflect/Type;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .locals 1
-    .parameter "type"
+    .param p1, "type"    # Ljava/lang/reflect/Type;
 
     .prologue
     .line 183
@@ -162,9 +161,9 @@
 
 .method public final defaultSerializeField(Ljava/lang/String;Ljava/lang/Object;Lcom/flurry/org/codehaus/jackson/JsonGenerator;)V
     .locals 3
-    .parameter "fieldName"
-    .parameter "value"
-    .parameter "jgen"
+    .param p1, "fieldName"    # Ljava/lang/String;
+    .param p2, "value"    # Ljava/lang/Object;
+    .param p3, "jgen"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -199,7 +198,7 @@
     move-result-object v0
 
     .line 466
-    .local v0, cls:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local v0, "cls":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const/4 v1, 0x1
 
     invoke-virtual {p0, v0, v1, v2}, Lcom/flurry/org/codehaus/jackson/map/SerializerProvider;->findTypedValueSerializer(Ljava/lang/Class;ZLcom/flurry/org/codehaus/jackson/map/BeanProperty;)Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;
@@ -213,7 +212,7 @@
 
 .method public final defaultSerializeNull(Lcom/flurry/org/codehaus/jackson/JsonGenerator;)V
     .locals 2
-    .parameter "jgen"
+    .param p1, "jgen"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -237,8 +236,8 @@
 
 .method public final defaultSerializeValue(Ljava/lang/Object;Lcom/flurry/org/codehaus/jackson/JsonGenerator;)V
     .locals 3
-    .parameter "value"
-    .parameter "jgen"
+    .param p1, "value"    # Ljava/lang/Object;
+    .param p2, "jgen"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -270,7 +269,7 @@
     move-result-object v0
 
     .line 446
-    .local v0, cls:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local v0, "cls":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const/4 v1, 0x1
 
     invoke-virtual {p0, v0, v1, v2}, Lcom/flurry/org/codehaus/jackson/map/SerializerProvider;->findTypedValueSerializer(Ljava/lang/Class;ZLcom/flurry/org/codehaus/jackson/map/BeanProperty;)Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;
@@ -305,8 +304,8 @@
 
 .method public final findTypedValueSerializer(Lcom/flurry/org/codehaus/jackson/type/JavaType;Z)Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;
     .locals 1
-    .parameter "valueType"
-    .parameter "cache"
+    .param p1, "valueType"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .param p2, "cache"    # Z
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -363,8 +362,7 @@
 
 .method public final findTypedValueSerializer(Ljava/lang/Class;Z)Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;
     .locals 1
-    .parameter
-    .parameter "cache"
+    .param p2, "cache"    # Z
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -388,7 +386,7 @@
 
     .prologue
     .line 336
-    .local p1, valueType:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p1, "valueType":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, p2, v0}, Lcom/flurry/org/codehaus/jackson/map/SerializerProvider;->findTypedValueSerializer(Ljava/lang/Class;ZLcom/flurry/org/codehaus/jackson/map/BeanProperty;)Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;
@@ -422,7 +420,7 @@
 
 .method public final findValueSerializer(Lcom/flurry/org/codehaus/jackson/type/JavaType;)Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;
     .locals 1
-    .parameter "serializationType"
+    .param p1, "serializationType"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -478,7 +476,6 @@
 
 .method public final findValueSerializer(Ljava/lang/Class;)Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -502,7 +499,7 @@
 
     .prologue
     .line 305
-    .local p1, runtimeType:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p1, "runtimeType":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, v0}, Lcom/flurry/org/codehaus/jackson/map/SerializerProvider;->findValueSerializer(Ljava/lang/Class;Lcom/flurry/org/codehaus/jackson/map/BeanProperty;)Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;
@@ -617,8 +614,8 @@
 
 .method public final getKeySerializer(Lcom/flurry/org/codehaus/jackson/type/JavaType;Lcom/flurry/org/codehaus/jackson/map/BeanProperty;)Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;
     .locals 1
-    .parameter "valueType"
-    .parameter "property"
+    .param p1, "valueType"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .param p2, "property"    # Lcom/flurry/org/codehaus/jackson/map/BeanProperty;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -720,7 +717,7 @@
 
 .method public final isEnabled(Lcom/flurry/org/codehaus/jackson/map/SerializationConfig$Feature;)Z
     .locals 1
-    .parameter "feature"
+    .param p1, "feature"    # Lcom/flurry/org/codehaus/jackson/map/SerializationConfig$Feature;
 
     .prologue
     .line 153

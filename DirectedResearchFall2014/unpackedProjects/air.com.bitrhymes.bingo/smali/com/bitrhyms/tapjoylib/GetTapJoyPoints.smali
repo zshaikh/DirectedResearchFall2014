@@ -22,8 +22,8 @@
 # virtual methods
 .method public call(Lcom/adobe/fre/FREContext;[Lcom/adobe/fre/FREObject;)Lcom/adobe/fre/FREObject;
     .locals 6
-    .parameter "context"
-    .parameter "args"
+    .param p1, "context"    # Lcom/adobe/fre/FREContext;
+    .param p2, "args"    # [Lcom/adobe/fre/FREObject;
 
     .prologue
     .line 17
@@ -37,7 +37,7 @@
     move-object v1, v0
 
     .line 20
-    .local v1, adec:Lcom/bitrhyms/tapjoylib/AndroidExtensionContext;
+    .local v1, "adec":Lcom/bitrhyms/tapjoylib/AndroidExtensionContext;
     new-instance v2, Landroid/app/AlertDialog$Builder;
 
     iget-object v4, v1, Lcom/bitrhyms/tapjoylib/AndroidExtensionContext;->activity:Landroid/app/Activity;
@@ -45,7 +45,7 @@
     invoke-direct {v2, v4}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
     .line 22
-    .local v2, builder:Landroid/app/AlertDialog$Builder;
+    .local v2, "builder":Landroid/app/AlertDialog$Builder;
     const/4 v4, 0x1
 
     :try_start_0
@@ -81,7 +81,7 @@
     move-object v3, v4
 
     .line 27
-    .local v3, e:Ljava/lang/Exception;
+    .local v3, "e":Ljava/lang/Exception;
     const-string v4, "ERROR_EVENT"
 
     invoke-virtual {v3}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
@@ -95,8 +95,8 @@
 
 .method public getUpdatePoints(Ljava/lang/String;I)V
     .locals 4
-    .parameter "currencyName"
-    .parameter "pointTotal"
+    .param p1, "currencyName"    # Ljava/lang/String;
+    .param p2, "pointTotal"    # I
 
     .prologue
     .line 35
@@ -105,7 +105,7 @@
     move-result-object v0
 
     .line 36
-    .local v0, context:Lcom/adobe/fre/FREContext;
+    .local v0, "context":Lcom/adobe/fre/FREContext;
     if-eqz v0, :cond_0
 
     .line 37
@@ -159,7 +159,7 @@
 
 .method public getUpdatePointsFailed(Ljava/lang/String;)V
     .locals 3
-    .parameter "error"
+    .param p1, "error"    # Ljava/lang/String;
 
     .prologue
     .line 47
@@ -168,7 +168,7 @@
     move-result-object v0
 
     .line 48
-    .local v0, context:Lcom/adobe/fre/FREContext;
+    .local v0, "context":Lcom/adobe/fre/FREContext;
     if-eqz v0, :cond_0
 
     .line 49

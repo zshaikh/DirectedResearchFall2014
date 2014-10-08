@@ -10,7 +10,6 @@
 # direct methods
 .method synthetic constructor <init>(Lcom/flurry/android/bn;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 249
@@ -23,8 +22,6 @@
 
 .method private constructor <init>(Lcom/flurry/android/bn;B)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 249
@@ -244,9 +241,6 @@
 
 .method public final onShowCustomView(Landroid/view/View;ILandroid/webkit/WebChromeClient$CustomViewCallback;)V
     .locals 6
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const/4 v5, 0x1
@@ -343,7 +337,7 @@
 
     move-result-object v0
 
-    const/high16 v1, -0x100
+    const/high16 v1, -0x1000000
 
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setBackgroundColor(I)V
 
@@ -515,8 +509,6 @@
 
 .method public final onShowCustomView(Landroid/view/View;Landroid/webkit/WebChromeClient$CustomViewCallback;)V
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 261

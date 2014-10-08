@@ -37,8 +37,8 @@
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 13
-    .parameter "context"
-    .parameter "intent"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "intent"    # Landroid/content/Intent;
     .annotation build Landroid/annotation/SuppressLint;
         value = {
             "NewApi"
@@ -107,7 +107,7 @@
     move-result-object v1
 
     .line 73
-    .local v1, extras:Landroid/os/Bundle;
+    .local v1, "extras":Landroid/os/Bundle;
     if-eqz v1, :cond_2
 
     .line 75
@@ -124,7 +124,7 @@
     invoke-direct {v7}, Ljava/util/HashMap;-><init>()V
 
     .line 87
-    .local v7, referralParams:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v7, "referralParams":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v9
@@ -149,8 +149,8 @@
     invoke-static {v9, v10}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 149
-    .end local v1           #extras:Landroid/os/Bundle;
-    .end local v7           #referralParams:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .end local v1    # "extras":Landroid/os/Bundle;
+    .end local v7    # "referralParams":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     :cond_3
     :goto_0
     return-void
@@ -162,13 +162,13 @@
     move-object v0, v9
 
     .line 80
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     goto :goto_0
 
     .line 94
-    .end local v0           #e:Ljava/lang/Exception;
-    .restart local v1       #extras:Landroid/os/Bundle;
-    .restart local v7       #referralParams:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .end local v0    # "e":Ljava/lang/Exception;
+    .restart local v1    # "extras":Landroid/os/Bundle;
+    .restart local v7    # "referralParams":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     :cond_4
     const-string v9, "referrer"
 
@@ -177,7 +177,7 @@
     move-result-object v8
 
     .line 95
-    .local v8, referrer:Ljava/lang/String;
+    .local v8, "referrer":Ljava/lang/String;
     if-eqz v8, :cond_5
 
     invoke-virtual {v8}, Ljava/lang/String;->length()I
@@ -244,7 +244,7 @@
     move-result-object v4
 
     .line 119
-    .local v4, params:[Ljava/lang/String;
+    .local v4, "params":[Ljava/lang/String;
     array-length v9, v4
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
@@ -255,7 +255,7 @@
     if-lt v10, v9, :cond_9
 
     .line 135
-    .end local v4           #params:[Ljava/lang/String;
+    .end local v4    # "params":[Ljava/lang/String;
     :cond_8
     :goto_2
     invoke-virtual {v7}, Ljava/lang/Object;->toString()Ljava/lang/String;
@@ -263,7 +263,7 @@
     move-result-object v6
 
     .line 138
-    .local v6, referParams:Ljava/lang/String;
+    .local v6, "referParams":Ljava/lang/String;
     const/4 v9, 0x1
 
     invoke-virtual {v6}, Ljava/lang/String;->length()I
@@ -305,7 +305,7 @@
     move-result-object v5
 
     .line 143
-    .local v5, pref:Landroid/content/SharedPreferences;
+    .local v5, "pref":Landroid/content/SharedPreferences;
     invoke-interface {v5}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v9
@@ -344,15 +344,15 @@
     goto/16 :goto_0
 
     .line 105
-    .end local v5           #pref:Landroid/content/SharedPreferences;
-    .end local v6           #referParams:Ljava/lang/String;
+    .end local v5    # "pref":Landroid/content/SharedPreferences;
+    .end local v6    # "referParams":Ljava/lang/String;
     :catch_1
     move-exception v9
 
     move-object v0, v9
 
     .line 107
-    .local v0, e:Ljava/io/UnsupportedEncodingException;
+    .local v0, "e":Ljava/io/UnsupportedEncodingException;
     sget-boolean v9, Lcom/kochava/android/tracker/Global;->DEBUGERROR:Z
 
     if-eqz v9, :cond_3
@@ -382,14 +382,14 @@
     goto/16 :goto_0
 
     .line 119
-    .end local v0           #e:Ljava/io/UnsupportedEncodingException;
-    .restart local v4       #params:[Ljava/lang/String;
+    .end local v0    # "e":Ljava/io/UnsupportedEncodingException;
+    .restart local v4    # "params":[Ljava/lang/String;
     :cond_9
     :try_start_3
     aget-object v3, v4, v10
 
     .line 121
-    .local v3, param:Ljava/lang/String;
+    .local v3, "param":Ljava/lang/String;
     const-string v11, "="
 
     invoke-virtual {v3, v11}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
@@ -397,7 +397,7 @@
     move-result-object v2
 
     .line 123
-    .local v2, pair:[Ljava/lang/String;
+    .local v2, "pair":[Ljava/lang/String;
     array-length v11, v2
 
     const/4 v12, 0x1
@@ -436,16 +436,16 @@
     goto :goto_3
 
     .line 129
-    .end local v2           #pair:[Ljava/lang/String;
-    .end local v3           #param:Ljava/lang/String;
-    .end local v4           #params:[Ljava/lang/String;
+    .end local v2    # "pair":[Ljava/lang/String;
+    .end local v3    # "param":Ljava/lang/String;
+    .end local v4    # "params":[Ljava/lang/String;
     :catch_2
     move-exception v9
 
     move-object v0, v9
 
     .line 131
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     sget-boolean v9, Lcom/kochava/android/tracker/Global;->DEBUG:Z
 
     if-eqz v9, :cond_8

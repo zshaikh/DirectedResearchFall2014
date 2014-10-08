@@ -113,9 +113,8 @@
 
 .method constructor <init>(Lcom/fiksu/asotracking/RatingPrompter;Lcom/fiksu/asotracking/RatingPrompter$PromptResult;Landroid/app/Activity;)V
     .locals 0
-    .parameter
-    .parameter "userRated"
-    .parameter "activity"
+    .param p2, "userRated"    # Lcom/fiksu/asotracking/RatingPrompter$PromptResult;
+    .param p3, "activity"    # Landroid/app/Activity;
 
     .prologue
     .line 75
@@ -134,8 +133,8 @@
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 5
-    .parameter "dialog"
-    .parameter "which"
+    .param p1, "dialog"    # Landroid/content/DialogInterface;
+    .param p2, "which"    # I
 
     .prologue
     const/4 v3, 0x5
@@ -165,7 +164,7 @@
 
     iget-object v1, p0, Lcom/fiksu/asotracking/RatingPrompter$RatingClickListener;->this$0:Lcom/fiksu/asotracking/RatingPrompter;
 
-    #getter for: Lcom/fiksu/asotracking/RatingPrompter;->mActivity:Landroid/app/Activity;
+    # getter for: Lcom/fiksu/asotracking/RatingPrompter;->mActivity:Landroid/app/Activity;
     invoke-static {v1}, Lcom/fiksu/asotracking/RatingPrompter;->access$0(Lcom/fiksu/asotracking/RatingPrompter;)Landroid/app/Activity;
 
     move-result-object v1
@@ -181,7 +180,7 @@
 
     iget-object v1, p0, Lcom/fiksu/asotracking/RatingPrompter$RatingClickListener;->this$0:Lcom/fiksu/asotracking/RatingPrompter;
 
-    #getter for: Lcom/fiksu/asotracking/RatingPrompter;->mActivity:Landroid/app/Activity;
+    # getter for: Lcom/fiksu/asotracking/RatingPrompter;->mActivity:Landroid/app/Activity;
     invoke-static {v1}, Lcom/fiksu/asotracking/RatingPrompter;->access$0(Lcom/fiksu/asotracking/RatingPrompter;)Landroid/app/Activity;
 
     move-result-object v1
@@ -195,13 +194,13 @@
     .line 84
     iget-object v0, p0, Lcom/fiksu/asotracking/RatingPrompter$RatingClickListener;->this$0:Lcom/fiksu/asotracking/RatingPrompter;
 
-    #calls: Lcom/fiksu/asotracking/RatingPrompter;->setUserRated()V
+    # invokes: Lcom/fiksu/asotracking/RatingPrompter;->setUserRated()V
     invoke-static {v0}, Lcom/fiksu/asotracking/RatingPrompter;->access$1(Lcom/fiksu/asotracking/RatingPrompter;)V
 
     .line 85
     iget-object v0, p0, Lcom/fiksu/asotracking/RatingPrompter$RatingClickListener;->this$0:Lcom/fiksu/asotracking/RatingPrompter;
 
-    #getter for: Lcom/fiksu/asotracking/RatingPrompter;->mActivity:Landroid/app/Activity;
+    # getter for: Lcom/fiksu/asotracking/RatingPrompter;->mActivity:Landroid/app/Activity;
     invoke-static {v0}, Lcom/fiksu/asotracking/RatingPrompter;->access$0(Lcom/fiksu/asotracking/RatingPrompter;)Landroid/app/Activity;
 
     move-result-object v0
@@ -218,7 +217,7 @@
 
     iget-object v4, p0, Lcom/fiksu/asotracking/RatingPrompter$RatingClickListener;->this$0:Lcom/fiksu/asotracking/RatingPrompter;
 
-    #getter for: Lcom/fiksu/asotracking/RatingPrompter;->mActivity:Landroid/app/Activity;
+    # getter for: Lcom/fiksu/asotracking/RatingPrompter;->mActivity:Landroid/app/Activity;
     invoke-static {v4}, Lcom/fiksu/asotracking/RatingPrompter;->access$0(Lcom/fiksu/asotracking/RatingPrompter;)Landroid/app/Activity;
 
     move-result-object v4
@@ -251,7 +250,7 @@
 
     iget-object v1, p0, Lcom/fiksu/asotracking/RatingPrompter$RatingClickListener;->this$0:Lcom/fiksu/asotracking/RatingPrompter;
 
-    #getter for: Lcom/fiksu/asotracking/RatingPrompter;->mActivity:Landroid/app/Activity;
+    # getter for: Lcom/fiksu/asotracking/RatingPrompter;->mActivity:Landroid/app/Activity;
     invoke-static {v1}, Lcom/fiksu/asotracking/RatingPrompter;->access$0(Lcom/fiksu/asotracking/RatingPrompter;)Landroid/app/Activity;
 
     move-result-object v1
@@ -265,7 +264,7 @@
     .line 89
     iget-object v0, p0, Lcom/fiksu/asotracking/RatingPrompter$RatingClickListener;->this$0:Lcom/fiksu/asotracking/RatingPrompter;
 
-    #calls: Lcom/fiksu/asotracking/RatingPrompter;->setUserRated()V
+    # invokes: Lcom/fiksu/asotracking/RatingPrompter;->setUserRated()V
     invoke-static {v0}, Lcom/fiksu/asotracking/RatingPrompter;->access$1(Lcom/fiksu/asotracking/RatingPrompter;)V
 
     goto :goto_0
@@ -276,7 +275,7 @@
 
     iget-object v1, p0, Lcom/fiksu/asotracking/RatingPrompter$RatingClickListener;->this$0:Lcom/fiksu/asotracking/RatingPrompter;
 
-    #getter for: Lcom/fiksu/asotracking/RatingPrompter;->mActivity:Landroid/app/Activity;
+    # getter for: Lcom/fiksu/asotracking/RatingPrompter;->mActivity:Landroid/app/Activity;
     invoke-static {v1}, Lcom/fiksu/asotracking/RatingPrompter;->access$0(Lcom/fiksu/asotracking/RatingPrompter;)Landroid/app/Activity;
 
     move-result-object v1

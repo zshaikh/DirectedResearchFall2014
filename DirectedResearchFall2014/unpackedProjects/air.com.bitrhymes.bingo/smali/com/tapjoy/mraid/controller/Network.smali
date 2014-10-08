@@ -28,8 +28,8 @@
 # direct methods
 .method public constructor <init>(Lcom/tapjoy/mraid/view/MraidView;Landroid/content/Context;)V
     .locals 1
-    .parameter "adView"
-    .parameter "context"
+    .param p1, "adView"    # Lcom/tapjoy/mraid/view/MraidView;
+    .param p2, "context"    # Landroid/content/Context;
 
     .prologue
     .line 31
@@ -60,7 +60,7 @@
     const/4 v2, 0x0
 
     .line 46
-    .local v2, ni:Landroid/net/NetworkInfo;
+    .local v2, "ni":Landroid/net/NetworkInfo;
     :try_start_0
     iget-object v4, p0, Lcom/tapjoy/mraid/controller/Network;->mConnectivityManager:Landroid/net/ConnectivityManager;
 
@@ -75,7 +75,7 @@
     const-string v1, "unknown"
 
     .line 54
-    .local v1, networkType:Ljava/lang/String;
+    .local v1, "networkType":Ljava/lang/String;
     if-nez v2, :cond_1
 
     .line 55
@@ -110,21 +110,21 @@
     return-object v1
 
     .line 48
-    .end local v1           #networkType:Ljava/lang/String;
+    .end local v1    # "networkType":Ljava/lang/String;
     :catch_0
     move-exception v4
 
     move-object v0, v4
 
     .line 50
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0
 
     .line 58
-    .end local v0           #e:Ljava/lang/Exception;
-    .restart local v1       #networkType:Ljava/lang/String;
+    .end local v0    # "e":Ljava/lang/Exception;
+    .restart local v1    # "networkType":Ljava/lang/String;
     :cond_1
     sget-object v4, Lcom/tapjoy/mraid/controller/Network$1;->$SwitchMap$android$net$NetworkInfo$State:[I
 
@@ -146,7 +146,7 @@
     move-result v3
 
     .line 67
-    .local v3, type:I
+    .local v3, "type":I
     if-nez v3, :cond_2
 
     .line 68
@@ -155,7 +155,7 @@
     goto :goto_1
 
     .line 60
-    .end local v3           #type:I
+    .end local v3    # "type":I
     :pswitch_0
     const-string v1, "unknown"
 
@@ -170,7 +170,7 @@
     goto :goto_1
 
     .line 69
-    .restart local v3       #type:I
+    .restart local v3    # "type":I
     :cond_2
     const/4 v4, 0x1
 
@@ -223,7 +223,7 @@
     move-result-object v0
 
     .line 107
-    .local v0, script:Ljava/lang/String;
+    .local v0, "script":Ljava/lang/String;
     const-string v1, "MRAID Network"
 
     invoke-static {v1, v0}, Lcom/tapjoy/TapjoyLog;->d(Ljava/lang/String;Ljava/lang/String;)V

@@ -37,7 +37,7 @@
 
 .method private createJsonElement(Ljava/lang/Object;)Lcom/fusepowered/m1/google/gson/JsonElement;
     .locals 1
-    .parameter "value"
+    .param p1, "value"    # Ljava/lang/Object;
 
     .prologue
     .line 122
@@ -60,8 +60,8 @@
 # virtual methods
 .method public add(Ljava/lang/String;Lcom/fusepowered/m1/google/gson/JsonElement;)V
     .locals 1
-    .parameter "property"
-    .parameter "value"
+    .param p1, "property"    # Ljava/lang/String;
+    .param p2, "value"    # Lcom/fusepowered/m1/google/gson/JsonElement;
 
     .prologue
     .line 54
@@ -82,8 +82,8 @@
 
 .method public addProperty(Ljava/lang/String;Ljava/lang/Boolean;)V
     .locals 1
-    .parameter "property"
-    .parameter "value"
+    .param p1, "property"    # Ljava/lang/String;
+    .param p2, "value"    # Ljava/lang/Boolean;
 
     .prologue
     .line 101
@@ -99,8 +99,8 @@
 
 .method public addProperty(Ljava/lang/String;Ljava/lang/Character;)V
     .locals 1
-    .parameter "property"
-    .parameter "value"
+    .param p1, "property"    # Ljava/lang/String;
+    .param p2, "value"    # Ljava/lang/Character;
 
     .prologue
     .line 112
@@ -116,8 +116,8 @@
 
 .method public addProperty(Ljava/lang/String;Ljava/lang/Number;)V
     .locals 1
-    .parameter "property"
-    .parameter "value"
+    .param p1, "property"    # Ljava/lang/String;
+    .param p2, "value"    # Ljava/lang/Number;
 
     .prologue
     .line 90
@@ -133,8 +133,8 @@
 
 .method public addProperty(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
-    .parameter "property"
-    .parameter "value"
+    .param p1, "property"    # Ljava/lang/String;
+    .param p2, "value"    # Ljava/lang/String;
 
     .prologue
     .line 79
@@ -170,7 +170,7 @@
     invoke-direct {v2}, Lcom/fusepowered/m1/google/gson/JsonObject;-><init>()V
 
     .line 39
-    .local v2, result:Lcom/fusepowered/m1/google/gson/JsonObject;
+    .local v2, "result":Lcom/fusepowered/m1/google/gson/JsonObject;
     iget-object v3, p0, Lcom/fusepowered/m1/google/gson/JsonObject;->members:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap;
 
     invoke-virtual {v3}, Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap;->entrySet()Ljava/util/Set;
@@ -181,8 +181,8 @@
 
     move-result-object v1
 
-    .end local p0
-    .local v1, i$:Ljava/util/Iterator;
+    .end local p0    # "this":Lcom/fusepowered/m1/google/gson/JsonObject;
+    .local v1, "i$":Ljava/util/Iterator;
     :goto_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
@@ -197,7 +197,7 @@
     check-cast v0, Ljava/util/Map$Entry;
 
     .line 40
-    .local v0, entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Lcom/fusepowered/m1/google/gson/JsonElement;>;"
+    .local v0, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Lcom/fusepowered/m1/google/gson/JsonElement;>;"
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object p0
@@ -219,7 +219,7 @@
     goto :goto_0
 
     .line 42
-    .end local v0           #entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Lcom/fusepowered/m1/google/gson/JsonElement;>;"
+    .end local v0    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Lcom/fusepowered/m1/google/gson/JsonElement;>;"
     :cond_0
     return-object v2
 .end method
@@ -252,7 +252,7 @@
 
 .method public equals(Ljava/lang/Object;)Z
     .locals 2
-    .parameter "o"
+    .param p1, "o"    # Ljava/lang/Object;
 
     .prologue
     .line 187
@@ -264,7 +264,7 @@
 
     check-cast p1, Lcom/fusepowered/m1/google/gson/JsonObject;
 
-    .end local p1
+    .end local p1    # "o":Ljava/lang/Object;
     iget-object v0, p1, Lcom/fusepowered/m1/google/gson/JsonObject;->members:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap;
 
     iget-object v1, p0, Lcom/fusepowered/m1/google/gson/JsonObject;->members:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap;
@@ -289,7 +289,7 @@
 
 .method public get(Ljava/lang/String;)Lcom/fusepowered/m1/google/gson/JsonElement;
     .locals 1
-    .parameter "memberName"
+    .param p1, "memberName"    # Ljava/lang/String;
 
     .prologue
     .line 152
@@ -299,7 +299,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/fusepowered/m1/google/gson/JsonObject;
     check-cast p0, Lcom/fusepowered/m1/google/gson/JsonElement;
 
     return-object p0
@@ -307,7 +307,7 @@
 
 .method public getAsJsonArray(Ljava/lang/String;)Lcom/fusepowered/m1/google/gson/JsonArray;
     .locals 1
-    .parameter "memberName"
+    .param p1, "memberName"    # Ljava/lang/String;
 
     .prologue
     .line 172
@@ -317,7 +317,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/fusepowered/m1/google/gson/JsonObject;
     check-cast p0, Lcom/fusepowered/m1/google/gson/JsonArray;
 
     return-object p0
@@ -325,7 +325,7 @@
 
 .method public getAsJsonObject(Ljava/lang/String;)Lcom/fusepowered/m1/google/gson/JsonObject;
     .locals 1
-    .parameter "memberName"
+    .param p1, "memberName"    # Ljava/lang/String;
 
     .prologue
     .line 182
@@ -335,7 +335,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/fusepowered/m1/google/gson/JsonObject;
     check-cast p0, Lcom/fusepowered/m1/google/gson/JsonObject;
 
     return-object p0
@@ -343,7 +343,7 @@
 
 .method public getAsJsonPrimitive(Ljava/lang/String;)Lcom/fusepowered/m1/google/gson/JsonPrimitive;
     .locals 1
-    .parameter "memberName"
+    .param p1, "memberName"    # Ljava/lang/String;
 
     .prologue
     .line 162
@@ -353,7 +353,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/fusepowered/m1/google/gson/JsonObject;
     check-cast p0, Lcom/fusepowered/m1/google/gson/JsonPrimitive;
 
     return-object p0
@@ -361,7 +361,7 @@
 
 .method public has(Ljava/lang/String;)Z
     .locals 1
-    .parameter "memberName"
+    .param p1, "memberName"    # Ljava/lang/String;
 
     .prologue
     .line 142
@@ -390,7 +390,7 @@
 
 .method public remove(Ljava/lang/String;)Lcom/fusepowered/m1/google/gson/JsonElement;
     .locals 1
-    .parameter "property"
+    .param p1, "property"    # Ljava/lang/String;
 
     .prologue
     .line 68
@@ -400,7 +400,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/fusepowered/m1/google/gson/JsonObject;
     check-cast p0, Lcom/fusepowered/m1/google/gson/JsonElement;
 
     return-object p0

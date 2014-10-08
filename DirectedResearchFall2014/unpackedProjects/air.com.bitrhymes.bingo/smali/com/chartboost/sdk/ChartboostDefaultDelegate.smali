@@ -21,7 +21,7 @@
 # virtual methods
 .method public didCacheInterstitial(Ljava/lang/String;)V
     .locals 0
-    .parameter "location"
+    .param p1, "location"    # Ljava/lang/String;
 
     .prologue
     .line 33
@@ -38,7 +38,7 @@
 
 .method public didClickInterstitial(Ljava/lang/String;)V
     .locals 0
-    .parameter "location"
+    .param p1, "location"    # Ljava/lang/String;
 
     .prologue
     .line 53
@@ -55,7 +55,7 @@
 
 .method public didCloseInterstitial(Ljava/lang/String;)V
     .locals 0
-    .parameter "location"
+    .param p1, "location"    # Ljava/lang/String;
 
     .prologue
     .line 48
@@ -72,7 +72,7 @@
 
 .method public didDismissInterstitial(Ljava/lang/String;)V
     .locals 0
-    .parameter "location"
+    .param p1, "location"    # Ljava/lang/String;
 
     .prologue
     .line 43
@@ -89,7 +89,7 @@
 
 .method public didFailToLoadInterstitial(Ljava/lang/String;)V
     .locals 0
-    .parameter "location"
+    .param p1, "location"    # Ljava/lang/String;
 
     .prologue
     .line 38
@@ -106,7 +106,7 @@
 
 .method public didFailToLoadUrl(Ljava/lang/String;)V
     .locals 0
-    .parameter "url"
+    .param p1, "url"    # Ljava/lang/String;
 
     .prologue
     .line 134
@@ -115,7 +115,7 @@
 
 .method public didShowInterstitial(Ljava/lang/String;)V
     .locals 0
-    .parameter "location"
+    .param p1, "location"    # Ljava/lang/String;
 
     .prologue
     .line 58
@@ -132,7 +132,7 @@
 
 .method public shouldDisplayInterstitial(Ljava/lang/String;)Z
     .locals 1
-    .parameter "location"
+    .param p1, "location"    # Ljava/lang/String;
 
     .prologue
     .line 27
@@ -163,7 +163,7 @@
 
 .method public shouldRequestInterstitial(Ljava/lang/String;)Z
     .locals 1
-    .parameter "location"
+    .param p1, "location"    # Ljava/lang/String;
 
     .prologue
     .line 17

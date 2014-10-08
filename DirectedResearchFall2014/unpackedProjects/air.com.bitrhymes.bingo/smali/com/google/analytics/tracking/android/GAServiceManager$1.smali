@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/google/analytics/tracking/android/GAServiceManager;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 54
@@ -39,7 +38,7 @@
 # virtual methods
 .method public reportStoreIsEmpty(Z)V
     .locals 2
-    .parameter "isEmpty"
+    .param p1, "isEmpty"    # Z
 
     .prologue
     .line 57
@@ -47,7 +46,7 @@
 
     iget-object v1, p0, Lcom/google/analytics/tracking/android/GAServiceManager$1;->this$0:Lcom/google/analytics/tracking/android/GAServiceManager;
 
-    #getter for: Lcom/google/analytics/tracking/android/GAServiceManager;->connected:Z
+    # getter for: Lcom/google/analytics/tracking/android/GAServiceManager;->connected:Z
     invoke-static {v1}, Lcom/google/analytics/tracking/android/GAServiceManager;->access$000(Lcom/google/analytics/tracking/android/GAServiceManager;)Z
 
     move-result v1

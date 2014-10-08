@@ -23,10 +23,10 @@
 # direct methods
 .method public constructor <init>(Lcom/google/analytics/tracking/android/Tracker;Lcom/google/analytics/tracking/android/ServiceManager;Ljava/lang/Thread$UncaughtExceptionHandler;Landroid/content/Context;)V
     .locals 2
-    .parameter "tracker"
-    .parameter "serviceManager"
-    .parameter "originalHandler"
-    .parameter "context"
+    .param p1, "tracker"    # Lcom/google/analytics/tracking/android/Tracker;
+    .param p2, "serviceManager"    # Lcom/google/analytics/tracking/android/ServiceManager;
+    .param p3, "originalHandler"    # Ljava/lang/Thread$UncaughtExceptionHandler;
+    .param p4, "context"    # Landroid/content/Context;
 
     .prologue
     .line 48
@@ -134,7 +134,7 @@
 
 .method public setExceptionParser(Lcom/google/analytics/tracking/android/ExceptionParser;)V
     .locals 0
-    .parameter "exceptionParser"
+    .param p1, "exceptionParser"    # Lcom/google/analytics/tracking/android/ExceptionParser;
 
     .prologue
     .line 68
@@ -146,15 +146,15 @@
 
 .method public uncaughtException(Ljava/lang/Thread;Ljava/lang/Throwable;)V
     .locals 4
-    .parameter "t"
-    .parameter "e"
+    .param p1, "t"    # Ljava/lang/Thread;
+    .param p2, "e"    # Ljava/lang/Throwable;
 
     .prologue
     .line 73
     const-string v0, "UncaughtException"
 
     .line 74
-    .local v0, description:Ljava/lang/String;
+    .local v0, "description":Ljava/lang/String;
     iget-object v2, p0, Lcom/google/analytics/tracking/android/ExceptionReporter;->mExceptionParser:Lcom/google/analytics/tracking/android/ExceptionParser;
 
     if-eqz v2, :cond_0
@@ -169,7 +169,7 @@
     move-object v1, v2
 
     .line 76
-    .local v1, threadName:Ljava/lang/String;
+    .local v1, "threadName":Ljava/lang/String;
     :goto_0
     iget-object v2, p0, Lcom/google/analytics/tracking/android/ExceptionReporter;->mExceptionParser:Lcom/google/analytics/tracking/android/ExceptionParser;
 
@@ -178,7 +178,7 @@
     move-result-object v0
 
     .line 78
-    .end local v1           #threadName:Ljava/lang/String;
+    .end local v1    # "threadName":Ljava/lang/String;
     :cond_0
     new-instance v2, Ljava/lang/StringBuilder;
 

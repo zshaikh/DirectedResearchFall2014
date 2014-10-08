@@ -23,7 +23,6 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m2/m2l/MillennialInterstitial;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 107
@@ -36,7 +35,7 @@
 
 .method private fetchFinished(Lcom/fusepowered/m2/m2l/MoPubErrorCode;)V
     .locals 2
-    .parameter "errorToReport"
+    .param p1, "errorToReport"    # Lcom/fusepowered/m2/m2l/MoPubErrorCode;
 
     .prologue
     const-string v1, "MoPub"
@@ -44,7 +43,7 @@
     .line 166
     iget-object v0, p0, Lcom/fusepowered/m2/m2l/MillennialInterstitial$MillennialBroadcastReceiver;->this$0:Lcom/fusepowered/m2/m2l/MillennialInterstitial;
 
-    #getter for: Lcom/fusepowered/m2/m2l/MillennialInterstitial;->mMillennialInterstitial:Lcom/fusepowered/m1/android/MMInterstitial;
+    # getter for: Lcom/fusepowered/m2/m2l/MillennialInterstitial;->mMillennialInterstitial:Lcom/fusepowered/m1/android/MMInterstitial;
     invoke-static {v0}, Lcom/fusepowered/m2/m2l/MillennialInterstitial;->access$1(Lcom/fusepowered/m2/m2l/MillennialInterstitial;)Lcom/fusepowered/m1/android/MMInterstitial;
 
     move-result-object v0
@@ -65,7 +64,7 @@
     .line 168
     iget-object v0, p0, Lcom/fusepowered/m2/m2l/MillennialInterstitial$MillennialBroadcastReceiver;->this$0:Lcom/fusepowered/m2/m2l/MillennialInterstitial;
 
-    #getter for: Lcom/fusepowered/m2/m2l/MillennialInterstitial;->mInterstitialListener:Lcom/fusepowered/m2/m2l/CustomEventInterstitial$CustomEventInterstitialListener;
+    # getter for: Lcom/fusepowered/m2/m2l/MillennialInterstitial;->mInterstitialListener:Lcom/fusepowered/m2/m2l/CustomEventInterstitial$CustomEventInterstitialListener;
     invoke-static {v0}, Lcom/fusepowered/m2/m2l/MillennialInterstitial;->access$0(Lcom/fusepowered/m2/m2l/MillennialInterstitial;)Lcom/fusepowered/m2/m2l/CustomEventInterstitial$CustomEventInterstitialListener;
 
     move-result-object v0
@@ -87,7 +86,7 @@
     .line 171
     iget-object v0, p0, Lcom/fusepowered/m2/m2l/MillennialInterstitial$MillennialBroadcastReceiver;->this$0:Lcom/fusepowered/m2/m2l/MillennialInterstitial;
 
-    #getter for: Lcom/fusepowered/m2/m2l/MillennialInterstitial;->mInterstitialListener:Lcom/fusepowered/m2/m2l/CustomEventInterstitial$CustomEventInterstitialListener;
+    # getter for: Lcom/fusepowered/m2/m2l/MillennialInterstitial;->mInterstitialListener:Lcom/fusepowered/m2/m2l/CustomEventInterstitial$CustomEventInterstitialListener;
     invoke-static {v0}, Lcom/fusepowered/m2/m2l/MillennialInterstitial;->access$0(Lcom/fusepowered/m2/m2l/MillennialInterstitial;)Lcom/fusepowered/m2/m2l/CustomEventInterstitial$CustomEventInterstitialListener;
 
     move-result-object v0
@@ -101,7 +100,7 @@
 # virtual methods
 .method public displayStarted(Lcom/fusepowered/m1/android/MMAd;)V
     .locals 2
-    .parameter "ad"
+    .param p1, "ad"    # Lcom/fusepowered/m1/android/MMAd;
 
     .prologue
     .line 138
@@ -117,7 +116,7 @@
     .line 140
     iget-object v0, p0, Lcom/fusepowered/m2/m2l/MillennialInterstitial$MillennialBroadcastReceiver;->this$0:Lcom/fusepowered/m2/m2l/MillennialInterstitial;
 
-    #getter for: Lcom/fusepowered/m2/m2l/MillennialInterstitial;->mInterstitialListener:Lcom/fusepowered/m2/m2l/CustomEventInterstitial$CustomEventInterstitialListener;
+    # getter for: Lcom/fusepowered/m2/m2l/MillennialInterstitial;->mInterstitialListener:Lcom/fusepowered/m2/m2l/CustomEventInterstitial$CustomEventInterstitialListener;
     invoke-static {v0}, Lcom/fusepowered/m2/m2l/MillennialInterstitial;->access$0(Lcom/fusepowered/m2/m2l/MillennialInterstitial;)Lcom/fusepowered/m2/m2l/CustomEventInterstitial$CustomEventInterstitialListener;
 
     move-result-object v0
@@ -130,7 +129,7 @@
 
 .method public fetchFailure(Lcom/fusepowered/m1/android/MMAd;)V
     .locals 1
-    .parameter "ad"
+    .param p1, "ad"    # Lcom/fusepowered/m1/android/MMAd;
 
     .prologue
     .line 132
@@ -147,7 +146,7 @@
 
 .method public fetchFinishedCaching(Lcom/fusepowered/m1/android/MMAd;)V
     .locals 1
-    .parameter "ad"
+    .param p1, "ad"    # Lcom/fusepowered/m1/android/MMAd;
 
     .prologue
     .line 112
@@ -164,7 +163,7 @@
 
 .method public getAdFailure(Lcom/fusepowered/m1/android/MMAd;)V
     .locals 2
-    .parameter "ad"
+    .param p1, "ad"    # Lcom/fusepowered/m1/android/MMAd;
 
     .prologue
     .line 118
@@ -180,7 +179,7 @@
     .line 120
     iget-object v0, p0, Lcom/fusepowered/m2/m2l/MillennialInterstitial$MillennialBroadcastReceiver;->this$0:Lcom/fusepowered/m2/m2l/MillennialInterstitial;
 
-    #getter for: Lcom/fusepowered/m2/m2l/MillennialInterstitial;->mInterstitialListener:Lcom/fusepowered/m2/m2l/CustomEventInterstitial$CustomEventInterstitialListener;
+    # getter for: Lcom/fusepowered/m2/m2l/MillennialInterstitial;->mInterstitialListener:Lcom/fusepowered/m2/m2l/CustomEventInterstitial$CustomEventInterstitialListener;
     invoke-static {v0}, Lcom/fusepowered/m2/m2l/MillennialInterstitial;->access$0(Lcom/fusepowered/m2/m2l/MillennialInterstitial;)Lcom/fusepowered/m2/m2l/CustomEventInterstitial$CustomEventInterstitialListener;
 
     move-result-object v0
@@ -195,8 +194,8 @@
 
 .method public intentStarted(Lcom/fusepowered/m1/android/MMAd;Ljava/lang/String;)V
     .locals 2
-    .parameter "ad"
-    .parameter "intent"
+    .param p1, "ad"    # Lcom/fusepowered/m1/android/MMAd;
+    .param p2, "intent"    # Ljava/lang/String;
 
     .prologue
     .line 125
@@ -212,7 +211,7 @@
     .line 127
     iget-object v0, p0, Lcom/fusepowered/m2/m2l/MillennialInterstitial$MillennialBroadcastReceiver;->this$0:Lcom/fusepowered/m2/m2l/MillennialInterstitial;
 
-    #getter for: Lcom/fusepowered/m2/m2l/MillennialInterstitial;->mInterstitialListener:Lcom/fusepowered/m2/m2l/CustomEventInterstitial$CustomEventInterstitialListener;
+    # getter for: Lcom/fusepowered/m2/m2l/MillennialInterstitial;->mInterstitialListener:Lcom/fusepowered/m2/m2l/CustomEventInterstitial$CustomEventInterstitialListener;
     invoke-static {v0}, Lcom/fusepowered/m2/m2l/MillennialInterstitial;->access$0(Lcom/fusepowered/m2/m2l/MillennialInterstitial;)Lcom/fusepowered/m2/m2l/CustomEventInterstitial$CustomEventInterstitialListener;
 
     move-result-object v0
@@ -225,7 +224,7 @@
 
 .method public overlayClosed(Lcom/fusepowered/m1/android/MMAd;)V
     .locals 2
-    .parameter "ad"
+    .param p1, "ad"    # Lcom/fusepowered/m1/android/MMAd;
 
     .prologue
     .line 145
@@ -241,7 +240,7 @@
     .line 147
     iget-object v0, p0, Lcom/fusepowered/m2/m2l/MillennialInterstitial$MillennialBroadcastReceiver;->this$0:Lcom/fusepowered/m2/m2l/MillennialInterstitial;
 
-    #getter for: Lcom/fusepowered/m2/m2l/MillennialInterstitial;->mInterstitialListener:Lcom/fusepowered/m2/m2l/CustomEventInterstitial$CustomEventInterstitialListener;
+    # getter for: Lcom/fusepowered/m2/m2l/MillennialInterstitial;->mInterstitialListener:Lcom/fusepowered/m2/m2l/CustomEventInterstitial$CustomEventInterstitialListener;
     invoke-static {v0}, Lcom/fusepowered/m2/m2l/MillennialInterstitial;->access$0(Lcom/fusepowered/m2/m2l/MillennialInterstitial;)Lcom/fusepowered/m2/m2l/CustomEventInterstitial$CustomEventInterstitialListener;
 
     move-result-object v0
@@ -254,7 +253,7 @@
 
 .method register(Landroid/content/Context;)V
     .locals 1
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     .line 151
@@ -283,8 +282,8 @@
 
     invoke-virtual {v1, p0}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 161
     iput-object v3, p0, Lcom/fusepowered/m2/m2l/MillennialInterstitial$MillennialBroadcastReceiver;->mContext:Landroid/content/Context;
@@ -300,7 +299,7 @@
     move-object v0, v1
 
     .line 159
-    .local v0, exception:Ljava/lang/Exception;
+    .local v0, "exception":Ljava/lang/Exception;
     :try_start_1
     const-string v1, "MoPub"
 
@@ -316,7 +315,7 @@
     goto :goto_0
 
     .line 160
-    .end local v0           #exception:Ljava/lang/Exception;
+    .end local v0    # "exception":Ljava/lang/Exception;
     :catchall_0
     move-exception v1
 

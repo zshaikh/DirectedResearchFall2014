@@ -48,7 +48,6 @@
 
 .method public static disableHardwareAccl(Lcom/inmobi/androidsdk/ai/container/IMWebView;)V
     .locals 5
-    .parameter
 
     .prologue
     .line 248
@@ -141,7 +140,6 @@
 
 .method public static getDisplayHeight(Landroid/view/Display;)I
     .locals 6
-    .parameter
 
     .prologue
     const/4 v5, 0x0
@@ -289,7 +287,6 @@
 
 .method public static getDisplayWidth(Landroid/view/Display;)I
     .locals 6
-    .parameter
 
     .prologue
     const/4 v5, 0x0
@@ -582,8 +579,8 @@
 
     invoke-virtual {v2, v4}, Ljava/lang/Class;->getField(Ljava/lang/String;)Ljava/lang/reflect/Field;
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Ljava/lang/NoSuchFieldException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     move-result-object v2
 
@@ -599,8 +596,8 @@
 
     sput v1, Lcom/inmobi/androidsdk/ai/container/IMWrapperFunctions;->a:I
     :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
     .line 169
     :cond_0
@@ -626,8 +623,8 @@
 
     invoke-virtual {v2, v4}, Ljava/lang/Class;->getField(Ljava/lang/String;)Ljava/lang/reflect/Field;
     :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_0
     .catch Ljava/lang/NoSuchFieldException; {:try_start_4 .. :try_end_4} :catch_1
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
     move-result-object v2
 
@@ -661,7 +658,6 @@
 
 .method public static getParamLandscapeOrientation(I)I
     .locals 4
-    .parameter
 
     .prologue
     .line 84
@@ -719,7 +715,6 @@
 
 .method public static getParamPortraitOrientation(I)I
     .locals 4
-    .parameter
 
     .prologue
     .line 67
@@ -777,7 +772,6 @@
 
 .method public static getTapLocationX(Landroid/view/MotionEvent;)Ljava/lang/String;
     .locals 6
-    .parameter
 
     .prologue
     const/4 v5, 0x0
@@ -864,7 +858,6 @@
 
 .method public static getTapLocationY(Landroid/view/MotionEvent;)Ljava/lang/String;
     .locals 6
-    .parameter
 
     .prologue
     const/4 v5, 0x0
@@ -951,7 +944,6 @@
 
 .method public static getTapSize(Landroid/view/MotionEvent;)Ljava/lang/String;
     .locals 6
-    .parameter
 
     .prologue
     const/4 v5, 0x0

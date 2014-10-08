@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m2/m2l/M2RActivity;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1
@@ -40,8 +39,8 @@
 # virtual methods
 .method public onCloseButtonStateChange(Lcom/fusepowered/m2/m2l/MraidView;Z)V
     .locals 1
-    .parameter "view"
-    .parameter "enabled"
+    .param p1, "view"    # Lcom/fusepowered/m2/m2l/MraidView;
+    .param p2, "enabled"    # Z
 
     .prologue
     .line 132

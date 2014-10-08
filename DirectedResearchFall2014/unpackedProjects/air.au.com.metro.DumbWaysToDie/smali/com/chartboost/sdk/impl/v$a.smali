@@ -23,9 +23,6 @@
 # direct methods
 .method public constructor <init>(Lcom/chartboost/sdk/impl/v;Landroid/content/Context;Ljava/lang/String;)V
     .locals 6
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 31
@@ -83,8 +80,6 @@
 # virtual methods
 .method protected a(II)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 43

@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Ljava/lang/String;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 41
@@ -48,7 +47,7 @@
     invoke-direct {v0}, Lorg/apache/http/impl/client/DefaultHttpClient;-><init>()V
 
     .line 48
-    .local v0, client:Lorg/apache/http/client/HttpClient;
+    .local v0, "client":Lorg/apache/http/client/HttpClient;
     new-instance v2, Lorg/apache/http/client/methods/HttpGet;
 
     iget-object v4, p0, Lcom/fusepowered/m1/android/Utils$HttpUtils$1;->val$url:Ljava/lang/String;
@@ -56,13 +55,13 @@
     invoke-direct {v2, v4}, Lorg/apache/http/client/methods/HttpGet;-><init>(Ljava/lang/String;)V
 
     .line 49
-    .local v2, get:Lorg/apache/http/client/methods/HttpGet;
+    .local v2, "get":Lorg/apache/http/client/methods/HttpGet;
     invoke-interface {v0, v2}, Lorg/apache/http/client/HttpClient;->execute(Lorg/apache/http/client/methods/HttpUriRequest;)Lorg/apache/http/HttpResponse;
 
     move-result-object v3
 
     .line 50
-    .local v3, request:Lorg/apache/http/HttpResponse;
+    .local v3, "request":Lorg/apache/http/HttpResponse;
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -94,9 +93,9 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 56
-    .end local v0           #client:Lorg/apache/http/client/HttpClient;
-    .end local v2           #get:Lorg/apache/http/client/methods/HttpGet;
-    .end local v3           #request:Lorg/apache/http/HttpResponse;
+    .end local v0    # "client":Lorg/apache/http/client/HttpClient;
+    .end local v2    # "get":Lorg/apache/http/client/methods/HttpGet;
+    .end local v3    # "request":Lorg/apache/http/HttpResponse;
     :goto_0
     return-void
 
@@ -107,7 +106,7 @@
     move-object v1, v4
 
     .line 54
-    .local v1, e:Ljava/io/IOException;
+    .local v1, "e":Ljava/io/IOException;
     invoke-static {v1}, Lcom/fusepowered/m1/android/MMSDK$Log;->e(Ljava/lang/Throwable;)V
 
     goto :goto_0

@@ -18,7 +18,7 @@
 # direct methods
 .method public constructor <init>(Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;)V
     .locals 0
-    .parameter "f"
+    .param p1, "f"    # Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;
 
     .prologue
     .line 18
@@ -35,8 +35,8 @@
 # virtual methods
 .method protected _problem(Lcom/flurry/org/codehaus/jackson/map/type/TypeParser$MyTokenizer;Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
     .locals 3
-    .parameter "tokens"
-    .parameter "msg"
+    .param p1, "tokens"    # Lcom/flurry/org/codehaus/jackson/map/type/TypeParser$MyTokenizer;
+    .param p2, "msg"    # Ljava/lang/String;
 
     .prologue
     .line 89
@@ -95,8 +95,8 @@
 
 .method protected findClass(Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/map/type/TypeParser$MyTokenizer;)Ljava/lang/Class;
     .locals 4
-    .parameter "className"
-    .parameter "tokens"
+    .param p1, "className"    # Ljava/lang/String;
+    .param p2, "tokens"    # Lcom/flurry/org/codehaus/jackson/map/type/TypeParser$MyTokenizer;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -120,7 +120,7 @@
     move-result-object v1
 
     .line 78
-    .local v1, loader:Ljava/lang/ClassLoader;
+    .local v1, "loader":Ljava/lang/ClassLoader;
     const/4 v2, 0x1
 
     invoke-static {p1, v2, v1}, Ljava/lang/Class;->forName(Ljava/lang/String;ZLjava/lang/ClassLoader;)Ljava/lang/Class;
@@ -132,14 +132,14 @@
     return-object v2
 
     .line 79
-    .end local v1           #loader:Ljava/lang/ClassLoader;
+    .end local v1    # "loader":Ljava/lang/ClassLoader;
     :catch_0
     move-exception v2
 
     move-object v0, v2
 
     .line 80
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     instance-of v2, v0, Ljava/lang/RuntimeException;
 
     if-eqz v2, :cond_0
@@ -147,11 +147,11 @@
     .line 81
     check-cast v0, Ljava/lang/RuntimeException;
 
-    .end local v0           #e:Ljava/lang/Exception;
+    .end local v0    # "e":Ljava/lang/Exception;
     throw v0
 
     .line 83
-    .restart local v0       #e:Ljava/lang/Exception;
+    .restart local v0    # "e":Ljava/lang/Exception;
     :cond_0
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -194,7 +194,7 @@
 
 .method public parse(Ljava/lang/String;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .locals 3
-    .parameter "canonical"
+    .param p1, "canonical"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/IllegalArgumentException;
@@ -213,13 +213,13 @@
     invoke-direct {v0, p1}, Lcom/flurry/org/codehaus/jackson/map/type/TypeParser$MyTokenizer;-><init>(Ljava/lang/String;)V
 
     .line 27
-    .local v0, tokens:Lcom/flurry/org/codehaus/jackson/map/type/TypeParser$MyTokenizer;
+    .local v0, "tokens":Lcom/flurry/org/codehaus/jackson/map/type/TypeParser$MyTokenizer;
     invoke-virtual {p0, v0}, Lcom/flurry/org/codehaus/jackson/map/type/TypeParser;->parseType(Lcom/flurry/org/codehaus/jackson/map/type/TypeParser$MyTokenizer;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
 
     move-result-object v1
 
     .line 29
-    .local v1, type:Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .local v1, "type":Lcom/flurry/org/codehaus/jackson/type/JavaType;
     invoke-virtual {v0}, Lcom/flurry/org/codehaus/jackson/map/type/TypeParser$MyTokenizer;->hasMoreTokens()Z
 
     move-result v2
@@ -242,7 +242,7 @@
 
 .method protected parseType(Lcom/flurry/org/codehaus/jackson/map/type/TypeParser$MyTokenizer;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .locals 4
-    .parameter "tokens"
+    .param p1, "tokens"    # Lcom/flurry/org/codehaus/jackson/map/type/TypeParser$MyTokenizer;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/IllegalArgumentException;
@@ -277,7 +277,7 @@
     move-result-object v0
 
     .line 43
-    .local v0, base:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local v0, "base":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-virtual {p1}, Lcom/flurry/org/codehaus/jackson/map/type/TypeParser$MyTokenizer;->hasMoreTokens()Z
 
     move-result v2
@@ -290,7 +290,7 @@
     move-result-object v1
 
     .line 45
-    .local v1, token:Ljava/lang/String;
+    .local v1, "token":Ljava/lang/String;
     const-string v2, "<"
 
     invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -311,17 +311,17 @@
     move-result-object v2
 
     .line 51
-    .end local v1           #token:Ljava/lang/String;
+    .end local v1    # "token":Ljava/lang/String;
     :goto_0
     return-object v2
 
     .line 49
-    .restart local v1       #token:Ljava/lang/String;
+    .restart local v1    # "token":Ljava/lang/String;
     :cond_1
     invoke-virtual {p1, v1}, Lcom/flurry/org/codehaus/jackson/map/type/TypeParser$MyTokenizer;->pushBack(Ljava/lang/String;)V
 
     .line 51
-    .end local v1           #token:Ljava/lang/String;
+    .end local v1    # "token":Ljava/lang/String;
     :cond_2
     iget-object v2, p0, Lcom/flurry/org/codehaus/jackson/map/type/TypeParser;->_factory:Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;
 
@@ -336,7 +336,7 @@
 
 .method protected parseTypes(Lcom/flurry/org/codehaus/jackson/map/type/TypeParser$MyTokenizer;)Ljava/util/List;
     .locals 4
-    .parameter "tokens"
+    .param p1, "tokens"    # Lcom/flurry/org/codehaus/jackson/map/type/TypeParser$MyTokenizer;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -362,7 +362,7 @@
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     .line 58
-    .local v1, types:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/flurry/org/codehaus/jackson/type/JavaType;>;"
+    .local v1, "types":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/flurry/org/codehaus/jackson/type/JavaType;>;"
     :cond_0
     invoke-virtual {p1}, Lcom/flurry/org/codehaus/jackson/map/type/TypeParser$MyTokenizer;->hasMoreTokens()Z
 
@@ -401,7 +401,7 @@
     move-result-object v0
 
     .line 62
-    .local v0, token:Ljava/lang/String;
+    .local v0, "token":Ljava/lang/String;
     const-string v2, ">"
 
     invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z

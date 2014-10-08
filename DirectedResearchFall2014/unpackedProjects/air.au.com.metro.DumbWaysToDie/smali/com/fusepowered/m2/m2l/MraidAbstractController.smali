@@ -10,7 +10,7 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m2/m2l/MraidView;)V
     .locals 0
-    .parameter "view"
+    .param p1, "view"    # Lcom/fusepowered/m2/m2l/MraidView;
 
     .prologue
     .line 40

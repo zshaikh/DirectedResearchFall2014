@@ -140,7 +140,6 @@
 
 .method public final a(I)V
     .locals 1
-    .parameter
 
     .prologue
     .line 232
@@ -169,7 +168,6 @@
 
 .method public final a(J)V
     .locals 4
-    .parameter
 
     .prologue
     const-wide/16 v2, 0x7530
@@ -207,7 +205,6 @@
 
 .method public final a(Ljava/lang/String;)V
     .locals 3
-    .parameter
 
     .prologue
     .line 104
@@ -308,7 +305,6 @@
 
 .method public final b(Ljava/lang/String;)V
     .locals 4
-    .parameter
 
     .prologue
     .line 139
@@ -357,7 +353,6 @@
 
 .method public final c(Ljava/lang/String;)V
     .locals 4
-    .parameter
 
     .prologue
     .line 152

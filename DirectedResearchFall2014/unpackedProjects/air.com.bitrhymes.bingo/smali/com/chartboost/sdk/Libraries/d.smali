@@ -34,8 +34,6 @@
 
 .method public static a(ILandroid/content/Context;)I
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     .line 259
@@ -98,7 +96,6 @@
 
 .method public static a(Ljava/util/Map;)Ljava/lang/String;
     .locals 6
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -273,7 +270,6 @@
 
 .method public static a(Lorg/json/JSONArray;)Ljava/util/List;
     .locals 5
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -392,7 +388,6 @@
 
 .method public static a(Lorg/json/JSONObject;)Ljava/util/Map;
     .locals 6
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -516,7 +511,6 @@
 
 .method public static a(Ljava/util/List;)Lorg/json/JSONArray;
     .locals 4
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -627,7 +621,6 @@
 
 .method public static a(Ljava/lang/Object;)Lorg/json/JSONObject;
     .locals 2
-    .parameter
 
     .prologue
     .line 337
@@ -706,7 +699,6 @@
 
 .method public static a(Lorg/apache/http/HttpEntity;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 371
@@ -728,7 +720,6 @@
 
 .method public static a(Lorg/apache/http/HttpResponse;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 361
@@ -764,7 +755,6 @@
 
 .method public static a(Landroid/content/Context;)Z
     .locals 7
-    .parameter
 
     .prologue
     const/4 v6, 0x0
@@ -901,8 +891,6 @@
 
 .method public static b(ILandroid/content/Context;)F
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     .line 264
@@ -919,7 +907,6 @@
 
 .method public static b(Landroid/content/Context;)F
     .locals 1
-    .parameter
 
     .prologue
     .line 254
@@ -981,7 +968,6 @@
 
 .method public static b(Ljava/util/Map;)Lorg/json/JSONObject;
     .locals 4
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1103,7 +1089,6 @@
 
 .method public static c(Landroid/content/Context;)Lcom/chartboost/sdk/Libraries/CBOrientation;
     .locals 9
-    .parameter
 
     .prologue
     const/4 v8, 0x3

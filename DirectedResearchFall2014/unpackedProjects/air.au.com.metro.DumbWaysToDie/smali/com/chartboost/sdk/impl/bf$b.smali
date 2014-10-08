@@ -29,8 +29,6 @@
 # direct methods
 .method constructor <init>(Ljava/util/Map;Lcom/chartboost/sdk/impl/ba$h$a;)V
     .locals 0
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -53,7 +51,6 @@
 # virtual methods
 .method public a(Ljava/util/Map;)Ljava/util/Map;
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<N::",

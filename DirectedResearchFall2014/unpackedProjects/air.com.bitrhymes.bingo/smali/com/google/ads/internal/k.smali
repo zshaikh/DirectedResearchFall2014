@@ -38,8 +38,6 @@
 
 .method public static a(Landroid/app/Activity;Lcom/google/ads/internal/d;)Landroid/view/ViewGroup;
     .locals 3
-    .parameter
-    .parameter
 
     .prologue
     .line 41

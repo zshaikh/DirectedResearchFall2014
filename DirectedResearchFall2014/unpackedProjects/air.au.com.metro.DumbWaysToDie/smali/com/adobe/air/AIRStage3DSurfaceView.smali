@@ -33,9 +33,6 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Lcom/adobe/air/AndroidActivityWrapper;J)V
     .locals 7
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const/4 v6, 0x0
@@ -155,7 +152,6 @@
 
 .method static synthetic access$000(Lcom/adobe/air/AIRStage3DSurfaceView;)J
     .locals 2
-    .parameter
 
     .prologue
     .line 37
@@ -166,8 +162,6 @@
 
 .method static synthetic access$100(Lcom/adobe/air/AIRStage3DSurfaceView;J)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 37
@@ -192,8 +186,6 @@
 # virtual methods
 .method protected onMeasure(II)V
     .locals 3
-    .parameter
-    .parameter
 
     .prologue
     .line 83
@@ -217,9 +209,6 @@
 
 .method public setFPInstance(Landroid/content/Context;Lcom/adobe/air/AndroidActivityWrapper;J)Z
     .locals 5
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const/4 v4, 0x6
@@ -261,10 +250,6 @@
 
 .method public setPlanePosition(IIII)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 89
@@ -285,10 +270,6 @@
 
 .method public surfaceChanged(Landroid/view/SurfaceHolder;III)V
     .locals 4
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 111
@@ -312,7 +293,6 @@
 
 .method public surfaceCreated(Landroid/view/SurfaceHolder;)V
     .locals 4
-    .parameter
 
     .prologue
     .line 119
@@ -382,7 +362,6 @@
 
 .method public surfaceDestroyed(Landroid/view/SurfaceHolder;)V
     .locals 4
-    .parameter
 
     .prologue
     .line 158

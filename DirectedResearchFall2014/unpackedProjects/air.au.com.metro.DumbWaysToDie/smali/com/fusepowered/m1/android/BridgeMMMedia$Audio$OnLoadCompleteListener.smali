@@ -40,8 +40,7 @@
 # direct methods
 .method public constructor <init>(Lcom/fusepowered/m1/android/BridgeMMMedia$Audio;Landroid/media/SoundPool;)V
     .locals 1
-    .parameter
-    .parameter "soundPool"
+    .param p2, "soundPool"    # Landroid/media/SoundPool;
 
     .prologue
     .line 926
@@ -65,7 +64,7 @@
 
 .method static synthetic access$300(Lcom/fusepowered/m1/android/BridgeMMMedia$Audio$OnLoadCompleteListener;)Ljava/util/ArrayList;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/fusepowered/m1/android/BridgeMMMedia$Audio$OnLoadCompleteListener;
 
     .prologue
     .line 903
@@ -76,7 +75,7 @@
 
 .method static synthetic access$400(Lcom/fusepowered/m1/android/BridgeMMMedia$Audio$OnLoadCompleteListener;)Landroid/media/SoundPool;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/fusepowered/m1/android/BridgeMMMedia$Audio$OnLoadCompleteListener;
 
     .prologue
     .line 903
@@ -87,7 +86,7 @@
 
 .method static synthetic access$500(Lcom/fusepowered/m1/android/BridgeMMMedia$Audio$OnLoadCompleteListener;)Ljava/util/Timer;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/fusepowered/m1/android/BridgeMMMedia$Audio$OnLoadCompleteListener;
 
     .prologue
     .line 903
@@ -142,7 +141,7 @@
 
 .method declared-synchronized testSample(I)V
     .locals 6
-    .parameter "sampleId"
+    .param p1, "sampleId"    # I
 
     .prologue
     .line 936

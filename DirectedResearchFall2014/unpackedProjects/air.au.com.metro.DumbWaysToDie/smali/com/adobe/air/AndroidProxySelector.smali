@@ -22,7 +22,6 @@
 
 .method public static getProxyUrl(Ljava/lang/String;)Ljava/lang/String;
     .locals 3
-    .parameter
 
     .prologue
     const-string v2, ""

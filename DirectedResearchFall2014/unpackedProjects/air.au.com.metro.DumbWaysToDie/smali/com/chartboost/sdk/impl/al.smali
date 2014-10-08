@@ -24,9 +24,6 @@
 
 .method private a(Ljava/lang/String;I[B)V
     .locals 3
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const/4 v2, 0x2
@@ -101,8 +98,6 @@
 
 .method private a(Ljava/lang/String;Ljava/lang/Iterable;)V
     .locals 6
-    .parameter
-    .parameter
 
     .prologue
     const/4 v5, 0x0
@@ -179,9 +174,6 @@
 
 .method private a(Ljava/lang/String;Ljava/lang/String;B)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 419
@@ -196,8 +188,6 @@
 
 .method private a(Ljava/lang/String;Ljava/util/Map;)V
     .locals 5
-    .parameter
-    .parameter
 
     .prologue
     const/4 v4, 0x0
@@ -283,8 +273,6 @@
 
 .method private a(Ljava/lang/String;Ljava/util/regex/Pattern;)V
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 432
@@ -316,8 +304,6 @@
 
 .method private c(Ljava/lang/String;Ljava/lang/Object;)V
     .locals 6
-    .parameter
-    .parameter
 
     .prologue
     const/4 v5, 0x0
@@ -391,7 +377,6 @@
 
 .method private d(Ljava/lang/String;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 438
@@ -405,7 +390,6 @@
 
 .method private e(Ljava/lang/String;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 442
@@ -434,8 +418,6 @@
 
 .method protected a(BLjava/lang/String;)V
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 453
@@ -452,7 +434,6 @@
 
 .method public a(Lcom/chartboost/sdk/impl/ap;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 93
@@ -479,7 +460,6 @@
 
 .method protected a(Ljava/lang/String;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 318
@@ -493,8 +473,6 @@
 
 .method protected a(Ljava/lang/String;Lcom/chartboost/sdk/impl/as;)V
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     .line 326
@@ -526,8 +504,6 @@
 
 .method protected a(Ljava/lang/String;Lcom/chartboost/sdk/impl/at;)V
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     .line 382
@@ -547,8 +523,6 @@
 
 .method protected a(Ljava/lang/String;Lcom/chartboost/sdk/impl/au;)V
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 341
@@ -574,8 +548,6 @@
 
 .method protected a(Ljava/lang/String;Lcom/chartboost/sdk/impl/av;)V
     .locals 3
-    .parameter
-    .parameter
 
     .prologue
     .line 332
@@ -630,8 +602,6 @@
 
 .method protected a(Ljava/lang/String;Lcom/chartboost/sdk/impl/ay;)V
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     .line 424
@@ -672,8 +642,6 @@
 
 .method protected a(Ljava/lang/String;Lcom/chartboost/sdk/impl/az;)V
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     .line 411
@@ -691,8 +659,6 @@
 
 .method protected a(Ljava/lang/String;Ljava/lang/Boolean;)V
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     .line 347
@@ -726,8 +692,6 @@
 
 .method protected a(Ljava/lang/String;Ljava/lang/Number;)V
     .locals 3
-    .parameter
-    .parameter
 
     .prologue
     .line 357
@@ -853,8 +817,6 @@
 
 .method protected a(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 415
@@ -868,8 +830,6 @@
 
 .method protected a(Ljava/lang/String;Ljava/util/Date;)V
     .locals 3
-    .parameter
-    .parameter
 
     .prologue
     .line 352
@@ -892,8 +852,6 @@
 
 .method protected a(Ljava/lang/String;Ljava/util/UUID;)V
     .locals 3
-    .parameter
-    .parameter
 
     .prologue
     .line 403
@@ -939,8 +897,6 @@
 
 .method protected a(Ljava/lang/String;[B)V
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 378
@@ -954,8 +910,6 @@
 
 .method protected a(Ljava/lang/String;Lcom/chartboost/sdk/impl/aj;)Z
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 107
@@ -966,8 +920,6 @@
 
 .method protected a(Ljava/lang/String;Ljava/lang/Object;)Z
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 111
@@ -978,7 +930,6 @@
 
 .method public a(Lcom/chartboost/sdk/impl/aj;)[B
     .locals 1
-    .parameter
 
     .prologue
     .line 85
@@ -1005,7 +956,6 @@
 
 .method public b(Lcom/chartboost/sdk/impl/aj;)I
     .locals 1
-    .parameter
 
     .prologue
     .line 120
@@ -1020,8 +970,6 @@
 
 .method protected b(Ljava/lang/String;Lcom/chartboost/sdk/impl/aj;)I
     .locals 10
-    .parameter
-    .parameter
 
     .prologue
     const/4 v5, 0x3
@@ -1336,7 +1284,6 @@
 
 .method protected b(Ljava/lang/String;)V
     .locals 3
-    .parameter
 
     .prologue
     .line 458
@@ -1369,8 +1316,6 @@
 
 .method protected b(Ljava/lang/String;Ljava/lang/Object;)V
     .locals 5
-    .parameter
-    .parameter
 
     .prologue
     .line 200
@@ -1777,7 +1722,6 @@
 
 .method protected c(Ljava/lang/String;)I
     .locals 7
-    .parameter
 
     .prologue
     const/4 v6, 0x0
@@ -1861,7 +1805,7 @@
 
     .line 489
     :cond_1
-    const/high16 v4, 0x1
+    const/high16 v4, 0x10000
 
     if-ge v3, v4, :cond_2
 

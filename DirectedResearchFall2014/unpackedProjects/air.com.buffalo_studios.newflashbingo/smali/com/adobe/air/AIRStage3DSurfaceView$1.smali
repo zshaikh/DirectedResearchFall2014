@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/adobe/air/AIRStage3DSurfaceView;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 135
@@ -44,7 +43,7 @@
     .line 140
     iget-object v0, p0, Lcom/adobe/air/AIRStage3DSurfaceView$1;->this$0:Lcom/adobe/air/AIRStage3DSurfaceView;
 
-    #getter for: Lcom/adobe/air/AIRStage3DSurfaceView;->mFPInstance:J
+    # getter for: Lcom/adobe/air/AIRStage3DSurfaceView;->mFPInstance:J
     invoke-static {v0}, Lcom/adobe/air/AIRStage3DSurfaceView;->access$000(Lcom/adobe/air/AIRStage3DSurfaceView;)J
 
     move-result-wide v0
@@ -60,12 +59,12 @@
 
     iget-object v1, p0, Lcom/adobe/air/AIRStage3DSurfaceView$1;->this$0:Lcom/adobe/air/AIRStage3DSurfaceView;
 
-    #getter for: Lcom/adobe/air/AIRStage3DSurfaceView;->mFPInstance:J
+    # getter for: Lcom/adobe/air/AIRStage3DSurfaceView;->mFPInstance:J
     invoke-static {v1}, Lcom/adobe/air/AIRStage3DSurfaceView;->access$000(Lcom/adobe/air/AIRStage3DSurfaceView;)J
 
     move-result-wide v1
 
-    #calls: Lcom/adobe/air/AIRStage3DSurfaceView;->nativeSurfaceLayoutChanged(J)V
+    # invokes: Lcom/adobe/air/AIRStage3DSurfaceView;->nativeSurfaceLayoutChanged(J)V
     invoke-static {v0, v1, v2}, Lcom/adobe/air/AIRStage3DSurfaceView;->access$100(Lcom/adobe/air/AIRStage3DSurfaceView;J)V
 
     .line 145

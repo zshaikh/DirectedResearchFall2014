@@ -36,7 +36,7 @@
     :goto_0
     iget-object v1, p0, Lcom/facebook/Session$2;->this$0:Lcom/facebook/Session;
 
-    #calls: Lcom/facebook/Session;->handleAuthorizationResult(ILcom/facebook/AuthorizationClient$Result;)V
+    # invokes: Lcom/facebook/Session;->handleAuthorizationResult(ILcom/facebook/AuthorizationClient$Result;)V
     invoke-static {v1, v0, p1}, Lcom/facebook/Session;->access$700(Lcom/facebook/Session;ILcom/facebook/AuthorizationClient$Result;)V
 
     return-void

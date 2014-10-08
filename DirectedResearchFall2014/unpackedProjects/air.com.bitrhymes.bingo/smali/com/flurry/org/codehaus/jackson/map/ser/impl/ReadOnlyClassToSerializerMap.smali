@@ -12,7 +12,7 @@
 # direct methods
 .method private constructor <init>(Lcom/flurry/org/codehaus/jackson/map/ser/impl/JsonSerializerMap;)V
     .locals 3
-    .parameter "map"
+    .param p1, "map"    # Lcom/flurry/org/codehaus/jackson/map/ser/impl/JsonSerializerMap;
 
     .prologue
     .line 31
@@ -40,7 +40,6 @@
 
 .method public static from(Ljava/util/HashMap;)Lcom/flurry/org/codehaus/jackson/map/ser/impl/ReadOnlyClassToSerializerMap;
     .locals 2
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -57,7 +56,7 @@
 
     .prologue
     .line 47
-    .local p0, src:Ljava/util/HashMap;,"Ljava/util/HashMap<Lcom/flurry/org/codehaus/jackson/map/ser/impl/SerializerCache$TypeKey;Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;>;"
+    .local p0, "src":Ljava/util/HashMap;, "Ljava/util/HashMap<Lcom/flurry/org/codehaus/jackson/map/ser/impl/SerializerCache$TypeKey;Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;>;"
     new-instance v0, Lcom/flurry/org/codehaus/jackson/map/ser/impl/ReadOnlyClassToSerializerMap;
 
     new-instance v1, Lcom/flurry/org/codehaus/jackson/map/ser/impl/JsonSerializerMap;
@@ -87,7 +86,7 @@
 
 .method public typedValueSerializer(Lcom/flurry/org/codehaus/jackson/type/JavaType;)Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;
     .locals 2
-    .parameter "type"
+    .param p1, "type"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -120,7 +119,6 @@
 
 .method public typedValueSerializer(Ljava/lang/Class;)Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;
     .locals 2
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -135,7 +133,7 @@
 
     .prologue
     .line 58
-    .local p1, cls:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p1, "cls":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/map/ser/impl/ReadOnlyClassToSerializerMap;->_cacheKey:Lcom/flurry/org/codehaus/jackson/map/ser/impl/SerializerCache$TypeKey;
 
     invoke-virtual {v0, p1}, Lcom/flurry/org/codehaus/jackson/map/ser/impl/SerializerCache$TypeKey;->resetTyped(Ljava/lang/Class;)V
@@ -154,7 +152,7 @@
 
 .method public untypedValueSerializer(Lcom/flurry/org/codehaus/jackson/type/JavaType;)Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;
     .locals 2
-    .parameter "type"
+    .param p1, "type"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -187,7 +185,6 @@
 
 .method public untypedValueSerializer(Ljava/lang/Class;)Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;
     .locals 2
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -202,7 +199,7 @@
 
     .prologue
     .line 64
-    .local p1, cls:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p1, "cls":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/map/ser/impl/ReadOnlyClassToSerializerMap;->_cacheKey:Lcom/flurry/org/codehaus/jackson/map/ser/impl/SerializerCache$TypeKey;
 
     invoke-virtual {v0, p1}, Lcom/flurry/org/codehaus/jackson/map/ser/impl/SerializerCache$TypeKey;->resetUntyped(Ljava/lang/Class;)V

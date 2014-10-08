@@ -90,9 +90,6 @@
 
 .method private constructor <init>(Ljava/lang/String;II)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I)V"
@@ -112,7 +109,6 @@
 
 .method static a(Lcom/flurry/android/AdSpaceLayout;)Lcom/flurry/android/FlurryAdSize;
     .locals 3
-    .parameter
 
     .prologue
     .line 36
@@ -184,7 +180,6 @@
 
 .method public static valueOf(Ljava/lang/String;)Lcom/flurry/android/FlurryAdSize;
     .locals 1
-    .parameter
 
     .prologue
     .line 16

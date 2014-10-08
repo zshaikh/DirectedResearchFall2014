@@ -70,7 +70,7 @@
     move-result-object v0
 
     .line 29
-    .local v0, ac:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;
+    .local v0, "ac":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;
     const-class v1, Ljava/lang/String;
 
     invoke-static {v3}, Lcom/flurry/org/codehaus/jackson/map/type/SimpleType;->constructUnsafe(Ljava/lang/Class;)Lcom/flurry/org/codehaus/jackson/map/type/SimpleType;
@@ -195,7 +195,7 @@
 # virtual methods
 .method protected _findCachedDesc(Lcom/flurry/org/codehaus/jackson/type/JavaType;)Lcom/flurry/org/codehaus/jackson/map/introspect/BasicBeanDescription;
     .locals 2
-    .parameter "type"
+    .param p1, "type"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
 
     .prologue
     .line 199
@@ -204,7 +204,7 @@
     move-result-object v0
 
     .line 200
-    .local v0, cls:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local v0, "cls":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const-class v1, Ljava/lang/String;
 
     if-ne v0, v1, :cond_0
@@ -258,9 +258,8 @@
 
 .method public classWithCreators(Lcom/flurry/org/codehaus/jackson/map/MapperConfig;Lcom/flurry/org/codehaus/jackson/type/JavaType;Lcom/flurry/org/codehaus/jackson/map/ClassIntrospector$MixInResolver;)Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;
     .locals 5
-    .parameter
-    .parameter "type"
-    .parameter "r"
+    .param p2, "type"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .param p3, "r"    # Lcom/flurry/org/codehaus/jackson/map/ClassIntrospector$MixInResolver;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -275,19 +274,19 @@
 
     .prologue
     .line 182
-    .local p1, config:Lcom/flurry/org/codehaus/jackson/map/MapperConfig;,"Lcom/flurry/org/codehaus/jackson/map/MapperConfig<*>;"
+    .local p1, "config":Lcom/flurry/org/codehaus/jackson/map/MapperConfig;, "Lcom/flurry/org/codehaus/jackson/map/MapperConfig<*>;"
     invoke-virtual {p1}, Lcom/flurry/org/codehaus/jackson/map/MapperConfig;->isAnnotationProcessingEnabled()Z
 
     move-result v2
 
     .line 183
-    .local v2, useAnnotations:Z
+    .local v2, "useAnnotations":Z
     invoke-virtual {p1}, Lcom/flurry/org/codehaus/jackson/map/MapperConfig;->getAnnotationIntrospector()Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;
 
     move-result-object v1
 
     .line 184
-    .local v1, ai:Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;
+    .local v1, "ai":Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;
     invoke-virtual {p2}, Lcom/flurry/org/codehaus/jackson/type/JavaType;->getRawClass()Ljava/lang/Class;
 
     move-result-object v3
@@ -302,7 +301,7 @@
     move-result-object v0
 
     .line 185
-    .local v0, ac:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;
+    .local v0, "ac":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;
     sget-object v3, Lcom/flurry/org/codehaus/jackson/map/introspect/BasicClassIntrospector;->MINIMAL_FILTER:Lcom/flurry/org/codehaus/jackson/map/introspect/MethodFilter;
 
     invoke-virtual {v0, v3}, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;->resolveMemberMethods(Lcom/flurry/org/codehaus/jackson/map/introspect/MethodFilter;)V
@@ -316,7 +315,7 @@
     return-object v0
 
     .line 184
-    .end local v0           #ac:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;
+    .end local v0    # "ac":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;
     :cond_0
     const/4 v4, 0x0
 
@@ -325,10 +324,9 @@
 
 .method public collectProperties(Lcom/flurry/org/codehaus/jackson/map/MapperConfig;Lcom/flurry/org/codehaus/jackson/type/JavaType;Lcom/flurry/org/codehaus/jackson/map/ClassIntrospector$MixInResolver;Z)Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertiesCollector;
     .locals 2
-    .parameter
-    .parameter "type"
-    .parameter "r"
-    .parameter "forSerialization"
+    .param p2, "type"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .param p3, "r"    # Lcom/flurry/org/codehaus/jackson/map/ClassIntrospector$MixInResolver;
+    .param p4, "forSerialization"    # Z
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -343,13 +341,13 @@
 
     .prologue
     .line 157
-    .local p1, config:Lcom/flurry/org/codehaus/jackson/map/MapperConfig;,"Lcom/flurry/org/codehaus/jackson/map/MapperConfig<*>;"
+    .local p1, "config":Lcom/flurry/org/codehaus/jackson/map/MapperConfig;, "Lcom/flurry/org/codehaus/jackson/map/MapperConfig<*>;"
     invoke-virtual {p0, p1, p2, p3}, Lcom/flurry/org/codehaus/jackson/map/introspect/BasicClassIntrospector;->classWithCreators(Lcom/flurry/org/codehaus/jackson/map/MapperConfig;Lcom/flurry/org/codehaus/jackson/type/JavaType;Lcom/flurry/org/codehaus/jackson/map/ClassIntrospector$MixInResolver;)Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;
 
     move-result-object v0
 
     .line 158
-    .local v0, ac:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;
+    .local v0, "ac":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;
     sget-object v1, Lcom/flurry/org/codehaus/jackson/map/introspect/BasicClassIntrospector;->MINIMAL_FILTER:Lcom/flurry/org/codehaus/jackson/map/introspect/MethodFilter;
 
     invoke-virtual {v0, v1}, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;->resolveMemberMethods(Lcom/flurry/org/codehaus/jackson/map/introspect/MethodFilter;)V
@@ -371,10 +369,9 @@
 
 .method protected constructPropertyCollector(Lcom/flurry/org/codehaus/jackson/map/MapperConfig;Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;Lcom/flurry/org/codehaus/jackson/type/JavaType;Z)Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertiesCollector;
     .locals 1
-    .parameter
-    .parameter "ac"
-    .parameter "type"
-    .parameter "forSerialization"
+    .param p2, "ac"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;
+    .param p3, "type"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .param p4, "forSerialization"    # Z
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -389,7 +386,7 @@
 
     .prologue
     .line 173
-    .local p1, config:Lcom/flurry/org/codehaus/jackson/map/MapperConfig;,"Lcom/flurry/org/codehaus/jackson/map/MapperConfig<*>;"
+    .local p1, "config":Lcom/flurry/org/codehaus/jackson/map/MapperConfig;, "Lcom/flurry/org/codehaus/jackson/map/MapperConfig<*>;"
     new-instance v0, Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertiesCollector;
 
     invoke-direct {v0, p1, p4, p3, p2}, Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertiesCollector;-><init>(Lcom/flurry/org/codehaus/jackson/map/MapperConfig;ZLcom/flurry/org/codehaus/jackson/type/JavaType;Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;)V
@@ -399,9 +396,9 @@
 
 .method public bridge synthetic forClassAnnotations(Lcom/flurry/org/codehaus/jackson/map/MapperConfig;Lcom/flurry/org/codehaus/jackson/type/JavaType;Lcom/flurry/org/codehaus/jackson/map/ClassIntrospector$MixInResolver;)Lcom/flurry/org/codehaus/jackson/map/BeanDescription;
     .locals 1
-    .parameter "x0"
-    .parameter "x1"
-    .parameter "x2"
+    .param p1, "x0"    # Lcom/flurry/org/codehaus/jackson/map/MapperConfig;
+    .param p2, "x1"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .param p3, "x2"    # Lcom/flurry/org/codehaus/jackson/map/ClassIntrospector$MixInResolver;
 
     .prologue
     .line 16
@@ -414,9 +411,8 @@
 
 .method public forClassAnnotations(Lcom/flurry/org/codehaus/jackson/map/MapperConfig;Lcom/flurry/org/codehaus/jackson/type/JavaType;Lcom/flurry/org/codehaus/jackson/map/ClassIntrospector$MixInResolver;)Lcom/flurry/org/codehaus/jackson/map/introspect/BasicBeanDescription;
     .locals 5
-    .parameter
-    .parameter "type"
-    .parameter "r"
+    .param p2, "type"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .param p3, "r"    # Lcom/flurry/org/codehaus/jackson/map/ClassIntrospector$MixInResolver;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -431,19 +427,19 @@
 
     .prologue
     .line 128
-    .local p1, cfg:Lcom/flurry/org/codehaus/jackson/map/MapperConfig;,"Lcom/flurry/org/codehaus/jackson/map/MapperConfig<*>;"
+    .local p1, "cfg":Lcom/flurry/org/codehaus/jackson/map/MapperConfig;, "Lcom/flurry/org/codehaus/jackson/map/MapperConfig<*>;"
     invoke-virtual {p1}, Lcom/flurry/org/codehaus/jackson/map/MapperConfig;->isAnnotationProcessingEnabled()Z
 
     move-result v2
 
     .line 129
-    .local v2, useAnnotations:Z
+    .local v2, "useAnnotations":Z
     invoke-virtual {p1}, Lcom/flurry/org/codehaus/jackson/map/MapperConfig;->getAnnotationIntrospector()Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;
 
     move-result-object v1
 
     .line 130
-    .local v1, ai:Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;
+    .local v1, "ai":Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;
     invoke-virtual {p2}, Lcom/flurry/org/codehaus/jackson/type/JavaType;->getRawClass()Ljava/lang/Class;
 
     move-result-object v3
@@ -458,7 +454,7 @@
     move-result-object v0
 
     .line 131
-    .local v0, ac:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;
+    .local v0, "ac":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;
     invoke-static {p1, p2, v0}, Lcom/flurry/org/codehaus/jackson/map/introspect/BasicBeanDescription;->forOtherUse(Lcom/flurry/org/codehaus/jackson/map/MapperConfig;Lcom/flurry/org/codehaus/jackson/type/JavaType;Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;)Lcom/flurry/org/codehaus/jackson/map/introspect/BasicBeanDescription;
 
     move-result-object v3
@@ -466,7 +462,7 @@
     return-object v3
 
     .line 130
-    .end local v0           #ac:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;
+    .end local v0    # "ac":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;
     :cond_0
     const/4 v4, 0x0
 
@@ -475,9 +471,9 @@
 
 .method public bridge synthetic forCreation(Lcom/flurry/org/codehaus/jackson/map/DeserializationConfig;Lcom/flurry/org/codehaus/jackson/type/JavaType;Lcom/flurry/org/codehaus/jackson/map/ClassIntrospector$MixInResolver;)Lcom/flurry/org/codehaus/jackson/map/BeanDescription;
     .locals 1
-    .parameter "x0"
-    .parameter "x1"
-    .parameter "x2"
+    .param p1, "x0"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationConfig;
+    .param p2, "x1"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .param p3, "x2"    # Lcom/flurry/org/codehaus/jackson/map/ClassIntrospector$MixInResolver;
 
     .prologue
     .line 16
@@ -490,9 +486,9 @@
 
 .method public forCreation(Lcom/flurry/org/codehaus/jackson/map/DeserializationConfig;Lcom/flurry/org/codehaus/jackson/type/JavaType;Lcom/flurry/org/codehaus/jackson/map/ClassIntrospector$MixInResolver;)Lcom/flurry/org/codehaus/jackson/map/introspect/BasicBeanDescription;
     .locals 2
-    .parameter "cfg"
-    .parameter "type"
-    .parameter "r"
+    .param p1, "cfg"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationConfig;
+    .param p2, "type"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .param p3, "r"    # Lcom/flurry/org/codehaus/jackson/map/ClassIntrospector$MixInResolver;
 
     .prologue
     .line 117
@@ -501,7 +497,7 @@
     move-result-object v0
 
     .line 118
-    .local v0, desc:Lcom/flurry/org/codehaus/jackson/map/introspect/BasicBeanDescription;
+    .local v0, "desc":Lcom/flurry/org/codehaus/jackson/map/introspect/BasicBeanDescription;
     if-nez v0, :cond_0
 
     .line 119
@@ -522,9 +518,9 @@
 
 .method public bridge synthetic forDeserialization(Lcom/flurry/org/codehaus/jackson/map/DeserializationConfig;Lcom/flurry/org/codehaus/jackson/type/JavaType;Lcom/flurry/org/codehaus/jackson/map/ClassIntrospector$MixInResolver;)Lcom/flurry/org/codehaus/jackson/map/BeanDescription;
     .locals 1
-    .parameter "x0"
-    .parameter "x1"
-    .parameter "x2"
+    .param p1, "x0"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationConfig;
+    .param p2, "x1"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .param p3, "x2"    # Lcom/flurry/org/codehaus/jackson/map/ClassIntrospector$MixInResolver;
 
     .prologue
     .line 16
@@ -537,9 +533,9 @@
 
 .method public forDeserialization(Lcom/flurry/org/codehaus/jackson/map/DeserializationConfig;Lcom/flurry/org/codehaus/jackson/type/JavaType;Lcom/flurry/org/codehaus/jackson/map/ClassIntrospector$MixInResolver;)Lcom/flurry/org/codehaus/jackson/map/introspect/BasicBeanDescription;
     .locals 2
-    .parameter "cfg"
-    .parameter "type"
-    .parameter "r"
+    .param p1, "cfg"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationConfig;
+    .param p2, "type"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .param p3, "r"    # Lcom/flurry/org/codehaus/jackson/map/ClassIntrospector$MixInResolver;
 
     .prologue
     .line 106
@@ -548,7 +544,7 @@
     move-result-object v0
 
     .line 107
-    .local v0, desc:Lcom/flurry/org/codehaus/jackson/map/introspect/BasicBeanDescription;
+    .local v0, "desc":Lcom/flurry/org/codehaus/jackson/map/introspect/BasicBeanDescription;
     if-nez v0, :cond_0
 
     .line 108
@@ -569,9 +565,9 @@
 
 .method public bridge synthetic forDirectClassAnnotations(Lcom/flurry/org/codehaus/jackson/map/MapperConfig;Lcom/flurry/org/codehaus/jackson/type/JavaType;Lcom/flurry/org/codehaus/jackson/map/ClassIntrospector$MixInResolver;)Lcom/flurry/org/codehaus/jackson/map/BeanDescription;
     .locals 1
-    .parameter "x0"
-    .parameter "x1"
-    .parameter "x2"
+    .param p1, "x0"    # Lcom/flurry/org/codehaus/jackson/map/MapperConfig;
+    .param p2, "x1"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .param p3, "x2"    # Lcom/flurry/org/codehaus/jackson/map/ClassIntrospector$MixInResolver;
 
     .prologue
     .line 16
@@ -584,9 +580,8 @@
 
 .method public forDirectClassAnnotations(Lcom/flurry/org/codehaus/jackson/map/MapperConfig;Lcom/flurry/org/codehaus/jackson/type/JavaType;Lcom/flurry/org/codehaus/jackson/map/ClassIntrospector$MixInResolver;)Lcom/flurry/org/codehaus/jackson/map/introspect/BasicBeanDescription;
     .locals 5
-    .parameter
-    .parameter "type"
-    .parameter "r"
+    .param p2, "type"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .param p3, "r"    # Lcom/flurry/org/codehaus/jackson/map/ClassIntrospector$MixInResolver;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -601,19 +596,19 @@
 
     .prologue
     .line 138
-    .local p1, cfg:Lcom/flurry/org/codehaus/jackson/map/MapperConfig;,"Lcom/flurry/org/codehaus/jackson/map/MapperConfig<*>;"
+    .local p1, "cfg":Lcom/flurry/org/codehaus/jackson/map/MapperConfig;, "Lcom/flurry/org/codehaus/jackson/map/MapperConfig<*>;"
     invoke-virtual {p1}, Lcom/flurry/org/codehaus/jackson/map/MapperConfig;->isAnnotationProcessingEnabled()Z
 
     move-result v2
 
     .line 139
-    .local v2, useAnnotations:Z
+    .local v2, "useAnnotations":Z
     invoke-virtual {p1}, Lcom/flurry/org/codehaus/jackson/map/MapperConfig;->getAnnotationIntrospector()Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;
 
     move-result-object v1
 
     .line 140
-    .local v1, ai:Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;
+    .local v1, "ai":Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;
     invoke-virtual {p2}, Lcom/flurry/org/codehaus/jackson/type/JavaType;->getRawClass()Ljava/lang/Class;
 
     move-result-object v3
@@ -628,7 +623,7 @@
     move-result-object v0
 
     .line 142
-    .local v0, ac:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;
+    .local v0, "ac":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;
     invoke-static {p1, p2, v0}, Lcom/flurry/org/codehaus/jackson/map/introspect/BasicBeanDescription;->forOtherUse(Lcom/flurry/org/codehaus/jackson/map/MapperConfig;Lcom/flurry/org/codehaus/jackson/type/JavaType;Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;)Lcom/flurry/org/codehaus/jackson/map/introspect/BasicBeanDescription;
 
     move-result-object v3
@@ -636,7 +631,7 @@
     return-object v3
 
     .line 140
-    .end local v0           #ac:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;
+    .end local v0    # "ac":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;
     :cond_0
     const/4 v4, 0x0
 
@@ -645,9 +640,9 @@
 
 .method public bridge synthetic forSerialization(Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;Lcom/flurry/org/codehaus/jackson/type/JavaType;Lcom/flurry/org/codehaus/jackson/map/ClassIntrospector$MixInResolver;)Lcom/flurry/org/codehaus/jackson/map/BeanDescription;
     .locals 1
-    .parameter "x0"
-    .parameter "x1"
-    .parameter "x2"
+    .param p1, "x0"    # Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;
+    .param p2, "x1"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .param p3, "x2"    # Lcom/flurry/org/codehaus/jackson/map/ClassIntrospector$MixInResolver;
 
     .prologue
     .line 16
@@ -660,9 +655,9 @@
 
 .method public forSerialization(Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;Lcom/flurry/org/codehaus/jackson/type/JavaType;Lcom/flurry/org/codehaus/jackson/map/ClassIntrospector$MixInResolver;)Lcom/flurry/org/codehaus/jackson/map/introspect/BasicBeanDescription;
     .locals 2
-    .parameter "cfg"
-    .parameter "type"
-    .parameter "r"
+    .param p1, "cfg"    # Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;
+    .param p2, "type"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .param p3, "r"    # Lcom/flurry/org/codehaus/jackson/map/ClassIntrospector$MixInResolver;
 
     .prologue
     .line 94
@@ -671,7 +666,7 @@
     move-result-object v0
 
     .line 95
-    .local v0, desc:Lcom/flurry/org/codehaus/jackson/map/introspect/BasicBeanDescription;
+    .local v0, "desc":Lcom/flurry/org/codehaus/jackson/map/introspect/BasicBeanDescription;
     if-nez v0, :cond_0
 
     .line 96
@@ -692,7 +687,7 @@
 
 .method protected getDeserializationMethodFilter(Lcom/flurry/org/codehaus/jackson/map/DeserializationConfig;)Lcom/flurry/org/codehaus/jackson/map/introspect/MethodFilter;
     .locals 1
-    .parameter "cfg"
+    .param p1, "cfg"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationConfig;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -721,7 +716,7 @@
 
 .method protected getSerializationMethodFilter(Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;)Lcom/flurry/org/codehaus/jackson/map/introspect/MethodFilter;
     .locals 1
-    .parameter "cfg"
+    .param p1, "cfg"    # Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 

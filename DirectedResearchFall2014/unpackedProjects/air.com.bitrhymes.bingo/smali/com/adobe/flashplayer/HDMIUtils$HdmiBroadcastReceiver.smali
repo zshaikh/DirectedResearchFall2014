@@ -21,7 +21,6 @@
 # direct methods
 .method constructor <init>(Lcom/adobe/flashplayer/HDMIUtils;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 174
@@ -36,8 +35,6 @@
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 6
-    .parameter
-    .parameter
 
     .prologue
     const/4 v5, 0x0
@@ -81,7 +78,7 @@
     .line 192
     iget-object v1, p0, Lcom/adobe/flashplayer/HDMIUtils$HdmiBroadcastReceiver;->this$0:Lcom/adobe/flashplayer/HDMIUtils;
 
-    #getter for: Lcom/adobe/flashplayer/HDMIUtils;->mHdmiConnection:Z
+    # getter for: Lcom/adobe/flashplayer/HDMIUtils;->mHdmiConnection:Z
     invoke-static {v1}, Lcom/adobe/flashplayer/HDMIUtils;->access$000(Lcom/adobe/flashplayer/HDMIUtils;)Z
 
     move-result v1
@@ -91,13 +88,13 @@
     .line 194
     iget-object v1, p0, Lcom/adobe/flashplayer/HDMIUtils$HdmiBroadcastReceiver;->this$0:Lcom/adobe/flashplayer/HDMIUtils;
 
-    #setter for: Lcom/adobe/flashplayer/HDMIUtils;->mHdmiConnection:Z
+    # setter for: Lcom/adobe/flashplayer/HDMIUtils;->mHdmiConnection:Z
     invoke-static {v1, v0}, Lcom/adobe/flashplayer/HDMIUtils;->access$002(Lcom/adobe/flashplayer/HDMIUtils;Z)Z
 
     .line 195
     iget-object v0, p0, Lcom/adobe/flashplayer/HDMIUtils$HdmiBroadcastReceiver;->this$0:Lcom/adobe/flashplayer/HDMIUtils;
 
-    #setter for: Lcom/adobe/flashplayer/HDMIUtils;->mHdmiStatusKnown:Z
+    # setter for: Lcom/adobe/flashplayer/HDMIUtils;->mHdmiStatusKnown:Z
     invoke-static {v0, v3}, Lcom/adobe/flashplayer/HDMIUtils;->access$102(Lcom/adobe/flashplayer/HDMIUtils;Z)Z
 
     .line 228
@@ -134,7 +131,7 @@
     .line 207
     iget-object v1, p0, Lcom/adobe/flashplayer/HDMIUtils$HdmiBroadcastReceiver;->this$0:Lcom/adobe/flashplayer/HDMIUtils;
 
-    #getter for: Lcom/adobe/flashplayer/HDMIUtils;->mHdmiOnOff:Z
+    # getter for: Lcom/adobe/flashplayer/HDMIUtils;->mHdmiOnOff:Z
     invoke-static {v1}, Lcom/adobe/flashplayer/HDMIUtils;->access$200(Lcom/adobe/flashplayer/HDMIUtils;)Z
 
     move-result v1
@@ -144,13 +141,13 @@
     .line 209
     iget-object v1, p0, Lcom/adobe/flashplayer/HDMIUtils$HdmiBroadcastReceiver;->this$0:Lcom/adobe/flashplayer/HDMIUtils;
 
-    #setter for: Lcom/adobe/flashplayer/HDMIUtils;->mHdmiOnOff:Z
+    # setter for: Lcom/adobe/flashplayer/HDMIUtils;->mHdmiOnOff:Z
     invoke-static {v1, v0}, Lcom/adobe/flashplayer/HDMIUtils;->access$202(Lcom/adobe/flashplayer/HDMIUtils;Z)Z
 
     .line 210
     iget-object v0, p0, Lcom/adobe/flashplayer/HDMIUtils$HdmiBroadcastReceiver;->this$0:Lcom/adobe/flashplayer/HDMIUtils;
 
-    #setter for: Lcom/adobe/flashplayer/HDMIUtils;->mHdmiStatusKnown:Z
+    # setter for: Lcom/adobe/flashplayer/HDMIUtils;->mHdmiStatusKnown:Z
     invoke-static {v0, v3}, Lcom/adobe/flashplayer/HDMIUtils;->access$102(Lcom/adobe/flashplayer/HDMIUtils;Z)Z
 
     goto :goto_1
@@ -182,7 +179,7 @@
     move v2, v3
 
     :goto_2
-    #setter for: Lcom/adobe/flashplayer/HDMIUtils;->mHdmiOnOff:Z
+    # setter for: Lcom/adobe/flashplayer/HDMIUtils;->mHdmiOnOff:Z
     invoke-static {v0, v2}, Lcom/adobe/flashplayer/HDMIUtils;->access$202(Lcom/adobe/flashplayer/HDMIUtils;Z)Z
 
     .line 220
@@ -199,13 +196,13 @@
     move v1, v3
 
     :goto_3
-    #setter for: Lcom/adobe/flashplayer/HDMIUtils;->mHdcpOnOff:Z
+    # setter for: Lcom/adobe/flashplayer/HDMIUtils;->mHdcpOnOff:Z
     invoke-static {v0, v1}, Lcom/adobe/flashplayer/HDMIUtils;->access$302(Lcom/adobe/flashplayer/HDMIUtils;Z)Z
 
     .line 225
     iget-object v0, p0, Lcom/adobe/flashplayer/HDMIUtils$HdmiBroadcastReceiver;->this$0:Lcom/adobe/flashplayer/HDMIUtils;
 
-    #setter for: Lcom/adobe/flashplayer/HDMIUtils;->mHdmiStatusKnown:Z
+    # setter for: Lcom/adobe/flashplayer/HDMIUtils;->mHdmiStatusKnown:Z
     invoke-static {v0, v3}, Lcom/adobe/flashplayer/HDMIUtils;->access$102(Lcom/adobe/flashplayer/HDMIUtils;Z)Z
 
     goto :goto_1

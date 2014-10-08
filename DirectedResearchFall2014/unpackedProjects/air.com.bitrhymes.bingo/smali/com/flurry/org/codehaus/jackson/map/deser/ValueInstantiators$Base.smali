@@ -32,9 +32,9 @@
 # virtual methods
 .method public findValueInstantiator(Lcom/flurry/org/codehaus/jackson/map/DeserializationConfig;Lcom/flurry/org/codehaus/jackson/map/BeanDescription;Lcom/flurry/org/codehaus/jackson/map/deser/ValueInstantiator;)Lcom/flurry/org/codehaus/jackson/map/deser/ValueInstantiator;
     .locals 0
-    .parameter "config"
-    .parameter "beanDesc"
-    .parameter "defaultInstantiator"
+    .param p1, "config"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationConfig;
+    .param p2, "beanDesc"    # Lcom/flurry/org/codehaus/jackson/map/BeanDescription;
+    .param p3, "defaultInstantiator"    # Lcom/flurry/org/codehaus/jackson/map/deser/ValueInstantiator;
 
     .prologue
     .line 49

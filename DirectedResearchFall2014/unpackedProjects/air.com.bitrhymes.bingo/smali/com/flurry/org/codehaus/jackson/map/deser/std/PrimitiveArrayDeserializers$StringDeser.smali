@@ -41,8 +41,8 @@
 
 .method private final handleNonArray(Lcom/flurry/org/codehaus/jackson/JsonParser;Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;)[Ljava/lang/String;
     .locals 6
-    .parameter "jp"
-    .parameter "ctxt"
+    .param p1, "jp"    # Lcom/flurry/org/codehaus/jackson/JsonParser;
+    .param p2, "ctxt"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -85,7 +85,7 @@
     move-result-object v0
 
     .line 149
-    .local v0, str:Ljava/lang/String;
+    .local v0, "str":Ljava/lang/String;
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
     move-result v1
@@ -95,7 +95,7 @@
     move-object v1, v5
 
     .line 155
-    .end local v0           #str:Ljava/lang/String;
+    .end local v0    # "str":Ljava/lang/String;
     :goto_0
     return-object v1
 
@@ -144,8 +144,8 @@
 # virtual methods
 .method public bridge synthetic deserialize(Lcom/flurry/org/codehaus/jackson/JsonParser;Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;)Ljava/lang/Object;
     .locals 1
-    .parameter "x0"
-    .parameter "x1"
+    .param p1, "x0"    # Lcom/flurry/org/codehaus/jackson/JsonParser;
+    .param p2, "x1"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -164,8 +164,8 @@
 
 .method public deserialize(Lcom/flurry/org/codehaus/jackson/JsonParser;Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;)[Ljava/lang/String;
     .locals 8
-    .parameter "jp"
-    .parameter "ctxt"
+    .param p1, "jp"    # Lcom/flurry/org/codehaus/jackson/JsonParser;
+    .param p2, "ctxt"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -197,23 +197,23 @@
     move-result-object v0
 
     .line 122
-    .local v0, buffer:Lcom/flurry/org/codehaus/jackson/map/util/ObjectBuffer;
+    .local v0, "buffer":Lcom/flurry/org/codehaus/jackson/map/util/ObjectBuffer;
     invoke-virtual {v0}, Lcom/flurry/org/codehaus/jackson/map/util/ObjectBuffer;->resetAndStart()[Ljava/lang/Object;
 
     move-result-object v1
 
     .line 123
-    .local v1, chunk:[Ljava/lang/Object;
+    .local v1, "chunk":[Ljava/lang/Object;
     const/4 v2, 0x0
 
     .line 126
-    .local v2, ix:I
+    .local v2, "ix":I
     :goto_1
     invoke-virtual {p1}, Lcom/flurry/org/codehaus/jackson/JsonParser;->nextToken()Lcom/flurry/org/codehaus/jackson/JsonToken;
 
     move-result-object v5
 
-    .local v5, t:Lcom/flurry/org/codehaus/jackson/JsonToken;
+    .local v5, "t":Lcom/flurry/org/codehaus/jackson/JsonToken;
     sget-object v7, Lcom/flurry/org/codehaus/jackson/JsonToken;->END_ARRAY:Lcom/flurry/org/codehaus/jackson/JsonToken;
 
     if-eq v5, v7, :cond_3
@@ -228,7 +228,7 @@
     move-object v6, v7
 
     .line 129
-    .local v6, value:Ljava/lang/String;
+    .local v6, "value":Ljava/lang/String;
     :goto_2
     array-length v7, v1
 
@@ -246,19 +246,19 @@
     :cond_1
     add-int/lit8 v3, v2, 0x1
 
-    .end local v2           #ix:I
-    .local v3, ix:I
+    .end local v2    # "ix":I
+    .local v3, "ix":I
     aput-object v6, v1, v2
 
     move v2, v3
 
     .line 134
-    .end local v3           #ix:I
-    .restart local v2       #ix:I
+    .end local v3    # "ix":I
+    .restart local v2    # "ix":I
     goto :goto_1
 
     .line 128
-    .end local v6           #value:Ljava/lang/String;
+    .end local v6    # "value":Ljava/lang/String;
     :cond_2
     invoke-virtual {p1}, Lcom/flurry/org/codehaus/jackson/JsonParser;->getText()Ljava/lang/String;
 
@@ -279,7 +279,7 @@
     check-cast v4, [Ljava/lang/String;
 
     .line 136
-    .local v4, result:[Ljava/lang/String;
+    .local v4, "result":[Ljava/lang/String;
     invoke-virtual {p2, v0}, Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;->returnObjectBuffer(Lcom/flurry/org/codehaus/jackson/map/util/ObjectBuffer;)V
 
     move-object v7, v4

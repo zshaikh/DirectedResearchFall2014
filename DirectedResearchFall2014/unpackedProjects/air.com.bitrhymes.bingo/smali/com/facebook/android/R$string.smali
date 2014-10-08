@@ -77,7 +77,7 @@
     sput v0, Lcom/facebook/android/R$string;->com_facebook_choose_friends:I
 
     .line 256
-    const/high16 v0, 0x7f07
+    const/high16 v0, 0x7f070000
 
     sput v0, Lcom/facebook/android/R$string;->com_facebook_dialogloginactivity_ok_button:I
 

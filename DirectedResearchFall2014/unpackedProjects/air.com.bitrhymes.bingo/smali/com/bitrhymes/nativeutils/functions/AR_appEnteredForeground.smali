@@ -21,8 +21,8 @@
 # virtual methods
 .method public call(Lcom/adobe/fre/FREContext;[Lcom/adobe/fre/FREObject;)Lcom/adobe/fre/FREObject;
     .locals 8
-    .parameter "freContext"
-    .parameter "args"
+    .param p1, "freContext"    # Lcom/adobe/fre/FREContext;
+    .param p2, "args"    # [Lcom/adobe/fre/FREObject;
 
     .prologue
     const-string v3, "Appirater : AR_appLaunched,"
@@ -42,7 +42,7 @@
     move-result-object v1
 
     .line 22
-    .local v1, appTitle:Ljava/lang/String;
+    .local v1, "appTitle":Ljava/lang/String;
     const/4 v3, 0x1
 
     aget-object v3, p2, v3
@@ -52,7 +52,7 @@
     move-result-object v0
 
     .line 24
-    .local v0, appID:Ljava/lang/String;
+    .local v0, "appID":Ljava/lang/String;
     const-string v3, "Appirater : AR_appLaunched,"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -126,8 +126,8 @@
     .catch Lcom/adobe/fre/FREWrongThreadException; {:try_start_0 .. :try_end_0} :catch_3
 
     .line 46
-    .end local v0           #appID:Ljava/lang/String;
-    .end local v1           #appTitle:Ljava/lang/String;
+    .end local v0    # "appID":Ljava/lang/String;
+    .end local v1    # "appTitle":Ljava/lang/String;
     :cond_0
     :goto_0
     const/4 v3, 0x0
@@ -141,7 +141,7 @@
     move-object v2, v3
 
     .line 34
-    .local v2, e:Ljava/lang/IllegalStateException;
+    .local v2, "e":Ljava/lang/IllegalStateException;
     const-string v3, "ERROR_EVENT"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -210,14 +210,14 @@
     goto :goto_0
 
     .line 36
-    .end local v2           #e:Ljava/lang/IllegalStateException;
+    .end local v2    # "e":Ljava/lang/IllegalStateException;
     :catch_1
     move-exception v3
 
     move-object v2, v3
 
     .line 37
-    .local v2, e:Lcom/adobe/fre/FRETypeMismatchException;
+    .local v2, "e":Lcom/adobe/fre/FRETypeMismatchException;
     const-string v3, "ERROR_EVENT"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -286,14 +286,14 @@
     goto/16 :goto_0
 
     .line 39
-    .end local v2           #e:Lcom/adobe/fre/FRETypeMismatchException;
+    .end local v2    # "e":Lcom/adobe/fre/FRETypeMismatchException;
     :catch_2
     move-exception v3
 
     move-object v2, v3
 
     .line 40
-    .local v2, e:Lcom/adobe/fre/FREInvalidObjectException;
+    .local v2, "e":Lcom/adobe/fre/FREInvalidObjectException;
     const-string v3, "ERROR_EVENT"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -362,14 +362,14 @@
     goto/16 :goto_0
 
     .line 42
-    .end local v2           #e:Lcom/adobe/fre/FREInvalidObjectException;
+    .end local v2    # "e":Lcom/adobe/fre/FREInvalidObjectException;
     :catch_3
     move-exception v3
 
     move-object v2, v3
 
     .line 43
-    .local v2, e:Lcom/adobe/fre/FREWrongThreadException;
+    .local v2, "e":Lcom/adobe/fre/FREWrongThreadException;
     const-string v3, "ERROR_EVENT"
 
     new-instance v3, Ljava/lang/StringBuilder;

@@ -11,7 +11,6 @@
 # direct methods
 .method public constructor <init>(Lcom/flurry/org/codehaus/jackson/map/util/EnumResolver;)V
     .locals 0
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -22,7 +21,7 @@
 
     .prologue
     .line 13
-    .local p1, res:Lcom/flurry/org/codehaus/jackson/map/util/EnumResolver;,"Lcom/flurry/org/codehaus/jackson/map/util/EnumResolver<*>;"
+    .local p1, "res":Lcom/flurry/org/codehaus/jackson/map/util/EnumResolver;, "Lcom/flurry/org/codehaus/jackson/map/util/EnumResolver<*>;"
     invoke-direct {p0, p1}, Lcom/flurry/org/codehaus/jackson/map/deser/std/EnumDeserializer;-><init>(Lcom/flurry/org/codehaus/jackson/map/util/EnumResolver;)V
 
     .line 14

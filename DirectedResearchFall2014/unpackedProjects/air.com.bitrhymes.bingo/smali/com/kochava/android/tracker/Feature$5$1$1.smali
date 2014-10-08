@@ -28,9 +28,6 @@
 # direct methods
 .method constructor <init>(Lcom/kochava/android/tracker/Feature$5$1;Landroid/app/Activity;Ljava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 1
@@ -50,8 +47,8 @@
 # virtual methods
 .method public onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
     .locals 14
-    .parameter "v"
-    .parameter "event"
+    .param p1, "v"    # Landroid/view/View;
+    .param p2, "event"    # Landroid/view/MotionEvent;
     .annotation build Landroid/annotation/SuppressLint;
         value = {
             "NewApi",
@@ -68,7 +65,7 @@
     float-to-int v4, v8
 
     .line 2182
-    .local v4, x:I
+    .local v4, "x":I
     invoke-virtual/range {p2 .. p2}, Landroid/view/MotionEvent;->getRawY()F
 
     move-result v8
@@ -76,13 +73,13 @@
     float-to-int v6, v8
 
     .line 2185
-    .local v6, y:I
+    .local v6, "y":I
     const/4 v8, 0x2
 
     new-array v3, v8, [I
 
     .line 2186
-    .local v3, viewCoords:[I
+    .local v3, "viewCoords":[I
     invoke-virtual {p1, v3}, Landroid/view/View;->getLocationOnScreen([I)V
 
     .line 2189
@@ -97,7 +94,7 @@
     add-int v5, v8, v9
 
     .line 2190
-    .local v5, xCoordBottom:I
+    .local v5, "xCoordBottom":I
     const/4 v8, 0x1
 
     aget v8, v3, v8
@@ -109,7 +106,7 @@
     add-int v7, v8, v9
 
     .line 2193
-    .local v7, yCoordBottom:I
+    .local v7, "yCoordBottom":I
     invoke-virtual/range {p2 .. p2}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v8
@@ -146,13 +143,13 @@
     invoke-direct {v1, v8, v9}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
     .line 2202
-    .local v1, intent:Landroid/content/Intent;
+    .local v1, "intent":Landroid/content/Intent;
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     .line 2203
-    .local v0, b:Landroid/os/Bundle;
+    .local v0, "b":Landroid/os/Bundle;
     const-string v8, "URL"
 
     iget-object v9, p0, Lcom/kochava/android/tracker/Feature$5$1$1;->val$clickUrl:Ljava/lang/String;
@@ -189,7 +186,7 @@
     move-result v2
 
     .line 2208
-    .local v2, test:I
+    .local v2, "test":I
     if-eqz v2, :cond_1
 
     .line 2209
@@ -238,9 +235,9 @@
     invoke-virtual {v8, v9, v10}, Landroid/app/Activity;->overridePendingTransition(II)V
 
     .line 2218
-    .end local v0           #b:Landroid/os/Bundle;
-    .end local v1           #intent:Landroid/content/Intent;
-    .end local v2           #test:I
+    .end local v0    # "b":Landroid/os/Bundle;
+    .end local v1    # "intent":Landroid/content/Intent;
+    .end local v2    # "test":I
     :cond_0
     :goto_0
     const/4 v8, 0x1
@@ -248,9 +245,9 @@
     return v8
 
     .line 2211
-    .restart local v0       #b:Landroid/os/Bundle;
-    .restart local v1       #intent:Landroid/content/Intent;
-    .restart local v2       #test:I
+    .restart local v0    # "b":Landroid/os/Bundle;
+    .restart local v1    # "intent":Landroid/content/Intent;
+    .restart local v2    # "test":I
     :cond_1
     iget-object v8, p0, Lcom/kochava/android/tracker/Feature$5$1$1;->val$context:Landroid/app/Activity;
 

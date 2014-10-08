@@ -25,9 +25,9 @@
 # direct methods
 .method public constructor <init>(Lv2/com/playhaven/interstitial/jsbridge/ManipulatableContentDisplayer;Lv2/com/playhaven/interstitial/jsbridge/PHJSBridge;Lv2/com/playhaven/model/PHContent;)V
     .locals 1
-    .parameter "contentDisplayer"
-    .parameter "bridge"
-    .parameter "content"
+    .param p1, "contentDisplayer"    # Lv2/com/playhaven/interstitial/jsbridge/ManipulatableContentDisplayer;
+    .param p2, "bridge"    # Lv2/com/playhaven/interstitial/jsbridge/PHJSBridge;
+    .param p3, "content"    # Lv2/com/playhaven/model/PHContent;
 
     .prologue
     .line 41
@@ -59,7 +59,7 @@
 
 .method private routePlayhavenCallback(Ljava/lang/String;)Z
     .locals 3
-    .parameter "url"
+    .param p1, "url"    # Ljava/lang/String;
 
     .prologue
     .line 150
@@ -114,7 +114,7 @@
     move-object v0, v1
 
     .line 159
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v1, "PHWebViewClient - url routing"
 
     sget-object v2, Lv2/com/playhaven/requests/crashreport/PHCrashReport$Urgency;->critical:Lv2/com/playhaven/requests/crashreport/PHCrashReport$Urgency;
@@ -122,7 +122,7 @@
     invoke-static {v0, v1, v2}, Lv2/com/playhaven/requests/crashreport/PHCrashReport;->reportCrash(Ljava/lang/Exception;Ljava/lang/String;Lv2/com/playhaven/requests/crashreport/PHCrashReport$Urgency;)Lv2/com/playhaven/requests/crashreport/PHCrashReport;
 
     .line 162
-    .end local v0           #e:Ljava/lang/Exception;
+    .end local v0    # "e":Ljava/lang/Exception;
     :cond_0
     const/4 v1, 0x0
 
@@ -162,8 +162,8 @@
 
 .method public onLoadResource(Landroid/webkit/WebView;Ljava/lang/String;)V
     .locals 3
-    .parameter "view"
-    .parameter "url"
+    .param p1, "view"    # Landroid/webkit/WebView;
+    .param p2, "url"    # Ljava/lang/String;
 
     .prologue
     .line 94
@@ -192,7 +192,7 @@
     move-object v0, v1
 
     .line 97
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v1, "PHWebViewClient - onLoadResource"
 
     sget-object v2, Lv2/com/playhaven/requests/crashreport/PHCrashReport$Urgency;->critical:Lv2/com/playhaven/requests/crashreport/PHCrashReport$Urgency;
@@ -204,8 +204,8 @@
 
 .method public onPageFinished(Landroid/webkit/WebView;Ljava/lang/String;)V
     .locals 4
-    .parameter "webview"
-    .parameter "url"
+    .param p1, "webview"    # Landroid/webkit/WebView;
+    .param p2, "url"    # Ljava/lang/String;
 
     .prologue
     .line 61
@@ -216,13 +216,13 @@
     if-eqz v2, :cond_1
 
     .line 74
-    .end local p0
+    .end local p0    # "this":Lv2/com/playhaven/interstitial/webview/PHWebViewClient;
     :cond_0
     :goto_0
     return-void
 
     .line 64
-    .restart local p0
+    .restart local p0    # "this":Lv2/com/playhaven/interstitial/webview/PHWebViewClient;
     :cond_1
     iget-object v2, p0, Lv2/com/playhaven/interstitial/webview/PHWebViewClient;->content:Lv2/com/playhaven/model/PHContent;
 
@@ -246,13 +246,13 @@
     move-result-object v0
 
     .line 67
-    .local v0, event:Ljava/lang/String;
+    .local v0, "event":Ljava/lang/String;
     new-instance v1, Landroid/os/Bundle;
 
     invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
 
     .line 69
-    .local v1, message:Landroid/os/Bundle;
+    .local v1, "message":Landroid/os/Bundle;
     sget-object v2, Lv2/com/playhaven/interstitial/requestbridge/bridges/ContentRequestToInterstitialBridge$InterstitialEventArgument;->Content:Lv2/com/playhaven/interstitial/requestbridge/bridges/ContentRequestToInterstitialBridge$InterstitialEventArgument;
 
     invoke-virtual {v2}, Lv2/com/playhaven/interstitial/requestbridge/bridges/ContentRequestToInterstitialBridge$InterstitialEventArgument;->getKey()Ljava/lang/String;
@@ -270,7 +270,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lv2/com/playhaven/interstitial/webview/PHWebViewClient;
     check-cast p0, Lv2/com/playhaven/interstitial/jsbridge/ManipulatableContentDisplayer;
 
     invoke-interface {p0, v0, v1}, Lv2/com/playhaven/interstitial/jsbridge/ManipulatableContentDisplayer;->sendEventToRequester(Ljava/lang/String;Landroid/os/Bundle;)V
@@ -280,10 +280,10 @@
 
 .method public onReceivedError(Landroid/webkit/WebView;ILjava/lang/String;Ljava/lang/String;)V
     .locals 7
-    .parameter "view"
-    .parameter "errorCode"
-    .parameter "description"
-    .parameter "failingUrl"
+    .param p1, "view"    # Landroid/webkit/WebView;
+    .param p2, "errorCode"    # I
+    .param p3, "description"    # Ljava/lang/String;
+    .param p4, "failingUrl"    # Ljava/lang/String;
 
     .prologue
     .line 105
@@ -294,12 +294,12 @@
     if-eqz v3, :cond_0
 
     .line 127
-    .end local p0
+    .end local p0    # "this":Lv2/com/playhaven/interstitial/webview/PHWebViewClient;
     :goto_0
     return-void
 
     .line 109
-    .restart local p0
+    .restart local p0    # "this":Lv2/com/playhaven/interstitial/webview/PHWebViewClient;
     :cond_0
     :try_start_0
     const-string v3, ""
@@ -342,7 +342,7 @@
     invoke-direct {v2}, Landroid/os/Bundle;-><init>()V
 
     .line 118
-    .local v2, message:Landroid/os/Bundle;
+    .local v2, "message":Landroid/os/Bundle;
     sget-object v3, Lv2/com/playhaven/interstitial/requestbridge/bridges/ContentRequestToInterstitialBridge$InterstitialEvent;->Failed:Lv2/com/playhaven/interstitial/requestbridge/bridges/ContentRequestToInterstitialBridge$InterstitialEvent;
 
     invoke-virtual {v3}, Lv2/com/playhaven/interstitial/requestbridge/bridges/ContentRequestToInterstitialBridge$InterstitialEvent;->toString()Ljava/lang/String;
@@ -350,7 +350,7 @@
     move-result-object v1
 
     .line 119
-    .local v1, event:Ljava/lang/String;
+    .local v1, "event":Ljava/lang/String;
     invoke-virtual {v2, v1, p3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 121
@@ -360,7 +360,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lv2/com/playhaven/interstitial/webview/PHWebViewClient;
     check-cast p0, Lv2/com/playhaven/interstitial/jsbridge/ManipulatableContentDisplayer;
 
     invoke-interface {p0, v1, v2}, Lv2/com/playhaven/interstitial/jsbridge/ManipulatableContentDisplayer;->sendEventToRequester(Ljava/lang/String;Landroid/os/Bundle;)V
@@ -370,15 +370,15 @@
     goto :goto_0
 
     .line 123
-    .end local v1           #event:Ljava/lang/String;
-    .end local v2           #message:Landroid/os/Bundle;
+    .end local v1    # "event":Ljava/lang/String;
+    .end local v2    # "message":Landroid/os/Bundle;
     :catch_0
     move-exception v3
 
     move-object v0, v3
 
     .line 124
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v3, "PHWebViewClient - onReceivedError"
 
     sget-object v4, Lv2/com/playhaven/requests/crashreport/PHCrashReport$Urgency;->low:Lv2/com/playhaven/requests/crashreport/PHCrashReport$Urgency;
@@ -390,8 +390,8 @@
 
 .method public shouldOverrideUrlLoading(Landroid/webkit/WebView;Ljava/lang/String;)Z
     .locals 3
-    .parameter "webview"
-    .parameter "url"
+    .param p1, "webview"    # Landroid/webkit/WebView;
+    .param p2, "url"    # Ljava/lang/String;
 
     .prologue
     .line 134
@@ -411,7 +411,7 @@
     move-exception v0
 
     .line 136
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v1, "PHWebViewClient - shouldOverrideUrlLoading"
 
     sget-object v2, Lv2/com/playhaven/requests/crashreport/PHCrashReport$Urgency;->critical:Lv2/com/playhaven/requests/crashreport/PHCrashReport$Urgency;

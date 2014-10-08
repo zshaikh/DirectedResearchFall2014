@@ -25,9 +25,9 @@
 # direct methods
 .method public constructor <init>(Lcom/flurry/org/codehaus/jackson/map/deser/impl/BeanPropertyMap$Bucket;Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/map/deser/SettableBeanProperty;)V
     .locals 0
-    .parameter "next"
-    .parameter "key"
-    .parameter "value"
+    .param p1, "next"    # Lcom/flurry/org/codehaus/jackson/map/deser/impl/BeanPropertyMap$Bucket;
+    .param p2, "key"    # Ljava/lang/String;
+    .param p3, "value"    # Lcom/flurry/org/codehaus/jackson/map/deser/SettableBeanProperty;
 
     .prologue
     .line 193

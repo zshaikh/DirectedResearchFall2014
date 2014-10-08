@@ -89,7 +89,7 @@
 
 .method public static SHA1(Ljava/lang/String;)Ljava/lang/String;
     .locals 5
-    .parameter "text"
+    .param p0, "text"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/security/NoSuchAlgorithmException;,
@@ -106,7 +106,7 @@
     move-result-object v0
 
     .line 161
-    .local v0, md:Ljava/security/MessageDigest;
+    .local v0, "md":Ljava/security/MessageDigest;
     const-string v2, "iso-8859-1"
 
     invoke-virtual {p0, v2}, Ljava/lang/String;->getBytes(Ljava/lang/String;)[B
@@ -127,7 +127,7 @@
     move-result-object v1
 
     .line 163
-    .local v1, sha1hash:[B
+    .local v1, "sha1hash":[B
     invoke-static {v1}, Lcom/bitrhymes/nativeutils/utils/Utils;->convertToHex([B)Ljava/lang/String;
 
     move-result-object v2
@@ -137,7 +137,7 @@
 
 .method private static convertToHex([B)Ljava/lang/String;
     .locals 8
-    .parameter "data"
+    .param p0, "data"    # [B
 
     .prologue
     .line 145
@@ -146,7 +146,7 @@
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
     .line 146
-    .local v1, buf:Ljava/lang/StringBuilder;
+    .local v1, "buf":Ljava/lang/StringBuilder;
     array-length v5, p0
 
     const/4 v6, 0x0
@@ -166,21 +166,21 @@
     aget-byte v0, p0, v6
 
     .line 147
-    .local v0, b:B
+    .local v0, "b":B
     ushr-int/lit8 v7, v0, 0x4
 
     and-int/lit8 v2, v7, 0xf
 
     .line 148
-    .local v2, halfbyte:I
+    .local v2, "halfbyte":I
     const/4 v3, 0x0
 
-    .local v3, two_halfs:I
+    .local v3, "two_halfs":I
     move v4, v3
 
     .line 150
-    .end local v3           #two_halfs:I
-    .local v4, two_halfs:I
+    .end local v3    # "two_halfs":I
+    .local v4, "two_halfs":I
     :goto_1
     if-ltz v2, :cond_1
 
@@ -201,8 +201,8 @@
     .line 153
     add-int/lit8 v3, v4, 0x1
 
-    .end local v4           #two_halfs:I
-    .restart local v3       #two_halfs:I
+    .end local v4    # "two_halfs":I
+    .restart local v3    # "two_halfs":I
     const/4 v7, 0x1
 
     .line 149
@@ -214,8 +214,8 @@
     goto :goto_0
 
     .line 151
-    .end local v3           #two_halfs:I
-    .restart local v4       #two_halfs:I
+    .end local v3    # "two_halfs":I
+    .restart local v4    # "two_halfs":I
     :cond_1
     const/16 v7, 0xa
 
@@ -227,13 +227,13 @@
 
     goto :goto_2
 
-    .end local v4           #two_halfs:I
-    .restart local v3       #two_halfs:I
+    .end local v4    # "two_halfs":I
+    .restart local v3    # "two_halfs":I
     :cond_2
     move v4, v3
 
-    .end local v3           #two_halfs:I
-    .restart local v4       #two_halfs:I
+    .end local v3    # "two_halfs":I
+    .restart local v4    # "two_halfs":I
     goto :goto_1
 .end method
 
@@ -259,7 +259,7 @@
 
 .method public static formatSize(J)Ljava/lang/String;
     .locals 6
-    .parameter "size"
+    .param p0, "size"    # J
 
     .prologue
     const-wide/16 v4, 0x400
@@ -268,7 +268,7 @@
     const/4 v2, 0x0
 
     .line 74
-    .local v2, suffix:Ljava/lang/String;
+    .local v2, "suffix":Ljava/lang/String;
     cmp-long v3, p0, v4
 
     if-ltz v3, :cond_0
@@ -301,7 +301,7 @@
     invoke-direct {v1, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     .line 85
-    .local v1, resultBuffer:Ljava/lang/StringBuilder;
+    .local v1, "resultBuffer":Ljava/lang/StringBuilder;
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->length()I
 
     move-result v3
@@ -311,7 +311,7 @@
     sub-int v0, v3, v4
 
     .line 86
-    .local v0, commaOffset:I
+    .local v0, "commaOffset":I
     :goto_0
     if-gtz v0, :cond_2
 
@@ -343,7 +343,7 @@
 
 .method public static getExceptionStackTraceAsString(Ljava/lang/Exception;)Ljava/lang/String;
     .locals 2
-    .parameter "exception"
+    .param p0, "exception"    # Ljava/lang/Exception;
 
     .prologue
     .line 66
@@ -352,7 +352,7 @@
     invoke-direct {v0}, Ljava/io/StringWriter;-><init>()V
 
     .line 67
-    .local v0, sw:Ljava/io/StringWriter;
+    .local v0, "sw":Ljava/io/StringWriter;
     new-instance v1, Ljava/io/PrintWriter;
 
     invoke-direct {v1, v0}, Ljava/io/PrintWriter;-><init>(Ljava/io/Writer;)V
@@ -369,7 +369,7 @@
 
 .method public static getStringArray(Ljava/lang/String;)[Ljava/lang/String;
     .locals 4
-    .parameter "commaSeparatedString"
+    .param p0, "commaSeparatedString"    # Ljava/lang/String;
 
     .prologue
     .line 42
@@ -382,7 +382,7 @@
     invoke-direct {v2, p0, v3}, Ljava/util/StringTokenizer;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 44
-    .local v2, tokenizer:Ljava/util/StringTokenizer;
+    .local v2, "tokenizer":Ljava/util/StringTokenizer;
     invoke-virtual {v2}, Ljava/util/StringTokenizer;->countTokens()I
 
     move-result v3
@@ -390,10 +390,10 @@
     new-array v0, v3, [Ljava/lang/String;
 
     .line 45
-    .local v0, array:[Ljava/lang/String;
+    .local v0, "array":[Ljava/lang/String;
     const/4 v1, 0x0
 
-    .local v1, i:I
+    .local v1, "i":I
     :goto_0
     array-length v3, v0
 
@@ -425,7 +425,7 @@
 
 .method public static md5(Ljava/lang/String;)Ljava/lang/String;
     .locals 5
-    .parameter "s"
+    .param p0, "s"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/Exception;
@@ -441,7 +441,7 @@
     move-result-object v2
 
     .line 54
-    .local v2, md:Ljava/security/MessageDigest;
+    .local v2, "md":Ljava/security/MessageDigest;
     invoke-virtual {p0}, Ljava/lang/String;->getBytes()[B
 
     move-result-object v4
@@ -454,16 +454,16 @@
     move-result-object v0
 
     .line 57
-    .local v0, digest:[B
+    .local v0, "digest":[B
     new-instance v3, Ljava/lang/StringBuffer;
 
     invoke-direct {v3}, Ljava/lang/StringBuffer;-><init>()V
 
     .line 59
-    .local v3, result:Ljava/lang/StringBuffer;
+    .local v3, "result":Ljava/lang/StringBuffer;
     const/4 v1, 0x0
 
-    .local v1, i:I
+    .local v1, "i":I
     :goto_0
     array-length v4, v0
 
@@ -496,8 +496,8 @@
 
 .method public static readFromFile(Ljava/lang/String;Landroid/content/Context;)Ljava/lang/String;
     .locals 10
-    .parameter "path"
-    .parameter "context"
+    .param p0, "path"    # Ljava/lang/String;
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     const-string v9, "Utils "
@@ -506,14 +506,14 @@
     const-string v5, ""
 
     .line 118
-    .local v5, ret:Ljava/lang/String;
+    .local v5, "ret":Ljava/lang/String;
     :try_start_0
     invoke-virtual {p1, p0}, Landroid/content/Context;->openFileInput(Ljava/lang/String;)Ljava/io/FileInputStream;
 
     move-result-object v2
 
     .line 120
-    .local v2, inputStream:Ljava/io/InputStream;
+    .local v2, "inputStream":Ljava/io/InputStream;
     if-eqz v2, :cond_0
 
     .line 121
@@ -522,23 +522,23 @@
     invoke-direct {v3, v2}, Ljava/io/InputStreamReader;-><init>(Ljava/io/InputStream;)V
 
     .line 123
-    .local v3, inputStreamReader:Ljava/io/InputStreamReader;
+    .local v3, "inputStreamReader":Ljava/io/InputStreamReader;
     new-instance v0, Ljava/io/BufferedReader;
 
     invoke-direct {v0, v3}, Ljava/io/BufferedReader;-><init>(Ljava/io/Reader;)V
 
     .line 125
-    .local v0, bufferedReader:Ljava/io/BufferedReader;
+    .local v0, "bufferedReader":Ljava/io/BufferedReader;
     const-string v4, ""
 
     .line 126
-    .local v4, receiveString:Ljava/lang/String;
+    .local v4, "receiveString":Ljava/lang/String;
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
     .line 128
-    .local v6, stringBuilder:Ljava/lang/StringBuilder;
+    .local v6, "stringBuilder":Ljava/lang/StringBuilder;
     :goto_0
     invoke-virtual {v0}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
@@ -555,21 +555,21 @@
     move-result-object v5
 
     .line 141
-    .end local v0           #bufferedReader:Ljava/io/BufferedReader;
-    .end local v2           #inputStream:Ljava/io/InputStream;
-    .end local v3           #inputStreamReader:Ljava/io/InputStreamReader;
-    .end local v4           #receiveString:Ljava/lang/String;
-    .end local v6           #stringBuilder:Ljava/lang/StringBuilder;
+    .end local v0    # "bufferedReader":Ljava/io/BufferedReader;
+    .end local v2    # "inputStream":Ljava/io/InputStream;
+    .end local v3    # "inputStreamReader":Ljava/io/InputStreamReader;
+    .end local v4    # "receiveString":Ljava/lang/String;
+    .end local v6    # "stringBuilder":Ljava/lang/StringBuilder;
     :cond_0
     :goto_1
     return-object v5
 
     .line 129
-    .restart local v0       #bufferedReader:Ljava/io/BufferedReader;
-    .restart local v2       #inputStream:Ljava/io/InputStream;
-    .restart local v3       #inputStreamReader:Ljava/io/InputStreamReader;
-    .restart local v4       #receiveString:Ljava/lang/String;
-    .restart local v6       #stringBuilder:Ljava/lang/StringBuilder;
+    .restart local v0    # "bufferedReader":Ljava/io/BufferedReader;
+    .restart local v2    # "inputStream":Ljava/io/InputStream;
+    .restart local v3    # "inputStreamReader":Ljava/io/InputStreamReader;
+    .restart local v4    # "receiveString":Ljava/lang/String;
+    .restart local v6    # "stringBuilder":Ljava/lang/StringBuilder;
     :cond_1
     invoke-virtual {v6, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
     :try_end_0
@@ -579,18 +579,18 @@
     goto :goto_0
 
     .line 135
-    .end local v0           #bufferedReader:Ljava/io/BufferedReader;
-    .end local v2           #inputStream:Ljava/io/InputStream;
-    .end local v3           #inputStreamReader:Ljava/io/InputStreamReader;
-    .end local v4           #receiveString:Ljava/lang/String;
-    .end local v6           #stringBuilder:Ljava/lang/StringBuilder;
+    .end local v0    # "bufferedReader":Ljava/io/BufferedReader;
+    .end local v2    # "inputStream":Ljava/io/InputStream;
+    .end local v3    # "inputStreamReader":Ljava/io/InputStreamReader;
+    .end local v4    # "receiveString":Ljava/lang/String;
+    .end local v6    # "stringBuilder":Ljava/lang/StringBuilder;
     :catch_0
     move-exception v7
 
     move-object v1, v7
 
     .line 136
-    .local v1, e:Ljava/io/FileNotFoundException;
+    .local v1, "e":Ljava/io/FileNotFoundException;
     const-string v7, "Utils "
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -616,14 +616,14 @@
     goto :goto_1
 
     .line 137
-    .end local v1           #e:Ljava/io/FileNotFoundException;
+    .end local v1    # "e":Ljava/io/FileNotFoundException;
     :catch_1
     move-exception v7
 
     move-object v1, v7
 
     .line 138
-    .local v1, e:Ljava/io/IOException;
+    .local v1, "e":Ljava/io/IOException;
     const-string v7, "Utils "
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -651,14 +651,14 @@
 
 .method public static readFromSDFile(Ljava/lang/String;)Ljava/lang/String;
     .locals 10
-    .parameter "fileName"
+    .param p0, "fileName"    # Ljava/lang/String;
 
     .prologue
     .line 196
     const-string v5, ""
 
     .line 199
-    .local v5, ret:Ljava/lang/String;
+    .local v5, "ret":Ljava/lang/String;
     :try_start_0
     invoke-static {}, Lcom/bitrhymes/nativeutils/utils/Utils;->externalMemoryAvailable()Z
 
@@ -680,7 +680,7 @@
     invoke-direct {v0, v7, v8}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
     .line 202
-    .local v0, bingoBashDir:Ljava/io/File;
+    .local v0, "bingoBashDir":Ljava/io/File;
     invoke-virtual {v0}, Ljava/io/File;->mkdirs()Z
 
     move-result v7
@@ -707,12 +707,12 @@
     const-string v7, ""
 
     .line 223
-    .end local v0           #bingoBashDir:Ljava/io/File;
+    .end local v0    # "bingoBashDir":Ljava/io/File;
     :goto_0
     return-object v7
 
     .line 207
-    .restart local v0       #bingoBashDir:Ljava/io/File;
+    .restart local v0    # "bingoBashDir":Ljava/io/File;
     :cond_0
     :try_start_1
     new-instance v3, Ljava/io/File;
@@ -722,14 +722,14 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
     .line 209
-    .local v3, file:Ljava/io/File;
+    .local v3, "file":Ljava/io/File;
     :try_start_2
     new-instance v4, Ljava/io/FileInputStream;
 
     invoke-direct {v4, v3}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
 
     .line 210
-    .local v4, in:Ljava/io/FileInputStream;
+    .local v4, "in":Ljava/io/FileInputStream;
     invoke-virtual {v4}, Ljava/io/FileInputStream;->available()I
 
     move-result v7
@@ -737,7 +737,7 @@
     new-array v1, v7, [B
 
     .line 211
-    .local v1, buffer:[B
+    .local v1, "buffer":[B
     invoke-virtual {v4, v1}, Ljava/io/FileInputStream;->read([B)I
 
     .line 212
@@ -748,8 +748,8 @@
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
 
     .line 213
-    .end local v5           #ret:Ljava/lang/String;
-    .local v6, ret:Ljava/lang/String;
+    .end local v5    # "ret":Ljava/lang/String;
+    .local v6, "ret":Ljava/lang/String;
     :try_start_3
     invoke-virtual {v4}, Ljava/io/FileInputStream;->close()V
     :try_end_3
@@ -757,12 +757,12 @@
 
     move-object v5, v6
 
-    .end local v0           #bingoBashDir:Ljava/io/File;
-    .end local v1           #buffer:[B
-    .end local v3           #file:Ljava/io/File;
-    .end local v4           #in:Ljava/io/FileInputStream;
-    .end local v6           #ret:Ljava/lang/String;
-    .restart local v5       #ret:Ljava/lang/String;
+    .end local v0    # "bingoBashDir":Ljava/io/File;
+    .end local v1    # "buffer":[B
+    .end local v3    # "file":Ljava/io/File;
+    .end local v4    # "in":Ljava/io/FileInputStream;
+    .end local v6    # "ret":Ljava/lang/String;
+    .restart local v5    # "ret":Ljava/lang/String;
     :cond_1
     :goto_1
     move-object v7, v5
@@ -771,15 +771,15 @@
     goto :goto_0
 
     .line 215
-    .restart local v0       #bingoBashDir:Ljava/io/File;
-    .restart local v3       #file:Ljava/io/File;
+    .restart local v0    # "bingoBashDir":Ljava/io/File;
+    .restart local v3    # "file":Ljava/io/File;
     :catch_0
     move-exception v7
 
     move-object v2, v7
 
     .line 216
-    .local v2, e:Ljava/lang/Exception;
+    .local v2, "e":Ljava/lang/Exception;
     :goto_2
     :try_start_4
     invoke-virtual {v2}, Ljava/lang/Exception;->printStackTrace()V
@@ -789,16 +789,16 @@
     goto :goto_1
 
     .line 219
-    .end local v0           #bingoBashDir:Ljava/io/File;
-    .end local v2           #e:Ljava/lang/Exception;
-    .end local v3           #file:Ljava/io/File;
+    .end local v0    # "bingoBashDir":Ljava/io/File;
+    .end local v2    # "e":Ljava/lang/Exception;
+    .end local v3    # "file":Ljava/io/File;
     :catch_1
     move-exception v7
 
     move-object v2, v7
 
     .line 220
-    .restart local v2       #e:Ljava/lang/Exception;
+    .restart local v2    # "e":Ljava/lang/Exception;
     const-string v7, "Exception"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -824,13 +824,13 @@
     goto :goto_1
 
     .line 215
-    .end local v2           #e:Ljava/lang/Exception;
-    .end local v5           #ret:Ljava/lang/String;
-    .restart local v0       #bingoBashDir:Ljava/io/File;
-    .restart local v1       #buffer:[B
-    .restart local v3       #file:Ljava/io/File;
-    .restart local v4       #in:Ljava/io/FileInputStream;
-    .restart local v6       #ret:Ljava/lang/String;
+    .end local v2    # "e":Ljava/lang/Exception;
+    .end local v5    # "ret":Ljava/lang/String;
+    .restart local v0    # "bingoBashDir":Ljava/io/File;
+    .restart local v1    # "buffer":[B
+    .restart local v3    # "file":Ljava/io/File;
+    .restart local v4    # "in":Ljava/io/FileInputStream;
+    .restart local v6    # "ret":Ljava/lang/String;
     :catch_2
     move-exception v7
 
@@ -838,15 +838,15 @@
 
     move-object v5, v6
 
-    .end local v6           #ret:Ljava/lang/String;
-    .restart local v5       #ret:Ljava/lang/String;
+    .end local v6    # "ret":Ljava/lang/String;
+    .restart local v5    # "ret":Ljava/lang/String;
     goto :goto_2
 .end method
 
 .method public static validateODID(Ljava/lang/String;Landroid/content/Context;)Z
     .locals 12
-    .parameter "odid"
-    .parameter "context"
+    .param p0, "odid"    # Ljava/lang/String;
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     const/4 v11, 0x1
@@ -859,7 +859,7 @@
     const/4 v5, 0x0
 
     .line 229
-    .local v5, isValid:Z
+    .local v5, "isValid":Z
     if-eqz p0, :cond_0
 
     invoke-virtual {p0}, Ljava/lang/String;->trim()Ljava/lang/String;
@@ -889,7 +889,7 @@
     move-result-object v4
 
     .line 235
-    .local v4, idsFromFile:[Ljava/lang/String;
+    .local v4, "idsFromFile":[Ljava/lang/String;
     array-length v8, v4
 
     const/4 v9, 0x2
@@ -908,19 +908,19 @@
     aget-object v2, v4, v8
 
     .line 239
-    .local v2, fileODID:Ljava/lang/String;
+    .local v2, "fileODID":Ljava/lang/String;
     const/4 v8, 0x0
 
     aget-object v1, v4, v8
 
     .line 241
-    .local v1, fileHashODID:Ljava/lang/String;
+    .local v1, "fileHashODID":Ljava/lang/String;
     new-instance v7, Lcom/bitrhymes/nativeutils/utils/OpenUDID_manager;
 
     invoke-direct {v7, p1}, Lcom/bitrhymes/nativeutils/utils/OpenUDID_manager;-><init>(Landroid/content/Context;)V
 
     .line 244
-    .local v7, manager:Lcom/bitrhymes/nativeutils/utils/OpenUDID_manager;
+    .local v7, "manager":Lcom/bitrhymes/nativeutils/utils/OpenUDID_manager;
     iget-object v8, v7, Lcom/bitrhymes/nativeutils/utils/OpenUDID_manager;->mPreferences:Landroid/content/SharedPreferences;
 
     .line 245
@@ -934,7 +934,7 @@
     move-result-object v6
 
     .line 246
-    .local v6, localOpenUDID:Ljava/lang/String;
+    .local v6, "localOpenUDID":Ljava/lang/String;
     if-nez v6, :cond_3
 
     .line 247
@@ -945,7 +945,7 @@
     move-result-object v0
 
     .line 248
-    .local v0, e:Landroid/content/SharedPreferences$Editor;
+    .local v0, "e":Landroid/content/SharedPreferences$Editor;
     const-string v8, "openudid"
 
     invoke-interface {v0, v8, v2}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
@@ -959,14 +959,14 @@
     goto :goto_0
 
     .line 253
-    .end local v0           #e:Landroid/content/SharedPreferences$Editor;
+    .end local v0    # "e":Landroid/content/SharedPreferences$Editor;
     :cond_3
     invoke-static {v6}, Lcom/bitrhymes/nativeutils/utils/Utils;->SHA1(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
     .line 255
-    .local v3, hashOfLocalODID:Ljava/lang/String;
+    .local v3, "hashOfLocalODID":Ljava/lang/String;
     invoke-virtual {v2, v6}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v8
@@ -985,12 +985,12 @@
     .line 257
     const/4 v5, 0x1
 
-    .end local v1           #fileHashODID:Ljava/lang/String;
-    .end local v2           #fileODID:Ljava/lang/String;
-    .end local v3           #hashOfLocalODID:Ljava/lang/String;
-    .end local v4           #idsFromFile:[Ljava/lang/String;
-    .end local v6           #localOpenUDID:Ljava/lang/String;
-    .end local v7           #manager:Lcom/bitrhymes/nativeutils/utils/OpenUDID_manager;
+    .end local v1    # "fileHashODID":Ljava/lang/String;
+    .end local v2    # "fileODID":Ljava/lang/String;
+    .end local v3    # "hashOfLocalODID":Ljava/lang/String;
+    .end local v4    # "idsFromFile":[Ljava/lang/String;
+    .end local v6    # "localOpenUDID":Ljava/lang/String;
+    .end local v7    # "manager":Lcom/bitrhymes/nativeutils/utils/OpenUDID_manager;
     :cond_4
     :goto_1
     move v8, v5
@@ -1005,7 +1005,7 @@
     move-object v0, v8
 
     .line 260
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v8, "Utils"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -1033,9 +1033,9 @@
 
 .method public static writeToFile(Ljava/lang/String;Landroid/content/Context;Ljava/lang/String;)V
     .locals 5
-    .parameter "data"
-    .parameter "context"
-    .parameter "path"
+    .param p0, "data"    # Ljava/lang/String;
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "path"    # Ljava/lang/String;
 
     .prologue
     .line 103
@@ -1056,7 +1056,7 @@
     invoke-direct {v1, v2}, Ljava/io/OutputStreamWriter;-><init>(Ljava/io/OutputStream;)V
 
     .line 106
-    .local v1, outputStreamWriter:Ljava/io/OutputStreamWriter;
+    .local v1, "outputStreamWriter":Ljava/io/OutputStreamWriter;
     invoke-virtual {v1, p0}, Ljava/io/OutputStreamWriter;->write(Ljava/lang/String;)V
 
     .line 107
@@ -1065,7 +1065,7 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 111
-    .end local v1           #outputStreamWriter:Ljava/io/OutputStreamWriter;
+    .end local v1    # "outputStreamWriter":Ljava/io/OutputStreamWriter;
     :goto_0
     return-void
 
@@ -1076,7 +1076,7 @@
     move-object v0, v2
 
     .line 109
-    .local v0, e:Ljava/io/IOException;
+    .local v0, "e":Ljava/io/IOException;
     const-string v2, "Exception"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1104,8 +1104,8 @@
 
 .method public static writeToSDFile(Ljava/lang/String;Ljava/lang/String;)V
     .locals 7
-    .parameter "data"
-    .parameter "fileName"
+    .param p0, "data"    # Ljava/lang/String;
+    .param p1, "fileName"    # Ljava/lang/String;
 
     .prologue
     .line 168
@@ -1130,7 +1130,7 @@
     invoke-direct {v0, v4, v5}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
     .line 171
-    .local v0, bingoBashDir:Ljava/io/File;
+    .local v0, "bingoBashDir":Ljava/io/File;
     invoke-virtual {v0}, Ljava/io/File;->mkdirs()Z
 
     move-result v4
@@ -1152,20 +1152,20 @@
     if-nez v4, :cond_1
 
     .line 192
-    .end local v0           #bingoBashDir:Ljava/io/File;
+    .end local v0    # "bingoBashDir":Ljava/io/File;
     :cond_0
     :goto_0
     return-void
 
     .line 176
-    .restart local v0       #bingoBashDir:Ljava/io/File;
+    .restart local v0    # "bingoBashDir":Ljava/io/File;
     :cond_1
     new-instance v2, Ljava/io/File;
 
     invoke-direct {v2, v0, p1}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
     .line 177
-    .local v2, file:Ljava/io/File;
+    .local v2, "file":Ljava/io/File;
     invoke-virtual {v2}, Ljava/io/File;->exists()Z
 
     move-result v4
@@ -1185,7 +1185,7 @@
     invoke-direct {v3, v2}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
 
     .line 181
-    .local v3, out:Ljava/io/FileOutputStream;
+    .local v3, "out":Ljava/io/FileOutputStream;
     invoke-virtual {p0}, Ljava/lang/String;->getBytes()[B
 
     move-result-object v4
@@ -1203,14 +1203,14 @@
     goto :goto_0
 
     .line 185
-    .end local v3           #out:Ljava/io/FileOutputStream;
+    .end local v3    # "out":Ljava/io/FileOutputStream;
     :catch_0
     move-exception v4
 
     move-object v1, v4
 
     .line 186
-    .local v1, e:Ljava/lang/Exception;
+    .local v1, "e":Ljava/lang/Exception;
     :try_start_2
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_2
@@ -1219,16 +1219,16 @@
     goto :goto_0
 
     .line 189
-    .end local v0           #bingoBashDir:Ljava/io/File;
-    .end local v1           #e:Ljava/lang/Exception;
-    .end local v2           #file:Ljava/io/File;
+    .end local v0    # "bingoBashDir":Ljava/io/File;
+    .end local v1    # "e":Ljava/lang/Exception;
+    .end local v2    # "file":Ljava/io/File;
     :catch_1
     move-exception v4
 
     move-object v1, v4
 
     .line 190
-    .restart local v1       #e:Ljava/lang/Exception;
+    .restart local v1    # "e":Ljava/lang/Exception;
     const-string v4, "Exception"
 
     new-instance v5, Ljava/lang/StringBuilder;

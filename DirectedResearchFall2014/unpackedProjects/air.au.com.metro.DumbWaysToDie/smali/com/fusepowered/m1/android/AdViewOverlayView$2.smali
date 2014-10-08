@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m1/android/AdViewOverlayView;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 358

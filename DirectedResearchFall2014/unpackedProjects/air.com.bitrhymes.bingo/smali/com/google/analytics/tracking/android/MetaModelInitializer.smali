@@ -44,7 +44,7 @@
 
 .method public static set(Lcom/google/analytics/tracking/android/MetaModel;)V
     .locals 8
-    .parameter "m"
+    .param p0, "m"    # Lcom/google/analytics/tracking/android/MetaModel;
 
     .prologue
     const/4 v4, 0x0

@@ -10,7 +10,7 @@
 # direct methods
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 0
-    .parameter "alias"
+    .param p1, "alias"    # Ljava/lang/String;
 
     .prologue
     .line 11
@@ -27,8 +27,8 @@
 # virtual methods
 .method public accountLoginComplete(ILjava/lang/String;)V
     .locals 0
-    .parameter "accountType"
-    .parameter "accountId"
+    .param p1, "accountType"    # I
+    .param p2, "accountId"    # Ljava/lang/String;
 
     .prologue
     .line 44
@@ -37,8 +37,8 @@
 
 .method public adAvailabilityResponse(II)V
     .locals 0
-    .parameter "available"
-    .parameter "error"
+    .param p1, "available"    # I
+    .param p2, "error"    # I
 
     .prologue
     .line 113
@@ -105,7 +105,7 @@
 
 .method public chatListError(Lcom/fusepowered/util/FuseChatError;)V
     .locals 0
-    .parameter "error"
+    .param p1, "error"    # Lcom/fusepowered/util/FuseChatError;
 
     .prologue
     .line 93
@@ -114,8 +114,7 @@
 
 .method public chatListReceived(Ljava/util/ArrayList;Ljava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter "fuse_id"
+    .param p2, "fuse_id"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -130,14 +129,14 @@
 
     .prologue
     .line 89
-    .local p1, chatMessages:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/fusepowered/util/ChatMessage;>;"
+    .local p1, "chatMessages":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/fusepowered/util/ChatMessage;>;"
     return-void
 .end method
 
 .method public friendAccepted(Ljava/lang/String;Lcom/fusepowered/util/FuseAcceptFriendError;)V
     .locals 0
-    .parameter "fuse_id"
-    .parameter "error"
+    .param p1, "fuse_id"    # Ljava/lang/String;
+    .param p2, "error"    # Lcom/fusepowered/util/FuseAcceptFriendError;
 
     .prologue
     .line 68
@@ -146,8 +145,8 @@
 
 .method public friendAdded(Ljava/lang/String;Lcom/fusepowered/util/FuseAddFriendError;)V
     .locals 0
-    .parameter "fuse_id"
-    .parameter "error"
+    .param p1, "fuse_id"    # Ljava/lang/String;
+    .param p2, "error"    # Lcom/fusepowered/util/FuseAddFriendError;
 
     .prologue
     .line 60
@@ -156,8 +155,8 @@
 
 .method public friendRejected(Ljava/lang/String;Lcom/fusepowered/util/FuseRejectFriendError;)V
     .locals 0
-    .parameter "fuse_id"
-    .parameter "error"
+    .param p1, "fuse_id"    # Ljava/lang/String;
+    .param p2, "error"    # Lcom/fusepowered/util/FuseRejectFriendError;
 
     .prologue
     .line 72
@@ -166,8 +165,8 @@
 
 .method public friendRemoved(Ljava/lang/String;Lcom/fusepowered/util/FuseRemoveFriendError;)V
     .locals 0
-    .parameter "fuse_id"
-    .parameter "error"
+    .param p1, "fuse_id"    # Ljava/lang/String;
+    .param p2, "error"    # Lcom/fusepowered/util/FuseRemoveFriendError;
 
     .prologue
     .line 64
@@ -176,7 +175,7 @@
 
 .method public friendsListError(Lcom/fusepowered/util/FuseFriendsListError;)V
     .locals 0
-    .parameter "error"
+    .param p1, "error"    # Lcom/fusepowered/util/FuseFriendsListError;
 
     .prologue
     .line 85
@@ -185,7 +184,6 @@
 
 .method public friendsListUpdated(Ljava/util/ArrayList;)V
     .locals 0
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -198,14 +196,14 @@
 
     .prologue
     .line 81
-    .local p1, friendsList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/fusepowered/util/Player;>;"
+    .local p1, "friendsList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/fusepowered/util/Player;>;"
     return-void
 .end method
 
 .method public friendsMigrated(Ljava/lang/String;Lcom/fusepowered/util/FuseMigrateFriendsError;)V
     .locals 0
-    .parameter "fuseId"
-    .parameter "migrateFriendsError"
+    .param p1, "fuseId"    # Ljava/lang/String;
+    .param p2, "migrateFriendsError"    # Lcom/fusepowered/util/FuseMigrateFriendsError;
 
     .prologue
     .line 77
@@ -222,7 +220,7 @@
 
 .method public incentiveActionCompletedStatus(Ljava/lang/String;)V
     .locals 0
-    .parameter "status"
+    .param p1, "status"    # Ljava/lang/String;
 
     .prologue
     .line 52
@@ -231,9 +229,9 @@
 
 .method public mailAcknowledged(ILjava/lang/String;I)V
     .locals 0
-    .parameter "messageId"
-    .parameter "fuse_id"
-    .parameter "requestID"
+    .param p1, "messageId"    # I
+    .param p2, "fuse_id"    # Ljava/lang/String;
+    .param p3, "requestID"    # I
 
     .prologue
     .line 105
@@ -242,8 +240,8 @@
 
 .method public mailError(Lcom/fusepowered/util/FuseMailError;I)V
     .locals 0
-    .parameter "error"
-    .parameter "requestID"
+    .param p1, "error"    # Lcom/fusepowered/util/FuseMailError;
+    .param p2, "requestID"    # I
 
     .prologue
     .line 109
@@ -252,7 +250,7 @@
 
 .method public mailListError(Lcom/fusepowered/util/FuseMailError;)V
     .locals 0
-    .parameter "error"
+    .param p1, "error"    # Lcom/fusepowered/util/FuseMailError;
 
     .prologue
     .line 101
@@ -261,8 +259,7 @@
 
 .method public mailListReceived(Ljava/util/ArrayList;Ljava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter "fuse_id"
+    .param p2, "fuse_id"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -277,13 +274,13 @@
 
     .prologue
     .line 97
-    .local p1, mailMessages:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/fusepowered/util/Mail;>;"
+    .local p1, "mailMessages":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/fusepowered/util/Mail;>;"
     return-void
 .end method
 
 .method public notificationAction(Ljava/lang/String;)V
     .locals 0
-    .parameter "action"
+    .param p1, "action"    # Ljava/lang/String;
 
     .prologue
     .line 32
@@ -292,10 +289,10 @@
 
 .method public rewardRedeemed(IILjava/lang/String;Ljava/lang/String;)V
     .locals 0
-    .parameter "incentiveId"
-    .parameter "amount"
-    .parameter "rewardItemId"
-    .parameter "rewardItemName"
+    .param p1, "incentiveId"    # I
+    .param p2, "amount"    # I
+    .param p3, "rewardItemId"    # Ljava/lang/String;
+    .param p4, "rewardItemName"    # Ljava/lang/String;
 
     .prologue
     .line 48
@@ -304,7 +301,7 @@
 
 .method public sessionLoginError(Lcom/fusepowered/util/FuseLoginError;)V
     .locals 0
-    .parameter "error"
+    .param p1, "error"    # Lcom/fusepowered/util/FuseLoginError;
 
     .prologue
     .line 36
@@ -321,7 +318,7 @@
 
 .method public timeUpdated(I)V
     .locals 0
-    .parameter "timestamp"
+    .param p1, "timestamp"    # I
 
     .prologue
     .line 40

@@ -32,7 +32,7 @@
 # virtual methods
 .method public accept(Ljava/io/File;)Z
     .locals 2
-    .parameter "file"
+    .param p1, "file"    # Ljava/io/File;
 
     .prologue
     .line 357

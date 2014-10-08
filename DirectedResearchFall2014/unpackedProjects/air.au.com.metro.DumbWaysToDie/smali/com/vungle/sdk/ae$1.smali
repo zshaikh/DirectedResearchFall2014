@@ -42,7 +42,6 @@
 # virtual methods
 .method public final synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 2
-    .parameter
 
     .prologue
     .line 41
@@ -61,7 +60,7 @@
 
 .method public final bridge synthetic newArray(I)[Ljava/lang/Object;
     .locals 1
-    .parameter "x0"
+    .param p1, "x0"    # I
 
     .prologue
     .line 41

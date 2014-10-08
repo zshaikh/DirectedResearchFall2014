@@ -30,7 +30,7 @@
 # direct methods
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 0
-    .parameter "tag"
+    .param p1, "tag"    # Ljava/lang/String;
 
     .prologue
     .line 79
@@ -45,7 +45,6 @@
 
 .method static synthetic access$0(Lv2/com/playhaven/interstitial/requestbridge/base/RequestBridge;)Ljava/lang/String;
     .locals 1
-    .parameter
 
     .prologue
     .line 53
@@ -152,7 +151,7 @@
 # virtual methods
 .method public attachDisplayer(Lv2/com/playhaven/interstitial/requestbridge/base/ContentDisplayer;)V
     .locals 0
-    .parameter "displayer"
+    .param p1, "displayer"    # Lv2/com/playhaven/interstitial/requestbridge/base/ContentDisplayer;
 
     .prologue
     .line 119
@@ -170,7 +169,7 @@
 
 .method public attachRequester(Lv2/com/playhaven/interstitial/requestbridge/base/ContentRequester;)V
     .locals 0
-    .parameter "requester"
+    .param p1, "requester"    # Lv2/com/playhaven/interstitial/requestbridge/base/ContentRequester;
 
     .prologue
     .line 87
@@ -304,7 +303,7 @@
 
 .method public onDisplayerAttached(Lv2/com/playhaven/interstitial/requestbridge/base/ContentDisplayer;)V
     .locals 0
-    .parameter "displayer"
+    .param p1, "displayer"    # Lv2/com/playhaven/interstitial/requestbridge/base/ContentDisplayer;
 
     .prologue
     .line 254
@@ -316,7 +315,7 @@
 
 .method public onRequesterAttached(Lv2/com/playhaven/interstitial/requestbridge/base/ContentRequester;)V
     .locals 0
-    .parameter "requester"
+    .param p1, "requester"    # Lv2/com/playhaven/interstitial/requestbridge/base/ContentRequester;
 
     .prologue
     .line 251
@@ -328,7 +327,7 @@
 
 .method public onTagChanged(Ljava/lang/String;)V
     .locals 1
-    .parameter "new_tag"
+    .param p1, "new_tag"    # Ljava/lang/String;
 
     .prologue
     .line 237

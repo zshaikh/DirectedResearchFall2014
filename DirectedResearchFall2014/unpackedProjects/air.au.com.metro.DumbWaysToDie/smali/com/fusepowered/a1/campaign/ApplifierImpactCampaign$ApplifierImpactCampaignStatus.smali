@@ -92,8 +92,6 @@
 
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 12
@@ -104,7 +102,7 @@
 
 .method public static getValueOf(Ljava/lang/String;)Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign$ApplifierImpactCampaignStatus;
     .locals 2
-    .parameter "status"
+    .param p0, "status"    # Ljava/lang/String;
 
     .prologue
     .line 20
@@ -163,7 +161,6 @@
 
 .method public static valueOf(Ljava/lang/String;)Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign$ApplifierImpactCampaignStatus;
     .locals 1
-    .parameter
 
     .prologue
     .line 1
@@ -216,6 +213,6 @@
     move-result-object v0
 
     .line 16
-    .local v0, output:Ljava/lang/String;
+    .local v0, "output":Ljava/lang/String;
     return-object v0
 .end method

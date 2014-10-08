@@ -69,7 +69,6 @@
 
 .method protected constructor <init>(Landroid/content/Context;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 118
@@ -81,8 +80,6 @@
 
 .method public static a(Ljava/lang/String;Landroid/content/Context;)Lcom/google/ads/ak;
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 73
@@ -126,8 +123,6 @@
 
 .method static a(Landroid/view/MotionEvent;Landroid/util/DisplayMetrics;)Ljava/util/ArrayList;
     .locals 4
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -285,8 +280,6 @@
 
 .method private static b([BLjava/lang/String;)Ljava/lang/String;
     .locals 3
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lcom/google/ads/ak$a;
@@ -348,8 +341,6 @@
 
 .method protected static declared-synchronized b(Ljava/lang/String;Landroid/content/Context;)V
     .locals 3
-    .parameter
-    .parameter
 
     .prologue
     .line 92
@@ -387,9 +378,9 @@
 
     sput-boolean v1, Lcom/google/ads/ak;->c:Z
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Lcom/google/ads/ak$a; {:try_start_1 .. :try_end_1} :catch_1
     .catch Ljava/lang/UnsupportedOperationException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     .line 110
     :cond_0
@@ -487,7 +478,6 @@
 
 .method static d(Landroid/content/Context;)Ljava/lang/String;
     .locals 4
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lcom/google/ads/ak$a;
@@ -570,7 +560,6 @@
 
 .method static e(Landroid/content/Context;)Ljava/lang/String;
     .locals 4
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lcom/google/ads/ak$a;
@@ -667,7 +656,6 @@
 
 .method private static f(Landroid/content/Context;)V
     .locals 10
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lcom/google/ads/ak$a;
@@ -1078,7 +1066,6 @@
 # virtual methods
 .method protected b(Landroid/content/Context;)V
     .locals 3
-    .parameter
 
     .prologue
     .line 125
@@ -1177,7 +1164,6 @@
 
 .method protected c(Landroid/content/Context;)V
     .locals 6
-    .parameter
 
     .prologue
     .line 156

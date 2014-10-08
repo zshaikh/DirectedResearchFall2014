@@ -96,7 +96,7 @@
 
 .method public constructor <init>(Lcom/fusepowered/m1/android/MMWebView;)V
     .locals 1
-    .parameter "webView"
+    .param p1, "webView"    # Lcom/fusepowered/m1/android/MMWebView;
 
     .prologue
     .line 294
@@ -182,7 +182,7 @@
 
 .method static synthetic access$000(Lcom/fusepowered/m1/android/NVASpeechKit;)Lcom/nuance/nmdp/speechkit/Recognizer;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/fusepowered/m1/android/NVASpeechKit;
 
     .prologue
     .line 37
@@ -193,8 +193,8 @@
 
 .method static synthetic access$002(Lcom/fusepowered/m1/android/NVASpeechKit;Lcom/nuance/nmdp/speechkit/Recognizer;)Lcom/nuance/nmdp/speechkit/Recognizer;
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
+    .param p0, "x0"    # Lcom/fusepowered/m1/android/NVASpeechKit;
+    .param p1, "x1"    # Lcom/nuance/nmdp/speechkit/Recognizer;
 
     .prologue
     .line 37
@@ -205,8 +205,8 @@
 
 .method static synthetic access$1000(Lcom/fusepowered/m1/android/NVASpeechKit;[Lcom/fusepowered/m1/android/NVASpeechKit$Result;)Lorg/json/JSONArray;
     .locals 1
-    .parameter "x0"
-    .parameter "x1"
+    .param p0, "x0"    # Lcom/fusepowered/m1/android/NVASpeechKit;
+    .param p1, "x1"    # [Lcom/fusepowered/m1/android/NVASpeechKit$Result;
 
     .prologue
     .line 37
@@ -219,8 +219,8 @@
 
 .method static synthetic access$1100(Lcom/fusepowered/m1/android/NVASpeechKit;Lcom/fusepowered/m1/android/NVASpeechKit$State;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
+    .param p0, "x0"    # Lcom/fusepowered/m1/android/NVASpeechKit;
+    .param p1, "x1"    # Lcom/fusepowered/m1/android/NVASpeechKit$State;
 
     .prologue
     .line 37
@@ -231,8 +231,8 @@
 
 .method static synthetic access$1200(Lcom/fusepowered/m1/android/NVASpeechKit;Lcom/nuance/nmdp/speechkit/SpeechError;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
+    .param p0, "x0"    # Lcom/fusepowered/m1/android/NVASpeechKit;
+    .param p1, "x1"    # Lcom/nuance/nmdp/speechkit/SpeechError;
 
     .prologue
     .line 37
@@ -243,8 +243,8 @@
 
 .method static synthetic access$1300(Lcom/fusepowered/m1/android/NVASpeechKit;Lcom/nuance/nmdp/speechkit/Recognizer;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
+    .param p0, "x0"    # Lcom/fusepowered/m1/android/NVASpeechKit;
+    .param p1, "x1"    # Lcom/nuance/nmdp/speechkit/Recognizer;
 
     .prologue
     .line 37
@@ -255,7 +255,7 @@
 
 .method static synthetic access$1400(Lcom/fusepowered/m1/android/NVASpeechKit;)Ljava/lang/Runnable;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/fusepowered/m1/android/NVASpeechKit;
 
     .prologue
     .line 37
@@ -266,7 +266,7 @@
 
 .method static synthetic access$1500(Lcom/fusepowered/m1/android/NVASpeechKit;)V
     .locals 0
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/fusepowered/m1/android/NVASpeechKit;
 
     .prologue
     .line 37
@@ -277,7 +277,7 @@
 
 .method static synthetic access$1600(Lcom/fusepowered/m1/android/NVASpeechKit;)Lcom/nuance/nmdp/speechkit/SpeechKit;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/fusepowered/m1/android/NVASpeechKit;
 
     .prologue
     .line 37
@@ -288,7 +288,7 @@
 
 .method static synthetic access$1700(Lcom/fusepowered/m1/android/NVASpeechKit;)Ljava/lang/String;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/fusepowered/m1/android/NVASpeechKit;
 
     .prologue
     .line 37
@@ -299,8 +299,8 @@
 
 .method static synthetic access$1702(Lcom/fusepowered/m1/android/NVASpeechKit;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
+    .param p0, "x0"    # Lcom/fusepowered/m1/android/NVASpeechKit;
+    .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
     .line 37
@@ -311,8 +311,8 @@
 
 .method static synthetic access$1800(Lcom/fusepowered/m1/android/NVASpeechKit;Ljava/util/List;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
+    .param p0, "x0"    # Lcom/fusepowered/m1/android/NVASpeechKit;
+    .param p1, "x1"    # Ljava/util/List;
 
     .prologue
     .line 37
@@ -323,7 +323,7 @@
 
 .method static synthetic access$200(Lcom/fusepowered/m1/android/NVASpeechKit;)Lcom/fusepowered/m1/android/NVASpeechKit$AudioLevelTracker;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/fusepowered/m1/android/NVASpeechKit;
 
     .prologue
     .line 37
@@ -334,7 +334,7 @@
 
 .method static synthetic access$300(Lcom/fusepowered/m1/android/NVASpeechKit;)Lcom/fusepowered/m1/android/NVASpeechKit$Listener;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/fusepowered/m1/android/NVASpeechKit;
 
     .prologue
     .line 37
@@ -345,7 +345,7 @@
 
 .method static synthetic access$400(Lcom/fusepowered/m1/android/NVASpeechKit;)Lcom/fusepowered/m1/android/NVASpeechKit$State;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/fusepowered/m1/android/NVASpeechKit;
 
     .prologue
     .line 37
@@ -356,7 +356,7 @@
 
 .method static synthetic access$500(Lcom/fusepowered/m1/android/NVASpeechKit;)Ljava/lang/Runnable;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/fusepowered/m1/android/NVASpeechKit;
 
     .prologue
     .line 37
@@ -367,7 +367,7 @@
 
 .method static synthetic access$600(Lcom/fusepowered/m1/android/NVASpeechKit;)Landroid/os/Handler;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/fusepowered/m1/android/NVASpeechKit;
 
     .prologue
     .line 37
@@ -378,7 +378,7 @@
 
 .method static synthetic access$700(Lcom/fusepowered/m1/android/NVASpeechKit;)V
     .locals 0
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/fusepowered/m1/android/NVASpeechKit;
 
     .prologue
     .line 37
@@ -389,7 +389,7 @@
 
 .method static synthetic access$800(Lcom/fusepowered/m1/android/NVASpeechKit;)Lcom/nuance/nmdp/speechkit/DataUploadCommand;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/fusepowered/m1/android/NVASpeechKit;
 
     .prologue
     .line 37
@@ -400,8 +400,8 @@
 
 .method static synthetic access$802(Lcom/fusepowered/m1/android/NVASpeechKit;Lcom/nuance/nmdp/speechkit/DataUploadCommand;)Lcom/nuance/nmdp/speechkit/DataUploadCommand;
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
+    .param p0, "x0"    # Lcom/fusepowered/m1/android/NVASpeechKit;
+    .param p1, "x1"    # Lcom/nuance/nmdp/speechkit/DataUploadCommand;
 
     .prologue
     .line 37
@@ -412,7 +412,7 @@
 
 .method static synthetic access$900(Lcom/fusepowered/m1/android/NVASpeechKit;)Lcom/fusepowered/m1/android/NVASpeechKit$CustomWordsOp;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/fusepowered/m1/android/NVASpeechKit;
 
     .prologue
     .line 37
@@ -423,7 +423,7 @@
 
 .method private byte2Str([B)Ljava/lang/String;
     .locals 5
-    .parameter "byteArray"
+    .param p1, "byteArray"    # [B
 
     .prologue
     .line 668
@@ -443,10 +443,10 @@
     invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
 
     .line 671
-    .local v1, hexString:Ljava/lang/StringBuffer;
+    .local v1, "hexString":Ljava/lang/StringBuffer;
     const/4 v2, 0x0
 
-    .local v2, i:I
+    .local v2, "i":I
     :goto_1
     array-length v4, p1
 
@@ -458,13 +458,13 @@
     and-int/lit16 v3, v4, 0xff
 
     .line 674
-    .local v3, v:I
+    .local v3, "v":I
     invoke-static {v3}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
 
     move-result-object v0
 
     .line 675
-    .local v0, hex:Ljava/lang/String;
+    .local v0, "hex":Ljava/lang/String;
     const/16 v4, 0x10
 
     if-ge v3, v4, :cond_1
@@ -484,8 +484,8 @@
     goto :goto_1
 
     .line 681
-    .end local v0           #hex:Ljava/lang/String;
-    .end local v3           #v:I
+    .end local v0    # "hex":Ljava/lang/String;
+    .end local v3    # "v":I
     :cond_2
     invoke-virtual {v1}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
@@ -565,7 +565,7 @@
     check-cast v0, Lcom/fusepowered/m1/android/MMWebView;
 
     .line 657
-    .local v0, webView:Lcom/fusepowered/m1/android/MMWebView;
+    .local v0, "webView":Lcom/fusepowered/m1/android/MMWebView;
     if-eqz v0, :cond_0
 
     .line 659
@@ -574,7 +574,7 @@
     move-result-object v1
 
     .line 662
-    .end local v0           #webView:Lcom/fusepowered/m1/android/MMWebView;
+    .end local v0    # "webView":Lcom/fusepowered/m1/android/MMWebView;
     :goto_0
     return-object v1
 
@@ -600,7 +600,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/fusepowered/m1/android/NVASpeechKit;
     check-cast p0, Lcom/fusepowered/m1/android/MMWebView;
 
     move-object v0, p0
@@ -609,7 +609,7 @@
     :goto_0
     return-object v0
 
-    .restart local p0
+    .restart local p0    # "this":Lcom/fusepowered/m1/android/NVASpeechKit;
     :cond_0
     const/4 v0, 0x0
 
@@ -618,7 +618,7 @@
 
 .method private getSpeechError(Lcom/nuance/nmdp/speechkit/SpeechError;)Ljava/lang/String;
     .locals 2
-    .parameter "error"
+    .param p1, "error"    # Lcom/nuance/nmdp/speechkit/SpeechError;
 
     .prologue
     .line 827
@@ -687,7 +687,7 @@
 
 .method private handleSpeechError(Lcom/nuance/nmdp/speechkit/SpeechError;)V
     .locals 1
-    .parameter "error"
+    .param p1, "error"    # Lcom/nuance/nmdp/speechkit/SpeechError;
 
     .prologue
     .line 960
@@ -776,7 +776,7 @@
 
 .method private initInternalData(Landroid/content/Context;)V
     .locals 1
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     .line 952
@@ -860,7 +860,6 @@
 
 .method private processResults(Ljava/util/List;)V
     .locals 9
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -873,7 +872,7 @@
 
     .prologue
     .line 788
-    .local p1, inputResults:Ljava/util/List;,"Ljava/util/List<Lcom/nuance/nmdp/speechkit/recognitionresult/DetailedResult;>;"
+    .local p1, "inputResults":Ljava/util/List;, "Ljava/util/List<Lcom/nuance/nmdp/speechkit/recognitionresult/DetailedResult;>;"
     const-string v4, "processResults called."
 
     invoke-static {v4}, Lcom/fusepowered/m1/android/MMSDK$Log;->d(Ljava/lang/String;)V
@@ -891,12 +890,12 @@
     const/4 v0, 0x0
 
     .line 791
-    .local v0, i:I
+    .local v0, "i":I
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
 
-    .local v2, i$:Ljava/util/Iterator;
+    .local v2, "i$":Ljava/util/Iterator;
     :goto_0
     invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
@@ -911,13 +910,13 @@
     check-cast v3, Lcom/nuance/nmdp/speechkit/recognitionresult/DetailedResult;
 
     .line 793
-    .local v3, r:Lcom/nuance/nmdp/speechkit/recognitionresult/DetailedResult;
+    .local v3, "r":Lcom/nuance/nmdp/speechkit/recognitionresult/DetailedResult;
     iget-object v4, p0, Lcom/fusepowered/m1/android/NVASpeechKit;->_results:[Lcom/fusepowered/m1/android/NVASpeechKit$Result;
 
     add-int/lit8 v1, v0, 0x1
 
-    .end local v0           #i:I
-    .local v1, i:I
+    .end local v0    # "i":I
+    .local v1, "i":I
     new-instance v5, Lcom/fusepowered/m1/android/NVASpeechKit$Result;
 
     invoke-virtual {v3}, Ljava/lang/Object;->toString()Ljava/lang/String;
@@ -934,12 +933,12 @@
 
     move v0, v1
 
-    .end local v1           #i:I
-    .restart local v0       #i:I
+    .end local v1    # "i":I
+    .restart local v0    # "i":I
     goto :goto_0
 
     .line 795
-    .end local v3           #r:Lcom/nuance/nmdp/speechkit/recognitionresult/DetailedResult;
+    .end local v3    # "r":Lcom/nuance/nmdp/speechkit/recognitionresult/DetailedResult;
     :cond_0
     return-void
 .end method
@@ -967,7 +966,7 @@
 
 .method private resultsToJSON([Lcom/fusepowered/m1/android/NVASpeechKit$Result;)Lorg/json/JSONArray;
     .locals 7
-    .parameter "resultArray"
+    .param p1, "resultArray"    # [Lcom/fusepowered/m1/android/NVASpeechKit$Result;
 
     .prologue
     .line 323
@@ -976,10 +975,10 @@
     invoke-direct {v2}, Lorg/json/JSONArray;-><init>()V
 
     .line 325
-    .local v2, list:Lorg/json/JSONArray;
+    .local v2, "list":Lorg/json/JSONArray;
     const/4 v1, 0x0
 
-    .local v1, i:I
+    .local v1, "i":I
     :goto_0
     array-length v4, p1
 
@@ -991,7 +990,7 @@
     invoke-direct {v3}, Lorg/json/JSONObject;-><init>()V
 
     .line 330
-    .local v3, object:Lorg/json/JSONObject;
+    .local v3, "object":Lorg/json/JSONObject;
     :try_start_0
     const-string v4, "score"
 
@@ -1049,7 +1048,7 @@
     move-object v0, v4
 
     .line 336
-    .local v0, e:Lorg/json/JSONException;
+    .local v0, "e":Lorg/json/JSONException;
     const-string v4, "JSON creation error."
 
     invoke-static {v4}, Lcom/fusepowered/m1/android/MMSDK$Log;->d(Ljava/lang/String;)V
@@ -1061,8 +1060,8 @@
     const/4 v4, 0x0
 
     .line 341
-    .end local v0           #e:Lorg/json/JSONException;
-    .end local v3           #object:Lorg/json/JSONObject;
+    .end local v0    # "e":Lorg/json/JSONException;
+    .end local v3    # "object":Lorg/json/JSONObject;
     :goto_1
     return-object v4
 
@@ -1074,7 +1073,7 @@
 
 .method private declared-synchronized setState(Lcom/fusepowered/m1/android/NVASpeechKit$State;)V
     .locals 3
-    .parameter "state"
+    .param p1, "state"    # Lcom/fusepowered/m1/android/NVASpeechKit$State;
 
     .prologue
     .line 1021
@@ -1105,7 +1104,7 @@
     iget-object v0, p0, Lcom/fusepowered/m1/android/NVASpeechKit;->state:Lcom/fusepowered/m1/android/NVASpeechKit$State;
 
     .line 1023
-    .local v0, old_state:Lcom/fusepowered/m1/android/NVASpeechKit$State;
+    .local v0, "old_state":Lcom/fusepowered/m1/android/NVASpeechKit$State;
     iput-object p1, p0, Lcom/fusepowered/m1/android/NVASpeechKit;->state:Lcom/fusepowered/m1/android/NVASpeechKit$State;
 
     .line 1024
@@ -1131,7 +1130,7 @@
     return-void
 
     .line 1021
-    .end local v0           #old_state:Lcom/fusepowered/m1/android/NVASpeechKit$State;
+    .end local v0    # "old_state":Lcom/fusepowered/m1/android/NVASpeechKit$State;
     :catchall_0
     move-exception v1
 
@@ -1142,7 +1141,7 @@
 
 .method private startProgress(Lcom/nuance/nmdp/speechkit/Recognizer;)V
     .locals 4
-    .parameter "recognizer"
+    .param p1, "recognizer"    # Lcom/nuance/nmdp/speechkit/Recognizer;
 
     .prologue
     .line 1015
@@ -1167,7 +1166,7 @@
 
 .method private string2Byte(Ljava/lang/String;)[B
     .locals 4
-    .parameter "string"
+    .param p1, "string"    # Ljava/lang/String;
 
     .prologue
     .line 686
@@ -1191,10 +1190,10 @@
     new-array v0, v2, [B
 
     .line 689
-    .local v0, bytes:[B
+    .local v0, "bytes":[B
     const/4 v1, 0x0
 
-    .local v1, i:I
+    .local v1, "i":I
     :goto_1
     array-length v2, v0
 
@@ -1237,7 +1236,7 @@
 # virtual methods
 .method audioLevelChange(D)V
     .locals 3
-    .parameter "audioLevel"
+    .param p1, "audioLevel"    # D
 
     .prologue
     .line 456
@@ -1246,7 +1245,7 @@
     move-result-object v0
 
     .line 457
-    .local v0, webView:Lcom/fusepowered/m1/android/MMWebView;
+    .local v0, "webView":Lcom/fusepowered/m1/android/MMWebView;
     if-eqz v0, :cond_0
 
     .line 459
@@ -1283,7 +1282,7 @@
 
 .method backgroundAudioLevel(D)V
     .locals 3
-    .parameter "audioLevel"
+    .param p1, "audioLevel"    # D
 
     .prologue
     .line 483
@@ -1292,7 +1291,7 @@
     move-result-object v0
 
     .line 484
-    .local v0, webView:Lcom/fusepowered/m1/android/MMWebView;
+    .local v0, "webView":Lcom/fusepowered/m1/android/MMWebView;
     if-eqz v0, :cond_0
 
     .line 486
@@ -1428,7 +1427,7 @@
     const/4 v0, 0x0
 
     .line 912
-    .local v0, context:Landroid/content/Context;
+    .local v0, "context":Landroid/content/Context;
     :try_start_1
     iget-object v7, p0, Lcom/fusepowered/m1/android/NVASpeechKit;->webViewRef:Ljava/lang/ref/WeakReference;
 
@@ -1444,7 +1443,7 @@
     check-cast v6, Lcom/fusepowered/m1/android/MMWebView;
 
     .line 915
-    .local v6, webView:Lcom/fusepowered/m1/android/MMWebView;
+    .local v6, "webView":Lcom/fusepowered/m1/android/MMWebView;
     if-eqz v6, :cond_1
 
     .line 917
@@ -1453,7 +1452,7 @@
     move-result-object v0
 
     .line 920
-    .end local v6           #webView:Lcom/fusepowered/m1/android/MMWebView;
+    .end local v6    # "webView":Lcom/fusepowered/m1/android/MMWebView;
     :cond_1
     if-nez v0, :cond_2
 
@@ -1477,7 +1476,7 @@
     move-result-object v4
 
     .line 931
-    .local v4, mmdid:Ljava/lang/String;
+    .local v4, "mmdid":Ljava/lang/String;
     if-nez v4, :cond_3
 
     move-object v7, v9
@@ -1495,7 +1494,7 @@
     move-result-object v3
 
     .line 937
-    .local v3, md:Ljava/security/MessageDigest;
+    .local v3, "md":Ljava/security/MessageDigest;
     invoke-virtual {v4}, Ljava/lang/String;->getBytes()[B
 
     move-result-object v7
@@ -1505,16 +1504,16 @@
     move-result-object v2
 
     .line 938
-    .local v2, hashBytes:[B
+    .local v2, "hashBytes":[B
     invoke-static {v2}, Lcom/fusepowered/m1/android/MMSDK;->byteArrayToString([B)Ljava/lang/String;
     :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
     move-result-object v5
 
     .line 945
-    .local v5, nuanceId:Ljava/lang/String;
+    .local v5, "nuanceId":Ljava/lang/String;
     :try_start_3
     sput-object v5, Lcom/fusepowered/m1/android/NVASpeechKit;->nuanceIdCache:Ljava/lang/String;
 
@@ -1523,16 +1522,16 @@
     goto :goto_0
 
     .line 940
-    .end local v2           #hashBytes:[B
-    .end local v3           #md:Ljava/security/MessageDigest;
-    .end local v5           #nuanceId:Ljava/lang/String;
+    .end local v2    # "hashBytes":[B
+    .end local v3    # "md":Ljava/security/MessageDigest;
+    .end local v5    # "nuanceId":Ljava/lang/String;
     :catch_0
     move-exception v7
 
     move-object v1, v7
 
     .line 942
-    .local v1, e:Ljava/lang/Exception;
+    .local v1, "e":Ljava/lang/Exception;
     invoke-virtual {v1}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object v7
@@ -1547,9 +1546,9 @@
     goto :goto_0
 
     .line 909
-    .end local v0           #context:Landroid/content/Context;
-    .end local v1           #e:Ljava/lang/Exception;
-    .end local v4           #mmdid:Ljava/lang/String;
+    .end local v0    # "context":Landroid/content/Context;
+    .end local v1    # "e":Ljava/lang/Exception;
+    .end local v4    # "mmdid":Ljava/lang/String;
     :catchall_0
     move-exception v7
 
@@ -1620,8 +1619,8 @@
 
 .method public initialize(Lcom/fusepowered/m1/android/HandShake$NuanceCredentials;Landroid/content/Context;)Z
     .locals 9
-    .parameter "credentials"
-    .parameter "context"
+    .param p1, "credentials"    # Lcom/fusepowered/m1/android/HandShake$NuanceCredentials;
+    .param p2, "context"    # Landroid/content/Context;
 
     .prologue
     const/4 v5, 0x0
@@ -1675,7 +1674,7 @@
     move-result-object v6
 
     .line 726
-    .local v6, appKeyBytes:[B
+    .local v6, "appKeyBytes":[B
     invoke-virtual {p1}, Lcom/fusepowered/m1/android/HandShake$NuanceCredentials;->toString()Ljava/lang/String;
 
     move-result-object v0
@@ -1742,14 +1741,14 @@
     goto :goto_0
 
     .line 717
-    .end local v6           #appKeyBytes:[B
+    .end local v6    # "appKeyBytes":[B
     :catch_0
     move-exception v0
 
     move-object v8, v0
 
     .line 719
-    .local v8, ex:Ljava/lang/IllegalStateException;
+    .local v8, "ex":Ljava/lang/IllegalStateException;
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/fusepowered/m1/android/NVASpeechKit;->sk:Lcom/nuance/nmdp/speechkit/SpeechKit;
@@ -1757,7 +1756,7 @@
     goto :goto_1
 
     .line 744
-    .end local v8           #ex:Ljava/lang/IllegalStateException;
+    .end local v8    # "ex":Ljava/lang/IllegalStateException;
     :cond_3
     const-string v0, "Already initialized. Skipping."
 
@@ -1789,7 +1788,7 @@
     invoke-direct {v2}, Lcom/nuance/nmdp/speechkit/util/pdx/PdxValue$Dictionary;-><init>()V
 
     .line 619
-    .local v2, content:Lcom/nuance/nmdp/speechkit/util/pdx/PdxValue$Dictionary;
+    .local v2, "content":Lcom/nuance/nmdp/speechkit/util/pdx/PdxValue$Dictionary;
     const-string v0, "nva_ad_network_id"
 
     const-string v1, "MillenialMedia"
@@ -1816,7 +1815,7 @@
     const-string v8, ""
 
     .line 624
-    .local v8, mmSessionId:Ljava/lang/String;
+    .local v8, "mmSessionId":Ljava/lang/String;
     iget-object v0, p0, Lcom/fusepowered/m1/android/NVASpeechKit;->_credentials:Lcom/fusepowered/m1/android/HandShake$NuanceCredentials;
 
     if-eqz v0, :cond_1
@@ -1852,7 +1851,7 @@
     move-result-object v6
 
     .line 630
-    .local v6, adId:Ljava/lang/String;
+    .local v6, "adId":Ljava/lang/String;
     invoke-static {v6}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -1881,7 +1880,7 @@
     iget-object v9, p0, Lcom/fusepowered/m1/android/NVASpeechKit;->nuance_transaction_session_id:Ljava/lang/String;
 
     .line 640
-    .local v9, session_id_for_logging:Ljava/lang/String;
+    .local v9, "session_id_for_logging":Ljava/lang/String;
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/fusepowered/m1/android/NVASpeechKit;->nuance_transaction_session_id:Ljava/lang/String;
@@ -1974,14 +1973,14 @@
     move-result-object v7
 
     .line 649
-    .local v7, command:Lcom/nuance/nmdp/speechkit/GenericCommand;
+    .local v7, "command":Lcom/nuance/nmdp/speechkit/GenericCommand;
     invoke-interface {v7}, Lcom/nuance/nmdp/speechkit/GenericCommand;->start()V
 
     goto/16 :goto_0
 
     .line 644
-    .end local v7           #command:Lcom/nuance/nmdp/speechkit/GenericCommand;
-    .end local v9           #session_id_for_logging:Ljava/lang/String;
+    .end local v7    # "command":Lcom/nuance/nmdp/speechkit/GenericCommand;
+    .end local v9    # "session_id_for_logging":Ljava/lang/String;
     :cond_3
     iget-object v0, p0, Lcom/fusepowered/m1/android/NVASpeechKit;->sk:Lcom/nuance/nmdp/speechkit/SpeechKit;
 
@@ -1989,13 +1988,13 @@
 
     move-result-object v9
 
-    .restart local v9       #session_id_for_logging:Ljava/lang/String;
+    .restart local v9    # "session_id_for_logging":Ljava/lang/String;
     goto :goto_1
 .end method
 
 .method recognitionResult(Ljava/lang/String;)V
     .locals 3
-    .parameter "jsonResults"
+    .param p1, "jsonResults"    # Ljava/lang/String;
 
     .prologue
     .line 465
@@ -2004,7 +2003,7 @@
     move-result-object v0
 
     .line 466
-    .local v0, webView:Lcom/fusepowered/m1/android/MMWebView;
+    .local v0, "webView":Lcom/fusepowered/m1/android/MMWebView;
     if-eqz v0, :cond_0
 
     .line 468
@@ -2087,7 +2086,7 @@
 
 .method public setSpeechKitListener(Lcom/fusepowered/m1/android/NVASpeechKit$Listener;)V
     .locals 0
-    .parameter "speechKitListener"
+    .param p1, "speechKitListener"    # Lcom/fusepowered/m1/android/NVASpeechKit$Listener;
 
     .prologue
     .line 505
@@ -2099,7 +2098,7 @@
 
 .method public startRecording(Ljava/lang/String;)Z
     .locals 6
-    .parameter "languageCode"
+    .param p1, "languageCode"    # Ljava/lang/String;
 
     .prologue
     const/4 v2, 0x1
@@ -2211,7 +2210,7 @@
     move-object v0, v1
 
     .line 574
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v1, "No speech kit to disconnect."
 
     const/4 v2, 0x1
@@ -2229,8 +2228,8 @@
 
 .method public textToSpeech(Ljava/lang/String;Ljava/lang/String;)Z
     .locals 3
-    .parameter "input"
-    .parameter "languageCode"
+    .param p1, "input"    # Ljava/lang/String;
+    .param p2, "languageCode"    # Ljava/lang/String;
 
     .prologue
     .line 585
@@ -2282,8 +2281,8 @@
 
 .method public updateCustomWords(Lcom/fusepowered/m1/android/NVASpeechKit$CustomWordsOp;[Ljava/lang/String;)V
     .locals 12
-    .parameter "op"
-    .parameter "words"
+    .param p1, "op"    # Lcom/fusepowered/m1/android/NVASpeechKit$CustomWordsOp;
+    .param p2, "words"    # [Ljava/lang/String;
 
     .prologue
     .line 765
@@ -2302,7 +2301,7 @@
     invoke-direct {v1}, Lcom/nuance/nmdp/speechkit/util/dataupload/DataBlock;-><init>()V
 
     .line 768
-    .local v1, datablock:Lcom/nuance/nmdp/speechkit/util/dataupload/DataBlock;
+    .local v1, "datablock":Lcom/nuance/nmdp/speechkit/util/dataupload/DataBlock;
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2346,7 +2345,7 @@
     invoke-direct {v8, v0, v3}, Lcom/nuance/nmdp/speechkit/util/dataupload/Data;-><init>(Ljava/lang/String;Lcom/nuance/nmdp/speechkit/util/dataupload/Data$DataType;)V
 
     .line 771
-    .local v8, data:Lcom/nuance/nmdp/speechkit/util/dataupload/Data;
+    .local v8, "data":Lcom/nuance/nmdp/speechkit/util/dataupload/Data;
     new-instance v6, Lcom/nuance/nmdp/speechkit/util/dataupload/Action;
 
     sget-object v0, Lcom/fusepowered/m1/android/NVASpeechKit$CustomWordsOp;->Add:Lcom/fusepowered/m1/android/NVASpeechKit$CustomWordsOp;
@@ -2359,23 +2358,23 @@
     invoke-direct {v6, v0}, Lcom/nuance/nmdp/speechkit/util/dataupload/Action;-><init>(Lcom/nuance/nmdp/speechkit/util/dataupload/Action$ActionType;)V
 
     .line 772
-    .local v6, addAction:Lcom/nuance/nmdp/speechkit/util/dataupload/Action;
+    .local v6, "addAction":Lcom/nuance/nmdp/speechkit/util/dataupload/Action;
     move-object v7, p2
 
-    .local v7, arr$:[Ljava/lang/String;
+    .local v7, "arr$":[Ljava/lang/String;
     array-length v10, v7
 
-    .local v10, len$:I
+    .local v10, "len$":I
     const/4 v9, 0x0
 
-    .local v9, i$:I
+    .local v9, "i$":I
     :goto_3
     if-ge v9, v10, :cond_3
 
     aget-object v11, v7, v9
 
     .line 774
-    .local v11, word:Ljava/lang/String;
+    .local v11, "word":Ljava/lang/String;
     invoke-virtual {v6, v11}, Lcom/nuance/nmdp/speechkit/util/dataupload/Action;->addWord(Ljava/lang/String;)V
 
     .line 775
@@ -2411,29 +2410,29 @@
     goto :goto_3
 
     .line 768
-    .end local v6           #addAction:Lcom/nuance/nmdp/speechkit/util/dataupload/Action;
-    .end local v7           #arr$:[Ljava/lang/String;
-    .end local v8           #data:Lcom/nuance/nmdp/speechkit/util/dataupload/Data;
-    .end local v9           #i$:I
-    .end local v10           #len$:I
-    .end local v11           #word:Ljava/lang/String;
+    .end local v6    # "addAction":Lcom/nuance/nmdp/speechkit/util/dataupload/Action;
+    .end local v7    # "arr$":[Ljava/lang/String;
+    .end local v8    # "data":Lcom/nuance/nmdp/speechkit/util/dataupload/Data;
+    .end local v9    # "i$":I
+    .end local v10    # "len$":I
+    .end local v11    # "word":Ljava/lang/String;
     :cond_1
     const-string v3, "deleting"
 
     goto :goto_1
 
     .line 771
-    .restart local v8       #data:Lcom/nuance/nmdp/speechkit/util/dataupload/Data;
+    .restart local v8    # "data":Lcom/nuance/nmdp/speechkit/util/dataupload/Data;
     :cond_2
     sget-object v0, Lcom/nuance/nmdp/speechkit/util/dataupload/Action$ActionType;->REMOVE:Lcom/nuance/nmdp/speechkit/util/dataupload/Action$ActionType;
 
     goto :goto_2
 
     .line 777
-    .restart local v6       #addAction:Lcom/nuance/nmdp/speechkit/util/dataupload/Action;
-    .restart local v7       #arr$:[Ljava/lang/String;
-    .restart local v9       #i$:I
-    .restart local v10       #len$:I
+    .restart local v6    # "addAction":Lcom/nuance/nmdp/speechkit/util/dataupload/Action;
+    .restart local v7    # "arr$":[Ljava/lang/String;
+    .restart local v9    # "i$":I
+    .restart local v10    # "len$":I
     :cond_3
     invoke-virtual {v8, v6}, Lcom/nuance/nmdp/speechkit/util/dataupload/Data;->addAction(Lcom/nuance/nmdp/speechkit/util/dataupload/Action;)V
 
@@ -2446,7 +2445,7 @@
     move-result v2
 
     .line 781
-    .local v2, checksum:I
+    .local v2, "checksum":I
     iput-object p1, p0, Lcom/fusepowered/m1/android/NVASpeechKit;->pendingDataUploadCommandType:Lcom/fusepowered/m1/android/NVASpeechKit$CustomWordsOp;
 
     .line 782
@@ -2474,7 +2473,7 @@
 
 .method voiceError(Ljava/lang/String;)V
     .locals 3
-    .parameter "error"
+    .param p1, "error"    # Ljava/lang/String;
 
     .prologue
     .line 474
@@ -2483,7 +2482,7 @@
     move-result-object v0
 
     .line 475
-    .local v0, webView:Lcom/fusepowered/m1/android/MMWebView;
+    .local v0, "webView":Lcom/fusepowered/m1/android/MMWebView;
     if-eqz v0, :cond_0
 
     .line 477
@@ -2528,7 +2527,7 @@
     move-result-object v0
 
     .line 448
-    .local v0, webView:Lcom/fusepowered/m1/android/MMWebView;
+    .local v0, "webView":Lcom/fusepowered/m1/android/MMWebView;
     if-eqz v0, :cond_0
 
     .line 450
@@ -2551,7 +2550,7 @@
     move-result-object v0
 
     .line 430
-    .local v0, webView:Lcom/fusepowered/m1/android/MMWebView;
+    .local v0, "webView":Lcom/fusepowered/m1/android/MMWebView;
     if-eqz v0, :cond_0
 
     .line 432
@@ -2574,7 +2573,7 @@
     move-result-object v0
 
     .line 412
-    .local v0, webView:Lcom/fusepowered/m1/android/MMWebView;
+    .local v0, "webView":Lcom/fusepowered/m1/android/MMWebView;
     if-eqz v0, :cond_0
 
     .line 414
@@ -2597,7 +2596,7 @@
     move-result-object v0
 
     .line 421
-    .local v0, webView:Lcom/fusepowered/m1/android/MMWebView;
+    .local v0, "webView":Lcom/fusepowered/m1/android/MMWebView;
     if-eqz v0, :cond_0
 
     .line 423
@@ -2620,7 +2619,7 @@
     move-result-object v0
 
     .line 439
-    .local v0, webView:Lcom/fusepowered/m1/android/MMWebView;
+    .local v0, "webView":Lcom/fusepowered/m1/android/MMWebView;
     if-eqz v0, :cond_0
 
     .line 441

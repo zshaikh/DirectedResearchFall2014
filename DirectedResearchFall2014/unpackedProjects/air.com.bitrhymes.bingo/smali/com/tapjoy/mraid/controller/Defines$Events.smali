@@ -43,7 +43,6 @@
 # direct methods
 .method public constructor <init>(Lcom/tapjoy/mraid/controller/Defines;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 5

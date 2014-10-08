@@ -25,7 +25,6 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m2/m2l/MraidDisplayController;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 864
@@ -60,8 +59,8 @@
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 4
-    .parameter "context"
-    .parameter "intent"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
     .line 869
@@ -83,7 +82,7 @@
     move-result-object v0
 
     .line 873
-    .local v0, action:Ljava/lang/String;
+    .local v0, "action":Ljava/lang/String;
     const-string v2, "android.intent.action.CONFIGURATION_CHANGED"
 
     invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -95,13 +94,13 @@
     .line 874
     iget-object v2, p0, Lcom/fusepowered/m2/m2l/MraidDisplayController$OrientationBroadcastReceiver;->this$0:Lcom/fusepowered/m2/m2l/MraidDisplayController;
 
-    #calls: Lcom/fusepowered/m2/m2l/MraidDisplayController;->getDisplayRotation()I
+    # invokes: Lcom/fusepowered/m2/m2l/MraidDisplayController;->getDisplayRotation()I
     invoke-static {v2}, Lcom/fusepowered/m2/m2l/MraidDisplayController;->access$3(Lcom/fusepowered/m2/m2l/MraidDisplayController;)I
 
     move-result v1
 
     .line 875
-    .local v1, orientation:I
+    .local v1, "orientation":I
     iget v2, p0, Lcom/fusepowered/m2/m2l/MraidDisplayController$OrientationBroadcastReceiver;->mLastRotation:I
 
     if-eq v1, v2, :cond_0
@@ -114,7 +113,7 @@
 
     iget v3, p0, Lcom/fusepowered/m2/m2l/MraidDisplayController$OrientationBroadcastReceiver;->mLastRotation:I
 
-    #calls: Lcom/fusepowered/m2/m2l/MraidDisplayController;->onOrientationChanged(I)V
+    # invokes: Lcom/fusepowered/m2/m2l/MraidDisplayController;->onOrientationChanged(I)V
     invoke-static {v2, v3}, Lcom/fusepowered/m2/m2l/MraidDisplayController;->access$4(Lcom/fusepowered/m2/m2l/MraidDisplayController;I)V
 
     goto :goto_0
@@ -122,7 +121,7 @@
 
 .method public register(Landroid/content/Context;)V
     .locals 2
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     .line 887

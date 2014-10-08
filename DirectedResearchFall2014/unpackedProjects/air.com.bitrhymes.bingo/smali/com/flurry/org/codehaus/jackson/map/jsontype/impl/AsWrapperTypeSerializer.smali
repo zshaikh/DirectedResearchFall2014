@@ -6,8 +6,8 @@
 # direct methods
 .method public constructor <init>(Lcom/flurry/org/codehaus/jackson/map/jsontype/TypeIdResolver;Lcom/flurry/org/codehaus/jackson/map/BeanProperty;)V
     .locals 0
-    .parameter "idRes"
-    .parameter "property"
+    .param p1, "idRes"    # Lcom/flurry/org/codehaus/jackson/map/jsontype/TypeIdResolver;
+    .param p2, "property"    # Lcom/flurry/org/codehaus/jackson/map/BeanProperty;
 
     .prologue
     .line 27
@@ -31,8 +31,8 @@
 
 .method public writeTypePrefixForArray(Ljava/lang/Object;Lcom/flurry/org/codehaus/jackson/JsonGenerator;)V
     .locals 1
-    .parameter "value"
-    .parameter "jgen"
+    .param p1, "value"    # Ljava/lang/Object;
+    .param p2, "jgen"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -59,9 +59,8 @@
 
 .method public writeTypePrefixForArray(Ljava/lang/Object;Lcom/flurry/org/codehaus/jackson/JsonGenerator;Ljava/lang/Class;)V
     .locals 1
-    .parameter "value"
-    .parameter "jgen"
-    .parameter
+    .param p1, "value"    # Ljava/lang/Object;
+    .param p2, "jgen"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -81,7 +80,7 @@
 
     .prologue
     .line 70
-    .local p3, type:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p3, "type":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-virtual {p2}, Lcom/flurry/org/codehaus/jackson/JsonGenerator;->writeStartObject()V
 
     .line 72
@@ -99,8 +98,8 @@
 
 .method public writeTypePrefixForObject(Ljava/lang/Object;Lcom/flurry/org/codehaus/jackson/JsonGenerator;)V
     .locals 1
-    .parameter "value"
-    .parameter "jgen"
+    .param p1, "value"    # Ljava/lang/Object;
+    .param p2, "jgen"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -127,9 +126,8 @@
 
 .method public writeTypePrefixForObject(Ljava/lang/Object;Lcom/flurry/org/codehaus/jackson/JsonGenerator;Ljava/lang/Class;)V
     .locals 1
-    .parameter "value"
-    .parameter "jgen"
-    .parameter
+    .param p1, "value"    # Ljava/lang/Object;
+    .param p2, "jgen"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -149,7 +147,7 @@
 
     .prologue
     .line 49
-    .local p3, type:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p3, "type":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-virtual {p2}, Lcom/flurry/org/codehaus/jackson/JsonGenerator;->writeStartObject()V
 
     .line 51
@@ -167,8 +165,8 @@
 
 .method public writeTypePrefixForScalar(Ljava/lang/Object;Lcom/flurry/org/codehaus/jackson/JsonGenerator;)V
     .locals 1
-    .parameter "value"
-    .parameter "jgen"
+    .param p1, "value"    # Ljava/lang/Object;
+    .param p2, "jgen"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -195,9 +193,8 @@
 
 .method public writeTypePrefixForScalar(Ljava/lang/Object;Lcom/flurry/org/codehaus/jackson/JsonGenerator;Ljava/lang/Class;)V
     .locals 1
-    .parameter "value"
-    .parameter "jgen"
-    .parameter
+    .param p1, "value"    # Ljava/lang/Object;
+    .param p2, "jgen"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -217,7 +214,7 @@
 
     .prologue
     .line 90
-    .local p3, type:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p3, "type":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-virtual {p2}, Lcom/flurry/org/codehaus/jackson/JsonGenerator;->writeStartObject()V
 
     .line 91
@@ -235,8 +232,8 @@
 
 .method public writeTypeSuffixForArray(Ljava/lang/Object;Lcom/flurry/org/codehaus/jackson/JsonGenerator;)V
     .locals 0
-    .parameter "value"
-    .parameter "jgen"
+    .param p1, "value"    # Ljava/lang/Object;
+    .param p2, "jgen"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -257,8 +254,8 @@
 
 .method public writeTypeSuffixForObject(Ljava/lang/Object;Lcom/flurry/org/codehaus/jackson/JsonGenerator;)V
     .locals 0
-    .parameter "value"
-    .parameter "jgen"
+    .param p1, "value"    # Ljava/lang/Object;
+    .param p2, "jgen"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -279,8 +276,8 @@
 
 .method public writeTypeSuffixForScalar(Ljava/lang/Object;Lcom/flurry/org/codehaus/jackson/JsonGenerator;)V
     .locals 0
-    .parameter "value"
-    .parameter "jgen"
+    .param p1, "value"    # Ljava/lang/Object;
+    .param p2, "jgen"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,

@@ -10,9 +10,9 @@
 # direct methods
 .method public constructor <init>(Lcom/flurry/org/codehaus/jackson/map/jsontype/TypeIdResolver;Lcom/flurry/org/codehaus/jackson/map/BeanProperty;Ljava/lang/String;)V
     .locals 0
-    .parameter "idRes"
-    .parameter "property"
-    .parameter "propName"
+    .param p1, "idRes"    # Lcom/flurry/org/codehaus/jackson/map/jsontype/TypeIdResolver;
+    .param p2, "property"    # Lcom/flurry/org/codehaus/jackson/map/BeanProperty;
+    .param p3, "propName"    # Ljava/lang/String;
 
     .prologue
     .line 29
@@ -49,8 +49,8 @@
 
 .method public writeTypePrefixForObject(Ljava/lang/Object;Lcom/flurry/org/codehaus/jackson/JsonGenerator;)V
     .locals 2
-    .parameter "value"
-    .parameter "jgen"
+    .param p1, "value"    # Ljava/lang/Object;
+    .param p2, "jgen"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -79,9 +79,8 @@
 
 .method public writeTypePrefixForObject(Ljava/lang/Object;Lcom/flurry/org/codehaus/jackson/JsonGenerator;Ljava/lang/Class;)V
     .locals 2
-    .parameter "value"
-    .parameter "jgen"
-    .parameter
+    .param p1, "value"    # Ljava/lang/Object;
+    .param p2, "jgen"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -101,7 +100,7 @@
 
     .prologue
     .line 51
-    .local p3, type:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p3, "type":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-virtual {p2}, Lcom/flurry/org/codehaus/jackson/JsonGenerator;->writeStartObject()V
 
     .line 52
@@ -121,8 +120,8 @@
 
 .method public writeTypeSuffixForObject(Ljava/lang/Object;Lcom/flurry/org/codehaus/jackson/JsonGenerator;)V
     .locals 0
-    .parameter "value"
-    .parameter "jgen"
+    .param p1, "value"    # Ljava/lang/Object;
+    .param p2, "jgen"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,

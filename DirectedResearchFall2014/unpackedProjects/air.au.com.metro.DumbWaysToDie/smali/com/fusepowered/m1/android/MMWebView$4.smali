@@ -28,9 +28,6 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m1/android/MMWebView;Lcom/fusepowered/m1/android/MMAdView;Lcom/fusepowered/m1/android/DTOResizeParameters;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 419
@@ -47,7 +44,7 @@
 
 .method private handleMraidResize(Lcom/fusepowered/m1/android/DTOResizeParameters;)V
     .locals 3
-    .parameter "resizeParams"
+    .param p1, "resizeParams"    # Lcom/fusepowered/m1/android/DTOResizeParameters;
 
     .prologue
     .line 434
@@ -60,7 +57,7 @@
     invoke-direct {v0, v2, p1}, Lcom/fusepowered/m1/android/MMAdView$BannerBounds;-><init>(Lcom/fusepowered/m1/android/MMAdView;Lcom/fusepowered/m1/android/DTOResizeParameters;)V
 
     .line 437
-    .local v0, bounds:Lcom/fusepowered/m1/android/MMAdView$BannerBounds;
+    .local v0, "bounds":Lcom/fusepowered/m1/android/MMAdView$BannerBounds;
     invoke-direct {p0}, Lcom/fusepowered/m1/android/MMWebView$4;->setUnresizeParameters()V
 
     .line 439
@@ -71,7 +68,7 @@
     move-result-object v1
 
     .line 440
-    .local v1, layoutParams:Landroid/view/ViewGroup$LayoutParams;
+    .local v1, "layoutParams":Landroid/view/ViewGroup$LayoutParams;
     invoke-virtual {v0, v1}, Lcom/fusepowered/m1/android/MMAdView$BannerBounds;->modifyLayoutParams(Landroid/view/ViewGroup$LayoutParams;)Landroid/view/ViewGroup$LayoutParams;
 
     .line 441
@@ -85,7 +82,7 @@
     .line 444
     iget-object v1, p0, Lcom/fusepowered/m1/android/MMWebView$4;->this$0:Lcom/fusepowered/m1/android/MMWebView;
 
-    #calls: Lcom/fusepowered/m1/android/MMWebView;->hasDefaultResizeParams()Z
+    # invokes: Lcom/fusepowered/m1/android/MMWebView;->hasDefaultResizeParams()Z
     invoke-static {v1}, Lcom/fusepowered/m1/android/MMWebView;->access$000(Lcom/fusepowered/m1/android/MMWebView;)Z
 
     move-result v1
@@ -100,7 +97,7 @@
     move-result-object v0
 
     .line 446
-    .local v0, oldParams:Landroid/view/ViewGroup$LayoutParams;
+    .local v0, "oldParams":Landroid/view/ViewGroup$LayoutParams;
     iget-object v1, p0, Lcom/fusepowered/m1/android/MMWebView$4;->this$0:Lcom/fusepowered/m1/android/MMWebView;
 
     iget v2, v0, Landroid/view/ViewGroup$LayoutParams;->width:I
@@ -152,7 +149,7 @@
     iput v2, v1, Lcom/fusepowered/m1/android/MMWebView;->oldHeight:I
 
     .line 455
-    .end local v0           #oldParams:Landroid/view/ViewGroup$LayoutParams;
+    .end local v0    # "oldParams":Landroid/view/ViewGroup$LayoutParams;
     :cond_1
     return-void
 .end method

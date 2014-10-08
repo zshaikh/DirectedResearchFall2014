@@ -24,7 +24,6 @@
 # direct methods
 .method public constructor <init>(Lcom/tapjoy/TapjoyConnectCore;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1906
@@ -58,7 +57,7 @@
     const-string v0, "https://connect.tapjoy.com/"
 
     .line 1915
-    .local v0, connectHostURL:Ljava/lang/String;
+    .local v0, "connectHostURL":Ljava/lang/String;
     invoke-static {}, Lcom/tapjoy/TapjoyConnectCore;->getHostURL()Ljava/lang/String;
 
     move-result-object v6
@@ -74,6 +73,7 @@
 
     .line 1919
     :cond_0
+    # getter for: Lcom/tapjoy/TapjoyConnectCore;->tapjoyURLConnection:Lcom/tapjoy/TapjoyURLConnection;
     invoke-static {}, Lcom/tapjoy/TapjoyConnectCore;->access$300()Lcom/tapjoy/TapjoyURLConnection;
 
     move-result-object v6
@@ -105,7 +105,7 @@
     move-result-object v1
 
     .line 1922
-    .local v1, httpResponse:Lcom/tapjoy/TapjoyHttpURLResponse;
+    .local v1, "httpResponse":Lcom/tapjoy/TapjoyHttpURLResponse;
     if-eqz v1, :cond_4
 
     iget v6, v1, Lcom/tapjoy/TapjoyHttpURLResponse;->statusCode:I
@@ -115,7 +115,7 @@
     .line 1924
     iget-object v6, v1, Lcom/tapjoy/TapjoyHttpURLResponse;->response:Ljava/lang/String;
 
-    #calls: Lcom/tapjoy/TapjoyConnectCore;->handleConnectResponse(Ljava/lang/String;)Z
+    # invokes: Lcom/tapjoy/TapjoyConnectCore;->handleConnectResponse(Ljava/lang/String;)Z
     invoke-static {v6}, Lcom/tapjoy/TapjoyConnectCore;->access$400(Ljava/lang/String;)Z
 
     move-result v6
@@ -130,6 +130,7 @@
     invoke-static {v11, v6}, Lcom/tapjoy/TapjoyLog;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 1928
+    # getter for: Lcom/tapjoy/TapjoyConnectCore;->connectNotifier:Lcom/tapjoy/TapjoyConnectNotifier;
     invoke-static {}, Lcom/tapjoy/TapjoyConnectCore;->access$600()Lcom/tapjoy/TapjoyConnectNotifier;
 
     move-result-object v6
@@ -137,6 +138,7 @@
     if-eqz v6, :cond_1
 
     .line 1929
+    # getter for: Lcom/tapjoy/TapjoyConnectCore;->connectNotifier:Lcom/tapjoy/TapjoyConnectNotifier;
     invoke-static {}, Lcom/tapjoy/TapjoyConnectCore;->access$600()Lcom/tapjoy/TapjoyConnectNotifier;
 
     move-result-object v6
@@ -146,6 +148,7 @@
     .line 1939
     :cond_1
     :goto_0
+    # getter for: Lcom/tapjoy/TapjoyConnectCore;->matchingPackageNames:Ljava/lang/String;
     invoke-static {}, Lcom/tapjoy/TapjoyConnectCore;->access$700()Ljava/lang/String;
 
     move-result-object v6
@@ -162,9 +165,10 @@
     move-result-object v2
 
     .line 1942
-    .local v2, params:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v2, "params":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v6, "package_names"
 
+    # getter for: Lcom/tapjoy/TapjoyConnectCore;->matchingPackageNames:Ljava/lang/String;
     invoke-static {}, Lcom/tapjoy/TapjoyConnectCore;->access$700()Ljava/lang/String;
 
     move-result-object v7
@@ -181,18 +185,19 @@
     div-long v3, v6, v8
 
     .line 1946
-    .local v3, time:J
+    .local v3, "time":J
+    # getter for: Lcom/tapjoy/TapjoyConnectCore;->matchingPackageNames:Ljava/lang/String;
     invoke-static {}, Lcom/tapjoy/TapjoyConnectCore;->access$700()Ljava/lang/String;
 
     move-result-object v6
 
-    #calls: Lcom/tapjoy/TapjoyConnectCore;->getPackageNamesVerifier(JLjava/lang/String;)Ljava/lang/String;
+    # invokes: Lcom/tapjoy/TapjoyConnectCore;->getPackageNamesVerifier(JLjava/lang/String;)Ljava/lang/String;
     invoke-static {v3, v4, v6}, Lcom/tapjoy/TapjoyConnectCore;->access$800(JLjava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
     .line 1947
-    .local v5, verifier:Ljava/lang/String;
+    .local v5, "verifier":Ljava/lang/String;
     const-string v6, "timestamp"
 
     invoke-static {v3, v4}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
@@ -252,15 +257,16 @@
     invoke-static {v11, v6}, Lcom/tapjoy/TapjoyLog;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 1963
-    .end local v2           #params:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
-    .end local v3           #time:J
-    .end local v5           #verifier:Ljava/lang/String;
+    .end local v2    # "params":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .end local v3    # "time":J
+    .end local v5    # "verifier":Ljava/lang/String;
     :cond_2
     :goto_1
     return-void
 
     .line 1934
     :cond_3
+    # getter for: Lcom/tapjoy/TapjoyConnectCore;->connectNotifier:Lcom/tapjoy/TapjoyConnectNotifier;
     invoke-static {}, Lcom/tapjoy/TapjoyConnectCore;->access$600()Lcom/tapjoy/TapjoyConnectNotifier;
 
     move-result-object v6
@@ -268,6 +274,7 @@
     if-eqz v6, :cond_1
 
     .line 1935
+    # getter for: Lcom/tapjoy/TapjoyConnectCore;->connectNotifier:Lcom/tapjoy/TapjoyConnectNotifier;
     invoke-static {}, Lcom/tapjoy/TapjoyConnectCore;->access$600()Lcom/tapjoy/TapjoyConnectNotifier;
 
     move-result-object v6
@@ -278,6 +285,7 @@
 
     .line 1960
     :cond_4
+    # getter for: Lcom/tapjoy/TapjoyConnectCore;->connectNotifier:Lcom/tapjoy/TapjoyConnectNotifier;
     invoke-static {}, Lcom/tapjoy/TapjoyConnectCore;->access$600()Lcom/tapjoy/TapjoyConnectNotifier;
 
     move-result-object v6
@@ -285,6 +293,7 @@
     if-eqz v6, :cond_2
 
     .line 1961
+    # getter for: Lcom/tapjoy/TapjoyConnectCore;->connectNotifier:Lcom/tapjoy/TapjoyConnectNotifier;
     invoke-static {}, Lcom/tapjoy/TapjoyConnectCore;->access$600()Lcom/tapjoy/TapjoyConnectNotifier;
 
     move-result-object v6

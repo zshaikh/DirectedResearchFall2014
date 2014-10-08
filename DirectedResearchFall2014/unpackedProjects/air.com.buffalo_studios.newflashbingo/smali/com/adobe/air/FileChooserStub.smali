@@ -100,7 +100,6 @@
 
 .method static synthetic access$000(Lcom/adobe/air/FileChooserStub;)Lcom/adobe/air/AIRExpandableFileChooser;
     .locals 1
-    .parameter
 
     .prologue
     .line 23
@@ -111,8 +110,6 @@
 
 .method static synthetic access$002(Lcom/adobe/air/FileChooserStub;Lcom/adobe/air/AIRExpandableFileChooser;)Lcom/adobe/air/AIRExpandableFileChooser;
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 23
@@ -123,7 +120,6 @@
 
 .method static synthetic access$100(Lcom/adobe/air/FileChooserStub;)Ljava/util/ArrayList;
     .locals 1
-    .parameter
 
     .prologue
     .line 23
@@ -136,7 +132,6 @@
 # virtual methods
 .method public SetUserAction(Ljava/lang/String;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 90
@@ -163,7 +158,6 @@
 
 .method public addFilter(Ljava/lang/String;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 85
@@ -177,7 +171,6 @@
 
 .method public getFilename(I)Ljava/lang/String;
     .locals 1
-    .parameter
 
     .prologue
     .line 100
@@ -226,9 +219,6 @@
 
 .method public show(Ljava/lang/String;ZZ)V
     .locals 7
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 37
@@ -286,8 +276,8 @@
 
     invoke-interface {v0}, Ljava/util/concurrent/locks/Condition;->await()V
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 69
     :cond_0

@@ -34,7 +34,6 @@
 # direct methods
 .method private constructor <init>(Lcom/chartboost/sdk/impl/bf;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 51
@@ -47,8 +46,6 @@
 
 .method synthetic constructor <init>(Lcom/chartboost/sdk/impl/bf;Lcom/chartboost/sdk/impl/bf$a;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 51
@@ -61,7 +58,6 @@
 # virtual methods
 .method public a(Ljava/lang/Class;)Ljava/lang/Object;
     .locals 3
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -120,7 +116,6 @@
 
 .method public bridge synthetic a(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
-    .parameter
 
     .prologue
     .line 1

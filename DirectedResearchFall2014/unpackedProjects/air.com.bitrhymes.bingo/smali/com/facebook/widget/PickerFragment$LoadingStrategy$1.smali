@@ -34,7 +34,6 @@
 # direct methods
 .method constructor <init>(Lcom/facebook/widget/PickerFragment$LoadingStrategy;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1
@@ -50,8 +49,8 @@
 # virtual methods
 .method public onCreateLoader(ILandroid/os/Bundle;)Landroid/support/v4/content/Loader;
     .locals 1
-    .parameter "id"
-    .parameter "args"
+    .param p1, "id"    # I
+    .param p2, "args"    # Landroid/os/Bundle;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I",
@@ -77,8 +76,6 @@
 
 .method public onLoadFinished(Landroid/support/v4/content/Loader;Lcom/facebook/widget/SimpleGraphObjectCursor;)V
     .locals 2
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -93,8 +90,8 @@
 
     .prologue
     .line 845
-    .local p1, loader:Landroid/support/v4/content/Loader;,"Landroid/support/v4/content/Loader<Lcom/facebook/widget/SimpleGraphObjectCursor<TT;>;>;"
-    .local p2, data:Lcom/facebook/widget/SimpleGraphObjectCursor;,"Lcom/facebook/widget/SimpleGraphObjectCursor<TT;>;"
+    .local p1, "loader":Landroid/support/v4/content/Loader;, "Landroid/support/v4/content/Loader<Lcom/facebook/widget/SimpleGraphObjectCursor<TT;>;>;"
+    .local p2, "data":Lcom/facebook/widget/SimpleGraphObjectCursor;, "Lcom/facebook/widget/SimpleGraphObjectCursor<TT;>;"
     iget-object v0, p0, Lcom/facebook/widget/PickerFragment$LoadingStrategy$1;->this$1:Lcom/facebook/widget/PickerFragment$LoadingStrategy;
 
     iget-object v0, v0, Lcom/facebook/widget/PickerFragment$LoadingStrategy;->loader:Lcom/facebook/widget/GraphObjectPagingLoader;
@@ -116,7 +113,7 @@
 
     check-cast p1, Lcom/facebook/widget/GraphObjectPagingLoader;
 
-    .end local p1           #loader:Landroid/support/v4/content/Loader;,"Landroid/support/v4/content/Loader<Lcom/facebook/widget/SimpleGraphObjectCursor<TT;>;>;"
+    .end local p1    # "loader":Landroid/support/v4/content/Loader;, "Landroid/support/v4/content/Loader<Lcom/facebook/widget/SimpleGraphObjectCursor<TT;>;>;"
     invoke-virtual {v0, p1, p2}, Lcom/facebook/widget/PickerFragment$LoadingStrategy;->onLoadFinished(Lcom/facebook/widget/GraphObjectPagingLoader;Lcom/facebook/widget/SimpleGraphObjectCursor;)V
 
     .line 849
@@ -125,8 +122,6 @@
 
 .method public bridge synthetic onLoadFinished(Landroid/support/v4/content/Loader;Ljava/lang/Object;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 1
@@ -141,7 +136,6 @@
 
 .method public onLoaderReset(Landroid/support/v4/content/Loader;)V
     .locals 2
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -154,7 +148,7 @@
 
     .prologue
     .line 853
-    .local p1, loader:Landroid/support/v4/content/Loader;,"Landroid/support/v4/content/Loader<Lcom/facebook/widget/SimpleGraphObjectCursor<TT;>;>;"
+    .local p1, "loader":Landroid/support/v4/content/Loader;, "Landroid/support/v4/content/Loader<Lcom/facebook/widget/SimpleGraphObjectCursor<TT;>;>;"
     iget-object v0, p0, Lcom/facebook/widget/PickerFragment$LoadingStrategy$1;->this$1:Lcom/facebook/widget/PickerFragment$LoadingStrategy;
 
     iget-object v0, v0, Lcom/facebook/widget/PickerFragment$LoadingStrategy;->loader:Lcom/facebook/widget/GraphObjectPagingLoader;
@@ -176,7 +170,7 @@
 
     check-cast p1, Lcom/facebook/widget/GraphObjectPagingLoader;
 
-    .end local p1           #loader:Landroid/support/v4/content/Loader;,"Landroid/support/v4/content/Loader<Lcom/facebook/widget/SimpleGraphObjectCursor<TT;>;>;"
+    .end local p1    # "loader":Landroid/support/v4/content/Loader;, "Landroid/support/v4/content/Loader<Lcom/facebook/widget/SimpleGraphObjectCursor<TT;>;>;"
     invoke-virtual {v0, p1}, Lcom/facebook/widget/PickerFragment$LoadingStrategy;->onLoadReset(Lcom/facebook/widget/GraphObjectPagingLoader;)V
 
     .line 857

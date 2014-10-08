@@ -21,8 +21,8 @@
 # virtual methods
 .method public call(Lcom/adobe/fre/FREContext;[Lcom/adobe/fre/FREObject;)Lcom/adobe/fre/FREObject;
     .locals 5
-    .parameter "context"
-    .parameter "args"
+    .param p1, "context"    # Lcom/adobe/fre/FREContext;
+    .param p2, "args"    # [Lcom/adobe/fre/FREObject;
 
     .prologue
     .line 21
@@ -36,7 +36,7 @@
     move-result-object v1
 
     .line 22
-    .local v1, msgs:Ljava/lang/String;
+    .local v1, "msgs":Ljava/lang/String;
     const-string v3, "LaunchSms"
 
     const-string v4, "msgs"
@@ -51,7 +51,7 @@
     invoke-direct {v2, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
     .line 24
-    .local v2, smsIntent:Landroid/content/Intent;
+    .local v2, "smsIntent":Landroid/content/Intent;
     const-string v3, "vnd.android-dir/mms-sms"
 
     invoke-virtual {v2, v3}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
@@ -71,8 +71,8 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 34
-    .end local v1           #msgs:Ljava/lang/String;
-    .end local v2           #smsIntent:Landroid/content/Intent;
+    .end local v1    # "msgs":Ljava/lang/String;
+    .end local v2    # "smsIntent":Landroid/content/Intent;
     :goto_0
     const/4 v3, 0x0
 
@@ -85,7 +85,7 @@
     move-object v0, v3
 
     .line 31
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v3, "AIR_AndroidDialog"
 
     invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;

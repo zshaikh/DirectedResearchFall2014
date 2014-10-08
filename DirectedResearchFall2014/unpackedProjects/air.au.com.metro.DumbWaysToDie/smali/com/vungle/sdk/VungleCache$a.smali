@@ -30,7 +30,6 @@
 # direct methods
 .method private constructor <init>(Lcom/vungle/sdk/VungleCache;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 475
@@ -62,8 +61,6 @@
 
 .method synthetic constructor <init>(Lcom/vungle/sdk/VungleCache;B)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 475

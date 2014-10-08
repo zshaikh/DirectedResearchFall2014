@@ -26,8 +26,6 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m2/m2l/MraidDisplayController;Ljava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 1
@@ -50,7 +48,7 @@
     .line 370
     iget-object v0, p0, Lcom/fusepowered/m2/m2l/MraidDisplayController$3;->this$0:Lcom/fusepowered/m2/m2l/MraidDisplayController;
 
-    #calls: Lcom/fusepowered/m2/m2l/MraidDisplayController;->getContext()Landroid/content/Context;
+    # invokes: Lcom/fusepowered/m2/m2l/MraidDisplayController;->getContext()Landroid/content/Context;
     invoke-static {v0}, Lcom/fusepowered/m2/m2l/MraidDisplayController;->access$5(Lcom/fusepowered/m2/m2l/MraidDisplayController;)Landroid/content/Context;
 
     move-result-object v0

@@ -60,8 +60,8 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;J)V
     .locals 7
-    .parameter "context"
-    .parameter "internalId"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "internalId"    # J
 
     .prologue
     const/16 v1, -0x32
@@ -193,7 +193,7 @@
     move-result-object v0
 
     .line 88
-    .local v0, webSettings:Landroid/webkit/WebSettings;
+    .local v0, "webSettings":Landroid/webkit/WebSettings;
     invoke-virtual {v0}, Landroid/webkit/WebSettings;->getUserAgentString()Ljava/lang/String;
 
     move-result-object v1
@@ -241,7 +241,7 @@
     return-void
 
     .line 84
-    .end local v0           #webSettings:Landroid/webkit/WebSettings;
+    .end local v0    # "webSettings":Landroid/webkit/WebSettings;
     :cond_0
     invoke-virtual {p0}, Lcom/fusepowered/m1/android/MMWebView;->disableAllAcceleration()V
 
@@ -250,7 +250,7 @@
 
 .method static synthetic access$000(Lcom/fusepowered/m1/android/MMWebView;)Z
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/fusepowered/m1/android/MMWebView;
 
     .prologue
     .line 43
@@ -321,7 +321,7 @@
     move-result v0
 
     .line 195
-    .local v0, version:I
+    .local v0, "version":I
     const-string v1, "Nexus S"
 
     sget-object v2, Landroid/os/Build;->MODEL:Ljava/lang/String;
@@ -486,7 +486,7 @@
 
 .method animateTransition(Lcom/fusepowered/m1/android/MMAdImpl;)V
     .locals 2
-    .parameter "adImpl"
+    .param p1, "adImpl"    # Lcom/fusepowered/m1/android/MMAdImpl;
 
     .prologue
     .line 360
@@ -499,7 +499,7 @@
     invoke-direct {v0, v1}, Ljava/util/concurrent/FutureTask;-><init>(Ljava/util/concurrent/Callable;)V
 
     .line 379
-    .local v0, future:Ljava/util/concurrent/FutureTask;,"Ljava/util/concurrent/FutureTask<Ljava/lang/Void;>;"
+    .local v0, "future":Ljava/util/concurrent/FutureTask;, "Ljava/util/concurrent/FutureTask<Ljava/lang/Void;>;"
     invoke-static {v0}, Lcom/fusepowered/m1/android/MMSDK;->runOnUiThread(Ljava/lang/Runnable;)V
 
     .line 381
@@ -595,7 +595,7 @@
     move-result-object v0
 
     .line 185
-    .local v0, method:Ljava/lang/reflect/Method;
+    .local v0, "method":Ljava/lang/reflect/Method;
     const/4 v1, 0x2
 
     new-array v1, v1, [Ljava/lang/Object;
@@ -626,7 +626,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 190
-    .end local v0           #method:Ljava/lang/reflect/Method;
+    .end local v0    # "method":Ljava/lang/reflect/Method;
     :goto_0
     return-void
 
@@ -675,7 +675,7 @@
     move-result-object v0
 
     .line 220
-    .local v0, method:Ljava/lang/reflect/Method;
+    .local v0, "method":Ljava/lang/reflect/Method;
     const/4 v1, 0x2
 
     new-array v1, v1, [Ljava/lang/Object;
@@ -706,7 +706,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 226
-    .end local v0           #method:Ljava/lang/reflect/Method;
+    .end local v0    # "method":Ljava/lang/reflect/Method;
     :cond_0
     :goto_0
     return-void
@@ -769,7 +769,7 @@
     move-result-object v0
 
     .line 206
-    .local v0, method:Ljava/lang/reflect/Method;
+    .local v0, "method":Ljava/lang/reflect/Method;
     const/4 v1, 0x2
 
     new-array v1, v1, [Ljava/lang/Object;
@@ -800,7 +800,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 213
-    .end local v0           #method:Ljava/lang/reflect/Method;
+    .end local v0    # "method":Ljava/lang/reflect/Method;
     :cond_0
     :goto_0
     return-void
@@ -825,7 +825,7 @@
     move-result-object v1
 
     .line 539
-    .local v1, parent:Landroid/view/ViewParent;
+    .local v1, "parent":Landroid/view/ViewParent;
     if-eqz v1, :cond_0
 
     instance-of v2, v1, Landroid/view/ViewGroup;
@@ -835,13 +835,13 @@
     .line 540
     check-cast v1, Landroid/view/ViewGroup;
 
-    .end local v1           #parent:Landroid/view/ViewParent;
+    .end local v1    # "parent":Landroid/view/ViewParent;
     invoke-virtual {v1}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
     .line 541
-    .local v0, context:Landroid/content/Context;
+    .local v0, "context":Landroid/content/Context;
     if-eqz v0, :cond_0
 
     instance-of v2, v0, Lcom/fusepowered/m1/android/MMActivity;
@@ -853,7 +853,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .end local v0           #context:Landroid/content/Context;
+    .end local v0    # "context":Landroid/content/Context;
     move-object v2, v0
 
     .line 545
@@ -923,7 +923,7 @@
     move-result-object v0
 
     .line 577
-    .local v0, parent:Landroid/view/ViewParent;
+    .local v0, "parent":Landroid/view/ViewParent;
     if-eqz v0, :cond_0
 
     instance-of v1, v0, Lcom/fusepowered/m1/android/AdViewOverlayView;
@@ -935,7 +935,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .end local v0           #parent:Landroid/view/ViewParent;
+    .end local v0    # "parent":Landroid/view/ViewParent;
     move-object v1, v0
 
     .line 580
@@ -944,14 +944,14 @@
 
     return-object v1
 
-    .restart local v0       #parent:Landroid/view/ViewParent;
+    .restart local v0    # "parent":Landroid/view/ViewParent;
     :cond_0
     const/4 v1, 0x0
 
     goto :goto_0
 
     .line 576
-    .end local v0           #parent:Landroid/view/ViewParent;
+    .end local v0    # "parent":Landroid/view/ViewParent;
     :catchall_0
     move-exception v1
 
@@ -973,7 +973,7 @@
     move-result-object v0
 
     .line 588
-    .local v0, parent:Landroid/view/ViewParent;
+    .local v0, "parent":Landroid/view/ViewParent;
     if-eqz v0, :cond_0
 
     instance-of v1, v0, Lcom/fusepowered/m1/android/MMAdView;
@@ -985,7 +985,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .end local v0           #parent:Landroid/view/ViewParent;
+    .end local v0    # "parent":Landroid/view/ViewParent;
     move-object v1, v0
 
     .line 591
@@ -994,14 +994,14 @@
 
     return-object v1
 
-    .restart local v0       #parent:Landroid/view/ViewParent;
+    .restart local v0    # "parent":Landroid/view/ViewParent;
     :cond_0
     const/4 v1, 0x0
 
     goto :goto_0
 
     .line 587
-    .end local v0           #parent:Landroid/view/ViewParent;
+    .end local v0    # "parent":Landroid/view/ViewParent;
     :catchall_0
     move-exception v1
 
@@ -1038,7 +1038,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/fusepowered/m1/android/MMWebView;
     check-cast p0, Lcom/fusepowered/m1/android/MMAdView;
 
     move-object v0, p0
@@ -1047,7 +1047,7 @@
     :goto_0
     return-object v0
 
-    .restart local p0
+    .restart local p0    # "this":Lcom/fusepowered/m1/android/MMWebView;
     :cond_0
     const/4 v0, 0x0
 
@@ -1072,7 +1072,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/fusepowered/m1/android/MMWebView;
     check-cast p0, Lcom/fusepowered/m1/android/MMLayout;
 
     move-object v0, p0
@@ -1081,7 +1081,7 @@
     :goto_0
     return-object v0
 
-    .restart local p0
+    .restart local p0    # "this":Lcom/fusepowered/m1/android/MMWebView;
     :cond_0
     const/4 v0, 0x0
 
@@ -1100,7 +1100,7 @@
 
 .method isCurrentParent(J)Z
     .locals 7
-    .parameter "internalId"
+    .param p1, "internalId"    # J
 
     .prologue
     const/4 v6, 0x0
@@ -1111,18 +1111,18 @@
     move-result-object v1
 
     .line 926
-    .local v1, parent:Landroid/view/ViewParent;
+    .local v1, "parent":Landroid/view/ViewParent;
     if-nez v1, :cond_0
 
     move v2, v6
 
     .line 930
-    .end local v1           #parent:Landroid/view/ViewParent;
+    .end local v1    # "parent":Landroid/view/ViewParent;
     :goto_0
     return v2
 
     .line 928
-    .restart local v1       #parent:Landroid/view/ViewParent;
+    .restart local v1    # "parent":Landroid/view/ViewParent;
     :cond_0
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -1167,7 +1167,7 @@
     .line 930
     check-cast v1, Lcom/fusepowered/m1/android/MMLayout;
 
-    .end local v1           #parent:Landroid/view/ViewParent;
+    .end local v1    # "parent":Landroid/view/ViewParent;
     iget-object v2, v1, Lcom/fusepowered/m1/android/MMLayout;->adImpl:Lcom/fusepowered/m1/android/MMAdImpl;
 
     iget-wide v2, v2, Lcom/fusepowered/m1/android/MMAdImpl;->internalId:J
@@ -1204,7 +1204,7 @@
 
 .method isOriginalUrl(Ljava/lang/String;)Z
     .locals 2
-    .parameter "url"
+    .param p1, "url"    # Ljava/lang/String;
 
     .prologue
     .line 948
@@ -1300,11 +1300,11 @@
     check-cast v0, Landroid/view/ViewGroup;
 
     .line 402
-    .local v0, viewGroup:Landroid/view/ViewGroup;
+    .local v0, "viewGroup":Landroid/view/ViewGroup;
     instance-of v1, v0, Lcom/fusepowered/m1/android/MMAdView;
 
     .line 404
-    .end local v0           #viewGroup:Landroid/view/ViewGroup;
+    .end local v0    # "viewGroup":Landroid/view/ViewGroup;
     :goto_0
     return v1
 
@@ -1316,11 +1316,11 @@
 
 .method public loadDataWithBaseURL(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
-    .parameter "baseUrl"
-    .parameter "data"
-    .parameter "mimeType"
-    .parameter "encoding"
-    .parameter "historyUrl"
+    .param p1, "baseUrl"    # Ljava/lang/String;
+    .param p2, "data"    # Ljava/lang/String;
+    .param p3, "mimeType"    # Ljava/lang/String;
+    .param p4, "encoding"    # Ljava/lang/String;
+    .param p5, "historyUrl"    # Ljava/lang/String;
 
     .prologue
     .line 304
@@ -1335,7 +1335,7 @@
 
 .method public loadUrl(Ljava/lang/String;)V
     .locals 2
-    .parameter "url"
+    .param p1, "url"    # Ljava/lang/String;
 
     .prologue
     .line 550
@@ -1418,8 +1418,8 @@
 
 .method protected onMeasure(II)V
     .locals 6
-    .parameter "widthMeasureSpec"
-    .parameter "heightMeasureSpec"
+    .param p1, "widthMeasureSpec"    # I
+    .param p2, "heightMeasureSpec"    # I
 
     .prologue
     const/4 v5, 0x1
@@ -1433,19 +1433,19 @@
     move-result v0
 
     .line 153
-    .local v0, heightSize:I
+    .local v0, "heightSize":I
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v3
 
     .line 155
-    .local v3, widthSize:I
+    .local v3, "widthSize":I
     invoke-virtual {p0}, Lcom/fusepowered/m1/android/MMWebView;->getMeasuredHeight()I
 
     move-result v1
 
     .line 156
-    .local v1, measuredHeight:I
+    .local v1, "measuredHeight":I
     if-nez v1, :cond_0
 
     .line 157
@@ -1456,7 +1456,7 @@
     move v2, v3
 
     .line 162
-    .local v2, measuredWidth:I
+    .local v2, "measuredWidth":I
     iget-boolean v4, p0, Lcom/fusepowered/m1/android/MMWebView;->requiresPreAdSizeFix:Z
 
     if-eqz v4, :cond_1
@@ -1501,7 +1501,7 @@
     move-result-object v1
 
     .line 600
-    .local v1, m:Ljava/lang/reflect/Method;
+    .local v1, "m":Ljava/lang/reflect/Method;
     const/4 v2, 0x0
 
     new-array v2, v2, [Ljava/lang/Object;
@@ -1511,7 +1511,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 605
-    .end local v1           #m:Ljava/lang/reflect/Method;
+    .end local v1    # "m":Ljava/lang/reflect/Method;
     :cond_0
     :goto_0
     return-void
@@ -1523,7 +1523,7 @@
     move-object v0, v2
 
     .line 602
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v2, "No onPause()"
 
     invoke-static {v2}, Lcom/fusepowered/m1/android/MMSDK$Log;->w(Ljava/lang/String;)V
@@ -1557,7 +1557,7 @@
     move-result-object v1
 
     .line 613
-    .local v1, m:Ljava/lang/reflect/Method;
+    .local v1, "m":Ljava/lang/reflect/Method;
     const/4 v2, 0x0
 
     new-array v2, v2, [Ljava/lang/Object;
@@ -1567,7 +1567,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 618
-    .end local v1           #m:Ljava/lang/reflect/Method;
+    .end local v1    # "m":Ljava/lang/reflect/Method;
     :cond_0
     :goto_0
     return-void
@@ -1579,7 +1579,7 @@
     move-object v0, v2
 
     .line 615
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v2, "No onResume()"
 
     invoke-static {v2}, Lcom/fusepowered/m1/android/MMSDK$Log;->w(Ljava/lang/String;)V
@@ -1589,10 +1589,10 @@
 
 .method protected onSizeChanged(IIII)V
     .locals 11
-    .parameter "w"
-    .parameter "h"
-    .parameter "oldw"
-    .parameter "oldh"
+    .param p1, "w"    # I
+    .param p2, "h"    # I
+    .param p3, "oldw"    # I
+    .param p4, "oldh"    # I
 
     .prologue
     const/4 v10, 0x1
@@ -1603,7 +1603,7 @@
     new-array v3, v8, [I
 
     .line 879
-    .local v3, location:[I
+    .local v3, "location":[I
     invoke-virtual {p0, v3}, Lcom/fusepowered/m1/android/MMWebView;->getLocationInWindow([I)V
 
     .line 881
@@ -1616,7 +1616,7 @@
     move-result-object v4
 
     .line 882
-    .local v4, metrics:Landroid/util/DisplayMetrics;
+    .local v4, "metrics":Landroid/util/DisplayMetrics;
     if-eqz v4, :cond_1
 
     .line 883
@@ -1633,7 +1633,7 @@
     float-to-int v6, v8
 
     .line 884
-    .local v6, xLoc:I
+    .local v6, "xLoc":I
     aget v8, v3, v10
 
     int-to-float v8, v8
@@ -1645,7 +1645,7 @@
     float-to-int v7, v8
 
     .line 885
-    .local v7, yLoc:I
+    .local v7, "yLoc":I
     int-to-float v8, p1
 
     iget v9, v4, Landroid/util/DisplayMetrics;->density:F
@@ -1655,7 +1655,7 @@
     float-to-int v5, v8
 
     .line 886
-    .local v5, width:I
+    .local v5, "width":I
     int-to-float v8, p2
 
     iget v9, v4, Landroid/util/DisplayMetrics;->density:F
@@ -1665,13 +1665,13 @@
     float-to-int v2, v8
 
     .line 887
-    .local v2, height:I
+    .local v2, "height":I
     new-instance v0, Lcom/fusepowered/m1/android/DTOAdViewLayout;
 
     invoke-direct {v0, v6, v7, v5, v2}, Lcom/fusepowered/m1/android/DTOAdViewLayout;-><init>(IIII)V
 
     .line 890
-    .local v0, dtoLayout:Lcom/fusepowered/m1/android/DTOAdViewLayout;
+    .local v0, "dtoLayout":Lcom/fusepowered/m1/android/DTOAdViewLayout;
     new-instance v8, Lcom/fusepowered/m1/google/gson/Gson;
 
     invoke-direct {v8}, Lcom/fusepowered/m1/google/gson/Gson;-><init>()V
@@ -1681,7 +1681,7 @@
     move-result-object v1
 
     .line 891
-    .local v1, gsonAdSize:Ljava/lang/String;
+    .local v1, "gsonAdSize":Ljava/lang/String;
     iget-boolean v8, p0, Lcom/fusepowered/m1/android/MMWebView;->isSendingSize:Z
 
     if-eqz v8, :cond_2
@@ -1758,12 +1758,12 @@
     invoke-static {v8, v9, v10}, Lcom/fusepowered/m1/android/MMSDK;->runOnUiThreadDelayed(Ljava/lang/Runnable;J)V
 
     .line 915
-    .end local v0           #dtoLayout:Lcom/fusepowered/m1/android/DTOAdViewLayout;
-    .end local v1           #gsonAdSize:Ljava/lang/String;
-    .end local v2           #height:I
-    .end local v5           #width:I
-    .end local v6           #xLoc:I
-    .end local v7           #yLoc:I
+    .end local v0    # "dtoLayout":Lcom/fusepowered/m1/android/DTOAdViewLayout;
+    .end local v1    # "gsonAdSize":Ljava/lang/String;
+    .end local v2    # "height":I
+    .end local v5    # "width":I
+    .end local v6    # "xLoc":I
+    .end local v7    # "yLoc":I
     :cond_1
     :goto_0
     invoke-super {p0, p1, p2, p3, p4}, Landroid/webkit/WebView;->onSizeChanged(IIII)V
@@ -1772,12 +1772,12 @@
     return-void
 
     .line 912
-    .restart local v0       #dtoLayout:Lcom/fusepowered/m1/android/DTOAdViewLayout;
-    .restart local v1       #gsonAdSize:Ljava/lang/String;
-    .restart local v2       #height:I
-    .restart local v5       #width:I
-    .restart local v6       #xLoc:I
-    .restart local v7       #yLoc:I
+    .restart local v0    # "dtoLayout":Lcom/fusepowered/m1/android/DTOAdViewLayout;
+    .restart local v1    # "gsonAdSize":Ljava/lang/String;
+    .restart local v2    # "height":I
+    .restart local v5    # "width":I
+    .restart local v6    # "xLoc":I
+    .restart local v7    # "yLoc":I
     :cond_2
     new-instance v8, Ljava/lang/StringBuilder;
 
@@ -1804,7 +1804,7 @@
 
 .method public onTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 5
-    .parameter "e"
+    .param p1, "e"    # Landroid/view/MotionEvent;
 
     .prologue
     const/4 v4, 0x1
@@ -1899,7 +1899,7 @@
 
     move-result-object v0
 
-    .local v0, parent:Landroid/view/ViewParent;
+    .local v0, "parent":Landroid/view/ViewParent;
     if-eqz v0, :cond_0
 
     instance-of v1, v0, Landroid/view/ViewGroup;
@@ -1909,7 +1909,7 @@
     .line 936
     check-cast v0, Landroid/view/ViewGroup;
 
-    .end local v0           #parent:Landroid/view/ViewParent;
+    .end local v0    # "parent":Landroid/view/ViewParent;
     invoke-virtual {v0, p0}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
 
     .line 938
@@ -1938,7 +1938,7 @@
 
 .method setAdProperties(Lorg/json/JSONObject;)V
     .locals 2
-    .parameter "adProperties"
+    .param p1, "adProperties"    # Lorg/json/JSONObject;
 
     .prologue
     .line 870
@@ -1978,7 +1978,7 @@
 
 .method public setBackgroundColor(I)V
     .locals 0
-    .parameter "color"
+    .param p1, "color"    # I
 
     .prologue
     .line 174
@@ -2000,7 +2000,7 @@
 
 .method setLastHeaders(Lcom/fusepowered/m1/android/HttpMMHeaders;)V
     .locals 0
-    .parameter "lastHeaders"
+    .param p1, "lastHeaders"    # Lcom/fusepowered/m1/android/HttpMMHeaders;
 
     .prologue
     .line 964
@@ -2012,7 +2012,7 @@
 
 .method setMediaPlaybackRequiresUserGesture(Z)V
     .locals 6
-    .parameter "requiresGesture"
+    .param p1, "requiresGesture"    # Z
 
     .prologue
     .line 141
@@ -2036,7 +2036,7 @@
     move-result-object v0
 
     .line 143
-    .local v0, method:Ljava/lang/reflect/Method;
+    .local v0, "method":Ljava/lang/reflect/Method;
     const/4 v1, 0x1
 
     new-array v1, v1, [Ljava/lang/Object;
@@ -2054,7 +2054,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 146
-    .end local v0           #method:Ljava/lang/reflect/Method;
+    .end local v0    # "method":Ljava/lang/reflect/Method;
     :goto_0
     return-void
 
@@ -2221,7 +2221,7 @@
 
 .method declared-synchronized setMraidResize(Lcom/fusepowered/m1/android/DTOResizeParameters;)V
     .locals 3
-    .parameter "resizeParams"
+    .param p1, "resizeParams"    # Lcom/fusepowered/m1/android/DTOResizeParameters;
 
     .prologue
     .line 413
@@ -2240,7 +2240,7 @@
     move-result-object v0
 
     .line 415
-    .local v0, adView:Lcom/fusepowered/m1/android/MMAdView;
+    .local v0, "adView":Lcom/fusepowered/m1/android/MMAdView;
     const/4 v1, 0x0
 
     iput-boolean v1, p0, Lcom/fusepowered/m1/android/MMWebView;->isUserClosedResize:Z
@@ -2279,7 +2279,7 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 460
-    .end local v0           #adView:Lcom/fusepowered/m1/android/MMAdView;
+    .end local v0    # "adView":Lcom/fusepowered/m1/android/MMAdView;
     :cond_0
     monitor-exit p0
 
@@ -2332,9 +2332,9 @@
 
 .method setWebViewContent(Ljava/lang/String;Ljava/lang/String;Landroid/content/Context;)V
     .locals 6
-    .parameter "webContent"
-    .parameter "baseUrl"
-    .parameter "context"
+    .param p1, "webContent"    # Ljava/lang/String;
+    .param p2, "baseUrl"    # Ljava/lang/String;
+    .param p3, "context"    # Landroid/content/Context;
 
     .prologue
     const/4 v5, 0x0
@@ -2364,14 +2364,14 @@
     move-result-object v1
 
     .line 319
-    .local v1, finalBaseUrl:Ljava/lang/String;
+    .local v1, "finalBaseUrl":Ljava/lang/String;
     invoke-virtual {p0}, Lcom/fusepowered/m1/android/MMWebView;->resetSpeechKit()V
 
     .line 320
     move-object v0, p1
 
     .line 322
-    .local v0, content:Ljava/lang/String;
+    .local v0, "content":Ljava/lang/String;
     invoke-static {p3}, Lcom/fusepowered/m1/android/MRaid;->hasMraidLocally(Landroid/content/Context;)Z
 
     move-result v3
@@ -2388,7 +2388,7 @@
     move-object v2, v0
 
     .line 329
-    .local v2, finalContent:Ljava/lang/String;
+    .local v2, "finalContent":Ljava/lang/String;
     sget v3, Lcom/fusepowered/m1/android/MMSDK;->logLevel:I
 
     const/4 v4, 0x5
@@ -2420,7 +2420,7 @@
     goto :goto_0
 
     .line 325
-    .end local v2           #finalContent:Ljava/lang/String;
+    .end local v2    # "finalContent":Ljava/lang/String;
     :cond_3
     const-string v3, "MMJS is not downloaded"
 
@@ -2431,9 +2431,9 @@
 
 .method setWebViewContent(Ljava/lang/String;Ljava/lang/String;Lcom/fusepowered/m1/android/MMAdImpl;)V
     .locals 6
-    .parameter "webContent"
-    .parameter "adUrl"
-    .parameter "adImpl"
+    .param p1, "webContent"    # Ljava/lang/String;
+    .param p2, "adUrl"    # Ljava/lang/String;
+    .param p3, "adImpl"    # Lcom/fusepowered/m1/android/MMAdImpl;
 
     .prologue
     const/4 v5, 0x0
@@ -2471,7 +2471,7 @@
     move-result-object v0
 
     .line 255
-    .local v0, baseUrl:Ljava/lang/String;
+    .local v0, "baseUrl":Ljava/lang/String;
     sget v3, Lcom/fusepowered/m1/android/MMSDK;->logLevel:I
 
     const/4 v4, 0x5
@@ -2529,7 +2529,7 @@
     move-result-object v1
 
     .line 271
-    .local v1, content:Ljava/lang/String;
+    .local v1, "content":Ljava/lang/String;
     :goto_1
     invoke-virtual {p3}, Lcom/fusepowered/m1/android/MMAdImpl;->getContext()Landroid/content/Context;
 
@@ -2555,7 +2555,7 @@
     move-object v2, v1
 
     .line 279
-    .local v2, finalContent:Ljava/lang/String;
+    .local v2, "finalContent":Ljava/lang/String;
     new-instance v3, Lcom/fusepowered/m1/android/MMWebView$1;
 
     invoke-direct {v3, p0, p3, v0, v2}, Lcom/fusepowered/m1/android/MMWebView$1;-><init>(Lcom/fusepowered/m1/android/MMWebView;Lcom/fusepowered/m1/android/MMAdImpl;Ljava/lang/String;Ljava/lang/String;)V
@@ -2565,12 +2565,12 @@
     goto :goto_0
 
     .line 268
-    .end local v1           #content:Ljava/lang/String;
-    .end local v2           #finalContent:Ljava/lang/String;
+    .end local v1    # "content":Ljava/lang/String;
+    .end local v2    # "finalContent":Ljava/lang/String;
     :cond_4
     move-object v1, p1
 
-    .restart local v1       #content:Ljava/lang/String;
+    .restart local v1    # "content":Ljava/lang/String;
     goto :goto_1
 
     .line 274
@@ -2584,7 +2584,7 @@
 
 .method setmicrophoneAudioLevelChange(D)V
     .locals 2
-    .parameter "level"
+    .param p1, "level"    # D
 
     .prologue
     .line 844
@@ -2620,7 +2620,7 @@
 
 .method setmicrophoneStateChange(Ljava/lang/String;)V
     .locals 2
-    .parameter "state"
+    .param p1, "state"    # Ljava/lang/String;
 
     .prologue
     .line 848
@@ -2710,7 +2710,7 @@
 
 .method declared-synchronized unresizeToDefault(Lcom/fusepowered/m1/android/MMAdImpl;)V
     .locals 4
-    .parameter "adImpl"
+    .param p1, "adImpl"    # Lcom/fusepowered/m1/android/MMAdImpl;
 
     .prologue
     .line 476
@@ -2738,7 +2738,7 @@
     move-result-object v1
 
     .line 479
-    .local v1, ad:Lcom/fusepowered/m1/android/MMAd;
+    .local v1, "ad":Lcom/fusepowered/m1/android/MMAd;
     instance-of v3, v1, Lcom/fusepowered/m1/android/MMAdView;
 
     if-eqz v3, :cond_0
@@ -2751,7 +2751,7 @@
     move-object v2, v0
 
     .line 481
-    .local v2, adView:Lcom/fusepowered/m1/android/MMAdView;
+    .local v2, "adView":Lcom/fusepowered/m1/android/MMAdView;
     const/4 v3, 0x1
 
     iput-boolean v3, p0, Lcom/fusepowered/m1/android/MMWebView;->isUserClosedResize:Z
@@ -2766,8 +2766,8 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 510
-    .end local v1           #ad:Lcom/fusepowered/m1/android/MMAd;
-    .end local v2           #adView:Lcom/fusepowered/m1/android/MMAdView;
+    .end local v1    # "ad":Lcom/fusepowered/m1/android/MMAd;
+    .end local v2    # "adView":Lcom/fusepowered/m1/android/MMAdView;
     :cond_0
     monitor-exit p0
 
@@ -2784,7 +2784,6 @@
 
 .method updateArgumentsWithSettings(Ljava/util/Map;)V
     .locals 3
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -2798,7 +2797,7 @@
 
     .prologue
     .line 392
-    .local p1, arguments:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p1, "arguments":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v0, "PROPERTY_BANNER_TYPE"
 
     invoke-virtual {p0}, Lcom/fusepowered/m1/android/MMWebView;->isParentBannerAd()Z

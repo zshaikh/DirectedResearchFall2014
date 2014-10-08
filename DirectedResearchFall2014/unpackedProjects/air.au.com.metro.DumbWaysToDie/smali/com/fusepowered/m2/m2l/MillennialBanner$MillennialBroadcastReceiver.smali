@@ -23,7 +23,6 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m2/m2l/MillennialBanner;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 108
@@ -38,7 +37,7 @@
 # virtual methods
 .method public getAdFailure(Lcom/fusepowered/m1/android/MMAd;)V
     .locals 2
-    .parameter "ad"
+    .param p1, "ad"    # Lcom/fusepowered/m1/android/MMAd;
 
     .prologue
     .line 120
@@ -54,7 +53,7 @@
     .line 122
     iget-object v0, p0, Lcom/fusepowered/m2/m2l/MillennialBanner$MillennialBroadcastReceiver;->this$0:Lcom/fusepowered/m2/m2l/MillennialBanner;
 
-    #getter for: Lcom/fusepowered/m2/m2l/MillennialBanner;->mBannerListener:Lcom/fusepowered/m2/m2l/CustomEventBanner$CustomEventBannerListener;
+    # getter for: Lcom/fusepowered/m2/m2l/MillennialBanner;->mBannerListener:Lcom/fusepowered/m2/m2l/CustomEventBanner$CustomEventBannerListener;
     invoke-static {v0}, Lcom/fusepowered/m2/m2l/MillennialBanner;->access$0(Lcom/fusepowered/m2/m2l/MillennialBanner;)Lcom/fusepowered/m2/m2l/CustomEventBanner$CustomEventBannerListener;
 
     move-result-object v0
@@ -69,7 +68,7 @@
 
 .method public getAdSuccess(Lcom/fusepowered/m1/android/MMAd;)V
     .locals 2
-    .parameter "ad"
+    .param p1, "ad"    # Lcom/fusepowered/m1/android/MMAd;
 
     .prologue
     .line 113
@@ -85,14 +84,14 @@
     .line 115
     iget-object v0, p0, Lcom/fusepowered/m2/m2l/MillennialBanner$MillennialBroadcastReceiver;->this$0:Lcom/fusepowered/m2/m2l/MillennialBanner;
 
-    #getter for: Lcom/fusepowered/m2/m2l/MillennialBanner;->mBannerListener:Lcom/fusepowered/m2/m2l/CustomEventBanner$CustomEventBannerListener;
+    # getter for: Lcom/fusepowered/m2/m2l/MillennialBanner;->mBannerListener:Lcom/fusepowered/m2/m2l/CustomEventBanner$CustomEventBannerListener;
     invoke-static {v0}, Lcom/fusepowered/m2/m2l/MillennialBanner;->access$0(Lcom/fusepowered/m2/m2l/MillennialBanner;)Lcom/fusepowered/m2/m2l/CustomEventBanner$CustomEventBannerListener;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/fusepowered/m2/m2l/MillennialBanner$MillennialBroadcastReceiver;->this$0:Lcom/fusepowered/m2/m2l/MillennialBanner;
 
-    #getter for: Lcom/fusepowered/m2/m2l/MillennialBanner;->mMillennialAdView:Lcom/fusepowered/m1/android/MMAdView;
+    # getter for: Lcom/fusepowered/m2/m2l/MillennialBanner;->mMillennialAdView:Lcom/fusepowered/m1/android/MMAdView;
     invoke-static {v1}, Lcom/fusepowered/m2/m2l/MillennialBanner;->access$1(Lcom/fusepowered/m2/m2l/MillennialBanner;)Lcom/fusepowered/m1/android/MMAdView;
 
     move-result-object v1
@@ -105,8 +104,8 @@
 
 .method public intentStarted(Lcom/fusepowered/m1/android/MMAd;Ljava/lang/String;)V
     .locals 2
-    .parameter "ad"
-    .parameter "intent"
+    .param p1, "ad"    # Lcom/fusepowered/m1/android/MMAd;
+    .param p2, "intent"    # Ljava/lang/String;
 
     .prologue
     .line 127
@@ -122,7 +121,7 @@
     .line 129
     iget-object v0, p0, Lcom/fusepowered/m2/m2l/MillennialBanner$MillennialBroadcastReceiver;->this$0:Lcom/fusepowered/m2/m2l/MillennialBanner;
 
-    #getter for: Lcom/fusepowered/m2/m2l/MillennialBanner;->mBannerListener:Lcom/fusepowered/m2/m2l/CustomEventBanner$CustomEventBannerListener;
+    # getter for: Lcom/fusepowered/m2/m2l/MillennialBanner;->mBannerListener:Lcom/fusepowered/m2/m2l/CustomEventBanner$CustomEventBannerListener;
     invoke-static {v0}, Lcom/fusepowered/m2/m2l/MillennialBanner;->access$0(Lcom/fusepowered/m2/m2l/MillennialBanner;)Lcom/fusepowered/m2/m2l/CustomEventBanner$CustomEventBannerListener;
 
     move-result-object v0
@@ -135,7 +134,7 @@
 
 .method register(Landroid/content/Context;)V
     .locals 1
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     .line 133
@@ -164,8 +163,8 @@
 
     invoke-virtual {v1, p0}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 143
     iput-object v3, p0, Lcom/fusepowered/m2/m2l/MillennialBanner$MillennialBroadcastReceiver;->mContext:Landroid/content/Context;
@@ -181,7 +180,7 @@
     move-object v0, v1
 
     .line 141
-    .local v0, exception:Ljava/lang/Exception;
+    .local v0, "exception":Ljava/lang/Exception;
     :try_start_1
     const-string v1, "MoPub"
 
@@ -197,7 +196,7 @@
     goto :goto_0
 
     .line 142
-    .end local v0           #exception:Ljava/lang/Exception;
+    .end local v0    # "exception":Ljava/lang/Exception;
     :catchall_0
     move-exception v1
 

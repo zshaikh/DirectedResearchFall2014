@@ -35,7 +35,7 @@
 
     iget-object v0, p0, Lcom/facebook/Session$3;->this$0:Lcom/facebook/Session;
 
-    #getter for: Lcom/facebook/Session;->callbacks:Ljava/util/List;
+    # getter for: Lcom/facebook/Session;->callbacks:Ljava/util/List;
     invoke-static {v0}, Lcom/facebook/Session;->access$800(Lcom/facebook/Session;)Ljava/util/List;
 
     move-result-object v1
@@ -45,7 +45,7 @@
     :try_start_0
     iget-object v0, p0, Lcom/facebook/Session$3;->this$0:Lcom/facebook/Session;
 
-    #getter for: Lcom/facebook/Session;->callbacks:Ljava/util/List;
+    # getter for: Lcom/facebook/Session;->callbacks:Ljava/util/List;
     invoke-static {v0}, Lcom/facebook/Session;->access$800(Lcom/facebook/Session;)Ljava/util/List;
 
     move-result-object v0
@@ -73,12 +73,12 @@
 
     iget-object v0, p0, Lcom/facebook/Session$3;->this$0:Lcom/facebook/Session;
 
-    #getter for: Lcom/facebook/Session;->handler:Landroid/os/Handler;
+    # getter for: Lcom/facebook/Session;->handler:Landroid/os/Handler;
     invoke-static {v0}, Lcom/facebook/Session;->access$900(Lcom/facebook/Session;)Landroid/os/Handler;
 
     move-result-object v0
 
-    #calls: Lcom/facebook/Session;->runWithHandlerOrExecutor(Landroid/os/Handler;Ljava/lang/Runnable;)V
+    # invokes: Lcom/facebook/Session;->runWithHandlerOrExecutor(Landroid/os/Handler;Ljava/lang/Runnable;)V
     invoke-static {v0, v3}, Lcom/facebook/Session;->access$1000(Landroid/os/Handler;Ljava/lang/Runnable;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0

@@ -30,7 +30,7 @@
 
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 1
-    .parameter "rootValueSeparator"
+    .param p1, "rootValueSeparator"    # Ljava/lang/String;
 
     .prologue
     .line 47
@@ -52,7 +52,7 @@
 # virtual methods
 .method public beforeArrayValues(Lcom/flurry/org/codehaus/jackson/JsonGenerator;)V
     .locals 0
-    .parameter "jg"
+    .param p1, "jg"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -67,7 +67,7 @@
 
 .method public beforeObjectEntries(Lcom/flurry/org/codehaus/jackson/JsonGenerator;)V
     .locals 0
-    .parameter "jg"
+    .param p1, "jg"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -82,7 +82,7 @@
 
 .method public setRootValueSeparator(Ljava/lang/String;)V
     .locals 0
-    .parameter "sep"
+    .param p1, "sep"    # Ljava/lang/String;
 
     .prologue
     .line 52
@@ -94,7 +94,7 @@
 
 .method public writeArrayValueSeparator(Lcom/flurry/org/codehaus/jackson/JsonGenerator;)V
     .locals 1
-    .parameter "jg"
+    .param p1, "jg"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -114,8 +114,8 @@
 
 .method public writeEndArray(Lcom/flurry/org/codehaus/jackson/JsonGenerator;I)V
     .locals 1
-    .parameter "jg"
-    .parameter "nrOfValues"
+    .param p1, "jg"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator;
+    .param p2, "nrOfValues"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -135,8 +135,8 @@
 
 .method public writeEndObject(Lcom/flurry/org/codehaus/jackson/JsonGenerator;I)V
     .locals 1
-    .parameter "jg"
-    .parameter "nrOfEntries"
+    .param p1, "jg"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator;
+    .param p2, "nrOfEntries"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -156,7 +156,7 @@
 
 .method public writeObjectEntrySeparator(Lcom/flurry/org/codehaus/jackson/JsonGenerator;)V
     .locals 1
-    .parameter "jg"
+    .param p1, "jg"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -176,7 +176,7 @@
 
 .method public writeObjectFieldValueSeparator(Lcom/flurry/org/codehaus/jackson/JsonGenerator;)V
     .locals 1
-    .parameter "jg"
+    .param p1, "jg"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -196,7 +196,7 @@
 
 .method public writeRootValueSeparator(Lcom/flurry/org/codehaus/jackson/JsonGenerator;)V
     .locals 1
-    .parameter "jg"
+    .param p1, "jg"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -222,7 +222,7 @@
 
 .method public writeStartArray(Lcom/flurry/org/codehaus/jackson/JsonGenerator;)V
     .locals 1
-    .parameter "jg"
+    .param p1, "jg"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -242,7 +242,7 @@
 
 .method public writeStartObject(Lcom/flurry/org/codehaus/jackson/JsonGenerator;)V
     .locals 1
-    .parameter "jg"
+    .param p1, "jg"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,

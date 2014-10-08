@@ -21,7 +21,7 @@
 # direct methods
 .method public constructor <init>(Lcom/flurry/org/apache/avro/Schema;)V
     .locals 1
-    .parameter "schema"
+    .param p1, "schema"    # Lcom/flurry/org/apache/avro/Schema;
 
     .prologue
     .line 37
@@ -44,7 +44,7 @@
 
 .method public constructor <init>(Lcom/flurry/org/apache/avro/generic/GenericData$Record;)V
     .locals 5
-    .parameter "other"
+    .param p1, "other"    # Lcom/flurry/org/apache/avro/generic/GenericData$Record;
 
     .prologue
     .line 55
@@ -80,7 +80,7 @@
 
     move-result-object v1
 
-    .local v1, i$:Ljava/util/Iterator;
+    .local v1, "i$":Ljava/util/Iterator;
     :cond_0
     :goto_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
@@ -96,7 +96,7 @@
     check-cast v0, Lcom/flurry/org/apache/avro/Schema$Field;
 
     .line 60
-    .local v0, f:Lcom/flurry/org/apache/avro/Schema$Field;
+    .local v0, "f":Lcom/flurry/org/apache/avro/Schema$Field;
     invoke-virtual {v0}, Lcom/flurry/org/apache/avro/Schema$Field;->pos()I
 
     move-result v3
@@ -106,7 +106,7 @@
     move-result-object v2
 
     .line 63
-    .local v2, value:Ljava/lang/Object;
+    .local v2, "value":Ljava/lang/Object;
     invoke-static {v0, v2}, Lcom/flurry/org/apache/avro/generic/GenericRecordBuilder;->isValidValue(Lcom/flurry/org/apache/avro/Schema$Field;Ljava/lang/Object;)Z
 
     move-result v3
@@ -131,15 +131,15 @@
     goto :goto_0
 
     .line 67
-    .end local v0           #f:Lcom/flurry/org/apache/avro/Schema$Field;
-    .end local v2           #value:Ljava/lang/Object;
+    .end local v0    # "f":Lcom/flurry/org/apache/avro/Schema$Field;
+    .end local v2    # "value":Ljava/lang/Object;
     :cond_1
     return-void
 .end method
 
 .method public constructor <init>(Lcom/flurry/org/apache/avro/generic/GenericRecordBuilder;)V
     .locals 3
-    .parameter "other"
+    .param p1, "other"    # Lcom/flurry/org/apache/avro/generic/GenericRecordBuilder;
 
     .prologue
     .line 46
@@ -166,7 +166,7 @@
 
 .method private getWithDefault(Lcom/flurry/org/apache/avro/Schema$Field;)Ljava/lang/Object;
     .locals 2
-    .parameter "field"
+    .param p1, "field"    # Lcom/flurry/org/apache/avro/Schema$Field;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -210,9 +210,9 @@
 
 .method private set(Lcom/flurry/org/apache/avro/Schema$Field;ILjava/lang/Object;)Lcom/flurry/org/apache/avro/generic/GenericRecordBuilder;
     .locals 2
-    .parameter "field"
-    .parameter "pos"
-    .parameter "value"
+    .param p1, "field"    # Lcom/flurry/org/apache/avro/Schema$Field;
+    .param p2, "pos"    # I
+    .param p3, "value"    # Ljava/lang/Object;
 
     .prologue
     .line 134
@@ -255,25 +255,25 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 205
-    .local v5, record:Lcom/flurry/org/apache/avro/generic/GenericData$Record;
+    .local v5, "record":Lcom/flurry/org/apache/avro/generic/GenericData$Record;
     invoke-virtual {p0}, Lcom/flurry/org/apache/avro/generic/GenericRecordBuilder;->fields()[Lcom/flurry/org/apache/avro/Schema$Field;
 
     move-result-object v0
 
-    .local v0, arr$:[Lcom/flurry/org/apache/avro/Schema$Field;
+    .local v0, "arr$":[Lcom/flurry/org/apache/avro/Schema$Field;
     array-length v4, v0
 
-    .local v4, len$:I
+    .local v4, "len$":I
     const/4 v3, 0x0
 
-    .local v3, i$:I
+    .local v3, "i$":I
     :goto_0
     if-ge v3, v4, :cond_1
 
     aget-object v2, v0, v3
 
     .line 208
-    .local v2, field:Lcom/flurry/org/apache/avro/Schema$Field;
+    .local v2, "field":Lcom/flurry/org/apache/avro/Schema$Field;
     :try_start_1
     invoke-direct {p0, v2}, Lcom/flurry/org/apache/avro/generic/GenericRecordBuilder;->getWithDefault(Lcom/flurry/org/apache/avro/Schema$Field;)Ljava/lang/Object;
     :try_end_1
@@ -282,7 +282,7 @@
     move-result-object v6
 
     .line 212
-    .local v6, value:Ljava/lang/Object;
+    .local v6, "value":Ljava/lang/Object;
     if-eqz v6, :cond_0
 
     .line 213
@@ -299,19 +299,19 @@
     goto :goto_0
 
     .line 201
-    .end local v0           #arr$:[Lcom/flurry/org/apache/avro/Schema$Field;
-    .end local v2           #field:Lcom/flurry/org/apache/avro/Schema$Field;
-    .end local v3           #i$:I
-    .end local v4           #len$:I
-    .end local v5           #record:Lcom/flurry/org/apache/avro/generic/GenericData$Record;
-    .end local v6           #value:Ljava/lang/Object;
+    .end local v0    # "arr$":[Lcom/flurry/org/apache/avro/Schema$Field;
+    .end local v2    # "field":Lcom/flurry/org/apache/avro/Schema$Field;
+    .end local v3    # "i$":I
+    .end local v4    # "len$":I
+    .end local v5    # "record":Lcom/flurry/org/apache/avro/generic/GenericData$Record;
+    .end local v6    # "value":Ljava/lang/Object;
     :catch_0
     move-exception v7
 
     move-object v1, v7
 
     .line 202
-    .local v1, e:Ljava/lang/Exception;
+    .local v1, "e":Ljava/lang/Exception;
     new-instance v7, Lcom/flurry/org/apache/avro/AvroRuntimeException;
 
     invoke-direct {v7, v1}, Lcom/flurry/org/apache/avro/AvroRuntimeException;-><init>(Ljava/lang/Throwable;)V
@@ -319,17 +319,17 @@
     throw v7
 
     .line 209
-    .end local v1           #e:Ljava/lang/Exception;
-    .restart local v0       #arr$:[Lcom/flurry/org/apache/avro/Schema$Field;
-    .restart local v2       #field:Lcom/flurry/org/apache/avro/Schema$Field;
-    .restart local v3       #i$:I
-    .restart local v4       #len$:I
-    .restart local v5       #record:Lcom/flurry/org/apache/avro/generic/GenericData$Record;
+    .end local v1    # "e":Ljava/lang/Exception;
+    .restart local v0    # "arr$":[Lcom/flurry/org/apache/avro/Schema$Field;
+    .restart local v2    # "field":Lcom/flurry/org/apache/avro/Schema$Field;
+    .restart local v3    # "i$":I
+    .restart local v4    # "len$":I
+    .restart local v5    # "record":Lcom/flurry/org/apache/avro/generic/GenericData$Record;
     :catch_1
     move-exception v1
 
     .line 210
-    .local v1, e:Ljava/io/IOException;
+    .local v1, "e":Ljava/io/IOException;
     new-instance v7, Lcom/flurry/org/apache/avro/AvroRuntimeException;
 
     invoke-direct {v7, v1}, Lcom/flurry/org/apache/avro/AvroRuntimeException;-><init>(Ljava/lang/Throwable;)V
@@ -337,8 +337,8 @@
     throw v7
 
     .line 217
-    .end local v1           #e:Ljava/io/IOException;
-    .end local v2           #field:Lcom/flurry/org/apache/avro/Schema$Field;
+    .end local v1    # "e":Ljava/io/IOException;
+    .end local v2    # "field":Lcom/flurry/org/apache/avro/Schema$Field;
     :cond_1
     return-object v5
 .end method
@@ -357,7 +357,7 @@
 
 .method protected clear(I)Lcom/flurry/org/apache/avro/generic/GenericRecordBuilder;
     .locals 2
-    .parameter "pos"
+    .param p1, "pos"    # I
 
     .prologue
     .line 191
@@ -382,7 +382,7 @@
 
 .method public clear(Lcom/flurry/org/apache/avro/Schema$Field;)Lcom/flurry/org/apache/avro/generic/GenericRecordBuilder;
     .locals 1
-    .parameter "field"
+    .param p1, "field"    # Lcom/flurry/org/apache/avro/Schema$Field;
 
     .prologue
     .line 182
@@ -399,7 +399,7 @@
 
 .method public clear(Ljava/lang/String;)Lcom/flurry/org/apache/avro/generic/GenericRecordBuilder;
     .locals 1
-    .parameter "fieldName"
+    .param p1, "fieldName"    # Ljava/lang/String;
 
     .prologue
     .line 173
@@ -420,7 +420,7 @@
 
 .method public equals(Ljava/lang/Object;)Z
     .locals 6
-    .parameter "obj"
+    .param p1, "obj"    # Ljava/lang/Object;
 
     .prologue
     const/4 v5, 0x1
@@ -475,7 +475,7 @@
     move-object v1, v0
 
     .line 252
-    .local v1, other:Lcom/flurry/org/apache/avro/generic/GenericRecordBuilder;
+    .local v1, "other":Lcom/flurry/org/apache/avro/generic/GenericRecordBuilder;
     iget-object v2, p0, Lcom/flurry/org/apache/avro/generic/GenericRecordBuilder;->record:Lcom/flurry/org/apache/avro/generic/GenericData$Record;
 
     if-nez v2, :cond_3
@@ -516,7 +516,7 @@
 
 .method protected get(I)Ljava/lang/Object;
     .locals 1
-    .parameter "pos"
+    .param p1, "pos"    # I
 
     .prologue
     .line 93
@@ -531,7 +531,7 @@
 
 .method public get(Lcom/flurry/org/apache/avro/Schema$Field;)Ljava/lang/Object;
     .locals 1
-    .parameter "field"
+    .param p1, "field"    # Lcom/flurry/org/apache/avro/Schema$Field;
 
     .prologue
     .line 84
@@ -548,7 +548,7 @@
 
 .method public get(Ljava/lang/String;)Ljava/lang/Object;
     .locals 1
-    .parameter "fieldName"
+    .param p1, "fieldName"    # Ljava/lang/String;
 
     .prologue
     .line 75
@@ -569,7 +569,7 @@
 
 .method protected has(I)Z
     .locals 1
-    .parameter "pos"
+    .param p1, "pos"    # I
 
     .prologue
     .line 164
@@ -584,7 +584,7 @@
 
 .method public has(Lcom/flurry/org/apache/avro/Schema$Field;)Z
     .locals 1
-    .parameter "field"
+    .param p1, "field"    # Lcom/flurry/org/apache/avro/Schema$Field;
 
     .prologue
     .line 155
@@ -601,7 +601,7 @@
 
 .method public has(Ljava/lang/String;)Z
     .locals 1
-    .parameter "fieldName"
+    .param p1, "fieldName"    # Ljava/lang/String;
 
     .prologue
     .line 146
@@ -628,13 +628,13 @@
     const/16 v0, 0x1f
 
     .line 238
-    .local v0, prime:I
+    .local v0, "prime":I
     invoke-super {p0}, Lcom/flurry/org/apache/avro/data/RecordBuilderBase;->hashCode()I
 
     move-result v1
 
     .line 239
-    .local v1, result:I
+    .local v1, "result":I
     mul-int/lit8 v2, v1, 0x1f
 
     iget-object v3, p0, Lcom/flurry/org/apache/avro/generic/GenericRecordBuilder;->record:Lcom/flurry/org/apache/avro/generic/GenericData$Record;
@@ -662,8 +662,8 @@
 
 .method protected set(ILjava/lang/Object;)Lcom/flurry/org/apache/avro/generic/GenericRecordBuilder;
     .locals 1
-    .parameter "pos"
-    .parameter "value"
+    .param p1, "pos"    # I
+    .param p2, "value"    # Ljava/lang/Object;
 
     .prologue
     .line 123
@@ -682,8 +682,8 @@
 
 .method public set(Lcom/flurry/org/apache/avro/Schema$Field;Ljava/lang/Object;)Lcom/flurry/org/apache/avro/generic/GenericRecordBuilder;
     .locals 1
-    .parameter "field"
-    .parameter "value"
+    .param p1, "field"    # Lcom/flurry/org/apache/avro/Schema$Field;
+    .param p2, "value"    # Ljava/lang/Object;
 
     .prologue
     .line 113
@@ -700,8 +700,8 @@
 
 .method public set(Ljava/lang/String;Ljava/lang/Object;)Lcom/flurry/org/apache/avro/generic/GenericRecordBuilder;
     .locals 1
-    .parameter "fieldName"
-    .parameter "value"
+    .param p1, "fieldName"    # Ljava/lang/String;
+    .param p2, "value"    # Ljava/lang/Object;
 
     .prologue
     .line 103

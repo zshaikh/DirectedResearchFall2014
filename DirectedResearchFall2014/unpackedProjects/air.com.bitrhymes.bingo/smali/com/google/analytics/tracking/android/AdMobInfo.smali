@@ -121,7 +121,7 @@
 
 .method setAdHitId(I)V
     .locals 0
-    .parameter "adHitId"
+    .param p1, "adHitId"    # I
 
     .prologue
     .line 58

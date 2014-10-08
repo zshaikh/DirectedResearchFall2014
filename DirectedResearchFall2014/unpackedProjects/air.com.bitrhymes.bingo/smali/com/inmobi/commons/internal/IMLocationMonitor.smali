@@ -120,7 +120,6 @@
 
 .method public declared-synchronized onLocationChanged(Landroid/location/Location;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 71
@@ -147,7 +146,6 @@
 
 .method public onProviderDisabled(Ljava/lang/String;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 75
@@ -156,7 +154,6 @@
 
 .method public onProviderEnabled(Ljava/lang/String;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 78
@@ -165,9 +162,6 @@
 
 .method public onStatusChanged(Ljava/lang/String;ILandroid/os/Bundle;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 83
@@ -176,7 +170,6 @@
 
 .method public declared-synchronized startListening(Landroid/content/Context;)V
     .locals 6
-    .parameter
 
     .prologue
     .line 35

@@ -85,7 +85,7 @@
 
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 7
-    .parameter "applicationContext"
+    .param p1, "applicationContext"    # Landroid/content/Context;
 
     .prologue
     const/4 v2, 0x0
@@ -320,13 +320,13 @@
     move-result v0
 
     .line 96
-    .local v0, count:I
+    .local v0, "count":I
     invoke-virtual {p0, v0}, Lcom/tapjoy/TapjoyVideo;->setVideoCacheCount(I)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 104
-    .end local v0           #count:I
+    .end local v0    # "count":I
     :cond_1
     :goto_0
     invoke-virtual {p0}, Lcom/tapjoy/TapjoyVideo;->init()V
@@ -341,7 +341,7 @@
     move-object v1, v2
 
     .line 100
-    .local v1, e:Ljava/lang/Exception;
+    .local v1, "e":Ljava/lang/Exception;
     const-string v2, "TapjoyVideo"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -375,8 +375,8 @@
 
 .method static synthetic access$000(Lcom/tapjoy/TapjoyVideo;Ljava/lang/String;)Z
     .locals 1
-    .parameter "x0"
-    .parameter "x1"
+    .param p0, "x0"    # Lcom/tapjoy/TapjoyVideo;
+    .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
     .line 36
@@ -389,7 +389,7 @@
 
 .method static synthetic access$100(Lcom/tapjoy/TapjoyVideo;)Z
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/tapjoy/TapjoyVideo;
 
     .prologue
     .line 36
@@ -402,7 +402,7 @@
 
 .method static synthetic access$1000(Lcom/tapjoy/TapjoyVideo;)Ljava/util/Vector;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/tapjoy/TapjoyVideo;
 
     .prologue
     .line 36
@@ -413,7 +413,7 @@
 
 .method static synthetic access$1100(Lcom/tapjoy/TapjoyVideo;)Ljava/util/Hashtable;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/tapjoy/TapjoyVideo;
 
     .prologue
     .line 36
@@ -424,8 +424,8 @@
 
 .method static synthetic access$1200(Lcom/tapjoy/TapjoyVideo;Ljava/lang/String;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
+    .param p0, "x0"    # Lcom/tapjoy/TapjoyVideo;
+    .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
     .line 36
@@ -436,7 +436,7 @@
 
 .method static synthetic access$1300(Lcom/tapjoy/TapjoyVideo;)V
     .locals 0
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/tapjoy/TapjoyVideo;
 
     .prologue
     .line 36
@@ -447,7 +447,7 @@
 
 .method static synthetic access$202(Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
     .locals 0
-    .parameter "x0"
+    .param p0, "x0"    # Landroid/graphics/Bitmap;
 
     .prologue
     .line 36
@@ -458,7 +458,7 @@
 
 .method static synthetic access$300(Lcom/tapjoy/TapjoyVideo;)V
     .locals 0
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/tapjoy/TapjoyVideo;
 
     .prologue
     .line 36
@@ -469,7 +469,7 @@
 
 .method static synthetic access$400(Lcom/tapjoy/TapjoyVideo;)Z
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/tapjoy/TapjoyVideo;
 
     .prologue
     .line 36
@@ -480,8 +480,8 @@
 
 .method static synthetic access$402(Lcom/tapjoy/TapjoyVideo;Z)Z
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
+    .param p0, "x0"    # Lcom/tapjoy/TapjoyVideo;
+    .param p1, "x1"    # Z
 
     .prologue
     .line 36
@@ -492,7 +492,7 @@
 
 .method static synthetic access$500(Lcom/tapjoy/TapjoyVideo;)Z
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/tapjoy/TapjoyVideo;
 
     .prologue
     .line 36
@@ -503,7 +503,7 @@
 
 .method static synthetic access$600(Lcom/tapjoy/TapjoyVideo;)Z
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/tapjoy/TapjoyVideo;
 
     .prologue
     .line 36
@@ -514,7 +514,7 @@
 
 .method static synthetic access$700(Lcom/tapjoy/TapjoyVideo;)Z
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/tapjoy/TapjoyVideo;
 
     .prologue
     .line 36
@@ -525,7 +525,7 @@
 
 .method static synthetic access$800(Lcom/tapjoy/TapjoyVideo;)Ljava/util/Hashtable;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/tapjoy/TapjoyVideo;
 
     .prologue
     .line 36
@@ -536,7 +536,7 @@
 
 .method static synthetic access$900(Lcom/tapjoy/TapjoyVideo;)I
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/tapjoy/TapjoyVideo;
 
     .prologue
     .line 36
@@ -547,7 +547,7 @@
 
 .method private cacheVideoFromURL(Ljava/lang/String;)V
     .locals 28
-    .parameter "url"
+    .param p1, "url"    # Ljava/lang/String;
 
     .prologue
     .line 634
@@ -583,35 +583,35 @@
     move-result-wide v22
 
     .line 638
-    .local v22, time:J
+    .local v22, "time":J
     const/4 v15, 0x0
 
     .line 639
-    .local v15, networkTimeout:Z
+    .local v15, "networkTimeout":Z
     const/4 v6, 0x0
 
     .line 641
-    .local v6, downloadError:Z
+    .local v6, "downloadError":Z
     const/4 v11, 0x0
 
     .line 642
-    .local v11, inputStream:Ljava/io/BufferedInputStream;
+    .local v11, "inputStream":Ljava/io/BufferedInputStream;
     const/16 v17, 0x0
 
     .line 644
-    .local v17, out:Ljava/io/OutputStream;
+    .local v17, "out":Ljava/io/OutputStream;
     const/4 v9, 0x0
 
     .line 645
-    .local v9, fileName:Ljava/lang/String;
+    .local v9, "fileName":Ljava/lang/String;
     const/16 v19, 0x0
 
     .line 646
-    .local v19, path:Ljava/lang/String;
+    .local v19, "path":Ljava/lang/String;
     const/16 v20, 0x0
 
     .line 650
-    .local v20, savedFile:Ljava/io/File;
+    .local v20, "savedFile":Ljava/io/File;
     :try_start_0
     new-instance v10, Ljava/net/URL;
 
@@ -622,13 +622,13 @@
     invoke-direct {v0, v1}, Ljava/net/URL;-><init>(Ljava/lang/String;)V
 
     .line 651
-    .local v10, fileURL:Ljava/net/URL;
+    .local v10, "fileURL":Ljava/net/URL;
     invoke-virtual {v10}, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;
 
     move-result-object v5
 
     .line 652
-    .local v5, connection:Ljava/net/URLConnection;
+    .local v5, "connection":Ljava/net/URLConnection;
     const/16 v24, 0x3a98
 
     move-object v0, v5
@@ -666,8 +666,8 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
     .line 660
-    .end local v11           #inputStream:Ljava/io/BufferedInputStream;
-    .local v12, inputStream:Ljava/io/BufferedInputStream;
+    .end local v11    # "inputStream":Ljava/io/BufferedInputStream;
+    .local v12, "inputStream":Ljava/io/BufferedInputStream;
     :try_start_1
     new-instance v8, Ljava/io/File;
 
@@ -684,7 +684,7 @@
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
     .line 662
-    .local v8, fileDir:Ljava/io/File;
+    .local v8, "fileDir":Ljava/io/File;
     const/16 v24, 0x0
 
     const-string v25, "/"
@@ -890,8 +890,8 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_4
 
     .line 678
-    .end local v20           #savedFile:Ljava/io/File;
-    .local v21, savedFile:Ljava/io/File;
+    .end local v20    # "savedFile":Ljava/io/File;
+    .local v21, "savedFile":Ljava/io/File;
     :try_start_2
     new-instance v18, Ljava/io/FileOutputStream;
 
@@ -905,8 +905,8 @@
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_5
 
     .line 680
-    .end local v17           #out:Ljava/io/OutputStream;
-    .local v18, out:Ljava/io/OutputStream;
+    .end local v17    # "out":Ljava/io/OutputStream;
+    .local v18, "out":Ljava/io/OutputStream;
     :try_start_3
     const-string v24, "TapjoyVideo"
 
@@ -944,13 +944,13 @@
     move-object v4, v0
 
     .line 685
-    .local v4, buf:[B
+    .local v4, "buf":[B
     :goto_0
     invoke-virtual {v12, v4}, Ljava/io/BufferedInputStream;->read([B)I
 
     move-result v14
 
-    .local v14, len:I
+    .local v14, "len":I
     const/16 v24, -0x1
 
     move v0, v14
@@ -978,8 +978,8 @@
     goto :goto_0
 
     .line 699
-    .end local v4           #buf:[B
-    .end local v14           #len:I
+    .end local v4    # "buf":[B
+    .end local v14    # "len":I
     :catch_0
     move-exception v24
 
@@ -987,21 +987,21 @@
 
     move-object/from16 v20, v21
 
-    .end local v21           #savedFile:Ljava/io/File;
-    .restart local v20       #savedFile:Ljava/io/File;
+    .end local v21    # "savedFile":Ljava/io/File;
+    .restart local v20    # "savedFile":Ljava/io/File;
     move-object/from16 v17, v18
 
-    .end local v18           #out:Ljava/io/OutputStream;
-    .restart local v17       #out:Ljava/io/OutputStream;
+    .end local v18    # "out":Ljava/io/OutputStream;
+    .restart local v17    # "out":Ljava/io/OutputStream;
     move-object v11, v12
 
     .line 701
-    .end local v5           #connection:Ljava/net/URLConnection;
-    .end local v8           #fileDir:Ljava/io/File;
-    .end local v10           #fileURL:Ljava/net/URL;
-    .end local v12           #inputStream:Ljava/io/BufferedInputStream;
-    .local v7, e:Ljava/net/SocketTimeoutException;
-    .restart local v11       #inputStream:Ljava/io/BufferedInputStream;
+    .end local v5    # "connection":Ljava/net/URLConnection;
+    .end local v8    # "fileDir":Ljava/io/File;
+    .end local v10    # "fileURL":Ljava/net/URL;
+    .end local v12    # "inputStream":Ljava/io/BufferedInputStream;
+    .local v7, "e":Ljava/net/SocketTimeoutException;
+    .restart local v11    # "inputStream":Ljava/io/BufferedInputStream;
     :goto_1
     const-string v24, "TapjoyVideo"
 
@@ -1036,7 +1036,7 @@
     const/4 v6, 0x1
 
     .line 711
-    .end local v7           #e:Ljava/net/SocketTimeoutException;
+    .end local v7    # "e":Ljava/net/SocketTimeoutException;
     :goto_2
     const/16 v24, 0x1
 
@@ -1086,7 +1086,7 @@
     check-cast v13, Ljava/lang/String;
 
     .line 734
-    .local v13, key:Ljava/lang/String;
+    .local v13, "key":Ljava/lang/String;
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/tapjoy/TapjoyVideo;->uncachedVideos:Ljava/util/Hashtable;
@@ -1104,7 +1104,7 @@
     check-cast v16, Lcom/tapjoy/TapjoyVideoObject;
 
     .line 736
-    .local v16, newVideo:Lcom/tapjoy/TapjoyVideoObject;
+    .local v16, "newVideo":Lcom/tapjoy/TapjoyVideoObject;
     invoke-virtual/range {v20 .. v20}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v24
@@ -1195,23 +1195,23 @@
     .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_2
 
     .line 757
-    .end local v13           #key:Ljava/lang/String;
-    .end local v16           #newVideo:Lcom/tapjoy/TapjoyVideoObject;
+    .end local v13    # "key":Ljava/lang/String;
+    .end local v16    # "newVideo":Lcom/tapjoy/TapjoyVideoObject;
     :goto_4
     return-void
 
     .line 690
-    .end local v11           #inputStream:Ljava/io/BufferedInputStream;
-    .end local v17           #out:Ljava/io/OutputStream;
-    .end local v20           #savedFile:Ljava/io/File;
-    .restart local v4       #buf:[B
-    .restart local v5       #connection:Ljava/net/URLConnection;
-    .restart local v8       #fileDir:Ljava/io/File;
-    .restart local v10       #fileURL:Ljava/net/URL;
-    .restart local v12       #inputStream:Ljava/io/BufferedInputStream;
-    .restart local v14       #len:I
-    .restart local v18       #out:Ljava/io/OutputStream;
-    .restart local v21       #savedFile:Ljava/io/File;
+    .end local v11    # "inputStream":Ljava/io/BufferedInputStream;
+    .end local v17    # "out":Ljava/io/OutputStream;
+    .end local v20    # "savedFile":Ljava/io/File;
+    .restart local v4    # "buf":[B
+    .restart local v5    # "connection":Ljava/net/URLConnection;
+    .restart local v8    # "fileDir":Ljava/io/File;
+    .restart local v10    # "fileURL":Ljava/net/URL;
+    .restart local v12    # "inputStream":Ljava/io/BufferedInputStream;
+    .restart local v14    # "len":I
+    .restart local v18    # "out":Ljava/io/OutputStream;
+    .restart local v21    # "savedFile":Ljava/io/File;
     :cond_2
     :try_start_6
     invoke-virtual/range {v18 .. v18}, Ljava/io/OutputStream;->close()V
@@ -1266,32 +1266,32 @@
     :cond_3
     move-object/from16 v20, v21
 
-    .end local v21           #savedFile:Ljava/io/File;
-    .restart local v20       #savedFile:Ljava/io/File;
+    .end local v21    # "savedFile":Ljava/io/File;
+    .restart local v20    # "savedFile":Ljava/io/File;
     move-object/from16 v17, v18
 
-    .end local v18           #out:Ljava/io/OutputStream;
-    .restart local v17       #out:Ljava/io/OutputStream;
+    .end local v18    # "out":Ljava/io/OutputStream;
+    .restart local v17    # "out":Ljava/io/OutputStream;
     move-object v11, v12
 
     .line 709
-    .end local v12           #inputStream:Ljava/io/BufferedInputStream;
-    .restart local v11       #inputStream:Ljava/io/BufferedInputStream;
+    .end local v12    # "inputStream":Ljava/io/BufferedInputStream;
+    .restart local v11    # "inputStream":Ljava/io/BufferedInputStream;
     goto/16 :goto_2
 
     .line 705
-    .end local v4           #buf:[B
-    .end local v5           #connection:Ljava/net/URLConnection;
-    .end local v8           #fileDir:Ljava/io/File;
-    .end local v10           #fileURL:Ljava/net/URL;
-    .end local v14           #len:I
+    .end local v4    # "buf":[B
+    .end local v5    # "connection":Ljava/net/URLConnection;
+    .end local v8    # "fileDir":Ljava/io/File;
+    .end local v10    # "fileURL":Ljava/net/URL;
+    .end local v14    # "len":I
     :catch_1
     move-exception v24
 
     move-object/from16 v7, v24
 
     .line 707
-    .local v7, e:Ljava/lang/Exception;
+    .local v7, "e":Ljava/lang/Exception;
     :goto_5
     const-string v24, "TapjoyVideo"
 
@@ -1325,14 +1325,14 @@
     goto/16 :goto_2
 
     .line 747
-    .end local v7           #e:Ljava/lang/Exception;
+    .end local v7    # "e":Ljava/lang/Exception;
     :catch_2
     move-exception v24
 
     move-object/from16 v7, v24
 
     .line 749
-    .restart local v7       #e:Ljava/lang/Exception;
+    .restart local v7    # "e":Ljava/lang/Exception;
     const-string v24, "TapjoyVideo"
 
     new-instance v25, Ljava/lang/StringBuilder;
@@ -1362,7 +1362,7 @@
     goto :goto_4
 
     .line 755
-    .end local v7           #e:Ljava/lang/Exception;
+    .end local v7    # "e":Ljava/lang/Exception;
     :cond_4
     const/16 v24, 0x2
 
@@ -1377,10 +1377,10 @@
     goto/16 :goto_3
 
     .line 705
-    .end local v11           #inputStream:Ljava/io/BufferedInputStream;
-    .restart local v5       #connection:Ljava/net/URLConnection;
-    .restart local v10       #fileURL:Ljava/net/URL;
-    .restart local v12       #inputStream:Ljava/io/BufferedInputStream;
+    .end local v11    # "inputStream":Ljava/io/BufferedInputStream;
+    .restart local v5    # "connection":Ljava/net/URLConnection;
+    .restart local v10    # "fileURL":Ljava/net/URL;
+    .restart local v12    # "inputStream":Ljava/io/BufferedInputStream;
     :catch_4
     move-exception v24
 
@@ -1388,15 +1388,15 @@
 
     move-object v11, v12
 
-    .end local v12           #inputStream:Ljava/io/BufferedInputStream;
-    .restart local v11       #inputStream:Ljava/io/BufferedInputStream;
+    .end local v12    # "inputStream":Ljava/io/BufferedInputStream;
+    .restart local v11    # "inputStream":Ljava/io/BufferedInputStream;
     goto :goto_5
 
-    .end local v11           #inputStream:Ljava/io/BufferedInputStream;
-    .end local v20           #savedFile:Ljava/io/File;
-    .restart local v8       #fileDir:Ljava/io/File;
-    .restart local v12       #inputStream:Ljava/io/BufferedInputStream;
-    .restart local v21       #savedFile:Ljava/io/File;
+    .end local v11    # "inputStream":Ljava/io/BufferedInputStream;
+    .end local v20    # "savedFile":Ljava/io/File;
+    .restart local v8    # "fileDir":Ljava/io/File;
+    .restart local v12    # "inputStream":Ljava/io/BufferedInputStream;
+    .restart local v21    # "savedFile":Ljava/io/File;
     :catch_5
     move-exception v24
 
@@ -1404,20 +1404,20 @@
 
     move-object/from16 v20, v21
 
-    .end local v21           #savedFile:Ljava/io/File;
-    .restart local v20       #savedFile:Ljava/io/File;
+    .end local v21    # "savedFile":Ljava/io/File;
+    .restart local v20    # "savedFile":Ljava/io/File;
     move-object v11, v12
 
-    .end local v12           #inputStream:Ljava/io/BufferedInputStream;
-    .restart local v11       #inputStream:Ljava/io/BufferedInputStream;
+    .end local v12    # "inputStream":Ljava/io/BufferedInputStream;
+    .restart local v11    # "inputStream":Ljava/io/BufferedInputStream;
     goto :goto_5
 
-    .end local v11           #inputStream:Ljava/io/BufferedInputStream;
-    .end local v17           #out:Ljava/io/OutputStream;
-    .end local v20           #savedFile:Ljava/io/File;
-    .restart local v12       #inputStream:Ljava/io/BufferedInputStream;
-    .restart local v18       #out:Ljava/io/OutputStream;
-    .restart local v21       #savedFile:Ljava/io/File;
+    .end local v11    # "inputStream":Ljava/io/BufferedInputStream;
+    .end local v17    # "out":Ljava/io/OutputStream;
+    .end local v20    # "savedFile":Ljava/io/File;
+    .restart local v12    # "inputStream":Ljava/io/BufferedInputStream;
+    .restart local v18    # "out":Ljava/io/OutputStream;
+    .restart local v21    # "savedFile":Ljava/io/File;
     :catch_6
     move-exception v24
 
@@ -1425,22 +1425,22 @@
 
     move-object/from16 v20, v21
 
-    .end local v21           #savedFile:Ljava/io/File;
-    .restart local v20       #savedFile:Ljava/io/File;
+    .end local v21    # "savedFile":Ljava/io/File;
+    .restart local v20    # "savedFile":Ljava/io/File;
     move-object/from16 v17, v18
 
-    .end local v18           #out:Ljava/io/OutputStream;
-    .restart local v17       #out:Ljava/io/OutputStream;
+    .end local v18    # "out":Ljava/io/OutputStream;
+    .restart local v17    # "out":Ljava/io/OutputStream;
     move-object v11, v12
 
-    .end local v12           #inputStream:Ljava/io/BufferedInputStream;
-    .restart local v11       #inputStream:Ljava/io/BufferedInputStream;
+    .end local v12    # "inputStream":Ljava/io/BufferedInputStream;
+    .restart local v11    # "inputStream":Ljava/io/BufferedInputStream;
     goto :goto_5
 
     .line 699
-    .end local v5           #connection:Ljava/net/URLConnection;
-    .end local v8           #fileDir:Ljava/io/File;
-    .end local v10           #fileURL:Ljava/net/URL;
+    .end local v5    # "connection":Ljava/net/URLConnection;
+    .end local v8    # "fileDir":Ljava/io/File;
+    .end local v10    # "fileURL":Ljava/net/URL;
     :catch_7
     move-exception v24
 
@@ -1448,10 +1448,10 @@
 
     goto/16 :goto_1
 
-    .end local v11           #inputStream:Ljava/io/BufferedInputStream;
-    .restart local v5       #connection:Ljava/net/URLConnection;
-    .restart local v10       #fileURL:Ljava/net/URL;
-    .restart local v12       #inputStream:Ljava/io/BufferedInputStream;
+    .end local v11    # "inputStream":Ljava/io/BufferedInputStream;
+    .restart local v5    # "connection":Ljava/net/URLConnection;
+    .restart local v10    # "fileURL":Ljava/net/URL;
+    .restart local v12    # "inputStream":Ljava/io/BufferedInputStream;
     :catch_8
     move-exception v24
 
@@ -1459,15 +1459,15 @@
 
     move-object v11, v12
 
-    .end local v12           #inputStream:Ljava/io/BufferedInputStream;
-    .restart local v11       #inputStream:Ljava/io/BufferedInputStream;
+    .end local v12    # "inputStream":Ljava/io/BufferedInputStream;
+    .restart local v11    # "inputStream":Ljava/io/BufferedInputStream;
     goto/16 :goto_1
 
-    .end local v11           #inputStream:Ljava/io/BufferedInputStream;
-    .end local v20           #savedFile:Ljava/io/File;
-    .restart local v8       #fileDir:Ljava/io/File;
-    .restart local v12       #inputStream:Ljava/io/BufferedInputStream;
-    .restart local v21       #savedFile:Ljava/io/File;
+    .end local v11    # "inputStream":Ljava/io/BufferedInputStream;
+    .end local v20    # "savedFile":Ljava/io/File;
+    .restart local v8    # "fileDir":Ljava/io/File;
+    .restart local v12    # "inputStream":Ljava/io/BufferedInputStream;
+    .restart local v21    # "savedFile":Ljava/io/File;
     :catch_9
     move-exception v24
 
@@ -1475,12 +1475,12 @@
 
     move-object/from16 v20, v21
 
-    .end local v21           #savedFile:Ljava/io/File;
-    .restart local v20       #savedFile:Ljava/io/File;
+    .end local v21    # "savedFile":Ljava/io/File;
+    .restart local v20    # "savedFile":Ljava/io/File;
     move-object v11, v12
 
-    .end local v12           #inputStream:Ljava/io/BufferedInputStream;
-    .restart local v11       #inputStream:Ljava/io/BufferedInputStream;
+    .end local v12    # "inputStream":Ljava/io/BufferedInputStream;
+    .restart local v11    # "inputStream":Ljava/io/BufferedInputStream;
     goto/16 :goto_1
 .end method
 
@@ -1506,7 +1506,7 @@
 
 .method private handleGetVideosResponse(Ljava/lang/String;)Z
     .locals 27
-    .parameter "response"
+    .param p1, "response"    # Ljava/lang/String;
 
     .prologue
     .line 275
@@ -1515,7 +1515,7 @@
     move-result-object v9
 
     .line 278
-    .local v9, factory:Ljavax/xml/parsers/DocumentBuilderFactory;
+    .local v9, "factory":Ljavax/xml/parsers/DocumentBuilderFactory;
     const-string v24, "TapjoyVideo"
 
     const-string v25, "========================================"
@@ -1543,19 +1543,19 @@
     invoke-direct {v0, v1}, Ljava/io/ByteArrayInputStream;-><init>([B)V
 
     .line 285
-    .local v11, is:Ljava/io/InputStream;
+    .local v11, "is":Ljava/io/InputStream;
     invoke-virtual {v9}, Ljavax/xml/parsers/DocumentBuilderFactory;->newDocumentBuilder()Ljavax/xml/parsers/DocumentBuilder;
 
     move-result-object v6
 
     .line 286
-    .local v6, documentBuilder:Ljavax/xml/parsers/DocumentBuilder;
+    .local v6, "documentBuilder":Ljavax/xml/parsers/DocumentBuilder;
     invoke-virtual {v6, v11}, Ljavax/xml/parsers/DocumentBuilder;->parse(Ljava/io/InputStream;)Lorg/w3c/dom/Document;
 
     move-result-object v5
 
     .line 289
-    .local v5, document:Lorg/w3c/dom/Document;
+    .local v5, "document":Lorg/w3c/dom/Document;
     invoke-interface {v5}, Lorg/w3c/dom/Document;->getDocumentElement()Lorg/w3c/dom/Element;
 
     move-result-object v24
@@ -1574,7 +1574,7 @@
     move-result-object v19
 
     .line 292
-    .local v19, nodelistParent:Lorg/w3c/dom/NodeList;
+    .local v19, "nodelistParent":Lorg/w3c/dom/NodeList;
     const/16 v24, 0x0
 
     move-object/from16 v0, v19
@@ -1590,7 +1590,7 @@
     move-result-object v18
 
     .line 296
-    .local v18, nodelist:Lorg/w3c/dom/NodeList;
+    .local v18, "nodelist":Lorg/w3c/dom/NodeList;
     const/16 v24, 0x0
 
     move-object/from16 v0, v19
@@ -1606,7 +1606,7 @@
     move-result-object v17
 
     .line 299
-    .local v17, nodeMap:Lorg/w3c/dom/NamedNodeMap;
+    .local v17, "nodeMap":Lorg/w3c/dom/NamedNodeMap;
     const-string v24, "cache_auto"
 
     move-object/from16 v0, v17
@@ -1930,8 +1930,8 @@
     .line 320
     const/4 v10, 0x0
 
-    .end local p1
-    .local v10, i:I
+    .end local p1    # "response":Ljava/lang/String;
+    .local v10, "i":I
     :goto_0
     invoke-interface/range {v18 .. v18}, Lorg/w3c/dom/NodeList;->getLength()I
 
@@ -1953,13 +1953,13 @@
     move-result-object v16
 
     .line 325
-    .local v16, node:Lorg/w3c/dom/Node;
+    .local v16, "node":Lorg/w3c/dom/Node;
     new-instance v23, Lcom/tapjoy/TapjoyVideoObject;
 
     invoke-direct/range {v23 .. v23}, Lcom/tapjoy/TapjoyVideoObject;-><init>()V
 
     .line 327
-    .local v23, videoObject:Lcom/tapjoy/TapjoyVideoObject;
+    .local v23, "videoObject":Lcom/tapjoy/TapjoyVideoObject;
     if-eqz v16, :cond_f
 
     invoke-interface/range {v16 .. v16}, Lorg/w3c/dom/Node;->getNodeType()S
@@ -1982,7 +1982,7 @@
     move-object v8, v0
 
     .line 332
-    .local v8, element:Lorg/w3c/dom/Element;
+    .local v8, "element":Lorg/w3c/dom/Element;
     const-string v24, "ClickURL"
 
     move-object v0, v8
@@ -1998,7 +1998,7 @@
     move-result-object v22
 
     .line 333
-    .local v22, value:Ljava/lang/String;
+    .local v22, "value":Ljava/lang/String;
     if-eqz v22, :cond_3
 
     const-string v24, ""
@@ -2355,7 +2355,7 @@
     move-result-object v3
 
     .line 370
-    .local v3, buttonData:Lorg/w3c/dom/NodeList;
+    .local v3, "buttonData":Lorg/w3c/dom/NodeList;
     const/16 v24, 0x0
 
     move-object v0, v3
@@ -2371,10 +2371,10 @@
     move-result-object v12
 
     .line 375
-    .local v12, itemNodeList:Lorg/w3c/dom/NodeList;
+    .local v12, "itemNodeList":Lorg/w3c/dom/NodeList;
     const/4 v13, 0x0
 
-    .local v13, j:I
+    .local v13, "j":I
     :goto_1
     invoke-interface {v12}, Lorg/w3c/dom/NodeList;->getLength()I
 
@@ -2396,7 +2396,7 @@
     move-result-object v4
 
     .line 381
-    .local v4, child:Lorg/w3c/dom/NodeList;
+    .local v4, "child":Lorg/w3c/dom/NodeList;
     invoke-interface {v4}, Lorg/w3c/dom/NodeList;->getLength()I
 
     move-result v24
@@ -2414,14 +2414,14 @@
     const-string v15, ""
 
     .line 390
-    .local v15, name:Ljava/lang/String;
+    .local v15, "name":Ljava/lang/String;
     const-string v21, ""
 
     .line 392
-    .local v21, url:Ljava/lang/String;
+    .local v21, "url":Ljava/lang/String;
     const/4 v14, 0x0
 
-    .local v14, k:I
+    .local v14, "k":I
     :goto_3
     invoke-interface {v4}, Lorg/w3c/dom/NodeList;->getLength()I
 
@@ -2454,7 +2454,7 @@
     move-result-object v20
 
     .line 399
-    .local v20, tagName:Ljava/lang/String;
+    .local v20, "tagName":Ljava/lang/String;
     const-string v24, "Name"
 
     move-object/from16 v0, v20
@@ -2491,7 +2491,7 @@
     move-result-object v15
 
     .line 392
-    .end local v20           #tagName:Ljava/lang/String;
+    .end local v20    # "tagName":Ljava/lang/String;
     :cond_b
     :goto_4
     add-int/lit8 v14, v14, 0x1
@@ -2499,7 +2499,7 @@
     goto :goto_3
 
     .line 405
-    .restart local v20       #tagName:Ljava/lang/String;
+    .restart local v20    # "tagName":Ljava/lang/String;
     :cond_c
     const-string v24, "URL"
 
@@ -2539,7 +2539,7 @@
     goto :goto_4
 
     .line 412
-    .end local v20           #tagName:Ljava/lang/String;
+    .end local v20    # "tagName":Ljava/lang/String;
     :cond_d
     const-string v24, "TapjoyVideo"
 
@@ -2595,31 +2595,31 @@
     goto/16 :goto_2
 
     .line 423
-    .end local v3           #buttonData:Lorg/w3c/dom/NodeList;
-    .end local v4           #child:Lorg/w3c/dom/NodeList;
-    .end local v5           #document:Lorg/w3c/dom/Document;
-    .end local v6           #documentBuilder:Ljavax/xml/parsers/DocumentBuilder;
-    .end local v8           #element:Lorg/w3c/dom/Element;
-    .end local v10           #i:I
-    .end local v11           #is:Ljava/io/InputStream;
-    .end local v12           #itemNodeList:Lorg/w3c/dom/NodeList;
-    .end local v13           #j:I
-    .end local v14           #k:I
-    .end local v15           #name:Ljava/lang/String;
-    .end local v16           #node:Lorg/w3c/dom/Node;
-    .end local v17           #nodeMap:Lorg/w3c/dom/NamedNodeMap;
-    .end local v18           #nodelist:Lorg/w3c/dom/NodeList;
-    .end local v19           #nodelistParent:Lorg/w3c/dom/NodeList;
-    .end local v21           #url:Ljava/lang/String;
-    .end local v22           #value:Ljava/lang/String;
-    .end local v23           #videoObject:Lcom/tapjoy/TapjoyVideoObject;
+    .end local v3    # "buttonData":Lorg/w3c/dom/NodeList;
+    .end local v4    # "child":Lorg/w3c/dom/NodeList;
+    .end local v5    # "document":Lorg/w3c/dom/Document;
+    .end local v6    # "documentBuilder":Ljavax/xml/parsers/DocumentBuilder;
+    .end local v8    # "element":Lorg/w3c/dom/Element;
+    .end local v10    # "i":I
+    .end local v11    # "is":Ljava/io/InputStream;
+    .end local v12    # "itemNodeList":Lorg/w3c/dom/NodeList;
+    .end local v13    # "j":I
+    .end local v14    # "k":I
+    .end local v15    # "name":Ljava/lang/String;
+    .end local v16    # "node":Lorg/w3c/dom/Node;
+    .end local v17    # "nodeMap":Lorg/w3c/dom/NamedNodeMap;
+    .end local v18    # "nodelist":Lorg/w3c/dom/NodeList;
+    .end local v19    # "nodelistParent":Lorg/w3c/dom/NodeList;
+    .end local v21    # "url":Ljava/lang/String;
+    .end local v22    # "value":Ljava/lang/String;
+    .end local v23    # "videoObject":Lcom/tapjoy/TapjoyVideoObject;
     :catch_0
     move-exception v24
 
     move-object/from16 v7, v24
 
     .line 425
-    .local v7, e:Ljava/lang/Exception;
+    .local v7, "e":Ljava/lang/Exception;
     const-string v24, "TapjoyVideo"
 
     new-instance v25, Ljava/lang/StringBuilder;
@@ -2650,25 +2650,25 @@
     const/16 v24, 0x0
 
     .line 431
-    .end local v7           #e:Ljava/lang/Exception;
+    .end local v7    # "e":Ljava/lang/Exception;
     :goto_5
     return v24
 
     .line 418
-    .restart local v3       #buttonData:Lorg/w3c/dom/NodeList;
-    .restart local v5       #document:Lorg/w3c/dom/Document;
-    .restart local v6       #documentBuilder:Ljavax/xml/parsers/DocumentBuilder;
-    .restart local v8       #element:Lorg/w3c/dom/Element;
-    .restart local v10       #i:I
-    .restart local v11       #is:Ljava/io/InputStream;
-    .restart local v12       #itemNodeList:Lorg/w3c/dom/NodeList;
-    .restart local v13       #j:I
-    .restart local v16       #node:Lorg/w3c/dom/Node;
-    .restart local v17       #nodeMap:Lorg/w3c/dom/NamedNodeMap;
-    .restart local v18       #nodelist:Lorg/w3c/dom/NodeList;
-    .restart local v19       #nodelistParent:Lorg/w3c/dom/NodeList;
-    .restart local v22       #value:Ljava/lang/String;
-    .restart local v23       #videoObject:Lcom/tapjoy/TapjoyVideoObject;
+    .restart local v3    # "buttonData":Lorg/w3c/dom/NodeList;
+    .restart local v5    # "document":Lorg/w3c/dom/Document;
+    .restart local v6    # "documentBuilder":Ljavax/xml/parsers/DocumentBuilder;
+    .restart local v8    # "element":Lorg/w3c/dom/Element;
+    .restart local v10    # "i":I
+    .restart local v11    # "is":Ljava/io/InputStream;
+    .restart local v12    # "itemNodeList":Lorg/w3c/dom/NodeList;
+    .restart local v13    # "j":I
+    .restart local v16    # "node":Lorg/w3c/dom/Node;
+    .restart local v17    # "nodeMap":Lorg/w3c/dom/NamedNodeMap;
+    .restart local v18    # "nodelist":Lorg/w3c/dom/NodeList;
+    .restart local v19    # "nodelistParent":Lorg/w3c/dom/NodeList;
+    .restart local v22    # "value":Ljava/lang/String;
+    .restart local v23    # "videoObject":Lcom/tapjoy/TapjoyVideoObject;
     :cond_e
     :try_start_1
     move-object/from16 v0, p0
@@ -2709,19 +2709,19 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
     .line 320
-    .end local v3           #buttonData:Lorg/w3c/dom/NodeList;
-    .end local v8           #element:Lorg/w3c/dom/Element;
-    .end local v12           #itemNodeList:Lorg/w3c/dom/NodeList;
-    .end local v13           #j:I
-    .end local v22           #value:Ljava/lang/String;
+    .end local v3    # "buttonData":Lorg/w3c/dom/NodeList;
+    .end local v8    # "element":Lorg/w3c/dom/Element;
+    .end local v12    # "itemNodeList":Lorg/w3c/dom/NodeList;
+    .end local v13    # "j":I
+    .end local v22    # "value":Ljava/lang/String;
     :cond_f
     add-int/lit8 v10, v10, 0x1
 
     goto/16 :goto_0
 
     .line 429
-    .end local v16           #node:Lorg/w3c/dom/Node;
-    .end local v23           #videoObject:Lcom/tapjoy/TapjoyVideoObject;
+    .end local v16    # "node":Lorg/w3c/dom/Node;
+    .end local v23    # "videoObject":Lcom/tapjoy/TapjoyVideoObject;
     :cond_10
     const-string v24, "TapjoyVideo"
 
@@ -2778,14 +2778,14 @@
     move-result-object v0
 
     .line 618
-    .local v0, entries:Ljava/util/Set;,"Ljava/util/Set<Ljava/util/Map$Entry<Ljava/lang/String;Lcom/tapjoy/TapjoyVideoObject;>;>;"
+    .local v0, "entries":Ljava/util/Set;, "Ljava/util/Set<Ljava/util/Map$Entry<Ljava/lang/String;Lcom/tapjoy/TapjoyVideoObject;>;>;"
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
 
     .line 620
-    .end local p0
-    .local v2, iterator:Ljava/util/Iterator;,"Ljava/util/Iterator<Ljava/util/Map$Entry<Ljava/lang/String;Lcom/tapjoy/TapjoyVideoObject;>;>;"
+    .end local p0    # "this":Lcom/tapjoy/TapjoyVideo;
+    .local v2, "iterator":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/util/Map$Entry<Ljava/lang/String;Lcom/tapjoy/TapjoyVideoObject;>;>;"
     :goto_0
     invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
@@ -2801,7 +2801,7 @@
     check-cast v1, Ljava/util/Map$Entry;
 
     .line 623
-    .local v1, item:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Lcom/tapjoy/TapjoyVideoObject;>;"
+    .local v1, "item":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Lcom/tapjoy/TapjoyVideoObject;>;"
     const-string v3, "TapjoyVideo"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -2851,7 +2851,7 @@
     goto :goto_0
 
     .line 625
-    .end local v1           #item:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Lcom/tapjoy/TapjoyVideoObject;>;"
+    .end local v1    # "item":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Lcom/tapjoy/TapjoyVideoObject;>;"
     :cond_0
     return-void
 .end method
@@ -2866,7 +2866,7 @@
     const-string v2, ""
 
     .line 767
-    .local v2, videoIDs:Ljava/lang/String;
+    .local v2, "videoIDs":Ljava/lang/String;
     iget-object v3, p0, Lcom/tapjoy/TapjoyVideo;->cachedVideos:Ljava/util/Hashtable;
 
     if-eqz v3, :cond_2
@@ -2887,7 +2887,7 @@
     move-result-object v1
 
     .line 771
-    .local v1, keys:Ljava/util/Enumeration;,"Ljava/util/Enumeration<Ljava/lang/String;>;"
+    .local v1, "keys":Ljava/util/Enumeration;, "Ljava/util/Enumeration<Ljava/lang/String;>;"
     :cond_0
     :goto_0
     invoke-interface {v1}, Ljava/util/Enumeration;->hasMoreElements()Z
@@ -2904,7 +2904,7 @@
     check-cast v0, Ljava/lang/String;
 
     .line 774
-    .local v0, key:Ljava/lang/String;
+    .local v0, "key":Ljava/lang/String;
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -2950,7 +2950,7 @@
     goto :goto_0
 
     .line 780
-    .end local v0           #key:Ljava/lang/String;
+    .end local v0    # "key":Ljava/lang/String;
     :cond_1
     const-string v3, "TapjoyVideo"
 
@@ -2981,7 +2981,7 @@
     invoke-static {v5, v3}, Lcom/tapjoy/TapjoyLog;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 783
-    .end local v1           #keys:Ljava/util/Enumeration;,"Ljava/util/Enumeration<Ljava/lang/String;>;"
+    .end local v1    # "keys":Ljava/util/Enumeration;, "Ljava/util/Enumeration<Ljava/lang/String;>;"
     :cond_2
     const-string v3, "TapjoyVideo"
 
@@ -3030,11 +3030,11 @@
     const/4 v5, 0x0
 
     .line 791
-    .local v5, success:Z
+    .local v5, "success":Z
     const/4 v4, 0x1
 
     .line 794
-    .local v4, proceed:Z
+    .local v4, "proceed":Z
     new-instance v7, Ljava/io/File;
 
     iget-object v8, p0, Lcom/tapjoy/TapjoyVideo;->videoCacheDir:Ljava/lang/String;
@@ -3046,7 +3046,7 @@
     move-result-object v0
 
     .line 796
-    .local v0, cachedFilesOnDisk:[Ljava/io/File;
+    .local v0, "cachedFilesOnDisk":[Ljava/io/File;
     iget-object v7, p0, Lcom/tapjoy/TapjoyVideo;->uncachedVideos:Ljava/util/Hashtable;
 
     if-nez v7, :cond_0
@@ -3102,7 +3102,7 @@
     .line 818
     const/4 v2, 0x0
 
-    .local v2, i:I
+    .local v2, "i":I
     :goto_0
     array-length v7, v0
 
@@ -3116,7 +3116,7 @@
     move-result-object v3
 
     .line 823
-    .local v3, key:Ljava/lang/String;
+    .local v3, "key":Ljava/lang/String;
     const-string v7, "TapjoyVideo"
 
     const-string v7, "-----"
@@ -3204,21 +3204,21 @@
     check-cast v6, Lcom/tapjoy/TapjoyVideoObject;
 
     .line 835
-    .local v6, videoObject:Lcom/tapjoy/TapjoyVideoObject;
+    .local v6, "videoObject":Lcom/tapjoy/TapjoyVideoObject;
     if-nez v6, :cond_3
 
     .line 837
     const/4 v5, 0x0
 
     .line 818
-    .end local v6           #videoObject:Lcom/tapjoy/TapjoyVideoObject;
+    .end local v6    # "videoObject":Lcom/tapjoy/TapjoyVideoObject;
     :goto_1
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
     .line 841
-    .restart local v6       #videoObject:Lcom/tapjoy/TapjoyVideoObject;
+    .restart local v6    # "videoObject":Lcom/tapjoy/TapjoyVideoObject;
     :cond_3
     new-instance v7, Lcom/tapjoy/TapjoyURLConnection;
 
@@ -3231,7 +3231,7 @@
     move-result-object v1
 
     .line 843
-    .local v1, contentLength:Ljava/lang/String;
+    .local v1, "contentLength":Ljava/lang/String;
     const-string v7, "TapjoyVideo"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -3388,8 +3388,8 @@
     goto/16 :goto_1
 
     .line 866
-    .end local v1           #contentLength:Ljava/lang/String;
-    .end local v6           #videoObject:Lcom/tapjoy/TapjoyVideoObject;
+    .end local v1    # "contentLength":Ljava/lang/String;
+    .end local v6    # "videoObject":Lcom/tapjoy/TapjoyVideoObject;
     :cond_5
     const-string v7, "TapjoyVideo"
 
@@ -3437,12 +3437,12 @@
     goto/16 :goto_1
 
     .line 871
-    .end local v3           #key:Ljava/lang/String;
+    .end local v3    # "key":Ljava/lang/String;
     :cond_6
     const/4 v5, 0x1
 
     .line 874
-    .end local v2           #i:I
+    .end local v2    # "i":I
     :cond_7
     return v5
 .end method
@@ -3468,7 +3468,7 @@
 
 .method public static videoNotifierError(I)V
     .locals 1
-    .parameter "error"
+    .param p0, "error"    # I
 
     .prologue
     .line 893
@@ -3528,7 +3528,7 @@
 
 .method public enableVideoCache(Z)V
     .locals 0
-    .parameter "enable"
+    .param p1, "enable"    # Z
 
     .prologue
     .line 137
@@ -3652,7 +3652,7 @@
 
 .method public initVideoAd(Lcom/tapjoy/TapjoyVideoNotifier;)V
     .locals 1
-    .parameter "notifier"
+    .param p1, "notifier"    # Lcom/tapjoy/TapjoyVideoNotifier;
 
     .prologue
     .line 146
@@ -3666,8 +3666,8 @@
 
 .method public initVideoAd(Lcom/tapjoy/TapjoyVideoNotifier;Z)V
     .locals 2
-    .parameter "notifier"
-    .parameter "skipCaching"
+    .param p1, "notifier"    # Lcom/tapjoy/TapjoyVideoNotifier;
+    .param p2, "skipCaching"    # Z
 
     .prologue
     .line 157
@@ -3696,7 +3696,7 @@
 
 .method public setVideoCacheCount(I)V
     .locals 0
-    .parameter "count"
+    .param p1, "count"    # I
 
     .prologue
     .line 124
@@ -3708,7 +3708,7 @@
 
 .method public setVideoNotifier(Lcom/tapjoy/TapjoyVideoNotifier;)V
     .locals 0
-    .parameter "notifier"
+    .param p1, "notifier"    # Lcom/tapjoy/TapjoyVideoNotifier;
 
     .prologue
     .line 883
@@ -3720,12 +3720,12 @@
 
 .method public startVideo(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
     .locals 8
-    .parameter "videoID"
-    .parameter "currencyName"
-    .parameter "currencyAmount"
-    .parameter "clickURL"
-    .parameter "webviewURL"
-    .parameter "videoURL"
+    .param p1, "videoID"    # Ljava/lang/String;
+    .param p2, "currencyName"    # Ljava/lang/String;
+    .param p3, "currencyAmount"    # Ljava/lang/String;
+    .param p4, "clickURL"    # Ljava/lang/String;
+    .param p5, "webviewURL"    # Ljava/lang/String;
+    .param p6, "videoURL"    # Ljava/lang/String;
 
     .prologue
     const/4 v7, 0x0
@@ -3736,7 +3736,7 @@
     const/4 v0, 0x1
 
     .line 452
-    .local v0, cachedVideo:Z
+    .local v0, "cachedVideo":Z
     const-string v4, "TapjoyVideo"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -3853,7 +3853,7 @@
     invoke-direct {v1}, Lcom/tapjoy/TapjoyVideoObject;-><init>()V
 
     .line 478
-    .local v1, newVideo:Lcom/tapjoy/TapjoyVideoObject;
+    .local v1, "newVideo":Lcom/tapjoy/TapjoyVideoObject;
     iput-object p1, v1, Lcom/tapjoy/TapjoyVideoObject;->offerID:Ljava/lang/String;
 
     .line 479
@@ -3888,7 +3888,7 @@
     iput-object v4, p0, Lcom/tapjoy/TapjoyVideo;->videoToPlay:Lcom/tapjoy/TapjoyVideoObject;
 
     .line 496
-    .end local v1           #newVideo:Lcom/tapjoy/TapjoyVideoObject;
+    .end local v1    # "newVideo":Lcom/tapjoy/TapjoyVideoObject;
     :cond_2
     const/4 v0, 0x0
 
@@ -4126,7 +4126,7 @@
     invoke-direct {v2, v4}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
     .line 519
-    .local v2, video:Ljava/io/File;
+    .local v2, "video":Ljava/io/File;
     if-eqz v2, :cond_4
 
     invoke-virtual {v2}, Ljava/io/File;->exists()Z
@@ -4149,7 +4149,7 @@
     goto/16 :goto_0
 
     .line 490
-    .end local v2           #video:Ljava/io/File;
+    .end local v2    # "video":Ljava/io/File;
     :cond_5
     const-string v4, "TapjoyVideo"
 
@@ -4173,8 +4173,8 @@
     invoke-direct {v3, v4, v5}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
     .line 527
-    .local v3, videoIntent:Landroid/content/Intent;
-    const/high16 v4, 0x1000
+    .local v3, "videoIntent":Landroid/content/Intent;
+    const/high16 v4, 0x10000000
 
     invoke-virtual {v3, v4}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 

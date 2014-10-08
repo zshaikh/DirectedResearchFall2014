@@ -67,9 +67,9 @@
 
 .method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Lcom/facebook/internal/FileLruCache$Limits;)V
     .locals 3
-    .parameter "context"
-    .parameter "tag"
-    .parameter "limits"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "tag"    # Ljava/lang/String;
+    .param p3, "limits"    # Lcom/facebook/internal/FileLruCache$Limits;
 
     .prologue
     .line 74
@@ -148,7 +148,6 @@
 
 .method static synthetic access$1(Lcom/facebook/internal/FileLruCache;)Ljava/util/concurrent/atomic/AtomicLong;
     .locals 1
-    .parameter
 
     .prologue
     .line 71
@@ -159,9 +158,6 @@
 
 .method static synthetic access$2(Lcom/facebook/internal/FileLruCache;Ljava/lang/String;Ljava/io/File;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 238
@@ -172,7 +168,6 @@
 
 .method static synthetic access$3(Lcom/facebook/internal/FileLruCache;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 279
@@ -232,8 +227,8 @@
 
 .method private renameToTargetAndTrim(Ljava/lang/String;Ljava/io/File;)V
     .locals 3
-    .parameter "key"
-    .parameter "buffer"
+    .param p1, "key"    # Ljava/lang/String;
+    .param p2, "buffer"    # Ljava/io/File;
 
     .prologue
     .line 239
@@ -248,7 +243,7 @@
     invoke-direct {v0, v1, v2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
     .line 246
-    .local v0, target:Ljava/io/File;
+    .local v0, "target":Ljava/io/File;
     invoke-virtual {p2, v0}, Ljava/io/File;->renameTo(Ljava/io/File;)Z
 
     move-result v1
@@ -286,15 +281,15 @@
     invoke-direct {v4}, Ljava/util/PriorityQueue;-><init>()V
 
     .line 283
-    .local v4, heap:Ljava/util/PriorityQueue;,"Ljava/util/PriorityQueue<Lcom/facebook/internal/FileLruCache$ModifiedFile;>;"
+    .local v4, "heap":Ljava/util/PriorityQueue;, "Ljava/util/PriorityQueue<Lcom/facebook/internal/FileLruCache$ModifiedFile;>;"
     const-wide/16 v6, 0x0
 
     .line 284
-    .local v6, size:J
+    .local v6, "size":J
     const-wide/16 v0, 0x0
 
     .line 285
-    .local v0, count:J
+    .local v0, "count":J
     iget-object v8, p0, Lcom/facebook/internal/FileLruCache;->directory:Ljava/io/File;
 
     invoke-static {}, Lcom/facebook/internal/FileLruCache$BufferFile;->excludeBufferFiles()Ljava/io/FilenameFilter;
@@ -306,7 +301,7 @@
     move-result-object v3
 
     .line 286
-    .local v3, filesToTrim:[Ljava/io/File;
+    .local v3, "filesToTrim":[Ljava/io/File;
     if-eqz v3, :cond_0
 
     .line 287
@@ -376,13 +371,13 @@
     aget-object v2, v3, v9
 
     .line 288
-    .local v2, file:Ljava/io/File;
+    .local v2, "file":Ljava/io/File;
     new-instance v5, Lcom/facebook/internal/FileLruCache$ModifiedFile;
 
     invoke-direct {v5, v2}, Lcom/facebook/internal/FileLruCache$ModifiedFile;-><init>(Ljava/io/File;)V
 
     .line 289
-    .local v5, modified:Lcom/facebook/internal/FileLruCache$ModifiedFile;
+    .local v5, "modified":Lcom/facebook/internal/FileLruCache$ModifiedFile;
     invoke-virtual {v4, v5}, Ljava/util/PriorityQueue;->add(Ljava/lang/Object;)Z
 
     .line 290
@@ -452,8 +447,8 @@
     goto :goto_0
 
     .line 299
-    .end local v2           #file:Ljava/io/File;
-    .end local v5           #modified:Lcom/facebook/internal/FileLruCache$ModifiedFile;
+    .end local v2    # "file":Ljava/io/File;
+    .end local v5    # "modified":Lcom/facebook/internal/FileLruCache$ModifiedFile;
     :cond_2
     invoke-virtual {v4}, Ljava/util/PriorityQueue;->remove()Ljava/lang/Object;
 
@@ -466,7 +461,7 @@
     move-result-object v2
 
     .line 300
-    .restart local v2       #file:Ljava/io/File;
+    .restart local v2    # "file":Ljava/io/File;
     sget-object v8, Lcom/facebook/LoggingBehavior;->CACHE:Lcom/facebook/LoggingBehavior;
 
     sget-object v9, Lcom/facebook/internal/FileLruCache;->TAG:Ljava/lang/String;
@@ -511,11 +506,11 @@
     goto/16 :goto_1
 
     .line 305
-    .end local v0           #count:J
-    .end local v2           #file:Ljava/io/File;
-    .end local v3           #filesToTrim:[Ljava/io/File;
-    .end local v4           #heap:Ljava/util/PriorityQueue;,"Ljava/util/PriorityQueue<Lcom/facebook/internal/FileLruCache$ModifiedFile;>;"
-    .end local v6           #size:J
+    .end local v0    # "count":J
+    .end local v2    # "file":Ljava/io/File;
+    .end local v3    # "filesToTrim":[Ljava/io/File;
+    .end local v4    # "heap":Ljava/util/PriorityQueue;, "Ljava/util/PriorityQueue<Lcom/facebook/internal/FileLruCache$ModifiedFile;>;"
+    .end local v6    # "size":J
     :catchall_0
     move-exception v8
 
@@ -554,10 +549,10 @@
 
     throw v8
 
-    .restart local v0       #count:J
-    .restart local v3       #filesToTrim:[Ljava/io/File;
-    .restart local v4       #heap:Ljava/util/PriorityQueue;,"Ljava/util/PriorityQueue<Lcom/facebook/internal/FileLruCache$ModifiedFile;>;"
-    .restart local v6       #size:J
+    .restart local v0    # "count":J
+    .restart local v3    # "filesToTrim":[Ljava/io/File;
+    .restart local v4    # "heap":Ljava/util/PriorityQueue;, "Ljava/util/PriorityQueue<Lcom/facebook/internal/FileLruCache$ModifiedFile;>;"
+    .restart local v6    # "size":J
     :catchall_2
     move-exception v9
 
@@ -587,7 +582,7 @@
     move-result-object v0
 
     .line 225
-    .local v0, filesToDelete:[Ljava/io/File;
+    .local v0, "filesToDelete":[Ljava/io/File;
     iget-object v1, p0, Lcom/facebook/internal/FileLruCache;->lastClearCacheTime:Ljava/util/concurrent/atomic/AtomicLong;
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -617,7 +612,7 @@
 
 .method public get(Ljava/lang/String;)Ljava/io/InputStream;
     .locals 1
-    .parameter "key"
+    .param p1, "key"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -637,8 +632,8 @@
 
 .method public get(Ljava/lang/String;Ljava/lang/String;)Ljava/io/InputStream;
     .locals 17
-    .parameter "key"
-    .parameter "contentTag"
+    .param p1, "key"    # Ljava/lang/String;
+    .param p2, "contentTag"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -662,11 +657,11 @@
     invoke-direct {v6, v13, v14}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
     .line 120
-    .local v6, file:Ljava/io/File;
+    .local v6, "file":Ljava/io/File;
     const/4 v10, 0x0
 
     .line 122
-    .local v10, input:Ljava/io/FileInputStream;
+    .local v10, "input":Ljava/io/FileInputStream;
     :try_start_0
     new-instance v11, Ljava/io/FileInputStream;
 
@@ -675,8 +670,8 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 127
-    .end local v10           #input:Ljava/io/FileInputStream;
-    .local v11, input:Ljava/io/FileInputStream;
+    .end local v10    # "input":Ljava/io/FileInputStream;
+    .local v11, "input":Ljava/io/FileInputStream;
     new-instance v4, Ljava/io/BufferedInputStream;
 
     const/16 v13, 0x2000
@@ -684,11 +679,11 @@
     invoke-direct {v4, v11, v13}, Ljava/io/BufferedInputStream;-><init>(Ljava/io/InputStream;I)V
 
     .line 128
-    .local v4, buffered:Ljava/io/BufferedInputStream;
+    .local v4, "buffered":Ljava/io/BufferedInputStream;
     const/4 v12, 0x0
 
     .line 131
-    .local v12, success:Z
+    .local v12, "success":Z
     :try_start_1
     invoke-static {v4}, Lcom/facebook/internal/FileLruCache$StreamHeader;->readHeader(Ljava/io/InputStream;)Lorg/json/JSONObject;
     :try_end_1
@@ -697,7 +692,7 @@
     move-result-object v8
 
     .line 132
-    .local v8, header:Lorg/json/JSONObject;
+    .local v8, "header":Lorg/json/JSONObject;
     if-nez v8, :cond_1
 
     .line 156
@@ -713,11 +708,11 @@
     move-object v10, v11
 
     .line 154
-    .end local v4           #buffered:Ljava/io/BufferedInputStream;
-    .end local v8           #header:Lorg/json/JSONObject;
-    .end local v11           #input:Ljava/io/FileInputStream;
-    .end local v12           #success:Z
-    .restart local v10       #input:Ljava/io/FileInputStream;
+    .end local v4    # "buffered":Ljava/io/BufferedInputStream;
+    .end local v8    # "header":Lorg/json/JSONObject;
+    .end local v11    # "input":Ljava/io/FileInputStream;
+    .end local v12    # "success":Z
+    .restart local v10    # "input":Ljava/io/FileInputStream;
     :goto_0
     return-object v13
 
@@ -728,18 +723,18 @@
     move-object v5, v13
 
     .line 124
-    .local v5, e:Ljava/io/IOException;
+    .local v5, "e":Ljava/io/IOException;
     const/4 v13, 0x0
 
     goto :goto_0
 
     .line 136
-    .end local v5           #e:Ljava/io/IOException;
-    .end local v10           #input:Ljava/io/FileInputStream;
-    .restart local v4       #buffered:Ljava/io/BufferedInputStream;
-    .restart local v8       #header:Lorg/json/JSONObject;
-    .restart local v11       #input:Ljava/io/FileInputStream;
-    .restart local v12       #success:Z
+    .end local v5    # "e":Ljava/io/IOException;
+    .end local v10    # "input":Ljava/io/FileInputStream;
+    .restart local v4    # "buffered":Ljava/io/BufferedInputStream;
+    .restart local v8    # "header":Lorg/json/JSONObject;
+    .restart local v11    # "input":Ljava/io/FileInputStream;
+    .restart local v12    # "success":Z
     :cond_1
     :try_start_2
     const-string v13, "key"
@@ -749,7 +744,7 @@
     move-result-object v7
 
     .line 137
-    .local v7, foundKey:Ljava/lang/String;
+    .local v7, "foundKey":Ljava/lang/String;
     if-eqz v7, :cond_2
 
     move-object v0, v7
@@ -777,13 +772,13 @@
 
     move-object v10, v11
 
-    .end local v11           #input:Ljava/io/FileInputStream;
-    .restart local v10       #input:Ljava/io/FileInputStream;
+    .end local v11    # "input":Ljava/io/FileInputStream;
+    .restart local v10    # "input":Ljava/io/FileInputStream;
     goto :goto_0
 
     .line 141
-    .end local v10           #input:Ljava/io/FileInputStream;
-    .restart local v11       #input:Ljava/io/FileInputStream;
+    .end local v10    # "input":Ljava/io/FileInputStream;
+    .restart local v11    # "input":Ljava/io/FileInputStream;
     :cond_4
     :try_start_3
     const-string v13, "tag"
@@ -795,7 +790,7 @@
     move-result-object v9
 
     .line 143
-    .local v9, headerContentTag:Ljava/lang/String;
+    .local v9, "headerContentTag":Ljava/lang/String;
     if-nez p2, :cond_5
 
     if-nez v9, :cond_6
@@ -829,13 +824,13 @@
 
     move-object v10, v11
 
-    .end local v11           #input:Ljava/io/FileInputStream;
-    .restart local v10       #input:Ljava/io/FileInputStream;
+    .end local v11    # "input":Ljava/io/FileInputStream;
+    .restart local v10    # "input":Ljava/io/FileInputStream;
     goto :goto_0
 
     .line 148
-    .end local v10           #input:Ljava/io/FileInputStream;
-    .restart local v11       #input:Ljava/io/FileInputStream;
+    .end local v10    # "input":Ljava/io/FileInputStream;
+    .restart local v11    # "input":Ljava/io/FileInputStream;
     :cond_8
     :try_start_4
     new-instance v13, Ljava/util/Date;
@@ -847,7 +842,7 @@
     move-result-wide v2
 
     .line 149
-    .local v2, accessTime:J
+    .local v2, "accessTime":J
     sget-object v13, Lcom/facebook/LoggingBehavior;->CACHE:Lcom/facebook/LoggingBehavior;
 
     sget-object v14, Lcom/facebook/internal/FileLruCache;->TAG:Ljava/lang/String;
@@ -905,20 +900,20 @@
     :cond_9
     move-object v10, v11
 
-    .end local v11           #input:Ljava/io/FileInputStream;
-    .restart local v10       #input:Ljava/io/FileInputStream;
+    .end local v11    # "input":Ljava/io/FileInputStream;
+    .restart local v10    # "input":Ljava/io/FileInputStream;
     move-object v13, v4
 
     .line 154
     goto :goto_0
 
     .line 155
-    .end local v2           #accessTime:J
-    .end local v7           #foundKey:Ljava/lang/String;
-    .end local v8           #header:Lorg/json/JSONObject;
-    .end local v9           #headerContentTag:Ljava/lang/String;
-    .end local v10           #input:Ljava/io/FileInputStream;
-    .restart local v11       #input:Ljava/io/FileInputStream;
+    .end local v2    # "accessTime":J
+    .end local v7    # "foundKey":Ljava/lang/String;
+    .end local v8    # "header":Lorg/json/JSONObject;
+    .end local v9    # "headerContentTag":Ljava/lang/String;
+    .end local v10    # "input":Ljava/io/FileInputStream;
+    .restart local v11    # "input":Ljava/io/FileInputStream;
     :catchall_0
     move-exception v13
 
@@ -935,8 +930,8 @@
 
 .method public interceptAndPut(Ljava/lang/String;Ljava/io/InputStream;)Ljava/io/InputStream;
     .locals 2
-    .parameter "key"
-    .parameter "input"
+    .param p1, "key"    # Ljava/lang/String;
+    .param p2, "input"    # Ljava/io/InputStream;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -950,7 +945,7 @@
     move-result-object v0
 
     .line 258
-    .local v0, output:Ljava/io/OutputStream;
+    .local v0, "output":Ljava/io/OutputStream;
     new-instance v1, Lcom/facebook/internal/FileLruCache$CopyingInputStream;
 
     invoke-direct {v1, p2, v0}, Lcom/facebook/internal/FileLruCache$CopyingInputStream;-><init>(Ljava/io/InputStream;Ljava/io/OutputStream;)V
@@ -960,7 +955,7 @@
 
 .method openPutStream(Ljava/lang/String;)Ljava/io/OutputStream;
     .locals 1
-    .parameter "key"
+    .param p1, "key"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -980,8 +975,8 @@
 
 .method public openPutStream(Ljava/lang/String;Ljava/lang/String;)Ljava/io/OutputStream;
     .locals 12
-    .parameter "key"
-    .parameter "contentTag"
+    .param p1, "key"    # Ljava/lang/String;
+    .param p2, "contentTag"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -997,7 +992,7 @@
     move-result-object v4
 
     .line 168
-    .local v4, buffer:Ljava/io/File;
+    .local v4, "buffer":Ljava/io/File;
     invoke-virtual {v4}, Ljava/io/File;->delete()Z
 
     .line 169
@@ -1037,23 +1032,23 @@
     const/4 v9, 0x0
 
     .line 175
-    .local v9, file:Ljava/io/FileOutputStream;
+    .local v9, "file":Ljava/io/FileOutputStream;
     :try_start_0
     new-instance v9, Ljava/io/FileOutputStream;
 
-    .end local v9           #file:Ljava/io/FileOutputStream;
+    .end local v9    # "file":Ljava/io/FileOutputStream;
     invoke-direct {v9, v4}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
     :try_end_0
     .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 181
-    .restart local v9       #file:Ljava/io/FileOutputStream;
+    .restart local v9    # "file":Ljava/io/FileOutputStream;
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
 
     .line 182
-    .local v2, bufferFileCreateTime:J
+    .local v2, "bufferFileCreateTime":J
     new-instance v0, Lcom/facebook/internal/FileLruCache$1;
 
     move-object v1, p0
@@ -1063,13 +1058,13 @@
     invoke-direct/range {v0 .. v5}, Lcom/facebook/internal/FileLruCache$1;-><init>(Lcom/facebook/internal/FileLruCache;JLjava/io/File;Ljava/lang/String;)V
 
     .line 195
-    .local v0, renameToTargetCallback:Lcom/facebook/internal/FileLruCache$StreamCloseCallback;
+    .local v0, "renameToTargetCallback":Lcom/facebook/internal/FileLruCache$StreamCloseCallback;
     new-instance v7, Lcom/facebook/internal/FileLruCache$CloseCallbackOutputStream;
 
     invoke-direct {v7, v9, v0}, Lcom/facebook/internal/FileLruCache$CloseCallbackOutputStream;-><init>(Ljava/io/OutputStream;Lcom/facebook/internal/FileLruCache$StreamCloseCallback;)V
 
     .line 196
-    .local v7, cleanup:Lcom/facebook/internal/FileLruCache$CloseCallbackOutputStream;
+    .local v7, "cleanup":Lcom/facebook/internal/FileLruCache$CloseCallbackOutputStream;
     new-instance v6, Ljava/io/BufferedOutputStream;
 
     const/16 v1, 0x2000
@@ -1077,18 +1072,18 @@
     invoke-direct {v6, v7, v1}, Ljava/io/BufferedOutputStream;-><init>(Ljava/io/OutputStream;I)V
 
     .line 197
-    .local v6, buffered:Ljava/io/BufferedOutputStream;
+    .local v6, "buffered":Ljava/io/BufferedOutputStream;
     const/4 v11, 0x0
 
     .line 201
-    .local v11, success:Z
+    .local v11, "success":Z
     :try_start_1
     new-instance v10, Lorg/json/JSONObject;
 
     invoke-direct {v10}, Lorg/json/JSONObject;-><init>()V
 
     .line 202
-    .local v10, header:Lorg/json/JSONObject;
+    .local v10, "header":Lorg/json/JSONObject;
     const-string v1, "key"
 
     invoke-virtual {v10, v1, p1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
@@ -1109,8 +1104,8 @@
     :cond_1
     invoke-static {v6, v10}, Lcom/facebook/internal/FileLruCache$StreamHeader;->writeHeader(Ljava/io/OutputStream;Lorg/json/JSONObject;)V
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Lorg/json/JSONException; {:try_start_1 .. :try_end_1} :catch_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     .line 209
     const/4 v11, 0x1
@@ -1126,20 +1121,20 @@
     return-object v6
 
     .line 176
-    .end local v0           #renameToTargetCallback:Lcom/facebook/internal/FileLruCache$StreamCloseCallback;
-    .end local v2           #bufferFileCreateTime:J
-    .end local v6           #buffered:Ljava/io/BufferedOutputStream;
-    .end local v7           #cleanup:Lcom/facebook/internal/FileLruCache$CloseCallbackOutputStream;
-    .end local v9           #file:Ljava/io/FileOutputStream;
-    .end local v10           #header:Lorg/json/JSONObject;
-    .end local v11           #success:Z
+    .end local v0    # "renameToTargetCallback":Lcom/facebook/internal/FileLruCache$StreamCloseCallback;
+    .end local v2    # "bufferFileCreateTime":J
+    .end local v6    # "buffered":Ljava/io/BufferedOutputStream;
+    .end local v7    # "cleanup":Lcom/facebook/internal/FileLruCache$CloseCallbackOutputStream;
+    .end local v9    # "file":Ljava/io/FileOutputStream;
+    .end local v10    # "header":Lorg/json/JSONObject;
+    .end local v11    # "success":Z
     :catch_0
     move-exception v1
 
     move-object v8, v1
 
     .line 177
-    .local v8, e:Ljava/io/FileNotFoundException;
+    .local v8, "e":Ljava/io/FileNotFoundException;
     sget-object v1, Lcom/facebook/LoggingBehavior;->CACHE:Lcom/facebook/LoggingBehavior;
 
     const/4 v2, 0x5
@@ -1148,7 +1143,7 @@
 
     new-instance v4, Ljava/lang/StringBuilder;
 
-    .end local v4           #buffer:Ljava/io/File;
+    .end local v4    # "buffer":Ljava/io/File;
     const-string v5, "Error creating buffer output stream: "
 
     invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
@@ -1175,21 +1170,21 @@
     throw v1
 
     .line 211
-    .end local v8           #e:Ljava/io/FileNotFoundException;
-    .restart local v0       #renameToTargetCallback:Lcom/facebook/internal/FileLruCache$StreamCloseCallback;
-    .restart local v2       #bufferFileCreateTime:J
-    .restart local v4       #buffer:Ljava/io/File;
-    .restart local v6       #buffered:Ljava/io/BufferedOutputStream;
-    .restart local v7       #cleanup:Lcom/facebook/internal/FileLruCache$CloseCallbackOutputStream;
-    .restart local v9       #file:Ljava/io/FileOutputStream;
-    .restart local v11       #success:Z
+    .end local v8    # "e":Ljava/io/FileNotFoundException;
+    .restart local v0    # "renameToTargetCallback":Lcom/facebook/internal/FileLruCache$StreamCloseCallback;
+    .restart local v2    # "bufferFileCreateTime":J
+    .restart local v4    # "buffer":Ljava/io/File;
+    .restart local v6    # "buffered":Ljava/io/BufferedOutputStream;
+    .restart local v7    # "cleanup":Lcom/facebook/internal/FileLruCache$CloseCallbackOutputStream;
+    .restart local v9    # "file":Ljava/io/FileOutputStream;
+    .restart local v11    # "success":Z
     :catch_1
     move-exception v1
 
     move-object v8, v1
 
     .line 213
-    .local v8, e:Lorg/json/JSONException;
+    .local v8, "e":Lorg/json/JSONException;
     :try_start_2
     sget-object v1, Lcom/facebook/LoggingBehavior;->CACHE:Lcom/facebook/LoggingBehavior;
 
@@ -1197,10 +1192,10 @@
 
     sget-object v3, Lcom/facebook/internal/FileLruCache;->TAG:Ljava/lang/String;
 
-    .end local v2           #bufferFileCreateTime:J
+    .end local v2    # "bufferFileCreateTime":J
     new-instance v4, Ljava/lang/StringBuilder;
 
-    .end local v4           #buffer:Ljava/io/File;
+    .end local v4    # "buffer":Ljava/io/File;
     const-string v5, "Error creating JSON header for cache file: "
 
     invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
@@ -1229,7 +1224,7 @@
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
     .line 215
-    .end local v8           #e:Lorg/json/JSONException;
+    .end local v8    # "e":Lorg/json/JSONException;
     :catchall_0
     move-exception v1
 
@@ -1273,11 +1268,11 @@
     move-result-object v1
 
     .line 104
-    .local v1, files:[Ljava/io/File;
+    .local v1, "files":[Ljava/io/File;
     const-wide/16 v2, 0x0
 
     .line 105
-    .local v2, total:J
+    .local v2, "total":J
     if-eqz v1, :cond_0
 
     .line 106
@@ -1293,16 +1288,16 @@
     return-wide v2
 
     .line 96
-    .end local v1           #files:[Ljava/io/File;
-    .end local v2           #total:J
+    .end local v1    # "files":[Ljava/io/File;
+    .end local v2    # "total":J
     :cond_1
     :try_start_1
     iget-object v5, p0, Lcom/facebook/internal/FileLruCache;->lock:Ljava/lang/Object;
 
     invoke-virtual {v5}, Ljava/lang/Object;->wait()V
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     goto :goto_0
 
@@ -1324,13 +1319,13 @@
     throw v5
 
     .line 106
-    .restart local v1       #files:[Ljava/io/File;
-    .restart local v2       #total:J
+    .restart local v1    # "files":[Ljava/io/File;
+    .restart local v2    # "total":J
     :cond_2
     aget-object v0, v1, v5
 
     .line 107
-    .local v0, file:Ljava/io/File;
+    .local v0, "file":Ljava/io/File;
     invoke-virtual {v0}, Ljava/io/File;->length()J
 
     move-result-wide v6

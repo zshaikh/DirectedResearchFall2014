@@ -28,7 +28,7 @@
 # virtual methods
 .method protected VisitFunctions(J)V
     .locals 5
-    .parameter "clientID"
+    .param p1, "clientID"    # J
 
     .prologue
     .line 134
@@ -37,7 +37,7 @@
     move-result-object v2
 
     .line 135
-    .local v2, m:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Lcom/adobe/fre/FREFunction;>;"
+    .local v2, "m":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Lcom/adobe/fre/FREFunction;>;"
     invoke-interface {v2}, Ljava/util/Map;->size()I
 
     move-result v3
@@ -54,7 +54,7 @@
     move-result-object v1
 
     .line 137
-    .local v1, it:Ljava/util/Iterator;,"Ljava/util/Iterator<Ljava/util/Map$Entry<Ljava/lang/String;Lcom/adobe/fre/FREFunction;>;>;"
+    .local v1, "it":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/util/Map$Entry<Ljava/lang/String;Lcom/adobe/fre/FREFunction;>;>;"
     :goto_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
@@ -70,7 +70,7 @@
     check-cast v0, Ljava/util/Map$Entry;
 
     .line 140
-    .local v0, e:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Lcom/adobe/fre/FREFunction;>;"
+    .local v0, "e":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Lcom/adobe/fre/FREFunction;>;"
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v3
@@ -88,7 +88,7 @@
     goto :goto_0
 
     .line 142
-    .end local v0           #e:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Lcom/adobe/fre/FREFunction;>;"
+    .end local v0    # "e":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Lcom/adobe/fre/FREFunction;>;"
     :cond_0
     return-void
 .end method

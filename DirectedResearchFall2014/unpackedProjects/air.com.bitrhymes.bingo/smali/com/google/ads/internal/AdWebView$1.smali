@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/google/ads/internal/AdWebView;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 110
@@ -39,11 +38,11 @@
 # virtual methods
 .method public onDownloadStart(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;J)V
     .locals 3
-    .parameter "url"
-    .parameter "userAgent"
-    .parameter "contentDisposition"
-    .parameter "mimeType"
-    .parameter "size"
+    .param p1, "url"    # Ljava/lang/String;
+    .param p2, "userAgent"    # Ljava/lang/String;
+    .param p3, "contentDisposition"    # Ljava/lang/String;
+    .param p4, "mimeType"    # Ljava/lang/String;
+    .param p5, "size"    # J
 
     .prologue
     .line 115

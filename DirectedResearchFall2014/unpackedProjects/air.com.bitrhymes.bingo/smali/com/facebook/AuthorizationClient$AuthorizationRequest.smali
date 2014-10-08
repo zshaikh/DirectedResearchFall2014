@@ -53,15 +53,14 @@
 # direct methods
 .method constructor <init>(Lcom/facebook/SessionLoginBehavior;IZLjava/util/List;Lcom/facebook/SessionDefaultAudience;Ljava/lang/String;Ljava/lang/String;Lcom/facebook/AuthorizationClient$StartActivityDelegate;Ljava/lang/String;)V
     .locals 1
-    .parameter "loginBehavior"
-    .parameter "requestCode"
-    .parameter "isLegacy"
-    .parameter
-    .parameter "defaultAudience"
-    .parameter "applicationId"
-    .parameter "validateSameFbidAsToken"
-    .parameter "startActivityDelegate"
-    .parameter "authId"
+    .param p1, "loginBehavior"    # Lcom/facebook/SessionLoginBehavior;
+    .param p2, "requestCode"    # I
+    .param p3, "isLegacy"    # Z
+    .param p5, "defaultAudience"    # Lcom/facebook/SessionDefaultAudience;
+    .param p6, "applicationId"    # Ljava/lang/String;
+    .param p7, "validateSameFbidAsToken"    # Ljava/lang/String;
+    .param p8, "startActivityDelegate"    # Lcom/facebook/AuthorizationClient$StartActivityDelegate;
+    .param p9, "authId"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -82,7 +81,7 @@
 
     .prologue
     .line 1052
-    .local p4, permissions:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
+    .local p4, "permissions":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1045
@@ -248,7 +247,7 @@
 
 .method setIsLegacy(Z)V
     .locals 0
-    .parameter "isLegacy"
+    .param p1, "isLegacy"    # Z
 
     .prologue
     .line 1100
@@ -260,7 +259,6 @@
 
 .method setPermissions(Ljava/util/List;)V
     .locals 0
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -273,7 +271,7 @@
 
     .prologue
     .line 1076
-    .local p1, permissions:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
+    .local p1, "permissions":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     iput-object p1, p0, Lcom/facebook/AuthorizationClient$AuthorizationRequest;->permissions:Ljava/util/List;
 
     .line 1077

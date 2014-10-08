@@ -29,8 +29,8 @@
 # direct methods
 .method constructor <init>(Lorg/apache/http/HttpResponse;Lcom/fusepowered/m2/m2l/AdViewController;)V
     .locals 0
-    .parameter "response"
-    .parameter "adViewController"
+    .param p1, "response"    # Lorg/apache/http/HttpResponse;
+    .param p2, "adViewController"    # Lcom/fusepowered/m2/m2l/AdViewController;
 
     .prologue
     .line 91
@@ -48,7 +48,7 @@
 
 .method private createCustomEventAdLoadTask(Ljava/lang/String;)Lcom/fusepowered/m2/m2l/AdLoadTask;
     .locals 3
-    .parameter "customEventData"
+    .param p1, "customEventData"    # Ljava/lang/String;
 
     .prologue
     .line 160
@@ -57,7 +57,7 @@
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     .line 161
-    .local v0, paramsMap:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v0, "paramsMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     sget-object v1, Lcom/fusepowered/m2/m2l/util/ResponseHeader;->CUSTOM_EVENT_NAME:Lcom/fusepowered/m2/m2l/util/ResponseHeader;
 
     invoke-virtual {v1}, Lcom/fusepowered/m2/m2l/util/ResponseHeader;->getKey()Ljava/lang/String;
@@ -93,7 +93,7 @@
 
 .method private eventDataIsInResponseBody(Ljava/lang/String;)Z
     .locals 2
-    .parameter "adType"
+    .param p1, "adType"    # Ljava/lang/String;
 
     .prologue
     .line 172
@@ -180,13 +180,13 @@
     move-result-object v0
 
     .line 121
-    .local v0, customEventData:Ljava/lang/String;
+    .local v0, "customEventData":Ljava/lang/String;
     invoke-direct {p0, v0}, Lcom/fusepowered/m2/m2l/AdLoadTask$TaskExtractor;->createCustomEventAdLoadTask(Ljava/lang/String;)Lcom/fusepowered/m2/m2l/AdLoadTask;
 
     move-result-object v2
 
     .line 126
-    .end local v0           #customEventData:Ljava/lang/String;
+    .end local v0    # "customEventData":Ljava/lang/String;
     :goto_0
     return-object v2
 
@@ -205,7 +205,7 @@
     move-result-object v1
 
     .line 126
-    .local v1, oldCustomEventHeader:Lorg/apache/http/Header;
+    .local v1, "oldCustomEventHeader":Lorg/apache/http/Header;
     new-instance v2, Lcom/fusepowered/m2/m2l/AdLoadTask$LegacyCustomEventAdLoadTask;
 
     iget-object v3, p0, Lcom/fusepowered/m2/m2l/AdLoadTask$TaskExtractor;->adViewController:Lcom/fusepowered/m2/m2l/AdViewController;
@@ -234,7 +234,7 @@
     move-result-object v0
 
     .line 156
-    .local v0, eventData:Ljava/lang/String;
+    .local v0, "eventData":Ljava/lang/String;
     invoke-direct {p0, v0}, Lcom/fusepowered/m2/m2l/AdLoadTask$TaskExtractor;->createCustomEventAdLoadTask(Ljava/lang/String;)Lcom/fusepowered/m2/m2l/AdLoadTask;
 
     move-result-object v1
@@ -259,7 +259,7 @@
     move-result-object v1
 
     .line 131
-    .local v1, entity:Lorg/apache/http/HttpEntity;
+    .local v1, "entity":Lorg/apache/http/HttpEntity;
     if-eqz v1, :cond_2
 
     invoke-interface {v1}, Lorg/apache/http/HttpEntity;->getContent()Ljava/io/InputStream;
@@ -273,7 +273,7 @@
     move-object v4, v7
 
     .line 133
-    .local v4, htmlData:Ljava/lang/String;
+    .local v4, "htmlData":Ljava/lang/String;
     :goto_0
     iget-object v7, p0, Lcom/fusepowered/m2/m2l/AdLoadTask$TaskExtractor;->adViewController:Lcom/fusepowered/m2/m2l/AdViewController;
 
@@ -293,7 +293,7 @@
     move-result-object v5
 
     .line 136
-    .local v5, redirectUrl:Ljava/lang/String;
+    .local v5, "redirectUrl":Ljava/lang/String;
     iget-object v7, p0, Lcom/fusepowered/m2/m2l/AdLoadTask$TaskExtractor;->response:Lorg/apache/http/HttpResponse;
 
     sget-object v8, Lcom/fusepowered/m2/m2l/util/ResponseHeader;->CLICKTHROUGH_URL:Lcom/fusepowered/m2/m2l/util/ResponseHeader;
@@ -303,7 +303,7 @@
     move-result-object v0
 
     .line 137
-    .local v0, clickthroughUrl:Ljava/lang/String;
+    .local v0, "clickthroughUrl":Ljava/lang/String;
     iget-object v7, p0, Lcom/fusepowered/m2/m2l/AdLoadTask$TaskExtractor;->response:Lorg/apache/http/HttpResponse;
 
     sget-object v8, Lcom/fusepowered/m2/m2l/util/ResponseHeader;->SCROLLABLE:Lcom/fusepowered/m2/m2l/util/ResponseHeader;
@@ -315,13 +315,13 @@
     move-result v6
 
     .line 139
-    .local v6, scrollingEnabled:Z
+    .local v6, "scrollingEnabled":Z
     new-instance v3, Ljava/util/HashMap;
 
     invoke-direct {v3}, Ljava/util/HashMap;-><init>()V
 
     .line 140
-    .local v3, eventDataMap:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v3, "eventDataMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v7, "Html-Response-Body"
 
     invoke-static {v4}, Landroid/net/Uri;->encode(Ljava/lang/String;)Ljava/lang/String;
@@ -363,7 +363,7 @@
     move-result-object v2
 
     .line 150
-    .local v2, eventData:Ljava/lang/String;
+    .local v2, "eventData":Ljava/lang/String;
     invoke-direct {p0, v2}, Lcom/fusepowered/m2/m2l/AdLoadTask$TaskExtractor;->createCustomEventAdLoadTask(Ljava/lang/String;)Lcom/fusepowered/m2/m2l/AdLoadTask;
 
     move-result-object v7
@@ -371,12 +371,12 @@
     return-object v7
 
     .line 131
-    .end local v0           #clickthroughUrl:Ljava/lang/String;
-    .end local v2           #eventData:Ljava/lang/String;
-    .end local v3           #eventDataMap:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
-    .end local v4           #htmlData:Ljava/lang/String;
-    .end local v5           #redirectUrl:Ljava/lang/String;
-    .end local v6           #scrollingEnabled:Z
+    .end local v0    # "clickthroughUrl":Ljava/lang/String;
+    .end local v2    # "eventData":Ljava/lang/String;
+    .end local v3    # "eventDataMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .end local v4    # "htmlData":Ljava/lang/String;
+    .end local v5    # "redirectUrl":Ljava/lang/String;
+    .end local v6    # "scrollingEnabled":Z
     :cond_2
     const-string v7, ""
 

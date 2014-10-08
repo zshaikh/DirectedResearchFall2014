@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m2/m2l/VastVideoView;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1
@@ -40,7 +39,7 @@
 # virtual methods
 .method public onPrepared(Landroid/media/MediaPlayer;)V
     .locals 2
-    .parameter "mp"
+    .param p1, "mp"    # Landroid/media/MediaPlayer;
 
     .prologue
     .line 193
@@ -63,7 +62,6 @@
 
     move-result v1
 
-    #setter for: Lcom/fusepowered/m2/m2l/VastVideoView;->mShowCloseButtonDelay:I
     invoke-static {v0, v1}, Lcom/fusepowered/m2/m2l/VastVideoView;->access$20(Lcom/fusepowered/m2/m2l/VastVideoView;I)V
 
     .line 196

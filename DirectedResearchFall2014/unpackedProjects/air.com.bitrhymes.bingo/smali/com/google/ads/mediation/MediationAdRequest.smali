@@ -14,9 +14,9 @@
 # direct methods
 .method public constructor <init>(Lcom/google/ads/AdRequest;Landroid/content/Context;Z)V
     .locals 1
-    .parameter "request"
-    .parameter "context"
-    .parameter "shareLocation"
+    .param p1, "request"    # Lcom/google/ads/AdRequest;
+    .param p2, "context"    # Landroid/content/Context;
+    .param p3, "shareLocation"    # Z
 
     .prologue
     .line 35

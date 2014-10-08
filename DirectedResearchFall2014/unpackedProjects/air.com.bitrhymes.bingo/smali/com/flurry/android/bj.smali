@@ -13,7 +13,6 @@
 # direct methods
 .method constructor <init>(Lcom/flurry/android/aw;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 58
@@ -47,7 +46,6 @@
 
 .method public final onAdClick(Lcom/mobclix/android/sdk/MobclixAdView;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 84
@@ -74,8 +72,6 @@
 
 .method public final onCustomAdTouchThrough(Lcom/mobclix/android/sdk/MobclixAdView;Ljava/lang/String;)V
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     .line 91
@@ -102,8 +98,6 @@
 
 .method public final onFailedLoad(Lcom/mobclix/android/sdk/MobclixAdView;I)V
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     .line 70
@@ -130,8 +124,6 @@
 
 .method public final onOpenAllocationLoad(Lcom/mobclix/android/sdk/MobclixAdView;I)Z
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     .line 77
@@ -151,7 +143,6 @@
 
 .method public final onSuccessfulLoad(Lcom/mobclix/android/sdk/MobclixAdView;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 62

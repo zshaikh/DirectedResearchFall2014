@@ -27,7 +27,7 @@
 # virtual methods
 .method public generate(Lcom/flurry/org/apache/avro/Schema;)Lcom/flurry/org/apache/avro/io/parsing/Symbol;
     .locals 3
-    .parameter "schema"
+    .param p1, "schema"    # Lcom/flurry/org/apache/avro/Schema;
 
     .prologue
     .line 37
@@ -56,8 +56,7 @@
 
 .method public generate(Lcom/flurry/org/apache/avro/Schema;Ljava/util/Map;)Lcom/flurry/org/apache/avro/io/parsing/Symbol;
     .locals 13
-    .parameter "sc"
-    .parameter
+    .param p1, "sc"    # Lcom/flurry/org/apache/avro/Schema;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -73,7 +72,7 @@
 
     .prologue
     .line 51
-    .local p2, seen:Ljava/util/Map;,"Ljava/util/Map<Lcom/flurry/org/apache/avro/io/parsing/ValidatingGrammarGenerator$LitS;Lcom/flurry/org/apache/avro/io/parsing/Symbol;>;"
+    .local p2, "seen":Ljava/util/Map;, "Ljava/util/Map<Lcom/flurry/org/apache/avro/io/parsing/ValidatingGrammarGenerator$LitS;Lcom/flurry/org/apache/avro/io/parsing/Symbol;>;"
     sget-object v7, Lcom/flurry/org/apache/avro/io/parsing/JsonGrammarGenerator$1;->$SwitchMap$org$apache$avro$Schema$Type:[I
 
     invoke-virtual {p1}, Lcom/flurry/org/apache/avro/Schema;->getType()Lcom/flurry/org/apache/avro/Schema$Type;
@@ -256,7 +255,7 @@
     invoke-direct {v6, p1}, Lcom/flurry/org/apache/avro/io/parsing/ValidatingGrammarGenerator$LitS;-><init>(Lcom/flurry/org/apache/avro/Schema;)V
 
     .line 77
-    .local v6, wsc:Lcom/flurry/org/apache/avro/io/parsing/ValidatingGrammarGenerator$LitS;
+    .local v6, "wsc":Lcom/flurry/org/apache/avro/io/parsing/ValidatingGrammarGenerator$LitS;
     invoke-interface {p2, v6}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v5
@@ -264,7 +263,7 @@
     check-cast v5, Lcom/flurry/org/apache/avro/io/parsing/Symbol;
 
     .line 78
-    .local v5, rresult:Lcom/flurry/org/apache/avro/io/parsing/Symbol;
+    .local v5, "rresult":Lcom/flurry/org/apache/avro/io/parsing/Symbol;
     if-nez v5, :cond_1
 
     .line 79
@@ -283,7 +282,7 @@
     new-array v4, v7, [Lcom/flurry/org/apache/avro/io/parsing/Symbol;
 
     .line 80
-    .local v4, production:[Lcom/flurry/org/apache/avro/io/parsing/Symbol;
+    .local v4, "production":[Lcom/flurry/org/apache/avro/io/parsing/Symbol;
     invoke-static {v4}, Lcom/flurry/org/apache/avro/io/parsing/Symbol;->seq([Lcom/flurry/org/apache/avro/io/parsing/Symbol;)Lcom/flurry/org/apache/avro/io/parsing/Symbol;
 
     move-result-object v5
@@ -295,11 +294,11 @@
     array-length v1, v4
 
     .line 84
-    .local v1, i:I
+    .local v1, "i":I
     const/4 v3, 0x0
 
     .line 85
-    .local v3, n:I
+    .local v3, "n":I
     add-int/lit8 v1, v1, -0x1
 
     sget-object v7, Lcom/flurry/org/apache/avro/io/parsing/Symbol;->RECORD_START:Lcom/flurry/org/apache/avro/io/parsing/Symbol;
@@ -315,7 +314,7 @@
 
     move-result-object v2
 
-    .local v2, i$:Ljava/util/Iterator;
+    .local v2, "i$":Ljava/util/Iterator;
     :goto_1
     invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
@@ -330,7 +329,7 @@
     check-cast v0, Lcom/flurry/org/apache/avro/Schema$Field;
 
     .line 87
-    .local v0, f:Lcom/flurry/org/apache/avro/Schema$Field;
+    .local v0, "f":Lcom/flurry/org/apache/avro/Schema$Field;
     add-int/lit8 v1, v1, -0x1
 
     new-instance v7, Lcom/flurry/org/apache/avro/io/parsing/Symbol$FieldAdjustAction;
@@ -370,7 +369,7 @@
     goto :goto_1
 
     .line 92
-    .end local v0           #f:Lcom/flurry/org/apache/avro/Schema$Field;
+    .end local v0    # "f":Lcom/flurry/org/apache/avro/Schema$Field;
     :cond_0
     add-int/lit8 v1, v1, -0x1
 
@@ -378,10 +377,10 @@
 
     aput-object v7, v4, v1
 
-    .end local v1           #i:I
-    .end local v2           #i$:Ljava/util/Iterator;
-    .end local v3           #n:I
-    .end local v4           #production:[Lcom/flurry/org/apache/avro/io/parsing/Symbol;
+    .end local v1    # "i":I
+    .end local v2    # "i$":Ljava/util/Iterator;
+    .end local v3    # "n":I
+    .end local v4    # "production":[Lcom/flurry/org/apache/avro/io/parsing/Symbol;
     :cond_1
     move-object v7, v5
 

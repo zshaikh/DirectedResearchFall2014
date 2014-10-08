@@ -37,7 +37,6 @@
 # direct methods
 .method private constructor <init>(Lcom/chartboost/sdk/impl/bc;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 399
@@ -50,8 +49,6 @@
 
 .method synthetic constructor <init>(Lcom/chartboost/sdk/impl/bc;Lcom/chartboost/sdk/impl/bc$b;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 399
@@ -155,7 +152,7 @@
 
 .method public remove(Ljava/lang/Object;)Z
     .locals 3
-    .parameter "o"
+    .param p1, "o"    # Ljava/lang/Object;
 
     .prologue
     .line 418
@@ -272,7 +269,6 @@
 
 .method public removeAll(Ljava/util/Collection;)Z
     .locals 3
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -283,7 +279,7 @@
 
     .prologue
     .line 435
-    .local p1, c:Ljava/util/Collection;,"Ljava/util/Collection<*>;"
+    .local p1, "c":Ljava/util/Collection;, "Ljava/util/Collection<*>;"
     iget-object v0, p0, Lcom/chartboost/sdk/impl/bc$b;->a:Lcom/chartboost/sdk/impl/bc;
 
     invoke-static {v0}, Lcom/chartboost/sdk/impl/bc;->b(Lcom/chartboost/sdk/impl/bc;)Ljava/util/concurrent/locks/Lock;
@@ -368,7 +364,6 @@
 
 .method public retainAll(Ljava/util/Collection;)Z
     .locals 3
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -379,7 +374,7 @@
 
     .prologue
     .line 449
-    .local p1, c:Ljava/util/Collection;,"Ljava/util/Collection<*>;"
+    .local p1, "c":Ljava/util/Collection;, "Ljava/util/Collection<*>;"
     iget-object v0, p0, Lcom/chartboost/sdk/impl/bc$b;->a:Lcom/chartboost/sdk/impl/bc;
 
     invoke-static {v0}, Lcom/chartboost/sdk/impl/bc;->b(Lcom/chartboost/sdk/impl/bc;)Ljava/util/concurrent/locks/Lock;

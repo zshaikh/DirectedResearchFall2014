@@ -134,7 +134,7 @@
 
     iget-object v0, p0, Lcom/facebook/widget/WorkQueue$WorkNode;->this$0:Lcom/facebook/widget/WorkQueue;
 
-    #getter for: Lcom/facebook/widget/WorkQueue;->workLock:Ljava/lang/Object;
+    # getter for: Lcom/facebook/widget/WorkQueue;->workLock:Ljava/lang/Object;
     invoke-static {v0}, Lcom/facebook/widget/WorkQueue;->access$100(Lcom/facebook/widget/WorkQueue;)Ljava/lang/Object;
 
     move-result-object v0
@@ -152,7 +152,7 @@
 
     iget-object v2, p0, Lcom/facebook/widget/WorkQueue$WorkNode;->this$0:Lcom/facebook/widget/WorkQueue;
 
-    #getter for: Lcom/facebook/widget/WorkQueue;->pendingJobs:Lcom/facebook/widget/WorkQueue$WorkNode;
+    # getter for: Lcom/facebook/widget/WorkQueue;->pendingJobs:Lcom/facebook/widget/WorkQueue$WorkNode;
     invoke-static {v2}, Lcom/facebook/widget/WorkQueue;->access$200(Lcom/facebook/widget/WorkQueue;)Lcom/facebook/widget/WorkQueue$WorkNode;
 
     move-result-object v2
@@ -161,7 +161,7 @@
 
     move-result-object v2
 
-    #setter for: Lcom/facebook/widget/WorkQueue;->pendingJobs:Lcom/facebook/widget/WorkQueue$WorkNode;
+    # setter for: Lcom/facebook/widget/WorkQueue;->pendingJobs:Lcom/facebook/widget/WorkQueue$WorkNode;
     invoke-static {v1, v2}, Lcom/facebook/widget/WorkQueue;->access$202(Lcom/facebook/widget/WorkQueue;Lcom/facebook/widget/WorkQueue$WorkNode;)Lcom/facebook/widget/WorkQueue$WorkNode;
 
     const/4 v1, 0x1
@@ -219,7 +219,7 @@
 
     iget-object v0, p0, Lcom/facebook/widget/WorkQueue$WorkNode;->this$0:Lcom/facebook/widget/WorkQueue;
 
-    #getter for: Lcom/facebook/widget/WorkQueue;->workLock:Ljava/lang/Object;
+    # getter for: Lcom/facebook/widget/WorkQueue;->workLock:Ljava/lang/Object;
     invoke-static {v0}, Lcom/facebook/widget/WorkQueue;->access$100(Lcom/facebook/widget/WorkQueue;)Ljava/lang/Object;
 
     move-result-object v0
@@ -237,7 +237,7 @@
 
     iget-object v2, p0, Lcom/facebook/widget/WorkQueue$WorkNode;->this$0:Lcom/facebook/widget/WorkQueue;
 
-    #getter for: Lcom/facebook/widget/WorkQueue;->pendingJobs:Lcom/facebook/widget/WorkQueue$WorkNode;
+    # getter for: Lcom/facebook/widget/WorkQueue;->pendingJobs:Lcom/facebook/widget/WorkQueue$WorkNode;
     invoke-static {v2}, Lcom/facebook/widget/WorkQueue;->access$200(Lcom/facebook/widget/WorkQueue;)Lcom/facebook/widget/WorkQueue$WorkNode;
 
     move-result-object v2
@@ -246,14 +246,14 @@
 
     move-result-object v2
 
-    #setter for: Lcom/facebook/widget/WorkQueue;->pendingJobs:Lcom/facebook/widget/WorkQueue$WorkNode;
+    # setter for: Lcom/facebook/widget/WorkQueue;->pendingJobs:Lcom/facebook/widget/WorkQueue$WorkNode;
     invoke-static {v1, v2}, Lcom/facebook/widget/WorkQueue;->access$202(Lcom/facebook/widget/WorkQueue;Lcom/facebook/widget/WorkQueue$WorkNode;)Lcom/facebook/widget/WorkQueue$WorkNode;
 
     iget-object v1, p0, Lcom/facebook/widget/WorkQueue$WorkNode;->this$0:Lcom/facebook/widget/WorkQueue;
 
     iget-object v2, p0, Lcom/facebook/widget/WorkQueue$WorkNode;->this$0:Lcom/facebook/widget/WorkQueue;
 
-    #getter for: Lcom/facebook/widget/WorkQueue;->pendingJobs:Lcom/facebook/widget/WorkQueue$WorkNode;
+    # getter for: Lcom/facebook/widget/WorkQueue;->pendingJobs:Lcom/facebook/widget/WorkQueue$WorkNode;
     invoke-static {v2}, Lcom/facebook/widget/WorkQueue;->access$200(Lcom/facebook/widget/WorkQueue;)Lcom/facebook/widget/WorkQueue$WorkNode;
 
     move-result-object v2
@@ -264,7 +264,7 @@
 
     move-result-object v2
 
-    #setter for: Lcom/facebook/widget/WorkQueue;->pendingJobs:Lcom/facebook/widget/WorkQueue$WorkNode;
+    # setter for: Lcom/facebook/widget/WorkQueue;->pendingJobs:Lcom/facebook/widget/WorkQueue$WorkNode;
     invoke-static {v1, v2}, Lcom/facebook/widget/WorkQueue;->access$202(Lcom/facebook/widget/WorkQueue;Lcom/facebook/widget/WorkQueue$WorkNode;)Lcom/facebook/widget/WorkQueue$WorkNode;
 
     :cond_0

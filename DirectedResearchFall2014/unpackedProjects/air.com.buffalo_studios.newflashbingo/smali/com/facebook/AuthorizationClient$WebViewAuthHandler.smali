@@ -226,7 +226,7 @@
 
     iget-object v3, p0, Lcom/facebook/AuthorizationClient$WebViewAuthHandler;->e2e:Ljava/lang/String;
 
-    #calls: Lcom/facebook/AuthorizationClient;->logWebLoginCompleted(Ljava/lang/String;Ljava/lang/String;)V
+    # invokes: Lcom/facebook/AuthorizationClient;->logWebLoginCompleted(Ljava/lang/String;Ljava/lang/String;)V
     invoke-static {v1, v2, v3}, Lcom/facebook/AuthorizationClient;->access$200(Lcom/facebook/AuthorizationClient;Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_1
@@ -402,7 +402,7 @@
 
     invoke-direct {v1, p0, p1}, Lcom/facebook/AuthorizationClient$WebViewAuthHandler$1;-><init>(Lcom/facebook/AuthorizationClient$WebViewAuthHandler;Lcom/facebook/AuthorizationClient$AuthorizationRequest;)V
 
-    #calls: Lcom/facebook/AuthorizationClient;->getE2E()Ljava/lang/String;
+    # invokes: Lcom/facebook/AuthorizationClient;->getE2E()Ljava/lang/String;
     invoke-static {}, Lcom/facebook/AuthorizationClient;->access$100()Ljava/lang/String;
 
     move-result-object v2

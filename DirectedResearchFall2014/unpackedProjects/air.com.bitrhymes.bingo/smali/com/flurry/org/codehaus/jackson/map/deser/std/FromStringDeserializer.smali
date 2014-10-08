@@ -32,7 +32,6 @@
 # direct methods
 .method protected constructor <init>(Ljava/lang/Class;)V
     .locals 0
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -43,8 +42,8 @@
 
     .prologue
     .line 26
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/deser/std/FromStringDeserializer;,"Lcom/flurry/org/codehaus/jackson/map/deser/std/FromStringDeserializer<TT;>;"
-    .local p1, vc:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/deser/std/FromStringDeserializer;, "Lcom/flurry/org/codehaus/jackson/map/deser/std/FromStringDeserializer<TT;>;"
+    .local p1, "vc":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-direct {p0, p1}, Lcom/flurry/org/codehaus/jackson/map/deser/std/StdScalarDeserializer;-><init>(Ljava/lang/Class;)V
 
     .line 27
@@ -70,7 +69,7 @@
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     .line 33
-    .local v0, all:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/flurry/org/codehaus/jackson/map/deser/std/FromStringDeserializer<*>;>;"
+    .local v0, "all":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/flurry/org/codehaus/jackson/map/deser/std/FromStringDeserializer<*>;>;"
     new-instance v1, Lcom/flurry/org/codehaus/jackson/map/deser/std/FromStringDeserializer$UUIDDeserializer;
 
     invoke-direct {v1}, Lcom/flurry/org/codehaus/jackson/map/deser/std/FromStringDeserializer$UUIDDeserializer;-><init>()V
@@ -159,8 +158,8 @@
 
 .method protected _deserializeEmbedded(Ljava/lang/Object;Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;)Ljava/lang/Object;
     .locals 2
-    .parameter "ob"
-    .parameter "ctxt"
+    .param p1, "ob"    # Ljava/lang/Object;
+    .param p2, "ctxt"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -179,7 +178,7 @@
 
     .prologue
     .line 91
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/deser/std/FromStringDeserializer;,"Lcom/flurry/org/codehaus/jackson/map/deser/std/FromStringDeserializer<TT;>;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/deser/std/FromStringDeserializer;, "Lcom/flurry/org/codehaus/jackson/map/deser/std/FromStringDeserializer<TT;>;"
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -231,8 +230,8 @@
 
 .method public final deserialize(Lcom/flurry/org/codehaus/jackson/JsonParser;Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;)Ljava/lang/Object;
     .locals 6
-    .parameter "jp"
-    .parameter "ctxt"
+    .param p1, "jp"    # Lcom/flurry/org/codehaus/jackson/JsonParser;
+    .param p2, "ctxt"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -250,7 +249,7 @@
     .end annotation
 
     .prologue
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/deser/std/FromStringDeserializer;,"Lcom/flurry/org/codehaus/jackson/map/deser/std/FromStringDeserializer<TT;>;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/deser/std/FromStringDeserializer;, "Lcom/flurry/org/codehaus/jackson/map/deser/std/FromStringDeserializer<TT;>;"
     const/4 v5, 0x0
 
     .line 54
@@ -272,7 +271,7 @@
     move-result-object v2
 
     .line 57
-    .local v2, text:Ljava/lang/String;
+    .local v2, "text":Ljava/lang/String;
     invoke-virtual {v2}, Ljava/lang/String;->length()I
 
     move-result v3
@@ -282,12 +281,12 @@
     move-object v3, v5
 
     .line 79
-    .end local v2           #text:Ljava/lang/String;
+    .end local v2    # "text":Ljava/lang/String;
     :goto_0
     return-object v3
 
     .line 61
-    .restart local v2       #text:Ljava/lang/String;
+    .restart local v2    # "text":Ljava/lang/String;
     :cond_0
     :try_start_0
     invoke-virtual {p0, v2, p2}, Lcom/flurry/org/codehaus/jackson/map/deser/std/FromStringDeserializer;->_deserialize(Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;)Ljava/lang/Object;
@@ -297,7 +296,7 @@
     move-result-object v1
 
     .line 62
-    .local v1, result:Ljava/lang/Object;,"TT;"
+    .local v1, "result":Ljava/lang/Object;, "TT;"
     if-eqz v1, :cond_1
 
     move-object v3, v1
@@ -306,7 +305,7 @@
     goto :goto_0
 
     .line 65
-    .end local v1           #result:Ljava/lang/Object;,"TT;"
+    .end local v1    # "result":Ljava/lang/Object;, "TT;"
     :catch_0
     move-exception v3
 
@@ -323,7 +322,7 @@
     throw v3
 
     .line 70
-    .end local v2           #text:Ljava/lang/String;
+    .end local v2    # "text":Ljava/lang/String;
     :cond_2
     invoke-virtual {p1}, Lcom/flurry/org/codehaus/jackson/JsonParser;->getCurrentToken()Lcom/flurry/org/codehaus/jackson/JsonToken;
 
@@ -339,7 +338,7 @@
     move-result-object v0
 
     .line 73
-    .local v0, ob:Ljava/lang/Object;
+    .local v0, "ob":Ljava/lang/Object;
     if-nez v0, :cond_3
 
     move-object v3, v5
@@ -375,7 +374,7 @@
     goto :goto_0
 
     .line 81
-    .end local v0           #ob:Ljava/lang/Object;
+    .end local v0    # "ob":Ljava/lang/Object;
     :cond_5
     iget-object v3, p0, Lcom/flurry/org/codehaus/jackson/map/deser/std/FromStringDeserializer;->_valueClass:Ljava/lang/Class;
 

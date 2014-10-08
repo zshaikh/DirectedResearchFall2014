@@ -66,9 +66,9 @@
 
 .method public format(Ljava/util/Date;Ljava/lang/StringBuffer;Ljava/text/FieldPosition;)Ljava/lang/StringBuffer;
     .locals 1
-    .parameter "date"
-    .parameter "toAppendTo"
-    .parameter "fieldPosition"
+    .param p1, "date"    # Ljava/util/Date;
+    .param p2, "toAppendTo"    # Ljava/lang/StringBuffer;
+    .param p3, "fieldPosition"    # Ljava/text/FieldPosition;
 
     .prologue
     .line 34
@@ -77,7 +77,7 @@
     move-result-object v0
 
     .line 35
-    .local v0, value:Ljava/lang/String;
+    .local v0, "value":Ljava/lang/String;
     invoke-virtual {p2, v0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     .line 36
@@ -86,8 +86,8 @@
 
 .method public parse(Ljava/lang/String;Ljava/text/ParsePosition;)Ljava/util/Date;
     .locals 1
-    .parameter "source"
-    .parameter "pos"
+    .param p1, "source"    # Ljava/lang/String;
+    .param p2, "pos"    # Ljava/text/ParsePosition;
 
     .prologue
     .line 44

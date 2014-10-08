@@ -24,7 +24,6 @@
 # direct methods
 .method private constructor <init>(Lcom/facebook/widget/LoginButton;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 651
@@ -37,8 +36,6 @@
 
 .method synthetic constructor <init>(Lcom/facebook/widget/LoginButton;Lcom/facebook/widget/LoginButton$LoginClickListener;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 651
@@ -51,7 +48,7 @@
 # virtual methods
 .method public onClick(Landroid/view/View;)V
     .locals 15
-    .parameter "v"
+    .param p1, "v"    # Landroid/view/View;
 
     .prologue
     .line 655
@@ -62,10 +59,10 @@
     move-result-object v2
 
     .line 656
-    .local v2, context:Landroid/content/Context;
+    .local v2, "context":Landroid/content/Context;
     iget-object v11, p0, Lcom/facebook/widget/LoginButton$LoginClickListener;->this$0:Lcom/facebook/widget/LoginButton;
 
-    #getter for: Lcom/facebook/widget/LoginButton;->sessionTracker:Lcom/facebook/internal/SessionTracker;
+    # getter for: Lcom/facebook/widget/LoginButton;->sessionTracker:Lcom/facebook/internal/SessionTracker;
     invoke-static {v11}, Lcom/facebook/widget/LoginButton;->access$1(Lcom/facebook/widget/LoginButton;)Lcom/facebook/internal/SessionTracker;
 
     move-result-object v11
@@ -75,13 +72,13 @@
     move-result-object v8
 
     .line 658
-    .local v8, openSession:Lcom/facebook/Session;
+    .local v8, "openSession":Lcom/facebook/Session;
     if-eqz v8, :cond_3
 
     .line 660
     iget-object v11, p0, Lcom/facebook/widget/LoginButton$LoginClickListener;->this$0:Lcom/facebook/widget/LoginButton;
 
-    #getter for: Lcom/facebook/widget/LoginButton;->confirmLogout:Z
+    # getter for: Lcom/facebook/widget/LoginButton;->confirmLogout:Z
     invoke-static {v11}, Lcom/facebook/widget/LoginButton;->access$2(Lcom/facebook/widget/LoginButton;)Z
 
     move-result v11
@@ -108,7 +105,7 @@
     move-result-object v5
 
     .line 663
-    .local v5, logout:Ljava/lang/String;
+    .local v5, "logout":Ljava/lang/String;
     iget-object v11, p0, Lcom/facebook/widget/LoginButton$LoginClickListener;->this$0:Lcom/facebook/widget/LoginButton;
 
     invoke-virtual {v11}, Lcom/facebook/widget/LoginButton;->getResources()Landroid/content/res/Resources;
@@ -128,10 +125,10 @@
     move-result-object v1
 
     .line 665
-    .local v1, cancel:Ljava/lang/String;
+    .local v1, "cancel":Ljava/lang/String;
     iget-object v11, p0, Lcom/facebook/widget/LoginButton$LoginClickListener;->this$0:Lcom/facebook/widget/LoginButton;
 
-    #getter for: Lcom/facebook/widget/LoginButton;->user:Lcom/facebook/model/GraphUser;
+    # getter for: Lcom/facebook/widget/LoginButton;->user:Lcom/facebook/model/GraphUser;
     invoke-static {v11}, Lcom/facebook/widget/LoginButton;->access$3(Lcom/facebook/widget/LoginButton;)Lcom/facebook/model/GraphUser;
 
     move-result-object v11
@@ -140,7 +137,7 @@
 
     iget-object v11, p0, Lcom/facebook/widget/LoginButton$LoginClickListener;->this$0:Lcom/facebook/widget/LoginButton;
 
-    #getter for: Lcom/facebook/widget/LoginButton;->user:Lcom/facebook/model/GraphUser;
+    # getter for: Lcom/facebook/widget/LoginButton;->user:Lcom/facebook/model/GraphUser;
     invoke-static {v11}, Lcom/facebook/widget/LoginButton;->access$3(Lcom/facebook/widget/LoginButton;)Lcom/facebook/model/GraphUser;
 
     move-result-object v11
@@ -178,7 +175,7 @@
 
     iget-object v14, p0, Lcom/facebook/widget/LoginButton$LoginClickListener;->this$0:Lcom/facebook/widget/LoginButton;
 
-    #getter for: Lcom/facebook/widget/LoginButton;->user:Lcom/facebook/model/GraphUser;
+    # getter for: Lcom/facebook/widget/LoginButton;->user:Lcom/facebook/model/GraphUser;
     invoke-static {v14}, Lcom/facebook/widget/LoginButton;->access$3(Lcom/facebook/widget/LoginButton;)Lcom/facebook/model/GraphUser;
 
     move-result-object v14
@@ -194,14 +191,14 @@
     move-result-object v6
 
     .line 670
-    .local v6, message:Ljava/lang/String;
+    .local v6, "message":Ljava/lang/String;
     :goto_0
     new-instance v0, Landroid/app/AlertDialog$Builder;
 
     invoke-direct {v0, v2}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
     .line 671
-    .local v0, builder:Landroid/app/AlertDialog$Builder;
+    .local v0, "builder":Landroid/app/AlertDialog$Builder;
     invoke-virtual {v0, v6}, Landroid/app/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
 
     move-result-object v11
@@ -235,11 +232,11 @@
     invoke-virtual {v11}, Landroid/app/AlertDialog;->show()V
 
     .line 713
-    .end local v0           #builder:Landroid/app/AlertDialog$Builder;
-    .end local v1           #cancel:Ljava/lang/String;
-    .end local v2           #context:Landroid/content/Context;
-    .end local v5           #logout:Ljava/lang/String;
-    .end local v6           #message:Ljava/lang/String;
+    .end local v0    # "builder":Landroid/app/AlertDialog$Builder;
+    .end local v1    # "cancel":Ljava/lang/String;
+    .end local v2    # "context":Landroid/content/Context;
+    .end local v5    # "logout":Ljava/lang/String;
+    .end local v6    # "message":Ljava/lang/String;
     :cond_0
     :goto_1
     iget-object v11, p0, Lcom/facebook/widget/LoginButton$LoginClickListener;->this$0:Lcom/facebook/widget/LoginButton;
@@ -253,13 +250,13 @@
     move-result-object v4
 
     .line 715
-    .local v4, logger:Lcom/facebook/AppEventsLogger;
+    .local v4, "logger":Lcom/facebook/AppEventsLogger;
     new-instance v9, Landroid/os/Bundle;
 
     invoke-direct {v9}, Landroid/os/Bundle;-><init>()V
 
     .line 716
-    .local v9, parameters:Landroid/os/Bundle;
+    .local v9, "parameters":Landroid/os/Bundle;
     const-string v11, "logging_in"
 
     if-eqz v8, :cond_9
@@ -272,7 +269,7 @@
     .line 718
     iget-object v11, p0, Lcom/facebook/widget/LoginButton$LoginClickListener;->this$0:Lcom/facebook/widget/LoginButton;
 
-    #getter for: Lcom/facebook/widget/LoginButton;->loginLogoutEventName:Ljava/lang/String;
+    # getter for: Lcom/facebook/widget/LoginButton;->loginLogoutEventName:Ljava/lang/String;
     invoke-static {v11}, Lcom/facebook/widget/LoginButton;->access$7(Lcom/facebook/widget/LoginButton;)Ljava/lang/String;
 
     move-result-object v11
@@ -285,11 +282,11 @@
     return-void
 
     .line 668
-    .end local v4           #logger:Lcom/facebook/AppEventsLogger;
-    .end local v9           #parameters:Landroid/os/Bundle;
-    .restart local v1       #cancel:Ljava/lang/String;
-    .restart local v2       #context:Landroid/content/Context;
-    .restart local v5       #logout:Ljava/lang/String;
+    .end local v4    # "logger":Lcom/facebook/AppEventsLogger;
+    .end local v9    # "parameters":Landroid/os/Bundle;
+    .restart local v1    # "cancel":Ljava/lang/String;
+    .restart local v2    # "context":Landroid/content/Context;
+    .restart local v5    # "logout":Ljava/lang/String;
     :cond_1
     iget-object v11, p0, Lcom/facebook/widget/LoginButton$LoginClickListener;->this$0:Lcom/facebook/widget/LoginButton;
 
@@ -309,13 +306,13 @@
 
     move-result-object v6
 
-    .restart local v6       #message:Ljava/lang/String;
+    .restart local v6    # "message":Ljava/lang/String;
     goto :goto_0
 
     .line 681
-    .end local v1           #cancel:Ljava/lang/String;
-    .end local v5           #logout:Ljava/lang/String;
-    .end local v6           #message:Ljava/lang/String;
+    .end local v1    # "cancel":Ljava/lang/String;
+    .end local v5    # "logout":Ljava/lang/String;
+    .end local v6    # "message":Ljava/lang/String;
     :cond_2
     invoke-virtual {v8}, Lcom/facebook/Session;->closeAndClearTokenInformation()V
 
@@ -325,7 +322,7 @@
     :cond_3
     iget-object v11, p0, Lcom/facebook/widget/LoginButton$LoginClickListener;->this$0:Lcom/facebook/widget/LoginButton;
 
-    #getter for: Lcom/facebook/widget/LoginButton;->sessionTracker:Lcom/facebook/internal/SessionTracker;
+    # getter for: Lcom/facebook/widget/LoginButton;->sessionTracker:Lcom/facebook/internal/SessionTracker;
     invoke-static {v11}, Lcom/facebook/widget/LoginButton;->access$1(Lcom/facebook/widget/LoginButton;)Lcom/facebook/internal/SessionTracker;
 
     move-result-object v11
@@ -335,7 +332,7 @@
     move-result-object v3
 
     .line 685
-    .local v3, currentSession:Lcom/facebook/Session;
+    .local v3, "currentSession":Lcom/facebook/Session;
     if-eqz v3, :cond_4
 
     invoke-virtual {v3}, Lcom/facebook/Session;->getState()Lcom/facebook/SessionState;
@@ -352,7 +349,7 @@
     :cond_4
     iget-object v11, p0, Lcom/facebook/widget/LoginButton$LoginClickListener;->this$0:Lcom/facebook/widget/LoginButton;
 
-    #getter for: Lcom/facebook/widget/LoginButton;->sessionTracker:Lcom/facebook/internal/SessionTracker;
+    # getter for: Lcom/facebook/widget/LoginButton;->sessionTracker:Lcom/facebook/internal/SessionTracker;
     invoke-static {v11}, Lcom/facebook/widget/LoginButton;->access$1(Lcom/facebook/widget/LoginButton;)Lcom/facebook/internal/SessionTracker;
 
     move-result-object v11
@@ -368,7 +365,7 @@
 
     iget-object v12, p0, Lcom/facebook/widget/LoginButton$LoginClickListener;->this$0:Lcom/facebook/widget/LoginButton;
 
-    #getter for: Lcom/facebook/widget/LoginButton;->applicationId:Ljava/lang/String;
+    # getter for: Lcom/facebook/widget/LoginButton;->applicationId:Ljava/lang/String;
     invoke-static {v12}, Lcom/facebook/widget/LoginButton;->access$4(Lcom/facebook/widget/LoginButton;)Ljava/lang/String;
 
     move-result-object v12
@@ -382,14 +379,14 @@
     move-result-object v10
 
     .line 688
-    .local v10, session:Lcom/facebook/Session;
+    .local v10, "session":Lcom/facebook/Session;
     invoke-static {v10}, Lcom/facebook/Session;->setActiveSession(Lcom/facebook/Session;)V
 
     .line 689
     move-object v3, v10
 
     .line 691
-    .end local v10           #session:Lcom/facebook/Session;
+    .end local v10    # "session":Lcom/facebook/Session;
     :cond_5
     invoke-virtual {v3}, Lcom/facebook/Session;->isOpened()Z
 
@@ -401,10 +398,10 @@
     const/4 v7, 0x0
 
     .line 693
-    .local v7, openRequest:Lcom/facebook/Session$OpenRequest;
+    .local v7, "openRequest":Lcom/facebook/Session$OpenRequest;
     iget-object v11, p0, Lcom/facebook/widget/LoginButton$LoginClickListener;->this$0:Lcom/facebook/widget/LoginButton;
 
-    #getter for: Lcom/facebook/widget/LoginButton;->parentFragment:Landroid/support/v4/app/Fragment;
+    # getter for: Lcom/facebook/widget/LoginButton;->parentFragment:Landroid/support/v4/app/Fragment;
     invoke-static {v11}, Lcom/facebook/widget/LoginButton;->access$5(Lcom/facebook/widget/LoginButton;)Landroid/support/v4/app/Fragment;
 
     move-result-object v11
@@ -414,10 +411,10 @@
     .line 694
     new-instance v7, Lcom/facebook/Session$OpenRequest;
 
-    .end local v7           #openRequest:Lcom/facebook/Session$OpenRequest;
+    .end local v7    # "openRequest":Lcom/facebook/Session$OpenRequest;
     iget-object v11, p0, Lcom/facebook/widget/LoginButton$LoginClickListener;->this$0:Lcom/facebook/widget/LoginButton;
 
-    #getter for: Lcom/facebook/widget/LoginButton;->parentFragment:Landroid/support/v4/app/Fragment;
+    # getter for: Lcom/facebook/widget/LoginButton;->parentFragment:Landroid/support/v4/app/Fragment;
     invoke-static {v11}, Lcom/facebook/widget/LoginButton;->access$5(Lcom/facebook/widget/LoginButton;)Landroid/support/v4/app/Fragment;
 
     move-result-object v11
@@ -425,8 +422,8 @@
     invoke-direct {v7, v11}, Lcom/facebook/Session$OpenRequest;-><init>(Landroid/support/v4/app/Fragment;)V
 
     .line 699
-    .end local v2           #context:Landroid/content/Context;
-    .restart local v7       #openRequest:Lcom/facebook/Session$OpenRequest;
+    .end local v2    # "context":Landroid/content/Context;
+    .restart local v7    # "openRequest":Lcom/facebook/Session$OpenRequest;
     :cond_6
     :goto_3
     if-eqz v7, :cond_0
@@ -434,12 +431,12 @@
     .line 700
     iget-object v11, p0, Lcom/facebook/widget/LoginButton$LoginClickListener;->this$0:Lcom/facebook/widget/LoginButton;
 
-    #getter for: Lcom/facebook/widget/LoginButton;->properties:Lcom/facebook/widget/LoginButton$LoginButtonProperties;
+    # getter for: Lcom/facebook/widget/LoginButton;->properties:Lcom/facebook/widget/LoginButton$LoginButtonProperties;
     invoke-static {v11}, Lcom/facebook/widget/LoginButton;->access$6(Lcom/facebook/widget/LoginButton;)Lcom/facebook/widget/LoginButton$LoginButtonProperties;
 
     move-result-object v11
 
-    #getter for: Lcom/facebook/widget/LoginButton$LoginButtonProperties;->defaultAudience:Lcom/facebook/SessionDefaultAudience;
+    # getter for: Lcom/facebook/widget/LoginButton$LoginButtonProperties;->defaultAudience:Lcom/facebook/SessionDefaultAudience;
     invoke-static {v11}, Lcom/facebook/widget/LoginButton$LoginButtonProperties;->access$0(Lcom/facebook/widget/LoginButton$LoginButtonProperties;)Lcom/facebook/SessionDefaultAudience;
 
     move-result-object v11
@@ -449,12 +446,12 @@
     .line 701
     iget-object v11, p0, Lcom/facebook/widget/LoginButton$LoginClickListener;->this$0:Lcom/facebook/widget/LoginButton;
 
-    #getter for: Lcom/facebook/widget/LoginButton;->properties:Lcom/facebook/widget/LoginButton$LoginButtonProperties;
+    # getter for: Lcom/facebook/widget/LoginButton;->properties:Lcom/facebook/widget/LoginButton$LoginButtonProperties;
     invoke-static {v11}, Lcom/facebook/widget/LoginButton;->access$6(Lcom/facebook/widget/LoginButton;)Lcom/facebook/widget/LoginButton$LoginButtonProperties;
 
     move-result-object v11
 
-    #getter for: Lcom/facebook/widget/LoginButton$LoginButtonProperties;->permissions:Ljava/util/List;
+    # getter for: Lcom/facebook/widget/LoginButton$LoginButtonProperties;->permissions:Ljava/util/List;
     invoke-static {v11}, Lcom/facebook/widget/LoginButton$LoginButtonProperties;->access$1(Lcom/facebook/widget/LoginButton$LoginButtonProperties;)Ljava/util/List;
 
     move-result-object v11
@@ -464,12 +461,12 @@
     .line 702
     iget-object v11, p0, Lcom/facebook/widget/LoginButton$LoginClickListener;->this$0:Lcom/facebook/widget/LoginButton;
 
-    #getter for: Lcom/facebook/widget/LoginButton;->properties:Lcom/facebook/widget/LoginButton$LoginButtonProperties;
+    # getter for: Lcom/facebook/widget/LoginButton;->properties:Lcom/facebook/widget/LoginButton$LoginButtonProperties;
     invoke-static {v11}, Lcom/facebook/widget/LoginButton;->access$6(Lcom/facebook/widget/LoginButton;)Lcom/facebook/widget/LoginButton$LoginButtonProperties;
 
     move-result-object v11
 
-    #getter for: Lcom/facebook/widget/LoginButton$LoginButtonProperties;->loginBehavior:Lcom/facebook/SessionLoginBehavior;
+    # getter for: Lcom/facebook/widget/LoginButton$LoginButtonProperties;->loginBehavior:Lcom/facebook/SessionLoginBehavior;
     invoke-static {v11}, Lcom/facebook/widget/LoginButton$LoginButtonProperties;->access$2(Lcom/facebook/widget/LoginButton$LoginButtonProperties;)Lcom/facebook/SessionLoginBehavior;
 
     move-result-object v11
@@ -481,12 +478,12 @@
 
     iget-object v12, p0, Lcom/facebook/widget/LoginButton$LoginClickListener;->this$0:Lcom/facebook/widget/LoginButton;
 
-    #getter for: Lcom/facebook/widget/LoginButton;->properties:Lcom/facebook/widget/LoginButton$LoginButtonProperties;
+    # getter for: Lcom/facebook/widget/LoginButton;->properties:Lcom/facebook/widget/LoginButton$LoginButtonProperties;
     invoke-static {v12}, Lcom/facebook/widget/LoginButton;->access$6(Lcom/facebook/widget/LoginButton;)Lcom/facebook/widget/LoginButton$LoginButtonProperties;
 
     move-result-object v12
 
-    #getter for: Lcom/facebook/widget/LoginButton$LoginButtonProperties;->authorizationType:Lcom/facebook/internal/SessionAuthorizationType;
+    # getter for: Lcom/facebook/widget/LoginButton$LoginButtonProperties;->authorizationType:Lcom/facebook/internal/SessionAuthorizationType;
     invoke-static {v12}, Lcom/facebook/widget/LoginButton$LoginButtonProperties;->access$3(Lcom/facebook/widget/LoginButton$LoginButtonProperties;)Lcom/facebook/internal/SessionAuthorizationType;
 
     move-result-object v12
@@ -503,7 +500,7 @@
     goto/16 :goto_1
 
     .line 695
-    .restart local v2       #context:Landroid/content/Context;
+    .restart local v2    # "context":Landroid/content/Context;
     :cond_7
     instance-of v11, v2, Landroid/app/Activity;
 
@@ -512,13 +509,13 @@
     .line 696
     new-instance v7, Lcom/facebook/Session$OpenRequest;
 
-    .end local v7           #openRequest:Lcom/facebook/Session$OpenRequest;
+    .end local v7    # "openRequest":Lcom/facebook/Session$OpenRequest;
     check-cast v2, Landroid/app/Activity;
 
-    .end local v2           #context:Landroid/content/Context;
+    .end local v2    # "context":Landroid/content/Context;
     invoke-direct {v7, v2}, Lcom/facebook/Session$OpenRequest;-><init>(Landroid/app/Activity;)V
 
-    .restart local v7       #openRequest:Lcom/facebook/Session$OpenRequest;
+    .restart local v7    # "openRequest":Lcom/facebook/Session$OpenRequest;
     goto :goto_3
 
     .line 707
@@ -528,10 +525,10 @@
     goto/16 :goto_1
 
     .line 716
-    .end local v3           #currentSession:Lcom/facebook/Session;
-    .end local v7           #openRequest:Lcom/facebook/Session$OpenRequest;
-    .restart local v4       #logger:Lcom/facebook/AppEventsLogger;
-    .restart local v9       #parameters:Landroid/os/Bundle;
+    .end local v3    # "currentSession":Lcom/facebook/Session;
+    .end local v7    # "openRequest":Lcom/facebook/Session$OpenRequest;
+    .restart local v4    # "logger":Lcom/facebook/AppEventsLogger;
+    .restart local v9    # "parameters":Landroid/os/Bundle;
     :cond_9
     const/4 v12, 0x1
 

@@ -30,7 +30,7 @@
 
 .method public asDouble(D)D
     .locals 2
-    .parameter "defaultValue"
+    .param p1, "defaultValue"    # D
 
     .prologue
     .line 70
@@ -55,7 +55,7 @@
 
 .method public asInt(I)I
     .locals 1
-    .parameter "defaultValue"
+    .param p1, "defaultValue"    # I
 
     .prologue
     .line 52
@@ -80,7 +80,7 @@
 
 .method public asLong(J)J
     .locals 2
-    .parameter "defaultValue"
+    .param p1, "defaultValue"    # J
 
     .prologue
     .line 61

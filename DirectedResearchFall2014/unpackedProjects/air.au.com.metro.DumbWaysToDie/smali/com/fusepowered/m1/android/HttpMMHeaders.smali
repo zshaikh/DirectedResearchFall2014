@@ -8,7 +8,7 @@
 
 
 # static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator; = null
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroid/os/Parcelable$Creator",
@@ -65,7 +65,7 @@
 
 .method public constructor <init>(Landroid/os/Parcel;)V
     .locals 4
-    .parameter "in"
+    .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
     .line 45
@@ -78,7 +78,7 @@
     new-array v0, v2, [Z
 
     .line 49
-    .local v0, booleanValues:[Z
+    .local v0, "booleanValues":[Z
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->readBooleanArray([Z)V
 
     .line 50
@@ -126,7 +126,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 61
-    .end local v0           #booleanValues:[Z
+    .end local v0    # "booleanValues":[Z
     :goto_0
     return-void
 
@@ -137,7 +137,7 @@
     move-object v1, v2
 
     .line 59
-    .local v1, e:Ljava/lang/Exception;
+    .local v1, "e":Ljava/lang/Exception;
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0
@@ -145,7 +145,7 @@
 
 .method public constructor <init>([Lorg/apache/http/Header;)V
     .locals 4
-    .parameter "allHeaders"
+    .param p1, "allHeaders"    # [Lorg/apache/http/Header;
 
     .prologue
     .line 32
@@ -154,20 +154,20 @@
     .line 33
     move-object v0, p1
 
-    .local v0, arr$:[Lorg/apache/http/Header;
+    .local v0, "arr$":[Lorg/apache/http/Header;
     array-length v3, v0
 
-    .local v3, len$:I
+    .local v3, "len$":I
     const/4 v2, 0x0
 
-    .local v2, i$:I
+    .local v2, "i$":I
     :goto_0
     if-ge v2, v3, :cond_0
 
     aget-object v1, v0, v2
 
     .line 35
-    .local v1, header:Lorg/apache/http/Header;
+    .local v1, "header":Lorg/apache/http/Header;
     invoke-direct {p0, v1}, Lcom/fusepowered/m1/android/HttpMMHeaders;->checkTransparent(Lorg/apache/http/Header;)V
 
     .line 36
@@ -191,14 +191,14 @@
     goto :goto_0
 
     .line 42
-    .end local v1           #header:Lorg/apache/http/Header;
+    .end local v1    # "header":Lorg/apache/http/Header;
     :cond_0
     return-void
 .end method
 
 .method private checkAcid(Lorg/apache/http/Header;)V
     .locals 2
-    .parameter "header"
+    .param p1, "header"    # Lorg/apache/http/Header;
 
     .prologue
     .line 112
@@ -228,7 +228,7 @@
 
 .method private checkEnableHardwareAccel(Lorg/apache/http/Header;)V
     .locals 2
-    .parameter "header"
+    .param p1, "header"    # Lorg/apache/http/Header;
 
     .prologue
     .line 105
@@ -262,7 +262,7 @@
 
 .method private checkTransition(Lorg/apache/http/Header;)V
     .locals 2
-    .parameter "header"
+    .param p1, "header"    # Lorg/apache/http/Header;
 
     .prologue
     .line 77
@@ -292,7 +292,7 @@
 
 .method private checkTransitionDuration(Lorg/apache/http/Header;)V
     .locals 3
-    .parameter "header"
+    .param p1, "header"    # Lorg/apache/http/Header;
 
     .prologue
     .line 85
@@ -314,7 +314,7 @@
     move-result-object v0
 
     .line 88
-    .local v0, value:Ljava/lang/String;
+    .local v0, "value":Ljava/lang/String;
     if-eqz v0, :cond_0
 
     .line 90
@@ -322,7 +322,7 @@
 
     move-result v1
 
-    const/high16 v2, 0x447a
+    const/high16 v2, 0x447a0000
 
     mul-float/2addr v1, v2
 
@@ -331,14 +331,14 @@
     iput-wide v1, p0, Lcom/fusepowered/m1/android/HttpMMHeaders;->transitionTimeInMillis:J
 
     .line 93
-    .end local v0           #value:Ljava/lang/String;
+    .end local v0    # "value":Ljava/lang/String;
     :cond_0
     return-void
 .end method
 
 .method private checkTransparent(Lorg/apache/http/Header;)V
     .locals 3
-    .parameter "header"
+    .param p1, "header"    # Lorg/apache/http/Header;
 
     .prologue
     .line 65
@@ -360,7 +360,7 @@
     move-result-object v0
 
     .line 68
-    .local v0, value:Ljava/lang/String;
+    .local v0, "value":Ljava/lang/String;
     if-eqz v0, :cond_0
 
     .line 70
@@ -371,14 +371,14 @@
     iput-boolean v1, p0, Lcom/fusepowered/m1/android/HttpMMHeaders;->isTransparent:Z
 
     .line 73
-    .end local v0           #value:Ljava/lang/String;
+    .end local v0    # "value":Ljava/lang/String;
     :cond_0
     return-void
 .end method
 
 .method private checkUseCustomClose(Lorg/apache/http/Header;)V
     .locals 2
-    .parameter "header"
+    .param p1, "header"    # Lorg/apache/http/Header;
 
     .prologue
     .line 97
@@ -424,7 +424,6 @@
 
 .method updateArgumentsWithSettings(Ljava/util/Map;)V
     .locals 3
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -438,7 +437,7 @@
 
     .prologue
     .line 151
-    .local p1, arguments:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p1, "arguments":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v0, "transparent"
 
     iget-boolean v1, p0, Lcom/fusepowered/m1/android/HttpMMHeaders;->isTransparent:Z
@@ -510,8 +509,8 @@
 
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 3
-    .parameter "dest"
-    .parameter "flags"
+    .param p1, "dest"    # Landroid/os/Parcel;
+    .param p2, "flags"    # I
 
     .prologue
     .line 127
@@ -538,7 +537,7 @@
     aput-boolean v2, v0, v1
 
     .line 128
-    .local v0, booleanValues:[Z
+    .local v0, "booleanValues":[Z
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeBooleanArray([Z)V
 
     .line 129

@@ -1243,9 +1243,7 @@
 
 .method private constructor <init>(Ljava/lang/String;II)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter "messageCode"
+    .param p3, "messageCode"    # I
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I)V"
@@ -1265,7 +1263,7 @@
 
 .method public static getActionTypeByCode(I)Lcom/fusepowered/util/ActionType;
     .locals 1
-    .parameter "messageCode"
+    .param p0, "messageCode"    # I
 
     .prologue
     .line 80
@@ -1691,7 +1689,7 @@
 
 .method public static getServerUrlForActionCode(Lcom/fusepowered/util/ActionType;)Ljava/lang/String;
     .locals 2
-    .parameter "action"
+    .param p0, "action"    # Lcom/fusepowered/util/ActionType;
 
     .prologue
     .line 230
@@ -1783,7 +1781,7 @@
 
 .method public static isDataAction(Lcom/fusepowered/util/ActionType;)Z
     .locals 3
-    .parameter "action"
+    .param p0, "action"    # Lcom/fusepowered/util/ActionType;
 
     .prologue
     const/4 v2, 0x0
@@ -1842,7 +1840,7 @@
 
 .method public static valueOf(Ljava/lang/String;)Lcom/fusepowered/util/ActionType;
     .locals 1
-    .parameter "name"
+    .param p0, "name"    # Ljava/lang/String;
 
     .prologue
     .line 4
@@ -1852,7 +1850,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "name":Ljava/lang/String;
     check-cast p0, Lcom/fusepowered/util/ActionType;
 
     return-object p0
@@ -1888,7 +1886,7 @@
 
 .method public setMessageCode(I)V
     .locals 0
-    .parameter "messageCode"
+    .param p1, "messageCode"    # I
 
     .prologue
     .line 72

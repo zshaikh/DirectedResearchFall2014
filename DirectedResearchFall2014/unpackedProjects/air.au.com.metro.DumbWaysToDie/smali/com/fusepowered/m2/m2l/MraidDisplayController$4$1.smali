@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m2/m2l/MraidDisplayController$4;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1
@@ -47,20 +46,20 @@
     .line 413
     iget-object v0, p0, Lcom/fusepowered/m2/m2l/MraidDisplayController$4$1;->this$1:Lcom/fusepowered/m2/m2l/MraidDisplayController$4;
 
-    #getter for: Lcom/fusepowered/m2/m2l/MraidDisplayController$4;->this$0:Lcom/fusepowered/m2/m2l/MraidDisplayController;
+    # getter for: Lcom/fusepowered/m2/m2l/MraidDisplayController$4;->this$0:Lcom/fusepowered/m2/m2l/MraidDisplayController;
     invoke-static {v0}, Lcom/fusepowered/m2/m2l/MraidDisplayController$4;->access$0(Lcom/fusepowered/m2/m2l/MraidDisplayController$4;)Lcom/fusepowered/m2/m2l/MraidDisplayController;
 
     move-result-object v0
 
     const-string v1, "Image failed to download."
 
-    #calls: Lcom/fusepowered/m2/m2l/MraidDisplayController;->showUserToast(Ljava/lang/String;)V
+    # invokes: Lcom/fusepowered/m2/m2l/MraidDisplayController;->showUserToast(Ljava/lang/String;)V
     invoke-static {v0, v1}, Lcom/fusepowered/m2/m2l/MraidDisplayController;->access$7(Lcom/fusepowered/m2/m2l/MraidDisplayController;Ljava/lang/String;)V
 
     .line 414
     iget-object v0, p0, Lcom/fusepowered/m2/m2l/MraidDisplayController$4$1;->this$1:Lcom/fusepowered/m2/m2l/MraidDisplayController$4;
 
-    #getter for: Lcom/fusepowered/m2/m2l/MraidDisplayController$4;->this$0:Lcom/fusepowered/m2/m2l/MraidDisplayController;
+    # getter for: Lcom/fusepowered/m2/m2l/MraidDisplayController$4;->this$0:Lcom/fusepowered/m2/m2l/MraidDisplayController;
     invoke-static {v0}, Lcom/fusepowered/m2/m2l/MraidDisplayController$4;->access$0(Lcom/fusepowered/m2/m2l/MraidDisplayController$4;)Lcom/fusepowered/m2/m2l/MraidDisplayController;
 
     move-result-object v0

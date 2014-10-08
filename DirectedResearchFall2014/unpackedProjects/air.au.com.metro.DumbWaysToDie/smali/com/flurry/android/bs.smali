@@ -30,11 +30,6 @@
 # direct methods
 .method public constructor <init>(ILjava/lang/String;Ljava/util/Map;JZ)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I",
@@ -74,7 +69,6 @@
 # virtual methods
 .method public final c(J)V
     .locals 4
-    .parameter
 
     .prologue
     .line 39
@@ -145,7 +139,6 @@
 
 .method public final d(Ljava/util/Map;)V
     .locals 4
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -258,7 +251,6 @@
 
 .method public final e(Ljava/util/Map;)V
     .locals 0
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -296,8 +288,8 @@
 
     invoke-direct {v3, v2}, Ljava/io/DataOutputStream;-><init>(Ljava/io/OutputStream;)V
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 92
     :try_start_1
@@ -337,8 +329,8 @@
     .line 112
     invoke-virtual {v2}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     move-result-object v0
 
@@ -410,8 +402,8 @@
 
     invoke-virtual {v3, v0}, Ljava/io/DataOutputStream;->writeUTF(Ljava/lang/String;)V
     :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
     goto :goto_1
 
@@ -499,7 +491,6 @@
 
 .method public final w(Ljava/lang/String;)Z
     .locals 4
-    .parameter
 
     .prologue
     .line 34

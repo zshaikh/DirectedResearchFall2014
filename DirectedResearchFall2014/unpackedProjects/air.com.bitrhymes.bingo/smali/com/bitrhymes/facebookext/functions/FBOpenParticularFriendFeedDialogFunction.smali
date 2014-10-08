@@ -21,8 +21,8 @@
 # virtual methods
 .method public call(Lcom/adobe/fre/FREContext;[Lcom/adobe/fre/FREObject;)Lcom/adobe/fre/FREObject;
     .locals 20
-    .parameter "context"
-    .parameter "args"
+    .param p1, "context"    # Lcom/adobe/fre/FREContext;
+    .param p2, "args"    # [Lcom/adobe/fre/FREObject;
 
     .prologue
     .line 22
@@ -39,7 +39,7 @@
     move-result-object v6
 
     .line 24
-    .local v6, appAccessToken:Ljava/lang/String;
+    .local v6, "appAccessToken":Ljava/lang/String;
     const/16 v18, 0x1
 
     aget-object v18, p2, v18
@@ -49,7 +49,7 @@
     move-result-object v7
 
     .line 25
-    .local v7, appId:Ljava/lang/String;
+    .local v7, "appId":Ljava/lang/String;
     const/16 v18, 0x2
 
     aget-object v18, p2, v18
@@ -59,7 +59,7 @@
     move-result-object v5
 
     .line 26
-    .local v5, actionName:Ljava/lang/String;
+    .local v5, "actionName":Ljava/lang/String;
     const/16 v18, 0x3
 
     aget-object v18, p2, v18
@@ -69,7 +69,7 @@
     move-result-object v3
 
     .line 27
-    .local v3, actionLink:Ljava/lang/String;
+    .local v3, "actionLink":Ljava/lang/String;
     const/16 v18, 0x4
 
     aget-object v18, p2, v18
@@ -79,7 +79,7 @@
     move-result-object v8
 
     .line 28
-    .local v8, appName:Ljava/lang/String;
+    .local v8, "appName":Ljava/lang/String;
     const/16 v18, 0x5
 
     aget-object v18, p2, v18
@@ -89,7 +89,7 @@
     move-result-object v9
 
     .line 29
-    .local v9, caption:Ljava/lang/String;
+    .local v9, "caption":Ljava/lang/String;
     const/16 v18, 0x6
 
     aget-object v18, p2, v18
@@ -99,7 +99,7 @@
     move-result-object v10
 
     .line 30
-    .local v10, description:Ljava/lang/String;
+    .local v10, "description":Ljava/lang/String;
     const/16 v18, 0x7
 
     aget-object v18, p2, v18
@@ -109,7 +109,7 @@
     move-result-object v12
 
     .line 31
-    .local v12, fbLink:Ljava/lang/String;
+    .local v12, "fbLink":Ljava/lang/String;
     const/16 v18, 0x8
 
     aget-object v18, p2, v18
@@ -119,7 +119,7 @@
     move-result-object v17
 
     .line 32
-    .local v17, picUrl:Ljava/lang/String;
+    .local v17, "picUrl":Ljava/lang/String;
     const/16 v18, 0x9
 
     aget-object v18, p2, v18
@@ -129,7 +129,7 @@
     move-result-object v13
 
     .line 35
-    .local v13, friendId:Ljava/lang/String;
+    .local v13, "friendId":Ljava/lang/String;
     const/16 v18, 0xa
 
     aget-object v18, p2, v18
@@ -139,7 +139,7 @@
     move-result-object v11
 
     .line 37
-    .local v11, expiresTime:Ljava/lang/String;
+    .local v11, "expiresTime":Ljava/lang/String;
     invoke-static {v6, v11, v7}, Lcom/bitrhymes/facebookext/FacebookExtContext;->updateFBSession(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 39
@@ -148,7 +148,7 @@
     invoke-direct {v4}, Ljava/util/HashMap;-><init>()V
 
     .line 40
-    .local v4, actionMap:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v4, "actionMap":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v18, "name"
 
     move-object v0, v4
@@ -176,7 +176,7 @@
     invoke-direct/range {v16 .. v16}, Landroid/os/Bundle;-><init>()V
 
     .line 44
-    .local v16, params:Landroid/os/Bundle;
+    .local v16, "params":Landroid/os/Bundle;
     const-string v18, "to"
 
     move-object/from16 v0, v16
@@ -282,7 +282,7 @@
     const-string v15, "feed"
 
     .line 55
-    .local v15, method:Ljava/lang/String;
+    .local v15, "method":Ljava/lang/String;
     new-instance v14, Landroid/content/Intent;
 
     invoke-virtual/range {p1 .. p1}, Lcom/adobe/fre/FREContext;->getActivity()Landroid/app/Activity;
@@ -304,7 +304,7 @@
     invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
     .line 56
-    .local v14, i:Landroid/content/Intent;
+    .local v14, "i":Landroid/content/Intent;
     new-instance v18, Ljava/lang/StringBuilder;
 
     sget-object v19, Lcom/bitrhymes/facebookext/DialogActivity;->extraPrefix:Ljava/lang/String;
@@ -407,21 +407,21 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 64
-    .end local v3           #actionLink:Ljava/lang/String;
-    .end local v4           #actionMap:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
-    .end local v5           #actionName:Ljava/lang/String;
-    .end local v6           #appAccessToken:Ljava/lang/String;
-    .end local v7           #appId:Ljava/lang/String;
-    .end local v8           #appName:Ljava/lang/String;
-    .end local v9           #caption:Ljava/lang/String;
-    .end local v10           #description:Ljava/lang/String;
-    .end local v11           #expiresTime:Ljava/lang/String;
-    .end local v12           #fbLink:Ljava/lang/String;
-    .end local v13           #friendId:Ljava/lang/String;
-    .end local v14           #i:Landroid/content/Intent;
-    .end local v15           #method:Ljava/lang/String;
-    .end local v16           #params:Landroid/os/Bundle;
-    .end local v17           #picUrl:Ljava/lang/String;
+    .end local v3    # "actionLink":Ljava/lang/String;
+    .end local v4    # "actionMap":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .end local v5    # "actionName":Ljava/lang/String;
+    .end local v6    # "appAccessToken":Ljava/lang/String;
+    .end local v7    # "appId":Ljava/lang/String;
+    .end local v8    # "appName":Ljava/lang/String;
+    .end local v9    # "caption":Ljava/lang/String;
+    .end local v10    # "description":Ljava/lang/String;
+    .end local v11    # "expiresTime":Ljava/lang/String;
+    .end local v12    # "fbLink":Ljava/lang/String;
+    .end local v13    # "friendId":Ljava/lang/String;
+    .end local v14    # "i":Landroid/content/Intent;
+    .end local v15    # "method":Ljava/lang/String;
+    .end local v16    # "params":Landroid/os/Bundle;
+    .end local v17    # "picUrl":Ljava/lang/String;
     :goto_0
     const/16 v18, 0x0
 

@@ -21,7 +21,6 @@
 # direct methods
 .method public constructor <init>(Lcom/adobe/air/AIRService;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 141

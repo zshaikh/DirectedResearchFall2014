@@ -52,7 +52,7 @@
 
 .method public static create(I)Lorg/apache/http/impl/client/DefaultHttpClient;
     .locals 1
-    .parameter "timeoutMilliseconds"
+    .param p0, "timeoutMilliseconds"    # I
 
     .prologue
     .line 51
@@ -67,7 +67,7 @@
 
 .method public static setInstance(Lcom/fusepowered/m2/m2l/factories/HttpClientFactory;)V
     .locals 0
-    .parameter "factory"
+    .param p0, "factory"    # Lcom/fusepowered/m2/m2l/factories/HttpClientFactory;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -83,7 +83,7 @@
 # virtual methods
 .method protected internalCreate(I)Lorg/apache/http/impl/client/DefaultHttpClient;
     .locals 2
-    .parameter "timeoutMilliseconds"
+    .param p1, "timeoutMilliseconds"    # I
 
     .prologue
     .line 59
@@ -92,7 +92,7 @@
     invoke-direct {v0}, Lorg/apache/http/params/BasicHttpParams;-><init>()V
 
     .line 61
-    .local v0, httpParameters:Lorg/apache/http/params/HttpParams;
+    .local v0, "httpParameters":Lorg/apache/http/params/HttpParams;
     if-lez p1, :cond_0
 
     .line 63

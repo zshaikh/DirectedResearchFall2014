@@ -30,16 +30,15 @@
 # direct methods
 .method constructor <init>(Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap;Ljava/lang/Object;)V
     .locals 1
-    .parameter
-    .parameter "obj"
+    .param p2, "obj"    # Ljava/lang/Object;
 
     .prologue
     .line 149
-    .local p0, this:Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap$IdentityWeakReference;,"Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap<TK;TV;>.IdentityWeakReference;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap$IdentityWeakReference;, "Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap<TK;TV;>.IdentityWeakReference;"
     iput-object p1, p0, Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap$IdentityWeakReference;->this$0:Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap;
 
     .line 150
-    #getter for: Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap;->queue:Ljava/lang/ref/ReferenceQueue;
+    # getter for: Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap;->queue:Ljava/lang/ref/ReferenceQueue;
     invoke-static {p1}, Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap;->access$000(Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap;)Ljava/lang/ref/ReferenceQueue;
 
     move-result-object v0
@@ -61,10 +60,10 @@
 # virtual methods
 .method public equals(Ljava/lang/Object;)Z
     .locals 5
-    .parameter "o"
+    .param p1, "o"    # Ljava/lang/Object;
 
     .prologue
-    .local p0, this:Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap$IdentityWeakReference;,"Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap<TK;TV;>.IdentityWeakReference;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap$IdentityWeakReference;, "Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap<TK;TV;>.IdentityWeakReference;"
     const/4 v4, 0x1
 
     .line 159
@@ -85,7 +84,7 @@
     move-object v1, v0
 
     .line 163
-    .local v1, ref:Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap$IdentityWeakReference;,"Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap<TK;TV;>.IdentityWeakReference;"
+    .local v1, "ref":Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap$IdentityWeakReference;, "Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap<TK;TV;>.IdentityWeakReference;"
     invoke-virtual {p0}, Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap$IdentityWeakReference;->get()Ljava/lang/Object;
 
     move-result-object v2
@@ -113,7 +112,7 @@
 
     .prologue
     .line 155
-    .local p0, this:Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap$IdentityWeakReference;,"Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap<TK;TV;>.IdentityWeakReference;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap$IdentityWeakReference;, "Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap<TK;TV;>.IdentityWeakReference;"
     iget v0, p0, Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap$IdentityWeakReference;->hash:I
 
     return v0

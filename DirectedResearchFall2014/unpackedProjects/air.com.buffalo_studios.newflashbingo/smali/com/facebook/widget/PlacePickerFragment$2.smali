@@ -24,7 +24,7 @@
 
     iget-object v0, p0, Lcom/facebook/widget/PlacePickerFragment$2;->this$0:Lcom/facebook/widget/PlacePickerFragment;
 
-    #calls: Lcom/facebook/widget/PlacePickerFragment;->onSearchTextTimerTriggered()V
+    # invokes: Lcom/facebook/widget/PlacePickerFragment;->onSearchTextTimerTriggered()V
     invoke-static {v0}, Lcom/facebook/widget/PlacePickerFragment;->access$200(Lcom/facebook/widget/PlacePickerFragment;)V
 
     return-void

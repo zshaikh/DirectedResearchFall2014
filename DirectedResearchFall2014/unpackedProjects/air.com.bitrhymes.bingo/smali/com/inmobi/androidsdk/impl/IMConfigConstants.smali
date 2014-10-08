@@ -16,7 +16,7 @@
 
 .field protected static final CELL_TYPE:Ljava/lang/String; = "a1"
 
-.field protected static final MIN_NICE_RETRY_INERVAL:Ljava/lang/Long; = null
+.field protected static final MIN_NICE_RETRY_INERVAL:Ljava/lang/Long;
 
 .field public static final MSG_AD_ACTIVE:Ljava/lang/String; = "Interstitial ad is in ACTIVE state. Try again after sometime."
 

@@ -26,7 +26,7 @@
 
     .prologue
     .line 142
-    const/high16 v0, 0x7f02
+    const/high16 v0, 0x7f020000
 
     sput v0, Lcom/fusepowered/m1/android/R$drawable;->in:I
 

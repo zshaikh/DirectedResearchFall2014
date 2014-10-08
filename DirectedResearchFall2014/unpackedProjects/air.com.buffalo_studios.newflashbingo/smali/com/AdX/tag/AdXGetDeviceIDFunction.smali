@@ -38,15 +38,15 @@
 # virtual methods
 .method public call(Lcom/adobe/fre/FREContext;[Lcom/adobe/fre/FREObject;)Lcom/adobe/fre/FREObject;
     .locals 14
-    .parameter "context"
-    .parameter "passedArgs"
+    .param p1, "context"    # Lcom/adobe/fre/FREContext;
+    .param p2, "passedArgs"    # [Lcom/adobe/fre/FREObject;
 
     .prologue
     .line 35
     const/4 v9, 0x0
 
     .line 37
-    .local v9, result:Lcom/adobe/fre/FREObject;
+    .local v9, "result":Lcom/adobe/fre/FREObject;
     const-string v12, "AdXGetDeviceIDFunction"
 
     const-string v13, "call"
@@ -61,19 +61,19 @@
     move-object v3, v0
 
     .line 40
-    .local v3, adxExtContext:Lcom/AdX/tag/AdXExtensionContext;
+    .local v3, "adxExtContext":Lcom/AdX/tag/AdXExtensionContext;
     invoke-virtual {v3}, Lcom/AdX/tag/AdXExtensionContext;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
     .line 41
-    .local v2, a:Landroid/app/Activity;
+    .local v2, "a":Landroid/app/Activity;
     invoke-virtual {v2}, Landroid/app/Activity;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v1
 
     .line 42
-    .local v1, _context:Landroid/content/Context;
+    .local v1, "_context":Landroid/content/Context;
     sget-object v12, Lcom/AdX/tag/AdXGetDeviceIDFunction;->AdX_PREFERENCE:Ljava/lang/String;
 
     const/4 v13, 0x0
@@ -83,11 +83,11 @@
     move-result-object v10
 
     .line 43
-    .local v10, settings:Landroid/content/SharedPreferences;
+    .local v10, "settings":Landroid/content/SharedPreferences;
     const/4 v5, 0x0
 
     .line 46
-    .local v5, deviceID:Ljava/lang/String;
+    .local v5, "deviceID":Ljava/lang/String;
     :try_start_0
     const-string v12, "phone"
 
@@ -98,7 +98,7 @@
     check-cast v11, Landroid/telephony/TelephonyManager;
 
     .line 48
-    .local v11, telephonyManager:Landroid/telephony/TelephonyManager;
+    .local v11, "telephonyManager":Landroid/telephony/TelephonyManager;
     if-eqz v11, :cond_0
 
     .line 50
@@ -111,7 +111,7 @@
     const/4 v8, 0x0
 
     .line 58
-    .local v8, invalidDeviceID:Z
+    .local v8, "invalidDeviceID":Z
     if-nez v5, :cond_2
 
     .line 60
@@ -127,7 +127,7 @@
     invoke-direct {v4}, Ljava/lang/StringBuffer;-><init>()V
 
     .line 83
-    .local v4, buff:Ljava/lang/StringBuffer;
+    .local v4, "buff":Ljava/lang/StringBuffer;
     const-string v12, "EMULATOR"
 
     invoke-virtual {v4, v12}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
@@ -142,7 +142,7 @@
     move-result-object v6
 
     .line 87
-    .local v6, deviceId:Ljava/lang/String;
+    .local v6, "deviceId":Ljava/lang/String;
     if-eqz v6, :cond_5
 
     const-string v12, ""
@@ -157,8 +157,8 @@
     move-object v5, v6
 
     .line 96
-    .end local v4           #buff:Ljava/lang/StringBuffer;
-    .end local v6           #deviceId:Ljava/lang/String;
+    .end local v4    # "buff":Ljava/lang/StringBuffer;
+    .end local v6    # "deviceId":Ljava/lang/String;
     :cond_1
     :goto_1
     invoke-static {v5}, Lcom/adobe/fre/FREObject;->newObject(Ljava/lang/String;)Lcom/adobe/fre/FREObject;
@@ -166,14 +166,14 @@
     move-result-object v9
 
     .line 100
-    .end local v8           #invalidDeviceID:Z
-    .end local v11           #telephonyManager:Landroid/telephony/TelephonyManager;
+    .end local v8    # "invalidDeviceID":Z
+    .end local v11    # "telephonyManager":Landroid/telephony/TelephonyManager;
     :goto_2
     return-object v9
 
     .line 66
-    .restart local v8       #invalidDeviceID:Z
-    .restart local v11       #telephonyManager:Landroid/telephony/TelephonyManager;
+    .restart local v8    # "invalidDeviceID":Z
+    .restart local v11    # "telephonyManager":Landroid/telephony/TelephonyManager;
     :cond_2
     invoke-virtual {v5}, Ljava/lang/String;->length()I
 
@@ -212,8 +212,8 @@
     goto :goto_0
 
     .line 92
-    .restart local v4       #buff:Ljava/lang/StringBuffer;
-    .restart local v6       #deviceId:Ljava/lang/String;
+    .restart local v4    # "buff":Ljava/lang/StringBuffer;
+    .restart local v6    # "deviceId":Ljava/lang/String;
     :cond_5
     const-string v5, "TabletANON"
     :try_end_0
@@ -222,16 +222,16 @@
     goto :goto_1
 
     .line 98
-    .end local v4           #buff:Ljava/lang/StringBuffer;
-    .end local v6           #deviceId:Ljava/lang/String;
-    .end local v8           #invalidDeviceID:Z
-    .end local v11           #telephonyManager:Landroid/telephony/TelephonyManager;
+    .end local v4    # "buff":Ljava/lang/StringBuffer;
+    .end local v6    # "deviceId":Ljava/lang/String;
+    .end local v8    # "invalidDeviceID":Z
+    .end local v11    # "telephonyManager":Landroid/telephony/TelephonyManager;
     :catch_0
     move-exception v12
 
     move-object v7, v12
 
-    .local v7, e:Ljava/lang/Exception;
+    .local v7, "e":Ljava/lang/Exception;
     const-string v12, "AdXFunction"
 
     invoke-virtual {v7}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;

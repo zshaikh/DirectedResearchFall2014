@@ -31,7 +31,6 @@
 # direct methods
 .method constructor <init>(Lcom/facebook/AuthorizationClient;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 574
@@ -58,7 +57,7 @@
     move-result-object v0
 
     .line 705
-    .local v0, context:Landroid/content/Context;
+    .local v0, "context":Landroid/content/Context;
     const-string v2, "com.facebook.AuthorizationClient.WebViewAuthHandler.TOKEN_STORE_KEY"
 
     .line 706
@@ -70,7 +69,7 @@
     move-result-object v1
 
     .line 707
-    .local v1, sharedPreferences:Landroid/content/SharedPreferences;
+    .local v1, "sharedPreferences":Landroid/content/SharedPreferences;
     const-string v2, "TOKEN"
 
     const-string v3, ""
@@ -84,7 +83,7 @@
 
 .method private saveCookieToken(Ljava/lang/String;)V
     .locals 5
-    .parameter "token"
+    .param p1, "token"    # Ljava/lang/String;
 
     .prologue
     .line 691
@@ -99,7 +98,7 @@
     move-result-object v0
 
     .line 693
-    .local v0, context:Landroid/content/Context;
+    .local v0, "context":Landroid/content/Context;
     const-string v3, "com.facebook.AuthorizationClient.WebViewAuthHandler.TOKEN_STORE_KEY"
 
     .line 694
@@ -111,13 +110,13 @@
     move-result-object v2
 
     .line 695
-    .local v2, sharedPreferences:Landroid/content/SharedPreferences;
+    .local v2, "sharedPreferences":Landroid/content/SharedPreferences;
     invoke-interface {v2}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v1
 
     .line 696
-    .local v1, editor:Landroid/content/SharedPreferences$Editor;
+    .local v1, "editor":Landroid/content/SharedPreferences$Editor;
     const-string v3, "TOKEN"
 
     invoke-interface {v1, v3, p1}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
@@ -199,9 +198,9 @@
 
 .method onWebDialogComplete(Lcom/facebook/AuthorizationClient$AuthorizationRequest;Landroid/os/Bundle;Lcom/facebook/FacebookException;)V
     .locals 11
-    .parameter "request"
-    .parameter "values"
-    .parameter "error"
+    .param p1, "request"    # Lcom/facebook/AuthorizationClient$AuthorizationRequest;
+    .param p2, "values"    # Landroid/os/Bundle;
+    .param p3, "error"    # Lcom/facebook/FacebookException;
 
     .prologue
     const/4 v10, 0x0
@@ -242,7 +241,7 @@
     move-result-object v5
 
     .line 657
-    .local v5, token:Lcom/facebook/AccessToken;
+    .local v5, "token":Lcom/facebook/AccessToken;
     iget-object v6, p0, Lcom/facebook/AuthorizationClient$WebViewAuthHandler;->this$0:Lcom/facebook/AuthorizationClient;
 
     iget-object v6, v6, Lcom/facebook/AuthorizationClient;->pendingRequest:Lcom/facebook/AuthorizationClient$AuthorizationRequest;
@@ -252,7 +251,7 @@
     move-result-object v2
 
     .line 662
-    .local v2, outcome:Lcom/facebook/AuthorizationClient$Result;
+    .local v2, "outcome":Lcom/facebook/AuthorizationClient$Result;
     iget-object v6, p0, Lcom/facebook/AuthorizationClient$WebViewAuthHandler;->this$0:Lcom/facebook/AuthorizationClient;
 
     iget-object v6, v6, Lcom/facebook/AuthorizationClient;->context:Landroid/content/Context;
@@ -262,7 +261,7 @@
     move-result-object v4
 
     .line 663
-    .local v4, syncManager:Landroid/webkit/CookieSyncManager;
+    .local v4, "syncManager":Landroid/webkit/CookieSyncManager;
     invoke-virtual {v4}, Landroid/webkit/CookieSyncManager;->sync()V
 
     .line 664
@@ -273,9 +272,9 @@
     invoke-direct {p0, v6}, Lcom/facebook/AuthorizationClient$WebViewAuthHandler;->saveCookieToken(Ljava/lang/String;)V
 
     .line 683
-    .end local v4           #syncManager:Landroid/webkit/CookieSyncManager;
-    .end local v5           #token:Lcom/facebook/AccessToken;
-    .end local p3
+    .end local v4    # "syncManager":Landroid/webkit/CookieSyncManager;
+    .end local v5    # "token":Lcom/facebook/AccessToken;
+    .end local p3    # "error":Lcom/facebook/FacebookException;
     :goto_0
     iget-object v6, p0, Lcom/facebook/AuthorizationClient$WebViewAuthHandler;->e2e:Ljava/lang/String;
 
@@ -292,7 +291,7 @@
 
     iget-object v8, p0, Lcom/facebook/AuthorizationClient$WebViewAuthHandler;->e2e:Ljava/lang/String;
 
-    #calls: Lcom/facebook/AuthorizationClient;->logWebLoginCompleted(Ljava/lang/String;Ljava/lang/String;)V
+    # invokes: Lcom/facebook/AuthorizationClient;->logWebLoginCompleted(Ljava/lang/String;Ljava/lang/String;)V
     invoke-static {v6, v7, v8}, Lcom/facebook/AuthorizationClient;->access$1(Lcom/facebook/AuthorizationClient;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 687
@@ -305,8 +304,8 @@
     return-void
 
     .line 666
-    .end local v2           #outcome:Lcom/facebook/AuthorizationClient$Result;
-    .restart local p3
+    .end local v2    # "outcome":Lcom/facebook/AuthorizationClient$Result;
+    .restart local p3    # "error":Lcom/facebook/FacebookException;
     :cond_2
     instance-of v6, p3, Lcom/facebook/FacebookOperationCanceledException;
 
@@ -324,11 +323,11 @@
     move-result-object v2
 
     .line 668
-    .restart local v2       #outcome:Lcom/facebook/AuthorizationClient$Result;
+    .restart local v2    # "outcome":Lcom/facebook/AuthorizationClient$Result;
     goto :goto_0
 
     .line 670
-    .end local v2           #outcome:Lcom/facebook/AuthorizationClient$Result;
+    .end local v2    # "outcome":Lcom/facebook/AuthorizationClient$Result;
     :cond_3
     iput-object v10, p0, Lcom/facebook/AuthorizationClient$WebViewAuthHandler;->e2e:Ljava/lang/String;
 
@@ -336,13 +335,13 @@
     const/4 v0, 0x0
 
     .line 673
-    .local v0, errorCode:Ljava/lang/String;
+    .local v0, "errorCode":Ljava/lang/String;
     invoke-virtual {p3}, Lcom/facebook/FacebookException;->getMessage()Ljava/lang/String;
 
     move-result-object v1
 
     .line 674
-    .local v1, errorMessage:Ljava/lang/String;
+    .local v1, "errorMessage":Ljava/lang/String;
     instance-of v6, p3, Lcom/facebook/FacebookServiceException;
 
     if-eqz v6, :cond_4
@@ -350,13 +349,13 @@
     .line 675
     check-cast p3, Lcom/facebook/FacebookServiceException;
 
-    .end local p3
+    .end local p3    # "error":Lcom/facebook/FacebookException;
     invoke-virtual {p3}, Lcom/facebook/FacebookServiceException;->getRequestError()Lcom/facebook/FacebookRequestError;
 
     move-result-object v3
 
     .line 676
-    .local v3, requestError:Lcom/facebook/FacebookRequestError;
+    .local v3, "requestError":Lcom/facebook/FacebookRequestError;
     const-string v6, "%d"
 
     const/4 v7, 0x1
@@ -385,7 +384,7 @@
     move-result-object v1
 
     .line 679
-    .end local v3           #requestError:Lcom/facebook/FacebookRequestError;
+    .end local v3    # "requestError":Lcom/facebook/FacebookRequestError;
     :cond_4
     iget-object v6, p0, Lcom/facebook/AuthorizationClient$WebViewAuthHandler;->this$0:Lcom/facebook/AuthorizationClient;
 
@@ -395,13 +394,13 @@
 
     move-result-object v2
 
-    .restart local v2       #outcome:Lcom/facebook/AuthorizationClient$Result;
+    .restart local v2    # "outcome":Lcom/facebook/AuthorizationClient$Result;
     goto :goto_0
 .end method
 
 .method tryAuthorize(Lcom/facebook/AuthorizationClient$AuthorizationRequest;)Z
     .locals 9
-    .parameter "request"
+    .param p1, "request"    # Lcom/facebook/AuthorizationClient$AuthorizationRequest;
 
     .prologue
     const-string v8, "scope"
@@ -421,7 +420,7 @@
     invoke-direct {v2}, Landroid/os/Bundle;-><init>()V
 
     .line 609
-    .local v2, parameters:Landroid/os/Bundle;
+    .local v2, "parameters":Landroid/os/Bundle;
     invoke-virtual {p1}, Lcom/facebook/AuthorizationClient$AuthorizationRequest;->getPermissions()Ljava/util/List;
 
     move-result-object v5
@@ -444,7 +443,7 @@
     move-result-object v4
 
     .line 611
-    .local v4, scope:Ljava/lang/String;
+    .local v4, "scope":Ljava/lang/String;
     const-string v5, "scope"
 
     invoke-virtual {v2, v8, v4}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
@@ -455,14 +454,14 @@
     invoke-virtual {p0, v8, v4}, Lcom/facebook/AuthorizationClient$WebViewAuthHandler;->addLoggingExtra(Ljava/lang/String;Ljava/lang/Object;)V
 
     .line 615
-    .end local v4           #scope:Ljava/lang/String;
+    .end local v4    # "scope":Ljava/lang/String;
     :cond_0
     invoke-virtual {p1}, Lcom/facebook/AuthorizationClient$AuthorizationRequest;->getPreviousAccessToken()Ljava/lang/String;
 
     move-result-object v3
 
     .line 616
-    .local v3, previousToken:Ljava/lang/String;
+    .local v3, "previousToken":Ljava/lang/String;
     invoke-static {v3}, Lcom/facebook/internal/Utility;->isNullOrEmpty(Ljava/lang/String;)Z
 
     move-result v5
@@ -498,8 +497,8 @@
     invoke-direct {v1, p0, p1}, Lcom/facebook/AuthorizationClient$WebViewAuthHandler$1;-><init>(Lcom/facebook/AuthorizationClient$WebViewAuthHandler;Lcom/facebook/AuthorizationClient$AuthorizationRequest;)V
 
     .line 633
-    .local v1, listener:Lcom/facebook/widget/WebDialog$OnCompleteListener;
-    #calls: Lcom/facebook/AuthorizationClient;->getE2E()Ljava/lang/String;
+    .local v1, "listener":Lcom/facebook/widget/WebDialog$OnCompleteListener;
+    # invokes: Lcom/facebook/AuthorizationClient;->getE2E()Ljava/lang/String;
     invoke-static {}, Lcom/facebook/AuthorizationClient;->access$0()Ljava/lang/String;
 
     move-result-object v5
@@ -545,7 +544,7 @@
     check-cast v0, Lcom/facebook/widget/WebDialog$Builder;
 
     .line 640
-    .local v0, builder:Lcom/facebook/widget/WebDialog$Builder;
+    .local v0, "builder":Lcom/facebook/widget/WebDialog$Builder;
     invoke-virtual {v0}, Lcom/facebook/widget/WebDialog$Builder;->build()Lcom/facebook/widget/WebDialog;
 
     move-result-object v5
@@ -563,8 +562,8 @@
     return v5
 
     .line 622
-    .end local v0           #builder:Lcom/facebook/widget/WebDialog$Builder;
-    .end local v1           #listener:Lcom/facebook/widget/WebDialog$OnCompleteListener;
+    .end local v0    # "builder":Lcom/facebook/widget/WebDialog$Builder;
+    .end local v1    # "listener":Lcom/facebook/widget/WebDialog$OnCompleteListener;
     :cond_1
     iget-object v5, p0, Lcom/facebook/AuthorizationClient$WebViewAuthHandler;->this$0:Lcom/facebook/AuthorizationClient;
 

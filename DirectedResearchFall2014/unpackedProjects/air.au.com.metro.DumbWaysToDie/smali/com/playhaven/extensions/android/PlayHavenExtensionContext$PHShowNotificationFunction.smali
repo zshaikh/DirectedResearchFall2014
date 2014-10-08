@@ -24,7 +24,6 @@
 # direct methods
 .method private constructor <init>(Lcom/playhaven/extensions/android/PlayHavenExtensionContext;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 628
@@ -37,8 +36,6 @@
 
 .method synthetic constructor <init>(Lcom/playhaven/extensions/android/PlayHavenExtensionContext;Lcom/playhaven/extensions/android/PlayHavenExtensionContext$PHShowNotificationFunction;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 628
@@ -51,8 +48,8 @@
 # virtual methods
 .method public call(Lcom/adobe/fre/FREContext;[Lcom/adobe/fre/FREObject;)Lcom/adobe/fre/FREObject;
     .locals 9
-    .parameter "arg0"
-    .parameter "args"
+    .param p1, "arg0"    # Lcom/adobe/fre/FREContext;
+    .param p2, "args"    # [Lcom/adobe/fre/FREObject;
 
     .prologue
     .line 634
@@ -66,7 +63,7 @@
     move-result-object v1
 
     .line 635
-    .local v1, placementId:Ljava/lang/String;
+    .local v1, "placementId":Ljava/lang/String;
     const/4 v0, 0x1
 
     aget-object v0, p2, v0
@@ -78,7 +75,7 @@
     double-to-float v6, v2
 
     .line 636
-    .local v6, centerX:F
+    .local v6, "centerX":F
     const/4 v0, 0x2
 
     aget-object v0, p2, v0
@@ -90,7 +87,7 @@
     double-to-float v7, v2
 
     .line 637
-    .local v7, centerY:F
+    .local v7, "centerY":F
     iget-object v0, p0, Lcom/playhaven/extensions/android/PlayHavenExtensionContext$PHShowNotificationFunction;->this$0:Lcom/playhaven/extensions/android/PlayHavenExtensionContext;
 
     float-to-double v2, v6
@@ -102,9 +99,9 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 643
-    .end local v1           #placementId:Ljava/lang/String;
-    .end local v6           #centerX:F
-    .end local v7           #centerY:F
+    .end local v1    # "placementId":Ljava/lang/String;
+    .end local v6    # "centerX":F
+    .end local v7    # "centerY":F
     :goto_0
     const/4 v0, 0x0
 
@@ -117,7 +114,7 @@
     move-object v8, v0
 
     .line 641
-    .local v8, e:Ljava/lang/Exception;
+    .local v8, "e":Ljava/lang/Exception;
     const-string v0, "[PHExtension]"
 
     invoke-virtual {v8}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;

@@ -33,7 +33,7 @@
 # direct methods
 .method public constructor <init>(Lcom/fusepowered/m1/android/InlineVideoView;)V
     .locals 1
-    .parameter "videoView"
+    .param p1, "videoView"    # Lcom/fusepowered/m1/android/InlineVideoView;
 
     .prologue
     .line 661
@@ -54,9 +54,9 @@
 # virtual methods
 .method public onError(Landroid/media/MediaPlayer;II)Z
     .locals 2
-    .parameter "mp"
-    .parameter "what"
-    .parameter "extra"
+    .param p1, "mp"    # Landroid/media/MediaPlayer;
+    .param p2, "what"    # I
+    .param p3, "extra"    # I
 
     .prologue
     .line 668
@@ -69,7 +69,7 @@
     check-cast v0, Lcom/fusepowered/m1/android/InlineVideoView;
 
     .line 669
-    .local v0, inlineView:Lcom/fusepowered/m1/android/InlineVideoView;
+    .local v0, "inlineView":Lcom/fusepowered/m1/android/InlineVideoView;
     if-eqz v0, :cond_0
 
     .line 671

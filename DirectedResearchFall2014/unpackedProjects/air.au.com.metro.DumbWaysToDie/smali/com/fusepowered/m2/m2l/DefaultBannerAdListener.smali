@@ -21,7 +21,7 @@
 # virtual methods
 .method public onBannerClicked(Lcom/fusepowered/m2/m2l/MoPubView;)V
     .locals 0
-    .parameter "banner"
+    .param p1, "banner"    # Lcom/fusepowered/m2/m2l/MoPubView;
 
     .prologue
     .line 40
@@ -30,7 +30,7 @@
 
 .method public onBannerCollapsed(Lcom/fusepowered/m2/m2l/MoPubView;)V
     .locals 0
-    .parameter "banner"
+    .param p1, "banner"    # Lcom/fusepowered/m2/m2l/MoPubView;
 
     .prologue
     .line 42
@@ -39,7 +39,7 @@
 
 .method public onBannerExpanded(Lcom/fusepowered/m2/m2l/MoPubView;)V
     .locals 0
-    .parameter "banner"
+    .param p1, "banner"    # Lcom/fusepowered/m2/m2l/MoPubView;
 
     .prologue
     .line 41
@@ -48,8 +48,8 @@
 
 .method public onBannerFailed(Lcom/fusepowered/m2/m2l/MoPubView;Lcom/fusepowered/m2/m2l/MoPubErrorCode;)V
     .locals 0
-    .parameter "banner"
-    .parameter "errorCode"
+    .param p1, "banner"    # Lcom/fusepowered/m2/m2l/MoPubView;
+    .param p2, "errorCode"    # Lcom/fusepowered/m2/m2l/MoPubErrorCode;
 
     .prologue
     .line 39
@@ -58,7 +58,7 @@
 
 .method public onBannerLoaded(Lcom/fusepowered/m2/m2l/MoPubView;)V
     .locals 0
-    .parameter "banner"
+    .param p1, "banner"    # Lcom/fusepowered/m2/m2l/MoPubView;
 
     .prologue
     .line 38

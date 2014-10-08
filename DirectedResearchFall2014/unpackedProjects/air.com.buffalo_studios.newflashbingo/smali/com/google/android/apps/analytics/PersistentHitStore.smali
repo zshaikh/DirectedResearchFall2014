@@ -20,25 +20,25 @@
 
 .field private static final CATEGORY:Ljava/lang/String; = "category"
 
-.field private static final CREATE_CUSTOM_VARIABLES_TABLE:Ljava/lang/String; = null
+.field private static final CREATE_CUSTOM_VARIABLES_TABLE:Ljava/lang/String;
 
-.field private static final CREATE_CUSTOM_VAR_VISITOR_CACHE_TABLE:Ljava/lang/String; = null
+.field private static final CREATE_CUSTOM_VAR_VISITOR_CACHE_TABLE:Ljava/lang/String;
 
-.field private static final CREATE_EVENTS_TABLE:Ljava/lang/String; = null
+.field private static final CREATE_EVENTS_TABLE:Ljava/lang/String;
 
-.field private static final CREATE_HITS_TABLE:Ljava/lang/String; = null
+.field private static final CREATE_HITS_TABLE:Ljava/lang/String;
 
 .field private static final CREATE_INSTALL_REFERRER_TABLE:Ljava/lang/String; = "CREATE TABLE install_referrer (referrer TEXT PRIMARY KEY NOT NULL);"
 
-.field private static final CREATE_ITEM_EVENTS_TABLE:Ljava/lang/String; = null
+.field private static final CREATE_ITEM_EVENTS_TABLE:Ljava/lang/String;
 
-.field private static final CREATE_OLD_CUSTOM_VAR_CACHE_TABLE:Ljava/lang/String; = null
+.field private static final CREATE_OLD_CUSTOM_VAR_CACHE_TABLE:Ljava/lang/String;
 
 .field private static final CREATE_REFERRER_TABLE:Ljava/lang/String; = "CREATE TABLE IF NOT EXISTS referrer (referrer TEXT PRIMARY KEY NOT NULL,timestamp_referrer INTEGER NOT NULL,referrer_visit INTEGER NOT NULL DEFAULT 1,referrer_index INTEGER NOT NULL DEFAULT 1);"
 
-.field private static final CREATE_SESSION_TABLE:Ljava/lang/String; = null
+.field private static final CREATE_SESSION_TABLE:Ljava/lang/String;
 
-.field private static final CREATE_TRANSACTION_EVENTS_TABLE:Ljava/lang/String; = null
+.field private static final CREATE_TRANSACTION_EVENTS_TABLE:Ljava/lang/String;
 
 .field private static final CUSTOMVAR_ID:Ljava/lang/String; = "cv_id"
 
@@ -1974,8 +1974,8 @@
 
     invoke-virtual {p1}, Landroid/database/sqlite/SQLiteDatabase;->setTransactionSuccessful()V
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Landroid/database/sqlite/SQLiteException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     invoke-virtual {p1}, Landroid/database/sqlite/SQLiteDatabase;->inTransaction()Z
 
@@ -2134,8 +2134,8 @@
 
     iput v0, p0, Lcom/google/android/apps/analytics/PersistentHitStore;->numStoredHits:I
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Landroid/database/sqlite/SQLiteException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     :goto_0
     monitor-exit p0
@@ -2204,8 +2204,8 @@
 
     invoke-virtual/range {v0 .. v7}, Landroid/database/sqlite/SQLiteDatabase;->query(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Landroid/database/sqlite/SQLiteException; {:try_start_0 .. :try_end_0} :catch_1
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result-object v0
 
@@ -2263,8 +2263,8 @@
 
     invoke-virtual {v8, v1}, Lcom/google/android/apps/analytics/CustomVariableBuffer;->setCustomVariable(Lcom/google/android/apps/analytics/CustomVariable;)V
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
     .catch Landroid/database/sqlite/SQLiteException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     goto :goto_0
 
@@ -2383,8 +2383,8 @@
 
     invoke-virtual/range {v0 .. v7}, Landroid/database/sqlite/SQLiteDatabase;->query(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Landroid/database/sqlite/SQLiteException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result-object v7
 
@@ -2469,8 +2469,8 @@
 
     invoke-virtual {v0}, Lcom/google/android/apps/analytics/Item$Builder;->build()Lcom/google/android/apps/analytics/Item;
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
     .catch Landroid/database/sqlite/SQLiteException; {:try_start_1 .. :try_end_1} :catch_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     move-result-object v0
 
@@ -2577,8 +2577,8 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/database/sqlite/SQLiteDatabase;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Landroid/database/sqlite/SQLiteException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result-object v0
 
@@ -2593,8 +2593,8 @@
 
     invoke-interface {v0, v1}, Landroid/database/Cursor;->getLong(I)J
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
     .catch Landroid/database/sqlite/SQLiteException; {:try_start_1 .. :try_end_1} :catch_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     move-result-wide v1
 
@@ -2816,8 +2816,8 @@
 
     invoke-virtual/range {v0 .. v7}, Landroid/database/sqlite/SQLiteDatabase;->query(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Landroid/database/sqlite/SQLiteException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result-object v0
 
@@ -2896,8 +2896,8 @@
 
     invoke-virtual {v1}, Lcom/google/android/apps/analytics/Transaction$Builder;->build()Lcom/google/android/apps/analytics/Transaction;
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
     .catch Landroid/database/sqlite/SQLiteException; {:try_start_1 .. :try_end_1} :catch_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     move-result-object v1
 
@@ -3132,8 +3132,8 @@
 
     invoke-virtual/range {v0 .. v7}, Landroid/database/sqlite/SQLiteDatabase;->query(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Landroid/database/sqlite/SQLiteException; {:try_start_0 .. :try_end_0} :catch_1
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result-object v0
 
@@ -3202,8 +3202,8 @@
 
     invoke-virtual {v8, v1}, Lcom/google/android/apps/analytics/CustomVariableBuffer;->setCustomVariable(Lcom/google/android/apps/analytics/CustomVariable;)V
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
     .catch Landroid/database/sqlite/SQLiteException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     goto :goto_0
 
@@ -3351,8 +3351,8 @@
 
     invoke-virtual/range {v0 .. v7}, Landroid/database/sqlite/SQLiteDatabase;->query(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Landroid/database/sqlite/SQLiteException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result-object v0
 
@@ -3429,8 +3429,8 @@
     :goto_0
     iput-boolean v1, p0, Lcom/google/android/apps/analytics/PersistentHitStore;->sessionStarted:Z
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
     .catch Landroid/database/sqlite/SQLiteException; {:try_start_1 .. :try_end_1} :catch_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     :goto_1
     if-eqz v0, :cond_1
@@ -3472,8 +3472,8 @@
 
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
     :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
     .catch Landroid/database/sqlite/SQLiteException; {:try_start_2 .. :try_end_2} :catch_1
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
     :try_start_3
     new-instance v0, Landroid/content/ContentValues;
@@ -3536,8 +3536,8 @@
 
     invoke-virtual {p1, v1, v2, v0}, Landroid/database/sqlite/SQLiteDatabase;->insert(Ljava/lang/String;Ljava/lang/String;Landroid/content/ContentValues;)J
     :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
     .catch Landroid/database/sqlite/SQLiteException; {:try_start_3 .. :try_end_3} :catch_0
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
     move-object v0, v8
 
@@ -3639,8 +3639,8 @@
 
     invoke-virtual/range {v4 .. v12}, Landroid/database/sqlite/SQLiteDatabase;->query(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_1
     .catch Landroid/database/sqlite/SQLiteException; {:try_start_0 .. :try_end_0} :catch_1
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
     move-result-object v21
 
@@ -3887,8 +3887,8 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Landroid/database/sqlite/SQLiteException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     goto/16 :goto_0
 
@@ -3970,8 +3970,8 @@
     :cond_3
     invoke-virtual {v4, v7}, Lcom/google/android/apps/analytics/Event;->setItem(Lcom/google/android/apps/analytics/Item;)V
     :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
     .catch Landroid/database/sqlite/SQLiteException; {:try_start_3 .. :try_end_3} :catch_0
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
     goto :goto_2
 
@@ -4018,8 +4018,8 @@
 
     invoke-direct {v5}, Lcom/google/android/apps/analytics/CustomVariableBuffer;-><init>()V
     :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_0
     .catch Landroid/database/sqlite/SQLiteException; {:try_start_4 .. :try_end_4} :catch_0
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
     goto :goto_6
 
@@ -4124,8 +4124,8 @@
 
     invoke-virtual/range {v0 .. v8}, Landroid/database/sqlite/SQLiteDatabase;->query(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Landroid/database/sqlite/SQLiteException; {:try_start_0 .. :try_end_0} :catch_1
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result-object v0
 
@@ -4155,8 +4155,8 @@
 
     invoke-interface {v9, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
     .catch Landroid/database/sqlite/SQLiteException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     goto :goto_0
 
@@ -4515,8 +4515,8 @@
 
     invoke-virtual {v0}, Lcom/google/android/apps/analytics/PersistentHitStore$DataBaseHelper;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Landroid/database/sqlite/SQLiteException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result-object v0
 
@@ -4536,8 +4536,8 @@
 
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->setTransactionSuccessful()V
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
     .catch Landroid/database/sqlite/SQLiteException; {:try_start_1 .. :try_end_1} :catch_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     :try_start_2
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->inTransaction()Z
@@ -4717,8 +4717,8 @@
 
     invoke-virtual/range {v0 .. v7}, Landroid/database/sqlite/SQLiteDatabase;->query(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Landroid/database/sqlite/SQLiteException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result-object v6
 
@@ -4773,8 +4773,8 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/google/android/apps/analytics/Referrer;-><init>(Ljava/lang/String;JII)V
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
     .catch Landroid/database/sqlite/SQLiteException; {:try_start_1 .. :try_end_1} :catch_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     :goto_0
     if-eqz v6, :cond_0

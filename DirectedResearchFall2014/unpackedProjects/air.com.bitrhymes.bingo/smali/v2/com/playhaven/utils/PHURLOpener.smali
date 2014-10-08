@@ -50,7 +50,7 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     .line 95
@@ -89,8 +89,8 @@
 
 .method public constructor <init>(Landroid/content/Context;Lv2/com/playhaven/utils/PHURLOpener$Listener;)V
     .locals 1
-    .parameter "context"
-    .parameter "listener"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "listener"    # Lv2/com/playhaven/utils/PHURLOpener$Listener;
 
     .prologue
     .line 85
@@ -331,7 +331,7 @@
 
 .method private launchActivity(Landroid/content/Intent;)V
     .locals 2
-    .parameter "intent"
+    .param p1, "intent"    # Landroid/content/Intent;
 
     .prologue
     .line 233
@@ -389,7 +389,7 @@
 
 .method private openMarketURL(Ljava/lang/String;)V
     .locals 10
-    .parameter "url"
+    .param p1, "url"    # Ljava/lang/String;
 
     .prologue
     const-string v9, "android.intent.action.VIEW"
@@ -407,7 +407,7 @@
     invoke-direct {v0, v9}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
     .line 253
-    .local v0, intent:Landroid/content/Intent;
+    .local v0, "intent":Landroid/content/Intent;
     invoke-static {p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v4
@@ -424,15 +424,15 @@
     move-result-object v1
 
     .line 258
-    .local v1, packageManager:Landroid/content/pm/PackageManager;
-    const/high16 v4, 0x1
+    .local v1, "packageManager":Landroid/content/pm/PackageManager;
+    const/high16 v4, 0x10000
 
     invoke-virtual {v1, v0, v4}, Landroid/content/pm/PackageManager;->queryIntentActivities(Landroid/content/Intent;I)Ljava/util/List;
 
     move-result-object v2
 
     .line 261
-    .local v2, resolveInfo:Ljava/util/List;,"Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
+    .local v2, "resolveInfo":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     invoke-interface {v2}, Ljava/util/List;->size()I
 
     move-result v4
@@ -474,17 +474,17 @@
     move-result-object v3
 
     .line 270
-    .local v3, uri:Landroid/net/Uri;
+    .local v3, "uri":Landroid/net/Uri;
     new-instance v0, Landroid/content/Intent;
 
-    .end local v0           #intent:Landroid/content/Intent;
+    .end local v0    # "intent":Landroid/content/Intent;
     const-string v4, "android.intent.action.VIEW"
 
     invoke-direct {v0, v9, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
     .line 273
-    .end local v3           #uri:Landroid/net/Uri;
-    .restart local v0       #intent:Landroid/content/Intent;
+    .end local v3    # "uri":Landroid/net/Uri;
+    .restart local v0    # "intent":Landroid/content/Intent;
     :cond_0
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -557,7 +557,7 @@
 
 .method public onHttpRequestFailed(Lv2/com/playhaven/model/PHError;)V
     .locals 2
-    .parameter "e"
+    .param p1, "e"    # Lv2/com/playhaven/model/PHError;
 
     .prologue
     .line 331
@@ -590,8 +590,8 @@
 
 .method public onHttpRequestSucceeded(Ljava/nio/ByteBuffer;I)V
     .locals 2
-    .parameter "response"
-    .parameter "responseCode"
+    .param p1, "response"    # Ljava/nio/ByteBuffer;
+    .param p2, "responseCode"    # I
 
     .prologue
     .line 316
@@ -671,7 +671,7 @@
 
 .method public open(Ljava/lang/String;)V
     .locals 5
-    .parameter "url"
+    .param p1, "url"    # Ljava/lang/String;
 
     .prologue
     const/4 v4, 0x0
@@ -797,7 +797,7 @@
 
 .method public setConnection(Lv2/com/playhaven/requests/base/PHAsyncRequest;)V
     .locals 0
-    .parameter "conn"
+    .param p1, "conn"    # Lv2/com/playhaven/requests/base/PHAsyncRequest;
 
     .prologue
     .line 142
@@ -809,7 +809,7 @@
 
 .method public setContentTemplateCallback(Ljava/lang/String;)V
     .locals 0
-    .parameter "callback"
+    .param p1, "callback"    # Ljava/lang/String;
 
     .prologue
     .line 126
@@ -821,7 +821,7 @@
 
 .method public setShouldOpenFinalURL(Z)V
     .locals 0
-    .parameter "shouldOpen"
+    .param p1, "shouldOpen"    # Z
 
     .prologue
     .line 111
@@ -833,7 +833,7 @@
 
 .method public setTargetURL(Ljava/lang/String;)V
     .locals 0
-    .parameter "url"
+    .param p1, "url"    # Ljava/lang/String;
 
     .prologue
     .line 149

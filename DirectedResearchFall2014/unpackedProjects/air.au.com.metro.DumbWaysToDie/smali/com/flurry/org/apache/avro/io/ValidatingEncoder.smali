@@ -15,8 +15,8 @@
 # direct methods
 .method constructor <init>(Lcom/flurry/org/apache/avro/Schema;Lcom/flurry/org/apache/avro/io/Encoder;)V
     .locals 1
-    .parameter "schema"
-    .parameter "in"
+    .param p1, "schema"    # Lcom/flurry/org/apache/avro/Schema;
+    .param p2, "in"    # Lcom/flurry/org/apache/avro/io/Encoder;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -41,8 +41,8 @@
 
 .method constructor <init>(Lcom/flurry/org/apache/avro/io/parsing/Symbol;Lcom/flurry/org/apache/avro/io/Encoder;)V
     .locals 1
-    .parameter "root"
-    .parameter "out"
+    .param p1, "root"    # Lcom/flurry/org/apache/avro/io/parsing/Symbol;
+    .param p2, "out"    # Lcom/flurry/org/apache/avro/io/Encoder;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -71,7 +71,7 @@
 # virtual methods
 .method public configure(Lcom/flurry/org/apache/avro/io/Encoder;)Lcom/flurry/org/apache/avro/io/ValidatingEncoder;
     .locals 1
-    .parameter "encoder"
+    .param p1, "encoder"    # Lcom/flurry/org/apache/avro/io/Encoder;
 
     .prologue
     .line 69
@@ -88,8 +88,8 @@
 
 .method public doAction(Lcom/flurry/org/apache/avro/io/parsing/Symbol;Lcom/flurry/org/apache/avro/io/parsing/Symbol;)Lcom/flurry/org/apache/avro/io/parsing/Symbol;
     .locals 1
-    .parameter "input"
-    .parameter "top"
+    .param p1, "input"    # Lcom/flurry/org/apache/avro/io/parsing/Symbol;
+    .param p2, "top"    # Lcom/flurry/org/apache/avro/io/parsing/Symbol;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -123,7 +123,7 @@
 
 .method public setItemCount(J)V
     .locals 1
-    .parameter "itemCount"
+    .param p1, "itemCount"    # J
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -222,7 +222,7 @@
 
 .method public writeBoolean(Z)V
     .locals 2
-    .parameter "b"
+    .param p1, "b"    # Z
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -248,7 +248,7 @@
 
 .method public writeBytes(Ljava/nio/ByteBuffer;)V
     .locals 2
-    .parameter "bytes"
+    .param p1, "bytes"    # Ljava/nio/ByteBuffer;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -274,9 +274,9 @@
 
 .method public writeBytes([BII)V
     .locals 2
-    .parameter "bytes"
-    .parameter "start"
-    .parameter "len"
+    .param p1, "bytes"    # [B
+    .param p2, "start"    # I
+    .param p3, "len"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -302,7 +302,7 @@
 
 .method public writeDouble(D)V
     .locals 2
-    .parameter "d"
+    .param p1, "d"    # D
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -328,7 +328,7 @@
 
 .method public writeEnum(I)V
     .locals 4
-    .parameter "e"
+    .param p1, "e"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -353,7 +353,7 @@
     check-cast v0, Lcom/flurry/org/apache/avro/io/parsing/Symbol$IntCheckAction;
 
     .line 156
-    .local v0, top:Lcom/flurry/org/apache/avro/io/parsing/Symbol$IntCheckAction;
+    .local v0, "top":Lcom/flurry/org/apache/avro/io/parsing/Symbol$IntCheckAction;
     if-ltz p1, :cond_0
 
     iget v1, v0, Lcom/flurry/org/apache/avro/io/parsing/Symbol$IntCheckAction;->size:I
@@ -410,9 +410,9 @@
 
 .method public writeFixed([BII)V
     .locals 4
-    .parameter "bytes"
-    .parameter "start"
-    .parameter "len"
+    .param p1, "bytes"    # [B
+    .param p2, "start"    # I
+    .param p3, "len"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -437,7 +437,7 @@
     check-cast v0, Lcom/flurry/org/apache/avro/io/parsing/Symbol$IntCheckAction;
 
     .line 144
-    .local v0, top:Lcom/flurry/org/apache/avro/io/parsing/Symbol$IntCheckAction;
+    .local v0, "top":Lcom/flurry/org/apache/avro/io/parsing/Symbol$IntCheckAction;
     iget v1, v0, Lcom/flurry/org/apache/avro/io/parsing/Symbol$IntCheckAction;->size:I
 
     if-eq p3, v1, :cond_0
@@ -497,7 +497,7 @@
 
 .method public writeFloat(F)V
     .locals 2
-    .parameter "f"
+    .param p1, "f"    # F
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -523,7 +523,7 @@
 
 .method public writeIndex(I)V
     .locals 3
-    .parameter "unionIndex"
+    .param p1, "unionIndex"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -548,7 +548,7 @@
     check-cast v0, Lcom/flurry/org/apache/avro/io/parsing/Symbol$Alternative;
 
     .line 208
-    .local v0, top:Lcom/flurry/org/apache/avro/io/parsing/Symbol$Alternative;
+    .local v0, "top":Lcom/flurry/org/apache/avro/io/parsing/Symbol$Alternative;
     iget-object v1, p0, Lcom/flurry/org/apache/avro/io/ValidatingEncoder;->parser:Lcom/flurry/org/apache/avro/io/parsing/Parser;
 
     invoke-virtual {v0, p1}, Lcom/flurry/org/apache/avro/io/parsing/Symbol$Alternative;->getSymbol(I)Lcom/flurry/org/apache/avro/io/parsing/Symbol;
@@ -568,7 +568,7 @@
 
 .method public writeInt(I)V
     .locals 2
-    .parameter "n"
+    .param p1, "n"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -594,7 +594,7 @@
 
 .method public writeLong(J)V
     .locals 2
-    .parameter "n"
+    .param p1, "n"    # J
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -701,7 +701,7 @@
 
 .method public writeString(Lcom/flurry/org/apache/avro/util/Utf8;)V
     .locals 2
-    .parameter "utf8"
+    .param p1, "utf8"    # Lcom/flurry/org/apache/avro/util/Utf8;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -727,7 +727,7 @@
 
 .method public writeString(Ljava/lang/CharSequence;)V
     .locals 2
-    .parameter "charSequence"
+    .param p1, "charSequence"    # Ljava/lang/CharSequence;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -753,7 +753,7 @@
 
 .method public writeString(Ljava/lang/String;)V
     .locals 2
-    .parameter "str"
+    .param p1, "str"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;

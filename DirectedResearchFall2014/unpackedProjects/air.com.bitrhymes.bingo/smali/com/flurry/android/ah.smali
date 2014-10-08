@@ -13,7 +13,6 @@
 # direct methods
 .method constructor <init>(Lcom/flurry/android/bo;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 49
@@ -28,9 +27,6 @@
 # virtual methods
 .method public final onAdError(Lcom/jumptap/adtag/JtAdView;II)V
     .locals 2
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 76
@@ -48,9 +44,6 @@
 
 .method public final onFocusChange(Lcom/jumptap/adtag/JtAdView;IZ)V
     .locals 2
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 71
@@ -68,8 +61,6 @@
 
 .method public final onInterstitialDismissed(Lcom/jumptap/adtag/JtAdView;I)V
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     .line 65
@@ -96,9 +87,6 @@
 
 .method public final onNewAd(Lcom/jumptap/adtag/JtAdView;ILjava/lang/String;)V
     .locals 2
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 58
@@ -134,8 +122,6 @@
 
 .method public final onNoAdFound(Lcom/jumptap/adtag/JtAdView;I)V
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     .line 52

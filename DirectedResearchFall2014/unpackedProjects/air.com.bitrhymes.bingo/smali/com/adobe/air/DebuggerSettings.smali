@@ -40,9 +40,6 @@
 
 .method constructor <init>(ILjava/lang/String;Z)V
     .locals 1
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 31
@@ -100,7 +97,6 @@
 
 .method public setDebugerPort(I)V
     .locals 0
-    .parameter
 
     .prologue
     .line 50
@@ -112,7 +108,6 @@
 
 .method public setHost(Ljava/lang/String;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 54
@@ -124,7 +119,6 @@
 
 .method public setListen(Z)V
     .locals 0
-    .parameter
 
     .prologue
     .line 58

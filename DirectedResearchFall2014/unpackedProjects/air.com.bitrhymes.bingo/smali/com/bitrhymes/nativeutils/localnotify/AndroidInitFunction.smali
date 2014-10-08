@@ -21,8 +21,8 @@
 # virtual methods
 .method public call(Lcom/adobe/fre/FREContext;[Lcom/adobe/fre/FREObject;)Lcom/adobe/fre/FREObject;
     .locals 4
-    .parameter "context"
-    .parameter "args"
+    .param p1, "context"    # Lcom/adobe/fre/FREContext;
+    .param p2, "args"    # [Lcom/adobe/fre/FREObject;
 
     .prologue
     .line 13
@@ -33,13 +33,13 @@
     move-object v2, v0
 
     .line 14
-    .local v2, adec:Lcom/bitrhymes/nativeutils/NativeUtilsContext;
+    .local v2, "adec":Lcom/bitrhymes/nativeutils/NativeUtilsContext;
     invoke-virtual {v2}, Lcom/bitrhymes/nativeutils/NativeUtilsContext;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
     .line 15
-    .local v1, activity:Landroid/app/Activity;
+    .local v1, "activity":Landroid/app/Activity;
     iput-object v1, v2, Lcom/bitrhymes/nativeutils/NativeUtilsContext;->activity:Landroid/app/Activity;
 
     .line 16

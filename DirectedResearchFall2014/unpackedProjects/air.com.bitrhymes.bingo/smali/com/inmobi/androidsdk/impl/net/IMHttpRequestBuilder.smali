@@ -16,7 +16,6 @@
 
 .method private static a(Lcom/inmobi/androidsdk/impl/IMUserInfo;)Ljava/lang/String;
     .locals 5
-    .parameter
 
     .prologue
     .line 63
@@ -491,8 +490,6 @@
 
 .method static a(Lcom/inmobi/androidsdk/impl/IMUserInfo;Lcom/inmobi/androidsdk/impl/net/IMRequestResponseManager$ActionType;)Ljava/lang/String;
     .locals 5
-    .parameter
-    .parameter
 
     .prologue
     const-string v0, ""
@@ -693,9 +690,6 @@
 
 .method public static appendClickParams(Ljava/lang/String;Landroid/view/MotionEvent;Ljava/lang/String;)Ljava/lang/String;
     .locals 6
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const/4 v4, 0x0
@@ -1177,7 +1171,6 @@
 
 .method private static b(Lcom/inmobi/androidsdk/impl/IMUserInfo;)Ljava/lang/String;
     .locals 3
-    .parameter
 
     .prologue
     .line 150
@@ -1249,7 +1242,6 @@
 
 .method private static c(Lcom/inmobi/androidsdk/impl/IMUserInfo;)Ljava/lang/String;
     .locals 3
-    .parameter
 
     .prologue
     .line 168
@@ -1642,7 +1634,6 @@
 
 .method public static currentLocationStr(Lcom/inmobi/androidsdk/impl/IMUserInfo;)Ljava/lang/String;
     .locals 4
-    .parameter
 
     .prologue
     const-string v3, ","
@@ -1711,8 +1702,6 @@
 
 .method public static getURLDecoded(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     .line 269
@@ -1739,7 +1728,6 @@
 
 .method public static getURLEncoded(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
-    .parameter
 
     .prologue
     const-string v1, ""

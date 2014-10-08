@@ -26,8 +26,6 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m2/m2l/MraidDisplayController;Ljava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 1
@@ -45,8 +43,8 @@
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 2
-    .parameter "dialog"
-    .parameter "which"
+    .param p1, "dialog"    # Landroid/content/DialogInterface;
+    .param p2, "which"    # I
 
     .prologue
     .line 442
@@ -54,7 +52,7 @@
 
     iget-object v1, p0, Lcom/fusepowered/m2/m2l/MraidDisplayController$5;->val$imageUrl:Ljava/lang/String;
 
-    #calls: Lcom/fusepowered/m2/m2l/MraidDisplayController;->downloadImage(Ljava/lang/String;)V
+    # invokes: Lcom/fusepowered/m2/m2l/MraidDisplayController;->downloadImage(Ljava/lang/String;)V
     invoke-static {v0, v1}, Lcom/fusepowered/m2/m2l/MraidDisplayController;->access$8(Lcom/fusepowered/m2/m2l/MraidDisplayController;Ljava/lang/String;)V
 
     .line 443

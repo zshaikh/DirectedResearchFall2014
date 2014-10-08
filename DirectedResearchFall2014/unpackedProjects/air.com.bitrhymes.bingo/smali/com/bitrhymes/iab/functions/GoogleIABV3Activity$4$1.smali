@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/bitrhymes/iab/functions/GoogleIABV3Activity$4;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1
@@ -40,8 +39,8 @@
 # virtual methods
 .method public onQueryInventoryFinished(Lcom/bitrhymes/iab/util/IabResult;Lcom/bitrhymes/iab/util/Inventory;)V
     .locals 12
-    .parameter "result"
-    .parameter "inventory"
+    .param p1, "result"    # Lcom/bitrhymes/iab/util/IabResult;
+    .param p2, "inventory"    # Lcom/bitrhymes/iab/util/Inventory;
 
     .prologue
     const/4 v8, 0x0
@@ -84,7 +83,7 @@
     .line 307
     iget-object v6, p0, Lcom/bitrhymes/iab/functions/GoogleIABV3Activity$4$1;->this$1:Lcom/bitrhymes/iab/functions/GoogleIABV3Activity$4;
 
-    #getter for: Lcom/bitrhymes/iab/functions/GoogleIABV3Activity$4;->this$0:Lcom/bitrhymes/iab/functions/GoogleIABV3Activity;
+    # getter for: Lcom/bitrhymes/iab/functions/GoogleIABV3Activity$4;->this$0:Lcom/bitrhymes/iab/functions/GoogleIABV3Activity;
     invoke-static {v6}, Lcom/bitrhymes/iab/functions/GoogleIABV3Activity$4;->access$0(Lcom/bitrhymes/iab/functions/GoogleIABV3Activity$4;)Lcom/bitrhymes/iab/functions/GoogleIABV3Activity;
 
     move-result-object v6
@@ -113,7 +112,7 @@
     .line 314
     iget-object v6, p0, Lcom/bitrhymes/iab/functions/GoogleIABV3Activity$4$1;->this$1:Lcom/bitrhymes/iab/functions/GoogleIABV3Activity$4;
 
-    #getter for: Lcom/bitrhymes/iab/functions/GoogleIABV3Activity$4;->this$0:Lcom/bitrhymes/iab/functions/GoogleIABV3Activity;
+    # getter for: Lcom/bitrhymes/iab/functions/GoogleIABV3Activity$4;->this$0:Lcom/bitrhymes/iab/functions/GoogleIABV3Activity;
     invoke-static {v6}, Lcom/bitrhymes/iab/functions/GoogleIABV3Activity$4;->access$0(Lcom/bitrhymes/iab/functions/GoogleIABV3Activity$4;)Lcom/bitrhymes/iab/functions/GoogleIABV3Activity;
 
     move-result-object v6
@@ -126,13 +125,13 @@
     invoke-direct {v2}, Lorg/json/JSONArray;-><init>()V
 
     .line 317
-    .local v2, jsonArray:Lorg/json/JSONArray;
+    .local v2, "jsonArray":Lorg/json/JSONArray;
     invoke-virtual {p2}, Lcom/bitrhymes/iab/util/Inventory;->getPurchaseMap()Ljava/util/Map;
 
     move-result-object v1
 
     .line 319
-    .local v1, inventoryMap:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Lcom/bitrhymes/iab/util/Purchase;>;"
+    .local v1, "inventoryMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Lcom/bitrhymes/iab/util/Purchase;>;"
     invoke-interface {v1}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
     move-result-object v6
@@ -195,20 +194,20 @@
     check-cast v5, Ljava/lang/String;
 
     .line 320
-    .local v5, skuId:Ljava/lang/String;
+    .local v5, "skuId":Ljava/lang/String;
     invoke-virtual {p2, v5}, Lcom/bitrhymes/iab/util/Inventory;->getPurchase(Ljava/lang/String;)Lcom/bitrhymes/iab/util/Purchase;
 
     move-result-object v4
 
     .line 322
-    .local v4, purObj:Lcom/bitrhymes/iab/util/Purchase;
+    .local v4, "purObj":Lcom/bitrhymes/iab/util/Purchase;
     :try_start_0
     new-instance v3, Lorg/json/JSONObject;
 
     invoke-direct {v3}, Lorg/json/JSONObject;-><init>()V
 
     .line 323
-    .local v3, jsonObj:Lorg/json/JSONObject;
+    .local v3, "jsonObj":Lorg/json/JSONObject;
     const-string v7, "0"
 
     invoke-virtual {v4}, Lcom/bitrhymes/iab/util/Purchase;->getOriginalJson()Ljava/lang/String;
@@ -234,14 +233,14 @@
     goto :goto_1
 
     .line 326
-    .end local v3           #jsonObj:Lorg/json/JSONObject;
+    .end local v3    # "jsonObj":Lorg/json/JSONObject;
     :catch_0
     move-exception v7
 
     move-object v0, v7
 
     .line 327
-    .local v0, e:Lorg/json/JSONException;
+    .local v0, "e":Lorg/json/JSONException;
     invoke-virtual {v0}, Lorg/json/JSONException;->printStackTrace()V
 
     .line 328

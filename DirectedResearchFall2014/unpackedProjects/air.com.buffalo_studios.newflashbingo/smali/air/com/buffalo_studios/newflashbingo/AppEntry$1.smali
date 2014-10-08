@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lair/com/buffalo_studios/newflashbingo/AppEntry;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 160
@@ -39,14 +38,14 @@
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 1
-    .parameter "dialog"
-    .parameter "which"
+    .param p1, "dialog"    # Landroid/content/DialogInterface;
+    .param p2, "which"    # I
 
     .prologue
     .line 162
     iget-object v0, p0, Lair/com/buffalo_studios/newflashbingo/AppEntry$1;->this$0:Lair/com/buffalo_studios/newflashbingo/AppEntry;
 
-    #calls: Lair/com/buffalo_studios/newflashbingo/AppEntry;->launchMarketPlaceForAIR()V
+    # invokes: Lair/com/buffalo_studios/newflashbingo/AppEntry;->launchMarketPlaceForAIR()V
     invoke-static {v0}, Lair/com/buffalo_studios/newflashbingo/AppEntry;->access$000(Lair/com/buffalo_studios/newflashbingo/AppEntry;)V
 
     .line 163

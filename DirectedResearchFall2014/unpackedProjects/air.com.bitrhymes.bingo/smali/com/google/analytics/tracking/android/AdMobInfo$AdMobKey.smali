@@ -121,9 +121,7 @@
 
 .method private constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter "bowParameter"
+    .param p3, "bowParameter"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -145,7 +143,7 @@
 
 .method public static valueOf(Ljava/lang/String;)Lcom/google/analytics/tracking/android/AdMobInfo$AdMobKey;
     .locals 1
-    .parameter "name"
+    .param p0, "name"    # Ljava/lang/String;
 
     .prologue
     .line 65
@@ -155,7 +153,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "name":Ljava/lang/String;
     check-cast p0, Lcom/google/analytics/tracking/android/AdMobInfo$AdMobKey;
 
     return-object p0

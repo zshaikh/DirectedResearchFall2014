@@ -34,8 +34,8 @@
 
 .method public static create(Landroid/content/Context;Lcom/fusepowered/m2/m2l/MoPubView;)Lcom/fusepowered/m2/m2l/AdViewController;
     .locals 1
-    .parameter "context"
-    .parameter "moPubView"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "moPubView"    # Lcom/fusepowered/m2/m2l/MoPubView;
 
     .prologue
     .line 48
@@ -50,7 +50,7 @@
 
 .method public static setInstance(Lcom/fusepowered/m2/m2l/factories/AdViewControllerFactory;)V
     .locals 0
-    .parameter "factory"
+    .param p0, "factory"    # Lcom/fusepowered/m2/m2l/factories/AdViewControllerFactory;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -66,8 +66,8 @@
 # virtual methods
 .method protected internalCreate(Landroid/content/Context;Lcom/fusepowered/m2/m2l/MoPubView;)Lcom/fusepowered/m2/m2l/AdViewController;
     .locals 1
-    .parameter "context"
-    .parameter "moPubView"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "moPubView"    # Lcom/fusepowered/m2/m2l/MoPubView;
 
     .prologue
     .line 52

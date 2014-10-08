@@ -32,9 +32,7 @@
 # direct methods
 .method constructor <init>(Lcom/facebook/widget/PlacePickerFragment;Lcom/facebook/widget/PickerFragment;Landroid/content/Context;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter "$anonymous0"
+    .param p3, "$anonymous0"    # Landroid/content/Context;
 
     .prologue
     .line 1
@@ -66,7 +64,6 @@
 
 .method protected bridge synthetic getGraphObjectRowLayoutId(Lcom/facebook/model/GraphObject;)I
     .locals 1
-    .parameter
 
     .prologue
     .line 1
@@ -81,7 +78,7 @@
 
 .method protected getGraphObjectRowLayoutId(Lcom/facebook/model/GraphPlace;)I
     .locals 2
-    .parameter "graphObject"
+    .param p1, "graphObject"    # Lcom/facebook/model/GraphPlace;
 
     .prologue
     .line 363
@@ -98,7 +95,6 @@
 
 .method protected bridge synthetic getSubTitleOfGraphObject(Lcom/facebook/model/GraphObject;)Ljava/lang/CharSequence;
     .locals 1
-    .parameter
 
     .prologue
     .line 1
@@ -113,7 +109,7 @@
 
 .method protected getSubTitleOfGraphObject(Lcom/facebook/model/GraphPlace;)Ljava/lang/CharSequence;
     .locals 8
-    .parameter "graphObject"
+    .param p1, "graphObject"    # Lcom/facebook/model/GraphPlace;
 
     .prologue
     const/4 v7, 0x1
@@ -126,7 +122,7 @@
     move-result-object v0
 
     .line 348
-    .local v0, category:Ljava/lang/String;
+    .local v0, "category":Ljava/lang/String;
     const-string v3, "were_here_count"
 
     invoke-interface {p1, v3}, Lcom/facebook/model/GraphPlace;->getProperty(Ljava/lang/String;)Ljava/lang/Object;
@@ -136,11 +132,11 @@
     check-cast v2, Ljava/lang/Integer;
 
     .line 350
-    .local v2, wereHereCount:Ljava/lang/Integer;
+    .local v2, "wereHereCount":Ljava/lang/Integer;
     const/4 v1, 0x0
 
     .line 351
-    .local v1, result:Ljava/lang/String;
+    .local v1, "result":Ljava/lang/String;
     if-eqz v0, :cond_1
 
     if-eqz v2, :cond_1

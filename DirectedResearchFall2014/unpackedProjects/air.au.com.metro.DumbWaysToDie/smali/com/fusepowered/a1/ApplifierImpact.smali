@@ -4,9 +4,9 @@
 
 # interfaces
 .implements Lcom/fusepowered/a1/cache/IApplifierImpactCacheListener;
-.implements Lcom/fusepowered/a1/webapp/IApplifierImpactWebDataListener;
-.implements Lcom/fusepowered/a1/webapp/IApplifierImpactWebBrigeListener;
 .implements Lcom/fusepowered/a1/view/IApplifierImpactMainViewListener;
+.implements Lcom/fusepowered/a1/webapp/IApplifierImpactWebBrigeListener;
+.implements Lcom/fusepowered/a1/webapp/IApplifierImpactWebDataListener;
 
 
 # annotations
@@ -209,8 +209,8 @@
 
 .method public constructor <init>(Landroid/app/Activity;Ljava/lang/String;)V
     .locals 2
-    .parameter "activity"
-    .parameter "gameId"
+    .param p1, "activity"    # Landroid/app/Activity;
+    .param p2, "gameId"    # Ljava/lang/String;
 
     .prologue
     const/4 v1, 0x0
@@ -256,9 +256,9 @@
 
 .method public constructor <init>(Landroid/app/Activity;Ljava/lang/String;Lcom/fusepowered/a1/IApplifierImpactListener;)V
     .locals 2
-    .parameter "activity"
-    .parameter "gameId"
-    .parameter "listener"
+    .param p1, "activity"    # Landroid/app/Activity;
+    .param p2, "gameId"    # Ljava/lang/String;
+    .param p3, "listener"    # Lcom/fusepowered/a1/IApplifierImpactListener;
 
     .prologue
     const/4 v1, 0x0
@@ -304,8 +304,6 @@
 
 .method static synthetic access$0(Lcom/fusepowered/a1/ApplifierImpact;Z)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 60
@@ -316,7 +314,6 @@
 
 .method static synthetic access$1(Lcom/fusepowered/a1/ApplifierImpact;)Lcom/fusepowered/a1/IApplifierImpactListener;
     .locals 1
-    .parameter
 
     .prologue
     .line 70
@@ -327,7 +324,6 @@
 
 .method static synthetic access$2(Lcom/fusepowered/a1/ApplifierImpact;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 731
@@ -338,7 +334,6 @@
 
 .method static synthetic access$4(Lcom/fusepowered/a1/ApplifierImpact;)Landroid/app/AlertDialog;
     .locals 1
-    .parameter
 
     .prologue
     .line 64
@@ -349,8 +344,6 @@
 
 .method static synthetic access$5(Lcom/fusepowered/a1/ApplifierImpact;Z)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 61
@@ -361,7 +354,6 @@
 
 .method static synthetic access$6(Lcom/fusepowered/a1/ApplifierImpact;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 599
@@ -372,7 +364,6 @@
 
 .method static synthetic access$7(Lcom/fusepowered/a1/ApplifierImpact;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 717
@@ -444,13 +435,13 @@
     invoke-direct {v0, p0, v1}, Lcom/fusepowered/a1/ApplifierImpact$ApplifierImpactCloseRunner;-><init>(Lcom/fusepowered/a1/ApplifierImpact;Lcom/fusepowered/a1/ApplifierImpact$ApplifierImpactCloseRunner;)V
 
     .line 603
-    .local v0, closeRunner:Lcom/fusepowered/a1/ApplifierImpact$ApplifierImpactCloseRunner;
+    .local v0, "closeRunner":Lcom/fusepowered/a1/ApplifierImpact$ApplifierImpactCloseRunner;
     sget-object v1, Lcom/fusepowered/a1/properties/ApplifierImpactProperties;->CURRENT_ACTIVITY:Landroid/app/Activity;
 
     invoke-virtual {v1, v0}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
 
     .line 605
-    .end local v0           #closeRunner:Lcom/fusepowered/a1/ApplifierImpact$ApplifierImpactCloseRunner;
+    .end local v0    # "closeRunner":Lcom/fusepowered/a1/ApplifierImpact$ApplifierImpactCloseRunner;
     :cond_0
     return-void
 .end method
@@ -500,9 +491,9 @@
 
 .method private init(Landroid/app/Activity;Ljava/lang/String;Lcom/fusepowered/a1/IApplifierImpactListener;)V
     .locals 4
-    .parameter "activity"
-    .parameter "gameId"
-    .parameter "listener"
+    .param p1, "activity"    # Landroid/app/Activity;
+    .param p2, "gameId"    # Ljava/lang/String;
+    .param p3, "listener"    # Lcom/fusepowered/a1/IApplifierImpactListener;
 
     .prologue
     .line 564
@@ -540,7 +531,7 @@
     move-result v1
 
     .line 571
-    .local v1, gameIdInteger:I
+    .local v1, "gameIdInteger":I
     if-gtz v1, :cond_3
 
     .line 572
@@ -555,14 +546,14 @@
     .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 574
-    .end local v1           #gameIdInteger:I
+    .end local v1    # "gameIdInteger":I
     :catch_0
     move-exception v2
 
     move-object v0, v2
 
     .line 575
-    .local v0, e:Ljava/lang/NumberFormatException;
+    .local v0, "e":Ljava/lang/NumberFormatException;
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
     const-string v3, "gameId does not parse as an integer"
@@ -572,8 +563,8 @@
     throw v2
 
     .line 579
-    .end local v0           #e:Ljava/lang/NumberFormatException;
-    .restart local v1       #gameIdInteger:I
+    .end local v0    # "e":Ljava/lang/NumberFormatException;
+    .restart local v1    # "gameIdInteger":I
     :cond_3
     sput-object p0, Lcom/fusepowered/a1/ApplifierImpact;->instance:Lcom/fusepowered/a1/ApplifierImpact;
 
@@ -707,7 +698,7 @@
 
 .method private open(Ljava/lang/String;)V
     .locals 7
-    .parameter "view"
+    .param p1, "view"    # Ljava/lang/String;
 
     .prologue
     const/4 v5, 0x1
@@ -720,13 +711,13 @@
     move-result-object v1
 
     .line 609
-    .local v1, dataOk:Ljava/lang/Boolean;
+    .local v1, "dataOk":Ljava/lang/Boolean;
     new-instance v0, Lorg/json/JSONObject;
 
     invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
 
     .line 612
-    .local v0, data:Lorg/json/JSONObject;
+    .local v0, "data":Lorg/json/JSONObject;
     :try_start_0
     const-string v3, "action"
 
@@ -884,7 +875,7 @@
     move-object v2, v3
 
     .line 617
-    .local v2, e:Ljava/lang/Exception;
+    .local v2, "e":Ljava/lang/Exception;
     const/4 v3, 0x0
 
     invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -896,7 +887,7 @@
 
 .method private openPlayStoreAsIntent(Ljava/lang/String;)V
     .locals 6
-    .parameter "playStoreId"
+    .param p1, "playStoreId"    # Ljava/lang/String;
 
     .prologue
     .line 538
@@ -965,7 +956,7 @@
     move-object v0, v1
 
     .line 545
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v1, "Couldn\'t start PlayStore intent!"
 
     invoke-static {v1, p0}, Lcom/fusepowered/a1/ApplifierImpactUtils;->Log(Ljava/lang/String;Ljava/lang/Object;)V
@@ -975,7 +966,7 @@
 
 .method private openPlayStoreInBrowser(Ljava/lang/String;)V
     .locals 5
-    .parameter "url"
+    .param p1, "url"    # Ljava/lang/String;
 
     .prologue
     .line 551
@@ -1030,7 +1021,7 @@
     move-object v0, v1
 
     .line 558
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v1, "Couldn\'t start browser intent!"
 
     invoke-static {v1, p0}, Lcom/fusepowered/a1/ApplifierImpactUtils;->Log(Ljava/lang/String;Ljava/lang/Object;)V
@@ -1053,7 +1044,7 @@
 
 .method private playVideo(J)V
     .locals 4
-    .parameter "delay"
+    .param p1, "delay"    # J
 
     .prologue
     .line 674
@@ -1074,7 +1065,7 @@
     invoke-direct {v0}, Ljava/util/Timer;-><init>()V
 
     .line 678
-    .local v0, delayTimer:Ljava/util/Timer;
+    .local v0, "delayTimer":Ljava/util/Timer;
     new-instance v2, Lcom/fusepowered/a1/ApplifierImpact$3;
 
     invoke-direct {v2, p0}, Lcom/fusepowered/a1/ApplifierImpact$3;-><init>(Lcom/fusepowered/a1/ApplifierImpact;)V
@@ -1082,7 +1073,7 @@
     invoke-virtual {v0, v2, p1, p2}, Ljava/util/Timer;->schedule(Ljava/util/TimerTask;J)V
 
     .line 693
-    .end local v0           #delayTimer:Ljava/util/Timer;
+    .end local v0    # "delayTimer":Ljava/util/Timer;
     :cond_0
     :goto_0
     return-void
@@ -1096,7 +1087,7 @@
     invoke-direct {v1, p0, v2}, Lcom/fusepowered/a1/ApplifierImpact$ApplifierImpactPlayVideoRunner;-><init>(Lcom/fusepowered/a1/ApplifierImpact;Lcom/fusepowered/a1/ApplifierImpact$ApplifierImpactPlayVideoRunner;)V
 
     .line 690
-    .local v1, playVideoRunner:Lcom/fusepowered/a1/ApplifierImpact$ApplifierImpactPlayVideoRunner;
+    .local v1, "playVideoRunner":Lcom/fusepowered/a1/ApplifierImpact$ApplifierImpactPlayVideoRunner;
     sget-object v2, Lcom/fusepowered/a1/properties/ApplifierImpactProperties;->CURRENT_ACTIVITY:Landroid/app/Activity;
 
     if-eqz v2, :cond_0
@@ -1138,7 +1129,7 @@
 
 .method public static setDebugMode(Z)V
     .locals 1
-    .parameter "debugModeEnabled"
+    .param p0, "debugModeEnabled"    # Z
 
     .prologue
     .line 93
@@ -1154,7 +1145,7 @@
 
 .method public static setTestDeveloperId(Ljava/lang/String;)V
     .locals 0
-    .parameter "testDeveloperId"
+    .param p0, "testDeveloperId"    # Ljava/lang/String;
 
     .prologue
     .line 101
@@ -1166,7 +1157,7 @@
 
 .method public static setTestMode(Z)V
     .locals 1
-    .parameter "testModeEnabled"
+    .param p0, "testModeEnabled"    # Z
 
     .prologue
     .line 97
@@ -1182,7 +1173,7 @@
 
 .method public static setTestOptionsId(Ljava/lang/String;)V
     .locals 0
-    .parameter "testOptionsId"
+    .param p0, "testOptionsId"    # Ljava/lang/String;
 
     .prologue
     .line 105
@@ -1239,11 +1230,11 @@
     invoke-direct {v2, v3, v4}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
     .line 697
-    .local v2, newIntent:Landroid/content/Intent;
-    const/high16 v1, 0x1001
+    .local v2, "newIntent":Landroid/content/Intent;
+    const/high16 v1, 0x10010000
 
     .line 699
-    .local v1, flags:I
+    .local v1, "flags":I
     sget-object v3, Lcom/fusepowered/a1/properties/ApplifierImpactProperties;->IMPACT_DEVELOPER_OPTIONS:Ljava/util/Map;
 
     if-eqz v3, :cond_0
@@ -1281,7 +1272,7 @@
     if-eqz v3, :cond_0
 
     .line 702
-    const/high16 v1, 0x1000
+    const/high16 v1, 0x10000000
 
     .line 704
     :cond_0
@@ -1307,7 +1298,7 @@
     move-object v0, v3
 
     .line 710
-    .local v0, e:Landroid/content/ActivityNotFoundException;
+    .local v0, "e":Landroid/content/ActivityNotFoundException;
     new-instance v3, Ljava/lang/StringBuilder;
 
     const-string v4, "Could not find activity: "
@@ -1331,14 +1322,14 @@
     goto :goto_0
 
     .line 712
-    .end local v0           #e:Landroid/content/ActivityNotFoundException;
+    .end local v0    # "e":Landroid/content/ActivityNotFoundException;
     :catch_1
     move-exception v3
 
     move-object v0, v3
 
     .line 713
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     new-instance v3, Ljava/lang/StringBuilder;
 
     const-string v4, "Weird error: "
@@ -1513,7 +1504,7 @@
 
 .method public changeActivity(Landroid/app/Activity;)V
     .locals 3
-    .parameter "activity"
+    .param p1, "activity"    # Landroid/app/Activity;
 
     .prologue
     .line 120
@@ -1581,7 +1572,7 @@
     const/4 v0, 0x0
 
     .line 133
-    .local v0, view:Ljava/lang/String;
+    .local v0, "view":Ljava/lang/String;
     sget-object v1, Lcom/fusepowered/a1/ApplifierImpact;->mainview:Lcom/fusepowered/a1/view/ApplifierImpactMainView;
 
     if-eqz v1, :cond_3
@@ -1630,7 +1621,7 @@
     goto :goto_0
 
     .line 148
-    .end local v0           #view:Ljava/lang/String;
+    .end local v0    # "view":Ljava/lang/String;
     :cond_4
     sput-object p1, Lcom/fusepowered/a1/properties/ApplifierImpactProperties;->BASE_ACTIVITY:Landroid/app/Activity;
 
@@ -1711,7 +1702,7 @@
 
 .method public getRewardItemDetailsWithKey(Ljava/lang/String;)Ljava/util/Map;
     .locals 3
-    .parameter "rewardItemKey"
+    .param p1, "rewardItemKey"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1734,7 +1725,7 @@
     move-result-object v0
 
     .line 296
-    .local v0, rewardItem:Lcom/fusepowered/a1/campaign/ApplifierImpactRewardItem;
+    .local v0, "rewardItem":Lcom/fusepowered/a1/campaign/ApplifierImpactRewardItem;
     if-eqz v0, :cond_0
 
     .line 297
@@ -1812,13 +1803,13 @@
     move-result-object v2
 
     .line 248
-    .local v2, rewardItems:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/fusepowered/a1/campaign/ApplifierImpactRewardItem;>;"
+    .local v2, "rewardItems":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/fusepowered/a1/campaign/ApplifierImpactRewardItem;>;"
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     .line 249
-    .local v1, rewardItemKeys:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
+    .local v1, "rewardItemKeys":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
@@ -1833,14 +1824,14 @@
     move-object v3, v1
 
     .line 256
-    .end local v1           #rewardItemKeys:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
-    .end local v2           #rewardItems:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/fusepowered/a1/campaign/ApplifierImpactRewardItem;>;"
+    .end local v1    # "rewardItemKeys":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
+    .end local v2    # "rewardItems":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/fusepowered/a1/campaign/ApplifierImpactRewardItem;>;"
     :goto_1
     return-object v3
 
     .line 249
-    .restart local v1       #rewardItemKeys:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
-    .restart local v2       #rewardItems:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/fusepowered/a1/campaign/ApplifierImpactRewardItem;>;"
+    .restart local v1    # "rewardItemKeys":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
+    .restart local v2    # "rewardItems":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/fusepowered/a1/campaign/ApplifierImpactRewardItem;>;"
     :cond_0
     invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -1849,7 +1840,7 @@
     check-cast v0, Lcom/fusepowered/a1/campaign/ApplifierImpactRewardItem;
 
     .line 250
-    .local v0, rewardItem:Lcom/fusepowered/a1/campaign/ApplifierImpactRewardItem;
+    .local v0, "rewardItem":Lcom/fusepowered/a1/campaign/ApplifierImpactRewardItem;
     invoke-virtual {v0}, Lcom/fusepowered/a1/campaign/ApplifierImpactRewardItem;->getKey()Ljava/lang/String;
 
     move-result-object v4
@@ -1859,9 +1850,9 @@
     goto :goto_0
 
     .line 256
-    .end local v0           #rewardItem:Lcom/fusepowered/a1/campaign/ApplifierImpactRewardItem;
-    .end local v1           #rewardItemKeys:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
-    .end local v2           #rewardItems:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/fusepowered/a1/campaign/ApplifierImpactRewardItem;>;"
+    .end local v0    # "rewardItem":Lcom/fusepowered/a1/campaign/ApplifierImpactRewardItem;
+    .end local v1    # "rewardItemKeys":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
+    .end local v2    # "rewardItems":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/fusepowered/a1/campaign/ApplifierImpactRewardItem;>;"
     :cond_1
     const/4 v3, 0x0
 
@@ -1946,7 +1937,7 @@
 
 .method public onCampaignReady(Lcom/fusepowered/a1/campaign/ApplifierImpactCampaignHandler;)V
     .locals 2
-    .parameter "campaignHandler"
+    .param p1, "campaignHandler"    # Lcom/fusepowered/a1/campaign/ApplifierImpactCampaignHandler;
 
     .prologue
     .line 349
@@ -2017,7 +2008,7 @@
 
 .method public onCloseImpactView(Lorg/json/JSONObject;)V
     .locals 0
-    .parameter "data"
+    .param p1, "data"    # Lorg/json/JSONObject;
 
     .prologue
     .line 460
@@ -2029,7 +2020,7 @@
 
 .method public onMainViewAction(Lcom/fusepowered/a1/view/ApplifierImpactMainView$ApplifierImpactMainViewAction;)V
     .locals 3
-    .parameter "action"
+    .param p1, "action"    # Lcom/fusepowered/a1/view/ApplifierImpactMainView$ApplifierImpactMainViewAction;
 
     .prologue
     .line 311
@@ -2188,7 +2179,7 @@
 
 .method public onOpenPlayStore(Lorg/json/JSONObject;)V
     .locals 8
-    .parameter "data"
+    .param p1, "data"    # Lorg/json/JSONObject;
 
     .prologue
     const-string v7, "iTunesId"
@@ -2216,11 +2207,11 @@
     const/4 v3, 0x0
 
     .line 495
-    .local v3, playStoreId:Ljava/lang/String;
+    .local v3, "playStoreId":Ljava/lang/String;
     const/4 v1, 0x0
 
     .line 496
-    .local v1, clickUrl:Ljava/lang/String;
+    .local v1, "clickUrl":Ljava/lang/String;
     const/4 v4, 0x0
 
     invoke-static {v4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -2228,7 +2219,7 @@
     move-result-object v0
 
     .line 498
-    .local v0, bypassAppSheet:Ljava/lang/Boolean;
+    .local v0, "bypassAppSheet":Ljava/lang/Boolean;
     const-string v4, "iTunesId"
 
     invoke-virtual {p1, v7}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
@@ -2308,24 +2299,24 @@
     invoke-direct {p0, v3}, Lcom/fusepowered/a1/ApplifierImpact;->openPlayStoreAsIntent(Ljava/lang/String;)V
 
     .line 532
-    .end local v0           #bypassAppSheet:Ljava/lang/Boolean;
-    .end local v1           #clickUrl:Ljava/lang/String;
-    .end local v3           #playStoreId:Ljava/lang/String;
+    .end local v0    # "bypassAppSheet":Ljava/lang/Boolean;
+    .end local v1    # "clickUrl":Ljava/lang/String;
+    .end local v3    # "playStoreId":Ljava/lang/String;
     :cond_3
     :goto_3
     return-void
 
     .line 502
-    .restart local v0       #bypassAppSheet:Ljava/lang/Boolean;
-    .restart local v1       #clickUrl:Ljava/lang/String;
-    .restart local v3       #playStoreId:Ljava/lang/String;
+    .restart local v0    # "bypassAppSheet":Ljava/lang/Boolean;
+    .restart local v1    # "clickUrl":Ljava/lang/String;
+    .restart local v3    # "playStoreId":Ljava/lang/String;
     :catch_0
     move-exception v4
 
     move-object v2, v4
 
     .line 503
-    .local v2, e:Ljava/lang/Exception;
+    .local v2, "e":Ljava/lang/Exception;
     const-string v4, "Could not fetch playStoreId"
 
     invoke-static {v4, p0}, Lcom/fusepowered/a1/ApplifierImpactUtils;->Log(Ljava/lang/String;Ljava/lang/Object;)V
@@ -2333,14 +2324,14 @@
     goto :goto_0
 
     .line 511
-    .end local v2           #e:Ljava/lang/Exception;
+    .end local v2    # "e":Ljava/lang/Exception;
     :catch_1
     move-exception v4
 
     move-object v2, v4
 
     .line 512
-    .restart local v2       #e:Ljava/lang/Exception;
+    .restart local v2    # "e":Ljava/lang/Exception;
     const-string v4, "Could not fetch clickUrl"
 
     invoke-static {v4, p0}, Lcom/fusepowered/a1/ApplifierImpactUtils;->Log(Ljava/lang/String;Ljava/lang/Object;)V
@@ -2348,14 +2339,14 @@
     goto :goto_1
 
     .line 520
-    .end local v2           #e:Ljava/lang/Exception;
+    .end local v2    # "e":Ljava/lang/Exception;
     :catch_2
     move-exception v4
 
     move-object v2, v4
 
     .line 521
-    .restart local v2       #e:Ljava/lang/Exception;
+    .restart local v2    # "e":Ljava/lang/Exception;
     const-string v4, "Could not fetch bypassAppSheet"
 
     invoke-static {v4, p0}, Lcom/fusepowered/a1/ApplifierImpactUtils;->Log(Ljava/lang/String;Ljava/lang/Object;)V
@@ -2363,7 +2354,7 @@
     goto :goto_2
 
     .line 528
-    .end local v2           #e:Ljava/lang/Exception;
+    .end local v2    # "e":Ljava/lang/Exception;
     :cond_4
     if-eqz v1, :cond_3
 
@@ -2375,7 +2366,7 @@
 
 .method public onPauseVideo(Lorg/json/JSONObject;)V
     .locals 0
-    .parameter "data"
+    .param p1, "data"    # Lorg/json/JSONObject;
 
     .prologue
     .line 456
@@ -2384,7 +2375,7 @@
 
 .method public onPlayVideo(Lorg/json/JSONObject;)V
     .locals 5
-    .parameter "data"
+    .param p1, "data"    # Lorg/json/JSONObject;
 
     .prologue
     const-string v4, "campaignId"
@@ -2407,7 +2398,7 @@
     const/4 v0, 0x0
 
     .line 422
-    .local v0, campaignId:Ljava/lang/String;
+    .local v0, "campaignId":Ljava/lang/String;
     :try_start_0
     const-string v3, "campaignId"
 
@@ -2479,7 +2470,7 @@
     move-result-object v2
 
     .line 440
-    .local v2, rewatch:Ljava/lang/Boolean;
+    .local v2, "rewatch":Ljava/lang/Boolean;
     :try_start_1
     const-string v3, "rewatch"
 
@@ -2561,20 +2552,20 @@
     invoke-direct {p0}, Lcom/fusepowered/a1/ApplifierImpact;->playVideo()V
 
     .line 452
-    .end local v0           #campaignId:Ljava/lang/String;
-    .end local v2           #rewatch:Ljava/lang/Boolean;
+    .end local v0    # "campaignId":Ljava/lang/String;
+    .end local v2    # "rewatch":Ljava/lang/Boolean;
     :cond_2
     return-void
 
     .line 424
-    .restart local v0       #campaignId:Ljava/lang/String;
+    .restart local v0    # "campaignId":Ljava/lang/String;
     :catch_0
     move-exception v3
 
     move-object v1, v3
 
     .line 425
-    .local v1, e:Ljava/lang/Exception;
+    .local v1, "e":Ljava/lang/Exception;
     const-string v3, "Could not get campaignId"
 
     invoke-static {v3, p0}, Lcom/fusepowered/a1/ApplifierImpactUtils;->Log(Ljava/lang/String;Ljava/lang/Object;)V
@@ -2582,8 +2573,8 @@
     goto/16 :goto_0
 
     .line 442
-    .end local v1           #e:Ljava/lang/Exception;
-    .restart local v2       #rewatch:Ljava/lang/Boolean;
+    .end local v1    # "e":Ljava/lang/Exception;
+    .restart local v2    # "rewatch":Ljava/lang/Boolean;
     :catch_1
     move-exception v3
 
@@ -2592,7 +2583,7 @@
 
 .method public onWebAppInitComplete(Lorg/json/JSONObject;)V
     .locals 5
-    .parameter "data"
+    .param p1, "data"    # Lorg/json/JSONObject;
 
     .prologue
     const/4 v4, 0x1
@@ -2611,7 +2602,7 @@
     move-result-object v0
 
     .line 469
-    .local v0, dataOk:Ljava/lang/Boolean;
+    .local v0, "dataOk":Ljava/lang/Boolean;
     invoke-virtual {p0}, Lcom/fusepowered/a1/ApplifierImpact;->canShowCampaigns()Z
 
     move-result v3
@@ -2624,7 +2615,7 @@
     invoke-direct {v2}, Lorg/json/JSONObject;-><init>()V
 
     .line 473
-    .local v2, setViewData:Lorg/json/JSONObject;
+    .local v2, "setViewData":Lorg/json/JSONObject;
     :try_start_0
     const-string v3, "action"
 
@@ -2666,19 +2657,19 @@
     invoke-direct {p0}, Lcom/fusepowered/a1/ApplifierImpact;->sendImpactReadyEvent()V
 
     .line 485
-    .end local v2           #setViewData:Lorg/json/JSONObject;
+    .end local v2    # "setViewData":Lorg/json/JSONObject;
     :cond_0
     return-void
 
     .line 476
-    .restart local v2       #setViewData:Lorg/json/JSONObject;
+    .restart local v2    # "setViewData":Lorg/json/JSONObject;
     :catch_0
     move-exception v3
 
     move-object v1, v3
 
     .line 477
-    .local v1, e:Ljava/lang/Exception;
+    .local v1, "e":Ljava/lang/Exception;
     const/4 v3, 0x0
 
     invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -2700,15 +2691,15 @@
     const/4 v2, 0x0
 
     .line 367
-    .local v2, jsonData:Lorg/json/JSONObject;
+    .local v2, "jsonData":Lorg/json/JSONObject;
     const/4 v0, 0x0
 
     .line 368
-    .local v0, dataFetchFailed:Z
+    .local v0, "dataFetchFailed":Z
     const/4 v3, 0x1
 
     .line 370
-    .local v3, sdkIsCurrent:Z
+    .local v3, "sdkIsCurrent":Z
     sget-object v4, Lcom/fusepowered/a1/ApplifierImpact;->webdata:Lcom/fusepowered/a1/webapp/ApplifierImpactWebData;
 
     invoke-virtual {v4}, Lcom/fusepowered/a1/webapp/ApplifierImpactWebData;->getData()Lorg/json/JSONObject;
@@ -2842,20 +2833,20 @@
     move-object v1, v4
 
     .line 375
-    .local v1, e:Ljava/lang/Exception;
+    .local v1, "e":Ljava/lang/Exception;
     const/4 v0, 0x1
 
     goto :goto_0
 
     .line 383
-    .end local v1           #e:Ljava/lang/Exception;
+    .end local v1    # "e":Ljava/lang/Exception;
     :catch_1
     move-exception v4
 
     move-object v1, v4
 
     .line 384
-    .restart local v1       #e:Ljava/lang/Exception;
+    .restart local v1    # "e":Ljava/lang/Exception;
     const/4 v0, 0x1
 
     goto :goto_1
@@ -2922,7 +2913,7 @@
 
 .method public setImpactListener(Lcom/fusepowered/a1/IApplifierImpactListener;)V
     .locals 0
-    .parameter "listener"
+    .param p1, "listener"    # Lcom/fusepowered/a1/IApplifierImpactListener;
 
     .prologue
     .line 116
@@ -2934,7 +2925,7 @@
 
 .method public setRewardItemKey(Ljava/lang/String;)Z
     .locals 2
-    .parameter "rewardItemKey"
+    .param p1, "rewardItemKey"    # Ljava/lang/String;
 
     .prologue
     .line 274
@@ -2952,7 +2943,7 @@
     move-result-object v0
 
     .line 277
-    .local v0, rewardItem:Lcom/fusepowered/a1/campaign/ApplifierImpactRewardItem;
+    .local v0, "rewardItem":Lcom/fusepowered/a1/campaign/ApplifierImpactRewardItem;
     if-eqz v0, :cond_0
 
     .line 278
@@ -2964,7 +2955,7 @@
     const/4 v1, 0x1
 
     .line 283
-    .end local v0           #rewardItem:Lcom/fusepowered/a1/campaign/ApplifierImpactRewardItem;
+    .end local v0    # "rewardItem":Lcom/fusepowered/a1/campaign/ApplifierImpactRewardItem;
     :goto_0
     return v1
 
@@ -3011,7 +3002,6 @@
 
 .method public showImpact(Ljava/util/Map;)Z
     .locals 6
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -3024,7 +3014,7 @@
     .end annotation
 
     .prologue
-    .local p1, options:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
+    .local p1, "options":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
     const/4 v3, 0x0
 
     const-string v5, "noOfferScreen"
@@ -3104,11 +3094,11 @@
     check-cast v0, Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;
 
     .line 170
-    .local v0, selectedCampaign:Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;
+    .local v0, "selectedCampaign":Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;
     sput-object v0, Lcom/fusepowered/a1/properties/ApplifierImpactProperties;->SELECTED_CAMPAIGN:Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;
 
     .line 173
-    .end local v0           #selectedCampaign:Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;
+    .end local v0    # "selectedCampaign":Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;
     :cond_0
     sget-object v1, Lcom/fusepowered/a1/properties/ApplifierImpactProperties;->IMPACT_DEVELOPER_OPTIONS:Ljava/util/Map;
 

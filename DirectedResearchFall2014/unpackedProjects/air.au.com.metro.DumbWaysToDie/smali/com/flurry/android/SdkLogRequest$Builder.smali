@@ -66,7 +66,6 @@
 
 .method private constructor <init>(B)V
     .locals 1
-    .parameter
 
     .prologue
     .line 144
@@ -563,7 +562,6 @@
 
 .method public setAdReportedIds(Ljava/util/List;)Lcom/flurry/android/SdkLogRequest$Builder;
     .locals 2
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -603,7 +601,6 @@
 
 .method public setAgentTimestamp(J)Lcom/flurry/android/SdkLogRequest$Builder;
     .locals 3
-    .parameter
 
     .prologue
     const/4 v2, 0x3
@@ -639,7 +636,6 @@
 
 .method public setApiKey(Ljava/lang/CharSequence;)Lcom/flurry/android/SdkLogRequest$Builder;
     .locals 3
-    .parameter
 
     .prologue
     const/4 v2, 0x0
@@ -671,7 +667,6 @@
 
 .method public setSdkAdLogs(Ljava/util/List;)Lcom/flurry/android/SdkLogRequest$Builder;
     .locals 3
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -713,7 +708,6 @@
 
 .method public setTestDevice(Z)Lcom/flurry/android/SdkLogRequest$Builder;
     .locals 3
-    .parameter
 
     .prologue
     const/4 v2, 0x4

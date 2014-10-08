@@ -38,7 +38,7 @@
 
     iget-object v0, p0, Lcom/google/android/apps/analytics/GoogleAnalyticsTracker$DispatcherCallbacks;->this$0:Lcom/google/android/apps/analytics/GoogleAnalyticsTracker;
 
-    #getter for: Lcom/google/android/apps/analytics/GoogleAnalyticsTracker;->handler:Landroid/os/Handler;
+    # getter for: Lcom/google/android/apps/analytics/GoogleAnalyticsTracker;->handler:Landroid/os/Handler;
     invoke-static {v0}, Lcom/google/android/apps/analytics/GoogleAnalyticsTracker;->access$000(Lcom/google/android/apps/analytics/GoogleAnalyticsTracker;)Landroid/os/Handler;
 
     move-result-object v0
@@ -57,7 +57,7 @@
 
     iget-object v0, p0, Lcom/google/android/apps/analytics/GoogleAnalyticsTracker$DispatcherCallbacks;->this$0:Lcom/google/android/apps/analytics/GoogleAnalyticsTracker;
 
-    #getter for: Lcom/google/android/apps/analytics/GoogleAnalyticsTracker;->hitStore:Lcom/google/android/apps/analytics/HitStore;
+    # getter for: Lcom/google/android/apps/analytics/GoogleAnalyticsTracker;->hitStore:Lcom/google/android/apps/analytics/HitStore;
     invoke-static {v0}, Lcom/google/android/apps/analytics/GoogleAnalyticsTracker;->access$100(Lcom/google/android/apps/analytics/GoogleAnalyticsTracker;)Lcom/google/android/apps/analytics/HitStore;
 
     move-result-object v0

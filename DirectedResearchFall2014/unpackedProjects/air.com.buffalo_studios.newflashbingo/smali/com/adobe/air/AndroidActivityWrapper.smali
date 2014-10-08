@@ -220,7 +220,6 @@
 
 .method private constructor <init>(Landroid/app/Activity;)V
     .locals 4
-    .parameter
 
     .prologue
     const/4 v3, 0x1
@@ -416,7 +415,6 @@
 
 .method public static CreateAndroidActivityWrapper(Landroid/app/Activity;)Lcom/adobe/air/AndroidActivityWrapper;
     .locals 1
-    .parameter
 
     .prologue
     .line 202
@@ -435,8 +433,6 @@
 
 .method public static CreateAndroidActivityWrapper(Landroid/app/Activity;Ljava/lang/Boolean;)Lcom/adobe/air/AndroidActivityWrapper;
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 207
@@ -534,13 +530,6 @@
 
 .method private LaunchApplication(Landroid/app/Activity;Lcom/adobe/air/AIRWindowSurfaceView;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZ)V
     .locals 13
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 835
@@ -1184,7 +1173,6 @@
 
 .method private SetVisible(Z)V
     .locals 2
-    .parameter
 
     .prologue
     .line 1220
@@ -1591,9 +1579,6 @@
 
 .method private callActivityResultListeners(IILandroid/content/Intent;)V
     .locals 3
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 1784
@@ -1710,7 +1695,6 @@
 
 .method private callActivityStateListeners(Landroid/content/res/Configuration;)V
     .locals 3
-    .parameter
 
     .prologue
     .line 1738
@@ -1768,7 +1752,6 @@
 
 .method private callInputEventListeners(Landroid/view/KeyEvent;)Z
     .locals 5
-    .parameter
 
     .prologue
     const/4 v4, 0x0
@@ -1864,7 +1847,6 @@
 
 .method private callInputEventListeners(Landroid/view/MotionEvent;)Z
     .locals 5
-    .parameter
 
     .prologue
     const/4 v4, 0x0
@@ -2129,19 +2111,19 @@
 
     invoke-direct {v1, v2, v3, v4}, Ljava/net/ServerSocket;-><init>(IILjava/net/InetAddress;)V
     :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_2
     .catch Ljava/lang/SecurityException; {:try_start_3 .. :try_end_3} :catch_4
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_6
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
     .line 1480
     :try_start_4
     invoke-virtual {v1}, Ljava/net/ServerSocket;->close()V
     :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_1
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_b
     .catch Ljava/lang/SecurityException; {:try_start_4 .. :try_end_4} :catch_a
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_9
+    .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
     .line 1497
     if-eqz v1, :cond_3
@@ -2496,7 +2478,6 @@
 
 .method private initializeAndroidAppVars(Landroid/content/pm/ApplicationInfo;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 617
@@ -2640,8 +2621,6 @@
 
 .method private parseArgs(Landroid/app/Activity;[Ljava/lang/String;)V
     .locals 11
-    .parameter
-    .parameter
 
     .prologue
     const-string v7, "false"
@@ -2928,7 +2907,6 @@
 
 .method private planeRemovedSuccessfully(Landroid/view/SurfaceView;)Z
     .locals 3
-    .parameter
 
     .prologue
     const/4 v2, 0x1
@@ -3087,7 +3065,6 @@
 
 .method private setMainView(Landroid/view/View;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 989
@@ -3131,7 +3108,6 @@
 
 .method private showDialogUnableToListenOnPort(I)V
     .locals 2
-    .parameter
 
     .prologue
     .line 1402
@@ -3150,7 +3126,6 @@
 
 .method private showDialogWaitingForConnection(I)V
     .locals 3
-    .parameter
 
     .prologue
     .line 1570
@@ -3220,7 +3195,6 @@
 
 .method private showDialogforIpAddress(Ljava/lang/String;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 1545
@@ -3244,8 +3218,6 @@
 # virtual methods
 .method public BroadcastIntent(Ljava/lang/String;Ljava/lang/String;)V
     .locals 3
-    .parameter
-    .parameter
 
     .prologue
     .line 1344
@@ -3399,7 +3371,6 @@
 
 .method public LaunchMarketPlaceForAIR(Ljava/lang/String;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 1360
@@ -3456,9 +3427,6 @@
 
 .method public SendIntentToRuntime(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
-    .parameter
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -3505,11 +3473,6 @@
 
 .method public SendIntentToRuntime(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -3758,8 +3721,8 @@
 
     invoke-interface {v0}, Ljava/util/concurrent/locks/Condition;->await()V
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 1823
     :cond_0
@@ -3796,7 +3759,6 @@
 
 .method public addActivityResultListener(Lcom/adobe/air/AndroidActivityWrapper$ActivityResultCallback;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 1761
@@ -3833,7 +3795,6 @@
 
 .method public addActivityStateChangeListner(Lcom/adobe/air/AndroidActivityWrapper$StateChangeCallback;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 1699
@@ -3870,7 +3831,6 @@
 
 .method public addInputEventListner(Lcom/adobe/air/AndroidActivityWrapper$InputEventCallback;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 1632
@@ -3960,8 +3920,6 @@
 
 .method public dispatchGenericMotionEvent(Landroid/view/MotionEvent;Z)Z
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 1252
@@ -3975,8 +3933,6 @@
 
 .method public dispatchKeyEvent(Landroid/view/KeyEvent;Z)Z
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 1246
@@ -4073,8 +4029,6 @@
 
 .method public finishActivityFromChild(Landroid/app/Activity;I)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 1879
@@ -4083,7 +4037,6 @@
 
 .method public finishFromChild(Landroid/app/Activity;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1883
@@ -4183,7 +4136,7 @@
     return v0
 
     :cond_0
-    const/high16 v0, 0x1000
+    const/high16 v0, 0x10000000
 
     goto :goto_0
 .end method
@@ -4261,7 +4214,6 @@
 
 .method public getOverlaysLayout(Z)Landroid/widget/RelativeLayout;
     .locals 2
-    .parameter
 
     .prologue
     .line 494
@@ -4354,8 +4306,6 @@
 
 .method public gotResultFromDialog(ZLjava/lang/String;)V
     .locals 3
-    .parameter
-    .parameter
 
     .prologue
     const/4 v2, 0x0
@@ -4623,9 +4573,6 @@
 
 .method public onActivityResult(IILandroid/content/Intent;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 1302
@@ -4637,9 +4584,6 @@
 
 .method public onApplyThemeResource(Landroid/content/res/Resources$Theme;IZ)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 2031
@@ -4664,8 +4608,6 @@
 
 .method public onChildTitleChanged(Landroid/app/Activity;Ljava/lang/CharSequence;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 2035
@@ -4674,7 +4616,6 @@
 
 .method public onConfigurationChanged(Landroid/content/res/Configuration;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 1235
@@ -4709,8 +4650,6 @@
 
 .method public onContextItemSelected(Landroid/view/MenuItem;Z)Z
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 1899
@@ -4719,7 +4658,6 @@
 
 .method public onContextMenuClosed(Landroid/view/Menu;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1904
@@ -4728,8 +4666,6 @@
 
 .method public onCreate(Landroid/app/Activity;[Ljava/lang/String;)V
     .locals 3
-    .parameter
-    .parameter
 
     .prologue
     .line 680
@@ -4820,9 +4756,6 @@
 
 .method public onCreateContextMenu(Landroid/view/ContextMenu;Landroid/view/View;Landroid/view/ContextMenu$ContextMenuInfo;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 1908
@@ -4831,7 +4764,6 @@
 
 .method public onCreateDescription(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
     .locals 0
-    .parameter
 
     .prologue
     .line 1912
@@ -4840,8 +4772,6 @@
 
 .method public onCreateDialog(ILandroid/app/Dialog;)Landroid/app/Dialog;
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 2044
@@ -4850,9 +4780,6 @@
 
 .method public onCreateDialog(ILandroid/os/Bundle;Landroid/app/Dialog;)Landroid/app/Dialog;
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 2039
@@ -4861,8 +4788,6 @@
 
 .method public onCreateOptionsMenu(Landroid/view/Menu;Z)Z
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 1917
@@ -4871,9 +4796,6 @@
 
 .method public onCreatePanelMenu(ILandroid/view/Menu;Z)Z
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 1922
@@ -4882,8 +4804,6 @@
 
 .method public onCreatePanelView(ILandroid/view/View;)Landroid/view/View;
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 1927
@@ -4892,9 +4812,6 @@
 
 .method public onCreateThumbnail(Landroid/graphics/Bitmap;Landroid/graphics/Canvas;Z)Z
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 1932
@@ -4903,10 +4820,6 @@
 
 .method public onCreateView(Ljava/lang/String;Landroid/content/Context;Landroid/util/AttributeSet;Landroid/view/View;)Landroid/view/View;
     .locals 0
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 1937
@@ -5024,9 +4937,6 @@
 
 .method public onKeyDown(ILandroid/view/KeyEvent;Z)Z
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 1946
@@ -5035,9 +4945,6 @@
 
 .method public onKeyLongPress(ILandroid/view/KeyEvent;Z)Z
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 1951
@@ -5046,10 +4953,6 @@
 
 .method public onKeyMultiple(IILandroid/view/KeyEvent;Z)Z
     .locals 0
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 1956
@@ -5058,9 +4961,6 @@
 
 .method public onKeyUp(ILandroid/view/KeyEvent;Z)Z
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 1961
@@ -5080,9 +4980,6 @@
 
 .method public onMenuItemSelected(ILandroid/view/MenuItem;Z)Z
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 1966
@@ -5091,9 +4988,6 @@
 
 .method public onMenuOpened(ILandroid/view/Menu;Z)Z
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 1971
@@ -5102,7 +4996,6 @@
 
 .method public onNewIntent(Landroid/content/Intent;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 1159
@@ -5119,8 +5012,6 @@
 
 .method public onOptionsItemSelected(Landroid/view/MenuItem;Z)Z
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 1976
@@ -5129,7 +5020,6 @@
 
 .method public onOptionsMenuClosed(Landroid/view/Menu;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1981
@@ -5138,8 +5028,6 @@
 
 .method public onPanelClosed(ILandroid/view/Menu;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 1985
@@ -5216,7 +5104,6 @@
 
 .method public onPostCreate(Landroid/os/Bundle;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 2049
@@ -5233,8 +5120,6 @@
 
 .method public onPrepareDialog(ILandroid/app/Dialog;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 2061
@@ -5243,9 +5128,6 @@
 
 .method public onPrepareDialog(ILandroid/app/Dialog;Landroid/os/Bundle;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 2057
@@ -5254,8 +5136,6 @@
 
 .method public onPrepareOptionsMenu(Landroid/view/Menu;Z)Z
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 1989
@@ -5264,10 +5144,6 @@
 
 .method public onPreparePanel(ILandroid/view/View;Landroid/view/Menu;Z)Z
     .locals 0
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 1994
@@ -5308,7 +5184,6 @@
 
 .method public onRestoreInstanceState(Landroid/os/Bundle;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 2065
@@ -5383,7 +5258,6 @@
 
 .method public onRetainNonConfigurationInstance(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
-    .parameter
 
     .prologue
     .line 1999
@@ -5392,7 +5266,6 @@
 
 .method public onSaveInstanceState(Landroid/os/Bundle;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 2069
@@ -5401,7 +5274,6 @@
 
 .method public onScreenStateChanged(Z)V
     .locals 1
-    .parameter
 
     .prologue
     .line 1210
@@ -5428,7 +5300,6 @@
 
 .method public onSearchRequested(Z)Z
     .locals 0
-    .parameter
 
     .prologue
     .line 2004
@@ -5557,8 +5428,6 @@
 
 .method public onTitleChanged(Ljava/lang/CharSequence;I)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 2073
@@ -5567,8 +5436,6 @@
 
 .method public onTouchEvent(Landroid/view/MotionEvent;Z)Z
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 2009
@@ -5577,8 +5444,6 @@
 
 .method public onTrackballEvent(Landroid/view/MotionEvent;Z)Z
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 2014
@@ -5603,7 +5468,6 @@
 
 .method public onWindowAttributesChanged(Landroid/view/WindowManager$LayoutParams;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 2023
@@ -5612,7 +5476,6 @@
 
 .method public onWindowFocusChanged(Z)V
     .locals 0
-    .parameter
 
     .prologue
     .line 2027
@@ -5959,8 +5822,6 @@
 
 .method public registerPlane(Landroid/view/SurfaceView;I)V
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 323
@@ -5977,7 +5838,6 @@
 
 .method public removeActivityResultListener(Lcom/adobe/air/AndroidActivityWrapper$ActivityResultCallback;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 1774
@@ -5997,7 +5857,6 @@
 
 .method public removeActivityStateChangeListner(Lcom/adobe/air/AndroidActivityWrapper$StateChangeCallback;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 1708
@@ -6017,7 +5876,6 @@
 
 .method public removeInputEventListner(Lcom/adobe/air/AndroidActivityWrapper$InputEventCallback;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 1641
@@ -6037,7 +5895,6 @@
 
 .method public setAspectRatio(I)V
     .locals 1
-    .parameter
 
     .prologue
     .line 1280
@@ -6051,7 +5908,6 @@
 
 .method public setAutoOrients(Z)V
     .locals 1
-    .parameter
 
     .prologue
     .line 1285
@@ -6065,7 +5921,6 @@
 
 .method protected setIsFullScreen(Z)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1854
@@ -6077,7 +5932,6 @@
 
 .method public setOrientation(I)V
     .locals 1
-    .parameter
 
     .prologue
     .line 1274
@@ -6091,7 +5945,6 @@
 
 .method public setSpeakerphoneOn(Z)V
     .locals 2
-    .parameter
 
     .prologue
     .line 270
@@ -6115,7 +5968,6 @@
 
 .method public setUseRGB565(Ljava/lang/Boolean;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 1326
@@ -6131,7 +5983,6 @@
 
 .method public unregisterPlane(I)V
     .locals 2
-    .parameter
 
     .prologue
     .line 329

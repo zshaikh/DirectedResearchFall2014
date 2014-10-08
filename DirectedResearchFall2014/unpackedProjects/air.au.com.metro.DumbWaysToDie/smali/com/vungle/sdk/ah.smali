@@ -55,7 +55,6 @@
 
 .method public b(Landroid/os/Parcel;)Lcom/vungle/sdk/ah;
     .locals 2
-    .parameter
 
     .prologue
     .line 125
@@ -269,8 +268,8 @@
 
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 1
-    .parameter "parcel"
-    .parameter "flags"
+    .param p1, "parcel"    # Landroid/os/Parcel;
+    .param p2, "flags"    # I
 
     .prologue
     .line 118

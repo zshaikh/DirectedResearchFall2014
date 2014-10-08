@@ -21,7 +21,7 @@
 
 .field private static final EC_PERMISSION_DENIED:I = 0xa
 
-.field private static final EC_RANGE_PERMISSION:Lcom/facebook/FacebookRequestError$Range; = null
+.field private static final EC_RANGE_PERMISSION:Lcom/facebook/FacebookRequestError$Range;
 
 .field private static final EC_SERVICE_UNAVAILABLE:I = 0x2
 
@@ -49,11 +49,11 @@
 
 .field private static final ERROR_TYPE_FIELD_KEY:Ljava/lang/String; = "type"
 
-.field private static final HTTP_RANGE_CLIENT_ERROR:Lcom/facebook/FacebookRequestError$Range; = null
+.field private static final HTTP_RANGE_CLIENT_ERROR:Lcom/facebook/FacebookRequestError$Range;
 
-.field private static final HTTP_RANGE_SERVER_ERROR:Lcom/facebook/FacebookRequestError$Range; = null
+.field private static final HTTP_RANGE_SERVER_ERROR:Lcom/facebook/FacebookRequestError$Range;
 
-.field private static final HTTP_RANGE_SUCCESS:Lcom/facebook/FacebookRequestError$Range; = null
+.field private static final HTTP_RANGE_SUCCESS:Lcom/facebook/FacebookRequestError$Range;
 
 .field public static final INVALID_ERROR_CODE:I = -0x1
 

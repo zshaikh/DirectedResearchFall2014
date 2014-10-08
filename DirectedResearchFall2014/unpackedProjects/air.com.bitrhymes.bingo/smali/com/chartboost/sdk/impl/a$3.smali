@@ -26,8 +26,6 @@
 # direct methods
 .method constructor <init>(Lcom/chartboost/sdk/impl/a;Lcom/chartboost/sdk/impl/a;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 1
@@ -45,8 +43,6 @@
 # virtual methods
 .method public a(Ljava/lang/String;Lorg/json/JSONObject;)V
     .locals 5
-    .parameter
-    .parameter
 
     .prologue
     .line 126
@@ -103,7 +99,7 @@
     move-result-object v3
 
     .line 132
-    const/high16 v4, 0x1
+    const/high16 v4, 0x10000
 
     invoke-virtual {v3, v2, v4}, Landroid/content/pm/PackageManager;->queryIntentActivities(Landroid/content/Intent;I)Ljava/util/List;
 

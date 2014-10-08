@@ -38,7 +38,7 @@
 
     mul-double v0, p2, v4
 
-    const-wide/high16 v2, 0x3fe0
+    const-wide/high16 v2, 0x3fe0000000000000L
 
     add-double/2addr v0, v2
 

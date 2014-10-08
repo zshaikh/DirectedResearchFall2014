@@ -69,8 +69,8 @@
 
 .method protected constructor <init>(Lcom/flurry/org/codehaus/jackson/map/type/TypeParser;[Lcom/flurry/org/codehaus/jackson/map/type/TypeModifier;)V
     .locals 0
-    .parameter "p"
-    .parameter "mods"
+    .param p1, "p"    # Lcom/flurry/org/codehaus/jackson/map/type/TypeParser;
+    .param p2, "mods"    # [Lcom/flurry/org/codehaus/jackson/map/type/TypeModifier;
 
     .prologue
     .line 98
@@ -88,7 +88,6 @@
 
 .method private _collectionType(Ljava/lang/Class;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .locals 4
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -100,7 +99,7 @@
 
     .prologue
     .line 1009
-    .local p1, rawClass:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p1, "rawClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const-class v1, Ljava/util/Collection;
 
     invoke-virtual {p0, p1, v1}, Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;->findTypeParameters(Ljava/lang/Class;Ljava/lang/Class;)[Lcom/flurry/org/codehaus/jackson/type/JavaType;
@@ -108,7 +107,7 @@
     move-result-object v0
 
     .line 1011
-    .local v0, typeParams:[Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .local v0, "typeParams":[Lcom/flurry/org/codehaus/jackson/type/JavaType;
     if-nez v0, :cond_0
 
     .line 1012
@@ -182,7 +181,6 @@
 
 .method private _mapType(Ljava/lang/Class;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .locals 4
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -194,7 +192,7 @@
 
     .prologue
     .line 995
-    .local p1, rawClass:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p1, "rawClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const-class v1, Ljava/util/Map;
 
     invoke-virtual {p0, p1, v1}, Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;->findTypeParameters(Ljava/lang/Class;Ljava/lang/Class;)[Lcom/flurry/org/codehaus/jackson/type/JavaType;
@@ -202,7 +200,7 @@
     move-result-object v0
 
     .line 997
-    .local v0, typeParams:[Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .local v0, "typeParams":[Lcom/flurry/org/codehaus/jackson/type/JavaType;
     if-nez v0, :cond_0
 
     .line 998
@@ -284,7 +282,7 @@
 
 .method public static arrayType(Lcom/flurry/org/codehaus/jackson/type/JavaType;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .locals 1
-    .parameter "elementType"
+    .param p0, "elementType"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -301,7 +299,6 @@
 
 .method public static arrayType(Ljava/lang/Class;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .locals 2
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -316,7 +313,7 @@
 
     .prologue
     .line 178
-    .local p0, elementType:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p0, "elementType":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     sget-object v0, Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;->instance:Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;
 
     sget-object v1, Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;->instance:Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;
@@ -334,8 +331,7 @@
 
 .method public static collectionType(Ljava/lang/Class;Lcom/flurry/org/codehaus/jackson/type/JavaType;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .locals 1
-    .parameter
-    .parameter "elementType"
+    .param p1, "elementType"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -354,7 +350,7 @@
 
     .prologue
     .line 193
-    .local p0, collectionType:Ljava/lang/Class;,"Ljava/lang/Class<+Ljava/util/Collection;>;"
+    .local p0, "collectionType":Ljava/lang/Class;, "Ljava/lang/Class<+Ljava/util/Collection;>;"
     sget-object v0, Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;->instance:Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;
 
     invoke-virtual {v0, p0, p1}, Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;->constructCollectionType(Ljava/lang/Class;Lcom/flurry/org/codehaus/jackson/type/JavaType;)Lcom/flurry/org/codehaus/jackson/map/type/CollectionType;
@@ -366,8 +362,6 @@
 
 .method public static collectionType(Ljava/lang/Class;Ljava/lang/Class;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .locals 2
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -386,8 +380,8 @@
 
     .prologue
     .line 188
-    .local p0, collectionType:Ljava/lang/Class;,"Ljava/lang/Class<+Ljava/util/Collection;>;"
-    .local p1, elementType:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p0, "collectionType":Ljava/lang/Class;, "Ljava/lang/Class<+Ljava/util/Collection;>;"
+    .local p1, "elementType":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     sget-object v0, Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;->instance:Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;
 
     sget-object v1, Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;->instance:Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;
@@ -415,7 +409,6 @@
 
 .method public static fastSimpleType(Ljava/lang/Class;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -430,7 +423,7 @@
 
     .prologue
     .line 228
-    .local p0, cls:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p0, "cls":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     sget-object v0, Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;->instance:Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;
 
     invoke-virtual {v0, p0}, Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;->uncheckedSimpleType(Ljava/lang/Class;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
@@ -442,8 +435,7 @@
 
 .method public static findParameterTypes(Lcom/flurry/org/codehaus/jackson/type/JavaType;Ljava/lang/Class;)[Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .locals 1
-    .parameter "type"
-    .parameter
+    .param p0, "type"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -459,7 +451,7 @@
 
     .prologue
     .line 243
-    .local p1, expType:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p1, "expType":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     sget-object v0, Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;->instance:Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;
 
     invoke-virtual {v0, p0, p1}, Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;->findTypeParameters(Lcom/flurry/org/codehaus/jackson/type/JavaType;Ljava/lang/Class;)[Lcom/flurry/org/codehaus/jackson/type/JavaType;
@@ -471,8 +463,6 @@
 
 .method public static findParameterTypes(Ljava/lang/Class;Ljava/lang/Class;)[Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .locals 1
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -489,8 +479,8 @@
 
     .prologue
     .line 233
-    .local p0, clz:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
-    .local p1, expType:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p0, "clz":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
+    .local p1, "expType":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     sget-object v0, Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;->instance:Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;
 
     invoke-virtual {v0, p0, p1}, Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;->findTypeParameters(Ljava/lang/Class;Ljava/lang/Class;)[Lcom/flurry/org/codehaus/jackson/type/JavaType;
@@ -502,9 +492,7 @@
 
 .method public static findParameterTypes(Ljava/lang/Class;Ljava/lang/Class;Lcom/flurry/org/codehaus/jackson/map/type/TypeBindings;)[Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .locals 1
-    .parameter
-    .parameter
-    .parameter "bindings"
+    .param p2, "bindings"    # Lcom/flurry/org/codehaus/jackson/map/type/TypeBindings;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -523,8 +511,8 @@
 
     .prologue
     .line 238
-    .local p0, clz:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
-    .local p1, expType:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p0, "clz":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
+    .local p1, "expType":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     sget-object v0, Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;->instance:Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;
 
     invoke-virtual {v0, p0, p1, p2}, Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;->findTypeParameters(Ljava/lang/Class;Ljava/lang/Class;Lcom/flurry/org/codehaus/jackson/map/type/TypeBindings;)[Lcom/flurry/org/codehaus/jackson/type/JavaType;
@@ -536,7 +524,7 @@
 
 .method public static fromCanonical(Ljava/lang/String;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .locals 1
-    .parameter "canonical"
+    .param p0, "canonical"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/IllegalArgumentException;
@@ -556,7 +544,6 @@
 
 .method public static fromClass(Ljava/lang/Class;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .locals 2
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -571,7 +558,7 @@
 
     .prologue
     .line 266
-    .local p0, clz:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p0, "clz":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     sget-object v0, Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;->instance:Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;
 
     const/4 v1, 0x0
@@ -585,7 +572,7 @@
 
 .method public static fromType(Ljava/lang/reflect/Type;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .locals 2
-    .parameter "type"
+    .param p0, "type"    # Ljava/lang/reflect/Type;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -604,7 +591,6 @@
 
 .method public static fromTypeReference(Lcom/flurry/org/codehaus/jackson/type/TypeReference;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -619,7 +605,7 @@
 
     .prologue
     .line 280
-    .local p0, ref:Lcom/flurry/org/codehaus/jackson/type/TypeReference;,"Lcom/flurry/org/codehaus/jackson/type/TypeReference<*>;"
+    .local p0, "ref":Lcom/flurry/org/codehaus/jackson/type/TypeReference;, "Lcom/flurry/org/codehaus/jackson/type/TypeReference<*>;"
     invoke-virtual {p0}, Lcom/flurry/org/codehaus/jackson/type/TypeReference;->getType()Ljava/lang/reflect/Type;
 
     move-result-object v0
@@ -633,9 +619,8 @@
 
 .method public static mapType(Ljava/lang/Class;Lcom/flurry/org/codehaus/jackson/type/JavaType;Lcom/flurry/org/codehaus/jackson/type/JavaType;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .locals 1
-    .parameter
-    .parameter "keyType"
-    .parameter "valueType"
+    .param p1, "keyType"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .param p2, "valueType"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -655,7 +640,7 @@
 
     .prologue
     .line 204
-    .local p0, mapType:Ljava/lang/Class;,"Ljava/lang/Class<+Ljava/util/Map;>;"
+    .local p0, "mapType":Ljava/lang/Class;, "Ljava/lang/Class<+Ljava/util/Map;>;"
     sget-object v0, Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;->instance:Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;
 
     invoke-virtual {v0, p0, p1, p2}, Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;->constructMapType(Ljava/lang/Class;Lcom/flurry/org/codehaus/jackson/type/JavaType;Lcom/flurry/org/codehaus/jackson/type/JavaType;)Lcom/flurry/org/codehaus/jackson/map/type/MapType;
@@ -667,9 +652,6 @@
 
 .method public static mapType(Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/Class;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .locals 3
-    .parameter
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -690,9 +672,9 @@
 
     .prologue
     .line 199
-    .local p0, mapClass:Ljava/lang/Class;,"Ljava/lang/Class<+Ljava/util/Map;>;"
-    .local p1, keyType:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
-    .local p2, valueType:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p0, "mapClass":Ljava/lang/Class;, "Ljava/lang/Class<+Ljava/util/Map;>;"
+    .local p1, "keyType":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
+    .local p2, "valueType":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     sget-object v0, Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;->instance:Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;
 
     invoke-static {p1}, Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;->type(Ljava/lang/reflect/Type;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
@@ -714,8 +696,7 @@
 
 .method public static varargs parametricType(Ljava/lang/Class;[Lcom/flurry/org/codehaus/jackson/type/JavaType;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .locals 1
-    .parameter
-    .parameter "parameterTypes"
+    .param p1, "parameterTypes"    # [Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -732,7 +713,7 @@
 
     .prologue
     .line 214
-    .local p0, parametrized:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p0, "parametrized":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     sget-object v0, Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;->instance:Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;
 
     invoke-virtual {v0, p0, p1}, Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;->constructParametricType(Ljava/lang/Class;[Lcom/flurry/org/codehaus/jackson/type/JavaType;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
@@ -744,8 +725,6 @@
 
 .method public static varargs parametricType(Ljava/lang/Class;[Ljava/lang/Class;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .locals 1
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -762,8 +741,8 @@
 
     .prologue
     .line 209
-    .local p0, parametrized:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
-    .local p1, parameterClasses:[Ljava/lang/Class;,"[Ljava/lang/Class<*>;"
+    .local p0, "parametrized":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
+    .local p1, "parameterClasses":[Ljava/lang/Class;, "[Ljava/lang/Class<*>;"
     sget-object v0, Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;->instance:Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;
 
     invoke-virtual {v0, p0, p1}, Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;->constructParametricType(Ljava/lang/Class;[Ljava/lang/Class;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
@@ -775,7 +754,7 @@
 
 .method public static rawClass(Ljava/lang/reflect/Type;)Ljava/lang/Class;
     .locals 1
-    .parameter "t"
+    .param p0, "t"    # Ljava/lang/reflect/Type;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -795,14 +774,14 @@
     .line 139
     check-cast p0, Ljava/lang/Class;
 
-    .end local p0
+    .end local p0    # "t":Ljava/lang/reflect/Type;
     move-object v0, p0
 
     .line 142
     :goto_0
     return-object v0
 
-    .restart local p0
+    .restart local p0    # "t":Ljava/lang/reflect/Type;
     :cond_0
     invoke-static {}, Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;->defaultInstance()Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;
 
@@ -821,8 +800,7 @@
 
 .method public static specialize(Lcom/flurry/org/codehaus/jackson/type/JavaType;Ljava/lang/Class;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .locals 1
-    .parameter "baseType"
-    .parameter
+    .param p0, "baseType"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -838,7 +816,7 @@
 
     .prologue
     .line 223
-    .local p1, subclass:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p1, "subclass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     sget-object v0, Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;->instance:Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;
 
     invoke-virtual {v0, p0, p1}, Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;->constructSpecializedType(Lcom/flurry/org/codehaus/jackson/type/JavaType;Ljava/lang/Class;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
@@ -850,7 +828,6 @@
 
 .method public static type(Lcom/flurry/org/codehaus/jackson/type/TypeReference;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .locals 2
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -865,7 +842,7 @@
 
     .prologue
     .line 173
-    .local p0, ref:Lcom/flurry/org/codehaus/jackson/type/TypeReference;,"Lcom/flurry/org/codehaus/jackson/type/TypeReference<*>;"
+    .local p0, "ref":Lcom/flurry/org/codehaus/jackson/type/TypeReference;, "Lcom/flurry/org/codehaus/jackson/type/TypeReference<*>;"
     sget-object v0, Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;->instance:Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;
 
     invoke-virtual {p0}, Lcom/flurry/org/codehaus/jackson/type/TypeReference;->getType()Ljava/lang/reflect/Type;
@@ -881,7 +858,7 @@
 
 .method public static type(Ljava/lang/reflect/Type;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .locals 2
-    .parameter "t"
+    .param p0, "t"    # Ljava/lang/reflect/Type;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -900,8 +877,8 @@
 
 .method public static type(Ljava/lang/reflect/Type;Lcom/flurry/org/codehaus/jackson/map/type/TypeBindings;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .locals 1
-    .parameter "type"
-    .parameter "bindings"
+    .param p0, "type"    # Ljava/lang/reflect/Type;
+    .param p1, "bindings"    # Lcom/flurry/org/codehaus/jackson/map/type/TypeBindings;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -918,8 +895,8 @@
 
 .method public static type(Ljava/lang/reflect/Type;Lcom/flurry/org/codehaus/jackson/type/JavaType;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .locals 1
-    .parameter "type"
-    .parameter "context"
+    .param p0, "type"    # Ljava/lang/reflect/Type;
+    .param p1, "context"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -936,8 +913,7 @@
 
 .method public static type(Ljava/lang/reflect/Type;Ljava/lang/Class;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .locals 1
-    .parameter "type"
-    .parameter
+    .param p0, "type"    # Ljava/lang/reflect/Type;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -953,7 +929,7 @@
 
     .prologue
     .line 158
-    .local p1, context:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p1, "context":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     sget-object v0, Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;->instance:Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;
 
     invoke-virtual {v0, p0, p1}, Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;->constructType(Ljava/lang/reflect/Type;Ljava/lang/Class;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
@@ -983,7 +959,7 @@
 # virtual methods
 .method protected declared-synchronized _arrayListSuperInterfaceChain(Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;)Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;
     .locals 3
-    .parameter "current"
+    .param p1, "current"    # Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;
 
     .prologue
     .line 1155
@@ -1000,7 +976,7 @@
     move-result-object v0
 
     .line 1157
-    .local v0, base:Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;
+    .local v0, "base":Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;
     const-class v2, Ljava/util/List;
 
     invoke-virtual {p0, v0, v2}, Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;->_doFindSuperInterfaceChain(Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;Ljava/lang/Class;)Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;
@@ -1013,7 +989,7 @@
     iput-object v2, p0, Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;->_cachedArrayListType:Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;
 
     .line 1160
-    .end local v0           #base:Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;
+    .end local v0    # "base":Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;
     :cond_0
     iget-object v2, p0, Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;->_cachedArrayListType:Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;
 
@@ -1022,7 +998,7 @@
     move-result-object v1
 
     .line 1161
-    .local v1, t:Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;
+    .local v1, "t":Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;
     invoke-virtual {p1, v1}, Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;->setSuperType(Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;)V
 
     .line 1162
@@ -1036,7 +1012,7 @@
     return-object p1
 
     .line 1155
-    .end local v1           #t:Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;
+    .end local v1    # "t":Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;
     :catchall_0
     move-exception v2
 
@@ -1047,8 +1023,8 @@
 
 .method public _constructType(Ljava/lang/reflect/Type;Lcom/flurry/org/codehaus/jackson/map/type/TypeBindings;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .locals 10
-    .parameter "type"
-    .parameter "context"
+    .param p1, "type"    # Ljava/lang/reflect/Type;
+    .param p2, "context"    # Lcom/flurry/org/codehaus/jackson/map/type/TypeBindings;
 
     .prologue
     .line 475
@@ -1064,25 +1040,25 @@
     move-object v2, v0
 
     .line 480
-    .local v2, cls:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local v2, "cls":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     if-nez p2, :cond_0
 
     .line 481
     new-instance p2, Lcom/flurry/org/codehaus/jackson/map/type/TypeBindings;
 
-    .end local p2
+    .end local p2    # "context":Lcom/flurry/org/codehaus/jackson/map/type/TypeBindings;
     invoke-direct {p2, p0, v2}, Lcom/flurry/org/codehaus/jackson/map/type/TypeBindings;-><init>(Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;Ljava/lang/Class;)V
 
     .line 483
-    .restart local p2
+    .restart local p2    # "context":Lcom/flurry/org/codehaus/jackson/map/type/TypeBindings;
     :cond_0
     invoke-virtual {p0, v2, p2}, Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;->_fromClass(Ljava/lang/Class;Lcom/flurry/org/codehaus/jackson/map/type/TypeBindings;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
 
     move-result-object v6
 
     .line 505
-    .end local v2           #cls:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
-    .local v6, resultType:Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .end local v2    # "cls":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
+    .local v6, "resultType":Lcom/flurry/org/codehaus/jackson/type/JavaType;
     :goto_0
     iget-object v7, p0, Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;->_modifiers:[Lcom/flurry/org/codehaus/jackson/map/type/TypeModifier;
 
@@ -1097,20 +1073,20 @@
     .line 506
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;->_modifiers:[Lcom/flurry/org/codehaus/jackson/map/type/TypeModifier;
 
-    .local v1, arr$:[Lcom/flurry/org/codehaus/jackson/map/type/TypeModifier;
+    .local v1, "arr$":[Lcom/flurry/org/codehaus/jackson/map/type/TypeModifier;
     array-length v4, v1
 
-    .local v4, len$:I
+    .local v4, "len$":I
     const/4 v3, 0x0
 
-    .local v3, i$:I
+    .local v3, "i$":I
     :goto_1
     if-ge v3, v4, :cond_6
 
     aget-object v5, v1, v3
 
     .line 507
-    .local v5, mod:Lcom/flurry/org/codehaus/jackson/map/type/TypeModifier;
+    .local v5, "mod":Lcom/flurry/org/codehaus/jackson/map/type/TypeModifier;
     invoke-virtual {v5, v6, p1, p2, p0}, Lcom/flurry/org/codehaus/jackson/map/type/TypeModifier;->modifyType(Lcom/flurry/org/codehaus/jackson/type/JavaType;Ljava/lang/reflect/Type;Lcom/flurry/org/codehaus/jackson/map/type/TypeBindings;Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
 
     move-result-object v6
@@ -1121,11 +1097,11 @@
     goto :goto_1
 
     .line 486
-    .end local v1           #arr$:[Lcom/flurry/org/codehaus/jackson/map/type/TypeModifier;
-    .end local v3           #i$:I
-    .end local v4           #len$:I
-    .end local v5           #mod:Lcom/flurry/org/codehaus/jackson/map/type/TypeModifier;
-    .end local v6           #resultType:Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .end local v1    # "arr$":[Lcom/flurry/org/codehaus/jackson/map/type/TypeModifier;
+    .end local v3    # "i$":I
+    .end local v4    # "len$":I
+    .end local v5    # "mod":Lcom/flurry/org/codehaus/jackson/map/type/TypeModifier;
+    .end local v6    # "resultType":Lcom/flurry/org/codehaus/jackson/type/JavaType;
     :cond_1
     instance-of v7, p1, Ljava/lang/reflect/ParameterizedType;
 
@@ -1142,11 +1118,11 @@
 
     move-result-object v6
 
-    .restart local v6       #resultType:Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .restart local v6    # "resultType":Lcom/flurry/org/codehaus/jackson/type/JavaType;
     goto :goto_0
 
     .line 489
-    .end local v6           #resultType:Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .end local v6    # "resultType":Lcom/flurry/org/codehaus/jackson/type/JavaType;
     :cond_2
     instance-of v7, p1, Ljava/lang/reflect/GenericArrayType;
 
@@ -1163,11 +1139,11 @@
 
     move-result-object v6
 
-    .restart local v6       #resultType:Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .restart local v6    # "resultType":Lcom/flurry/org/codehaus/jackson/type/JavaType;
     goto :goto_0
 
     .line 492
-    .end local v6           #resultType:Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .end local v6    # "resultType":Lcom/flurry/org/codehaus/jackson/type/JavaType;
     :cond_3
     instance-of v7, p1, Ljava/lang/reflect/TypeVariable;
 
@@ -1184,11 +1160,11 @@
 
     move-result-object v6
 
-    .restart local v6       #resultType:Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .restart local v6    # "resultType":Lcom/flurry/org/codehaus/jackson/type/JavaType;
     goto :goto_0
 
     .line 495
-    .end local v6           #resultType:Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .end local v6    # "resultType":Lcom/flurry/org/codehaus/jackson/type/JavaType;
     :cond_4
     instance-of v7, p1, Ljava/lang/reflect/WildcardType;
 
@@ -1205,11 +1181,11 @@
 
     move-result-object v6
 
-    .restart local v6       #resultType:Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .restart local v6    # "resultType":Lcom/flurry/org/codehaus/jackson/type/JavaType;
     goto :goto_0
 
     .line 499
-    .end local v6           #resultType:Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .end local v6    # "resultType":Lcom/flurry/org/codehaus/jackson/type/JavaType;
     :cond_5
     new-instance v7, Ljava/lang/IllegalArgumentException;
 
@@ -1240,15 +1216,14 @@
     throw v7
 
     .line 510
-    .restart local v6       #resultType:Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .restart local v6    # "resultType":Lcom/flurry/org/codehaus/jackson/type/JavaType;
     :cond_6
     return-object v6
 .end method
 
 .method protected _doFindSuperInterfaceChain(Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;Ljava/lang/Class;)Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;
     .locals 8
-    .parameter "current"
-    .parameter
+    .param p1, "current"    # Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1261,44 +1236,44 @@
 
     .prologue
     .line 1113
-    .local p2, target:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p2, "target":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-virtual {p1}, Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;->getRawClass()Ljava/lang/Class;
 
     move-result-object v5
 
     .line 1114
-    .local v5, raw:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local v5, "raw":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-virtual {v5}, Ljava/lang/Class;->getGenericInterfaces()[Ljava/lang/reflect/Type;
 
     move-result-object v4
 
     .line 1117
-    .local v4, parents:[Ljava/lang/reflect/Type;
+    .local v4, "parents":[Ljava/lang/reflect/Type;
     if-eqz v4, :cond_1
 
     .line 1118
     move-object v0, v4
 
-    .local v0, arr$:[Ljava/lang/reflect/Type;
+    .local v0, "arr$":[Ljava/lang/reflect/Type;
     array-length v2, v0
 
-    .local v2, len$:I
+    .local v2, "len$":I
     const/4 v1, 0x0
 
-    .local v1, i$:I
+    .local v1, "i$":I
     :goto_0
     if-ge v1, v2, :cond_1
 
     aget-object v3, v0, v1
 
     .line 1119
-    .local v3, parent:Ljava/lang/reflect/Type;
+    .local v3, "parent":Ljava/lang/reflect/Type;
     invoke-virtual {p0, v3, p2}, Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;->_findSuperInterfaceChain(Ljava/lang/reflect/Type;Ljava/lang/Class;)Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;
 
     move-result-object v6
 
     .line 1120
-    .local v6, sup:Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;
+    .local v6, "sup":Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;
     if-eqz v6, :cond_0
 
     .line 1121
@@ -1310,36 +1285,36 @@
     move-object v7, p1
 
     .line 1137
-    .end local v0           #arr$:[Ljava/lang/reflect/Type;
-    .end local v1           #i$:I
-    .end local v2           #len$:I
-    .end local v6           #sup:Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;
+    .end local v0    # "arr$":[Ljava/lang/reflect/Type;
+    .end local v1    # "i$":I
+    .end local v2    # "len$":I
+    .end local v6    # "sup":Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;
     :goto_1
     return-object v7
 
     .line 1118
-    .restart local v0       #arr$:[Ljava/lang/reflect/Type;
-    .restart local v1       #i$:I
-    .restart local v2       #len$:I
-    .restart local v6       #sup:Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;
+    .restart local v0    # "arr$":[Ljava/lang/reflect/Type;
+    .restart local v1    # "i$":I
+    .restart local v2    # "len$":I
+    .restart local v6    # "sup":Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
     .line 1128
-    .end local v0           #arr$:[Ljava/lang/reflect/Type;
-    .end local v1           #i$:I
-    .end local v2           #len$:I
-    .end local v3           #parent:Ljava/lang/reflect/Type;
-    .end local v6           #sup:Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;
+    .end local v0    # "arr$":[Ljava/lang/reflect/Type;
+    .end local v1    # "i$":I
+    .end local v2    # "len$":I
+    .end local v3    # "parent":Ljava/lang/reflect/Type;
+    .end local v6    # "sup":Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;
     :cond_1
     invoke-virtual {v5}, Ljava/lang/Class;->getGenericSuperclass()Ljava/lang/reflect/Type;
 
     move-result-object v3
 
     .line 1129
-    .restart local v3       #parent:Ljava/lang/reflect/Type;
+    .restart local v3    # "parent":Ljava/lang/reflect/Type;
     if-eqz v3, :cond_2
 
     .line 1130
@@ -1348,7 +1323,7 @@
     move-result-object v6
 
     .line 1131
-    .restart local v6       #sup:Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;
+    .restart local v6    # "sup":Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;
     if-eqz v6, :cond_2
 
     .line 1132
@@ -1363,7 +1338,7 @@
     goto :goto_1
 
     .line 1137
-    .end local v6           #sup:Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;
+    .end local v6    # "sup":Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;
     :cond_2
     const/4 v7, 0x0
 
@@ -1372,8 +1347,7 @@
 
 .method protected _findSuperClassChain(Ljava/lang/reflect/Type;Ljava/lang/Class;)Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;
     .locals 5
-    .parameter "currentType"
-    .parameter
+    .param p1, "currentType"    # Ljava/lang/reflect/Type;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1386,19 +1360,19 @@
 
     .prologue
     .line 1069
-    .local p2, target:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p2, "target":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     new-instance v0, Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;
 
     invoke-direct {v0, p1}, Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;-><init>(Ljava/lang/reflect/Type;)V
 
     .line 1070
-    .local v0, current:Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;
+    .local v0, "current":Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;
     invoke-virtual {v0}, Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;->getRawClass()Ljava/lang/Class;
 
     move-result-object v2
 
     .line 1071
-    .local v2, raw:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local v2, "raw":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     if-ne v2, p2, :cond_0
 
     move-object v4, v0
@@ -1414,7 +1388,7 @@
     move-result-object v1
 
     .line 1076
-    .local v1, parent:Ljava/lang/reflect/Type;
+    .local v1, "parent":Ljava/lang/reflect/Type;
     if-eqz v1, :cond_1
 
     .line 1077
@@ -1423,7 +1397,7 @@
     move-result-object v3
 
     .line 1078
-    .local v3, sup:Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;
+    .local v3, "sup":Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;
     if-eqz v3, :cond_1
 
     .line 1079
@@ -1438,7 +1412,7 @@
     goto :goto_0
 
     .line 1084
-    .end local v3           #sup:Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;
+    .end local v3    # "sup":Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;
     :cond_1
     const/4 v4, 0x0
 
@@ -1447,8 +1421,7 @@
 
 .method protected _findSuperInterfaceChain(Ljava/lang/reflect/Type;Ljava/lang/Class;)Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;
     .locals 3
-    .parameter "currentType"
-    .parameter
+    .param p1, "currentType"    # Ljava/lang/reflect/Type;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1461,19 +1434,19 @@
 
     .prologue
     .line 1089
-    .local p2, target:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p2, "target":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     new-instance v0, Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;
 
     invoke-direct {v0, p1}, Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;-><init>(Ljava/lang/reflect/Type;)V
 
     .line 1090
-    .local v0, current:Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;
+    .local v0, "current":Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;
     invoke-virtual {v0}, Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;->getRawClass()Ljava/lang/Class;
 
     move-result-object v1
 
     .line 1091
-    .local v1, raw:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local v1, "raw":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     if-ne v1, p2, :cond_0
 
     .line 1092
@@ -1532,8 +1505,6 @@
 
 .method protected _findSuperTypeChain(Ljava/lang/Class;Ljava/lang/Class;)Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;
     .locals 1
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1547,8 +1518,8 @@
 
     .prologue
     .line 1061
-    .local p1, subtype:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
-    .local p2, supertype:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p1, "subtype":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
+    .local p2, "supertype":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-virtual {p2}, Ljava/lang/Class;->isInterface()Z
 
     move-result v0
@@ -1574,8 +1545,8 @@
 
 .method protected _fromArrayType(Ljava/lang/reflect/GenericArrayType;Lcom/flurry/org/codehaus/jackson/map/type/TypeBindings;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .locals 3
-    .parameter "type"
-    .parameter "context"
+    .param p1, "type"    # Ljava/lang/reflect/GenericArrayType;
+    .param p2, "context"    # Lcom/flurry/org/codehaus/jackson/map/type/TypeBindings;
 
     .prologue
     const/4 v2, 0x0
@@ -1590,7 +1561,7 @@
     move-result-object v0
 
     .line 936
-    .local v0, compType:Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .local v0, "compType":Lcom/flurry/org/codehaus/jackson/type/JavaType;
     invoke-static {v0, v2, v2}, Lcom/flurry/org/codehaus/jackson/map/type/ArrayType;->construct(Lcom/flurry/org/codehaus/jackson/type/JavaType;Ljava/lang/Object;Ljava/lang/Object;)Lcom/flurry/org/codehaus/jackson/map/type/ArrayType;
 
     move-result-object v1
@@ -1600,8 +1571,7 @@
 
 .method protected _fromClass(Ljava/lang/Class;Lcom/flurry/org/codehaus/jackson/map/type/TypeBindings;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .locals 2
-    .parameter
-    .parameter "context"
+    .param p2, "context"    # Lcom/flurry/org/codehaus/jackson/map/type/TypeBindings;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1614,7 +1584,7 @@
     .end annotation
 
     .prologue
-    .local p1, clz:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p1, "clz":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const/4 v1, 0x0
 
     .line 821
@@ -1701,8 +1671,8 @@
 
 .method protected _fromParamType(Ljava/lang/reflect/ParameterizedType;Lcom/flurry/org/codehaus/jackson/map/type/TypeBindings;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .locals 11
-    .parameter "type"
-    .parameter "context"
+    .param p1, "type"    # Ljava/lang/reflect/ParameterizedType;
+    .param p2, "context"    # Lcom/flurry/org/codehaus/jackson/map/type/TypeBindings;
 
     .prologue
     .line 894
@@ -1713,13 +1683,13 @@
     check-cast v6, Ljava/lang/Class;
 
     .line 895
-    .local v6, rawType:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local v6, "rawType":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-interface {p1}, Ljava/lang/reflect/ParameterizedType;->getActualTypeArguments()[Ljava/lang/reflect/Type;
 
     move-result-object v0
 
     .line 896
-    .local v0, args:[Ljava/lang/reflect/Type;
+    .local v0, "args":[Ljava/lang/reflect/Type;
     if-nez v0, :cond_1
 
     const/4 v8, 0x0
@@ -1727,7 +1697,7 @@
     move v4, v8
 
     .line 900
-    .local v4, paramCount:I
+    .local v4, "paramCount":I
     :goto_0
     if-nez v4, :cond_2
 
@@ -1735,7 +1705,7 @@
     sget-object v5, Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;->NO_TYPES:[Lcom/flurry/org/codehaus/jackson/type/JavaType;
 
     .line 910
-    .local v5, pt:[Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .local v5, "pt":[Lcom/flurry/org/codehaus/jackson/type/JavaType;
     :cond_0
     const-class v8, Ljava/util/Map;
 
@@ -1751,7 +1721,7 @@
     move-result-object v7
 
     .line 912
-    .local v7, subtype:Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .local v7, "subtype":Lcom/flurry/org/codehaus/jackson/type/JavaType;
     const-class v8, Ljava/util/Map;
 
     invoke-virtual {p0, v7, v8}, Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;->findTypeParameters(Lcom/flurry/org/codehaus/jackson/type/JavaType;Ljava/lang/Class;)[Lcom/flurry/org/codehaus/jackson/type/JavaType;
@@ -1759,7 +1729,7 @@
     move-result-object v3
 
     .line 913
-    .local v3, mapParams:[Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .local v3, "mapParams":[Lcom/flurry/org/codehaus/jackson/type/JavaType;
     array-length v8, v3
 
     const/4 v9, 0x2
@@ -1814,10 +1784,10 @@
     throw v8
 
     .line 896
-    .end local v3           #mapParams:[Lcom/flurry/org/codehaus/jackson/type/JavaType;
-    .end local v4           #paramCount:I
-    .end local v5           #pt:[Lcom/flurry/org/codehaus/jackson/type/JavaType;
-    .end local v7           #subtype:Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .end local v3    # "mapParams":[Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .end local v4    # "paramCount":I
+    .end local v5    # "pt":[Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .end local v7    # "subtype":Lcom/flurry/org/codehaus/jackson/type/JavaType;
     :cond_1
     array-length v8, v0
 
@@ -1826,15 +1796,15 @@
     goto :goto_0
 
     .line 903
-    .restart local v4       #paramCount:I
+    .restart local v4    # "paramCount":I
     :cond_2
     new-array v5, v4, [Lcom/flurry/org/codehaus/jackson/type/JavaType;
 
     .line 904
-    .restart local v5       #pt:[Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .restart local v5    # "pt":[Lcom/flurry/org/codehaus/jackson/type/JavaType;
     const/4 v2, 0x0
 
-    .local v2, i:I
+    .local v2, "i":I
     :goto_1
     if-ge v2, v4, :cond_0
 
@@ -1853,9 +1823,9 @@
     goto :goto_1
 
     .line 916
-    .end local v2           #i:I
-    .restart local v3       #mapParams:[Lcom/flurry/org/codehaus/jackson/type/JavaType;
-    .restart local v7       #subtype:Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .end local v2    # "i":I
+    .restart local v3    # "mapParams":[Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .restart local v7    # "subtype":Lcom/flurry/org/codehaus/jackson/type/JavaType;
     :cond_3
     const/4 v8, 0x0
 
@@ -1870,8 +1840,8 @@
     move-result-object v8
 
     .line 929
-    .end local v3           #mapParams:[Lcom/flurry/org/codehaus/jackson/type/JavaType;
-    .end local v7           #subtype:Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .end local v3    # "mapParams":[Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .end local v7    # "subtype":Lcom/flurry/org/codehaus/jackson/type/JavaType;
     :goto_2
     return-object v8
 
@@ -1891,7 +1861,7 @@
     move-result-object v7
 
     .line 920
-    .restart local v7       #subtype:Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .restart local v7    # "subtype":Lcom/flurry/org/codehaus/jackson/type/JavaType;
     const-class v8, Ljava/util/Collection;
 
     invoke-virtual {p0, v7, v8}, Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;->findTypeParameters(Lcom/flurry/org/codehaus/jackson/type/JavaType;Ljava/lang/Class;)[Lcom/flurry/org/codehaus/jackson/type/JavaType;
@@ -1899,7 +1869,7 @@
     move-result-object v1
 
     .line 921
-    .local v1, collectionParams:[Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .local v1, "collectionParams":[Lcom/flurry/org/codehaus/jackson/type/JavaType;
     array-length v8, v1
 
     const/4 v9, 0x1
@@ -1966,8 +1936,8 @@
     goto :goto_2
 
     .line 926
-    .end local v1           #collectionParams:[Lcom/flurry/org/codehaus/jackson/type/JavaType;
-    .end local v7           #subtype:Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .end local v1    # "collectionParams":[Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .end local v7    # "subtype":Lcom/flurry/org/codehaus/jackson/type/JavaType;
     :cond_6
     if-nez v4, :cond_7
 
@@ -1989,8 +1959,6 @@
 
 .method protected _fromParameterizedClass(Ljava/lang/Class;Ljava/util/List;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .locals 7
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -2005,8 +1973,8 @@
     .end annotation
 
     .prologue
-    .local p1, clz:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
-    .local p2, paramTypes:Ljava/util/List;,"Ljava/util/List<Lcom/flurry/org/codehaus/jackson/type/JavaType;>;"
+    .local p1, "clz":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
+    .local p2, "paramTypes":Ljava/util/List;, "Ljava/util/List<Lcom/flurry/org/codehaus/jackson/type/JavaType;>;"
     const/4 v6, 0x1
 
     const/4 v5, 0x0
@@ -2034,12 +2002,12 @@
     move-result-object v3
 
     .line 876
-    .end local p0
+    .end local p0    # "this":Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;
     :goto_0
     return-object v3
 
     .line 852
-    .restart local p0
+    .restart local p0    # "this":Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;
     :cond_0
     invoke-virtual {p1}, Ljava/lang/Class;->isEnum()Z
 
@@ -2079,7 +2047,7 @@
     check-cast v1, Lcom/flurry/org/codehaus/jackson/type/JavaType;
 
     .line 860
-    .local v1, keyType:Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .local v1, "keyType":Lcom/flurry/org/codehaus/jackson/type/JavaType;
     invoke-interface {p2}, Ljava/util/List;->size()I
 
     move-result v3
@@ -2092,13 +2060,13 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;
     check-cast p0, Lcom/flurry/org/codehaus/jackson/type/JavaType;
 
     move-object v0, p0
 
     .line 862
-    .local v0, contentType:Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .local v0, "contentType":Lcom/flurry/org/codehaus/jackson/type/JavaType;
     :goto_1
     invoke-static {p1, v1, v0}, Lcom/flurry/org/codehaus/jackson/map/type/MapType;->construct(Ljava/lang/Class;Lcom/flurry/org/codehaus/jackson/type/JavaType;Lcom/flurry/org/codehaus/jackson/type/JavaType;)Lcom/flurry/org/codehaus/jackson/map/type/MapType;
 
@@ -2107,8 +2075,8 @@
     goto :goto_0
 
     .line 860
-    .end local v0           #contentType:Lcom/flurry/org/codehaus/jackson/type/JavaType;
-    .restart local p0
+    .end local v0    # "contentType":Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .restart local p0    # "this":Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;
     :cond_2
     invoke-virtual {p0}, Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;->_unknownType()Lcom/flurry/org/codehaus/jackson/type/JavaType;
 
@@ -2119,7 +2087,7 @@
     goto :goto_1
 
     .line 864
-    .end local v1           #keyType:Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .end local v1    # "keyType":Lcom/flurry/org/codehaus/jackson/type/JavaType;
     :cond_3
     invoke-direct {p0, p1}, Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;->_mapType(Ljava/lang/Class;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
 
@@ -2149,7 +2117,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;
     check-cast p0, Lcom/flurry/org/codehaus/jackson/type/JavaType;
 
     invoke-static {p1, p0}, Lcom/flurry/org/codehaus/jackson/map/type/CollectionType;->construct(Ljava/lang/Class;Lcom/flurry/org/codehaus/jackson/type/JavaType;)Lcom/flurry/org/codehaus/jackson/map/type/CollectionType;
@@ -2159,7 +2127,7 @@
     goto :goto_0
 
     .line 870
-    .restart local p0
+    .restart local p0    # "this":Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;
     :cond_5
     invoke-direct {p0, p1}, Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;->_collectionType(Ljava/lang/Class;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
 
@@ -2197,7 +2165,7 @@
     check-cast v2, [Lcom/flurry/org/codehaus/jackson/type/JavaType;
 
     .line 876
-    .local v2, pt:[Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .local v2, "pt":[Lcom/flurry/org/codehaus/jackson/type/JavaType;
     invoke-virtual {p0, p1, v2}, Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;->constructSimpleType(Ljava/lang/Class;[Lcom/flurry/org/codehaus/jackson/type/JavaType;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
 
     move-result-object v3
@@ -2207,8 +2175,7 @@
 
 .method protected _fromVariable(Ljava/lang/reflect/TypeVariable;Lcom/flurry/org/codehaus/jackson/map/type/TypeBindings;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .locals 4
-    .parameter
-    .parameter "context"
+    .param p2, "context"    # Lcom/flurry/org/codehaus/jackson/map/type/TypeBindings;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -2222,7 +2189,7 @@
 
     .prologue
     .line 945
-    .local p1, type:Ljava/lang/reflect/TypeVariable;,"Ljava/lang/reflect/TypeVariable<*>;"
+    .local p1, "type":Ljava/lang/reflect/TypeVariable;, "Ljava/lang/reflect/TypeVariable<*>;"
     if-nez p2, :cond_0
 
     .line 946
@@ -2241,13 +2208,13 @@
     move-result-object v2
 
     .line 951
-    .local v2, name:Ljava/lang/String;
+    .local v2, "name":Ljava/lang/String;
     invoke-virtual {p2, v2}, Lcom/flurry/org/codehaus/jackson/map/type/TypeBindings;->findType(Ljava/lang/String;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
 
     move-result-object v0
 
     .line 952
-    .local v0, actualType:Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .local v0, "actualType":Lcom/flurry/org/codehaus/jackson/type/JavaType;
     if-eqz v0, :cond_1
 
     move-object v3, v0
@@ -2262,7 +2229,7 @@
     move-result-object v1
 
     .line 976
-    .local v1, bounds:[Ljava/lang/reflect/Type;
+    .local v1, "bounds":[Ljava/lang/reflect/Type;
     invoke-virtual {p2, v2}, Lcom/flurry/org/codehaus/jackson/map/type/TypeBindings;->_addPlaceholder(Ljava/lang/String;)V
 
     .line 977
@@ -2279,8 +2246,8 @@
 
 .method protected _fromWildcard(Ljava/lang/reflect/WildcardType;Lcom/flurry/org/codehaus/jackson/map/type/TypeBindings;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .locals 2
-    .parameter "type"
-    .parameter "context"
+    .param p1, "type"    # Ljava/lang/reflect/WildcardType;
+    .param p2, "context"    # Lcom/flurry/org/codehaus/jackson/map/type/TypeBindings;
 
     .prologue
     .line 990
@@ -2301,7 +2268,7 @@
 
 .method protected declared-synchronized _hashMapSuperInterfaceChain(Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;)Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;
     .locals 3
-    .parameter "current"
+    .param p1, "current"    # Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;
 
     .prologue
     .line 1142
@@ -2318,7 +2285,7 @@
     move-result-object v0
 
     .line 1144
-    .local v0, base:Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;
+    .local v0, "base":Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;
     const-class v2, Ljava/util/Map;
 
     invoke-virtual {p0, v0, v2}, Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;->_doFindSuperInterfaceChain(Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;Ljava/lang/Class;)Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;
@@ -2331,7 +2298,7 @@
     iput-object v2, p0, Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;->_cachedHashMapType:Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;
 
     .line 1147
-    .end local v0           #base:Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;
+    .end local v0    # "base":Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;
     :cond_0
     iget-object v2, p0, Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;->_cachedHashMapType:Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;
 
@@ -2340,7 +2307,7 @@
     move-result-object v1
 
     .line 1148
-    .local v1, t:Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;
+    .local v1, "t":Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;
     invoke-virtual {p1, v1}, Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;->setSuperType(Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;)V
 
     .line 1149
@@ -2354,7 +2321,7 @@
     return-object p1
 
     .line 1142
-    .end local v1           #t:Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;
+    .end local v1    # "t":Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;
     :catchall_0
     move-exception v2
 
@@ -2365,9 +2332,9 @@
 
 .method protected _resolveVariableViaSubTypes(Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/map/type/TypeBindings;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .locals 7
-    .parameter "leafType"
-    .parameter "variableName"
-    .parameter "bindings"
+    .param p1, "leafType"    # Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;
+    .param p2, "variableName"    # Ljava/lang/String;
+    .param p3, "bindings"    # Lcom/flurry/org/codehaus/jackson/map/type/TypeBindings;
 
     .prologue
     .line 1024
@@ -2389,13 +2356,13 @@
     move-result-object v4
 
     .line 1026
-    .local v4, typeVariables:[Ljava/lang/reflect/TypeVariable;,"[Ljava/lang/reflect/TypeVariable<*>;"
+    .local v4, "typeVariables":[Ljava/lang/reflect/TypeVariable;, "[Ljava/lang/reflect/TypeVariable<*>;"
     const/4 v0, 0x0
 
-    .local v0, i:I
+    .local v0, "i":I
     array-length v1, v4
 
-    .local v1, len:I
+    .local v1, "len":I
     :goto_0
     if-ge v0, v1, :cond_2
 
@@ -2403,7 +2370,7 @@
     aget-object v2, v4, v0
 
     .line 1028
-    .local v2, tv:Ljava/lang/reflect/TypeVariable;,"Ljava/lang/reflect/TypeVariable<*>;"
+    .local v2, "tv":Ljava/lang/reflect/TypeVariable;, "Ljava/lang/reflect/TypeVariable<*>;"
     invoke-interface {v2}, Ljava/lang/reflect/TypeVariable;->getName()Ljava/lang/String;
 
     move-result-object v5
@@ -2426,7 +2393,7 @@
     aget-object v3, v5, v0
 
     .line 1031
-    .local v3, type:Ljava/lang/reflect/Type;
+    .local v3, "type":Ljava/lang/reflect/Type;
     instance-of v5, v3, Ljava/lang/reflect/TypeVariable;
 
     if-eqz v5, :cond_0
@@ -2438,7 +2405,7 @@
 
     check-cast v3, Ljava/lang/reflect/TypeVariable;
 
-    .end local v3           #type:Ljava/lang/reflect/Type;
+    .end local v3    # "type":Ljava/lang/reflect/Type;
     invoke-interface {v3}, Ljava/lang/reflect/TypeVariable;->getName()Ljava/lang/String;
 
     move-result-object v6
@@ -2448,19 +2415,19 @@
     move-result-object v5
 
     .line 1039
-    .end local v0           #i:I
-    .end local v1           #len:I
-    .end local v2           #tv:Ljava/lang/reflect/TypeVariable;,"Ljava/lang/reflect/TypeVariable<*>;"
-    .end local v4           #typeVariables:[Ljava/lang/reflect/TypeVariable;,"[Ljava/lang/reflect/TypeVariable<*>;"
+    .end local v0    # "i":I
+    .end local v1    # "len":I
+    .end local v2    # "tv":Ljava/lang/reflect/TypeVariable;, "Ljava/lang/reflect/TypeVariable<*>;"
+    .end local v4    # "typeVariables":[Ljava/lang/reflect/TypeVariable;, "[Ljava/lang/reflect/TypeVariable<*>;"
     :goto_1
     return-object v5
 
     .line 1035
-    .restart local v0       #i:I
-    .restart local v1       #len:I
-    .restart local v2       #tv:Ljava/lang/reflect/TypeVariable;,"Ljava/lang/reflect/TypeVariable<*>;"
-    .restart local v3       #type:Ljava/lang/reflect/Type;
-    .restart local v4       #typeVariables:[Ljava/lang/reflect/TypeVariable;,"[Ljava/lang/reflect/TypeVariable<*>;"
+    .restart local v0    # "i":I
+    .restart local v1    # "len":I
+    .restart local v2    # "tv":Ljava/lang/reflect/TypeVariable;, "Ljava/lang/reflect/TypeVariable<*>;"
+    .restart local v3    # "type":Ljava/lang/reflect/Type;
+    .restart local v4    # "typeVariables":[Ljava/lang/reflect/TypeVariable;, "[Ljava/lang/reflect/TypeVariable<*>;"
     :cond_0
     invoke-virtual {p0, v3, p3}, Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;->_constructType(Ljava/lang/reflect/Type;Lcom/flurry/org/codehaus/jackson/map/type/TypeBindings;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
 
@@ -2469,17 +2436,17 @@
     goto :goto_1
 
     .line 1026
-    .end local v3           #type:Ljava/lang/reflect/Type;
+    .end local v3    # "type":Ljava/lang/reflect/Type;
     :cond_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
     .line 1039
-    .end local v0           #i:I
-    .end local v1           #len:I
-    .end local v2           #tv:Ljava/lang/reflect/TypeVariable;,"Ljava/lang/reflect/TypeVariable<*>;"
-    .end local v4           #typeVariables:[Ljava/lang/reflect/TypeVariable;,"[Ljava/lang/reflect/TypeVariable<*>;"
+    .end local v0    # "i":I
+    .end local v1    # "len":I
+    .end local v2    # "tv":Ljava/lang/reflect/TypeVariable;, "Ljava/lang/reflect/TypeVariable<*>;"
+    .end local v4    # "typeVariables":[Ljava/lang/reflect/TypeVariable;, "[Ljava/lang/reflect/TypeVariable<*>;"
     :cond_2
     invoke-virtual {p0}, Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;->_unknownType()Lcom/flurry/org/codehaus/jackson/type/JavaType;
 
@@ -2504,7 +2471,7 @@
 
 .method public constructArrayType(Lcom/flurry/org/codehaus/jackson/type/JavaType;)Lcom/flurry/org/codehaus/jackson/map/type/ArrayType;
     .locals 1
-    .parameter "elementType"
+    .param p1, "elementType"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
 
     .prologue
     const/4 v0, 0x0
@@ -2519,7 +2486,6 @@
 
 .method public constructArrayType(Ljava/lang/Class;)Lcom/flurry/org/codehaus/jackson/map/type/ArrayType;
     .locals 2
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -2530,7 +2496,7 @@
     .end annotation
 
     .prologue
-    .local p1, elementType:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p1, "elementType":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const/4 v1, 0x0
 
     .line 526
@@ -2547,8 +2513,7 @@
 
 .method public constructCollectionLikeType(Ljava/lang/Class;Lcom/flurry/org/codehaus/jackson/type/JavaType;)Lcom/flurry/org/codehaus/jackson/map/type/CollectionLikeType;
     .locals 1
-    .parameter
-    .parameter "elementType"
+    .param p2, "elementType"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -2562,7 +2527,7 @@
 
     .prologue
     .line 580
-    .local p1, collectionClass:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p1, "collectionClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-static {p1, p2}, Lcom/flurry/org/codehaus/jackson/map/type/CollectionLikeType;->construct(Ljava/lang/Class;Lcom/flurry/org/codehaus/jackson/type/JavaType;)Lcom/flurry/org/codehaus/jackson/map/type/CollectionLikeType;
 
     move-result-object v0
@@ -2572,8 +2537,6 @@
 
 .method public constructCollectionLikeType(Ljava/lang/Class;Ljava/lang/Class;)Lcom/flurry/org/codehaus/jackson/map/type/CollectionLikeType;
     .locals 1
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -2587,8 +2550,8 @@
 
     .prologue
     .line 568
-    .local p1, collectionClass:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
-    .local p2, elementClass:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p1, "collectionClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
+    .local p2, "elementClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-virtual {p0, p2}, Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;->constructType(Ljava/lang/reflect/Type;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
 
     move-result-object v0
@@ -2602,8 +2565,7 @@
 
 .method public constructCollectionType(Ljava/lang/Class;Lcom/flurry/org/codehaus/jackson/type/JavaType;)Lcom/flurry/org/codehaus/jackson/map/type/CollectionType;
     .locals 1
-    .parameter
-    .parameter "elementType"
+    .param p2, "elementType"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -2619,7 +2581,7 @@
 
     .prologue
     .line 556
-    .local p1, collectionClass:Ljava/lang/Class;,"Ljava/lang/Class<+Ljava/util/Collection;>;"
+    .local p1, "collectionClass":Ljava/lang/Class;, "Ljava/lang/Class<+Ljava/util/Collection;>;"
     invoke-static {p1, p2}, Lcom/flurry/org/codehaus/jackson/map/type/CollectionType;->construct(Ljava/lang/Class;Lcom/flurry/org/codehaus/jackson/type/JavaType;)Lcom/flurry/org/codehaus/jackson/map/type/CollectionType;
 
     move-result-object v0
@@ -2629,8 +2591,6 @@
 
 .method public constructCollectionType(Ljava/lang/Class;Ljava/lang/Class;)Lcom/flurry/org/codehaus/jackson/map/type/CollectionType;
     .locals 1
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -2646,8 +2606,8 @@
 
     .prologue
     .line 546
-    .local p1, collectionClass:Ljava/lang/Class;,"Ljava/lang/Class<+Ljava/util/Collection;>;"
-    .local p2, elementClass:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p1, "collectionClass":Ljava/lang/Class;, "Ljava/lang/Class<+Ljava/util/Collection;>;"
+    .local p2, "elementClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-virtual {p0, p2}, Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;->constructType(Ljava/lang/reflect/Type;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
 
     move-result-object v0
@@ -2661,7 +2621,7 @@
 
 .method public constructFromCanonical(Ljava/lang/String;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .locals 1
-    .parameter "canonical"
+    .param p1, "canonical"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/IllegalArgumentException;
@@ -2681,9 +2641,8 @@
 
 .method public constructMapLikeType(Ljava/lang/Class;Lcom/flurry/org/codehaus/jackson/type/JavaType;Lcom/flurry/org/codehaus/jackson/type/JavaType;)Lcom/flurry/org/codehaus/jackson/map/type/MapLikeType;
     .locals 1
-    .parameter
-    .parameter "keyType"
-    .parameter "valueType"
+    .param p2, "keyType"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .param p3, "valueType"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -2698,7 +2657,7 @@
 
     .prologue
     .line 616
-    .local p1, mapClass:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p1, "mapClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-static {p1, p2, p3}, Lcom/flurry/org/codehaus/jackson/map/type/MapLikeType;->construct(Ljava/lang/Class;Lcom/flurry/org/codehaus/jackson/type/JavaType;Lcom/flurry/org/codehaus/jackson/type/JavaType;)Lcom/flurry/org/codehaus/jackson/map/type/MapLikeType;
 
     move-result-object v0
@@ -2708,9 +2667,6 @@
 
 .method public constructMapLikeType(Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/Class;)Lcom/flurry/org/codehaus/jackson/map/type/MapLikeType;
     .locals 2
-    .parameter
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -2726,9 +2682,9 @@
 
     .prologue
     .line 628
-    .local p1, mapClass:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
-    .local p2, keyClass:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
-    .local p3, valueClass:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p1, "mapClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
+    .local p2, "keyClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
+    .local p3, "valueClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-virtual {p0, p2}, Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;->constructType(Ljava/lang/reflect/Type;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
 
     move-result-object v0
@@ -2746,9 +2702,8 @@
 
 .method public constructMapType(Ljava/lang/Class;Lcom/flurry/org/codehaus/jackson/type/JavaType;Lcom/flurry/org/codehaus/jackson/type/JavaType;)Lcom/flurry/org/codehaus/jackson/map/type/MapType;
     .locals 1
-    .parameter
-    .parameter "keyType"
-    .parameter "valueType"
+    .param p2, "keyType"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .param p3, "valueType"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -2765,7 +2720,7 @@
 
     .prologue
     .line 592
-    .local p1, mapClass:Ljava/lang/Class;,"Ljava/lang/Class<+Ljava/util/Map;>;"
+    .local p1, "mapClass":Ljava/lang/Class;, "Ljava/lang/Class<+Ljava/util/Map;>;"
     invoke-static {p1, p2, p3}, Lcom/flurry/org/codehaus/jackson/map/type/MapType;->construct(Ljava/lang/Class;Lcom/flurry/org/codehaus/jackson/type/JavaType;Lcom/flurry/org/codehaus/jackson/type/JavaType;)Lcom/flurry/org/codehaus/jackson/map/type/MapType;
 
     move-result-object v0
@@ -2775,9 +2730,6 @@
 
 .method public constructMapType(Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/Class;)Lcom/flurry/org/codehaus/jackson/map/type/MapType;
     .locals 2
-    .parameter
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -2795,9 +2747,9 @@
 
     .prologue
     .line 604
-    .local p1, mapClass:Ljava/lang/Class;,"Ljava/lang/Class<+Ljava/util/Map;>;"
-    .local p2, keyClass:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
-    .local p3, valueClass:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p1, "mapClass":Ljava/lang/Class;, "Ljava/lang/Class<+Ljava/util/Map;>;"
+    .local p2, "keyClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
+    .local p3, "valueClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-virtual {p0, p2}, Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;->constructType(Ljava/lang/reflect/Type;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
 
     move-result-object v0
@@ -2815,8 +2767,7 @@
 
 .method public varargs constructParametricType(Ljava/lang/Class;[Lcom/flurry/org/codehaus/jackson/type/JavaType;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .locals 6
-    .parameter
-    .parameter "parameterTypes"
+    .param p2, "parameterTypes"    # [Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -2829,7 +2780,7 @@
     .end annotation
 
     .prologue
-    .local p1, parametrized:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p1, "parametrized":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const/4 v4, 0x1
 
     const/4 v3, 0x0
@@ -2892,12 +2843,12 @@
     move-result-object v0
 
     .line 730
-    .local v0, resultType:Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .local v0, "resultType":Lcom/flurry/org/codehaus/jackson/type/JavaType;
     :goto_0
     return-object v0
 
     .line 716
-    .end local v0           #resultType:Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .end local v0    # "resultType":Lcom/flurry/org/codehaus/jackson/type/JavaType;
     :cond_1
     const-class v1, Ljava/util/Map;
 
@@ -2959,11 +2910,11 @@
 
     move-result-object v0
 
-    .restart local v0       #resultType:Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .restart local v0    # "resultType":Lcom/flurry/org/codehaus/jackson/type/JavaType;
     goto :goto_0
 
     .line 722
-    .end local v0           #resultType:Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .end local v0    # "resultType":Lcom/flurry/org/codehaus/jackson/type/JavaType;
     :cond_3
     const-class v1, Ljava/util/Collection;
 
@@ -3021,24 +2972,22 @@
 
     move-result-object v0
 
-    .restart local v0       #resultType:Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .restart local v0    # "resultType":Lcom/flurry/org/codehaus/jackson/type/JavaType;
     goto :goto_0
 
     .line 728
-    .end local v0           #resultType:Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .end local v0    # "resultType":Lcom/flurry/org/codehaus/jackson/type/JavaType;
     :cond_5
     invoke-virtual {p0, p1, p2}, Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;->constructSimpleType(Ljava/lang/Class;[Lcom/flurry/org/codehaus/jackson/type/JavaType;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
 
     move-result-object v0
 
-    .restart local v0       #resultType:Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .restart local v0    # "resultType":Lcom/flurry/org/codehaus/jackson/type/JavaType;
     goto :goto_0
 .end method
 
 .method public varargs constructParametricType(Ljava/lang/Class;[Ljava/lang/Class;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .locals 5
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -3052,19 +3001,19 @@
 
     .prologue
     .line 681
-    .local p1, parametrized:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
-    .local p2, parameterClasses:[Ljava/lang/Class;,"[Ljava/lang/Class<*>;"
+    .local p1, "parametrized":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
+    .local p2, "parameterClasses":[Ljava/lang/Class;, "[Ljava/lang/Class<*>;"
     array-length v1, p2
 
     .line 682
-    .local v1, len:I
+    .local v1, "len":I
     new-array v2, v1, [Lcom/flurry/org/codehaus/jackson/type/JavaType;
 
     .line 683
-    .local v2, pt:[Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .local v2, "pt":[Lcom/flurry/org/codehaus/jackson/type/JavaType;
     const/4 v0, 0x0
 
-    .local v0, i:I
+    .local v0, "i":I
     :goto_0
     if-ge v0, v1, :cond_0
 
@@ -3095,7 +3044,6 @@
 
 .method public constructRawCollectionLikeType(Ljava/lang/Class;)Lcom/flurry/org/codehaus/jackson/map/type/CollectionLikeType;
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -3107,7 +3055,7 @@
 
     .prologue
     .line 771
-    .local p1, collectionClass:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p1, "collectionClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-static {}, Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;->unknownType()Lcom/flurry/org/codehaus/jackson/type/JavaType;
 
     move-result-object v0
@@ -3121,7 +3069,6 @@
 
 .method public constructRawCollectionType(Ljava/lang/Class;)Lcom/flurry/org/codehaus/jackson/map/type/CollectionType;
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -3135,7 +3082,7 @@
 
     .prologue
     .line 754
-    .local p1, collectionClass:Ljava/lang/Class;,"Ljava/lang/Class<+Ljava/util/Collection;>;"
+    .local p1, "collectionClass":Ljava/lang/Class;, "Ljava/lang/Class<+Ljava/util/Collection;>;"
     invoke-static {}, Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;->unknownType()Lcom/flurry/org/codehaus/jackson/type/JavaType;
 
     move-result-object v0
@@ -3149,7 +3096,6 @@
 
 .method public constructRawMapLikeType(Ljava/lang/Class;)Lcom/flurry/org/codehaus/jackson/map/type/MapLikeType;
     .locals 2
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -3161,7 +3107,7 @@
 
     .prologue
     .line 805
-    .local p1, mapClass:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p1, "mapClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-static {}, Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;->unknownType()Lcom/flurry/org/codehaus/jackson/type/JavaType;
 
     move-result-object v0
@@ -3179,7 +3125,6 @@
 
 .method public constructRawMapType(Ljava/lang/Class;)Lcom/flurry/org/codehaus/jackson/map/type/MapType;
     .locals 2
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -3193,7 +3138,7 @@
 
     .prologue
     .line 788
-    .local p1, mapClass:Ljava/lang/Class;,"Ljava/lang/Class<+Ljava/util/Map;>;"
+    .local p1, "mapClass":Ljava/lang/Class;, "Ljava/lang/Class<+Ljava/util/Map;>;"
     invoke-static {}, Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;->unknownType()Lcom/flurry/org/codehaus/jackson/type/JavaType;
 
     move-result-object v0
@@ -3211,8 +3156,7 @@
 
 .method public constructSimpleType(Ljava/lang/Class;[Lcom/flurry/org/codehaus/jackson/type/JavaType;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .locals 9
-    .parameter
-    .parameter "parameterTypes"
+    .param p2, "parameterTypes"    # [Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -3225,7 +3169,7 @@
     .end annotation
 
     .prologue
-    .local p1, rawType:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p1, "rawType":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const/4 v4, 0x0
 
     .line 639
@@ -3234,7 +3178,7 @@
     move-result-object v8
 
     .line 640
-    .local v8, typeVars:[Ljava/lang/reflect/TypeVariable;,"[Ljava/lang/reflect/TypeVariable<*>;"
+    .local v8, "typeVars":[Ljava/lang/reflect/TypeVariable;, "[Ljava/lang/reflect/TypeVariable<*>;"
     array-length v1, v8
 
     array-length v3, p2
@@ -3301,13 +3245,13 @@
     new-array v2, v1, [Ljava/lang/String;
 
     .line 645
-    .local v2, names:[Ljava/lang/String;
+    .local v2, "names":[Ljava/lang/String;
     const/4 v6, 0x0
 
-    .local v6, i:I
+    .local v6, "i":I
     array-length v7, v8
 
-    .local v7, len:I
+    .local v7, "len":I
     :goto_0
     if-ge v6, v7, :cond_1
 
@@ -3338,14 +3282,13 @@
     invoke-direct/range {v0 .. v5}, Lcom/flurry/org/codehaus/jackson/map/type/SimpleType;-><init>(Ljava/lang/Class;[Ljava/lang/String;[Lcom/flurry/org/codehaus/jackson/type/JavaType;Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 649
-    .local v0, resultType:Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .local v0, "resultType":Lcom/flurry/org/codehaus/jackson/type/JavaType;
     return-object v0
 .end method
 
 .method public constructSpecializedType(Lcom/flurry/org/codehaus/jackson/type/JavaType;Ljava/lang/Class;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .locals 5
-    .parameter "baseType"
-    .parameter
+    .param p1, "baseType"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -3358,7 +3301,7 @@
 
     .prologue
     .line 312
-    .local p2, subclass:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p2, "subclass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     instance-of v2, p1, Lcom/flurry/org/codehaus/jackson/map/type/SimpleType;
 
     if-eqz v2, :cond_4
@@ -3456,13 +3399,13 @@
     move-result-object v1
 
     .line 324
-    .local v1, subtype:Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .local v1, "subtype":Lcom/flurry/org/codehaus/jackson/type/JavaType;
     invoke-virtual {p1}, Lcom/flurry/org/codehaus/jackson/type/JavaType;->getValueHandler()Ljava/lang/Object;
 
     move-result-object v0
 
     .line 325
-    .local v0, h:Ljava/lang/Object;
+    .local v0, "h":Ljava/lang/Object;
     if-eqz v0, :cond_2
 
     .line 327
@@ -3488,8 +3431,8 @@
     move-object v2, v1
 
     .line 337
-    .end local v0           #h:Ljava/lang/Object;
-    .end local v1           #subtype:Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .end local v0    # "h":Ljava/lang/Object;
+    .end local v1    # "subtype":Lcom/flurry/org/codehaus/jackson/type/JavaType;
     :goto_0
     return-object v2
 
@@ -3503,7 +3446,6 @@
 
 .method public constructType(Lcom/flurry/org/codehaus/jackson/type/TypeReference;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .locals 2
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -3515,7 +3457,7 @@
 
     .prologue
     .line 452
-    .local p1, typeRef:Lcom/flurry/org/codehaus/jackson/type/TypeReference;,"Lcom/flurry/org/codehaus/jackson/type/TypeReference<*>;"
+    .local p1, "typeRef":Lcom/flurry/org/codehaus/jackson/type/TypeReference;, "Lcom/flurry/org/codehaus/jackson/type/TypeReference<*>;"
     invoke-virtual {p1}, Lcom/flurry/org/codehaus/jackson/type/TypeReference;->getType()Ljava/lang/reflect/Type;
 
     move-result-object v0
@@ -3531,7 +3473,7 @@
 
 .method public constructType(Ljava/lang/reflect/Type;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .locals 1
-    .parameter "type"
+    .param p1, "type"    # Ljava/lang/reflect/Type;
 
     .prologue
     .line 444
@@ -3546,8 +3488,8 @@
 
 .method public constructType(Ljava/lang/reflect/Type;Lcom/flurry/org/codehaus/jackson/map/type/TypeBindings;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .locals 1
-    .parameter "type"
-    .parameter "bindings"
+    .param p1, "type"    # Ljava/lang/reflect/Type;
+    .param p2, "bindings"    # Lcom/flurry/org/codehaus/jackson/map/type/TypeBindings;
 
     .prologue
     .line 448
@@ -3560,8 +3502,8 @@
 
 .method public constructType(Ljava/lang/reflect/Type;Lcom/flurry/org/codehaus/jackson/type/JavaType;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .locals 2
-    .parameter "type"
-    .parameter "context"
+    .param p1, "type"    # Ljava/lang/reflect/Type;
+    .param p2, "context"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
 
     .prologue
     .line 461
@@ -3572,7 +3514,7 @@
     move-object v0, v1
 
     .line 462
-    .local v0, b:Lcom/flurry/org/codehaus/jackson/map/type/TypeBindings;
+    .local v0, "b":Lcom/flurry/org/codehaus/jackson/map/type/TypeBindings;
     :goto_0
     invoke-virtual {p0, p1, v0}, Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;->_constructType(Ljava/lang/reflect/Type;Lcom/flurry/org/codehaus/jackson/map/type/TypeBindings;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
 
@@ -3581,7 +3523,7 @@
     return-object v1
 
     .line 461
-    .end local v0           #b:Lcom/flurry/org/codehaus/jackson/map/type/TypeBindings;
+    .end local v0    # "b":Lcom/flurry/org/codehaus/jackson/map/type/TypeBindings;
     :cond_0
     new-instance v1, Lcom/flurry/org/codehaus/jackson/map/type/TypeBindings;
 
@@ -3594,8 +3536,7 @@
 
 .method public constructType(Ljava/lang/reflect/Type;Ljava/lang/Class;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .locals 2
-    .parameter "type"
-    .parameter
+    .param p1, "type"    # Ljava/lang/reflect/Type;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -3608,7 +3549,7 @@
 
     .prologue
     .line 456
-    .local p2, context:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p2, "context":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     if-nez p2, :cond_0
 
     const/4 v1, 0x0
@@ -3616,7 +3557,7 @@
     move-object v0, v1
 
     .line 457
-    .local v0, b:Lcom/flurry/org/codehaus/jackson/map/type/TypeBindings;
+    .local v0, "b":Lcom/flurry/org/codehaus/jackson/map/type/TypeBindings;
     :goto_0
     invoke-virtual {p0, p1, v0}, Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;->_constructType(Ljava/lang/reflect/Type;Lcom/flurry/org/codehaus/jackson/map/type/TypeBindings;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
 
@@ -3625,7 +3566,7 @@
     return-object v1
 
     .line 456
-    .end local v0           #b:Lcom/flurry/org/codehaus/jackson/map/type/TypeBindings;
+    .end local v0    # "b":Lcom/flurry/org/codehaus/jackson/map/type/TypeBindings;
     :cond_0
     new-instance v1, Lcom/flurry/org/codehaus/jackson/map/type/TypeBindings;
 
@@ -3638,8 +3579,7 @@
 
 .method public findTypeParameters(Lcom/flurry/org/codehaus/jackson/type/JavaType;Ljava/lang/Class;)[Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .locals 5
-    .parameter "type"
-    .parameter
+    .param p1, "type"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -3652,13 +3592,13 @@
 
     .prologue
     .line 378
-    .local p2, expType:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p2, "expType":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-virtual {p1}, Lcom/flurry/org/codehaus/jackson/type/JavaType;->getRawClass()Ljava/lang/Class;
 
     move-result-object v2
 
     .line 379
-    .local v2, raw:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local v2, "raw":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     if-ne v2, p2, :cond_2
 
     .line 381
@@ -3667,26 +3607,26 @@
     move-result v0
 
     .line 382
-    .local v0, count:I
+    .local v0, "count":I
     if-nez v0, :cond_0
 
     const/4 v4, 0x0
 
     .line 395
-    .end local v0           #count:I
+    .end local v0    # "count":I
     :goto_0
     return-object v4
 
     .line 383
-    .restart local v0       #count:I
+    .restart local v0    # "count":I
     :cond_0
     new-array v3, v0, [Lcom/flurry/org/codehaus/jackson/type/JavaType;
 
     .line 384
-    .local v3, result:[Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .local v3, "result":[Lcom/flurry/org/codehaus/jackson/type/JavaType;
     const/4 v1, 0x0
 
-    .local v1, i:I
+    .local v1, "i":I
     :goto_1
     if-ge v1, v0, :cond_1
 
@@ -3709,9 +3649,9 @@
     goto :goto_0
 
     .line 395
-    .end local v0           #count:I
-    .end local v1           #i:I
-    .end local v3           #result:[Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .end local v0    # "count":I
+    .end local v1    # "i":I
+    .end local v3    # "result":[Lcom/flurry/org/codehaus/jackson/type/JavaType;
     :cond_2
     new-instance v4, Lcom/flurry/org/codehaus/jackson/map/type/TypeBindings;
 
@@ -3726,8 +3666,6 @@
 
 .method public findTypeParameters(Ljava/lang/Class;Ljava/lang/Class;)[Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .locals 1
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -3741,8 +3679,8 @@
 
     .prologue
     .line 399
-    .local p1, clz:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
-    .local p2, expType:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p1, "clz":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
+    .local p2, "expType":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     new-instance v0, Lcom/flurry/org/codehaus/jackson/map/type/TypeBindings;
 
     invoke-direct {v0, p0, p1}, Lcom/flurry/org/codehaus/jackson/map/type/TypeBindings;-><init>(Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;Ljava/lang/Class;)V
@@ -3756,9 +3694,7 @@
 
 .method public findTypeParameters(Ljava/lang/Class;Ljava/lang/Class;Lcom/flurry/org/codehaus/jackson/map/type/TypeBindings;)[Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .locals 17
-    .parameter
-    .parameter
-    .parameter "bindings"
+    .param p3, "bindings"    # Lcom/flurry/org/codehaus/jackson/map/type/TypeBindings;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -3774,14 +3710,14 @@
 
     .prologue
     .line 405
-    .local p1, clz:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
-    .local p2, expType:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p1, "clz":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
+    .local p2, "expType":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-virtual/range {p0 .. p2}, Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;->_findSuperTypeChain(Ljava/lang/Class;Ljava/lang/Class;)Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;
 
     move-result-object v10
 
     .line 407
-    .local v10, subType:Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;
+    .local v10, "subType":Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;
     if-nez v10, :cond_0
 
     .line 408
@@ -3832,7 +3768,7 @@
     move-object v11, v10
 
     .line 412
-    .local v11, superType:Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;
+    .local v11, "superType":Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;
     :goto_0
     invoke-virtual {v11}, Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;->getSuperType()Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;
 
@@ -3851,7 +3787,7 @@
     move-result-object v9
 
     .line 415
-    .local v9, raw:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local v9, "raw":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     new-instance v7, Lcom/flurry/org/codehaus/jackson/map/type/TypeBindings;
 
     move-object v0, v7
@@ -3863,7 +3799,7 @@
     invoke-direct {v0, v1, v2}, Lcom/flurry/org/codehaus/jackson/map/type/TypeBindings;-><init>(Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;Ljava/lang/Class;)V
 
     .line 416
-    .local v7, newBindings:Lcom/flurry/org/codehaus/jackson/map/type/TypeBindings;
+    .local v7, "newBindings":Lcom/flurry/org/codehaus/jackson/map/type/TypeBindings;
     invoke-virtual {v11}, Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;->isGeneric()Z
 
     move-result v14
@@ -3876,26 +3812,26 @@
     move-result-object v8
 
     .line 418
-    .local v8, pt:Ljava/lang/reflect/ParameterizedType;
+    .local v8, "pt":Ljava/lang/reflect/ParameterizedType;
     invoke-interface {v8}, Ljava/lang/reflect/ParameterizedType;->getActualTypeArguments()[Ljava/lang/reflect/Type;
 
     move-result-object v3
 
     .line 419
-    .local v3, actualTypes:[Ljava/lang/reflect/Type;
+    .local v3, "actualTypes":[Ljava/lang/reflect/Type;
     invoke-virtual {v9}, Ljava/lang/Class;->getTypeParameters()[Ljava/lang/reflect/TypeVariable;
 
     move-result-object v13
 
     .line 420
-    .local v13, vars:[Ljava/lang/reflect/TypeVariable;,"[Ljava/lang/reflect/TypeVariable<*>;"
+    .local v13, "vars":[Ljava/lang/reflect/TypeVariable;, "[Ljava/lang/reflect/TypeVariable<*>;"
     array-length v5, v3
 
     .line 421
-    .local v5, len:I
+    .local v5, "len":I
     const/4 v4, 0x0
 
-    .local v4, i:I
+    .local v4, "i":I
     :goto_1
     if-ge v4, v5, :cond_1
 
@@ -3907,7 +3843,7 @@
     move-result-object v6
 
     .line 423
-    .local v6, name:Ljava/lang/String;
+    .local v6, "name":Ljava/lang/String;
     sget-object v14, Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;->instance:Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;
 
     aget-object v15, v3, v4
@@ -3923,7 +3859,7 @@
     move-result-object v12
 
     .line 424
-    .local v12, type:Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .local v12, "type":Lcom/flurry/org/codehaus/jackson/type/JavaType;
     invoke-virtual {v7, v6, v12}, Lcom/flurry/org/codehaus/jackson/map/type/TypeBindings;->addBinding(Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/type/JavaType;)V
 
     .line 421
@@ -3932,13 +3868,13 @@
     goto :goto_1
 
     .line 427
-    .end local v3           #actualTypes:[Ljava/lang/reflect/Type;
-    .end local v4           #i:I
-    .end local v5           #len:I
-    .end local v6           #name:Ljava/lang/String;
-    .end local v8           #pt:Ljava/lang/reflect/ParameterizedType;
-    .end local v12           #type:Lcom/flurry/org/codehaus/jackson/type/JavaType;
-    .end local v13           #vars:[Ljava/lang/reflect/TypeVariable;,"[Ljava/lang/reflect/TypeVariable<*>;"
+    .end local v3    # "actualTypes":[Ljava/lang/reflect/Type;
+    .end local v4    # "i":I
+    .end local v5    # "len":I
+    .end local v6    # "name":Ljava/lang/String;
+    .end local v8    # "pt":Ljava/lang/reflect/ParameterizedType;
+    .end local v12    # "type":Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .end local v13    # "vars":[Ljava/lang/reflect/TypeVariable;, "[Ljava/lang/reflect/TypeVariable<*>;"
     :cond_1
     move-object/from16 p3, v7
 
@@ -3946,8 +3882,8 @@
     goto :goto_0
 
     .line 431
-    .end local v7           #newBindings:Lcom/flurry/org/codehaus/jackson/map/type/TypeBindings;
-    .end local v9           #raw:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .end local v7    # "newBindings":Lcom/flurry/org/codehaus/jackson/map/type/TypeBindings;
+    .end local v9    # "raw":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     :cond_2
     invoke-virtual {v11}, Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;->isGeneric()Z
 
@@ -3972,7 +3908,6 @@
 
 .method public uncheckedSimpleType(Ljava/lang/Class;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -3984,7 +3919,7 @@
 
     .prologue
     .line 662
-    .local p1, cls:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p1, "cls":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     new-instance v0, Lcom/flurry/org/codehaus/jackson/map/type/SimpleType;
 
     invoke-direct {v0, p1}, Lcom/flurry/org/codehaus/jackson/map/type/SimpleType;-><init>(Ljava/lang/Class;)V
@@ -3994,7 +3929,7 @@
 
 .method public withModifier(Lcom/flurry/org/codehaus/jackson/map/type/TypeModifier;)Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;
     .locals 4
-    .parameter "mod"
+    .param p1, "mod"    # Lcom/flurry/org/codehaus/jackson/map/type/TypeModifier;
 
     .prologue
     .line 105
@@ -4018,11 +3953,11 @@
     invoke-direct {v0, v1, v2}, Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;-><init>(Lcom/flurry/org/codehaus/jackson/map/type/TypeParser;[Lcom/flurry/org/codehaus/jackson/map/type/TypeModifier;)V
 
     .line 108
-    .end local p0
+    .end local p0    # "this":Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;
     :goto_0
     return-object v0
 
-    .restart local p0
+    .restart local p0    # "this":Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;
     :cond_0
     new-instance v0, Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;
 
@@ -4034,7 +3969,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;
     check-cast p0, [Lcom/flurry/org/codehaus/jackson/map/type/TypeModifier;
 
     invoke-direct {v0, v1, p0}, Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;-><init>(Lcom/flurry/org/codehaus/jackson/map/type/TypeParser;[Lcom/flurry/org/codehaus/jackson/map/type/TypeModifier;)V

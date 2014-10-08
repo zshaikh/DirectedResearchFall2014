@@ -32,8 +32,8 @@
 # virtual methods
 .method public call(Lcom/adobe/fre/FREContext;[Lcom/adobe/fre/FREObject;)Lcom/adobe/fre/FREObject;
     .locals 2
-    .parameter "context"
-    .parameter "args"
+    .param p1, "context"    # Lcom/adobe/fre/FREContext;
+    .param p2, "args"    # [Lcom/adobe/fre/FREObject;
 
     .prologue
     .line 22
@@ -42,7 +42,7 @@
     move-result-object v0
 
     .line 25
-    .local v0, activity:Landroid/app/Activity;
+    .local v0, "activity":Landroid/app/Activity;
     invoke-static {v0}, Lcom/buffalostudios/aneutils/loadingspinner/LoadingSpinnerActivity;->stop(Landroid/app/Activity;)V
 
     .line 27

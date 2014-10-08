@@ -21,8 +21,7 @@
 # direct methods
 .method public constructor <init>(Lcom/fusepowered/m1/android/MMAdView;Landroid/content/Context;)V
     .locals 1
-    .parameter
-    .parameter "context"
+    .param p2, "context"    # Landroid/content/Context;
 
     .prologue
     .line 324
@@ -71,7 +70,7 @@
     iget v4, v5, Lcom/fusepowered/m1/android/MMAdView;->transitionType:I
 
     .line 404
-    .local v4, type:I
+    .local v4, "type":I
     if-ne v4, v8, :cond_0
 
     .line 406
@@ -80,25 +79,25 @@
     invoke-direct {v3}, Ljava/util/Random;-><init>()V
 
     .line 407
-    .local v3, r:Ljava/util/Random;
+    .local v3, "r":Ljava/util/Random;
     invoke-virtual {v3, v8}, Ljava/util/Random;->nextInt(I)I
 
     move-result v4
 
     .line 411
-    .end local v3           #r:Ljava/util/Random;
+    .end local v3    # "r":Ljava/util/Random;
     :cond_0
     packed-switch v4, :pswitch_data_0
 
     .line 414
     new-instance v1, Landroid/view/animation/AlphaAnimation;
 
-    const/high16 v5, 0x3f80
+    const/high16 v5, 0x3f800000
 
     invoke-direct {v1, v5, v6}, Landroid/view/animation/AlphaAnimation;-><init>(FF)V
 
     .line 428
-    .local v1, animation:Landroid/view/animation/Animation;
+    .local v1, "animation":Landroid/view/animation/Animation;
     :goto_0
     const-wide/16 v5, 0x3e8
 
@@ -122,7 +121,7 @@
     move-object v0, v1
 
     .line 434
-    .local v0, animFinal:Landroid/view/animation/Animation;
+    .local v0, "animFinal":Landroid/view/animation/Animation;
     new-instance v5, Lcom/fusepowered/m1/android/MMAdView$MMAdViewMMAdImpl$1;
 
     invoke-direct {v5, p0, v0}, Lcom/fusepowered/m1/android/MMAdView$MMAdViewMMAdImpl$1;-><init>(Lcom/fusepowered/m1/android/MMAdView$MMAdViewMMAdImpl;Landroid/view/animation/Animation;)V
@@ -130,14 +129,14 @@
     invoke-static {v5}, Lcom/fusepowered/m1/android/MMSDK;->runOnUiThread(Ljava/lang/Runnable;)V
 
     .line 443
-    .end local v0           #animFinal:Landroid/view/animation/Animation;
-    .end local v1           #animation:Landroid/view/animation/Animation;
-    .end local v4           #type:I
+    .end local v0    # "animFinal":Landroid/view/animation/Animation;
+    .end local v1    # "animation":Landroid/view/animation/Animation;
+    .end local v4    # "type":I
     :cond_1
     return-void
 
     .line 417
-    .restart local v4       #type:I
+    .restart local v4    # "type":I
     :pswitch_0
     iget-object v5, p0, Lcom/fusepowered/m1/android/MMAdView$MMAdViewMMAdImpl;->this$0:Lcom/fusepowered/m1/android/MMAdView;
 
@@ -148,7 +147,7 @@
     int-to-float v2, v5
 
     .line 418
-    .local v2, height:F
+    .local v2, "height":F
     new-instance v1, Landroid/view/animation/TranslateAnimation;
 
     neg-float v5, v2
@@ -156,12 +155,12 @@
     invoke-direct {v1, v6, v6, v6, v5}, Landroid/view/animation/TranslateAnimation;-><init>(FFFF)V
 
     .line 419
-    .restart local v1       #animation:Landroid/view/animation/Animation;
+    .restart local v1    # "animation":Landroid/view/animation/Animation;
     goto :goto_0
 
     .line 421
-    .end local v1           #animation:Landroid/view/animation/Animation;
-    .end local v2           #height:F
+    .end local v1    # "animation":Landroid/view/animation/Animation;
+    .end local v2    # "height":F
     :pswitch_1
     iget-object v5, p0, Lcom/fusepowered/m1/android/MMAdView$MMAdViewMMAdImpl;->this$0:Lcom/fusepowered/m1/android/MMAdView;
 
@@ -172,12 +171,12 @@
     int-to-float v2, v5
 
     .line 422
-    .restart local v2       #height:F
+    .restart local v2    # "height":F
     new-instance v1, Landroid/view/animation/TranslateAnimation;
 
     invoke-direct {v1, v6, v6, v6, v2}, Landroid/view/animation/TranslateAnimation;-><init>(FFFF)V
 
-    .restart local v1       #animation:Landroid/view/animation/Animation;
+    .restart local v1    # "animation":Landroid/view/animation/Animation;
     goto :goto_0
 
     .line 411
@@ -230,7 +229,6 @@
 
 .method insertUrlAdMetaValues(Ljava/util/Map;)V
     .locals 2
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -244,7 +242,7 @@
 
     .prologue
     .line 378
-    .local p1, paramsMap:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p1, "paramsMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     iget-object v0, p0, Lcom/fusepowered/m1/android/MMAdView$MMAdViewMMAdImpl;->this$0:Lcom/fusepowered/m1/android/MMAdView;
 
     iget v0, v0, Lcom/fusepowered/m1/android/MMAdView;->height:I
@@ -351,7 +349,7 @@
 
 .method prepareTransition(Landroid/graphics/Bitmap;)V
     .locals 2
-    .parameter "bitmap"
+    .param p1, "bitmap"    # Landroid/graphics/Bitmap;
 
     .prologue
     .line 357

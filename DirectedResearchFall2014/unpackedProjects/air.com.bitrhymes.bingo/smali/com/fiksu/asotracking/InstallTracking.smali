@@ -24,7 +24,7 @@
 
 .method protected static checkForFiksuReceiver(Landroid/content/Context;)V
     .locals 8
-    .parameter "context"
+    .param p0, "context"    # Landroid/content/Context;
 
     .prologue
     const/4 v4, 0x0
@@ -41,7 +41,7 @@
     move-result-object v2
 
     .line 158
-    .local v2, receivers:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
+    .local v2, "receivers":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-interface {v2}, Ljava/util/List;->size()I
 
     move-result v3
@@ -52,7 +52,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "context":Landroid/content/Context;
     check-cast p0, Ljava/lang/String;
 
     const-string v3, "com.fiksu.asotracking.InstallTracking"
@@ -80,7 +80,7 @@
     move-object v1, p0
 
     .line 160
-    .local v1, receiver:Ljava/lang/String;
+    .local v1, "receiver":Ljava/lang/String;
     :goto_0
     const-string v3, "FiksuTracking"
 
@@ -117,7 +117,7 @@
     throw v3
 
     .line 159
-    .end local v1           #receiver:Ljava/lang/String;
+    .end local v1    # "receiver":Ljava/lang/String;
     :cond_1
     const-string v3, "NONE"
 
@@ -146,7 +146,7 @@
     const-string v0, "Multiple receivers declared for: com.android.vending.INSTALL_REFERRER"
 
     .line 170
-    .local v0, msg:Ljava/lang/String;
+    .local v0, "msg":Ljava/lang/String;
     const-string v3, "FiksuTracking"
 
     const-string v3, "Multiple receivers declared for: com.android.vending.INSTALL_REFERRER"
@@ -163,14 +163,14 @@
     throw v3
 
     .line 174
-    .end local v0           #msg:Ljava/lang/String;
+    .end local v0    # "msg":Ljava/lang/String;
     :cond_3
     return-void
 .end method
 
 .method protected static readReceiversFromManifest(Landroid/content/Context;)Ljava/util/List;
     .locals 7
-    .parameter "context"
+    .param p0, "context"    # Landroid/content/Context;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -190,13 +190,13 @@
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
     .line 133
-    .local v4, receivers:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
+    .local v4, "receivers":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v3
 
     .line 134
-    .local v3, packageManager:Landroid/content/pm/PackageManager;
+    .local v3, "packageManager":Landroid/content/pm/PackageManager;
     if-nez v3, :cond_1
 
     .line 153
@@ -212,7 +212,7 @@
     invoke-direct {v1, v5}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
     .line 139
-    .local v1, installReferrerIntent:Landroid/content/Intent;
+    .local v1, "installReferrerIntent":Landroid/content/Intent;
     invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object v5
@@ -227,7 +227,7 @@
     move-result-object v2
 
     .line 142
-    .local v2, list:Ljava/util/List;,"Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
+    .local v2, "list":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     if-eqz v2, :cond_0
 
     invoke-interface {v2}, Ljava/util/List;->size()I
@@ -256,7 +256,7 @@
     check-cast v0, Landroid/content/pm/ResolveInfo;
 
     .line 147
-    .local v0, info:Landroid/content/pm/ResolveInfo;
+    .local v0, "info":Landroid/content/pm/ResolveInfo;
     if-eqz v0, :cond_2
 
     iget-object v6, v0, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
@@ -281,7 +281,7 @@
 
 .method protected static readTargetsFromMetaData(Landroid/content/Context;)Ljava/util/List;
     .locals 11
-    .parameter "context"
+    .param p0, "context"    # Landroid/content/Context;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -303,13 +303,13 @@
     invoke-direct {v6}, Ljava/util/ArrayList;-><init>()V
 
     .line 94
-    .local v6, receivers:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
+    .local v6, "receivers":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v5
 
     .line 95
-    .local v5, packageManager:Landroid/content/pm/PackageManager;
+    .local v5, "packageManager":Landroid/content/pm/PackageManager;
     if-nez v5, :cond_1
 
     .line 96
@@ -342,7 +342,7 @@
     move-result-object v0
 
     .line 103
-    .local v0, activityInfo:Landroid/content/pm/ActivityInfo;
+    .local v0, "activityInfo":Landroid/content/pm/ActivityInfo;
     if-eqz v0, :cond_2
 
     iget-object v7, v0, Landroid/content/pm/ActivityInfo;->metaData:Landroid/os/Bundle;
@@ -370,14 +370,14 @@
     goto :goto_0
 
     .line 124
-    .end local v0           #activityInfo:Landroid/content/pm/ActivityInfo;
+    .end local v0    # "activityInfo":Landroid/content/pm/ActivityInfo;
     :catch_0
     move-exception v7
 
     move-object v4, v7
 
     .line 125
-    .local v4, nnf:Landroid/content/pm/PackageManager$NameNotFoundException;
+    .local v4, "nnf":Landroid/content/pm/PackageManager$NameNotFoundException;
     const-string v7, "FiksuTracking"
 
     const-string v7, "Couldn\'t get info for receivers."
@@ -387,14 +387,14 @@
     goto :goto_0
 
     .line 108
-    .end local v4           #nnf:Landroid/content/pm/PackageManager$NameNotFoundException;
-    .restart local v0       #activityInfo:Landroid/content/pm/ActivityInfo;
+    .end local v4    # "nnf":Landroid/content/pm/PackageManager$NameNotFoundException;
+    .restart local v0    # "activityInfo":Landroid/content/pm/ActivityInfo;
     :cond_3
     :try_start_1
     iget-object v3, v0, Landroid/content/pm/ActivityInfo;->metaData:Landroid/os/Bundle;
 
     .line 110
-    .local v3, metaData:Landroid/os/Bundle;
+    .local v3, "metaData":Landroid/os/Bundle;
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-virtual {v3}, Landroid/os/Bundle;->keySet()Ljava/util/Set;
@@ -404,7 +404,7 @@
     invoke-direct {v2, v7}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
     .line 111
-    .local v2, keys:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
+    .local v2, "keys":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-static {v2}, Ljava/util/Collections;->sort(Ljava/util/List;)V
 
     .line 113
@@ -427,7 +427,7 @@
     check-cast v1, Ljava/lang/String;
 
     .line 114
-    .local v1, key:Ljava/lang/String;
+    .local v1, "key":Ljava/lang/String;
     const-string v8, "forward."
 
     invoke-virtual {v1, v8}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
@@ -490,8 +490,8 @@
 # virtual methods
 .method protected forwardToOtherReceivers(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 7
-    .parameter "context"
-    .parameter "intent"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
     .line 67
@@ -500,18 +500,18 @@
     move-result-object v2
 
     .line 69
-    .local v2, classNames:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
+    .local v2, "classNames":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     .line 70
-    .local v0, badlyBehaved:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
+    .local v0, "badlyBehaved":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
 
-    .local v3, iter:Ljava/util/Iterator;,"Ljava/util/Iterator<Ljava/lang/String;>;"
+    .local v3, "iter":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/String;>;"
     :cond_0
     :goto_0
     invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
@@ -556,7 +556,7 @@
     check-cast v4, Ljava/lang/String;
 
     .line 72
-    .local v4, value:Ljava/lang/String;
+    .local v4, "value":Ljava/lang/String;
     const-string v5, "com.fiksu.asotracking.InstallTracking"
 
     invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -589,7 +589,7 @@
     goto :goto_0
 
     .line 82
-    .end local v4           #value:Ljava/lang/String;
+    .end local v4    # "value":Ljava/lang/String;
     :cond_3
     invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -598,13 +598,13 @@
     check-cast v1, Ljava/lang/String;
 
     .line 83
-    .local v1, className:Ljava/lang/String;
+    .local v1, "className":Ljava/lang/String;
     invoke-virtual {p0, p1, p2, v1}, Lcom/fiksu/asotracking/InstallTracking;->forwardToReceiver(Landroid/content/Context;Landroid/content/Intent;Ljava/lang/String;)V
 
     goto :goto_1
 
     .line 86
-    .end local v1           #className:Ljava/lang/String;
+    .end local v1    # "className":Ljava/lang/String;
     :cond_4
     invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -613,7 +613,7 @@
     check-cast v1, Ljava/lang/String;
 
     .line 87
-    .restart local v1       #className:Ljava/lang/String;
+    .restart local v1    # "className":Ljava/lang/String;
     invoke-virtual {p0, p1, p2, v1}, Lcom/fiksu/asotracking/InstallTracking;->forwardToReceiver(Landroid/content/Context;Landroid/content/Intent;Ljava/lang/String;)V
 
     goto :goto_2
@@ -621,9 +621,9 @@
 
 .method protected forwardToReceiver(Landroid/content/Context;Landroid/content/Intent;Ljava/lang/String;)V
     .locals 7
-    .parameter "context"
-    .parameter "intent"
-    .parameter "receiverClassName"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "intent"    # Landroid/content/Intent;
+    .param p3, "receiverClassName"    # Ljava/lang/String;
 
     .prologue
     const-string v6, "FiksuTracking"
@@ -641,7 +641,7 @@
     check-cast v2, Landroid/content/BroadcastReceiver;
 
     .line 57
-    .local v2, receiver:Landroid/content/BroadcastReceiver;
+    .local v2, "receiver":Landroid/content/BroadcastReceiver;
     invoke-virtual {v2, p1, p2}, Landroid/content/BroadcastReceiver;->onReceive(Landroid/content/Context;Landroid/content/Intent;)V
 
     .line 58
@@ -667,7 +667,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
     .line 64
-    .end local v2           #receiver:Landroid/content/BroadcastReceiver;
+    .end local v2    # "receiver":Landroid/content/BroadcastReceiver;
     :goto_0
     return-void
 
@@ -678,7 +678,7 @@
     move-object v1, v3
 
     .line 60
-    .local v1, missing:Ljava/lang/ClassNotFoundException;
+    .local v1, "missing":Ljava/lang/ClassNotFoundException;
     const-string v3, "FiksuTracking"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -700,14 +700,14 @@
     goto :goto_0
 
     .line 61
-    .end local v1           #missing:Ljava/lang/ClassNotFoundException;
+    .end local v1    # "missing":Ljava/lang/ClassNotFoundException;
     :catch_1
     move-exception v3
 
     move-object v0, v3
 
     .line 62
-    .local v0, error:Ljava/lang/Exception;
+    .local v0, "error":Ljava/lang/Exception;
     const-string v3, "FiksuTracking"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -737,8 +737,8 @@
 
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 0
-    .parameter "context"
-    .parameter "intent"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
     .line 36
@@ -753,8 +753,8 @@
 
 .method protected uploadConversionEvent(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 5
-    .parameter "context"
-    .parameter "intent"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
     .line 42
@@ -766,7 +766,7 @@
     move-result-object v1
 
     .line 43
-    .local v1, referrer:Ljava/lang/String;
+    .local v1, "referrer":Ljava/lang/String;
     if-eqz v1, :cond_0
 
     .line 44
@@ -787,12 +787,12 @@
     invoke-virtual {v2, v3, v4}, Lcom/fiksu/asotracking/ConversionEventTracker;->uploadEventSynchronously(J)V
 
     .line 52
-    .end local v1           #referrer:Ljava/lang/String;
+    .end local v1    # "referrer":Ljava/lang/String;
     :goto_1
     return-void
 
     .line 46
-    .restart local v1       #referrer:Ljava/lang/String;
+    .restart local v1    # "referrer":Ljava/lang/String;
     :cond_0
     const-string v1, ""
     :try_end_0
@@ -801,14 +801,14 @@
     goto :goto_0
 
     .line 49
-    .end local v1           #referrer:Ljava/lang/String;
+    .end local v1    # "referrer":Ljava/lang/String;
     :catch_0
     move-exception v2
 
     move-object v0, v2
 
     .line 50
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v2, "FiksuTracking"
 
     const-string v3, "Unhandled exception processing intent."

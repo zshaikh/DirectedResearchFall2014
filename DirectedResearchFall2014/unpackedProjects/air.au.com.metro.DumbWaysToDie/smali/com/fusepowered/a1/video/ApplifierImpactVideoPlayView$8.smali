@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1
@@ -40,7 +39,7 @@
 # virtual methods
 .method public onClick(Landroid/view/View;)V
     .locals 1
-    .parameter "v"
+    .param p1, "v"    # Landroid/view/View;
 
     .prologue
     .line 423
@@ -51,7 +50,7 @@
     .line 424
     iget-object v0, p0, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$8;->this$0:Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;
 
-    #getter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->_listener:Lcom/fusepowered/a1/video/IApplifierImpactVideoPlayerListener;
+    # getter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->_listener:Lcom/fusepowered/a1/video/IApplifierImpactVideoPlayerListener;
     invoke-static {v0}, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->access$10(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;)Lcom/fusepowered/a1/video/IApplifierImpactVideoPlayerListener;
 
     move-result-object v0

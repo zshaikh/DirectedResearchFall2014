@@ -24,7 +24,6 @@
 # direct methods
 .method private constructor <init>(Lcom/milkmangames/extensions/android/BuffaloExtensionContext;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 779
@@ -37,8 +36,6 @@
 
 .method synthetic constructor <init>(Lcom/milkmangames/extensions/android/BuffaloExtensionContext;Lcom/milkmangames/extensions/android/BuffaloExtensionContext$BUScheduleRepeatingLocalNotificaitonFunction;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 779
@@ -51,8 +48,8 @@
 # virtual methods
 .method public call(Lcom/adobe/fre/FREContext;[Lcom/adobe/fre/FREObject;)Lcom/adobe/fre/FREObject;
     .locals 13
-    .parameter "context"
-    .parameter "args"
+    .param p1, "context"    # Lcom/adobe/fre/FREContext;
+    .param p2, "args"    # [Lcom/adobe/fre/FREObject;
 
     .prologue
     const/4 v12, 0x0
@@ -68,7 +65,7 @@
     move-result v1
 
     .line 788
-    .local v1, uid:I
+    .local v1, "uid":I
     const/4 v0, 0x1
 
     aget-object v0, p2, v0
@@ -80,7 +77,7 @@
     double-to-long v2, v10
 
     .line 789
-    .local v2, firstTimeSeconds:J
+    .local v2, "firstTimeSeconds":J
     const/4 v0, 0x2
 
     aget-object v0, p2, v0
@@ -92,7 +89,7 @@
     double-to-long v4, v10
 
     .line 790
-    .local v4, thenEverySeconds:J
+    .local v4, "thenEverySeconds":J
     const/4 v0, 0x3
 
     aget-object v0, p2, v0
@@ -102,7 +99,7 @@
     move-result-object v6
 
     .line 791
-    .local v6, title:Ljava/lang/String;
+    .local v6, "title":Ljava/lang/String;
     const/4 v0, 0x4
 
     aget-object v0, p2, v0
@@ -112,7 +109,7 @@
     move-result-object v7
 
     .line 792
-    .local v7, message:Ljava/lang/String;
+    .local v7, "message":Ljava/lang/String;
     const/4 v0, 0x5
 
     aget-object v0, p2, v0
@@ -122,7 +119,7 @@
     move-result-object v8
 
     .line 793
-    .local v8, extraData:Ljava/lang/String;
+    .local v8, "extraData":Ljava/lang/String;
     iget-object v0, p0, Lcom/milkmangames/extensions/android/BuffaloExtensionContext$BUScheduleRepeatingLocalNotificaitonFunction;->this$0:Lcom/milkmangames/extensions/android/BuffaloExtensionContext;
 
     invoke-virtual/range {v0 .. v8}, Lcom/milkmangames/extensions/android/BuffaloExtensionContext;->scheduleRepeatingLocalNotification(IJJLjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
@@ -132,12 +129,12 @@
     move-object v0, v12
 
     .line 801
-    .end local v1           #uid:I
-    .end local v2           #firstTimeSeconds:J
-    .end local v4           #thenEverySeconds:J
-    .end local v6           #title:Ljava/lang/String;
-    .end local v7           #message:Ljava/lang/String;
-    .end local v8           #extraData:Ljava/lang/String;
+    .end local v1    # "uid":I
+    .end local v2    # "firstTimeSeconds":J
+    .end local v4    # "thenEverySeconds":J
+    .end local v6    # "title":Ljava/lang/String;
+    .end local v7    # "message":Ljava/lang/String;
+    .end local v8    # "extraData":Ljava/lang/String;
     :goto_0
     return-object v0
 
@@ -148,7 +145,7 @@
     move-object v9, v0
 
     .line 797
-    .local v9, e:Ljava/lang/Exception;
+    .local v9, "e":Ljava/lang/Exception;
     const-string v0, "[BUExtension]"
 
     const-string v10, "Parse exception"

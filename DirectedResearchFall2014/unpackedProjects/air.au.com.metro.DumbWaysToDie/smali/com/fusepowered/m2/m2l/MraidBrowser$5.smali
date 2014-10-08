@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m2/m2l/M2RBrowser;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1
@@ -40,13 +39,13 @@
 # virtual methods
 .method public onClick(Landroid/view/View;)V
     .locals 1
-    .parameter "v"
+    .param p1, "v"    # Landroid/view/View;
 
     .prologue
     .line 189
     iget-object v0, p0, Lcom/fusepowered/m2/m2l/MraidBrowser$5;->this$0:Lcom/fusepowered/m2/m2l/M2RBrowser;
 
-    #getter for: Lcom/fusepowered/m2/m2l/M2RBrowser;->mWebView:Landroid/webkit/WebView;
+    # getter for: Lcom/fusepowered/m2/m2l/M2RBrowser;->mWebView:Landroid/webkit/WebView;
     invoke-static {v0}, Lcom/fusepowered/m2/m2l/M2RBrowser;->access$2(Lcom/fusepowered/m2/m2l/M2RBrowser;)Landroid/webkit/WebView;
 
     move-result-object v0

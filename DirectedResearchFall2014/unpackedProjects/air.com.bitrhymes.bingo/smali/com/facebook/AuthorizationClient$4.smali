@@ -26,8 +26,6 @@
 # direct methods
 .method constructor <init>(Lcom/facebook/AuthorizationClient;Ljava/util/ArrayList;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 1
@@ -45,7 +43,7 @@
 # virtual methods
 .method public onCompleted(Lcom/facebook/Response;)V
     .locals 5
-    .parameter "response"
+    .param p1, "response"    # Lcom/facebook/Response;
 
     .prologue
     .line 401
@@ -59,7 +57,7 @@
     check-cast v2, Lcom/facebook/model/GraphMultiResult;
 
     .line 402
-    .local v2, result:Lcom/facebook/model/GraphMultiResult;
+    .local v2, "result":Lcom/facebook/model/GraphMultiResult;
     if-eqz v2, :cond_0
 
     .line 403
@@ -68,7 +66,7 @@
     move-result-object v0
 
     .line 404
-    .local v0, data:Lcom/facebook/model/GraphObjectList;,"Lcom/facebook/model/GraphObjectList<Lcom/facebook/model/GraphObject;>;"
+    .local v0, "data":Lcom/facebook/model/GraphObjectList;, "Lcom/facebook/model/GraphObjectList<Lcom/facebook/model/GraphObject;>;"
     if-eqz v0, :cond_0
 
     invoke-interface {v0}, Lcom/facebook/model/GraphObjectList;->size()I
@@ -89,7 +87,7 @@
     check-cast v1, Lcom/facebook/model/GraphObject;
 
     .line 408
-    .local v1, permissions:Lcom/facebook/model/GraphObject;
+    .local v1, "permissions":Lcom/facebook/model/GraphObject;
     iget-object v3, p0, Lcom/facebook/AuthorizationClient$4;->val$tokenPermissions:Ljava/util/ArrayList;
 
     invoke-interface {v1}, Lcom/facebook/model/GraphObject;->asMap()Ljava/util/Map;
@@ -105,9 +103,9 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 413
-    .end local v0           #data:Lcom/facebook/model/GraphObjectList;,"Lcom/facebook/model/GraphObjectList<Lcom/facebook/model/GraphObject;>;"
-    .end local v1           #permissions:Lcom/facebook/model/GraphObject;
-    .end local v2           #result:Lcom/facebook/model/GraphMultiResult;
+    .end local v0    # "data":Lcom/facebook/model/GraphObjectList;, "Lcom/facebook/model/GraphObjectList<Lcom/facebook/model/GraphObject;>;"
+    .end local v1    # "permissions":Lcom/facebook/model/GraphObject;
+    .end local v2    # "result":Lcom/facebook/model/GraphMultiResult;
     :cond_0
     :goto_0
     return-void

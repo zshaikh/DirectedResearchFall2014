@@ -85,7 +85,7 @@
 
     .line 532
     :array_0
-    .array-data 0x1
+    .array-data 1
         0x41t
         0x42t
         0x43t
@@ -154,7 +154,7 @@
 
     .line 543
     :array_1
-    .array-data 0x1
+    .array-data 1
         0x41t
         0x42t
         0x43t
@@ -224,8 +224,6 @@
 
 .method public constructor <init>(I[B)V
     .locals 3
-    .parameter
-    .parameter
 
     .prologue
     const/4 v2, 0x1
@@ -336,7 +334,6 @@
 # virtual methods
 .method public a(I)I
     .locals 1
-    .parameter
 
     .prologue
     .line 578
@@ -351,10 +348,6 @@
 
 .method public a([BIIZ)Z
     .locals 11
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 583

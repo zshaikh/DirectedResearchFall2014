@@ -220,16 +220,14 @@
     nop
 
     :array_0
-    .array-data 0x4
-        0x1ft 0x1t 0x1t 0x1t
-        0x20t 0x1t 0x1t 0x1t
+    .array-data 4
+        0x101011f
+        0x1010120
     .end array-data
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 4
-    .parameter
-    .parameter
 
     .prologue
     const/4 v3, 0x1
@@ -377,8 +375,6 @@
 
 .method public constructor <init>(Landroid/content/Context;Lcom/inmobi/androidsdk/ai/container/IMWebView$IMWebViewListener;)V
     .locals 4
-    .parameter
-    .parameter
 
     .prologue
     const/4 v3, 0x1
@@ -515,10 +511,6 @@
 
 .method public constructor <init>(Landroid/content/Context;Lcom/inmobi/androidsdk/ai/container/IMWebView$IMWebViewListener;ZZ)V
     .locals 4
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const/4 v3, 0x1
@@ -677,7 +669,6 @@
 
 .method static synthetic A(Lcom/inmobi/androidsdk/ai/container/IMWebView;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1009
@@ -688,7 +679,6 @@
 
 .method static synthetic B(Lcom/inmobi/androidsdk/ai/container/IMWebView;)Lcom/inmobi/androidsdk/ai/controller/util/IMAVPlayer;
     .locals 1
-    .parameter
 
     .prologue
     .line 198
@@ -699,7 +689,6 @@
 
 .method static synthetic C(Lcom/inmobi/androidsdk/ai/container/IMWebView;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 2273
@@ -710,7 +699,6 @@
 
 .method private a(Landroid/app/Activity;)I
     .locals 4
-    .parameter
 
     .prologue
     .line 3699
@@ -728,7 +716,7 @@
     invoke-direct {v1, p1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
     .line 3702
-    const/high16 v2, 0x1
+    const/high16 v2, 0x10000
 
     .line 3701
     invoke-virtual {v0, v1, v2}, Landroid/content/pm/PackageManager;->queryIntentActivities(Landroid/content/Intent;I)Ljava/util/List;
@@ -795,7 +783,6 @@
 
 .method static synthetic a(Lcom/inmobi/androidsdk/ai/container/IMWebView;)Landroid/webkit/WebViewClient;
     .locals 1
-    .parameter
 
     .prologue
     .line 1741
@@ -806,7 +793,6 @@
 
 .method private a(Lcom/inmobi/androidsdk/ai/controller/JSController$ExpandProperties;)Landroid/widget/FrameLayout;
     .locals 9
-    .parameter
 
     .prologue
     const/4 v8, 0x1
@@ -954,8 +940,6 @@
 
 .method static synthetic a(Lcom/inmobi/androidsdk/ai/container/IMWebView;Ljava/lang/String;)Lcom/inmobi/androidsdk/ai/controller/util/IMAVPlayer;
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 2476
@@ -968,7 +952,6 @@
 
 .method private a(Ljava/lang/String;)Ljava/lang/String;
     .locals 3
-    .parameter
 
     .prologue
     .line 2059
@@ -1101,7 +1084,6 @@
 
 .method private a(I)V
     .locals 4
-    .parameter
 
     .prologue
     .line 1675
@@ -1170,7 +1152,6 @@
 
 .method private a(Landroid/os/Bundle;)V
     .locals 6
-    .parameter
 
     .prologue
     .line 896
@@ -1493,8 +1474,6 @@
 
 .method private a(Landroid/os/Bundle;Landroid/app/Activity;)V
     .locals 6
-    .parameter
-    .parameter
 
     .prologue
     const/4 v4, 0x1
@@ -1663,7 +1642,7 @@
     invoke-virtual {v2, v3}, Landroid/widget/RelativeLayout;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
     .line 2714
-    const/high16 v3, -0x100
+    const/high16 v3, -0x1000000
 
     invoke-virtual {v2, v3}, Landroid/widget/RelativeLayout;->setBackgroundColor(I)V
 
@@ -1748,11 +1727,9 @@
 
 .method private a(Landroid/view/ViewGroup;Z)V
     .locals 5
-    .parameter
-    .parameter
 
     .prologue
-    const/high16 v3, 0x4248
+    const/high16 v3, 0x42480000
 
     .line 867
     new-instance v0, Landroid/widget/RelativeLayout$LayoutParams;
@@ -1827,8 +1804,6 @@
 
 .method private a(Landroid/webkit/WebView;Ljava/lang/String;)V
     .locals 6
-    .parameter
-    .parameter
 
     .prologue
     const-string v5, "InMobiAndroidSDK_3.6.2"
@@ -1961,7 +1936,6 @@
 
 .method private a(Lcom/inmobi/androidsdk/ai/container/IMWebView$ViewState;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 1900
@@ -2008,8 +1982,6 @@
 
 .method static synthetic a(Lcom/inmobi/androidsdk/ai/container/IMWebView;Landroid/os/Bundle;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 892
@@ -2020,9 +1992,6 @@
 
 .method static synthetic a(Lcom/inmobi/androidsdk/ai/container/IMWebView;Landroid/os/Bundle;Landroid/app/Activity;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 2668
@@ -2033,8 +2002,6 @@
 
 .method static synthetic a(Lcom/inmobi/androidsdk/ai/container/IMWebView;Landroid/os/Message;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 1728
@@ -2045,8 +2012,6 @@
 
 .method static synthetic a(Lcom/inmobi/androidsdk/ai/container/IMWebView;Landroid/view/ViewGroup;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 1561
@@ -2057,8 +2022,6 @@
 
 .method static synthetic a(Lcom/inmobi/androidsdk/ai/container/IMWebView;Landroid/webkit/WebChromeClient$CustomViewCallback;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 1563
@@ -2069,9 +2032,6 @@
 
 .method static synthetic a(Lcom/inmobi/androidsdk/ai/container/IMWebView;Landroid/webkit/WebView;Ljava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 1533
@@ -2082,8 +2042,6 @@
 
 .method static synthetic a(Lcom/inmobi/androidsdk/ai/container/IMWebView;Landroid/widget/FrameLayout;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 1562
@@ -2094,8 +2052,6 @@
 
 .method static synthetic a(Lcom/inmobi/androidsdk/ai/container/IMWebView;Landroid/widget/VideoView;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 1560
@@ -2106,8 +2062,6 @@
 
 .method static synthetic a(Lcom/inmobi/androidsdk/ai/container/IMWebView;Lcom/inmobi/androidsdk/ai/container/IMWebView$ViewState;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 1899
@@ -2118,8 +2072,6 @@
 
 .method static synthetic a(Lcom/inmobi/androidsdk/ai/container/IMWebView;Lcom/inmobi/androidsdk/ai/controller/util/IMAVPlayer;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 198
@@ -2130,8 +2082,6 @@
 
 .method static synthetic a(Lcom/inmobi/androidsdk/ai/container/IMWebView;Z)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 174
@@ -2142,10 +2092,9 @@
 
 .method private a(Lcom/inmobi/androidsdk/ai/controller/JSController$Dimensions;)V
     .locals 6
-    .parameter
 
     .prologue
-    const/high16 v3, 0x4248
+    const/high16 v3, 0x42480000
 
     const/4 v4, 0x1
 
@@ -2336,8 +2285,6 @@
 
 .method private a(Lcom/inmobi/androidsdk/ai/controller/util/IMAVPlayer;Lcom/inmobi/androidsdk/ai/controller/JSController$Dimensions;)V
     .locals 5
-    .parameter
-    .parameter
 
     .prologue
     const/4 v4, 0x0
@@ -2431,7 +2378,6 @@
 
 .method private a(Z)V
     .locals 2
-    .parameter
 
     .prologue
     .line 1954
@@ -2472,9 +2418,6 @@
 
 .method private a(Ljava/lang/String;Ljava/lang/String;Landroid/app/Activity;)Z
     .locals 4
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const/4 v3, 0x0
@@ -2673,10 +2616,6 @@
 
 .method private a(Ljava/lang/String;Ljava/lang/String;Landroid/app/Activity;Lcom/inmobi/androidsdk/ai/controller/JSController$Dimensions;)Z
     .locals 5
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const/4 v4, 0x0
@@ -3027,7 +2966,6 @@
 
 .method static synthetic b(Lcom/inmobi/androidsdk/ai/container/IMWebView;)Lcom/inmobi/androidsdk/ai/container/IMWebView$ViewState;
     .locals 1
-    .parameter
 
     .prologue
     .line 164
@@ -3073,8 +3011,6 @@
 
 .method private b(Landroid/os/Bundle;Landroid/app/Activity;)V
     .locals 7
-    .parameter
-    .parameter
 
     .prologue
     const/4 v6, 0x0
@@ -3228,7 +3164,7 @@
     invoke-virtual {v1, v2}, Landroid/widget/RelativeLayout;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
     .line 3024
-    const/high16 v2, -0x100
+    const/high16 v2, -0x1000000
 
     invoke-virtual {v1, v2}, Landroid/widget/RelativeLayout;->setBackgroundColor(I)V
 
@@ -3397,9 +3333,6 @@
 
 .method static synthetic b(Lcom/inmobi/androidsdk/ai/container/IMWebView;Landroid/os/Bundle;Landroid/app/Activity;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 2982
@@ -3410,8 +3343,6 @@
 
 .method static synthetic b(Lcom/inmobi/androidsdk/ai/container/IMWebView;Ljava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 2085
@@ -3422,8 +3353,6 @@
 
 .method static synthetic b(Lcom/inmobi/androidsdk/ai/container/IMWebView;Z)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 1953
@@ -3434,7 +3363,6 @@
 
 .method private b(Ljava/lang/String;)V
     .locals 7
-    .parameter
 
     .prologue
     const-string v6, "open"
@@ -3629,7 +3557,6 @@
 
 .method private b(I)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 3508
@@ -3652,7 +3579,6 @@
 
 .method private b(Landroid/app/Activity;)Z
     .locals 6
-    .parameter
 
     .prologue
     const/4 v5, 0x1
@@ -3733,9 +3659,6 @@
 
 .method private b(Ljava/lang/String;Ljava/lang/String;Landroid/app/Activity;)Z
     .locals 4
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const/4 v2, 0x0
@@ -3862,7 +3785,6 @@
 
 .method static synthetic c(Lcom/inmobi/androidsdk/ai/container/IMWebView;)Lcom/inmobi/androidsdk/ai/container/IMWebView$IMWebViewListener;
     .locals 1
-    .parameter
 
     .prologue
     .line 167
@@ -3873,7 +3795,6 @@
 
 .method private declared-synchronized c(Ljava/lang/String;)Lcom/inmobi/androidsdk/ai/controller/util/IMAVPlayer;
     .locals 2
-    .parameter
 
     .prologue
     .line 2324
@@ -3956,8 +3877,6 @@
 
 .method static synthetic c(Lcom/inmobi/androidsdk/ai/container/IMWebView;Ljava/lang/String;)Ljava/lang/String;
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 2057
@@ -4068,8 +3987,6 @@
 
 .method static synthetic c(Lcom/inmobi/androidsdk/ai/container/IMWebView;Z)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 184
@@ -4080,7 +3997,6 @@
 
 .method private c(I)Z
     .locals 2
-    .parameter
 
     .prologue
     const/4 v1, 0x1
@@ -4105,7 +4021,6 @@
 
 .method private d(Ljava/lang/String;)Lcom/inmobi/androidsdk/ai/controller/util/IMAVPlayer;
     .locals 1
-    .parameter
 
     .prologue
     .line 2373
@@ -4140,7 +4055,6 @@
 
 .method static synthetic d(Lcom/inmobi/androidsdk/ai/container/IMWebView;)Ljava/util/concurrent/atomic/AtomicBoolean;
     .locals 1
-    .parameter
 
     .prologue
     .line 250
@@ -5275,8 +5189,6 @@
 
 .method static synthetic d(Lcom/inmobi/androidsdk/ai/container/IMWebView;Z)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 175
@@ -5287,7 +5199,6 @@
 
 .method private declared-synchronized e(Ljava/lang/String;)Lcom/inmobi/androidsdk/ai/controller/util/IMAVPlayer;
     .locals 2
-    .parameter
 
     .prologue
     .line 2478
@@ -5443,7 +5354,6 @@
 
 .method static synthetic e(Lcom/inmobi/androidsdk/ai/container/IMWebView;)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 174
@@ -5454,7 +5364,6 @@
 
 .method static synthetic f(Lcom/inmobi/androidsdk/ai/container/IMWebView;)Ljava/util/ArrayList;
     .locals 1
-    .parameter
 
     .prologue
     .line 244
@@ -5670,7 +5579,6 @@
 
 .method static synthetic g(Lcom/inmobi/androidsdk/ai/container/IMWebView;)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 184
@@ -5805,7 +5713,6 @@
 
 .method static synthetic h(Lcom/inmobi/androidsdk/ai/container/IMWebView;)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 187
@@ -5816,7 +5723,6 @@
 
 .method static synthetic i(Lcom/inmobi/androidsdk/ai/container/IMWebView;)Landroid/os/Message;
     .locals 1
-    .parameter
 
     .prologue
     .line 1728
@@ -5877,7 +5783,6 @@
 
 .method static synthetic j(Lcom/inmobi/androidsdk/ai/container/IMWebView;)Landroid/os/Message;
     .locals 1
-    .parameter
 
     .prologue
     .line 1729
@@ -6144,7 +6049,6 @@
 
 .method static synthetic k(Lcom/inmobi/androidsdk/ai/container/IMWebView;)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 176
@@ -6155,7 +6059,6 @@
 
 .method static synthetic l(Lcom/inmobi/androidsdk/ai/container/IMWebView;)Landroid/app/Activity;
     .locals 1
-    .parameter
 
     .prologue
     .line 1734
@@ -6226,7 +6129,6 @@
 
 .method static synthetic m(Lcom/inmobi/androidsdk/ai/container/IMWebView;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 3743
@@ -6237,7 +6139,6 @@
 
 .method static synthetic n(Lcom/inmobi/androidsdk/ai/container/IMWebView;)Landroid/widget/FrameLayout;
     .locals 1
-    .parameter
 
     .prologue
     .line 1562
@@ -6450,7 +6351,6 @@
 
 .method static synthetic o(Lcom/inmobi/androidsdk/ai/container/IMWebView;)Landroid/view/ViewGroup;
     .locals 1
-    .parameter
 
     .prologue
     .line 1561
@@ -6544,7 +6444,6 @@
 
 .method static synthetic p(Lcom/inmobi/androidsdk/ai/container/IMWebView;)Landroid/widget/VideoView;
     .locals 1
-    .parameter
 
     .prologue
     .line 1560
@@ -6654,7 +6553,6 @@
 
 .method static synthetic q(Lcom/inmobi/androidsdk/ai/container/IMWebView;)Landroid/media/MediaPlayer$OnCompletionListener;
     .locals 1
-    .parameter
 
     .prologue
     .line 1637
@@ -6837,7 +6735,6 @@
 
 .method static synthetic r(Lcom/inmobi/androidsdk/ai/container/IMWebView;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1654
@@ -6848,7 +6745,6 @@
 
 .method static synthetic s(Lcom/inmobi/androidsdk/ai/container/IMWebView;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1830
@@ -6859,7 +6755,6 @@
 
 .method static synthetic t(Lcom/inmobi/androidsdk/ai/container/IMWebView;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 3593
@@ -6870,7 +6765,6 @@
 
 .method static synthetic u(Lcom/inmobi/androidsdk/ai/container/IMWebView;)Ljava/util/Hashtable;
     .locals 1
-    .parameter
 
     .prologue
     .line 208
@@ -6881,7 +6775,6 @@
 
 .method static synthetic v(Lcom/inmobi/androidsdk/ai/container/IMWebView;)Ljava/util/Hashtable;
     .locals 1
-    .parameter
 
     .prologue
     .line 207
@@ -6892,7 +6785,6 @@
 
 .method static synthetic w(Lcom/inmobi/androidsdk/ai/container/IMWebView;)Lcom/inmobi/androidsdk/ai/controller/util/IMAVPlayer;
     .locals 1
-    .parameter
 
     .prologue
     .line 198
@@ -6903,7 +6795,6 @@
 
 .method static synthetic x(Lcom/inmobi/androidsdk/ai/container/IMWebView;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1985
@@ -6914,7 +6805,6 @@
 
 .method static synthetic y(Lcom/inmobi/androidsdk/ai/container/IMWebView;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 3670
@@ -6925,7 +6815,6 @@
 
 .method static synthetic z(Lcom/inmobi/androidsdk/ai/container/IMWebView;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 3515
@@ -6938,7 +6827,6 @@
 # virtual methods
 .method public acceptAction(Ljava/lang/String;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1805
@@ -6947,8 +6835,6 @@
 
 .method public addJavascriptObject(Ljava/lang/Object;Ljava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 1814
@@ -6975,14 +6861,13 @@
 
 .method public changeContentAreaForInterstitials(Z)V
     .locals 9
-    .parameter
 
     .prologue
     const/4 v8, 0x0
 
-    const/high16 v7, -0x100
+    const/high16 v7, -0x1000000
 
-    const/high16 v5, 0x4248
+    const/high16 v5, 0x42480000
 
     .line 3384
     :try_start_0
@@ -7293,7 +7178,6 @@
 
 .method protected closeOpened(Landroid/view/View;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 1881
@@ -7325,7 +7209,6 @@
 
 .method public closeVideo(Ljava/lang/String;)V
     .locals 4
-    .parameter
 
     .prologue
     const-string v3, "closeVideo"
@@ -7441,8 +7324,6 @@
 
 .method public expand(Ljava/lang/String;Lcom/inmobi/androidsdk/ai/controller/JSController$ExpandProperties;)V
     .locals 5
-    .parameter
-    .parameter
 
     .prologue
     const-string v4, " ,"
@@ -7603,7 +7484,6 @@
 
 .method public getAudioVolume(Ljava/lang/String;)I
     .locals 2
-    .parameter
 
     .prologue
     .line 2950
@@ -7639,7 +7519,6 @@
 
 .method public getCurrentRotation(I)Ljava/lang/String;
     .locals 1
-    .parameter
 
     .prologue
     .line 1703
@@ -7901,7 +7780,6 @@
 
 .method public getVideoVolume(Ljava/lang/String;)I
     .locals 2
-    .parameter
 
     .prologue
     .line 3336
@@ -7952,7 +7830,6 @@
 
 .method public hideVideo(Ljava/lang/String;)V
     .locals 3
-    .parameter
 
     .prologue
     .line 3225
@@ -7988,7 +7865,6 @@
 
 .method public injectJavaScript(Ljava/lang/String;)V
     .locals 4
-    .parameter
 
     .prologue
     const-string v3, "InMobiAndroidSDK_3.6.2"
@@ -8070,7 +7946,6 @@
 
 .method public isAudioMuted(Ljava/lang/String;)Z
     .locals 2
-    .parameter
 
     .prologue
     .line 2920
@@ -8148,7 +8023,6 @@
 
 .method public isVideoMuted(Ljava/lang/String;)Z
     .locals 2
-    .parameter
 
     .prologue
     .line 3303
@@ -8194,9 +8068,6 @@
 
 .method public loadData(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 378
@@ -8208,11 +8079,6 @@
 
 .method public loadDataWithBaseURL(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 385
@@ -8227,7 +8093,6 @@
 
 .method public loadUrl(Ljava/lang/String;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 367
@@ -8242,7 +8107,6 @@
 
 .method public lockExpandOrientation(Lcom/inmobi/androidsdk/ai/controller/JSController$ExpandProperties;)V
     .locals 3
-    .parameter
 
     .prologue
     .line 964
@@ -8363,7 +8227,6 @@
 
 .method public muteAudio(Ljava/lang/String;)V
     .locals 3
-    .parameter
 
     .prologue
     const-string v2, "muteAudio"
@@ -8437,7 +8300,6 @@
 
 .method public muteVideo(Ljava/lang/String;)V
     .locals 4
-    .parameter
 
     .prologue
     const-string v3, "muteVideo"
@@ -8613,7 +8475,6 @@
 
 .method public openURL(Ljava/lang/String;)V
     .locals 3
-    .parameter
 
     .prologue
     .line 2041
@@ -8670,7 +8531,6 @@
 
 .method public pageFinishedCallbackForAdCreativeTesting(Landroid/os/Message;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 2512
@@ -8682,7 +8542,6 @@
 
 .method public pauseAudio(Ljava/lang/String;)V
     .locals 4
-    .parameter
 
     .prologue
     const-string v3, "pauseAudio"
@@ -8764,7 +8623,6 @@
 
 .method public pauseVideo(Ljava/lang/String;)V
     .locals 3
-    .parameter
 
     .prologue
     .line 3198
@@ -8800,13 +8658,6 @@
 
 .method public playAudio(Ljava/lang/String;ZZZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 8
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const-string v4, "playAudio"
@@ -8834,8 +8685,8 @@
 
     invoke-virtual {v1}, Ljava/lang/Object;->wait()V
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     .line 2807
     :cond_0
@@ -8968,15 +8819,6 @@
 
 .method public playVideo(Ljava/lang/String;ZZZZLcom/inmobi/androidsdk/ai/controller/JSController$Dimensions;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 12
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 3144
@@ -9002,8 +8844,8 @@
 
     invoke-virtual {v4}, Ljava/lang/Object;->wait()V
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     .line 3144
     :cond_0
@@ -9359,7 +9201,6 @@
 
 .method public postInjectJavaScript(Ljava/lang/String;)V
     .locals 3
-    .parameter
 
     .prologue
     .line 328
@@ -9430,8 +9271,6 @@
 
 .method public raiseError(Ljava/lang/String;Ljava/lang/String;)V
     .locals 3
-    .parameter
-    .parameter
 
     .prologue
     .line 2242
@@ -9485,7 +9324,6 @@
 
 .method public rejectAction(Ljava/lang/String;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1807
@@ -9666,7 +9504,6 @@
 
 .method public requestOnInterstitialClosed(Landroid/os/Message;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 2527
@@ -9678,7 +9515,6 @@
 
 .method public requestOnInterstitialShown(Landroid/os/Message;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 2520
@@ -9690,7 +9526,6 @@
 
 .method public requestOnPageFinishedCallback(Landroid/os/Message;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 2506
@@ -9702,7 +9537,6 @@
 
 .method public requestOnSearchAdClicked(Landroid/os/Message;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 2532
@@ -9714,8 +9548,6 @@
 
 .method public seekAudio(Ljava/lang/String;I)V
     .locals 4
-    .parameter
-    .parameter
 
     .prologue
     const-string v3, "seekAudio"
@@ -9792,8 +9624,6 @@
 
 .method public seekVideo(Ljava/lang/String;I)V
     .locals 4
-    .parameter
-    .parameter
 
     .prologue
     const-string v3, "seekVideo"
@@ -9882,7 +9712,6 @@
 
 .method public sendasyncPing(Ljava/lang/String;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 1810
@@ -9896,7 +9725,6 @@
 
 .method public setActivity(Landroid/app/Activity;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 2536
@@ -9908,8 +9736,6 @@
 
 .method public setAdUnitData(ZLjava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 2498
@@ -9924,8 +9750,6 @@
 
 .method public setAudioVolume(Ljava/lang/String;I)V
     .locals 3
-    .parameter
-    .parameter
 
     .prologue
     .line 2933
@@ -9983,7 +9807,6 @@
 
 .method public setCustomClose(Z)V
     .locals 2
-    .parameter
 
     .prologue
     .line 1975
@@ -10016,9 +9839,6 @@
 
 .method public setExpandPropertiesForInterstitial(ZZLjava/lang/String;)V
     .locals 2
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 3494
@@ -10064,7 +9884,6 @@
 
 .method public setExpandedActivity(Landroid/app/Activity;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 955
@@ -10076,7 +9895,6 @@
 
 .method public setExternalWebViewClient(Landroid/webkit/WebViewClient;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 3638
@@ -10088,8 +9906,6 @@
 
 .method public setVideoVolume(Ljava/lang/String;I)V
     .locals 4
-    .parameter
-    .parameter
 
     .prologue
     const-string v3, "setVideoVolume"
@@ -10183,7 +9999,6 @@
 
 .method public showVideo(Ljava/lang/String;)V
     .locals 3
-    .parameter
 
     .prologue
     .line 3235
@@ -10219,7 +10034,6 @@
 
 .method public unMuteAudio(Ljava/lang/String;)V
     .locals 3
-    .parameter
 
     .prologue
     const-string v2, "unmuteAudio"
@@ -10293,7 +10107,6 @@
 
 .method public unMuteVideo(Ljava/lang/String;)V
     .locals 4
-    .parameter
 
     .prologue
     const-string v3, "unMuteVideo"

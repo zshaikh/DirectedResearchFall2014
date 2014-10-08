@@ -27,7 +27,7 @@
 
     iget-object v0, p0, Lcom/facebook/widget/WebDialog$3;->this$0:Lcom/facebook/widget/WebDialog;
 
-    #calls: Lcom/facebook/widget/WebDialog;->sendCancelToListener()V
+    # invokes: Lcom/facebook/widget/WebDialog;->sendCancelToListener()V
     invoke-static {v0}, Lcom/facebook/widget/WebDialog;->access$000(Lcom/facebook/widget/WebDialog;)V
 
     iget-object v0, p0, Lcom/facebook/widget/WebDialog$3;->this$0:Lcom/facebook/widget/WebDialog;

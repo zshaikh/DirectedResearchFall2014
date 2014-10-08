@@ -88,10 +88,9 @@
 
 .method protected constructor <init>(Lcom/flurry/org/codehaus/jackson/type/JavaType;Lcom/flurry/org/codehaus/jackson/JsonParser;Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;)V
     .locals 7
-    .parameter "type"
-    .parameter "jp"
-    .parameter "ctxt"
-    .parameter
+    .param p1, "type"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .param p2, "jp"    # Lcom/flurry/org/codehaus/jackson/JsonParser;
+    .param p3, "ctxt"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -105,8 +104,8 @@
 
     .prologue
     .line 51
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/MappingIterator;,"Lcom/flurry/org/codehaus/jackson/map/MappingIterator<TT;>;"
-    .local p4, deser:Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer<*>;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/MappingIterator;, "Lcom/flurry/org/codehaus/jackson/map/MappingIterator<TT;>;"
+    .local p4, "deser":Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer<*>;"
     const/4 v5, 0x1
 
     const/4 v6, 0x0
@@ -129,12 +128,11 @@
 
 .method protected constructor <init>(Lcom/flurry/org/codehaus/jackson/type/JavaType;Lcom/flurry/org/codehaus/jackson/JsonParser;Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;ZLjava/lang/Object;)V
     .locals 3
-    .parameter "type"
-    .parameter "jp"
-    .parameter "ctxt"
-    .parameter
-    .parameter "closeParser"
-    .parameter "valueToUpdate"
+    .param p1, "type"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .param p2, "jp"    # Lcom/flurry/org/codehaus/jackson/JsonParser;
+    .param p3, "ctxt"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;
+    .param p5, "closeParser"    # Z
+    .param p6, "valueToUpdate"    # Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -150,8 +148,8 @@
 
     .prologue
     .line 60
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/MappingIterator;,"Lcom/flurry/org/codehaus/jackson/map/MappingIterator<TT;>;"
-    .local p4, deser:Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer<*>;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/MappingIterator;, "Lcom/flurry/org/codehaus/jackson/map/MappingIterator<TT;>;"
+    .local p4, "deser":Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer<*>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 61
@@ -183,7 +181,7 @@
     move-result-object v0
 
     .line 72
-    .local v0, sc:Lcom/flurry/org/codehaus/jackson/JsonStreamContext;
+    .local v0, "sc":Lcom/flurry/org/codehaus/jackson/JsonStreamContext;
     invoke-virtual {v0}, Lcom/flurry/org/codehaus/jackson/JsonStreamContext;->inRoot()Z
 
     move-result v1
@@ -194,7 +192,7 @@
     invoke-virtual {p2}, Lcom/flurry/org/codehaus/jackson/JsonParser;->clearCurrentToken()V
 
     .line 76
-    .end local v0           #sc:Lcom/flurry/org/codehaus/jackson/JsonStreamContext;
+    .end local v0    # "sc":Lcom/flurry/org/codehaus/jackson/JsonStreamContext;
     :cond_0
     iput-boolean p5, p0, Lcom/flurry/org/codehaus/jackson/map/MappingIterator;->_closeParser:Z
 
@@ -243,7 +241,7 @@
 
     .prologue
     .line 99
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/MappingIterator;,"Lcom/flurry/org/codehaus/jackson/map/MappingIterator<TT;>;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/MappingIterator;, "Lcom/flurry/org/codehaus/jackson/map/MappingIterator<TT;>;"
     :try_start_0
     invoke-virtual {p0}, Lcom/flurry/org/codehaus/jackson/map/MappingIterator;->hasNextValue()Z
     :try_end_0
@@ -259,7 +257,7 @@
     move-exception v0
 
     .line 101
-    .local v0, e:Lcom/flurry/org/codehaus/jackson/map/JsonMappingException;
+    .local v0, "e":Lcom/flurry/org/codehaus/jackson/map/JsonMappingException;
     new-instance v1, Lcom/flurry/org/codehaus/jackson/map/RuntimeJsonMappingException;
 
     invoke-virtual {v0}, Lcom/flurry/org/codehaus/jackson/map/JsonMappingException;->getMessage()Ljava/lang/String;
@@ -271,12 +269,12 @@
     throw v1
 
     .line 102
-    .end local v0           #e:Lcom/flurry/org/codehaus/jackson/map/JsonMappingException;
+    .end local v0    # "e":Lcom/flurry/org/codehaus/jackson/map/JsonMappingException;
     :catch_1
     move-exception v0
 
     .line 103
-    .local v0, e:Ljava/io/IOException;
+    .local v0, "e":Ljava/io/IOException;
     new-instance v1, Ljava/lang/RuntimeException;
 
     invoke-virtual {v0}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
@@ -297,7 +295,7 @@
     .end annotation
 
     .prologue
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/MappingIterator;,"Lcom/flurry/org/codehaus/jackson/map/MappingIterator<TT;>;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/MappingIterator;, "Lcom/flurry/org/codehaus/jackson/map/MappingIterator<TT;>;"
     const/4 v4, 0x1
 
     const/4 v3, 0x0
@@ -327,7 +325,7 @@
     move-result-object v1
 
     .line 140
-    .local v1, t:Lcom/flurry/org/codehaus/jackson/JsonToken;
+    .local v1, "t":Lcom/flurry/org/codehaus/jackson/JsonToken;
     iput-boolean v4, p0, Lcom/flurry/org/codehaus/jackson/map/MappingIterator;->_hasNextChecked:Z
 
     .line 141
@@ -347,7 +345,7 @@
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/map/MappingIterator;->_parser:Lcom/flurry/org/codehaus/jackson/JsonParser;
 
     .line 146
-    .local v0, jp:Lcom/flurry/org/codehaus/jackson/JsonParser;
+    .local v0, "jp":Lcom/flurry/org/codehaus/jackson/JsonParser;
     const/4 v2, 0x0
 
     iput-object v2, p0, Lcom/flurry/org/codehaus/jackson/map/MappingIterator;->_parser:Lcom/flurry/org/codehaus/jackson/JsonParser;
@@ -367,7 +365,7 @@
     goto :goto_0
 
     .line 155
-    .end local v0           #jp:Lcom/flurry/org/codehaus/jackson/JsonParser;
+    .end local v0    # "jp":Lcom/flurry/org/codehaus/jackson/JsonParser;
     :cond_2
     sget-object v2, Lcom/flurry/org/codehaus/jackson/JsonToken;->END_ARRAY:Lcom/flurry/org/codehaus/jackson/JsonToken;
 
@@ -378,7 +376,7 @@
     .line 156
     goto :goto_0
 
-    .end local v1           #t:Lcom/flurry/org/codehaus/jackson/JsonToken;
+    .end local v1    # "t":Lcom/flurry/org/codehaus/jackson/JsonToken;
     :cond_3
     move v2, v4
 
@@ -396,7 +394,7 @@
 
     .prologue
     .line 111
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/MappingIterator;,"Lcom/flurry/org/codehaus/jackson/map/MappingIterator<TT;>;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/MappingIterator;, "Lcom/flurry/org/codehaus/jackson/map/MappingIterator<TT;>;"
     :try_start_0
     invoke-virtual {p0}, Lcom/flurry/org/codehaus/jackson/map/MappingIterator;->nextValue()Ljava/lang/Object;
     :try_end_0
@@ -412,7 +410,7 @@
     move-exception v0
 
     .line 113
-    .local v0, e:Lcom/flurry/org/codehaus/jackson/map/JsonMappingException;
+    .local v0, "e":Lcom/flurry/org/codehaus/jackson/map/JsonMappingException;
     new-instance v1, Lcom/flurry/org/codehaus/jackson/map/RuntimeJsonMappingException;
 
     invoke-virtual {v0}, Lcom/flurry/org/codehaus/jackson/map/JsonMappingException;->getMessage()Ljava/lang/String;
@@ -424,12 +422,12 @@
     throw v1
 
     .line 114
-    .end local v0           #e:Lcom/flurry/org/codehaus/jackson/map/JsonMappingException;
+    .end local v0    # "e":Lcom/flurry/org/codehaus/jackson/map/JsonMappingException;
     :catch_1
     move-exception v0
 
     .line 115
-    .local v0, e:Ljava/io/IOException;
+    .local v0, "e":Ljava/io/IOException;
     new-instance v1, Ljava/lang/RuntimeException;
 
     invoke-virtual {v0}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
@@ -457,7 +455,7 @@
 
     .prologue
     .line 166
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/MappingIterator;,"Lcom/flurry/org/codehaus/jackson/map/MappingIterator<TT;>;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/MappingIterator;, "Lcom/flurry/org/codehaus/jackson/map/MappingIterator<TT;>;"
     iget-boolean v1, p0, Lcom/flurry/org/codehaus/jackson/map/MappingIterator;->_hasNextChecked:Z
 
     if-nez v1, :cond_0
@@ -512,7 +510,7 @@
     move-result-object v0
 
     .line 184
-    .local v0, result:Ljava/lang/Object;,"TT;"
+    .local v0, "result":Ljava/lang/Object;, "TT;"
     :goto_0
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/map/MappingIterator;->_parser:Lcom/flurry/org/codehaus/jackson/JsonParser;
 
@@ -522,7 +520,7 @@
     return-object v0
 
     .line 180
-    .end local v0           #result:Ljava/lang/Object;,"TT;"
+    .end local v0    # "result":Ljava/lang/Object;, "TT;"
     :cond_2
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/map/MappingIterator;->_deserializer:Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;
 
@@ -537,7 +535,7 @@
     .line 181
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/map/MappingIterator;->_updatedValue:Ljava/lang/Object;
 
-    .restart local v0       #result:Ljava/lang/Object;,"TT;"
+    .restart local v0    # "result":Ljava/lang/Object;, "TT;"
     goto :goto_0
 .end method
 
@@ -546,7 +544,7 @@
 
     .prologue
     .line 120
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/MappingIterator;,"Lcom/flurry/org/codehaus/jackson/map/MappingIterator<TT;>;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/MappingIterator;, "Lcom/flurry/org/codehaus/jackson/map/MappingIterator<TT;>;"
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V

@@ -31,7 +31,7 @@
 
     iget-object v0, p0, Lcom/applovin/impl/adview/n;->b:Lcom/applovin/impl/adview/AdViewControllerJsInterface;
 
-    #getter for: Lcom/applovin/impl/adview/AdViewControllerJsInterface;->parentView:Landroid/view/ViewGroup;
+    # getter for: Lcom/applovin/impl/adview/AdViewControllerJsInterface;->parentView:Landroid/view/ViewGroup;
     invoke-static {v0}, Lcom/applovin/impl/adview/AdViewControllerJsInterface;->access$000(Lcom/applovin/impl/adview/AdViewControllerJsInterface;)Landroid/view/ViewGroup;
 
     move-result-object v0

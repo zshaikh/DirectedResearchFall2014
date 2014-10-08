@@ -133,8 +133,6 @@
 # virtual methods
 .method public a(Landroid/net/Uri;Ljava/util/HashMap;)Ljava/lang/String;
     .locals 4
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -307,7 +305,6 @@
 
 .method public a(Landroid/webkit/WebView;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 313
@@ -323,8 +320,6 @@
 
 .method public a(Landroid/webkit/WebView;Ljava/lang/String;)V
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     .line 291
@@ -375,9 +370,6 @@
 
 .method public a(Landroid/webkit/WebView;Ljava/lang/String;Ljava/lang/String;)V
     .locals 3
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const-string v2, "(\'"
@@ -470,8 +462,6 @@
 
 .method public a(Landroid/webkit/WebView;Ljava/util/Map;)V
     .locals 2
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -505,10 +495,6 @@
 
 .method public a(Lcom/google/ads/internal/d;Ljava/util/Map;Landroid/net/Uri;Landroid/webkit/WebView;)V
     .locals 3
-    .parameter
-    .parameter
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -607,7 +593,6 @@
 
 .method public a(Landroid/net/Uri;)Z
     .locals 2
-    .parameter
 
     .prologue
     const/4 v1, 0x0
@@ -654,7 +639,6 @@
 
 .method public b(Landroid/webkit/WebView;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 324
@@ -670,7 +654,6 @@
 
 .method public b(Landroid/net/Uri;)Z
     .locals 3
-    .parameter
 
     .prologue
     const/4 v2, 0x0
@@ -730,7 +713,6 @@
 
 .method public c(Landroid/net/Uri;)Z
     .locals 2
-    .parameter
 
     .prologue
     .line 260

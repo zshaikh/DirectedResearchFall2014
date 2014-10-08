@@ -21,7 +21,6 @@
 # direct methods
 .method constructor <init>(Lcom/adobe/air/RemoteDebuggerListenerDialog;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 71
@@ -36,8 +35,6 @@
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     .line 75
@@ -71,7 +68,7 @@
     :goto_0
     iget-object v1, p0, Lcom/adobe/air/RemoteDebuggerListenerDialog$1;->this$0:Lcom/adobe/air/RemoteDebuggerListenerDialog;
 
-    #getter for: Lcom/adobe/air/RemoteDebuggerListenerDialog;->debuggerPort:I
+    # getter for: Lcom/adobe/air/RemoteDebuggerListenerDialog;->debuggerPort:I
     invoke-static {v1}, Lcom/adobe/air/RemoteDebuggerListenerDialog;->access$000(Lcom/adobe/air/RemoteDebuggerListenerDialog;)I
 
     move-result v1
@@ -81,7 +78,7 @@
     .line 82
     iget-object v0, p0, Lcom/adobe/air/RemoteDebuggerListenerDialog$1;->this$0:Lcom/adobe/air/RemoteDebuggerListenerDialog;
 
-    #calls: Lcom/adobe/air/RemoteDebuggerListenerDialog;->dismissDialog()V
+    # invokes: Lcom/adobe/air/RemoteDebuggerListenerDialog;->dismissDialog()V
     invoke-static {v0}, Lcom/adobe/air/RemoteDebuggerListenerDialog;->access$100(Lcom/adobe/air/RemoteDebuggerListenerDialog;)V
 
     .line 84

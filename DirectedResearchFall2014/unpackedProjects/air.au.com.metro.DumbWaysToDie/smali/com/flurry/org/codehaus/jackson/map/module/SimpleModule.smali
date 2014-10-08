@@ -37,8 +37,8 @@
 # direct methods
 .method public constructor <init>(Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/Version;)V
     .locals 1
-    .parameter "name"
-    .parameter "version"
+    .param p1, "name"    # Ljava/lang/String;
+    .param p2, "version"    # Lcom/flurry/org/codehaus/jackson/Version;
 
     .prologue
     const/4 v0, 0x0
@@ -81,8 +81,6 @@
 # virtual methods
 .method public addAbstractTypeMapping(Ljava/lang/Class;Ljava/lang/Class;)Lcom/flurry/org/codehaus/jackson/map/module/SimpleModule;
     .locals 1
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -98,8 +96,8 @@
 
     .prologue
     .line 181
-    .local p1, superType:Ljava/lang/Class;,"Ljava/lang/Class<TT;>;"
-    .local p2, subType:Ljava/lang/Class;,"Ljava/lang/Class<+TT;>;"
+    .local p1, "superType":Ljava/lang/Class;, "Ljava/lang/Class<TT;>;"
+    .local p2, "subType":Ljava/lang/Class;, "Ljava/lang/Class<+TT;>;"
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/map/module/SimpleModule;->_abstractTypes:Lcom/flurry/org/codehaus/jackson/map/module/SimpleAbstractTypeResolver;
 
     if-nez v0, :cond_0
@@ -127,8 +125,6 @@
 
 .method public addDeserializer(Ljava/lang/Class;Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;)Lcom/flurry/org/codehaus/jackson/map/module/SimpleModule;
     .locals 1
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -144,8 +140,8 @@
 
     .prologue
     .line 157
-    .local p1, type:Ljava/lang/Class;,"Ljava/lang/Class<TT;>;"
-    .local p2, deser:Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer<+TT;>;"
+    .local p1, "type":Ljava/lang/Class;, "Ljava/lang/Class<TT;>;"
+    .local p2, "deser":Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer<+TT;>;"
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/map/module/SimpleModule;->_deserializers:Lcom/flurry/org/codehaus/jackson/map/module/SimpleDeserializers;
 
     if-nez v0, :cond_0
@@ -169,8 +165,7 @@
 
 .method public addKeyDeserializer(Ljava/lang/Class;Lcom/flurry/org/codehaus/jackson/map/KeyDeserializer;)Lcom/flurry/org/codehaus/jackson/map/module/SimpleModule;
     .locals 1
-    .parameter
-    .parameter "deser"
+    .param p2, "deser"    # Lcom/flurry/org/codehaus/jackson/map/KeyDeserializer;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -184,7 +179,7 @@
 
     .prologue
     .line 166
-    .local p1, type:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p1, "type":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/map/module/SimpleModule;->_keyDeserializers:Lcom/flurry/org/codehaus/jackson/map/module/SimpleKeyDeserializers;
 
     if-nez v0, :cond_0
@@ -208,8 +203,6 @@
 
 .method public addKeySerializer(Ljava/lang/Class;Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;)Lcom/flurry/org/codehaus/jackson/map/module/SimpleModule;
     .locals 1
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -225,8 +218,8 @@
 
     .prologue
     .line 148
-    .local p1, type:Ljava/lang/Class;,"Ljava/lang/Class<+TT;>;"
-    .local p2, ser:Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<TT;>;"
+    .local p1, "type":Ljava/lang/Class;, "Ljava/lang/Class<+TT;>;"
+    .local p2, "ser":Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<TT;>;"
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/map/module/SimpleModule;->_keySerializers:Lcom/flurry/org/codehaus/jackson/map/module/SimpleSerializers;
 
     if-nez v0, :cond_0
@@ -250,7 +243,6 @@
 
 .method public addSerializer(Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;)Lcom/flurry/org/codehaus/jackson/map/module/SimpleModule;
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -262,7 +254,7 @@
 
     .prologue
     .line 130
-    .local p1, ser:Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<*>;"
+    .local p1, "ser":Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<*>;"
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/map/module/SimpleModule;->_serializers:Lcom/flurry/org/codehaus/jackson/map/module/SimpleSerializers;
 
     if-nez v0, :cond_0
@@ -286,8 +278,6 @@
 
 .method public addSerializer(Ljava/lang/Class;Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;)Lcom/flurry/org/codehaus/jackson/map/module/SimpleModule;
     .locals 1
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -303,8 +293,8 @@
 
     .prologue
     .line 139
-    .local p1, type:Ljava/lang/Class;,"Ljava/lang/Class<+TT;>;"
-    .local p2, ser:Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<TT;>;"
+    .local p1, "type":Ljava/lang/Class;, "Ljava/lang/Class<+TT;>;"
+    .local p2, "ser":Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<TT;>;"
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/map/module/SimpleModule;->_serializers:Lcom/flurry/org/codehaus/jackson/map/module/SimpleSerializers;
 
     if-nez v0, :cond_0
@@ -328,8 +318,7 @@
 
 .method public addValueInstantiator(Ljava/lang/Class;Lcom/flurry/org/codehaus/jackson/map/deser/ValueInstantiator;)Lcom/flurry/org/codehaus/jackson/map/module/SimpleModule;
     .locals 1
-    .parameter
-    .parameter "inst"
+    .param p2, "inst"    # Lcom/flurry/org/codehaus/jackson/map/deser/ValueInstantiator;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -343,7 +332,7 @@
 
     .prologue
     .line 198
-    .local p1, beanType:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p1, "beanType":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/map/module/SimpleModule;->_valueInstantiators:Lcom/flurry/org/codehaus/jackson/map/module/SimpleValueInstantiators;
 
     if-nez v0, :cond_0
@@ -381,7 +370,7 @@
 
 .method public setAbstractTypes(Lcom/flurry/org/codehaus/jackson/map/module/SimpleAbstractTypeResolver;)V
     .locals 0
-    .parameter "atr"
+    .param p1, "atr"    # Lcom/flurry/org/codehaus/jackson/map/module/SimpleAbstractTypeResolver;
 
     .prologue
     .line 110
@@ -393,7 +382,7 @@
 
 .method public setDeserializers(Lcom/flurry/org/codehaus/jackson/map/module/SimpleDeserializers;)V
     .locals 0
-    .parameter "d"
+    .param p1, "d"    # Lcom/flurry/org/codehaus/jackson/map/module/SimpleDeserializers;
 
     .prologue
     .line 83
@@ -405,7 +394,7 @@
 
 .method public setKeyDeserializers(Lcom/flurry/org/codehaus/jackson/map/module/SimpleKeyDeserializers;)V
     .locals 0
-    .parameter "kd"
+    .param p1, "kd"    # Lcom/flurry/org/codehaus/jackson/map/module/SimpleKeyDeserializers;
 
     .prologue
     .line 101
@@ -417,7 +406,7 @@
 
 .method public setKeySerializers(Lcom/flurry/org/codehaus/jackson/map/module/SimpleSerializers;)V
     .locals 0
-    .parameter "ks"
+    .param p1, "ks"    # Lcom/flurry/org/codehaus/jackson/map/module/SimpleSerializers;
 
     .prologue
     .line 92
@@ -429,8 +418,6 @@
 
 .method public setMixInAnnotation(Ljava/lang/Class;Ljava/lang/Class;)Lcom/flurry/org/codehaus/jackson/map/module/SimpleModule;
     .locals 1
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -444,8 +431,8 @@
 
     .prologue
     .line 215
-    .local p1, targetType:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
-    .local p2, mixinClass:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p1, "targetType":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
+    .local p2, "mixinClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/map/module/SimpleModule;->_mixins:Ljava/util/HashMap;
 
     if-nez v0, :cond_0
@@ -469,7 +456,7 @@
 
 .method public setSerializers(Lcom/flurry/org/codehaus/jackson/map/module/SimpleSerializers;)V
     .locals 0
-    .parameter "s"
+    .param p1, "s"    # Lcom/flurry/org/codehaus/jackson/map/module/SimpleSerializers;
 
     .prologue
     .line 74
@@ -481,7 +468,7 @@
 
 .method public setValueInstantiators(Lcom/flurry/org/codehaus/jackson/map/module/SimpleValueInstantiators;)V
     .locals 0
-    .parameter "svi"
+    .param p1, "svi"    # Lcom/flurry/org/codehaus/jackson/map/module/SimpleValueInstantiators;
 
     .prologue
     .line 119
@@ -493,7 +480,7 @@
 
 .method public setupModule(Lcom/flurry/org/codehaus/jackson/map/Module$SetupContext;)V
     .locals 3
-    .parameter "context"
+    .param p1, "context"    # Lcom/flurry/org/codehaus/jackson/map/Module$SetupContext;
 
     .prologue
     .line 236
@@ -578,8 +565,8 @@
 
     move-result-object v1
 
-    .end local p0
-    .local v1, i$:Ljava/util/Iterator;
+    .end local p0    # "this":Lcom/flurry/org/codehaus/jackson/map/module/SimpleModule;
+    .local v1, "i$":Ljava/util/Iterator;
     :goto_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
@@ -594,7 +581,7 @@
     check-cast v0, Ljava/util/Map$Entry;
 
     .line 256
-    .local v0, entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/Class<*>;Ljava/lang/Class<*>;>;"
+    .local v0, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/Class<*>;Ljava/lang/Class<*>;>;"
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object p0
@@ -612,8 +599,8 @@
     goto :goto_0
 
     .line 259
-    .end local v0           #entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/Class<*>;Ljava/lang/Class<*>;>;"
-    .end local v1           #i$:Ljava/util/Iterator;
+    .end local v0    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/Class<*>;Ljava/lang/Class<*>;>;"
+    .end local v1    # "i$":Ljava/util/Iterator;
     :cond_6
     return-void
 .end method

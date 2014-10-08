@@ -136,7 +136,6 @@
 
 .method public static a(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 3
-    .parameter
 
     .prologue
     .line 197
@@ -227,7 +226,6 @@
 
 .method public static a(I)Ljava/lang/String;
     .locals 7
-    .parameter
 
     .prologue
     .line 118

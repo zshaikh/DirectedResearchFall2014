@@ -34,8 +34,6 @@
 
 .method static synthetic access$0(Lcom/adobe/fre/FREContext;I)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 109
@@ -46,12 +44,6 @@
 
 .method static synthetic access$1(Lcom/adobe/fre/FREContext;IJLjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 120
@@ -62,13 +54,6 @@
 
 .method static synthetic access$2(Lcom/adobe/fre/FREContext;IJJLjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 140
@@ -79,8 +64,8 @@
 
 .method private static cancelNotification(Lcom/adobe/fre/FREContext;I)V
     .locals 6
-    .parameter "context"
-    .parameter "uid"
+    .param p0, "context"    # Lcom/adobe/fre/FREContext;
+    .param p1, "uid"    # I
 
     .prologue
     .line 110
@@ -95,7 +80,7 @@
     invoke-direct {v1, v3, v4}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
     .line 112
-    .local v1, intent:Landroid/content/Intent;
+    .local v1, "intent":Landroid/content/Intent;
     invoke-virtual {p0}, Lcom/adobe/fre/FREContext;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
@@ -105,7 +90,7 @@
     add-int/2addr v4, p1
 
     .line 113
-    const/high16 v5, 0x800
+    const/high16 v5, 0x8000000
 
     .line 111
     invoke-static {v3, v4, v1, v5}, Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
@@ -113,7 +98,7 @@
     move-result-object v2
 
     .line 114
-    .local v2, pendingIntent:Landroid/app/PendingIntent;
+    .local v2, "pendingIntent":Landroid/app/PendingIntent;
     invoke-virtual {p0}, Lcom/adobe/fre/FREContext;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
@@ -129,7 +114,7 @@
     check-cast v0, Landroid/app/AlarmManager;
 
     .line 117
-    .local v0, alarmManager:Landroid/app/AlarmManager;
+    .local v0, "alarmManager":Landroid/app/AlarmManager;
     invoke-virtual {v0, v2}, Landroid/app/AlarmManager;->cancel(Landroid/app/PendingIntent;)V
 
     .line 118
@@ -138,8 +123,8 @@
 
 .method public static onLocalMessage(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 10
-    .parameter "context"
-    .parameter "intent"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "intent"    # Landroid/content/Intent;
 
     .prologue
     .line 30
@@ -162,7 +147,7 @@
     move-result-object v2
 
     .line 35
-    .local v2, message:Ljava/lang/String;
+    .local v2, "message":Ljava/lang/String;
     const-string v0, "LocalNotifier"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -196,10 +181,10 @@
     .line 39
     const-string p0, "LocalNotifier"
 
-    .end local p0
+    .end local p0    # "context":Landroid/content/Context;
     const-string p1, "LN = in foreground."
 
-    .end local p1
+    .end local p1    # "intent":Landroid/content/Intent;
     invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 107
@@ -207,8 +192,8 @@
     return-void
 
     .line 45
-    .restart local p0
-    .restart local p1
+    .restart local p0    # "context":Landroid/content/Context;
+    .restart local p1    # "intent":Landroid/content/Intent;
     :cond_0
     const-string v0, "notification"
 
@@ -220,25 +205,25 @@
     check-cast v4, Landroid/app/NotificationManager;
 
     .line 46
-    .local v4, notificationManager:Landroid/app/NotificationManager;
+    .local v4, "notificationManager":Landroid/app/NotificationManager;
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v5
 
     .line 47
-    .local v5, packageManager:Landroid/content/pm/PackageManager;
+    .local v5, "packageManager":Landroid/content/pm/PackageManager;
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
 
     .line 48
-    .local v0, appContext:Landroid/content/Context;
+    .local v0, "appContext":Landroid/content/Context;
     invoke-virtual {v0}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
 
     move-result-object v1
 
     .line 51
-    .local v1, applicationInfo:Landroid/content/pm/ApplicationInfo;
+    .local v1, "applicationInfo":Landroid/content/pm/ApplicationInfo;
     invoke-virtual {p1}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object v3
@@ -250,17 +235,17 @@
     move-result-object v3
 
     .line 52
-    .local v3, rawJson:Ljava/lang/String;
+    .local v3, "rawJson":Ljava/lang/String;
     move-object v6, v3
 
     .line 53
-    .local v6, tickerText:Ljava/lang/String;
+    .local v6, "tickerText":Ljava/lang/String;
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v3
 
     .line 54
-    .end local v3           #rawJson:Ljava/lang/String;
+    .end local v3    # "rawJson":Ljava/lang/String;
     invoke-virtual {v3}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
 
     move-result-object v3
@@ -270,13 +255,13 @@
     move-result-object v3
 
     .line 56
-    .local v3, title:Ljava/lang/CharSequence;
+    .local v3, "title":Ljava/lang/CharSequence;
     :try_start_0
     invoke-virtual {p1}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object p1
 
-    .end local p1
+    .end local p1    # "intent":Landroid/content/Intent;
     const-string v7, "title"
 
     invoke-virtual {p1, v7}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -285,13 +270,13 @@
 
     move-result-object p1
 
-    .end local v3           #title:Ljava/lang/CharSequence;
-    .local p1, title:Ljava/lang/CharSequence;
+    .end local v3    # "title":Ljava/lang/CharSequence;
+    .local p1, "title":Ljava/lang/CharSequence;
     move-object v7, p1
 
     .line 61
-    .end local p1           #title:Ljava/lang/CharSequence;
-    .local v7, title:Ljava/lang/CharSequence;
+    .end local p1    # "title":Ljava/lang/CharSequence;
+    .local v7, "title":Ljava/lang/CharSequence;
     :goto_1
     new-instance v3, Landroid/app/Notification;
 
@@ -306,7 +291,7 @@
     invoke-direct {v3, p1, v6, v8, v9}, Landroid/app/Notification;-><init>(ILjava/lang/CharSequence;J)V
 
     .line 63
-    .local v3, notification:Landroid/app/Notification;
+    .local v3, "notification":Landroid/app/Notification;
     iget p1, v3, Landroid/app/Notification;->flags:I
 
     or-int/lit8 p1, p1, 0x1f
@@ -355,13 +340,13 @@
     move-result-object p1
 
     .line 77
-    .local p1, packageName:Ljava/lang/String;
+    .local p1, "packageName":Ljava/lang/String;
     const-string v0, "LocalNotifier"
 
-    .end local v0           #appContext:Landroid/content/Context;
+    .end local v0    # "appContext":Landroid/content/Context;
     new-instance v1, Ljava/lang/StringBuilder;
 
-    .end local v1           #applicationInfo:Landroid/content/pm/ApplicationInfo;
+    .end local v1    # "applicationInfo":Landroid/content/pm/ApplicationInfo;
     const-string v8, "LMPN:"
 
     invoke-direct {v1, v8}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
@@ -382,25 +367,25 @@
     move-result-object p1
 
     .line 80
-    .local p1, launchIntent:Landroid/content/Intent;
+    .local p1, "launchIntent":Landroid/content/Intent;
     invoke-virtual {p1}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
 
     move-result-object p1
 
-    .end local p1           #launchIntent:Landroid/content/Intent;
+    .end local p1    # "launchIntent":Landroid/content/Intent;
     invoke-virtual {p1}, Landroid/content/ComponentName;->getClassName()Ljava/lang/String;
 
     move-result-object p1
 
     .line 81
-    .local p1, launchClassName:Ljava/lang/String;
+    .local p1, "launchClassName":Ljava/lang/String;
     const-string v0, "LocalNotifier"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     const-string v5, "LLCN:"
 
-    .end local v5           #packageManager:Landroid/content/pm/PackageManager;
+    .end local v5    # "packageManager":Landroid/content/pm/PackageManager;
     invoke-direct {v1, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -423,19 +408,19 @@
     move-result-object p1
 
     .line 84
-    .end local p1           #launchClassName:Ljava/lang/String;
+    .end local p1    # "launchClassName":Ljava/lang/String;
     invoke-direct {v0, p0, p1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
     .line 92
-    .local v0, notificationIntent:Landroid/content/Intent;
+    .local v0, "notificationIntent":Landroid/content/Intent;
     const-string p1, "bufLocal"
 
     invoke-virtual {v0, p1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 95
-    const/high16 p1, 0x2400
+    const/high16 p1, 0x24000000
 
     invoke-virtual {v0, p1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
@@ -443,7 +428,7 @@
     const/4 p1, 0x0
 
     .line 98
-    const/high16 v1, 0x800
+    const/high16 v1, 0x8000000
 
     .line 97
     invoke-static {p0, p1, v0, v1}, Landroid/app/PendingIntent;->getActivity(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
@@ -451,13 +436,13 @@
     move-result-object p1
 
     .line 100
-    .local p1, pendingIntent:Landroid/app/PendingIntent;
+    .local p1, "pendingIntent":Landroid/app/PendingIntent;
     invoke-virtual {v3, p0, v7, v6, p1}, Landroid/app/Notification;->setLatestEventInfo(Landroid/content/Context;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Landroid/app/PendingIntent;)V
 
     .line 102
     iget p0, v3, Landroid/app/Notification;->flags:I
 
-    .end local p0
+    .end local p0    # "context":Landroid/content/Context;
     or-int/lit8 p0, p0, 0x10
 
     iput p0, v3, Landroid/app/Notification;->flags:I
@@ -472,7 +457,7 @@
 
     const-string p1, "release lock"
 
-    .end local p1           #pendingIntent:Landroid/app/PendingIntent;
+    .end local p1    # "pendingIntent":Landroid/app/PendingIntent;
     invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 106
@@ -481,17 +466,17 @@
     goto/16 :goto_0
 
     .line 57
-    .end local v7           #title:Ljava/lang/CharSequence;
-    .local v0, appContext:Landroid/content/Context;
-    .restart local v1       #applicationInfo:Landroid/content/pm/ApplicationInfo;
-    .local v3, title:Ljava/lang/CharSequence;
-    .restart local v5       #packageManager:Landroid/content/pm/PackageManager;
-    .restart local p0
+    .end local v7    # "title":Ljava/lang/CharSequence;
+    .local v0, "appContext":Landroid/content/Context;
+    .restart local v1    # "applicationInfo":Landroid/content/pm/ApplicationInfo;
+    .local v3, "title":Ljava/lang/CharSequence;
+    .restart local v5    # "packageManager":Landroid/content/pm/PackageManager;
+    .restart local p0    # "context":Landroid/content/Context;
     :catch_0
     move-exception p1
 
     .line 58
-    .local p1, e:Ljava/lang/Exception;
+    .local p1, "e":Ljava/lang/Exception;
     const-string v7, "LocalNotifier"
 
     const-string v8, "Local Message parse failed."
@@ -503,21 +488,21 @@
 
     move-object v7, v3
 
-    .end local v3           #title:Ljava/lang/CharSequence;
-    .restart local v7       #title:Ljava/lang/CharSequence;
+    .end local v3    # "title":Ljava/lang/CharSequence;
+    .restart local v7    # "title":Ljava/lang/CharSequence;
     goto/16 :goto_1
 
     .line 86
-    .end local v0           #appContext:Landroid/content/Context;
-    .end local v1           #applicationInfo:Landroid/content/pm/ApplicationInfo;
-    .end local v5           #packageManager:Landroid/content/pm/PackageManager;
-    .end local p1           #e:Ljava/lang/Exception;
-    .local v3, notification:Landroid/app/Notification;
+    .end local v0    # "appContext":Landroid/content/Context;
+    .end local v1    # "applicationInfo":Landroid/content/pm/ApplicationInfo;
+    .end local v5    # "packageManager":Landroid/content/pm/PackageManager;
+    .end local p1    # "e":Ljava/lang/Exception;
+    .local v3, "notification":Landroid/app/Notification;
     :catch_1
     move-exception p0
 
     .line 87
-    .local p0, e:Ljava/lang/Exception;
+    .local p0, "e":Ljava/lang/Exception;
     const-string p1, "LocalNotifier"
 
     const-string v0, "Failed to locate the air main intent."
@@ -532,12 +517,12 @@
 
 .method private static scheduleNotification(Lcom/adobe/fre/FREContext;IJLjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 6
-    .parameter "context"
-    .parameter "uid"
-    .parameter "timeSeconds"
-    .parameter "title"
-    .parameter "message"
-    .parameter "extraData"
+    .param p0, "context"    # Lcom/adobe/fre/FREContext;
+    .param p1, "uid"    # I
+    .param p2, "timeSeconds"    # J
+    .param p4, "title"    # Ljava/lang/String;
+    .param p5, "message"    # Ljava/lang/String;
+    .param p6, "extraData"    # Ljava/lang/String;
 
     .prologue
     .line 124
@@ -552,7 +537,7 @@
     invoke-direct {v1, v3, v4}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
     .line 125
-    .local v1, intent:Landroid/content/Intent;
+    .local v1, "intent":Landroid/content/Intent;
     const-string v3, "message"
 
     invoke-virtual {v1, v3, p5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
@@ -577,7 +562,7 @@
     add-int/2addr v4, p1
 
     .line 130
-    const/high16 v5, 0x800
+    const/high16 v5, 0x8000000
 
     .line 128
     invoke-static {v3, v4, v1, v5}, Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
@@ -585,7 +570,7 @@
     move-result-object v2
 
     .line 132
-    .local v2, pendingIntent:Landroid/app/PendingIntent;
+    .local v2, "pendingIntent":Landroid/app/PendingIntent;
     invoke-virtual {p0}, Lcom/adobe/fre/FREContext;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
@@ -601,7 +586,7 @@
     check-cast v0, Landroid/app/AlarmManager;
 
     .line 135
-    .local v0, alarmManager:Landroid/app/AlarmManager;
+    .local v0, "alarmManager":Landroid/app/AlarmManager;
     const/4 v3, 0x0
 
     .line 136
@@ -618,13 +603,13 @@
 
 .method private static scheduleNotificationRepeating(Lcom/adobe/fre/FREContext;IJJLjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 7
-    .parameter "context"
-    .parameter "uid"
-    .parameter "firstTimeSeconds"
-    .parameter "thenEverySeconds"
-    .parameter "title"
-    .parameter "message"
-    .parameter "extraData"
+    .param p0, "context"    # Lcom/adobe/fre/FREContext;
+    .param p1, "uid"    # I
+    .param p2, "firstTimeSeconds"    # J
+    .param p4, "thenEverySeconds"    # J
+    .param p6, "title"    # Ljava/lang/String;
+    .param p7, "message"    # Ljava/lang/String;
+    .param p8, "extraData"    # Ljava/lang/String;
 
     .prologue
     .line 144
@@ -639,7 +624,7 @@
     invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
     .line 145
-    .local v0, intent:Landroid/content/Intent;
+    .local v0, "intent":Landroid/content/Intent;
     const-string v1, "message"
 
     invoke-virtual {v0, v1, p7}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
@@ -647,13 +632,13 @@
     .line 146
     const-string p7, "title"
 
-    .end local p7
+    .end local p7    # "message":Ljava/lang/String;
     invoke-virtual {v0, p7, p6}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 147
     const-string p6, "extraData"
 
-    .end local p6
+    .end local p6    # "title":Ljava/lang/String;
     invoke-virtual {v0, p6, p8}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 149
@@ -666,22 +651,22 @@
     add-int/2addr p1, p7
 
     .line 150
-    const/high16 p7, 0x800
+    const/high16 p7, 0x8000000
 
     .line 148
     invoke-static {p6, p1, v0, p7}, Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
 
-    .end local p1
+    .end local p1    # "uid":I
     move-result-object v6
 
     .line 152
-    .local v6, pendingIntent:Landroid/app/PendingIntent;
+    .local v6, "pendingIntent":Landroid/app/PendingIntent;
     invoke-virtual {p0}, Lcom/adobe/fre/FREContext;->getActivity()Landroid/app/Activity;
 
     move-result-object p0
 
     .line 153
-    .end local p0
+    .end local p0    # "context":Lcom/adobe/fre/FREContext;
     const-string p1, "alarm"
 
     invoke-virtual {p0, p1}, Landroid/app/Activity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -689,11 +674,11 @@
     move-result-object v0
 
     .line 152
-    .end local v0           #intent:Landroid/content/Intent;
+    .end local v0    # "intent":Landroid/content/Intent;
     check-cast v0, Landroid/app/AlarmManager;
 
     .line 155
-    .local v0, alarmManager:Landroid/app/AlarmManager;
+    .local v0, "alarmManager":Landroid/app/AlarmManager;
     const/4 v1, 0x0
 
     .line 156

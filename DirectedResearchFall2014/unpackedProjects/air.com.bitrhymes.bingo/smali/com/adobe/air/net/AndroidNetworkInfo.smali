@@ -39,7 +39,6 @@
 
 .method private constructor <init>(Landroid/content/Context;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 50
@@ -61,7 +60,6 @@
 
 .method public static GetAndroidNetworkInfo(Landroid/content/Context;)Lcom/adobe/air/net/AndroidNetworkInfo;
     .locals 1
-    .parameter
 
     .prologue
     .line 44
@@ -174,7 +172,6 @@
 # virtual methods
 .method public GetNetworkInterface(I)Lcom/adobe/air/net/NetworkInterface;
     .locals 1
-    .parameter
 
     .prologue
     .line 103
@@ -247,7 +244,6 @@
 
 .method getAddress(Landroid/net/NetworkInfo;)Lcom/adobe/air/net/InterfaceAddress;
     .locals 5
-    .parameter
 
     .prologue
     const/4 v3, 0x0
@@ -377,7 +373,6 @@
 
 .method getDefaultData(Landroid/net/NetworkInfo;)Lcom/adobe/air/net/NetworkInterface;
     .locals 2
-    .parameter
 
     .prologue
     .line 141
@@ -412,7 +407,6 @@
 
 .method getWifiData(Landroid/net/NetworkInfo;)Lcom/adobe/air/net/NetworkInterface;
     .locals 3
-    .parameter
 
     .prologue
     .line 111

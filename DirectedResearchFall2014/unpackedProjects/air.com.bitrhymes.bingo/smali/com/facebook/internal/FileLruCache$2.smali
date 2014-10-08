@@ -26,8 +26,6 @@
 # direct methods
 .method constructor <init>(Lcom/facebook/internal/FileLruCache;[Ljava/io/File;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 1
@@ -65,7 +63,7 @@
     aget-object v0, v1, v3
 
     .line 231
-    .local v0, file:Ljava/io/File;
+    .local v0, "file":Ljava/io/File;
     invoke-virtual {v0}, Ljava/io/File;->delete()Z
 
     .line 230

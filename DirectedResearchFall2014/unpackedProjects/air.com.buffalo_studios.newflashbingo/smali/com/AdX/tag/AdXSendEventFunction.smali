@@ -21,15 +21,15 @@
 # virtual methods
 .method public call(Lcom/adobe/fre/FREContext;[Lcom/adobe/fre/FREObject;)Lcom/adobe/fre/FREObject;
     .locals 11
-    .parameter "context"
-    .parameter "passedArgs"
+    .param p1, "context"    # Lcom/adobe/fre/FREContext;
+    .param p2, "passedArgs"    # [Lcom/adobe/fre/FREObject;
 
     .prologue
     .line 32
     const/4 v8, 0x0
 
     .line 34
-    .local v8, result:Lcom/adobe/fre/FREObject;
+    .local v8, "result":Lcom/adobe/fre/FREObject;
     const-string v9, "AdXSendEventFunction"
 
     const-string v10, "call"
@@ -44,20 +44,20 @@
     move-object v2, v0
 
     .line 40
-    .local v2, adxExtContext:Lcom/AdX/tag/AdXExtensionContext;
+    .local v2, "adxExtContext":Lcom/AdX/tag/AdXExtensionContext;
     const/4 v9, 0x0
 
     :try_start_0
     aget-object v7, p2, v9
 
     .line 41
-    .local v7, fro:Lcom/adobe/fre/FREObject;
+    .local v7, "fro":Lcom/adobe/fre/FREObject;
     invoke-virtual {v7}, Lcom/adobe/fre/FREObject;->getAsString()Ljava/lang/String;
 
     move-result-object v6
 
     .line 42
-    .local v6, event:Ljava/lang/String;
+    .local v6, "event":Ljava/lang/String;
     const/4 v9, 0x1
 
     aget-object v7, p2, v9
@@ -68,7 +68,7 @@
     move-result-object v4
 
     .line 44
-    .local v4, data:Ljava/lang/String;
+    .local v4, "data":Ljava/lang/String;
     const/4 v9, 0x2
 
     aget-object v7, p2, v9
@@ -79,13 +79,13 @@
     move-result-object v3
 
     .line 47
-    .local v3, currency:Ljava/lang/String;
+    .local v3, "currency":Ljava/lang/String;
     invoke-virtual {v2}, Lcom/AdX/tag/AdXExtensionContext;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
     .line 48
-    .local v1, a:Landroid/app/Activity;
+    .local v1, "a":Landroid/app/Activity;
     invoke-virtual {v1}, Landroid/app/Activity;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v9
@@ -95,11 +95,11 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 58
-    .end local v1           #a:Landroid/app/Activity;
-    .end local v3           #currency:Ljava/lang/String;
-    .end local v4           #data:Ljava/lang/String;
-    .end local v6           #event:Ljava/lang/String;
-    .end local v7           #fro:Lcom/adobe/fre/FREObject;
+    .end local v1    # "a":Landroid/app/Activity;
+    .end local v3    # "currency":Ljava/lang/String;
+    .end local v4    # "data":Ljava/lang/String;
+    .end local v6    # "event":Ljava/lang/String;
+    .end local v7    # "fro":Lcom/adobe/fre/FREObject;
     :goto_0
     return-object v8
 
@@ -110,7 +110,7 @@
     move-object v5, v9
 
     .line 55
-    .local v5, e:Ljava/lang/Exception;
+    .local v5, "e":Ljava/lang/Exception;
     const-string v9, "AdXFunction"
 
     invoke-virtual {v5}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;

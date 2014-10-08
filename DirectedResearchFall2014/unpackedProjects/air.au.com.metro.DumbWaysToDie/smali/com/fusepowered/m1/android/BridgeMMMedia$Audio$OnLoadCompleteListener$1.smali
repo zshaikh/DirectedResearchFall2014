@@ -21,7 +21,6 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m1/android/BridgeMMMedia$Audio$OnLoadCompleteListener;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 941
@@ -48,10 +47,10 @@
     invoke-direct {v7}, Ljava/util/ArrayList;-><init>()V
 
     .line 946
-    .local v7, completedOnes:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/Integer;>;"
+    .local v7, "completedOnes":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     iget-object v0, p0, Lcom/fusepowered/m1/android/BridgeMMMedia$Audio$OnLoadCompleteListener$1;->this$1:Lcom/fusepowered/m1/android/BridgeMMMedia$Audio$OnLoadCompleteListener;
 
-    #getter for: Lcom/fusepowered/m1/android/BridgeMMMedia$Audio$OnLoadCompleteListener;->sampleIds:Ljava/util/ArrayList;
+    # getter for: Lcom/fusepowered/m1/android/BridgeMMMedia$Audio$OnLoadCompleteListener;->sampleIds:Ljava/util/ArrayList;
     invoke-static {v0}, Lcom/fusepowered/m1/android/BridgeMMMedia$Audio$OnLoadCompleteListener;->access$300(Lcom/fusepowered/m1/android/BridgeMMMedia$Audio$OnLoadCompleteListener;)Ljava/util/ArrayList;
 
     move-result-object v0
@@ -60,7 +59,7 @@
 
     move-result-object v8
 
-    .local v8, i$:Ljava/util/Iterator;
+    .local v8, "i$":Ljava/util/Iterator;
     :cond_0
     :goto_0
     invoke-interface {v8}, Ljava/util/Iterator;->hasNext()Z
@@ -76,10 +75,10 @@
     check-cast v9, Ljava/lang/Integer;
 
     .line 948
-    .local v9, sampleId:Ljava/lang/Integer;
+    .local v9, "sampleId":Ljava/lang/Integer;
     iget-object v0, p0, Lcom/fusepowered/m1/android/BridgeMMMedia$Audio$OnLoadCompleteListener$1;->this$1:Lcom/fusepowered/m1/android/BridgeMMMedia$Audio$OnLoadCompleteListener;
 
-    #getter for: Lcom/fusepowered/m1/android/BridgeMMMedia$Audio$OnLoadCompleteListener;->soundPool:Landroid/media/SoundPool;
+    # getter for: Lcom/fusepowered/m1/android/BridgeMMMedia$Audio$OnLoadCompleteListener;->soundPool:Landroid/media/SoundPool;
     invoke-static {v0}, Lcom/fusepowered/m1/android/BridgeMMMedia$Audio$OnLoadCompleteListener;->access$400(Lcom/fusepowered/m1/android/BridgeMMMedia$Audio$OnLoadCompleteListener;)Landroid/media/SoundPool;
 
     move-result-object v0
@@ -88,7 +87,7 @@
 
     move-result v1
 
-    const/high16 v6, 0x3f80
+    const/high16 v6, 0x3f800000
 
     move v3, v2
 
@@ -99,13 +98,13 @@
     move-result v10
 
     .line 949
-    .local v10, streamId:I
+    .local v10, "streamId":I
     if-eqz v10, :cond_0
 
     .line 951
     iget-object v0, p0, Lcom/fusepowered/m1/android/BridgeMMMedia$Audio$OnLoadCompleteListener$1;->this$1:Lcom/fusepowered/m1/android/BridgeMMMedia$Audio$OnLoadCompleteListener;
 
-    #getter for: Lcom/fusepowered/m1/android/BridgeMMMedia$Audio$OnLoadCompleteListener;->soundPool:Landroid/media/SoundPool;
+    # getter for: Lcom/fusepowered/m1/android/BridgeMMMedia$Audio$OnLoadCompleteListener;->soundPool:Landroid/media/SoundPool;
     invoke-static {v0}, Lcom/fusepowered/m1/android/BridgeMMMedia$Audio$OnLoadCompleteListener;->access$400(Lcom/fusepowered/m1/android/BridgeMMMedia$Audio$OnLoadCompleteListener;)Landroid/media/SoundPool;
 
     move-result-object v0
@@ -117,7 +116,7 @@
 
     iget-object v1, p0, Lcom/fusepowered/m1/android/BridgeMMMedia$Audio$OnLoadCompleteListener$1;->this$1:Lcom/fusepowered/m1/android/BridgeMMMedia$Audio$OnLoadCompleteListener;
 
-    #getter for: Lcom/fusepowered/m1/android/BridgeMMMedia$Audio$OnLoadCompleteListener;->soundPool:Landroid/media/SoundPool;
+    # getter for: Lcom/fusepowered/m1/android/BridgeMMMedia$Audio$OnLoadCompleteListener;->soundPool:Landroid/media/SoundPool;
     invoke-static {v1}, Lcom/fusepowered/m1/android/BridgeMMMedia$Audio$OnLoadCompleteListener;->access$400(Lcom/fusepowered/m1/android/BridgeMMMedia$Audio$OnLoadCompleteListener;)Landroid/media/SoundPool;
 
     move-result-object v1
@@ -134,12 +133,12 @@
     goto :goto_0
 
     .line 956
-    .end local v9           #sampleId:Ljava/lang/Integer;
-    .end local v10           #streamId:I
+    .end local v9    # "sampleId":Ljava/lang/Integer;
+    .end local v10    # "streamId":I
     :cond_1
     iget-object v0, p0, Lcom/fusepowered/m1/android/BridgeMMMedia$Audio$OnLoadCompleteListener$1;->this$1:Lcom/fusepowered/m1/android/BridgeMMMedia$Audio$OnLoadCompleteListener;
 
-    #getter for: Lcom/fusepowered/m1/android/BridgeMMMedia$Audio$OnLoadCompleteListener;->sampleIds:Ljava/util/ArrayList;
+    # getter for: Lcom/fusepowered/m1/android/BridgeMMMedia$Audio$OnLoadCompleteListener;->sampleIds:Ljava/util/ArrayList;
     invoke-static {v0}, Lcom/fusepowered/m1/android/BridgeMMMedia$Audio$OnLoadCompleteListener;->access$300(Lcom/fusepowered/m1/android/BridgeMMMedia$Audio$OnLoadCompleteListener;)Ljava/util/ArrayList;
 
     move-result-object v0
@@ -149,7 +148,7 @@
     .line 957
     iget-object v0, p0, Lcom/fusepowered/m1/android/BridgeMMMedia$Audio$OnLoadCompleteListener$1;->this$1:Lcom/fusepowered/m1/android/BridgeMMMedia$Audio$OnLoadCompleteListener;
 
-    #getter for: Lcom/fusepowered/m1/android/BridgeMMMedia$Audio$OnLoadCompleteListener;->sampleIds:Ljava/util/ArrayList;
+    # getter for: Lcom/fusepowered/m1/android/BridgeMMMedia$Audio$OnLoadCompleteListener;->sampleIds:Ljava/util/ArrayList;
     invoke-static {v0}, Lcom/fusepowered/m1/android/BridgeMMMedia$Audio$OnLoadCompleteListener;->access$300(Lcom/fusepowered/m1/android/BridgeMMMedia$Audio$OnLoadCompleteListener;)Ljava/util/ArrayList;
 
     move-result-object v0
@@ -163,7 +162,7 @@
     .line 959
     iget-object v0, p0, Lcom/fusepowered/m1/android/BridgeMMMedia$Audio$OnLoadCompleteListener$1;->this$1:Lcom/fusepowered/m1/android/BridgeMMMedia$Audio$OnLoadCompleteListener;
 
-    #getter for: Lcom/fusepowered/m1/android/BridgeMMMedia$Audio$OnLoadCompleteListener;->timer:Ljava/util/Timer;
+    # getter for: Lcom/fusepowered/m1/android/BridgeMMMedia$Audio$OnLoadCompleteListener;->timer:Ljava/util/Timer;
     invoke-static {v0}, Lcom/fusepowered/m1/android/BridgeMMMedia$Audio$OnLoadCompleteListener;->access$500(Lcom/fusepowered/m1/android/BridgeMMMedia$Audio$OnLoadCompleteListener;)Ljava/util/Timer;
 
     move-result-object v0
@@ -173,7 +172,7 @@
     .line 960
     iget-object v0, p0, Lcom/fusepowered/m1/android/BridgeMMMedia$Audio$OnLoadCompleteListener$1;->this$1:Lcom/fusepowered/m1/android/BridgeMMMedia$Audio$OnLoadCompleteListener;
 
-    #getter for: Lcom/fusepowered/m1/android/BridgeMMMedia$Audio$OnLoadCompleteListener;->timer:Ljava/util/Timer;
+    # getter for: Lcom/fusepowered/m1/android/BridgeMMMedia$Audio$OnLoadCompleteListener;->timer:Ljava/util/Timer;
     invoke-static {v0}, Lcom/fusepowered/m1/android/BridgeMMMedia$Audio$OnLoadCompleteListener;->access$500(Lcom/fusepowered/m1/android/BridgeMMMedia$Audio$OnLoadCompleteListener;)Ljava/util/Timer;
 
     move-result-object v0

@@ -14,7 +14,7 @@
 # static fields
 .field private static final APPLICATION_FIELDS:Ljava/lang/String; = "fields"
 
-.field private static final APP_SETTING_FIELDS:[Ljava/lang/String; = null
+.field private static final APP_SETTING_FIELDS:[Ljava/lang/String;
 
 .field public static final DEFAULT_STREAM_BUFFER_SIZE:I = 0x2000
 
@@ -92,8 +92,6 @@
 
 .method public static areObjectsEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
     .locals 1
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -104,8 +102,8 @@
 
     .prologue
     .line 331
-    .local p0, a:Ljava/lang/Object;,"TT;"
-    .local p1, b:Ljava/lang/Object;,"TT;"
+    .local p0, "a":Ljava/lang/Object;, "TT;"
+    .local p1, "b":Ljava/lang/Object;, "TT;"
     if-nez p0, :cond_1
 
     .line 332
@@ -134,7 +132,7 @@
 
 .method public static varargs arrayList([Ljava/lang/Object;)Ljava/util/ArrayList;
     .locals 4
-    .parameter "ts"
+    .param p0, "ts"    # [Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -154,7 +152,7 @@
     invoke-direct {v0, v2}, Ljava/util/ArrayList;-><init>(I)V
 
     .line 119
-    .local v0, arrayList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<TT;>;"
+    .local v0, "arrayList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<TT;>;"
     array-length v2, p0
 
     const/4 v3, 0x0
@@ -170,7 +168,7 @@
     aget-object v1, p0, v3
 
     .line 120
-    .local v1, t:Ljava/lang/Object;,"TT;"
+    .local v1, "t":Ljava/lang/Object;, "TT;"
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 119
@@ -181,7 +179,7 @@
 
 .method public static varargs asListNoNulls([Ljava/lang/Object;)Ljava/util/List;
     .locals 4
-    .parameter "array"
+    .param p0, "array"    # [Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -199,7 +197,7 @@
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     .line 398
-    .local v0, result:Ljava/util/ArrayList;,"Ljava/util/ArrayList<TT;>;"
+    .local v0, "result":Ljava/util/ArrayList;, "Ljava/util/ArrayList<TT;>;"
     array-length v2, p0
 
     const/4 v3, 0x0
@@ -215,7 +213,7 @@
     aget-object v1, p0, v3
 
     .line 399
-    .local v1, t:Ljava/lang/Object;,"TT;"
+    .local v1, "t":Ljava/lang/Object;, "TT;"
     if-eqz v1, :cond_1
 
     .line 400
@@ -230,9 +228,9 @@
 
 .method public static buildUri(Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)Landroid/net/Uri;
     .locals 5
-    .parameter "authority"
-    .parameter "path"
-    .parameter "parameters"
+    .param p0, "authority"    # Ljava/lang/String;
+    .param p1, "path"    # Ljava/lang/String;
+    .param p2, "parameters"    # Landroid/os/Bundle;
 
     .prologue
     .line 144
@@ -241,7 +239,7 @@
     invoke-direct {v0}, Landroid/net/Uri$Builder;-><init>()V
 
     .line 145
-    .local v0, builder:Landroid/net/Uri$Builder;
+    .local v0, "builder":Landroid/net/Uri$Builder;
     const-string v3, "https"
 
     invoke-virtual {v0, v3}, Landroid/net/Uri$Builder;->scheme(Ljava/lang/String;)Landroid/net/Uri$Builder;
@@ -285,13 +283,13 @@
     check-cast v1, Ljava/lang/String;
 
     .line 149
-    .local v1, key:Ljava/lang/String;
+    .local v1, "key":Ljava/lang/String;
     invoke-virtual {p2, v1}, Landroid/os/Bundle;->get(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v2
 
     .line 150
-    .local v2, parameter:Ljava/lang/Object;
+    .local v2, "parameter":Ljava/lang/Object;
     instance-of v4, v2, Ljava/lang/String;
 
     if-eqz v4, :cond_0
@@ -299,7 +297,7 @@
     .line 151
     check-cast v2, Ljava/lang/String;
 
-    .end local v2           #parameter:Ljava/lang/Object;
+    .end local v2    # "parameter":Ljava/lang/Object;
     invoke-virtual {v0, v1, v2}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
 
     goto :goto_0
@@ -307,7 +305,7 @@
 
 .method public static clearCaches(Landroid/content/Context;)V
     .locals 0
-    .parameter "context"
+    .param p0, "context"    # Landroid/content/Context;
 
     .prologue
     .line 380
@@ -319,8 +317,8 @@
 
 .method private static clearCookiesForDomain(Landroid/content/Context;Ljava/lang/String;)V
     .locals 12
-    .parameter "context"
-    .parameter "domain"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "domain"    # Ljava/lang/String;
 
     .prologue
     const/4 v11, 0x0
@@ -331,7 +329,7 @@
     move-result-object v6
 
     .line 289
-    .local v6, syncManager:Landroid/webkit/CookieSyncManager;
+    .local v6, "syncManager":Landroid/webkit/CookieSyncManager;
     invoke-virtual {v6}, Landroid/webkit/CookieSyncManager;->sync()V
 
     .line 291
@@ -340,13 +338,13 @@
     move-result-object v1
 
     .line 293
-    .local v1, cookieManager:Landroid/webkit/CookieManager;
+    .local v1, "cookieManager":Landroid/webkit/CookieManager;
     invoke-virtual {v1, p1}, Landroid/webkit/CookieManager;->getCookie(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
     .line 294
-    .local v3, cookies:Ljava/lang/String;
+    .local v3, "cookies":Ljava/lang/String;
     if-nez v3, :cond_0
 
     .line 307
@@ -362,7 +360,7 @@
     move-result-object v5
 
     .line 299
-    .local v5, splitCookies:[Ljava/lang/String;
+    .local v5, "splitCookies":[Ljava/lang/String;
     array-length v7, v5
 
     move v8, v11
@@ -380,7 +378,7 @@
     aget-object v0, v5, v8
 
     .line 300
-    .local v0, cookie:Ljava/lang/String;
+    .local v0, "cookie":Ljava/lang/String;
     const-string v9, "="
 
     invoke-virtual {v0, v9}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
@@ -388,7 +386,7 @@
     move-result-object v2
 
     .line 301
-    .local v2, cookieParts:[Ljava/lang/String;
+    .local v2, "cookieParts":[Ljava/lang/String;
     array-length v9, v2
 
     if-lez v9, :cond_2
@@ -419,11 +417,11 @@
     move-result-object v4
 
     .line 303
-    .local v4, newCookie:Ljava/lang/String;
+    .local v4, "newCookie":Ljava/lang/String;
     invoke-virtual {v1, p1, v4}, Landroid/webkit/CookieManager;->setCookie(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 299
-    .end local v4           #newCookie:Ljava/lang/String;
+    .end local v4    # "newCookie":Ljava/lang/String;
     :cond_2
     add-int/lit8 v8, v8, 0x1
 
@@ -432,7 +430,7 @@
 
 .method public static clearFacebookCookies(Landroid/content/Context;)V
     .locals 1
-    .parameter "context"
+    .param p0, "context"    # Landroid/content/Context;
 
     .prologue
     .line 312
@@ -461,7 +459,7 @@
 
 .method public static closeQuietly(Ljava/io/Closeable;)V
     .locals 1
-    .parameter "closeable"
+    .param p0, "closeable"    # Ljava/io/Closeable;
 
     .prologue
     .line 171
@@ -487,7 +485,7 @@
 
 .method static convertJSONObjectToHashMap(Lorg/json/JSONObject;)Ljava/util/Map;
     .locals 6
-    .parameter "jsonObject"
+    .param p0, "jsonObject"    # Lorg/json/JSONObject;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -508,16 +506,16 @@
     invoke-direct {v3}, Ljava/util/HashMap;-><init>()V
 
     .line 203
-    .local v3, map:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/Object;>;"
+    .local v3, "map":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/Object;>;"
     invoke-virtual {p0}, Lorg/json/JSONObject;->names()Lorg/json/JSONArray;
 
     move-result-object v2
 
     .line 204
-    .local v2, keys:Lorg/json/JSONArray;
+    .local v2, "keys":Lorg/json/JSONArray;
     const/4 v0, 0x0
 
-    .local v0, i:I
+    .local v0, "i":I
     :goto_0
     invoke-virtual {v2}, Lorg/json/JSONArray;->length()I
 
@@ -536,13 +534,13 @@
     move-result-object v1
 
     .line 208
-    .local v1, key:Ljava/lang/String;
+    .local v1, "key":Ljava/lang/String;
     invoke-virtual {p0, v1}, Lorg/json/JSONObject;->get(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v4
 
     .line 209
-    .local v4, value:Ljava/lang/Object;
+    .local v4, "value":Ljava/lang/Object;
     instance-of v5, v4, Lorg/json/JSONObject;
 
     if-eqz v5, :cond_1
@@ -550,7 +548,7 @@
     .line 210
     check-cast v4, Lorg/json/JSONObject;
 
-    .end local v4           #value:Ljava/lang/Object;
+    .end local v4    # "value":Ljava/lang/Object;
     invoke-static {v4}, Lcom/facebook/internal/Utility;->convertJSONObjectToHashMap(Lorg/json/JSONObject;)Ljava/util/Map;
 
     move-result-object v4
@@ -562,7 +560,7 @@
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 204
-    .end local v1           #key:Ljava/lang/String;
+    .end local v1    # "key":Ljava/lang/String;
     :goto_1
     add-int/lit8 v0, v0, 0x1
 
@@ -577,7 +575,7 @@
 
 .method public static deleteDirectory(Ljava/io/File;)V
     .locals 4
-    .parameter "directoryOrFile"
+    .param p0, "directoryOrFile"    # Ljava/io/File;
 
     .prologue
     .line 384
@@ -622,7 +620,7 @@
     aget-object v0, v1, v3
 
     .line 390
-    .local v0, child:Ljava/io/File;
+    .local v0, "child":Ljava/io/File;
     invoke-static {v0}, Lcom/facebook/internal/Utility;->deleteDirectory(Ljava/io/File;)V
 
     .line 389
@@ -633,7 +631,7 @@
 
 .method public static disconnectQuietly(Ljava/net/URLConnection;)V
     .locals 1
-    .parameter "connection"
+    .param p0, "connection"    # Ljava/net/URLConnection;
 
     .prologue
     .line 180
@@ -644,7 +642,7 @@
     .line 181
     check-cast p0, Ljava/net/HttpURLConnection;
 
-    .end local p0
+    .end local p0    # "connection":Ljava/net/URLConnection;
     invoke-virtual {p0}, Ljava/net/HttpURLConnection;->disconnect()V
 
     .line 183
@@ -654,7 +652,7 @@
 
 .method public static getMetadataApplicationId(Landroid/content/Context;)Ljava/lang/String;
     .locals 4
-    .parameter "context"
+    .param p0, "context"    # Landroid/content/Context;
 
     .prologue
     .line 186
@@ -681,7 +679,7 @@
     move-result-object v0
 
     .line 191
-    .local v0, ai:Landroid/content/pm/ApplicationInfo;
+    .local v0, "ai":Landroid/content/pm/ApplicationInfo;
     iget-object v1, v0, Landroid/content/pm/ApplicationInfo;->metaData:Landroid/os/Bundle;
 
     if-eqz v1, :cond_0
@@ -698,7 +696,7 @@
     move-result-object v1
 
     .line 198
-    .end local v0           #ai:Landroid/content/pm/ApplicationInfo;
+    .end local v0    # "ai":Landroid/content/pm/ApplicationInfo;
     :goto_0
     return-object v1
 
@@ -715,9 +713,9 @@
 
 .method public static getStringPropertyAsJSON(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
     .locals 4
-    .parameter "jsonObject"
-    .parameter "key"
-    .parameter "nonJSONPropertyKey"
+    .param p0, "jsonObject"    # Lorg/json/JSONObject;
+    .param p1, "key"    # Ljava/lang/String;
+    .param p2, "nonJSONPropertyKey"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lorg/json/JSONException;
@@ -731,7 +729,7 @@
     move-result-object v1
 
     .line 223
-    .local v1, value:Ljava/lang/Object;
+    .local v1, "value":Ljava/lang/Object;
     if-eqz v1, :cond_0
 
     instance-of v2, v1, Ljava/lang/String;
@@ -743,18 +741,18 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .end local v1           #value:Ljava/lang/Object;
+    .end local v1    # "value":Ljava/lang/Object;
     invoke-direct {v0, v1}, Lorg/json/JSONTokener;-><init>(Ljava/lang/String;)V
 
     .line 225
-    .local v0, tokener:Lorg/json/JSONTokener;
+    .local v0, "tokener":Lorg/json/JSONTokener;
     invoke-virtual {v0}, Lorg/json/JSONTokener;->nextValue()Ljava/lang/Object;
 
     move-result-object v1
 
     .line 228
-    .end local v0           #tokener:Lorg/json/JSONTokener;
-    .restart local v1       #value:Ljava/lang/Object;
+    .end local v0    # "tokener":Lorg/json/JSONTokener;
+    .restart local v1    # "value":Ljava/lang/Object;
     :cond_0
     if-eqz v1, :cond_2
 
@@ -772,11 +770,11 @@
     .line 235
     new-instance p0, Lorg/json/JSONObject;
 
-    .end local p0
+    .end local p0    # "jsonObject":Lorg/json/JSONObject;
     invoke-direct {p0}, Lorg/json/JSONObject;-><init>()V
 
     .line 236
-    .restart local p0
+    .restart local p0    # "jsonObject":Lorg/json/JSONObject;
     invoke-virtual {p0, p2, v1}, Lorg/json/JSONObject;->putOpt(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     move-object v2, p0
@@ -804,7 +802,7 @@
 
 .method public static isNullOrEmpty(Ljava/lang/String;)Z
     .locals 1
-    .parameter "s"
+    .param p0, "s"    # Ljava/lang/String;
 
     .prologue
     .line 110
@@ -829,7 +827,6 @@
 
 .method public static isNullOrEmpty(Ljava/util/Collection;)Z
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -842,7 +839,7 @@
 
     .prologue
     .line 106
-    .local p0, c:Ljava/util/Collection;,"Ljava/util/Collection<TT;>;"
+    .local p0, "c":Ljava/util/Collection;, "Ljava/util/Collection<TT;>;"
     if-eqz p0, :cond_0
 
     invoke-interface {p0}, Ljava/util/Collection;->size()I
@@ -864,8 +861,6 @@
 
 .method public static isSubset(Ljava/util/Collection;Ljava/util/Collection;)Z
     .locals 6
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -879,8 +874,8 @@
     .end annotation
 
     .prologue
-    .local p0, subset:Ljava/util/Collection;,"Ljava/util/Collection<TT;>;"
-    .local p1, superset:Ljava/util/Collection;,"Ljava/util/Collection<TT;>;"
+    .local p0, "subset":Ljava/util/Collection;, "Ljava/util/Collection<TT;>;"
+    .local p1, "superset":Ljava/util/Collection;, "Ljava/util/Collection<TT;>;"
     const/4 v5, 0x1
 
     const/4 v4, 0x0
@@ -923,7 +918,7 @@
     invoke-direct {v0, p1}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
 
     .line 97
-    .local v0, hash:Ljava/util/HashSet;,"Ljava/util/HashSet<TT;>;"
+    .local v0, "hash":Ljava/util/HashSet;, "Ljava/util/HashSet<TT;>;"
     invoke-interface {p0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
@@ -949,7 +944,7 @@
     check-cast v1, Ljava/lang/Object;
 
     .line 98
-    .local v1, t:Ljava/lang/Object;,"TT;"
+    .local v1, "t":Ljava/lang/Object;, "TT;"
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
 
     move-result v3
@@ -964,8 +959,8 @@
 
 .method public static logd(Ljava/lang/String;Ljava/lang/Exception;)V
     .locals 2
-    .parameter "tag"
-    .parameter "e"
+    .param p0, "tag"    # Ljava/lang/String;
+    .param p1, "e"    # Ljava/lang/Exception;
 
     .prologue
     .line 319
@@ -1017,8 +1012,8 @@
 
 .method public static logd(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
-    .parameter "tag"
-    .parameter "msg"
+    .param p0, "tag"    # Ljava/lang/String;
+    .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
     .line 325
@@ -1036,14 +1031,14 @@
 
 .method static md5hash(Ljava/lang/String;)Ljava/lang/String;
     .locals 8
-    .parameter "key"
+    .param p0, "key"    # Ljava/lang/String;
 
     .prologue
     .line 126
     const/4 v4, 0x0
 
     .line 128
-    .local v4, hash:Ljava/security/MessageDigest;
+    .local v4, "hash":Ljava/security/MessageDigest;
     :try_start_0
     const-string v5, "MD5"
 
@@ -1066,13 +1061,13 @@
     move-result-object v2
 
     .line 135
-    .local v2, digest:[B
+    .local v2, "digest":[B
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
     .line 136
-    .local v1, builder:Ljava/lang/StringBuilder;
+    .local v1, "builder":Ljava/lang/StringBuilder;
     array-length v5, v2
 
     const/4 v6, 0x0
@@ -1085,8 +1080,8 @@
 
     move-result-object v5
 
-    .end local v1           #builder:Ljava/lang/StringBuilder;
-    .end local v2           #digest:[B
+    .end local v1    # "builder":Ljava/lang/StringBuilder;
+    .end local v2    # "digest":[B
     :goto_1
     return-object v5
 
@@ -1097,20 +1092,20 @@
     move-object v3, v5
 
     .line 130
-    .local v3, e:Ljava/security/NoSuchAlgorithmException;
+    .local v3, "e":Ljava/security/NoSuchAlgorithmException;
     const/4 v5, 0x0
 
     goto :goto_1
 
     .line 136
-    .end local v3           #e:Ljava/security/NoSuchAlgorithmException;
-    .restart local v1       #builder:Ljava/lang/StringBuilder;
-    .restart local v2       #digest:[B
+    .end local v3    # "e":Ljava/security/NoSuchAlgorithmException;
+    .restart local v1    # "builder":Ljava/lang/StringBuilder;
+    .restart local v2    # "digest":[B
     :cond_0
     aget-byte v0, v2, v6
 
     .line 137
-    .local v0, b:I
+    .local v0, "b":I
     shr-int/lit8 v7, v0, 0x4
 
     and-int/lit8 v7, v7, 0xf
@@ -1140,9 +1135,9 @@
 
 .method public static putObjectInBundle(Landroid/os/Bundle;Ljava/lang/String;Ljava/lang/Object;)V
     .locals 2
-    .parameter "bundle"
-    .parameter "key"
-    .parameter "value"
+    .param p0, "bundle"    # Landroid/os/Bundle;
+    .param p1, "key"    # Ljava/lang/String;
+    .param p2, "value"    # Ljava/lang/Object;
 
     .prologue
     .line 158
@@ -1153,7 +1148,7 @@
     .line 159
     check-cast p2, Ljava/lang/String;
 
-    .end local p2
+    .end local p2    # "value":Ljava/lang/Object;
     invoke-virtual {p0, p1, p2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 167
@@ -1161,7 +1156,7 @@
     return-void
 
     .line 160
-    .restart local p2
+    .restart local p2    # "value":Ljava/lang/Object;
     :cond_0
     instance-of v0, p2, Landroid/os/Parcelable;
 
@@ -1170,13 +1165,13 @@
     .line 161
     check-cast p2, Landroid/os/Parcelable;
 
-    .end local p2
+    .end local p2    # "value":Ljava/lang/Object;
     invoke-virtual {p0, p1, p2}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
     goto :goto_0
 
     .line 162
-    .restart local p2
+    .restart local p2    # "value":Ljava/lang/Object;
     :cond_1
     instance-of v0, p2, [B
 
@@ -1185,13 +1180,13 @@
     .line 163
     check-cast p2, [B
 
-    .end local p2
+    .end local p2    # "value":Ljava/lang/Object;
     invoke-virtual {p0, p1, p2}, Landroid/os/Bundle;->putByteArray(Ljava/lang/String;[B)V
 
     goto :goto_0
 
     .line 165
-    .restart local p2
+    .restart local p2    # "value":Ljava/lang/Object;
     :cond_2
     new-instance v0, Lcom/facebook/FacebookException;
 
@@ -1204,8 +1199,8 @@
 
 .method public static queryAppSettings(Ljava/lang/String;Z)Lcom/facebook/internal/Utility$FetchedAppSettings;
     .locals 8
-    .parameter "applicationId"
-    .parameter "forceRequery"
+    .param p0, "applicationId"    # Ljava/lang/String;
+    .param p1, "forceRequery"    # Z
 
     .prologue
     const/4 v7, 0x0
@@ -1228,7 +1223,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "applicationId":Ljava/lang/String;
     check-cast p0, Lcom/facebook/internal/Utility$FetchedAppSettings;
 
     move-object v4, p0
@@ -1238,14 +1233,14 @@
     return-object v4
 
     .line 345
-    .restart local p0
+    .restart local p0    # "applicationId":Ljava/lang/String;
     :cond_0
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     .line 346
-    .local v0, appSettingsParams:Landroid/os/Bundle;
+    .local v0, "appSettingsParams":Landroid/os/Bundle;
     const-string v4, "fields"
 
     const-string v5, ","
@@ -1264,7 +1259,7 @@
     move-result-object v1
 
     .line 349
-    .local v1, request:Lcom/facebook/Request;
+    .local v1, "request":Lcom/facebook/Request;
     invoke-virtual {v1, v0}, Lcom/facebook/Request;->setParameters(Landroid/os/Bundle;)V
 
     .line 351
@@ -1277,7 +1272,7 @@
     move-result-object v3
 
     .line 352
-    .local v3, supportResponse:Lcom/facebook/model/GraphObject;
+    .local v3, "supportResponse":Lcom/facebook/model/GraphObject;
     new-instance v2, Lcom/facebook/internal/Utility$FetchedAppSettings;
 
     .line 353
@@ -1298,7 +1293,7 @@
     invoke-direct {v2, v4, v5, v7}, Lcom/facebook/internal/Utility$FetchedAppSettings;-><init>(ZZLcom/facebook/internal/Utility$FetchedAppSettings;)V
 
     .line 356
-    .local v2, result:Lcom/facebook/internal/Utility$FetchedAppSettings;
+    .local v2, "result":Lcom/facebook/internal/Utility$FetchedAppSettings;
     if-eqz p0, :cond_1
 
     .line 357
@@ -1323,7 +1318,7 @@
 
 .method public static readStreamToString(Ljava/io/InputStream;)Ljava/lang/String;
     .locals 9
-    .parameter "inputStream"
+    .param p0, "inputStream"    # Ljava/io/InputStream;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -1335,11 +1330,11 @@
     const/4 v2, 0x0
 
     .line 249
-    .local v2, bufferedInputStream:Ljava/io/BufferedInputStream;
+    .local v2, "bufferedInputStream":Ljava/io/BufferedInputStream;
     const/4 v5, 0x0
 
     .line 251
-    .local v5, reader:Ljava/io/InputStreamReader;
+    .local v5, "reader":Ljava/io/InputStreamReader;
     :try_start_0
     new-instance v3, Ljava/io/BufferedInputStream;
 
@@ -1348,8 +1343,8 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
     .line 252
-    .end local v2           #bufferedInputStream:Ljava/io/BufferedInputStream;
-    .local v3, bufferedInputStream:Ljava/io/BufferedInputStream;
+    .end local v2    # "bufferedInputStream":Ljava/io/BufferedInputStream;
+    .local v3, "bufferedInputStream":Ljava/io/BufferedInputStream;
     :try_start_1
     new-instance v6, Ljava/io/InputStreamReader;
 
@@ -1358,29 +1353,29 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_2
 
     .line 253
-    .end local v5           #reader:Ljava/io/InputStreamReader;
-    .local v6, reader:Ljava/io/InputStreamReader;
+    .end local v5    # "reader":Ljava/io/InputStreamReader;
+    .local v6, "reader":Ljava/io/InputStreamReader;
     :try_start_2
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
     .line 255
-    .local v7, stringBuilder:Ljava/lang/StringBuilder;
+    .local v7, "stringBuilder":Ljava/lang/StringBuilder;
     const/16 v1, 0x800
 
     .line 256
-    .local v1, bufferSize:I
+    .local v1, "bufferSize":I
     const/16 v8, 0x800
 
     new-array v0, v8, [C
 
     .line 257
-    .local v0, buffer:[C
+    .local v0, "buffer":[C
     const/4 v4, 0x0
 
     .line 258
-    .local v4, n:I
+    .local v4, "n":I
     :goto_0
     invoke-virtual {v6, v0}, Ljava/io/InputStreamReader;->read([C)I
 
@@ -1418,22 +1413,22 @@
     goto :goto_0
 
     .line 263
-    .end local v0           #buffer:[C
-    .end local v1           #bufferSize:I
-    .end local v4           #n:I
-    .end local v7           #stringBuilder:Ljava/lang/StringBuilder;
+    .end local v0    # "buffer":[C
+    .end local v1    # "bufferSize":I
+    .end local v4    # "n":I
+    .end local v7    # "stringBuilder":Ljava/lang/StringBuilder;
     :catchall_0
     move-exception v8
 
     move-object v5, v6
 
-    .end local v6           #reader:Ljava/io/InputStreamReader;
-    .restart local v5       #reader:Ljava/io/InputStreamReader;
+    .end local v6    # "reader":Ljava/io/InputStreamReader;
+    .restart local v5    # "reader":Ljava/io/InputStreamReader;
     move-object v2, v3
 
     .line 264
-    .end local v3           #bufferedInputStream:Ljava/io/BufferedInputStream;
-    .restart local v2       #bufferedInputStream:Ljava/io/BufferedInputStream;
+    .end local v3    # "bufferedInputStream":Ljava/io/BufferedInputStream;
+    .restart local v2    # "bufferedInputStream":Ljava/io/BufferedInputStream;
     :goto_1
     invoke-static {v2}, Lcom/facebook/internal/Utility;->closeQuietly(Ljava/io/Closeable;)V
 
@@ -1449,22 +1444,22 @@
 
     goto :goto_1
 
-    .end local v2           #bufferedInputStream:Ljava/io/BufferedInputStream;
-    .restart local v3       #bufferedInputStream:Ljava/io/BufferedInputStream;
+    .end local v2    # "bufferedInputStream":Ljava/io/BufferedInputStream;
+    .restart local v3    # "bufferedInputStream":Ljava/io/BufferedInputStream;
     :catchall_2
     move-exception v8
 
     move-object v2, v3
 
-    .end local v3           #bufferedInputStream:Ljava/io/BufferedInputStream;
-    .restart local v2       #bufferedInputStream:Ljava/io/BufferedInputStream;
+    .end local v3    # "bufferedInputStream":Ljava/io/BufferedInputStream;
+    .restart local v2    # "bufferedInputStream":Ljava/io/BufferedInputStream;
     goto :goto_1
 .end method
 
 .method private static safeGetBooleanFromResponse(Lcom/facebook/model/GraphObject;Ljava/lang/String;)Z
     .locals 3
-    .parameter "response"
-    .parameter "propertyName"
+    .param p0, "response"    # Lcom/facebook/model/GraphObject;
+    .param p1, "propertyName"    # Ljava/lang/String;
 
     .prologue
     const/4 v2, 0x0
@@ -1475,7 +1470,7 @@
     move-result-object v0
 
     .line 370
-    .local v0, result:Ljava/lang/Boolean;
+    .local v0, "result":Ljava/lang/Boolean;
     if-eqz p0, :cond_0
 
     .line 371
@@ -1484,7 +1479,7 @@
     move-result-object v0
 
     .line 373
-    .end local v0           #result:Ljava/lang/Boolean;
+    .end local v0    # "result":Ljava/lang/Boolean;
     :cond_0
     instance-of v1, v0, Ljava/lang/Boolean;
 
@@ -1495,12 +1490,12 @@
 
     move-result-object v0
 
-    .restart local v0       #result:Ljava/lang/Boolean;
+    .restart local v0    # "result":Ljava/lang/Boolean;
     move-object p0, v0
 
     .line 376
-    .end local v0           #result:Ljava/lang/Boolean;
-    .end local p0
+    .end local v0    # "result":Ljava/lang/Boolean;
+    .end local p0    # "response":Lcom/facebook/model/GraphObject;
     :goto_0
     check-cast p0, Ljava/lang/Boolean;
 
@@ -1510,7 +1505,7 @@
 
     return v1
 
-    .restart local p0
+    .restart local p0    # "response":Lcom/facebook/model/GraphObject;
     :cond_1
     move-object p0, v0
 
@@ -1519,8 +1514,8 @@
 
 .method public static stringsEqualOrEmpty(Ljava/lang/String;Ljava/lang/String;)Z
     .locals 3
-    .parameter "a"
-    .parameter "b"
+    .param p0, "a"    # Ljava/lang/String;
+    .param p1, "b"    # Ljava/lang/String;
 
     .prologue
     .line 270
@@ -1529,13 +1524,13 @@
     move-result v0
 
     .line 271
-    .local v0, aEmpty:Z
+    .local v0, "aEmpty":Z
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     .line 273
-    .local v1, bEmpty:Z
+    .local v1, "bEmpty":Z
     if-eqz v0, :cond_0
 
     if-eqz v1, :cond_0
@@ -1569,7 +1564,7 @@
 
 .method public static varargs unmodifiableCollection([Ljava/lang/Object;)Ljava/util/Collection;
     .locals 1
-    .parameter "ts"
+    .param p0, "ts"    # [Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",

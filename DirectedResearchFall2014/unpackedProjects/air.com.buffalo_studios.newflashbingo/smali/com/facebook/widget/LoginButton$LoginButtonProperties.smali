@@ -156,6 +156,7 @@
 
     if-nez v0, :cond_1
 
+    # getter for: Lcom/facebook/widget/LoginButton;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/facebook/widget/LoginButton;->access$000()Ljava/lang/String;
 
     move-result-object v0

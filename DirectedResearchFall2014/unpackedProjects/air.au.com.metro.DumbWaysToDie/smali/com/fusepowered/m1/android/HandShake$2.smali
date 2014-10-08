@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m1/android/HandShake;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 392
@@ -44,7 +43,7 @@
     .line 397
     iget-object v1, p0, Lcom/fusepowered/m1/android/HandShake$2;->this$0:Lcom/fusepowered/m1/android/HandShake;
 
-    #getter for: Lcom/fusepowered/m1/android/HandShake;->contextRef:Ljava/lang/ref/WeakReference;
+    # getter for: Lcom/fusepowered/m1/android/HandShake;->contextRef:Ljava/lang/ref/WeakReference;
     invoke-static {v1}, Lcom/fusepowered/m1/android/HandShake;->access$000(Lcom/fusepowered/m1/android/HandShake;)Ljava/lang/ref/WeakReference;
 
     move-result-object v1
@@ -56,13 +55,13 @@
     check-cast v0, Landroid/content/Context;
 
     .line 398
-    .local v0, context:Landroid/content/Context;
+    .local v0, "context":Landroid/content/Context;
     if-nez v0, :cond_0
 
     .line 399
     iget-object v1, p0, Lcom/fusepowered/m1/android/HandShake$2;->this$0:Lcom/fusepowered/m1/android/HandShake;
 
-    #getter for: Lcom/fusepowered/m1/android/HandShake;->appContextRef:Ljava/lang/ref/WeakReference;
+    # getter for: Lcom/fusepowered/m1/android/HandShake;->appContextRef:Ljava/lang/ref/WeakReference;
     invoke-static {v1}, Lcom/fusepowered/m1/android/HandShake;->access$100(Lcom/fusepowered/m1/android/HandShake;)Ljava/lang/ref/WeakReference;
 
     move-result-object v1
@@ -71,11 +70,11 @@
 
     move-result-object v0
 
-    .end local v0           #context:Landroid/content/Context;
+    .end local v0    # "context":Landroid/content/Context;
     check-cast v0, Landroid/content/Context;
 
     .line 400
-    .restart local v0       #context:Landroid/content/Context;
+    .restart local v0    # "context":Landroid/content/Context;
     :cond_0
     if-eqz v0, :cond_1
 

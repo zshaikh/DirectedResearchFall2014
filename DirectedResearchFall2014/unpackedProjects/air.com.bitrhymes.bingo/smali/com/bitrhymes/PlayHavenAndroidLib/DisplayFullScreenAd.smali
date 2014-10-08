@@ -23,7 +23,6 @@
 
 .method static synthetic access$0(Lcom/bitrhymes/PlayHavenAndroidLib/DisplayFullScreenAd;)Lcom/adobe/fre/FREContext;
     .locals 1
-    .parameter
 
     .prologue
     .line 17
@@ -36,8 +35,8 @@
 # virtual methods
 .method public call(Lcom/adobe/fre/FREContext;[Lcom/adobe/fre/FREObject;)Lcom/adobe/fre/FREObject;
     .locals 6
-    .parameter "context"
-    .parameter "args"
+    .param p1, "context"    # Lcom/adobe/fre/FREContext;
+    .param p2, "args"    # [Lcom/adobe/fre/FREObject;
 
     .prologue
     const-string v5, "ERROR_EVENT"
@@ -104,7 +103,7 @@
     invoke-direct {v1, v2, v3}, Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest;-><init>(Landroid/app/Activity;Ljava/lang/String;)V
 
     .line 33
-    .local v1, request:Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest;
+    .local v1, "request":Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest;
     new-instance v2, Lcom/bitrhymes/PlayHavenAndroidLib/DisplayFullScreenAd$1;
 
     invoke-direct {v2, p0}, Lcom/bitrhymes/PlayHavenAndroidLib/DisplayFullScreenAd$1;-><init>(Lcom/bitrhymes/PlayHavenAndroidLib/DisplayFullScreenAd;)V
@@ -117,7 +116,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 90
-    .end local v1           #request:Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest;
+    .end local v1    # "request":Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest;
     :goto_0
     const/4 v2, 0x0
 
@@ -130,7 +129,7 @@
     move-object v0, v2
 
     .line 85
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v2, "PlayhavenEXt"
 
     const-string v2, "DisplayFullScreenAd : failed"

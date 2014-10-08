@@ -36,7 +36,7 @@
 # virtual methods
 .method public findContentDeserializer(Lcom/flurry/org/codehaus/jackson/map/introspect/Annotated;)Ljava/lang/Class;
     .locals 1
-    .parameter "am"
+    .param p1, "am"    # Lcom/flurry/org/codehaus/jackson/map/introspect/Annotated;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -58,7 +58,7 @@
 
 .method public findDeserializablePropertyName(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedField;)Ljava/lang/String;
     .locals 1
-    .parameter "af"
+    .param p1, "af"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedField;
 
     .prologue
     .line 167
@@ -69,9 +69,9 @@
 
 .method public findDeserializationContentType(Lcom/flurry/org/codehaus/jackson/map/introspect/Annotated;Lcom/flurry/org/codehaus/jackson/type/JavaType;Ljava/lang/String;)Ljava/lang/Class;
     .locals 1
-    .parameter "am"
-    .parameter "t"
-    .parameter "propName"
+    .param p1, "am"    # Lcom/flurry/org/codehaus/jackson/map/introspect/Annotated;
+    .param p2, "t"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .param p3, "propName"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -93,9 +93,9 @@
 
 .method public findDeserializationKeyType(Lcom/flurry/org/codehaus/jackson/map/introspect/Annotated;Lcom/flurry/org/codehaus/jackson/type/JavaType;Ljava/lang/String;)Ljava/lang/Class;
     .locals 1
-    .parameter "am"
-    .parameter "t"
-    .parameter "propName"
+    .param p1, "am"    # Lcom/flurry/org/codehaus/jackson/map/introspect/Annotated;
+    .param p2, "t"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .param p3, "propName"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -117,9 +117,9 @@
 
 .method public findDeserializationType(Lcom/flurry/org/codehaus/jackson/map/introspect/Annotated;Lcom/flurry/org/codehaus/jackson/type/JavaType;Ljava/lang/String;)Ljava/lang/Class;
     .locals 1
-    .parameter "am"
-    .parameter "t"
-    .parameter "propName"
+    .param p1, "am"    # Lcom/flurry/org/codehaus/jackson/map/introspect/Annotated;
+    .param p2, "t"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .param p3, "propName"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -141,7 +141,7 @@
 
 .method public findDeserializer(Lcom/flurry/org/codehaus/jackson/map/introspect/Annotated;)Ljava/lang/Object;
     .locals 1
-    .parameter "am"
+    .param p1, "am"    # Lcom/flurry/org/codehaus/jackson/map/introspect/Annotated;
 
     .prologue
     .line 186
@@ -152,7 +152,6 @@
 
 .method public findEnumValue(Ljava/lang/Enum;)Ljava/lang/String;
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -164,7 +163,7 @@
 
     .prologue
     .line 45
-    .local p1, value:Ljava/lang/Enum;,"Ljava/lang/Enum<*>;"
+    .local p1, "value":Ljava/lang/Enum;, "Ljava/lang/Enum<*>;"
     const/4 v0, 0x0
 
     return-object v0
@@ -172,7 +171,7 @@
 
 .method public findGettablePropertyName(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;)Ljava/lang/String;
     .locals 1
-    .parameter "am"
+    .param p1, "am"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
 
     .prologue
     .line 157
@@ -183,7 +182,7 @@
 
 .method public findIgnoreUnknownProperties(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;)Ljava/lang/Boolean;
     .locals 1
-    .parameter "ac"
+    .param p1, "ac"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;
 
     .prologue
     .line 66
@@ -194,7 +193,7 @@
 
 .method public findKeyDeserializer(Lcom/flurry/org/codehaus/jackson/map/introspect/Annotated;)Ljava/lang/Class;
     .locals 1
-    .parameter "am"
+    .param p1, "am"    # Lcom/flurry/org/codehaus/jackson/map/introspect/Annotated;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -216,7 +215,7 @@
 
 .method public findPropertiesToIgnore(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;)[Ljava/lang/String;
     .locals 1
-    .parameter "ac"
+    .param p1, "ac"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;
 
     .prologue
     .line 61
@@ -227,7 +226,7 @@
 
 .method public findPropertyNameForParam(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedParameter;)Ljava/lang/String;
     .locals 1
-    .parameter "param"
+    .param p1, "param"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedParameter;
 
     .prologue
     .line 197
@@ -238,7 +237,7 @@
 
 .method public findRootName(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;)Ljava/lang/String;
     .locals 1
-    .parameter "ac"
+    .param p1, "ac"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;
 
     .prologue
     .line 56
@@ -249,7 +248,7 @@
 
 .method public findSerializablePropertyName(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedField;)Ljava/lang/String;
     .locals 1
-    .parameter "af"
+    .param p1, "af"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedField;
 
     .prologue
     .line 202
@@ -260,7 +259,7 @@
 
 .method public findSerializationPropertyOrder(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;)[Ljava/lang/String;
     .locals 1
-    .parameter "ac"
+    .param p1, "ac"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;
 
     .prologue
     .line 141
@@ -271,7 +270,7 @@
 
 .method public findSerializationSortAlphabetically(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;)Ljava/lang/Boolean;
     .locals 1
-    .parameter "ac"
+    .param p1, "ac"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;
 
     .prologue
     .line 146
@@ -282,7 +281,7 @@
 
 .method public findSerializationType(Lcom/flurry/org/codehaus/jackson/map/introspect/Annotated;)Ljava/lang/Class;
     .locals 1
-    .parameter "a"
+    .param p1, "a"    # Lcom/flurry/org/codehaus/jackson/map/introspect/Annotated;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -302,7 +301,7 @@
 
 .method public findSerializationTyping(Lcom/flurry/org/codehaus/jackson/map/introspect/Annotated;)Lcom/flurry/org/codehaus/jackson/map/annotate/JsonSerialize$Typing;
     .locals 1
-    .parameter "a"
+    .param p1, "a"    # Lcom/flurry/org/codehaus/jackson/map/introspect/Annotated;
 
     .prologue
     .line 125
@@ -313,7 +312,7 @@
 
 .method public findSerializationViews(Lcom/flurry/org/codehaus/jackson/map/introspect/Annotated;)[Ljava/lang/Class;
     .locals 1
-    .parameter "a"
+    .param p1, "a"    # Lcom/flurry/org/codehaus/jackson/map/introspect/Annotated;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -333,7 +332,7 @@
 
 .method public findSerializer(Lcom/flurry/org/codehaus/jackson/map/introspect/Annotated;)Ljava/lang/Object;
     .locals 1
-    .parameter "am"
+    .param p1, "am"    # Lcom/flurry/org/codehaus/jackson/map/introspect/Annotated;
 
     .prologue
     .line 115
@@ -344,7 +343,7 @@
 
 .method public findSettablePropertyName(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;)Ljava/lang/String;
     .locals 1
-    .parameter "am"
+    .param p1, "am"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
 
     .prologue
     .line 207
@@ -355,7 +354,7 @@
 
 .method public hasAsValueAnnotation(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;)Z
     .locals 1
-    .parameter "am"
+    .param p1, "am"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
 
     .prologue
     .line 162
@@ -366,7 +365,7 @@
 
 .method public hasIgnoreMarker(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMember;)Z
     .locals 1
-    .parameter "member"
+    .param p1, "member"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMember;
 
     .prologue
     .line 77
@@ -377,7 +376,7 @@
 
 .method public isHandled(Ljava/lang/annotation/Annotation;)Z
     .locals 1
-    .parameter "ann"
+    .param p1, "ann"    # Ljava/lang/annotation/Annotation;
 
     .prologue
     .line 34
@@ -388,7 +387,7 @@
 
 .method public isIgnorableConstructor(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedConstructor;)Z
     .locals 1
-    .parameter "c"
+    .param p1, "c"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedConstructor;
 
     .prologue
     .line 88
@@ -399,7 +398,7 @@
 
 .method public isIgnorableField(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedField;)Z
     .locals 1
-    .parameter "f"
+    .param p1, "f"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedField;
 
     .prologue
     .line 104
@@ -410,7 +409,7 @@
 
 .method public isIgnorableMethod(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;)Z
     .locals 1
-    .parameter "m"
+    .param p1, "m"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
 
     .prologue
     .line 93

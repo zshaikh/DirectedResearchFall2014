@@ -35,8 +35,6 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Ljava/lang/String;)V
     .locals 7
-    .parameter
-    .parameter
 
     .prologue
     const/16 v6, 0xb
@@ -322,7 +320,6 @@
 
 .method static synthetic a(Lcom/flurry/android/cl;)Landroid/webkit/WebView;
     .locals 1
-    .parameter
 
     .prologue
     .line 18
@@ -333,8 +330,6 @@
 
 .method static synthetic a(Lcom/flurry/android/cl;Z)Z
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 18
@@ -345,7 +340,6 @@
 
 .method static synthetic b(Lcom/flurry/android/cl;)Lcom/flurry/android/f;
     .locals 1
-    .parameter
 
     .prologue
     .line 18
@@ -356,8 +350,6 @@
 
 .method static synthetic b(Lcom/flurry/android/cl;Z)Z
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 18
@@ -368,7 +360,6 @@
 
 .method static synthetic c(Lcom/flurry/android/cl;)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 18
@@ -379,7 +370,6 @@
 
 .method static synthetic d(Lcom/flurry/android/cl;)Lcom/flurry/android/bh;
     .locals 1
-    .parameter
 
     .prologue
     .line 18
@@ -392,7 +382,6 @@
 # virtual methods
 .method public final a(Lcom/flurry/android/bh;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 76
@@ -404,7 +393,6 @@
 
 .method public final a(Lcom/flurry/android/f;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 60
@@ -416,7 +404,6 @@
 
 .method public final a(Lcom/flurry/android/y;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 68
@@ -541,7 +528,6 @@
 
 .method public final onClick(Landroid/view/View;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 240

@@ -35,7 +35,7 @@
 # virtual methods
 .method public compareTo(Lcom/flurry/org/apache/avro/specific/SpecificRecord;)I
     .locals 2
-    .parameter "that"
+    .param p1, "that"    # Lcom/flurry/org/apache/avro/specific/SpecificRecord;
 
     .prologue
     .line 45
@@ -56,13 +56,13 @@
 
 .method public bridge synthetic compareTo(Ljava/lang/Object;)I
     .locals 1
-    .parameter "x0"
+    .param p1, "x0"    # Ljava/lang/Object;
 
     .prologue
     .line 23
     check-cast p1, Lcom/flurry/org/apache/avro/specific/SpecificRecord;
 
-    .end local p1
+    .end local p1    # "x0":Ljava/lang/Object;
     invoke-virtual {p0, p1}, Lcom/flurry/org/apache/avro/specific/SpecificRecordBase;->compareTo(Lcom/flurry/org/apache/avro/specific/SpecificRecord;)I
 
     move-result v0
@@ -72,7 +72,7 @@
 
 .method public equals(Ljava/lang/Object;)Z
     .locals 4
-    .parameter "that"
+    .param p1, "that"    # Ljava/lang/Object;
 
     .prologue
     const/4 v3, 0x1
@@ -85,12 +85,12 @@
     move v0, v3
 
     .line 35
-    .end local p1
+    .end local p1    # "that":Ljava/lang/Object;
     :goto_0
     return v0
 
     .line 33
-    .restart local p1
+    .restart local p1    # "that":Ljava/lang/Object;
     :cond_0
     instance-of v0, p1, Lcom/flurry/org/apache/avro/specific/SpecificRecord;
 
@@ -120,7 +120,7 @@
     :cond_2
     check-cast p1, Lcom/flurry/org/apache/avro/specific/SpecificRecord;
 
-    .end local p1
+    .end local p1    # "that":Ljava/lang/Object;
     invoke-virtual {p0, p1}, Lcom/flurry/org/apache/avro/specific/SpecificRecordBase;->compareTo(Lcom/flurry/org/apache/avro/specific/SpecificRecord;)I
 
     move-result v0

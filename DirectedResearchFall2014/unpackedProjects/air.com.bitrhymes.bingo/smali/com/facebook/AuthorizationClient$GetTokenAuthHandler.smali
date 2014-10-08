@@ -27,7 +27,6 @@
 # direct methods
 .method constructor <init>(Lcom/facebook/AuthorizationClient;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 711
@@ -76,8 +75,8 @@
 
 .method getTokenCompleted(Lcom/facebook/AuthorizationClient$AuthorizationRequest;Landroid/os/Bundle;)V
     .locals 8
-    .parameter "request"
-    .parameter "result"
+    .param p1, "request"    # Lcom/facebook/AuthorizationClient$AuthorizationRequest;
+    .param p2, "result"    # Landroid/os/Bundle;
 
     .prologue
     .line 748
@@ -88,7 +87,7 @@
     .line 750
     iget-object v6, p0, Lcom/facebook/AuthorizationClient$GetTokenAuthHandler;->this$0:Lcom/facebook/AuthorizationClient;
 
-    #calls: Lcom/facebook/AuthorizationClient;->notifyBackgroundProcessingStop()V
+    # invokes: Lcom/facebook/AuthorizationClient;->notifyBackgroundProcessingStop()V
     invoke-static {v6}, Lcom/facebook/AuthorizationClient;->access$3(Lcom/facebook/AuthorizationClient;)V
 
     .line 752
@@ -102,13 +101,13 @@
     move-result-object v0
 
     .line 754
-    .local v0, currentPermissions:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
+    .local v0, "currentPermissions":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     invoke-virtual {p1}, Lcom/facebook/AuthorizationClient$AuthorizationRequest;->getPermissions()Ljava/util/List;
 
     move-result-object v4
 
     .line 755
-    .local v4, permissions:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
+    .local v4, "permissions":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     if-eqz v0, :cond_1
 
     .line 756
@@ -129,7 +128,7 @@
     move-result-object v5
 
     .line 760
-    .local v5, token:Lcom/facebook/AccessToken;
+    .local v5, "token":Lcom/facebook/AccessToken;
     iget-object v6, p0, Lcom/facebook/AuthorizationClient$GetTokenAuthHandler;->this$0:Lcom/facebook/AuthorizationClient;
 
     iget-object v6, v6, Lcom/facebook/AuthorizationClient;->pendingRequest:Lcom/facebook/AuthorizationClient$AuthorizationRequest;
@@ -139,29 +138,29 @@
     move-result-object v2
 
     .line 761
-    .local v2, outcome:Lcom/facebook/AuthorizationClient$Result;
+    .local v2, "outcome":Lcom/facebook/AuthorizationClient$Result;
     iget-object v6, p0, Lcom/facebook/AuthorizationClient$GetTokenAuthHandler;->this$0:Lcom/facebook/AuthorizationClient;
 
     invoke-virtual {v6, v2}, Lcom/facebook/AuthorizationClient;->completeAndValidate(Lcom/facebook/AuthorizationClient$Result;)V
 
     .line 781
-    .end local v0           #currentPermissions:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
-    .end local v2           #outcome:Lcom/facebook/AuthorizationClient$Result;
-    .end local v4           #permissions:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
-    .end local v5           #token:Lcom/facebook/AccessToken;
+    .end local v0    # "currentPermissions":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
+    .end local v2    # "outcome":Lcom/facebook/AuthorizationClient$Result;
+    .end local v4    # "permissions":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
+    .end local v5    # "token":Lcom/facebook/AccessToken;
     :goto_0
     return-void
 
     .line 767
-    .restart local v0       #currentPermissions:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
-    .restart local v4       #permissions:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
+    .restart local v0    # "currentPermissions":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
+    .restart local v4    # "permissions":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     :cond_1
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     .line 768
-    .local v1, newPermissions:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
+    .local v1, "newPermissions":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-interface {v4}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v6
@@ -197,9 +196,9 @@
     invoke-virtual {p1, v1}, Lcom/facebook/AuthorizationClient$AuthorizationRequest;->setPermissions(Ljava/util/List;)V
 
     .line 780
-    .end local v0           #currentPermissions:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
-    .end local v1           #newPermissions:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
-    .end local v4           #permissions:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
+    .end local v0    # "currentPermissions":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
+    .end local v1    # "newPermissions":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
+    .end local v4    # "permissions":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     :cond_4
     iget-object v6, p0, Lcom/facebook/AuthorizationClient$GetTokenAuthHandler;->this$0:Lcom/facebook/AuthorizationClient;
 
@@ -208,9 +207,9 @@
     goto :goto_0
 
     .line 768
-    .restart local v0       #currentPermissions:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
-    .restart local v1       #newPermissions:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
-    .restart local v4       #permissions:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
+    .restart local v0    # "currentPermissions":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
+    .restart local v1    # "newPermissions":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
+    .restart local v4    # "permissions":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     :cond_5
     invoke-interface {v6}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -219,7 +218,7 @@
     check-cast v3, Ljava/lang/String;
 
     .line 769
-    .local v3, permission:Ljava/lang/String;
+    .local v3, "permission":Ljava/lang/String;
     invoke-virtual {v0, v3}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
 
     move-result v7
@@ -234,7 +233,7 @@
 
 .method tryAuthorize(Lcom/facebook/AuthorizationClient$AuthorizationRequest;)Z
     .locals 4
-    .parameter "request"
+    .param p1, "request"    # Lcom/facebook/AuthorizationClient$AuthorizationRequest;
 
     .prologue
     .line 729
@@ -272,7 +271,7 @@
     :cond_0
     iget-object v1, p0, Lcom/facebook/AuthorizationClient$GetTokenAuthHandler;->this$0:Lcom/facebook/AuthorizationClient;
 
-    #calls: Lcom/facebook/AuthorizationClient;->notifyBackgroundProcessingStart()V
+    # invokes: Lcom/facebook/AuthorizationClient;->notifyBackgroundProcessingStart()V
     invoke-static {v1}, Lcom/facebook/AuthorizationClient;->access$2(Lcom/facebook/AuthorizationClient;)V
 
     .line 736
@@ -281,7 +280,7 @@
     invoke-direct {v0, p0, p1}, Lcom/facebook/AuthorizationClient$GetTokenAuthHandler$1;-><init>(Lcom/facebook/AuthorizationClient$GetTokenAuthHandler;Lcom/facebook/AuthorizationClient$AuthorizationRequest;)V
 
     .line 743
-    .local v0, callback:Lcom/facebook/internal/PlatformServiceClient$CompletedListener;
+    .local v0, "callback":Lcom/facebook/internal/PlatformServiceClient$CompletedListener;
     iget-object v1, p0, Lcom/facebook/AuthorizationClient$GetTokenAuthHandler;->getTokenClient:Lcom/facebook/GetTokenClient;
 
     invoke-virtual {v1, v0}, Lcom/facebook/GetTokenClient;->setCompletedListener(Lcom/facebook/internal/PlatformServiceClient$CompletedListener;)V

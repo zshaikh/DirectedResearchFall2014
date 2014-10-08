@@ -16,7 +16,7 @@
 
 .method public static getConnectionType(Landroid/content/Context;)Lv2/com/playhaven/configuration/PHConfiguration$ConnectionType;
     .locals 7
-    .parameter "context"
+    .param p0, "context"    # Landroid/content/Context;
 
     .prologue
     .line 19
@@ -30,19 +30,19 @@
     check-cast v1, Landroid/net/ConnectivityManager;
 
     .line 21
-    .local v1, manager:Landroid/net/ConnectivityManager;
+    .local v1, "manager":Landroid/net/ConnectivityManager;
     if-nez v1, :cond_0
 
     .line 22
     sget-object v6, Lv2/com/playhaven/configuration/PHConfiguration$ConnectionType;->NO_NETWORK:Lv2/com/playhaven/configuration/PHConfiguration$ConnectionType;
 
     .line 44
-    .end local v1           #manager:Landroid/net/ConnectivityManager;
+    .end local v1    # "manager":Landroid/net/ConnectivityManager;
     :goto_0
     return-object v6
 
     .line 24
-    .restart local v1       #manager:Landroid/net/ConnectivityManager;
+    .restart local v1    # "manager":Landroid/net/ConnectivityManager;
     :cond_0
     const/4 v6, 0x0
 
@@ -51,7 +51,7 @@
     move-result-object v3
 
     .line 25
-    .local v3, mobileInfo:Landroid/net/NetworkInfo;
+    .local v3, "mobileInfo":Landroid/net/NetworkInfo;
     const/4 v6, 0x1
 
     invoke-virtual {v1, v6}, Landroid/net/ConnectivityManager;->getNetworkInfo(I)Landroid/net/NetworkInfo;
@@ -59,7 +59,7 @@
     move-result-object v5
 
     .line 27
-    .local v5, wifiInfo:Landroid/net/NetworkInfo;
+    .local v5, "wifiInfo":Landroid/net/NetworkInfo;
     if-eqz v3, :cond_1
 
     if-nez v5, :cond_2
@@ -77,13 +77,13 @@
     move-result-object v2
 
     .line 31
-    .local v2, mobile:Landroid/net/NetworkInfo$State;
+    .local v2, "mobile":Landroid/net/NetworkInfo$State;
     invoke-virtual {v5}, Landroid/net/NetworkInfo;->getState()Landroid/net/NetworkInfo$State;
 
     move-result-object v4
 
     .line 33
-    .local v4, wifi:Landroid/net/NetworkInfo$State;
+    .local v4, "wifi":Landroid/net/NetworkInfo$State;
     sget-object v6, Landroid/net/NetworkInfo$State;->CONNECTED:Landroid/net/NetworkInfo$State;
 
     if-eq v2, v6, :cond_3
@@ -117,29 +117,29 @@
     goto :goto_0
 
     .line 39
-    .end local v1           #manager:Landroid/net/ConnectivityManager;
-    .end local v2           #mobile:Landroid/net/NetworkInfo$State;
-    .end local v3           #mobileInfo:Landroid/net/NetworkInfo;
-    .end local v4           #wifi:Landroid/net/NetworkInfo$State;
-    .end local v5           #wifiInfo:Landroid/net/NetworkInfo;
+    .end local v1    # "manager":Landroid/net/ConnectivityManager;
+    .end local v2    # "mobile":Landroid/net/NetworkInfo$State;
+    .end local v3    # "mobileInfo":Landroid/net/NetworkInfo;
+    .end local v4    # "wifi":Landroid/net/NetworkInfo$State;
+    .end local v5    # "wifiInfo":Landroid/net/NetworkInfo;
     :catch_0
     move-exception v6
 
     move-object v0, v6
 
     .line 41
-    .local v0, e:Ljava/lang/SecurityException;
+    .local v0, "e":Ljava/lang/SecurityException;
     sget-object v6, Lv2/com/playhaven/configuration/PHConfiguration$ConnectionType;->NO_PERMISSION:Lv2/com/playhaven/configuration/PHConfiguration$ConnectionType;
 
     goto :goto_0
 
     .line 44
-    .end local v0           #e:Ljava/lang/SecurityException;
-    .restart local v1       #manager:Landroid/net/ConnectivityManager;
-    .restart local v2       #mobile:Landroid/net/NetworkInfo$State;
-    .restart local v3       #mobileInfo:Landroid/net/NetworkInfo;
-    .restart local v4       #wifi:Landroid/net/NetworkInfo$State;
-    .restart local v5       #wifiInfo:Landroid/net/NetworkInfo;
+    .end local v0    # "e":Ljava/lang/SecurityException;
+    .restart local v1    # "manager":Landroid/net/ConnectivityManager;
+    .restart local v2    # "mobile":Landroid/net/NetworkInfo$State;
+    .restart local v3    # "mobileInfo":Landroid/net/NetworkInfo;
+    .restart local v4    # "wifi":Landroid/net/NetworkInfo$State;
+    .restart local v5    # "wifiInfo":Landroid/net/NetworkInfo;
     :cond_6
     sget-object v6, Lv2/com/playhaven/configuration/PHConfiguration$ConnectionType;->NO_NETWORK:Lv2/com/playhaven/configuration/PHConfiguration$ConnectionType;
 

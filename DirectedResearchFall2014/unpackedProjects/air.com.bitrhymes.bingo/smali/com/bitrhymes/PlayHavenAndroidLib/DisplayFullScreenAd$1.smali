@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/bitrhymes/PlayHavenAndroidLib/DisplayFullScreenAd;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1
@@ -40,8 +39,8 @@
 # virtual methods
 .method public onDismissedContent(Lv2/com/playhaven/requests/content/PHContentRequest;Lv2/com/playhaven/requests/content/PHContentRequest$PHDismissType;)V
     .locals 2
-    .parameter "arg0"
-    .parameter "arg1"
+    .param p1, "arg0"    # Lv2/com/playhaven/requests/content/PHContentRequest;
+    .param p2, "arg1"    # Lv2/com/playhaven/requests/content/PHContentRequest$PHDismissType;
 
     .prologue
     .line 79
@@ -57,8 +56,8 @@
 
 .method public onDisplayedContent(Lv2/com/playhaven/requests/content/PHContentRequest;Lv2/com/playhaven/model/PHContent;)V
     .locals 2
-    .parameter "arg0"
-    .parameter "arg1"
+    .param p1, "arg0"    # Lv2/com/playhaven/requests/content/PHContentRequest;
+    .param p2, "arg1"    # Lv2/com/playhaven/model/PHContent;
 
     .prologue
     .line 72
@@ -74,8 +73,8 @@
 
 .method public onFailedToDisplayContent(Lv2/com/playhaven/requests/content/PHContentRequest;Lv2/com/playhaven/model/PHError;)V
     .locals 3
-    .parameter "arg0"
-    .parameter "arg1"
+    .param p1, "arg0"    # Lv2/com/playhaven/requests/content/PHContentRequest;
+    .param p2, "arg1"    # Lv2/com/playhaven/model/PHError;
 
     .prologue
     .line 64
@@ -88,7 +87,7 @@
     .line 65
     iget-object v0, p0, Lcom/bitrhymes/PlayHavenAndroidLib/DisplayFullScreenAd$1;->this$0:Lcom/bitrhymes/PlayHavenAndroidLib/DisplayFullScreenAd;
 
-    #getter for: Lcom/bitrhymes/PlayHavenAndroidLib/DisplayFullScreenAd;->_context:Lcom/adobe/fre/FREContext;
+    # getter for: Lcom/bitrhymes/PlayHavenAndroidLib/DisplayFullScreenAd;->_context:Lcom/adobe/fre/FREContext;
     invoke-static {v0}, Lcom/bitrhymes/PlayHavenAndroidLib/DisplayFullScreenAd;->access$0(Lcom/bitrhymes/PlayHavenAndroidLib/DisplayFullScreenAd;)Lcom/adobe/fre/FREContext;
 
     move-result-object v0
@@ -98,7 +97,7 @@
     .line 66
     iget-object v0, p0, Lcom/bitrhymes/PlayHavenAndroidLib/DisplayFullScreenAd$1;->this$0:Lcom/bitrhymes/PlayHavenAndroidLib/DisplayFullScreenAd;
 
-    #getter for: Lcom/bitrhymes/PlayHavenAndroidLib/DisplayFullScreenAd;->_context:Lcom/adobe/fre/FREContext;
+    # getter for: Lcom/bitrhymes/PlayHavenAndroidLib/DisplayFullScreenAd;->_context:Lcom/adobe/fre/FREContext;
     invoke-static {v0}, Lcom/bitrhymes/PlayHavenAndroidLib/DisplayFullScreenAd;->access$0(Lcom/bitrhymes/PlayHavenAndroidLib/DisplayFullScreenAd;)Lcom/adobe/fre/FREContext;
 
     move-result-object v0
@@ -116,7 +115,7 @@
 
 .method public onNoContent(Lv2/com/playhaven/requests/content/PHContentRequest;)V
     .locals 3
-    .parameter "arg0"
+    .param p1, "arg0"    # Lv2/com/playhaven/requests/content/PHContentRequest;
 
     .prologue
     .line 57
@@ -129,7 +128,7 @@
     .line 58
     iget-object v0, p0, Lcom/bitrhymes/PlayHavenAndroidLib/DisplayFullScreenAd$1;->this$0:Lcom/bitrhymes/PlayHavenAndroidLib/DisplayFullScreenAd;
 
-    #getter for: Lcom/bitrhymes/PlayHavenAndroidLib/DisplayFullScreenAd;->_context:Lcom/adobe/fre/FREContext;
+    # getter for: Lcom/bitrhymes/PlayHavenAndroidLib/DisplayFullScreenAd;->_context:Lcom/adobe/fre/FREContext;
     invoke-static {v0}, Lcom/bitrhymes/PlayHavenAndroidLib/DisplayFullScreenAd;->access$0(Lcom/bitrhymes/PlayHavenAndroidLib/DisplayFullScreenAd;)Lcom/adobe/fre/FREContext;
 
     move-result-object v0
@@ -139,7 +138,7 @@
     .line 59
     iget-object v0, p0, Lcom/bitrhymes/PlayHavenAndroidLib/DisplayFullScreenAd$1;->this$0:Lcom/bitrhymes/PlayHavenAndroidLib/DisplayFullScreenAd;
 
-    #getter for: Lcom/bitrhymes/PlayHavenAndroidLib/DisplayFullScreenAd;->_context:Lcom/adobe/fre/FREContext;
+    # getter for: Lcom/bitrhymes/PlayHavenAndroidLib/DisplayFullScreenAd;->_context:Lcom/adobe/fre/FREContext;
     invoke-static {v0}, Lcom/bitrhymes/PlayHavenAndroidLib/DisplayFullScreenAd;->access$0(Lcom/bitrhymes/PlayHavenAndroidLib/DisplayFullScreenAd;)Lcom/adobe/fre/FREContext;
 
     move-result-object v0
@@ -157,14 +156,14 @@
 
 .method public onReceivedContent(Lv2/com/playhaven/requests/content/PHContentRequest;Lv2/com/playhaven/model/PHContent;)V
     .locals 3
-    .parameter "arg0"
-    .parameter "arg1"
+    .param p1, "arg0"    # Lv2/com/playhaven/requests/content/PHContentRequest;
+    .param p2, "arg1"    # Lv2/com/playhaven/model/PHContent;
 
     .prologue
     .line 50
     iget-object v0, p0, Lcom/bitrhymes/PlayHavenAndroidLib/DisplayFullScreenAd$1;->this$0:Lcom/bitrhymes/PlayHavenAndroidLib/DisplayFullScreenAd;
 
-    #getter for: Lcom/bitrhymes/PlayHavenAndroidLib/DisplayFullScreenAd;->_context:Lcom/adobe/fre/FREContext;
+    # getter for: Lcom/bitrhymes/PlayHavenAndroidLib/DisplayFullScreenAd;->_context:Lcom/adobe/fre/FREContext;
     invoke-static {v0}, Lcom/bitrhymes/PlayHavenAndroidLib/DisplayFullScreenAd;->access$0(Lcom/bitrhymes/PlayHavenAndroidLib/DisplayFullScreenAd;)Lcom/adobe/fre/FREContext;
 
     move-result-object v0
@@ -174,7 +173,7 @@
     .line 51
     iget-object v0, p0, Lcom/bitrhymes/PlayHavenAndroidLib/DisplayFullScreenAd$1;->this$0:Lcom/bitrhymes/PlayHavenAndroidLib/DisplayFullScreenAd;
 
-    #getter for: Lcom/bitrhymes/PlayHavenAndroidLib/DisplayFullScreenAd;->_context:Lcom/adobe/fre/FREContext;
+    # getter for: Lcom/bitrhymes/PlayHavenAndroidLib/DisplayFullScreenAd;->_context:Lcom/adobe/fre/FREContext;
     invoke-static {v0}, Lcom/bitrhymes/PlayHavenAndroidLib/DisplayFullScreenAd;->access$0(Lcom/bitrhymes/PlayHavenAndroidLib/DisplayFullScreenAd;)Lcom/adobe/fre/FREContext;
 
     move-result-object v0
@@ -199,7 +198,7 @@
 
 .method public onSentContentRequest(Lv2/com/playhaven/requests/content/PHContentRequest;)V
     .locals 2
-    .parameter "arg0"
+    .param p1, "arg0"    # Lv2/com/playhaven/requests/content/PHContentRequest;
 
     .prologue
     .line 44
@@ -215,8 +214,8 @@
 
 .method public onWillDisplayContent(Lv2/com/playhaven/requests/content/PHContentRequest;Lv2/com/playhaven/model/PHContent;)V
     .locals 2
-    .parameter "arg0"
-    .parameter "arg1"
+    .param p1, "arg0"    # Lv2/com/playhaven/requests/content/PHContentRequest;
+    .param p2, "arg1"    # Lv2/com/playhaven/model/PHContent;
 
     .prologue
     .line 38

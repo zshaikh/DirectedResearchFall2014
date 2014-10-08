@@ -24,8 +24,8 @@
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 5
-    .parameter "ctx"
-    .parameter "intent"
+    .param p1, "ctx"    # Landroid/content/Context;
+    .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
     const-string v4, "referrer"
@@ -38,7 +38,7 @@
     move-result-object v0
 
     .line 42
-    .local v0, campaign:Ljava/lang/String;
+    .local v0, "campaign":Ljava/lang/String;
     const-string v2, "com.android.vending.INSTALL_REFERRER"
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -67,7 +67,7 @@
     invoke-direct {v1, p1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
     .line 47
-    .local v1, serviceIntent:Landroid/content/Intent;
+    .local v1, "serviceIntent":Landroid/content/Intent;
     const-string v2, "referrer"
 
     invoke-virtual {v1, v4, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;

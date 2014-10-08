@@ -86,9 +86,7 @@
 
 .method private constructor <init>(Ljava/lang/String;II)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter "android_state"
+    .param p3, "android_state"    # I
 
     .prologue
     .line 24
@@ -103,7 +101,6 @@
 
 .method public static valueOf(Ljava/lang/String;)Lcom/playhaven/src/publishersdk/content/PHContentView$ButtonState;
     .locals 1
-    .parameter
 
     .prologue
     .line 1

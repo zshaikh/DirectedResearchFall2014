@@ -21,7 +21,6 @@
 # direct methods
 .method constructor <init>(Lcom/inmobi/androidsdk/IMBrowserActivity;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1
@@ -37,8 +36,6 @@
 # virtual methods
 .method public onPageFinished(Landroid/webkit/WebView;Ljava/lang/String;)V
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     .line 288
@@ -118,9 +115,6 @@
 
 .method public onPageStarted(Landroid/webkit/WebView;Ljava/lang/String;Landroid/graphics/Bitmap;)V
     .locals 2
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 275

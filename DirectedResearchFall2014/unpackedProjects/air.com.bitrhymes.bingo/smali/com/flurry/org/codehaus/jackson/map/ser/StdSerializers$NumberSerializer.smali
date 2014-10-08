@@ -61,8 +61,8 @@
 # virtual methods
 .method public getSchema(Lcom/flurry/org/codehaus/jackson/map/SerializerProvider;Ljava/lang/reflect/Type;)Lcom/flurry/org/codehaus/jackson/JsonNode;
     .locals 2
-    .parameter "provider"
-    .parameter "typeHint"
+    .param p1, "provider"    # Lcom/flurry/org/codehaus/jackson/map/SerializerProvider;
+    .param p2, "typeHint"    # Ljava/lang/reflect/Type;
 
     .prologue
     .line 275
@@ -79,9 +79,9 @@
 
 .method public serialize(Ljava/lang/Number;Lcom/flurry/org/codehaus/jackson/JsonGenerator;Lcom/flurry/org/codehaus/jackson/map/SerializerProvider;)V
     .locals 2
-    .parameter "value"
-    .parameter "jgen"
-    .parameter "provider"
+    .param p1, "value"    # Ljava/lang/Number;
+    .param p2, "jgen"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator;
+    .param p3, "provider"    # Lcom/flurry/org/codehaus/jackson/map/SerializerProvider;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -98,7 +98,7 @@
     .line 249
     check-cast p1, Ljava/math/BigDecimal;
 
-    .end local p1
+    .end local p1    # "value":Ljava/lang/Number;
     invoke-virtual {p2, p1}, Lcom/flurry/org/codehaus/jackson/JsonGenerator;->writeNumber(Ljava/math/BigDecimal;)V
 
     .line 270
@@ -106,7 +106,7 @@
     return-void
 
     .line 250
-    .restart local p1
+    .restart local p1    # "value":Ljava/lang/Number;
     :cond_0
     instance-of v0, p1, Ljava/math/BigInteger;
 
@@ -115,13 +115,13 @@
     .line 251
     check-cast p1, Ljava/math/BigInteger;
 
-    .end local p1
+    .end local p1    # "value":Ljava/lang/Number;
     invoke-virtual {p2, p1}, Lcom/flurry/org/codehaus/jackson/JsonGenerator;->writeNumber(Ljava/math/BigInteger;)V
 
     goto :goto_0
 
     .line 256
-    .restart local p1
+    .restart local p1    # "value":Ljava/lang/Number;
     :cond_1
     instance-of v0, p1, Ljava/lang/Integer;
 
@@ -214,9 +214,9 @@
 
 .method public bridge synthetic serialize(Ljava/lang/Object;Lcom/flurry/org/codehaus/jackson/JsonGenerator;Lcom/flurry/org/codehaus/jackson/map/SerializerProvider;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
-    .parameter "x2"
+    .param p1, "x0"    # Ljava/lang/Object;
+    .param p2, "x1"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator;
+    .param p3, "x2"    # Lcom/flurry/org/codehaus/jackson/map/SerializerProvider;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -228,7 +228,7 @@
     .line 235
     check-cast p1, Ljava/lang/Number;
 
-    .end local p1
+    .end local p1    # "x0":Ljava/lang/Object;
     invoke-virtual {p0, p1, p2, p3}, Lcom/flurry/org/codehaus/jackson/map/ser/StdSerializers$NumberSerializer;->serialize(Ljava/lang/Number;Lcom/flurry/org/codehaus/jackson/JsonGenerator;Lcom/flurry/org/codehaus/jackson/map/SerializerProvider;)V
 
     return-void

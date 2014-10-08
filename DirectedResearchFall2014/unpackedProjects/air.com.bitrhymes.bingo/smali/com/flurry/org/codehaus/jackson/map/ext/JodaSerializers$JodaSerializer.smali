@@ -54,7 +54,6 @@
 
 .method protected constructor <init>(Ljava/lang/Class;)V
     .locals 0
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -65,8 +64,8 @@
 
     .prologue
     .line 57
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/ext/JodaSerializers$JodaSerializer;,"Lcom/flurry/org/codehaus/jackson/map/ext/JodaSerializers$JodaSerializer<TT;>;"
-    .local p1, cls:Ljava/lang/Class;,"Ljava/lang/Class<TT;>;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/ext/JodaSerializers$JodaSerializer;, "Lcom/flurry/org/codehaus/jackson/map/ext/JodaSerializers$JodaSerializer<TT;>;"
+    .local p1, "cls":Ljava/lang/Class;, "Ljava/lang/Class<TT;>;"
     invoke-direct {p0, p1}, Lcom/flurry/org/codehaus/jackson/map/ser/std/SerializerBase;-><init>(Ljava/lang/Class;)V
 
     return-void
@@ -76,7 +75,7 @@
 # virtual methods
 .method protected printLocalDate(Lorg/joda/time/ReadableInstant;)Ljava/lang/String;
     .locals 1
-    .parameter "dateValue"
+    .param p1, "dateValue"    # Lorg/joda/time/ReadableInstant;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -86,7 +85,7 @@
 
     .prologue
     .line 74
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/ext/JodaSerializers$JodaSerializer;,"Lcom/flurry/org/codehaus/jackson/map/ext/JodaSerializers$JodaSerializer<TT;>;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/ext/JodaSerializers$JodaSerializer;, "Lcom/flurry/org/codehaus/jackson/map/ext/JodaSerializers$JodaSerializer<TT;>;"
     sget-object v0, Lcom/flurry/org/codehaus/jackson/map/ext/JodaSerializers$JodaSerializer;->_localDateFormat:Lorg/joda/time/format/DateTimeFormatter;
 
     invoke-virtual {v0, p1}, Lorg/joda/time/format/DateTimeFormatter;->print(Lorg/joda/time/ReadableInstant;)Ljava/lang/String;
@@ -98,7 +97,7 @@
 
 .method protected printLocalDate(Lorg/joda/time/ReadablePartial;)Ljava/lang/String;
     .locals 1
-    .parameter "dateValue"
+    .param p1, "dateValue"    # Lorg/joda/time/ReadablePartial;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -108,7 +107,7 @@
 
     .prologue
     .line 68
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/ext/JodaSerializers$JodaSerializer;,"Lcom/flurry/org/codehaus/jackson/map/ext/JodaSerializers$JodaSerializer<TT;>;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/ext/JodaSerializers$JodaSerializer;, "Lcom/flurry/org/codehaus/jackson/map/ext/JodaSerializers$JodaSerializer<TT;>;"
     sget-object v0, Lcom/flurry/org/codehaus/jackson/map/ext/JodaSerializers$JodaSerializer;->_localDateFormat:Lorg/joda/time/format/DateTimeFormatter;
 
     invoke-virtual {v0, p1}, Lorg/joda/time/format/DateTimeFormatter;->print(Lorg/joda/time/ReadablePartial;)Ljava/lang/String;
@@ -120,7 +119,7 @@
 
 .method protected printLocalDateTime(Lorg/joda/time/ReadablePartial;)Ljava/lang/String;
     .locals 1
-    .parameter "dateValue"
+    .param p1, "dateValue"    # Lorg/joda/time/ReadablePartial;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -130,7 +129,7 @@
 
     .prologue
     .line 62
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/ext/JodaSerializers$JodaSerializer;,"Lcom/flurry/org/codehaus/jackson/map/ext/JodaSerializers$JodaSerializer<TT;>;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/ext/JodaSerializers$JodaSerializer;, "Lcom/flurry/org/codehaus/jackson/map/ext/JodaSerializers$JodaSerializer<TT;>;"
     sget-object v0, Lcom/flurry/org/codehaus/jackson/map/ext/JodaSerializers$JodaSerializer;->_localDateTimeFormat:Lorg/joda/time/format/DateTimeFormatter;
 
     invoke-virtual {v0, p1}, Lorg/joda/time/format/DateTimeFormatter;->print(Lorg/joda/time/ReadablePartial;)Ljava/lang/String;

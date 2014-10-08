@@ -28,9 +28,6 @@
 # direct methods
 .method constructor <init>(Lcom/google/ads/e;Landroid/view/View;Lcom/google/ads/f;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 250

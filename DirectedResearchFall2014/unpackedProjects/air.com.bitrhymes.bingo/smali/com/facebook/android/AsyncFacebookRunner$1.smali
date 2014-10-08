@@ -27,10 +27,6 @@
 # direct methods
 .method constructor <init>(Lcom/facebook/android/AsyncFacebookRunner;Landroid/content/Context;Lcom/facebook/android/AsyncFacebookRunner$RequestListener;Ljava/lang/Object;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 1
@@ -67,7 +63,7 @@
     move-result-object v1
 
     .line 90
-    .local v1, response:Ljava/lang/String;
+    .local v1, "response":Ljava/lang/String;
     invoke-virtual {v1}, Ljava/lang/String;->length()I
 
     move-result v2
@@ -99,12 +95,12 @@
     invoke-interface {v2, v3, v4}, Lcom/facebook/android/AsyncFacebookRunner$RequestListener;->onFacebookError(Lcom/facebook/android/FacebookError;Ljava/lang/Object;)V
 
     .line 103
-    .end local v1           #response:Ljava/lang/String;
+    .end local v1    # "response":Ljava/lang/String;
     :goto_0
     return-void
 
     .line 95
-    .restart local v1       #response:Ljava/lang/String;
+    .restart local v1    # "response":Ljava/lang/String;
     :cond_1
     iget-object v2, p0, Lcom/facebook/android/AsyncFacebookRunner$1;->val$listener:Lcom/facebook/android/AsyncFacebookRunner$RequestListener;
 
@@ -119,14 +115,14 @@
     goto :goto_0
 
     .line 96
-    .end local v1           #response:Ljava/lang/String;
+    .end local v1    # "response":Ljava/lang/String;
     :catch_0
     move-exception v2
 
     move-object v0, v2
 
     .line 97
-    .local v0, e:Ljava/io/FileNotFoundException;
+    .local v0, "e":Ljava/io/FileNotFoundException;
     iget-object v2, p0, Lcom/facebook/android/AsyncFacebookRunner$1;->val$listener:Lcom/facebook/android/AsyncFacebookRunner$RequestListener;
 
     iget-object v3, p0, Lcom/facebook/android/AsyncFacebookRunner$1;->val$state:Ljava/lang/Object;
@@ -136,14 +132,14 @@
     goto :goto_0
 
     .line 98
-    .end local v0           #e:Ljava/io/FileNotFoundException;
+    .end local v0    # "e":Ljava/io/FileNotFoundException;
     :catch_1
     move-exception v2
 
     move-object v0, v2
 
     .line 99
-    .local v0, e:Ljava/net/MalformedURLException;
+    .local v0, "e":Ljava/net/MalformedURLException;
     iget-object v2, p0, Lcom/facebook/android/AsyncFacebookRunner$1;->val$listener:Lcom/facebook/android/AsyncFacebookRunner$RequestListener;
 
     iget-object v3, p0, Lcom/facebook/android/AsyncFacebookRunner$1;->val$state:Ljava/lang/Object;
@@ -153,14 +149,14 @@
     goto :goto_0
 
     .line 100
-    .end local v0           #e:Ljava/net/MalformedURLException;
+    .end local v0    # "e":Ljava/net/MalformedURLException;
     :catch_2
     move-exception v2
 
     move-object v0, v2
 
     .line 101
-    .local v0, e:Ljava/io/IOException;
+    .local v0, "e":Ljava/io/IOException;
     iget-object v2, p0, Lcom/facebook/android/AsyncFacebookRunner$1;->val$listener:Lcom/facebook/android/AsyncFacebookRunner$RequestListener;
 
     iget-object v3, p0, Lcom/facebook/android/AsyncFacebookRunner$1;->val$state:Ljava/lang/Object;

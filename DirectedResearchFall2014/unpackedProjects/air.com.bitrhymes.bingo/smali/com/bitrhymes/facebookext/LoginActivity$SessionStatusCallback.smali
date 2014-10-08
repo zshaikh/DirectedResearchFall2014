@@ -24,7 +24,6 @@
 # direct methods
 .method private constructor <init>(Lcom/bitrhymes/facebookext/LoginActivity;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 233
@@ -37,8 +36,6 @@
 
 .method synthetic constructor <init>(Lcom/bitrhymes/facebookext/LoginActivity;Lcom/bitrhymes/facebookext/LoginActivity$SessionStatusCallback;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 233
@@ -51,9 +48,9 @@
 # virtual methods
 .method public call(Lcom/facebook/Session;Lcom/facebook/SessionState;Ljava/lang/Exception;)V
     .locals 9
-    .parameter "session"
-    .parameter "state"
-    .parameter "exception"
+    .param p1, "session"    # Lcom/facebook/Session;
+    .param p2, "state"    # Lcom/facebook/SessionState;
+    .param p3, "exception"    # Ljava/lang/Exception;
 
     .prologue
     const/4 v5, 0x0
@@ -167,13 +164,13 @@
     move-result-object v0
 
     .line 246
-    .local v0, isCancel:Ljava/lang/Boolean;
+    .local v0, "isCancel":Ljava/lang/Boolean;
     sput-object p1, Lcom/bitrhymes/facebookext/FacebookExtContext;->session:Lcom/facebook/Session;
 
     .line 247
     iget-object v2, p0, Lcom/bitrhymes/facebookext/LoginActivity$SessionStatusCallback;->this$0:Lcom/bitrhymes/facebookext/LoginActivity;
 
-    #getter for: Lcom/bitrhymes/facebookext/LoginActivity;->reauthorize:Z
+    # getter for: Lcom/bitrhymes/facebookext/LoginActivity;->reauthorize:Z
     invoke-static {v2}, Lcom/bitrhymes/facebookext/LoginActivity;->access$0(Lcom/bitrhymes/facebookext/LoginActivity;)Z
 
     move-result v2
@@ -189,7 +186,7 @@
 
     iget-object v3, p0, Lcom/bitrhymes/facebookext/LoginActivity$SessionStatusCallback;->this$0:Lcom/bitrhymes/facebookext/LoginActivity;
 
-    #getter for: Lcom/bitrhymes/facebookext/LoginActivity;->reauthorize:Z
+    # getter for: Lcom/bitrhymes/facebookext/LoginActivity;->reauthorize:Z
     invoke-static {v3}, Lcom/bitrhymes/facebookext/LoginActivity;->access$0(Lcom/bitrhymes/facebookext/LoginActivity;)Z
 
     move-result v3
@@ -303,7 +300,7 @@
     move-object v1, v2
 
     .line 262
-    .local v1, msg:Ljava/lang/String;
+    .local v1, "msg":Ljava/lang/String;
     :goto_2
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -348,7 +345,7 @@
     goto :goto_0
 
     .line 261
-    .end local v1           #msg:Ljava/lang/String;
+    .end local v1    # "msg":Ljava/lang/String;
     :cond_2
     const-string v2, "null exception"
 
@@ -367,7 +364,7 @@
     move-object v1, v2
 
     .line 270
-    .restart local v1       #msg:Ljava/lang/String;
+    .restart local v1    # "msg":Ljava/lang/String;
     :goto_3
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -412,7 +409,7 @@
     goto :goto_0
 
     .line 269
-    .end local v1           #msg:Ljava/lang/String;
+    .end local v1    # "msg":Ljava/lang/String;
     :cond_4
     const-string v2, "null exception"
 
@@ -549,7 +546,7 @@
     move-object v1, v2
 
     .line 292
-    .restart local v1       #msg:Ljava/lang/String;
+    .restart local v1    # "msg":Ljava/lang/String;
     :goto_4
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -603,7 +600,7 @@
     goto/16 :goto_1
 
     .line 291
-    .end local v1           #msg:Ljava/lang/String;
+    .end local v1    # "msg":Ljava/lang/String;
     :cond_7
     const-string v2, "null exception"
 
@@ -622,7 +619,7 @@
     move-object v1, v2
 
     .line 300
-    .restart local v1       #msg:Ljava/lang/String;
+    .restart local v1    # "msg":Ljava/lang/String;
     :goto_6
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -670,7 +667,7 @@
     goto :goto_5
 
     .line 299
-    .end local v1           #msg:Ljava/lang/String;
+    .end local v1    # "msg":Ljava/lang/String;
     :cond_9
     const-string v2, "null exception"
 

@@ -6,7 +6,6 @@
 # direct methods
 .method public static a([B)[B
     .locals 2
-    .parameter
 
     .prologue
     const/4 v1, 0x0
@@ -54,7 +53,6 @@
 
 .method public static b([B)Ljava/lang/String;
     .locals 5
-    .parameter
 
     .prologue
     const/4 v4, 0x1

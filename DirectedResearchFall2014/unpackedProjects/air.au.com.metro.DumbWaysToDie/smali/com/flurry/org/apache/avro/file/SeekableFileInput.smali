@@ -9,7 +9,7 @@
 # direct methods
 .method public constructor <init>(Ljava/io/File;)V
     .locals 0
-    .parameter "file"
+    .param p1, "file"    # Ljava/io/File;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -25,7 +25,7 @@
 
 .method public constructor <init>(Ljava/io/FileDescriptor;)V
     .locals 0
-    .parameter "fd"
+    .param p1, "fd"    # Ljava/io/FileDescriptor;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -64,7 +64,7 @@
 
 .method public seek(J)V
     .locals 1
-    .parameter "p"
+    .param p1, "p"    # J
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;

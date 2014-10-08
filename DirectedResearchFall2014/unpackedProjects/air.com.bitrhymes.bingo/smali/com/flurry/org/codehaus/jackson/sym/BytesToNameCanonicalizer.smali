@@ -56,8 +56,8 @@
 # direct methods
 .method private constructor <init>(IZ)V
     .locals 2
-    .parameter "hashSize"
-    .parameter "intern"
+    .param p1, "hashSize"    # I
+    .param p2, "intern"    # Z
 
     .prologue
     .line 200
@@ -101,7 +101,7 @@
     const/16 v0, 0x10
 
     .line 214
-    .local v0, curr:I
+    .local v0, "curr":I
     :goto_1
     if-ge v0, p1, :cond_2
 
@@ -119,8 +119,8 @@
 
 .method private constructor <init>(Lcom/flurry/org/codehaus/jackson/sym/BytesToNameCanonicalizer;Z)V
     .locals 2
-    .parameter "parent"
-    .parameter "intern"
+    .param p1, "parent"    # Lcom/flurry/org/codehaus/jackson/sym/BytesToNameCanonicalizer;
+    .param p2, "intern"    # Z
 
     .prologue
     const/4 v1, 0x1
@@ -189,8 +189,8 @@
 
 .method private _addSymbol(ILcom/flurry/org/codehaus/jackson/sym/Name;)V
     .locals 9
-    .parameter "hash"
-    .parameter "symbol"
+    .param p1, "hash"    # I
+    .param p2, "symbol"    # Lcom/flurry/org/codehaus/jackson/sym/Name;
 
     .prologue
     const/4 v8, 0x1
@@ -226,7 +226,7 @@
     and-int v4, p1, v5
 
     .line 637
-    .local v4, ix:I
+    .local v4, "ix":I
     iget-object v5, p0, Lcom/flurry/org/codehaus/jackson/sym/BytesToNameCanonicalizer;->_mainNames:[Lcom/flurry/org/codehaus/jackson/sym/Name;
 
     aget-object v5, v5, v4
@@ -261,7 +261,7 @@
     array-length v3, v5
 
     .line 680
-    .local v3, hashSize:I
+    .local v3, "hashSize":I
     iget v5, p0, Lcom/flurry/org/codehaus/jackson/sym/BytesToNameCanonicalizer;->_count:I
 
     shr-int/lit8 v6, v3, 0x1
@@ -272,7 +272,7 @@
     shr-int/lit8 v2, v3, 0x2
 
     .line 685
-    .local v2, hashQuarter:I
+    .local v2, "hashQuarter":I
     iget v5, p0, Lcom/flurry/org/codehaus/jackson/sym/BytesToNameCanonicalizer;->_count:I
 
     sub-int v6, v3, v2
@@ -283,13 +283,13 @@
     iput-boolean v8, p0, Lcom/flurry/org/codehaus/jackson/sym/BytesToNameCanonicalizer;->_needRehash:Z
 
     .line 692
-    .end local v2           #hashQuarter:I
+    .end local v2    # "hashQuarter":I
     :cond_3
     :goto_1
     return-void
 
     .line 647
-    .end local v3           #hashSize:I
+    .end local v3    # "hashSize":I
     :cond_4
     iget-boolean v5, p0, Lcom/flurry/org/codehaus/jackson/sym/BytesToNameCanonicalizer;->_collListShared:Z
 
@@ -312,11 +312,11 @@
     aget v1, v5, v4
 
     .line 653
-    .local v1, entryValue:I
+    .local v1, "entryValue":I
     and-int/lit16 v0, v1, 0xff
 
     .line 654
-    .local v0, bucket:I
+    .local v0, "bucket":I
     if-nez v0, :cond_8
 
     .line 655
@@ -390,10 +390,10 @@
     goto :goto_3
 
     .line 687
-    .end local v0           #bucket:I
-    .end local v1           #entryValue:I
-    .restart local v2       #hashQuarter:I
-    .restart local v3       #hashSize:I
+    .end local v0    # "bucket":I
+    .end local v1    # "entryValue":I
+    .restart local v2    # "hashQuarter":I
+    .restart local v3    # "hashSize":I
     :cond_9
     iget v5, p0, Lcom/flurry/org/codehaus/jackson/sym/BytesToNameCanonicalizer;->_collCount:I
 
@@ -407,14 +407,14 @@
 
 .method public static final calcHash(I)I
     .locals 2
-    .parameter "firstQuad"
+    .param p0, "firstQuad"    # I
 
     .prologue
     .line 512
     move v0, p0
 
     .line 513
-    .local v0, hash:I
+    .local v0, "hash":I
     ushr-int/lit8 v1, v0, 0x10
 
     xor-int/2addr v0, v1
@@ -430,8 +430,8 @@
 
 .method public static final calcHash(II)I
     .locals 2
-    .parameter "firstQuad"
-    .parameter "secondQuad"
+    .param p0, "firstQuad"    # I
+    .param p1, "secondQuad"    # I
 
     .prologue
     .line 520
@@ -440,7 +440,7 @@
     add-int v0, v1, p1
 
     .line 525
-    .local v0, hash:I
+    .local v0, "hash":I
     ushr-int/lit8 v1, v0, 0x10
 
     xor-int/2addr v0, v1
@@ -456,8 +456,8 @@
 
 .method public static final calcHash([II)I
     .locals 4
-    .parameter "quads"
-    .parameter "qlen"
+    .param p0, "quads"    # [I
+    .param p1, "qlen"    # I
 
     .prologue
     .line 533
@@ -466,10 +466,10 @@
     aget v0, p0, v2
 
     .line 534
-    .local v0, hash:I
+    .local v0, "hash":I
     const/4 v1, 0x1
 
-    .local v1, i:I
+    .local v1, "i":I
     :goto_0
     if-ge v1, p1, :cond_0
 
@@ -502,10 +502,10 @@
 
 .method private static constructName(ILjava/lang/String;II)Lcom/flurry/org/codehaus/jackson/sym/Name;
     .locals 1
-    .parameter "hash"
-    .parameter "name"
-    .parameter "q1"
-    .parameter "q2"
+    .param p0, "hash"    # I
+    .param p1, "name"    # Ljava/lang/String;
+    .param p2, "q1"    # I
+    .param p3, "q2"    # I
 
     .prologue
     .line 880
@@ -530,10 +530,10 @@
 
 .method private static constructName(ILjava/lang/String;[II)Lcom/flurry/org/codehaus/jackson/sym/Name;
     .locals 8
-    .parameter "hash"
-    .parameter "name"
-    .parameter "quads"
-    .parameter "qlen"
+    .param p0, "hash"    # I
+    .param p1, "name"    # Ljava/lang/String;
+    .param p2, "quads"    # [I
+    .param p3, "qlen"    # I
 
     .prologue
     const/4 v2, 0x1
@@ -553,10 +553,10 @@
     new-array v6, p3, [I
 
     .line 901
-    .local v6, buf:[I
+    .local v6, "buf":[I
     const/4 v7, 0x0
 
-    .local v7, i:I
+    .local v7, "i":I
     :goto_0
     if-ge v7, p3, :cond_1
 
@@ -571,8 +571,8 @@
     goto :goto_0
 
     .line 891
-    .end local v6           #buf:[I
-    .end local v7           #i:I
+    .end local v6    # "buf":[I
+    .end local v7    # "i":I
     :pswitch_0
     new-instance v0, Lcom/flurry/org/codehaus/jackson/sym/Name1;
 
@@ -617,8 +617,8 @@
     goto :goto_1
 
     .line 904
-    .restart local v6       #buf:[I
-    .restart local v7       #i:I
+    .restart local v6    # "buf":[I
+    .restart local v7    # "i":I
     :cond_1
     new-instance v0, Lcom/flurry/org/codehaus/jackson/sym/NameN;
 
@@ -663,11 +663,11 @@
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/sym/BytesToNameCanonicalizer;->_collList:[Lcom/flurry/org/codehaus/jackson/sym/BytesToNameCanonicalizer$Bucket;
 
     .line 866
-    .local v1, old:[Lcom/flurry/org/codehaus/jackson/sym/BytesToNameCanonicalizer$Bucket;
+    .local v1, "old":[Lcom/flurry/org/codehaus/jackson/sym/BytesToNameCanonicalizer$Bucket;
     array-length v0, v1
 
     .line 867
-    .local v0, len:I
+    .local v0, "len":I
     add-int v2, v0, v0
 
     new-array v2, v2, [Lcom/flurry/org/codehaus/jackson/sym/BytesToNameCanonicalizer$Bucket;
@@ -691,21 +691,21 @@
     iget-object v2, p0, Lcom/flurry/org/codehaus/jackson/sym/BytesToNameCanonicalizer;->_collList:[Lcom/flurry/org/codehaus/jackson/sym/BytesToNameCanonicalizer$Bucket;
 
     .line 809
-    .local v2, buckets:[Lcom/flurry/org/codehaus/jackson/sym/BytesToNameCanonicalizer$Bucket;
+    .local v2, "buckets":[Lcom/flurry/org/codehaus/jackson/sym/BytesToNameCanonicalizer$Bucket;
     const v0, 0x7fffffff
 
     .line 810
-    .local v0, bestCount:I
+    .local v0, "bestCount":I
     const/4 v1, -0x1
 
     .line 812
-    .local v1, bestIx:I
+    .local v1, "bestIx":I
     const/4 v4, 0x0
 
-    .local v4, i:I
+    .local v4, "i":I
     iget v5, p0, Lcom/flurry/org/codehaus/jackson/sym/BytesToNameCanonicalizer;->_collEnd:I
 
-    .local v5, len:I
+    .local v5, "len":I
     :goto_0
     if-ge v4, v5, :cond_2
 
@@ -717,7 +717,7 @@
     move-result v3
 
     .line 814
-    .local v3, count:I
+    .local v3, "count":I
     if-ge v3, v0, :cond_1
 
     .line 815
@@ -728,12 +728,12 @@
     move v6, v4
 
     .line 822
-    .end local v3           #count:I
+    .end local v3    # "count":I
     :goto_1
     return v6
 
     .line 818
-    .restart local v3       #count:I
+    .restart local v3    # "count":I
     :cond_0
     move v0, v3
 
@@ -746,7 +746,7 @@
 
     goto :goto_0
 
-    .end local v3           #count:I
+    .end local v3    # "count":I
     :cond_2
     move v6, v1
 
@@ -768,7 +768,7 @@
 
 .method private initTables(I)V
     .locals 3
-    .parameter "hashSize"
+    .param p1, "hashSize"    # I
 
     .prologue
     const/4 v2, 0x1
@@ -838,7 +838,7 @@
 
 .method private declared-synchronized mergeChild(Lcom/flurry/org/codehaus/jackson/sym/BytesToNameCanonicalizer;)V
     .locals 3
-    .parameter "child"
+    .param p1, "child"    # Lcom/flurry/org/codehaus/jackson/sym/BytesToNameCanonicalizer;
 
     .prologue
     .line 265
@@ -848,7 +848,7 @@
     iget v0, p1, Lcom/flurry/org/codehaus/jackson/sym/BytesToNameCanonicalizer;->_count:I
 
     .line 266
-    .local v0, childCount:I
+    .local v0, "childCount":I
     iget v1, p0, Lcom/flurry/org/codehaus/jackson/sym/BytesToNameCanonicalizer;->_count:I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -882,7 +882,7 @@
     goto :goto_0
 
     .line 265
-    .end local v0           #childCount:I
+    .end local v0    # "childCount":I
     :catchall_0
     move-exception v1
 
@@ -891,7 +891,7 @@
     throw v1
 
     .line 284
-    .restart local v0       #childCount:I
+    .restart local v0    # "childCount":I
     :cond_1
     :try_start_2
     iget v1, p1, Lcom/flurry/org/codehaus/jackson/sym/BytesToNameCanonicalizer;->_count:I
@@ -1009,16 +1009,16 @@
     move-object v12, v0
 
     .line 705
-    .local v12, oldMainHash:[I
+    .local v12, "oldMainHash":[I
     array-length v8, v12
 
     .line 706
-    .local v8, len:I
+    .local v8, "len":I
     add-int v9, v8, v8
 
     .line 711
-    .local v9, newLen:I
-    const/high16 v17, 0x1
+    .local v9, "newLen":I
+    const/high16 v17, 0x10000
 
     move v0, v9
 
@@ -1066,7 +1066,7 @@
     move-object v13, v0
 
     .line 719
-    .local v13, oldNames:[Lcom/flurry/org/codehaus/jackson/sym/Name;
+    .local v13, "oldNames":[Lcom/flurry/org/codehaus/jackson/sym/Name;
     move v0, v9
 
     new-array v0, v0, [Lcom/flurry/org/codehaus/jackson/sym/Name;
@@ -1083,10 +1083,10 @@
     const/4 v15, 0x0
 
     .line 721
-    .local v15, symbolsSeen:I
+    .local v15, "symbolsSeen":I
     const/4 v6, 0x0
 
-    .local v6, i:I
+    .local v6, "i":I
     :goto_0
     if-ge v6, v8, :cond_3
 
@@ -1094,7 +1094,7 @@
     aget-object v14, v13, v6
 
     .line 723
-    .local v14, symbol:Lcom/flurry/org/codehaus/jackson/sym/Name;
+    .local v14, "symbol":Lcom/flurry/org/codehaus/jackson/sym/Name;
     if-eqz v14, :cond_2
 
     .line 724
@@ -1106,7 +1106,7 @@
     move-result v5
 
     .line 726
-    .local v5, hash:I
+    .local v5, "hash":I
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/flurry/org/codehaus/jackson/sym/BytesToNameCanonicalizer;->_mainHashMask:I
@@ -1116,7 +1116,7 @@
     and-int v7, v5, v17
 
     .line 727
-    .local v7, ix:I
+    .local v7, "ix":I
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/flurry/org/codehaus/jackson/sym/BytesToNameCanonicalizer;->_mainNames:[Lcom/flurry/org/codehaus/jackson/sym/Name;
@@ -1137,15 +1137,15 @@
     aput v18, v17, v7
 
     .line 721
-    .end local v5           #hash:I
-    .end local v7           #ix:I
+    .end local v5    # "hash":I
+    .end local v7    # "ix":I
     :cond_2
     add-int/lit8 v6, v6, 0x1
 
     goto :goto_0
 
     .line 736
-    .end local v14           #symbol:Lcom/flurry/org/codehaus/jackson/sym/Name;
+    .end local v14    # "symbol":Lcom/flurry/org/codehaus/jackson/sym/Name;
     :cond_3
     move-object/from16 v0, p0
 
@@ -1154,7 +1154,7 @@
     move v11, v0
 
     .line 737
-    .local v11, oldEnd:I
+    .local v11, "oldEnd":I
     if-eqz v11, :cond_0
 
     .line 741
@@ -1192,7 +1192,7 @@
     move-object v10, v0
 
     .line 746
-    .local v10, oldBuckets:[Lcom/flurry/org/codehaus/jackson/sym/BytesToNameCanonicalizer$Bucket;
+    .local v10, "oldBuckets":[Lcom/flurry/org/codehaus/jackson/sym/BytesToNameCanonicalizer$Bucket;
     move-object v0, v10
 
     array-length v0, v0
@@ -1220,7 +1220,7 @@
     .line 748
     aget-object v4, v10, v6
 
-    .local v4, curr:Lcom/flurry/org/codehaus/jackson/sym/BytesToNameCanonicalizer$Bucket;
+    .local v4, "curr":Lcom/flurry/org/codehaus/jackson/sym/BytesToNameCanonicalizer$Bucket;
     :goto_2
     if-eqz v4, :cond_8
 
@@ -1231,13 +1231,13 @@
     iget-object v14, v4, Lcom/flurry/org/codehaus/jackson/sym/BytesToNameCanonicalizer$Bucket;->_name:Lcom/flurry/org/codehaus/jackson/sym/Name;
 
     .line 751
-    .restart local v14       #symbol:Lcom/flurry/org/codehaus/jackson/sym/Name;
+    .restart local v14    # "symbol":Lcom/flurry/org/codehaus/jackson/sym/Name;
     invoke-virtual {v14}, Lcom/flurry/org/codehaus/jackson/sym/Name;->hashCode()I
 
     move-result v5
 
     .line 752
-    .restart local v5       #hash:I
+    .restart local v5    # "hash":I
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/flurry/org/codehaus/jackson/sym/BytesToNameCanonicalizer;->_mainHashMask:I
@@ -1247,7 +1247,7 @@
     and-int v7, v5, v17
 
     .line 753
-    .restart local v7       #ix:I
+    .restart local v7    # "ix":I
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/flurry/org/codehaus/jackson/sym/BytesToNameCanonicalizer;->_mainHash:[I
@@ -1257,7 +1257,7 @@
     aget v16, v17, v7
 
     .line 754
-    .local v16, val:I
+    .local v16, "val":I
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/flurry/org/codehaus/jackson/sym/BytesToNameCanonicalizer;->_mainNames:[Lcom/flurry/org/codehaus/jackson/sym/Name;
@@ -1318,7 +1318,7 @@
     move v3, v0
 
     .line 760
-    .local v3, bucket:I
+    .local v3, "bucket":I
     if-nez v3, :cond_7
 
     .line 761
@@ -1446,18 +1446,18 @@
     goto :goto_5
 
     .line 747
-    .end local v3           #bucket:I
-    .end local v5           #hash:I
-    .end local v7           #ix:I
-    .end local v14           #symbol:Lcom/flurry/org/codehaus/jackson/sym/Name;
-    .end local v16           #val:I
+    .end local v3    # "bucket":I
+    .end local v5    # "hash":I
+    .end local v7    # "ix":I
+    .end local v14    # "symbol":Lcom/flurry/org/codehaus/jackson/sym/Name;
+    .end local v16    # "val":I
     :cond_8
     add-int/lit8 v6, v6, 0x1
 
     goto/16 :goto_1
 
     .line 782
-    .end local v4           #curr:Lcom/flurry/org/codehaus/jackson/sym/BytesToNameCanonicalizer$Bucket;
+    .end local v4    # "curr":Lcom/flurry/org/codehaus/jackson/sym/BytesToNameCanonicalizer$Bucket;
     :cond_9
     move-object/from16 v0, p0
 
@@ -1527,7 +1527,7 @@
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/sym/BytesToNameCanonicalizer;->_collList:[Lcom/flurry/org/codehaus/jackson/sym/BytesToNameCanonicalizer$Bucket;
 
     .line 844
-    .local v1, old:[Lcom/flurry/org/codehaus/jackson/sym/BytesToNameCanonicalizer$Bucket;
+    .local v1, "old":[Lcom/flurry/org/codehaus/jackson/sym/BytesToNameCanonicalizer$Bucket;
     if-nez v1, :cond_0
 
     .line 845
@@ -1549,7 +1549,7 @@
     array-length v0, v1
 
     .line 848
-    .local v0, len:I
+    .local v0, "len":I
     new-array v2, v0, [Lcom/flurry/org/codehaus/jackson/sym/BytesToNameCanonicalizer$Bucket;
 
     iput-object v2, p0, Lcom/flurry/org/codehaus/jackson/sym/BytesToNameCanonicalizer;->_collList:[Lcom/flurry/org/codehaus/jackson/sym/BytesToNameCanonicalizer$Bucket;
@@ -1572,13 +1572,13 @@
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/sym/BytesToNameCanonicalizer;->_mainHash:[I
 
     .line 834
-    .local v1, old:[I
+    .local v1, "old":[I
     iget-object v2, p0, Lcom/flurry/org/codehaus/jackson/sym/BytesToNameCanonicalizer;->_mainHash:[I
 
     array-length v0, v2
 
     .line 836
-    .local v0, len:I
+    .local v0, "len":I
     new-array v2, v0, [I
 
     iput-object v2, p0, Lcom/flurry/org/codehaus/jackson/sym/BytesToNameCanonicalizer;->_mainHash:[I
@@ -1605,11 +1605,11 @@
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/sym/BytesToNameCanonicalizer;->_mainNames:[Lcom/flurry/org/codehaus/jackson/sym/Name;
 
     .line 857
-    .local v1, old:[Lcom/flurry/org/codehaus/jackson/sym/Name;
+    .local v1, "old":[Lcom/flurry/org/codehaus/jackson/sym/Name;
     array-length v0, v1
 
     .line 858
-    .local v0, len:I
+    .local v0, "len":I
     new-array v2, v0, [Lcom/flurry/org/codehaus/jackson/sym/Name;
 
     iput-object v2, p0, Lcom/flurry/org/codehaus/jackson/sym/BytesToNameCanonicalizer;->_mainNames:[Lcom/flurry/org/codehaus/jackson/sym/Name;
@@ -1630,9 +1630,9 @@
 # virtual methods
 .method public addName(Ljava/lang/String;II)Lcom/flurry/org/codehaus/jackson/sym/Name;
     .locals 3
-    .parameter "symbolStr"
-    .parameter "q1"
-    .parameter "q2"
+    .param p1, "symbolStr"    # Ljava/lang/String;
+    .param p2, "q1"    # I
+    .param p3, "q2"    # I
 
     .prologue
     .line 484
@@ -1658,22 +1658,22 @@
     move v0, v2
 
     .line 488
-    .local v0, hash:I
+    .local v0, "hash":I
     :goto_0
     invoke-static {v0, p1, p2, p3}, Lcom/flurry/org/codehaus/jackson/sym/BytesToNameCanonicalizer;->constructName(ILjava/lang/String;II)Lcom/flurry/org/codehaus/jackson/sym/Name;
 
     move-result-object v1
 
     .line 489
-    .local v1, symbol:Lcom/flurry/org/codehaus/jackson/sym/Name;
+    .local v1, "symbol":Lcom/flurry/org/codehaus/jackson/sym/Name;
     invoke-direct {p0, v0, v1}, Lcom/flurry/org/codehaus/jackson/sym/BytesToNameCanonicalizer;->_addSymbol(ILcom/flurry/org/codehaus/jackson/sym/Name;)V
 
     .line 490
     return-object v1
 
     .line 487
-    .end local v0           #hash:I
-    .end local v1           #symbol:Lcom/flurry/org/codehaus/jackson/sym/Name;
+    .end local v0    # "hash":I
+    .end local v1    # "symbol":Lcom/flurry/org/codehaus/jackson/sym/Name;
     :cond_1
     invoke-static {p2, p3}, Lcom/flurry/org/codehaus/jackson/sym/BytesToNameCanonicalizer;->calcHash(II)I
 
@@ -1686,9 +1686,9 @@
 
 .method public addName(Ljava/lang/String;[II)Lcom/flurry/org/codehaus/jackson/sym/Name;
     .locals 3
-    .parameter "symbolStr"
-    .parameter "quads"
-    .parameter "qlen"
+    .param p1, "symbolStr"    # Ljava/lang/String;
+    .param p2, "quads"    # [I
+    .param p3, "qlen"    # I
 
     .prologue
     .line 495
@@ -1710,13 +1710,13 @@
     move-result v0
 
     .line 499
-    .local v0, hash:I
+    .local v0, "hash":I
     invoke-static {v0, p1, p2, p3}, Lcom/flurry/org/codehaus/jackson/sym/BytesToNameCanonicalizer;->constructName(ILjava/lang/String;[II)Lcom/flurry/org/codehaus/jackson/sym/Name;
 
     move-result-object v1
 
     .line 500
-    .local v1, symbol:Lcom/flurry/org/codehaus/jackson/sym/Name;
+    .local v1, "symbol":Lcom/flurry/org/codehaus/jackson/sym/Name;
     invoke-direct {p0, v0, v1}, Lcom/flurry/org/codehaus/jackson/sym/BytesToNameCanonicalizer;->_addSymbol(ILcom/flurry/org/codehaus/jackson/sym/Name;)V
 
     .line 501
@@ -1725,7 +1725,7 @@
 
 .method public findName(I)Lcom/flurry/org/codehaus/jackson/sym/Name;
     .locals 7
-    .parameter "firstQuad"
+    .param p1, "firstQuad"    # I
 
     .prologue
     const/4 v6, 0x0
@@ -1736,19 +1736,19 @@
     move-result v1
 
     .line 344
-    .local v1, hash:I
+    .local v1, "hash":I
     iget v5, p0, Lcom/flurry/org/codehaus/jackson/sym/BytesToNameCanonicalizer;->_mainHashMask:I
 
     and-int v2, v1, v5
 
     .line 345
-    .local v2, ix:I
+    .local v2, "ix":I
     iget-object v5, p0, Lcom/flurry/org/codehaus/jackson/sym/BytesToNameCanonicalizer;->_mainHash:[I
 
     aget v4, v5, v2
 
     .line 350
-    .local v4, val:I
+    .local v4, "val":I
     shr-int/lit8 v5, v4, 0x8
 
     xor-int/2addr v5, v1
@@ -1763,18 +1763,18 @@
     aget-object v3, v5, v2
 
     .line 353
-    .local v3, name:Lcom/flurry/org/codehaus/jackson/sym/Name;
+    .local v3, "name":Lcom/flurry/org/codehaus/jackson/sym/Name;
     if-nez v3, :cond_0
 
     move-object v5, v6
 
     .line 372
-    .end local v3           #name:Lcom/flurry/org/codehaus/jackson/sym/Name;
+    .end local v3    # "name":Lcom/flurry/org/codehaus/jackson/sym/Name;
     :goto_0
     return-object v5
 
     .line 356
-    .restart local v3       #name:Lcom/flurry/org/codehaus/jackson/sym/Name;
+    .restart local v3    # "name":Lcom/flurry/org/codehaus/jackson/sym/Name;
     :cond_0
     invoke-virtual {v3, p1}, Lcom/flurry/org/codehaus/jackson/sym/Name;->equals(I)Z
 
@@ -1788,7 +1788,7 @@
     goto :goto_0
 
     .line 359
-    .end local v3           #name:Lcom/flurry/org/codehaus/jackson/sym/Name;
+    .end local v3    # "name":Lcom/flurry/org/codehaus/jackson/sym/Name;
     :cond_1
     if-nez v4, :cond_2
 
@@ -1813,7 +1813,7 @@
     aget-object v0, v5, v4
 
     .line 367
-    .local v0, bucket:Lcom/flurry/org/codehaus/jackson/sym/BytesToNameCanonicalizer$Bucket;
+    .local v0, "bucket":Lcom/flurry/org/codehaus/jackson/sym/BytesToNameCanonicalizer$Bucket;
     if-eqz v0, :cond_3
 
     .line 368
@@ -1825,7 +1825,7 @@
 
     goto :goto_0
 
-    .end local v0           #bucket:Lcom/flurry/org/codehaus/jackson/sym/BytesToNameCanonicalizer$Bucket;
+    .end local v0    # "bucket":Lcom/flurry/org/codehaus/jackson/sym/BytesToNameCanonicalizer$Bucket;
     :cond_3
     move-object v5, v6
 
@@ -1835,8 +1835,8 @@
 
 .method public findName(II)Lcom/flurry/org/codehaus/jackson/sym/Name;
     .locals 7
-    .parameter "firstQuad"
-    .parameter "secondQuad"
+    .param p1, "firstQuad"    # I
+    .param p2, "secondQuad"    # I
 
     .prologue
     const/4 v6, 0x0
@@ -1847,19 +1847,19 @@
     move-result v1
 
     .line 394
-    .local v1, hash:I
+    .local v1, "hash":I
     iget v5, p0, Lcom/flurry/org/codehaus/jackson/sym/BytesToNameCanonicalizer;->_mainHashMask:I
 
     and-int v2, v1, v5
 
     .line 395
-    .local v2, ix:I
+    .local v2, "ix":I
     iget-object v5, p0, Lcom/flurry/org/codehaus/jackson/sym/BytesToNameCanonicalizer;->_mainHash:[I
 
     aget v4, v5, v2
 
     .line 400
-    .local v4, val:I
+    .local v4, "val":I
     shr-int/lit8 v5, v4, 0x8
 
     xor-int/2addr v5, v1
@@ -1874,18 +1874,18 @@
     aget-object v3, v5, v2
 
     .line 403
-    .local v3, name:Lcom/flurry/org/codehaus/jackson/sym/Name;
+    .local v3, "name":Lcom/flurry/org/codehaus/jackson/sym/Name;
     if-nez v3, :cond_0
 
     move-object v5, v6
 
     .line 422
-    .end local v3           #name:Lcom/flurry/org/codehaus/jackson/sym/Name;
+    .end local v3    # "name":Lcom/flurry/org/codehaus/jackson/sym/Name;
     :goto_0
     return-object v5
 
     .line 406
-    .restart local v3       #name:Lcom/flurry/org/codehaus/jackson/sym/Name;
+    .restart local v3    # "name":Lcom/flurry/org/codehaus/jackson/sym/Name;
     :cond_0
     invoke-virtual {v3, p1, p2}, Lcom/flurry/org/codehaus/jackson/sym/Name;->equals(II)Z
 
@@ -1899,7 +1899,7 @@
     goto :goto_0
 
     .line 409
-    .end local v3           #name:Lcom/flurry/org/codehaus/jackson/sym/Name;
+    .end local v3    # "name":Lcom/flurry/org/codehaus/jackson/sym/Name;
     :cond_1
     if-nez v4, :cond_2
 
@@ -1924,7 +1924,7 @@
     aget-object v0, v5, v4
 
     .line 417
-    .local v0, bucket:Lcom/flurry/org/codehaus/jackson/sym/BytesToNameCanonicalizer$Bucket;
+    .local v0, "bucket":Lcom/flurry/org/codehaus/jackson/sym/BytesToNameCanonicalizer$Bucket;
     if-eqz v0, :cond_3
 
     .line 418
@@ -1934,7 +1934,7 @@
 
     goto :goto_0
 
-    .end local v0           #bucket:Lcom/flurry/org/codehaus/jackson/sym/BytesToNameCanonicalizer$Bucket;
+    .end local v0    # "bucket":Lcom/flurry/org/codehaus/jackson/sym/BytesToNameCanonicalizer$Bucket;
     :cond_3
     move-object v5, v6
 
@@ -1944,8 +1944,8 @@
 
 .method public findName([II)Lcom/flurry/org/codehaus/jackson/sym/Name;
     .locals 7
-    .parameter "quads"
-    .parameter "qlen"
+    .param p1, "quads"    # [I
+    .param p2, "qlen"    # I
 
     .prologue
     const/4 v6, 0x0
@@ -1956,19 +1956,19 @@
     move-result v1
 
     .line 451
-    .local v1, hash:I
+    .local v1, "hash":I
     iget v5, p0, Lcom/flurry/org/codehaus/jackson/sym/BytesToNameCanonicalizer;->_mainHashMask:I
 
     and-int v2, v1, v5
 
     .line 452
-    .local v2, ix:I
+    .local v2, "ix":I
     iget-object v5, p0, Lcom/flurry/org/codehaus/jackson/sym/BytesToNameCanonicalizer;->_mainHash:[I
 
     aget v4, v5, v2
 
     .line 453
-    .local v4, val:I
+    .local v4, "val":I
     shr-int/lit8 v5, v4, 0x8
 
     xor-int/2addr v5, v1
@@ -1983,7 +1983,7 @@
     aget-object v3, v5, v2
 
     .line 455
-    .local v3, name:Lcom/flurry/org/codehaus/jackson/sym/Name;
+    .local v3, "name":Lcom/flurry/org/codehaus/jackson/sym/Name;
     if-eqz v3, :cond_0
 
     invoke-virtual {v3, p1, p2}, Lcom/flurry/org/codehaus/jackson/sym/Name;->equals([II)Z
@@ -1996,7 +1996,7 @@
     move-object v5, v3
 
     .line 470
-    .end local v3           #name:Lcom/flurry/org/codehaus/jackson/sym/Name;
+    .end local v3    # "name":Lcom/flurry/org/codehaus/jackson/sym/Name;
     :goto_0
     return-object v5
 
@@ -2025,7 +2025,7 @@
     aget-object v0, v5, v4
 
     .line 466
-    .local v0, bucket:Lcom/flurry/org/codehaus/jackson/sym/BytesToNameCanonicalizer$Bucket;
+    .local v0, "bucket":Lcom/flurry/org/codehaus/jackson/sym/BytesToNameCanonicalizer$Bucket;
     if-eqz v0, :cond_3
 
     .line 467
@@ -2035,7 +2035,7 @@
 
     goto :goto_0
 
-    .end local v0           #bucket:Lcom/flurry/org/codehaus/jackson/sym/BytesToNameCanonicalizer$Bucket;
+    .end local v0    # "bucket":Lcom/flurry/org/codehaus/jackson/sym/BytesToNameCanonicalizer$Bucket;
     :cond_3
     move-object v5, v6
 
@@ -2045,8 +2045,8 @@
 
 .method public declared-synchronized makeChild(ZZ)Lcom/flurry/org/codehaus/jackson/sym/BytesToNameCanonicalizer;
     .locals 1
-    .parameter "canonicalize"
-    .parameter "intern"
+    .param p1, "canonicalize"    # Z
+    .param p2, "intern"    # Z
 
     .prologue
     .line 177

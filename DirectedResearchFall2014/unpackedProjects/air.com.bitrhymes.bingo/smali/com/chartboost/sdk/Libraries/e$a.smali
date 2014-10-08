@@ -45,8 +45,6 @@
 
 .method public a(Ljava/lang/Object;Ljava/lang/StringBuilder;)Z
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     .line 23

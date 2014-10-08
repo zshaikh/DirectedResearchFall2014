@@ -14,8 +14,6 @@
 # direct methods
 .method public static a(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",

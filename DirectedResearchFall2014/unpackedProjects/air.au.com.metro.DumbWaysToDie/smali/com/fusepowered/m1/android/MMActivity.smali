@@ -24,7 +24,7 @@
 # virtual methods
 .method public dispatchTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 1
-    .parameter "ev"
+    .param p1, "ev"    # Landroid/view/MotionEvent;
 
     .prologue
     .line 229
@@ -53,7 +53,7 @@
 
 .method dispatchTouchEventSuper(Landroid/view/MotionEvent;)Z
     .locals 1
-    .parameter "ev"
+    .param p1, "ev"    # Landroid/view/MotionEvent;
 
     .prologue
     .line 257
@@ -130,9 +130,9 @@
 
 .method protected onActivityResult(IILandroid/content/Intent;)V
     .locals 1
-    .parameter "requestCode"
-    .parameter "resultCode"
-    .parameter "data"
+    .param p1, "requestCode"    # I
+    .param p2, "resultCode"    # I
+    .param p3, "data"    # Landroid/content/Intent;
 
     .prologue
     .line 201
@@ -158,9 +158,9 @@
 
 .method onActivityResultSuper(IILandroid/content/Intent;)V
     .locals 0
-    .parameter "requestCode"
-    .parameter "resultCode"
-    .parameter "data"
+    .param p1, "requestCode"    # I
+    .param p2, "resultCode"    # I
+    .param p3, "data"    # Landroid/content/Intent;
 
     .prologue
     .line 209
@@ -172,7 +172,7 @@
 
 .method public onConfigurationChanged(Landroid/content/res/Configuration;)V
     .locals 1
-    .parameter "newConfig"
+    .param p1, "newConfig"    # Landroid/content/res/Configuration;
 
     .prologue
     .line 173
@@ -198,7 +198,7 @@
 
 .method onConfigurationChangedSuper(Landroid/content/res/Configuration;)V
     .locals 0
-    .parameter "newConfig"
+    .param p1, "newConfig"    # Landroid/content/res/Configuration;
 
     .prologue
     .line 167
@@ -210,7 +210,7 @@
 
 .method protected onCreate(Landroid/os/Bundle;)V
     .locals 8
-    .parameter "savedInstanceState"
+    .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
     .line 19
@@ -220,13 +220,13 @@
     const/4 v1, 0x0
 
     .line 21
-    .local v1, className:Ljava/lang/String;
+    .local v1, "className":Ljava/lang/String;
     invoke-virtual {p0}, Lcom/fusepowered/m1/android/MMActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v3
 
     .line 22
-    .local v3, intent:Landroid/content/Intent;
+    .local v3, "intent":Landroid/content/Intent;
     const-string v4, "internalId"
 
     const-wide/16 v5, -0x4
@@ -255,7 +255,7 @@
     move-result-object v0
 
     .line 27
-    .local v0, activityClass:Ljava/lang/Class;
+    .local v0, "activityClass":Ljava/lang/Class;
     invoke-virtual {v0}, Ljava/lang/Class;->newInstance()Ljava/lang/Object;
 
     move-result-object v4
@@ -277,7 +277,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 37
-    .end local v0           #activityClass:Ljava/lang/Class;
+    .end local v0    # "activityClass":Ljava/lang/Class;
     :goto_0
     return-void
 
@@ -288,7 +288,7 @@
     move-object v2, v4
 
     .line 33
-    .local v2, e:Ljava/lang/Exception;
+    .local v2, "e":Ljava/lang/Exception;
     const-string v4, "Could not start activity for %s. %s"
 
     const/4 v5, 0x2
@@ -320,7 +320,7 @@
 
 .method onCreateSuper(Landroid/os/Bundle;)V
     .locals 0
-    .parameter "savedInstanceState"
+    .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
     .line 41
@@ -368,8 +368,8 @@
 
 .method public onKeyDown(ILandroid/view/KeyEvent;)Z
     .locals 1
-    .parameter "keyCode"
-    .parameter "event"
+    .param p1, "keyCode"    # I
+    .param p2, "event"    # Landroid/view/KeyEvent;
 
     .prologue
     .line 215
@@ -398,8 +398,8 @@
 
 .method onKeyDownSuper(ILandroid/view/KeyEvent;)Z
     .locals 1
-    .parameter "keyCode"
-    .parameter "event"
+    .param p1, "keyCode"    # I
+    .param p2, "event"    # Landroid/view/KeyEvent;
 
     .prologue
     .line 223
@@ -484,7 +484,7 @@
 
 .method protected onRestoreInstanceState(Landroid/os/Bundle;)V
     .locals 1
-    .parameter "savedInstanceState"
+    .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
     .line 145
@@ -510,7 +510,7 @@
 
 .method onRestoreInstanceStateSuper(Landroid/os/Bundle;)V
     .locals 0
-    .parameter "savedInstanceState"
+    .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
     .line 153
@@ -598,7 +598,7 @@
 
 .method protected onSaveInstanceState(Landroid/os/Bundle;)V
     .locals 1
-    .parameter "outState"
+    .param p1, "outState"    # Landroid/os/Bundle;
 
     .prologue
     .line 131
@@ -624,7 +624,7 @@
 
 .method onSaveInstanceStateSuper(Landroid/os/Bundle;)V
     .locals 0
-    .parameter "outState"
+    .param p1, "outState"    # Landroid/os/Bundle;
 
     .prologue
     .line 139
@@ -708,7 +708,7 @@
 
 .method public onWindowFocusChanged(Z)V
     .locals 1
-    .parameter "hasFocus"
+    .param p1, "hasFocus"    # Z
 
     .prologue
     .line 159
@@ -734,7 +734,7 @@
 
 .method onWindowFocusChangedSuper(Z)V
     .locals 0
-    .parameter "hasFocus"
+    .param p1, "hasFocus"    # Z
 
     .prologue
     .line 181

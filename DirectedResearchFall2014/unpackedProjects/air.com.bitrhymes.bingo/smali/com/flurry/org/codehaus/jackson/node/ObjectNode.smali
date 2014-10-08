@@ -28,7 +28,7 @@
 # direct methods
 .method public constructor <init>(Lcom/flurry/org/codehaus/jackson/node/JsonNodeFactory;)V
     .locals 1
-    .parameter "nc"
+    .param p1, "nc"    # Lcom/flurry/org/codehaus/jackson/node/JsonNodeFactory;
 
     .prologue
     .line 19
@@ -45,8 +45,8 @@
 
 .method private final _put(Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/JsonNode;)Lcom/flurry/org/codehaus/jackson/JsonNode;
     .locals 1
-    .parameter "fieldName"
-    .parameter "value"
+    .param p1, "fieldName"    # Ljava/lang/String;
+    .param p2, "value"    # Lcom/flurry/org/codehaus/jackson/JsonNode;
 
     .prologue
     .line 664
@@ -69,7 +69,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/flurry/org/codehaus/jackson/node/ObjectNode;
     check-cast p0, Lcom/flurry/org/codehaus/jackson/JsonNode;
 
     return-object p0
@@ -89,7 +89,7 @@
 
 .method public equals(Ljava/lang/Object;)Z
     .locals 11
-    .parameter "o"
+    .param p1, "o"    # Ljava/lang/Object;
 
     .prologue
     const/4 v10, 0x1
@@ -139,7 +139,7 @@
     move-object v4, v0
 
     .line 611
-    .local v4, other:Lcom/flurry/org/codehaus/jackson/node/ObjectNode;
+    .local v4, "other":Lcom/flurry/org/codehaus/jackson/node/ObjectNode;
     invoke-virtual {v4}, Lcom/flurry/org/codehaus/jackson/node/ObjectNode;->size()I
 
     move-result v7
@@ -172,7 +172,7 @@
 
     move-result-object v2
 
-    .local v2, i$:Ljava/util/Iterator;
+    .local v2, "i$":Ljava/util/Iterator;
     :cond_4
     invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
@@ -187,7 +187,7 @@
     check-cast v1, Ljava/util/Map$Entry;
 
     .line 616
-    .local v1, en:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/JsonNode;>;"
+    .local v1, "en":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/JsonNode;>;"
     invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v3
@@ -195,7 +195,7 @@
     check-cast v3, Ljava/lang/String;
 
     .line 617
-    .local v3, key:Ljava/lang/String;
+    .local v3, "key":Ljava/lang/String;
     invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v6
@@ -203,13 +203,13 @@
     check-cast v6, Lcom/flurry/org/codehaus/jackson/JsonNode;
 
     .line 619
-    .local v6, value:Lcom/flurry/org/codehaus/jackson/JsonNode;
+    .local v6, "value":Lcom/flurry/org/codehaus/jackson/JsonNode;
     invoke-virtual {v4, v3}, Lcom/flurry/org/codehaus/jackson/node/ObjectNode;->get(Ljava/lang/String;)Lcom/flurry/org/codehaus/jackson/JsonNode;
 
     move-result-object v5
 
     .line 621
-    .local v5, otherValue:Lcom/flurry/org/codehaus/jackson/JsonNode;
+    .local v5, "otherValue":Lcom/flurry/org/codehaus/jackson/JsonNode;
     if-eqz v5, :cond_5
 
     invoke-virtual {v5, v6}, Lcom/flurry/org/codehaus/jackson/JsonNode;->equals(Ljava/lang/Object;)Z
@@ -224,11 +224,11 @@
     .line 622
     goto :goto_0
 
-    .end local v1           #en:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/JsonNode;>;"
-    .end local v2           #i$:Ljava/util/Iterator;
-    .end local v3           #key:Ljava/lang/String;
-    .end local v5           #otherValue:Lcom/flurry/org/codehaus/jackson/JsonNode;
-    .end local v6           #value:Lcom/flurry/org/codehaus/jackson/JsonNode;
+    .end local v1    # "en":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/JsonNode;>;"
+    .end local v2    # "i$":Ljava/util/Iterator;
+    .end local v3    # "key":Ljava/lang/String;
+    .end local v5    # "otherValue":Lcom/flurry/org/codehaus/jackson/JsonNode;
+    .end local v6    # "value":Lcom/flurry/org/codehaus/jackson/JsonNode;
     :cond_6
     move v7, v10
 
@@ -238,7 +238,7 @@
 
 .method public bridge synthetic findParent(Ljava/lang/String;)Lcom/flurry/org/codehaus/jackson/JsonNode;
     .locals 1
-    .parameter "x0"
+    .param p1, "x0"    # Ljava/lang/String;
 
     .prologue
     .line 14
@@ -251,7 +251,7 @@
 
 .method public findParent(Ljava/lang/String;)Lcom/flurry/org/codehaus/jackson/node/ObjectNode;
     .locals 4
-    .parameter "fieldName"
+    .param p1, "fieldName"    # Ljava/lang/String;
 
     .prologue
     .line 175
@@ -270,7 +270,7 @@
 
     move-result-object v1
 
-    .local v1, i$:Ljava/util/Iterator;
+    .local v1, "i$":Ljava/util/Iterator;
     :cond_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
@@ -285,7 +285,7 @@
     check-cast v0, Ljava/util/Map$Entry;
 
     .line 177
-    .local v0, entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/JsonNode;>;"
+    .local v0, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/JsonNode;>;"
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v3
@@ -299,14 +299,14 @@
     move-object v3, p0
 
     .line 186
-    .end local v0           #entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/JsonNode;>;"
-    .end local v1           #i$:Ljava/util/Iterator;
+    .end local v0    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/JsonNode;>;"
+    .end local v1    # "i$":Ljava/util/Iterator;
     :goto_0
     return-object v3
 
     .line 180
-    .restart local v0       #entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/JsonNode;>;"
-    .restart local v1       #i$:Ljava/util/Iterator;
+    .restart local v0    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/JsonNode;>;"
+    .restart local v1    # "i$":Ljava/util/Iterator;
     :cond_1
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -319,20 +319,20 @@
     move-result-object v2
 
     .line 181
-    .local v2, value:Lcom/flurry/org/codehaus/jackson/JsonNode;
+    .local v2, "value":Lcom/flurry/org/codehaus/jackson/JsonNode;
     if-eqz v2, :cond_0
 
     .line 182
     check-cast v2, Lcom/flurry/org/codehaus/jackson/node/ObjectNode;
 
-    .end local v2           #value:Lcom/flurry/org/codehaus/jackson/JsonNode;
+    .end local v2    # "value":Lcom/flurry/org/codehaus/jackson/JsonNode;
     move-object v3, v2
 
     goto :goto_0
 
     .line 186
-    .end local v0           #entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/JsonNode;>;"
-    .end local v1           #i$:Ljava/util/Iterator;
+    .end local v0    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/JsonNode;>;"
+    .end local v1    # "i$":Ljava/util/Iterator;
     :cond_2
     const/4 v3, 0x0
 
@@ -341,8 +341,7 @@
 
 .method public findParents(Ljava/lang/String;Ljava/util/List;)Ljava/util/List;
     .locals 3
-    .parameter "fieldName"
-    .parameter
+    .param p1, "fieldName"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -360,7 +359,7 @@
 
     .prologue
     .line 192
-    .local p2, foundSoFar:Ljava/util/List;,"Ljava/util/List<Lcom/flurry/org/codehaus/jackson/JsonNode;>;"
+    .local p2, "foundSoFar":Ljava/util/List;, "Ljava/util/List<Lcom/flurry/org/codehaus/jackson/JsonNode;>;"
     iget-object v2, p0, Lcom/flurry/org/codehaus/jackson/node/ObjectNode;->_children:Ljava/util/LinkedHashMap;
 
     if-eqz v2, :cond_2
@@ -376,7 +375,7 @@
 
     move-result-object v1
 
-    .local v1, i$:Ljava/util/Iterator;
+    .local v1, "i$":Ljava/util/Iterator;
     :goto_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
@@ -391,7 +390,7 @@
     check-cast v0, Ljava/util/Map$Entry;
 
     .line 194
-    .local v0, entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/JsonNode;>;"
+    .local v0, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/JsonNode;>;"
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v2
@@ -408,11 +407,11 @@
     .line 196
     new-instance p2, Ljava/util/ArrayList;
 
-    .end local p2           #foundSoFar:Ljava/util/List;,"Ljava/util/List<Lcom/flurry/org/codehaus/jackson/JsonNode;>;"
+    .end local p2    # "foundSoFar":Ljava/util/List;, "Ljava/util/List<Lcom/flurry/org/codehaus/jackson/JsonNode;>;"
     invoke-direct {p2}, Ljava/util/ArrayList;-><init>()V
 
     .line 198
-    .restart local p2       #foundSoFar:Ljava/util/List;,"Ljava/util/List<Lcom/flurry/org/codehaus/jackson/JsonNode;>;"
+    .restart local p2    # "foundSoFar":Ljava/util/List;, "Ljava/util/List<Lcom/flurry/org/codehaus/jackson/JsonNode;>;"
     :cond_0
     invoke-interface {p2, p0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -433,15 +432,15 @@
     goto :goto_0
 
     .line 204
-    .end local v0           #entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/JsonNode;>;"
-    .end local v1           #i$:Ljava/util/Iterator;
+    .end local v0    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/JsonNode;>;"
+    .end local v1    # "i$":Ljava/util/Iterator;
     :cond_2
     return-object p2
 .end method
 
 .method public findValue(Ljava/lang/String;)Lcom/flurry/org/codehaus/jackson/JsonNode;
     .locals 4
-    .parameter "fieldName"
+    .param p1, "fieldName"    # Ljava/lang/String;
 
     .prologue
     .line 122
@@ -460,8 +459,8 @@
 
     move-result-object v1
 
-    .end local p0
-    .local v1, i$:Ljava/util/Iterator;
+    .end local p0    # "this":Lcom/flurry/org/codehaus/jackson/node/ObjectNode;
+    .local v1, "i$":Ljava/util/Iterator;
     :cond_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
@@ -476,7 +475,7 @@
     check-cast v0, Ljava/util/Map$Entry;
 
     .line 124
-    .local v0, entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/JsonNode;>;"
+    .local v0, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/JsonNode;>;"
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v3
@@ -497,14 +496,14 @@
     move-object v3, p0
 
     .line 133
-    .end local v0           #entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/JsonNode;>;"
-    .end local v1           #i$:Ljava/util/Iterator;
+    .end local v0    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/JsonNode;>;"
+    .end local v1    # "i$":Ljava/util/Iterator;
     :goto_0
     return-object v3
 
     .line 127
-    .restart local v0       #entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/JsonNode;>;"
-    .restart local v1       #i$:Ljava/util/Iterator;
+    .restart local v0    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/JsonNode;>;"
+    .restart local v1    # "i$":Ljava/util/Iterator;
     :cond_1
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -517,7 +516,7 @@
     move-result-object v2
 
     .line 128
-    .local v2, value:Lcom/flurry/org/codehaus/jackson/JsonNode;
+    .local v2, "value":Lcom/flurry/org/codehaus/jackson/JsonNode;
     if-eqz v2, :cond_0
 
     move-object v3, v2
@@ -526,9 +525,9 @@
     goto :goto_0
 
     .line 133
-    .end local v0           #entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/JsonNode;>;"
-    .end local v1           #i$:Ljava/util/Iterator;
-    .end local v2           #value:Lcom/flurry/org/codehaus/jackson/JsonNode;
+    .end local v0    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/JsonNode;>;"
+    .end local v1    # "i$":Ljava/util/Iterator;
+    .end local v2    # "value":Lcom/flurry/org/codehaus/jackson/JsonNode;
     :cond_2
     const/4 v3, 0x0
 
@@ -537,8 +536,7 @@
 
 .method public findValues(Ljava/lang/String;Ljava/util/List;)Ljava/util/List;
     .locals 3
-    .parameter "fieldName"
-    .parameter
+    .param p1, "fieldName"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -556,7 +554,7 @@
 
     .prologue
     .line 139
-    .local p2, foundSoFar:Ljava/util/List;,"Ljava/util/List<Lcom/flurry/org/codehaus/jackson/JsonNode;>;"
+    .local p2, "foundSoFar":Ljava/util/List;, "Ljava/util/List<Lcom/flurry/org/codehaus/jackson/JsonNode;>;"
     iget-object v2, p0, Lcom/flurry/org/codehaus/jackson/node/ObjectNode;->_children:Ljava/util/LinkedHashMap;
 
     if-eqz v2, :cond_2
@@ -572,8 +570,8 @@
 
     move-result-object v1
 
-    .end local p0
-    .local v1, i$:Ljava/util/Iterator;
+    .end local p0    # "this":Lcom/flurry/org/codehaus/jackson/node/ObjectNode;
+    .local v1, "i$":Ljava/util/Iterator;
     :goto_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
@@ -588,7 +586,7 @@
     check-cast v0, Ljava/util/Map$Entry;
 
     .line 141
-    .local v0, entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/JsonNode;>;"
+    .local v0, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/JsonNode;>;"
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v2
@@ -605,11 +603,11 @@
     .line 143
     new-instance p2, Ljava/util/ArrayList;
 
-    .end local p2           #foundSoFar:Ljava/util/List;,"Ljava/util/List<Lcom/flurry/org/codehaus/jackson/JsonNode;>;"
+    .end local p2    # "foundSoFar":Ljava/util/List;, "Ljava/util/List<Lcom/flurry/org/codehaus/jackson/JsonNode;>;"
     invoke-direct {p2}, Ljava/util/ArrayList;-><init>()V
 
     .line 145
-    .restart local p2       #foundSoFar:Ljava/util/List;,"Ljava/util/List<Lcom/flurry/org/codehaus/jackson/JsonNode;>;"
+    .restart local p2    # "foundSoFar":Ljava/util/List;, "Ljava/util/List<Lcom/flurry/org/codehaus/jackson/JsonNode;>;"
     :cond_0
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -634,16 +632,15 @@
     goto :goto_0
 
     .line 151
-    .end local v0           #entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/JsonNode;>;"
-    .end local v1           #i$:Ljava/util/Iterator;
+    .end local v0    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/JsonNode;>;"
+    .end local v1    # "i$":Ljava/util/Iterator;
     :cond_2
     return-object p2
 .end method
 
 .method public findValuesAsText(Ljava/lang/String;Ljava/util/List;)Ljava/util/List;
     .locals 3
-    .parameter "fieldName"
-    .parameter
+    .param p1, "fieldName"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -661,7 +658,7 @@
 
     .prologue
     .line 157
-    .local p2, foundSoFar:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
+    .local p2, "foundSoFar":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     iget-object v2, p0, Lcom/flurry/org/codehaus/jackson/node/ObjectNode;->_children:Ljava/util/LinkedHashMap;
 
     if-eqz v2, :cond_2
@@ -677,8 +674,8 @@
 
     move-result-object v1
 
-    .end local p0
-    .local v1, i$:Ljava/util/Iterator;
+    .end local p0    # "this":Lcom/flurry/org/codehaus/jackson/node/ObjectNode;
+    .local v1, "i$":Ljava/util/Iterator;
     :goto_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
@@ -693,7 +690,7 @@
     check-cast v0, Ljava/util/Map$Entry;
 
     .line 159
-    .local v0, entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/JsonNode;>;"
+    .local v0, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/JsonNode;>;"
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v2
@@ -710,11 +707,11 @@
     .line 161
     new-instance p2, Ljava/util/ArrayList;
 
-    .end local p2           #foundSoFar:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
+    .end local p2    # "foundSoFar":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-direct {p2}, Ljava/util/ArrayList;-><init>()V
 
     .line 163
-    .restart local p2       #foundSoFar:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
+    .restart local p2    # "foundSoFar":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     :cond_0
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -745,15 +742,15 @@
     goto :goto_0
 
     .line 169
-    .end local v0           #entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/JsonNode;>;"
-    .end local v1           #i$:Ljava/util/Iterator;
+    .end local v0    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/JsonNode;>;"
+    .end local v1    # "i$":Ljava/util/Iterator;
     :cond_2
     return-object p2
 .end method
 
 .method public get(I)Lcom/flurry/org/codehaus/jackson/JsonNode;
     .locals 1
-    .parameter "index"
+    .param p1, "index"    # I
 
     .prologue
     .line 44
@@ -764,7 +761,7 @@
 
 .method public get(Ljava/lang/String;)Lcom/flurry/org/codehaus/jackson/JsonNode;
     .locals 1
-    .parameter "fieldName"
+    .param p1, "fieldName"    # Ljava/lang/String;
 
     .prologue
     .line 49
@@ -779,7 +776,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/flurry/org/codehaus/jackson/node/ObjectNode;
     check-cast p0, Lcom/flurry/org/codehaus/jackson/JsonNode;
 
     move-object v0, p0
@@ -788,7 +785,7 @@
     :goto_0
     return-object v0
 
-    .restart local p0
+    .restart local p0    # "this":Lcom/flurry/org/codehaus/jackson/node/ObjectNode;
     :cond_0
     const/4 v0, 0x0
 
@@ -951,7 +948,7 @@
 
 .method public path(I)Lcom/flurry/org/codehaus/jackson/JsonNode;
     .locals 1
-    .parameter "index"
+    .param p1, "index"    # I
 
     .prologue
     .line 64
@@ -964,7 +961,7 @@
 
 .method public path(Ljava/lang/String;)Lcom/flurry/org/codehaus/jackson/JsonNode;
     .locals 2
-    .parameter "fieldName"
+    .param p1, "fieldName"    # Ljava/lang/String;
 
     .prologue
     .line 70
@@ -982,13 +979,13 @@
     check-cast v0, Lcom/flurry/org/codehaus/jackson/JsonNode;
 
     .line 72
-    .local v0, n:Lcom/flurry/org/codehaus/jackson/JsonNode;
+    .local v0, "n":Lcom/flurry/org/codehaus/jackson/JsonNode;
     if-eqz v0, :cond_0
 
     move-object v1, v0
 
     .line 76
-    .end local v0           #n:Lcom/flurry/org/codehaus/jackson/JsonNode;
+    .end local v0    # "n":Lcom/flurry/org/codehaus/jackson/JsonNode;
     :goto_0
     return-object v1
 
@@ -1002,8 +999,8 @@
 
 .method public put(Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/JsonNode;)Lcom/flurry/org/codehaus/jackson/JsonNode;
     .locals 1
-    .parameter "fieldName"
-    .parameter "value"
+    .param p1, "fieldName"    # Ljava/lang/String;
+    .param p2, "value"    # Lcom/flurry/org/codehaus/jackson/JsonNode;
 
     .prologue
     .line 270
@@ -1025,8 +1022,8 @@
 
 .method public put(Ljava/lang/String;D)V
     .locals 1
-    .parameter "fieldName"
-    .parameter "v"
+    .param p1, "fieldName"    # Ljava/lang/String;
+    .param p2, "v"    # D
 
     .prologue
     .line 510
@@ -1041,8 +1038,8 @@
 
 .method public put(Ljava/lang/String;F)V
     .locals 1
-    .parameter "fieldName"
-    .parameter "v"
+    .param p1, "fieldName"    # Ljava/lang/String;
+    .param p2, "v"    # F
 
     .prologue
     .line 491
@@ -1057,8 +1054,8 @@
 
 .method public put(Ljava/lang/String;I)V
     .locals 1
-    .parameter "fieldName"
-    .parameter "v"
+    .param p1, "fieldName"    # Ljava/lang/String;
+    .param p2, "v"    # I
 
     .prologue
     .line 453
@@ -1073,8 +1070,8 @@
 
 .method public put(Ljava/lang/String;J)V
     .locals 1
-    .parameter "fieldName"
-    .parameter "v"
+    .param p1, "fieldName"    # Ljava/lang/String;
+    .param p2, "v"    # J
 
     .prologue
     .line 472
@@ -1089,8 +1086,8 @@
 
 .method public put(Ljava/lang/String;Ljava/lang/Boolean;)V
     .locals 1
-    .parameter "fieldName"
-    .parameter "value"
+    .param p1, "fieldName"    # Ljava/lang/String;
+    .param p2, "value"    # Ljava/lang/Boolean;
 
     .prologue
     .line 560
@@ -1124,8 +1121,8 @@
 
 .method public put(Ljava/lang/String;Ljava/lang/Double;)V
     .locals 2
-    .parameter "fieldName"
-    .parameter "value"
+    .param p1, "fieldName"    # Ljava/lang/String;
+    .param p2, "value"    # Ljava/lang/Double;
 
     .prologue
     .line 519
@@ -1159,8 +1156,8 @@
 
 .method public put(Ljava/lang/String;Ljava/lang/Float;)V
     .locals 1
-    .parameter "fieldName"
-    .parameter "value"
+    .param p1, "fieldName"    # Ljava/lang/String;
+    .param p2, "value"    # Ljava/lang/Float;
 
     .prologue
     .line 500
@@ -1194,8 +1191,8 @@
 
 .method public put(Ljava/lang/String;Ljava/lang/Integer;)V
     .locals 1
-    .parameter "fieldName"
-    .parameter "value"
+    .param p1, "fieldName"    # Ljava/lang/String;
+    .param p2, "value"    # Ljava/lang/Integer;
 
     .prologue
     .line 462
@@ -1229,8 +1226,8 @@
 
 .method public put(Ljava/lang/String;Ljava/lang/Long;)V
     .locals 2
-    .parameter "fieldName"
-    .parameter "value"
+    .param p1, "fieldName"    # Ljava/lang/String;
+    .param p2, "value"    # Ljava/lang/Long;
 
     .prologue
     .line 481
@@ -1264,8 +1261,8 @@
 
 .method public put(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
-    .parameter "fieldName"
-    .parameter "v"
+    .param p1, "fieldName"    # Ljava/lang/String;
+    .param p2, "v"    # Ljava/lang/String;
 
     .prologue
     .line 541
@@ -1291,8 +1288,8 @@
 
 .method public put(Ljava/lang/String;Ljava/math/BigDecimal;)V
     .locals 1
-    .parameter "fieldName"
-    .parameter "v"
+    .param p1, "fieldName"    # Ljava/lang/String;
+    .param p2, "v"    # Ljava/math/BigDecimal;
 
     .prologue
     .line 530
@@ -1318,8 +1315,8 @@
 
 .method public put(Ljava/lang/String;Z)V
     .locals 1
-    .parameter "fieldName"
-    .parameter "v"
+    .param p1, "fieldName"    # Ljava/lang/String;
+    .param p2, "v"    # Z
 
     .prologue
     .line 551
@@ -1334,8 +1331,8 @@
 
 .method public put(Ljava/lang/String;[B)V
     .locals 1
-    .parameter "fieldName"
-    .parameter "v"
+    .param p1, "fieldName"    # Ljava/lang/String;
+    .param p2, "v"    # [B
 
     .prologue
     .line 571
@@ -1365,7 +1362,7 @@
 
 .method public putAll(Lcom/flurry/org/codehaus/jackson/node/ObjectNode;)Lcom/flurry/org/codehaus/jackson/JsonNode;
     .locals 2
-    .parameter "other"
+    .param p1, "other"    # Lcom/flurry/org/codehaus/jackson/node/ObjectNode;
 
     .prologue
     .line 358
@@ -1374,7 +1371,7 @@
     move-result v0
 
     .line 359
-    .local v0, len:I
+    .local v0, "len":I
     if-lez v0, :cond_1
 
     .line 360
@@ -1402,7 +1399,6 @@
 
 .method public putAll(Ljava/util/Map;)Lcom/flurry/org/codehaus/jackson/JsonNode;
     .locals 5
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1417,7 +1413,7 @@
 
     .prologue
     .line 332
-    .local p1, properties:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/JsonNode;>;"
+    .local p1, "properties":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/JsonNode;>;"
     iget-object v3, p0, Lcom/flurry/org/codehaus/jackson/node/ObjectNode;->_children:Ljava/util/LinkedHashMap;
 
     if-nez v3, :cond_1
@@ -1443,7 +1439,7 @@
 
     move-result-object v1
 
-    .local v1, i$:Ljava/util/Iterator;
+    .local v1, "i$":Ljava/util/Iterator;
     :goto_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
@@ -1458,7 +1454,7 @@
     check-cast v0, Ljava/util/Map$Entry;
 
     .line 336
-    .local v0, en:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/JsonNode;>;"
+    .local v0, "en":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/JsonNode;>;"
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v2
@@ -1466,7 +1462,7 @@
     check-cast v2, Lcom/flurry/org/codehaus/jackson/JsonNode;
 
     .line 337
-    .local v2, n:Lcom/flurry/org/codehaus/jackson/JsonNode;
+    .local v2, "n":Lcom/flurry/org/codehaus/jackson/JsonNode;
     if-nez v2, :cond_2
 
     .line 338
@@ -1489,7 +1485,7 @@
 
 .method public putArray(Ljava/lang/String;)Lcom/flurry/org/codehaus/jackson/node/ArrayNode;
     .locals 1
-    .parameter "fieldName"
+    .param p1, "fieldName"    # Ljava/lang/String;
 
     .prologue
     .line 421
@@ -1498,7 +1494,7 @@
     move-result-object v0
 
     .line 422
-    .local v0, n:Lcom/flurry/org/codehaus/jackson/node/ArrayNode;
+    .local v0, "n":Lcom/flurry/org/codehaus/jackson/node/ArrayNode;
     invoke-direct {p0, p1, v0}, Lcom/flurry/org/codehaus/jackson/node/ObjectNode;->_put(Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/JsonNode;)Lcom/flurry/org/codehaus/jackson/JsonNode;
 
     .line 423
@@ -1507,7 +1503,6 @@
 
 .method protected putContentsTo(Ljava/util/Map;)V
     .locals 4
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1521,7 +1516,7 @@
 
     .prologue
     .line 589
-    .local p1, dst:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/JsonNode;>;"
+    .local p1, "dst":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/JsonNode;>;"
     iget-object v2, p0, Lcom/flurry/org/codehaus/jackson/node/ObjectNode;->_children:Ljava/util/LinkedHashMap;
 
     if-eqz v2, :cond_0
@@ -1537,7 +1532,7 @@
 
     move-result-object v1
 
-    .local v1, i$:Ljava/util/Iterator;
+    .local v1, "i$":Ljava/util/Iterator;
     :goto_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
@@ -1552,7 +1547,7 @@
     check-cast v0, Ljava/util/Map$Entry;
 
     .line 591
-    .local v0, en:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/JsonNode;>;"
+    .local v0, "en":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/JsonNode;>;"
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v2
@@ -1566,15 +1561,15 @@
     goto :goto_0
 
     .line 594
-    .end local v0           #en:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/JsonNode;>;"
-    .end local v1           #i$:Ljava/util/Iterator;
+    .end local v0    # "en":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/JsonNode;>;"
+    .end local v1    # "i$":Ljava/util/Iterator;
     :cond_0
     return-void
 .end method
 
 .method public putNull(Ljava/lang/String;)V
     .locals 1
-    .parameter "fieldName"
+    .param p1, "fieldName"    # Ljava/lang/String;
 
     .prologue
     .line 447
@@ -1590,7 +1585,7 @@
 
 .method public putObject(Ljava/lang/String;)Lcom/flurry/org/codehaus/jackson/node/ObjectNode;
     .locals 1
-    .parameter "fieldName"
+    .param p1, "fieldName"    # Ljava/lang/String;
 
     .prologue
     .line 435
@@ -1599,7 +1594,7 @@
     move-result-object v0
 
     .line 436
-    .local v0, n:Lcom/flurry/org/codehaus/jackson/node/ObjectNode;
+    .local v0, "n":Lcom/flurry/org/codehaus/jackson/node/ObjectNode;
     invoke-direct {p0, p1, v0}, Lcom/flurry/org/codehaus/jackson/node/ObjectNode;->_put(Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/JsonNode;)Lcom/flurry/org/codehaus/jackson/JsonNode;
 
     .line 437
@@ -1608,8 +1603,8 @@
 
 .method public putPOJO(Ljava/lang/String;Ljava/lang/Object;)V
     .locals 1
-    .parameter "fieldName"
-    .parameter "pojo"
+    .param p1, "fieldName"    # Ljava/lang/String;
+    .param p2, "pojo"    # Ljava/lang/Object;
 
     .prologue
     .line 442
@@ -1625,7 +1620,7 @@
 
 .method public remove(Ljava/lang/String;)Lcom/flurry/org/codehaus/jackson/JsonNode;
     .locals 1
-    .parameter "fieldName"
+    .param p1, "fieldName"    # Ljava/lang/String;
 
     .prologue
     .line 283
@@ -1640,7 +1635,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/flurry/org/codehaus/jackson/node/ObjectNode;
     check-cast p0, Lcom/flurry/org/codehaus/jackson/JsonNode;
 
     move-object v0, p0
@@ -1649,7 +1644,7 @@
     :goto_0
     return-object v0
 
-    .restart local p0
+    .restart local p0    # "this":Lcom/flurry/org/codehaus/jackson/node/ObjectNode;
     :cond_0
     const/4 v0, 0x0
 
@@ -1658,7 +1653,6 @@
 
 .method public remove(Ljava/util/Collection;)Lcom/flurry/org/codehaus/jackson/node/ObjectNode;
     .locals 3
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1672,7 +1666,7 @@
 
     .prologue
     .line 301
-    .local p1, fieldNames:Ljava/util/Collection;,"Ljava/util/Collection<Ljava/lang/String;>;"
+    .local p1, "fieldNames":Ljava/util/Collection;, "Ljava/util/Collection<Ljava/lang/String;>;"
     iget-object v2, p0, Lcom/flurry/org/codehaus/jackson/node/ObjectNode;->_children:Ljava/util/LinkedHashMap;
 
     if-eqz v2, :cond_0
@@ -1682,7 +1676,7 @@
 
     move-result-object v1
 
-    .local v1, i$:Ljava/util/Iterator;
+    .local v1, "i$":Ljava/util/Iterator;
     :goto_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
@@ -1697,7 +1691,7 @@
     check-cast v0, Ljava/lang/String;
 
     .line 303
-    .local v0, fieldName:Ljava/lang/String;
+    .local v0, "fieldName":Ljava/lang/String;
     iget-object v2, p0, Lcom/flurry/org/codehaus/jackson/node/ObjectNode;->_children:Ljava/util/LinkedHashMap;
 
     invoke-virtual {v2, v0}, Ljava/util/LinkedHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1705,8 +1699,8 @@
     goto :goto_0
 
     .line 306
-    .end local v0           #fieldName:Ljava/lang/String;
-    .end local v1           #i$:Ljava/util/Iterator;
+    .end local v0    # "fieldName":Ljava/lang/String;
+    .end local v1    # "i$":Ljava/util/Iterator;
     :cond_0
     return-object p0
 .end method
@@ -1738,7 +1732,6 @@
 
 .method public retain(Ljava/util/Collection;)Lcom/flurry/org/codehaus/jackson/node/ObjectNode;
     .locals 3
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1752,7 +1745,7 @@
 
     .prologue
     .line 380
-    .local p1, fieldNames:Ljava/util/Collection;,"Ljava/util/Collection<Ljava/lang/String;>;"
+    .local p1, "fieldNames":Ljava/util/Collection;, "Ljava/util/Collection<Ljava/lang/String;>;"
     iget-object v2, p0, Lcom/flurry/org/codehaus/jackson/node/ObjectNode;->_children:Ljava/util/LinkedHashMap;
 
     if-eqz v2, :cond_1
@@ -1769,7 +1762,7 @@
     move-result-object v0
 
     .line 382
-    .local v0, entries:Ljava/util/Iterator;,"Ljava/util/Iterator<Ljava/util/Map$Entry<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/JsonNode;>;>;"
+    .local v0, "entries":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/util/Map$Entry<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/JsonNode;>;>;"
     :cond_0
     :goto_0
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
@@ -1786,7 +1779,7 @@
     check-cast v1, Ljava/util/Map$Entry;
 
     .line 384
-    .local v1, entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/JsonNode;>;"
+    .local v1, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/JsonNode;>;"
     invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v2
@@ -1803,15 +1796,15 @@
     goto :goto_0
 
     .line 389
-    .end local v0           #entries:Ljava/util/Iterator;,"Ljava/util/Iterator<Ljava/util/Map$Entry<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/JsonNode;>;>;"
-    .end local v1           #entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/JsonNode;>;"
+    .end local v0    # "entries":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/util/Map$Entry<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/JsonNode;>;>;"
+    .end local v1    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/JsonNode;>;"
     :cond_1
     return-object p0
 .end method
 
 .method public varargs retain([Ljava/lang/String;)Lcom/flurry/org/codehaus/jackson/node/ObjectNode;
     .locals 1
-    .parameter "fieldNames"
+    .param p1, "fieldNames"    # [Ljava/lang/String;
 
     .prologue
     .line 403
@@ -1828,8 +1821,8 @@
 
 .method public final serialize(Lcom/flurry/org/codehaus/jackson/JsonGenerator;Lcom/flurry/org/codehaus/jackson/map/SerializerProvider;)V
     .locals 3
-    .parameter "jg"
-    .parameter "provider"
+    .param p1, "jg"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator;
+    .param p2, "provider"    # Lcom/flurry/org/codehaus/jackson/map/SerializerProvider;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -1857,8 +1850,8 @@
 
     move-result-object v1
 
-    .end local p0
-    .local v1, i$:Ljava/util/Iterator;
+    .end local p0    # "this":Lcom/flurry/org/codehaus/jackson/node/ObjectNode;
+    .local v1, "i$":Ljava/util/Iterator;
     :goto_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
@@ -1873,7 +1866,7 @@
     check-cast v0, Ljava/util/Map$Entry;
 
     .line 224
-    .local v0, en:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/JsonNode;>;"
+    .local v0, "en":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/JsonNode;>;"
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object p0
@@ -1894,8 +1887,8 @@
     goto :goto_0
 
     .line 233
-    .end local v0           #en:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/JsonNode;>;"
-    .end local v1           #i$:Ljava/util/Iterator;
+    .end local v0    # "en":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/JsonNode;>;"
+    .end local v1    # "i$":Ljava/util/Iterator;
     :cond_0
     invoke-virtual {p1}, Lcom/flurry/org/codehaus/jackson/JsonGenerator;->writeEndObject()V
 
@@ -1905,9 +1898,9 @@
 
 .method public serializeWithType(Lcom/flurry/org/codehaus/jackson/JsonGenerator;Lcom/flurry/org/codehaus/jackson/map/SerializerProvider;Lcom/flurry/org/codehaus/jackson/map/TypeSerializer;)V
     .locals 3
-    .parameter "jg"
-    .parameter "provider"
-    .parameter "typeSer"
+    .param p1, "jg"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator;
+    .param p2, "provider"    # Lcom/flurry/org/codehaus/jackson/map/SerializerProvider;
+    .param p3, "typeSer"    # Lcom/flurry/org/codehaus/jackson/map/TypeSerializer;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -1935,7 +1928,7 @@
 
     move-result-object v1
 
-    .local v1, i$:Ljava/util/Iterator;
+    .local v1, "i$":Ljava/util/Iterator;
     :goto_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
@@ -1950,7 +1943,7 @@
     check-cast v0, Ljava/util/Map$Entry;
 
     .line 244
-    .local v0, en:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/JsonNode;>;"
+    .local v0, "en":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/JsonNode;>;"
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v2
@@ -1971,8 +1964,8 @@
     goto :goto_0
 
     .line 248
-    .end local v0           #en:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/JsonNode;>;"
-    .end local v1           #i$:Ljava/util/Iterator;
+    .end local v0    # "en":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/JsonNode;>;"
+    .end local v1    # "i$":Ljava/util/Iterator;
     :cond_0
     invoke-virtual {p3, p0, p1}, Lcom/flurry/org/codehaus/jackson/map/TypeSerializer;->writeTypeSuffixForObject(Ljava/lang/Object;Lcom/flurry/org/codehaus/jackson/JsonGenerator;)V
 
@@ -2022,7 +2015,7 @@
     invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(I)V
 
     .line 639
-    .local v3, sb:Ljava/lang/StringBuilder;
+    .local v3, "sb":Ljava/lang/StringBuilder;
     const-string v4, "{"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -2036,7 +2029,7 @@
     const/4 v0, 0x0
 
     .line 642
-    .local v0, count:I
+    .local v0, "count":I
     iget-object v4, p0, Lcom/flurry/org/codehaus/jackson/node/ObjectNode;->_children:Ljava/util/LinkedHashMap;
 
     invoke-virtual {v4}, Ljava/util/LinkedHashMap;->entrySet()Ljava/util/Set;
@@ -2047,8 +2040,8 @@
 
     move-result-object v2
 
-    .end local p0
-    .local v2, i$:Ljava/util/Iterator;
+    .end local p0    # "this":Lcom/flurry/org/codehaus/jackson/node/ObjectNode;
+    .local v2, "i$":Ljava/util/Iterator;
     :goto_0
     invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
@@ -2063,7 +2056,7 @@
     check-cast v1, Ljava/util/Map$Entry;
 
     .line 643
-    .local v1, en:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/JsonNode;>;"
+    .local v1, "en":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/JsonNode;>;"
     if-lez v0, :cond_0
 
     .line 644
@@ -2105,9 +2098,9 @@
     goto :goto_0
 
     .line 652
-    .end local v0           #count:I
-    .end local v1           #en:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/JsonNode;>;"
-    .end local v2           #i$:Ljava/util/Iterator;
+    .end local v0    # "count":I
+    .end local v1    # "en":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/JsonNode;>;"
+    .end local v2    # "i$":Ljava/util/Iterator;
     :cond_1
     const-string v4, "}"
 
@@ -2123,7 +2116,7 @@
 
 .method public bridge synthetic with(Ljava/lang/String;)Lcom/flurry/org/codehaus/jackson/JsonNode;
     .locals 1
-    .parameter "x0"
+    .param p1, "x0"    # Ljava/lang/String;
 
     .prologue
     .line 14
@@ -2136,7 +2129,7 @@
 
 .method public with(Ljava/lang/String;)Lcom/flurry/org/codehaus/jackson/node/ObjectNode;
     .locals 5
-    .parameter "propertyName"
+    .param p1, "propertyName"    # Ljava/lang/String;
 
     .prologue
     .line 95
@@ -2158,7 +2151,7 @@
     move-result-object v1
 
     .line 109
-    .local v1, result:Lcom/flurry/org/codehaus/jackson/node/ObjectNode;
+    .local v1, "result":Lcom/flurry/org/codehaus/jackson/node/ObjectNode;
     iget-object v2, p0, Lcom/flurry/org/codehaus/jackson/node/ObjectNode;->_children:Ljava/util/LinkedHashMap;
 
     invoke-virtual {v2, p1, v1}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -2166,7 +2159,7 @@
     move-object v2, v1
 
     .line 110
-    .end local v1           #result:Lcom/flurry/org/codehaus/jackson/node/ObjectNode;
+    .end local v1    # "result":Lcom/flurry/org/codehaus/jackson/node/ObjectNode;
     :goto_0
     return-object v2
 
@@ -2181,7 +2174,7 @@
     check-cast v0, Lcom/flurry/org/codehaus/jackson/JsonNode;
 
     .line 99
-    .local v0, n:Lcom/flurry/org/codehaus/jackson/JsonNode;
+    .local v0, "n":Lcom/flurry/org/codehaus/jackson/JsonNode;
     if-eqz v0, :cond_0
 
     .line 100
@@ -2192,13 +2185,13 @@
     .line 101
     check-cast v0, Lcom/flurry/org/codehaus/jackson/node/ObjectNode;
 
-    .end local v0           #n:Lcom/flurry/org/codehaus/jackson/JsonNode;
+    .end local v0    # "n":Lcom/flurry/org/codehaus/jackson/JsonNode;
     move-object v2, v0
 
     goto :goto_0
 
     .line 103
-    .restart local v0       #n:Lcom/flurry/org/codehaus/jackson/JsonNode;
+    .restart local v0    # "n":Lcom/flurry/org/codehaus/jackson/JsonNode;
     :cond_2
     new-instance v2, Ljava/lang/UnsupportedOperationException;
 

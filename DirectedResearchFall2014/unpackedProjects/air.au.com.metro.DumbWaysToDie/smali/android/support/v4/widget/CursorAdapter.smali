@@ -3,8 +3,8 @@
 .source "CursorAdapter.java"
 
 # interfaces
-.implements Landroid/widget/Filterable;
 .implements Landroid/support/v4/widget/CursorFilter$CursorFilterClient;
+.implements Landroid/widget/Filterable;
 
 
 # annotations
@@ -49,8 +49,8 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Landroid/database/Cursor;)V
     .locals 1
-    .parameter "context"
-    .parameter "c"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "c"    # Landroid/database/Cursor;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -69,9 +69,9 @@
 
 .method public constructor <init>(Landroid/content/Context;Landroid/database/Cursor;I)V
     .locals 0
-    .parameter "context"
-    .parameter "c"
-    .parameter "flags"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "c"    # Landroid/database/Cursor;
+    .param p3, "flags"    # I
 
     .prologue
     .line 150
@@ -86,9 +86,9 @@
 
 .method public constructor <init>(Landroid/content/Context;Landroid/database/Cursor;Z)V
     .locals 1
-    .parameter "context"
-    .parameter "c"
-    .parameter "autoRequery"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "c"    # Landroid/database/Cursor;
+    .param p3, "autoRequery"    # Z
 
     .prologue
     .line 137
@@ -119,7 +119,7 @@
 
 .method public changeCursor(Landroid/database/Cursor;)V
     .locals 1
-    .parameter "cursor"
+    .param p1, "cursor"    # Landroid/database/Cursor;
 
     .prologue
     .line 315
@@ -128,7 +128,7 @@
     move-result-object v0
 
     .line 316
-    .local v0, old:Landroid/database/Cursor;
+    .local v0, "old":Landroid/database/Cursor;
     if-eqz v0, :cond_0
 
     .line 317
@@ -141,7 +141,7 @@
 
 .method public convertToString(Landroid/database/Cursor;)Ljava/lang/CharSequence;
     .locals 1
-    .parameter "cursor"
+    .param p1, "cursor"    # Landroid/database/Cursor;
 
     .prologue
     .line 367
@@ -202,9 +202,9 @@
 
 .method public getDropDownView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
     .locals 3
-    .parameter "position"
-    .parameter "convertView"
-    .parameter "parent"
+    .param p1, "position"    # I
+    .param p2, "convertView"    # Landroid/view/View;
+    .param p3, "parent"    # Landroid/view/ViewGroup;
 
     .prologue
     .line 262
@@ -230,7 +230,7 @@
     move-result-object v0
 
     .line 270
-    .local v0, v:Landroid/view/View;
+    .local v0, "v":Landroid/view/View;
     :goto_0
     iget-object v1, p0, Landroid/support/v4/widget/CursorAdapter;->mContext:Landroid/content/Context;
 
@@ -241,7 +241,7 @@
     move-object v1, v0
 
     .line 273
-    .end local v0           #v:Landroid/view/View;
+    .end local v0    # "v":Landroid/view/View;
     :goto_1
     return-object v1
 
@@ -249,11 +249,11 @@
     :cond_0
     move-object v0, p2
 
-    .restart local v0       #v:Landroid/view/View;
+    .restart local v0    # "v":Landroid/view/View;
     goto :goto_0
 
     .line 273
-    .end local v0           #v:Landroid/view/View;
+    .end local v0    # "v":Landroid/view/View;
     :cond_1
     const/4 v1, 0x0
 
@@ -295,7 +295,7 @@
 
 .method public getItem(I)Ljava/lang/Object;
     .locals 1
-    .parameter "position"
+    .param p1, "position"    # I
 
     .prologue
     .line 212
@@ -327,7 +327,7 @@
 
 .method public getItemId(I)J
     .locals 3
-    .parameter "position"
+    .param p1, "position"    # I
 
     .prologue
     const-wide/16 v1, 0x0
@@ -378,9 +378,9 @@
 
 .method public getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
     .locals 4
-    .parameter "position"
-    .parameter "convertView"
-    .parameter "parent"
+    .param p1, "position"    # I
+    .param p2, "convertView"    # Landroid/view/View;
+    .param p3, "parent"    # Landroid/view/ViewGroup;
 
     .prologue
     .line 244
@@ -446,7 +446,7 @@
     move-result-object v0
 
     .line 256
-    .local v0, v:Landroid/view/View;
+    .local v0, "v":Landroid/view/View;
     :goto_0
     iget-object v1, p0, Landroid/support/v4/widget/CursorAdapter;->mContext:Landroid/content/Context;
 
@@ -458,11 +458,11 @@
     return-object v0
 
     .line 254
-    .end local v0           #v:Landroid/view/View;
+    .end local v0    # "v":Landroid/view/View;
     :cond_2
     move-object v0, p2
 
-    .restart local v0       #v:Landroid/view/View;
+    .restart local v0    # "v":Landroid/view/View;
     goto :goto_0
 .end method
 
@@ -478,9 +478,9 @@
 
 .method init(Landroid/content/Context;Landroid/database/Cursor;I)V
     .locals 5
-    .parameter "context"
-    .parameter "c"
-    .parameter "flags"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "c"    # Landroid/database/Cursor;
+    .param p3, "flags"    # I
 
     .prologue
     const/4 v4, 0x0
@@ -507,7 +507,7 @@
     move v0, v2
 
     .line 171
-    .local v0, cursorPresent:Z
+    .local v0, "cursorPresent":Z
     :goto_1
     iput-object p2, p0, Landroid/support/v4/widget/CursorAdapter;->mCursor:Landroid/database/Cursor;
 
@@ -578,7 +578,7 @@
     return-void
 
     .line 168
-    .end local v0           #cursorPresent:Z
+    .end local v0    # "cursorPresent":Z
     :cond_2
     iput-boolean v4, p0, Landroid/support/v4/widget/CursorAdapter;->mAutoRequery:Z
 
@@ -591,7 +591,7 @@
     goto :goto_1
 
     .line 174
-    .restart local v0       #cursorPresent:Z
+    .restart local v0    # "cursorPresent":Z
     :cond_4
     const/4 v1, -0x1
 
@@ -609,9 +609,9 @@
 
 .method protected init(Landroid/content/Context;Landroid/database/Cursor;Z)V
     .locals 1
-    .parameter "context"
-    .parameter "c"
-    .parameter "autoRequery"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "c"    # Landroid/database/Cursor;
+    .param p3, "autoRequery"    # Z
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -636,9 +636,9 @@
 
 .method public newDropDownView(Landroid/content/Context;Landroid/database/Cursor;Landroid/view/ViewGroup;)Landroid/view/View;
     .locals 1
-    .parameter "context"
-    .parameter "cursor"
-    .parameter "parent"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "cursor"    # Landroid/database/Cursor;
+    .param p3, "parent"    # Landroid/view/ViewGroup;
 
     .prologue
     .line 296
@@ -689,7 +689,7 @@
 
 .method public runQueryOnBackgroundThread(Ljava/lang/CharSequence;)Landroid/database/Cursor;
     .locals 1
-    .parameter "constraint"
+    .param p1, "constraint"    # Ljava/lang/CharSequence;
 
     .prologue
     .line 396
@@ -716,7 +716,7 @@
 
 .method public setFilterQueryProvider(Landroid/widget/FilterQueryProvider;)V
     .locals 0
-    .parameter "filterQueryProvider"
+    .param p1, "filterQueryProvider"    # Landroid/widget/FilterQueryProvider;
 
     .prologue
     .line 436
@@ -728,7 +728,7 @@
 
 .method public swapCursor(Landroid/database/Cursor;)Landroid/database/Cursor;
     .locals 2
-    .parameter "newCursor"
+    .param p1, "newCursor"    # Landroid/database/Cursor;
 
     .prologue
     .line 332
@@ -748,7 +748,7 @@
     iget-object v0, p0, Landroid/support/v4/widget/CursorAdapter;->mCursor:Landroid/database/Cursor;
 
     .line 336
-    .local v0, oldCursor:Landroid/database/Cursor;
+    .local v0, "oldCursor":Landroid/database/Cursor;
     if-eqz v0, :cond_2
 
     .line 337

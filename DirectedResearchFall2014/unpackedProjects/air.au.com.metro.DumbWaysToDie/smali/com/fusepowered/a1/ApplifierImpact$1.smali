@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/a1/ApplifierImpact;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1
@@ -40,14 +39,14 @@
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 1
-    .parameter "dialog"
-    .parameter "which"
+    .param p1, "dialog"    # Landroid/content/DialogInterface;
+    .param p2, "which"    # I
 
     .prologue
     .line 397
     iget-object v0, p0, Lcom/fusepowered/a1/ApplifierImpact$1;->this$0:Lcom/fusepowered/a1/ApplifierImpact;
 
-    #getter for: Lcom/fusepowered/a1/ApplifierImpact;->_alertDialog:Landroid/app/AlertDialog;
+    # getter for: Lcom/fusepowered/a1/ApplifierImpact;->_alertDialog:Landroid/app/AlertDialog;
     invoke-static {v0}, Lcom/fusepowered/a1/ApplifierImpact;->access$4(Lcom/fusepowered/a1/ApplifierImpact;)Landroid/app/AlertDialog;
 
     move-result-object v0

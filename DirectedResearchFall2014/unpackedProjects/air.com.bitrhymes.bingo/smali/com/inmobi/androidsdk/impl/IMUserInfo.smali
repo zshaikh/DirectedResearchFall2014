@@ -68,7 +68,6 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
-    .parameter
 
     .prologue
     const/4 v0, 0x0
@@ -125,7 +124,6 @@
 
 .method private a(D)V
     .locals 0
-    .parameter
 
     .prologue
     .line 454
@@ -137,7 +135,6 @@
 
 .method private a(I)V
     .locals 1
-    .parameter
 
     .prologue
     .line 180
@@ -153,7 +150,6 @@
 
 .method private a(Landroid/content/Context;)V
     .locals 3
-    .parameter
 
     .prologue
     const-string v0, "inmobisdkaid"
@@ -243,7 +239,6 @@
 
 .method private a(Landroid/location/Location;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 636
@@ -284,7 +279,6 @@
 
 .method private declared-synchronized a(Landroid/location/LocationManager;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 414
@@ -311,7 +305,6 @@
 
 .method private a(Lcom/inmobi/androidsdk/IMAdRequest;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 123
@@ -323,7 +316,6 @@
 
 .method private a(Ljava/lang/String;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 100
@@ -335,7 +327,6 @@
 
 .method private a(Z)V
     .locals 0
-    .parameter
 
     .prologue
     .line 439
@@ -357,7 +348,6 @@
 
 .method private b(D)V
     .locals 0
-    .parameter
 
     .prologue
     .line 469
@@ -369,7 +359,6 @@
 
 .method private b(I)V
     .locals 0
-    .parameter
 
     .prologue
     .line 847
@@ -381,7 +370,6 @@
 
 .method private b(Ljava/lang/String;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 115
@@ -393,7 +381,6 @@
 
 .method private b(Z)V
     .locals 0
-    .parameter
 
     .prologue
     .line 499
@@ -429,7 +416,6 @@
 
 .method private c(D)V
     .locals 0
-    .parameter
 
     .prologue
     .line 484
@@ -441,7 +427,6 @@
 
 .method private c(Ljava/lang/String;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 138
@@ -453,7 +438,6 @@
 
 .method private d(Ljava/lang/String;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 153
@@ -491,7 +475,6 @@
 
 .method private e(Ljava/lang/String;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 175
@@ -706,7 +689,6 @@
 
 .method private f(Ljava/lang/String;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 184
@@ -820,7 +802,6 @@
 
 .method private g(Ljava/lang/String;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 226
@@ -886,7 +867,6 @@
 
 .method private h(Ljava/lang/String;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 241
@@ -1351,7 +1331,6 @@
 
 .method private i(Ljava/lang/String;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 270
@@ -2077,7 +2056,6 @@
 
 .method public setAdUnitSlot(Ljava/lang/String;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 808
@@ -2089,7 +2067,6 @@
 
 .method public setPhoneDefaultUserAgent(Ljava/lang/String;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 800
@@ -2101,7 +2078,6 @@
 
 .method public setRefTagKey(Ljava/lang/String;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 788
@@ -2113,7 +2089,6 @@
 
 .method public setRefTagValue(Ljava/lang/String;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 796
@@ -2125,7 +2100,6 @@
 
 .method public setRefreshType(I)V
     .locals 1
-    .parameter
 
     .prologue
     .line 860
@@ -2151,7 +2125,6 @@
 
 .method public setScreenDensity(Ljava/lang/String;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 832
@@ -2163,7 +2136,6 @@
 
 .method public setScreenSize(Ljava/lang/String;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 824
@@ -2175,7 +2147,6 @@
 
 .method public setSlotId(Ljava/lang/String;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 816
@@ -2187,8 +2158,6 @@
 
 .method public declared-synchronized updateInfo(Ljava/lang/String;Lcom/inmobi/androidsdk/IMAdRequest;)V
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 537

@@ -32,7 +32,7 @@
 # virtual methods
 .method public build(Lcom/fusepowered/push/FuseNotificationCompat$Builder;)Landroid/app/Notification;
     .locals 21
-    .parameter "b"
+    .param p1, "b"    # Lcom/fusepowered/push/FuseNotificationCompat$Builder;
 
     .prologue
     .line 117
@@ -137,7 +137,7 @@
     invoke-direct/range {v1 .. v17}, Lcom/fusepowered/push/FuseNotificationCompatJellybean;-><init>(Landroid/content/Context;Landroid/app/Notification;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Landroid/widget/RemoteViews;ILandroid/app/PendingIntent;Landroid/app/PendingIntent;Landroid/graphics/Bitmap;IIZZILjava/lang/CharSequence;)V
 
     .line 122
-    .local v1, jbBuilder:Lcom/fusepowered/push/FuseNotificationCompatJellybean;
+    .local v1, "jbBuilder":Lcom/fusepowered/push/FuseNotificationCompatJellybean;
     move-object/from16 v0, p1
 
     iget-object v0, v0, Lcom/fusepowered/push/FuseNotificationCompat$Builder;->mActions:Ljava/util/ArrayList;
@@ -148,7 +148,7 @@
 
     move-result-object v19
 
-    .local v19, i$:Ljava/util/Iterator;
+    .local v19, "i$":Ljava/util/Iterator;
     :goto_0
     invoke-interface/range {v19 .. v19}, Ljava/util/Iterator;->hasNext()Z
 
@@ -163,7 +163,7 @@
     check-cast v18, Lcom/fusepowered/push/FuseNotificationCompat$Action;
 
     .line 123
-    .local v18, action:Lcom/fusepowered/push/FuseNotificationCompat$Action;
+    .local v18, "action":Lcom/fusepowered/push/FuseNotificationCompat$Action;
     move-object/from16 v0, v18
 
     iget v0, v0, Lcom/fusepowered/push/FuseNotificationCompat$Action;->icon:I
@@ -187,7 +187,7 @@
     goto :goto_0
 
     .line 125
-    .end local v18           #action:Lcom/fusepowered/push/FuseNotificationCompat$Action;
+    .end local v18    # "action":Lcom/fusepowered/push/FuseNotificationCompat$Action;
     :cond_0
     move-object/from16 v0, p1
 
@@ -218,7 +218,7 @@
     check-cast v20, Lcom/fusepowered/push/FuseNotificationCompat$BigTextStyle;
 
     .line 128
-    .local v20, style:Lcom/fusepowered/push/FuseNotificationCompat$BigTextStyle;
+    .local v20, "style":Lcom/fusepowered/push/FuseNotificationCompat$BigTextStyle;
     move-object/from16 v0, v20
 
     iget-object v0, v0, Lcom/fusepowered/push/FuseNotificationCompat$BigTextStyle;->mBigContentTitle:Ljava/lang/CharSequence;
@@ -246,7 +246,7 @@
     invoke-virtual {v1, v2, v3, v4, v5}, Lcom/fusepowered/push/FuseNotificationCompatJellybean;->addBigTextStyle(Ljava/lang/CharSequence;ZLjava/lang/CharSequence;Ljava/lang/CharSequence;)V
 
     .line 148
-    .end local v20           #style:Lcom/fusepowered/push/FuseNotificationCompat$BigTextStyle;
+    .end local v20    # "style":Lcom/fusepowered/push/FuseNotificationCompat$BigTextStyle;
     :cond_1
     :goto_1
     invoke-virtual {v1}, Lcom/fusepowered/push/FuseNotificationCompatJellybean;->build()Landroid/app/Notification;
@@ -277,7 +277,7 @@
     check-cast v20, Lcom/fusepowered/push/FuseNotificationCompat$InboxStyle;
 
     .line 134
-    .local v20, style:Lcom/fusepowered/push/FuseNotificationCompat$InboxStyle;
+    .local v20, "style":Lcom/fusepowered/push/FuseNotificationCompat$InboxStyle;
     move-object/from16 v0, v20
 
     iget-object v0, v0, Lcom/fusepowered/push/FuseNotificationCompat$InboxStyle;->mBigContentTitle:Ljava/lang/CharSequence;
@@ -307,7 +307,7 @@
     goto :goto_1
 
     .line 138
-    .end local v20           #style:Lcom/fusepowered/push/FuseNotificationCompat$InboxStyle;
+    .end local v20    # "style":Lcom/fusepowered/push/FuseNotificationCompat$InboxStyle;
     :cond_3
     move-object/from16 v0, p1
 
@@ -329,7 +329,7 @@
     check-cast v20, Lcom/fusepowered/push/FuseNotificationCompat$BigPictureStyle;
 
     .line 140
-    .local v20, style:Lcom/fusepowered/push/FuseNotificationCompat$BigPictureStyle;
+    .local v20, "style":Lcom/fusepowered/push/FuseNotificationCompat$BigPictureStyle;
     move-object/from16 v0, v20
 
     iget-object v0, v0, Lcom/fusepowered/push/FuseNotificationCompat$BigPictureStyle;->mBigContentTitle:Ljava/lang/CharSequence;

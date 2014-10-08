@@ -33,7 +33,7 @@
 # direct methods
 .method public constructor <init>(Lcom/fusepowered/m1/android/VideoAd;)V
     .locals 1
-    .parameter "videoAd"
+    .param p1, "videoAd"    # Lcom/fusepowered/m1/android/VideoAd;
 
     .prologue
     .line 461
@@ -54,8 +54,8 @@
 # virtual methods
 .method public accept(Ljava/io/File;Ljava/lang/String;)Z
     .locals 4
-    .parameter "dir"
-    .parameter "filename"
+    .param p1, "dir"    # Ljava/io/File;
+    .param p2, "filename"    # Ljava/lang/String;
 
     .prologue
     const/4 v3, 0x0
@@ -70,7 +70,7 @@
     check-cast v1, Lcom/fusepowered/m1/android/VideoAd;
 
     .line 469
-    .local v1, videoAd:Lcom/fusepowered/m1/android/VideoAd;
+    .local v1, "videoAd":Lcom/fusepowered/m1/android/VideoAd;
     if-eqz v1, :cond_1
 
     .line 471
@@ -79,18 +79,18 @@
     move-result-object v0
 
     .line 472
-    .local v0, id:Ljava/lang/String;
+    .local v0, "id":Ljava/lang/String;
     if-nez v0, :cond_0
 
     move v2, v3
 
     .line 476
-    .end local v0           #id:Ljava/lang/String;
+    .end local v0    # "id":Ljava/lang/String;
     :goto_0
     return v2
 
     .line 474
-    .restart local v0       #id:Ljava/lang/String;
+    .restart local v0    # "id":Ljava/lang/String;
     :cond_0
     invoke-virtual {p2, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
@@ -98,7 +98,7 @@
 
     goto :goto_0
 
-    .end local v0           #id:Ljava/lang/String;
+    .end local v0    # "id":Ljava/lang/String;
     :cond_1
     move v2, v3
 

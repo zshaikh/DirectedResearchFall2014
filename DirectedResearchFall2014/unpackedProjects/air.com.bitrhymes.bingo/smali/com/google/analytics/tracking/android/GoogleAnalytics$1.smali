@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/google/analytics/tracking/android/GoogleAnalytics;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 66
@@ -39,7 +38,7 @@
 # virtual methods
 .method public reportAppOptOut(Z)V
     .locals 2
-    .parameter "optOut"
+    .param p1, "optOut"    # Z
 
     .prologue
     .line 70
@@ -49,7 +48,7 @@
 
     move-result-object v1
 
-    #setter for: Lcom/google/analytics/tracking/android/GoogleAnalytics;->mAppOptOut:Ljava/lang/Boolean;
+    # setter for: Lcom/google/analytics/tracking/android/GoogleAnalytics;->mAppOptOut:Ljava/lang/Boolean;
     invoke-static {v0, v1}, Lcom/google/analytics/tracking/android/GoogleAnalytics;->access$002(Lcom/google/analytics/tracking/android/GoogleAnalytics;Ljava/lang/Boolean;)Ljava/lang/Boolean;
 
     .line 71

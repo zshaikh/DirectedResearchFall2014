@@ -105,7 +105,7 @@
 
 .method public setAccountId(Ljava/lang/String;)V
     .locals 0
-    .parameter "accountId"
+    .param p1, "accountId"    # Ljava/lang/String;
 
     .prologue
     .line 20
@@ -117,7 +117,7 @@
 
 .method public setAlias(Ljava/lang/String;)V
     .locals 0
-    .parameter "alias"
+    .param p1, "alias"    # Ljava/lang/String;
 
     .prologue
     .line 36
@@ -129,7 +129,7 @@
 
 .method public setCanAttack(Z)V
     .locals 0
-    .parameter "canAttack"
+    .param p1, "canAttack"    # Z
 
     .prologue
     .line 68
@@ -141,7 +141,7 @@
 
 .method public setFuseId(Ljava/lang/String;)V
     .locals 0
-    .parameter "fuseId"
+    .param p1, "fuseId"    # Ljava/lang/String;
 
     .prologue
     .line 28
@@ -153,7 +153,7 @@
 
 .method public setLevel(I)V
     .locals 0
-    .parameter "level"
+    .param p1, "level"    # I
 
     .prologue
     .line 52
@@ -165,7 +165,7 @@
 
 .method public setPending(I)V
     .locals 0
-    .parameter "pending"
+    .param p1, "pending"    # I
 
     .prologue
     .line 60
@@ -177,7 +177,7 @@
 
 .method public setType(Ljava/lang/String;)V
     .locals 0
-    .parameter "type"
+    .param p1, "type"    # Ljava/lang/String;
 
     .prologue
     .line 44
@@ -283,7 +283,7 @@
     move-result-object v0
 
     .line 81
-    .local v0, buf:Ljava/lang/StringBuilder;
+    .local v0, "buf":Ljava/lang/StringBuilder;
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1

@@ -79,7 +79,7 @@
 
 .method protected constructor <init>(Landroid/os/Parcel;)V
     .locals 0
-    .parameter "in"
+    .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
     .line 189

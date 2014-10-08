@@ -21,7 +21,7 @@
 # direct methods
 .method public constructor <init>(I)V
     .locals 1
-    .parameter "size"
+    .param p1, "size"    # I
 
     .prologue
     .line 407

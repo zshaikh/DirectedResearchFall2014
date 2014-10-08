@@ -34,7 +34,6 @@
 # direct methods
 .method private constructor <init>(Lcom/bitrhymes/nativeutils/utils/OpenUDID_manager;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 233
@@ -47,8 +46,6 @@
 
 .method synthetic constructor <init>(Lcom/bitrhymes/nativeutils/utils/OpenUDID_manager;Lcom/bitrhymes/nativeutils/utils/OpenUDID_manager$ValueComparator;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 233
@@ -61,14 +58,14 @@
 # virtual methods
 .method public compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 2
-    .parameter "a"
-    .parameter "b"
+    .param p1, "a"    # Ljava/lang/Object;
+    .param p2, "b"    # Ljava/lang/Object;
 
     .prologue
     .line 236
     iget-object v0, p0, Lcom/bitrhymes/nativeutils/utils/OpenUDID_manager$ValueComparator;->this$0:Lcom/bitrhymes/nativeutils/utils/OpenUDID_manager;
 
-    #getter for: Lcom/bitrhymes/nativeutils/utils/OpenUDID_manager;->mReceivedOpenUDIDs:Ljava/util/Map;
+    # getter for: Lcom/bitrhymes/nativeutils/utils/OpenUDID_manager;->mReceivedOpenUDIDs:Ljava/util/Map;
     invoke-static {v0}, Lcom/bitrhymes/nativeutils/utils/OpenUDID_manager;->access$0(Lcom/bitrhymes/nativeutils/utils/OpenUDID_manager;)Ljava/util/Map;
 
     move-result-object v0
@@ -85,7 +82,7 @@
 
     iget-object v0, p0, Lcom/bitrhymes/nativeutils/utils/OpenUDID_manager$ValueComparator;->this$0:Lcom/bitrhymes/nativeutils/utils/OpenUDID_manager;
 
-    #getter for: Lcom/bitrhymes/nativeutils/utils/OpenUDID_manager;->mReceivedOpenUDIDs:Ljava/util/Map;
+    # getter for: Lcom/bitrhymes/nativeutils/utils/OpenUDID_manager;->mReceivedOpenUDIDs:Ljava/util/Map;
     invoke-static {v0}, Lcom/bitrhymes/nativeutils/utils/OpenUDID_manager;->access$0(Lcom/bitrhymes/nativeutils/utils/OpenUDID_manager;)Ljava/util/Map;
 
     move-result-object v0
@@ -113,7 +110,7 @@
     :cond_0
     iget-object v0, p0, Lcom/bitrhymes/nativeutils/utils/OpenUDID_manager$ValueComparator;->this$0:Lcom/bitrhymes/nativeutils/utils/OpenUDID_manager;
 
-    #getter for: Lcom/bitrhymes/nativeutils/utils/OpenUDID_manager;->mReceivedOpenUDIDs:Ljava/util/Map;
+    # getter for: Lcom/bitrhymes/nativeutils/utils/OpenUDID_manager;->mReceivedOpenUDIDs:Ljava/util/Map;
     invoke-static {v0}, Lcom/bitrhymes/nativeutils/utils/OpenUDID_manager;->access$0(Lcom/bitrhymes/nativeutils/utils/OpenUDID_manager;)Ljava/util/Map;
 
     move-result-object v0
@@ -124,7 +121,7 @@
 
     iget-object v1, p0, Lcom/bitrhymes/nativeutils/utils/OpenUDID_manager$ValueComparator;->this$0:Lcom/bitrhymes/nativeutils/utils/OpenUDID_manager;
 
-    #getter for: Lcom/bitrhymes/nativeutils/utils/OpenUDID_manager;->mReceivedOpenUDIDs:Ljava/util/Map;
+    # getter for: Lcom/bitrhymes/nativeutils/utils/OpenUDID_manager;->mReceivedOpenUDIDs:Ljava/util/Map;
     invoke-static {v1}, Lcom/bitrhymes/nativeutils/utils/OpenUDID_manager;->access$0(Lcom/bitrhymes/nativeutils/utils/OpenUDID_manager;)Ljava/util/Map;
 
     move-result-object v1

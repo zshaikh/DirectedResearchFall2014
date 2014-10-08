@@ -32,7 +32,7 @@
 # virtual methods
 .method public getParentActivityIntent(Landroid/app/Activity;)Landroid/content/Intent;
     .locals 9
-    .parameter "activity"
+    .param p1, "activity"    # Landroid/app/Activity;
 
     .prologue
     const/4 v8, 0x0
@@ -43,7 +43,7 @@
     move-result-object v3
 
     .line 53
-    .local v3, parentName:Ljava/lang/String;
+    .local v3, "parentName":Ljava/lang/String;
     if-nez v3, :cond_0
 
     move-object v5, v8
@@ -59,14 +59,14 @@
     invoke-direct {v4, p1, v3}, Landroid/content/ComponentName;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
     .line 58
-    .local v4, target:Landroid/content/ComponentName;
+    .local v4, "target":Landroid/content/ComponentName;
     :try_start_0
     invoke-static {p1, v4}, Landroid/support/v4/app/NavUtils;->getParentActivityName(Landroid/content/Context;Landroid/content/ComponentName;)Ljava/lang/String;
 
     move-result-object v1
 
     .line 59
-    .local v1, grandparent:Ljava/lang/String;
+    .local v1, "grandparent":Ljava/lang/String;
     if-nez v1, :cond_1
 
     invoke-static {v4}, Landroid/support/v4/content/IntentCompat;->makeMainActivity(Landroid/content/ComponentName;)Landroid/content/Intent;
@@ -75,7 +75,7 @@
 
     move-object v2, v5
 
-    .local v2, parentIntent:Landroid/content/Intent;
+    .local v2, "parentIntent":Landroid/content/Intent;
     :goto_1
     move-object v5, v2
 
@@ -83,7 +83,7 @@
     goto :goto_0
 
     .line 59
-    .end local v2           #parentIntent:Landroid/content/Intent;
+    .end local v2    # "parentIntent":Landroid/content/Intent;
     :cond_1
     new-instance v5, Landroid/content/Intent;
 
@@ -100,14 +100,14 @@
     goto :goto_1
 
     .line 63
-    .end local v1           #grandparent:Ljava/lang/String;
+    .end local v1    # "grandparent":Ljava/lang/String;
     :catch_0
     move-exception v5
 
     move-object v0, v5
 
     .line 64
-    .local v0, e:Landroid/content/pm/PackageManager$NameNotFoundException;
+    .local v0, "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     const-string v5, "NavUtils"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -144,8 +144,8 @@
 
 .method public getParentActivityName(Landroid/content/Context;Landroid/content/pm/ActivityInfo;)Ljava/lang/String;
     .locals 4
-    .parameter "context"
-    .parameter "info"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "info"    # Landroid/content/pm/ActivityInfo;
 
     .prologue
     const/4 v3, 0x0
@@ -172,7 +172,7 @@
     move-result-object v0
 
     .line 87
-    .local v0, parentActivity:Ljava/lang/String;
+    .local v0, "parentActivity":Ljava/lang/String;
     if-nez v0, :cond_1
 
     move-object v1, v3
@@ -221,12 +221,12 @@
 
 .method public navigateUpTo(Landroid/app/Activity;Landroid/content/Intent;)V
     .locals 1
-    .parameter "activity"
-    .parameter "upIntent"
+    .param p1, "activity"    # Landroid/app/Activity;
+    .param p2, "upIntent"    # Landroid/content/Intent;
 
     .prologue
     .line 78
-    const/high16 v0, 0x400
+    const/high16 v0, 0x4000000
 
     invoke-virtual {p2, v0}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
@@ -242,8 +242,8 @@
 
 .method public shouldUpRecreateTask(Landroid/app/Activity;Landroid/content/Intent;)Z
     .locals 2
-    .parameter "activity"
-    .parameter "targetIntent"
+    .param p1, "activity"    # Landroid/app/Activity;
+    .param p2, "targetIntent"    # Landroid/content/Intent;
 
     .prologue
     .line 72
@@ -256,7 +256,7 @@
     move-result-object v0
 
     .line 73
-    .local v0, action:Ljava/lang/String;
+    .local v0, "action":Ljava/lang/String;
     if-eqz v0, :cond_0
 
     const-string v1, "android.intent.action.MAIN"

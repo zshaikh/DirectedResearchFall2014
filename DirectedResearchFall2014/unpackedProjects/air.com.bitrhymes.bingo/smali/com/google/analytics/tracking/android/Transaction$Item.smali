@@ -35,14 +35,14 @@
 # direct methods
 .method private constructor <init>(Lcom/google/analytics/tracking/android/Transaction$Item$Builder;)V
     .locals 2
-    .parameter "builder"
+    .param p1, "builder"    # Lcom/google/analytics/tracking/android/Transaction$Item$Builder;
 
     .prologue
     .line 196
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 197
-    #getter for: Lcom/google/analytics/tracking/android/Transaction$Item$Builder;->mSKU:Ljava/lang/String;
+    # getter for: Lcom/google/analytics/tracking/android/Transaction$Item$Builder;->mSKU:Ljava/lang/String;
     invoke-static {p1}, Lcom/google/analytics/tracking/android/Transaction$Item$Builder;->access$700(Lcom/google/analytics/tracking/android/Transaction$Item$Builder;)Ljava/lang/String;
 
     move-result-object v0
@@ -50,7 +50,7 @@
     iput-object v0, p0, Lcom/google/analytics/tracking/android/Transaction$Item;->mSKU:Ljava/lang/String;
 
     .line 198
-    #getter for: Lcom/google/analytics/tracking/android/Transaction$Item$Builder;->mPriceInMicros:J
+    # getter for: Lcom/google/analytics/tracking/android/Transaction$Item$Builder;->mPriceInMicros:J
     invoke-static {p1}, Lcom/google/analytics/tracking/android/Transaction$Item$Builder;->access$800(Lcom/google/analytics/tracking/android/Transaction$Item$Builder;)J
 
     move-result-wide v0
@@ -58,7 +58,7 @@
     iput-wide v0, p0, Lcom/google/analytics/tracking/android/Transaction$Item;->mPriceInMicros:J
 
     .line 199
-    #getter for: Lcom/google/analytics/tracking/android/Transaction$Item$Builder;->mQuantity:J
+    # getter for: Lcom/google/analytics/tracking/android/Transaction$Item$Builder;->mQuantity:J
     invoke-static {p1}, Lcom/google/analytics/tracking/android/Transaction$Item$Builder;->access$900(Lcom/google/analytics/tracking/android/Transaction$Item$Builder;)J
 
     move-result-wide v0
@@ -66,7 +66,7 @@
     iput-wide v0, p0, Lcom/google/analytics/tracking/android/Transaction$Item;->mQuantity:J
 
     .line 200
-    #getter for: Lcom/google/analytics/tracking/android/Transaction$Item$Builder;->mName:Ljava/lang/String;
+    # getter for: Lcom/google/analytics/tracking/android/Transaction$Item$Builder;->mName:Ljava/lang/String;
     invoke-static {p1}, Lcom/google/analytics/tracking/android/Transaction$Item$Builder;->access$1000(Lcom/google/analytics/tracking/android/Transaction$Item$Builder;)Ljava/lang/String;
 
     move-result-object v0
@@ -74,7 +74,7 @@
     iput-object v0, p0, Lcom/google/analytics/tracking/android/Transaction$Item;->mName:Ljava/lang/String;
 
     .line 201
-    #getter for: Lcom/google/analytics/tracking/android/Transaction$Item$Builder;->mCategory:Ljava/lang/String;
+    # getter for: Lcom/google/analytics/tracking/android/Transaction$Item$Builder;->mCategory:Ljava/lang/String;
     invoke-static {p1}, Lcom/google/analytics/tracking/android/Transaction$Item$Builder;->access$1100(Lcom/google/analytics/tracking/android/Transaction$Item$Builder;)Ljava/lang/String;
 
     move-result-object v0
@@ -87,8 +87,8 @@
 
 .method synthetic constructor <init>(Lcom/google/analytics/tracking/android/Transaction$Item$Builder;Lcom/google/analytics/tracking/android/Transaction$1;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
+    .param p1, "x0"    # Lcom/google/analytics/tracking/android/Transaction$Item$Builder;
+    .param p2, "x1"    # Lcom/google/analytics/tracking/android/Transaction$1;
 
     .prologue
     .line 189

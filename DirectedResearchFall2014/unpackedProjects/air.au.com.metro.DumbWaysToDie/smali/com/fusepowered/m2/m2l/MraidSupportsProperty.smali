@@ -160,7 +160,7 @@
 
 .method public withCalendar(Z)Lcom/fusepowered/m2/m2l/MraidSupportsProperty;
     .locals 0
-    .parameter "value"
+    .param p1, "value"    # Z
 
     .prologue
     .line 151
@@ -172,7 +172,7 @@
 
 .method public withInlineVideo(Z)Lcom/fusepowered/m2/m2l/MraidSupportsProperty;
     .locals 0
-    .parameter "value"
+    .param p1, "value"    # Z
 
     .prologue
     .line 161
@@ -184,7 +184,7 @@
 
 .method public withSms(Z)Lcom/fusepowered/m2/m2l/MraidSupportsProperty;
     .locals 0
-    .parameter "value"
+    .param p1, "value"    # Z
 
     .prologue
     .line 140
@@ -196,7 +196,7 @@
 
 .method public withStorePicture(Z)Lcom/fusepowered/m2/m2l/MraidSupportsProperty;
     .locals 0
-    .parameter "value"
+    .param p1, "value"    # Z
 
     .prologue
     .line 156
@@ -208,7 +208,7 @@
 
 .method public withTel(Z)Lcom/fusepowered/m2/m2l/MraidSupportsProperty;
     .locals 0
-    .parameter "value"
+    .param p1, "value"    # Z
 
     .prologue
     .line 146

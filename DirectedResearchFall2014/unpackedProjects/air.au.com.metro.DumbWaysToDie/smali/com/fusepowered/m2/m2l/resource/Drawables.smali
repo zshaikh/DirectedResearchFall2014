@@ -241,9 +241,7 @@
 
 .method private constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter "encodedString"
+    .param p3, "encodedString"    # Ljava/lang/String;
 
     .prologue
     .line 61
@@ -258,7 +256,6 @@
 
 .method public static valueOf(Ljava/lang/String;)Lcom/fusepowered/m2/m2l/resource/Drawables;
     .locals 1
-    .parameter
 
     .prologue
     .line 1
@@ -295,7 +292,7 @@
 # virtual methods
 .method public decodeImage(Landroid/content/Context;)Landroid/graphics/drawable/BitmapDrawable;
     .locals 5
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     .line 66
@@ -313,7 +310,7 @@
     move-result-object v0
 
     .line 68
-    .local v0, displayMetrics:Landroid/util/DisplayMetrics;
+    .local v0, "displayMetrics":Landroid/util/DisplayMetrics;
     iget v3, v0, Landroid/util/DisplayMetrics;->xdpi:F
 
     invoke-static {v3, p1}, Lcom/fusepowered/m2/m2l/util/Dips;->asIntPixels(FLandroid/content/Context;)I
@@ -321,7 +318,7 @@
     move-result v2
 
     .line 70
-    .local v2, scaledDensity:I
+    .local v2, "scaledDensity":I
     iget-object v3, p0, Lcom/fusepowered/m2/m2l/resource/Drawables;->encodedString:Ljava/lang/String;
 
     const/4 v4, 0x0
@@ -331,7 +328,7 @@
     move-result-object v1
 
     .line 71
-    .local v1, rawImageData:[B
+    .local v1, "rawImageData":[B
     new-instance v3, Landroid/graphics/drawable/BitmapDrawable;
 
     new-instance v4, Ljava/io/ByteArrayInputStream;
@@ -348,9 +345,9 @@
     invoke-virtual {v3, v2}, Landroid/graphics/drawable/BitmapDrawable;->setTargetDensity(I)V
 
     .line 75
-    .end local v0           #displayMetrics:Landroid/util/DisplayMetrics;
-    .end local v1           #rawImageData:[B
-    .end local v2           #scaledDensity:I
+    .end local v0    # "displayMetrics":Landroid/util/DisplayMetrics;
+    .end local v1    # "rawImageData":[B
+    .end local v2    # "scaledDensity":I
     :cond_0
     iget-object v3, p0, Lcom/fusepowered/m2/m2l/resource/Drawables;->cachedImage:Landroid/graphics/drawable/BitmapDrawable;
 

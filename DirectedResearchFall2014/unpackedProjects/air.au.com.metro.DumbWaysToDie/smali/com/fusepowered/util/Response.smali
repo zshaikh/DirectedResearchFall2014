@@ -63,7 +63,7 @@
 
 .method public setXml(Ljava/lang/String;)V
     .locals 0
-    .parameter "xml"
+    .param p1, "xml"    # Ljava/lang/String;
 
     .prologue
     .line 12
@@ -97,7 +97,7 @@
     move-result-object v0
 
     .line 23
-    .local v0, buf:Ljava/lang/StringBuilder;
+    .local v0, "buf":Ljava/lang/StringBuilder;
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1

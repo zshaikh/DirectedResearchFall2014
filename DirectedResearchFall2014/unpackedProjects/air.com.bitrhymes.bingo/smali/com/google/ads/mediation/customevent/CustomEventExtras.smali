@@ -42,8 +42,8 @@
 # virtual methods
 .method public addExtra(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/ads/mediation/customevent/CustomEventExtras;
     .locals 1
-    .parameter "label"
-    .parameter "value"
+    .param p1, "label"    # Ljava/lang/String;
+    .param p2, "value"    # Ljava/lang/Object;
 
     .prologue
     .line 22
@@ -70,7 +70,7 @@
 
 .method public getExtra(Ljava/lang/String;)Ljava/lang/Object;
     .locals 1
-    .parameter "label"
+    .param p1, "label"    # Ljava/lang/String;
 
     .prologue
     .line 40
@@ -85,7 +85,7 @@
 
 .method public removeExtra(Ljava/lang/String;)Ljava/lang/Object;
     .locals 1
-    .parameter "label"
+    .param p1, "label"    # Ljava/lang/String;
 
     .prologue
     .line 49

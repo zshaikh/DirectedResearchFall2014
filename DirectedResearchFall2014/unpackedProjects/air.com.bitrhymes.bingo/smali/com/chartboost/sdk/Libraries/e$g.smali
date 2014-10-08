@@ -23,8 +23,6 @@
 # direct methods
 .method public constructor <init>(Ljava/lang/String;Lcom/chartboost/sdk/Libraries/e$a;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 370
@@ -42,7 +40,6 @@
 
 .method static synthetic a(Lcom/chartboost/sdk/Libraries/e$g;)Ljava/lang/String;
     .locals 1
-    .parameter
 
     .prologue
     .line 368
@@ -53,7 +50,6 @@
 
 .method static synthetic b(Lcom/chartboost/sdk/Libraries/e$g;)Lcom/chartboost/sdk/Libraries/e$a;
     .locals 1
-    .parameter
 
     .prologue
     .line 369

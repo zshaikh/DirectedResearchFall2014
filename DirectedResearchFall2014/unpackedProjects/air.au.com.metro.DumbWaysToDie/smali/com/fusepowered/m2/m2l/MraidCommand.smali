@@ -26,8 +26,7 @@
 # direct methods
 .method constructor <init>(Ljava/util/Map;Lcom/fusepowered/m2/m2l/MraidView;)V
     .locals 0
-    .parameter
-    .parameter "view"
+    .param p2, "view"    # Lcom/fusepowered/m2/m2l/MraidView;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -43,7 +42,7 @@
 
     .prologue
     .line 52
-    .local p1, params:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p1, "params":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 53
@@ -63,7 +62,7 @@
 
 .method protected getBooleanFromParamsForKey(Ljava/lang/String;)Z
     .locals 2
-    .parameter "key"
+    .param p1, "key"    # Ljava/lang/String;
 
     .prologue
     .line 88
@@ -84,7 +83,7 @@
 
 .method protected getFloatFromParamsForKey(Ljava/lang/String;)F
     .locals 4
-    .parameter "key"
+    .param p1, "key"    # Ljava/lang/String;
 
     .prologue
     const/4 v3, 0x0
@@ -99,7 +98,7 @@
     check-cast v1, Ljava/lang/String;
 
     .line 77
-    .local v1, s:Ljava/lang/String;
+    .local v1, "s":Ljava/lang/String;
     if-nez v1, :cond_0
 
     move v2, v3
@@ -123,7 +122,7 @@
     :catch_0
     move-exception v0
 
-    .local v0, e:Ljava/lang/NumberFormatException;
+    .local v0, "e":Ljava/lang/NumberFormatException;
     move v2, v3
 
     .line 82
@@ -132,7 +131,7 @@
 
 .method protected getIntFromParamsForKey(Ljava/lang/String;)I
     .locals 4
-    .parameter "key"
+    .param p1, "key"    # Ljava/lang/String;
 
     .prologue
     const/4 v3, -0x1
@@ -147,7 +146,7 @@
     check-cast v1, Ljava/lang/String;
 
     .line 61
-    .local v1, s:Ljava/lang/String;
+    .local v1, "s":Ljava/lang/String;
     if-nez v1, :cond_0
 
     move v2, v3
@@ -173,7 +172,7 @@
     :catch_0
     move-exception v0
 
-    .local v0, e:Ljava/lang/NumberFormatException;
+    .local v0, "e":Ljava/lang/NumberFormatException;
     move v2, v3
 
     .line 66
@@ -182,7 +181,7 @@
 
 .method protected getStringFromParamsForKey(Ljava/lang/String;)Ljava/lang/String;
     .locals 1
-    .parameter "key"
+    .param p1, "key"    # Ljava/lang/String;
 
     .prologue
     .line 72
@@ -192,7 +191,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/fusepowered/m2/m2l/MraidCommand;
     check-cast p0, Ljava/lang/String;
 
     return-object p0
@@ -200,7 +199,7 @@
 
 .method protected isCommandDependentOnUserClick(Lcom/fusepowered/m2/m2l/MraidView$PlacementType;)Z
     .locals 1
-    .parameter "placementType"
+    .param p1, "placementType"    # Lcom/fusepowered/m2/m2l/MraidView$PlacementType;
 
     .prologue
     .line 92

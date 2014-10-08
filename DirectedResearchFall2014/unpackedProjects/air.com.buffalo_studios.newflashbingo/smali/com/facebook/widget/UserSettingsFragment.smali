@@ -367,9 +367,9 @@
 
     iget-object v0, p0, Lcom/facebook/widget/UserSettingsFragment;->connectedStateLabel:Landroid/widget/TextView;
 
-    const/high16 v1, 0x3f80
+    const/high16 v1, 0x3f800000
 
-    const/high16 v2, -0x4080
+    const/high16 v2, -0x40800000
 
     invoke-virtual {p0}, Lcom/facebook/widget/UserSettingsFragment;->getResources()Landroid/content/res/Resources;
 

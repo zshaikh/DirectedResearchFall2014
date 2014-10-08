@@ -50,8 +50,8 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Lcom/fusepowered/m2/m2l/AdConfiguration;)V
     .locals 6
-    .parameter "context"
-    .parameter "adConfiguration"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "adConfiguration"    # Lcom/fusepowered/m2/m2l/AdConfiguration;
 
     .prologue
     .line 108
@@ -76,11 +76,11 @@
 
 .method public constructor <init>(Landroid/content/Context;Lcom/fusepowered/m2/m2l/AdConfiguration;Lcom/fusepowered/m2/m2l/MraidView$ExpansionStyle;Lcom/fusepowered/m2/m2l/MraidView$NativeCloseButtonStyle;Lcom/fusepowered/m2/m2l/MraidView$PlacementType;)V
     .locals 1
-    .parameter "context"
-    .parameter "adConfiguration"
-    .parameter "expStyle"
-    .parameter "buttonStyle"
-    .parameter "placementType"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "adConfiguration"    # Lcom/fusepowered/m2/m2l/AdConfiguration;
+    .param p3, "expStyle"    # Lcom/fusepowered/m2/m2l/MraidView$ExpansionStyle;
+    .param p4, "buttonStyle"    # Lcom/fusepowered/m2/m2l/MraidView$NativeCloseButtonStyle;
+    .param p5, "placementType"    # Lcom/fusepowered/m2/m2l/MraidView$PlacementType;
 
     .prologue
     .line 114
@@ -113,8 +113,6 @@
 
 .method static synthetic access$0(Lcom/fusepowered/m2/m2l/MraidView;Ljava/net/URI;)Z
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 314
@@ -127,7 +125,6 @@
 
 .method static synthetic access$1(Lcom/fusepowered/m2/m2l/MraidView;)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 71
@@ -138,7 +135,6 @@
 
 .method static synthetic access$2(Lcom/fusepowered/m2/m2l/MraidView;)Lcom/fusepowered/m2/m2l/MraidDisplayController;
     .locals 1
-    .parameter
 
     .prologue
     .line 67
@@ -149,7 +145,6 @@
 
 .method static synthetic access$3(Lcom/fusepowered/m2/m2l/MraidView;)Lcom/fusepowered/m2/m2l/MraidView$PlacementType;
     .locals 1
-    .parameter
 
     .prologue
     .line 73
@@ -160,8 +155,6 @@
 
 .method static synthetic access$4(Lcom/fusepowered/m2/m2l/MraidView;Z)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 71
@@ -172,7 +165,6 @@
 
 .method static synthetic access$5(Lcom/fusepowered/m2/m2l/MraidView;)Lcom/fusepowered/m2/m2l/ViewGestureDetector;
     .locals 1
-    .parameter
 
     .prologue
     .line 74
@@ -183,8 +175,8 @@
 
 .method private initialize(Lcom/fusepowered/m2/m2l/MraidView$ExpansionStyle;Lcom/fusepowered/m2/m2l/MraidView$NativeCloseButtonStyle;)V
     .locals 2
-    .parameter "expStyle"
-    .parameter "buttonStyle"
+    .param p1, "expStyle"    # Lcom/fusepowered/m2/m2l/MraidView$ExpansionStyle;
+    .param p2, "buttonStyle"    # Lcom/fusepowered/m2/m2l/MraidView$NativeCloseButtonStyle;
 
     .prologue
     const/4 v0, 0x0
@@ -263,7 +255,7 @@
     .line 238
     iget-object v0, p0, Lcom/fusepowered/m2/m2l/MraidView;->mListenerInfo:Lcom/fusepowered/m2/m2l/MraidView$MraidListenerInfo;
 
-    #getter for: Lcom/fusepowered/m2/m2l/MraidView$MraidListenerInfo;->mMraidListener:Lcom/fusepowered/m2/m2l/MraidView$MraidListener;
+    # getter for: Lcom/fusepowered/m2/m2l/MraidView$MraidListenerInfo;->mMraidListener:Lcom/fusepowered/m2/m2l/MraidView$MraidListener;
     invoke-static {v0}, Lcom/fusepowered/m2/m2l/MraidView$MraidListenerInfo;->access$0(Lcom/fusepowered/m2/m2l/MraidView$MraidListenerInfo;)Lcom/fusepowered/m2/m2l/MraidView$MraidListener;
 
     move-result-object v0
@@ -273,7 +265,7 @@
     .line 239
     iget-object v0, p0, Lcom/fusepowered/m2/m2l/MraidView;->mListenerInfo:Lcom/fusepowered/m2/m2l/MraidView$MraidListenerInfo;
 
-    #getter for: Lcom/fusepowered/m2/m2l/MraidView$MraidListenerInfo;->mMraidListener:Lcom/fusepowered/m2/m2l/MraidView$MraidListener;
+    # getter for: Lcom/fusepowered/m2/m2l/MraidView$MraidListenerInfo;->mMraidListener:Lcom/fusepowered/m2/m2l/MraidView$MraidListener;
     invoke-static {v0}, Lcom/fusepowered/m2/m2l/MraidView$MraidListenerInfo;->access$0(Lcom/fusepowered/m2/m2l/MraidView$MraidListenerInfo;)Lcom/fusepowered/m2/m2l/MraidView$MraidListener;
 
     move-result-object v0
@@ -287,7 +279,7 @@
 
 .method private tryCommand(Ljava/net/URI;)Z
     .locals 9
-    .parameter "uri"
+    .param p1, "uri"    # Ljava/net/URI;
 
     .prologue
     const/4 v8, 0x0
@@ -298,7 +290,7 @@
     move-result-object v1
 
     .line 316
-    .local v1, commandType:Ljava/lang/String;
+    .local v1, "commandType":Ljava/lang/String;
     const-string v5, "UTF-8"
 
     invoke-static {p1, v5}, Lorg/apache/http/client/utils/URLEncodedUtils;->parse(Ljava/net/URI;Ljava/lang/String;)Ljava/util/List;
@@ -306,13 +298,13 @@
     move-result-object v2
 
     .line 317
-    .local v2, list:Ljava/util/List;,"Ljava/util/List<Lorg/apache/http/NameValuePair;>;"
+    .local v2, "list":Ljava/util/List;, "Ljava/util/List<Lorg/apache/http/NameValuePair;>;"
     new-instance v4, Ljava/util/HashMap;
 
     invoke-direct {v4}, Ljava/util/HashMap;-><init>()V
 
     .line 318
-    .local v4, params:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v4, "params":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v5
@@ -330,7 +322,7 @@
     move-result-object v0
 
     .line 324
-    .local v0, command:Lcom/fusepowered/m2/m2l/MraidCommand;
+    .local v0, "command":Lcom/fusepowered/m2/m2l/MraidCommand;
     if-nez v0, :cond_1
 
     .line 325
@@ -343,7 +335,7 @@
     return v5
 
     .line 318
-    .end local v0           #command:Lcom/fusepowered/m2/m2l/MraidCommand;
+    .end local v0    # "command":Lcom/fusepowered/m2/m2l/MraidCommand;
     :cond_0
     invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -352,7 +344,7 @@
     check-cast v3, Lorg/apache/http/NameValuePair;
 
     .line 319
-    .local v3, pair:Lorg/apache/http/NameValuePair;
+    .local v3, "pair":Lorg/apache/http/NameValuePair;
     invoke-interface {v3}, Lorg/apache/http/NameValuePair;->getName()Ljava/lang/String;
 
     move-result-object v6
@@ -366,8 +358,8 @@
     goto :goto_0
 
     .line 327
-    .end local v3           #pair:Lorg/apache/http/NameValuePair;
-    .restart local v0       #command:Lcom/fusepowered/m2/m2l/MraidCommand;
+    .end local v3    # "pair":Lorg/apache/http/NameValuePair;
+    .restart local v0    # "command":Lcom/fusepowered/m2/m2l/MraidCommand;
     :cond_1
     iget-object v5, p0, Lcom/fusepowered/m2/m2l/MraidView;->mPlacementType:Lcom/fusepowered/m2/m2l/MraidView$PlacementType;
 
@@ -421,7 +413,6 @@
 
 .method protected fireChangeEventForProperties(Ljava/util/ArrayList;)V
     .locals 5
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -433,7 +424,7 @@
     .end annotation
 
     .prologue
-    .local p1, properties:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/fusepowered/m2/m2l/MraidProperty;>;"
+    .local p1, "properties":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/fusepowered/m2/m2l/MraidProperty;>;"
     const/4 v4, 0x1
 
     .line 292
@@ -442,7 +433,7 @@
     move-result-object v1
 
     .line 293
-    .local v1, props:Ljava/lang/String;
+    .local v1, "props":Ljava/lang/String;
     invoke-virtual {v1}, Ljava/lang/String;->length()I
 
     move-result v2
@@ -488,7 +479,7 @@
     move-result-object v0
 
     .line 296
-    .local v0, json:Ljava/lang/String;
+    .local v0, "json":Ljava/lang/String;
     new-instance v2, Ljava/lang/StringBuilder;
 
     const-string v3, "window.mraidbridge.fireChangeEvent("
@@ -535,7 +526,7 @@
 
 .method protected fireChangeEventForProperty(Lcom/fusepowered/m2/m2l/MraidProperty;)V
     .locals 4
-    .parameter "property"
+    .param p1, "property"    # Lcom/fusepowered/m2/m2l/MraidProperty;
 
     .prologue
     .line 286
@@ -564,7 +555,7 @@
     move-result-object v0
 
     .line 287
-    .local v0, json:Ljava/lang/String;
+    .local v0, "json":Ljava/lang/String;
     new-instance v1, Ljava/lang/StringBuilder;
 
     const-string v2, "window.mraidbridge.fireChangeEvent("
@@ -612,8 +603,8 @@
 
 .method protected fireErrorEvent(Lcom/fusepowered/m2/m2l/MraidCommandFactory$MraidJavascriptCommand;Ljava/lang/String;)V
     .locals 3
-    .parameter "mraidJavascriptCommand"
-    .parameter "message"
+    .param p1, "mraidJavascriptCommand"    # Lcom/fusepowered/m2/m2l/MraidCommandFactory$MraidJavascriptCommand;
+    .param p2, "message"    # Ljava/lang/String;
 
     .prologue
     .line 301
@@ -622,7 +613,7 @@
     move-result-object v0
 
     .line 303
-    .local v0, action:Ljava/lang/String;
+    .local v0, "action":Ljava/lang/String;
     new-instance v1, Ljava/lang/StringBuilder;
 
     const-string v2, "window.mraidbridge.fireErrorEvent(\'"
@@ -661,7 +652,7 @@
 
 .method protected fireNativeCommandCompleteEvent(Ljava/lang/String;)V
     .locals 2
-    .parameter "command"
+    .param p1, "command"    # Ljava/lang/String;
 
     .prologue
     .line 311
@@ -741,7 +732,7 @@
     .line 260
     iget-object v0, p0, Lcom/fusepowered/m2/m2l/MraidView;->mListenerInfo:Lcom/fusepowered/m2/m2l/MraidView$MraidListenerInfo;
 
-    #getter for: Lcom/fusepowered/m2/m2l/MraidView$MraidListenerInfo;->mMraidListener:Lcom/fusepowered/m2/m2l/MraidView$MraidListener;
+    # getter for: Lcom/fusepowered/m2/m2l/MraidView$MraidListenerInfo;->mMraidListener:Lcom/fusepowered/m2/m2l/MraidView$MraidListener;
     invoke-static {v0}, Lcom/fusepowered/m2/m2l/MraidView$MraidListenerInfo;->access$0(Lcom/fusepowered/m2/m2l/MraidView$MraidListenerInfo;)Lcom/fusepowered/m2/m2l/MraidView$MraidListener;
 
     move-result-object v0
@@ -768,7 +759,7 @@
     .line 268
     iget-object v0, p0, Lcom/fusepowered/m2/m2l/MraidView;->mListenerInfo:Lcom/fusepowered/m2/m2l/MraidView$MraidListenerInfo;
 
-    #getter for: Lcom/fusepowered/m2/m2l/MraidView$MraidListenerInfo;->mOnCloseButtonListener:Lcom/fusepowered/m2/m2l/MraidView$OnCloseButtonStateChangeListener;
+    # getter for: Lcom/fusepowered/m2/m2l/MraidView$MraidListenerInfo;->mOnCloseButtonListener:Lcom/fusepowered/m2/m2l/MraidView$OnCloseButtonStateChangeListener;
     invoke-static {v0}, Lcom/fusepowered/m2/m2l/MraidView$MraidListenerInfo;->access$3(Lcom/fusepowered/m2/m2l/MraidView$MraidListenerInfo;)Lcom/fusepowered/m2/m2l/MraidView$OnCloseButtonStateChangeListener;
 
     move-result-object v0
@@ -783,7 +774,7 @@
     .line 276
     iget-object v0, p0, Lcom/fusepowered/m2/m2l/MraidView;->mListenerInfo:Lcom/fusepowered/m2/m2l/MraidView$MraidListenerInfo;
 
-    #getter for: Lcom/fusepowered/m2/m2l/MraidView$MraidListenerInfo;->mOnOpenListener:Lcom/fusepowered/m2/m2l/MraidView$OnOpenListener;
+    # getter for: Lcom/fusepowered/m2/m2l/MraidView$MraidListenerInfo;->mOnOpenListener:Lcom/fusepowered/m2/m2l/MraidView$OnOpenListener;
     invoke-static {v0}, Lcom/fusepowered/m2/m2l/MraidView$MraidListenerInfo;->access$5(Lcom/fusepowered/m2/m2l/MraidView$MraidListenerInfo;)Lcom/fusepowered/m2/m2l/MraidView$OnOpenListener;
 
     move-result-object v0
@@ -793,7 +784,7 @@
 
 .method protected injectJavaScript(Ljava/lang/String;)V
     .locals 2
-    .parameter "js"
+    .param p1, "js"    # Ljava/lang/String;
 
     .prologue
     .line 282
@@ -822,7 +813,7 @@
 
 .method public loadHtmlData(Ljava/lang/String;)V
     .locals 6
-    .parameter "data"
+    .param p1, "data"    # Ljava/lang/String;
 
     .prologue
     const/4 v1, 0x0
@@ -895,7 +886,7 @@
 
 .method public loadUrl(Ljava/lang/String;)V
     .locals 9
-    .parameter "url"
+    .param p1, "url"    # Ljava/lang/String;
 
     .prologue
     .line 202
@@ -927,30 +918,30 @@
     move-result-object v2
 
     .line 212
-    .local v2, httpClient:Lorg/apache/http/client/HttpClient;
+    .local v2, "httpClient":Lorg/apache/http/client/HttpClient;
     const-string v4, ""
 
     .line 215
-    .local v4, outString:Ljava/lang/String;
+    .local v4, "outString":Ljava/lang/String;
     :try_start_0
     new-instance v3, Lorg/apache/http/client/methods/HttpGet;
 
     invoke-direct {v3, p1}, Lorg/apache/http/client/methods/HttpGet;-><init>(Ljava/lang/String;)V
 
     .line 216
-    .local v3, httpGet:Lorg/apache/http/client/methods/HttpGet;
+    .local v3, "httpGet":Lorg/apache/http/client/methods/HttpGet;
     invoke-interface {v2, v3}, Lorg/apache/http/client/HttpClient;->execute(Lorg/apache/http/client/methods/HttpUriRequest;)Lorg/apache/http/HttpResponse;
 
     move-result-object v5
 
     .line 217
-    .local v5, response:Lorg/apache/http/HttpResponse;
+    .local v5, "response":Lorg/apache/http/HttpResponse;
     invoke-interface {v5}, Lorg/apache/http/HttpResponse;->getEntity()Lorg/apache/http/HttpEntity;
 
     move-result-object v1
 
     .line 219
-    .local v1, entity:Lorg/apache/http/HttpEntity;
+    .local v1, "entity":Lorg/apache/http/HttpEntity;
     if-eqz v1, :cond_2
 
     .line 220
@@ -973,16 +964,16 @@
     goto :goto_0
 
     .line 222
-    .end local v1           #entity:Lorg/apache/http/HttpEntity;
-    .end local v3           #httpGet:Lorg/apache/http/client/methods/HttpGet;
-    .end local v5           #response:Lorg/apache/http/HttpResponse;
+    .end local v1    # "entity":Lorg/apache/http/HttpEntity;
+    .end local v3    # "httpGet":Lorg/apache/http/client/methods/HttpGet;
+    .end local v5    # "response":Lorg/apache/http/HttpResponse;
     :catch_0
     move-exception v6
 
     move-object v0, v6
 
     .line 223
-    .local v0, e:Ljava/lang/IllegalArgumentException;
+    .local v0, "e":Ljava/lang/IllegalArgumentException;
     const-string v6, "MoPub"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -1007,27 +998,27 @@
     goto :goto_0
 
     .line 226
-    .end local v0           #e:Ljava/lang/IllegalArgumentException;
+    .end local v0    # "e":Ljava/lang/IllegalArgumentException;
     :catch_1
     move-exception v6
 
     move-object v0, v6
 
     .line 227
-    .local v0, e:Lorg/apache/http/client/ClientProtocolException;
+    .local v0, "e":Lorg/apache/http/client/ClientProtocolException;
     invoke-direct {p0}, Lcom/fusepowered/m2/m2l/MraidView;->notifyOnFailureListener()V
 
     goto :goto_0
 
     .line 229
-    .end local v0           #e:Lorg/apache/http/client/ClientProtocolException;
+    .end local v0    # "e":Lorg/apache/http/client/ClientProtocolException;
     :catch_2
     move-exception v6
 
     move-object v0, v6
 
     .line 230
-    .local v0, e:Ljava/io/IOException;
+    .local v0, "e":Ljava/io/IOException;
     invoke-direct {p0}, Lcom/fusepowered/m2/m2l/MraidView;->notifyOnFailureListener()V
 
     goto :goto_0
@@ -1061,7 +1052,7 @@
 
 .method setMraidDisplayController(Lcom/fusepowered/m2/m2l/MraidDisplayController;)V
     .locals 0
-    .parameter "mraidDisplayController"
+    .param p1, "mraidDisplayController"    # Lcom/fusepowered/m2/m2l/MraidDisplayController;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -1075,13 +1066,12 @@
 
 .method public setMraidListener(Lcom/fusepowered/m2/m2l/MraidView$MraidListener;)V
     .locals 1
-    .parameter "mraidListener"
+    .param p1, "mraidListener"    # Lcom/fusepowered/m2/m2l/MraidView$MraidListener;
 
     .prologue
     .line 256
     iget-object v0, p0, Lcom/fusepowered/m2/m2l/MraidView;->mListenerInfo:Lcom/fusepowered/m2/m2l/MraidView$MraidListenerInfo;
 
-    #setter for: Lcom/fusepowered/m2/m2l/MraidView$MraidListenerInfo;->mMraidListener:Lcom/fusepowered/m2/m2l/MraidView$MraidListener;
     invoke-static {v0, p1}, Lcom/fusepowered/m2/m2l/MraidView$MraidListenerInfo;->access$1(Lcom/fusepowered/m2/m2l/MraidView$MraidListenerInfo;Lcom/fusepowered/m2/m2l/MraidView$MraidListener;)V
 
     .line 257
@@ -1090,13 +1080,12 @@
 
 .method public setOnCloseButtonStateChange(Lcom/fusepowered/m2/m2l/MraidView$OnCloseButtonStateChangeListener;)V
     .locals 1
-    .parameter "listener"
+    .param p1, "listener"    # Lcom/fusepowered/m2/m2l/MraidView$OnCloseButtonStateChangeListener;
 
     .prologue
     .line 264
     iget-object v0, p0, Lcom/fusepowered/m2/m2l/MraidView;->mListenerInfo:Lcom/fusepowered/m2/m2l/MraidView$MraidListenerInfo;
 
-    #setter for: Lcom/fusepowered/m2/m2l/MraidView$MraidListenerInfo;->mOnCloseButtonListener:Lcom/fusepowered/m2/m2l/MraidView$OnCloseButtonStateChangeListener;
     invoke-static {v0, p1}, Lcom/fusepowered/m2/m2l/MraidView$MraidListenerInfo;->access$2(Lcom/fusepowered/m2/m2l/MraidView$MraidListenerInfo;Lcom/fusepowered/m2/m2l/MraidView$OnCloseButtonStateChangeListener;)V
 
     .line 265
@@ -1105,13 +1094,12 @@
 
 .method public setOnOpenListener(Lcom/fusepowered/m2/m2l/MraidView$OnOpenListener;)V
     .locals 1
-    .parameter "listener"
+    .param p1, "listener"    # Lcom/fusepowered/m2/m2l/MraidView$OnOpenListener;
 
     .prologue
     .line 272
     iget-object v0, p0, Lcom/fusepowered/m2/m2l/MraidView;->mListenerInfo:Lcom/fusepowered/m2/m2l/MraidView$MraidListenerInfo;
 
-    #setter for: Lcom/fusepowered/m2/m2l/MraidView$MraidListenerInfo;->mOnOpenListener:Lcom/fusepowered/m2/m2l/MraidView$OnOpenListener;
     invoke-static {v0, p1}, Lcom/fusepowered/m2/m2l/MraidView$MraidListenerInfo;->access$4(Lcom/fusepowered/m2/m2l/MraidView$MraidListenerInfo;Lcom/fusepowered/m2/m2l/MraidView$OnOpenListener;)V
 
     .line 273

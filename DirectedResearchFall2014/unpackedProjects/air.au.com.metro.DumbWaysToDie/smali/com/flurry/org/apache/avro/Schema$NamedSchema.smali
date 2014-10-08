@@ -34,9 +34,9 @@
 # direct methods
 .method public constructor <init>(Lcom/flurry/org/apache/avro/Schema$Type;Lcom/flurry/org/apache/avro/Schema$Name;Ljava/lang/String;)V
     .locals 3
-    .parameter "type"
-    .parameter "name"
-    .parameter "doc"
+    .param p1, "type"    # Lcom/flurry/org/apache/avro/Schema$Type;
+    .param p2, "name"    # Lcom/flurry/org/apache/avro/Schema$Name;
+    .param p3, "doc"    # Ljava/lang/String;
 
     .prologue
     .line 520
@@ -51,7 +51,7 @@
     .line 523
     sget-object v0, Lcom/flurry/org/apache/avro/Schema$NamedSchema;->PRIMITIVES:Ljava/util/Map;
 
-    #getter for: Lcom/flurry/org/apache/avro/Schema$Name;->full:Ljava/lang/String;
+    # getter for: Lcom/flurry/org/apache/avro/Schema$Name;->full:Ljava/lang/String;
     invoke-static {p2}, Lcom/flurry/org/apache/avro/Schema$Name;->access$400(Lcom/flurry/org/apache/avro/Schema$Name;)Ljava/lang/String;
 
     move-result-object v1
@@ -75,7 +75,7 @@
 
     move-result-object v1
 
-    #getter for: Lcom/flurry/org/apache/avro/Schema$Name;->full:Ljava/lang/String;
+    # getter for: Lcom/flurry/org/apache/avro/Schema$Name;->full:Ljava/lang/String;
     invoke-static {p2}, Lcom/flurry/org/apache/avro/Schema$Name;->access$400(Lcom/flurry/org/apache/avro/Schema$Name;)Ljava/lang/String;
 
     move-result-object v2
@@ -101,7 +101,7 @@
 # virtual methods
 .method public addAlias(Ljava/lang/String;)V
     .locals 3
-    .parameter "alias"
+    .param p1, "alias"    # Ljava/lang/String;
 
     .prologue
     .line 532
@@ -124,7 +124,7 @@
 
     iget-object v2, p0, Lcom/flurry/org/apache/avro/Schema$NamedSchema;->name:Lcom/flurry/org/apache/avro/Schema$Name;
 
-    #getter for: Lcom/flurry/org/apache/avro/Schema$Name;->space:Ljava/lang/String;
+    # getter for: Lcom/flurry/org/apache/avro/Schema$Name;->space:Ljava/lang/String;
     invoke-static {v2}, Lcom/flurry/org/apache/avro/Schema$Name;->access$600(Lcom/flurry/org/apache/avro/Schema$Name;)Ljava/lang/String;
 
     move-result-object v2
@@ -139,7 +139,7 @@
 
 .method public aliasesToJson(Lcom/flurry/org/codehaus/jackson/JsonGenerator;)V
     .locals 3
-    .parameter "gen"
+    .param p1, "gen"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -181,7 +181,7 @@
 
     move-result-object v1
 
-    .local v1, i$:Ljava/util/Iterator;
+    .local v1, "i$":Ljava/util/Iterator;
     :goto_1
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
@@ -196,10 +196,10 @@
     check-cast v0, Lcom/flurry/org/apache/avro/Schema$Name;
 
     .line 567
-    .local v0, alias:Lcom/flurry/org/apache/avro/Schema$Name;
+    .local v0, "alias":Lcom/flurry/org/apache/avro/Schema$Name;
     iget-object v2, p0, Lcom/flurry/org/apache/avro/Schema$NamedSchema;->name:Lcom/flurry/org/apache/avro/Schema$Name;
 
-    #getter for: Lcom/flurry/org/apache/avro/Schema$Name;->space:Ljava/lang/String;
+    # getter for: Lcom/flurry/org/apache/avro/Schema$Name;->space:Ljava/lang/String;
     invoke-static {v2}, Lcom/flurry/org/apache/avro/Schema$Name;->access$600(Lcom/flurry/org/apache/avro/Schema$Name;)Ljava/lang/String;
 
     move-result-object v2
@@ -213,7 +213,7 @@
     goto :goto_1
 
     .line 568
-    .end local v0           #alias:Lcom/flurry/org/apache/avro/Schema$Name;
+    .end local v0    # "alias":Lcom/flurry/org/apache/avro/Schema$Name;
     :cond_2
     invoke-virtual {p1}, Lcom/flurry/org/codehaus/jackson/JsonGenerator;->writeEndArray()V
 
@@ -242,7 +242,7 @@
 
 .method public equalNames(Lcom/flurry/org/apache/avro/Schema$NamedSchema;)Z
     .locals 2
-    .parameter "that"
+    .param p1, "that"    # Lcom/flurry/org/apache/avro/Schema$NamedSchema;
 
     .prologue
     .line 557
@@ -276,7 +276,7 @@
     invoke-direct {v2}, Ljava/util/LinkedHashSet;-><init>()V
 
     .line 538
-    .local v2, result:Ljava/util/Set;,"Ljava/util/Set<Ljava/lang/String;>;"
+    .local v2, "result":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     iget-object v3, p0, Lcom/flurry/org/apache/avro/Schema$NamedSchema;->aliases:Ljava/util/Set;
 
     if-eqz v3, :cond_0
@@ -288,7 +288,7 @@
 
     move-result-object v1
 
-    .local v1, i$:Ljava/util/Iterator;
+    .local v1, "i$":Ljava/util/Iterator;
     :goto_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
@@ -303,8 +303,8 @@
     check-cast v0, Lcom/flurry/org/apache/avro/Schema$Name;
 
     .line 540
-    .local v0, alias:Lcom/flurry/org/apache/avro/Schema$Name;
-    #getter for: Lcom/flurry/org/apache/avro/Schema$Name;->full:Ljava/lang/String;
+    .local v0, "alias":Lcom/flurry/org/apache/avro/Schema$Name;
+    # getter for: Lcom/flurry/org/apache/avro/Schema$Name;->full:Ljava/lang/String;
     invoke-static {v0}, Lcom/flurry/org/apache/avro/Schema$Name;->access$400(Lcom/flurry/org/apache/avro/Schema$Name;)Ljava/lang/String;
 
     move-result-object v3
@@ -314,8 +314,8 @@
     goto :goto_0
 
     .line 541
-    .end local v0           #alias:Lcom/flurry/org/apache/avro/Schema$Name;
-    .end local v1           #i$:Ljava/util/Iterator;
+    .end local v0    # "alias":Lcom/flurry/org/apache/avro/Schema$Name;
+    .end local v1    # "i$":Ljava/util/Iterator;
     :cond_0
     return-object v2
 .end method
@@ -337,7 +337,7 @@
     .line 530
     iget-object v0, p0, Lcom/flurry/org/apache/avro/Schema$NamedSchema;->name:Lcom/flurry/org/apache/avro/Schema$Name;
 
-    #getter for: Lcom/flurry/org/apache/avro/Schema$Name;->full:Ljava/lang/String;
+    # getter for: Lcom/flurry/org/apache/avro/Schema$Name;->full:Ljava/lang/String;
     invoke-static {v0}, Lcom/flurry/org/apache/avro/Schema$Name;->access$400(Lcom/flurry/org/apache/avro/Schema$Name;)Ljava/lang/String;
 
     move-result-object v0
@@ -352,7 +352,7 @@
     .line 527
     iget-object v0, p0, Lcom/flurry/org/apache/avro/Schema$NamedSchema;->name:Lcom/flurry/org/apache/avro/Schema$Name;
 
-    #getter for: Lcom/flurry/org/apache/avro/Schema$Name;->name:Ljava/lang/String;
+    # getter for: Lcom/flurry/org/apache/avro/Schema$Name;->name:Ljava/lang/String;
     invoke-static {v0}, Lcom/flurry/org/apache/avro/Schema$Name;->access$500(Lcom/flurry/org/apache/avro/Schema$Name;)Ljava/lang/String;
 
     move-result-object v0
@@ -367,7 +367,7 @@
     .line 529
     iget-object v0, p0, Lcom/flurry/org/apache/avro/Schema$NamedSchema;->name:Lcom/flurry/org/apache/avro/Schema$Name;
 
-    #getter for: Lcom/flurry/org/apache/avro/Schema$Name;->space:Ljava/lang/String;
+    # getter for: Lcom/flurry/org/apache/avro/Schema$Name;->space:Ljava/lang/String;
     invoke-static {v0}, Lcom/flurry/org/apache/avro/Schema$Name;->access$600(Lcom/flurry/org/apache/avro/Schema$Name;)Ljava/lang/String;
 
     move-result-object v0
@@ -377,8 +377,8 @@
 
 .method public writeName(Lcom/flurry/org/apache/avro/Schema$Names;Lcom/flurry/org/codehaus/jackson/JsonGenerator;)V
     .locals 1
-    .parameter "names"
-    .parameter "gen"
+    .param p1, "names"    # Lcom/flurry/org/apache/avro/Schema$Names;
+    .param p2, "gen"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -397,8 +397,8 @@
 
 .method public writeNameRef(Lcom/flurry/org/apache/avro/Schema$Names;Lcom/flurry/org/codehaus/jackson/JsonGenerator;)Z
     .locals 2
-    .parameter "names"
-    .parameter "gen"
+    .param p1, "names"    # Lcom/flurry/org/apache/avro/Schema$Names;
+    .param p2, "gen"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -443,7 +443,7 @@
     :cond_0
     iget-object v0, p0, Lcom/flurry/org/apache/avro/Schema$NamedSchema;->name:Lcom/flurry/org/apache/avro/Schema$Name;
 
-    #getter for: Lcom/flurry/org/apache/avro/Schema$Name;->name:Ljava/lang/String;
+    # getter for: Lcom/flurry/org/apache/avro/Schema$Name;->name:Ljava/lang/String;
     invoke-static {v0}, Lcom/flurry/org/apache/avro/Schema$Name;->access$500(Lcom/flurry/org/apache/avro/Schema$Name;)Ljava/lang/String;
 
     move-result-object v0

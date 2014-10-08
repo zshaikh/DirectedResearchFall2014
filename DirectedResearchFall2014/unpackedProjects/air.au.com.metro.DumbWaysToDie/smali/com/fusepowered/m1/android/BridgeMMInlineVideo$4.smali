@@ -36,8 +36,6 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m1/android/BridgeMMInlineVideo;Ljava/util/HashMap;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 87
@@ -68,7 +66,7 @@
     check-cast v2, Lcom/fusepowered/m1/android/MMWebView;
 
     .line 92
-    .local v2, webView:Lcom/fusepowered/m1/android/MMWebView;
+    .local v2, "webView":Lcom/fusepowered/m1/android/MMWebView;
     if-eqz v2, :cond_0
 
     .line 94
@@ -80,7 +78,7 @@
     move-result-object v0
 
     .line 97
-    .local v0, mmLayout:Lcom/fusepowered/m1/android/MMLayout;
+    .local v0, "mmLayout":Lcom/fusepowered/m1/android/MMLayout;
     new-instance v1, Lcom/fusepowered/m1/android/InlineVideoView$InlineParams;
 
     iget-object v3, p0, Lcom/fusepowered/m1/android/BridgeMMInlineVideo$4;->val$parameters:Ljava/util/HashMap;
@@ -92,7 +90,7 @@
     invoke-direct {v1, v3, v4}, Lcom/fusepowered/m1/android/InlineVideoView$InlineParams;-><init>(Ljava/util/HashMap;Landroid/content/Context;)V
 
     .line 98
-    .local v1, params:Lcom/fusepowered/m1/android/InlineVideoView$InlineParams;
+    .local v1, "params":Lcom/fusepowered/m1/android/InlineVideoView$InlineParams;
     invoke-virtual {v0, v1}, Lcom/fusepowered/m1/android/MMLayout;->adjustVideo(Lcom/fusepowered/m1/android/InlineVideoView$InlineParams;)Z
 
     move-result v3
@@ -105,8 +103,8 @@
     move-result-object v3
 
     .line 104
-    .end local v0           #mmLayout:Lcom/fusepowered/m1/android/MMLayout;
-    .end local v1           #params:Lcom/fusepowered/m1/android/InlineVideoView$InlineParams;
+    .end local v0    # "mmLayout":Lcom/fusepowered/m1/android/MMLayout;
+    .end local v1    # "params":Lcom/fusepowered/m1/android/InlineVideoView$InlineParams;
     :goto_0
     return-object v3
 

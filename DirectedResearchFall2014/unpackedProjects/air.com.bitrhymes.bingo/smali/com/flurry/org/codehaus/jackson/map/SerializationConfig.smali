@@ -39,13 +39,11 @@
 # direct methods
 .method public constructor <init>(Lcom/flurry/org/codehaus/jackson/map/ClassIntrospector;Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;Lcom/flurry/org/codehaus/jackson/map/introspect/VisibilityChecker;Lcom/flurry/org/codehaus/jackson/map/jsontype/SubtypeResolver;Lcom/flurry/org/codehaus/jackson/map/PropertyNamingStrategy;Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;Lcom/flurry/org/codehaus/jackson/map/HandlerInstantiator;)V
     .locals 9
-    .parameter
-    .parameter "annIntr"
-    .parameter
-    .parameter "subtypeResolver"
-    .parameter "propertyNamingStrategy"
-    .parameter "typeFactory"
-    .parameter "handlerInstantiator"
+    .param p2, "annIntr"    # Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;
+    .param p4, "subtypeResolver"    # Lcom/flurry/org/codehaus/jackson/map/jsontype/SubtypeResolver;
+    .param p5, "propertyNamingStrategy"    # Lcom/flurry/org/codehaus/jackson/map/PropertyNamingStrategy;
+    .param p6, "typeFactory"    # Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;
+    .param p7, "handlerInstantiator"    # Lcom/flurry/org/codehaus/jackson/map/HandlerInstantiator;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -66,8 +64,8 @@
 
     .prologue
     .line 490
-    .local p1, intr:Lcom/flurry/org/codehaus/jackson/map/ClassIntrospector;,"Lcom/flurry/org/codehaus/jackson/map/ClassIntrospector<+Lcom/flurry/org/codehaus/jackson/map/BeanDescription;>;"
-    .local p3, vc:Lcom/flurry/org/codehaus/jackson/map/introspect/VisibilityChecker;,"Lcom/flurry/org/codehaus/jackson/map/introspect/VisibilityChecker<*>;"
+    .local p1, "intr":Lcom/flurry/org/codehaus/jackson/map/ClassIntrospector;, "Lcom/flurry/org/codehaus/jackson/map/ClassIntrospector<+Lcom/flurry/org/codehaus/jackson/map/BeanDescription;>;"
+    .local p3, "vc":Lcom/flurry/org/codehaus/jackson/map/introspect/VisibilityChecker;, "Lcom/flurry/org/codehaus/jackson/map/introspect/VisibilityChecker<*>;"
     const-class v0, Lcom/flurry/org/codehaus/jackson/map/SerializationConfig$Feature;
 
     invoke-static {v0}, Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;->collectFeatureDefaults(Ljava/lang/Class;)I
@@ -108,7 +106,7 @@
 
 .method protected constructor <init>(Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;)V
     .locals 1
-    .parameter "src"
+    .param p1, "src"    # Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;
 
     .prologue
     .line 499
@@ -122,8 +120,8 @@
 
 .method protected constructor <init>(Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;I)V
     .locals 1
-    .parameter "src"
-    .parameter "features"
+    .param p1, "src"    # Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;
+    .param p2, "features"    # I
 
     .prologue
     .line 570
@@ -155,8 +153,8 @@
 
 .method protected constructor <init>(Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Base;)V
     .locals 1
-    .parameter "src"
-    .parameter "base"
+    .param p1, "src"    # Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;
+    .param p2, "base"    # Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Base;
 
     .prologue
     .line 520
@@ -190,8 +188,8 @@
 
 .method protected constructor <init>(Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;Lcom/flurry/org/codehaus/jackson/map/annotate/JsonSerialize$Inclusion;)V
     .locals 2
-    .parameter "src"
-    .parameter "incl"
+    .param p1, "src"    # Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;
+    .param p2, "incl"    # Lcom/flurry/org/codehaus/jackson/map/annotate/JsonSerialize$Inclusion;
 
     .prologue
     .line 553
@@ -258,8 +256,8 @@
 
 .method protected constructor <init>(Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;Lcom/flurry/org/codehaus/jackson/map/ser/FilterProvider;)V
     .locals 1
-    .parameter "src"
-    .parameter "filters"
+    .param p1, "src"    # Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;
+    .param p2, "filters"    # Lcom/flurry/org/codehaus/jackson/map/ser/FilterProvider;
 
     .prologue
     .line 531
@@ -289,8 +287,7 @@
 
 .method protected constructor <init>(Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;Ljava/lang/Class;)V
     .locals 1
-    .parameter "src"
-    .parameter
+    .param p1, "src"    # Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -302,7 +299,7 @@
 
     .prologue
     .line 542
-    .local p2, view:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p2, "view":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-direct {p0, p1}, Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Impl;-><init>(Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Impl;)V
 
     .line 459
@@ -329,9 +326,8 @@
 
 .method protected constructor <init>(Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;Ljava/util/HashMap;Lcom/flurry/org/codehaus/jackson/map/jsontype/SubtypeResolver;)V
     .locals 1
-    .parameter "src"
-    .parameter
-    .parameter "str"
+    .param p1, "src"    # Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;
+    .param p3, "str"    # Lcom/flurry/org/codehaus/jackson/map/jsontype/SubtypeResolver;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -348,7 +344,7 @@
 
     .prologue
     .line 510
-    .local p2, mixins:Ljava/util/HashMap;,"Ljava/util/HashMap<Lcom/flurry/org/codehaus/jackson/map/type/ClassKey;Ljava/lang/Class<*>;>;"
+    .local p2, "mixins":Ljava/util/HashMap;, "Ljava/util/HashMap<Lcom/flurry/org/codehaus/jackson/map/type/ClassKey;Ljava/lang/Class<*>;>;"
     iget-object v0, p1, Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;->_base:Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Base;
 
     invoke-direct {p0, p1, v0}, Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;-><init>(Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Base;)V
@@ -381,7 +377,7 @@
 
 .method public bridge synthetic createUnshared(Lcom/flurry/org/codehaus/jackson/map/jsontype/SubtypeResolver;)Lcom/flurry/org/codehaus/jackson/map/MapperConfig;
     .locals 1
-    .parameter "x0"
+    .param p1, "x0"    # Lcom/flurry/org/codehaus/jackson/map/jsontype/SubtypeResolver;
 
     .prologue
     .line 38
@@ -394,14 +390,14 @@
 
 .method public createUnshared(Lcom/flurry/org/codehaus/jackson/map/jsontype/SubtypeResolver;)Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;
     .locals 2
-    .parameter "subtypeResolver"
+    .param p1, "subtypeResolver"    # Lcom/flurry/org/codehaus/jackson/map/jsontype/SubtypeResolver;
 
     .prologue
     .line 774
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;->_mixInAnnotations:Ljava/util/HashMap;
 
     .line 775
-    .local v0, mixins:Ljava/util/HashMap;,"Ljava/util/HashMap<Lcom/flurry/org/codehaus/jackson/map/type/ClassKey;Ljava/lang/Class<*>;>;"
+    .local v0, "mixins":Ljava/util/HashMap;, "Ljava/util/HashMap<Lcom/flurry/org/codehaus/jackson/map/type/ClassKey;Ljava/lang/Class<*>;>;"
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;->_mixInAnnotationsShared:Z
@@ -416,13 +412,13 @@
 
 .method public bridge synthetic disable(Lcom/flurry/org/codehaus/jackson/map/MapperConfig$ConfigFeature;)V
     .locals 0
-    .parameter "x0"
+    .param p1, "x0"    # Lcom/flurry/org/codehaus/jackson/map/MapperConfig$ConfigFeature;
 
     .prologue
     .line 38
     check-cast p1, Lcom/flurry/org/codehaus/jackson/map/SerializationConfig$Feature;
 
-    .end local p1
+    .end local p1    # "x0":Lcom/flurry/org/codehaus/jackson/map/MapperConfig$ConfigFeature;
     invoke-virtual {p0, p1}, Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;->disable(Lcom/flurry/org/codehaus/jackson/map/SerializationConfig$Feature;)V
 
     return-void
@@ -430,7 +426,7 @@
 
 .method public disable(Lcom/flurry/org/codehaus/jackson/map/SerializationConfig$Feature;)V
     .locals 0
-    .parameter "f"
+    .param p1, "f"    # Lcom/flurry/org/codehaus/jackson/map/SerializationConfig$Feature;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -444,13 +440,13 @@
 
 .method public bridge synthetic enable(Lcom/flurry/org/codehaus/jackson/map/MapperConfig$ConfigFeature;)V
     .locals 0
-    .parameter "x0"
+    .param p1, "x0"    # Lcom/flurry/org/codehaus/jackson/map/MapperConfig$ConfigFeature;
 
     .prologue
     .line 38
     check-cast p1, Lcom/flurry/org/codehaus/jackson/map/SerializationConfig$Feature;
 
-    .end local p1
+    .end local p1    # "x0":Lcom/flurry/org/codehaus/jackson/map/MapperConfig$ConfigFeature;
     invoke-virtual {p0, p1}, Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;->enable(Lcom/flurry/org/codehaus/jackson/map/SerializationConfig$Feature;)V
 
     return-void
@@ -458,7 +454,7 @@
 
 .method public enable(Lcom/flurry/org/codehaus/jackson/map/SerializationConfig$Feature;)V
     .locals 0
-    .parameter "f"
+    .param p1, "f"    # Lcom/flurry/org/codehaus/jackson/map/SerializationConfig$Feature;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -472,7 +468,6 @@
 
 .method public fromAnnotations(Ljava/lang/Class;)V
     .locals 7
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -485,7 +480,7 @@
     .end annotation
 
     .prologue
-    .local p1, cls:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p1, "cls":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const/4 v6, 0x0
 
     .line 754
@@ -494,13 +489,13 @@
     move-result-object v1
 
     .line 755
-    .local v1, ai:Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;
+    .local v1, "ai":Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;
     invoke-static {p1, v1, v6}, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;->construct(Ljava/lang/Class;Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;Lcom/flurry/org/codehaus/jackson/map/ClassIntrospector$MixInResolver;)Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;
 
     move-result-object v0
 
     .line 756
-    .local v0, ac:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;
+    .local v0, "ac":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;
     iget-object v4, p0, Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;->_base:Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Base;
 
     invoke-virtual {p0}, Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;->getDefaultVisibilityChecker()Lcom/flurry/org/codehaus/jackson/map/introspect/VisibilityChecker;
@@ -523,7 +518,7 @@
     move-result-object v2
 
     .line 761
-    .local v2, incl:Lcom/flurry/org/codehaus/jackson/map/annotate/JsonSerialize$Inclusion;
+    .local v2, "incl":Lcom/flurry/org/codehaus/jackson/map/annotate/JsonSerialize$Inclusion;
     iget-object v4, p0, Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;->_serializationInclusion:Lcom/flurry/org/codehaus/jackson/map/annotate/JsonSerialize$Inclusion;
 
     if-eq v2, v4, :cond_0
@@ -538,7 +533,7 @@
     move-result-object v3
 
     .line 766
-    .local v3, typing:Lcom/flurry/org/codehaus/jackson/map/annotate/JsonSerialize$Typing;
+    .local v3, "typing":Lcom/flurry/org/codehaus/jackson/map/annotate/JsonSerialize$Typing;
     if-eqz v3, :cond_1
 
     .line 767
@@ -611,7 +606,7 @@
     move-result-object v0
 
     .line 835
-    .local v0, vchecker:Lcom/flurry/org/codehaus/jackson/map/introspect/VisibilityChecker;,"Lcom/flurry/org/codehaus/jackson/map/introspect/VisibilityChecker<*>;"
+    .local v0, "vchecker":Lcom/flurry/org/codehaus/jackson/map/introspect/VisibilityChecker;, "Lcom/flurry/org/codehaus/jackson/map/introspect/VisibilityChecker<*>;"
     sget-object v1, Lcom/flurry/org/codehaus/jackson/map/SerializationConfig$Feature;->AUTO_DETECT_GETTERS:Lcom/flurry/org/codehaus/jackson/map/SerializationConfig$Feature;
 
     invoke-virtual {p0, v1}, Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;->isEnabled(Lcom/flurry/org/codehaus/jackson/map/SerializationConfig$Feature;)Z
@@ -730,7 +725,7 @@
 
 .method public introspect(Lcom/flurry/org/codehaus/jackson/type/JavaType;)Lcom/flurry/org/codehaus/jackson/map/BeanDescription;
     .locals 1
-    .parameter "type"
+    .param p1, "type"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -756,7 +751,7 @@
 
 .method public introspectClassAnnotations(Lcom/flurry/org/codehaus/jackson/type/JavaType;)Lcom/flurry/org/codehaus/jackson/map/BeanDescription;
     .locals 1
-    .parameter "type"
+    .param p1, "type"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -782,7 +777,7 @@
 
 .method public introspectDirectClassAnnotations(Lcom/flurry/org/codehaus/jackson/type/JavaType;)Lcom/flurry/org/codehaus/jackson/map/BeanDescription;
     .locals 1
-    .parameter "type"
+    .param p1, "type"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -822,7 +817,7 @@
 
 .method public bridge synthetic isEnabled(Lcom/flurry/org/codehaus/jackson/map/MapperConfig$ConfigFeature;)Z
     .locals 1
-    .parameter "x0"
+    .param p1, "x0"    # Lcom/flurry/org/codehaus/jackson/map/MapperConfig$ConfigFeature;
 
     .prologue
     .line 38
@@ -835,7 +830,7 @@
 
 .method public isEnabled(Lcom/flurry/org/codehaus/jackson/map/SerializationConfig$Feature;)Z
     .locals 2
-    .parameter "f"
+    .param p1, "f"    # Lcom/flurry/org/codehaus/jackson/map/SerializationConfig$Feature;
 
     .prologue
     .line 867
@@ -862,8 +857,7 @@
 
 .method public serializerInstance(Lcom/flurry/org/codehaus/jackson/map/introspect/Annotated;Ljava/lang/Class;)Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;
     .locals 3
-    .parameter "annotated"
-    .parameter
+    .param p1, "annotated"    # Lcom/flurry/org/codehaus/jackson/map/introspect/Annotated;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -881,13 +875,13 @@
 
     .prologue
     .line 985
-    .local p2, serClass:Ljava/lang/Class;,"Ljava/lang/Class<+Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<*>;>;"
+    .local p2, "serClass":Ljava/lang/Class;, "Ljava/lang/Class<+Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<*>;>;"
     invoke-virtual {p0}, Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;->getHandlerInstantiator()Lcom/flurry/org/codehaus/jackson/map/HandlerInstantiator;
 
     move-result-object v0
 
     .line 986
-    .local v0, hi:Lcom/flurry/org/codehaus/jackson/map/HandlerInstantiator;
+    .local v0, "hi":Lcom/flurry/org/codehaus/jackson/map/HandlerInstantiator;
     if-eqz v0, :cond_0
 
     .line 987
@@ -896,18 +890,18 @@
     move-result-object v1
 
     .line 988
-    .local v1, ser:Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<*>;"
+    .local v1, "ser":Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<*>;"
     if-eqz v1, :cond_0
 
     move-object v2, v1
 
     .line 992
-    .end local v1           #ser:Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<*>;"
-    .end local p0
+    .end local v1    # "ser":Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<*>;"
+    .end local p0    # "this":Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;
     :goto_0
     return-object v2
 
-    .restart local p0
+    .restart local p0    # "this":Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;
     :cond_0
     invoke-virtual {p0}, Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;->canOverrideAccessModifiers()Z
 
@@ -917,7 +911,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;
     check-cast p0, Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;
 
     move-object v2, p0
@@ -927,14 +921,14 @@
 
 .method public bridge synthetic set(Lcom/flurry/org/codehaus/jackson/map/MapperConfig$ConfigFeature;Z)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
+    .param p1, "x0"    # Lcom/flurry/org/codehaus/jackson/map/MapperConfig$ConfigFeature;
+    .param p2, "x1"    # Z
 
     .prologue
     .line 38
     check-cast p1, Lcom/flurry/org/codehaus/jackson/map/SerializationConfig$Feature;
 
-    .end local p1
+    .end local p1    # "x0":Lcom/flurry/org/codehaus/jackson/map/MapperConfig$ConfigFeature;
     invoke-virtual {p0, p1, p2}, Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;->set(Lcom/flurry/org/codehaus/jackson/map/SerializationConfig$Feature;Z)V
 
     return-void
@@ -942,8 +936,8 @@
 
 .method public set(Lcom/flurry/org/codehaus/jackson/map/SerializationConfig$Feature;Z)V
     .locals 0
-    .parameter "f"
-    .parameter "state"
+    .param p1, "f"    # Lcom/flurry/org/codehaus/jackson/map/SerializationConfig$Feature;
+    .param p2, "state"    # Z
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -957,7 +951,7 @@
 
 .method public final setDateFormat(Ljava/text/DateFormat;)V
     .locals 2
-    .parameter "df"
+    .param p1, "df"    # Ljava/text/DateFormat;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -987,7 +981,7 @@
 
 .method public setSerializationInclusion(Lcom/flurry/org/codehaus/jackson/map/annotate/JsonSerialize$Inclusion;)V
     .locals 1
-    .parameter "props"
+    .param p1, "props"    # Lcom/flurry/org/codehaus/jackson/map/annotate/JsonSerialize$Inclusion;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -1020,7 +1014,6 @@
 
 .method public setSerializationView(Ljava/lang/Class;)V
     .locals 0
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1034,7 +1027,7 @@
 
     .prologue
     .line 1026
-    .local p1, view:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p1, "view":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     iput-object p1, p0, Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;->_serializationView:Ljava/lang/Class;
 
     .line 1027
@@ -1095,13 +1088,13 @@
 
 .method public bridge synthetic with([Lcom/flurry/org/codehaus/jackson/map/MapperConfig$ConfigFeature;)Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Impl;
     .locals 1
-    .parameter "x0"
+    .param p1, "x0"    # [Lcom/flurry/org/codehaus/jackson/map/MapperConfig$ConfigFeature;
 
     .prologue
     .line 38
     check-cast p1, [Lcom/flurry/org/codehaus/jackson/map/SerializationConfig$Feature;
 
-    .end local p1
+    .end local p1    # "x0":[Lcom/flurry/org/codehaus/jackson/map/MapperConfig$ConfigFeature;
     invoke-virtual {p0, p1}, Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;->with([Lcom/flurry/org/codehaus/jackson/map/SerializationConfig$Feature;)Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;
 
     move-result-object v0
@@ -1111,30 +1104,30 @@
 
 .method public varargs with([Lcom/flurry/org/codehaus/jackson/map/SerializationConfig$Feature;)Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;
     .locals 6
-    .parameter "features"
+    .param p1, "features"    # [Lcom/flurry/org/codehaus/jackson/map/SerializationConfig$Feature;
 
     .prologue
     .line 692
     iget v2, p0, Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;->_featureFlags:I
 
     .line 693
-    .local v2, flags:I
+    .local v2, "flags":I
     move-object v0, p1
 
-    .local v0, arr$:[Lcom/flurry/org/codehaus/jackson/map/SerializationConfig$Feature;
+    .local v0, "arr$":[Lcom/flurry/org/codehaus/jackson/map/SerializationConfig$Feature;
     array-length v4, v0
 
-    .local v4, len$:I
+    .local v4, "len$":I
     const/4 v3, 0x0
 
-    .local v3, i$:I
+    .local v3, "i$":I
     :goto_0
     if-ge v3, v4, :cond_0
 
     aget-object v1, v0, v3
 
     .line 694
-    .local v1, f:Lcom/flurry/org/codehaus/jackson/map/SerializationConfig$Feature;
+    .local v1, "f":Lcom/flurry/org/codehaus/jackson/map/SerializationConfig$Feature;
     invoke-virtual {v1}, Lcom/flurry/org/codehaus/jackson/map/SerializationConfig$Feature;->getMask()I
 
     move-result v5
@@ -1147,7 +1140,7 @@
     goto :goto_0
 
     .line 696
-    .end local v1           #f:Lcom/flurry/org/codehaus/jackson/map/SerializationConfig$Feature;
+    .end local v1    # "f":Lcom/flurry/org/codehaus/jackson/map/SerializationConfig$Feature;
     :cond_0
     new-instance v5, Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;
 
@@ -1158,7 +1151,7 @@
 
 .method public bridge synthetic withAnnotationIntrospector(Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;)Lcom/flurry/org/codehaus/jackson/map/MapperConfig;
     .locals 1
-    .parameter "x0"
+    .param p1, "x0"    # Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;
 
     .prologue
     .line 38
@@ -1171,7 +1164,7 @@
 
 .method public withAnnotationIntrospector(Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;)Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;
     .locals 2
-    .parameter "ai"
+    .param p1, "ai"    # Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;
 
     .prologue
     .line 589
@@ -1190,7 +1183,7 @@
 
 .method public bridge synthetic withAppendedAnnotationIntrospector(Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;)Lcom/flurry/org/codehaus/jackson/map/MapperConfig;
     .locals 1
-    .parameter "x0"
+    .param p1, "x0"    # Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;
 
     .prologue
     .line 38
@@ -1203,7 +1196,7 @@
 
 .method public withAppendedAnnotationIntrospector(Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;)Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;
     .locals 2
-    .parameter "ai"
+    .param p1, "ai"    # Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;
 
     .prologue
     .line 599
@@ -1222,7 +1215,7 @@
 
 .method public bridge synthetic withClassIntrospector(Lcom/flurry/org/codehaus/jackson/map/ClassIntrospector;)Lcom/flurry/org/codehaus/jackson/map/MapperConfig;
     .locals 1
-    .parameter "x0"
+    .param p1, "x0"    # Lcom/flurry/org/codehaus/jackson/map/ClassIntrospector;
 
     .prologue
     .line 38
@@ -1235,7 +1228,6 @@
 
 .method public withClassIntrospector(Lcom/flurry/org/codehaus/jackson/map/ClassIntrospector;)Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;
     .locals 2
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1249,7 +1241,7 @@
 
     .prologue
     .line 584
-    .local p1, ci:Lcom/flurry/org/codehaus/jackson/map/ClassIntrospector;,"Lcom/flurry/org/codehaus/jackson/map/ClassIntrospector<+Lcom/flurry/org/codehaus/jackson/map/BeanDescription;>;"
+    .local p1, "ci":Lcom/flurry/org/codehaus/jackson/map/ClassIntrospector;, "Lcom/flurry/org/codehaus/jackson/map/ClassIntrospector<+Lcom/flurry/org/codehaus/jackson/map/BeanDescription;>;"
     new-instance v0, Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;
 
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;->_base:Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Base;
@@ -1265,7 +1257,7 @@
 
 .method public bridge synthetic withDateFormat(Ljava/text/DateFormat;)Lcom/flurry/org/codehaus/jackson/map/MapperConfig;
     .locals 1
-    .parameter "x0"
+    .param p1, "x0"    # Ljava/text/DateFormat;
 
     .prologue
     .line 38
@@ -1278,7 +1270,7 @@
 
 .method public withDateFormat(Ljava/text/DateFormat;)Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;
     .locals 4
-    .parameter "df"
+    .param p1, "df"    # Ljava/text/DateFormat;
 
     .prologue
     const/4 v2, 0x1
@@ -1297,7 +1289,7 @@
     invoke-direct {v0, p0, v1}, Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;-><init>(Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Base;)V
 
     .line 643
-    .local v0, cfg:Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;
+    .local v0, "cfg":Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;
     if-nez p1, :cond_0
 
     .line 644
@@ -1332,7 +1324,7 @@
 
 .method public withFilters(Lcom/flurry/org/codehaus/jackson/map/ser/FilterProvider;)Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;
     .locals 1
-    .parameter "filterProvider"
+    .param p1, "filterProvider"    # Lcom/flurry/org/codehaus/jackson/map/ser/FilterProvider;
 
     .prologue
     .line 666
@@ -1345,7 +1337,7 @@
 
 .method public bridge synthetic withHandlerInstantiator(Lcom/flurry/org/codehaus/jackson/map/HandlerInstantiator;)Lcom/flurry/org/codehaus/jackson/map/MapperConfig;
     .locals 1
-    .parameter "x0"
+    .param p1, "x0"    # Lcom/flurry/org/codehaus/jackson/map/HandlerInstantiator;
 
     .prologue
     .line 38
@@ -1358,7 +1350,7 @@
 
 .method public withHandlerInstantiator(Lcom/flurry/org/codehaus/jackson/map/HandlerInstantiator;)Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;
     .locals 2
-    .parameter "hi"
+    .param p1, "hi"    # Lcom/flurry/org/codehaus/jackson/map/HandlerInstantiator;
 
     .prologue
     .line 653
@@ -1377,7 +1369,7 @@
 
 .method public bridge synthetic withInsertedAnnotationIntrospector(Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;)Lcom/flurry/org/codehaus/jackson/map/MapperConfig;
     .locals 1
-    .parameter "x0"
+    .param p1, "x0"    # Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;
 
     .prologue
     .line 38
@@ -1390,7 +1382,7 @@
 
 .method public withInsertedAnnotationIntrospector(Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;)Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;
     .locals 2
-    .parameter "ai"
+    .param p1, "ai"    # Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;
 
     .prologue
     .line 594
@@ -1409,7 +1401,7 @@
 
 .method public bridge synthetic withPropertyNamingStrategy(Lcom/flurry/org/codehaus/jackson/map/PropertyNamingStrategy;)Lcom/flurry/org/codehaus/jackson/map/MapperConfig;
     .locals 1
-    .parameter "x0"
+    .param p1, "x0"    # Lcom/flurry/org/codehaus/jackson/map/PropertyNamingStrategy;
 
     .prologue
     .line 38
@@ -1422,7 +1414,7 @@
 
 .method public withPropertyNamingStrategy(Lcom/flurry/org/codehaus/jackson/map/PropertyNamingStrategy;)Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;
     .locals 2
-    .parameter "pns"
+    .param p1, "pns"    # Lcom/flurry/org/codehaus/jackson/map/PropertyNamingStrategy;
 
     .prologue
     .line 626
@@ -1441,7 +1433,7 @@
 
 .method public withSerializationInclusion(Lcom/flurry/org/codehaus/jackson/map/annotate/JsonSerialize$Inclusion;)Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;
     .locals 1
-    .parameter "incl"
+    .param p1, "incl"    # Lcom/flurry/org/codehaus/jackson/map/annotate/JsonSerialize$Inclusion;
 
     .prologue
     .line 680
@@ -1454,7 +1446,7 @@
 
 .method public bridge synthetic withSubtypeResolver(Lcom/flurry/org/codehaus/jackson/map/jsontype/SubtypeResolver;)Lcom/flurry/org/codehaus/jackson/map/MapperConfig;
     .locals 1
-    .parameter "x0"
+    .param p1, "x0"    # Lcom/flurry/org/codehaus/jackson/map/jsontype/SubtypeResolver;
 
     .prologue
     .line 38
@@ -1467,7 +1459,7 @@
 
 .method public withSubtypeResolver(Lcom/flurry/org/codehaus/jackson/map/jsontype/SubtypeResolver;)Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;
     .locals 1
-    .parameter "str"
+    .param p1, "str"    # Lcom/flurry/org/codehaus/jackson/map/jsontype/SubtypeResolver;
 
     .prologue
     .line 619
@@ -1476,7 +1468,7 @@
     invoke-direct {v0, p0}, Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;-><init>(Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;)V
 
     .line 620
-    .local v0, cfg:Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;
+    .local v0, "cfg":Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;
     iput-object p1, v0, Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;->_subtypeResolver:Lcom/flurry/org/codehaus/jackson/map/jsontype/SubtypeResolver;
 
     .line 621
@@ -1485,7 +1477,7 @@
 
 .method public bridge synthetic withTypeFactory(Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;)Lcom/flurry/org/codehaus/jackson/map/MapperConfig;
     .locals 1
-    .parameter "x0"
+    .param p1, "x0"    # Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;
 
     .prologue
     .line 38
@@ -1498,7 +1490,7 @@
 
 .method public withTypeFactory(Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;)Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;
     .locals 2
-    .parameter "tf"
+    .param p1, "tf"    # Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;
 
     .prologue
     .line 631
@@ -1517,7 +1509,7 @@
 
 .method public bridge synthetic withTypeResolverBuilder(Lcom/flurry/org/codehaus/jackson/map/jsontype/TypeResolverBuilder;)Lcom/flurry/org/codehaus/jackson/map/MapperConfig;
     .locals 1
-    .parameter "x0"
+    .param p1, "x0"    # Lcom/flurry/org/codehaus/jackson/map/jsontype/TypeResolverBuilder;
 
     .prologue
     .line 38
@@ -1530,7 +1522,6 @@
 
 .method public withTypeResolverBuilder(Lcom/flurry/org/codehaus/jackson/map/jsontype/TypeResolverBuilder;)Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;
     .locals 2
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1542,7 +1533,7 @@
 
     .prologue
     .line 614
-    .local p1, trb:Lcom/flurry/org/codehaus/jackson/map/jsontype/TypeResolverBuilder;,"Lcom/flurry/org/codehaus/jackson/map/jsontype/TypeResolverBuilder<*>;"
+    .local p1, "trb":Lcom/flurry/org/codehaus/jackson/map/jsontype/TypeResolverBuilder;, "Lcom/flurry/org/codehaus/jackson/map/jsontype/TypeResolverBuilder<*>;"
     new-instance v0, Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;
 
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;->_base:Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Base;
@@ -1558,7 +1549,6 @@
 
 .method public withView(Ljava/lang/Class;)Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1570,7 +1560,7 @@
 
     .prologue
     .line 673
-    .local p1, view:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p1, "view":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     new-instance v0, Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;
 
     invoke-direct {v0, p0, p1}, Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;-><init>(Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;Ljava/lang/Class;)V
@@ -1580,8 +1570,8 @@
 
 .method public bridge synthetic withVisibility(Lcom/flurry/org/codehaus/jackson/annotate/JsonMethod;Lcom/flurry/org/codehaus/jackson/annotate/JsonAutoDetect$Visibility;)Lcom/flurry/org/codehaus/jackson/map/MapperConfig;
     .locals 1
-    .parameter "x0"
-    .parameter "x1"
+    .param p1, "x0"    # Lcom/flurry/org/codehaus/jackson/annotate/JsonMethod;
+    .param p2, "x1"    # Lcom/flurry/org/codehaus/jackson/annotate/JsonAutoDetect$Visibility;
 
     .prologue
     .line 38
@@ -1594,8 +1584,8 @@
 
 .method public withVisibility(Lcom/flurry/org/codehaus/jackson/annotate/JsonMethod;Lcom/flurry/org/codehaus/jackson/annotate/JsonAutoDetect$Visibility;)Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;
     .locals 2
-    .parameter "forMethod"
-    .parameter "visibility"
+    .param p1, "forMethod"    # Lcom/flurry/org/codehaus/jackson/annotate/JsonMethod;
+    .param p2, "visibility"    # Lcom/flurry/org/codehaus/jackson/annotate/JsonAutoDetect$Visibility;
 
     .prologue
     .line 609
@@ -1614,7 +1604,7 @@
 
 .method public bridge synthetic withVisibilityChecker(Lcom/flurry/org/codehaus/jackson/map/introspect/VisibilityChecker;)Lcom/flurry/org/codehaus/jackson/map/MapperConfig;
     .locals 1
-    .parameter "x0"
+    .param p1, "x0"    # Lcom/flurry/org/codehaus/jackson/map/introspect/VisibilityChecker;
 
     .prologue
     .line 38
@@ -1627,7 +1617,6 @@
 
 .method public withVisibilityChecker(Lcom/flurry/org/codehaus/jackson/map/introspect/VisibilityChecker;)Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;
     .locals 2
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1639,7 +1628,7 @@
 
     .prologue
     .line 604
-    .local p1, vc:Lcom/flurry/org/codehaus/jackson/map/introspect/VisibilityChecker;,"Lcom/flurry/org/codehaus/jackson/map/introspect/VisibilityChecker<*>;"
+    .local p1, "vc":Lcom/flurry/org/codehaus/jackson/map/introspect/VisibilityChecker;, "Lcom/flurry/org/codehaus/jackson/map/introspect/VisibilityChecker<*>;"
     new-instance v0, Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;
 
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;->_base:Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Base;
@@ -1655,13 +1644,13 @@
 
 .method public bridge synthetic without([Lcom/flurry/org/codehaus/jackson/map/MapperConfig$ConfigFeature;)Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Impl;
     .locals 1
-    .parameter "x0"
+    .param p1, "x0"    # [Lcom/flurry/org/codehaus/jackson/map/MapperConfig$ConfigFeature;
 
     .prologue
     .line 38
     check-cast p1, [Lcom/flurry/org/codehaus/jackson/map/SerializationConfig$Feature;
 
-    .end local p1
+    .end local p1    # "x0":[Lcom/flurry/org/codehaus/jackson/map/MapperConfig$ConfigFeature;
     invoke-virtual {p0, p1}, Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;->without([Lcom/flurry/org/codehaus/jackson/map/SerializationConfig$Feature;)Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;
 
     move-result-object v0
@@ -1671,30 +1660,30 @@
 
 .method public varargs without([Lcom/flurry/org/codehaus/jackson/map/SerializationConfig$Feature;)Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;
     .locals 6
-    .parameter "features"
+    .param p1, "features"    # [Lcom/flurry/org/codehaus/jackson/map/SerializationConfig$Feature;
 
     .prologue
     .line 708
     iget v2, p0, Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;->_featureFlags:I
 
     .line 709
-    .local v2, flags:I
+    .local v2, "flags":I
     move-object v0, p1
 
-    .local v0, arr$:[Lcom/flurry/org/codehaus/jackson/map/SerializationConfig$Feature;
+    .local v0, "arr$":[Lcom/flurry/org/codehaus/jackson/map/SerializationConfig$Feature;
     array-length v4, v0
 
-    .local v4, len$:I
+    .local v4, "len$":I
     const/4 v3, 0x0
 
-    .local v3, i$:I
+    .local v3, "i$":I
     :goto_0
     if-ge v3, v4, :cond_0
 
     aget-object v1, v0, v3
 
     .line 710
-    .local v1, f:Lcom/flurry/org/codehaus/jackson/map/SerializationConfig$Feature;
+    .local v1, "f":Lcom/flurry/org/codehaus/jackson/map/SerializationConfig$Feature;
     invoke-virtual {v1}, Lcom/flurry/org/codehaus/jackson/map/SerializationConfig$Feature;->getMask()I
 
     move-result v5
@@ -1709,7 +1698,7 @@
     goto :goto_0
 
     .line 712
-    .end local v1           #f:Lcom/flurry/org/codehaus/jackson/map/SerializationConfig$Feature;
+    .end local v1    # "f":Lcom/flurry/org/codehaus/jackson/map/SerializationConfig$Feature;
     :cond_0
     new-instance v5, Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;
 

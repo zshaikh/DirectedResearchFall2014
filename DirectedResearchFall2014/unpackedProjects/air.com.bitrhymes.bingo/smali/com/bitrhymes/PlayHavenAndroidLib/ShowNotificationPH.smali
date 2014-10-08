@@ -25,8 +25,8 @@
 # virtual methods
 .method public call(Lcom/adobe/fre/FREContext;[Lcom/adobe/fre/FREObject;)Lcom/adobe/fre/FREObject;
     .locals 7
-    .parameter "arg0"
-    .parameter "args"
+    .param p1, "arg0"    # Lcom/adobe/fre/FREContext;
+    .param p2, "args"    # [Lcom/adobe/fre/FREObject;
 
     .prologue
     const-string v5, "PlayhavenEXt"
@@ -59,7 +59,7 @@
     move-result-object v2
 
     .line 24
-    .local v2, place:Ljava/lang/String;
+    .local v2, "place":Ljava/lang/String;
     new-instance v1, Lcom/playhaven/src/publishersdk/metadata/PHNotificationView;
 
     iget-object v3, p0, Lcom/bitrhymes/PlayHavenAndroidLib/ShowNotificationPH;->context:Lcom/adobe/fre/FREContext;
@@ -71,14 +71,14 @@
     invoke-direct {v1, v3, v2}, Lcom/playhaven/src/publishersdk/metadata/PHNotificationView;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
     .line 28
-    .local v1, notifyView:Lcom/playhaven/src/publishersdk/metadata/PHNotificationView;
+    .local v1, "notifyView":Lcom/playhaven/src/publishersdk/metadata/PHNotificationView;
     invoke-virtual {v1}, Lcom/playhaven/src/publishersdk/metadata/PHNotificationView;->refresh()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 37
-    .end local v1           #notifyView:Lcom/playhaven/src/publishersdk/metadata/PHNotificationView;
-    .end local v2           #place:Ljava/lang/String;
+    .end local v1    # "notifyView":Lcom/playhaven/src/publishersdk/metadata/PHNotificationView;
+    .end local v2    # "place":Ljava/lang/String;
     :goto_0
     const/4 v3, 0x0
 
@@ -91,7 +91,7 @@
     move-object v0, v3
 
     .line 31
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     .line 32

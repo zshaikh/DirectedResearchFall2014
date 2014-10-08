@@ -124,8 +124,6 @@
 
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()V"
@@ -141,9 +139,9 @@
 
 .method synthetic constructor <init>(Ljava/lang/String;ILcom/fusepowered/m1/google/gson/FieldNamingPolicy$1;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
-    .parameter "x2"
+    .param p1, "x0"    # Ljava/lang/String;
+    .param p2, "x1"    # I
+    .param p3, "x2"    # Lcom/fusepowered/m1/google/gson/FieldNamingPolicy$1;
 
     .prologue
     .line 30
@@ -154,7 +152,7 @@
 
 .method static synthetic access$100(Ljava/lang/String;)Ljava/lang/String;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Ljava/lang/String;
 
     .prologue
     .line 30
@@ -167,8 +165,8 @@
 
 .method static synthetic access$200(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 1
-    .parameter "x0"
-    .parameter "x1"
+    .param p0, "x0"    # Ljava/lang/String;
+    .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
     .line 30
@@ -181,9 +179,9 @@
 
 .method private static modifyString(CLjava/lang/String;I)Ljava/lang/String;
     .locals 2
-    .parameter "firstCharacter"
-    .parameter "srcString"
-    .parameter "indexOfSubstring"
+    .param p0, "firstCharacter"    # C
+    .param p1, "srcString"    # Ljava/lang/String;
+    .param p2, "indexOfSubstring"    # I
 
     .prologue
     .line 164
@@ -226,8 +224,8 @@
 
 .method private static separateCamelCase(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 4
-    .parameter "name"
-    .parameter "separator"
+    .param p0, "name"    # Ljava/lang/String;
+    .param p1, "separator"    # Ljava/lang/String;
 
     .prologue
     .line 123
@@ -236,10 +234,10 @@
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
     .line 124
-    .local v2, translation:Ljava/lang/StringBuilder;
+    .local v2, "translation":Ljava/lang/StringBuilder;
     const/4 v1, 0x0
 
-    .local v1, i:I
+    .local v1, "i":I
     :goto_0
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
@@ -253,7 +251,7 @@
     move-result v0
 
     .line 126
-    .local v0, character:C
+    .local v0, "character":C
     invoke-static {v0}, Ljava/lang/Character;->isUpperCase(C)Z
 
     move-result v3
@@ -279,7 +277,7 @@
     goto :goto_0
 
     .line 131
-    .end local v0           #character:C
+    .end local v0    # "character":C
     :cond_1
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -290,7 +288,7 @@
 
 .method private static upperCaseFirstLetter(Ljava/lang/String;)Ljava/lang/String;
     .locals 6
-    .parameter "name"
+    .param p0, "name"    # Ljava/lang/String;
 
     .prologue
     .line 138
@@ -299,17 +297,17 @@
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     .line 139
-    .local v0, fieldNameBuilder:Ljava/lang/StringBuilder;
+    .local v0, "fieldNameBuilder":Ljava/lang/StringBuilder;
     const/4 v2, 0x0
 
     .line 140
-    .local v2, index:I
+    .local v2, "index":I
     invoke-virtual {p0, v2}, Ljava/lang/String;->charAt(I)C
 
     move-result v1
 
     .line 142
-    .local v1, firstCharacter:C
+    .local v1, "firstCharacter":C
     :goto_0
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
@@ -378,7 +376,7 @@
     move-result-object v3
 
     .line 157
-    .local v3, modifiedTarget:Ljava/lang/String;
+    .local v3, "modifiedTarget":Ljava/lang/String;
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v4
@@ -389,7 +387,7 @@
 
     goto :goto_1
 
-    .end local v3           #modifiedTarget:Ljava/lang/String;
+    .end local v3    # "modifiedTarget":Ljava/lang/String;
     :cond_3
     move-object v4, p0
 
@@ -399,7 +397,7 @@
 
 .method public static valueOf(Ljava/lang/String;)Lcom/fusepowered/m1/google/gson/FieldNamingPolicy;
     .locals 1
-    .parameter "name"
+    .param p0, "name"    # Ljava/lang/String;
 
     .prologue
     .line 30
@@ -409,7 +407,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "name":Ljava/lang/String;
     check-cast p0, Lcom/fusepowered/m1/google/gson/FieldNamingPolicy;
 
     return-object p0

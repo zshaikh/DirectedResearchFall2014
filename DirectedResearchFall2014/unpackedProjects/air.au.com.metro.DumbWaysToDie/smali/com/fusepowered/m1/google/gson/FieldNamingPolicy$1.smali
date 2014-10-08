@@ -17,8 +17,6 @@
 # direct methods
 .method constructor <init>(Ljava/lang/String;I)V
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 36
@@ -33,7 +31,7 @@
 # virtual methods
 .method public translateName(Ljava/lang/reflect/Field;)Ljava/lang/String;
     .locals 1
-    .parameter "f"
+    .param p1, "f"    # Ljava/lang/reflect/Field;
 
     .prologue
     .line 38

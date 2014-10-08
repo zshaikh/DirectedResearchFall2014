@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m1/android/NVASpeechKit;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 835
@@ -39,8 +38,8 @@
 # virtual methods
 .method public onError(Lcom/nuance/nmdp/speechkit/Recognizer;Lcom/nuance/nmdp/speechkit/SpeechError;)V
     .locals 2
-    .parameter "recognizer"
-    .parameter "error"
+    .param p1, "recognizer"    # Lcom/nuance/nmdp/speechkit/Recognizer;
+    .param p2, "error"    # Lcom/nuance/nmdp/speechkit/SpeechError;
 
     .prologue
     .line 869
@@ -99,13 +98,13 @@
     .line 870
     iget-object v0, p0, Lcom/fusepowered/m1/android/NVASpeechKit$7;->this$0:Lcom/fusepowered/m1/android/NVASpeechKit;
 
-    #calls: Lcom/fusepowered/m1/android/NVASpeechKit;->cancelAudioLevelCallbacks()V
+    # invokes: Lcom/fusepowered/m1/android/NVASpeechKit;->cancelAudioLevelCallbacks()V
     invoke-static {v0}, Lcom/fusepowered/m1/android/NVASpeechKit;->access$1500(Lcom/fusepowered/m1/android/NVASpeechKit;)V
 
     .line 871
     iget-object v0, p0, Lcom/fusepowered/m1/android/NVASpeechKit$7;->this$0:Lcom/fusepowered/m1/android/NVASpeechKit;
 
-    #calls: Lcom/fusepowered/m1/android/NVASpeechKit;->handleSpeechError(Lcom/nuance/nmdp/speechkit/SpeechError;)V
+    # invokes: Lcom/fusepowered/m1/android/NVASpeechKit;->handleSpeechError(Lcom/nuance/nmdp/speechkit/SpeechError;)V
     invoke-static {v0, p2}, Lcom/fusepowered/m1/android/NVASpeechKit;->access$1200(Lcom/fusepowered/m1/android/NVASpeechKit;Lcom/nuance/nmdp/speechkit/SpeechError;)V
 
     .line 872
@@ -113,13 +112,13 @@
 
     const/4 v1, 0x0
 
-    #setter for: Lcom/fusepowered/m1/android/NVASpeechKit;->skCurrentRecognizer:Lcom/nuance/nmdp/speechkit/Recognizer;
+    # setter for: Lcom/fusepowered/m1/android/NVASpeechKit;->skCurrentRecognizer:Lcom/nuance/nmdp/speechkit/Recognizer;
     invoke-static {v0, v1}, Lcom/fusepowered/m1/android/NVASpeechKit;->access$002(Lcom/fusepowered/m1/android/NVASpeechKit;Lcom/nuance/nmdp/speechkit/Recognizer;)Lcom/nuance/nmdp/speechkit/Recognizer;
 
     .line 874
     iget-object v0, p0, Lcom/fusepowered/m1/android/NVASpeechKit$7;->this$0:Lcom/fusepowered/m1/android/NVASpeechKit;
 
-    #getter for: Lcom/fusepowered/m1/android/NVASpeechKit;->sk:Lcom/nuance/nmdp/speechkit/SpeechKit;
+    # getter for: Lcom/fusepowered/m1/android/NVASpeechKit;->sk:Lcom/nuance/nmdp/speechkit/SpeechKit;
     invoke-static {v0}, Lcom/fusepowered/m1/android/NVASpeechKit;->access$1600(Lcom/fusepowered/m1/android/NVASpeechKit;)Lcom/nuance/nmdp/speechkit/SpeechKit;
 
     move-result-object v0
@@ -139,7 +138,7 @@
 
     iget-object v1, p0, Lcom/fusepowered/m1/android/NVASpeechKit$7;->this$0:Lcom/fusepowered/m1/android/NVASpeechKit;
 
-    #getter for: Lcom/fusepowered/m1/android/NVASpeechKit;->sk:Lcom/nuance/nmdp/speechkit/SpeechKit;
+    # getter for: Lcom/fusepowered/m1/android/NVASpeechKit;->sk:Lcom/nuance/nmdp/speechkit/SpeechKit;
     invoke-static {v1}, Lcom/fusepowered/m1/android/NVASpeechKit;->access$1600(Lcom/fusepowered/m1/android/NVASpeechKit;)Lcom/nuance/nmdp/speechkit/SpeechKit;
 
     move-result-object v1
@@ -171,7 +170,7 @@
 
 .method public onRecordingBegin(Lcom/nuance/nmdp/speechkit/Recognizer;)V
     .locals 4
-    .parameter "recognizer"
+    .param p1, "recognizer"    # Lcom/nuance/nmdp/speechkit/Recognizer;
 
     .prologue
     .line 839
@@ -189,7 +188,7 @@
     .line 841
     iget-object v0, p0, Lcom/fusepowered/m1/android/NVASpeechKit$7;->this$0:Lcom/fusepowered/m1/android/NVASpeechKit;
 
-    #getter for: Lcom/fusepowered/m1/android/NVASpeechKit;->audioLevelTracker:Lcom/fusepowered/m1/android/NVASpeechKit$AudioLevelTracker;
+    # getter for: Lcom/fusepowered/m1/android/NVASpeechKit;->audioLevelTracker:Lcom/fusepowered/m1/android/NVASpeechKit$AudioLevelTracker;
     invoke-static {v0}, Lcom/fusepowered/m1/android/NVASpeechKit;->access$200(Lcom/fusepowered/m1/android/NVASpeechKit;)Lcom/fusepowered/m1/android/NVASpeechKit$AudioLevelTracker;
 
     move-result-object v0
@@ -205,20 +204,20 @@
 
     sget-object v1, Lcom/fusepowered/m1/android/NVASpeechKit$State;->RECORDING:Lcom/fusepowered/m1/android/NVASpeechKit$State;
 
-    #calls: Lcom/fusepowered/m1/android/NVASpeechKit;->setState(Lcom/fusepowered/m1/android/NVASpeechKit$State;)V
+    # invokes: Lcom/fusepowered/m1/android/NVASpeechKit;->setState(Lcom/fusepowered/m1/android/NVASpeechKit$State;)V
     invoke-static {v0, v1}, Lcom/fusepowered/m1/android/NVASpeechKit;->access$1100(Lcom/fusepowered/m1/android/NVASpeechKit;Lcom/fusepowered/m1/android/NVASpeechKit$State;)V
 
     .line 845
     :cond_0
     iget-object v0, p0, Lcom/fusepowered/m1/android/NVASpeechKit$7;->this$0:Lcom/fusepowered/m1/android/NVASpeechKit;
 
-    #calls: Lcom/fusepowered/m1/android/NVASpeechKit;->startProgress(Lcom/nuance/nmdp/speechkit/Recognizer;)V
+    # invokes: Lcom/fusepowered/m1/android/NVASpeechKit;->startProgress(Lcom/nuance/nmdp/speechkit/Recognizer;)V
     invoke-static {v0, p1}, Lcom/fusepowered/m1/android/NVASpeechKit;->access$1300(Lcom/fusepowered/m1/android/NVASpeechKit;Lcom/nuance/nmdp/speechkit/Recognizer;)V
 
     .line 846
     iget-object v0, p0, Lcom/fusepowered/m1/android/NVASpeechKit$7;->this$0:Lcom/fusepowered/m1/android/NVASpeechKit;
 
-    #getter for: Lcom/fusepowered/m1/android/NVASpeechKit;->audioLevelTracker:Lcom/fusepowered/m1/android/NVASpeechKit$AudioLevelTracker;
+    # getter for: Lcom/fusepowered/m1/android/NVASpeechKit;->audioLevelTracker:Lcom/fusepowered/m1/android/NVASpeechKit$AudioLevelTracker;
     invoke-static {v0}, Lcom/fusepowered/m1/android/NVASpeechKit;->access$200(Lcom/fusepowered/m1/android/NVASpeechKit;)Lcom/fusepowered/m1/android/NVASpeechKit$AudioLevelTracker;
 
     move-result-object v0
@@ -232,14 +231,14 @@
     .line 848
     iget-object v0, p0, Lcom/fusepowered/m1/android/NVASpeechKit$7;->this$0:Lcom/fusepowered/m1/android/NVASpeechKit;
 
-    #getter for: Lcom/fusepowered/m1/android/NVASpeechKit;->speeckKitHandler:Landroid/os/Handler;
+    # getter for: Lcom/fusepowered/m1/android/NVASpeechKit;->speeckKitHandler:Landroid/os/Handler;
     invoke-static {v0}, Lcom/fusepowered/m1/android/NVASpeechKit;->access$600(Lcom/fusepowered/m1/android/NVASpeechKit;)Landroid/os/Handler;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/fusepowered/m1/android/NVASpeechKit$7;->this$0:Lcom/fusepowered/m1/android/NVASpeechKit;
 
-    #getter for: Lcom/fusepowered/m1/android/NVASpeechKit;->audioSampleCallback:Ljava/lang/Runnable;
+    # getter for: Lcom/fusepowered/m1/android/NVASpeechKit;->audioSampleCallback:Ljava/lang/Runnable;
     invoke-static {v1}, Lcom/fusepowered/m1/android/NVASpeechKit;->access$1400(Lcom/fusepowered/m1/android/NVASpeechKit;)Ljava/lang/Runnable;
 
     move-result-object v1
@@ -249,14 +248,14 @@
     .line 849
     iget-object v0, p0, Lcom/fusepowered/m1/android/NVASpeechKit$7;->this$0:Lcom/fusepowered/m1/android/NVASpeechKit;
 
-    #getter for: Lcom/fusepowered/m1/android/NVASpeechKit;->speeckKitHandler:Landroid/os/Handler;
+    # getter for: Lcom/fusepowered/m1/android/NVASpeechKit;->speeckKitHandler:Landroid/os/Handler;
     invoke-static {v0}, Lcom/fusepowered/m1/android/NVASpeechKit;->access$600(Lcom/fusepowered/m1/android/NVASpeechKit;)Landroid/os/Handler;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/fusepowered/m1/android/NVASpeechKit$7;->this$0:Lcom/fusepowered/m1/android/NVASpeechKit;
 
-    #getter for: Lcom/fusepowered/m1/android/NVASpeechKit;->audioSampleCallback:Ljava/lang/Runnable;
+    # getter for: Lcom/fusepowered/m1/android/NVASpeechKit;->audioSampleCallback:Ljava/lang/Runnable;
     invoke-static {v1}, Lcom/fusepowered/m1/android/NVASpeechKit;->access$1400(Lcom/fusepowered/m1/android/NVASpeechKit;)Ljava/lang/Runnable;
 
     move-result-object v1
@@ -272,7 +271,7 @@
 
 .method public onRecordingDone(Lcom/nuance/nmdp/speechkit/Recognizer;)V
     .locals 2
-    .parameter "recognizer"
+    .param p1, "recognizer"    # Lcom/nuance/nmdp/speechkit/Recognizer;
 
     .prologue
     .line 856
@@ -283,13 +282,13 @@
     .line 857
     iget-object v0, p0, Lcom/fusepowered/m1/android/NVASpeechKit$7;->this$0:Lcom/fusepowered/m1/android/NVASpeechKit;
 
-    #calls: Lcom/fusepowered/m1/android/NVASpeechKit;->cancelAudioLevelCallbacks()V
+    # invokes: Lcom/fusepowered/m1/android/NVASpeechKit;->cancelAudioLevelCallbacks()V
     invoke-static {v0}, Lcom/fusepowered/m1/android/NVASpeechKit;->access$1500(Lcom/fusepowered/m1/android/NVASpeechKit;)V
 
     .line 858
     iget-object v0, p0, Lcom/fusepowered/m1/android/NVASpeechKit$7;->this$0:Lcom/fusepowered/m1/android/NVASpeechKit;
 
-    #getter for: Lcom/fusepowered/m1/android/NVASpeechKit;->audioLevelTracker:Lcom/fusepowered/m1/android/NVASpeechKit$AudioLevelTracker;
+    # getter for: Lcom/fusepowered/m1/android/NVASpeechKit;->audioLevelTracker:Lcom/fusepowered/m1/android/NVASpeechKit$AudioLevelTracker;
     invoke-static {v0}, Lcom/fusepowered/m1/android/NVASpeechKit;->access$200(Lcom/fusepowered/m1/android/NVASpeechKit;)Lcom/fusepowered/m1/android/NVASpeechKit$AudioLevelTracker;
 
     move-result-object v0
@@ -305,14 +304,14 @@
 
     sget-object v1, Lcom/fusepowered/m1/android/NVASpeechKit$State;->PROCESSING:Lcom/fusepowered/m1/android/NVASpeechKit$State;
 
-    #calls: Lcom/fusepowered/m1/android/NVASpeechKit;->setState(Lcom/fusepowered/m1/android/NVASpeechKit$State;)V
+    # invokes: Lcom/fusepowered/m1/android/NVASpeechKit;->setState(Lcom/fusepowered/m1/android/NVASpeechKit$State;)V
     invoke-static {v0, v1}, Lcom/fusepowered/m1/android/NVASpeechKit;->access$1100(Lcom/fusepowered/m1/android/NVASpeechKit;Lcom/fusepowered/m1/android/NVASpeechKit$State;)V
 
     .line 862
     :cond_0
     iget-object v0, p0, Lcom/fusepowered/m1/android/NVASpeechKit$7;->this$0:Lcom/fusepowered/m1/android/NVASpeechKit;
 
-    #getter for: Lcom/fusepowered/m1/android/NVASpeechKit;->sk:Lcom/nuance/nmdp/speechkit/SpeechKit;
+    # getter for: Lcom/fusepowered/m1/android/NVASpeechKit;->sk:Lcom/nuance/nmdp/speechkit/SpeechKit;
     invoke-static {v0}, Lcom/fusepowered/m1/android/NVASpeechKit;->access$1600(Lcom/fusepowered/m1/android/NVASpeechKit;)Lcom/nuance/nmdp/speechkit/SpeechKit;
 
     move-result-object v0
@@ -324,7 +323,7 @@
 
     iget-object v1, p0, Lcom/fusepowered/m1/android/NVASpeechKit$7;->this$0:Lcom/fusepowered/m1/android/NVASpeechKit;
 
-    #getter for: Lcom/fusepowered/m1/android/NVASpeechKit;->sk:Lcom/nuance/nmdp/speechkit/SpeechKit;
+    # getter for: Lcom/fusepowered/m1/android/NVASpeechKit;->sk:Lcom/nuance/nmdp/speechkit/SpeechKit;
     invoke-static {v1}, Lcom/fusepowered/m1/android/NVASpeechKit;->access$1600(Lcom/fusepowered/m1/android/NVASpeechKit;)Lcom/nuance/nmdp/speechkit/SpeechKit;
 
     move-result-object v1
@@ -333,7 +332,7 @@
 
     move-result-object v1
 
-    #setter for: Lcom/fusepowered/m1/android/NVASpeechKit;->nuance_transaction_session_id:Ljava/lang/String;
+    # setter for: Lcom/fusepowered/m1/android/NVASpeechKit;->nuance_transaction_session_id:Ljava/lang/String;
     invoke-static {v0, v1}, Lcom/fusepowered/m1/android/NVASpeechKit;->access$1702(Lcom/fusepowered/m1/android/NVASpeechKit;Ljava/lang/String;)Ljava/lang/String;
 
     .line 864
@@ -343,8 +342,8 @@
 
 .method public onResults(Lcom/nuance/nmdp/speechkit/Recognizer;Lcom/nuance/nmdp/speechkit/Recognition;)V
     .locals 2
-    .parameter "recognizer"
-    .parameter "results"
+    .param p1, "recognizer"    # Lcom/nuance/nmdp/speechkit/Recognizer;
+    .param p2, "results"    # Lcom/nuance/nmdp/speechkit/Recognition;
 
     .prologue
     .line 883
@@ -355,13 +354,13 @@
     .line 884
     iget-object v0, p0, Lcom/fusepowered/m1/android/NVASpeechKit$7;->this$0:Lcom/fusepowered/m1/android/NVASpeechKit;
 
-    #calls: Lcom/fusepowered/m1/android/NVASpeechKit;->cancelAudioLevelCallbacks()V
+    # invokes: Lcom/fusepowered/m1/android/NVASpeechKit;->cancelAudioLevelCallbacks()V
     invoke-static {v0}, Lcom/fusepowered/m1/android/NVASpeechKit;->access$1500(Lcom/fusepowered/m1/android/NVASpeechKit;)V
 
     .line 885
     iget-object v0, p0, Lcom/fusepowered/m1/android/NVASpeechKit$7;->this$0:Lcom/fusepowered/m1/android/NVASpeechKit;
 
-    #getter for: Lcom/fusepowered/m1/android/NVASpeechKit;->audioLevelTracker:Lcom/fusepowered/m1/android/NVASpeechKit$AudioLevelTracker;
+    # getter for: Lcom/fusepowered/m1/android/NVASpeechKit;->audioLevelTracker:Lcom/fusepowered/m1/android/NVASpeechKit$AudioLevelTracker;
     invoke-static {v0}, Lcom/fusepowered/m1/android/NVASpeechKit;->access$200(Lcom/fusepowered/m1/android/NVASpeechKit;)Lcom/fusepowered/m1/android/NVASpeechKit$AudioLevelTracker;
 
     move-result-object v0
@@ -377,13 +376,13 @@
 
     move-result-object v1
 
-    #calls: Lcom/fusepowered/m1/android/NVASpeechKit;->processResults(Ljava/util/List;)V
+    # invokes: Lcom/fusepowered/m1/android/NVASpeechKit;->processResults(Ljava/util/List;)V
     invoke-static {v0, v1}, Lcom/fusepowered/m1/android/NVASpeechKit;->access$1800(Lcom/fusepowered/m1/android/NVASpeechKit;Ljava/util/List;)V
 
     .line 889
     iget-object v0, p0, Lcom/fusepowered/m1/android/NVASpeechKit$7;->this$0:Lcom/fusepowered/m1/android/NVASpeechKit;
 
-    #getter for: Lcom/fusepowered/m1/android/NVASpeechKit;->nuance_transaction_session_id:Ljava/lang/String;
+    # getter for: Lcom/fusepowered/m1/android/NVASpeechKit;->nuance_transaction_session_id:Ljava/lang/String;
     invoke-static {v0}, Lcom/fusepowered/m1/android/NVASpeechKit;->access$1700(Lcom/fusepowered/m1/android/NVASpeechKit;)Ljava/lang/String;
 
     move-result-object v0
@@ -403,7 +402,7 @@
 
     iget-object v1, p0, Lcom/fusepowered/m1/android/NVASpeechKit$7;->this$0:Lcom/fusepowered/m1/android/NVASpeechKit;
 
-    #getter for: Lcom/fusepowered/m1/android/NVASpeechKit;->nuance_transaction_session_id:Ljava/lang/String;
+    # getter for: Lcom/fusepowered/m1/android/NVASpeechKit;->nuance_transaction_session_id:Ljava/lang/String;
     invoke-static {v1}, Lcom/fusepowered/m1/android/NVASpeechKit;->access$1700(Lcom/fusepowered/m1/android/NVASpeechKit;)Ljava/lang/String;
 
     move-result-object v1
@@ -447,7 +446,7 @@
     .line 899
     iget-object v0, p0, Lcom/fusepowered/m1/android/NVASpeechKit$7;->this$0:Lcom/fusepowered/m1/android/NVASpeechKit;
 
-    #calls: Lcom/fusepowered/m1/android/NVASpeechKit;->notifySpeechResults()V
+    # invokes: Lcom/fusepowered/m1/android/NVASpeechKit;->notifySpeechResults()V
     invoke-static {v0}, Lcom/fusepowered/m1/android/NVASpeechKit;->access$700(Lcom/fusepowered/m1/android/NVASpeechKit;)V
 
     goto :goto_0

@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1
@@ -45,7 +44,7 @@
     .line 117
     iget-object v0, p0, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$2;->this$0:Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;
 
-    #getter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->_videoView:Landroid/widget/VideoView;
+    # getter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->_videoView:Landroid/widget/VideoView;
     invoke-static {v0}, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->access$0(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;)Landroid/widget/VideoView;
 
     move-result-object v0
@@ -62,7 +61,7 @@
     .line 119
     iget-object v0, p0, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$2;->this$0:Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;
 
-    #calls: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->createAndAddPausedView()V
+    # invokes: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->createAndAddPausedView()V
     invoke-static {v0}, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->access$21(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;)V
 
     .line 120

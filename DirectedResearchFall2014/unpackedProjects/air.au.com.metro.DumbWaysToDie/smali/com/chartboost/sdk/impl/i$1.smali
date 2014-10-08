@@ -21,7 +21,6 @@
 # direct methods
 .method constructor <init>(Lcom/chartboost/sdk/impl/i;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1
@@ -37,8 +36,8 @@
 # virtual methods
 .method public shouldOverrideUrlLoading(Landroid/webkit/WebView;Ljava/lang/String;)Z
     .locals 2
-    .parameter "view"
-    .parameter "url"
+    .param p1, "view"    # Landroid/webkit/WebView;
+    .param p2, "url"    # Ljava/lang/String;
 
     .prologue
     .line 30

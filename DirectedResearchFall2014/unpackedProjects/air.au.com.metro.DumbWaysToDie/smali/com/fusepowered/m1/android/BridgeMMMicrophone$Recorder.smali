@@ -65,7 +65,7 @@
 
 .method synthetic constructor <init>(Lcom/fusepowered/m1/android/BridgeMMMicrophone$1;)V
     .locals 0
-    .parameter "x0"
+    .param p1, "x0"    # Lcom/fusepowered/m1/android/BridgeMMMicrophone$1;
 
     .prologue
     .line 138
@@ -76,9 +76,9 @@
 
 .method static synthetic access$000(Lcom/fusepowered/m1/android/BridgeMMMicrophone$Recorder;Ljava/lang/String;I)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
-    .parameter "x2"
+    .param p0, "x0"    # Lcom/fusepowered/m1/android/BridgeMMMicrophone$Recorder;
+    .param p1, "x1"    # Ljava/lang/String;
+    .param p2, "x2"    # I
 
     .prologue
     .line 138
@@ -89,7 +89,7 @@
 
 .method static synthetic access$200(Lcom/fusepowered/m1/android/BridgeMMMicrophone$Recorder;)Ljava/lang/ref/WeakReference;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/fusepowered/m1/android/BridgeMMMicrophone$Recorder;
 
     .prologue
     .line 138
@@ -100,7 +100,7 @@
 
 .method static synthetic access$300(Lcom/fusepowered/m1/android/BridgeMMMicrophone$Recorder;)D
     .locals 2
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/fusepowered/m1/android/BridgeMMMicrophone$Recorder;
 
     .prologue
     .line 138
@@ -135,11 +135,11 @@
 
     div-double v0, v2, v4
 
-    .local v0, db:D
+    .local v0, "db":D
     move-wide v2, v0
 
     .line 268
-    .end local v0           #db:D
+    .end local v0    # "db":D
     :goto_0
     return-wide v2
 
@@ -161,8 +161,8 @@
 
 .method private declared-synchronized startRecording(Ljava/lang/String;I)V
     .locals 5
-    .parameter "path"
-    .parameter "callbackRate"
+    .param p1, "path"    # Ljava/lang/String;
+    .param p2, "callbackRate"    # I
 
     .prologue
     .line 182
@@ -226,8 +226,8 @@
 
     invoke-virtual {v2}, Landroid/media/MediaRecorder;->prepare()V
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     .line 205
     :goto_0
@@ -256,7 +256,7 @@
     check-cast v1, Lcom/fusepowered/m1/android/MMWebView;
 
     .line 210
-    .local v1, webView:Lcom/fusepowered/m1/android/MMWebView;
+    .local v1, "webView":Lcom/fusepowered/m1/android/MMWebView;
     if-eqz v1, :cond_3
 
     .line 212
@@ -304,7 +304,7 @@
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
     .line 225
-    .end local v1           #webView:Lcom/fusepowered/m1/android/MMWebView;
+    .end local v1    # "webView":Lcom/fusepowered/m1/android/MMWebView;
     :cond_3
     monitor-exit p0
 
@@ -317,7 +317,7 @@
     move-object v0, v2
 
     .line 202
-    .local v0, e:Ljava/io/IOException;
+    .local v0, "e":Ljava/io/IOException;
     :try_start_3
     const-string v2, "prepare() failed"
 
@@ -328,7 +328,7 @@
     goto :goto_0
 
     .line 182
-    .end local v0           #e:Ljava/io/IOException;
+    .end local v0    # "e":Ljava/io/IOException;
     :catchall_0
     move-exception v2
 
@@ -341,7 +341,7 @@
 # virtual methods
 .method declared-synchronized addCallBack(Lcom/fusepowered/m1/android/MMWebView;)V
     .locals 1
-    .parameter "webView"
+    .param p1, "webView"    # Lcom/fusepowered/m1/android/MMWebView;
 
     .prologue
     .line 167
@@ -395,8 +395,8 @@
 
     invoke-virtual {v2}, Landroid/media/MediaRecorder;->reset()V
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     .line 287
     :cond_0
@@ -427,7 +427,7 @@
     check-cast v1, Lcom/fusepowered/m1/android/MMWebView;
 
     .line 295
-    .local v1, webView:Lcom/fusepowered/m1/android/MMWebView;
+    .local v1, "webView":Lcom/fusepowered/m1/android/MMWebView;
     if-eqz v1, :cond_2
 
     .line 297
@@ -447,7 +447,7 @@
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
     .line 301
-    .end local v1           #webView:Lcom/fusepowered/m1/android/MMWebView;
+    .end local v1    # "webView":Lcom/fusepowered/m1/android/MMWebView;
     :cond_2
     monitor-exit p0
 
@@ -460,7 +460,7 @@
     move-object v0, v2
 
     .line 284
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     :try_start_3
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -491,7 +491,7 @@
     goto :goto_0
 
     .line 273
-    .end local v0           #e:Ljava/lang/Exception;
+    .end local v0    # "e":Ljava/lang/Exception;
     :catchall_0
     move-exception v2
 

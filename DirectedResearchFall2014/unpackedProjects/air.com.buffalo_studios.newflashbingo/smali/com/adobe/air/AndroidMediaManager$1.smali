@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/adobe/air/AndroidMediaManager;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 97
@@ -39,9 +38,6 @@
 # virtual methods
 .method public onActivityResult(IILandroid/content/Intent;)V
     .locals 4
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 105
@@ -56,6 +52,7 @@
 
     .line 115
     :cond_1
+    # getter for: Lcom/adobe/air/AndroidMediaManager;->MediaManagerObjectPointer:J
     invoke-static {}, Lcom/adobe/air/AndroidMediaManager;->access$000()J
 
     move-result-wide v0
@@ -69,7 +66,7 @@
     .line 119
     iget-object v0, p0, Lcom/adobe/air/AndroidMediaManager$1;->this$0:Lcom/adobe/air/AndroidMediaManager;
 
-    #getter for: Lcom/adobe/air/AndroidMediaManager;->mCallbacksRegistered:Z
+    # getter for: Lcom/adobe/air/AndroidMediaManager;->mCallbacksRegistered:Z
     invoke-static {v0}, Lcom/adobe/air/AndroidMediaManager;->access$100(Lcom/adobe/air/AndroidMediaManager;)Z
 
     move-result v0

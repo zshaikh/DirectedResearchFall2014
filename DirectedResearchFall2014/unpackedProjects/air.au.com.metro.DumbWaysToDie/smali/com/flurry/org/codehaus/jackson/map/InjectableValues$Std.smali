@@ -46,7 +46,6 @@
 
 .method public constructor <init>(Ljava/util/Map;)V
     .locals 0
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -60,7 +59,7 @@
 
     .prologue
     .line 50
-    .local p1, values:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
+    .local p1, "values":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
     invoke-direct {p0}, Lcom/flurry/org/codehaus/jackson/map/InjectableValues;-><init>()V
 
     .line 51
@@ -74,8 +73,7 @@
 # virtual methods
 .method public addValue(Ljava/lang/Class;Ljava/lang/Object;)Lcom/flurry/org/codehaus/jackson/map/InjectableValues$Std;
     .locals 2
-    .parameter
-    .parameter "value"
+    .param p2, "value"    # Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -89,7 +87,7 @@
 
     .prologue
     .line 62
-    .local p1, classKey:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p1, "classKey":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/map/InjectableValues$Std;->_values:Ljava/util/Map;
 
     invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -104,8 +102,8 @@
 
 .method public addValue(Ljava/lang/String;Ljava/lang/Object;)Lcom/flurry/org/codehaus/jackson/map/InjectableValues$Std;
     .locals 1
-    .parameter "key"
-    .parameter "value"
+    .param p1, "key"    # Ljava/lang/String;
+    .param p2, "value"    # Ljava/lang/Object;
 
     .prologue
     .line 56
@@ -119,10 +117,10 @@
 
 .method public findInjectableValue(Ljava/lang/Object;Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;Lcom/flurry/org/codehaus/jackson/map/BeanProperty;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 7
-    .parameter "valueId"
-    .parameter "ctxt"
-    .parameter "forProperty"
-    .parameter "beanInstance"
+    .param p1, "valueId"    # Ljava/lang/Object;
+    .param p2, "ctxt"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;
+    .param p3, "forProperty"    # Lcom/flurry/org/codehaus/jackson/map/BeanProperty;
+    .param p4, "beanInstance"    # Ljava/lang/Object;
 
     .prologue
     .line 71
@@ -138,7 +136,7 @@
     move-object v3, v4
 
     .line 73
-    .local v3, type:Ljava/lang/String;
+    .local v3, "type":Ljava/lang/String;
     :goto_0
     new-instance v4, Ljava/lang/IllegalArgumentException;
 
@@ -171,7 +169,7 @@
     throw v4
 
     .line 72
-    .end local v3           #type:Ljava/lang/String;
+    .end local v3    # "type":Ljava/lang/String;
     :cond_0
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -194,7 +192,7 @@
     move-object v1, v0
 
     .line 76
-    .local v1, key:Ljava/lang/String;
+    .local v1, "key":Ljava/lang/String;
     iget-object v4, p0, Lcom/flurry/org/codehaus/jackson/map/InjectableValues$Std;->_values:Ljava/util/Map;
 
     invoke-interface {v4, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -202,7 +200,7 @@
     move-result-object v2
 
     .line 77
-    .local v2, ob:Ljava/lang/Object;
+    .local v2, "ob":Ljava/lang/Object;
     if-nez v2, :cond_2
 
     iget-object v4, p0, Lcom/flurry/org/codehaus/jackson/map/InjectableValues$Std;->_values:Ljava/util/Map;

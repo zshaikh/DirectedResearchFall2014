@@ -19,7 +19,7 @@
 # direct methods
 .method public constructor <init>(Lcom/flurry/org/codehaus/jackson/node/JsonNodeFactory;)V
     .locals 0
-    .parameter "nc"
+    .param p1, "nc"    # Lcom/flurry/org/codehaus/jackson/node/JsonNodeFactory;
 
     .prologue
     .line 19
@@ -30,7 +30,7 @@
 
 .method private _add(Lcom/flurry/org/codehaus/jackson/JsonNode;)V
     .locals 1
-    .parameter "node"
+    .param p1, "node"    # Lcom/flurry/org/codehaus/jackson/JsonNode;
 
     .prologue
     .line 719
@@ -57,8 +57,8 @@
 
 .method private _insert(ILcom/flurry/org/codehaus/jackson/JsonNode;)V
     .locals 2
-    .parameter "index"
-    .parameter "node"
+    .param p1, "index"    # I
+    .param p2, "node"    # Lcom/flurry/org/codehaus/jackson/JsonNode;
 
     .prologue
     .line 727
@@ -123,7 +123,6 @@
 
 .method private _sameChildren(Ljava/util/ArrayList;)Z
     .locals 5
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -135,7 +134,7 @@
     .end annotation
 
     .prologue
-    .local p1, otherChildren:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/flurry/org/codehaus/jackson/JsonNode;>;"
+    .local p1, "otherChildren":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/flurry/org/codehaus/jackson/JsonNode;>;"
     const/4 v4, 0x0
 
     .line 747
@@ -144,7 +143,7 @@
     move-result v1
 
     .line 748
-    .local v1, len:I
+    .local v1, "len":I
     invoke-virtual {p0}, Lcom/flurry/org/codehaus/jackson/node/ArrayNode;->size()I
 
     move-result v2
@@ -161,7 +160,7 @@
     :cond_0
     const/4 v0, 0x0
 
-    .local v0, i:I
+    .local v0, "i":I
     :goto_1
     if-ge v0, v1, :cond_2
 
@@ -206,8 +205,8 @@
 # virtual methods
 .method public _set(ILcom/flurry/org/codehaus/jackson/JsonNode;)Lcom/flurry/org/codehaus/jackson/JsonNode;
     .locals 3
-    .parameter "index"
-    .parameter "value"
+    .param p1, "index"    # I
+    .param p2, "value"    # Lcom/flurry/org/codehaus/jackson/JsonNode;
 
     .prologue
     .line 711
@@ -273,7 +272,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/flurry/org/codehaus/jackson/node/ArrayNode;
     check-cast p0, Lcom/flurry/org/codehaus/jackson/JsonNode;
 
     return-object p0
@@ -281,7 +280,7 @@
 
 .method public add(D)V
     .locals 1
-    .parameter "v"
+    .param p1, "v"    # D
 
     .prologue
     .line 395
@@ -296,7 +295,7 @@
 
 .method public add(F)V
     .locals 1
-    .parameter "v"
+    .param p1, "v"    # F
 
     .prologue
     .line 376
@@ -311,7 +310,7 @@
 
 .method public add(I)V
     .locals 1
-    .parameter "v"
+    .param p1, "v"    # I
 
     .prologue
     .line 338
@@ -326,7 +325,7 @@
 
 .method public add(J)V
     .locals 1
-    .parameter "v"
+    .param p1, "v"    # J
 
     .prologue
     .line 357
@@ -341,7 +340,7 @@
 
 .method public add(Lcom/flurry/org/codehaus/jackson/JsonNode;)V
     .locals 0
-    .parameter "value"
+    .param p1, "value"    # Lcom/flurry/org/codehaus/jackson/JsonNode;
 
     .prologue
     .line 200
@@ -362,7 +361,7 @@
 
 .method public add(Ljava/lang/Boolean;)V
     .locals 1
-    .parameter "value"
+    .param p1, "value"    # Ljava/lang/Boolean;
 
     .prologue
     .line 445
@@ -392,7 +391,7 @@
 
 .method public add(Ljava/lang/Double;)V
     .locals 2
-    .parameter "value"
+    .param p1, "value"    # Ljava/lang/Double;
 
     .prologue
     .line 404
@@ -422,7 +421,7 @@
 
 .method public add(Ljava/lang/Float;)V
     .locals 1
-    .parameter "value"
+    .param p1, "value"    # Ljava/lang/Float;
 
     .prologue
     .line 385
@@ -452,7 +451,7 @@
 
 .method public add(Ljava/lang/Integer;)V
     .locals 1
-    .parameter "value"
+    .param p1, "value"    # Ljava/lang/Integer;
 
     .prologue
     .line 347
@@ -482,7 +481,7 @@
 
 .method public add(Ljava/lang/Long;)V
     .locals 2
-    .parameter "value"
+    .param p1, "value"    # Ljava/lang/Long;
 
     .prologue
     .line 366
@@ -512,7 +511,7 @@
 
 .method public add(Ljava/lang/String;)V
     .locals 1
-    .parameter "v"
+    .param p1, "v"    # Ljava/lang/String;
 
     .prologue
     .line 426
@@ -538,7 +537,7 @@
 
 .method public add(Ljava/math/BigDecimal;)V
     .locals 1
-    .parameter "v"
+    .param p1, "v"    # Ljava/math/BigDecimal;
 
     .prologue
     .line 415
@@ -564,7 +563,7 @@
 
 .method public add(Z)V
     .locals 1
-    .parameter "v"
+    .param p1, "v"    # Z
 
     .prologue
     .line 436
@@ -579,7 +578,7 @@
 
 .method public add([B)V
     .locals 1
-    .parameter "v"
+    .param p1, "v"    # [B
 
     .prologue
     .line 456
@@ -605,7 +604,7 @@
 
 .method public addAll(Lcom/flurry/org/codehaus/jackson/node/ArrayNode;)Lcom/flurry/org/codehaus/jackson/JsonNode;
     .locals 3
-    .parameter "other"
+    .param p1, "other"    # Lcom/flurry/org/codehaus/jackson/node/ArrayNode;
 
     .prologue
     .line 218
@@ -614,7 +613,7 @@
     move-result v0
 
     .line 219
-    .local v0, len:I
+    .local v0, "len":I
     if-lez v0, :cond_1
 
     .line 220
@@ -644,7 +643,6 @@
 
 .method public addAll(Ljava/util/Collection;)Lcom/flurry/org/codehaus/jackson/JsonNode;
     .locals 2
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -658,13 +656,13 @@
 
     .prologue
     .line 239
-    .local p1, nodes:Ljava/util/Collection;,"Ljava/util/Collection<Lcom/flurry/org/codehaus/jackson/JsonNode;>;"
+    .local p1, "nodes":Ljava/util/Collection;, "Ljava/util/Collection<Lcom/flurry/org/codehaus/jackson/JsonNode;>;"
     invoke-interface {p1}, Ljava/util/Collection;->size()I
 
     move-result v0
 
     .line 240
-    .local v0, len:I
+    .local v0, "len":I
     if-lez v0, :cond_0
 
     .line 241
@@ -703,7 +701,7 @@
     move-result-object v0
 
     .line 300
-    .local v0, n:Lcom/flurry/org/codehaus/jackson/node/ArrayNode;
+    .local v0, "n":Lcom/flurry/org/codehaus/jackson/node/ArrayNode;
     invoke-direct {p0, v0}, Lcom/flurry/org/codehaus/jackson/node/ArrayNode;->_add(Lcom/flurry/org/codehaus/jackson/JsonNode;)V
 
     .line 301
@@ -712,7 +710,6 @@
 
 .method protected addContentsTo(Ljava/util/List;)V
     .locals 3
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -725,7 +722,7 @@
 
     .prologue
     .line 640
-    .local p1, dst:Ljava/util/List;,"Ljava/util/List<Lcom/flurry/org/codehaus/jackson/JsonNode;>;"
+    .local p1, "dst":Ljava/util/List;, "Ljava/util/List<Lcom/flurry/org/codehaus/jackson/JsonNode;>;"
     iget-object v2, p0, Lcom/flurry/org/codehaus/jackson/node/ArrayNode;->_children:Ljava/util/ArrayList;
 
     if-eqz v2, :cond_0
@@ -737,7 +734,7 @@
 
     move-result-object v0
 
-    .local v0, i$:Ljava/util/Iterator;
+    .local v0, "i$":Ljava/util/Iterator;
     :goto_0
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
@@ -752,14 +749,14 @@
     check-cast v1, Lcom/flurry/org/codehaus/jackson/JsonNode;
 
     .line 642
-    .local v1, n:Lcom/flurry/org/codehaus/jackson/JsonNode;
+    .local v1, "n":Lcom/flurry/org/codehaus/jackson/JsonNode;
     invoke-interface {p1, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
     .line 645
-    .end local v0           #i$:Ljava/util/Iterator;
-    .end local v1           #n:Lcom/flurry/org/codehaus/jackson/JsonNode;
+    .end local v0    # "i$":Ljava/util/Iterator;
+    .end local v1    # "n":Lcom/flurry/org/codehaus/jackson/JsonNode;
     :cond_0
     return-void
 .end method
@@ -789,7 +786,7 @@
     move-result-object v0
 
     .line 313
-    .local v0, n:Lcom/flurry/org/codehaus/jackson/node/ObjectNode;
+    .local v0, "n":Lcom/flurry/org/codehaus/jackson/node/ObjectNode;
     invoke-direct {p0, v0}, Lcom/flurry/org/codehaus/jackson/node/ArrayNode;->_add(Lcom/flurry/org/codehaus/jackson/JsonNode;)V
 
     .line 314
@@ -798,7 +795,7 @@
 
 .method public addPOJO(Ljava/lang/Object;)V
     .locals 1
-    .parameter "value"
+    .param p1, "value"    # Ljava/lang/Object;
 
     .prologue
     .line 323
@@ -834,7 +831,7 @@
 
 .method public equals(Ljava/lang/Object;)Z
     .locals 6
-    .parameter "o"
+    .param p1, "o"    # Ljava/lang/Object;
 
     .prologue
     const/4 v5, 0x1
@@ -884,7 +881,7 @@
     move-object v1, v0
 
     .line 662
-    .local v1, other:Lcom/flurry/org/codehaus/jackson/node/ArrayNode;
+    .local v1, "other":Lcom/flurry/org/codehaus/jackson/node/ArrayNode;
     iget-object v2, p0, Lcom/flurry/org/codehaus/jackson/node/ArrayNode;->_children:Ljava/util/ArrayList;
 
     if-eqz v2, :cond_3
@@ -927,7 +924,7 @@
 
 .method public bridge synthetic findParent(Ljava/lang/String;)Lcom/flurry/org/codehaus/jackson/JsonNode;
     .locals 1
-    .parameter "x0"
+    .param p1, "x0"    # Ljava/lang/String;
 
     .prologue
     .line 14
@@ -940,7 +937,7 @@
 
 .method public findParent(Ljava/lang/String;)Lcom/flurry/org/codehaus/jackson/node/ObjectNode;
     .locals 4
-    .parameter "fieldName"
+    .param p1, "fieldName"    # Ljava/lang/String;
 
     .prologue
     .line 151
@@ -955,7 +952,7 @@
 
     move-result-object v0
 
-    .local v0, i$:Ljava/util/Iterator;
+    .local v0, "i$":Ljava/util/Iterator;
     :cond_0
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
@@ -970,24 +967,24 @@
     check-cast v1, Lcom/flurry/org/codehaus/jackson/JsonNode;
 
     .line 153
-    .local v1, node:Lcom/flurry/org/codehaus/jackson/JsonNode;
+    .local v1, "node":Lcom/flurry/org/codehaus/jackson/JsonNode;
     invoke-virtual {v1, p1}, Lcom/flurry/org/codehaus/jackson/JsonNode;->findParent(Ljava/lang/String;)Lcom/flurry/org/codehaus/jackson/JsonNode;
 
     move-result-object v2
 
     .line 154
-    .local v2, parent:Lcom/flurry/org/codehaus/jackson/JsonNode;
+    .local v2, "parent":Lcom/flurry/org/codehaus/jackson/JsonNode;
     if-eqz v2, :cond_0
 
     .line 155
     check-cast v2, Lcom/flurry/org/codehaus/jackson/node/ObjectNode;
 
-    .end local v2           #parent:Lcom/flurry/org/codehaus/jackson/JsonNode;
+    .end local v2    # "parent":Lcom/flurry/org/codehaus/jackson/JsonNode;
     move-object v3, v2
 
     .line 159
-    .end local v0           #i$:Ljava/util/Iterator;
-    .end local v1           #node:Lcom/flurry/org/codehaus/jackson/JsonNode;
+    .end local v0    # "i$":Ljava/util/Iterator;
+    .end local v1    # "node":Lcom/flurry/org/codehaus/jackson/JsonNode;
     :goto_0
     return-object v3
 
@@ -999,8 +996,7 @@
 
 .method public findParents(Ljava/lang/String;Ljava/util/List;)Ljava/util/List;
     .locals 3
-    .parameter "fieldName"
-    .parameter
+    .param p1, "fieldName"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1018,7 +1014,7 @@
 
     .prologue
     .line 165
-    .local p2, foundSoFar:Ljava/util/List;,"Ljava/util/List<Lcom/flurry/org/codehaus/jackson/JsonNode;>;"
+    .local p2, "foundSoFar":Ljava/util/List;, "Ljava/util/List<Lcom/flurry/org/codehaus/jackson/JsonNode;>;"
     iget-object v2, p0, Lcom/flurry/org/codehaus/jackson/node/ArrayNode;->_children:Ljava/util/ArrayList;
 
     if-eqz v2, :cond_0
@@ -1030,7 +1026,7 @@
 
     move-result-object v0
 
-    .local v0, i$:Ljava/util/Iterator;
+    .local v0, "i$":Ljava/util/Iterator;
     :goto_0
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
@@ -1045,7 +1041,7 @@
     check-cast v1, Lcom/flurry/org/codehaus/jackson/JsonNode;
 
     .line 167
-    .local v1, node:Lcom/flurry/org/codehaus/jackson/JsonNode;
+    .local v1, "node":Lcom/flurry/org/codehaus/jackson/JsonNode;
     invoke-virtual {v1, p1, p2}, Lcom/flurry/org/codehaus/jackson/JsonNode;->findParents(Ljava/lang/String;Ljava/util/List;)Ljava/util/List;
 
     move-result-object p2
@@ -1053,15 +1049,15 @@
     goto :goto_0
 
     .line 170
-    .end local v0           #i$:Ljava/util/Iterator;
-    .end local v1           #node:Lcom/flurry/org/codehaus/jackson/JsonNode;
+    .end local v0    # "i$":Ljava/util/Iterator;
+    .end local v1    # "node":Lcom/flurry/org/codehaus/jackson/JsonNode;
     :cond_0
     return-object p2
 .end method
 
 .method public findValue(Ljava/lang/String;)Lcom/flurry/org/codehaus/jackson/JsonNode;
     .locals 4
-    .parameter "fieldName"
+    .param p1, "fieldName"    # Ljava/lang/String;
 
     .prologue
     .line 115
@@ -1076,7 +1072,7 @@
 
     move-result-object v0
 
-    .local v0, i$:Ljava/util/Iterator;
+    .local v0, "i$":Ljava/util/Iterator;
     :cond_0
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
@@ -1091,21 +1087,21 @@
     check-cast v1, Lcom/flurry/org/codehaus/jackson/JsonNode;
 
     .line 117
-    .local v1, node:Lcom/flurry/org/codehaus/jackson/JsonNode;
+    .local v1, "node":Lcom/flurry/org/codehaus/jackson/JsonNode;
     invoke-virtual {v1, p1}, Lcom/flurry/org/codehaus/jackson/JsonNode;->findValue(Ljava/lang/String;)Lcom/flurry/org/codehaus/jackson/JsonNode;
 
     move-result-object v2
 
     .line 118
-    .local v2, value:Lcom/flurry/org/codehaus/jackson/JsonNode;
+    .local v2, "value":Lcom/flurry/org/codehaus/jackson/JsonNode;
     if-eqz v2, :cond_0
 
     move-object v3, v2
 
     .line 123
-    .end local v0           #i$:Ljava/util/Iterator;
-    .end local v1           #node:Lcom/flurry/org/codehaus/jackson/JsonNode;
-    .end local v2           #value:Lcom/flurry/org/codehaus/jackson/JsonNode;
+    .end local v0    # "i$":Ljava/util/Iterator;
+    .end local v1    # "node":Lcom/flurry/org/codehaus/jackson/JsonNode;
+    .end local v2    # "value":Lcom/flurry/org/codehaus/jackson/JsonNode;
     :goto_0
     return-object v3
 
@@ -1117,8 +1113,7 @@
 
 .method public findValues(Ljava/lang/String;Ljava/util/List;)Ljava/util/List;
     .locals 3
-    .parameter "fieldName"
-    .parameter
+    .param p1, "fieldName"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1136,7 +1131,7 @@
 
     .prologue
     .line 129
-    .local p2, foundSoFar:Ljava/util/List;,"Ljava/util/List<Lcom/flurry/org/codehaus/jackson/JsonNode;>;"
+    .local p2, "foundSoFar":Ljava/util/List;, "Ljava/util/List<Lcom/flurry/org/codehaus/jackson/JsonNode;>;"
     iget-object v2, p0, Lcom/flurry/org/codehaus/jackson/node/ArrayNode;->_children:Ljava/util/ArrayList;
 
     if-eqz v2, :cond_0
@@ -1148,7 +1143,7 @@
 
     move-result-object v0
 
-    .local v0, i$:Ljava/util/Iterator;
+    .local v0, "i$":Ljava/util/Iterator;
     :goto_0
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
@@ -1163,7 +1158,7 @@
     check-cast v1, Lcom/flurry/org/codehaus/jackson/JsonNode;
 
     .line 131
-    .local v1, node:Lcom/flurry/org/codehaus/jackson/JsonNode;
+    .local v1, "node":Lcom/flurry/org/codehaus/jackson/JsonNode;
     invoke-virtual {v1, p1, p2}, Lcom/flurry/org/codehaus/jackson/JsonNode;->findValues(Ljava/lang/String;Ljava/util/List;)Ljava/util/List;
 
     move-result-object p2
@@ -1171,16 +1166,15 @@
     goto :goto_0
 
     .line 134
-    .end local v0           #i$:Ljava/util/Iterator;
-    .end local v1           #node:Lcom/flurry/org/codehaus/jackson/JsonNode;
+    .end local v0    # "i$":Ljava/util/Iterator;
+    .end local v1    # "node":Lcom/flurry/org/codehaus/jackson/JsonNode;
     :cond_0
     return-object p2
 .end method
 
 .method public findValuesAsText(Ljava/lang/String;Ljava/util/List;)Ljava/util/List;
     .locals 3
-    .parameter "fieldName"
-    .parameter
+    .param p1, "fieldName"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1198,7 +1192,7 @@
 
     .prologue
     .line 140
-    .local p2, foundSoFar:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
+    .local p2, "foundSoFar":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     iget-object v2, p0, Lcom/flurry/org/codehaus/jackson/node/ArrayNode;->_children:Ljava/util/ArrayList;
 
     if-eqz v2, :cond_0
@@ -1210,7 +1204,7 @@
 
     move-result-object v0
 
-    .local v0, i$:Ljava/util/Iterator;
+    .local v0, "i$":Ljava/util/Iterator;
     :goto_0
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
@@ -1225,7 +1219,7 @@
     check-cast v1, Lcom/flurry/org/codehaus/jackson/JsonNode;
 
     .line 142
-    .local v1, node:Lcom/flurry/org/codehaus/jackson/JsonNode;
+    .local v1, "node":Lcom/flurry/org/codehaus/jackson/JsonNode;
     invoke-virtual {v1, p1, p2}, Lcom/flurry/org/codehaus/jackson/JsonNode;->findValuesAsText(Ljava/lang/String;Ljava/util/List;)Ljava/util/List;
 
     move-result-object p2
@@ -1233,15 +1227,15 @@
     goto :goto_0
 
     .line 145
-    .end local v0           #i$:Ljava/util/Iterator;
-    .end local v1           #node:Lcom/flurry/org/codehaus/jackson/JsonNode;
+    .end local v0    # "i$":Ljava/util/Iterator;
+    .end local v1    # "node":Lcom/flurry/org/codehaus/jackson/JsonNode;
     :cond_0
     return-object p2
 .end method
 
 .method public get(I)Lcom/flurry/org/codehaus/jackson/JsonNode;
     .locals 1
-    .parameter "index"
+    .param p1, "index"    # I
 
     .prologue
     .line 47
@@ -1266,7 +1260,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/flurry/org/codehaus/jackson/node/ArrayNode;
     check-cast p0, Lcom/flurry/org/codehaus/jackson/JsonNode;
 
     move-object v0, p0
@@ -1275,7 +1269,7 @@
     :goto_0
     return-object v0
 
-    .restart local p0
+    .restart local p0    # "this":Lcom/flurry/org/codehaus/jackson/node/ArrayNode;
     :cond_0
     const/4 v0, 0x0
 
@@ -1284,7 +1278,7 @@
 
 .method public get(Ljava/lang/String;)Lcom/flurry/org/codehaus/jackson/JsonNode;
     .locals 1
-    .parameter "fieldName"
+    .param p1, "fieldName"    # Ljava/lang/String;
 
     .prologue
     .line 54
@@ -1341,12 +1335,12 @@
     const/4 v0, 0x1
 
     .line 682
-    .local v0, hash:I
+    .local v0, "hash":I
     :cond_0
     return v0
 
     .line 675
-    .end local v0           #hash:I
+    .end local v0    # "hash":I
     :cond_1
     iget-object v3, p0, Lcom/flurry/org/codehaus/jackson/node/ArrayNode;->_children:Ljava/util/ArrayList;
 
@@ -1355,14 +1349,14 @@
     move-result v0
 
     .line 676
-    .restart local v0       #hash:I
+    .restart local v0    # "hash":I
     iget-object v3, p0, Lcom/flurry/org/codehaus/jackson/node/ArrayNode;->_children:Ljava/util/ArrayList;
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
 
-    .local v1, i$:Ljava/util/Iterator;
+    .local v1, "i$":Ljava/util/Iterator;
     :cond_2
     :goto_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
@@ -1378,7 +1372,7 @@
     check-cast v2, Lcom/flurry/org/codehaus/jackson/JsonNode;
 
     .line 677
-    .local v2, n:Lcom/flurry/org/codehaus/jackson/JsonNode;
+    .local v2, "n":Lcom/flurry/org/codehaus/jackson/JsonNode;
     if-eqz v2, :cond_2
 
     .line 678
@@ -1393,8 +1387,8 @@
 
 .method public insert(ID)V
     .locals 1
-    .parameter "index"
-    .parameter "v"
+    .param p1, "index"    # I
+    .param p2, "v"    # D
 
     .prologue
     .line 561
@@ -1409,8 +1403,8 @@
 
 .method public insert(IF)V
     .locals 1
-    .parameter "index"
-    .parameter "v"
+    .param p1, "index"    # I
+    .param p2, "v"    # F
 
     .prologue
     .line 542
@@ -1425,8 +1419,8 @@
 
 .method public insert(II)V
     .locals 1
-    .parameter "index"
-    .parameter "v"
+    .param p1, "index"    # I
+    .param p2, "v"    # I
 
     .prologue
     .line 504
@@ -1441,8 +1435,8 @@
 
 .method public insert(IJ)V
     .locals 1
-    .parameter "index"
-    .parameter "v"
+    .param p1, "index"    # I
+    .param p2, "v"    # J
 
     .prologue
     .line 523
@@ -1457,8 +1451,8 @@
 
 .method public insert(ILcom/flurry/org/codehaus/jackson/JsonNode;)V
     .locals 0
-    .parameter "index"
-    .parameter "value"
+    .param p1, "index"    # I
+    .param p2, "value"    # Lcom/flurry/org/codehaus/jackson/JsonNode;
 
     .prologue
     .line 259
@@ -1479,8 +1473,8 @@
 
 .method public insert(ILjava/lang/Boolean;)V
     .locals 1
-    .parameter "index"
-    .parameter "value"
+    .param p1, "index"    # I
+    .param p2, "value"    # Ljava/lang/Boolean;
 
     .prologue
     .line 611
@@ -1510,8 +1504,8 @@
 
 .method public insert(ILjava/lang/Double;)V
     .locals 2
-    .parameter "index"
-    .parameter "value"
+    .param p1, "index"    # I
+    .param p2, "value"    # Ljava/lang/Double;
 
     .prologue
     .line 570
@@ -1541,8 +1535,8 @@
 
 .method public insert(ILjava/lang/Float;)V
     .locals 1
-    .parameter "index"
-    .parameter "value"
+    .param p1, "index"    # I
+    .param p2, "value"    # Ljava/lang/Float;
 
     .prologue
     .line 551
@@ -1572,8 +1566,8 @@
 
 .method public insert(ILjava/lang/Integer;)V
     .locals 1
-    .parameter "index"
-    .parameter "value"
+    .param p1, "index"    # I
+    .param p2, "value"    # Ljava/lang/Integer;
 
     .prologue
     .line 513
@@ -1603,8 +1597,8 @@
 
 .method public insert(ILjava/lang/Long;)V
     .locals 2
-    .parameter "index"
-    .parameter "value"
+    .param p1, "index"    # I
+    .param p2, "value"    # Ljava/lang/Long;
 
     .prologue
     .line 532
@@ -1634,8 +1628,8 @@
 
 .method public insert(ILjava/lang/String;)V
     .locals 1
-    .parameter "index"
-    .parameter "v"
+    .param p1, "index"    # I
+    .param p2, "v"    # Ljava/lang/String;
 
     .prologue
     .line 592
@@ -1661,8 +1655,8 @@
 
 .method public insert(ILjava/math/BigDecimal;)V
     .locals 1
-    .parameter "index"
-    .parameter "v"
+    .param p1, "index"    # I
+    .param p2, "v"    # Ljava/math/BigDecimal;
 
     .prologue
     .line 581
@@ -1688,8 +1682,8 @@
 
 .method public insert(IZ)V
     .locals 1
-    .parameter "index"
-    .parameter "v"
+    .param p1, "index"    # I
+    .param p2, "v"    # Z
 
     .prologue
     .line 602
@@ -1704,8 +1698,8 @@
 
 .method public insert(I[B)V
     .locals 1
-    .parameter "index"
-    .parameter "v"
+    .param p1, "index"    # I
+    .param p2, "v"    # [B
 
     .prologue
     .line 622
@@ -1731,7 +1725,7 @@
 
 .method public insertArray(I)Lcom/flurry/org/codehaus/jackson/node/ArrayNode;
     .locals 1
-    .parameter "index"
+    .param p1, "index"    # I
 
     .prologue
     .line 465
@@ -1740,7 +1734,7 @@
     move-result-object v0
 
     .line 466
-    .local v0, n:Lcom/flurry/org/codehaus/jackson/node/ArrayNode;
+    .local v0, "n":Lcom/flurry/org/codehaus/jackson/node/ArrayNode;
     invoke-direct {p0, p1, v0}, Lcom/flurry/org/codehaus/jackson/node/ArrayNode;->_insert(ILcom/flurry/org/codehaus/jackson/JsonNode;)V
 
     .line 467
@@ -1749,7 +1743,7 @@
 
 .method public insertNull(I)V
     .locals 1
-    .parameter "index"
+    .param p1, "index"    # I
 
     .prologue
     .line 498
@@ -1765,7 +1759,7 @@
 
 .method public insertObject(I)Lcom/flurry/org/codehaus/jackson/node/ObjectNode;
     .locals 1
-    .parameter "index"
+    .param p1, "index"    # I
 
     .prologue
     .line 478
@@ -1774,7 +1768,7 @@
     move-result-object v0
 
     .line 479
-    .local v0, n:Lcom/flurry/org/codehaus/jackson/node/ObjectNode;
+    .local v0, "n":Lcom/flurry/org/codehaus/jackson/node/ObjectNode;
     invoke-direct {p0, p1, v0}, Lcom/flurry/org/codehaus/jackson/node/ArrayNode;->_insert(ILcom/flurry/org/codehaus/jackson/JsonNode;)V
 
     .line 480
@@ -1783,8 +1777,8 @@
 
 .method public insertPOJO(ILjava/lang/Object;)V
     .locals 1
-    .parameter "index"
-    .parameter "value"
+    .param p1, "index"    # I
+    .param p2, "value"    # Ljava/lang/Object;
 
     .prologue
     .line 489
@@ -1820,7 +1814,7 @@
 
 .method public path(I)Lcom/flurry/org/codehaus/jackson/JsonNode;
     .locals 1
-    .parameter "index"
+    .param p1, "index"    # I
 
     .prologue
     .line 62
@@ -1845,7 +1839,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/flurry/org/codehaus/jackson/node/ArrayNode;
     check-cast p0, Lcom/flurry/org/codehaus/jackson/JsonNode;
 
     move-object v0, p0
@@ -1854,7 +1848,7 @@
     :goto_0
     return-object v0
 
-    .restart local p0
+    .restart local p0    # "this":Lcom/flurry/org/codehaus/jackson/node/ArrayNode;
     :cond_0
     invoke-static {}, Lcom/flurry/org/codehaus/jackson/node/MissingNode;->getInstance()Lcom/flurry/org/codehaus/jackson/node/MissingNode;
 
@@ -1865,7 +1859,7 @@
 
 .method public path(Ljava/lang/String;)Lcom/flurry/org/codehaus/jackson/JsonNode;
     .locals 1
-    .parameter "fieldName"
+    .param p1, "fieldName"    # Ljava/lang/String;
 
     .prologue
     .line 57
@@ -1878,7 +1872,7 @@
 
 .method public remove(I)Lcom/flurry/org/codehaus/jackson/JsonNode;
     .locals 1
-    .parameter "index"
+    .param p1, "index"    # I
 
     .prologue
     .line 272
@@ -1903,7 +1897,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/flurry/org/codehaus/jackson/node/ArrayNode;
     check-cast p0, Lcom/flurry/org/codehaus/jackson/JsonNode;
 
     move-object v0, p0
@@ -1912,7 +1906,7 @@
     :goto_0
     return-object v0
 
-    .restart local p0
+    .restart local p0    # "this":Lcom/flurry/org/codehaus/jackson/node/ArrayNode;
     :cond_0
     const/4 v0, 0x0
 
@@ -1946,8 +1940,8 @@
 
 .method public final serialize(Lcom/flurry/org/codehaus/jackson/JsonGenerator;Lcom/flurry/org/codehaus/jackson/map/SerializerProvider;)V
     .locals 3
-    .parameter "jg"
-    .parameter "provider"
+    .param p1, "jg"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator;
+    .param p2, "provider"    # Lcom/flurry/org/codehaus/jackson/map/SerializerProvider;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -1971,7 +1965,7 @@
 
     move-result-object v0
 
-    .local v0, i$:Ljava/util/Iterator;
+    .local v0, "i$":Ljava/util/Iterator;
     :goto_0
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
@@ -1986,16 +1980,16 @@
     check-cast v1, Lcom/flurry/org/codehaus/jackson/JsonNode;
 
     .line 86
-    .local v1, n:Lcom/flurry/org/codehaus/jackson/JsonNode;
+    .local v1, "n":Lcom/flurry/org/codehaus/jackson/JsonNode;
     check-cast v1, Lcom/flurry/org/codehaus/jackson/node/BaseJsonNode;
 
-    .end local v1           #n:Lcom/flurry/org/codehaus/jackson/JsonNode;
+    .end local v1    # "n":Lcom/flurry/org/codehaus/jackson/JsonNode;
     invoke-virtual {v1, p1, p2}, Lcom/flurry/org/codehaus/jackson/node/BaseJsonNode;->serialize(Lcom/flurry/org/codehaus/jackson/JsonGenerator;Lcom/flurry/org/codehaus/jackson/map/SerializerProvider;)V
 
     goto :goto_0
 
     .line 89
-    .end local v0           #i$:Ljava/util/Iterator;
+    .end local v0    # "i$":Ljava/util/Iterator;
     :cond_0
     invoke-virtual {p1}, Lcom/flurry/org/codehaus/jackson/JsonGenerator;->writeEndArray()V
 
@@ -2005,9 +1999,9 @@
 
 .method public serializeWithType(Lcom/flurry/org/codehaus/jackson/JsonGenerator;Lcom/flurry/org/codehaus/jackson/map/SerializerProvider;Lcom/flurry/org/codehaus/jackson/map/TypeSerializer;)V
     .locals 3
-    .parameter "jg"
-    .parameter "provider"
-    .parameter "typeSer"
+    .param p1, "jg"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator;
+    .param p2, "provider"    # Lcom/flurry/org/codehaus/jackson/map/SerializerProvider;
+    .param p3, "typeSer"    # Lcom/flurry/org/codehaus/jackson/map/TypeSerializer;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -2031,7 +2025,7 @@
 
     move-result-object v0
 
-    .local v0, i$:Ljava/util/Iterator;
+    .local v0, "i$":Ljava/util/Iterator;
     :goto_0
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
@@ -2046,16 +2040,16 @@
     check-cast v1, Lcom/flurry/org/codehaus/jackson/JsonNode;
 
     .line 100
-    .local v1, n:Lcom/flurry/org/codehaus/jackson/JsonNode;
+    .local v1, "n":Lcom/flurry/org/codehaus/jackson/JsonNode;
     check-cast v1, Lcom/flurry/org/codehaus/jackson/node/BaseJsonNode;
 
-    .end local v1           #n:Lcom/flurry/org/codehaus/jackson/JsonNode;
+    .end local v1    # "n":Lcom/flurry/org/codehaus/jackson/JsonNode;
     invoke-virtual {v1, p1, p2}, Lcom/flurry/org/codehaus/jackson/node/BaseJsonNode;->serialize(Lcom/flurry/org/codehaus/jackson/JsonGenerator;Lcom/flurry/org/codehaus/jackson/map/SerializerProvider;)V
 
     goto :goto_0
 
     .line 103
-    .end local v0           #i$:Ljava/util/Iterator;
+    .end local v0    # "i$":Ljava/util/Iterator;
     :cond_0
     invoke-virtual {p3, p0, p1}, Lcom/flurry/org/codehaus/jackson/map/TypeSerializer;->writeTypeSuffixForArray(Ljava/lang/Object;Lcom/flurry/org/codehaus/jackson/JsonGenerator;)V
 
@@ -2065,8 +2059,8 @@
 
 .method public set(ILcom/flurry/org/codehaus/jackson/JsonNode;)Lcom/flurry/org/codehaus/jackson/JsonNode;
     .locals 1
-    .parameter "index"
-    .parameter "value"
+    .param p1, "index"    # I
+    .param p2, "value"    # Lcom/flurry/org/codehaus/jackson/JsonNode;
 
     .prologue
     .line 192
@@ -2128,7 +2122,7 @@
     invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(I)V
 
     .line 690
-    .local v2, sb:Ljava/lang/StringBuilder;
+    .local v2, "sb":Ljava/lang/StringBuilder;
     const/16 v3, 0x5b
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
@@ -2141,14 +2135,14 @@
     .line 692
     const/4 v0, 0x0
 
-    .local v0, i:I
+    .local v0, "i":I
     iget-object v3, p0, Lcom/flurry/org/codehaus/jackson/node/ArrayNode;->_children:Ljava/util/ArrayList;
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
 
     move-result v1
 
-    .local v1, len:I
+    .local v1, "len":I
     :goto_0
     if-ge v0, v1, :cond_1
 
@@ -2182,8 +2176,8 @@
     goto :goto_0
 
     .line 699
-    .end local v0           #i:I
-    .end local v1           #len:I
+    .end local v0    # "i":I
+    .end local v1    # "len":I
     :cond_1
     const/16 v3, 0x5d
 

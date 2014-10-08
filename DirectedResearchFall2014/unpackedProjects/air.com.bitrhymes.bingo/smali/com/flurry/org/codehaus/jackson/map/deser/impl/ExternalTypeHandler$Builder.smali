@@ -68,8 +68,8 @@
 # virtual methods
 .method public addExternal(Lcom/flurry/org/codehaus/jackson/map/deser/SettableBeanProperty;Ljava/lang/String;)V
     .locals 3
-    .parameter "property"
-    .parameter "extPropName"
+    .param p1, "property"    # Lcom/flurry/org/codehaus/jackson/map/deser/SettableBeanProperty;
+    .param p2, "extPropName"    # Ljava/lang/String;
 
     .prologue
     .line 140
@@ -84,7 +84,7 @@
     move-result-object v0
 
     .line 141
-    .local v0, index:Ljava/lang/Integer;
+    .local v0, "index":Ljava/lang/Integer;
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/map/deser/impl/ExternalTypeHandler$Builder;->_properties:Ljava/util/ArrayList;
 
     new-instance v2, Lcom/flurry/org/codehaus/jackson/map/deser/impl/ExternalTypeHandler$ExtTypedProperty;

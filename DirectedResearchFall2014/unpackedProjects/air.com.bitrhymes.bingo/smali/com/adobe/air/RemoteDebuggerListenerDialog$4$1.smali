@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/adobe/air/RemoteDebuggerListenerDialog$4;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 142
@@ -39,8 +38,6 @@
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 144
@@ -48,7 +45,7 @@
 
     iget-object v0, v0, Lcom/adobe/air/RemoteDebuggerListenerDialog$4;->this$0:Lcom/adobe/air/RemoteDebuggerListenerDialog;
 
-    #calls: Lcom/adobe/air/RemoteDebuggerListenerDialog;->closeListeningDebuggerSocket()V
+    # invokes: Lcom/adobe/air/RemoteDebuggerListenerDialog;->closeListeningDebuggerSocket()V
     invoke-static {v0}, Lcom/adobe/air/RemoteDebuggerListenerDialog;->access$400(Lcom/adobe/air/RemoteDebuggerListenerDialog;)V
 
     .line 145

@@ -21,7 +21,6 @@
 # direct methods
 .method constructor <init>(Lcom/adobe/air/AndroidNetworkDetector;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 29
@@ -36,8 +35,6 @@
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 3
-    .parameter
-    .parameter
 
     .prologue
     .line 36
@@ -68,12 +65,12 @@
 
     iget-object v1, p0, Lcom/adobe/air/AndroidNetworkDetector$1;->this$0:Lcom/adobe/air/AndroidNetworkDetector;
 
-    #getter for: Lcom/adobe/air/AndroidNetworkDetector;->objReference:J
+    # getter for: Lcom/adobe/air/AndroidNetworkDetector;->objReference:J
     invoke-static {v1}, Lcom/adobe/air/AndroidNetworkDetector;->access$000(Lcom/adobe/air/AndroidNetworkDetector;)J
 
     move-result-wide v1
 
-    #calls: Lcom/adobe/air/AndroidNetworkDetector;->callOnNetworkChange(J)V
+    # invokes: Lcom/adobe/air/AndroidNetworkDetector;->callOnNetworkChange(J)V
     invoke-static {v0, v1, v2}, Lcom/adobe/air/AndroidNetworkDetector;->access$100(Lcom/adobe/air/AndroidNetworkDetector;J)V
 
     .line 47

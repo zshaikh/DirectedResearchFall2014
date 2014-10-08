@@ -89,8 +89,6 @@
 # virtual methods
 .method public init(Landroid/content/Context;Ljava/lang/String;)V
     .locals 3
-    .parameter
-    .parameter
 
     .prologue
     const-string v2, "IMAdTrackerSDK_V_2_5_1"
@@ -228,7 +226,6 @@
 
 .method public reportCustomGoal(Ljava/lang/String;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 107
@@ -259,7 +256,6 @@
 
 .method protected reportInternalGoals(Ljava/lang/String;)Z
     .locals 9
-    .parameter
 
     .prologue
     const-wide/16 v7, 0x0

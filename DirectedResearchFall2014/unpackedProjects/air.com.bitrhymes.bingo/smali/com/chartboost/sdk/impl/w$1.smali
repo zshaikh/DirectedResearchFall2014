@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/chartboost/sdk/impl/w;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1
@@ -75,7 +74,7 @@
 
     move-result v3
 
-    const/high16 v4, 0x3f80
+    const/high16 v4, 0x3f800000
 
     mul-float/2addr v4, v1
 
@@ -100,7 +99,7 @@
     int-to-float v0, v0
 
     .line 45
-    const/high16 v2, 0x4110
+    const/high16 v2, 0x41100000
 
     mul-float/2addr v1, v2
 
@@ -124,7 +123,7 @@
 
     move-result v2
 
-    const/high16 v3, 0x4000
+    const/high16 v3, 0x40000000
 
     mul-float/2addr v0, v3
 

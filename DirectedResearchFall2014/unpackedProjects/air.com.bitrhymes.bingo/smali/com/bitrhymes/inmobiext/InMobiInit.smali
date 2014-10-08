@@ -21,8 +21,8 @@
 # virtual methods
 .method public call(Lcom/adobe/fre/FREContext;[Lcom/adobe/fre/FREObject;)Lcom/adobe/fre/FREObject;
     .locals 4
-    .parameter "context"
-    .parameter "arg1"
+    .param p1, "context"    # Lcom/adobe/fre/FREContext;
+    .param p2, "arg1"    # [Lcom/adobe/fre/FREObject;
 
     .prologue
     const-string v2, "InMobiInit"
@@ -50,7 +50,7 @@
     move-result-object v0
 
     .line 21
-    .local v0, appID:Ljava/lang/String;
+    .local v0, "appID":Ljava/lang/String;
     invoke-static {}, Lcom/inmobi/adtracker/androidsdk/IMAdTracker;->getInstance()Lcom/inmobi/adtracker/androidsdk/IMAdTracker;
 
     move-result-object v2
@@ -82,7 +82,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 28
-    .end local v0           #appID:Ljava/lang/String;
+    .end local v0    # "appID":Ljava/lang/String;
     :goto_0
     const/4 v2, 0x0
 
@@ -95,7 +95,7 @@
     move-object v1, v2
 
     .line 25
-    .local v1, e:Ljava/lang/Exception;
+    .local v1, "e":Ljava/lang/Exception;
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0

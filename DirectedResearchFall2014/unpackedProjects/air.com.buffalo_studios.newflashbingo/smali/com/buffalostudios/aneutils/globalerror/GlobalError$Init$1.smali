@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/buffalostudios/aneutils/globalerror/GlobalError$Init;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1
@@ -40,12 +39,12 @@
 # virtual methods
 .method public uncaughtException(Ljava/lang/Thread;Ljava/lang/Throwable;)V
     .locals 0
-    .parameter "thread"
-    .parameter "ex"
+    .param p1, "thread"    # Ljava/lang/Thread;
+    .param p2, "ex"    # Ljava/lang/Throwable;
 
     .prologue
     .line 91
-    #calls: Lcom/buffalostudios/aneutils/globalerror/GlobalError;->showErrorDialog(Ljava/lang/Thread;Ljava/lang/Throwable;)V
+    # invokes: Lcom/buffalostudios/aneutils/globalerror/GlobalError;->showErrorDialog(Ljava/lang/Thread;Ljava/lang/Throwable;)V
     invoke-static {p1, p2}, Lcom/buffalostudios/aneutils/globalerror/GlobalError;->access$0(Ljava/lang/Thread;Ljava/lang/Throwable;)V
 
     .line 92

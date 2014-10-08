@@ -12,8 +12,6 @@
 # direct methods
 .method public constructor <init>(Lcom/inmobi/androidsdk/ai/container/IMWebView;Landroid/content/Context;)V
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     .line 42
@@ -68,7 +66,6 @@
 
 .method private a(Lcom/inmobi/androidsdk/ai/controller/JSController$ExpandProperties;)Lcom/inmobi/androidsdk/ai/controller/JSController$ExpandProperties;
     .locals 9
-    .parameter
 
     .prologue
     const/4 v8, 0x2
@@ -671,8 +668,6 @@
 
 .method private a(Lcom/inmobi/androidsdk/ai/controller/JSController$ExpandProperties;Lcom/inmobi/androidsdk/ai/controller/JSController$ExpandProperties;)V
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 322
@@ -773,7 +768,6 @@
 # virtual methods
 .method public acceptAction(Ljava/lang/String;)V
     .locals 1
-    .parameter
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 
@@ -829,7 +823,6 @@
 
 .method public expand(Ljava/lang/String;)V
     .locals 4
-    .parameter
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 
@@ -1263,7 +1256,6 @@
 
 .method public open(Ljava/lang/String;)V
     .locals 3
-    .parameter
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 
@@ -1298,7 +1290,6 @@
 
 .method public rejectAction(Ljava/lang/String;)V
     .locals 1
-    .parameter
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 
@@ -1314,7 +1305,6 @@
 
 .method public setExpandProperties(Ljava/lang/String;)V
     .locals 5
-    .parameter
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 
@@ -1499,7 +1489,6 @@
 
 .method public useCustomClose(Z)V
     .locals 3
-    .parameter
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 

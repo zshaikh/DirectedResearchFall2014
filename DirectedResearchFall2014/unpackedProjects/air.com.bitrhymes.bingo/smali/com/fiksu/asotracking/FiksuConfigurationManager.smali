@@ -65,7 +65,6 @@
 
 .method static synthetic access$0(Lcom/fiksu/asotracking/FiksuConfigurationManager;)Ljava/util/concurrent/atomic/AtomicBoolean;
     .locals 1
-    .parameter
 
     .prologue
     .line 32
@@ -76,9 +75,6 @@
 
 .method static synthetic access$1(Lcom/fiksu/asotracking/FiksuConfigurationManager;Landroid/content/Context;Ljava/lang/String;)Z
     .locals 1
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 144
@@ -91,7 +87,7 @@
 
 .method private static final getHttpClient(Landroid/content/Context;)Lorg/apache/http/client/HttpClient;
     .locals 4
-    .parameter "context"
+    .param p0, "context"    # Landroid/content/Context;
 
     .prologue
     .line 229
@@ -113,7 +109,7 @@
     move-object v0, v1
 
     .line 253
-    .local v0, illegalArgumentException:Ljava/lang/IllegalArgumentException;
+    .local v0, "illegalArgumentException":Ljava/lang/IllegalArgumentException;
     const-string v1, "FiksuTracking"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -154,7 +150,7 @@
 
 .method private static final getSynchUrl(Landroid/content/Context;)Ljava/lang/String;
     .locals 2
-    .parameter "context"
+    .param p0, "context"    # Landroid/content/Context;
 
     .prologue
     .line 106
@@ -199,8 +195,8 @@
 
 .method private static final readContentsFromServer(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
     .locals 14
-    .parameter "context"
-    .parameter "url"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "url"    # Ljava/lang/String;
 
     .prologue
     const/4 v11, 0x0
@@ -213,25 +209,25 @@
     const/4 v2, 0x0
 
     .line 184
-    .local v2, inputStream:Ljava/io/InputStream;
+    .local v2, "inputStream":Ljava/io/InputStream;
     :try_start_0
     invoke-static {p0}, Lcom/fiksu/asotracking/FiksuConfigurationManager;->getHttpClient(Landroid/content/Context;)Lorg/apache/http/client/HttpClient;
 
     move-result-object v0
 
     .line 185
-    .local v0, httpClient:Lorg/apache/http/client/HttpClient;
+    .local v0, "httpClient":Lorg/apache/http/client/HttpClient;
     if-nez v0, :cond_0
 
     move-object v8, v11
 
     .line 216
-    .end local v0           #httpClient:Lorg/apache/http/client/HttpClient;
+    .end local v0    # "httpClient":Lorg/apache/http/client/HttpClient;
     :goto_0
     return-object v8
 
     .line 188
-    .restart local v0       #httpClient:Lorg/apache/http/client/HttpClient;
+    .restart local v0    # "httpClient":Lorg/apache/http/client/HttpClient;
     :cond_0
     new-instance v8, Lorg/apache/http/client/methods/HttpGet;
 
@@ -242,7 +238,7 @@
     move-result-object v1
 
     .line 190
-    .local v1, httpResponse:Lorg/apache/http/HttpResponse;
+    .local v1, "httpResponse":Lorg/apache/http/HttpResponse;
     invoke-interface {v1}, Lorg/apache/http/HttpResponse;->getStatusLine()Lorg/apache/http/StatusLine;
 
     move-result-object v8
@@ -252,7 +248,7 @@
     move-result v6
 
     .line 191
-    .local v6, statusCode:I
+    .local v6, "statusCode":I
     const-string v8, "FiksuTracking"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -316,17 +312,17 @@
     invoke-direct {v5, v8}, Ljava/io/BufferedReader;-><init>(Ljava/io/Reader;)V
 
     .line 206
-    .local v5, reader:Ljava/io/BufferedReader;
+    .local v5, "reader":Ljava/io/BufferedReader;
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
     .line 209
-    .local v7, stringBuilder:Ljava/lang/StringBuilder;
+    .local v7, "stringBuilder":Ljava/lang/StringBuilder;
     const/4 v4, 0x0
 
     .line 210
-    .local v4, line:Ljava/lang/String;
+    .local v4, "line":Ljava/lang/String;
     :goto_1
     :try_start_2
     invoke-virtual {v5}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
@@ -338,8 +334,8 @@
     .line 213
     invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
     :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
     move-result-object v8
 
@@ -361,19 +357,19 @@
     goto :goto_0
 
     .line 200
-    .end local v0           #httpClient:Lorg/apache/http/client/HttpClient;
-    .end local v1           #httpResponse:Lorg/apache/http/HttpResponse;
-    .end local v4           #line:Ljava/lang/String;
-    .end local v5           #reader:Ljava/io/BufferedReader;
-    .end local v6           #statusCode:I
-    .end local v7           #stringBuilder:Ljava/lang/StringBuilder;
+    .end local v0    # "httpClient":Lorg/apache/http/client/HttpClient;
+    .end local v1    # "httpResponse":Lorg/apache/http/HttpResponse;
+    .end local v4    # "line":Ljava/lang/String;
+    .end local v5    # "reader":Ljava/io/BufferedReader;
+    .end local v6    # "statusCode":I
+    .end local v7    # "stringBuilder":Ljava/lang/StringBuilder;
     :catch_1
     move-exception v8
 
     move-object v3, v8
 
     .line 201
-    .local v3, ioException:Ljava/io/IOException;
+    .local v3, "ioException":Ljava/io/IOException;
     const-string v8, "FiksuTracking"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -412,13 +408,13 @@
     goto/16 :goto_0
 
     .line 211
-    .end local v3           #ioException:Ljava/io/IOException;
-    .restart local v0       #httpClient:Lorg/apache/http/client/HttpClient;
-    .restart local v1       #httpResponse:Lorg/apache/http/HttpResponse;
-    .restart local v4       #line:Ljava/lang/String;
-    .restart local v5       #reader:Ljava/io/BufferedReader;
-    .restart local v6       #statusCode:I
-    .restart local v7       #stringBuilder:Ljava/lang/StringBuilder;
+    .end local v3    # "ioException":Ljava/io/IOException;
+    .restart local v0    # "httpClient":Lorg/apache/http/client/HttpClient;
+    .restart local v1    # "httpResponse":Lorg/apache/http/HttpResponse;
+    .restart local v4    # "line":Ljava/lang/String;
+    .restart local v5    # "reader":Ljava/io/BufferedReader;
+    .restart local v6    # "statusCode":I
+    .restart local v7    # "stringBuilder":Ljava/lang/StringBuilder;
     :cond_2
     :try_start_4
     new-instance v8, Ljava/lang/StringBuilder;
@@ -441,8 +437,8 @@
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
     :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_0
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_2
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
     goto :goto_1
 
@@ -453,7 +449,7 @@
     move-object v3, v8
 
     .line 215
-    .restart local v3       #ioException:Ljava/io/IOException;
+    .restart local v3    # "ioException":Ljava/io/IOException;
     :try_start_5
     const-string v8, "FiksuTracking"
 
@@ -505,7 +501,7 @@
     goto/16 :goto_0
 
     .line 217
-    .end local v3           #ioException:Ljava/io/IOException;
+    .end local v3    # "ioException":Ljava/io/IOException;
     :catchall_0
     move-exception v8
 
@@ -528,7 +524,7 @@
 
     goto :goto_3
 
-    .restart local v3       #ioException:Ljava/io/IOException;
+    .restart local v3    # "ioException":Ljava/io/IOException;
     :catch_4
     move-exception v8
 
@@ -537,7 +533,7 @@
 
 .method private setSharedPreferences(Landroid/content/Context;)V
     .locals 2
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     .line 74
@@ -579,8 +575,8 @@
 
 .method private final updateConfigurationFromServerBlocking(Landroid/content/Context;Ljava/lang/String;)Z
     .locals 6
-    .parameter "context"
-    .parameter "url"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "url"    # Ljava/lang/String;
 
     .prologue
     const/4 v4, 0x1
@@ -593,7 +589,7 @@
     move-result-object v0
 
     .line 146
-    .local v0, json:Ljava/lang/String;
+    .local v0, "json":Ljava/lang/String;
     if-nez v0, :cond_0
 
     move v2, v5
@@ -659,7 +655,7 @@
     move-object v1, v2
 
     .line 166
-    .local v1, jsonException:Lorg/json/JSONException;
+    .local v1, "jsonException":Lorg/json/JSONException;
     const-string v2, "FiksuTracking"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -712,7 +708,7 @@
 
 .method protected final initialize(Landroid/content/Context;)V
     .locals 2
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     .line 55
@@ -756,7 +752,7 @@
 
 .method public final setDebugModeEnabled(Z)V
     .locals 1
-    .parameter "debugModeEnabled"
+    .param p1, "debugModeEnabled"    # Z
 
     .prologue
     .line 269
@@ -770,7 +766,7 @@
 
 .method protected final updateConfiguration(Landroid/content/Context;)V
     .locals 1
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     .line 95
@@ -802,8 +798,8 @@
 
 .method protected final updateConfigurationFromServerInTheBackground(Landroid/content/Context;Ljava/lang/String;)V
     .locals 3
-    .parameter "context"
-    .parameter "url"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "url"    # Ljava/lang/String;
 
     .prologue
     .line 110

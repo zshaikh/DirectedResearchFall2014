@@ -21,7 +21,7 @@
 # virtual methods
 .method public onInterstitialClicked(Lcom/fusepowered/m2/m2l/MoPubInterstitial;)V
     .locals 0
-    .parameter "interstitial"
+    .param p1, "interstitial"    # Lcom/fusepowered/m2/m2l/MoPubInterstitial;
 
     .prologue
     .line 41
@@ -30,7 +30,7 @@
 
 .method public onInterstitialDismissed(Lcom/fusepowered/m2/m2l/MoPubInterstitial;)V
     .locals 0
-    .parameter "interstitial"
+    .param p1, "interstitial"    # Lcom/fusepowered/m2/m2l/MoPubInterstitial;
 
     .prologue
     .line 42
@@ -39,8 +39,8 @@
 
 .method public onInterstitialFailed(Lcom/fusepowered/m2/m2l/MoPubInterstitial;Lcom/fusepowered/m2/m2l/MoPubErrorCode;)V
     .locals 0
-    .parameter "interstitial"
-    .parameter "errorCode"
+    .param p1, "interstitial"    # Lcom/fusepowered/m2/m2l/MoPubInterstitial;
+    .param p2, "errorCode"    # Lcom/fusepowered/m2/m2l/MoPubErrorCode;
 
     .prologue
     .line 39
@@ -49,7 +49,7 @@
 
 .method public onInterstitialLoaded(Lcom/fusepowered/m2/m2l/MoPubInterstitial;)V
     .locals 0
-    .parameter "interstitial"
+    .param p1, "interstitial"    # Lcom/fusepowered/m2/m2l/MoPubInterstitial;
 
     .prologue
     .line 38
@@ -58,7 +58,7 @@
 
 .method public onInterstitialShown(Lcom/fusepowered/m2/m2l/MoPubInterstitial;)V
     .locals 0
-    .parameter "interstitial"
+    .param p1, "interstitial"    # Lcom/fusepowered/m2/m2l/MoPubInterstitial;
 
     .prologue
     .line 40

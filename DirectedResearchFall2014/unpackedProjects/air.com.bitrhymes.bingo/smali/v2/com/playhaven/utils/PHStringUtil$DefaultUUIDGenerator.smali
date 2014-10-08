@@ -30,7 +30,7 @@
 
 .method synthetic constructor <init>(Lv2/com/playhaven/utils/PHStringUtil$1;)V
     .locals 0
-    .parameter "x0"
+    .param p1, "x0"    # Lv2/com/playhaven/utils/PHStringUtil$1;
 
     .prologue
     .line 33

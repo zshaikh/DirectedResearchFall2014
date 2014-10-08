@@ -97,7 +97,6 @@
 
 .method public constructor <init>(J)V
     .locals 4
-    .parameter
 
     .prologue
     const/4 v3, 0x0
@@ -156,7 +155,6 @@
 
 .method static synthetic access$000(Lcom/adobe/air/AndroidCamera;)J
     .locals 2
-    .parameter
 
     .prologue
     .line 73
@@ -167,7 +165,6 @@
 
 .method static synthetic access$100(Lcom/adobe/air/AndroidCamera;)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 73
@@ -178,9 +175,6 @@
 
 .method static synthetic access$200(Lcom/adobe/air/AndroidCamera;J[B)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 73
@@ -191,7 +185,6 @@
 
 .method static synthetic access$300(Lcom/adobe/air/AndroidCamera;)[B
     .locals 1
-    .parameter
 
     .prologue
     .line 73
@@ -202,8 +195,6 @@
 
 .method static synthetic access$302(Lcom/adobe/air/AndroidCamera;[B)[B
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 73
@@ -214,7 +205,6 @@
 
 .method static synthetic access$400(Lcom/adobe/air/AndroidCamera;)[B
     .locals 1
-    .parameter
 
     .prologue
     .line 73
@@ -225,7 +215,6 @@
 
 .method static synthetic access$500(Lcom/adobe/air/AndroidCamera;)[B
     .locals 1
-    .parameter
 
     .prologue
     .line 73
@@ -236,7 +225,6 @@
 
 .method static synthetic access$600(Lcom/adobe/air/AndroidCamera;)Landroid/hardware/Camera;
     .locals 1
-    .parameter
 
     .prologue
     .line 73
@@ -247,7 +235,6 @@
 
 .method static synthetic access$700(Lcom/adobe/air/AndroidCamera;)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 73
@@ -258,8 +245,6 @@
 
 .method static synthetic access$702(Lcom/adobe/air/AndroidCamera;Z)Z
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 73
@@ -270,8 +255,6 @@
 
 .method static synthetic access$800(Lcom/adobe/air/AndroidCamera;J)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 73
@@ -282,8 +265,6 @@
 
 .method static synthetic access$900(Lcom/adobe/air/AndroidCamera;J)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 73
@@ -1065,7 +1046,6 @@
 
 .method public open(I)Z
     .locals 9
-    .parameter
 
     .prologue
     const/4 v8, 0x0
@@ -1232,7 +1212,6 @@
 
 .method public registerCallbacks(Z)V
     .locals 2
-    .parameter
 
     .prologue
     .line 561
@@ -1367,10 +1346,6 @@
 
 .method public startCapture(IIII)Z
     .locals 5
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const/4 v4, 0x1

@@ -25,8 +25,8 @@
 # direct methods
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
     .locals 3
-    .parameter "name"
-    .parameter "space"
+    .param p1, "name"    # Ljava/lang/String;
+    .param p2, "space"    # Ljava/lang/String;
 
     .prologue
     .line 476
@@ -57,14 +57,14 @@
     move-result v0
 
     .line 482
-    .local v0, lastDot:I
+    .local v0, "lastDot":I
     if-gez v0, :cond_1
 
     .line 483
     iput-object p2, p0, Lcom/flurry/org/apache/avro/Schema$Name;->space:Ljava/lang/String;
 
     .line 484
-    #calls: Lcom/flurry/org/apache/avro/Schema;->validateName(Ljava/lang/String;)Ljava/lang/String;
+    # invokes: Lcom/flurry/org/apache/avro/Schema;->validateName(Ljava/lang/String;)Ljava/lang/String;
     invoke-static {p1}, Lcom/flurry/org/apache/avro/Schema;->access$200(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -105,7 +105,7 @@
 
     move-result-object v1
 
-    #calls: Lcom/flurry/org/apache/avro/Schema;->validateName(Ljava/lang/String;)Ljava/lang/String;
+    # invokes: Lcom/flurry/org/apache/avro/Schema;->validateName(Ljava/lang/String;)Ljava/lang/String;
     invoke-static {v1}, Lcom/flurry/org/apache/avro/Schema;->access$200(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -147,7 +147,7 @@
 
 .method static synthetic access$400(Lcom/flurry/org/apache/avro/Schema$Name;)Ljava/lang/String;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/flurry/org/apache/avro/Schema$Name;
 
     .prologue
     .line 472
@@ -158,7 +158,7 @@
 
 .method static synthetic access$500(Lcom/flurry/org/apache/avro/Schema$Name;)Ljava/lang/String;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/flurry/org/apache/avro/Schema$Name;
 
     .prologue
     .line 472
@@ -169,7 +169,7 @@
 
 .method static synthetic access$600(Lcom/flurry/org/apache/avro/Schema$Name;)Ljava/lang/String;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/flurry/org/apache/avro/Schema$Name;
 
     .prologue
     .line 472
@@ -182,7 +182,7 @@
 # virtual methods
 .method public equals(Ljava/lang/Object;)Z
     .locals 5
-    .parameter "o"
+    .param p1, "o"    # Ljava/lang/Object;
 
     .prologue
     const/4 v4, 0x1
@@ -217,7 +217,7 @@
     move-object v1, v0
 
     .line 495
-    .local v1, that:Lcom/flurry/org/apache/avro/Schema$Name;
+    .local v1, "that":Lcom/flurry/org/apache/avro/Schema$Name;
     iget-object v2, p0, Lcom/flurry/org/apache/avro/Schema$Name;->full:Ljava/lang/String;
 
     if-nez v2, :cond_3
@@ -249,7 +249,7 @@
 
 .method public getQualified(Ljava/lang/String;)Ljava/lang/String;
     .locals 1
-    .parameter "defaultSpace"
+    .param p1, "defaultSpace"    # Ljava/lang/String;
 
     .prologue
     .line 511
@@ -313,8 +313,8 @@
 
 .method public writeName(Lcom/flurry/org/apache/avro/Schema$Names;Lcom/flurry/org/codehaus/jackson/JsonGenerator;)V
     .locals 2
-    .parameter "names"
-    .parameter "gen"
+    .param p1, "names"    # Lcom/flurry/org/apache/avro/Schema$Names;
+    .param p2, "gen"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;

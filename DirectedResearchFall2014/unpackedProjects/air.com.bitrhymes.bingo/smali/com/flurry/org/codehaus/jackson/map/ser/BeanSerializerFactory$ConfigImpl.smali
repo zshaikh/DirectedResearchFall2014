@@ -63,9 +63,9 @@
 
 .method protected constructor <init>([Lcom/flurry/org/codehaus/jackson/map/Serializers;[Lcom/flurry/org/codehaus/jackson/map/Serializers;[Lcom/flurry/org/codehaus/jackson/map/ser/BeanSerializerModifier;)V
     .locals 1
-    .parameter "allAdditionalSerializers"
-    .parameter "allAdditionalKeySerializers"
-    .parameter "modifiers"
+    .param p1, "allAdditionalSerializers"    # [Lcom/flurry/org/codehaus/jackson/map/Serializers;
+    .param p2, "allAdditionalKeySerializers"    # [Lcom/flurry/org/codehaus/jackson/map/Serializers;
+    .param p3, "modifiers"    # [Lcom/flurry/org/codehaus/jackson/map/ser/BeanSerializerModifier;
 
     .prologue
     .line 113
@@ -256,7 +256,7 @@
 
 .method public withAdditionalKeySerializers(Lcom/flurry/org/codehaus/jackson/map/Serializers;)Lcom/flurry/org/codehaus/jackson/map/SerializerFactory$Config;
     .locals 4
-    .parameter "additional"
+    .param p1, "additional"    # Lcom/flurry/org/codehaus/jackson/map/Serializers;
 
     .prologue
     .line 134
@@ -282,7 +282,7 @@
     check-cast v0, [Lcom/flurry/org/codehaus/jackson/map/Serializers;
 
     .line 138
-    .local v0, all:[Lcom/flurry/org/codehaus/jackson/map/Serializers;
+    .local v0, "all":[Lcom/flurry/org/codehaus/jackson/map/Serializers;
     new-instance v1, Lcom/flurry/org/codehaus/jackson/map/ser/BeanSerializerFactory$ConfigImpl;
 
     iget-object v2, p0, Lcom/flurry/org/codehaus/jackson/map/ser/BeanSerializerFactory$ConfigImpl;->_additionalSerializers:[Lcom/flurry/org/codehaus/jackson/map/Serializers;
@@ -296,7 +296,7 @@
 
 .method public withAdditionalSerializers(Lcom/flurry/org/codehaus/jackson/map/Serializers;)Lcom/flurry/org/codehaus/jackson/map/SerializerFactory$Config;
     .locals 4
-    .parameter "additional"
+    .param p1, "additional"    # Lcom/flurry/org/codehaus/jackson/map/Serializers;
 
     .prologue
     .line 124
@@ -322,7 +322,7 @@
     check-cast v0, [Lcom/flurry/org/codehaus/jackson/map/Serializers;
 
     .line 128
-    .local v0, all:[Lcom/flurry/org/codehaus/jackson/map/Serializers;
+    .local v0, "all":[Lcom/flurry/org/codehaus/jackson/map/Serializers;
     new-instance v1, Lcom/flurry/org/codehaus/jackson/map/ser/BeanSerializerFactory$ConfigImpl;
 
     iget-object v2, p0, Lcom/flurry/org/codehaus/jackson/map/ser/BeanSerializerFactory$ConfigImpl;->_additionalKeySerializers:[Lcom/flurry/org/codehaus/jackson/map/Serializers;
@@ -336,7 +336,7 @@
 
 .method public withSerializerModifier(Lcom/flurry/org/codehaus/jackson/map/ser/BeanSerializerModifier;)Lcom/flurry/org/codehaus/jackson/map/SerializerFactory$Config;
     .locals 4
-    .parameter "modifier"
+    .param p1, "modifier"    # Lcom/flurry/org/codehaus/jackson/map/ser/BeanSerializerModifier;
 
     .prologue
     .line 144
@@ -362,7 +362,7 @@
     check-cast v0, [Lcom/flurry/org/codehaus/jackson/map/ser/BeanSerializerModifier;
 
     .line 148
-    .local v0, modifiers:[Lcom/flurry/org/codehaus/jackson/map/ser/BeanSerializerModifier;
+    .local v0, "modifiers":[Lcom/flurry/org/codehaus/jackson/map/ser/BeanSerializerModifier;
     new-instance v1, Lcom/flurry/org/codehaus/jackson/map/ser/BeanSerializerFactory$ConfigImpl;
 
     iget-object v2, p0, Lcom/flurry/org/codehaus/jackson/map/ser/BeanSerializerFactory$ConfigImpl;->_additionalSerializers:[Lcom/flurry/org/codehaus/jackson/map/Serializers;

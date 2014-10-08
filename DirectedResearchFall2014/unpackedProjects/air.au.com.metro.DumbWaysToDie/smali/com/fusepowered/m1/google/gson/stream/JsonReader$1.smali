@@ -29,7 +29,7 @@
 # virtual methods
 .method public promoteNameToValue(Lcom/fusepowered/m1/google/gson/stream/JsonReader;)V
     .locals 4
-    .parameter "reader"
+    .param p1, "reader"    # Lcom/fusepowered/m1/google/gson/stream/JsonReader;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -45,7 +45,7 @@
     .line 1536
     check-cast p1, Lcom/fusepowered/m1/google/gson/internal/bind/JsonTreeReader;
 
-    .end local p1
+    .end local p1    # "reader":Lcom/fusepowered/m1/google/gson/stream/JsonReader;
     invoke-virtual {p1}, Lcom/fusepowered/m1/google/gson/internal/bind/JsonTreeReader;->promoteNameToValue()V
 
     .line 1553
@@ -53,19 +53,19 @@
     return-void
 
     .line 1539
-    .restart local p1
+    .restart local p1    # "reader":Lcom/fusepowered/m1/google/gson/stream/JsonReader;
     :cond_0
-    #getter for: Lcom/fusepowered/m1/google/gson/stream/JsonReader;->peeked:I
+    # getter for: Lcom/fusepowered/m1/google/gson/stream/JsonReader;->peeked:I
     invoke-static {p1}, Lcom/fusepowered/m1/google/gson/stream/JsonReader;->access$000(Lcom/fusepowered/m1/google/gson/stream/JsonReader;)I
 
     move-result v0
 
     .line 1540
-    .local v0, p:I
+    .local v0, "p":I
     if-nez v0, :cond_1
 
     .line 1541
-    #calls: Lcom/fusepowered/m1/google/gson/stream/JsonReader;->doPeek()I
+    # invokes: Lcom/fusepowered/m1/google/gson/stream/JsonReader;->doPeek()I
     invoke-static {p1}, Lcom/fusepowered/m1/google/gson/stream/JsonReader;->access$100(Lcom/fusepowered/m1/google/gson/stream/JsonReader;)I
 
     move-result v0
@@ -79,7 +79,7 @@
     .line 1544
     const/16 v1, 0x9
 
-    #setter for: Lcom/fusepowered/m1/google/gson/stream/JsonReader;->peeked:I
+    # setter for: Lcom/fusepowered/m1/google/gson/stream/JsonReader;->peeked:I
     invoke-static {p1, v1}, Lcom/fusepowered/m1/google/gson/stream/JsonReader;->access$002(Lcom/fusepowered/m1/google/gson/stream/JsonReader;I)I
 
     goto :goto_0
@@ -93,7 +93,7 @@
     .line 1546
     const/16 v1, 0x8
 
-    #setter for: Lcom/fusepowered/m1/google/gson/stream/JsonReader;->peeked:I
+    # setter for: Lcom/fusepowered/m1/google/gson/stream/JsonReader;->peeked:I
     invoke-static {p1, v1}, Lcom/fusepowered/m1/google/gson/stream/JsonReader;->access$002(Lcom/fusepowered/m1/google/gson/stream/JsonReader;I)I
 
     goto :goto_0
@@ -107,7 +107,7 @@
     .line 1548
     const/16 v1, 0xa
 
-    #setter for: Lcom/fusepowered/m1/google/gson/stream/JsonReader;->peeked:I
+    # setter for: Lcom/fusepowered/m1/google/gson/stream/JsonReader;->peeked:I
     invoke-static {p1, v1}, Lcom/fusepowered/m1/google/gson/stream/JsonReader;->access$002(Lcom/fusepowered/m1/google/gson/stream/JsonReader;I)I
 
     goto :goto_0
@@ -146,7 +146,7 @@
 
     move-result-object v2
 
-    #calls: Lcom/fusepowered/m1/google/gson/stream/JsonReader;->getLineNumber()I
+    # invokes: Lcom/fusepowered/m1/google/gson/stream/JsonReader;->getLineNumber()I
     invoke-static {p1}, Lcom/fusepowered/m1/google/gson/stream/JsonReader;->access$200(Lcom/fusepowered/m1/google/gson/stream/JsonReader;)I
 
     move-result v3
@@ -161,7 +161,7 @@
 
     move-result-object v2
 
-    #calls: Lcom/fusepowered/m1/google/gson/stream/JsonReader;->getColumnNumber()I
+    # invokes: Lcom/fusepowered/m1/google/gson/stream/JsonReader;->getColumnNumber()I
     invoke-static {p1}, Lcom/fusepowered/m1/google/gson/stream/JsonReader;->access$300(Lcom/fusepowered/m1/google/gson/stream/JsonReader;)I
 
     move-result v3

@@ -124,10 +124,9 @@
 # direct methods
 .method protected constructor <init>(Lcom/flurry/org/codehaus/jackson/map/MapperConfig;ZLcom/flurry/org/codehaus/jackson/type/JavaType;Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;)V
     .locals 2
-    .parameter
-    .parameter "forSerialization"
-    .parameter "type"
-    .parameter "classDef"
+    .param p2, "forSerialization"    # Z
+    .param p3, "type"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .param p4, "classDef"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -140,7 +139,7 @@
     .end annotation
 
     .prologue
-    .local p1, config:Lcom/flurry/org/codehaus/jackson/map/MapperConfig;,"Lcom/flurry/org/codehaus/jackson/map/MapperConfig<*>;"
+    .local p1, "config":Lcom/flurry/org/codehaus/jackson/map/MapperConfig;, "Lcom/flurry/org/codehaus/jackson/map/MapperConfig<*>;"
     const/4 v1, 0x0
 
     .line 103
@@ -238,7 +237,7 @@
 
 .method private _addIgnored(Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;)V
     .locals 2
-    .parameter "prop"
+    .param p1, "prop"    # Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
 
     .prologue
     .line 590
@@ -258,7 +257,7 @@
     move-result-object v0
 
     .line 599
-    .local v0, name:Ljava/lang/String;
+    .local v0, "name":Ljava/lang/String;
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertiesCollector;->_ignoredPropertyNames:Ljava/util/Set;
 
     invoke-direct {p0, v1, v0}, Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertiesCollector;->addToSet(Ljava/util/Set;Ljava/lang/String;)Ljava/util/Set;
@@ -288,8 +287,7 @@
 
 .method private addToSet(Ljava/util/Set;Ljava/lang/String;)Ljava/util/Set;
     .locals 0
-    .parameter
-    .parameter "str"
+    .param p2, "str"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -308,17 +306,17 @@
 
     .prologue
     .line 707
-    .local p1, set:Ljava/util/Set;,"Ljava/util/Set<Ljava/lang/String;>;"
+    .local p1, "set":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     if-nez p1, :cond_0
 
     .line 708
     new-instance p1, Ljava/util/HashSet;
 
-    .end local p1           #set:Ljava/util/Set;,"Ljava/util/Set<Ljava/lang/String;>;"
+    .end local p1    # "set":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     invoke-direct {p1}, Ljava/util/HashSet;-><init>()V
 
     .line 710
-    .restart local p1       #set:Ljava/util/Set;,"Ljava/util/Set<Ljava/lang/String;>;"
+    .restart local p1    # "set":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     :cond_0
     invoke-interface {p1, p2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
@@ -340,7 +338,7 @@
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertiesCollector;->_annotationIntrospector:Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;
 
     .line 374
-    .local v0, ai:Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;
+    .local v0, "ai":Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;
     if-nez v0, :cond_1
 
     .line 409
@@ -359,7 +357,7 @@
 
     move-result-object v4
 
-    .local v4, i$:Ljava/util/Iterator;
+    .local v4, "i$":Ljava/util/Iterator;
     :cond_2
     invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
 
@@ -374,7 +372,7 @@
     check-cast v1, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedConstructor;
 
     .line 378
-    .local v1, ctor:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedConstructor;
+    .local v1, "ctor":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedConstructor;
     iget-object v9, p0, Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertiesCollector;->_creatorProperties:Ljava/util/LinkedList;
 
     if-nez v9, :cond_3
@@ -390,12 +388,12 @@
     :cond_3
     const/4 v3, 0x0
 
-    .local v3, i:I
+    .local v3, "i":I
     invoke-virtual {v1}, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedConstructor;->getParameterCount()I
 
     move-result v5
 
-    .local v5, len:I
+    .local v5, "len":I
     :goto_0
     if-ge v3, v5, :cond_2
 
@@ -405,13 +403,13 @@
     move-result-object v7
 
     .line 383
-    .local v7, param:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedParameter;
+    .local v7, "param":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedParameter;
     invoke-virtual {v0, v7}, Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;->findPropertyNameForParam(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedParameter;)Ljava/lang/String;
 
     move-result-object v6
 
     .line 385
-    .local v6, name:Ljava/lang/String;
+    .local v6, "name":Ljava/lang/String;
     if-eqz v6, :cond_4
 
     .line 387
@@ -420,7 +418,7 @@
     move-result-object v8
 
     .line 388
-    .local v8, prop:Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
+    .local v8, "prop":Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
     invoke-virtual {v8, v7, v6, v11, v10}, Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;->addCtor(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedParameter;Ljava/lang/String;ZZ)V
 
     .line 389
@@ -429,18 +427,18 @@
     invoke-virtual {v9, v8}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
 
     .line 381
-    .end local v8           #prop:Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
+    .end local v8    # "prop":Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
     :cond_4
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
     .line 393
-    .end local v1           #ctor:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedConstructor;
-    .end local v3           #i:I
-    .end local v5           #len:I
-    .end local v6           #name:Ljava/lang/String;
-    .end local v7           #param:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedParameter;
+    .end local v1    # "ctor":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedConstructor;
+    .end local v3    # "i":I
+    .end local v5    # "len":I
+    .end local v6    # "name":Ljava/lang/String;
+    .end local v7    # "param":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedParameter;
     :cond_5
     iget-object v9, p0, Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertiesCollector;->_classDef:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;
 
@@ -466,7 +464,7 @@
     check-cast v2, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
 
     .line 394
-    .local v2, factory:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
+    .local v2, "factory":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
     iget-object v9, p0, Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertiesCollector;->_creatorProperties:Ljava/util/LinkedList;
 
     if-nez v9, :cond_7
@@ -482,12 +480,12 @@
     :cond_7
     const/4 v3, 0x0
 
-    .restart local v3       #i:I
+    .restart local v3    # "i":I
     invoke-virtual {v2}, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;->getParameterCount()I
 
     move-result v5
 
-    .restart local v5       #len:I
+    .restart local v5    # "len":I
     :goto_1
     if-ge v3, v5, :cond_6
 
@@ -497,13 +495,13 @@
     move-result-object v7
 
     .line 399
-    .restart local v7       #param:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedParameter;
+    .restart local v7    # "param":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedParameter;
     invoke-virtual {v0, v7}, Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;->findPropertyNameForParam(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedParameter;)Ljava/lang/String;
 
     move-result-object v6
 
     .line 401
-    .restart local v6       #name:Ljava/lang/String;
+    .restart local v6    # "name":Ljava/lang/String;
     if-eqz v6, :cond_8
 
     .line 403
@@ -512,7 +510,7 @@
     move-result-object v8
 
     .line 404
-    .restart local v8       #prop:Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
+    .restart local v8    # "prop":Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
     invoke-virtual {v8, v7, v6, v11, v10}, Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;->addCtor(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedParameter;Ljava/lang/String;ZZ)V
 
     .line 405
@@ -521,7 +519,7 @@
     invoke-virtual {v9, v8}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
 
     .line 397
-    .end local v8           #prop:Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
+    .end local v8    # "prop":Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
     :cond_8
     add-int/lit8 v3, v3, 0x1
 
@@ -540,7 +538,7 @@
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertiesCollector;->_annotationIntrospector:Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;
 
     .line 337
-    .local v0, ai:Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;
+    .local v0, "ai":Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;
     iget-object v7, p0, Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertiesCollector;->_classDef:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;
 
     invoke-virtual {v7}, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;->fields()Ljava/lang/Iterable;
@@ -551,7 +549,7 @@
 
     move-result-object v3
 
-    .local v3, i$:Ljava/util/Iterator;
+    .local v3, "i$":Ljava/util/Iterator;
     :goto_0
     invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
 
@@ -566,20 +564,20 @@
     check-cast v2, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedField;
 
     .line 338
-    .local v2, f:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedField;
+    .local v2, "f":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedField;
     invoke-virtual {v2}, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedField;->getName()Ljava/lang/String;
 
     move-result-object v5
 
     .line 341
-    .local v5, implName:Ljava/lang/String;
+    .local v5, "implName":Ljava/lang/String;
     if-nez v0, :cond_2
 
     .line 342
     const/4 v1, 0x0
 
     .line 353
-    .local v1, explName:Ljava/lang/String;
+    .local v1, "explName":Ljava/lang/String;
     :goto_1
     const-string v7, ""
 
@@ -599,7 +597,7 @@
     move v6, v9
 
     .line 358
-    .local v6, visible:Z
+    .local v6, "visible":Z
     :goto_2
     if-nez v6, :cond_1
 
@@ -623,7 +621,7 @@
     move v4, v9
 
     .line 363
-    .local v4, ignored:Z
+    .local v4, "ignored":Z
     :goto_3
     invoke-virtual {p0, v5}, Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertiesCollector;->_property(Ljava/lang/String;)Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
 
@@ -634,9 +632,9 @@
     goto :goto_0
 
     .line 343
-    .end local v1           #explName:Ljava/lang/String;
-    .end local v4           #ignored:Z
-    .end local v6           #visible:Z
+    .end local v1    # "explName":Ljava/lang/String;
+    .end local v4    # "ignored":Z
+    .end local v6    # "visible":Z
     :cond_2
     iget-boolean v7, p0, Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertiesCollector;->_forSerialization:Z
 
@@ -647,17 +645,17 @@
 
     move-result-object v1
 
-    .restart local v1       #explName:Ljava/lang/String;
+    .restart local v1    # "explName":Ljava/lang/String;
     goto :goto_1
 
     .line 351
-    .end local v1           #explName:Ljava/lang/String;
+    .end local v1    # "explName":Ljava/lang/String;
     :cond_3
     invoke-virtual {v0, v2}, Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;->findDeserializablePropertyName(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedField;)Ljava/lang/String;
 
     move-result-object v1
 
-    .restart local v1       #explName:Ljava/lang/String;
+    .restart local v1    # "explName":Ljava/lang/String;
     goto :goto_1
 
     :cond_4
@@ -666,7 +664,7 @@
     .line 357
     goto :goto_2
 
-    .restart local v6       #visible:Z
+    .restart local v6    # "visible":Z
     :cond_5
     move v4, v8
 
@@ -674,10 +672,10 @@
     goto :goto_3
 
     .line 365
-    .end local v1           #explName:Ljava/lang/String;
-    .end local v2           #f:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedField;
-    .end local v5           #implName:Ljava/lang/String;
-    .end local v6           #visible:Z
+    .end local v1    # "explName":Ljava/lang/String;
+    .end local v2    # "f":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedField;
+    .end local v5    # "implName":Ljava/lang/String;
+    .end local v6    # "visible":Z
     :cond_6
     return-void
 .end method
@@ -690,7 +688,7 @@
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertiesCollector;->_annotationIntrospector:Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;
 
     .line 513
-    .local v0, ai:Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;
+    .local v0, "ai":Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;
     if-nez v0, :cond_1
 
     .line 531
@@ -709,7 +707,7 @@
 
     move-result-object v2
 
-    .local v2, i$:Ljava/util/Iterator;
+    .local v2, "i$":Ljava/util/Iterator;
     :goto_0
     invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
@@ -724,7 +722,7 @@
     check-cast v1, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedField;
 
     .line 519
-    .local v1, f:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedField;
+    .local v1, "f":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedField;
     invoke-virtual {v0, v1}, Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;->findInjectableValueId(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMember;)Ljava/lang/Object;
 
     move-result-object v4
@@ -734,7 +732,7 @@
     goto :goto_0
 
     .line 522
-    .end local v1           #f:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedField;
+    .end local v1    # "f":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedField;
     :cond_2
     iget-object v4, p0, Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertiesCollector;->_classDef:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;
 
@@ -761,7 +759,7 @@
     check-cast v3, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
 
     .line 526
-    .local v3, m:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
+    .local v3, "m":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
     invoke-virtual {v3}, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;->getParameterCount()I
 
     move-result v4
@@ -792,7 +790,7 @@
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertiesCollector;->_annotationIntrospector:Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;
 
     .line 418
-    .local v0, ai:Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;
+    .local v0, "ai":Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;
     iget-object v8, p0, Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertiesCollector;->_classDef:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;
 
     invoke-virtual {v8}, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;->memberMethods()Ljava/lang/Iterable;
@@ -803,7 +801,7 @@
 
     move-result-object v3
 
-    .local v3, i$:Ljava/util/Iterator;
+    .local v3, "i$":Ljava/util/Iterator;
     :cond_0
     :goto_0
     invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
@@ -819,13 +817,13 @@
     check-cast v6, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
 
     .line 427
-    .local v6, m:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
+    .local v6, "m":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
     invoke-virtual {v6}, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;->getParameterCount()I
 
     move-result v1
 
     .line 430
-    .local v1, argCount:I
+    .local v1, "argCount":I
     if-nez v1, :cond_b
 
     .line 432
@@ -893,7 +891,7 @@
     move-object v2, v10
 
     .line 451
-    .local v2, explName:Ljava/lang/String;
+    .local v2, "explName":Ljava/lang/String;
     :goto_1
     if-nez v2, :cond_7
 
@@ -907,7 +905,7 @@
     move-result-object v5
 
     .line 453
-    .local v5, implName:Ljava/lang/String;
+    .local v5, "implName":Ljava/lang/String;
     if-nez v5, :cond_6
 
     .line 454
@@ -930,14 +928,14 @@
     move-result v7
 
     .line 474
-    .local v7, visible:Z
+    .local v7, "visible":Z
     :goto_2
     if-nez v0, :cond_a
 
     move v4, v9
 
     .line 475
-    .local v4, ignore:Z
+    .local v4, "ignore":Z
     :goto_3
     invoke-virtual {p0, v5}, Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertiesCollector;->_property(Ljava/lang/String;)Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
 
@@ -948,10 +946,10 @@
     goto :goto_0
 
     .line 450
-    .end local v2           #explName:Ljava/lang/String;
-    .end local v4           #ignore:Z
-    .end local v5           #implName:Ljava/lang/String;
-    .end local v7           #visible:Z
+    .end local v2    # "explName":Ljava/lang/String;
+    .end local v4    # "ignore":Z
+    .end local v5    # "implName":Ljava/lang/String;
+    .end local v7    # "visible":Z
     :cond_5
     invoke-virtual {v0, v6}, Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;->findGettablePropertyName(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;)Ljava/lang/String;
 
@@ -962,8 +960,8 @@
     goto :goto_1
 
     .line 460
-    .restart local v2       #explName:Ljava/lang/String;
-    .restart local v5       #implName:Ljava/lang/String;
+    .restart local v2    # "explName":Ljava/lang/String;
+    .restart local v5    # "implName":Ljava/lang/String;
     :cond_6
     iget-object v8, p0, Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertiesCollector;->_visibilityChecker:Lcom/flurry/org/codehaus/jackson/map/introspect/VisibilityChecker;
 
@@ -971,19 +969,19 @@
 
     move-result v7
 
-    .restart local v7       #visible:Z
+    .restart local v7    # "visible":Z
     goto :goto_2
 
     .line 464
-    .end local v5           #implName:Ljava/lang/String;
-    .end local v7           #visible:Z
+    .end local v5    # "implName":Ljava/lang/String;
+    .end local v7    # "visible":Z
     :cond_7
     invoke-static {v6}, Lcom/flurry/org/codehaus/jackson/map/util/BeanUtil;->okNameForGetter(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;)Ljava/lang/String;
 
     move-result-object v5
 
     .line 466
-    .restart local v5       #implName:Ljava/lang/String;
+    .restart local v5    # "implName":Ljava/lang/String;
     if-nez v5, :cond_8
 
     .line 467
@@ -1006,7 +1004,7 @@
     :cond_9
     const/4 v7, 0x1
 
-    .restart local v7       #visible:Z
+    .restart local v7    # "visible":Z
     goto :goto_2
 
     .line 474
@@ -1020,9 +1018,9 @@
     goto :goto_3
 
     .line 476
-    .end local v2           #explName:Ljava/lang/String;
-    .end local v5           #implName:Ljava/lang/String;
-    .end local v7           #visible:Z
+    .end local v2    # "explName":Ljava/lang/String;
+    .end local v5    # "implName":Ljava/lang/String;
+    .end local v7    # "visible":Z
     :cond_b
     const/4 v8, 0x1
 
@@ -1034,7 +1032,7 @@
     move-object v2, v10
 
     .line 478
-    .restart local v2       #explName:Ljava/lang/String;
+    .restart local v2    # "explName":Ljava/lang/String;
     :goto_4
     if-nez v2, :cond_d
 
@@ -1044,7 +1042,7 @@
     move-result-object v5
 
     .line 480
-    .restart local v5       #implName:Ljava/lang/String;
+    .restart local v5    # "implName":Ljava/lang/String;
     if-eqz v5, :cond_0
 
     .line 483
@@ -1055,14 +1053,14 @@
     move-result v7
 
     .line 496
-    .restart local v7       #visible:Z
+    .restart local v7    # "visible":Z
     :goto_5
     if-nez v0, :cond_10
 
     move v4, v9
 
     .line 497
-    .restart local v4       #ignore:Z
+    .restart local v4    # "ignore":Z
     :goto_6
     invoke-virtual {p0, v5}, Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertiesCollector;->_property(Ljava/lang/String;)Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
 
@@ -1073,10 +1071,10 @@
     goto/16 :goto_0
 
     .line 477
-    .end local v2           #explName:Ljava/lang/String;
-    .end local v4           #ignore:Z
-    .end local v5           #implName:Ljava/lang/String;
-    .end local v7           #visible:Z
+    .end local v2    # "explName":Ljava/lang/String;
+    .end local v4    # "ignore":Z
+    .end local v5    # "implName":Ljava/lang/String;
+    .end local v7    # "visible":Z
     :cond_c
     invoke-virtual {v0, v6}, Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;->findSettablePropertyName(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;)Ljava/lang/String;
 
@@ -1087,14 +1085,14 @@
     goto :goto_4
 
     .line 486
-    .restart local v2       #explName:Ljava/lang/String;
+    .restart local v2    # "explName":Ljava/lang/String;
     :cond_d
     invoke-static {v6}, Lcom/flurry/org/codehaus/jackson/map/util/BeanUtil;->okNameForSetter(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;)Ljava/lang/String;
 
     move-result-object v5
 
     .line 488
-    .restart local v5       #implName:Ljava/lang/String;
+    .restart local v5    # "implName":Ljava/lang/String;
     if-nez v5, :cond_e
 
     .line 489
@@ -1117,7 +1115,7 @@
     :cond_f
     const/4 v7, 0x1
 
-    .restart local v7       #visible:Z
+    .restart local v7    # "visible":Z
     goto :goto_5
 
     .line 496
@@ -1131,9 +1129,9 @@
     goto :goto_6
 
     .line 499
-    .end local v2           #explName:Ljava/lang/String;
-    .end local v5           #implName:Ljava/lang/String;
-    .end local v7           #visible:Z
+    .end local v2    # "explName":Ljava/lang/String;
+    .end local v5    # "implName":Ljava/lang/String;
+    .end local v7    # "visible":Z
     :cond_11
     const/4 v8, 0x2
 
@@ -1169,16 +1167,16 @@
     goto/16 :goto_0
 
     .line 508
-    .end local v1           #argCount:I
-    .end local v6           #m:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
+    .end local v1    # "argCount":I
+    .end local v6    # "m":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
     :cond_13
     return-void
 .end method
 
 .method protected _doAddInjectable(Ljava/lang/Object;Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMember;)V
     .locals 5
-    .parameter "id"
-    .parameter "m"
+    .param p1, "id"    # Ljava/lang/Object;
+    .param p2, "m"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMember;
 
     .prologue
     .line 535
@@ -1212,7 +1210,7 @@
     check-cast v0, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMember;
 
     .line 542
-    .local v0, prev:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMember;
+    .local v0, "prev":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMember;
     if-eqz v0, :cond_0
 
     .line 543
@@ -1223,7 +1221,7 @@
     move-object v1, v2
 
     .line 544
-    .local v1, type:Ljava/lang/String;
+    .local v1, "type":Ljava/lang/String;
     :goto_0
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
@@ -1270,7 +1268,7 @@
     throw v2
 
     .line 543
-    .end local v1           #type:Ljava/lang/String;
+    .end local v1    # "type":Ljava/lang/String;
     :cond_3
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -1287,7 +1285,7 @@
 
 .method protected _property(Ljava/lang/String;)Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
     .locals 2
-    .parameter "implName"
+    .param p1, "implName"    # Ljava/lang/String;
 
     .prologue
     .line 697
@@ -1300,17 +1298,17 @@
     check-cast v0, Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
 
     .line 698
-    .local v0, prop:Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
+    .local v0, "prop":Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
     if-nez v0, :cond_0
 
     .line 699
     new-instance v0, Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
 
-    .end local v0           #prop:Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
+    .end local v0    # "prop":Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
     invoke-direct {v0, p1}, Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;-><init>(Ljava/lang/String;)V
 
     .line 700
-    .restart local v0       #prop:Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
+    .restart local v0    # "prop":Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertiesCollector;->_properties:Ljava/util/LinkedHashMap;
 
     invoke-virtual {v1, p1, v0}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -1336,7 +1334,7 @@
     move-result-object v1
 
     .line 562
-    .local v1, it:Ljava/util/Iterator;,"Ljava/util/Iterator<Ljava/util/Map$Entry<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;>;>;"
+    .local v1, "it":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/util/Map$Entry<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;>;>;"
     :goto_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
@@ -1352,7 +1350,7 @@
     check-cast v0, Ljava/util/Map$Entry;
 
     .line 564
-    .local v0, entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;>;"
+    .local v0, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;>;"
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v2
@@ -1360,7 +1358,7 @@
     check-cast v2, Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
 
     .line 567
-    .local v2, prop:Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
+    .local v2, "prop":Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
     invoke-virtual {v2}, Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;->anyVisible()Z
 
     move-result v3
@@ -1406,8 +1404,8 @@
     goto :goto_0
 
     .line 585
-    .end local v0           #entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;>;"
-    .end local v2           #prop:Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
+    .end local v0    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;>;"
+    .end local v2    # "prop":Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
     :cond_3
     return-void
 .end method
@@ -1428,11 +1426,11 @@
     move-result-object v2
 
     .line 615
-    .local v2, it:Ljava/util/Iterator;,"Ljava/util/Iterator<Ljava/util/Map$Entry<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;>;>;"
+    .local v2, "it":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/util/Map$Entry<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;>;>;"
     const/4 v7, 0x0
 
     .line 616
-    .local v7, renamed:Ljava/util/LinkedList;,"Ljava/util/LinkedList<Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;>;"
+    .local v7, "renamed":Ljava/util/LinkedList;, "Ljava/util/LinkedList<Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;>;"
     :cond_0
     :goto_0
     invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
@@ -1449,7 +1447,7 @@
     check-cast v0, Ljava/util/Map$Entry;
 
     .line 618
-    .local v0, entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;>;"
+    .local v0, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;>;"
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v6
@@ -1457,13 +1455,13 @@
     check-cast v6, Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
 
     .line 619
-    .local v6, prop:Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
+    .local v6, "prop":Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
     invoke-virtual {v6}, Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;->findNewName()Ljava/lang/String;
 
     move-result-object v4
 
     .line 620
-    .local v4, newName:Ljava/lang/String;
+    .local v4, "newName":Ljava/lang/String;
     if-eqz v4, :cond_0
 
     .line 621
@@ -1472,11 +1470,11 @@
     .line 622
     new-instance v7, Ljava/util/LinkedList;
 
-    .end local v7           #renamed:Ljava/util/LinkedList;,"Ljava/util/LinkedList<Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;>;"
+    .end local v7    # "renamed":Ljava/util/LinkedList;, "Ljava/util/LinkedList<Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;>;"
     invoke-direct {v7}, Ljava/util/LinkedList;-><init>()V
 
     .line 624
-    .restart local v7       #renamed:Ljava/util/LinkedList;,"Ljava/util/LinkedList<Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;>;"
+    .restart local v7    # "renamed":Ljava/util/LinkedList;, "Ljava/util/LinkedList<Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;>;"
     :cond_1
     invoke-virtual {v6, v4}, Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;->withName(Ljava/lang/String;)Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
 
@@ -1491,9 +1489,9 @@
     goto :goto_0
 
     .line 631
-    .end local v0           #entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;>;"
-    .end local v4           #newName:Ljava/lang/String;
-    .end local v6           #prop:Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
+    .end local v0    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;>;"
+    .end local v4    # "newName":Ljava/lang/String;
+    .end local v6    # "prop":Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
     :cond_2
     if-eqz v7, :cond_4
 
@@ -1502,7 +1500,7 @@
 
     move-result-object v1
 
-    .local v1, i$:Ljava/util/Iterator;
+    .local v1, "i$":Ljava/util/Iterator;
     :goto_1
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
@@ -1517,13 +1515,13 @@
     check-cast v6, Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
 
     .line 633
-    .restart local v6       #prop:Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
+    .restart local v6    # "prop":Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
     invoke-virtual {v6}, Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;->getName()Ljava/lang/String;
 
     move-result-object v3
 
     .line 634
-    .local v3, name:Ljava/lang/String;
+    .local v3, "name":Ljava/lang/String;
     iget-object v8, p0, Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertiesCollector;->_properties:Ljava/util/LinkedHashMap;
 
     invoke-virtual {v8, v3}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1533,7 +1531,7 @@
     check-cast v5, Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
 
     .line 635
-    .local v5, old:Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
+    .local v5, "old":Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
     if-nez v5, :cond_3
 
     .line 636
@@ -1550,17 +1548,17 @@
     goto :goto_1
 
     .line 642
-    .end local v1           #i$:Ljava/util/Iterator;
-    .end local v3           #name:Ljava/lang/String;
-    .end local v5           #old:Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
-    .end local v6           #prop:Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
+    .end local v1    # "i$":Ljava/util/Iterator;
+    .end local v3    # "name":Ljava/lang/String;
+    .end local v5    # "old":Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
+    .end local v6    # "prop":Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
     :cond_4
     return-void
 .end method
 
 .method protected _renameUsing(Lcom/flurry/org/codehaus/jackson/map/PropertyNamingStrategy;)V
     .locals 9
-    .parameter "naming"
+    .param p1, "naming"    # Lcom/flurry/org/codehaus/jackson/map/PropertyNamingStrategy;
 
     .prologue
     .line 646
@@ -1585,7 +1583,7 @@
     check-cast v6, [Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
 
     .line 647
-    .local v6, props:[Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
+    .local v6, "props":[Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
     iget-object v7, p0, Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertiesCollector;->_properties:Ljava/util/LinkedHashMap;
 
     invoke-virtual {v7}, Ljava/util/LinkedHashMap;->clear()V
@@ -1593,26 +1591,26 @@
     .line 648
     move-object v0, v6
 
-    .local v0, arr$:[Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
+    .local v0, "arr$":[Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
     array-length v2, v0
 
-    .local v2, len$:I
+    .local v2, "len$":I
     const/4 v1, 0x0
 
-    .local v1, i$:I
+    .local v1, "i$":I
     :goto_0
     if-ge v1, v2, :cond_8
 
     aget-object v5, v0, v1
 
     .line 649
-    .local v5, prop:Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
+    .local v5, "prop":Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
     invoke-virtual {v5}, Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;->getName()Ljava/lang/String;
 
     move-result-object v3
 
     .line 650
-    .local v3, name:Ljava/lang/String;
+    .local v3, "name":Ljava/lang/String;
     iget-boolean v7, p0, Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertiesCollector;->_forSerialization:Z
 
     if-eqz v7, :cond_3
@@ -1664,7 +1662,7 @@
     check-cast v4, Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
 
     .line 677
-    .local v4, old:Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
+    .local v4, "old":Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
     if-nez v4, :cond_7
 
     .line 678
@@ -1679,7 +1677,7 @@
     goto :goto_0
 
     .line 653
-    .end local v4           #old:Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
+    .end local v4    # "old":Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
     :cond_2
     invoke-virtual {v5}, Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;->hasField()Z
 
@@ -1785,16 +1783,16 @@
     goto :goto_1
 
     .line 680
-    .restart local v4       #old:Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
+    .restart local v4    # "old":Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
     :cond_7
     invoke-virtual {v4, v5}, Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;->addAll(Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;)V
 
     goto :goto_2
 
     .line 683
-    .end local v3           #name:Ljava/lang/String;
-    .end local v4           #old:Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
-    .end local v5           #prop:Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
+    .end local v3    # "name":Ljava/lang/String;
+    .end local v4    # "old":Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
+    .end local v5    # "prop":Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
     :cond_8
     return-void
 .end method
@@ -1811,7 +1809,7 @@
     move-result-object v5
 
     .line 266
-    .local v5, intr:Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;
+    .local v5, "intr":Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;
     iget-object v14, p0, Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertiesCollector;->_classDef:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;
 
     invoke-virtual {v5, v14}, Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;->findSerializationSortAlphabetically(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;)Ljava/lang/Boolean;
@@ -1819,7 +1817,7 @@
     move-result-object v1
 
     .line 268
-    .local v1, alpha:Ljava/lang/Boolean;
+    .local v1, "alpha":Ljava/lang/Boolean;
     if-nez v1, :cond_0
 
     .line 269
@@ -1830,7 +1828,7 @@
     move-result v12
 
     .line 273
-    .local v12, sort:Z
+    .local v12, "sort":Z
     :goto_0
     iget-object v14, p0, Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertiesCollector;->_classDef:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;
 
@@ -1839,7 +1837,7 @@
     move-result-object v10
 
     .line 276
-    .local v10, propertyOrder:[Ljava/lang/String;
+    .local v10, "propertyOrder":[Ljava/lang/String;
     if-nez v12, :cond_1
 
     iget-object v14, p0, Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertiesCollector;->_creatorProperties:Ljava/util/LinkedList;
@@ -1853,18 +1851,18 @@
     return-void
 
     .line 271
-    .end local v10           #propertyOrder:[Ljava/lang/String;
-    .end local v12           #sort:Z
+    .end local v10    # "propertyOrder":[Ljava/lang/String;
+    .end local v12    # "sort":Z
     :cond_0
     invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v12
 
-    .restart local v12       #sort:Z
+    .restart local v12    # "sort":Z
     goto :goto_0
 
     .line 279
-    .restart local v10       #propertyOrder:[Ljava/lang/String;
+    .restart local v10    # "propertyOrder":[Ljava/lang/String;
     :cond_1
     iget-object v14, p0, Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertiesCollector;->_properties:Ljava/util/LinkedHashMap;
 
@@ -1873,7 +1871,7 @@
     move-result v11
 
     .line 282
-    .local v11, size:I
+    .local v11, "size":I
     if-eqz v12, :cond_2
 
     .line 283
@@ -1882,7 +1880,7 @@
     invoke-direct {v0}, Ljava/util/TreeMap;-><init>()V
 
     .line 288
-    .local v0, all:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;>;"
+    .local v0, "all":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;>;"
     :goto_2
     iget-object v14, p0, Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertiesCollector;->_properties:Ljava/util/LinkedHashMap;
 
@@ -1894,7 +1892,7 @@
 
     move-result-object v3
 
-    .local v3, i$:Ljava/util/Iterator;
+    .local v3, "i$":Ljava/util/Iterator;
     :goto_3
     invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
 
@@ -1909,7 +1907,7 @@
     check-cast v9, Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
 
     .line 289
-    .local v9, prop:Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
+    .local v9, "prop":Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
     invoke-virtual {v9}, Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;->getName()Ljava/lang/String;
 
     move-result-object v14
@@ -1919,9 +1917,9 @@
     goto :goto_3
 
     .line 285
-    .end local v0           #all:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;>;"
-    .end local v3           #i$:Ljava/util/Iterator;
-    .end local v9           #prop:Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
+    .end local v0    # "all":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;>;"
+    .end local v3    # "i$":Ljava/util/Iterator;
+    .end local v9    # "prop":Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
     :cond_2
     new-instance v0, Ljava/util/LinkedHashMap;
 
@@ -1929,11 +1927,11 @@
 
     invoke-direct {v0, v14}, Ljava/util/LinkedHashMap;-><init>(I)V
 
-    .restart local v0       #all:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;>;"
+    .restart local v0    # "all":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;>;"
     goto :goto_2
 
     .line 291
-    .restart local v3       #i$:Ljava/util/Iterator;
+    .restart local v3    # "i$":Ljava/util/Iterator;
     :cond_3
     new-instance v8, Ljava/util/LinkedHashMap;
 
@@ -1942,30 +1940,30 @@
     invoke-direct {v8, v14}, Ljava/util/LinkedHashMap;-><init>(I)V
 
     .line 293
-    .local v8, ordered:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;>;"
+    .local v8, "ordered":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;>;"
     if-eqz v10, :cond_7
 
     .line 294
     move-object v2, v10
 
-    .local v2, arr$:[Ljava/lang/String;
+    .local v2, "arr$":[Ljava/lang/String;
     array-length v6, v2
 
-    .local v6, len$:I
+    .local v6, "len$":I
     const/4 v3, 0x0
 
-    .local v3, i$:I
+    .local v3, "i$":I
     move v4, v3
 
-    .end local v3           #i$:I
-    .local v4, i$:I
+    .end local v3    # "i$":I
+    .local v4, "i$":I
     :goto_4
     if-ge v4, v6, :cond_7
 
     aget-object v7, v2, v4
 
     .line 295
-    .local v7, name:Ljava/lang/String;
+    .local v7, "name":Ljava/lang/String;
     invoke-interface {v0, v7}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v13
@@ -1973,7 +1971,7 @@
     check-cast v13, Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
 
     .line 296
-    .local v13, w:Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
+    .local v13, "w":Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
     if-nez v13, :cond_5
 
     .line 297
@@ -1987,8 +1985,8 @@
 
     move-result-object v3
 
-    .end local v4           #i$:I
-    .local v3, i$:Ljava/util/Iterator;
+    .end local v4    # "i$":I
+    .local v3, "i$":Ljava/util/Iterator;
     :cond_4
     invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
 
@@ -2003,7 +2001,7 @@
     check-cast v9, Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
 
     .line 298
-    .restart local v9       #prop:Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
+    .restart local v9    # "prop":Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
     invoke-virtual {v9}, Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;->getInternalName()Ljava/lang/String;
 
     move-result-object v14
@@ -2023,8 +2021,8 @@
     move-result-object v7
 
     .line 306
-    .end local v3           #i$:Ljava/util/Iterator;
-    .end local v9           #prop:Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
+    .end local v3    # "i$":Ljava/util/Iterator;
+    .end local v9    # "prop":Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
     :cond_5
     if-eqz v13, :cond_6
 
@@ -2035,19 +2033,19 @@
     :cond_6
     add-int/lit8 v3, v4, 0x1
 
-    .local v3, i$:I
+    .local v3, "i$":I
     move v4, v3
 
-    .end local v3           #i$:I
-    .restart local v4       #i$:I
+    .end local v3    # "i$":I
+    .restart local v4    # "i$":I
     goto :goto_4
 
     .line 312
-    .end local v2           #arr$:[Ljava/lang/String;
-    .end local v4           #i$:I
-    .end local v6           #len$:I
-    .end local v7           #name:Ljava/lang/String;
-    .end local v13           #w:Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
+    .end local v2    # "arr$":[Ljava/lang/String;
+    .end local v4    # "i$":I
+    .end local v6    # "len$":I
+    .end local v7    # "name":Ljava/lang/String;
+    .end local v13    # "w":Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
     :cond_7
     iget-object v14, p0, Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertiesCollector;->_creatorProperties:Ljava/util/LinkedList;
 
@@ -2060,7 +2058,7 @@
 
     move-result-object v3
 
-    .local v3, i$:Ljava/util/Iterator;
+    .local v3, "i$":Ljava/util/Iterator;
     :goto_5
     invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
 
@@ -2075,7 +2073,7 @@
     check-cast v9, Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
 
     .line 314
-    .restart local v9       #prop:Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
+    .restart local v9    # "prop":Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
     invoke-virtual {v9}, Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;->getName()Ljava/lang/String;
 
     move-result-object v14
@@ -2085,8 +2083,8 @@
     goto :goto_5
 
     .line 318
-    .end local v3           #i$:Ljava/util/Iterator;
-    .end local v9           #prop:Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
+    .end local v3    # "i$":Ljava/util/Iterator;
+    .end local v9    # "prop":Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
     :cond_8
     invoke-interface {v8, v0}, Ljava/util/Map;->putAll(Ljava/util/Map;)V
 
@@ -2138,7 +2136,7 @@
     move-result-object v1
 
     .line 230
-    .local v1, naming:Lcom/flurry/org/codehaus/jackson/map/PropertyNamingStrategy;
+    .local v1, "naming":Lcom/flurry/org/codehaus/jackson/map/PropertyNamingStrategy;
     if-eqz v1, :cond_0
 
     .line 231
@@ -2156,7 +2154,7 @@
 
     move-result-object v0
 
-    .local v0, i$:Ljava/util/Iterator;
+    .local v0, "i$":Ljava/util/Iterator;
     :goto_0
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
@@ -2171,13 +2169,13 @@
     check-cast v2, Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
 
     .line 239
-    .local v2, property:Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
+    .local v2, "property":Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
     invoke-virtual {v2}, Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;->trimByVisibility()V
 
     goto :goto_0
 
     .line 243
-    .end local v2           #property:Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
+    .end local v2    # "property":Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
     :cond_1
     iget-object v3, p0, Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertiesCollector;->_properties:Ljava/util/LinkedHashMap;
 
@@ -2203,7 +2201,7 @@
     check-cast v2, Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
 
     .line 244
-    .restart local v2       #property:Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
+    .restart local v2    # "property":Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
     iget-boolean v3, p0, Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertiesCollector;->_forSerialization:Z
 
     invoke-virtual {v2, v3}, Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;->mergeAnnotations(Z)V
@@ -2211,7 +2209,7 @@
     goto :goto_1
 
     .line 248
-    .end local v2           #property:Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
+    .end local v2    # "property":Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertyBuilder;
     :cond_2
     invoke-virtual {p0}, Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertiesCollector;->_sortProperties()V
 
@@ -2308,7 +2306,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertiesCollector;
     check-cast p0, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
 
     move-object v0, p0
@@ -2317,7 +2315,7 @@
     :goto_0
     return-object v0
 
-    .restart local p0
+    .restart local p0    # "this":Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertiesCollector;
     :cond_1
     const/4 v0, 0x0
 
@@ -2403,7 +2401,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertiesCollector;
     check-cast p0, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
 
     move-object v0, p0
@@ -2412,7 +2410,7 @@
     :goto_0
     return-object v0
 
-    .restart local p0
+    .restart local p0    # "this":Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertiesCollector;
     :cond_1
     const/4 v0, 0x0
 
@@ -2583,7 +2581,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertiesCollector;
     check-cast p0, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
 
     move-object v0, p0
@@ -2592,7 +2590,7 @@
     :goto_0
     return-object v0
 
-    .restart local p0
+    .restart local p0    # "this":Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertiesCollector;
     :cond_1
     const/4 v0, 0x0
 
@@ -2658,7 +2656,7 @@
 
 .method protected reportProblem(Ljava/lang/String;)V
     .locals 3
-    .parameter "msg"
+    .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
     .line 692

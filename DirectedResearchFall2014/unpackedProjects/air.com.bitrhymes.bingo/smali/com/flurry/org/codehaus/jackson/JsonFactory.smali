@@ -7,11 +7,9 @@
 
 
 # static fields
-#the value of this static final field might be set in the static constructor
-.field static final DEFAULT_GENERATOR_FEATURE_FLAGS:I = 0x0
+.field static final DEFAULT_GENERATOR_FEATURE_FLAGS:I
 
-#the value of this static final field might be set in the static constructor
-.field static final DEFAULT_PARSER_FEATURE_FLAGS:I = 0x0
+.field static final DEFAULT_PARSER_FEATURE_FLAGS:I
 
 .field public static final FORMAT_NAME_JSON:Ljava/lang/String; = "JSON"
 
@@ -90,7 +88,7 @@
 
 .method public constructor <init>(Lcom/flurry/org/codehaus/jackson/ObjectCodec;)V
     .locals 1
-    .parameter "oc"
+    .param p1, "oc"    # Lcom/flurry/org/codehaus/jackson/ObjectCodec;
 
     .prologue
     .line 171
@@ -130,8 +128,8 @@
 # virtual methods
 .method protected _createContext(Ljava/lang/Object;Z)Lcom/flurry/org/codehaus/jackson/io/IOContext;
     .locals 2
-    .parameter "srcRef"
-    .parameter "resourceManaged"
+    .param p1, "srcRef"    # Ljava/lang/Object;
+    .param p2, "resourceManaged"    # Z
 
     .prologue
     .line 894
@@ -148,8 +146,8 @@
 
 .method protected _createJsonGenerator(Ljava/io/Writer;Lcom/flurry/org/codehaus/jackson/io/IOContext;)Lcom/flurry/org/codehaus/jackson/JsonGenerator;
     .locals 3
-    .parameter "out"
-    .parameter "ctxt"
+    .param p1, "out"    # Ljava/io/Writer;
+    .param p2, "ctxt"    # Lcom/flurry/org/codehaus/jackson/io/IOContext;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -167,7 +165,7 @@
     invoke-direct {v0, p2, v1, v2, p1}, Lcom/flurry/org/codehaus/jackson/impl/WriterBasedGenerator;-><init>(Lcom/flurry/org/codehaus/jackson/io/IOContext;ILcom/flurry/org/codehaus/jackson/ObjectCodec;Ljava/io/Writer;)V
 
     .line 846
-    .local v0, gen:Lcom/flurry/org/codehaus/jackson/impl/WriterBasedGenerator;
+    .local v0, "gen":Lcom/flurry/org/codehaus/jackson/impl/WriterBasedGenerator;
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/JsonFactory;->_characterEscapes:Lcom/flurry/org/codehaus/jackson/io/CharacterEscapes;
 
     if-eqz v1, :cond_0
@@ -184,8 +182,8 @@
 
 .method protected _createJsonParser(Ljava/io/InputStream;Lcom/flurry/org/codehaus/jackson/io/IOContext;)Lcom/flurry/org/codehaus/jackson/JsonParser;
     .locals 5
-    .parameter "in"
-    .parameter "ctxt"
+    .param p1, "in"    # Ljava/io/InputStream;
+    .param p2, "ctxt"    # Lcom/flurry/org/codehaus/jackson/io/IOContext;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -216,8 +214,8 @@
 
 .method protected _createJsonParser(Ljava/io/Reader;Lcom/flurry/org/codehaus/jackson/io/IOContext;)Lcom/flurry/org/codehaus/jackson/JsonParser;
     .locals 6
-    .parameter "r"
-    .parameter "ctxt"
+    .param p1, "r"    # Ljava/io/Reader;
+    .param p2, "ctxt"    # Lcom/flurry/org/codehaus/jackson/io/IOContext;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -262,10 +260,10 @@
 
 .method protected _createJsonParser([BIILcom/flurry/org/codehaus/jackson/io/IOContext;)Lcom/flurry/org/codehaus/jackson/JsonParser;
     .locals 5
-    .parameter "data"
-    .parameter "offset"
-    .parameter "len"
-    .parameter "ctxt"
+    .param p1, "data"    # [B
+    .param p2, "offset"    # I
+    .param p3, "len"    # I
+    .param p4, "ctxt"    # Lcom/flurry/org/codehaus/jackson/io/IOContext;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -296,8 +294,8 @@
 
 .method protected _createUTF8JsonGenerator(Ljava/io/OutputStream;Lcom/flurry/org/codehaus/jackson/io/IOContext;)Lcom/flurry/org/codehaus/jackson/JsonGenerator;
     .locals 3
-    .parameter "out"
-    .parameter "ctxt"
+    .param p1, "out"    # Ljava/io/OutputStream;
+    .param p2, "ctxt"    # Lcom/flurry/org/codehaus/jackson/io/IOContext;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -315,7 +313,7 @@
     invoke-direct {v0, p2, v1, v2, p1}, Lcom/flurry/org/codehaus/jackson/impl/Utf8Generator;-><init>(Lcom/flurry/org/codehaus/jackson/io/IOContext;ILcom/flurry/org/codehaus/jackson/ObjectCodec;Ljava/io/OutputStream;)V
 
     .line 866
-    .local v0, gen:Lcom/flurry/org/codehaus/jackson/impl/Utf8Generator;
+    .local v0, "gen":Lcom/flurry/org/codehaus/jackson/impl/Utf8Generator;
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/JsonFactory;->_characterEscapes:Lcom/flurry/org/codehaus/jackson/io/CharacterEscapes;
 
     if-eqz v1, :cond_0
@@ -332,9 +330,9 @@
 
 .method protected _createWriter(Ljava/io/OutputStream;Lcom/flurry/org/codehaus/jackson/JsonEncoding;Lcom/flurry/org/codehaus/jackson/io/IOContext;)Ljava/io/Writer;
     .locals 2
-    .parameter "out"
-    .parameter "enc"
-    .parameter "ctxt"
+    .param p1, "out"    # Ljava/io/OutputStream;
+    .param p2, "enc"    # Lcom/flurry/org/codehaus/jackson/JsonEncoding;
+    .param p3, "ctxt"    # Lcom/flurry/org/codehaus/jackson/io/IOContext;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -382,7 +380,7 @@
     check-cast v1, Ljava/lang/ref/SoftReference;
 
     .line 906
-    .local v1, ref:Ljava/lang/ref/SoftReference;,"Ljava/lang/ref/SoftReference<Lcom/flurry/org/codehaus/jackson/util/BufferRecycler;>;"
+    .local v1, "ref":Ljava/lang/ref/SoftReference;, "Ljava/lang/ref/SoftReference<Lcom/flurry/org/codehaus/jackson/util/BufferRecycler;>;"
     if-nez v1, :cond_1
 
     const/4 v2, 0x0
@@ -390,19 +388,19 @@
     move-object v0, v2
 
     .line 908
-    .end local p0
-    .local v0, br:Lcom/flurry/org/codehaus/jackson/util/BufferRecycler;
+    .end local p0    # "this":Lcom/flurry/org/codehaus/jackson/JsonFactory;
+    .local v0, "br":Lcom/flurry/org/codehaus/jackson/util/BufferRecycler;
     :goto_0
     if-nez v0, :cond_0
 
     .line 909
     new-instance v0, Lcom/flurry/org/codehaus/jackson/util/BufferRecycler;
 
-    .end local v0           #br:Lcom/flurry/org/codehaus/jackson/util/BufferRecycler;
+    .end local v0    # "br":Lcom/flurry/org/codehaus/jackson/util/BufferRecycler;
     invoke-direct {v0}, Lcom/flurry/org/codehaus/jackson/util/BufferRecycler;-><init>()V
 
     .line 910
-    .restart local v0       #br:Lcom/flurry/org/codehaus/jackson/util/BufferRecycler;
+    .restart local v0    # "br":Lcom/flurry/org/codehaus/jackson/util/BufferRecycler;
     sget-object v2, Lcom/flurry/org/codehaus/jackson/JsonFactory;->_recyclerRef:Ljava/lang/ThreadLocal;
 
     new-instance v3, Ljava/lang/ref/SoftReference;
@@ -416,14 +414,14 @@
     return-object v0
 
     .line 906
-    .end local v0           #br:Lcom/flurry/org/codehaus/jackson/util/BufferRecycler;
-    .restart local p0
+    .end local v0    # "br":Lcom/flurry/org/codehaus/jackson/util/BufferRecycler;
+    .restart local p0    # "this":Lcom/flurry/org/codehaus/jackson/JsonFactory;
     :cond_1
     invoke-virtual {v1}, Ljava/lang/ref/SoftReference;->get()Ljava/lang/Object;
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/flurry/org/codehaus/jackson/JsonFactory;
     check-cast p0, Lcom/flurry/org/codehaus/jackson/util/BufferRecycler;
 
     move-object v0, p0
@@ -433,7 +431,7 @@
 
 .method protected _optimizedStreamFromURL(Ljava/net/URL;)Ljava/io/InputStream;
     .locals 3
-    .parameter "url"
+    .param p1, "url"    # Ljava/net/URL;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -460,7 +458,7 @@
     move-result-object v0
 
     .line 931
-    .local v0, host:Ljava/lang/String;
+    .local v0, "host":Ljava/lang/String;
     if-eqz v0, :cond_0
 
     invoke-virtual {v0}, Ljava/lang/String;->length()I
@@ -480,7 +478,7 @@
     invoke-direct {v1, v2}, Ljava/io/FileInputStream;-><init>(Ljava/lang/String;)V
 
     .line 935
-    .end local v0           #host:Ljava/lang/String;
+    .end local v0    # "host":Ljava/lang/String;
     :goto_0
     return-object v1
 
@@ -494,8 +492,8 @@
 
 .method public final configure(Lcom/flurry/org/codehaus/jackson/JsonGenerator$Feature;Z)Lcom/flurry/org/codehaus/jackson/JsonFactory;
     .locals 0
-    .parameter "f"
-    .parameter "state"
+    .param p1, "f"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator$Feature;
+    .param p2, "state"    # Z
 
     .prologue
     .line 346
@@ -517,8 +515,8 @@
 
 .method public final configure(Lcom/flurry/org/codehaus/jackson/JsonParser$Feature;Z)Lcom/flurry/org/codehaus/jackson/JsonFactory;
     .locals 0
-    .parameter "f"
-    .parameter "state"
+    .param p1, "f"    # Lcom/flurry/org/codehaus/jackson/JsonParser$Feature;
+    .param p2, "state"    # Z
 
     .prologue
     .line 240
@@ -540,8 +538,8 @@
 
 .method public createJsonGenerator(Ljava/io/File;Lcom/flurry/org/codehaus/jackson/JsonEncoding;)Lcom/flurry/org/codehaus/jackson/JsonGenerator;
     .locals 4
-    .parameter "f"
-    .parameter "enc"
+    .param p1, "f"    # Ljava/io/File;
+    .param p2, "enc"    # Lcom/flurry/org/codehaus/jackson/JsonEncoding;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -555,7 +553,7 @@
     invoke-direct {v1, p1}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
 
     .line 748
-    .local v1, out:Ljava/io/OutputStream;
+    .local v1, "out":Ljava/io/OutputStream;
     const/4 v3, 0x1
 
     invoke-virtual {p0, v1, v3}, Lcom/flurry/org/codehaus/jackson/JsonFactory;->_createContext(Ljava/lang/Object;Z)Lcom/flurry/org/codehaus/jackson/io/IOContext;
@@ -563,7 +561,7 @@
     move-result-object v0
 
     .line 749
-    .local v0, ctxt:Lcom/flurry/org/codehaus/jackson/io/IOContext;
+    .local v0, "ctxt":Lcom/flurry/org/codehaus/jackson/io/IOContext;
     invoke-virtual {v0, p2}, Lcom/flurry/org/codehaus/jackson/io/IOContext;->setEncoding(Lcom/flurry/org/codehaus/jackson/JsonEncoding;)V
 
     .line 750
@@ -600,7 +598,7 @@
     move-result-object v2
 
     .line 759
-    .local v2, w:Ljava/io/Writer;
+    .local v2, "w":Ljava/io/Writer;
     iget-object v3, p0, Lcom/flurry/org/codehaus/jackson/JsonFactory;->_outputDecorator:Lcom/flurry/org/codehaus/jackson/io/OutputDecorator;
 
     if-eqz v3, :cond_2
@@ -623,7 +621,7 @@
 
 .method public createJsonGenerator(Ljava/io/OutputStream;)Lcom/flurry/org/codehaus/jackson/JsonGenerator;
     .locals 1
-    .parameter "out"
+    .param p1, "out"    # Ljava/io/OutputStream;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -643,8 +641,8 @@
 
 .method public createJsonGenerator(Ljava/io/OutputStream;Lcom/flurry/org/codehaus/jackson/JsonEncoding;)Lcom/flurry/org/codehaus/jackson/JsonGenerator;
     .locals 3
-    .parameter "out"
-    .parameter "enc"
+    .param p1, "out"    # Ljava/io/OutputStream;
+    .param p2, "enc"    # Lcom/flurry/org/codehaus/jackson/JsonEncoding;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -660,7 +658,7 @@
     move-result-object v0
 
     .line 677
-    .local v0, ctxt:Lcom/flurry/org/codehaus/jackson/io/IOContext;
+    .local v0, "ctxt":Lcom/flurry/org/codehaus/jackson/io/IOContext;
     invoke-virtual {v0, p2}, Lcom/flurry/org/codehaus/jackson/io/IOContext;->setEncoding(Lcom/flurry/org/codehaus/jackson/JsonEncoding;)V
 
     .line 678
@@ -697,7 +695,7 @@
     move-result-object v1
 
     .line 687
-    .local v1, w:Ljava/io/Writer;
+    .local v1, "w":Ljava/io/Writer;
     iget-object v2, p0, Lcom/flurry/org/codehaus/jackson/JsonFactory;->_outputDecorator:Lcom/flurry/org/codehaus/jackson/io/OutputDecorator;
 
     if-eqz v2, :cond_2
@@ -720,7 +718,7 @@
 
 .method public createJsonGenerator(Ljava/io/Writer;)Lcom/flurry/org/codehaus/jackson/JsonGenerator;
     .locals 2
-    .parameter "out"
+    .param p1, "out"    # Ljava/io/Writer;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -736,7 +734,7 @@
     move-result-object v0
 
     .line 711
-    .local v0, ctxt:Lcom/flurry/org/codehaus/jackson/io/IOContext;
+    .local v0, "ctxt":Lcom/flurry/org/codehaus/jackson/io/IOContext;
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/JsonFactory;->_outputDecorator:Lcom/flurry/org/codehaus/jackson/io/OutputDecorator;
 
     if-eqz v1, :cond_0
@@ -759,7 +757,7 @@
 
 .method public createJsonParser(Ljava/io/File;)Lcom/flurry/org/codehaus/jackson/JsonParser;
     .locals 3
-    .parameter "f"
+    .param p1, "f"    # Ljava/io/File;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -776,13 +774,13 @@
     move-result-object v0
 
     .line 504
-    .local v0, ctxt:Lcom/flurry/org/codehaus/jackson/io/IOContext;
+    .local v0, "ctxt":Lcom/flurry/org/codehaus/jackson/io/IOContext;
     new-instance v1, Ljava/io/FileInputStream;
 
     invoke-direct {v1, p1}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
 
     .line 506
-    .local v1, in:Ljava/io/InputStream;
+    .local v1, "in":Ljava/io/InputStream;
     iget-object v2, p0, Lcom/flurry/org/codehaus/jackson/JsonFactory;->_inputDecorator:Lcom/flurry/org/codehaus/jackson/io/InputDecorator;
 
     if-eqz v2, :cond_0
@@ -805,7 +803,7 @@
 
 .method public createJsonParser(Ljava/io/InputStream;)Lcom/flurry/org/codehaus/jackson/JsonParser;
     .locals 2
-    .parameter "in"
+    .param p1, "in"    # Ljava/io/InputStream;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -822,7 +820,7 @@
     move-result-object v0
 
     .line 558
-    .local v0, ctxt:Lcom/flurry/org/codehaus/jackson/io/IOContext;
+    .local v0, "ctxt":Lcom/flurry/org/codehaus/jackson/io/IOContext;
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/JsonFactory;->_inputDecorator:Lcom/flurry/org/codehaus/jackson/io/InputDecorator;
 
     if-eqz v1, :cond_0
@@ -845,7 +843,7 @@
 
 .method public createJsonParser(Ljava/io/Reader;)Lcom/flurry/org/codehaus/jackson/JsonParser;
     .locals 2
-    .parameter "r"
+    .param p1, "r"    # Ljava/io/Reader;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -862,7 +860,7 @@
     move-result-object v0
 
     .line 583
-    .local v0, ctxt:Lcom/flurry/org/codehaus/jackson/io/IOContext;
+    .local v0, "ctxt":Lcom/flurry/org/codehaus/jackson/io/IOContext;
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/JsonFactory;->_inputDecorator:Lcom/flurry/org/codehaus/jackson/io/InputDecorator;
 
     if-eqz v1, :cond_0
@@ -885,7 +883,7 @@
 
 .method public createJsonParser(Ljava/lang/String;)Lcom/flurry/org/codehaus/jackson/JsonParser;
     .locals 3
-    .parameter "content"
+    .param p1, "content"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -900,7 +898,7 @@
     invoke-direct {v1, p1}, Ljava/io/StringReader;-><init>(Ljava/lang/String;)V
 
     .line 638
-    .local v1, r:Ljava/io/Reader;
+    .local v1, "r":Ljava/io/Reader;
     const/4 v2, 0x1
 
     invoke-virtual {p0, v1, v2}, Lcom/flurry/org/codehaus/jackson/JsonFactory;->_createContext(Ljava/lang/Object;Z)Lcom/flurry/org/codehaus/jackson/io/IOContext;
@@ -908,7 +906,7 @@
     move-result-object v0
 
     .line 640
-    .local v0, ctxt:Lcom/flurry/org/codehaus/jackson/io/IOContext;
+    .local v0, "ctxt":Lcom/flurry/org/codehaus/jackson/io/IOContext;
     iget-object v2, p0, Lcom/flurry/org/codehaus/jackson/JsonFactory;->_inputDecorator:Lcom/flurry/org/codehaus/jackson/io/InputDecorator;
 
     if-eqz v2, :cond_0
@@ -931,7 +929,7 @@
 
 .method public createJsonParser(Ljava/net/URL;)Lcom/flurry/org/codehaus/jackson/JsonParser;
     .locals 3
-    .parameter "url"
+    .param p1, "url"    # Ljava/net/URL;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -948,13 +946,13 @@
     move-result-object v0
 
     .line 530
-    .local v0, ctxt:Lcom/flurry/org/codehaus/jackson/io/IOContext;
+    .local v0, "ctxt":Lcom/flurry/org/codehaus/jackson/io/IOContext;
     invoke-virtual {p0, p1}, Lcom/flurry/org/codehaus/jackson/JsonFactory;->_optimizedStreamFromURL(Ljava/net/URL;)Ljava/io/InputStream;
 
     move-result-object v1
 
     .line 532
-    .local v1, in:Ljava/io/InputStream;
+    .local v1, "in":Ljava/io/InputStream;
     iget-object v2, p0, Lcom/flurry/org/codehaus/jackson/JsonFactory;->_inputDecorator:Lcom/flurry/org/codehaus/jackson/io/InputDecorator;
 
     if-eqz v2, :cond_0
@@ -977,7 +975,7 @@
 
 .method public createJsonParser([B)Lcom/flurry/org/codehaus/jackson/JsonParser;
     .locals 5
-    .parameter "data"
+    .param p1, "data"    # [B
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -996,7 +994,7 @@
     move-result-object v0
 
     .line 598
-    .local v0, ctxt:Lcom/flurry/org/codehaus/jackson/io/IOContext;
+    .local v0, "ctxt":Lcom/flurry/org/codehaus/jackson/io/IOContext;
     iget-object v2, p0, Lcom/flurry/org/codehaus/jackson/JsonFactory;->_inputDecorator:Lcom/flurry/org/codehaus/jackson/io/InputDecorator;
 
     if-eqz v2, :cond_0
@@ -1011,7 +1009,7 @@
     move-result-object v1
 
     .line 600
-    .local v1, in:Ljava/io/InputStream;
+    .local v1, "in":Ljava/io/InputStream;
     if-eqz v1, :cond_0
 
     .line 601
@@ -1020,7 +1018,7 @@
     move-result-object v2
 
     .line 604
-    .end local v1           #in:Ljava/io/InputStream;
+    .end local v1    # "in":Ljava/io/InputStream;
     :goto_0
     return-object v2
 
@@ -1036,9 +1034,9 @@
 
 .method public createJsonParser([BII)Lcom/flurry/org/codehaus/jackson/JsonParser;
     .locals 3
-    .parameter "data"
-    .parameter "offset"
-    .parameter "len"
+    .param p1, "data"    # [B
+    .param p2, "offset"    # I
+    .param p3, "len"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -1055,7 +1053,7 @@
     move-result-object v0
 
     .line 620
-    .local v0, ctxt:Lcom/flurry/org/codehaus/jackson/io/IOContext;
+    .local v0, "ctxt":Lcom/flurry/org/codehaus/jackson/io/IOContext;
     iget-object v2, p0, Lcom/flurry/org/codehaus/jackson/JsonFactory;->_inputDecorator:Lcom/flurry/org/codehaus/jackson/io/InputDecorator;
 
     if-eqz v2, :cond_0
@@ -1068,7 +1066,7 @@
     move-result-object v1
 
     .line 622
-    .local v1, in:Ljava/io/InputStream;
+    .local v1, "in":Ljava/io/InputStream;
     if-eqz v1, :cond_0
 
     .line 623
@@ -1077,7 +1075,7 @@
     move-result-object v2
 
     .line 626
-    .end local v1           #in:Ljava/io/InputStream;
+    .end local v1    # "in":Ljava/io/InputStream;
     :goto_0
     return-object v2
 
@@ -1091,7 +1089,7 @@
 
 .method public disable(Lcom/flurry/org/codehaus/jackson/JsonGenerator$Feature;)Lcom/flurry/org/codehaus/jackson/JsonFactory;
     .locals 2
-    .parameter "f"
+    .param p1, "f"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator$Feature;
 
     .prologue
     .line 373
@@ -1113,7 +1111,7 @@
 
 .method public disable(Lcom/flurry/org/codehaus/jackson/JsonParser$Feature;)Lcom/flurry/org/codehaus/jackson/JsonFactory;
     .locals 2
-    .parameter "f"
+    .param p1, "f"    # Lcom/flurry/org/codehaus/jackson/JsonParser$Feature;
 
     .prologue
     .line 266
@@ -1135,7 +1133,7 @@
 
 .method public final disableGeneratorFeature(Lcom/flurry/org/codehaus/jackson/JsonGenerator$Feature;)V
     .locals 0
-    .parameter "f"
+    .param p1, "f"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator$Feature;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -1149,7 +1147,7 @@
 
 .method public final disableParserFeature(Lcom/flurry/org/codehaus/jackson/JsonParser$Feature;)V
     .locals 0
-    .parameter "f"
+    .param p1, "f"    # Lcom/flurry/org/codehaus/jackson/JsonParser$Feature;
 
     .prologue
     .line 294
@@ -1161,7 +1159,7 @@
 
 .method public enable(Lcom/flurry/org/codehaus/jackson/JsonGenerator$Feature;)Lcom/flurry/org/codehaus/jackson/JsonFactory;
     .locals 2
-    .parameter "f"
+    .param p1, "f"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator$Feature;
 
     .prologue
     .line 362
@@ -1181,7 +1179,7 @@
 
 .method public enable(Lcom/flurry/org/codehaus/jackson/JsonParser$Feature;)Lcom/flurry/org/codehaus/jackson/JsonFactory;
     .locals 2
-    .parameter "f"
+    .param p1, "f"    # Lcom/flurry/org/codehaus/jackson/JsonParser$Feature;
 
     .prologue
     .line 255
@@ -1201,7 +1199,7 @@
 
 .method public final enableGeneratorFeature(Lcom/flurry/org/codehaus/jackson/JsonGenerator$Feature;)V
     .locals 0
-    .parameter "f"
+    .param p1, "f"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator$Feature;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -1215,7 +1213,7 @@
 
 .method public final enableParserFeature(Lcom/flurry/org/codehaus/jackson/JsonParser$Feature;)V
     .locals 0
-    .parameter "f"
+    .param p1, "f"    # Lcom/flurry/org/codehaus/jackson/JsonParser$Feature;
 
     .prologue
     .line 286
@@ -1293,7 +1291,7 @@
 
 .method public hasFormat(Lcom/flurry/org/codehaus/jackson/format/InputAccessor;)Lcom/flurry/org/codehaus/jackson/format/MatchStrength;
     .locals 2
-    .parameter "acc"
+    .param p1, "acc"    # Lcom/flurry/org/codehaus/jackson/format/InputAccessor;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -1327,7 +1325,7 @@
 
 .method protected hasJSONFormat(Lcom/flurry/org/codehaus/jackson/format/InputAccessor;)Lcom/flurry/org/codehaus/jackson/format/MatchStrength;
     .locals 1
-    .parameter "acc"
+    .param p1, "acc"    # Lcom/flurry/org/codehaus/jackson/format/InputAccessor;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -1345,7 +1343,7 @@
 
 .method public final isEnabled(Lcom/flurry/org/codehaus/jackson/JsonGenerator$Feature;)Z
     .locals 2
-    .parameter "f"
+    .param p1, "f"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator$Feature;
 
     .prologue
     .line 383
@@ -1372,7 +1370,7 @@
 
 .method public final isEnabled(Lcom/flurry/org/codehaus/jackson/JsonParser$Feature;)Z
     .locals 2
-    .parameter "f"
+    .param p1, "f"    # Lcom/flurry/org/codehaus/jackson/JsonParser$Feature;
 
     .prologue
     .line 276
@@ -1399,7 +1397,7 @@
 
 .method public final isGeneratorFeatureEnabled(Lcom/flurry/org/codehaus/jackson/JsonGenerator$Feature;)Z
     .locals 1
-    .parameter "f"
+    .param p1, "f"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator$Feature;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -1414,7 +1412,7 @@
 
 .method public final isParserFeatureEnabled(Lcom/flurry/org/codehaus/jackson/JsonParser$Feature;)Z
     .locals 2
-    .parameter "f"
+    .param p1, "f"    # Lcom/flurry/org/codehaus/jackson/JsonParser$Feature;
 
     .prologue
     .line 310
@@ -1441,7 +1439,7 @@
 
 .method public setCharacterEscapes(Lcom/flurry/org/codehaus/jackson/io/CharacterEscapes;)Lcom/flurry/org/codehaus/jackson/JsonFactory;
     .locals 0
-    .parameter "esc"
+    .param p1, "esc"    # Lcom/flurry/org/codehaus/jackson/io/CharacterEscapes;
 
     .prologue
     .line 437
@@ -1453,7 +1451,7 @@
 
 .method public setCodec(Lcom/flurry/org/codehaus/jackson/ObjectCodec;)Lcom/flurry/org/codehaus/jackson/JsonFactory;
     .locals 0
-    .parameter "oc"
+    .param p1, "oc"    # Lcom/flurry/org/codehaus/jackson/ObjectCodec;
 
     .prologue
     .line 475
@@ -1465,8 +1463,8 @@
 
 .method public final setGeneratorFeature(Lcom/flurry/org/codehaus/jackson/JsonGenerator$Feature;Z)V
     .locals 0
-    .parameter "f"
-    .parameter "state"
+    .param p1, "f"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator$Feature;
+    .param p2, "state"    # Z
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -1480,7 +1478,7 @@
 
 .method public setInputDecorator(Lcom/flurry/org/codehaus/jackson/io/InputDecorator;)Lcom/flurry/org/codehaus/jackson/JsonFactory;
     .locals 0
-    .parameter "d"
+    .param p1, "d"    # Lcom/flurry/org/codehaus/jackson/io/InputDecorator;
 
     .prologue
     .line 329
@@ -1492,7 +1490,7 @@
 
 .method public setOutputDecorator(Lcom/flurry/org/codehaus/jackson/io/OutputDecorator;)Lcom/flurry/org/codehaus/jackson/JsonFactory;
     .locals 0
-    .parameter "d"
+    .param p1, "d"    # Lcom/flurry/org/codehaus/jackson/io/OutputDecorator;
 
     .prologue
     .line 457
@@ -1504,8 +1502,8 @@
 
 .method public final setParserFeature(Lcom/flurry/org/codehaus/jackson/JsonParser$Feature;Z)V
     .locals 0
-    .parameter "f"
-    .parameter "state"
+    .param p1, "f"    # Lcom/flurry/org/codehaus/jackson/JsonParser$Feature;
+    .param p2, "state"    # Z
 
     .prologue
     .line 302

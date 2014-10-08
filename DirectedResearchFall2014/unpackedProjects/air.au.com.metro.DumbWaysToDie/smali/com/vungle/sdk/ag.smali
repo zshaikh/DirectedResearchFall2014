@@ -71,7 +71,6 @@
 
 .method public static a(Lcom/vungle/sdk/ah;)Lcom/vungle/sdk/aj;
     .locals 13
-    .parameter
 
     .prologue
     .line 45
@@ -123,10 +122,10 @@
 
     check-cast v0, Ljava/net/HttpURLConnection;
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/net/MalformedURLException; {:try_start_0 .. :try_end_0} :catch_5
     .catch Ljava/net/SocketTimeoutException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_2
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 54
     const/16 v1, 0x7530
@@ -258,10 +257,10 @@
     .line 74
     invoke-virtual {v0, v1, v6}, Ljava/net/HttpURLConnection;->addRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
     .catch Ljava/net/MalformedURLException; {:try_start_1 .. :try_end_1} :catch_0
     .catch Ljava/net/SocketTimeoutException; {:try_start_1 .. :try_end_1} :catch_4
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_3
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     goto :goto_0
 
@@ -438,10 +437,10 @@
     .line 91
     invoke-static {p0, v1}, Lcom/vungle/sdk/aj;->a(ILjava/lang/String;)Lcom/vungle/sdk/aj;
     :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
     .catch Ljava/net/MalformedURLException; {:try_start_3 .. :try_end_3} :catch_0
     .catch Ljava/net/SocketTimeoutException; {:try_start_3 .. :try_end_3} :catch_4
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
     move-result-object p0
 
@@ -463,10 +462,10 @@
     :try_start_4
     invoke-virtual {v0}, Ljava/net/HttpURLConnection;->getErrorStream()Ljava/io/InputStream;
     :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_1
     .catch Ljava/net/MalformedURLException; {:try_start_4 .. :try_end_4} :catch_0
     .catch Ljava/net/SocketTimeoutException; {:try_start_4 .. :try_end_4} :catch_4
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_3
+    .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
     move-result-object v1
 
@@ -588,8 +587,6 @@
 
 .method private static a(Ljava/io/InputStream;Ljava/lang/String;)Ljava/lang/String;
     .locals 7
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;

@@ -21,7 +21,6 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/a1/ApplifierImpact;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1
@@ -60,7 +59,7 @@
     check-cast v0, Landroid/os/PowerManager;
 
     .line 737
-    .local v0, pm:Landroid/os/PowerManager;
+    .local v0, "pm":Landroid/os/PowerManager;
     invoke-virtual {v0}, Landroid/os/PowerManager;->isScreenOn()Z
 
     move-result v1
@@ -83,17 +82,17 @@
     .line 739
     iget-object v1, p0, Lcom/fusepowered/a1/ApplifierImpact$4;->this$0:Lcom/fusepowered/a1/ApplifierImpact;
 
-    #calls: Lcom/fusepowered/a1/ApplifierImpact;->close()V
+    # invokes: Lcom/fusepowered/a1/ApplifierImpact;->close()V
     invoke-static {v1}, Lcom/fusepowered/a1/ApplifierImpact;->access$6(Lcom/fusepowered/a1/ApplifierImpact;)V
 
     .line 740
     iget-object v1, p0, Lcom/fusepowered/a1/ApplifierImpact$4;->this$0:Lcom/fusepowered/a1/ApplifierImpact;
 
-    #calls: Lcom/fusepowered/a1/ApplifierImpact;->cancelPauseScreenTimer()V
+    # invokes: Lcom/fusepowered/a1/ApplifierImpact;->cancelPauseScreenTimer()V
     invoke-static {v1}, Lcom/fusepowered/a1/ApplifierImpact;->access$7(Lcom/fusepowered/a1/ApplifierImpact;)V
 
     .line 743
-    .end local v0           #pm:Landroid/os/PowerManager;
+    .end local v0    # "pm":Landroid/os/PowerManager;
     :cond_0
     return-void
 .end method

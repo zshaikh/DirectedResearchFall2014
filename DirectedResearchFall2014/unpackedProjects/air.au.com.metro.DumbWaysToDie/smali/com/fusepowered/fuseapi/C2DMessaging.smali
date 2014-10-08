@@ -38,7 +38,7 @@
 
 .method public static clearRegistrationId(Landroid/content/Context;)V
     .locals 5
-    .parameter "context"
+    .param p0, "context"    # Landroid/content/Context;
 
     .prologue
     .line 127
@@ -51,13 +51,13 @@
     move-result-object v1
 
     .line 129
-    .local v1, prefs:Landroid/content/SharedPreferences;
+    .local v1, "prefs":Landroid/content/SharedPreferences;
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
     .line 130
-    .local v0, editor:Landroid/content/SharedPreferences$Editor;
+    .local v0, "editor":Landroid/content/SharedPreferences$Editor;
     const-string v2, "dm_registration"
 
     const-string v3, ""
@@ -82,7 +82,7 @@
 
 .method public static getBackoff(Landroid/content/Context;)J
     .locals 4
-    .parameter "context"
+    .param p0, "context"    # Landroid/content/Context;
 
     .prologue
     .line 112
@@ -95,7 +95,7 @@
     move-result-object v0
 
     .line 114
-    .local v0, prefs:Landroid/content/SharedPreferences;
+    .local v0, "prefs":Landroid/content/SharedPreferences;
     const-string v1, "backoff"
 
     const-wide/16 v2, 0x7530
@@ -109,7 +109,7 @@
 
 .method public static getLastRegistrationChange(Landroid/content/Context;)J
     .locals 4
-    .parameter "context"
+    .param p0, "context"    # Landroid/content/Context;
 
     .prologue
     .line 106
@@ -122,7 +122,7 @@
     move-result-object v0
 
     .line 108
-    .local v0, prefs:Landroid/content/SharedPreferences;
+    .local v0, "prefs":Landroid/content/SharedPreferences;
     const-string v1, "last_registration_change"
 
     const-wide/16 v2, 0x0
@@ -136,7 +136,7 @@
 
 .method public static getRegistrationId(Landroid/content/Context;)Ljava/lang/String;
     .locals 4
-    .parameter "context"
+    .param p0, "context"    # Landroid/content/Context;
 
     .prologue
     .line 99
@@ -149,7 +149,7 @@
     move-result-object v0
 
     .line 101
-    .local v0, prefs:Landroid/content/SharedPreferences;
+    .local v0, "prefs":Landroid/content/SharedPreferences;
     const-string v2, "dm_registration"
 
     const-string v3, ""
@@ -159,14 +159,14 @@
     move-result-object v1
 
     .line 102
-    .local v1, registrationId:Ljava/lang/String;
+    .local v1, "registrationId":Ljava/lang/String;
     return-object v1
 .end method
 
 .method public static register(Landroid/content/Context;Ljava/lang/String;)Z
     .locals 6
-    .parameter "context"
-    .parameter "senderId"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "senderId"    # Ljava/lang/String;
 
     .prologue
     const/4 v5, 0x0
@@ -175,7 +175,7 @@
     const/4 v2, 0x0
 
     .line 55
-    .local v2, res:Z
+    .local v2, "res":Z
     new-instance v1, Landroid/content/Intent;
 
     const-string v3, "com.google.android.c2dm.intent.REGISTER"
@@ -183,7 +183,7 @@
     invoke-direct {v1, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
     .line 56
-    .local v1, registrationIntent:Landroid/content/Intent;
+    .local v1, "registrationIntent":Landroid/content/Intent;
     const-string v3, "com.google.android.gsf"
 
     invoke-virtual {v1, v3}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
@@ -212,7 +212,7 @@
     move-result-object v0
 
     .line 66
-    .local v0, name:Landroid/content/ComponentName;
+    .local v0, "name":Landroid/content/ComponentName;
     if-nez v0, :cond_0
 
     .line 76
@@ -228,8 +228,8 @@
 
 .method public static setBackoff(Landroid/content/Context;J)V
     .locals 4
-    .parameter "context"
-    .parameter "backoff"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "backoff"    # J
 
     .prologue
     .line 118
@@ -242,13 +242,13 @@
     move-result-object v1
 
     .line 120
-    .local v1, prefs:Landroid/content/SharedPreferences;
+    .local v1, "prefs":Landroid/content/SharedPreferences;
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
     .line 121
-    .local v0, editor:Landroid/content/SharedPreferences$Editor;
+    .local v0, "editor":Landroid/content/SharedPreferences$Editor;
     const-string v2, "backoff"
 
     invoke-interface {v0, v2, p1, p2}, Landroid/content/SharedPreferences$Editor;->putLong(Ljava/lang/String;J)Landroid/content/SharedPreferences$Editor;
@@ -262,8 +262,8 @@
 
 .method public static setRegistrationId(Landroid/content/Context;Ljava/lang/String;)V
     .locals 4
-    .parameter "context"
-    .parameter "registrationId"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "registrationId"    # Ljava/lang/String;
 
     .prologue
     .line 137
@@ -276,13 +276,13 @@
     move-result-object v1
 
     .line 139
-    .local v1, prefs:Landroid/content/SharedPreferences;
+    .local v1, "prefs":Landroid/content/SharedPreferences;
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
     .line 140
-    .local v0, editor:Landroid/content/SharedPreferences$Editor;
+    .local v0, "editor":Landroid/content/SharedPreferences$Editor;
     const-string v2, "dm_registration"
 
     invoke-interface {v0, v2, p1}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
@@ -296,7 +296,7 @@
 
 .method public static unregister(Landroid/content/Context;)V
     .locals 4
-    .parameter "context"
+    .param p0, "context"    # Landroid/content/Context;
 
     .prologue
     const/4 v3, 0x0
@@ -309,7 +309,7 @@
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
     .line 84
-    .local v0, regIntent:Landroid/content/Intent;
+    .local v0, "regIntent":Landroid/content/Intent;
     const-string v1, "com.google.android.gsf"
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;

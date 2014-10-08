@@ -79,7 +79,7 @@
 
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 2
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     .line 43
@@ -119,7 +119,6 @@
 
 .method static synthetic access$0(Lcom/bitrhymes/nativeutils/utils/OpenUDID_manager;)Ljava/util/Map;
     .locals 1
-    .parameter
 
     .prologue
     .line 36
@@ -166,7 +165,7 @@
     invoke-direct {v3}, Ljava/security/SecureRandom;-><init>()V
 
     .line 107
-    .local v3, random:Ljava/security/SecureRandom;
+    .local v3, "random":Ljava/security/SecureRandom;
     new-instance v7, Ljava/math/BigInteger;
 
     const/16 v8, 0x40
@@ -188,13 +187,13 @@
     move-result-wide v4
 
     .line 114
-    .local v4, seconds:J
+    .local v4, "seconds":J
     const-wide/16 v7, 0x3e8
 
     div-long v1, v4, v7
 
     .line 115
-    .local v1, microseconds:J
+    .local v1, "microseconds":J
     const-string v7, "OpenUDID"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -233,7 +232,7 @@
     move-result-object v6
 
     .line 117
-    .local v6, tempODID:Ljava/lang/String;
+    .local v6, "tempODID":Ljava/lang/String;
     invoke-static {v6}, Lcom/bitrhymes/nativeutils/utils/Utils;->SHA1(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v7
@@ -243,23 +242,23 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 125
-    .end local v1           #microseconds:J
-    .end local v3           #random:Ljava/security/SecureRandom;
-    .end local v4           #seconds:J
-    .end local v6           #tempODID:Ljava/lang/String;
+    .end local v1    # "microseconds":J
+    .end local v3    # "random":Ljava/security/SecureRandom;
+    .end local v4    # "seconds":J
+    .end local v6    # "tempODID":Ljava/lang/String;
     :cond_1
     :goto_0
     return-void
 
     .line 120
-    .restart local v3       #random:Ljava/security/SecureRandom;
+    .restart local v3    # "random":Ljava/security/SecureRandom;
     :catch_0
     move-exception v7
 
     move-object v0, v7
 
     .line 122
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v7, "OpenUDID"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -310,7 +309,7 @@
     invoke-direct {v0, v1}, Ljava/util/TreeMap;-><init>(Ljava/util/Comparator;)V
 
     .line 157
-    .local v0, sorted_OpenUDIDS:Ljava/util/TreeMap;,"Ljava/util/TreeMap<Ljava/lang/String;Ljava/lang/Integer;>;"
+    .local v0, "sorted_OpenUDIDS":Ljava/util/TreeMap;, "Ljava/util/TreeMap<Ljava/lang/String;Ljava/lang/Integer;>;"
     iget-object v1, p0, Lcom/bitrhymes/nativeutils/utils/OpenUDID_manager;->mReceivedOpenUDIDs:Ljava/util/Map;
 
     invoke-virtual {v0, v1}, Ljava/util/TreeMap;->putAll(Ljava/util/Map;)V
@@ -320,13 +319,13 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/bitrhymes/nativeutils/utils/OpenUDID_manager;
     check-cast p0, Ljava/lang/String;
 
     sput-object p0, Lcom/bitrhymes/nativeutils/utils/OpenUDID_manager;->OpenUDID:Ljava/lang/String;
 
     .line 161
-    .end local v0           #sorted_OpenUDIDS:Ljava/util/TreeMap;,"Ljava/util/TreeMap<Ljava/lang/String;Ljava/lang/Integer;>;"
+    .end local v0    # "sorted_OpenUDIDS":Ljava/util/TreeMap;, "Ljava/util/TreeMap<Ljava/lang/String;Ljava/lang/Integer;>;"
     :cond_0
     return-void
 .end method
@@ -432,13 +431,13 @@
     iget-object v1, v2, Landroid/content/pm/ResolveInfo;->serviceInfo:Landroid/content/pm/ServiceInfo;
 
     .line 137
-    .local v1, servInfo:Landroid/content/pm/ServiceInfo;
+    .local v1, "servInfo":Landroid/content/pm/ServiceInfo;
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
     .line 138
-    .local v0, i:Landroid/content/Intent;
+    .local v0, "i":Landroid/content/Intent;
     new-instance v2, Landroid/content/ComponentName;
 
     iget-object v3, v1, Landroid/content/pm/ServiceInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -462,8 +461,8 @@
     invoke-interface {v2, v5}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
     .line 151
-    .end local v0           #i:Landroid/content/Intent;
-    .end local v1           #servInfo:Landroid/content/pm/ServiceInfo;
+    .end local v0    # "i":Landroid/content/Intent;
+    .end local v1    # "servInfo":Landroid/content/pm/ServiceInfo;
     :goto_0
     return-void
 
@@ -522,7 +521,7 @@
     move-result-object v0
 
     .line 89
-    .local v0, e:Landroid/content/SharedPreferences$Editor;
+    .local v0, "e":Landroid/content/SharedPreferences$Editor;
     const-string v1, "openudid"
 
     sget-object v2, Lcom/bitrhymes/nativeutils/utils/OpenUDID_manager;->OpenUDID:Ljava/lang/String;
@@ -538,7 +537,7 @@
 
 .method public static sync(Landroid/content/Context;)V
     .locals 7
-    .parameter "context"
+    .param p0, "context"    # Landroid/content/Context;
 
     .prologue
     const/4 v4, 0x1
@@ -553,7 +552,7 @@
     invoke-direct {v0, p0}, Lcom/bitrhymes/nativeutils/utils/OpenUDID_manager;-><init>(Landroid/content/Context;)V
 
     .line 197
-    .local v0, manager:Lcom/bitrhymes/nativeutils/utils/OpenUDID_manager;
+    .local v0, "manager":Lcom/bitrhymes/nativeutils/utils/OpenUDID_manager;
     iget-object v1, v0, Lcom/bitrhymes/nativeutils/utils/OpenUDID_manager;->mPreferences:Landroid/content/SharedPreferences;
 
     const-string v2, "openudid"
@@ -648,8 +647,8 @@
 # virtual methods
 .method public onServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V
     .locals 8
-    .parameter "className"
-    .parameter "service"
+    .param p1, "className"    # Landroid/content/ComponentName;
+    .param p2, "service"    # Landroid/os/IBinder;
 
     .prologue
     const-string v7, "OpenUDID"
@@ -661,7 +660,7 @@
     move-result-object v1
 
     .line 56
-    .local v1, data:Landroid/os/Parcel;
+    .local v1, "data":Landroid/os/Parcel;
     iget-object v4, p0, Lcom/bitrhymes/nativeutils/utils/OpenUDID_manager;->mRandom:Ljava/util/Random;
 
     invoke-virtual {v4}, Ljava/util/Random;->nextInt()I
@@ -676,7 +675,7 @@
     move-result-object v3
 
     .line 58
-    .local v3, reply:Landroid/os/Parcel;
+    .local v3, "reply":Landroid/os/Parcel;
     const/4 v4, 0x1
 
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
@@ -704,7 +703,7 @@
     move-result-object v0
 
     .line 63
-    .local v0, _openUDID:Ljava/lang/String;
+    .local v0, "_openUDID":Ljava/lang/String;
     if-eqz v0, :cond_0
 
     .line 65
@@ -759,7 +758,7 @@
     invoke-interface {v5, v0, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 73
-    .end local v0           #_openUDID:Ljava/lang/String;
+    .end local v0    # "_openUDID":Ljava/lang/String;
     :cond_0
     :goto_0
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
@@ -767,8 +766,8 @@
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 78
-    .end local v1           #data:Landroid/os/Parcel;
-    .end local v3           #reply:Landroid/os/Parcel;
+    .end local v1    # "data":Landroid/os/Parcel;
+    .end local v3    # "reply":Landroid/os/Parcel;
     :goto_1
     iget-object v4, p0, Lcom/bitrhymes/nativeutils/utils/OpenUDID_manager;->mContext:Landroid/content/Context;
 
@@ -778,9 +777,9 @@
     return-void
 
     .line 70
-    .restart local v0       #_openUDID:Ljava/lang/String;
-    .restart local v1       #data:Landroid/os/Parcel;
-    .restart local v3       #reply:Landroid/os/Parcel;
+    .restart local v0    # "_openUDID":Ljava/lang/String;
+    .restart local v1    # "data":Landroid/os/Parcel;
+    .restart local v3    # "reply":Landroid/os/Parcel;
     :cond_1
     :try_start_1
     iget-object v4, p0, Lcom/bitrhymes/nativeutils/utils/OpenUDID_manager;->mReceivedOpenUDIDs:Ljava/util/Map;
@@ -798,16 +797,16 @@
     goto :goto_0
 
     .line 74
-    .end local v0           #_openUDID:Ljava/lang/String;
-    .end local v1           #data:Landroid/os/Parcel;
-    .end local v3           #reply:Landroid/os/Parcel;
+    .end local v0    # "_openUDID":Ljava/lang/String;
+    .end local v1    # "data":Landroid/os/Parcel;
+    .end local v3    # "reply":Landroid/os/Parcel;
     :catch_0
     move-exception v4
 
     move-object v2, v4
 
     .line 76
-    .local v2, e:Landroid/os/RemoteException;
+    .local v2, "e":Landroid/os/RemoteException;
     const-string v4, "OpenUDID"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -835,7 +834,7 @@
 
 .method public onServiceDisconnected(Landroid/content/ComponentName;)V
     .locals 0
-    .parameter "className"
+    .param p1, "className"    # Landroid/content/ComponentName;
 
     .prologue
     .line 85

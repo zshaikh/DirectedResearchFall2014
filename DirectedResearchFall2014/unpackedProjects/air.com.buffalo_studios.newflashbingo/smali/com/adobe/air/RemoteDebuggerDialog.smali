@@ -10,7 +10,6 @@
 # direct methods
 .method constructor <init>(Landroid/app/Activity;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 39
@@ -27,7 +26,6 @@
 # virtual methods
 .method public createAndShowDialog(Ljava/lang/String;)V
     .locals 7
-    .parameter
 
     .prologue
     const/16 v6, 0x14
@@ -225,8 +223,6 @@
 
 .method public gotResultFromDialog(ZLjava/lang/String;)V
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 105

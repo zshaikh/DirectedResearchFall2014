@@ -21,7 +21,6 @@
 # direct methods
 .method private constructor <init>(Lcom/vungle/sdk/i;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 39
@@ -34,8 +33,6 @@
 
 .method synthetic constructor <init>(Lcom/vungle/sdk/i;B)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 39
@@ -48,8 +45,6 @@
 # virtual methods
 .method public final a(Ljava/lang/String;Ljava/lang/String;)Z
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     const/4 v1, 0x1

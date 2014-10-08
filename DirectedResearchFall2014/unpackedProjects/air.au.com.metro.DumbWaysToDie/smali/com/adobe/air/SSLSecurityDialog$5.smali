@@ -26,8 +26,6 @@
 # direct methods
 .method constructor <init>(Lcom/adobe/air/SSLSecurityDialog;Lcom/adobe/air/AndroidAlertDialog;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 159

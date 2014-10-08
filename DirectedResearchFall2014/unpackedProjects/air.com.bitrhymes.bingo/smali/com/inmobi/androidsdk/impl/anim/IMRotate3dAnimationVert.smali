@@ -22,12 +22,6 @@
 # direct methods
 .method public constructor <init>(FFFFFZ)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 22
@@ -59,8 +53,6 @@
 # virtual methods
 .method protected applyTransformation(FLandroid/view/animation/Transformation;)V
     .locals 8
-    .parameter
-    .parameter
 
     .prologue
     const/4 v7, 0x0
@@ -134,7 +126,7 @@
     :cond_0
     iget v5, p0, Lcom/inmobi/androidsdk/impl/anim/IMRotate3dAnimationVert;->e:F
 
-    const/high16 v6, 0x3f80
+    const/high16 v6, 0x3f800000
 
     sub-float/2addr v6, p1
 
@@ -147,10 +139,6 @@
 
 .method public initialize(IIII)V
     .locals 1
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 35

@@ -211,7 +211,7 @@
 
     const/4 v11, -0x2
 
-    const-wide/high16 v9, 0x3ff0
+    const-wide/high16 v9, 0x3ff0000000000000L
 
     const/4 v8, 0x1
 
@@ -669,7 +669,7 @@
 
     div-double v0, v9, v0
 
-    const-wide/high16 v2, 0x4059
+    const-wide/high16 v2, 0x4059000000000000L
 
     mul-double/2addr v0, v2
 

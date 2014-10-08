@@ -3,8 +3,8 @@
 .source "JsonParser.java"
 
 # interfaces
-.implements Ljava/io/Closeable;
 .implements Lcom/flurry/org/codehaus/jackson/Versioned;
+.implements Ljava/io/Closeable;
 
 
 # annotations
@@ -48,7 +48,7 @@
 
 .method protected constructor <init>(I)V
     .locals 0
-    .parameter "features"
+    .param p1, "features"    # I
 
     .prologue
     .line 288
@@ -65,7 +65,7 @@
 # virtual methods
 .method protected _constructError(Ljava/lang/String;)Lcom/flurry/org/codehaus/jackson/JsonParseException;
     .locals 2
-    .parameter "msg"
+    .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
     .line 1432
@@ -82,7 +82,7 @@
 
 .method public canUseSchema(Lcom/flurry/org/codehaus/jackson/FormatSchema;)Z
     .locals 1
-    .parameter "schema"
+    .param p1, "schema"    # Lcom/flurry/org/codehaus/jackson/FormatSchema;
 
     .prologue
     .line 343
@@ -125,8 +125,8 @@
 
 .method public configure(Lcom/flurry/org/codehaus/jackson/JsonParser$Feature;Z)Lcom/flurry/org/codehaus/jackson/JsonParser;
     .locals 0
-    .parameter "f"
-    .parameter "state"
+    .param p1, "f"    # Lcom/flurry/org/codehaus/jackson/JsonParser$Feature;
+    .param p2, "state"    # Z
 
     .prologue
     .line 486
@@ -148,7 +148,7 @@
 
 .method public disable(Lcom/flurry/org/codehaus/jackson/JsonParser$Feature;)Lcom/flurry/org/codehaus/jackson/JsonParser;
     .locals 2
-    .parameter "f"
+    .param p1, "f"    # Lcom/flurry/org/codehaus/jackson/JsonParser$Feature;
 
     .prologue
     .line 474
@@ -170,7 +170,7 @@
 
 .method public disableFeature(Lcom/flurry/org/codehaus/jackson/JsonParser$Feature;)V
     .locals 0
-    .parameter "f"
+    .param p1, "f"    # Lcom/flurry/org/codehaus/jackson/JsonParser$Feature;
 
     .prologue
     .line 517
@@ -181,7 +181,7 @@
 
 .method public enable(Lcom/flurry/org/codehaus/jackson/JsonParser$Feature;)Lcom/flurry/org/codehaus/jackson/JsonParser;
     .locals 2
-    .parameter "f"
+    .param p1, "f"    # Lcom/flurry/org/codehaus/jackson/JsonParser$Feature;
 
     .prologue
     .line 462
@@ -201,7 +201,7 @@
 
 .method public enableFeature(Lcom/flurry/org/codehaus/jackson/JsonParser$Feature;)V
     .locals 0
-    .parameter "f"
+    .param p1, "f"    # Lcom/flurry/org/codehaus/jackson/JsonParser$Feature;
 
     .prologue
     .line 512
@@ -343,7 +343,7 @@
     move-result v0
 
     .line 962
-    .local v0, value:I
+    .local v0, "value":I
     const/16 v1, -0x80
 
     if-lt v0, v1, :cond_0
@@ -538,7 +538,7 @@
     move-result v0
 
     .line 985
-    .local v0, value:I
+    .local v0, "value":I
     const/16 v1, -0x8000
 
     if-lt v0, v1, :cond_0
@@ -651,7 +651,7 @@
 
 .method public getValueAsBoolean(Z)Z
     .locals 0
-    .parameter "defaultValue"
+    .param p1, "defaultValue"    # Z
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -686,7 +686,7 @@
 
 .method public getValueAsDouble(D)D
     .locals 0
-    .parameter "defaultValue"
+    .param p1, "defaultValue"    # D
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -721,7 +721,7 @@
 
 .method public getValueAsInt(I)I
     .locals 0
-    .parameter "defaultValue"
+    .param p1, "defaultValue"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -758,7 +758,7 @@
 
 .method public getValueAsLong(J)J
     .locals 0
-    .parameter "defaultValue"
+    .param p1, "defaultValue"    # J
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -806,7 +806,7 @@
 
 .method public isEnabled(Lcom/flurry/org/codehaus/jackson/JsonParser$Feature;)Z
     .locals 2
-    .parameter "f"
+    .param p1, "f"    # Lcom/flurry/org/codehaus/jackson/JsonParser$Feature;
 
     .prologue
     .line 501
@@ -857,7 +857,7 @@
 
 .method public final isFeatureEnabled(Lcom/flurry/org/codehaus/jackson/JsonParser$Feature;)Z
     .locals 1
-    .parameter "f"
+    .param p1, "f"    # Lcom/flurry/org/codehaus/jackson/JsonParser$Feature;
 
     .prologue
     .line 522
@@ -923,7 +923,7 @@
 
 .method public nextFieldName(Lcom/flurry/org/codehaus/jackson/SerializableString;)Z
     .locals 2
-    .parameter "str"
+    .param p1, "str"    # Lcom/flurry/org/codehaus/jackson/SerializableString;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -968,7 +968,7 @@
 
 .method public nextIntValue(I)I
     .locals 2
-    .parameter "defaultValue"
+    .param p1, "defaultValue"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -1001,7 +1001,7 @@
 
 .method public nextLongValue(J)J
     .locals 2
-    .parameter "defaultValue"
+    .param p1, "defaultValue"    # J
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -1089,7 +1089,7 @@
     move-result-object v0
 
     .line 568
-    .local v0, t:Lcom/flurry/org/codehaus/jackson/JsonToken;
+    .local v0, "t":Lcom/flurry/org/codehaus/jackson/JsonToken;
     sget-object v1, Lcom/flurry/org/codehaus/jackson/JsonToken;->FIELD_NAME:Lcom/flurry/org/codehaus/jackson/JsonToken;
 
     if-ne v0, v1, :cond_0
@@ -1106,7 +1106,6 @@
 
 .method public readValueAs(Lcom/flurry/org/codehaus/jackson/type/TypeReference;)Ljava/lang/Object;
     .locals 3
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -1126,13 +1125,13 @@
 
     .prologue
     .line 1361
-    .local p1, valueTypeRef:Lcom/flurry/org/codehaus/jackson/type/TypeReference;,"Lcom/flurry/org/codehaus/jackson/type/TypeReference<*>;"
+    .local p1, "valueTypeRef":Lcom/flurry/org/codehaus/jackson/type/TypeReference;, "Lcom/flurry/org/codehaus/jackson/type/TypeReference<*>;"
     invoke-virtual {p0}, Lcom/flurry/org/codehaus/jackson/JsonParser;->getCodec()Lcom/flurry/org/codehaus/jackson/ObjectCodec;
 
     move-result-object v0
 
     .line 1362
-    .local v0, codec:Lcom/flurry/org/codehaus/jackson/ObjectCodec;
+    .local v0, "codec":Lcom/flurry/org/codehaus/jackson/ObjectCodec;
     if-nez v0, :cond_0
 
     .line 1363
@@ -1155,7 +1154,6 @@
 
 .method public readValueAs(Ljava/lang/Class;)Ljava/lang/Object;
     .locals 3
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -1175,13 +1173,13 @@
 
     .prologue
     .line 1332
-    .local p1, valueType:Ljava/lang/Class;,"Ljava/lang/Class<TT;>;"
+    .local p1, "valueType":Ljava/lang/Class;, "Ljava/lang/Class<TT;>;"
     invoke-virtual {p0}, Lcom/flurry/org/codehaus/jackson/JsonParser;->getCodec()Lcom/flurry/org/codehaus/jackson/ObjectCodec;
 
     move-result-object v0
 
     .line 1333
-    .local v0, codec:Lcom/flurry/org/codehaus/jackson/ObjectCodec;
+    .local v0, "codec":Lcom/flurry/org/codehaus/jackson/ObjectCodec;
     if-nez v0, :cond_0
 
     .line 1334
@@ -1218,7 +1216,7 @@
     move-result-object v0
 
     .line 1414
-    .local v0, codec:Lcom/flurry/org/codehaus/jackson/ObjectCodec;
+    .local v0, "codec":Lcom/flurry/org/codehaus/jackson/ObjectCodec;
     if-nez v0, :cond_0
 
     .line 1415
@@ -1241,7 +1239,6 @@
 
 .method public readValuesAs(Lcom/flurry/org/codehaus/jackson/type/TypeReference;)Ljava/util/Iterator;
     .locals 3
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -1263,13 +1260,13 @@
 
     .prologue
     .line 1396
-    .local p1, valueTypeRef:Lcom/flurry/org/codehaus/jackson/type/TypeReference;,"Lcom/flurry/org/codehaus/jackson/type/TypeReference<*>;"
+    .local p1, "valueTypeRef":Lcom/flurry/org/codehaus/jackson/type/TypeReference;, "Lcom/flurry/org/codehaus/jackson/type/TypeReference<*>;"
     invoke-virtual {p0}, Lcom/flurry/org/codehaus/jackson/JsonParser;->getCodec()Lcom/flurry/org/codehaus/jackson/ObjectCodec;
 
     move-result-object v0
 
     .line 1397
-    .local v0, codec:Lcom/flurry/org/codehaus/jackson/ObjectCodec;
+    .local v0, "codec":Lcom/flurry/org/codehaus/jackson/ObjectCodec;
     if-nez v0, :cond_0
 
     .line 1398
@@ -1292,7 +1289,6 @@
 
 .method public readValuesAs(Ljava/lang/Class;)Ljava/util/Iterator;
     .locals 3
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -1314,13 +1310,13 @@
 
     .prologue
     .line 1380
-    .local p1, valueType:Ljava/lang/Class;,"Ljava/lang/Class<TT;>;"
+    .local p1, "valueType":Ljava/lang/Class;, "Ljava/lang/Class<TT;>;"
     invoke-virtual {p0}, Lcom/flurry/org/codehaus/jackson/JsonParser;->getCodec()Lcom/flurry/org/codehaus/jackson/ObjectCodec;
 
     move-result-object v0
 
     .line 1381
-    .local v0, codec:Lcom/flurry/org/codehaus/jackson/ObjectCodec;
+    .local v0, "codec":Lcom/flurry/org/codehaus/jackson/ObjectCodec;
     if-nez v0, :cond_0
 
     .line 1382
@@ -1343,7 +1339,7 @@
 
 .method public releaseBuffered(Ljava/io/OutputStream;)I
     .locals 1
-    .parameter "out"
+    .param p1, "out"    # Ljava/io/OutputStream;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -1359,7 +1355,7 @@
 
 .method public releaseBuffered(Ljava/io/Writer;)I
     .locals 1
-    .parameter "w"
+    .param p1, "w"    # Ljava/io/Writer;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -1378,8 +1374,8 @@
 
 .method public setFeature(Lcom/flurry/org/codehaus/jackson/JsonParser$Feature;Z)V
     .locals 0
-    .parameter "f"
-    .parameter "state"
+    .param p1, "f"    # Lcom/flurry/org/codehaus/jackson/JsonParser$Feature;
+    .param p2, "state"    # Z
 
     .prologue
     .line 507
@@ -1390,7 +1386,7 @@
 
 .method public setSchema(Lcom/flurry/org/codehaus/jackson/FormatSchema;)V
     .locals 3
-    .parameter "schema"
+    .param p1, "schema"    # Lcom/flurry/org/codehaus/jackson/FormatSchema;
 
     .prologue
     .line 328

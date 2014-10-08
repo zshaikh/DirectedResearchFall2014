@@ -36,9 +36,8 @@
 
 .method public writeTypePrefixForArray(Ljava/lang/Object;Lcom/flurry/org/codehaus/jackson/JsonGenerator;Ljava/lang/Class;)V
     .locals 0
-    .parameter "value"
-    .parameter "jgen"
-    .parameter
+    .param p1, "value"    # Ljava/lang/Object;
+    .param p2, "jgen"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -58,7 +57,7 @@
 
     .prologue
     .line 161
-    .local p3, type:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p3, "type":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-virtual {p0, p1, p2}, Lcom/flurry/org/codehaus/jackson/map/TypeSerializer;->writeTypePrefixForArray(Ljava/lang/Object;Lcom/flurry/org/codehaus/jackson/JsonGenerator;)V
 
     .line 162
@@ -76,9 +75,8 @@
 
 .method public writeTypePrefixForObject(Ljava/lang/Object;Lcom/flurry/org/codehaus/jackson/JsonGenerator;Ljava/lang/Class;)V
     .locals 0
-    .parameter "value"
-    .parameter "jgen"
-    .parameter
+    .param p1, "value"    # Ljava/lang/Object;
+    .param p2, "jgen"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -98,7 +96,7 @@
 
     .prologue
     .line 147
-    .local p3, type:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p3, "type":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-virtual {p0, p1, p2}, Lcom/flurry/org/codehaus/jackson/map/TypeSerializer;->writeTypePrefixForObject(Ljava/lang/Object;Lcom/flurry/org/codehaus/jackson/JsonGenerator;)V
 
     .line 148
@@ -116,9 +114,8 @@
 
 .method public writeTypePrefixForScalar(Ljava/lang/Object;Lcom/flurry/org/codehaus/jackson/JsonGenerator;Ljava/lang/Class;)V
     .locals 0
-    .parameter "value"
-    .parameter "jgen"
-    .parameter
+    .param p1, "value"    # Ljava/lang/Object;
+    .param p2, "jgen"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -138,7 +135,7 @@
 
     .prologue
     .line 133
-    .local p3, type:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p3, "type":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-virtual {p0, p1, p2}, Lcom/flurry/org/codehaus/jackson/map/TypeSerializer;->writeTypePrefixForScalar(Ljava/lang/Object;Lcom/flurry/org/codehaus/jackson/JsonGenerator;)V
 
     .line 134

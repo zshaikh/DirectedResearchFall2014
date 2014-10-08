@@ -30,10 +30,6 @@
 # direct methods
 .method constructor <init>(Ljava/lang/String;ZJLjava/util/TreeMap;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 100
@@ -62,7 +58,7 @@
     invoke-direct {v0}, Lcom/fusepowered/m1/android/HttpGetRequest;-><init>()V
 
     .line 107
-    .local v0, tc:Lcom/fusepowered/m1/android/HttpGetRequest;
+    .local v0, "tc":Lcom/fusepowered/m1/android/HttpGetRequest;
     :try_start_0
     iget-object v1, p0, Lcom/fusepowered/m1/android/MMConversionTracker$1;->val$goalId:Ljava/lang/String;
 
@@ -87,7 +83,7 @@
     move-object v6, v1
 
     .line 111
-    .local v6, e:Ljava/lang/Exception;
+    .local v6, "e":Ljava/lang/Exception;
     invoke-virtual {v6}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0

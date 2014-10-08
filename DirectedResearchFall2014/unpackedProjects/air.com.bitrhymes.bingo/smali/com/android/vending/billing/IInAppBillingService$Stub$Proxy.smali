@@ -24,7 +24,7 @@
 # direct methods
 .method constructor <init>(Landroid/os/IBinder;)V
     .locals 0
-    .parameter "remote"
+    .param p1, "remote"    # Landroid/os/IBinder;
 
     .prologue
     .line 176
@@ -51,9 +51,9 @@
 
 .method public consumePurchase(ILjava/lang/String;Ljava/lang/String;)I
     .locals 6
-    .parameter "apiVersion"
-    .parameter "packageName"
-    .parameter "purchaseToken"
+    .param p1, "apiVersion"    # I
+    .param p2, "packageName"    # Ljava/lang/String;
+    .param p3, "purchaseToken"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;
@@ -67,13 +67,13 @@
     move-result-object v0
 
     .line 384
-    .local v0, _data:Landroid/os/Parcel;
+    .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
     .line 387
-    .local v1, _reply:Landroid/os/Parcel;
+    .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string v3, "com.android.vending.billing.IInAppBillingService"
 
@@ -108,7 +108,7 @@
     move-result v2
 
     .line 396
-    .local v2, _result:I
+    .local v2, "_result":I
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
     .line 397
@@ -118,7 +118,7 @@
     return v2
 
     .line 395
-    .end local v2           #_result:I
+    .end local v2    # "_result":I
     :catchall_0
     move-exception v3
 
@@ -134,11 +134,11 @@
 
 .method public getBuyIntent(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/os/Bundle;
     .locals 6
-    .parameter "apiVersion"
-    .parameter "packageName"
-    .parameter "sku"
-    .parameter "type"
-    .parameter "developerPayload"
+    .param p1, "apiVersion"    # I
+    .param p2, "packageName"    # Ljava/lang/String;
+    .param p3, "sku"    # Ljava/lang/String;
+    .param p4, "type"    # Ljava/lang/String;
+    .param p5, "developerPayload"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;
@@ -152,13 +152,13 @@
     move-result-object v0
 
     .line 298
-    .local v0, _data:Landroid/os/Parcel;
+    .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
     .line 301
-    .local v1, _reply:Landroid/os/Parcel;
+    .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string v3, "com.android.vending.billing.IInAppBillingService"
 
@@ -210,7 +210,7 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 317
-    .local v2, _result:Landroid/os/Bundle;
+    .local v2, "_result":Landroid/os/Bundle;
     :goto_0
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
@@ -221,16 +221,16 @@
     return-object v2
 
     .line 313
-    .end local v2           #_result:Landroid/os/Bundle;
+    .end local v2    # "_result":Landroid/os/Bundle;
     :cond_0
     const/4 v2, 0x0
 
     .line 315
-    .restart local v2       #_result:Landroid/os/Bundle;
+    .restart local v2    # "_result":Landroid/os/Bundle;
     goto :goto_0
 
     .line 316
-    .end local v2           #_result:Landroid/os/Bundle;
+    .end local v2    # "_result":Landroid/os/Bundle;
     :catchall_0
     move-exception v3
 
@@ -256,10 +256,10 @@
 
 .method public getPurchases(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/os/Bundle;
     .locals 6
-    .parameter "apiVersion"
-    .parameter "packageName"
-    .parameter "type"
-    .parameter "continuationToken"
+    .param p1, "apiVersion"    # I
+    .param p2, "packageName"    # Ljava/lang/String;
+    .param p3, "type"    # Ljava/lang/String;
+    .param p4, "continuationToken"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;
@@ -273,13 +273,13 @@
     move-result-object v0
 
     .line 349
-    .local v0, _data:Landroid/os/Parcel;
+    .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
     .line 352
-    .local v1, _reply:Landroid/os/Parcel;
+    .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string v3, "com.android.vending.billing.IInAppBillingService"
 
@@ -328,7 +328,7 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 367
-    .local v2, _result:Landroid/os/Bundle;
+    .local v2, "_result":Landroid/os/Bundle;
     :goto_0
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
@@ -339,16 +339,16 @@
     return-object v2
 
     .line 363
-    .end local v2           #_result:Landroid/os/Bundle;
+    .end local v2    # "_result":Landroid/os/Bundle;
     :cond_0
     const/4 v2, 0x0
 
     .line 365
-    .restart local v2       #_result:Landroid/os/Bundle;
+    .restart local v2    # "_result":Landroid/os/Bundle;
     goto :goto_0
 
     .line 366
-    .end local v2           #_result:Landroid/os/Bundle;
+    .end local v2    # "_result":Landroid/os/Bundle;
     :catchall_0
     move-exception v3
 
@@ -364,10 +364,10 @@
 
 .method public getSkuDetails(ILjava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;
     .locals 6
-    .parameter "apiVersion"
-    .parameter "packageName"
-    .parameter "type"
-    .parameter "skusBundle"
+    .param p1, "apiVersion"    # I
+    .param p2, "packageName"    # Ljava/lang/String;
+    .param p3, "type"    # Ljava/lang/String;
+    .param p4, "skusBundle"    # Landroid/os/Bundle;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;
@@ -381,13 +381,13 @@
     move-result-object v0
 
     .line 236
-    .local v0, _data:Landroid/os/Parcel;
+    .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
     .line 239
-    .local v1, _reply:Landroid/os/Parcel;
+    .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string v3, "com.android.vending.billing.IInAppBillingService"
 
@@ -447,7 +447,7 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 260
-    .local v2, _result:Landroid/os/Bundle;
+    .local v2, "_result":Landroid/os/Bundle;
     :goto_1
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
@@ -458,7 +458,7 @@
     return-object v2
 
     .line 248
-    .end local v2           #_result:Landroid/os/Bundle;
+    .end local v2    # "_result":Landroid/os/Bundle;
     :cond_0
     const/4 v3, 0x0
 
@@ -487,15 +487,15 @@
     const/4 v2, 0x0
 
     .line 258
-    .restart local v2       #_result:Landroid/os/Bundle;
+    .restart local v2    # "_result":Landroid/os/Bundle;
     goto :goto_1
 .end method
 
 .method public isBillingSupported(ILjava/lang/String;Ljava/lang/String;)I
     .locals 6
-    .parameter "apiVersion"
-    .parameter "packageName"
-    .parameter "type"
+    .param p1, "apiVersion"    # I
+    .param p2, "packageName"    # Ljava/lang/String;
+    .param p3, "type"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;
@@ -509,13 +509,13 @@
     move-result-object v0
 
     .line 200
-    .local v0, _data:Landroid/os/Parcel;
+    .local v0, "_data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
     .line 203
-    .local v1, _reply:Landroid/os/Parcel;
+    .local v1, "_reply":Landroid/os/Parcel;
     :try_start_0
     const-string v3, "com.android.vending.billing.IInAppBillingService"
 
@@ -550,7 +550,7 @@
     move-result v2
 
     .line 212
-    .local v2, _result:I
+    .local v2, "_result":I
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
     .line 213
@@ -560,7 +560,7 @@
     return v2
 
     .line 211
-    .end local v2           #_result:I
+    .end local v2    # "_result":I
     :catchall_0
     move-exception v3
 

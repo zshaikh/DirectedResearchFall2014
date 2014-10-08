@@ -19,7 +19,6 @@
 # direct methods
 .method protected constructor <init>(Landroid/content/Context;)V
     .locals 2
-    .parameter
 
     .prologue
     const/4 v0, 0x0
@@ -71,7 +70,7 @@
     .line 138
     iget-object v0, p0, Lcom/google/ads/aj;->b:Landroid/util/DisplayMetrics;
 
-    const/high16 v1, 0x3f80
+    const/high16 v1, 0x3f800000
 
     iput v1, v0, Landroid/util/DisplayMetrics;->density:F
 
@@ -80,9 +79,6 @@
 
 .method private a(Landroid/content/Context;Ljava/lang/String;Z)Ljava/lang/String;
     .locals 3
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const/4 v2, 0x7
@@ -230,7 +226,6 @@
 # virtual methods
 .method public a(Landroid/content/Context;)Ljava/lang/String;
     .locals 2
-    .parameter
 
     .prologue
     .line 162
@@ -247,8 +242,6 @@
 
 .method public a(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 167
@@ -263,8 +256,6 @@
 
 .method a([BLjava/lang/String;)Ljava/lang/String;
     .locals 6
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/security/NoSuchAlgorithmException;,
@@ -442,9 +433,6 @@
 
 .method public a(III)V
     .locals 16
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 185
@@ -539,8 +527,6 @@
 
 .method protected a(IJ)V
     .locals 1
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -559,8 +545,6 @@
 
 .method protected a(ILjava/lang/String;)V
     .locals 1
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -579,7 +563,6 @@
 
 .method public a(Landroid/view/MotionEvent;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 173
@@ -616,8 +599,6 @@
 
 .method a(Ljava/lang/String;[B)V
     .locals 2
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/UnsupportedEncodingException;

@@ -98,11 +98,9 @@
 
 .method private constructor <init>(Ljava/lang/Class;Ljava/util/List;Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;Lcom/flurry/org/codehaus/jackson/map/ClassIntrospector$MixInResolver;Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;)V
     .locals 2
-    .parameter
-    .parameter
-    .parameter "aintr"
-    .parameter "mir"
-    .parameter "classAnnotations"
+    .param p3, "aintr"    # Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;
+    .param p4, "mir"    # Lcom/flurry/org/codehaus/jackson/map/ClassIntrospector$MixInResolver;
+    .param p5, "classAnnotations"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -121,8 +119,8 @@
 
     .prologue
     .line 108
-    .local p1, cls:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
-    .local p2, superTypes:Ljava/util/List;,"Ljava/util/List<Ljava/lang/Class<*>;>;"
+    .local p1, "cls":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
+    .local p2, "superTypes":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Class<*>;>;"
     invoke-direct {p0}, Lcom/flurry/org/codehaus/jackson/map/introspect/Annotated;-><init>()V
 
     .line 109
@@ -180,7 +178,7 @@
 
 .method private _emptyAnnotationMaps(I)[Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;
     .locals 3
-    .parameter "count"
+    .param p1, "count"    # I
 
     .prologue
     .line 858
@@ -198,10 +196,10 @@
     new-array v1, p1, [Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;
 
     .line 862
-    .local v1, maps:[Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;
+    .local v1, "maps":[Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;
     const/4 v0, 0x0
 
-    .local v0, i:I
+    .local v0, "i":I
     :goto_1
     if-ge v0, p1, :cond_1
 
@@ -226,7 +224,7 @@
 
 .method private _isIncludableField(Ljava/lang/reflect/Field;)Z
     .locals 3
-    .parameter "f"
+    .param p1, "f"    # Ljava/lang/reflect/Field;
 
     .prologue
     const/4 v2, 0x0
@@ -251,7 +249,7 @@
     move-result v0
 
     .line 899
-    .local v0, mods:I
+    .local v0, "mods":I
     invoke-static {v0}, Ljava/lang/reflect/Modifier;->isStatic(I)Z
 
     move-result v1
@@ -279,9 +277,8 @@
 
 .method public static construct(Ljava/lang/Class;Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;Lcom/flurry/org/codehaus/jackson/map/ClassIntrospector$MixInResolver;)Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;
     .locals 6
-    .parameter
-    .parameter "aintr"
-    .parameter "mir"
+    .param p1, "aintr"    # Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;
+    .param p2, "mir"    # Lcom/flurry/org/codehaus/jackson/map/ClassIntrospector$MixInResolver;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -295,7 +292,7 @@
     .end annotation
 
     .prologue
-    .local p0, cls:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p0, "cls":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const/4 v5, 0x0
 
     .line 132
@@ -304,7 +301,7 @@
     move-result-object v2
 
     .line 133
-    .local v2, st:Ljava/util/List;,"Ljava/util/List<Ljava/lang/Class<*>;>;"
+    .local v2, "st":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Class<*>;>;"
     new-instance v0, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;
 
     move-object v1, p0
@@ -316,7 +313,7 @@
     invoke-direct/range {v0 .. v5}, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;-><init>(Ljava/lang/Class;Ljava/util/List;Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;Lcom/flurry/org/codehaus/jackson/map/ClassIntrospector$MixInResolver;Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;)V
 
     .line 134
-    .local v0, ac:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;
+    .local v0, "ac":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;
     invoke-virtual {v0}, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;->resolveClassAnnotations()V
 
     .line 135
@@ -325,9 +322,8 @@
 
 .method public static constructWithoutSuperTypes(Ljava/lang/Class;Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;Lcom/flurry/org/codehaus/jackson/map/ClassIntrospector$MixInResolver;)Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;
     .locals 6
-    .parameter
-    .parameter "aintr"
-    .parameter "mir"
+    .param p1, "aintr"    # Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;
+    .param p2, "mir"    # Lcom/flurry/org/codehaus/jackson/map/ClassIntrospector$MixInResolver;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -342,13 +338,13 @@
 
     .prologue
     .line 146
-    .local p0, cls:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p0, "cls":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object v2
 
     .line 147
-    .local v2, empty:Ljava/util/List;,"Ljava/util/List<Ljava/lang/Class<*>;>;"
+    .local v2, "empty":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Class<*>;>;"
     new-instance v0, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;
 
     const/4 v5, 0x0
@@ -362,7 +358,7 @@
     invoke-direct/range {v0 .. v5}, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;-><init>(Ljava/lang/Class;Ljava/util/List;Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;Lcom/flurry/org/codehaus/jackson/map/ClassIntrospector$MixInResolver;Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;)V
 
     .line 148
-    .local v0, ac:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;
+    .local v0, "ac":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;
     invoke-virtual {v0}, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;->resolveClassAnnotations()V
 
     .line 149
@@ -373,8 +369,7 @@
 # virtual methods
 .method protected _addClassMixIns(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;Ljava/lang/Class;)V
     .locals 1
-    .parameter "annotations"
-    .parameter
+    .param p1, "annotations"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -386,7 +381,7 @@
 
     .prologue
     .line 504
-    .local p2, toMask:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p2, "toMask":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;->_mixInResolver:Lcom/flurry/org/codehaus/jackson/map/ClassIntrospector$MixInResolver;
 
     if-eqz v0, :cond_0
@@ -407,9 +402,7 @@
 
 .method protected _addClassMixIns(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;Ljava/lang/Class;Ljava/lang/Class;)V
     .locals 7
-    .parameter "annotations"
-    .parameter
-    .parameter
+    .param p1, "annotations"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -423,8 +416,8 @@
 
     .prologue
     .line 512
-    .local p2, toMask:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
-    .local p3, mixin:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p2, "toMask":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
+    .local p3, "mixin":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     if-nez p3, :cond_1
 
     .line 535
@@ -437,20 +430,20 @@
 
     move-result-object v1
 
-    .local v1, arr$:[Ljava/lang/annotation/Annotation;
+    .local v1, "arr$":[Ljava/lang/annotation/Annotation;
     array-length v4, v1
 
-    .local v4, len$:I
+    .local v4, "len$":I
     const/4 v2, 0x0
 
-    .local v2, i$:I
+    .local v2, "i$":I
     :goto_0
     if-ge v2, v4, :cond_3
 
     aget-object v0, v1, v2
 
     .line 517
-    .local v0, a:Ljava/lang/annotation/Annotation;
+    .local v0, "a":Ljava/lang/annotation/Annotation;
     iget-object v6, p0, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;->_annotationIntrospector:Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;
 
     invoke-virtual {v6, v0}, Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;->isHandled(Ljava/lang/annotation/Annotation;)Z
@@ -469,7 +462,7 @@
     goto :goto_0
 
     .line 528
-    .end local v0           #a:Ljava/lang/annotation/Annotation;
+    .end local v0    # "a":Ljava/lang/annotation/Annotation;
     :cond_3
     invoke-static {p3, p2}, Lcom/flurry/org/codehaus/jackson/map/util/ClassUtil;->findSuperTypes(Ljava/lang/Class;Ljava/lang/Class;)Ljava/util/List;
 
@@ -479,7 +472,7 @@
 
     move-result-object v2
 
-    .end local v2           #i$:I
+    .end local v2    # "i$":I
     :cond_4
     invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
@@ -494,7 +487,7 @@
     check-cast v5, Ljava/lang/Class;
 
     .line 529
-    .local v5, parent:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local v5, "parent":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-virtual {v5}, Ljava/lang/Class;->getDeclaredAnnotations()[Ljava/lang/annotation/Annotation;
 
     move-result-object v1
@@ -503,14 +496,14 @@
 
     const/4 v3, 0x0
 
-    .local v3, i$:I
+    .local v3, "i$":I
     :goto_1
     if-ge v3, v4, :cond_4
 
     aget-object v0, v1, v3
 
     .line 530
-    .restart local v0       #a:Ljava/lang/annotation/Annotation;
+    .restart local v0    # "a":Ljava/lang/annotation/Annotation;
     iget-object v6, p0, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;->_annotationIntrospector:Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;
 
     invoke-virtual {v6, v0}, Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;->isHandled(Ljava/lang/annotation/Annotation;)Z
@@ -531,7 +524,6 @@
 
 .method protected _addConstructorMixIns(Ljava/lang/Class;)V
     .locals 11
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -541,14 +533,14 @@
     .end annotation
 
     .prologue
-    .local p1, mixin:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p1, "mixin":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const/4 v10, 0x0
 
     .line 545
     const/4 v3, 0x0
 
     .line 546
-    .local v3, ctorKeys:[Lcom/flurry/org/codehaus/jackson/map/introspect/MemberKey;
+    .local v3, "ctorKeys":[Lcom/flurry/org/codehaus/jackson/map/introspect/MemberKey;
     iget-object v8, p0, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;->_constructors:Ljava/util/List;
 
     if-nez v8, :cond_1
@@ -556,26 +548,26 @@
     move v2, v10
 
     .line 547
-    .local v2, ctorCount:I
+    .local v2, "ctorCount":I
     :goto_0
     invoke-virtual {p1}, Ljava/lang/Class;->getDeclaredConstructors()[Ljava/lang/reflect/Constructor;
 
     move-result-object v0
 
-    .local v0, arr$:[Ljava/lang/reflect/Constructor;
+    .local v0, "arr$":[Ljava/lang/reflect/Constructor;
     array-length v7, v0
 
-    .local v7, len$:I
+    .local v7, "len$":I
     const/4 v5, 0x0
 
-    .local v5, i$:I
+    .local v5, "i$":I
     :goto_1
     if-ge v5, v7, :cond_5
 
     aget-object v1, v0, v5
 
     .line 548
-    .local v1, ctor:Ljava/lang/reflect/Constructor;,"Ljava/lang/reflect/Constructor<*>;"
+    .local v1, "ctor":Ljava/lang/reflect/Constructor;, "Ljava/lang/reflect/Constructor<*>;"
     invoke-virtual {v1}, Ljava/lang/reflect/Constructor;->getParameterTypes()[Ljava/lang/Class;
 
     move-result-object v8
@@ -602,11 +594,11 @@
     goto :goto_1
 
     .line 546
-    .end local v0           #arr$:[Ljava/lang/reflect/Constructor;
-    .end local v1           #ctor:Ljava/lang/reflect/Constructor;,"Ljava/lang/reflect/Constructor<*>;"
-    .end local v2           #ctorCount:I
-    .end local v5           #i$:I
-    .end local v7           #len$:I
+    .end local v0    # "arr$":[Ljava/lang/reflect/Constructor;
+    .end local v1    # "ctor":Ljava/lang/reflect/Constructor;, "Ljava/lang/reflect/Constructor<*>;"
+    .end local v2    # "ctorCount":I
+    .end local v5    # "i$":I
+    .end local v7    # "len$":I
     :cond_1
     iget-object v8, p0, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;->_constructors:Ljava/util/List;
 
@@ -619,11 +611,11 @@
     goto :goto_0
 
     .line 553
-    .restart local v0       #arr$:[Ljava/lang/reflect/Constructor;
-    .restart local v1       #ctor:Ljava/lang/reflect/Constructor;,"Ljava/lang/reflect/Constructor<*>;"
-    .restart local v2       #ctorCount:I
-    .restart local v5       #i$:I
-    .restart local v7       #len$:I
+    .restart local v0    # "arr$":[Ljava/lang/reflect/Constructor;
+    .restart local v1    # "ctor":Ljava/lang/reflect/Constructor;, "Ljava/lang/reflect/Constructor<*>;"
+    .restart local v2    # "ctorCount":I
+    .restart local v5    # "i$":I
+    .restart local v7    # "len$":I
     :cond_2
     if-nez v3, :cond_3
 
@@ -633,7 +625,7 @@
     .line 555
     const/4 v4, 0x0
 
-    .local v4, i:I
+    .local v4, "i":I
     :goto_3
     if-ge v4, v2, :cond_3
 
@@ -662,17 +654,17 @@
     goto :goto_3
 
     .line 559
-    .end local v4           #i:I
+    .end local v4    # "i":I
     :cond_3
     new-instance v6, Lcom/flurry/org/codehaus/jackson/map/introspect/MemberKey;
 
     invoke-direct {v6, v1}, Lcom/flurry/org/codehaus/jackson/map/introspect/MemberKey;-><init>(Ljava/lang/reflect/Constructor;)V
 
     .line 561
-    .local v6, key:Lcom/flurry/org/codehaus/jackson/map/introspect/MemberKey;
+    .local v6, "key":Lcom/flurry/org/codehaus/jackson/map/introspect/MemberKey;
     const/4 v4, 0x0
 
-    .restart local v4       #i:I
+    .restart local v4    # "i":I
     :goto_4
     if-ge v4, v2, :cond_0
 
@@ -707,16 +699,15 @@
     goto :goto_2
 
     .line 570
-    .end local v1           #ctor:Ljava/lang/reflect/Constructor;,"Ljava/lang/reflect/Constructor<*>;"
-    .end local v4           #i:I
-    .end local v6           #key:Lcom/flurry/org/codehaus/jackson/map/introspect/MemberKey;
+    .end local v1    # "ctor":Ljava/lang/reflect/Constructor;, "Ljava/lang/reflect/Constructor<*>;"
+    .end local v4    # "i":I
+    .end local v6    # "key":Lcom/flurry/org/codehaus/jackson/map/introspect/MemberKey;
     :cond_5
     return-void
 .end method
 
 .method protected _addFactoryMixIns(Ljava/lang/Class;)V
     .locals 10
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -727,11 +718,11 @@
 
     .prologue
     .line 574
-    .local p1, mixin:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p1, "mixin":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const/4 v7, 0x0
 
     .line 575
-    .local v7, methodKeys:[Lcom/flurry/org/codehaus/jackson/map/introspect/MemberKey;
+    .local v7, "methodKeys":[Lcom/flurry/org/codehaus/jackson/map/introspect/MemberKey;
     iget-object v8, p0, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;->_creatorMethods:Ljava/util/List;
 
     invoke-interface {v8}, Ljava/util/List;->size()I
@@ -739,25 +730,25 @@
     move-result v6
 
     .line 577
-    .local v6, methodCount:I
+    .local v6, "methodCount":I
     invoke-virtual {p1}, Ljava/lang/Class;->getDeclaredMethods()[Ljava/lang/reflect/Method;
 
     move-result-object v0
 
-    .local v0, arr$:[Ljava/lang/reflect/Method;
+    .local v0, "arr$":[Ljava/lang/reflect/Method;
     array-length v4, v0
 
-    .local v4, len$:I
+    .local v4, "len$":I
     const/4 v2, 0x0
 
-    .local v2, i$:I
+    .local v2, "i$":I
     :goto_0
     if-ge v2, v4, :cond_4
 
     aget-object v5, v0, v2
 
     .line 578
-    .local v5, m:Ljava/lang/reflect/Method;
+    .local v5, "m":Ljava/lang/reflect/Method;
     invoke-virtual {v5}, Ljava/lang/reflect/Method;->getModifiers()I
 
     move-result v8
@@ -794,7 +785,7 @@
     .line 586
     const/4 v1, 0x0
 
-    .local v1, i:I
+    .local v1, "i":I
     :goto_2
     if-ge v1, v6, :cond_2
 
@@ -823,17 +814,17 @@
     goto :goto_2
 
     .line 590
-    .end local v1           #i:I
+    .end local v1    # "i":I
     :cond_2
     new-instance v3, Lcom/flurry/org/codehaus/jackson/map/introspect/MemberKey;
 
     invoke-direct {v3, v5}, Lcom/flurry/org/codehaus/jackson/map/introspect/MemberKey;-><init>(Ljava/lang/reflect/Method;)V
 
     .line 591
-    .local v3, key:Lcom/flurry/org/codehaus/jackson/map/introspect/MemberKey;
+    .local v3, "key":Lcom/flurry/org/codehaus/jackson/map/introspect/MemberKey;
     const/4 v1, 0x0
 
-    .restart local v1       #i:I
+    .restart local v1    # "i":I
     :goto_3
     if-ge v1, v6, :cond_0
 
@@ -868,17 +859,15 @@
     goto :goto_1
 
     .line 599
-    .end local v1           #i:I
-    .end local v3           #key:Lcom/flurry/org/codehaus/jackson/map/introspect/MemberKey;
-    .end local v5           #m:Ljava/lang/reflect/Method;
+    .end local v1    # "i":I
+    .end local v3    # "key":Lcom/flurry/org/codehaus/jackson/map/introspect/MemberKey;
+    .end local v5    # "m":Ljava/lang/reflect/Method;
     :cond_4
     return-void
 .end method
 
 .method protected _addFieldMixIns(Ljava/lang/Class;Ljava/util/Map;)V
     .locals 11
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -894,32 +883,32 @@
 
     .prologue
     .line 726
-    .local p1, mixin:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
-    .local p2, fields:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedField;>;"
+    .local p1, "mixin":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
+    .local p2, "fields":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedField;>;"
     invoke-virtual {p1}, Ljava/lang/Class;->getDeclaredFields()[Ljava/lang/reflect/Field;
 
     move-result-object v1
 
-    .local v1, arr$:[Ljava/lang/reflect/Field;
+    .local v1, "arr$":[Ljava/lang/reflect/Field;
     array-length v5, v1
 
-    .local v5, len$:I
+    .local v5, "len$":I
     const/4 v3, 0x0
 
-    .local v3, i$:I
+    .local v3, "i$":I
     move v4, v3
 
-    .end local v1           #arr$:[Ljava/lang/reflect/Field;
-    .end local v3           #i$:I
-    .end local v5           #len$:I
-    .local v4, i$:I
+    .end local v1    # "arr$":[Ljava/lang/reflect/Field;
+    .end local v3    # "i$":I
+    .end local v5    # "len$":I
+    .local v4, "i$":I
     :goto_0
     if-ge v4, v5, :cond_3
 
     aget-object v8, v1, v4
 
     .line 730
-    .local v8, mixinField:Ljava/lang/reflect/Field;
+    .local v8, "mixinField":Ljava/lang/reflect/Field;
     invoke-direct {p0, v8}, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;->_isIncludableField(Ljava/lang/reflect/Field;)Z
 
     move-result v10
@@ -927,15 +916,15 @@
     if-nez v10, :cond_1
 
     .line 726
-    .end local v4           #i$:I
+    .end local v4    # "i$":I
     :cond_0
     add-int/lit8 v3, v4, 0x1
 
-    .restart local v3       #i$:I
+    .restart local v3    # "i$":I
     move v4, v3
 
-    .end local v3           #i$:I
-    .restart local v4       #i$:I
+    .end local v3    # "i$":I
+    .restart local v4    # "i$":I
     goto :goto_0
 
     .line 733
@@ -945,7 +934,7 @@
     move-result-object v9
 
     .line 735
-    .local v9, name:Ljava/lang/String;
+    .local v9, "name":Ljava/lang/String;
     invoke-interface {p2, v9}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v7
@@ -953,7 +942,7 @@
     check-cast v7, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedField;
 
     .line 736
-    .local v7, maskedField:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedField;
+    .local v7, "maskedField":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedField;
     if-eqz v7, :cond_0
 
     .line 737
@@ -961,21 +950,21 @@
 
     move-result-object v2
 
-    .local v2, arr$:[Ljava/lang/annotation/Annotation;
+    .local v2, "arr$":[Ljava/lang/annotation/Annotation;
     array-length v6, v2
 
-    .local v6, len$:I
+    .local v6, "len$":I
     const/4 v3, 0x0
 
-    .end local v4           #i$:I
-    .restart local v3       #i$:I
+    .end local v4    # "i$":I
+    .restart local v3    # "i$":I
     :goto_1
     if-ge v3, v6, :cond_0
 
     aget-object v0, v2, v3
 
     .line 738
-    .local v0, a:Ljava/lang/annotation/Annotation;
+    .local v0, "a":Ljava/lang/annotation/Annotation;
     iget-object v10, p0, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;->_annotationIntrospector:Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;
 
     invoke-virtual {v10, v0}, Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;->isHandled(Ljava/lang/annotation/Annotation;)Z
@@ -994,22 +983,20 @@
     goto :goto_1
 
     .line 744
-    .end local v0           #a:Ljava/lang/annotation/Annotation;
-    .end local v2           #arr$:[Ljava/lang/annotation/Annotation;
-    .end local v3           #i$:I
-    .end local v6           #len$:I
-    .end local v7           #maskedField:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedField;
-    .end local v8           #mixinField:Ljava/lang/reflect/Field;
-    .end local v9           #name:Ljava/lang/String;
-    .restart local v4       #i$:I
+    .end local v0    # "a":Ljava/lang/annotation/Annotation;
+    .end local v2    # "arr$":[Ljava/lang/annotation/Annotation;
+    .end local v3    # "i$":I
+    .end local v6    # "len$":I
+    .end local v7    # "maskedField":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedField;
+    .end local v8    # "mixinField":Ljava/lang/reflect/Field;
+    .end local v9    # "name":Ljava/lang/String;
+    .restart local v4    # "i$":I
     :cond_3
     return-void
 .end method
 
 .method protected _addFields(Ljava/util/Map;Ljava/lang/Class;)V
     .locals 8
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1025,14 +1012,14 @@
 
     .prologue
     .line 690
-    .local p1, fields:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedField;>;"
-    .local p2, c:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p1, "fields":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedField;>;"
+    .local p2, "c":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-virtual {p2}, Ljava/lang/Class;->getSuperclass()Ljava/lang/Class;
 
     move-result-object v5
 
     .line 691
-    .local v5, parent:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local v5, "parent":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     if-eqz v5, :cond_2
 
     .line 696
@@ -1043,20 +1030,20 @@
 
     move-result-object v0
 
-    .local v0, arr$:[Ljava/lang/reflect/Field;
+    .local v0, "arr$":[Ljava/lang/reflect/Field;
     array-length v3, v0
 
-    .local v3, len$:I
+    .local v3, "len$":I
     const/4 v2, 0x0
 
-    .local v2, i$:I
+    .local v2, "i$":I
     :goto_0
     if-ge v2, v3, :cond_1
 
     aget-object v1, v0, v2
 
     .line 699
-    .local v1, f:Ljava/lang/reflect/Field;
+    .local v1, "f":Ljava/lang/reflect/Field;
     invoke-direct {p0, v1}, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;->_isIncludableField(Ljava/lang/reflect/Field;)Z
 
     move-result v6
@@ -1084,7 +1071,7 @@
     goto :goto_1
 
     .line 710
-    .end local v1           #f:Ljava/lang/reflect/Field;
+    .end local v1    # "f":Ljava/lang/reflect/Field;
     :cond_1
     iget-object v6, p0, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;->_mixInResolver:Lcom/flurry/org/codehaus/jackson/map/ClassIntrospector$MixInResolver;
 
@@ -1098,28 +1085,26 @@
     move-result-object v4
 
     .line 712
-    .local v4, mixin:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local v4, "mixin":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     if-eqz v4, :cond_2
 
     .line 713
     invoke-virtual {p0, v4, p1}, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;->_addFieldMixIns(Ljava/lang/Class;Ljava/util/Map;)V
 
     .line 717
-    .end local v0           #arr$:[Ljava/lang/reflect/Field;
-    .end local v2           #i$:I
-    .end local v3           #len$:I
-    .end local v4           #mixin:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .end local v0    # "arr$":[Ljava/lang/reflect/Field;
+    .end local v2    # "i$":I
+    .end local v3    # "len$":I
+    .end local v4    # "mixin":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     :cond_2
     return-void
 .end method
 
 .method protected _addMemberMethods(Ljava/lang/Class;Lcom/flurry/org/codehaus/jackson/map/introspect/MethodFilter;Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethodMap;Ljava/lang/Class;Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethodMap;)V
     .locals 8
-    .parameter
-    .parameter "methodFilter"
-    .parameter "methods"
-    .parameter
-    .parameter "mixIns"
+    .param p2, "methodFilter"    # Lcom/flurry/org/codehaus/jackson/map/introspect/MethodFilter;
+    .param p3, "methods"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethodMap;
+    .param p5, "mixIns"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethodMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1136,8 +1121,8 @@
 
     .prologue
     .line 612
-    .local p1, cls:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
-    .local p4, mixInCls:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p1, "cls":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
+    .local p4, "mixInCls":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     if-eqz p4, :cond_0
 
     .line 613
@@ -1157,20 +1142,20 @@
 
     move-result-object v0
 
-    .local v0, arr$:[Ljava/lang/reflect/Method;
+    .local v0, "arr$":[Ljava/lang/reflect/Method;
     array-length v2, v0
 
-    .local v2, len$:I
+    .local v2, "len$":I
     const/4 v1, 0x0
 
-    .local v1, i$:I
+    .local v1, "i$":I
     :goto_0
     if-ge v1, v2, :cond_1
 
     aget-object v3, v0, v1
 
     .line 621
-    .local v3, m:Ljava/lang/reflect/Method;
+    .local v3, "m":Ljava/lang/reflect/Method;
     invoke-virtual {p0, v3, p2}, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;->_isIncludableMethod(Ljava/lang/reflect/Method;Lcom/flurry/org/codehaus/jackson/map/introspect/MethodFilter;)Z
 
     move-result v6
@@ -1191,7 +1176,7 @@
     move-result-object v5
 
     .line 625
-    .local v5, old:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
+    .local v5, "old":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
     if-nez v5, :cond_5
 
     .line 626
@@ -1200,7 +1185,7 @@
     move-result-object v4
 
     .line 627
-    .local v4, newM:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
+    .local v4, "newM":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
     invoke-virtual {p3, v4}, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethodMap;->add(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;)V
 
     .line 629
@@ -1223,7 +1208,7 @@
     goto :goto_1
 
     .line 637
-    .end local v4           #newM:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
+    .end local v4    # "newM":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
     :cond_5
     invoke-virtual {p0, v3, v5}, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;->_addMixUnders(Ljava/lang/reflect/Method;Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;)V
 
@@ -1260,10 +1245,9 @@
 
 .method protected _addMethodMixIns(Lcom/flurry/org/codehaus/jackson/map/introspect/MethodFilter;Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethodMap;Ljava/lang/Class;Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethodMap;)V
     .locals 6
-    .parameter "methodFilter"
-    .parameter "methods"
-    .parameter
-    .parameter "mixIns"
+    .param p1, "methodFilter"    # Lcom/flurry/org/codehaus/jackson/map/introspect/MethodFilter;
+    .param p2, "methods"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethodMap;
+    .param p4, "mixIns"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethodMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1278,25 +1262,25 @@
 
     .prologue
     .line 656
-    .local p3, mixInCls:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p3, "mixInCls":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-virtual {p3}, Ljava/lang/Class;->getDeclaredMethods()[Ljava/lang/reflect/Method;
 
     move-result-object v1
 
-    .local v1, arr$:[Ljava/lang/reflect/Method;
+    .local v1, "arr$":[Ljava/lang/reflect/Method;
     array-length v3, v1
 
-    .local v3, len$:I
+    .local v3, "len$":I
     const/4 v2, 0x0
 
-    .local v2, i$:I
+    .local v2, "i$":I
     :goto_0
     if-ge v2, v3, :cond_2
 
     aget-object v4, v1, v2
 
     .line 657
-    .local v4, m:Ljava/lang/reflect/Method;
+    .local v4, "m":Ljava/lang/reflect/Method;
     invoke-virtual {p0, v4, p1}, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;->_isIncludableMethod(Ljava/lang/reflect/Method;Lcom/flurry/org/codehaus/jackson/map/introspect/MethodFilter;)Z
 
     move-result v5
@@ -1316,7 +1300,7 @@
     move-result-object v0
 
     .line 665
-    .local v0, am:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
+    .local v0, "am":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
     if-eqz v0, :cond_1
 
     .line 666
@@ -1335,17 +1319,16 @@
     goto :goto_1
 
     .line 675
-    .end local v0           #am:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
-    .end local v4           #m:Ljava/lang/reflect/Method;
+    .end local v0    # "am":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
+    .end local v4    # "m":Ljava/lang/reflect/Method;
     :cond_2
     return-void
 .end method
 
 .method protected _addMixOvers(Ljava/lang/reflect/Constructor;Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedConstructor;Z)V
     .locals 8
-    .parameter
-    .parameter "target"
-    .parameter "addParamAnnotations"
+    .param p2, "target"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedConstructor;
+    .param p3, "addParamAnnotations"    # Z
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1358,25 +1341,25 @@
 
     .prologue
     .line 918
-    .local p1, mixin:Ljava/lang/reflect/Constructor;,"Ljava/lang/reflect/Constructor<*>;"
+    .local p1, "mixin":Ljava/lang/reflect/Constructor;, "Ljava/lang/reflect/Constructor<*>;"
     invoke-virtual {p1}, Ljava/lang/reflect/Constructor;->getDeclaredAnnotations()[Ljava/lang/annotation/Annotation;
 
     move-result-object v1
 
-    .local v1, arr$:[Ljava/lang/annotation/Annotation;
+    .local v1, "arr$":[Ljava/lang/annotation/Annotation;
     array-length v5, v1
 
-    .local v5, len$:I
+    .local v5, "len$":I
     const/4 v3, 0x0
 
-    .local v3, i$:I
+    .local v3, "i$":I
     :goto_0
     if-ge v3, v5, :cond_1
 
     aget-object v0, v1, v3
 
     .line 919
-    .local v0, a:Ljava/lang/annotation/Annotation;
+    .local v0, "a":Ljava/lang/annotation/Annotation;
     iget-object v7, p0, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;->_annotationIntrospector:Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;
 
     invoke-virtual {v7, v0}, Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;->isHandled(Ljava/lang/annotation/Annotation;)Z
@@ -1395,7 +1378,7 @@
     goto :goto_0
 
     .line 923
-    .end local v0           #a:Ljava/lang/annotation/Annotation;
+    .end local v0    # "a":Ljava/lang/annotation/Annotation;
     :cond_1
     if-eqz p3, :cond_3
 
@@ -1405,13 +1388,13 @@
     move-result-object v6
 
     .line 925
-    .local v6, pa:[[Ljava/lang/annotation/Annotation;
+    .local v6, "pa":[[Ljava/lang/annotation/Annotation;
     const/4 v2, 0x0
 
-    .local v2, i:I
+    .local v2, "i":I
     array-length v4, v6
 
-    .local v4, len:I
+    .local v4, "len":I
     :goto_1
     if-ge v2, v4, :cond_3
 
@@ -1428,7 +1411,7 @@
     aget-object v0, v1, v3
 
     .line 927
-    .restart local v0       #a:Ljava/lang/annotation/Annotation;
+    .restart local v0    # "a":Ljava/lang/annotation/Annotation;
     invoke-virtual {p2, v2, v0}, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedConstructor;->addOrOverrideParam(ILjava/lang/annotation/Annotation;)V
 
     .line 926
@@ -1437,25 +1420,25 @@
     goto :goto_2
 
     .line 925
-    .end local v0           #a:Ljava/lang/annotation/Annotation;
+    .end local v0    # "a":Ljava/lang/annotation/Annotation;
     :cond_2
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
     .line 931
-    .end local v2           #i:I
-    .end local v4           #len:I
-    .end local v6           #pa:[[Ljava/lang/annotation/Annotation;
+    .end local v2    # "i":I
+    .end local v4    # "len":I
+    .end local v6    # "pa":[[Ljava/lang/annotation/Annotation;
     :cond_3
     return-void
 .end method
 
 .method protected _addMixOvers(Ljava/lang/reflect/Method;Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;Z)V
     .locals 8
-    .parameter "mixin"
-    .parameter "target"
-    .parameter "addParamAnnotations"
+    .param p1, "mixin"    # Ljava/lang/reflect/Method;
+    .param p2, "target"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
+    .param p3, "addParamAnnotations"    # Z
 
     .prologue
     .line 940
@@ -1463,20 +1446,20 @@
 
     move-result-object v1
 
-    .local v1, arr$:[Ljava/lang/annotation/Annotation;
+    .local v1, "arr$":[Ljava/lang/annotation/Annotation;
     array-length v5, v1
 
-    .local v5, len$:I
+    .local v5, "len$":I
     const/4 v3, 0x0
 
-    .local v3, i$:I
+    .local v3, "i$":I
     :goto_0
     if-ge v3, v5, :cond_1
 
     aget-object v0, v1, v3
 
     .line 941
-    .local v0, a:Ljava/lang/annotation/Annotation;
+    .local v0, "a":Ljava/lang/annotation/Annotation;
     iget-object v7, p0, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;->_annotationIntrospector:Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;
 
     invoke-virtual {v7, v0}, Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;->isHandled(Ljava/lang/annotation/Annotation;)Z
@@ -1495,7 +1478,7 @@
     goto :goto_0
 
     .line 945
-    .end local v0           #a:Ljava/lang/annotation/Annotation;
+    .end local v0    # "a":Ljava/lang/annotation/Annotation;
     :cond_1
     if-eqz p3, :cond_3
 
@@ -1505,13 +1488,13 @@
     move-result-object v6
 
     .line 947
-    .local v6, pa:[[Ljava/lang/annotation/Annotation;
+    .local v6, "pa":[[Ljava/lang/annotation/Annotation;
     const/4 v2, 0x0
 
-    .local v2, i:I
+    .local v2, "i":I
     array-length v4, v6
 
-    .local v4, len:I
+    .local v4, "len":I
     :goto_1
     if-ge v2, v4, :cond_3
 
@@ -1528,7 +1511,7 @@
     aget-object v0, v1, v3
 
     .line 949
-    .restart local v0       #a:Ljava/lang/annotation/Annotation;
+    .restart local v0    # "a":Ljava/lang/annotation/Annotation;
     invoke-virtual {p2, v2, v0}, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;->addOrOverrideParam(ILjava/lang/annotation/Annotation;)V
 
     .line 948
@@ -1537,24 +1520,24 @@
     goto :goto_2
 
     .line 947
-    .end local v0           #a:Ljava/lang/annotation/Annotation;
+    .end local v0    # "a":Ljava/lang/annotation/Annotation;
     :cond_2
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
     .line 953
-    .end local v2           #i:I
-    .end local v4           #len:I
-    .end local v6           #pa:[[Ljava/lang/annotation/Annotation;
+    .end local v2    # "i":I
+    .end local v4    # "len":I
+    .end local v6    # "pa":[[Ljava/lang/annotation/Annotation;
     :cond_3
     return-void
 .end method
 
 .method protected _addMixUnders(Ljava/lang/reflect/Method;Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;)V
     .locals 5
-    .parameter "src"
-    .parameter "target"
+    .param p1, "src"    # Ljava/lang/reflect/Method;
+    .param p2, "target"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
 
     .prologue
     .line 961
@@ -1562,20 +1545,20 @@
 
     move-result-object v1
 
-    .local v1, arr$:[Ljava/lang/annotation/Annotation;
+    .local v1, "arr$":[Ljava/lang/annotation/Annotation;
     array-length v3, v1
 
-    .local v3, len$:I
+    .local v3, "len$":I
     const/4 v2, 0x0
 
-    .local v2, i$:I
+    .local v2, "i$":I
     :goto_0
     if-ge v2, v3, :cond_1
 
     aget-object v0, v1, v2
 
     .line 962
-    .local v0, a:Ljava/lang/annotation/Annotation;
+    .local v0, "a":Ljava/lang/annotation/Annotation;
     iget-object v4, p0, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;->_annotationIntrospector:Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;
 
     invoke-virtual {v4, v0}, Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;->isHandled(Ljava/lang/annotation/Annotation;)Z
@@ -1594,14 +1577,14 @@
     goto :goto_0
 
     .line 966
-    .end local v0           #a:Ljava/lang/annotation/Annotation;
+    .end local v0    # "a":Ljava/lang/annotation/Annotation;
     :cond_1
     return-void
 .end method
 
 .method protected _collectRelevantAnnotations([Ljava/lang/annotation/Annotation;)Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;
     .locals 6
-    .parameter "anns"
+    .param p1, "anns"    # [Ljava/lang/annotation/Annotation;
 
     .prologue
     .line 842
@@ -1610,26 +1593,26 @@
     invoke-direct {v1}, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;-><init>()V
 
     .line 843
-    .local v1, annMap:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;
+    .local v1, "annMap":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;
     if-eqz p1, :cond_1
 
     .line 844
     move-object v2, p1
 
-    .local v2, arr$:[Ljava/lang/annotation/Annotation;
+    .local v2, "arr$":[Ljava/lang/annotation/Annotation;
     array-length v4, v2
 
-    .local v4, len$:I
+    .local v4, "len$":I
     const/4 v3, 0x0
 
-    .local v3, i$:I
+    .local v3, "i$":I
     :goto_0
     if-ge v3, v4, :cond_1
 
     aget-object v0, v2, v3
 
     .line 845
-    .local v0, a:Ljava/lang/annotation/Annotation;
+    .local v0, "a":Ljava/lang/annotation/Annotation;
     iget-object v5, p0, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;->_annotationIntrospector:Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;
 
     invoke-virtual {v5, v0}, Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;->isHandled(Ljava/lang/annotation/Annotation;)Z
@@ -1648,31 +1631,31 @@
     goto :goto_0
 
     .line 850
-    .end local v0           #a:Ljava/lang/annotation/Annotation;
-    .end local v2           #arr$:[Ljava/lang/annotation/Annotation;
-    .end local v3           #i$:I
-    .end local v4           #len$:I
+    .end local v0    # "a":Ljava/lang/annotation/Annotation;
+    .end local v2    # "arr$":[Ljava/lang/annotation/Annotation;
+    .end local v3    # "i$":I
+    .end local v4    # "len$":I
     :cond_1
     return-object v1
 .end method
 
 .method protected _collectRelevantAnnotations([[Ljava/lang/annotation/Annotation;)[Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;
     .locals 4
-    .parameter "anns"
+    .param p1, "anns"    # [[Ljava/lang/annotation/Annotation;
 
     .prologue
     .line 832
     array-length v1, p1
 
     .line 833
-    .local v1, len:I
+    .local v1, "len":I
     new-array v2, v1, [Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;
 
     .line 834
-    .local v2, result:[Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;
+    .local v2, "result":[Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;
     const/4 v0, 0x0
 
-    .local v0, i:I
+    .local v0, "i":I
     :goto_0
     if-ge v0, v1, :cond_0
 
@@ -1697,8 +1680,7 @@
 
 .method protected _constructConstructor(Ljava/lang/reflect/Constructor;Z)Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedConstructor;
     .locals 8
-    .parameter
-    .parameter "defaultCtor"
+    .param p2, "defaultCtor"    # Z
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1709,7 +1691,7 @@
     .end annotation
 
     .prologue
-    .local p1, ctor:Ljava/lang/reflect/Constructor;,"Ljava/lang/reflect/Constructor<*>;"
+    .local p1, "ctor":Ljava/lang/reflect/Constructor;, "Ljava/lang/reflect/Constructor<*>;"
     const/4 v7, 0x0
 
     .line 766
@@ -1768,7 +1750,7 @@
     move-result-object v2
 
     .line 773
-    .local v2, paramAnns:[[Ljava/lang/annotation/Annotation;
+    .local v2, "paramAnns":[[Ljava/lang/annotation/Annotation;
     invoke-virtual {p1}, Ljava/lang/reflect/Constructor;->getParameterTypes()[Ljava/lang/Class;
 
     move-result-object v5
@@ -1776,11 +1758,11 @@
     array-length v3, v5
 
     .line 780
-    .local v3, paramCount:I
+    .local v3, "paramCount":I
     const/4 v4, 0x0
 
     .line 781
-    .local v4, resolvedAnnotations:[Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;
+    .local v4, "resolvedAnnotations":[Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;
     array-length v5, v2
 
     if-eq v3, v5, :cond_4
@@ -1791,7 +1773,7 @@
     move-result-object v0
 
     .line 787
-    .local v0, dc:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local v0, "dc":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-virtual {v0}, Ljava/lang/Class;->isEnum()Z
 
     move-result v5
@@ -1808,7 +1790,7 @@
     move-object v1, v2
 
     .line 789
-    .local v1, old:[[Ljava/lang/annotation/Annotation;
+    .local v1, "old":[[Ljava/lang/annotation/Annotation;
     array-length v5, v1
 
     add-int/lit8 v5, v5, 0x2
@@ -1828,7 +1810,7 @@
     move-result-object v4
 
     .line 802
-    .end local v1           #old:[[Ljava/lang/annotation/Annotation;
+    .end local v1    # "old":[[Ljava/lang/annotation/Annotation;
     :cond_2
     :goto_1
     if-nez v4, :cond_5
@@ -1913,7 +1895,7 @@
     move-object v1, v2
 
     .line 797
-    .restart local v1       #old:[[Ljava/lang/annotation/Annotation;
+    .restart local v1    # "old":[[Ljava/lang/annotation/Annotation;
     array-length v5, v1
 
     add-int/lit8 v5, v5, 0x1
@@ -1935,8 +1917,8 @@
     goto :goto_1
 
     .line 807
-    .end local v0           #dc:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
-    .end local v1           #old:[[Ljava/lang/annotation/Annotation;
+    .end local v0    # "dc":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
+    .end local v1    # "old":[[Ljava/lang/annotation/Annotation;
     :cond_4
     invoke-virtual {p0, v2}, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;->_collectRelevantAnnotations([[Ljava/lang/annotation/Annotation;)[Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;
 
@@ -1961,7 +1943,7 @@
 
 .method protected _constructCreatorMethod(Ljava/lang/reflect/Method;)Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
     .locals 3
-    .parameter "m"
+    .param p1, "m"    # Ljava/lang/reflect/Method;
 
     .prologue
     .line 815
@@ -2018,7 +2000,7 @@
 
 .method protected _constructField(Ljava/lang/reflect/Field;)Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedField;
     .locals 2
-    .parameter "f"
+    .param p1, "f"    # Ljava/lang/reflect/Field;
 
     .prologue
     .line 824
@@ -2057,7 +2039,7 @@
 
 .method protected _constructMethod(Ljava/lang/reflect/Method;)Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
     .locals 3
-    .parameter "m"
+    .param p1, "m"    # Ljava/lang/reflect/Method;
 
     .prologue
     const/4 v2, 0x0
@@ -2098,8 +2080,8 @@
 
 .method protected _isIncludableMethod(Ljava/lang/reflect/Method;Lcom/flurry/org/codehaus/jackson/map/introspect/MethodFilter;)Z
     .locals 2
-    .parameter "m"
-    .parameter "filter"
+    .param p1, "m"    # Ljava/lang/reflect/Method;
+    .param p2, "filter"    # Lcom/flurry/org/codehaus/jackson/map/introspect/MethodFilter;
 
     .prologue
     const/4 v1, 0x0
@@ -2181,8 +2163,7 @@
 
 .method public findMethod(Ljava/lang/String;[Ljava/lang/Class;)Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
     .locals 1
-    .parameter "name"
-    .parameter
+    .param p1, "name"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -2196,7 +2177,7 @@
 
     .prologue
     .line 234
-    .local p2, paramTypes:[Ljava/lang/Class;,"[Ljava/lang/Class<*>;"
+    .local p2, "paramTypes":[Ljava/lang/Class;, "[Ljava/lang/Class<*>;"
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;->_memberMethods:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethodMap;
 
     invoke-virtual {v0, p1, p2}, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethodMap;->find(Ljava/lang/String;[Ljava/lang/Class;)Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
@@ -2247,7 +2228,6 @@
 
 .method public getAnnotation(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<A::",
@@ -2260,7 +2240,7 @@
 
     .prologue
     .line 170
-    .local p1, acls:Ljava/lang/Class;,"Ljava/lang/Class<TA;>;"
+    .local p1, "acls":Ljava/lang/Class;, "Ljava/lang/Class<TA;>;"
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;->_classAnnotations:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;
 
     if-nez v0, :cond_0
@@ -2547,20 +2527,20 @@
 
     move-result-object v1
 
-    .local v1, arr$:[Ljava/lang/annotation/Annotation;
+    .local v1, "arr$":[Ljava/lang/annotation/Annotation;
     array-length v5, v1
 
-    .local v5, len$:I
+    .local v5, "len$":I
     const/4 v3, 0x0
 
-    .local v3, i$:I
+    .local v3, "i$":I
     :goto_1
     if-ge v3, v5, :cond_3
 
     aget-object v0, v1, v3
 
     .line 277
-    .local v0, a:Ljava/lang/annotation/Annotation;
+    .local v0, "a":Ljava/lang/annotation/Annotation;
     iget-object v6, p0, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;->_annotationIntrospector:Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;
 
     invoke-virtual {v6, v0}, Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;->isHandled(Ljava/lang/annotation/Annotation;)Z
@@ -2581,7 +2561,7 @@
     goto :goto_1
 
     .line 283
-    .end local v0           #a:Ljava/lang/annotation/Annotation;
+    .end local v0    # "a":Ljava/lang/annotation/Annotation;
     :cond_3
     iget-object v6, p0, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;->_superTypes:Ljava/util/List;
 
@@ -2589,7 +2569,7 @@
 
     move-result-object v3
 
-    .end local v3           #i$:I
+    .end local v3    # "i$":I
     :cond_4
     invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
 
@@ -2604,7 +2584,7 @@
     check-cast v2, Ljava/lang/Class;
 
     .line 285
-    .local v2, cls:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local v2, "cls":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     iget-object v6, p0, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;->_classAnnotations:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;
 
     invoke-virtual {p0, v6, v2}, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;->_addClassMixIns(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;Ljava/lang/Class;)V
@@ -2618,14 +2598,14 @@
 
     const/4 v4, 0x0
 
-    .local v4, i$:I
+    .local v4, "i$":I
     :goto_2
     if-ge v4, v5, :cond_4
 
     aget-object v0, v1, v4
 
     .line 287
-    .restart local v0       #a:Ljava/lang/annotation/Annotation;
+    .restart local v0    # "a":Ljava/lang/annotation/Annotation;
     iget-object v6, p0, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;->_annotationIntrospector:Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;
 
     invoke-virtual {v6, v0}, Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;->isHandled(Ljava/lang/annotation/Annotation;)Z
@@ -2646,9 +2626,9 @@
     goto :goto_2
 
     .line 301
-    .end local v0           #a:Ljava/lang/annotation/Annotation;
-    .end local v2           #cls:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
-    .end local v4           #i$:I
+    .end local v0    # "a":Ljava/lang/annotation/Annotation;
+    .end local v2    # "cls":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
+    .end local v4    # "i$":I
     :cond_6
     iget-object v6, p0, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;->_classAnnotations:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;
 
@@ -2661,7 +2641,7 @@
 
 .method public resolveCreators(Z)V
     .locals 13
-    .parameter "includeAll"
+    .param p1, "includeAll"    # Z
 
     .prologue
     const/4 v12, 0x1
@@ -2679,23 +2659,23 @@
     move-result-object v3
 
     .line 319
-    .local v3, declaredCtors:[Ljava/lang/reflect/Constructor;,"[Ljava/lang/reflect/Constructor<*>;"
+    .local v3, "declaredCtors":[Ljava/lang/reflect/Constructor;, "[Ljava/lang/reflect/Constructor<*>;"
     move-object v1, v3
 
-    .local v1, arr$:[Ljava/lang/reflect/Constructor;
+    .local v1, "arr$":[Ljava/lang/reflect/Constructor;
     array-length v6, v1
 
-    .local v6, len$:I
+    .local v6, "len$":I
     const/4 v5, 0x0
 
-    .local v5, i$:I
+    .local v5, "i$":I
     :goto_0
     if-ge v5, v6, :cond_3
 
     aget-object v2, v1, v5
 
     .line 320
-    .local v2, ctor:Ljava/lang/reflect/Constructor;,"Ljava/lang/reflect/Constructor<*>;"
+    .local v2, "ctor":Ljava/lang/reflect/Constructor;, "Ljava/lang/reflect/Constructor<*>;"
     invoke-virtual {v2}, Ljava/lang/reflect/Constructor;->getParameterTypes()[Ljava/lang/Class;
 
     move-result-object v8
@@ -2757,7 +2737,7 @@
     goto :goto_1
 
     .line 332
-    .end local v2           #ctor:Ljava/lang/reflect/Constructor;,"Ljava/lang/reflect/Constructor<*>;"
+    .end local v2    # "ctor":Ljava/lang/reflect/Constructor;, "Ljava/lang/reflect/Constructor<*>;"
     :cond_3
     iget-object v8, p0, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;->_primaryMixIn:Ljava/lang/Class;
 
@@ -2816,7 +2796,7 @@
 
     move-result v4
 
-    .local v4, i:I
+    .local v4, "i":I
     :cond_7
     :goto_2
     add-int/lit8 v4, v4, -0x1
@@ -2848,7 +2828,7 @@
     goto :goto_2
 
     .line 359
-    .end local v4           #i:I
+    .end local v4    # "i":I
     :cond_8
     iput-object v11, p0, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;->_creatorMethods:Ljava/util/List;
 
@@ -2862,7 +2842,7 @@
 
     move-result-object v1
 
-    .local v1, arr$:[Ljava/lang/reflect/Method;
+    .local v1, "arr$":[Ljava/lang/reflect/Method;
     array-length v6, v1
 
     const/4 v5, 0x0
@@ -2873,7 +2853,7 @@
     aget-object v7, v1, v5
 
     .line 364
-    .local v7, m:Ljava/lang/reflect/Method;
+    .local v7, "m":Ljava/lang/reflect/Method;
     invoke-virtual {v7}, Ljava/lang/reflect/Method;->getModifiers()I
 
     move-result v8
@@ -2900,7 +2880,7 @@
     array-length v0, v8
 
     .line 369
-    .local v0, argCount:I
+    .local v0, "argCount":I
     if-lt v0, v12, :cond_9
 
     .line 372
@@ -2930,8 +2910,8 @@
     goto :goto_4
 
     .line 378
-    .end local v0           #argCount:I
-    .end local v7           #m:Ljava/lang/reflect/Method;
+    .end local v0    # "argCount":I
+    .end local v7    # "m":Ljava/lang/reflect/Method;
     :cond_c
     iget-object v8, p0, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;->_primaryMixIn:Ljava/lang/Class;
 
@@ -2964,7 +2944,7 @@
 
     move-result v4
 
-    .restart local v4       #i:I
+    .restart local v4    # "i":I
     :cond_e
     :goto_5
     add-int/lit8 v4, v4, -0x1
@@ -2996,8 +2976,8 @@
     goto :goto_5
 
     .line 393
-    .end local v1           #arr$:[Ljava/lang/reflect/Method;
-    .end local v4           #i:I
+    .end local v1    # "arr$":[Ljava/lang/reflect/Method;
+    .end local v4    # "i":I
     :cond_f
     return-void
 .end method
@@ -3012,7 +2992,7 @@
     invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
 
     .line 457
-    .local v0, foundFields:Ljava/util/LinkedHashMap;,"Ljava/util/LinkedHashMap<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedField;>;"
+    .local v0, "foundFields":Ljava/util/LinkedHashMap;, "Ljava/util/LinkedHashMap<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedField;>;"
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;->_class:Ljava/lang/Class;
 
     invoke-virtual {p0, v0, v1}, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;->_addFields(Ljava/util/Map;Ljava/lang/Class;)V
@@ -3061,7 +3041,7 @@
 
 .method public resolveFields(Z)V
     .locals 0
-    .parameter "collectIgnored"
+    .param p1, "collectIgnored"    # Z
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -3075,7 +3055,7 @@
 
 .method public resolveMemberMethods(Lcom/flurry/org/codehaus/jackson/map/introspect/MethodFilter;)V
     .locals 12
-    .parameter "methodFilter"
+    .param p1, "methodFilter"    # Lcom/flurry/org/codehaus/jackson/map/introspect/MethodFilter;
 
     .prologue
     const-class v11, Ljava/lang/Object;
@@ -3093,7 +3073,7 @@
     invoke-direct {v5}, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethodMap;-><init>()V
 
     .line 408
-    .local v5, mixins:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethodMap;
+    .local v5, "mixins":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethodMap;
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;->_class:Ljava/lang/Class;
 
     iget-object v3, p0, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;->_memberMethods:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethodMap;
@@ -3113,7 +3093,7 @@
 
     move-result-object v7
 
-    .local v7, i$:Ljava/util/Iterator;
+    .local v7, "i$":Ljava/util/Iterator;
     :goto_0
     invoke-interface {v7}, Ljava/util/Iterator;->hasNext()Z
 
@@ -3128,7 +3108,7 @@
     check-cast v1, Ljava/lang/Class;
 
     .line 412
-    .local v1, cls:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local v1, "cls":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;->_mixInResolver:Lcom/flurry/org/codehaus/jackson/map/ClassIntrospector$MixInResolver;
 
     if-nez v0, :cond_0
@@ -3138,7 +3118,7 @@
     move-object v4, v0
 
     .line 413
-    .local v4, mixin:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local v4, "mixin":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     :goto_1
     iget-object v3, p0, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;->_memberMethods:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethodMap;
 
@@ -3151,7 +3131,7 @@
     goto :goto_0
 
     .line 412
-    .end local v4           #mixin:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .end local v4    # "mixin":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     :cond_0
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;->_mixInResolver:Lcom/flurry/org/codehaus/jackson/map/ClassIntrospector$MixInResolver;
 
@@ -3164,7 +3144,7 @@
     goto :goto_1
 
     .line 416
-    .end local v1           #cls:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .end local v1    # "cls":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     :cond_1
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;->_mixInResolver:Lcom/flurry/org/codehaus/jackson/map/ClassIntrospector$MixInResolver;
 
@@ -3180,7 +3160,7 @@
     move-result-object v4
 
     .line 418
-    .restart local v4       #mixin:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .restart local v4    # "mixin":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     if-eqz v4, :cond_2
 
     .line 419
@@ -3189,7 +3169,7 @@
     invoke-virtual {p0, p1, v0, v4, v5}, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;->_addMethodMixIns(Lcom/flurry/org/codehaus/jackson/map/introspect/MethodFilter;Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethodMap;Ljava/lang/Class;Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethodMap;)V
 
     .line 429
-    .end local v4           #mixin:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .end local v4    # "mixin":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     :cond_2
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;->_annotationIntrospector:Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;
 
@@ -3208,7 +3188,7 @@
     move-result-object v8
 
     .line 432
-    .local v8, it:Ljava/util/Iterator;,"Ljava/util/Iterator<Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;>;"
+    .local v8, "it":Ljava/util/Iterator;, "Ljava/util/Iterator<Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;>;"
     :cond_3
     :goto_2
     invoke-interface {v8}, Ljava/util/Iterator;->hasNext()Z
@@ -3225,7 +3205,7 @@
     check-cast v10, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
 
     .line 435
-    .local v10, mixIn:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
+    .local v10, "mixIn":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
     :try_start_0
     const-class v0, Ljava/lang/Object;
 
@@ -3242,7 +3222,7 @@
     move-result-object v9
 
     .line 436
-    .local v9, m:Ljava/lang/reflect/Method;
+    .local v9, "m":Ljava/lang/reflect/Method;
     if-eqz v9, :cond_3
 
     .line 437
@@ -3251,7 +3231,7 @@
     move-result-object v6
 
     .line 438
-    .local v6, am:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
+    .local v6, "am":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
     invoke-virtual {v10}, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;->getAnnotated()Ljava/lang/reflect/Method;
 
     move-result-object v0
@@ -3270,24 +3250,24 @@
     goto :goto_2
 
     .line 441
-    .end local v6           #am:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
-    .end local v9           #m:Ljava/lang/reflect/Method;
+    .end local v6    # "am":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
+    .end local v9    # "m":Ljava/lang/reflect/Method;
     :catch_0
     move-exception v0
 
     goto :goto_2
 
     .line 445
-    .end local v8           #it:Ljava/util/Iterator;,"Ljava/util/Iterator<Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;>;"
-    .end local v10           #mixIn:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
+    .end local v8    # "it":Ljava/util/Iterator;, "Ljava/util/Iterator<Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;>;"
+    .end local v10    # "mixIn":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
     :cond_4
     return-void
 .end method
 
 .method public resolveMemberMethods(Lcom/flurry/org/codehaus/jackson/map/introspect/MethodFilter;Z)V
     .locals 0
-    .parameter "methodFilter"
-    .parameter "collectIgnored"
+    .param p1, "methodFilter"    # Lcom/flurry/org/codehaus/jackson/map/introspect/MethodFilter;
+    .param p2, "collectIgnored"    # Z
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -3339,7 +3319,7 @@
 
 .method public bridge synthetic withAnnotations(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;)Lcom/flurry/org/codehaus/jackson/map/introspect/Annotated;
     .locals 1
-    .parameter "x0"
+    .param p1, "x0"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;
 
     .prologue
     .line 12
@@ -3352,7 +3332,7 @@
 
 .method public withAnnotations(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;)Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;
     .locals 6
-    .parameter "ann"
+    .param p1, "ann"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;
 
     .prologue
     .line 120

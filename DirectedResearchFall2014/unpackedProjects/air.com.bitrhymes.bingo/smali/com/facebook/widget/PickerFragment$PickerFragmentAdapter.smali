@@ -31,12 +31,11 @@
 # direct methods
 .method public constructor <init>(Lcom/facebook/widget/PickerFragment;Landroid/content/Context;)V
     .locals 0
-    .parameter
-    .parameter "context"
+    .param p2, "context"    # Landroid/content/Context;
 
     .prologue
     .line 1055
-    .local p0, this:Lcom/facebook/widget/PickerFragment$PickerFragmentAdapter;,"Lcom/facebook/widget/PickerFragment<TT;>.PickerFragmentAdapter<TU;>;"
+    .local p0, "this":Lcom/facebook/widget/PickerFragment$PickerFragmentAdapter;, "Lcom/facebook/widget/PickerFragment<TT;>.PickerFragmentAdapter<TU;>;"
     iput-object p1, p0, Lcom/facebook/widget/PickerFragment$PickerFragmentAdapter;->this$0:Lcom/facebook/widget/PickerFragment;
 
     .line 1056
@@ -50,14 +49,14 @@
 # virtual methods
 .method isGraphObjectSelected(Ljava/lang/String;)Z
     .locals 1
-    .parameter "graphObjectId"
+    .param p1, "graphObjectId"    # Ljava/lang/String;
 
     .prologue
     .line 1061
-    .local p0, this:Lcom/facebook/widget/PickerFragment$PickerFragmentAdapter;,"Lcom/facebook/widget/PickerFragment<TT;>.PickerFragmentAdapter<TU;>;"
+    .local p0, "this":Lcom/facebook/widget/PickerFragment$PickerFragmentAdapter;, "Lcom/facebook/widget/PickerFragment<TT;>.PickerFragmentAdapter<TU;>;"
     iget-object v0, p0, Lcom/facebook/widget/PickerFragment$PickerFragmentAdapter;->this$0:Lcom/facebook/widget/PickerFragment;
 
-    #getter for: Lcom/facebook/widget/PickerFragment;->selectionStrategy:Lcom/facebook/widget/PickerFragment$SelectionStrategy;
+    # getter for: Lcom/facebook/widget/PickerFragment;->selectionStrategy:Lcom/facebook/widget/PickerFragment$SelectionStrategy;
     invoke-static {v0}, Lcom/facebook/widget/PickerFragment;->access$3(Lcom/facebook/widget/PickerFragment;)Lcom/facebook/widget/PickerFragment$SelectionStrategy;
 
     move-result-object v0
@@ -71,12 +70,12 @@
 
 .method updateCheckboxState(Landroid/widget/CheckBox;Z)V
     .locals 2
-    .parameter "checkBox"
-    .parameter "graphObjectSelected"
+    .param p1, "checkBox"    # Landroid/widget/CheckBox;
+    .param p2, "graphObjectSelected"    # Z
 
     .prologue
     .line 1066
-    .local p0, this:Lcom/facebook/widget/PickerFragment$PickerFragmentAdapter;,"Lcom/facebook/widget/PickerFragment<TT;>.PickerFragmentAdapter<TU;>;"
+    .local p0, "this":Lcom/facebook/widget/PickerFragment$PickerFragmentAdapter;, "Lcom/facebook/widget/PickerFragment<TT;>.PickerFragmentAdapter<TU;>;"
     invoke-virtual {p1, p2}, Landroid/widget/CheckBox;->setChecked(Z)V
 
     .line 1067
@@ -84,7 +83,7 @@
 
     iget-object v1, p0, Lcom/facebook/widget/PickerFragment$PickerFragmentAdapter;->this$0:Lcom/facebook/widget/PickerFragment;
 
-    #getter for: Lcom/facebook/widget/PickerFragment;->selectionStrategy:Lcom/facebook/widget/PickerFragment$SelectionStrategy;
+    # getter for: Lcom/facebook/widget/PickerFragment;->selectionStrategy:Lcom/facebook/widget/PickerFragment$SelectionStrategy;
     invoke-static {v1}, Lcom/facebook/widget/PickerFragment;->access$3(Lcom/facebook/widget/PickerFragment;)Lcom/facebook/widget/PickerFragment$SelectionStrategy;
 
     move-result-object v1
@@ -102,7 +101,7 @@
     move v0, v1
 
     .line 1069
-    .local v0, visible:I
+    .local v0, "visible":I
     :goto_0
     invoke-virtual {p1, v0}, Landroid/widget/CheckBox;->setVisibility(I)V
 
@@ -110,7 +109,7 @@
     return-void
 
     .line 1068
-    .end local v0           #visible:I
+    .end local v0    # "visible":I
     :cond_1
     const/16 v1, 0x8
 

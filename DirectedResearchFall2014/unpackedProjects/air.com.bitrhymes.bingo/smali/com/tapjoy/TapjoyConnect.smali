@@ -74,11 +74,10 @@
 
 .method private constructor <init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/util/Hashtable;Lcom/tapjoy/TapjoyConnectNotifier;)V
     .locals 0
-    .parameter "context"
-    .parameter "appID"
-    .parameter "secretKey"
-    .parameter
-    .parameter "notifier"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "appID"    # Ljava/lang/String;
+    .param p3, "secretKey"    # Ljava/lang/String;
+    .param p5, "notifier"    # Lcom/tapjoy/TapjoyConnectNotifier;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -103,7 +102,7 @@
 
     .prologue
     .line 182
-    .local p4, flags:Ljava/util/Hashtable;,"Ljava/util/Hashtable<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p4, "flags":Ljava/util/Hashtable;, "Ljava/util/Hashtable<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 183
@@ -115,7 +114,7 @@
 
 .method public static enableLogging(Z)V
     .locals 0
-    .parameter "enable"
+    .param p0, "enable"    # Z
 
     .prologue
     .line 64
@@ -168,9 +167,9 @@
 
 .method public static requestTapjoyConnect(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Z
     .locals 1
-    .parameter "context"
-    .parameter "appID"
-    .parameter "secretKey"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "appID"    # Ljava/lang/String;
+    .param p2, "secretKey"    # Ljava/lang/String;
 
     .prologue
     .line 80
@@ -185,10 +184,9 @@
 
 .method public static requestTapjoyConnect(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/util/Hashtable;)Z
     .locals 1
-    .parameter "context"
-    .parameter "appID"
-    .parameter "secretKey"
-    .parameter
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "appID"    # Ljava/lang/String;
+    .param p2, "secretKey"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -205,7 +203,7 @@
 
     .prologue
     .line 99
-    .local p3, flags:Ljava/util/Hashtable;,"Ljava/util/Hashtable<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p3, "flags":Ljava/util/Hashtable;, "Ljava/util/Hashtable<Ljava/lang/String;Ljava/lang/String;>;"
     const/4 v0, 0x0
 
     invoke-static {p0, p1, p2, p3, v0}, Lcom/tapjoy/TapjoyConnect;->requestTapjoyConnect(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/util/Hashtable;Lcom/tapjoy/TapjoyConnectNotifier;)Z
@@ -217,11 +215,10 @@
 
 .method public static requestTapjoyConnect(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/util/Hashtable;Lcom/tapjoy/TapjoyConnectNotifier;)Z
     .locals 9
-    .parameter "context"
-    .parameter "appID"
-    .parameter "secretKey"
-    .parameter
-    .parameter "notifier"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "appID"    # Ljava/lang/String;
+    .param p2, "secretKey"    # Ljava/lang/String;
+    .param p4, "notifier"    # Lcom/tapjoy/TapjoyConnectNotifier;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -239,7 +236,7 @@
     .end annotation
 
     .prologue
-    .local p3, flags:Ljava/util/Hashtable;,"Ljava/util/Hashtable<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p3, "flags":Ljava/util/Hashtable;, "Ljava/util/Hashtable<Ljava/lang/String;Ljava/lang/String;>;"
     const/4 v7, 0x0
 
     const-string v8, "TapjoyConnect"
@@ -337,7 +334,7 @@
     move-object v6, v0
 
     .line 128
-    .local v6, e:Lcom/tapjoy/TapjoyIntegrationException;
+    .local v6, "e":Lcom/tapjoy/TapjoyIntegrationException;
     const-string v0, "TapjoyConnect"
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -377,14 +374,14 @@
     goto :goto_0
 
     .line 133
-    .end local v6           #e:Lcom/tapjoy/TapjoyIntegrationException;
+    .end local v6    # "e":Lcom/tapjoy/TapjoyIntegrationException;
     :catch_1
     move-exception v0
 
     move-object v6, v0
 
     .line 135
-    .local v6, e:Lcom/tapjoy/TapjoyException;
+    .local v6, "e":Lcom/tapjoy/TapjoyException;
     const-string v0, "TapjoyConnect"
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -426,8 +423,8 @@
 
 .method public static setFlagKeyValue(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
-    .parameter "key"
-    .parameter "value"
+    .param p0, "key"    # Ljava/lang/String;
+    .param p1, "value"    # Ljava/lang/String;
 
     .prologue
     .line 45
@@ -456,7 +453,7 @@
 # virtual methods
 .method public actionComplete(Ljava/lang/String;)V
     .locals 1
-    .parameter "actionID"
+    .param p1, "actionID"    # Ljava/lang/String;
 
     .prologue
     .line 294
@@ -502,8 +499,8 @@
 
 .method public awardTapPoints(ILcom/tapjoy/TapjoyAwardPointsNotifier;)V
     .locals 1
-    .parameter "amount"
-    .parameter "notifier"
+    .param p1, "amount"    # I
+    .param p2, "notifier"    # Lcom/tapjoy/TapjoyAwardPointsNotifier;
 
     .prologue
     .line 374
@@ -530,7 +527,7 @@
 
 .method public enableBannerAdAutoRefresh(Z)V
     .locals 1
-    .parameter "shouldAutoRefresh"
+    .param p1, "shouldAutoRefresh"    # Z
 
     .prologue
     .line 580
@@ -544,7 +541,7 @@
 
 .method public enableDisplayAdAutoRefresh(Z)V
     .locals 1
-    .parameter "shouldAutoRefresh"
+    .param p1, "shouldAutoRefresh"    # Z
 
     .prologue
     .line 568
@@ -558,7 +555,7 @@
 
 .method public enablePaidAppWithActionID(Ljava/lang/String;)V
     .locals 1
-    .parameter "paidAppPayPerActionID"
+    .param p1, "paidAppPayPerActionID"    # Ljava/lang/String;
 
     .prologue
     .line 247
@@ -574,7 +571,7 @@
 
 .method public enableVideoCache(Z)V
     .locals 1
-    .parameter "enable"
+    .param p1, "enable"    # Z
 
     .prologue
     .line 670
@@ -616,7 +613,7 @@
 
 .method public getDailyRewardAd(Lcom/tapjoy/TapjoyDailyRewardAdNotifier;)V
     .locals 1
-    .parameter "notifier"
+    .param p1, "notifier"    # Lcom/tapjoy/TapjoyDailyRewardAdNotifier;
 
     .prologue
     .line 493
@@ -630,8 +627,8 @@
 
 .method public getDailyRewardAdWithCurrencyID(Ljava/lang/String;Lcom/tapjoy/TapjoyDailyRewardAdNotifier;)V
     .locals 1
-    .parameter "currencyID"
-    .parameter "notifier"
+    .param p1, "currencyID"    # Ljava/lang/String;
+    .param p2, "notifier"    # Lcom/tapjoy/TapjoyDailyRewardAdNotifier;
 
     .prologue
     .line 509
@@ -645,8 +642,8 @@
 
 .method public getDisplayAd(Landroid/app/Activity;Lcom/tapjoy/TapjoyDisplayAdNotifier;)V
     .locals 1
-    .parameter "activity"
-    .parameter "notifier"
+    .param p1, "activity"    # Landroid/app/Activity;
+    .param p2, "notifier"    # Lcom/tapjoy/TapjoyDisplayAdNotifier;
 
     .prologue
     .line 620
@@ -660,7 +657,7 @@
 
 .method public getDisplayAd(Lcom/tapjoy/TapjoyDisplayAdNotifier;)V
     .locals 2
-    .parameter "notifier"
+    .param p1, "notifier"    # Lcom/tapjoy/TapjoyDisplayAdNotifier;
 
     .prologue
     .line 593
@@ -676,9 +673,9 @@
 
 .method public getDisplayAdWithCurrencyID(Landroid/app/Activity;Ljava/lang/String;Lcom/tapjoy/TapjoyDisplayAdNotifier;)V
     .locals 1
-    .parameter "activity"
-    .parameter "currencyID"
-    .parameter "notifier"
+    .param p1, "activity"    # Landroid/app/Activity;
+    .param p2, "currencyID"    # Ljava/lang/String;
+    .param p3, "notifier"    # Lcom/tapjoy/TapjoyDisplayAdNotifier;
 
     .prologue
     .line 634
@@ -692,8 +689,8 @@
 
 .method public getDisplayAdWithCurrencyID(Ljava/lang/String;Lcom/tapjoy/TapjoyDisplayAdNotifier;)V
     .locals 2
-    .parameter "currencyID"
-    .parameter "notifier"
+    .param p1, "currencyID"    # Ljava/lang/String;
+    .param p2, "notifier"    # Lcom/tapjoy/TapjoyDisplayAdNotifier;
 
     .prologue
     .line 608
@@ -709,7 +706,7 @@
 
 .method public getFeaturedApp(Lcom/tapjoy/TapjoyFeaturedAppNotifier;)V
     .locals 1
-    .parameter "notifier"
+    .param p1, "notifier"    # Lcom/tapjoy/TapjoyFeaturedAppNotifier;
 
     .prologue
     .line 438
@@ -723,8 +720,8 @@
 
 .method public getFeaturedAppWithCurrencyID(Ljava/lang/String;Lcom/tapjoy/TapjoyFeaturedAppNotifier;)V
     .locals 1
-    .parameter "currencyID"
-    .parameter "notifier"
+    .param p1, "currencyID"    # Ljava/lang/String;
+    .param p2, "notifier"    # Lcom/tapjoy/TapjoyFeaturedAppNotifier;
 
     .prologue
     .line 452
@@ -738,7 +735,7 @@
 
 .method public getFullScreenAd(Lcom/tapjoy/TapjoyFullScreenAdNotifier;)V
     .locals 1
-    .parameter "notifier"
+    .param p1, "notifier"    # Lcom/tapjoy/TapjoyFullScreenAdNotifier;
 
     .prologue
     .line 401
@@ -752,8 +749,8 @@
 
 .method public getFullScreenAdWithCurrencyID(Ljava/lang/String;Lcom/tapjoy/TapjoyFullScreenAdNotifier;)V
     .locals 1
-    .parameter "currencyID"
-    .parameter "notifier"
+    .param p1, "currencyID"    # Ljava/lang/String;
+    .param p2, "notifier"    # Lcom/tapjoy/TapjoyFullScreenAdNotifier;
 
     .prologue
     .line 415
@@ -767,7 +764,7 @@
 
 .method public getTapPoints(Lcom/tapjoy/TapjoyNotifier;)V
     .locals 1
-    .parameter "notifier"
+    .param p1, "notifier"    # Lcom/tapjoy/TapjoyNotifier;
 
     .prologue
     .line 352
@@ -793,7 +790,7 @@
 
 .method public initVideoAd(Lcom/tapjoy/TapjoyVideoNotifier;)V
     .locals 1
-    .parameter "notifier"
+    .param p1, "notifier"    # Lcom/tapjoy/TapjoyVideoNotifier;
 
     .prologue
     .line 650
@@ -807,10 +804,10 @@
 
 .method public sendIAPEvent(Ljava/lang/String;FILjava/lang/String;)V
     .locals 1
-    .parameter "name"
-    .parameter "price"
-    .parameter "quantity"
-    .parameter "currencyCode"
+    .param p1, "name"    # Ljava/lang/String;
+    .param p2, "price"    # F
+    .param p3, "quantity"    # I
+    .param p4, "currencyCode"    # Ljava/lang/String;
 
     .prologue
     .line 715
@@ -837,7 +834,7 @@
 
 .method public setBannerAdSize(Ljava/lang/String;)V
     .locals 1
-    .parameter "dimensions"
+    .param p1, "dimensions"    # Ljava/lang/String;
 
     .prologue
     .line 558
@@ -851,7 +848,7 @@
 
 .method public setCurrencyMultiplier(F)V
     .locals 1
-    .parameter "multiplier"
+    .param p1, "multiplier"    # F
 
     .prologue
     .line 258
@@ -867,7 +864,7 @@
 
 .method public setDisplayAdSize(Ljava/lang/String;)V
     .locals 1
-    .parameter "dimensions"
+    .param p1, "dimensions"    # Ljava/lang/String;
 
     .prologue
     .line 542
@@ -881,7 +878,7 @@
 
 .method public setEarnedPointsNotifier(Lcom/tapjoy/TapjoyEarnedPointsNotifier;)V
     .locals 1
-    .parameter "notifier"
+    .param p1, "notifier"    # Lcom/tapjoy/TapjoyEarnedPointsNotifier;
 
     .prologue
     .line 384
@@ -895,7 +892,7 @@
 
 .method public setFeaturedAppDisplayCount(I)V
     .locals 1
-    .parameter "count"
+    .param p1, "count"    # I
 
     .prologue
     .line 463
@@ -909,7 +906,7 @@
 
 .method public setMraidJsString(Ljava/lang/String;)V
     .locals 0
-    .parameter "js"
+    .param p1, "js"    # Ljava/lang/String;
 
     .prologue
     .line 55
@@ -921,7 +918,7 @@
 
 .method public setTapjoyViewNotifier(Lcom/tapjoy/TapjoyViewNotifier;)V
     .locals 1
-    .parameter "notifier"
+    .param p1, "notifier"    # Lcom/tapjoy/TapjoyViewNotifier;
 
     .prologue
     .line 278
@@ -937,7 +934,7 @@
 
 .method public setUserID(Ljava/lang/String;)V
     .locals 0
-    .parameter "userID"
+    .param p1, "userID"    # Ljava/lang/String;
 
     .prologue
     .line 212
@@ -949,7 +946,7 @@
 
 .method public setVideoCacheCount(I)V
     .locals 1
-    .parameter "count"
+    .param p1, "count"    # I
 
     .prologue
     .line 660
@@ -963,7 +960,7 @@
 
 .method public setVideoNotifier(Lcom/tapjoy/TapjoyVideoNotifier;)V
     .locals 1
-    .parameter "notifier"
+    .param p1, "notifier"    # Lcom/tapjoy/TapjoyVideoNotifier;
 
     .prologue
     .line 690
@@ -1031,7 +1028,7 @@
 
 .method public showOffers(Lcom/tapjoy/TapjoyOffersNotifier;)V
     .locals 1
-    .parameter "notifier"
+    .param p1, "notifier"    # Lcom/tapjoy/TapjoyOffersNotifier;
 
     .prologue
     .line 329
@@ -1045,8 +1042,8 @@
 
 .method public showOffersWithCurrencyID(Ljava/lang/String;Z)V
     .locals 2
-    .parameter "currencyID"
-    .parameter "enableCurrencySelector"
+    .param p1, "currencyID"    # Ljava/lang/String;
+    .param p2, "enableCurrencySelector"    # Z
 
     .prologue
     .line 319
@@ -1062,9 +1059,9 @@
 
 .method public showOffersWithCurrencyID(Ljava/lang/String;ZLcom/tapjoy/TapjoyOffersNotifier;)V
     .locals 1
-    .parameter "currencyID"
-    .parameter "enableCurrencySelector"
-    .parameter "notifier"
+    .param p1, "currencyID"    # Ljava/lang/String;
+    .param p2, "enableCurrencySelector"    # Z
+    .param p3, "notifier"    # Lcom/tapjoy/TapjoyOffersNotifier;
 
     .prologue
     .line 342
@@ -1078,8 +1075,8 @@
 
 .method public spendTapPoints(ILcom/tapjoy/TapjoySpendPointsNotifier;)V
     .locals 1
-    .parameter "amount"
-    .parameter "notifier"
+    .param p1, "amount"    # I
+    .param p2, "notifier"    # Lcom/tapjoy/TapjoySpendPointsNotifier;
 
     .prologue
     .line 363

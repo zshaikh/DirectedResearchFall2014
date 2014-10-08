@@ -14,7 +14,6 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 28
@@ -29,10 +28,9 @@
 
 .method private a(Landroid/content/Context;)V
     .locals 4
-    .parameter
 
     .prologue
-    const/high16 v3, 0x3f80
+    const/high16 v3, 0x3f800000
 
     .line 44
     invoke-virtual {p0}, Lcom/chartboost/sdk/impl/g;->getContext()Landroid/content/Context;
@@ -82,7 +80,7 @@
     .line 50
     iget-object v1, p0, Lcom/chartboost/sdk/impl/g;->b:Landroid/graphics/Paint;
 
-    const/high16 v2, -0x5a00
+    const/high16 v2, -0x5a000000
 
     invoke-virtual {v1, v2}, Landroid/graphics/Paint;->setColor(I)V
 
@@ -112,10 +110,10 @@
 # virtual methods
 .method protected onDraw(Landroid/graphics/Canvas;)V
     .locals 10
-    .parameter "canvas"
+    .param p1, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
-    const/high16 v9, 0x4000
+    const/high16 v9, 0x40000000
 
     const/4 v8, 0x0
 
@@ -137,12 +135,12 @@
     iget v1, v1, Landroid/util/DisplayMetrics;->density:F
 
     .line 60
-    const/high16 v2, 0x4120
+    const/high16 v2, 0x41200000
 
     mul-float v3, v2, v1
 
     .line 61
-    const/high16 v2, 0x3f80
+    const/high16 v2, 0x3f800000
 
     mul-float v4, v2, v1
 
@@ -216,7 +214,7 @@
     invoke-virtual {p1, v7, v7, v7, v7}, Landroid/graphics/Canvas;->drawARGB(IIII)V
 
     .line 82
-    const/high16 v5, -0x100
+    const/high16 v5, -0x1000000
 
     invoke-virtual {v1, v5}, Landroid/graphics/Paint;->setColor(I)V
 

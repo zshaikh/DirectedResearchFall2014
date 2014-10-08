@@ -24,7 +24,6 @@
 # direct methods
 .method private constructor <init>(Lcom/google/ads/mediation/admob/AdMobAdapter;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 268
@@ -37,8 +36,6 @@
 
 .method synthetic constructor <init>(Lcom/google/ads/mediation/admob/AdMobAdapter;Lcom/google/ads/mediation/admob/AdMobAdapter$1;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 268
@@ -51,7 +48,7 @@
 # virtual methods
 .method public onDismissScreen(Lcom/google/ads/Ad;)V
     .locals 2
-    .parameter "ad"
+    .param p1, "ad"    # Lcom/google/ads/Ad;
 
     .prologue
     .line 287
@@ -71,8 +68,8 @@
 
 .method public onFailedToReceiveAd(Lcom/google/ads/Ad;Lcom/google/ads/AdRequest$ErrorCode;)V
     .locals 2
-    .parameter "ad"
-    .parameter "error"
+    .param p1, "ad"    # Lcom/google/ads/Ad;
+    .param p2, "error"    # Lcom/google/ads/AdRequest$ErrorCode;
 
     .prologue
     .line 276
@@ -92,7 +89,7 @@
 
 .method public onLeaveApplication(Lcom/google/ads/Ad;)V
     .locals 2
-    .parameter "ad"
+    .param p1, "ad"    # Lcom/google/ads/Ad;
 
     .prologue
     .line 297
@@ -112,7 +109,7 @@
 
 .method public onPresentScreen(Lcom/google/ads/Ad;)V
     .locals 2
-    .parameter "ad"
+    .param p1, "ad"    # Lcom/google/ads/Ad;
 
     .prologue
     .line 281
@@ -143,7 +140,7 @@
 
 .method public onReceiveAd(Lcom/google/ads/Ad;)V
     .locals 2
-    .parameter "ad"
+    .param p1, "ad"    # Lcom/google/ads/Ad;
 
     .prologue
     .line 271

@@ -16,8 +16,8 @@
 
 .method public static startActivities(Landroid/content/Context;[Landroid/content/Intent;)Z
     .locals 1
-    .parameter "context"
-    .parameter "intents"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "intents"    # [Landroid/content/Intent;
 
     .prologue
     .line 57
@@ -32,9 +32,9 @@
 
 .method public static startActivities(Landroid/content/Context;[Landroid/content/Intent;Landroid/os/Bundle;)Z
     .locals 3
-    .parameter "context"
-    .parameter "intents"
-    .parameter "options"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "intents"    # [Landroid/content/Intent;
+    .param p2, "options"    # Landroid/os/Bundle;
 
     .prologue
     const/4 v2, 0x1
@@ -43,7 +43,7 @@
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     .line 90
-    .local v0, version:I
+    .local v0, "version":I
     const/16 v1, 0x10
 
     if-lt v0, v1, :cond_0

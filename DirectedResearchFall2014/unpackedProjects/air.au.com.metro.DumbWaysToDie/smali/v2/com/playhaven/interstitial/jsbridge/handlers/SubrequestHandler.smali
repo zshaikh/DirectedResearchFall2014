@@ -19,7 +19,7 @@
 
 .method private notifyRequesterOfError(Lv2/com/playhaven/interstitial/PHContentEnums$Error;)V
     .locals 4
-    .parameter "error"
+    .param p1, "error"    # Lv2/com/playhaven/interstitial/PHContentEnums$Error;
 
     .prologue
     .line 57
@@ -28,7 +28,7 @@
     invoke-direct {v2}, Landroid/os/Bundle;-><init>()V
 
     .line 59
-    .local v2, message:Landroid/os/Bundle;
+    .local v2, "message":Landroid/os/Bundle;
     sget-object v3, Lv2/com/playhaven/interstitial/requestbridge/bridges/ContentRequestToInterstitialBridge$InterstitialEventArgument;->Error:Lv2/com/playhaven/interstitial/requestbridge/bridges/ContentRequestToInterstitialBridge$InterstitialEventArgument;
 
     invoke-virtual {v3}, Lv2/com/playhaven/interstitial/requestbridge/bridges/ContentRequestToInterstitialBridge$InterstitialEventArgument;->toString()Ljava/lang/String;
@@ -36,7 +36,7 @@
     move-result-object v0
 
     .line 60
-    .local v0, error_key:Ljava/lang/String;
+    .local v0, "error_key":Ljava/lang/String;
     invoke-virtual {p1}, Lv2/com/playhaven/interstitial/PHContentEnums$Error;->toString()Ljava/lang/String;
 
     move-result-object v3
@@ -51,14 +51,14 @@
     move-result-object v1
 
     .line 64
-    .local v1, event:Ljava/lang/String;
+    .local v1, "event":Ljava/lang/String;
     iget-object v3, p0, Lv2/com/playhaven/interstitial/jsbridge/handlers/SubrequestHandler;->contentDisplayer:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v3}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lv2/com/playhaven/interstitial/jsbridge/handlers/SubrequestHandler;
     check-cast p0, Lv2/com/playhaven/interstitial/jsbridge/ManipulatableContentDisplayer;
 
     invoke-interface {p0, v1, v2}, Lv2/com/playhaven/interstitial/jsbridge/ManipulatableContentDisplayer;->sendEventToRequester(Ljava/lang/String;Landroid/os/Bundle;)V
@@ -77,7 +77,7 @@
     invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
 
     .line 46
-    .local v1, message:Landroid/os/Bundle;
+    .local v1, "message":Landroid/os/Bundle;
     sget-object v2, Lv2/com/playhaven/interstitial/requestbridge/bridges/ContentRequestToInterstitialBridge$InterstitialEvent;->SentSubrequest:Lv2/com/playhaven/interstitial/requestbridge/bridges/ContentRequestToInterstitialBridge$InterstitialEvent;
 
     invoke-virtual {v2}, Lv2/com/playhaven/interstitial/requestbridge/bridges/ContentRequestToInterstitialBridge$InterstitialEvent;->toString()Ljava/lang/String;
@@ -85,14 +85,14 @@
     move-result-object v0
 
     .line 48
-    .local v0, event:Ljava/lang/String;
+    .local v0, "event":Ljava/lang/String;
     iget-object v2, p0, Lv2/com/playhaven/interstitial/jsbridge/handlers/SubrequestHandler;->contentDisplayer:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v2}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lv2/com/playhaven/interstitial/jsbridge/handlers/SubrequestHandler;
     check-cast p0, Lv2/com/playhaven/interstitial/jsbridge/ManipulatableContentDisplayer;
 
     invoke-interface {p0, v0, v1}, Lv2/com/playhaven/interstitial/jsbridge/ManipulatableContentDisplayer;->sendEventToRequester(Ljava/lang/String;Landroid/os/Bundle;)V
@@ -105,7 +105,7 @@
 # virtual methods
 .method public handle(Lorg/json/JSONObject;)V
     .locals 3
-    .parameter "jsonPayload"
+    .param p1, "jsonPayload"    # Lorg/json/JSONObject;
 
     .prologue
     .line 25
@@ -122,7 +122,7 @@
     invoke-direct {v0, p0}, Lv2/com/playhaven/requests/content/PHSubContentRequest;-><init>(Lv2/com/playhaven/listeners/PHSubContentRequestListener;)V
 
     .line 29
-    .local v0, request:Lv2/com/playhaven/requests/content/PHSubContentRequest;
+    .local v0, "request":Lv2/com/playhaven/requests/content/PHSubContentRequest;
     const-string v1, "url"
 
     const-string v2, ""
@@ -163,8 +163,8 @@
 
 .method public onSubContentRequestFailed(Lv2/com/playhaven/requests/content/PHSubContentRequest;Lv2/com/playhaven/model/PHError;)V
     .locals 7
-    .parameter "request"
-    .parameter "e"
+    .param p1, "request"    # Lv2/com/playhaven/requests/content/PHSubContentRequest;
+    .param p2, "e"    # Lv2/com/playhaven/model/PHError;
 
     .prologue
     const-string v6, "PHInterstitialActivity - requestFailed(request, responseData)"
@@ -184,7 +184,7 @@
     invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
 
     .line 115
-    .local v0, error:Lorg/json/JSONObject;
+    .local v0, "error":Lorg/json/JSONObject;
     const-string v4, "error"
 
     const-string v5, "1"
@@ -195,7 +195,7 @@
     move-object v3, p1
 
     .line 119
-    .local v3, sub_request:Lv2/com/playhaven/requests/content/PHSubContentRequest;
+    .local v3, "sub_request":Lv2/com/playhaven/requests/content/PHSubContentRequest;
     invoke-virtual {v3}, Lv2/com/playhaven/requests/content/PHSubContentRequest;->getWebviewCallback()Ljava/lang/String;
 
     move-result-object v4
@@ -215,15 +215,15 @@
     goto :goto_0
 
     .line 124
-    .end local v0           #error:Lorg/json/JSONObject;
-    .end local v3           #sub_request:Lv2/com/playhaven/requests/content/PHSubContentRequest;
+    .end local v0    # "error":Lorg/json/JSONObject;
+    .end local v3    # "sub_request":Lv2/com/playhaven/requests/content/PHSubContentRequest;
     :catch_0
     move-exception v4
 
     move-object v1, v4
 
     .line 125
-    .local v1, ex:Lorg/json/JSONException;
+    .local v1, "ex":Lorg/json/JSONException;
     const-string v4, "PHInterstitialActivity - requestFailed(request, responseData)"
 
     sget-object v4, Lv2/com/playhaven/requests/crashreport/PHCrashReport$Urgency;->low:Lv2/com/playhaven/requests/crashreport/PHCrashReport$Urgency;
@@ -233,14 +233,14 @@
     goto :goto_0
 
     .line 126
-    .end local v1           #ex:Lorg/json/JSONException;
+    .end local v1    # "ex":Lorg/json/JSONException;
     :catch_1
     move-exception v4
 
     move-object v2, v4
 
     .line 127
-    .local v2, exc:Ljava/lang/Exception;
+    .local v2, "exc":Ljava/lang/Exception;
     const-string v4, "PHInterstitialActivity - requestFailed(request, responseData)"
 
     sget-object v4, Lv2/com/playhaven/requests/crashreport/PHCrashReport$Urgency;->critical:Lv2/com/playhaven/requests/crashreport/PHCrashReport$Urgency;
@@ -252,8 +252,8 @@
 
 .method public onSubContentRequestSucceeded(Lv2/com/playhaven/requests/content/PHSubContentRequest;Lorg/json/JSONObject;)V
     .locals 5
-    .parameter "request"
-    .parameter "responseData"
+    .param p1, "request"    # Lv2/com/playhaven/requests/content/PHSubContentRequest;
+    .param p2, "responseData"    # Lorg/json/JSONObject;
 
     .prologue
     .line 71
@@ -275,7 +275,7 @@
     invoke-direct {v0, p2}, Lv2/com/playhaven/model/PHContent;-><init>(Lorg/json/JSONObject;)V
 
     .line 77
-    .local v0, content:Lv2/com/playhaven/model/PHContent;
+    .local v0, "content":Lv2/com/playhaven/model/PHContent;
     iget-object v3, v0, Lv2/com/playhaven/model/PHContent;->url:Landroid/net/Uri;
 
     if-eqz v3, :cond_1
@@ -305,14 +305,14 @@
     goto :goto_0
 
     .line 104
-    .end local v0           #content:Lv2/com/playhaven/model/PHContent;
+    .end local v0    # "content":Lv2/com/playhaven/model/PHContent;
     :catch_0
     move-exception v3
 
     move-object v1, v3
 
     .line 105
-    .local v1, e:Ljava/lang/Exception;
+    .local v1, "e":Ljava/lang/Exception;
     const-string v3, "PHInterstitialActivity - requestSucceeded(request, responseData)"
 
     sget-object v4, Lv2/com/playhaven/requests/crashreport/PHCrashReport$Urgency;->critical:Lv2/com/playhaven/requests/crashreport/PHCrashReport$Urgency;
@@ -322,8 +322,8 @@
     goto :goto_0
 
     .line 91
-    .end local v1           #e:Ljava/lang/Exception;
-    .restart local v0       #content:Lv2/com/playhaven/model/PHContent;
+    .end local v1    # "e":Ljava/lang/Exception;
+    .restart local v0    # "content":Lv2/com/playhaven/model/PHContent;
     :cond_1
     :try_start_1
     new-instance v2, Lorg/json/JSONObject;
@@ -331,7 +331,7 @@
     invoke-direct {v2}, Lorg/json/JSONObject;-><init>()V
 
     .line 92
-    .local v2, error_dict:Lorg/json/JSONObject;
+    .local v2, "error_dict":Lorg/json/JSONObject;
     const-string v3, "error"
 
     const-string v4, "1"
@@ -356,14 +356,14 @@
     goto :goto_0
 
     .line 100
-    .end local v2           #error_dict:Lorg/json/JSONObject;
+    .end local v2    # "error_dict":Lorg/json/JSONObject;
     :catch_1
     move-exception v3
 
     move-object v1, v3
 
     .line 101
-    .local v1, e:Lorg/json/JSONException;
+    .local v1, "e":Lorg/json/JSONException;
     :try_start_2
     invoke-virtual {v1}, Lorg/json/JSONException;->printStackTrace()V
     :try_end_2

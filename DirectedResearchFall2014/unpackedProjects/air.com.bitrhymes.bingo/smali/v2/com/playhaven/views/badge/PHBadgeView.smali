@@ -47,8 +47,8 @@
 
 .method public constructor <init>(Landroid/content/Context;Ljava/lang/String;)V
     .locals 0
-    .parameter "context"
-    .parameter "placement"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "placement"    # Ljava/lang/String;
 
     .prologue
     .line 43
@@ -100,8 +100,8 @@
 
 .method public static setBadgeRenderer(Ljava/lang/Class;Ljava/lang/String;)V
     .locals 4
-    .parameter "renderer"
-    .parameter "type"
+    .param p0, "renderer"    # Ljava/lang/Class;
+    .param p1, "type"    # Ljava/lang/String;
 
     .prologue
     .line 129
@@ -110,7 +110,7 @@
     move-result-object v0
 
     .line 131
-    .local v0, superclass:Ljava/lang/Class;
+    .local v0, "superclass":Ljava/lang/Class;
     const-class v1, Lv2/com/playhaven/views/badge/AbstractBadgeRenderer;
 
     if-eq v0, v1, :cond_0
@@ -176,7 +176,7 @@
 
 .method public createBadgeRenderer(Lorg/json/JSONObject;)Lv2/com/playhaven/views/badge/AbstractBadgeRenderer;
     .locals 7
-    .parameter "data"
+    .param p1, "data"    # Lorg/json/JSONObject;
 
     .prologue
     .line 105
@@ -201,11 +201,11 @@
     move-result-object v4
 
     .line 109
-    .local v4, type:Ljava/lang/String;
+    .local v4, "type":Ljava/lang/String;
     const/4 v3, 0x0
 
     .line 111
-    .local v3, renderer:Lv2/com/playhaven/views/badge/AbstractBadgeRenderer;
+    .local v3, "renderer":Lv2/com/playhaven/views/badge/AbstractBadgeRenderer;
     :try_start_0
     sget-object v5, Lv2/com/playhaven/views/badge/PHBadgeView;->renderMap:Ljava/util/HashMap;
 
@@ -216,7 +216,7 @@
     check-cast v2, Ljava/lang/Class;
 
     .line 112
-    .local v2, render_class:Ljava/lang/Class;
+    .local v2, "render_class":Ljava/lang/Class;
     invoke-virtual {v2}, Ljava/lang/Class;->newInstance()Ljava/lang/Object;
 
     move-result-object v5
@@ -245,7 +245,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 122
-    .end local v2           #render_class:Ljava/lang/Class;
+    .end local v2    # "render_class":Ljava/lang/Class;
     :goto_0
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -277,7 +277,7 @@
     move-object v1, v5
 
     .line 118
-    .local v1, e:Ljava/lang/Exception;
+    .local v1, "e":Ljava/lang/Exception;
     const-string v5, "PHBadgeView - createBadgeRenderer"
 
     sget-object v6, Lv2/com/playhaven/requests/crashreport/PHCrashReport$Urgency;->critical:Lv2/com/playhaven/requests/crashreport/PHCrashReport$Urgency;
@@ -332,8 +332,8 @@
 
 .method public onBadgeRequestFailed(Lv2/com/playhaven/requests/badge/PHBadgeRequest;Lv2/com/playhaven/model/PHError;)V
     .locals 1
-    .parameter "request"
-    .parameter "error"
+    .param p1, "request"    # Lv2/com/playhaven/requests/badge/PHBadgeRequest;
+    .param p2, "error"    # Lv2/com/playhaven/model/PHError;
 
     .prologue
     const/4 v0, 0x0
@@ -350,8 +350,8 @@
 
 .method public onBadgeRequestSucceeded(Lv2/com/playhaven/requests/badge/PHBadgeRequest;Lorg/json/JSONObject;)V
     .locals 2
-    .parameter "request"
-    .parameter "responseData"
+    .param p1, "request"    # Lv2/com/playhaven/requests/badge/PHBadgeRequest;
+    .param p2, "responseData"    # Lorg/json/JSONObject;
 
     .prologue
     .line 176
@@ -367,7 +367,7 @@
     move-result-object v0
 
     .line 180
-    .local v0, notification:Lorg/json/JSONObject;
+    .local v0, "notification":Lorg/json/JSONObject;
     sget-object v1, Lorg/json/JSONObject;->NULL:Ljava/lang/Object;
 
     invoke-virtual {v1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
@@ -392,7 +392,7 @@
 
 .method protected onDraw(Landroid/graphics/Canvas;)V
     .locals 4
-    .parameter "canvas"
+    .param p1, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
     .line 147
@@ -428,7 +428,7 @@
     move-object v0, v1
 
     .line 151
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v1, "PHBadgeView - onDraw"
 
     sget-object v2, Lv2/com/playhaven/requests/crashreport/PHCrashReport$Urgency;->critical:Lv2/com/playhaven/requests/crashreport/PHCrashReport$Urgency;
@@ -440,8 +440,8 @@
 
 .method protected onMeasure(II)V
     .locals 5
-    .parameter "widthSpec"
-    .parameter "heightSpec"
+    .param p1, "widthSpec"    # I
+    .param p2, "heightSpec"    # I
 
     .prologue
     .line 158
@@ -455,7 +455,7 @@
     invoke-direct {v1, v2, v3, p1, p2}, Landroid/graphics/Rect;-><init>(IIII)V
 
     .line 159
-    .local v1, size:Landroid/graphics/Rect;
+    .local v1, "size":Landroid/graphics/Rect;
     iget-object v2, p0, Lv2/com/playhaven/views/badge/PHBadgeView;->notificationRenderer:Lv2/com/playhaven/views/badge/AbstractBadgeRenderer;
 
     if-eqz v2, :cond_0
@@ -488,7 +488,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 167
-    .end local v1           #size:Landroid/graphics/Rect;
+    .end local v1    # "size":Landroid/graphics/Rect;
     :goto_0
     return-void
 
@@ -499,7 +499,7 @@
     move-object v0, v2
 
     .line 164
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v2, "PHBadgeView - onDraw"
 
     sget-object v3, Lv2/com/playhaven/requests/crashreport/PHCrashReport$Urgency;->critical:Lv2/com/playhaven/requests/crashreport/PHCrashReport$Urgency;
@@ -537,7 +537,7 @@
 
 .method public updateBadgeData(Lorg/json/JSONObject;)V
     .locals 3
-    .parameter "data"
+    .param p1, "data"    # Lorg/json/JSONObject;
 
     .prologue
     .line 83
@@ -576,7 +576,7 @@
     move-object v0, v1
 
     .line 96
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v1, "PHBadgeView - updateBadgeData"
 
     sget-object v2, Lv2/com/playhaven/requests/crashreport/PHCrashReport$Urgency;->critical:Lv2/com/playhaven/requests/crashreport/PHCrashReport$Urgency;

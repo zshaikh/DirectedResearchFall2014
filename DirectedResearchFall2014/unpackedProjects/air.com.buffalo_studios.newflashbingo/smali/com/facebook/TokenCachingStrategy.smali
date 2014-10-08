@@ -32,7 +32,7 @@
 .method static getDate(Landroid/os/Bundle;Ljava/lang/String;)Ljava/util/Date;
     .locals 6
 
-    const-wide/high16 v4, -0x8000
+    const-wide/high16 v4, -0x8000000000000000L
 
     const/4 v3, 0x0
 

@@ -412,7 +412,6 @@
 
 .method private static a(D)D
     .locals 4
-    .parameter
 
     .prologue
     const-wide v2, 0x408f400000000000L
@@ -436,7 +435,6 @@
 
 .method private static a(Ljava/io/File;)Ljava/lang/String;
     .locals 8
-    .parameter
 
     .prologue
     const/4 v6, 0x0
@@ -448,8 +446,8 @@
 
     invoke-direct {v0, p0}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_1
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 2004
     :try_start_1
@@ -457,8 +455,8 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_2
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     .line 2005
     const/16 v2, 0x400
@@ -483,8 +481,8 @@
 
     invoke-virtual {v1, v4}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
     :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
     .catch Ljava/lang/Throwable; {:try_start_2 .. :try_end_2} :catch_0
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
     goto :goto_0
 
@@ -596,8 +594,6 @@
 
 .method private declared-synchronized a(Landroid/content/Context;Ljava/lang/String;)V
     .locals 8
-    .parameter
-    .parameter
 
     .prologue
     const/4 v7, 0x1
@@ -1235,8 +1231,6 @@
 
 .method private declared-synchronized a(Landroid/content/Context;Z)V
     .locals 5
-    .parameter
-    .parameter
 
     .prologue
     const-string v0, "FlurryAgent"
@@ -1432,8 +1426,6 @@
 
 .method static synthetic a(Lcom/flurry/android/FlurryAgent;Landroid/content/Context;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 70
@@ -1444,9 +1436,6 @@
 
 .method static synthetic a(Lcom/flurry/android/FlurryAgent;Landroid/content/Context;Z)V
     .locals 3
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 70
@@ -1527,7 +1516,6 @@
 
 .method private a(Lcom/flurry/android/bk;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 1382
@@ -1541,7 +1529,6 @@
 
 .method private declared-synchronized a(Ljava/io/DataInputStream;)V
     .locals 5
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -1884,10 +1871,6 @@
 
 .method private declared-synchronized a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 9
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const/4 v3, 0x0
@@ -2159,9 +2142,6 @@
 
 .method private declared-synchronized a(Ljava/lang/String;Ljava/util/Map;Z)V
     .locals 8
-    .parameter
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -2504,7 +2484,6 @@
 
 .method static synthetic a(Lcom/flurry/android/FlurryAgent;)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 70
@@ -2515,7 +2494,6 @@
 
 .method private a([B)Z
     .locals 5
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -2665,8 +2643,6 @@
 
 .method private a([BLjava/lang/String;)Z
     .locals 6
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -2864,7 +2840,6 @@
 
 .method private declared-synchronized b(Landroid/content/Context;)V
     .locals 9
-    .parameter
 
     .prologue
     const-string v0, "FlurryAgent"
@@ -2933,8 +2908,8 @@
 
     invoke-direct {v3, v2}, Ljava/io/DataInputStream;-><init>(Ljava/io/InputStream;)V
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_2
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     .line 1900
     :try_start_2
@@ -2950,8 +2925,8 @@
     .line 1905
     invoke-direct {p0, v3}, Lcom/flurry/android/FlurryAgent;->a(Ljava/io/DataInputStream;)V
     :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_2
     .catch Ljava/lang/Throwable; {:try_start_2 .. :try_end_2} :catch_0
+    .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
     .line 1918
     :goto_0
@@ -2984,8 +2959,8 @@
 
     invoke-static {v1, v2}, Lcom/flurry/android/db;->c(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_0
     .catch Ljava/lang/Throwable; {:try_start_4 .. :try_end_4} :catch_1
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
     .line 1946
     :cond_0
@@ -3142,8 +3117,8 @@
 
     invoke-static {v1, v2}, Lcom/flurry/android/db;->c(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_6
-    .catchall {:try_start_6 .. :try_end_6} :catchall_2
     .catch Ljava/lang/Throwable; {:try_start_6 .. :try_end_6} :catch_0
+    .catchall {:try_start_6 .. :try_end_6} :catchall_2
 
     goto/16 :goto_0
 
@@ -3201,8 +3176,8 @@
 
     invoke-static {v1, v2}, Lcom/flurry/android/db;->d(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_a
-    .catchall {:try_start_a .. :try_end_a} :catchall_0
     .catch Ljava/lang/Throwable; {:try_start_a .. :try_end_a} :catch_1
+    .catchall {:try_start_a .. :try_end_a} :catchall_0
 
     goto/16 :goto_2
 
@@ -3262,8 +3237,6 @@
 
 .method private declared-synchronized b(Landroid/content/Context;Ljava/lang/String;)V
     .locals 5
-    .parameter
-    .parameter
 
     .prologue
     .line 2242
@@ -3313,8 +3286,8 @@
 
     invoke-direct {v2, v1}, Ljava/io/DataOutputStream;-><init>(Ljava/io/OutputStream;)V
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     .line 2254
     const/4 v0, 0x1
@@ -3325,8 +3298,8 @@
     .line 2255
     invoke-virtual {v2, p2}, Ljava/io/DataOutputStream;->writeUTF(Ljava/lang/String;)V
     :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_2
     .catch Ljava/lang/Throwable; {:try_start_2 .. :try_end_2} :catch_1
+    .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
     .line 2263
     :try_start_3
@@ -3410,7 +3383,6 @@
 
 .method static synthetic b(Lcom/flurry/android/FlurryAgent;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 70
@@ -3421,8 +3393,6 @@
 
 .method static synthetic b(Lcom/flurry/android/FlurryAgent;Landroid/content/Context;)V
     .locals 4
-    .parameter
-    .parameter
 
     .prologue
     .line 70
@@ -3508,8 +3478,6 @@
 
 .method private declared-synchronized b(Ljava/lang/String;Ljava/util/Map;)V
     .locals 7
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -3727,7 +3695,6 @@
 
 .method private c(Landroid/content/Context;)Ljava/lang/String;
     .locals 8
-    .parameter
 
     .prologue
     const/4 v6, 0x0
@@ -3863,8 +3830,8 @@
 
     invoke-direct {v1, v3}, Ljava/io/DataInputStream;-><init>(Ljava/io/InputStream;)V
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 2295
     :try_start_1
@@ -3873,8 +3840,8 @@
     .line 2296
     invoke-virtual {v1}, Ljava/io/DataInputStream;->readUTF()Ljava/lang/String;
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     move-result-object v0
 
@@ -3940,7 +3907,6 @@
 
 .method static synthetic c(Lcom/flurry/android/FlurryAgent;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 70
@@ -3951,7 +3917,6 @@
 
 .method static synthetic d(Lcom/flurry/android/FlurryAgent;)Landroid/os/Handler;
     .locals 1
-    .parameter
 
     .prologue
     .line 70
@@ -3962,7 +3927,6 @@
 
 .method private static d(Landroid/content/Context;)Ljava/lang/String;
     .locals 3
-    .parameter
 
     .prologue
     .line 2335
@@ -4031,7 +3995,6 @@
 
 .method private e(Landroid/content/Context;)Landroid/location/Location;
     .locals 7
-    .parameter
 
     .prologue
     .line 2355
@@ -4149,7 +4112,6 @@
 
 .method private static e(Ljava/lang/String;)Ljava/util/Map;
     .locals 8
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -4365,7 +4327,6 @@
 
 .method public static endTimedEvent(Ljava/lang/String;)V
     .locals 4
-    .parameter
 
     .prologue
     const-string v3, "FlurryAgent"
@@ -4429,8 +4390,6 @@
 
 .method public static endTimedEvent(Ljava/lang/String;Ljava/util/Map;)V
     .locals 4
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -4518,7 +4477,6 @@
 
 .method private static f(Ljava/lang/String;)Ljava/lang/String;
     .locals 4
-    .parameter
 
     .prologue
     const/4 v3, 0x4
@@ -4590,7 +4548,6 @@
 
 .method private static f(Landroid/content/Context;)[B
     .locals 4
-    .parameter
 
     .prologue
     .line 2387
@@ -4696,7 +4653,6 @@
 
 .method private declared-synchronized g(Ljava/lang/String;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 2453
@@ -4817,7 +4773,6 @@
 
 .method public static logEvent(Ljava/lang/String;)V
     .locals 4
-    .parameter
 
     .prologue
     const-string v3, "FlurryAgent"
@@ -4883,8 +4838,6 @@
 
 .method public static logEvent(Ljava/lang/String;Ljava/util/Map;)V
     .locals 4
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -4972,9 +4925,6 @@
 
 .method public static logEvent(Ljava/lang/String;Ljava/util/Map;Z)V
     .locals 4
-    .parameter
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -5060,8 +5010,6 @@
 
 .method public static logEvent(Ljava/lang/String;Z)V
     .locals 4
-    .parameter
-    .parameter
 
     .prologue
     const-string v3, "FlurryAgent"
@@ -5256,8 +5204,8 @@
 
     invoke-direct {v4, v3}, Ljava/io/DataOutputStream;-><init>(Ljava/io/OutputStream;)V
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_2
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
+    .catchall {:try_start_0 .. :try_end_0} :catchall_2
 
     .line 1279
     const/4 v1, 0x1
@@ -5411,8 +5359,8 @@
 
     invoke-virtual {v4, v1}, Ljava/io/DataOutputStream;->writeInt(I)V
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     goto :goto_3
 
@@ -5493,8 +5441,8 @@
 
     invoke-virtual {v4, v1}, Ljava/io/DataOutputStream;->writeFloat(F)V
     :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_0
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_0
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
     goto/16 :goto_1
 
@@ -5696,8 +5644,8 @@
 
     invoke-interface {v1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
     :try_end_6
-    .catchall {:try_start_6 .. :try_end_6} :catchall_0
     .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_0
+    .catchall {:try_start_6 .. :try_end_6} :catchall_0
 
     .line 1365
     :try_start_7
@@ -5738,7 +5686,6 @@
 
 .method public static onEndSession(Landroid/content/Context;)V
     .locals 3
-    .parameter
 
     .prologue
     .line 507
@@ -5784,9 +5731,6 @@
 
 .method public static onError(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 6
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const/4 v2, 0x2
@@ -5903,9 +5847,6 @@
 
 .method public static onError(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 3
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const-string v2, "FlurryAgent"
@@ -5985,7 +5926,6 @@
 
 .method public static onEvent(Ljava/lang/String;)V
     .locals 4
-    .parameter
 
     .prologue
     const-string v3, "FlurryAgent"
@@ -6035,8 +5975,6 @@
 
 .method public static onEvent(Ljava/lang/String;Ljava/util/Map;)V
     .locals 3
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -6138,8 +6076,6 @@
 
 .method public static onStartSession(Landroid/content/Context;Ljava/lang/String;)V
     .locals 3
-    .parameter
-    .parameter
 
     .prologue
     .line 458
@@ -6263,8 +6199,8 @@
 
     invoke-direct {v5, v4}, Ljava/io/DataOutputStream;-><init>(Ljava/io/OutputStream;)V
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_2
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_1
+    .catchall {:try_start_0 .. :try_end_0} :catchall_2
 
     .line 1563
     const/16 v0, 0x1a
@@ -6403,8 +6339,8 @@
     .line 1590
     invoke-virtual {v5, v0}, Ljava/io/DataOutputStream;->write([B)V
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     goto :goto_0
 
@@ -6738,8 +6674,8 @@
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
     :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_0
     .catch Ljava/lang/Throwable; {:try_start_4 .. :try_end_4} :catch_0
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
     goto :goto_4
 
@@ -7004,8 +6940,8 @@
     .line 1694
     invoke-virtual {v3}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
     :try_end_6
-    .catchall {:try_start_6 .. :try_end_6} :catchall_0
     .catch Ljava/lang/Throwable; {:try_start_6 .. :try_end_6} :catch_0
+    .catchall {:try_start_6 .. :try_end_6} :catchall_0
 
     move-result-object v0
 
@@ -7209,7 +7145,6 @@
 
 .method public static setAge(I)V
     .locals 7
-    .parameter
 
     .prologue
     const/4 v6, 0x1
@@ -7268,7 +7203,6 @@
 
 .method public static setCaptureUncaughtExceptions(Z)V
     .locals 3
-    .parameter
 
     .prologue
     .line 408
@@ -7319,7 +7253,6 @@
 
 .method public static setContinueSessionMillis(J)V
     .locals 3
-    .parameter
 
     .prologue
     .line 367
@@ -7383,7 +7316,6 @@
 
 .method public static setGender(B)V
     .locals 2
-    .parameter
 
     .prologue
     .line 964
@@ -7418,7 +7350,6 @@
 
 .method public static setLocationCriteria(Landroid/location/Criteria;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 929
@@ -7447,7 +7378,6 @@
 
 .method public static setLogEnabled(Z)V
     .locals 2
-    .parameter
 
     .prologue
     .line 321
@@ -7487,7 +7417,6 @@
 
 .method public static setLogEvents(Z)V
     .locals 2
-    .parameter
 
     .prologue
     .line 385
@@ -7516,7 +7445,6 @@
 
 .method public static setLogLevel(I)V
     .locals 2
-    .parameter
 
     .prologue
     .line 340
@@ -7545,7 +7473,6 @@
 
 .method public static setReportLocation(Z)V
     .locals 2
-    .parameter
 
     .prologue
     .line 309
@@ -7576,7 +7503,6 @@
 
 .method public static setReportUrl(Ljava/lang/String;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 910
@@ -7596,7 +7522,6 @@
 
 .method public static setUseHttps(Z)V
     .locals 0
-    .parameter
 
     .prologue
     .line 399
@@ -7608,7 +7533,6 @@
 
 .method public static setUserId(Ljava/lang/String;)V
     .locals 3
-    .parameter
 
     .prologue
     .line 985
@@ -7658,7 +7582,6 @@
 
 .method public static setVersionName(Ljava/lang/String;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 280
@@ -7783,8 +7706,8 @@
 
     invoke-static {v0}, Lcom/flurry/android/bc;->b(Ljava/io/File;)Z
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_1
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
     move-result v0
 
@@ -7819,8 +7742,8 @@
 
     invoke-direct {v1, v0}, Ljava/io/DataOutputStream;-><init>(Ljava/io/OutputStream;)V
     :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
     .catch Ljava/lang/Throwable; {:try_start_2 .. :try_end_2} :catch_0
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
     .line 2184
     const v0, 0xb5fa
@@ -7925,8 +7848,8 @@
 
     invoke-virtual {v1, v0}, Ljava/io/DataOutputStream;->writeShort(I)V
     :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_2
     .catch Ljava/lang/Throwable; {:try_start_3 .. :try_end_3} :catch_1
+    .catchall {:try_start_3 .. :try_end_3} :catchall_2
 
     .line 2215
     :try_start_4
@@ -7952,8 +7875,8 @@
     .line 2205
     invoke-virtual {v1, v0}, Ljava/io/DataOutputStream;->write([B)V
     :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_2
     .catch Ljava/lang/Throwable; {:try_start_5 .. :try_end_5} :catch_1
+    .catchall {:try_start_5 .. :try_end_5} :catchall_2
 
     .line 2195
     add-int/lit8 v0, v2, -0x1
@@ -8081,7 +8004,6 @@
 # virtual methods
 .method final a(Ljava/lang/Throwable;)V
     .locals 3
-    .parameter
 
     .prologue
     .line 229
@@ -8191,7 +8113,6 @@
 
 .method public final declared-synchronized onLocationChanged(Landroid/location/Location;)V
     .locals 3
-    .parameter
 
     .prologue
     .line 2479
@@ -8203,8 +8124,8 @@
     .line 2480
     invoke-direct {p0}, Lcom/flurry/android/FlurryAgent;->v()V
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 2486
     :goto_0
@@ -8239,7 +8160,6 @@
 
 .method public final onProviderDisabled(Ljava/lang/String;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 2492
@@ -8248,7 +8168,6 @@
 
 .method public final onProviderEnabled(Ljava/lang/String;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 2498
@@ -8257,9 +8176,6 @@
 
 .method public final onStatusChanged(Ljava/lang/String;ILandroid/os/Bundle;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 2504

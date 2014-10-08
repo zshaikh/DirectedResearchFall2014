@@ -25,7 +25,7 @@
 # direct methods
 .method public constructor <init>([Lcom/flurry/org/codehaus/jackson/map/ser/impl/PropertySerializerMap$TypeAndSerializer;)V
     .locals 0
-    .parameter "entries"
+    .param p1, "entries"    # [Lcom/flurry/org/codehaus/jackson/map/ser/impl/PropertySerializerMap$TypeAndSerializer;
 
     .prologue
     .line 200
@@ -42,8 +42,6 @@
 # virtual methods
 .method public newWith(Ljava/lang/Class;Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;)Lcom/flurry/org/codehaus/jackson/map/ser/impl/PropertySerializerMap;
     .locals 4
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -58,8 +56,8 @@
     .end annotation
 
     .prologue
-    .local p1, type:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
-    .local p2, serializer:Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
+    .local p1, "type":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
+    .local p2, "serializer":Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
     const/4 v3, 0x0
 
     .line 219
@@ -68,7 +66,7 @@
     array-length v1, v2
 
     .line 221
-    .local v1, len:I
+    .local v1, "len":I
     const/16 v2, 0x8
 
     if-ne v1, v2, :cond_0
@@ -86,7 +84,7 @@
     new-array v0, v2, [Lcom/flurry/org/codehaus/jackson/map/ser/impl/PropertySerializerMap$TypeAndSerializer;
 
     .line 226
-    .local v0, entries:[Lcom/flurry/org/codehaus/jackson/map/ser/impl/PropertySerializerMap$TypeAndSerializer;
+    .local v0, "entries":[Lcom/flurry/org/codehaus/jackson/map/ser/impl/PropertySerializerMap$TypeAndSerializer;
     iget-object v2, p0, Lcom/flurry/org/codehaus/jackson/map/ser/impl/PropertySerializerMap$Multi;->_entries:[Lcom/flurry/org/codehaus/jackson/map/ser/impl/PropertySerializerMap$TypeAndSerializer;
 
     invoke-static {v2, v3, v0, v3, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
@@ -108,7 +106,6 @@
 
 .method public serializerFor(Ljava/lang/Class;)Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;
     .locals 4
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -123,15 +120,15 @@
 
     .prologue
     .line 207
-    .local p1, type:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p1, "type":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const/4 v1, 0x0
 
-    .local v1, i:I
+    .local v1, "i":I
     iget-object v3, p0, Lcom/flurry/org/codehaus/jackson/map/ser/impl/PropertySerializerMap$Multi;->_entries:[Lcom/flurry/org/codehaus/jackson/map/ser/impl/PropertySerializerMap$TypeAndSerializer;
 
     array-length v2, v3
 
-    .local v2, len:I
+    .local v2, "len":I
     :goto_0
     if-ge v1, v2, :cond_1
 
@@ -141,7 +138,7 @@
     aget-object v0, v3, v1
 
     .line 209
-    .local v0, entry:Lcom/flurry/org/codehaus/jackson/map/ser/impl/PropertySerializerMap$TypeAndSerializer;
+    .local v0, "entry":Lcom/flurry/org/codehaus/jackson/map/ser/impl/PropertySerializerMap$TypeAndSerializer;
     iget-object v3, v0, Lcom/flurry/org/codehaus/jackson/map/ser/impl/PropertySerializerMap$TypeAndSerializer;->type:Ljava/lang/Class;
 
     if-ne v3, p1, :cond_0
@@ -150,19 +147,19 @@
     iget-object v3, v0, Lcom/flurry/org/codehaus/jackson/map/ser/impl/PropertySerializerMap$TypeAndSerializer;->serializer:Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;
 
     .line 213
-    .end local v0           #entry:Lcom/flurry/org/codehaus/jackson/map/ser/impl/PropertySerializerMap$TypeAndSerializer;
+    .end local v0    # "entry":Lcom/flurry/org/codehaus/jackson/map/ser/impl/PropertySerializerMap$TypeAndSerializer;
     :goto_1
     return-object v3
 
     .line 207
-    .restart local v0       #entry:Lcom/flurry/org/codehaus/jackson/map/ser/impl/PropertySerializerMap$TypeAndSerializer;
+    .restart local v0    # "entry":Lcom/flurry/org/codehaus/jackson/map/ser/impl/PropertySerializerMap$TypeAndSerializer;
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
     .line 213
-    .end local v0           #entry:Lcom/flurry/org/codehaus/jackson/map/ser/impl/PropertySerializerMap$TypeAndSerializer;
+    .end local v0    # "entry":Lcom/flurry/org/codehaus/jackson/map/ser/impl/PropertySerializerMap$TypeAndSerializer;
     :cond_1
     const/4 v3, 0x0
 

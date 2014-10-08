@@ -109,7 +109,7 @@
 
 .method static synthetic access$100(Lcom/tapjoy/TJAdUnitView;)V
     .locals 0
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/tapjoy/TJAdUnitView;
 
     .prologue
     .line 48
@@ -120,7 +120,7 @@
 
 .method static synthetic access$200(Lcom/tapjoy/TJAdUnitView;)Z
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/tapjoy/TJAdUnitView;
 
     .prologue
     .line 48
@@ -131,7 +131,7 @@
 
 .method static synthetic access$300(Lcom/tapjoy/TJAdUnitView;)Landroid/widget/ProgressBar;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/tapjoy/TJAdUnitView;
 
     .prologue
     .line 48
@@ -142,7 +142,7 @@
 
 .method static synthetic access$400(Lcom/tapjoy/TJAdUnitView;)I
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/tapjoy/TJAdUnitView;
 
     .prologue
     .line 48
@@ -153,8 +153,8 @@
 
 .method static synthetic access$500(Lcom/tapjoy/TJAdUnitView;Ljava/lang/String;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
+    .param p0, "x0"    # Lcom/tapjoy/TJAdUnitView;
+    .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
     .line 48
@@ -165,8 +165,8 @@
 
 .method static synthetic access$600(Lcom/tapjoy/TJAdUnitView;Ljava/lang/String;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
+    .param p0, "x0"    # Lcom/tapjoy/TJAdUnitView;
+    .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
     .line 48
@@ -177,8 +177,8 @@
 
 .method static synthetic access$700(Lcom/tapjoy/TJAdUnitView;Lcom/tapjoy/TJAdUnitView$CLOSE_TYPES;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
+    .param p0, "x0"    # Lcom/tapjoy/TJAdUnitView;
+    .param p1, "x1"    # Lcom/tapjoy/TJAdUnitView$CLOSE_TYPES;
 
     .prologue
     .line 48
@@ -189,7 +189,7 @@
 
 .method private closeView(Lcom/tapjoy/TJAdUnitView$CLOSE_TYPES;)V
     .locals 2
-    .parameter "closeType"
+    .param p1, "closeType"    # Lcom/tapjoy/TJAdUnitView$CLOSE_TYPES;
 
     .prologue
     .line 826
@@ -260,7 +260,7 @@
 
 .method private finishWithResult(Ljava/lang/String;)V
     .locals 2
-    .parameter "result"
+    .param p1, "result"    # Ljava/lang/String;
 
     .prologue
     .line 731
@@ -269,7 +269,7 @@
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
     .line 732
-    .local v0, returnIntent:Landroid/content/Intent;
+    .local v0, "returnIntent":Landroid/content/Intent;
     const-string v1, "result"
 
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
@@ -294,15 +294,15 @@
     const-string v10, "com/tapjoy/res/tj_close_button.png"
 
     .line 278
-    .local v10, source:Ljava/lang/String;
+    .local v10, "source":Ljava/lang/String;
     const/4 v4, 0x0
 
     .line 279
-    .local v4, in:Ljava/io/InputStream;
+    .local v4, "in":Ljava/io/InputStream;
     const/4 v0, 0x0
 
     .line 281
-    .local v0, closeBitmap:Landroid/graphics/Bitmap;
+    .local v0, "closeBitmap":Landroid/graphics/Bitmap;
     :try_start_0
     const-class v12, Lcom/tapjoy/TJAdUnitView;
 
@@ -315,13 +315,13 @@
     move-result-object v11
 
     .line 283
-    .local v11, url:Ljava/net/URL;
+    .local v11, "url":Ljava/net/URL;
     invoke-virtual {v11}, Ljava/net/URL;->getFile()Ljava/lang/String;
 
     move-result-object v3
 
     .line 284
-    .local v3, file:Ljava/lang/String;
+    .local v3, "file":Ljava/lang/String;
     const-string v12, "jar:"
 
     invoke-virtual {v3, v12}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
@@ -363,7 +363,7 @@
     move-result v7
 
     .line 291
-    .local v7, pos:I
+    .local v7, "pos":I
     if-lez v7, :cond_2
 
     .line 292
@@ -380,13 +380,13 @@
     invoke-direct {v5, v3}, Ljava/util/jar/JarFile;-><init>(Ljava/lang/String;)V
 
     .line 295
-    .local v5, jf:Ljava/util/jar/JarFile;
+    .local v5, "jf":Ljava/util/jar/JarFile;
     invoke-virtual {v5, v10}, Ljava/util/jar/JarFile;->getJarEntry(Ljava/lang/String;)Ljava/util/jar/JarEntry;
 
     move-result-object v2
 
     .line 296
-    .local v2, entry:Ljava/util/jar/JarEntry;
+    .local v2, "entry":Ljava/util/jar/JarEntry;
     invoke-virtual {v5, v2}, Ljava/util/jar/JarFile;->getInputStream(Ljava/util/zip/ZipEntry;)Ljava/io/InputStream;
 
     move-result-object v4
@@ -397,7 +397,7 @@
     invoke-direct {v6}, Landroid/graphics/BitmapFactory$Options;-><init>()V
 
     .line 300
-    .local v6, options:Landroid/graphics/BitmapFactory$Options;
+    .local v6, "options":Landroid/graphics/BitmapFactory$Options;
     const/4 v12, 0x1
 
     iput-boolean v12, v6, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
@@ -423,7 +423,7 @@
     move-result v8
 
     .line 307
-    .local v8, scale:F
+    .local v8, "scale":F
     iget v12, v6, Landroid/graphics/BitmapFactory$Options;->outWidth:I
 
     int-to-float v12, v12
@@ -447,7 +447,7 @@
     move-result-object v9
 
     .line 308
-    .local v9, scaledBitmap:Landroid/graphics/Bitmap;
+    .local v9, "scaledBitmap":Landroid/graphics/Bitmap;
     move-object v0, v9
 
     .line 309
@@ -458,14 +458,14 @@
     move-object v12, v0
 
     .line 314
-    .end local v2           #entry:Ljava/util/jar/JarEntry;
-    .end local v3           #file:Ljava/lang/String;
-    .end local v5           #jf:Ljava/util/jar/JarFile;
-    .end local v6           #options:Landroid/graphics/BitmapFactory$Options;
-    .end local v7           #pos:I
-    .end local v8           #scale:F
-    .end local v9           #scaledBitmap:Landroid/graphics/Bitmap;
-    .end local v11           #url:Ljava/net/URL;
+    .end local v2    # "entry":Ljava/util/jar/JarEntry;
+    .end local v3    # "file":Ljava/lang/String;
+    .end local v5    # "jf":Ljava/util/jar/JarFile;
+    .end local v6    # "options":Landroid/graphics/BitmapFactory$Options;
+    .end local v7    # "pos":I
+    .end local v8    # "scale":F
+    .end local v9    # "scaledBitmap":Landroid/graphics/Bitmap;
+    .end local v11    # "url":Ljava/net/URL;
     :goto_0
     return-object v12
 
@@ -476,7 +476,7 @@
     move-object v1, v12
 
     .line 313
-    .local v1, e:Ljava/lang/Exception;
+    .local v1, "e":Ljava/lang/Exception;
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
     .line 314
@@ -517,7 +517,7 @@
     move-result-object v0
 
     .line 855
-    .local v0, list:Landroid/webkit/WebBackForwardList;
+    .local v0, "list":Landroid/webkit/WebBackForwardList;
     invoke-virtual {v0}, Landroid/webkit/WebBackForwardList;->getCurrentIndex()I
 
     move-result v1
@@ -533,13 +533,13 @@
     invoke-virtual {p0}, Lcom/tapjoy/TJAdUnitView;->finish()V
 
     .line 867
-    .end local v0           #list:Landroid/webkit/WebBackForwardList;
+    .end local v0    # "list":Landroid/webkit/WebBackForwardList;
     :cond_0
     :goto_0
     return-void
 
     .line 862
-    .restart local v0       #list:Landroid/webkit/WebBackForwardList;
+    .restart local v0    # "list":Landroid/webkit/WebBackForwardList;
     :cond_1
     iget-object v1, p0, Lcom/tapjoy/TJAdUnitView;->webView:Lcom/tapjoy/mraid/view/MraidView;
 
@@ -548,7 +548,7 @@
     goto :goto_0
 
     .line 866
-    .end local v0           #list:Landroid/webkit/WebBackForwardList;
+    .end local v0    # "list":Landroid/webkit/WebBackForwardList;
     :cond_2
     invoke-direct {p0}, Lcom/tapjoy/TJAdUnitView;->finishActivity()V
 
@@ -557,14 +557,14 @@
 
 .method private handleTJVideoURL(Ljava/lang/String;)V
     .locals 12
-    .parameter "url"
+    .param p1, "url"    # Ljava/lang/String;
 
     .prologue
     .line 577
     const/4 v9, 0x0
 
     .line 586
-    .local v9, index:I
+    .local v9, "index":I
     const-string v0, "://"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
@@ -585,7 +585,7 @@
     move-result-object v11
 
     .line 590
-    .local v11, source:Ljava/lang/String;
+    .local v11, "source":Ljava/lang/String;
     const/4 v0, 0x1
 
     invoke-static {v11, v0}, Lcom/tapjoy/TapjoyUtil;->convertURLParams(Ljava/lang/String;Z)Ljava/util/Map;
@@ -593,7 +593,7 @@
     move-result-object v10
 
     .line 592
-    .local v10, params:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v10, "params":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v0, "video_id"
 
     invoke-interface {v10, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -603,7 +603,7 @@
     check-cast v1, Ljava/lang/String;
 
     .line 593
-    .local v1, videoID:Ljava/lang/String;
+    .local v1, "videoID":Ljava/lang/String;
     const-string v0, "amount"
 
     invoke-interface {v10, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -613,7 +613,7 @@
     check-cast v3, Ljava/lang/String;
 
     .line 594
-    .local v3, amount:Ljava/lang/String;
+    .local v3, "amount":Ljava/lang/String;
     const-string v0, "currency_name"
 
     invoke-interface {v10, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -623,7 +623,7 @@
     check-cast v2, Ljava/lang/String;
 
     .line 595
-    .local v2, currencyName:Ljava/lang/String;
+    .local v2, "currencyName":Ljava/lang/String;
     const-string v0, "click_url"
 
     invoke-interface {v10, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -633,7 +633,7 @@
     check-cast v4, Ljava/lang/String;
 
     .line 596
-    .local v4, clickURL:Ljava/lang/String;
+    .local v4, "clickURL":Ljava/lang/String;
     const-string v0, "video_complete_url"
 
     invoke-interface {v10, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -643,7 +643,7 @@
     check-cast v5, Ljava/lang/String;
 
     .line 597
-    .local v5, videoCompleteURL:Ljava/lang/String;
+    .local v5, "videoCompleteURL":Ljava/lang/String;
     const-string v0, "video_url"
 
     invoke-interface {v10, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -653,7 +653,7 @@
     check-cast v6, Ljava/lang/String;
 
     .line 599
-    .local v6, videoURL:Ljava/lang/String;
+    .local v6, "videoURL":Ljava/lang/String;
     const-string v0, "TJAdUnitView"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -807,30 +807,30 @@
 
     const-string v1, "Video started successfully"
 
-    .end local v1           #videoID:Ljava/lang/String;
+    .end local v1    # "videoID":Ljava/lang/String;
     invoke-static {v0, v1}, Lcom/tapjoy/TapjoyLog;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 631
-    .end local v2           #currencyName:Ljava/lang/String;
-    .end local v3           #amount:Ljava/lang/String;
+    .end local v2    # "currencyName":Ljava/lang/String;
+    .end local v3    # "amount":Ljava/lang/String;
     :goto_0
     return-void
 
     .line 613
-    .restart local v1       #videoID:Ljava/lang/String;
-    .restart local v2       #currencyName:Ljava/lang/String;
-    .restart local v3       #amount:Ljava/lang/String;
+    .restart local v1    # "videoID":Ljava/lang/String;
+    .restart local v2    # "currencyName":Ljava/lang/String;
+    .restart local v3    # "amount":Ljava/lang/String;
     :cond_0
     const-string v0, "TJAdUnitView"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
-    .end local v2           #currencyName:Ljava/lang/String;
+    .end local v2    # "currencyName":Ljava/lang/String;
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v3, "Unable to play video: "
 
-    .end local v3           #amount:Ljava/lang/String;
+    .end local v3    # "amount":Ljava/lang/String;
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
@@ -839,7 +839,7 @@
 
     move-result-object v1
 
-    .end local v1           #videoID:Ljava/lang/String;
+    .end local v1    # "videoID":Ljava/lang/String;
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -878,7 +878,7 @@
     move-result-object v7
 
     .line 624
-    .local v7, dialog:Landroid/app/AlertDialog;
+    .local v7, "dialog":Landroid/app/AlertDialog;
     :try_start_0
     invoke-virtual {v7}, Landroid/app/AlertDialog;->show()V
     :try_end_0
@@ -891,7 +891,7 @@
     move-exception v8
 
     .line 628
-    .local v8, e:Ljava/lang/Exception;
+    .local v8, "e":Ljava/lang/Exception;
     const-string v0, "TJAdUnitView"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -946,7 +946,7 @@
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
     .line 721
-    .local v0, intent:Landroid/content/Intent;
+    .local v0, "intent":Landroid/content/Intent;
     const-string v1, "result"
 
     sget-object v2, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
@@ -966,7 +966,7 @@
     invoke-virtual {p0, v1, v0}, Lcom/tapjoy/TJAdUnitView;->setResult(ILandroid/content/Intent;)V
 
     .line 726
-    .end local v0           #intent:Landroid/content/Intent;
+    .end local v0    # "intent":Landroid/content/Intent;
     :cond_0
     invoke-super {p0}, Landroid/app/Activity;->finish()V
 
@@ -976,7 +976,7 @@
 
 .method public handleClose(Lcom/tapjoy/TJAdUnitView$CLOSE_TYPES;)V
     .locals 4
-    .parameter "handleCloseButton"
+    .param p1, "handleCloseButton"    # Lcom/tapjoy/TJAdUnitView$CLOSE_TYPES;
 
     .prologue
     const-string v3, "TJAdUnitView"
@@ -1045,13 +1045,13 @@
     invoke-direct {v1, p0, p1}, Lcom/tapjoy/TJAdUnitView$4;-><init>(Lcom/tapjoy/TJAdUnitView;Lcom/tapjoy/TJAdUnitView$CLOSE_TYPES;)V
 
     .line 811
-    .local v1, timerTask:Ljava/util/TimerTask;
+    .local v1, "timerTask":Ljava/util/TimerTask;
     new-instance v0, Ljava/util/Timer;
 
     invoke-direct {v0}, Ljava/util/Timer;-><init>()V
 
     .line 812
-    .local v0, timer:Ljava/util/Timer;
+    .local v0, "timer":Ljava/util/Timer;
     const-wide/16 v2, 0x3e8
 
     invoke-virtual {v0, v1, v2, v3}, Ljava/util/Timer;->schedule(Ljava/util/TimerTask;J)V
@@ -1059,8 +1059,8 @@
     goto :goto_0
 
     .line 818
-    .end local v0           #timer:Ljava/util/Timer;
-    .end local v1           #timerTask:Ljava/util/TimerTask;
+    .end local v0    # "timer":Ljava/util/Timer;
+    .end local v1    # "timerTask":Ljava/util/TimerTask;
     :cond_2
     invoke-direct {p0, p1}, Lcom/tapjoy/TJAdUnitView;->closeView(Lcom/tapjoy/TJAdUnitView$CLOSE_TYPES;)V
 
@@ -1069,8 +1069,8 @@
 
 .method public handleWebViewOnPageFinished(Landroid/webkit/WebView;Ljava/lang/String;)V
     .locals 2
-    .parameter "view"
-    .parameter "url"
+    .param p1, "view"    # Landroid/webkit/WebView;
+    .param p2, "url"    # Ljava/lang/String;
 
     .prologue
     .line 377
@@ -1086,10 +1086,10 @@
 
 .method public handleWebViewOnReceivedError(Landroid/webkit/WebView;ILjava/lang/String;Ljava/lang/String;)V
     .locals 4
-    .parameter "view"
-    .parameter "errorCode"
-    .parameter "description"
-    .parameter "failingUrl"
+    .param p1, "view"    # Landroid/webkit/WebView;
+    .param p2, "errorCode"    # I
+    .param p3, "description"    # Ljava/lang/String;
+    .param p4, "failingUrl"    # Ljava/lang/String;
 
     .prologue
     .line 357
@@ -1125,7 +1125,7 @@
     move-result-object v0
 
     .line 368
-    .local v0, dialog:Landroid/app/AlertDialog;
+    .local v0, "dialog":Landroid/app/AlertDialog;
     invoke-virtual {v0}, Landroid/app/AlertDialog;->show()V
 
     .line 369
@@ -1147,15 +1147,15 @@
     const/16 v17, 0x0
 
     .line 99
-    .local v17, loadURL:Z
+    .local v17, "loadURL":Z
     const/4 v15, 0x0
 
     .line 100
-    .local v15, html:Ljava/lang/String;
+    .local v15, "html":Ljava/lang/String;
     const/4 v11, 0x0
 
     .line 102
-    .local v11, baseURL:Ljava/lang/String;
+    .local v11, "baseURL":Ljava/lang/String;
     invoke-virtual/range {p0 .. p0}, Lcom/tapjoy/TJAdUnitView;->getIntent()Landroid/content/Intent;
 
     move-result-object v5
@@ -1165,7 +1165,7 @@
     move-result-object v14
 
     .line 105
-    .local v14, extras:Landroid/os/Bundle;
+    .local v14, "extras":Landroid/os/Bundle;
     if-eqz v14, :cond_6
 
     .line 108
@@ -1497,9 +1497,9 @@
 
     move-result-object v5
 
-    const/high16 v6, 0x100
+    const/high16 v6, 0x1000000
 
-    const/high16 v7, 0x100
+    const/high16 v7, 0x1000000
 
     invoke-virtual {v5, v6, v7}, Landroid/view/Window;->setFlags(II)V
 
@@ -1511,7 +1511,7 @@
 
     new-instance v6, Landroid/graphics/drawable/ColorDrawable;
 
-    const/high16 v7, 0x6000
+    const/high16 v7, 0x60000000
 
     invoke-direct {v6, v7}, Landroid/graphics/drawable/ColorDrawable;-><init>(I)V
 
@@ -1533,7 +1533,7 @@
     invoke-direct {v0, v1, v2}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
 
     .line 205
-    .local v19, params:Landroid/view/ViewGroup$LayoutParams;
+    .local v19, "params":Landroid/view/ViewGroup$LayoutParams;
     new-instance v5, Landroid/widget/RelativeLayout;
 
     move-object v0, v5
@@ -1740,7 +1740,7 @@
     invoke-direct {v0, v1, v2}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
     .line 241
-    .local v16, layoutParams:Landroid/widget/RelativeLayout$LayoutParams;
+    .local v16, "layoutParams":Landroid/widget/RelativeLayout$LayoutParams;
     const/16 v5, 0xd
 
     move-object/from16 v0, v16
@@ -1778,7 +1778,7 @@
     invoke-virtual {v5, v6}, Landroid/widget/RelativeLayout;->addView(Landroid/view/View;)V
 
     .line 247
-    .end local v16           #layoutParams:Landroid/widget/RelativeLayout$LayoutParams;
+    .end local v16    # "layoutParams":Landroid/widget/RelativeLayout$LayoutParams;
     :cond_5
     move-object/from16 v0, p0
 
@@ -1802,7 +1802,7 @@
     invoke-direct {v0, v1}, Landroid/widget/ImageButton;-><init>(Landroid/content/Context;)V
 
     .line 251
-    .local v12, closeButton:Landroid/widget/ImageButton;
+    .local v12, "closeButton":Landroid/widget/ImageButton;
     invoke-direct/range {p0 .. p0}, Lcom/tapjoy/TJAdUnitView;->getCloseBitmap()Landroid/graphics/Bitmap;
 
     move-result-object v5
@@ -1835,7 +1835,7 @@
     invoke-direct {v13, v5, v6}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
     .line 263
-    .local v13, closeButtonLayoutParams:Landroid/widget/RelativeLayout$LayoutParams;
+    .local v13, "closeButtonLayoutParams":Landroid/widget/RelativeLayout$LayoutParams;
     const/16 v5, 0xa
 
     invoke-virtual {v13, v5}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
@@ -1846,7 +1846,7 @@
     invoke-virtual {v13, v5}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
 
     .line 265
-    const/high16 v5, -0x3ee0
+    const/high16 v5, -0x3ee00000
 
     invoke-static {}, Lcom/tapjoy/TapjoyConnectCore;->getDeviceScreenDensityScale()F
 
@@ -1861,7 +1861,7 @@
     move/from16 v18, v0
 
     .line 266
-    .local v18, offset:I
+    .local v18, "offset":I
     const/4 v5, 0x0
 
     const/4 v6, 0x0
@@ -1888,10 +1888,10 @@
     invoke-virtual {v5, v12, v13}, Landroid/widget/RelativeLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 272
-    .end local v12           #closeButton:Landroid/widget/ImageButton;
-    .end local v13           #closeButtonLayoutParams:Landroid/widget/RelativeLayout$LayoutParams;
-    .end local v18           #offset:I
-    .end local v19           #params:Landroid/view/ViewGroup$LayoutParams;
+    .end local v12    # "closeButton":Landroid/widget/ImageButton;
+    .end local v13    # "closeButtonLayoutParams":Landroid/widget/RelativeLayout$LayoutParams;
+    .end local v18    # "offset":I
+    .end local v19    # "params":Landroid/view/ViewGroup$LayoutParams;
     :cond_6
     return-void
 
@@ -1918,18 +1918,18 @@
     const/16 v20, 0x0
 
     .line 119
-    .local v20, urlParams:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v20, "urlParams":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v5, "URL_PARAMS"
 
     invoke-virtual {v14, v5}, Landroid/os/Bundle;->getSerializable(Ljava/lang/String;)Ljava/io/Serializable;
 
     move-result-object v20
 
-    .end local v20           #urlParams:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .end local v20    # "urlParams":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     check-cast v20, Ljava/util/HashMap;
 
     .line 121
-    .restart local v20       #urlParams:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .restart local v20    # "urlParams":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v5, "TJAdUnitView"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -2002,7 +2002,7 @@
     goto/16 :goto_0
 
     .line 166
-    .end local v20           #urlParams:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .end local v20    # "urlParams":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     :cond_8
     if-eqz v15, :cond_b
 
@@ -2167,7 +2167,7 @@
     goto :goto_3
 
     .line 217
-    .restart local v19       #params:Landroid/view/ViewGroup$LayoutParams;
+    .restart local v19    # "params":Landroid/view/ViewGroup$LayoutParams;
     :cond_d
     move-object/from16 v0, p0
 
@@ -2211,7 +2211,7 @@
     check-cast v0, Landroid/net/ConnectivityManager;
 
     .line 891
-    .local v0, conMgr:Landroid/net/ConnectivityManager;
+    .local v0, "conMgr":Landroid/net/ConnectivityManager;
     invoke-virtual {v0}, Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;
 
     move-result-object v1
@@ -2251,9 +2251,9 @@
 
 .method protected onActivityResult(IILandroid/content/Intent;)V
     .locals 6
-    .parameter "requestCode"
-    .parameter "resultCode"
-    .parameter "data"
+    .param p1, "requestCode"    # I
+    .param p2, "resultCode"    # I
+    .param p3, "data"    # Landroid/content/Intent;
 
     .prologue
     const-string v4, "callback_id"
@@ -2300,7 +2300,7 @@
     const/4 v0, 0x0
 
     .line 746
-    .local v0, extras:Landroid/os/Bundle;
+    .local v0, "extras":Landroid/os/Bundle;
     if-eqz p3, :cond_0
 
     .line 747
@@ -2403,7 +2403,7 @@
 
 .method public onConfigurationChanged(Landroid/content/res/Configuration;)V
     .locals 2
-    .parameter "newConfig"
+    .param p1, "newConfig"    # Landroid/content/res/Configuration;
 
     .prologue
     .line 321
@@ -2425,7 +2425,7 @@
 
 .method protected onCreate(Landroid/os/Bundle;)V
     .locals 3
-    .parameter "savedInstanceState"
+    .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
     const/16 v2, 0x400
@@ -2627,8 +2627,8 @@
 
 .method public onKeyDown(ILandroid/view/KeyEvent;)Z
     .locals 1
-    .parameter "keyCode"
-    .parameter "event"
+    .param p1, "keyCode"    # I
+    .param p2, "event"    # Landroid/view/KeyEvent;
 
     .prologue
     .line 760
@@ -2705,7 +2705,7 @@
 
 .method protected onRestoreInstanceState(Landroid/os/Bundle;)V
     .locals 1
-    .parameter "savedInstanceState"
+    .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
     .line 345
@@ -2828,7 +2828,7 @@
 
 .method protected onSaveInstanceState(Landroid/os/Bundle;)V
     .locals 1
-    .parameter "outState"
+    .param p1, "outState"    # Landroid/os/Bundle;
 
     .prologue
     .line 336

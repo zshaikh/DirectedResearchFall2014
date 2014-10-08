@@ -39,7 +39,6 @@
 # virtual methods
 .method public append(Ljava/util/List;)V
     .locals 3
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -52,12 +51,12 @@
 
     .prologue
     .line 57
-    .local p1, lists:Ljava/util/List;,"Ljava/util/List<Ljava/nio/ByteBuffer;>;"
+    .local p1, "lists":Ljava/util/List;, "Ljava/util/List<Ljava/nio/ByteBuffer;>;"
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
 
-    .local v1, i$:Ljava/util/Iterator;
+    .local v1, "i$":Ljava/util/Iterator;
     :goto_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
@@ -72,7 +71,7 @@
     check-cast v0, Ljava/nio/ByteBuffer;
 
     .line 58
-    .local v0, buffer:Ljava/nio/ByteBuffer;
+    .local v0, "buffer":Ljava/nio/ByteBuffer;
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->limit()I
 
     move-result v2
@@ -82,7 +81,7 @@
     goto :goto_0
 
     .line 60
-    .end local v0           #buffer:Ljava/nio/ByteBuffer;
+    .end local v0    # "buffer":Ljava/nio/ByteBuffer;
     :cond_0
     iget-object v2, p0, Lcom/flurry/org/apache/avro/util/ByteBufferOutputStream;->buffers:Ljava/util/List;
 
@@ -109,7 +108,7 @@
     iget-object v2, p0, Lcom/flurry/org/apache/avro/util/ByteBufferOutputStream;->buffers:Ljava/util/List;
 
     .line 42
-    .local v2, result:Ljava/util/List;,"Ljava/util/List<Ljava/nio/ByteBuffer;>;"
+    .local v2, "result":Ljava/util/List;, "Ljava/util/List<Ljava/nio/ByteBuffer;>;"
     invoke-virtual {p0}, Lcom/flurry/org/apache/avro/util/ByteBufferOutputStream;->reset()V
 
     .line 43
@@ -117,7 +116,7 @@
 
     move-result-object v1
 
-    .local v1, i$:Ljava/util/Iterator;
+    .local v1, "i$":Ljava/util/Iterator;
     :goto_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
@@ -131,20 +130,19 @@
 
     check-cast v0, Ljava/nio/ByteBuffer;
 
-    .local v0, buffer:Ljava/nio/ByteBuffer;
+    .local v0, "buffer":Ljava/nio/ByteBuffer;
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->flip()Ljava/nio/Buffer;
 
     goto :goto_0
 
     .line 44
-    .end local v0           #buffer:Ljava/nio/ByteBuffer;
+    .end local v0    # "buffer":Ljava/nio/ByteBuffer;
     :cond_0
     return-object v2
 .end method
 
 .method public prepend(Ljava/util/List;)V
     .locals 4
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -157,12 +155,12 @@
 
     .prologue
     .line 49
-    .local p1, lists:Ljava/util/List;,"Ljava/util/List<Ljava/nio/ByteBuffer;>;"
+    .local p1, "lists":Ljava/util/List;, "Ljava/util/List<Ljava/nio/ByteBuffer;>;"
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
 
-    .local v1, i$:Ljava/util/Iterator;
+    .local v1, "i$":Ljava/util/Iterator;
     :goto_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
@@ -177,7 +175,7 @@
     check-cast v0, Ljava/nio/ByteBuffer;
 
     .line 50
-    .local v0, buffer:Ljava/nio/ByteBuffer;
+    .local v0, "buffer":Ljava/nio/ByteBuffer;
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->limit()I
 
     move-result v2
@@ -187,7 +185,7 @@
     goto :goto_0
 
     .line 52
-    .end local v0           #buffer:Ljava/nio/ByteBuffer;
+    .end local v0    # "buffer":Ljava/nio/ByteBuffer;
     :cond_0
     iget-object v2, p0, Lcom/flurry/org/apache/avro/util/ByteBufferOutputStream;->buffers:Ljava/util/List;
 
@@ -227,7 +225,7 @@
 
 .method public write(I)V
     .locals 4
-    .parameter "b"
+    .param p1, "b"    # I
 
     .prologue
     const/4 v3, 0x1
@@ -250,7 +248,7 @@
     check-cast v0, Ljava/nio/ByteBuffer;
 
     .line 75
-    .local v0, buffer:Ljava/nio/ByteBuffer;
+    .local v0, "buffer":Ljava/nio/ByteBuffer;
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->remaining()I
 
     move-result v1
@@ -281,7 +279,7 @@
 
 .method public write(Ljava/nio/ByteBuffer;)V
     .locals 1
-    .parameter "buffer"
+    .param p1, "buffer"    # Ljava/nio/ByteBuffer;
 
     .prologue
     .line 69
@@ -295,9 +293,9 @@
 
 .method public write([BII)V
     .locals 5
-    .parameter "b"
-    .parameter "off"
-    .parameter "len"
+    .param p1, "b"    # [B
+    .param p2, "off"    # I
+    .param p3, "len"    # I
 
     .prologue
     .line 84
@@ -320,13 +318,13 @@
     check-cast v0, Ljava/nio/ByteBuffer;
 
     .line 85
-    .local v0, buffer:Ljava/nio/ByteBuffer;
+    .local v0, "buffer":Ljava/nio/ByteBuffer;
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->remaining()I
 
     move-result v1
 
     .line 86
-    .local v1, remaining:I
+    .local v1, "remaining":I
     :goto_0
     if-le p3, v1, :cond_0
 
@@ -368,7 +366,7 @@
 
 .method public writeBuffer(Ljava/nio/ByteBuffer;)V
     .locals 4
-    .parameter "buffer"
+    .param p1, "buffer"    # Ljava/nio/ByteBuffer;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -411,7 +409,7 @@
     move-result-object v0
 
     .line 103
-    .local v0, dup:Ljava/nio/ByteBuffer;
+    .local v0, "dup":Ljava/nio/ByteBuffer;
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->limit()I
 
     move-result v1

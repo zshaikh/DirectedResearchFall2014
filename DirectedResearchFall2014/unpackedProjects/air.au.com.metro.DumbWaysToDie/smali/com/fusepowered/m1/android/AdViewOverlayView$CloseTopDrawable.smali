@@ -23,8 +23,8 @@
 # direct methods
 .method constructor <init>(ZF)V
     .locals 2
-    .parameter "enabled"
-    .parameter "scale"
+    .param p1, "enabled"    # Z
+    .param p2, "scale"    # F
 
     .prologue
     .line 513
@@ -34,7 +34,7 @@
     iput p2, p0, Lcom/fusepowered/m1/android/AdViewOverlayView$CloseTopDrawable;->scale:F
 
     .line 515
-    const/high16 v0, 0x4080
+    const/high16 v0, 0x40800000
 
     mul-float/2addr v0, p2
 
@@ -43,7 +43,7 @@
     .line 516
     iget-object v0, p0, Lcom/fusepowered/m1/android/AdViewOverlayView$CloseTopDrawable;->paint:Landroid/graphics/Paint;
 
-    const/high16 v1, -0x100
+    const/high16 v1, -0x1000000
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
@@ -55,16 +55,16 @@
 # virtual methods
 .method public draw(Landroid/graphics/Canvas;)V
     .locals 11
-    .parameter "canvas"
+    .param p1, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
     const/4 v5, -0x1
 
-    const/high16 v4, -0x100
+    const/high16 v4, -0x1000000
 
-    const/high16 v3, 0x41a0
+    const/high16 v3, 0x41a00000
 
-    const/high16 v2, 0x4120
+    const/high16 v2, 0x41200000
 
     .line 522
     invoke-virtual {p0}, Lcom/fusepowered/m1/android/AdViewOverlayView$CloseTopDrawable;->copyBounds()Landroid/graphics/Rect;
@@ -72,7 +72,7 @@
     move-result-object v6
 
     .line 523
-    .local v6, bounds:Landroid/graphics/Rect;
+    .local v6, "bounds":Landroid/graphics/Rect;
     iget v0, v6, Landroid/graphics/Rect;->right:I
 
     iget v1, v6, Landroid/graphics/Rect;->left:I
@@ -80,13 +80,13 @@
     sub-int v10, v0, v1
 
     .line 524
-    .local v10, width:I
+    .local v10, "width":I
     int-to-float v0, v10
 
     div-float v9, v0, v2
 
     .line 525
-    .local v9, strokeWidth:F
+    .local v9, "strokeWidth":F
     iget v0, v6, Landroid/graphics/Rect;->right:I
 
     int-to-float v0, v0
@@ -98,7 +98,7 @@
     sub-float v7, v0, v1
 
     .line 526
-    .local v7, cx:F
+    .local v7, "cx":F
     iget v0, v6, Landroid/graphics/Rect;->top:I
 
     int-to-float v0, v0
@@ -110,7 +110,7 @@
     add-float v8, v0, v1
 
     .line 527
-    .local v8, cy:F
+    .local v8, "cy":F
     iget-object v0, p0, Lcom/fusepowered/m1/android/AdViewOverlayView$CloseTopDrawable;->paint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, v9}, Landroid/graphics/Paint;->setStrokeWidth(F)V
@@ -128,7 +128,7 @@
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
     .line 530
-    const/high16 v0, 0x4140
+    const/high16 v0, 0x41400000
 
     iget v1, p0, Lcom/fusepowered/m1/android/AdViewOverlayView$CloseTopDrawable;->scale:F
 
@@ -165,7 +165,7 @@
     invoke-virtual {v0, v4}, Landroid/graphics/Paint;->setColor(I)V
 
     .line 535
-    const/high16 v0, 0x40e0
+    const/high16 v0, 0x40e00000
 
     iget v1, p0, Lcom/fusepowered/m1/android/AdViewOverlayView$CloseTopDrawable;->scale:F
 
@@ -183,7 +183,7 @@
     .line 537
     iget-object v0, p0, Lcom/fusepowered/m1/android/AdViewOverlayView$CloseTopDrawable;->paint:Landroid/graphics/Paint;
 
-    const/high16 v1, 0x4000
+    const/high16 v1, 0x40000000
 
     div-float v1, v9, v1
 

@@ -32,19 +32,19 @@
 # virtual methods
 .method public call(Lcom/adobe/fre/FREContext;[Lcom/adobe/fre/FREObject;)Lcom/adobe/fre/FREObject;
     .locals 6
-    .parameter "context"
-    .parameter "args"
+    .param p1, "context"    # Lcom/adobe/fre/FREContext;
+    .param p2, "args"    # [Lcom/adobe/fre/FREObject;
 
     .prologue
     .line 272
     const/4 v3, 0x0
 
     .line 274
-    .local v3, result:Z
+    .local v3, "result":Z
     const/4 v2, 0x0
 
     .line 276
-    .local v2, resFreObject:Lcom/adobe/fre/FREObject;
+    .local v2, "resFreObject":Lcom/adobe/fre/FREObject;
     const/4 v4, 0x0
 
     :try_start_0
@@ -55,8 +55,8 @@
     move-result v1
 
     .line 277
-    .local v1, isRegistered:Z
-    #calls: Lcom/buffalostudios/aneutils/notifier/PushNotifier;->setGCMRegisteredOnServer(Lcom/adobe/fre/FREContext;Z)Z
+    .local v1, "isRegistered":Z
+    # invokes: Lcom/buffalostudios/aneutils/notifier/PushNotifier;->setGCMRegisteredOnServer(Lcom/adobe/fre/FREContext;Z)Z
     invoke-static {p1, v1}, Lcom/buffalostudios/aneutils/notifier/PushNotifier;->access$3(Lcom/adobe/fre/FREContext;Z)Z
 
     move-result v3
@@ -69,7 +69,7 @@
     move-result-object v2
 
     .line 283
-    .end local v1           #isRegistered:Z
+    .end local v1    # "isRegistered":Z
     :goto_0
     return-object v2
 
@@ -80,7 +80,7 @@
     move-object v0, v4
 
     .line 280
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v4, "PushNotifier"
 
     const-string v5, "Thread Exception"

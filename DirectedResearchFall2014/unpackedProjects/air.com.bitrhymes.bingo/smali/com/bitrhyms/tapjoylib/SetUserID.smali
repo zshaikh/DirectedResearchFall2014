@@ -21,8 +21,8 @@
 # virtual methods
 .method public call(Lcom/adobe/fre/FREContext;[Lcom/adobe/fre/FREObject;)Lcom/adobe/fre/FREObject;
     .locals 6
-    .parameter "context"
-    .parameter "args"
+    .param p1, "context"    # Lcom/adobe/fre/FREContext;
+    .param p2, "args"    # [Lcom/adobe/fre/FREObject;
 
     .prologue
     .line 13
@@ -33,7 +33,7 @@
     move-object v1, v0
 
     .line 14
-    .local v1, adec:Lcom/bitrhyms/tapjoylib/AndroidExtensionContext;
+    .local v1, "adec":Lcom/bitrhyms/tapjoylib/AndroidExtensionContext;
     invoke-static {p1}, Lcom/bitrhyms/tapjoylib/AndroidExtensionContext;->setFREContext(Lcom/adobe/fre/FREContext;)V
 
     .line 16
@@ -46,7 +46,7 @@
     invoke-direct {v2, v4}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
     .line 19
-    .local v2, builder:Landroid/app/AlertDialog$Builder;
+    .local v2, "builder":Landroid/app/AlertDialog$Builder;
     const/4 v4, 0x1
 
     :try_start_0
@@ -90,7 +90,7 @@
     move-object v3, v4
 
     .line 24
-    .local v3, e:Ljava/lang/Exception;
+    .local v3, "e":Ljava/lang/Exception;
     const-string v4, "ERROR_EVENT"
 
     invoke-virtual {v3}, Ljava/lang/Exception;->toString()Ljava/lang/String;

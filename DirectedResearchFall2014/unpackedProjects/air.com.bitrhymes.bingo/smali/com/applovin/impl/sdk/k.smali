@@ -348,7 +348,7 @@
 
     long-to-float v3, v3
 
-    const/high16 v4, 0x447a
+    const/high16 v4, 0x447a0000
 
     div-float/2addr v3, v4
 
@@ -448,7 +448,7 @@
 
     long-to-float v3, v3
 
-    const/high16 v4, 0x447a
+    const/high16 v4, 0x447a0000
 
     div-float/2addr v3, v4
 
@@ -646,8 +646,8 @@
 
     invoke-direct {p0, p1, p2, p3}, Lcom/applovin/impl/sdk/k;->a(Ljava/lang/String;Ljava/lang/String;I)Ljava/net/HttpURLConnection;
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result-object v7
 
@@ -731,8 +731,8 @@
     :cond_3
     invoke-virtual {v7}, Ljava/net/HttpURLConnection;->getResponseCode()I
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     move-result v3
 
@@ -741,8 +741,8 @@
     :try_start_2
     invoke-virtual {v7}, Ljava/net/HttpURLConnection;->getInputStream()Ljava/io/InputStream;
     :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
     .catch Ljava/lang/Throwable; {:try_start_2 .. :try_end_2} :catch_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
     move-result-object v6
 
@@ -765,8 +765,8 @@
 
     invoke-direct {p0, v8, v0, p1, p5}, Lcom/applovin/impl/sdk/k;->a(Ljava/lang/String;ILjava/lang/String;Lcom/applovin/impl/sdk/l;)V
     :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_2
     .catch Ljava/lang/Throwable; {:try_start_3 .. :try_end_3} :catch_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_2
 
     move-object v0, v6
 
@@ -792,8 +792,8 @@
 
     invoke-interface {p5, v3}, Lcom/applovin/impl/sdk/l;->a(I)V
     :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_1
     .catch Ljava/lang/Throwable; {:try_start_4 .. :try_end_4} :catch_2
+    .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
     move-object v0, v9
 

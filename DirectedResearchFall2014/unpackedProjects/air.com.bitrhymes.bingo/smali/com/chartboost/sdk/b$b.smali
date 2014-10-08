@@ -28,9 +28,6 @@
 # direct methods
 .method public constructor <init>(Lcom/chartboost/sdk/b;Lcom/chartboost/sdk/impl/a;Z)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 240

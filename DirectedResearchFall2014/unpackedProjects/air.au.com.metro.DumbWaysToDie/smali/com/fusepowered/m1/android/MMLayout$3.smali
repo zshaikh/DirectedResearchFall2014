@@ -26,8 +26,6 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m1/android/MMLayout;Lcom/fusepowered/m1/android/InlineVideoView$InlineParams;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 559

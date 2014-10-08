@@ -10,8 +10,8 @@
 # direct methods
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
-    .parameter "name"
-    .parameter "value"
+    .param p1, "name"    # Ljava/lang/String;
+    .param p2, "value"    # Ljava/lang/String;
 
     .prologue
     .line 9
@@ -33,8 +33,8 @@
 
 .method private encode(Ljava/lang/String;Ljava/lang/String;)V
     .locals 3
-    .parameter "name"
-    .parameter "value"
+    .param p1, "name"    # Ljava/lang/String;
+    .param p2, "value"    # Ljava/lang/String;
 
     .prologue
     const-string v1, "UTF-8"
@@ -81,7 +81,7 @@
     move-object v0, v1
 
     .line 26
-    .local v0, ex:Ljava/io/UnsupportedEncodingException;
+    .local v0, "ex":Ljava/io/UnsupportedEncodingException;
     new-instance v1, Ljava/lang/RuntimeException;
 
     const-string v2, "Broken VM does not support UTF-8"
@@ -95,8 +95,8 @@
 # virtual methods
 .method public add(Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
-    .parameter "name"
-    .parameter "value"
+    .param p1, "name"    # Ljava/lang/String;
+    .param p2, "value"    # Ljava/lang/String;
 
     .prologue
     .line 14

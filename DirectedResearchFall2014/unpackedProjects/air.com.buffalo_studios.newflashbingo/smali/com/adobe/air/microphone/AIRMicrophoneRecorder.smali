@@ -31,11 +31,6 @@
 # direct methods
 .method public constructor <init>(IIIII)V
     .locals 1
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const/4 v0, 0x0
@@ -287,8 +282,8 @@
 
     invoke-virtual {v1}, Ljava/lang/Object;->wait()V
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     goto :goto_0
 
@@ -354,7 +349,6 @@
 
 .method public setRecording(Z)V
     .locals 3
-    .parameter
 
     .prologue
     .line 100

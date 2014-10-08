@@ -42,7 +42,7 @@
 # virtual methods
 .method getAdImplId(Ljava/lang/String;)J
     .locals 2
-    .parameter "creatorAdImplId"
+    .param p1, "creatorAdImplId"    # Ljava/lang/String;
 
     .prologue
     .line 68
@@ -79,7 +79,7 @@
     check-cast v4, Lcom/fusepowered/m1/android/MMWebView;
 
     .line 31
-    .local v4, mmWebView:Lcom/fusepowered/m1/android/MMWebView;
+    .local v4, "mmWebView":Lcom/fusepowered/m1/android/MMWebView;
     if-eqz v4, :cond_0
 
     .line 33
@@ -88,7 +88,7 @@
     move-result-object v1
 
     .line 34
-    .local v1, activity:Landroid/app/Activity;
+    .local v1, "activity":Landroid/app/Activity;
     instance-of v5, v1, Lcom/fusepowered/m1/android/MMActivity;
 
     if-eqz v5, :cond_0
@@ -101,13 +101,13 @@
     move-object v3, v0
 
     .line 37
-    .local v3, mmActivity:Lcom/fusepowered/m1/android/MMActivity;
+    .local v3, "mmActivity":Lcom/fusepowered/m1/android/MMActivity;
     invoke-virtual {v3}, Lcom/fusepowered/m1/android/MMActivity;->getWrappedActivity()Lcom/fusepowered/m1/android/MMBaseActivity;
 
     move-result-object v2
 
     .line 38
-    .local v2, baseActivity:Lcom/fusepowered/m1/android/MMBaseActivity;
+    .local v2, "baseActivity":Lcom/fusepowered/m1/android/MMBaseActivity;
     instance-of v5, v2, Lcom/fusepowered/m1/android/AdViewOverlayActivity;
 
     if-eqz v5, :cond_0
@@ -115,12 +115,12 @@
     .line 40
     check-cast v2, Lcom/fusepowered/m1/android/AdViewOverlayActivity;
 
-    .end local v2           #baseActivity:Lcom/fusepowered/m1/android/MMBaseActivity;
+    .end local v2    # "baseActivity":Lcom/fusepowered/m1/android/MMBaseActivity;
     move-object v5, v2
 
     .line 44
-    .end local v1           #activity:Landroid/app/Activity;
-    .end local v3           #mmActivity:Lcom/fusepowered/m1/android/MMActivity;
+    .end local v1    # "activity":Landroid/app/Activity;
+    .end local v3    # "mmActivity":Lcom/fusepowered/m1/android/MMActivity;
     :goto_0
     return-object v5
 
@@ -132,7 +132,6 @@
 
 .method runOnUiThreadFuture(Ljava/util/concurrent/Callable;)Lcom/fusepowered/m1/android/MMJSResponse;
     .locals 3
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -146,13 +145,13 @@
 
     .prologue
     .line 49
-    .local p1, callable:Ljava/util/concurrent/Callable;,"Ljava/util/concurrent/Callable<Lcom/fusepowered/m1/android/MMJSResponse;>;"
+    .local p1, "callable":Ljava/util/concurrent/Callable;, "Ljava/util/concurrent/Callable<Lcom/fusepowered/m1/android/MMJSResponse;>;"
     new-instance v1, Ljava/util/concurrent/FutureTask;
 
     invoke-direct {v1, p1}, Ljava/util/concurrent/FutureTask;-><init>(Ljava/util/concurrent/Callable;)V
 
     .line 50
-    .local v1, future:Ljava/util/concurrent/FutureTask;,"Ljava/util/concurrent/FutureTask<Lcom/fusepowered/m1/android/MMJSResponse;>;"
+    .local v1, "future":Ljava/util/concurrent/FutureTask;, "Ljava/util/concurrent/FutureTask<Lcom/fusepowered/m1/android/MMJSResponse;>;"
     invoke-static {v1}, Lcom/fusepowered/m1/android/MMSDK;->runOnUiThread(Ljava/lang/Runnable;)V
 
     .line 53
@@ -161,7 +160,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/fusepowered/m1/android/MMJSObject;
     check-cast p0, Lcom/fusepowered/m1/android/MMJSResponse;
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
@@ -180,11 +179,11 @@
     move-object v0, v2
 
     .line 57
-    .local v0, e:Ljava/lang/InterruptedException;
+    .local v0, "e":Ljava/lang/InterruptedException;
     invoke-virtual {v0}, Ljava/lang/InterruptedException;->printStackTrace()V
 
     .line 63
-    .end local v0           #e:Ljava/lang/InterruptedException;
+    .end local v0    # "e":Ljava/lang/InterruptedException;
     :goto_1
     const/4 v2, 0x0
 
@@ -197,7 +196,7 @@
     move-object v0, v2
 
     .line 61
-    .local v0, e:Ljava/util/concurrent/ExecutionException;
+    .local v0, "e":Ljava/util/concurrent/ExecutionException;
     invoke-virtual {v0}, Ljava/util/concurrent/ExecutionException;->printStackTrace()V
 
     goto :goto_1
@@ -205,7 +204,7 @@
 
 .method setContext(Landroid/content/Context;)V
     .locals 1
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     .line 20
@@ -221,7 +220,7 @@
 
 .method setMMWebView(Lcom/fusepowered/m1/android/MMWebView;)V
     .locals 1
-    .parameter "webView"
+    .param p1, "webView"    # Lcom/fusepowered/m1/android/MMWebView;
 
     .prologue
     .line 25

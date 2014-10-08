@@ -21,8 +21,8 @@
 # virtual methods
 .method public call(Lcom/adobe/fre/FREContext;[Lcom/adobe/fre/FREObject;)Lcom/adobe/fre/FREObject;
     .locals 12
-    .parameter "freContext"
-    .parameter "arg1"
+    .param p1, "freContext"    # Lcom/adobe/fre/FREContext;
+    .param p2, "arg1"    # [Lcom/adobe/fre/FREObject;
 
     .prologue
     .line 20
@@ -36,7 +36,7 @@
     move-result-object v1
 
     .line 21
-    .local v1, eventName:Ljava/lang/String;
+    .local v1, "eventName":Ljava/lang/String;
     const/4 v9, 0x1
 
     aget-object v9, p2, v9
@@ -46,7 +46,7 @@
     move-result-object v3
 
     .line 22
-    .local v3, parameterKey:Ljava/lang/String;
+    .local v3, "parameterKey":Ljava/lang/String;
     const/4 v9, 0x2
 
     aget-object v9, p2, v9
@@ -56,7 +56,7 @@
     move-result-object v4
 
     .line 23
-    .local v4, parameterValue:Ljava/lang/String;
+    .local v4, "parameterValue":Ljava/lang/String;
     const/4 v9, 0x3
 
     aget-object v9, p2, v9
@@ -66,7 +66,7 @@
     move-result-object v7
 
     .line 25
-    .local v7, timedValue:Ljava/lang/String;
+    .local v7, "timedValue":Ljava/lang/String;
     invoke-virtual {v1}, Ljava/lang/String;->length()I
 
     move-result v9
@@ -109,11 +109,11 @@
     move-result v8
 
     .line 32
-    .local v8, value:I
+    .local v8, "value":I
     const/4 v6, 0x0
 
     .line 33
-    .local v6, timedBooleanValue:Z
+    .local v6, "timedBooleanValue":Z
     const/4 v9, 0x1
 
     if-ne v8, v9, :cond_1
@@ -135,16 +135,16 @@
     invoke-direct {v2}, Ljava/util/HashMap;-><init>()V
 
     .line 38
-    .local v2, map:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v2, "map":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-virtual {v2, v3, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 39
     invoke-static {v1, v2, v6}, Lcom/flurry/android/FlurryAgent;->logEvent(Ljava/lang/String;Ljava/util/Map;Z)V
 
     .line 62
-    .end local v2           #map:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
-    .end local v6           #timedBooleanValue:Z
-    .end local v8           #value:I
+    .end local v2    # "map":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .end local v6    # "timedBooleanValue":Z
+    .end local v8    # "value":I
     :goto_0
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -159,20 +159,20 @@
     invoke-static {v9, v10}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 80
-    .end local v1           #eventName:Ljava/lang/String;
-    .end local v3           #parameterKey:Ljava/lang/String;
-    .end local v4           #parameterValue:Ljava/lang/String;
-    .end local v7           #timedValue:Ljava/lang/String;
+    .end local v1    # "eventName":Ljava/lang/String;
+    .end local v3    # "parameterKey":Ljava/lang/String;
+    .end local v4    # "parameterValue":Ljava/lang/String;
+    .end local v7    # "timedValue":Ljava/lang/String;
     :goto_1
     const/4 v9, 0x0
 
     return-object v9
 
     .line 42
-    .restart local v1       #eventName:Ljava/lang/String;
-    .restart local v3       #parameterKey:Ljava/lang/String;
-    .restart local v4       #parameterValue:Ljava/lang/String;
-    .restart local v7       #timedValue:Ljava/lang/String;
+    .restart local v1    # "eventName":Ljava/lang/String;
+    .restart local v3    # "parameterKey":Ljava/lang/String;
+    .restart local v4    # "parameterValue":Ljava/lang/String;
+    .restart local v7    # "timedValue":Ljava/lang/String;
     :cond_3
     if-eqz v7, :cond_5
 
@@ -188,11 +188,11 @@
     move-result v8
 
     .line 45
-    .restart local v8       #value:I
+    .restart local v8    # "value":I
     const/4 v5, 0x0
 
     .line 46
-    .local v5, timeBooleanValue:Z
+    .local v5, "timeBooleanValue":Z
     const/4 v9, 0x1
 
     if-ne v8, v9, :cond_4
@@ -213,19 +213,19 @@
     goto :goto_0
 
     .line 64
-    .end local v1           #eventName:Ljava/lang/String;
-    .end local v3           #parameterKey:Ljava/lang/String;
-    .end local v4           #parameterValue:Ljava/lang/String;
-    .end local v5           #timeBooleanValue:Z
-    .end local v7           #timedValue:Ljava/lang/String;
-    .end local v8           #value:I
+    .end local v1    # "eventName":Ljava/lang/String;
+    .end local v3    # "parameterKey":Ljava/lang/String;
+    .end local v4    # "parameterValue":Ljava/lang/String;
+    .end local v5    # "timeBooleanValue":Z
+    .end local v7    # "timedValue":Ljava/lang/String;
+    .end local v8    # "value":I
     :catch_0
     move-exception v9
 
     move-object v0, v9
 
     .line 65
-    .local v0, e:Ljava/lang/IllegalStateException;
+    .local v0, "e":Ljava/lang/IllegalStateException;
     invoke-virtual {v0}, Ljava/lang/IllegalStateException;->printStackTrace()V
 
     .line 66
@@ -294,11 +294,11 @@
     goto :goto_1
 
     .line 50
-    .end local v0           #e:Ljava/lang/IllegalStateException;
-    .restart local v1       #eventName:Ljava/lang/String;
-    .restart local v3       #parameterKey:Ljava/lang/String;
-    .restart local v4       #parameterValue:Ljava/lang/String;
-    .restart local v7       #timedValue:Ljava/lang/String;
+    .end local v0    # "e":Ljava/lang/IllegalStateException;
+    .restart local v1    # "eventName":Ljava/lang/String;
+    .restart local v3    # "parameterKey":Ljava/lang/String;
+    .restart local v4    # "parameterValue":Ljava/lang/String;
+    .restart local v7    # "timedValue":Ljava/lang/String;
     :cond_5
     if-eqz v3, :cond_7
 
@@ -322,7 +322,7 @@
     invoke-direct {v2}, Ljava/util/HashMap;-><init>()V
 
     .line 55
-    .restart local v2       #map:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .restart local v2    # "map":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-virtual {v2, v3, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 56
@@ -337,18 +337,18 @@
     goto/16 :goto_0
 
     .line 67
-    .end local v1           #eventName:Ljava/lang/String;
-    .end local v2           #map:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
-    .end local v3           #parameterKey:Ljava/lang/String;
-    .end local v4           #parameterValue:Ljava/lang/String;
-    .end local v7           #timedValue:Ljava/lang/String;
+    .end local v1    # "eventName":Ljava/lang/String;
+    .end local v2    # "map":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .end local v3    # "parameterKey":Ljava/lang/String;
+    .end local v4    # "parameterValue":Ljava/lang/String;
+    .end local v7    # "timedValue":Ljava/lang/String;
     :catch_1
     move-exception v9
 
     move-object v0, v9
 
     .line 68
-    .local v0, e:Lcom/adobe/fre/FRETypeMismatchException;
+    .local v0, "e":Lcom/adobe/fre/FRETypeMismatchException;
     invoke-virtual {v0}, Lcom/adobe/fre/FRETypeMismatchException;->printStackTrace()V
 
     .line 69
@@ -417,11 +417,11 @@
     goto/16 :goto_1
 
     .line 60
-    .end local v0           #e:Lcom/adobe/fre/FRETypeMismatchException;
-    .restart local v1       #eventName:Ljava/lang/String;
-    .restart local v3       #parameterKey:Ljava/lang/String;
-    .restart local v4       #parameterValue:Ljava/lang/String;
-    .restart local v7       #timedValue:Ljava/lang/String;
+    .end local v0    # "e":Lcom/adobe/fre/FRETypeMismatchException;
+    .restart local v1    # "eventName":Ljava/lang/String;
+    .restart local v3    # "parameterKey":Ljava/lang/String;
+    .restart local v4    # "parameterValue":Ljava/lang/String;
+    .restart local v7    # "timedValue":Ljava/lang/String;
     :cond_7
     :try_start_2
     invoke-static {v1}, Lcom/flurry/android/FlurryAgent;->logEvent(Ljava/lang/String;)V
@@ -435,17 +435,17 @@
     goto/16 :goto_0
 
     .line 70
-    .end local v1           #eventName:Ljava/lang/String;
-    .end local v3           #parameterKey:Ljava/lang/String;
-    .end local v4           #parameterValue:Ljava/lang/String;
-    .end local v7           #timedValue:Ljava/lang/String;
+    .end local v1    # "eventName":Ljava/lang/String;
+    .end local v3    # "parameterKey":Ljava/lang/String;
+    .end local v4    # "parameterValue":Ljava/lang/String;
+    .end local v7    # "timedValue":Ljava/lang/String;
     :catch_2
     move-exception v9
 
     move-object v0, v9
 
     .line 71
-    .local v0, e:Lcom/adobe/fre/FREInvalidObjectException;
+    .local v0, "e":Lcom/adobe/fre/FREInvalidObjectException;
     invoke-virtual {v0}, Lcom/adobe/fre/FREInvalidObjectException;->printStackTrace()V
 
     .line 72
@@ -514,14 +514,14 @@
     goto/16 :goto_1
 
     .line 73
-    .end local v0           #e:Lcom/adobe/fre/FREInvalidObjectException;
+    .end local v0    # "e":Lcom/adobe/fre/FREInvalidObjectException;
     :catch_3
     move-exception v9
 
     move-object v0, v9
 
     .line 74
-    .local v0, e:Lcom/adobe/fre/FREWrongThreadException;
+    .local v0, "e":Lcom/adobe/fre/FREWrongThreadException;
     invoke-virtual {v0}, Lcom/adobe/fre/FREWrongThreadException;->printStackTrace()V
 
     .line 75
@@ -590,14 +590,14 @@
     goto/16 :goto_1
 
     .line 76
-    .end local v0           #e:Lcom/adobe/fre/FREWrongThreadException;
+    .end local v0    # "e":Lcom/adobe/fre/FREWrongThreadException;
     :catch_4
     move-exception v9
 
     move-object v0, v9
 
     .line 77
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     .line 78

@@ -72,7 +72,6 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 142
@@ -425,7 +424,6 @@
 
 .method public setGeolocationEventSource(J)V
     .locals 1
-    .parameter
 
     .prologue
     .line 62
@@ -450,8 +448,6 @@
 
 .method public setUpdateTimeAndRegister(JJ)V
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 76

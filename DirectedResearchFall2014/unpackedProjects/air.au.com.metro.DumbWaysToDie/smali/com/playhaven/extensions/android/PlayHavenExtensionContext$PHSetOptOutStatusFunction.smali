@@ -24,7 +24,6 @@
 # direct methods
 .method private constructor <init>(Lcom/playhaven/extensions/android/PlayHavenExtensionContext;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 541
@@ -37,8 +36,6 @@
 
 .method synthetic constructor <init>(Lcom/playhaven/extensions/android/PlayHavenExtensionContext;Lcom/playhaven/extensions/android/PlayHavenExtensionContext$PHSetOptOutStatusFunction;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 541
@@ -51,8 +48,8 @@
 # virtual methods
 .method public call(Lcom/adobe/fre/FREContext;[Lcom/adobe/fre/FREObject;)Lcom/adobe/fre/FREObject;
     .locals 4
-    .parameter "arg0"
-    .parameter "args"
+    .param p1, "arg0"    # Lcom/adobe/fre/FREContext;
+    .param p2, "args"    # [Lcom/adobe/fre/FREObject;
 
     .prologue
     .line 547
@@ -66,7 +63,7 @@
     move-result v1
 
     .line 548
-    .local v1, shouldOptOut:Z
+    .local v1, "shouldOptOut":Z
     iget-object v2, p0, Lcom/playhaven/extensions/android/PlayHavenExtensionContext$PHSetOptOutStatusFunction;->this$0:Lcom/playhaven/extensions/android/PlayHavenExtensionContext;
 
     invoke-virtual {v2, v1}, Lcom/playhaven/extensions/android/PlayHavenExtensionContext;->ffiSetOptOutStatus(Z)V
@@ -74,7 +71,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 554
-    .end local v1           #shouldOptOut:Z
+    .end local v1    # "shouldOptOut":Z
     :goto_0
     const/4 v2, 0x0
 
@@ -87,7 +84,7 @@
     move-object v0, v2
 
     .line 552
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v2, "[PHExtension]"
 
     invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;

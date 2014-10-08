@@ -15,10 +15,10 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;Lcom/facebook/android/Facebook$DialogListener;)V
     .locals 6
-    .parameter "context"
-    .parameter "action"
-    .parameter "parameters"
-    .parameter "listener"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "action"    # Ljava/lang/String;
+    .param p3, "parameters"    # Landroid/os/Bundle;
+    .param p4, "listener"    # Lcom/facebook/android/Facebook$DialogListener;
 
     .prologue
     .line 42
@@ -45,11 +45,11 @@
 
 .method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;Lcom/facebook/android/Facebook$DialogListener;I)V
     .locals 6
-    .parameter "context"
-    .parameter "action"
-    .parameter "parameters"
-    .parameter "listener"
-    .parameter "theme"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "action"    # Ljava/lang/String;
+    .param p3, "parameters"    # Landroid/os/Bundle;
+    .param p4, "listener"    # Lcom/facebook/android/Facebook$DialogListener;
+    .param p5, "theme"    # I
 
     .prologue
     .line 48
@@ -76,9 +76,9 @@
 
 .method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Lcom/facebook/android/Facebook$DialogListener;)V
     .locals 1
-    .parameter "context"
-    .parameter "url"
-    .parameter "listener"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "url"    # Ljava/lang/String;
+    .param p3, "listener"    # Lcom/facebook/android/Facebook$DialogListener;
 
     .prologue
     .line 33
@@ -92,10 +92,10 @@
 
 .method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Lcom/facebook/android/Facebook$DialogListener;I)V
     .locals 0
-    .parameter "context"
-    .parameter "url"
-    .parameter "listener"
-    .parameter "theme"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "url"    # Ljava/lang/String;
+    .param p3, "listener"    # Lcom/facebook/android/Facebook$DialogListener;
+    .param p4, "theme"    # I
 
     .prologue
     .line 37
@@ -110,9 +110,6 @@
 
 .method static synthetic access$0(Lcom/facebook/android/FbDialog;Landroid/os/Bundle;Lcom/facebook/FacebookException;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 62
@@ -123,8 +120,8 @@
 
 .method private callDialogListener(Landroid/os/Bundle;Lcom/facebook/FacebookException;)V
     .locals 7
-    .parameter "values"
-    .parameter "error"
+    .param p1, "values"    # Landroid/os/Bundle;
+    .param p2, "error"    # Lcom/facebook/FacebookException;
 
     .prologue
     .line 63
@@ -161,7 +158,7 @@
     move-object v2, v0
 
     .line 72
-    .local v2, facebookDialogException:Lcom/facebook/FacebookDialogException;
+    .local v2, "facebookDialogException":Lcom/facebook/FacebookDialogException;
     new-instance v1, Lcom/facebook/android/DialogError;
 
     invoke-virtual {v2}, Lcom/facebook/FacebookDialogException;->getMessage()Ljava/lang/String;
@@ -181,7 +178,7 @@
     invoke-direct {v1, v4, v5, v6}, Lcom/facebook/android/DialogError;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     .line 74
-    .local v1, dialogError:Lcom/facebook/android/DialogError;
+    .local v1, "dialogError":Lcom/facebook/android/DialogError;
     iget-object v4, p0, Lcom/facebook/android/FbDialog;->mListener:Lcom/facebook/android/Facebook$DialogListener;
 
     invoke-interface {v4, v1}, Lcom/facebook/android/Facebook$DialogListener;->onError(Lcom/facebook/android/DialogError;)V
@@ -189,8 +186,8 @@
     goto :goto_0
 
     .line 75
-    .end local v1           #dialogError:Lcom/facebook/android/DialogError;
-    .end local v2           #facebookDialogException:Lcom/facebook/FacebookDialogException;
+    .end local v1    # "dialogError":Lcom/facebook/android/DialogError;
+    .end local v2    # "facebookDialogException":Lcom/facebook/FacebookDialogException;
     :cond_2
     instance-of v4, p2, Lcom/facebook/FacebookOperationCanceledException;
 
@@ -214,7 +211,7 @@
     invoke-direct {v3, v4}, Lcom/facebook/android/FacebookError;-><init>(Ljava/lang/String;)V
 
     .line 79
-    .local v3, facebookError:Lcom/facebook/android/FacebookError;
+    .local v3, "facebookError":Lcom/facebook/android/FacebookError;
     iget-object v4, p0, Lcom/facebook/android/FbDialog;->mListener:Lcom/facebook/android/Facebook$DialogListener;
 
     invoke-interface {v4, v3}, Lcom/facebook/android/Facebook$DialogListener;->onFacebookError(Lcom/facebook/android/FacebookError;)V
@@ -224,7 +221,7 @@
 
 .method private setDialogListener(Lcom/facebook/android/Facebook$DialogListener;)V
     .locals 1
-    .parameter "listener"
+    .param p1, "listener"    # Lcom/facebook/android/Facebook$DialogListener;
 
     .prologue
     .line 53

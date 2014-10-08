@@ -33,13 +33,13 @@
 
 .method public constructor <init>(IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
-    .parameter "id"
-    .parameter "messageId"
-    .parameter "alias"
-    .parameter "fuseId"
-    .parameter "url"
-    .parameter "message"
-    .parameter "date"
+    .param p1, "id"    # I
+    .param p2, "messageId"    # I
+    .param p3, "alias"    # Ljava/lang/String;
+    .param p4, "fuseId"    # Ljava/lang/String;
+    .param p5, "url"    # Ljava/lang/String;
+    .param p6, "message"    # Ljava/lang/String;
+    .param p7, "date"    # Ljava/lang/String;
 
     .prologue
     .line 18
@@ -144,7 +144,7 @@
 
 .method public setAlias(Ljava/lang/String;)V
     .locals 0
-    .parameter "alias"
+    .param p1, "alias"    # Ljava/lang/String;
 
     .prologue
     .line 53
@@ -156,7 +156,7 @@
 
 .method public setDate(Ljava/lang/String;)V
     .locals 0
-    .parameter "date"
+    .param p1, "date"    # Ljava/lang/String;
 
     .prologue
     .line 42
@@ -168,7 +168,7 @@
 
 .method public setFuseId(Ljava/lang/String;)V
     .locals 0
-    .parameter "fuseId"
+    .param p1, "fuseId"    # Ljava/lang/String;
 
     .prologue
     .line 65
@@ -180,7 +180,7 @@
 
 .method public setId(I)V
     .locals 0
-    .parameter "id"
+    .param p1, "id"    # I
 
     .prologue
     .line 94
@@ -192,7 +192,7 @@
 
 .method public setMessage(Ljava/lang/String;)V
     .locals 0
-    .parameter "message"
+    .param p1, "message"    # Ljava/lang/String;
 
     .prologue
     .line 77
@@ -204,7 +204,7 @@
 
 .method public setMessageId(I)V
     .locals 0
-    .parameter "messageId"
+    .param p1, "messageId"    # I
 
     .prologue
     .line 87
@@ -216,7 +216,7 @@
 
 .method public setUrl(Ljava/lang/String;)V
     .locals 0
-    .parameter "url"
+    .param p1, "url"    # Ljava/lang/String;
 
     .prologue
     .line 33
@@ -310,7 +310,7 @@
     move-result-object v0
 
     .line 106
-    .local v0, buf:Ljava/lang/StringBuilder;
+    .local v0, "buf":Ljava/lang/StringBuilder;
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1

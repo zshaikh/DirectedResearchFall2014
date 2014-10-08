@@ -64,8 +64,8 @@
 
 .method public constructor <init>(Landroid/app/Activity;Lcom/google/ads/internal/AdWebView;)V
     .locals 4
-    .parameter "adActivity"
-    .parameter "adWebView"
+    .param p1, "adActivity"    # Landroid/app/Activity;
+    .param p2, "adWebView"    # Lcom/google/ads/internal/AdWebView;
 
     .prologue
     const/4 v3, 0x0
@@ -157,7 +157,6 @@
 
 .method public a(I)V
     .locals 1
-    .parameter
 
     .prologue
     .line 230
@@ -171,7 +170,6 @@
 
 .method public a(Landroid/view/MotionEvent;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 237
@@ -284,7 +282,7 @@
     .line 253
     long-to-float v2, v0
 
-    const/high16 v3, 0x447a
+    const/high16 v3, 0x447a0000
 
     div-float/2addr v2, v3
 
@@ -331,7 +329,7 @@
 
 .method public onCompletion(Landroid/media/MediaPlayer;)V
     .locals 4
-    .parameter "mp"
+    .param p1, "mp"    # Landroid/media/MediaPlayer;
 
     .prologue
     .line 186
@@ -351,9 +349,9 @@
 
 .method public onError(Landroid/media/MediaPlayer;II)Z
     .locals 5
-    .parameter "mp"
-    .parameter "what"
-    .parameter "extra"
+    .param p1, "mp"    # Landroid/media/MediaPlayer;
+    .param p2, "what"    # I
+    .param p3, "extra"    # I
 
     .prologue
     .line 194
@@ -444,7 +442,7 @@
 
 .method public onPrepared(Landroid/media/MediaPlayer;)V
     .locals 6
-    .parameter "mp"
+    .param p1, "mp"    # Landroid/media/MediaPlayer;
 
     .prologue
     .line 205
@@ -456,7 +454,7 @@
 
     int-to-float v0, v0
 
-    const/high16 v1, 0x447a
+    const/high16 v1, 0x447a0000
 
     div-float/2addr v0, v1
 
@@ -499,7 +497,7 @@
 
 .method public setMediaControllerEnabled(Z)V
     .locals 2
-    .parameter "enabled"
+    .param p1, "enabled"    # Z
 
     .prologue
     .line 155
@@ -573,7 +571,7 @@
 
 .method public setSrc(Ljava/lang/String;)V
     .locals 0
-    .parameter "src"
+    .param p1, "src"    # Ljava/lang/String;
 
     .prologue
     .line 178

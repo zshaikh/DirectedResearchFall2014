@@ -75,8 +75,8 @@
 
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
     .locals 3
-    .parameter "gameId"
-    .parameter "gameVersion"
+    .param p1, "gameId"    # Ljava/lang/String;
+    .param p2, "gameVersion"    # Ljava/lang/String;
 
     .prologue
     const-string v2, "1"
@@ -224,7 +224,7 @@
 
 .method public setDebug(Ljava/lang/String;)V
     .locals 0
-    .parameter "debug"
+    .param p1, "debug"    # Ljava/lang/String;
 
     .prologue
     .line 67
@@ -236,7 +236,7 @@
 
 .method public setEncryptionBroken(Ljava/lang/String;)V
     .locals 0
-    .parameter "encryptionBroken"
+    .param p1, "encryptionBroken"    # Ljava/lang/String;
 
     .prologue
     .line 91
@@ -248,7 +248,7 @@
 
 .method public setGameId(Ljava/lang/String;)V
     .locals 0
-    .parameter "gameId"
+    .param p1, "gameId"    # Ljava/lang/String;
 
     .prologue
     .line 39
@@ -260,7 +260,7 @@
 
 .method public setGameName(Ljava/lang/String;)V
     .locals 0
-    .parameter "gameName"
+    .param p1, "gameName"    # Ljava/lang/String;
 
     .prologue
     .line 51
@@ -272,7 +272,7 @@
 
 .method public setGameVersion(Ljava/lang/String;)V
     .locals 0
-    .parameter "gameVersion"
+    .param p1, "gameVersion"    # Ljava/lang/String;
 
     .prologue
     .line 45
@@ -284,7 +284,6 @@
 
 .method public setInAppItems(Ljava/util/ArrayList;)V
     .locals 0
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -297,7 +296,7 @@
 
     .prologue
     .line 99
-    .local p1, inAppItems:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/fusepowered/util/InAppItem;>;"
+    .local p1, "inAppItems":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/fusepowered/util/InAppItem;>;"
     iput-object p1, p0, Lcom/fusepowered/util/GameInfo;->inAppItems:Ljava/util/ArrayList;
 
     .line 100
@@ -306,7 +305,7 @@
 
 .method public setJailBroken(Ljava/lang/String;)V
     .locals 0
-    .parameter "jailBroken"
+    .param p1, "jailBroken"    # Ljava/lang/String;
 
     .prologue
     .line 75
@@ -318,7 +317,7 @@
 
 .method public setNoHash(Ljava/lang/String;)V
     .locals 0
-    .parameter "noHash"
+    .param p1, "noHash"    # Ljava/lang/String;
 
     .prologue
     .line 59
@@ -330,7 +329,7 @@
 
 .method public setPl(Ljava/lang/String;)V
     .locals 0
-    .parameter "pl"
+    .param p1, "pl"    # Ljava/lang/String;
 
     .prologue
     .line 83
@@ -460,7 +459,7 @@
     move-result-object v0
 
     .line 114
-    .local v0, buf:Ljava/lang/StringBuilder;
+    .local v0, "buf":Ljava/lang/StringBuilder;
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1

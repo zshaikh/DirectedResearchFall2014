@@ -30,10 +30,10 @@
 # virtual methods
 .method public onJsAlert(Landroid/webkit/WebView;Ljava/lang/String;Ljava/lang/String;Landroid/webkit/JsResult;)Z
     .locals 1
-    .parameter "view"
-    .parameter "url"
-    .parameter "message"
-    .parameter "result"
+    .param p1, "view"    # Landroid/webkit/WebView;
+    .param p2, "url"    # Ljava/lang/String;
+    .param p3, "message"    # Ljava/lang/String;
+    .param p4, "result"    # Landroid/webkit/JsResult;
 
     .prologue
     .line 70
@@ -49,10 +49,10 @@
 
 .method public onJsBeforeUnload(Landroid/webkit/WebView;Ljava/lang/String;Ljava/lang/String;Landroid/webkit/JsResult;)Z
     .locals 1
-    .parameter "view"
-    .parameter "url"
-    .parameter "message"
-    .parameter "result"
+    .param p1, "view"    # Landroid/webkit/WebView;
+    .param p2, "url"    # Ljava/lang/String;
+    .param p3, "message"    # Ljava/lang/String;
+    .param p4, "result"    # Landroid/webkit/JsResult;
 
     .prologue
     .line 88
@@ -68,10 +68,10 @@
 
 .method public onJsConfirm(Landroid/webkit/WebView;Ljava/lang/String;Ljava/lang/String;Landroid/webkit/JsResult;)Z
     .locals 1
-    .parameter "view"
-    .parameter "url"
-    .parameter "message"
-    .parameter "result"
+    .param p1, "view"    # Landroid/webkit/WebView;
+    .param p2, "url"    # Ljava/lang/String;
+    .param p3, "message"    # Ljava/lang/String;
+    .param p4, "result"    # Landroid/webkit/JsResult;
 
     .prologue
     .line 76
@@ -87,11 +87,11 @@
 
 .method public onJsPrompt(Landroid/webkit/WebView;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/webkit/JsPromptResult;)Z
     .locals 1
-    .parameter "view"
-    .parameter "url"
-    .parameter "message"
-    .parameter "defaultValue"
-    .parameter "result"
+    .param p1, "view"    # Landroid/webkit/WebView;
+    .param p2, "url"    # Ljava/lang/String;
+    .param p3, "message"    # Ljava/lang/String;
+    .param p4, "defaultValue"    # Ljava/lang/String;
+    .param p5, "result"    # Landroid/webkit/JsPromptResult;
 
     .prologue
     .line 82

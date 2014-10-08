@@ -63,9 +63,6 @@
 
 .method public constructor <init>(Ljava/lang/String;Lcom/chartboost/sdk/impl/j$c;Ljava/lang/String;)V
     .locals 1
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 81
@@ -114,8 +111,6 @@
 
 .method static synthetic a(Landroid/app/Application;Ljava/lang/String;)Ljava/lang/String;
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 377
@@ -128,7 +123,6 @@
 
 .method static synthetic a(I)V
     .locals 0
-    .parameter
 
     .prologue
     .line 174
@@ -139,8 +133,6 @@
 
 .method static synthetic a(Lcom/chartboost/sdk/impl/j;Lcom/chartboost/sdk/impl/k;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 106
@@ -151,8 +143,6 @@
 
 .method private static b(Landroid/app/Application;Ljava/lang/String;)Ljava/lang/String;
     .locals 4
-    .parameter
-    .parameter
 
     .prologue
     const-string v3, "; "
@@ -383,7 +373,6 @@
 
 .method private b(Lcom/chartboost/sdk/impl/k;)V
     .locals 6
-    .parameter
 
     .prologue
     const-string v5, "Chartboost"
@@ -691,7 +680,6 @@
 
 .method public a(Lcom/chartboost/sdk/impl/k;)V
     .locals 4
-    .parameter
 
     .prologue
     .line 91

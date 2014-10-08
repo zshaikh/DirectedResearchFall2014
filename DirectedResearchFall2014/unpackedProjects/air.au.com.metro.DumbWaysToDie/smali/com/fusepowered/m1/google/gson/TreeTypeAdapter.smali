@@ -67,11 +67,8 @@
 # direct methods
 .method private constructor <init>(Lcom/fusepowered/m1/google/gson/JsonSerializer;Lcom/fusepowered/m1/google/gson/JsonDeserializer;Lcom/fusepowered/m1/google/gson/Gson;Lcom/fusepowered/m1/google/gson/reflect/TypeToken;Lcom/fusepowered/m1/google/gson/TypeAdapterFactory;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter "gson"
-    .parameter
-    .parameter "skipPast"
+    .param p3, "gson"    # Lcom/fusepowered/m1/google/gson/Gson;
+    .param p5, "skipPast"    # Lcom/fusepowered/m1/google/gson/TypeAdapterFactory;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -89,10 +86,10 @@
 
     .prologue
     .line 43
-    .local p0, this:Lcom/fusepowered/m1/google/gson/TreeTypeAdapter;,"Lcom/fusepowered/m1/google/gson/TreeTypeAdapter<TT;>;"
-    .local p1, serializer:Lcom/fusepowered/m1/google/gson/JsonSerializer;,"Lcom/fusepowered/m1/google/gson/JsonSerializer<TT;>;"
-    .local p2, deserializer:Lcom/fusepowered/m1/google/gson/JsonDeserializer;,"Lcom/fusepowered/m1/google/gson/JsonDeserializer<TT;>;"
-    .local p4, typeToken:Lcom/fusepowered/m1/google/gson/reflect/TypeToken;,"Lcom/fusepowered/m1/google/gson/reflect/TypeToken<TT;>;"
+    .local p0, "this":Lcom/fusepowered/m1/google/gson/TreeTypeAdapter;, "Lcom/fusepowered/m1/google/gson/TreeTypeAdapter<TT;>;"
+    .local p1, "serializer":Lcom/fusepowered/m1/google/gson/JsonSerializer;, "Lcom/fusepowered/m1/google/gson/JsonSerializer<TT;>;"
+    .local p2, "deserializer":Lcom/fusepowered/m1/google/gson/JsonDeserializer;, "Lcom/fusepowered/m1/google/gson/JsonDeserializer<TT;>;"
+    .local p4, "typeToken":Lcom/fusepowered/m1/google/gson/reflect/TypeToken;, "Lcom/fusepowered/m1/google/gson/reflect/TypeToken<TT;>;"
     invoke-direct {p0}, Lcom/fusepowered/m1/google/gson/TypeAdapter;-><init>()V
 
     .line 44
@@ -116,16 +113,16 @@
 
 .method synthetic constructor <init>(Lcom/fusepowered/m1/google/gson/JsonSerializer;Lcom/fusepowered/m1/google/gson/JsonDeserializer;Lcom/fusepowered/m1/google/gson/Gson;Lcom/fusepowered/m1/google/gson/reflect/TypeToken;Lcom/fusepowered/m1/google/gson/TypeAdapterFactory;Lcom/fusepowered/m1/google/gson/TreeTypeAdapter$1;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
-    .parameter "x2"
-    .parameter "x3"
-    .parameter "x4"
-    .parameter "x5"
+    .param p1, "x0"    # Lcom/fusepowered/m1/google/gson/JsonSerializer;
+    .param p2, "x1"    # Lcom/fusepowered/m1/google/gson/JsonDeserializer;
+    .param p3, "x2"    # Lcom/fusepowered/m1/google/gson/Gson;
+    .param p4, "x3"    # Lcom/fusepowered/m1/google/gson/reflect/TypeToken;
+    .param p5, "x4"    # Lcom/fusepowered/m1/google/gson/TypeAdapterFactory;
+    .param p6, "x5"    # Lcom/fusepowered/m1/google/gson/TreeTypeAdapter$1;
 
     .prologue
     .line 32
-    .local p0, this:Lcom/fusepowered/m1/google/gson/TreeTypeAdapter;,"Lcom/fusepowered/m1/google/gson/TreeTypeAdapter<TT;>;"
+    .local p0, "this":Lcom/fusepowered/m1/google/gson/TreeTypeAdapter;, "Lcom/fusepowered/m1/google/gson/TreeTypeAdapter<TT;>;"
     invoke-direct/range {p0 .. p5}, Lcom/fusepowered/m1/google/gson/TreeTypeAdapter;-><init>(Lcom/fusepowered/m1/google/gson/JsonSerializer;Lcom/fusepowered/m1/google/gson/JsonDeserializer;Lcom/fusepowered/m1/google/gson/Gson;Lcom/fusepowered/m1/google/gson/reflect/TypeToken;Lcom/fusepowered/m1/google/gson/TypeAdapterFactory;)V
 
     return-void
@@ -143,11 +140,11 @@
 
     .prologue
     .line 76
-    .local p0, this:Lcom/fusepowered/m1/google/gson/TreeTypeAdapter;,"Lcom/fusepowered/m1/google/gson/TreeTypeAdapter<TT;>;"
+    .local p0, "this":Lcom/fusepowered/m1/google/gson/TreeTypeAdapter;, "Lcom/fusepowered/m1/google/gson/TreeTypeAdapter<TT;>;"
     iget-object v0, p0, Lcom/fusepowered/m1/google/gson/TreeTypeAdapter;->delegate:Lcom/fusepowered/m1/google/gson/TypeAdapter;
 
     .line 77
-    .local v0, d:Lcom/fusepowered/m1/google/gson/TypeAdapter;,"Lcom/fusepowered/m1/google/gson/TypeAdapter<TT;>;"
+    .local v0, "d":Lcom/fusepowered/m1/google/gson/TypeAdapter;, "Lcom/fusepowered/m1/google/gson/TypeAdapter<TT;>;"
     if-eqz v0, :cond_0
 
     move-object v1, v0
@@ -173,8 +170,7 @@
 
 .method public static newFactory(Lcom/fusepowered/m1/google/gson/reflect/TypeToken;Ljava/lang/Object;)Lcom/fusepowered/m1/google/gson/TypeAdapterFactory;
     .locals 6
-    .parameter
-    .parameter "typeAdapter"
+    .param p1, "typeAdapter"    # Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -187,7 +183,7 @@
     .end annotation
 
     .prologue
-    .local p0, exactType:Lcom/fusepowered/m1/google/gson/reflect/TypeToken;,"Lcom/fusepowered/m1/google/gson/reflect/TypeToken<*>;"
+    .local p0, "exactType":Lcom/fusepowered/m1/google/gson/reflect/TypeToken;, "Lcom/fusepowered/m1/google/gson/reflect/TypeToken<*>;"
     const/4 v4, 0x0
 
     .line 86
@@ -208,8 +204,7 @@
 
 .method public static newFactoryWithMatchRawType(Lcom/fusepowered/m1/google/gson/reflect/TypeToken;Ljava/lang/Object;)Lcom/fusepowered/m1/google/gson/TypeAdapterFactory;
     .locals 6
-    .parameter
-    .parameter "typeAdapter"
+    .param p1, "typeAdapter"    # Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -222,7 +217,7 @@
     .end annotation
 
     .prologue
-    .local p0, exactType:Lcom/fusepowered/m1/google/gson/reflect/TypeToken;,"Lcom/fusepowered/m1/google/gson/reflect/TypeToken<*>;"
+    .local p0, "exactType":Lcom/fusepowered/m1/google/gson/reflect/TypeToken;, "Lcom/fusepowered/m1/google/gson/reflect/TypeToken<*>;"
     const/4 v4, 0x0
 
     .line 96
@@ -241,7 +236,7 @@
     move v3, v0
 
     .line 97
-    .local v3, matchRawType:Z
+    .local v3, "matchRawType":Z
     :goto_0
     new-instance v0, Lcom/fusepowered/m1/google/gson/TreeTypeAdapter$SingleTypeFactory;
 
@@ -256,7 +251,7 @@
     return-object v0
 
     .line 96
-    .end local v3           #matchRawType:Z
+    .end local v3    # "matchRawType":Z
     :cond_0
     const/4 v0, 0x0
 
@@ -267,8 +262,7 @@
 
 .method public static newTypeHierarchyFactory(Ljava/lang/Class;Ljava/lang/Object;)Lcom/fusepowered/m1/google/gson/TypeAdapterFactory;
     .locals 6
-    .parameter
-    .parameter "typeAdapter"
+    .param p1, "typeAdapter"    # Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -281,7 +275,7 @@
     .end annotation
 
     .prologue
-    .local p0, hierarchyType:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p0, "hierarchyType":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const/4 v2, 0x0
 
     .line 106
@@ -304,7 +298,7 @@
 # virtual methods
 .method public read(Lcom/fusepowered/m1/google/gson/stream/JsonReader;)Ljava/lang/Object;
     .locals 4
-    .parameter "in"
+    .param p1, "in"    # Lcom/fusepowered/m1/google/gson/stream/JsonReader;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -321,7 +315,7 @@
 
     .prologue
     .line 52
-    .local p0, this:Lcom/fusepowered/m1/google/gson/TreeTypeAdapter;,"Lcom/fusepowered/m1/google/gson/TreeTypeAdapter<TT;>;"
+    .local p0, "this":Lcom/fusepowered/m1/google/gson/TreeTypeAdapter;, "Lcom/fusepowered/m1/google/gson/TreeTypeAdapter<TT;>;"
     iget-object v1, p0, Lcom/fusepowered/m1/google/gson/TreeTypeAdapter;->deserializer:Lcom/fusepowered/m1/google/gson/JsonDeserializer;
 
     if-nez v1, :cond_0
@@ -346,7 +340,7 @@
     move-result-object v0
 
     .line 56
-    .local v0, value:Lcom/fusepowered/m1/google/gson/JsonElement;
+    .local v0, "value":Lcom/fusepowered/m1/google/gson/JsonElement;
     invoke-virtual {v0}, Lcom/fusepowered/m1/google/gson/JsonElement;->isJsonNull()Z
 
     move-result v1
@@ -381,8 +375,7 @@
 
 .method public write(Lcom/fusepowered/m1/google/gson/stream/JsonWriter;Ljava/lang/Object;)V
     .locals 4
-    .parameter "out"
-    .parameter
+    .param p1, "out"    # Lcom/fusepowered/m1/google/gson/stream/JsonWriter;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -399,8 +392,8 @@
 
     .prologue
     .line 63
-    .local p0, this:Lcom/fusepowered/m1/google/gson/TreeTypeAdapter;,"Lcom/fusepowered/m1/google/gson/TreeTypeAdapter<TT;>;"
-    .local p2, value:Ljava/lang/Object;,"TT;"
+    .local p0, "this":Lcom/fusepowered/m1/google/gson/TreeTypeAdapter;, "Lcom/fusepowered/m1/google/gson/TreeTypeAdapter<TT;>;"
+    .local p2, "value":Ljava/lang/Object;, "TT;"
     iget-object v1, p0, Lcom/fusepowered/m1/google/gson/TreeTypeAdapter;->serializer:Lcom/fusepowered/m1/google/gson/JsonSerializer;
 
     if-nez v1, :cond_0
@@ -444,7 +437,7 @@
     move-result-object v0
 
     .line 72
-    .local v0, tree:Lcom/fusepowered/m1/google/gson/JsonElement;
+    .local v0, "tree":Lcom/fusepowered/m1/google/gson/JsonElement;
     invoke-static {v0, p1}, Lcom/fusepowered/m1/google/gson/internal/Streams;->write(Lcom/fusepowered/m1/google/gson/JsonElement;Lcom/fusepowered/m1/google/gson/stream/JsonWriter;)V
 
     goto :goto_0

@@ -13,8 +13,8 @@
 # direct methods
 .method constructor <init>(Lcom/flurry/org/apache/avro/Schema;Lcom/flurry/org/apache/avro/io/Decoder;)V
     .locals 1
-    .parameter "schema"
-    .parameter "in"
+    .param p1, "schema"    # Lcom/flurry/org/apache/avro/Schema;
+    .param p2, "in"    # Lcom/flurry/org/apache/avro/io/Decoder;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -35,8 +35,8 @@
 
 .method constructor <init>(Lcom/flurry/org/apache/avro/io/parsing/Symbol;Lcom/flurry/org/apache/avro/io/Decoder;)V
     .locals 0
-    .parameter "root"
-    .parameter "in"
+    .param p1, "root"    # Lcom/flurry/org/apache/avro/io/parsing/Symbol;
+    .param p2, "in"    # Lcom/flurry/org/apache/avro/io/Decoder;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -56,7 +56,7 @@
 
 .method private checkFixed(I)V
     .locals 4
-    .parameter "size"
+    .param p1, "size"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -81,7 +81,7 @@
     check-cast v0, Lcom/flurry/org/apache/avro/io/parsing/Symbol$IntCheckAction;
 
     .line 137
-    .local v0, top:Lcom/flurry/org/apache/avro/io/parsing/Symbol$IntCheckAction;
+    .local v0, "top":Lcom/flurry/org/apache/avro/io/parsing/Symbol$IntCheckAction;
     iget v1, v0, Lcom/flurry/org/apache/avro/io/parsing/Symbol$IntCheckAction;->size:I
 
     if-eq p1, v1, :cond_0
@@ -136,7 +136,7 @@
 
 .method private static getSymbol(Lcom/flurry/org/apache/avro/Schema;)Lcom/flurry/org/apache/avro/io/parsing/Symbol;
     .locals 2
-    .parameter "schema"
+    .param p0, "schema"    # Lcom/flurry/org/apache/avro/Schema;
 
     .prologue
     .line 55
@@ -188,7 +188,7 @@
     move-result-wide v0
 
     .line 190
-    .local v0, result:J
+    .local v0, "result":J
     const-wide/16 v2, 0x0
 
     cmp-long v2, v0, v2
@@ -209,7 +209,7 @@
 
 .method public configure(Lcom/flurry/org/apache/avro/io/Decoder;)Lcom/flurry/org/apache/avro/io/ValidatingDecoder;
     .locals 1
-    .parameter "in"
+    .param p1, "in"    # Lcom/flurry/org/apache/avro/io/Decoder;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -231,8 +231,8 @@
 
 .method public doAction(Lcom/flurry/org/apache/avro/io/parsing/Symbol;Lcom/flurry/org/apache/avro/io/parsing/Symbol;)Lcom/flurry/org/apache/avro/io/parsing/Symbol;
     .locals 1
-    .parameter "input"
-    .parameter "top"
+    .param p1, "input"    # Lcom/flurry/org/apache/avro/io/parsing/Symbol;
+    .param p2, "top"    # Lcom/flurry/org/apache/avro/io/parsing/Symbol;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -268,7 +268,7 @@
     move-result-wide v0
 
     .line 222
-    .local v0, result:J
+    .local v0, "result":J
     const-wide/16 v2, 0x0
 
     cmp-long v2, v0, v2
@@ -311,7 +311,7 @@
     move-result-wide v0
 
     .line 180
-    .local v0, result:J
+    .local v0, "result":J
     const-wide/16 v2, 0x0
 
     cmp-long v2, v0, v2
@@ -358,7 +358,7 @@
 
 .method public readBytes(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
     .locals 2
-    .parameter "old"
+    .param p1, "old"    # Ljava/nio/ByteBuffer;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -435,7 +435,7 @@
     check-cast v1, Lcom/flurry/org/apache/avro/io/parsing/Symbol$IntCheckAction;
 
     .line 167
-    .local v1, top:Lcom/flurry/org/apache/avro/io/parsing/Symbol$IntCheckAction;
+    .local v1, "top":Lcom/flurry/org/apache/avro/io/parsing/Symbol$IntCheckAction;
     iget-object v2, p0, Lcom/flurry/org/apache/avro/io/ValidatingDecoder;->in:Lcom/flurry/org/apache/avro/io/Decoder;
 
     invoke-virtual {v2}, Lcom/flurry/org/apache/avro/io/Decoder;->readEnum()I
@@ -443,7 +443,7 @@
     move-result v0
 
     .line 168
-    .local v0, result:I
+    .local v0, "result":I
     if-ltz v0, :cond_0
 
     iget v2, v1, Lcom/flurry/org/apache/avro/io/parsing/Symbol$IntCheckAction;->size:I
@@ -495,9 +495,9 @@
 
 .method public readFixed([BII)V
     .locals 1
-    .parameter "bytes"
-    .parameter "start"
-    .parameter "len"
+    .param p1, "bytes"    # [B
+    .param p2, "start"    # I
+    .param p3, "len"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -569,7 +569,7 @@
     check-cast v1, Lcom/flurry/org/apache/avro/io/parsing/Symbol$Alternative;
 
     .line 244
-    .local v1, top:Lcom/flurry/org/apache/avro/io/parsing/Symbol$Alternative;
+    .local v1, "top":Lcom/flurry/org/apache/avro/io/parsing/Symbol$Alternative;
     iget-object v2, p0, Lcom/flurry/org/apache/avro/io/ValidatingDecoder;->in:Lcom/flurry/org/apache/avro/io/Decoder;
 
     invoke-virtual {v2}, Lcom/flurry/org/apache/avro/io/Decoder;->readIndex()I
@@ -577,7 +577,7 @@
     move-result v0
 
     .line 245
-    .local v0, result:I
+    .local v0, "result":I
     iget-object v2, p0, Lcom/flurry/org/apache/avro/io/ValidatingDecoder;->parser:Lcom/flurry/org/apache/avro/io/parsing/SkipParser;
 
     invoke-virtual {v1, v0}, Lcom/flurry/org/apache/avro/io/parsing/Symbol$Alternative;->getSymbol(I)Lcom/flurry/org/apache/avro/io/parsing/Symbol;
@@ -666,7 +666,7 @@
     move-result-wide v0
 
     .line 212
-    .local v0, result:J
+    .local v0, "result":J
     const-wide/16 v2, 0x0
 
     cmp-long v2, v0, v2
@@ -712,7 +712,7 @@
 
 .method public readString(Lcom/flurry/org/apache/avro/util/Utf8;)Lcom/flurry/org/apache/avro/util/Utf8;
     .locals 2
-    .parameter "old"
+    .param p1, "old"    # Lcom/flurry/org/apache/avro/util/Utf8;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -788,7 +788,7 @@
 
     move-result-wide v0
 
-    .local v0, c:J
+    .local v0, "c":J
     :goto_0
     cmp-long v4, v0, v6
 
@@ -797,15 +797,15 @@
     move-wide v2, v0
 
     .line 200
-    .end local v0           #c:J
-    .local v2, c:J
+    .end local v0    # "c":J
+    .local v2, "c":J
     :goto_1
     const-wide/16 v4, 0x1
 
     sub-long v0, v2, v4
 
-    .end local v2           #c:J
-    .restart local v0       #c:J
+    .end local v2    # "c":J
+    .restart local v0    # "c":J
     cmp-long v4, v2, v6
 
     if-lez v4, :cond_0
@@ -817,13 +817,13 @@
 
     move-wide v2, v0
 
-    .end local v0           #c:J
-    .restart local v2       #c:J
+    .end local v0    # "c":J
+    .restart local v2    # "c":J
     goto :goto_1
 
     .line 199
-    .end local v2           #c:J
-    .restart local v0       #c:J
+    .end local v2    # "c":J
+    .restart local v0    # "c":J
     :cond_0
     iget-object v4, p0, Lcom/flurry/org/apache/avro/io/ValidatingDecoder;->in:Lcom/flurry/org/apache/avro/io/Decoder;
 
@@ -896,7 +896,7 @@
     check-cast v0, Lcom/flurry/org/apache/avro/io/parsing/Symbol$IntCheckAction;
 
     .line 160
-    .local v0, top:Lcom/flurry/org/apache/avro/io/parsing/Symbol$IntCheckAction;
+    .local v0, "top":Lcom/flurry/org/apache/avro/io/parsing/Symbol$IntCheckAction;
     iget-object v1, p0, Lcom/flurry/org/apache/avro/io/ValidatingDecoder;->in:Lcom/flurry/org/apache/avro/io/Decoder;
 
     iget v2, v0, Lcom/flurry/org/apache/avro/io/parsing/Symbol$IntCheckAction;->size:I
@@ -909,7 +909,7 @@
 
 .method public skipFixed(I)V
     .locals 1
-    .parameter "length"
+    .param p1, "length"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -954,7 +954,7 @@
 
     move-result-wide v0
 
-    .local v0, c:J
+    .local v0, "c":J
     :goto_0
     cmp-long v4, v0, v6
 
@@ -963,15 +963,15 @@
     move-wide v2, v0
 
     .line 232
-    .end local v0           #c:J
-    .local v2, c:J
+    .end local v0    # "c":J
+    .local v2, "c":J
     :goto_1
     const-wide/16 v4, 0x1
 
     sub-long v0, v2, v4
 
-    .end local v2           #c:J
-    .restart local v0       #c:J
+    .end local v2    # "c":J
+    .restart local v0    # "c":J
     cmp-long v4, v2, v6
 
     if-lez v4, :cond_0
@@ -983,13 +983,13 @@
 
     move-wide v2, v0
 
-    .end local v0           #c:J
-    .restart local v2       #c:J
+    .end local v0    # "c":J
+    .restart local v2    # "c":J
     goto :goto_1
 
     .line 231
-    .end local v2           #c:J
-    .restart local v0       #c:J
+    .end local v2    # "c":J
+    .restart local v0    # "c":J
     :cond_0
     iget-object v4, p0, Lcom/flurry/org/apache/avro/io/ValidatingDecoder;->in:Lcom/flurry/org/apache/avro/io/Decoder;
 

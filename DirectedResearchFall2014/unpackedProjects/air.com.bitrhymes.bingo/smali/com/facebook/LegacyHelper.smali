@@ -16,8 +16,8 @@
 
 .method public static extendTokenCompleted(Lcom/facebook/Session;Landroid/os/Bundle;)V
     .locals 0
-    .parameter "session"
-    .parameter "bundle"
+    .param p0, "session"    # Lcom/facebook/Session;
+    .param p1, "bundle"    # Landroid/os/Bundle;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 

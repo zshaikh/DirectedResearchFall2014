@@ -26,8 +26,6 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m1/android/BridgeMMMedia;Ljava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 569
@@ -71,8 +69,8 @@
 
 .method public onScanCompleted(Ljava/lang/String;Landroid/net/Uri;)V
     .locals 2
-    .parameter "path"
-    .parameter "uri"
+    .param p1, "path"    # Ljava/lang/String;
+    .param p2, "uri"    # Landroid/net/Uri;
 
     .prologue
     .line 573

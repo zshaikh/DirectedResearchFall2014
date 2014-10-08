@@ -44,11 +44,11 @@
 
 .method protected constructor <init>(Lcom/vungle/sdk/ak;)V
     .locals 0
-    .parameter
+    .param p1    # Lcom/vungle/sdk/ak;
         .annotation runtime Ljavax/inject/Named;
             value = "RequestAdHttpResponseHandler"
         .end annotation
-    .end parameter
+    .end param
     .annotation runtime Ljavax/inject/Inject;
     .end annotation
 
@@ -77,7 +77,6 @@
 
 .method protected final a(Landroid/os/Parcel;)Lcom/vungle/sdk/net/http/RequestAdHttpRequest;
     .locals 1
-    .parameter
 
     .prologue
     .line 69
@@ -96,7 +95,6 @@
 
 .method final a(Ljava/lang/String;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 49
@@ -118,7 +116,6 @@
 
 .method protected final synthetic b(Landroid/os/Parcel;)Lcom/vungle/sdk/ah;
     .locals 1
-    .parameter
 
     .prologue
     .line 16
@@ -173,8 +170,8 @@
 
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 1
-    .parameter "parcel"
-    .parameter "flags"
+    .param p1, "parcel"    # Landroid/os/Parcel;
+    .param p2, "flags"    # I
 
     .prologue
     .line 62

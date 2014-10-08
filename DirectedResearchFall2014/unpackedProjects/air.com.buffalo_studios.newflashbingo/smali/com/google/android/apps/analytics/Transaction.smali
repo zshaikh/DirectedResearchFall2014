@@ -29,35 +29,35 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    #getter for: Lcom/google/android/apps/analytics/Transaction$Builder;->orderId:Ljava/lang/String;
+    # getter for: Lcom/google/android/apps/analytics/Transaction$Builder;->orderId:Ljava/lang/String;
     invoke-static {p1}, Lcom/google/android/apps/analytics/Transaction$Builder;->access$000(Lcom/google/android/apps/analytics/Transaction$Builder;)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/android/apps/analytics/Transaction;->orderId:Ljava/lang/String;
 
-    #getter for: Lcom/google/android/apps/analytics/Transaction$Builder;->totalCost:D
+    # getter for: Lcom/google/android/apps/analytics/Transaction$Builder;->totalCost:D
     invoke-static {p1}, Lcom/google/android/apps/analytics/Transaction$Builder;->access$100(Lcom/google/android/apps/analytics/Transaction$Builder;)D
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/google/android/apps/analytics/Transaction;->totalCost:D
 
-    #getter for: Lcom/google/android/apps/analytics/Transaction$Builder;->storeName:Ljava/lang/String;
+    # getter for: Lcom/google/android/apps/analytics/Transaction$Builder;->storeName:Ljava/lang/String;
     invoke-static {p1}, Lcom/google/android/apps/analytics/Transaction$Builder;->access$200(Lcom/google/android/apps/analytics/Transaction$Builder;)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/android/apps/analytics/Transaction;->storeName:Ljava/lang/String;
 
-    #getter for: Lcom/google/android/apps/analytics/Transaction$Builder;->totalTax:D
+    # getter for: Lcom/google/android/apps/analytics/Transaction$Builder;->totalTax:D
     invoke-static {p1}, Lcom/google/android/apps/analytics/Transaction$Builder;->access$300(Lcom/google/android/apps/analytics/Transaction$Builder;)D
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/google/android/apps/analytics/Transaction;->totalTax:D
 
-    #getter for: Lcom/google/android/apps/analytics/Transaction$Builder;->shippingCost:D
+    # getter for: Lcom/google/android/apps/analytics/Transaction$Builder;->shippingCost:D
     invoke-static {p1}, Lcom/google/android/apps/analytics/Transaction$Builder;->access$400(Lcom/google/android/apps/analytics/Transaction$Builder;)D
 
     move-result-wide v0

@@ -182,7 +182,6 @@
 
 .method private static a(Landroid/app/Activity;)Landroid/content/pm/ActivityInfo;
     .locals 4
-    .parameter
 
     .prologue
     const/4 v3, 0x0
@@ -249,8 +248,6 @@
 
 .method public static a(Landroid/app/Activity;I)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 24
@@ -266,9 +263,6 @@
 
 .method public static a(Landroid/app/Activity;IZ)Z
     .locals 6
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const/4 v5, 0x1

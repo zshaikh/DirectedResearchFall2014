@@ -105,9 +105,7 @@
 
 .method private constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter "loggingValue"
+    .param p3, "loggingValue"    # Ljava/lang/String;
 
     .prologue
     .line 1127
@@ -122,7 +120,6 @@
 
 .method public static valueOf(Ljava/lang/String;)Lcom/facebook/AuthorizationClient$Result$Code;
     .locals 1
-    .parameter
 
     .prologue
     .line 1

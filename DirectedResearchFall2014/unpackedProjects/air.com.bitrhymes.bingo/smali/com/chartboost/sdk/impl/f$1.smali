@@ -23,7 +23,6 @@
 # direct methods
 .method constructor <init>(Lcom/chartboost/sdk/impl/f;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 1
@@ -44,12 +43,12 @@
 # virtual methods
 .method public draw(Landroid/graphics/Canvas;)V
     .locals 7
-    .parameter "canvas"
+    .param p1, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
     const/4 v2, 0x0
 
-    const/high16 v6, 0x4000
+    const/high16 v6, 0x40000000
 
     .line 87
     iget-object v0, p0, Lcom/chartboost/sdk/impl/f$1;->b:Lcom/chartboost/sdk/impl/f;
@@ -82,7 +81,7 @@
     if-lt v2, v4, :cond_1
 
     .line 95
-    const/high16 v1, 0x40c0
+    const/high16 v1, 0x40c00000
 
     mul-float/2addr v1, v0
 
@@ -164,7 +163,7 @@
     invoke-virtual {p1, v2, v4}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
 
     .line 108
-    const/high16 v2, 0x3f80
+    const/high16 v2, 0x3f800000
 
     mul-float/2addr v0, v2
 
@@ -355,7 +354,7 @@
 
 .method protected onStateChange([I)Z
     .locals 6
-    .parameter "states"
+    .param p1, "states"    # [I
 
     .prologue
     const/4 v5, 0x1
@@ -415,7 +414,7 @@
 
 .method public setAlpha(I)V
     .locals 1
-    .parameter "alpha"
+    .param p1, "alpha"    # I
 
     .prologue
     .line 131
@@ -442,7 +441,7 @@
 
 .method public setColorFilter(Landroid/graphics/ColorFilter;)V
     .locals 1
-    .parameter "cf"
+    .param p1, "cf"    # Landroid/graphics/ColorFilter;
 
     .prologue
     .line 137

@@ -53,7 +53,7 @@
 
 .method public static getBitmapFromString(Ljava/lang/String;)Landroid/graphics/Bitmap;
     .locals 12
-    .parameter "bitmapString"
+    .param p0, "bitmapString"    # Ljava/lang/String;
 
     .prologue
     const/4 v6, 0x0
@@ -66,11 +66,11 @@
     const/4 v2, 0x0
 
     .line 21
-    .local v2, base64decode:Ljava/lang/reflect/Method;
+    .local v2, "base64decode":Ljava/lang/reflect/Method;
     const/4 v1, 0x0
 
     .line 23
-    .local v1, b64:Ljava/lang/Class;
+    .local v1, "b64":Ljava/lang/Class;
     if-eqz p0, :cond_0
 
     .line 25
@@ -143,7 +143,7 @@
     const/4 v4, 0x0
 
     .line 42
-    .local v4, decodedString:[B
+    .local v4, "decodedString":[B
     const/4 v6, 0x0
 
     const/4 v7, 0x2
@@ -204,12 +204,12 @@
 
     move-result-object v3
 
-    .local v3, decodedByte:Landroid/graphics/Bitmap;
+    .local v3, "decodedByte":Landroid/graphics/Bitmap;
     move-object v6, v3
 
     .line 54
-    .end local v3           #decodedByte:Landroid/graphics/Bitmap;
-    .end local v4           #decodedString:[B
+    .end local v3    # "decodedByte":Landroid/graphics/Bitmap;
+    .end local v4    # "decodedString":[B
     :cond_0
     return-object v6
 
@@ -233,7 +233,7 @@
     move-object v5, v6
 
     .line 35
-    .local v5, e:Ljava/lang/Exception;
+    .local v5, "e":Ljava/lang/Exception;
     const-string v6, "Proper decode method could not be found, disabling mute-button feature"
 
     const-class v7, Lcom/fusepowered/a1/data/ApplifierImpactGraphicsBundle;
@@ -243,15 +243,15 @@
     goto :goto_0
 
     .line 44
-    .end local v5           #e:Ljava/lang/Exception;
-    .restart local v4       #decodedString:[B
+    .end local v5    # "e":Ljava/lang/Exception;
+    .restart local v4    # "decodedString":[B
     :catch_1
     move-exception v6
 
     move-object v5, v6
 
     .line 45
-    .restart local v5       #e:Ljava/lang/Exception;
+    .restart local v5    # "e":Ljava/lang/Exception;
     const-string v6, "Problems invoking decode method"
 
     const-class v7, Lcom/fusepowered/a1/data/ApplifierImpactGraphicsBundle;

@@ -40,8 +40,8 @@
 # virtual methods
 .method public bridge synthetic deserialize(Lcom/flurry/org/codehaus/jackson/JsonParser;Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;)Ljava/lang/Object;
     .locals 1
-    .parameter "x0"
-    .parameter "x1"
+    .param p1, "x0"    # Lcom/flurry/org/codehaus/jackson/JsonParser;
+    .param p2, "x1"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -60,8 +60,8 @@
 
 .method public deserialize(Lcom/flurry/org/codehaus/jackson/JsonParser;Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;)Lorg/joda/time/DateMidnight;
     .locals 7
-    .parameter "jp"
-    .parameter "ctxt"
+    .param p1, "jp"    # Lcom/flurry/org/codehaus/jackson/JsonParser;
+    .param p2, "ctxt"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -86,7 +86,7 @@
     move-result v3
 
     .line 207
-    .local v3, year:I
+    .local v3, "year":I
     invoke-virtual {p1}, Lcom/flurry/org/codehaus/jackson/JsonParser;->nextToken()Lcom/flurry/org/codehaus/jackson/JsonToken;
 
     .line 208
@@ -95,7 +95,7 @@
     move-result v2
 
     .line 209
-    .local v2, month:I
+    .local v2, "month":I
     invoke-virtual {p1}, Lcom/flurry/org/codehaus/jackson/JsonParser;->nextToken()Lcom/flurry/org/codehaus/jackson/JsonToken;
 
     .line 210
@@ -104,7 +104,7 @@
     move-result v0
 
     .line 211
-    .local v0, day:I
+    .local v0, "day":I
     invoke-virtual {p1}, Lcom/flurry/org/codehaus/jackson/JsonParser;->nextToken()Lcom/flurry/org/codehaus/jackson/JsonToken;
 
     move-result-object v4
@@ -131,9 +131,9 @@
     invoke-direct {v4, v3, v2, v0}, Lorg/joda/time/DateMidnight;-><init>(III)V
 
     .line 224
-    .end local v0           #day:I
-    .end local v2           #month:I
-    .end local v3           #year:I
+    .end local v0    # "day":I
+    .end local v2    # "month":I
+    .end local v3    # "year":I
     :goto_0
     return-object v4
 
@@ -183,7 +183,7 @@
     move-result-object v1
 
     .line 221
-    .local v1, local:Lorg/joda/time/DateTime;
+    .local v1, "local":Lorg/joda/time/DateTime;
     if-nez v1, :cond_2
 
     .line 222

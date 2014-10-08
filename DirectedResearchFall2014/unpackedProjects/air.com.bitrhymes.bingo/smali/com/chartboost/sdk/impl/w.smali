@@ -32,7 +32,6 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
-    .parameter
 
     .prologue
     const/4 v0, 0x0
@@ -62,7 +61,6 @@
 
 .method static synthetic a(Lcom/chartboost/sdk/impl/w;)F
     .locals 1
-    .parameter
 
     .prologue
     .line 28
@@ -73,7 +71,6 @@
 
 .method private a(Landroid/content/Context;)V
     .locals 7
-    .parameter
 
     .prologue
     const/4 v6, -0x1
@@ -140,7 +137,7 @@
     .line 81
     iget-object v1, p0, Lcom/chartboost/sdk/impl/w;->d:Landroid/graphics/Paint;
 
-    const/high16 v2, 0x4040
+    const/high16 v2, 0x40400000
 
     mul-float/2addr v0, v2
 
@@ -263,8 +260,6 @@
 
 .method static synthetic a(Lcom/chartboost/sdk/impl/w;F)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 28
@@ -275,7 +270,6 @@
 
 .method private a(Landroid/graphics/Canvas;)Z
     .locals 4
-    .parameter
 
     .prologue
     const/4 v3, 0x0
@@ -390,16 +384,16 @@
 
 .method protected onDraw(Landroid/graphics/Canvas;)V
     .locals 13
-    .parameter "canvas"
+    .param p1, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
     const/4 v11, 0x0
 
-    const/high16 v10, 0x4040
+    const/high16 v10, 0x40400000
 
-    const/high16 v9, 0x3fc0
+    const/high16 v9, 0x3fc00000
 
-    const/high16 v8, 0x4000
+    const/high16 v8, 0x40000000
 
     const/4 v7, 0x0
 
@@ -516,14 +510,14 @@
     .line 136
     iget-object v0, p0, Lcom/chartboost/sdk/impl/w;->k:Landroid/graphics/Canvas;
 
-    .end local p1
-    .local v0, canvas:Landroid/graphics/Canvas;
+    .end local p1    # "canvas":Landroid/graphics/Canvas;
+    .local v0, "canvas":Landroid/graphics/Canvas;
     move-object v12, p1
 
     move-object p1, v0
 
-    .end local v0           #canvas:Landroid/graphics/Canvas;
-    .restart local p1
+    .end local v0    # "canvas":Landroid/graphics/Canvas;
+    .restart local p1    # "canvas":Landroid/graphics/Canvas;
     move-object v0, v12
 
     .line 140
@@ -547,7 +541,7 @@
     if-eqz v4, :cond_3
 
     .line 143
-    const/high16 v4, 0x4334
+    const/high16 v4, 0x43340000
 
     invoke-virtual {p0}, Lcom/chartboost/sdk/impl/w;->getWidth()I
 
@@ -782,13 +776,13 @@
 
     invoke-virtual {v0, v1, v7, v7, v2}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
 
-    .end local p1
-    .restart local v0       #canvas:Landroid/graphics/Canvas;
+    .end local p1    # "canvas":Landroid/graphics/Canvas;
+    .restart local v0    # "canvas":Landroid/graphics/Canvas;
     move-object p1, v0
 
     .line 218
-    .end local v0           #canvas:Landroid/graphics/Canvas;
-    .restart local p1
+    .end local v0    # "canvas":Landroid/graphics/Canvas;
+    .restart local p1    # "canvas":Landroid/graphics/Canvas;
     :cond_5
     invoke-static {}, Ljava/lang/System;->nanoTime()J
 
@@ -991,7 +985,7 @@
 
 .method protected onWindowVisibilityChanged(I)V
     .locals 2
-    .parameter "visibility"
+    .param p1, "visibility"    # I
 
     .prologue
     .line 230

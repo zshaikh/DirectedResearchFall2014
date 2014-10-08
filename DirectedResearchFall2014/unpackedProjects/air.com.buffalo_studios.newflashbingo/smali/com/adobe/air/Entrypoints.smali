@@ -47,8 +47,6 @@
 
 .method public static BroadcastIntent(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 123
@@ -137,10 +135,6 @@
 
 .method public static registerCallback(IIILandroid/os/Handler;)V
     .locals 4
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 62
@@ -192,9 +186,6 @@
 
 .method public static registerKeyCallback(ILcom/adobe/air/KeyEventData;Landroid/os/Handler;)Z
     .locals 4
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 102
@@ -245,9 +236,6 @@
 
 .method public static registerTouchCallback(ILcom/adobe/air/TouchEventData;Landroid/os/Handler;)Z
     .locals 4
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 82
@@ -311,8 +299,6 @@
 
 .method public EntryDownloadConfig(Ljava/lang/Object;Ljava/lang/String;)Z
     .locals 3
-    .parameter
-    .parameter
 
     .prologue
     .line 154
@@ -400,17 +386,6 @@
 
 .method public EntryMain(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;ZZ)V
     .locals 12
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 129
@@ -540,7 +515,6 @@
 
 .method public setMainView(Landroid/view/View;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 189

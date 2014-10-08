@@ -78,8 +78,6 @@
 
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()V"
@@ -95,9 +93,6 @@
 
 .method synthetic constructor <init>(Ljava/lang/String;ILcom/chartboost/sdk/impl/ba$1;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 570
@@ -108,7 +103,7 @@
 
 .method public static valueOf(Ljava/lang/String;)Lcom/chartboost/sdk/impl/ba$h$a;
     .locals 1
-    .parameter "name"
+    .param p0, "name"    # Ljava/lang/String;
 
     .prologue
     .line 570
@@ -118,7 +113,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "name":Ljava/lang/String;
     check-cast p0, Lcom/chartboost/sdk/impl/ba$h$a;
 
     return-object p0

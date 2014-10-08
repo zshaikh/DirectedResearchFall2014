@@ -90,9 +90,7 @@
 
 .method private constructor <init>(Ljava/lang/String;II)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter "errorCode"
+    .param p3, "errorCode"    # I
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I)V"
@@ -112,7 +110,7 @@
 
 .method public static getFuseEventByCode(I)Lcom/fusepowered/util/FuseEvent;
     .locals 1
-    .parameter "errorCode"
+    .param p0, "errorCode"    # I
 
     .prologue
     .line 24
@@ -155,7 +153,7 @@
 
 .method public static valueOf(Ljava/lang/String;)Lcom/fusepowered/util/FuseEvent;
     .locals 1
-    .parameter "name"
+    .param p0, "name"    # Ljava/lang/String;
 
     .prologue
     .line 3
@@ -165,7 +163,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "name":Ljava/lang/String;
     check-cast p0, Lcom/fusepowered/util/FuseEvent;
 
     return-object p0
@@ -201,7 +199,7 @@
 
 .method public setErrorCode(I)V
     .locals 0
-    .parameter "errorCode"
+    .param p1, "errorCode"    # I
 
     .prologue
     .line 20

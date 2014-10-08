@@ -21,7 +21,6 @@
 # direct methods
 .method public constructor <init>(Lcom/vungle/sdk/k;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 160
@@ -36,8 +35,7 @@
 # virtual methods
 .method public final onPageFinished(Landroid/webkit/WebView;Ljava/lang/String;)V
     .locals 4
-    .parameter
-    .parameter "url"
+    .param p2, "url"    # Ljava/lang/String;
 
     .prologue
     .line 171
@@ -123,10 +121,8 @@
 
 .method public final onReceivedError(Landroid/webkit/WebView;ILjava/lang/String;Ljava/lang/String;)V
     .locals 3
-    .parameter
-    .parameter "code"
-    .parameter "desc"
-    .parameter
+    .param p2, "code"    # I
+    .param p3, "desc"    # Ljava/lang/String;
 
     .prologue
     .line 165

@@ -6,7 +6,7 @@
 # direct methods
 .method constructor <init>(Landroid/app/Application;)V
     .locals 1
-    .parameter "application"
+    .param p1, "application"    # Landroid/app/Application;
 
     .prologue
     .line 18
@@ -20,8 +20,8 @@
 
 .method constructor <init>(Landroid/app/Application;Z)V
     .locals 1
-    .parameter "application"
-    .parameter "notification"
+    .param p1, "application"    # Landroid/app/Application;
+    .param p2, "notification"    # Z
 
     .prologue
     .line 22

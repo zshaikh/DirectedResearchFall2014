@@ -130,9 +130,6 @@
 
 .method private constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 17
@@ -147,7 +144,6 @@
 
 .method public static fromString(Ljava/lang/String;)Lcom/inmobi/androidsdk/ai/controller/util/IMNavigationStringEnum;
     .locals 5
-    .parameter
 
     .prologue
     .line 38
@@ -199,7 +195,6 @@
 
 .method public static valueOf(Ljava/lang/String;)Lcom/inmobi/androidsdk/ai/controller/util/IMNavigationStringEnum;
     .locals 1
-    .parameter
 
     .prologue
     .line 1

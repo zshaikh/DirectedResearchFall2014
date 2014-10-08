@@ -26,11 +26,11 @@
 # direct methods
 .method public constructor <init>(Lcom/flurry/org/codehaus/jackson/io/IOContext;ILjava/io/Reader;Lcom/flurry/org/codehaus/jackson/ObjectCodec;Lcom/flurry/org/codehaus/jackson/sym/CharsToNameCanonicalizer;)V
     .locals 1
-    .parameter "ctxt"
-    .parameter "features"
-    .parameter "r"
-    .parameter "codec"
-    .parameter "st"
+    .param p1, "ctxt"    # Lcom/flurry/org/codehaus/jackson/io/IOContext;
+    .param p2, "features"    # I
+    .param p3, "r"    # Ljava/io/Reader;
+    .param p4, "codec"    # Lcom/flurry/org/codehaus/jackson/ObjectCodec;
+    .param p5, "st"    # Lcom/flurry/org/codehaus/jackson/sym/CharsToNameCanonicalizer;
 
     .prologue
     .line 69
@@ -74,7 +74,7 @@
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParser;->_nextToken:Lcom/flurry/org/codehaus/jackson/JsonToken;
 
     .line 501
-    .local v0, t:Lcom/flurry/org/codehaus/jackson/JsonToken;
+    .local v0, "t":Lcom/flurry/org/codehaus/jackson/JsonToken;
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParser;->_nextToken:Lcom/flurry/org/codehaus/jackson/JsonToken;
@@ -128,9 +128,9 @@
 
 .method private _parseFieldName2(III)Ljava/lang/String;
     .locals 12
-    .parameter "startPtr"
-    .parameter "hash"
-    .parameter "endChar"
+    .param p1, "startPtr"    # I
+    .param p2, "hash"    # I
+    .param p3, "endChar"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -158,7 +158,7 @@
     move-result-object v4
 
     .line 1020
-    .local v4, outBuf:[C
+    .local v4, "outBuf":[C
     iget-object v9, p0, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParser;->_textBuffer:Lcom/flurry/org/codehaus/jackson/util/TextBuffer;
 
     invoke-virtual {v9}, Lcom/flurry/org/codehaus/jackson/util/TextBuffer;->getCurrentSegmentSize()I
@@ -166,7 +166,7 @@
     move-result v5
 
     .line 1023
-    .local v5, outPtr:I
+    .local v5, "outPtr":I
     :goto_0
     iget v9, p0, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParser;->_inputPtr:I
 
@@ -223,11 +223,11 @@
     aget-char v1, v9, v10
 
     .line 1029
-    .local v1, c:C
+    .local v1, "c":C
     move v2, v1
 
     .line 1030
-    .local v2, i:I
+    .local v2, "i":I
     const/16 v9, 0x5c
 
     if-gt v2, v9, :cond_1
@@ -252,8 +252,8 @@
     .line 1048
     add-int/lit8 v6, v5, 0x1
 
-    .end local v5           #outPtr:I
-    .local v6, outPtr:I
+    .end local v5    # "outPtr":I
+    .local v6, "outPtr":I
     aput-char v1, v4, v5
 
     .line 1051
@@ -271,8 +271,8 @@
     .line 1053
     const/4 v5, 0x0
 
-    .end local v6           #outPtr:I
-    .restart local v5       #outPtr:I
+    .end local v6    # "outPtr":I
+    .restart local v5    # "outPtr":I
     goto :goto_0
 
     .line 1037
@@ -291,25 +291,25 @@
     iget-object v8, p0, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParser;->_textBuffer:Lcom/flurry/org/codehaus/jackson/util/TextBuffer;
 
     .line 1059
-    .local v8, tb:Lcom/flurry/org/codehaus/jackson/util/TextBuffer;
+    .local v8, "tb":Lcom/flurry/org/codehaus/jackson/util/TextBuffer;
     invoke-virtual {v8}, Lcom/flurry/org/codehaus/jackson/util/TextBuffer;->getTextBuffer()[C
 
     move-result-object v0
 
     .line 1060
-    .local v0, buf:[C
+    .local v0, "buf":[C
     invoke-virtual {v8}, Lcom/flurry/org/codehaus/jackson/util/TextBuffer;->getTextOffset()I
 
     move-result v7
 
     .line 1061
-    .local v7, start:I
+    .local v7, "start":I
     invoke-virtual {v8}, Lcom/flurry/org/codehaus/jackson/util/TextBuffer;->size()I
 
     move-result v3
 
     .line 1063
-    .local v3, len:I
+    .local v3, "len":I
     iget-object v9, p0, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParser;->_symbols:Lcom/flurry/org/codehaus/jackson/sym/CharsToNameCanonicalizer;
 
     invoke-virtual {v9, v0, v7, v3, p2}, Lcom/flurry/org/codehaus/jackson/sym/CharsToNameCanonicalizer;->findSymbol([CIII)Ljava/lang/String;
@@ -319,10 +319,10 @@
     return-object v9
 
     .line 1041
-    .end local v0           #buf:[C
-    .end local v3           #len:I
-    .end local v7           #start:I
-    .end local v8           #tb:Lcom/flurry/org/codehaus/jackson/util/TextBuffer;
+    .end local v0    # "buf":[C
+    .end local v3    # "len":I
+    .end local v7    # "start":I
+    .end local v8    # "tb":Lcom/flurry/org/codehaus/jackson/util/TextBuffer;
     :cond_3
     const/16 v9, 0x20
 
@@ -335,21 +335,21 @@
 
     goto :goto_1
 
-    .end local v5           #outPtr:I
-    .restart local v6       #outPtr:I
+    .end local v5    # "outPtr":I
+    .restart local v6    # "outPtr":I
     :cond_4
     move v5, v6
 
-    .end local v6           #outPtr:I
-    .restart local v5       #outPtr:I
+    .end local v6    # "outPtr":I
+    .restart local v5    # "outPtr":I
     goto :goto_0
 .end method
 
 .method private _parseUnusualFieldName2(II[I)Ljava/lang/String;
     .locals 18
-    .parameter "startPtr"
-    .parameter "hash"
-    .parameter "codes"
+    .param p1, "startPtr"    # I
+    .param p2, "hash"    # I
+    .param p3, "codes"    # [I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -401,7 +401,7 @@
     move-result-object v10
 
     .line 1255
-    .local v10, outBuf:[C
+    .local v10, "outBuf":[C
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParser;->_textBuffer:Lcom/flurry/org/codehaus/jackson/util/TextBuffer;
@@ -413,7 +413,7 @@
     move-result v11
 
     .line 1256
-    .local v11, outPtr:I
+    .local v11, "outPtr":I
     move-object/from16 v0, p3
 
     array-length v0, v0
@@ -421,7 +421,7 @@
     move v9, v0
 
     .line 1259
-    .local v9, maxCode:I
+    .local v9, "maxCode":I
     :goto_0
     move-object/from16 v0, p0
 
@@ -467,25 +467,25 @@
     move-object v14, v0
 
     .line 1287
-    .local v14, tb:Lcom/flurry/org/codehaus/jackson/util/TextBuffer;
+    .local v14, "tb":Lcom/flurry/org/codehaus/jackson/util/TextBuffer;
     invoke-virtual {v14}, Lcom/flurry/org/codehaus/jackson/util/TextBuffer;->getTextBuffer()[C
 
     move-result-object v5
 
     .line 1288
-    .local v5, buf:[C
+    .local v5, "buf":[C
     invoke-virtual {v14}, Lcom/flurry/org/codehaus/jackson/util/TextBuffer;->getTextOffset()I
 
     move-result v13
 
     .line 1289
-    .local v13, start:I
+    .local v13, "start":I
     invoke-virtual {v14}, Lcom/flurry/org/codehaus/jackson/util/TextBuffer;->size()I
 
     move-result v8
 
     .line 1291
-    .local v8, len:I
+    .local v8, "len":I
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParser;->_symbols:Lcom/flurry/org/codehaus/jackson/sym/CharsToNameCanonicalizer;
@@ -509,10 +509,10 @@
     return-object v15
 
     .line 1264
-    .end local v5           #buf:[C
-    .end local v8           #len:I
-    .end local v13           #start:I
-    .end local v14           #tb:Lcom/flurry/org/codehaus/jackson/util/TextBuffer;
+    .end local v5    # "buf":[C
+    .end local v8    # "len":I
+    .end local v13    # "start":I
+    .end local v14    # "tb":Lcom/flurry/org/codehaus/jackson/util/TextBuffer;
     :cond_1
     move-object/from16 v0, p0
 
@@ -529,11 +529,11 @@
     aget-char v6, v15, v16
 
     .line 1265
-    .local v6, c:C
+    .local v6, "c":C
     move v7, v6
 
     .line 1266
-    .local v7, i:I
+    .local v7, "i":I
     if-gt v7, v9, :cond_3
 
     .line 1267
@@ -565,8 +565,8 @@
     .line 1276
     add-int/lit8 v12, v11, 0x1
 
-    .end local v11           #outPtr:I
-    .local v12, outPtr:I
+    .end local v11    # "outPtr":I
+    .local v12, "outPtr":I
     aput-char v6, v10, v11
 
     .line 1279
@@ -588,8 +588,8 @@
     .line 1281
     const/4 v11, 0x0
 
-    .end local v12           #outPtr:I
-    .restart local v11       #outPtr:I
+    .end local v12    # "outPtr":I
+    .restart local v11    # "outPtr":I
     goto :goto_0
 
     .line 1270
@@ -602,13 +602,13 @@
 
     goto :goto_1
 
-    .end local v11           #outPtr:I
-    .restart local v12       #outPtr:I
+    .end local v11    # "outPtr":I
+    .restart local v12    # "outPtr":I
     :cond_4
     move v11, v12
 
-    .end local v12           #outPtr:I
-    .restart local v11       #outPtr:I
+    .end local v12    # "outPtr":I
+    .restart local v11    # "outPtr":I
     goto :goto_0
 .end method
 
@@ -652,7 +652,7 @@
     aget-char v0, v1, v2
 
     .line 1527
-    .local v0, i:I
+    .local v0, "i":I
     if-gt v0, v4, :cond_0
 
     .line 1528
@@ -672,7 +672,7 @@
     if-nez v1, :cond_3
 
     .line 1549
-    .end local v0           #i:I
+    .end local v0    # "i":I
     :cond_2
     const-string v1, " in a comment"
 
@@ -683,7 +683,7 @@
     return-void
 
     .line 1532
-    .restart local v0       #i:I
+    .restart local v0    # "i":I
     :cond_3
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParser;->_inputBuffer:[C
 
@@ -801,7 +801,7 @@
     aget-char v0, v1, v2
 
     .line 1511
-    .local v0, c:C
+    .local v0, "c":C
     if-ne v0, v4, :cond_2
 
     .line 1512
@@ -869,7 +869,7 @@
     aget-char v0, v1, v2
 
     .line 1558
-    .local v0, i:I
+    .local v0, "i":I
     const/16 v1, 0x20
 
     if-ge v0, v1, :cond_0
@@ -883,13 +883,13 @@
     invoke-virtual {p0}, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParser;->_skipLF()V
 
     .line 1570
-    .end local v0           #i:I
+    .end local v0    # "i":I
     :cond_2
     :goto_1
     return-void
 
     .line 1562
-    .restart local v0       #i:I
+    .restart local v0    # "i":I
     :cond_3
     const/16 v1, 0xd
 
@@ -952,7 +952,7 @@
     aget-char v0, v1, v2
 
     .line 1455
-    .local v0, i:I
+    .local v0, "i":I
     if-le v0, v4, :cond_3
 
     .line 1456
@@ -1006,7 +1006,7 @@
     goto :goto_0
 
     .line 1470
-    .end local v0           #i:I
+    .end local v0    # "i":I
     :cond_6
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1085,7 +1085,7 @@
     aget-char v0, v1, v2
 
     .line 1478
-    .local v0, i:I
+    .local v0, "i":I
     if-le v0, v4, :cond_3
 
     .line 1479
@@ -1102,12 +1102,12 @@
     move v1, v0
 
     .line 1497
-    .end local v0           #i:I
+    .end local v0    # "i":I
     :goto_1
     return v1
 
     .line 1485
-    .restart local v0       #i:I
+    .restart local v0    # "i":I
     :cond_3
     if-eq v0, v4, :cond_0
 
@@ -1144,7 +1144,7 @@
     goto :goto_0
 
     .line 1496
-    .end local v0           #i:I
+    .end local v0    # "i":I
     :cond_6
     invoke-virtual {p0}, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParser;->_handleEOF()V
 
@@ -1196,7 +1196,7 @@
     aget-char v0, v1, v2
 
     .line 910
-    .local v0, ch:C
+    .local v0, "ch":C
     if-lt v0, v3, :cond_1
 
     if-le v0, v4, :cond_2
@@ -1286,7 +1286,7 @@
 
 .method private final parseNumberText2(Z)Lcom/flurry/org/codehaus/jackson/JsonToken;
     .locals 11
-    .parameter "negative"
+    .param p1, "negative"    # Z
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -1303,18 +1303,18 @@
     move-result-object v5
 
     .line 781
-    .local v5, outBuf:[C
+    .local v5, "outBuf":[C
     const/4 v6, 0x0
 
     .line 784
-    .local v6, outPtr:I
+    .local v6, "outPtr":I
     if-eqz p1, :cond_0
 
     .line 785
     add-int/lit8 v7, v6, 0x1
 
-    .end local v6           #outPtr:I
-    .local v7, outPtr:I
+    .end local v6    # "outPtr":I
+    .local v7, "outPtr":I
     const/16 v8, 0x2d
 
     aput-char v8, v5, v6
@@ -1322,13 +1322,13 @@
     move v6, v7
 
     .line 789
-    .end local v7           #outPtr:I
-    .restart local v6       #outPtr:I
+    .end local v7    # "outPtr":I
+    .restart local v6    # "outPtr":I
     :cond_0
     const/4 v4, 0x0
 
     .line 790
-    .local v4, intLen:I
+    .local v4, "intLen":I
     iget v8, p0, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParser;->_inputPtr:I
 
     iget v9, p0, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParser;->_inputEnd:I
@@ -1348,7 +1348,7 @@
     move v0, v8
 
     .line 791
-    .local v0, c:C
+    .local v0, "c":C
     :goto_0
     const/16 v8, 0x30
 
@@ -1364,7 +1364,7 @@
     const/4 v1, 0x0
 
     .line 798
-    .local v1, eof:Z
+    .local v1, "eof":Z
     :goto_1
     const/16 v8, 0x30
 
@@ -1396,8 +1396,8 @@
     :cond_2
     add-int/lit8 v7, v6, 0x1
 
-    .end local v6           #outPtr:I
-    .restart local v7       #outPtr:I
+    .end local v6    # "outPtr":I
+    .restart local v7    # "outPtr":I
     aput-char v0, v5, v6
 
     .line 805
@@ -1459,7 +1459,7 @@
     const/4 v3, 0x0
 
     .line 820
-    .local v3, fractLen:I
+    .local v3, "fractLen":I
     const/16 v8, 0x2e
 
     if-ne v0, v8, :cond_16
@@ -1467,8 +1467,8 @@
     .line 821
     add-int/lit8 v6, v7, 0x1
 
-    .end local v7           #outPtr:I
-    .restart local v6       #outPtr:I
+    .end local v7    # "outPtr":I
+    .restart local v6    # "outPtr":I
     aput-char v0, v5, v7
 
     .line 825
@@ -1503,7 +1503,7 @@
     const/4 v2, 0x0
 
     .line 847
-    .local v2, expLen:I
+    .local v2, "expLen":I
     const/16 v8, 0x65
 
     if-eq v0, v8, :cond_6
@@ -1532,8 +1532,8 @@
     :cond_7
     add-int/lit8 v7, v6, 0x1
 
-    .end local v6           #outPtr:I
-    .restart local v7       #outPtr:I
+    .end local v6    # "outPtr":I
+    .restart local v7    # "outPtr":I
     aput-char v0, v5, v6
 
     .line 854
@@ -1582,13 +1582,13 @@
     const/4 v6, 0x0
 
     .line 862
-    .end local v7           #outPtr:I
-    .restart local v6       #outPtr:I
+    .end local v7    # "outPtr":I
+    .restart local v6    # "outPtr":I
     :goto_6
     add-int/lit8 v7, v6, 0x1
 
-    .end local v6           #outPtr:I
-    .restart local v7       #outPtr:I
+    .end local v6    # "outPtr":I
+    .restart local v7    # "outPtr":I
     aput-char v0, v5, v6
 
     .line 864
@@ -1614,8 +1614,8 @@
     move v6, v7
 
     .line 869
-    .end local v7           #outPtr:I
-    .restart local v6       #outPtr:I
+    .end local v7    # "outPtr":I
+    .restart local v6    # "outPtr":I
     :goto_8
     const/16 v8, 0x39
 
@@ -1647,8 +1647,8 @@
     :cond_9
     add-int/lit8 v7, v6, 0x1
 
-    .end local v6           #outPtr:I
-    .restart local v7       #outPtr:I
+    .end local v6    # "outPtr":I
+    .restart local v7    # "outPtr":I
     aput-char v0, v5, v6
 
     .line 876
@@ -1670,8 +1670,8 @@
     move v6, v7
 
     .line 883
-    .end local v7           #outPtr:I
-    .restart local v6       #outPtr:I
+    .end local v7    # "outPtr":I
+    .restart local v6    # "outPtr":I
     :cond_a
     if-nez v2, :cond_b
 
@@ -1707,10 +1707,10 @@
     return-object v8
 
     .line 790
-    .end local v0           #c:C
-    .end local v1           #eof:Z
-    .end local v2           #expLen:I
-    .end local v3           #fractLen:I
+    .end local v0    # "c":C
+    .end local v1    # "eof":Z
+    .end local v2    # "expLen":I
+    .end local v3    # "fractLen":I
     :cond_d
     const-string v8, "No digit following minus sign"
 
@@ -1723,10 +1723,10 @@
     goto/16 :goto_0
 
     .line 811
-    .end local v6           #outPtr:I
-    .restart local v0       #c:C
-    .restart local v1       #eof:Z
-    .restart local v7       #outPtr:I
+    .end local v6    # "outPtr":I
+    .restart local v0    # "c":C
+    .restart local v1    # "eof":Z
+    .restart local v7    # "outPtr":I
     :cond_e
     iget-object v8, p0, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParser;->_inputBuffer:[C
 
@@ -1740,12 +1740,12 @@
 
     move v6, v7
 
-    .end local v7           #outPtr:I
-    .restart local v6       #outPtr:I
+    .end local v7    # "outPtr":I
+    .restart local v6    # "outPtr":I
     goto/16 :goto_1
 
     .line 829
-    .restart local v3       #fractLen:I
+    .restart local v3    # "fractLen":I
     :cond_f
     iget-object v8, p0, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParser;->_inputBuffer:[C
 
@@ -1788,20 +1788,20 @@
     :cond_10
     add-int/lit8 v7, v6, 0x1
 
-    .end local v6           #outPtr:I
-    .restart local v7       #outPtr:I
+    .end local v6    # "outPtr":I
+    .restart local v7    # "outPtr":I
     aput-char v0, v5, v6
 
     move v6, v7
 
-    .end local v7           #outPtr:I
-    .restart local v6       #outPtr:I
+    .end local v7    # "outPtr":I
+    .restart local v6    # "outPtr":I
     goto/16 :goto_3
 
     .line 854
-    .end local v6           #outPtr:I
-    .restart local v2       #expLen:I
-    .restart local v7       #outPtr:I
+    .end local v6    # "outPtr":I
+    .restart local v2    # "expLen":I
+    .restart local v7    # "outPtr":I
     :cond_11
     const-string v8, "expected a digit for number exponent"
 
@@ -1839,44 +1839,44 @@
 
     move v6, v7
 
-    .end local v7           #outPtr:I
-    .restart local v6       #outPtr:I
+    .end local v7    # "outPtr":I
+    .restart local v6    # "outPtr":I
     goto/16 :goto_8
 
-    .end local v6           #outPtr:I
-    .restart local v7       #outPtr:I
+    .end local v6    # "outPtr":I
+    .restart local v7    # "outPtr":I
     :cond_14
     move v6, v7
 
-    .end local v7           #outPtr:I
-    .restart local v6       #outPtr:I
+    .end local v7    # "outPtr":I
+    .restart local v6    # "outPtr":I
     goto/16 :goto_6
 
-    .end local v6           #outPtr:I
-    .restart local v7       #outPtr:I
+    .end local v6    # "outPtr":I
+    .restart local v7    # "outPtr":I
     :cond_15
     move v6, v7
 
-    .end local v7           #outPtr:I
-    .restart local v6       #outPtr:I
+    .end local v7    # "outPtr":I
+    .restart local v6    # "outPtr":I
     goto/16 :goto_8
 
-    .end local v2           #expLen:I
-    .end local v6           #outPtr:I
-    .restart local v7       #outPtr:I
+    .end local v2    # "expLen":I
+    .end local v6    # "outPtr":I
+    .restart local v7    # "outPtr":I
     :cond_16
     move v6, v7
 
-    .end local v7           #outPtr:I
-    .restart local v6       #outPtr:I
+    .end local v7    # "outPtr":I
+    .restart local v6    # "outPtr":I
     goto/16 :goto_4
 
-    .end local v3           #fractLen:I
+    .end local v3    # "fractLen":I
     :cond_17
     move v7, v6
 
-    .end local v6           #outPtr:I
-    .restart local v7       #outPtr:I
+    .end local v6    # "outPtr":I
+    .restart local v7    # "outPtr":I
     goto/16 :goto_2
 .end method
 
@@ -1932,7 +1932,7 @@
 
 .method protected _decodeBase64(Lcom/flurry/org/codehaus/jackson/Base64Variant;)[B
     .locals 10
-    .parameter "b64variant"
+    .param p1, "b64variant"    # Lcom/flurry/org/codehaus/jackson/Base64Variant;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -1953,7 +1953,7 @@
     move-result-object v1
 
     .line 1687
-    .local v1, builder:Lcom/flurry/org/codehaus/jackson/util/ByteArrayBuilder;
+    .local v1, "builder":Lcom/flurry/org/codehaus/jackson/util/ByteArrayBuilder;
     :cond_0
     :goto_0
     iget v4, p0, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParser;->_inputPtr:I
@@ -1978,7 +1978,7 @@
     aget-char v2, v4, v5
 
     .line 1691
-    .local v2, ch:C
+    .local v2, "ch":C
     const/16 v4, 0x20
 
     if-le v2, v4, :cond_0
@@ -1989,7 +1989,7 @@
     move-result v0
 
     .line 1693
-    .local v0, bits:I
+    .local v0, "bits":I
     if-gez v0, :cond_3
 
     .line 1694
@@ -2020,7 +2020,7 @@
     move v3, v0
 
     .line 1706
-    .local v3, decodedData:I
+    .local v3, "decodedData":I
     iget v4, p0, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParser;->_inputPtr:I
 
     iget v5, p0, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParser;->_inputEnd:I
@@ -2338,7 +2338,7 @@
     aget-char v0, v5, v6
 
     .line 1583
-    .local v0, c:C
+    .local v0, "c":C
     sparse-switch v0, :sswitch_data_0
 
     .line 1606
@@ -2391,10 +2391,10 @@
     const/4 v4, 0x0
 
     .line 1611
-    .local v4, value:I
+    .local v4, "value":I
     const/4 v3, 0x0
 
-    .local v3, i:I
+    .local v3, "i":I
     :goto_1
     const/4 v5, 0x4
 
@@ -2432,13 +2432,13 @@
     aget-char v1, v5, v6
 
     .line 1618
-    .local v1, ch:I
+    .local v1, "ch":I
     invoke-static {v1}, Lcom/flurry/org/codehaus/jackson/util/CharTypes;->charToHex(I)I
 
     move-result v2
 
     .line 1619
-    .local v2, digit:I
+    .local v2, "digit":I
     if-gez v2, :cond_2
 
     .line 1620
@@ -2458,8 +2458,8 @@
     goto :goto_1
 
     .line 1624
-    .end local v1           #ch:I
-    .end local v2           #digit:I
+    .end local v1    # "ch":I
+    .end local v2    # "digit":I
     :cond_3
     int-to-char v5, v4
 
@@ -2494,11 +2494,11 @@
     iget v4, p0, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParser;->_inputPtr:I
 
     .line 1304
-    .local v4, ptr:I
+    .local v4, "ptr":I
     iget v2, p0, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParser;->_inputEnd:I
 
     .line 1306
-    .local v2, inputLen:I
+    .local v2, "inputLen":I
     if-ge v4, v2, :cond_2
 
     .line 1307
@@ -2507,18 +2507,18 @@
     move-result-object v1
 
     .line 1308
-    .local v1, codes:[I
+    .local v1, "codes":[I
     array-length v3, v1
 
     .line 1311
-    .local v3, maxCode:I
+    .local v3, "maxCode":I
     :cond_0
     iget-object v5, p0, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParser;->_inputBuffer:[C
 
     aget-char v0, v5, v4
 
     .line 1312
-    .local v0, ch:I
+    .local v0, "ch":I
     if-ge v0, v3, :cond_1
 
     aget v5, v1, v0
@@ -2549,16 +2549,16 @@
     iput v5, p0, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParser;->_inputPtr:I
 
     .line 1331
-    .end local v0           #ch:I
-    .end local v1           #codes:[I
-    .end local v3           #maxCode:I
+    .end local v0    # "ch":I
+    .end local v1    # "codes":[I
+    .end local v3    # "maxCode":I
     :goto_0
     return-void
 
     .line 1321
-    .restart local v0       #ch:I
-    .restart local v1       #codes:[I
-    .restart local v3       #maxCode:I
+    .restart local v0    # "ch":I
+    .restart local v1    # "codes":[I
+    .restart local v3    # "maxCode":I
     :cond_1
     add-int/lit8 v4, v4, 0x1
 
@@ -2566,9 +2566,9 @@
     if-lt v4, v2, :cond_0
 
     .line 1328
-    .end local v0           #ch:I
-    .end local v1           #codes:[I
-    .end local v3           #maxCode:I
+    .end local v0    # "ch":I
+    .end local v1    # "codes":[I
+    .end local v3    # "maxCode":I
     :cond_2
     iget-object v5, p0, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParser;->_textBuffer:Lcom/flurry/org/codehaus/jackson/util/TextBuffer;
 
@@ -2613,7 +2613,7 @@
     move-result-object v2
 
     .line 1337
-    .local v2, outBuf:[C
+    .local v2, "outBuf":[C
     iget-object v5, p0, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParser;->_textBuffer:Lcom/flurry/org/codehaus/jackson/util/TextBuffer;
 
     invoke-virtual {v5}, Lcom/flurry/org/codehaus/jackson/util/TextBuffer;->getCurrentSegmentSize()I
@@ -2621,7 +2621,7 @@
     move-result v3
 
     .line 1340
-    .local v3, outPtr:I
+    .local v3, "outPtr":I
     :goto_0
     iget v5, p0, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParser;->_inputPtr:I
 
@@ -2654,11 +2654,11 @@
     aget-char v0, v5, v6
 
     .line 1346
-    .local v0, c:C
+    .local v0, "c":C
     move v1, v0
 
     .line 1347
-    .local v1, i:I
+    .local v1, "i":I
     if-gt v1, v9, :cond_1
 
     .line 1348
@@ -2690,15 +2690,15 @@
     :cond_2
     add-int/lit8 v4, v3, 0x1
 
-    .end local v3           #outPtr:I
-    .local v4, outPtr:I
+    .end local v3    # "outPtr":I
+    .local v4, "outPtr":I
     aput-char v0, v2, v3
 
     move v3, v4
 
     .line 1370
-    .end local v4           #outPtr:I
-    .restart local v3       #outPtr:I
+    .end local v4    # "outPtr":I
+    .restart local v3    # "outPtr":I
     goto :goto_0
 
     .line 1354
@@ -2732,7 +2732,7 @@
 
 .method protected final _getText2(Lcom/flurry/org/codehaus/jackson/JsonToken;)Ljava/lang/String;
     .locals 2
-    .parameter "t"
+    .param p1, "t"    # Lcom/flurry/org/codehaus/jackson/JsonToken;
 
     .prologue
     .line 209
@@ -2816,7 +2816,7 @@
     move-result-object v2
 
     .line 1209
-    .local v2, outBuf:[C
+    .local v2, "outBuf":[C
     iget-object v5, p0, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParser;->_textBuffer:Lcom/flurry/org/codehaus/jackson/util/TextBuffer;
 
     invoke-virtual {v5}, Lcom/flurry/org/codehaus/jackson/util/TextBuffer;->getCurrentSegmentSize()I
@@ -2824,7 +2824,7 @@
     move-result v3
 
     .line 1212
-    .local v3, outPtr:I
+    .local v3, "outPtr":I
     :goto_0
     iget v5, p0, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParser;->_inputPtr:I
 
@@ -2857,11 +2857,11 @@
     aget-char v0, v5, v6
 
     .line 1218
-    .local v0, c:C
+    .local v0, "c":C
     move v1, v0
 
     .line 1219
-    .local v1, i:I
+    .local v1, "i":I
     if-gt v1, v9, :cond_1
 
     .line 1220
@@ -2893,15 +2893,15 @@
     :cond_2
     add-int/lit8 v4, v3, 0x1
 
-    .end local v3           #outPtr:I
-    .local v4, outPtr:I
+    .end local v3    # "outPtr":I
+    .local v4, "outPtr":I
     aput-char v0, v2, v3
 
     move v3, v4
 
     .line 1242
-    .end local v4           #outPtr:I
-    .restart local v3       #outPtr:I
+    .end local v4    # "outPtr":I
+    .restart local v3    # "outPtr":I
     goto :goto_0
 
     .line 1226
@@ -2937,8 +2937,8 @@
 
 .method protected _handleInvalidNumberStart(IZ)Lcom/flurry/org/codehaus/jackson/JsonToken;
     .locals 11
-    .parameter "ch"
-    .parameter "negative"
+    .param p1, "ch"    # I
+    .param p2, "negative"    # Z
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -2949,9 +2949,9 @@
     .prologue
     const/4 v8, 0x3
 
-    const-wide/high16 v6, 0x7ff0
+    const-wide/high16 v6, 0x7ff0000000000000L
 
-    const-wide/high16 v4, -0x10
+    const-wide/high16 v4, -0x10000000000000L
 
     const-string v10, "Non-standard token \'"
 
@@ -3004,7 +3004,7 @@
     move-object v0, v1
 
     .line 949
-    .local v0, match:Ljava/lang/String;
+    .local v0, "match":Ljava/lang/String;
     :goto_0
     invoke-virtual {p0, v0, v8}, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParser;->_matchToken(Ljava/lang/String;I)V
 
@@ -3028,7 +3028,7 @@
     move-result-object v1
 
     .line 964
-    .end local v0           #match:Ljava/lang/String;
+    .end local v0    # "match":Ljava/lang/String;
     :goto_2
     return-object v1
 
@@ -3040,7 +3040,7 @@
 
     goto :goto_0
 
-    .restart local v0       #match:Ljava/lang/String;
+    .restart local v0    # "match":Ljava/lang/String;
     :cond_2
     move-wide v1, v6
 
@@ -3076,7 +3076,7 @@
     invoke-virtual {p0, v1}, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParser;->_reportError(Ljava/lang/String;)V
 
     .line 963
-    .end local v0           #match:Ljava/lang/String;
+    .end local v0    # "match":Ljava/lang/String;
     :cond_4
     :goto_3
     const-string v1, "expected digit (0-9) to follow minus sign, for valid numeric value"
@@ -3102,7 +3102,7 @@
     move-object v0, v1
 
     .line 956
-    .restart local v0       #match:Ljava/lang/String;
+    .restart local v0    # "match":Ljava/lang/String;
     :goto_4
     invoke-virtual {p0, v0, v8}, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParser;->_matchToken(Ljava/lang/String;I)V
 
@@ -3128,7 +3128,7 @@
     goto :goto_2
 
     .line 955
-    .end local v0           #match:Ljava/lang/String;
+    .end local v0    # "match":Ljava/lang/String;
     :cond_6
     const-string v1, "+Infinity"
 
@@ -3136,7 +3136,7 @@
 
     goto :goto_4
 
-    .restart local v0       #match:Ljava/lang/String;
+    .restart local v0    # "match":Ljava/lang/String;
     :cond_7
     move-wide v1, v6
 
@@ -3176,7 +3176,7 @@
 
 .method protected final _handleUnexpectedValue(I)Lcom/flurry/org/codehaus/jackson/JsonToken;
     .locals 3
-    .parameter "i"
+    .param p1, "i"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -3240,7 +3240,7 @@
     .line 1186
     const-string v0, "NaN"
 
-    const-wide/high16 v0, 0x7ff8
+    const-wide/high16 v0, 0x7ff8000000000000L
 
     invoke-virtual {p0, v2, v0, v1}, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParser;->resetAsNaN(Ljava/lang/String;D)Lcom/flurry/org/codehaus/jackson/JsonToken;
 
@@ -3307,7 +3307,7 @@
 
 .method protected final _handleUnusualFieldName(I)Ljava/lang/String;
     .locals 11
-    .parameter "i"
+    .param p1, "i"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -3362,11 +3362,11 @@
     move-result-object v1
 
     .line 1087
-    .local v1, codes:[I
+    .local v1, "codes":[I
     array-length v5, v1
 
     .line 1092
-    .local v5, maxCode:I
+    .local v5, "maxCode":I
     if-ge p1, v5, :cond_6
 
     .line 1093
@@ -3386,7 +3386,7 @@
     move v2, v9
 
     .line 1097
-    .local v2, firstOk:Z
+    .local v2, "firstOk":Z
     :goto_1
     if-nez v2, :cond_3
 
@@ -3400,15 +3400,15 @@
     iget v6, p0, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParser;->_inputPtr:I
 
     .line 1101
-    .local v6, ptr:I
+    .local v6, "ptr":I
     const/4 v3, 0x0
 
     .line 1102
-    .local v3, hash:I
+    .local v3, "hash":I
     iget v4, p0, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParser;->_inputEnd:I
 
     .line 1104
-    .local v4, inputLen:I
+    .local v4, "inputLen":I
     if-ge v6, v4, :cond_9
 
     .line 1106
@@ -3418,7 +3418,7 @@
     aget-char v0, v8, v6
 
     .line 1107
-    .local v0, ch:I
+    .local v0, "ch":I
     if-ge v0, v5, :cond_7
 
     .line 1108
@@ -3432,7 +3432,7 @@
     sub-int v7, v8, v9
 
     .line 1110
-    .local v7, start:I
+    .local v7, "start":I
     iput v6, p0, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParser;->_inputPtr:I
 
     .line 1111
@@ -3449,12 +3449,12 @@
     goto :goto_0
 
     .line 1093
-    .end local v0           #ch:I
-    .end local v2           #firstOk:Z
-    .end local v3           #hash:I
-    .end local v4           #inputLen:I
-    .end local v6           #ptr:I
-    .end local v7           #start:I
+    .end local v0    # "ch":I
+    .end local v2    # "firstOk":Z
+    .end local v3    # "hash":I
+    .end local v4    # "inputLen":I
+    .end local v6    # "ptr":I
+    .end local v7    # "start":I
     :cond_5
     const/4 v8, 0x0
 
@@ -3470,14 +3470,14 @@
 
     move-result v2
 
-    .restart local v2       #firstOk:Z
+    .restart local v2    # "firstOk":Z
     goto :goto_1
 
     .line 1113
-    .restart local v0       #ch:I
-    .restart local v3       #hash:I
-    .restart local v4       #inputLen:I
-    .restart local v6       #ptr:I
+    .restart local v0    # "ch":I
+    .restart local v3    # "hash":I
+    .restart local v4    # "inputLen":I
+    .restart local v6    # "ptr":I
     :cond_7
     int-to-char v8, v0
 
@@ -3493,7 +3493,7 @@
     sub-int v7, v8, v9
 
     .line 1115
-    .restart local v7       #start:I
+    .restart local v7    # "start":I
     iput v6, p0, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParser;->_inputPtr:I
 
     .line 1116
@@ -3510,7 +3510,7 @@
     goto :goto_0
 
     .line 1118
-    .end local v7           #start:I
+    .end local v7    # "start":I
     :cond_8
     mul-int/lit8 v8, v3, 0x1f
 
@@ -3523,14 +3523,14 @@
     if-lt v6, v4, :cond_4
 
     .line 1122
-    .end local v0           #ch:I
+    .end local v0    # "ch":I
     :cond_9
     iget v8, p0, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParser;->_inputPtr:I
 
     sub-int v7, v8, v9
 
     .line 1123
-    .restart local v7       #start:I
+    .restart local v7    # "start":I
     iput v6, p0, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParser;->_inputPtr:I
 
     .line 1124
@@ -3543,8 +3543,8 @@
 
 .method protected final _matchToken(Ljava/lang/String;I)V
     .locals 6
-    .parameter "matchStr"
-    .parameter "i"
+    .param p1, "matchStr"    # Ljava/lang/String;
+    .param p2, "i"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -3563,7 +3563,7 @@
     move-result v1
 
     .line 1638
-    .local v1, len:I
+    .local v1, "len":I
     :cond_0
     iget v2, p0, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParser;->_inputPtr:I
 
@@ -3645,7 +3645,7 @@
     aget-char v0, v2, v3
 
     .line 1656
-    .local v0, c:C
+    .local v0, "c":C
     const/16 v2, 0x30
 
     if-lt v0, v2, :cond_3
@@ -3700,15 +3700,15 @@
     iget v5, p0, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParser;->_inputPtr:I
 
     .line 1132
-    .local v5, ptr:I
+    .local v5, "ptr":I
     const/4 v2, 0x0
 
     .line 1133
-    .local v2, hash:I
+    .local v2, "hash":I
     iget v3, p0, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParser;->_inputEnd:I
 
     .line 1135
-    .local v3, inputLen:I
+    .local v3, "inputLen":I
     if-ge v5, v3, :cond_2
 
     .line 1136
@@ -3717,25 +3717,25 @@
     move-result-object v1
 
     .line 1137
-    .local v1, codes:[I
+    .local v1, "codes":[I
     array-length v4, v1
 
     .line 1140
-    .local v4, maxCode:I
+    .local v4, "maxCode":I
     :cond_0
     iget-object v7, p0, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParser;->_inputBuffer:[C
 
     aget-char v0, v7, v5
 
     .line 1141
-    .local v0, ch:I
+    .local v0, "ch":I
     if-ne v0, v8, :cond_1
 
     .line 1142
     iget v6, p0, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParser;->_inputPtr:I
 
     .line 1143
-    .local v6, start:I
+    .local v6, "start":I
     add-int/lit8 v7, v5, 0x1
 
     iput v7, p0, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParser;->_inputPtr:I
@@ -3752,17 +3752,17 @@
     move-result-object v7
 
     .line 1157
-    .end local v0           #ch:I
-    .end local v1           #codes:[I
-    .end local v4           #maxCode:I
+    .end local v0    # "ch":I
+    .end local v1    # "codes":[I
+    .end local v4    # "maxCode":I
     :goto_0
     return-object v7
 
     .line 1146
-    .end local v6           #start:I
-    .restart local v0       #ch:I
-    .restart local v1       #codes:[I
-    .restart local v4       #maxCode:I
+    .end local v6    # "start":I
+    .restart local v0    # "ch":I
+    .restart local v1    # "codes":[I
+    .restart local v4    # "maxCode":I
     :cond_1
     if-ge v0, v4, :cond_3
 
@@ -3771,15 +3771,15 @@
     if-eqz v7, :cond_3
 
     .line 1154
-    .end local v0           #ch:I
-    .end local v1           #codes:[I
-    .end local v4           #maxCode:I
+    .end local v0    # "ch":I
+    .end local v1    # "codes":[I
+    .end local v4    # "maxCode":I
     :cond_2
     :goto_1
     iget v6, p0, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParser;->_inputPtr:I
 
     .line 1155
-    .restart local v6       #start:I
+    .restart local v6    # "start":I
     iput v5, p0, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParser;->_inputPtr:I
 
     .line 1157
@@ -3790,10 +3790,10 @@
     goto :goto_0
 
     .line 1149
-    .end local v6           #start:I
-    .restart local v0       #ch:I
-    .restart local v1       #codes:[I
-    .restart local v4       #maxCode:I
+    .end local v6    # "start":I
+    .restart local v0    # "ch":I
+    .restart local v1    # "codes":[I
+    .restart local v4    # "maxCode":I
     :cond_3
     mul-int/lit8 v7, v2, 0x1f
 
@@ -3810,7 +3810,7 @@
 
 .method protected final _parseFieldName(I)Ljava/lang/String;
     .locals 10
-    .parameter "i"
+    .param p1, "i"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -3838,15 +3838,15 @@
     iget v5, p0, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParser;->_inputPtr:I
 
     .line 984
-    .local v5, ptr:I
+    .local v5, "ptr":I
     const/4 v2, 0x0
 
     .line 985
-    .local v2, hash:I
+    .local v2, "hash":I
     iget v3, p0, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParser;->_inputEnd:I
 
     .line 987
-    .local v3, inputLen:I
+    .local v3, "inputLen":I
     if-ge v5, v3, :cond_3
 
     .line 988
@@ -3855,18 +3855,18 @@
     move-result-object v1
 
     .line 989
-    .local v1, codes:[I
+    .local v1, "codes":[I
     array-length v4, v1
 
     .line 992
-    .local v4, maxCode:I
+    .local v4, "maxCode":I
     :cond_1
     iget-object v7, p0, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParser;->_inputBuffer:[C
 
     aget-char v0, v7, v5
 
     .line 993
-    .local v0, ch:I
+    .local v0, "ch":I
     if-ge v0, v4, :cond_2
 
     aget v7, v1, v0
@@ -3880,7 +3880,7 @@
     iget v6, p0, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParser;->_inputPtr:I
 
     .line 996
-    .local v6, start:I
+    .local v6, "start":I
     add-int/lit8 v7, v5, 0x1
 
     iput v7, p0, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParser;->_inputPtr:I
@@ -3899,7 +3899,7 @@
     goto :goto_0
 
     .line 1001
-    .end local v6           #start:I
+    .end local v6    # "start":I
     :cond_2
     mul-int/lit8 v7, v2, 0x1f
 
@@ -3912,14 +3912,14 @@
     if-lt v5, v3, :cond_1
 
     .line 1006
-    .end local v0           #ch:I
-    .end local v1           #codes:[I
-    .end local v4           #maxCode:I
+    .end local v0    # "ch":I
+    .end local v1    # "codes":[I
+    .end local v4    # "maxCode":I
     :cond_3
     iget v6, p0, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParser;->_inputPtr:I
 
     .line 1007
-    .restart local v6       #start:I
+    .restart local v6    # "start":I
     iput v5, p0, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParser;->_inputPtr:I
 
     .line 1008
@@ -3946,7 +3946,7 @@
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParser;->_inputBuffer:[C
 
     .line 174
-    .local v0, buf:[C
+    .local v0, "buf":[C
     if-eqz v0, :cond_0
 
     .line 175
@@ -3966,8 +3966,8 @@
 
 .method protected _reportInvalidToken(Ljava/lang/String;Ljava/lang/String;)V
     .locals 4
-    .parameter "matchedPart"
-    .parameter "msg"
+    .param p1, "matchedPart"    # Ljava/lang/String;
+    .param p2, "msg"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -3982,7 +3982,7 @@
     invoke-direct {v1, p1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     .line 1801
-    .local v1, sb:Ljava/lang/StringBuilder;
+    .local v1, "sb":Ljava/lang/StringBuilder;
     :goto_0
     iget v2, p0, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParser;->_inputPtr:I
 
@@ -4041,7 +4041,7 @@
     aget-char v0, v2, v3
 
     .line 1807
-    .local v0, c:C
+    .local v0, "c":C
     invoke-static {v0}, Ljava/lang/Character;->isJavaIdentifierPart(C)Z
 
     move-result v2
@@ -4167,15 +4167,15 @@
     iget v4, p0, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParser;->_inputPtr:I
 
     .line 1385
-    .local v4, inputPtr:I
+    .local v4, "inputPtr":I
     iget v3, p0, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParser;->_inputEnd:I
 
     .line 1386
-    .local v3, inputLen:I
+    .local v3, "inputLen":I
     iget-object v2, p0, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParser;->_inputBuffer:[C
 
     .line 1389
-    .local v2, inputBuffer:[C
+    .local v2, "inputBuffer":[C
     :goto_0
     if-lt v4, v3, :cond_1
 
@@ -4205,16 +4205,16 @@
     :cond_1
     add-int/lit8 v5, v4, 0x1
 
-    .end local v4           #inputPtr:I
-    .local v5, inputPtr:I
+    .end local v4    # "inputPtr":I
+    .local v5, "inputPtr":I
     aget-char v0, v2, v4
 
     .line 1398
-    .local v0, c:C
+    .local v0, "c":C
     move v1, v0
 
     .line 1399
-    .local v1, i:I
+    .local v1, "i":I
     if-gt v1, v8, :cond_4
 
     .line 1400
@@ -4232,15 +4232,15 @@
     iget v4, p0, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParser;->_inputPtr:I
 
     .line 1408
-    .end local v5           #inputPtr:I
-    .restart local v4       #inputPtr:I
+    .end local v5    # "inputPtr":I
+    .restart local v4    # "inputPtr":I
     iget v3, p0, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParser;->_inputEnd:I
 
     goto :goto_0
 
     .line 1409
-    .end local v4           #inputPtr:I
-    .restart local v5       #inputPtr:I
+    .end local v4    # "inputPtr":I
+    .restart local v5    # "inputPtr":I
     :cond_2
     if-gt v1, v7, :cond_4
 
@@ -4270,8 +4270,8 @@
     :cond_4
     move v4, v5
 
-    .end local v5           #inputPtr:I
-    .restart local v4       #inputPtr:I
+    .end local v5    # "inputPtr":I
+    .restart local v4    # "inputPtr":I
     goto :goto_0
 .end method
 
@@ -4298,7 +4298,7 @@
 
 .method public getBinaryValue(Lcom/flurry/org/codehaus/jackson/Base64Variant;)[B
     .locals 4
-    .parameter "b64variant"
+    .param p1, "b64variant"    # Lcom/flurry/org/codehaus/jackson/Base64Variant;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -4389,7 +4389,7 @@
     move-object v1, v2
 
     .line 326
-    .local v1, iae:Ljava/lang/IllegalArgumentException;
+    .local v1, "iae":Ljava/lang/IllegalArgumentException;
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -4429,7 +4429,7 @@
     throw v2
 
     .line 333
-    .end local v1           #iae:Ljava/lang/IllegalArgumentException;
+    .end local v1    # "iae":Ljava/lang/IllegalArgumentException;
     :cond_3
     iget-object v2, p0, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParser;->_binaryValue:[B
 
@@ -4441,7 +4441,7 @@
     move-result-object v0
 
     .line 335
-    .local v0, builder:Lcom/flurry/org/codehaus/jackson/util/ByteArrayBuilder;
+    .local v0, "builder":Lcom/flurry/org/codehaus/jackson/util/ByteArrayBuilder;
     invoke-virtual {p0}, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParser;->getText()Ljava/lang/String;
 
     move-result-object v2
@@ -4480,7 +4480,7 @@
 
 .method protected getNextChar(Ljava/lang/String;)C
     .locals 3
-    .parameter "eofMsg"
+    .param p1, "eofMsg"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -4535,7 +4535,7 @@
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParser;->_currToken:Lcom/flurry/org/codehaus/jackson/JsonToken;
 
     .line 197
-    .local v0, t:Lcom/flurry/org/codehaus/jackson/JsonToken;
+    .local v0, "t":Lcom/flurry/org/codehaus/jackson/JsonToken;
     sget-object v1, Lcom/flurry/org/codehaus/jackson/JsonToken;->VALUE_STRING:Lcom/flurry/org/codehaus/jackson/JsonToken;
 
     if-ne v0, v1, :cond_1
@@ -4628,13 +4628,13 @@
     move-result-object v0
 
     .line 235
-    .local v0, name:Ljava/lang/String;
+    .local v0, "name":Ljava/lang/String;
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
     move-result v1
 
     .line 236
-    .local v1, nameLen:I
+    .local v1, "nameLen":I
     iget-object v2, p0, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParser;->_nameCopyBuffer:[C
 
     if-nez v2, :cond_2
@@ -4661,16 +4661,16 @@
     iput-boolean v2, p0, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParser;->_nameCopied:Z
 
     .line 244
-    .end local v0           #name:Ljava/lang/String;
-    .end local v1           #nameLen:I
+    .end local v0    # "name":Ljava/lang/String;
+    .end local v1    # "nameLen":I
     :cond_1
     iget-object v2, p0, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParser;->_nameCopyBuffer:[C
 
     goto :goto_0
 
     .line 238
-    .restart local v0       #name:Ljava/lang/String;
-    .restart local v1       #nameLen:I
+    .restart local v0    # "name":Ljava/lang/String;
+    .restart local v1    # "nameLen":I
     :cond_2
     iget-object v2, p0, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParser;->_nameCopyBuffer:[C
 
@@ -4686,8 +4686,8 @@
     goto :goto_1
 
     .line 247
-    .end local v0           #name:Ljava/lang/String;
-    .end local v1           #nameLen:I
+    .end local v0    # "name":Ljava/lang/String;
+    .end local v1    # "nameLen":I
     :pswitch_1
     iget-boolean v2, p0, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParser;->_tokenIncomplete:Z
 
@@ -4950,7 +4950,7 @@
     move-result v0
 
     .line 118
-    .local v0, count:I
+    .local v0, "count":I
     if-lez v0, :cond_0
 
     .line 119
@@ -4963,12 +4963,12 @@
     const/4 v1, 0x1
 
     .line 130
-    .end local v0           #count:I
+    .end local v0    # "count":I
     :goto_0
     return v1
 
     .line 124
-    .restart local v0       #count:I
+    .restart local v0    # "count":I
     :cond_0
     invoke-virtual {p0}, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParser;->_closeInput()V
 
@@ -5002,7 +5002,7 @@
 
     throw v1
 
-    .end local v0           #count:I
+    .end local v0    # "count":I
     :cond_1
     move v1, v5
 
@@ -5038,7 +5038,7 @@
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParser;->_nextToken:Lcom/flurry/org/codehaus/jackson/JsonToken;
 
     .line 601
-    .local v0, t:Lcom/flurry/org/codehaus/jackson/JsonToken;
+    .local v0, "t":Lcom/flurry/org/codehaus/jackson/JsonToken;
     iput-object v4, p0, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParser;->_nextToken:Lcom/flurry/org/codehaus/jackson/JsonToken;
 
     .line 602
@@ -5053,12 +5053,12 @@
     sget-object v1, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
     .line 622
-    .end local v0           #t:Lcom/flurry/org/codehaus/jackson/JsonToken;
+    .end local v0    # "t":Lcom/flurry/org/codehaus/jackson/JsonToken;
     :goto_0
     return-object v1
 
     .line 606
-    .restart local v0       #t:Lcom/flurry/org/codehaus/jackson/JsonToken;
+    .restart local v0    # "t":Lcom/flurry/org/codehaus/jackson/JsonToken;
     :cond_0
     sget-object v1, Lcom/flurry/org/codehaus/jackson/JsonToken;->VALUE_FALSE:Lcom/flurry/org/codehaus/jackson/JsonToken;
 
@@ -5117,7 +5117,7 @@
     goto :goto_1
 
     .line 616
-    .end local v0           #t:Lcom/flurry/org/codehaus/jackson/JsonToken;
+    .end local v0    # "t":Lcom/flurry/org/codehaus/jackson/JsonToken;
     :cond_4
     sget-object v1, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParser$1;->$SwitchMap$org$codehaus$jackson$JsonToken:[I
 
@@ -5160,7 +5160,7 @@
 
 .method public nextIntValue(I)I
     .locals 4
-    .parameter "defaultValue"
+    .param p1, "defaultValue"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -5185,7 +5185,7 @@
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParser;->_nextToken:Lcom/flurry/org/codehaus/jackson/JsonToken;
 
     .line 553
-    .local v0, t:Lcom/flurry/org/codehaus/jackson/JsonToken;
+    .local v0, "t":Lcom/flurry/org/codehaus/jackson/JsonToken;
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParser;->_nextToken:Lcom/flurry/org/codehaus/jackson/JsonToken;
@@ -5204,12 +5204,12 @@
     move-result v1
 
     .line 566
-    .end local v0           #t:Lcom/flurry/org/codehaus/jackson/JsonToken;
+    .end local v0    # "t":Lcom/flurry/org/codehaus/jackson/JsonToken;
     :goto_0
     return v1
 
     .line 558
-    .restart local v0       #t:Lcom/flurry/org/codehaus/jackson/JsonToken;
+    .restart local v0    # "t":Lcom/flurry/org/codehaus/jackson/JsonToken;
     :cond_0
     sget-object v1, Lcom/flurry/org/codehaus/jackson/JsonToken;->START_ARRAY:Lcom/flurry/org/codehaus/jackson/JsonToken;
 
@@ -5257,7 +5257,7 @@
     goto :goto_1
 
     .line 566
-    .end local v0           #t:Lcom/flurry/org/codehaus/jackson/JsonToken;
+    .end local v0    # "t":Lcom/flurry/org/codehaus/jackson/JsonToken;
     :cond_3
     invoke-virtual {p0}, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParser;->nextToken()Lcom/flurry/org/codehaus/jackson/JsonToken;
 
@@ -5281,7 +5281,7 @@
 
 .method public nextLongValue(J)J
     .locals 4
-    .parameter "defaultValue"
+    .param p1, "defaultValue"    # J
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -5306,7 +5306,7 @@
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParser;->_nextToken:Lcom/flurry/org/codehaus/jackson/JsonToken;
 
     .line 577
-    .local v0, t:Lcom/flurry/org/codehaus/jackson/JsonToken;
+    .local v0, "t":Lcom/flurry/org/codehaus/jackson/JsonToken;
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParser;->_nextToken:Lcom/flurry/org/codehaus/jackson/JsonToken;
@@ -5325,12 +5325,12 @@
     move-result-wide v1
 
     .line 590
-    .end local v0           #t:Lcom/flurry/org/codehaus/jackson/JsonToken;
+    .end local v0    # "t":Lcom/flurry/org/codehaus/jackson/JsonToken;
     :goto_0
     return-wide v1
 
     .line 582
-    .restart local v0       #t:Lcom/flurry/org/codehaus/jackson/JsonToken;
+    .restart local v0    # "t":Lcom/flurry/org/codehaus/jackson/JsonToken;
     :cond_0
     sget-object v1, Lcom/flurry/org/codehaus/jackson/JsonToken;->START_ARRAY:Lcom/flurry/org/codehaus/jackson/JsonToken;
 
@@ -5378,7 +5378,7 @@
     goto :goto_1
 
     .line 590
-    .end local v0           #t:Lcom/flurry/org/codehaus/jackson/JsonToken;
+    .end local v0    # "t":Lcom/flurry/org/codehaus/jackson/JsonToken;
     :cond_3
     invoke-virtual {p0}, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParser;->nextToken()Lcom/flurry/org/codehaus/jackson/JsonToken;
 
@@ -5428,7 +5428,7 @@
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParser;->_nextToken:Lcom/flurry/org/codehaus/jackson/JsonToken;
 
     .line 525
-    .local v0, t:Lcom/flurry/org/codehaus/jackson/JsonToken;
+    .local v0, "t":Lcom/flurry/org/codehaus/jackson/JsonToken;
     iput-object v4, p0, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParser;->_nextToken:Lcom/flurry/org/codehaus/jackson/JsonToken;
 
     .line 526
@@ -5459,12 +5459,12 @@
     move-result-object v1
 
     .line 542
-    .end local v0           #t:Lcom/flurry/org/codehaus/jackson/JsonToken;
+    .end local v0    # "t":Lcom/flurry/org/codehaus/jackson/JsonToken;
     :goto_0
     return-object v1
 
     .line 534
-    .restart local v0       #t:Lcom/flurry/org/codehaus/jackson/JsonToken;
+    .restart local v0    # "t":Lcom/flurry/org/codehaus/jackson/JsonToken;
     :cond_1
     sget-object v1, Lcom/flurry/org/codehaus/jackson/JsonToken;->START_ARRAY:Lcom/flurry/org/codehaus/jackson/JsonToken;
 
@@ -5512,7 +5512,7 @@
     goto :goto_1
 
     .line 542
-    .end local v0           #t:Lcom/flurry/org/codehaus/jackson/JsonToken;
+    .end local v0    # "t":Lcom/flurry/org/codehaus/jackson/JsonToken;
     :cond_4
     invoke-virtual {p0}, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParser;->nextToken()Lcom/flurry/org/codehaus/jackson/JsonToken;
 
@@ -5589,7 +5589,7 @@
     move-result v0
 
     .line 369
-    .local v0, i:I
+    .local v0, "i":I
     if-gez v0, :cond_2
 
     .line 373
@@ -5765,7 +5765,7 @@
     move-result v1
 
     .line 416
-    .local v1, inObject:Z
+    .local v1, "inObject":Z
     if-eqz v1, :cond_a
 
     .line 418
@@ -5774,7 +5774,7 @@
     move-result-object v2
 
     .line 419
-    .local v2, name:Ljava/lang/String;
+    .local v2, "name":Ljava/lang/String;
     iget-object v4, p0, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParser;->_parsingContext:Lcom/flurry/org/codehaus/jackson/impl/JsonReadContext;
 
     invoke-virtual {v4, v2}, Lcom/flurry/org/codehaus/jackson/impl/JsonReadContext;->setCurrentName(Ljava/lang/String;)V
@@ -5806,7 +5806,7 @@
     move-result v0
 
     .line 432
-    .end local v2           #name:Ljava/lang/String;
+    .end local v2    # "name":Ljava/lang/String;
     :cond_a
     sparse-switch v0, :sswitch_data_0
 
@@ -5816,7 +5816,7 @@
     move-result-object v3
 
     .line 489
-    .local v3, t:Lcom/flurry/org/codehaus/jackson/JsonToken;
+    .local v3, "t":Lcom/flurry/org/codehaus/jackson/JsonToken;
     :goto_1
     if-eqz v1, :cond_d
 
@@ -5829,7 +5829,7 @@
     goto/16 :goto_0
 
     .line 434
-    .end local v3           #t:Lcom/flurry/org/codehaus/jackson/JsonToken;
+    .end local v3    # "t":Lcom/flurry/org/codehaus/jackson/JsonToken;
     :sswitch_0
     iput-boolean v8, p0, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParser;->_tokenIncomplete:Z
 
@@ -5837,11 +5837,11 @@
     sget-object v3, Lcom/flurry/org/codehaus/jackson/JsonToken;->VALUE_STRING:Lcom/flurry/org/codehaus/jackson/JsonToken;
 
     .line 436
-    .restart local v3       #t:Lcom/flurry/org/codehaus/jackson/JsonToken;
+    .restart local v3    # "t":Lcom/flurry/org/codehaus/jackson/JsonToken;
     goto :goto_1
 
     .line 438
-    .end local v3           #t:Lcom/flurry/org/codehaus/jackson/JsonToken;
+    .end local v3    # "t":Lcom/flurry/org/codehaus/jackson/JsonToken;
     :sswitch_1
     if-nez v1, :cond_b
 
@@ -5863,11 +5863,11 @@
     sget-object v3, Lcom/flurry/org/codehaus/jackson/JsonToken;->START_ARRAY:Lcom/flurry/org/codehaus/jackson/JsonToken;
 
     .line 442
-    .restart local v3       #t:Lcom/flurry/org/codehaus/jackson/JsonToken;
+    .restart local v3    # "t":Lcom/flurry/org/codehaus/jackson/JsonToken;
     goto :goto_1
 
     .line 444
-    .end local v3           #t:Lcom/flurry/org/codehaus/jackson/JsonToken;
+    .end local v3    # "t":Lcom/flurry/org/codehaus/jackson/JsonToken;
     :sswitch_2
     if-nez v1, :cond_c
 
@@ -5889,11 +5889,11 @@
     sget-object v3, Lcom/flurry/org/codehaus/jackson/JsonToken;->START_OBJECT:Lcom/flurry/org/codehaus/jackson/JsonToken;
 
     .line 448
-    .restart local v3       #t:Lcom/flurry/org/codehaus/jackson/JsonToken;
+    .restart local v3    # "t":Lcom/flurry/org/codehaus/jackson/JsonToken;
     goto :goto_1
 
     .line 453
-    .end local v3           #t:Lcom/flurry/org/codehaus/jackson/JsonToken;
+    .end local v3    # "t":Lcom/flurry/org/codehaus/jackson/JsonToken;
     :sswitch_3
     const-string v4, "expected a value"
 
@@ -5909,11 +5909,11 @@
     sget-object v3, Lcom/flurry/org/codehaus/jackson/JsonToken;->VALUE_TRUE:Lcom/flurry/org/codehaus/jackson/JsonToken;
 
     .line 457
-    .restart local v3       #t:Lcom/flurry/org/codehaus/jackson/JsonToken;
+    .restart local v3    # "t":Lcom/flurry/org/codehaus/jackson/JsonToken;
     goto :goto_1
 
     .line 459
-    .end local v3           #t:Lcom/flurry/org/codehaus/jackson/JsonToken;
+    .end local v3    # "t":Lcom/flurry/org/codehaus/jackson/JsonToken;
     :sswitch_5
     const-string v4, "false"
 
@@ -5923,11 +5923,11 @@
     sget-object v3, Lcom/flurry/org/codehaus/jackson/JsonToken;->VALUE_FALSE:Lcom/flurry/org/codehaus/jackson/JsonToken;
 
     .line 461
-    .restart local v3       #t:Lcom/flurry/org/codehaus/jackson/JsonToken;
+    .restart local v3    # "t":Lcom/flurry/org/codehaus/jackson/JsonToken;
     goto :goto_1
 
     .line 463
-    .end local v3           #t:Lcom/flurry/org/codehaus/jackson/JsonToken;
+    .end local v3    # "t":Lcom/flurry/org/codehaus/jackson/JsonToken;
     :sswitch_6
     const-string v4, "null"
 
@@ -5937,18 +5937,18 @@
     sget-object v3, Lcom/flurry/org/codehaus/jackson/JsonToken;->VALUE_NULL:Lcom/flurry/org/codehaus/jackson/JsonToken;
 
     .line 465
-    .restart local v3       #t:Lcom/flurry/org/codehaus/jackson/JsonToken;
+    .restart local v3    # "t":Lcom/flurry/org/codehaus/jackson/JsonToken;
     goto :goto_1
 
     .line 482
-    .end local v3           #t:Lcom/flurry/org/codehaus/jackson/JsonToken;
+    .end local v3    # "t":Lcom/flurry/org/codehaus/jackson/JsonToken;
     :sswitch_7
     invoke-virtual {p0, v0}, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParser;->parseNumberText(I)Lcom/flurry/org/codehaus/jackson/JsonToken;
 
     move-result-object v3
 
     .line 483
-    .restart local v3       #t:Lcom/flurry/org/codehaus/jackson/JsonToken;
+    .restart local v3    # "t":Lcom/flurry/org/codehaus/jackson/JsonToken;
     goto :goto_1
 
     .line 493
@@ -5987,7 +5987,7 @@
 
 .method protected final parseNumberText(I)Lcom/flurry/org/codehaus/jackson/JsonToken;
     .locals 14
-    .parameter "ch"
+    .param p1, "ch"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -6010,20 +6010,20 @@
     move v5, v12
 
     .line 663
-    .local v5, negative:Z
+    .local v5, "negative":Z
     :goto_0
     iget v6, p0, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParser;->_inputPtr:I
 
     .line 664
-    .local v6, ptr:I
+    .local v6, "ptr":I
     sub-int v8, v6, v12
 
     .line 665
-    .local v8, startPtr:I
+    .local v8, "startPtr":I
     iget v2, p0, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParser;->_inputEnd:I
 
     .line 669
-    .local v2, inputLen:I
+    .local v2, "inputLen":I
     if-eqz v5, :cond_5
 
     .line 670
@@ -6050,10 +6050,10 @@
     return-object v9
 
     .line 662
-    .end local v2           #inputLen:I
-    .end local v5           #negative:Z
-    .end local v6           #ptr:I
-    .end local v8           #startPtr:I
+    .end local v2    # "inputLen":I
+    .end local v5    # "negative":Z
+    .end local v6    # "ptr":I
+    .end local v8    # "startPtr":I
     :cond_1
     const/4 v9, 0x0
 
@@ -6062,17 +6062,17 @@
     goto :goto_0
 
     .line 673
-    .restart local v2       #inputLen:I
-    .restart local v5       #negative:Z
-    .restart local v6       #ptr:I
-    .restart local v8       #startPtr:I
+    .restart local v2    # "inputLen":I
+    .restart local v5    # "negative":Z
+    .restart local v6    # "ptr":I
+    .restart local v8    # "startPtr":I
     :cond_2
     iget-object v9, p0, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParser;->_inputBuffer:[C
 
     add-int/lit8 v7, v6, 0x1
 
-    .end local v6           #ptr:I
-    .local v7, ptr:I
+    .end local v6    # "ptr":I
+    .local v7, "ptr":I
     aget-char p1, v9, v6
 
     .line 675
@@ -6091,18 +6091,18 @@
 
     move v6, v7
 
-    .end local v7           #ptr:I
-    .restart local v6       #ptr:I
+    .end local v7    # "ptr":I
+    .restart local v6    # "ptr":I
     goto :goto_3
 
-    .end local v6           #ptr:I
-    .restart local v7       #ptr:I
+    .end local v6    # "ptr":I
+    .restart local v7    # "ptr":I
     :cond_4
     move v6, v7
 
     .line 685
-    .end local v7           #ptr:I
-    .restart local v6       #ptr:I
+    .end local v7    # "ptr":I
+    .restart local v6    # "ptr":I
     :cond_5
     if-eq p1, v10, :cond_0
 
@@ -6110,7 +6110,7 @@
     const/4 v3, 0x1
 
     .line 701
-    .local v3, intLen:I
+    .local v3, "intLen":I
     :goto_4
     iget v9, p0, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParser;->_inputEnd:I
 
@@ -6121,8 +6121,8 @@
 
     add-int/lit8 v7, v6, 0x1
 
-    .end local v6           #ptr:I
-    .restart local v7       #ptr:I
+    .end local v6    # "ptr":I
+    .restart local v7    # "ptr":I
     aget-char p1, v9, v6
 
     .line 705
@@ -6135,7 +6135,7 @@
     const/4 v1, 0x0
 
     .line 714
-    .local v1, fractLen:I
+    .local v1, "fractLen":I
     const/16 v9, 0x2e
 
     if-ne p1, v9, :cond_b
@@ -6147,34 +6147,34 @@
     move v6, v7
 
     .line 718
-    .end local v7           #ptr:I
-    .restart local v6       #ptr:I
+    .end local v7    # "ptr":I
+    .restart local v6    # "ptr":I
     goto :goto_1
 
     .line 708
-    .end local v1           #fractLen:I
-    .end local v6           #ptr:I
-    .restart local v7       #ptr:I
+    .end local v1    # "fractLen":I
+    .end local v6    # "ptr":I
+    .restart local v7    # "ptr":I
     :cond_7
     add-int/lit8 v3, v3, 0x1
 
     move v6, v7
 
-    .end local v7           #ptr:I
-    .restart local v6       #ptr:I
+    .end local v7    # "ptr":I
+    .restart local v6    # "ptr":I
     goto :goto_4
 
     .line 720
-    .end local v6           #ptr:I
-    .restart local v1       #fractLen:I
-    .restart local v7       #ptr:I
+    .end local v6    # "ptr":I
+    .restart local v1    # "fractLen":I
+    .restart local v7    # "ptr":I
     :cond_8
     iget-object v9, p0, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParser;->_inputBuffer:[C
 
     add-int/lit8 v6, v7, 0x1
 
-    .end local v7           #ptr:I
-    .restart local v6       #ptr:I
+    .end local v7    # "ptr":I
+    .restart local v6    # "ptr":I
     aget-char p1, v9, v7
 
     .line 721
@@ -6195,13 +6195,13 @@
     move v7, v6
 
     .line 732
-    .end local v6           #ptr:I
-    .restart local v7       #ptr:I
+    .end local v6    # "ptr":I
+    .restart local v7    # "ptr":I
     :cond_b
     const/4 v0, 0x0
 
     .line 733
-    .local v0, expLen:I
+    .local v0, "expLen":I
     const/16 v9, 0x65
 
     if-eq p1, v9, :cond_c
@@ -6217,30 +6217,30 @@
     move v6, v7
 
     .line 735
-    .end local v7           #ptr:I
-    .restart local v6       #ptr:I
+    .end local v7    # "ptr":I
+    .restart local v6    # "ptr":I
     goto :goto_1
 
     .line 724
-    .end local v0           #expLen:I
+    .end local v0    # "expLen":I
     :cond_d
     add-int/lit8 v1, v1, 0x1
 
     move v7, v6
 
-    .end local v6           #ptr:I
-    .restart local v7       #ptr:I
+    .end local v6    # "ptr":I
+    .restart local v7    # "ptr":I
     goto :goto_5
 
     .line 738
-    .restart local v0       #expLen:I
+    .restart local v0    # "expLen":I
     :cond_e
     iget-object v9, p0, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParser;->_inputBuffer:[C
 
     add-int/lit8 v6, v7, 0x1
 
-    .end local v7           #ptr:I
-    .restart local v6       #ptr:I
+    .end local v7    # "ptr":I
+    .restart local v6    # "ptr":I
     aget-char p1, v9, v7
 
     .line 739
@@ -6259,8 +6259,8 @@
 
     add-int/lit8 v7, v6, 0x1
 
-    .end local v6           #ptr:I
-    .restart local v7       #ptr:I
+    .end local v6    # "ptr":I
+    .restart local v7    # "ptr":I
     aget-char p1, v9, v6
 
     .line 745
@@ -6278,26 +6278,26 @@
     move v6, v7
 
     .line 748
-    .end local v7           #ptr:I
-    .restart local v6       #ptr:I
+    .end local v7    # "ptr":I
+    .restart local v6    # "ptr":I
     goto :goto_1
 
     .line 750
-    .end local v6           #ptr:I
-    .restart local v7       #ptr:I
+    .end local v6    # "ptr":I
+    .restart local v7    # "ptr":I
     :cond_10
     iget-object v9, p0, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParser;->_inputBuffer:[C
 
     add-int/lit8 v6, v7, 0x1
 
-    .end local v7           #ptr:I
-    .restart local v6       #ptr:I
+    .end local v7    # "ptr":I
+    .restart local v6    # "ptr":I
     aget-char p1, v9, v7
 
     move v7, v6
 
-    .end local v6           #ptr:I
-    .restart local v7       #ptr:I
+    .end local v6    # "ptr":I
+    .restart local v7    # "ptr":I
     goto :goto_6
 
     .line 753
@@ -6313,8 +6313,8 @@
     move v6, v7
 
     .line 759
-    .end local v7           #ptr:I
-    .restart local v6       #ptr:I
+    .end local v7    # "ptr":I
+    .restart local v6    # "ptr":I
     add-int/lit8 v6, v6, -0x1
 
     .line 760
@@ -6324,7 +6324,7 @@
     sub-int v4, v6, v8
 
     .line 762
-    .local v4, len:I
+    .local v4, "len":I
     iget-object v9, p0, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParser;->_textBuffer:Lcom/flurry/org/codehaus/jackson/util/TextBuffer;
 
     iget-object v10, p0, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParser;->_inputBuffer:[C
@@ -6338,30 +6338,30 @@
 
     goto/16 :goto_3
 
-    .end local v0           #expLen:I
-    .end local v1           #fractLen:I
-    .end local v3           #intLen:I
-    .end local v4           #len:I
+    .end local v0    # "expLen":I
+    .end local v1    # "fractLen":I
+    .end local v3    # "intLen":I
+    .end local v4    # "len":I
     :cond_13
     move v9, v8
 
     .line 766
     goto/16 :goto_2
 
-    .restart local v0       #expLen:I
-    .restart local v1       #fractLen:I
-    .restart local v3       #intLen:I
+    .restart local v0    # "expLen":I
+    .restart local v1    # "fractLen":I
+    .restart local v3    # "intLen":I
     :cond_14
     move v7, v6
 
-    .end local v6           #ptr:I
-    .restart local v7       #ptr:I
+    .end local v6    # "ptr":I
+    .restart local v7    # "ptr":I
     goto :goto_6
 .end method
 
 .method public releaseBuffered(Ljava/io/Writer;)I
     .locals 4
-    .parameter "w"
+    .param p1, "w"    # Ljava/io/Writer;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -6377,7 +6377,7 @@
     sub-int v0, v2, v3
 
     .line 96
-    .local v0, count:I
+    .local v0, "count":I
     const/4 v2, 0x1
 
     if-ge v0, v2, :cond_0
@@ -6394,7 +6394,7 @@
     iget v1, p0, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParser;->_inputPtr:I
 
     .line 101
-    .local v1, origPtr:I
+    .local v1, "origPtr":I
     iget-object v2, p0, Lcom/flurry/org/codehaus/jackson/impl/ReaderBasedParser;->_inputBuffer:[C
 
     invoke-virtual {p1, v2, v1, v0}, Ljava/io/Writer;->write([CII)V
@@ -6407,7 +6407,7 @@
 
 .method public setCodec(Lcom/flurry/org/codehaus/jackson/ObjectCodec;)V
     .locals 0
-    .parameter "c"
+    .param p1, "c"    # Lcom/flurry/org/codehaus/jackson/ObjectCodec;
 
     .prologue
     .line 89

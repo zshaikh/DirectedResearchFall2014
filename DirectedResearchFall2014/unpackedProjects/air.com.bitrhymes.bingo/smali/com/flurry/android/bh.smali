@@ -18,7 +18,6 @@
 # direct methods
 .method synthetic constructor <init>(Lcom/flurry/android/FlurryFullscreenTakeoverActivity;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 396
@@ -31,8 +30,6 @@
 
 .method private constructor <init>(Lcom/flurry/android/FlurryFullscreenTakeoverActivity;B)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 396
@@ -118,10 +115,6 @@
 
 .method public final a(Lcom/flurry/android/cl;Landroid/view/View;ILcom/flurry/android/BasicWebView$BasicWebViewFullScreenTransitionHandler$BasicWebViewFullScreenTransitionCallback;)V
     .locals 5
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const/4 v4, -0x1
@@ -162,7 +155,7 @@
     .line 423
     iget-object v0, p0, Lcom/flurry/android/bh;->dk:Landroid/widget/FrameLayout;
 
-    const/high16 v1, -0x100
+    const/high16 v1, -0x1000000
 
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setBackgroundColor(I)V
 

@@ -26,8 +26,6 @@
 # direct methods
 .method constructor <init>(Lcom/playhaven/extensions/android/PlayHavenExtensionContext;Ljava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 1
@@ -45,8 +43,8 @@
 # virtual methods
 .method public requestFailed(Lcom/playhaven/src/common/PHAPIRequest;Ljava/lang/Exception;)V
     .locals 4
-    .parameter "request"
-    .parameter "e"
+    .param p1, "request"    # Lcom/playhaven/src/common/PHAPIRequest;
+    .param p2, "e"    # Ljava/lang/Exception;
 
     .prologue
     .line 162
@@ -102,12 +100,12 @@
     move-result-object v0
 
     .line 164
-    .local v0, level:Ljava/lang/String;
+    .local v0, "level":Ljava/lang/String;
     iget-object v1, p0, Lcom/playhaven/extensions/android/PlayHavenExtensionContext$1;->this$0:Lcom/playhaven/extensions/android/PlayHavenExtensionContext;
 
     const-string v2, "METADATA_FAILED"
 
-    #calls: Lcom/playhaven/extensions/android/PlayHavenExtensionContext;->dispatchFlashEvent(Ljava/lang/String;Ljava/lang/String;)V
+    # invokes: Lcom/playhaven/extensions/android/PlayHavenExtensionContext;->dispatchFlashEvent(Ljava/lang/String;Ljava/lang/String;)V
     invoke-static {v1, v2, v0}, Lcom/playhaven/extensions/android/PlayHavenExtensionContext;->access$0(Lcom/playhaven/extensions/android/PlayHavenExtensionContext;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 166
@@ -116,8 +114,8 @@
 
 .method public requestSucceeded(Lcom/playhaven/src/common/PHAPIRequest;Lorg/json/JSONObject;)V
     .locals 3
-    .parameter "request"
-    .parameter "responseData"
+    .param p1, "request"    # Lcom/playhaven/src/common/PHAPIRequest;
+    .param p2, "responseData"    # Lorg/json/JSONObject;
 
     .prologue
     .line 153
@@ -152,7 +150,7 @@
 
     move-result-object v2
 
-    #calls: Lcom/playhaven/extensions/android/PlayHavenExtensionContext;->dispatchFlashEvent(Ljava/lang/String;Ljava/lang/String;)V
+    # invokes: Lcom/playhaven/extensions/android/PlayHavenExtensionContext;->dispatchFlashEvent(Ljava/lang/String;Ljava/lang/String;)V
     invoke-static {v0, v1, v2}, Lcom/playhaven/extensions/android/PlayHavenExtensionContext;->access$0(Lcom/playhaven/extensions/android/PlayHavenExtensionContext;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 156

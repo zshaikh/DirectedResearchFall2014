@@ -247,8 +247,6 @@
 
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 45
@@ -259,7 +257,6 @@
 
 .method public static valueOf(Ljava/lang/String;)Lcom/fusepowered/a1/webapp/ApplifierImpactWebData$ApplifierVideoPosition;
     .locals 1
-    .parameter
 
     .prologue
     .line 1
@@ -307,7 +304,7 @@
     const/4 v0, 0x0
 
     .line 50
-    .local v0, output:Ljava/lang/String;
+    .local v0, "output":Ljava/lang/String;
     invoke-static {}, Lcom/fusepowered/a1/webapp/ApplifierImpactWebData$ApplifierVideoPosition;->$SWITCH_TABLE$com$applifier$impact$android$webapp$ApplifierImpactWebData$ApplifierVideoPosition()[I
 
     move-result-object v1

@@ -88,7 +88,7 @@
 
     .prologue
     .line 178
-    const/high16 v0, 0x7f02
+    const/high16 v0, 0x7f020000
 
     sput v0, Lcom/facebook/android/R$drawable;->com_facebook_button_blue:I
 

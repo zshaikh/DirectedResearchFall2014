@@ -38,8 +38,6 @@
 
 .method private static a(Lcom/google/ads/util/b$a;Ljava/lang/String;)V
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 65
@@ -53,9 +51,6 @@
 
 .method private static a(Lcom/google/ads/util/b$a;Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 1
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 69
@@ -75,7 +70,6 @@
 
 .method public static a(Ljava/lang/String;)V
     .locals 2
-    .parameter
 
     .prologue
     const-string v1, "Ads"
@@ -108,8 +102,6 @@
 
 .method public static a(Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     const-string v1, "Ads"
@@ -142,7 +134,6 @@
 
 .method private static a(I)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 272
@@ -163,8 +154,6 @@
 
 .method public static a(Ljava/lang/String;I)Z
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 258
@@ -194,7 +183,6 @@
 
 .method public static b(Ljava/lang/String;)V
     .locals 2
-    .parameter
 
     .prologue
     const-string v1, "Ads"
@@ -227,8 +215,6 @@
 
 .method public static b(Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     const-string v1, "Ads"
@@ -268,7 +254,6 @@
 
 .method public static c(Ljava/lang/String;)V
     .locals 2
-    .parameter
 
     .prologue
     const-string v1, "Ads"
@@ -301,8 +286,6 @@
 
 .method public static c(Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     const-string v1, "Ads"
@@ -335,7 +318,6 @@
 
 .method public static d(Ljava/lang/String;)V
     .locals 2
-    .parameter
 
     .prologue
     const-string v1, "Ads"
@@ -368,8 +350,6 @@
 
 .method public static d(Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     const-string v1, "Ads"
@@ -409,7 +389,6 @@
 
 .method public static e(Ljava/lang/String;)V
     .locals 2
-    .parameter
 
     .prologue
     const-string v1, "Ads"

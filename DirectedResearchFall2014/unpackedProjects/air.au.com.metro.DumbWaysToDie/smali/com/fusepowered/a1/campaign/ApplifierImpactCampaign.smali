@@ -113,7 +113,7 @@
 
 .method public constructor <init>(Lorg/json/JSONObject;)V
     .locals 3
-    .parameter "fromJSON"
+    .param p1, "fromJSON"    # Lorg/json/JSONObject;
 
     .prologue
     .line 48
@@ -239,7 +239,7 @@
     aget-object v0, v1, v3
 
     .line 303
-    .local v0, key:Ljava/lang/String;
+    .local v0, "key":Ljava/lang/String;
     iget-object v4, p0, Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;->_campaignJson:Lorg/json/JSONObject;
 
     invoke-virtual {v4, v0}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
@@ -259,7 +259,7 @@
 
     goto :goto_0
 
-    .end local v0           #key:Ljava/lang/String;
+    .end local v0    # "key":Ljava/lang/String;
     :cond_2
     move v1, v5
 
@@ -316,13 +316,13 @@
     move-object v0, v1
 
     .line 130
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v1, "getCampaignId: This should not happen!"
 
     invoke-static {v1, p0}, Lcom/fusepowered/a1/ApplifierImpactUtils;->Log(Ljava/lang/String;Ljava/lang/Object;)V
 
     .line 134
-    .end local v0           #e:Ljava/lang/Exception;
+    .end local v0    # "e":Ljava/lang/Exception;
     :cond_0
     const/4 v1, 0x0
 
@@ -373,13 +373,13 @@
     move-object v0, v1
 
     .line 195
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v1, "getClickUrl: This should not happen!"
 
     invoke-static {v1, p0}, Lcom/fusepowered/a1/ApplifierImpactUtils;->Log(Ljava/lang/String;Ljava/lang/Object;)V
 
     .line 199
-    .end local v0           #e:Ljava/lang/Exception;
+    .end local v0    # "e":Ljava/lang/Exception;
     :cond_0
     const/4 v1, 0x0
 
@@ -420,13 +420,13 @@
     move-object v0, v1
 
     .line 104
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v1, "getEndScreenUrl: This should not happen!"
 
     invoke-static {v1, p0}, Lcom/fusepowered/a1/ApplifierImpactUtils;->Log(Ljava/lang/String;Ljava/lang/Object;)V
 
     .line 108
-    .end local v0           #e:Ljava/lang/Exception;
+    .end local v0    # "e":Ljava/lang/Exception;
     :cond_0
     const/4 v1, 0x0
 
@@ -467,13 +467,13 @@
     move-object v0, v1
 
     .line 143
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v1, "getGameId: This should not happen!"
 
     invoke-static {v1, p0}, Lcom/fusepowered/a1/ApplifierImpactUtils;->Log(Ljava/lang/String;Ljava/lang/Object;)V
 
     .line 147
-    .end local v0           #e:Ljava/lang/Exception;
+    .end local v0    # "e":Ljava/lang/Exception;
     :cond_0
     const/4 v1, 0x0
 
@@ -514,13 +514,13 @@
     move-object v0, v1
 
     .line 156
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v1, "getGameName: This should not happen!"
 
     invoke-static {v1, p0}, Lcom/fusepowered/a1/ApplifierImpactUtils;->Log(Ljava/lang/String;Ljava/lang/Object;)V
 
     .line 160
-    .end local v0           #e:Ljava/lang/Exception;
+    .end local v0    # "e":Ljava/lang/Exception;
     :cond_0
     const/4 v1, 0x0
 
@@ -561,13 +561,13 @@
     move-object v0, v1
 
     .line 117
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v1, "getPicture: This should not happen!"
 
     invoke-static {v1, p0}, Lcom/fusepowered/a1/ApplifierImpactUtils;->Log(Ljava/lang/String;Ljava/lang/Object;)V
 
     .line 121
-    .end local v0           #e:Ljava/lang/Exception;
+    .end local v0    # "e":Ljava/lang/Exception;
     :cond_0
     const/4 v1, 0x0
 
@@ -618,7 +618,7 @@
     move-object v0, v1
 
     .line 260
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     new-instance v1, Ljava/lang/StringBuilder;
 
     const-string v2, "getStoreId: Was supposed to use ApplifierImpactConstants.IMPACT_CAMPAIGN_STOREID_KEY but "
@@ -646,7 +646,7 @@
     invoke-static {v1, p0}, Lcom/fusepowered/a1/ApplifierImpactUtils;->Log(Ljava/lang/String;Ljava/lang/Object;)V
 
     .line 263
-    .end local v0           #e:Ljava/lang/Exception;
+    .end local v0    # "e":Ljava/lang/Exception;
     :cond_0
     iget-object v1, p0, Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;->_campaignJson:Lorg/json/JSONObject;
 
@@ -679,7 +679,7 @@
     move-object v0, v1
 
     .line 268
-    .restart local v0       #e:Ljava/lang/Exception;
+    .restart local v0    # "e":Ljava/lang/Exception;
     new-instance v1, Ljava/lang/StringBuilder;
 
     const-string v2, "getStoreId: Was supposed to use ApplifierImpactConstants.IMPACT_CAMPAIGN_ITUNESID_KEY but "
@@ -707,7 +707,7 @@
     invoke-static {v1, p0}, Lcom/fusepowered/a1/ApplifierImpactUtils;->Log(Ljava/lang/String;Ljava/lang/Object;)V
 
     .line 272
-    .end local v0           #e:Ljava/lang/Exception;
+    .end local v0    # "e":Ljava/lang/Exception;
     :cond_1
     const/4 v1, 0x0
 
@@ -748,13 +748,13 @@
     move-object v0, v1
 
     .line 247
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v1, "getTagLine: This should not happen!"
 
     invoke-static {v1, p0}, Lcom/fusepowered/a1/ApplifierImpactUtils;->Log(Ljava/lang/String;Ljava/lang/Object;)V
 
     .line 251
-    .end local v0           #e:Ljava/lang/Exception;
+    .end local v0    # "e":Ljava/lang/Exception;
     :cond_0
     const/4 v1, 0x0
 
@@ -769,7 +769,7 @@
     const-wide/16 v2, -0x1
 
     .line 218
-    .local v2, size:J
+    .local v2, "size":J
     invoke-direct {p0}, Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;->checkDataIntegrity()Z
 
     move-result v6
@@ -789,7 +789,7 @@
     move-result-object v1
 
     .line 223
-    .local v1, fileSize:Ljava/lang/String;
+    .local v1, "fileSize":Ljava/lang/String;
     :try_start_1
     invoke-static {v1}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
     :try_end_1
@@ -800,21 +800,21 @@
     move-wide v4, v2
 
     .line 238
-    .end local v1           #fileSize:Ljava/lang/String;
-    .end local v2           #size:J
-    .local v4, size:J
+    .end local v1    # "fileSize":Ljava/lang/String;
+    .end local v2    # "size":J
+    .local v4, "size":J
     :goto_0
     return-wide v4
 
     .line 225
-    .end local v4           #size:J
-    .restart local v1       #fileSize:Ljava/lang/String;
-    .restart local v2       #size:J
+    .end local v4    # "size":J
+    .restart local v1    # "fileSize":Ljava/lang/String;
+    .restart local v2    # "size":J
     :catch_0
     move-exception v0
 
     .line 226
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     :try_start_2
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -841,22 +841,22 @@
     move-wide v4, v2
 
     .line 227
-    .end local v2           #size:J
-    .restart local v4       #size:J
+    .end local v2    # "size":J
+    .restart local v4    # "size":J
     goto :goto_0
 
     .line 232
-    .end local v0           #e:Ljava/lang/Exception;
-    .end local v1           #fileSize:Ljava/lang/String;
-    .end local v4           #size:J
-    .restart local v2       #size:J
+    .end local v0    # "e":Ljava/lang/Exception;
+    .end local v1    # "fileSize":Ljava/lang/String;
+    .end local v4    # "size":J
+    .restart local v2    # "size":J
     :catch_1
     move-exception v6
 
     move-object v0, v6
 
     .line 233
-    .restart local v0       #e:Ljava/lang/Exception;
+    .restart local v0    # "e":Ljava/lang/Exception;
     const-string v6, "getVideoFileExpectedSize: not found, returning -1"
 
     invoke-static {v6, p0}, Lcom/fusepowered/a1/ApplifierImpactUtils;->Log(Ljava/lang/String;Ljava/lang/Object;)V
@@ -864,19 +864,19 @@
     move-wide v4, v2
 
     .line 234
-    .end local v2           #size:J
-    .restart local v4       #size:J
+    .end local v2    # "size":J
+    .restart local v4    # "size":J
     goto :goto_0
 
-    .end local v0           #e:Ljava/lang/Exception;
-    .end local v4           #size:J
-    .restart local v2       #size:J
+    .end local v0    # "e":Ljava/lang/Exception;
+    .end local v4    # "size":J
+    .restart local v2    # "size":J
     :cond_0
     move-wide v4, v2
 
     .line 238
-    .end local v2           #size:J
-    .restart local v4       #size:J
+    .end local v2    # "size":J
+    .restart local v4    # "size":J
     goto :goto_0
 .end method
 
@@ -906,7 +906,7 @@
     invoke-direct {v1, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
     .line 206
-    .local v1, videoFile:Ljava/io/File;
+    .local v1, "videoFile":Ljava/io/File;
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-virtual {p0}, Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;->getCampaignId()Ljava/lang/String;
@@ -940,7 +940,7 @@
     move-result-object v2
 
     .line 213
-    .end local v1           #videoFile:Ljava/io/File;
+    .end local v1    # "videoFile":Ljava/io/File;
     :goto_0
     return-object v2
 
@@ -951,13 +951,13 @@
     move-object v0, v2
 
     .line 209
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v2, "getVideoFilename: This should not happen!"
 
     invoke-static {v2, p0}, Lcom/fusepowered/a1/ApplifierImpactUtils;->Log(Ljava/lang/String;Ljava/lang/Object;)V
 
     .line 213
-    .end local v0           #e:Ljava/lang/Exception;
+    .end local v0    # "e":Ljava/lang/Exception;
     :cond_0
     const/4 v2, 0x0
 
@@ -998,13 +998,13 @@
     move-object v0, v1
 
     .line 182
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v1, "getVideoStreamUrl: This should not happen!"
 
     invoke-static {v1, p0}, Lcom/fusepowered/a1/ApplifierImpactUtils;->Log(Ljava/lang/String;Ljava/lang/Object;)V
 
     .line 186
-    .end local v0           #e:Ljava/lang/Exception;
+    .end local v0    # "e":Ljava/lang/Exception;
     :cond_0
     const/4 v1, 0x0
 
@@ -1045,13 +1045,13 @@
     move-object v0, v1
 
     .line 169
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v1, "getVideoUrl: This should not happen!"
 
     invoke-static {v1, p0}, Lcom/fusepowered/a1/ApplifierImpactUtils;->Log(Ljava/lang/String;Ljava/lang/Object;)V
 
     .line 173
-    .end local v0           #e:Ljava/lang/Exception;
+    .end local v0    # "e":Ljava/lang/Exception;
     :cond_0
     const/4 v1, 0x0
 
@@ -1104,7 +1104,7 @@
 
 .method public setCampaignStatus(Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign$ApplifierImpactCampaignStatus;)V
     .locals 0
-    .parameter "status"
+    .param p1, "status"    # Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign$ApplifierImpactCampaignStatus;
 
     .prologue
     .line 280
@@ -1152,7 +1152,7 @@
     move-object v0, v1
 
     .line 89
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     new-instance v1, Ljava/lang/StringBuilder;
 
     const-string v2, "shouldBypassAppSheet: key not found for campaign: "
@@ -1180,7 +1180,7 @@
     invoke-static {v1, p0}, Lcom/fusepowered/a1/ApplifierImpactUtils;->Log(Ljava/lang/String;Ljava/lang/Object;)V
 
     .line 93
-    .end local v0           #e:Ljava/lang/Exception;
+    .end local v0    # "e":Ljava/lang/Exception;
     :cond_0
     const/4 v1, 0x0
 
@@ -1229,7 +1229,7 @@
     move-object v0, v1
 
     .line 77
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     new-instance v1, Ljava/lang/StringBuilder;
 
     const-string v2, "shouldCacheVideo: key not found for campaign: "
@@ -1257,7 +1257,7 @@
     invoke-static {v1, p0}, Lcom/fusepowered/a1/ApplifierImpactUtils;->Log(Ljava/lang/String;Ljava/lang/Object;)V
 
     .line 80
-    .end local v0           #e:Ljava/lang/Exception;
+    .end local v0    # "e":Ljava/lang/Exception;
     :cond_0
     const/4 v1, 0x0
 
@@ -1276,7 +1276,7 @@
     iget-object v1, p0, Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;->_campaignJson:Lorg/json/JSONObject;
 
     .line 61
-    .local v1, retObject:Lorg/json/JSONObject;
+    .local v1, "retObject":Lorg/json/JSONObject;
     :try_start_0
     const-string v2, "status"
 
@@ -1305,7 +1305,7 @@
     move-object v0, v2
 
     .line 64
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v2, "Error creating campaign JSON"
 
     invoke-static {v2, p0}, Lcom/fusepowered/a1/ApplifierImpactUtils;->Log(Ljava/lang/String;Ljava/lang/Object;)V

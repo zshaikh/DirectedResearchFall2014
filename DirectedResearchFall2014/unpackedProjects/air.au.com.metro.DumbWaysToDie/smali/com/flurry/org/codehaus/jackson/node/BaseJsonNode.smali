@@ -24,7 +24,7 @@
 
 .method public bridge synthetic findParent(Ljava/lang/String;)Lcom/flurry/org/codehaus/jackson/JsonNode;
     .locals 1
-    .parameter "x0"
+    .param p1, "x0"    # Ljava/lang/String;
 
     .prologue
     .line 19
@@ -37,7 +37,7 @@
 
 .method public findParent(Ljava/lang/String;)Lcom/flurry/org/codehaus/jackson/node/ObjectNode;
     .locals 1
-    .parameter "fieldName"
+    .param p1, "fieldName"    # Ljava/lang/String;
 
     .prologue
     .line 49
@@ -48,8 +48,7 @@
 
 .method public findParents(Ljava/lang/String;Ljava/util/List;)Ljava/util/List;
     .locals 0
-    .parameter "fieldName"
-    .parameter
+    .param p1, "fieldName"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -67,13 +66,13 @@
 
     .prologue
     .line 64
-    .local p2, foundSoFar:Ljava/util/List;,"Ljava/util/List<Lcom/flurry/org/codehaus/jackson/JsonNode;>;"
+    .local p2, "foundSoFar":Ljava/util/List;, "Ljava/util/List<Lcom/flurry/org/codehaus/jackson/JsonNode;>;"
     return-object p2
 .end method
 
 .method public final findPath(Ljava/lang/String;)Lcom/flurry/org/codehaus/jackson/JsonNode;
     .locals 2
-    .parameter "fieldName"
+    .param p1, "fieldName"    # Ljava/lang/String;
 
     .prologue
     .line 39
@@ -82,7 +81,7 @@
     move-result-object v0
 
     .line 40
-    .local v0, value:Lcom/flurry/org/codehaus/jackson/JsonNode;
+    .local v0, "value":Lcom/flurry/org/codehaus/jackson/JsonNode;
     if-nez v0, :cond_0
 
     .line 41
@@ -102,7 +101,7 @@
 
 .method public findValue(Ljava/lang/String;)Lcom/flurry/org/codehaus/jackson/JsonNode;
     .locals 1
-    .parameter "fieldName"
+    .param p1, "fieldName"    # Ljava/lang/String;
 
     .prologue
     .line 33
@@ -113,8 +112,7 @@
 
 .method public findValues(Ljava/lang/String;Ljava/util/List;)Ljava/util/List;
     .locals 0
-    .parameter "fieldName"
-    .parameter
+    .param p1, "fieldName"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -132,14 +130,13 @@
 
     .prologue
     .line 54
-    .local p2, foundSoFar:Ljava/util/List;,"Ljava/util/List<Lcom/flurry/org/codehaus/jackson/JsonNode;>;"
+    .local p2, "foundSoFar":Ljava/util/List;, "Ljava/util/List<Lcom/flurry/org/codehaus/jackson/JsonNode;>;"
     return-object p2
 .end method
 
 .method public findValuesAsText(Ljava/lang/String;Ljava/util/List;)Ljava/util/List;
     .locals 0
-    .parameter "fieldName"
-    .parameter
+    .param p1, "fieldName"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -157,7 +154,7 @@
 
     .prologue
     .line 59
-    .local p2, foundSoFar:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
+    .local p2, "foundSoFar":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     return-object p2
 .end method
 

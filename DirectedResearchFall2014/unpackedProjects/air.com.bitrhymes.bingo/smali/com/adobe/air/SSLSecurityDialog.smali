@@ -4,7 +4,7 @@
 
 
 # static fields
-.field public static final TAG:Ljava/lang/String; = null
+.field public static final TAG:Ljava/lang/String;
 
 .field private static final USER_ACTION_TRUST_ALWAYS:Ljava/lang/String; = "always"
 
@@ -72,7 +72,6 @@
 
 .method private SetUserAction(Ljava/lang/String;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 183
@@ -99,8 +98,6 @@
 
 .method static synthetic access$000(Lcom/adobe/air/SSLSecurityDialog;Ljava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 31
@@ -113,10 +110,6 @@
 # virtual methods
 .method public ShowSSLDialog(Ljava/lang/String;[BLandroid/net/http/SslCertificate;Z)V
     .locals 11
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 62
@@ -401,8 +394,8 @@
 
     invoke-interface {v0}, Ljava/util/concurrent/locks/Condition;->await()V
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 176
     :cond_2
@@ -456,8 +449,6 @@
 
 .method public show(Ljava/lang/String;Landroid/net/http/SslCertificate;)Ljava/lang/String;
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     .line 194
@@ -481,8 +472,6 @@
 
 .method public show(Ljava/lang/String;[B)Ljava/lang/String;
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     .line 51

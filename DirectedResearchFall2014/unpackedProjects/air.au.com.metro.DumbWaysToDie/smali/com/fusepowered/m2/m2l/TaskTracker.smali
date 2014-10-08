@@ -40,7 +40,7 @@
 
 .method public isMostCurrentTask(J)Z
     .locals 2
-    .parameter "taskId"
+    .param p1, "taskId"    # J
 
     .prologue
     .line 54
@@ -63,7 +63,7 @@
 
 .method public markTaskCompleted(J)V
     .locals 2
-    .parameter "taskId"
+    .param p1, "taskId"    # J
 
     .prologue
     .line 48

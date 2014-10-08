@@ -6,8 +6,8 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m1/android/MMWebViewClient$MMWebViewClientListener;Lcom/fusepowered/m1/android/HttpRedirection$RedirectionListenerImpl;)V
     .locals 0
-    .parameter "mmWebViewClientListener"
-    .parameter "redirListener"
+    .param p1, "mmWebViewClientListener"    # Lcom/fusepowered/m1/android/MMWebViewClient$MMWebViewClientListener;
+    .param p2, "redirListener"    # Lcom/fusepowered/m1/android/HttpRedirection$RedirectionListenerImpl;
 
     .prologue
     .line 9
@@ -21,7 +21,7 @@
 # virtual methods
 .method setMraidState(Lcom/fusepowered/m1/android/MMWebView;)V
     .locals 0
-    .parameter "mmWebView"
+    .param p1, "mmWebView"    # Lcom/fusepowered/m1/android/MMWebView;
 
     .prologue
     .line 15

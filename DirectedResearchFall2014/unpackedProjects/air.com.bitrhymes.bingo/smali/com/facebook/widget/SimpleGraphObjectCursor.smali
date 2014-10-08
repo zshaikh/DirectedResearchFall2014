@@ -43,7 +43,7 @@
     .locals 2
 
     .prologue
-    .local p0, this:Lcom/facebook/widget/SimpleGraphObjectCursor;,"Lcom/facebook/widget/SimpleGraphObjectCursor<TT;>;"
+    .local p0, "this":Lcom/facebook/widget/SimpleGraphObjectCursor;, "Lcom/facebook/widget/SimpleGraphObjectCursor<TT;>;"
     const/4 v1, 0x0
 
     .line 32
@@ -76,7 +76,6 @@
 
 .method constructor <init>(Lcom/facebook/widget/SimpleGraphObjectCursor;)V
     .locals 2
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -86,8 +85,8 @@
     .end annotation
 
     .prologue
-    .local p0, this:Lcom/facebook/widget/SimpleGraphObjectCursor;,"Lcom/facebook/widget/SimpleGraphObjectCursor<TT;>;"
-    .local p1, other:Lcom/facebook/widget/SimpleGraphObjectCursor;,"Lcom/facebook/widget/SimpleGraphObjectCursor<TT;>;"
+    .local p0, "this":Lcom/facebook/widget/SimpleGraphObjectCursor;, "Lcom/facebook/widget/SimpleGraphObjectCursor<TT;>;"
+    .local p1, "other":Lcom/facebook/widget/SimpleGraphObjectCursor;, "Lcom/facebook/widget/SimpleGraphObjectCursor<TT;>;"
     const/4 v1, 0x0
 
     .line 35
@@ -151,8 +150,7 @@
 # virtual methods
 .method public addGraphObjects(Ljava/util/Collection;Z)V
     .locals 1
-    .parameter
-    .parameter "fromCache"
+    .param p2, "fromCache"    # Z
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -163,8 +161,8 @@
 
     .prologue
     .line 46
-    .local p0, this:Lcom/facebook/widget/SimpleGraphObjectCursor;,"Lcom/facebook/widget/SimpleGraphObjectCursor<TT;>;"
-    .local p1, graphObjects:Ljava/util/Collection;,"Ljava/util/Collection<TT;>;"
+    .local p0, "this":Lcom/facebook/widget/SimpleGraphObjectCursor;, "Lcom/facebook/widget/SimpleGraphObjectCursor<TT;>;"
+    .local p1, "graphObjects":Ljava/util/Collection;, "Ljava/util/Collection<TT;>;"
     iget-object v0, p0, Lcom/facebook/widget/SimpleGraphObjectCursor;->graphObjects:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
@@ -185,7 +183,7 @@
 
     .prologue
     .line 60
-    .local p0, this:Lcom/facebook/widget/SimpleGraphObjectCursor;,"Lcom/facebook/widget/SimpleGraphObjectCursor<TT;>;"
+    .local p0, "this":Lcom/facebook/widget/SimpleGraphObjectCursor;, "Lcom/facebook/widget/SimpleGraphObjectCursor<TT;>;"
     iget-boolean v0, p0, Lcom/facebook/widget/SimpleGraphObjectCursor;->moreObjectsAvailable:Z
 
     return v0
@@ -196,7 +194,7 @@
 
     .prologue
     .line 154
-    .local p0, this:Lcom/facebook/widget/SimpleGraphObjectCursor;,"Lcom/facebook/widget/SimpleGraphObjectCursor<TT;>;"
+    .local p0, "this":Lcom/facebook/widget/SimpleGraphObjectCursor;, "Lcom/facebook/widget/SimpleGraphObjectCursor<TT;>;"
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/facebook/widget/SimpleGraphObjectCursor;->closed:Z
@@ -210,7 +208,7 @@
 
     .prologue
     .line 69
-    .local p0, this:Lcom/facebook/widget/SimpleGraphObjectCursor;,"Lcom/facebook/widget/SimpleGraphObjectCursor<TT;>;"
+    .local p0, "this":Lcom/facebook/widget/SimpleGraphObjectCursor;, "Lcom/facebook/widget/SimpleGraphObjectCursor<TT;>;"
     iget-object v0, p0, Lcom/facebook/widget/SimpleGraphObjectCursor;->graphObjects:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -230,7 +228,7 @@
 
     .prologue
     .line 143
-    .local p0, this:Lcom/facebook/widget/SimpleGraphObjectCursor;,"Lcom/facebook/widget/SimpleGraphObjectCursor<TT;>;"
+    .local p0, "this":Lcom/facebook/widget/SimpleGraphObjectCursor;, "Lcom/facebook/widget/SimpleGraphObjectCursor<TT;>;"
     iget v0, p0, Lcom/facebook/widget/SimpleGraphObjectCursor;->pos:I
 
     if-gez v0, :cond_0
@@ -275,7 +273,7 @@
 
     move-result-object p0
 
-    .end local p0           #this:Lcom/facebook/widget/SimpleGraphObjectCursor;,"Lcom/facebook/widget/SimpleGraphObjectCursor<TT;>;"
+    .end local p0    # "this":Lcom/facebook/widget/SimpleGraphObjectCursor;, "Lcom/facebook/widget/SimpleGraphObjectCursor<TT;>;"
     check-cast p0, Lcom/facebook/model/GraphObject;
 
     return-object p0
@@ -286,7 +284,7 @@
 
     .prologue
     .line 74
-    .local p0, this:Lcom/facebook/widget/SimpleGraphObjectCursor;,"Lcom/facebook/widget/SimpleGraphObjectCursor<TT;>;"
+    .local p0, "this":Lcom/facebook/widget/SimpleGraphObjectCursor;, "Lcom/facebook/widget/SimpleGraphObjectCursor<TT;>;"
     iget v0, p0, Lcom/facebook/widget/SimpleGraphObjectCursor;->pos:I
 
     return v0
@@ -297,13 +295,13 @@
 
     .prologue
     .line 137
-    .local p0, this:Lcom/facebook/widget/SimpleGraphObjectCursor;,"Lcom/facebook/widget/SimpleGraphObjectCursor<TT;>;"
+    .local p0, "this":Lcom/facebook/widget/SimpleGraphObjectCursor;, "Lcom/facebook/widget/SimpleGraphObjectCursor<TT;>;"
     invoke-virtual {p0}, Lcom/facebook/widget/SimpleGraphObjectCursor;->getCount()I
 
     move-result v0
 
     .line 138
-    .local v0, count:I
+    .local v0, "count":I
     if-eqz v0, :cond_0
 
     iget v1, p0, Lcom/facebook/widget/SimpleGraphObjectCursor;->pos:I
@@ -326,7 +324,7 @@
 
     .prologue
     .line 132
-    .local p0, this:Lcom/facebook/widget/SimpleGraphObjectCursor;,"Lcom/facebook/widget/SimpleGraphObjectCursor<TT;>;"
+    .local p0, "this":Lcom/facebook/widget/SimpleGraphObjectCursor;, "Lcom/facebook/widget/SimpleGraphObjectCursor<TT;>;"
     invoke-virtual {p0}, Lcom/facebook/widget/SimpleGraphObjectCursor;->getCount()I
 
     move-result v0
@@ -355,7 +353,7 @@
 
     .prologue
     .line 159
-    .local p0, this:Lcom/facebook/widget/SimpleGraphObjectCursor;,"Lcom/facebook/widget/SimpleGraphObjectCursor<TT;>;"
+    .local p0, "this":Lcom/facebook/widget/SimpleGraphObjectCursor;, "Lcom/facebook/widget/SimpleGraphObjectCursor<TT;>;"
     iget-boolean v0, p0, Lcom/facebook/widget/SimpleGraphObjectCursor;->closed:Z
 
     return v0
@@ -366,7 +364,7 @@
 
     .prologue
     .line 121
-    .local p0, this:Lcom/facebook/widget/SimpleGraphObjectCursor;,"Lcom/facebook/widget/SimpleGraphObjectCursor<TT;>;"
+    .local p0, "this":Lcom/facebook/widget/SimpleGraphObjectCursor;, "Lcom/facebook/widget/SimpleGraphObjectCursor<TT;>;"
     iget v0, p0, Lcom/facebook/widget/SimpleGraphObjectCursor;->pos:I
 
     if-nez v0, :cond_0
@@ -393,7 +391,7 @@
 
     .prologue
     .line 52
-    .local p0, this:Lcom/facebook/widget/SimpleGraphObjectCursor;,"Lcom/facebook/widget/SimpleGraphObjectCursor<TT;>;"
+    .local p0, "this":Lcom/facebook/widget/SimpleGraphObjectCursor;, "Lcom/facebook/widget/SimpleGraphObjectCursor<TT;>;"
     iget-boolean v0, p0, Lcom/facebook/widget/SimpleGraphObjectCursor;->fromCache:Z
 
     return v0
@@ -403,7 +401,7 @@
     .locals 4
 
     .prologue
-    .local p0, this:Lcom/facebook/widget/SimpleGraphObjectCursor;,"Lcom/facebook/widget/SimpleGraphObjectCursor<TT;>;"
+    .local p0, "this":Lcom/facebook/widget/SimpleGraphObjectCursor;, "Lcom/facebook/widget/SimpleGraphObjectCursor<TT;>;"
     const/4 v3, 0x1
 
     .line 126
@@ -412,7 +410,7 @@
     move-result v0
 
     .line 127
-    .local v0, count:I
+    .local v0, "count":I
     iget v1, p0, Lcom/facebook/widget/SimpleGraphObjectCursor;->pos:I
 
     sub-int v2, v0, v3
@@ -434,11 +432,11 @@
 
 .method public move(I)Z
     .locals 1
-    .parameter "offset"
+    .param p1, "offset"    # I
 
     .prologue
     .line 79
-    .local p0, this:Lcom/facebook/widget/SimpleGraphObjectCursor;,"Lcom/facebook/widget/SimpleGraphObjectCursor<TT;>;"
+    .local p0, "this":Lcom/facebook/widget/SimpleGraphObjectCursor;, "Lcom/facebook/widget/SimpleGraphObjectCursor<TT;>;"
     iget v0, p0, Lcom/facebook/widget/SimpleGraphObjectCursor;->pos:I
 
     add-int/2addr v0, p1
@@ -455,7 +453,7 @@
 
     .prologue
     .line 101
-    .local p0, this:Lcom/facebook/widget/SimpleGraphObjectCursor;,"Lcom/facebook/widget/SimpleGraphObjectCursor<TT;>;"
+    .local p0, "this":Lcom/facebook/widget/SimpleGraphObjectCursor;, "Lcom/facebook/widget/SimpleGraphObjectCursor<TT;>;"
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Lcom/facebook/widget/SimpleGraphObjectCursor;->moveToPosition(I)Z
@@ -470,7 +468,7 @@
 
     .prologue
     .line 106
-    .local p0, this:Lcom/facebook/widget/SimpleGraphObjectCursor;,"Lcom/facebook/widget/SimpleGraphObjectCursor<TT;>;"
+    .local p0, "this":Lcom/facebook/widget/SimpleGraphObjectCursor;, "Lcom/facebook/widget/SimpleGraphObjectCursor<TT;>;"
     invoke-virtual {p0}, Lcom/facebook/widget/SimpleGraphObjectCursor;->getCount()I
 
     move-result v0
@@ -491,7 +489,7 @@
 
     .prologue
     .line 111
-    .local p0, this:Lcom/facebook/widget/SimpleGraphObjectCursor;,"Lcom/facebook/widget/SimpleGraphObjectCursor<TT;>;"
+    .local p0, "this":Lcom/facebook/widget/SimpleGraphObjectCursor;, "Lcom/facebook/widget/SimpleGraphObjectCursor<TT;>;"
     iget v0, p0, Lcom/facebook/widget/SimpleGraphObjectCursor;->pos:I
 
     add-int/lit8 v0, v0, 0x1
@@ -505,10 +503,10 @@
 
 .method public moveToPosition(I)Z
     .locals 3
-    .parameter "position"
+    .param p1, "position"    # I
 
     .prologue
-    .local p0, this:Lcom/facebook/widget/SimpleGraphObjectCursor;,"Lcom/facebook/widget/SimpleGraphObjectCursor<TT;>;"
+    .local p0, "this":Lcom/facebook/widget/SimpleGraphObjectCursor;, "Lcom/facebook/widget/SimpleGraphObjectCursor<TT;>;"
     const/4 v2, 0x0
 
     .line 84
@@ -517,7 +515,7 @@
     move-result v0
 
     .line 85
-    .local v0, count:I
+    .local v0, "count":I
     if-lt p1, v0, :cond_0
 
     .line 86
@@ -558,7 +556,7 @@
 
     .prologue
     .line 116
-    .local p0, this:Lcom/facebook/widget/SimpleGraphObjectCursor;,"Lcom/facebook/widget/SimpleGraphObjectCursor<TT;>;"
+    .local p0, "this":Lcom/facebook/widget/SimpleGraphObjectCursor;, "Lcom/facebook/widget/SimpleGraphObjectCursor<TT;>;"
     iget v0, p0, Lcom/facebook/widget/SimpleGraphObjectCursor;->pos:I
 
     const/4 v1, 0x1
@@ -574,11 +572,11 @@
 
 .method public setFromCache(Z)V
     .locals 0
-    .parameter "fromCache"
+    .param p1, "fromCache"    # Z
 
     .prologue
     .line 56
-    .local p0, this:Lcom/facebook/widget/SimpleGraphObjectCursor;,"Lcom/facebook/widget/SimpleGraphObjectCursor<TT;>;"
+    .local p0, "this":Lcom/facebook/widget/SimpleGraphObjectCursor;, "Lcom/facebook/widget/SimpleGraphObjectCursor<TT;>;"
     iput-boolean p1, p0, Lcom/facebook/widget/SimpleGraphObjectCursor;->fromCache:Z
 
     .line 57
@@ -587,11 +585,11 @@
 
 .method public setMoreObjectsAvailable(Z)V
     .locals 0
-    .parameter "moreObjectsAvailable"
+    .param p1, "moreObjectsAvailable"    # Z
 
     .prologue
     .line 64
-    .local p0, this:Lcom/facebook/widget/SimpleGraphObjectCursor;,"Lcom/facebook/widget/SimpleGraphObjectCursor<TT;>;"
+    .local p0, "this":Lcom/facebook/widget/SimpleGraphObjectCursor;, "Lcom/facebook/widget/SimpleGraphObjectCursor<TT;>;"
     iput-boolean p1, p0, Lcom/facebook/widget/SimpleGraphObjectCursor;->moreObjectsAvailable:Z
 
     .line 65

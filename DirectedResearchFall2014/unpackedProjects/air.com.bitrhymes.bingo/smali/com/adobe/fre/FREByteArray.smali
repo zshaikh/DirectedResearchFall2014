@@ -35,7 +35,7 @@
 
 .method private constructor <init>(Lcom/adobe/fre/FREObject$CFREObjectWrapper;)V
     .locals 0
-    .parameter "obj"
+    .param p1, "obj"    # Lcom/adobe/fre/FREObject$CFREObjectWrapper;
 
     .prologue
     .line 24

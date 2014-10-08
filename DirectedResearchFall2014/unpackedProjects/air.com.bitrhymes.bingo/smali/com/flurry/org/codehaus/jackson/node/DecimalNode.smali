@@ -10,7 +10,7 @@
 # direct methods
 .method public constructor <init>(Ljava/math/BigDecimal;)V
     .locals 0
-    .parameter "v"
+    .param p1, "v"    # Ljava/math/BigDecimal;
 
     .prologue
     .line 25
@@ -23,7 +23,7 @@
 
 .method public static valueOf(Ljava/math/BigDecimal;)Lcom/flurry/org/codehaus/jackson/node/DecimalNode;
     .locals 1
-    .parameter "d"
+    .param p0, "d"    # Ljava/math/BigDecimal;
 
     .prologue
     .line 27
@@ -62,7 +62,7 @@
 
 .method public equals(Ljava/lang/Object;)Z
     .locals 3
-    .parameter "o"
+    .param p1, "o"    # Ljava/lang/Object;
 
     .prologue
     const/4 v2, 0x0
@@ -73,12 +73,12 @@
     const/4 v0, 0x1
 
     .line 91
-    .end local p1
+    .end local p1    # "o":Ljava/lang/Object;
     :goto_0
     return v0
 
     .line 87
-    .restart local p1
+    .restart local p1    # "o":Ljava/lang/Object;
     :cond_0
     if-nez p1, :cond_1
 
@@ -107,7 +107,7 @@
     :cond_2
     check-cast p1, Lcom/flurry/org/codehaus/jackson/node/DecimalNode;
 
-    .end local p1
+    .end local p1    # "o":Ljava/lang/Object;
     iget-object v0, p1, Lcom/flurry/org/codehaus/jackson/node/DecimalNode;->_value:Ljava/math/BigDecimal;
 
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/node/DecimalNode;->_value:Ljava/math/BigDecimal;
@@ -241,8 +241,8 @@
 
 .method public final serialize(Lcom/flurry/org/codehaus/jackson/JsonGenerator;Lcom/flurry/org/codehaus/jackson/map/SerializerProvider;)V
     .locals 1
-    .parameter "jg"
-    .parameter "provider"
+    .param p1, "jg"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator;
+    .param p2, "provider"    # Lcom/flurry/org/codehaus/jackson/map/SerializerProvider;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,

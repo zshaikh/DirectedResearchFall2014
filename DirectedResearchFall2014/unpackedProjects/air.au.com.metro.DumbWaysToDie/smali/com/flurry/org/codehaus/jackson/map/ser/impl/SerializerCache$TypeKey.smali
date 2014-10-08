@@ -34,8 +34,8 @@
 # direct methods
 .method public constructor <init>(Lcom/flurry/org/codehaus/jackson/type/JavaType;Z)V
     .locals 1
-    .parameter "key"
-    .parameter "typed"
+    .param p1, "key"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .param p2, "typed"    # Z
 
     .prologue
     .line 230
@@ -65,8 +65,7 @@
 
 .method public constructor <init>(Ljava/lang/Class;Z)V
     .locals 1
-    .parameter
-    .parameter "typed"
+    .param p2, "typed"    # Z
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -77,7 +76,7 @@
 
     .prologue
     .line 223
-    .local p1, key:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p1, "key":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 224
@@ -104,8 +103,8 @@
 
 .method private static final hash(Lcom/flurry/org/codehaus/jackson/type/JavaType;Z)I
     .locals 3
-    .parameter "type"
-    .parameter "typed"
+    .param p0, "type"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .param p1, "typed"    # Z
 
     .prologue
     .line 246
@@ -118,7 +117,7 @@
     sub-int v0, v1, v2
 
     .line 247
-    .local v0, hash:I
+    .local v0, "hash":I
     if-eqz p1, :cond_0
 
     .line 248
@@ -131,8 +130,7 @@
 
 .method private static final hash(Ljava/lang/Class;Z)I
     .locals 2
-    .parameter
-    .parameter "typed"
+    .param p1, "typed"    # Z
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -143,7 +141,7 @@
 
     .prologue
     .line 238
-    .local p0, cls:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p0, "cls":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-virtual {p0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object v1
@@ -153,7 +151,7 @@
     move-result v0
 
     .line 239
-    .local v0, hash:I
+    .local v0, "hash":I
     if-eqz p1, :cond_0
 
     .line 240
@@ -168,7 +166,7 @@
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
     .locals 6
-    .parameter "o"
+    .param p1, "o"    # Ljava/lang/Object;
 
     .prologue
     const/4 v5, 0x1
@@ -193,7 +191,7 @@
     move-object v1, v0
 
     .line 295
-    .local v1, other:Lcom/flurry/org/codehaus/jackson/map/ser/impl/SerializerCache$TypeKey;
+    .local v1, "other":Lcom/flurry/org/codehaus/jackson/map/ser/impl/SerializerCache$TypeKey;
     iget-boolean v2, v1, Lcom/flurry/org/codehaus/jackson/map/ser/impl/SerializerCache$TypeKey;->_isTyped:Z
 
     iget-boolean v3, p0, Lcom/flurry/org/codehaus/jackson/map/ser/impl/SerializerCache$TypeKey;->_isTyped:Z
@@ -252,7 +250,7 @@
 
 .method public resetTyped(Lcom/flurry/org/codehaus/jackson/type/JavaType;)V
     .locals 2
-    .parameter "type"
+    .param p1, "type"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
 
     .prologue
     const/4 v1, 0x1
@@ -281,7 +279,6 @@
 
 .method public resetTyped(Ljava/lang/Class;)V
     .locals 2
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -291,7 +288,7 @@
     .end annotation
 
     .prologue
-    .local p1, cls:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p1, "cls":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const/4 v1, 0x1
 
     .line 254
@@ -318,7 +315,7 @@
 
 .method public resetUntyped(Lcom/flurry/org/codehaus/jackson/type/JavaType;)V
     .locals 2
-    .parameter "type"
+    .param p1, "type"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
 
     .prologue
     const/4 v1, 0x0
@@ -347,7 +344,6 @@
 
 .method public resetUntyped(Ljava/lang/Class;)V
     .locals 2
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -357,7 +353,7 @@
     .end annotation
 
     .prologue
-    .local p1, cls:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p1, "cls":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const/4 v1, 0x0
 
     .line 261

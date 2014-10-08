@@ -10,7 +10,7 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m2/m2l/MraidView$PlacementType;)V
     .locals 0
-    .parameter "placementType"
+    .param p1, "placementType"    # Lcom/fusepowered/m2/m2l/MraidView$PlacementType;
 
     .prologue
     .line 54
@@ -25,7 +25,7 @@
 
 .method public static createWithType(Lcom/fusepowered/m2/m2l/MraidView$PlacementType;)Lcom/fusepowered/m2/m2l/MraidPlacementTypeProperty;
     .locals 1
-    .parameter "placementType"
+    .param p0, "placementType"    # Lcom/fusepowered/m2/m2l/MraidView$PlacementType;
 
     .prologue
     .line 60

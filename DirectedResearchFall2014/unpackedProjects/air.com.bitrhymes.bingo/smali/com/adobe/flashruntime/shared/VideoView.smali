@@ -30,7 +30,6 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 3
-    .parameter
 
     .prologue
     const/16 v2, 0x10
@@ -109,7 +108,6 @@
 
 .method static synthetic access$000(Lcom/adobe/flashruntime/shared/VideoView;)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 44
@@ -120,7 +118,6 @@
 
 .method static synthetic access$100(Lcom/adobe/flashruntime/shared/VideoView;)I
     .locals 1
-    .parameter
 
     .prologue
     .line 44
@@ -131,7 +128,6 @@
 
 .method static synthetic access$200(Lcom/adobe/flashruntime/shared/VideoView;)I
     .locals 1
-    .parameter
 
     .prologue
     .line 44
@@ -142,7 +138,6 @@
 
 .method static synthetic access$300(Lcom/adobe/flashruntime/shared/VideoView;)I
     .locals 1
-    .parameter
 
     .prologue
     .line 44
@@ -153,7 +148,6 @@
 
 .method static synthetic access$400(Lcom/adobe/flashruntime/shared/VideoView;)I
     .locals 1
-    .parameter
 
     .prologue
     .line 44
@@ -164,7 +158,6 @@
 
 .method static synthetic access$500(Lcom/adobe/flashruntime/shared/VideoView;)Landroid/view/Surface;
     .locals 1
-    .parameter
 
     .prologue
     .line 44
@@ -175,8 +168,6 @@
 
 .method static synthetic access$502(Lcom/adobe/flashruntime/shared/VideoView;Landroid/view/Surface;)Landroid/view/Surface;
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 44
@@ -187,8 +178,6 @@
 
 .method static synthetic access$602(Lcom/adobe/flashruntime/shared/VideoView;Z)Z
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 44
@@ -275,7 +264,6 @@
 
 .method public setFPInstance(J)V
     .locals 4
-    .parameter
 
     .prologue
     .line 114
@@ -325,10 +313,6 @@
 
 .method public setPlanePosition(IIII)V
     .locals 2
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 127

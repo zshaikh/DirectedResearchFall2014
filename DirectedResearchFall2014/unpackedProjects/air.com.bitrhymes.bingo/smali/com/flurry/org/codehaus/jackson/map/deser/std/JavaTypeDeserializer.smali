@@ -31,8 +31,8 @@
 # virtual methods
 .method public deserialize(Lcom/flurry/org/codehaus/jackson/JsonParser;Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .locals 3
-    .parameter "jp"
-    .parameter "ctxt"
+    .param p1, "jp"    # Lcom/flurry/org/codehaus/jackson/JsonParser;
+    .param p2, "ctxt"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -47,7 +47,7 @@
     move-result-object v0
 
     .line 25
-    .local v0, curr:Lcom/flurry/org/codehaus/jackson/JsonToken;
+    .local v0, "curr":Lcom/flurry/org/codehaus/jackson/JsonToken;
     sget-object v2, Lcom/flurry/org/codehaus/jackson/JsonToken;->VALUE_STRING:Lcom/flurry/org/codehaus/jackson/JsonToken;
 
     if-ne v0, v2, :cond_1
@@ -62,7 +62,7 @@
     move-result-object v1
 
     .line 27
-    .local v1, str:Ljava/lang/String;
+    .local v1, "str":Ljava/lang/String;
     invoke-virtual {v1}, Ljava/lang/String;->length()I
 
     move-result v2
@@ -74,19 +74,19 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/flurry/org/codehaus/jackson/map/deser/std/JavaTypeDeserializer;
     check-cast p0, Lcom/flurry/org/codehaus/jackson/type/JavaType;
 
     move-object v2, p0
 
     .line 34
-    .end local v1           #str:Ljava/lang/String;
+    .end local v1    # "str":Ljava/lang/String;
     :goto_0
     return-object v2
 
     .line 30
-    .restart local v1       #str:Ljava/lang/String;
-    .restart local p0
+    .restart local v1    # "str":Ljava/lang/String;
+    .restart local p0    # "this":Lcom/flurry/org/codehaus/jackson/map/deser/std/JavaTypeDeserializer;
     :cond_0
     invoke-virtual {p2}, Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;->getTypeFactory()Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;
 
@@ -99,7 +99,7 @@
     goto :goto_0
 
     .line 33
-    .end local v1           #str:Ljava/lang/String;
+    .end local v1    # "str":Ljava/lang/String;
     :cond_1
     sget-object v2, Lcom/flurry/org/codehaus/jackson/JsonToken;->VALUE_EMBEDDED_OBJECT:Lcom/flurry/org/codehaus/jackson/JsonToken;
 
@@ -110,7 +110,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/flurry/org/codehaus/jackson/map/deser/std/JavaTypeDeserializer;
     check-cast p0, Lcom/flurry/org/codehaus/jackson/type/JavaType;
 
     move-object v2, p0
@@ -118,7 +118,7 @@
     goto :goto_0
 
     .line 36
-    .restart local p0
+    .restart local p0    # "this":Lcom/flurry/org/codehaus/jackson/map/deser/std/JavaTypeDeserializer;
     :cond_2
     iget-object v2, p0, Lcom/flurry/org/codehaus/jackson/map/deser/std/JavaTypeDeserializer;->_valueClass:Ljava/lang/Class;
 
@@ -131,8 +131,8 @@
 
 .method public bridge synthetic deserialize(Lcom/flurry/org/codehaus/jackson/JsonParser;Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;)Ljava/lang/Object;
     .locals 1
-    .parameter "x0"
-    .parameter "x1"
+    .param p1, "x0"    # Lcom/flurry/org/codehaus/jackson/JsonParser;
+    .param p2, "x1"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,

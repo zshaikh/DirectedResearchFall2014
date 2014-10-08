@@ -4,8 +4,8 @@
 
 # interfaces
 .implements Landroid/hardware/input/InputManager$InputDeviceListener;
-.implements Lcom/adobe/air/AndroidActivityWrapper$StateChangeCallback;
 .implements Lcom/adobe/air/AndroidActivityWrapper$InputEventCallback;
+.implements Lcom/adobe/air/AndroidActivityWrapper$StateChangeCallback;
 
 
 # static fields
@@ -48,7 +48,6 @@
 
 .method private constructor <init>(Landroid/content/Context;)V
     .locals 2
-    .parameter
 
     .prologue
     const/4 v0, 0x0
@@ -125,7 +124,6 @@
 
 .method public static GetAndroidInputManager(Landroid/content/Context;)Lcom/adobe/air/AndroidInputManager;
     .locals 1
-    .parameter
 
     .prologue
     .line 69
@@ -329,7 +327,6 @@
 # virtual methods
 .method public getInputDevice(I)Lcom/adobe/air/AndroidInputDevice;
     .locals 1
-    .parameter
 
     .prologue
     .line 95
@@ -346,7 +343,6 @@
 
 .method public listenForInputDevice(Z)V
     .locals 2
-    .parameter
 
     .prologue
     .line 108
@@ -416,7 +412,6 @@
 
 .method public onActivityStateChanged(Lcom/adobe/air/AndroidActivityWrapper$ActivityState;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 239
@@ -450,7 +445,6 @@
 
 .method public onConfigurationChanged(Landroid/content/res/Configuration;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 252
@@ -459,7 +453,6 @@
 
 .method public onGenericMotionEvent(Landroid/view/MotionEvent;)Z
     .locals 2
-    .parameter
 
     .prologue
     .line 224
@@ -512,7 +505,6 @@
 
 .method public onInputDeviceAdded(I)V
     .locals 4
-    .parameter
 
     .prologue
     .line 168
@@ -583,7 +575,6 @@
 
 .method public onInputDeviceChanged(I)V
     .locals 0
-    .parameter
 
     .prologue
     .line 203
@@ -598,7 +589,6 @@
 
 .method public onInputDeviceRemoved(I)V
     .locals 3
-    .parameter
 
     .prologue
     .line 187
@@ -634,7 +624,6 @@
 
 .method public onKeyEvent(Landroid/view/KeyEvent;)Z
     .locals 2
-    .parameter
 
     .prologue
     .line 211
@@ -670,7 +659,6 @@
 
 .method public setInternalReference(J)V
     .locals 0
-    .parameter
 
     .prologue
     .line 100

@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m2/m2l/MraidBanner;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1
@@ -40,14 +39,14 @@
 # virtual methods
 .method public onClose(Lcom/fusepowered/m2/m2l/MraidView;Lcom/fusepowered/m2/m2l/MraidView$ViewState;)V
     .locals 1
-    .parameter "view"
-    .parameter "newViewState"
+    .param p1, "view"    # Lcom/fusepowered/m2/m2l/MraidView;
+    .param p2, "newViewState"    # Lcom/fusepowered/m2/m2l/MraidView$ViewState;
 
     .prologue
     .line 112
     iget-object v0, p0, Lcom/fusepowered/m2/m2l/MraidBanner$1;->this$0:Lcom/fusepowered/m2/m2l/MraidBanner;
 
-    #calls: Lcom/fusepowered/m2/m2l/MraidBanner;->onClose()V
+    # invokes: Lcom/fusepowered/m2/m2l/MraidBanner;->onClose()V
     invoke-static {v0}, Lcom/fusepowered/m2/m2l/MraidBanner;->access$3(Lcom/fusepowered/m2/m2l/MraidBanner;)V
 
     .line 113
@@ -56,13 +55,13 @@
 
 .method public onExpand(Lcom/fusepowered/m2/m2l/MraidView;)V
     .locals 1
-    .parameter "view"
+    .param p1, "view"    # Lcom/fusepowered/m2/m2l/MraidView;
 
     .prologue
     .line 109
     iget-object v0, p0, Lcom/fusepowered/m2/m2l/MraidBanner$1;->this$0:Lcom/fusepowered/m2/m2l/MraidBanner;
 
-    #calls: Lcom/fusepowered/m2/m2l/MraidBanner;->onExpand()V
+    # invokes: Lcom/fusepowered/m2/m2l/MraidBanner;->onExpand()V
     invoke-static {v0}, Lcom/fusepowered/m2/m2l/MraidBanner;->access$2(Lcom/fusepowered/m2/m2l/MraidBanner;)V
 
     .line 110
@@ -71,13 +70,13 @@
 
 .method public onFailure(Lcom/fusepowered/m2/m2l/MraidView;)V
     .locals 1
-    .parameter "view"
+    .param p1, "view"    # Lcom/fusepowered/m2/m2l/MraidView;
 
     .prologue
     .line 106
     iget-object v0, p0, Lcom/fusepowered/m2/m2l/MraidBanner$1;->this$0:Lcom/fusepowered/m2/m2l/MraidBanner;
 
-    #calls: Lcom/fusepowered/m2/m2l/MraidBanner;->onFail()V
+    # invokes: Lcom/fusepowered/m2/m2l/MraidBanner;->onFail()V
     invoke-static {v0}, Lcom/fusepowered/m2/m2l/MraidBanner;->access$1(Lcom/fusepowered/m2/m2l/MraidBanner;)V
 
     .line 107
@@ -86,13 +85,13 @@
 
 .method public onReady(Lcom/fusepowered/m2/m2l/MraidView;)V
     .locals 1
-    .parameter "view"
+    .param p1, "view"    # Lcom/fusepowered/m2/m2l/MraidView;
 
     .prologue
     .line 103
     iget-object v0, p0, Lcom/fusepowered/m2/m2l/MraidBanner$1;->this$0:Lcom/fusepowered/m2/m2l/MraidBanner;
 
-    #calls: Lcom/fusepowered/m2/m2l/MraidBanner;->onReady()V
+    # invokes: Lcom/fusepowered/m2/m2l/MraidBanner;->onReady()V
     invoke-static {v0}, Lcom/fusepowered/m2/m2l/MraidBanner;->access$0(Lcom/fusepowered/m2/m2l/MraidBanner;)V
 
     .line 104

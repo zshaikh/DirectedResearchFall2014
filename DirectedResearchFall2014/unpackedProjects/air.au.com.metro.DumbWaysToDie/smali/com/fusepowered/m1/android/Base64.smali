@@ -40,12 +40,12 @@
     .line 80
     const/4 v0, 0x0
 
-    .local v0, i:I
+    .local v0, "i":I
     sget-object v2, Lcom/fusepowered/m1/android/Base64;->CA:[C
 
     array-length v1, v2
 
-    .local v1, iS:I
+    .local v1, "iS":I
     :goto_0
     if-ge v0, v1, :cond_0
 
@@ -89,7 +89,7 @@
 
 .method public static final decode(Ljava/lang/String;)[B
     .locals 14
-    .parameter "str"
+    .param p0, "str"    # Ljava/lang/String;
 
     .prologue
     const/4 v13, 0x0
@@ -104,7 +104,7 @@
     move v10, v12
 
     .line 467
-    .local v10, sLen:I
+    .local v10, "sLen":I
     :goto_0
     if-nez v10, :cond_1
 
@@ -115,7 +115,7 @@
     :goto_1
     return-object v12
 
-    .end local v10           #sLen:I
+    .end local v10    # "sLen":I
     :cond_0
     move v10, v13
 
@@ -123,15 +123,15 @@
     goto :goto_0
 
     .line 472
-    .restart local v10       #sLen:I
+    .restart local v10    # "sLen":I
     :cond_1
     const/4 v11, 0x0
 
     .line 473
-    .local v11, sepCnt:I
+    .local v11, "sepCnt":I
     const/4 v4, 0x0
 
-    .local v4, i:I
+    .local v4, "i":I
     :goto_2
     if-ge v4, v10, :cond_3
 
@@ -173,7 +173,7 @@
     const/4 v7, 0x0
 
     .line 483
-    .local v7, pad:I
+    .local v7, "pad":I
     move v4, v10
 
     :cond_5
@@ -219,21 +219,21 @@
     sub-int v6, v12, v7
 
     .line 489
-    .local v6, len:I
+    .local v6, "len":I
     new-array v3, v6, [B
 
     .line 491
-    .local v3, dArr:[B
+    .local v3, "dArr":[B
     const/4 v8, 0x0
 
-    .local v8, s:I
+    .local v8, "s":I
     const/4 v1, 0x0
 
-    .local v1, d:I
+    .local v1, "d":I
     move v2, v1
 
-    .end local v1           #d:I
-    .local v2, d:I
+    .end local v1    # "d":I
+    .local v2, "d":I
     :goto_4
     if-ge v2, v6, :cond_a
 
@@ -243,11 +243,11 @@
     .line 494
     const/4 v5, 0x0
 
-    .local v5, j:I
+    .local v5, "j":I
     move v9, v8
 
-    .end local v8           #s:I
-    .local v9, s:I
+    .end local v8    # "s":I
+    .local v9, "s":I
     :goto_5
     const/4 v12, 0x4
 
@@ -258,8 +258,8 @@
 
     add-int/lit8 v8, v9, 0x1
 
-    .end local v9           #s:I
-    .restart local v8       #s:I
+    .end local v9    # "s":I
+    .restart local v8    # "s":I
     invoke-virtual {p0, v9}, Ljava/lang/String;->charAt(I)C
 
     move-result v13
@@ -267,7 +267,7 @@
     aget v0, v12, v13
 
     .line 496
-    .local v0, c:I
+    .local v0, "c":I
     if-ltz v0, :cond_7
 
     .line 497
@@ -287,27 +287,27 @@
 
     move v9, v8
 
-    .end local v8           #s:I
-    .restart local v9       #s:I
+    .end local v8    # "s":I
+    .restart local v9    # "s":I
     goto :goto_5
 
     .line 499
-    .end local v9           #s:I
-    .restart local v8       #s:I
+    .end local v9    # "s":I
+    .restart local v8    # "s":I
     :cond_7
     add-int/lit8 v5, v5, -0x1
 
     goto :goto_6
 
     .line 502
-    .end local v0           #c:I
-    .end local v8           #s:I
-    .restart local v9       #s:I
+    .end local v0    # "c":I
+    .end local v8    # "s":I
+    .restart local v9    # "s":I
     :cond_8
     add-int/lit8 v1, v2, 0x1
 
-    .end local v2           #d:I
-    .restart local v1       #d:I
+    .end local v2    # "d":I
+    .restart local v1    # "d":I
     shr-int/lit8 v12, v4, 0x10
 
     int-to-byte v12, v12
@@ -320,8 +320,8 @@
     .line 504
     add-int/lit8 v2, v1, 0x1
 
-    .end local v1           #d:I
-    .restart local v2       #d:I
+    .end local v1    # "d":I
+    .restart local v2    # "d":I
     shr-int/lit8 v12, v4, 0x8
 
     int-to-byte v12, v12
@@ -334,8 +334,8 @@
     .line 506
     add-int/lit8 v1, v2, 0x1
 
-    .end local v2           #d:I
-    .restart local v1       #d:I
+    .end local v2    # "d":I
+    .restart local v1    # "d":I
     int-to-byte v12, v4
 
     aput-byte v12, v3, v2
@@ -344,50 +344,50 @@
     :goto_7
     move v2, v1
 
-    .end local v1           #d:I
-    .restart local v2       #d:I
+    .end local v1    # "d":I
+    .restart local v2    # "d":I
     move v8, v9
 
     .line 508
-    .end local v9           #s:I
-    .restart local v8       #s:I
+    .end local v9    # "s":I
+    .restart local v8    # "s":I
     goto :goto_4
 
-    .end local v5           #j:I
+    .end local v5    # "j":I
     :cond_a
     move-object v12, v3
 
     .line 509
     goto/16 :goto_1
 
-    .end local v8           #s:I
-    .restart local v5       #j:I
-    .restart local v9       #s:I
+    .end local v8    # "s":I
+    .restart local v5    # "j":I
+    .restart local v9    # "s":I
     :cond_b
     move v1, v2
 
-    .end local v2           #d:I
-    .restart local v1       #d:I
+    .end local v2    # "d":I
+    .restart local v1    # "d":I
     goto :goto_7
 .end method
 
 .method public static final decode([B)[B
     .locals 14
-    .parameter "sArr"
+    .param p0, "sArr"    # [B
 
     .prologue
     .line 327
     array-length v10, p0
 
     .line 331
-    .local v10, sLen:I
+    .local v10, "sLen":I
     const/4 v11, 0x0
 
     .line 332
-    .local v11, sepCnt:I
+    .local v11, "sepCnt":I
     const/4 v4, 0x0
 
-    .local v4, i:I
+    .local v4, "i":I
     :goto_0
     if-ge v4, v10, :cond_1
 
@@ -431,7 +431,7 @@
     const/4 v7, 0x0
 
     .line 341
-    .local v7, pad:I
+    .local v7, "pad":I
     move v4, v10
 
     :cond_3
@@ -475,21 +475,21 @@
     sub-int v6, v12, v7
 
     .line 347
-    .local v6, len:I
+    .local v6, "len":I
     new-array v3, v6, [B
 
     .line 349
-    .local v3, dArr:[B
+    .local v3, "dArr":[B
     const/4 v8, 0x0
 
-    .local v8, s:I
+    .local v8, "s":I
     const/4 v1, 0x0
 
-    .local v1, d:I
+    .local v1, "d":I
     move v2, v1
 
-    .end local v1           #d:I
-    .local v2, d:I
+    .end local v1    # "d":I
+    .local v2, "d":I
     :goto_3
     if-ge v2, v6, :cond_8
 
@@ -499,11 +499,11 @@
     .line 352
     const/4 v5, 0x0
 
-    .local v5, j:I
+    .local v5, "j":I
     move v9, v8
 
-    .end local v8           #s:I
-    .local v9, s:I
+    .end local v8    # "s":I
+    .local v9, "s":I
     :goto_4
     const/4 v12, 0x4
 
@@ -514,8 +514,8 @@
 
     add-int/lit8 v8, v9, 0x1
 
-    .end local v9           #s:I
-    .restart local v8       #s:I
+    .end local v9    # "s":I
+    .restart local v8    # "s":I
     aget-byte v13, p0, v9
 
     and-int/lit16 v13, v13, 0xff
@@ -523,7 +523,7 @@
     aget v0, v12, v13
 
     .line 354
-    .local v0, c:I
+    .local v0, "c":I
     if-ltz v0, :cond_5
 
     .line 355
@@ -543,27 +543,27 @@
 
     move v9, v8
 
-    .end local v8           #s:I
-    .restart local v9       #s:I
+    .end local v8    # "s":I
+    .restart local v9    # "s":I
     goto :goto_4
 
     .line 357
-    .end local v9           #s:I
-    .restart local v8       #s:I
+    .end local v9    # "s":I
+    .restart local v8    # "s":I
     :cond_5
     add-int/lit8 v5, v5, -0x1
 
     goto :goto_5
 
     .line 361
-    .end local v0           #c:I
-    .end local v8           #s:I
-    .restart local v9       #s:I
+    .end local v0    # "c":I
+    .end local v8    # "s":I
+    .restart local v9    # "s":I
     :cond_6
     add-int/lit8 v1, v2, 0x1
 
-    .end local v2           #d:I
-    .restart local v1       #d:I
+    .end local v2    # "d":I
+    .restart local v1    # "d":I
     shr-int/lit8 v12, v4, 0x10
 
     int-to-byte v12, v12
@@ -576,8 +576,8 @@
     .line 363
     add-int/lit8 v2, v1, 0x1
 
-    .end local v1           #d:I
-    .restart local v2       #d:I
+    .end local v1    # "d":I
+    .restart local v2    # "d":I
     shr-int/lit8 v12, v4, 0x8
 
     int-to-byte v12, v12
@@ -590,8 +590,8 @@
     .line 365
     add-int/lit8 v1, v2, 0x1
 
-    .end local v2           #d:I
-    .restart local v1       #d:I
+    .end local v2    # "d":I
+    .restart local v1    # "d":I
     int-to-byte v12, v4
 
     aput-byte v12, v3, v2
@@ -600,37 +600,37 @@
     :goto_6
     move v2, v1
 
-    .end local v1           #d:I
-    .restart local v2       #d:I
+    .end local v1    # "d":I
+    .restart local v2    # "d":I
     move v8, v9
 
     .line 367
-    .end local v9           #s:I
-    .restart local v8       #s:I
+    .end local v9    # "s":I
+    .restart local v8    # "s":I
     goto :goto_3
 
-    .end local v5           #j:I
+    .end local v5    # "j":I
     :cond_8
     move-object v12, v3
 
     .line 369
     goto :goto_1
 
-    .end local v8           #s:I
-    .restart local v5       #j:I
-    .restart local v9       #s:I
+    .end local v8    # "s":I
+    .restart local v5    # "j":I
+    .restart local v9    # "s":I
     :cond_9
     move v1, v2
 
-    .end local v2           #d:I
-    .restart local v1       #d:I
+    .end local v2    # "d":I
+    .restart local v1    # "d":I
     goto :goto_6
 .end method
 
 .method public static final encodeToChar([BZ)[C
     .locals 11
-    .parameter "sArr"
-    .parameter "lineSep"
+    .param p0, "sArr"    # [B
+    .param p1, "lineSep"    # Z
 
     .prologue
     .line 99
@@ -641,7 +641,7 @@
     move v8, v0
 
     .line 100
-    .local v8, sLen:I
+    .local v8, "sLen":I
     :goto_0
     if-nez v8, :cond_1
 
@@ -651,15 +651,15 @@
     new-array p0, p0, [C
 
     .line 139
-    .end local p0
-    .end local p1
+    .end local p0    # "sArr":[B
+    .end local p1    # "lineSep":Z
     :goto_1
     return-object p0
 
     .line 99
-    .end local v8           #sLen:I
-    .restart local p0
-    .restart local p1
+    .end local v8    # "sLen":I
+    .restart local p0    # "sArr":[B
+    .restart local p1    # "lineSep":Z
     :cond_0
     const/4 v0, 0x0
 
@@ -668,14 +668,14 @@
     goto :goto_0
 
     .line 103
-    .restart local v8       #sLen:I
+    .restart local v8    # "sLen":I
     :cond_1
     div-int/lit8 v0, v8, 0x3
 
     mul-int/lit8 v5, v0, 0x3
 
     .line 104
-    .local v5, eLen:I
+    .local v5, "eLen":I
     const/4 v0, 0x1
 
     sub-int v0, v8, v0
@@ -687,7 +687,7 @@
     shl-int/lit8 v0, v0, 0x2
 
     .line 105
-    .local v0, cCnt:I
+    .local v0, "cCnt":I
     if-eqz p1, :cond_2
 
     const/4 v1, 0x1
@@ -702,36 +702,36 @@
     add-int v4, v0, v1
 
     .line 106
-    .local v4, dLen:I
+    .local v4, "dLen":I
     new-array v3, v4, [C
 
     .line 109
-    .local v3, dArr:[C
+    .local v3, "dArr":[C
     const/4 v2, 0x0
 
-    .local v2, s:I
+    .local v2, "s":I
     const/4 v1, 0x0
 
-    .local v1, d:I
+    .local v1, "d":I
     const/4 v0, 0x0
 
-    .local v0, cc:I
+    .local v0, "cc":I
     move v6, v2
 
-    .end local v2           #s:I
-    .local v6, s:I
+    .end local v2    # "s":I
+    .local v6, "s":I
     move v2, v1
 
-    .end local v1           #d:I
-    .local v2, d:I
+    .end local v1    # "d":I
+    .local v2, "d":I
     :goto_3
     if-ge v6, v5, :cond_3
 
     .line 111
     add-int/lit8 v1, v6, 0x1
 
-    .end local v6           #s:I
-    .local v1, s:I
+    .end local v6    # "s":I
+    .local v1, "s":I
     aget-byte v6, p0, v6
 
     and-int/lit16 v6, v6, 0xff
@@ -740,8 +740,8 @@
 
     add-int/lit8 v6, v1, 0x1
 
-    .end local v1           #s:I
-    .restart local v6       #s:I
+    .end local v1    # "s":I
+    .restart local v6    # "s":I
     aget-byte v1, p0, v1
 
     and-int/lit16 v1, v1, 0xff
@@ -752,8 +752,8 @@
 
     add-int/lit8 v7, v6, 0x1
 
-    .end local v6           #s:I
-    .local v7, s:I
+    .end local v6    # "s":I
+    .local v7, "s":I
     aget-byte v6, p0, v6
 
     and-int/lit16 v6, v6, 0xff
@@ -761,11 +761,11 @@
     or-int/2addr v6, v1
 
     .line 114
-    .local v6, i:I
+    .local v6, "i":I
     add-int/lit8 v1, v2, 0x1
 
-    .end local v2           #d:I
-    .local v1, d:I
+    .end local v2    # "d":I
+    .local v1, "d":I
     sget-object v9, Lcom/fusepowered/m1/android/Base64;->CA:[C
 
     ushr-int/lit8 v10, v6, 0x12
@@ -779,8 +779,8 @@
     .line 115
     add-int/lit8 v2, v1, 0x1
 
-    .end local v1           #d:I
-    .restart local v2       #d:I
+    .end local v1    # "d":I
+    .restart local v2    # "d":I
     sget-object v9, Lcom/fusepowered/m1/android/Base64;->CA:[C
 
     ushr-int/lit8 v10, v6, 0xc
@@ -794,8 +794,8 @@
     .line 116
     add-int/lit8 v1, v2, 0x1
 
-    .end local v2           #d:I
-    .restart local v1       #d:I
+    .end local v2    # "d":I
+    .restart local v1    # "d":I
     sget-object v9, Lcom/fusepowered/m1/android/Base64;->CA:[C
 
     ushr-int/lit8 v10, v6, 0x6
@@ -809,15 +809,15 @@
     .line 117
     add-int/lit8 v2, v1, 0x1
 
-    .end local v1           #d:I
-    .restart local v2       #d:I
+    .end local v1    # "d":I
+    .restart local v2    # "d":I
     sget-object v9, Lcom/fusepowered/m1/android/Base64;->CA:[C
 
     and-int/lit8 v6, v6, 0x3f
 
     aget-char v6, v9, v6
 
-    .end local v6           #i:I
+    .end local v6    # "i":I
     aput-char v6, v3, v1
 
     .line 120
@@ -838,8 +838,8 @@
     .line 121
     add-int/lit8 v0, v2, 0x1
 
-    .end local v2           #d:I
-    .local v0, d:I
+    .end local v2    # "d":I
+    .local v0, "d":I
     const/16 v1, 0xd
 
     aput-char v1, v3, v2
@@ -847,8 +847,8 @@
     .line 122
     add-int/lit8 v1, v0, 0x1
 
-    .end local v0           #d:I
-    .restart local v1       #d:I
+    .end local v0    # "d":I
+    .restart local v1    # "d":I
     const/16 v2, 0xa
 
     aput-char v2, v3, v0
@@ -856,47 +856,47 @@
     .line 123
     const/4 v0, 0x0
 
-    .local v0, cc:I
+    .local v0, "cc":I
     :goto_4
     move v2, v1
 
-    .end local v1           #d:I
-    .restart local v2       #d:I
+    .end local v1    # "d":I
+    .restart local v2    # "d":I
     move v6, v7
 
     .line 125
-    .end local v7           #s:I
-    .local v6, s:I
+    .end local v7    # "s":I
+    .local v6, "s":I
     goto :goto_3
 
     .line 105
-    .end local v2           #d:I
-    .end local v3           #dArr:[C
-    .end local v4           #dLen:I
-    .end local v6           #s:I
-    .local v0, cCnt:I
+    .end local v2    # "d":I
+    .end local v3    # "dArr":[C
+    .end local v4    # "dLen":I
+    .end local v6    # "s":I
+    .local v0, "cCnt":I
     :cond_2
     const/4 v1, 0x0
 
     goto :goto_2
 
     .line 128
-    .local v0, cc:I
-    .restart local v2       #d:I
-    .restart local v3       #dArr:[C
-    .restart local v4       #dLen:I
-    .restart local v6       #s:I
+    .local v0, "cc":I
+    .restart local v2    # "d":I
+    .restart local v3    # "dArr":[C
+    .restart local v4    # "dLen":I
+    .restart local v6    # "s":I
     :cond_3
     sub-int p1, v8, v5
 
     .line 129
-    .local p1, left:I
+    .local p1, "left":I
     if-lez p1, :cond_4
 
     .line 131
     aget-byte v0, p0, v5
 
-    .end local v0           #cc:I
+    .end local v0    # "cc":I
     and-int/lit16 v0, v0, 0xff
 
     shl-int/lit8 v0, v0, 0xa
@@ -911,7 +911,7 @@
 
     aget-byte p0, p0, v1
 
-    .end local p0
+    .end local p0    # "sArr":[B
     and-int/lit16 p0, p0, 0xff
 
     shl-int/lit8 p0, p0, 0x2
@@ -920,7 +920,7 @@
     or-int/2addr p0, v0
 
     .line 134
-    .local p0, i:I
+    .local p0, "i":I
     const/4 v0, 0x4
 
     sub-int v0, v4, v0
@@ -931,7 +931,7 @@
 
     aget-char v1, v1, v2
 
-    .end local v2           #d:I
+    .end local v2    # "d":I
     aput-char v1, v3, v0
 
     .line 135
@@ -960,12 +960,12 @@
 
     sget-object p1, Lcom/fusepowered/m1/android/Base64;->CA:[C
 
-    .end local p1           #left:I
+    .end local p1    # "left":I
     and-int/lit8 p0, p0, 0x3f
 
     aget-char p0, p1, p0
 
-    .end local p0           #i:I
+    .end local p0    # "i":I
     :goto_6
     aput-char p0, v3, v0
 
@@ -985,40 +985,40 @@
     goto/16 :goto_1
 
     .line 131
-    .restart local v2       #d:I
-    .local p0, sArr:[B
-    .restart local p1       #left:I
+    .restart local v2    # "d":I
+    .local p0, "sArr":[B
+    .restart local p1    # "left":I
     :cond_5
     const/4 p0, 0x0
 
     goto :goto_5
 
     .line 136
-    .end local v2           #d:I
-    .local p0, i:I
+    .end local v2    # "d":I
+    .local p0, "i":I
     :cond_6
     const/16 p0, 0x3d
 
     goto :goto_6
 
-    .end local v6           #s:I
-    .restart local v0       #cc:I
-    .restart local v2       #d:I
-    .restart local v7       #s:I
-    .local p0, sArr:[B
-    .local p1, lineSep:Z
+    .end local v6    # "s":I
+    .restart local v0    # "cc":I
+    .restart local v2    # "d":I
+    .restart local v7    # "s":I
+    .local p0, "sArr":[B
+    .local p1, "lineSep":Z
     :cond_7
     move v1, v2
 
-    .end local v2           #d:I
-    .restart local v1       #d:I
+    .end local v2    # "d":I
+    .restart local v1    # "d":I
     goto :goto_4
 .end method
 
 .method public static final encodeToString([BZ)Ljava/lang/String;
     .locals 2
-    .parameter "sArr"
-    .parameter "lineSep"
+    .param p0, "sArr"    # [B
+    .param p1, "lineSep"    # Z
 
     .prologue
     .line 452

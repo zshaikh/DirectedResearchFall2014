@@ -19,7 +19,7 @@
 # direct methods
 .method constructor <init>(Landroid/content/Context;)V
     .locals 1
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     .line 17
@@ -51,7 +51,7 @@
     invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
 
     .line 79
-    .local v0, params:Lorg/json/JSONObject;
+    .local v0, "params":Lorg/json/JSONObject;
     const-string v1, "height"
 
     invoke-virtual {p0}, Lcom/fusepowered/m1/android/AdProperties;->getAdDpiIndependentHeight()Ljava/lang/String;
@@ -90,7 +90,7 @@
     invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
 
     .line 49
-    .local v0, params:Lorg/json/JSONObject;
+    .local v0, "params":Lorg/json/JSONObject;
     const-string v1, "android.permission.ACCESS_FINE_LOCATION"
 
     invoke-virtual {p0}, Lcom/fusepowered/m1/android/AdProperties;->getContext()Landroid/content/Context;
@@ -135,7 +135,7 @@
     invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
 
     .line 57
-    .local v0, params:Lorg/json/JSONObject;
+    .local v0, "params":Lorg/json/JSONObject;
     const-string v1, "height"
 
     invoke-virtual {p0}, Lcom/fusepowered/m1/android/AdProperties;->getScreenDpiIndependentHeight()Ljava/lang/String;
@@ -174,13 +174,13 @@
     invoke-direct {v1}, Lorg/json/JSONObject;-><init>()V
 
     .line 97
-    .local v1, params:Lorg/json/JSONObject;
+    .local v1, "params":Lorg/json/JSONObject;
     invoke-virtual {p0}, Lcom/fusepowered/m1/android/AdProperties;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
     .line 98
-    .local v0, context:Landroid/content/Context;
+    .local v0, "context":Landroid/content/Context;
     const-string v2, "sms"
 
     invoke-static {v0}, Lcom/fusepowered/m1/android/MMSDK;->getSupportsSms(Landroid/content/Context;)Ljava/lang/String;
@@ -259,7 +259,7 @@
     invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
 
     .line 26
-    .local v0, adProps:Lorg/json/JSONObject;
+    .local v0, "adProps":Lorg/json/JSONObject;
     :try_start_0
     const-string v1, "screen"
 
@@ -355,7 +355,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/fusepowered/m1/android/AdProperties;
     check-cast p0, Landroid/content/Context;
 
     return-object p0
@@ -375,7 +375,7 @@
     move-result-object v1
 
     .line 65
-    .local v1, metrics:Landroid/util/DisplayMetrics;
+    .local v1, "metrics":Landroid/util/DisplayMetrics;
     iget v2, v1, Landroid/util/DisplayMetrics;->heightPixels:I
 
     int-to-float v2, v2
@@ -387,7 +387,7 @@
     float-to-int v0, v2
 
     .line 66
-    .local v0, height:I
+    .local v0, "height":I
     invoke-static {v0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v2
@@ -409,7 +409,7 @@
     move-result-object v0
 
     .line 72
-    .local v0, metrics:Landroid/util/DisplayMetrics;
+    .local v0, "metrics":Landroid/util/DisplayMetrics;
     iget v2, v0, Landroid/util/DisplayMetrics;->widthPixels:I
 
     int-to-float v2, v2
@@ -421,7 +421,7 @@
     float-to-int v1, v2
 
     .line 73
-    .local v1, width:I
+    .local v1, "width":I
     invoke-static {v1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v2

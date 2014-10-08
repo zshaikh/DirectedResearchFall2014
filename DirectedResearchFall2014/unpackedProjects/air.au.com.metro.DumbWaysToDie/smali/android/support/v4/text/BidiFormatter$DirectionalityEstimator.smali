@@ -15,7 +15,7 @@
 
 
 # static fields
-.field private static final DIR_TYPE_CACHE:[B = null
+.field private static final DIR_TYPE_CACHE:[B
 
 .field private static final DIR_TYPE_CACHE_SIZE:I = 0x700
 
@@ -47,7 +47,7 @@
     .line 506
     const/4 v0, 0x0
 
-    .local v0, i:I
+    .local v0, "i":I
     :goto_0
     if-ge v0, v3, :cond_0
 
@@ -72,8 +72,8 @@
 
 .method constructor <init>(Ljava/lang/String;Z)V
     .locals 1
-    .parameter "text"
-    .parameter "isHtml"
+    .param p1, "text"    # Ljava/lang/String;
+    .param p2, "isHtml"    # Z
 
     .prologue
     .line 549
@@ -98,7 +98,7 @@
 
 .method private static getCachedDirectionality(C)B
     .locals 1
-    .parameter "c"
+    .param p0, "c"    # C
 
     .prologue
     .line 724
@@ -131,7 +131,7 @@
     iget v0, p0, Landroid/support/v4/text/BidiFormatter$DirectionalityEstimator;->charIndex:I
 
     .line 866
-    .local v0, initialCharIndex:I
+    .local v0, "initialCharIndex":I
     :cond_0
     iget v1, p0, Landroid/support/v4/text/BidiFormatter$DirectionalityEstimator;->charIndex:I
 
@@ -236,7 +236,7 @@
     iget v0, p0, Landroid/support/v4/text/BidiFormatter$DirectionalityEstimator;->charIndex:I
 
     .line 823
-    .local v0, initialCharIndex:I
+    .local v0, "initialCharIndex":I
     :cond_0
     iget v2, p0, Landroid/support/v4/text/BidiFormatter$DirectionalityEstimator;->charIndex:I
 
@@ -308,7 +308,7 @@
     iget-char v1, p0, Landroid/support/v4/text/BidiFormatter$DirectionalityEstimator;->lastChar:C
 
     .line 835
-    .local v1, quote:C
+    .local v1, "quote":C
     :goto_1
     iget v2, p0, Landroid/support/v4/text/BidiFormatter$DirectionalityEstimator;->charIndex:I
 
@@ -341,7 +341,7 @@
     iget v0, p0, Landroid/support/v4/text/BidiFormatter$DirectionalityEstimator;->charIndex:I
 
     .line 794
-    .local v0, initialCharIndex:I
+    .local v0, "initialCharIndex":I
     :cond_0
     iget v2, p0, Landroid/support/v4/text/BidiFormatter$DirectionalityEstimator;->charIndex:I
 
@@ -397,7 +397,7 @@
     iget-char v1, p0, Landroid/support/v4/text/BidiFormatter$DirectionalityEstimator;->lastChar:C
 
     .line 803
-    .local v1, quote:C
+    .local v1, "quote":C
     :goto_1
     iget v2, p0, Landroid/support/v4/text/BidiFormatter$DirectionalityEstimator;->charIndex:I
 
@@ -424,7 +424,7 @@
     goto :goto_1
 
     .line 807
-    .end local v1           #quote:C
+    .end local v1    # "quote":C
     :cond_3
     iput v0, p0, Landroid/support/v4/text/BidiFormatter$DirectionalityEstimator;->charIndex:I
 
@@ -479,7 +479,7 @@
     move-result v0
 
     .line 770
-    .local v0, codePoint:I
+    .local v0, "codePoint":I
     iget v2, p0, Landroid/support/v4/text/BidiFormatter$DirectionalityEstimator;->charIndex:I
 
     invoke-static {v0}, Ljava/lang/Character;->charCount(I)I
@@ -496,7 +496,7 @@
     move-result v2
 
     .line 783
-    .end local v0           #codePoint:I
+    .end local v0    # "codePoint":I
     :goto_0
     return v2
 
@@ -516,7 +516,7 @@
     move-result v1
 
     .line 775
-    .local v1, dirType:B
+    .local v1, "dirType":B
     iget-boolean v2, p0, Landroid/support/v4/text/BidiFormatter$DirectionalityEstimator;->isHtml:Z
 
     if-eqz v2, :cond_1
@@ -590,7 +590,7 @@
     move-result v0
 
     .line 740
-    .local v0, codePoint:I
+    .local v0, "codePoint":I
     iget v2, p0, Landroid/support/v4/text/BidiFormatter$DirectionalityEstimator;->charIndex:I
 
     invoke-static {v0}, Ljava/lang/Character;->charCount(I)I
@@ -607,7 +607,7 @@
     move-result v2
 
     .line 753
-    .end local v0           #codePoint:I
+    .end local v0    # "codePoint":I
     :goto_0
     return v2
 
@@ -627,7 +627,7 @@
     move-result v1
 
     .line 745
-    .local v1, dirType:B
+    .local v1, "dirType":B
     iget-boolean v2, p0, Landroid/support/v4/text/BidiFormatter$DirectionalityEstimator;->isHtml:Z
 
     if-eqz v2, :cond_1
@@ -684,15 +684,15 @@
     const/4 v0, 0x0
 
     .line 569
-    .local v0, embeddingLevel:I
+    .local v0, "embeddingLevel":I
     const/4 v1, 0x0
 
     .line 570
-    .local v1, embeddingLevelDir:I
+    .local v1, "embeddingLevelDir":I
     const/4 v2, 0x0
 
     .line 571
-    .local v2, firstNonEmptyEmbeddingLevel:I
+    .local v2, "firstNonEmptyEmbeddingLevel":I
     :goto_0
     :pswitch_0
     iget v3, p0, Landroid/support/v4/text/BidiFormatter$DirectionalityEstimator;->charIndex:I
@@ -910,11 +910,11 @@
     const/4 v0, 0x0
 
     .line 667
-    .local v0, embeddingLevel:I
+    .local v0, "embeddingLevel":I
     const/4 v1, 0x0
 
     .line 668
-    .local v1, lastNonEmptyEmbeddingLevel:I
+    .local v1, "lastNonEmptyEmbeddingLevel":I
     :cond_0
     :goto_0
     :pswitch_0

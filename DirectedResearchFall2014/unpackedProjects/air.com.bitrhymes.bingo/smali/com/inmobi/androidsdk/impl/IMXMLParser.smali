@@ -33,7 +33,6 @@
 
 .method public static buildAdUnitFromResponseData(Ljava/io/Reader;)Lcom/inmobi/androidsdk/impl/IMAdUnit;
     .locals 11
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,

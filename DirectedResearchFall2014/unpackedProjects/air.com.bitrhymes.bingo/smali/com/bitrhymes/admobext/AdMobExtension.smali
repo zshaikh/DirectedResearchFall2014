@@ -21,7 +21,7 @@
 # virtual methods
 .method public createContext(Ljava/lang/String;)Lcom/adobe/fre/FREContext;
     .locals 1
-    .parameter "arg0"
+    .param p1, "arg0"    # Ljava/lang/String;
 
     .prologue
     .line 10

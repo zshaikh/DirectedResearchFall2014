@@ -26,8 +26,6 @@
 # direct methods
 .method constructor <init>(Lcom/facebook/AuthorizationClient;Ljava/util/ArrayList;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 1
@@ -45,7 +43,7 @@
 # virtual methods
 .method public onCompleted(Lcom/facebook/Response;)V
     .locals 3
-    .parameter "response"
+    .param p1, "response"    # Lcom/facebook/Response;
 
     .prologue
     .line 380
@@ -59,7 +57,7 @@
     check-cast v0, Lcom/facebook/model/GraphUser;
 
     .line 381
-    .local v0, user:Lcom/facebook/model/GraphUser;
+    .local v0, "user":Lcom/facebook/model/GraphUser;
     if-eqz v0, :cond_0
 
     .line 382
@@ -74,7 +72,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 386
-    .end local v0           #user:Lcom/facebook/model/GraphUser;
+    .end local v0    # "user":Lcom/facebook/model/GraphUser;
     :cond_0
     :goto_0
     return-void

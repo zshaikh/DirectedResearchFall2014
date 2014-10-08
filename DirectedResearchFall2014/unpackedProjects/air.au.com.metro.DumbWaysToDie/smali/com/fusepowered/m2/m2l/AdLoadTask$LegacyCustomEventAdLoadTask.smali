@@ -24,8 +24,8 @@
 # direct methods
 .method public constructor <init>(Lcom/fusepowered/m2/m2l/AdViewController;Lorg/apache/http/Header;)V
     .locals 0
-    .parameter "adViewController"
-    .parameter "header"
+    .param p1, "adViewController"    # Lcom/fusepowered/m2/m2l/AdViewController;
+    .param p2, "header"    # Lorg/apache/http/Header;
 
     .prologue
     .line 221
@@ -71,7 +71,7 @@
     check-cast v0, Lcom/fusepowered/m2/m2l/AdViewController;
 
     .line 228
-    .local v0, adViewController:Lcom/fusepowered/m2/m2l/AdViewController;
+    .local v0, "adViewController":Lcom/fusepowered/m2/m2l/AdViewController;
     if-eqz v0, :cond_0
 
     invoke-virtual {v0}, Lcom/fusepowered/m2/m2l/AdViewController;->isDestroyed()Z
@@ -95,7 +95,7 @@
     move-result-object v5
 
     .line 235
-    .local v5, mpv:Lcom/fusepowered/m2/m2l/MoPubView;
+    .local v5, "mpv":Lcom/fusepowered/m2/m2l/MoPubView;
     iget-object v7, p0, Lcom/fusepowered/m2/m2l/AdLoadTask$LegacyCustomEventAdLoadTask;->mHeader:Lorg/apache/http/Header;
 
     if-nez v7, :cond_2
@@ -123,7 +123,7 @@
     move-result-object v4
 
     .line 242
-    .local v4, methodName:Ljava/lang/String;
+    .local v4, "methodName":Ljava/lang/String;
     const-string v7, "MoPub"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -148,14 +148,14 @@
     move-result-object v6
 
     .line 248
-    .local v6, userActivity:Landroid/app/Activity;
+    .local v6, "userActivity":Landroid/app/Activity;
     :try_start_0
     invoke-virtual {v6}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v1
 
     .line 249
-    .local v1, c:Ljava/lang/Class;,"Ljava/lang/Class<+Landroid/app/Activity;>;"
+    .local v1, "c":Ljava/lang/Class;, "Ljava/lang/Class<+Landroid/app/Activity;>;"
     const/4 v7, 0x1
 
     new-array v7, v7, [Ljava/lang/Class;
@@ -171,7 +171,7 @@
     move-result-object v3
 
     .line 250
-    .local v3, method:Ljava/lang/reflect/Method;
+    .local v3, "method":Ljava/lang/reflect/Method;
     const/4 v7, 0x1
 
     new-array v7, v7, [Ljava/lang/Object;
@@ -188,15 +188,15 @@
     goto :goto_0
 
     .line 251
-    .end local v1           #c:Ljava/lang/Class;,"Ljava/lang/Class<+Landroid/app/Activity;>;"
-    .end local v3           #method:Ljava/lang/reflect/Method;
+    .end local v1    # "c":Ljava/lang/Class;, "Ljava/lang/Class<+Landroid/app/Activity;>;"
+    .end local v3    # "method":Ljava/lang/reflect/Method;
     :catch_0
     move-exception v7
 
     move-object v2, v7
 
     .line 252
-    .local v2, e:Ljava/lang/NoSuchMethodException;
+    .local v2, "e":Ljava/lang/NoSuchMethodException;
     const-string v7, "MoPub"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -231,14 +231,14 @@
     goto :goto_0
 
     .line 255
-    .end local v2           #e:Ljava/lang/NoSuchMethodException;
+    .end local v2    # "e":Ljava/lang/NoSuchMethodException;
     :catch_1
     move-exception v7
 
     move-object v2, v7
 
     .line 256
-    .local v2, e:Ljava/lang/Exception;
+    .local v2, "e":Ljava/lang/Exception;
     const-string v7, "MoPub"
 
     new-instance v7, Ljava/lang/StringBuilder;

@@ -24,7 +24,7 @@
 
 .method static jsonObjectClear(Lorg/json/JSONObject;)V
     .locals 2
-    .parameter "jsonObject"
+    .param p0, "jsonObject"    # Lorg/json/JSONObject;
 
     .prologue
     .line 28
@@ -33,7 +33,7 @@
     move-result-object v0
 
     .line 29
-    .local v0, keys:Ljava/util/Iterator;,"Ljava/util/Iterator<Ljava/lang/String;>;"
+    .local v0, "keys":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/String;>;"
     :goto_0
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
@@ -56,8 +56,8 @@
 
 .method static jsonObjectContainsValue(Lorg/json/JSONObject;Ljava/lang/Object;)Z
     .locals 3
-    .parameter "jsonObject"
-    .parameter "value"
+    .param p0, "jsonObject"    # Lorg/json/JSONObject;
+    .param p1, "value"    # Ljava/lang/Object;
 
     .prologue
     .line 37
@@ -66,7 +66,7 @@
     move-result-object v0
 
     .line 38
-    .local v0, keys:Ljava/util/Iterator;,"Ljava/util/Iterator<Ljava/lang/String;>;"
+    .local v0, "keys":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/String;>;"
     :cond_0
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
@@ -93,7 +93,7 @@
     move-result-object v1
 
     .line 40
-    .local v1, thisValue:Ljava/lang/Object;
+    .local v1, "thisValue":Ljava/lang/Object;
     if-eqz v1, :cond_0
 
     invoke-virtual {v1, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
@@ -110,7 +110,7 @@
 
 .method static jsonObjectEntrySet(Lorg/json/JSONObject;)Ljava/util/Set;
     .locals 5
-    .parameter "jsonObject"
+    .param p0, "jsonObject"    # Lorg/json/JSONObject;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -133,13 +133,13 @@
     invoke-direct {v2}, Ljava/util/HashSet;-><init>()V
 
     .line 78
-    .local v2, result:Ljava/util/HashSet;,"Ljava/util/HashSet<Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/Object;>;>;"
+    .local v2, "result":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/Object;>;>;"
     invoke-virtual {p0}, Lorg/json/JSONObject;->keys()Ljava/util/Iterator;
 
     move-result-object v1
 
     .line 79
-    .local v1, keys:Ljava/util/Iterator;,"Ljava/util/Iterator<Ljava/lang/String;>;"
+    .local v1, "keys":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/String;>;"
     :goto_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
@@ -159,13 +159,13 @@
     check-cast v0, Ljava/lang/String;
 
     .line 81
-    .local v0, key:Ljava/lang/String;
+    .local v0, "key":Ljava/lang/String;
     invoke-virtual {p0, v0}, Lorg/json/JSONObject;->opt(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v3
 
     .line 82
-    .local v3, value:Ljava/lang/Object;
+    .local v3, "value":Ljava/lang/Object;
     new-instance v4, Lcom/facebook/model/JsonUtil$JSONObjectEntry;
 
     invoke-direct {v4, v0, v3}, Lcom/facebook/model/JsonUtil$JSONObjectEntry;-><init>(Ljava/lang/String;Ljava/lang/Object;)V
@@ -177,7 +177,7 @@
 
 .method static jsonObjectKeySet(Lorg/json/JSONObject;)Ljava/util/Set;
     .locals 3
-    .parameter "jsonObject"
+    .param p0, "jsonObject"    # Lorg/json/JSONObject;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -197,14 +197,14 @@
     invoke-direct {v1}, Ljava/util/HashSet;-><init>()V
 
     .line 92
-    .local v1, result:Ljava/util/HashSet;,"Ljava/util/HashSet<Ljava/lang/String;>;"
+    .local v1, "result":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/String;>;"
     invoke-virtual {p0}, Lorg/json/JSONObject;->keys()Ljava/util/Iterator;
 
     move-result-object v0
 
     .line 93
-    .end local p0
-    .local v0, keys:Ljava/util/Iterator;,"Ljava/util/Iterator<Ljava/lang/String;>;"
+    .end local p0    # "jsonObject":Lorg/json/JSONObject;
+    .local v0, "keys":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/String;>;"
     :goto_0
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
@@ -230,8 +230,7 @@
 
 .method static jsonObjectPutAll(Lorg/json/JSONObject;Ljava/util/Map;)V
     .locals 6
-    .parameter "jsonObject"
-    .parameter
+    .param p0, "jsonObject"    # Lorg/json/JSONObject;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -246,13 +245,13 @@
 
     .prologue
     .line 101
-    .local p1, map:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
+    .local p1, "map":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
     invoke-interface {p1}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object v2
 
     .line 102
-    .local v2, entrySet:Ljava/util/Set;,"Ljava/util/Set<Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/Object;>;>;"
+    .local v2, "entrySet":Ljava/util/Set;, "Ljava/util/Set<Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/Object;>;>;"
     invoke-interface {v2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v4
@@ -276,7 +275,7 @@
     check-cast v1, Ljava/util/Map$Entry;
 
     .line 104
-    .local v1, entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/Object;>;"
+    .local v1, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/Object;>;"
     :try_start_0
     invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -301,7 +300,7 @@
     move-object v0, v3
 
     .line 106
-    .local v0, e:Lorg/json/JSONException;
+    .local v0, "e":Lorg/json/JSONException;
     new-instance v3, Ljava/lang/IllegalArgumentException;
 
     invoke-direct {v3, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/Throwable;)V
@@ -311,7 +310,7 @@
 
 .method static jsonObjectValues(Lorg/json/JSONObject;)Ljava/util/Collection;
     .locals 3
-    .parameter "jsonObject"
+    .param p0, "jsonObject"    # Lorg/json/JSONObject;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -331,13 +330,13 @@
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     .line 115
-    .local v1, result:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/Object;>;"
+    .local v1, "result":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Object;>;"
     invoke-virtual {p0}, Lorg/json/JSONObject;->keys()Ljava/util/Iterator;
 
     move-result-object v0
 
     .line 116
-    .local v0, keys:Ljava/util/Iterator;,"Ljava/util/Iterator<Ljava/lang/String;>;"
+    .local v0, "keys":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/String;>;"
     :goto_0
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 

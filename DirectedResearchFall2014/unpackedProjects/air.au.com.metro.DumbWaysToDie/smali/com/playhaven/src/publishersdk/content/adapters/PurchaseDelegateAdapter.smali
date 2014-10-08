@@ -13,7 +13,7 @@
 # direct methods
 .method public constructor <init>(Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest$PurchaseDelegate;)V
     .locals 0
-    .parameter "delegate"
+    .param p1, "delegate"    # Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest$PurchaseDelegate;
 
     .prologue
     .line 16
@@ -30,8 +30,8 @@
 # virtual methods
 .method public onMadePurchase(Lv2/com/playhaven/requests/content/PHContentRequest;Lv2/com/playhaven/model/PHPurchase;)V
     .locals 2
-    .parameter "request"
-    .parameter "purchase"
+    .param p1, "request"    # Lv2/com/playhaven/requests/content/PHContentRequest;
+    .param p2, "purchase"    # Lv2/com/playhaven/model/PHPurchase;
 
     .prologue
     .line 22
@@ -40,7 +40,7 @@
     check-cast p1, Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest;
 
     .line 23
-    .end local p1
+    .end local p1    # "request":Lv2/com/playhaven/requests/content/PHContentRequest;
     new-instance v1, Lcom/playhaven/src/publishersdk/content/PHPurchase;
 
     invoke-direct {v1, p2}, Lcom/playhaven/src/publishersdk/content/PHPurchase;-><init>(Lv2/com/playhaven/model/PHPurchase;)V

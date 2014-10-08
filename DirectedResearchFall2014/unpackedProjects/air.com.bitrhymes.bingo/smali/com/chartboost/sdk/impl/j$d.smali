@@ -26,8 +26,6 @@
 # direct methods
 .method public constructor <init>(Lcom/chartboost/sdk/impl/j;Lcom/chartboost/sdk/impl/j$a;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 236
@@ -44,7 +42,6 @@
 
 .method static synthetic a(Lcom/chartboost/sdk/impl/j$d;)Lcom/chartboost/sdk/impl/j$a;
     .locals 1
-    .parameter
 
     .prologue
     .line 234
@@ -55,8 +52,6 @@
 
 .method private a(ZLjava/lang/String;)V
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     .line 349
@@ -248,8 +243,8 @@
 
     invoke-interface {v0, v3}, Lorg/apache/http/client/HttpClient;->execute(Lorg/apache/http/client/methods/HttpUriRequest;)Lorg/apache/http/HttpResponse;
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     move-result-object v0
 
@@ -266,8 +261,8 @@
     .line 290
     invoke-interface {v0}, Lorg/apache/http/HttpResponse;->getEntity()Lorg/apache/http/HttpEntity;
     :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
     move-result-object v2
 
@@ -315,8 +310,8 @@
     .line 303
     invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
     :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_1
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
     move-result-object v3
 
@@ -392,8 +387,8 @@
     :goto_4
     invoke-static {v2}, Lcom/chartboost/sdk/Libraries/d;->a(Lorg/apache/http/HttpEntity;)V
     :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_1
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_2
+    .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
     move-object v0, v1
 
@@ -508,8 +503,8 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_6
-    .catchall {:try_start_6 .. :try_end_6} :catchall_1
     .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_0
+    .catchall {:try_start_6 .. :try_end_6} :catchall_1
 
     goto/16 :goto_1
 
@@ -582,8 +577,8 @@
 
     invoke-virtual {v3, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
     :try_end_8
-    .catchall {:try_start_8 .. :try_end_8} :catchall_1
     .catch Ljava/lang/Exception; {:try_start_8 .. :try_end_8} :catch_1
+    .catchall {:try_start_8 .. :try_end_8} :catchall_1
 
     goto/16 :goto_2
 
@@ -667,8 +662,8 @@
 
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
     :try_end_9
-    .catchall {:try_start_9 .. :try_end_9} :catchall_1
     .catch Ljava/lang/Exception; {:try_start_9 .. :try_end_9} :catch_2
+    .catchall {:try_start_9 .. :try_end_9} :catchall_1
 
     move-result-object v0
 

@@ -27,7 +27,7 @@
 
 .method synthetic constructor <init>(Lcom/flurry/org/apache/avro/io/EncoderFactory$1;)V
     .locals 0
-    .parameter "x0"
+    .param p1, "x0"    # Lcom/flurry/org/apache/avro/io/EncoderFactory$1;
 
     .prologue
     .line 326
@@ -40,7 +40,7 @@
 # virtual methods
 .method public configureBlockSize(I)Lcom/flurry/org/apache/avro/io/EncoderFactory;
     .locals 2
-    .parameter "size"
+    .param p1, "size"    # I
 
     .prologue
     .line 329
@@ -55,7 +55,7 @@
 
 .method public configureBufferSize(I)Lcom/flurry/org/apache/avro/io/EncoderFactory;
     .locals 2
-    .parameter "size"
+    .param p1, "size"    # I
 
     .prologue
     .line 333

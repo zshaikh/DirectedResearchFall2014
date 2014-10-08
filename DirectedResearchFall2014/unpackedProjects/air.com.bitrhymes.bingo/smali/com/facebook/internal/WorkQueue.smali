@@ -13,8 +13,7 @@
 
 
 # static fields
-#the value of this static final field might be set in the static constructor
-.field static final synthetic $assertionsDisabled:Z = false
+.field static final synthetic $assertionsDisabled:Z
 
 .field public static final DEFAULT_MAX_CONCURRENT:I = 0x8
 
@@ -77,7 +76,7 @@
 
 .method constructor <init>(I)V
     .locals 1
-    .parameter "maxConcurrent"
+    .param p1, "maxConcurrent"    # I
 
     .prologue
     .line 40
@@ -93,8 +92,8 @@
 
 .method constructor <init>(ILjava/util/concurrent/Executor;)V
     .locals 1
-    .parameter "maxConcurrent"
-    .parameter "executor"
+    .param p1, "maxConcurrent"    # I
+    .param p2, "executor"    # Ljava/util/concurrent/Executor;
 
     .prologue
     .line 43
@@ -129,7 +128,6 @@
 
 .method static synthetic access$0(Lcom/facebook/internal/WorkQueue;)Ljava/lang/Object;
     .locals 1
-    .parameter
 
     .prologue
     .line 26
@@ -140,7 +138,6 @@
 
 .method static synthetic access$1(Lcom/facebook/internal/WorkQueue;)Lcom/facebook/internal/WorkQueue$WorkNode;
     .locals 1
-    .parameter
 
     .prologue
     .line 27
@@ -151,8 +148,6 @@
 
 .method static synthetic access$2(Lcom/facebook/internal/WorkQueue;Lcom/facebook/internal/WorkQueue$WorkNode;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 27
@@ -163,8 +158,6 @@
 
 .method static synthetic access$3(Lcom/facebook/internal/WorkQueue;Lcom/facebook/internal/WorkQueue$WorkNode;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 84
@@ -175,7 +168,7 @@
 
 .method private execute(Lcom/facebook/internal/WorkQueue$WorkNode;)V
     .locals 2
-    .parameter "node"
+    .param p1, "node"    # Lcom/facebook/internal/WorkQueue$WorkNode;
 
     .prologue
     .line 114
@@ -193,7 +186,7 @@
 
 .method private finishItemAndStartNew(Lcom/facebook/internal/WorkQueue$WorkNode;)V
     .locals 4
-    .parameter "finished"
+    .param p1, "finished"    # Lcom/facebook/internal/WorkQueue$WorkNode;
 
     .prologue
     const/4 v3, 0x1
@@ -202,7 +195,7 @@
     const/4 v0, 0x0
 
     .line 87
-    .local v0, ready:Lcom/facebook/internal/WorkQueue$WorkNode;
+    .local v0, "ready":Lcom/facebook/internal/WorkQueue$WorkNode;
     iget-object v1, p0, Lcom/facebook/internal/WorkQueue;->workLock:Ljava/lang/Object;
 
     monitor-enter v1
@@ -318,7 +311,7 @@
 # virtual methods
 .method addActiveWorkItem(Ljava/lang/Runnable;)Lcom/facebook/internal/WorkQueue$WorkItem;
     .locals 1
-    .parameter "callback"
+    .param p1, "callback"    # Ljava/lang/Runnable;
 
     .prologue
     .line 49
@@ -333,8 +326,8 @@
 
 .method addActiveWorkItem(Ljava/lang/Runnable;Z)Lcom/facebook/internal/WorkQueue$WorkItem;
     .locals 3
-    .parameter "callback"
-    .parameter "addToFront"
+    .param p1, "callback"    # Ljava/lang/Runnable;
+    .param p2, "addToFront"    # Z
 
     .prologue
     .line 53
@@ -343,7 +336,7 @@
     invoke-direct {v0, p0, p1}, Lcom/facebook/internal/WorkQueue$WorkNode;-><init>(Lcom/facebook/internal/WorkQueue;Ljava/lang/Runnable;)V
 
     .line 54
-    .local v0, node:Lcom/facebook/internal/WorkQueue$WorkNode;
+    .local v0, "node":Lcom/facebook/internal/WorkQueue$WorkNode;
     iget-object v1, p0, Lcom/facebook/internal/WorkQueue;->workLock:Ljava/lang/Object;
 
     monitor-enter v1
@@ -394,7 +387,7 @@
     const/4 v0, 0x0
 
     .line 67
-    .local v0, count:I
+    .local v0, "count":I
     :try_start_0
     iget-object v3, p0, Lcom/facebook/internal/WorkQueue;->runningJobs:Lcom/facebook/internal/WorkQueue$WorkNode;
 
@@ -404,7 +397,7 @@
     iget-object v1, p0, Lcom/facebook/internal/WorkQueue;->runningJobs:Lcom/facebook/internal/WorkQueue$WorkNode;
 
     .line 70
-    .local v1, walk:Lcom/facebook/internal/WorkQueue$WorkNode;
+    .local v1, "walk":Lcom/facebook/internal/WorkQueue$WorkNode;
     :cond_0
     const/4 v3, 0x1
 
@@ -424,7 +417,7 @@
     if-ne v1, v3, :cond_0
 
     .line 76
-    .end local v1           #walk:Lcom/facebook/internal/WorkQueue$WorkNode;
+    .end local v1    # "walk":Lcom/facebook/internal/WorkQueue$WorkNode;
     :cond_1
     sget-boolean v3, Lcom/facebook/internal/WorkQueue;->$assertionsDisabled:Z
 

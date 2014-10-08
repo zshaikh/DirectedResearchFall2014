@@ -21,7 +21,6 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m2/m2l/MoPubView;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1
@@ -37,8 +36,8 @@
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 3
-    .parameter "context"
-    .parameter "intent"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
     const-string v2, "MoPub"
@@ -59,7 +58,7 @@
     .line 128
     iget-object v0, p0, Lcom/fusepowered/m2/m2l/MoPubView$1;->this$0:Lcom/fusepowered/m2/m2l/MoPubView;
 
-    #getter for: Lcom/fusepowered/m2/m2l/MoPubView;->mIsInForeground:Z
+    # getter for: Lcom/fusepowered/m2/m2l/MoPubView;->mIsInForeground:Z
     invoke-static {v0}, Lcom/fusepowered/m2/m2l/MoPubView;->access$0(Lcom/fusepowered/m2/m2l/MoPubView;)Z
 
     move-result v0
@@ -91,7 +90,6 @@
 
     move-result v1
 
-    #setter for: Lcom/fusepowered/m2/m2l/MoPubView;->mPreviousAutorefreshSetting:Z
     invoke-static {v0, v1}, Lcom/fusepowered/m2/m2l/MoPubView;->access$1(Lcom/fusepowered/m2/m2l/MoPubView;Z)V
 
     .line 132
@@ -135,7 +133,7 @@
     .line 139
     iget-object v0, p0, Lcom/fusepowered/m2/m2l/MoPubView$1;->this$0:Lcom/fusepowered/m2/m2l/MoPubView;
 
-    #getter for: Lcom/fusepowered/m2/m2l/MoPubView;->mIsInForeground:Z
+    # getter for: Lcom/fusepowered/m2/m2l/MoPubView;->mIsInForeground:Z
     invoke-static {v0}, Lcom/fusepowered/m2/m2l/MoPubView;->access$0(Lcom/fusepowered/m2/m2l/MoPubView;)Z
 
     move-result v0
@@ -163,7 +161,7 @@
 
     iget-object v1, p0, Lcom/fusepowered/m2/m2l/MoPubView$1;->this$0:Lcom/fusepowered/m2/m2l/MoPubView;
 
-    #getter for: Lcom/fusepowered/m2/m2l/MoPubView;->mPreviousAutorefreshSetting:Z
+    # getter for: Lcom/fusepowered/m2/m2l/MoPubView;->mPreviousAutorefreshSetting:Z
     invoke-static {v1}, Lcom/fusepowered/m2/m2l/MoPubView;->access$2(Lcom/fusepowered/m2/m2l/MoPubView;)Z
 
     move-result v1

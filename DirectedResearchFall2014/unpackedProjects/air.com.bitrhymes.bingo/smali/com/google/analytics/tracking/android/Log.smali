@@ -26,7 +26,7 @@
 
 .method public static d(Ljava/lang/String;)I
     .locals 2
-    .parameter "msg"
+    .param p0, "msg"    # Ljava/lang/String;
 
     .prologue
     .line 51
@@ -45,7 +45,7 @@
 
 .method public static dDebug(Ljava/lang/String;)I
     .locals 1
-    .parameter "msg"
+    .param p0, "msg"    # Ljava/lang/String;
 
     .prologue
     .line 62
@@ -70,7 +70,7 @@
 
 .method public static e(Ljava/lang/String;)I
     .locals 2
-    .parameter "msg"
+    .param p0, "msg"    # Ljava/lang/String;
 
     .prologue
     .line 76
@@ -89,7 +89,7 @@
 
 .method public static eDebug(Ljava/lang/String;)I
     .locals 1
-    .parameter "msg"
+    .param p0, "msg"    # Ljava/lang/String;
 
     .prologue
     .line 87
@@ -114,7 +114,7 @@
 
 .method private static formatMessage(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
-    .parameter "msg"
+    .param p0, "msg"    # Ljava/lang/String;
 
     .prologue
     .line 169
@@ -153,7 +153,7 @@
 
 .method public static i(Ljava/lang/String;)I
     .locals 2
-    .parameter "msg"
+    .param p0, "msg"    # Ljava/lang/String;
 
     .prologue
     .line 101
@@ -172,7 +172,7 @@
 
 .method public static iDebug(Ljava/lang/String;)I
     .locals 1
-    .parameter "msg"
+    .param p0, "msg"    # Ljava/lang/String;
 
     .prologue
     .line 112
@@ -207,7 +207,7 @@
 
 .method public static setDebug(Z)V
     .locals 0
-    .parameter "debug"
+    .param p0, "debug"    # Z
 
     .prologue
     .line 31
@@ -219,7 +219,7 @@
 
 .method public static v(Ljava/lang/String;)I
     .locals 2
-    .parameter "msg"
+    .param p0, "msg"    # Ljava/lang/String;
 
     .prologue
     .line 126
@@ -238,7 +238,7 @@
 
 .method public static vDebug(Ljava/lang/String;)I
     .locals 1
-    .parameter "msg"
+    .param p0, "msg"    # Ljava/lang/String;
 
     .prologue
     .line 137
@@ -263,7 +263,7 @@
 
 .method public static w(Ljava/lang/String;)I
     .locals 2
-    .parameter "msg"
+    .param p0, "msg"    # Ljava/lang/String;
 
     .prologue
     .line 151
@@ -282,7 +282,7 @@
 
 .method public static wDebug(Ljava/lang/String;)I
     .locals 1
-    .parameter "msg"
+    .param p0, "msg"    # Ljava/lang/String;
 
     .prologue
     .line 162

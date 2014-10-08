@@ -23,7 +23,6 @@
 # direct methods
 .method public constructor <init>(Lcom/fusepowered/activities/FuseApiBrowser;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 19
@@ -43,8 +42,8 @@
 # virtual methods
 .method public onPageFinished(Landroid/webkit/WebView;Ljava/lang/String;)V
     .locals 2
-    .parameter "view"
-    .parameter "url"
+    .param p1, "view"    # Landroid/webkit/WebView;
+    .param p2, "url"    # Ljava/lang/String;
 
     .prologue
     .line 86
@@ -68,9 +67,9 @@
 
 .method public onPageStarted(Landroid/webkit/WebView;Ljava/lang/String;Landroid/graphics/Bitmap;)V
     .locals 2
-    .parameter "view"
-    .parameter "url"
-    .parameter "favicon"
+    .param p1, "view"    # Landroid/webkit/WebView;
+    .param p2, "url"    # Ljava/lang/String;
+    .param p3, "favicon"    # Landroid/graphics/Bitmap;
 
     .prologue
     .line 26
@@ -90,10 +89,10 @@
 
 .method public onReceivedError(Landroid/webkit/WebView;ILjava/lang/String;Ljava/lang/String;)V
     .locals 3
-    .parameter "view"
-    .parameter "errorCode"
-    .parameter "description"
-    .parameter "failingUrl"
+    .param p1, "view"    # Landroid/webkit/WebView;
+    .param p2, "errorCode"    # I
+    .param p3, "description"    # Ljava/lang/String;
+    .param p4, "failingUrl"    # Ljava/lang/String;
 
     .prologue
     .line 78
@@ -137,8 +136,8 @@
 
 .method public shouldOverrideUrlLoading(Landroid/webkit/WebView;Ljava/lang/String;)Z
     .locals 5
-    .parameter "view"
-    .parameter "url"
+    .param p1, "view"    # Landroid/webkit/WebView;
+    .param p2, "url"    # Ljava/lang/String;
 
     .prologue
     const-string v4, "android.intent.action.VIEW"
@@ -173,8 +172,8 @@
     invoke-direct {v0, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
     .line 55
-    .local v0, i:Landroid/content/Intent;
-    const/high16 v2, 0x1000
+    .local v0, "i":Landroid/content/Intent;
+    const/high16 v2, 0x10000000
 
     invoke-virtual {v0, v2}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
@@ -194,7 +193,7 @@
     invoke-static {}, Lcom/fusepowered/fuseapi/FuseAPI;->adClick()V
 
     .line 73
-    .end local v0           #i:Landroid/content/Intent;
+    .end local v0    # "i":Landroid/content/Intent;
     :cond_1
     :goto_0
     const/4 v2, 0x1
@@ -223,7 +222,7 @@
     invoke-direct {v1, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
     .line 64
-    .local v1, intent:Landroid/content/Intent;
+    .local v1, "intent":Landroid/content/Intent;
     invoke-static {p2}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v2
@@ -241,7 +240,7 @@
     goto :goto_0
 
     .line 68
-    .end local v1           #intent:Landroid/content/Intent;
+    .end local v1    # "intent":Landroid/content/Intent;
     :cond_3
     invoke-virtual {p2}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
 

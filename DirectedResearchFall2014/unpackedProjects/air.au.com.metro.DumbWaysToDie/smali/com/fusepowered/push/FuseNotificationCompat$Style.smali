@@ -50,7 +50,7 @@
     const/4 v0, 0x0
 
     .line 624
-    .local v0, notification:Landroid/app/Notification;
+    .local v0, "notification":Landroid/app/Notification;
     iget-object v1, p0, Lcom/fusepowered/push/FuseNotificationCompat$Style;->mBuilder:Lcom/fusepowered/push/FuseNotificationCompat$Builder;
 
     if-eqz v1, :cond_0
@@ -69,7 +69,7 @@
 
 .method public setBuilder(Lcom/fusepowered/push/FuseNotificationCompat$Builder;)V
     .locals 1
-    .parameter "builder"
+    .param p1, "builder"    # Lcom/fusepowered/push/FuseNotificationCompat$Builder;
 
     .prologue
     .line 614

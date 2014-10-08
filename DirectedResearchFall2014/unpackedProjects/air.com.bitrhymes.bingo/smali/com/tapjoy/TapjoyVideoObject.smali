@@ -71,8 +71,8 @@
 # virtual methods
 .method public addButton(Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
-    .parameter "name"
-    .parameter "url"
+    .param p1, "name"    # Ljava/lang/String;
+    .param p2, "url"    # Ljava/lang/String;
 
     .prologue
     .line 39

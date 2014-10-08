@@ -23,7 +23,7 @@
 
 .method public equals(Ljava/lang/Object;)Z
     .locals 4
-    .parameter "o"
+    .param p1, "o"    # Ljava/lang/Object;
 
     .prologue
     const/4 v3, 0x1
@@ -36,12 +36,12 @@
     move v0, v3
 
     .line 61
-    .end local p1
+    .end local p1    # "o":Ljava/lang/Object;
     :goto_0
     return v0
 
     .line 46
-    .restart local p1
+    .restart local p1    # "o":Ljava/lang/Object;
     :cond_0
     if-nez p1, :cond_1
 
@@ -58,7 +58,7 @@
     .line 50
     check-cast p1, Lcom/chartboost/sdk/impl/az;
 
-    .end local p1
+    .end local p1    # "o":Ljava/lang/Object;
     iget-object v0, p1, Lcom/chartboost/sdk/impl/az;->a:Ljava/lang/String;
 
     .line 59
@@ -81,7 +81,7 @@
     goto :goto_0
 
     .line 52
-    .restart local p1
+    .restart local p1    # "o":Ljava/lang/Object;
     :cond_3
     instance-of v0, p1, Ljava/lang/String;
 
@@ -90,12 +90,12 @@
     .line 53
     check-cast p1, Ljava/lang/String;
 
-    .end local p1
+    .end local p1    # "o":Ljava/lang/Object;
     move-object v0, p1
 
     goto :goto_1
 
-    .restart local p1
+    .restart local p1    # "o":Ljava/lang/Object;
     :cond_4
     move v0, v2
 
@@ -103,7 +103,7 @@
     goto :goto_0
 
     .line 59
-    .end local p1
+    .end local p1    # "o":Ljava/lang/Object;
     :cond_5
     if-nez v0, :cond_2
 

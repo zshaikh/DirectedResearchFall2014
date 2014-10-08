@@ -288,7 +288,6 @@
 
 .method public setAdUnits(Ljava/util/List;)Lcom/flurry/android/AdResponse$Builder;
     .locals 3
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -330,7 +329,6 @@
 
 .method public setErrors(Ljava/util/List;)Lcom/flurry/android/AdResponse$Builder;
     .locals 2
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",

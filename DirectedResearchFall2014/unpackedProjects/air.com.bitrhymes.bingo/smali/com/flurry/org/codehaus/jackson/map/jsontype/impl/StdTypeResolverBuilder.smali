@@ -78,10 +78,9 @@
 # virtual methods
 .method public buildTypeDeserializer(Lcom/flurry/org/codehaus/jackson/map/DeserializationConfig;Lcom/flurry/org/codehaus/jackson/type/JavaType;Ljava/util/Collection;Lcom/flurry/org/codehaus/jackson/map/BeanProperty;)Lcom/flurry/org/codehaus/jackson/map/TypeDeserializer;
     .locals 6
-    .parameter "config"
-    .parameter "baseType"
-    .parameter
-    .parameter "property"
+    .param p1, "config"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationConfig;
+    .param p2, "baseType"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .param p4, "property"    # Lcom/flurry/org/codehaus/jackson/map/BeanProperty;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -99,7 +98,7 @@
 
     .prologue
     .line 100
-    .local p3, subtypes:Ljava/util/Collection;,"Ljava/util/Collection<Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;>;"
+    .local p3, "subtypes":Ljava/util/Collection;, "Ljava/util/Collection<Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;>;"
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/map/jsontype/impl/StdTypeResolverBuilder;->_idType:Lcom/flurry/org/codehaus/jackson/annotate/JsonTypeInfo$Id;
 
     sget-object v1, Lcom/flurry/org/codehaus/jackson/annotate/JsonTypeInfo$Id;->NONE:Lcom/flurry/org/codehaus/jackson/annotate/JsonTypeInfo$Id;
@@ -132,7 +131,7 @@
     move-result-object v2
 
     .line 107
-    .local v2, idRes:Lcom/flurry/org/codehaus/jackson/map/jsontype/TypeIdResolver;
+    .local v2, "idRes":Lcom/flurry/org/codehaus/jackson/map/jsontype/TypeIdResolver;
     sget-object v0, Lcom/flurry/org/codehaus/jackson/map/jsontype/impl/StdTypeResolverBuilder$1;->$SwitchMap$org$codehaus$jackson$annotate$JsonTypeInfo$As:[I
 
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/map/jsontype/impl/StdTypeResolverBuilder;->_includeAs:Lcom/flurry/org/codehaus/jackson/annotate/JsonTypeInfo$As;
@@ -236,10 +235,9 @@
 
 .method public buildTypeSerializer(Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;Lcom/flurry/org/codehaus/jackson/type/JavaType;Ljava/util/Collection;Lcom/flurry/org/codehaus/jackson/map/BeanProperty;)Lcom/flurry/org/codehaus/jackson/map/TypeSerializer;
     .locals 7
-    .parameter "config"
-    .parameter "baseType"
-    .parameter
-    .parameter "property"
+    .param p1, "config"    # Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;
+    .param p2, "baseType"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .param p4, "property"    # Lcom/flurry/org/codehaus/jackson/map/BeanProperty;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -257,7 +255,7 @@
 
     .prologue
     .line 79
-    .local p3, subtypes:Ljava/util/Collection;,"Ljava/util/Collection<Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;>;"
+    .local p3, "subtypes":Ljava/util/Collection;, "Ljava/util/Collection<Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;>;"
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/map/jsontype/impl/StdTypeResolverBuilder;->_idType:Lcom/flurry/org/codehaus/jackson/annotate/JsonTypeInfo$Id;
 
     sget-object v1, Lcom/flurry/org/codehaus/jackson/annotate/JsonTypeInfo$Id;->NONE:Lcom/flurry/org/codehaus/jackson/annotate/JsonTypeInfo$Id;
@@ -290,7 +288,7 @@
     move-result-object v6
 
     .line 83
-    .local v6, idRes:Lcom/flurry/org/codehaus/jackson/map/jsontype/TypeIdResolver;
+    .local v6, "idRes":Lcom/flurry/org/codehaus/jackson/map/jsontype/TypeIdResolver;
     sget-object v0, Lcom/flurry/org/codehaus/jackson/map/jsontype/impl/StdTypeResolverBuilder$1;->$SwitchMap$org$codehaus$jackson$annotate$JsonTypeInfo$As:[I
 
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/map/jsontype/impl/StdTypeResolverBuilder;->_includeAs:Lcom/flurry/org/codehaus/jackson/annotate/JsonTypeInfo$As;
@@ -378,7 +376,7 @@
 
 .method public bridge synthetic defaultImpl(Ljava/lang/Class;)Lcom/flurry/org/codehaus/jackson/map/jsontype/TypeResolverBuilder;
     .locals 1
-    .parameter "x0"
+    .param p1, "x0"    # Ljava/lang/Class;
 
     .prologue
     .line 18
@@ -391,7 +389,6 @@
 
 .method public defaultImpl(Ljava/lang/Class;)Lcom/flurry/org/codehaus/jackson/map/jsontype/impl/StdTypeResolverBuilder;
     .locals 0
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -403,7 +400,7 @@
 
     .prologue
     .line 155
-    .local p1, defaultImpl:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p1, "defaultImpl":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     iput-object p1, p0, Lcom/flurry/org/codehaus/jackson/map/jsontype/impl/StdTypeResolverBuilder;->_defaultImpl:Ljava/lang/Class;
 
     .line 156
@@ -439,11 +436,9 @@
 
 .method protected idResolver(Lcom/flurry/org/codehaus/jackson/map/MapperConfig;Lcom/flurry/org/codehaus/jackson/type/JavaType;Ljava/util/Collection;ZZ)Lcom/flurry/org/codehaus/jackson/map/jsontype/TypeIdResolver;
     .locals 3
-    .parameter
-    .parameter "baseType"
-    .parameter
-    .parameter "forSer"
-    .parameter "forDeser"
+    .param p2, "baseType"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .param p4, "forSer"    # Z
+    .param p5, "forDeser"    # Z
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -460,8 +455,8 @@
 
     .prologue
     .line 183
-    .local p1, config:Lcom/flurry/org/codehaus/jackson/map/MapperConfig;,"Lcom/flurry/org/codehaus/jackson/map/MapperConfig<*>;"
-    .local p3, subtypes:Ljava/util/Collection;,"Ljava/util/Collection<Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;>;"
+    .local p1, "config":Lcom/flurry/org/codehaus/jackson/map/MapperConfig;, "Lcom/flurry/org/codehaus/jackson/map/MapperConfig<*>;"
+    .local p3, "subtypes":Ljava/util/Collection;, "Ljava/util/Collection<Lcom/flurry/org/codehaus/jackson/map/jsontype/NamedType;>;"
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/map/jsontype/impl/StdTypeResolverBuilder;->_customIdResolver:Lcom/flurry/org/codehaus/jackson/map/jsontype/TypeIdResolver;
 
     if-eqz v0, :cond_0
@@ -579,7 +574,7 @@
 
 .method public bridge synthetic inclusion(Lcom/flurry/org/codehaus/jackson/annotate/JsonTypeInfo$As;)Lcom/flurry/org/codehaus/jackson/map/jsontype/TypeResolverBuilder;
     .locals 1
-    .parameter "x0"
+    .param p1, "x0"    # Lcom/flurry/org/codehaus/jackson/annotate/JsonTypeInfo$As;
 
     .prologue
     .line 18
@@ -592,7 +587,7 @@
 
 .method public inclusion(Lcom/flurry/org/codehaus/jackson/annotate/JsonTypeInfo$As;)Lcom/flurry/org/codehaus/jackson/map/jsontype/impl/StdTypeResolverBuilder;
     .locals 2
-    .parameter "includeAs"
+    .param p1, "includeAs"    # Lcom/flurry/org/codehaus/jackson/annotate/JsonTypeInfo$As;
 
     .prologue
     .line 130
@@ -617,8 +612,8 @@
 
 .method public bridge synthetic init(Lcom/flurry/org/codehaus/jackson/annotate/JsonTypeInfo$Id;Lcom/flurry/org/codehaus/jackson/map/jsontype/TypeIdResolver;)Lcom/flurry/org/codehaus/jackson/map/jsontype/TypeResolverBuilder;
     .locals 1
-    .parameter "x0"
-    .parameter "x1"
+    .param p1, "x0"    # Lcom/flurry/org/codehaus/jackson/annotate/JsonTypeInfo$Id;
+    .param p2, "x1"    # Lcom/flurry/org/codehaus/jackson/map/jsontype/TypeIdResolver;
 
     .prologue
     .line 18
@@ -631,8 +626,8 @@
 
 .method public init(Lcom/flurry/org/codehaus/jackson/annotate/JsonTypeInfo$Id;Lcom/flurry/org/codehaus/jackson/map/jsontype/TypeIdResolver;)Lcom/flurry/org/codehaus/jackson/map/jsontype/impl/StdTypeResolverBuilder;
     .locals 2
-    .parameter "idType"
-    .parameter "idRes"
+    .param p1, "idType"    # Lcom/flurry/org/codehaus/jackson/annotate/JsonTypeInfo$Id;
+    .param p2, "idRes"    # Lcom/flurry/org/codehaus/jackson/map/jsontype/TypeIdResolver;
 
     .prologue
     .line 65
@@ -667,7 +662,7 @@
 
 .method public bridge synthetic typeProperty(Ljava/lang/String;)Lcom/flurry/org/codehaus/jackson/map/jsontype/TypeResolverBuilder;
     .locals 1
-    .parameter "x0"
+    .param p1, "x0"    # Ljava/lang/String;
 
     .prologue
     .line 18
@@ -680,7 +675,7 @@
 
 .method public typeProperty(Ljava/lang/String;)Lcom/flurry/org/codehaus/jackson/map/jsontype/impl/StdTypeResolverBuilder;
     .locals 1
-    .parameter "typeIdPropName"
+    .param p1, "typeIdPropName"    # Ljava/lang/String;
 
     .prologue
     .line 145

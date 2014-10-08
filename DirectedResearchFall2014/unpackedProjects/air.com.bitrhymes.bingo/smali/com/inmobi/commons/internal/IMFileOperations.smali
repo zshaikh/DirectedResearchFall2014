@@ -16,9 +16,6 @@
 
 .method public static getBooleanPreferences(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Z
     .locals 3
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const/4 v2, 0x0
@@ -86,9 +83,6 @@
 
 .method public static getIntPreferences(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I
     .locals 3
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const/4 v2, 0x0
@@ -156,9 +150,6 @@
 
 .method public static getPreferences(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 3
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const/4 v2, 0x0
@@ -228,8 +219,6 @@
 
 .method public static readFromFile(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/Object;
     .locals 5
-    .parameter
-    .parameter
 
     .prologue
     const/4 v4, 0x0
@@ -419,9 +408,6 @@
 
 .method public static saveToFile(Landroid/content/Context;Ljava/lang/String;Ljava/lang/Object;)Z
     .locals 7
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const/4 v4, 0x0
@@ -596,10 +582,6 @@
 
 .method public static setPreferences(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;F)V
     .locals 2
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const-string v1, ""
@@ -671,10 +653,6 @@
 
 .method public static setPreferences(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;I)V
     .locals 2
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const-string v1, ""
@@ -746,10 +724,6 @@
 
 .method public static setPreferences(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;J)V
     .locals 2
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const-string v1, ""
@@ -821,10 +795,6 @@
 
 .method public static setPreferences(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Z)V
     .locals 2
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const-string v1, ""
@@ -896,10 +866,6 @@
 
 .method public static setPreferences(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
     .locals 3
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const/4 v2, 0x0

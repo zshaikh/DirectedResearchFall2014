@@ -12,8 +12,8 @@
 # direct methods
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
-    .parameter "method"
-    .parameter "secret"
+    .param p1, "method"    # Ljava/lang/String;
+    .param p2, "secret"    # Ljava/lang/String;
 
     .prologue
     .line 15
@@ -31,8 +31,7 @@
 
 .method private prepareMessage(Ljava/lang/String;Ljava/util/Map;)Ljava/lang/String;
     .locals 7
-    .parameter "url"
-    .parameter
+    .param p1, "url"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -48,13 +47,13 @@
 
     .prologue
     .line 46
-    .local p2, params:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p2, "params":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-static {p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v3
 
     .line 47
-    .local v3, uri:Landroid/net/Uri;
+    .local v3, "uri":Landroid/net/Uri;
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -86,7 +85,7 @@
     move-result-object v0
 
     .line 48
-    .local v0, baseUrl:Ljava/lang/String;
+    .local v0, "baseUrl":Ljava/lang/String;
     invoke-virtual {v3}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
 
     move-result-object v4
@@ -134,7 +133,7 @@
     move v1, v4
 
     .line 49
-    .local v1, dropPort:Z
+    .local v1, "dropPort":Z
     :goto_0
     if-nez v1, :cond_2
 
@@ -206,7 +205,7 @@
     move-result-object v2
 
     .line 55
-    .local v2, paramStr:Ljava/lang/String;
+    .local v2, "paramStr":Ljava/lang/String;
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -270,8 +269,8 @@
     return-object v0
 
     .line 48
-    .end local v1           #dropPort:Z
-    .end local v2           #paramStr:Ljava/lang/String;
+    .end local v1    # "dropPort":Z
+    .end local v2    # "paramStr":Ljava/lang/String;
     :cond_3
     const/4 v4, 0x0
 
@@ -282,7 +281,6 @@
 
 .method private prepareParams(Ljava/util/Map;)Ljava/lang/String;
     .locals 8
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -296,7 +294,7 @@
     .end annotation
 
     .prologue
-    .local p1, params:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p1, "params":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v7, "&"
 
     .line 62
@@ -309,18 +307,18 @@
     invoke-direct {v2, v5}, Ljava/util/TreeSet;-><init>(Ljava/util/Collection;)V
 
     .line 63
-    .local v2, keys:Ljava/util/TreeSet;,"Ljava/util/TreeSet<Ljava/lang/String;>;"
+    .local v2, "keys":Ljava/util/TreeSet;, "Ljava/util/TreeSet<Ljava/lang/String;>;"
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
     .line 65
-    .local v3, message:Ljava/lang/StringBuilder;
+    .local v3, "message":Ljava/lang/StringBuilder;
     invoke-virtual {v2}, Ljava/util/TreeSet;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
-    .local v0, i$:Ljava/util/Iterator;
+    .local v0, "i$":Ljava/util/Iterator;
     :goto_0
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
@@ -335,7 +333,7 @@
     check-cast v1, Ljava/lang/String;
 
     .line 66
-    .local v1, key:Ljava/lang/String;
+    .local v1, "key":Ljava/lang/String;
     invoke-interface {p1, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v4
@@ -343,7 +341,7 @@
     check-cast v4, Ljava/lang/String;
 
     .line 67
-    .local v4, val:Ljava/lang/String;
+    .local v4, "val":Ljava/lang/String;
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -377,8 +375,8 @@
     goto :goto_0
 
     .line 69
-    .end local v1           #key:Ljava/lang/String;
-    .end local v4           #val:Ljava/lang/String;
+    .end local v1    # "key":Ljava/lang/String;
+    .end local v4    # "val":Ljava/lang/String;
     :cond_0
     const-string v5, "&"
 
@@ -427,9 +425,8 @@
 # virtual methods
 .method public matches(Ljava/lang/String;Ljava/util/Map;Ljava/lang/String;)Z
     .locals 2
-    .parameter "url"
-    .parameter
-    .parameter "signature"
+    .param p1, "url"    # Ljava/lang/String;
+    .param p3, "signature"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -446,13 +443,13 @@
 
     .prologue
     .line 41
-    .local p2, params:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p2, "params":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-virtual {p0, p1, p2}, Lcom/tapjoy/HmacSignature;->sign(Ljava/lang/String;Ljava/util/Map;)Ljava/lang/String;
 
     move-result-object v0
 
     .line 42
-    .local v0, sig:Ljava/lang/String;
+    .local v0, "sig":Ljava/lang/String;
     invoke-virtual {v0, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -462,8 +459,7 @@
 
 .method public sign(Ljava/lang/String;Ljava/util/Map;)Ljava/lang/String;
     .locals 11
-    .parameter "url"
-    .parameter
+    .param p1, "url"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -479,7 +475,7 @@
 
     .prologue
     .line 22
-    .local p2, params:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p2, "params":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     :try_start_0
     new-instance v8, Ljavax/crypto/spec/SecretKeySpec;
 
@@ -494,7 +490,7 @@
     invoke-direct {v8, v9, v10}, Ljavax/crypto/spec/SecretKeySpec;-><init>([BLjava/lang/String;)V
 
     .line 23
-    .local v8, signingKey:Ljavax/crypto/spec/SecretKeySpec;
+    .local v8, "signingKey":Ljavax/crypto/spec/SecretKeySpec;
     iget-object v9, p0, Lcom/tapjoy/HmacSignature;->_method:Ljava/lang/String;
 
     invoke-static {v9}, Ljavax/crypto/Mac;->getInstance(Ljava/lang/String;)Ljavax/crypto/Mac;
@@ -502,7 +498,7 @@
     move-result-object v6
 
     .line 24
-    .local v6, mac:Ljavax/crypto/Mac;
+    .local v6, "mac":Ljavax/crypto/Mac;
     invoke-virtual {v6, v8}, Ljavax/crypto/Mac;->init(Ljava/security/Key;)V
 
     .line 25
@@ -519,33 +515,33 @@
     move-result-object v3
 
     .line 26
-    .local v3, hmac:[B
+    .local v3, "hmac":[B
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
     .line 27
-    .local v7, sb:Ljava/lang/StringBuilder;
+    .local v7, "sb":Ljava/lang/StringBuilder;
     const-string v2, ""
 
     .line 28
-    .local v2, ch:Ljava/lang/String;
+    .local v2, "ch":Ljava/lang/String;
     move-object v0, v3
 
-    .local v0, arr$:[B
+    .local v0, "arr$":[B
     array-length v5, v0
 
-    .local v5, len$:I
+    .local v5, "len$":I
     const/4 v4, 0x0
 
-    .local v4, i$:I
+    .local v4, "i$":I
     :goto_0
     if-ge v4, v5, :cond_1
 
     aget-byte v1, v0, v4
 
     .line 29
-    .local v1, b:B
+    .local v1, "b":B
     and-int/lit16 v9, v1, 0xff
 
     invoke-static {v9}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
@@ -576,7 +572,7 @@
     goto :goto_0
 
     .line 35
-    .end local v1           #b:B
+    .end local v1    # "b":B
     :cond_1
     invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
     :try_end_0
@@ -585,14 +581,14 @@
     move-result-object v9
 
     .line 37
-    .end local v0           #arr$:[B
-    .end local v2           #ch:Ljava/lang/String;
-    .end local v3           #hmac:[B
-    .end local v4           #i$:I
-    .end local v5           #len$:I
-    .end local v6           #mac:Ljavax/crypto/Mac;
-    .end local v7           #sb:Ljava/lang/StringBuilder;
-    .end local v8           #signingKey:Ljavax/crypto/spec/SecretKeySpec;
+    .end local v0    # "arr$":[B
+    .end local v2    # "ch":Ljava/lang/String;
+    .end local v3    # "hmac":[B
+    .end local v4    # "i$":I
+    .end local v5    # "len$":I
+    .end local v6    # "mac":Ljavax/crypto/Mac;
+    .end local v7    # "sb":Ljava/lang/StringBuilder;
+    .end local v8    # "signingKey":Ljavax/crypto/spec/SecretKeySpec;
     :goto_1
     return-object v9
 

@@ -298,9 +298,7 @@
 
 .method private constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
     .locals 4
-    .parameter
-    .parameter
-    .parameter "token"
+    .param p3, "token"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -348,7 +346,7 @@
     array-length v1, v2
 
     .line 137
-    .local v1, len:I
+    .local v1, "len":I
     new-array v2, v1, [B
 
     iput-object v2, p0, Lcom/flurry/org/codehaus/jackson/JsonToken;->_serializedBytes:[B
@@ -356,7 +354,7 @@
     .line 138
     const/4 v0, 0x0
 
-    .local v0, i:I
+    .local v0, "i":I
     :goto_0
     if-ge v0, v1, :cond_0
 
@@ -379,7 +377,7 @@
 
 .method public static valueOf(Ljava/lang/String;)Lcom/flurry/org/codehaus/jackson/JsonToken;
     .locals 1
-    .parameter "name"
+    .param p0, "name"    # Ljava/lang/String;
 
     .prologue
     .line 7
@@ -389,7 +387,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "name":Ljava/lang/String;
     check-cast p0, Lcom/flurry/org/codehaus/jackson/JsonToken;
 
     return-object p0

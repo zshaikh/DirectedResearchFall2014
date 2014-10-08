@@ -83,8 +83,8 @@
 # virtual methods
 .method public binaryDecoder(Ljava/io/InputStream;Lcom/flurry/org/apache/avro/io/BinaryDecoder;)Lcom/flurry/org/apache/avro/io/BinaryDecoder;
     .locals 2
-    .parameter "in"
-    .parameter "reuse"
+    .param p1, "in"    # Ljava/io/InputStream;
+    .param p2, "reuse"    # Lcom/flurry/org/apache/avro/io/BinaryDecoder;
 
     .prologue
     .line 132
@@ -126,10 +126,10 @@
 
 .method public binaryDecoder([BIILcom/flurry/org/apache/avro/io/BinaryDecoder;)Lcom/flurry/org/apache/avro/io/BinaryDecoder;
     .locals 2
-    .parameter "bytes"
-    .parameter "offset"
-    .parameter "length"
-    .parameter "reuse"
+    .param p1, "bytes"    # [B
+    .param p2, "offset"    # I
+    .param p3, "length"    # I
+    .param p4, "reuse"    # Lcom/flurry/org/apache/avro/io/BinaryDecoder;
 
     .prologue
     .line 214
@@ -167,8 +167,8 @@
 
 .method public binaryDecoder([BLcom/flurry/org/apache/avro/io/BinaryDecoder;)Lcom/flurry/org/apache/avro/io/BinaryDecoder;
     .locals 2
-    .parameter "bytes"
-    .parameter "reuse"
+    .param p1, "bytes"    # [B
+    .param p2, "reuse"    # Lcom/flurry/org/apache/avro/io/BinaryDecoder;
 
     .prologue
     .line 234
@@ -185,7 +185,7 @@
 
 .method public configureDecoderBufferSize(I)Lcom/flurry/org/apache/avro/io/DecoderFactory;
     .locals 1
-    .parameter "size"
+    .param p1, "size"    # I
 
     .prologue
     .line 78
@@ -198,12 +198,12 @@
 
     .line 80
     :cond_0
-    const/high16 v0, 0x100
+    const/high16 v0, 0x1000000
 
     if-le p1, v0, :cond_1
 
     .line 81
-    const/high16 p1, 0x100
+    const/high16 p1, 0x1000000
 
     .line 82
     :cond_1
@@ -215,8 +215,8 @@
 
 .method public createBinaryDecoder(Ljava/io/InputStream;Lcom/flurry/org/apache/avro/io/BinaryDecoder;)Lcom/flurry/org/apache/avro/io/BinaryDecoder;
     .locals 1
-    .parameter "in"
-    .parameter "reuse"
+    .param p1, "in"    # Ljava/io/InputStream;
+    .param p2, "reuse"    # Lcom/flurry/org/apache/avro/io/BinaryDecoder;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -231,10 +231,10 @@
 
 .method public createBinaryDecoder([BIILcom/flurry/org/apache/avro/io/BinaryDecoder;)Lcom/flurry/org/apache/avro/io/BinaryDecoder;
     .locals 2
-    .parameter "bytes"
-    .parameter "offset"
-    .parameter "length"
-    .parameter "reuse"
+    .param p1, "bytes"    # [B
+    .param p2, "offset"    # I
+    .param p3, "length"    # I
+    .param p4, "reuse"    # Lcom/flurry/org/apache/avro/io/BinaryDecoder;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -274,8 +274,8 @@
 
 .method public createBinaryDecoder([BLcom/flurry/org/apache/avro/io/BinaryDecoder;)Lcom/flurry/org/apache/avro/io/BinaryDecoder;
     .locals 2
-    .parameter "bytes"
-    .parameter "reuse"
+    .param p1, "bytes"    # [B
+    .param p2, "reuse"    # Lcom/flurry/org/apache/avro/io/BinaryDecoder;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -294,8 +294,8 @@
 
 .method public directBinaryDecoder(Ljava/io/InputStream;Lcom/flurry/org/apache/avro/io/BinaryDecoder;)Lcom/flurry/org/apache/avro/io/BinaryDecoder;
     .locals 2
-    .parameter "in"
-    .parameter "reuse"
+    .param p1, "in"    # Ljava/io/InputStream;
+    .param p2, "reuse"    # Lcom/flurry/org/apache/avro/io/BinaryDecoder;
 
     .prologue
     .line 172
@@ -320,15 +320,15 @@
     invoke-direct {v0, p1}, Lcom/flurry/org/apache/avro/io/DirectBinaryDecoder;-><init>(Ljava/io/InputStream;)V
 
     .line 175
-    .end local p2
+    .end local p2    # "reuse":Lcom/flurry/org/apache/avro/io/BinaryDecoder;
     :goto_0
     return-object v0
 
-    .restart local p2
+    .restart local p2    # "reuse":Lcom/flurry/org/apache/avro/io/BinaryDecoder;
     :cond_1
     check-cast p2, Lcom/flurry/org/apache/avro/io/DirectBinaryDecoder;
 
-    .end local p2
+    .end local p2    # "reuse":Lcom/flurry/org/apache/avro/io/BinaryDecoder;
     invoke-virtual {p2, p1}, Lcom/flurry/org/apache/avro/io/DirectBinaryDecoder;->configure(Ljava/io/InputStream;)Lcom/flurry/org/apache/avro/io/DirectBinaryDecoder;
 
     move-result-object v0
@@ -348,8 +348,8 @@
 
 .method public jsonDecoder(Lcom/flurry/org/apache/avro/Schema;Ljava/io/InputStream;)Lcom/flurry/org/apache/avro/io/JsonDecoder;
     .locals 1
-    .parameter "schema"
-    .parameter "input"
+    .param p1, "schema"    # Lcom/flurry/org/apache/avro/Schema;
+    .param p2, "input"    # Ljava/io/InputStream;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -367,8 +367,8 @@
 
 .method public jsonDecoder(Lcom/flurry/org/apache/avro/Schema;Ljava/lang/String;)Lcom/flurry/org/apache/avro/io/JsonDecoder;
     .locals 1
-    .parameter "schema"
-    .parameter "input"
+    .param p1, "schema"    # Lcom/flurry/org/apache/avro/Schema;
+    .param p2, "input"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -386,9 +386,9 @@
 
 .method public resolvingDecoder(Lcom/flurry/org/apache/avro/Schema;Lcom/flurry/org/apache/avro/Schema;Lcom/flurry/org/apache/avro/io/Decoder;)Lcom/flurry/org/apache/avro/io/ResolvingDecoder;
     .locals 1
-    .parameter "writer"
-    .parameter "reader"
-    .parameter "wrapped"
+    .param p1, "writer"    # Lcom/flurry/org/apache/avro/Schema;
+    .param p2, "reader"    # Lcom/flurry/org/apache/avro/Schema;
+    .param p3, "wrapped"    # Lcom/flurry/org/apache/avro/io/Decoder;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -406,8 +406,8 @@
 
 .method public validatingDecoder(Lcom/flurry/org/apache/avro/Schema;Lcom/flurry/org/apache/avro/io/Decoder;)Lcom/flurry/org/apache/avro/io/ValidatingDecoder;
     .locals 1
-    .parameter "schema"
-    .parameter "wrapped"
+    .param p1, "schema"    # Lcom/flurry/org/apache/avro/Schema;
+    .param p2, "wrapped"    # Lcom/flurry/org/apache/avro/io/Decoder;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;

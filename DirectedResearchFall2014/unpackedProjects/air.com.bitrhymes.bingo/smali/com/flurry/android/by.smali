@@ -13,7 +13,6 @@
 # direct methods
 .method public constructor <init>(Landroid/webkit/WebChromeClient$CustomViewCallback;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 285

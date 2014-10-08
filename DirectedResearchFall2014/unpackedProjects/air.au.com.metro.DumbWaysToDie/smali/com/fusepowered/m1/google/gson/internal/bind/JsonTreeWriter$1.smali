@@ -63,9 +63,9 @@
 
 .method public write([CII)V
     .locals 1
-    .parameter "buffer"
-    .parameter "offset"
-    .parameter "counter"
+    .param p1, "buffer"    # [C
+    .param p2, "offset"    # I
+    .param p3, "counter"    # I
 
     .prologue
     .line 37

@@ -27,7 +27,6 @@
 # direct methods
 .method public constructor <init>(Ljava/lang/Class;)V
     .locals 0
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -38,8 +37,8 @@
 
     .prologue
     .line 78
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/ext/JodaDeserializers$DateTimeDeserializer;,"Lcom/flurry/org/codehaus/jackson/map/ext/JodaDeserializers$DateTimeDeserializer<TT;>;"
-    .local p1, cls:Ljava/lang/Class;,"Ljava/lang/Class<TT;>;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/ext/JodaDeserializers$DateTimeDeserializer;, "Lcom/flurry/org/codehaus/jackson/map/ext/JodaDeserializers$DateTimeDeserializer<TT;>;"
+    .local p1, "cls":Ljava/lang/Class;, "Ljava/lang/Class<TT;>;"
     invoke-direct {p0, p1}, Lcom/flurry/org/codehaus/jackson/map/ext/JodaDeserializers$JodaDeserializer;-><init>(Ljava/lang/Class;)V
 
     return-void
@@ -49,8 +48,8 @@
 # virtual methods
 .method public bridge synthetic deserialize(Lcom/flurry/org/codehaus/jackson/JsonParser;Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;)Ljava/lang/Object;
     .locals 1
-    .parameter "x0"
-    .parameter "x1"
+    .param p1, "x0"    # Lcom/flurry/org/codehaus/jackson/JsonParser;
+    .param p2, "x1"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -60,7 +59,7 @@
 
     .prologue
     .line 75
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/ext/JodaDeserializers$DateTimeDeserializer;,"Lcom/flurry/org/codehaus/jackson/map/ext/JodaDeserializers$DateTimeDeserializer<TT;>;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/ext/JodaDeserializers$DateTimeDeserializer;, "Lcom/flurry/org/codehaus/jackson/map/ext/JodaDeserializers$DateTimeDeserializer<TT;>;"
     invoke-virtual {p0, p1, p2}, Lcom/flurry/org/codehaus/jackson/map/ext/JodaDeserializers$DateTimeDeserializer;->deserialize(Lcom/flurry/org/codehaus/jackson/JsonParser;Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;)Lorg/joda/time/ReadableInstant;
 
     move-result-object v0
@@ -70,8 +69,8 @@
 
 .method public deserialize(Lcom/flurry/org/codehaus/jackson/JsonParser;Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;)Lorg/joda/time/ReadableInstant;
     .locals 6
-    .parameter "jp"
-    .parameter "ctxt"
+    .param p1, "jp"    # Lcom/flurry/org/codehaus/jackson/JsonParser;
+    .param p2, "ctxt"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -90,13 +89,13 @@
 
     .prologue
     .line 85
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/ext/JodaDeserializers$DateTimeDeserializer;,"Lcom/flurry/org/codehaus/jackson/map/ext/JodaDeserializers$DateTimeDeserializer<TT;>;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/ext/JodaDeserializers$DateTimeDeserializer;, "Lcom/flurry/org/codehaus/jackson/map/ext/JodaDeserializers$DateTimeDeserializer<TT;>;"
     invoke-virtual {p1}, Lcom/flurry/org/codehaus/jackson/JsonParser;->getCurrentToken()Lcom/flurry/org/codehaus/jackson/JsonToken;
 
     move-result-object v1
 
     .line 86
-    .local v1, t:Lcom/flurry/org/codehaus/jackson/JsonToken;
+    .local v1, "t":Lcom/flurry/org/codehaus/jackson/JsonToken;
     sget-object v2, Lcom/flurry/org/codehaus/jackson/JsonToken;->VALUE_NUMBER_INT:Lcom/flurry/org/codehaus/jackson/JsonToken;
 
     if-ne v1, v2, :cond_0
@@ -132,7 +131,7 @@
     move-result-object v0
 
     .line 91
-    .local v0, str:Ljava/lang/String;
+    .local v0, "str":Ljava/lang/String;
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
     move-result v2
@@ -155,7 +154,7 @@
     goto :goto_0
 
     .line 96
-    .end local v0           #str:Ljava/lang/String;
+    .end local v0    # "str":Ljava/lang/String;
     :cond_2
     invoke-virtual {p0}, Lcom/flurry/org/codehaus/jackson/map/ext/JodaDeserializers$DateTimeDeserializer;->getValueClass()Ljava/lang/Class;
 

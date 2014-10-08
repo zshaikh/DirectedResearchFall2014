@@ -238,7 +238,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/fusepowered/util/ResponseValues;
     check-cast p0, Lcom/fusepowered/util/Ad;
 
     return-object p0
@@ -285,7 +285,7 @@
 
 .method public getChatMessages(Ljava/lang/String;)Ljava/util/ArrayList;
     .locals 1
-    .parameter "fuseId"
+    .param p1, "fuseId"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -306,11 +306,11 @@
     const/4 v0, 0x0
 
     .line 261
-    .end local p0
+    .end local p0    # "this":Lcom/fusepowered/util/ResponseValues;
     :goto_0
     return-object v0
 
-    .restart local p0
+    .restart local p0    # "this":Lcom/fusepowered/util/ResponseValues;
     :cond_0
     iget-object v0, p0, Lcom/fusepowered/util/ResponseValues;->chatMessages:Ljava/util/HashMap;
 
@@ -318,7 +318,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/fusepowered/util/ResponseValues;
     check-cast p0, Ljava/util/ArrayList;
 
     move-object v0, p0
@@ -422,7 +422,7 @@
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
     .line 155
-    .local v4, rtn:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/fusepowered/util/GameConfig;>;"
+    .local v4, "rtn":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/fusepowered/util/GameConfig;>;"
     sget-object v6, Lcom/fusepowered/fuseapi/FuseAPI;->appdata:Landroid/content/SharedPreferences;
 
     invoke-interface {v6}, Landroid/content/SharedPreferences;->getAll()Ljava/util/Map;
@@ -430,7 +430,7 @@
     move-result-object v3
 
     .line 156
-    .local v3, m:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;*>;"
+    .local v3, "m":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;*>;"
     invoke-interface {v3}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
     move-result-object v6
@@ -439,7 +439,7 @@
 
     move-result-object v1
 
-    .local v1, i:Ljava/util/Iterator;,"Ljava/util/Iterator<Ljava/lang/String;>;"
+    .local v1, "i":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/String;>;"
     :goto_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
@@ -455,7 +455,7 @@
     check-cast v2, Ljava/lang/String;
 
     .line 159
-    .local v2, k:Ljava/lang/String;
+    .local v2, "k":Ljava/lang/String;
     sget-object v6, Lcom/fusepowered/fuseapi/FuseAPI;->appdata:Landroid/content/SharedPreferences;
 
     const/4 v7, 0x0
@@ -465,7 +465,7 @@
     move-result-object v5
 
     .line 161
-    .local v5, v:Ljava/lang/String;
+    .local v5, "v":Ljava/lang/String;
     const-string v6, "GAME CONFIG"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -504,7 +504,7 @@
     invoke-direct {v0}, Lcom/fusepowered/util/GameConfig;-><init>()V
 
     .line 165
-    .local v0, gc:Lcom/fusepowered/util/GameConfig;
+    .local v0, "gc":Lcom/fusepowered/util/GameConfig;
     invoke-virtual {v0, v2}, Lcom/fusepowered/util/GameConfig;->setKey(Ljava/lang/String;)V
 
     .line 166
@@ -516,9 +516,9 @@
     goto :goto_0
 
     .line 171
-    .end local v0           #gc:Lcom/fusepowered/util/GameConfig;
-    .end local v2           #k:Ljava/lang/String;
-    .end local v5           #v:Ljava/lang/String;
+    .end local v0    # "gc":Lcom/fusepowered/util/GameConfig;
+    .end local v2    # "k":Ljava/lang/String;
+    .end local v5    # "v":Ljava/lang/String;
     :cond_0
     return-object v4
 .end method
@@ -554,7 +554,7 @@
 
 .method public getMailList(Ljava/lang/String;)Ljava/util/ArrayList;
     .locals 1
-    .parameter "fuseId"
+    .param p1, "fuseId"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -575,11 +575,11 @@
     const/4 v0, 0x0
 
     .line 280
-    .end local p0
+    .end local p0    # "this":Lcom/fusepowered/util/ResponseValues;
     :goto_0
     return-object v0
 
-    .restart local p0
+    .restart local p0    # "this":Lcom/fusepowered/util/ResponseValues;
     :cond_0
     iget-object v0, p0, Lcom/fusepowered/util/ResponseValues;->mailLists:Ljava/util/HashMap;
 
@@ -587,7 +587,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/fusepowered/util/ResponseValues;
     check-cast p0, Ljava/util/ArrayList;
 
     move-object v0, p0
@@ -647,7 +647,7 @@
     check-cast v0, Lcom/fusepowered/util/Message;
 
     .line 122
-    .local v0, rtn:Lcom/fusepowered/util/Message;
+    .local v0, "rtn":Lcom/fusepowered/util/Message;
     iget-object v1, p0, Lcom/fusepowered/util/ResponseValues;->messages:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
@@ -821,7 +821,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/fusepowered/util/ResponseValues;
     check-cast p0, Lcom/fusepowered/util/Ad;
 
     return-object p0
@@ -829,7 +829,7 @@
 
 .method public setAccount(Lcom/fusepowered/util/Account;)V
     .locals 0
-    .parameter "account"
+    .param p1, "account"    # Lcom/fusepowered/util/Account;
 
     .prologue
     .line 246
@@ -841,7 +841,7 @@
 
 .method public setAd(Lcom/fusepowered/util/Ad;)V
     .locals 1
-    .parameter "ad"
+    .param p1, "ad"    # Lcom/fusepowered/util/Ad;
 
     .prologue
     .line 220
@@ -855,7 +855,6 @@
 
 .method public setAds(Ljava/util/ArrayList;)V
     .locals 0
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -868,7 +867,7 @@
 
     .prologue
     .line 196
-    .local p1, ads:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/fusepowered/util/AdProvider;>;"
+    .local p1, "ads":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/fusepowered/util/AdProvider;>;"
     iput-object p1, p0, Lcom/fusepowered/util/ResponseValues;->ads:Ljava/util/ArrayList;
 
     .line 197
@@ -877,7 +876,7 @@
 
 .method public setApplifierId(Ljava/lang/String;)V
     .locals 0
-    .parameter "applifierId"
+    .param p1, "applifierId"    # Ljava/lang/String;
 
     .prologue
     .line 134
@@ -889,7 +888,7 @@
 
 .method public setApplifierUseImpact(Z)V
     .locals 0
-    .parameter "applifierUseImpact"
+    .param p1, "applifierUseImpact"    # Z
 
     .prologue
     .line 365
@@ -901,8 +900,7 @@
 
 .method public setChatMessages(Ljava/lang/String;Ljava/util/ArrayList;)V
     .locals 1
-    .parameter "fuseId"
-    .parameter
+    .param p1, "fuseId"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -916,7 +914,7 @@
 
     .prologue
     .line 265
-    .local p2, chatMessages:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/fusepowered/util/ChatMessage;>;"
+    .local p2, "chatMessages":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/fusepowered/util/ChatMessage;>;"
     iget-object v0, p0, Lcom/fusepowered/util/ResponseValues;->chatMessages:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1, p2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -927,7 +925,7 @@
 
 .method public setDisableAll(Z)V
     .locals 0
-    .parameter "disableAll"
+    .param p1, "disableAll"    # Z
 
     .prologue
     .line 61
@@ -939,7 +937,7 @@
 
 .method public setDisableAnalytics(Z)V
     .locals 0
-    .parameter "disableAnalytics"
+    .param p1, "disableAnalytics"    # Z
 
     .prologue
     .line 85
@@ -951,7 +949,7 @@
 
 .method public setDisableConfiguration(Z)V
     .locals 0
-    .parameter "disableConfiguration"
+    .param p1, "disableConfiguration"    # Z
 
     .prologue
     .line 77
@@ -963,7 +961,7 @@
 
 .method public setDisableNotifications(Z)V
     .locals 0
-    .parameter "disableNotifications"
+    .param p1, "disableNotifications"    # Z
 
     .prologue
     .line 69
@@ -975,7 +973,6 @@
 
 .method public setDlc(Ljava/util/ArrayList;)V
     .locals 0
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -988,7 +985,7 @@
 
     .prologue
     .line 204
-    .local p1, dlc:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/fusepowered/util/DLC;>;"
+    .local p1, "dlc":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/fusepowered/util/DLC;>;"
     iput-object p1, p0, Lcom/fusepowered/util/ResponseValues;->dlc:Ljava/util/ArrayList;
 
     .line 205
@@ -997,7 +994,6 @@
 
 .method public setEnemiesList(Ljava/util/ArrayList;)V
     .locals 0
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1010,7 +1006,7 @@
 
     .prologue
     .line 309
-    .local p1, enemiesList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/fusepowered/util/Player;>;"
+    .local p1, "enemiesList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/fusepowered/util/Player;>;"
     iput-object p1, p0, Lcom/fusepowered/util/ResponseValues;->enemiesList:Ljava/util/ArrayList;
 
     .line 310
@@ -1019,7 +1015,7 @@
 
 .method public setError(Ljava/lang/String;)V
     .locals 0
-    .parameter "error"
+    .param p1, "error"    # Ljava/lang/String;
 
     .prologue
     .line 333
@@ -1031,7 +1027,6 @@
 
 .method public setFriendsList(Ljava/util/ArrayList;)V
     .locals 0
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1044,7 +1039,7 @@
 
     .prologue
     .line 301
-    .local p1, friendsList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/fusepowered/util/Player;>;"
+    .local p1, "friendsList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/fusepowered/util/Player;>;"
     iput-object p1, p0, Lcom/fusepowered/util/ResponseValues;->friendsList:Ljava/util/ArrayList;
 
     .line 302
@@ -1053,7 +1048,7 @@
 
 .method public setFuseId(Ljava/lang/String;)V
     .locals 0
-    .parameter "fuseId"
+    .param p1, "fuseId"    # Ljava/lang/String;
 
     .prologue
     .line 317
@@ -1065,7 +1060,6 @@
 
 .method public setGameConfigs(Ljava/util/ArrayList;)V
     .locals 6
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1078,7 +1072,7 @@
 
     .prologue
     .line 176
-    .local p1, gameConfigs:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/fusepowered/util/GameConfig;>;"
+    .local p1, "gameConfigs":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/fusepowered/util/GameConfig;>;"
     sget-object v3, Lcom/fusepowered/fuseapi/FuseAPI;->appdata:Landroid/content/SharedPreferences;
 
     invoke-interface {v3}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
@@ -1086,7 +1080,7 @@
     move-result-object v1
 
     .line 179
-    .local v1, e:Landroid/content/SharedPreferences$Editor;
+    .local v1, "e":Landroid/content/SharedPreferences$Editor;
     invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->clear()Landroid/content/SharedPreferences$Editor;
 
     .line 180
@@ -1097,7 +1091,7 @@
 
     move-result-object v2
 
-    .local v2, i:Ljava/util/Iterator;,"Ljava/util/Iterator<Lcom/fusepowered/util/GameConfig;>;"
+    .local v2, "i":Ljava/util/Iterator;, "Ljava/util/Iterator<Lcom/fusepowered/util/GameConfig;>;"
     :goto_0
     invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
@@ -1113,7 +1107,7 @@
     check-cast v0, Lcom/fusepowered/util/GameConfig;
 
     .line 185
-    .local v0, currItem:Lcom/fusepowered/util/GameConfig;
+    .local v0, "currItem":Lcom/fusepowered/util/GameConfig;
     invoke-virtual {v0}, Lcom/fusepowered/util/GameConfig;->getKey()Ljava/lang/String;
 
     move-result-object v3
@@ -1168,7 +1162,7 @@
     goto :goto_0
 
     .line 188
-    .end local v0           #currItem:Lcom/fusepowered/util/GameConfig;
+    .end local v0    # "currItem":Lcom/fusepowered/util/GameConfig;
     :cond_0
     invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
@@ -1178,7 +1172,7 @@
 
 .method public setGameKeyValuePairs(Lcom/fusepowered/util/GameKeyValuePairs;)V
     .locals 0
-    .parameter "gameKeyValuePairs"
+    .param p1, "gameKeyValuePairs"    # Lcom/fusepowered/util/GameKeyValuePairs;
 
     .prologue
     .line 238
@@ -1190,7 +1184,6 @@
 
 .method public setIncentives(Ljava/util/ArrayList;)V
     .locals 0
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1203,7 +1196,7 @@
 
     .prologue
     .line 254
-    .local p1, incentives:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/fusepowered/util/Incentive;>;"
+    .local p1, "incentives":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/fusepowered/util/Incentive;>;"
     iput-object p1, p0, Lcom/fusepowered/util/ResponseValues;->incentives:Ljava/util/ArrayList;
 
     .line 255
@@ -1212,8 +1205,7 @@
 
 .method public setMailList(Ljava/lang/String;Ljava/util/ArrayList;)V
     .locals 1
-    .parameter "fuseId"
-    .parameter
+    .param p1, "fuseId"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1227,7 +1219,7 @@
 
     .prologue
     .line 284
-    .local p2, mailList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/fusepowered/util/Mail;>;"
+    .local p2, "mailList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/fusepowered/util/Mail;>;"
     iget-object v0, p0, Lcom/fusepowered/util/ResponseValues;->mailLists:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1, p2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -1238,7 +1230,6 @@
 
 .method public setMessages(Ljava/util/ArrayList;)V
     .locals 0
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1251,7 +1242,7 @@
 
     .prologue
     .line 147
-    .local p1, messages:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/fusepowered/util/Message;>;"
+    .local p1, "messages":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/fusepowered/util/Message;>;"
     iput-object p1, p0, Lcom/fusepowered/util/ResponseValues;->messages:Ljava/util/ArrayList;
 
     .line 148
@@ -1260,7 +1251,7 @@
 
 .method public setReqId(Ljava/lang/String;)V
     .locals 0
-    .parameter "requestId"
+    .param p1, "requestId"    # Ljava/lang/String;
 
     .prologue
     .line 321
@@ -1272,7 +1263,7 @@
 
 .method public setSessionId(Ljava/lang/String;)V
     .locals 0
-    .parameter "sessionIdIn"
+    .param p1, "sessionIdIn"    # Ljava/lang/String;
 
     .prologue
     .line 53
@@ -1284,7 +1275,6 @@
 
 .method public setSignPosts(Ljava/util/ArrayList;)V
     .locals 0
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1297,7 +1287,7 @@
 
     .prologue
     .line 273
-    .local p1, signPosts:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/fusepowered/util/SignPost;>;"
+    .local p1, "signPosts":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/fusepowered/util/SignPost;>;"
     iput-object p1, p0, Lcom/fusepowered/util/ResponseValues;->signPosts:Ljava/util/ArrayList;
 
     .line 274
@@ -1306,7 +1296,7 @@
 
 .method public setTimestamp(Ljava/lang/String;)V
     .locals 0
-    .parameter "timestamp"
+    .param p1, "timestamp"    # Ljava/lang/String;
 
     .prologue
     .line 93
@@ -1318,7 +1308,7 @@
 
 .method public setUserCity(Ljava/lang/String;)V
     .locals 0
-    .parameter "userCity"
+    .param p1, "userCity"    # Ljava/lang/String;
 
     .prologue
     .line 101
@@ -1330,7 +1320,7 @@
 
 .method public setUserCountry(Ljava/lang/String;)V
     .locals 0
-    .parameter "userCountry"
+    .param p1, "userCountry"    # Ljava/lang/String;
 
     .prologue
     .line 109
@@ -1342,7 +1332,6 @@
 
 .method public setUserTransactionLogs(Ljava/util/ArrayList;)V
     .locals 0
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1355,7 +1344,7 @@
 
     .prologue
     .line 293
-    .local p1, userTransactionLogs:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/fusepowered/util/UserTransactionLog;>;"
+    .local p1, "userTransactionLogs":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/fusepowered/util/UserTransactionLog;>;"
     iput-object p1, p0, Lcom/fusepowered/util/ResponseValues;->userTransactionLogs:Ljava/util/ArrayList;
 
     .line 294
@@ -1364,7 +1353,7 @@
 
 .method public setVungleId(Ljava/lang/String;)V
     .locals 0
-    .parameter "vungleId"
+    .param p1, "vungleId"    # Ljava/lang/String;
 
     .prologue
     .line 142
@@ -1654,7 +1643,7 @@
     move-result-object v0
 
     .line 361
-    .local v0, buf:Ljava/lang/StringBuilder;
+    .local v0, "buf":Ljava/lang/StringBuilder;
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1

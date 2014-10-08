@@ -68,7 +68,6 @@
 # virtual methods
 .method final declared-synchronized A(Ljava/lang/String;)Lcom/flurry/android/ac;
     .locals 1
-    .parameter
 
     .prologue
     .line 19
@@ -123,7 +122,6 @@
 
 .method final declared-synchronized B(Ljava/lang/String;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 61
@@ -152,10 +150,6 @@
 
 .method final declared-synchronized a(Lcom/flurry/android/FlurryAds;Landroid/content/Context;Landroid/view/ViewGroup;Ljava/lang/String;)Lcom/flurry/android/ac;
     .locals 3
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 37
@@ -255,8 +249,6 @@
 
 .method final declared-synchronized a(Ljava/lang/String;Lcom/flurry/android/bf;)V
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 66
@@ -285,7 +277,6 @@
 
 .method final declared-synchronized n(Ljava/lang/String;)Lcom/flurry/android/bf;
     .locals 1
-    .parameter
 
     .prologue
     .line 71
@@ -318,7 +309,6 @@
 
 .method final declared-synchronized o(Ljava/lang/String;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 77

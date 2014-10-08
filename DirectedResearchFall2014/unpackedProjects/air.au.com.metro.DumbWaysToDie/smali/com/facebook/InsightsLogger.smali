@@ -129,7 +129,7 @@
 
     invoke-virtual {v0, v1, p0}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    const-wide/high16 v1, 0x3ff0
+    const-wide/high16 v1, 0x3ff0000000000000L
 
     cmpl-double v1, p1, v1
 

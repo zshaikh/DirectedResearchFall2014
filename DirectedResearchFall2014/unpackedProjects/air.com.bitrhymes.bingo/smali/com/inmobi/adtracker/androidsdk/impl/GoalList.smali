@@ -29,9 +29,6 @@
 # virtual methods
 .method public addGoal(Ljava/lang/String;IJ)Z
     .locals 5
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const/4 v4, 0x1
@@ -204,7 +201,6 @@
 
 .method public getGoal(Ljava/lang/String;)Lcom/inmobi/adtracker/androidsdk/impl/Goal;
     .locals 3
-    .parameter
 
     .prologue
     const/4 v2, 0x0
@@ -345,8 +341,6 @@
 
 .method public removeGoal(Ljava/lang/String;I)Z
     .locals 5
-    .parameter
-    .parameter
 
     .prologue
     const/4 v3, 0x1

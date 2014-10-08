@@ -58,9 +58,7 @@
 
 .method public constructor <init>(Lcom/fusepowered/m1/google/gson/Gson;Lcom/fusepowered/m1/google/gson/TypeAdapter;Ljava/lang/Class;)V
     .locals 1
-    .parameter "context"
-    .parameter
-    .parameter
+    .param p1, "context"    # Lcom/fusepowered/m1/google/gson/Gson;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -74,9 +72,9 @@
 
     .prologue
     .line 57
-    .local p0, this:Lcom/fusepowered/m1/google/gson/internal/bind/ArrayTypeAdapter;,"Lcom/fusepowered/m1/google/gson/internal/bind/ArrayTypeAdapter<TE;>;"
-    .local p2, componentTypeAdapter:Lcom/fusepowered/m1/google/gson/TypeAdapter;,"Lcom/fusepowered/m1/google/gson/TypeAdapter<TE;>;"
-    .local p3, componentType:Ljava/lang/Class;,"Ljava/lang/Class<TE;>;"
+    .local p0, "this":Lcom/fusepowered/m1/google/gson/internal/bind/ArrayTypeAdapter;, "Lcom/fusepowered/m1/google/gson/internal/bind/ArrayTypeAdapter<TE;>;"
+    .local p2, "componentTypeAdapter":Lcom/fusepowered/m1/google/gson/TypeAdapter;, "Lcom/fusepowered/m1/google/gson/TypeAdapter<TE;>;"
+    .local p3, "componentType":Ljava/lang/Class;, "Ljava/lang/Class<TE;>;"
     invoke-direct {p0}, Lcom/fusepowered/m1/google/gson/TypeAdapter;-><init>()V
 
     .line 58
@@ -97,7 +95,7 @@
 # virtual methods
 .method public read(Lcom/fusepowered/m1/google/gson/stream/JsonReader;)Ljava/lang/Object;
     .locals 6
-    .parameter "in"
+    .param p1, "in"    # Lcom/fusepowered/m1/google/gson/stream/JsonReader;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -106,7 +104,7 @@
 
     .prologue
     .line 64
-    .local p0, this:Lcom/fusepowered/m1/google/gson/internal/bind/ArrayTypeAdapter;,"Lcom/fusepowered/m1/google/gson/internal/bind/ArrayTypeAdapter<TE;>;"
+    .local p0, "this":Lcom/fusepowered/m1/google/gson/internal/bind/ArrayTypeAdapter;, "Lcom/fusepowered/m1/google/gson/internal/bind/ArrayTypeAdapter<TE;>;"
     invoke-virtual {p1}, Lcom/fusepowered/m1/google/gson/stream/JsonReader;->peek()Lcom/fusepowered/m1/google/gson/stream/JsonToken;
 
     move-result-object v4
@@ -132,7 +130,7 @@
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
     .line 70
-    .local v3, list:Ljava/util/List;,"Ljava/util/List<TE;>;"
+    .local v3, "list":Ljava/util/List;, "Ljava/util/List<TE;>;"
     invoke-virtual {p1}, Lcom/fusepowered/m1/google/gson/stream/JsonReader;->beginArray()V
 
     .line 71
@@ -151,13 +149,13 @@
     move-result-object v2
 
     .line 73
-    .local v2, instance:Ljava/lang/Object;,"TE;"
+    .local v2, "instance":Ljava/lang/Object;, "TE;"
     invoke-interface {v3, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
 
     .line 75
-    .end local v2           #instance:Ljava/lang/Object;,"TE;"
+    .end local v2    # "instance":Ljava/lang/Object;, "TE;"
     :cond_1
     invoke-virtual {p1}, Lcom/fusepowered/m1/google/gson/stream/JsonReader;->endArray()V
 
@@ -173,10 +171,10 @@
     move-result-object v0
 
     .line 77
-    .local v0, array:Ljava/lang/Object;
+    .local v0, "array":Ljava/lang/Object;
     const/4 v1, 0x0
 
-    .local v1, i:I
+    .local v1, "i":I
     :goto_2
     invoke-interface {v3}, Ljava/util/List;->size()I
 
@@ -205,8 +203,8 @@
 
 .method public write(Lcom/fusepowered/m1/google/gson/stream/JsonWriter;Ljava/lang/Object;)V
     .locals 4
-    .parameter "out"
-    .parameter "array"
+    .param p1, "out"    # Lcom/fusepowered/m1/google/gson/stream/JsonWriter;
+    .param p2, "array"    # Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -215,7 +213,7 @@
 
     .prologue
     .line 85
-    .local p0, this:Lcom/fusepowered/m1/google/gson/internal/bind/ArrayTypeAdapter;,"Lcom/fusepowered/m1/google/gson/internal/bind/ArrayTypeAdapter<TE;>;"
+    .local p0, "this":Lcom/fusepowered/m1/google/gson/internal/bind/ArrayTypeAdapter;, "Lcom/fusepowered/m1/google/gson/internal/bind/ArrayTypeAdapter<TE;>;"
     if-nez p2, :cond_0
 
     .line 86
@@ -232,12 +230,12 @@
     .line 91
     const/4 v0, 0x0
 
-    .local v0, i:I
+    .local v0, "i":I
     invoke-static {p2}, Ljava/lang/reflect/Array;->getLength(Ljava/lang/Object;)I
 
     move-result v1
 
-    .local v1, length:I
+    .local v1, "length":I
     :goto_1
     if-ge v0, v1, :cond_1
 
@@ -247,7 +245,7 @@
     move-result-object v2
 
     .line 93
-    .local v2, value:Ljava/lang/Object;,"TE;"
+    .local v2, "value":Ljava/lang/Object;, "TE;"
     iget-object v3, p0, Lcom/fusepowered/m1/google/gson/internal/bind/ArrayTypeAdapter;->componentTypeAdapter:Lcom/fusepowered/m1/google/gson/TypeAdapter;
 
     invoke-virtual {v3, p1, v2}, Lcom/fusepowered/m1/google/gson/TypeAdapter;->write(Lcom/fusepowered/m1/google/gson/stream/JsonWriter;Ljava/lang/Object;)V
@@ -258,7 +256,7 @@
     goto :goto_1
 
     .line 95
-    .end local v2           #value:Ljava/lang/Object;,"TE;"
+    .end local v2    # "value":Ljava/lang/Object;, "TE;"
     :cond_1
     invoke-virtual {p1}, Lcom/fusepowered/m1/google/gson/stream/JsonWriter;->endArray()Lcom/fusepowered/m1/google/gson/stream/JsonWriter;
 

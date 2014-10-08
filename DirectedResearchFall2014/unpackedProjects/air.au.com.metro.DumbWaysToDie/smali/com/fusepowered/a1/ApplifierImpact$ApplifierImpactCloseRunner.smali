@@ -26,7 +26,6 @@
 # direct methods
 .method private constructor <init>(Lcom/fusepowered/a1/ApplifierImpact;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 755
@@ -44,8 +43,6 @@
 
 .method synthetic constructor <init>(Lcom/fusepowered/a1/ApplifierImpact;Lcom/fusepowered/a1/ApplifierImpact$ApplifierImpactCloseRunner;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 755
@@ -56,7 +53,6 @@
 
 .method static synthetic access$1(Lcom/fusepowered/a1/ApplifierImpact$ApplifierImpactCloseRunner;)Lcom/fusepowered/a1/ApplifierImpact;
     .locals 1
-    .parameter
 
     .prologue
     .line 755
@@ -98,13 +94,13 @@
     move-result-object v1
 
     .line 762
-    .local v1, dataOk:Ljava/lang/Boolean;
+    .local v1, "dataOk":Ljava/lang/Boolean;
     new-instance v0, Lorg/json/JSONObject;
 
     invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
 
     .line 765
-    .local v0, data:Lorg/json/JSONObject;
+    .local v0, "data":Lorg/json/JSONObject;
     :try_start_0
     const-string v4, "action"
 
@@ -157,7 +153,7 @@
     invoke-direct {v3}, Ljava/util/Timer;-><init>()V
 
     .line 777
-    .local v3, testTimer:Ljava/util/Timer;
+    .local v3, "testTimer":Ljava/util/Timer;
     new-instance v4, Lcom/fusepowered/a1/ApplifierImpact$ApplifierImpactCloseRunner$1;
 
     invoke-direct {v4, p0}, Lcom/fusepowered/a1/ApplifierImpact$ApplifierImpactCloseRunner$1;-><init>(Lcom/fusepowered/a1/ApplifierImpact$ApplifierImpactCloseRunner;)V
@@ -169,22 +165,22 @@
     invoke-virtual {v3, v4, v5, v6}, Ljava/util/Timer;->schedule(Ljava/util/TimerTask;J)V
 
     .line 802
-    .end local v0           #data:Lorg/json/JSONObject;
-    .end local v1           #dataOk:Ljava/lang/Boolean;
-    .end local v3           #testTimer:Ljava/util/Timer;
+    .end local v0    # "data":Lorg/json/JSONObject;
+    .end local v1    # "dataOk":Ljava/lang/Boolean;
+    .end local v3    # "testTimer":Ljava/util/Timer;
     :cond_0
     return-void
 
     .line 767
-    .restart local v0       #data:Lorg/json/JSONObject;
-    .restart local v1       #dataOk:Ljava/lang/Boolean;
+    .restart local v0    # "data":Lorg/json/JSONObject;
+    .restart local v1    # "dataOk":Ljava/lang/Boolean;
     :catch_0
     move-exception v4
 
     move-object v2, v4
 
     .line 768
-    .local v2, e:Ljava/lang/Exception;
+    .local v2, "e":Ljava/lang/Exception;
     const/4 v4, 0x0
 
     invoke-static {v4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;

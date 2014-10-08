@@ -21,9 +21,9 @@
 # virtual methods
 .method public reportCrashs([Lcom/fusepowered/crashlog/CrashData;Landroid/content/Context;Lcom/fusepowered/crashlog/senders/CrashSender$CrashSenderCallback;)V
     .locals 7
-    .parameter "crashes"
-    .parameter "context"
-    .parameter "callback"
+    .param p1, "crashes"    # [Lcom/fusepowered/crashlog/CrashData;
+    .param p2, "context"    # Landroid/content/Context;
+    .param p3, "callback"    # Lcom/fusepowered/crashlog/senders/CrashSender$CrashSenderCallback;
 
     .prologue
     .line 24
@@ -55,20 +55,20 @@
     :cond_1
     move-object v0, p1
 
-    .local v0, arr$:[Lcom/fusepowered/crashlog/CrashData;
+    .local v0, "arr$":[Lcom/fusepowered/crashlog/CrashData;
     array-length v3, v0
 
-    .local v3, len$:I
+    .local v3, "len$":I
     const/4 v2, 0x0
 
-    .local v2, i$:I
+    .local v2, "i$":I
     :goto_0
     if-ge v2, v3, :cond_2
 
     aget-object v1, v0, v2
 
     .line 32
-    .local v1, crash:Lcom/fusepowered/crashlog/CrashData;
+    .local v1, "crash":Lcom/fusepowered/crashlog/CrashData;
     invoke-virtual {v1}, Lcom/fusepowered/crashlog/CrashData;->getCrashedThreadState()Ljava/lang/String;
 
     move-result-object v4
@@ -89,7 +89,7 @@
     goto :goto_0
 
     .line 35
-    .end local v1           #crash:Lcom/fusepowered/crashlog/CrashData;
+    .end local v1    # "crash":Lcom/fusepowered/crashlog/CrashData;
     :cond_2
     if-eqz p3, :cond_3
 

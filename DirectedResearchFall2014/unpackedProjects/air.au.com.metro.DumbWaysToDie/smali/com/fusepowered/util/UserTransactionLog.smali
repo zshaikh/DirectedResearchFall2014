@@ -57,15 +57,15 @@
 
 .method public constructor <init>(ILjava/lang/String;Ljava/lang/String;ILcom/fusepowered/util/FuseAttackRobberyEventType;ZIII)V
     .locals 0
-    .parameter "id"
-    .parameter "alias"
-    .parameter "fuseId"
-    .parameter "level"
-    .parameter "eventType"
-    .parameter "wasWon"
-    .parameter "amountWon"
-    .parameter "amountLost"
-    .parameter "date"
+    .param p1, "id"    # I
+    .param p2, "alias"    # Ljava/lang/String;
+    .param p3, "fuseId"    # Ljava/lang/String;
+    .param p4, "level"    # I
+    .param p5, "eventType"    # Lcom/fusepowered/util/FuseAttackRobberyEventType;
+    .param p6, "wasWon"    # Z
+    .param p7, "amountWon"    # I
+    .param p8, "amountLost"    # I
+    .param p9, "date"    # I
 
     .prologue
     .line 25
@@ -196,7 +196,7 @@
 
 .method public setAlias(Ljava/lang/String;)V
     .locals 0
-    .parameter "alias"
+    .param p1, "alias"    # Ljava/lang/String;
 
     .prologue
     .line 50
@@ -208,7 +208,7 @@
 
 .method public setAmountLost(I)V
     .locals 0
-    .parameter "amountLost"
+    .param p1, "amountLost"    # I
 
     .prologue
     .line 98
@@ -220,7 +220,7 @@
 
 .method public setAmountWon(I)V
     .locals 0
-    .parameter "amountWon"
+    .param p1, "amountWon"    # I
 
     .prologue
     .line 90
@@ -232,7 +232,7 @@
 
 .method public setDate(I)V
     .locals 0
-    .parameter "date"
+    .param p1, "date"    # I
 
     .prologue
     .line 106
@@ -244,7 +244,7 @@
 
 .method public setEventType(Lcom/fusepowered/util/FuseAttackRobberyEventType;)V
     .locals 0
-    .parameter "eventType"
+    .param p1, "eventType"    # Lcom/fusepowered/util/FuseAttackRobberyEventType;
 
     .prologue
     .line 74
@@ -256,7 +256,7 @@
 
 .method public setFuseId(Ljava/lang/String;)V
     .locals 0
-    .parameter "fuseId"
+    .param p1, "fuseId"    # Ljava/lang/String;
 
     .prologue
     .line 58
@@ -268,7 +268,7 @@
 
 .method public setId(I)V
     .locals 0
-    .parameter "id"
+    .param p1, "id"    # I
 
     .prologue
     .line 42
@@ -280,7 +280,7 @@
 
 .method public setLevel(I)V
     .locals 0
-    .parameter "level"
+    .param p1, "level"    # I
 
     .prologue
     .line 66
@@ -292,7 +292,7 @@
 
 .method public setWasWon(Z)V
     .locals 0
-    .parameter "wasWon"
+    .param p1, "wasWon"    # Z
 
     .prologue
     .line 82
@@ -316,13 +316,13 @@
     mul-long v3, v5, v7
 
     .line 112
-    .local v3, ms:J
+    .local v3, "ms":J
     new-instance v1, Ljava/util/Date;
 
     invoke-direct {v1, v3, v4}, Ljava/util/Date;-><init>(J)V
 
     .line 113
-    .local v1, d:Ljava/util/Date;
+    .local v1, "d":Ljava/util/Date;
     new-instance v5, Ljava/lang/StringBuilder;
 
     sget-object v6, Lcom/fusepowered/util/UserTransactionLog;->sdf:Ljava/text/SimpleDateFormat;
@@ -344,7 +344,7 @@
     move-result-object v2
 
     .line 115
-    .local v2, displayDate:Ljava/lang/String;
+    .local v2, "displayDate":Ljava/lang/String;
     new-instance v5, Ljava/lang/StringBuilder;
 
     const-string v6, "UserTransactionLog [id="
@@ -458,7 +458,7 @@
     move-result-object v0
 
     .line 125
-    .local v0, buf:Ljava/lang/StringBuilder;
+    .local v0, "buf":Ljava/lang/StringBuilder;
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v5

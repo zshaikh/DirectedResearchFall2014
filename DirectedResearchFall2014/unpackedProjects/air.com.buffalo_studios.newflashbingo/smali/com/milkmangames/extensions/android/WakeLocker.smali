@@ -20,7 +20,7 @@
 
 .method public static acquire(Landroid/content/Context;)V
     .locals 4
-    .parameter "ctx"
+    .param p0, "ctx"    # Landroid/content/Context;
 
     .prologue
     .line 10
@@ -53,7 +53,7 @@
     check-cast v0, Landroid/os/PowerManager;
 
     .line 21
-    .local v0, pm:Landroid/os/PowerManager;
+    .local v0, "pm":Landroid/os/PowerManager;
     invoke-virtual {v0}, Landroid/os/PowerManager;->isScreenOn()Z
 
     move-result v1

@@ -26,8 +26,6 @@
 # direct methods
 .method constructor <init>(Lcom/facebook/widget/UserSettingsFragment;Lcom/facebook/Session;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 1
@@ -45,8 +43,8 @@
 # virtual methods
 .method public onCompleted(Lcom/facebook/model/GraphUser;Lcom/facebook/Response;)V
     .locals 2
-    .parameter "me"
-    .parameter "response"
+    .param p1, "me"    # Lcom/facebook/model/GraphUser;
+    .param p2, "response"    # Lcom/facebook/Response;
 
     .prologue
     .line 351
@@ -63,13 +61,12 @@
     .line 352
     iget-object v0, p0, Lcom/facebook/widget/UserSettingsFragment$1;->this$0:Lcom/facebook/widget/UserSettingsFragment;
 
-    #setter for: Lcom/facebook/widget/UserSettingsFragment;->user:Lcom/facebook/model/GraphUser;
     invoke-static {v0, p1}, Lcom/facebook/widget/UserSettingsFragment;->access$3(Lcom/facebook/widget/UserSettingsFragment;Lcom/facebook/model/GraphUser;)V
 
     .line 353
     iget-object v0, p0, Lcom/facebook/widget/UserSettingsFragment$1;->this$0:Lcom/facebook/widget/UserSettingsFragment;
 
-    #calls: Lcom/facebook/widget/UserSettingsFragment;->updateUI()V
+    # invokes: Lcom/facebook/widget/UserSettingsFragment;->updateUI()V
     invoke-static {v0}, Lcom/facebook/widget/UserSettingsFragment;->access$4(Lcom/facebook/widget/UserSettingsFragment;)V
 
     .line 355
@@ -83,7 +80,7 @@
     .line 356
     iget-object v0, p0, Lcom/facebook/widget/UserSettingsFragment$1;->this$0:Lcom/facebook/widget/UserSettingsFragment;
 
-    #getter for: Lcom/facebook/widget/UserSettingsFragment;->loginButton:Lcom/facebook/widget/LoginButton;
+    # getter for: Lcom/facebook/widget/UserSettingsFragment;->loginButton:Lcom/facebook/widget/LoginButton;
     invoke-static {v0}, Lcom/facebook/widget/UserSettingsFragment;->access$5(Lcom/facebook/widget/UserSettingsFragment;)Lcom/facebook/widget/LoginButton;
 
     move-result-object v0

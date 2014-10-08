@@ -26,8 +26,6 @@
 # direct methods
 .method constructor <init>(Ljava/lang/String;Landroid/content/Context;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 104
@@ -86,7 +84,7 @@
     invoke-direct {v2, v4}, Lorg/apache/http/client/methods/HttpGet;-><init>(Ljava/lang/String;)V
 
     .line 112
-    .local v2, httpGet:Lorg/apache/http/client/methods/HttpGet;
+    .local v2, "httpGet":Lorg/apache/http/client/methods/HttpGet;
     new-instance v4, Lorg/apache/http/impl/client/DefaultHttpClient;
 
     invoke-direct {v4}, Lorg/apache/http/impl/client/DefaultHttpClient;-><init>()V
@@ -96,7 +94,7 @@
     move-result-object v3
 
     .line 113
-    .local v3, response:Lorg/apache/http/HttpResponse;
+    .local v3, "response":Lorg/apache/http/HttpResponse;
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -198,21 +196,21 @@
     check-cast v1, Lcom/fusepowered/m1/android/MRaid$Finished;
 
     .line 121
-    .local v1, fin:Lcom/fusepowered/m1/android/MRaid$Finished;
+    .local v1, "fin":Lcom/fusepowered/m1/android/MRaid$Finished;
     if-eqz v1, :cond_1
 
     .line 123
     invoke-interface {v1}, Lcom/fusepowered/m1/android/MRaid$Finished;->finished()V
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/net/MalformedURLException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_2
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 143
-    .end local v1           #fin:Lcom/fusepowered/m1/android/MRaid$Finished;
-    .end local v2           #httpGet:Lorg/apache/http/client/methods/HttpGet;
-    .end local v3           #response:Lorg/apache/http/HttpResponse;
+    .end local v1    # "fin":Lcom/fusepowered/m1/android/MRaid$Finished;
+    .end local v2    # "httpGet":Lorg/apache/http/client/methods/HttpGet;
+    .end local v3    # "response":Lorg/apache/http/HttpResponse;
     :cond_1
     :goto_0
     return-void
@@ -224,7 +222,7 @@
     move-object v0, v4
 
     .line 130
-    .local v0, e:Ljava/net/MalformedURLException;
+    .local v0, "e":Ljava/net/MalformedURLException;
     :try_start_1
     invoke-virtual {v0}, Ljava/net/MalformedURLException;->printStackTrace()V
     :try_end_1
@@ -233,7 +231,7 @@
     goto :goto_0
 
     .line 141
-    .end local v0           #e:Ljava/net/MalformedURLException;
+    .end local v0    # "e":Ljava/net/MalformedURLException;
     :catchall_0
     move-exception v4
 
@@ -246,21 +244,21 @@
     move-object v0, v4
 
     .line 134
-    .local v0, e:Ljava/lang/IllegalStateException;
+    .local v0, "e":Ljava/lang/IllegalStateException;
     :try_start_2
     invoke-virtual {v0}, Ljava/lang/IllegalStateException;->printStackTrace()V
 
     goto :goto_0
 
     .line 136
-    .end local v0           #e:Ljava/lang/IllegalStateException;
+    .end local v0    # "e":Ljava/lang/IllegalStateException;
     :catch_2
     move-exception v4
 
     move-object v0, v4
 
     .line 138
-    .local v0, e:Ljava/io/IOException;
+    .local v0, "e":Ljava/io/IOException;
     invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0

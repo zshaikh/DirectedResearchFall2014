@@ -28,7 +28,6 @@
 # direct methods
 .method private constructor <init>(Lcom/fusepowered/m1/android/MMAdImplController;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 449
@@ -41,8 +40,8 @@
 
 .method synthetic constructor <init>(Lcom/fusepowered/m1/android/MMAdImplController;Lcom/fusepowered/m1/android/MMAdImplController$1;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
+    .param p1, "x0"    # Lcom/fusepowered/m1/android/MMAdImplController;
+    .param p2, "x1"    # Lcom/fusepowered/m1/android/MMAdImplController$1;
 
     .prologue
     .line 449
@@ -66,7 +65,7 @@
     const/4 v0, 0x0
 
     .line 534
-    .local v0, adImpl:Lcom/fusepowered/m1/android/MMAdImpl;
+    .local v0, "adImpl":Lcom/fusepowered/m1/android/MMAdImpl;
     iget-object v7, p0, Lcom/fusepowered/m1/android/MMAdImplController$RequestAdRunnable;->this$0:Lcom/fusepowered/m1/android/MMAdImplController;
 
     iget-object v7, v7, Lcom/fusepowered/m1/android/MMAdImplController;->adImplRef:Ljava/lang/ref/WeakReference;
@@ -82,11 +81,11 @@
 
     move-result-object v0
 
-    .end local v0           #adImpl:Lcom/fusepowered/m1/android/MMAdImpl;
+    .end local v0    # "adImpl":Lcom/fusepowered/m1/android/MMAdImpl;
     check-cast v0, Lcom/fusepowered/m1/android/MMAdImpl;
 
     .line 540
-    .restart local v0       #adImpl:Lcom/fusepowered/m1/android/MMAdImpl;
+    .restart local v0    # "adImpl":Lcom/fusepowered/m1/android/MMAdImpl;
     :cond_0
     if-eqz v0, :cond_2
 
@@ -99,7 +98,7 @@
     invoke-direct {v6, v7}, Ljava/util/TreeMap;-><init>(Ljava/util/Comparator;)V
 
     .line 544
-    .local v6, paramsMap:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v6, "paramsMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-virtual {v0, v6}, Lcom/fusepowered/m1/android/MMAdImpl;->insertUrlAdMetaValues(Ljava/util/Map;)V
 
     .line 545
@@ -130,13 +129,13 @@
     invoke-direct {v1, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     .line 550
-    .local v1, adUrlBuilder:Ljava/lang/StringBuilder;
+    .local v1, "adUrlBuilder":Ljava/lang/StringBuilder;
     invoke-interface {v6}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object v3
 
     .line 551
-    .local v3, e:Ljava/util/Set;,"Ljava/util/Set<Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;>;"
+    .local v3, "e":Ljava/util/Set;, "Ljava/util/Set<Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;>;"
     invoke-virtual {v3}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v7
@@ -152,7 +151,7 @@
 
     move-result-object v5
 
-    .local v5, i$:Ljava/util/Iterator;
+    .local v5, "i$":Ljava/util/Iterator;
     :goto_0
     invoke-interface {v5}, Ljava/util/Iterator;->hasNext()Z
 
@@ -167,7 +166,7 @@
     check-cast v4, Ljava/util/Map$Entry;
 
     .line 553
-    .local v4, entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v4, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v8, "%s=%s&"
 
     const/4 v7, 0x2
@@ -209,18 +208,18 @@
     goto :goto_0
 
     .line 563
-    .end local v1           #adUrlBuilder:Ljava/lang/StringBuilder;
-    .end local v3           #e:Ljava/util/Set;,"Ljava/util/Set<Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;>;"
-    .end local v4           #entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
-    .end local v5           #i$:Ljava/util/Iterator;
-    .end local v6           #paramsMap:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .end local v1    # "adUrlBuilder":Ljava/lang/StringBuilder;
+    .end local v3    # "e":Ljava/util/Set;, "Ljava/util/Set<Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;>;"
+    .end local v4    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
+    .end local v5    # "i$":Ljava/util/Iterator;
+    .end local v6    # "paramsMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     :catch_0
     move-exception v7
 
     move-object v2, v7
 
     .line 565
-    .local v2, e:Ljava/io/UnsupportedEncodingException;
+    .local v2, "e":Ljava/io/UnsupportedEncodingException;
     new-instance v7, Lcom/fusepowered/m1/android/MMException;
 
     invoke-direct {v7, v2}, Lcom/fusepowered/m1/android/MMException;-><init>(Ljava/lang/Exception;)V
@@ -230,15 +229,15 @@
     move-result v7
 
     .line 567
-    .end local v2           #e:Ljava/io/UnsupportedEncodingException;
+    .end local v2    # "e":Ljava/io/UnsupportedEncodingException;
     :goto_1
     return v7
 
     .line 554
-    .restart local v1       #adUrlBuilder:Ljava/lang/StringBuilder;
-    .restart local v3       #e:Ljava/util/Set;,"Ljava/util/Set<Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;>;"
-    .restart local v5       #i$:Ljava/util/Iterator;
-    .restart local v6       #paramsMap:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .restart local v1    # "adUrlBuilder":Ljava/lang/StringBuilder;
+    .restart local v3    # "e":Ljava/util/Set;, "Ljava/util/Set<Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;>;"
+    .restart local v5    # "i$":Ljava/util/Iterator;
+    .restart local v6    # "paramsMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     :cond_1
     :try_start_1
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->length()I
@@ -275,10 +274,10 @@
 
     invoke-static {v7, v8}, Lcom/fusepowered/m1/android/MMSDK$Log;->d(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .end local v1           #adUrlBuilder:Ljava/lang/StringBuilder;
-    .end local v3           #e:Ljava/util/Set;,"Ljava/util/Set<Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;>;"
-    .end local v5           #i$:Ljava/util/Iterator;
-    .end local v6           #paramsMap:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .end local v1    # "adUrlBuilder":Ljava/lang/StringBuilder;
+    .end local v3    # "e":Ljava/util/Set;, "Ljava/util/Set<Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;>;"
+    .end local v5    # "i$":Ljava/util/Iterator;
+    .end local v6    # "paramsMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     :goto_2
     move v7, v12
 
@@ -302,7 +301,7 @@
 
 .method private isHandledHtmlResponse(Lorg/apache/http/HttpEntity;)Z
     .locals 9
-    .parameter "httpEntity"
+    .param p1, "httpEntity"    # Lorg/apache/http/HttpEntity;
 
     .prologue
     const/4 v8, 0x1
@@ -311,7 +310,7 @@
     const/4 v1, 0x0
 
     .line 729
-    .local v1, adImpl:Lcom/fusepowered/m1/android/MMAdImpl;
+    .local v1, "adImpl":Lcom/fusepowered/m1/android/MMAdImpl;
     :try_start_0
     iget-object v4, p0, Lcom/fusepowered/m1/android/MMAdImplController$RequestAdRunnable;->this$0:Lcom/fusepowered/m1/android/MMAdImplController;
 
@@ -351,7 +350,7 @@
     invoke-direct {v2}, Lcom/fusepowered/m1/android/InterstitialAd;-><init>()V
 
     .line 738
-    .local v2, interstitialAd:Lcom/fusepowered/m1/android/InterstitialAd;
+    .local v2, "interstitialAd":Lcom/fusepowered/m1/android/InterstitialAd;
     invoke-interface {p1}, Lorg/apache/http/HttpEntity;->getContent()Ljava/io/InputStream;
 
     move-result-object v4
@@ -433,7 +432,7 @@
     .line 750
     invoke-static {v1}, Lcom/fusepowered/m1/android/MMSDK$Event;->requestCompleted(Lcom/fusepowered/m1/android/MMAdImpl;)V
 
-    .end local v2           #interstitialAd:Lcom/fusepowered/m1/android/InterstitialAd;
+    .end local v2    # "interstitialAd":Lcom/fusepowered/m1/android/InterstitialAd;
     :cond_2
     :goto_0
     move v4, v8
@@ -485,7 +484,7 @@
     move-object v3, v4
 
     .line 766
-    .local v3, ioe:Ljava/io/IOException;
+    .local v3, "ioe":Ljava/io/IOException;
     new-instance v4, Lcom/fusepowered/m1/android/MMException;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -521,7 +520,7 @@
 
 .method private isHandledJsonResponse(Lorg/apache/http/HttpEntity;)Z
     .locals 9
-    .parameter "httpEntity"
+    .param p1, "httpEntity"    # Lorg/apache/http/HttpEntity;
 
     .prologue
     const/16 v8, 0xf
@@ -530,11 +529,11 @@
     const/4 v5, 0x0
 
     .line 652
-    .local v5, videoAd:Lcom/fusepowered/m1/android/VideoAd;
+    .local v5, "videoAd":Lcom/fusepowered/m1/android/VideoAd;
     const/4 v1, 0x0
 
     .line 653
-    .local v1, adImpl:Lcom/fusepowered/m1/android/MMAdImpl;
+    .local v1, "adImpl":Lcom/fusepowered/m1/android/MMAdImpl;
     iget-object v6, p0, Lcom/fusepowered/m1/android/MMAdImplController$RequestAdRunnable;->this$0:Lcom/fusepowered/m1/android/MMAdImplController;
 
     iget-object v6, v6, Lcom/fusepowered/m1/android/MMAdImplController;->adImplRef:Ljava/lang/ref/WeakReference;
@@ -550,11 +549,11 @@
 
     move-result-object v1
 
-    .end local v1           #adImpl:Lcom/fusepowered/m1/android/MMAdImpl;
+    .end local v1    # "adImpl":Lcom/fusepowered/m1/android/MMAdImpl;
     check-cast v1, Lcom/fusepowered/m1/android/MMAdImpl;
 
     .line 657
-    .restart local v1       #adImpl:Lcom/fusepowered/m1/android/MMAdImpl;
+    .restart local v1    # "adImpl":Lcom/fusepowered/m1/android/MMAdImpl;
     :cond_0
     if-eqz v1, :cond_2
 
@@ -592,7 +591,7 @@
     move-result-object v4
 
     .line 667
-    .local v4, json:Ljava/lang/String;
+    .local v4, "json":Ljava/lang/String;
     invoke-static {v4}, Lcom/fusepowered/m1/android/CachedAd;->parseJSON(Ljava/lang/String;)Lcom/fusepowered/m1/android/CachedAd;
 
     move-result-object v6
@@ -667,7 +666,7 @@
     invoke-static {v1, v6}, Lcom/fusepowered/m1/android/MMSDK$Event;->requestFailed(Lcom/fusepowered/m1/android/MMAdImpl;Lcom/fusepowered/m1/android/MMException;)V
 
     .line 721
-    .end local v4           #json:Ljava/lang/String;
+    .end local v4    # "json":Ljava/lang/String;
     :cond_2
     :goto_1
     const/4 v6, 0x1
@@ -681,7 +680,7 @@
     move-object v2, v6
 
     .line 671
-    .local v2, illegalE:Ljava/lang/IllegalStateException;
+    .local v2, "illegalE":Ljava/lang/IllegalStateException;
     invoke-virtual {v2}, Ljava/lang/IllegalStateException;->printStackTrace()V
 
     .line 672
@@ -698,14 +697,14 @@
     goto :goto_0
 
     .line 674
-    .end local v2           #illegalE:Ljava/lang/IllegalStateException;
+    .end local v2    # "illegalE":Ljava/lang/IllegalStateException;
     :catch_1
     move-exception v6
 
     move-object v3, v6
 
     .line 676
-    .local v3, ioe:Ljava/io/IOException;
+    .local v3, "ioe":Ljava/io/IOException;
     invoke-virtual {v3}, Ljava/io/IOException;->printStackTrace()V
 
     .line 677
@@ -742,8 +741,8 @@
     goto/16 :goto_0
 
     .line 691
-    .end local v3           #ioe:Ljava/io/IOException;
-    .restart local v4       #json:Ljava/lang/String;
+    .end local v3    # "ioe":Ljava/io/IOException;
+    .restart local v4    # "json":Ljava/lang/String;
     :cond_3
     invoke-virtual {v1}, Lcom/fusepowered/m1/android/MMAdImpl;->getContext()Landroid/content/Context;
 
@@ -866,7 +865,7 @@
 
 .method private isHandledResponse(Lorg/apache/http/HttpResponse;)Z
     .locals 12
-    .parameter "httpResponse"
+    .param p1, "httpResponse"    # Lorg/apache/http/HttpResponse;
 
     .prologue
     const/16 v11, 0xf
@@ -881,7 +880,7 @@
     move-result-object v2
 
     .line 573
-    .local v2, httpEntity:Lorg/apache/http/HttpEntity;
+    .local v2, "httpEntity":Lorg/apache/http/HttpEntity;
     if-nez v2, :cond_0
 
     .line 575
@@ -935,7 +934,7 @@
     move-result-object v3
 
     .line 588
-    .local v3, httpHeader:Lorg/apache/http/Header;
+    .local v3, "httpHeader":Lorg/apache/http/Header;
     if-eqz v3, :cond_6
 
     invoke-interface {v3}, Lorg/apache/http/Header;->getValue()Ljava/lang/String;
@@ -996,7 +995,7 @@
     move-result-object v4
 
     .line 600
-    .local v4, xHeader:Lorg/apache/http/Header;
+    .local v4, "xHeader":Lorg/apache/http/Header;
     new-instance v5, Lcom/fusepowered/m1/android/HttpMMHeaders;
 
     invoke-interface {p1}, Lorg/apache/http/HttpResponse;->getAllHeaders()[Lorg/apache/http/Header;
@@ -1026,7 +1025,7 @@
     const/4 v0, 0x0
 
     .line 605
-    .local v0, adImpl:Lcom/fusepowered/m1/android/MMAdImpl;
+    .local v0, "adImpl":Lcom/fusepowered/m1/android/MMAdImpl;
     iget-object v5, p0, Lcom/fusepowered/m1/android/MMAdImplController$RequestAdRunnable;->this$0:Lcom/fusepowered/m1/android/MMAdImplController;
 
     iget-object v5, v5, Lcom/fusepowered/m1/android/MMAdImplController;->adImplRef:Ljava/lang/ref/WeakReference;
@@ -1042,11 +1041,11 @@
 
     move-result-object v0
 
-    .end local v0           #adImpl:Lcom/fusepowered/m1/android/MMAdImpl;
+    .end local v0    # "adImpl":Lcom/fusepowered/m1/android/MMAdImpl;
     check-cast v0, Lcom/fusepowered/m1/android/MMAdImpl;
 
     .line 609
-    .restart local v0       #adImpl:Lcom/fusepowered/m1/android/MMAdImpl;
+    .restart local v0    # "adImpl":Lcom/fusepowered/m1/android/MMAdImpl;
     :cond_3
     if-eqz v0, :cond_4
 
@@ -1056,7 +1055,7 @@
     move-result-object v1
 
     .line 612
-    .local v1, context:Landroid/content/Context;
+    .local v1, "context":Landroid/content/Context;
     invoke-static {v1}, Lcom/fusepowered/m1/android/HandShake;->sharedHandShake(Landroid/content/Context;)Lcom/fusepowered/m1/android/HandShake;
 
     move-result-object v5
@@ -1066,15 +1065,15 @@
     invoke-virtual {v5, v1, v6}, Lcom/fusepowered/m1/android/HandShake;->updateLastVideoViewedTime(Landroid/content/Context;Ljava/lang/String;)V
 
     .line 615
-    .end local v0           #adImpl:Lcom/fusepowered/m1/android/MMAdImpl;
-    .end local v1           #context:Landroid/content/Context;
+    .end local v0    # "adImpl":Lcom/fusepowered/m1/android/MMAdImpl;
+    .end local v1    # "context":Landroid/content/Context;
     :cond_4
     invoke-direct {p0, v2}, Lcom/fusepowered/m1/android/MMAdImplController$RequestAdRunnable;->isHandledHtmlResponse(Lorg/apache/http/HttpEntity;)Z
 
     goto :goto_1
 
     .line 619
-    .end local v4           #xHeader:Lorg/apache/http/Header;
+    .end local v4    # "xHeader":Lorg/apache/http/Header;
     :cond_5
     new-instance v5, Lcom/fusepowered/m1/android/MMException;
 
@@ -1107,7 +1106,7 @@
 
 .method private saveMacId(Lorg/apache/http/HttpResponse;)V
     .locals 9
-    .parameter "httpResponse"
+    .param p1, "httpResponse"    # Lorg/apache/http/HttpResponse;
 
     .prologue
     .line 633
@@ -1118,29 +1117,29 @@
     move-result-object v2
 
     .line 634
-    .local v2, cookieHeaders:[Lorg/apache/http/Header;
+    .local v2, "cookieHeaders":[Lorg/apache/http/Header;
     move-object v0, v2
 
-    .local v0, arr$:[Lorg/apache/http/Header;
+    .local v0, "arr$":[Lorg/apache/http/Header;
     array-length v6, v0
 
-    .local v6, len$:I
+    .local v6, "len$":I
     const/4 v4, 0x0
 
-    .local v4, i$:I
+    .local v4, "i$":I
     :goto_0
     if-ge v4, v6, :cond_1
 
     aget-object v1, v0, v4
 
     .line 637
-    .local v1, cookieHeader:Lorg/apache/http/Header;
+    .local v1, "cookieHeader":Lorg/apache/http/Header;
     invoke-interface {v1}, Lorg/apache/http/Header;->getValue()Ljava/lang/String;
 
     move-result-object v7
 
     .line 638
-    .local v7, value:Ljava/lang/String;
+    .local v7, "value":Ljava/lang/String;
     const-string v8, "MAC-ID="
 
     invoke-virtual {v7, v8}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
@@ -1148,7 +1147,7 @@
     move-result v5
 
     .line 639
-    .local v5, index:I
+    .local v5, "index":I
     if-ltz v5, :cond_0
 
     .line 641
@@ -1159,7 +1158,7 @@
     move-result v3
 
     .line 642
-    .local v3, endIndex:I
+    .local v3, "endIndex":I
     if-le v3, v5, :cond_0
 
     .line 643
@@ -1172,16 +1171,16 @@
     sput-object v8, Lcom/fusepowered/m1/android/MMSDK;->macId:Ljava/lang/String;
 
     .line 634
-    .end local v3           #endIndex:I
+    .end local v3    # "endIndex":I
     :cond_0
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_0
 
     .line 646
-    .end local v1           #cookieHeader:Lorg/apache/http/Header;
-    .end local v5           #index:I
-    .end local v7           #value:Ljava/lang/String;
+    .end local v1    # "cookieHeader":Lorg/apache/http/Header;
+    .end local v5    # "index":I
+    .end local v7    # "value":Ljava/lang/String;
     :cond_1
     return-void
 .end method
@@ -1190,14 +1189,14 @@
 # virtual methods
 .method fail(Lcom/fusepowered/m1/android/MMException;)Z
     .locals 2
-    .parameter "mmError"
+    .param p1, "mmError"    # Lcom/fusepowered/m1/android/MMException;
 
     .prologue
     .line 467
     const/4 v0, 0x0
 
     .line 468
-    .local v0, adImpl:Lcom/fusepowered/m1/android/MMAdImpl;
+    .local v0, "adImpl":Lcom/fusepowered/m1/android/MMAdImpl;
     iget-object v1, p0, Lcom/fusepowered/m1/android/MMAdImplController$RequestAdRunnable;->this$0:Lcom/fusepowered/m1/android/MMAdImplController;
 
     iget-object v1, v1, Lcom/fusepowered/m1/android/MMAdImplController;->adImplRef:Ljava/lang/ref/WeakReference;
@@ -1213,11 +1212,11 @@
 
     move-result-object v0
 
-    .end local v0           #adImpl:Lcom/fusepowered/m1/android/MMAdImpl;
+    .end local v0    # "adImpl":Lcom/fusepowered/m1/android/MMAdImpl;
     check-cast v0, Lcom/fusepowered/m1/android/MMAdImpl;
 
     .line 472
-    .restart local v0       #adImpl:Lcom/fusepowered/m1/android/MMAdImpl;
+    .restart local v0    # "adImpl":Lcom/fusepowered/m1/android/MMAdImpl;
     :cond_0
     invoke-static {v0, p1}, Lcom/fusepowered/m1/android/MMSDK$Event;->requestFailed(Lcom/fusepowered/m1/android/MMAdImpl;Lcom/fusepowered/m1/android/MMException;)V
 
@@ -1229,7 +1228,7 @@
 
 .method failWithErrorMessage(Lcom/fusepowered/m1/android/MMException;)Z
     .locals 1
-    .parameter "mmError"
+    .param p1, "mmError"    # Lcom/fusepowered/m1/android/MMException;
 
     .prologue
     .line 455
@@ -1249,7 +1248,7 @@
 
 .method failWithInfoMessage(Lcom/fusepowered/m1/android/MMException;)Z
     .locals 1
-    .parameter "mmError"
+    .param p1, "mmError"    # Lcom/fusepowered/m1/android/MMException;
 
     .prologue
     .line 461
@@ -1293,7 +1292,7 @@
     check-cast v0, Lcom/fusepowered/m1/android/MMAdImpl;
 
     .line 487
-    .local v0, adImpl:Lcom/fusepowered/m1/android/MMAdImpl;
+    .local v0, "adImpl":Lcom/fusepowered/m1/android/MMAdImpl;
     if-eqz v0, :cond_2
 
     invoke-virtual {v0}, Lcom/fusepowered/m1/android/MMAdImpl;->getContext()Landroid/content/Context;
@@ -1309,8 +1308,8 @@
     .line 491
     invoke-direct {p0}, Lcom/fusepowered/m1/android/MMAdImplController$RequestAdRunnable;->isAdUrlBuildable()Z
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result v3
 
@@ -1322,12 +1321,12 @@
     iput-object v6, v3, Lcom/fusepowered/m1/android/MMAdImplController;->requestAdRunnable:Lcom/fusepowered/m1/android/MMAdImplController$RequestAdRunnable;
 
     .line 528
-    .end local v0           #adImpl:Lcom/fusepowered/m1/android/MMAdImpl;
+    .end local v0    # "adImpl":Lcom/fusepowered/m1/android/MMAdImpl;
     :goto_0
     return-void
 
     .line 496
-    .restart local v0       #adImpl:Lcom/fusepowered/m1/android/MMAdImpl;
+    .restart local v0    # "adImpl":Lcom/fusepowered/m1/android/MMAdImpl;
     :cond_0
     :try_start_1
     new-instance v3, Lcom/fusepowered/m1/android/HttpGetRequest;
@@ -1341,7 +1340,7 @@
     move-result-object v2
 
     .line 497
-    .local v2, httpResponse:Lorg/apache/http/HttpResponse;
+    .local v2, "httpResponse":Lorg/apache/http/HttpResponse;
     if-nez v2, :cond_1
 
     .line 499
@@ -1355,8 +1354,8 @@
 
     invoke-virtual {p0, v3}, Lcom/fusepowered/m1/android/MMAdImplController$RequestAdRunnable;->failWithErrorMessage(Lcom/fusepowered/m1/android/MMException;)Z
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     .line 525
     iget-object v3, p0, Lcom/fusepowered/m1/android/MMAdImplController$RequestAdRunnable;->this$0:Lcom/fusepowered/m1/android/MMAdImplController;
@@ -1366,14 +1365,14 @@
     goto :goto_0
 
     .line 503
-    .end local v2           #httpResponse:Lorg/apache/http/HttpResponse;
+    .end local v2    # "httpResponse":Lorg/apache/http/HttpResponse;
     :catch_0
     move-exception v3
 
     move-object v1, v3
 
     .line 505
-    .local v1, e:Ljava/lang/Exception;
+    .local v1, "e":Ljava/lang/Exception;
     :try_start_2
     new-instance v3, Lcom/fusepowered/m1/android/MMException;
 
@@ -1405,8 +1404,8 @@
 
     invoke-virtual {p0, v3}, Lcom/fusepowered/m1/android/MMAdImplController$RequestAdRunnable;->failWithErrorMessage(Lcom/fusepowered/m1/android/MMException;)Z
     :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
     .line 525
     iget-object v3, p0, Lcom/fusepowered/m1/android/MMAdImplController$RequestAdRunnable;->this$0:Lcom/fusepowered/m1/android/MMAdImplController;
@@ -1416,14 +1415,14 @@
     goto :goto_0
 
     .line 509
-    .end local v1           #e:Ljava/lang/Exception;
-    .restart local v2       #httpResponse:Lorg/apache/http/HttpResponse;
+    .end local v1    # "e":Ljava/lang/Exception;
+    .restart local v2    # "httpResponse":Lorg/apache/http/HttpResponse;
     :cond_1
     :try_start_3
     invoke-direct {p0, v2}, Lcom/fusepowered/m1/android/MMAdImplController$RequestAdRunnable;->isHandledResponse(Lorg/apache/http/HttpResponse;)Z
     :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_1
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
     move-result v3
 
@@ -1437,7 +1436,7 @@
     goto :goto_0
 
     .line 514
-    .end local v2           #httpResponse:Lorg/apache/http/HttpResponse;
+    .end local v2    # "httpResponse":Lorg/apache/http/HttpResponse;
     :cond_2
     :try_start_4
     new-instance v3, Lcom/fusepowered/m1/android/MMException;
@@ -1450,8 +1449,8 @@
 
     invoke-virtual {p0, v3}, Lcom/fusepowered/m1/android/MMAdImplController$RequestAdRunnable;->failWithInfoMessage(Lcom/fusepowered/m1/android/MMException;)Z
     :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_1
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
     .line 525
     iget-object v3, p0, Lcom/fusepowered/m1/android/MMAdImplController$RequestAdRunnable;->this$0:Lcom/fusepowered/m1/android/MMAdImplController;
@@ -1460,7 +1459,7 @@
 
     goto :goto_0
 
-    .end local v0           #adImpl:Lcom/fusepowered/m1/android/MMAdImpl;
+    .end local v0    # "adImpl":Lcom/fusepowered/m1/android/MMAdImpl;
     :cond_3
     iget-object v3, p0, Lcom/fusepowered/m1/android/MMAdImplController$RequestAdRunnable;->this$0:Lcom/fusepowered/m1/android/MMAdImplController;
 
@@ -1475,7 +1474,7 @@
     move-object v1, v3
 
     .line 521
-    .restart local v1       #e:Ljava/lang/Exception;
+    .restart local v1    # "e":Ljava/lang/Exception;
     :try_start_5
     new-instance v3, Lcom/fusepowered/m1/android/MMException;
 
@@ -1496,7 +1495,7 @@
 
     goto :goto_0
 
-    .end local v1           #e:Ljava/lang/Exception;
+    .end local v1    # "e":Ljava/lang/Exception;
     :catchall_0
     move-exception v3
 

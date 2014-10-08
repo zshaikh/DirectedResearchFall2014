@@ -21,7 +21,6 @@
 # direct methods
 .method private constructor <init>(Lcom/facebook/widget/WebDialog;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 330
@@ -34,8 +33,6 @@
 
 .method synthetic constructor <init>(Lcom/facebook/widget/WebDialog;Lcom/facebook/widget/WebDialog$DialogWebViewClient;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 330
@@ -48,8 +45,8 @@
 # virtual methods
 .method public onPageFinished(Landroid/webkit/WebView;Ljava/lang/String;)V
     .locals 2
-    .parameter "view"
-    .parameter "url"
+    .param p1, "view"    # Landroid/webkit/WebView;
+    .param p2, "url"    # Ljava/lang/String;
 
     .prologue
     const/4 v1, 0x0
@@ -60,7 +57,7 @@
     .line 416
     iget-object v0, p0, Lcom/facebook/widget/WebDialog$DialogWebViewClient;->this$0:Lcom/facebook/widget/WebDialog;
 
-    #getter for: Lcom/facebook/widget/WebDialog;->isDetached:Z
+    # getter for: Lcom/facebook/widget/WebDialog;->isDetached:Z
     invoke-static {v0}, Lcom/facebook/widget/WebDialog;->access$3(Lcom/facebook/widget/WebDialog;)Z
 
     move-result v0
@@ -70,7 +67,7 @@
     .line 417
     iget-object v0, p0, Lcom/facebook/widget/WebDialog$DialogWebViewClient;->this$0:Lcom/facebook/widget/WebDialog;
 
-    #getter for: Lcom/facebook/widget/WebDialog;->spinner:Landroid/app/ProgressDialog;
+    # getter for: Lcom/facebook/widget/WebDialog;->spinner:Landroid/app/ProgressDialog;
     invoke-static {v0}, Lcom/facebook/widget/WebDialog;->access$4(Lcom/facebook/widget/WebDialog;)Landroid/app/ProgressDialog;
 
     move-result-object v0
@@ -81,7 +78,7 @@
     :cond_0
     iget-object v0, p0, Lcom/facebook/widget/WebDialog$DialogWebViewClient;->this$0:Lcom/facebook/widget/WebDialog;
 
-    #getter for: Lcom/facebook/widget/WebDialog;->contentFrameLayout:Landroid/widget/FrameLayout;
+    # getter for: Lcom/facebook/widget/WebDialog;->contentFrameLayout:Landroid/widget/FrameLayout;
     invoke-static {v0}, Lcom/facebook/widget/WebDialog;->access$5(Lcom/facebook/widget/WebDialog;)Landroid/widget/FrameLayout;
 
     move-result-object v0
@@ -91,7 +88,7 @@
     .line 424
     iget-object v0, p0, Lcom/facebook/widget/WebDialog$DialogWebViewClient;->this$0:Lcom/facebook/widget/WebDialog;
 
-    #getter for: Lcom/facebook/widget/WebDialog;->webView:Landroid/webkit/WebView;
+    # getter for: Lcom/facebook/widget/WebDialog;->webView:Landroid/webkit/WebView;
     invoke-static {v0}, Lcom/facebook/widget/WebDialog;->access$6(Lcom/facebook/widget/WebDialog;)Landroid/webkit/WebView;
 
     move-result-object v0
@@ -101,7 +98,7 @@
     .line 425
     iget-object v0, p0, Lcom/facebook/widget/WebDialog$DialogWebViewClient;->this$0:Lcom/facebook/widget/WebDialog;
 
-    #getter for: Lcom/facebook/widget/WebDialog;->crossImageView:Landroid/widget/ImageView;
+    # getter for: Lcom/facebook/widget/WebDialog;->crossImageView:Landroid/widget/ImageView;
     invoke-static {v0}, Lcom/facebook/widget/WebDialog;->access$7(Lcom/facebook/widget/WebDialog;)Landroid/widget/ImageView;
 
     move-result-object v0
@@ -114,9 +111,9 @@
 
 .method public onPageStarted(Landroid/webkit/WebView;Ljava/lang/String;Landroid/graphics/Bitmap;)V
     .locals 3
-    .parameter "view"
-    .parameter "url"
-    .parameter "favicon"
+    .param p1, "view"    # Landroid/webkit/WebView;
+    .param p2, "url"    # Ljava/lang/String;
+    .param p3, "favicon"    # Landroid/graphics/Bitmap;
 
     .prologue
     .line 406
@@ -144,7 +141,7 @@
     .line 408
     iget-object v0, p0, Lcom/facebook/widget/WebDialog$DialogWebViewClient;->this$0:Lcom/facebook/widget/WebDialog;
 
-    #getter for: Lcom/facebook/widget/WebDialog;->isDetached:Z
+    # getter for: Lcom/facebook/widget/WebDialog;->isDetached:Z
     invoke-static {v0}, Lcom/facebook/widget/WebDialog;->access$3(Lcom/facebook/widget/WebDialog;)Z
 
     move-result v0
@@ -154,7 +151,7 @@
     .line 409
     iget-object v0, p0, Lcom/facebook/widget/WebDialog$DialogWebViewClient;->this$0:Lcom/facebook/widget/WebDialog;
 
-    #getter for: Lcom/facebook/widget/WebDialog;->spinner:Landroid/app/ProgressDialog;
+    # getter for: Lcom/facebook/widget/WebDialog;->spinner:Landroid/app/ProgressDialog;
     invoke-static {v0}, Lcom/facebook/widget/WebDialog;->access$4(Lcom/facebook/widget/WebDialog;)Landroid/app/ProgressDialog;
 
     move-result-object v0
@@ -168,10 +165,10 @@
 
 .method public onReceivedError(Landroid/webkit/WebView;ILjava/lang/String;Ljava/lang/String;)V
     .locals 2
-    .parameter "view"
-    .parameter "errorCode"
-    .parameter "description"
-    .parameter "failingUrl"
+    .param p1, "view"    # Landroid/webkit/WebView;
+    .param p2, "errorCode"    # I
+    .param p3, "description"    # Ljava/lang/String;
+    .param p4, "failingUrl"    # Ljava/lang/String;
 
     .prologue
     .line 386
@@ -184,7 +181,7 @@
 
     invoke-direct {v1, p3, p2, p4}, Lcom/facebook/FacebookDialogException;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    #calls: Lcom/facebook/widget/WebDialog;->sendErrorToListener(Ljava/lang/Throwable;)V
+    # invokes: Lcom/facebook/widget/WebDialog;->sendErrorToListener(Ljava/lang/Throwable;)V
     invoke-static {v0, v1}, Lcom/facebook/widget/WebDialog;->access$2(Lcom/facebook/widget/WebDialog;Ljava/lang/Throwable;)V
 
     .line 388
@@ -198,9 +195,9 @@
 
 .method public onReceivedSslError(Landroid/webkit/WebView;Landroid/webkit/SslErrorHandler;Landroid/net/http/SslError;)V
     .locals 4
-    .parameter "view"
-    .parameter "handler"
-    .parameter "error"
+    .param p1, "view"    # Landroid/webkit/WebView;
+    .param p2, "handler"    # Landroid/webkit/SslErrorHandler;
+    .param p3, "error"    # Landroid/net/http/SslError;
 
     .prologue
     const/4 v3, 0x0
@@ -217,7 +214,7 @@
 
     invoke-direct {v1, v3, v2, v3}, Lcom/facebook/FacebookDialogException;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    #calls: Lcom/facebook/widget/WebDialog;->sendErrorToListener(Ljava/lang/Throwable;)V
+    # invokes: Lcom/facebook/widget/WebDialog;->sendErrorToListener(Ljava/lang/Throwable;)V
     invoke-static {v0, v1}, Lcom/facebook/widget/WebDialog;->access$2(Lcom/facebook/widget/WebDialog;Ljava/lang/Throwable;)V
 
     .line 399
@@ -234,8 +231,8 @@
 
 .method public shouldOverrideUrlLoading(Landroid/webkit/WebView;Ljava/lang/String;)Z
     .locals 12
-    .parameter "view"
-    .parameter "url"
+    .param p1, "view"    # Landroid/webkit/WebView;
+    .param p2, "url"    # Ljava/lang/String;
 
     .prologue
     const/4 v11, 0x1
@@ -274,7 +271,7 @@
     move-result-object v6
 
     .line 338
-    .local v6, values:Landroid/os/Bundle;
+    .local v6, "values":Landroid/os/Bundle;
     const-string v7, "error"
 
     invoke-virtual {v6, v7}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -282,7 +279,7 @@
     move-result-object v0
 
     .line 339
-    .local v0, error:Ljava/lang/String;
+    .local v0, "error":Ljava/lang/String;
     if-nez v0, :cond_0
 
     .line 340
@@ -301,7 +298,7 @@
     move-result-object v3
 
     .line 344
-    .local v3, errorMessage:Ljava/lang/String;
+    .local v3, "errorMessage":Ljava/lang/String;
     if-nez v3, :cond_1
 
     .line 345
@@ -320,11 +317,11 @@
     move-result-object v2
 
     .line 348
-    .local v2, errorCodeString:Ljava/lang/String;
+    .local v2, "errorCodeString":Ljava/lang/String;
     const/4 v1, -0x1
 
     .line 349
-    .local v1, errorCode:I
+    .local v1, "errorCode":I
     invoke-static {v2}, Lcom/facebook/internal/Utility;->isNullOrEmpty(Ljava/lang/String;)Z
 
     move-result v7
@@ -362,7 +359,7 @@
     .line 359
     iget-object v7, p0, Lcom/facebook/widget/WebDialog$DialogWebViewClient;->this$0:Lcom/facebook/widget/WebDialog;
 
-    #calls: Lcom/facebook/widget/WebDialog;->sendSuccessToListener(Landroid/os/Bundle;)V
+    # invokes: Lcom/facebook/widget/WebDialog;->sendSuccessToListener(Landroid/os/Bundle;)V
     invoke-static {v7, v6}, Lcom/facebook/widget/WebDialog;->access$0(Lcom/facebook/widget/WebDialog;Landroid/os/Bundle;)V
 
     .line 368
@@ -374,31 +371,31 @@
     move v7, v11
 
     .line 380
-    .end local v0           #error:Ljava/lang/String;
-    .end local v1           #errorCode:I
-    .end local v2           #errorCodeString:Ljava/lang/String;
-    .end local v3           #errorMessage:Ljava/lang/String;
-    .end local v6           #values:Landroid/os/Bundle;
+    .end local v0    # "error":Ljava/lang/String;
+    .end local v1    # "errorCode":I
+    .end local v2    # "errorCodeString":Ljava/lang/String;
+    .end local v3    # "errorMessage":Ljava/lang/String;
+    .end local v6    # "values":Landroid/os/Bundle;
     :goto_2
     return v7
 
     .line 352
-    .restart local v0       #error:Ljava/lang/String;
-    .restart local v1       #errorCode:I
-    .restart local v2       #errorCodeString:Ljava/lang/String;
-    .restart local v3       #errorMessage:Ljava/lang/String;
-    .restart local v6       #values:Landroid/os/Bundle;
+    .restart local v0    # "error":Ljava/lang/String;
+    .restart local v1    # "errorCode":I
+    .restart local v2    # "errorCodeString":Ljava/lang/String;
+    .restart local v3    # "errorMessage":Ljava/lang/String;
+    .restart local v6    # "values":Landroid/os/Bundle;
     :catch_0
     move-exception v4
 
     .line 353
-    .local v4, ex:Ljava/lang/NumberFormatException;
+    .local v4, "ex":Ljava/lang/NumberFormatException;
     const/4 v1, -0x1
 
     goto :goto_0
 
     .line 360
-    .end local v4           #ex:Ljava/lang/NumberFormatException;
+    .end local v4    # "ex":Ljava/lang/NumberFormatException;
     :cond_3
     if-eqz v0, :cond_5
 
@@ -423,7 +420,7 @@
     :cond_4
     iget-object v7, p0, Lcom/facebook/widget/WebDialog$DialogWebViewClient;->this$0:Lcom/facebook/widget/WebDialog;
 
-    #calls: Lcom/facebook/widget/WebDialog;->sendCancelToListener()V
+    # invokes: Lcom/facebook/widget/WebDialog;->sendCancelToListener()V
     invoke-static {v7}, Lcom/facebook/widget/WebDialog;->access$1(Lcom/facebook/widget/WebDialog;)V
 
     goto :goto_1
@@ -435,25 +432,25 @@
     invoke-direct {v5, v1, v0, v3}, Lcom/facebook/FacebookRequestError;-><init>(ILjava/lang/String;Ljava/lang/String;)V
 
     .line 365
-    .local v5, requestError:Lcom/facebook/FacebookRequestError;
+    .local v5, "requestError":Lcom/facebook/FacebookRequestError;
     iget-object v7, p0, Lcom/facebook/widget/WebDialog$DialogWebViewClient;->this$0:Lcom/facebook/widget/WebDialog;
 
     new-instance v8, Lcom/facebook/FacebookServiceException;
 
     invoke-direct {v8, v5, v3}, Lcom/facebook/FacebookServiceException;-><init>(Lcom/facebook/FacebookRequestError;Ljava/lang/String;)V
 
-    #calls: Lcom/facebook/widget/WebDialog;->sendErrorToListener(Ljava/lang/Throwable;)V
+    # invokes: Lcom/facebook/widget/WebDialog;->sendErrorToListener(Ljava/lang/Throwable;)V
     invoke-static {v7, v8}, Lcom/facebook/widget/WebDialog;->access$2(Lcom/facebook/widget/WebDialog;Ljava/lang/Throwable;)V
 
     goto :goto_1
 
     .line 370
-    .end local v0           #error:Ljava/lang/String;
-    .end local v1           #errorCode:I
-    .end local v2           #errorCodeString:Ljava/lang/String;
-    .end local v3           #errorMessage:Ljava/lang/String;
-    .end local v5           #requestError:Lcom/facebook/FacebookRequestError;
-    .end local v6           #values:Landroid/os/Bundle;
+    .end local v0    # "error":Ljava/lang/String;
+    .end local v1    # "errorCode":I
+    .end local v2    # "errorCodeString":Ljava/lang/String;
+    .end local v3    # "errorMessage":Ljava/lang/String;
+    .end local v5    # "requestError":Lcom/facebook/FacebookRequestError;
+    .end local v6    # "values":Landroid/os/Bundle;
     :cond_6
     const-string v7, "fbconnect://cancel"
 
@@ -466,7 +463,7 @@
     .line 371
     iget-object v7, p0, Lcom/facebook/widget/WebDialog$DialogWebViewClient;->this$0:Lcom/facebook/widget/WebDialog;
 
-    #calls: Lcom/facebook/widget/WebDialog;->sendCancelToListener()V
+    # invokes: Lcom/facebook/widget/WebDialog;->sendCancelToListener()V
     invoke-static {v7}, Lcom/facebook/widget/WebDialog;->access$1(Lcom/facebook/widget/WebDialog;)V
 
     .line 372

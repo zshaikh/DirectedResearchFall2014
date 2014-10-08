@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/tapjoy/TapjoyVideoView;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 622
@@ -39,8 +38,8 @@
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 4
-    .parameter "dialog"
-    .parameter "whichButton"
+    .param p1, "dialog"    # Landroid/content/DialogInterface;
+    .param p2, "whichButton"    # I
 
     .prologue
     const-string v3, "VideoView"
@@ -51,14 +50,14 @@
     .line 628
     iget-object v0, p0, Lcom/tapjoy/TapjoyVideoView$4;->this$0:Lcom/tapjoy/TapjoyVideoView;
 
-    #getter for: Lcom/tapjoy/TapjoyVideoView;->videoView:Landroid/widget/VideoView;
+    # getter for: Lcom/tapjoy/TapjoyVideoView;->videoView:Landroid/widget/VideoView;
     invoke-static {v0}, Lcom/tapjoy/TapjoyVideoView;->access$700(Lcom/tapjoy/TapjoyVideoView;)Landroid/widget/VideoView;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/tapjoy/TapjoyVideoView$4;->this$0:Lcom/tapjoy/TapjoyVideoView;
 
-    #getter for: Lcom/tapjoy/TapjoyVideoView;->seekTime:I
+    # getter for: Lcom/tapjoy/TapjoyVideoView;->seekTime:I
     invoke-static {v1}, Lcom/tapjoy/TapjoyVideoView;->access$600(Lcom/tapjoy/TapjoyVideoView;)I
 
     move-result v1
@@ -68,7 +67,7 @@
     .line 629
     iget-object v0, p0, Lcom/tapjoy/TapjoyVideoView$4;->this$0:Lcom/tapjoy/TapjoyVideoView;
 
-    #getter for: Lcom/tapjoy/TapjoyVideoView;->videoView:Landroid/widget/VideoView;
+    # getter for: Lcom/tapjoy/TapjoyVideoView;->videoView:Landroid/widget/VideoView;
     invoke-static {v0}, Lcom/tapjoy/TapjoyVideoView;->access$700(Lcom/tapjoy/TapjoyVideoView;)Landroid/widget/VideoView;
 
     move-result-object v0
@@ -80,7 +79,7 @@
 
     const/4 v1, 0x0
 
-    #setter for: Lcom/tapjoy/TapjoyVideoView;->dialogShowing:Z
+    # setter for: Lcom/tapjoy/TapjoyVideoView;->dialogShowing:Z
     invoke-static {v0, v1}, Lcom/tapjoy/TapjoyVideoView;->access$802(Lcom/tapjoy/TapjoyVideoView;Z)Z
 
     .line 633
@@ -98,7 +97,7 @@
 
     iget-object v1, p0, Lcom/tapjoy/TapjoyVideoView$4;->this$0:Lcom/tapjoy/TapjoyVideoView;
 
-    #getter for: Lcom/tapjoy/TapjoyVideoView;->seekTime:I
+    # getter for: Lcom/tapjoy/TapjoyVideoView;->seekTime:I
     invoke-static {v1}, Lcom/tapjoy/TapjoyVideoView;->access$600(Lcom/tapjoy/TapjoyVideoView;)I
 
     move-result v1
@@ -128,7 +127,7 @@
 
     iget-object v1, p0, Lcom/tapjoy/TapjoyVideoView$4;->this$0:Lcom/tapjoy/TapjoyVideoView;
 
-    #getter for: Lcom/tapjoy/TapjoyVideoView;->videoView:Landroid/widget/VideoView;
+    # getter for: Lcom/tapjoy/TapjoyVideoView;->videoView:Landroid/widget/VideoView;
     invoke-static {v1}, Lcom/tapjoy/TapjoyVideoView;->access$700(Lcom/tapjoy/TapjoyVideoView;)Landroid/widget/VideoView;
 
     move-result-object v1
@@ -162,7 +161,7 @@
 
     iget-object v1, p0, Lcom/tapjoy/TapjoyVideoView$4;->this$0:Lcom/tapjoy/TapjoyVideoView;
 
-    #getter for: Lcom/tapjoy/TapjoyVideoView;->videoView:Landroid/widget/VideoView;
+    # getter for: Lcom/tapjoy/TapjoyVideoView;->videoView:Landroid/widget/VideoView;
     invoke-static {v1}, Lcom/tapjoy/TapjoyVideoView;->access$700(Lcom/tapjoy/TapjoyVideoView;)Landroid/widget/VideoView;
 
     move-result-object v1
@@ -183,7 +182,7 @@
 
     iget-object v1, p0, Lcom/tapjoy/TapjoyVideoView$4;->this$0:Lcom/tapjoy/TapjoyVideoView;
 
-    #getter for: Lcom/tapjoy/TapjoyVideoView;->videoView:Landroid/widget/VideoView;
+    # getter for: Lcom/tapjoy/TapjoyVideoView;->videoView:Landroid/widget/VideoView;
     invoke-static {v1}, Lcom/tapjoy/TapjoyVideoView;->access$700(Lcom/tapjoy/TapjoyVideoView;)Landroid/widget/VideoView;
 
     move-result-object v1
@@ -194,7 +193,7 @@
 
     iget-object v2, p0, Lcom/tapjoy/TapjoyVideoView$4;->this$0:Lcom/tapjoy/TapjoyVideoView;
 
-    #getter for: Lcom/tapjoy/TapjoyVideoView;->videoView:Landroid/widget/VideoView;
+    # getter for: Lcom/tapjoy/TapjoyVideoView;->videoView:Landroid/widget/VideoView;
     invoke-static {v2}, Lcom/tapjoy/TapjoyVideoView;->access$700(Lcom/tapjoy/TapjoyVideoView;)Landroid/widget/VideoView;
 
     move-result-object v2

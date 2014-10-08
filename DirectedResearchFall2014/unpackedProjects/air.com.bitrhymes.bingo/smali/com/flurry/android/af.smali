@@ -24,9 +24,6 @@
 # direct methods
 .method constructor <init>(Ljava/lang/String;Ljava/util/Map;Lcom/flurry/android/cw;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",

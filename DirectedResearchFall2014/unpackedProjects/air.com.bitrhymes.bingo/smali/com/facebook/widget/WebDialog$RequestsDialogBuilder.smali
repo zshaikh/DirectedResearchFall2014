@@ -38,8 +38,8 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Lcom/facebook/Session;)V
     .locals 2
-    .parameter "context"
-    .parameter "session"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "session"    # Lcom/facebook/Session;
 
     .prologue
     .line 719
@@ -55,9 +55,9 @@
 
 .method public constructor <init>(Landroid/content/Context;Lcom/facebook/Session;Landroid/os/Bundle;)V
     .locals 1
-    .parameter "context"
-    .parameter "session"
-    .parameter "parameters"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "session"    # Lcom/facebook/Session;
+    .param p3, "parameters"    # Landroid/os/Bundle;
 
     .prologue
     .line 735
@@ -85,7 +85,7 @@
 
 .method public setData(Ljava/lang/String;)Lcom/facebook/widget/WebDialog$RequestsDialogBuilder;
     .locals 2
-    .parameter "data"
+    .param p1, "data"    # Ljava/lang/String;
 
     .prologue
     .line 771
@@ -103,7 +103,7 @@
 
 .method public setMessage(Ljava/lang/String;)Lcom/facebook/widget/WebDialog$RequestsDialogBuilder;
     .locals 2
-    .parameter "message"
+    .param p1, "message"    # Ljava/lang/String;
 
     .prologue
     .line 746
@@ -121,7 +121,6 @@
 
 .method public bridge synthetic setOnCompleteListener(Lcom/facebook/widget/WebDialog$OnCompleteListener;)Lcom/facebook/widget/WebDialog$BuilderBase;
     .locals 1
-    .parameter
 
     .prologue
     .line 1
@@ -134,7 +133,6 @@
 
 .method public bridge synthetic setTheme(I)Lcom/facebook/widget/WebDialog$BuilderBase;
     .locals 1
-    .parameter
 
     .prologue
     .line 1
@@ -147,7 +145,7 @@
 
 .method public setTitle(Ljava/lang/String;)Lcom/facebook/widget/WebDialog$RequestsDialogBuilder;
     .locals 2
-    .parameter "title"
+    .param p1, "title"    # Ljava/lang/String;
 
     .prologue
     .line 782
@@ -165,7 +163,7 @@
 
 .method public setTo(Ljava/lang/String;)Lcom/facebook/widget/WebDialog$RequestsDialogBuilder;
     .locals 2
-    .parameter "id"
+    .param p1, "id"    # Ljava/lang/String;
 
     .prologue
     .line 759

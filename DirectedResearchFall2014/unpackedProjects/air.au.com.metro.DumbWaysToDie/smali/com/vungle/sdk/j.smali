@@ -106,11 +106,6 @@
 
 .method public constructor <init>(Landroid/content/Context;Ljava/lang/String;IILcom/vungle/sdk/j$g;)V
     .locals 4
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lcom/vungle/sdk/g$a;
@@ -266,7 +261,7 @@
     .line 137
     iget-object v0, p0, Lcom/vungle/sdk/j;->e:Landroid/view/View;
 
-    const/high16 v1, -0x100
+    const/high16 v1, -0x1000000
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundColor(I)V
 
@@ -402,8 +397,6 @@
 
 .method static synthetic a(Lcom/vungle/sdk/j;J)J
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 31
@@ -414,8 +407,6 @@
 
 .method static synthetic a(Lcom/vungle/sdk/j;Landroid/app/AlertDialog;)Landroid/app/AlertDialog;
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 31
@@ -426,7 +417,6 @@
 
 .method static synthetic a(Lcom/vungle/sdk/j;)Landroid/widget/ProgressBar;
     .locals 1
-    .parameter
 
     .prologue
     .line 31
@@ -437,8 +427,6 @@
 
 .method static synthetic a(Lcom/vungle/sdk/j;Z)Z
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 31
@@ -449,7 +437,6 @@
 
 .method static synthetic b(Lcom/vungle/sdk/j;)Landroid/widget/VideoView;
     .locals 1
-    .parameter
 
     .prologue
     .line 31
@@ -460,7 +447,6 @@
 
 .method static synthetic c(Lcom/vungle/sdk/j;)Landroid/content/Context;
     .locals 1
-    .parameter
 
     .prologue
     .line 31
@@ -471,7 +457,6 @@
 
 .method static synthetic d(Lcom/vungle/sdk/j;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 31
@@ -506,7 +491,6 @@
 
 .method static synthetic e(Lcom/vungle/sdk/j;)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 31
@@ -575,7 +559,6 @@
 
 .method static synthetic f(Lcom/vungle/sdk/j;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 31
@@ -625,7 +608,6 @@
 
 .method static synthetic g(Lcom/vungle/sdk/j;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 31
@@ -636,7 +618,6 @@
 
 .method static synthetic h(Lcom/vungle/sdk/j;)J
     .locals 2
-    .parameter
 
     .prologue
     .line 31
@@ -676,7 +657,6 @@
 
 .method static synthetic i(Lcom/vungle/sdk/j;)Lcom/vungle/sdk/j$g;
     .locals 1
-    .parameter
 
     .prologue
     .line 31
@@ -708,7 +688,6 @@
 
 .method static synthetic j(Lcom/vungle/sdk/j;)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 31
@@ -719,7 +698,6 @@
 
 .method static synthetic k(Lcom/vungle/sdk/j;)I
     .locals 1
-    .parameter
 
     .prologue
     .line 31
@@ -730,7 +708,6 @@
 
 .method static synthetic l(Lcom/vungle/sdk/j;)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 31
@@ -741,7 +718,6 @@
 
 .method static synthetic m(Lcom/vungle/sdk/j;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 31
@@ -752,7 +728,6 @@
 
 .method static synthetic n(Lcom/vungle/sdk/j;)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 31
@@ -763,7 +738,6 @@
 
 .method static synthetic o(Lcom/vungle/sdk/j;)Ljava/lang/Object;
     .locals 1
-    .parameter
 
     .prologue
     .line 31
@@ -774,7 +748,6 @@
 
 .method static synthetic p(Lcom/vungle/sdk/j;)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 31
@@ -785,7 +758,6 @@
 
 .method static synthetic q(Lcom/vungle/sdk/j;)Landroid/widget/ImageView;
     .locals 1
-    .parameter
 
     .prologue
     .line 31
@@ -796,7 +768,6 @@
 
 .method static synthetic r(Lcom/vungle/sdk/j;)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 31
@@ -807,7 +778,6 @@
 
 .method static synthetic s(Lcom/vungle/sdk/j;)Landroid/widget/TextView;
     .locals 1
-    .parameter
 
     .prologue
     .line 31
@@ -818,7 +788,6 @@
 
 .method static synthetic t(Lcom/vungle/sdk/j;)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 31
@@ -831,7 +800,6 @@
 
 .method static synthetic u(Lcom/vungle/sdk/j;)I
     .locals 1
-    .parameter
 
     .prologue
     .line 31
@@ -842,7 +810,6 @@
 
 .method static synthetic v(Lcom/vungle/sdk/j;)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 31
@@ -855,7 +822,6 @@
 
 .method static synthetic w(Lcom/vungle/sdk/j;)Landroid/os/Handler;
     .locals 1
-    .parameter
 
     .prologue
     .line 31
@@ -878,7 +844,6 @@
 
 .method protected final a(Landroid/content/Context;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 98
@@ -948,7 +913,6 @@
 
 .method public final a(Z)V
     .locals 0
-    .parameter
 
     .prologue
     .line 267
@@ -1053,7 +1017,7 @@
     .line 206
     iget-object v1, p0, Lcom/vungle/sdk/j;->l:Landroid/widget/TextView;
 
-    const/high16 v2, 0x4000
+    const/high16 v2, 0x40000000
 
     const/4 v3, 0x0
 
@@ -1237,7 +1201,7 @@
     .line 252
     iget-object v0, p0, Lcom/vungle/sdk/j;->l:Landroid/widget/TextView;
 
-    const/high16 v2, 0x4000
+    const/high16 v2, 0x40000000
 
     const/4 v3, 0x0
 

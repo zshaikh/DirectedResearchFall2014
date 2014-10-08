@@ -29,8 +29,6 @@
 # direct methods
 .method private constructor <init>(Lcom/chartboost/sdk/impl/b;Landroid/content/Context;)V
     .locals 3
-    .parameter
-    .parameter
 
     .prologue
     const/4 v2, -0x1
@@ -142,9 +140,6 @@
 
 .method synthetic constructor <init>(Lcom/chartboost/sdk/impl/b;Landroid/content/Context;Lcom/chartboost/sdk/impl/b$a;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 43
@@ -155,7 +150,6 @@
 
 .method private a(Ljava/lang/String;)Landroid/graphics/Point;
     .locals 5
-    .parameter
 
     .prologue
     const/4 v4, 0x0
@@ -217,7 +211,6 @@
 
 .method static synthetic a(Lcom/chartboost/sdk/impl/b$a;)Lcom/chartboost/sdk/impl/b;
     .locals 1
-    .parameter
 
     .prologue
     .line 36
@@ -230,17 +223,15 @@
 # virtual methods
 .method protected a(II)V
     .locals 12
-    .parameter
-    .parameter
 
     .prologue
     const/16 v11, 0xa
 
-    const/high16 v8, 0x43f0
+    const/high16 v8, 0x43f00000
 
-    const/high16 v7, 0x43a0
+    const/high16 v7, 0x43a00000
 
-    const/high16 v10, 0x4000
+    const/high16 v10, 0x40000000
 
     const/4 v6, -0x2
 

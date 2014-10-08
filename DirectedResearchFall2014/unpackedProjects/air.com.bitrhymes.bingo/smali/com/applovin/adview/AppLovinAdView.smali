@@ -80,7 +80,7 @@
 
     const/4 v2, 0x1
 
-    const/high16 v3, 0x4248
+    const/high16 v3, 0x42480000
 
     invoke-static {v2, v3, v0}, Landroid/util/TypedValue;->applyDimension(IFLandroid/util/DisplayMetrics;)F
 
@@ -98,7 +98,7 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setBackgroundColor(I)V
 
-    const/high16 v3, -0x100
+    const/high16 v3, -0x1000000
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setTextColor(I)V
 

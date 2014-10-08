@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/vungle/sdk/j;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 583
@@ -39,7 +38,6 @@
 # virtual methods
 .method public final onCancel(Landroid/content/DialogInterface;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 586

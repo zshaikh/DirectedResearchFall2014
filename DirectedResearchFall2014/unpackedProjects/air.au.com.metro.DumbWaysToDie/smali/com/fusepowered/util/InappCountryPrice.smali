@@ -12,8 +12,8 @@
 # direct methods
 .method public constructor <init>(Ljava/lang/String;F)V
     .locals 0
-    .parameter "country"
-    .parameter "price"
+    .param p1, "country"    # Ljava/lang/String;
+    .param p2, "price"    # F
 
     .prologue
     .line 9
@@ -53,7 +53,7 @@
 
 .method public setCountry(Ljava/lang/String;)V
     .locals 0
-    .parameter "country"
+    .param p1, "country"    # Ljava/lang/String;
 
     .prologue
     .line 19
@@ -65,7 +65,7 @@
 
 .method public setPrice(F)V
     .locals 0
-    .parameter "price"
+    .param p1, "price"    # F
 
     .prologue
     .line 27
@@ -111,7 +111,7 @@
     move-result-object v0
 
     .line 35
-    .local v0, buf:Ljava/lang/StringBuilder;
+    .local v0, "buf":Ljava/lang/StringBuilder;
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1

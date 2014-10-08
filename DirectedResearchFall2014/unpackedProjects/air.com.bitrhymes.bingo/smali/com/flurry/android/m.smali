@@ -26,10 +26,6 @@
 
 .method public constructor <init>(Landroid/content/Context;Lcom/flurry/android/FlurryAds;Lcom/flurry/android/cz;Lcom/flurry/android/AdUnit;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 19
@@ -41,8 +37,6 @@
 
 .method private a(Ljava/lang/String;Ljava/util/Map;)V
     .locals 8
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -135,7 +129,6 @@
 # virtual methods
 .method public final onAdClicked(Ljava/util/Map;)V
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -159,7 +152,6 @@
 
 .method public final onAdClosed(Ljava/util/Map;)V
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -183,7 +175,6 @@
 
 .method public final onAdFilled(Ljava/util/Map;)V
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -207,7 +198,6 @@
 
 .method public final onAdShown(Ljava/util/Map;)V
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -231,7 +221,6 @@
 
 .method public final onRenderFailed(Ljava/util/Map;)V
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",

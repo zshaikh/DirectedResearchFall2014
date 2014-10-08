@@ -188,7 +188,6 @@
 
 .method static synthetic access$000(Lcom/adobe/air/OrientationManager;)I
     .locals 1
-    .parameter
 
     .prologue
     .line 38
@@ -199,8 +198,6 @@
 
 .method static synthetic access$002(Lcom/adobe/air/OrientationManager;I)I
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 38
@@ -211,7 +208,6 @@
 
 .method static synthetic access$100(Lcom/adobe/air/OrientationManager;)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 38
@@ -222,7 +218,6 @@
 
 .method static synthetic access$200(Lcom/adobe/air/OrientationManager;)I
     .locals 1
-    .parameter
 
     .prologue
     .line 38
@@ -233,8 +228,6 @@
 
 .method static synthetic access$202(Lcom/adobe/air/OrientationManager;I)I
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 38
@@ -245,7 +238,6 @@
 
 .method static synthetic access$300(Lcom/adobe/air/OrientationManager;)I
     .locals 1
-    .parameter
 
     .prologue
     .line 38
@@ -256,7 +248,6 @@
 
 .method static synthetic access$400(Lcom/adobe/air/OrientationManager;)Landroid/app/Activity;
     .locals 1
-    .parameter
 
     .prologue
     .line 38
@@ -267,7 +258,6 @@
 
 .method static synthetic access$500(Lcom/adobe/air/OrientationManager;)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 38
@@ -280,8 +270,6 @@
 
 .method static synthetic access$602(Lcom/adobe/air/OrientationManager;I)I
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 38
@@ -292,7 +280,6 @@
 
 .method static synthetic access$700(Lcom/adobe/air/OrientationManager;)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 38
@@ -305,7 +292,6 @@
 
 .method static synthetic access$800(Lcom/adobe/air/OrientationManager;)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 38
@@ -316,8 +302,6 @@
 
 .method static synthetic access$802(Lcom/adobe/air/OrientationManager;Z)Z
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 38
@@ -328,7 +312,6 @@
 
 .method static synthetic access$900(Lcom/adobe/air/OrientationManager;)F
     .locals 1
-    .parameter
 
     .prologue
     .line 38
@@ -1319,7 +1302,6 @@
 # virtual methods
 .method public enableEventListener(Z)V
     .locals 1
-    .parameter
 
     .prologue
     .line 351
@@ -1538,8 +1520,6 @@
 
 .method public onActivityCreated(Landroid/app/Activity;Lcom/adobe/air/AIRWindowSurfaceView;)V
     .locals 4
-    .parameter
-    .parameter
 
     .prologue
     const/4 v3, 0x1
@@ -1677,7 +1657,6 @@
 
 .method public onConfigurationChanged(Landroid/content/res/Configuration;)V
     .locals 4
-    .parameter
 
     .prologue
     const/4 v3, 0x0
@@ -1825,7 +1804,6 @@
 
 .method public setAspectRatio(I)V
     .locals 4
-    .parameter
 
     .prologue
     const/4 v3, 0x0
@@ -1923,7 +1901,6 @@
 
 .method public setAutoOrients(Z)V
     .locals 2
-    .parameter
 
     .prologue
     .line 566
@@ -1985,7 +1962,6 @@
 
 .method public setNearestOrientation(I)V
     .locals 2
-    .parameter
 
     .prologue
     .line 499
@@ -2074,7 +2050,6 @@
 
 .method public setOrientation(I)V
     .locals 5
-    .parameter
 
     .prologue
     const/4 v4, 0x0

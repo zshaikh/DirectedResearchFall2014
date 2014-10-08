@@ -26,7 +26,7 @@
 
 .method public static parse(Lcom/fusepowered/m1/google/gson/stream/JsonReader;)Lcom/fusepowered/m1/google/gson/JsonElement;
     .locals 3
-    .parameter "reader"
+    .param p0, "reader"    # Lcom/fusepowered/m1/google/gson/stream/JsonReader;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lcom/fusepowered/m1/google/gson/JsonParseException;
@@ -38,7 +38,7 @@
     const/4 v1, 0x1
 
     .line 43
-    .local v1, isEmpty:Z
+    .local v1, "isEmpty":Z
     :try_start_0
     invoke-virtual {p0}, Lcom/fusepowered/m1/google/gson/stream/JsonReader;->peek()Lcom/fusepowered/m1/google/gson/stream/JsonToken;
 
@@ -52,7 +52,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "reader":Lcom/fusepowered/m1/google/gson/stream/JsonReader;
     check-cast p0, Lcom/fusepowered/m1/google/gson/JsonElement;
     :try_end_0
     .catch Ljava/io/EOFException; {:try_start_0 .. :try_end_0} :catch_0
@@ -73,7 +73,7 @@
     move-object v0, v2
 
     .line 51
-    .local v0, e:Ljava/io/EOFException;
+    .local v0, "e":Ljava/io/EOFException;
     if-eqz v1, :cond_0
 
     .line 52
@@ -90,14 +90,14 @@
     throw v2
 
     .line 56
-    .end local v0           #e:Ljava/io/EOFException;
+    .end local v0    # "e":Ljava/io/EOFException;
     :catch_1
     move-exception v2
 
     move-object v0, v2
 
     .line 57
-    .local v0, e:Lcom/fusepowered/m1/google/gson/stream/MalformedJsonException;
+    .local v0, "e":Lcom/fusepowered/m1/google/gson/stream/MalformedJsonException;
     new-instance v2, Lcom/fusepowered/m1/google/gson/JsonSyntaxException;
 
     invoke-direct {v2, v0}, Lcom/fusepowered/m1/google/gson/JsonSyntaxException;-><init>(Ljava/lang/Throwable;)V
@@ -105,14 +105,14 @@
     throw v2
 
     .line 58
-    .end local v0           #e:Lcom/fusepowered/m1/google/gson/stream/MalformedJsonException;
+    .end local v0    # "e":Lcom/fusepowered/m1/google/gson/stream/MalformedJsonException;
     :catch_2
     move-exception v2
 
     move-object v0, v2
 
     .line 59
-    .local v0, e:Ljava/io/IOException;
+    .local v0, "e":Ljava/io/IOException;
     new-instance v2, Lcom/fusepowered/m1/google/gson/JsonIOException;
 
     invoke-direct {v2, v0}, Lcom/fusepowered/m1/google/gson/JsonIOException;-><init>(Ljava/lang/Throwable;)V
@@ -120,14 +120,14 @@
     throw v2
 
     .line 60
-    .end local v0           #e:Ljava/io/IOException;
+    .end local v0    # "e":Ljava/io/IOException;
     :catch_3
     move-exception v2
 
     move-object v0, v2
 
     .line 61
-    .local v0, e:Ljava/lang/NumberFormatException;
+    .local v0, "e":Ljava/lang/NumberFormatException;
     new-instance v2, Lcom/fusepowered/m1/google/gson/JsonSyntaxException;
 
     invoke-direct {v2, v0}, Lcom/fusepowered/m1/google/gson/JsonSyntaxException;-><init>(Ljava/lang/Throwable;)V
@@ -137,8 +137,8 @@
 
 .method public static write(Lcom/fusepowered/m1/google/gson/JsonElement;Lcom/fusepowered/m1/google/gson/stream/JsonWriter;)V
     .locals 1
-    .parameter "element"
-    .parameter "writer"
+    .param p0, "element"    # Lcom/fusepowered/m1/google/gson/JsonElement;
+    .param p1, "writer"    # Lcom/fusepowered/m1/google/gson/stream/JsonWriter;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -157,7 +157,7 @@
 
 .method public static writerForAppendable(Ljava/lang/Appendable;)Ljava/io/Writer;
     .locals 2
-    .parameter "appendable"
+    .param p0, "appendable"    # Ljava/lang/Appendable;
 
     .prologue
     .line 73
@@ -167,13 +167,13 @@
 
     check-cast p0, Ljava/io/Writer;
 
-    .end local p0
+    .end local p0    # "appendable":Ljava/lang/Appendable;
     move-object v0, p0
 
     :goto_0
     return-object v0
 
-    .restart local p0
+    .restart local p0    # "appendable":Ljava/lang/Appendable;
     :cond_0
     new-instance v0, Lcom/fusepowered/m1/google/gson/internal/Streams$AppendableWriter;
 

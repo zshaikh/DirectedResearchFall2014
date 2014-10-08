@@ -20,7 +20,7 @@
 
 .method public static decodeUrl(Ljava/lang/String;)Landroid/os/Bundle;
     .locals 10
-    .parameter "s"
+    .param p0, "s"    # Ljava/lang/String;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -37,7 +37,7 @@
     invoke-direct {v2}, Landroid/os/Bundle;-><init>()V
 
     .line 99
-    .local v2, params:Landroid/os/Bundle;
+    .local v2, "params":Landroid/os/Bundle;
     if-eqz p0, :cond_0
 
     .line 100
@@ -48,24 +48,24 @@
     move-result-object v0
 
     .line 101
-    .local v0, array:[Ljava/lang/String;
+    .local v0, "array":[Ljava/lang/String;
     array-length v4, v0
 
     :goto_0
     if-lt v5, v4, :cond_1
 
     .line 116
-    .end local v0           #array:[Ljava/lang/String;
+    .end local v0    # "array":[Ljava/lang/String;
     :cond_0
     return-object v2
 
     .line 101
-    .restart local v0       #array:[Ljava/lang/String;
+    .restart local v0    # "array":[Ljava/lang/String;
     :cond_1
     aget-object v1, v0, v5
 
     .line 102
-    .local v1, parameter:Ljava/lang/String;
+    .local v1, "parameter":Ljava/lang/String;
     const-string v6, "="
 
     invoke-virtual {v1, v6}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
@@ -73,7 +73,7 @@
     move-result-object v3
 
     .line 105
-    .local v3, v:[Ljava/lang/String;
+    .local v3, "v":[Ljava/lang/String;
     :try_start_0
     array-length v6, v3
 
@@ -147,8 +147,8 @@
 
 .method public static encodePostBody(Landroid/os/Bundle;Ljava/lang/String;)Ljava/lang/String;
     .locals 6
-    .parameter "parameters"
-    .parameter "boundary"
+    .param p0, "parameters"    # Landroid/os/Bundle;
+    .param p1, "boundary"    # Ljava/lang/String;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -169,7 +169,7 @@
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
     .line 61
-    .local v2, sb:Ljava/lang/StringBuilder;
+    .local v2, "sb":Ljava/lang/StringBuilder;
     invoke-virtual {p0}, Landroid/os/Bundle;->keySet()Ljava/util/Set;
 
     move-result-object v3
@@ -202,13 +202,13 @@
     check-cast v0, Ljava/lang/String;
 
     .line 62
-    .local v0, key:Ljava/lang/String;
+    .local v0, "key":Ljava/lang/String;
     invoke-virtual {p0, v0}, Landroid/os/Bundle;->get(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v1
 
     .line 63
-    .local v1, parameter:Ljava/lang/Object;
+    .local v1, "parameter":Ljava/lang/Object;
     instance-of v4, v1, Ljava/lang/String;
 
     if-eqz v4, :cond_1
@@ -233,7 +233,7 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .end local v1           #parameter:Ljava/lang/Object;
+    .end local v1    # "parameter":Ljava/lang/Object;
     invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v4
@@ -273,7 +273,7 @@
 
 .method public static encodeUrl(Landroid/os/Bundle;)Ljava/lang/String;
     .locals 7
-    .parameter "parameters"
+    .param p0, "parameters"    # Landroid/os/Bundle;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -295,11 +295,11 @@
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
     .line 82
-    .local v3, sb:Ljava/lang/StringBuilder;
+    .local v3, "sb":Ljava/lang/StringBuilder;
     const/4 v0, 0x1
 
     .line 83
-    .local v0, first:Z
+    .local v0, "first":Z
     invoke-virtual {p0}, Landroid/os/Bundle;->keySet()Ljava/util/Set;
 
     move-result-object v4
@@ -332,13 +332,13 @@
     check-cast v1, Ljava/lang/String;
 
     .line 84
-    .local v1, key:Ljava/lang/String;
+    .local v1, "key":Ljava/lang/String;
     invoke-virtual {p0, v1}, Landroid/os/Bundle;->get(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v2
 
     .line 85
-    .local v2, parameter:Ljava/lang/Object;
+    .local v2, "parameter":Ljava/lang/Object;
     instance-of v5, v2, Ljava/lang/String;
 
     if-eqz v5, :cond_1
@@ -401,9 +401,9 @@
 
 .method public static openUrl(Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/String;
     .locals 7
-    .parameter "url"
-    .parameter "method"
-    .parameter "params"
+    .param p0, "url"    # Ljava/lang/String;
+    .param p1, "method"    # Ljava/lang/String;
+    .param p2, "params"    # Landroid/os/Bundle;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/net/MalformedURLException;,
@@ -419,11 +419,11 @@
     const-string v4, "3i2ndDfv2rTHiSisAbouNdArYfORhtTPEefj3q2f"
 
     .line 158
-    .local v4, strBoundary:Ljava/lang/String;
+    .local v4, "strBoundary":Ljava/lang/String;
     const-string v1, "\r\n"
 
     .line 162
-    .local v1, endLine:Ljava/lang/String;
+    .local v1, "endLine":Ljava/lang/String;
     const-string v0, "GET"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -439,7 +439,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "url":Ljava/lang/String;
     invoke-direct {v0, p0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     const-string p0, "?"
@@ -461,7 +461,7 @@
     move-result-object p0
 
     .line 165
-    .restart local p0
+    .restart local p0    # "url":Ljava/lang/String;
     :cond_0
     const-string v0, "Facebook-Util"
 
@@ -498,11 +498,11 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "url":Ljava/lang/String;
     check-cast p0, Ljava/net/HttpURLConnection;
 
     .line 168
-    .local p0, conn:Ljava/net/HttpURLConnection;
+    .local p0, "conn":Ljava/net/HttpURLConnection;
     const-string v0, "User-Agent"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -552,7 +552,7 @@
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     .line 172
-    .local v0, dataparams:Landroid/os/Bundle;
+    .local v0, "dataparams":Landroid/os/Bundle;
     invoke-virtual {p2}, Landroid/os/Bundle;->keySet()Ljava/util/Set;
 
     move-result-object v2
@@ -587,7 +587,7 @@
     :cond_2
     const-string p1, "access_token"
 
-    .end local p1
+    .end local p1    # "method":Ljava/lang/String;
     invoke-virtual {p2, p1}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
 
     move-result p1
@@ -606,13 +606,13 @@
     move-result-object p1
 
     .line 187
-    .local p1, decoded_token:Ljava/lang/String;
+    .local p1, "decoded_token":Ljava/lang/String;
     const-string v2, "access_token"
 
     invoke-virtual {p2, v2, p1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 190
-    .end local p1           #decoded_token:Ljava/lang/String;
+    .end local p1    # "decoded_token":Ljava/lang/String;
     :cond_3
     const-string p1, "POST"
 
@@ -669,7 +669,7 @@
     invoke-direct {v2, p1}, Ljava/io/BufferedOutputStream;-><init>(Ljava/io/OutputStream;)V
 
     .line 202
-    .local v2, os:Ljava/io/OutputStream;
+    .local v2, "os":Ljava/io/OutputStream;
     :try_start_0
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -713,7 +713,7 @@
 
     move-result-object p2
 
-    .end local p2
+    .end local p2    # "params":Landroid/os/Bundle;
     invoke-direct {p1, p2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     const-string p2, "--"
@@ -773,19 +773,19 @@
     invoke-virtual {v2}, Ljava/io/OutputStream;->close()V
 
     .line 222
-    .end local v0           #dataparams:Landroid/os/Bundle;
-    .end local v2           #os:Ljava/io/OutputStream;
+    .end local v0    # "dataparams":Landroid/os/Bundle;
+    .end local v2    # "os":Ljava/io/OutputStream;
     :cond_5
     const-string p1, ""
 
     .line 224
-    .local p1, response:Ljava/lang/String;
+    .local p1, "response":Ljava/lang/String;
     :try_start_1
     invoke-virtual {p0}, Ljava/net/HttpURLConnection;->getInputStream()Ljava/io/InputStream;
 
     move-result-object p1
 
-    .end local p1           #response:Ljava/lang/String;
+    .end local p1    # "response":Ljava/lang/String;
     invoke-static {p1}, Lcom/facebook/android/Util;->read(Ljava/io/InputStream;)Ljava/lang/String;
     :try_end_1
     .catch Ljava/io/FileNotFoundException; {:try_start_1 .. :try_end_1} :catch_0
@@ -793,15 +793,15 @@
     move-result-object p0
 
     .line 229
-    .local p0, response:Ljava/lang/String;
+    .local p0, "response":Ljava/lang/String;
     :goto_2
     return-object p0
 
     .line 172
-    .restart local v0       #dataparams:Landroid/os/Bundle;
-    .local p0, conn:Ljava/net/HttpURLConnection;
-    .local p1, method:Ljava/lang/String;
-    .restart local p2
+    .restart local v0    # "dataparams":Landroid/os/Bundle;
+    .local p0, "conn":Ljava/net/HttpURLConnection;
+    .local p1, "method":Ljava/lang/String;
+    .restart local p2    # "params":Landroid/os/Bundle;
     :cond_6
     invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -810,13 +810,13 @@
     check-cast v2, Ljava/lang/String;
 
     .line 173
-    .local v2, key:Ljava/lang/String;
+    .local v2, "key":Ljava/lang/String;
     invoke-virtual {p2, v2}, Landroid/os/Bundle;->get(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v3
 
     .line 174
-    .local v3, parameter:Ljava/lang/Object;
+    .local v3, "parameter":Ljava/lang/Object;
     instance-of v6, v3, [B
 
     if-eqz v6, :cond_1
@@ -824,15 +824,15 @@
     .line 175
     check-cast v3, [B
 
-    .end local v3           #parameter:Ljava/lang/Object;
+    .end local v3    # "parameter":Ljava/lang/Object;
     invoke-virtual {v0, v2, v3}, Landroid/os/Bundle;->putByteArray(Ljava/lang/String;[B)V
 
     goto/16 :goto_0
 
     .line 208
-    .end local p1           #method:Ljava/lang/String;
-    .end local p2
-    .local v2, os:Ljava/io/OutputStream;
+    .end local p1    # "method":Ljava/lang/String;
+    .end local p2    # "params":Landroid/os/Bundle;
+    .local v2, "os":Ljava/io/OutputStream;
     :cond_7
     :try_start_2
     invoke-interface {p2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
@@ -842,7 +842,7 @@
     check-cast p1, Ljava/lang/String;
 
     .line 209
-    .local p1, key:Ljava/lang/String;
+    .local p1, "key":Ljava/lang/String;
     new-instance v3, Ljava/lang/StringBuilder;
 
     const-string v5, "Content-Disposition: form-data; filename=\""
@@ -903,7 +903,7 @@
 
     move-result-object p1
 
-    .end local p1           #key:Ljava/lang/String;
+    .end local p1    # "key":Ljava/lang/String;
     invoke-virtual {v2, p1}, Ljava/io/OutputStream;->write([B)V
 
     .line 212
@@ -948,37 +948,37 @@
     move-exception p0
 
     .line 218
-    .end local p0           #conn:Ljava/net/HttpURLConnection;
+    .end local p0    # "conn":Ljava/net/HttpURLConnection;
     invoke-virtual {v2}, Ljava/io/OutputStream;->close()V
 
     .line 219
     throw p0
 
     .line 225
-    .end local v0           #dataparams:Landroid/os/Bundle;
-    .end local v2           #os:Ljava/io/OutputStream;
-    .restart local p0       #conn:Ljava/net/HttpURLConnection;
+    .end local v0    # "dataparams":Landroid/os/Bundle;
+    .end local v2    # "os":Ljava/io/OutputStream;
+    .restart local p0    # "conn":Ljava/net/HttpURLConnection;
     :catch_0
     move-exception p1
 
     .line 227
-    .local p1, e:Ljava/io/FileNotFoundException;
+    .local p1, "e":Ljava/io/FileNotFoundException;
     invoke-virtual {p0}, Ljava/net/HttpURLConnection;->getErrorStream()Ljava/io/InputStream;
 
     move-result-object p0
 
-    .end local p0           #conn:Ljava/net/HttpURLConnection;
+    .end local p0    # "conn":Ljava/net/HttpURLConnection;
     invoke-static {p0}, Lcom/facebook/android/Util;->read(Ljava/io/InputStream;)Ljava/lang/String;
 
     move-result-object p0
 
-    .local p0, response:Ljava/lang/String;
+    .local p0, "response":Ljava/lang/String;
     goto/16 :goto_2
 .end method
 
 .method public static parseJson(Ljava/lang/String;)Lorg/json/JSONObject;
     .locals 8
-    .parameter "response"
+    .param p0, "response"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lorg/json/JSONException;,
@@ -1038,7 +1038,7 @@
     invoke-direct {v1, p0}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
     .line 275
-    .local v1, json:Lorg/json/JSONObject;
+    .local v1, "json":Lorg/json/JSONObject;
     const-string v2, "error"
 
     invoke-virtual {v1, v3}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
@@ -1055,7 +1055,7 @@
     move-result-object v0
 
     .line 277
-    .local v0, error:Lorg/json/JSONObject;
+    .local v0, "error":Lorg/json/JSONObject;
     new-instance v2, Lcom/facebook/android/FacebookError;
 
     .line 278
@@ -1079,7 +1079,7 @@
     throw v2
 
     .line 280
-    .end local v0           #error:Lorg/json/JSONObject;
+    .end local v0    # "error":Lorg/json/JSONObject;
     :cond_2
     const-string v2, "error_code"
 
@@ -1210,7 +1210,7 @@
 
 .method public static parseUrl(Ljava/lang/String;)Landroid/os/Bundle;
     .locals 5
-    .parameter "url"
+    .param p0, "url"    # Ljava/lang/String;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -1231,7 +1231,7 @@
     invoke-direct {v2, p0}, Ljava/net/URL;-><init>(Ljava/lang/String;)V
 
     .line 131
-    .local v2, u:Ljava/net/URL;
+    .local v2, "u":Ljava/net/URL;
     invoke-virtual {v2}, Ljava/net/URL;->getQuery()Ljava/lang/String;
 
     move-result-object v3
@@ -1241,7 +1241,7 @@
     move-result-object v0
 
     .line 132
-    .local v0, b:Landroid/os/Bundle;
+    .local v0, "b":Landroid/os/Bundle;
     invoke-virtual {v2}, Ljava/net/URL;->getRef()Ljava/lang/String;
 
     move-result-object v3
@@ -1257,8 +1257,8 @@
     move-object v3, v0
 
     .line 135
-    .end local v0           #b:Landroid/os/Bundle;
-    .end local v2           #u:Ljava/net/URL;
+    .end local v0    # "b":Landroid/os/Bundle;
+    .end local v2    # "u":Ljava/net/URL;
     :goto_0
     return-object v3
 
@@ -1269,7 +1269,7 @@
     move-object v1, v3
 
     .line 135
-    .local v1, e:Ljava/net/MalformedURLException;
+    .local v1, "e":Ljava/net/MalformedURLException;
     new-instance v3, Landroid/os/Bundle;
 
     invoke-direct {v3}, Landroid/os/Bundle;-><init>()V
@@ -1279,7 +1279,7 @@
 
 .method private static read(Ljava/io/InputStream;)Ljava/lang/String;
     .locals 5
-    .parameter "in"
+    .param p0, "in"    # Ljava/io/InputStream;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -1296,7 +1296,7 @@
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
     .line 235
-    .local v2, sb:Ljava/lang/StringBuilder;
+    .local v2, "sb":Ljava/lang/StringBuilder;
     new-instance v1, Ljava/io/BufferedReader;
 
     new-instance v3, Ljava/io/InputStreamReader;
@@ -1308,12 +1308,12 @@
     invoke-direct {v1, v3, v4}, Ljava/io/BufferedReader;-><init>(Ljava/io/Reader;I)V
 
     .line 236
-    .local v1, r:Ljava/io/BufferedReader;
+    .local v1, "r":Ljava/io/BufferedReader;
     invoke-virtual {v1}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
     move-result-object v0
 
-    .local v0, line:Ljava/lang/String;
+    .local v0, "line":Ljava/lang/String;
     :goto_0
     if-nez v0, :cond_0
 
@@ -1341,9 +1341,9 @@
 
 .method public static showAlert(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
-    .parameter "context"
-    .parameter "title"
-    .parameter "text"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "title"    # Ljava/lang/String;
+    .param p2, "text"    # Ljava/lang/String;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -1354,7 +1354,7 @@
     invoke-direct {v0, p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
     .line 310
-    .local v0, alertBuilder:Landroid/app/AlertDialog$Builder;
+    .local v0, "alertBuilder":Landroid/app/AlertDialog$Builder;
     invoke-virtual {v0, p1}, Landroid/app/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
 
     .line 311

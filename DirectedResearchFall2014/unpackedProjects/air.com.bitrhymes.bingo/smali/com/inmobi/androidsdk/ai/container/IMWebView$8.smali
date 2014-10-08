@@ -21,7 +21,6 @@
 # direct methods
 .method constructor <init>(Lcom/inmobi/androidsdk/ai/container/IMWebView;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1
@@ -35,7 +34,6 @@
 
 .method static synthetic a(Lcom/inmobi/androidsdk/ai/container/IMWebView$8;)Lcom/inmobi/androidsdk/ai/container/IMWebView;
     .locals 1
-    .parameter
 
     .prologue
     .line 1570
@@ -48,10 +46,6 @@
 # virtual methods
 .method public onJsAlert(Landroid/webkit/WebView;Ljava/lang/String;Ljava/lang/String;Landroid/webkit/JsResult;)Z
     .locals 4
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const-string v3, "InMobiAndroidSDK_3.6.2"
@@ -145,8 +139,6 @@
 
 .method public onShowCustomView(Landroid/view/View;Landroid/webkit/WebChromeClient$CustomViewCallback;)V
     .locals 3
-    .parameter
-    .parameter
 
     .prologue
     .line 1595

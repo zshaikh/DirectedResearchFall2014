@@ -27,8 +27,8 @@
 # direct methods
 .method private constructor <init>(JI)V
     .locals 1
-    .parameter "numEntries"
-    .parameter "blockSize"
+    .param p1, "numEntries"    # J
+    .param p3, "blockSize"    # I
 
     .prologue
     .line 313
@@ -56,9 +56,9 @@
 
 .method synthetic constructor <init>(JILcom/flurry/org/apache/avro/file/DataFileStream$1;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
-    .parameter "x2"
+    .param p1, "x0"    # J
+    .param p3, "x1"    # I
+    .param p4, "x2"    # Lcom/flurry/org/apache/avro/file/DataFileStream$1;
 
     .prologue
     .line 308
@@ -69,8 +69,8 @@
 
 .method constructor <init>(Ljava/nio/ByteBuffer;J)V
     .locals 2
-    .parameter "block"
-    .parameter "numEntries"
+    .param p1, "block"    # Ljava/nio/ByteBuffer;
+    .param p2, "numEntries"    # J
 
     .prologue
     .line 319
@@ -117,7 +117,7 @@
 
 .method static synthetic access$200(Lcom/flurry/org/apache/avro/file/DataFileStream$DataBlock;)[B
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/flurry/org/apache/avro/file/DataFileStream$DataBlock;
 
     .prologue
     .line 308
@@ -128,8 +128,8 @@
 
 .method static synthetic access$402(Lcom/flurry/org/apache/avro/file/DataFileStream$DataBlock;J)J
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
+    .param p0, "x0"    # Lcom/flurry/org/apache/avro/file/DataFileStream$DataBlock;
+    .param p1, "x1"    # J
 
     .prologue
     .line 308
@@ -140,7 +140,7 @@
 
 .method static synthetic access$500(Lcom/flurry/org/apache/avro/file/DataFileStream$DataBlock;)I
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/flurry/org/apache/avro/file/DataFileStream$DataBlock;
 
     .prologue
     .line 308
@@ -151,8 +151,8 @@
 
 .method static synthetic access$502(Lcom/flurry/org/apache/avro/file/DataFileStream$DataBlock;I)I
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
+    .param p0, "x0"    # Lcom/flurry/org/apache/avro/file/DataFileStream$DataBlock;
+    .param p1, "x1"    # I
 
     .prologue
     .line 308
@@ -165,7 +165,7 @@
 # virtual methods
 .method compressUsing(Lcom/flurry/org/apache/avro/file/Codec;)V
     .locals 2
-    .parameter "c"
+    .param p1, "c"    # Lcom/flurry/org/apache/avro/file/Codec;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -183,7 +183,7 @@
     move-result-object v0
 
     .line 350
-    .local v0, result:Ljava/nio/ByteBuffer;
+    .local v0, "result":Ljava/nio/ByteBuffer;
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->array()[B
 
     move-result-object v1
@@ -203,7 +203,7 @@
 
 .method decompressUsing(Lcom/flurry/org/apache/avro/file/Codec;)V
     .locals 2
-    .parameter "c"
+    .param p1, "c"    # Lcom/flurry/org/apache/avro/file/Codec;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -221,7 +221,7 @@
     move-result-object v0
 
     .line 344
-    .local v0, result:Ljava/nio/ByteBuffer;
+    .local v0, "result":Ljava/nio/ByteBuffer;
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->array()[B
 
     move-result-object v1
@@ -289,8 +289,8 @@
 
 .method writeBlockTo(Lcom/flurry/org/apache/avro/io/BinaryEncoder;[B)V
     .locals 3
-    .parameter "e"
-    .parameter "sync"
+    .param p1, "e"    # Lcom/flurry/org/apache/avro/io/BinaryEncoder;
+    .param p2, "sync"    # [B
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;

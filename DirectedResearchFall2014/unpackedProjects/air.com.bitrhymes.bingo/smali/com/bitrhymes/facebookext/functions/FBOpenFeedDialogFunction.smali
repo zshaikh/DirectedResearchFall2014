@@ -22,8 +22,8 @@
 # virtual methods
 .method public call(Lcom/adobe/fre/FREContext;[Lcom/adobe/fre/FREObject;)Lcom/adobe/fre/FREObject;
     .locals 16
-    .parameter "context"
-    .parameter "args"
+    .param p1, "context"    # Lcom/adobe/fre/FREContext;
+    .param p2, "args"    # [Lcom/adobe/fre/FREObject;
 
     .prologue
     .line 26
@@ -40,7 +40,7 @@
     move-result-object v3
 
     .line 28
-    .local v3, appAccessToken:Ljava/lang/String;
+    .local v3, "appAccessToken":Ljava/lang/String;
     const/4 v14, 0x1
 
     aget-object v14, p2, v14
@@ -50,7 +50,7 @@
     move-result-object v4
 
     .line 29
-    .local v4, appId:Ljava/lang/String;
+    .local v4, "appId":Ljava/lang/String;
     const/4 v14, 0x2
 
     aget-object v14, p2, v14
@@ -60,7 +60,7 @@
     move-result-object v2
 
     .line 30
-    .local v2, actionName:Ljava/lang/String;
+    .local v2, "actionName":Ljava/lang/String;
     const/4 v14, 0x3
 
     aget-object v14, p2, v14
@@ -70,7 +70,7 @@
     move-result-object v0
 
     .line 31
-    .local v0, actionLink:Ljava/lang/String;
+    .local v0, "actionLink":Ljava/lang/String;
     const/4 v14, 0x4
 
     aget-object v14, p2, v14
@@ -80,7 +80,7 @@
     move-result-object v5
 
     .line 32
-    .local v5, appName:Ljava/lang/String;
+    .local v5, "appName":Ljava/lang/String;
     const/4 v14, 0x5
 
     aget-object v14, p2, v14
@@ -90,7 +90,7 @@
     move-result-object v6
 
     .line 33
-    .local v6, caption:Ljava/lang/String;
+    .local v6, "caption":Ljava/lang/String;
     const/4 v14, 0x6
 
     aget-object v14, p2, v14
@@ -100,7 +100,7 @@
     move-result-object v7
 
     .line 34
-    .local v7, description:Ljava/lang/String;
+    .local v7, "description":Ljava/lang/String;
     const/4 v14, 0x7
 
     aget-object v14, p2, v14
@@ -110,7 +110,7 @@
     move-result-object v9
 
     .line 35
-    .local v9, fbLink:Ljava/lang/String;
+    .local v9, "fbLink":Ljava/lang/String;
     const/16 v14, 0x8
 
     aget-object v14, p2, v14
@@ -120,7 +120,7 @@
     move-result-object v13
 
     .line 36
-    .local v13, picUrl:Ljava/lang/String;
+    .local v13, "picUrl":Ljava/lang/String;
     const/16 v14, 0x9
 
     aget-object v14, p2, v14
@@ -130,7 +130,7 @@
     move-result-object v8
 
     .line 39
-    .local v8, expiresTime:Ljava/lang/String;
+    .local v8, "expiresTime":Ljava/lang/String;
     invoke-static {v3, v8, v4}, Lcom/bitrhymes/facebookext/FacebookExtContext;->updateFBSession(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 41
@@ -139,7 +139,7 @@
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
     .line 42
-    .local v1, actionMap:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v1, "actionMap":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v14, "name"
 
     invoke-virtual {v1, v14, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -155,7 +155,7 @@
     invoke-direct {v12}, Landroid/os/Bundle;-><init>()V
 
     .line 46
-    .local v12, params:Landroid/os/Bundle;
+    .local v12, "params":Landroid/os/Bundle;
     const-string v14, "name"
 
     invoke-virtual {v12, v14, v5}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
@@ -204,7 +204,7 @@
     const-string v11, "feed"
 
     .line 56
-    .local v11, method:Ljava/lang/String;
+    .local v11, "method":Ljava/lang/String;
     new-instance v10, Landroid/content/Intent;
 
     invoke-virtual/range {p1 .. p1}, Lcom/adobe/fre/FREContext;->getActivity()Landroid/app/Activity;
@@ -220,7 +220,7 @@
     invoke-direct {v10, v14, v15}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
     .line 57
-    .local v10, i:Landroid/content/Intent;
+    .local v10, "i":Landroid/content/Intent;
     new-instance v14, Ljava/lang/StringBuilder;
 
     sget-object v15, Lcom/bitrhymes/facebookext/DialogActivity;->extraPrefix:Ljava/lang/String;
@@ -301,20 +301,20 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 65
-    .end local v0           #actionLink:Ljava/lang/String;
-    .end local v1           #actionMap:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
-    .end local v2           #actionName:Ljava/lang/String;
-    .end local v3           #appAccessToken:Ljava/lang/String;
-    .end local v4           #appId:Ljava/lang/String;
-    .end local v5           #appName:Ljava/lang/String;
-    .end local v6           #caption:Ljava/lang/String;
-    .end local v7           #description:Ljava/lang/String;
-    .end local v8           #expiresTime:Ljava/lang/String;
-    .end local v9           #fbLink:Ljava/lang/String;
-    .end local v10           #i:Landroid/content/Intent;
-    .end local v11           #method:Ljava/lang/String;
-    .end local v12           #params:Landroid/os/Bundle;
-    .end local v13           #picUrl:Ljava/lang/String;
+    .end local v0    # "actionLink":Ljava/lang/String;
+    .end local v1    # "actionMap":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .end local v2    # "actionName":Ljava/lang/String;
+    .end local v3    # "appAccessToken":Ljava/lang/String;
+    .end local v4    # "appId":Ljava/lang/String;
+    .end local v5    # "appName":Ljava/lang/String;
+    .end local v6    # "caption":Ljava/lang/String;
+    .end local v7    # "description":Ljava/lang/String;
+    .end local v8    # "expiresTime":Ljava/lang/String;
+    .end local v9    # "fbLink":Ljava/lang/String;
+    .end local v10    # "i":Landroid/content/Intent;
+    .end local v11    # "method":Ljava/lang/String;
+    .end local v12    # "params":Landroid/os/Bundle;
+    .end local v13    # "picUrl":Ljava/lang/String;
     :goto_0
     const/4 v14, 0x0
 
@@ -337,7 +337,7 @@
 
 .method public onComplete(Landroid/os/Bundle;)V
     .locals 0
-    .parameter "values"
+    .param p1, "values"    # Landroid/os/Bundle;
 
     .prologue
     .line 71
@@ -346,7 +346,7 @@
 
 .method public onError(Lcom/facebook/android/DialogError;)V
     .locals 0
-    .parameter "e"
+    .param p1, "e"    # Lcom/facebook/android/DialogError;
 
     .prologue
     .line 81
@@ -355,7 +355,7 @@
 
 .method public onFacebookError(Lcom/facebook/android/FacebookError;)V
     .locals 0
-    .parameter "e"
+    .param p1, "e"    # Lcom/facebook/android/FacebookError;
 
     .prologue
     .line 76

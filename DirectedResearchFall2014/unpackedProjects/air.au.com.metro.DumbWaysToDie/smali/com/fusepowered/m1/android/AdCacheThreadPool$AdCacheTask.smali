@@ -3,8 +3,8 @@
 .source "AdCacheThreadPool.java"
 
 # interfaces
-.implements Ljava/lang/Runnable;
 .implements Ljava/lang/Comparable;
+.implements Ljava/lang/Runnable;
 
 
 # annotations
@@ -62,11 +62,10 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m1/android/AdCacheThreadPool;Landroid/content/Context;Ljava/lang/String;Lcom/fusepowered/m1/android/CachedAd;Lcom/fusepowered/m1/android/AdCache$AdCacheTaskListener;)V
     .locals 2
-    .parameter
-    .parameter "context"
-    .parameter "adName"
-    .parameter "ad"
-    .parameter "listener"
+    .param p2, "context"    # Landroid/content/Context;
+    .param p3, "adName"    # Ljava/lang/String;
+    .param p4, "ad"    # Lcom/fusepowered/m1/android/CachedAd;
+    .param p5, "listener"    # Lcom/fusepowered/m1/android/AdCache$AdCacheTaskListener;
 
     .prologue
     .line 58
@@ -110,7 +109,7 @@
 # virtual methods
 .method public compareTo(Lcom/fusepowered/m1/android/AdCacheThreadPool$AdCacheTask;)I
     .locals 2
-    .parameter "other"
+    .param p1, "other"    # Lcom/fusepowered/m1/android/AdCacheThreadPool$AdCacheTask;
 
     .prologue
     .line 120
@@ -129,13 +128,13 @@
 
 .method public bridge synthetic compareTo(Ljava/lang/Object;)I
     .locals 1
-    .parameter "x0"
+    .param p1, "x0"    # Ljava/lang/Object;
 
     .prologue
     .line 50
     check-cast p1, Lcom/fusepowered/m1/android/AdCacheThreadPool$AdCacheTask;
 
-    .end local p1
+    .end local p1    # "x0":Ljava/lang/Object;
     invoke-virtual {p0, p1}, Lcom/fusepowered/m1/android/AdCacheThreadPool$AdCacheTask;->compareTo(Lcom/fusepowered/m1/android/AdCacheThreadPool$AdCacheTask;)I
 
     move-result v0
@@ -145,7 +144,7 @@
 
 .method public equals(Ljava/lang/Object;)Z
     .locals 4
-    .parameter "other"
+    .param p1, "other"    # Ljava/lang/Object;
 
     .prologue
     .line 109
@@ -178,7 +177,7 @@
     move-object v1, v0
 
     .line 114
-    .local v1, that:Lcom/fusepowered/m1/android/AdCacheThreadPool$AdCacheTask;
+    .local v1, "that":Lcom/fusepowered/m1/android/AdCacheThreadPool$AdCacheTask;
     iget-object v2, p0, Lcom/fusepowered/m1/android/AdCacheThreadPool$AdCacheTask;->ad:Lcom/fusepowered/m1/android/CachedAd;
 
     iget-object v3, v1, Lcom/fusepowered/m1/android/AdCacheThreadPool$AdCacheTask;->ad:Lcom/fusepowered/m1/android/CachedAd;
@@ -200,7 +199,7 @@
     const/4 v1, 0x0
 
     .line 71
-    .local v1, listener:Lcom/fusepowered/m1/android/AdCache$AdCacheTaskListener;
+    .local v1, "listener":Lcom/fusepowered/m1/android/AdCache$AdCacheTaskListener;
     iget-object v3, p0, Lcom/fusepowered/m1/android/AdCacheThreadPool$AdCacheTask;->listenerRef:Ljava/lang/ref/WeakReference;
 
     if-eqz v3, :cond_0
@@ -212,11 +211,11 @@
 
     move-result-object v1
 
-    .end local v1           #listener:Lcom/fusepowered/m1/android/AdCache$AdCacheTaskListener;
+    .end local v1    # "listener":Lcom/fusepowered/m1/android/AdCache$AdCacheTaskListener;
     check-cast v1, Lcom/fusepowered/m1/android/AdCache$AdCacheTaskListener;
 
     .line 74
-    .restart local v1       #listener:Lcom/fusepowered/m1/android/AdCache$AdCacheTaskListener;
+    .restart local v1    # "listener":Lcom/fusepowered/m1/android/AdCache$AdCacheTaskListener;
     :cond_0
     if-eqz v1, :cond_1
 
@@ -259,7 +258,7 @@
     move-result v2
 
     .line 78
-    .local v2, success:Z
+    .local v2, "success":Z
     iget-object v3, p0, Lcom/fusepowered/m1/android/AdCacheThreadPool$AdCacheTask;->contextRef:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v3}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -295,7 +294,7 @@
     move-result-object v0
 
     .line 84
-    .local v0, incompleteId:Ljava/lang/String;
+    .local v0, "incompleteId":Ljava/lang/String;
     if-eqz v0, :cond_3
 
     iget-object v3, p0, Lcom/fusepowered/m1/android/AdCacheThreadPool$AdCacheTask;->ad:Lcom/fusepowered/m1/android/CachedAd;
@@ -337,7 +336,7 @@
     invoke-static {v3, v4, v6}, Lcom/fusepowered/m1/android/AdCache;->setIncompleteDownload(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 102
-    .end local v0           #incompleteId:Ljava/lang/String;
+    .end local v0    # "incompleteId":Ljava/lang/String;
     :goto_0
     if-eqz v1, :cond_2
 
@@ -351,7 +350,7 @@
     return-void
 
     .line 93
-    .restart local v0       #incompleteId:Ljava/lang/String;
+    .restart local v0    # "incompleteId":Ljava/lang/String;
     :cond_3
     iget-object v3, p0, Lcom/fusepowered/m1/android/AdCacheThreadPool$AdCacheTask;->contextRef:Ljava/lang/ref/WeakReference;
 
@@ -386,7 +385,7 @@
     goto :goto_1
 
     .line 99
-    .end local v0           #incompleteId:Ljava/lang/String;
+    .end local v0    # "incompleteId":Ljava/lang/String;
     :cond_5
     iget-object v3, p0, Lcom/fusepowered/m1/android/AdCacheThreadPool$AdCacheTask;->contextRef:Ljava/lang/ref/WeakReference;
 

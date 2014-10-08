@@ -30,7 +30,7 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m1/android/CachedVideoPlayerActivity;)V
     .locals 1
-    .parameter "activity"
+    .param p1, "activity"    # Lcom/fusepowered/m1/android/CachedVideoPlayerActivity;
 
     .prologue
     .line 366
@@ -51,7 +51,7 @@
 # virtual methods
 .method public onPageFinished(Ljava/lang/String;)V
     .locals 3
-    .parameter "url"
+    .param p1, "url"    # Ljava/lang/String;
 
     .prologue
     .line 373
@@ -85,11 +85,11 @@
     check-cast v0, Lcom/fusepowered/m1/android/CachedVideoPlayerActivity;
 
     .line 375
-    .local v0, activity:Lcom/fusepowered/m1/android/CachedVideoPlayerActivity;
+    .local v0, "activity":Lcom/fusepowered/m1/android/CachedVideoPlayerActivity;
     if-eqz v0, :cond_0
 
     .line 377
-    #calls: Lcom/fusepowered/m1/android/CachedVideoPlayerActivity;->onPageFinished(Ljava/lang/String;)V
+    # invokes: Lcom/fusepowered/m1/android/CachedVideoPlayerActivity;->onPageFinished(Ljava/lang/String;)V
     invoke-static {v0, p1}, Lcom/fusepowered/m1/android/CachedVideoPlayerActivity;->access$000(Lcom/fusepowered/m1/android/CachedVideoPlayerActivity;Ljava/lang/String;)V
 
     .line 379

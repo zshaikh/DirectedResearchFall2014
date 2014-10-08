@@ -12,7 +12,7 @@
 # direct methods
 .method protected constructor <init>(Lcom/flurry/org/codehaus/jackson/map/DeserializationConfig;)V
     .locals 1
-    .parameter "config"
+    .param p1, "config"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationConfig;
 
     .prologue
     .line 33
@@ -37,7 +37,6 @@
 
 .method public constructType(Ljava/lang/Class;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -49,7 +48,7 @@
 
     .prologue
     .line 98
-    .local p1, cls:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p1, "cls":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;->_config:Lcom/flurry/org/codehaus/jackson/map/DeserializationConfig;
 
     invoke-virtual {v0, p1}, Lcom/flurry/org/codehaus/jackson/map/DeserializationConfig;->constructType(Ljava/lang/Class;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
@@ -179,7 +178,7 @@
 
 .method public isEnabled(Lcom/flurry/org/codehaus/jackson/map/DeserializationConfig$Feature;)Z
     .locals 2
-    .parameter "feat"
+    .param p1, "feat"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationConfig$Feature;
 
     .prologue
     .line 69
@@ -233,7 +232,7 @@
 
 .method public mappingException(Ljava/lang/String;)Lcom/flurry/org/codehaus/jackson/map/JsonMappingException;
     .locals 1
-    .parameter "message"
+    .param p1, "message"    # Ljava/lang/String;
 
     .prologue
     .line 203

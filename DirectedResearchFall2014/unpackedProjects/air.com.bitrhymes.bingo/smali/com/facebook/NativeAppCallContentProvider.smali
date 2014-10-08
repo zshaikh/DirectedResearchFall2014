@@ -56,7 +56,7 @@
 
 .method constructor <init>(Lcom/facebook/NativeAppCallContentProvider$AttachmentDataSource;)V
     .locals 0
-    .parameter "dataSource"
+    .param p1, "dataSource"    # Lcom/facebook/NativeAppCallContentProvider$AttachmentDataSource;
 
     .prologue
     .line 56
@@ -71,9 +71,9 @@
 
 .method public static getAttachmentUrl(Ljava/lang/String;Ljava/util/UUID;Ljava/lang/String;)Ljava/lang/String;
     .locals 4
-    .parameter "applicationId"
-    .parameter "callId"
-    .parameter "attachmentName"
+    .param p0, "applicationId"    # Ljava/lang/String;
+    .param p1, "callId"    # Ljava/util/UUID;
+    .param p2, "attachmentName"    # Ljava/lang/String;
 
     .prologue
     .line 70
@@ -116,9 +116,9 @@
 # virtual methods
 .method public delete(Landroid/net/Uri;Ljava/lang/String;[Ljava/lang/String;)I
     .locals 1
-    .parameter "uri"
-    .parameter "s"
-    .parameter "strings"
+    .param p1, "uri"    # Landroid/net/Uri;
+    .param p2, "s"    # Ljava/lang/String;
+    .param p3, "strings"    # [Ljava/lang/String;
 
     .prologue
     .line 95
@@ -129,7 +129,7 @@
 
 .method public getType(Landroid/net/Uri;)Ljava/lang/String;
     .locals 1
-    .parameter "uri"
+    .param p1, "uri"    # Landroid/net/Uri;
 
     .prologue
     .line 85
@@ -140,8 +140,8 @@
 
 .method public insert(Landroid/net/Uri;Landroid/content/ContentValues;)Landroid/net/Uri;
     .locals 1
-    .parameter "uri"
-    .parameter "contentValues"
+    .param p1, "uri"    # Landroid/net/Uri;
+    .param p2, "contentValues"    # Landroid/content/ContentValues;
 
     .prologue
     .line 90
@@ -162,8 +162,8 @@
 
 .method public openFile(Landroid/net/Uri;Ljava/lang/String;)Landroid/os/ParcelFileDescriptor;
     .locals 6
-    .parameter "uri"
-    .parameter "mode"
+    .param p1, "uri"    # Landroid/net/Uri;
+    .param p2, "mode"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/FileNotFoundException;
@@ -177,7 +177,7 @@
     move-result-object v0
 
     .line 108
-    .local v0, callIdAndAttachmentName:Landroid/util/Pair;,"Landroid/util/Pair<Ljava/util/UUID;Ljava/lang/String;>;"
+    .local v0, "callIdAndAttachmentName":Landroid/util/Pair;, "Landroid/util/Pair<Ljava/util/UUID;Ljava/lang/String;>;"
     if-nez v0, :cond_0
 
     .line 109
@@ -194,7 +194,7 @@
 
     iget-object p0, v0, Landroid/util/Pair;->first:Ljava/lang/Object;
 
-    .end local p0
+    .end local p0    # "this":Lcom/facebook/NativeAppCallContentProvider;
     check-cast p0, Ljava/util/UUID;
 
     iget-object v3, v0, Landroid/util/Pair;->second:Ljava/lang/Object;
@@ -206,8 +206,8 @@
     move-result-object v2
 
     .line 115
-    .local v2, file:Ljava/io/File;
-    const/high16 v3, 0x1000
+    .local v2, "file":Ljava/io/File;
+    const/high16 v3, 0x10000000
 
     invoke-static {v2, v3}, Landroid/os/ParcelFileDescriptor;->open(Ljava/io/File;I)Landroid/os/ParcelFileDescriptor;
     :try_end_0
@@ -218,14 +218,14 @@
     return-object v3
 
     .line 116
-    .end local v2           #file:Ljava/io/File;
+    .end local v2    # "file":Ljava/io/File;
     :catch_0
     move-exception v3
 
     move-object v1, v3
 
     .line 117
-    .local v1, exception:Ljava/io/FileNotFoundException;
+    .local v1, "exception":Ljava/io/FileNotFoundException;
     sget-object v3, Lcom/facebook/NativeAppCallContentProvider;->TAG:Ljava/lang/String;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -250,7 +250,7 @@
 
 .method parseCallIdAndAttachmentName(Landroid/net/Uri;)Landroid/util/Pair;
     .locals 8
-    .parameter "uri"
+    .param p1, "uri"    # Landroid/net/Uri;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -278,7 +278,7 @@
     move-result-object v2
 
     .line 128
-    .local v2, callIdAndAttachmentName:Ljava/lang/String;
+    .local v2, "callIdAndAttachmentName":Ljava/lang/String;
     const-string v6, "/"
 
     invoke-virtual {v2, v6}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
@@ -286,25 +286,25 @@
     move-result-object v5
 
     .line 130
-    .local v5, parts:[Ljava/lang/String;
+    .local v5, "parts":[Ljava/lang/String;
     const/4 v6, 0x0
 
     aget-object v3, v5, v6
 
     .line 131
-    .local v3, callIdString:Ljava/lang/String;
+    .local v3, "callIdString":Ljava/lang/String;
     const/4 v6, 0x1
 
     aget-object v0, v5, v6
 
     .line 132
-    .local v0, attachmentName:Ljava/lang/String;
+    .local v0, "attachmentName":Ljava/lang/String;
     invoke-static {v3}, Ljava/util/UUID;->fromString(Ljava/lang/String;)Ljava/util/UUID;
 
     move-result-object v1
 
     .line 134
-    .local v1, callId:Ljava/util/UUID;
+    .local v1, "callId":Ljava/util/UUID;
     new-instance v6, Landroid/util/Pair;
 
     invoke-direct {v6, v1, v0}, Landroid/util/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
@@ -312,11 +312,11 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 136
-    .end local v0           #attachmentName:Ljava/lang/String;
-    .end local v1           #callId:Ljava/util/UUID;
-    .end local v2           #callIdAndAttachmentName:Ljava/lang/String;
-    .end local v3           #callIdString:Ljava/lang/String;
-    .end local v5           #parts:[Ljava/lang/String;
+    .end local v0    # "attachmentName":Ljava/lang/String;
+    .end local v1    # "callId":Ljava/util/UUID;
+    .end local v2    # "callIdAndAttachmentName":Ljava/lang/String;
+    .end local v3    # "callIdString":Ljava/lang/String;
+    .end local v5    # "parts":[Ljava/lang/String;
     :goto_0
     return-object v6
 
@@ -327,7 +327,7 @@
     move-object v4, v6
 
     .line 136
-    .local v4, exception:Ljava/lang/Exception;
+    .local v4, "exception":Ljava/lang/Exception;
     const/4 v6, 0x0
 
     goto :goto_0
@@ -335,11 +335,11 @@
 
 .method public query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
     .locals 1
-    .parameter "uri"
-    .parameter "strings"
-    .parameter "s"
-    .parameter "strings2"
-    .parameter "s2"
+    .param p1, "uri"    # Landroid/net/Uri;
+    .param p2, "strings"    # [Ljava/lang/String;
+    .param p3, "s"    # Ljava/lang/String;
+    .param p4, "strings2"    # [Ljava/lang/String;
+    .param p5, "s2"    # Ljava/lang/String;
 
     .prologue
     .line 80
@@ -350,10 +350,10 @@
 
 .method public update(Landroid/net/Uri;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
     .locals 1
-    .parameter "uri"
-    .parameter "contentValues"
-    .parameter "s"
-    .parameter "strings"
+    .param p1, "uri"    # Landroid/net/Uri;
+    .param p2, "contentValues"    # Landroid/content/ContentValues;
+    .param p3, "s"    # Ljava/lang/String;
+    .param p4, "strings"    # [Ljava/lang/String;
 
     .prologue
     .line 100

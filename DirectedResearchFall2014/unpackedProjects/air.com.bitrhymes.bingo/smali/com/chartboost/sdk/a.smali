@@ -57,7 +57,6 @@
 # direct methods
 .method public constructor <init>(Lcom/chartboost/sdk/Chartboost;)V
     .locals 3
-    .parameter
 
     .prologue
     const/4 v2, 0x0
@@ -124,7 +123,6 @@
 
 .method static synthetic a(Lcom/chartboost/sdk/a;)Ljava/util/Map;
     .locals 1
-    .parameter
 
     .prologue
     .line 59
@@ -135,9 +133,6 @@
 
 .method static synthetic a(Lcom/chartboost/sdk/a;Lcom/chartboost/sdk/impl/a$c;Ljava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 200
@@ -148,8 +143,6 @@
 
 .method static synthetic a(Lcom/chartboost/sdk/a;Lcom/chartboost/sdk/impl/a;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 60
@@ -160,9 +153,6 @@
 
 .method static synthetic a(Lcom/chartboost/sdk/a;Ljava/lang/String;Z)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 315
@@ -173,12 +163,6 @@
 
 .method static synthetic a(Lcom/chartboost/sdk/a;Lorg/json/JSONObject;Lcom/chartboost/sdk/impl/a$c;ZLjava/lang/String;Z)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 222
@@ -189,9 +173,6 @@
 
 .method static synthetic a(Lcom/chartboost/sdk/a;Lorg/json/JSONObject;Ljava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 257
@@ -202,8 +183,6 @@
 
 .method private a(Ljava/lang/String;Z)V
     .locals 3
-    .parameter
-    .parameter
 
     .prologue
     .line 317
@@ -444,11 +423,6 @@
 
 .method private a(Lorg/json/JSONObject;Lcom/chartboost/sdk/impl/a$c;ZLjava/lang/String;Z)V
     .locals 7
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 224
@@ -559,8 +533,6 @@
 
 .method private a(Lorg/json/JSONObject;Ljava/lang/String;)V
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     .line 259
@@ -580,7 +552,6 @@
 
 .method static synthetic b(Lcom/chartboost/sdk/a;)Lcom/chartboost/sdk/Chartboost;
     .locals 1
-    .parameter
 
     .prologue
     .line 54
@@ -591,8 +562,6 @@
 
 .method static synthetic b(Lcom/chartboost/sdk/a;Lcom/chartboost/sdk/impl/a;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 262
@@ -603,7 +572,6 @@
 
 .method private b(Lcom/chartboost/sdk/impl/a;)V
     .locals 4
-    .parameter
 
     .prologue
     const-string v3, "ad_id"
@@ -749,7 +717,6 @@
 
 .method static synthetic c(Lcom/chartboost/sdk/a;)Lcom/chartboost/sdk/impl/j;
     .locals 1
-    .parameter
 
     .prologue
     .line 55
@@ -760,8 +727,6 @@
 
 .method static synthetic c(Lcom/chartboost/sdk/a;Lcom/chartboost/sdk/impl/a;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 286
@@ -772,8 +737,6 @@
 
 .method private c(Lcom/chartboost/sdk/impl/a$c;Ljava/lang/String;)V
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     .line 201
@@ -865,7 +828,6 @@
 
 .method private c(Lcom/chartboost/sdk/impl/a;)V
     .locals 5
-    .parameter
 
     .prologue
     const/4 v4, 0x0
@@ -998,7 +960,6 @@
 
 .method static synthetic d(Lcom/chartboost/sdk/a;)Lcom/chartboost/sdk/impl/n$a;
     .locals 1
-    .parameter
 
     .prologue
     .line 618
@@ -1009,8 +970,6 @@
 
 .method static synthetic d(Lcom/chartboost/sdk/a;Lcom/chartboost/sdk/impl/a;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 61
@@ -1021,7 +980,6 @@
 
 .method static synthetic e(Lcom/chartboost/sdk/a;)Lcom/chartboost/sdk/impl/a;
     .locals 1
-    .parameter
 
     .prologue
     .line 60
@@ -1034,8 +992,6 @@
 # virtual methods
 .method public declared-synchronized a(Lcom/chartboost/sdk/impl/a$c;Ljava/lang/String;)Lcom/chartboost/sdk/a$a;
     .locals 4
-    .parameter
-    .parameter
 
     .prologue
     const/4 v3, 0x0
@@ -1167,9 +1123,6 @@
 
 .method public declared-synchronized a(Lcom/chartboost/sdk/impl/a$c;Ljava/lang/String;Z)V
     .locals 2
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 110
@@ -1224,7 +1177,6 @@
 
 .method protected a(Lcom/chartboost/sdk/impl/a;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 68
@@ -1236,7 +1188,6 @@
 
 .method public a(Ljava/lang/String;)V
     .locals 4
-    .parameter
 
     .prologue
     const/4 v3, 0x1
@@ -1291,7 +1242,6 @@
 
 .method protected a(Z)V
     .locals 5
-    .parameter
 
     .prologue
     const/4 v4, 0x1
@@ -1607,8 +1557,6 @@
 
 .method public declared-synchronized b(Lcom/chartboost/sdk/impl/a$c;Ljava/lang/String;)V
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     .line 100
@@ -1668,7 +1616,6 @@
 
 .method protected b(Ljava/lang/String;)V
     .locals 3
-    .parameter
 
     .prologue
     .line 136
@@ -1754,7 +1701,6 @@
 
 .method protected c(Ljava/lang/String;)Z
     .locals 6
-    .parameter
 
     .prologue
     const/4 v5, 0x0

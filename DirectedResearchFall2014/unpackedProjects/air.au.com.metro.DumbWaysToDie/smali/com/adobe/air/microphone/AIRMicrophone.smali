@@ -82,10 +82,6 @@
 
 .method public Open(IIII)Z
     .locals 8
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const/16 v2, 0x10

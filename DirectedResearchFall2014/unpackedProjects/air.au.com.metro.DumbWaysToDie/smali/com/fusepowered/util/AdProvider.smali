@@ -92,7 +92,7 @@
 
 .method public setIds(Ljava/lang/String;)V
     .locals 0
-    .parameter "ids"
+    .param p1, "ids"    # Ljava/lang/String;
 
     .prologue
     .line 45
@@ -104,7 +104,7 @@
 
 .method public setInterstitial(I)V
     .locals 0
-    .parameter "interstitial"
+    .param p1, "interstitial"    # I
 
     .prologue
     .line 33
@@ -116,7 +116,7 @@
 
 .method public setKeywords(Ljava/lang/String;)V
     .locals 0
-    .parameter "keywords"
+    .param p1, "keywords"    # Ljava/lang/String;
 
     .prologue
     .line 39
@@ -128,7 +128,7 @@
 
 .method public setProvider_id(I)V
     .locals 0
-    .parameter "provider_id"
+    .param p1, "provider_id"    # I
 
     .prologue
     .line 15
@@ -140,7 +140,7 @@
 
 .method public setTest(Z)V
     .locals 0
-    .parameter "test"
+    .param p1, "test"    # Z
 
     .prologue
     .line 21
@@ -152,7 +152,7 @@
 
 .method public setValue(I)V
     .locals 0
-    .parameter "value"
+    .param p1, "value"    # I
 
     .prologue
     .line 27
@@ -246,7 +246,7 @@
     move-result-object v0
 
     .line 56
-    .local v0, buf:Ljava/lang/StringBuilder;
+    .local v0, "buf":Ljava/lang/StringBuilder;
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1

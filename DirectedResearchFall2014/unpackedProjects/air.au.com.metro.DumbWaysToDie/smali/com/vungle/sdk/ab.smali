@@ -54,7 +54,6 @@
 
 .method public static a(Lcom/vungle/sdk/model/RequestAd;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 94
@@ -66,7 +65,6 @@
 
 .method public static a(Lcom/vungle/sdk/x;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 73
@@ -78,7 +76,6 @@
 
 .method public static a(Lcom/vungle/sdk/y;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 81
@@ -90,7 +87,6 @@
 
 .method public static a(Ljava/lang/String;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 62
@@ -119,7 +115,6 @@
 
 .method public static a(Ljava/lang/Throwable;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 109
@@ -135,7 +130,6 @@
 
 .method public static a(Ljava/util/ArrayList;)V
     .locals 0
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",

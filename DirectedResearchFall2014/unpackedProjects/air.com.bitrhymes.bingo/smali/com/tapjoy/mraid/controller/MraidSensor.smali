@@ -22,8 +22,8 @@
 # direct methods
 .method public constructor <init>(Lcom/tapjoy/mraid/view/MraidView;Landroid/content/Context;)V
     .locals 2
-    .parameter "adView"
-    .parameter "context"
+    .param p1, "adView"    # Lcom/tapjoy/mraid/view/MraidView;
+    .param p2, "context"    # Landroid/content/Context;
 
     .prologue
     const/4 v1, 0x0
@@ -157,7 +157,7 @@
     move-result-object v0
 
     .line 112
-    .local v0, tilt:Ljava/lang/String;
+    .local v0, "tilt":Ljava/lang/String;
     const-string v1, "MRAID Sensor"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -186,7 +186,7 @@
 
 .method public onHeadingChange(F)V
     .locals 6
-    .parameter "f"
+    .param p1, "f"    # F
 
     .prologue
     .line 122
@@ -223,7 +223,7 @@
     move-result-object v0
 
     .line 123
-    .local v0, script:Ljava/lang/String;
+    .local v0, "script":Ljava/lang/String;
     const-string v1, "MRAID Sensor"
 
     invoke-static {v1, v0}, Lcom/tapjoy/TapjoyLog;->d(Ljava/lang/String;Ljava/lang/String;)V
@@ -254,9 +254,9 @@
 
 .method public onTilt(FFF)V
     .locals 3
-    .parameter "x"
-    .parameter "y"
-    .parameter "z"
+    .param p1, "x"    # F
+    .param p2, "y"    # F
+    .param p3, "z"    # F
 
     .prologue
     .line 96
@@ -298,7 +298,7 @@
     move-result-object v0
 
     .line 101
-    .local v0, script:Ljava/lang/String;
+    .local v0, "script":Ljava/lang/String;
     const-string v1, "MRAID Sensor"
 
     invoke-static {v1, v0}, Lcom/tapjoy/TapjoyLog;->d(Ljava/lang/String;Ljava/lang/String;)V

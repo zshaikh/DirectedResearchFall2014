@@ -14,7 +14,7 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m2/m2l/MraidView;)V
     .locals 1
-    .parameter "view"
+    .param p1, "view"    # Lcom/fusepowered/m2/m2l/MraidView;
 
     .prologue
     .line 46
@@ -33,7 +33,7 @@
 
 .method private canHandleApplicationUrl(Ljava/lang/String;)Z
     .locals 4
-    .parameter "url"
+    .param p1, "url"    # Ljava/lang/String;
 
     .prologue
     .line 72
@@ -48,7 +48,7 @@
     invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
     .line 75
-    .local v0, intent:Landroid/content/Intent;
+    .local v0, "intent":Landroid/content/Intent;
     iget-object v1, p0, Lcom/fusepowered/m2/m2l/MraidBrowserController;->mContext:Landroid/content/Context;
 
     invoke-static {v1, v0}, Lcom/fusepowered/m2/m2l/Utils;->deviceCanHandleIntent(Landroid/content/Context;Landroid/content/Intent;)Z
@@ -112,9 +112,9 @@
 
 .method private executeIntent(Landroid/content/Context;Landroid/content/Intent;Ljava/lang/String;)Z
     .locals 3
-    .parameter "context"
-    .parameter "intent"
-    .parameter "errorMessage"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "intent"    # Landroid/content/Intent;
+    .param p3, "errorMessage"    # Ljava/lang/String;
 
     .prologue
     .line 96
@@ -134,7 +134,7 @@
     move-exception v0
 
     .line 98
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v1, "MoPub"
 
     if-eqz p3, :cond_0
@@ -158,7 +158,7 @@
 
 .method private isWebSiteUrl(Ljava/lang/String;)Z
     .locals 1
-    .parameter "url"
+    .param p1, "url"    # Ljava/lang/String;
 
     .prologue
     .line 107
@@ -191,7 +191,7 @@
 
 .method private launchApplicationUrl(Ljava/lang/String;)Z
     .locals 4
-    .parameter "url"
+    .param p1, "url"    # Ljava/lang/String;
 
     .prologue
     .line 86
@@ -206,8 +206,8 @@
     invoke-direct {v1, v2, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
     .line 87
-    .local v1, intent:Landroid/content/Intent;
-    const/high16 v2, 0x1000
+    .local v1, "intent":Landroid/content/Intent;
+    const/high16 v2, 0x10000000
 
     invoke-virtual {v1, v2}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
@@ -215,7 +215,7 @@
     const-string v0, "Unable to open intent."
 
     .line 91
-    .local v0, errorMessage:Ljava/lang/String;
+    .local v0, "errorMessage":Ljava/lang/String;
     invoke-virtual {p0}, Lcom/fusepowered/m2/m2l/MraidBrowserController;->getMraidView()Lcom/fusepowered/m2/m2l/MraidView;
 
     move-result-object v2
@@ -235,7 +235,7 @@
 # virtual methods
 .method protected open(Ljava/lang/String;)V
     .locals 5
-    .parameter "url"
+    .param p1, "url"    # Ljava/lang/String;
 
     .prologue
     .line 51
@@ -263,7 +263,7 @@
     move-result-object v1
 
     .line 54
-    .local v1, view:Lcom/fusepowered/m2/m2l/MraidView;
+    .local v1, "view":Lcom/fusepowered/m2/m2l/MraidView;
     invoke-virtual {v1}, Lcom/fusepowered/m2/m2l/MraidView;->getOnOpenListener()Lcom/fusepowered/m2/m2l/MraidView$OnOpenListener;
 
     move-result-object v2
@@ -309,13 +309,13 @@
     invoke-direct {v0, v2, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
     .line 65
-    .local v0, i:Landroid/content/Intent;
+    .local v0, "i":Landroid/content/Intent;
     const-string v2, "extra_url"
 
     invoke-virtual {v0, v2, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 66
-    const/high16 v2, 0x1000
+    const/high16 v2, 0x10000000
 
     invoke-virtual {v0, v2}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 

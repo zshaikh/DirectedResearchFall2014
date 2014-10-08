@@ -30,8 +30,8 @@
 # direct methods
 .method public constructor <init>(Ljava/io/InputStream;[B)V
     .locals 1
-    .parameter "in"
-    .parameter "buffer"
+    .param p1, "in"    # Ljava/io/InputStream;
+    .param p2, "buffer"    # [B
 
     .prologue
     .line 66
@@ -54,7 +54,7 @@
 
 .method public constructor <init>([B)V
     .locals 1
-    .parameter "inputDocument"
+    .param p1, "inputDocument"    # [B
 
     .prologue
     .line 77
@@ -81,8 +81,8 @@
 # virtual methods
 .method public createMatcher(Lcom/flurry/org/codehaus/jackson/JsonFactory;Lcom/flurry/org/codehaus/jackson/format/MatchStrength;)Lcom/flurry/org/codehaus/jackson/format/DataFormatMatcher;
     .locals 6
-    .parameter "match"
-    .parameter "matchStrength"
+    .param p1, "match"    # Lcom/flurry/org/codehaus/jackson/JsonFactory;
+    .param p2, "matchStrength"    # Lcom/flurry/org/codehaus/jackson/format/MatchStrength;
 
     .prologue
     .line 127
@@ -140,7 +140,7 @@
     sub-int v0, v2, v3
 
     .line 91
-    .local v0, amount:I
+    .local v0, "amount":I
     if-ge v0, v5, :cond_1
 
     move v2, v6
@@ -161,7 +161,7 @@
     move-result v1
 
     .line 95
-    .local v1, count:I
+    .local v1, "count":I
     if-gtz v1, :cond_2
 
     move v2, v6

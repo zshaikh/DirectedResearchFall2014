@@ -42,14 +42,14 @@
 # direct methods
 .method protected constructor <init>(Landroid/content/Context;Lcom/facebook/Session;Ljava/lang/String;Landroid/os/Bundle;)V
     .locals 2
-    .parameter "context"
-    .parameter "session"
-    .parameter "action"
-    .parameter "parameters"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "session"    # Lcom/facebook/Session;
+    .param p3, "action"    # Ljava/lang/String;
+    .param p4, "parameters"    # Landroid/os/Bundle;
 
     .prologue
     .line 438
-    .local p0, this:Lcom/facebook/widget/WebDialog$BuilderBase;,"Lcom/facebook/widget/WebDialog$BuilderBase<TCONCRETE;>;"
+    .local p0, "this":Lcom/facebook/widget/WebDialog$BuilderBase;, "Lcom/facebook/widget/WebDialog$BuilderBase<TCONCRETE;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 434
@@ -91,14 +91,14 @@
 
 .method protected constructor <init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)V
     .locals 1
-    .parameter "context"
-    .parameter "applicationId"
-    .parameter "action"
-    .parameter "parameters"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "applicationId"    # Ljava/lang/String;
+    .param p3, "action"    # Ljava/lang/String;
+    .param p4, "parameters"    # Landroid/os/Bundle;
 
     .prologue
     .line 448
-    .local p0, this:Lcom/facebook/widget/WebDialog$BuilderBase;,"Lcom/facebook/widget/WebDialog$BuilderBase<TCONCRETE;>;"
+    .local p0, "this":Lcom/facebook/widget/WebDialog$BuilderBase;, "Lcom/facebook/widget/WebDialog$BuilderBase<TCONCRETE;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 434
@@ -123,13 +123,13 @@
 
 .method private finishInit(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;)V
     .locals 1
-    .parameter "context"
-    .parameter "action"
-    .parameter "parameters"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "action"    # Ljava/lang/String;
+    .param p3, "parameters"    # Landroid/os/Bundle;
 
     .prologue
     .line 523
-    .local p0, this:Lcom/facebook/widget/WebDialog$BuilderBase;,"Lcom/facebook/widget/WebDialog$BuilderBase<TCONCRETE;>;"
+    .local p0, "this":Lcom/facebook/widget/WebDialog$BuilderBase;, "Lcom/facebook/widget/WebDialog$BuilderBase<TCONCRETE;>;"
     iput-object p1, p0, Lcom/facebook/widget/WebDialog$BuilderBase;->context:Landroid/content/Context;
 
     .line 524
@@ -162,7 +162,7 @@
     .locals 6
 
     .prologue
-    .local p0, this:Lcom/facebook/widget/WebDialog$BuilderBase;,"Lcom/facebook/widget/WebDialog$BuilderBase<TCONCRETE;>;"
+    .local p0, "this":Lcom/facebook/widget/WebDialog$BuilderBase;, "Lcom/facebook/widget/WebDialog$BuilderBase<TCONCRETE;>;"
     const-string v3, "redirect_uri"
 
     const-string v2, "app_id"
@@ -263,7 +263,7 @@
 
     .prologue
     .line 503
-    .local p0, this:Lcom/facebook/widget/WebDialog$BuilderBase;,"Lcom/facebook/widget/WebDialog$BuilderBase<TCONCRETE;>;"
+    .local p0, "this":Lcom/facebook/widget/WebDialog$BuilderBase;, "Lcom/facebook/widget/WebDialog$BuilderBase<TCONCRETE;>;"
     iget-object v0, p0, Lcom/facebook/widget/WebDialog$BuilderBase;->applicationId:Ljava/lang/String;
 
     return-object v0
@@ -274,7 +274,7 @@
 
     .prologue
     .line 507
-    .local p0, this:Lcom/facebook/widget/WebDialog$BuilderBase;,"Lcom/facebook/widget/WebDialog$BuilderBase<TCONCRETE;>;"
+    .local p0, "this":Lcom/facebook/widget/WebDialog$BuilderBase;, "Lcom/facebook/widget/WebDialog$BuilderBase<TCONCRETE;>;"
     iget-object v0, p0, Lcom/facebook/widget/WebDialog$BuilderBase;->context:Landroid/content/Context;
 
     return-object v0
@@ -285,7 +285,7 @@
 
     .prologue
     .line 519
-    .local p0, this:Lcom/facebook/widget/WebDialog$BuilderBase;,"Lcom/facebook/widget/WebDialog$BuilderBase<TCONCRETE;>;"
+    .local p0, "this":Lcom/facebook/widget/WebDialog$BuilderBase;, "Lcom/facebook/widget/WebDialog$BuilderBase<TCONCRETE;>;"
     iget-object v0, p0, Lcom/facebook/widget/WebDialog$BuilderBase;->listener:Lcom/facebook/widget/WebDialog$OnCompleteListener;
 
     return-object v0
@@ -296,7 +296,7 @@
 
     .prologue
     .line 515
-    .local p0, this:Lcom/facebook/widget/WebDialog$BuilderBase;,"Lcom/facebook/widget/WebDialog$BuilderBase<TCONCRETE;>;"
+    .local p0, "this":Lcom/facebook/widget/WebDialog$BuilderBase;, "Lcom/facebook/widget/WebDialog$BuilderBase<TCONCRETE;>;"
     iget-object v0, p0, Lcom/facebook/widget/WebDialog$BuilderBase;->parameters:Landroid/os/Bundle;
 
     return-object v0
@@ -307,7 +307,7 @@
 
     .prologue
     .line 511
-    .local p0, this:Lcom/facebook/widget/WebDialog$BuilderBase;,"Lcom/facebook/widget/WebDialog$BuilderBase<TCONCRETE;>;"
+    .local p0, "this":Lcom/facebook/widget/WebDialog$BuilderBase;, "Lcom/facebook/widget/WebDialog$BuilderBase<TCONCRETE;>;"
     iget v0, p0, Lcom/facebook/widget/WebDialog$BuilderBase;->theme:I
 
     return v0
@@ -315,7 +315,7 @@
 
 .method public setOnCompleteListener(Lcom/facebook/widget/WebDialog$OnCompleteListener;)Lcom/facebook/widget/WebDialog$BuilderBase;
     .locals 1
-    .parameter "listener"
+    .param p1, "listener"    # Lcom/facebook/widget/WebDialog$OnCompleteListener;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -326,20 +326,20 @@
 
     .prologue
     .line 475
-    .local p0, this:Lcom/facebook/widget/WebDialog$BuilderBase;,"Lcom/facebook/widget/WebDialog$BuilderBase<TCONCRETE;>;"
+    .local p0, "this":Lcom/facebook/widget/WebDialog$BuilderBase;, "Lcom/facebook/widget/WebDialog$BuilderBase<TCONCRETE;>;"
     iput-object p1, p0, Lcom/facebook/widget/WebDialog$BuilderBase;->listener:Lcom/facebook/widget/WebDialog$OnCompleteListener;
 
     .line 477
     move-object v0, p0
 
     .line 478
-    .local v0, result:Lcom/facebook/widget/WebDialog$BuilderBase;,"TCONCRETE;"
+    .local v0, "result":Lcom/facebook/widget/WebDialog$BuilderBase;, "TCONCRETE;"
     return-object v0
 .end method
 
 .method public setTheme(I)Lcom/facebook/widget/WebDialog$BuilderBase;
     .locals 1
-    .parameter "theme"
+    .param p1, "theme"    # I
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I)TCONCRETE;"
@@ -348,13 +348,13 @@
 
     .prologue
     .line 462
-    .local p0, this:Lcom/facebook/widget/WebDialog$BuilderBase;,"Lcom/facebook/widget/WebDialog$BuilderBase<TCONCRETE;>;"
+    .local p0, "this":Lcom/facebook/widget/WebDialog$BuilderBase;, "Lcom/facebook/widget/WebDialog$BuilderBase<TCONCRETE;>;"
     iput p1, p0, Lcom/facebook/widget/WebDialog$BuilderBase;->theme:I
 
     .line 464
     move-object v0, p0
 
     .line 465
-    .local v0, result:Lcom/facebook/widget/WebDialog$BuilderBase;,"TCONCRETE;"
+    .local v0, "result":Lcom/facebook/widget/WebDialog$BuilderBase;, "TCONCRETE;"
     return-object v0
 .end method

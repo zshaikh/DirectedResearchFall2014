@@ -206,7 +206,6 @@
 
 .method private a(Lcom/google/ads/util/i$a;)V
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -227,8 +226,6 @@
 
 .method static synthetic a(Lcom/google/ads/util/i;Lcom/google/ads/util/i$a;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 24

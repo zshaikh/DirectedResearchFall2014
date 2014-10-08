@@ -12,8 +12,8 @@
 # direct methods
 .method protected constructor <init>(Lcom/flurry/org/codehaus/jackson/type/JavaType;Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;)V
     .locals 4
-    .parameter "baseType"
-    .parameter "typeFactory"
+    .param p1, "baseType"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .param p2, "typeFactory"    # Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;
 
     .prologue
     const/4 v3, 0x0
@@ -31,7 +31,7 @@
     move-result-object v0
 
     .line 26
-    .local v0, base:Ljava/lang/String;
+    .local v0, "base":Ljava/lang/String;
     const/16 v2, 0x2e
 
     invoke-virtual {v0, v2}, Ljava/lang/String;->lastIndexOf(I)I
@@ -39,7 +39,7 @@
     move-result v1
 
     .line 27
-    .local v1, ix:I
+    .local v1, "ix":I
     if-gez v1, :cond_0
 
     .line 28
@@ -90,7 +90,7 @@
 
 .method public idFromValue(Ljava/lang/Object;)Ljava/lang/String;
     .locals 3
-    .parameter "value"
+    .param p1, "value"    # Ljava/lang/Object;
 
     .prologue
     .line 42
@@ -103,7 +103,7 @@
     move-result-object v0
 
     .line 43
-    .local v0, n:Ljava/lang/String;
+    .local v0, "n":Ljava/lang/String;
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/map/jsontype/impl/MinimalClassNameIdResolver;->_basePackagePrefix:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
@@ -139,7 +139,7 @@
 
 .method public typeFromId(Ljava/lang/String;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .locals 3
-    .parameter "id"
+    .param p1, "id"    # Ljava/lang/String;
 
     .prologue
     .line 53
@@ -169,7 +169,7 @@
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
     .line 55
-    .local v0, sb:Ljava/lang/StringBuilder;
+    .local v0, "sb":Ljava/lang/StringBuilder;
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/map/jsontype/impl/MinimalClassNameIdResolver;->_basePackageName:Ljava/lang/String;
 
     invoke-virtual {v1}, Ljava/lang/String;->length()I
@@ -194,7 +194,7 @@
     move-result-object p1
 
     .line 64
-    .end local v0           #sb:Ljava/lang/StringBuilder;
+    .end local v0    # "sb":Ljava/lang/StringBuilder;
     :cond_0
     invoke-super {p0, p1}, Lcom/flurry/org/codehaus/jackson/map/jsontype/impl/ClassNameIdResolver;->typeFromId(Ljava/lang/String;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
 
@@ -203,7 +203,7 @@
     return-object v1
 
     .line 60
-    .restart local v0       #sb:Ljava/lang/StringBuilder;
+    .restart local v0    # "sb":Ljava/lang/StringBuilder;
     :cond_1
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/map/jsontype/impl/MinimalClassNameIdResolver;->_basePackageName:Ljava/lang/String;
 

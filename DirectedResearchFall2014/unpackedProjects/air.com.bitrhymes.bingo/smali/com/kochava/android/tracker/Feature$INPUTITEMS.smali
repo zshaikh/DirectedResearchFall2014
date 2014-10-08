@@ -33,7 +33,6 @@
 # direct methods
 .method private constructor <init>(Lcom/kochava/android/tracker/Feature;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 2377

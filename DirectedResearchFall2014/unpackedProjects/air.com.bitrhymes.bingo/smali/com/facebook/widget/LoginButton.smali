@@ -64,7 +64,7 @@
 
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     const/4 v0, 0x0
@@ -105,8 +105,8 @@
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 6
-    .parameter "context"
-    .parameter "attrs"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
     const/4 v0, 0x0
@@ -362,9 +362,9 @@
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 1
-    .parameter "context"
-    .parameter "attrs"
-    .parameter "defStyle"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "attrs"    # Landroid/util/AttributeSet;
+    .param p3, "defStyle"    # I
 
     .prologue
     const/4 v0, 0x0
@@ -415,7 +415,6 @@
 
 .method static synthetic access$1(Lcom/facebook/widget/LoginButton;)Lcom/facebook/internal/SessionTracker;
     .locals 1
-    .parameter
 
     .prologue
     .line 63
@@ -426,8 +425,6 @@
 
 .method static synthetic access$10(Lcom/facebook/widget/LoginButton;Lcom/facebook/model/GraphUser;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 64
@@ -438,7 +435,6 @@
 
 .method static synthetic access$11(Lcom/facebook/widget/LoginButton;)Lcom/facebook/widget/LoginButton$UserInfoChangedCallback;
     .locals 1
-    .parameter
 
     .prologue
     .line 70
@@ -449,7 +445,6 @@
 
 .method static synthetic access$2(Lcom/facebook/widget/LoginButton;)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 66
@@ -460,7 +455,6 @@
 
 .method static synthetic access$3(Lcom/facebook/widget/LoginButton;)Lcom/facebook/model/GraphUser;
     .locals 1
-    .parameter
 
     .prologue
     .line 64
@@ -471,7 +465,6 @@
 
 .method static synthetic access$4(Lcom/facebook/widget/LoginButton;)Ljava/lang/String;
     .locals 1
-    .parameter
 
     .prologue
     .line 62
@@ -482,7 +475,6 @@
 
 .method static synthetic access$5(Lcom/facebook/widget/LoginButton;)Landroid/support/v4/app/Fragment;
     .locals 1
-    .parameter
 
     .prologue
     .line 71
@@ -493,7 +485,6 @@
 
 .method static synthetic access$6(Lcom/facebook/widget/LoginButton;)Lcom/facebook/widget/LoginButton$LoginButtonProperties;
     .locals 1
-    .parameter
 
     .prologue
     .line 72
@@ -504,7 +495,6 @@
 
 .method static synthetic access$7(Lcom/facebook/widget/LoginButton;)Ljava/lang/String;
     .locals 1
-    .parameter
 
     .prologue
     .line 73
@@ -515,7 +505,6 @@
 
 .method static synthetic access$8(Lcom/facebook/widget/LoginButton;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 620
@@ -526,7 +515,6 @@
 
 .method static synthetic access$9(Lcom/facebook/widget/LoginButton;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 592
@@ -552,7 +540,7 @@
     move-result-object v0
 
     .line 623
-    .local v0, currentSession:Lcom/facebook/Session;
+    .local v0, "currentSession":Lcom/facebook/Session;
     if-eqz v0, :cond_1
 
     .line 624
@@ -569,7 +557,7 @@
 
     move-result-object v1
 
-    .local v1, request:Lcom/facebook/Request;
+    .local v1, "request":Lcom/facebook/Request;
     const/4 v2, 0x1
 
     new-array v2, v2, [Lcom/facebook/Request;
@@ -585,14 +573,14 @@
     iput-object v0, p0, Lcom/facebook/widget/LoginButton;->userInfoSession:Lcom/facebook/Session;
 
     .line 649
-    .end local v0           #currentSession:Lcom/facebook/Session;
-    .end local v1           #request:Lcom/facebook/Request;
+    .end local v0    # "currentSession":Lcom/facebook/Session;
+    .end local v1    # "request":Lcom/facebook/Request;
     :cond_0
     :goto_0
     return-void
 
     .line 643
-    .restart local v0       #currentSession:Lcom/facebook/Session;
+    .restart local v0    # "currentSession":Lcom/facebook/Session;
     :cond_1
     const/4 v2, 0x0
 
@@ -663,7 +651,7 @@
 
 .method private initializeActiveSessionWithCachedToken(Landroid/content/Context;)Z
     .locals 4
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     const/4 v3, 0x0
@@ -684,7 +672,7 @@
     move-result-object v1
 
     .line 608
-    .local v1, session:Lcom/facebook/Session;
+    .local v1, "session":Lcom/facebook/Session;
     if-eqz v1, :cond_1
 
     .line 609
@@ -701,7 +689,7 @@
     move-result-object v0
 
     .line 613
-    .local v0, applicationId:Ljava/lang/String;
+    .local v0, "applicationId":Ljava/lang/String;
     if-nez v0, :cond_2
 
     move v2, v3
@@ -729,7 +717,7 @@
 
 .method private parseAttributes(Landroid/util/AttributeSet;)V
     .locals 4
-    .parameter "attrs"
+    .param p1, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
     const/4 v3, 0x1
@@ -746,7 +734,7 @@
     move-result-object v0
 
     .line 585
-    .local v0, a:Landroid/content/res/TypedArray;
+    .local v0, "a":Landroid/content/res/TypedArray;
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1, v3}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
@@ -978,13 +966,13 @@
 
 .method handleError(Ljava/lang/Exception;)V
     .locals 2
-    .parameter "exception"
+    .param p1, "exception"    # Ljava/lang/Exception;
 
     .prologue
     .line 740
     iget-object v0, p0, Lcom/facebook/widget/LoginButton;->properties:Lcom/facebook/widget/LoginButton$LoginButtonProperties;
 
-    #getter for: Lcom/facebook/widget/LoginButton$LoginButtonProperties;->onErrorListener:Lcom/facebook/widget/LoginButton$OnErrorListener;
+    # getter for: Lcom/facebook/widget/LoginButton$LoginButtonProperties;->onErrorListener:Lcom/facebook/widget/LoginButton$OnErrorListener;
     invoke-static {v0}, Lcom/facebook/widget/LoginButton$LoginButtonProperties;->access$5(Lcom/facebook/widget/LoginButton$LoginButtonProperties;)Lcom/facebook/widget/LoginButton$OnErrorListener;
 
     move-result-object v0
@@ -999,14 +987,14 @@
     .line 742
     iget-object v0, p0, Lcom/facebook/widget/LoginButton;->properties:Lcom/facebook/widget/LoginButton$LoginButtonProperties;
 
-    #getter for: Lcom/facebook/widget/LoginButton$LoginButtonProperties;->onErrorListener:Lcom/facebook/widget/LoginButton$OnErrorListener;
+    # getter for: Lcom/facebook/widget/LoginButton$LoginButtonProperties;->onErrorListener:Lcom/facebook/widget/LoginButton$OnErrorListener;
     invoke-static {v0}, Lcom/facebook/widget/LoginButton$LoginButtonProperties;->access$5(Lcom/facebook/widget/LoginButton$LoginButtonProperties;)Lcom/facebook/widget/LoginButton$OnErrorListener;
 
     move-result-object v0
 
     check-cast p1, Lcom/facebook/FacebookException;
 
-    .end local p1
+    .end local p1    # "exception":Ljava/lang/Exception;
     invoke-interface {v0, p1}, Lcom/facebook/widget/LoginButton$OnErrorListener;->onError(Lcom/facebook/FacebookException;)V
 
     .line 747
@@ -1015,11 +1003,11 @@
     return-void
 
     .line 744
-    .restart local p1
+    .restart local p1    # "exception":Ljava/lang/Exception;
     :cond_1
     iget-object v0, p0, Lcom/facebook/widget/LoginButton;->properties:Lcom/facebook/widget/LoginButton$LoginButtonProperties;
 
-    #getter for: Lcom/facebook/widget/LoginButton$LoginButtonProperties;->onErrorListener:Lcom/facebook/widget/LoginButton$OnErrorListener;
+    # getter for: Lcom/facebook/widget/LoginButton$LoginButtonProperties;->onErrorListener:Lcom/facebook/widget/LoginButton$OnErrorListener;
     invoke-static {v0}, Lcom/facebook/widget/LoginButton$LoginButtonProperties;->access$5(Lcom/facebook/widget/LoginButton$LoginButtonProperties;)Lcom/facebook/widget/LoginButton$OnErrorListener;
 
     move-result-object v0
@@ -1035,9 +1023,9 @@
 
 .method public onActivityResult(IILandroid/content/Intent;)Z
     .locals 2
-    .parameter "requestCode"
-    .parameter "resultCode"
-    .parameter "data"
+    .param p1, "requestCode"    # I
+    .param p2, "resultCode"    # I
+    .param p3, "data"    # Landroid/content/Intent;
 
     .prologue
     .line 499
@@ -1048,7 +1036,7 @@
     move-result-object v0
 
     .line 500
-    .local v0, session:Lcom/facebook/Session;
+    .local v0, "session":Lcom/facebook/Session;
     if-eqz v0, :cond_0
 
     .line 501
@@ -1056,7 +1044,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/facebook/widget/LoginButton;
     check-cast p0, Landroid/app/Activity;
 
     invoke-virtual {v0, p0, p1, p2, p3}, Lcom/facebook/Session;->onActivityResult(Landroid/app/Activity;IILandroid/content/Intent;)Z
@@ -1067,7 +1055,7 @@
     :goto_0
     return v1
 
-    .restart local p0
+    .restart local p0    # "this":Lcom/facebook/widget/LoginButton;
     :cond_0
     const/4 v1, 0x0
 
@@ -1148,7 +1136,7 @@
 
 .method public setApplicationId(Ljava/lang/String;)V
     .locals 0
-    .parameter "applicationId"
+    .param p1, "applicationId"    # Ljava/lang/String;
 
     .prologue
     .line 434
@@ -1160,7 +1148,7 @@
 
 .method public setDefaultAudience(Lcom/facebook/SessionDefaultAudience;)V
     .locals 1
-    .parameter "defaultAudience"
+    .param p1, "defaultAudience"    # Lcom/facebook/SessionDefaultAudience;
 
     .prologue
     .line 277
@@ -1174,7 +1162,7 @@
 
 .method public setFragment(Landroid/support/v4/app/Fragment;)V
     .locals 0
-    .parameter "fragment"
+    .param p1, "fragment"    # Landroid/support/v4/app/Fragment;
 
     .prologue
     .line 549
@@ -1186,7 +1174,7 @@
 
 .method public setLoginBehavior(Lcom/facebook/SessionLoginBehavior;)V
     .locals 1
-    .parameter "loginBehavior"
+    .param p1, "loginBehavior"    # Lcom/facebook/SessionLoginBehavior;
 
     .prologue
     .line 412
@@ -1200,7 +1188,7 @@
 
 .method setLoginLogoutEventName(Ljava/lang/String;)V
     .locals 0
-    .parameter "eventName"
+    .param p1, "eventName"    # Ljava/lang/String;
 
     .prologue
     .line 580
@@ -1212,7 +1200,7 @@
 
 .method public setOnErrorListener(Lcom/facebook/widget/LoginButton$OnErrorListener;)V
     .locals 1
-    .parameter "onErrorListener"
+    .param p1, "onErrorListener"    # Lcom/facebook/widget/LoginButton$OnErrorListener;
 
     .prologue
     .line 257
@@ -1226,7 +1214,7 @@
 
 .method setProperties(Lcom/facebook/widget/LoginButton$LoginButtonProperties;)V
     .locals 0
-    .parameter "properties"
+    .param p1, "properties"    # Lcom/facebook/widget/LoginButton$LoginButtonProperties;
 
     .prologue
     .line 576
@@ -1238,7 +1226,6 @@
 
 .method public setPublishPermissions(Ljava/util/List;)V
     .locals 2
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1251,7 +1238,7 @@
 
     .prologue
     .line 365
-    .local p1, permissions:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
+    .local p1, "permissions":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     iget-object v0, p0, Lcom/facebook/widget/LoginButton;->properties:Lcom/facebook/widget/LoginButton$LoginButtonProperties;
 
     iget-object v1, p0, Lcom/facebook/widget/LoginButton;->sessionTracker:Lcom/facebook/internal/SessionTracker;
@@ -1268,7 +1255,7 @@
 
 .method public varargs setPublishPermissions([Ljava/lang/String;)V
     .locals 3
-    .parameter "permissions"
+    .param p1, "permissions"    # [Ljava/lang/String;
 
     .prologue
     .line 391
@@ -1292,7 +1279,6 @@
 
 .method public setReadPermissions(Ljava/util/List;)V
     .locals 2
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1305,7 +1291,7 @@
 
     .prologue
     .line 313
-    .local p1, permissions:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
+    .local p1, "permissions":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     iget-object v0, p0, Lcom/facebook/widget/LoginButton;->properties:Lcom/facebook/widget/LoginButton$LoginButtonProperties;
 
     iget-object v1, p0, Lcom/facebook/widget/LoginButton;->sessionTracker:Lcom/facebook/internal/SessionTracker;
@@ -1322,7 +1308,7 @@
 
 .method public varargs setReadPermissions([Ljava/lang/String;)V
     .locals 3
-    .parameter "permissions"
+    .param p1, "permissions"    # [Ljava/lang/String;
 
     .prologue
     .line 338
@@ -1346,7 +1332,7 @@
 
 .method public setSession(Lcom/facebook/Session;)V
     .locals 1
-    .parameter "newSession"
+    .param p1, "newSession"    # Lcom/facebook/Session;
 
     .prologue
     .line 520
@@ -1366,7 +1352,7 @@
 
 .method public setSessionStatusCallback(Lcom/facebook/Session$StatusCallback;)V
     .locals 1
-    .parameter "callback"
+    .param p1, "callback"    # Lcom/facebook/Session$StatusCallback;
 
     .prologue
     .line 462
@@ -1380,7 +1366,7 @@
 
 .method public setUserInfoChangedCallback(Lcom/facebook/widget/LoginButton$UserInfoChangedCallback;)V
     .locals 0
-    .parameter "userInfoChangedCallback"
+    .param p1, "userInfoChangedCallback"    # Lcom/facebook/widget/LoginButton$UserInfoChangedCallback;
 
     .prologue
     .line 451

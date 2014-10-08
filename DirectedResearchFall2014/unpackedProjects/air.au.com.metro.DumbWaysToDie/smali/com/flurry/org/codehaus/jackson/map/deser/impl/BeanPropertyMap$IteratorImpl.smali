@@ -38,7 +38,7 @@
 # direct methods
 .method public constructor <init>([Lcom/flurry/org/codehaus/jackson/map/deser/impl/BeanPropertyMap$Bucket;)V
     .locals 5
-    .parameter "buckets"
+    .param p1, "buckets"    # [Lcom/flurry/org/codehaus/jackson/map/deser/impl/BeanPropertyMap$Bucket;
 
     .prologue
     .line 217
@@ -51,16 +51,16 @@
     const/4 v1, 0x0
 
     .line 221
-    .local v1, i:I
+    .local v1, "i":I
     iget-object v4, p0, Lcom/flurry/org/codehaus/jackson/map/deser/impl/BeanPropertyMap$IteratorImpl;->_buckets:[Lcom/flurry/org/codehaus/jackson/map/deser/impl/BeanPropertyMap$Bucket;
 
     array-length v3, v4
 
-    .local v3, len:I
+    .local v3, "len":I
     move v2, v1
 
-    .end local v1           #i:I
-    .local v2, i:I
+    .end local v1    # "i":I
+    .local v2, "i":I
     :goto_0
     if-ge v2, v3, :cond_1
 
@@ -69,40 +69,40 @@
 
     add-int/lit8 v1, v2, 0x1
 
-    .end local v2           #i:I
-    .restart local v1       #i:I
+    .end local v2    # "i":I
+    .restart local v1    # "i":I
     aget-object v0, v4, v2
 
     .line 223
-    .local v0, b:Lcom/flurry/org/codehaus/jackson/map/deser/impl/BeanPropertyMap$Bucket;
+    .local v0, "b":Lcom/flurry/org/codehaus/jackson/map/deser/impl/BeanPropertyMap$Bucket;
     if-eqz v0, :cond_0
 
     .line 224
     iput-object v0, p0, Lcom/flurry/org/codehaus/jackson/map/deser/impl/BeanPropertyMap$IteratorImpl;->_currentBucket:Lcom/flurry/org/codehaus/jackson/map/deser/impl/BeanPropertyMap$Bucket;
 
     .line 228
-    .end local v0           #b:Lcom/flurry/org/codehaus/jackson/map/deser/impl/BeanPropertyMap$Bucket;
+    .end local v0    # "b":Lcom/flurry/org/codehaus/jackson/map/deser/impl/BeanPropertyMap$Bucket;
     :goto_1
     iput v1, p0, Lcom/flurry/org/codehaus/jackson/map/deser/impl/BeanPropertyMap$IteratorImpl;->_nextBucketIndex:I
 
     .line 229
     return-void
 
-    .restart local v0       #b:Lcom/flurry/org/codehaus/jackson/map/deser/impl/BeanPropertyMap$Bucket;
+    .restart local v0    # "b":Lcom/flurry/org/codehaus/jackson/map/deser/impl/BeanPropertyMap$Bucket;
     :cond_0
     move v2, v1
 
     .line 227
-    .end local v1           #i:I
-    .restart local v2       #i:I
+    .end local v1    # "i":I
+    .restart local v2    # "i":I
     goto :goto_0
 
-    .end local v0           #b:Lcom/flurry/org/codehaus/jackson/map/deser/impl/BeanPropertyMap$Bucket;
+    .end local v0    # "b":Lcom/flurry/org/codehaus/jackson/map/deser/impl/BeanPropertyMap$Bucket;
     :cond_1
     move v1, v2
 
-    .end local v2           #i:I
-    .restart local v1       #i:I
+    .end local v2    # "i":I
+    .restart local v1    # "i":I
     goto :goto_1
 .end method
 
@@ -136,7 +136,7 @@
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/map/deser/impl/BeanPropertyMap$IteratorImpl;->_currentBucket:Lcom/flurry/org/codehaus/jackson/map/deser/impl/BeanPropertyMap$Bucket;
 
     .line 240
-    .local v1, curr:Lcom/flurry/org/codehaus/jackson/map/deser/impl/BeanPropertyMap$Bucket;
+    .local v1, "curr":Lcom/flurry/org/codehaus/jackson/map/deser/impl/BeanPropertyMap$Bucket;
     if-nez v1, :cond_0
 
     .line 241
@@ -151,7 +151,7 @@
     iget-object v0, v1, Lcom/flurry/org/codehaus/jackson/map/deser/impl/BeanPropertyMap$Bucket;->next:Lcom/flurry/org/codehaus/jackson/map/deser/impl/BeanPropertyMap$Bucket;
 
     .line 245
-    .local v0, b:Lcom/flurry/org/codehaus/jackson/map/deser/impl/BeanPropertyMap$Bucket;
+    .local v0, "b":Lcom/flurry/org/codehaus/jackson/map/deser/impl/BeanPropertyMap$Bucket;
     :goto_0
     if-nez v0, :cond_1
 

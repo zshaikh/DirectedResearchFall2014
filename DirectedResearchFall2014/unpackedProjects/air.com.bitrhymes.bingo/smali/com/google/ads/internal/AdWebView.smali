@@ -29,8 +29,8 @@
 # direct methods
 .method public constructor <init>(Lcom/google/ads/n;Lcom/google/ads/AdSize;)V
     .locals 4
-    .parameter "slotState"
-    .parameter "adSize"
+    .param p1, "slotState"    # Lcom/google/ads/n;
+    .param p2, "adSize"    # Lcom/google/ads/AdSize;
 
     .prologue
     const/16 v3, 0xb
@@ -110,7 +110,7 @@
     .line 137
     :cond_0
     :goto_0
-    const/high16 v0, 0x200
+    const/high16 v0, 0x2000000
 
     invoke-virtual {p0, v0}, Lcom/google/ads/internal/AdWebView;->setScrollBarStyle(I)V
 
@@ -164,7 +164,6 @@
 # virtual methods
 .method public a(Z)V
     .locals 1
-    .parameter
 
     .prologue
     .line 387
@@ -355,11 +354,11 @@
 
 .method public loadDataWithBaseURL(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
-    .parameter "baseUrl"
-    .parameter "data"
-    .parameter "mimeType"
-    .parameter "encoding"
-    .parameter "historyUrl"
+    .param p1, "baseUrl"    # Ljava/lang/String;
+    .param p2, "data"    # Ljava/lang/String;
+    .param p3, "mimeType"    # Ljava/lang/String;
+    .param p4, "encoding"    # Ljava/lang/String;
+    .param p5, "historyUrl"    # Ljava/lang/String;
 
     .prologue
     .line 229
@@ -386,7 +385,7 @@
 
 .method public loadUrl(Ljava/lang/String;)V
     .locals 2
-    .parameter "url"
+    .param p1, "url"    # Ljava/lang/String;
 
     .prologue
     .line 242
@@ -413,15 +412,15 @@
 
 .method protected declared-synchronized onMeasure(II)V
     .locals 10
-    .parameter "widthMeasureSpec"
-    .parameter "heightMeasureSpec"
+    .param p1, "widthMeasureSpec"    # I
+    .param p2, "heightMeasureSpec"    # I
 
     .prologue
     const v9, 0x7fffffff
 
-    const/high16 v8, 0x4000
+    const/high16 v8, 0x40000000
 
-    const/high16 v7, -0x8000
+    const/high16 v7, -0x80000000
 
     const-string v0, ", "
 
@@ -558,7 +557,7 @@
     :goto_2
     int-to-float v7, v5
 
-    const/high16 v8, 0x40c0
+    const/high16 v8, 0x40c00000
 
     mul-float/2addr v4, v8
 
@@ -661,7 +660,7 @@
 
 .method public onTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 1
-    .parameter "event"
+    .param p1, "event"    # Landroid/view/MotionEvent;
 
     .prologue
     .line 352
@@ -692,7 +691,7 @@
 
 .method public setAdActivity(Lcom/google/ads/AdActivity;)V
     .locals 1
-    .parameter "adActivity"
+    .param p1, "adActivity"    # Lcom/google/ads/AdActivity;
 
     .prologue
     .line 214
@@ -708,7 +707,7 @@
 
 .method public declared-synchronized setAdSize(Lcom/google/ads/AdSize;)V
     .locals 1
-    .parameter "adSize"
+    .param p1, "adSize"    # Lcom/google/ads/AdSize;
 
     .prologue
     .line 288
@@ -738,7 +737,7 @@
 
 .method public setCustomClose(Z)V
     .locals 1
-    .parameter "useCustomClose"
+    .param p1, "useCustomClose"    # Z
 
     .prologue
     .line 365
@@ -756,7 +755,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/google/ads/internal/AdWebView;
     check-cast p0, Lcom/google/ads/AdActivity;
 
     .line 368
@@ -772,7 +771,7 @@
 
 .method public setIsExpandedMraid(Z)V
     .locals 0
-    .parameter "isCurrentlyExpandedMraid"
+    .param p1, "isCurrentlyExpandedMraid"    # Z
 
     .prologue
     .line 379

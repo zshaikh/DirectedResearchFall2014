@@ -45,7 +45,7 @@
 
 .method private constructor <init>(Lcom/fusepowered/m1/google/gson/Gson;)V
     .locals 0
-    .parameter "gson"
+    .param p1, "gson"    # Lcom/fusepowered/m1/google/gson/Gson;
 
     .prologue
     .line 50
@@ -60,8 +60,8 @@
 
 .method synthetic constructor <init>(Lcom/fusepowered/m1/google/gson/Gson;Lcom/fusepowered/m1/google/gson/internal/bind/ObjectTypeAdapter$1;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
+    .param p1, "x0"    # Lcom/fusepowered/m1/google/gson/Gson;
+    .param p2, "x1"    # Lcom/fusepowered/m1/google/gson/internal/bind/ObjectTypeAdapter$1;
 
     .prologue
     .line 37
@@ -74,7 +74,7 @@
 # virtual methods
 .method public read(Lcom/fusepowered/m1/google/gson/stream/JsonReader;)Ljava/lang/Object;
     .locals 5
-    .parameter "in"
+    .param p1, "in"    # Lcom/fusepowered/m1/google/gson/stream/JsonReader;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -88,7 +88,7 @@
     move-result-object v2
 
     .line 56
-    .local v2, token:Lcom/fusepowered/m1/google/gson/stream/JsonToken;
+    .local v2, "token":Lcom/fusepowered/m1/google/gson/stream/JsonToken;
     sget-object v3, Lcom/fusepowered/m1/google/gson/internal/bind/ObjectTypeAdapter$2;->$SwitchMap$com$millennialmedia$google$gson$stream$JsonToken:[I
 
     invoke-virtual {v2}, Lcom/fusepowered/m1/google/gson/stream/JsonToken;->ordinal()I
@@ -113,7 +113,7 @@
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     .line 59
-    .local v0, list:Ljava/util/List;,"Ljava/util/List<Ljava/lang/Object;>;"
+    .local v0, "list":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Object;>;"
     invoke-virtual {p1}, Lcom/fusepowered/m1/google/gson/stream/JsonReader;->beginArray()V
 
     .line 60
@@ -140,7 +140,7 @@
     move-object v3, v0
 
     .line 86
-    .end local v0           #list:Ljava/util/List;,"Ljava/util/List<Ljava/lang/Object;>;"
+    .end local v0    # "list":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Object;>;"
     :goto_1
     return-object v3
 
@@ -151,7 +151,7 @@
     invoke-direct {v1}, Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap;-><init>()V
 
     .line 68
-    .local v1, map:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
+    .local v1, "map":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
     invoke-virtual {p1}, Lcom/fusepowered/m1/google/gson/stream/JsonReader;->beginObject()V
 
     .line 69
@@ -185,7 +185,7 @@
     goto :goto_1
 
     .line 76
-    .end local v1           #map:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
+    .end local v1    # "map":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
     :pswitch_2
     invoke-virtual {p1}, Lcom/fusepowered/m1/google/gson/stream/JsonReader;->nextString()Ljava/lang/String;
 
@@ -242,8 +242,8 @@
 
 .method public write(Lcom/fusepowered/m1/google/gson/stream/JsonWriter;Ljava/lang/Object;)V
     .locals 3
-    .parameter "out"
-    .parameter "value"
+    .param p1, "out"    # Lcom/fusepowered/m1/google/gson/stream/JsonWriter;
+    .param p2, "value"    # Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -274,7 +274,7 @@
     move-result-object v0
 
     .line 101
-    .local v0, typeAdapter:Lcom/fusepowered/m1/google/gson/TypeAdapter;,"Lcom/fusepowered/m1/google/gson/TypeAdapter<Ljava/lang/Object;>;"
+    .local v0, "typeAdapter":Lcom/fusepowered/m1/google/gson/TypeAdapter;, "Lcom/fusepowered/m1/google/gson/TypeAdapter<Ljava/lang/Object;>;"
     instance-of v1, v0, Lcom/fusepowered/m1/google/gson/internal/bind/ObjectTypeAdapter;
 
     if-eqz v1, :cond_1

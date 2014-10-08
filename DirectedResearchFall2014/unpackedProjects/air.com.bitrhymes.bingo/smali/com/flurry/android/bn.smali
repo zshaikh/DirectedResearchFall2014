@@ -109,11 +109,6 @@
 # direct methods
 .method constructor <init>(Landroid/content/Context;Lcom/flurry/android/FlurryAds;Lcom/flurry/android/cz;Lcom/flurry/android/AdUnit;I)V
     .locals 3
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const/4 v2, 0x0
@@ -289,8 +284,6 @@
 
 .method static synthetic a(Lcom/flurry/android/bn;I)I
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 49
@@ -301,8 +294,6 @@
 
 .method static synthetic a(Lcom/flurry/android/bn;Landroid/app/Dialog;)Landroid/app/Dialog;
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 49
@@ -313,8 +304,6 @@
 
 .method static synthetic a(Lcom/flurry/android/bn;Landroid/view/View;)Landroid/view/View;
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 49
@@ -325,8 +314,6 @@
 
 .method static synthetic a(Lcom/flurry/android/bn;Landroid/webkit/WebChromeClient$CustomViewCallback;)Landroid/webkit/WebChromeClient$CustomViewCallback;
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 49
@@ -337,8 +324,6 @@
 
 .method static synthetic a(Lcom/flurry/android/bn;Landroid/widget/FrameLayout;)Landroid/widget/FrameLayout;
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 49
@@ -349,8 +334,6 @@
 
 .method static synthetic a(Lcom/flurry/android/bn;Ljava/lang/String;)Lcom/flurry/android/AdUnit;
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 49
@@ -363,7 +346,6 @@
 
 .method static synthetic a(Lcom/flurry/android/bn;)Ljava/lang/String;
     .locals 1
-    .parameter
 
     .prologue
     .line 49
@@ -374,8 +356,6 @@
 
 .method private a(II)V
     .locals 4
-    .parameter
-    .parameter
 
     .prologue
     const/4 v3, 0x0
@@ -535,8 +515,6 @@
 
 .method static synthetic a(Lcom/flurry/android/bn;Z)Z
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 49
@@ -660,7 +638,6 @@
 
 .method static synthetic b(Lcom/flurry/android/bn;)Landroid/webkit/WebView;
     .locals 1
-    .parameter
 
     .prologue
     .line 49
@@ -671,8 +648,6 @@
 
 .method static synthetic b(Lcom/flurry/android/bn;Ljava/lang/String;)Lcom/flurry/android/cz;
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 49
@@ -685,8 +660,6 @@
 
 .method private b(II)Ljava/util/List;
     .locals 6
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(II)",
@@ -779,8 +752,6 @@
 
 .method static synthetic b(Lcom/flurry/android/bn;Z)Z
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 49
@@ -791,7 +762,6 @@
 
 .method static synthetic c(Lcom/flurry/android/bn;)V
     .locals 4
-    .parameter
 
     .prologue
     const/4 v3, 0x0
@@ -945,7 +915,6 @@
 
 .method static synthetic d(Lcom/flurry/android/bn;)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 49
@@ -956,7 +925,6 @@
 
 .method static synthetic e(Lcom/flurry/android/bn;)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 49
@@ -967,7 +935,6 @@
 
 .method private static f(Ljava/util/List;)Ljava/lang/String;
     .locals 4
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1068,7 +1035,6 @@
 
 .method static synthetic f(Lcom/flurry/android/bn;)V
     .locals 3
-    .parameter
 
     .prologue
     .line 49
@@ -1094,7 +1060,6 @@
 
 .method static synthetic g(Lcom/flurry/android/bn;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 49
@@ -1107,7 +1072,6 @@
 
 .method static synthetic h(Lcom/flurry/android/bn;)V
     .locals 3
-    .parameter
 
     .prologue
     .line 49
@@ -1212,7 +1176,6 @@
 
 .method static synthetic i(Lcom/flurry/android/bn;)Ljava/util/List;
     .locals 1
-    .parameter
 
     .prologue
     .line 49
@@ -1223,7 +1186,6 @@
 
 .method static synthetic j(Lcom/flurry/android/bn;)Landroid/content/Context;
     .locals 1
-    .parameter
 
     .prologue
     .line 49
@@ -1234,7 +1196,6 @@
 
 .method static synthetic k(Lcom/flurry/android/bn;)Landroid/app/Activity;
     .locals 1
-    .parameter
 
     .prologue
     .line 49
@@ -1245,7 +1206,6 @@
 
 .method static synthetic l(Lcom/flurry/android/bn;)Landroid/view/View;
     .locals 1
-    .parameter
 
     .prologue
     .line 49
@@ -1256,7 +1216,6 @@
 
 .method static synthetic m(Lcom/flurry/android/bn;)Landroid/webkit/WebChromeClient;
     .locals 1
-    .parameter
 
     .prologue
     .line 49
@@ -1267,7 +1226,6 @@
 
 .method static synthetic n(Lcom/flurry/android/bn;)Landroid/widget/FrameLayout;
     .locals 1
-    .parameter
 
     .prologue
     .line 49
@@ -1278,7 +1236,6 @@
 
 .method static synthetic o(Lcom/flurry/android/bn;)Landroid/app/Dialog;
     .locals 1
-    .parameter
 
     .prologue
     .line 49
@@ -1289,7 +1246,6 @@
 
 .method static synthetic p(Lcom/flurry/android/bn;)Landroid/app/Dialog;
     .locals 1
-    .parameter
 
     .prologue
     .line 49
@@ -1300,7 +1256,6 @@
 
 .method static synthetic q(Lcom/flurry/android/bn;)I
     .locals 1
-    .parameter
 
     .prologue
     .line 49
@@ -1311,7 +1266,6 @@
 
 .method static synthetic r(Lcom/flurry/android/bn;)Landroid/webkit/WebChromeClient$CustomViewCallback;
     .locals 1
-    .parameter
 
     .prologue
     .line 49
@@ -1322,7 +1276,6 @@
 
 .method static synthetic s(Lcom/flurry/android/bn;)Lcom/flurry/android/ce;
     .locals 1
-    .parameter
 
     .prologue
     .line 49
@@ -1333,7 +1286,6 @@
 
 .method private u(Ljava/lang/String;)Lcom/flurry/android/cz;
     .locals 2
-    .parameter
 
     .prologue
     .line 1256
@@ -1379,7 +1331,6 @@
 
 .method private v(Ljava/lang/String;)Lcom/flurry/android/AdUnit;
     .locals 1
-    .parameter
 
     .prologue
     .line 1272
@@ -1412,12 +1363,6 @@
 # virtual methods
 .method final a(Ljava/lang/String;Ljava/util/Map;Lcom/flurry/android/AdUnit;Lcom/flurry/android/cz;II)V
     .locals 8
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1494,7 +1439,6 @@
 
 .method final a(Landroid/view/View;)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 1289
@@ -1558,7 +1502,6 @@
 
 .method public final initLayout(Landroid/content/Context;)V
     .locals 10
-    .parameter
 
     .prologue
     const/4 v8, -0x1
@@ -1991,7 +1934,6 @@
 
 .method public final onCompletion(Landroid/media/MediaPlayer;)V
     .locals 7
-    .parameter
 
     .prologue
     .line 1111
@@ -2019,9 +1961,6 @@
 
 .method public final onError(Landroid/media/MediaPlayer;II)Z
     .locals 7
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const/4 v6, 0x0
@@ -2073,9 +2012,6 @@
 
 .method public final onKey(Landroid/content/DialogInterface;ILandroid/view/KeyEvent;)Z
     .locals 7
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const/4 v6, 0x0
@@ -2161,7 +2097,6 @@
 
 .method public final onPrepared(Landroid/media/MediaPlayer;)V
     .locals 7
-    .parameter
 
     .prologue
     const/4 v6, 0x0
@@ -2251,9 +2186,6 @@
 
 .method public final performAction$3deb3ec3(Lcom/flurry/android/af;Lcom/flurry/android/FlurryAds;I)V
     .locals 9
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 710
@@ -3500,7 +3432,7 @@
 
     iget-object v0, p0, Lcom/flurry/android/bn;->dC:Landroid/widget/FrameLayout;
 
-    const/high16 v1, -0x100
+    const/high16 v1, -0x1000000
 
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setBackgroundColor(I)V
 

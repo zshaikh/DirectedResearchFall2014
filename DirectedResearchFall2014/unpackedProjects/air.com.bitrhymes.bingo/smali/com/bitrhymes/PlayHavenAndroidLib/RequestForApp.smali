@@ -25,8 +25,8 @@
 # virtual methods
 .method public call(Lcom/adobe/fre/FREContext;[Lcom/adobe/fre/FREObject;)Lcom/adobe/fre/FREObject;
     .locals 6
-    .parameter "context"
-    .parameter "args"
+    .param p1, "context"    # Lcom/adobe/fre/FREContext;
+    .param p2, "args"    # [Lcom/adobe/fre/FREObject;
 
     .prologue
     .line 22
@@ -78,7 +78,7 @@
     invoke-direct {v1, v2}, Lcom/playhaven/src/publishersdk/open/PHPublisherOpenRequest;-><init>(Landroid/content/Context;)V
 
     .line 32
-    .local v1, request:Lcom/playhaven/src/publishersdk/open/PHPublisherOpenRequest;
+    .local v1, "request":Lcom/playhaven/src/publishersdk/open/PHPublisherOpenRequest;
     new-instance v2, Lcom/bitrhymes/PlayHavenAndroidLib/RequestForApp$1;
 
     invoke-direct {v2, p0}, Lcom/bitrhymes/PlayHavenAndroidLib/RequestForApp$1;-><init>(Lcom/bitrhymes/PlayHavenAndroidLib/RequestForApp;)V
@@ -91,7 +91,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 54
-    .end local v1           #request:Lcom/playhaven/src/publishersdk/open/PHPublisherOpenRequest;
+    .end local v1    # "request":Lcom/playhaven/src/publishersdk/open/PHPublisherOpenRequest;
     :goto_0
     const/4 v2, 0x0
 
@@ -104,7 +104,7 @@
     move-object v0, v2
 
     .line 50
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     iget-object v2, p0, Lcom/bitrhymes/PlayHavenAndroidLib/RequestForApp;->_context:Lcom/adobe/fre/FREContext;
 
     const-string v3, "ERROR_EVENT"

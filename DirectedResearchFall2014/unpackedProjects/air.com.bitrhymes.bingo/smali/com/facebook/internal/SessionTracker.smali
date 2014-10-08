@@ -27,8 +27,8 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Lcom/facebook/Session$StatusCallback;)V
     .locals 1
-    .parameter "context"
-    .parameter "callback"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "callback"    # Lcom/facebook/Session$StatusCallback;
 
     .prologue
     .line 48
@@ -42,9 +42,9 @@
 
 .method constructor <init>(Landroid/content/Context;Lcom/facebook/Session$StatusCallback;Lcom/facebook/Session;)V
     .locals 1
-    .parameter "context"
-    .parameter "callback"
-    .parameter "session"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "callback"    # Lcom/facebook/Session$StatusCallback;
+    .param p3, "session"    # Lcom/facebook/Session;
 
     .prologue
     .line 60
@@ -58,10 +58,10 @@
 
 .method public constructor <init>(Landroid/content/Context;Lcom/facebook/Session$StatusCallback;Lcom/facebook/Session;Z)V
     .locals 2
-    .parameter "context"
-    .parameter "callback"
-    .parameter "session"
-    .parameter "startTracking"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "callback"    # Lcom/facebook/Session$StatusCallback;
+    .param p3, "session"    # Lcom/facebook/Session;
+    .param p4, "startTracking"    # Z
 
     .prologue
     .line 72
@@ -111,7 +111,6 @@
 
 .method static synthetic access$0(Lcom/facebook/internal/SessionTracker;)Lcom/facebook/Session$StatusCallback;
     .locals 1
-    .parameter
 
     .prologue
     .line 35
@@ -122,7 +121,6 @@
 
 .method static synthetic access$1(Lcom/facebook/internal/SessionTracker;)Lcom/facebook/Session;
     .locals 1
-    .parameter
 
     .prologue
     .line 34
@@ -141,7 +139,7 @@
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
     .line 196
-    .local v0, filter:Landroid/content/IntentFilter;
+    .local v0, "filter":Landroid/content/IntentFilter;
     const-string v1, "com.facebook.sdk.ACTIVE_SESSION_SET"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
@@ -174,7 +172,7 @@
     move-result-object v0
 
     .line 100
-    .local v0, openSession:Lcom/facebook/Session;
+    .local v0, "openSession":Lcom/facebook/Session;
     if-eqz v0, :cond_0
 
     invoke-virtual {v0}, Lcom/facebook/Session;->isOpened()Z
@@ -249,7 +247,7 @@
 
 .method public setSession(Lcom/facebook/Session;)V
     .locals 3
-    .parameter "newSession"
+    .param p1, "newSession"    # Lcom/facebook/Session;
 
     .prologue
     .line 112
@@ -308,7 +306,7 @@
     move-result-object v0
 
     .line 128
-    .local v0, activeSession:Lcom/facebook/Session;
+    .local v0, "activeSession":Lcom/facebook/Session;
     if-eqz v0, :cond_2
 
     .line 129
@@ -325,7 +323,7 @@
     invoke-virtual {v1, v2}, Landroid/support/v4/content/LocalBroadcastManager;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
     .line 138
-    .end local v0           #activeSession:Lcom/facebook/Session;
+    .end local v0    # "activeSession":Lcom/facebook/Session;
     :goto_1
     iput-object p1, p0, Lcom/facebook/internal/SessionTracker;->session:Lcom/facebook/Session;
 
@@ -417,7 +415,7 @@
     move-result-object v0
 
     .line 169
-    .local v0, session:Lcom/facebook/Session;
+    .local v0, "session":Lcom/facebook/Session;
     if-eqz v0, :cond_1
 
     .line 170

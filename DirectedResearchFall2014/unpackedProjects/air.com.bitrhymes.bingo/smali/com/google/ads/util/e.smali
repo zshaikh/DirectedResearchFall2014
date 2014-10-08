@@ -12,9 +12,6 @@
 # direct methods
 .method private static a(Landroid/content/Context;FI)I
     .locals 1
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 72
@@ -48,8 +45,6 @@
 
 .method public static a(Landroid/content/Context;Landroid/util/DisplayMetrics;)I
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     .line 44
@@ -66,8 +61,6 @@
 
 .method public static a(Landroid/content/Intent;Ljava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 84
@@ -79,8 +72,6 @@
 
 .method public static b(Landroid/content/Context;Landroid/util/DisplayMetrics;)I
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     .line 58

@@ -50,7 +50,7 @@
 
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 2
-    .parameter "senderId"
+    .param p1, "senderId"    # Ljava/lang/String;
 
     .prologue
     .line 33
@@ -75,9 +75,9 @@
 
 .method public static getResourseIdByName(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
     .locals 6
-    .parameter "packageName"
-    .parameter "className"
-    .parameter "name"
+    .param p0, "packageName"    # Ljava/lang/String;
+    .param p1, "className"    # Ljava/lang/String;
+    .param p2, "name"    # Ljava/lang/String;
 
     .prologue
     const-string v3, ".R"
@@ -86,10 +86,10 @@
     const/4 v2, 0x0
 
     .line 178
-    .local v2, id:I
+    .local v2, "id":I
     const/4 v1, 0x0
 
-    .local v1, i:I
+    .local v1, "i":I
     :goto_0
     :try_start_0
     new-instance v3, Ljava/lang/StringBuilder;
@@ -294,7 +294,7 @@
     move-object v0, v3
 
     .line 190
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const/4 v3, -0x1
 
     goto/16 :goto_2
@@ -302,7 +302,7 @@
 
 .method private writeData(Ljava/lang/String;)V
     .locals 5
-    .parameter "data"
+    .param p1, "data"    # Ljava/lang/String;
 
     .prologue
     .line 156
@@ -330,13 +330,13 @@
     move-result-object v1
 
     .line 162
-    .local v1, fOut:Ljava/io/FileOutputStream;
+    .local v1, "fOut":Ljava/io/FileOutputStream;
     new-instance v2, Ljava/io/OutputStreamWriter;
 
     invoke-direct {v2, v1}, Ljava/io/OutputStreamWriter;-><init>(Ljava/io/OutputStream;)V
 
     .line 163
-    .local v2, osw:Ljava/io/OutputStreamWriter;
+    .local v2, "osw":Ljava/io/OutputStreamWriter;
     invoke-virtual {v2, p1}, Ljava/io/OutputStreamWriter;->write(Ljava/lang/String;)V
 
     .line 164
@@ -349,8 +349,8 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
 
     .line 171
-    .end local v1           #fOut:Ljava/io/FileOutputStream;
-    .end local v2           #osw:Ljava/io/OutputStreamWriter;
+    .end local v1    # "fOut":Ljava/io/FileOutputStream;
+    .end local v2    # "osw":Ljava/io/OutputStreamWriter;
     :goto_0
     return-void
 
@@ -361,20 +361,20 @@
     move-object v0, v3
 
     .line 167
-    .local v0, e:Ljava/io/FileNotFoundException;
+    .local v0, "e":Ljava/io/FileNotFoundException;
     invoke-virtual {v0}, Ljava/io/FileNotFoundException;->printStackTrace()V
 
     goto :goto_0
 
     .line 168
-    .end local v0           #e:Ljava/io/FileNotFoundException;
+    .end local v0    # "e":Ljava/io/FileNotFoundException;
     :catch_1
     move-exception v3
 
     move-object v0, v3
 
     .line 169
-    .local v0, e:Ljava/io/IOException;
+    .local v0, "e":Ljava/io/IOException;
     invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
 
     goto :goto_0
@@ -402,8 +402,8 @@
 
 .method public onError(Landroid/content/Context;Ljava/lang/String;)V
     .locals 5
-    .parameter "context"
-    .parameter "errorId"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "errorId"    # Ljava/lang/String;
 
     .prologue
     const-string v4, "GCMIntentService"
@@ -433,7 +433,7 @@
     move-result-object v1
 
     .line 201
-    .local v1, freContext:Lcom/adobe/fre/FREContext;
+    .local v1, "freContext":Lcom/adobe/fre/FREContext;
     if-eqz v1, :cond_0
 
     .line 202
@@ -456,7 +456,7 @@
     move-object v0, v2
 
     .line 207
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v2, "GCMIntentService"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -484,8 +484,8 @@
 
 .method public onMessage(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 24
-    .parameter "context"
-    .parameter "intent"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
     .line 83
@@ -521,7 +521,7 @@
     move-result-object v13
 
     .line 87
-    .local v13, manager:Landroid/content/pm/PackageManager;
+    .local v13, "manager":Landroid/content/pm/PackageManager;
     :try_start_0
     invoke-virtual/range {p1 .. p1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
@@ -540,17 +540,17 @@
     move-result-object v5
 
     .line 89
-    .local v5, ai:Landroid/content/pm/ApplicationInfo;
+    .local v5, "ai":Landroid/content/pm/ApplicationInfo;
     iget v11, v5, Landroid/content/pm/ApplicationInfo;->icon:I
 
     .line 91
-    .local v11, iconID:I
+    .local v11, "iconID":I
     invoke-virtual/range {p2 .. p2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object v6
 
     .line 92
-    .local v6, bundleObj:Landroid/os/Bundle;
+    .local v6, "bundleObj":Landroid/os/Bundle;
     const-string v20, "Text"
 
     move-object v0, v6
@@ -562,7 +562,7 @@
     move-result-object v14
 
     .line 93
-    .local v14, message:Ljava/lang/String;
+    .local v14, "message":Ljava/lang/String;
     const-string v20, "Track"
 
     move-object v0, v6
@@ -574,7 +574,7 @@
     move-result-object v17
 
     .line 94
-    .local v17, trackMsg:Ljava/lang/String;
+    .local v17, "trackMsg":Ljava/lang/String;
     sget-object v20, Lcom/bitrhymes/nativeutils/GCMIntentService;->TAG:Ljava/lang/String;
 
     new-instance v21, Ljava/lang/StringBuilder;
@@ -608,7 +608,7 @@
     const-string v16, "notification"
 
     .line 100
-    .local v16, ns:Ljava/lang/String;
+    .local v16, "ns":Ljava/lang/String;
     move-object/from16 v0, p1
 
     move-object/from16 v1, v16
@@ -620,13 +620,13 @@
     check-cast v12, Landroid/app/NotificationManager;
 
     .line 101
-    .local v12, mNotificationManager:Landroid/app/NotificationManager;
+    .local v12, "mNotificationManager":Landroid/app/NotificationManager;
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v18
 
     .line 104
-    .local v18, when:J
+    .local v18, "when":J
     new-instance v15, Landroid/app/Notification;
 
     move-object v0, v15
@@ -640,7 +640,7 @@
     invoke-direct {v0, v1, v2, v3, v4}, Landroid/app/Notification;-><init>(ILjava/lang/CharSequence;J)V
 
     .line 106
-    .local v15, notification:Landroid/app/Notification;
+    .local v15, "notification":Landroid/app/Notification;
     new-instance v8, Landroid/widget/RemoteViews;
 
     invoke-virtual/range {p1 .. p1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
@@ -670,7 +670,7 @@
     invoke-direct {v0, v1, v2}, Landroid/widget/RemoteViews;-><init>(Ljava/lang/String;I)V
 
     .line 109
-    .local v8, contentView:Landroid/widget/RemoteViews;
+    .local v8, "contentView":Landroid/widget/RemoteViews;
     invoke-virtual/range {p1 .. p1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object v20
@@ -729,7 +729,7 @@
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
     .line 117
-    .local v10, i:Landroid/content/Intent;
+    .local v10, "i":Landroid/content/Intent;
     invoke-virtual/range {p1 .. p1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object v20
@@ -755,32 +755,32 @@
     invoke-static/range {v20 .. v21}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 153
-    .end local v5           #ai:Landroid/content/pm/ApplicationInfo;
-    .end local v6           #bundleObj:Landroid/os/Bundle;
-    .end local v8           #contentView:Landroid/widget/RemoteViews;
-    .end local v10           #i:Landroid/content/Intent;
-    .end local v11           #iconID:I
-    .end local v12           #mNotificationManager:Landroid/app/NotificationManager;
-    .end local v14           #message:Ljava/lang/String;
-    .end local v15           #notification:Landroid/app/Notification;
-    .end local v16           #ns:Ljava/lang/String;
-    .end local v17           #trackMsg:Ljava/lang/String;
-    .end local v18           #when:J
+    .end local v5    # "ai":Landroid/content/pm/ApplicationInfo;
+    .end local v6    # "bundleObj":Landroid/os/Bundle;
+    .end local v8    # "contentView":Landroid/widget/RemoteViews;
+    .end local v10    # "i":Landroid/content/Intent;
+    .end local v11    # "iconID":I
+    .end local v12    # "mNotificationManager":Landroid/app/NotificationManager;
+    .end local v14    # "message":Ljava/lang/String;
+    .end local v15    # "notification":Landroid/app/Notification;
+    .end local v16    # "ns":Ljava/lang/String;
+    .end local v17    # "trackMsg":Ljava/lang/String;
+    .end local v18    # "when":J
     :goto_0
     return-void
 
     .line 127
-    .restart local v5       #ai:Landroid/content/pm/ApplicationInfo;
-    .restart local v6       #bundleObj:Landroid/os/Bundle;
-    .restart local v8       #contentView:Landroid/widget/RemoteViews;
-    .restart local v10       #i:Landroid/content/Intent;
-    .restart local v11       #iconID:I
-    .restart local v12       #mNotificationManager:Landroid/app/NotificationManager;
-    .restart local v14       #message:Ljava/lang/String;
-    .restart local v15       #notification:Landroid/app/Notification;
-    .restart local v16       #ns:Ljava/lang/String;
-    .restart local v17       #trackMsg:Ljava/lang/String;
-    .restart local v18       #when:J
+    .restart local v5    # "ai":Landroid/content/pm/ApplicationInfo;
+    .restart local v6    # "bundleObj":Landroid/os/Bundle;
+    .restart local v8    # "contentView":Landroid/widget/RemoteViews;
+    .restart local v10    # "i":Landroid/content/Intent;
+    .restart local v11    # "iconID":I
+    .restart local v12    # "mNotificationManager":Landroid/app/NotificationManager;
+    .restart local v14    # "message":Ljava/lang/String;
+    .restart local v15    # "notification":Landroid/app/Notification;
+    .restart local v16    # "ns":Ljava/lang/String;
+    .restart local v17    # "trackMsg":Ljava/lang/String;
+    .restart local v18    # "when":J
     :cond_0
     const-string v20, "android.intent.category.LAUNCHER"
 
@@ -808,7 +808,7 @@
     move-result-object v7
 
     .line 129
-    .local v7, contentIntent:Landroid/app/PendingIntent;
+    .local v7, "contentIntent":Landroid/app/PendingIntent;
     iput-object v7, v15, Landroid/app/Notification;->contentIntent:Landroid/app/PendingIntent;
 
     .line 133
@@ -860,25 +860,25 @@
     goto :goto_0
 
     .line 139
-    .end local v5           #ai:Landroid/content/pm/ApplicationInfo;
-    .end local v6           #bundleObj:Landroid/os/Bundle;
-    .end local v7           #contentIntent:Landroid/app/PendingIntent;
-    .end local v8           #contentView:Landroid/widget/RemoteViews;
-    .end local v10           #i:Landroid/content/Intent;
-    .end local v11           #iconID:I
-    .end local v12           #mNotificationManager:Landroid/app/NotificationManager;
-    .end local v14           #message:Ljava/lang/String;
-    .end local v15           #notification:Landroid/app/Notification;
-    .end local v16           #ns:Ljava/lang/String;
-    .end local v17           #trackMsg:Ljava/lang/String;
-    .end local v18           #when:J
+    .end local v5    # "ai":Landroid/content/pm/ApplicationInfo;
+    .end local v6    # "bundleObj":Landroid/os/Bundle;
+    .end local v7    # "contentIntent":Landroid/app/PendingIntent;
+    .end local v8    # "contentView":Landroid/widget/RemoteViews;
+    .end local v10    # "i":Landroid/content/Intent;
+    .end local v11    # "iconID":I
+    .end local v12    # "mNotificationManager":Landroid/app/NotificationManager;
+    .end local v14    # "message":Ljava/lang/String;
+    .end local v15    # "notification":Landroid/app/Notification;
+    .end local v16    # "ns":Ljava/lang/String;
+    .end local v17    # "trackMsg":Ljava/lang/String;
+    .end local v18    # "when":J
     :catch_0
     move-exception v20
 
     move-object/from16 v9, v20
 
     .line 140
-    .local v9, e:Ljava/lang/Exception;
+    .local v9, "e":Ljava/lang/Exception;
     const-string v20, "GCMIntentService"
 
     new-instance v21, Ljava/lang/StringBuilder;
@@ -909,8 +909,8 @@
 
 .method public onRecoverableError(Landroid/content/Context;Ljava/lang/String;)Z
     .locals 5
-    .parameter "context"
-    .parameter "errorId"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "errorId"    # Ljava/lang/String;
 
     .prologue
     const-string v4, "GCMIntentService"
@@ -940,7 +940,7 @@
     move-result-object v1
 
     .line 221
-    .local v1, freContext:Lcom/adobe/fre/FREContext;
+    .local v1, "freContext":Lcom/adobe/fre/FREContext;
     if-eqz v1, :cond_0
 
     .line 222
@@ -965,7 +965,7 @@
     move-object v0, v2
 
     .line 227
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v2, "GCMIntentService"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -993,8 +993,8 @@
 
 .method public onRegistered(Landroid/content/Context;Ljava/lang/String;)V
     .locals 6
-    .parameter "context"
-    .parameter "regId"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "regId"    # Ljava/lang/String;
 
     .prologue
     const-string v5, "GCMIntentService"
@@ -1025,7 +1025,7 @@
     move-result-object v1
 
     .line 51
-    .local v1, freContext:Lcom/adobe/fre/FREContext;
+    .local v1, "freContext":Lcom/adobe/fre/FREContext;
     if-eqz v1, :cond_0
 
     .line 52
@@ -1050,7 +1050,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 59
-    .end local v1           #freContext:Lcom/adobe/fre/FREContext;
+    .end local v1    # "freContext":Lcom/adobe/fre/FREContext;
     :cond_0
     :goto_0
     return-void
@@ -1062,7 +1062,7 @@
     move-object v0, v2
 
     .line 57
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v2, "GCMIntentService"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1090,8 +1090,8 @@
 
 .method public onUnregistered(Landroid/content/Context;Ljava/lang/String;)V
     .locals 6
-    .parameter "context"
-    .parameter "regId"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "regId"    # Ljava/lang/String;
 
     .prologue
     const-string v5, "GCMIntentService"
@@ -1122,7 +1122,7 @@
     move-result-object v1
 
     .line 69
-    .local v1, freContext:Lcom/adobe/fre/FREContext;
+    .local v1, "freContext":Lcom/adobe/fre/FREContext;
     if-eqz v1, :cond_0
 
     .line 70
@@ -1147,7 +1147,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 77
-    .end local v1           #freContext:Lcom/adobe/fre/FREContext;
+    .end local v1    # "freContext":Lcom/adobe/fre/FREContext;
     :cond_0
     :goto_0
     return-void
@@ -1159,7 +1159,7 @@
     move-object v0, v2
 
     .line 75
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v2, "GCMIntentService"
 
     new-instance v2, Ljava/lang/StringBuilder;

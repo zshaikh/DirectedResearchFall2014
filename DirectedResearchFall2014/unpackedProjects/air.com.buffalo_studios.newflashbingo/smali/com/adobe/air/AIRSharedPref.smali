@@ -55,7 +55,6 @@
 
 .method public static getConfigData(Landroid/content/Context;)Ljava/lang/String;
     .locals 4
-    .parameter
 
     .prologue
     .line 105
@@ -121,7 +120,6 @@
 
 .method public static getConfigRequestTime(Landroid/content/Context;)Ljava/lang/String;
     .locals 4
-    .parameter
 
     .prologue
     .line 62
@@ -217,8 +215,6 @@
 
 .method public static setConfigData(Landroid/content/Context;Ljava/lang/String;)Z
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     .line 171
@@ -252,8 +248,6 @@
 
 .method public static setConfigRequestTime(Landroid/content/Context;Ljava/lang/String;)Z
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     .line 148

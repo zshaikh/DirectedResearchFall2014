@@ -343,8 +343,8 @@
 
 .method private static bestBranch(Lcom/flurry/org/apache/avro/Schema;Lcom/flurry/org/apache/avro/Schema;)I
     .locals 8
-    .parameter "r"
-    .parameter "w"
+    .param p0, "r"    # Lcom/flurry/org/apache/avro/Schema;
+    .param p1, "w"    # Lcom/flurry/org/apache/avro/Schema;
 
     .prologue
     .line 419
@@ -353,11 +353,11 @@
     move-result-object v4
 
     .line 421
-    .local v4, vt:Lcom/flurry/org/apache/avro/Schema$Type;
+    .local v4, "vt":Lcom/flurry/org/apache/avro/Schema$Type;
     const/4 v2, 0x0
 
     .line 422
-    .local v2, j:I
+    .local v2, "j":I
     invoke-virtual {p0}, Lcom/flurry/org/apache/avro/Schema;->getTypes()Ljava/util/List;
 
     move-result-object v5
@@ -407,7 +407,7 @@
     check-cast v0, Lcom/flurry/org/apache/avro/Schema;
 
     .line 423
-    .local v0, b:Lcom/flurry/org/apache/avro/Schema;
+    .local v0, "b":Lcom/flurry/org/apache/avro/Schema;
     invoke-virtual {v0}, Lcom/flurry/org/apache/avro/Schema;->getType()Lcom/flurry/org/apache/avro/Schema$Type;
 
     move-result-object v6
@@ -435,13 +435,13 @@
     move-result-object v3
 
     .line 427
-    .local v3, vname:Ljava/lang/String;
+    .local v3, "vname":Ljava/lang/String;
     invoke-virtual {v0}, Lcom/flurry/org/apache/avro/Schema;->getFullName()Ljava/lang/String;
 
     move-result-object v1
 
     .line 428
-    .local v1, bname:Ljava/lang/String;
+    .local v1, "bname":Ljava/lang/String;
     if-eqz v3, :cond_2
 
     invoke-virtual {v3, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -464,8 +464,8 @@
     .line 430
     goto :goto_2
 
-    .end local v1           #bname:Ljava/lang/String;
-    .end local v3           #vname:Ljava/lang/String;
+    .end local v1    # "bname":Ljava/lang/String;
+    .end local v3    # "vname":Ljava/lang/String;
     :cond_4
     move v5, v2
 
@@ -479,7 +479,7 @@
     goto :goto_0
 
     .line 438
-    .end local v0           #b:Lcom/flurry/org/apache/avro/Schema;
+    .end local v0    # "b":Lcom/flurry/org/apache/avro/Schema;
     :cond_6
     invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -488,7 +488,7 @@
     check-cast v0, Lcom/flurry/org/apache/avro/Schema;
 
     .line 439
-    .restart local v0       #b:Lcom/flurry/org/apache/avro/Schema;
+    .restart local v0    # "b":Lcom/flurry/org/apache/avro/Schema;
     invoke-static {}, Lcom/flurry/org/apache/avro/io/parsing/ResolvingGrammarGenerator;->$SWITCH_TABLE$org$apache$avro$Schema$Type()[I
 
     move-result-object v6
@@ -587,9 +587,9 @@
 
 .method public static encode(Lcom/flurry/org/apache/avro/io/Encoder;Lcom/flurry/org/apache/avro/Schema;Lcom/flurry/org/codehaus/jackson/JsonNode;)V
     .locals 13
-    .parameter "e"
-    .parameter "s"
-    .parameter "n"
+    .param p0, "e"    # Lcom/flurry/org/apache/avro/io/Encoder;
+    .param p1, "s"    # Lcom/flurry/org/apache/avro/Schema;
+    .param p2, "n"    # Lcom/flurry/org/codehaus/jackson/JsonNode;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -647,19 +647,19 @@
     check-cast v1, Lcom/flurry/org/apache/avro/Schema$Field;
 
     .line 312
-    .local v1, f:Lcom/flurry/org/apache/avro/Schema$Field;
+    .local v1, "f":Lcom/flurry/org/apache/avro/Schema$Field;
     invoke-virtual {v1}, Lcom/flurry/org/apache/avro/Schema$Field;->name()Ljava/lang/String;
 
     move-result-object v5
 
     .line 313
-    .local v5, name:Ljava/lang/String;
+    .local v5, "name":Ljava/lang/String;
     invoke-virtual {p2, v5}, Lcom/flurry/org/codehaus/jackson/JsonNode;->get(Ljava/lang/String;)Lcom/flurry/org/codehaus/jackson/JsonNode;
 
     move-result-object v8
 
     .line 314
-    .local v8, v:Lcom/flurry/org/codehaus/jackson/JsonNode;
+    .local v8, "v":Lcom/flurry/org/codehaus/jackson/JsonNode;
     if-nez v8, :cond_1
 
     .line 315
@@ -703,9 +703,9 @@
     goto :goto_1
 
     .line 324
-    .end local v1           #f:Lcom/flurry/org/apache/avro/Schema$Field;
-    .end local v5           #name:Ljava/lang/String;
-    .end local v8           #v:Lcom/flurry/org/codehaus/jackson/JsonNode;
+    .end local v1    # "f":Lcom/flurry/org/apache/avro/Schema$Field;
+    .end local v5    # "name":Ljava/lang/String;
+    .end local v8    # "v":Lcom/flurry/org/codehaus/jackson/JsonNode;
     :pswitch_1
     invoke-virtual {p2}, Lcom/flurry/org/codehaus/jackson/JsonNode;->getTextValue()Ljava/lang/String;
 
@@ -738,7 +738,7 @@
     move-result-object v2
 
     .line 330
-    .local v2, i:Lcom/flurry/org/apache/avro/Schema;
+    .local v2, "i":Lcom/flurry/org/apache/avro/Schema;
     invoke-virtual {p2}, Lcom/flurry/org/codehaus/jackson/JsonNode;->iterator()Ljava/util/Iterator;
 
     move-result-object v9
@@ -764,7 +764,7 @@
     check-cast v7, Lcom/flurry/org/codehaus/jackson/JsonNode;
 
     .line 331
-    .local v7, node:Lcom/flurry/org/codehaus/jackson/JsonNode;
+    .local v7, "node":Lcom/flurry/org/codehaus/jackson/JsonNode;
     invoke-virtual {p0}, Lcom/flurry/org/apache/avro/io/Encoder;->startItem()V
 
     .line 332
@@ -773,8 +773,8 @@
     goto :goto_2
 
     .line 337
-    .end local v2           #i:Lcom/flurry/org/apache/avro/Schema;
-    .end local v7           #node:Lcom/flurry/org/codehaus/jackson/JsonNode;
+    .end local v2    # "i":Lcom/flurry/org/apache/avro/Schema;
+    .end local v7    # "node":Lcom/flurry/org/codehaus/jackson/JsonNode;
     :pswitch_3
     invoke-virtual {p0}, Lcom/flurry/org/apache/avro/io/Encoder;->writeMapStart()V
 
@@ -793,12 +793,12 @@
     move-result-object v8
 
     .line 340
-    .local v8, v:Lcom/flurry/org/apache/avro/Schema;
+    .local v8, "v":Lcom/flurry/org/apache/avro/Schema;
     invoke-virtual {p2}, Lcom/flurry/org/codehaus/jackson/JsonNode;->getFieldNames()Ljava/util/Iterator;
 
     move-result-object v3
 
-    .local v3, it:Ljava/util/Iterator;,"Ljava/util/Iterator<Ljava/lang/String;>;"
+    .local v3, "it":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/String;>;"
     :goto_3
     invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
 
@@ -823,7 +823,7 @@
     check-cast v4, Ljava/lang/String;
 
     .line 343
-    .local v4, key:Ljava/lang/String;
+    .local v4, "key":Ljava/lang/String;
     invoke-virtual {p0, v4}, Lcom/flurry/org/apache/avro/io/Encoder;->writeString(Ljava/lang/String;)V
 
     .line 344
@@ -836,9 +836,9 @@
     goto :goto_3
 
     .line 349
-    .end local v3           #it:Ljava/util/Iterator;,"Ljava/util/Iterator<Ljava/lang/String;>;"
-    .end local v4           #key:Ljava/lang/String;
-    .end local v8           #v:Lcom/flurry/org/apache/avro/Schema;
+    .end local v3    # "it":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/String;>;"
+    .end local v4    # "key":Ljava/lang/String;
+    .end local v8    # "v":Lcom/flurry/org/apache/avro/Schema;
     :pswitch_4
     invoke-virtual {p0, v11}, Lcom/flurry/org/apache/avro/io/Encoder;->writeIndex(I)V
 
@@ -899,7 +899,7 @@
     move-result-object v0
 
     .line 356
-    .local v0, bb:[B
+    .local v0, "bb":[B
     array-length v9, v0
 
     invoke-virtual {p1}, Lcom/flurry/org/apache/avro/Schema;->getFixedSize()I
@@ -916,7 +916,7 @@
     new-array v6, v9, [B
 
     .line 359
-    .local v6, newBb:[B
+    .local v6, "newBb":[B
     invoke-virtual {p1}, Lcom/flurry/org/apache/avro/Schema;->getFixedSize()I
 
     move-result v9
@@ -934,14 +934,14 @@
     move-object v0, v6
 
     .line 362
-    .end local v6           #newBb:[B
+    .end local v6    # "newBb":[B
     :cond_6
     invoke-virtual {p0, v0}, Lcom/flurry/org/apache/avro/io/Encoder;->writeFixed([B)V
 
     goto/16 :goto_0
 
     .line 359
-    .restart local v6       #newBb:[B
+    .restart local v6    # "newBb":[B
     :cond_7
     invoke-virtual {p1}, Lcom/flurry/org/apache/avro/Schema;->getFixedSize()I
 
@@ -950,8 +950,8 @@
     goto :goto_4
 
     .line 365
-    .end local v0           #bb:[B
-    .end local v6           #newBb:[B
+    .end local v0    # "bb":[B
+    .end local v6    # "newBb":[B
     :pswitch_6
     invoke-virtual {p2}, Lcom/flurry/org/codehaus/jackson/JsonNode;->isTextual()Z
 
@@ -1291,8 +1291,8 @@
 
 .method private static getBinary(Lcom/flurry/org/apache/avro/Schema;Lcom/flurry/org/codehaus/jackson/JsonNode;)[B
     .locals 4
-    .parameter "s"
-    .parameter "n"
+    .param p0, "s"    # Lcom/flurry/org/apache/avro/Schema;
+    .param p1, "n"    # Lcom/flurry/org/codehaus/jackson/JsonNode;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -1306,7 +1306,7 @@
     invoke-direct {v1}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
     .line 292
-    .local v1, out:Ljava/io/ByteArrayOutputStream;
+    .local v1, "out":Ljava/io/ByteArrayOutputStream;
     sget-object v2, Lcom/flurry/org/apache/avro/io/parsing/ResolvingGrammarGenerator;->factory:Lcom/flurry/org/apache/avro/io/EncoderFactory;
 
     const/4 v3, 0x0
@@ -1316,7 +1316,7 @@
     move-result-object v0
 
     .line 293
-    .local v0, e:Lcom/flurry/org/apache/avro/io/Encoder;
+    .local v0, "e":Lcom/flurry/org/apache/avro/io/Encoder;
     invoke-static {v0, p0, p1}, Lcom/flurry/org/apache/avro/io/parsing/ResolvingGrammarGenerator;->encode(Lcom/flurry/org/apache/avro/io/Encoder;Lcom/flurry/org/apache/avro/Schema;Lcom/flurry/org/codehaus/jackson/JsonNode;)V
 
     .line 294
@@ -1332,8 +1332,6 @@
 
 .method private static mkEnumAdjust(Ljava/util/List;Ljava/util/List;)Lcom/flurry/org/apache/avro/io/parsing/Symbol;
     .locals 5
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1351,8 +1349,8 @@
 
     .prologue
     .line 409
-    .local p0, wsymbols:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
-    .local p1, rsymbols:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
+    .local p0, "wsymbols":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
+    .local p1, "rsymbols":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result v3
@@ -1360,10 +1358,10 @@
     new-array v0, v3, [Ljava/lang/Object;
 
     .line 410
-    .local v0, adjustments:[Ljava/lang/Object;
+    .local v0, "adjustments":[Ljava/lang/Object;
     const/4 v1, 0x0
 
-    .local v1, i:I
+    .local v1, "i":I
     :goto_0
     array-length v3, v0
 
@@ -1391,7 +1389,7 @@
     move-result v2
 
     .line 412
-    .local v2, j:I
+    .local v2, "j":I
     const/4 v3, -0x1
 
     if-ne v2, v3, :cond_1
@@ -1435,9 +1433,8 @@
 
 .method private resolveRecords(Lcom/flurry/org/apache/avro/Schema;Lcom/flurry/org/apache/avro/Schema;Ljava/util/Map;)Lcom/flurry/org/apache/avro/io/parsing/Symbol;
     .locals 24
-    .parameter "writer"
-    .parameter "reader"
-    .parameter
+    .param p1, "writer"    # Lcom/flurry/org/apache/avro/Schema;
+    .param p2, "reader"    # Lcom/flurry/org/apache/avro/Schema;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1460,7 +1457,7 @@
 
     .prologue
     .line 202
-    .local p3, seen:Ljava/util/Map;,"Ljava/util/Map<Lcom/flurry/org/apache/avro/io/parsing/ValidatingGrammarGenerator$LitS;Lcom/flurry/org/apache/avro/io/parsing/Symbol;>;"
+    .local p3, "seen":Ljava/util/Map;, "Ljava/util/Map<Lcom/flurry/org/apache/avro/io/parsing/ValidatingGrammarGenerator$LitS;Lcom/flurry/org/apache/avro/io/parsing/Symbol;>;"
     new-instance v19, Lcom/flurry/org/apache/avro/io/parsing/ResolvingGrammarGenerator$LitS2;
 
     move-object/from16 v0, v19
@@ -1472,7 +1469,7 @@
     invoke-direct {v0, v1, v2}, Lcom/flurry/org/apache/avro/io/parsing/ResolvingGrammarGenerator$LitS2;-><init>(Lcom/flurry/org/apache/avro/Schema;Lcom/flurry/org/apache/avro/Schema;)V
 
     .line 203
-    .local v19, wsc:Lcom/flurry/org/apache/avro/io/parsing/ValidatingGrammarGenerator$LitS;
+    .local v19, "wsc":Lcom/flurry/org/apache/avro/io/parsing/ValidatingGrammarGenerator$LitS;
     move-object/from16 v0, p3
 
     move-object/from16 v1, v19
@@ -1484,7 +1481,7 @@
     check-cast v11, Lcom/flurry/org/apache/avro/io/parsing/Symbol;
 
     .line 204
-    .local v11, result:Lcom/flurry/org/apache/avro/io/parsing/Symbol;
+    .local v11, "result":Lcom/flurry/org/apache/avro/io/parsing/Symbol;
     if-nez v11, :cond_3
 
     .line 205
@@ -1493,13 +1490,13 @@
     move-result-object v18
 
     .line 206
-    .local v18, wfields:Ljava/util/List;,"Ljava/util/List<Lcom/flurry/org/apache/avro/Schema$Field;>;"
+    .local v18, "wfields":Ljava/util/List;, "Ljava/util/List<Lcom/flurry/org/apache/avro/Schema$Field;>;"
     invoke-virtual/range {p2 .. p2}, Lcom/flurry/org/apache/avro/Schema;->getFields()Ljava/util/List;
 
     move-result-object v14
 
     .line 210
-    .local v14, rfields:Ljava/util/List;,"Ljava/util/List<Lcom/flurry/org/apache/avro/Schema$Field;>;"
+    .local v14, "rfields":Ljava/util/List;, "Ljava/util/List<Lcom/flurry/org/apache/avro/Schema$Field;>;"
     invoke-interface {v14}, Ljava/util/List;->size()I
 
     move-result v20
@@ -1511,11 +1508,11 @@
     move-object v10, v0
 
     .line 211
-    .local v10, reordered:[Lcom/flurry/org/apache/avro/Schema$Field;
+    .local v10, "reordered":[Lcom/flurry/org/apache/avro/Schema$Field;
     const/4 v15, 0x0
 
     .line 212
-    .local v15, ridx:I
+    .local v15, "ridx":I
     invoke-interface/range {v18 .. v18}, Ljava/util/List;->size()I
 
     move-result v20
@@ -1523,7 +1520,7 @@
     add-int/lit8 v5, v20, 0x1
 
     .line 214
-    .local v5, count:I
+    .local v5, "count":I
     invoke-interface/range {v18 .. v18}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v20
@@ -1553,7 +1550,7 @@
     new-array v8, v5, [Lcom/flurry/org/apache/avro/io/parsing/Symbol;
 
     .line 237
-    .local v8, production:[Lcom/flurry/org/apache/avro/io/parsing/Symbol;
+    .local v8, "production":[Lcom/flurry/org/apache/avro/io/parsing/Symbol;
     add-int/lit8 v5, v5, -0x1
 
     new-instance v20, Lcom/flurry/org/apache/avro/io/parsing/Symbol$FieldOrderAction;
@@ -1605,29 +1602,29 @@
 
     if-nez v21, :cond_9
 
-    .end local v5           #count:I
-    .end local v8           #production:[Lcom/flurry/org/apache/avro/io/parsing/Symbol;
-    .end local v10           #reordered:[Lcom/flurry/org/apache/avro/Schema$Field;
-    .end local v14           #rfields:Ljava/util/List;,"Ljava/util/List<Lcom/flurry/org/apache/avro/Schema$Field;>;"
-    .end local v15           #ridx:I
-    .end local v18           #wfields:Ljava/util/List;,"Ljava/util/List<Lcom/flurry/org/apache/avro/Schema$Field;>;"
+    .end local v5    # "count":I
+    .end local v8    # "production":[Lcom/flurry/org/apache/avro/io/parsing/Symbol;
+    .end local v10    # "reordered":[Lcom/flurry/org/apache/avro/Schema$Field;
+    .end local v14    # "rfields":Ljava/util/List;, "Ljava/util/List<Lcom/flurry/org/apache/avro/Schema$Field;>;"
+    .end local v15    # "ridx":I
+    .end local v18    # "wfields":Ljava/util/List;, "Ljava/util/List<Lcom/flurry/org/apache/avro/Schema$Field;>;"
     :cond_3
     move-object v12, v11
 
     .line 278
-    .end local v11           #result:Lcom/flurry/org/apache/avro/io/parsing/Symbol;
-    .local v12, result:Lcom/flurry/org/apache/avro/io/parsing/Symbol;
+    .end local v11    # "result":Lcom/flurry/org/apache/avro/io/parsing/Symbol;
+    .local v12, "result":Lcom/flurry/org/apache/avro/io/parsing/Symbol;
     :goto_4
     return-object v12
 
     .line 214
-    .end local v12           #result:Lcom/flurry/org/apache/avro/io/parsing/Symbol;
-    .restart local v5       #count:I
-    .restart local v10       #reordered:[Lcom/flurry/org/apache/avro/Schema$Field;
-    .restart local v11       #result:Lcom/flurry/org/apache/avro/io/parsing/Symbol;
-    .restart local v14       #rfields:Ljava/util/List;,"Ljava/util/List<Lcom/flurry/org/apache/avro/Schema$Field;>;"
-    .restart local v15       #ridx:I
-    .restart local v18       #wfields:Ljava/util/List;,"Ljava/util/List<Lcom/flurry/org/apache/avro/Schema$Field;>;"
+    .end local v12    # "result":Lcom/flurry/org/apache/avro/io/parsing/Symbol;
+    .restart local v5    # "count":I
+    .restart local v10    # "reordered":[Lcom/flurry/org/apache/avro/Schema$Field;
+    .restart local v11    # "result":Lcom/flurry/org/apache/avro/io/parsing/Symbol;
+    .restart local v14    # "rfields":Ljava/util/List;, "Ljava/util/List<Lcom/flurry/org/apache/avro/Schema$Field;>;"
+    .restart local v15    # "ridx":I
+    .restart local v18    # "wfields":Ljava/util/List;, "Ljava/util/List<Lcom/flurry/org/apache/avro/Schema$Field;>;"
     :cond_4
     invoke-interface/range {v20 .. v20}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -1636,7 +1633,7 @@
     check-cast v6, Lcom/flurry/org/apache/avro/Schema$Field;
 
     .line 215
-    .local v6, f:Lcom/flurry/org/apache/avro/Schema$Field;
+    .local v6, "f":Lcom/flurry/org/apache/avro/Schema$Field;
     invoke-virtual {v6}, Lcom/flurry/org/apache/avro/Schema$Field;->name()Ljava/lang/String;
 
     move-result-object v21
@@ -1650,25 +1647,25 @@
     move-result-object v9
 
     .line 216
-    .local v9, rdrField:Lcom/flurry/org/apache/avro/Schema$Field;
+    .local v9, "rdrField":Lcom/flurry/org/apache/avro/Schema$Field;
     if-eqz v9, :cond_0
 
     .line 217
     add-int/lit8 v16, v15, 0x1
 
-    .end local v15           #ridx:I
-    .local v16, ridx:I
+    .end local v15    # "ridx":I
+    .local v16, "ridx":I
     aput-object v9, v10, v15
 
     move/from16 v15, v16
 
-    .end local v16           #ridx:I
-    .restart local v15       #ridx:I
+    .end local v16    # "ridx":I
+    .restart local v15    # "ridx":I
     goto :goto_0
 
     .line 221
-    .end local v6           #f:Lcom/flurry/org/apache/avro/Schema$Field;
-    .end local v9           #rdrField:Lcom/flurry/org/apache/avro/Schema$Field;
+    .end local v6    # "f":Lcom/flurry/org/apache/avro/Schema$Field;
+    .end local v9    # "rdrField":Lcom/flurry/org/apache/avro/Schema$Field;
     :cond_5
     invoke-interface/range {v20 .. v20}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -1677,13 +1674,13 @@
     check-cast v13, Lcom/flurry/org/apache/avro/Schema$Field;
 
     .line 222
-    .local v13, rf:Lcom/flurry/org/apache/avro/Schema$Field;
+    .local v13, "rf":Lcom/flurry/org/apache/avro/Schema$Field;
     invoke-virtual {v13}, Lcom/flurry/org/apache/avro/Schema$Field;->name()Ljava/lang/String;
 
     move-result-object v7
 
     .line 223
-    .local v7, fname:Ljava/lang/String;
+    .local v7, "fname":Ljava/lang/String;
     move-object/from16 v0, p1
 
     move-object v1, v7
@@ -1764,18 +1761,18 @@
     move-object v12, v11
 
     .line 228
-    .end local v11           #result:Lcom/flurry/org/apache/avro/io/parsing/Symbol;
-    .restart local v12       #result:Lcom/flurry/org/apache/avro/io/parsing/Symbol;
+    .end local v11    # "result":Lcom/flurry/org/apache/avro/io/parsing/Symbol;
+    .restart local v12    # "result":Lcom/flurry/org/apache/avro/io/parsing/Symbol;
     goto :goto_4
 
     .line 230
-    .end local v12           #result:Lcom/flurry/org/apache/avro/io/parsing/Symbol;
-    .restart local v11       #result:Lcom/flurry/org/apache/avro/io/parsing/Symbol;
+    .end local v12    # "result":Lcom/flurry/org/apache/avro/io/parsing/Symbol;
+    .restart local v11    # "result":Lcom/flurry/org/apache/avro/io/parsing/Symbol;
     :cond_6
     add-int/lit8 v16, v15, 0x1
 
-    .end local v15           #ridx:I
-    .restart local v16       #ridx:I
+    .end local v15    # "ridx":I
+    .restart local v16    # "ridx":I
     aput-object v13, v10, v15
 
     .line 231
@@ -1783,14 +1780,14 @@
 
     move/from16 v15, v16
 
-    .end local v16           #ridx:I
-    .restart local v15       #ridx:I
+    .end local v16    # "ridx":I
+    .restart local v15    # "ridx":I
     goto/16 :goto_1
 
     .line 254
-    .end local v7           #fname:Ljava/lang/String;
-    .end local v13           #rf:Lcom/flurry/org/apache/avro/Schema$Field;
-    .restart local v8       #production:[Lcom/flurry/org/apache/avro/io/parsing/Symbol;
+    .end local v7    # "fname":Ljava/lang/String;
+    .end local v13    # "rf":Lcom/flurry/org/apache/avro/Schema$Field;
+    .restart local v8    # "production":[Lcom/flurry/org/apache/avro/io/parsing/Symbol;
     :cond_7
     invoke-interface/range {v20 .. v20}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -1799,13 +1796,13 @@
     check-cast v17, Lcom/flurry/org/apache/avro/Schema$Field;
 
     .line 255
-    .local v17, wf:Lcom/flurry/org/apache/avro/Schema$Field;
+    .local v17, "wf":Lcom/flurry/org/apache/avro/Schema$Field;
     invoke-virtual/range {v17 .. v17}, Lcom/flurry/org/apache/avro/Schema$Field;->name()Ljava/lang/String;
 
     move-result-object v7
 
     .line 256
-    .restart local v7       #fname:Ljava/lang/String;
+    .restart local v7    # "fname":Ljava/lang/String;
     move-object/from16 v0, p2
 
     move-object v1, v7
@@ -1815,7 +1812,7 @@
     move-result-object v13
 
     .line 257
-    .restart local v13       #rf:Lcom/flurry/org/apache/avro/Schema$Field;
+    .restart local v13    # "rf":Lcom/flurry/org/apache/avro/Schema$Field;
     if-nez v13, :cond_8
 
     .line 258
@@ -1882,9 +1879,9 @@
     goto/16 :goto_2
 
     .line 267
-    .end local v7           #fname:Ljava/lang/String;
-    .end local v13           #rf:Lcom/flurry/org/apache/avro/Schema$Field;
-    .end local v17           #wf:Lcom/flurry/org/apache/avro/Schema$Field;
+    .end local v7    # "fname":Ljava/lang/String;
+    .end local v13    # "rf":Lcom/flurry/org/apache/avro/Schema$Field;
+    .end local v17    # "wf":Lcom/flurry/org/apache/avro/Schema$Field;
     :cond_9
     invoke-interface/range {v20 .. v20}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -1893,13 +1890,13 @@
     check-cast v13, Lcom/flurry/org/apache/avro/Schema$Field;
 
     .line 268
-    .restart local v13       #rf:Lcom/flurry/org/apache/avro/Schema$Field;
+    .restart local v13    # "rf":Lcom/flurry/org/apache/avro/Schema$Field;
     invoke-virtual {v13}, Lcom/flurry/org/apache/avro/Schema$Field;->name()Ljava/lang/String;
 
     move-result-object v7
 
     .line 269
-    .restart local v7       #fname:Ljava/lang/String;
+    .restart local v7    # "fname":Ljava/lang/String;
     move-object/from16 v0, p1
 
     move-object v1, v7
@@ -1909,7 +1906,7 @@
     move-result-object v17
 
     .line 270
-    .restart local v17       #wf:Lcom/flurry/org/apache/avro/Schema$Field;
+    .restart local v17    # "wf":Lcom/flurry/org/apache/avro/Schema$Field;
     if-nez v17, :cond_2
 
     .line 271
@@ -1926,7 +1923,7 @@
     move-result-object v4
 
     .line 272
-    .local v4, bb:[B
+    .local v4, "bb":[B
     add-int/lit8 v5, v5, -0x1
 
     new-instance v21, Lcom/flurry/org/apache/avro/io/parsing/Symbol$DefaultStartAction;
@@ -1976,9 +1973,8 @@
 
 .method private resolveUnion(Lcom/flurry/org/apache/avro/Schema;Lcom/flurry/org/apache/avro/Schema;Ljava/util/Map;)Lcom/flurry/org/apache/avro/io/parsing/Symbol;
     .locals 9
-    .parameter "writer"
-    .parameter "reader"
-    .parameter
+    .param p1, "writer"    # Lcom/flurry/org/apache/avro/Schema;
+    .param p2, "reader"    # Lcom/flurry/org/apache/avro/Schema;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -2001,31 +1997,31 @@
 
     .prologue
     .line 181
-    .local p3, seen:Ljava/util/Map;,"Ljava/util/Map<Lcom/flurry/org/apache/avro/io/parsing/ValidatingGrammarGenerator$LitS;Lcom/flurry/org/apache/avro/io/parsing/Symbol;>;"
+    .local p3, "seen":Ljava/util/Map;, "Ljava/util/Map<Lcom/flurry/org/apache/avro/io/parsing/ValidatingGrammarGenerator$LitS;Lcom/flurry/org/apache/avro/io/parsing/Symbol;>;"
     invoke-virtual {p1}, Lcom/flurry/org/apache/avro/Schema;->getTypes()Ljava/util/List;
 
     move-result-object v0
 
     .line 182
-    .local v0, alts:Ljava/util/List;,"Ljava/util/List<Lcom/flurry/org/apache/avro/Schema;>;"
+    .local v0, "alts":Ljava/util/List;, "Ljava/util/List<Lcom/flurry/org/apache/avro/Schema;>;"
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v3
 
     .line 183
-    .local v3, size:I
+    .local v3, "size":I
     new-array v4, v3, [Lcom/flurry/org/apache/avro/io/parsing/Symbol;
 
     .line 184
-    .local v4, symbols:[Lcom/flurry/org/apache/avro/io/parsing/Symbol;
+    .local v4, "symbols":[Lcom/flurry/org/apache/avro/io/parsing/Symbol;
     new-array v2, v3, [Ljava/lang/String;
 
     .line 190
-    .local v2, labels:[Ljava/lang/String;
+    .local v2, "labels":[Ljava/lang/String;
     const/4 v1, 0x0
 
     .line 191
-    .local v1, i:I
+    .local v1, "i":I
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v6
@@ -2074,7 +2070,7 @@
     check-cast v5, Lcom/flurry/org/apache/avro/Schema;
 
     .line 192
-    .local v5, w:Lcom/flurry/org/apache/avro/Schema;
+    .local v5, "w":Lcom/flurry/org/apache/avro/Schema;
     invoke-virtual {p0, v5, p2, p3}, Lcom/flurry/org/apache/avro/io/parsing/ResolvingGrammarGenerator;->generate(Lcom/flurry/org/apache/avro/Schema;Lcom/flurry/org/apache/avro/Schema;Ljava/util/Map;)Lcom/flurry/org/apache/avro/io/parsing/Symbol;
 
     move-result-object v7
@@ -2098,8 +2094,8 @@
 # virtual methods
 .method public final generate(Lcom/flurry/org/apache/avro/Schema;Lcom/flurry/org/apache/avro/Schema;)Lcom/flurry/org/apache/avro/io/parsing/Symbol;
     .locals 3
-    .parameter "writer"
-    .parameter "reader"
+    .param p1, "writer"    # Lcom/flurry/org/apache/avro/Schema;
+    .param p2, "reader"    # Lcom/flurry/org/apache/avro/Schema;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -2133,9 +2129,8 @@
 
 .method public generate(Lcom/flurry/org/apache/avro/Schema;Lcom/flurry/org/apache/avro/Schema;Ljava/util/Map;)Lcom/flurry/org/apache/avro/io/parsing/Symbol;
     .locals 11
-    .parameter "writer"
-    .parameter "reader"
-    .parameter
+    .param p1, "writer"    # Lcom/flurry/org/apache/avro/Schema;
+    .param p2, "reader"    # Lcom/flurry/org/apache/avro/Schema;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -2157,7 +2152,7 @@
     .end annotation
 
     .prologue
-    .local p3, seen:Ljava/util/Map;,"Ljava/util/Map<Lcom/flurry/org/apache/avro/io/parsing/ValidatingGrammarGenerator$LitS;Lcom/flurry/org/apache/avro/io/parsing/Symbol;>;"
+    .local p3, "seen":Ljava/util/Map;, "Ljava/util/Map<Lcom/flurry/org/apache/avro/io/parsing/ValidatingGrammarGenerator$LitS;Lcom/flurry/org/apache/avro/io/parsing/Symbol;>;"
     const/4 v6, 0x2
 
     const/4 v10, 0x0
@@ -2170,13 +2165,13 @@
     move-result-object v3
 
     .line 70
-    .local v3, writerType:Lcom/flurry/org/apache/avro/Schema$Type;
+    .local v3, "writerType":Lcom/flurry/org/apache/avro/Schema$Type;
     invoke-virtual {p2}, Lcom/flurry/org/apache/avro/Schema;->getType()Lcom/flurry/org/apache/avro/Schema$Type;
 
     move-result-object v1
 
     .line 72
-    .local v1, readerType:Lcom/flurry/org/apache/avro/Schema$Type;
+    .local v1, "readerType":Lcom/flurry/org/apache/avro/Schema$Type;
     if-ne v3, v1, :cond_1
 
     .line 73
@@ -2663,7 +2658,7 @@
     move-result v0
 
     .line 156
-    .local v0, j:I
+    .local v0, "j":I
     if-ltz v0, :cond_3
 
     .line 157
@@ -2682,7 +2677,7 @@
     move-result-object v2
 
     .line 158
-    .local v2, s:Lcom/flurry/org/apache/avro/io/parsing/Symbol;
+    .local v2, "s":Lcom/flurry/org/apache/avro/io/parsing/Symbol;
     new-array v4, v6, [Lcom/flurry/org/apache/avro/io/parsing/Symbol;
 
     new-instance v5, Lcom/flurry/org/apache/avro/io/parsing/Symbol$UnionAdjustAction;

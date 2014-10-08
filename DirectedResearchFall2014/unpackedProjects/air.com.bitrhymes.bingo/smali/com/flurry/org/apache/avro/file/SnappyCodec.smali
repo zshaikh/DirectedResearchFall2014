@@ -37,7 +37,7 @@
 
 .method synthetic constructor <init>(Lcom/flurry/org/apache/avro/file/SnappyCodec$1;)V
     .locals 0
-    .parameter "x0"
+    .param p1, "x0"    # Lcom/flurry/org/apache/avro/file/SnappyCodec$1;
 
     .prologue
     .line 27
@@ -50,7 +50,7 @@
 # virtual methods
 .method compress(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
     .locals 7
-    .parameter "in"
+    .param p1, "in"    # Ljava/nio/ByteBuffer;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -74,7 +74,7 @@
     move-result-object v0
 
     .line 45
-    .local v0, out:Ljava/nio/ByteBuffer;
+    .local v0, "out":Ljava/nio/ByteBuffer;
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->array()[B
 
     move-result-object v2
@@ -98,7 +98,7 @@
     move-result v1
 
     .line 47
-    .local v1, size:I
+    .local v1, "size":I
     iget-object v2, p0, Lcom/flurry/org/apache/avro/file/SnappyCodec;->crc32:Ljava/util/zip/CRC32;
 
     invoke-virtual {v2}, Ljava/util/zip/CRC32;->reset()V
@@ -142,7 +142,7 @@
 
 .method decompress(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
     .locals 8
-    .parameter "in"
+    .param p1, "in"    # Ljava/nio/ByteBuffer;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -178,7 +178,7 @@
     move-result-object v0
 
     .line 60
-    .local v0, out:Ljava/nio/ByteBuffer;
+    .local v0, "out":Ljava/nio/ByteBuffer;
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->array()[B
 
     move-result-object v2
@@ -202,7 +202,7 @@
     move-result v1
 
     .line 62
-    .local v1, size:I
+    .local v1, "size":I
     invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
 
     .line 64
@@ -256,7 +256,7 @@
 
 .method public equals(Ljava/lang/Object;)Z
     .locals 3
-    .parameter "obj"
+    .param p1, "obj"    # Ljava/lang/Object;
 
     .prologue
     const/4 v2, 0x1

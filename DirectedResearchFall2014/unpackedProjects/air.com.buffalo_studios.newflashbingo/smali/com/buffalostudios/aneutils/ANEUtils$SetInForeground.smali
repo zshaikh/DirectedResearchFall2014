@@ -32,8 +32,8 @@
 # virtual methods
 .method public call(Lcom/adobe/fre/FREContext;[Lcom/adobe/fre/FREObject;)Lcom/adobe/fre/FREObject;
     .locals 5
-    .parameter "context"
-    .parameter "args"
+    .param p1, "context"    # Lcom/adobe/fre/FREContext;
+    .param p2, "args"    # [Lcom/adobe/fre/FREObject;
 
     .prologue
     const/4 v4, 0x0
@@ -49,8 +49,8 @@
     move-result v1
 
     .line 35
-    .local v1, inForeground:Z
-    #calls: Lcom/buffalostudios/aneutils/ANEUtils;->setInForeground(Z)V
+    .local v1, "inForeground":Z
+    # invokes: Lcom/buffalostudios/aneutils/ANEUtils;->setInForeground(Z)V
     invoke-static {v1}, Lcom/buffalostudios/aneutils/ANEUtils;->access$0(Z)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -58,7 +58,7 @@
     move-object v2, v4
 
     .line 40
-    .end local v1           #inForeground:Z
+    .end local v1    # "inForeground":Z
     :goto_0
     return-object v2
 
@@ -69,7 +69,7 @@
     move-object v0, v2
 
     .line 37
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v2, "ANEUtils"
 
     const-string v3, "Parse exception"

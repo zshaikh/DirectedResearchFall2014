@@ -5,7 +5,7 @@
 # static fields
 .field private static final APPLICATION_FIELDS:Ljava/lang/String; = "fields"
 
-.field private static final APP_SETTING_FIELDS:[Ljava/lang/String; = null
+.field private static final APP_SETTING_FIELDS:[Ljava/lang/String;
 
 .field public static final DEFAULT_STREAM_BUFFER_SIZE:I = 0x2000
 

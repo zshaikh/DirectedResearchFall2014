@@ -15,8 +15,8 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Lcom/fusepowered/m2/m2l/AdConfiguration;)V
     .locals 3
-    .parameter "context"
-    .parameter "adConfiguration"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "adConfiguration"    # Lcom/fusepowered/m2/m2l/AdConfiguration;
 
     .prologue
     const/4 v2, 0x1
@@ -74,7 +74,6 @@
 
 .method static synthetic access$0(Lcom/fusepowered/m2/m2l/BaseHtmlWebView;)Lcom/fusepowered/m2/m2l/ViewGestureDetector;
     .locals 1
-    .parameter
 
     .prologue
     .line 46
@@ -116,7 +115,7 @@
 # virtual methods
 .method public init(Z)V
     .locals 0
-    .parameter "isScrollable"
+    .param p1, "isScrollable"    # Z
 
     .prologue
     .line 65
@@ -128,7 +127,7 @@
 
 .method initializeOnTouchListener(Z)V
     .locals 1
-    .parameter "isScrollable"
+    .param p1, "isScrollable"    # Z
 
     .prologue
     .line 91
@@ -144,7 +143,7 @@
 
 .method loadHtmlResponse(Ljava/lang/String;)V
     .locals 6
-    .parameter "htmlResponse"
+    .param p1, "htmlResponse"    # Ljava/lang/String;
 
     .prologue
     .line 87
@@ -168,7 +167,7 @@
 
 .method public loadUrl(Ljava/lang/String;)V
     .locals 3
-    .parameter "url"
+    .param p1, "url"    # Ljava/lang/String;
 
     .prologue
     .line 70

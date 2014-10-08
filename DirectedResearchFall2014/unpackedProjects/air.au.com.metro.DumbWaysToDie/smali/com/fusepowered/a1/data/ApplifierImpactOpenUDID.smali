@@ -32,14 +32,14 @@
 
 .method private static Md5(Ljava/lang/String;)Ljava/lang/String;
     .locals 9
-    .parameter "input"
+    .param p0, "input"    # Ljava/lang/String;
 
     .prologue
     .line 152
     const/4 v3, 0x0
 
     .line 154
-    .local v3, m:Ljava/security/MessageDigest;
+    .local v3, "m":Ljava/security/MessageDigest;
     :try_start_0
     const-string v6, "MD5"
 
@@ -69,16 +69,16 @@
     move-result-object v5
 
     .line 161
-    .local v5, p_md5Data:[B
+    .local v5, "p_md5Data":[B
     new-instance v4, Ljava/lang/String;
 
     invoke-direct {v4}, Ljava/lang/String;-><init>()V
 
     .line 162
-    .local v4, mOutput:Ljava/lang/String;
+    .local v4, "mOutput":Ljava/lang/String;
     const/4 v2, 0x0
 
-    .local v2, i:I
+    .local v2, "i":I
     :goto_1
     array-length v6, v5
 
@@ -92,32 +92,32 @@
     return-object v6
 
     .line 155
-    .end local v2           #i:I
-    .end local v4           #mOutput:Ljava/lang/String;
-    .end local v5           #p_md5Data:[B
+    .end local v2    # "i":I
+    .end local v4    # "mOutput":Ljava/lang/String;
+    .end local v5    # "p_md5Data":[B
     :catch_0
     move-exception v6
 
     move-object v1, v6
 
     .line 156
-    .local v1, e:Ljava/security/NoSuchAlgorithmException;
+    .local v1, "e":Ljava/security/NoSuchAlgorithmException;
     invoke-virtual {v1}, Ljava/security/NoSuchAlgorithmException;->printStackTrace()V
 
     goto :goto_0
 
     .line 163
-    .end local v1           #e:Ljava/security/NoSuchAlgorithmException;
-    .restart local v2       #i:I
-    .restart local v4       #mOutput:Ljava/lang/String;
-    .restart local v5       #p_md5Data:[B
+    .end local v1    # "e":Ljava/security/NoSuchAlgorithmException;
+    .restart local v2    # "i":I
+    .restart local v4    # "mOutput":Ljava/lang/String;
+    .restart local v5    # "p_md5Data":[B
     :cond_0
     aget-byte v6, v5, v2
 
     and-int/lit16 v0, v6, 0xff
 
     .line 165
-    .local v0, b:I
+    .local v0, "b":I
     const/16 v6, 0xf
 
     if-gt v0, v6, :cond_1
@@ -170,7 +170,7 @@
 
 .method private static _debugLog(Ljava/lang/String;)V
     .locals 1
-    .parameter "lmsg"
+    .param p0, "lmsg"    # Ljava/lang/String;
 
     .prologue
     .line 33
@@ -190,7 +190,7 @@
     const/4 v0, 0x0
 
     .line 126
-    .local v0, m_BluetoothAdapter:Landroid/bluetooth/BluetoothAdapter;
+    .local v0, "m_BluetoothAdapter":Landroid/bluetooth/BluetoothAdapter;
     :try_start_0
     invoke-static {}, Landroid/bluetooth/BluetoothAdapter;->getDefaultAdapter()Landroid/bluetooth/BluetoothAdapter;
 
@@ -202,7 +202,7 @@
     move-result-object v1
 
     .line 128
-    .local v1, m_szBTMAC:Ljava/lang/String;
+    .local v1, "m_szBTMAC":Ljava/lang/String;
     if-eqz v1, :cond_0
 
     .line 129
@@ -225,7 +225,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 134
-    .end local v1           #m_szBTMAC:Ljava/lang/String;
+    .end local v1    # "m_szBTMAC":Ljava/lang/String;
     :cond_0
     :goto_0
     return-void
@@ -239,7 +239,7 @@
 
 .method private static generateImeiId(Landroid/content/Context;)V
     .locals 4
-    .parameter "mContext"
+    .param p0, "mContext"    # Landroid/content/Context;
 
     .prologue
     .line 113
@@ -253,13 +253,13 @@
     check-cast v0, Landroid/telephony/TelephonyManager;
 
     .line 114
-    .local v0, TelephonyMgr:Landroid/telephony/TelephonyManager;
+    .local v0, "TelephonyMgr":Landroid/telephony/TelephonyManager;
     invoke-virtual {v0}, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;
 
     move-result-object v1
 
     .line 116
-    .local v1, szImei:Ljava/lang/String;
+    .local v1, "szImei":Ljava/lang/String;
     if-eqz v1, :cond_0
 
     const/4 v2, 0x0
@@ -298,8 +298,8 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 122
-    .end local v0           #TelephonyMgr:Landroid/telephony/TelephonyManager;
-    .end local v1           #szImei:Ljava/lang/String;
+    .end local v0    # "TelephonyMgr":Landroid/telephony/TelephonyManager;
+    .end local v1    # "szImei":Ljava/lang/String;
     :cond_0
     :goto_0
     return-void
@@ -313,7 +313,7 @@
 
 .method private static generateOpenUDIDInContext(Landroid/content/Context;)V
     .locals 4
-    .parameter "mContext"
+    .param p0, "mContext"    # Landroid/content/Context;
     .annotation build Landroid/annotation/SuppressLint;
         value = {
             "DefaultLocale"
@@ -358,7 +358,7 @@
     move-result-object v0
 
     .line 81
-    .local v0, _androidId:Ljava/lang/String;
+    .local v0, "_androidId":Ljava/lang/String;
     if-eqz v0, :cond_2
 
     invoke-virtual {v0}, Ljava/lang/String;->length()I
@@ -575,7 +575,7 @@
     move-result-object v0
 
     .line 196
-    .local v0, fp:Ljava/lang/String;
+    .local v0, "fp":Ljava/lang/String;
     invoke-static {v0}, Lcom/fusepowered/a1/data/ApplifierImpactOpenUDID;->_debugLog(Ljava/lang/String;)V
 
     .line 197
@@ -595,7 +595,7 @@
 
 .method private static generateWifiId(Landroid/content/Context;)V
     .locals 7
-    .parameter "mContext"
+    .param p0, "mContext"    # Landroid/content/Context;
 
     .prologue
     .line 137
@@ -609,13 +609,13 @@
     check-cast v2, Landroid/net/wifi/WifiManager;
 
     .line 138
-    .local v2, wifiMan:Landroid/net/wifi/WifiManager;
+    .local v2, "wifiMan":Landroid/net/wifi/WifiManager;
     invoke-virtual {v2}, Landroid/net/wifi/WifiManager;->getConnectionInfo()Landroid/net/wifi/WifiInfo;
 
     move-result-object v1
 
     .line 140
-    .local v1, wifiInf:Landroid/net/wifi/WifiInfo;
+    .local v1, "wifiInf":Landroid/net/wifi/WifiInfo;
     const-string v3, "%s"
 
     const/4 v4, 0x1
@@ -642,7 +642,7 @@
     move-result-object v0
 
     .line 143
-    .local v0, macAddr:Ljava/lang/String;
+    .local v0, "macAddr":Ljava/lang/String;
     if-eqz v0, :cond_0
 
     .line 144
@@ -665,9 +665,9 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 149
-    .end local v0           #macAddr:Ljava/lang/String;
-    .end local v1           #wifiInf:Landroid/net/wifi/WifiInfo;
-    .end local v2           #wifiMan:Landroid/net/wifi/WifiManager;
+    .end local v0    # "macAddr":Ljava/lang/String;
+    .end local v1    # "wifiInf":Landroid/net/wifi/WifiInfo;
+    .end local v2    # "wifiMan":Landroid/net/wifi/WifiManager;
     :cond_0
     :goto_0
     return-void
@@ -681,7 +681,7 @@
 
 .method public static getCorpUDID(Ljava/lang/String;)Ljava/lang/String;
     .locals 4
-    .parameter "corpIdentifier"
+    .param p0, "corpIdentifier"    # Ljava/lang/String;
 
     .prologue
     .line 65
@@ -727,7 +727,7 @@
 
 .method public static syncContext(Landroid/content/Context;)V
     .locals 7
-    .parameter "mContext"
+    .param p0, "mContext"    # Landroid/content/Context;
 
     .prologue
     const-string v6, "openudid"
@@ -741,7 +741,7 @@
     const/4 v3, 0x0
 
     .line 40
-    .local v3, openContext:Landroid/content/Context;
+    .local v3, "openContext":Landroid/content/Context;
     :try_start_0
     const-string v4, "net.openudid.android"
 
@@ -767,7 +767,7 @@
     move-result-object v2
 
     .line 47
-    .local v2, mPreferences:Landroid/content/SharedPreferences;
+    .local v2, "mPreferences":Landroid/content/SharedPreferences;
     const-string v4, "openudid"
 
     const/4 v4, 0x0
@@ -777,7 +777,7 @@
     move-result-object v0
 
     .line 48
-    .local v0, _keyInPref:Ljava/lang/String;
+    .local v0, "_keyInPref":Ljava/lang/String;
     if-nez v0, :cond_1
 
     .line 49
@@ -789,7 +789,7 @@
     move-result-object v1
 
     .line 51
-    .local v1, e:Landroid/content/SharedPreferences$Editor;
+    .local v1, "e":Landroid/content/SharedPreferences$Editor;
     const-string v4, "openudid"
 
     sget-object v4, Lcom/fusepowered/a1/data/ApplifierImpactOpenUDID;->_openUdid:Ljava/lang/String;
@@ -800,26 +800,26 @@
     invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     .line 57
-    .end local v0           #_keyInPref:Ljava/lang/String;
-    .end local v1           #e:Landroid/content/SharedPreferences$Editor;
-    .end local v2           #mPreferences:Landroid/content/SharedPreferences;
-    .end local v3           #openContext:Landroid/content/Context;
+    .end local v0    # "_keyInPref":Ljava/lang/String;
+    .end local v1    # "e":Landroid/content/SharedPreferences$Editor;
+    .end local v2    # "mPreferences":Landroid/content/SharedPreferences;
+    .end local v3    # "openContext":Landroid/content/Context;
     :cond_0
     :goto_1
     return-void
 
     .line 54
-    .restart local v0       #_keyInPref:Ljava/lang/String;
-    .restart local v2       #mPreferences:Landroid/content/SharedPreferences;
-    .restart local v3       #openContext:Landroid/content/Context;
+    .restart local v0    # "_keyInPref":Ljava/lang/String;
+    .restart local v2    # "mPreferences":Landroid/content/SharedPreferences;
+    .restart local v3    # "openContext":Landroid/content/Context;
     :cond_1
     sput-object v0, Lcom/fusepowered/a1/data/ApplifierImpactOpenUDID;->_openUdid:Ljava/lang/String;
 
     goto :goto_1
 
     .line 42
-    .end local v0           #_keyInPref:Ljava/lang/String;
-    .end local v2           #mPreferences:Landroid/content/SharedPreferences;
+    .end local v0    # "_keyInPref":Ljava/lang/String;
+    .end local v2    # "mPreferences":Landroid/content/SharedPreferences;
     :catch_0
     move-exception v4
 

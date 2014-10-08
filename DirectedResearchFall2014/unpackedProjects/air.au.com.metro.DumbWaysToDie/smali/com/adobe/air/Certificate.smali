@@ -53,7 +53,6 @@
 
 .method public constructor <init>(Landroid/net/http/SslCertificate;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 20
@@ -215,7 +214,6 @@
 
 .method public setCertificate([B)Ljava/lang/Boolean;
     .locals 3
-    .parameter
 
     .prologue
     const/4 v2, 0x0

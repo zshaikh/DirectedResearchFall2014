@@ -51,9 +51,9 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Landroid/view/View;Lcom/fusepowered/m2/m2l/AdConfiguration;)V
     .locals 6
-    .parameter "context"
-    .parameter "view"
-    .parameter "adConfiguration"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "view"    # Landroid/view/View;
+    .param p3, "adConfiguration"    # Lcom/fusepowered/m2/m2l/AdConfiguration;
 
     .prologue
     .line 69
@@ -83,7 +83,7 @@
     invoke-direct {v0, v3}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
 
     .line 77
-    .local v0, dateFormat:Ljava/text/SimpleDateFormat;
+    .local v0, "dateFormat":Ljava/text/SimpleDateFormat;
     invoke-static {}, Lcom/fusepowered/m2/m2l/util/DateAndTime;->now()Ljava/util/Date;
 
     move-result-object v3
@@ -103,13 +103,13 @@
     move-result-object v1
 
     .line 81
-    .local v1, screenShot:Landroid/graphics/Bitmap;
+    .local v1, "screenShot":Landroid/graphics/Bitmap;
     invoke-direct {p0, v1}, Lcom/fusepowered/m2/m2l/AdAlertReporter;->convertBitmapInWEBPToBase64EncodedString(Landroid/graphics/Bitmap;)Ljava/lang/String;
 
     move-result-object v2
 
     .line 82
-    .local v2, screenShotString:Ljava/lang/String;
+    .local v2, "screenShotString":Ljava/lang/String;
     invoke-direct {p0}, Lcom/fusepowered/m2/m2l/AdAlertReporter;->formParameters()Ljava/lang/String;
 
     move-result-object v3
@@ -174,7 +174,7 @@
 
 .method private varargs addEmailBody([Ljava/lang/String;)V
     .locals 5
-    .parameter "data"
+    .param p1, "data"    # [Ljava/lang/String;
 
     .prologue
     .line 179
@@ -183,11 +183,11 @@
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     .line 180
-    .local v0, body:Ljava/lang/StringBuilder;
+    .local v0, "body":Ljava/lang/StringBuilder;
     const/4 v1, 0x0
 
     .line 181
-    .local v1, i:I
+    .local v1, "i":I
     :goto_0
     array-length v2, p1
 
@@ -267,15 +267,15 @@
 
 .method private addImageAttachment(Ljava/lang/String;Landroid/graphics/Bitmap;)V
     .locals 6
-    .parameter "fileName"
-    .parameter "bitmap"
+    .param p1, "fileName"    # Ljava/lang/String;
+    .param p2, "bitmap"    # Landroid/graphics/Bitmap;
 
     .prologue
     .line 192
     const/4 v1, 0x0
 
     .line 194
-    .local v1, fileOutputStream:Ljava/io/FileOutputStream;
+    .local v1, "fileOutputStream":Ljava/io/FileOutputStream;
     if-eqz p1, :cond_0
 
     if-nez p2, :cond_1
@@ -341,13 +341,13 @@
     move-result-object v2
 
     .line 204
-    .local v2, fileUri:Landroid/net/Uri;
+    .local v2, "fileUri":Landroid/net/Uri;
     iget-object v3, p0, Lcom/fusepowered/m2/m2l/AdAlertReporter;->mEmailAttachments:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 208
     invoke-static {v1}, Lcom/fusepowered/m2/m2l/util/Streams;->closeStream(Ljava/io/Closeable;)V
@@ -355,14 +355,14 @@
     goto :goto_0
 
     .line 205
-    .end local v2           #fileUri:Landroid/net/Uri;
+    .end local v2    # "fileUri":Landroid/net/Uri;
     :catch_0
     move-exception v3
 
     move-object v0, v3
 
     .line 206
-    .local v0, exception:Ljava/lang/Exception;
+    .local v0, "exception":Ljava/lang/Exception;
     :try_start_1
     const-string v3, "MoPub"
 
@@ -390,7 +390,7 @@
     goto :goto_0
 
     .line 207
-    .end local v0           #exception:Ljava/lang/Exception;
+    .end local v0    # "exception":Ljava/lang/Exception;
     :catchall_0
     move-exception v3
 
@@ -403,15 +403,15 @@
 
 .method private addTextAttachment(Ljava/lang/String;Ljava/lang/String;)V
     .locals 6
-    .parameter "fileName"
-    .parameter "body"
+    .param p1, "fileName"    # Ljava/lang/String;
+    .param p2, "body"    # Ljava/lang/String;
 
     .prologue
     .line 213
     const/4 v1, 0x0
 
     .line 215
-    .local v1, fileOutputStream:Ljava/io/FileOutputStream;
+    .local v1, "fileOutputStream":Ljava/io/FileOutputStream;
     if-eqz p1, :cond_0
 
     if-nez p2, :cond_1
@@ -477,13 +477,13 @@
     move-result-object v2
 
     .line 224
-    .local v2, fileUri:Landroid/net/Uri;
+    .local v2, "fileUri":Landroid/net/Uri;
     iget-object v3, p0, Lcom/fusepowered/m2/m2l/AdAlertReporter;->mEmailAttachments:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 228
     invoke-static {v1}, Lcom/fusepowered/m2/m2l/util/Streams;->closeStream(Ljava/io/Closeable;)V
@@ -491,14 +491,14 @@
     goto :goto_0
 
     .line 225
-    .end local v2           #fileUri:Landroid/net/Uri;
+    .end local v2    # "fileUri":Landroid/net/Uri;
     :catch_0
     move-exception v3
 
     move-object v0, v3
 
     .line 226
-    .local v0, exception:Ljava/lang/Exception;
+    .local v0, "exception":Ljava/lang/Exception;
     :try_start_1
     const-string v3, "MoPub"
 
@@ -526,7 +526,7 @@
     goto :goto_0
 
     .line 227
-    .end local v0           #exception:Ljava/lang/Exception;
+    .end local v0    # "exception":Ljava/lang/Exception;
     :catchall_0
     move-exception v3
 
@@ -539,9 +539,9 @@
 
 .method private appendKeyValue(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
-    .parameter "parameters"
-    .parameter "key"
-    .parameter "value"
+    .param p1, "parameters"    # Ljava/lang/StringBuilder;
+    .param p2, "key"    # Ljava/lang/String;
+    .param p3, "value"    # Ljava/lang/String;
 
     .prologue
     .line 168
@@ -566,14 +566,14 @@
 
 .method private convertBitmapInWEBPToBase64EncodedString(Landroid/graphics/Bitmap;)Ljava/lang/String;
     .locals 5
-    .parameter "bitmap"
+    .param p1, "bitmap"    # Landroid/graphics/Bitmap;
 
     .prologue
     .line 128
     const/4 v2, 0x0
 
     .line 129
-    .local v2, result:Ljava/lang/String;
+    .local v2, "result":Ljava/lang/String;
     if-eqz p1, :cond_0
 
     .line 131
@@ -583,7 +583,7 @@
     invoke-direct {v0}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
     .line 132
-    .local v0, byteArrayOutputStream:Ljava/io/ByteArrayOutputStream;
+    .local v0, "byteArrayOutputStream":Ljava/io/ByteArrayOutputStream;
     sget-object v3, Landroid/graphics/Bitmap$CompressFormat;->JPEG:Landroid/graphics/Bitmap$CompressFormat;
 
     const/16 v4, 0x19
@@ -596,7 +596,7 @@
     move-result-object v1
 
     .line 134
-    .local v1, bytes:[B
+    .local v1, "bytes":[B
     const/4 v3, 0x0
 
     invoke-static {v1, v3}, Lcom/fusepowered/m2/m2l/util/Base64;->encodeToString([BI)Ljava/lang/String;
@@ -606,8 +606,8 @@
     move-result-object v2
 
     .line 139
-    .end local v0           #byteArrayOutputStream:Ljava/io/ByteArrayOutputStream;
-    .end local v1           #bytes:[B
+    .end local v0    # "byteArrayOutputStream":Ljava/io/ByteArrayOutputStream;
+    .end local v1    # "bytes":[B
     :cond_0
     :goto_0
     return-object v2
@@ -629,7 +629,7 @@
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     .line 145
-    .local v0, parameters:Ljava/lang/StringBuilder;
+    .local v0, "parameters":Ljava/lang/StringBuilder;
     iget-object v1, p0, Lcom/fusepowered/m2/m2l/AdAlertReporter;->mAdConfiguration:Lcom/fusepowered/m2/m2l/AdConfiguration;
 
     if-eqz v1, :cond_0
@@ -821,7 +821,7 @@
 
 .method private getFormattedTimeStamp(J)Ljava/lang/String;
     .locals 3
-    .parameter "timeStamp"
+    .param p1, "timeStamp"    # J
 
     .prologue
     .line 233
@@ -839,7 +839,7 @@
     invoke-direct {v0, v1}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
 
     .line 235
-    .local v0, dateFormat:Ljava/text/SimpleDateFormat;
+    .local v0, "dateFormat":Ljava/text/SimpleDateFormat;
     new-instance v1, Ljava/util/Date;
 
     invoke-direct {v1, p1, p2}, Ljava/util/Date;-><init>(J)V
@@ -849,7 +849,7 @@
     move-result-object v1
 
     .line 237
-    .end local v0           #dateFormat:Ljava/text/SimpleDateFormat;
+    .end local v0    # "dateFormat":Ljava/text/SimpleDateFormat;
     :goto_0
     return-object v1
 
@@ -895,7 +895,7 @@
     move-result-object v0
 
     .line 102
-    .local v0, emailScheme:Landroid/net/Uri;
+    .local v0, "emailScheme":Landroid/net/Uri;
     new-instance v1, Landroid/content/Intent;
 
     const-string v2, "android.intent.action.SEND_MULTIPLE"
@@ -967,13 +967,13 @@
     move-result-object v2
 
     .line 113
-    .local v2, rootView:Landroid/view/View;
+    .local v2, "rootView":Landroid/view/View;
     invoke-virtual {v2}, Landroid/view/View;->isDrawingCacheEnabled()Z
 
     move-result v3
 
     .line 114
-    .local v3, wasDrawingCacheEnabled:Z
+    .local v3, "wasDrawingCacheEnabled":Z
     const/4 v4, 0x1
 
     invoke-virtual {v2, v4}, Landroid/view/View;->setDrawingCacheEnabled(Z)V
@@ -984,7 +984,7 @@
     move-result-object v1
 
     .line 117
-    .local v1, drawingCache:Landroid/graphics/Bitmap;
+    .local v1, "drawingCache":Landroid/graphics/Bitmap;
     if-nez v1, :cond_2
 
     move-object v4, v5
@@ -999,7 +999,7 @@
     move-result-object v0
 
     .line 122
-    .local v0, bitmap:Landroid/graphics/Bitmap;
+    .local v0, "bitmap":Landroid/graphics/Bitmap;
     invoke-virtual {v2, v3}, Landroid/view/View;->setDrawingCacheEnabled(Z)V
 
     move-object v4, v0
@@ -1091,8 +1091,8 @@
     move-result-object v0
 
     .line 96
-    .local v0, chooserIntent:Landroid/content/Intent;
-    const/high16 v1, 0x1000
+    .local v0, "chooserIntent":Landroid/content/Intent;
+    const/high16 v1, 0x10000000
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 

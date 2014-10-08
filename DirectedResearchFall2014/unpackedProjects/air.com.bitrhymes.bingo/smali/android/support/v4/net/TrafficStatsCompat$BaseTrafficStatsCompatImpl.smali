@@ -67,7 +67,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Landroid/support/v4/net/TrafficStatsCompat$BaseTrafficStatsCompatImpl;
     check-cast p0, Landroid/support/v4/net/TrafficStatsCompat$BaseTrafficStatsCompatImpl$SocketTags;
 
     const/4 v0, -0x1
@@ -89,7 +89,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Landroid/support/v4/net/TrafficStatsCompat$BaseTrafficStatsCompatImpl;
     check-cast p0, Landroid/support/v4/net/TrafficStatsCompat$BaseTrafficStatsCompatImpl$SocketTags;
 
     iget v0, p0, Landroid/support/v4/net/TrafficStatsCompat$BaseTrafficStatsCompatImpl$SocketTags;->statsTag:I
@@ -99,7 +99,7 @@
 
 .method public incrementOperationCount(I)V
     .locals 0
-    .parameter "operationCount"
+    .param p1, "operationCount"    # I
 
     .prologue
     .line 64
@@ -108,8 +108,8 @@
 
 .method public incrementOperationCount(II)V
     .locals 0
-    .parameter "tag"
-    .parameter "operationCount"
+    .param p1, "tag"    # I
+    .param p2, "operationCount"    # I
 
     .prologue
     .line 68
@@ -118,7 +118,7 @@
 
 .method public setThreadStatsTag(I)V
     .locals 1
-    .parameter "tag"
+    .param p1, "tag"    # I
 
     .prologue
     .line 72
@@ -128,7 +128,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Landroid/support/v4/net/TrafficStatsCompat$BaseTrafficStatsCompatImpl;
     check-cast p0, Landroid/support/v4/net/TrafficStatsCompat$BaseTrafficStatsCompatImpl$SocketTags;
 
     iput p1, p0, Landroid/support/v4/net/TrafficStatsCompat$BaseTrafficStatsCompatImpl$SocketTags;->statsTag:I
@@ -139,7 +139,7 @@
 
 .method public tagSocket(Ljava/net/Socket;)V
     .locals 0
-    .parameter "socket"
+    .param p1, "socket"    # Ljava/net/Socket;
 
     .prologue
     .line 77
@@ -148,7 +148,7 @@
 
 .method public untagSocket(Ljava/net/Socket;)V
     .locals 0
-    .parameter "socket"
+    .param p1, "socket"    # Ljava/net/Socket;
 
     .prologue
     .line 81

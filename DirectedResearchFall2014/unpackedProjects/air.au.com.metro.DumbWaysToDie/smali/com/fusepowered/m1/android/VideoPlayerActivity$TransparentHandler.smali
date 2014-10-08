@@ -30,7 +30,7 @@
 # direct methods
 .method public constructor <init>(Lcom/fusepowered/m1/android/VideoPlayerActivity;)V
     .locals 1
-    .parameter "activity"
+    .param p1, "activity"    # Lcom/fusepowered/m1/android/VideoPlayerActivity;
 
     .prologue
     .line 460
@@ -51,7 +51,7 @@
 # virtual methods
 .method public handleMessage(Landroid/os/Message;)V
     .locals 2
-    .parameter "msg"
+    .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
     .line 467
@@ -64,7 +64,7 @@
     check-cast v0, Lcom/fusepowered/m1/android/VideoPlayerActivity;
 
     .line 468
-    .local v0, activity:Lcom/fusepowered/m1/android/VideoPlayerActivity;
+    .local v0, "activity":Lcom/fusepowered/m1/android/VideoPlayerActivity;
     if-eqz v0, :cond_0
 
     .line 470

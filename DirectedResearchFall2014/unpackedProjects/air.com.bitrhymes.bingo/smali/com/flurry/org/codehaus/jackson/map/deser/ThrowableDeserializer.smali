@@ -11,7 +11,7 @@
 # direct methods
 .method public constructor <init>(Lcom/flurry/org/codehaus/jackson/map/deser/BeanDeserializer;)V
     .locals 0
-    .parameter "baseDeserializer"
+    .param p1, "baseDeserializer"    # Lcom/flurry/org/codehaus/jackson/map/deser/BeanDeserializer;
 
     .prologue
     .line 11

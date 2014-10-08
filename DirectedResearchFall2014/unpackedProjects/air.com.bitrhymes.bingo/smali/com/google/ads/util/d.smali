@@ -92,9 +92,6 @@
 
 .method constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 63
@@ -115,8 +112,6 @@
 
 .method private static a(Ljava/lang/String;Ljava/lang/String;)Z
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 88
@@ -148,7 +143,7 @@
 # virtual methods
 .method public equals(Ljava/lang/Object;)Z
     .locals 3
-    .parameter "o"
+    .param p1, "o"    # Ljava/lang/Object;
 
     .prologue
     const/4 v2, 0x0
@@ -161,17 +156,17 @@
     move v0, v2
 
     .line 78
-    .end local p1
+    .end local p1    # "o":Ljava/lang/Object;
     :goto_0
     return v0
 
     .line 77
-    .restart local p1
+    .restart local p1    # "o":Ljava/lang/Object;
     :cond_0
     check-cast p1, Lcom/google/ads/util/d;
 
     .line 78
-    .end local p1
+    .end local p1    # "o":Ljava/lang/Object;
     iget-object v0, p0, Lcom/google/ads/util/d;->a:Ljava/lang/String;
 
     iget-object v1, p1, Lcom/google/ads/util/d;->a:Ljava/lang/String;

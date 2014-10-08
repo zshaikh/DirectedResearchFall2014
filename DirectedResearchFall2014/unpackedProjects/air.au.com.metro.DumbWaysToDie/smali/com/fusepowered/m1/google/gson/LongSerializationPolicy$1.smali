@@ -17,8 +17,6 @@
 # direct methods
 .method constructor <init>(Ljava/lang/String;I)V
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 34
@@ -33,7 +31,7 @@
 # virtual methods
 .method public serialize(Ljava/lang/Long;)Lcom/fusepowered/m1/google/gson/JsonElement;
     .locals 1
-    .parameter "value"
+    .param p1, "value"    # Ljava/lang/Long;
 
     .prologue
     .line 36

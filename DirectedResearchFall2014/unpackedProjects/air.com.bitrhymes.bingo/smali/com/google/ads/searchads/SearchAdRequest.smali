@@ -53,7 +53,6 @@
 
 .method private a(I)Ljava/lang/String;
     .locals 5
-    .parameter
 
     .prologue
     .line 284
@@ -88,7 +87,7 @@
 # virtual methods
 .method public getRequestMap(Landroid/content/Context;)Ljava/util/Map;
     .locals 5
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -411,7 +410,7 @@
 
 .method public setAnchorTextColor(I)V
     .locals 0
-    .parameter "anchorTextColor"
+    .param p1, "anchorTextColor"    # I
 
     .prologue
     .line 159
@@ -423,7 +422,7 @@
 
 .method public setBackgroundColor(I)V
     .locals 3
-    .parameter "backgroundColor"
+    .param p1, "backgroundColor"    # I
 
     .prologue
     const/4 v2, 0x0
@@ -453,8 +452,8 @@
 
 .method public setBackgroundGradient(II)V
     .locals 3
-    .parameter "from"
-    .parameter "to"
+    .param p1, "from"    # I
+    .param p2, "to"    # I
 
     .prologue
     const/16 v2, 0xff
@@ -494,7 +493,7 @@
 
 .method public setBorderColor(I)V
     .locals 0
-    .parameter "borderColor"
+    .param p1, "borderColor"    # I
 
     .prologue
     .line 189
@@ -506,7 +505,7 @@
 
 .method public setBorderThickness(I)V
     .locals 0
-    .parameter "borderThickness"
+    .param p1, "borderThickness"    # I
 
     .prologue
     .line 207
@@ -518,7 +517,7 @@
 
 .method public setBorderType(Lcom/google/ads/searchads/SearchAdRequest$BorderType;)V
     .locals 0
-    .parameter "borderType"
+    .param p1, "borderType"    # Lcom/google/ads/searchads/SearchAdRequest$BorderType;
 
     .prologue
     .line 197
@@ -530,7 +529,7 @@
 
 .method public setCustomChannels(Ljava/lang/String;)V
     .locals 0
-    .parameter "channelIds"
+    .param p1, "channelIds"    # Ljava/lang/String;
 
     .prologue
     .line 215
@@ -542,7 +541,7 @@
 
 .method public setDescriptionTextColor(I)V
     .locals 0
-    .parameter "descriptionTextColor"
+    .param p1, "descriptionTextColor"    # I
 
     .prologue
     .line 148
@@ -554,7 +553,7 @@
 
 .method public setFontFace(Ljava/lang/String;)V
     .locals 0
-    .parameter "fontFace"
+    .param p1, "fontFace"    # Ljava/lang/String;
 
     .prologue
     .line 168
@@ -566,7 +565,7 @@
 
 .method public setHeaderTextColor(I)V
     .locals 0
-    .parameter "headerTextColor"
+    .param p1, "headerTextColor"    # I
 
     .prologue
     .line 137
@@ -578,7 +577,7 @@
 
 .method public setHeaderTextSize(I)V
     .locals 0
-    .parameter "headerTextSize"
+    .param p1, "headerTextSize"    # I
 
     .prologue
     .line 178
@@ -590,7 +589,7 @@
 
 .method public setQuery(Ljava/lang/String;)V
     .locals 0
-    .parameter "query"
+    .param p1, "query"    # Ljava/lang/String;
 
     .prologue
     .line 91

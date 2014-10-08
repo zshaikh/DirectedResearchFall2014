@@ -92,14 +92,6 @@
 
 .method private constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/util/List;Ljava/util/List;Ljava/util/List;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -163,7 +155,6 @@
 
 .method private static a(Lorg/json/JSONObject;)Lcom/google/ads/a;
     .locals 8
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lorg/json/JSONException;
@@ -299,7 +290,6 @@
 
 .method public static a(Ljava/lang/String;)Lcom/google/ads/c;
     .locals 10
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lorg/json/JSONException;
@@ -499,8 +489,6 @@
 
 .method private static a(Lorg/json/JSONObject;Ljava/lang/String;)Ljava/util/List;
     .locals 4
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",

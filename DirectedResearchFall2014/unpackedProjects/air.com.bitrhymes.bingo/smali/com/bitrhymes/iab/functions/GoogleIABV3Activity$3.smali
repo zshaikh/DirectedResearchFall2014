@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/bitrhymes/iab/functions/GoogleIABV3Activity;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1
@@ -38,7 +37,6 @@
 
 .method static synthetic access$0(Lcom/bitrhymes/iab/functions/GoogleIABV3Activity$3;)Lcom/bitrhymes/iab/functions/GoogleIABV3Activity;
     .locals 1
-    .parameter
 
     .prologue
     .line 189
@@ -51,7 +49,7 @@
 # virtual methods
 .method public onIabSetupFinished(Lcom/bitrhymes/iab/util/IabResult;)V
     .locals 4
-    .parameter "result"
+    .param p1, "result"    # Lcom/bitrhymes/iab/util/IabResult;
 
     .prologue
     const-string v3, "InApp"
@@ -140,7 +138,7 @@
     invoke-direct {v0, p0}, Lcom/bitrhymes/iab/functions/GoogleIABV3Activity$3$1;-><init>(Lcom/bitrhymes/iab/functions/GoogleIABV3Activity$3;)V
 
     .line 253
-    .local v0, mGotInventoryListener:Lcom/bitrhymes/iab/util/IabHelper$QueryInventoryFinishedListener;
+    .local v0, "mGotInventoryListener":Lcom/bitrhymes/iab/util/IabHelper$QueryInventoryFinishedListener;
     iget-object v1, p0, Lcom/bitrhymes/iab/functions/GoogleIABV3Activity$3;->this$0:Lcom/bitrhymes/iab/functions/GoogleIABV3Activity;
 
     iget-object v1, v1, Lcom/bitrhymes/iab/functions/GoogleIABV3Activity;->mHelper:Lcom/bitrhymes/iab/util/IabHelper;

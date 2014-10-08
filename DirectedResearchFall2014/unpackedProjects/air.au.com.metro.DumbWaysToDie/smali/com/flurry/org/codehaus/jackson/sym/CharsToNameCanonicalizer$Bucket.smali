@@ -23,8 +23,8 @@
 # direct methods
 .method public constructor <init>(Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/sym/CharsToNameCanonicalizer$Bucket;)V
     .locals 0
-    .parameter "symbol"
-    .parameter "next"
+    .param p1, "symbol"    # Ljava/lang/String;
+    .param p2, "next"    # Lcom/flurry/org/codehaus/jackson/sym/CharsToNameCanonicalizer$Bucket;
 
     .prologue
     .line 523
@@ -44,20 +44,20 @@
 # virtual methods
 .method public find([CII)Ljava/lang/String;
     .locals 5
-    .parameter "buf"
-    .parameter "start"
-    .parameter "len"
+    .param p1, "buf"    # [C
+    .param p2, "start"    # I
+    .param p3, "len"    # I
 
     .prologue
     .line 532
     iget-object v2, p0, Lcom/flurry/org/codehaus/jackson/sym/CharsToNameCanonicalizer$Bucket;->_symbol:Ljava/lang/String;
 
     .line 533
-    .local v2, sym:Ljava/lang/String;
+    .local v2, "sym":Ljava/lang/String;
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/sym/CharsToNameCanonicalizer$Bucket;->mNext:Lcom/flurry/org/codehaus/jackson/sym/CharsToNameCanonicalizer$Bucket;
 
     .line 536
-    .local v0, b:Lcom/flurry/org/codehaus/jackson/sym/CharsToNameCanonicalizer$Bucket;
+    .local v0, "b":Lcom/flurry/org/codehaus/jackson/sym/CharsToNameCanonicalizer$Bucket;
     :goto_0
     invoke-virtual {v2}, Ljava/lang/String;->length()I
 
@@ -69,7 +69,7 @@
     const/4 v1, 0x0
 
     .line 539
-    .local v1, i:I
+    .local v1, "i":I
     :cond_0
     invoke-virtual {v2, v1}, Ljava/lang/String;->charAt(I)C
 
@@ -88,12 +88,12 @@
     move-object v3, v2
 
     .line 553
-    .end local v1           #i:I
+    .end local v1    # "i":I
     :goto_2
     return-object v3
 
     .line 542
-    .restart local v1       #i:I
+    .restart local v1    # "i":I
     :cond_1
     add-int/lit8 v1, v1, 0x1
 
@@ -102,7 +102,7 @@
     goto :goto_1
 
     .line 547
-    .end local v1           #i:I
+    .end local v1    # "i":I
     :cond_2
     if-nez v0, :cond_3
 

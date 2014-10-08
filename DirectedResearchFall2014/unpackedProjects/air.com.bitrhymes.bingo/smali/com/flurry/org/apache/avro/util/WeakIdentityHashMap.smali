@@ -55,7 +55,7 @@
 
     .prologue
     .line 50
-    .local p0, this:Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap;,"Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap<TK;TV;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap;, "Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap<TK;TV;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 46
@@ -78,7 +78,7 @@
 
 .method static synthetic access$000(Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap;)Ljava/lang/ref/ReferenceQueue;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap;
 
     .prologue
     .line 45
@@ -92,7 +92,7 @@
 
     .prologue
     .line 136
-    .local p0, this:Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap;,"Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap<TK;TV;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap;, "Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap<TK;TV;>;"
     monitor-enter p0
 
     :try_start_0
@@ -103,7 +103,7 @@
     move-result-object v2
 
     .line 138
-    .local v2, zombie:Ljava/lang/ref/Reference;
+    .local v2, "zombie":Ljava/lang/ref/Reference;
     :goto_0
     if-eqz v2, :cond_0
 
@@ -115,7 +115,7 @@
     move-object v1, v0
 
     .line 140
-    .local v1, victim:Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap$IdentityWeakReference;,"Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap<TK;TV;>.IdentityWeakReference;"
+    .local v1, "victim":Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap$IdentityWeakReference;, "Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap<TK;TV;>.IdentityWeakReference;"
     iget-object v3, p0, Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap;->backingStore:Ljava/util/Map;
 
     invoke-interface {v3, v1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
@@ -133,14 +133,14 @@
     goto :goto_0
 
     .line 143
-    .end local v1           #victim:Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap$IdentityWeakReference;,"Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap<TK;TV;>.IdentityWeakReference;"
+    .end local v1    # "victim":Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap$IdentityWeakReference;, "Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap<TK;TV;>.IdentityWeakReference;"
     :cond_0
     monitor-exit p0
 
     return-void
 
     .line 136
-    .end local v2           #zombie:Ljava/lang/ref/Reference;
+    .end local v2    # "zombie":Ljava/lang/ref/Reference;
     :catchall_0
     move-exception v3
 
@@ -156,7 +156,7 @@
 
     .prologue
     .line 53
-    .local p0, this:Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap;,"Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap<TK;TV;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap;, "Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap<TK;TV;>;"
     iget-object v0, p0, Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap;->backingStore:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->clear()V
@@ -170,11 +170,11 @@
 
 .method public containsKey(Ljava/lang/Object;)Z
     .locals 2
-    .parameter "key"
+    .param p1, "key"    # Ljava/lang/Object;
 
     .prologue
     .line 58
-    .local p0, this:Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap;,"Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap<TK;TV;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap;, "Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap<TK;TV;>;"
     invoke-direct {p0}, Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap;->reap()V
 
     .line 59
@@ -193,11 +193,11 @@
 
 .method public containsValue(Ljava/lang/Object;)Z
     .locals 1
-    .parameter "value"
+    .param p1, "value"    # Ljava/lang/Object;
 
     .prologue
     .line 63
-    .local p0, this:Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap;,"Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap<TK;TV;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap;, "Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap<TK;TV;>;"
     invoke-direct {p0}, Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap;->reap()V
 
     .line 64
@@ -224,7 +224,7 @@
 
     .prologue
     .line 68
-    .local p0, this:Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap;,"Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap<TK;TV;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap;, "Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap<TK;TV;>;"
     invoke-direct {p0}, Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap;->reap()V
 
     .line 69
@@ -233,7 +233,7 @@
     invoke-direct {v4}, Ljava/util/HashSet;-><init>()V
 
     .line 70
-    .local v4, ret:Ljava/util/Set;,"Ljava/util/Set<Ljava/util/Map$Entry<TK;TV;>;>;"
+    .local v4, "ret":Ljava/util/Set;, "Ljava/util/Set<Ljava/util/Map$Entry<TK;TV;>;>;"
     iget-object v6, p0, Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap;->backingStore:Ljava/util/Map;
 
     invoke-interface {v6}, Ljava/util/Map;->entrySet()Ljava/util/Set;
@@ -244,7 +244,7 @@
 
     move-result-object v1
 
-    .local v1, i$:Ljava/util/Iterator;
+    .local v1, "i$":Ljava/util/Iterator;
     :goto_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
@@ -259,7 +259,7 @@
     check-cast v3, Ljava/util/Map$Entry;
 
     .line 71
-    .local v3, ref:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap<TK;TV;>.IdentityWeakReference;TV;>;"
+    .local v3, "ref":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap<TK;TV;>.IdentityWeakReference;TV;>;"
     invoke-interface {v3}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v6
@@ -271,28 +271,28 @@
     move-result-object v2
 
     .line 72
-    .local v2, key:Ljava/lang/Object;,"TK;"
+    .local v2, "key":Ljava/lang/Object;, "TK;"
     invoke-interface {v3}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v5
 
     .line 73
-    .local v5, value:Ljava/lang/Object;,"TV;"
+    .local v5, "value":Ljava/lang/Object;, "TV;"
     new-instance v0, Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap$1;
 
     invoke-direct {v0, p0, v2, v5}, Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap$1;-><init>(Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap;Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 84
-    .local v0, entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<TK;TV;>;"
+    .local v0, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<TK;TV;>;"
     invoke-interface {v4, v0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
     .line 86
-    .end local v0           #entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<TK;TV;>;"
-    .end local v2           #key:Ljava/lang/Object;,"TK;"
-    .end local v3           #ref:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap<TK;TV;>.IdentityWeakReference;TV;>;"
-    .end local v5           #value:Ljava/lang/Object;,"TV;"
+    .end local v0    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<TK;TV;>;"
+    .end local v2    # "key":Ljava/lang/Object;, "TK;"
+    .end local v3    # "ref":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap<TK;TV;>.IdentityWeakReference;TV;>;"
+    .end local v5    # "value":Ljava/lang/Object;, "TV;"
     :cond_0
     invoke-static {v4}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
 
@@ -303,16 +303,16 @@
 
 .method public equals(Ljava/lang/Object;)Z
     .locals 2
-    .parameter "o"
+    .param p1, "o"    # Ljava/lang/Object;
 
     .prologue
     .line 99
-    .local p0, this:Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap;,"Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap<TK;TV;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap;, "Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap<TK;TV;>;"
     iget-object v0, p0, Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap;->backingStore:Ljava/util/Map;
 
     check-cast p1, Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap;
 
-    .end local p1
+    .end local p1    # "o":Ljava/lang/Object;
     iget-object v1, p1, Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap;->backingStore:Ljava/util/Map;
 
     invoke-interface {v0, v1}, Ljava/util/Map;->equals(Ljava/lang/Object;)Z
@@ -324,7 +324,7 @@
 
 .method public get(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
-    .parameter "key"
+    .param p1, "key"    # Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -335,7 +335,7 @@
 
     .prologue
     .line 103
-    .local p0, this:Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap;,"Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap<TK;TV;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap;, "Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap<TK;TV;>;"
     invoke-direct {p0}, Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap;->reap()V
 
     .line 104
@@ -357,7 +357,7 @@
 
     .prologue
     .line 112
-    .local p0, this:Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap;,"Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap<TK;TV;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap;, "Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap<TK;TV;>;"
     invoke-direct {p0}, Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap;->reap()V
 
     .line 113
@@ -375,7 +375,7 @@
 
     .prologue
     .line 116
-    .local p0, this:Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap;,"Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap<TK;TV;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap;, "Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap<TK;TV;>;"
     invoke-direct {p0}, Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap;->reap()V
 
     .line 117
@@ -400,7 +400,7 @@
 
     .prologue
     .line 90
-    .local p0, this:Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap;,"Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap<TK;TV;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap;, "Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap<TK;TV;>;"
     invoke-direct {p0}, Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap;->reap()V
 
     .line 91
@@ -409,7 +409,7 @@
     invoke-direct {v2}, Ljava/util/HashSet;-><init>()V
 
     .line 92
-    .local v2, ret:Ljava/util/Set;,"Ljava/util/Set<TK;>;"
+    .local v2, "ret":Ljava/util/Set;, "Ljava/util/Set<TK;>;"
     iget-object v3, p0, Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap;->backingStore:Ljava/util/Map;
 
     invoke-interface {v3}, Ljava/util/Map;->keySet()Ljava/util/Set;
@@ -420,7 +420,7 @@
 
     move-result-object v0
 
-    .local v0, i$:Ljava/util/Iterator;
+    .local v0, "i$":Ljava/util/Iterator;
     :goto_0
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
@@ -435,7 +435,7 @@
     check-cast v1, Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap$IdentityWeakReference;
 
     .line 93
-    .local v1, ref:Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap$IdentityWeakReference;,"Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap<TK;TV;>.IdentityWeakReference;"
+    .local v1, "ref":Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap$IdentityWeakReference;, "Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap<TK;TV;>.IdentityWeakReference;"
     invoke-virtual {v1}, Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap$IdentityWeakReference;->get()Ljava/lang/Object;
 
     move-result-object v3
@@ -445,7 +445,7 @@
     goto :goto_0
 
     .line 95
-    .end local v1           #ref:Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap$IdentityWeakReference;,"Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap<TK;TV;>.IdentityWeakReference;"
+    .end local v1    # "ref":Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap$IdentityWeakReference;, "Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap<TK;TV;>.IdentityWeakReference;"
     :cond_0
     invoke-static {v2}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
 
@@ -456,8 +456,6 @@
 
 .method public put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TK;TV;)TV;"
@@ -466,9 +464,9 @@
 
     .prologue
     .line 107
-    .local p0, this:Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap;,"Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap<TK;TV;>;"
-    .local p1, key:Ljava/lang/Object;,"TK;"
-    .local p2, value:Ljava/lang/Object;,"TV;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap;, "Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap<TK;TV;>;"
+    .local p1, "key":Ljava/lang/Object;, "TK;"
+    .local p2, "value":Ljava/lang/Object;, "TV;"
     invoke-direct {p0}, Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap;->reap()V
 
     .line 108
@@ -487,11 +485,11 @@
 
 .method public putAll(Ljava/util/Map;)V
     .locals 1
-    .parameter "t"
+    .param p1, "t"    # Ljava/util/Map;
 
     .prologue
     .line 120
-    .local p0, this:Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap;,"Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap<TK;TV;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap;, "Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap<TK;TV;>;"
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -501,7 +499,7 @@
 
 .method public remove(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
-    .parameter "key"
+    .param p1, "key"    # Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -512,7 +510,7 @@
 
     .prologue
     .line 123
-    .local p0, this:Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap;,"Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap<TK;TV;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap;, "Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap<TK;TV;>;"
     invoke-direct {p0}, Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap;->reap()V
 
     .line 124
@@ -534,7 +532,7 @@
 
     .prologue
     .line 127
-    .local p0, this:Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap;,"Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap<TK;TV;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap;, "Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap<TK;TV;>;"
     invoke-direct {p0}, Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap;->reap()V
 
     .line 128
@@ -559,7 +557,7 @@
 
     .prologue
     .line 131
-    .local p0, this:Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap;,"Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap<TK;TV;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap;, "Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap<TK;TV;>;"
     invoke-direct {p0}, Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap;->reap()V
 
     .line 132

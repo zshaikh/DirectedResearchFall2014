@@ -119,7 +119,6 @@
 
 .method static synthetic a(Lcom/inmobi/activity/AdCreativeTesting;)Lcom/inmobi/androidsdk/ai/container/IMWebView;
     .locals 1
-    .parameter
 
     .prologue
     .line 35
@@ -130,8 +129,6 @@
 
 .method static synthetic a(Lcom/inmobi/activity/AdCreativeTesting;Lcom/inmobi/androidsdk/ai/container/IMWebView;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 34
@@ -142,8 +139,6 @@
 
 .method static synthetic a(Lcom/inmobi/activity/AdCreativeTesting;Z)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 41
@@ -154,7 +149,6 @@
 
 .method static synthetic b(Lcom/inmobi/activity/AdCreativeTesting;)Landroid/widget/EditText;
     .locals 1
-    .parameter
 
     .prologue
     .line 30
@@ -165,8 +159,6 @@
 
 .method static synthetic b(Lcom/inmobi/activity/AdCreativeTesting;Lcom/inmobi/androidsdk/ai/container/IMWebView;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 35
@@ -177,7 +169,6 @@
 
 .method static synthetic c(Lcom/inmobi/activity/AdCreativeTesting;)Landroid/widget/Button;
     .locals 1
-    .parameter
 
     .prologue
     .line 38
@@ -188,7 +179,6 @@
 
 .method static synthetic d(Lcom/inmobi/activity/AdCreativeTesting;)I
     .locals 1
-    .parameter
 
     .prologue
     .line 31
@@ -199,7 +189,6 @@
 
 .method static synthetic e(Lcom/inmobi/activity/AdCreativeTesting;)F
     .locals 1
-    .parameter
 
     .prologue
     .line 42
@@ -210,7 +199,6 @@
 
 .method static synthetic f(Lcom/inmobi/activity/AdCreativeTesting;)I
     .locals 1
-    .parameter
 
     .prologue
     .line 32
@@ -221,7 +209,6 @@
 
 .method static synthetic g(Lcom/inmobi/activity/AdCreativeTesting;)Lcom/inmobi/androidsdk/ai/container/IMWebView;
     .locals 1
-    .parameter
 
     .prologue
     .line 34
@@ -232,7 +219,6 @@
 
 .method static synthetic h(Lcom/inmobi/activity/AdCreativeTesting;)Landroid/widget/RelativeLayout;
     .locals 1
-    .parameter
 
     .prologue
     .line 36
@@ -243,7 +229,6 @@
 
 .method static synthetic i(Lcom/inmobi/activity/AdCreativeTesting;)Landroid/widget/Button;
     .locals 1
-    .parameter
 
     .prologue
     .line 37
@@ -254,7 +239,6 @@
 
 .method static synthetic j(Lcom/inmobi/activity/AdCreativeTesting;)Landroid/widget/Button;
     .locals 1
-    .parameter
 
     .prologue
     .line 39
@@ -265,7 +249,6 @@
 
 .method static synthetic k(Lcom/inmobi/activity/AdCreativeTesting;)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 41
@@ -276,7 +259,6 @@
 
 .method static synthetic l(Lcom/inmobi/activity/AdCreativeTesting;)Lcom/inmobi/activity/AdCreativeTesting$a;
     .locals 1
-    .parameter
 
     .prologue
     .line 184
@@ -289,7 +271,6 @@
 # virtual methods
 .method protected onCreate(Landroid/os/Bundle;)V
     .locals 4
-    .parameter
 
     .prologue
     const/4 v3, 0x0
@@ -463,10 +444,6 @@
 
 .method public onItemSelected(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
     .locals 3
-    .parameter
-    .parameter
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -520,7 +497,6 @@
 
 .method public onNothingSelected(Landroid/widget/AdapterView;)V
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",

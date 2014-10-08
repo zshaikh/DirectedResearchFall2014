@@ -3,9 +3,9 @@
 .source "GAServiceProxy.java"
 
 # interfaces
-.implements Lcom/google/analytics/tracking/android/ServiceProxy;
 .implements Lcom/google/analytics/tracking/android/AnalyticsGmsCoreClient$OnConnectedListener;
 .implements Lcom/google/analytics/tracking/android/AnalyticsGmsCoreClient$OnConnectionFailedListener;
+.implements Lcom/google/analytics/tracking/android/ServiceProxy;
 
 
 # annotations
@@ -77,8 +77,8 @@
 # direct methods
 .method constructor <init>(Landroid/content/Context;Lcom/google/analytics/tracking/android/AnalyticsThread;)V
     .locals 1
-    .parameter "ctx"
-    .parameter "thread"
+    .param p1, "ctx"    # Landroid/content/Context;
+    .param p2, "thread"    # Lcom/google/analytics/tracking/android/AnalyticsThread;
 
     .prologue
     .line 82
@@ -92,9 +92,9 @@
 
 .method constructor <init>(Landroid/content/Context;Lcom/google/analytics/tracking/android/AnalyticsThread;Lcom/google/analytics/tracking/android/AnalyticsStore;)V
     .locals 2
-    .parameter "ctx"
-    .parameter "thread"
-    .parameter "store"
+    .param p1, "ctx"    # Landroid/content/Context;
+    .param p2, "thread"    # Lcom/google/analytics/tracking/android/AnalyticsThread;
+    .param p3, "store"    # Lcom/google/analytics/tracking/android/AnalyticsStore;
 
     .prologue
     .line 67
@@ -144,7 +144,7 @@
 
 .method static synthetic access$000(Lcom/google/analytics/tracking/android/GAServiceProxy;)V
     .locals 0
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/google/analytics/tracking/android/GAServiceProxy;
 
     .prologue
     .line 27
@@ -155,7 +155,7 @@
 
 .method static synthetic access$1000(Lcom/google/analytics/tracking/android/GAServiceProxy;)Lcom/google/analytics/tracking/android/Clock;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/google/analytics/tracking/android/GAServiceProxy;
 
     .prologue
     .line 27
@@ -166,7 +166,7 @@
 
 .method static synthetic access$1100(Lcom/google/analytics/tracking/android/GAServiceProxy;)V
     .locals 0
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/google/analytics/tracking/android/GAServiceProxy;
 
     .prologue
     .line 27
@@ -177,7 +177,7 @@
 
 .method static synthetic access$1200(Lcom/google/analytics/tracking/android/GAServiceProxy;)Ljava/util/Timer;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/google/analytics/tracking/android/GAServiceProxy;
 
     .prologue
     .line 27
@@ -188,7 +188,7 @@
 
 .method static synthetic access$400(Lcom/google/analytics/tracking/android/GAServiceProxy;)Lcom/google/analytics/tracking/android/GAServiceProxy$ConnectState;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/google/analytics/tracking/android/GAServiceProxy;
 
     .prologue
     .line 27
@@ -199,7 +199,7 @@
 
 .method static synthetic access$500(Lcom/google/analytics/tracking/android/GAServiceProxy;)V
     .locals 0
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/google/analytics/tracking/android/GAServiceProxy;
 
     .prologue
     .line 27
@@ -210,7 +210,7 @@
 
 .method static synthetic access$600(Lcom/google/analytics/tracking/android/GAServiceProxy;)V
     .locals 0
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/google/analytics/tracking/android/GAServiceProxy;
 
     .prologue
     .line 27
@@ -221,7 +221,7 @@
 
 .method static synthetic access$700(Lcom/google/analytics/tracking/android/GAServiceProxy;)Ljava/util/Queue;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/google/analytics/tracking/android/GAServiceProxy;
 
     .prologue
     .line 27
@@ -232,7 +232,7 @@
 
 .method static synthetic access$800(Lcom/google/analytics/tracking/android/GAServiceProxy;)J
     .locals 2
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/google/analytics/tracking/android/GAServiceProxy;
 
     .prologue
     .line 27
@@ -243,7 +243,7 @@
 
 .method static synthetic access$900(Lcom/google/analytics/tracking/android/GAServiceProxy;)J
     .locals 2
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/google/analytics/tracking/android/GAServiceProxy;
 
     .prologue
     .line 27
@@ -254,7 +254,7 @@
 
 .method private cancelTimer(Ljava/util/Timer;)Ljava/util/Timer;
     .locals 1
-    .parameter "timer"
+    .param p1, "timer"    # Ljava/util/Timer;
 
     .prologue
     .line 141
@@ -375,8 +375,8 @@
 
     invoke-interface {v1}, Lcom/google/analytics/tracking/android/AnalyticsClient;->connect()V
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Ljava/lang/SecurityException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     .line 288
     :goto_0
@@ -391,7 +391,7 @@
     move-object v0, v1
 
     .line 281
-    .local v0, e:Ljava/lang/SecurityException;
+    .local v0, "e":Ljava/lang/SecurityException;
     :try_start_2
     const-string v1, "security exception on connectToService"
 
@@ -405,7 +405,7 @@
     goto :goto_0
 
     .line 271
-    .end local v0           #e:Ljava/lang/SecurityException;
+    .end local v0    # "e":Ljava/lang/SecurityException;
     :catchall_0
     move-exception v1
 
@@ -623,7 +623,7 @@
     check-cast v6, Lcom/google/analytics/tracking/android/GAServiceProxy$HitParams;
 
     .line 210
-    .local v6, hitParams:Lcom/google/analytics/tracking/android/GAServiceProxy$HitParams;
+    .local v6, "hitParams":Lcom/google/analytics/tracking/android/GAServiceProxy$HitParams;
     const-string v0, "Sending hit to store"
 
     invoke-static {v0}, Lcom/google/analytics/tracking/android/Log;->iDebug(Ljava/lang/String;)I
@@ -654,7 +654,7 @@
     goto :goto_1
 
     .line 194
-    .end local v6           #hitParams:Lcom/google/analytics/tracking/android/GAServiceProxy$HitParams;
+    .end local v6    # "hitParams":Lcom/google/analytics/tracking/android/GAServiceProxy$HitParams;
     :catchall_0
     move-exception v0
 
@@ -695,7 +695,7 @@
     check-cast v6, Lcom/google/analytics/tracking/android/GAServiceProxy$HitParams;
 
     .line 222
-    .restart local v6       #hitParams:Lcom/google/analytics/tracking/android/GAServiceProxy$HitParams;
+    .restart local v6    # "hitParams":Lcom/google/analytics/tracking/android/GAServiceProxy$HitParams;
     const-string v0, "Sending hit to service"
 
     invoke-static {v0}, Lcom/google/analytics/tracking/android/Log;->iDebug(Ljava/lang/String;)I
@@ -729,7 +729,7 @@
     goto :goto_2
 
     .line 227
-    .end local v6           #hitParams:Lcom/google/analytics/tracking/android/GAServiceProxy$HitParams;
+    .end local v6    # "hitParams":Lcom/google/analytics/tracking/android/GAServiceProxy$HitParams;
     :cond_4
     iget-object v0, p0, Lcom/google/analytics/tracking/android/GAServiceProxy;->clock:Lcom/google/analytics/tracking/android/Clock;
 
@@ -843,7 +843,7 @@
     move-result-object v0
 
     .line 263
-    .local v0, instance:Lcom/google/analytics/tracking/android/GAServiceManager;
+    .local v0, "instance":Lcom/google/analytics/tracking/android/GAServiceManager;
     iget-object v1, p0, Lcom/google/analytics/tracking/android/GAServiceProxy;->ctx:Landroid/content/Context;
 
     iget-object v2, p0, Lcom/google/analytics/tracking/android/GAServiceProxy;->thread:Lcom/google/analytics/tracking/android/AnalyticsThread;
@@ -965,7 +965,7 @@
 
 .method createService(Lcom/google/analytics/tracking/android/AnalyticsClient;)V
     .locals 1
-    .parameter "client"
+    .param p1, "client"    # Lcom/google/analytics/tracking/android/AnalyticsClient;
 
     .prologue
     .line 170
@@ -1113,8 +1113,8 @@
 
 .method public declared-synchronized onConnectionFailed(ILandroid/content/Intent;)V
     .locals 2
-    .parameter "errorCode"
-    .parameter "resolution"
+    .param p1, "errorCode"    # I
+    .param p2, "resolution"    # Landroid/content/Intent;
 
     .prologue
     const-string v0, "Service unavailable (code="
@@ -1298,10 +1298,8 @@
 
 .method public putHit(Ljava/util/Map;JLjava/lang/String;Ljava/util/List;)V
     .locals 7
-    .parameter
-    .parameter "hitTimeInMilliseconds"
-    .parameter "path"
-    .parameter
+    .param p2, "hitTimeInMilliseconds"    # J
+    .param p4, "path"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1320,8 +1318,8 @@
 
     .prologue
     .line 95
-    .local p1, wireFormatParams:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
-    .local p5, commands:Ljava/util/List;,"Ljava/util/List<Lcom/google/android/gms/analytics/internal/Command;>;"
+    .local p1, "wireFormatParams":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p5, "commands":Ljava/util/List;, "Ljava/util/List<Lcom/google/android/gms/analytics/internal/Command;>;"
     const-string v0, "putHit called"
 
     invoke-static {v0}, Lcom/google/analytics/tracking/android/Log;->iDebug(Ljava/lang/String;)I
@@ -1352,7 +1350,7 @@
 
 .method setClock(Lcom/google/analytics/tracking/android/Clock;)V
     .locals 0
-    .parameter "clock"
+    .param p1, "clock"    # Lcom/google/analytics/tracking/android/Clock;
 
     .prologue
     .line 89
@@ -1364,7 +1362,7 @@
 
 .method public setIdleTimeout(J)V
     .locals 0
-    .parameter "idleTimeout"
+    .param p1, "idleTimeout"    # J
 
     .prologue
     .line 182

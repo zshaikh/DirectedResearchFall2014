@@ -10,7 +10,6 @@
 # direct methods
 .method synthetic constructor <init>(Lcom/flurry/android/FlurryFullscreenTakeoverActivity;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 373
@@ -23,8 +22,6 @@
 
 .method private constructor <init>(Lcom/flurry/android/FlurryFullscreenTakeoverActivity;B)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 373
@@ -39,8 +36,6 @@
 # virtual methods
 .method public final a(Ljava/lang/String;Z)Z
     .locals 4
-    .parameter
-    .parameter
 
     .prologue
     const/4 v3, 0x1

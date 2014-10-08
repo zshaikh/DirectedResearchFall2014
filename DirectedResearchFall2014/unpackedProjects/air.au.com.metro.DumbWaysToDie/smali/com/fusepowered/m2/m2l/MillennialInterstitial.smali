@@ -36,7 +36,6 @@
 
 .method static synthetic access$0(Lcom/fusepowered/m2/m2l/MillennialInterstitial;)Lcom/fusepowered/m2/m2l/CustomEventInterstitial$CustomEventInterstitialListener;
     .locals 1
-    .parameter
 
     .prologue
     .line 51
@@ -47,7 +46,6 @@
 
 .method static synthetic access$1(Lcom/fusepowered/m2/m2l/MillennialInterstitial;)Lcom/fusepowered/m1/android/MMInterstitial;
     .locals 1
-    .parameter
 
     .prologue
     .line 50
@@ -58,7 +56,6 @@
 
 .method private extrasAreValid(Ljava/util/Map;)Z
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -72,7 +69,7 @@
 
     .prologue
     .line 104
-    .local p1, serverExtras:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p1, "serverExtras":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v0, "adUnitID"
 
     invoke-interface {p1, v0}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
@@ -86,10 +83,8 @@
 # virtual methods
 .method protected loadInterstitial(Landroid/content/Context;Lcom/fusepowered/m2/m2l/CustomEventInterstitial$CustomEventInterstitialListener;Ljava/util/Map;Ljava/util/Map;)V
     .locals 4
-    .parameter "context"
-    .parameter "customEventInterstitialListener"
-    .parameter
-    .parameter
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "customEventInterstitialListener"    # Lcom/fusepowered/m2/m2l/CustomEventInterstitial$CustomEventInterstitialListener;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -110,8 +105,8 @@
 
     .prologue
     .line 58
-    .local p3, localExtras:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
-    .local p4, serverExtras:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p3, "localExtras":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
+    .local p4, "serverExtras":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     iput-object p2, p0, Lcom/fusepowered/m2/m2l/MillennialInterstitial;->mInterstitialListener:Lcom/fusepowered/m2/m2l/CustomEventInterstitial$CustomEventInterstitialListener;
 
     .line 61
@@ -131,7 +126,7 @@
     check-cast v0, Ljava/lang/String;
 
     .line 68
-    .local v0, apid:Ljava/lang/String;
+    .local v0, "apid":Ljava/lang/String;
     invoke-static {p1}, Lcom/fusepowered/m1/android/MMSDK;->initialize(Landroid/content/Context;)V
 
     .line 69
@@ -161,7 +156,7 @@
     check-cast v1, Landroid/location/Location;
 
     .line 75
-    .local v1, location:Landroid/location/Location;
+    .local v1, "location":Landroid/location/Location;
     if-eqz v1, :cond_0
 
     invoke-static {v1}, Lcom/fusepowered/m1/android/MMRequest;->setUserLocation(Landroid/location/Location;)V
@@ -196,8 +191,8 @@
     invoke-interface {v2}, Lcom/fusepowered/m2/m2l/CustomEventInterstitial$CustomEventInterstitialListener;->onInterstitialLoaded()V
 
     .line 86
-    .end local v0           #apid:Ljava/lang/String;
-    .end local v1           #location:Landroid/location/Location;
+    .end local v0    # "apid":Ljava/lang/String;
+    .end local v1    # "location":Landroid/location/Location;
     :goto_0
     return-void
 
@@ -212,8 +207,8 @@
     goto :goto_0
 
     .line 82
-    .restart local v0       #apid:Ljava/lang/String;
-    .restart local v1       #location:Landroid/location/Location;
+    .restart local v0    # "apid":Ljava/lang/String;
+    .restart local v1    # "location":Landroid/location/Location;
     :cond_2
     iget-object v2, p0, Lcom/fusepowered/m2/m2l/MillennialInterstitial;->mMillennialInterstitial:Lcom/fusepowered/m1/android/MMInterstitial;
 

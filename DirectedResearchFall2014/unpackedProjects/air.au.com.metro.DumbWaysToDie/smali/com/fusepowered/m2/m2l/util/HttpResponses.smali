@@ -16,9 +16,9 @@
 
 .method public static extractBooleanHeader(Lorg/apache/http/HttpResponse;Lcom/fusepowered/m2/m2l/util/ResponseHeader;Z)Z
     .locals 2
-    .parameter "response"
-    .parameter "responseHeader"
-    .parameter "defaultValue"
+    .param p0, "response"    # Lorg/apache/http/HttpResponse;
+    .param p1, "responseHeader"    # Lcom/fusepowered/m2/m2l/util/ResponseHeader;
+    .param p2, "defaultValue"    # Z
 
     .prologue
     .line 48
@@ -27,7 +27,7 @@
     move-result-object v0
 
     .line 49
-    .local v0, header:Ljava/lang/String;
+    .local v0, "header":Ljava/lang/String;
     if-nez v0, :cond_0
 
     move v1, p2
@@ -48,8 +48,8 @@
 
 .method public static extractHeader(Lorg/apache/http/HttpResponse;Lcom/fusepowered/m2/m2l/util/ResponseHeader;)Ljava/lang/String;
     .locals 2
-    .parameter "response"
-    .parameter "responseHeader"
+    .param p0, "response"    # Lorg/apache/http/HttpResponse;
+    .param p1, "responseHeader"    # Lcom/fusepowered/m2/m2l/util/ResponseHeader;
 
     .prologue
     .line 43
@@ -62,7 +62,7 @@
     move-result-object v0
 
     .line 44
-    .local v0, header:Lorg/apache/http/Header;
+    .local v0, "header":Lorg/apache/http/Header;
     if-eqz v0, :cond_0
 
     invoke-interface {v0}, Lorg/apache/http/Header;->getValue()Ljava/lang/String;
@@ -80,9 +80,9 @@
 
 .method public static extractIntHeader(Lorg/apache/http/HttpResponse;Lcom/fusepowered/m2/m2l/util/ResponseHeader;I)I
     .locals 2
-    .parameter "response"
-    .parameter "responseHeader"
-    .parameter "defaultValue"
+    .param p0, "response"    # Lorg/apache/http/HttpResponse;
+    .param p1, "responseHeader"    # Lcom/fusepowered/m2/m2l/util/ResponseHeader;
+    .param p2, "defaultValue"    # I
 
     .prologue
     .line 69
@@ -91,7 +91,7 @@
     move-result-object v0
 
     .line 70
-    .local v0, headerValue:Ljava/lang/Integer;
+    .local v0, "headerValue":Ljava/lang/Integer;
     if-nez v0, :cond_0
 
     move v1, p2
@@ -110,8 +110,8 @@
 
 .method public static extractIntegerHeader(Lorg/apache/http/HttpResponse;Lcom/fusepowered/m2/m2l/util/ResponseHeader;)Ljava/lang/Integer;
     .locals 5
-    .parameter "response"
-    .parameter "responseHeader"
+    .param p0, "response"    # Lorg/apache/http/HttpResponse;
+    .param p1, "responseHeader"    # Lcom/fusepowered/m2/m2l/util/ResponseHeader;
 
     .prologue
     .line 56
@@ -122,7 +122,7 @@
     move-result-object v2
 
     .line 57
-    .local v2, numberFormat:Ljava/text/NumberFormat;
+    .local v2, "numberFormat":Ljava/text/NumberFormat;
     const/4 v4, 0x1
 
     invoke-virtual {v2, v4}, Ljava/text/NumberFormat;->setParseIntegerOnly(Z)V
@@ -133,7 +133,7 @@
     move-result-object v1
 
     .line 61
-    .local v1, headerValue:Ljava/lang/String;
+    .local v1, "headerValue":Ljava/lang/String;
     :try_start_0
     invoke-virtual {v1}, Ljava/lang/String;->trim()Ljava/lang/String;
 
@@ -144,7 +144,7 @@
     move-result-object v3
 
     .line 62
-    .local v3, value:Ljava/lang/Number;
+    .local v3, "value":Ljava/lang/Number;
     invoke-virtual {v3}, Ljava/lang/Number;->intValue()I
 
     move-result v4
@@ -156,7 +156,7 @@
     move-result-object v4
 
     .line 64
-    .end local v3           #value:Ljava/lang/Number;
+    .end local v3    # "value":Ljava/lang/Number;
     :goto_0
     return-object v4
 
@@ -167,7 +167,7 @@
     move-object v0, v4
 
     .line 64
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const/4 v4, 0x0
 
     goto :goto_0

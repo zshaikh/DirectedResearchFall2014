@@ -86,12 +86,12 @@
 
 .method private constructor <init>(Lcom/flurry/org/codehaus/jackson/sym/CharsToNameCanonicalizer;ZZ[Ljava/lang/String;[Lcom/flurry/org/codehaus/jackson/sym/CharsToNameCanonicalizer$Bucket;I)V
     .locals 2
-    .parameter "parent"
-    .parameter "canonicalize"
-    .parameter "intern"
-    .parameter "symbols"
-    .parameter "buckets"
-    .parameter "size"
+    .param p1, "parent"    # Lcom/flurry/org/codehaus/jackson/sym/CharsToNameCanonicalizer;
+    .param p2, "canonicalize"    # Z
+    .param p3, "intern"    # Z
+    .param p4, "symbols"    # [Ljava/lang/String;
+    .param p5, "buckets"    # [Lcom/flurry/org/codehaus/jackson/sym/CharsToNameCanonicalizer$Bucket;
+    .param p6, "size"    # I
 
     .prologue
     .line 205
@@ -119,7 +119,7 @@
     array-length v0, p4
 
     .line 215
-    .local v0, arrayLen:I
+    .local v0, "arrayLen":I
     shr-int/lit8 v1, v0, 0x2
 
     sub-int v1, v0, v1
@@ -144,7 +144,7 @@
 
 .method public static calcHash(Ljava/lang/String;)I
     .locals 5
-    .parameter "key"
+    .param p0, "key"    # Ljava/lang/String;
 
     .prologue
     .line 403
@@ -155,15 +155,15 @@
     move-result v0
 
     .line 404
-    .local v0, hash:I
+    .local v0, "hash":I
     const/4 v1, 0x1
 
-    .local v1, i:I
+    .local v1, "i":I
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v2
 
-    .local v2, len:I
+    .local v2, "len":I
     :goto_0
     if-ge v1, v2, :cond_0
 
@@ -188,9 +188,9 @@
 
 .method public static calcHash([CII)I
     .locals 4
-    .parameter "buffer"
-    .parameter "start"
-    .parameter "len"
+    .param p0, "buffer"    # [C
+    .param p1, "start"    # I
+    .param p2, "len"    # I
 
     .prologue
     .line 395
@@ -199,10 +199,10 @@
     aget-char v0, p0, v2
 
     .line 396
-    .local v0, hash:I
+    .local v0, "hash":I
     const/4 v1, 0x1
 
-    .local v1, i:I
+    .local v1, "i":I
     :goto_0
     if-ge v1, p2, :cond_0
 
@@ -233,11 +233,11 @@
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/sym/CharsToNameCanonicalizer;->_symbols:[Ljava/lang/String;
 
     .line 423
-    .local v1, oldSyms:[Ljava/lang/String;
+    .local v1, "oldSyms":[Ljava/lang/String;
     array-length v2, v1
 
     .line 424
-    .local v2, size:I
+    .local v2, "size":I
     new-array v3, v2, [Ljava/lang/String;
 
     iput-object v3, p0, Lcom/flurry/org/codehaus/jackson/sym/CharsToNameCanonicalizer;->_symbols:[Ljava/lang/String;
@@ -251,7 +251,7 @@
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/sym/CharsToNameCanonicalizer;->_buckets:[Lcom/flurry/org/codehaus/jackson/sym/CharsToNameCanonicalizer$Bucket;
 
     .line 427
-    .local v0, oldBuckets:[Lcom/flurry/org/codehaus/jackson/sym/CharsToNameCanonicalizer$Bucket;
+    .local v0, "oldBuckets":[Lcom/flurry/org/codehaus/jackson/sym/CharsToNameCanonicalizer$Bucket;
     array-length v2, v0
 
     .line 428
@@ -284,7 +284,7 @@
 
 .method private initTables(I)V
     .locals 1
-    .parameter "initialSize"
+    .param p1, "initialSize"    # I
 
     .prologue
     .line 190
@@ -348,7 +348,7 @@
 
 .method private declared-synchronized mergeChild(Lcom/flurry/org/codehaus/jackson/sym/CharsToNameCanonicalizer;)V
     .locals 2
-    .parameter "child"
+    .param p1, "child"    # Lcom/flurry/org/codehaus/jackson/sym/CharsToNameCanonicalizer;
 
     .prologue
     .line 259
@@ -447,12 +447,12 @@
     array-length v8, v10
 
     .line 442
-    .local v8, size:I
+    .local v8, "size":I
     add-int v5, v8, v8
 
     .line 448
-    .local v5, newSize:I
-    const/high16 v10, 0x1
+    .local v5, "newSize":I
+    const/high16 v10, 0x10000
 
     if-le v5, v10, :cond_1
 
@@ -483,11 +483,11 @@
     iget-object v7, p0, Lcom/flurry/org/codehaus/jackson/sym/CharsToNameCanonicalizer;->_symbols:[Ljava/lang/String;
 
     .line 461
-    .local v7, oldSyms:[Ljava/lang/String;
+    .local v7, "oldSyms":[Ljava/lang/String;
     iget-object v6, p0, Lcom/flurry/org/codehaus/jackson/sym/CharsToNameCanonicalizer;->_buckets:[Lcom/flurry/org/codehaus/jackson/sym/CharsToNameCanonicalizer$Bucket;
 
     .line 462
-    .local v6, oldBuckets:[Lcom/flurry/org/codehaus/jackson/sym/CharsToNameCanonicalizer$Bucket;
+    .local v6, "oldBuckets":[Lcom/flurry/org/codehaus/jackson/sym/CharsToNameCanonicalizer$Bucket;
     new-array v10, v5, [Ljava/lang/String;
 
     iput-object v10, p0, Lcom/flurry/org/codehaus/jackson/sym/CharsToNameCanonicalizer;->_symbols:[Ljava/lang/String;
@@ -517,10 +517,10 @@
     const/4 v2, 0x0
 
     .line 473
-    .local v2, count:I
+    .local v2, "count":I
     const/4 v3, 0x0
 
-    .local v3, i:I
+    .local v3, "i":I
     :goto_0
     if-ge v3, v8, :cond_4
 
@@ -528,7 +528,7 @@
     aget-object v9, v7, v3
 
     .line 475
-    .local v9, symbol:Ljava/lang/String;
+    .local v9, "symbol":Ljava/lang/String;
     if-eqz v9, :cond_2
 
     .line 476
@@ -544,7 +544,7 @@
     and-int v4, v10, v11
 
     .line 478
-    .local v4, index:I
+    .local v4, "index":I
     iget-object v10, p0, Lcom/flurry/org/codehaus/jackson/sym/CharsToNameCanonicalizer;->_symbols:[Ljava/lang/String;
 
     aget-object v10, v10, v4
@@ -557,7 +557,7 @@
     aput-object v9, v10, v4
 
     .line 473
-    .end local v4           #index:I
+    .end local v4    # "index":I
     :cond_2
     :goto_1
     add-int/lit8 v3, v3, 0x1
@@ -565,12 +565,12 @@
     goto :goto_0
 
     .line 481
-    .restart local v4       #index:I
+    .restart local v4    # "index":I
     :cond_3
     shr-int/lit8 v1, v4, 0x1
 
     .line 482
-    .local v1, bix:I
+    .local v1, "bix":I
     iget-object v10, p0, Lcom/flurry/org/codehaus/jackson/sym/CharsToNameCanonicalizer;->_buckets:[Lcom/flurry/org/codehaus/jackson/sym/CharsToNameCanonicalizer$Bucket;
 
     new-instance v11, Lcom/flurry/org/codehaus/jackson/sym/CharsToNameCanonicalizer$Bucket;
@@ -586,9 +586,9 @@
     goto :goto_1
 
     .line 487
-    .end local v1           #bix:I
-    .end local v4           #index:I
-    .end local v9           #symbol:Ljava/lang/String;
+    .end local v1    # "bix":I
+    .end local v4    # "index":I
+    .end local v9    # "symbol":Ljava/lang/String;
     :cond_4
     shr-int/lit8 v8, v8, 0x1
 
@@ -602,7 +602,7 @@
     aget-object v0, v6, v3
 
     .line 490
-    .local v0, b:Lcom/flurry/org/codehaus/jackson/sym/CharsToNameCanonicalizer$Bucket;
+    .local v0, "b":Lcom/flurry/org/codehaus/jackson/sym/CharsToNameCanonicalizer$Bucket;
     :goto_3
     if-eqz v0, :cond_6
 
@@ -615,7 +615,7 @@
     move-result-object v9
 
     .line 493
-    .restart local v9       #symbol:Ljava/lang/String;
+    .restart local v9    # "symbol":Ljava/lang/String;
     invoke-static {v9}, Lcom/flurry/org/codehaus/jackson/sym/CharsToNameCanonicalizer;->calcHash(Ljava/lang/String;)I
 
     move-result v10
@@ -625,7 +625,7 @@
     and-int v4, v10, v11
 
     .line 494
-    .restart local v4       #index:I
+    .restart local v4    # "index":I
     iget-object v10, p0, Lcom/flurry/org/codehaus/jackson/sym/CharsToNameCanonicalizer;->_symbols:[Ljava/lang/String;
 
     aget-object v10, v10, v4
@@ -651,7 +651,7 @@
     shr-int/lit8 v1, v4, 0x1
 
     .line 498
-    .restart local v1       #bix:I
+    .restart local v1    # "bix":I
     iget-object v10, p0, Lcom/flurry/org/codehaus/jackson/sym/CharsToNameCanonicalizer;->_buckets:[Lcom/flurry/org/codehaus/jackson/sym/CharsToNameCanonicalizer$Bucket;
 
     new-instance v11, Lcom/flurry/org/codehaus/jackson/sym/CharsToNameCanonicalizer$Bucket;
@@ -667,16 +667,16 @@
     goto :goto_4
 
     .line 488
-    .end local v1           #bix:I
-    .end local v4           #index:I
-    .end local v9           #symbol:Ljava/lang/String;
+    .end local v1    # "bix":I
+    .end local v4    # "index":I
+    .end local v9    # "symbol":Ljava/lang/String;
     :cond_6
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_2
 
     .line 504
-    .end local v0           #b:Lcom/flurry/org/codehaus/jackson/sym/CharsToNameCanonicalizer$Bucket;
+    .end local v0    # "b":Lcom/flurry/org/codehaus/jackson/sym/CharsToNameCanonicalizer$Bucket;
     :cond_7
     iget v10, p0, Lcom/flurry/org/codehaus/jackson/sym/CharsToNameCanonicalizer;->_size:I
 
@@ -730,10 +730,10 @@
 # virtual methods
 .method public findSymbol([CIII)Ljava/lang/String;
     .locals 8
-    .parameter "buffer"
-    .parameter "start"
-    .parameter "len"
-    .parameter "hash"
+    .param p1, "buffer"    # [C
+    .param p2, "start"    # I
+    .param p3, "len"    # I
+    .param p4, "hash"    # I
 
     .prologue
     const/4 v7, 0x1
@@ -773,7 +773,7 @@
     aget-object v4, v5, p4
 
     .line 334
-    .local v4, sym:Ljava/lang/String;
+    .local v4, "sym":Ljava/lang/String;
     if-eqz v4, :cond_5
 
     .line 336
@@ -787,7 +787,7 @@
     const/4 v2, 0x0
 
     .line 339
-    .local v2, i:I
+    .local v2, "i":I
     :cond_2
     invoke-virtual {v4, v2}, Ljava/lang/String;->charAt(I)C
 
@@ -817,7 +817,7 @@
     goto :goto_1
 
     .line 349
-    .end local v2           #i:I
+    .end local v2    # "i":I
     :cond_4
     iget-object v5, p0, Lcom/flurry/org/codehaus/jackson/sym/CharsToNameCanonicalizer;->_buckets:[Lcom/flurry/org/codehaus/jackson/sym/CharsToNameCanonicalizer$Bucket;
 
@@ -826,7 +826,7 @@
     aget-object v0, v5, v6
 
     .line 350
-    .local v0, b:Lcom/flurry/org/codehaus/jackson/sym/CharsToNameCanonicalizer$Bucket;
+    .local v0, "b":Lcom/flurry/org/codehaus/jackson/sym/CharsToNameCanonicalizer$Bucket;
     if-eqz v0, :cond_5
 
     .line 351
@@ -843,7 +843,7 @@
     goto :goto_0
 
     .line 358
-    .end local v0           #b:Lcom/flurry/org/codehaus/jackson/sym/CharsToNameCanonicalizer$Bucket;
+    .end local v0    # "b":Lcom/flurry/org/codehaus/jackson/sym/CharsToNameCanonicalizer$Bucket;
     :cond_5
     iget-boolean v5, p0, Lcom/flurry/org/codehaus/jackson/sym/CharsToNameCanonicalizer;->_dirty:Z
 
@@ -870,7 +870,7 @@
     invoke-direct {v3, p1, p2, p3}, Ljava/lang/String;-><init>([CII)V
 
     .line 371
-    .local v3, newSymbol:Ljava/lang/String;
+    .local v3, "newSymbol":Ljava/lang/String;
     iget-boolean v5, p0, Lcom/flurry/org/codehaus/jackson/sym/CharsToNameCanonicalizer;->_intern:Z
 
     if-eqz v5, :cond_7
@@ -902,7 +902,7 @@
     goto :goto_0
 
     .line 361
-    .end local v3           #newSymbol:Ljava/lang/String;
+    .end local v3    # "newSymbol":Ljava/lang/String;
     :cond_8
     iget v5, p0, Lcom/flurry/org/codehaus/jackson/sym/CharsToNameCanonicalizer;->_size:I
 
@@ -925,12 +925,12 @@
     goto :goto_2
 
     .line 378
-    .restart local v3       #newSymbol:Ljava/lang/String;
+    .restart local v3    # "newSymbol":Ljava/lang/String;
     :cond_9
     shr-int/lit8 v1, p4, 0x1
 
     .line 379
-    .local v1, bix:I
+    .local v1, "bix":I
     iget-object v5, p0, Lcom/flurry/org/codehaus/jackson/sym/CharsToNameCanonicalizer;->_buckets:[Lcom/flurry/org/codehaus/jackson/sym/CharsToNameCanonicalizer$Bucket;
 
     new-instance v6, Lcom/flurry/org/codehaus/jackson/sym/CharsToNameCanonicalizer$Bucket;
@@ -948,8 +948,8 @@
 
 .method public declared-synchronized makeChild(ZZ)Lcom/flurry/org/codehaus/jackson/sym/CharsToNameCanonicalizer;
     .locals 7
-    .parameter "canonicalize"
-    .parameter "intern"
+    .param p1, "canonicalize"    # Z
+    .param p2, "intern"    # Z
 
     .prologue
     .line 236

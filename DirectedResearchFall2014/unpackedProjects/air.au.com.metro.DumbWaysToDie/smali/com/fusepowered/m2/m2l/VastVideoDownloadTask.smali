@@ -41,8 +41,8 @@
 # direct methods
 .method public constructor <init>(Lcom/fusepowered/m2/m2l/VastVideoDownloadTask$OnDownloadCompleteListener;Lcom/fusepowered/m2/m2l/DiskLruCache;)V
     .locals 1
-    .parameter "listener"
-    .parameter "diskLruCache"
+    .param p1, "listener"    # Lcom/fusepowered/m2/m2l/VastVideoDownloadTask$OnDownloadCompleteListener;
+    .param p2, "diskLruCache"    # Lcom/fusepowered/m2/m2l/DiskLruCache;
 
     .prologue
     .line 60
@@ -71,7 +71,7 @@
 # virtual methods
 .method connectToUrl(Ljava/lang/String;)Ljava/io/InputStream;
     .locals 5
-    .parameter "videoUrl"
+    .param p1, "videoUrl"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -98,7 +98,7 @@
     invoke-direct {v0, p1}, Lorg/apache/http/client/methods/HttpGet;-><init>(Ljava/lang/String;)V
 
     .line 111
-    .local v0, httpget:Lorg/apache/http/client/methods/HttpGet;
+    .local v0, "httpget":Lorg/apache/http/client/methods/HttpGet;
     iget-object v2, p0, Lcom/fusepowered/m2/m2l/VastVideoDownloadTask;->mHttpClient:Lorg/apache/http/impl/client/DefaultHttpClient;
 
     invoke-virtual {v2, v0}, Lorg/apache/http/impl/client/DefaultHttpClient;->execute(Lorg/apache/http/client/methods/HttpUriRequest;)Lorg/apache/http/HttpResponse;
@@ -106,7 +106,7 @@
     move-result-object v1
 
     .line 113
-    .local v1, response:Lorg/apache/http/HttpResponse;
+    .local v1, "response":Lorg/apache/http/HttpResponse;
     if-eqz v1, :cond_1
 
     invoke-interface {v1}, Lorg/apache/http/HttpResponse;->getEntity()Lorg/apache/http/HttpEntity;
@@ -152,7 +152,7 @@
 
 .method copyInputStreamToTempFile(Ljava/io/InputStream;)Ljava/io/File;
     .locals 6
-    .parameter "inputStream"
+    .param p1, "inputStream"    # Ljava/io/InputStream;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -176,7 +176,7 @@
     move-result-object v2
 
     .line 122
-    .local v2, tempFile:Ljava/io/File;
+    .local v2, "tempFile":Ljava/io/File;
     new-instance v1, Ljava/io/BufferedOutputStream;
 
     new-instance v3, Ljava/io/FileOutputStream;
@@ -186,14 +186,14 @@
     invoke-direct {v1, v3}, Ljava/io/BufferedOutputStream;-><init>(Ljava/io/OutputStream;)V
 
     .line 125
-    .local v1, outputStream:Ljava/io/OutputStream;
+    .local v1, "outputStream":Ljava/io/OutputStream;
     const-wide/32 v3, 0x17d7840
 
     :try_start_0
     invoke-static {p1, v1, v3, v4}, Lcom/fusepowered/m2/m2l/util/Streams;->copyContent(Ljava/io/InputStream;Ljava/io/OutputStream;J)V
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 130
     invoke-static {p1}, Lcom/fusepowered/m2/m2l/util/Streams;->closeStream(Ljava/io/Closeable;)V
@@ -209,7 +209,7 @@
     move-exception v0
 
     .line 127
-    .local v0, exception:Ljava/io/IOException;
+    .local v0, "exception":Ljava/io/IOException;
     :try_start_1
     invoke-virtual {v2}, Ljava/io/File;->delete()Z
 
@@ -219,7 +219,7 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     .line 129
-    .end local v0           #exception:Ljava/io/IOException;
+    .end local v0    # "exception":Ljava/io/IOException;
     :catchall_0
     move-exception v3
 
@@ -235,8 +235,8 @@
 
 .method copyTempFileIntoCache(Ljava/lang/String;Ljava/io/File;)Z
     .locals 3
-    .parameter "videoUrl"
-    .parameter "tempFile"
+    .param p1, "videoUrl"    # Ljava/lang/String;
+    .param p2, "tempFile"    # Ljava/io/File;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/FileNotFoundException;
@@ -254,7 +254,7 @@
     invoke-direct {v1, v2}, Ljava/io/BufferedInputStream;-><init>(Ljava/io/InputStream;)V
 
     .line 139
-    .local v1, temporaryVideoStream:Ljava/io/InputStream;
+    .local v1, "temporaryVideoStream":Ljava/io/InputStream;
     iget-object v2, p0, Lcom/fusepowered/m2/m2l/VastVideoDownloadTask;->mDiskLruCache:Lcom/fusepowered/m2/m2l/DiskLruCache;
 
     invoke-virtual {v2, p1, v1}, Lcom/fusepowered/m2/m2l/DiskLruCache;->putStream(Ljava/lang/String;Ljava/io/InputStream;)Z
@@ -262,7 +262,7 @@
     move-result v0
 
     .line 140
-    .local v0, savedSuccessfully:Z
+    .local v0, "savedSuccessfully":Z
     invoke-static {v1}, Lcom/fusepowered/m2/m2l/util/Streams;->closeStream(Ljava/io/Closeable;)V
 
     .line 141
@@ -271,7 +271,7 @@
 
 .method protected varargs doInBackground([Ljava/lang/String;)Ljava/lang/Boolean;
     .locals 2
-    .parameter "params"
+    .param p1, "params"    # [Ljava/lang/String;
 
     .prologue
     const/4 v1, 0x0
@@ -305,7 +305,6 @@
 
 .method protected bridge varargs synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
-    .parameter
 
     .prologue
     .line 1
@@ -320,27 +319,27 @@
 
 .method downloadToCache(Ljava/lang/String;)Ljava/lang/Boolean;
     .locals 6
-    .parameter "videoUrl"
+    .param p1, "videoUrl"    # Ljava/lang/String;
 
     .prologue
     .line 89
     const/4 v2, 0x0
 
     .line 92
-    .local v2, savedSuccessfully:Z
+    .local v2, "savedSuccessfully":Z
     :try_start_0
     invoke-virtual {p0, p1}, Lcom/fusepowered/m2/m2l/VastVideoDownloadTask;->connectToUrl(Ljava/lang/String;)Ljava/io/InputStream;
 
     move-result-object v1
 
     .line 93
-    .local v1, inputStream:Ljava/io/InputStream;
+    .local v1, "inputStream":Ljava/io/InputStream;
     invoke-virtual {p0, v1}, Lcom/fusepowered/m2/m2l/VastVideoDownloadTask;->copyInputStreamToTempFile(Ljava/io/InputStream;)Ljava/io/File;
 
     move-result-object v3
 
     .line 94
-    .local v3, tempFile:Ljava/io/File;
+    .local v3, "tempFile":Ljava/io/File;
     invoke-virtual {p0, p1, v3}, Lcom/fusepowered/m2/m2l/VastVideoDownloadTask;->copyTempFileIntoCache(Ljava/lang/String;Ljava/io/File;)Z
 
     move-result v2
@@ -348,8 +347,8 @@
     .line 95
     invoke-virtual {v3}, Ljava/io/File;->delete()Z
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 99
     iget-object v4, p0, Lcom/fusepowered/m2/m2l/VastVideoDownloadTask;->mHttpClient:Lorg/apache/http/impl/client/DefaultHttpClient;
@@ -357,8 +356,8 @@
     invoke-static {v4}, Lcom/fusepowered/m2/m2l/util/HttpClients;->safeShutdown(Lorg/apache/http/client/HttpClient;)V
 
     .line 102
-    .end local v1           #inputStream:Ljava/io/InputStream;
-    .end local v3           #tempFile:Ljava/io/File;
+    .end local v1    # "inputStream":Ljava/io/InputStream;
+    .end local v3    # "tempFile":Ljava/io/File;
     :goto_0
     invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -373,7 +372,7 @@
     move-object v0, v4
 
     .line 97
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     :try_start_1
     const-string v4, "MoPub"
 
@@ -391,7 +390,7 @@
     goto :goto_0
 
     .line 98
-    .end local v0           #e:Ljava/lang/Exception;
+    .end local v0    # "e":Ljava/lang/Exception;
     :catchall_0
     move-exception v4
 
@@ -406,7 +405,7 @@
 
 .method protected onPostExecute(Ljava/lang/Boolean;)V
     .locals 1
-    .parameter "success"
+    .param p1, "success"    # Ljava/lang/Boolean;
 
     .prologue
     .line 77
@@ -447,7 +446,6 @@
 
 .method protected bridge synthetic onPostExecute(Ljava/lang/Object;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1

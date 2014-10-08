@@ -40,12 +40,10 @@
 # direct methods
 .method constructor <init>(Lcom/flurry/org/apache/avro/reflect/ReflectDatumWriter;Ljava/lang/Object;)V
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 71
-    .local p0, this:Lcom/flurry/org/apache/avro/reflect/ReflectDatumWriter$1;,"Lcom/flurry/org/apache/avro/reflect/ReflectDatumWriter.1;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/reflect/ReflectDatumWriter$1;, "Lcom/flurry/org/apache/avro/reflect/ReflectDatumWriter.1;"
     iput-object p1, p0, Lcom/flurry/org/apache/avro/reflect/ReflectDatumWriter$1;->this$0:Lcom/flurry/org/apache/avro/reflect/ReflectDatumWriter;
 
     iput-object p2, p0, Lcom/flurry/org/apache/avro/reflect/ReflectDatumWriter$1;->val$array:Ljava/lang/Object;
@@ -76,7 +74,7 @@
 
     .prologue
     .line 74
-    .local p0, this:Lcom/flurry/org/apache/avro/reflect/ReflectDatumWriter$1;,"Lcom/flurry/org/apache/avro/reflect/ReflectDatumWriter.1;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/reflect/ReflectDatumWriter$1;, "Lcom/flurry/org/apache/avro/reflect/ReflectDatumWriter.1;"
     iget v0, p0, Lcom/flurry/org/apache/avro/reflect/ReflectDatumWriter$1;->i:I
 
     iget v1, p0, Lcom/flurry/org/apache/avro/reflect/ReflectDatumWriter$1;->length:I
@@ -99,7 +97,7 @@
 
     .prologue
     .line 75
-    .local p0, this:Lcom/flurry/org/apache/avro/reflect/ReflectDatumWriter$1;,"Lcom/flurry/org/apache/avro/reflect/ReflectDatumWriter.1;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/reflect/ReflectDatumWriter$1;, "Lcom/flurry/org/apache/avro/reflect/ReflectDatumWriter.1;"
     iget-object v0, p0, Lcom/flurry/org/apache/avro/reflect/ReflectDatumWriter$1;->val$array:Ljava/lang/Object;
 
     iget v1, p0, Lcom/flurry/org/apache/avro/reflect/ReflectDatumWriter$1;->i:I
@@ -120,7 +118,7 @@
 
     .prologue
     .line 76
-    .local p0, this:Lcom/flurry/org/apache/avro/reflect/ReflectDatumWriter$1;,"Lcom/flurry/org/apache/avro/reflect/ReflectDatumWriter.1;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/reflect/ReflectDatumWriter$1;, "Lcom/flurry/org/apache/avro/reflect/ReflectDatumWriter.1;"
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V

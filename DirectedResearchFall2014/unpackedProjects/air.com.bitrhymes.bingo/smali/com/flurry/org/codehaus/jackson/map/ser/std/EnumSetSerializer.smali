@@ -19,8 +19,8 @@
 # direct methods
 .method public constructor <init>(Lcom/flurry/org/codehaus/jackson/type/JavaType;Lcom/flurry/org/codehaus/jackson/map/BeanProperty;)V
     .locals 7
-    .parameter "elemType"
-    .parameter "property"
+    .param p1, "elemType"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .param p2, "property"    # Lcom/flurry/org/codehaus/jackson/map/BeanProperty;
 
     .prologue
     const/4 v4, 0x0
@@ -48,7 +48,7 @@
 # virtual methods
 .method public _withValueTypeSerializer(Lcom/flurry/org/codehaus/jackson/map/TypeSerializer;)Lcom/flurry/org/codehaus/jackson/map/ser/std/ContainerSerializerBase;
     .locals 0
-    .parameter "vts"
+    .param p1, "vts"    # Lcom/flurry/org/codehaus/jackson/map/TypeSerializer;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -66,9 +66,9 @@
 
 .method public bridge synthetic serializeContents(Ljava/lang/Object;Lcom/flurry/org/codehaus/jackson/JsonGenerator;Lcom/flurry/org/codehaus/jackson/map/SerializerProvider;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
-    .parameter "x2"
+    .param p1, "x0"    # Ljava/lang/Object;
+    .param p2, "x1"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator;
+    .param p3, "x2"    # Lcom/flurry/org/codehaus/jackson/map/SerializerProvider;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -80,7 +80,7 @@
     .line 14
     check-cast p1, Ljava/util/EnumSet;
 
-    .end local p1
+    .end local p1    # "x0":Ljava/lang/Object;
     invoke-virtual {p0, p1, p2, p3}, Lcom/flurry/org/codehaus/jackson/map/ser/std/EnumSetSerializer;->serializeContents(Ljava/util/EnumSet;Lcom/flurry/org/codehaus/jackson/JsonGenerator;Lcom/flurry/org/codehaus/jackson/map/SerializerProvider;)V
 
     return-void
@@ -88,9 +88,8 @@
 
 .method public serializeContents(Ljava/util/EnumSet;Lcom/flurry/org/codehaus/jackson/JsonGenerator;Lcom/flurry/org/codehaus/jackson/map/SerializerProvider;)V
     .locals 5
-    .parameter
-    .parameter "jgen"
-    .parameter "provider"
+    .param p2, "jgen"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator;
+    .param p3, "provider"    # Lcom/flurry/org/codehaus/jackson/map/SerializerProvider;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -113,16 +112,16 @@
 
     .prologue
     .line 32
-    .local p1, value:Ljava/util/EnumSet;,"Ljava/util/EnumSet<+Ljava/lang/Enum<*>;>;"
+    .local p1, "value":Ljava/util/EnumSet;, "Ljava/util/EnumSet<+Ljava/lang/Enum<*>;>;"
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/map/ser/std/EnumSetSerializer;->_elementSerializer:Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;
 
     .line 37
-    .local v1, enumSer:Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
+    .local v1, "enumSer":Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
     invoke-virtual {p1}, Ljava/util/EnumSet;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
 
-    .local v2, i$:Ljava/util/Iterator;
+    .local v2, "i$":Ljava/util/Iterator;
     :goto_0
     invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
@@ -137,7 +136,7 @@
     check-cast v0, Ljava/lang/Enum;
 
     .line 38
-    .local v0, en:Ljava/lang/Enum;,"Ljava/lang/Enum<*>;"
+    .local v0, "en":Ljava/lang/Enum;, "Ljava/lang/Enum<*>;"
     if-nez v1, :cond_0
 
     .line 42
@@ -158,7 +157,7 @@
     goto :goto_0
 
     .line 46
-    .end local v0           #en:Ljava/lang/Enum;,"Ljava/lang/Enum<*>;"
+    .end local v0    # "en":Ljava/lang/Enum;, "Ljava/lang/Enum<*>;"
     :cond_1
     return-void
 .end method

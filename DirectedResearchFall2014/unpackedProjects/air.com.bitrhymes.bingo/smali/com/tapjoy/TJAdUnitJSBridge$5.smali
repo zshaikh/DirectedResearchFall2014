@@ -28,9 +28,6 @@
 # direct methods
 .method constructor <init>(Lcom/tapjoy/TJAdUnitJSBridge;Lorg/json/JSONObject;Ljava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 687
@@ -59,7 +56,7 @@
     :try_start_0
     iget-object v1, p0, Lcom/tapjoy/TJAdUnitJSBridge$5;->this$0:Lcom/tapjoy/TJAdUnitJSBridge;
 
-    #getter for: Lcom/tapjoy/TJAdUnitJSBridge;->webView:Landroid/webkit/WebView;
+    # getter for: Lcom/tapjoy/TJAdUnitJSBridge;->webView:Landroid/webkit/WebView;
     invoke-static {v1}, Lcom/tapjoy/TJAdUnitJSBridge;->access$300(Lcom/tapjoy/TJAdUnitJSBridge;)Landroid/webkit/WebView;
 
     move-result-object v1
@@ -122,7 +119,7 @@
     move-object v0, v1
 
     .line 697
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     iget-object v1, p0, Lcom/tapjoy/TJAdUnitJSBridge$5;->this$0:Lcom/tapjoy/TJAdUnitJSBridge;
 
     iget-object v2, p0, Lcom/tapjoy/TJAdUnitJSBridge$5;->val$callbackID:Ljava/lang/String;

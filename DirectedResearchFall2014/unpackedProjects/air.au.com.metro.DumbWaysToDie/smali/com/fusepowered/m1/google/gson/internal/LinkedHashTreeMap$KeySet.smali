@@ -28,11 +28,10 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 836
-    .local p0, this:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$KeySet;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap<TK;TV;>.KeySet;"
+    .local p0, "this":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$KeySet;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap<TK;TV;>.KeySet;"
     iput-object p1, p0, Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$KeySet;->this$0:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap;
 
     invoke-direct {p0}, Ljava/util/AbstractSet;-><init>()V
@@ -47,7 +46,7 @@
 
     .prologue
     .line 858
-    .local p0, this:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$KeySet;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap<TK;TV;>.KeySet;"
+    .local p0, "this":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$KeySet;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap<TK;TV;>.KeySet;"
     iget-object v0, p0, Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$KeySet;->this$0:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap;
 
     invoke-virtual {v0}, Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap;->clear()V
@@ -58,11 +57,11 @@
 
 .method public contains(Ljava/lang/Object;)Z
     .locals 1
-    .parameter "o"
+    .param p1, "o"    # Ljava/lang/Object;
 
     .prologue
     .line 850
-    .local p0, this:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$KeySet;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap<TK;TV;>.KeySet;"
+    .local p0, "this":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$KeySet;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap<TK;TV;>.KeySet;"
     iget-object v0, p0, Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$KeySet;->this$0:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap;
 
     invoke-virtual {v0, p1}, Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap;->containsKey(Ljava/lang/Object;)Z
@@ -84,7 +83,7 @@
 
     .prologue
     .line 842
-    .local p0, this:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$KeySet;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap<TK;TV;>.KeySet;"
+    .local p0, "this":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$KeySet;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap<TK;TV;>.KeySet;"
     new-instance v0, Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$KeySet$1;
 
     invoke-direct {v0, p0}, Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$KeySet$1;-><init>(Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$KeySet;)V
@@ -94,11 +93,11 @@
 
 .method public remove(Ljava/lang/Object;)Z
     .locals 1
-    .parameter "key"
+    .param p1, "key"    # Ljava/lang/Object;
 
     .prologue
     .line 854
-    .local p0, this:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$KeySet;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap<TK;TV;>.KeySet;"
+    .local p0, "this":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$KeySet;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap<TK;TV;>.KeySet;"
     iget-object v0, p0, Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$KeySet;->this$0:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap;
 
     invoke-virtual {v0, p1}, Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap;->removeInternalByKey(Ljava/lang/Object;)Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;
@@ -123,7 +122,7 @@
 
     .prologue
     .line 838
-    .local p0, this:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$KeySet;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap<TK;TV;>.KeySet;"
+    .local p0, "this":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$KeySet;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap<TK;TV;>.KeySet;"
     iget-object v0, p0, Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$KeySet;->this$0:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap;
 
     iget v0, v0, Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap;->size:I

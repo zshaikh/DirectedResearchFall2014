@@ -96,7 +96,6 @@
 
 .method private a(Lcom/vungle/sdk/model/RequestAd;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 77
@@ -140,7 +139,6 @@
 # virtual methods
 .method public final a(Lcom/vungle/sdk/av;)V
     .locals 4
-    .parameter
 
     .prologue
     const-string v3, "com.vungle.sdk.VungleUtil"
@@ -229,7 +227,6 @@
 
 .method public final bridge synthetic a(Ljava/lang/Object;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 24
@@ -242,8 +239,6 @@
 
 .method public final a(Ljava/util/Set;Ljava/util/Set;)V
     .locals 1
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",

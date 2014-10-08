@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/facebook/internal/FileLruCache;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1
@@ -45,7 +44,7 @@
     .line 272
     iget-object v0, p0, Lcom/facebook/internal/FileLruCache$3;->this$0:Lcom/facebook/internal/FileLruCache;
 
-    #calls: Lcom/facebook/internal/FileLruCache;->trim()V
+    # invokes: Lcom/facebook/internal/FileLruCache;->trim()V
     invoke-static {v0}, Lcom/facebook/internal/FileLruCache;->access$3(Lcom/facebook/internal/FileLruCache;)V
 
     .line 273

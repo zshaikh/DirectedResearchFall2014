@@ -6,9 +6,6 @@
 # direct methods
 .method public static a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 70
@@ -23,8 +20,6 @@
 
 .method public static a(Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 66

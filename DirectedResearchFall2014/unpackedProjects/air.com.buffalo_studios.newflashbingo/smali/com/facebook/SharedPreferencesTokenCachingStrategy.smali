@@ -11,7 +11,7 @@
 
 .field private static final JSON_VALUE_TYPE:Ljava/lang/String; = "valueType"
 
-.field private static final TAG:Ljava/lang/String; = null
+.field private static final TAG:Ljava/lang/String;
 
 .field private static final TYPE_BOOLEAN:Ljava/lang/String; = "bool"
 

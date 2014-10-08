@@ -21,8 +21,7 @@
 # direct methods
 .method public constructor <init>(Lcom/flurry/org/apache/avro/file/DataFileWriter$BufferedFileOutputStream;Ljava/io/OutputStream;)V
     .locals 0
-    .parameter
-    .parameter "out"
+    .param p2, "out"    # Ljava/io/OutputStream;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -31,7 +30,7 @@
 
     .prologue
     .line 382
-    .local p0, this:Lcom/flurry/org/apache/avro/file/DataFileWriter$BufferedFileOutputStream$PositionFilter;,"Lcom/flurry/org/apache/avro/file/DataFileWriter<TD;>.BufferedFileOutputStream.PositionFilter;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/file/DataFileWriter$BufferedFileOutputStream$PositionFilter;, "Lcom/flurry/org/apache/avro/file/DataFileWriter<TD;>.BufferedFileOutputStream.PositionFilter;"
     iput-object p1, p0, Lcom/flurry/org/apache/avro/file/DataFileWriter$BufferedFileOutputStream$PositionFilter;->this$1:Lcom/flurry/org/apache/avro/file/DataFileWriter$BufferedFileOutputStream;
 
     invoke-direct {p0, p2}, Ljava/io/FilterOutputStream;-><init>(Ljava/io/OutputStream;)V
@@ -43,9 +42,9 @@
 # virtual methods
 .method public write([BII)V
     .locals 3
-    .parameter "b"
-    .parameter "off"
-    .parameter "len"
+    .param p1, "b"    # [B
+    .param p2, "off"    # I
+    .param p3, "len"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -54,7 +53,7 @@
 
     .prologue
     .line 385
-    .local p0, this:Lcom/flurry/org/apache/avro/file/DataFileWriter$BufferedFileOutputStream$PositionFilter;,"Lcom/flurry/org/apache/avro/file/DataFileWriter<TD;>.BufferedFileOutputStream.PositionFilter;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/file/DataFileWriter$BufferedFileOutputStream$PositionFilter;, "Lcom/flurry/org/apache/avro/file/DataFileWriter<TD;>.BufferedFileOutputStream.PositionFilter;"
     iget-object v0, p0, Lcom/flurry/org/apache/avro/file/DataFileWriter$BufferedFileOutputStream$PositionFilter;->out:Ljava/io/OutputStream;
 
     invoke-virtual {v0, p1, p2, p3}, Ljava/io/OutputStream;->write([BII)V
@@ -64,6 +63,7 @@
 
     int-to-long v1, p3
 
+    # += operator for: Lcom/flurry/org/apache/avro/file/DataFileWriter$BufferedFileOutputStream;->position:J
     invoke-static {v0, v1, v2}, Lcom/flurry/org/apache/avro/file/DataFileWriter$BufferedFileOutputStream;->access$014(Lcom/flurry/org/apache/avro/file/DataFileWriter$BufferedFileOutputStream;J)J
 
     .line 387

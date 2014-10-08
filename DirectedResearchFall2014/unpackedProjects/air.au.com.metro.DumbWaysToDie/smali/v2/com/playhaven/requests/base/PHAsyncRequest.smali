@@ -65,7 +65,7 @@
 # direct methods
 .method public constructor <init>(Lv2/com/playhaven/listeners/PHHttpRequestListener;)V
     .locals 1
-    .parameter "delegate"
+    .param p1, "delegate"    # Lv2/com/playhaven/listeners/PHHttpRequestListener;
 
     .prologue
     .line 269
@@ -99,7 +99,7 @@
 
 .method private varargs execRequest([Landroid/net/Uri;)Ljava/nio/ByteBuffer;
     .locals 11
-    .parameter "urls"
+    .param p1, "urls"    # [Landroid/net/Uri;
 
     .prologue
     const/4 v10, 0x0
@@ -108,7 +108,7 @@
     const/4 v0, 0x0
 
     .line 321
-    .local v0, buffer:Ljava/nio/ByteBuffer;
+    .local v0, "buffer":Ljava/nio/ByteBuffer;
     const/4 v8, -0x1
 
     iput v8, p0, Lv2/com/playhaven/requests/base/PHAsyncRequest;->responseCode:I
@@ -148,7 +148,7 @@
     aget-object v7, p1, v8
 
     .line 336
-    .local v7, url:Landroid/net/Uri;
+    .local v7, "url":Landroid/net/Uri;
     iget-object v8, p0, Lv2/com/playhaven/requests/base/PHAsyncRequest;->url:Landroid/net/Uri;
 
     invoke-virtual {v7, v8}, Landroid/net/Uri;->equals(Ljava/lang/Object;)Z
@@ -164,21 +164,21 @@
     .line 337
     iget-object v7, p0, Lv2/com/playhaven/requests/base/PHAsyncRequest;->url:Landroid/net/Uri;
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 339
     :cond_0
     const/4 v6, 0x0
 
     .line 341
-    .local v6, response:Lorg/apache/http/HttpResponse;
+    .local v6, "response":Lorg/apache/http/HttpResponse;
     :try_start_1
     invoke-virtual {p0}, Lv2/com/playhaven/requests/base/PHAsyncRequest;->isCancelled()Z
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     move-result v8
 
@@ -192,14 +192,14 @@
     move-object v8, v10
 
     .line 393
-    .end local v6           #response:Lorg/apache/http/HttpResponse;
-    .end local v7           #url:Landroid/net/Uri;
+    .end local v6    # "response":Lorg/apache/http/HttpResponse;
+    .end local v7    # "url":Landroid/net/Uri;
     :goto_0
     return-object v8
 
     .line 344
-    .restart local v6       #response:Lorg/apache/http/HttpResponse;
-    .restart local v7       #url:Landroid/net/Uri;
+    .restart local v6    # "response":Lorg/apache/http/HttpResponse;
+    .restart local v7    # "url":Landroid/net/Uri;
     :cond_1
     :try_start_3
     invoke-virtual {v7}, Landroid/net/Uri;->toString()Ljava/lang/String;
@@ -207,7 +207,7 @@
     move-result-object v4
 
     .line 347
-    .local v4, net_uri:Ljava/lang/String;
+    .local v4, "net_uri":Ljava/lang/String;
     iget-object v8, p0, Lv2/com/playhaven/requests/base/PHAsyncRequest;->request_type:Lv2/com/playhaven/requests/base/PHAsyncRequest$RequestType;
 
     sget-object v9, Lv2/com/playhaven/requests/base/PHAsyncRequest$RequestType;->Post:Lv2/com/playhaven/requests/base/PHAsyncRequest$RequestType;
@@ -220,7 +220,7 @@
     invoke-direct {v5, v4}, Lorg/apache/http/client/methods/HttpPost;-><init>(Ljava/lang/String;)V
 
     .line 350
-    .local v5, request:Lorg/apache/http/client/methods/HttpPost;
+    .local v5, "request":Lorg/apache/http/client/methods/HttpPost;
     new-instance v8, Lorg/apache/http/client/entity/UrlEncodedFormEntity;
 
     iget-object v9, p0, Lv2/com/playhaven/requests/base/PHAsyncRequest;->postParams:Ljava/util/ArrayList;
@@ -237,14 +237,14 @@
     move-result-object v6
 
     .line 363
-    .end local v5           #request:Lorg/apache/http/client/methods/HttpPost;
+    .end local v5    # "request":Lorg/apache/http/client/methods/HttpPost;
     :goto_1
     invoke-interface {v6}, Lorg/apache/http/HttpResponse;->getEntity()Lorg/apache/http/HttpEntity;
 
     move-result-object v2
 
     .line 366
-    .local v2, entity:Lorg/apache/http/HttpEntity;
+    .local v2, "entity":Lorg/apache/http/HttpEntity;
     invoke-interface {v6}, Lorg/apache/http/HttpResponse;->getStatusLine()Lorg/apache/http/StatusLine;
 
     move-result-object v8
@@ -277,9 +277,9 @@
     :cond_2
     invoke-virtual {p0}, Lv2/com/playhaven/requests/base/PHAsyncRequest;->isCancelled()Z
     :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_0
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_1
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
     move-result v8
 
@@ -295,7 +295,7 @@
     goto :goto_0
 
     .line 354
-    .end local v2           #entity:Lorg/apache/http/HttpEntity;
+    .end local v2    # "entity":Lorg/apache/http/HttpEntity;
     :cond_3
     :try_start_5
     iget-object v8, p0, Lv2/com/playhaven/requests/base/PHAsyncRequest;->request_type:Lv2/com/playhaven/requests/base/PHAsyncRequest$RequestType;
@@ -310,7 +310,7 @@
     invoke-direct {v5, v4}, Lorg/apache/http/client/methods/HttpGet;-><init>(Ljava/lang/String;)V
 
     .line 356
-    .local v5, request:Lorg/apache/http/client/methods/HttpGet;
+    .local v5, "request":Lorg/apache/http/client/methods/HttpGet;
     iget-object v8, p0, Lv2/com/playhaven/requests/base/PHAsyncRequest;->client:Lv2/com/playhaven/requests/base/PHAsyncRequest$PHHttpConn;
 
     invoke-virtual {v8, v5}, Lv2/com/playhaven/requests/base/PHAsyncRequest$PHHttpConn;->start(Lorg/apache/http/client/methods/HttpUriRequest;)Lorg/apache/http/HttpResponse;
@@ -321,14 +321,14 @@
     goto :goto_1
 
     .line 358
-    .end local v5           #request:Lorg/apache/http/client/methods/HttpGet;
+    .end local v5    # "request":Lorg/apache/http/client/methods/HttpGet;
     :cond_4
     new-instance v5, Lorg/apache/http/client/methods/HttpGet;
 
     invoke-direct {v5, v4}, Lorg/apache/http/client/methods/HttpGet;-><init>(Ljava/lang/String;)V
 
     .line 359
-    .restart local v5       #request:Lorg/apache/http/client/methods/HttpGet;
+    .restart local v5    # "request":Lorg/apache/http/client/methods/HttpGet;
     iget-object v8, p0, Lv2/com/playhaven/requests/base/PHAsyncRequest;->client:Lv2/com/playhaven/requests/base/PHAsyncRequest$PHHttpConn;
 
     invoke-virtual {v8, v5}, Lv2/com/playhaven/requests/base/PHAsyncRequest$PHHttpConn;->start(Lorg/apache/http/client/methods/HttpUriRequest;)Lorg/apache/http/HttpResponse;
@@ -338,8 +338,8 @@
     goto :goto_1
 
     .line 376
-    .end local v5           #request:Lorg/apache/http/client/methods/HttpGet;
-    .restart local v2       #entity:Lorg/apache/http/HttpEntity;
+    .end local v5    # "request":Lorg/apache/http/client/methods/HttpGet;
+    .restart local v2    # "entity":Lorg/apache/http/HttpEntity;
     :cond_5
     if-eqz v2, :cond_6
 
@@ -349,7 +349,7 @@
     move-result-object v3
 
     .line 379
-    .local v3, in_stream:Ljava/io/InputStream;
+    .local v3, "in_stream":Ljava/io/InputStream;
     invoke-static {v3}, Lv2/com/playhaven/requests/base/PHAsyncRequest;->readStream(Ljava/io/InputStream;)Ljava/nio/ByteBuffer;
 
     move-result-object v0
@@ -357,16 +357,16 @@
     .line 381
     invoke-virtual {v3}, Ljava/io/InputStream;->close()V
     :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_0
     .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_0
     .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_1
+    .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
     .line 324
-    .end local v2           #entity:Lorg/apache/http/HttpEntity;
-    .end local v3           #in_stream:Ljava/io/InputStream;
-    .end local v4           #net_uri:Ljava/lang/String;
-    .end local v6           #response:Lorg/apache/http/HttpResponse;
-    .end local v7           #url:Landroid/net/Uri;
+    .end local v2    # "entity":Lorg/apache/http/HttpEntity;
+    .end local v3    # "in_stream":Ljava/io/InputStream;
+    .end local v4    # "net_uri":Ljava/lang/String;
+    .end local v6    # "response":Lorg/apache/http/HttpResponse;
+    .end local v7    # "url":Landroid/net/Uri;
     :cond_6
     :goto_2
     :try_start_6
@@ -380,15 +380,15 @@
     goto :goto_0
 
     .line 384
-    .restart local v6       #response:Lorg/apache/http/HttpResponse;
-    .restart local v7       #url:Landroid/net/Uri;
+    .restart local v6    # "response":Lorg/apache/http/HttpResponse;
+    .restart local v7    # "url":Landroid/net/Uri;
     :catch_0
     move-exception v8
 
     move-object v1, v8
 
     .line 385
-    .local v1, e:Ljava/io/IOException;
+    .local v1, "e":Ljava/io/IOException;
     :try_start_7
     new-instance v8, Lv2/com/playhaven/model/PHError;
 
@@ -396,22 +396,22 @@
 
     iput-object v8, p0, Lv2/com/playhaven/requests/base/PHAsyncRequest;->lastError:Lv2/com/playhaven/model/PHError;
     :try_end_7
-    .catchall {:try_start_7 .. :try_end_7} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_7 .. :try_end_7} :catch_1
+    .catchall {:try_start_7 .. :try_end_7} :catchall_0
 
     goto :goto_2
 
     .line 388
-    .end local v1           #e:Ljava/io/IOException;
-    .end local v6           #response:Lorg/apache/http/HttpResponse;
-    .end local v7           #url:Landroid/net/Uri;
+    .end local v1    # "e":Ljava/io/IOException;
+    .end local v6    # "response":Lorg/apache/http/HttpResponse;
+    .end local v7    # "url":Landroid/net/Uri;
     :catch_1
     move-exception v8
 
     move-object v1, v8
 
     .line 389
-    .local v1, e:Ljava/lang/Exception;
+    .local v1, "e":Ljava/lang/Exception;
     :try_start_8
     const-string v8, "PHAsyncRequest - doInBackground"
 
@@ -422,7 +422,7 @@
     goto :goto_2
 
     .line 324
-    .end local v1           #e:Ljava/lang/Exception;
+    .end local v1    # "e":Ljava/lang/Exception;
     :catchall_0
     move-exception v8
 
@@ -435,7 +435,7 @@
 
 .method private static readStream(Ljava/io/InputStream;)Ljava/nio/ByteBuffer;
     .locals 5
-    .parameter "inputStream"
+    .param p0, "inputStream"    # Ljava/io/InputStream;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -449,19 +449,19 @@
     invoke-direct {v3}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
     .line 459
-    .local v3, output:Ljava/io/ByteArrayOutputStream;
+    .local v3, "output":Ljava/io/ByteArrayOutputStream;
     const/16 v1, 0x400
 
     .line 460
-    .local v1, bufferSize:I
+    .local v1, "bufferSize":I
     new-array v0, v1, [B
 
     .line 462
-    .local v0, buffer:[B
+    .local v0, "buffer":[B
     const/4 v2, 0x0
 
     .line 463
-    .local v2, len:I
+    .local v2, "len":I
     :goto_0
     invoke-virtual {p0, v0}, Ljava/io/InputStream;->read([B)I
 
@@ -496,7 +496,7 @@
 
 .method public static streamToString(Ljava/io/InputStream;)Ljava/lang/String;
     .locals 3
-    .parameter "inputStream"
+    .param p0, "inputStream"    # Ljava/io/InputStream;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -527,8 +527,8 @@
 # virtual methods
 .method public addPostParam(Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
-    .parameter "key"
-    .parameter "value"
+    .param p1, "key"    # Ljava/lang/String;
+    .param p2, "value"    # Ljava/lang/String;
 
     .prologue
     .line 288
@@ -546,7 +546,6 @@
 
 .method public addPostParams(Ljava/util/Hashtable;)V
     .locals 6
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -560,7 +559,7 @@
 
     .prologue
     .line 292
-    .local p1, params:Ljava/util/Hashtable;,"Ljava/util/Hashtable<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p1, "params":Ljava/util/Hashtable;, "Ljava/util/Hashtable<Ljava/lang/String;Ljava/lang/String;>;"
     if-nez p1, :cond_1
 
     .line 300
@@ -596,7 +595,7 @@
     check-cast v0, Ljava/util/Map$Entry;
 
     .line 297
-    .local v0, entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v0, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
     iget-object v4, p0, Lv2/com/playhaven/requests/base/PHAsyncRequest;->postParams:Ljava/util/ArrayList;
 
     new-instance v5, Lorg/apache/http/message/BasicNameValuePair;
@@ -624,7 +623,6 @@
 
 .method protected bridge varargs synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
-    .parameter
 
     .prologue
     .line 1
@@ -639,7 +637,7 @@
 
 .method protected varargs doInBackground([Landroid/net/Uri;)Ljava/nio/ByteBuffer;
     .locals 1
-    .parameter "urls"
+    .param p1, "urls"    # [Landroid/net/Uri;
 
     .prologue
     .line 315
@@ -762,7 +760,6 @@
 
 .method protected bridge synthetic onPostExecute(Ljava/lang/Object;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1
@@ -775,7 +772,7 @@
 
 .method protected onPostExecute(Ljava/nio/ByteBuffer;)V
     .locals 8
-    .parameter "result"
+    .param p1, "result"    # Ljava/nio/ByteBuffer;
 
     .prologue
     .line 398
@@ -797,7 +794,7 @@
     sub-long v1, v4, v6
 
     .line 404
-    .local v1, elapsedTimeMillis:J
+    .local v1, "elapsedTimeMillis":J
     new-instance v4, Ljava/lang/StringBuilder;
 
     const-string v5, "PHAsyncRequest elapsed time (ms) = "
@@ -813,7 +810,7 @@
     move-result-object v3
 
     .line 405
-    .local v3, outTime:Ljava/lang/String;
+    .local v3, "outTime":Ljava/lang/String;
     invoke-static {v3}, Lv2/com/playhaven/utils/PHStringUtil;->log(Ljava/lang/String;)V
 
     .line 407
@@ -833,15 +830,15 @@
     invoke-interface {v4, v5}, Lv2/com/playhaven/listeners/PHHttpRequestListener;->onHttpRequestFailed(Lv2/com/playhaven/model/PHError;)V
 
     .line 416
-    .end local v1           #elapsedTimeMillis:J
-    .end local v3           #outTime:Ljava/lang/String;
+    .end local v1    # "elapsedTimeMillis":J
+    .end local v3    # "outTime":Ljava/lang/String;
     :cond_0
     :goto_0
     return-void
 
     .line 409
-    .restart local v1       #elapsedTimeMillis:J
-    .restart local v3       #outTime:Ljava/lang/String;
+    .restart local v1    # "elapsedTimeMillis":J
+    .restart local v3    # "outTime":Ljava/lang/String;
     :cond_1
     iget-object v4, p0, Lv2/com/playhaven/requests/base/PHAsyncRequest;->listener:Lv2/com/playhaven/listeners/PHHttpRequestListener;
 
@@ -859,15 +856,15 @@
     goto :goto_0
 
     .line 412
-    .end local v1           #elapsedTimeMillis:J
-    .end local v3           #outTime:Ljava/lang/String;
+    .end local v1    # "elapsedTimeMillis":J
+    .end local v3    # "outTime":Ljava/lang/String;
     :catch_0
     move-exception v4
 
     move-object v0, v4
 
     .line 413
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v4, "PHAsyncRequest - onPostExecute"
 
     sget-object v5, Lv2/com/playhaven/requests/crashreport/PHCrashReport$Urgency;->critical:Lv2/com/playhaven/requests/crashreport/PHCrashReport$Urgency;
@@ -879,7 +876,7 @@
 
 .method public setMaxRedirects(I)V
     .locals 1
-    .parameter "max"
+    .param p1, "max"    # I
 
     .prologue
     .line 276
@@ -893,7 +890,7 @@
 
 .method public setPHHttpClient(Lv2/com/playhaven/requests/base/PHAsyncRequest$PHHttpConn;)V
     .locals 0
-    .parameter "client"
+    .param p1, "client"    # Lv2/com/playhaven/requests/base/PHAsyncRequest$PHHttpConn;
 
     .prologue
     .line 441
@@ -905,7 +902,7 @@
 
 .method public setPassword(Ljava/lang/String;)V
     .locals 1
-    .parameter "password"
+    .param p1, "password"    # Ljava/lang/String;
 
     .prologue
     .line 428
@@ -922,7 +919,7 @@
 
 .method public setUsername(Ljava/lang/String;)V
     .locals 1
-    .parameter "username"
+    .param p1, "username"    # Ljava/lang/String;
 
     .prologue
     .line 419

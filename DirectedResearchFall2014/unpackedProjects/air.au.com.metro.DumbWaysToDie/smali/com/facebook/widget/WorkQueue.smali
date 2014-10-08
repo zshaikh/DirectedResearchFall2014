@@ -3,8 +3,7 @@
 
 
 # static fields
-#the value of this static final field might be set in the static constructor
-.field static final synthetic $assertionsDisabled:Z = false
+.field static final synthetic $assertionsDisabled:Z
 
 .field public static final DEFAULT_MAX_CONCURRENT:I = 0x8
 

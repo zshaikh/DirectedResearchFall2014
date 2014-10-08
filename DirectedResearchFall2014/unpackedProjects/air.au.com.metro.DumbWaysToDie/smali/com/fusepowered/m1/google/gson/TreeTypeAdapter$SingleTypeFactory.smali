@@ -60,10 +60,8 @@
 # direct methods
 .method private constructor <init>(Ljava/lang/Object;Lcom/fusepowered/m1/google/gson/reflect/TypeToken;ZLjava/lang/Class;)V
     .locals 3
-    .parameter "typeAdapter"
-    .parameter
-    .parameter "matchRawType"
-    .parameter
+    .param p1, "typeAdapter"    # Ljava/lang/Object;
+    .param p3, "matchRawType"    # Z
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -76,8 +74,8 @@
     .end annotation
 
     .prologue
-    .local p2, exactType:Lcom/fusepowered/m1/google/gson/reflect/TypeToken;,"Lcom/fusepowered/m1/google/gson/reflect/TypeToken<*>;"
-    .local p4, hierarchyType:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p2, "exactType":Lcom/fusepowered/m1/google/gson/reflect/TypeToken;, "Lcom/fusepowered/m1/google/gson/reflect/TypeToken<*>;"
+    .local p4, "hierarchyType":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const/4 v2, 0x0
 
     .line 117
@@ -104,7 +102,7 @@
 
     check-cast p1, Lcom/fusepowered/m1/google/gson/JsonDeserializer;
 
-    .end local p1
+    .end local p1    # "typeAdapter":Ljava/lang/Object;
     move-object v1, p1
 
     :goto_1
@@ -137,7 +135,7 @@
     .line 128
     return-void
 
-    .restart local p1
+    .restart local p1    # "typeAdapter":Ljava/lang/Object;
     :cond_1
     move-object v1, v2
 
@@ -151,7 +149,7 @@
     goto :goto_1
 
     .line 124
-    .end local p1
+    .end local p1    # "typeAdapter":Ljava/lang/Object;
     :cond_3
     const/4 v1, 0x0
 
@@ -160,11 +158,11 @@
 
 .method synthetic constructor <init>(Ljava/lang/Object;Lcom/fusepowered/m1/google/gson/reflect/TypeToken;ZLjava/lang/Class;Lcom/fusepowered/m1/google/gson/TreeTypeAdapter$1;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
-    .parameter "x2"
-    .parameter "x3"
-    .parameter "x4"
+    .param p1, "x0"    # Ljava/lang/Object;
+    .param p2, "x1"    # Lcom/fusepowered/m1/google/gson/reflect/TypeToken;
+    .param p3, "x2"    # Z
+    .param p4, "x3"    # Ljava/lang/Class;
+    .param p5, "x4"    # Lcom/fusepowered/m1/google/gson/TreeTypeAdapter$1;
 
     .prologue
     .line 109
@@ -177,8 +175,7 @@
 # virtual methods
 .method public create(Lcom/fusepowered/m1/google/gson/Gson;Lcom/fusepowered/m1/google/gson/reflect/TypeToken;)Lcom/fusepowered/m1/google/gson/TypeAdapter;
     .locals 8
-    .parameter "gson"
-    .parameter
+    .param p1, "gson"    # Lcom/fusepowered/m1/google/gson/Gson;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -193,7 +190,7 @@
     .end annotation
 
     .prologue
-    .local p2, type:Lcom/fusepowered/m1/google/gson/reflect/TypeToken;,"Lcom/fusepowered/m1/google/gson/reflect/TypeToken<TT;>;"
+    .local p2, "type":Lcom/fusepowered/m1/google/gson/reflect/TypeToken;, "Lcom/fusepowered/m1/google/gson/reflect/TypeToken<TT;>;"
     const/4 v6, 0x0
 
     .line 132
@@ -231,7 +228,7 @@
     move v7, v0
 
     .line 135
-    .local v7, matches:Z
+    .local v7, "matches":Z
     :goto_0
     if-eqz v7, :cond_3
 
@@ -253,7 +250,7 @@
     return-object v0
 
     .line 132
-    .end local v7           #matches:Z
+    .end local v7    # "matches":Z
     :cond_1
     const/4 v0, 0x0
 
@@ -276,7 +273,7 @@
 
     goto :goto_0
 
-    .restart local v7       #matches:Z
+    .restart local v7    # "matches":Z
     :cond_3
     move-object v0, v6
 

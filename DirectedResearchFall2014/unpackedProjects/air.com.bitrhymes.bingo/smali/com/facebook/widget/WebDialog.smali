@@ -61,8 +61,8 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Ljava/lang/String;)V
     .locals 1
-    .parameter "context"
-    .parameter "url"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "url"    # Ljava/lang/String;
 
     .prologue
     .line 105
@@ -76,9 +76,9 @@
 
 .method public constructor <init>(Landroid/content/Context;Ljava/lang/String;I)V
     .locals 1
-    .parameter "context"
-    .parameter "url"
-    .parameter "theme"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "url"    # Ljava/lang/String;
+    .param p3, "theme"    # I
 
     .prologue
     const/4 v0, 0x0
@@ -101,11 +101,11 @@
 
 .method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;ILcom/facebook/widget/WebDialog$OnCompleteListener;)V
     .locals 4
-    .parameter "context"
-    .parameter "action"
-    .parameter "parameters"
-    .parameter "theme"
-    .parameter "listener"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "action"    # Ljava/lang/String;
+    .param p3, "parameters"    # Landroid/os/Bundle;
+    .param p4, "theme"    # I
+    .param p5, "listener"    # Lcom/facebook/widget/WebDialog$OnCompleteListener;
 
     .prologue
     const/4 v1, 0x0
@@ -125,11 +125,11 @@
     .line 134
     new-instance p3, Landroid/os/Bundle;
 
-    .end local p3
+    .end local p3    # "parameters":Landroid/os/Bundle;
     invoke-direct {p3}, Landroid/os/Bundle;-><init>()V
 
     .line 136
-    .restart local p3
+    .restart local p3    # "parameters":Landroid/os/Bundle;
     :cond_0
     const-string v1, "display"
 
@@ -168,7 +168,7 @@
     move-result-object v0
 
     .line 141
-    .local v0, uri:Landroid/net/Uri;
+    .local v0, "uri":Landroid/net/Uri;
     invoke-virtual {v0}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -184,8 +184,6 @@
 
 .method static synthetic access$0(Lcom/facebook/widget/WebDialog;Landroid/os/Bundle;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 268
@@ -196,7 +194,6 @@
 
 .method static synthetic access$1(Lcom/facebook/widget/WebDialog;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 288
@@ -207,8 +204,6 @@
 
 .method static synthetic access$2(Lcom/facebook/widget/WebDialog;Ljava/lang/Throwable;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 275
@@ -219,7 +214,6 @@
 
 .method static synthetic access$3(Lcom/facebook/widget/WebDialog;)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 80
@@ -230,7 +224,6 @@
 
 .method static synthetic access$4(Lcom/facebook/widget/WebDialog;)Landroid/app/ProgressDialog;
     .locals 1
-    .parameter
 
     .prologue
     .line 76
@@ -241,7 +234,6 @@
 
 .method static synthetic access$5(Lcom/facebook/widget/WebDialog;)Landroid/widget/FrameLayout;
     .locals 1
-    .parameter
 
     .prologue
     .line 78
@@ -252,7 +244,6 @@
 
 .method static synthetic access$6(Lcom/facebook/widget/WebDialog;)Landroid/webkit/WebView;
     .locals 1
-    .parameter
 
     .prologue
     .line 75
@@ -263,7 +254,6 @@
 
 .method static synthetic access$7(Lcom/facebook/widget/WebDialog;)Landroid/widget/ImageView;
     .locals 1
-    .parameter
 
     .prologue
     .line 77
@@ -318,7 +308,7 @@
     move-result-object v0
 
     .line 303
-    .local v0, crossDrawable:Landroid/graphics/drawable/Drawable;
+    .local v0, "crossDrawable":Landroid/graphics/drawable/Drawable;
     iget-object v1, p0, Lcom/facebook/widget/WebDialog;->crossImageView:Landroid/widget/ImageView;
 
     invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
@@ -362,30 +352,30 @@
     check-cast v9, Landroid/view/WindowManager;
 
     .line 241
-    .local v9, wm:Landroid/view/WindowManager;
+    .local v9, "wm":Landroid/view/WindowManager;
     invoke-interface {v9}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
 
     move-result-object v0
 
     .line 242
-    .local v0, display:Landroid/view/Display;
+    .local v0, "display":Landroid/view/Display;
     new-instance v3, Landroid/util/DisplayMetrics;
 
     invoke-direct {v3}, Landroid/util/DisplayMetrics;-><init>()V
 
     .line 243
-    .local v3, metrics:Landroid/util/DisplayMetrics;
+    .local v3, "metrics":Landroid/util/DisplayMetrics;
     invoke-virtual {v0, v3}, Landroid/view/Display;->getMetrics(Landroid/util/DisplayMetrics;)V
 
     .line 244
     iget v8, v3, Landroid/util/DisplayMetrics;->widthPixels:I
 
     .line 245
-    .local v8, width:I
+    .local v8, "width":I
     iget v1, v3, Landroid/util/DisplayMetrics;->heightPixels:I
 
     .line 248
-    .local v1, height:I
+    .local v1, "height":I
     int-to-float v10, v8
 
     iget v11, v3, Landroid/util/DisplayMetrics;->density:F
@@ -395,49 +385,49 @@
     float-to-int v6, v10
 
     .line 249
-    .local v6, scaledWidth:I
+    .local v6, "scaledWidth":I
     const/16 v10, 0x200
 
     if-gt v6, v10, :cond_0
 
     .line 250
-    const-wide/high16 v4, 0x3ff0
+    const-wide/high16 v4, 0x3ff0000000000000L
 
     .line 262
-    .local v4, scaleFactor:D
+    .local v4, "scaleFactor":D
     :goto_0
     int-to-double v10, v8
 
-    const-wide/high16 v12, 0x3ff0
+    const-wide/high16 v12, 0x3ff0000000000000L
 
     sub-double/2addr v12, v4
 
     mul-double/2addr v10, v12
 
-    const-wide/high16 v12, 0x4000
+    const-wide/high16 v12, 0x4000000000000000L
 
     div-double/2addr v10, v12
 
     double-to-int v2, v10
 
     .line 263
-    .local v2, leftRightMargin:I
+    .local v2, "leftRightMargin":I
     int-to-double v10, v1
 
-    const-wide/high16 v12, 0x3ff0
+    const-wide/high16 v12, 0x3ff0000000000000L
 
     sub-double/2addr v12, v4
 
     mul-double/2addr v10, v12
 
-    const-wide/high16 v12, 0x4000
+    const-wide/high16 v12, 0x4000000000000000L
 
     div-double/2addr v10, v12
 
     double-to-int v7, v10
 
     .line 265
-    .local v7, topBottomMargin:I
+    .local v7, "topBottomMargin":I
     new-instance v10, Landroid/util/Pair;
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -453,25 +443,25 @@
     return-object v10
 
     .line 251
-    .end local v2           #leftRightMargin:I
-    .end local v4           #scaleFactor:D
-    .end local v7           #topBottomMargin:I
+    .end local v2    # "leftRightMargin":I
+    .end local v4    # "scaleFactor":D
+    .end local v7    # "topBottomMargin":I
     :cond_0
     const/16 v10, 0x400
 
     if-lt v6, v10, :cond_1
 
     .line 252
-    const-wide/high16 v4, 0x3ff0
+    const-wide/high16 v4, 0x3ff0000000000000L
 
     .line 253
-    .restart local v4       #scaleFactor:D
+    .restart local v4    # "scaleFactor":D
     goto :goto_0
 
     .line 256
-    .end local v4           #scaleFactor:D
+    .end local v4    # "scaleFactor":D
     :cond_1
-    const-wide/high16 v10, 0x3ff0
+    const-wide/high16 v10, 0x3ff0000000000000L
 
     .line 257
     const/16 v12, 0x400
@@ -481,7 +471,7 @@
     int-to-double v12, v12
 
     .line 258
-    const-wide/high16 v14, 0x4080
+    const-wide/high16 v14, 0x4080000000000000L
 
     .line 257
     div-double/2addr v12, v14
@@ -495,7 +485,7 @@
     .line 256
     add-double v4, v10, v12
 
-    .restart local v4       #scaleFactor:D
+    .restart local v4    # "scaleFactor":D
     goto :goto_0
 .end method
 
@@ -516,7 +506,7 @@
 
 .method private sendErrorToListener(Ljava/lang/Throwable;)V
     .locals 4
-    .parameter "error"
+    .param p1, "error"    # Ljava/lang/Throwable;
 
     .prologue
     .line 276
@@ -537,7 +527,7 @@
     const/4 v1, 0x0
 
     .line 279
-    .local v1, facebookException:Lcom/facebook/FacebookException;
+    .local v1, "facebookException":Lcom/facebook/FacebookException;
     instance-of v2, p1, Lcom/facebook/FacebookException;
 
     if-eqz v2, :cond_1
@@ -558,25 +548,25 @@
     invoke-interface {v2, v3, v1}, Lcom/facebook/widget/WebDialog$OnCompleteListener;->onComplete(Landroid/os/Bundle;Lcom/facebook/FacebookException;)V
 
     .line 286
-    .end local v1           #facebookException:Lcom/facebook/FacebookException;
+    .end local v1    # "facebookException":Lcom/facebook/FacebookException;
     :cond_0
     return-void
 
     .line 282
-    .restart local v1       #facebookException:Lcom/facebook/FacebookException;
+    .restart local v1    # "facebookException":Lcom/facebook/FacebookException;
     :cond_1
     new-instance v1, Lcom/facebook/FacebookException;
 
-    .end local v1           #facebookException:Lcom/facebook/FacebookException;
+    .end local v1    # "facebookException":Lcom/facebook/FacebookException;
     invoke-direct {v1, p1}, Lcom/facebook/FacebookException;-><init>(Ljava/lang/Throwable;)V
 
-    .restart local v1       #facebookException:Lcom/facebook/FacebookException;
+    .restart local v1    # "facebookException":Lcom/facebook/FacebookException;
     goto :goto_0
 .end method
 
 .method private sendSuccessToListener(Landroid/os/Bundle;)V
     .locals 2
-    .parameter "values"
+    .param p1, "values"    # Landroid/os/Bundle;
 
     .prologue
     .line 269
@@ -607,7 +597,7 @@
 
 .method private setUpWebView(I)V
     .locals 6
-    .parameter "margin"
+    .param p1, "margin"    # I
     .annotation build Landroid/annotation/SuppressLint;
         value = {
             "SetJavaScriptEnabled"
@@ -629,7 +619,7 @@
     invoke-direct {v0, v1}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
 
     .line 313
-    .local v0, webViewContainer:Landroid/widget/LinearLayout;
+    .local v0, "webViewContainer":Landroid/widget/LinearLayout;
     new-instance v1, Landroid/webkit/WebView;
 
     invoke-virtual {p0}, Lcom/facebook/widget/WebDialog;->getContext()Landroid/content/Context;
@@ -715,7 +705,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
     .line 326
-    const/high16 v1, -0x3400
+    const/high16 v1, -0x34000000
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setBackgroundColor(I)V
 
@@ -801,7 +791,7 @@
 
 .method protected onCreate(Landroid/os/Bundle;)V
     .locals 9
-    .parameter "savedInstanceState"
+    .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
     const/4 v6, 0x1
@@ -886,7 +876,7 @@
     move-result-object v1
 
     .line 215
-    .local v1, margins:Landroid/util/Pair;,"Landroid/util/Pair<Ljava/lang/Integer;Ljava/lang/Integer;>;"
+    .local v1, "margins":Landroid/util/Pair;, "Landroid/util/Pair<Ljava/lang/Integer;Ljava/lang/Integer;>;"
     iget-object v3, p0, Lcom/facebook/widget/WebDialog;->contentFrameLayout:Landroid/widget/FrameLayout;
 
     iget-object v2, v1, Landroid/util/Pair;->first:Ljava/lang/Object;
@@ -938,7 +928,7 @@
     move-result v0
 
     .line 228
-    .local v0, crossWidth:I
+    .local v0, "crossWidth":I
     div-int/lit8 v2, v0, 0x2
 
     add-int/lit8 v2, v2, 0x1
@@ -991,7 +981,7 @@
 
 .method public setOnCompleteListener(Lcom/facebook/widget/WebDialog$OnCompleteListener;)V
     .locals 0
-    .parameter "listener"
+    .param p1, "listener"    # Lcom/facebook/widget/WebDialog$OnCompleteListener;
 
     .prologue
     .line 151

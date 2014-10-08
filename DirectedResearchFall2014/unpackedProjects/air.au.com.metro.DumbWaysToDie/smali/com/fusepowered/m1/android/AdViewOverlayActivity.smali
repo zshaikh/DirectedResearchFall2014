@@ -91,7 +91,7 @@
 
 .method private setRequestedOrientation(Ljava/lang/String;)V
     .locals 1
-    .parameter "orientation"
+    .param p1, "orientation"    # Ljava/lang/String;
 
     .prologue
     .line 109
@@ -177,7 +177,7 @@
 
 .method public onConfigurationChanged(Landroid/content/res/Configuration;)V
     .locals 1
-    .parameter "newConfig"
+    .param p1, "newConfig"    # Landroid/content/res/Configuration;
 
     .prologue
     .line 100
@@ -200,7 +200,7 @@
 
 .method protected onCreate(Landroid/os/Bundle;)V
     .locals 9
-    .parameter "savedInstanceState"
+    .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
     const/4 v6, 0x1
@@ -254,7 +254,7 @@
 
     move-result-object v4
 
-    const/high16 v5, 0x100
+    const/high16 v5, 0x1000000
 
     invoke-virtual {v4, v5}, Landroid/view/Window;->addFlags(I)V
 
@@ -264,7 +264,7 @@
     move-result-object v1
 
     .line 43
-    .local v1, intent:Landroid/content/Intent;
+    .local v1, "intent":Landroid/content/Intent;
     const-string v4, "settings"
 
     invoke-virtual {v1, v4}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
@@ -328,7 +328,7 @@
     move-result-object v3
 
     .line 60
-    .local v3, uri:Landroid/net/Uri;
+    .local v3, "uri":Landroid/net/Uri;
     if-eqz v3, :cond_2
 
     .line 62
@@ -345,7 +345,7 @@
     invoke-static {v4, v5}, Lcom/fusepowered/m1/android/MMSDK$Log;->v(Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 65
-    .end local v3           #uri:Landroid/net/Uri;
+    .end local v3    # "uri":Landroid/net/Uri;
     :cond_2
     new-instance v0, Landroid/widget/RelativeLayout;
 
@@ -354,13 +354,13 @@
     invoke-direct {v0, v4}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;)V
 
     .line 66
-    .local v0, allowForCenteringModalsLayout:Landroid/widget/RelativeLayout;
+    .local v0, "allowForCenteringModalsLayout":Landroid/widget/RelativeLayout;
     new-instance v2, Landroid/widget/RelativeLayout$LayoutParams;
 
     invoke-direct {v2, v7, v7}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
     .line 67
-    .local v2, params:Landroid/widget/RelativeLayout$LayoutParams;
+    .local v2, "params":Landroid/widget/RelativeLayout$LayoutParams;
     const/16 v4, 0xd
 
     invoke-virtual {v2, v4}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
@@ -474,16 +474,16 @@
     return-void
 
     .line 55
-    .end local v0           #allowForCenteringModalsLayout:Landroid/widget/RelativeLayout;
-    .end local v2           #params:Landroid/widget/RelativeLayout$LayoutParams;
+    .end local v0    # "allowForCenteringModalsLayout":Landroid/widget/RelativeLayout;
+    .end local v2    # "params":Landroid/widget/RelativeLayout$LayoutParams;
     :cond_5
     invoke-direct {p0}, Lcom/fusepowered/m1/android/AdViewOverlayActivity;->lockOrientation()V
 
     goto/16 :goto_0
 
     .line 88
-    .restart local v0       #allowForCenteringModalsLayout:Landroid/widget/RelativeLayout;
-    .restart local v2       #params:Landroid/widget/RelativeLayout$LayoutParams;
+    .restart local v0    # "allowForCenteringModalsLayout":Landroid/widget/RelativeLayout;
+    .restart local v2    # "params":Landroid/widget/RelativeLayout$LayoutParams;
     :cond_6
     iget-object v4, p0, Lcom/fusepowered/m1/android/AdViewOverlayActivity;->settings:Lcom/fusepowered/m1/android/OverlaySettings;
 
@@ -527,8 +527,8 @@
 
 .method public onKeyDown(ILandroid/view/KeyEvent;)Z
     .locals 1
-    .parameter "keyCode"
-    .parameter "event"
+    .param p1, "keyCode"    # I
+    .param p2, "event"    # Landroid/view/KeyEvent;
 
     .prologue
     .line 282
@@ -584,7 +584,7 @@
     move-result-object v0
 
     .line 227
-    .local v0, audio:Lcom/fusepowered/m1/android/BridgeMMMedia$Audio;
+    .local v0, "audio":Lcom/fusepowered/m1/android/BridgeMMMedia$Audio;
     if-eqz v0, :cond_0
 
     .line 229
@@ -679,7 +679,7 @@
 
 .method protected onRestoreInstanceState(Landroid/os/Bundle;)V
     .locals 0
-    .parameter "savedInstanceState"
+    .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
     .line 275
@@ -784,7 +784,7 @@
 
 .method protected onSaveInstanceState(Landroid/os/Bundle;)V
     .locals 2
-    .parameter "outState"
+    .param p1, "outState"    # Landroid/os/Bundle;
 
     .prologue
     .line 268
@@ -818,7 +818,7 @@
 
 .method public onWindowFocusChanged(Z)V
     .locals 1
-    .parameter "hasWindowFocus"
+    .param p1, "hasWindowFocus"    # Z
 
     .prologue
     .line 212
@@ -846,7 +846,7 @@
 
 .method setAllowOrientationChange(Z)V
     .locals 1
-    .parameter "allowOrientationChange"
+    .param p1, "allowOrientationChange"    # Z
 
     .prologue
     .line 136

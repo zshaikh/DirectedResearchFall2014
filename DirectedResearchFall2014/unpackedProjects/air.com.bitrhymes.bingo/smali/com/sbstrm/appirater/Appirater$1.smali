@@ -28,9 +28,6 @@
 # direct methods
 .method constructor <init>(Landroid/content/Context;Ljava/lang/String;Landroid/content/SharedPreferences$Editor;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 1
@@ -50,8 +47,8 @@
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 4
-    .parameter "dialog"
-    .parameter "id"
+    .param p1, "dialog"    # Landroid/content/DialogInterface;
+    .param p2, "id"    # I
 
     .prologue
     .line 114

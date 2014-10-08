@@ -34,7 +34,6 @@
 # direct methods
 .method public constructor <init>(Lcom/inmobi/androidsdk/ai/container/IMWebView;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 460
@@ -195,7 +194,6 @@
 # virtual methods
 .method public handleMessage(Landroid/os/Message;)V
     .locals 8
-    .parameter
 
     .prologue
     const/4 v5, 0x0

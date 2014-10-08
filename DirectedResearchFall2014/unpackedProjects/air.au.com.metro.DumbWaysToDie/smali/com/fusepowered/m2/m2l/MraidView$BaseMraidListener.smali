@@ -32,8 +32,8 @@
 # virtual methods
 .method public onClose(Lcom/fusepowered/m2/m2l/MraidView;Lcom/fusepowered/m2/m2l/MraidView$ViewState;)V
     .locals 0
-    .parameter "view"
-    .parameter "newViewState"
+    .param p1, "view"    # Lcom/fusepowered/m2/m2l/MraidView;
+    .param p2, "newViewState"    # Lcom/fusepowered/m2/m2l/MraidView$ViewState;
 
     .prologue
     .line 401
@@ -42,7 +42,7 @@
 
 .method public onExpand(Lcom/fusepowered/m2/m2l/MraidView;)V
     .locals 0
-    .parameter "view"
+    .param p1, "view"    # Lcom/fusepowered/m2/m2l/MraidView;
 
     .prologue
     .line 400
@@ -51,7 +51,7 @@
 
 .method public onFailure(Lcom/fusepowered/m2/m2l/MraidView;)V
     .locals 0
-    .parameter "view"
+    .param p1, "view"    # Lcom/fusepowered/m2/m2l/MraidView;
 
     .prologue
     .line 399
@@ -60,7 +60,7 @@
 
 .method public onReady(Lcom/fusepowered/m2/m2l/MraidView;)V
     .locals 0
-    .parameter "view"
+    .param p1, "view"    # Lcom/fusepowered/m2/m2l/MraidView;
 
     .prologue
     .line 398

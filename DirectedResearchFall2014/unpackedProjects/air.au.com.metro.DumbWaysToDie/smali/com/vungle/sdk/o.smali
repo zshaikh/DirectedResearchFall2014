@@ -55,20 +55,18 @@
     nop
 
     :array_0
-    .array-data 0x4
-        0xat 0x0t 0x0t 0x0t
-        0x1et 0x0t 0x0t 0x0t
-        0x1et 0x0t 0x0t 0x0t
-        0x3ct 0x0t 0x0t 0x0t
-        0x3ct 0x0t 0x0t 0x0t
-        0x78t 0x0t 0x0t 0x0t
+    .array-data 4
+        0xa
+        0x1e
+        0x1e
+        0x3c
+        0x3c
+        0x78
     .end array-data
 .end method
 
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 72
@@ -82,9 +80,6 @@
 
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 3
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const/4 v2, 0x0
@@ -140,8 +135,6 @@
 
 .method static synthetic a(Lcom/vungle/sdk/o;Lcom/vungle/sdk/o$a;)Lcom/vungle/sdk/o$a;
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 20
@@ -152,7 +145,6 @@
 
 .method static synthetic a(Lcom/vungle/sdk/o;)Ljava/lang/String;
     .locals 1
-    .parameter
 
     .prologue
     .line 20
@@ -163,7 +155,6 @@
 
 .method static synthetic b(Lcom/vungle/sdk/o;)Lcom/vungle/sdk/o$b;
     .locals 1
-    .parameter
 
     .prologue
     .line 20
@@ -174,7 +165,6 @@
 
 .method static synthetic c(Lcom/vungle/sdk/o;)Z
     .locals 4
-    .parameter
 
     .prologue
     const/4 v3, 0x1
@@ -221,7 +211,6 @@
 
 .method static synthetic d(Lcom/vungle/sdk/o;)I
     .locals 1
-    .parameter
 
     .prologue
     .line 20
@@ -232,7 +221,6 @@
 
 .method static synthetic e(Lcom/vungle/sdk/o;)Ljava/lang/String;
     .locals 1
-    .parameter
 
     .prologue
     .line 20
@@ -243,7 +231,6 @@
 
 .method static synthetic f(Lcom/vungle/sdk/o;)Ljava/lang/String;
     .locals 1
-    .parameter
 
     .prologue
     .line 20
@@ -254,7 +241,6 @@
 
 .method static synthetic g(Lcom/vungle/sdk/o;)Ljava/lang/String;
     .locals 1
-    .parameter
 
     .prologue
     .line 20
@@ -265,7 +251,6 @@
 
 .method static synthetic h(Lcom/vungle/sdk/o;)Lcom/vungle/sdk/o$a;
     .locals 1
-    .parameter
 
     .prologue
     .line 20
@@ -306,7 +291,6 @@
 
 .method public final a(Lcom/vungle/sdk/o$b;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 82
@@ -318,7 +302,6 @@
 
 .method public final a(Ljava/lang/String;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 89

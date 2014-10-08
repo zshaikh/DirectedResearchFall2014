@@ -57,7 +57,6 @@
 
 .method a(I)V
     .locals 2
-    .parameter
 
     .prologue
     .line 152
@@ -80,7 +79,6 @@
 
 .method a(Lcom/chartboost/sdk/impl/as$a;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 147
@@ -117,7 +115,6 @@
 
 .method b(I)V
     .locals 2
-    .parameter
 
     .prologue
     .line 165
@@ -164,7 +161,6 @@
 
 .method c(I)I
     .locals 1
-    .parameter
 
     .prologue
     .line 178

@@ -218,9 +218,7 @@
 
 .method private constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter "name"
+    .param p3, "name"    # Ljava/lang/String;
 
     .prologue
     .line 31
@@ -235,7 +233,6 @@
 
 .method public static valueOf(Ljava/lang/String;)Lcom/fiksu/asotracking/FiksuEventType;
     .locals 1
-    .parameter
 
     .prologue
     .line 1

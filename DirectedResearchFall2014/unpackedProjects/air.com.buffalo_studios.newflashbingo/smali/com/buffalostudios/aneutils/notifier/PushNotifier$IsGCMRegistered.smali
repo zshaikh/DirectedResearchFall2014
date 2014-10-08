@@ -32,22 +32,22 @@
 # virtual methods
 .method public call(Lcom/adobe/fre/FREContext;[Lcom/adobe/fre/FREObject;)Lcom/adobe/fre/FREObject;
     .locals 5
-    .parameter "context"
-    .parameter "args"
+    .param p1, "context"    # Lcom/adobe/fre/FREContext;
+    .param p2, "args"    # [Lcom/adobe/fre/FREObject;
 
     .prologue
     .line 242
-    #calls: Lcom/buffalostudios/aneutils/notifier/PushNotifier;->isGCMRegistered(Lcom/adobe/fre/FREContext;)Z
+    # invokes: Lcom/buffalostudios/aneutils/notifier/PushNotifier;->isGCMRegistered(Lcom/adobe/fre/FREContext;)Z
     invoke-static {p1}, Lcom/buffalostudios/aneutils/notifier/PushNotifier;->access$1(Lcom/adobe/fre/FREContext;)Z
 
     move-result v2
 
     .line 244
-    .local v2, result:Z
+    .local v2, "result":Z
     const/4 v1, 0x0
 
     .line 246
-    .local v1, resFreObject:Lcom/adobe/fre/FREObject;
+    .local v1, "resFreObject":Lcom/adobe/fre/FREObject;
     :try_start_0
     invoke-static {v2}, Lcom/adobe/fre/FREObject;->newObject(Z)Lcom/adobe/fre/FREObject;
     :try_end_0
@@ -64,7 +64,7 @@
     move-exception v0
 
     .line 248
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v3, "PushNotifier"
 
     const-string v4, "Thread Exception"

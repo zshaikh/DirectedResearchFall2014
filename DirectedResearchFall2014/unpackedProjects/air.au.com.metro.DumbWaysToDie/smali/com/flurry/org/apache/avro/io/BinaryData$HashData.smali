@@ -54,7 +54,7 @@
 
 .method static synthetic access$400(Lcom/flurry/org/apache/avro/io/BinaryData$HashData;)Lcom/flurry/org/apache/avro/io/BinaryDecoder;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/flurry/org/apache/avro/io/BinaryData$HashData;
 
     .prologue
     .line 196
@@ -65,7 +65,7 @@
 
 .method static synthetic access$500(Lcom/flurry/org/apache/avro/io/BinaryData$HashData;)Lcom/flurry/org/apache/avro/io/BinaryDecoder$BufferAccessor;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/flurry/org/apache/avro/io/BinaryData$HashData;
 
     .prologue
     .line 196
@@ -78,9 +78,9 @@
 # virtual methods
 .method public set([BII)V
     .locals 1
-    .parameter "bytes"
-    .parameter "start"
-    .parameter "len"
+    .param p1, "bytes"    # [B
+    .param p2, "start"    # I
+    .param p3, "len"    # I
 
     .prologue
     .line 204

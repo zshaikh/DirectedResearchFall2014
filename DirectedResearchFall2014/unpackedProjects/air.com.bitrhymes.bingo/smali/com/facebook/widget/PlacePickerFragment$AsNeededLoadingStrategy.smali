@@ -31,7 +31,6 @@
 # direct methods
 .method private constructor <init>(Lcom/facebook/widget/PlacePickerFragment;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 476
@@ -44,8 +43,6 @@
 
 .method synthetic constructor <init>(Lcom/facebook/widget/PlacePickerFragment;Lcom/facebook/widget/PlacePickerFragment$AsNeededLoadingStrategy;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 476
@@ -58,7 +55,6 @@
 # virtual methods
 .method public attach(Lcom/facebook/widget/GraphObjectAdapter;)V
     .locals 2
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -71,7 +67,7 @@
 
     .prologue
     .line 479
-    .local p1, adapter:Lcom/facebook/widget/GraphObjectAdapter;,"Lcom/facebook/widget/GraphObjectAdapter<Lcom/facebook/model/GraphPlace;>;"
+    .local p1, "adapter":Lcom/facebook/widget/GraphObjectAdapter;, "Lcom/facebook/widget/GraphObjectAdapter<Lcom/facebook/model/GraphPlace;>;"
     invoke-super {p0, p1}, Lcom/facebook/widget/PickerFragment$LoadingStrategy;->attach(Lcom/facebook/widget/GraphObjectAdapter;)V
 
     .line 481
@@ -89,8 +85,6 @@
 
 .method protected onLoadFinished(Lcom/facebook/widget/GraphObjectPagingLoader;Lcom/facebook/widget/SimpleGraphObjectCursor;)V
     .locals 2
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -107,8 +101,8 @@
 
     .prologue
     .line 496
-    .local p1, loader:Lcom/facebook/widget/GraphObjectPagingLoader;,"Lcom/facebook/widget/GraphObjectPagingLoader<Lcom/facebook/model/GraphPlace;>;"
-    .local p2, data:Lcom/facebook/widget/SimpleGraphObjectCursor;,"Lcom/facebook/widget/SimpleGraphObjectCursor<Lcom/facebook/model/GraphPlace;>;"
+    .local p1, "loader":Lcom/facebook/widget/GraphObjectPagingLoader;, "Lcom/facebook/widget/GraphObjectPagingLoader<Lcom/facebook/model/GraphPlace;>;"
+    .local p2, "data":Lcom/facebook/widget/SimpleGraphObjectCursor;, "Lcom/facebook/widget/SimpleGraphObjectCursor<Lcom/facebook/model/GraphPlace;>;"
     invoke-super {p0, p1, p2}, Lcom/facebook/widget/PickerFragment$LoadingStrategy;->onLoadFinished(Lcom/facebook/widget/GraphObjectPagingLoader;Lcom/facebook/widget/SimpleGraphObjectCursor;)V
 
     .line 500

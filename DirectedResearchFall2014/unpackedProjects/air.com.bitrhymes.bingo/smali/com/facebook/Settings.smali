@@ -8,7 +8,7 @@
 
 .field private static final ATTRIBUTION_ID_COLUMN_NAME:Ljava/lang/String; = "aid"
 
-.field private static final ATTRIBUTION_ID_CONTENT_URI:Landroid/net/Uri; = null
+.field private static final ATTRIBUTION_ID_CONTENT_URI:Landroid/net/Uri;
 
 .field private static final ATTRIBUTION_KEY:Ljava/lang/String; = "attribution"
 
@@ -22,9 +22,9 @@
 
 .field private static final DEFAULT_MAXIMUM_POOL_SIZE:I = 0x80
 
-.field private static final DEFAULT_THREAD_FACTORY:Ljava/util/concurrent/ThreadFactory; = null
+.field private static final DEFAULT_THREAD_FACTORY:Ljava/util/concurrent/ThreadFactory;
 
-.field private static final DEFAULT_WORK_QUEUE:Ljava/util/concurrent/BlockingQueue; = null
+.field private static final DEFAULT_WORK_QUEUE:Ljava/util/concurrent/BlockingQueue;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/concurrent/BlockingQueue",
@@ -37,7 +37,7 @@
 
 .field private static final FACEBOOK_COM:Ljava/lang/String; = "facebook.com"
 
-.field private static final LOCK:Ljava/lang/Object; = null
+.field private static final LOCK:Ljava/lang/Object;
 
 .field private static final MOBILE_INSTALL_EVENT:Ljava/lang/String; = "MOBILE_APP_INSTALL"
 
@@ -155,7 +155,7 @@
 
 .method public static final addLoggingBehavior(Lcom/facebook/LoggingBehavior;)V
     .locals 2
-    .parameter "behavior"
+    .param p0, "behavior"    # Lcom/facebook/LoggingBehavior;
 
     .prologue
     .line 103
@@ -238,7 +238,7 @@
     const/4 v1, 0x0
 
     .line 214
-    .local v1, executorField:Ljava/lang/reflect/Field;
+    .local v1, "executorField":Ljava/lang/reflect/Field;
     :try_start_0
     const-class v3, Landroid/os/AsyncTask;
 
@@ -254,7 +254,7 @@
     const/4 v2, 0x0
 
     .line 221
-    .local v2, executorObject:Ljava/lang/Object;
+    .local v2, "executorObject":Ljava/lang/Object;
     const/4 v3, 0x0
 
     :try_start_1
@@ -270,7 +270,7 @@
     move-object v3, v5
 
     .line 234
-    .end local v2           #executorObject:Ljava/lang/Object;
+    .end local v2    # "executorObject":Ljava/lang/Object;
     :goto_0
     return-object v3
 
@@ -280,26 +280,26 @@
 
     move-object v0, v3
 
-    .local v0, e:Ljava/lang/NoSuchFieldException;
+    .local v0, "e":Ljava/lang/NoSuchFieldException;
     move-object v3, v5
 
     .line 216
     goto :goto_0
 
     .line 222
-    .end local v0           #e:Ljava/lang/NoSuchFieldException;
-    .restart local v2       #executorObject:Ljava/lang/Object;
+    .end local v0    # "e":Ljava/lang/NoSuchFieldException;
+    .restart local v2    # "executorObject":Ljava/lang/Object;
     :catch_1
     move-exception v0
 
-    .local v0, e:Ljava/lang/IllegalAccessException;
+    .local v0, "e":Ljava/lang/IllegalAccessException;
     move-object v3, v5
 
     .line 223
     goto :goto_0
 
     .line 230
-    .end local v0           #e:Ljava/lang/IllegalAccessException;
+    .end local v0    # "e":Ljava/lang/IllegalAccessException;
     :cond_0
     instance-of v3, v2, Ljava/util/concurrent/Executor;
 
@@ -314,7 +314,7 @@
     :cond_1
     check-cast v2, Ljava/util/concurrent/Executor;
 
-    .end local v2           #executorObject:Ljava/lang/Object;
+    .end local v2    # "executorObject":Ljava/lang/Object;
     move-object v3, v2
 
     goto :goto_0
@@ -322,7 +322,7 @@
 
 .method public static getAttributionId(Landroid/content/ContentResolver;)Ljava/lang/String;
     .locals 10
-    .parameter "contentResolver"
+    .param p0, "contentResolver"    # Landroid/content/ContentResolver;
 
     .prologue
     const/4 v9, 0x0
@@ -342,7 +342,7 @@
     aput-object v1, v2, v0
 
     .line 419
-    .local v2, projection:[Ljava/lang/String;
+    .local v2, "projection":[Ljava/lang/String;
     sget-object v1, Lcom/facebook/Settings;->ATTRIBUTION_ID_CONTENT_URI:Landroid/net/Uri;
 
     const/4 v3, 0x0
@@ -358,7 +358,7 @@
     move-result-object v7
 
     .line 420
-    .local v7, c:Landroid/database/Cursor;
+    .local v7, "c":Landroid/database/Cursor;
     if-eqz v7, :cond_0
 
     invoke-interface {v7}, Landroid/database/Cursor;->moveToFirst()Z
@@ -371,14 +371,14 @@
     move-object v0, v9
 
     .line 428
-    .end local v2           #projection:[Ljava/lang/String;
-    .end local v7           #c:Landroid/database/Cursor;
+    .end local v2    # "projection":[Ljava/lang/String;
+    .end local v7    # "c":Landroid/database/Cursor;
     :goto_0
     return-object v0
 
     .line 423
-    .restart local v2       #projection:[Ljava/lang/String;
-    .restart local v7       #c:Landroid/database/Cursor;
+    .restart local v2    # "projection":[Ljava/lang/String;
+    .restart local v7    # "c":Landroid/database/Cursor;
     :cond_1
     const-string v0, "aid"
 
@@ -391,7 +391,7 @@
     move-result-object v6
 
     .line 424
-    .local v6, attributionId:Ljava/lang/String;
+    .local v6, "attributionId":Ljava/lang/String;
     invoke-interface {v7}, Landroid/database/Cursor;->close()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -402,16 +402,16 @@
     goto :goto_0
 
     .line 426
-    .end local v2           #projection:[Ljava/lang/String;
-    .end local v6           #attributionId:Ljava/lang/String;
-    .end local v7           #c:Landroid/database/Cursor;
+    .end local v2    # "projection":[Ljava/lang/String;
+    .end local v6    # "attributionId":Ljava/lang/String;
+    .end local v7    # "c":Landroid/database/Cursor;
     :catch_0
     move-exception v0
 
     move-object v8, v0
 
     .line 427
-    .local v8, e:Ljava/lang/Exception;
+    .local v8, "e":Ljava/lang/Exception;
     sget-object v0, Lcom/facebook/Settings;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -461,13 +461,13 @@
     move-result-object v0
 
     .line 163
-    .local v0, executor:Ljava/util/concurrent/Executor;
+    .local v0, "executor":Ljava/util/concurrent/Executor;
     if-nez v0, :cond_0
 
     .line 164
     new-instance v0, Ljava/util/concurrent/ThreadPoolExecutor;
 
-    .end local v0           #executor:Ljava/util/concurrent/Executor;
+    .end local v0    # "executor":Ljava/util/concurrent/Executor;
     const/4 v1, 0x5
 
     const/16 v2, 0x80
@@ -485,12 +485,12 @@
     invoke-direct/range {v0 .. v7}, Ljava/util/concurrent/ThreadPoolExecutor;-><init>(IIJLjava/util/concurrent/TimeUnit;Ljava/util/concurrent/BlockingQueue;Ljava/util/concurrent/ThreadFactory;)V
 
     .line 167
-    .restart local v0       #executor:Ljava/util/concurrent/Executor;
+    .restart local v0    # "executor":Ljava/util/concurrent/Executor;
     :cond_0
     sput-object v0, Lcom/facebook/Settings;->executor:Ljava/util/concurrent/Executor;
 
     .line 160
-    .end local v0           #executor:Ljava/util/concurrent/Executor;
+    .end local v0    # "executor":Ljava/util/concurrent/Executor;
     :cond_1
     monitor-exit v8
     :try_end_0
@@ -602,7 +602,7 @@
 
 .method public static final isLoggingBehaviorEnabled(Lcom/facebook/LoggingBehavior;)Z
     .locals 2
-    .parameter "behavior"
+    .param p0, "behavior"    # Lcom/facebook/LoggingBehavior;
 
     .prologue
     .line 146
@@ -645,8 +645,8 @@
 
 .method public static publishInstallAndWait(Landroid/content/Context;Ljava/lang/String;)Z
     .locals 2
-    .parameter "context"
-    .parameter "applicationId"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "applicationId"    # Ljava/lang/String;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -657,7 +657,7 @@
     move-result-object v0
 
     .line 319
-    .local v0, response:Lcom/facebook/Response;
+    .local v0, "response":Lcom/facebook/Response;
     if-eqz v0, :cond_0
 
     invoke-virtual {v0}, Lcom/facebook/Response;->getError()Lcom/facebook/FacebookRequestError;
@@ -679,8 +679,8 @@
 
 .method public static publishInstallAndWaitForResponse(Landroid/content/Context;Ljava/lang/String;)Lcom/facebook/Response;
     .locals 1
-    .parameter "context"
-    .parameter "applicationId"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "applicationId"    # Ljava/lang/String;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -697,9 +697,9 @@
 
 .method static publishInstallAndWaitForResponse(Landroid/content/Context;Ljava/lang/String;Z)Lcom/facebook/Response;
     .locals 10
-    .parameter "context"
-    .parameter "applicationId"
-    .parameter "isAutoPublish"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "applicationId"    # Ljava/lang/String;
+    .param p2, "isAutoPublish"    # Z
 
     .prologue
     .line 341
@@ -712,10 +712,10 @@
     :try_start_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
-    .end local p0
+    .end local p0    # "context":Landroid/content/Context;
     const-string p1, "Both context and applicationId must be non-null"
 
-    .end local p1
+    .end local p1    # "applicationId":Ljava/lang/String;
     invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw p0
@@ -723,12 +723,12 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 405
-    .end local p2
+    .end local p2    # "isAutoPublish":Z
     :catch_0
     move-exception p0
 
     .line 407
-    .local p0, e:Ljava/lang/Exception;
+    .local p0, "e":Ljava/lang/Exception;
     const-string p1, "Facebook-publish"
 
     invoke-static {p1, p0}, Lcom/facebook/internal/Utility;->logd(Ljava/lang/String;Ljava/lang/Exception;)V
@@ -750,14 +750,14 @@
 
     move-object p0, p1
 
-    .end local p0           #e:Ljava/lang/Exception;
+    .end local p0    # "e":Ljava/lang/Exception;
     :goto_0
     return-object p0
 
     .line 344
-    .local p0, context:Landroid/content/Context;
-    .restart local p1
-    .restart local p2
+    .local p0, "context":Landroid/content/Context;
+    .restart local p1    # "applicationId":Ljava/lang/String;
+    .restart local p2    # "isAutoPublish":Z
     :cond_1
     :try_start_1
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -769,7 +769,7 @@
     move-result-object v0
 
     .line 345
-    .local v0, attributionId:Ljava/lang/String;
+    .local v0, "attributionId":Ljava/lang/String;
     const-string v1, "com.facebook.sdk.attributionTracking"
 
     const/4 v2, 0x0
@@ -779,7 +779,7 @@
     move-result-object v6
 
     .line 346
-    .local v6, preferences:Landroid/content/SharedPreferences;
+    .local v6, "preferences":Landroid/content/SharedPreferences;
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -799,7 +799,7 @@
     move-result-object v5
 
     .line 347
-    .local v5, pingKey:Ljava/lang/String;
+    .local v5, "pingKey":Ljava/lang/String;
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -819,7 +819,7 @@
     move-result-object v1
 
     .line 348
-    .local v1, jsonKey:Ljava/lang/String;
+    .local v1, "jsonKey":Ljava/lang/String;
     const-wide/16 v2, 0x0
 
     invoke-interface {v6, v5, v2, v3}, Landroid/content/SharedPreferences;->getLong(Ljava/lang/String;J)J
@@ -827,7 +827,7 @@
     move-result-wide v2
 
     .line 349
-    .local v2, lastPing:J
+    .local v2, "lastPing":J
     const/4 v4, 0x0
 
     invoke-interface {v6, v1, v4}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
@@ -835,7 +835,7 @@
     move-result-object v4
 
     .line 352
-    .local v4, lastResponseJSON:Ljava/lang/String;
+    .local v4, "lastResponseJSON":Ljava/lang/String;
     if-nez p2, :cond_2
 
     .line 353
@@ -850,7 +850,7 @@
     move-result-object v7
 
     .line 357
-    .local v7, publishParams:Lcom/facebook/model/GraphObject;
+    .local v7, "publishParams":Lcom/facebook/model/GraphObject;
     const-string v8, "event"
 
     const-string v9, "MOBILE_APP_INSTALL"
@@ -869,7 +869,7 @@
 
     move-result-object p2
 
-    .end local p2
+    .end local p2    # "isAutoPublish":Z
     invoke-interface {v7, v8, p2}, Lcom/facebook/model/GraphObject;->setProperty(Ljava/lang/String;Ljava/lang/Object;)V
 
     .line 360
@@ -897,7 +897,7 @@
 
     move-result-object p0
 
-    .end local p0           #context:Landroid/content/Context;
+    .end local p0    # "context":Landroid/content/Context;
     invoke-interface {v7, p2, p0}, Lcom/facebook/model/GraphObject;->setProperty(Ljava/lang/String;Ljava/lang/Object;)V
 
     .line 363
@@ -916,7 +916,7 @@
     move-result-object p0
 
     .line 364
-    .local p0, publishUrl:Ljava/lang/String;
+    .local p0, "publishUrl":Ljava/lang/String;
     const/4 p2, 0x0
 
     const/4 v8, 0x0
@@ -928,7 +928,7 @@
     move-result-object p2
 
     .line 366
-    .local p2, publishRequest:Lcom/facebook/Request;
+    .local p2, "publishRequest":Lcom/facebook/Request;
     const-wide/16 v7, 0x0
 
     cmp-long p0, v2, v7
@@ -936,19 +936,19 @@
     if-eqz p0, :cond_6
 
     .line 367
-    .end local v7           #publishParams:Lcom/facebook/model/GraphObject;
-    .end local p0           #publishUrl:Ljava/lang/String;
+    .end local v7    # "publishParams":Lcom/facebook/model/GraphObject;
+    .end local p0    # "publishUrl":Ljava/lang/String;
     const/4 p0, 0x0
 
     .line 369
-    .local p0, graphObject:Lcom/facebook/model/GraphObject;
+    .local p0, "graphObject":Lcom/facebook/model/GraphObject;
     if-eqz v4, :cond_3
 
     .line 370
     :try_start_2
     new-instance p1, Lorg/json/JSONObject;
 
-    .end local p1
+    .end local p1    # "applicationId":Ljava/lang/String;
     invoke-direct {p1, v4}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
     invoke-static {p1}, Lcom/facebook/model/GraphObject$Factory;->create(Lorg/json/JSONObject;)Lcom/facebook/model/GraphObject;
@@ -967,29 +967,29 @@
     :try_start_3
     const-string p0, "true"
 
-    .end local p0           #graphObject:Lcom/facebook/model/GraphObject;
+    .end local p0    # "graphObject":Lcom/facebook/model/GraphObject;
     const/4 p1, 0x0
 
     new-instance v0, Lcom/facebook/RequestBatch;
 
-    .end local v0           #attributionId:Ljava/lang/String;
+    .end local v0    # "attributionId":Ljava/lang/String;
     const/4 v1, 0x1
 
     new-array v1, v1, [Lcom/facebook/Request;
 
-    .end local v1           #jsonKey:Ljava/lang/String;
+    .end local v1    # "jsonKey":Ljava/lang/String;
     const/4 v2, 0x0
 
     aput-object p2, v1, v2
 
-    .end local v2           #lastPing:J
+    .end local v2    # "lastPing":J
     invoke-direct {v0, v1}, Lcom/facebook/RequestBatch;-><init>([Lcom/facebook/Request;)V
 
     const/4 p2, 0x1
 
     invoke-static {p0, p1, v0, p2}, Lcom/facebook/Response;->createResponsesFromString(Ljava/lang/String;Ljava/net/HttpURLConnection;Lcom/facebook/RequestBatch;Z)Ljava/util/List;
 
-    .end local p2           #publishRequest:Lcom/facebook/Request;
+    .end local p2    # "publishRequest":Lcom/facebook/Request;
     move-result-object p0
 
     const/4 p1, 0x0
@@ -1003,22 +1003,22 @@
     goto/16 :goto_0
 
     .line 360
-    .restart local v0       #attributionId:Ljava/lang/String;
-    .restart local v1       #jsonKey:Ljava/lang/String;
-    .restart local v2       #lastPing:J
-    .restart local v7       #publishParams:Lcom/facebook/model/GraphObject;
-    .local p0, context:Landroid/content/Context;
-    .restart local p1
+    .restart local v0    # "attributionId":Ljava/lang/String;
+    .restart local v1    # "jsonKey":Ljava/lang/String;
+    .restart local v2    # "lastPing":J
+    .restart local v7    # "publishParams":Lcom/facebook/model/GraphObject;
+    .local p0, "context":Landroid/content/Context;
+    .restart local p1    # "applicationId":Ljava/lang/String;
     :cond_4
     const/4 v8, 0x1
 
     goto :goto_1
 
     .line 379
-    .end local v7           #publishParams:Lcom/facebook/model/GraphObject;
-    .end local p1
-    .local p0, graphObject:Lcom/facebook/model/GraphObject;
-    .restart local p2       #publishRequest:Lcom/facebook/Request;
+    .end local v7    # "publishParams":Lcom/facebook/model/GraphObject;
+    .end local p1    # "applicationId":Ljava/lang/String;
+    .local p0, "graphObject":Lcom/facebook/model/GraphObject;
+    .restart local p2    # "publishRequest":Lcom/facebook/Request;
     :cond_5
     new-instance p1, Lcom/facebook/Response;
 
@@ -1030,19 +1030,19 @@
 
     invoke-direct {p1, p2, v0, p0, v1}, Lcom/facebook/Response;-><init>(Lcom/facebook/Request;Ljava/net/HttpURLConnection;Lcom/facebook/model/GraphObject;Z)V
 
-    .end local v0           #attributionId:Ljava/lang/String;
-    .end local v1           #jsonKey:Ljava/lang/String;
-    .end local p2           #publishRequest:Lcom/facebook/Request;
+    .end local v0    # "attributionId":Ljava/lang/String;
+    .end local v1    # "jsonKey":Ljava/lang/String;
+    .end local p2    # "publishRequest":Lcom/facebook/Request;
     move-object p0, p1
 
     goto/16 :goto_0
 
     .line 381
-    .end local p0           #graphObject:Lcom/facebook/model/GraphObject;
-    .restart local v0       #attributionId:Ljava/lang/String;
-    .restart local v1       #jsonKey:Ljava/lang/String;
-    .restart local p1
-    .restart local p2       #publishRequest:Lcom/facebook/Request;
+    .end local p0    # "graphObject":Lcom/facebook/model/GraphObject;
+    .restart local v0    # "attributionId":Ljava/lang/String;
+    .restart local v1    # "jsonKey":Ljava/lang/String;
+    .restart local p1    # "applicationId":Ljava/lang/String;
+    .restart local p2    # "publishRequest":Lcom/facebook/Request;
     :cond_6
     if-nez v0, :cond_7
 
@@ -1051,13 +1051,13 @@
 
     const-string p1, "No attribution id returned from the Facebook application"
 
-    .end local p1
+    .end local p1    # "applicationId":Ljava/lang/String;
     invoke-direct {p0, p1}, Lcom/facebook/FacebookException;-><init>(Ljava/lang/String;)V
 
     throw p0
 
     .line 385
-    .restart local p1
+    .restart local p1    # "applicationId":Ljava/lang/String;
     :cond_7
     const/4 p0, 0x0
 
@@ -1076,34 +1076,34 @@
 
     const-string p1, "Install attribution has been disabled on the server."
 
-    .end local p1
+    .end local p1    # "applicationId":Ljava/lang/String;
     invoke-direct {p0, p1}, Lcom/facebook/FacebookException;-><init>(Ljava/lang/String;)V
 
     throw p0
 
     .line 389
-    .restart local p1
+    .restart local p1    # "applicationId":Ljava/lang/String;
     :cond_8
     invoke-virtual {p2}, Lcom/facebook/Request;->executeAndWait()Lcom/facebook/Response;
 
     move-result-object v0
 
     .line 392
-    .local v0, publishResponse:Lcom/facebook/Response;
+    .local v0, "publishResponse":Lcom/facebook/Response;
     invoke-interface {v6}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object p0
 
     .line 393
-    .local p0, editor:Landroid/content/SharedPreferences$Editor;
+    .local p0, "editor":Landroid/content/SharedPreferences$Editor;
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide p1
 
     .line 394
-    .end local v2           #lastPing:J
-    .end local p2           #publishRequest:Lcom/facebook/Request;
-    .local p1, lastPing:J
+    .end local v2    # "lastPing":J
+    .end local p2    # "publishRequest":Lcom/facebook/Request;
+    .local p1, "lastPing":J
     invoke-interface {p0, v5, p1, p2}, Landroid/content/SharedPreferences$Editor;->putLong(Ljava/lang/String;J)Landroid/content/SharedPreferences$Editor;
 
     .line 397
@@ -1111,7 +1111,7 @@
 
     move-result-object p1
 
-    .end local p1           #lastPing:J
+    .end local p1    # "lastPing":J
     if-eqz p1, :cond_9
 
     .line 398
@@ -1152,10 +1152,10 @@
     goto/16 :goto_0
 
     .line 373
-    .local v0, attributionId:Ljava/lang/String;
-    .restart local v2       #lastPing:J
-    .local p0, graphObject:Lcom/facebook/model/GraphObject;
-    .restart local p2       #publishRequest:Lcom/facebook/Request;
+    .local v0, "attributionId":Ljava/lang/String;
+    .restart local v2    # "lastPing":J
+    .local p0, "graphObject":Lcom/facebook/model/GraphObject;
+    .restart local p2    # "publishRequest":Lcom/facebook/Request;
     :catch_1
     move-exception p1
 
@@ -1164,8 +1164,8 @@
 
 .method public static publishInstallAsync(Landroid/content/Context;Ljava/lang/String;)V
     .locals 1
-    .parameter "context"
-    .parameter "applicationId"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "applicationId"    # Ljava/lang/String;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -1181,9 +1181,9 @@
 
 .method public static publishInstallAsync(Landroid/content/Context;Ljava/lang/String;Lcom/facebook/Request$Callback;)V
     .locals 3
-    .parameter "context"
-    .parameter "applicationId"
-    .parameter "callback"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "applicationId"    # Ljava/lang/String;
+    .param p2, "callback"    # Lcom/facebook/Request$Callback;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -1194,7 +1194,7 @@
     move-result-object v0
 
     .line 264
-    .local v0, applicationContext:Landroid/content/Context;
+    .local v0, "applicationContext":Landroid/content/Context;
     invoke-static {}, Lcom/facebook/Settings;->getExecutor()Ljava/util/concurrent/Executor;
 
     move-result-object v1
@@ -1211,7 +1211,7 @@
 
 .method public static final removeLoggingBehavior(Lcom/facebook/LoggingBehavior;)V
     .locals 2
-    .parameter "behavior"
+    .param p0, "behavior"    # Lcom/facebook/LoggingBehavior;
 
     .prologue
     .line 118
@@ -1244,7 +1244,7 @@
 
 .method public static setAppVersion(Ljava/lang/String;)V
     .locals 0
-    .parameter "appVersion"
+    .param p0, "appVersion"    # Ljava/lang/String;
 
     .prologue
     .line 448
@@ -1256,7 +1256,7 @@
 
 .method public static setExecutor(Ljava/util/concurrent/Executor;)V
     .locals 2
-    .parameter "executor"
+    .param p0, "executor"    # Ljava/util/concurrent/Executor;
 
     .prologue
     .line 180
@@ -1292,7 +1292,7 @@
 
 .method public static setFacebookDomain(Ljava/lang/String;)V
     .locals 0
-    .parameter "facebookDomain"
+    .param p0, "facebookDomain"    # Ljava/lang/String;
 
     .prologue
     .line 208
@@ -1304,7 +1304,7 @@
 
 .method public static setShouldAutoPublishInstall(Z)V
     .locals 0
-    .parameter "shouldAutoPublishInstall"
+    .param p0, "shouldAutoPublishInstall"    # Z
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 

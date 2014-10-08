@@ -36,8 +36,6 @@
 # direct methods
 .method public constructor <init>(Lcom/inmobi/androidsdk/ai/container/IMWebView;Landroid/content/Context;)V
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 354
@@ -69,8 +67,6 @@
 
 .method protected static getFromJSON(Lorg/json/JSONObject;Ljava/lang/Class;)Ljava/lang/Object;
     .locals 7
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",

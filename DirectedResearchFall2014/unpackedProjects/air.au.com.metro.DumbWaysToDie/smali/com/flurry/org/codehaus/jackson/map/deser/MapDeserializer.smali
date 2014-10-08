@@ -11,7 +11,7 @@
 # direct methods
 .method protected constructor <init>(Lcom/flurry/org/codehaus/jackson/map/deser/MapDeserializer;)V
     .locals 0
-    .parameter "src"
+    .param p1, "src"    # Lcom/flurry/org/codehaus/jackson/map/deser/MapDeserializer;
 
     .prologue
     .line 42
@@ -23,11 +23,10 @@
 
 .method public constructor <init>(Lcom/flurry/org/codehaus/jackson/type/JavaType;Lcom/flurry/org/codehaus/jackson/map/deser/ValueInstantiator;Lcom/flurry/org/codehaus/jackson/map/KeyDeserializer;Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;Lcom/flurry/org/codehaus/jackson/map/TypeDeserializer;)V
     .locals 0
-    .parameter "mapType"
-    .parameter "valueInstantiator"
-    .parameter "keyDeser"
-    .parameter
-    .parameter "valueTypeDeser"
+    .param p1, "mapType"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .param p2, "valueInstantiator"    # Lcom/flurry/org/codehaus/jackson/map/deser/ValueInstantiator;
+    .param p3, "keyDeser"    # Lcom/flurry/org/codehaus/jackson/map/KeyDeserializer;
+    .param p5, "valueTypeDeser"    # Lcom/flurry/org/codehaus/jackson/map/TypeDeserializer;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -45,7 +44,7 @@
 
     .prologue
     .line 32
-    .local p4, valueDeser:Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer<Ljava/lang/Object;>;"
+    .local p4, "valueDeser":Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer<Ljava/lang/Object;>;"
     invoke-direct/range {p0 .. p5}, Lcom/flurry/org/codehaus/jackson/map/deser/std/MapDeserializer;-><init>(Lcom/flurry/org/codehaus/jackson/type/JavaType;Lcom/flurry/org/codehaus/jackson/map/deser/ValueInstantiator;Lcom/flurry/org/codehaus/jackson/map/KeyDeserializer;Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;Lcom/flurry/org/codehaus/jackson/map/TypeDeserializer;)V
 
     .line 33
@@ -54,11 +53,9 @@
 
 .method public constructor <init>(Lcom/flurry/org/codehaus/jackson/type/JavaType;Ljava/lang/reflect/Constructor;Lcom/flurry/org/codehaus/jackson/map/KeyDeserializer;Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;Lcom/flurry/org/codehaus/jackson/map/TypeDeserializer;)V
     .locals 0
-    .parameter "mapType"
-    .parameter
-    .parameter "keyDeser"
-    .parameter
-    .parameter "valueTypeDeser"
+    .param p1, "mapType"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .param p3, "keyDeser"    # Lcom/flurry/org/codehaus/jackson/map/KeyDeserializer;
+    .param p5, "valueTypeDeser"    # Lcom/flurry/org/codehaus/jackson/map/TypeDeserializer;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -85,8 +82,8 @@
 
     .prologue
     .line 25
-    .local p2, defCtor:Ljava/lang/reflect/Constructor;,"Ljava/lang/reflect/Constructor<Ljava/util/Map<Ljava/lang/Object;Ljava/lang/Object;>;>;"
-    .local p4, valueDeser:Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer<Ljava/lang/Object;>;"
+    .local p2, "defCtor":Ljava/lang/reflect/Constructor;, "Ljava/lang/reflect/Constructor<Ljava/util/Map<Ljava/lang/Object;Ljava/lang/Object;>;>;"
+    .local p4, "valueDeser":Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer<Ljava/lang/Object;>;"
     invoke-direct/range {p0 .. p5}, Lcom/flurry/org/codehaus/jackson/map/deser/std/MapDeserializer;-><init>(Lcom/flurry/org/codehaus/jackson/type/JavaType;Ljava/lang/reflect/Constructor;Lcom/flurry/org/codehaus/jackson/map/KeyDeserializer;Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;Lcom/flurry/org/codehaus/jackson/map/TypeDeserializer;)V
 
     .line 26

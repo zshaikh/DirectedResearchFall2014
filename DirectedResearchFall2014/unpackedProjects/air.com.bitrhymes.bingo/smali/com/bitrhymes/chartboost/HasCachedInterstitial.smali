@@ -25,8 +25,8 @@
 # virtual methods
 .method public call(Lcom/adobe/fre/FREContext;[Lcom/adobe/fre/FREObject;)Lcom/adobe/fre/FREObject;
     .locals 9
-    .parameter "context"
-    .parameter "arg1"
+    .param p1, "context"    # Lcom/adobe/fre/FREContext;
+    .param p2, "arg1"    # [Lcom/adobe/fre/FREObject;
 
     .prologue
     const-string v7, "Chartboost"
@@ -51,17 +51,17 @@
     move-result-object v4
 
     .line 20
-    .local v4, location:Ljava/lang/String;
+    .local v4, "location":Ljava/lang/String;
     const/4 v3, 0x0
 
     .line 22
-    .local v3, hasCached:Z
+    .local v3, "hasCached":Z
     invoke-static {}, Lcom/chartboost/sdk/Chartboost;->sharedChartboost()Lcom/chartboost/sdk/Chartboost;
 
     move-result-object v0
 
     .line 23
-    .local v0, _cb:Lcom/chartboost/sdk/Chartboost;
+    .local v0, "_cb":Lcom/chartboost/sdk/Chartboost;
     if-eqz v4, :cond_0
 
     invoke-virtual {v4}, Ljava/lang/String;->length()I
@@ -80,7 +80,7 @@
     const/4 v2, 0x0
 
     .line 30
-    .local v2, freObj:Lcom/adobe/fre/FREObject;
+    .local v2, "freObj":Lcom/adobe/fre/FREObject;
     if-eqz v3, :cond_1
 
     const-string v5, "1"
@@ -93,17 +93,17 @@
     move-object v5, v2
 
     .line 38
-    .end local v0           #_cb:Lcom/chartboost/sdk/Chartboost;
-    .end local v2           #freObj:Lcom/adobe/fre/FREObject;
-    .end local v3           #hasCached:Z
-    .end local v4           #location:Ljava/lang/String;
+    .end local v0    # "_cb":Lcom/chartboost/sdk/Chartboost;
+    .end local v2    # "freObj":Lcom/adobe/fre/FREObject;
+    .end local v3    # "hasCached":Z
+    .end local v4    # "location":Ljava/lang/String;
     :goto_2
     return-object v5
 
     .line 26
-    .restart local v0       #_cb:Lcom/chartboost/sdk/Chartboost;
-    .restart local v3       #hasCached:Z
-    .restart local v4       #location:Ljava/lang/String;
+    .restart local v0    # "_cb":Lcom/chartboost/sdk/Chartboost;
+    .restart local v3    # "hasCached":Z
+    .restart local v4    # "location":Ljava/lang/String;
     :cond_0
     invoke-virtual {v0}, Lcom/chartboost/sdk/Chartboost;->hasCachedInterstitial()Z
 
@@ -112,7 +112,7 @@
     goto :goto_0
 
     .line 30
-    .restart local v2       #freObj:Lcom/adobe/fre/FREObject;
+    .restart local v2    # "freObj":Lcom/adobe/fre/FREObject;
     :cond_1
     const-string v5, "0"
     :try_end_0
@@ -121,17 +121,17 @@
     goto :goto_1
 
     .line 33
-    .end local v0           #_cb:Lcom/chartboost/sdk/Chartboost;
-    .end local v2           #freObj:Lcom/adobe/fre/FREObject;
-    .end local v3           #hasCached:Z
-    .end local v4           #location:Ljava/lang/String;
+    .end local v0    # "_cb":Lcom/chartboost/sdk/Chartboost;
+    .end local v2    # "freObj":Lcom/adobe/fre/FREObject;
+    .end local v3    # "hasCached":Z
+    .end local v4    # "location":Ljava/lang/String;
     :catch_0
     move-exception v5
 
     move-object v1, v5
 
     .line 34
-    .local v1, e:Ljava/lang/Exception;
+    .local v1, "e":Ljava/lang/Exception;
     const-string v5, "Chartboost"
 
     new-instance v5, Ljava/lang/StringBuilder;

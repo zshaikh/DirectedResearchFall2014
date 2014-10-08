@@ -34,7 +34,6 @@
 
 .method synthetic constructor <init>(Lcom/adobe/air/JavaTrustStoreHelper$1;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 79

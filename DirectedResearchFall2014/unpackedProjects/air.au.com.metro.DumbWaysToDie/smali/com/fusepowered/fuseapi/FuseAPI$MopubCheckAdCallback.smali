@@ -39,7 +39,7 @@
 
 .method synthetic constructor <init>(Lcom/fusepowered/fuseapi/FuseAPI$1;)V
     .locals 0
-    .parameter "x0"
+    .param p1, "x0"    # Lcom/fusepowered/fuseapi/FuseAPI$1;
 
     .prologue
     .line 1549
@@ -58,7 +58,7 @@
 
 .method public onInterstitialClicked(Lcom/fusepowered/m2/m2l/MoPubInterstitial;)V
     .locals 0
-    .parameter "arg0"
+    .param p1, "arg0"    # Lcom/fusepowered/m2/m2l/MoPubInterstitial;
 
     .prologue
     .line 1557
@@ -67,7 +67,7 @@
 
 .method public onInterstitialDismissed(Lcom/fusepowered/m2/m2l/MoPubInterstitial;)V
     .locals 0
-    .parameter "arg0"
+    .param p1, "arg0"    # Lcom/fusepowered/m2/m2l/MoPubInterstitial;
 
     .prologue
     .line 1563
@@ -76,8 +76,8 @@
 
 .method public onInterstitialFailed(Lcom/fusepowered/m2/m2l/MoPubInterstitial;Lcom/fusepowered/m2/m2l/MoPubErrorCode;)V
     .locals 1
-    .parameter "arg0"
-    .parameter "arg1"
+    .param p1, "arg0"    # Lcom/fusepowered/m2/m2l/MoPubInterstitial;
+    .param p2, "arg1"    # Lcom/fusepowered/m2/m2l/MoPubErrorCode;
 
     .prologue
     .line 1569
@@ -100,7 +100,7 @@
 
 .method public onInterstitialLoaded(Lcom/fusepowered/m2/m2l/MoPubInterstitial;)V
     .locals 1
-    .parameter "arg0"
+    .param p1, "arg0"    # Lcom/fusepowered/m2/m2l/MoPubInterstitial;
 
     .prologue
     .line 1577
@@ -123,7 +123,7 @@
 
 .method public onInterstitialShown(Lcom/fusepowered/m2/m2l/MoPubInterstitial;)V
     .locals 2
-    .parameter "arg0"
+    .param p1, "arg0"    # Lcom/fusepowered/m2/m2l/MoPubInterstitial;
 
     .prologue
     .line 1584

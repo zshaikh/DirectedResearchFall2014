@@ -19,7 +19,7 @@
 
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 0
-    .parameter "name"
+    .param p1, "name"    # Ljava/lang/String;
 
     .prologue
     .line 16
@@ -33,7 +33,7 @@
 # virtual methods
 .method protected onHandleIntent(Landroid/content/Intent;)V
     .locals 5
-    .parameter "intent"
+    .param p1, "intent"    # Landroid/content/Intent;
 
     .prologue
     .line 25
@@ -44,7 +44,7 @@
     move-result-object v0
 
     .line 29
-    .local v0, campaign:Ljava/lang/String;
+    .local v0, "campaign":Ljava/lang/String;
     :try_start_0
     const-string v3, "gaInstallData"
 
@@ -55,7 +55,7 @@
     move-result-object v2
 
     .line 30
-    .local v2, output:Ljava/io/OutputStream;
+    .local v2, "output":Ljava/io/OutputStream;
     invoke-virtual {v0}, Ljava/lang/String;->getBytes()[B
 
     move-result-object v3
@@ -68,7 +68,7 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 35
-    .end local v2           #output:Ljava/io/OutputStream;
+    .end local v2    # "output":Ljava/io/OutputStream;
     :goto_0
     return-void
 
@@ -79,7 +79,7 @@
     move-object v1, v3
 
     .line 33
-    .local v1, e:Ljava/io/IOException;
+    .local v1, "e":Ljava/io/IOException;
     const-string v3, "Error storing install campaign."
 
     invoke-static {v3}, Lcom/google/analytics/tracking/android/Log;->e(Ljava/lang/String;)I

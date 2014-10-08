@@ -35,7 +35,7 @@
 
 .method public static getExceptionStackTraceAsString(Ljava/lang/Exception;)Ljava/lang/String;
     .locals 2
-    .parameter "exception"
+    .param p0, "exception"    # Ljava/lang/Exception;
 
     .prologue
     .line 30
@@ -44,7 +44,7 @@
     invoke-direct {v0}, Ljava/io/StringWriter;-><init>()V
 
     .line 31
-    .local v0, sw:Ljava/io/StringWriter;
+    .local v0, "sw":Ljava/io/StringWriter;
     new-instance v1, Ljava/io/PrintWriter;
 
     invoke-direct {v1, v0}, Ljava/io/PrintWriter;-><init>(Ljava/io/Writer;)V
@@ -61,9 +61,9 @@
 
 .method public static writeToFile(Ljava/lang/String;Landroid/content/Context;Ljava/lang/String;)V
     .locals 5
-    .parameter "data"
-    .parameter "context"
-    .parameter "path"
+    .param p0, "data"    # Ljava/lang/String;
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "path"    # Ljava/lang/String;
 
     .prologue
     .line 19
@@ -84,7 +84,7 @@
     invoke-direct {v1, v2}, Ljava/io/OutputStreamWriter;-><init>(Ljava/io/OutputStream;)V
 
     .line 22
-    .local v1, outputStreamWriter:Ljava/io/OutputStreamWriter;
+    .local v1, "outputStreamWriter":Ljava/io/OutputStreamWriter;
     invoke-virtual {v1, p0}, Ljava/io/OutputStreamWriter;->write(Ljava/lang/String;)V
 
     .line 23
@@ -93,7 +93,7 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 27
-    .end local v1           #outputStreamWriter:Ljava/io/OutputStreamWriter;
+    .end local v1    # "outputStreamWriter":Ljava/io/OutputStreamWriter;
     :goto_0
     return-void
 
@@ -104,7 +104,7 @@
     move-object v0, v2
 
     .line 25
-    .local v0, e:Ljava/io/IOException;
+    .local v0, "e":Ljava/io/IOException;
     const-string v2, "Exception"
 
     new-instance v3, Ljava/lang/StringBuilder;

@@ -4,13 +4,13 @@
 
 
 # static fields
-.field static final BD_MAX_INT:Ljava/math/BigDecimal; = null
+.field static final BD_MAX_INT:Ljava/math/BigDecimal;
 
-.field static final BD_MAX_LONG:Ljava/math/BigDecimal; = null
+.field static final BD_MAX_LONG:Ljava/math/BigDecimal;
 
-.field static final BD_MIN_INT:Ljava/math/BigDecimal; = null
+.field static final BD_MIN_INT:Ljava/math/BigDecimal;
 
-.field static final BD_MIN_LONG:Ljava/math/BigDecimal; = null
+.field static final BD_MIN_LONG:Ljava/math/BigDecimal;
 
 .field protected static final CHAR_NULL:C = '\u0000'
 
@@ -132,7 +132,7 @@
     .prologue
     const-wide v3, 0x7fffffffffffffffL
 
-    const-wide/high16 v1, -0x8000
+    const-wide/high16 v1, -0x8000000000000000L
 
     .line 195
     new-instance v0, Ljava/math/BigDecimal;
@@ -167,8 +167,8 @@
 
 .method protected constructor <init>(Lcom/flurry/org/codehaus/jackson/io/IOContext;I)V
     .locals 5
-    .parameter "ctxt"
-    .parameter "features"
+    .param p1, "ctxt"    # Lcom/flurry/org/codehaus/jackson/io/IOContext;
+    .param p2, "features"    # I
 
     .prologue
     const-wide/16 v3, 0x0
@@ -244,7 +244,7 @@
 
 .method private final _parseSlowFloatValue(I)V
     .locals 3
-    .parameter "expType"
+    .param p1, "expType"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -303,7 +303,7 @@
     move-object v0, v1
 
     .line 784
-    .local v0, nex:Ljava/lang/NumberFormatException;
+    .local v0, "nex":Ljava/lang/NumberFormatException;
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -341,10 +341,10 @@
 
 .method private final _parseSlowIntValue(I[CII)V
     .locals 4
-    .parameter "expType"
-    .parameter "buf"
-    .parameter "offset"
-    .parameter "len"
+    .param p1, "expType"    # I
+    .param p2, "buf"    # [C
+    .param p3, "offset"    # I
+    .param p4, "len"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -361,7 +361,7 @@
     move-result-object v1
 
     .line 794
-    .local v1, numStr:Ljava/lang/String;
+    .local v1, "numStr":Ljava/lang/String;
     :try_start_0
     iget-boolean v2, p0, Lcom/flurry/org/codehaus/jackson/impl/JsonParserBase;->_numberNegative:Z
 
@@ -411,7 +411,7 @@
     move-object v0, v2
 
     .line 805
-    .local v0, nex:Ljava/lang/NumberFormatException;
+    .local v0, "nex":Ljava/lang/NumberFormatException;
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -453,9 +453,9 @@
 
 .method protected final _decodeBase64Escape(Lcom/flurry/org/codehaus/jackson/Base64Variant;CI)I
     .locals 3
-    .parameter "b64variant"
-    .parameter "ch"
-    .parameter "index"
+    .param p1, "b64variant"    # Lcom/flurry/org/codehaus/jackson/Base64Variant;
+    .param p2, "ch"    # C
+    .param p3, "index"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -483,7 +483,7 @@
     move-result v1
 
     .line 1025
-    .local v1, unescaped:C
+    .local v1, "unescaped":C
     const/16 v2, 0x20
 
     if-gt v1, v2, :cond_1
@@ -505,7 +505,7 @@
     move-result v0
 
     .line 1032
-    .local v0, bits:I
+    .local v0, "bits":I
     if-gez v0, :cond_2
 
     .line 1033
@@ -524,9 +524,9 @@
 
 .method protected final _decodeBase64Escape(Lcom/flurry/org/codehaus/jackson/Base64Variant;II)I
     .locals 3
-    .parameter "b64variant"
-    .parameter "ch"
-    .parameter "index"
+    .param p1, "b64variant"    # Lcom/flurry/org/codehaus/jackson/Base64Variant;
+    .param p2, "ch"    # I
+    .param p3, "index"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -554,7 +554,7 @@
     move-result v1
 
     .line 1003
-    .local v1, unescaped:I
+    .local v1, "unescaped":I
     const/16 v2, 0x20
 
     if-gt v1, v2, :cond_1
@@ -576,7 +576,7 @@
     move-result v0
 
     .line 1010
-    .local v0, bits:I
+    .local v0, "bits":I
     if-gez v0, :cond_2
 
     .line 1011
@@ -731,7 +731,7 @@
 
 .method protected _parseNumericValue(I)V
     .locals 9
-    .parameter "expType"
+    .param p1, "expType"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -757,7 +757,7 @@
     move-result-object v0
 
     .line 717
-    .local v0, buf:[C
+    .local v0, "buf":[C
     iget-object v6, p0, Lcom/flurry/org/codehaus/jackson/impl/JsonParserBase;->_textBuffer:Lcom/flurry/org/codehaus/jackson/util/TextBuffer;
 
     invoke-virtual {v6}, Lcom/flurry/org/codehaus/jackson/util/TextBuffer;->getTextOffset()I
@@ -765,11 +765,11 @@
     move-result v5
 
     .line 718
-    .local v5, offset:I
+    .local v5, "offset":I
     iget v4, p0, Lcom/flurry/org/codehaus/jackson/impl/JsonParserBase;->_intLength:I
 
     .line 719
-    .local v4, len:I
+    .local v4, "len":I
     iget-boolean v6, p0, Lcom/flurry/org/codehaus/jackson/impl/JsonParserBase;->_numberNegative:Z
 
     if-eqz v6, :cond_0
@@ -789,7 +789,7 @@
     move-result v1
 
     .line 724
-    .local v1, i:I
+    .local v1, "i":I
     iget-boolean v6, p0, Lcom/flurry/org/codehaus/jackson/impl/JsonParserBase;->_numberNegative:Z
 
     if-eqz v6, :cond_1
@@ -803,17 +803,17 @@
     iput v8, p0, Lcom/flurry/org/codehaus/jackson/impl/JsonParserBase;->_numTypesValid:I
 
     .line 761
-    .end local v0           #buf:[C
-    .end local v1           #i:I
-    .end local v4           #len:I
-    .end local v5           #offset:I
+    .end local v0    # "buf":[C
+    .end local v1    # "i":I
+    .end local v4    # "len":I
+    .end local v5    # "offset":I
     :goto_1
     return-void
 
-    .restart local v0       #buf:[C
-    .restart local v1       #i:I
-    .restart local v4       #len:I
-    .restart local v5       #offset:I
+    .restart local v0    # "buf":[C
+    .restart local v1    # "i":I
+    .restart local v4    # "len":I
+    .restart local v5    # "offset":I
     :cond_1
     move v6, v1
 
@@ -821,7 +821,7 @@
     goto :goto_0
 
     .line 728
-    .end local v1           #i:I
+    .end local v1    # "i":I
     :cond_2
     const/16 v6, 0x12
 
@@ -833,7 +833,7 @@
     move-result-wide v2
 
     .line 730
-    .local v2, l:J
+    .local v2, "l":J
     iget-boolean v6, p0, Lcom/flurry/org/codehaus/jackson/impl/JsonParserBase;->_numberNegative:Z
 
     if-eqz v6, :cond_3
@@ -899,16 +899,16 @@
     goto :goto_1
 
     .line 753
-    .end local v2           #l:J
+    .end local v2    # "l":J
     :cond_6
     invoke-direct {p0, p1, v0, v5, v4}, Lcom/flurry/org/codehaus/jackson/impl/JsonParserBase;->_parseSlowIntValue(I[CII)V
 
     goto :goto_1
 
     .line 756
-    .end local v0           #buf:[C
-    .end local v4           #len:I
-    .end local v5           #offset:I
+    .end local v0    # "buf":[C
+    .end local v4    # "len":I
+    .end local v5    # "offset":I
     :cond_7
     iget-object v6, p0, Lcom/flurry/org/codehaus/jackson/impl/JsonParserBase;->_currToken:Lcom/flurry/org/codehaus/jackson/JsonToken;
 
@@ -972,7 +972,7 @@
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/impl/JsonParserBase;->_nameCopyBuffer:[C
 
     .line 452
-    .local v0, buf:[C
+    .local v0, "buf":[C
     if-eqz v0, :cond_0
 
     .line 453
@@ -992,8 +992,8 @@
 
 .method protected _reportMismatchedEndMarker(IC)V
     .locals 4
-    .parameter "actCh"
-    .parameter "expCh"
+    .param p1, "actCh"    # I
+    .param p2, "expCh"    # C
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lcom/flurry/org/codehaus/jackson/JsonParseException;
@@ -1033,7 +1033,7 @@
     move-result-object v0
 
     .line 481
-    .local v0, startDesc:Ljava/lang/String;
+    .local v0, "startDesc":Ljava/lang/String;
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1475,7 +1475,7 @@
     long-to-int v0, v1
 
     .line 822
-    .local v0, result:I
+    .local v0, "result":I
     int-to-long v1, v0
 
     iget-wide v3, p0, Lcom/flurry/org/codehaus/jackson/impl/JsonParserBase;->_numberLong:J
@@ -1520,7 +1520,7 @@
     iput v0, p0, Lcom/flurry/org/codehaus/jackson/impl/JsonParserBase;->_numberInt:I
 
     .line 845
-    .end local v0           #result:I
+    .end local v0    # "result":I
     :goto_0
     iget v1, p0, Lcom/flurry/org/codehaus/jackson/impl/JsonParserBase;->_numTypesValid:I
 
@@ -1561,7 +1561,7 @@
     .line 831
     iget-wide v1, p0, Lcom/flurry/org/codehaus/jackson/impl/JsonParserBase;->_numberDouble:D
 
-    const-wide/high16 v3, -0x3e20
+    const-wide/high16 v3, -0x3e20000000000000L
 
     cmpg-double v1, v1, v3
 
@@ -1706,7 +1706,7 @@
     .line 858
     iget-wide v0, p0, Lcom/flurry/org/codehaus/jackson/impl/JsonParserBase;->_numberDouble:D
 
-    const-wide/high16 v2, -0x3c20
+    const-wide/high16 v2, -0x3c20000000000000L
 
     cmpg-double v0, v0, v2
 
@@ -1714,7 +1714,7 @@
 
     iget-wide v0, p0, Lcom/flurry/org/codehaus/jackson/impl/JsonParserBase;->_numberDouble:D
 
-    const-wide/high16 v2, 0x43e0
+    const-wide/high16 v2, 0x43e0000000000000L
 
     cmpl-double v0, v0, v2
 
@@ -1845,7 +1845,7 @@
     add-int/lit8 v5, v0, 0x1
 
     .line 373
-    .local v5, col:I
+    .local v5, "col":I
     new-instance v0, Lcom/flurry/org/codehaus/jackson/JsonLocation;
 
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/impl/JsonParserBase;->_ioContext:Lcom/flurry/org/codehaus/jackson/io/IOContext;
@@ -1905,13 +1905,13 @@
     move-result-object v0
 
     .line 322
-    .local v0, parent:Lcom/flurry/org/codehaus/jackson/impl/JsonReadContext;
+    .local v0, "parent":Lcom/flurry/org/codehaus/jackson/impl/JsonReadContext;
     invoke-virtual {v0}, Lcom/flurry/org/codehaus/jackson/impl/JsonReadContext;->getCurrentName()Ljava/lang/String;
 
     move-result-object v1
 
     .line 324
-    .end local v0           #parent:Lcom/flurry/org/codehaus/jackson/impl/JsonReadContext;
+    .end local v0    # "parent":Lcom/flurry/org/codehaus/jackson/impl/JsonReadContext;
     :goto_0
     return-object v1
 
@@ -2031,7 +2031,7 @@
     move-result-wide v0
 
     .line 665
-    .local v0, value:D
+    .local v0, "value":D
     double-to-float v2, v0
 
     return v2
@@ -2365,7 +2365,7 @@
     iget v0, p0, Lcom/flurry/org/codehaus/jackson/impl/JsonParserBase;->_tokenInputCol:I
 
     .line 407
-    .local v0, col:I
+    .local v0, "col":I
     if-gez v0, :cond_0
 
     move v1, v0
@@ -2501,9 +2501,9 @@
 
 .method protected reportInvalidBase64Char(Lcom/flurry/org/codehaus/jackson/Base64Variant;II)Ljava/lang/IllegalArgumentException;
     .locals 1
-    .parameter "b64variant"
-    .parameter "ch"
-    .parameter "bindex"
+    .param p1, "b64variant"    # Lcom/flurry/org/codehaus/jackson/Base64Variant;
+    .param p2, "ch"    # I
+    .param p3, "bindex"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/IllegalArgumentException;
@@ -2523,10 +2523,10 @@
 
 .method protected reportInvalidBase64Char(Lcom/flurry/org/codehaus/jackson/Base64Variant;IILjava/lang/String;)Ljava/lang/IllegalArgumentException;
     .locals 4
-    .parameter "b64variant"
-    .parameter "ch"
-    .parameter "bindex"
-    .parameter "msg"
+    .param p1, "b64variant"    # Lcom/flurry/org/codehaus/jackson/Base64Variant;
+    .param p2, "ch"    # I
+    .param p3, "bindex"    # I
+    .param p4, "msg"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/IllegalArgumentException;
@@ -2583,7 +2583,7 @@
     move-result-object v0
 
     .line 1062
-    .local v0, base:Ljava/lang/String;
+    .local v0, "base":Ljava/lang/String;
     :goto_0
     if-eqz p4, :cond_0
 
@@ -2619,7 +2619,7 @@
     return-object v1
 
     .line 1054
-    .end local v0           #base:Ljava/lang/String;
+    .end local v0    # "base":Ljava/lang/String;
     :cond_1
     invoke-virtual {p1, p2}, Lcom/flurry/org/codehaus/jackson/Base64Variant;->usesPaddingChar(I)Z
 
@@ -2668,11 +2668,11 @@
 
     move-result-object v0
 
-    .restart local v0       #base:Ljava/lang/String;
+    .restart local v0    # "base":Ljava/lang/String;
     goto :goto_0
 
     .line 1056
-    .end local v0           #base:Ljava/lang/String;
+    .end local v0    # "base":Ljava/lang/String;
     :cond_2
     invoke-static {p2}, Ljava/lang/Character;->isDefined(I)Z
 
@@ -2716,11 +2716,11 @@
 
     move-result-object v0
 
-    .restart local v0       #base:Ljava/lang/String;
+    .restart local v0    # "base":Ljava/lang/String;
     goto :goto_0
 
     .line 1060
-    .end local v0           #base:Ljava/lang/String;
+    .end local v0    # "base":Ljava/lang/String;
     :cond_4
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -2762,13 +2762,13 @@
 
     move-result-object v0
 
-    .restart local v0       #base:Ljava/lang/String;
+    .restart local v0    # "base":Ljava/lang/String;
     goto/16 :goto_0
 .end method
 
 .method protected reportInvalidNumber(Ljava/lang/String;)V
     .locals 2
-    .parameter "msg"
+    .param p1, "msg"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lcom/flurry/org/codehaus/jackson/JsonParseException;
@@ -2836,7 +2836,7 @@
 
     move-result-object v0
 
-    const/high16 v1, -0x8000
+    const/high16 v1, -0x80000000
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -2905,7 +2905,7 @@
 
     move-result-object v0
 
-    const-wide/high16 v1, -0x8000
+    const-wide/high16 v1, -0x8000000000000000L
 
     invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
@@ -2941,8 +2941,8 @@
 
 .method protected reportUnexpectedNumberChar(ILjava/lang/String;)V
     .locals 3
-    .parameter "ch"
-    .parameter "comment"
+    .param p1, "ch"    # I
+    .param p2, "comment"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lcom/flurry/org/codehaus/jackson/JsonParseException;
@@ -2980,7 +2980,7 @@
     move-result-object v0
 
     .line 954
-    .local v0, msg:Ljava/lang/String;
+    .local v0, "msg":Ljava/lang/String;
     if-eqz p2, :cond_0
 
     .line 955
@@ -3016,10 +3016,10 @@
 
 .method protected final reset(ZIII)Lcom/flurry/org/codehaus/jackson/JsonToken;
     .locals 1
-    .parameter "negative"
-    .parameter "intLen"
-    .parameter "fractLen"
-    .parameter "expLen"
+    .param p1, "negative"    # Z
+    .param p2, "intLen"    # I
+    .param p3, "fractLen"    # I
+    .param p4, "expLen"    # I
 
     .prologue
     const/4 v0, 0x1
@@ -3048,8 +3048,8 @@
 
 .method protected final resetAsNaN(Ljava/lang/String;D)Lcom/flurry/org/codehaus/jackson/JsonToken;
     .locals 1
-    .parameter "valueStr"
-    .parameter "value"
+    .param p1, "valueStr"    # Ljava/lang/String;
+    .param p2, "value"    # D
 
     .prologue
     .line 538
@@ -3073,10 +3073,10 @@
 
 .method protected final resetFloat(ZIII)Lcom/flurry/org/codehaus/jackson/JsonToken;
     .locals 1
-    .parameter "negative"
-    .parameter "intLen"
-    .parameter "fractLen"
-    .parameter "expLen"
+    .param p1, "negative"    # Z
+    .param p2, "intLen"    # I
+    .param p3, "fractLen"    # I
+    .param p4, "expLen"    # I
 
     .prologue
     .line 528
@@ -3104,8 +3104,8 @@
 
 .method protected final resetInt(ZI)Lcom/flurry/org/codehaus/jackson/JsonToken;
     .locals 1
-    .parameter "negative"
-    .parameter "intLen"
+    .param p1, "negative"    # Z
+    .param p2, "intLen"    # I
 
     .prologue
     const/4 v0, 0x0

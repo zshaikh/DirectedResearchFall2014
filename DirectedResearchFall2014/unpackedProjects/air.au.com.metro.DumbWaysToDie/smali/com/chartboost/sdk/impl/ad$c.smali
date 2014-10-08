@@ -21,7 +21,6 @@
 # direct methods
 .method constructor <init>(Lcom/chartboost/sdk/impl/af;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 102

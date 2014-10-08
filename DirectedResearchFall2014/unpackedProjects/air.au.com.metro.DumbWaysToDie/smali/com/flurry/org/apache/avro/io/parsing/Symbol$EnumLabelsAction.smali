@@ -30,7 +30,6 @@
 # direct methods
 .method public constructor <init>(Ljava/util/List;)V
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -43,7 +42,7 @@
 
     .prologue
     .line 498
-    .local p1, symbols:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
+    .local p1, "symbols":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v0
@@ -61,7 +60,7 @@
 # virtual methods
 .method public findLabel(Ljava/lang/String;)I
     .locals 2
-    .parameter "l"
+    .param p1, "l"    # Ljava/lang/String;
 
     .prologue
     .line 507
@@ -70,7 +69,7 @@
     .line 508
     const/4 v0, 0x0
 
-    .local v0, i:I
+    .local v0, "i":I
     :goto_0
     iget-object v1, p0, Lcom/flurry/org/apache/avro/io/parsing/Symbol$EnumLabelsAction;->symbols:Ljava/util/List;
 
@@ -96,19 +95,19 @@
     move v1, v0
 
     .line 514
-    .end local v0           #i:I
+    .end local v0    # "i":I
     :goto_1
     return v1
 
     .line 508
-    .restart local v0       #i:I
+    .restart local v0    # "i":I
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
     .line 514
-    .end local v0           #i:I
+    .end local v0    # "i":I
     :cond_1
     const/4 v1, -0x1
 
@@ -117,7 +116,7 @@
 
 .method public getLabel(I)Ljava/lang/String;
     .locals 1
-    .parameter "n"
+    .param p1, "n"    # I
 
     .prologue
     .line 503
@@ -127,7 +126,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/flurry/org/apache/avro/io/parsing/Symbol$EnumLabelsAction;
     check-cast p0, Ljava/lang/String;
 
     return-object p0

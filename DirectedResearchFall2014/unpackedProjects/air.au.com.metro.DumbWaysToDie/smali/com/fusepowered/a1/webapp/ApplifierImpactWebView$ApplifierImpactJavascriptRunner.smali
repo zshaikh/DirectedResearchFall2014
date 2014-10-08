@@ -26,8 +26,7 @@
 # direct methods
 .method public constructor <init>(Lcom/fusepowered/a1/webapp/ApplifierImpactWebView;Ljava/lang/String;)V
     .locals 1
-    .parameter
-    .parameter "jsString"
+    .param p2, "jsString"    # Ljava/lang/String;
 
     .prologue
     .line 346
@@ -79,7 +78,7 @@
     move-object v0, v1
 
     .line 357
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v1, "Error while processing JavaScriptString!"
 
     invoke-static {v1, p0}, Lcom/fusepowered/a1/ApplifierImpactUtils;->Log(Ljava/lang/String;Ljava/lang/Object;)V
@@ -87,7 +86,7 @@
     goto :goto_0
 
     .line 361
-    .end local v0           #e:Ljava/lang/Exception;
+    .end local v0    # "e":Ljava/lang/Exception;
     :cond_0
     const-string v1, "Could not process JavaScript, the string is NULL"
 

@@ -18,7 +18,7 @@
 # virtual methods
 .method public onBind(Landroid/content/Intent;)Landroid/os/IBinder;
     .locals 1
-    .parameter "arg0"
+    .param p1, "arg0"    # Landroid/content/Intent;
 
     .prologue
     .line 25

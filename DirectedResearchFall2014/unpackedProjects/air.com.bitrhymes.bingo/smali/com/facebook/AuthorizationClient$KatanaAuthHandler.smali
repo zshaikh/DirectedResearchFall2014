@@ -25,7 +25,6 @@
 # direct methods
 .method constructor <init>(Lcom/facebook/AuthorizationClient;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 784
@@ -40,8 +39,8 @@
 # virtual methods
 .method protected tryIntent(Landroid/content/Intent;I)Z
     .locals 3
-    .parameter "intent"
-    .parameter "requestCode"
+    .param p1, "intent"    # Landroid/content/Intent;
+    .param p2, "requestCode"    # I
 
     .prologue
     const/4 v2, 0x0
@@ -79,7 +78,7 @@
 
     move-object v0, v1
 
-    .local v0, e:Landroid/content/ActivityNotFoundException;
+    .local v0, "e":Landroid/content/ActivityNotFoundException;
     move v1, v2
 
     .line 797

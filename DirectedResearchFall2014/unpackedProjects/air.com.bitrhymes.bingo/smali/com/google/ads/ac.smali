@@ -43,10 +43,6 @@
 # virtual methods
 .method protected a(Ljava/util/HashMap;Ljava/lang/String;ILandroid/util/DisplayMetrics;)I
     .locals 2
-    .parameter
-    .parameter
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -138,9 +134,6 @@
 
 .method public a(Lcom/google/ads/internal/d;Ljava/util/HashMap;Landroid/webkit/WebView;)V
     .locals 10
-    .parameter
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -454,7 +447,7 @@
     move-result v0
 
     .line 149
-    const/high16 v1, 0x447a
+    const/high16 v1, 0x447a0000
 
     mul-float/2addr v0, v1
 

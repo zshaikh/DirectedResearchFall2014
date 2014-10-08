@@ -26,8 +26,7 @@
 # direct methods
 .method public constructor <init>(Lcom/fusepowered/a1/webapp/ApplifierImpactWebData;Lcom/fusepowered/a1/webapp/ApplifierImpactWebData$ApplifierImpactUrlLoader;)V
     .locals 1
-    .parameter
-    .parameter "loader"
+    .param p2, "loader"    # Lcom/fusepowered/a1/webapp/ApplifierImpactWebData$ApplifierImpactUrlLoader;
 
     .prologue
     .line 606
@@ -74,7 +73,7 @@
     move-object v0, v1
 
     .line 615
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     new-instance v1, Ljava/lang/StringBuilder;
 
     const-string v2, "Cancelling urlLoader got exception: "

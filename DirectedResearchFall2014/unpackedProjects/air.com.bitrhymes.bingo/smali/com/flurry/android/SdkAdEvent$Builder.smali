@@ -359,7 +359,6 @@
 
 .method public setParams(Ljava/util/Map;)Lcom/flurry/android/SdkAdEvent$Builder;
     .locals 2
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -400,7 +399,6 @@
 
 .method public setTimeOffset(J)Lcom/flurry/android/SdkAdEvent$Builder;
     .locals 3
-    .parameter
 
     .prologue
     const/4 v2, 0x2
@@ -436,7 +434,6 @@
 
 .method public setType(Ljava/lang/CharSequence;)Lcom/flurry/android/SdkAdEvent$Builder;
     .locals 3
-    .parameter
 
     .prologue
     const/4 v2, 0x0

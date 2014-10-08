@@ -32,8 +32,8 @@
 # virtual methods
 .method public call(Lcom/adobe/fre/FREContext;[Lcom/adobe/fre/FREObject;)Lcom/adobe/fre/FREObject;
     .locals 6
-    .parameter "context"
-    .parameter "args"
+    .param p1, "context"    # Lcom/adobe/fre/FREContext;
+    .param p2, "args"    # [Lcom/adobe/fre/FREObject;
 
     .prologue
     const-string v5, "PushNotifier"
@@ -46,13 +46,13 @@
     invoke-static {v5, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 226
-    #calls: Lcom/buffalostudios/aneutils/notifier/PushNotifier;->isGCMAvailable(Lcom/adobe/fre/FREContext;)Z
+    # invokes: Lcom/buffalostudios/aneutils/notifier/PushNotifier;->isGCMAvailable(Lcom/adobe/fre/FREContext;)Z
     invoke-static {p1}, Lcom/buffalostudios/aneutils/notifier/PushNotifier;->access$0(Lcom/adobe/fre/FREContext;)Z
 
     move-result v2
 
     .line 228
-    .local v2, result:Z
+    .local v2, "result":Z
     const-string v3, "PushNotifier"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -75,7 +75,7 @@
     const/4 v1, 0x0
 
     .line 231
-    .local v1, resFreObject:Lcom/adobe/fre/FREObject;
+    .local v1, "resFreObject":Lcom/adobe/fre/FREObject;
     :try_start_0
     invoke-static {v2}, Lcom/adobe/fre/FREObject;->newObject(Z)Lcom/adobe/fre/FREObject;
     :try_end_0
@@ -92,7 +92,7 @@
     move-exception v0
 
     .line 233
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v3, "PushNotifier"
 
     const-string v3, "Thread Exception"

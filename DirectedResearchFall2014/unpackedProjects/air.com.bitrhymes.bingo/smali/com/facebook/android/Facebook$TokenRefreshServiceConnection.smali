@@ -32,9 +32,8 @@
 # direct methods
 .method public constructor <init>(Lcom/facebook/android/Facebook;Landroid/content/Context;Lcom/facebook/android/Facebook$ServiceListener;)V
     .locals 2
-    .parameter
-    .parameter "applicationsContext"
-    .parameter "serviceListener"
+    .param p2, "applicationsContext"    # Landroid/content/Context;
+    .param p3, "serviceListener"    # Lcom/facebook/android/Facebook$ServiceListener;
 
     .prologue
     .line 520
@@ -79,12 +78,12 @@
     invoke-direct {v2}, Landroid/os/Bundle;-><init>()V
 
     .line 541
-    .local v2, requestData:Landroid/os/Bundle;
+    .local v2, "requestData":Landroid/os/Bundle;
     const-string v3, "access_token"
 
     iget-object v4, p0, Lcom/facebook/android/Facebook$TokenRefreshServiceConnection;->this$0:Lcom/facebook/android/Facebook;
 
-    #getter for: Lcom/facebook/android/Facebook;->accessToken:Ljava/lang/String;
+    # getter for: Lcom/facebook/android/Facebook;->accessToken:Ljava/lang/String;
     invoke-static {v4}, Lcom/facebook/android/Facebook;->access$0(Lcom/facebook/android/Facebook;)Ljava/lang/String;
 
     move-result-object v4
@@ -97,7 +96,7 @@
     move-result-object v1
 
     .line 544
-    .local v1, request:Landroid/os/Message;
+    .local v1, "request":Landroid/os/Message;
     invoke-virtual {v1, v2}, Landroid/os/Message;->setData(Landroid/os/Bundle;)V
 
     .line 545
@@ -124,7 +123,7 @@
     move-object v0, v3
 
     .line 550
-    .local v0, e:Landroid/os/RemoteException;
+    .local v0, "e":Landroid/os/RemoteException;
     iget-object v3, p0, Lcom/facebook/android/Facebook$TokenRefreshServiceConnection;->serviceListener:Lcom/facebook/android/Facebook$ServiceListener;
 
     new-instance v4, Ljava/lang/Error;
@@ -142,8 +141,8 @@
 # virtual methods
 .method public onServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V
     .locals 1
-    .parameter "className"
-    .parameter "service"
+    .param p1, "className"    # Landroid/content/ComponentName;
+    .param p2, "service"    # Landroid/os/IBinder;
 
     .prologue
     .line 527
@@ -162,7 +161,7 @@
 
 .method public onServiceDisconnected(Landroid/content/ComponentName;)V
     .locals 3
-    .parameter "arg"
+    .param p1, "arg"    # Landroid/content/ComponentName;
 
     .prologue
     .line 533

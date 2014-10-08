@@ -39,9 +39,9 @@
 # direct methods
 .method public constructor <init>(Landroid/app/Activity;Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest$ContentDelegate;Ljava/lang/String;)V
     .locals 0
-    .parameter "activity"
-    .parameter "delegate"
-    .parameter "placement"
+    .param p1, "activity"    # Landroid/app/Activity;
+    .param p2, "delegate"    # Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest$ContentDelegate;
+    .param p3, "placement"    # Ljava/lang/String;
 
     .prologue
     .line 86
@@ -56,8 +56,8 @@
 
 .method public constructor <init>(Landroid/app/Activity;Ljava/lang/String;)V
     .locals 1
-    .parameter "activity"
-    .parameter "placement"
+    .param p1, "activity"    # Landroid/app/Activity;
+    .param p2, "placement"    # Ljava/lang/String;
 
     .prologue
     .line 80
@@ -76,7 +76,7 @@
 
 .method public static didDismissContentWithin(J)Z
     .locals 1
-    .parameter "range"
+    .param p0, "range"    # J
 
     .prologue
     .line 188
@@ -110,7 +110,7 @@
     move-result-object v0
 
     .line 216
-    .local v0, active:Landroid/graphics/Bitmap;
+    .local v0, "active":Landroid/graphics/Bitmap;
     iget-object v2, p0, Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest;->customize_delegate:Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest$CustomizeDelegate;
 
     sget-object v3, Lcom/playhaven/src/publishersdk/content/PHContentView$ButtonState;->Up:Lcom/playhaven/src/publishersdk/content/PHContentView$ButtonState;
@@ -120,7 +120,7 @@
     move-result-object v1
 
     .line 218
-    .local v1, inactive:Landroid/graphics/Bitmap;
+    .local v1, "inactive":Landroid/graphics/Bitmap;
     if-eqz v0, :cond_0
 
     if-eqz v1, :cond_0
@@ -136,8 +136,8 @@
     invoke-super {p0, v1, v2}, Lv2/com/playhaven/requests/content/PHContentRequest;->setCloseButton(Landroid/graphics/Bitmap;Lv2/com/playhaven/views/interstitial/PHCloseButton$CloseButtonState;)V
 
     .line 226
-    .end local v0           #active:Landroid/graphics/Bitmap;
-    .end local v1           #inactive:Landroid/graphics/Bitmap;
+    .end local v0    # "active":Landroid/graphics/Bitmap;
+    .end local v1    # "inactive":Landroid/graphics/Bitmap;
     :cond_0
     return-void
 .end method
@@ -167,7 +167,7 @@
     invoke-direct {v0}, Lv2/com/playhaven/configuration/PHConfiguration;-><init>()V
 
     .line 259
-    .local v0, config:Lv2/com/playhaven/configuration/PHConfiguration;
+    .local v0, "config":Lv2/com/playhaven/configuration/PHConfiguration;
     iget-object v1, p0, Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest;->context:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -223,7 +223,7 @@
     invoke-direct {v0}, Lv2/com/playhaven/configuration/PHConfiguration;-><init>()V
 
     .line 280
-    .local v0, config:Lv2/com/playhaven/configuration/PHConfiguration;
+    .local v0, "config":Lv2/com/playhaven/configuration/PHConfiguration;
     iget-object v1, p0, Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest;->context:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -268,7 +268,7 @@
 
 .method public setDelegate(Lcom/playhaven/src/common/PHAPIRequest$Delegate;)V
     .locals 3
-    .parameter "delegate"
+    .param p1, "delegate"    # Lcom/playhaven/src/common/PHAPIRequest$Delegate;
 
     .prologue
     const/4 v2, 0x0
@@ -277,7 +277,7 @@
     const/4 v0, 0x0
 
     .line 234
-    .local v0, existing_failure_delegate:Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest$FailureDelegate;
+    .local v0, "existing_failure_delegate":Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest$FailureDelegate;
     iget-object v1, p0, Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest;->content_adapter:Lcom/playhaven/src/publishersdk/content/adapters/ContentDelegateAdapter;
 
     if-eqz v1, :cond_0
@@ -304,7 +304,7 @@
 
     check-cast p1, Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest$ContentDelegate;
 
-    .end local p1
+    .end local p1    # "delegate":Lcom/playhaven/src/common/PHAPIRequest$Delegate;
     invoke-direct {v1, p1, v0, v2}, Lcom/playhaven/src/publishersdk/content/adapters/ContentDelegateAdapter;-><init>(Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest$ContentDelegate;Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest$FailureDelegate;Lcom/playhaven/src/common/PHAPIRequest$Delegate;)V
 
     invoke-virtual {p0, v1}, Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest;->setOnContentListener(Lv2/com/playhaven/listeners/PHContentRequestListener;)V
@@ -314,7 +314,7 @@
     return-void
 
     .line 244
-    .restart local p1
+    .restart local p1    # "delegate":Lcom/playhaven/src/common/PHAPIRequest$Delegate;
     :cond_1
     new-instance v1, Lcom/playhaven/src/publishersdk/content/adapters/ContentDelegateAdapter;
 
@@ -327,7 +327,7 @@
 
 .method public setDelegates(Ljava/lang/Object;)V
     .locals 4
-    .parameter "delegate"
+    .param p1, "delegate"    # Ljava/lang/Object;
 
     .prologue
     const/4 v3, 0x0
@@ -462,7 +462,7 @@
 
     check-cast p1, Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest$FailureDelegate;
 
-    .end local p1
+    .end local p1    # "delegate":Ljava/lang/Object;
     invoke-direct {v2, v1, p1, v3}, Lcom/playhaven/src/publishersdk/content/adapters/ContentDelegateAdapter;-><init>(Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest$ContentDelegate;Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest$FailureDelegate;Lcom/playhaven/src/common/PHAPIRequest$Delegate;)V
 
     invoke-super {p0, v2}, Lv2/com/playhaven/requests/content/PHContentRequest;->setOnContentListener(Lv2/com/playhaven/listeners/PHContentRequestListener;)V
@@ -472,7 +472,7 @@
     return-void
 
     .line 147
-    .restart local p1
+    .restart local p1    # "delegate":Ljava/lang/Object;
     :cond_2
     const-string v1, "*** RewardDelegate is not implemented. If you are using rewards this needs to be implemented."
 
@@ -518,14 +518,14 @@
 
 .method public setOnContentListener(Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest$ContentDelegate;)V
     .locals 3
-    .parameter "content_listener"
+    .param p1, "content_listener"    # Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest$ContentDelegate;
 
     .prologue
     .line 97
     const/4 v0, 0x0
 
     .line 99
-    .local v0, existing_failure_delegate:Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest$FailureDelegate;
+    .local v0, "existing_failure_delegate":Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest$FailureDelegate;
     iget-object v2, p0, Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest;->content_adapter:Lcom/playhaven/src/publishersdk/content/adapters/ContentDelegateAdapter;
 
     if-eqz v2, :cond_0
@@ -542,7 +542,7 @@
     const/4 v1, 0x0
 
     .line 104
-    .local v1, existing_request_delegate:Lcom/playhaven/src/common/PHAPIRequest$Delegate;
+    .local v1, "existing_request_delegate":Lcom/playhaven/src/common/PHAPIRequest$Delegate;
     iget-object v2, p0, Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest;->content_adapter:Lcom/playhaven/src/publishersdk/content/adapters/ContentDelegateAdapter;
 
     if-eqz v2, :cond_1
@@ -570,7 +570,7 @@
 
 .method public setOnCustomizeListener(Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest$CustomizeDelegate;)V
     .locals 0
-    .parameter "customize_listener"
+    .param p1, "customize_listener"    # Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest$CustomizeDelegate;
 
     .prologue
     .line 119
@@ -582,14 +582,14 @@
 
 .method public setOnFailureListener(Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest$FailureDelegate;)V
     .locals 3
-    .parameter "failure_listener"
+    .param p1, "failure_listener"    # Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest$FailureDelegate;
 
     .prologue
     .line 125
     const/4 v0, 0x0
 
     .line 127
-    .local v0, existing_content_delegate:Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest$ContentDelegate;
+    .local v0, "existing_content_delegate":Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest$ContentDelegate;
     iget-object v2, p0, Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest;->content_adapter:Lcom/playhaven/src/publishersdk/content/adapters/ContentDelegateAdapter;
 
     if-eqz v2, :cond_0
@@ -606,7 +606,7 @@
     const/4 v1, 0x0
 
     .line 132
-    .local v1, existing_request_delegate:Lcom/playhaven/src/common/PHAPIRequest$Delegate;
+    .local v1, "existing_request_delegate":Lcom/playhaven/src/common/PHAPIRequest$Delegate;
     iget-object v2, p0, Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest;->content_adapter:Lcom/playhaven/src/publishersdk/content/adapters/ContentDelegateAdapter;
 
     if-eqz v2, :cond_1
@@ -634,7 +634,7 @@
 
 .method public setOnPurchaseListener(Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest$PurchaseDelegate;)V
     .locals 1
-    .parameter "purchase_listener"
+    .param p1, "purchase_listener"    # Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest$PurchaseDelegate;
 
     .prologue
     .line 115
@@ -650,7 +650,7 @@
 
 .method public setOnRewardListener(Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest$RewardDelegate;)V
     .locals 1
-    .parameter "reward_listener"
+    .param p1, "reward_listener"    # Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest$RewardDelegate;
 
     .prologue
     .line 111
@@ -666,7 +666,7 @@
 
 .method public setOverlayImmediately(Z)V
     .locals 0
-    .parameter "doOverlay"
+    .param p1, "doOverlay"    # Z
 
     .prologue
     .line 199

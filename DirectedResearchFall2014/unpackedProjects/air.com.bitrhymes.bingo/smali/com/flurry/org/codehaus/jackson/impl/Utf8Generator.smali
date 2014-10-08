@@ -26,13 +26,13 @@
 
 .field private static final BYTE_u:B = 0x75t
 
-.field private static final FALSE_BYTES:[B = null
+.field private static final FALSE_BYTES:[B
 
-.field static final HEX_CHARS:[B = null
+.field static final HEX_CHARS:[B
 
 .field private static final MAX_BYTES_TO_BUFFER:I = 0x200
 
-.field private static final NULL_BYTES:[B = null
+.field private static final NULL_BYTES:[B
 
 .field protected static final SURR1_FIRST:I = 0xd800
 
@@ -123,7 +123,7 @@
 
     .line 42
     :array_0
-    .array-data 0x1
+    .array-data 1
         0x6et
         0x75t
         0x6ct
@@ -132,7 +132,7 @@
 
     .line 43
     :array_1
-    .array-data 0x1
+    .array-data 1
         0x74t
         0x72t
         0x75t
@@ -141,7 +141,7 @@
 
     .line 44
     :array_2
-    .array-data 0x1
+    .array-data 1
         0x66t
         0x61t
         0x6ct
@@ -152,10 +152,10 @@
 
 .method public constructor <init>(Lcom/flurry/org/codehaus/jackson/io/IOContext;ILcom/flurry/org/codehaus/jackson/ObjectCodec;Ljava/io/OutputStream;)V
     .locals 1
-    .parameter "ctxt"
-    .parameter "features"
-    .parameter "codec"
-    .parameter "out"
+    .param p1, "ctxt"    # Lcom/flurry/org/codehaus/jackson/io/IOContext;
+    .param p2, "features"    # I
+    .param p3, "codec"    # Lcom/flurry/org/codehaus/jackson/ObjectCodec;
+    .param p4, "out"    # Ljava/io/OutputStream;
 
     .prologue
     .line 162
@@ -238,13 +238,13 @@
 
 .method public constructor <init>(Lcom/flurry/org/codehaus/jackson/io/IOContext;ILcom/flurry/org/codehaus/jackson/ObjectCodec;Ljava/io/OutputStream;[BIZ)V
     .locals 1
-    .parameter "ctxt"
-    .parameter "features"
-    .parameter "codec"
-    .parameter "out"
-    .parameter "outputBuffer"
-    .parameter "outputOffset"
-    .parameter "bufferRecyclable"
+    .param p1, "ctxt"    # Lcom/flurry/org/codehaus/jackson/io/IOContext;
+    .param p2, "features"    # I
+    .param p3, "codec"    # Lcom/flurry/org/codehaus/jackson/ObjectCodec;
+    .param p4, "out"    # Ljava/io/OutputStream;
+    .param p5, "outputBuffer"    # [B
+    .param p6, "outputOffset"    # I
+    .param p7, "bufferRecyclable"    # Z
 
     .prologue
     .line 186
@@ -324,11 +324,11 @@
 
 .method private _handleLongCustomEscape([BII[BI)I
     .locals 3
-    .parameter "outputBuffer"
-    .parameter "outputPtr"
-    .parameter "outputEnd"
-    .parameter "raw"
-    .parameter "remainingChars"
+    .param p1, "outputBuffer"    # [B
+    .param p2, "outputPtr"    # I
+    .param p3, "outputEnd"    # I
+    .param p4, "raw"    # [B
+    .param p5, "remainingChars"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -343,7 +343,7 @@
     array-length v0, p4
 
     .line 1483
-    .local v0, len:I
+    .local v0, "len":I
     add-int v1, p2, v0
 
     if-le v1, p3, :cond_1
@@ -405,8 +405,8 @@
 
 .method private final _outputMultiByteChar(II)I
     .locals 4
-    .parameter "ch"
-    .parameter "outputPtr"
+    .param p1, "ch"    # I
+    .param p2, "outputPtr"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -418,7 +418,7 @@
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/impl/Utf8Generator;->_outputBuffer:[B
 
     .line 1687
-    .local v0, bbuf:[B
+    .local v0, "bbuf":[B
     const v2, 0xd800
 
     if-lt p1, v2, :cond_0
@@ -430,8 +430,8 @@
     .line 1688
     add-int/lit8 v1, p2, 0x1
 
-    .end local p2
-    .local v1, outputPtr:I
+    .end local p2    # "outputPtr":I
+    .local v1, "outputPtr":I
     const/16 v2, 0x5c
 
     aput-byte v2, v0, p2
@@ -439,8 +439,8 @@
     .line 1689
     add-int/lit8 p2, v1, 0x1
 
-    .end local v1           #outputPtr:I
-    .restart local p2
+    .end local v1    # "outputPtr":I
+    .restart local p2    # "outputPtr":I
     const/16 v2, 0x75
 
     aput-byte v2, v0, v1
@@ -448,8 +448,8 @@
     .line 1691
     add-int/lit8 v1, p2, 0x1
 
-    .end local p2
-    .restart local v1       #outputPtr:I
+    .end local p2    # "outputPtr":I
+    .restart local v1    # "outputPtr":I
     sget-object v2, Lcom/flurry/org/codehaus/jackson/impl/Utf8Generator;->HEX_CHARS:[B
 
     shr-int/lit8 v3, p1, 0xc
@@ -463,8 +463,8 @@
     .line 1692
     add-int/lit8 p2, v1, 0x1
 
-    .end local v1           #outputPtr:I
-    .restart local p2
+    .end local v1    # "outputPtr":I
+    .restart local p2    # "outputPtr":I
     sget-object v2, Lcom/flurry/org/codehaus/jackson/impl/Utf8Generator;->HEX_CHARS:[B
 
     shr-int/lit8 v3, p1, 0x8
@@ -478,8 +478,8 @@
     .line 1693
     add-int/lit8 v1, p2, 0x1
 
-    .end local p2
-    .restart local v1       #outputPtr:I
+    .end local p2    # "outputPtr":I
+    .restart local v1    # "outputPtr":I
     sget-object v2, Lcom/flurry/org/codehaus/jackson/impl/Utf8Generator;->HEX_CHARS:[B
 
     shr-int/lit8 v3, p1, 0x4
@@ -493,8 +493,8 @@
     .line 1694
     add-int/lit8 p2, v1, 0x1
 
-    .end local v1           #outputPtr:I
-    .restart local p2
+    .end local v1    # "outputPtr":I
+    .restart local p2    # "outputPtr":I
     sget-object v2, Lcom/flurry/org/codehaus/jackson/impl/Utf8Generator;->HEX_CHARS:[B
 
     and-int/lit8 v3, p1, 0xf
@@ -511,8 +511,8 @@
     :cond_0
     add-int/lit8 v1, p2, 0x1
 
-    .end local p2
-    .restart local v1       #outputPtr:I
+    .end local p2    # "outputPtr":I
+    .restart local v1    # "outputPtr":I
     shr-int/lit8 v2, p1, 0xc
 
     or-int/lit16 v2, v2, 0xe0
@@ -524,8 +524,8 @@
     .line 1697
     add-int/lit8 p2, v1, 0x1
 
-    .end local v1           #outputPtr:I
-    .restart local p2
+    .end local v1    # "outputPtr":I
+    .restart local p2    # "outputPtr":I
     shr-int/lit8 v2, p1, 0x6
 
     and-int/lit8 v2, v2, 0x3f
@@ -539,8 +539,8 @@
     .line 1698
     add-int/lit8 v1, p2, 0x1
 
-    .end local p2
-    .restart local v1       #outputPtr:I
+    .end local p2    # "outputPtr":I
+    .restart local v1    # "outputPtr":I
     and-int/lit8 v2, p1, 0x3f
 
     or-int/lit16 v2, v2, 0x80
@@ -551,17 +551,17 @@
 
     move p2, v1
 
-    .end local v1           #outputPtr:I
-    .restart local p2
+    .end local v1    # "outputPtr":I
+    .restart local p2    # "outputPtr":I
     goto :goto_0
 .end method
 
 .method private final _outputRawMultiByteChar(I[CII)I
     .locals 3
-    .parameter "ch"
-    .parameter "cbuf"
-    .parameter "inputOffset"
-    .parameter "inputLen"
+    .param p1, "ch"    # I
+    .param p2, "cbuf"    # [C
+    .param p3, "inputOffset"    # I
+    .param p4, "inputLen"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -605,7 +605,7 @@
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/impl/Utf8Generator;->_outputBuffer:[B
 
     .line 1654
-    .local v0, bbuf:[B
+    .local v0, "bbuf":[B
     iget v1, p0, Lcom/flurry/org/codehaus/jackson/impl/Utf8Generator;->_outputTail:I
 
     add-int/lit8 v2, v1, 0x1
@@ -660,7 +660,7 @@
 
 .method private final _writeBytes([B)V
     .locals 4
-    .parameter "bytes"
+    .param p1, "bytes"    # [B
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -674,7 +674,7 @@
     array-length v0, p1
 
     .line 1163
-    .local v0, len:I
+    .local v0, "len":I
     iget v1, p0, Lcom/flurry/org/codehaus/jackson/impl/Utf8Generator;->_outputTail:I
 
     add-int/2addr v1, v0
@@ -720,9 +720,9 @@
 
 .method private final _writeBytes([BII)V
     .locals 2
-    .parameter "bytes"
-    .parameter "offset"
-    .parameter "len"
+    .param p1, "bytes"    # [B
+    .param p2, "offset"    # I
+    .param p3, "len"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -776,10 +776,10 @@
 
 .method private _writeCustomEscape([BILcom/flurry/org/codehaus/jackson/SerializableString;I)I
     .locals 7
-    .parameter "outputBuffer"
-    .parameter "outputPtr"
-    .parameter "esc"
-    .parameter "remainingChars"
+    .param p1, "outputBuffer"    # [B
+    .param p2, "outputPtr"    # I
+    .param p3, "esc"    # Lcom/flurry/org/codehaus/jackson/SerializableString;
+    .param p4, "remainingChars"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -794,11 +794,11 @@
     move-result-object v4
 
     .line 1469
-    .local v4, raw:[B
+    .local v4, "raw":[B
     array-length v6, v4
 
     .line 1470
-    .local v6, len:I
+    .local v6, "len":I
     const/4 v0, 0x6
 
     if-le v6, v0, :cond_0
@@ -836,9 +836,9 @@
 
 .method private final _writeCustomStringSegment2([CII)V
     .locals 15
-    .parameter "cbuf"
-    .parameter "offset"
-    .parameter "end"
+    .param p1, "cbuf"    # [C
+    .param p2, "offset"    # I
+    .param p3, "end"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -868,15 +868,15 @@
     iget v10, p0, Lcom/flurry/org/codehaus/jackson/impl/Utf8Generator;->_outputTail:I
 
     .line 1416
-    .local v10, outputPtr:I
+    .local v10, "outputPtr":I
     iget-object v9, p0, Lcom/flurry/org/codehaus/jackson/impl/Utf8Generator;->_outputBuffer:[B
 
     .line 1417
-    .local v9, outputBuffer:[B
+    .local v9, "outputBuffer":[B
     iget-object v5, p0, Lcom/flurry/org/codehaus/jackson/impl/Utf8Generator;->_outputEscapes:[I
 
     .line 1419
-    .local v5, escCodes:[I
+    .local v5, "escCodes":[I
     iget v12, p0, Lcom/flurry/org/codehaus/jackson/impl/Utf8Generator;->_maximumNonEscapedChar:I
 
     if-gtz v12, :cond_1
@@ -886,20 +886,20 @@
     move v7, v12
 
     .line 1420
-    .local v7, maxUnescaped:I
+    .local v7, "maxUnescaped":I
     :goto_0
     iget-object v3, p0, Lcom/flurry/org/codehaus/jackson/impl/Utf8Generator;->_characterEscapes:Lcom/flurry/org/codehaus/jackson/io/CharacterEscapes;
 
-    .local v3, customEscapes:Lcom/flurry/org/codehaus/jackson/io/CharacterEscapes;
+    .local v3, "customEscapes":Lcom/flurry/org/codehaus/jackson/io/CharacterEscapes;
     move v11, v10
 
-    .end local v10           #outputPtr:I
-    .local v11, outputPtr:I
+    .end local v10    # "outputPtr":I
+    .local v11, "outputPtr":I
     move/from16 v8, p2
 
     .line 1422
-    .end local p2
-    .local v8, offset:I
+    .end local p2    # "offset":I
+    .local v8, "offset":I
     :goto_1
     move v0, v8
 
@@ -910,12 +910,12 @@
     .line 1423
     add-int/lit8 p2, v8, 0x1
 
-    .end local v8           #offset:I
-    .restart local p2
+    .end local v8    # "offset":I
+    .restart local p2    # "offset":I
     aget-char v2, p1, v8
 
     .line 1424
-    .local v2, ch:I
+    .local v2, "ch":I
     const/16 v12, 0x7f
 
     if-gt v2, v12, :cond_6
@@ -928,31 +928,31 @@
     .line 1426
     add-int/lit8 v10, v11, 0x1
 
-    .end local v11           #outputPtr:I
-    .restart local v10       #outputPtr:I
+    .end local v11    # "outputPtr":I
+    .restart local v10    # "outputPtr":I
     int-to-byte v12, v2
 
     aput-byte v12, v9, v11
 
     move v11, v10
 
-    .end local v10           #outputPtr:I
-    .restart local v11       #outputPtr:I
+    .end local v10    # "outputPtr":I
+    .restart local v11    # "outputPtr":I
     move/from16 v8, p2
 
     .line 1427
-    .end local p2
-    .restart local v8       #offset:I
+    .end local p2    # "offset":I
+    .restart local v8    # "offset":I
     goto :goto_1
 
     .line 1419
-    .end local v2           #ch:I
-    .end local v3           #customEscapes:Lcom/flurry/org/codehaus/jackson/io/CharacterEscapes;
-    .end local v7           #maxUnescaped:I
-    .end local v8           #offset:I
-    .end local v11           #outputPtr:I
-    .restart local v10       #outputPtr:I
-    .restart local p2
+    .end local v2    # "ch":I
+    .end local v3    # "customEscapes":Lcom/flurry/org/codehaus/jackson/io/CharacterEscapes;
+    .end local v7    # "maxUnescaped":I
+    .end local v8    # "offset":I
+    .end local v11    # "outputPtr":I
+    .restart local v10    # "outputPtr":I
+    .restart local p2    # "offset":I
     :cond_1
     iget v12, p0, Lcom/flurry/org/codehaus/jackson/impl/Utf8Generator;->_maximumNonEscapedChar:I
 
@@ -961,23 +961,23 @@
     goto :goto_0
 
     .line 1429
-    .end local v10           #outputPtr:I
-    .restart local v2       #ch:I
-    .restart local v3       #customEscapes:Lcom/flurry/org/codehaus/jackson/io/CharacterEscapes;
-    .restart local v7       #maxUnescaped:I
-    .restart local v11       #outputPtr:I
+    .end local v10    # "outputPtr":I
+    .restart local v2    # "ch":I
+    .restart local v3    # "customEscapes":Lcom/flurry/org/codehaus/jackson/io/CharacterEscapes;
+    .restart local v7    # "maxUnescaped":I
+    .restart local v11    # "outputPtr":I
     :cond_2
     aget v6, v5, v2
 
     .line 1430
-    .local v6, escape:I
+    .local v6, "escape":I
     if-lez v6, :cond_3
 
     .line 1431
     add-int/lit8 v10, v11, 0x1
 
-    .end local v11           #outputPtr:I
-    .restart local v10       #outputPtr:I
+    .end local v11    # "outputPtr":I
+    .restart local v10    # "outputPtr":I
     const/16 v12, 0x5c
 
     aput-byte v12, v9, v11
@@ -985,21 +985,21 @@
     .line 1432
     add-int/lit8 v11, v10, 0x1
 
-    .end local v10           #outputPtr:I
-    .restart local v11       #outputPtr:I
+    .end local v10    # "outputPtr":I
+    .restart local v11    # "outputPtr":I
     int-to-byte v12, v6
 
     aput-byte v12, v9, v10
 
     move/from16 v8, p2
 
-    .end local p2
-    .restart local v8       #offset:I
+    .end local p2    # "offset":I
+    .restart local v8    # "offset":I
     goto :goto_1
 
     .line 1433
-    .end local v8           #offset:I
-    .restart local p2
+    .end local v8    # "offset":I
+    .restart local p2    # "offset":I
     :cond_3
     const/4 v12, -0x2
 
@@ -1011,7 +1011,7 @@
     move-result-object v4
 
     .line 1435
-    .local v4, esc:Lcom/flurry/org/codehaus/jackson/SerializableString;
+    .local v4, "esc":Lcom/flurry/org/codehaus/jackson/SerializableString;
     if-nez v4, :cond_4
 
     .line 1436
@@ -1057,45 +1057,45 @@
 
     move-result v10
 
-    .end local v11           #outputPtr:I
-    .restart local v10       #outputPtr:I
+    .end local v11    # "outputPtr":I
+    .restart local v10    # "outputPtr":I
     move v11, v10
 
-    .end local v10           #outputPtr:I
-    .restart local v11       #outputPtr:I
+    .end local v10    # "outputPtr":I
+    .restart local v11    # "outputPtr":I
     move/from16 v8, p2
 
     .line 1440
-    .end local p2
-    .restart local v8       #offset:I
+    .end local p2    # "offset":I
+    .restart local v8    # "offset":I
     goto :goto_1
 
     .line 1442
-    .end local v4           #esc:Lcom/flurry/org/codehaus/jackson/SerializableString;
-    .end local v8           #offset:I
-    .restart local p2
+    .end local v4    # "esc":Lcom/flurry/org/codehaus/jackson/SerializableString;
+    .end local v8    # "offset":I
+    .restart local p2    # "offset":I
     :cond_5
     invoke-direct {p0, v2, v11}, Lcom/flurry/org/codehaus/jackson/impl/Utf8Generator;->_writeGenericEscape(II)I
 
     move-result v10
 
-    .end local v11           #outputPtr:I
-    .restart local v10       #outputPtr:I
+    .end local v11    # "outputPtr":I
+    .restart local v10    # "outputPtr":I
     move v11, v10
 
-    .end local v10           #outputPtr:I
-    .restart local v11       #outputPtr:I
+    .end local v10    # "outputPtr":I
+    .restart local v11    # "outputPtr":I
     move/from16 v8, p2
 
     .line 1444
-    .end local p2
-    .restart local v8       #offset:I
+    .end local p2    # "offset":I
+    .restart local v8    # "offset":I
     goto :goto_1
 
     .line 1446
-    .end local v6           #escape:I
-    .end local v8           #offset:I
-    .restart local p2
+    .end local v6    # "escape":I
+    .end local v8    # "offset":I
+    .restart local p2    # "offset":I
     :cond_6
     if-le v2, v7, :cond_7
 
@@ -1104,29 +1104,29 @@
 
     move-result v10
 
-    .end local v11           #outputPtr:I
-    .restart local v10       #outputPtr:I
+    .end local v11    # "outputPtr":I
+    .restart local v10    # "outputPtr":I
     move v11, v10
 
-    .end local v10           #outputPtr:I
-    .restart local v11       #outputPtr:I
+    .end local v10    # "outputPtr":I
+    .restart local v11    # "outputPtr":I
     move/from16 v8, p2
 
     .line 1448
-    .end local p2
-    .restart local v8       #offset:I
+    .end local p2    # "offset":I
+    .restart local v8    # "offset":I
     goto :goto_1
 
     .line 1450
-    .end local v8           #offset:I
-    .restart local p2
+    .end local v8    # "offset":I
+    .restart local p2    # "offset":I
     :cond_7
     invoke-virtual {v3, v2}, Lcom/flurry/org/codehaus/jackson/io/CharacterEscapes;->getEscapeSequence(I)Lcom/flurry/org/codehaus/jackson/SerializableString;
 
     move-result-object v4
 
     .line 1451
-    .restart local v4       #esc:Lcom/flurry/org/codehaus/jackson/SerializableString;
+    .restart local v4    # "esc":Lcom/flurry/org/codehaus/jackson/SerializableString;
     if-eqz v4, :cond_8
 
     .line 1452
@@ -1136,22 +1136,22 @@
 
     move-result v10
 
-    .end local v11           #outputPtr:I
-    .restart local v10       #outputPtr:I
+    .end local v11    # "outputPtr":I
+    .restart local v10    # "outputPtr":I
     move v11, v10
 
-    .end local v10           #outputPtr:I
-    .restart local v11       #outputPtr:I
+    .end local v10    # "outputPtr":I
+    .restart local v11    # "outputPtr":I
     move/from16 v8, p2
 
     .line 1453
-    .end local p2
-    .restart local v8       #offset:I
+    .end local p2    # "offset":I
+    .restart local v8    # "offset":I
     goto/16 :goto_1
 
     .line 1455
-    .end local v8           #offset:I
-    .restart local p2
+    .end local v8    # "offset":I
+    .restart local p2    # "offset":I
     :cond_8
     const/16 v12, 0x7ff
 
@@ -1160,8 +1160,8 @@
     .line 1456
     add-int/lit8 v10, v11, 0x1
 
-    .end local v11           #outputPtr:I
-    .restart local v10       #outputPtr:I
+    .end local v11    # "outputPtr":I
+    .restart local v10    # "outputPtr":I
     shr-int/lit8 v12, v2, 0x6
 
     or-int/lit16 v12, v12, 0xc0
@@ -1173,8 +1173,8 @@
     .line 1457
     add-int/lit8 v11, v10, 0x1
 
-    .end local v10           #outputPtr:I
-    .restart local v11       #outputPtr:I
+    .end local v10    # "outputPtr":I
+    .restart local v11    # "outputPtr":I
     and-int/lit8 v12, v2, 0x3f
 
     or-int/lit16 v12, v12, 0x80
@@ -1185,39 +1185,39 @@
 
     move v10, v11
 
-    .end local v11           #outputPtr:I
-    .restart local v10       #outputPtr:I
+    .end local v11    # "outputPtr":I
+    .restart local v10    # "outputPtr":I
     :goto_2
     move v11, v10
 
-    .end local v10           #outputPtr:I
-    .restart local v11       #outputPtr:I
+    .end local v10    # "outputPtr":I
+    .restart local v11    # "outputPtr":I
     move/from16 v8, p2
 
     .line 1461
-    .end local p2
-    .restart local v8       #offset:I
+    .end local p2    # "offset":I
+    .restart local v8    # "offset":I
     goto/16 :goto_1
 
     .line 1459
-    .end local v8           #offset:I
-    .restart local p2
+    .end local v8    # "offset":I
+    .restart local p2    # "offset":I
     :cond_9
     invoke-direct {p0, v2, v11}, Lcom/flurry/org/codehaus/jackson/impl/Utf8Generator;->_outputMultiByteChar(II)I
 
     move-result v10
 
-    .end local v11           #outputPtr:I
-    .restart local v10       #outputPtr:I
+    .end local v11    # "outputPtr":I
+    .restart local v10    # "outputPtr":I
     goto :goto_2
 
     .line 1462
-    .end local v2           #ch:I
-    .end local v4           #esc:Lcom/flurry/org/codehaus/jackson/SerializableString;
-    .end local v10           #outputPtr:I
-    .end local p2
-    .restart local v8       #offset:I
-    .restart local v11       #outputPtr:I
+    .end local v2    # "ch":I
+    .end local v4    # "esc":Lcom/flurry/org/codehaus/jackson/SerializableString;
+    .end local v10    # "outputPtr":I
+    .end local p2    # "offset":I
+    .restart local v8    # "offset":I
+    .restart local v11    # "outputPtr":I
     :cond_a
     iput v11, p0, Lcom/flurry/org/codehaus/jackson/impl/Utf8Generator;->_outputTail:I
 
@@ -1227,8 +1227,8 @@
 
 .method private _writeGenericEscape(II)I
     .locals 5
-    .parameter "charToEscape"
-    .parameter "outputPtr"
+    .param p1, "charToEscape"    # I
+    .param p2, "outputPtr"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -1242,11 +1242,11 @@
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/impl/Utf8Generator;->_outputBuffer:[B
 
     .line 1732
-    .local v0, bbuf:[B
+    .local v0, "bbuf":[B
     add-int/lit8 v2, p2, 0x1
 
-    .end local p2
-    .local v2, outputPtr:I
+    .end local p2    # "outputPtr":I
+    .local v2, "outputPtr":I
     const/16 v3, 0x5c
 
     aput-byte v3, v0, p2
@@ -1254,8 +1254,8 @@
     .line 1733
     add-int/lit8 p2, v2, 0x1
 
-    .end local v2           #outputPtr:I
-    .restart local p2
+    .end local v2    # "outputPtr":I
+    .restart local p2    # "outputPtr":I
     const/16 v3, 0x75
 
     aput-byte v3, v0, v2
@@ -1271,11 +1271,11 @@
     and-int/lit16 v1, v3, 0xff
 
     .line 1736
-    .local v1, hi:I
+    .local v1, "hi":I
     add-int/lit8 v2, p2, 0x1
 
-    .end local p2
-    .restart local v2       #outputPtr:I
+    .end local p2    # "outputPtr":I
+    .restart local v2    # "outputPtr":I
     sget-object v3, Lcom/flurry/org/codehaus/jackson/impl/Utf8Generator;->HEX_CHARS:[B
 
     shr-int/lit8 v4, v1, 0x4
@@ -1287,8 +1287,8 @@
     .line 1737
     add-int/lit8 p2, v2, 0x1
 
-    .end local v2           #outputPtr:I
-    .restart local p2
+    .end local v2    # "outputPtr":I
+    .restart local p2    # "outputPtr":I
     sget-object v3, Lcom/flurry/org/codehaus/jackson/impl/Utf8Generator;->HEX_CHARS:[B
 
     and-int/lit8 v4, v1, 0xf
@@ -1301,12 +1301,12 @@
     and-int/lit16 p1, p1, 0xff
 
     .line 1744
-    .end local v1           #hi:I
+    .end local v1    # "hi":I
     :goto_0
     add-int/lit8 v2, p2, 0x1
 
-    .end local p2
-    .restart local v2       #outputPtr:I
+    .end local p2    # "outputPtr":I
+    .restart local v2    # "outputPtr":I
     sget-object v3, Lcom/flurry/org/codehaus/jackson/impl/Utf8Generator;->HEX_CHARS:[B
 
     shr-int/lit8 v4, p1, 0x4
@@ -1318,8 +1318,8 @@
     .line 1745
     add-int/lit8 p2, v2, 0x1
 
-    .end local v2           #outputPtr:I
-    .restart local p2
+    .end local v2    # "outputPtr":I
+    .restart local p2    # "outputPtr":I
     sget-object v3, Lcom/flurry/org/codehaus/jackson/impl/Utf8Generator;->HEX_CHARS:[B
 
     and-int/lit8 v4, p1, 0xf
@@ -1335,15 +1335,15 @@
     :cond_0
     add-int/lit8 v2, p2, 0x1
 
-    .end local p2
-    .restart local v2       #outputPtr:I
+    .end local p2    # "outputPtr":I
+    .restart local v2    # "outputPtr":I
     aput-byte v4, v0, p2
 
     .line 1741
     add-int/lit8 p2, v2, 0x1
 
-    .end local v2           #outputPtr:I
-    .restart local p2
+    .end local v2    # "outputPtr":I
+    .restart local p2    # "outputPtr":I
     aput-byte v4, v0, v2
 
     goto :goto_0
@@ -1351,7 +1351,7 @@
 
 .method private final _writeLongString(Ljava/lang/String;)V
     .locals 4
-    .parameter "text"
+    .param p1, "text"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -1415,9 +1415,9 @@
 
 .method private final _writeLongString([CII)V
     .locals 4
-    .parameter "text"
-    .parameter "offset"
-    .parameter "len"
+    .param p1, "text"    # [C
+    .param p2, "offset"    # I
+    .param p3, "len"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -1531,7 +1531,7 @@
 
 .method private final _writeQuotedInt(I)V
     .locals 4
-    .parameter "i"
+    .param p1, "i"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -1593,7 +1593,7 @@
 
 .method private final _writeQuotedLong(J)V
     .locals 4
-    .parameter "l"
+    .param p1, "l"    # J
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -1655,7 +1655,7 @@
 
 .method private final _writeQuotedRaw(Ljava/lang/Object;)V
     .locals 4
-    .parameter "value"
+    .param p1, "value"    # Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -1722,9 +1722,9 @@
 
 .method private final _writeSegmentedRaw([CII)V
     .locals 6
-    .parameter "cbuf"
-    .parameter "offset"
-    .parameter "len"
+    .param p1, "cbuf"    # [C
+    .param p2, "offset"    # I
+    .param p3, "len"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -1737,11 +1737,11 @@
     iget v2, p0, Lcom/flurry/org/codehaus/jackson/impl/Utf8Generator;->_outputEnd:I
 
     .line 788
-    .local v2, end:I
+    .local v2, "end":I
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/impl/Utf8Generator;->_outputBuffer:[B
 
     .line 791
-    .local v0, bbuf:[B
+    .local v0, "bbuf":[B
     :goto_0
     if-ge p2, p3, :cond_4
 
@@ -1750,7 +1750,7 @@
     aget-char v1, p1, p2
 
     .line 795
-    .local v1, ch:I
+    .local v1, "ch":I
     const/16 v4, 0x80
 
     if-lt v1, v4, :cond_2
@@ -1771,12 +1771,12 @@
     :cond_1
     add-int/lit8 v3, p2, 0x1
 
-    .end local p2
-    .local v3, offset:I
+    .end local p2    # "offset":I
+    .local v3, "offset":I
     aget-char v1, p1, p2
 
     .line 811
-    .local v1, ch:C
+    .local v1, "ch":C
     const/16 v4, 0x800
 
     if-ge v1, v4, :cond_5
@@ -1815,12 +1815,12 @@
     move p2, v3
 
     .line 817
-    .end local v3           #offset:I
-    .restart local p2
+    .end local v3    # "offset":I
+    .restart local p2    # "offset":I
     goto :goto_0
 
     .line 799
-    .local v1, ch:I
+    .local v1, "ch":I
     :cond_2
     iget v4, p0, Lcom/flurry/org/codehaus/jackson/impl/Utf8Generator;->_outputTail:I
 
@@ -1847,14 +1847,14 @@
     if-lt p2, p3, :cond_0
 
     .line 818
-    .end local v1           #ch:I
+    .end local v1    # "ch":I
     :cond_4
     return-void
 
     .line 815
-    .end local p2
-    .local v1, ch:C
-    .restart local v3       #offset:I
+    .end local p2    # "offset":I
+    .local v1, "ch":C
+    .restart local v3    # "offset":I
     :cond_5
     invoke-direct {p0, v1, p1, v3, p3}, Lcom/flurry/org/codehaus/jackson/impl/Utf8Generator;->_outputRawMultiByteChar(I[CII)I
 
@@ -1863,9 +1863,9 @@
 
 .method private final _writeStringSegment([CII)V
     .locals 6
-    .parameter "cbuf"
-    .parameter "offset"
-    .parameter "len"
+    .param p1, "cbuf"    # [C
+    .param p2, "offset"    # I
+    .param p3, "len"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -1881,19 +1881,19 @@
     iget v3, p0, Lcom/flurry/org/codehaus/jackson/impl/Utf8Generator;->_outputTail:I
 
     .line 1264
-    .local v3, outputPtr:I
+    .local v3, "outputPtr":I
     iget-object v2, p0, Lcom/flurry/org/codehaus/jackson/impl/Utf8Generator;->_outputBuffer:[B
 
     .line 1265
-    .local v2, outputBuffer:[B
+    .local v2, "outputBuffer":[B
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/impl/Utf8Generator;->_outputEscapes:[I
 
-    .local v1, escCodes:[I
+    .local v1, "escCodes":[I
     move v4, v3
 
     .line 1267
-    .end local v3           #outputPtr:I
-    .local v4, outputPtr:I
+    .end local v3    # "outputPtr":I
+    .local v4, "outputPtr":I
     :goto_0
     if-ge p2, p3, :cond_0
 
@@ -1901,7 +1901,7 @@
     aget-char v0, p1, p2
 
     .line 1270
-    .local v0, ch:I
+    .local v0, "ch":I
     const/16 v5, 0x7f
 
     if-gt v0, v5, :cond_0
@@ -1911,7 +1911,7 @@
     if-eqz v5, :cond_2
 
     .line 1276
-    .end local v0           #ch:I
+    .end local v0    # "ch":I
     :cond_0
     iput v4, p0, Lcom/flurry/org/codehaus/jackson/impl/Utf8Generator;->_outputTail:I
 
@@ -1932,12 +1932,12 @@
     return-void
 
     .line 1273
-    .restart local v0       #ch:I
+    .restart local v0    # "ch":I
     :cond_2
     add-int/lit8 v3, v4, 0x1
 
-    .end local v4           #outputPtr:I
-    .restart local v3       #outputPtr:I
+    .end local v4    # "outputPtr":I
+    .restart local v3    # "outputPtr":I
     int-to-byte v5, v0
 
     aput-byte v5, v2, v4
@@ -1948,12 +1948,12 @@
     move v4, v3
 
     .line 1275
-    .end local v3           #outputPtr:I
-    .restart local v4       #outputPtr:I
+    .end local v3    # "outputPtr":I
+    .restart local v4    # "outputPtr":I
     goto :goto_0
 
     .line 1282
-    .end local v0           #ch:I
+    .end local v0    # "ch":I
     :cond_3
     iget v5, p0, Lcom/flurry/org/codehaus/jackson/impl/Utf8Generator;->_maximumNonEscapedChar:I
 
@@ -1973,9 +1973,9 @@
 
 .method private final _writeStringSegment2([CII)V
     .locals 9
-    .parameter "cbuf"
-    .parameter "offset"
-    .parameter "end"
+    .param p1, "cbuf"    # [C
+    .param p2, "offset"    # I
+    .param p3, "end"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -2005,35 +2005,35 @@
     iget v5, p0, Lcom/flurry/org/codehaus/jackson/impl/Utf8Generator;->_outputTail:I
 
     .line 1305
-    .local v5, outputPtr:I
+    .local v5, "outputPtr":I
     iget-object v4, p0, Lcom/flurry/org/codehaus/jackson/impl/Utf8Generator;->_outputBuffer:[B
 
     .line 1306
-    .local v4, outputBuffer:[B
+    .local v4, "outputBuffer":[B
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/impl/Utf8Generator;->_outputEscapes:[I
 
-    .local v1, escCodes:[I
+    .local v1, "escCodes":[I
     move v6, v5
 
-    .end local v5           #outputPtr:I
-    .local v6, outputPtr:I
+    .end local v5    # "outputPtr":I
+    .local v6, "outputPtr":I
     move v3, p2
 
     .line 1308
-    .end local p2
-    .local v3, offset:I
+    .end local p2    # "offset":I
+    .local v3, "offset":I
     :goto_0
     if-ge v3, p3, :cond_5
 
     .line 1309
     add-int/lit8 p2, v3, 0x1
 
-    .end local v3           #offset:I
-    .restart local p2
+    .end local v3    # "offset":I
+    .restart local p2    # "offset":I
     aget-char v0, p1, v3
 
     .line 1310
-    .local v0, ch:I
+    .local v0, "ch":I
     const/16 v7, 0x7f
 
     if-gt v0, v7, :cond_3
@@ -2046,38 +2046,38 @@
     .line 1312
     add-int/lit8 v5, v6, 0x1
 
-    .end local v6           #outputPtr:I
-    .restart local v5       #outputPtr:I
+    .end local v6    # "outputPtr":I
+    .restart local v5    # "outputPtr":I
     int-to-byte v7, v0
 
     aput-byte v7, v4, v6
 
     move v6, v5
 
-    .end local v5           #outputPtr:I
-    .restart local v6       #outputPtr:I
+    .end local v5    # "outputPtr":I
+    .restart local v6    # "outputPtr":I
     move v3, p2
 
     .line 1313
-    .end local p2
-    .restart local v3       #offset:I
+    .end local p2    # "offset":I
+    .restart local v3    # "offset":I
     goto :goto_0
 
     .line 1315
-    .end local v3           #offset:I
-    .restart local p2
+    .end local v3    # "offset":I
+    .restart local p2    # "offset":I
     :cond_1
     aget v2, v1, v0
 
     .line 1316
-    .local v2, escape:I
+    .local v2, "escape":I
     if-lez v2, :cond_2
 
     .line 1317
     add-int/lit8 v5, v6, 0x1
 
-    .end local v6           #outputPtr:I
-    .restart local v5       #outputPtr:I
+    .end local v6    # "outputPtr":I
+    .restart local v5    # "outputPtr":I
     const/16 v7, 0x5c
 
     aput-byte v7, v4, v6
@@ -2085,43 +2085,43 @@
     .line 1318
     add-int/lit8 v6, v5, 0x1
 
-    .end local v5           #outputPtr:I
-    .restart local v6       #outputPtr:I
+    .end local v5    # "outputPtr":I
+    .restart local v6    # "outputPtr":I
     int-to-byte v7, v2
 
     aput-byte v7, v4, v5
 
     move v3, p2
 
-    .end local p2
-    .restart local v3       #offset:I
+    .end local p2    # "offset":I
+    .restart local v3    # "offset":I
     goto :goto_0
 
     .line 1321
-    .end local v3           #offset:I
-    .restart local p2
+    .end local v3    # "offset":I
+    .restart local p2    # "offset":I
     :cond_2
     invoke-direct {p0, v0, v6}, Lcom/flurry/org/codehaus/jackson/impl/Utf8Generator;->_writeGenericEscape(II)I
 
     move-result v5
 
-    .end local v6           #outputPtr:I
-    .restart local v5       #outputPtr:I
+    .end local v6    # "outputPtr":I
+    .restart local v5    # "outputPtr":I
     move v6, v5
 
-    .end local v5           #outputPtr:I
-    .restart local v6       #outputPtr:I
+    .end local v5    # "outputPtr":I
+    .restart local v6    # "outputPtr":I
     move v3, p2
 
     .line 1323
-    .end local p2
-    .restart local v3       #offset:I
+    .end local p2    # "offset":I
+    .restart local v3    # "offset":I
     goto :goto_0
 
     .line 1325
-    .end local v2           #escape:I
-    .end local v3           #offset:I
-    .restart local p2
+    .end local v2    # "escape":I
+    .end local v3    # "offset":I
+    .restart local p2    # "offset":I
     :cond_3
     const/16 v7, 0x7ff
 
@@ -2130,8 +2130,8 @@
     .line 1326
     add-int/lit8 v5, v6, 0x1
 
-    .end local v6           #outputPtr:I
-    .restart local v5       #outputPtr:I
+    .end local v6    # "outputPtr":I
+    .restart local v5    # "outputPtr":I
     shr-int/lit8 v7, v0, 0x6
 
     or-int/lit16 v7, v7, 0xc0
@@ -2143,8 +2143,8 @@
     .line 1327
     add-int/lit8 v6, v5, 0x1
 
-    .end local v5           #outputPtr:I
-    .restart local v6       #outputPtr:I
+    .end local v5    # "outputPtr":I
+    .restart local v6    # "outputPtr":I
     and-int/lit8 v7, v0, 0x3f
 
     or-int/lit16 v7, v7, 0x80
@@ -2155,38 +2155,38 @@
 
     move v5, v6
 
-    .end local v6           #outputPtr:I
-    .restart local v5       #outputPtr:I
+    .end local v6    # "outputPtr":I
+    .restart local v5    # "outputPtr":I
     :goto_1
     move v6, v5
 
-    .end local v5           #outputPtr:I
-    .restart local v6       #outputPtr:I
+    .end local v5    # "outputPtr":I
+    .restart local v6    # "outputPtr":I
     move v3, p2
 
     .line 1331
-    .end local p2
-    .restart local v3       #offset:I
+    .end local p2    # "offset":I
+    .restart local v3    # "offset":I
     goto :goto_0
 
     .line 1329
-    .end local v3           #offset:I
-    .restart local p2
+    .end local v3    # "offset":I
+    .restart local p2    # "offset":I
     :cond_4
     invoke-direct {p0, v0, v6}, Lcom/flurry/org/codehaus/jackson/impl/Utf8Generator;->_outputMultiByteChar(II)I
 
     move-result v5
 
-    .end local v6           #outputPtr:I
-    .restart local v5       #outputPtr:I
+    .end local v6    # "outputPtr":I
+    .restart local v5    # "outputPtr":I
     goto :goto_1
 
     .line 1332
-    .end local v0           #ch:I
-    .end local v5           #outputPtr:I
-    .end local p2
-    .restart local v3       #offset:I
-    .restart local v6       #outputPtr:I
+    .end local v0    # "ch":I
+    .end local v5    # "outputPtr":I
+    .end local p2    # "offset":I
+    .restart local v3    # "offset":I
+    .restart local v6    # "outputPtr":I
     :cond_5
     iput v6, p0, Lcom/flurry/org/codehaus/jackson/impl/Utf8Generator;->_outputTail:I
 
@@ -2196,9 +2196,9 @@
 
 .method private final _writeStringSegmentASCII2([CII)V
     .locals 10
-    .parameter "cbuf"
-    .parameter "offset"
-    .parameter "end"
+    .param p1, "cbuf"    # [C
+    .param p2, "offset"    # I
+    .param p3, "end"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -2228,39 +2228,39 @@
     iget v6, p0, Lcom/flurry/org/codehaus/jackson/impl/Utf8Generator;->_outputTail:I
 
     .line 1359
-    .local v6, outputPtr:I
+    .local v6, "outputPtr":I
     iget-object v5, p0, Lcom/flurry/org/codehaus/jackson/impl/Utf8Generator;->_outputBuffer:[B
 
     .line 1360
-    .local v5, outputBuffer:[B
+    .local v5, "outputBuffer":[B
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/impl/Utf8Generator;->_outputEscapes:[I
 
     .line 1361
-    .local v1, escCodes:[I
+    .local v1, "escCodes":[I
     iget v3, p0, Lcom/flurry/org/codehaus/jackson/impl/Utf8Generator;->_maximumNonEscapedChar:I
 
-    .local v3, maxUnescaped:I
+    .local v3, "maxUnescaped":I
     move v7, v6
 
-    .end local v6           #outputPtr:I
-    .local v7, outputPtr:I
+    .end local v6    # "outputPtr":I
+    .local v7, "outputPtr":I
     move v4, p2
 
     .line 1363
-    .end local p2
-    .local v4, offset:I
+    .end local p2    # "offset":I
+    .local v4, "offset":I
     :goto_0
     if-ge v4, p3, :cond_6
 
     .line 1364
     add-int/lit8 p2, v4, 0x1
 
-    .end local v4           #offset:I
-    .restart local p2
+    .end local v4    # "offset":I
+    .restart local p2    # "offset":I
     aget-char v0, p1, v4
 
     .line 1365
-    .local v0, ch:I
+    .local v0, "ch":I
     const/16 v8, 0x7f
 
     if-gt v0, v8, :cond_3
@@ -2273,38 +2273,38 @@
     .line 1367
     add-int/lit8 v6, v7, 0x1
 
-    .end local v7           #outputPtr:I
-    .restart local v6       #outputPtr:I
+    .end local v7    # "outputPtr":I
+    .restart local v6    # "outputPtr":I
     int-to-byte v8, v0
 
     aput-byte v8, v5, v7
 
     move v7, v6
 
-    .end local v6           #outputPtr:I
-    .restart local v7       #outputPtr:I
+    .end local v6    # "outputPtr":I
+    .restart local v7    # "outputPtr":I
     move v4, p2
 
     .line 1368
-    .end local p2
-    .restart local v4       #offset:I
+    .end local p2    # "offset":I
+    .restart local v4    # "offset":I
     goto :goto_0
 
     .line 1370
-    .end local v4           #offset:I
-    .restart local p2
+    .end local v4    # "offset":I
+    .restart local p2    # "offset":I
     :cond_1
     aget v2, v1, v0
 
     .line 1371
-    .local v2, escape:I
+    .local v2, "escape":I
     if-lez v2, :cond_2
 
     .line 1372
     add-int/lit8 v6, v7, 0x1
 
-    .end local v7           #outputPtr:I
-    .restart local v6       #outputPtr:I
+    .end local v7    # "outputPtr":I
+    .restart local v6    # "outputPtr":I
     const/16 v8, 0x5c
 
     aput-byte v8, v5, v7
@@ -2312,43 +2312,43 @@
     .line 1373
     add-int/lit8 v7, v6, 0x1
 
-    .end local v6           #outputPtr:I
-    .restart local v7       #outputPtr:I
+    .end local v6    # "outputPtr":I
+    .restart local v7    # "outputPtr":I
     int-to-byte v8, v2
 
     aput-byte v8, v5, v6
 
     move v4, p2
 
-    .end local p2
-    .restart local v4       #offset:I
+    .end local p2    # "offset":I
+    .restart local v4    # "offset":I
     goto :goto_0
 
     .line 1376
-    .end local v4           #offset:I
-    .restart local p2
+    .end local v4    # "offset":I
+    .restart local p2    # "offset":I
     :cond_2
     invoke-direct {p0, v0, v7}, Lcom/flurry/org/codehaus/jackson/impl/Utf8Generator;->_writeGenericEscape(II)I
 
     move-result v6
 
-    .end local v7           #outputPtr:I
-    .restart local v6       #outputPtr:I
+    .end local v7    # "outputPtr":I
+    .restart local v6    # "outputPtr":I
     move v7, v6
 
-    .end local v6           #outputPtr:I
-    .restart local v7       #outputPtr:I
+    .end local v6    # "outputPtr":I
+    .restart local v7    # "outputPtr":I
     move v4, p2
 
     .line 1378
-    .end local p2
-    .restart local v4       #offset:I
+    .end local p2    # "offset":I
+    .restart local v4    # "offset":I
     goto :goto_0
 
     .line 1380
-    .end local v2           #escape:I
-    .end local v4           #offset:I
-    .restart local p2
+    .end local v2    # "escape":I
+    .end local v4    # "offset":I
+    .restart local p2    # "offset":I
     :cond_3
     if-le v0, v3, :cond_4
 
@@ -2357,22 +2357,22 @@
 
     move-result v6
 
-    .end local v7           #outputPtr:I
-    .restart local v6       #outputPtr:I
+    .end local v7    # "outputPtr":I
+    .restart local v6    # "outputPtr":I
     move v7, v6
 
-    .end local v6           #outputPtr:I
-    .restart local v7       #outputPtr:I
+    .end local v6    # "outputPtr":I
+    .restart local v7    # "outputPtr":I
     move v4, p2
 
     .line 1382
-    .end local p2
-    .restart local v4       #offset:I
+    .end local p2    # "offset":I
+    .restart local v4    # "offset":I
     goto :goto_0
 
     .line 1384
-    .end local v4           #offset:I
-    .restart local p2
+    .end local v4    # "offset":I
+    .restart local p2    # "offset":I
     :cond_4
     const/16 v8, 0x7ff
 
@@ -2381,8 +2381,8 @@
     .line 1385
     add-int/lit8 v6, v7, 0x1
 
-    .end local v7           #outputPtr:I
-    .restart local v6       #outputPtr:I
+    .end local v7    # "outputPtr":I
+    .restart local v6    # "outputPtr":I
     shr-int/lit8 v8, v0, 0x6
 
     or-int/lit16 v8, v8, 0xc0
@@ -2394,8 +2394,8 @@
     .line 1386
     add-int/lit8 v7, v6, 0x1
 
-    .end local v6           #outputPtr:I
-    .restart local v7       #outputPtr:I
+    .end local v6    # "outputPtr":I
+    .restart local v7    # "outputPtr":I
     and-int/lit8 v8, v0, 0x3f
 
     or-int/lit16 v8, v8, 0x80
@@ -2406,38 +2406,38 @@
 
     move v6, v7
 
-    .end local v7           #outputPtr:I
-    .restart local v6       #outputPtr:I
+    .end local v7    # "outputPtr":I
+    .restart local v6    # "outputPtr":I
     :goto_1
     move v7, v6
 
-    .end local v6           #outputPtr:I
-    .restart local v7       #outputPtr:I
+    .end local v6    # "outputPtr":I
+    .restart local v7    # "outputPtr":I
     move v4, p2
 
     .line 1390
-    .end local p2
-    .restart local v4       #offset:I
+    .end local p2    # "offset":I
+    .restart local v4    # "offset":I
     goto :goto_0
 
     .line 1388
-    .end local v4           #offset:I
-    .restart local p2
+    .end local v4    # "offset":I
+    .restart local p2    # "offset":I
     :cond_5
     invoke-direct {p0, v0, v7}, Lcom/flurry/org/codehaus/jackson/impl/Utf8Generator;->_outputMultiByteChar(II)I
 
     move-result v6
 
-    .end local v7           #outputPtr:I
-    .restart local v6       #outputPtr:I
+    .end local v7    # "outputPtr":I
+    .restart local v6    # "outputPtr":I
     goto :goto_1
 
     .line 1391
-    .end local v0           #ch:I
-    .end local v6           #outputPtr:I
-    .end local p2
-    .restart local v4       #offset:I
-    .restart local v7       #outputPtr:I
+    .end local v0    # "ch":I
+    .end local v6    # "outputPtr":I
+    .end local p2    # "offset":I
+    .restart local v4    # "offset":I
+    .restart local v7    # "outputPtr":I
     :cond_6
     iput v7, p0, Lcom/flurry/org/codehaus/jackson/impl/Utf8Generator;->_outputTail:I
 
@@ -2447,7 +2447,7 @@
 
 .method private final _writeStringSegments(Ljava/lang/String;)V
     .locals 7
-    .parameter "text"
+    .param p1, "text"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -2464,15 +2464,15 @@
     move-result v1
 
     .line 1206
-    .local v1, left:I
+    .local v1, "left":I
     const/4 v3, 0x0
 
     .line 1207
-    .local v3, offset:I
+    .local v3, "offset":I
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/impl/Utf8Generator;->_charBuffer:[C
 
     .line 1209
-    .local v0, cbuf:[C
+    .local v0, "cbuf":[C
     :goto_0
     if-lez v1, :cond_1
 
@@ -2484,7 +2484,7 @@
     move-result v2
 
     .line 1211
-    .local v2, len:I
+    .local v2, "len":I
     add-int v4, v3, v2
 
     invoke-virtual {p1, v3, v4, v0, v6}, Ljava/lang/String;->getChars(II[CI)V
@@ -2515,16 +2515,16 @@
     goto :goto_0
 
     .line 1219
-    .end local v2           #len:I
+    .end local v2    # "len":I
     :cond_1
     return-void
 .end method
 
 .method private final _writeStringSegments([CII)V
     .locals 3
-    .parameter "cbuf"
-    .parameter "offset"
-    .parameter "totalLen"
+    .param p1, "cbuf"    # [C
+    .param p2, "offset"    # I
+    .param p3, "totalLen"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -2542,7 +2542,7 @@
     move-result v0
 
     .line 1232
-    .local v0, len:I
+    .local v0, "len":I
     iget v1, p0, Lcom/flurry/org/codehaus/jackson/impl/Utf8Generator;->_outputTail:I
 
     add-int/2addr v1, v0
@@ -2573,9 +2573,9 @@
 
 .method private final _writeUTF8Segment([BII)V
     .locals 7
-    .parameter "utf8"
-    .parameter "offset"
-    .parameter "len"
+    .param p1, "utf8"    # [B
+    .param p2, "offset"    # I
+    .param p3, "len"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -2588,29 +2588,29 @@
     iget-object v2, p0, Lcom/flurry/org/codehaus/jackson/impl/Utf8Generator;->_outputEscapes:[I
 
     .line 1530
-    .local v2, escCodes:[I
+    .local v2, "escCodes":[I
     move v3, p2
 
-    .local v3, ptr:I
+    .local v3, "ptr":I
     add-int v1, p2, p3
 
-    .local v1, end:I
+    .local v1, "end":I
     move v4, v3
 
-    .end local v3           #ptr:I
-    .local v4, ptr:I
+    .end local v3    # "ptr":I
+    .local v4, "ptr":I
     :goto_0
     if-ge v4, v1, :cond_1
 
     .line 1532
     add-int/lit8 v3, v4, 0x1
 
-    .end local v4           #ptr:I
-    .restart local v3       #ptr:I
+    .end local v4    # "ptr":I
+    .restart local v3    # "ptr":I
     aget-byte v0, p1, v4
 
     .line 1533
-    .local v0, ch:I
+    .local v0, "ch":I
     if-ltz v0, :cond_0
 
     aget v5, v2, v0
@@ -2621,21 +2621,21 @@
     invoke-direct {p0, p1, p2, p3}, Lcom/flurry/org/codehaus/jackson/impl/Utf8Generator;->_writeUTF8Segment2([BII)V
 
     .line 1545
-    .end local v0           #ch:I
+    .end local v0    # "ch":I
     :goto_1
     return-void
 
-    .restart local v0       #ch:I
+    .restart local v0    # "ch":I
     :cond_0
     move v4, v3
 
     .line 1537
-    .end local v3           #ptr:I
-    .restart local v4       #ptr:I
+    .end local v3    # "ptr":I
+    .restart local v4    # "ptr":I
     goto :goto_0
 
     .line 1540
-    .end local v0           #ch:I
+    .end local v0    # "ch":I
     :cond_1
     iget v5, p0, Lcom/flurry/org/codehaus/jackson/impl/Utf8Generator;->_outputTail:I
 
@@ -2666,16 +2666,16 @@
     move v3, v4
 
     .line 1545
-    .end local v4           #ptr:I
-    .restart local v3       #ptr:I
+    .end local v4    # "ptr":I
+    .restart local v3    # "ptr":I
     goto :goto_1
 .end method
 
 .method private final _writeUTF8Segment2([BII)V
     .locals 10
-    .parameter "utf8"
-    .parameter "offset"
-    .parameter "len"
+    .param p1, "utf8"    # [B
+    .param p2, "offset"    # I
+    .param p3, "len"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -2688,7 +2688,7 @@
     iget v6, p0, Lcom/flurry/org/codehaus/jackson/impl/Utf8Generator;->_outputTail:I
 
     .line 1553
-    .local v6, outputPtr:I
+    .local v6, "outputPtr":I
     mul-int/lit8 v8, p3, 0x6
 
     add-int/2addr v8, v6
@@ -2708,38 +2708,38 @@
     iget-object v5, p0, Lcom/flurry/org/codehaus/jackson/impl/Utf8Generator;->_outputBuffer:[B
 
     .line 1559
-    .local v5, outputBuffer:[B
+    .local v5, "outputBuffer":[B
     iget-object v2, p0, Lcom/flurry/org/codehaus/jackson/impl/Utf8Generator;->_outputEscapes:[I
 
     .line 1560
-    .local v2, escCodes:[I
+    .local v2, "escCodes":[I
     add-int/2addr p3, p2
 
     move v7, v6
 
-    .end local v6           #outputPtr:I
-    .local v7, outputPtr:I
+    .end local v6    # "outputPtr":I
+    .local v7, "outputPtr":I
     move v4, p2
 
     .line 1562
-    .end local p2
-    .local v4, offset:I
+    .end local p2    # "offset":I
+    .local v4, "offset":I
     :goto_0
     if-ge v4, p3, :cond_4
 
     .line 1563
     add-int/lit8 p2, v4, 0x1
 
-    .end local v4           #offset:I
-    .restart local p2
+    .end local v4    # "offset":I
+    .restart local p2    # "offset":I
     aget-byte v0, p1, v4
 
     .line 1564
-    .local v0, b:B
+    .local v0, "b":B
     move v1, v0
 
     .line 1565
-    .local v1, ch:I
+    .local v1, "ch":I
     if-ltz v1, :cond_1
 
     aget v8, v2, v1
@@ -2750,36 +2750,36 @@
     :cond_1
     add-int/lit8 v6, v7, 0x1
 
-    .end local v7           #outputPtr:I
-    .restart local v6       #outputPtr:I
+    .end local v7    # "outputPtr":I
+    .restart local v6    # "outputPtr":I
     aput-byte v0, v5, v7
 
     move v7, v6
 
-    .end local v6           #outputPtr:I
-    .restart local v7       #outputPtr:I
+    .end local v6    # "outputPtr":I
+    .restart local v7    # "outputPtr":I
     move v4, p2
 
     .line 1567
-    .end local p2
-    .restart local v4       #offset:I
+    .end local p2    # "offset":I
+    .restart local v4    # "offset":I
     goto :goto_0
 
     .line 1569
-    .end local v4           #offset:I
-    .restart local p2
+    .end local v4    # "offset":I
+    .restart local p2    # "offset":I
     :cond_2
     aget v3, v2, v1
 
     .line 1570
-    .local v3, escape:I
+    .local v3, "escape":I
     if-lez v3, :cond_3
 
     .line 1571
     add-int/lit8 v6, v7, 0x1
 
-    .end local v7           #outputPtr:I
-    .restart local v6       #outputPtr:I
+    .end local v7    # "outputPtr":I
+    .restart local v6    # "outputPtr":I
     const/16 v8, 0x5c
 
     aput-byte v8, v5, v7
@@ -2787,48 +2787,48 @@
     .line 1572
     add-int/lit8 v7, v6, 0x1
 
-    .end local v6           #outputPtr:I
-    .restart local v7       #outputPtr:I
+    .end local v6    # "outputPtr":I
+    .restart local v7    # "outputPtr":I
     int-to-byte v8, v3
 
     aput-byte v8, v5, v6
 
     move v6, v7
 
-    .end local v7           #outputPtr:I
-    .restart local v6       #outputPtr:I
+    .end local v7    # "outputPtr":I
+    .restart local v6    # "outputPtr":I
     :goto_1
     move v7, v6
 
-    .end local v6           #outputPtr:I
-    .restart local v7       #outputPtr:I
+    .end local v6    # "outputPtr":I
+    .restart local v7    # "outputPtr":I
     move v4, p2
 
     .line 1577
-    .end local p2
-    .restart local v4       #offset:I
+    .end local p2    # "offset":I
+    .restart local v4    # "offset":I
     goto :goto_0
 
     .line 1575
-    .end local v4           #offset:I
-    .restart local p2
+    .end local v4    # "offset":I
+    .restart local p2    # "offset":I
     :cond_3
     invoke-direct {p0, v1, v7}, Lcom/flurry/org/codehaus/jackson/impl/Utf8Generator;->_writeGenericEscape(II)I
 
     move-result v6
 
-    .end local v7           #outputPtr:I
-    .restart local v6       #outputPtr:I
+    .end local v7    # "outputPtr":I
+    .restart local v6    # "outputPtr":I
     goto :goto_1
 
     .line 1578
-    .end local v0           #b:B
-    .end local v1           #ch:I
-    .end local v3           #escape:I
-    .end local v6           #outputPtr:I
-    .end local p2
-    .restart local v4       #offset:I
-    .restart local v7       #outputPtr:I
+    .end local v0    # "b":B
+    .end local v1    # "ch":I
+    .end local v3    # "escape":I
+    .end local v6    # "outputPtr":I
+    .end local p2    # "offset":I
+    .restart local v4    # "offset":I
+    .restart local v7    # "outputPtr":I
     :cond_4
     iput v7, p0, Lcom/flurry/org/codehaus/jackson/impl/Utf8Generator;->_outputTail:I
 
@@ -2838,9 +2838,9 @@
 
 .method private final _writeUTF8Segments([BII)V
     .locals 2
-    .parameter "utf8"
-    .parameter "offset"
-    .parameter "totalLen"
+    .param p1, "utf8"    # [B
+    .param p2, "offset"    # I
+    .param p3, "totalLen"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -2858,7 +2858,7 @@
     move-result v0
 
     .line 1518
-    .local v0, len:I
+    .local v0, "len":I
     invoke-direct {p0, p1, p2, v0}, Lcom/flurry/org/codehaus/jackson/impl/Utf8Generator;->_writeUTF8Segment([BII)V
 
     .line 1519
@@ -2878,8 +2878,8 @@
 # virtual methods
 .method protected final _decodeSurrogate(II)I
     .locals 5
-    .parameter "surr1"
-    .parameter "surr2"
+    .param p1, "surr1"    # I
+    .param p2, "surr2"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -2935,13 +2935,13 @@
     move-result-object v1
 
     .line 1708
-    .local v1, msg:Ljava/lang/String;
+    .local v1, "msg":Ljava/lang/String;
     invoke-virtual {p0, v1}, Lcom/flurry/org/codehaus/jackson/impl/Utf8Generator;->_reportError(Ljava/lang/String;)V
 
     .line 1710
-    .end local v1           #msg:Ljava/lang/String;
+    .end local v1    # "msg":Ljava/lang/String;
     :cond_1
-    const/high16 v2, 0x1
+    const/high16 v2, 0x10000
 
     const v3, 0xd800
 
@@ -2956,7 +2956,7 @@
     add-int v0, v2, v3
 
     .line 1711
-    .local v0, c:I
+    .local v0, "c":I
     return v0
 .end method
 
@@ -2975,7 +2975,7 @@
     iget v0, p0, Lcom/flurry/org/codehaus/jackson/impl/Utf8Generator;->_outputTail:I
 
     .line 1752
-    .local v0, len:I
+    .local v0, "len":I
     if-lez v0, :cond_0
 
     .line 1753
@@ -2995,8 +2995,8 @@
 
 .method protected final _outputSurrogates(II)V
     .locals 4
-    .parameter "surr1"
-    .parameter "surr2"
+    .param p1, "surr1"    # I
+    .param p2, "surr2"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -3010,7 +3010,7 @@
     move-result v1
 
     .line 1664
-    .local v1, c:I
+    .local v1, "c":I
     iget v2, p0, Lcom/flurry/org/codehaus/jackson/impl/Utf8Generator;->_outputTail:I
 
     add-int/lit8 v2, v2, 0x4
@@ -3027,7 +3027,7 @@
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/impl/Utf8Generator;->_outputBuffer:[B
 
     .line 1668
-    .local v0, bbuf:[B
+    .local v0, "bbuf":[B
     iget v2, p0, Lcom/flurry/org/codehaus/jackson/impl/Utf8Generator;->_outputTail:I
 
     add-int/lit8 v3, v2, 0x1
@@ -3105,7 +3105,7 @@
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/impl/Utf8Generator;->_outputBuffer:[B
 
     .line 1143
-    .local v0, buf:[B
+    .local v0, "buf":[B
     if-eqz v0, :cond_0
 
     iget-boolean v2, p0, Lcom/flurry/org/codehaus/jackson/impl/Utf8Generator;->_bufferRecyclable:Z
@@ -3125,7 +3125,7 @@
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/impl/Utf8Generator;->_charBuffer:[C
 
     .line 1148
-    .local v1, cbuf:[C
+    .local v1, "cbuf":[C
     if-eqz v1, :cond_1
 
     .line 1149
@@ -3143,8 +3143,8 @@
 
 .method protected final _verifyPrettyValueWrite(Ljava/lang/String;I)V
     .locals 1
-    .parameter "typeMsg"
-    .parameter "status"
+    .param p1, "typeMsg"    # Ljava/lang/String;
+    .param p2, "status"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -3236,7 +3236,7 @@
 
 .method protected final _verifyValueWrite(Ljava/lang/String;)V
     .locals 4
-    .parameter "typeMsg"
+    .param p1, "typeMsg"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -3253,7 +3253,7 @@
     move-result v1
 
     .line 1020
-    .local v1, status:I
+    .local v1, "status":I
     const/4 v2, 0x5
 
     if-ne v1, v2, :cond_0
@@ -3303,7 +3303,7 @@
     const/16 v0, 0x2c
 
     .line 1039
-    .local v0, b:B
+    .local v0, "b":B
     :goto_1
     iget v2, p0, Lcom/flurry/org/codehaus/jackson/impl/Utf8Generator;->_outputTail:I
 
@@ -3332,25 +3332,25 @@
     goto :goto_0
 
     .line 1030
-    .end local v0           #b:B
+    .end local v0    # "b":B
     :pswitch_1
     const/16 v0, 0x3a
 
     .line 1031
-    .restart local v0       #b:B
+    .restart local v0    # "b":B
     goto :goto_1
 
     .line 1033
-    .end local v0           #b:B
+    .end local v0    # "b":B
     :pswitch_2
     const/16 v0, 0x20
 
     .line 1034
-    .restart local v0       #b:B
+    .restart local v0    # "b":B
     goto :goto_1
 
     .line 1047
-    .end local v0           #b:B
+    .end local v0    # "b":B
     :cond_2
     invoke-virtual {p0, p1, v1}, Lcom/flurry/org/codehaus/jackson/impl/Utf8Generator;->_verifyPrettyValueWrite(Ljava/lang/String;I)V
 
@@ -3369,10 +3369,10 @@
 
 .method protected _writeBinary(Lcom/flurry/org/codehaus/jackson/Base64Variant;[BII)V
     .locals 9
-    .parameter "b64variant"
-    .parameter "input"
-    .parameter "inputPtr"
-    .parameter "inputEnd"
+    .param p1, "b64variant"    # Lcom/flurry/org/codehaus/jackson/Base64Variant;
+    .param p2, "input"    # [B
+    .param p3, "inputPtr"    # I
+    .param p4, "inputEnd"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -3387,7 +3387,7 @@
     sub-int v4, p4, v6
 
     .line 1593
-    .local v4, safeInputEnd:I
+    .local v4, "safeInputEnd":I
     iget v6, p0, Lcom/flurry/org/codehaus/jackson/impl/Utf8Generator;->_outputEnd:I
 
     const/4 v7, 0x6
@@ -3395,19 +3395,19 @@
     sub-int v5, v6, v7
 
     .line 1594
-    .local v5, safeOutputEnd:I
+    .local v5, "safeOutputEnd":I
     invoke-virtual {p1}, Lcom/flurry/org/codehaus/jackson/Base64Variant;->getMaxLineLength()I
 
     move-result v6
 
     shr-int/lit8 v1, v6, 0x2
 
-    .local v1, chunksBeforeLF:I
+    .local v1, "chunksBeforeLF":I
     move v3, p3
 
     .line 1597
-    .end local p3
-    .local v3, inputPtr:I
+    .end local p3    # "inputPtr":I
+    .local v3, "inputPtr":I
     :goto_0
     if-gt v3, v4, :cond_2
 
@@ -3423,18 +3423,18 @@
     :cond_0
     add-int/lit8 p3, v3, 0x1
 
-    .end local v3           #inputPtr:I
-    .restart local p3
+    .end local v3    # "inputPtr":I
+    .restart local p3    # "inputPtr":I
     aget-byte v6, p2, v3
 
     shl-int/lit8 v0, v6, 0x8
 
     .line 1603
-    .local v0, b24:I
+    .local v0, "b24":I
     add-int/lit8 v3, p3, 0x1
 
-    .end local p3
-    .restart local v3       #inputPtr:I
+    .end local p3    # "inputPtr":I
+    .restart local v3    # "inputPtr":I
     aget-byte v6, p2, p3
 
     and-int/lit16 v6, v6, 0xff
@@ -3446,8 +3446,8 @@
 
     add-int/lit8 p3, v3, 0x1
 
-    .end local v3           #inputPtr:I
-    .restart local p3
+    .end local v3    # "inputPtr":I
+    .restart local p3    # "inputPtr":I
     aget-byte v7, p2, v3
 
     and-int/lit16 v7, v7, 0xff
@@ -3507,17 +3507,17 @@
     move v3, p3
 
     .line 1612
-    .end local p3
-    .restart local v3       #inputPtr:I
+    .end local p3    # "inputPtr":I
+    .restart local v3    # "inputPtr":I
     goto :goto_0
 
     .line 1615
-    .end local v0           #b24:I
+    .end local v0    # "b24":I
     :cond_2
     sub-int v2, p4, v3
 
     .line 1616
-    .local v2, inputLeft:I
+    .local v2, "inputLeft":I
     if-lez v2, :cond_5
 
     .line 1617
@@ -3532,14 +3532,14 @@
     :cond_3
     add-int/lit8 p3, v3, 0x1
 
-    .end local v3           #inputPtr:I
-    .restart local p3
+    .end local v3    # "inputPtr":I
+    .restart local p3    # "inputPtr":I
     aget-byte v6, p2, v3
 
     shl-int/lit8 v0, v6, 0x10
 
     .line 1621
-    .restart local v0       #b24:I
+    .restart local v0    # "b24":I
     const/4 v6, 0x2
 
     if-ne v2, v6, :cond_4
@@ -3547,8 +3547,8 @@
     .line 1622
     add-int/lit8 v3, p3, 0x1
 
-    .end local p3
-    .restart local v3       #inputPtr:I
+    .end local p3    # "inputPtr":I
+    .restart local v3    # "inputPtr":I
     aget-byte v6, p2, p3
 
     and-int/lit16 v6, v6, 0xff
@@ -3560,8 +3560,8 @@
     move p3, v3
 
     .line 1624
-    .end local v3           #inputPtr:I
-    .restart local p3
+    .end local v3    # "inputPtr":I
+    .restart local p3    # "inputPtr":I
     :cond_4
     iget-object v6, p0, Lcom/flurry/org/codehaus/jackson/impl/Utf8Generator;->_outputBuffer:[B
 
@@ -3574,23 +3574,23 @@
     iput v6, p0, Lcom/flurry/org/codehaus/jackson/impl/Utf8Generator;->_outputTail:I
 
     .line 1626
-    .end local v0           #b24:I
+    .end local v0    # "b24":I
     :goto_1
     return-void
 
-    .end local p3
-    .restart local v3       #inputPtr:I
+    .end local p3    # "inputPtr":I
+    .restart local v3    # "inputPtr":I
     :cond_5
     move p3, v3
 
-    .end local v3           #inputPtr:I
-    .restart local p3
+    .end local v3    # "inputPtr":I
+    .restart local p3    # "inputPtr":I
     goto :goto_1
 .end method
 
 .method protected final _writeFieldName(Lcom/flurry/org/codehaus/jackson/SerializableString;)V
     .locals 6
-    .parameter "name"
+    .param p1, "name"    # Lcom/flurry/org/codehaus/jackson/SerializableString;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -3607,7 +3607,7 @@
     move-result-object v1
 
     .line 441
-    .local v1, raw:[B
+    .local v1, "raw":[B
     sget-object v2, Lcom/flurry/org/codehaus/jackson/JsonGenerator$Feature;->QUOTE_FIELD_NAMES:Lcom/flurry/org/codehaus/jackson/JsonGenerator$Feature;
 
     invoke-virtual {p0, v2}, Lcom/flurry/org/codehaus/jackson/impl/Utf8Generator;->isEnabled(Lcom/flurry/org/codehaus/jackson/JsonGenerator$Feature;)Z
@@ -3650,7 +3650,7 @@
     array-length v0, v1
 
     .line 452
-    .local v0, len:I
+    .local v0, "len":I
     iget v2, p0, Lcom/flurry/org/codehaus/jackson/impl/Utf8Generator;->_outputTail:I
 
     add-int/2addr v2, v0
@@ -3721,7 +3721,7 @@
 
 .method protected final _writeFieldName(Ljava/lang/String;)V
     .locals 6
-    .parameter "name"
+    .param p1, "name"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -3779,7 +3779,7 @@
     move-result v0
 
     .line 415
-    .local v0, len:I
+    .local v0, "len":I
     iget v1, p0, Lcom/flurry/org/codehaus/jackson/impl/Utf8Generator;->_charBufferLength:I
 
     if-gt v0, v1, :cond_5
@@ -3854,8 +3854,8 @@
 
 .method protected final _writePPFieldName(Lcom/flurry/org/codehaus/jackson/SerializableString;Z)V
     .locals 5
-    .parameter "name"
-    .parameter "commaBefore"
+    .param p1, "name"    # Lcom/flurry/org/codehaus/jackson/SerializableString;
+    .param p2, "commaBefore"    # Z
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -3883,7 +3883,7 @@
     move-result v0
 
     .line 517
-    .local v0, addQuotes:Z
+    .local v0, "addQuotes":Z
     if-eqz v0, :cond_1
 
     .line 518
@@ -3946,7 +3946,7 @@
     return-void
 
     .line 513
-    .end local v0           #addQuotes:Z
+    .end local v0    # "addQuotes":Z
     :cond_4
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/impl/Utf8Generator;->_cfgPrettyPrinter:Lcom/flurry/org/codehaus/jackson/PrettyPrinter;
 
@@ -3957,8 +3957,8 @@
 
 .method protected final _writePPFieldName(Ljava/lang/String;Z)V
     .locals 6
-    .parameter "name"
-    .parameter "commaBefore"
+    .param p1, "name"    # Ljava/lang/String;
+    .param p2, "commaBefore"    # Z
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -4017,7 +4017,7 @@
     move-result v0
 
     .line 484
-    .local v0, len:I
+    .local v0, "len":I
     iget v1, p0, Lcom/flurry/org/codehaus/jackson/impl/Utf8Generator;->_charBufferLength:I
 
     if-gt v0, v1, :cond_5
@@ -4074,7 +4074,7 @@
     aput-byte v5, v1, v2
 
     .line 505
-    .end local v0           #len:I
+    .end local v0    # "len":I
     :goto_2
     return-void
 
@@ -4087,7 +4087,7 @@
     goto :goto_0
 
     .line 493
-    .restart local v0       #len:I
+    .restart local v0    # "len":I
     :cond_4
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/impl/Utf8Generator;->_charBuffer:[C
 
@@ -4102,7 +4102,7 @@
     goto :goto_1
 
     .line 503
-    .end local v0           #len:I
+    .end local v0    # "len":I
     :cond_6
     invoke-direct {p0, p1}, Lcom/flurry/org/codehaus/jackson/impl/Utf8Generator;->_writeStringSegments(Ljava/lang/String;)V
 
@@ -4141,7 +4141,7 @@
     move-result-object v0
 
     .line 1110
-    .local v0, ctxt:Lcom/flurry/org/codehaus/jackson/JsonStreamContext;
+    .local v0, "ctxt":Lcom/flurry/org/codehaus/jackson/JsonStreamContext;
     invoke-virtual {v0}, Lcom/flurry/org/codehaus/jackson/JsonStreamContext;->inArray()Z
 
     move-result v1
@@ -4167,7 +4167,7 @@
     goto :goto_0
 
     .line 1119
-    .end local v0           #ctxt:Lcom/flurry/org/codehaus/jackson/JsonStreamContext;
+    .end local v0    # "ctxt":Lcom/flurry/org/codehaus/jackson/JsonStreamContext;
     :cond_1
     invoke-virtual {p0}, Lcom/flurry/org/codehaus/jackson/impl/Utf8Generator;->_flushBuffer()V
 
@@ -4293,7 +4293,7 @@
 
 .method public setCharacterEscapes(Lcom/flurry/org/codehaus/jackson/io/CharacterEscapes;)Lcom/flurry/org/codehaus/jackson/JsonGenerator;
     .locals 1
-    .parameter "esc"
+    .param p1, "esc"    # Lcom/flurry/org/codehaus/jackson/io/CharacterEscapes;
 
     .prologue
     .line 223
@@ -4324,7 +4324,7 @@
 
 .method public setHighestNonEscapedChar(I)Lcom/flurry/org/codehaus/jackson/JsonGenerator;
     .locals 1
-    .parameter "charCode"
+    .param p1, "charCode"    # I
 
     .prologue
     .line 211
@@ -4347,10 +4347,10 @@
 
 .method public writeBinary(Lcom/flurry/org/codehaus/jackson/Base64Variant;[BII)V
     .locals 4
-    .parameter "b64variant"
-    .parameter "data"
-    .parameter "offset"
-    .parameter "len"
+    .param p1, "b64variant"    # Lcom/flurry/org/codehaus/jackson/Base64Variant;
+    .param p2, "data"    # [B
+    .param p3, "offset"    # I
+    .param p4, "len"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -4421,7 +4421,7 @@
 
 .method public writeBoolean(Z)V
     .locals 5
-    .parameter "state"
+    .param p1, "state"    # Z
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -4456,12 +4456,12 @@
     move-object v0, v2
 
     .line 996
-    .local v0, keyword:[B
+    .local v0, "keyword":[B
     :goto_0
     array-length v1, v0
 
     .line 997
-    .local v1, len:I
+    .local v1, "len":I
     const/4 v2, 0x0
 
     iget-object v3, p0, Lcom/flurry/org/codehaus/jackson/impl/Utf8Generator;->_outputBuffer:[B
@@ -4481,8 +4481,8 @@
     return-void
 
     .line 995
-    .end local v0           #keyword:[B
-    .end local v1           #len:I
+    .end local v0    # "keyword":[B
+    .end local v1    # "len":I
     :cond_1
     sget-object v2, Lcom/flurry/org/codehaus/jackson/impl/Utf8Generator;->FALSE_BYTES:[B
 
@@ -4701,7 +4701,7 @@
 
 .method public final writeFieldName(Lcom/flurry/org/codehaus/jackson/SerializableString;)V
     .locals 4
-    .parameter "name"
+    .param p1, "name"    # Lcom/flurry/org/codehaus/jackson/SerializableString;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -4724,7 +4724,7 @@
     move-result v0
 
     .line 313
-    .local v0, status:I
+    .local v0, "status":I
     const/4 v1, 0x4
 
     if-ne v0, v1, :cond_0
@@ -4795,7 +4795,7 @@
 
 .method public final writeFieldName(Lcom/flurry/org/codehaus/jackson/io/SerializedString;)V
     .locals 4
-    .parameter "name"
+    .param p1, "name"    # Lcom/flurry/org/codehaus/jackson/io/SerializedString;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -4818,7 +4818,7 @@
     move-result v0
 
     .line 291
-    .local v0, status:I
+    .local v0, "status":I
     const/4 v1, 0x4
 
     if-ne v0, v1, :cond_0
@@ -4889,7 +4889,7 @@
 
 .method public final writeFieldName(Ljava/lang/String;)V
     .locals 4
-    .parameter "name"
+    .param p1, "name"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -4908,7 +4908,7 @@
     move-result v0
 
     .line 269
-    .local v0, status:I
+    .local v0, "status":I
     const/4 v1, 0x4
 
     if-ne v0, v1, :cond_0
@@ -5001,7 +5001,7 @@
 
 .method public writeNumber(D)V
     .locals 1
-    .parameter "d"
+    .param p1, "d"    # D
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -5066,7 +5066,7 @@
 
 .method public writeNumber(F)V
     .locals 1
-    .parameter "f"
+    .param p1, "f"    # F
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -5131,7 +5131,7 @@
 
 .method public writeNumber(I)V
     .locals 2
-    .parameter "i"
+    .param p1, "i"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -5187,7 +5187,7 @@
 
 .method public writeNumber(J)V
     .locals 2
-    .parameter "l"
+    .param p1, "l"    # J
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -5243,7 +5243,7 @@
 
 .method public writeNumber(Ljava/lang/String;)V
     .locals 1
-    .parameter "encodedValue"
+    .param p1, "encodedValue"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -5278,7 +5278,7 @@
 
 .method public writeNumber(Ljava/math/BigDecimal;)V
     .locals 1
-    .parameter "value"
+    .param p1, "value"    # Ljava/math/BigDecimal;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -5326,7 +5326,7 @@
 
 .method public writeNumber(Ljava/math/BigInteger;)V
     .locals 1
-    .parameter "value"
+    .param p1, "value"    # Ljava/math/BigInteger;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -5374,7 +5374,7 @@
 
 .method public writeRaw(C)V
     .locals 4
-    .parameter "ch"
+    .param p1, "ch"    # C
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -5402,7 +5402,7 @@
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/impl/Utf8Generator;->_outputBuffer:[B
 
     .line 770
-    .local v0, bbuf:[B
+    .local v0, "bbuf":[B
     const/16 v1, 0x7f
 
     if-gt p1, v1, :cond_1
@@ -5471,7 +5471,7 @@
 
 .method public writeRaw(Ljava/lang/String;)V
     .locals 7
-    .parameter "text"
+    .param p1, "text"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -5486,13 +5486,13 @@
     const/4 v4, 0x0
 
     .line 691
-    .local v4, start:I
+    .local v4, "start":I
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v2
 
     .line 692
-    .local v2, len:I
+    .local v2, "len":I
     :goto_0
     if-lez v2, :cond_1
 
@@ -5500,17 +5500,17 @@
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/impl/Utf8Generator;->_charBuffer:[C
 
     .line 694
-    .local v1, buf:[C
+    .local v1, "buf":[C
     array-length v0, v1
 
     .line 695
-    .local v0, blen:I
+    .local v0, "blen":I
     if-ge v2, v0, :cond_0
 
     move v3, v2
 
     .line 696
-    .local v3, len2:I
+    .local v3, "len2":I
     :goto_1
     add-int v5, v4, v3
 
@@ -5528,7 +5528,7 @@
     .line 700
     goto :goto_0
 
-    .end local v3           #len2:I
+    .end local v3    # "len2":I
     :cond_0
     move v3, v0
 
@@ -5536,17 +5536,17 @@
     goto :goto_1
 
     .line 701
-    .end local v0           #blen:I
-    .end local v1           #buf:[C
+    .end local v0    # "blen":I
+    .end local v1    # "buf":[C
     :cond_1
     return-void
 .end method
 
 .method public writeRaw(Ljava/lang/String;II)V
     .locals 5
-    .parameter "text"
-    .parameter "offset"
-    .parameter "len"
+    .param p1, "text"    # Ljava/lang/String;
+    .param p2, "offset"    # I
+    .param p3, "len"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -5565,17 +5565,17 @@
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/impl/Utf8Generator;->_charBuffer:[C
 
     .line 709
-    .local v1, buf:[C
+    .local v1, "buf":[C
     array-length v0, v1
 
     .line 710
-    .local v0, blen:I
+    .local v0, "blen":I
     if-ge p3, v0, :cond_0
 
     move v2, p3
 
     .line 711
-    .local v2, len2:I
+    .local v2, "len2":I
     :goto_1
     add-int v3, p2, v2
 
@@ -5593,7 +5593,7 @@
     .line 715
     goto :goto_0
 
-    .end local v2           #len2:I
+    .end local v2    # "len2":I
     :cond_0
     move v2, v0
 
@@ -5601,17 +5601,17 @@
     goto :goto_1
 
     .line 716
-    .end local v0           #blen:I
-    .end local v1           #buf:[C
+    .end local v0    # "blen":I
+    .end local v1    # "buf":[C
     :cond_1
     return-void
 .end method
 
 .method public final writeRaw([CII)V
     .locals 6
-    .parameter "cbuf"
-    .parameter "offset"
-    .parameter "len"
+    .param p1, "cbuf"    # [C
+    .param p2, "offset"    # I
+    .param p3, "len"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -5626,7 +5626,7 @@
     add-int v1, v3, p3
 
     .line 726
-    .local v1, len3:I
+    .local v1, "len3":I
     iget v3, p0, Lcom/flurry/org/codehaus/jackson/impl/Utf8Generator;->_outputTail:I
 
     add-int/2addr v3, v1
@@ -5665,7 +5665,7 @@
     aget-char v0, p1, p2
 
     .line 744
-    .local v0, ch:I
+    .local v0, "ch":I
     const/16 v3, 0x7f
 
     if-le v0, v3, :cond_4
@@ -5673,12 +5673,12 @@
     .line 752
     add-int/lit8 v2, p2, 0x1
 
-    .end local p2
-    .local v2, offset:I
+    .end local p2    # "offset":I
+    .local v2, "offset":I
     aget-char v0, p1, p2
 
     .line 753
-    .local v0, ch:C
+    .local v0, "ch":C
     const/16 v3, 0x800
 
     if-ge v0, v3, :cond_5
@@ -5721,12 +5721,12 @@
     move p2, v2
 
     .line 759
-    .end local v2           #offset:I
-    .restart local p2
+    .end local v2    # "offset":I
+    .restart local p2    # "offset":I
     goto :goto_1
 
     .line 747
-    .local v0, ch:I
+    .local v0, "ch":I
     :cond_4
     iget-object v3, p0, Lcom/flurry/org/codehaus/jackson/impl/Utf8Generator;->_outputBuffer:[B
 
@@ -5748,9 +5748,9 @@
     goto :goto_0
 
     .line 757
-    .end local p2
-    .local v0, ch:C
-    .restart local v2       #offset:I
+    .end local p2    # "offset":I
+    .local v0, "ch":C
+    .restart local v2    # "offset":I
     :cond_5
     invoke-direct {p0, v0, p1, v2, p3}, Lcom/flurry/org/codehaus/jackson/impl/Utf8Generator;->_outputRawMultiByteChar(I[CII)I
 
@@ -5759,9 +5759,9 @@
 
 .method public writeRawUTF8String([BII)V
     .locals 4
-    .parameter "text"
-    .parameter "offset"
-    .parameter "length"
+    .param p1, "text"    # [B
+    .param p2, "offset"    # I
+    .param p3, "length"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -5962,7 +5962,7 @@
 
 .method public final writeString(Lcom/flurry/org/codehaus/jackson/SerializableString;)V
     .locals 4
-    .parameter "text"
+    .param p1, "text"    # Lcom/flurry/org/codehaus/jackson/SerializableString;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -6035,7 +6035,7 @@
 
 .method public writeString(Ljava/lang/String;)V
     .locals 6
-    .parameter "text"
+    .param p1, "text"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -6070,7 +6070,7 @@
     move-result v0
 
     .line 549
-    .local v0, len:I
+    .local v0, "len":I
     iget v1, p0, Lcom/flurry/org/codehaus/jackson/impl/Utf8Generator;->_charBufferLength:I
 
     if-le v0, v1, :cond_1
@@ -6155,9 +6155,9 @@
 
 .method public writeString([CII)V
     .locals 4
-    .parameter "text"
-    .parameter "offset"
-    .parameter "len"
+    .param p1, "text"    # [C
+    .param p2, "offset"    # I
+    .param p3, "len"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -6251,8 +6251,8 @@
 
 .method public final writeStringField(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
-    .parameter "fieldName"
-    .parameter "value"
+    .param p1, "fieldName"    # Ljava/lang/String;
+    .param p2, "value"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -6273,9 +6273,9 @@
 
 .method public writeUTF8String([BII)V
     .locals 4
-    .parameter "text"
-    .parameter "offset"
-    .parameter "len"
+    .param p1, "text"    # [B
+    .param p2, "offset"    # I
+    .param p3, "len"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,

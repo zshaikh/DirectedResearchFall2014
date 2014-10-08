@@ -112,8 +112,8 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Ljava/lang/String;)V
     .locals 2
-    .parameter "ctx"
-    .parameter "base64PublicKey"
+    .param p1, "ctx"    # Landroid/content/Context;
+    .param p2, "base64PublicKey"    # Ljava/lang/String;
 
     .prologue
     const/4 v1, 0x0
@@ -169,7 +169,7 @@
 
 .method public static getResponseDesc(I)Ljava/lang/String;
     .locals 7
-    .parameter "code"
+    .param p0, "code"    # I
 
     .prologue
     const/16 v5, -0x3e8
@@ -187,7 +187,7 @@
     move-result-object v0
 
     .line 721
-    .local v0, iab_msgs:[Ljava/lang/String;
+    .local v0, "iab_msgs":[Ljava/lang/String;
     const-string v3, "0:OK/-1001:Remote exception during initialization/-1002:Bad response received/-1003:Purchase signature verification failed/-1004:Send intent failed/-1005:User cancelled/-1006:Unknown purchase response/-1007:Missing token/-1008:Unknown error/-1009:Subscriptions not available/-1010:Invalid consumption attempt"
 
     .line 730
@@ -198,14 +198,14 @@
     move-result-object v1
 
     .line 732
-    .local v1, iabhelper_msgs:[Ljava/lang/String;
+    .local v1, "iabhelper_msgs":[Ljava/lang/String;
     if-gt p0, v5, :cond_1
 
     .line 733
     sub-int v2, v5, p0
 
     .line 734
-    .local v2, index:I
+    .local v2, "index":I
     if-ltz v2, :cond_0
 
     array-length v3, v1
@@ -215,12 +215,12 @@
     aget-object v3, v1, v2
 
     .line 740
-    .end local v2           #index:I
+    .end local v2    # "index":I
     :goto_0
     return-object v3
 
     .line 735
-    .restart local v2       #index:I
+    .restart local v2    # "index":I
     :cond_0
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -247,7 +247,7 @@
     goto :goto_0
 
     .line 737
-    .end local v2           #index:I
+    .end local v2    # "index":I
     :cond_1
     if-ltz p0, :cond_2
 
@@ -292,7 +292,7 @@
 # virtual methods
 .method checkSetupDone(Ljava/lang/String;)V
     .locals 3
-    .parameter "operation"
+    .param p1, "operation"    # Ljava/lang/String;
 
     .prologue
     .line 746
@@ -351,7 +351,7 @@
 
 .method consume(Lcom/bitrhymes/iab/util/Purchase;)V
     .locals 8
-    .parameter "itemInfo"
+    .param p1, "itemInfo"    # Lcom/bitrhymes/iab/util/Purchase;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lcom/bitrhymes/iab/util/IabException;
@@ -416,13 +416,13 @@
     move-result-object v3
 
     .line 635
-    .local v3, token:Ljava/lang/String;
+    .local v3, "token":Ljava/lang/String;
     invoke-virtual {p1}, Lcom/bitrhymes/iab/util/Purchase;->getSku()Ljava/lang/String;
 
     move-result-object v2
 
     .line 636
-    .local v2, sku:Ljava/lang/String;
+    .local v2, "sku":Ljava/lang/String;
     if-eqz v3, :cond_1
 
     const-string v4, ""
@@ -495,15 +495,15 @@
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 652
-    .end local v2           #sku:Ljava/lang/String;
-    .end local v3           #token:Ljava/lang/String;
+    .end local v2    # "sku":Ljava/lang/String;
+    .end local v3    # "token":Ljava/lang/String;
     :catch_0
     move-exception v4
 
     move-object v0, v4
 
     .line 653
-    .local v0, e:Landroid/os/RemoteException;
+    .local v0, "e":Landroid/os/RemoteException;
     new-instance v4, Lcom/bitrhymes/iab/util/IabException;
 
     const/16 v5, -0x3e9
@@ -527,9 +527,9 @@
     throw v4
 
     .line 642
-    .end local v0           #e:Landroid/os/RemoteException;
-    .restart local v2       #sku:Ljava/lang/String;
-    .restart local v3       #token:Ljava/lang/String;
+    .end local v0    # "e":Landroid/os/RemoteException;
+    .restart local v2    # "sku":Ljava/lang/String;
+    .restart local v3    # "token":Ljava/lang/String;
     :cond_2
     :try_start_1
     new-instance v4, Ljava/lang/StringBuilder;
@@ -574,7 +574,7 @@
     move-result v1
 
     .line 644
-    .local v1, response:I
+    .local v1, "response":I
     if-nez v1, :cond_3
 
     .line 645
@@ -655,8 +655,8 @@
 
 .method public consumeAsync(Lcom/bitrhymes/iab/util/Purchase;Lcom/bitrhymes/iab/util/IabHelper$OnConsumeFinishedListener;)V
     .locals 2
-    .parameter "purchase"
-    .parameter "listener"
+    .param p1, "purchase"    # Lcom/bitrhymes/iab/util/Purchase;
+    .param p2, "listener"    # Lcom/bitrhymes/iab/util/IabHelper$OnConsumeFinishedListener;
 
     .prologue
     .line 693
@@ -670,7 +670,7 @@
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     .line 695
-    .local v0, purchases:Ljava/util/List;,"Ljava/util/List<Lcom/bitrhymes/iab/util/Purchase;>;"
+    .local v0, "purchases":Ljava/util/List;, "Ljava/util/List<Lcom/bitrhymes/iab/util/Purchase;>;"
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 696
@@ -684,8 +684,7 @@
 
 .method public consumeAsync(Ljava/util/List;Lcom/bitrhymes/iab/util/IabHelper$OnConsumeMultiFinishedListener;)V
     .locals 1
-    .parameter
-    .parameter "listener"
+    .param p2, "listener"    # Lcom/bitrhymes/iab/util/IabHelper$OnConsumeMultiFinishedListener;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -700,7 +699,7 @@
 
     .prologue
     .line 705
-    .local p1, purchases:Ljava/util/List;,"Ljava/util/List<Lcom/bitrhymes/iab/util/Purchase;>;"
+    .local p1, "purchases":Ljava/util/List;, "Ljava/util/List<Lcom/bitrhymes/iab/util/Purchase;>;"
     const-string v0, "consume"
 
     invoke-virtual {p0, v0}, Lcom/bitrhymes/iab/util/IabHelper;->checkSetupDone(Ljava/lang/String;)V
@@ -716,9 +715,8 @@
 
 .method consumeAsyncInternal(Ljava/util/List;Lcom/bitrhymes/iab/util/IabHelper$OnConsumeFinishedListener;Lcom/bitrhymes/iab/util/IabHelper$OnConsumeMultiFinishedListener;)V
     .locals 7
-    .parameter
-    .parameter "singleListener"
-    .parameter "multiListener"
+    .param p2, "singleListener"    # Lcom/bitrhymes/iab/util/IabHelper$OnConsumeFinishedListener;
+    .param p3, "multiListener"    # Lcom/bitrhymes/iab/util/IabHelper$OnConsumeMultiFinishedListener;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -734,13 +732,13 @@
 
     .prologue
     .line 906
-    .local p1, purchases:Ljava/util/List;,"Ljava/util/List<Lcom/bitrhymes/iab/util/Purchase;>;"
+    .local p1, "purchases":Ljava/util/List;, "Ljava/util/List<Lcom/bitrhymes/iab/util/Purchase;>;"
     new-instance v4, Landroid/os/Handler;
 
     invoke-direct {v4}, Landroid/os/Handler;-><init>()V
 
     .line 907
-    .local v4, handler:Landroid/os/Handler;
+    .local v4, "handler":Landroid/os/Handler;
     const-string v0, "consume"
 
     invoke-virtual {p0, v0}, Lcom/bitrhymes/iab/util/IabHelper;->flagStartAsync(Ljava/lang/String;)V
@@ -823,7 +821,7 @@
 
 .method public enableDebugLogging(Z)V
     .locals 0
-    .parameter "enable"
+    .param p1, "enable"    # Z
 
     .prologue
     .line 160
@@ -835,8 +833,8 @@
 
 .method public enableDebugLogging(ZLjava/lang/String;)V
     .locals 0
-    .parameter "enable"
-    .parameter "tag"
+    .param p1, "enable"    # Z
+    .param p2, "tag"    # Ljava/lang/String;
 
     .prologue
     .line 155
@@ -888,7 +886,7 @@
 
 .method flagStartAsync(Ljava/lang/String;)V
     .locals 3
-    .parameter "operation"
+    .param p1, "operation"    # Ljava/lang/String;
 
     .prologue
     .line 785
@@ -967,7 +965,7 @@
 
 .method getResponseCodeFromBundle(Landroid/os/Bundle;)I
     .locals 4
-    .parameter "b"
+    .param p1, "b"    # Landroid/os/Bundle;
 
     .prologue
     .line 754
@@ -978,7 +976,7 @@
     move-result-object v0
 
     .line 755
-    .local v0, o:Ljava/lang/Object;
+    .local v0, "o":Ljava/lang/Object;
     if-nez v0, :cond_0
 
     .line 756
@@ -990,12 +988,12 @@
     const/4 v1, 0x0
 
     .line 760
-    .end local v0           #o:Ljava/lang/Object;
+    .end local v0    # "o":Ljava/lang/Object;
     :goto_0
     return v1
 
     .line 759
-    .restart local v0       #o:Ljava/lang/Object;
+    .restart local v0    # "o":Ljava/lang/Object;
     :cond_0
     instance-of v1, v0, Ljava/lang/Integer;
 
@@ -1003,7 +1001,7 @@
 
     check-cast v0, Ljava/lang/Integer;
 
-    .end local v0           #o:Ljava/lang/Object;
+    .end local v0    # "o":Ljava/lang/Object;
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
     move-result v1
@@ -1011,7 +1009,7 @@
     goto :goto_0
 
     .line 760
-    .restart local v0       #o:Ljava/lang/Object;
+    .restart local v0    # "o":Ljava/lang/Object;
     :cond_1
     instance-of v1, v0, Ljava/lang/Long;
 
@@ -1019,7 +1017,7 @@
 
     check-cast v0, Ljava/lang/Long;
 
-    .end local v0           #o:Ljava/lang/Object;
+    .end local v0    # "o":Ljava/lang/Object;
     invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
 
     move-result-wide v1
@@ -1029,7 +1027,7 @@
     goto :goto_0
 
     .line 762
-    .restart local v0       #o:Ljava/lang/Object;
+    .restart local v0    # "o":Ljava/lang/Object;
     :cond_2
     const-string v1, "Unexpected type for bundle response code."
 
@@ -1078,7 +1076,7 @@
 
 .method getResponseCodeFromIntent(Landroid/content/Intent;)I
     .locals 4
-    .parameter "i"
+    .param p1, "i"    # Landroid/content/Intent;
 
     .prologue
     .line 770
@@ -1093,7 +1091,7 @@
     move-result-object v0
 
     .line 771
-    .local v0, o:Ljava/lang/Object;
+    .local v0, "o":Ljava/lang/Object;
     if-nez v0, :cond_0
 
     .line 772
@@ -1105,12 +1103,12 @@
     const/4 v1, 0x0
 
     .line 776
-    .end local v0           #o:Ljava/lang/Object;
+    .end local v0    # "o":Ljava/lang/Object;
     :goto_0
     return v1
 
     .line 775
-    .restart local v0       #o:Ljava/lang/Object;
+    .restart local v0    # "o":Ljava/lang/Object;
     :cond_0
     instance-of v1, v0, Ljava/lang/Integer;
 
@@ -1118,7 +1116,7 @@
 
     check-cast v0, Ljava/lang/Integer;
 
-    .end local v0           #o:Ljava/lang/Object;
+    .end local v0    # "o":Ljava/lang/Object;
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
     move-result v1
@@ -1126,7 +1124,7 @@
     goto :goto_0
 
     .line 776
-    .restart local v0       #o:Ljava/lang/Object;
+    .restart local v0    # "o":Ljava/lang/Object;
     :cond_1
     instance-of v1, v0, Ljava/lang/Long;
 
@@ -1134,7 +1132,7 @@
 
     check-cast v0, Ljava/lang/Long;
 
-    .end local v0           #o:Ljava/lang/Object;
+    .end local v0    # "o":Ljava/lang/Object;
     invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
 
     move-result-wide v1
@@ -1144,7 +1142,7 @@
     goto :goto_0
 
     .line 778
-    .restart local v0       #o:Ljava/lang/Object;
+    .restart local v0    # "o":Ljava/lang/Object;
     :cond_2
     const-string v1, "Unexpected type for intent response code."
 
@@ -1193,9 +1191,9 @@
 
 .method public handleActivityResult(IILandroid/content/Intent;)Z
     .locals 12
-    .parameter "requestCode"
-    .parameter "resultCode"
-    .parameter "data"
+    .param p1, "requestCode"    # I
+    .param p2, "resultCode"    # I
+    .param p3, "data"    # Landroid/content/Intent;
 
     .prologue
     .line 409
@@ -1275,7 +1273,7 @@
     invoke-direct {v6, v8, v9}, Lcom/bitrhymes/iab/util/IabResult;-><init>(ILjava/lang/String;)V
 
     .line 422
-    .local v6, result:Lcom/bitrhymes/iab/util/IabResult;
+    .local v6, "result":Lcom/bitrhymes/iab/util/IabResult;
     iget-object v8, p0, Lcom/bitrhymes/iab/util/IabHelper;->mPurchaseListener:Lcom/bitrhymes/iab/util/IabHelper$OnIabPurchaseFinishedListener;
 
     if-eqz v8, :cond_1
@@ -1293,14 +1291,14 @@
     goto :goto_0
 
     .line 426
-    .end local v6           #result:Lcom/bitrhymes/iab/util/IabResult;
+    .end local v6    # "result":Lcom/bitrhymes/iab/util/IabResult;
     :cond_2
     invoke-virtual {p0, p3}, Lcom/bitrhymes/iab/util/IabHelper;->getResponseCodeFromIntent(Landroid/content/Intent;)I
 
     move-result v5
 
     .line 427
-    .local v5, responseCode:I
+    .local v5, "responseCode":I
     const-string v8, "INAPP_PURCHASE_DATA"
 
     invoke-virtual {p3, v8}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
@@ -1308,7 +1306,7 @@
     move-result-object v4
 
     .line 428
-    .local v4, purchaseData:Ljava/lang/String;
+    .local v4, "purchaseData":Ljava/lang/String;
     const-string v8, "INAPP_DATA_SIGNATURE"
 
     invoke-virtual {p3, v8}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
@@ -1316,7 +1314,7 @@
     move-result-object v0
 
     .line 430
-    .local v0, dataSignature:Ljava/lang/String;
+    .local v0, "dataSignature":Ljava/lang/String;
     const-string v8, "IabHelper"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -1465,7 +1463,7 @@
     invoke-direct {v6, v8, v9}, Lcom/bitrhymes/iab/util/IabResult;-><init>(ILjava/lang/String;)V
 
     .line 442
-    .restart local v6       #result:Lcom/bitrhymes/iab/util/IabResult;
+    .restart local v6    # "result":Lcom/bitrhymes/iab/util/IabResult;
     iget-object v8, p0, Lcom/bitrhymes/iab/util/IabHelper;->mPurchaseListener:Lcom/bitrhymes/iab/util/IabHelper$OnIabPurchaseFinishedListener;
 
     if-eqz v8, :cond_4
@@ -1483,12 +1481,12 @@
     goto/16 :goto_0
 
     .line 446
-    .end local v6           #result:Lcom/bitrhymes/iab/util/IabResult;
+    .end local v6    # "result":Lcom/bitrhymes/iab/util/IabResult;
     :cond_5
     const/4 v2, 0x0
 
     .line 448
-    .local v2, purchase:Lcom/bitrhymes/iab/util/Purchase;
+    .local v2, "purchase":Lcom/bitrhymes/iab/util/Purchase;
     :try_start_0
     new-instance v3, Lcom/bitrhymes/iab/util/Purchase;
 
@@ -1499,15 +1497,15 @@
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 449
-    .end local v2           #purchase:Lcom/bitrhymes/iab/util/Purchase;
-    .local v3, purchase:Lcom/bitrhymes/iab/util/Purchase;
+    .end local v2    # "purchase":Lcom/bitrhymes/iab/util/Purchase;
+    .local v3, "purchase":Lcom/bitrhymes/iab/util/Purchase;
     :try_start_1
     invoke-virtual {v3}, Lcom/bitrhymes/iab/util/Purchase;->getSku()Ljava/lang/String;
 
     move-result-object v7
 
     .line 452
-    .local v7, sku:Ljava/lang/String;
+    .local v7, "sku":Ljava/lang/String;
     iget-object v8, p0, Lcom/bitrhymes/iab/util/IabHelper;->mSignatureBase64:Ljava/lang/String;
 
     invoke-static {v8, v4, v0}, Lcom/bitrhymes/iab/util/Security;->verifyPurchase(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
@@ -1555,7 +1553,7 @@
     invoke-direct {v6, v8, v9}, Lcom/bitrhymes/iab/util/IabResult;-><init>(ILjava/lang/String;)V
 
     .line 455
-    .restart local v6       #result:Lcom/bitrhymes/iab/util/IabResult;
+    .restart local v6    # "result":Lcom/bitrhymes/iab/util/IabResult;
     iget-object v8, p0, Lcom/bitrhymes/iab/util/IabHelper;->mPurchaseListener:Lcom/bitrhymes/iab/util/IabHelper$OnIabPurchaseFinishedListener;
 
     if-eqz v8, :cond_6
@@ -1571,7 +1569,7 @@
     goto/16 :goto_0
 
     .line 458
-    .end local v6           #result:Lcom/bitrhymes/iab/util/IabResult;
+    .end local v6    # "result":Lcom/bitrhymes/iab/util/IabResult;
     :cond_7
     const-string v8, "Purchase signature successfully verified."
 
@@ -1598,8 +1596,8 @@
     invoke-interface {v8, v9, v3}, Lcom/bitrhymes/iab/util/IabHelper$OnIabPurchaseFinishedListener;->onIabPurchaseFinished(Lcom/bitrhymes/iab/util/IabResult;Lcom/bitrhymes/iab/util/Purchase;)V
 
     .line 491
-    .end local v3           #purchase:Lcom/bitrhymes/iab/util/Purchase;
-    .end local v7           #sku:Ljava/lang/String;
+    .end local v3    # "purchase":Lcom/bitrhymes/iab/util/Purchase;
+    .end local v7    # "sku":Ljava/lang/String;
     :cond_8
     :goto_1
     const/4 v8, 0x1
@@ -1607,14 +1605,14 @@
     goto/16 :goto_0
 
     .line 460
-    .restart local v2       #purchase:Lcom/bitrhymes/iab/util/Purchase;
+    .restart local v2    # "purchase":Lcom/bitrhymes/iab/util/Purchase;
     :catch_0
     move-exception v8
 
     move-object v1, v8
 
     .line 461
-    .local v1, e:Lorg/json/JSONException;
+    .local v1, "e":Lorg/json/JSONException;
     :goto_2
     const-string v8, "Failed to parse purchase data."
 
@@ -1633,7 +1631,7 @@
     invoke-direct {v6, v8, v9}, Lcom/bitrhymes/iab/util/IabResult;-><init>(ILjava/lang/String;)V
 
     .line 464
-    .restart local v6       #result:Lcom/bitrhymes/iab/util/IabResult;
+    .restart local v6    # "result":Lcom/bitrhymes/iab/util/IabResult;
     iget-object v8, p0, Lcom/bitrhymes/iab/util/IabHelper;->mPurchaseListener:Lcom/bitrhymes/iab/util/IabHelper$OnIabPurchaseFinishedListener;
 
     if-eqz v8, :cond_9
@@ -1651,9 +1649,9 @@
     goto/16 :goto_0
 
     .line 472
-    .end local v1           #e:Lorg/json/JSONException;
-    .end local v2           #purchase:Lcom/bitrhymes/iab/util/Purchase;
-    .end local v6           #result:Lcom/bitrhymes/iab/util/IabResult;
+    .end local v1    # "e":Lorg/json/JSONException;
+    .end local v2    # "purchase":Lcom/bitrhymes/iab/util/Purchase;
+    .end local v6    # "result":Lcom/bitrhymes/iab/util/IabResult;
     :cond_a
     const/4 v8, -0x1
 
@@ -1693,7 +1691,7 @@
     invoke-direct {v6, v5, v8}, Lcom/bitrhymes/iab/util/IabResult;-><init>(ILjava/lang/String;)V
 
     .line 477
-    .restart local v6       #result:Lcom/bitrhymes/iab/util/IabResult;
+    .restart local v6    # "result":Lcom/bitrhymes/iab/util/IabResult;
     iget-object v8, p0, Lcom/bitrhymes/iab/util/IabHelper;->mPurchaseListener:Lcom/bitrhymes/iab/util/IabHelper$OnIabPurchaseFinishedListener;
 
     const/4 v9, 0x0
@@ -1703,7 +1701,7 @@
     goto :goto_1
 
     .line 480
-    .end local v6           #result:Lcom/bitrhymes/iab/util/IabResult;
+    .end local v6    # "result":Lcom/bitrhymes/iab/util/IabResult;
     :cond_b
     if-nez p2, :cond_c
 
@@ -1738,7 +1736,7 @@
     invoke-direct {v6, v8, v9}, Lcom/bitrhymes/iab/util/IabResult;-><init>(ILjava/lang/String;)V
 
     .line 483
-    .restart local v6       #result:Lcom/bitrhymes/iab/util/IabResult;
+    .restart local v6    # "result":Lcom/bitrhymes/iab/util/IabResult;
     iget-object v8, p0, Lcom/bitrhymes/iab/util/IabHelper;->mPurchaseListener:Lcom/bitrhymes/iab/util/IabHelper$OnIabPurchaseFinishedListener;
 
     if-eqz v8, :cond_8
@@ -1752,7 +1750,7 @@
     goto :goto_1
 
     .line 486
-    .end local v6           #result:Lcom/bitrhymes/iab/util/IabResult;
+    .end local v6    # "result":Lcom/bitrhymes/iab/util/IabResult;
     :cond_c
     new-instance v8, Ljava/lang/StringBuilder;
 
@@ -1800,7 +1798,7 @@
     invoke-direct {v6, v8, v9}, Lcom/bitrhymes/iab/util/IabResult;-><init>(ILjava/lang/String;)V
 
     .line 489
-    .restart local v6       #result:Lcom/bitrhymes/iab/util/IabResult;
+    .restart local v6    # "result":Lcom/bitrhymes/iab/util/IabResult;
     iget-object v8, p0, Lcom/bitrhymes/iab/util/IabHelper;->mPurchaseListener:Lcom/bitrhymes/iab/util/IabHelper$OnIabPurchaseFinishedListener;
 
     if-eqz v8, :cond_8
@@ -1814,8 +1812,8 @@
     goto/16 :goto_1
 
     .line 460
-    .end local v6           #result:Lcom/bitrhymes/iab/util/IabResult;
-    .restart local v3       #purchase:Lcom/bitrhymes/iab/util/Purchase;
+    .end local v6    # "result":Lcom/bitrhymes/iab/util/IabResult;
+    .restart local v3    # "purchase":Lcom/bitrhymes/iab/util/Purchase;
     :catch_1
     move-exception v8
 
@@ -1823,17 +1821,17 @@
 
     move-object v2, v3
 
-    .end local v3           #purchase:Lcom/bitrhymes/iab/util/Purchase;
-    .restart local v2       #purchase:Lcom/bitrhymes/iab/util/Purchase;
+    .end local v3    # "purchase":Lcom/bitrhymes/iab/util/Purchase;
+    .restart local v2    # "purchase":Lcom/bitrhymes/iab/util/Purchase;
     goto/16 :goto_2
 .end method
 
 .method public launchPurchaseFlow(Landroid/app/Activity;Ljava/lang/String;ILcom/bitrhymes/iab/util/IabHelper$OnIabPurchaseFinishedListener;)V
     .locals 6
-    .parameter "act"
-    .parameter "sku"
-    .parameter "requestCode"
-    .parameter "listener"
+    .param p1, "act"    # Landroid/app/Activity;
+    .param p2, "sku"    # Ljava/lang/String;
+    .param p3, "requestCode"    # I
+    .param p4, "listener"    # Lcom/bitrhymes/iab/util/IabHelper$OnIabPurchaseFinishedListener;
 
     .prologue
     .line 303
@@ -1857,11 +1855,11 @@
 
 .method public launchPurchaseFlow(Landroid/app/Activity;Ljava/lang/String;ILcom/bitrhymes/iab/util/IabHelper$OnIabPurchaseFinishedListener;Ljava/lang/String;)V
     .locals 7
-    .parameter "act"
-    .parameter "sku"
-    .parameter "requestCode"
-    .parameter "listener"
-    .parameter "extraData"
+    .param p1, "act"    # Landroid/app/Activity;
+    .param p2, "sku"    # Ljava/lang/String;
+    .param p3, "requestCode"    # I
+    .param p4, "listener"    # Lcom/bitrhymes/iab/util/IabHelper$OnIabPurchaseFinishedListener;
+    .param p5, "extraData"    # Ljava/lang/String;
 
     .prologue
     .line 308
@@ -1887,12 +1885,12 @@
 
 .method public launchPurchaseFlow(Landroid/app/Activity;Ljava/lang/String;Ljava/lang/String;ILcom/bitrhymes/iab/util/IabHelper$OnIabPurchaseFinishedListener;Ljava/lang/String;)V
     .locals 16
-    .parameter "act"
-    .parameter "sku"
-    .parameter "itemType"
-    .parameter "requestCode"
-    .parameter "listener"
-    .parameter "extraData"
+    .param p1, "act"    # Landroid/app/Activity;
+    .param p2, "sku"    # Ljava/lang/String;
+    .param p3, "itemType"    # Ljava/lang/String;
+    .param p4, "requestCode"    # I
+    .param p5, "listener"    # Lcom/bitrhymes/iab/util/IabHelper$OnIabPurchaseFinishedListener;
+    .param p6, "extraData"    # Ljava/lang/String;
 
     .prologue
     .line 341
@@ -2000,7 +1998,7 @@
     invoke-direct {v13, v3, v4}, Lcom/bitrhymes/iab/util/IabResult;-><init>(ILjava/lang/String;)V
 
     .line 350
-    .local v13, r:Lcom/bitrhymes/iab/util/IabResult;
+    .local v13, "r":Lcom/bitrhymes/iab/util/IabResult;
     if-eqz p5, :cond_0
 
     const/4 v3, 0x0
@@ -2014,7 +2012,7 @@
     invoke-interface {v0, v1, v2}, Lcom/bitrhymes/iab/util/IabHelper$OnIabPurchaseFinishedListener;->onIabPurchaseFinished(Lcom/bitrhymes/iab/util/IabResult;Lcom/bitrhymes/iab/util/Purchase;)V
 
     .line 391
-    .end local v13           #r:Lcom/bitrhymes/iab/util/IabResult;
+    .end local v13    # "r":Lcom/bitrhymes/iab/util/IabResult;
     :cond_0
     :goto_0
     return-void
@@ -2090,7 +2088,7 @@
     move-result-object v10
 
     .line 357
-    .local v10, buyIntentBundle:Landroid/os/Bundle;
+    .local v10, "buyIntentBundle":Landroid/os/Bundle;
     move-object/from16 v0, p0
 
     move-object v1, v10
@@ -2100,7 +2098,7 @@
     move-result v14
 
     .line 358
-    .local v14, response:I
+    .local v14, "response":I
     if-eqz v14, :cond_2
 
     .line 359
@@ -2139,7 +2137,7 @@
     invoke-direct {v15, v14, v3}, Lcom/bitrhymes/iab/util/IabResult;-><init>(ILjava/lang/String;)V
 
     .line 363
-    .local v15, result:Lcom/bitrhymes/iab/util/IabResult;
+    .local v15, "result":Lcom/bitrhymes/iab/util/IabResult;
     if-eqz p5, :cond_0
 
     const/4 v3, 0x0
@@ -2158,16 +2156,16 @@
     goto :goto_0
 
     .line 377
-    .end local v10           #buyIntentBundle:Landroid/os/Bundle;
-    .end local v14           #response:I
-    .end local v15           #result:Lcom/bitrhymes/iab/util/IabResult;
+    .end local v10    # "buyIntentBundle":Landroid/os/Bundle;
+    .end local v14    # "response":I
+    .end local v15    # "result":Lcom/bitrhymes/iab/util/IabResult;
     :catch_0
     move-exception v3
 
     move-object v11, v3
 
     .line 378
-    .local v11, e:Landroid/content/IntentSender$SendIntentException;
+    .local v11, "e":Landroid/content/IntentSender$SendIntentException;
     new-instance v3, Ljava/lang/StringBuilder;
 
     const-string v4, "SendIntentException while launching purchase flow for sku "
@@ -2205,7 +2203,7 @@
     invoke-direct {v15, v3, v4}, Lcom/bitrhymes/iab/util/IabResult;-><init>(ILjava/lang/String;)V
 
     .line 382
-    .restart local v15       #result:Lcom/bitrhymes/iab/util/IabResult;
+    .restart local v15    # "result":Lcom/bitrhymes/iab/util/IabResult;
     if-eqz p5, :cond_0
 
     const/4 v3, 0x0
@@ -2221,10 +2219,10 @@
     goto/16 :goto_0
 
     .line 367
-    .end local v11           #e:Landroid/content/IntentSender$SendIntentException;
-    .end local v15           #result:Lcom/bitrhymes/iab/util/IabResult;
-    .restart local v10       #buyIntentBundle:Landroid/os/Bundle;
-    .restart local v14       #response:I
+    .end local v11    # "e":Landroid/content/IntentSender$SendIntentException;
+    .end local v15    # "result":Lcom/bitrhymes/iab/util/IabResult;
+    .restart local v10    # "buyIntentBundle":Landroid/os/Bundle;
+    .restart local v14    # "response":I
     :cond_2
     :try_start_1
     const-string v3, "BUY_INTENT"
@@ -2236,7 +2234,7 @@
     check-cast v12, Landroid/app/PendingIntent;
 
     .line 368
-    .local v12, pendingIntent:Landroid/app/PendingIntent;
+    .local v12, "pendingIntent":Landroid/app/PendingIntent;
     new-instance v3, Ljava/lang/StringBuilder;
 
     const-string v4, "Launching buy intent for "
@@ -2351,16 +2349,16 @@
     goto/16 :goto_0
 
     .line 384
-    .end local v10           #buyIntentBundle:Landroid/os/Bundle;
-    .end local v12           #pendingIntent:Landroid/app/PendingIntent;
-    .end local v14           #response:I
+    .end local v10    # "buyIntentBundle":Landroid/os/Bundle;
+    .end local v12    # "pendingIntent":Landroid/app/PendingIntent;
+    .end local v14    # "response":I
     :catch_1
     move-exception v3
 
     move-object v11, v3
 
     .line 385
-    .local v11, e:Landroid/os/RemoteException;
+    .local v11, "e":Landroid/os/RemoteException;
     new-instance v3, Ljava/lang/StringBuilder;
 
     const-string v4, "RemoteException while launching purchase flow for sku "
@@ -2398,7 +2396,7 @@
     invoke-direct {v15, v3, v4}, Lcom/bitrhymes/iab/util/IabResult;-><init>(ILjava/lang/String;)V
 
     .line 389
-    .restart local v15       #result:Lcom/bitrhymes/iab/util/IabResult;
+    .restart local v15    # "result":Lcom/bitrhymes/iab/util/IabResult;
     if-eqz p5, :cond_0
 
     const/4 v3, 0x0
@@ -2416,10 +2414,10 @@
 
 .method public launchSubscriptionPurchaseFlow(Landroid/app/Activity;Ljava/lang/String;ILcom/bitrhymes/iab/util/IabHelper$OnIabPurchaseFinishedListener;)V
     .locals 6
-    .parameter "act"
-    .parameter "sku"
-    .parameter "requestCode"
-    .parameter "listener"
+    .param p1, "act"    # Landroid/app/Activity;
+    .param p2, "sku"    # Ljava/lang/String;
+    .param p3, "requestCode"    # I
+    .param p4, "listener"    # Lcom/bitrhymes/iab/util/IabHelper$OnIabPurchaseFinishedListener;
 
     .prologue
     .line 313
@@ -2443,11 +2441,11 @@
 
 .method public launchSubscriptionPurchaseFlow(Landroid/app/Activity;Ljava/lang/String;ILcom/bitrhymes/iab/util/IabHelper$OnIabPurchaseFinishedListener;Ljava/lang/String;)V
     .locals 7
-    .parameter "act"
-    .parameter "sku"
-    .parameter "requestCode"
-    .parameter "listener"
-    .parameter "extraData"
+    .param p1, "act"    # Landroid/app/Activity;
+    .param p2, "sku"    # Ljava/lang/String;
+    .param p3, "requestCode"    # I
+    .param p4, "listener"    # Lcom/bitrhymes/iab/util/IabHelper$OnIabPurchaseFinishedListener;
+    .param p5, "extraData"    # Ljava/lang/String;
 
     .prologue
     .line 318
@@ -2473,7 +2471,7 @@
 
 .method logDebug(Ljava/lang/String;)V
     .locals 1
-    .parameter "msg"
+    .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
     .line 941
@@ -2492,7 +2490,7 @@
 
 .method logError(Ljava/lang/String;)V
     .locals 3
-    .parameter "msg"
+    .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
     .line 945
@@ -2520,7 +2518,7 @@
 
 .method logWarn(Ljava/lang/String;)V
     .locals 3
-    .parameter "msg"
+    .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
     .line 949
@@ -2548,8 +2546,7 @@
 
 .method public queryInventory(ZLjava/util/List;)Lcom/bitrhymes/iab/util/Inventory;
     .locals 1
-    .parameter "querySkuDetails"
-    .parameter
+    .param p1, "querySkuDetails"    # Z
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(Z",
@@ -2569,7 +2566,7 @@
 
     .prologue
     .line 495
-    .local p2, moreSkus:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
+    .local p2, "moreSkus":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, p2, v0}, Lcom/bitrhymes/iab/util/IabHelper;->queryInventory(ZLjava/util/List;Ljava/util/List;)Lcom/bitrhymes/iab/util/Inventory;
@@ -2581,9 +2578,7 @@
 
 .method public queryInventory(ZLjava/util/List;Ljava/util/List;)Lcom/bitrhymes/iab/util/Inventory;
     .locals 6
-    .parameter "querySkuDetails"
-    .parameter
-    .parameter
+    .param p1, "querySkuDetails"    # Z
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(Z",
@@ -2606,8 +2601,8 @@
     .end annotation
 
     .prologue
-    .local p2, moreItemSkus:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
-    .local p3, moreSubsSkus:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
+    .local p2, "moreItemSkus":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
+    .local p3, "moreSubsSkus":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     const-string v3, "subs"
 
     const-string v3, "inapp"
@@ -2624,7 +2619,7 @@
     invoke-direct {v1}, Lcom/bitrhymes/iab/util/Inventory;-><init>()V
 
     .line 516
-    .local v1, inv:Lcom/bitrhymes/iab/util/Inventory;
+    .local v1, "inv":Lcom/bitrhymes/iab/util/Inventory;
     const-string v3, "inapp"
 
     invoke-virtual {p0, v1, v3}, Lcom/bitrhymes/iab/util/IabHelper;->queryPurchases(Lcom/bitrhymes/iab/util/Inventory;Ljava/lang/String;)I
@@ -2632,7 +2627,7 @@
     move-result v2
 
     .line 517
-    .local v2, r:I
+    .local v2, "r":I
     if-eqz v2, :cond_0
 
     .line 518
@@ -2648,15 +2643,15 @@
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_1
 
     .line 545
-    .end local v1           #inv:Lcom/bitrhymes/iab/util/Inventory;
-    .end local v2           #r:I
+    .end local v1    # "inv":Lcom/bitrhymes/iab/util/Inventory;
+    .end local v2    # "r":I
     :catch_0
     move-exception v3
 
     move-object v0, v3
 
     .line 546
-    .local v0, e:Landroid/os/RemoteException;
+    .local v0, "e":Landroid/os/RemoteException;
     new-instance v3, Lcom/bitrhymes/iab/util/IabException;
 
     const/16 v4, -0x3e9
@@ -2668,9 +2663,9 @@
     throw v3
 
     .line 521
-    .end local v0           #e:Landroid/os/RemoteException;
-    .restart local v1       #inv:Lcom/bitrhymes/iab/util/Inventory;
-    .restart local v2       #r:I
+    .end local v0    # "e":Landroid/os/RemoteException;
+    .restart local v1    # "inv":Lcom/bitrhymes/iab/util/Inventory;
+    .restart local v2    # "r":I
     :cond_0
     if-eqz p1, :cond_1
 
@@ -2698,15 +2693,15 @@
     .catch Lorg/json/JSONException; {:try_start_1 .. :try_end_1} :catch_1
 
     .line 548
-    .end local v1           #inv:Lcom/bitrhymes/iab/util/Inventory;
-    .end local v2           #r:I
+    .end local v1    # "inv":Lcom/bitrhymes/iab/util/Inventory;
+    .end local v2    # "r":I
     :catch_1
     move-exception v3
 
     move-object v0, v3
 
     .line 549
-    .local v0, e:Lorg/json/JSONException;
+    .local v0, "e":Lorg/json/JSONException;
     new-instance v3, Lcom/bitrhymes/iab/util/IabException;
 
     const/16 v4, -0x3ea
@@ -2718,9 +2713,9 @@
     throw v3
 
     .line 529
-    .end local v0           #e:Lorg/json/JSONException;
-    .restart local v1       #inv:Lcom/bitrhymes/iab/util/Inventory;
-    .restart local v2       #r:I
+    .end local v0    # "e":Lorg/json/JSONException;
+    .restart local v1    # "inv":Lcom/bitrhymes/iab/util/Inventory;
+    .restart local v2    # "r":I
     :cond_1
     :try_start_2
     iget-boolean v3, p0, Lcom/bitrhymes/iab/util/IabHelper;->mSubscriptionsSupported:Z
@@ -2779,7 +2774,7 @@
 
 .method public queryInventoryAsync(Lcom/bitrhymes/iab/util/IabHelper$QueryInventoryFinishedListener;)V
     .locals 2
-    .parameter "listener"
+    .param p1, "listener"    # Lcom/bitrhymes/iab/util/IabHelper$QueryInventoryFinishedListener;
 
     .prologue
     .line 608
@@ -2795,8 +2790,8 @@
 
 .method public queryInventoryAsync(ZLcom/bitrhymes/iab/util/IabHelper$QueryInventoryFinishedListener;)V
     .locals 1
-    .parameter "querySkuDetails"
-    .parameter "listener"
+    .param p1, "querySkuDetails"    # Z
+    .param p2, "listener"    # Lcom/bitrhymes/iab/util/IabHelper$QueryInventoryFinishedListener;
 
     .prologue
     .line 612
@@ -2810,9 +2805,8 @@
 
 .method public queryInventoryAsync(ZLjava/util/List;Lcom/bitrhymes/iab/util/IabHelper$QueryInventoryFinishedListener;)V
     .locals 7
-    .parameter "querySkuDetails"
-    .parameter
-    .parameter "listener"
+    .param p1, "querySkuDetails"    # Z
+    .param p3, "listener"    # Lcom/bitrhymes/iab/util/IabHelper$QueryInventoryFinishedListener;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(Z",
@@ -2827,13 +2821,13 @@
 
     .prologue
     .line 580
-    .local p2, moreSkus:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
+    .local p2, "moreSkus":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     new-instance v4, Landroid/os/Handler;
 
     invoke-direct {v4}, Landroid/os/Handler;-><init>()V
 
     .line 581
-    .local v4, handler:Landroid/os/Handler;
+    .local v4, "handler":Landroid/os/Handler;
     const-string v0, "queryInventory"
 
     invoke-virtual {p0, v0}, Lcom/bitrhymes/iab/util/IabHelper;->checkSetupDone(Ljava/lang/String;)V
@@ -2869,8 +2863,8 @@
 
 .method queryPurchases(Lcom/bitrhymes/iab/util/Inventory;Ljava/lang/String;)I
     .locals 20
-    .parameter "inv"
-    .parameter "itemType"
+    .param p1, "inv"    # Lcom/bitrhymes/iab/util/Inventory;
+    .param p2, "itemType"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lorg/json/JSONException;,
@@ -2939,11 +2933,11 @@
     const/16 v16, 0x0
 
     .line 804
-    .local v16, verificationFailed:Z
+    .local v16, "verificationFailed":Z
     const/4 v5, 0x0
 
     .line 807
-    .local v5, continueToken:Ljava/lang/String;
+    .local v5, "continueToken":Ljava/lang/String;
     :cond_0
     new-instance v17, Ljava/lang/StringBuilder;
 
@@ -3003,7 +2997,7 @@
     move-result-object v7
 
     .line 811
-    .local v7, ownedItems:Landroid/os/Bundle;
+    .local v7, "ownedItems":Landroid/os/Bundle;
     move-object/from16 v0, p0
 
     move-object v1, v7
@@ -3013,7 +3007,7 @@
     move-result v12
 
     .line 812
-    .local v12, response:I
+    .local v12, "response":I
     new-instance v17, Ljava/lang/StringBuilder;
 
     const-string v18, "Owned items response: "
@@ -3141,7 +3135,7 @@
     move-result-object v8
 
     .line 827
-    .local v8, ownedSkus:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
+    .local v8, "ownedSkus":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     const-string v17, "INAPP_PURCHASE_DATA_LIST"
 
     .line 826
@@ -3154,7 +3148,7 @@
     move-result-object v11
 
     .line 829
-    .local v11, purchaseDataList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
+    .local v11, "purchaseDataList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     const-string v17, "INAPP_DATA_SIGNATURE_LIST"
 
     .line 828
@@ -3167,10 +3161,10 @@
     move-result-object v14
 
     .line 831
-    .local v14, signatureList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
+    .local v14, "signatureList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     const/4 v6, 0x0
 
-    .local v6, i:I
+    .local v6, "i":I
     :goto_1
     invoke-virtual {v11}, Ljava/util/ArrayList;->size()I
 
@@ -3241,7 +3235,7 @@
     check-cast v10, Ljava/lang/String;
 
     .line 833
-    .local v10, purchaseData:Ljava/lang/String;
+    .local v10, "purchaseData":Ljava/lang/String;
     invoke-virtual {v14, v6}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v13
@@ -3249,7 +3243,7 @@
     check-cast v13, Ljava/lang/String;
 
     .line 834
-    .local v13, signature:Ljava/lang/String;
+    .local v13, "signature":Ljava/lang/String;
     invoke-virtual {v8, v6}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v15
@@ -3257,7 +3251,7 @@
     check-cast v15, Ljava/lang/String;
 
     .line 835
-    .local v15, sku:Ljava/lang/String;
+    .local v15, "sku":Ljava/lang/String;
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/bitrhymes/iab/util/IabHelper;->mSignatureBase64:Ljava/lang/String;
@@ -3315,7 +3309,7 @@
     invoke-direct {v0, v1, v2, v3}, Lcom/bitrhymes/iab/util/Purchase;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 839
-    .local v9, purchase:Lcom/bitrhymes/iab/util/Purchase;
+    .local v9, "purchase":Lcom/bitrhymes/iab/util/Purchase;
     invoke-virtual {v9}, Lcom/bitrhymes/iab/util/Purchase;->getToken()Ljava/lang/String;
 
     move-result-object v17
@@ -3369,7 +3363,7 @@
     invoke-virtual {v0, v1}, Lcom/bitrhymes/iab/util/Inventory;->addPurchase(Lcom/bitrhymes/iab/util/Purchase;)V
 
     .line 831
-    .end local v9           #purchase:Lcom/bitrhymes/iab/util/Purchase;
+    .end local v9    # "purchase":Lcom/bitrhymes/iab/util/Purchase;
     :goto_2
     add-int/lit8 v6, v6, 0x1
 
@@ -3441,9 +3435,9 @@
     goto :goto_2
 
     .line 859
-    .end local v10           #purchaseData:Ljava/lang/String;
-    .end local v13           #signature:Ljava/lang/String;
-    .end local v15           #sku:Ljava/lang/String;
+    .end local v10    # "purchaseData":Ljava/lang/String;
+    .end local v13    # "signature":Ljava/lang/String;
+    .end local v15    # "sku":Ljava/lang/String;
     :cond_7
     const/16 v17, 0x0
 
@@ -3452,9 +3446,8 @@
 
 .method querySkuDetails(Ljava/lang/String;Lcom/bitrhymes/iab/util/Inventory;Ljava/util/List;)I
     .locals 12
-    .parameter "itemType"
-    .parameter "inv"
-    .parameter
+    .param p1, "itemType"    # Ljava/lang/String;
+    .param p2, "inv"    # Lcom/bitrhymes/iab/util/Inventory;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -3475,7 +3468,7 @@
     .end annotation
 
     .prologue
-    .local p3, moreSkus:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
+    .local p3, "moreSkus":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     const/4 v10, 0x0
 
     const-string v11, "DETAILS_LIST"
@@ -3491,7 +3484,7 @@
     invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
 
     .line 866
-    .local v5, skuList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
+    .local v5, "skuList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     invoke-virtual {p2, p1}, Lcom/bitrhymes/iab/util/Inventory;->getAllOwnedSkus(Ljava/lang/String;)Ljava/util/List;
 
     move-result-object v7
@@ -3529,7 +3522,7 @@
     invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
 
     .line 875
-    .local v1, querySkus:Landroid/os/Bundle;
+    .local v1, "querySkus":Landroid/os/Bundle;
     const-string v7, "ITEM_ID_LIST"
 
     invoke-virtual {v1, v7, v5}, Landroid/os/Bundle;->putStringArrayList(Ljava/lang/String;Ljava/util/ArrayList;)V
@@ -3550,7 +3543,7 @@
     move-result-object v4
 
     .line 879
-    .local v4, skuDetails:Landroid/os/Bundle;
+    .local v4, "skuDetails":Landroid/os/Bundle;
     const-string v7, "DETAILS_LIST"
 
     invoke-virtual {v4, v11}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
@@ -3565,7 +3558,7 @@
     move-result v2
 
     .line 881
-    .local v2, response:I
+    .local v2, "response":I
     if-eqz v2, :cond_2
 
     .line 882
@@ -3606,7 +3599,7 @@
     goto :goto_0
 
     .line 892
-    .end local v2           #response:I
+    .end local v2    # "response":I
     :cond_3
     const-string v7, "DETAILS_LIST"
 
@@ -3616,7 +3609,7 @@
     move-result-object v3
 
     .line 894
-    .local v3, responseList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
+    .local v3, "responseList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     invoke-virtual {v3}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v7
@@ -3642,13 +3635,13 @@
     check-cast v6, Ljava/lang/String;
 
     .line 895
-    .local v6, thisResponse:Ljava/lang/String;
+    .local v6, "thisResponse":Ljava/lang/String;
     new-instance v0, Lcom/bitrhymes/iab/util/SkuDetails;
 
     invoke-direct {v0, p1, v6}, Lcom/bitrhymes/iab/util/SkuDetails;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 896
-    .local v0, d:Lcom/bitrhymes/iab/util/SkuDetails;
+    .local v0, "d":Lcom/bitrhymes/iab/util/SkuDetails;
     new-instance v8, Ljava/lang/StringBuilder;
 
     const-string v9, "Got sku details: "
@@ -3673,7 +3666,7 @@
 
 .method public startSetup(Lcom/bitrhymes/iab/util/IabHelper$OnIabSetupFinishedListener;)V
     .locals 4
-    .parameter "listener"
+    .param p1, "listener"    # Lcom/bitrhymes/iab/util/IabHelper$OnIabSetupFinishedListener;
 
     .prologue
     .line 185
@@ -3710,7 +3703,7 @@
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
     .line 244
-    .local v0, serviceIntent:Landroid/content/Intent;
+    .local v0, "serviceIntent":Landroid/content/Intent;
     iget-object v1, p0, Lcom/bitrhymes/iab/util/IabHelper;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;

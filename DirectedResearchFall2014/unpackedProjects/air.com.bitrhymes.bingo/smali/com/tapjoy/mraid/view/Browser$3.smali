@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/tapjoy/mraid/view/Browser;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 168
@@ -39,7 +38,7 @@
 # virtual methods
 .method public onClick(Landroid/view/View;)V
     .locals 3
-    .parameter "arg0"
+    .param p1, "arg0"    # Landroid/view/View;
 
     .prologue
     .line 172
@@ -54,7 +53,7 @@
     check-cast v0, Landroid/webkit/WebView;
 
     .line 173
-    .local v0, wv:Landroid/webkit/WebView;
+    .local v0, "wv":Landroid/webkit/WebView;
     invoke-virtual {v0}, Landroid/webkit/WebView;->reload()V
 
     .line 174

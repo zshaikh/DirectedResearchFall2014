@@ -21,8 +21,8 @@
 # virtual methods
 .method public call(Lcom/adobe/fre/FREContext;[Lcom/adobe/fre/FREObject;)Lcom/adobe/fre/FREObject;
     .locals 8
-    .parameter "arg0"
-    .parameter "arg1"
+    .param p1, "arg0"    # Lcom/adobe/fre/FREContext;
+    .param p2, "arg1"    # [Lcom/adobe/fre/FREObject;
 
     .prologue
     const/4 v2, 0x0
@@ -41,7 +41,7 @@
     move-result-object v0
 
     .line 15
-    .local v0, acm:Landroid/accounts/AccountManager;
+    .local v0, "acm":Landroid/accounts/AccountManager;
     const-string v1, "com.google"
 
     invoke-virtual {p1}, Lcom/adobe/fre/FREContext;->getActivity()Landroid/app/Activity;

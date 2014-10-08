@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/facebook/AppEventsLogger$FlushReason;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1
@@ -45,7 +44,7 @@
     .line 772
     iget-object v0, p0, Lcom/facebook/AppEventsLogger$4;->val$reason:Lcom/facebook/AppEventsLogger$FlushReason;
 
-    #calls: Lcom/facebook/AppEventsLogger;->flushAndWait(Lcom/facebook/AppEventsLogger$FlushReason;)V
+    # invokes: Lcom/facebook/AppEventsLogger;->flushAndWait(Lcom/facebook/AppEventsLogger$FlushReason;)V
     invoke-static {v0}, Lcom/facebook/AppEventsLogger;->access$1(Lcom/facebook/AppEventsLogger$FlushReason;)V
 
     .line 773

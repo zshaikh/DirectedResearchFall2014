@@ -30,8 +30,8 @@
 # direct methods
 .method public constructor <init>(Lcom/flurry/org/codehaus/jackson/io/IOContext;Ljava/io/OutputStream;)V
     .locals 3
-    .parameter "ctxt"
-    .parameter "out"
+    .param p1, "ctxt"    # Lcom/flurry/org/codehaus/jackson/io/IOContext;
+    .param p2, "out"    # Ljava/io/OutputStream;
 
     .prologue
     const/4 v2, 0x0
@@ -75,7 +75,7 @@
 
 .method private convertSurrogate(I)I
     .locals 4
-    .parameter "secondPart"
+    .param p1, "secondPart"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -89,7 +89,7 @@
     iget v0, p0, Lcom/flurry/org/codehaus/jackson/io/UTF8Writer;->_surrogate:I
 
     .line 362
-    .local v0, firstPart:I
+    .local v0, "firstPart":I
     const/4 v1, 0x0
 
     iput v1, p0, Lcom/flurry/org/codehaus/jackson/io/UTF8Writer;->_surrogate:I
@@ -153,7 +153,7 @@
 
     .line 368
     :cond_1
-    const/high16 v1, 0x1
+    const/high16 v1, 0x10000
 
     const v2, 0xd800
 
@@ -172,7 +172,7 @@
 
 .method private throwIllegal(I)V
     .locals 5
-    .parameter "code"
+    .param p1, "code"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -347,7 +347,7 @@
 # virtual methods
 .method public append(C)Ljava/io/Writer;
     .locals 0
-    .parameter "c"
+    .param p1, "c"    # C
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -364,7 +364,7 @@
 
 .method public bridge synthetic append(C)Ljava/lang/Appendable;
     .locals 1
-    .parameter "x0"
+    .param p1, "x0"    # C
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -420,14 +420,14 @@
     iget-object v2, p0, Lcom/flurry/org/codehaus/jackson/io/UTF8Writer;->_out:Ljava/io/OutputStream;
 
     .line 63
-    .local v2, out:Ljava/io/OutputStream;
+    .local v2, "out":Ljava/io/OutputStream;
     iput-object v7, p0, Lcom/flurry/org/codehaus/jackson/io/UTF8Writer;->_out:Ljava/io/OutputStream;
 
     .line 65
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/io/UTF8Writer;->_outBuffer:[B
 
     .line 66
-    .local v0, buf:[B
+    .local v0, "buf":[B
     if-eqz v0, :cond_1
 
     .line 67
@@ -446,7 +446,7 @@
     iget v1, p0, Lcom/flurry/org/codehaus/jackson/io/UTF8Writer;->_surrogate:I
 
     .line 77
-    .local v1, code:I
+    .local v1, "code":I
     iput v6, p0, Lcom/flurry/org/codehaus/jackson/io/UTF8Writer;->_surrogate:I
 
     .line 78
@@ -456,9 +456,9 @@
     invoke-direct {p0, v1}, Lcom/flurry/org/codehaus/jackson/io/UTF8Writer;->throwIllegal(I)V
 
     .line 82
-    .end local v0           #buf:[B
-    .end local v1           #code:I
-    .end local v2           #out:Ljava/io/OutputStream;
+    .end local v0    # "buf":[B
+    .end local v1    # "code":I
+    .end local v2    # "out":Ljava/io/OutputStream;
     :cond_2
     return-void
 .end method
@@ -509,7 +509,7 @@
 
 .method public write(I)V
     .locals 6
-    .parameter "c"
+    .param p1, "c"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -601,7 +601,7 @@
     iget v0, p0, Lcom/flurry/org/codehaus/jackson/io/UTF8Writer;->_outPtr:I
 
     .line 227
-    .local v0, ptr:I
+    .local v0, "ptr":I
     const/16 v2, 0x800
 
     if-ge p1, v2, :cond_5
@@ -611,8 +611,8 @@
 
     add-int/lit8 v1, v0, 0x1
 
-    .end local v0           #ptr:I
-    .local v1, ptr:I
+    .end local v0    # "ptr":I
+    .local v1, "ptr":I
     shr-int/lit8 v3, p1, 0x6
 
     or-int/lit16 v3, v3, 0xc0
@@ -626,8 +626,8 @@
 
     add-int/lit8 v0, v1, 0x1
 
-    .end local v1           #ptr:I
-    .restart local v0       #ptr:I
+    .end local v1    # "ptr":I
+    .restart local v0    # "ptr":I
     and-int/lit8 v3, p1, 0x3f
 
     or-int/lit16 v3, v3, 0x80
@@ -653,8 +653,8 @@
 
     add-int/lit8 v1, v0, 0x1
 
-    .end local v0           #ptr:I
-    .restart local v1       #ptr:I
+    .end local v0    # "ptr":I
+    .restart local v1    # "ptr":I
     shr-int/lit8 v3, p1, 0xc
 
     or-int/lit16 v3, v3, 0xe0
@@ -668,8 +668,8 @@
 
     add-int/lit8 v0, v1, 0x1
 
-    .end local v1           #ptr:I
-    .restart local v0       #ptr:I
+    .end local v1    # "ptr":I
+    .restart local v0    # "ptr":I
     shr-int/lit8 v3, p1, 0x6
 
     and-int/lit8 v3, v3, 0x3f
@@ -685,8 +685,8 @@
 
     add-int/lit8 v1, v0, 0x1
 
-    .end local v0           #ptr:I
-    .restart local v1       #ptr:I
+    .end local v0    # "ptr":I
+    .restart local v1    # "ptr":I
     and-int/lit8 v3, p1, 0x3f
 
     or-int/lit16 v3, v3, 0x80
@@ -697,8 +697,8 @@
 
     move v0, v1
 
-    .end local v1           #ptr:I
-    .restart local v0       #ptr:I
+    .end local v1    # "ptr":I
+    .restart local v0    # "ptr":I
     goto :goto_1
 
     .line 235
@@ -716,8 +716,8 @@
 
     add-int/lit8 v1, v0, 0x1
 
-    .end local v0           #ptr:I
-    .restart local v1       #ptr:I
+    .end local v0    # "ptr":I
+    .restart local v1    # "ptr":I
     shr-int/lit8 v3, p1, 0x12
 
     or-int/lit16 v3, v3, 0xf0
@@ -731,8 +731,8 @@
 
     add-int/lit8 v0, v1, 0x1
 
-    .end local v1           #ptr:I
-    .restart local v0       #ptr:I
+    .end local v1    # "ptr":I
+    .restart local v0    # "ptr":I
     shr-int/lit8 v3, p1, 0xc
 
     and-int/lit8 v3, v3, 0x3f
@@ -748,8 +748,8 @@
 
     add-int/lit8 v1, v0, 0x1
 
-    .end local v0           #ptr:I
-    .restart local v1       #ptr:I
+    .end local v0    # "ptr":I
+    .restart local v1    # "ptr":I
     shr-int/lit8 v3, p1, 0x6
 
     and-int/lit8 v3, v3, 0x3f
@@ -765,8 +765,8 @@
 
     add-int/lit8 v0, v1, 0x1
 
-    .end local v1           #ptr:I
-    .restart local v0       #ptr:I
+    .end local v1    # "ptr":I
+    .restart local v0    # "ptr":I
     and-int/lit8 v3, p1, 0x3f
 
     or-int/lit16 v3, v3, 0x80
@@ -780,7 +780,7 @@
 
 .method public write(Ljava/lang/String;)V
     .locals 2
-    .parameter "str"
+    .param p1, "str"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -803,9 +803,9 @@
 
 .method public write(Ljava/lang/String;II)V
     .locals 12
-    .parameter "str"
-    .parameter "off"
-    .parameter "len"
+    .param p1, "str"    # Ljava/lang/String;
+    .param p2, "off"    # I
+    .param p3, "len"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -846,14 +846,14 @@
     .line 265
     add-int/lit8 v3, p2, 0x1
 
-    .end local p2
-    .local v3, off:I
+    .end local p2    # "off":I
+    .local v3, "off":I
     invoke-virtual {p1, p2}, Ljava/lang/String;->charAt(I)C
 
     move-result v8
 
     .line 266
-    .local v8, second:C
+    .local v8, "second":C
     add-int/lit8 p3, p3, -0x1
 
     .line 267
@@ -866,29 +866,29 @@
     move p2, v3
 
     .line 271
-    .end local v3           #off:I
-    .end local v8           #second:C
-    .restart local p2
+    .end local v3    # "off":I
+    .end local v8    # "second":C
+    .restart local p2    # "off":I
     :cond_2
     iget v6, p0, Lcom/flurry/org/codehaus/jackson/io/UTF8Writer;->_outPtr:I
 
     .line 272
-    .local v6, outPtr:I
+    .local v6, "outPtr":I
     iget-object v4, p0, Lcom/flurry/org/codehaus/jackson/io/UTF8Writer;->_outBuffer:[B
 
     .line 273
-    .local v4, outBuf:[B
+    .local v4, "outBuf":[B
     iget v5, p0, Lcom/flurry/org/codehaus/jackson/io/UTF8Writer;->_outBufferEnd:I
 
     .line 276
-    .local v5, outBufLast:I
+    .local v5, "outBufLast":I
     add-int/2addr p3, p2
 
     move v3, p2
 
     .line 279
-    .end local p2
-    .restart local v3       #off:I
+    .end local p2    # "off":I
+    .restart local v3    # "off":I
     :goto_1
     if-ge v3, p3, :cond_e
 
@@ -909,21 +909,21 @@
     :cond_3
     add-int/lit8 p2, v3, 0x1
 
-    .end local v3           #off:I
-    .restart local p2
+    .end local v3    # "off":I
+    .restart local p2    # "off":I
     invoke-virtual {p1, v3}, Ljava/lang/String;->charAt(I)C
 
     move-result v0
 
     .line 290
-    .local v0, c:I
+    .local v0, "c":I
     if-ge v0, v11, :cond_d
 
     .line 291
     add-int/lit8 v7, v6, 0x1
 
-    .end local v6           #outPtr:I
-    .local v7, outPtr:I
+    .end local v6    # "outPtr":I
+    .local v7, "outPtr":I
     int-to-byte v9, v0
 
     aput-byte v9, v4, v6
@@ -932,11 +932,11 @@
     sub-int v1, p3, p2
 
     .line 294
-    .local v1, maxInCount:I
+    .local v1, "maxInCount":I
     sub-int v2, v5, v7
 
     .line 296
-    .local v2, maxOutCount:I
+    .local v2, "maxOutCount":I
     if-le v1, v2, :cond_4
 
     .line 297
@@ -949,26 +949,26 @@
     move v3, p2
 
     .line 302
-    .end local p2
-    .restart local v3       #off:I
+    .end local p2    # "off":I
+    .restart local v3    # "off":I
     :goto_2
     if-lt v3, v1, :cond_5
 
     move v6, v7
 
     .line 303
-    .end local v7           #outPtr:I
-    .restart local v6       #outPtr:I
+    .end local v7    # "outPtr":I
+    .restart local v6    # "outPtr":I
     goto :goto_1
 
     .line 305
-    .end local v6           #outPtr:I
-    .restart local v7       #outPtr:I
+    .end local v6    # "outPtr":I
+    .restart local v7    # "outPtr":I
     :cond_5
     add-int/lit8 p2, v3, 0x1
 
-    .end local v3           #off:I
-    .restart local p2
+    .end local v3    # "off":I
+    .restart local p2    # "off":I
     invoke-virtual {p1, v3}, Ljava/lang/String;->charAt(I)C
 
     move-result v0
@@ -979,10 +979,10 @@
     move v3, p2
 
     .line 314
-    .end local v1           #maxInCount:I
-    .end local v2           #maxOutCount:I
-    .end local p2
-    .restart local v3       #off:I
+    .end local v1    # "maxInCount":I
+    .end local v2    # "maxOutCount":I
+    .end local p2    # "off":I
+    .restart local v3    # "off":I
     :goto_3
     const/16 v9, 0x800
 
@@ -991,8 +991,8 @@
     .line 315
     add-int/lit8 v6, v7, 0x1
 
-    .end local v7           #outPtr:I
-    .restart local v6       #outPtr:I
+    .end local v7    # "outPtr":I
+    .restart local v6    # "outPtr":I
     shr-int/lit8 v9, v0, 0x6
 
     or-int/lit16 v9, v9, 0xc0
@@ -1004,8 +1004,8 @@
     .line 316
     add-int/lit8 v7, v6, 0x1
 
-    .end local v6           #outPtr:I
-    .restart local v7       #outPtr:I
+    .end local v6    # "outPtr":I
+    .restart local v7    # "outPtr":I
     and-int/lit8 v9, v0, 0x3f
 
     or-int/lit16 v9, v9, 0x80
@@ -1016,49 +1016,49 @@
 
     move v6, v7
 
-    .end local v7           #outPtr:I
-    .restart local v6       #outPtr:I
+    .end local v7    # "outPtr":I
+    .restart local v6    # "outPtr":I
     move p2, v3
 
-    .end local v3           #off:I
-    .restart local p2
+    .end local v3    # "off":I
+    .restart local p2    # "off":I
     :goto_4
     move v3, p2
 
     .line 345
-    .end local p2
-    .restart local v3       #off:I
+    .end local p2    # "off":I
+    .restart local v3    # "off":I
     goto :goto_1
 
     .line 309
-    .end local v3           #off:I
-    .end local v6           #outPtr:I
-    .restart local v1       #maxInCount:I
-    .restart local v2       #maxOutCount:I
-    .restart local v7       #outPtr:I
-    .restart local p2
+    .end local v3    # "off":I
+    .end local v6    # "outPtr":I
+    .restart local v1    # "maxInCount":I
+    .restart local v2    # "maxOutCount":I
+    .restart local v7    # "outPtr":I
+    .restart local p2    # "off":I
     :cond_6
     add-int/lit8 v6, v7, 0x1
 
-    .end local v7           #outPtr:I
-    .restart local v6       #outPtr:I
+    .end local v7    # "outPtr":I
+    .restart local v6    # "outPtr":I
     int-to-byte v9, v0
 
     aput-byte v9, v4, v7
 
     move v7, v6
 
-    .end local v6           #outPtr:I
-    .restart local v7       #outPtr:I
+    .end local v6    # "outPtr":I
+    .restart local v7    # "outPtr":I
     move v3, p2
 
-    .end local p2
-    .restart local v3       #off:I
+    .end local p2    # "off":I
+    .restart local v3    # "off":I
     goto :goto_2
 
     .line 319
-    .end local v1           #maxInCount:I
-    .end local v2           #maxOutCount:I
+    .end local v1    # "maxInCount":I
+    .end local v2    # "maxOutCount":I
     :cond_7
     const v9, 0xd800
 
@@ -1072,8 +1072,8 @@
     :cond_8
     add-int/lit8 v6, v7, 0x1
 
-    .end local v7           #outPtr:I
-    .restart local v6       #outPtr:I
+    .end local v7    # "outPtr":I
+    .restart local v6    # "outPtr":I
     shr-int/lit8 v9, v0, 0xc
 
     or-int/lit16 v9, v9, 0xe0
@@ -1085,8 +1085,8 @@
     .line 321
     add-int/lit8 v7, v6, 0x1
 
-    .end local v6           #outPtr:I
-    .restart local v7       #outPtr:I
+    .end local v6    # "outPtr":I
+    .restart local v7    # "outPtr":I
     shr-int/lit8 v9, v0, 0x6
 
     and-int/lit8 v9, v9, 0x3f
@@ -1100,8 +1100,8 @@
     .line 322
     add-int/lit8 v6, v7, 0x1
 
-    .end local v7           #outPtr:I
-    .restart local v6       #outPtr:I
+    .end local v7    # "outPtr":I
+    .restart local v6    # "outPtr":I
     and-int/lit8 v9, v0, 0x3f
 
     or-int/lit16 v9, v9, 0x80
@@ -1113,8 +1113,8 @@
     goto :goto_1
 
     .line 326
-    .end local v6           #outPtr:I
-    .restart local v7       #outPtr:I
+    .end local v6    # "outPtr":I
+    .restart local v7    # "outPtr":I
     :cond_9
     const v9, 0xdbff
 
@@ -1135,30 +1135,30 @@
 
     move v6, v7
 
-    .end local v7           #outPtr:I
-    .restart local v6       #outPtr:I
+    .end local v7    # "outPtr":I
+    .restart local v6    # "outPtr":I
     move p2, v3
 
     .line 346
-    .end local v0           #c:I
-    .end local v3           #off:I
-    .restart local p2
+    .end local v0    # "c":I
+    .end local v3    # "off":I
+    .restart local p2    # "off":I
     :goto_5
     iput v6, p0, Lcom/flurry/org/codehaus/jackson/io/UTF8Writer;->_outPtr:I
 
     goto/16 :goto_0
 
     .line 335
-    .end local v6           #outPtr:I
-    .end local p2
-    .restart local v0       #c:I
-    .restart local v3       #off:I
-    .restart local v7       #outPtr:I
+    .end local v6    # "outPtr":I
+    .end local p2    # "off":I
+    .restart local v0    # "c":I
+    .restart local v3    # "off":I
+    .restart local v7    # "outPtr":I
     :cond_b
     add-int/lit8 p2, v3, 0x1
 
-    .end local v3           #off:I
-    .restart local p2
+    .end local v3    # "off":I
+    .restart local p2    # "off":I
     invoke-virtual {p1, v3}, Ljava/lang/String;->charAt(I)C
 
     move-result v9
@@ -1182,8 +1182,8 @@
     :cond_c
     add-int/lit8 v6, v7, 0x1
 
-    .end local v7           #outPtr:I
-    .restart local v6       #outPtr:I
+    .end local v7    # "outPtr":I
+    .restart local v6    # "outPtr":I
     shr-int/lit8 v9, v0, 0x12
 
     or-int/lit16 v9, v9, 0xf0
@@ -1195,8 +1195,8 @@
     .line 341
     add-int/lit8 v7, v6, 0x1
 
-    .end local v6           #outPtr:I
-    .restart local v7       #outPtr:I
+    .end local v6    # "outPtr":I
+    .restart local v7    # "outPtr":I
     shr-int/lit8 v9, v0, 0xc
 
     and-int/lit8 v9, v9, 0x3f
@@ -1210,8 +1210,8 @@
     .line 342
     add-int/lit8 v6, v7, 0x1
 
-    .end local v7           #outPtr:I
-    .restart local v6       #outPtr:I
+    .end local v7    # "outPtr":I
+    .restart local v6    # "outPtr":I
     shr-int/lit8 v9, v0, 0x6
 
     and-int/lit8 v9, v9, 0x3f
@@ -1225,8 +1225,8 @@
     .line 343
     add-int/lit8 v7, v6, 0x1
 
-    .end local v6           #outPtr:I
-    .restart local v7       #outPtr:I
+    .end local v6    # "outPtr":I
+    .restart local v7    # "outPtr":I
     and-int/lit8 v9, v0, 0x3f
 
     or-int/lit16 v9, v9, 0x80
@@ -1237,35 +1237,35 @@
 
     move v6, v7
 
-    .end local v7           #outPtr:I
-    .restart local v6       #outPtr:I
+    .end local v7    # "outPtr":I
+    .restart local v6    # "outPtr":I
     goto/16 :goto_4
 
     :cond_d
     move v7, v6
 
-    .end local v6           #outPtr:I
-    .restart local v7       #outPtr:I
+    .end local v6    # "outPtr":I
+    .restart local v7    # "outPtr":I
     move v3, p2
 
-    .end local p2
-    .restart local v3       #off:I
+    .end local p2    # "off":I
+    .restart local v3    # "off":I
     goto/16 :goto_3
 
-    .end local v0           #c:I
-    .end local v7           #outPtr:I
-    .restart local v6       #outPtr:I
+    .end local v0    # "c":I
+    .end local v7    # "outPtr":I
+    .restart local v6    # "outPtr":I
     :cond_e
     move p2, v3
 
-    .end local v3           #off:I
-    .restart local p2
+    .end local v3    # "off":I
+    .restart local p2    # "off":I
     goto :goto_5
 .end method
 
 .method public write([C)V
     .locals 2
-    .parameter "cbuf"
+    .param p1, "cbuf"    # [C
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -1286,9 +1286,9 @@
 
 .method public write([CII)V
     .locals 12
-    .parameter "cbuf"
-    .parameter "off"
-    .parameter "len"
+    .param p1, "cbuf"    # [C
+    .param p2, "off"    # I
+    .param p3, "len"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -1327,12 +1327,12 @@
     .line 117
     add-int/lit8 v3, p2, 0x1
 
-    .end local p2
-    .local v3, off:I
+    .end local p2    # "off":I
+    .local v3, "off":I
     aget-char v8, p1, p2
 
     .line 118
-    .local v8, second:C
+    .local v8, "second":C
     add-int/lit8 p3, p3, -0x1
 
     .line 119
@@ -1345,29 +1345,29 @@
     move p2, v3
 
     .line 123
-    .end local v3           #off:I
-    .end local v8           #second:C
-    .restart local p2
+    .end local v3    # "off":I
+    .end local v8    # "second":C
+    .restart local p2    # "off":I
     :cond_2
     iget v6, p0, Lcom/flurry/org/codehaus/jackson/io/UTF8Writer;->_outPtr:I
 
     .line 124
-    .local v6, outPtr:I
+    .local v6, "outPtr":I
     iget-object v4, p0, Lcom/flurry/org/codehaus/jackson/io/UTF8Writer;->_outBuffer:[B
 
     .line 125
-    .local v4, outBuf:[B
+    .local v4, "outBuf":[B
     iget v5, p0, Lcom/flurry/org/codehaus/jackson/io/UTF8Writer;->_outBufferEnd:I
 
     .line 128
-    .local v5, outBufLast:I
+    .local v5, "outBufLast":I
     add-int/2addr p3, p2
 
     move v3, p2
 
     .line 131
-    .end local p2
-    .restart local v3       #off:I
+    .end local p2    # "off":I
+    .restart local v3    # "off":I
     :goto_1
     if-ge v3, p3, :cond_e
 
@@ -1388,19 +1388,19 @@
     :cond_3
     add-int/lit8 p2, v3, 0x1
 
-    .end local v3           #off:I
-    .restart local p2
+    .end local v3    # "off":I
+    .restart local p2    # "off":I
     aget-char v0, p1, v3
 
     .line 142
-    .local v0, c:I
+    .local v0, "c":I
     if-ge v0, v11, :cond_d
 
     .line 143
     add-int/lit8 v7, v6, 0x1
 
-    .end local v6           #outPtr:I
-    .local v7, outPtr:I
+    .end local v6    # "outPtr":I
+    .local v7, "outPtr":I
     int-to-byte v9, v0
 
     aput-byte v9, v4, v6
@@ -1409,11 +1409,11 @@
     sub-int v1, p3, p2
 
     .line 146
-    .local v1, maxInCount:I
+    .local v1, "maxInCount":I
     sub-int v2, v5, v7
 
     .line 148
-    .local v2, maxOutCount:I
+    .local v2, "maxOutCount":I
     if-le v1, v2, :cond_4
 
     .line 149
@@ -1426,26 +1426,26 @@
     move v3, p2
 
     .line 154
-    .end local p2
-    .restart local v3       #off:I
+    .end local p2    # "off":I
+    .restart local v3    # "off":I
     :goto_2
     if-lt v3, v1, :cond_5
 
     move v6, v7
 
     .line 155
-    .end local v7           #outPtr:I
-    .restart local v6       #outPtr:I
+    .end local v7    # "outPtr":I
+    .restart local v6    # "outPtr":I
     goto :goto_1
 
     .line 157
-    .end local v6           #outPtr:I
-    .restart local v7       #outPtr:I
+    .end local v6    # "outPtr":I
+    .restart local v7    # "outPtr":I
     :cond_5
     add-int/lit8 p2, v3, 0x1
 
-    .end local v3           #off:I
-    .restart local p2
+    .end local v3    # "off":I
+    .restart local p2    # "off":I
     aget-char v0, p1, v3
 
     .line 158
@@ -1454,10 +1454,10 @@
     move v3, p2
 
     .line 166
-    .end local v1           #maxInCount:I
-    .end local v2           #maxOutCount:I
-    .end local p2
-    .restart local v3       #off:I
+    .end local v1    # "maxInCount":I
+    .end local v2    # "maxOutCount":I
+    .end local p2    # "off":I
+    .restart local v3    # "off":I
     :goto_3
     const/16 v9, 0x800
 
@@ -1466,8 +1466,8 @@
     .line 167
     add-int/lit8 v6, v7, 0x1
 
-    .end local v7           #outPtr:I
-    .restart local v6       #outPtr:I
+    .end local v7    # "outPtr":I
+    .restart local v6    # "outPtr":I
     shr-int/lit8 v9, v0, 0x6
 
     or-int/lit16 v9, v9, 0xc0
@@ -1479,8 +1479,8 @@
     .line 168
     add-int/lit8 v7, v6, 0x1
 
-    .end local v6           #outPtr:I
-    .restart local v7       #outPtr:I
+    .end local v6    # "outPtr":I
+    .restart local v7    # "outPtr":I
     and-int/lit8 v9, v0, 0x3f
 
     or-int/lit16 v9, v9, 0x80
@@ -1491,49 +1491,49 @@
 
     move v6, v7
 
-    .end local v7           #outPtr:I
-    .restart local v6       #outPtr:I
+    .end local v7    # "outPtr":I
+    .restart local v6    # "outPtr":I
     move p2, v3
 
-    .end local v3           #off:I
-    .restart local p2
+    .end local v3    # "off":I
+    .restart local p2    # "off":I
     :goto_4
     move v3, p2
 
     .line 197
-    .end local p2
-    .restart local v3       #off:I
+    .end local p2    # "off":I
+    .restart local v3    # "off":I
     goto :goto_1
 
     .line 161
-    .end local v3           #off:I
-    .end local v6           #outPtr:I
-    .restart local v1       #maxInCount:I
-    .restart local v2       #maxOutCount:I
-    .restart local v7       #outPtr:I
-    .restart local p2
+    .end local v3    # "off":I
+    .end local v6    # "outPtr":I
+    .restart local v1    # "maxInCount":I
+    .restart local v2    # "maxOutCount":I
+    .restart local v7    # "outPtr":I
+    .restart local p2    # "off":I
     :cond_6
     add-int/lit8 v6, v7, 0x1
 
-    .end local v7           #outPtr:I
-    .restart local v6       #outPtr:I
+    .end local v7    # "outPtr":I
+    .restart local v6    # "outPtr":I
     int-to-byte v9, v0
 
     aput-byte v9, v4, v7
 
     move v7, v6
 
-    .end local v6           #outPtr:I
-    .restart local v7       #outPtr:I
+    .end local v6    # "outPtr":I
+    .restart local v7    # "outPtr":I
     move v3, p2
 
-    .end local p2
-    .restart local v3       #off:I
+    .end local p2    # "off":I
+    .restart local v3    # "off":I
     goto :goto_2
 
     .line 171
-    .end local v1           #maxInCount:I
-    .end local v2           #maxOutCount:I
+    .end local v1    # "maxInCount":I
+    .end local v2    # "maxOutCount":I
     :cond_7
     const v9, 0xd800
 
@@ -1547,8 +1547,8 @@
     :cond_8
     add-int/lit8 v6, v7, 0x1
 
-    .end local v7           #outPtr:I
-    .restart local v6       #outPtr:I
+    .end local v7    # "outPtr":I
+    .restart local v6    # "outPtr":I
     shr-int/lit8 v9, v0, 0xc
 
     or-int/lit16 v9, v9, 0xe0
@@ -1560,8 +1560,8 @@
     .line 173
     add-int/lit8 v7, v6, 0x1
 
-    .end local v6           #outPtr:I
-    .restart local v7       #outPtr:I
+    .end local v6    # "outPtr":I
+    .restart local v7    # "outPtr":I
     shr-int/lit8 v9, v0, 0x6
 
     and-int/lit8 v9, v9, 0x3f
@@ -1575,8 +1575,8 @@
     .line 174
     add-int/lit8 v6, v7, 0x1
 
-    .end local v7           #outPtr:I
-    .restart local v6       #outPtr:I
+    .end local v7    # "outPtr":I
+    .restart local v6    # "outPtr":I
     and-int/lit8 v9, v0, 0x3f
 
     or-int/lit16 v9, v9, 0x80
@@ -1588,8 +1588,8 @@
     goto :goto_1
 
     .line 178
-    .end local v6           #outPtr:I
-    .restart local v7       #outPtr:I
+    .end local v6    # "outPtr":I
+    .restart local v7    # "outPtr":I
     :cond_9
     const v9, 0xdbff
 
@@ -1610,30 +1610,30 @@
 
     move v6, v7
 
-    .end local v7           #outPtr:I
-    .restart local v6       #outPtr:I
+    .end local v7    # "outPtr":I
+    .restart local v6    # "outPtr":I
     move p2, v3
 
     .line 198
-    .end local v0           #c:I
-    .end local v3           #off:I
-    .restart local p2
+    .end local v0    # "c":I
+    .end local v3    # "off":I
+    .restart local p2    # "off":I
     :goto_5
     iput v6, p0, Lcom/flurry/org/codehaus/jackson/io/UTF8Writer;->_outPtr:I
 
     goto/16 :goto_0
 
     .line 187
-    .end local v6           #outPtr:I
-    .end local p2
-    .restart local v0       #c:I
-    .restart local v3       #off:I
-    .restart local v7       #outPtr:I
+    .end local v6    # "outPtr":I
+    .end local p2    # "off":I
+    .restart local v0    # "c":I
+    .restart local v3    # "off":I
+    .restart local v7    # "outPtr":I
     :cond_b
     add-int/lit8 p2, v3, 0x1
 
-    .end local v3           #off:I
-    .restart local p2
+    .end local v3    # "off":I
+    .restart local p2    # "off":I
     aget-char v9, p1, v3
 
     invoke-direct {p0, v9}, Lcom/flurry/org/codehaus/jackson/io/UTF8Writer;->convertSurrogate(I)I
@@ -1655,8 +1655,8 @@
     :cond_c
     add-int/lit8 v6, v7, 0x1
 
-    .end local v7           #outPtr:I
-    .restart local v6       #outPtr:I
+    .end local v7    # "outPtr":I
+    .restart local v6    # "outPtr":I
     shr-int/lit8 v9, v0, 0x12
 
     or-int/lit16 v9, v9, 0xf0
@@ -1668,8 +1668,8 @@
     .line 193
     add-int/lit8 v7, v6, 0x1
 
-    .end local v6           #outPtr:I
-    .restart local v7       #outPtr:I
+    .end local v6    # "outPtr":I
+    .restart local v7    # "outPtr":I
     shr-int/lit8 v9, v0, 0xc
 
     and-int/lit8 v9, v9, 0x3f
@@ -1683,8 +1683,8 @@
     .line 194
     add-int/lit8 v6, v7, 0x1
 
-    .end local v7           #outPtr:I
-    .restart local v6       #outPtr:I
+    .end local v7    # "outPtr":I
+    .restart local v6    # "outPtr":I
     shr-int/lit8 v9, v0, 0x6
 
     and-int/lit8 v9, v9, 0x3f
@@ -1698,8 +1698,8 @@
     .line 195
     add-int/lit8 v7, v6, 0x1
 
-    .end local v6           #outPtr:I
-    .restart local v7       #outPtr:I
+    .end local v6    # "outPtr":I
+    .restart local v7    # "outPtr":I
     and-int/lit8 v9, v0, 0x3f
 
     or-int/lit16 v9, v9, 0x80
@@ -1710,28 +1710,28 @@
 
     move v6, v7
 
-    .end local v7           #outPtr:I
-    .restart local v6       #outPtr:I
+    .end local v7    # "outPtr":I
+    .restart local v6    # "outPtr":I
     goto/16 :goto_4
 
     :cond_d
     move v7, v6
 
-    .end local v6           #outPtr:I
-    .restart local v7       #outPtr:I
+    .end local v6    # "outPtr":I
+    .restart local v7    # "outPtr":I
     move v3, p2
 
-    .end local p2
-    .restart local v3       #off:I
+    .end local p2    # "off":I
+    .restart local v3    # "off":I
     goto/16 :goto_3
 
-    .end local v0           #c:I
-    .end local v7           #outPtr:I
-    .restart local v6       #outPtr:I
+    .end local v0    # "c":I
+    .end local v7    # "outPtr":I
+    .restart local v6    # "outPtr":I
     :cond_e
     move p2, v3
 
-    .end local v3           #off:I
-    .restart local p2
+    .end local v3    # "off":I
+    .restart local p2    # "off":I
     goto :goto_5
 .end method

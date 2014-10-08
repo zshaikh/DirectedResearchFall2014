@@ -21,7 +21,6 @@
 # direct methods
 .method private constructor <init>(Lcom/fusepowered/a1/webapp/ApplifierImpactWebView;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 287
@@ -34,8 +33,6 @@
 
 .method synthetic constructor <init>(Lcom/fusepowered/a1/webapp/ApplifierImpactWebView;Lcom/fusepowered/a1/webapp/ApplifierImpactWebView$ApplifierViewChromeClient;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 287
@@ -48,20 +45,20 @@
 # virtual methods
 .method public onConsoleMessage(Ljava/lang/String;ILjava/lang/String;)V
     .locals 6
-    .parameter "message"
-    .parameter "lineNumber"
-    .parameter "sourceID"
+    .param p1, "message"    # Ljava/lang/String;
+    .param p2, "lineNumber"    # I
+    .param p3, "sourceID"    # Ljava/lang/String;
 
     .prologue
     .line 289
     move-object v1, p3
 
     .line 290
-    .local v1, sourceFile:Ljava/lang/String;
+    .local v1, "sourceFile":Ljava/lang/String;
     const/4 v2, 0x0
 
     .line 293
-    .local v2, tmp:Ljava/io/File;
+    .local v2, "tmp":Ljava/io/File;
     :try_start_0
     new-instance v3, Ljava/io/File;
 
@@ -69,13 +66,13 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .end local v2           #tmp:Ljava/io/File;
-    .local v3, tmp:Ljava/io/File;
+    .end local v2    # "tmp":Ljava/io/File;
+    .local v3, "tmp":Ljava/io/File;
     move-object v2, v3
 
     .line 299
-    .end local v3           #tmp:Ljava/io/File;
-    .restart local v2       #tmp:Ljava/io/File;
+    .end local v3    # "tmp":Ljava/io/File;
+    .restart local v2    # "tmp":Ljava/io/File;
     :goto_0
     if-eqz v2, :cond_0
 
@@ -138,7 +135,7 @@
     move-object v0, v4
 
     .line 296
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     new-instance v4, Ljava/lang/StringBuilder;
 
     const-string v5, "Could not handle sourceId: "
@@ -164,9 +161,9 @@
 
 .method public onReachedMaxAppCacheSize(JJLandroid/webkit/WebStorage$QuotaUpdater;)V
     .locals 2
-    .parameter "spaceNeeded"
-    .parameter "totalUsedQuota"
-    .parameter "quotaUpdater"
+    .param p1, "spaceNeeded"    # J
+    .param p3, "totalUsedQuota"    # J
+    .param p5, "quotaUpdater"    # Landroid/webkit/WebStorage$QuotaUpdater;
 
     .prologue
     .line 306

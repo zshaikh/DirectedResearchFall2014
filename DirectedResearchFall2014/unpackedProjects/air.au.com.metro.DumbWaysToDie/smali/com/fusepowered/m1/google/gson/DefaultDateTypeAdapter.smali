@@ -3,8 +3,8 @@
 .source "DefaultDateTypeAdapter.java"
 
 # interfaces
-.implements Lcom/fusepowered/m1/google/gson/JsonSerializer;
 .implements Lcom/fusepowered/m1/google/gson/JsonDeserializer;
+.implements Lcom/fusepowered/m1/google/gson/JsonSerializer;
 
 
 # annotations
@@ -57,7 +57,7 @@
 
 .method constructor <init>(I)V
     .locals 2
-    .parameter "style"
+    .param p1, "style"    # I
 
     .prologue
     .line 53
@@ -79,8 +79,8 @@
 
 .method public constructor <init>(II)V
     .locals 2
-    .parameter "dateStyle"
-    .parameter "timeStyle"
+    .param p1, "dateStyle"    # I
+    .param p2, "timeStyle"    # I
 
     .prologue
     .line 57
@@ -102,7 +102,7 @@
 
 .method constructor <init>(Ljava/lang/String;)V
     .locals 2
-    .parameter "datePattern"
+    .param p1, "datePattern"    # Ljava/lang/String;
 
     .prologue
     .line 49
@@ -124,8 +124,8 @@
 
 .method constructor <init>(Ljava/text/DateFormat;Ljava/text/DateFormat;)V
     .locals 3
-    .parameter "enUsFormat"
-    .parameter "localFormat"
+    .param p1, "enUsFormat"    # Ljava/text/DateFormat;
+    .param p2, "localFormat"    # Ljava/text/DateFormat;
 
     .prologue
     .line 61
@@ -165,7 +165,7 @@
 
 .method private deserializeToDate(Lcom/fusepowered/m1/google/gson/JsonElement;)Ljava/util/Date;
     .locals 4
-    .parameter "json"
+    .param p1, "json"    # Lcom/fusepowered/m1/google/gson/JsonElement;
 
     .prologue
     .line 95
@@ -183,8 +183,8 @@
 
     invoke-virtual {v2, v3}, Ljava/text/DateFormat;->parse(Ljava/lang/String;)Ljava/util/Date;
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/text/ParseException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result-object v2
 
@@ -213,8 +213,8 @@
 
     invoke-virtual {v2, v3}, Ljava/text/DateFormat;->parse(Ljava/lang/String;)Ljava/util/Date;
     :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
     .catch Ljava/text/ParseException; {:try_start_2 .. :try_end_2} :catch_1
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
     move-result-object v2
 
@@ -241,8 +241,8 @@
 
     invoke-virtual {v2, v3}, Ljava/text/DateFormat;->parse(Ljava/lang/String;)Ljava/util/Date;
     :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_0
     .catch Ljava/text/ParseException; {:try_start_4 .. :try_end_4} :catch_2
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
     move-result-object v2
 
@@ -260,7 +260,7 @@
     move-object v0, v2
 
     .line 107
-    .local v0, e:Ljava/text/ParseException;
+    .local v0, "e":Ljava/text/ParseException;
     new-instance v2, Lcom/fusepowered/m1/google/gson/JsonSyntaxException;
 
     invoke-virtual {p1}, Lcom/fusepowered/m1/google/gson/JsonElement;->getAsString()Ljava/lang/String;
@@ -272,7 +272,7 @@
     throw v2
 
     .line 109
-    .end local v0           #e:Ljava/text/ParseException;
+    .end local v0    # "e":Ljava/text/ParseException;
     :catchall_0
     move-exception v2
 
@@ -287,9 +287,9 @@
 # virtual methods
 .method public bridge synthetic deserialize(Lcom/fusepowered/m1/google/gson/JsonElement;Ljava/lang/reflect/Type;Lcom/fusepowered/m1/google/gson/JsonDeserializationContext;)Ljava/lang/Object;
     .locals 1
-    .parameter "x0"
-    .parameter "x1"
-    .parameter "x2"
+    .param p1, "x0"    # Lcom/fusepowered/m1/google/gson/JsonElement;
+    .param p2, "x1"    # Ljava/lang/reflect/Type;
+    .param p3, "x2"    # Lcom/fusepowered/m1/google/gson/JsonDeserializationContext;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lcom/fusepowered/m1/google/gson/JsonParseException;
@@ -307,9 +307,9 @@
 
 .method public deserialize(Lcom/fusepowered/m1/google/gson/JsonElement;Ljava/lang/reflect/Type;Lcom/fusepowered/m1/google/gson/JsonDeserializationContext;)Ljava/util/Date;
     .locals 4
-    .parameter "json"
-    .parameter "typeOfT"
-    .parameter "context"
+    .param p1, "json"    # Lcom/fusepowered/m1/google/gson/JsonElement;
+    .param p2, "typeOfT"    # Ljava/lang/reflect/Type;
+    .param p3, "context"    # Lcom/fusepowered/m1/google/gson/JsonDeserializationContext;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lcom/fusepowered/m1/google/gson/JsonParseException;
@@ -338,7 +338,7 @@
     move-result-object v0
 
     .line 83
-    .local v0, date:Ljava/util/Date;
+    .local v0, "date":Ljava/util/Date;
     const-class v1, Ljava/util/Date;
 
     if-ne p2, v1, :cond_1
@@ -420,15 +420,15 @@
 
 .method public bridge synthetic serialize(Ljava/lang/Object;Ljava/lang/reflect/Type;Lcom/fusepowered/m1/google/gson/JsonSerializationContext;)Lcom/fusepowered/m1/google/gson/JsonElement;
     .locals 1
-    .parameter "x0"
-    .parameter "x1"
-    .parameter "x2"
+    .param p1, "x0"    # Ljava/lang/Object;
+    .param p2, "x1"    # Ljava/lang/reflect/Type;
+    .param p3, "x2"    # Lcom/fusepowered/m1/google/gson/JsonSerializationContext;
 
     .prologue
     .line 35
     check-cast p1, Ljava/util/Date;
 
-    .end local p1
+    .end local p1    # "x0":Ljava/lang/Object;
     invoke-virtual {p0, p1, p2, p3}, Lcom/fusepowered/m1/google/gson/DefaultDateTypeAdapter;->serialize(Ljava/util/Date;Ljava/lang/reflect/Type;Lcom/fusepowered/m1/google/gson/JsonSerializationContext;)Lcom/fusepowered/m1/google/gson/JsonElement;
 
     move-result-object v0
@@ -438,9 +438,9 @@
 
 .method public serialize(Ljava/util/Date;Ljava/lang/reflect/Type;Lcom/fusepowered/m1/google/gson/JsonSerializationContext;)Lcom/fusepowered/m1/google/gson/JsonElement;
     .locals 3
-    .parameter "src"
-    .parameter "typeOfSrc"
-    .parameter "context"
+    .param p1, "src"    # Ljava/util/Date;
+    .param p2, "typeOfSrc"    # Ljava/lang/reflect/Type;
+    .param p3, "context"    # Lcom/fusepowered/m1/google/gson/JsonSerializationContext;
 
     .prologue
     .line 71
@@ -457,7 +457,7 @@
     move-result-object v0
 
     .line 73
-    .local v0, dateFormatAsString:Ljava/lang/String;
+    .local v0, "dateFormatAsString":Ljava/lang/String;
     new-instance v2, Lcom/fusepowered/m1/google/gson/JsonPrimitive;
 
     invoke-direct {v2, v0}, Lcom/fusepowered/m1/google/gson/JsonPrimitive;-><init>(Ljava/lang/String;)V
@@ -467,7 +467,7 @@
     return-object v2
 
     .line 74
-    .end local v0           #dateFormatAsString:Ljava/lang/String;
+    .end local v0    # "dateFormatAsString":Ljava/lang/String;
     :catchall_0
     move-exception v2
 
@@ -488,7 +488,7 @@
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     .line 115
-    .local v0, sb:Ljava/lang/StringBuilder;
+    .local v0, "sb":Ljava/lang/StringBuilder;
     const-class v1, Lcom/fusepowered/m1/google/gson/DefaultDateTypeAdapter;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;

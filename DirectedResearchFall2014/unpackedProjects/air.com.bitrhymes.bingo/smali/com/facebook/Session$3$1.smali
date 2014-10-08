@@ -30,10 +30,6 @@
 # direct methods
 .method constructor <init>(Lcom/facebook/Session$3;Lcom/facebook/Session$StatusCallback;Lcom/facebook/SessionState;Ljava/lang/Exception;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 1
@@ -62,7 +58,7 @@
 
     iget-object v1, p0, Lcom/facebook/Session$3$1;->this$1:Lcom/facebook/Session$3;
 
-    #getter for: Lcom/facebook/Session$3;->this$0:Lcom/facebook/Session;
+    # getter for: Lcom/facebook/Session$3;->this$0:Lcom/facebook/Session;
     invoke-static {v1}, Lcom/facebook/Session$3;->access$0(Lcom/facebook/Session$3;)Lcom/facebook/Session;
 
     move-result-object v1

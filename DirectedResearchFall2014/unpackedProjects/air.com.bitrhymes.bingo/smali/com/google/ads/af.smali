@@ -22,7 +22,6 @@
 # direct methods
 .method public constructor <init>(Lcom/google/ads/internal/d;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 30

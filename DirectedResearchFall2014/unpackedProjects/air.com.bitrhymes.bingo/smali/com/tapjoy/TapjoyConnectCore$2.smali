@@ -40,13 +40,13 @@
     invoke-direct {v0}, Lcom/tapjoy/TapjoyURLConnection;-><init>()V
 
     .line 1814
-    .local v0, connection:Lcom/tapjoy/TapjoyURLConnection;
+    .local v0, "connection":Lcom/tapjoy/TapjoyURLConnection;
     invoke-static {}, Lcom/tapjoy/TapjoyConnectCore;->getOfflineLogs()Ljava/util/Map;
 
     move-result-object v4
 
     .line 1817
-    .local v4, requests:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;*>;"
+    .local v4, "requests":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;*>;"
     invoke-interface {v4}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object v6
@@ -55,8 +55,8 @@
 
     move-result-object v3
 
-    .end local p0
-    .local v3, i$:Ljava/util/Iterator;
+    .end local p0    # "this":Lcom/tapjoy/TapjoyConnectCore$2;
+    .local v3, "i$":Ljava/util/Iterator;
     :cond_0
     :goto_0
     invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
@@ -72,7 +72,7 @@
     check-cast v1, Ljava/util/Map$Entry;
 
     .line 1819
-    .local v1, entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;*>;"
+    .local v1, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;*>;"
     const-string v6, "TapjoyConnect"
 
     const-string v7, "sending offline log: "
@@ -119,7 +119,7 @@
     move-result-object v2
 
     .line 1822
-    .local v2, httpRequest:Ljava/lang/String;
+    .local v2, "httpRequest":Ljava/lang/String;
     const-string v6, ""
 
     invoke-virtual {v0, v2, v6}, Lcom/tapjoy/TapjoyURLConnection;->getResponseFromURL(Ljava/lang/String;Ljava/lang/String;)Lcom/tapjoy/TapjoyHttpURLResponse;
@@ -127,7 +127,7 @@
     move-result-object v5
 
     .line 1824
-    .local v5, response:Lcom/tapjoy/TapjoyHttpURLResponse;
+    .local v5, "response":Lcom/tapjoy/TapjoyHttpURLResponse;
     if-eqz v5, :cond_0
 
     .line 1827
@@ -149,9 +149,9 @@
     goto :goto_0
 
     .line 1834
-    .end local v1           #entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;*>;"
-    .end local v2           #httpRequest:Ljava/lang/String;
-    .end local v5           #response:Lcom/tapjoy/TapjoyHttpURLResponse;
+    .end local v1    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;*>;"
+    .end local v2    # "httpRequest":Ljava/lang/String;
+    .end local v5    # "response":Lcom/tapjoy/TapjoyHttpURLResponse;
     :cond_1
     return-void
 .end method

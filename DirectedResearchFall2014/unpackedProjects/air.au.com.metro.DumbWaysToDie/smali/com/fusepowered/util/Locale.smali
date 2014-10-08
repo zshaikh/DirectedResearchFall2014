@@ -12,8 +12,8 @@
 # direct methods
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
-    .parameter "title"
-    .parameter "description"
+    .param p1, "title"    # Ljava/lang/String;
+    .param p2, "description"    # Ljava/lang/String;
 
     .prologue
     .line 9
@@ -53,7 +53,7 @@
 
 .method public setDescription(Ljava/lang/String;)V
     .locals 0
-    .parameter "description"
+    .param p1, "description"    # Ljava/lang/String;
 
     .prologue
     .line 24
@@ -65,7 +65,7 @@
 
 .method public setTitle(Ljava/lang/String;)V
     .locals 0
-    .parameter "title"
+    .param p1, "title"    # Ljava/lang/String;
 
     .prologue
     .line 18
@@ -111,7 +111,7 @@
     move-result-object v0
 
     .line 32
-    .local v0, buf:Ljava/lang/StringBuilder;
+    .local v0, "buf":Ljava/lang/StringBuilder;
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1

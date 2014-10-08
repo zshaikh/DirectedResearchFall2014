@@ -3,8 +3,8 @@
 .source "$Gson$Types.java"
 
 # interfaces
-.implements Ljava/lang/reflect/WildcardType;
 .implements Ljava/io/Serializable;
+.implements Ljava/lang/reflect/WildcardType;
 
 
 # annotations
@@ -31,8 +31,8 @@
 # direct methods
 .method public constructor <init>([Ljava/lang/reflect/Type;[Ljava/lang/reflect/Type;)V
     .locals 5
-    .parameter "upperBounds"
-    .parameter "lowerBounds"
+    .param p1, "upperBounds"    # [Ljava/lang/reflect/Type;
+    .param p2, "lowerBounds"    # [Ljava/lang/reflect/Type;
 
     .prologue
     const/4 v3, 0x1
@@ -77,7 +77,7 @@
     .line 542
     aget-object v0, p2, v2
 
-    #calls: Lcom/fusepowered/m1/google/gson/internal/$Gson$Types;->checkNotPrimitive(Ljava/lang/reflect/Type;)V
+    # invokes: Lcom/fusepowered/m1/google/gson/internal/$Gson$Types;->checkNotPrimitive(Ljava/lang/reflect/Type;)V
     invoke-static {v0}, Lcom/fusepowered/m1/google/gson/internal/$Gson$Types;->access$000(Ljava/lang/reflect/Type;)V
 
     .line 543
@@ -137,7 +137,7 @@
     .line 549
     aget-object v0, p1, v2
 
-    #calls: Lcom/fusepowered/m1/google/gson/internal/$Gson$Types;->checkNotPrimitive(Ljava/lang/reflect/Type;)V
+    # invokes: Lcom/fusepowered/m1/google/gson/internal/$Gson$Types;->checkNotPrimitive(Ljava/lang/reflect/Type;)V
     invoke-static {v0}, Lcom/fusepowered/m1/google/gson/internal/$Gson$Types;->access$000(Ljava/lang/reflect/Type;)V
 
     .line 550
@@ -161,7 +161,7 @@
 # virtual methods
 .method public equals(Ljava/lang/Object;)Z
     .locals 1
-    .parameter "other"
+    .param p1, "other"    # Ljava/lang/Object;
 
     .prologue
     .line 566
@@ -171,7 +171,7 @@
 
     check-cast p1, Ljava/lang/reflect/WildcardType;
 
-    .end local p1
+    .end local p1    # "other":Ljava/lang/Object;
     invoke-static {p0, p1}, Lcom/fusepowered/m1/google/gson/internal/$Gson$Types;->equals(Ljava/lang/reflect/Type;Ljava/lang/reflect/Type;)Z
 
     move-result v0

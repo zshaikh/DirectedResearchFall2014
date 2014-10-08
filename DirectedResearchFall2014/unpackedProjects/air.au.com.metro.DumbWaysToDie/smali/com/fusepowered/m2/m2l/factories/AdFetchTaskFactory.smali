@@ -34,10 +34,10 @@
 
 .method public static create(Lcom/fusepowered/m2/m2l/TaskTracker;Lcom/fusepowered/m2/m2l/AdViewController;Ljava/lang/String;I)Lcom/fusepowered/m2/m2l/AdFetchTask;
     .locals 1
-    .parameter "taskTracker"
-    .parameter "adViewController"
-    .parameter "userAgent"
-    .parameter "timeoutMilliseconds"
+    .param p0, "taskTracker"    # Lcom/fusepowered/m2/m2l/TaskTracker;
+    .param p1, "adViewController"    # Lcom/fusepowered/m2/m2l/AdViewController;
+    .param p2, "userAgent"    # Ljava/lang/String;
+    .param p3, "timeoutMilliseconds"    # I
 
     .prologue
     .line 48
@@ -52,7 +52,7 @@
 
 .method public static setInstance(Lcom/fusepowered/m2/m2l/factories/AdFetchTaskFactory;)V
     .locals 0
-    .parameter "factory"
+    .param p0, "factory"    # Lcom/fusepowered/m2/m2l/factories/AdFetchTaskFactory;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -68,10 +68,10 @@
 # virtual methods
 .method protected internalCreate(Lcom/fusepowered/m2/m2l/TaskTracker;Lcom/fusepowered/m2/m2l/AdViewController;Ljava/lang/String;I)Lcom/fusepowered/m2/m2l/AdFetchTask;
     .locals 1
-    .parameter "taskTracker"
-    .parameter "adViewController"
-    .parameter "userAgent"
-    .parameter "timeoutMilliseconds"
+    .param p1, "taskTracker"    # Lcom/fusepowered/m2/m2l/TaskTracker;
+    .param p2, "adViewController"    # Lcom/fusepowered/m2/m2l/AdViewController;
+    .param p3, "userAgent"    # Ljava/lang/String;
+    .param p4, "timeoutMilliseconds"    # I
 
     .prologue
     .line 52

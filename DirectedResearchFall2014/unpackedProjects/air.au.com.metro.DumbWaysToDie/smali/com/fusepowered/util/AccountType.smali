@@ -208,9 +208,7 @@
 
 .method private constructor <init>(Ljava/lang/String;II)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter "accountNumber"
+    .param p3, "accountNumber"    # I
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I)V"
@@ -230,7 +228,7 @@
 
 .method public static getAccountTypeByNumber(I)Lcom/fusepowered/util/AccountType;
     .locals 1
-    .parameter "accountNumber"
+    .param p0, "accountNumber"    # I
 
     .prologue
     .line 30
@@ -315,7 +313,7 @@
 
 .method public static valueOf(Ljava/lang/String;)Lcom/fusepowered/util/AccountType;
     .locals 1
-    .parameter "name"
+    .param p0, "name"    # Ljava/lang/String;
 
     .prologue
     .line 3
@@ -325,7 +323,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "name":Ljava/lang/String;
     check-cast p0, Lcom/fusepowered/util/AccountType;
 
     return-object p0
@@ -361,7 +359,7 @@
 
 .method public setAccountNumber(I)V
     .locals 0
-    .parameter "accountNumber"
+    .param p1, "accountNumber"    # I
 
     .prologue
     .line 26

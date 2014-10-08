@@ -67,9 +67,6 @@
 
 .method private a(Ljava/lang/String;Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Object;
     .locals 3
-    .parameter
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -254,7 +251,6 @@
 
 .method static synthetic a(Lcom/google/ads/mediation/customevent/CustomEventAdapter;)Ljava/lang/String;
     .locals 1
-    .parameter
 
     .prologue
     .line 33
@@ -265,8 +261,6 @@
 
 .method private a(Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     .line 276
@@ -398,12 +392,12 @@
 
 .method public bridge synthetic requestBannerAd(Lcom/google/ads/mediation/MediationBannerListener;Landroid/app/Activity;Lcom/google/ads/mediation/MediationServerParameters;Lcom/google/ads/AdSize;Lcom/google/ads/mediation/MediationAdRequest;Lcom/google/ads/mediation/NetworkExtras;)V
     .locals 8
-    .parameter "x0"
-    .parameter "x1"
-    .parameter "x2"
-    .parameter "x3"
-    .parameter "x4"
-    .parameter "x5"
+    .param p1, "x0"    # Lcom/google/ads/mediation/MediationBannerListener;
+    .param p2, "x1"    # Landroid/app/Activity;
+    .param p3, "x2"    # Lcom/google/ads/mediation/MediationServerParameters;
+    .param p4, "x3"    # Lcom/google/ads/AdSize;
+    .param p5, "x4"    # Lcom/google/ads/mediation/MediationAdRequest;
+    .param p6, "x5"    # Lcom/google/ads/mediation/NetworkExtras;
 
     .prologue
     .line 33
@@ -436,12 +430,12 @@
 
 .method public requestBannerAd(Lcom/google/ads/mediation/MediationBannerListener;Landroid/app/Activity;Lcom/google/ads/mediation/customevent/CustomEventServerParameters;Lcom/google/ads/AdSize;Lcom/google/ads/mediation/MediationAdRequest;Lcom/google/ads/mediation/customevent/CustomEventExtras;)V
     .locals 8
-    .parameter "mediationListener"
-    .parameter "activity"
-    .parameter "serverParameters"
-    .parameter "adSize"
-    .parameter "mediationAdRequest"
-    .parameter "mediationExtras"
+    .param p1, "mediationListener"    # Lcom/google/ads/mediation/MediationBannerListener;
+    .param p2, "activity"    # Landroid/app/Activity;
+    .param p3, "serverParameters"    # Lcom/google/ads/mediation/customevent/CustomEventServerParameters;
+    .param p4, "adSize"    # Lcom/google/ads/AdSize;
+    .param p5, "mediationAdRequest"    # Lcom/google/ads/mediation/MediationAdRequest;
+    .param p6, "mediationExtras"    # Lcom/google/ads/mediation/customevent/CustomEventExtras;
 
     .prologue
     .line 110
@@ -561,11 +555,11 @@
 
 .method public bridge synthetic requestInterstitialAd(Lcom/google/ads/mediation/MediationInterstitialListener;Landroid/app/Activity;Lcom/google/ads/mediation/MediationServerParameters;Lcom/google/ads/mediation/MediationAdRequest;Lcom/google/ads/mediation/NetworkExtras;)V
     .locals 7
-    .parameter "x0"
-    .parameter "x1"
-    .parameter "x2"
-    .parameter "x3"
-    .parameter "x4"
+    .param p1, "x0"    # Lcom/google/ads/mediation/MediationInterstitialListener;
+    .param p2, "x1"    # Landroid/app/Activity;
+    .param p3, "x2"    # Lcom/google/ads/mediation/MediationServerParameters;
+    .param p4, "x3"    # Lcom/google/ads/mediation/MediationAdRequest;
+    .param p5, "x4"    # Lcom/google/ads/mediation/NetworkExtras;
 
     .prologue
     .line 33
@@ -596,11 +590,11 @@
 
 .method public requestInterstitialAd(Lcom/google/ads/mediation/MediationInterstitialListener;Landroid/app/Activity;Lcom/google/ads/mediation/customevent/CustomEventServerParameters;Lcom/google/ads/mediation/MediationAdRequest;Lcom/google/ads/mediation/customevent/CustomEventExtras;)V
     .locals 7
-    .parameter "mediationListener"
-    .parameter "activity"
-    .parameter "serverParameters"
-    .parameter "mediationAdRequest"
-    .parameter "mediationExtras"
+    .param p1, "mediationListener"    # Lcom/google/ads/mediation/MediationInterstitialListener;
+    .param p2, "activity"    # Landroid/app/Activity;
+    .param p3, "serverParameters"    # Lcom/google/ads/mediation/customevent/CustomEventServerParameters;
+    .param p4, "mediationAdRequest"    # Lcom/google/ads/mediation/MediationAdRequest;
+    .param p5, "mediationExtras"    # Lcom/google/ads/mediation/customevent/CustomEventExtras;
 
     .prologue
     .line 225

@@ -6,8 +6,7 @@
 # direct methods
 .method constructor <init>(Ljava/util/Map;Lcom/fusepowered/m2/m2l/MraidView;)V
     .locals 0
-    .parameter
-    .parameter "view"
+    .param p2, "view"    # Lcom/fusepowered/m2/m2l/MraidView;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -23,7 +22,7 @@
 
     .prologue
     .line 207
-    .local p1, params:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p1, "params":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-direct {p0, p1, p2}, Lcom/fusepowered/m2/m2l/MraidCommand;-><init>(Ljava/util/Map;Lcom/fusepowered/m2/m2l/MraidView;)V
 
     .line 208
@@ -44,7 +43,7 @@
     move-result-object v0
 
     .line 213
-    .local v0, url:Ljava/lang/String;
+    .local v0, "url":Ljava/lang/String;
     if-nez v0, :cond_0
 
     .line 214
@@ -75,7 +74,7 @@
 
 .method protected isCommandDependentOnUserClick(Lcom/fusepowered/m2/m2l/MraidView$PlacementType;)Z
     .locals 1
-    .parameter "placementType"
+    .param p1, "placementType"    # Lcom/fusepowered/m2/m2l/MraidView$PlacementType;
 
     .prologue
     .line 222

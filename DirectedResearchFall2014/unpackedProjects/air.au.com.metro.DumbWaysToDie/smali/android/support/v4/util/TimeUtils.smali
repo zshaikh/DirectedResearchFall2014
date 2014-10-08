@@ -51,10 +51,10 @@
 
 .method private static accumField(IIZI)I
     .locals 1
-    .parameter "amt"
-    .parameter "suffix"
-    .parameter "always"
-    .parameter "zeropad"
+    .param p0, "amt"    # I
+    .param p1, "suffix"    # I
+    .param p2, "always"    # Z
+    .param p3, "zeropad"    # I
 
     .prologue
     .line 39
@@ -115,9 +115,9 @@
 
 .method public static formatDuration(JJLjava/io/PrintWriter;)V
     .locals 3
-    .parameter "time"
-    .parameter "now"
-    .parameter "pw"
+    .param p0, "time"    # J
+    .param p2, "now"    # J
+    .param p4, "pw"    # Ljava/io/PrintWriter;
 
     .prologue
     .line 169
@@ -149,8 +149,8 @@
 
 .method public static formatDuration(JLjava/io/PrintWriter;)V
     .locals 1
-    .parameter "duration"
-    .parameter "pw"
+    .param p0, "duration"    # J
+    .param p2, "pw"    # Ljava/io/PrintWriter;
 
     .prologue
     .line 164
@@ -164,9 +164,9 @@
 
 .method public static formatDuration(JLjava/io/PrintWriter;I)V
     .locals 5
-    .parameter "duration"
-    .parameter "pw"
-    .parameter "fieldLen"
+    .param p0, "duration"    # J
+    .param p2, "pw"    # Ljava/io/PrintWriter;
+    .param p3, "fieldLen"    # I
 
     .prologue
     .line 156
@@ -181,7 +181,7 @@
     move-result v0
 
     .line 158
-    .local v0, len:I
+    .local v0, "len":I
     new-instance v2, Ljava/lang/String;
 
     sget-object v3, Landroid/support/v4/util/TimeUtils;->sFormatStr:[C
@@ -199,7 +199,7 @@
     return-void
 
     .line 159
-    .end local v0           #len:I
+    .end local v0    # "len":I
     :catchall_0
     move-exception v2
 
@@ -212,8 +212,8 @@
 
 .method public static formatDuration(JLjava/lang/StringBuilder;)V
     .locals 4
-    .parameter "duration"
-    .parameter "builder"
+    .param p0, "duration"    # J
+    .param p2, "builder"    # Ljava/lang/StringBuilder;
 
     .prologue
     .line 148
@@ -230,7 +230,7 @@
     move-result v0
 
     .line 150
-    .local v0, len:I
+    .local v0, "len":I
     sget-object v2, Landroid/support/v4/util/TimeUtils;->sFormatStr:[C
 
     const/4 v3, 0x0
@@ -244,7 +244,7 @@
     return-void
 
     .line 151
-    .end local v0           #len:I
+    .end local v0    # "len":I
     :catchall_0
     move-exception v2
 
@@ -257,8 +257,8 @@
 
 .method private static formatDurationLocked(JI)I
     .locals 18
-    .parameter "duration"
-    .parameter "fieldLen"
+    .param p0, "duration"    # J
+    .param p2, "fieldLen"    # I
 
     .prologue
     .line 76
@@ -286,7 +286,7 @@
     sget-object v4, Landroid/support/v4/util/TimeUtils;->sFormatStr:[C
 
     .line 82
-    .local v4, formatStr:[C
+    .local v4, "formatStr":[C
     const-wide/16 v5, 0x0
 
     cmp-long v5, p0, v5
@@ -297,11 +297,11 @@
     const/4 v7, 0x0
 
     .line 84
-    .local v7, pos:I
+    .local v7, "pos":I
     add-int/lit8 p2, p2, -0x1
 
     .line 85
-    .end local p0
+    .end local p0    # "duration":J
     :goto_0
     move v0, v7
 
@@ -330,8 +330,8 @@
     return p0
 
     .line 93
-    .end local v7           #pos:I
-    .restart local p0
+    .end local v7    # "pos":I
+    .restart local p0    # "duration":J
     :cond_2
     const-wide/16 v5, 0x0
 
@@ -342,12 +342,12 @@
     .line 94
     const/16 v5, 0x2b
 
-    .local v5, prefix:C
+    .local v5, "prefix":C
     move v8, v5
 
     .line 100
-    .end local v5           #prefix:C
-    .local v8, prefix:C
+    .end local v5    # "prefix":C
+    .local v8, "prefix":C
     :goto_2
     const-wide/16 v5, 0x3e8
 
@@ -356,12 +356,12 @@
     long-to-int v14, v5
 
     .line 101
-    .local v14, millis:I
+    .local v14, "millis":I
     const-wide/16 v5, 0x3e8
 
     div-long p0, p0, v5
 
-    .end local p0
+    .end local p0    # "duration":J
     move-wide/from16 v0, p0
 
     long-to-double v0, v0
@@ -379,17 +379,17 @@
     move v6, v0
 
     .line 102
-    .local v6, seconds:I
+    .local v6, "seconds":I
     const/4 v5, 0x0
 
-    .local v5, days:I
+    .local v5, "days":I
     const/16 p0, 0x0
 
-    .local p0, hours:I
+    .local p0, "hours":I
     const/16 p1, 0x0
 
     .line 104
-    .local p1, minutes:I
+    .local p1, "minutes":I
     const v7, 0x15180
 
     if-le v6, v7, :cond_3
@@ -445,13 +445,13 @@
     move v15, v6
 
     .line 117
-    .end local v6           #seconds:I
-    .local v15, seconds:I
+    .end local v6    # "seconds":I
+    .local v15, "seconds":I
     :goto_3
     const/4 v7, 0x0
 
     .line 119
-    .restart local v7       #pos:I
+    .restart local v7    # "pos":I
     if-eqz p2, :cond_a
 
     .line 120
@@ -466,7 +466,7 @@
     move-result v6
 
     .line 121
-    .local v6, myLen:I
+    .local v6, "myLen":I
     const/4 v9, 0x1
 
     if-lez v6, :cond_6
@@ -570,19 +570,19 @@
     goto :goto_8
 
     .line 96
-    .end local v5           #days:I
-    .end local v6           #myLen:I
-    .end local v7           #pos:I
-    .end local v8           #prefix:C
-    .end local v14           #millis:I
-    .end local v15           #seconds:I
-    .end local p1           #minutes:I
-    .local p0, duration:J
+    .end local v5    # "days":I
+    .end local v6    # "myLen":I
+    .end local v7    # "pos":I
+    .end local v8    # "prefix":C
+    .end local v14    # "millis":I
+    .end local v15    # "seconds":I
+    .end local p1    # "minutes":I
+    .local p0, "duration":J
     :cond_5
     const/16 v5, 0x2d
 
     .line 97
-    .local v5, prefix:C
+    .local v5, "prefix":C
     move-wide/from16 v0, p0
 
     neg-long v0, v0
@@ -591,18 +591,18 @@
 
     move v8, v5
 
-    .end local v5           #prefix:C
-    .restart local v8       #prefix:C
+    .end local v5    # "prefix":C
+    .restart local v8    # "prefix":C
     goto/16 :goto_2
 
     .line 121
-    .local v5, days:I
-    .restart local v6       #myLen:I
-    .restart local v7       #pos:I
-    .restart local v14       #millis:I
-    .restart local v15       #seconds:I
-    .local p0, hours:I
-    .restart local p1       #minutes:I
+    .local v5, "days":I
+    .restart local v6    # "myLen":I
+    .restart local v7    # "pos":I
+    .restart local v14    # "millis":I
+    .restart local v15    # "seconds":I
+    .local p0, "hours":I
+    .restart local p1    # "minutes":I
     :cond_6
     const/4 v10, 0x0
 
@@ -627,7 +627,7 @@
     goto :goto_7
 
     .line 132
-    .end local v6           #myLen:I
+    .end local v6    # "myLen":I
     :cond_a
     aput-char v8, v4, v7
 
@@ -638,7 +638,7 @@
     move/from16 v16, v7
 
     .line 136
-    .local v16, start:I
+    .local v16, "start":I
     if-eqz p2, :cond_b
 
     const/4 v6, 0x1
@@ -646,7 +646,7 @@
     move/from16 v17, v6
 
     .line 137
-    .local v17, zeropad:Z
+    .local v17, "zeropad":Z
     :goto_9
     const/16 v6, 0x64
 
@@ -656,7 +656,7 @@
 
     invoke-static/range {v4 .. v9}, Landroid/support/v4/util/TimeUtils;->printField([CICIZI)I
 
-    .end local v8           #prefix:C
+    .end local v8    # "prefix":C
     move-result v7
 
     .line 138
@@ -672,7 +672,7 @@
 
     move v12, v5
 
-    .end local v5           #days:I
+    .end local v5    # "days":I
     :goto_a
     if-eqz v17, :cond_d
 
@@ -704,7 +704,7 @@
 
     move/from16 v12, p0
 
-    .end local p0           #hours:I
+    .end local p0    # "hours":I
     :goto_c
     if-eqz v17, :cond_f
 
@@ -793,10 +793,10 @@
     goto/16 :goto_1
 
     .line 136
-    .end local v17           #zeropad:Z
-    .restart local v5       #days:I
-    .restart local v8       #prefix:C
-    .restart local p0       #hours:I
+    .end local v17    # "zeropad":Z
+    .restart local v5    # "days":I
+    .restart local v8    # "prefix":C
+    .restart local p0    # "hours":I
     :cond_b
     const/4 v6, 0x0
 
@@ -805,8 +805,8 @@
     goto :goto_9
 
     .line 138
-    .end local v8           #prefix:C
-    .restart local v17       #zeropad:Z
+    .end local v8    # "prefix":C
+    .restart local v17    # "zeropad":Z
     :cond_c
     const/4 v5, 0x0
 
@@ -814,7 +814,7 @@
 
     goto :goto_a
 
-    .end local v5           #days:I
+    .end local v5    # "days":I
     :cond_d
     const/4 v5, 0x0
 
@@ -830,7 +830,7 @@
 
     goto :goto_c
 
-    .end local p0           #hours:I
+    .end local p0    # "hours":I
     :cond_f
     const/16 p0, 0x0
 
@@ -861,30 +861,30 @@
 
     goto :goto_10
 
-    .end local v7           #pos:I
-    .end local v15           #seconds:I
-    .end local v16           #start:I
-    .end local v17           #zeropad:Z
-    .restart local v5       #days:I
-    .local v6, seconds:I
-    .restart local v8       #prefix:C
-    .restart local p0       #hours:I
+    .end local v7    # "pos":I
+    .end local v15    # "seconds":I
+    .end local v16    # "start":I
+    .end local v17    # "zeropad":Z
+    .restart local v5    # "days":I
+    .local v6, "seconds":I
+    .restart local v8    # "prefix":C
+    .restart local p0    # "hours":I
     :cond_13
     move v15, v6
 
-    .end local v6           #seconds:I
-    .restart local v15       #seconds:I
+    .end local v6    # "seconds":I
+    .restart local v15    # "seconds":I
     goto/16 :goto_3
 .end method
 
 .method private static printField([CICIZI)I
     .locals 3
-    .parameter "formatStr"
-    .parameter "amt"
-    .parameter "suffix"
-    .parameter "pos"
-    .parameter "always"
-    .parameter "zeropad"
+    .param p0, "formatStr"    # [C
+    .param p1, "amt"    # I
+    .param p2, "suffix"    # C
+    .param p3, "pos"    # I
+    .param p4, "always"    # Z
+    .param p5, "zeropad"    # I
 
     .prologue
     .line 53
@@ -897,7 +897,7 @@
     move v1, p3
 
     .line 55
-    .local v1, startPos:I
+    .local v1, "startPos":I
     if-eqz p4, :cond_1
 
     const/4 v2, 0x3
@@ -914,7 +914,7 @@
     div-int/lit8 v0, p1, 0x64
 
     .line 57
-    .local v0, dig:I
+    .local v0, "dig":I
     add-int/lit8 v2, v0, 0x30
 
     int-to-char v2, v2
@@ -930,7 +930,7 @@
     sub-int/2addr p1, v2
 
     .line 61
-    .end local v0           #dig:I
+    .end local v0    # "dig":I
     :cond_3
     if-eqz p4, :cond_4
 
@@ -950,7 +950,7 @@
     div-int/lit8 v0, p1, 0xa
 
     .line 63
-    .restart local v0       #dig:I
+    .restart local v0    # "dig":I
     add-int/lit8 v2, v0, 0x30
 
     int-to-char v2, v2
@@ -966,7 +966,7 @@
     sub-int/2addr p1, v2
 
     .line 67
-    .end local v0           #dig:I
+    .end local v0    # "dig":I
     :cond_6
     add-int/lit8 v2, p1, 0x30
 
@@ -984,7 +984,7 @@
     add-int/lit8 p3, p3, 0x1
 
     .line 72
-    .end local v1           #startPos:I
+    .end local v1    # "startPos":I
     :cond_7
     return p3
 .end method

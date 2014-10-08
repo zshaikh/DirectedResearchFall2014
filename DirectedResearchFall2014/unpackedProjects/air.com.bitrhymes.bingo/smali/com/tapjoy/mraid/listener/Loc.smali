@@ -17,10 +17,10 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;ILcom/tapjoy/mraid/controller/MraidLocation;Ljava/lang/String;)V
     .locals 1
-    .parameter "c"
-    .parameter "interval"
-    .parameter "ormmaLocationController"
-    .parameter "provider"
+    .param p1, "c"    # Landroid/content/Context;
+    .param p2, "interval"    # I
+    .param p3, "ormmaLocationController"    # Lcom/tapjoy/mraid/controller/MraidLocation;
+    .param p4, "provider"    # Ljava/lang/String;
 
     .prologue
     .line 75
@@ -51,7 +51,7 @@
 # virtual methods
 .method public onLocationChanged(Landroid/location/Location;)V
     .locals 1
-    .parameter "location"
+    .param p1, "location"    # Landroid/location/Location;
 
     .prologue
     .line 102
@@ -65,7 +65,7 @@
 
 .method public onProviderDisabled(Ljava/lang/String;)V
     .locals 1
-    .parameter "provider"
+    .param p1, "provider"    # Ljava/lang/String;
 
     .prologue
     .line 86
@@ -79,7 +79,7 @@
 
 .method public onProviderEnabled(Ljava/lang/String;)V
     .locals 0
-    .parameter "provider"
+    .param p1, "provider"    # Ljava/lang/String;
 
     .prologue
     .line 119
@@ -88,9 +88,9 @@
 
 .method public onStatusChanged(Ljava/lang/String;ILandroid/os/Bundle;)V
     .locals 1
-    .parameter "provider"
-    .parameter "status"
-    .parameter "extras"
+    .param p1, "provider"    # Ljava/lang/String;
+    .param p2, "status"    # I
+    .param p3, "extras"    # Landroid/os/Bundle;
 
     .prologue
     .line 93

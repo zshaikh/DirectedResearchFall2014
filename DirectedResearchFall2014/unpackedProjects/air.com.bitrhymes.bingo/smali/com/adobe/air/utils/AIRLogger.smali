@@ -59,7 +59,6 @@
 
 .method public static Enable(Z)V
     .locals 3
-    .parameter
 
     .prologue
     .line 27
@@ -96,8 +95,6 @@
 
 .method public static d(Ljava/lang/String;Ljava/lang/String;)I
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     .line 40
@@ -122,9 +119,6 @@
 
 .method public static d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     .locals 2
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 36
@@ -149,8 +143,6 @@
 
 .method public static e(Ljava/lang/String;Ljava/lang/String;)I
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     .line 44
@@ -175,9 +167,6 @@
 
 .method public static e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     .locals 2
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 48
@@ -202,8 +191,6 @@
 
 .method public static i(Ljava/lang/String;Ljava/lang/String;)I
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     .line 56
@@ -228,9 +215,6 @@
 
 .method public static i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     .locals 2
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 52
@@ -265,8 +249,6 @@
 
 .method public static isLoggable(Ljava/lang/String;I)Z
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     .line 84
@@ -291,9 +273,6 @@
 
 .method public static println(ILjava/lang/String;Ljava/lang/String;)I
     .locals 2
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 80
@@ -318,8 +297,6 @@
 
 .method public static v(Ljava/lang/String;Ljava/lang/String;)I
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     .line 64
@@ -344,9 +321,6 @@
 
 .method public static v(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     .locals 2
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 60
@@ -371,8 +345,6 @@
 
 .method public static w(Ljava/lang/String;Ljava/lang/String;)I
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     .line 68
@@ -397,9 +369,6 @@
 
 .method public static w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     .locals 2
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 76
@@ -424,8 +393,6 @@
 
 .method public static w(Ljava/lang/String;Ljava/lang/Throwable;)I
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     .line 72

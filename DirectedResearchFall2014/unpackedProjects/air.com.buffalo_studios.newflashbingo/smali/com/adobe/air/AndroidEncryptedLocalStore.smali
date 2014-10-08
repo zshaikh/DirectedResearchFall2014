@@ -22,8 +22,6 @@
 # virtual methods
 .method public getItem(Ljava/lang/String;Ljava/lang/String;)[B
     .locals 3
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/OutOfMemoryError;
@@ -78,8 +76,6 @@
 
 .method public removeItem(Ljava/lang/String;Ljava/lang/String;)Z
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     .line 64
@@ -119,7 +115,6 @@
 
 .method public reset(Ljava/lang/String;)Z
     .locals 2
-    .parameter
 
     .prologue
     .line 73
@@ -159,9 +154,6 @@
 
 .method public setItem(Ljava/lang/String;Ljava/lang/String;[B)Z
     .locals 3
-    .parameter
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/OutOfMemoryError;

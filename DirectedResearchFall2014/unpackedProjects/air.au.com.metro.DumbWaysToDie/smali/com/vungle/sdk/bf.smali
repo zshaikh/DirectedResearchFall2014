@@ -22,8 +22,6 @@
 # direct methods
 .method private constructor <init>(Ljava/lang/ClassLoader;[Ljava/lang/reflect/Field;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 36
@@ -41,7 +39,6 @@
 
 .method public static a(Ljava/lang/Class;)Lcom/vungle/sdk/bb;
     .locals 6
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -221,7 +218,6 @@
 
 .method public final a(Lcom/vungle/sdk/av;)V
     .locals 5
-    .parameter
 
     .prologue
     .line 42

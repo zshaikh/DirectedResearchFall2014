@@ -45,8 +45,8 @@
 # direct methods
 .method public constructor <init>(Lcom/fusepowered/m1/android/AdViewOverlayView;Ljava/lang/String;)V
     .locals 1
-    .parameter "view"
-    .parameter "baseUrl"
+    .param p1, "view"    # Lcom/fusepowered/m1/android/AdViewOverlayView;
+    .param p2, "baseUrl"    # Ljava/lang/String;
 
     .prologue
     .line 603
@@ -70,13 +70,13 @@
 # virtual methods
 .method protected bridge synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
-    .parameter "x0"
+    .param p1, "x0"    # [Ljava/lang/Object;
 
     .prologue
     .line 594
     check-cast p1, [Ljava/lang/Void;
 
-    .end local p1
+    .end local p1    # "x0":[Ljava/lang/Object;
     invoke-virtual {p0, p1}, Lcom/fusepowered/m1/android/AdViewOverlayView$FetchWebViewContentTask;->doInBackground([Ljava/lang/Void;)Ljava/lang/String;
 
     move-result-object v0
@@ -86,7 +86,7 @@
 
 .method protected varargs doInBackground([Ljava/lang/Void;)Ljava/lang/String;
     .locals 7
-    .parameter "arg0"
+    .param p1, "arg0"    # [Ljava/lang/Void;
 
     .prologue
     .line 625
@@ -116,7 +116,7 @@
     move-result-object v2
 
     .line 631
-    .local v2, httpResponse:Lorg/apache/http/HttpResponse;
+    .local v2, "httpResponse":Lorg/apache/http/HttpResponse;
     if-eqz v2, :cond_0
 
     .line 633
@@ -125,7 +125,7 @@
     move-result-object v3
 
     .line 634
-    .local v3, statusLine:Lorg/apache/http/StatusLine;
+    .local v3, "statusLine":Lorg/apache/http/StatusLine;
     if-eqz v2, :cond_0
 
     if-eqz v3, :cond_0
@@ -144,7 +144,7 @@
     move-result-object v1
 
     .line 638
-    .local v1, httpEntity:Lorg/apache/http/HttpEntity;
+    .local v1, "httpEntity":Lorg/apache/http/HttpEntity;
     if-eqz v1, :cond_0
 
     .line 640
@@ -157,7 +157,7 @@
     move-result-object v4
 
     .line 642
-    .local v4, webContent:Ljava/lang/String;
+    .local v4, "webContent":Ljava/lang/String;
     const/4 v5, 0x0
 
     iput-boolean v5, p0, Lcom/fusepowered/m1/android/AdViewOverlayView$FetchWebViewContentTask;->cancelVideo:Z
@@ -167,10 +167,10 @@
     move-object v5, v4
 
     .line 653
-    .end local v1           #httpEntity:Lorg/apache/http/HttpEntity;
-    .end local v2           #httpResponse:Lorg/apache/http/HttpResponse;
-    .end local v3           #statusLine:Lorg/apache/http/StatusLine;
-    .end local v4           #webContent:Ljava/lang/String;
+    .end local v1    # "httpEntity":Lorg/apache/http/HttpEntity;
+    .end local v2    # "httpResponse":Lorg/apache/http/HttpResponse;
+    .end local v3    # "statusLine":Lorg/apache/http/StatusLine;
+    .end local v4    # "webContent":Ljava/lang/String;
     :goto_0
     return-object v5
 
@@ -181,11 +181,11 @@
     move-object v0, v5
 
     .line 650
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     .line 653
-    .end local v0           #e:Ljava/lang/Exception;
+    .end local v0    # "e":Ljava/lang/Exception;
     :cond_0
     const/4 v5, 0x0
 
@@ -194,13 +194,13 @@
 
 .method protected bridge synthetic onPostExecute(Ljava/lang/Object;)V
     .locals 0
-    .parameter "x0"
+    .param p1, "x0"    # Ljava/lang/Object;
 
     .prologue
     .line 594
     check-cast p1, Ljava/lang/String;
 
-    .end local p1
+    .end local p1    # "x0":Ljava/lang/Object;
     invoke-virtual {p0, p1}, Lcom/fusepowered/m1/android/AdViewOverlayView$FetchWebViewContentTask;->onPostExecute(Ljava/lang/String;)V
 
     return-void
@@ -208,7 +208,7 @@
 
 .method protected onPostExecute(Ljava/lang/String;)V
     .locals 4
-    .parameter "webContent"
+    .param p1, "webContent"    # Ljava/lang/String;
 
     .prologue
     .line 660
@@ -221,7 +221,7 @@
     check-cast v1, Lcom/fusepowered/m1/android/AdViewOverlayView;
 
     .line 661
-    .local v1, view:Lcom/fusepowered/m1/android/AdViewOverlayView;
+    .local v1, "view":Lcom/fusepowered/m1/android/AdViewOverlayView;
     if-eqz v1, :cond_1
 
     .line 663
@@ -239,14 +239,14 @@
     check-cast v0, Lcom/fusepowered/m1/android/AdViewOverlayActivity;
 
     .line 666
-    .local v0, overlayActivity:Lcom/fusepowered/m1/android/AdViewOverlayActivity;
+    .local v0, "overlayActivity":Lcom/fusepowered/m1/android/AdViewOverlayActivity;
     if-eqz v0, :cond_2
 
     .line 668
     invoke-virtual {v0}, Lcom/fusepowered/m1/android/AdViewOverlayActivity;->finish()V
 
     .line 675
-    .end local v0           #overlayActivity:Lcom/fusepowered/m1/android/AdViewOverlayActivity;
+    .end local v0    # "overlayActivity":Lcom/fusepowered/m1/android/AdViewOverlayActivity;
     :cond_0
     :goto_0
     if-eqz p1, :cond_1
@@ -275,9 +275,9 @@
     return-void
 
     .line 672
-    .restart local v0       #overlayActivity:Lcom/fusepowered/m1/android/AdViewOverlayActivity;
+    .restart local v0    # "overlayActivity":Lcom/fusepowered/m1/android/AdViewOverlayActivity;
     :cond_2
-    #calls: Lcom/fusepowered/m1/android/AdViewOverlayView;->removeProgressBar()V
+    # invokes: Lcom/fusepowered/m1/android/AdViewOverlayView;->removeProgressBar()V
     invoke-static {v1}, Lcom/fusepowered/m1/android/AdViewOverlayView;->access$200(Lcom/fusepowered/m1/android/AdViewOverlayView;)V
 
     goto :goto_0
@@ -297,11 +297,11 @@
     check-cast v0, Lcom/fusepowered/m1/android/AdViewOverlayView;
 
     .line 612
-    .local v0, view:Lcom/fusepowered/m1/android/AdViewOverlayView;
+    .local v0, "view":Lcom/fusepowered/m1/android/AdViewOverlayView;
     if-eqz v0, :cond_0
 
     .line 614
-    #getter for: Lcom/fusepowered/m1/android/AdViewOverlayView;->progressBar:Landroid/widget/ProgressBar;
+    # getter for: Lcom/fusepowered/m1/android/AdViewOverlayView;->progressBar:Landroid/widget/ProgressBar;
     invoke-static {v0}, Lcom/fusepowered/m1/android/AdViewOverlayView;->access$400(Lcom/fusepowered/m1/android/AdViewOverlayView;)Landroid/widget/ProgressBar;
 
     move-result-object v1
@@ -309,7 +309,7 @@
     if-nez v1, :cond_0
 
     .line 616
-    #calls: Lcom/fusepowered/m1/android/AdViewOverlayView;->initProgressBar()V
+    # invokes: Lcom/fusepowered/m1/android/AdViewOverlayView;->initProgressBar()V
     invoke-static {v0}, Lcom/fusepowered/m1/android/AdViewOverlayView;->access$500(Lcom/fusepowered/m1/android/AdViewOverlayView;)V
 
     .line 619

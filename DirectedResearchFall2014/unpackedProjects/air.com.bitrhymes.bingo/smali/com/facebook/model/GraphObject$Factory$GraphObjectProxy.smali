@@ -79,8 +79,7 @@
 # direct methods
 .method public constructor <init>(Lorg/json/JSONObject;Ljava/lang/Class;)V
     .locals 0
-    .parameter "state"
-    .parameter
+    .param p1, "state"    # Lorg/json/JSONObject;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -92,7 +91,7 @@
 
     .prologue
     .line 503
-    .local p2, graphObjectClass:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p2, "graphObjectClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-direct {p0, p1}, Lcom/facebook/model/GraphObject$Factory$ProxyBase;-><init>(Ljava/lang/Object;)V
 
     .line 504
@@ -104,8 +103,8 @@
 
 .method private createGraphObjectsFromParameters(Lcom/facebook/model/CreateGraphObject;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 8
-    .parameter "createGraphObject"
-    .parameter "value"
+    .param p1, "createGraphObject"    # Lcom/facebook/model/CreateGraphObject;
+    .param p2, "value"    # Ljava/lang/Object;
 
     .prologue
     .line 629
@@ -128,7 +127,7 @@
     move-result-object v4
 
     .line 632
-    .local v4, propertyName:Ljava/lang/String;
+    .local v4, "propertyName":Ljava/lang/String;
     const-class v6, Ljava/util/List;
 
     invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -149,7 +148,7 @@
     move-result-object v2
 
     .line 635
-    .local v2, graphObjects:Lcom/facebook/model/GraphObjectList;,"Lcom/facebook/model/GraphObjectList<Lcom/facebook/model/GraphObject;>;"
+    .local v2, "graphObjects":Lcom/facebook/model/GraphObjectList;, "Lcom/facebook/model/GraphObjectList<Lcom/facebook/model/GraphObject;>;"
     move-object v0, p2
 
     check-cast v0, Ljava/util/List;
@@ -157,7 +156,7 @@
     move-object v5, v0
 
     .line 636
-    .local v5, values:Ljava/util/List;,"Ljava/util/List<Ljava/lang/Object;>;"
+    .local v5, "values":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Object;>;"
     invoke-interface {v5}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v6
@@ -173,32 +172,32 @@
     move-object p2, v2
 
     .line 651
-    .end local v2           #graphObjects:Lcom/facebook/model/GraphObjectList;,"Lcom/facebook/model/GraphObjectList<Lcom/facebook/model/GraphObject;>;"
-    .end local v4           #propertyName:Ljava/lang/String;
-    .end local v5           #values:Ljava/util/List;,"Ljava/util/List<Ljava/lang/Object;>;"
-    .end local p2
+    .end local v2    # "graphObjects":Lcom/facebook/model/GraphObjectList;, "Lcom/facebook/model/GraphObjectList<Lcom/facebook/model/GraphObject;>;"
+    .end local v4    # "propertyName":Ljava/lang/String;
+    .end local v5    # "values":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Object;>;"
+    .end local p2    # "value":Ljava/lang/Object;
     :cond_0
     :goto_1
     return-object p2
 
     .line 636
-    .restart local v2       #graphObjects:Lcom/facebook/model/GraphObjectList;,"Lcom/facebook/model/GraphObjectList<Lcom/facebook/model/GraphObject;>;"
-    .restart local v4       #propertyName:Ljava/lang/String;
-    .restart local v5       #values:Ljava/util/List;,"Ljava/util/List<Ljava/lang/Object;>;"
-    .restart local p2
+    .restart local v2    # "graphObjects":Lcom/facebook/model/GraphObjectList;, "Lcom/facebook/model/GraphObjectList<Lcom/facebook/model/GraphObject;>;"
+    .restart local v4    # "propertyName":Ljava/lang/String;
+    .restart local v5    # "values":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Object;>;"
+    .restart local p2    # "value":Ljava/lang/Object;
     :cond_1
     invoke-interface {v6}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v3
 
     .line 637
-    .local v3, obj:Ljava/lang/Object;
+    .local v3, "obj":Ljava/lang/Object;
     invoke-static {}, Lcom/facebook/model/GraphObject$Factory;->create()Lcom/facebook/model/GraphObject;
 
     move-result-object v1
 
     .line 638
-    .local v1, graphObject:Lcom/facebook/model/GraphObject;
+    .local v1, "graphObject":Lcom/facebook/model/GraphObject;
     invoke-interface {v1, v4, v3}, Lcom/facebook/model/GraphObject;->setProperty(Ljava/lang/String;Ljava/lang/Object;)V
 
     .line 639
@@ -207,30 +206,30 @@
     goto :goto_0
 
     .line 644
-    .end local v1           #graphObject:Lcom/facebook/model/GraphObject;
-    .end local v2           #graphObjects:Lcom/facebook/model/GraphObjectList;,"Lcom/facebook/model/GraphObjectList<Lcom/facebook/model/GraphObject;>;"
-    .end local v3           #obj:Ljava/lang/Object;
-    .end local v5           #values:Ljava/util/List;,"Ljava/util/List<Ljava/lang/Object;>;"
+    .end local v1    # "graphObject":Lcom/facebook/model/GraphObject;
+    .end local v2    # "graphObjects":Lcom/facebook/model/GraphObjectList;, "Lcom/facebook/model/GraphObjectList<Lcom/facebook/model/GraphObject;>;"
+    .end local v3    # "obj":Ljava/lang/Object;
+    .end local v5    # "values":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Object;>;"
     :cond_2
     invoke-static {}, Lcom/facebook/model/GraphObject$Factory;->create()Lcom/facebook/model/GraphObject;
 
     move-result-object v1
 
     .line 645
-    .restart local v1       #graphObject:Lcom/facebook/model/GraphObject;
+    .restart local v1    # "graphObject":Lcom/facebook/model/GraphObject;
     invoke-interface {v1, v4, p2}, Lcom/facebook/model/GraphObject;->setProperty(Ljava/lang/String;Ljava/lang/Object;)V
 
     .line 647
     move-object p2, v1
 
-    .local p2, value:Lcom/facebook/model/GraphObject;
+    .local p2, "value":Lcom/facebook/model/GraphObject;
     goto :goto_1
 .end method
 
 .method private final proxyGraphObjectGettersAndSetters(Ljava/lang/reflect/Method;[Ljava/lang/Object;)Ljava/lang/Object;
     .locals 11
-    .parameter "method"
-    .parameter "args"
+    .param p1, "method"    # Ljava/lang/reflect/Method;
+    .param p2, "args"    # [Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lorg/json/JSONException;
@@ -244,7 +243,7 @@
     move-result-object v5
 
     .line 656
-    .local v5, methodName:Ljava/lang/String;
+    .local v5, "methodName":Ljava/lang/String;
     invoke-virtual {p1}, Ljava/lang/reflect/Method;->getParameterTypes()[Ljava/lang/Class;
 
     move-result-object v10
@@ -252,7 +251,7 @@
     array-length v6, v10
 
     .line 657
-    .local v6, parameterCount:I
+    .local v6, "parameterCount":I
     const-class v10, Lcom/facebook/model/PropertyName;
 
     invoke-virtual {p1, v10}, Ljava/lang/reflect/Method;->getAnnotation(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;
@@ -262,7 +261,7 @@
     check-cast v8, Lcom/facebook/model/PropertyName;
 
     .line 659
-    .local v8, propertyNameOverride:Lcom/facebook/model/PropertyName;
+    .local v8, "propertyNameOverride":Lcom/facebook/model/PropertyName;
     if-eqz v8, :cond_1
 
     invoke-interface {v8}, Lcom/facebook/model/PropertyName;->value()Ljava/lang/String;
@@ -272,14 +271,14 @@
     move-object v4, v10
 
     .line 663
-    .local v4, key:Ljava/lang/String;
+    .local v4, "key":Ljava/lang/String;
     :goto_0
     if-nez v6, :cond_2
 
     .line 665
     iget-object p0, p0, Lcom/facebook/model/GraphObject$Factory$GraphObjectProxy;->state:Ljava/lang/Object;
 
-    .end local p0
+    .end local p0    # "this":Lcom/facebook/model/GraphObject$Factory$GraphObjectProxy;
     check-cast p0, Lorg/json/JSONObject;
 
     invoke-virtual {p0, v4}, Lorg/json/JSONObject;->opt(Ljava/lang/String;)Ljava/lang/Object;
@@ -287,23 +286,23 @@
     move-result-object v9
 
     .line 667
-    .local v9, value:Ljava/lang/Object;
+    .local v9, "value":Ljava/lang/Object;
     invoke-virtual {p1}, Ljava/lang/reflect/Method;->getReturnType()Ljava/lang/Class;
 
     move-result-object v2
 
     .line 669
-    .local v2, expectedType:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local v2, "expectedType":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-virtual {p1}, Ljava/lang/reflect/Method;->getGenericReturnType()Ljava/lang/reflect/Type;
 
     move-result-object v3
 
     .line 670
-    .local v3, genericReturnType:Ljava/lang/reflect/Type;
+    .local v3, "genericReturnType":Ljava/lang/reflect/Type;
     const/4 v7, 0x0
 
     .line 671
-    .local v7, parameterizedReturnType:Ljava/lang/reflect/ParameterizedType;
+    .local v7, "parameterizedReturnType":Ljava/lang/reflect/ParameterizedType;
     instance-of v10, v3, Ljava/lang/reflect/ParameterizedType;
 
     if-eqz v10, :cond_0
@@ -324,16 +323,16 @@
     move-object v10, v9
 
     .line 690
-    .end local v2           #expectedType:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
-    .end local v3           #genericReturnType:Ljava/lang/reflect/Type;
-    .end local v7           #parameterizedReturnType:Ljava/lang/reflect/ParameterizedType;
-    .end local v9           #value:Ljava/lang/Object;
+    .end local v2    # "expectedType":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
+    .end local v3    # "genericReturnType":Ljava/lang/reflect/Type;
+    .end local v7    # "parameterizedReturnType":Ljava/lang/reflect/ParameterizedType;
+    .end local v9    # "value":Ljava/lang/Object;
     :goto_1
     return-object v10
 
     .line 660
-    .end local v4           #key:Ljava/lang/String;
-    .restart local p0
+    .end local v4    # "key":Ljava/lang/String;
+    .restart local p0    # "this":Lcom/facebook/model/GraphObject$Factory$GraphObjectProxy;
     :cond_1
     const/4 v10, 0x3
 
@@ -350,7 +349,7 @@
     goto :goto_0
 
     .line 678
-    .restart local v4       #key:Ljava/lang/String;
+    .restart local v4    # "key":Ljava/lang/String;
     :cond_2
     const/4 v10, 0x1
 
@@ -366,7 +365,7 @@
     check-cast v1, Lcom/facebook/model/CreateGraphObject;
 
     .line 681
-    .local v1, createGraphObjectAnnotation:Lcom/facebook/model/CreateGraphObject;
+    .local v1, "createGraphObjectAnnotation":Lcom/facebook/model/CreateGraphObject;
     const/4 v10, 0x0
 
     aget-object v10, p2, v10
@@ -376,8 +375,8 @@
     move-result-object v9
 
     .line 685
-    .restart local v9       #value:Ljava/lang/Object;
-    #calls: Lcom/facebook/model/GraphObject$Factory;->getUnderlyingJSONObject(Ljava/lang/Object;)Ljava/lang/Object;
+    .restart local v9    # "value":Ljava/lang/Object;
+    # invokes: Lcom/facebook/model/GraphObject$Factory;->getUnderlyingJSONObject(Ljava/lang/Object;)Ljava/lang/Object;
     invoke-static {v9}, Lcom/facebook/model/GraphObject$Factory;->access$2(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v9
@@ -385,7 +384,7 @@
     .line 686
     iget-object p0, p0, Lcom/facebook/model/GraphObject$Factory$GraphObjectProxy;->state:Ljava/lang/Object;
 
-    .end local p0
+    .end local p0    # "this":Lcom/facebook/model/GraphObject$Factory$GraphObjectProxy;
     check-cast p0, Lorg/json/JSONObject;
 
     invoke-virtual {p0, v4, v9}, Lorg/json/JSONObject;->putOpt(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
@@ -396,9 +395,9 @@
     goto :goto_1
 
     .line 690
-    .end local v1           #createGraphObjectAnnotation:Lcom/facebook/model/CreateGraphObject;
-    .end local v9           #value:Ljava/lang/Object;
-    .restart local p0
+    .end local v1    # "createGraphObjectAnnotation":Lcom/facebook/model/CreateGraphObject;
+    .end local v9    # "value":Ljava/lang/Object;
+    .restart local p0    # "this":Lcom/facebook/model/GraphObject$Factory$GraphObjectProxy;
     :cond_3
     invoke-virtual {p0, p1}, Lcom/facebook/model/GraphObject$Factory$GraphObjectProxy;->throwUnexpectedMethodSignature(Ljava/lang/reflect/Method;)Ljava/lang/Object;
 
@@ -409,9 +408,9 @@
 
 .method private final proxyGraphObjectMethods(Ljava/lang/Object;Ljava/lang/reflect/Method;[Ljava/lang/Object;)Ljava/lang/Object;
     .locals 12
-    .parameter "proxy"
-    .parameter "method"
-    .parameter "args"
+    .param p1, "proxy"    # Ljava/lang/Object;
+    .param p2, "method"    # Ljava/lang/reflect/Method;
+    .param p3, "args"    # [Ljava/lang/Object;
 
     .prologue
     const/4 v11, 0x0
@@ -426,7 +425,7 @@
     move-result-object v4
 
     .line 575
-    .local v4, methodName:Ljava/lang/String;
+    .local v4, "methodName":Ljava/lang/String;
     const-string v8, "cast"
 
     invoke-virtual {v4, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -441,7 +440,7 @@
     check-cast v2, Ljava/lang/Class;
 
     .line 579
-    .local v2, graphObjectClass:Ljava/lang/Class;,"Ljava/lang/Class<+Lcom/facebook/model/GraphObject;>;"
+    .local v2, "graphObjectClass":Ljava/lang/Class;, "Ljava/lang/Class<+Lcom/facebook/model/GraphObject;>;"
     if-eqz v2, :cond_0
 
     .line 580
@@ -456,21 +455,21 @@
     move-object v8, p1
 
     .line 625
-    .end local v2           #graphObjectClass:Ljava/lang/Class;,"Ljava/lang/Class<+Lcom/facebook/model/GraphObject;>;"
-    .end local p0
+    .end local v2    # "graphObjectClass":Ljava/lang/Class;, "Ljava/lang/Class<+Lcom/facebook/model/GraphObject;>;"
+    .end local p0    # "this":Lcom/facebook/model/GraphObject$Factory$GraphObjectProxy;
     :goto_0
     return-object v8
 
     .line 583
-    .restart local v2       #graphObjectClass:Ljava/lang/Class;,"Ljava/lang/Class<+Lcom/facebook/model/GraphObject;>;"
-    .restart local p0
+    .restart local v2    # "graphObjectClass":Ljava/lang/Class;, "Ljava/lang/Class<+Lcom/facebook/model/GraphObject;>;"
+    .restart local p0    # "this":Lcom/facebook/model/GraphObject$Factory$GraphObjectProxy;
     :cond_0
     iget-object p0, p0, Lcom/facebook/model/GraphObject$Factory$GraphObjectProxy;->state:Ljava/lang/Object;
 
-    .end local p0
+    .end local p0    # "this":Lcom/facebook/model/GraphObject$Factory$GraphObjectProxy;
     check-cast p0, Lorg/json/JSONObject;
 
-    #calls: Lcom/facebook/model/GraphObject$Factory;->createGraphObjectProxy(Ljava/lang/Class;Lorg/json/JSONObject;)Lcom/facebook/model/GraphObject;
+    # invokes: Lcom/facebook/model/GraphObject$Factory;->createGraphObjectProxy(Ljava/lang/Class;Lorg/json/JSONObject;)Lcom/facebook/model/GraphObject;
     invoke-static {v2, p0}, Lcom/facebook/model/GraphObject$Factory;->access$0(Ljava/lang/Class;Lorg/json/JSONObject;)Lcom/facebook/model/GraphObject;
 
     move-result-object v8
@@ -478,8 +477,8 @@
     goto :goto_0
 
     .line 584
-    .end local v2           #graphObjectClass:Ljava/lang/Class;,"Ljava/lang/Class<+Lcom/facebook/model/GraphObject;>;"
-    .restart local p0
+    .end local v2    # "graphObjectClass":Ljava/lang/Class;, "Ljava/lang/Class<+Lcom/facebook/model/GraphObject;>;"
+    .restart local p0    # "this":Lcom/facebook/model/GraphObject$Factory$GraphObjectProxy;
     :cond_1
     const-string v8, "getInnerJSONObject"
 
@@ -495,7 +494,7 @@
     move-result-object v3
 
     .line 586
-    .local v3, handler:Ljava/lang/reflect/InvocationHandler;
+    .local v3, "handler":Ljava/lang/reflect/InvocationHandler;
     move-object v0, v3
 
     check-cast v0, Lcom/facebook/model/GraphObject$Factory$GraphObjectProxy;
@@ -503,14 +502,14 @@
     move-object v5, v0
 
     .line 587
-    .local v5, otherProxy:Lcom/facebook/model/GraphObject$Factory$GraphObjectProxy;
+    .local v5, "otherProxy":Lcom/facebook/model/GraphObject$Factory$GraphObjectProxy;
     iget-object v8, v5, Lcom/facebook/model/GraphObject$Factory$GraphObjectProxy;->state:Ljava/lang/Object;
 
     goto :goto_0
 
     .line 588
-    .end local v3           #handler:Ljava/lang/reflect/InvocationHandler;
-    .end local v5           #otherProxy:Lcom/facebook/model/GraphObject$Factory$GraphObjectProxy;
+    .end local v3    # "handler":Ljava/lang/reflect/InvocationHandler;
+    .end local v5    # "otherProxy":Lcom/facebook/model/GraphObject$Factory$GraphObjectProxy;
     :cond_2
     const-string v8, "asMap"
 
@@ -523,10 +522,10 @@
     .line 589
     iget-object p0, p0, Lcom/facebook/model/GraphObject$Factory$GraphObjectProxy;->state:Ljava/lang/Object;
 
-    .end local p0
+    .end local p0    # "this":Lcom/facebook/model/GraphObject$Factory$GraphObjectProxy;
     check-cast p0, Lorg/json/JSONObject;
 
-    #calls: Lcom/facebook/model/GraphObject$Factory;->createGraphObjectProxyForMap(Lorg/json/JSONObject;)Ljava/util/Map;
+    # invokes: Lcom/facebook/model/GraphObject$Factory;->createGraphObjectProxyForMap(Lorg/json/JSONObject;)Ljava/util/Map;
     invoke-static {p0}, Lcom/facebook/model/GraphObject$Factory;->access$1(Lorg/json/JSONObject;)Ljava/util/Map;
 
     move-result-object v8
@@ -534,7 +533,7 @@
     goto :goto_0
 
     .line 590
-    .restart local p0
+    .restart local p0    # "this":Lcom/facebook/model/GraphObject$Factory$GraphObjectProxy;
     :cond_3
     const-string v8, "getProperty"
 
@@ -547,7 +546,7 @@
     .line 591
     iget-object p0, p0, Lcom/facebook/model/GraphObject$Factory$GraphObjectProxy;->state:Ljava/lang/Object;
 
-    .end local p0
+    .end local p0    # "this":Lcom/facebook/model/GraphObject$Factory$GraphObjectProxy;
     check-cast p0, Lorg/json/JSONObject;
 
     aget-object v8, p3, v9
@@ -561,7 +560,7 @@
     goto :goto_0
 
     .line 592
-    .restart local p0
+    .restart local p0    # "this":Lcom/facebook/model/GraphObject$Factory$GraphObjectProxy;
     :cond_4
     const-string v8, "getPropertyAs"
 
@@ -574,7 +573,7 @@
     .line 593
     iget-object p0, p0, Lcom/facebook/model/GraphObject$Factory$GraphObjectProxy;->state:Ljava/lang/Object;
 
-    .end local p0
+    .end local p0    # "this":Lcom/facebook/model/GraphObject$Factory$GraphObjectProxy;
     check-cast p0, Lorg/json/JSONObject;
 
     aget-object v8, p3, v9
@@ -586,13 +585,13 @@
     move-result-object v7
 
     .line 594
-    .local v7, value:Ljava/lang/Object;
+    .local v7, "value":Ljava/lang/Object;
     aget-object v1, p3, v10
 
     check-cast v1, Ljava/lang/Class;
 
     .line 596
-    .local v1, expectedType:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local v1, "expectedType":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-static {v7, v1, v11}, Lcom/facebook/model/GraphObject$Factory;->coerceValueToExpectedType(Ljava/lang/Object;Ljava/lang/Class;Ljava/lang/reflect/ParameterizedType;)Ljava/lang/Object;
 
     move-result-object v8
@@ -600,9 +599,9 @@
     goto :goto_0
 
     .line 597
-    .end local v1           #expectedType:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
-    .end local v7           #value:Ljava/lang/Object;
-    .restart local p0
+    .end local v1    # "expectedType":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
+    .end local v7    # "value":Ljava/lang/Object;
+    .restart local p0    # "this":Lcom/facebook/model/GraphObject$Factory$GraphObjectProxy;
     :cond_5
     const-string v8, "getPropertyAsList"
 
@@ -626,19 +625,19 @@
     move-result-object v7
 
     .line 599
-    .restart local v7       #value:Ljava/lang/Object;
+    .restart local v7    # "value":Ljava/lang/Object;
     aget-object v1, p3, v10
 
     check-cast v1, Ljava/lang/Class;
 
     .line 601
-    .restart local v1       #expectedType:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .restart local v1    # "expectedType":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     new-instance v6, Lcom/facebook/model/GraphObject$Factory$GraphObjectProxy$1;
 
     invoke-direct {v6, p0, v1}, Lcom/facebook/model/GraphObject$Factory$GraphObjectProxy$1;-><init>(Lcom/facebook/model/GraphObject$Factory$GraphObjectProxy;Ljava/lang/Class;)V
 
     .line 617
-    .local v6, parameterizedType:Ljava/lang/reflect/ParameterizedType;
+    .local v6, "parameterizedType":Ljava/lang/reflect/ParameterizedType;
     const-class v8, Lcom/facebook/model/GraphObjectList;
 
     invoke-static {v7, v8, v6}, Lcom/facebook/model/GraphObject$Factory;->coerceValueToExpectedType(Ljava/lang/Object;Ljava/lang/Class;Ljava/lang/reflect/ParameterizedType;)Ljava/lang/Object;
@@ -648,9 +647,9 @@
     goto/16 :goto_0
 
     .line 618
-    .end local v1           #expectedType:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
-    .end local v6           #parameterizedType:Ljava/lang/reflect/ParameterizedType;
-    .end local v7           #value:Ljava/lang/Object;
+    .end local v1    # "expectedType":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
+    .end local v6    # "parameterizedType":Ljava/lang/reflect/ParameterizedType;
+    .end local v7    # "value":Ljava/lang/Object;
     :cond_6
     const-string v8, "setProperty"
 
@@ -680,7 +679,7 @@
     .line 621
     iget-object p0, p0, Lcom/facebook/model/GraphObject$Factory$GraphObjectProxy;->state:Ljava/lang/Object;
 
-    .end local p0
+    .end local p0    # "this":Lcom/facebook/model/GraphObject$Factory$GraphObjectProxy;
     check-cast p0, Lorg/json/JSONObject;
 
     aget-object v8, p3, v9
@@ -695,7 +694,7 @@
     goto/16 :goto_0
 
     .line 625
-    .restart local p0
+    .restart local p0    # "this":Lcom/facebook/model/GraphObject$Factory$GraphObjectProxy;
     :cond_8
     invoke-virtual {p0, p2}, Lcom/facebook/model/GraphObject$Factory$GraphObjectProxy;->throwUnexpectedMethodSignature(Ljava/lang/reflect/Method;)Ljava/lang/Object;
 
@@ -706,8 +705,8 @@
 
 .method private final proxyMapMethods(Ljava/lang/reflect/Method;[Ljava/lang/Object;)Ljava/lang/Object;
     .locals 6
-    .parameter "method"
-    .parameter "args"
+    .param p1, "method"    # Ljava/lang/reflect/Method;
+    .param p2, "args"    # [Ljava/lang/Object;
 
     .prologue
     const/4 v5, 0x0
@@ -720,7 +719,7 @@
     move-result-object v2
 
     .line 531
-    .local v2, methodName:Ljava/lang/String;
+    .local v2, "methodName":Ljava/lang/String;
     const-string v3, "clear"
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -732,7 +731,7 @@
     .line 532
     iget-object p0, p0, Lcom/facebook/model/GraphObject$Factory$GraphObjectProxy;->state:Ljava/lang/Object;
 
-    .end local p0
+    .end local p0    # "this":Lcom/facebook/model/GraphObject$Factory$GraphObjectProxy;
     check-cast p0, Lorg/json/JSONObject;
 
     invoke-static {p0}, Lcom/facebook/model/JsonUtil;->jsonObjectClear(Lorg/json/JSONObject;)V
@@ -744,7 +743,7 @@
     return-object v3
 
     .line 534
-    .restart local p0
+    .restart local p0    # "this":Lcom/facebook/model/GraphObject$Factory$GraphObjectProxy;
     :cond_0
     const-string v3, "containsKey"
 
@@ -757,7 +756,7 @@
     .line 535
     iget-object p0, p0, Lcom/facebook/model/GraphObject$Factory$GraphObjectProxy;->state:Ljava/lang/Object;
 
-    .end local p0
+    .end local p0    # "this":Lcom/facebook/model/GraphObject$Factory$GraphObjectProxy;
     check-cast p0, Lorg/json/JSONObject;
 
     aget-object v3, p2, v4
@@ -775,7 +774,7 @@
     goto :goto_0
 
     .line 536
-    .restart local p0
+    .restart local p0    # "this":Lcom/facebook/model/GraphObject$Factory$GraphObjectProxy;
     :cond_1
     const-string v3, "containsValue"
 
@@ -788,7 +787,7 @@
     .line 537
     iget-object p0, p0, Lcom/facebook/model/GraphObject$Factory$GraphObjectProxy;->state:Ljava/lang/Object;
 
-    .end local p0
+    .end local p0    # "this":Lcom/facebook/model/GraphObject$Factory$GraphObjectProxy;
     check-cast p0, Lorg/json/JSONObject;
 
     aget-object v3, p2, v4
@@ -804,7 +803,7 @@
     goto :goto_0
 
     .line 538
-    .restart local p0
+    .restart local p0    # "this":Lcom/facebook/model/GraphObject$Factory$GraphObjectProxy;
     :cond_2
     const-string v3, "entrySet"
 
@@ -817,7 +816,7 @@
     .line 539
     iget-object p0, p0, Lcom/facebook/model/GraphObject$Factory$GraphObjectProxy;->state:Ljava/lang/Object;
 
-    .end local p0
+    .end local p0    # "this":Lcom/facebook/model/GraphObject$Factory$GraphObjectProxy;
     check-cast p0, Lorg/json/JSONObject;
 
     invoke-static {p0}, Lcom/facebook/model/JsonUtil;->jsonObjectEntrySet(Lorg/json/JSONObject;)Ljava/util/Set;
@@ -827,7 +826,7 @@
     goto :goto_0
 
     .line 540
-    .restart local p0
+    .restart local p0    # "this":Lcom/facebook/model/GraphObject$Factory$GraphObjectProxy;
     :cond_3
     const-string v3, "get"
 
@@ -840,7 +839,7 @@
     .line 541
     iget-object p0, p0, Lcom/facebook/model/GraphObject$Factory$GraphObjectProxy;->state:Ljava/lang/Object;
 
-    .end local p0
+    .end local p0    # "this":Lcom/facebook/model/GraphObject$Factory$GraphObjectProxy;
     check-cast p0, Lorg/json/JSONObject;
 
     aget-object v3, p2, v4
@@ -854,7 +853,7 @@
     goto :goto_0
 
     .line 542
-    .restart local p0
+    .restart local p0    # "this":Lcom/facebook/model/GraphObject$Factory$GraphObjectProxy;
     :cond_4
     const-string v3, "isEmpty"
 
@@ -867,7 +866,7 @@
     .line 543
     iget-object p0, p0, Lcom/facebook/model/GraphObject$Factory$GraphObjectProxy;->state:Ljava/lang/Object;
 
-    .end local p0
+    .end local p0    # "this":Lcom/facebook/model/GraphObject$Factory$GraphObjectProxy;
     check-cast p0, Lorg/json/JSONObject;
 
     invoke-virtual {p0}, Lorg/json/JSONObject;->length()I
@@ -892,7 +891,7 @@
     goto :goto_0
 
     .line 544
-    .restart local p0
+    .restart local p0    # "this":Lcom/facebook/model/GraphObject$Factory$GraphObjectProxy;
     :cond_6
     const-string v3, "keySet"
 
@@ -905,7 +904,7 @@
     .line 545
     iget-object p0, p0, Lcom/facebook/model/GraphObject$Factory$GraphObjectProxy;->state:Ljava/lang/Object;
 
-    .end local p0
+    .end local p0    # "this":Lcom/facebook/model/GraphObject$Factory$GraphObjectProxy;
     check-cast p0, Lorg/json/JSONObject;
 
     invoke-static {p0}, Lcom/facebook/model/JsonUtil;->jsonObjectKeySet(Lorg/json/JSONObject;)Ljava/util/Set;
@@ -915,7 +914,7 @@
     goto/16 :goto_0
 
     .line 546
-    .restart local p0
+    .restart local p0    # "this":Lcom/facebook/model/GraphObject$Factory$GraphObjectProxy;
     :cond_7
     const-string v3, "put"
 
@@ -946,7 +945,7 @@
     const/4 v1, 0x0
 
     .line 550
-    .local v1, map:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
+    .local v1, "map":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
     aget-object v3, p2, v4
 
     instance-of v3, v3, Ljava/util/Map;
@@ -959,15 +958,15 @@
     check-cast v0, Ljava/util/Map;
 
     .line 553
-    .local v0, castMap:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
+    .local v0, "castMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
     move-object v1, v0
 
     .line 559
-    .end local v0           #castMap:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
+    .end local v0    # "castMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
     :goto_1
     iget-object p0, p0, Lcom/facebook/model/GraphObject$Factory$GraphObjectProxy;->state:Ljava/lang/Object;
 
-    .end local p0
+    .end local p0    # "this":Lcom/facebook/model/GraphObject$Factory$GraphObjectProxy;
     check-cast p0, Lorg/json/JSONObject;
 
     invoke-static {p0, v1}, Lcom/facebook/model/JsonUtil;->jsonObjectPutAll(Lorg/json/JSONObject;Ljava/util/Map;)V
@@ -978,7 +977,7 @@
     goto/16 :goto_0
 
     .line 554
-    .restart local p0
+    .restart local p0    # "this":Lcom/facebook/model/GraphObject$Factory$GraphObjectProxy;
     :cond_9
     aget-object v3, p2, v4
 
@@ -1005,7 +1004,7 @@
     goto/16 :goto_0
 
     .line 561
-    .end local v1           #map:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
+    .end local v1    # "map":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
     :cond_b
     const-string v3, "remove"
 
@@ -1018,7 +1017,7 @@
     .line 562
     iget-object p0, p0, Lcom/facebook/model/GraphObject$Factory$GraphObjectProxy;->state:Ljava/lang/Object;
 
-    .end local p0
+    .end local p0    # "this":Lcom/facebook/model/GraphObject$Factory$GraphObjectProxy;
     check-cast p0, Lorg/json/JSONObject;
 
     aget-object v3, p2, v4
@@ -1033,7 +1032,7 @@
     goto/16 :goto_0
 
     .line 564
-    .restart local p0
+    .restart local p0    # "this":Lcom/facebook/model/GraphObject$Factory$GraphObjectProxy;
     :cond_c
     const-string v3, "size"
 
@@ -1046,7 +1045,7 @@
     .line 565
     iget-object p0, p0, Lcom/facebook/model/GraphObject$Factory$GraphObjectProxy;->state:Ljava/lang/Object;
 
-    .end local p0
+    .end local p0    # "this":Lcom/facebook/model/GraphObject$Factory$GraphObjectProxy;
     check-cast p0, Lorg/json/JSONObject;
 
     invoke-virtual {p0}, Lorg/json/JSONObject;->length()I
@@ -1060,7 +1059,7 @@
     goto/16 :goto_0
 
     .line 566
-    .restart local p0
+    .restart local p0    # "this":Lcom/facebook/model/GraphObject$Factory$GraphObjectProxy;
     :cond_d
     const-string v3, "values"
 
@@ -1073,7 +1072,7 @@
     .line 567
     iget-object p0, p0, Lcom/facebook/model/GraphObject$Factory$GraphObjectProxy;->state:Ljava/lang/Object;
 
-    .end local p0
+    .end local p0    # "this":Lcom/facebook/model/GraphObject$Factory$GraphObjectProxy;
     check-cast p0, Lorg/json/JSONObject;
 
     invoke-static {p0}, Lcom/facebook/model/JsonUtil;->jsonObjectValues(Lorg/json/JSONObject;)Ljava/util/Collection;
@@ -1083,7 +1082,7 @@
     goto/16 :goto_0
 
     .line 570
-    .restart local p0
+    .restart local p0    # "this":Lcom/facebook/model/GraphObject$Factory$GraphObjectProxy;
     :cond_e
     invoke-virtual {p0, p1}, Lcom/facebook/model/GraphObject$Factory$GraphObjectProxy;->throwUnexpectedMethodSignature(Ljava/lang/reflect/Method;)Ljava/lang/Object;
 
@@ -1094,7 +1093,7 @@
 
 .method private setJSONProperty([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 5
-    .parameter "args"
+    .param p1, "args"    # [Ljava/lang/Object;
 
     .prologue
     .line 694
@@ -1105,24 +1104,24 @@
     check-cast v1, Ljava/lang/String;
 
     .line 695
-    .local v1, name:Ljava/lang/String;
+    .local v1, "name":Ljava/lang/String;
     const/4 v4, 0x1
 
     aget-object v2, p1, v4
 
     .line 696
-    .local v2, property:Ljava/lang/Object;
-    #calls: Lcom/facebook/model/GraphObject$Factory;->getUnderlyingJSONObject(Ljava/lang/Object;)Ljava/lang/Object;
+    .local v2, "property":Ljava/lang/Object;
+    # invokes: Lcom/facebook/model/GraphObject$Factory;->getUnderlyingJSONObject(Ljava/lang/Object;)Ljava/lang/Object;
     invoke-static {v2}, Lcom/facebook/model/GraphObject$Factory;->access$2(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v3
 
     .line 698
-    .local v3, value:Ljava/lang/Object;
+    .local v3, "value":Ljava/lang/Object;
     :try_start_0
     iget-object p0, p0, Lcom/facebook/model/GraphObject$Factory$GraphObjectProxy;->state:Ljava/lang/Object;
 
-    .end local p0
+    .end local p0    # "this":Lcom/facebook/model/GraphObject$Factory$GraphObjectProxy;
     check-cast p0, Lorg/json/JSONObject;
 
     invoke-virtual {p0, v1, v3}, Lorg/json/JSONObject;->putOpt(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
@@ -1141,7 +1140,7 @@
     move-object v0, v4
 
     .line 700
-    .local v0, e:Lorg/json/JSONException;
+    .local v0, "e":Lorg/json/JSONException;
     new-instance v4, Ljava/lang/IllegalArgumentException;
 
     invoke-direct {v4, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/Throwable;)V
@@ -1153,9 +1152,9 @@
 # virtual methods
 .method public final invoke(Ljava/lang/Object;Ljava/lang/reflect/Method;[Ljava/lang/Object;)Ljava/lang/Object;
     .locals 3
-    .parameter "proxy"
-    .parameter "method"
-    .parameter "args"
+    .param p1, "proxy"    # Ljava/lang/Object;
+    .param p2, "method"    # Ljava/lang/reflect/Method;
+    .param p3, "args"    # [Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/Throwable;
@@ -1171,7 +1170,7 @@
     move-result-object v0
 
     .line 516
-    .local v0, declaringClass:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local v0, "declaringClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const-class v1, Ljava/lang/Object;
 
     if-ne v0, v1, :cond_0

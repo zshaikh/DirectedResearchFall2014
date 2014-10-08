@@ -61,8 +61,7 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Ljava/lang/Class;)V
     .locals 1
-    .parameter "context"
-    .parameter
+    .param p1, "context"    # Landroid/content/Context;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -73,8 +72,8 @@
     .end annotation
 
     .prologue
-    .local p0, this:Lcom/facebook/widget/GraphObjectPagingLoader;,"Lcom/facebook/widget/GraphObjectPagingLoader<TT;>;"
-    .local p2, graphObjectClass:Ljava/lang/Class;,"Ljava/lang/Class<TT;>;"
+    .local p0, "this":Lcom/facebook/widget/GraphObjectPagingLoader;, "Lcom/facebook/widget/GraphObjectPagingLoader<TT;>;"
+    .local p2, "graphObjectClass":Ljava/lang/Class;, "Ljava/lang/Class<TT;>;"
     const/4 v0, 0x0
 
     .line 43
@@ -95,8 +94,6 @@
 
 .method static synthetic access$1(Lcom/facebook/widget/GraphObjectPagingLoader;Lcom/facebook/Response;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 164
@@ -107,10 +104,10 @@
 
 .method private addResults(Lcom/facebook/Response;)V
     .locals 9
-    .parameter "response"
+    .param p1, "response"    # Lcom/facebook/Response;
 
     .prologue
-    .local p0, this:Lcom/facebook/widget/GraphObjectPagingLoader;,"Lcom/facebook/widget/GraphObjectPagingLoader<TT;>;"
+    .local p0, "this":Lcom/facebook/widget/GraphObjectPagingLoader;, "Lcom/facebook/widget/GraphObjectPagingLoader<TT;>;"
     const/4 v8, 0x1
 
     const/4 v7, 0x0
@@ -132,7 +129,7 @@
     move-object v0, v5
 
     .line 194
-    .local v0, cursorToModify:Lcom/facebook/widget/SimpleGraphObjectCursor;,"Lcom/facebook/widget/SimpleGraphObjectCursor<TT;>;"
+    .local v0, "cursorToModify":Lcom/facebook/widget/SimpleGraphObjectCursor;, "Lcom/facebook/widget/SimpleGraphObjectCursor<TT;>;"
     :goto_0
     const-class v5, Lcom/facebook/widget/GraphObjectPagingLoader$PagedResults;
 
@@ -143,13 +140,13 @@
     check-cast v4, Lcom/facebook/widget/GraphObjectPagingLoader$PagedResults;
 
     .line 195
-    .local v4, result:Lcom/facebook/widget/GraphObjectPagingLoader$PagedResults;,"Lcom/facebook/widget/GraphObjectPagingLoader$PagedResults;"
+    .local v4, "result":Lcom/facebook/widget/GraphObjectPagingLoader$PagedResults;, "Lcom/facebook/widget/GraphObjectPagingLoader$PagedResults;"
     invoke-virtual {p1}, Lcom/facebook/Response;->getIsFromCache()Z
 
     move-result v2
 
     .line 197
-    .local v2, fromCache:Z
+    .local v2, "fromCache":Z
     invoke-interface {v4}, Lcom/facebook/widget/GraphObjectPagingLoader$PagedResults;->getData()Lcom/facebook/model/GraphObjectList;
 
     move-result-object v5
@@ -161,7 +158,7 @@
     move-result-object v1
 
     .line 198
-    .local v1, data:Lcom/facebook/model/GraphObjectList;,"Lcom/facebook/model/GraphObjectList<TT;>;"
+    .local v1, "data":Lcom/facebook/model/GraphObjectList;, "Lcom/facebook/model/GraphObjectList<TT;>;"
     invoke-interface {v1}, Lcom/facebook/model/GraphObjectList;->size()I
 
     move-result v5
@@ -171,7 +168,7 @@
     move v3, v8
 
     .line 200
-    .local v3, haveData:Z
+    .local v3, "haveData":Z
     :goto_1
     if-eqz v3, :cond_1
 
@@ -220,11 +217,11 @@
     return-void
 
     .line 192
-    .end local v0           #cursorToModify:Lcom/facebook/widget/SimpleGraphObjectCursor;,"Lcom/facebook/widget/SimpleGraphObjectCursor<TT;>;"
-    .end local v1           #data:Lcom/facebook/model/GraphObjectList;,"Lcom/facebook/model/GraphObjectList<TT;>;"
-    .end local v2           #fromCache:Z
-    .end local v3           #haveData:Z
-    .end local v4           #result:Lcom/facebook/widget/GraphObjectPagingLoader$PagedResults;,"Lcom/facebook/widget/GraphObjectPagingLoader$PagedResults;"
+    .end local v0    # "cursorToModify":Lcom/facebook/widget/SimpleGraphObjectCursor;, "Lcom/facebook/widget/SimpleGraphObjectCursor<TT;>;"
+    .end local v1    # "data":Lcom/facebook/model/GraphObjectList;, "Lcom/facebook/model/GraphObjectList<TT;>;"
+    .end local v2    # "fromCache":Z
+    .end local v3    # "haveData":Z
+    .end local v4    # "result":Lcom/facebook/widget/GraphObjectPagingLoader$PagedResults;, "Lcom/facebook/widget/GraphObjectPagingLoader$PagedResults;"
     :cond_4
     new-instance v5, Lcom/facebook/widget/SimpleGraphObjectCursor;
 
@@ -236,10 +233,10 @@
 
     goto :goto_0
 
-    .restart local v0       #cursorToModify:Lcom/facebook/widget/SimpleGraphObjectCursor;,"Lcom/facebook/widget/SimpleGraphObjectCursor<TT;>;"
-    .restart local v1       #data:Lcom/facebook/model/GraphObjectList;,"Lcom/facebook/model/GraphObjectList<TT;>;"
-    .restart local v2       #fromCache:Z
-    .restart local v4       #result:Lcom/facebook/widget/GraphObjectPagingLoader$PagedResults;,"Lcom/facebook/widget/GraphObjectPagingLoader$PagedResults;"
+    .restart local v0    # "cursorToModify":Lcom/facebook/widget/SimpleGraphObjectCursor;, "Lcom/facebook/widget/SimpleGraphObjectCursor<TT;>;"
+    .restart local v1    # "data":Lcom/facebook/model/GraphObjectList;, "Lcom/facebook/model/GraphObjectList<TT;>;"
+    .restart local v2    # "fromCache":Z
+    .restart local v4    # "result":Lcom/facebook/widget/GraphObjectPagingLoader$PagedResults;, "Lcom/facebook/widget/GraphObjectPagingLoader$PagedResults;"
     :cond_5
     move v3, v7
 
@@ -249,11 +246,11 @@
 
 .method private putRequestIntoBatch(Lcom/facebook/Request;Z)Lcom/facebook/internal/CacheableRequestBatch;
     .locals 4
-    .parameter "request"
-    .parameter "skipRoundtripIfCached"
+    .param p1, "request"    # Lcom/facebook/Request;
+    .param p2, "skipRoundtripIfCached"    # Z
 
     .prologue
-    .local p0, this:Lcom/facebook/widget/GraphObjectPagingLoader;,"Lcom/facebook/widget/GraphObjectPagingLoader<TT;>;"
+    .local p0, "this":Lcom/facebook/widget/GraphObjectPagingLoader;, "Lcom/facebook/widget/GraphObjectPagingLoader<TT;>;"
     const/4 v3, 0x1
 
     const/4 v2, 0x0
@@ -268,7 +265,7 @@
     invoke-direct {v0, v1}, Lcom/facebook/internal/CacheableRequestBatch;-><init>([Lcom/facebook/Request;)V
 
     .line 160
-    .local v0, batch:Lcom/facebook/internal/CacheableRequestBatch;
+    .local v0, "batch":Lcom/facebook/internal/CacheableRequestBatch;
     if-eqz p2, :cond_0
 
     move v1, v2
@@ -288,10 +285,10 @@
 
 .method private requestCompleted(Lcom/facebook/Response;)V
     .locals 5
-    .parameter "response"
+    .param p1, "response"    # Lcom/facebook/Response;
 
     .prologue
-    .local p0, this:Lcom/facebook/widget/GraphObjectPagingLoader;,"Lcom/facebook/widget/GraphObjectPagingLoader<TT;>;"
+    .local p0, "this":Lcom/facebook/widget/GraphObjectPagingLoader;, "Lcom/facebook/widget/GraphObjectPagingLoader<TT;>;"
     const/4 v4, 0x0
 
     .line 165
@@ -300,7 +297,7 @@
     move-result-object v1
 
     .line 166
-    .local v1, request:Lcom/facebook/Request;
+    .local v1, "request":Lcom/facebook/Request;
     iget-object v3, p0, Lcom/facebook/widget/GraphObjectPagingLoader;->currentRequest:Lcom/facebook/Request;
 
     if-eq v1, v3, :cond_1
@@ -325,13 +322,13 @@
     move-result-object v2
 
     .line 174
-    .local v2, requestError:Lcom/facebook/FacebookRequestError;
+    .local v2, "requestError":Lcom/facebook/FacebookRequestError;
     if-nez v2, :cond_3
 
     move-object v0, v4
 
     .line 175
-    .local v0, exception:Lcom/facebook/FacebookException;
+    .local v0, "exception":Lcom/facebook/FacebookException;
     :goto_1
     invoke-virtual {p1}, Lcom/facebook/Response;->getGraphObject()Lcom/facebook/model/GraphObject;
 
@@ -344,13 +341,13 @@
     .line 176
     new-instance v0, Lcom/facebook/FacebookException;
 
-    .end local v0           #exception:Lcom/facebook/FacebookException;
+    .end local v0    # "exception":Lcom/facebook/FacebookException;
     const-string v3, "GraphObjectPagingLoader received neither a result nor an error."
 
     invoke-direct {v0, v3}, Lcom/facebook/FacebookException;-><init>(Ljava/lang/String;)V
 
     .line 179
-    .restart local v0       #exception:Lcom/facebook/FacebookException;
+    .restart local v0    # "exception":Lcom/facebook/FacebookException;
     :cond_2
     if-eqz v0, :cond_4
 
@@ -370,7 +367,7 @@
     goto :goto_0
 
     .line 174
-    .end local v0           #exception:Lcom/facebook/FacebookException;
+    .end local v0    # "exception":Lcom/facebook/FacebookException;
     :cond_3
     invoke-virtual {v2}, Lcom/facebook/FacebookRequestError;->getException()Lcom/facebook/FacebookException;
 
@@ -381,7 +378,7 @@
     goto :goto_1
 
     .line 186
-    .restart local v0       #exception:Lcom/facebook/FacebookException;
+    .restart local v0    # "exception":Lcom/facebook/FacebookException;
     :cond_4
     invoke-direct {p0, p1}, Lcom/facebook/widget/GraphObjectPagingLoader;->addResults(Lcom/facebook/Response;)V
 
@@ -390,13 +387,13 @@
 
 .method private startLoading(Lcom/facebook/Request;ZJ)V
     .locals 5
-    .parameter "request"
-    .parameter "skipRoundtripIfCached"
-    .parameter "afterDelay"
+    .param p1, "request"    # Lcom/facebook/Request;
+    .param p2, "skipRoundtripIfCached"    # Z
+    .param p3, "afterDelay"    # J
 
     .prologue
     .line 127
-    .local p0, this:Lcom/facebook/widget/GraphObjectPagingLoader;,"Lcom/facebook/widget/GraphObjectPagingLoader<TT;>;"
+    .local p0, "this":Lcom/facebook/widget/GraphObjectPagingLoader;, "Lcom/facebook/widget/GraphObjectPagingLoader<TT;>;"
     iput-boolean p2, p0, Lcom/facebook/widget/GraphObjectPagingLoader;->skipRoundtripIfCached:Z
 
     .line 128
@@ -432,13 +429,13 @@
     move-result-object v0
 
     .line 142
-    .local v0, batch:Lcom/facebook/RequestBatch;
+    .local v0, "batch":Lcom/facebook/RequestBatch;
     new-instance v2, Lcom/facebook/widget/GraphObjectPagingLoader$3;
 
     invoke-direct {v2, p0, v0}, Lcom/facebook/widget/GraphObjectPagingLoader$3;-><init>(Lcom/facebook/widget/GraphObjectPagingLoader;Lcom/facebook/RequestBatch;)V
 
     .line 148
-    .local v2, r:Ljava/lang/Runnable;
+    .local v2, "r":Ljava/lang/Runnable;
     const-wide/16 v3, 0x0
 
     cmp-long v3, p3, v3
@@ -459,7 +456,7 @@
     invoke-direct {v1}, Landroid/os/Handler;-><init>()V
 
     .line 152
-    .local v1, handler:Landroid/os/Handler;
+    .local v1, "handler":Landroid/os/Handler;
     invoke-virtual {v1, v2, p3, p4}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
     goto :goto_0
@@ -471,7 +468,7 @@
     .locals 1
 
     .prologue
-    .local p0, this:Lcom/facebook/widget/GraphObjectPagingLoader;,"Lcom/facebook/widget/GraphObjectPagingLoader<TT;>;"
+    .local p0, "this":Lcom/facebook/widget/GraphObjectPagingLoader;, "Lcom/facebook/widget/GraphObjectPagingLoader<TT;>;"
     const/4 v0, 0x0
 
     .line 61
@@ -492,7 +489,6 @@
 
 .method public deliverResult(Lcom/facebook/widget/SimpleGraphObjectCursor;)V
     .locals 2
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -503,12 +499,12 @@
 
     .prologue
     .line 105
-    .local p0, this:Lcom/facebook/widget/GraphObjectPagingLoader;,"Lcom/facebook/widget/GraphObjectPagingLoader<TT;>;"
-    .local p1, cursor:Lcom/facebook/widget/SimpleGraphObjectCursor;,"Lcom/facebook/widget/SimpleGraphObjectCursor<TT;>;"
+    .local p0, "this":Lcom/facebook/widget/GraphObjectPagingLoader;, "Lcom/facebook/widget/GraphObjectPagingLoader<TT;>;"
+    .local p1, "cursor":Lcom/facebook/widget/SimpleGraphObjectCursor;, "Lcom/facebook/widget/SimpleGraphObjectCursor<TT;>;"
     iget-object v0, p0, Lcom/facebook/widget/GraphObjectPagingLoader;->cursor:Lcom/facebook/widget/SimpleGraphObjectCursor;
 
     .line 106
-    .local v0, oldCursor:Lcom/facebook/widget/SimpleGraphObjectCursor;,"Lcom/facebook/widget/SimpleGraphObjectCursor<TT;>;"
+    .local v0, "oldCursor":Lcom/facebook/widget/SimpleGraphObjectCursor;, "Lcom/facebook/widget/SimpleGraphObjectCursor<TT;>;"
     iput-object p1, p0, Lcom/facebook/widget/GraphObjectPagingLoader;->cursor:Lcom/facebook/widget/SimpleGraphObjectCursor;
 
     .line 108
@@ -542,7 +538,6 @@
 
 .method public bridge synthetic deliverResult(Ljava/lang/Object;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1
@@ -557,7 +552,7 @@
     .locals 4
 
     .prologue
-    .local p0, this:Lcom/facebook/widget/GraphObjectPagingLoader;,"Lcom/facebook/widget/GraphObjectPagingLoader<TT;>;"
+    .local p0, "this":Lcom/facebook/widget/GraphObjectPagingLoader;, "Lcom/facebook/widget/GraphObjectPagingLoader<TT;>;"
     const/4 v3, 0x1
 
     .line 86
@@ -595,11 +590,11 @@
     move-result-object v0
 
     .line 99
-    .local v0, batch:Lcom/facebook/internal/CacheableRequestBatch;
+    .local v0, "batch":Lcom/facebook/internal/CacheableRequestBatch;
     invoke-static {v0}, Lcom/facebook/Request;->executeBatchAsync(Lcom/facebook/RequestBatch;)Lcom/facebook/RequestAsyncTask;
 
     .line 101
-    .end local v0           #batch:Lcom/facebook/internal/CacheableRequestBatch;
+    .end local v0    # "batch":Lcom/facebook/internal/CacheableRequestBatch;
     :cond_0
     return-void
 .end method
@@ -616,7 +611,7 @@
 
     .prologue
     .line 57
-    .local p0, this:Lcom/facebook/widget/GraphObjectPagingLoader;,"Lcom/facebook/widget/GraphObjectPagingLoader<TT;>;"
+    .local p0, "this":Lcom/facebook/widget/GraphObjectPagingLoader;, "Lcom/facebook/widget/GraphObjectPagingLoader<TT;>;"
     iget-object v0, p0, Lcom/facebook/widget/GraphObjectPagingLoader;->cursor:Lcom/facebook/widget/SimpleGraphObjectCursor;
 
     return-object v0
@@ -627,7 +622,7 @@
 
     .prologue
     .line 49
-    .local p0, this:Lcom/facebook/widget/GraphObjectPagingLoader;,"Lcom/facebook/widget/GraphObjectPagingLoader<TT;>;"
+    .local p0, "this":Lcom/facebook/widget/GraphObjectPagingLoader;, "Lcom/facebook/widget/GraphObjectPagingLoader<TT;>;"
     iget-object v0, p0, Lcom/facebook/widget/GraphObjectPagingLoader;->onErrorListener:Lcom/facebook/widget/GraphObjectPagingLoader$OnErrorListener;
 
     return-object v0
@@ -638,7 +633,7 @@
 
     .prologue
     .line 69
-    .local p0, this:Lcom/facebook/widget/GraphObjectPagingLoader;,"Lcom/facebook/widget/GraphObjectPagingLoader<TT;>;"
+    .local p0, "this":Lcom/facebook/widget/GraphObjectPagingLoader;, "Lcom/facebook/widget/GraphObjectPagingLoader<TT;>;"
     iget-boolean v0, p0, Lcom/facebook/widget/GraphObjectPagingLoader;->loading:Z
 
     return v0
@@ -649,7 +644,7 @@
 
     .prologue
     .line 119
-    .local p0, this:Lcom/facebook/widget/GraphObjectPagingLoader;,"Lcom/facebook/widget/GraphObjectPagingLoader<TT;>;"
+    .local p0, "this":Lcom/facebook/widget/GraphObjectPagingLoader;, "Lcom/facebook/widget/GraphObjectPagingLoader<TT;>;"
     invoke-super {p0}, Landroid/support/v4/content/Loader;->onStartLoading()V
 
     .line 121
@@ -669,11 +664,11 @@
 
 .method public refreshOriginalRequest(J)V
     .locals 2
-    .parameter "afterDelay"
+    .param p1, "afterDelay"    # J
 
     .prologue
     .line 78
-    .local p0, this:Lcom/facebook/widget/GraphObjectPagingLoader;,"Lcom/facebook/widget/GraphObjectPagingLoader<TT;>;"
+    .local p0, "this":Lcom/facebook/widget/GraphObjectPagingLoader;, "Lcom/facebook/widget/GraphObjectPagingLoader<TT;>;"
     iget-object v0, p0, Lcom/facebook/widget/GraphObjectPagingLoader;->originalRequest:Lcom/facebook/Request;
 
     if-nez v0, :cond_0
@@ -703,12 +698,11 @@
 
 .method public setOnErrorListener(Lcom/facebook/widget/GraphObjectPagingLoader$OnErrorListener;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 53
-    .local p0, this:Lcom/facebook/widget/GraphObjectPagingLoader;,"Lcom/facebook/widget/GraphObjectPagingLoader<TT;>;"
-    .local p1, listener:Lcom/facebook/widget/GraphObjectPagingLoader$OnErrorListener;,"Lcom/facebook/widget/GraphObjectPagingLoader$OnErrorListener;"
+    .local p0, "this":Lcom/facebook/widget/GraphObjectPagingLoader;, "Lcom/facebook/widget/GraphObjectPagingLoader<TT;>;"
+    .local p1, "listener":Lcom/facebook/widget/GraphObjectPagingLoader$OnErrorListener;, "Lcom/facebook/widget/GraphObjectPagingLoader$OnErrorListener;"
     iput-object p1, p0, Lcom/facebook/widget/GraphObjectPagingLoader;->onErrorListener:Lcom/facebook/widget/GraphObjectPagingLoader$OnErrorListener;
 
     .line 54
@@ -717,12 +711,12 @@
 
 .method public startLoading(Lcom/facebook/Request;Z)V
     .locals 2
-    .parameter "request"
-    .parameter "skipRoundtripIfCached"
+    .param p1, "request"    # Lcom/facebook/Request;
+    .param p2, "skipRoundtripIfCached"    # Z
 
     .prologue
     .line 73
-    .local p0, this:Lcom/facebook/widget/GraphObjectPagingLoader;,"Lcom/facebook/widget/GraphObjectPagingLoader<TT;>;"
+    .local p0, "this":Lcom/facebook/widget/GraphObjectPagingLoader;, "Lcom/facebook/widget/GraphObjectPagingLoader<TT;>;"
     iput-object p1, p0, Lcom/facebook/widget/GraphObjectPagingLoader;->originalRequest:Lcom/facebook/Request;
 
     .line 74

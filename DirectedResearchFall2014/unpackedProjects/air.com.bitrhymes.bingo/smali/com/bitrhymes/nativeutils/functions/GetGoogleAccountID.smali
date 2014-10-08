@@ -41,8 +41,8 @@
 # virtual methods
 .method public call(Lcom/adobe/fre/FREContext;[Lcom/adobe/fre/FREObject;)Lcom/adobe/fre/FREObject;
     .locals 13
-    .parameter "arg0"
-    .parameter "arg1"
+    .param p1, "arg0"    # Lcom/adobe/fre/FREContext;
+    .param p2, "arg1"    # [Lcom/adobe/fre/FREObject;
 
     .prologue
     const-string v12, ","
@@ -51,11 +51,11 @@
     const-string v3, ""
 
     .line 24
-    .local v3, accountJsonStr:Ljava/lang/String;
+    .local v3, "accountJsonStr":Ljava/lang/String;
     const/4 v5, 0x0
 
     .line 26
-    .local v5, blankObj:Lcom/adobe/fre/FREObject;
+    .local v5, "blankObj":Lcom/adobe/fre/FREObject;
     :try_start_0
     invoke-static {v3}, Lcom/adobe/fre/FREObject;->newObject(Ljava/lang/String;)Lcom/adobe/fre/FREObject;
 
@@ -75,13 +75,13 @@
     move-result-object v4
 
     .line 29
-    .local v4, accounts:[Landroid/accounts/Account;
+    .local v4, "accounts":[Landroid/accounts/Account;
     new-instance v2, Lorg/json/JSONArray;
 
     invoke-direct {v2}, Lorg/json/JSONArray;-><init>()V
 
     .line 31
-    .local v2, accountJsonArray:Lorg/json/JSONArray;
+    .local v2, "accountJsonArray":Lorg/json/JSONArray;
     array-length v8, v4
 
     const/4 v9, 0x0
@@ -111,7 +111,7 @@
     const/4 v6, 0x0
 
     .line 48
-    .local v6, deviceInfoObject:Lcom/adobe/fre/FREObject;
+    .local v6, "deviceInfoObject":Lcom/adobe/fre/FREObject;
     invoke-static {v3}, Lcom/adobe/fre/FREObject;->newObject(Ljava/lang/String;)Lcom/adobe/fre/FREObject;
 
     move-result-object v6
@@ -119,20 +119,20 @@
     move-object v8, v6
 
     .line 55
-    .end local v2           #accountJsonArray:Lorg/json/JSONArray;
-    .end local v4           #accounts:[Landroid/accounts/Account;
-    .end local v6           #deviceInfoObject:Lcom/adobe/fre/FREObject;
+    .end local v2    # "accountJsonArray":Lorg/json/JSONArray;
+    .end local v4    # "accounts":[Landroid/accounts/Account;
+    .end local v6    # "deviceInfoObject":Lcom/adobe/fre/FREObject;
     :goto_2
     return-object v8
 
     .line 31
-    .restart local v2       #accountJsonArray:Lorg/json/JSONArray;
-    .restart local v4       #accounts:[Landroid/accounts/Account;
+    .restart local v2    # "accountJsonArray":Lorg/json/JSONArray;
+    .restart local v4    # "accounts":[Landroid/accounts/Account;
     :cond_0
     aget-object v0, v4, v9
 
     .line 32
-    .local v0, account:Landroid/accounts/Account;
+    .local v0, "account":Landroid/accounts/Account;
     iget-object v10, v0, Landroid/accounts/Account;->type:Ljava/lang/String;
 
     const-string v11, "google"
@@ -171,7 +171,7 @@
     invoke-direct {v1}, Lorg/json/JSONObject;-><init>()V
 
     .line 36
-    .local v1, accountJSONObj:Lorg/json/JSONObject;
+    .local v1, "accountJSONObj":Lorg/json/JSONObject;
     const-string v10, "type"
 
     iget-object v11, v0, Landroid/accounts/Account;->type:Ljava/lang/String;
@@ -189,14 +189,14 @@
     invoke-virtual {v2, v1}, Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;
 
     .line 31
-    .end local v1           #accountJSONObj:Lorg/json/JSONObject;
+    .end local v1    # "accountJSONObj":Lorg/json/JSONObject;
     :cond_2
     add-int/lit8 v9, v9, 0x1
 
     goto :goto_0
 
     .line 44
-    .end local v0           #account:Landroid/accounts/Account;
+    .end local v0    # "account":Landroid/accounts/Account;
     :cond_3
     const-string v3, ""
     :try_end_0
@@ -205,15 +205,15 @@
     goto :goto_1
 
     .line 51
-    .end local v2           #accountJsonArray:Lorg/json/JSONArray;
-    .end local v4           #accounts:[Landroid/accounts/Account;
+    .end local v2    # "accountJsonArray":Lorg/json/JSONArray;
+    .end local v4    # "accounts":[Landroid/accounts/Account;
     :catch_0
     move-exception v8
 
     move-object v7, v8
 
     .line 53
-    .local v7, e:Ljava/lang/Exception;
+    .local v7, "e":Ljava/lang/Exception;
     const-string v8, "ERROR_EVENT"
 
     new-instance v9, Ljava/lang/StringBuilder;

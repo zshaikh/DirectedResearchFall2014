@@ -10,7 +10,7 @@
 # direct methods
 .method protected constructor <init>(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;)V
     .locals 0
-    .parameter "annotations"
+    .param p1, "annotations"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;
 
     .prologue
     .line 21

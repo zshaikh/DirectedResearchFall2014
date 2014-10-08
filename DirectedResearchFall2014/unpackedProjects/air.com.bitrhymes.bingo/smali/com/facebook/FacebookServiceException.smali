@@ -14,8 +14,8 @@
 # direct methods
 .method public constructor <init>(Lcom/facebook/FacebookRequestError;Ljava/lang/String;)V
     .locals 0
-    .parameter "error"
-    .parameter "errorMessage"
+    .param p1, "error"    # Lcom/facebook/FacebookRequestError;
+    .param p2, "errorMessage"    # Ljava/lang/String;
 
     .prologue
     .line 34

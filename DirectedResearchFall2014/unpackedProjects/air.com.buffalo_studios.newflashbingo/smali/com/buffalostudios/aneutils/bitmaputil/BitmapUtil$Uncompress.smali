@@ -30,21 +30,21 @@
 
 .method private getUncompressedSize(II)I
     .locals 3
-    .parameter "width"
-    .parameter "height"
+    .param p1, "width"    # I
+    .param p2, "height"    # I
 
     .prologue
     .line 133
     const/4 v0, 0x4
 
     .line 134
-    .local v0, sizePixel:I
+    .local v0, "sizePixel":I
     mul-int v2, p1, p2
 
     mul-int v1, v2, v0
 
     .line 135
-    .local v1, sizeUncompressed:I
+    .local v1, "sizeUncompressed":I
     return v1
 .end method
 
@@ -55,8 +55,8 @@
 # virtual methods
 .method public call(Lcom/adobe/fre/FREContext;[Lcom/adobe/fre/FREObject;)Lcom/adobe/fre/FREObject;
     .locals 10
-    .parameter "context"
-    .parameter "args"
+    .param p1, "context"    # Lcom/adobe/fre/FREContext;
+    .param p2, "args"    # [Lcom/adobe/fre/FREObject;
 
     .prologue
     const/4 v9, 0x0
@@ -71,7 +71,7 @@
     move-result-object v0
 
     .line 104
-    .local v0, compressedData:Ljava/nio/ByteBuffer;
+    .local v0, "compressedData":Ljava/nio/ByteBuffer;
     sget-object v7, Ljava/nio/ByteOrder;->LITTLE_ENDIAN:Ljava/nio/ByteOrder;
 
     invoke-virtual {v0, v7}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
@@ -82,7 +82,7 @@
     move-result v5
 
     .line 108
-    .local v5, imageWidth:I
+    .local v5, "imageWidth":I
     const/4 v7, 0x4
 
     invoke-virtual {v0, v7}, Ljava/nio/ByteBuffer;->getInt(I)I
@@ -90,27 +90,27 @@
     move-result v3
 
     .line 111
-    .local v3, imageHeight:I
+    .local v3, "imageHeight":I
     invoke-direct {p0, v5, v3}, Lcom/buffalostudios/aneutils/bitmaputil/BitmapUtil$Uncompress;->getUncompressedSize(II)I
 
     move-result v6
 
     .line 112
-    .local v6, uncompressedSize:I
+    .local v6, "uncompressedSize":I
     invoke-static {v6}, Ljava/nio/ByteBuffer;->allocateDirect(I)Ljava/nio/ByteBuffer;
 
     move-result-object v4
 
     .line 115
-    .local v4, imagePixels:Ljava/nio/ByteBuffer;
+    .local v4, "imagePixels":Ljava/nio/ByteBuffer;
     new-array v2, v8, [I
 
     .line 116
-    .local v2, dummyWidth:[I
+    .local v2, "dummyWidth":[I
     new-array v1, v8, [I
 
     .line 117
-    .local v1, dummyHeight:[I
+    .local v1, "dummyHeight":[I
     invoke-direct {p0, v0, v2, v1, v4}, Lcom/buffalostudios/aneutils/bitmaputil/BitmapUtil$Uncompress;->uncompress(Ljava/nio/ByteBuffer;[I[ILjava/nio/ByteBuffer;)I
 
     move-result v6

@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>([Ljava/lang/String;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 177
@@ -44,20 +43,20 @@
     .line 181
     iget-object v0, p0, Lcom/fusepowered/m1/android/HttpGetRequest$1;->val$urls:[Ljava/lang/String;
 
-    .local v0, arr$:[Ljava/lang/String;
+    .local v0, "arr$":[Ljava/lang/String;
     array-length v4, v0
 
-    .local v4, len$:I
+    .local v4, "len$":I
     const/4 v3, 0x0
 
-    .local v3, i$:I
+    .local v3, "i$":I
     :goto_0
     if-ge v3, v4, :cond_0
 
     aget-object v5, v0, v3
 
     .line 183
-    .local v5, url:Ljava/lang/String;
+    .local v5, "url":Ljava/lang/String;
     const-string v6, "Logging event to: %s"
 
     const/4 v7, 0x1
@@ -77,13 +76,13 @@
     invoke-direct {v2}, Lcom/fusepowered/m1/android/HttpGetRequest;-><init>()V
 
     .line 187
-    .local v2, getRequest:Lcom/fusepowered/m1/android/HttpGetRequest;
+    .local v2, "getRequest":Lcom/fusepowered/m1/android/HttpGetRequest;
     invoke-virtual {v2, v5}, Lcom/fusepowered/m1/android/HttpGetRequest;->get(Ljava/lang/String;)Lorg/apache/http/HttpResponse;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 181
-    .end local v2           #getRequest:Lcom/fusepowered/m1/android/HttpGetRequest;
+    .end local v2    # "getRequest":Lcom/fusepowered/m1/android/HttpGetRequest;
     :goto_1
     add-int/lit8 v3, v3, 0x1
 
@@ -96,7 +95,7 @@
     move-object v1, v6
 
     .line 191
-    .local v1, e:Ljava/lang/Exception;
+    .local v1, "e":Ljava/lang/Exception;
     invoke-virtual {v1}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object v6
@@ -106,8 +105,8 @@
     goto :goto_1
 
     .line 194
-    .end local v1           #e:Ljava/lang/Exception;
-    .end local v5           #url:Ljava/lang/String;
+    .end local v1    # "e":Ljava/lang/Exception;
+    .end local v5    # "url":Ljava/lang/String;
     :cond_0
     return-void
 .end method

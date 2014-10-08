@@ -20,7 +20,6 @@
 # direct methods
 .method public static a(Landroid/view/View;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 458
@@ -36,10 +35,9 @@
 
 .method public static a(Landroid/view/Window;)V
     .locals 1
-    .parameter
 
     .prologue
-    const/high16 v0, 0x100
+    const/high16 v0, 0x1000000
 
     .line 472
     invoke-virtual {p0, v0, v0}, Landroid/view/Window;->setFlags(II)V
@@ -50,8 +48,6 @@
 
 .method public static a(Landroid/webkit/WebSettings;Lcom/google/ads/n;)V
     .locals 6
-    .parameter
-    .parameter
 
     .prologue
     const/4 v4, 0x1
@@ -155,7 +151,6 @@
 
 .method public static b(Landroid/view/View;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 465

@@ -20,7 +20,7 @@
 
 .method public static byteToHex(B)Ljava/lang/String;
     .locals 4
-    .parameter "b"
+    .param p0, "b"    # B
 
     .prologue
     .line 10
@@ -31,7 +31,7 @@
     fill-array-data v1, :array_0
 
     .line 12
-    .local v1, hexDigit:[C
+    .local v1, "hexDigit":[C
     const/4 v2, 0x2
 
     new-array v0, v2, [C
@@ -55,7 +55,7 @@
     aput-char v3, v0, v2
 
     .line 13
-    .local v0, array:[C
+    .local v0, "array":[C
     new-instance v2, Ljava/lang/String;
 
     invoke-direct {v2, v0}, Ljava/lang/String;-><init>([C)V
@@ -64,29 +64,29 @@
 
     .line 10
     :array_0
-    .array-data 0x2
-        0x30t 0x0t
-        0x31t 0x0t
-        0x32t 0x0t
-        0x33t 0x0t
-        0x34t 0x0t
-        0x35t 0x0t
-        0x36t 0x0t
-        0x37t 0x0t
-        0x38t 0x0t
-        0x39t 0x0t
-        0x61t 0x0t
-        0x62t 0x0t
-        0x63t 0x0t
-        0x64t 0x0t
-        0x65t 0x0t
-        0x66t 0x0t
+    .array-data 2
+        0x30s
+        0x31s
+        0x32s
+        0x33s
+        0x34s
+        0x35s
+        0x36s
+        0x37s
+        0x38s
+        0x39s
+        0x61s
+        0x62s
+        0x63s
+        0x64s
+        0x65s
+        0x66s
     .end array-data
 .end method
 
 .method public static convert(Ljava/lang/String;)Ljava/lang/String;
     .locals 6
-    .parameter "str"
+    .param p0, "str"    # Ljava/lang/String;
 
     .prologue
     .line 24
@@ -96,16 +96,16 @@
     move-result-object v0
 
     .line 26
-    .local v0, array:[B
+    .local v0, "array":[B
     new-instance v1, Ljava/lang/StringBuffer;
 
     invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
 
     .line 27
-    .local v1, buffer:Ljava/lang/StringBuffer;
+    .local v1, "buffer":Ljava/lang/StringBuffer;
     const/4 v2, 0x0
 
-    .local v2, k:I
+    .local v2, "k":I
     :goto_0
     array-length v3, v0
 
@@ -162,9 +162,9 @@
     goto :goto_1
 
     .line 35
-    .end local v0           #array:[B
-    .end local v1           #buffer:Ljava/lang/StringBuffer;
-    .end local v2           #k:I
+    .end local v0    # "array":[B
+    .end local v1    # "buffer":Ljava/lang/StringBuffer;
+    .end local v2    # "k":I
     :catch_0
     move-exception v3
 
@@ -175,9 +175,9 @@
     return-object v3
 
     .line 34
-    .restart local v0       #array:[B
-    .restart local v1       #buffer:Ljava/lang/StringBuffer;
-    .restart local v2       #k:I
+    .restart local v0    # "array":[B
+    .restart local v1    # "buffer":Ljava/lang/StringBuffer;
+    .restart local v2    # "k":I
     :cond_1
     new-instance v3, Ljava/lang/String;
 
@@ -200,8 +200,8 @@
 
 .method public static getData(Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/String;
     .locals 1
-    .parameter "key"
-    .parameter "data"
+    .param p0, "key"    # Ljava/lang/String;
+    .param p1, "data"    # Landroid/os/Bundle;
 
     .prologue
     .line 48

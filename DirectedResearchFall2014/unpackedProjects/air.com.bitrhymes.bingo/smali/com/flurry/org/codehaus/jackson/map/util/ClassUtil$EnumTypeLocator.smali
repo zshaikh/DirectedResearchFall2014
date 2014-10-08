@@ -82,8 +82,8 @@
 
 .method private get(Ljava/lang/Object;Ljava/lang/reflect/Field;)Ljava/lang/Object;
     .locals 2
-    .parameter "bean"
-    .parameter "field"
+    .param p1, "bean"    # Ljava/lang/Object;
+    .param p2, "field"    # Ljava/lang/reflect/Field;
 
     .prologue
     .line 610
@@ -101,7 +101,7 @@
     move-exception v0
 
     .line 612
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     invoke-direct {v1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/Throwable;)V
@@ -111,9 +111,7 @@
 
 .method private static locateField(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/reflect/Field;
     .locals 7
-    .parameter
-    .parameter "expectedName"
-    .parameter
+    .param p1, "expectedName"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -128,34 +126,34 @@
 
     .prologue
     .line 618
-    .local p0, fromClass:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
-    .local p2, type:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p0, "fromClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
+    .local p2, "type":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const/4 v3, 0x0
 
     .line 620
-    .local v3, found:Ljava/lang/reflect/Field;
+    .local v3, "found":Ljava/lang/reflect/Field;
     invoke-virtual {p0}, Ljava/lang/Class;->getDeclaredFields()[Ljava/lang/reflect/Field;
 
     move-result-object v2
 
     .line 621
-    .local v2, fields:[Ljava/lang/reflect/Field;
+    .local v2, "fields":[Ljava/lang/reflect/Field;
     move-object v0, v2
 
-    .local v0, arr$:[Ljava/lang/reflect/Field;
+    .local v0, "arr$":[Ljava/lang/reflect/Field;
     array-length v5, v0
 
-    .local v5, len$:I
+    .local v5, "len$":I
     const/4 v4, 0x0
 
-    .local v4, i$:I
+    .local v4, "i$":I
     :goto_0
     if-ge v4, v5, :cond_0
 
     aget-object v1, v0, v4
 
     .line 622
-    .local v1, f:Ljava/lang/reflect/Field;
+    .local v1, "f":Ljava/lang/reflect/Field;
     invoke-virtual {v1}, Ljava/lang/reflect/Field;->getName()Ljava/lang/String;
 
     move-result-object v6
@@ -176,7 +174,7 @@
     move-object v3, v1
 
     .line 628
-    .end local v1           #f:Ljava/lang/reflect/Field;
+    .end local v1    # "f":Ljava/lang/reflect/Field;
     :cond_0
     if-nez v3, :cond_4
 
@@ -193,7 +191,7 @@
     aget-object v1, v0, v4
 
     .line 630
-    .restart local v1       #f:Ljava/lang/reflect/Field;
+    .restart local v1    # "f":Ljava/lang/reflect/Field;
     invoke-virtual {v1}, Ljava/lang/reflect/Field;->getType()Ljava/lang/Class;
 
     move-result-object v6
@@ -206,12 +204,12 @@
     const/4 v6, 0x0
 
     .line 642
-    .end local v1           #f:Ljava/lang/reflect/Field;
+    .end local v1    # "f":Ljava/lang/reflect/Field;
     :goto_2
     return-object v6
 
     .line 621
-    .restart local v1       #f:Ljava/lang/reflect/Field;
+    .restart local v1    # "f":Ljava/lang/reflect/Field;
     :cond_1
     add-int/lit8 v4, v4, 0x1
 
@@ -228,7 +226,7 @@
     goto :goto_1
 
     .line 637
-    .end local v1           #f:Ljava/lang/reflect/Field;
+    .end local v1    # "f":Ljava/lang/reflect/Field;
     :cond_4
     if-eqz v3, :cond_5
 
@@ -258,7 +256,6 @@
 # virtual methods
 .method public enumTypeFor(Ljava/util/EnumMap;)Ljava/lang/Class;
     .locals 2
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -273,7 +270,7 @@
 
     .prologue
     .line 600
-    .local p1, set:Ljava/util/EnumMap;,"Ljava/util/EnumMap<**>;"
+    .local p1, "set":Ljava/util/EnumMap;, "Ljava/util/EnumMap<**>;"
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/map/util/ClassUtil$EnumTypeLocator;->enumMapTypeField:Ljava/lang/reflect/Field;
 
     if-eqz v0, :cond_0
@@ -285,13 +282,13 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/flurry/org/codehaus/jackson/map/util/ClassUtil$EnumTypeLocator;
     check-cast p0, Ljava/lang/Class;
 
     return-object p0
 
     .line 603
-    .restart local p0
+    .restart local p0    # "this":Lcom/flurry/org/codehaus/jackson/map/util/ClassUtil$EnumTypeLocator;
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -304,7 +301,6 @@
 
 .method public enumTypeFor(Ljava/util/EnumSet;)Ljava/lang/Class;
     .locals 2
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -319,7 +315,7 @@
 
     .prologue
     .line 591
-    .local p1, set:Ljava/util/EnumSet;,"Ljava/util/EnumSet<*>;"
+    .local p1, "set":Ljava/util/EnumSet;, "Ljava/util/EnumSet<*>;"
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/map/util/ClassUtil$EnumTypeLocator;->enumSetTypeField:Ljava/lang/reflect/Field;
 
     if-eqz v0, :cond_0
@@ -331,13 +327,13 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/flurry/org/codehaus/jackson/map/util/ClassUtil$EnumTypeLocator;
     check-cast p0, Ljava/lang/Class;
 
     return-object p0
 
     .line 594
-    .restart local p0
+    .restart local p0    # "this":Lcom/flurry/org/codehaus/jackson/map/util/ClassUtil$EnumTypeLocator;
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 

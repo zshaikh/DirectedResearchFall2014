@@ -3,8 +3,8 @@
 .source "$Gson$Types.java"
 
 # interfaces
-.implements Ljava/lang/reflect/GenericArrayType;
 .implements Ljava/io/Serializable;
+.implements Ljava/lang/reflect/GenericArrayType;
 
 
 # annotations
@@ -29,7 +29,7 @@
 # direct methods
 .method public constructor <init>(Ljava/lang/reflect/Type;)V
     .locals 1
-    .parameter "componentType"
+    .param p1, "componentType"    # Ljava/lang/reflect/Type;
 
     .prologue
     .line 502
@@ -50,7 +50,7 @@
 # virtual methods
 .method public equals(Ljava/lang/Object;)Z
     .locals 1
-    .parameter "o"
+    .param p1, "o"    # Ljava/lang/Object;
 
     .prologue
     .line 512
@@ -60,7 +60,7 @@
 
     check-cast p1, Ljava/lang/reflect/GenericArrayType;
 
-    .end local p1
+    .end local p1    # "o":Ljava/lang/Object;
     invoke-static {p0, p1}, Lcom/fusepowered/m1/google/gson/internal/$Gson$Types;->equals(Ljava/lang/reflect/Type;Ljava/lang/reflect/Type;)Z
 
     move-result v0

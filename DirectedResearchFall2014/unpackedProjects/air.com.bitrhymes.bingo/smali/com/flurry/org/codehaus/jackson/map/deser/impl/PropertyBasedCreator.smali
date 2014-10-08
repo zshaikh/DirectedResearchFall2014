@@ -26,7 +26,7 @@
 # direct methods
 .method public constructor <init>(Lcom/flurry/org/codehaus/jackson/map/deser/ValueInstantiator;)V
     .locals 9
-    .parameter "valueInstantiator"
+    .param p1, "valueInstantiator"    # Lcom/flurry/org/codehaus/jackson/map/deser/ValueInstantiator;
 
     .prologue
     .line 48
@@ -46,23 +46,23 @@
     const/4 v1, 0x0
 
     .line 53
-    .local v1, defValues:[Ljava/lang/Object;
+    .local v1, "defValues":[Ljava/lang/Object;
     invoke-virtual {p1}, Lcom/flurry/org/codehaus/jackson/map/deser/ValueInstantiator;->getFromObjectArguments()[Lcom/flurry/org/codehaus/jackson/map/deser/SettableBeanProperty;
 
     move-result-object v0
 
     .line 54
-    .local v0, creatorProps:[Lcom/flurry/org/codehaus/jackson/map/deser/SettableBeanProperty;
+    .local v0, "creatorProps":[Lcom/flurry/org/codehaus/jackson/map/deser/SettableBeanProperty;
     const/4 v6, 0x0
 
     .line 55
-    .local v6, propertiesWithInjectables:[Lcom/flurry/org/codehaus/jackson/map/deser/SettableBeanProperty;
+    .local v6, "propertiesWithInjectables":[Lcom/flurry/org/codehaus/jackson/map/deser/SettableBeanProperty;
     const/4 v2, 0x0
 
-    .local v2, i:I
+    .local v2, "i":I
     array-length v4, v0
 
-    .local v4, len:I
+    .local v4, "len":I
     :goto_0
     if-ge v2, v4, :cond_4
 
@@ -70,7 +70,7 @@
     aget-object v5, v0, v2
 
     .line 57
-    .local v5, prop:Lcom/flurry/org/codehaus/jackson/map/deser/SettableBeanProperty;
+    .local v5, "prop":Lcom/flurry/org/codehaus/jackson/map/deser/SettableBeanProperty;
     iget-object v7, p0, Lcom/flurry/org/codehaus/jackson/map/deser/impl/PropertyBasedCreator;->_properties:Ljava/util/HashMap;
 
     invoke-virtual {v5}, Lcom/flurry/org/codehaus/jackson/map/deser/SettableBeanProperty;->getName()Ljava/lang/String;
@@ -119,7 +119,7 @@
     move-result-object v3
 
     .line 65
-    .local v3, injectableValueId:Ljava/lang/Object;
+    .local v3, "injectableValueId":Ljava/lang/Object;
     if-eqz v3, :cond_3
 
     .line 66
@@ -139,8 +139,8 @@
     goto :goto_0
 
     .line 72
-    .end local v3           #injectableValueId:Ljava/lang/Object;
-    .end local v5           #prop:Lcom/flurry/org/codehaus/jackson/map/deser/SettableBeanProperty;
+    .end local v3    # "injectableValueId":Ljava/lang/Object;
+    .end local v5    # "prop":Lcom/flurry/org/codehaus/jackson/map/deser/SettableBeanProperty;
     :cond_4
     iput-object v1, p0, Lcom/flurry/org/codehaus/jackson/map/deser/impl/PropertyBasedCreator;->_defaultValues:[Ljava/lang/Object;
 
@@ -155,8 +155,7 @@
 # virtual methods
 .method public assignDeserializer(Lcom/flurry/org/codehaus/jackson/map/deser/SettableBeanProperty;Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;)V
     .locals 3
-    .parameter "prop"
-    .parameter
+    .param p1, "prop"    # Lcom/flurry/org/codehaus/jackson/map/deser/SettableBeanProperty;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -170,7 +169,7 @@
 
     .prologue
     .line 85
-    .local p2, deser:Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer<Ljava/lang/Object;>;"
+    .local p2, "deser":Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer<Ljava/lang/Object;>;"
     invoke-virtual {p1, p2}, Lcom/flurry/org/codehaus/jackson/map/deser/SettableBeanProperty;->withValueDeserializer(Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;)Lcom/flurry/org/codehaus/jackson/map/deser/SettableBeanProperty;
 
     move-result-object p1
@@ -190,7 +189,7 @@
     move-result-object v0
 
     .line 88
-    .local v0, nullValue:Ljava/lang/Object;
+    .local v0, "nullValue":Ljava/lang/Object;
     if-eqz v0, :cond_1
 
     .line 89
@@ -226,7 +225,7 @@
 
 .method public build(Lcom/flurry/org/codehaus/jackson/map/deser/impl/PropertyValueBuffer;)Ljava/lang/Object;
     .locals 4
-    .parameter "buffer"
+    .param p1, "buffer"    # Lcom/flurry/org/codehaus/jackson/map/deser/impl/PropertyValueBuffer;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -248,12 +247,12 @@
     move-result-object v0
 
     .line 112
-    .local v0, bean:Ljava/lang/Object;
+    .local v0, "bean":Ljava/lang/Object;
     invoke-virtual {p1}, Lcom/flurry/org/codehaus/jackson/map/deser/impl/PropertyValueBuffer;->buffered()Lcom/flurry/org/codehaus/jackson/map/deser/impl/PropertyValue;
 
     move-result-object v1
 
-    .local v1, pv:Lcom/flurry/org/codehaus/jackson/map/deser/impl/PropertyValue;
+    .local v1, "pv":Lcom/flurry/org/codehaus/jackson/map/deser/impl/PropertyValue;
     :goto_0
     if-eqz v1, :cond_0
 
@@ -272,7 +271,7 @@
 
 .method public findCreatorProperty(Ljava/lang/String;)Lcom/flurry/org/codehaus/jackson/map/deser/SettableBeanProperty;
     .locals 1
-    .parameter "name"
+    .param p1, "name"    # Ljava/lang/String;
 
     .prologue
     .line 81
@@ -282,7 +281,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/flurry/org/codehaus/jackson/map/deser/impl/PropertyBasedCreator;
     check-cast p0, Lcom/flurry/org/codehaus/jackson/map/deser/SettableBeanProperty;
 
     return-object p0
@@ -313,8 +312,8 @@
 
 .method public startBuilding(Lcom/flurry/org/codehaus/jackson/JsonParser;Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;)Lcom/flurry/org/codehaus/jackson/map/deser/impl/PropertyValueBuffer;
     .locals 2
-    .parameter "jp"
-    .parameter "ctxt"
+    .param p1, "jp"    # Lcom/flurry/org/codehaus/jackson/JsonParser;
+    .param p2, "ctxt"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;
 
     .prologue
     .line 101
@@ -329,7 +328,7 @@
     invoke-direct {v0, p1, p2, v1}, Lcom/flurry/org/codehaus/jackson/map/deser/impl/PropertyValueBuffer;-><init>(Lcom/flurry/org/codehaus/jackson/JsonParser;Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;I)V
 
     .line 102
-    .local v0, buffer:Lcom/flurry/org/codehaus/jackson/map/deser/impl/PropertyValueBuffer;
+    .local v0, "buffer":Lcom/flurry/org/codehaus/jackson/map/deser/impl/PropertyValueBuffer;
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/map/deser/impl/PropertyBasedCreator;->_propertiesWithInjectables:[Lcom/flurry/org/codehaus/jackson/map/deser/SettableBeanProperty;
 
     if-eqz v1, :cond_0

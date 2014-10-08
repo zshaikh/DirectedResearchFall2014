@@ -3,8 +3,8 @@
 .source "ApplifierImpactMainView.java"
 
 # interfaces
-.implements Lcom/fusepowered/a1/webapp/IApplifierImpactWebViewListener;
 .implements Lcom/fusepowered/a1/video/IApplifierImpactVideoPlayerListener;
+.implements Lcom/fusepowered/a1/webapp/IApplifierImpactWebViewListener;
 
 
 # annotations
@@ -99,7 +99,7 @@
 
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     const/4 v0, 0x0
@@ -130,8 +130,8 @@
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
-    .parameter "context"
-    .parameter "attrs"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
     const/4 v0, 0x0
@@ -162,9 +162,9 @@
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 1
-    .parameter "context"
-    .parameter "attrs"
-    .parameter "defStyle"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "attrs"    # Landroid/util/AttributeSet;
+    .param p3, "defStyle"    # I
 
     .prologue
     const/4 v0, 0x0
@@ -195,8 +195,8 @@
 
 .method public constructor <init>(Landroid/content/Context;Lcom/fusepowered/a1/view/IApplifierImpactMainViewListener;)V
     .locals 1
-    .parameter "context"
-    .parameter "listener"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "listener"    # Lcom/fusepowered/a1/view/IApplifierImpactMainViewListener;
 
     .prologue
     const/4 v0, 0x0
@@ -349,7 +349,7 @@
 
 .method private focusToView(Landroid/view/View;)V
     .locals 1
-    .parameter "view"
+    .param p1, "view"    # Landroid/view/View;
 
     .prologue
     const/4 v0, 0x1
@@ -394,7 +394,7 @@
 
 .method private removeFromMainView(Landroid/view/View;)V
     .locals 2
-    .parameter "view"
+    .param p1, "view"    # Landroid/view/View;
 
     .prologue
     const/4 v1, 0x0
@@ -416,21 +416,21 @@
     check-cast v0, Landroid/view/ViewGroup;
 
     .line 190
-    .local v0, vg:Landroid/view/ViewGroup;
+    .local v0, "vg":Landroid/view/ViewGroup;
     if-eqz v0, :cond_0
 
     .line 191
     invoke-virtual {v0, p1}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
 
     .line 193
-    .end local v0           #vg:Landroid/view/ViewGroup;
+    .end local v0    # "vg":Landroid/view/ViewGroup;
     :cond_0
     return-void
 .end method
 
 .method private sendActionToListener(Lcom/fusepowered/a1/view/ApplifierImpactMainView$ApplifierImpactMainViewAction;)V
     .locals 1
-    .parameter "action"
+    .param p1, "action"    # Lcom/fusepowered/a1/view/ApplifierImpactMainView$ApplifierImpactMainViewAction;
 
     .prologue
     .line 204
@@ -488,7 +488,7 @@
 
 .method public closeImpact(Lorg/json/JSONObject;)V
     .locals 2
-    .parameter "data"
+    .param p1, "data"    # Lorg/json/JSONObject;
 
     .prologue
     .line 92
@@ -506,14 +506,14 @@
     check-cast v0, Landroid/view/ViewGroup;
 
     .line 94
-    .local v0, vg:Landroid/view/ViewGroup;
+    .local v0, "vg":Landroid/view/ViewGroup;
     if-eqz v0, :cond_0
 
     .line 95
     invoke-virtual {v0, p0}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
 
     .line 98
-    .end local v0           #vg:Landroid/view/ViewGroup;
+    .end local v0    # "vg":Landroid/view/ViewGroup;
     :cond_0
     invoke-direct {p0}, Lcom/fusepowered/a1/view/ApplifierImpactMainView;->destroyVideoPlayerView()V
 
@@ -552,7 +552,7 @@
 
 .method public onBackButtonClicked(Landroid/view/View;)V
     .locals 2
-    .parameter "view"
+    .param p1, "view"    # Landroid/view/View;
 
     .prologue
     .line 213
@@ -673,7 +673,7 @@
 
 .method public onCompletion(Landroid/media/MediaPlayer;)V
     .locals 4
-    .parameter "mp"
+    .param p1, "mp"    # Landroid/media/MediaPlayer;
 
     .prologue
     .line 279
@@ -695,7 +695,7 @@
     invoke-direct {v1}, Lorg/json/JSONObject;-><init>()V
 
     .line 286
-    .local v1, params:Lorg/json/JSONObject;
+    .local v1, "params":Lorg/json/JSONObject;
     :try_start_0
     const-string v2, "campaignId"
 
@@ -732,7 +732,7 @@
     move-object v0, v2
 
     .line 289
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v2, "Could not create JSON"
 
     invoke-static {v2, p0}, Lcom/fusepowered/a1/ApplifierImpactUtils;->Log(Ljava/lang/String;Ljava/lang/Object;)V
@@ -742,7 +742,7 @@
 
 .method public onEventPositionReached(Lcom/fusepowered/a1/webapp/ApplifierImpactWebData$ApplifierVideoPosition;)V
     .locals 2
-    .parameter "position"
+    .param p1, "position"    # Lcom/fusepowered/a1/webapp/ApplifierImpactWebData$ApplifierVideoPosition;
 
     .prologue
     .line 273
@@ -778,8 +778,8 @@
 
 .method public onKeyDown(ILandroid/view/KeyEvent;)Z
     .locals 1
-    .parameter "keyCode"
-    .parameter "event"
+    .param p1, "keyCode"    # I
+    .param p2, "event"    # Landroid/view/KeyEvent;
 
     .prologue
     .line 139
@@ -836,19 +836,19 @@
     invoke-direct {v1}, Lorg/json/JSONObject;-><init>()V
 
     .line 303
-    .local v1, errorParams:Lorg/json/JSONObject;
+    .local v1, "errorParams":Lorg/json/JSONObject;
     new-instance v3, Lorg/json/JSONObject;
 
     invoke-direct {v3}, Lorg/json/JSONObject;-><init>()V
 
     .line 304
-    .local v3, spinnerParams:Lorg/json/JSONObject;
+    .local v3, "spinnerParams":Lorg/json/JSONObject;
     new-instance v2, Lorg/json/JSONObject;
 
     invoke-direct {v2}, Lorg/json/JSONObject;-><init>()V
 
     .line 307
-    .local v2, params:Lorg/json/JSONObject;
+    .local v2, "params":Lorg/json/JSONObject;
     :try_start_0
     const-string v4, "textKey"
 
@@ -927,7 +927,7 @@
     move-object v0, v4
 
     .line 312
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v4, "Could not create JSON"
 
     invoke-static {v4, p0}, Lcom/fusepowered/a1/ApplifierImpactUtils;->Log(Ljava/lang/String;Ljava/lang/Object;)V
@@ -952,13 +952,13 @@
     invoke-direct {v1}, Lorg/json/JSONObject;-><init>()V
 
     .line 236
-    .local v1, params:Lorg/json/JSONObject;
+    .local v1, "params":Lorg/json/JSONObject;
     new-instance v2, Lorg/json/JSONObject;
 
     invoke-direct {v2}, Lorg/json/JSONObject;-><init>()V
 
     .line 239
-    .local v2, spinnerParams:Lorg/json/JSONObject;
+    .local v2, "spinnerParams":Lorg/json/JSONObject;
     :try_start_0
     const-string v4, "campaignId"
 
@@ -994,7 +994,7 @@
     const/4 v3, 0x6
 
     .line 252
-    .local v3, targetOrientation:I
+    .local v3, "targetOrientation":I
     sget v4, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v5, 0x9
@@ -1081,14 +1081,14 @@
     return-void
 
     .line 242
-    .end local v3           #targetOrientation:I
+    .end local v3    # "targetOrientation":I
     :catch_0
     move-exception v4
 
     move-object v0, v4
 
     .line 243
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v4, "Could not create JSON"
 
     invoke-static {v4, p0}, Lcom/fusepowered/a1/ApplifierImpactUtils;->Log(Ljava/lang/String;Ljava/lang/Object;)V
@@ -1104,14 +1104,14 @@
     const/4 v2, 0x0
 
     .line 327
-    .local v2, values:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
+    .local v2, "values":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
     new-instance v2, Ljava/util/HashMap;
 
-    .end local v2           #values:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
+    .end local v2    # "values":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
     invoke-direct {v2}, Ljava/util/HashMap;-><init>()V
 
     .line 328
-    .restart local v2       #values:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
+    .restart local v2    # "values":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
     const-string v3, "bufferingDuration"
 
     iget-object v4, p0, Lcom/fusepowered/a1/view/ApplifierImpactMainView;->videoplayerview:Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;
@@ -1147,7 +1147,7 @@
     invoke-direct {v1}, Lorg/json/JSONObject;-><init>()V
 
     .line 336
-    .local v1, params:Lorg/json/JSONObject;
+    .local v1, "params":Lorg/json/JSONObject;
     :try_start_0
     const-string v3, "campaignId"
 
@@ -1184,7 +1184,7 @@
     move-object v0, v3
 
     .line 339
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v3, "Could not create JSON"
 
     invoke-static {v3, p0}, Lcom/fusepowered/a1/ApplifierImpactUtils;->Log(Ljava/lang/String;Ljava/lang/Object;)V
@@ -1213,8 +1213,8 @@
 
 .method public openImpact(Ljava/lang/String;Lorg/json/JSONObject;)V
     .locals 3
-    .parameter "view"
-    .parameter "data"
+    .param p1, "view"    # Ljava/lang/String;
+    .param p2, "data"    # Lorg/json/JSONObject;
 
     .prologue
     const/4 v2, -0x1
@@ -1309,7 +1309,7 @@
 
 .method public setViewState(Lcom/fusepowered/a1/view/ApplifierImpactMainView$ApplifierImpactMainViewState;)V
     .locals 3
-    .parameter "state"
+    .param p1, "state"    # Lcom/fusepowered/a1/view/ApplifierImpactMainView$ApplifierImpactMainViewState;
 
     .prologue
     const/4 v2, -0x1

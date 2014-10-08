@@ -44,7 +44,6 @@
 
 .method synthetic constructor <init>(Lcom/facebook/AppEventsLogger$FlushStatistics;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 844

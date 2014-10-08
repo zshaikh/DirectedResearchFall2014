@@ -79,7 +79,6 @@
 
 .method private getBitmapFromURL(Ljava/lang/String;)Landroid/graphics/Bitmap;
     .locals 1
-    .parameter
 
     .prologue
     .line 205
@@ -131,7 +130,6 @@
 
 .method private handleNotification(Ljava/lang/String;)V
     .locals 2
-    .parameter
 
     .prologue
     const-string v0, "http://"
@@ -348,7 +346,7 @@
     .locals 9
 
     .prologue
-    const-wide/high16 v5, -0x8000
+    const-wide/high16 v5, -0x8000000000000000L
 
     const/4 v7, 0x0
 
@@ -436,7 +434,7 @@
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 153
-    const/high16 v1, 0x2400
+    const/high16 v1, 0x24000000
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
@@ -447,7 +445,7 @@
 
     sput v1, Lcom/adobe/air/AndroidGcmIntentService;->sUniqueId:I
 
-    const/high16 v2, 0x4000
+    const/high16 v2, 0x40000000
 
     invoke-static {p0, v1, v0, v2}, Landroid/app/PendingIntent;->getActivity(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
 
@@ -521,7 +519,6 @@
 # virtual methods
 .method protected onHandleIntent(Landroid/content/Intent;)V
     .locals 4
-    .parameter
 
     .prologue
     const-string v3, "message"

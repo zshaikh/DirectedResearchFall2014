@@ -30,10 +30,6 @@
 # direct methods
 .method constructor <init>(Lcom/bitrhymes/iab/util/IabHelper$3;Lcom/bitrhymes/iab/util/IabHelper$OnConsumeMultiFinishedListener;Ljava/util/List;Ljava/util/List;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 1

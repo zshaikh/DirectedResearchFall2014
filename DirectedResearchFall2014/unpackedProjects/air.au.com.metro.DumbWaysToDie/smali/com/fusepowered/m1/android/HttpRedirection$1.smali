@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Ljava/lang/ref/WeakReference;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 180
@@ -37,18 +36,18 @@
 
 .method private handleDestinationUri(Lcom/fusepowered/m1/android/HttpRedirection$RedirectionListenerImpl;)V
     .locals 11
-    .parameter "listener"
+    .param p1, "listener"    # Lcom/fusepowered/m1/android/HttpRedirection$RedirectionListenerImpl;
 
     .prologue
     .line 206
     const/4 v5, 0x0
 
     .line 207
-    .local v5, scheme:Ljava/lang/String;
+    .local v5, "scheme":Ljava/lang/String;
     const/4 v4, 0x0
 
     .line 208
-    .local v4, intent:Landroid/content/Intent;
+    .local v4, "intent":Landroid/content/Intent;
     iget-object v7, p1, Lcom/fusepowered/m1/android/HttpRedirection$RedirectionListenerImpl;->weakContext:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v7}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -58,7 +57,7 @@
     check-cast v1, Landroid/content/Context;
 
     .line 209
-    .local v1, context:Landroid/content/Context;
+    .local v1, "context":Landroid/content/Context;
     if-eqz v1, :cond_4
 
     .line 211
@@ -95,7 +94,7 @@
     move-result-object v6
 
     .line 227
-    .local v6, settings:Lcom/fusepowered/m1/android/OverlaySettings;
+    .local v6, "settings":Lcom/fusepowered/m1/android/OverlaySettings;
     if-eqz v4, :cond_2
 
     if-eqz v6, :cond_2
@@ -125,7 +124,7 @@
     move-result-object v0
 
     .line 234
-    .local v0, clazz:Ljava/lang/String;
+    .local v0, "clazz":Ljava/lang/String;
     if-eqz v0, :cond_3
 
     const-class v7, Lcom/fusepowered/m1/android/AdViewOverlayActivity;
@@ -162,8 +161,8 @@
     .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 253
-    .end local v0           #clazz:Ljava/lang/String;
-    .end local v6           #settings:Lcom/fusepowered/m1/android/OverlaySettings;
+    .end local v0    # "clazz":Ljava/lang/String;
+    .end local v6    # "settings":Lcom/fusepowered/m1/android/OverlaySettings;
     :cond_4
     :goto_1
     return-void
@@ -186,22 +185,22 @@
     move-result-object v3
 
     .line 220
-    .local v3, id:Ljava/lang/String;
+    .local v3, "id":Ljava/lang/String;
     invoke-static {v1, v3, p1}, Lcom/fusepowered/m1/android/VideoAd;->playAd(Landroid/content/Context;Ljava/lang/String;Lcom/fusepowered/m1/android/HttpRedirection$RedirectionListenerImpl;)V
 
     goto :goto_0
 
     .line 244
-    .end local v3           #id:Ljava/lang/String;
-    .restart local v0       #clazz:Ljava/lang/String;
-    .restart local v6       #settings:Lcom/fusepowered/m1/android/OverlaySettings;
+    .end local v3    # "id":Ljava/lang/String;
+    .restart local v0    # "clazz":Ljava/lang/String;
+    .restart local v6    # "settings":Lcom/fusepowered/m1/android/OverlaySettings;
     :catch_0
     move-exception v7
 
     move-object v2, v7
 
     .line 246
-    .local v2, e:Landroid/content/ActivityNotFoundException;
+    .local v2, "e":Landroid/content/ActivityNotFoundException;
     const-string v7, "No activity found for %s"
 
     const/4 v8, 0x1
@@ -235,7 +234,7 @@
     check-cast v1, Lcom/fusepowered/m1/android/HttpRedirection$RedirectionListenerImpl;
 
     .line 186
-    .local v1, listener:Lcom/fusepowered/m1/android/HttpRedirection$RedirectionListenerImpl;
+    .local v1, "listener":Lcom/fusepowered/m1/android/HttpRedirection$RedirectionListenerImpl;
     if-eqz v1, :cond_0
 
     .line 188
@@ -246,7 +245,7 @@
     move-result-object v0
 
     .line 189
-    .local v0, destination:Ljava/lang/String;
+    .local v0, "destination":Ljava/lang/String;
     if-eqz v0, :cond_0
 
     .line 191
@@ -265,13 +264,13 @@
     invoke-direct {p0, v1}, Lcom/fusepowered/m1/android/HttpRedirection$1;->handleDestinationUri(Lcom/fusepowered/m1/android/HttpRedirection$RedirectionListenerImpl;)V
 
     .line 202
-    .end local v0           #destination:Ljava/lang/String;
+    .end local v0    # "destination":Ljava/lang/String;
     :cond_0
     :goto_0
     return-void
 
     .line 198
-    .restart local v0       #destination:Ljava/lang/String;
+    .restart local v0    # "destination":Ljava/lang/String;
     :cond_1
     const-string v2, "Could not start activity for %s"
 

@@ -45,7 +45,7 @@
 
     move-result-wide v1
 
-    #calls: Lcom/facebook/AppLinkData;->createFromJson(Ljava/lang/String;)Lcom/facebook/AppLinkData;
+    # invokes: Lcom/facebook/AppLinkData;->createFromJson(Ljava/lang/String;)Lcom/facebook/AppLinkData;
     invoke-static {v0}, Lcom/facebook/AppLinkData;->access$000(Ljava/lang/String;)Lcom/facebook/AppLinkData;
 
     move-result-object v0
@@ -55,14 +55,14 @@
     if-eqz v3, :cond_1
 
     :try_start_0
-    #getter for: Lcom/facebook/AppLinkData;->arguments:Lorg/json/JSONObject;
+    # getter for: Lcom/facebook/AppLinkData;->arguments:Lorg/json/JSONObject;
     invoke-static {v0}, Lcom/facebook/AppLinkData;->access$100(Lcom/facebook/AppLinkData;)Lorg/json/JSONObject;
 
     move-result-object v3
 
     if-eqz v3, :cond_0
 
-    #getter for: Lcom/facebook/AppLinkData;->arguments:Lorg/json/JSONObject;
+    # getter for: Lcom/facebook/AppLinkData;->arguments:Lorg/json/JSONObject;
     invoke-static {v0}, Lcom/facebook/AppLinkData;->access$100(Lcom/facebook/AppLinkData;)Lorg/json/JSONObject;
 
     move-result-object v3
@@ -72,14 +72,14 @@
     invoke-virtual {v3, v4, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
 
     :cond_0
-    #getter for: Lcom/facebook/AppLinkData;->argumentBundle:Landroid/os/Bundle;
+    # getter for: Lcom/facebook/AppLinkData;->argumentBundle:Landroid/os/Bundle;
     invoke-static {v0}, Lcom/facebook/AppLinkData;->access$200(Lcom/facebook/AppLinkData;)Landroid/os/Bundle;
 
     move-result-object v3
 
     if-eqz v3, :cond_1
 
-    #getter for: Lcom/facebook/AppLinkData;->argumentBundle:Landroid/os/Bundle;
+    # getter for: Lcom/facebook/AppLinkData;->argumentBundle:Landroid/os/Bundle;
     invoke-static {v0}, Lcom/facebook/AppLinkData;->access$200(Lcom/facebook/AppLinkData;)Landroid/os/Bundle;
 
     move-result-object v3
@@ -105,6 +105,7 @@
     :catch_0
     move-exception v1
 
+    # getter for: Lcom/facebook/AppLinkData;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/facebook/AppLinkData;->access$300()Ljava/lang/String;
 
     move-result-object v1

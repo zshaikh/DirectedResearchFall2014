@@ -10,8 +10,8 @@
 # direct methods
 .method protected constructor <init>(Ljava/io/InputStream;J)V
     .locals 0
-    .parameter "in"
-    .parameter "maxLength"
+    .param p1, "in"    # Ljava/io/InputStream;
+    .param p2, "maxLength"    # J
 
     .prologue
     .line 31
@@ -95,7 +95,7 @@
     move-result v0
 
     .line 39
-    .local v0, v:I
+    .local v0, "v":I
     if-eq v0, v5, :cond_0
 
     .line 40
@@ -111,7 +111,7 @@
     move v1, v0
 
     .line 44
-    .end local v0           #v:I
+    .end local v0    # "v":I
     :goto_0
     return v1
 
@@ -123,7 +123,7 @@
 
 .method public read([B)I
     .locals 2
-    .parameter "b"
+    .param p1, "b"    # [B
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -145,9 +145,9 @@
 
 .method public read([BII)I
     .locals 6
-    .parameter "b"
-    .parameter "off"
-    .parameter "len"
+    .param p1, "b"    # [B
+    .param p2, "off"    # I
+    .param p3, "len"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -194,7 +194,7 @@
     move-result v0
 
     .line 68
-    .local v0, v:I
+    .local v0, "v":I
     if-eq v0, v5, :cond_2
 
     .line 69
@@ -215,7 +215,7 @@
 
 .method public skip(J)J
     .locals 4
-    .parameter "n"
+    .param p1, "n"    # J
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -235,7 +235,7 @@
     move-result-wide v0
 
     .line 82
-    .local v0, v:J
+    .local v0, "v":J
     iget-wide v2, p0, Lcom/flurry/org/apache/avro/file/LengthLimitedInputStream;->remaining:J
 
     sub-long/2addr v2, v0

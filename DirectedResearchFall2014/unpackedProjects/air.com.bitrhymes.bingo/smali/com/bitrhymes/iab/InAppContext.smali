@@ -54,7 +54,7 @@
 
 .method public static setFREContext(Lcom/adobe/fre/FREContext;)V
     .locals 0
-    .parameter "appsContext1"
+    .param p0, "appsContext1"    # Lcom/adobe/fre/FREContext;
 
     .prologue
     .line 35
@@ -102,7 +102,7 @@
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     .line 50
-    .local v0, functionMap:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Lcom/adobe/fre/FREFunction;>;"
+    .local v0, "functionMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Lcom/adobe/fre/FREFunction;>;"
     const-string v1, "getVersion"
 
     new-instance v2, Lcom/bitrhymes/iab/functions/GetVersion;

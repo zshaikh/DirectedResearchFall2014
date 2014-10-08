@@ -21,14 +21,14 @@
 # virtual methods
 .method public call(Lcom/adobe/fre/FREContext;[Lcom/adobe/fre/FREObject;)Lcom/adobe/fre/FREObject;
     .locals 1
-    .parameter "context"
-    .parameter "passedArgs"
+    .param p1, "context"    # Lcom/adobe/fre/FREContext;
+    .param p2, "passedArgs"    # [Lcom/adobe/fre/FREObject;
 
     .prologue
     .line 28
     const/4 v0, 0x0
 
     .line 35
-    .local v0, result:Lcom/adobe/fre/FREObject;
+    .local v0, "result":Lcom/adobe/fre/FREObject;
     return-object v0
 .end method

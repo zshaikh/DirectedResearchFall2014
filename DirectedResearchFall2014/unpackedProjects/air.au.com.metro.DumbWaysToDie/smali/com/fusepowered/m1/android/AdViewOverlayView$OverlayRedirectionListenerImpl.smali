@@ -17,7 +17,7 @@
 # direct methods
 .method public constructor <init>(Lcom/fusepowered/m1/android/MMAdImpl;)V
     .locals 0
-    .parameter "adImpl"
+    .param p1, "adImpl"    # Lcom/fusepowered/m1/android/MMAdImpl;
 
     .prologue
     .line 339
@@ -43,7 +43,7 @@
     check-cast v0, Lcom/fusepowered/m1/android/MMAdImpl;
 
     .line 346
-    .local v0, adImpl:Lcom/fusepowered/m1/android/MMAdImpl;
+    .local v0, "adImpl":Lcom/fusepowered/m1/android/MMAdImpl;
     if-eqz v0, :cond_0
 
     instance-of v1, v0, Lcom/fusepowered/m1/android/AdViewOverlayView$AdViewOverlayViewMMAdImpl;

@@ -35,8 +35,8 @@
 
 .method private calculateAdSize(II)Lcom/google/ads/AdSize;
     .locals 1
-    .parameter "width"
-    .parameter "height"
+    .param p1, "width"    # I
+    .param p2, "height"    # I
 
     .prologue
     .line 131
@@ -141,7 +141,6 @@
 
 .method private extractLocation(Ljava/util/Map;)Landroid/location/Location;
     .locals 2
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -156,7 +155,7 @@
 
     .prologue
     .line 122
-    .local p1, localExtras:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
+    .local p1, "localExtras":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
     const-string v1, "location"
 
     invoke-interface {p1, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -164,7 +163,7 @@
     move-result-object v0
 
     .line 123
-    .local v0, location:Ljava/lang/Object;
+    .local v0, "location":Ljava/lang/Object;
     instance-of v1, v0, Landroid/location/Location;
 
     if-eqz v1, :cond_0
@@ -172,14 +171,14 @@
     .line 124
     check-cast v0, Landroid/location/Location;
 
-    .end local v0           #location:Ljava/lang/Object;
+    .end local v0    # "location":Ljava/lang/Object;
     move-object v1, v0
 
     .line 126
     :goto_0
     return-object v1
 
-    .restart local v0       #location:Ljava/lang/Object;
+    .restart local v0    # "location":Ljava/lang/Object;
     :cond_0
     const/4 v1, 0x0
 
@@ -188,7 +187,6 @@
 
 .method private extrasAreValid(Ljava/util/Map;)Z
     .locals 2
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -202,7 +200,7 @@
 
     .prologue
     .line 146
-    .local p1, serverExtras:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p1, "serverExtras":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     :try_start_0
     const-string v1, "adWidth"
 
@@ -210,7 +208,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/fusepowered/m2/m2l/GoogleAdMobBanner;
     check-cast p0, Ljava/lang/String;
 
     invoke-static {p0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -245,7 +243,7 @@
     move-object v0, v1
 
     .line 149
-    .local v0, e:Ljava/lang/NumberFormatException;
+    .local v0, "e":Ljava/lang/NumberFormatException;
     const/4 v1, 0x0
 
     goto :goto_0
@@ -267,10 +265,8 @@
 
 .method protected loadBanner(Landroid/content/Context;Lcom/fusepowered/m2/m2l/CustomEventBanner$CustomEventBannerListener;Ljava/util/Map;Ljava/util/Map;)V
     .locals 9
-    .parameter "context"
-    .parameter "customEventBannerListener"
-    .parameter
-    .parameter
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "customEventBannerListener"    # Lcom/fusepowered/m2/m2l/CustomEventBanner$CustomEventBannerListener;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -291,8 +287,8 @@
 
     .prologue
     .line 77
-    .local p3, localExtras:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
-    .local p4, serverExtras:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p3, "localExtras":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
+    .local p4, "serverExtras":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     iput-object p2, p0, Lcom/fusepowered/m2/m2l/GoogleAdMobBanner;->mBannerListener:Lcom/fusepowered/m2/m2l/CustomEventBanner$CustomEventBannerListener;
 
     .line 83
@@ -308,12 +304,12 @@
     invoke-interface {v6, v7}, Lcom/fusepowered/m2/m2l/CustomEventBanner$CustomEventBannerListener;->onBannerFailed(Lcom/fusepowered/m2/m2l/MoPubErrorCode;)V
 
     .line 112
-    .end local p1
+    .end local p1    # "context":Landroid/content/Context;
     :goto_0
     return-void
 
     .line 88
-    .restart local p1
+    .restart local p1    # "context":Landroid/content/Context;
     :cond_0
     invoke-direct {p0, p4}, Lcom/fusepowered/m2/m2l/GoogleAdMobBanner;->extrasAreValid(Ljava/util/Map;)Z
 
@@ -331,7 +327,7 @@
     check-cast v2, Ljava/lang/String;
 
     .line 90
-    .local v2, adUnitId:Ljava/lang/String;
+    .local v2, "adUnitId":Ljava/lang/String;
     const-string v6, "adWidth"
 
     invoke-interface {p4, v6}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -345,7 +341,7 @@
     move-result v3
 
     .line 91
-    .local v3, adWidth:I
+    .local v3, "adWidth":I
     const-string v6, "adHeight"
 
     invoke-interface {p4, v6}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -359,13 +355,13 @@
     move-result v0
 
     .line 97
-    .local v0, adHeight:I
+    .local v0, "adHeight":I
     invoke-direct {p0, v3, v0}, Lcom/fusepowered/m2/m2l/GoogleAdMobBanner;->calculateAdSize(II)Lcom/google/ads/AdSize;
 
     move-result-object v1
 
     .line 98
-    .local v1, adSize:Lcom/google/ads/AdSize;
+    .local v1, "adSize":Lcom/google/ads/AdSize;
     if-nez v1, :cond_2
 
     .line 99
@@ -407,10 +403,10 @@
     goto :goto_0
 
     .line 93
-    .end local v0           #adHeight:I
-    .end local v1           #adSize:Lcom/google/ads/AdSize;
-    .end local v2           #adUnitId:Ljava/lang/String;
-    .end local v3           #adWidth:I
+    .end local v0    # "adHeight":I
+    .end local v1    # "adSize":Lcom/google/ads/AdSize;
+    .end local v2    # "adUnitId":Ljava/lang/String;
+    .end local v3    # "adWidth":I
     :cond_1
     iget-object v6, p0, Lcom/fusepowered/m2/m2l/GoogleAdMobBanner;->mBannerListener:Lcom/fusepowered/m2/m2l/CustomEventBanner$CustomEventBannerListener;
 
@@ -421,16 +417,16 @@
     goto :goto_0
 
     .line 104
-    .restart local v0       #adHeight:I
-    .restart local v1       #adSize:Lcom/google/ads/AdSize;
-    .restart local v2       #adUnitId:Ljava/lang/String;
-    .restart local v3       #adWidth:I
+    .restart local v0    # "adHeight":I
+    .restart local v1    # "adSize":Lcom/google/ads/AdSize;
+    .restart local v2    # "adUnitId":Ljava/lang/String;
+    .restart local v3    # "adWidth":I
     :cond_2
     new-instance v6, Lcom/google/ads/AdView;
 
     check-cast p1, Landroid/app/Activity;
 
-    .end local p1
+    .end local p1    # "context":Landroid/content/Context;
     invoke-direct {v6, p1, v1, v2}, Lcom/google/ads/AdView;-><init>(Landroid/app/Activity;Lcom/google/ads/AdSize;Ljava/lang/String;)V
 
     iput-object v6, p0, Lcom/fusepowered/m2/m2l/GoogleAdMobBanner;->mAdMobView:Lcom/google/ads/AdView;
@@ -446,13 +442,13 @@
     invoke-direct {v5}, Lcom/google/ads/AdRequest;-><init>()V
 
     .line 108
-    .local v5, request:Lcom/google/ads/AdRequest;
+    .local v5, "request":Lcom/google/ads/AdRequest;
     invoke-direct {p0, p3}, Lcom/fusepowered/m2/m2l/GoogleAdMobBanner;->extractLocation(Ljava/util/Map;)Landroid/location/Location;
 
     move-result-object v4
 
     .line 109
-    .local v4, location:Landroid/location/Location;
+    .local v4, "location":Landroid/location/Location;
     if-eqz v4, :cond_3
 
     invoke-virtual {v5, v4}, Lcom/google/ads/AdRequest;->setLocation(Landroid/location/Location;)Lcom/google/ads/AdRequest;
@@ -468,7 +464,7 @@
 
 .method public onDismissScreen(Lcom/google/ads/Ad;)V
     .locals 0
-    .parameter "ad"
+    .param p1, "ad"    # Lcom/google/ads/Ad;
 
     .prologue
     .line 187
@@ -477,8 +473,8 @@
 
 .method public onFailedToReceiveAd(Lcom/google/ads/Ad;Lcom/google/ads/AdRequest$ErrorCode;)V
     .locals 2
-    .parameter "ad"
-    .parameter "error"
+    .param p1, "ad"    # Lcom/google/ads/Ad;
+    .param p2, "error"    # Lcom/google/ads/AdRequest$ErrorCode;
 
     .prologue
     .line 165
@@ -526,7 +522,7 @@
 
 .method public onLeaveApplication(Lcom/google/ads/Ad;)V
     .locals 0
-    .parameter "ad"
+    .param p1, "ad"    # Lcom/google/ads/Ad;
 
     .prologue
     .line 183
@@ -535,7 +531,7 @@
 
 .method public onPresentScreen(Lcom/google/ads/Ad;)V
     .locals 2
-    .parameter "ad"
+    .param p1, "ad"    # Lcom/google/ads/Ad;
 
     .prologue
     .line 171
@@ -556,7 +552,7 @@
 
 .method public onReceiveAd(Lcom/google/ads/Ad;)V
     .locals 2
-    .parameter "ad"
+    .param p1, "ad"    # Lcom/google/ads/Ad;
 
     .prologue
     .line 177

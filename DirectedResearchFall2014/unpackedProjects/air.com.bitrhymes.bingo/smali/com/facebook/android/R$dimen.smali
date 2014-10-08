@@ -83,7 +83,7 @@
     sput v0, Lcom/facebook/android/R$dimen;->com_facebook_picker_divider_width:I
 
     .line 170
-    const/high16 v0, 0x7f05
+    const/high16 v0, 0x7f050000
 
     sput v0, Lcom/facebook/android/R$dimen;->com_facebook_picker_place_image_size:I
 

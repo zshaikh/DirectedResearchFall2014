@@ -48,7 +48,7 @@
 
 .method public static setInstance(Lcom/fusepowered/m2/m2l/factories/VastManagerFactory;)V
     .locals 0
-    .parameter "factory"
+    .param p0, "factory"    # Lcom/fusepowered/m2/m2l/factories/VastManagerFactory;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 

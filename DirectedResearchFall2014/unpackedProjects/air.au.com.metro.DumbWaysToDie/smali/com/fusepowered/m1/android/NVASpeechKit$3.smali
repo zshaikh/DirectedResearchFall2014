@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m1/android/NVASpeechKit;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 238
@@ -39,9 +38,9 @@
 # virtual methods
 .method public onComplete(Lcom/nuance/nmdp/speechkit/GenericCommand;Lcom/nuance/nmdp/speechkit/GenericResult;Lcom/nuance/nmdp/speechkit/SpeechError;)V
     .locals 2
-    .parameter "command"
-    .parameter "result"
-    .parameter "error"
+    .param p1, "command"    # Lcom/nuance/nmdp/speechkit/GenericCommand;
+    .param p2, "result"    # Lcom/nuance/nmdp/speechkit/GenericResult;
+    .param p3, "error"    # Lcom/nuance/nmdp/speechkit/SpeechError;
 
     .prologue
     .line 242
@@ -76,7 +75,7 @@
     :goto_0
     iget-object v0, p0, Lcom/fusepowered/m1/android/NVASpeechKit$3;->this$0:Lcom/fusepowered/m1/android/NVASpeechKit;
 
-    #calls: Lcom/fusepowered/m1/android/NVASpeechKit;->notifySpeechResults()V
+    # invokes: Lcom/fusepowered/m1/android/NVASpeechKit;->notifySpeechResults()V
     invoke-static {v0}, Lcom/fusepowered/m1/android/NVASpeechKit;->access$700(Lcom/fusepowered/m1/android/NVASpeechKit;)V
 
     .line 252

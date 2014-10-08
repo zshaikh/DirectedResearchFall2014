@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/facebook/LoginActivity;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1
@@ -40,13 +39,13 @@
 # virtual methods
 .method public onCompleted(Lcom/facebook/AuthorizationClient$Result;)V
     .locals 1
-    .parameter "outcome"
+    .param p1, "outcome"    # Lcom/facebook/AuthorizationClient$Result;
 
     .prologue
     .line 73
     iget-object v0, p0, Lcom/facebook/LoginActivity$1;->this$0:Lcom/facebook/LoginActivity;
 
-    #calls: Lcom/facebook/LoginActivity;->onAuthClientCompleted(Lcom/facebook/AuthorizationClient$Result;)V
+    # invokes: Lcom/facebook/LoginActivity;->onAuthClientCompleted(Lcom/facebook/AuthorizationClient$Result;)V
     invoke-static {v0, p1}, Lcom/facebook/LoginActivity;->access$0(Lcom/facebook/LoginActivity;Lcom/facebook/AuthorizationClient$Result;)V
 
     .line 74

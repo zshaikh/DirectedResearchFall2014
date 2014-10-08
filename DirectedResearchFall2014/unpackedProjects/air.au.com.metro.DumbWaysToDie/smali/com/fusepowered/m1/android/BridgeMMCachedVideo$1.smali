@@ -25,9 +25,6 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m1/android/BridgeMMCachedVideo;Landroid/content/Context;Lorg/json/JSONArray;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 57
@@ -46,7 +43,7 @@
 # virtual methods
 .method callback(Lcom/fusepowered/m1/android/CachedAd;)Z
     .locals 2
-    .parameter "ad"
+    .param p1, "ad"    # Lcom/fusepowered/m1/android/CachedAd;
 
     .prologue
     .line 62

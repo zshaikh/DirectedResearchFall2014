@@ -228,9 +228,7 @@
 
 .method private constructor <init>(Ljava/lang/String;IZ)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter "defaultState"
+    .param p3, "defaultState"    # Z
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(Z)V"
@@ -256,25 +254,25 @@
     const/4 v2, 0x0
 
     .line 229
-    .local v2, flags:I
+    .local v2, "flags":I
     invoke-static {}, Lcom/flurry/org/codehaus/jackson/JsonParser$Feature;->values()[Lcom/flurry/org/codehaus/jackson/JsonParser$Feature;
 
     move-result-object v0
 
-    .local v0, arr$:[Lcom/flurry/org/codehaus/jackson/JsonParser$Feature;
+    .local v0, "arr$":[Lcom/flurry/org/codehaus/jackson/JsonParser$Feature;
     array-length v4, v0
 
-    .local v4, len$:I
+    .local v4, "len$":I
     const/4 v3, 0x0
 
-    .local v3, i$:I
+    .local v3, "i$":I
     :goto_0
     if-ge v3, v4, :cond_1
 
     aget-object v1, v0, v3
 
     .line 230
-    .local v1, f:Lcom/flurry/org/codehaus/jackson/JsonParser$Feature;
+    .local v1, "f":Lcom/flurry/org/codehaus/jackson/JsonParser$Feature;
     invoke-virtual {v1}, Lcom/flurry/org/codehaus/jackson/JsonParser$Feature;->enabledByDefault()Z
 
     move-result v5
@@ -295,14 +293,14 @@
     goto :goto_0
 
     .line 234
-    .end local v1           #f:Lcom/flurry/org/codehaus/jackson/JsonParser$Feature;
+    .end local v1    # "f":Lcom/flurry/org/codehaus/jackson/JsonParser$Feature;
     :cond_1
     return v2
 .end method
 
 .method public static valueOf(Ljava/lang/String;)Lcom/flurry/org/codehaus/jackson/JsonParser$Feature;
     .locals 1
-    .parameter "name"
+    .param p0, "name"    # Ljava/lang/String;
 
     .prologue
     .line 52
@@ -312,7 +310,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "name":Ljava/lang/String;
     check-cast p0, Lcom/flurry/org/codehaus/jackson/JsonParser$Feature;
 
     return-object p0
@@ -348,7 +346,7 @@
 
 .method public enabledIn(I)Z
     .locals 1
-    .parameter "flags"
+    .param p1, "flags"    # I
 
     .prologue
     .line 243

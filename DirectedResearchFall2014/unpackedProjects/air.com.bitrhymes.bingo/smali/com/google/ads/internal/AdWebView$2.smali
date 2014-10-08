@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/google/ads/internal/AdWebView;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 388
@@ -39,8 +38,8 @@
 # virtual methods
 .method public onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
     .locals 2
-    .parameter "v"
-    .parameter "event"
+    .param p1, "v"    # Landroid/view/View;
+    .param p2, "event"    # Landroid/view/MotionEvent;
 
     .prologue
     .line 391

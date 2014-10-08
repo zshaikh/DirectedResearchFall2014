@@ -30,10 +30,6 @@
 # direct methods
 .method constructor <init>(Lcom/vungle/sdk/o$a;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 114

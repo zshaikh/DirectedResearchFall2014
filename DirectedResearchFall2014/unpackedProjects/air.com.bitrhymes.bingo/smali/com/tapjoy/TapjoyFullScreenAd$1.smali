@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/tapjoy/TapjoyFullScreenAd;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 144
@@ -72,7 +71,7 @@
 
     iget-object v3, p0, Lcom/tapjoy/TapjoyFullScreenAd$1;->this$0:Lcom/tapjoy/TapjoyFullScreenAd;
 
-    #getter for: Lcom/tapjoy/TapjoyFullScreenAd;->legacyFullScreenAdParams:Ljava/util/Map;
+    # getter for: Lcom/tapjoy/TapjoyFullScreenAd;->legacyFullScreenAdParams:Ljava/util/Map;
     invoke-static {v3}, Lcom/tapjoy/TapjoyFullScreenAd;->access$000(Lcom/tapjoy/TapjoyFullScreenAd;)Ljava/util/Map;
 
     move-result-object v3
@@ -82,11 +81,12 @@
     move-result-object v0
 
     .line 148
-    .local v0, httpResponse:Lcom/tapjoy/TapjoyHttpURLResponse;
+    .local v0, "httpResponse":Lcom/tapjoy/TapjoyHttpURLResponse;
     invoke-static {}, Lcom/tapjoy/TapjoyConnectCore;->getHostURL()Ljava/lang/String;
 
     move-result-object v1
 
+    # setter for: Lcom/tapjoy/TapjoyFullScreenAd;->baseURL:Ljava/lang/String;
     invoke-static {v1}, Lcom/tapjoy/TapjoyFullScreenAd;->access$102(Ljava/lang/String;)Ljava/lang/String;
 
     .line 150
@@ -98,6 +98,7 @@
     packed-switch v1, :pswitch_data_0
 
     .line 165
+    # getter for: Lcom/tapjoy/TapjoyFullScreenAd;->featuredAppNotifier:Lcom/tapjoy/TapjoyFeaturedAppNotifier;
     invoke-static {}, Lcom/tapjoy/TapjoyFullScreenAd;->access$300()Lcom/tapjoy/TapjoyFeaturedAppNotifier;
 
     move-result-object v1
@@ -105,6 +106,7 @@
     if-eqz v1, :cond_0
 
     .line 166
+    # getter for: Lcom/tapjoy/TapjoyFullScreenAd;->featuredAppNotifier:Lcom/tapjoy/TapjoyFeaturedAppNotifier;
     invoke-static {}, Lcom/tapjoy/TapjoyFullScreenAd;->access$300()Lcom/tapjoy/TapjoyFeaturedAppNotifier;
 
     move-result-object v1
@@ -115,6 +117,7 @@
 
     .line 168
     :cond_0
+    # getter for: Lcom/tapjoy/TapjoyFullScreenAd;->fullScreenAdNotifier:Lcom/tapjoy/TapjoyFullScreenAdNotifier;
     invoke-static {}, Lcom/tapjoy/TapjoyFullScreenAd;->access$400()Lcom/tapjoy/TapjoyFullScreenAdNotifier;
 
     move-result-object v1
@@ -122,6 +125,7 @@
     if-eqz v1, :cond_1
 
     .line 169
+    # getter for: Lcom/tapjoy/TapjoyFullScreenAd;->fullScreenAdNotifier:Lcom/tapjoy/TapjoyFullScreenAdNotifier;
     invoke-static {}, Lcom/tapjoy/TapjoyFullScreenAd;->access$400()Lcom/tapjoy/TapjoyFullScreenAdNotifier;
 
     move-result-object v1
@@ -139,9 +143,11 @@
     :pswitch_0
     iget-object v1, v0, Lcom/tapjoy/TapjoyHttpURLResponse;->response:Ljava/lang/String;
 
+    # setter for: Lcom/tapjoy/TapjoyFullScreenAd;->htmlResponseData:Ljava/lang/String;
     invoke-static {v1}, Lcom/tapjoy/TapjoyFullScreenAd;->access$202(Ljava/lang/String;)Ljava/lang/String;
 
     .line 157
+    # getter for: Lcom/tapjoy/TapjoyFullScreenAd;->featuredAppNotifier:Lcom/tapjoy/TapjoyFeaturedAppNotifier;
     invoke-static {}, Lcom/tapjoy/TapjoyFullScreenAd;->access$300()Lcom/tapjoy/TapjoyFeaturedAppNotifier;
 
     move-result-object v1
@@ -149,6 +155,7 @@
     if-eqz v1, :cond_2
 
     .line 158
+    # getter for: Lcom/tapjoy/TapjoyFullScreenAd;->featuredAppNotifier:Lcom/tapjoy/TapjoyFeaturedAppNotifier;
     invoke-static {}, Lcom/tapjoy/TapjoyFullScreenAd;->access$300()Lcom/tapjoy/TapjoyFeaturedAppNotifier;
 
     move-result-object v1
@@ -159,6 +166,7 @@
 
     .line 160
     :cond_2
+    # getter for: Lcom/tapjoy/TapjoyFullScreenAd;->fullScreenAdNotifier:Lcom/tapjoy/TapjoyFullScreenAdNotifier;
     invoke-static {}, Lcom/tapjoy/TapjoyFullScreenAd;->access$400()Lcom/tapjoy/TapjoyFullScreenAdNotifier;
 
     move-result-object v1
@@ -166,6 +174,7 @@
     if-eqz v1, :cond_1
 
     .line 161
+    # getter for: Lcom/tapjoy/TapjoyFullScreenAd;->fullScreenAdNotifier:Lcom/tapjoy/TapjoyFullScreenAdNotifier;
     invoke-static {}, Lcom/tapjoy/TapjoyFullScreenAd;->access$400()Lcom/tapjoy/TapjoyFullScreenAdNotifier;
 
     move-result-object v1
@@ -176,6 +185,7 @@
 
     .line 175
     :cond_3
+    # getter for: Lcom/tapjoy/TapjoyFullScreenAd;->featuredAppNotifier:Lcom/tapjoy/TapjoyFeaturedAppNotifier;
     invoke-static {}, Lcom/tapjoy/TapjoyFullScreenAd;->access$300()Lcom/tapjoy/TapjoyFeaturedAppNotifier;
 
     move-result-object v1
@@ -183,6 +193,7 @@
     if-eqz v1, :cond_4
 
     .line 176
+    # getter for: Lcom/tapjoy/TapjoyFullScreenAd;->featuredAppNotifier:Lcom/tapjoy/TapjoyFeaturedAppNotifier;
     invoke-static {}, Lcom/tapjoy/TapjoyFullScreenAd;->access$300()Lcom/tapjoy/TapjoyFeaturedAppNotifier;
 
     move-result-object v1
@@ -193,6 +204,7 @@
 
     .line 178
     :cond_4
+    # getter for: Lcom/tapjoy/TapjoyFullScreenAd;->fullScreenAdNotifier:Lcom/tapjoy/TapjoyFullScreenAdNotifier;
     invoke-static {}, Lcom/tapjoy/TapjoyFullScreenAd;->access$400()Lcom/tapjoy/TapjoyFullScreenAdNotifier;
 
     move-result-object v1
@@ -200,6 +212,7 @@
     if-eqz v1, :cond_1
 
     .line 179
+    # getter for: Lcom/tapjoy/TapjoyFullScreenAd;->fullScreenAdNotifier:Lcom/tapjoy/TapjoyFullScreenAdNotifier;
     invoke-static {}, Lcom/tapjoy/TapjoyFullScreenAd;->access$400()Lcom/tapjoy/TapjoyFullScreenAdNotifier;
 
     move-result-object v1

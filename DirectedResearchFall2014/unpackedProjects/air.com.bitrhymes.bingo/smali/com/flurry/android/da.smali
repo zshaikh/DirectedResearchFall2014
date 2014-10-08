@@ -38,7 +38,6 @@
 # virtual methods
 .method protected final a(Landroid/content/Context;)Landroid/os/Bundle;
     .locals 2
-    .parameter
 
     .prologue
     .line 36
@@ -77,11 +76,6 @@
 
 .method protected final a(Landroid/content/Context;Lcom/flurry/android/FlurryAds;Lcom/flurry/android/cz;Lcom/flurry/android/AdUnit;Landroid/os/Bundle;)Lcom/flurry/android/ao;
     .locals 6
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 50
@@ -123,11 +117,6 @@
 
 .method protected final a(Landroid/content/Context;Lcom/flurry/android/FlurryAds;Lcom/flurry/android/cz;Lcom/flurry/android/AdCreative;Landroid/os/Bundle;)Lcom/flurry/android/p;
     .locals 6
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 61

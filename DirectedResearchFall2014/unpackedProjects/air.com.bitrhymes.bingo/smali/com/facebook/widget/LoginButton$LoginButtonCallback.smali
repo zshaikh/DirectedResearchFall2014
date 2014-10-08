@@ -24,7 +24,6 @@
 # direct methods
 .method private constructor <init>(Lcom/facebook/widget/LoginButton;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 722
@@ -37,8 +36,6 @@
 
 .method synthetic constructor <init>(Lcom/facebook/widget/LoginButton;Lcom/facebook/widget/LoginButton$LoginButtonCallback;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 722
@@ -51,32 +48,32 @@
 # virtual methods
 .method public call(Lcom/facebook/Session;Lcom/facebook/SessionState;Ljava/lang/Exception;)V
     .locals 1
-    .parameter "session"
-    .parameter "state"
-    .parameter "exception"
+    .param p1, "session"    # Lcom/facebook/Session;
+    .param p2, "state"    # Lcom/facebook/SessionState;
+    .param p3, "exception"    # Ljava/lang/Exception;
 
     .prologue
     .line 726
     iget-object v0, p0, Lcom/facebook/widget/LoginButton$LoginButtonCallback;->this$0:Lcom/facebook/widget/LoginButton;
 
-    #calls: Lcom/facebook/widget/LoginButton;->fetchUserInfo()V
+    # invokes: Lcom/facebook/widget/LoginButton;->fetchUserInfo()V
     invoke-static {v0}, Lcom/facebook/widget/LoginButton;->access$8(Lcom/facebook/widget/LoginButton;)V
 
     .line 727
     iget-object v0, p0, Lcom/facebook/widget/LoginButton$LoginButtonCallback;->this$0:Lcom/facebook/widget/LoginButton;
 
-    #calls: Lcom/facebook/widget/LoginButton;->setButtonText()V
+    # invokes: Lcom/facebook/widget/LoginButton;->setButtonText()V
     invoke-static {v0}, Lcom/facebook/widget/LoginButton;->access$9(Lcom/facebook/widget/LoginButton;)V
 
     .line 731
     iget-object v0, p0, Lcom/facebook/widget/LoginButton$LoginButtonCallback;->this$0:Lcom/facebook/widget/LoginButton;
 
-    #getter for: Lcom/facebook/widget/LoginButton;->properties:Lcom/facebook/widget/LoginButton$LoginButtonProperties;
+    # getter for: Lcom/facebook/widget/LoginButton;->properties:Lcom/facebook/widget/LoginButton$LoginButtonProperties;
     invoke-static {v0}, Lcom/facebook/widget/LoginButton;->access$6(Lcom/facebook/widget/LoginButton;)Lcom/facebook/widget/LoginButton$LoginButtonProperties;
 
     move-result-object v0
 
-    #getter for: Lcom/facebook/widget/LoginButton$LoginButtonProperties;->sessionStatusCallback:Lcom/facebook/Session$StatusCallback;
+    # getter for: Lcom/facebook/widget/LoginButton$LoginButtonProperties;->sessionStatusCallback:Lcom/facebook/Session$StatusCallback;
     invoke-static {v0}, Lcom/facebook/widget/LoginButton$LoginButtonProperties;->access$4(Lcom/facebook/widget/LoginButton$LoginButtonProperties;)Lcom/facebook/Session$StatusCallback;
 
     move-result-object v0
@@ -86,12 +83,12 @@
     .line 732
     iget-object v0, p0, Lcom/facebook/widget/LoginButton$LoginButtonCallback;->this$0:Lcom/facebook/widget/LoginButton;
 
-    #getter for: Lcom/facebook/widget/LoginButton;->properties:Lcom/facebook/widget/LoginButton$LoginButtonProperties;
+    # getter for: Lcom/facebook/widget/LoginButton;->properties:Lcom/facebook/widget/LoginButton$LoginButtonProperties;
     invoke-static {v0}, Lcom/facebook/widget/LoginButton;->access$6(Lcom/facebook/widget/LoginButton;)Lcom/facebook/widget/LoginButton$LoginButtonProperties;
 
     move-result-object v0
 
-    #getter for: Lcom/facebook/widget/LoginButton$LoginButtonProperties;->sessionStatusCallback:Lcom/facebook/Session$StatusCallback;
+    # getter for: Lcom/facebook/widget/LoginButton$LoginButtonProperties;->sessionStatusCallback:Lcom/facebook/Session$StatusCallback;
     invoke-static {v0}, Lcom/facebook/widget/LoginButton$LoginButtonProperties;->access$4(Lcom/facebook/widget/LoginButton$LoginButtonProperties;)Lcom/facebook/Session$StatusCallback;
 
     move-result-object v0

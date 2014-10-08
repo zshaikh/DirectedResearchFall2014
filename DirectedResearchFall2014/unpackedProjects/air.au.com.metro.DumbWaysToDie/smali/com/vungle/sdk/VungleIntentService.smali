@@ -68,7 +68,6 @@
 # virtual methods
 .method public onBind(Landroid/content/Intent;)Landroid/os/IBinder;
     .locals 1
-    .parameter
 
     .prologue
     .line 85
@@ -79,8 +78,7 @@
 
 .method public onStart(Landroid/content/Intent;I)V
     .locals 4
-    .parameter "intent"
-    .parameter
+    .param p1, "intent"    # Landroid/content/Intent;
 
     .prologue
     const-string v0, "Http"
@@ -222,9 +220,8 @@
 
 .method public onStartCommand(Landroid/content/Intent;II)I
     .locals 1
-    .parameter "intent"
-    .parameter
-    .parameter "startId"
+    .param p1, "intent"    # Landroid/content/Intent;
+    .param p3, "startId"    # I
 
     .prologue
     .line 36

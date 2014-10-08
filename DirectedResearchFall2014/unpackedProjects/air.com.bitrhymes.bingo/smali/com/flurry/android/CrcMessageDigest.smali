@@ -129,7 +129,6 @@
 
 .method protected engineUpdate(B)V
     .locals 1
-    .parameter
 
     .prologue
     .line 25
@@ -143,9 +142,6 @@
 
 .method protected engineUpdate([BII)V
     .locals 1
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 31

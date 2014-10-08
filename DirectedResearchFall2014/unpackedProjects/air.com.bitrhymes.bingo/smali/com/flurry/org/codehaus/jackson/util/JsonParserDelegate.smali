@@ -10,7 +10,7 @@
 # direct methods
 .method public constructor <init>(Lcom/flurry/org/codehaus/jackson/JsonParser;)V
     .locals 0
-    .parameter "d"
+    .param p1, "d"    # Lcom/flurry/org/codehaus/jackson/JsonParser;
 
     .prologue
     .line 25
@@ -27,7 +27,7 @@
 # virtual methods
 .method public canUseSchema(Lcom/flurry/org/codehaus/jackson/FormatSchema;)Z
     .locals 1
-    .parameter "schema"
+    .param p1, "schema"    # Lcom/flurry/org/codehaus/jackson/FormatSchema;
 
     .prologue
     .line 69
@@ -73,7 +73,7 @@
 
 .method public disable(Lcom/flurry/org/codehaus/jackson/JsonParser$Feature;)Lcom/flurry/org/codehaus/jackson/JsonParser;
     .locals 1
-    .parameter "f"
+    .param p1, "f"    # Lcom/flurry/org/codehaus/jackson/JsonParser$Feature;
 
     .prologue
     .line 53
@@ -87,7 +87,7 @@
 
 .method public enable(Lcom/flurry/org/codehaus/jackson/JsonParser$Feature;)Lcom/flurry/org/codehaus/jackson/JsonParser;
     .locals 1
-    .parameter "f"
+    .param p1, "f"    # Lcom/flurry/org/codehaus/jackson/JsonParser$Feature;
 
     .prologue
     .line 47
@@ -121,7 +121,7 @@
 
 .method public getBinaryValue(Lcom/flurry/org/codehaus/jackson/Base64Variant;)[B
     .locals 1
-    .parameter "b64variant"
+    .param p1, "b64variant"    # Lcom/flurry/org/codehaus/jackson/Base64Variant;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -588,7 +588,7 @@
 
 .method public isEnabled(Lcom/flurry/org/codehaus/jackson/JsonParser$Feature;)Z
     .locals 1
-    .parameter "f"
+    .param p1, "f"    # Lcom/flurry/org/codehaus/jackson/JsonParser$Feature;
 
     .prologue
     .line 59
@@ -623,7 +623,7 @@
 
 .method public setCodec(Lcom/flurry/org/codehaus/jackson/ObjectCodec;)V
     .locals 1
-    .parameter "c"
+    .param p1, "c"    # Lcom/flurry/org/codehaus/jackson/ObjectCodec;
 
     .prologue
     .line 37
@@ -637,7 +637,7 @@
 
 .method public setSchema(Lcom/flurry/org/codehaus/jackson/FormatSchema;)V
     .locals 1
-    .parameter "schema"
+    .param p1, "schema"    # Lcom/flurry/org/codehaus/jackson/FormatSchema;
 
     .prologue
     .line 64

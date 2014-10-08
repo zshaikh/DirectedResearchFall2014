@@ -32,8 +32,8 @@
 # virtual methods
 .method public call(Lcom/adobe/fre/FREContext;[Lcom/adobe/fre/FREObject;)Lcom/adobe/fre/FREObject;
     .locals 4
-    .parameter "context"
-    .parameter "args"
+    .param p1, "context"    # Lcom/adobe/fre/FREContext;
+    .param p2, "args"    # [Lcom/adobe/fre/FREObject;
 
     .prologue
     .line 306
@@ -47,14 +47,14 @@
     move-result-object v0
 
     .line 307
-    .local v0, GCMSender:Ljava/lang/String;
-    #calls: Lcom/buffalostudios/aneutils/notifier/PushNotifier;->initGCM(Ljava/lang/String;)V
+    .local v0, "GCMSender":Ljava/lang/String;
+    # invokes: Lcom/buffalostudios/aneutils/notifier/PushNotifier;->initGCM(Ljava/lang/String;)V
     invoke-static {v0}, Lcom/buffalostudios/aneutils/notifier/PushNotifier;->access$5(Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 311
-    .end local v0           #GCMSender:Ljava/lang/String;
+    .end local v0    # "GCMSender":Ljava/lang/String;
     :goto_0
     const/4 v2, 0x0
 
@@ -67,7 +67,7 @@
     move-object v1, v2
 
     .line 309
-    .local v1, e:Ljava/lang/Exception;
+    .local v1, "e":Ljava/lang/Exception;
     const-string v2, "PushNotifier"
 
     invoke-virtual {v1}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;

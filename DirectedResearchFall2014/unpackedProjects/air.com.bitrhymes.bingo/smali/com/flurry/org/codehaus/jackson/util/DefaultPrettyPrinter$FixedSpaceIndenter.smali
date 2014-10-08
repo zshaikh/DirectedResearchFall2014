@@ -42,8 +42,8 @@
 
 .method public writeIndentation(Lcom/flurry/org/codehaus/jackson/JsonGenerator;I)V
     .locals 1
-    .parameter "jg"
-    .parameter "level"
+    .param p1, "jg"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator;
+    .param p2, "level"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,

@@ -18,11 +18,11 @@
 # direct methods
 .method public constructor <init>(Lcom/flurry/org/codehaus/jackson/io/IOContext;Ljava/io/InputStream;[BII)V
     .locals 0
-    .parameter "context"
-    .parameter "in"
-    .parameter "buf"
-    .parameter "start"
-    .parameter "end"
+    .param p1, "context"    # Lcom/flurry/org/codehaus/jackson/io/IOContext;
+    .param p2, "in"    # Ljava/io/InputStream;
+    .param p3, "buf"    # [B
+    .param p4, "start"    # I
+    .param p5, "end"    # I
 
     .prologue
     .line 28
@@ -55,7 +55,7 @@
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/io/MergedStream;->_buffer:[B
 
     .line 138
-    .local v0, buf:[B
+    .local v0, "buf":[B
     if-eqz v0, :cond_0
 
     .line 139
@@ -138,7 +138,7 @@
 
 .method public mark(I)V
     .locals 1
-    .parameter "readlimit"
+    .param p1, "readlimit"    # I
 
     .prologue
     .line 55
@@ -212,7 +212,7 @@
     and-int/lit16 v0, v1, 0xff
 
     .line 72
-    .local v0, c:I
+    .local v0, "c":I
     iget v1, p0, Lcom/flurry/org/codehaus/jackson/io/MergedStream;->_ptr:I
 
     iget v2, p0, Lcom/flurry/org/codehaus/jackson/io/MergedStream;->_end:I
@@ -226,7 +226,7 @@
     move v1, v0
 
     .line 77
-    .end local v0           #c:I
+    .end local v0    # "c":I
     :goto_0
     return v1
 
@@ -242,7 +242,7 @@
 
 .method public read([B)I
     .locals 2
-    .parameter "b"
+    .param p1, "b"    # [B
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -264,9 +264,9 @@
 
 .method public read([BII)I
     .locals 3
-    .parameter "b"
-    .parameter "off"
-    .parameter "len"
+    .param p1, "b"    # [B
+    .param p2, "off"    # I
+    .param p3, "len"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -287,7 +287,7 @@
     sub-int v0, v1, v2
 
     .line 91
-    .local v0, avail:I
+    .local v0, "avail":I
     if-le p3, v0, :cond_0
 
     .line 92
@@ -322,7 +322,7 @@
     move v1, p3
 
     .line 101
-    .end local v0           #avail:I
+    .end local v0    # "avail":I
     :goto_0
     return v1
 
@@ -362,7 +362,7 @@
 
 .method public skip(J)J
     .locals 5
-    .parameter "n"
+    .param p1, "n"    # J
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -374,7 +374,7 @@
     const-wide/16 v1, 0x0
 
     .line 117
-    .local v1, count:J
+    .local v1, "count":J
     iget-object v3, p0, Lcom/flurry/org/codehaus/jackson/io/MergedStream;->_buffer:[B
 
     if-eqz v3, :cond_1
@@ -387,7 +387,7 @@
     sub-int v0, v3, v4
 
     .line 120
-    .local v0, amount:I
+    .local v0, "amount":I
     int-to-long v3, v0
 
     cmp-long v3, v3, p1
@@ -406,12 +406,12 @@
     move-wide v3, p1
 
     .line 132
-    .end local v0           #amount:I
+    .end local v0    # "amount":I
     :goto_0
     return-wide v3
 
     .line 124
-    .restart local v0       #amount:I
+    .restart local v0    # "amount":I
     :cond_0
     invoke-direct {p0}, Lcom/flurry/org/codehaus/jackson/io/MergedStream;->freeMergedBuffer()V
 
@@ -426,7 +426,7 @@
     sub-long/2addr p1, v3
 
     .line 129
-    .end local v0           #amount:I
+    .end local v0    # "amount":I
     :cond_1
     const-wide/16 v3, 0x0
 

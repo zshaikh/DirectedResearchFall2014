@@ -75,7 +75,7 @@
     .locals 2
 
     .prologue
-    .local p0, this:Lcom/flurry/org/apache/avro/generic/GenericDatumReader;,"Lcom/flurry/org/apache/avro/generic/GenericDatumReader<TD;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/generic/GenericDatumReader;, "Lcom/flurry/org/apache/avro/generic/GenericDatumReader<TD;>;"
     const/4 v1, 0x0
 
     .line 46
@@ -91,11 +91,11 @@
 
 .method public constructor <init>(Lcom/flurry/org/apache/avro/Schema;)V
     .locals 1
-    .parameter "schema"
+    .param p1, "schema"    # Lcom/flurry/org/apache/avro/Schema;
 
     .prologue
     .line 51
-    .local p0, this:Lcom/flurry/org/apache/avro/generic/GenericDatumReader;,"Lcom/flurry/org/apache/avro/generic/GenericDatumReader<TD;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/generic/GenericDatumReader;, "Lcom/flurry/org/apache/avro/generic/GenericDatumReader<TD;>;"
     invoke-static {}, Lcom/flurry/org/apache/avro/generic/GenericData;->get()Lcom/flurry/org/apache/avro/generic/GenericData;
 
     move-result-object v0
@@ -108,12 +108,12 @@
 
 .method public constructor <init>(Lcom/flurry/org/apache/avro/Schema;Lcom/flurry/org/apache/avro/Schema;)V
     .locals 1
-    .parameter "writer"
-    .parameter "reader"
+    .param p1, "writer"    # Lcom/flurry/org/apache/avro/Schema;
+    .param p2, "reader"    # Lcom/flurry/org/apache/avro/Schema;
 
     .prologue
     .line 56
-    .local p0, this:Lcom/flurry/org/apache/avro/generic/GenericDatumReader;,"Lcom/flurry/org/apache/avro/generic/GenericDatumReader<TD;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/generic/GenericDatumReader;, "Lcom/flurry/org/apache/avro/generic/GenericDatumReader<TD;>;"
     invoke-static {}, Lcom/flurry/org/apache/avro/generic/GenericData;->get()Lcom/flurry/org/apache/avro/generic/GenericData;
 
     move-result-object v0
@@ -126,13 +126,13 @@
 
 .method protected constructor <init>(Lcom/flurry/org/apache/avro/Schema;Lcom/flurry/org/apache/avro/Schema;Lcom/flurry/org/apache/avro/generic/GenericData;)V
     .locals 1
-    .parameter "writer"
-    .parameter "reader"
-    .parameter "data"
+    .param p1, "writer"    # Lcom/flurry/org/apache/avro/Schema;
+    .param p2, "reader"    # Lcom/flurry/org/apache/avro/Schema;
+    .param p3, "data"    # Lcom/flurry/org/apache/avro/generic/GenericData;
 
     .prologue
     .line 59
-    .local p0, this:Lcom/flurry/org/apache/avro/generic/GenericDatumReader;,"Lcom/flurry/org/apache/avro/generic/GenericDatumReader<TD;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/generic/GenericDatumReader;, "Lcom/flurry/org/apache/avro/generic/GenericDatumReader<TD;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 42
@@ -162,8 +162,8 @@
 
 .method public static skip(Lcom/flurry/org/apache/avro/Schema;Lcom/flurry/org/apache/avro/io/Decoder;)V
     .locals 14
-    .parameter "schema"
-    .parameter "in"
+    .param p0, "schema"    # Lcom/flurry/org/apache/avro/Schema;
+    .param p1, "in"    # Lcom/flurry/org/apache/avro/io/Decoder;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -225,7 +225,7 @@
 
     move-result-object v4
 
-    .local v4, i$:Ljava/util/Iterator;
+    .local v4, "i$":Ljava/util/Iterator;
     :goto_0
     invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
 
@@ -240,7 +240,7 @@
     check-cast v1, Lcom/flurry/org/apache/avro/Schema$Field;
 
     .line 369
-    .local v1, field:Lcom/flurry/org/apache/avro/Schema$Field;
+    .local v1, "field":Lcom/flurry/org/apache/avro/Schema$Field;
     invoke-virtual {v1}, Lcom/flurry/org/apache/avro/Schema$Field;->schema()Lcom/flurry/org/apache/avro/Schema;
 
     move-result-object v8
@@ -250,32 +250,32 @@
     goto :goto_0
 
     .line 372
-    .end local v1           #field:Lcom/flurry/org/apache/avro/Schema$Field;
-    .end local v4           #i$:Ljava/util/Iterator;
+    .end local v1    # "field":Lcom/flurry/org/apache/avro/Schema$Field;
+    .end local v4    # "i$":Ljava/util/Iterator;
     :pswitch_1
     invoke-virtual {p1}, Lcom/flurry/org/apache/avro/io/Decoder;->readInt()I
 
     .line 411
-    .end local p0
+    .end local p0    # "schema":Lcom/flurry/org/apache/avro/Schema;
     :cond_0
     :goto_1
     :pswitch_2
     return-void
 
     .line 375
-    .restart local p0
+    .restart local p0    # "schema":Lcom/flurry/org/apache/avro/Schema;
     :pswitch_3
     invoke-virtual {p0}, Lcom/flurry/org/apache/avro/Schema;->getElementType()Lcom/flurry/org/apache/avro/Schema;
 
     move-result-object v0
 
     .line 376
-    .local v0, elementType:Lcom/flurry/org/apache/avro/Schema;
+    .local v0, "elementType":Lcom/flurry/org/apache/avro/Schema;
     invoke-virtual {p1}, Lcom/flurry/org/apache/avro/io/Decoder;->skipArray()J
 
     move-result-wide v5
 
-    .local v5, l:J
+    .local v5, "l":J
     :goto_2
     cmp-long v8, v5, v10
 
@@ -284,7 +284,7 @@
     .line 377
     const-wide/16 v2, 0x0
 
-    .local v2, i:J
+    .local v2, "i":J
     :goto_3
     cmp-long v8, v2, v5
 
@@ -307,21 +307,21 @@
     goto :goto_2
 
     .line 383
-    .end local v0           #elementType:Lcom/flurry/org/apache/avro/Schema;
-    .end local v2           #i:J
-    .end local v5           #l:J
+    .end local v0    # "elementType":Lcom/flurry/org/apache/avro/Schema;
+    .end local v2    # "i":J
+    .end local v5    # "l":J
     :pswitch_4
     invoke-virtual {p0}, Lcom/flurry/org/apache/avro/Schema;->getValueType()Lcom/flurry/org/apache/avro/Schema;
 
     move-result-object v7
 
     .line 384
-    .local v7, value:Lcom/flurry/org/apache/avro/Schema;
+    .local v7, "value":Lcom/flurry/org/apache/avro/Schema;
     invoke-virtual {p1}, Lcom/flurry/org/apache/avro/io/Decoder;->skipMap()J
 
     move-result-wide v5
 
-    .restart local v5       #l:J
+    .restart local v5    # "l":J
     :goto_4
     cmp-long v8, v5, v10
 
@@ -330,7 +330,7 @@
     .line 385
     const-wide/16 v2, 0x0
 
-    .restart local v2       #i:J
+    .restart local v2    # "i":J
     :goto_5
     cmp-long v8, v2, v5
 
@@ -356,9 +356,9 @@
     goto :goto_4
 
     .line 392
-    .end local v2           #i:J
-    .end local v5           #l:J
-    .end local v7           #value:Lcom/flurry/org/apache/avro/Schema;
+    .end local v2    # "i":J
+    .end local v5    # "l":J
+    .end local v7    # "value":Lcom/flurry/org/apache/avro/Schema;
     :pswitch_5
     invoke-virtual {p0}, Lcom/flurry/org/apache/avro/Schema;->getTypes()Ljava/util/List;
 
@@ -372,7 +372,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "schema":Lcom/flurry/org/apache/avro/Schema;
     check-cast p0, Lcom/flurry/org/apache/avro/Schema;
 
     invoke-static {p0, p1}, Lcom/flurry/org/apache/avro/generic/GenericDatumReader;->skip(Lcom/flurry/org/apache/avro/Schema;Lcom/flurry/org/apache/avro/io/Decoder;)V
@@ -380,7 +380,7 @@
     goto :goto_1
 
     .line 395
-    .restart local p0
+    .restart local p0    # "schema":Lcom/flurry/org/apache/avro/Schema;
     :pswitch_6
     invoke-virtual {p0}, Lcom/flurry/org/apache/avro/Schema;->getFixedSize()I
 
@@ -458,16 +458,16 @@
 # virtual methods
 .method protected addToArray(Ljava/lang/Object;JLjava/lang/Object;)V
     .locals 0
-    .parameter "array"
-    .parameter "pos"
-    .parameter "e"
+    .param p1, "array"    # Ljava/lang/Object;
+    .param p2, "pos"    # J
+    .param p4, "e"    # Ljava/lang/Object;
 
     .prologue
     .line 226
-    .local p0, this:Lcom/flurry/org/apache/avro/generic/GenericDatumReader;,"Lcom/flurry/org/apache/avro/generic/GenericDatumReader<TD;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/generic/GenericDatumReader;, "Lcom/flurry/org/apache/avro/generic/GenericDatumReader<TD;>;"
     check-cast p1, Ljava/util/Collection;
 
-    .end local p1
+    .end local p1    # "array":Ljava/lang/Object;
     invoke-interface {p1, p4}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
     .line 227
@@ -476,16 +476,16 @@
 
 .method protected addToMap(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 0
-    .parameter "map"
-    .parameter "key"
-    .parameter "value"
+    .param p1, "map"    # Ljava/lang/Object;
+    .param p2, "key"    # Ljava/lang/Object;
+    .param p3, "value"    # Ljava/lang/Object;
 
     .prologue
     .line 250
-    .local p0, this:Lcom/flurry/org/apache/avro/generic/GenericDatumReader;,"Lcom/flurry/org/apache/avro/generic/GenericDatumReader<TD;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/generic/GenericDatumReader;, "Lcom/flurry/org/apache/avro/generic/GenericDatumReader<TD;>;"
     check-cast p1, Ljava/util/Map;
 
-    .end local p1
+    .end local p1    # "map":Ljava/lang/Object;
     invoke-interface {p1, p2, p3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 251
@@ -494,11 +494,11 @@
 
 .method protected createBytes([B)Ljava/lang/Object;
     .locals 1
-    .parameter "value"
+    .param p1, "value"    # [B
 
     .prologue
     .line 362
-    .local p0, this:Lcom/flurry/org/apache/avro/generic/GenericDatumReader;,"Lcom/flurry/org/apache/avro/generic/GenericDatumReader<TD;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/generic/GenericDatumReader;, "Lcom/flurry/org/apache/avro/generic/GenericDatumReader<TD;>;"
     invoke-static {p1}, Ljava/nio/ByteBuffer;->wrap([B)Ljava/nio/ByteBuffer;
 
     move-result-object v0
@@ -508,12 +508,12 @@
 
 .method protected createEnum(Ljava/lang/String;Lcom/flurry/org/apache/avro/Schema;)Ljava/lang/Object;
     .locals 1
-    .parameter "symbol"
-    .parameter "schema"
+    .param p1, "symbol"    # Ljava/lang/String;
+    .param p2, "schema"    # Lcom/flurry/org/apache/avro/Schema;
 
     .prologue
     .line 188
-    .local p0, this:Lcom/flurry/org/apache/avro/generic/GenericDatumReader;,"Lcom/flurry/org/apache/avro/generic/GenericDatumReader<TD;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/generic/GenericDatumReader;, "Lcom/flurry/org/apache/avro/generic/GenericDatumReader<TD;>;"
     new-instance v0, Lcom/flurry/org/apache/avro/generic/GenericData$EnumSymbol;
 
     invoke-direct {v0, p2, p1}, Lcom/flurry/org/apache/avro/generic/GenericData$EnumSymbol;-><init>(Lcom/flurry/org/apache/avro/Schema;Ljava/lang/String;)V
@@ -523,14 +523,14 @@
 
 .method protected createFixed(Ljava/lang/Object;Lcom/flurry/org/apache/avro/Schema;)Ljava/lang/Object;
     .locals 1
-    .parameter "old"
-    .parameter "schema"
+    .param p1, "old"    # Ljava/lang/Object;
+    .param p2, "schema"    # Lcom/flurry/org/apache/avro/Schema;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
     .prologue
     .line 270
-    .local p0, this:Lcom/flurry/org/apache/avro/generic/GenericDatumReader;,"Lcom/flurry/org/apache/avro/generic/GenericDatumReader<TD;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/generic/GenericDatumReader;, "Lcom/flurry/org/apache/avro/generic/GenericDatumReader<TD;>;"
     iget-object v0, p0, Lcom/flurry/org/apache/avro/generic/GenericDatumReader;->data:Lcom/flurry/org/apache/avro/generic/GenericData;
 
     invoke-virtual {v0, p1, p2}, Lcom/flurry/org/apache/avro/generic/GenericData;->createFixed(Ljava/lang/Object;Lcom/flurry/org/apache/avro/Schema;)Ljava/lang/Object;
@@ -542,15 +542,15 @@
 
 .method protected createFixed(Ljava/lang/Object;[BLcom/flurry/org/apache/avro/Schema;)Ljava/lang/Object;
     .locals 1
-    .parameter "old"
-    .parameter "bytes"
-    .parameter "schema"
+    .param p1, "old"    # Ljava/lang/Object;
+    .param p2, "bytes"    # [B
+    .param p3, "schema"    # Lcom/flurry/org/apache/avro/Schema;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
     .prologue
     .line 281
-    .local p0, this:Lcom/flurry/org/apache/avro/generic/GenericDatumReader;,"Lcom/flurry/org/apache/avro/generic/GenericDatumReader<TD;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/generic/GenericDatumReader;, "Lcom/flurry/org/apache/avro/generic/GenericDatumReader<TD;>;"
     iget-object v0, p0, Lcom/flurry/org/apache/avro/generic/GenericDatumReader;->data:Lcom/flurry/org/apache/avro/generic/GenericData;
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/flurry/org/apache/avro/generic/GenericData;->createFixed(Ljava/lang/Object;[BLcom/flurry/org/apache/avro/Schema;)Ljava/lang/Object;
@@ -562,11 +562,11 @@
 
 .method protected createString(Ljava/lang/String;)Ljava/lang/Object;
     .locals 1
-    .parameter "value"
+    .param p1, "value"    # Ljava/lang/String;
 
     .prologue
     .line 342
-    .local p0, this:Lcom/flurry/org/apache/avro/generic/GenericDatumReader;,"Lcom/flurry/org/apache/avro/generic/GenericDatumReader<TD;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/generic/GenericDatumReader;, "Lcom/flurry/org/apache/avro/generic/GenericDatumReader<TD;>;"
     new-instance v0, Lcom/flurry/org/apache/avro/util/Utf8;
 
     invoke-direct {v0, p1}, Lcom/flurry/org/apache/avro/util/Utf8;-><init>(Ljava/lang/String;)V
@@ -579,7 +579,7 @@
 
     .prologue
     .line 67
-    .local p0, this:Lcom/flurry/org/apache/avro/generic/GenericDatumReader;,"Lcom/flurry/org/apache/avro/generic/GenericDatumReader<TD;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/generic/GenericDatumReader;, "Lcom/flurry/org/apache/avro/generic/GenericDatumReader<TD;>;"
     iget-object v0, p0, Lcom/flurry/org/apache/avro/generic/GenericDatumReader;->data:Lcom/flurry/org/apache/avro/generic/GenericData;
 
     return-object v0
@@ -590,7 +590,7 @@
 
     .prologue
     .line 82
-    .local p0, this:Lcom/flurry/org/apache/avro/generic/GenericDatumReader;,"Lcom/flurry/org/apache/avro/generic/GenericDatumReader<TD;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/generic/GenericDatumReader;, "Lcom/flurry/org/apache/avro/generic/GenericDatumReader<TD;>;"
     iget-object v0, p0, Lcom/flurry/org/apache/avro/generic/GenericDatumReader;->expected:Lcom/flurry/org/apache/avro/Schema;
 
     return-object v0
@@ -598,8 +598,8 @@
 
 .method protected final getResolver(Lcom/flurry/org/apache/avro/Schema;Lcom/flurry/org/apache/avro/Schema;)Lcom/flurry/org/apache/avro/io/ResolvingDecoder;
     .locals 6
-    .parameter "actual"
-    .parameter "expected"
+    .param p1, "actual"    # Lcom/flurry/org/apache/avro/Schema;
+    .param p2, "expected"    # Lcom/flurry/org/apache/avro/Schema;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -608,13 +608,13 @@
 
     .prologue
     .line 105
-    .local p0, this:Lcom/flurry/org/apache/avro/generic/GenericDatumReader;,"Lcom/flurry/org/apache/avro/generic/GenericDatumReader<TD;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/generic/GenericDatumReader;, "Lcom/flurry/org/apache/avro/generic/GenericDatumReader<TD;>;"
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object v1
 
     .line 107
-    .local v1, currThread:Ljava/lang/Thread;
+    .local v1, "currThread":Ljava/lang/Thread;
     iget-object v3, p0, Lcom/flurry/org/apache/avro/generic/GenericDatumReader;->creator:Ljava/lang/Thread;
 
     if-ne v1, v3, :cond_0
@@ -647,17 +647,17 @@
     check-cast v0, Ljava/util/Map;
 
     .line 112
-    .local v0, cache:Ljava/util/Map;,"Ljava/util/Map<Lcom/flurry/org/apache/avro/Schema;Lcom/flurry/org/apache/avro/io/ResolvingDecoder;>;"
+    .local v0, "cache":Ljava/util/Map;, "Ljava/util/Map<Lcom/flurry/org/apache/avro/Schema;Lcom/flurry/org/apache/avro/io/ResolvingDecoder;>;"
     if-nez v0, :cond_1
 
     .line 113
     new-instance v0, Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap;
 
-    .end local v0           #cache:Ljava/util/Map;,"Ljava/util/Map<Lcom/flurry/org/apache/avro/Schema;Lcom/flurry/org/apache/avro/io/ResolvingDecoder;>;"
+    .end local v0    # "cache":Ljava/util/Map;, "Ljava/util/Map<Lcom/flurry/org/apache/avro/Schema;Lcom/flurry/org/apache/avro/io/ResolvingDecoder;>;"
     invoke-direct {v0}, Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap;-><init>()V
 
     .line 114
-    .restart local v0       #cache:Ljava/util/Map;,"Ljava/util/Map<Lcom/flurry/org/apache/avro/Schema;Lcom/flurry/org/apache/avro/io/ResolvingDecoder;>;"
+    .restart local v0    # "cache":Ljava/util/Map;, "Ljava/util/Map<Lcom/flurry/org/apache/avro/Schema;Lcom/flurry/org/apache/avro/io/ResolvingDecoder;>;"
     sget-object v3, Lcom/flurry/org/apache/avro/generic/GenericDatumReader;->RESOLVER_CACHE:Ljava/lang/ThreadLocal;
 
     invoke-virtual {v3}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
@@ -677,7 +677,7 @@
     check-cast v2, Lcom/flurry/org/apache/avro/io/ResolvingDecoder;
 
     .line 117
-    .local v2, resolver:Lcom/flurry/org/apache/avro/io/ResolvingDecoder;
+    .local v2, "resolver":Lcom/flurry/org/apache/avro/io/ResolvingDecoder;
     if-nez v2, :cond_2
 
     .line 118
@@ -719,7 +719,7 @@
 
     .prologue
     .line 70
-    .local p0, this:Lcom/flurry/org/apache/avro/generic/GenericDatumReader;,"Lcom/flurry/org/apache/avro/generic/GenericDatumReader<TD;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/generic/GenericDatumReader;, "Lcom/flurry/org/apache/avro/generic/GenericDatumReader<TD;>;"
     iget-object v0, p0, Lcom/flurry/org/apache/avro/generic/GenericDatumReader;->actual:Lcom/flurry/org/apache/avro/Schema;
 
     return-object v0
@@ -727,13 +727,13 @@
 
 .method protected newArray(Ljava/lang/Object;ILcom/flurry/org/apache/avro/Schema;)Ljava/lang/Object;
     .locals 2
-    .parameter "old"
-    .parameter "size"
-    .parameter "schema"
+    .param p1, "old"    # Ljava/lang/Object;
+    .param p2, "size"    # I
+    .param p3, "schema"    # Lcom/flurry/org/apache/avro/Schema;
 
     .prologue
     .line 304
-    .local p0, this:Lcom/flurry/org/apache/avro/generic/GenericDatumReader;,"Lcom/flurry/org/apache/avro/generic/GenericDatumReader<TD;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/generic/GenericDatumReader;, "Lcom/flurry/org/apache/avro/generic/GenericDatumReader<TD;>;"
     instance-of v1, p1, Ljava/util/Collection;
 
     if-eqz v1, :cond_0
@@ -763,12 +763,12 @@
 
 .method protected newMap(Ljava/lang/Object;I)Ljava/lang/Object;
     .locals 2
-    .parameter "old"
-    .parameter "size"
+    .param p1, "old"    # Ljava/lang/Object;
+    .param p2, "size"    # I
 
     .prologue
     .line 315
-    .local p0, this:Lcom/flurry/org/apache/avro/generic/GenericDatumReader;,"Lcom/flurry/org/apache/avro/generic/GenericDatumReader<TD;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/generic/GenericDatumReader;, "Lcom/flurry/org/apache/avro/generic/GenericDatumReader<TD;>;"
     instance-of v1, p1, Ljava/util/Map;
 
     if-eqz v1, :cond_0
@@ -798,14 +798,14 @@
 
 .method protected newRecord(Ljava/lang/Object;Lcom/flurry/org/apache/avro/Schema;)Ljava/lang/Object;
     .locals 1
-    .parameter "old"
-    .parameter "schema"
+    .param p1, "old"    # Ljava/lang/Object;
+    .param p2, "schema"    # Lcom/flurry/org/apache/avro/Schema;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
     .prologue
     .line 296
-    .local p0, this:Lcom/flurry/org/apache/avro/generic/GenericDatumReader;,"Lcom/flurry/org/apache/avro/generic/GenericDatumReader<TD;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/generic/GenericDatumReader;, "Lcom/flurry/org/apache/avro/generic/GenericDatumReader<TD;>;"
     iget-object v0, p0, Lcom/flurry/org/apache/avro/generic/GenericDatumReader;->data:Lcom/flurry/org/apache/avro/generic/GenericData;
 
     invoke-virtual {v0, p1, p2}, Lcom/flurry/org/apache/avro/generic/GenericData;->newRecord(Ljava/lang/Object;Lcom/flurry/org/apache/avro/Schema;)Ljava/lang/Object;
@@ -817,18 +817,18 @@
 
 .method protected peekArray(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
-    .parameter "array"
+    .param p1, "array"    # Ljava/lang/Object;
 
     .prologue
     .line 217
-    .local p0, this:Lcom/flurry/org/apache/avro/generic/GenericDatumReader;,"Lcom/flurry/org/apache/avro/generic/GenericDatumReader<TD;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/generic/GenericDatumReader;, "Lcom/flurry/org/apache/avro/generic/GenericDatumReader<TD;>;"
     instance-of v0, p1, Lcom/flurry/org/apache/avro/generic/GenericArray;
 
     if-eqz v0, :cond_0
 
     check-cast p1, Lcom/flurry/org/apache/avro/generic/GenericArray;
 
-    .end local p1
+    .end local p1    # "array":Ljava/lang/Object;
     invoke-interface {p1}, Lcom/flurry/org/apache/avro/generic/GenericArray;->peek()Ljava/lang/Object;
 
     move-result-object v0
@@ -836,7 +836,7 @@
     :goto_0
     return-object v0
 
-    .restart local p1
+    .restart local p1    # "array":Ljava/lang/Object;
     :cond_0
     const/4 v0, 0x0
 
@@ -845,9 +845,9 @@
 
 .method protected read(Ljava/lang/Object;Lcom/flurry/org/apache/avro/Schema;Lcom/flurry/org/apache/avro/io/ResolvingDecoder;)Ljava/lang/Object;
     .locals 3
-    .parameter "old"
-    .parameter "expected"
-    .parameter "in"
+    .param p1, "old"    # Ljava/lang/Object;
+    .param p2, "expected"    # Lcom/flurry/org/apache/avro/Schema;
+    .param p3, "in"    # Lcom/flurry/org/apache/avro/io/ResolvingDecoder;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -856,7 +856,7 @@
 
     .prologue
     .line 143
-    .local p0, this:Lcom/flurry/org/apache/avro/generic/GenericDatumReader;,"Lcom/flurry/org/apache/avro/generic/GenericDatumReader<TD;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/generic/GenericDatumReader;, "Lcom/flurry/org/apache/avro/generic/GenericDatumReader<TD;>;"
     sget-object v0, Lcom/flurry/org/apache/avro/generic/GenericDatumReader$2;->$SwitchMap$org$apache$avro$Schema$Type:[I
 
     invoke-virtual {p2}, Lcom/flurry/org/apache/avro/Schema;->getType()Lcom/flurry/org/apache/avro/Schema$Type;
@@ -1062,8 +1062,7 @@
 
 .method public read(Ljava/lang/Object;Lcom/flurry/org/apache/avro/io/Decoder;)Ljava/lang/Object;
     .locals 4
-    .parameter
-    .parameter "in"
+    .param p2, "in"    # Lcom/flurry/org/apache/avro/io/Decoder;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TD;",
@@ -1080,8 +1079,8 @@
 
     .prologue
     .line 133
-    .local p0, this:Lcom/flurry/org/apache/avro/generic/GenericDatumReader;,"Lcom/flurry/org/apache/avro/generic/GenericDatumReader<TD;>;"
-    .local p1, reuse:Ljava/lang/Object;,"TD;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/generic/GenericDatumReader;, "Lcom/flurry/org/apache/avro/generic/GenericDatumReader<TD;>;"
+    .local p1, "reuse":Ljava/lang/Object;, "TD;"
     iget-object v2, p0, Lcom/flurry/org/apache/avro/generic/GenericDatumReader;->actual:Lcom/flurry/org/apache/avro/Schema;
 
     iget-object v3, p0, Lcom/flurry/org/apache/avro/generic/GenericDatumReader;->expected:Lcom/flurry/org/apache/avro/Schema;
@@ -1091,7 +1090,7 @@
     move-result-object v0
 
     .line 134
-    .local v0, resolver:Lcom/flurry/org/apache/avro/io/ResolvingDecoder;
+    .local v0, "resolver":Lcom/flurry/org/apache/avro/io/ResolvingDecoder;
     invoke-virtual {v0, p2}, Lcom/flurry/org/apache/avro/io/ResolvingDecoder;->configure(Lcom/flurry/org/apache/avro/io/Decoder;)Lcom/flurry/org/apache/avro/io/ValidatingDecoder;
 
     .line 135
@@ -1102,7 +1101,7 @@
     move-result-object v1
 
     .line 136
-    .local v1, result:Ljava/lang/Object;,"TD;"
+    .local v1, "result":Ljava/lang/Object;, "TD;"
     invoke-virtual {v0}, Lcom/flurry/org/apache/avro/io/ResolvingDecoder;->drain()V
 
     .line 137
@@ -1111,9 +1110,9 @@
 
 .method protected readArray(Ljava/lang/Object;Lcom/flurry/org/apache/avro/Schema;Lcom/flurry/org/apache/avro/io/ResolvingDecoder;)Ljava/lang/Object;
     .locals 11
-    .parameter "old"
-    .parameter "expected"
-    .parameter "in"
+    .param p1, "old"    # Ljava/lang/Object;
+    .param p2, "expected"    # Lcom/flurry/org/apache/avro/Schema;
+    .param p3, "in"    # Lcom/flurry/org/apache/avro/io/ResolvingDecoder;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -1122,23 +1121,23 @@
 
     .prologue
     .line 195
-    .local p0, this:Lcom/flurry/org/apache/avro/generic/GenericDatumReader;,"Lcom/flurry/org/apache/avro/generic/GenericDatumReader<TD;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/generic/GenericDatumReader;, "Lcom/flurry/org/apache/avro/generic/GenericDatumReader<TD;>;"
     invoke-virtual {p2}, Lcom/flurry/org/apache/avro/Schema;->getElementType()Lcom/flurry/org/apache/avro/Schema;
 
     move-result-object v3
 
     .line 196
-    .local v3, expectedType:Lcom/flurry/org/apache/avro/Schema;
+    .local v3, "expectedType":Lcom/flurry/org/apache/avro/Schema;
     invoke-virtual {p3}, Lcom/flurry/org/apache/avro/io/ResolvingDecoder;->readArrayStart()J
 
     move-result-wide v6
 
     .line 197
-    .local v6, l:J
+    .local v6, "l":J
     const-wide/16 v1, 0x0
 
     .line 198
-    .local v1, base:J
+    .local v1, "base":J
     const-wide/16 v8, 0x0
 
     cmp-long v8, v6, v8
@@ -1153,11 +1152,11 @@
     move-result-object v0
 
     .line 201
-    .local v0, array:Ljava/lang/Object;
+    .local v0, "array":Ljava/lang/Object;
     :cond_0
     const-wide/16 v4, 0x0
 
-    .local v4, i:J
+    .local v4, "i":J
     :goto_0
     cmp-long v8, v4, v6
 
@@ -1201,8 +1200,8 @@
     move-object v8, v0
 
     .line 208
-    .end local v0           #array:Ljava/lang/Object;
-    .end local v4           #i:J
+    .end local v0    # "array":Ljava/lang/Object;
+    .end local v4    # "i":J
     :goto_1
     return-object v8
 
@@ -1218,8 +1217,8 @@
 
 .method protected readBytes(Ljava/lang/Object;Lcom/flurry/org/apache/avro/io/Decoder;)Ljava/lang/Object;
     .locals 1
-    .parameter "old"
-    .parameter "in"
+    .param p1, "old"    # Ljava/lang/Object;
+    .param p2, "in"    # Lcom/flurry/org/apache/avro/io/Decoder;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -1228,14 +1227,14 @@
 
     .prologue
     .line 348
-    .local p0, this:Lcom/flurry/org/apache/avro/generic/GenericDatumReader;,"Lcom/flurry/org/apache/avro/generic/GenericDatumReader<TD;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/generic/GenericDatumReader;, "Lcom/flurry/org/apache/avro/generic/GenericDatumReader<TD;>;"
     instance-of v0, p1, Ljava/nio/ByteBuffer;
 
     if-eqz v0, :cond_0
 
     check-cast p1, Ljava/nio/ByteBuffer;
 
-    .end local p1
+    .end local p1    # "old":Ljava/lang/Object;
     move-object v0, p1
 
     :goto_0
@@ -1245,7 +1244,7 @@
 
     return-object v0
 
-    .restart local p1
+    .restart local p1    # "old":Ljava/lang/Object;
     :cond_0
     const/4 v0, 0x0
 
@@ -1254,8 +1253,8 @@
 
 .method protected readEnum(Lcom/flurry/org/apache/avro/Schema;Lcom/flurry/org/apache/avro/io/Decoder;)Ljava/lang/Object;
     .locals 2
-    .parameter "expected"
-    .parameter "in"
+    .param p1, "expected"    # Lcom/flurry/org/apache/avro/Schema;
+    .param p2, "in"    # Lcom/flurry/org/apache/avro/io/Decoder;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -1264,7 +1263,7 @@
 
     .prologue
     .line 182
-    .local p0, this:Lcom/flurry/org/apache/avro/generic/GenericDatumReader;,"Lcom/flurry/org/apache/avro/generic/GenericDatumReader<TD;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/generic/GenericDatumReader;, "Lcom/flurry/org/apache/avro/generic/GenericDatumReader<TD;>;"
     invoke-virtual {p1}, Lcom/flurry/org/apache/avro/Schema;->getEnumSymbols()Ljava/util/List;
 
     move-result-object v0
@@ -1288,9 +1287,9 @@
 
 .method protected readFixed(Ljava/lang/Object;Lcom/flurry/org/apache/avro/Schema;Lcom/flurry/org/apache/avro/io/Decoder;)Ljava/lang/Object;
     .locals 4
-    .parameter "old"
-    .parameter "expected"
-    .parameter "in"
+    .param p1, "old"    # Ljava/lang/Object;
+    .param p2, "expected"    # Lcom/flurry/org/apache/avro/Schema;
+    .param p3, "in"    # Lcom/flurry/org/apache/avro/io/Decoder;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -1299,7 +1298,7 @@
 
     .prologue
     .line 257
-    .local p0, this:Lcom/flurry/org/apache/avro/generic/GenericDatumReader;,"Lcom/flurry/org/apache/avro/generic/GenericDatumReader<TD;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/generic/GenericDatumReader;, "Lcom/flurry/org/apache/avro/generic/GenericDatumReader<TD;>;"
     iget-object v1, p0, Lcom/flurry/org/apache/avro/generic/GenericDatumReader;->data:Lcom/flurry/org/apache/avro/generic/GenericData;
 
     invoke-virtual {v1, p1, p2}, Lcom/flurry/org/apache/avro/generic/GenericData;->createFixed(Ljava/lang/Object;Lcom/flurry/org/apache/avro/Schema;)Ljava/lang/Object;
@@ -1309,7 +1308,7 @@
     check-cast v0, Lcom/flurry/org/apache/avro/generic/GenericFixed;
 
     .line 258
-    .local v0, fixed:Lcom/flurry/org/apache/avro/generic/GenericFixed;
+    .local v0, "fixed":Lcom/flurry/org/apache/avro/generic/GenericFixed;
     invoke-interface {v0}, Lcom/flurry/org/apache/avro/generic/GenericFixed;->bytes()[B
 
     move-result-object v1
@@ -1328,9 +1327,9 @@
 
 .method protected readInt(Ljava/lang/Object;Lcom/flurry/org/apache/avro/Schema;Lcom/flurry/org/apache/avro/io/Decoder;)Ljava/lang/Object;
     .locals 1
-    .parameter "old"
-    .parameter "expected"
-    .parameter "in"
+    .param p1, "old"    # Ljava/lang/Object;
+    .param p2, "expected"    # Lcom/flurry/org/apache/avro/Schema;
+    .param p3, "in"    # Lcom/flurry/org/apache/avro/io/Decoder;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -1339,7 +1338,7 @@
 
     .prologue
     .line 356
-    .local p0, this:Lcom/flurry/org/apache/avro/generic/GenericDatumReader;,"Lcom/flurry/org/apache/avro/generic/GenericDatumReader<TD;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/generic/GenericDatumReader;, "Lcom/flurry/org/apache/avro/generic/GenericDatumReader<TD;>;"
     invoke-virtual {p3}, Lcom/flurry/org/apache/avro/io/Decoder;->readInt()I
 
     move-result v0
@@ -1353,9 +1352,9 @@
 
 .method protected readMap(Ljava/lang/Object;Lcom/flurry/org/apache/avro/Schema;Lcom/flurry/org/apache/avro/io/ResolvingDecoder;)Ljava/lang/Object;
     .locals 10
-    .parameter "old"
-    .parameter "expected"
-    .parameter "in"
+    .param p1, "old"    # Ljava/lang/Object;
+    .param p2, "expected"    # Lcom/flurry/org/apache/avro/Schema;
+    .param p3, "in"    # Lcom/flurry/org/apache/avro/io/ResolvingDecoder;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -1363,7 +1362,7 @@
     .end annotation
 
     .prologue
-    .local p0, this:Lcom/flurry/org/apache/avro/generic/GenericDatumReader;,"Lcom/flurry/org/apache/avro/generic/GenericDatumReader<TD;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/generic/GenericDatumReader;, "Lcom/flurry/org/apache/avro/generic/GenericDatumReader<TD;>;"
     const-wide/16 v8, 0x0
 
     const/4 v7, 0x0
@@ -1374,13 +1373,13 @@
     move-result-object v0
 
     .line 234
-    .local v0, eValue:Lcom/flurry/org/apache/avro/Schema;
+    .local v0, "eValue":Lcom/flurry/org/apache/avro/Schema;
     invoke-virtual {p3}, Lcom/flurry/org/apache/avro/io/ResolvingDecoder;->readMapStart()J
 
     move-result-wide v2
 
     .line 235
-    .local v2, l:J
+    .local v2, "l":J
     long-to-int v5, v2
 
     invoke-virtual {p0, p1, v5}, Lcom/flurry/org/apache/avro/generic/GenericDatumReader;->newMap(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -1388,7 +1387,7 @@
     move-result-object v4
 
     .line 236
-    .local v4, map:Ljava/lang/Object;
+    .local v4, "map":Ljava/lang/Object;
     cmp-long v5, v2, v8
 
     if-lez v5, :cond_2
@@ -1397,7 +1396,7 @@
     :cond_0
     const/4 v1, 0x0
 
-    .local v1, i:I
+    .local v1, "i":I
     :goto_0
     int-to-long v5, v1
 
@@ -1432,16 +1431,16 @@
     if-gtz v5, :cond_0
 
     .line 243
-    .end local v1           #i:I
+    .end local v1    # "i":I
     :cond_2
     return-object v4
 .end method
 
 .method protected readRecord(Ljava/lang/Object;Lcom/flurry/org/apache/avro/Schema;Lcom/flurry/org/apache/avro/io/ResolvingDecoder;)Ljava/lang/Object;
     .locals 11
-    .parameter "old"
-    .parameter "expected"
-    .parameter "in"
+    .param p1, "old"    # Ljava/lang/Object;
+    .param p2, "expected"    # Lcom/flurry/org/apache/avro/Schema;
+    .param p3, "in"    # Lcom/flurry/org/apache/avro/io/ResolvingDecoder;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -1450,7 +1449,7 @@
 
     .prologue
     .line 166
-    .local p0, this:Lcom/flurry/org/apache/avro/generic/GenericDatumReader;,"Lcom/flurry/org/apache/avro/generic/GenericDatumReader<TD;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/generic/GenericDatumReader;, "Lcom/flurry/org/apache/avro/generic/GenericDatumReader<TD;>;"
     iget-object v0, p0, Lcom/flurry/org/apache/avro/generic/GenericDatumReader;->data:Lcom/flurry/org/apache/avro/generic/GenericData;
 
     invoke-virtual {v0, p1, p2}, Lcom/flurry/org/apache/avro/generic/GenericData;->newRecord(Ljava/lang/Object;Lcom/flurry/org/apache/avro/Schema;)Ljava/lang/Object;
@@ -1458,7 +1457,7 @@
     move-result-object v1
 
     .line 167
-    .local v1, r:Ljava/lang/Object;
+    .local v1, "r":Ljava/lang/Object;
     iget-object v0, p0, Lcom/flurry/org/apache/avro/generic/GenericDatumReader;->data:Lcom/flurry/org/apache/avro/generic/GenericData;
 
     invoke-virtual {v0, v1, p2}, Lcom/flurry/org/apache/avro/generic/GenericData;->getRecordState(Ljava/lang/Object;Lcom/flurry/org/apache/avro/Schema;)Ljava/lang/Object;
@@ -1466,37 +1465,37 @@
     move-result-object v5
 
     .line 169
-    .local v5, state:Ljava/lang/Object;
+    .local v5, "state":Ljava/lang/Object;
     invoke-virtual {p3}, Lcom/flurry/org/apache/avro/io/ResolvingDecoder;->readFieldOrder()[Lcom/flurry/org/apache/avro/Schema$Field;
 
     move-result-object v6
 
-    .local v6, arr$:[Lcom/flurry/org/apache/avro/Schema$Field;
+    .local v6, "arr$":[Lcom/flurry/org/apache/avro/Schema$Field;
     array-length v9, v6
 
-    .local v9, len$:I
+    .local v9, "len$":I
     const/4 v8, 0x0
 
-    .local v8, i$:I
+    .local v8, "i$":I
     :goto_0
     if-ge v8, v9, :cond_1
 
     aget-object v7, v6, v8
 
     .line 170
-    .local v7, f:Lcom/flurry/org/apache/avro/Schema$Field;
+    .local v7, "f":Lcom/flurry/org/apache/avro/Schema$Field;
     invoke-virtual {v7}, Lcom/flurry/org/apache/avro/Schema$Field;->pos()I
 
     move-result v3
 
     .line 171
-    .local v3, pos:I
+    .local v3, "pos":I
     invoke-virtual {v7}, Lcom/flurry/org/apache/avro/Schema$Field;->name()Ljava/lang/String;
 
     move-result-object v2
 
     .line 172
-    .local v2, name:Ljava/lang/String;
+    .local v2, "name":Ljava/lang/String;
     if-eqz p1, :cond_0
 
     iget-object v0, p0, Lcom/flurry/org/apache/avro/generic/GenericDatumReader;->data:Lcom/flurry/org/apache/avro/generic/GenericData;
@@ -1508,7 +1507,7 @@
     move-object v10, v0
 
     .line 173
-    .local v10, oldDatum:Ljava/lang/Object;
+    .local v10, "oldDatum":Ljava/lang/Object;
     :goto_1
     iget-object v0, p0, Lcom/flurry/org/apache/avro/generic/GenericDatumReader;->data:Lcom/flurry/org/apache/avro/generic/GenericData;
 
@@ -1528,7 +1527,7 @@
     goto :goto_0
 
     .line 172
-    .end local v10           #oldDatum:Ljava/lang/Object;
+    .end local v10    # "oldDatum":Ljava/lang/Object;
     :cond_0
     const/4 v0, 0x0
 
@@ -1537,18 +1536,18 @@
     goto :goto_1
 
     .line 176
-    .end local v2           #name:Ljava/lang/String;
-    .end local v3           #pos:I
-    .end local v7           #f:Lcom/flurry/org/apache/avro/Schema$Field;
+    .end local v2    # "name":Ljava/lang/String;
+    .end local v3    # "pos":I
+    .end local v7    # "f":Lcom/flurry/org/apache/avro/Schema$Field;
     :cond_1
     return-object v1
 .end method
 
 .method protected readString(Ljava/lang/Object;Lcom/flurry/org/apache/avro/Schema;Lcom/flurry/org/apache/avro/io/Decoder;)Ljava/lang/Object;
     .locals 2
-    .parameter "old"
-    .parameter "expected"
-    .parameter "in"
+    .param p1, "old"    # Ljava/lang/Object;
+    .param p2, "expected"    # Lcom/flurry/org/apache/avro/Schema;
+    .param p3, "in"    # Lcom/flurry/org/apache/avro/io/Decoder;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -1557,7 +1556,7 @@
 
     .prologue
     .line 326
-    .local p0, this:Lcom/flurry/org/apache/avro/generic/GenericDatumReader;,"Lcom/flurry/org/apache/avro/generic/GenericDatumReader<TD;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/generic/GenericDatumReader;, "Lcom/flurry/org/apache/avro/generic/GenericDatumReader<TD;>;"
     iget-object v0, p0, Lcom/flurry/org/apache/avro/generic/GenericDatumReader;->data:Lcom/flurry/org/apache/avro/generic/GenericData;
 
     const-string v0, "String"
@@ -1595,8 +1594,8 @@
 
 .method protected readString(Ljava/lang/Object;Lcom/flurry/org/apache/avro/io/Decoder;)Ljava/lang/Object;
     .locals 1
-    .parameter "old"
-    .parameter "in"
+    .param p1, "old"    # Ljava/lang/Object;
+    .param p2, "in"    # Lcom/flurry/org/apache/avro/io/Decoder;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -1605,14 +1604,14 @@
 
     .prologue
     .line 336
-    .local p0, this:Lcom/flurry/org/apache/avro/generic/GenericDatumReader;,"Lcom/flurry/org/apache/avro/generic/GenericDatumReader<TD;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/generic/GenericDatumReader;, "Lcom/flurry/org/apache/avro/generic/GenericDatumReader<TD;>;"
     instance-of v0, p1, Lcom/flurry/org/apache/avro/util/Utf8;
 
     if-eqz v0, :cond_0
 
     check-cast p1, Lcom/flurry/org/apache/avro/util/Utf8;
 
-    .end local p1
+    .end local p1    # "old":Ljava/lang/Object;
     move-object v0, p1
 
     :goto_0
@@ -1622,7 +1621,7 @@
 
     return-object v0
 
-    .restart local p1
+    .restart local p1    # "old":Ljava/lang/Object;
     :cond_0
     const/4 v0, 0x0
 
@@ -1631,11 +1630,11 @@
 
 .method public setExpected(Lcom/flurry/org/apache/avro/Schema;)V
     .locals 1
-    .parameter "reader"
+    .param p1, "reader"    # Lcom/flurry/org/apache/avro/Schema;
 
     .prologue
     .line 86
-    .local p0, this:Lcom/flurry/org/apache/avro/generic/GenericDatumReader;,"Lcom/flurry/org/apache/avro/generic/GenericDatumReader<TD;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/generic/GenericDatumReader;, "Lcom/flurry/org/apache/avro/generic/GenericDatumReader<TD;>;"
     iput-object p1, p0, Lcom/flurry/org/apache/avro/generic/GenericDatumReader;->expected:Lcom/flurry/org/apache/avro/Schema;
 
     .line 87
@@ -1649,11 +1648,11 @@
 
 .method public setSchema(Lcom/flurry/org/apache/avro/Schema;)V
     .locals 1
-    .parameter "writer"
+    .param p1, "writer"    # Lcom/flurry/org/apache/avro/Schema;
 
     .prologue
     .line 74
-    .local p0, this:Lcom/flurry/org/apache/avro/generic/GenericDatumReader;,"Lcom/flurry/org/apache/avro/generic/GenericDatumReader<TD;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/generic/GenericDatumReader;, "Lcom/flurry/org/apache/avro/generic/GenericDatumReader<TD;>;"
     iput-object p1, p0, Lcom/flurry/org/apache/avro/generic/GenericDatumReader;->actual:Lcom/flurry/org/apache/avro/Schema;
 
     .line 75

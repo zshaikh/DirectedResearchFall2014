@@ -17,8 +17,6 @@
 # direct methods
 .method constructor <init>(Ljava/lang/String;I)V
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 52
@@ -33,7 +31,7 @@
 # virtual methods
 .method public translateName(Ljava/lang/reflect/Field;)Ljava/lang/String;
     .locals 1
-    .parameter "f"
+    .param p1, "f"    # Ljava/lang/reflect/Field;
 
     .prologue
     .line 54
@@ -41,7 +39,7 @@
 
     move-result-object v0
 
-    #calls: Lcom/fusepowered/m1/google/gson/FieldNamingPolicy;->upperCaseFirstLetter(Ljava/lang/String;)Ljava/lang/String;
+    # invokes: Lcom/fusepowered/m1/google/gson/FieldNamingPolicy;->upperCaseFirstLetter(Ljava/lang/String;)Ljava/lang/String;
     invoke-static {v0}, Lcom/fusepowered/m1/google/gson/FieldNamingPolicy;->access$100(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0

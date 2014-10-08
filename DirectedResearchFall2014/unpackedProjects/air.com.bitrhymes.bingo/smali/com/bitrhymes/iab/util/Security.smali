@@ -24,7 +24,7 @@
 
 .method public static generatePublicKey(Ljava/lang/String;)Ljava/security/PublicKey;
     .locals 5
-    .parameter "encodedPublicKey"
+    .param p0, "encodedPublicKey"    # Ljava/lang/String;
 
     .prologue
     const-string v4, "IABUtil/Security"
@@ -36,7 +36,7 @@
     move-result-object v0
 
     .line 67
-    .local v0, decodedKey:[B
+    .local v0, "decodedKey":[B
     const-string v3, "RSA"
 
     invoke-static {v3}, Ljava/security/KeyFactory;->getInstance(Ljava/lang/String;)Ljava/security/KeyFactory;
@@ -44,7 +44,7 @@
     move-result-object v2
 
     .line 68
-    .local v2, keyFactory:Ljava/security/KeyFactory;
+    .local v2, "keyFactory":Ljava/security/KeyFactory;
     new-instance v3, Ljava/security/spec/X509EncodedKeySpec;
 
     invoke-direct {v3, v0}, Ljava/security/spec/X509EncodedKeySpec;-><init>([B)V
@@ -60,15 +60,15 @@
     return-object v3
 
     .line 69
-    .end local v0           #decodedKey:[B
-    .end local v2           #keyFactory:Ljava/security/KeyFactory;
+    .end local v0    # "decodedKey":[B
+    .end local v2    # "keyFactory":Ljava/security/KeyFactory;
     :catch_0
     move-exception v3
 
     move-object v1, v3
 
     .line 70
-    .local v1, e:Ljava/security/NoSuchAlgorithmException;
+    .local v1, "e":Ljava/security/NoSuchAlgorithmException;
     new-instance v3, Ljava/lang/RuntimeException;
 
     invoke-direct {v3, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
@@ -76,14 +76,14 @@
     throw v3
 
     .line 71
-    .end local v1           #e:Ljava/security/NoSuchAlgorithmException;
+    .end local v1    # "e":Ljava/security/NoSuchAlgorithmException;
     :catch_1
     move-exception v3
 
     move-object v1, v3
 
     .line 72
-    .local v1, e:Ljava/security/spec/InvalidKeySpecException;
+    .local v1, "e":Ljava/security/spec/InvalidKeySpecException;
     const-string v3, "IABUtil/Security"
 
     const-string v3, "Invalid key specification."
@@ -98,14 +98,14 @@
     throw v3
 
     .line 74
-    .end local v1           #e:Ljava/security/spec/InvalidKeySpecException;
+    .end local v1    # "e":Ljava/security/spec/InvalidKeySpecException;
     :catch_2
     move-exception v3
 
     move-object v1, v3
 
     .line 75
-    .local v1, e:Lcom/bitrhymes/iab/util/Base64DecoderException;
+    .local v1, "e":Lcom/bitrhymes/iab/util/Base64DecoderException;
     const-string v3, "IABUtil/Security"
 
     const-string v3, "Base64 decoding failed."
@@ -122,9 +122,9 @@
 
 .method public static verify(Ljava/security/PublicKey;Ljava/lang/String;Ljava/lang/String;)Z
     .locals 6
-    .parameter "publicKey"
-    .parameter "signedData"
-    .parameter "signature"
+    .param p0, "publicKey"    # Ljava/security/PublicKey;
+    .param p1, "signedData"    # Ljava/lang/String;
+    .param p2, "signature"    # Ljava/lang/String;
 
     .prologue
     const/4 v5, 0x0
@@ -140,7 +140,7 @@
     move-result-object v1
 
     .line 93
-    .local v1, sig:Ljava/security/Signature;
+    .local v1, "sig":Ljava/security/Signature;
     invoke-virtual {v1, p0}, Ljava/security/Signature;->initVerify(Ljava/security/PublicKey;)V
 
     .line 94
@@ -176,33 +176,33 @@
     move v2, v5
 
     .line 109
-    .end local v1           #sig:Ljava/security/Signature;
+    .end local v1    # "sig":Ljava/security/Signature;
     :goto_0
     return v2
 
     .line 99
-    .restart local v1       #sig:Ljava/security/Signature;
+    .restart local v1    # "sig":Ljava/security/Signature;
     :cond_0
     const/4 v2, 0x1
 
     goto :goto_0
 
     .line 100
-    .end local v1           #sig:Ljava/security/Signature;
+    .end local v1    # "sig":Ljava/security/Signature;
     :catch_0
     move-exception v2
 
     move-object v0, v2
 
     .line 101
-    .local v0, e:Ljava/security/NoSuchAlgorithmException;
+    .local v0, "e":Ljava/security/NoSuchAlgorithmException;
     const-string v2, "IABUtil/Security"
 
     const-string v2, "NoSuchAlgorithmException."
 
     invoke-static {v4, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .end local v0           #e:Ljava/security/NoSuchAlgorithmException;
+    .end local v0    # "e":Ljava/security/NoSuchAlgorithmException;
     :goto_1
     move v2, v5
 
@@ -216,7 +216,7 @@
     move-object v0, v2
 
     .line 103
-    .local v0, e:Ljava/security/InvalidKeyException;
+    .local v0, "e":Ljava/security/InvalidKeyException;
     const-string v2, "IABUtil/Security"
 
     const-string v2, "Invalid key specification."
@@ -226,14 +226,14 @@
     goto :goto_1
 
     .line 104
-    .end local v0           #e:Ljava/security/InvalidKeyException;
+    .end local v0    # "e":Ljava/security/InvalidKeyException;
     :catch_2
     move-exception v2
 
     move-object v0, v2
 
     .line 105
-    .local v0, e:Ljava/security/SignatureException;
+    .local v0, "e":Ljava/security/SignatureException;
     const-string v2, "IABUtil/Security"
 
     const-string v2, "Signature exception."
@@ -243,14 +243,14 @@
     goto :goto_1
 
     .line 106
-    .end local v0           #e:Ljava/security/SignatureException;
+    .end local v0    # "e":Ljava/security/SignatureException;
     :catch_3
     move-exception v2
 
     move-object v0, v2
 
     .line 107
-    .local v0, e:Lcom/bitrhymes/iab/util/Base64DecoderException;
+    .local v0, "e":Lcom/bitrhymes/iab/util/Base64DecoderException;
     const-string v2, "IABUtil/Security"
 
     const-string v2, "Base64 decoding failed."
@@ -262,9 +262,9 @@
 
 .method public static verifyPurchase(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
     .locals 5
-    .parameter "base64PublicKey"
-    .parameter "signedData"
-    .parameter "signature"
+    .param p0, "base64PublicKey"    # Ljava/lang/String;
+    .param p1, "signedData"    # Ljava/lang/String;
+    .param p2, "signature"    # Ljava/lang/String;
 
     .prologue
     const/4 v3, 0x0
@@ -292,7 +292,7 @@
     const/4 v1, 0x0
 
     .line 46
-    .local v1, verified:Z
+    .local v1, "verified":Z
     invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v2
@@ -305,7 +305,7 @@
     move-result-object v0
 
     .line 48
-    .local v0, key:Ljava/security/PublicKey;
+    .local v0, "key":Ljava/security/PublicKey;
     invoke-static {v0, p1, p2}, Lcom/bitrhymes/iab/util/Security;->verify(Ljava/security/PublicKey;Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v1
@@ -326,7 +326,7 @@
     goto :goto_0
 
     .line 54
-    .end local v0           #key:Ljava/security/PublicKey;
+    .end local v0    # "key":Ljava/security/PublicKey;
     :cond_1
     const/4 v2, 0x1
 

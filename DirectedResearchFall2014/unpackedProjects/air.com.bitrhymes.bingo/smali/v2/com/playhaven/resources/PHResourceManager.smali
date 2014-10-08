@@ -169,7 +169,7 @@
     move-object v0, v1
 
     .line 55
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v1, "PHResourceManager - sharedResourceManager"
 
     sget-object v2, Lv2/com/playhaven/requests/crashreport/PHCrashReport$Urgency;->critical:Lv2/com/playhaven/requests/crashreport/PHCrashReport$Urgency;
@@ -183,7 +183,7 @@
 # virtual methods
 .method public getResource(Ljava/lang/String;)Lv2/com/playhaven/resources/types/PHResource;
     .locals 1
-    .parameter "key"
+    .param p1, "key"    # Ljava/lang/String;
 
     .prologue
     .line 63
@@ -198,7 +198,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lv2/com/playhaven/resources/PHResourceManager;
     check-cast p0, Lv2/com/playhaven/resources/types/PHResource;
 
     move-object v0, p0
@@ -207,7 +207,7 @@
     :goto_0
     return-object v0
 
-    .restart local p0
+    .restart local p0    # "this":Lv2/com/playhaven/resources/PHResourceManager;
     :cond_0
     const/4 v0, 0x0
 
@@ -216,8 +216,8 @@
 
 .method public registerResource(Ljava/lang/String;Lv2/com/playhaven/resources/types/PHResource;)V
     .locals 1
-    .parameter "key"
-    .parameter "resource"
+    .param p1, "key"    # Ljava/lang/String;
+    .param p2, "resource"    # Lv2/com/playhaven/resources/types/PHResource;
 
     .prologue
     .line 71

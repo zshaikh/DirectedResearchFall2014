@@ -21,8 +21,8 @@
 # virtual methods
 .method public call(Lcom/adobe/fre/FREContext;[Lcom/adobe/fre/FREObject;)Lcom/adobe/fre/FREObject;
     .locals 7
-    .parameter "arg0"
-    .parameter "arg1"
+    .param p1, "arg0"    # Lcom/adobe/fre/FREContext;
+    .param p2, "arg1"    # [Lcom/adobe/fre/FREObject;
 
     .prologue
     const-string v6, ","
@@ -31,11 +31,11 @@
     const-string v2, ""
 
     .line 17
-    .local v2, referrerString:Ljava/lang/String;
+    .local v2, "referrerString":Ljava/lang/String;
     const/4 v0, 0x0
 
     .line 19
-    .local v0, deviceInfoObject:Lcom/adobe/fre/FREObject;
+    .local v0, "deviceInfoObject":Lcom/adobe/fre/FREObject;
     :try_start_0
     sget-object v3, Lcom/bitrhymes/nativeutils/utils/Utils;->REFERRER_STRING_PATH:Ljava/lang/String;
 
@@ -88,7 +88,7 @@
     move-object v1, v3
 
     .line 25
-    .local v1, e:Lcom/adobe/fre/FREWrongThreadException;
+    .local v1, "e":Lcom/adobe/fre/FREWrongThreadException;
     invoke-virtual {v1}, Lcom/adobe/fre/FREWrongThreadException;->printStackTrace()V
 
     .line 26

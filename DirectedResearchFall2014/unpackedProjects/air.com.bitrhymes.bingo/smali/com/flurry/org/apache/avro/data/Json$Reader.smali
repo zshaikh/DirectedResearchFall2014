@@ -48,8 +48,8 @@
 # virtual methods
 .method public read(Lcom/flurry/org/codehaus/jackson/JsonNode;Lcom/flurry/org/apache/avro/io/Decoder;)Lcom/flurry/org/codehaus/jackson/JsonNode;
     .locals 5
-    .parameter "reuse"
-    .parameter "in"
+    .param p1, "reuse"    # Lcom/flurry/org/codehaus/jackson/JsonNode;
+    .param p2, "in"    # Lcom/flurry/org/apache/avro/io/Decoder;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -108,7 +108,7 @@
     move-result-object v0
 
     .line 90
-    .local v0, result:Lcom/flurry/org/codehaus/jackson/JsonNode;
+    .local v0, "result":Lcom/flurry/org/codehaus/jackson/JsonNode;
     iget-object v1, p0, Lcom/flurry/org/apache/avro/data/Json$Reader;->resolver:Lcom/flurry/org/apache/avro/io/ResolvingDecoder;
 
     invoke-virtual {v1}, Lcom/flurry/org/apache/avro/io/ResolvingDecoder;->drain()V
@@ -121,8 +121,8 @@
 
 .method public bridge synthetic read(Ljava/lang/Object;Lcom/flurry/org/apache/avro/io/Decoder;)Ljava/lang/Object;
     .locals 1
-    .parameter "x0"
-    .parameter "x1"
+    .param p1, "x0"    # Ljava/lang/Object;
+    .param p2, "x1"    # Lcom/flurry/org/apache/avro/io/Decoder;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -133,7 +133,7 @@
     .line 72
     check-cast p1, Lcom/flurry/org/codehaus/jackson/JsonNode;
 
-    .end local p1
+    .end local p1    # "x0":Ljava/lang/Object;
     invoke-virtual {p0, p1, p2}, Lcom/flurry/org/apache/avro/data/Json$Reader;->read(Lcom/flurry/org/codehaus/jackson/JsonNode;Lcom/flurry/org/apache/avro/io/Decoder;)Lcom/flurry/org/codehaus/jackson/JsonNode;
 
     move-result-object v0
@@ -143,7 +143,7 @@
 
 .method public setSchema(Lcom/flurry/org/apache/avro/Schema;)V
     .locals 2
-    .parameter "schema"
+    .param p1, "schema"    # Lcom/flurry/org/apache/avro/Schema;
 
     .prologue
     .line 77

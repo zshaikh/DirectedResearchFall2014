@@ -114,17 +114,15 @@
 
 .method constructor <init>(Lcom/fusepowered/m1/google/gson/internal/Excluder;Lcom/fusepowered/m1/google/gson/FieldNamingStrategy;Ljava/util/Map;ZZZZZZLcom/fusepowered/m1/google/gson/LongSerializationPolicy;Ljava/util/List;)V
     .locals 4
-    .parameter "excluder"
-    .parameter "fieldNamingPolicy"
-    .parameter
-    .parameter "serializeNulls"
-    .parameter "complexMapKeySerialization"
-    .parameter "generateNonExecutableGson"
-    .parameter "htmlSafe"
-    .parameter "prettyPrinting"
-    .parameter "serializeSpecialFloatingPointValues"
-    .parameter "longSerializationPolicy"
-    .parameter
+    .param p1, "excluder"    # Lcom/fusepowered/m1/google/gson/internal/Excluder;
+    .param p2, "fieldNamingPolicy"    # Lcom/fusepowered/m1/google/gson/FieldNamingStrategy;
+    .param p4, "serializeNulls"    # Z
+    .param p5, "complexMapKeySerialization"    # Z
+    .param p6, "generateNonExecutableGson"    # Z
+    .param p7, "htmlSafe"    # Z
+    .param p8, "prettyPrinting"    # Z
+    .param p9, "serializeSpecialFloatingPointValues"    # Z
+    .param p10, "longSerializationPolicy"    # Lcom/fusepowered/m1/google/gson/LongSerializationPolicy;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -145,8 +143,8 @@
 
     .prologue
     .line 186
-    .local p3, instanceCreators:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/reflect/Type;Lcom/fusepowered/m1/google/gson/InstanceCreator<*>;>;"
-    .local p11, typeAdapterFactories:Ljava/util/List;,"Ljava/util/List<Lcom/fusepowered/m1/google/gson/TypeAdapterFactory;>;"
+    .local p3, "instanceCreators":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/reflect/Type;Lcom/fusepowered/m1/google/gson/InstanceCreator<*>;>;"
+    .local p11, "typeAdapterFactories":Ljava/util/List;, "Ljava/util/List<Lcom/fusepowered/m1/google/gson/TypeAdapterFactory;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 110
@@ -206,7 +204,7 @@
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     .line 196
-    .local v0, factories:Ljava/util/List;,"Ljava/util/List<Lcom/fusepowered/m1/google/gson/TypeAdapterFactory;>;"
+    .local v0, "factories":Ljava/util/List;, "Ljava/util/List<Lcom/fusepowered/m1/google/gson/TypeAdapterFactory;>;"
     sget-object v1, Lcom/fusepowered/m1/google/gson/internal/bind/TypeAdapters;->JSON_ELEMENT_FACTORY:Lcom/fusepowered/m1/google/gson/TypeAdapterFactory;
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -444,8 +442,8 @@
 
 .method static synthetic access$000(Lcom/fusepowered/m1/google/gson/Gson;D)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
+    .param p0, "x0"    # Lcom/fusepowered/m1/google/gson/Gson;
+    .param p1, "x1"    # D
 
     .prologue
     .line 98
@@ -456,8 +454,8 @@
 
 .method private static assertFullConsumption(Ljava/lang/Object;Lcom/fusepowered/m1/google/gson/stream/JsonReader;)V
     .locals 3
-    .parameter "obj"
-    .parameter "reader"
+    .param p0, "obj"    # Ljava/lang/Object;
+    .param p1, "reader"    # Lcom/fusepowered/m1/google/gson/stream/JsonReader;
 
     .prologue
     .line 776
@@ -491,7 +489,7 @@
     move-object v0, v1
 
     .line 780
-    .local v0, e:Lcom/fusepowered/m1/google/gson/stream/MalformedJsonException;
+    .local v0, "e":Lcom/fusepowered/m1/google/gson/stream/MalformedJsonException;
     new-instance v1, Lcom/fusepowered/m1/google/gson/JsonSyntaxException;
 
     invoke-direct {v1, v0}, Lcom/fusepowered/m1/google/gson/JsonSyntaxException;-><init>(Ljava/lang/Throwable;)V
@@ -499,14 +497,14 @@
     throw v1
 
     .line 781
-    .end local v0           #e:Lcom/fusepowered/m1/google/gson/stream/MalformedJsonException;
+    .end local v0    # "e":Lcom/fusepowered/m1/google/gson/stream/MalformedJsonException;
     :catch_1
     move-exception v1
 
     move-object v0, v1
 
     .line 782
-    .local v0, e:Ljava/io/IOException;
+    .local v0, "e":Ljava/io/IOException;
     new-instance v1, Lcom/fusepowered/m1/google/gson/JsonIOException;
 
     invoke-direct {v1, v0}, Lcom/fusepowered/m1/google/gson/JsonIOException;-><init>(Ljava/lang/Throwable;)V
@@ -514,14 +512,14 @@
     throw v1
 
     .line 784
-    .end local v0           #e:Ljava/io/IOException;
+    .end local v0    # "e":Ljava/io/IOException;
     :cond_0
     return-void
 .end method
 
 .method private checkValidFloatingPoint(D)V
     .locals 3
-    .parameter "value"
+    .param p1, "value"    # D
 
     .prologue
     .line 296
@@ -576,7 +574,7 @@
 
 .method private doubleAdapter(Z)Lcom/fusepowered/m1/google/gson/TypeAdapter;
     .locals 1
-    .parameter "serializeSpecialFloatingPointValues"
+    .param p1, "serializeSpecialFloatingPointValues"    # Z
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(Z)",
@@ -608,7 +606,7 @@
 
 .method private floatAdapter(Z)Lcom/fusepowered/m1/google/gson/TypeAdapter;
     .locals 1
-    .parameter "serializeSpecialFloatingPointValues"
+    .param p1, "serializeSpecialFloatingPointValues"    # Z
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(Z)",
@@ -640,7 +638,7 @@
 
 .method private longAdapter(Lcom/fusepowered/m1/google/gson/LongSerializationPolicy;)Lcom/fusepowered/m1/google/gson/TypeAdapter;
     .locals 1
-    .parameter "longSerializationPolicy"
+    .param p1, "longSerializationPolicy"    # Lcom/fusepowered/m1/google/gson/LongSerializationPolicy;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -676,7 +674,7 @@
 
 .method private newJsonWriter(Ljava/io/Writer;)Lcom/fusepowered/m1/google/gson/stream/JsonWriter;
     .locals 2
-    .parameter "writer"
+    .param p1, "writer"    # Ljava/io/Writer;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -701,7 +699,7 @@
     invoke-direct {v0, p1}, Lcom/fusepowered/m1/google/gson/stream/JsonWriter;-><init>(Ljava/io/Writer;)V
 
     .line 643
-    .local v0, jsonWriter:Lcom/fusepowered/m1/google/gson/stream/JsonWriter;
+    .local v0, "jsonWriter":Lcom/fusepowered/m1/google/gson/stream/JsonWriter;
     iget-boolean v1, p0, Lcom/fusepowered/m1/google/gson/Gson;->prettyPrinting:Z
 
     if-eqz v1, :cond_1
@@ -725,8 +723,7 @@
 # virtual methods
 .method public fromJson(Lcom/fusepowered/m1/google/gson/JsonElement;Ljava/lang/Class;)Ljava/lang/Object;
     .locals 2
-    .parameter "json"
-    .parameter
+    .param p1, "json"    # Lcom/fusepowered/m1/google/gson/JsonElement;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -746,13 +743,13 @@
 
     .prologue
     .line 842
-    .local p2, classOfT:Ljava/lang/Class;,"Ljava/lang/Class<TT;>;"
+    .local p2, "classOfT":Ljava/lang/Class;, "Ljava/lang/Class<TT;>;"
     invoke-virtual {p0, p1, p2}, Lcom/fusepowered/m1/google/gson/Gson;->fromJson(Lcom/fusepowered/m1/google/gson/JsonElement;Ljava/lang/reflect/Type;)Ljava/lang/Object;
 
     move-result-object v0
 
     .line 843
-    .local v0, object:Ljava/lang/Object;
+    .local v0, "object":Ljava/lang/Object;
     invoke-static {p2}, Lcom/fusepowered/m1/google/gson/internal/Primitives;->wrap(Ljava/lang/Class;)Ljava/lang/Class;
 
     move-result-object v1
@@ -766,8 +763,8 @@
 
 .method public fromJson(Lcom/fusepowered/m1/google/gson/JsonElement;Ljava/lang/reflect/Type;)Ljava/lang/Object;
     .locals 1
-    .parameter "json"
-    .parameter "typeOfT"
+    .param p1, "json"    # Lcom/fusepowered/m1/google/gson/JsonElement;
+    .param p2, "typeOfT"    # Ljava/lang/reflect/Type;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -810,8 +807,8 @@
 
 .method public fromJson(Lcom/fusepowered/m1/google/gson/stream/JsonReader;Ljava/lang/reflect/Type;)Ljava/lang/Object;
     .locals 7
-    .parameter "reader"
-    .parameter "typeOfT"
+    .param p1, "reader"    # Lcom/fusepowered/m1/google/gson/stream/JsonReader;
+    .param p2, "typeOfT"    # Ljava/lang/reflect/Type;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -835,13 +832,13 @@
     const/4 v1, 0x1
 
     .line 797
-    .local v1, isEmpty:Z
+    .local v1, "isEmpty":Z
     invoke-virtual {p1}, Lcom/fusepowered/m1/google/gson/stream/JsonReader;->isLenient()Z
 
     move-result v3
 
     .line 798
-    .local v3, oldLenient:Z
+    .local v3, "oldLenient":Z
     const/4 v6, 0x1
 
     invoke-virtual {p1, v6}, Lcom/fusepowered/m1/google/gson/stream/JsonReader;->setLenient(Z)V
@@ -859,31 +856,31 @@
     move-result-object v5
 
     .line 803
-    .local v5, typeToken:Lcom/fusepowered/m1/google/gson/reflect/TypeToken;,"Lcom/fusepowered/m1/google/gson/reflect/TypeToken<TT;>;"
+    .local v5, "typeToken":Lcom/fusepowered/m1/google/gson/reflect/TypeToken;, "Lcom/fusepowered/m1/google/gson/reflect/TypeToken<TT;>;"
     invoke-virtual {p0, v5}, Lcom/fusepowered/m1/google/gson/Gson;->getAdapter(Lcom/fusepowered/m1/google/gson/reflect/TypeToken;)Lcom/fusepowered/m1/google/gson/TypeAdapter;
 
     move-result-object v4
 
     .line 804
-    .local v4, typeAdapter:Lcom/fusepowered/m1/google/gson/TypeAdapter;,"Lcom/fusepowered/m1/google/gson/TypeAdapter<TT;>;"
+    .local v4, "typeAdapter":Lcom/fusepowered/m1/google/gson/TypeAdapter;, "Lcom/fusepowered/m1/google/gson/TypeAdapter<TT;>;"
     invoke-virtual {v4, p1}, Lcom/fusepowered/m1/google/gson/TypeAdapter;->read(Lcom/fusepowered/m1/google/gson/stream/JsonReader;)Ljava/lang/Object;
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/io/EOFException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_2
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result-object v2
 
     .line 821
-    .local v2, object:Ljava/lang/Object;,"TT;"
+    .local v2, "object":Ljava/lang/Object;, "TT;"
     invoke-virtual {p1, v3}, Lcom/fusepowered/m1/google/gson/stream/JsonReader;->setLenient(Z)V
 
     move-object v6, v2
 
-    .end local v2           #object:Ljava/lang/Object;,"TT;"
-    .end local v4           #typeAdapter:Lcom/fusepowered/m1/google/gson/TypeAdapter;,"Lcom/fusepowered/m1/google/gson/TypeAdapter<TT;>;"
-    .end local v5           #typeToken:Lcom/fusepowered/m1/google/gson/reflect/TypeToken;,"Lcom/fusepowered/m1/google/gson/reflect/TypeToken<TT;>;"
+    .end local v2    # "object":Ljava/lang/Object;, "TT;"
+    .end local v4    # "typeAdapter":Lcom/fusepowered/m1/google/gson/TypeAdapter;, "Lcom/fusepowered/m1/google/gson/TypeAdapter<TT;>;"
+    .end local v5    # "typeToken":Lcom/fusepowered/m1/google/gson/reflect/TypeToken;, "Lcom/fusepowered/m1/google/gson/reflect/TypeToken<TT;>;"
     :goto_0
     return-object v6
 
@@ -894,7 +891,7 @@
     move-object v0, v6
 
     .line 811
-    .local v0, e:Ljava/io/EOFException;
+    .local v0, "e":Ljava/io/EOFException;
     if-eqz v1, :cond_0
 
     .line 812
@@ -917,7 +914,7 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     .line 821
-    .end local v0           #e:Ljava/io/EOFException;
+    .end local v0    # "e":Ljava/io/EOFException;
     :catchall_0
     move-exception v6
 
@@ -932,7 +929,7 @@
     move-object v0, v6
 
     .line 816
-    .local v0, e:Ljava/lang/IllegalStateException;
+    .local v0, "e":Ljava/lang/IllegalStateException;
     :try_start_2
     new-instance v6, Lcom/fusepowered/m1/google/gson/JsonSyntaxException;
 
@@ -941,14 +938,14 @@
     throw v6
 
     .line 817
-    .end local v0           #e:Ljava/lang/IllegalStateException;
+    .end local v0    # "e":Ljava/lang/IllegalStateException;
     :catch_2
     move-exception v6
 
     move-object v0, v6
 
     .line 819
-    .local v0, e:Ljava/io/IOException;
+    .local v0, "e":Ljava/io/IOException;
     new-instance v6, Lcom/fusepowered/m1/google/gson/JsonSyntaxException;
 
     invoke-direct {v6, v0}, Lcom/fusepowered/m1/google/gson/JsonSyntaxException;-><init>(Ljava/lang/Throwable;)V
@@ -960,8 +957,7 @@
 
 .method public fromJson(Ljava/io/Reader;Ljava/lang/Class;)Ljava/lang/Object;
     .locals 3
-    .parameter "json"
-    .parameter
+    .param p1, "json"    # Ljava/io/Reader;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -982,19 +978,19 @@
 
     .prologue
     .line 741
-    .local p2, classOfT:Ljava/lang/Class;,"Ljava/lang/Class<TT;>;"
+    .local p2, "classOfT":Ljava/lang/Class;, "Ljava/lang/Class<TT;>;"
     new-instance v0, Lcom/fusepowered/m1/google/gson/stream/JsonReader;
 
     invoke-direct {v0, p1}, Lcom/fusepowered/m1/google/gson/stream/JsonReader;-><init>(Ljava/io/Reader;)V
 
     .line 742
-    .local v0, jsonReader:Lcom/fusepowered/m1/google/gson/stream/JsonReader;
+    .local v0, "jsonReader":Lcom/fusepowered/m1/google/gson/stream/JsonReader;
     invoke-virtual {p0, v0, p2}, Lcom/fusepowered/m1/google/gson/Gson;->fromJson(Lcom/fusepowered/m1/google/gson/stream/JsonReader;Ljava/lang/reflect/Type;)Ljava/lang/Object;
 
     move-result-object v1
 
     .line 743
-    .local v1, object:Ljava/lang/Object;
+    .local v1, "object":Ljava/lang/Object;
     invoke-static {v1, v0}, Lcom/fusepowered/m1/google/gson/Gson;->assertFullConsumption(Ljava/lang/Object;Lcom/fusepowered/m1/google/gson/stream/JsonReader;)V
 
     .line 744
@@ -1011,8 +1007,8 @@
 
 .method public fromJson(Ljava/io/Reader;Ljava/lang/reflect/Type;)Ljava/lang/Object;
     .locals 2
-    .parameter "json"
-    .parameter "typeOfT"
+    .param p1, "json"    # Ljava/io/Reader;
+    .param p2, "typeOfT"    # Ljava/lang/reflect/Type;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -1038,13 +1034,13 @@
     invoke-direct {v0, p1}, Lcom/fusepowered/m1/google/gson/stream/JsonReader;-><init>(Ljava/io/Reader;)V
 
     .line 769
-    .local v0, jsonReader:Lcom/fusepowered/m1/google/gson/stream/JsonReader;
+    .local v0, "jsonReader":Lcom/fusepowered/m1/google/gson/stream/JsonReader;
     invoke-virtual {p0, v0, p2}, Lcom/fusepowered/m1/google/gson/Gson;->fromJson(Lcom/fusepowered/m1/google/gson/stream/JsonReader;Ljava/lang/reflect/Type;)Ljava/lang/Object;
 
     move-result-object v1
 
     .line 770
-    .local v1, object:Ljava/lang/Object;,"TT;"
+    .local v1, "object":Ljava/lang/Object;, "TT;"
     invoke-static {v1, v0}, Lcom/fusepowered/m1/google/gson/Gson;->assertFullConsumption(Ljava/lang/Object;Lcom/fusepowered/m1/google/gson/stream/JsonReader;)V
 
     .line 771
@@ -1053,8 +1049,7 @@
 
 .method public fromJson(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
     .locals 2
-    .parameter "json"
-    .parameter
+    .param p1, "json"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -1074,13 +1069,13 @@
 
     .prologue
     .line 690
-    .local p2, classOfT:Ljava/lang/Class;,"Ljava/lang/Class<TT;>;"
+    .local p2, "classOfT":Ljava/lang/Class;, "Ljava/lang/Class<TT;>;"
     invoke-virtual {p0, p1, p2}, Lcom/fusepowered/m1/google/gson/Gson;->fromJson(Ljava/lang/String;Ljava/lang/reflect/Type;)Ljava/lang/Object;
 
     move-result-object v0
 
     .line 691
-    .local v0, object:Ljava/lang/Object;
+    .local v0, "object":Ljava/lang/Object;
     invoke-static {p2}, Lcom/fusepowered/m1/google/gson/internal/Primitives;->wrap(Ljava/lang/Class;)Ljava/lang/Class;
 
     move-result-object v1
@@ -1094,8 +1089,8 @@
 
 .method public fromJson(Ljava/lang/String;Ljava/lang/reflect/Type;)Ljava/lang/Object;
     .locals 3
-    .parameter "json"
-    .parameter "typeOfT"
+    .param p1, "json"    # Ljava/lang/String;
+    .param p2, "typeOfT"    # Ljava/lang/reflect/Type;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -1131,12 +1126,12 @@
     invoke-direct {v0, p1}, Ljava/io/StringReader;-><init>(Ljava/lang/String;)V
 
     .line 718
-    .local v0, reader:Ljava/io/StringReader;
+    .local v0, "reader":Ljava/io/StringReader;
     invoke-virtual {p0, v0, p2}, Lcom/fusepowered/m1/google/gson/Gson;->fromJson(Ljava/io/Reader;Ljava/lang/reflect/Type;)Ljava/lang/Object;
 
     move-result-object v1
 
-    .local v1, target:Ljava/lang/Object;,"TT;"
+    .local v1, "target":Ljava/lang/Object;, "TT;"
     move-object v2, v1
 
     .line 719
@@ -1145,7 +1140,6 @@
 
 .method public getAdapter(Lcom/fusepowered/m1/google/gson/reflect/TypeToken;)Lcom/fusepowered/m1/google/gson/TypeAdapter;
     .locals 11
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -1160,7 +1154,7 @@
 
     .prologue
     .line 333
-    .local p1, type:Lcom/fusepowered/m1/google/gson/reflect/TypeToken;,"Lcom/fusepowered/m1/google/gson/reflect/TypeToken<TT;>;"
+    .local p1, "type":Lcom/fusepowered/m1/google/gson/reflect/TypeToken;, "Lcom/fusepowered/m1/google/gson/reflect/TypeToken<TT;>;"
     iget-object v8, p0, Lcom/fusepowered/m1/google/gson/Gson;->typeTokenCache:Ljava/util/Map;
 
     invoke-interface {v8, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1170,7 +1164,7 @@
     check-cast v0, Lcom/fusepowered/m1/google/gson/TypeAdapter;
 
     .line 334
-    .local v0, cached:Lcom/fusepowered/m1/google/gson/TypeAdapter;,"Lcom/fusepowered/m1/google/gson/TypeAdapter<*>;"
+    .local v0, "cached":Lcom/fusepowered/m1/google/gson/TypeAdapter;, "Lcom/fusepowered/m1/google/gson/TypeAdapter<*>;"
     if-eqz v0, :cond_0
 
     move-object v8, v0
@@ -1190,21 +1184,21 @@
     check-cast v7, Ljava/util/Map;
 
     .line 339
-    .local v7, threadCalls:Ljava/util/Map;,"Ljava/util/Map<Lcom/fusepowered/m1/google/gson/reflect/TypeToken<*>;Lcom/fusepowered/m1/google/gson/Gson$FutureTypeAdapter<*>;>;"
+    .local v7, "threadCalls":Ljava/util/Map;, "Ljava/util/Map<Lcom/fusepowered/m1/google/gson/reflect/TypeToken<*>;Lcom/fusepowered/m1/google/gson/Gson$FutureTypeAdapter<*>;>;"
     const/4 v6, 0x0
 
     .line 340
-    .local v6, requiresThreadLocalCleanup:Z
+    .local v6, "requiresThreadLocalCleanup":Z
     if-nez v7, :cond_1
 
     .line 341
     new-instance v7, Ljava/util/HashMap;
 
-    .end local v7           #threadCalls:Ljava/util/Map;,"Ljava/util/Map<Lcom/fusepowered/m1/google/gson/reflect/TypeToken<*>;Lcom/fusepowered/m1/google/gson/Gson$FutureTypeAdapter<*>;>;"
+    .end local v7    # "threadCalls":Ljava/util/Map;, "Ljava/util/Map<Lcom/fusepowered/m1/google/gson/reflect/TypeToken<*>;Lcom/fusepowered/m1/google/gson/Gson$FutureTypeAdapter<*>;>;"
     invoke-direct {v7}, Ljava/util/HashMap;-><init>()V
 
     .line 342
-    .restart local v7       #threadCalls:Ljava/util/Map;,"Ljava/util/Map<Lcom/fusepowered/m1/google/gson/reflect/TypeToken<*>;Lcom/fusepowered/m1/google/gson/Gson$FutureTypeAdapter<*>;>;"
+    .restart local v7    # "threadCalls":Ljava/util/Map;, "Ljava/util/Map<Lcom/fusepowered/m1/google/gson/reflect/TypeToken<*>;Lcom/fusepowered/m1/google/gson/Gson$FutureTypeAdapter<*>;>;"
     iget-object v8, p0, Lcom/fusepowered/m1/google/gson/Gson;->calls:Ljava/lang/ThreadLocal;
 
     invoke-virtual {v8, v7}, Ljava/lang/ThreadLocal;->set(Ljava/lang/Object;)V
@@ -1221,7 +1215,7 @@
     check-cast v5, Lcom/fusepowered/m1/google/gson/Gson$FutureTypeAdapter;
 
     .line 348
-    .local v5, ongoingCall:Lcom/fusepowered/m1/google/gson/Gson$FutureTypeAdapter;,"Lcom/fusepowered/m1/google/gson/Gson$FutureTypeAdapter<TT;>;"
+    .local v5, "ongoingCall":Lcom/fusepowered/m1/google/gson/Gson$FutureTypeAdapter;, "Lcom/fusepowered/m1/google/gson/Gson$FutureTypeAdapter<TT;>;"
     if-eqz v5, :cond_2
 
     move-object v8, v5
@@ -1237,7 +1231,7 @@
     invoke-direct {v1}, Lcom/fusepowered/m1/google/gson/Gson$FutureTypeAdapter;-><init>()V
 
     .line 354
-    .local v1, call:Lcom/fusepowered/m1/google/gson/Gson$FutureTypeAdapter;,"Lcom/fusepowered/m1/google/gson/Gson$FutureTypeAdapter<TT;>;"
+    .local v1, "call":Lcom/fusepowered/m1/google/gson/Gson$FutureTypeAdapter;, "Lcom/fusepowered/m1/google/gson/Gson$FutureTypeAdapter<TT;>;"
     invoke-interface {v7, p1, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 356
@@ -1247,7 +1241,7 @@
 
     move-result-object v4
 
-    .local v4, i$:Ljava/util/Iterator;
+    .local v4, "i$":Ljava/util/Iterator;
     :cond_3
     invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
 
@@ -1262,13 +1256,13 @@
     check-cast v3, Lcom/fusepowered/m1/google/gson/TypeAdapterFactory;
 
     .line 357
-    .local v3, factory:Lcom/fusepowered/m1/google/gson/TypeAdapterFactory;
+    .local v3, "factory":Lcom/fusepowered/m1/google/gson/TypeAdapterFactory;
     invoke-interface {v3, p0, p1}, Lcom/fusepowered/m1/google/gson/TypeAdapterFactory;->create(Lcom/fusepowered/m1/google/gson/Gson;Lcom/fusepowered/m1/google/gson/reflect/TypeToken;)Lcom/fusepowered/m1/google/gson/TypeAdapter;
 
     move-result-object v2
 
     .line 358
-    .local v2, candidate:Lcom/fusepowered/m1/google/gson/TypeAdapter;,"Lcom/fusepowered/m1/google/gson/TypeAdapter<TT;>;"
+    .local v2, "candidate":Lcom/fusepowered/m1/google/gson/TypeAdapter;, "Lcom/fusepowered/m1/google/gson/TypeAdapter<TT;>;"
     if-eqz v2, :cond_3
 
     .line 359
@@ -1298,8 +1292,8 @@
     goto :goto_0
 
     .line 364
-    .end local v2           #candidate:Lcom/fusepowered/m1/google/gson/TypeAdapter;,"Lcom/fusepowered/m1/google/gson/TypeAdapter<TT;>;"
-    .end local v3           #factory:Lcom/fusepowered/m1/google/gson/TypeAdapterFactory;
+    .end local v2    # "candidate":Lcom/fusepowered/m1/google/gson/TypeAdapter;, "Lcom/fusepowered/m1/google/gson/TypeAdapter<TT;>;"
+    .end local v3    # "factory":Lcom/fusepowered/m1/google/gson/TypeAdapterFactory;
     :cond_5
     :try_start_1
     new-instance v8, Ljava/lang/IllegalArgumentException;
@@ -1329,8 +1323,8 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     .line 366
-    .end local v1           #call:Lcom/fusepowered/m1/google/gson/Gson$FutureTypeAdapter;,"Lcom/fusepowered/m1/google/gson/Gson$FutureTypeAdapter<TT;>;"
-    .end local v4           #i$:Ljava/util/Iterator;
+    .end local v1    # "call":Lcom/fusepowered/m1/google/gson/Gson$FutureTypeAdapter;, "Lcom/fusepowered/m1/google/gson/Gson$FutureTypeAdapter<TT;>;"
+    .end local v4    # "i$":Ljava/util/Iterator;
     :catchall_0
     move-exception v8
 
@@ -1350,7 +1344,6 @@
 
 .method public getAdapter(Ljava/lang/Class;)Lcom/fusepowered/m1/google/gson/TypeAdapter;
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -1365,7 +1358,7 @@
 
     .prologue
     .line 446
-    .local p1, type:Ljava/lang/Class;,"Ljava/lang/Class<TT;>;"
+    .local p1, "type":Ljava/lang/Class;, "Ljava/lang/Class<TT;>;"
     invoke-static {p1}, Lcom/fusepowered/m1/google/gson/reflect/TypeToken;->get(Ljava/lang/Class;)Lcom/fusepowered/m1/google/gson/reflect/TypeToken;
 
     move-result-object v0
@@ -1379,8 +1372,7 @@
 
 .method public getDelegateAdapter(Lcom/fusepowered/m1/google/gson/TypeAdapterFactory;Lcom/fusepowered/m1/google/gson/reflect/TypeToken;)Lcom/fusepowered/m1/google/gson/TypeAdapter;
     .locals 7
-    .parameter "skipPast"
-    .parameter
+    .param p1, "skipPast"    # Lcom/fusepowered/m1/google/gson/TypeAdapterFactory;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -1396,18 +1388,18 @@
 
     .prologue
     .line 421
-    .local p2, type:Lcom/fusepowered/m1/google/gson/reflect/TypeToken;,"Lcom/fusepowered/m1/google/gson/reflect/TypeToken<TT;>;"
+    .local p2, "type":Lcom/fusepowered/m1/google/gson/reflect/TypeToken;, "Lcom/fusepowered/m1/google/gson/reflect/TypeToken<TT;>;"
     const/4 v3, 0x0
 
     .line 423
-    .local v3, skipPastFound:Z
+    .local v3, "skipPastFound":Z
     iget-object v4, p0, Lcom/fusepowered/m1/google/gson/Gson;->factories:Ljava/util/List;
 
     invoke-interface {v4}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
 
-    .local v2, i$:Ljava/util/Iterator;
+    .local v2, "i$":Ljava/util/Iterator;
     :cond_0
     :goto_0
     invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
@@ -1423,7 +1415,7 @@
     check-cast v1, Lcom/fusepowered/m1/google/gson/TypeAdapterFactory;
 
     .line 424
-    .local v1, factory:Lcom/fusepowered/m1/google/gson/TypeAdapterFactory;
+    .local v1, "factory":Lcom/fusepowered/m1/google/gson/TypeAdapterFactory;
     if-nez v3, :cond_1
 
     .line 425
@@ -1441,15 +1433,15 @@
     move-result-object v0
 
     .line 432
-    .local v0, candidate:Lcom/fusepowered/m1/google/gson/TypeAdapter;,"Lcom/fusepowered/m1/google/gson/TypeAdapter<TT;>;"
+    .local v0, "candidate":Lcom/fusepowered/m1/google/gson/TypeAdapter;, "Lcom/fusepowered/m1/google/gson/TypeAdapter<TT;>;"
     if-eqz v0, :cond_0
 
     .line 433
     return-object v0
 
     .line 436
-    .end local v0           #candidate:Lcom/fusepowered/m1/google/gson/TypeAdapter;,"Lcom/fusepowered/m1/google/gson/TypeAdapter<TT;>;"
-    .end local v1           #factory:Lcom/fusepowered/m1/google/gson/TypeAdapterFactory;
+    .end local v0    # "candidate":Lcom/fusepowered/m1/google/gson/TypeAdapter;, "Lcom/fusepowered/m1/google/gson/TypeAdapter<TT;>;"
+    .end local v1    # "factory":Lcom/fusepowered/m1/google/gson/TypeAdapterFactory;
     :cond_2
     new-instance v4, Ljava/lang/IllegalArgumentException;
 
@@ -1478,7 +1470,7 @@
 
 .method public toJson(Lcom/fusepowered/m1/google/gson/JsonElement;)Ljava/lang/String;
     .locals 2
-    .parameter "jsonElement"
+    .param p1, "jsonElement"    # Lcom/fusepowered/m1/google/gson/JsonElement;
 
     .prologue
     .line 612
@@ -1487,7 +1479,7 @@
     invoke-direct {v0}, Ljava/io/StringWriter;-><init>()V
 
     .line 613
-    .local v0, writer:Ljava/io/StringWriter;
+    .local v0, "writer":Ljava/io/StringWriter;
     invoke-virtual {p0, p1, v0}, Lcom/fusepowered/m1/google/gson/Gson;->toJson(Lcom/fusepowered/m1/google/gson/JsonElement;Ljava/lang/Appendable;)V
 
     .line 614
@@ -1500,7 +1492,7 @@
 
 .method public toJson(Ljava/lang/Object;)Ljava/lang/String;
     .locals 1
-    .parameter "src"
+    .param p1, "src"    # Ljava/lang/Object;
 
     .prologue
     .line 505
@@ -1531,8 +1523,8 @@
 
 .method public toJson(Ljava/lang/Object;Ljava/lang/reflect/Type;)Ljava/lang/String;
     .locals 2
-    .parameter "src"
-    .parameter "typeOfSrc"
+    .param p1, "src"    # Ljava/lang/Object;
+    .param p2, "typeOfSrc"    # Ljava/lang/reflect/Type;
 
     .prologue
     .line 527
@@ -1541,7 +1533,7 @@
     invoke-direct {v0}, Ljava/io/StringWriter;-><init>()V
 
     .line 528
-    .local v0, writer:Ljava/io/StringWriter;
+    .local v0, "writer":Ljava/io/StringWriter;
     invoke-virtual {p0, p1, p2, v0}, Lcom/fusepowered/m1/google/gson/Gson;->toJson(Ljava/lang/Object;Ljava/lang/reflect/Type;Ljava/lang/Appendable;)V
 
     .line 529
@@ -1554,8 +1546,8 @@
 
 .method public toJson(Lcom/fusepowered/m1/google/gson/JsonElement;Lcom/fusepowered/m1/google/gson/stream/JsonWriter;)V
     .locals 5
-    .parameter "jsonElement"
-    .parameter "writer"
+    .param p1, "jsonElement"    # Lcom/fusepowered/m1/google/gson/JsonElement;
+    .param p2, "writer"    # Lcom/fusepowered/m1/google/gson/stream/JsonWriter;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lcom/fusepowered/m1/google/gson/JsonIOException;
@@ -1569,7 +1561,7 @@
     move-result v2
 
     .line 656
-    .local v2, oldLenient:Z
+    .local v2, "oldLenient":Z
     const/4 v4, 0x1
 
     invoke-virtual {p2, v4}, Lcom/fusepowered/m1/google/gson/stream/JsonWriter;->setLenient(Z)V
@@ -1580,7 +1572,7 @@
     move-result v1
 
     .line 658
-    .local v1, oldHtmlSafe:Z
+    .local v1, "oldHtmlSafe":Z
     iget-boolean v4, p0, Lcom/fusepowered/m1/google/gson/Gson;->htmlSafe:Z
 
     invoke-virtual {p2, v4}, Lcom/fusepowered/m1/google/gson/stream/JsonWriter;->setHtmlSafe(Z)V
@@ -1591,7 +1583,7 @@
     move-result v3
 
     .line 660
-    .local v3, oldSerializeNulls:Z
+    .local v3, "oldSerializeNulls":Z
     iget-boolean v4, p0, Lcom/fusepowered/m1/google/gson/Gson;->serializeNulls:Z
 
     invoke-virtual {p2, v4}, Lcom/fusepowered/m1/google/gson/stream/JsonWriter;->setSerializeNulls(Z)V
@@ -1600,8 +1592,8 @@
     :try_start_0
     invoke-static {p1, p2}, Lcom/fusepowered/m1/google/gson/internal/Streams;->write(Lcom/fusepowered/m1/google/gson/JsonElement;Lcom/fusepowered/m1/google/gson/stream/JsonWriter;)V
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 666
     invoke-virtual {p2, v2}, Lcom/fusepowered/m1/google/gson/stream/JsonWriter;->setLenient(Z)V
@@ -1620,7 +1612,7 @@
     move-exception v0
 
     .line 664
-    .local v0, e:Ljava/io/IOException;
+    .local v0, "e":Ljava/io/IOException;
     :try_start_1
     new-instance v4, Lcom/fusepowered/m1/google/gson/JsonIOException;
 
@@ -1631,7 +1623,7 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     .line 666
-    .end local v0           #e:Ljava/io/IOException;
+    .end local v0    # "e":Ljava/io/IOException;
     :catchall_0
     move-exception v4
 
@@ -1648,8 +1640,8 @@
 
 .method public toJson(Lcom/fusepowered/m1/google/gson/JsonElement;Ljava/lang/Appendable;)V
     .locals 3
-    .parameter "jsonElement"
-    .parameter "writer"
+    .param p1, "jsonElement"    # Lcom/fusepowered/m1/google/gson/JsonElement;
+    .param p2, "writer"    # Ljava/lang/Appendable;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lcom/fusepowered/m1/google/gson/JsonIOException;
@@ -1668,7 +1660,7 @@
     move-result-object v1
 
     .line 628
-    .local v1, jsonWriter:Lcom/fusepowered/m1/google/gson/stream/JsonWriter;
+    .local v1, "jsonWriter":Lcom/fusepowered/m1/google/gson/stream/JsonWriter;
     invoke-virtual {p0, p1, v1}, Lcom/fusepowered/m1/google/gson/Gson;->toJson(Lcom/fusepowered/m1/google/gson/JsonElement;Lcom/fusepowered/m1/google/gson/stream/JsonWriter;)V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
@@ -1677,14 +1669,14 @@
     return-void
 
     .line 629
-    .end local v1           #jsonWriter:Lcom/fusepowered/m1/google/gson/stream/JsonWriter;
+    .end local v1    # "jsonWriter":Lcom/fusepowered/m1/google/gson/stream/JsonWriter;
     :catch_0
     move-exception v2
 
     move-object v0, v2
 
     .line 630
-    .local v0, e:Ljava/io/IOException;
+    .local v0, "e":Ljava/io/IOException;
     new-instance v2, Ljava/lang/RuntimeException;
 
     invoke-direct {v2, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
@@ -1694,8 +1686,8 @@
 
 .method public toJson(Ljava/lang/Object;Ljava/lang/Appendable;)V
     .locals 1
-    .parameter "src"
-    .parameter "writer"
+    .param p1, "src"    # Ljava/lang/Object;
+    .param p2, "writer"    # Ljava/lang/Appendable;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lcom/fusepowered/m1/google/gson/JsonIOException;
@@ -1728,9 +1720,9 @@
 
 .method public toJson(Ljava/lang/Object;Ljava/lang/reflect/Type;Lcom/fusepowered/m1/google/gson/stream/JsonWriter;)V
     .locals 6
-    .parameter "src"
-    .parameter "typeOfSrc"
-    .parameter "writer"
+    .param p1, "src"    # Ljava/lang/Object;
+    .param p2, "typeOfSrc"    # Ljava/lang/reflect/Type;
+    .param p3, "writer"    # Lcom/fusepowered/m1/google/gson/stream/JsonWriter;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lcom/fusepowered/m1/google/gson/JsonIOException;
@@ -1748,13 +1740,13 @@
     move-result-object v0
 
     .line 587
-    .local v0, adapter:Lcom/fusepowered/m1/google/gson/TypeAdapter;,"Lcom/fusepowered/m1/google/gson/TypeAdapter<*>;"
+    .local v0, "adapter":Lcom/fusepowered/m1/google/gson/TypeAdapter;, "Lcom/fusepowered/m1/google/gson/TypeAdapter<*>;"
     invoke-virtual {p3}, Lcom/fusepowered/m1/google/gson/stream/JsonWriter;->isLenient()Z
 
     move-result v3
 
     .line 588
-    .local v3, oldLenient:Z
+    .local v3, "oldLenient":Z
     const/4 v5, 0x1
 
     invoke-virtual {p3, v5}, Lcom/fusepowered/m1/google/gson/stream/JsonWriter;->setLenient(Z)V
@@ -1765,7 +1757,7 @@
     move-result v2
 
     .line 590
-    .local v2, oldHtmlSafe:Z
+    .local v2, "oldHtmlSafe":Z
     iget-boolean v5, p0, Lcom/fusepowered/m1/google/gson/Gson;->htmlSafe:Z
 
     invoke-virtual {p3, v5}, Lcom/fusepowered/m1/google/gson/stream/JsonWriter;->setHtmlSafe(Z)V
@@ -1776,7 +1768,7 @@
     move-result v4
 
     .line 592
-    .local v4, oldSerializeNulls:Z
+    .local v4, "oldSerializeNulls":Z
     iget-boolean v5, p0, Lcom/fusepowered/m1/google/gson/Gson;->serializeNulls:Z
 
     invoke-virtual {p3, v5}, Lcom/fusepowered/m1/google/gson/stream/JsonWriter;->setSerializeNulls(Z)V
@@ -1785,8 +1777,8 @@
     :try_start_0
     invoke-virtual {v0, p3, p1}, Lcom/fusepowered/m1/google/gson/TypeAdapter;->write(Lcom/fusepowered/m1/google/gson/stream/JsonWriter;Ljava/lang/Object;)V
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 598
     invoke-virtual {p3, v3}, Lcom/fusepowered/m1/google/gson/stream/JsonWriter;->setLenient(Z)V
@@ -1805,7 +1797,7 @@
     move-exception v1
 
     .line 596
-    .local v1, e:Ljava/io/IOException;
+    .local v1, "e":Ljava/io/IOException;
     :try_start_1
     new-instance v5, Lcom/fusepowered/m1/google/gson/JsonIOException;
 
@@ -1816,7 +1808,7 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     .line 598
-    .end local v1           #e:Ljava/io/IOException;
+    .end local v1    # "e":Ljava/io/IOException;
     :catchall_0
     move-exception v5
 
@@ -1833,9 +1825,9 @@
 
 .method public toJson(Ljava/lang/Object;Ljava/lang/reflect/Type;Ljava/lang/Appendable;)V
     .locals 3
-    .parameter "src"
-    .parameter "typeOfSrc"
-    .parameter "writer"
+    .param p1, "src"    # Ljava/lang/Object;
+    .param p2, "typeOfSrc"    # Ljava/lang/reflect/Type;
+    .param p3, "writer"    # Ljava/lang/Appendable;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lcom/fusepowered/m1/google/gson/JsonIOException;
@@ -1854,7 +1846,7 @@
     move-result-object v1
 
     .line 573
-    .local v1, jsonWriter:Lcom/fusepowered/m1/google/gson/stream/JsonWriter;
+    .local v1, "jsonWriter":Lcom/fusepowered/m1/google/gson/stream/JsonWriter;
     invoke-virtual {p0, p1, p2, v1}, Lcom/fusepowered/m1/google/gson/Gson;->toJson(Ljava/lang/Object;Ljava/lang/reflect/Type;Lcom/fusepowered/m1/google/gson/stream/JsonWriter;)V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
@@ -1863,14 +1855,14 @@
     return-void
 
     .line 574
-    .end local v1           #jsonWriter:Lcom/fusepowered/m1/google/gson/stream/JsonWriter;
+    .end local v1    # "jsonWriter":Lcom/fusepowered/m1/google/gson/stream/JsonWriter;
     :catch_0
     move-exception v2
 
     move-object v0, v2
 
     .line 575
-    .local v0, e:Ljava/io/IOException;
+    .local v0, "e":Ljava/io/IOException;
     new-instance v2, Lcom/fusepowered/m1/google/gson/JsonIOException;
 
     invoke-direct {v2, v0}, Lcom/fusepowered/m1/google/gson/JsonIOException;-><init>(Ljava/lang/Throwable;)V
@@ -1880,7 +1872,7 @@
 
 .method public toJsonTree(Ljava/lang/Object;)Lcom/fusepowered/m1/google/gson/JsonElement;
     .locals 1
-    .parameter "src"
+    .param p1, "src"    # Ljava/lang/Object;
 
     .prologue
     .line 463
@@ -1907,8 +1899,8 @@
 
 .method public toJsonTree(Ljava/lang/Object;Ljava/lang/reflect/Type;)Lcom/fusepowered/m1/google/gson/JsonElement;
     .locals 2
-    .parameter "src"
-    .parameter "typeOfSrc"
+    .param p1, "src"    # Ljava/lang/Object;
+    .param p2, "typeOfSrc"    # Ljava/lang/reflect/Type;
 
     .prologue
     .line 486
@@ -1917,7 +1909,7 @@
     invoke-direct {v0}, Lcom/fusepowered/m1/google/gson/internal/bind/JsonTreeWriter;-><init>()V
 
     .line 487
-    .local v0, writer:Lcom/fusepowered/m1/google/gson/internal/bind/JsonTreeWriter;
+    .local v0, "writer":Lcom/fusepowered/m1/google/gson/internal/bind/JsonTreeWriter;
     invoke-virtual {p0, p1, p2, v0}, Lcom/fusepowered/m1/google/gson/Gson;->toJson(Ljava/lang/Object;Ljava/lang/reflect/Type;Lcom/fusepowered/m1/google/gson/stream/JsonWriter;)V
 
     .line 488

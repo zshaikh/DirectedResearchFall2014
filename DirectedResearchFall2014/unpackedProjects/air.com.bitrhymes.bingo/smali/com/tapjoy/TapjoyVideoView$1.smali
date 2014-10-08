@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/tapjoy/TapjoyVideoView;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 421
@@ -55,6 +54,7 @@
 
     invoke-direct {v1}, Lcom/tapjoy/TapjoyURLConnection;-><init>()V
 
+    # getter for: Lcom/tapjoy/TapjoyVideoView;->videoData:Lcom/tapjoy/TapjoyVideoObject;
     invoke-static {}, Lcom/tapjoy/TapjoyVideoView;->access$200()Lcom/tapjoy/TapjoyVideoObject;
 
     move-result-object v2
@@ -66,7 +66,7 @@
     move-result-object v0
 
     .line 429
-    .local v0, response:Lcom/tapjoy/TapjoyHttpURLResponse;
+    .local v0, "response":Lcom/tapjoy/TapjoyHttpURLResponse;
     iget-object v1, v0, Lcom/tapjoy/TapjoyHttpURLResponse;->response:Ljava/lang/String;
 
     if-eqz v1, :cond_0
@@ -93,7 +93,7 @@
 
     const/4 v2, 0x1
 
-    #setter for: Lcom/tapjoy/TapjoyVideoView;->clickRequestSuccess:Z
+    # setter for: Lcom/tapjoy/TapjoyVideoView;->clickRequestSuccess:Z
     invoke-static {v1, v2}, Lcom/tapjoy/TapjoyVideoView;->access$302(Lcom/tapjoy/TapjoyVideoView;Z)Z
 
     .line 434

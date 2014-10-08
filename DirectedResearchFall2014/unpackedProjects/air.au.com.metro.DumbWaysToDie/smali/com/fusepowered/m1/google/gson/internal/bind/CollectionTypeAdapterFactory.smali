@@ -21,7 +21,7 @@
 # direct methods
 .method public constructor <init>(Lcom/fusepowered/m1/google/gson/internal/ConstructorConstructor;)V
     .locals 0
-    .parameter "constructorConstructor"
+    .param p1, "constructorConstructor"    # Lcom/fusepowered/m1/google/gson/internal/ConstructorConstructor;
 
     .prologue
     .line 40
@@ -38,8 +38,7 @@
 # virtual methods
 .method public create(Lcom/fusepowered/m1/google/gson/Gson;Lcom/fusepowered/m1/google/gson/reflect/TypeToken;)Lcom/fusepowered/m1/google/gson/TypeAdapter;
     .locals 7
-    .parameter "gson"
-    .parameter
+    .param p1, "gson"    # Lcom/fusepowered/m1/google/gson/Gson;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -55,19 +54,19 @@
 
     .prologue
     .line 45
-    .local p2, typeToken:Lcom/fusepowered/m1/google/gson/reflect/TypeToken;,"Lcom/fusepowered/m1/google/gson/reflect/TypeToken<TT;>;"
+    .local p2, "typeToken":Lcom/fusepowered/m1/google/gson/reflect/TypeToken;, "Lcom/fusepowered/m1/google/gson/reflect/TypeToken<TT;>;"
     invoke-virtual {p2}, Lcom/fusepowered/m1/google/gson/reflect/TypeToken;->getType()Ljava/lang/reflect/Type;
 
     move-result-object v5
 
     .line 47
-    .local v5, type:Ljava/lang/reflect/Type;
+    .local v5, "type":Ljava/lang/reflect/Type;
     invoke-virtual {p2}, Lcom/fusepowered/m1/google/gson/reflect/TypeToken;->getRawType()Ljava/lang/Class;
 
     move-result-object v3
 
     .line 48
-    .local v3, rawType:Ljava/lang/Class;,"Ljava/lang/Class<-TT;>;"
+    .local v3, "rawType":Ljava/lang/Class;, "Ljava/lang/Class<-TT;>;"
     const-class v6, Ljava/util/Collection;
 
     invoke-virtual {v6, v3}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
@@ -90,7 +89,7 @@
     move-result-object v1
 
     .line 53
-    .local v1, elementType:Ljava/lang/reflect/Type;
+    .local v1, "elementType":Ljava/lang/reflect/Type;
     invoke-static {v1}, Lcom/fusepowered/m1/google/gson/reflect/TypeToken;->get(Ljava/lang/reflect/Type;)Lcom/fusepowered/m1/google/gson/reflect/TypeToken;
 
     move-result-object v6
@@ -100,7 +99,7 @@
     move-result-object v2
 
     .line 54
-    .local v2, elementTypeAdapter:Lcom/fusepowered/m1/google/gson/TypeAdapter;,"Lcom/fusepowered/m1/google/gson/TypeAdapter<*>;"
+    .local v2, "elementTypeAdapter":Lcom/fusepowered/m1/google/gson/TypeAdapter;, "Lcom/fusepowered/m1/google/gson/TypeAdapter<*>;"
     iget-object v6, p0, Lcom/fusepowered/m1/google/gson/internal/bind/CollectionTypeAdapterFactory;->constructorConstructor:Lcom/fusepowered/m1/google/gson/internal/ConstructorConstructor;
 
     invoke-virtual {v6, p2}, Lcom/fusepowered/m1/google/gson/internal/ConstructorConstructor;->get(Lcom/fusepowered/m1/google/gson/reflect/TypeToken;)Lcom/fusepowered/m1/google/gson/internal/ObjectConstructor;
@@ -108,12 +107,12 @@
     move-result-object v0
 
     .line 57
-    .local v0, constructor:Lcom/fusepowered/m1/google/gson/internal/ObjectConstructor;,"Lcom/fusepowered/m1/google/gson/internal/ObjectConstructor<TT;>;"
+    .local v0, "constructor":Lcom/fusepowered/m1/google/gson/internal/ObjectConstructor;, "Lcom/fusepowered/m1/google/gson/internal/ObjectConstructor<TT;>;"
     new-instance v4, Lcom/fusepowered/m1/google/gson/internal/bind/CollectionTypeAdapterFactory$Adapter;
 
     invoke-direct {v4, p1, v1, v2, v0}, Lcom/fusepowered/m1/google/gson/internal/bind/CollectionTypeAdapterFactory$Adapter;-><init>(Lcom/fusepowered/m1/google/gson/Gson;Ljava/lang/reflect/Type;Lcom/fusepowered/m1/google/gson/TypeAdapter;Lcom/fusepowered/m1/google/gson/internal/ObjectConstructor;)V
 
-    .local v4, result:Lcom/fusepowered/m1/google/gson/TypeAdapter;,"Lcom/fusepowered/m1/google/gson/TypeAdapter<TT;>;"
+    .local v4, "result":Lcom/fusepowered/m1/google/gson/TypeAdapter;, "Lcom/fusepowered/m1/google/gson/TypeAdapter<TT;>;"
     move-object v6, v4
 
     .line 58

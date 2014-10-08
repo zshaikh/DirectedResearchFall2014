@@ -14,11 +14,11 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;ZLv2/com/playhaven/interstitial/webview/PHWebViewClient;Lv2/com/playhaven/interstitial/webview/PHWebViewChrome;Lv2/com/playhaven/model/PHContent;)V
     .locals 6
-    .parameter "context"
-    .parameter "doCache"
-    .parameter "client"
-    .parameter "chrome"
-    .parameter "content"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "doCache"    # Z
+    .param p3, "client"    # Lv2/com/playhaven/interstitial/webview/PHWebViewClient;
+    .param p4, "chrome"    # Lv2/com/playhaven/interstitial/webview/PHWebViewChrome;
+    .param p5, "content"    # Lv2/com/playhaven/model/PHContent;
 
     .prologue
     const/4 v5, 0x0
@@ -59,7 +59,7 @@
     move-result-object v0
 
     .line 56
-    .local v0, cachePath:Ljava/lang/String;
+    .local v0, "cachePath":Ljava/lang/String;
     if-eqz p2, :cond_0
 
     .line 58
@@ -235,7 +235,7 @@
     const/4 v0, 0x0
 
     .line 134
-    .local v0, cached_url:Ljava/lang/String;
+    .local v0, "cached_url":Ljava/lang/String;
     :try_start_0
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -369,13 +369,13 @@
     move-object v1, v2
 
     .line 152
-    .local v1, e:Ljava/lang/Exception;
+    .local v1, "e":Ljava/lang/Exception;
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
     goto/16 :goto_0
 
     .line 149
-    .end local v1           #e:Ljava/lang/Exception;
+    .end local v1    # "e":Ljava/lang/Exception;
     :cond_2
     :try_start_1
     iget-object v2, p0, Lv2/com/playhaven/views/interstitial/PHWebView;->content:Lv2/com/playhaven/model/PHContent;

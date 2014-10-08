@@ -37,10 +37,6 @@
 # direct methods
 .method public constructor <init>(Lcom/flurry/android/FlurryAds;Landroid/content/Context;Ljava/lang/String;Lcom/flurry/android/FlurryAdSize;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 950
@@ -63,13 +59,6 @@
 
 .method public constructor <init>(Lcom/flurry/android/FlurryAds;Landroid/content/Context;Ljava/lang/String;Lcom/flurry/android/FlurryAdSize;Landroid/view/ViewGroup;ZZ)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 958
@@ -150,7 +139,6 @@
 # virtual methods
 .method protected final bridge synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
-    .parameter
 
     .prologue
     .line 940
@@ -163,7 +151,6 @@
 
 .method protected final bridge synthetic onPostExecute(Ljava/lang/Object;)V
     .locals 4
-    .parameter
 
     .prologue
     .line 940

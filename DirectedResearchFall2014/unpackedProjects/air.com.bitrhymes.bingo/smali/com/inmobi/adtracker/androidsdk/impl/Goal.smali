@@ -43,9 +43,6 @@
 
 .method public constructor <init>(Ljava/lang/String;IJ)V
     .locals 4
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const-wide/16 v2, 0x0
@@ -125,7 +122,6 @@
 
 .method public setGoalCount(I)V
     .locals 0
-    .parameter
 
     .prologue
     .line 34
@@ -137,7 +133,6 @@
 
 .method public setGoalName(Ljava/lang/String;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 40
@@ -149,7 +144,6 @@
 
 .method public setRetryTime(J)V
     .locals 0
-    .parameter
 
     .prologue
     .line 47

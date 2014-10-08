@@ -24,8 +24,8 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m1/android/MMWebViewClient$MMWebViewClientListener;Lcom/fusepowered/m1/android/HttpRedirection$RedirectionListenerImpl;)V
     .locals 1
-    .parameter "mmWebViewClientListener"
-    .parameter "redirListener"
+    .param p1, "mmWebViewClientListener"    # Lcom/fusepowered/m1/android/MMWebViewClient$MMWebViewClientListener;
+    .param p2, "redirListener"    # Lcom/fusepowered/m1/android/HttpRedirection$RedirectionListenerImpl;
 
     .prologue
     .line 22
@@ -52,8 +52,8 @@
 # virtual methods
 .method public onPageFinished(Landroid/webkit/WebView;Ljava/lang/String;)V
     .locals 4
-    .parameter "webView"
-    .parameter "url"
+    .param p1, "webView"    # Landroid/webkit/WebView;
+    .param p2, "url"    # Ljava/lang/String;
 
     .prologue
     .line 75
@@ -64,7 +64,7 @@
     move-object v1, v0
 
     .line 76
-    .local v1, mmWebView:Lcom/fusepowered/m1/android/MMWebView;
+    .local v1, "mmWebView":Lcom/fusepowered/m1/android/MMWebView;
     invoke-virtual {v1, p2}, Lcom/fusepowered/m1/android/MMWebView;->isOriginalUrl(Ljava/lang/String;)Z
 
     move-result v2
@@ -133,9 +133,9 @@
 
 .method public onPageStarted(Landroid/webkit/WebView;Ljava/lang/String;Landroid/graphics/Bitmap;)V
     .locals 5
-    .parameter "webView"
-    .parameter "urlString"
-    .parameter "favicon"
+    .param p1, "webView"    # Landroid/webkit/WebView;
+    .param p2, "urlString"    # Ljava/lang/String;
+    .param p3, "favicon"    # Landroid/graphics/Bitmap;
 
     .prologue
     const/4 v4, 0x0
@@ -164,7 +164,7 @@
     move-object v1, v0
 
     .line 33
-    .local v1, mmWebView:Lcom/fusepowered/m1/android/MMWebView;
+    .local v1, "mmWebView":Lcom/fusepowered/m1/android/MMWebView;
     const-string v2, "loading"
 
     iput-object v2, v1, Lcom/fusepowered/m1/android/MMWebView;->mraidState:Ljava/lang/String;
@@ -181,10 +181,10 @@
 
 .method public onReceivedError(Landroid/webkit/WebView;ILjava/lang/String;Ljava/lang/String;)V
     .locals 4
-    .parameter "webView"
-    .parameter "errorCode"
-    .parameter "description"
-    .parameter "failingUrl"
+    .param p1, "webView"    # Landroid/webkit/WebView;
+    .param p2, "errorCode"    # I
+    .param p3, "description"    # Ljava/lang/String;
+    .param p4, "failingUrl"    # Ljava/lang/String;
 
     .prologue
     .line 69
@@ -221,8 +221,8 @@
 
 .method public shouldOverrideUrlLoading(Landroid/webkit/WebView;Ljava/lang/String;)Z
     .locals 7
-    .parameter "webView"
-    .parameter "url"
+    .param p1, "webView"    # Landroid/webkit/WebView;
+    .param p2, "url"    # Ljava/lang/String;
 
     .prologue
     const/4 v6, 0x1
@@ -237,7 +237,7 @@
     move-object v2, v0
 
     .line 44
-    .local v2, mmWebView:Lcom/fusepowered/m1/android/MMWebView;
+    .local v2, "mmWebView":Lcom/fusepowered/m1/android/MMWebView;
     invoke-virtual {v2, p2}, Lcom/fusepowered/m1/android/MMWebView;->isOriginalUrl(Ljava/lang/String;)Z
 
     move-result v3
@@ -316,11 +316,11 @@
 
     check-cast p1, Lcom/fusepowered/m1/android/MMWebView;
 
-    .end local p1
+    .end local p1    # "webView":Landroid/webkit/WebView;
     invoke-direct {v1, p1, p2}, Lcom/fusepowered/m1/android/MMCommand;-><init>(Lcom/fusepowered/m1/android/MMWebView;Ljava/lang/String;)V
 
     .line 51
-    .local v1, command:Lcom/fusepowered/m1/android/MMCommand;
+    .local v1, "command":Lcom/fusepowered/m1/android/MMCommand;
     invoke-virtual {v1}, Lcom/fusepowered/m1/android/MMCommand;->isResizeCommand()Z
 
     move-result v3
@@ -335,12 +335,12 @@
     move v3, v6
 
     .line 63
-    .end local v1           #command:Lcom/fusepowered/m1/android/MMCommand;
+    .end local v1    # "command":Lcom/fusepowered/m1/android/MMCommand;
     :goto_0
     return v3
 
     .line 55
-    .restart local p1
+    .restart local p1    # "webView":Landroid/webkit/WebView;
     :cond_0
     iget-object v3, p0, Lcom/fusepowered/m1/android/MMWebViewClient;->redirectListenerImpl:Lcom/fusepowered/m1/android/HttpRedirection$RedirectionListenerImpl;
 

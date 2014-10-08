@@ -29,7 +29,7 @@
 
     iget-object v1, p0, Lcom/applovin/impl/adview/s;->a:Lcom/applovin/impl/adview/AdViewControllerJsInterface;
 
-    #getter for: Lcom/applovin/impl/adview/AdViewControllerJsInterface;->videoOverlay:Lcom/applovin/impl/adview/AppLovinVideoOverlay;
+    # getter for: Lcom/applovin/impl/adview/AdViewControllerJsInterface;->videoOverlay:Lcom/applovin/impl/adview/AppLovinVideoOverlay;
     invoke-static {v1}, Lcom/applovin/impl/adview/AdViewControllerJsInterface;->access$300(Lcom/applovin/impl/adview/AdViewControllerJsInterface;)Lcom/applovin/impl/adview/AppLovinVideoOverlay;
 
     move-result-object v1

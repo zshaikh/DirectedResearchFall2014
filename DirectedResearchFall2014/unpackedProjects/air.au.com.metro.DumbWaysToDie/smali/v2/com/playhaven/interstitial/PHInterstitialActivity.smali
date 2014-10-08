@@ -3,8 +3,8 @@
 .source "PHInterstitialActivity.java"
 
 # interfaces
-.implements Lv2/com/playhaven/interstitial/requestbridge/base/ContentDisplayer;
 .implements Lv2/com/playhaven/interstitial/jsbridge/ManipulatableContentDisplayer;
+.implements Lv2/com/playhaven/interstitial/requestbridge/base/ContentDisplayer;
 .implements Lv2/com/playhaven/views/interstitial/PHContentView$Listener;
 
 
@@ -93,7 +93,7 @@
     iget v1, v2, Landroid/content/res/Configuration;->orientation:I
 
     .line 560
-    .local v1, orientation:I
+    .local v1, "orientation":I
     iget-object v2, p0, Lv2/com/playhaven/interstitial/PHInterstitialActivity;->content:Lv2/com/playhaven/model/PHContent;
 
     invoke-virtual {v2, v1}, Lv2/com/playhaven/model/PHContent;->getFrame(I)Landroid/graphics/RectF;
@@ -101,7 +101,7 @@
     move-result-object v0
 
     .line 563
-    .local v0, contentFrame:Landroid/graphics/RectF;
+    .local v0, "contentFrame":Landroid/graphics/RectF;
     invoke-virtual {v0}, Landroid/graphics/RectF;->width()F
 
     move-result v2
@@ -138,11 +138,11 @@
     .prologue
     const/16 v7, 0x800
 
-    const/high16 v6, 0x4f00
+    const/high16 v6, 0x4f000000
 
     const/4 v5, 0x0
 
-    const/high16 v4, -0x4080
+    const/high16 v4, -0x40800000
 
     const/16 v3, 0x400
 
@@ -158,7 +158,7 @@
     iget v1, v2, Landroid/content/res/Configuration;->orientation:I
 
     .line 574
-    .local v1, orientation:I
+    .local v1, "orientation":I
     iget-object v2, p0, Lv2/com/playhaven/interstitial/PHInterstitialActivity;->content:Lv2/com/playhaven/model/PHContent;
 
     invoke-virtual {v2, v1}, Lv2/com/playhaven/model/PHContent;->getFrame(I)Landroid/graphics/RectF;
@@ -166,7 +166,7 @@
     move-result-object v0
 
     .line 577
-    .local v0, contentFrame:Landroid/graphics/RectF;
+    .local v0, "contentFrame":Landroid/graphics/RectF;
     iget v2, v0, Landroid/graphics/RectF;->right:F
 
     cmpl-float v2, v2, v6
@@ -290,7 +290,7 @@
 
 .method private notifyContentRequestOfClose(Lv2/com/playhaven/requests/content/PHContentRequest$PHDismissType;)V
     .locals 4
-    .parameter "type"
+    .param p1, "type"    # Lv2/com/playhaven/requests/content/PHContentRequest$PHDismissType;
 
     .prologue
     .line 137
@@ -299,7 +299,7 @@
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     .line 140
-    .local v0, args:Landroid/os/Bundle;
+    .local v0, "args":Landroid/os/Bundle;
     sget-object v3, Lv2/com/playhaven/interstitial/requestbridge/bridges/ContentRequestToInterstitialBridge$InterstitialEventArgument;->CloseType:Lv2/com/playhaven/interstitial/requestbridge/bridges/ContentRequestToInterstitialBridge$InterstitialEventArgument;
 
     invoke-virtual {v3}, Lv2/com/playhaven/interstitial/requestbridge/bridges/ContentRequestToInterstitialBridge$InterstitialEventArgument;->getKey()Ljava/lang/String;
@@ -307,7 +307,7 @@
     move-result-object v1
 
     .line 143
-    .local v1, close_type_key:Ljava/lang/String;
+    .local v1, "close_type_key":Ljava/lang/String;
     invoke-virtual {p1}, Lv2/com/playhaven/requests/content/PHContentRequest$PHDismissType;->toString()Ljava/lang/String;
 
     move-result-object v3
@@ -322,7 +322,7 @@
     move-result-object v2
 
     .line 149
-    .local v2, event:Ljava/lang/String;
+    .local v2, "event":Ljava/lang/String;
     iget-object v3, p0, Lv2/com/playhaven/interstitial/PHInterstitialActivity;->tag:Ljava/lang/String;
 
     invoke-static {v3, v2, v0, p0}, Lv2/com/playhaven/interstitial/requestbridge/BridgeManager;->sendMessageFromDisplayer(Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;Landroid/content/Context;)V
@@ -333,7 +333,7 @@
 
 .method private notifyContentRequestOfFailure(Lv2/com/playhaven/interstitial/PHContentEnums$Error;)V
     .locals 4
-    .parameter "error"
+    .param p1, "error"    # Lv2/com/playhaven/interstitial/PHContentEnums$Error;
 
     .prologue
     .line 157
@@ -342,7 +342,7 @@
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     .line 160
-    .local v0, args:Landroid/os/Bundle;
+    .local v0, "args":Landroid/os/Bundle;
     sget-object v3, Lv2/com/playhaven/interstitial/requestbridge/bridges/ContentRequestToInterstitialBridge$InterstitialEventArgument;->Error:Lv2/com/playhaven/interstitial/requestbridge/bridges/ContentRequestToInterstitialBridge$InterstitialEventArgument;
 
     invoke-virtual {v3}, Lv2/com/playhaven/interstitial/requestbridge/bridges/ContentRequestToInterstitialBridge$InterstitialEventArgument;->getKey()Ljava/lang/String;
@@ -350,7 +350,7 @@
     move-result-object v1
 
     .line 163
-    .local v1, error_key:Ljava/lang/String;
+    .local v1, "error_key":Ljava/lang/String;
     invoke-virtual {p1}, Lv2/com/playhaven/interstitial/PHContentEnums$Error;->toString()Ljava/lang/String;
 
     move-result-object v3
@@ -365,7 +365,7 @@
     move-result-object v2
 
     .line 169
-    .local v2, event:Ljava/lang/String;
+    .local v2, "event":Ljava/lang/String;
     iget-object v3, p0, Lv2/com/playhaven/interstitial/PHInterstitialActivity;->tag:Ljava/lang/String;
 
     invoke-static {v3, v2, v0, p0}, Lv2/com/playhaven/interstitial/requestbridge/BridgeManager;->sendMessageFromDisplayer(Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;Landroid/content/Context;)V
@@ -623,7 +623,7 @@
 
 .method public launchNestedContentDisplayer(Lv2/com/playhaven/model/PHContent;)V
     .locals 4
-    .parameter "content"
+    .param p1, "content"    # Lv2/com/playhaven/model/PHContent;
 
     .prologue
     .line 428
@@ -636,7 +636,7 @@
     invoke-direct {v0, v2, v3}, Ljava/util/Random;-><init>(J)V
 
     .line 432
-    .local v0, random:Ljava/util/Random;
+    .local v0, "random":Ljava/util/Random;
     new-instance v2, Ljava/lang/StringBuilder;
 
     iget-object v3, p0, Lv2/com/playhaven/interstitial/PHInterstitialActivity;->tag:Ljava/lang/String;
@@ -666,7 +666,7 @@
     move-result-object v1
 
     .line 436
-    .local v1, subcontent_tag:Ljava/lang/String;
+    .local v1, "subcontent_tag":Ljava/lang/String;
     iget-object v2, p0, Lv2/com/playhaven/interstitial/PHInterstitialActivity;->tag:Ljava/lang/String;
 
     invoke-static {v2, v1}, Lv2/com/playhaven/interstitial/requestbridge/BridgeManager;->transferBridge(Ljava/lang/String;Ljava/lang/String;)V
@@ -682,7 +682,7 @@
 
 .method public launchSubRequest(Lv2/com/playhaven/requests/content/PHSubContentRequest;)V
     .locals 0
-    .parameter "request"
+    .param p1, "request"    # Lv2/com/playhaven/requests/content/PHSubContentRequest;
 
     .prologue
     .line 474
@@ -694,8 +694,8 @@
 
 .method public launchURL(Ljava/lang/String;Lv2/com/playhaven/utils/PHURLOpener$Listener;)V
     .locals 2
-    .parameter "url"
-    .parameter "listener"
+    .param p1, "url"    # Ljava/lang/String;
+    .param p2, "listener"    # Lv2/com/playhaven/utils/PHURLOpener$Listener;
 
     .prologue
     .line 464
@@ -704,7 +704,7 @@
     invoke-direct {v0, p0, p2}, Lv2/com/playhaven/utils/PHURLOpener;-><init>(Landroid/content/Context;Lv2/com/playhaven/utils/PHURLOpener$Listener;)V
 
     .line 467
-    .local v0, opener:Lv2/com/playhaven/utils/PHURLOpener;
+    .local v0, "opener":Lv2/com/playhaven/utils/PHURLOpener;
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lv2/com/playhaven/utils/PHURLOpener;->setShouldOpenFinalURL(Z)V
@@ -765,7 +765,7 @@
     move-object v0, v1
 
     .line 321
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v1, "PHInterstitialActivity - onAttachedToWindow()"
 
     sget-object v2, Lv2/com/playhaven/requests/crashreport/PHCrashReport$Urgency;->critical:Lv2/com/playhaven/requests/crashreport/PHCrashReport$Urgency;
@@ -806,7 +806,7 @@
 
 .method public onClose(Lv2/com/playhaven/views/interstitial/PHContentView;)V
     .locals 1
-    .parameter "contentView"
+    .param p1, "contentView"    # Lv2/com/playhaven/views/interstitial/PHContentView;
 
     .prologue
     .line 600
@@ -823,7 +823,7 @@
 
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 3
-    .parameter "savedInstanceState"
+    .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
     .line 329
@@ -960,7 +960,7 @@
     move-object v0, v1
 
     .line 361
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     sget-object v1, Lv2/com/playhaven/requests/crashreport/PHCrashReport$Urgency;->critical:Lv2/com/playhaven/requests/crashreport/PHCrashReport$Urgency;
 
     invoke-static {v0, v1}, Lv2/com/playhaven/requests/crashreport/PHCrashReport;->reportCrash(Ljava/lang/Exception;Lv2/com/playhaven/requests/crashreport/PHCrashReport$Urgency;)Lv2/com/playhaven/requests/crashreport/PHCrashReport;
@@ -1026,7 +1026,7 @@
 
 .method public onPurchaseResolved(Lv2/com/playhaven/model/PHPurchase;)V
     .locals 5
-    .parameter "resolvedPurchase"
+    .param p1, "resolvedPurchase"    # Lv2/com/playhaven/model/PHPurchase;
 
     .prologue
     .line 259
@@ -1036,7 +1036,7 @@
     invoke-direct {v1}, Lorg/json/JSONObject;-><init>()V
 
     .line 261
-    .local v1, response:Lorg/json/JSONObject;
+    .local v1, "response":Lorg/json/JSONObject;
     const-string v2, "resolution"
 
     iget-object v3, p1, Lv2/com/playhaven/model/PHPurchase;->resolution:Lv2/com/playhaven/model/PHPurchase$AndroidBillingResult;
@@ -1059,7 +1059,7 @@
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 268
-    .end local v1           #response:Lorg/json/JSONObject;
+    .end local v1    # "response":Lorg/json/JSONObject;
     :goto_0
     return-void
 
@@ -1070,7 +1070,7 @@
     move-object v0, v2
 
     .line 266
-    .local v0, e:Lorg/json/JSONException;
+    .local v0, "e":Lorg/json/JSONException;
     const-string v2, "PHInterstitialActivity - BroadcastReceiver - onReceive"
 
     sget-object v3, Lv2/com/playhaven/requests/crashreport/PHCrashReport$Urgency;->critical:Lv2/com/playhaven/requests/crashreport/PHCrashReport$Urgency;
@@ -1094,11 +1094,11 @@
     const/4 v6, 0x0
 
     .line 212
-    .local v6, active:Landroid/graphics/drawable/BitmapDrawable;
+    .local v6, "active":Landroid/graphics/drawable/BitmapDrawable;
     const/4 v7, 0x0
 
     .line 214
-    .local v7, inactive:Landroid/graphics/drawable/BitmapDrawable;
+    .local v7, "inactive":Landroid/graphics/drawable/BitmapDrawable;
     :try_start_0
     sget-object v0, Lv2/com/playhaven/views/interstitial/PHCloseButton$CloseButtonState;->Up:Lv2/com/playhaven/views/interstitial/PHCloseButton$CloseButtonState;
 
@@ -1107,7 +1107,7 @@
     move-result-object v9
 
     .line 215
-    .local v9, active_key:Ljava/lang/String;
+    .local v9, "active_key":Ljava/lang/String;
     sget-object v0, Lv2/com/playhaven/views/interstitial/PHCloseButton$CloseButtonState;->Up:Lv2/com/playhaven/views/interstitial/PHCloseButton$CloseButtonState;
 
     invoke-virtual {v0}, Lv2/com/playhaven/views/interstitial/PHCloseButton$CloseButtonState;->name()Ljava/lang/String;
@@ -1115,7 +1115,7 @@
     move-result-object v13
 
     .line 217
-    .local v13, inactive_key:Ljava/lang/String;
+    .local v13, "inactive_key":Ljava/lang/String;
     iget-object v0, p0, Lv2/com/playhaven/interstitial/PHInterstitialActivity;->customCloseStates:Ljava/util/HashMap;
 
     invoke-virtual {v0, v9}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1141,13 +1141,13 @@
 
     invoke-direct {v8, v1, v0}, Landroid/graphics/drawable/BitmapDrawable;-><init>(Landroid/content/res/Resources;Landroid/graphics/Bitmap;)V
 
-    .end local v6           #active:Landroid/graphics/drawable/BitmapDrawable;
-    .local v8, active:Landroid/graphics/drawable/BitmapDrawable;
+    .end local v6    # "active":Landroid/graphics/drawable/BitmapDrawable;
+    .local v8, "active":Landroid/graphics/drawable/BitmapDrawable;
     move-object v6, v8
 
     .line 220
-    .end local v8           #active:Landroid/graphics/drawable/BitmapDrawable;
-    .restart local v6       #active:Landroid/graphics/drawable/BitmapDrawable;
+    .end local v8    # "active":Landroid/graphics/drawable/BitmapDrawable;
+    .restart local v6    # "active":Landroid/graphics/drawable/BitmapDrawable;
     :cond_0
     iget-object v0, p0, Lv2/com/playhaven/interstitial/PHInterstitialActivity;->customCloseStates:Ljava/util/HashMap;
 
@@ -1174,13 +1174,13 @@
 
     invoke-direct {v12, v1, v0}, Landroid/graphics/drawable/BitmapDrawable;-><init>(Landroid/content/res/Resources;Landroid/graphics/Bitmap;)V
 
-    .end local v7           #inactive:Landroid/graphics/drawable/BitmapDrawable;
-    .local v12, inactive:Landroid/graphics/drawable/BitmapDrawable;
+    .end local v7    # "inactive":Landroid/graphics/drawable/BitmapDrawable;
+    .local v12, "inactive":Landroid/graphics/drawable/BitmapDrawable;
     move-object v7, v12
 
     .line 224
-    .end local v12           #inactive:Landroid/graphics/drawable/BitmapDrawable;
-    .restart local v7       #inactive:Landroid/graphics/drawable/BitmapDrawable;
+    .end local v12    # "inactive":Landroid/graphics/drawable/BitmapDrawable;
+    .restart local v7    # "inactive":Landroid/graphics/drawable/BitmapDrawable;
     :cond_1
     new-instance v0, Lv2/com/playhaven/views/interstitial/PHContentView;
 
@@ -1215,7 +1215,7 @@
     invoke-direct {v11, v0, v1}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
     .line 237
-    .local v11, fullscreenLayout:Landroid/widget/RelativeLayout$LayoutParams;
+    .local v11, "fullscreenLayout":Landroid/widget/RelativeLayout$LayoutParams;
     iget-object v0, p0, Lv2/com/playhaven/interstitial/PHInterstitialActivity;->contentView:Lv2/com/playhaven/views/interstitial/PHContentView;
 
     invoke-virtual {p0, v0, v11}, Lv2/com/playhaven/interstitial/PHInterstitialActivity;->setContentView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
@@ -1226,9 +1226,9 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 244
-    .end local v9           #active_key:Ljava/lang/String;
-    .end local v11           #fullscreenLayout:Landroid/widget/RelativeLayout$LayoutParams;
-    .end local v13           #inactive_key:Ljava/lang/String;
+    .end local v9    # "active_key":Ljava/lang/String;
+    .end local v11    # "fullscreenLayout":Landroid/widget/RelativeLayout$LayoutParams;
+    .end local v13    # "inactive_key":Ljava/lang/String;
     :goto_0
     return-void
 
@@ -1239,7 +1239,7 @@
     move-object v10, v0
 
     .line 242
-    .local v10, e:Ljava/lang/Exception;
+    .local v10, "e":Ljava/lang/Exception;
     const-string v0, "PHInterstitialActivity - onStart()"
 
     sget-object v1, Lv2/com/playhaven/requests/crashreport/PHCrashReport$Urgency;->critical:Lv2/com/playhaven/requests/crashreport/PHCrashReport$Urgency;
@@ -1262,7 +1262,7 @@
 
 .method public onTagChanged(Ljava/lang/String;)V
     .locals 1
-    .parameter "new_tag"
+    .param p1, "new_tag"    # Ljava/lang/String;
 
     .prologue
     .line 492
@@ -1287,7 +1287,7 @@
 
 .method public onTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 3
-    .parameter "event"
+    .param p1, "event"    # Landroid/view/MotionEvent;
 
     .prologue
     .line 375
@@ -1332,7 +1332,7 @@
     move-object v0, v1
 
     .line 390
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v1, "PHInterstitialActivity - onTouchEvent()"
 
     sget-object v2, Lv2/com/playhaven/requests/crashreport/PHCrashReport$Urgency;->critical:Lv2/com/playhaven/requests/crashreport/PHCrashReport$Urgency;
@@ -1340,7 +1340,7 @@
     invoke-static {v0, v1, v2}, Lv2/com/playhaven/requests/crashreport/PHCrashReport;->reportCrash(Ljava/lang/Exception;Ljava/lang/String;Lv2/com/playhaven/requests/crashreport/PHCrashReport$Urgency;)Lv2/com/playhaven/requests/crashreport/PHCrashReport;
 
     .line 392
-    .end local v0           #e:Ljava/lang/Exception;
+    .end local v0    # "e":Ljava/lang/Exception;
     :cond_1
     const/4 v1, 0x0
 
@@ -1349,8 +1349,8 @@
 
 .method public openURL(Ljava/lang/String;Lv2/com/playhaven/utils/PHURLOpener$Listener;)V
     .locals 2
-    .parameter "url"
-    .parameter "listener"
+    .param p1, "url"    # Ljava/lang/String;
+    .param p2, "listener"    # Lv2/com/playhaven/utils/PHURLOpener$Listener;
 
     .prologue
     .line 454
@@ -1359,7 +1359,7 @@
     invoke-direct {v0, p0, p2}, Lv2/com/playhaven/utils/PHURLOpener;-><init>(Landroid/content/Context;Lv2/com/playhaven/utils/PHURLOpener$Listener;)V
 
     .line 457
-    .local v0, opener:Lv2/com/playhaven/utils/PHURLOpener;
+    .local v0, "opener":Lv2/com/playhaven/utils/PHURLOpener;
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lv2/com/playhaven/utils/PHURLOpener;->setShouldOpenFinalURL(Z)V
@@ -1373,8 +1373,8 @@
 
 .method public sendEventToRequester(Ljava/lang/String;Landroid/os/Bundle;)V
     .locals 1
-    .parameter "event"
-    .parameter "message"
+    .param p1, "event"    # Ljava/lang/String;
+    .param p2, "message"    # Landroid/os/Bundle;
 
     .prologue
     .line 479
@@ -1388,8 +1388,8 @@
 
 .method public setCancelable(ZZ)V
     .locals 0
-    .parameter "touchCancel"
-    .parameter "backCancel"
+    .param p1, "touchCancel"    # Z
+    .param p2, "backCancel"    # Z
 
     .prologue
     .line 524
@@ -1404,7 +1404,7 @@
 
 .method public setContent(Lv2/com/playhaven/model/PHContent;)V
     .locals 0
-    .parameter "content"
+    .param p1, "content"    # Lv2/com/playhaven/model/PHContent;
 
     .prologue
     .line 545
@@ -1420,7 +1420,7 @@
 
 .method public setIsBackBtnCancelable(Z)Z
     .locals 0
-    .parameter "backCancel"
+    .param p1, "backCancel"    # Z
 
     .prologue
     .line 529

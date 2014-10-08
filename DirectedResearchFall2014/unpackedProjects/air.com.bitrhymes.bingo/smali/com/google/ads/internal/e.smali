@@ -22,7 +22,6 @@
 # direct methods
 .method public constructor <init>(Landroid/os/Bundle;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 54
@@ -56,7 +55,6 @@
 
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 66
@@ -71,8 +69,6 @@
 
 .method public constructor <init>(Ljava/lang/String;Ljava/util/HashMap;)V
     .locals 0
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -98,7 +94,6 @@
 
 .method private a(Ljava/io/Serializable;)Ljava/util/HashMap;
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",

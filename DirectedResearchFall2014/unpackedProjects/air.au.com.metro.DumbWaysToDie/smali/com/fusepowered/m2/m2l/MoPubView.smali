@@ -61,7 +61,7 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     .line 93
@@ -75,8 +75,8 @@
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 2
-    .parameter "context"
-    .parameter "attrs"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
     const/4 v1, 0x0
@@ -153,7 +153,6 @@
 
 .method static synthetic access$0(Lcom/fusepowered/m2/m2l/MoPubView;)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 79
@@ -164,8 +163,6 @@
 
 .method static synthetic access$1(Lcom/fusepowered/m2/m2l/MoPubView;Z)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 81
@@ -176,7 +173,6 @@
 
 .method static synthetic access$2(Lcom/fusepowered/m2/m2l/MoPubView;)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 81
@@ -214,7 +210,7 @@
     invoke-direct {v0, v1}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
     .line 151
-    .local v0, filter:Landroid/content/IntentFilter;
+    .local v0, "filter":Landroid/content/IntentFilter;
     const-string v1, "android.intent.action.USER_PRESENT"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
@@ -254,7 +250,7 @@
     move-object v0, v1
 
     .line 159
-    .local v0, IllegalArgumentException:Ljava/lang/Exception;
+    .local v0, "IllegalArgumentException":Ljava/lang/Exception;
     const-string v1, "MoPub"
 
     const-string v2, "Failed to unregister screen state broadcast receiver (never registered)."
@@ -334,7 +330,7 @@
 
 .method protected adFailed(Lcom/fusepowered/m2/m2l/MoPubErrorCode;)V
     .locals 1
-    .parameter "errorCode"
+    .param p1, "errorCode"    # Lcom/fusepowered/m2/m2l/MoPubErrorCode;
 
     .prologue
     .line 255
@@ -441,7 +437,7 @@
 
 .method protected adWillLoad(Ljava/lang/String;)V
     .locals 3
-    .parameter "url"
+    .param p1, "url"    # Ljava/lang/String;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -624,7 +620,7 @@
     .line 350
     iget-object p0, p0, Lcom/fusepowered/m2/m2l/MoPubView;->mContext:Landroid/content/Context;
 
-    .end local p0
+    .end local p0    # "this":Lcom/fusepowered/m2/m2l/MoPubView;
     check-cast p0, Landroid/app/Activity;
 
     return-object p0
@@ -1023,7 +1019,6 @@
 
 .method protected loadCustomEvent(Ljava/util/Map;)V
     .locals 2
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1036,7 +1031,7 @@
     .end annotation
 
     .prologue
-    .local p1, paramsMap:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p1, "paramsMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v1, "MoPub"
 
     .line 195
@@ -1120,7 +1115,7 @@
 
 .method protected loadFailUrl(Lcom/fusepowered/m2/m2l/MoPubErrorCode;)V
     .locals 1
-    .parameter "errorCode"
+    .param p1, "errorCode"    # Lcom/fusepowered/m2/m2l/MoPubErrorCode;
 
     .prologue
     .line 191
@@ -1160,7 +1155,7 @@
 
 .method protected onWindowVisibilityChanged(I)V
     .locals 6
-    .parameter "visibility"
+    .param p1, "visibility"    # I
 
     .prologue
     const/4 v3, 0x1
@@ -1292,7 +1287,7 @@
 
 .method public setAdContentView(Landroid/view/View;)V
     .locals 1
-    .parameter "view"
+    .param p1, "view"    # Landroid/view/View;
 
     .prologue
     .line 402
@@ -1311,7 +1306,7 @@
 
 .method public setAdUnitId(Ljava/lang/String;)V
     .locals 1
-    .parameter "adUnitId"
+    .param p1, "adUnitId"    # Ljava/lang/String;
 
     .prologue
     .line 294
@@ -1330,7 +1325,7 @@
 
 .method public setAutorefreshEnabled(Z)V
     .locals 1
-    .parameter "enabled"
+    .param p1, "enabled"    # Z
 
     .prologue
     .line 389
@@ -1349,7 +1344,7 @@
 
 .method public setBannerAdListener(Lcom/fusepowered/m2/m2l/MoPubView$BannerAdListener;)V
     .locals 0
-    .parameter "listener"
+    .param p1, "listener"    # Lcom/fusepowered/m2/m2l/MoPubView$BannerAdListener;
 
     .prologue
     .line 354
@@ -1361,7 +1356,7 @@
 
 .method public setClickthroughUrl(Ljava/lang/String;)V
     .locals 1
-    .parameter "url"
+    .param p1, "url"    # Ljava/lang/String;
 
     .prologue
     .line 342
@@ -1380,7 +1375,7 @@
 
 .method public setFacebookSupported(Z)V
     .locals 1
-    .parameter "enabled"
+    .param p1, "enabled"    # Z
 
     .prologue
     .line 310
@@ -1399,7 +1394,7 @@
 
 .method public setKeywords(Ljava/lang/String;)V
     .locals 1
-    .parameter "keywords"
+    .param p1, "keywords"    # Ljava/lang/String;
 
     .prologue
     .line 302
@@ -1418,7 +1413,6 @@
 
 .method public setLocalExtras(Ljava/util/Map;)V
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1432,7 +1426,7 @@
 
     .prologue
     .line 380
-    .local p1, localExtras:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
+    .local p1, "localExtras":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
     iget-object v0, p0, Lcom/fusepowered/m2/m2l/MoPubView;->mAdViewController:Lcom/fusepowered/m2/m2l/AdViewController;
 
     if-eqz v0, :cond_0
@@ -1448,7 +1442,7 @@
 
 .method public setLocation(Landroid/location/Location;)V
     .locals 1
-    .parameter "location"
+    .param p1, "location"    # Landroid/location/Location;
 
     .prologue
     .line 318
@@ -1467,7 +1461,7 @@
 
 .method public setLocationAwareness(Lcom/fusepowered/m2/m2l/MoPubView$LocationAwareness;)V
     .locals 0
-    .parameter "awareness"
+    .param p1, "awareness"    # Lcom/fusepowered/m2/m2l/MoPubView$LocationAwareness;
 
     .prologue
     .line 362
@@ -1479,7 +1473,7 @@
 
 .method public setLocationPrecision(I)V
     .locals 1
-    .parameter "precision"
+    .param p1, "precision"    # I
 
     .prologue
     .line 370
@@ -1499,7 +1493,7 @@
 
 .method public setOnAdClickedListener(Lcom/fusepowered/m2/m2l/MoPubView$OnAdClickedListener;)V
     .locals 0
-    .parameter "listener"
+    .param p1, "listener"    # Lcom/fusepowered/m2/m2l/MoPubView$OnAdClickedListener;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -1513,7 +1507,7 @@
 
 .method public setOnAdClosedListener(Lcom/fusepowered/m2/m2l/MoPubView$OnAdClosedListener;)V
     .locals 0
-    .parameter "listener"
+    .param p1, "listener"    # Lcom/fusepowered/m2/m2l/MoPubView$OnAdClosedListener;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -1527,7 +1521,7 @@
 
 .method public setOnAdFailedListener(Lcom/fusepowered/m2/m2l/MoPubView$OnAdFailedListener;)V
     .locals 0
-    .parameter "listener"
+    .param p1, "listener"    # Lcom/fusepowered/m2/m2l/MoPubView$OnAdFailedListener;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -1541,7 +1535,7 @@
 
 .method public setOnAdLoadedListener(Lcom/fusepowered/m2/m2l/MoPubView$OnAdLoadedListener;)V
     .locals 0
-    .parameter "listener"
+    .param p1, "listener"    # Lcom/fusepowered/m2/m2l/MoPubView$OnAdLoadedListener;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -1555,7 +1549,7 @@
 
 .method public setOnAdPresentedOverlayListener(Lcom/fusepowered/m2/m2l/MoPubView$OnAdPresentedOverlayListener;)V
     .locals 0
-    .parameter "listener"
+    .param p1, "listener"    # Lcom/fusepowered/m2/m2l/MoPubView$OnAdPresentedOverlayListener;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -1569,7 +1563,7 @@
 
 .method public setOnAdWillLoadListener(Lcom/fusepowered/m2/m2l/MoPubView$OnAdWillLoadListener;)V
     .locals 0
-    .parameter "listener"
+    .param p1, "listener"    # Lcom/fusepowered/m2/m2l/MoPubView$OnAdWillLoadListener;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -1583,7 +1577,7 @@
 
 .method public setTesting(Z)V
     .locals 1
-    .parameter "testing"
+    .param p1, "testing"    # Z
 
     .prologue
     .line 406
@@ -1602,7 +1596,7 @@
 
 .method public setTimeout(I)V
     .locals 1
-    .parameter "milliseconds"
+    .param p1, "milliseconds"    # I
 
     .prologue
     .line 326

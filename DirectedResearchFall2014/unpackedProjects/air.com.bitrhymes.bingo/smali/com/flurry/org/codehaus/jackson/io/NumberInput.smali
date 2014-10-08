@@ -6,9 +6,9 @@
 # static fields
 .field static final L_BILLION:J = 0x3b9aca00L
 
-.field static final MAX_LONG_STR:Ljava/lang/String; = null
+.field static final MAX_LONG_STR:Ljava/lang/String;
 
-.field static final MIN_LONG_STR_NO_SIGN:Ljava/lang/String; = null
+.field static final MIN_LONG_STR_NO_SIGN:Ljava/lang/String;
 
 .field public static final NASTY_SMALL_DOUBLE:Ljava/lang/String; = "2.2250738585072012e-308"
 
@@ -19,7 +19,7 @@
 
     .prologue
     .line 16
-    const-wide/high16 v0, -0x8000
+    const-wide/high16 v0, -0x8000000000000000L
 
     invoke-static {v0, v1}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
 
@@ -57,8 +57,8 @@
 
 .method public static final inLongRange(Ljava/lang/String;Z)Z
     .locals 9
-    .parameter "numberStr"
-    .parameter "negative"
+    .param p0, "numberStr"    # Ljava/lang/String;
+    .param p1, "negative"    # Z
 
     .prologue
     const/4 v8, 0x0
@@ -73,20 +73,20 @@
     move-object v2, v5
 
     .line 176
-    .local v2, cmpStr:Ljava/lang/String;
+    .local v2, "cmpStr":Ljava/lang/String;
     :goto_0
     invoke-virtual {v2}, Ljava/lang/String;->length()I
 
     move-result v1
 
     .line 177
-    .local v1, cmpLen:I
+    .local v1, "cmpLen":I
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v0
 
     .line 178
-    .local v0, actualLen:I
+    .local v0, "actualLen":I
     if-ge v0, v1, :cond_1
 
     move v5, v7
@@ -96,9 +96,9 @@
     return v5
 
     .line 175
-    .end local v0           #actualLen:I
-    .end local v1           #cmpLen:I
-    .end local v2           #cmpStr:Ljava/lang/String;
+    .end local v0    # "actualLen":I
+    .end local v1    # "cmpLen":I
+    .end local v2    # "cmpStr":Ljava/lang/String;
     :cond_0
     sget-object v5, Lcom/flurry/org/codehaus/jackson/io/NumberInput;->MAX_LONG_STR:Ljava/lang/String;
 
@@ -107,9 +107,9 @@
     goto :goto_0
 
     .line 179
-    .restart local v0       #actualLen:I
-    .restart local v1       #cmpLen:I
-    .restart local v2       #cmpStr:Ljava/lang/String;
+    .restart local v0    # "actualLen":I
+    .restart local v1    # "cmpLen":I
+    .restart local v2    # "cmpStr":Ljava/lang/String;
     :cond_1
     if-le v0, v1, :cond_2
 
@@ -121,7 +121,7 @@
     :cond_2
     const/4 v4, 0x0
 
-    .local v4, i:I
+    .local v4, "i":I
     :goto_2
     if-ge v4, v1, :cond_5
 
@@ -137,7 +137,7 @@
     sub-int v3, v5, v6
 
     .line 184
-    .local v3, diff:I
+    .local v3, "diff":I
     if-eqz v3, :cond_4
 
     .line 185
@@ -158,7 +158,7 @@
 
     goto :goto_2
 
-    .end local v3           #diff:I
+    .end local v3    # "diff":I
     :cond_5
     move v5, v7
 
@@ -168,10 +168,10 @@
 
 .method public static final inLongRange([CIIZ)Z
     .locals 8
-    .parameter "digitChars"
-    .parameter "offset"
-    .parameter "len"
-    .parameter "negative"
+    .param p0, "digitChars"    # [C
+    .param p1, "offset"    # I
+    .param p2, "len"    # I
+    .param p3, "negative"    # Z
 
     .prologue
     const/4 v7, 0x0
@@ -186,14 +186,14 @@
     move-object v1, v4
 
     .line 151
-    .local v1, cmpStr:Ljava/lang/String;
+    .local v1, "cmpStr":Ljava/lang/String;
     :goto_0
     invoke-virtual {v1}, Ljava/lang/String;->length()I
 
     move-result v0
 
     .line 152
-    .local v0, cmpLen:I
+    .local v0, "cmpLen":I
     if-ge p2, v0, :cond_1
 
     move v4, v6
@@ -203,8 +203,8 @@
     return v4
 
     .line 150
-    .end local v0           #cmpLen:I
-    .end local v1           #cmpStr:Ljava/lang/String;
+    .end local v0    # "cmpLen":I
+    .end local v1    # "cmpStr":Ljava/lang/String;
     :cond_0
     sget-object v4, Lcom/flurry/org/codehaus/jackson/io/NumberInput;->MAX_LONG_STR:Ljava/lang/String;
 
@@ -213,8 +213,8 @@
     goto :goto_0
 
     .line 153
-    .restart local v0       #cmpLen:I
-    .restart local v1       #cmpStr:Ljava/lang/String;
+    .restart local v0    # "cmpLen":I
+    .restart local v1    # "cmpStr":Ljava/lang/String;
     :cond_1
     if-le p2, v0, :cond_2
 
@@ -226,7 +226,7 @@
     :cond_2
     const/4 v3, 0x0
 
-    .local v3, i:I
+    .local v3, "i":I
     :goto_2
     if-ge v3, v0, :cond_5
 
@@ -242,7 +242,7 @@
     sub-int v2, v4, v5
 
     .line 157
-    .local v2, diff:I
+    .local v2, "diff":I
     if-eqz v2, :cond_4
 
     .line 158
@@ -263,7 +263,7 @@
 
     goto :goto_2
 
-    .end local v2           #diff:I
+    .end local v2    # "diff":I
     :cond_5
     move v4, v6
 
@@ -273,8 +273,8 @@
 
 .method public static parseAsDouble(Ljava/lang/String;D)D
     .locals 3
-    .parameter "input"
-    .parameter "defaultValue"
+    .param p0, "input"    # Ljava/lang/String;
+    .param p1, "defaultValue"    # D
 
     .prologue
     .line 278
@@ -298,7 +298,7 @@
     move-result v0
 
     .line 283
-    .local v0, len:I
+    .local v0, "len":I
     if-nez v0, :cond_1
 
     move-wide v1, p1
@@ -329,8 +329,8 @@
 
 .method public static parseAsInt(Ljava/lang/String;I)I
     .locals 6
-    .parameter "input"
-    .parameter "defaultValue"
+    .param p0, "input"    # Ljava/lang/String;
+    .param p1, "defaultValue"    # I
 
     .prologue
     .line 196
@@ -354,7 +354,7 @@
     move-result v3
 
     .line 201
-    .local v3, len:I
+    .local v3, "len":I
     if-nez v3, :cond_1
 
     move v4, p1
@@ -367,7 +367,7 @@
     const/4 v2, 0x0
 
     .line 206
-    .local v2, i:I
+    .local v2, "i":I
     if-ge v2, v3, :cond_2
 
     .line 207
@@ -378,7 +378,7 @@
     move-result v0
 
     .line 208
-    .local v0, c:C
+    .local v0, "c":C
     const/16 v4, 0x2b
 
     if-ne v0, v4, :cond_4
@@ -396,7 +396,7 @@
     move-result v3
 
     .line 215
-    .end local v0           #c:C
+    .end local v0    # "c":C
     :cond_2
     :goto_1
     if-ge v2, v3, :cond_6
@@ -407,7 +407,7 @@
     move-result v0
 
     .line 218
-    .restart local v0       #c:C
+    .restart local v0    # "c":C
     const/16 v4, 0x39
 
     if-gt v0, v4, :cond_3
@@ -444,21 +444,21 @@
     :catch_0
     move-exception v1
 
-    .local v1, e:Ljava/lang/NumberFormatException;
+    .local v1, "e":Ljava/lang/NumberFormatException;
     move v4, p1
 
     .line 222
     goto :goto_0
 
     .line 215
-    .end local v1           #e:Ljava/lang/NumberFormatException;
+    .end local v1    # "e":Ljava/lang/NumberFormatException;
     :cond_5
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
     .line 227
-    .end local v0           #c:C
+    .end local v0    # "c":C
     :cond_6
     :try_start_1
     invoke-static {p0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -481,8 +481,8 @@
 
 .method public static parseAsLong(Ljava/lang/String;J)J
     .locals 6
-    .parameter "input"
-    .parameter "defaultValue"
+    .param p0, "input"    # Ljava/lang/String;
+    .param p1, "defaultValue"    # J
 
     .prologue
     .line 237
@@ -506,7 +506,7 @@
     move-result v3
 
     .line 242
-    .local v3, len:I
+    .local v3, "len":I
     if-nez v3, :cond_1
 
     move-wide v4, p1
@@ -519,7 +519,7 @@
     const/4 v2, 0x0
 
     .line 247
-    .local v2, i:I
+    .local v2, "i":I
     if-ge v2, v3, :cond_2
 
     .line 248
@@ -530,7 +530,7 @@
     move-result v0
 
     .line 249
-    .local v0, c:C
+    .local v0, "c":C
     const/16 v4, 0x2b
 
     if-ne v0, v4, :cond_4
@@ -548,7 +548,7 @@
     move-result v3
 
     .line 256
-    .end local v0           #c:C
+    .end local v0    # "c":C
     :cond_2
     :goto_1
     if-ge v2, v3, :cond_6
@@ -559,7 +559,7 @@
     move-result v0
 
     .line 259
-    .restart local v0       #c:C
+    .restart local v0    # "c":C
     const/16 v4, 0x39
 
     if-gt v0, v4, :cond_3
@@ -596,21 +596,21 @@
     :catch_0
     move-exception v1
 
-    .local v1, e:Ljava/lang/NumberFormatException;
+    .local v1, "e":Ljava/lang/NumberFormatException;
     move-wide v4, p1
 
     .line 263
     goto :goto_0
 
     .line 256
-    .end local v1           #e:Ljava/lang/NumberFormatException;
+    .end local v1    # "e":Ljava/lang/NumberFormatException;
     :cond_5
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
     .line 268
-    .end local v0           #c:C
+    .end local v0    # "c":C
     :cond_6
     :try_start_1
     invoke-static {p0}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
@@ -633,7 +633,7 @@
 
 .method public static final parseDouble(Ljava/lang/String;)D
     .locals 2
-    .parameter "numStr"
+    .param p0, "numStr"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/NumberFormatException;
@@ -651,7 +651,7 @@
     if-eqz v0, :cond_0
 
     .line 299
-    const-wide/high16 v0, 0x10
+    const-wide/high16 v0, 0x10000000000000L
 
     .line 301
     :goto_0
@@ -667,7 +667,7 @@
 
 .method public static final parseInt(Ljava/lang/String;)I
     .locals 11
-    .parameter "str"
+    .param p0, "str"    # Ljava/lang/String;
 
     .prologue
     const/4 v10, 0x1
@@ -684,13 +684,13 @@
     move-result v0
 
     .line 71
-    .local v0, c:C
+    .local v0, "c":C
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v1
 
     .line 72
-    .local v1, length:I
+    .local v1, "length":I
     const/16 v6, 0x2d
 
     if-ne v0, v6, :cond_1
@@ -698,12 +698,12 @@
     move v2, v10
 
     .line 73
-    .local v2, negative:Z
+    .local v2, "negative":Z
     :goto_0
     const/4 v4, 0x1
 
     .line 76
-    .local v4, offset:I
+    .local v4, "offset":I
     if-eqz v2, :cond_4
 
     .line 77
@@ -723,8 +723,8 @@
     :goto_1
     return v6
 
-    .end local v2           #negative:Z
-    .end local v4           #offset:I
+    .end local v2    # "negative":Z
+    .end local v4    # "offset":I
     :cond_1
     move v2, v7
 
@@ -732,13 +732,13 @@
     goto :goto_0
 
     .line 80
-    .restart local v2       #negative:Z
-    .restart local v4       #offset:I
+    .restart local v2    # "negative":Z
+    .restart local v4    # "offset":I
     :cond_2
     add-int/lit8 v5, v4, 0x1
 
-    .end local v4           #offset:I
-    .local v5, offset:I
+    .end local v4    # "offset":I
+    .local v5, "offset":I
     invoke-virtual {p0, v4}, Ljava/lang/String;->charAt(I)C
 
     move-result v0
@@ -757,8 +757,8 @@
 
     move v4, v5
 
-    .end local v5           #offset:I
-    .restart local v4       #offset:I
+    .end local v5    # "offset":I
+    .restart local v4    # "offset":I
     goto :goto_1
 
     .line 82
@@ -775,20 +775,20 @@
     goto :goto_1
 
     .line 89
-    .end local v4           #offset:I
-    .restart local v5       #offset:I
+    .end local v4    # "offset":I
+    .restart local v5    # "offset":I
     :cond_5
     sub-int v3, v0, v8
 
     .line 90
-    .local v3, num:I
+    .local v3, "num":I
     if-ge v5, v1, :cond_d
 
     .line 91
     add-int/lit8 v4, v5, 0x1
 
-    .end local v5           #offset:I
-    .restart local v4       #offset:I
+    .end local v5    # "offset":I
+    .restart local v4    # "offset":I
     invoke-virtual {p0, v5}, Ljava/lang/String;->charAt(I)C
 
     move-result v0
@@ -820,8 +820,8 @@
     .line 97
     add-int/lit8 v5, v4, 0x1
 
-    .end local v4           #offset:I
-    .restart local v5       #offset:I
+    .end local v4    # "offset":I
+    .restart local v5    # "offset":I
     invoke-virtual {p0, v4}, Ljava/lang/String;->charAt(I)C
 
     move-result v0
@@ -839,13 +839,13 @@
 
     move v4, v5
 
-    .end local v5           #offset:I
-    .restart local v4       #offset:I
+    .end local v5    # "offset":I
+    .restart local v4    # "offset":I
     goto :goto_1
 
     .line 101
-    .end local v4           #offset:I
-    .restart local v5       #offset:I
+    .end local v4    # "offset":I
+    .restart local v5    # "offset":I
     :cond_9
     mul-int/lit8 v6, v3, 0xa
 
@@ -860,12 +860,12 @@
     move v4, v5
 
     .line 105
-    .end local v5           #offset:I
-    .restart local v4       #offset:I
+    .end local v5    # "offset":I
+    .restart local v4    # "offset":I
     add-int/lit8 v5, v4, 0x1
 
-    .end local v4           #offset:I
-    .restart local v5       #offset:I
+    .end local v4    # "offset":I
+    .restart local v5    # "offset":I
     invoke-virtual {p0, v4}, Ljava/lang/String;->charAt(I)C
 
     move-result v0
@@ -883,13 +883,13 @@
 
     move v4, v5
 
-    .end local v5           #offset:I
-    .restart local v4       #offset:I
+    .end local v5    # "offset":I
+    .restart local v4    # "offset":I
     goto :goto_1
 
     .line 109
-    .end local v4           #offset:I
-    .restart local v5       #offset:I
+    .end local v4    # "offset":I
+    .restart local v5    # "offset":I
     :cond_c
     mul-int/lit8 v6, v3, 0xa
 
@@ -904,8 +904,8 @@
     move v4, v5
 
     .line 114
-    .end local v5           #offset:I
-    .restart local v4       #offset:I
+    .end local v5    # "offset":I
+    .restart local v4    # "offset":I
     :cond_e
     if-eqz v2, :cond_f
 
@@ -918,20 +918,20 @@
 
     goto :goto_1
 
-    .end local v3           #num:I
+    .end local v3    # "num":I
     :cond_10
     move v5, v4
 
-    .end local v4           #offset:I
-    .restart local v5       #offset:I
+    .end local v4    # "offset":I
+    .restart local v5    # "offset":I
     goto :goto_2
 .end method
 
 .method public static final parseInt([CII)I
     .locals 4
-    .parameter "digitChars"
-    .parameter "offset"
-    .parameter "len"
+    .param p0, "digitChars"    # [C
+    .param p1, "offset"    # I
+    .param p2, "len"    # I
 
     .prologue
     const/16 v3, 0x30
@@ -942,7 +942,7 @@
     sub-int v0, v1, v3
 
     .line 29
-    .local v0, num:I
+    .local v0, "num":I
     add-int/2addr p2, p1
 
     .line 31
@@ -1064,7 +1064,7 @@
 
 .method public static final parseLong(Ljava/lang/String;)J
     .locals 3
-    .parameter "str"
+    .param p0, "str"    # Ljava/lang/String;
 
     .prologue
     .line 130
@@ -1073,7 +1073,7 @@
     move-result v0
 
     .line 131
-    .local v0, length:I
+    .local v0, "length":I
     const/16 v1, 0x9
 
     if-gt v0, v1, :cond_0
@@ -1099,9 +1099,9 @@
 
 .method public static final parseLong([CII)J
     .locals 8
-    .parameter "digitChars"
-    .parameter "offset"
-    .parameter "len"
+    .param p0, "digitChars"    # [C
+    .param p1, "offset"    # I
+    .param p2, "len"    # I
 
     .prologue
     const/16 v7, 0x9
@@ -1110,7 +1110,7 @@
     sub-int v0, p2, v7
 
     .line 121
-    .local v0, len1:I
+    .local v0, "len1":I
     invoke-static {p0, p1, v0}, Lcom/flurry/org/codehaus/jackson/io/NumberInput;->parseInt([CII)I
 
     move-result v3
@@ -1122,7 +1122,7 @@
     mul-long v1, v3, v5
 
     .line 122
-    .local v1, val:J
+    .local v1, "val":J
     add-int v3, p1, v0
 
     invoke-static {p0, v3, v7}, Lcom/flurry/org/codehaus/jackson/io/NumberInput;->parseInt([CII)I

@@ -28,9 +28,6 @@
 # direct methods
 .method constructor <init>(Lcom/facebook/Session;Lcom/facebook/SessionState;Ljava/lang/Exception;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 1
@@ -48,7 +45,6 @@
 
 .method static synthetic access$0(Lcom/facebook/Session$3;)Lcom/facebook/Session;
     .locals 1
-    .parameter
 
     .prologue
     .line 1296
@@ -66,7 +62,7 @@
     .line 1298
     iget-object v2, p0, Lcom/facebook/Session$3;->this$0:Lcom/facebook/Session;
 
-    #getter for: Lcom/facebook/Session;->callbacks:Ljava/util/List;
+    # getter for: Lcom/facebook/Session;->callbacks:Ljava/util/List;
     invoke-static {v2}, Lcom/facebook/Session;->access$7(Lcom/facebook/Session;)Ljava/util/List;
 
     move-result-object v2
@@ -94,7 +90,7 @@
     check-cast v0, Lcom/facebook/Session$StatusCallback;
 
     .line 1299
-    .local v0, callback:Lcom/facebook/Session$StatusCallback;
+    .local v0, "callback":Lcom/facebook/Session$StatusCallback;
     new-instance v1, Lcom/facebook/Session$3$1;
 
     iget-object v3, p0, Lcom/facebook/Session$3;->val$newState:Lcom/facebook/SessionState;
@@ -104,15 +100,15 @@
     invoke-direct {v1, p0, v0, v3, v4}, Lcom/facebook/Session$3$1;-><init>(Lcom/facebook/Session$3;Lcom/facebook/Session$StatusCallback;Lcom/facebook/SessionState;Ljava/lang/Exception;)V
 
     .line 1306
-    .local v1, closure:Ljava/lang/Runnable;
+    .local v1, "closure":Ljava/lang/Runnable;
     iget-object v3, p0, Lcom/facebook/Session$3;->this$0:Lcom/facebook/Session;
 
-    #getter for: Lcom/facebook/Session;->handler:Landroid/os/Handler;
+    # getter for: Lcom/facebook/Session;->handler:Landroid/os/Handler;
     invoke-static {v3}, Lcom/facebook/Session;->access$8(Lcom/facebook/Session;)Landroid/os/Handler;
 
     move-result-object v3
 
-    #calls: Lcom/facebook/Session;->runWithHandlerOrExecutor(Landroid/os/Handler;Ljava/lang/Runnable;)V
+    # invokes: Lcom/facebook/Session;->runWithHandlerOrExecutor(Landroid/os/Handler;Ljava/lang/Runnable;)V
     invoke-static {v3, v1}, Lcom/facebook/Session;->access$9(Landroid/os/Handler;Ljava/lang/Runnable;)V
 
     goto :goto_0

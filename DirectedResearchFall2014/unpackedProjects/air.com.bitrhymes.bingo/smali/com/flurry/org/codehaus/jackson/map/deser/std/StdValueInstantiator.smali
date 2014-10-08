@@ -32,8 +32,8 @@
 # direct methods
 .method public constructor <init>(Lcom/flurry/org/codehaus/jackson/map/DeserializationConfig;Lcom/flurry/org/codehaus/jackson/type/JavaType;)V
     .locals 1
-    .parameter "config"
-    .parameter "valueType"
+    .param p1, "config"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationConfig;
+    .param p2, "valueType"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
 
     .prologue
     .line 76
@@ -79,8 +79,7 @@
 
 .method public constructor <init>(Lcom/flurry/org/codehaus/jackson/map/DeserializationConfig;Ljava/lang/Class;)V
     .locals 1
-    .parameter "config"
-    .parameter
+    .param p1, "config"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationConfig;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -92,7 +91,7 @@
 
     .prologue
     .line 69
-    .local p2, valueType:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p2, "valueType":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-direct {p0}, Lcom/flurry/org/codehaus/jackson/map/deser/ValueInstantiator;-><init>()V
 
     .line 70
@@ -135,7 +134,7 @@
 
 .method protected constructor <init>(Lcom/flurry/org/codehaus/jackson/map/deser/std/StdValueInstantiator;)V
     .locals 1
-    .parameter "src"
+    .param p1, "src"    # Lcom/flurry/org/codehaus/jackson/map/deser/std/StdValueInstantiator;
 
     .prologue
     .line 87
@@ -209,7 +208,7 @@
 # virtual methods
 .method protected _createFromStringFallbacks(Ljava/lang/String;)Ljava/lang/Object;
     .locals 4
-    .parameter "value"
+    .param p1, "value"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -229,7 +228,7 @@
     move-result-object v0
 
     .line 367
-    .local v0, str:Ljava/lang/String;
+    .local v0, "str":Ljava/lang/String;
     const-string v1, "true"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -246,12 +245,12 @@
     move-result-object v1
 
     .line 377
-    .end local v0           #str:Ljava/lang/String;
+    .end local v0    # "str":Ljava/lang/String;
     :goto_0
     return-object v1
 
     .line 370
-    .restart local v0       #str:Ljava/lang/String;
+    .restart local v0    # "str":Ljava/lang/String;
     :cond_0
     const-string v1, "false"
 
@@ -271,7 +270,7 @@
     goto :goto_0
 
     .line 376
-    .end local v0           #str:Ljava/lang/String;
+    .end local v0    # "str":Ljava/lang/String;
     :cond_1
     iget-boolean v1, p0, Lcom/flurry/org/codehaus/jackson/map/deser/std/StdValueInstantiator;->_cfgEmptyStringsAsObjects:Z
 
@@ -467,7 +466,7 @@
 
 .method public configureFromBooleanCreator(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedWithParams;)V
     .locals 0
-    .parameter "creator"
+    .param p1, "creator"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedWithParams;
 
     .prologue
     .line 139
@@ -479,7 +478,7 @@
 
 .method public configureFromDoubleCreator(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedWithParams;)V
     .locals 0
-    .parameter "creator"
+    .param p1, "creator"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedWithParams;
 
     .prologue
     .line 135
@@ -491,7 +490,7 @@
 
 .method public configureFromIntCreator(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedWithParams;)V
     .locals 0
-    .parameter "creator"
+    .param p1, "creator"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedWithParams;
 
     .prologue
     .line 127
@@ -503,7 +502,7 @@
 
 .method public configureFromLongCreator(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedWithParams;)V
     .locals 0
-    .parameter "creator"
+    .param p1, "creator"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedWithParams;
 
     .prologue
     .line 131
@@ -515,11 +514,11 @@
 
 .method public configureFromObjectSettings(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedWithParams;Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedWithParams;Lcom/flurry/org/codehaus/jackson/type/JavaType;Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedWithParams;[Lcom/flurry/org/codehaus/jackson/map/deser/impl/CreatorProperty;)V
     .locals 0
-    .parameter "defaultCreator"
-    .parameter "delegateCreator"
-    .parameter "delegateType"
-    .parameter "withArgsCreator"
-    .parameter "constructorArgs"
+    .param p1, "defaultCreator"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedWithParams;
+    .param p2, "delegateCreator"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedWithParams;
+    .param p3, "delegateType"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .param p4, "withArgsCreator"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedWithParams;
+    .param p5, "constructorArgs"    # [Lcom/flurry/org/codehaus/jackson/map/deser/impl/CreatorProperty;
 
     .prologue
     .line 115
@@ -543,7 +542,7 @@
 
 .method public configureFromStringCreator(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedWithParams;)V
     .locals 0
-    .parameter "creator"
+    .param p1, "creator"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedWithParams;
 
     .prologue
     .line 123
@@ -555,7 +554,7 @@
 
 .method public createFromBoolean(Z)Ljava/lang/Object;
     .locals 4
-    .parameter "value"
+    .param p1, "value"    # Z
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -592,7 +591,7 @@
     move-object v0, v1
 
     .line 326
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {p0, v0}, Lcom/flurry/org/codehaus/jackson/map/deser/std/StdValueInstantiator;->wrapException(Ljava/lang/Throwable;)Lcom/flurry/org/codehaus/jackson/map/JsonMappingException;
 
     move-result-object v1
@@ -600,7 +599,7 @@
     throw v1
 
     .line 328
-    .end local v0           #e:Ljava/lang/Exception;
+    .end local v0    # "e":Ljava/lang/Exception;
     :cond_0
     new-instance v1, Lcom/flurry/org/codehaus/jackson/map/JsonMappingException;
 
@@ -639,7 +638,7 @@
 
 .method public createFromDouble(D)Ljava/lang/Object;
     .locals 4
-    .parameter "value"
+    .param p1, "value"    # D
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -676,7 +675,7 @@
     move-object v0, v1
 
     .line 312
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {p0, v0}, Lcom/flurry/org/codehaus/jackson/map/deser/std/StdValueInstantiator;->wrapException(Ljava/lang/Throwable;)Lcom/flurry/org/codehaus/jackson/map/JsonMappingException;
 
     move-result-object v1
@@ -684,7 +683,7 @@
     throw v1
 
     .line 314
-    .end local v0           #e:Ljava/lang/Exception;
+    .end local v0    # "e":Ljava/lang/Exception;
     :cond_0
     new-instance v1, Lcom/flurry/org/codehaus/jackson/map/JsonMappingException;
 
@@ -723,7 +722,7 @@
 
 .method public createFromInt(I)Ljava/lang/Object;
     .locals 4
-    .parameter "value"
+    .param p1, "value"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -783,7 +782,7 @@
     move-object v0, v1
 
     .line 284
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {p0, v0}, Lcom/flurry/org/codehaus/jackson/map/deser/std/StdValueInstantiator;->wrapException(Ljava/lang/Throwable;)Lcom/flurry/org/codehaus/jackson/map/JsonMappingException;
 
     move-result-object v1
@@ -791,7 +790,7 @@
     throw v1
 
     .line 286
-    .end local v0           #e:Ljava/lang/Exception;
+    .end local v0    # "e":Ljava/lang/Exception;
     :cond_1
     new-instance v1, Lcom/flurry/org/codehaus/jackson/map/JsonMappingException;
 
@@ -830,7 +829,7 @@
 
 .method public createFromLong(J)Ljava/lang/Object;
     .locals 4
-    .parameter "value"
+    .param p1, "value"    # J
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -867,7 +866,7 @@
     move-object v0, v1
 
     .line 298
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {p0, v0}, Lcom/flurry/org/codehaus/jackson/map/deser/std/StdValueInstantiator;->wrapException(Ljava/lang/Throwable;)Lcom/flurry/org/codehaus/jackson/map/JsonMappingException;
 
     move-result-object v1
@@ -875,7 +874,7 @@
     throw v1
 
     .line 300
-    .end local v0           #e:Ljava/lang/Exception;
+    .end local v0    # "e":Ljava/lang/Exception;
     :cond_0
     new-instance v1, Lcom/flurry/org/codehaus/jackson/map/JsonMappingException;
 
@@ -914,7 +913,7 @@
 
 .method public createFromObjectWith([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 4
-    .parameter "args"
+    .param p1, "args"    # [Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -978,7 +977,7 @@
     move-object v0, v1
 
     .line 230
-    .local v0, e:Ljava/lang/ExceptionInInitializerError;
+    .local v0, "e":Ljava/lang/ExceptionInInitializerError;
     invoke-virtual {p0, v0}, Lcom/flurry/org/codehaus/jackson/map/deser/std/StdValueInstantiator;->wrapException(Ljava/lang/Throwable;)Lcom/flurry/org/codehaus/jackson/map/JsonMappingException;
 
     move-result-object v1
@@ -986,14 +985,14 @@
     throw v1
 
     .line 231
-    .end local v0           #e:Ljava/lang/ExceptionInInitializerError;
+    .end local v0    # "e":Ljava/lang/ExceptionInInitializerError;
     :catch_1
     move-exception v1
 
     move-object v0, v1
 
     .line 232
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {p0, v0}, Lcom/flurry/org/codehaus/jackson/map/deser/std/StdValueInstantiator;->wrapException(Ljava/lang/Throwable;)Lcom/flurry/org/codehaus/jackson/map/JsonMappingException;
 
     move-result-object v1
@@ -1003,7 +1002,7 @@
 
 .method public createFromString(Ljava/lang/String;)Ljava/lang/Object;
     .locals 2
-    .parameter "value"
+    .param p1, "value"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -1038,7 +1037,7 @@
     move-object v0, v1
 
     .line 265
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {p0, v0}, Lcom/flurry/org/codehaus/jackson/map/deser/std/StdValueInstantiator;->wrapException(Ljava/lang/Throwable;)Lcom/flurry/org/codehaus/jackson/map/JsonMappingException;
 
     move-result-object v1
@@ -1046,7 +1045,7 @@
     throw v1
 
     .line 268
-    .end local v0           #e:Ljava/lang/Exception;
+    .end local v0    # "e":Ljava/lang/Exception;
     :cond_0
     invoke-virtual {p0, p1}, Lcom/flurry/org/codehaus/jackson/map/deser/std/StdValueInstantiator;->_createFromStringFallbacks(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -1120,7 +1119,7 @@
     move-object v0, v1
 
     .line 214
-    .local v0, e:Ljava/lang/ExceptionInInitializerError;
+    .local v0, "e":Ljava/lang/ExceptionInInitializerError;
     invoke-virtual {p0, v0}, Lcom/flurry/org/codehaus/jackson/map/deser/std/StdValueInstantiator;->wrapException(Ljava/lang/Throwable;)Lcom/flurry/org/codehaus/jackson/map/JsonMappingException;
 
     move-result-object v1
@@ -1128,14 +1127,14 @@
     throw v1
 
     .line 215
-    .end local v0           #e:Ljava/lang/ExceptionInInitializerError;
+    .end local v0    # "e":Ljava/lang/ExceptionInInitializerError;
     :catch_1
     move-exception v1
 
     move-object v0, v1
 
     .line 216
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {p0, v0}, Lcom/flurry/org/codehaus/jackson/map/deser/std/StdValueInstantiator;->wrapException(Ljava/lang/Throwable;)Lcom/flurry/org/codehaus/jackson/map/JsonMappingException;
 
     move-result-object v1
@@ -1145,7 +1144,7 @@
 
 .method public createUsingDelegate(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 4
-    .parameter "delegate"
+    .param p1, "delegate"    # Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -1209,7 +1208,7 @@
     move-object v0, v1
 
     .line 246
-    .local v0, e:Ljava/lang/ExceptionInInitializerError;
+    .local v0, "e":Ljava/lang/ExceptionInInitializerError;
     invoke-virtual {p0, v0}, Lcom/flurry/org/codehaus/jackson/map/deser/std/StdValueInstantiator;->wrapException(Ljava/lang/Throwable;)Lcom/flurry/org/codehaus/jackson/map/JsonMappingException;
 
     move-result-object v1
@@ -1217,14 +1216,14 @@
     throw v1
 
     .line 247
-    .end local v0           #e:Ljava/lang/ExceptionInInitializerError;
+    .end local v0    # "e":Ljava/lang/ExceptionInInitializerError;
     :catch_1
     move-exception v1
 
     move-object v0, v1
 
     .line 248
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {p0, v0}, Lcom/flurry/org/codehaus/jackson/map/deser/std/StdValueInstantiator;->wrapException(Ljava/lang/Throwable;)Lcom/flurry/org/codehaus/jackson/map/JsonMappingException;
 
     move-result-object v1
@@ -1294,7 +1293,7 @@
 
 .method protected wrapException(Ljava/lang/Throwable;)Lcom/flurry/org/codehaus/jackson/map/JsonMappingException;
     .locals 3
-    .parameter "t"
+    .param p1, "t"    # Ljava/lang/Throwable;
 
     .prologue
     .line 385

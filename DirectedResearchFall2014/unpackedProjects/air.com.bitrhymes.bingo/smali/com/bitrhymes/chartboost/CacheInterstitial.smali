@@ -25,8 +25,8 @@
 # virtual methods
 .method public call(Lcom/adobe/fre/FREContext;[Lcom/adobe/fre/FREObject;)Lcom/adobe/fre/FREObject;
     .locals 7
-    .parameter "context"
-    .parameter "arg1"
+    .param p1, "context"    # Lcom/adobe/fre/FREContext;
+    .param p2, "arg1"    # [Lcom/adobe/fre/FREObject;
 
     .prologue
     const-string v5, "Chartboost"
@@ -44,7 +44,7 @@
     move-result-object v2
 
     .line 19
-    .local v2, location:Ljava/lang/String;
+    .local v2, "location":Ljava/lang/String;
     const-string v3, "Chartboost"
 
     const-string v4, " ** Chartboost_cacheInterstitial**"
@@ -57,7 +57,7 @@
     move-result-object v0
 
     .line 23
-    .local v0, _cb:Lcom/chartboost/sdk/Chartboost;
+    .local v0, "_cb":Lcom/chartboost/sdk/Chartboost;
     if-eqz v2, :cond_0
 
     invoke-virtual {v2}, Ljava/lang/String;->length()I
@@ -70,16 +70,16 @@
     invoke-virtual {v0, v2}, Lcom/chartboost/sdk/Chartboost;->cacheInterstitial(Ljava/lang/String;)V
 
     .line 35
-    .end local v0           #_cb:Lcom/chartboost/sdk/Chartboost;
-    .end local v2           #location:Ljava/lang/String;
+    .end local v0    # "_cb":Lcom/chartboost/sdk/Chartboost;
+    .end local v2    # "location":Ljava/lang/String;
     :goto_0
     const/4 v3, 0x0
 
     return-object v3
 
     .line 26
-    .restart local v0       #_cb:Lcom/chartboost/sdk/Chartboost;
-    .restart local v2       #location:Ljava/lang/String;
+    .restart local v0    # "_cb":Lcom/chartboost/sdk/Chartboost;
+    .restart local v2    # "location":Ljava/lang/String;
     :cond_0
     invoke-virtual {v0}, Lcom/chartboost/sdk/Chartboost;->cacheInterstitial()V
     :try_end_0
@@ -88,15 +88,15 @@
     goto :goto_0
 
     .line 28
-    .end local v0           #_cb:Lcom/chartboost/sdk/Chartboost;
-    .end local v2           #location:Ljava/lang/String;
+    .end local v0    # "_cb":Lcom/chartboost/sdk/Chartboost;
+    .end local v2    # "location":Ljava/lang/String;
     :catch_0
     move-exception v3
 
     move-object v1, v3
 
     .line 29
-    .local v1, e:Ljava/lang/Exception;
+    .local v1, "e":Ljava/lang/Exception;
     const-string v3, "Chartboost"
 
     new-instance v3, Ljava/lang/StringBuilder;

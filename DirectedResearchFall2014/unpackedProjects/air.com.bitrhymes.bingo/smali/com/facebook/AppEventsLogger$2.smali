@@ -44,7 +44,7 @@
     .line 650
     sget-object v0, Lcom/facebook/AppEventsLogger$FlushReason;->TIMER:Lcom/facebook/AppEventsLogger$FlushReason;
 
-    #calls: Lcom/facebook/AppEventsLogger;->flushAndWait(Lcom/facebook/AppEventsLogger$FlushReason;)V
+    # invokes: Lcom/facebook/AppEventsLogger;->flushAndWait(Lcom/facebook/AppEventsLogger$FlushReason;)V
     invoke-static {v0}, Lcom/facebook/AppEventsLogger;->access$1(Lcom/facebook/AppEventsLogger$FlushReason;)V
 
     .line 652

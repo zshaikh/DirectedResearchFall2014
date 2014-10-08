@@ -34,12 +34,12 @@
 
 .method public static create(Landroid/content/Context;Lcom/fusepowered/m2/m2l/CustomEventBanner$CustomEventBannerListener;ZLjava/lang/String;Ljava/lang/String;Lcom/fusepowered/m2/m2l/AdConfiguration;)Lcom/fusepowered/m2/m2l/HtmlBannerWebView;
     .locals 7
-    .parameter "context"
-    .parameter "customEventBannerListener"
-    .parameter "isScrollable"
-    .parameter "redirectUrl"
-    .parameter "clickthroughUrl"
-    .parameter "adConfiguration"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "customEventBannerListener"    # Lcom/fusepowered/m2/m2l/CustomEventBanner$CustomEventBannerListener;
+    .param p2, "isScrollable"    # Z
+    .param p3, "redirectUrl"    # Ljava/lang/String;
+    .param p4, "clickthroughUrl"    # Ljava/lang/String;
+    .param p5, "adConfiguration"    # Lcom/fusepowered/m2/m2l/AdConfiguration;
 
     .prologue
     .line 51
@@ -66,7 +66,7 @@
 
 .method public static setInstance(Lcom/fusepowered/m2/m2l/factories/HtmlBannerWebViewFactory;)V
     .locals 0
-    .parameter "factory"
+    .param p0, "factory"    # Lcom/fusepowered/m2/m2l/factories/HtmlBannerWebViewFactory;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -82,12 +82,12 @@
 # virtual methods
 .method public internalCreate(Landroid/content/Context;Lcom/fusepowered/m2/m2l/CustomEventBanner$CustomEventBannerListener;ZLjava/lang/String;Ljava/lang/String;Lcom/fusepowered/m2/m2l/AdConfiguration;)Lcom/fusepowered/m2/m2l/HtmlBannerWebView;
     .locals 1
-    .parameter "context"
-    .parameter "customEventBannerListener"
-    .parameter "isScrollable"
-    .parameter "redirectUrl"
-    .parameter "clickthroughUrl"
-    .parameter "adConfiguration"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "customEventBannerListener"    # Lcom/fusepowered/m2/m2l/CustomEventBanner$CustomEventBannerListener;
+    .param p3, "isScrollable"    # Z
+    .param p4, "redirectUrl"    # Ljava/lang/String;
+    .param p5, "clickthroughUrl"    # Ljava/lang/String;
+    .param p6, "adConfiguration"    # Lcom/fusepowered/m2/m2l/AdConfiguration;
 
     .prologue
     .line 61
@@ -96,7 +96,7 @@
     invoke-direct {v0, p1, p6}, Lcom/fusepowered/m2/m2l/HtmlBannerWebView;-><init>(Landroid/content/Context;Lcom/fusepowered/m2/m2l/AdConfiguration;)V
 
     .line 62
-    .local v0, htmlBannerWebView:Lcom/fusepowered/m2/m2l/HtmlBannerWebView;
+    .local v0, "htmlBannerWebView":Lcom/fusepowered/m2/m2l/HtmlBannerWebView;
     invoke-virtual {v0, p2, p3, p4, p5}, Lcom/fusepowered/m2/m2l/HtmlBannerWebView;->init(Lcom/fusepowered/m2/m2l/CustomEventBanner$CustomEventBannerListener;ZLjava/lang/String;Ljava/lang/String;)V
 
     .line 63

@@ -46,8 +46,7 @@
 
 .method public constructor <init>(Ljava/lang/String;[Ljava/lang/Class;)V
     .locals 1
-    .parameter "name"
-    .parameter
+    .param p1, "name"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -60,7 +59,7 @@
 
     .prologue
     .line 29
-    .local p2, argTypes:[Ljava/lang/Class;,"[Ljava/lang/Class<*>;"
+    .local p2, "argTypes":[Ljava/lang/Class;, "[Ljava/lang/Class<*>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 30
@@ -86,7 +85,6 @@
 
 .method public constructor <init>(Ljava/lang/reflect/Constructor;)V
     .locals 2
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -97,7 +95,7 @@
 
     .prologue
     .line 25
-    .local p1, ctor:Ljava/lang/reflect/Constructor;,"Ljava/lang/reflect/Constructor<*>;"
+    .local p1, "ctor":Ljava/lang/reflect/Constructor;, "Ljava/lang/reflect/Constructor<*>;"
     const-string v0, ""
 
     invoke-virtual {p1}, Ljava/lang/reflect/Constructor;->getParameterTypes()[Ljava/lang/Class;
@@ -112,7 +110,7 @@
 
 .method public constructor <init>(Ljava/lang/reflect/Method;)V
     .locals 2
-    .parameter "m"
+    .param p1, "m"    # Ljava/lang/reflect/Method;
 
     .prologue
     .line 20
@@ -134,7 +132,7 @@
 # virtual methods
 .method public equals(Ljava/lang/Object;)Z
     .locals 11
-    .parameter "o"
+    .param p1, "o"    # Ljava/lang/Object;
 
     .prologue
     const/4 v10, 0x1
@@ -184,7 +182,7 @@
     move-object v3, v0
 
     .line 54
-    .local v3, other:Lcom/flurry/org/codehaus/jackson/map/introspect/MemberKey;
+    .local v3, "other":Lcom/flurry/org/codehaus/jackson/map/introspect/MemberKey;
     iget-object v7, p0, Lcom/flurry/org/codehaus/jackson/map/introspect/MemberKey;->_name:Ljava/lang/String;
 
     iget-object v8, v3, Lcom/flurry/org/codehaus/jackson/map/introspect/MemberKey;->_name:Ljava/lang/String;
@@ -205,13 +203,13 @@
     iget-object v4, v3, Lcom/flurry/org/codehaus/jackson/map/introspect/MemberKey;->_argTypes:[Ljava/lang/Class;
 
     .line 58
-    .local v4, otherArgs:[Ljava/lang/Class;,"[Ljava/lang/Class<*>;"
+    .local v4, "otherArgs":[Ljava/lang/Class;, "[Ljava/lang/Class<*>;"
     iget-object v7, p0, Lcom/flurry/org/codehaus/jackson/map/introspect/MemberKey;->_argTypes:[Ljava/lang/Class;
 
     array-length v2, v7
 
     .line 59
-    .local v2, len:I
+    .local v2, "len":I
     array-length v7, v4
 
     if-eq v7, v2, :cond_4
@@ -225,7 +223,7 @@
     :cond_4
     const/4 v1, 0x0
 
-    .local v1, i:I
+    .local v1, "i":I
     :goto_1
     if-ge v1, v2, :cond_7
 
@@ -233,13 +231,13 @@
     aget-object v5, v4, v1
 
     .line 64
-    .local v5, type1:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local v5, "type1":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     iget-object v7, p0, Lcom/flurry/org/codehaus/jackson/map/introspect/MemberKey;->_argTypes:[Ljava/lang/Class;
 
     aget-object v6, v7, v1
 
     .line 65
-    .local v6, type2:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local v6, "type2":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     if-ne v5, v6, :cond_6
 
     .line 62
@@ -267,8 +265,8 @@
     .line 79
     goto :goto_0
 
-    .end local v5           #type1:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
-    .end local v6           #type2:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .end local v5    # "type1":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
+    .end local v6    # "type2":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     :cond_7
     move v7, v10
 

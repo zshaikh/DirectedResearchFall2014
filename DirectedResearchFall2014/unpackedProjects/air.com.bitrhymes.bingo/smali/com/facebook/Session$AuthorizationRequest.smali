@@ -73,7 +73,7 @@
 # direct methods
 .method constructor <init>(Landroid/app/Activity;)V
     .locals 1
-    .parameter "activity"
+    .param p1, "activity"    # Landroid/app/Activity;
 
     .prologue
     .line 1655
@@ -137,7 +137,7 @@
 
 .method constructor <init>(Landroid/support/v4/app/Fragment;)V
     .locals 1
-    .parameter "fragment"
+    .param p1, "fragment"    # Landroid/support/v4/app/Fragment;
 
     .prologue
     .line 1669
@@ -201,13 +201,12 @@
 
 .method private constructor <init>(Lcom/facebook/SessionLoginBehavior;ILjava/util/List;Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;)V
     .locals 1
-    .parameter "loginBehavior"
-    .parameter "requestCode"
-    .parameter
-    .parameter "defaultAudience"
-    .parameter "isLegacy"
-    .parameter "applicationId"
-    .parameter "validateSameFbidAsToken"
+    .param p1, "loginBehavior"    # Lcom/facebook/SessionLoginBehavior;
+    .param p2, "requestCode"    # I
+    .param p4, "defaultAudience"    # Ljava/lang/String;
+    .param p5, "isLegacy"    # Z
+    .param p6, "applicationId"    # Ljava/lang/String;
+    .param p7, "validateSameFbidAsToken"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -227,7 +226,7 @@
 
     .prologue
     .line 1686
-    .local p3, permissions:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
+    .local p3, "permissions":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1644
@@ -313,14 +312,6 @@
 
 .method synthetic constructor <init>(Lcom/facebook/SessionLoginBehavior;ILjava/util/List;Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;Lcom/facebook/Session$AuthorizationRequest;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 1686
@@ -331,7 +322,6 @@
 
 .method static synthetic access$1(Lcom/facebook/Session$AuthorizationRequest;)Lcom/facebook/Session$StartActivityDelegate;
     .locals 1
-    .parameter
 
     .prologue
     .line 1643
@@ -342,7 +332,6 @@
 
 .method static synthetic access$2(Lcom/facebook/Session$AuthorizationRequest;)Ljava/util/Map;
     .locals 1
-    .parameter
 
     .prologue
     .line 1653
@@ -353,7 +342,6 @@
 
 .method static synthetic access$3(Lcom/facebook/Session$AuthorizationRequest;)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 1647
@@ -364,7 +352,6 @@
 
 .method static synthetic access$4(Lcom/facebook/Session$AuthorizationRequest;)Lcom/facebook/SessionLoginBehavior;
     .locals 1
-    .parameter
 
     .prologue
     .line 1644
@@ -375,7 +362,6 @@
 
 .method static synthetic access$5(Lcom/facebook/Session$AuthorizationRequest;)I
     .locals 1
-    .parameter
 
     .prologue
     .line 1645
@@ -386,7 +372,6 @@
 
 .method static synthetic access$6(Lcom/facebook/Session$AuthorizationRequest;)Ljava/util/List;
     .locals 1
-    .parameter
 
     .prologue
     .line 1648
@@ -397,7 +382,6 @@
 
 .method static synthetic access$7(Lcom/facebook/Session$AuthorizationRequest;)Lcom/facebook/SessionDefaultAudience;
     .locals 1
-    .parameter
 
     .prologue
     .line 1649
@@ -408,7 +392,7 @@
 
 .method private readObject(Ljava/io/ObjectInputStream;)V
     .locals 2
-    .parameter "stream"
+    .param p1, "stream"    # Ljava/io/ObjectInputStream;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/InvalidObjectException;
@@ -458,7 +442,7 @@
     invoke-direct {v8, p0}, Lcom/facebook/Session$AuthorizationRequest$4;-><init>(Lcom/facebook/Session$AuthorizationRequest;)V
 
     .line 1817
-    .local v8, delegate:Lcom/facebook/AuthorizationClient$StartActivityDelegate;
+    .local v8, "delegate":Lcom/facebook/AuthorizationClient$StartActivityDelegate;
     new-instance v0, Lcom/facebook/AuthorizationClient$AuthorizationRequest;
 
     iget-object v1, p0, Lcom/facebook/Session$AuthorizationRequest;->loginBehavior:Lcom/facebook/SessionLoginBehavior;
@@ -575,7 +559,7 @@
 
 .method setApplicationId(Ljava/lang/String;)V
     .locals 0
-    .parameter "applicationId"
+    .param p1, "applicationId"    # Ljava/lang/String;
 
     .prologue
     .line 1790
@@ -587,7 +571,7 @@
 
 .method setCallback(Lcom/facebook/Session$StatusCallback;)Lcom/facebook/Session$AuthorizationRequest;
     .locals 0
-    .parameter "statusCallback"
+    .param p1, "statusCallback"    # Lcom/facebook/Session$StatusCallback;
 
     .prologue
     .line 1725
@@ -599,7 +583,7 @@
 
 .method setDefaultAudience(Lcom/facebook/SessionDefaultAudience;)Lcom/facebook/Session$AuthorizationRequest;
     .locals 0
-    .parameter "defaultAudience"
+    .param p1, "defaultAudience"    # Lcom/facebook/SessionDefaultAudience;
 
     .prologue
     .line 1771
@@ -615,7 +599,7 @@
 
 .method public setIsLegacy(Z)V
     .locals 0
-    .parameter "isLegacy"
+    .param p1, "isLegacy"    # Z
 
     .prologue
     .line 1717
@@ -627,7 +611,7 @@
 
 .method setLoginBehavior(Lcom/facebook/SessionLoginBehavior;)Lcom/facebook/Session$AuthorizationRequest;
     .locals 0
-    .parameter "loginBehavior"
+    .param p1, "loginBehavior"    # Lcom/facebook/SessionLoginBehavior;
 
     .prologue
     .line 1734
@@ -643,7 +627,6 @@
 
 .method setPermissions(Ljava/util/List;)Lcom/facebook/Session$AuthorizationRequest;
     .locals 0
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -657,7 +640,7 @@
 
     .prologue
     .line 1756
-    .local p1, permissions:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
+    .local p1, "permissions":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     if-eqz p1, :cond_0
 
     .line 1757
@@ -670,7 +653,7 @@
 
 .method varargs setPermissions([Ljava/lang/String;)Lcom/facebook/Session$AuthorizationRequest;
     .locals 1
-    .parameter "permissions"
+    .param p1, "permissions"    # [Ljava/lang/String;
 
     .prologue
     .line 1763
@@ -687,7 +670,7 @@
 
 .method setRequestCode(I)Lcom/facebook/Session$AuthorizationRequest;
     .locals 0
-    .parameter "requestCode"
+    .param p1, "requestCode"    # I
 
     .prologue
     .line 1745
@@ -703,7 +686,7 @@
 
 .method setValidateSameFbidAsToken(Ljava/lang/String;)V
     .locals 0
-    .parameter "validateSameFbidAsToken"
+    .param p1, "validateSameFbidAsToken"    # Ljava/lang/String;
 
     .prologue
     .line 1798

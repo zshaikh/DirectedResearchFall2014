@@ -26,8 +26,8 @@
 # direct methods
 .method constructor <init>(Ljava/io/OutputStream;I)V
     .locals 0
-    .parameter "out"
-    .parameter "bufferSize"
+    .param p1, "out"    # Ljava/io/OutputStream;
+    .param p2, "bufferSize"    # I
 
     .prologue
     .line 51
@@ -42,7 +42,7 @@
 
 .method private ensureBounds(I)V
     .locals 3
-    .parameter "num"
+    .param p1, "num"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -60,7 +60,7 @@
     sub-int v0, v1, v2
 
     .line 104
-    .local v0, remaining:I
+    .local v0, "remaining":I
     if-ge v0, p1, :cond_0
 
     .line 105
@@ -106,7 +106,7 @@
 
 .method private writeByte(I)V
     .locals 3
-    .parameter "b"
+    .param p1, "b"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -160,8 +160,8 @@
 
 .method configure(Ljava/io/OutputStream;I)Lcom/flurry/org/apache/avro/io/BufferedBinaryEncoder;
     .locals 4
-    .parameter "out"
-    .parameter "bufferSize"
+    .param p1, "out"    # Ljava/io/OutputStream;
+    .param p2, "bufferSize"    # I
 
     .prologue
     const/16 v3, 0x200
@@ -254,7 +254,7 @@
     move-exception v0
 
     .line 63
-    .local v0, e:Ljava/io/IOException;
+    .local v0, "e":Ljava/io/IOException;
     new-instance v1, Lcom/flurry/org/apache/avro/AvroRuntimeException;
 
     const-string v2, "Failure flushing old output"
@@ -287,7 +287,7 @@
 
 .method public writeBoolean(Z)V
     .locals 3
-    .parameter "b"
+    .param p1, "b"    # Z
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -329,7 +329,7 @@
 
 .method public writeDouble(D)V
     .locals 3
-    .parameter "d"
+    .param p1, "d"    # D
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -363,9 +363,9 @@
 
 .method public writeFixed([BII)V
     .locals 2
-    .parameter "bytes"
-    .parameter "start"
-    .parameter "len"
+    .param p1, "bytes"    # [B
+    .param p2, "start"    # I
+    .param p3, "len"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -413,7 +413,7 @@
 
 .method public writeFloat(F)V
     .locals 3
-    .parameter "f"
+    .param p1, "f"    # F
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -447,7 +447,7 @@
 
 .method public writeInt(I)V
     .locals 3
-    .parameter "n"
+    .param p1, "n"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -481,7 +481,7 @@
 
 .method public writeLong(J)V
     .locals 3
-    .parameter "n"
+    .param p1, "n"    # J
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;

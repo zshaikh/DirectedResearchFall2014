@@ -6,8 +6,8 @@
 # direct methods
 .method constructor <init>(Landroid/content/Context;Ljava/lang/String;)V
     .locals 1
-    .parameter "context"
-    .parameter "username"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "username"    # Ljava/lang/String;
 
     .prologue
     .line 17

@@ -26,7 +26,6 @@
 # direct methods
 .method private constructor <init>(Lcom/vungle/sdk/j;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 338
@@ -44,8 +43,6 @@
 
 .method synthetic constructor <init>(Lcom/vungle/sdk/j;B)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 338
@@ -56,7 +53,6 @@
 
 .method static synthetic a(Lcom/vungle/sdk/j$a;)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 338
@@ -84,7 +80,6 @@
 
 .method public final onClick(Landroid/view/View;)V
     .locals 11
-    .parameter
 
     .prologue
     const-wide v9, 0x408f400000000000L

@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/adobe/air/AIRWindowSurfaceView;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1452
@@ -39,8 +38,6 @@
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 1455

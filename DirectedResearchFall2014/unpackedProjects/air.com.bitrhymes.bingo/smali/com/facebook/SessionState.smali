@@ -189,9 +189,7 @@
 
 .method private constructor <init>(Ljava/lang/String;ILcom/facebook/SessionState$Category;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter "category"
+    .param p3, "category"    # Lcom/facebook/SessionState$Category;
 
     .prologue
     .line 87
@@ -206,7 +204,6 @@
 
 .method public static valueOf(Ljava/lang/String;)Lcom/facebook/SessionState;
     .locals 1
-    .parameter
 
     .prologue
     .line 1

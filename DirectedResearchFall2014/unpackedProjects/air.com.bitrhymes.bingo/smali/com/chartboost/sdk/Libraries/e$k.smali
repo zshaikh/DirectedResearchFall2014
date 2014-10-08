@@ -23,7 +23,6 @@
 # direct methods
 .method public constructor <init>([Lcom/chartboost/sdk/Libraries/e$a;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 301
@@ -134,7 +133,6 @@
 
 .method public a(Ljava/lang/Object;)Z
     .locals 4
-    .parameter
 
     .prologue
     const/4 v3, 0x0

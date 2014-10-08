@@ -35,7 +35,7 @@
 
     iget-object v0, p0, Lcom/facebook/Session$3;->this$0:Lcom/facebook/Session;
 
-    #getter for: Lcom/facebook/Session;->callbacks:Ljava/util/List;
+    # getter for: Lcom/facebook/Session;->callbacks:Ljava/util/List;
     invoke-static {v0}, Lcom/facebook/Session;->access$300(Lcom/facebook/Session;)Ljava/util/List;
 
     move-result-object v0
@@ -63,12 +63,12 @@
 
     iget-object v0, p0, Lcom/facebook/Session$3;->this$0:Lcom/facebook/Session;
 
-    #getter for: Lcom/facebook/Session;->handler:Landroid/os/Handler;
+    # getter for: Lcom/facebook/Session;->handler:Landroid/os/Handler;
     invoke-static {v0}, Lcom/facebook/Session;->access$400(Lcom/facebook/Session;)Landroid/os/Handler;
 
     move-result-object v0
 
-    #calls: Lcom/facebook/Session;->runWithHandlerOrExecutor(Landroid/os/Handler;Ljava/lang/Runnable;)V
+    # invokes: Lcom/facebook/Session;->runWithHandlerOrExecutor(Landroid/os/Handler;Ljava/lang/Runnable;)V
     invoke-static {v0, v2}, Lcom/facebook/Session;->access$500(Landroid/os/Handler;Ljava/lang/Runnable;)V
 
     goto :goto_0

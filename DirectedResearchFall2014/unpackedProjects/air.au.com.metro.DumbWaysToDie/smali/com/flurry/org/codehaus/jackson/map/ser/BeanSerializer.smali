@@ -6,7 +6,7 @@
 # direct methods
 .method protected constructor <init>(Lcom/flurry/org/codehaus/jackson/map/ser/BeanSerializer;)V
     .locals 0
-    .parameter "src"
+    .param p1, "src"    # Lcom/flurry/org/codehaus/jackson/map/ser/BeanSerializer;
 
     .prologue
     .line 59
@@ -18,7 +18,7 @@
 
 .method protected constructor <init>(Lcom/flurry/org/codehaus/jackson/map/ser/std/BeanSerializerBase;)V
     .locals 0
-    .parameter "src"
+    .param p1, "src"    # Lcom/flurry/org/codehaus/jackson/map/ser/std/BeanSerializerBase;
 
     .prologue
     .line 70
@@ -30,11 +30,11 @@
 
 .method public constructor <init>(Lcom/flurry/org/codehaus/jackson/type/JavaType;[Lcom/flurry/org/codehaus/jackson/map/ser/BeanPropertyWriter;[Lcom/flurry/org/codehaus/jackson/map/ser/BeanPropertyWriter;Lcom/flurry/org/codehaus/jackson/map/ser/AnyGetterWriter;Ljava/lang/Object;)V
     .locals 0
-    .parameter "type"
-    .parameter "properties"
-    .parameter "filteredProperties"
-    .parameter "anyGetterWriter"
-    .parameter "filterId"
+    .param p1, "type"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .param p2, "properties"    # [Lcom/flurry/org/codehaus/jackson/map/ser/BeanPropertyWriter;
+    .param p3, "filteredProperties"    # [Lcom/flurry/org/codehaus/jackson/map/ser/BeanPropertyWriter;
+    .param p4, "anyGetterWriter"    # Lcom/flurry/org/codehaus/jackson/map/ser/AnyGetterWriter;
+    .param p5, "filterId"    # Ljava/lang/Object;
 
     .prologue
     .line 41
@@ -46,11 +46,10 @@
 
 .method public constructor <init>(Ljava/lang/Class;[Lcom/flurry/org/codehaus/jackson/map/ser/BeanPropertyWriter;[Lcom/flurry/org/codehaus/jackson/map/ser/BeanPropertyWriter;Lcom/flurry/org/codehaus/jackson/map/ser/AnyGetterWriter;Ljava/lang/Object;)V
     .locals 0
-    .parameter
-    .parameter "properties"
-    .parameter "filteredProperties"
-    .parameter "anyGetterWriter"
-    .parameter "filterId"
+    .param p2, "properties"    # [Lcom/flurry/org/codehaus/jackson/map/ser/BeanPropertyWriter;
+    .param p3, "filteredProperties"    # [Lcom/flurry/org/codehaus/jackson/map/ser/BeanPropertyWriter;
+    .param p4, "anyGetterWriter"    # Lcom/flurry/org/codehaus/jackson/map/ser/AnyGetterWriter;
+    .param p5, "filterId"    # Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -67,7 +66,7 @@
 
     .prologue
     .line 49
-    .local p1, rawType:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p1, "rawType":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-direct/range {p0 .. p5}, Lcom/flurry/org/codehaus/jackson/map/ser/std/BeanSerializerBase;-><init>(Ljava/lang/Class;[Lcom/flurry/org/codehaus/jackson/map/ser/BeanPropertyWriter;[Lcom/flurry/org/codehaus/jackson/map/ser/BeanPropertyWriter;Lcom/flurry/org/codehaus/jackson/map/ser/AnyGetterWriter;Ljava/lang/Object;)V
 
     .line 50
@@ -76,7 +75,6 @@
 
 .method public static createDummy(Ljava/lang/Class;)Lcom/flurry/org/codehaus/jackson/map/ser/BeanSerializer;
     .locals 6
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -87,7 +85,7 @@
     .end annotation
 
     .prologue
-    .local p0, forType:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p0, "forType":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const/4 v3, 0x0
 
     .line 85
@@ -110,9 +108,9 @@
 # virtual methods
 .method public final serialize(Ljava/lang/Object;Lcom/flurry/org/codehaus/jackson/JsonGenerator;Lcom/flurry/org/codehaus/jackson/map/SerializerProvider;)V
     .locals 1
-    .parameter "bean"
-    .parameter "jgen"
-    .parameter "provider"
+    .param p1, "bean"    # Ljava/lang/Object;
+    .param p2, "jgen"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator;
+    .param p3, "provider"    # Lcom/flurry/org/codehaus/jackson/map/SerializerProvider;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,

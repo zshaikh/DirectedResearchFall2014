@@ -24,7 +24,6 @@
 # direct methods
 .method private constructor <init>(Lcom/facebook/widget/FacebookFragment;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 287
@@ -37,8 +36,6 @@
 
 .method synthetic constructor <init>(Lcom/facebook/widget/FacebookFragment;Lcom/facebook/widget/FacebookFragment$DefaultSessionStatusCallback;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 287
@@ -51,9 +48,9 @@
 # virtual methods
 .method public call(Lcom/facebook/Session;Lcom/facebook/SessionState;Ljava/lang/Exception;)V
     .locals 1
-    .parameter "session"
-    .parameter "state"
-    .parameter "exception"
+    .param p1, "session"    # Lcom/facebook/Session;
+    .param p2, "state"    # Lcom/facebook/SessionState;
+    .param p3, "exception"    # Ljava/lang/Exception;
 
     .prologue
     .line 293

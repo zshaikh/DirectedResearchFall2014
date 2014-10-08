@@ -76,8 +76,6 @@
 
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 26
@@ -88,7 +86,6 @@
 
 .method public static valueOf(Ljava/lang/String;)Lcom/fusepowered/a1/cache/ApplifierImpactDownloader$ApplifierDownloadEventType;
     .locals 1
-    .parameter
 
     .prologue
     .line 1

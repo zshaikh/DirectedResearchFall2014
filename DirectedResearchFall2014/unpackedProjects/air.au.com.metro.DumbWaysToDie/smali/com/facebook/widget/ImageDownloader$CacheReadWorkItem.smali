@@ -39,7 +39,7 @@
 
     iget-boolean v2, p0, Lcom/facebook/widget/ImageDownloader$CacheReadWorkItem;->allowCachedRedirects:Z
 
-    #calls: Lcom/facebook/widget/ImageDownloader;->readFromCache(Lcom/facebook/widget/ImageDownloader$RequestKey;Landroid/content/Context;Z)V
+    # invokes: Lcom/facebook/widget/ImageDownloader;->readFromCache(Lcom/facebook/widget/ImageDownloader$RequestKey;Landroid/content/Context;Z)V
     invoke-static {v0, v1, v2}, Lcom/facebook/widget/ImageDownloader;->access$100(Lcom/facebook/widget/ImageDownloader$RequestKey;Landroid/content/Context;Z)V
 
     return-void

@@ -78,7 +78,7 @@
 
 .method public constructor <init>(Lcom/flurry/org/codehaus/jackson/annotate/JsonAutoDetect$Visibility;)V
     .locals 1
-    .parameter "v"
+    .param p1, "v"    # Lcom/flurry/org/codehaus/jackson/annotate/JsonAutoDetect$Visibility;
 
     .prologue
     .line 226
@@ -149,11 +149,11 @@
 
 .method public constructor <init>(Lcom/flurry/org/codehaus/jackson/annotate/JsonAutoDetect$Visibility;Lcom/flurry/org/codehaus/jackson/annotate/JsonAutoDetect$Visibility;Lcom/flurry/org/codehaus/jackson/annotate/JsonAutoDetect$Visibility;Lcom/flurry/org/codehaus/jackson/annotate/JsonAutoDetect$Visibility;Lcom/flurry/org/codehaus/jackson/annotate/JsonAutoDetect$Visibility;)V
     .locals 0
-    .parameter "getter"
-    .parameter "isGetter"
-    .parameter "setter"
-    .parameter "creator"
-    .parameter "field"
+    .param p1, "getter"    # Lcom/flurry/org/codehaus/jackson/annotate/JsonAutoDetect$Visibility;
+    .param p2, "isGetter"    # Lcom/flurry/org/codehaus/jackson/annotate/JsonAutoDetect$Visibility;
+    .param p3, "setter"    # Lcom/flurry/org/codehaus/jackson/annotate/JsonAutoDetect$Visibility;
+    .param p4, "creator"    # Lcom/flurry/org/codehaus/jackson/annotate/JsonAutoDetect$Visibility;
+    .param p5, "field"    # Lcom/flurry/org/codehaus/jackson/annotate/JsonAutoDetect$Visibility;
 
     .prologue
     .line 209
@@ -180,7 +180,7 @@
 
 .method public constructor <init>(Lcom/flurry/org/codehaus/jackson/annotate/JsonAutoDetect;)V
     .locals 2
-    .parameter "ann"
+    .param p1, "ann"    # Lcom/flurry/org/codehaus/jackson/annotate/JsonAutoDetect;
 
     .prologue
     .line 195
@@ -192,7 +192,7 @@
     move-result-object v0
 
     .line 198
-    .local v0, incl:[Lcom/flurry/org/codehaus/jackson/annotate/JsonMethod;
+    .local v0, "incl":[Lcom/flurry/org/codehaus/jackson/annotate/JsonMethod;
     sget-object v1, Lcom/flurry/org/codehaus/jackson/annotate/JsonMethod;->GETTER:Lcom/flurry/org/codehaus/jackson/annotate/JsonMethod;
 
     invoke-static {v0, v1}, Lcom/flurry/org/codehaus/jackson/map/introspect/VisibilityChecker$Std;->hasMethod([Lcom/flurry/org/codehaus/jackson/annotate/JsonMethod;Lcom/flurry/org/codehaus/jackson/annotate/JsonMethod;)Z
@@ -318,27 +318,27 @@
 
 .method private static hasMethod([Lcom/flurry/org/codehaus/jackson/annotate/JsonMethod;Lcom/flurry/org/codehaus/jackson/annotate/JsonMethod;)Z
     .locals 5
-    .parameter "methods"
-    .parameter "method"
+    .param p0, "methods"    # [Lcom/flurry/org/codehaus/jackson/annotate/JsonMethod;
+    .param p1, "method"    # Lcom/flurry/org/codehaus/jackson/annotate/JsonMethod;
 
     .prologue
     .line 402
     move-object v0, p0
 
-    .local v0, arr$:[Lcom/flurry/org/codehaus/jackson/annotate/JsonMethod;
+    .local v0, "arr$":[Lcom/flurry/org/codehaus/jackson/annotate/JsonMethod;
     array-length v3, v0
 
-    .local v3, len$:I
+    .local v3, "len$":I
     const/4 v2, 0x0
 
-    .local v2, i$:I
+    .local v2, "i$":I
     :goto_0
     if-ge v2, v3, :cond_2
 
     aget-object v1, v0, v2
 
     .line 403
-    .local v1, curr:Lcom/flurry/org/codehaus/jackson/annotate/JsonMethod;
+    .local v1, "curr":Lcom/flurry/org/codehaus/jackson/annotate/JsonMethod;
     if-eq v1, p1, :cond_0
 
     sget-object v4, Lcom/flurry/org/codehaus/jackson/annotate/JsonMethod;->ALL:Lcom/flurry/org/codehaus/jackson/annotate/JsonMethod;
@@ -349,19 +349,19 @@
     const/4 v4, 0x1
 
     .line 405
-    .end local v1           #curr:Lcom/flurry/org/codehaus/jackson/annotate/JsonMethod;
+    .end local v1    # "curr":Lcom/flurry/org/codehaus/jackson/annotate/JsonMethod;
     :goto_1
     return v4
 
     .line 402
-    .restart local v1       #curr:Lcom/flurry/org/codehaus/jackson/annotate/JsonMethod;
+    .restart local v1    # "curr":Lcom/flurry/org/codehaus/jackson/annotate/JsonMethod;
     :cond_1
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
     .line 405
-    .end local v1           #curr:Lcom/flurry/org/codehaus/jackson/annotate/JsonMethod;
+    .end local v1    # "curr":Lcom/flurry/org/codehaus/jackson/annotate/JsonMethod;
     :cond_2
     const/4 v4, 0x0
 
@@ -372,7 +372,7 @@
 # virtual methods
 .method public isCreatorVisible(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMember;)Z
     .locals 1
-    .parameter "m"
+    .param p1, "m"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMember;
 
     .prologue
     .line 351
@@ -389,7 +389,7 @@
 
 .method public isCreatorVisible(Ljava/lang/reflect/Member;)Z
     .locals 1
-    .parameter "m"
+    .param p1, "m"    # Ljava/lang/reflect/Member;
 
     .prologue
     .line 346
@@ -404,7 +404,7 @@
 
 .method public isFieldVisible(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedField;)Z
     .locals 1
-    .parameter "f"
+    .param p1, "f"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedField;
 
     .prologue
     .line 361
@@ -421,7 +421,7 @@
 
 .method public isFieldVisible(Ljava/lang/reflect/Field;)Z
     .locals 1
-    .parameter "f"
+    .param p1, "f"    # Ljava/lang/reflect/Field;
 
     .prologue
     .line 356
@@ -436,7 +436,7 @@
 
 .method public isGetterVisible(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;)Z
     .locals 1
-    .parameter "m"
+    .param p1, "m"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
 
     .prologue
     .line 371
@@ -453,7 +453,7 @@
 
 .method public isGetterVisible(Ljava/lang/reflect/Method;)Z
     .locals 1
-    .parameter "m"
+    .param p1, "m"    # Ljava/lang/reflect/Method;
 
     .prologue
     .line 366
@@ -468,7 +468,7 @@
 
 .method public isIsGetterVisible(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;)Z
     .locals 1
-    .parameter "m"
+    .param p1, "m"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
 
     .prologue
     .line 381
@@ -485,7 +485,7 @@
 
 .method public isIsGetterVisible(Ljava/lang/reflect/Method;)Z
     .locals 1
-    .parameter "m"
+    .param p1, "m"    # Ljava/lang/reflect/Method;
 
     .prologue
     .line 376
@@ -500,7 +500,7 @@
 
 .method public isSetterVisible(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;)Z
     .locals 1
-    .parameter "m"
+    .param p1, "m"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
 
     .prologue
     .line 391
@@ -517,7 +517,7 @@
 
 .method public isSetterVisible(Ljava/lang/reflect/Method;)Z
     .locals 1
-    .parameter "m"
+    .param p1, "m"    # Ljava/lang/reflect/Method;
 
     .prologue
     .line 386
@@ -616,7 +616,7 @@
 
 .method public with(Lcom/flurry/org/codehaus/jackson/annotate/JsonAutoDetect$Visibility;)Lcom/flurry/org/codehaus/jackson/map/introspect/VisibilityChecker$Std;
     .locals 1
-    .parameter "v"
+    .param p1, "v"    # Lcom/flurry/org/codehaus/jackson/annotate/JsonAutoDetect$Visibility;
 
     .prologue
     .line 275
@@ -641,7 +641,7 @@
 
 .method public with(Lcom/flurry/org/codehaus/jackson/annotate/JsonAutoDetect;)Lcom/flurry/org/codehaus/jackson/map/introspect/VisibilityChecker$Std;
     .locals 4
-    .parameter "ann"
+    .param p1, "ann"    # Lcom/flurry/org/codehaus/jackson/annotate/JsonAutoDetect;
 
     .prologue
     .line 253
@@ -658,13 +658,13 @@
     move-object v0, p0
 
     .line 256
-    .local v0, curr:Lcom/flurry/org/codehaus/jackson/map/introspect/VisibilityChecker$Std;
+    .local v0, "curr":Lcom/flurry/org/codehaus/jackson/map/introspect/VisibilityChecker$Std;
     invoke-interface {p1}, Lcom/flurry/org/codehaus/jackson/annotate/JsonAutoDetect;->value()[Lcom/flurry/org/codehaus/jackson/annotate/JsonMethod;
 
     move-result-object v1
 
     .line 259
-    .local v1, incl:[Lcom/flurry/org/codehaus/jackson/annotate/JsonMethod;
+    .local v1, "incl":[Lcom/flurry/org/codehaus/jackson/annotate/JsonMethod;
     sget-object v3, Lcom/flurry/org/codehaus/jackson/annotate/JsonMethod;->GETTER:Lcom/flurry/org/codehaus/jackson/annotate/JsonMethod;
 
     invoke-static {v1, v3}, Lcom/flurry/org/codehaus/jackson/map/introspect/VisibilityChecker$Std;->hasMethod([Lcom/flurry/org/codehaus/jackson/annotate/JsonMethod;Lcom/flurry/org/codehaus/jackson/annotate/JsonMethod;)Z
@@ -680,7 +680,7 @@
     move-object v2, v3
 
     .line 260
-    .local v2, v:Lcom/flurry/org/codehaus/jackson/annotate/JsonAutoDetect$Visibility;
+    .local v2, "v":Lcom/flurry/org/codehaus/jackson/annotate/JsonAutoDetect$Visibility;
     :goto_1
     invoke-virtual {v0, v2}, Lcom/flurry/org/codehaus/jackson/map/introspect/VisibilityChecker$Std;->withGetterVisibility(Lcom/flurry/org/codehaus/jackson/annotate/JsonAutoDetect$Visibility;)Lcom/flurry/org/codehaus/jackson/map/introspect/VisibilityChecker$Std;
 
@@ -776,7 +776,7 @@
     goto :goto_0
 
     .line 259
-    .end local v2           #v:Lcom/flurry/org/codehaus/jackson/annotate/JsonAutoDetect$Visibility;
+    .end local v2    # "v":Lcom/flurry/org/codehaus/jackson/annotate/JsonAutoDetect$Visibility;
     :cond_1
     sget-object v3, Lcom/flurry/org/codehaus/jackson/annotate/JsonAutoDetect$Visibility;->NONE:Lcom/flurry/org/codehaus/jackson/annotate/JsonAutoDetect$Visibility;
 
@@ -785,7 +785,7 @@
     goto :goto_1
 
     .line 261
-    .restart local v2       #v:Lcom/flurry/org/codehaus/jackson/annotate/JsonAutoDetect$Visibility;
+    .restart local v2    # "v":Lcom/flurry/org/codehaus/jackson/annotate/JsonAutoDetect$Visibility;
     :cond_2
     sget-object v3, Lcom/flurry/org/codehaus/jackson/annotate/JsonAutoDetect$Visibility;->NONE:Lcom/flurry/org/codehaus/jackson/annotate/JsonAutoDetect$Visibility;
 
@@ -820,7 +820,7 @@
 
 .method public bridge synthetic with(Lcom/flurry/org/codehaus/jackson/annotate/JsonAutoDetect$Visibility;)Lcom/flurry/org/codehaus/jackson/map/introspect/VisibilityChecker;
     .locals 1
-    .parameter "x0"
+    .param p1, "x0"    # Lcom/flurry/org/codehaus/jackson/annotate/JsonAutoDetect$Visibility;
 
     .prologue
     .line 158
@@ -833,7 +833,7 @@
 
 .method public bridge synthetic with(Lcom/flurry/org/codehaus/jackson/annotate/JsonAutoDetect;)Lcom/flurry/org/codehaus/jackson/map/introspect/VisibilityChecker;
     .locals 1
-    .parameter "x0"
+    .param p1, "x0"    # Lcom/flurry/org/codehaus/jackson/annotate/JsonAutoDetect;
 
     .prologue
     .line 158
@@ -846,7 +846,7 @@
 
 .method public withCreatorVisibility(Lcom/flurry/org/codehaus/jackson/annotate/JsonAutoDetect$Visibility;)Lcom/flurry/org/codehaus/jackson/map/introspect/VisibilityChecker$Std;
     .locals 6
-    .parameter "v"
+    .param p1, "v"    # Lcom/flurry/org/codehaus/jackson/annotate/JsonAutoDetect$Visibility;
 
     .prologue
     .line 326
@@ -890,7 +890,7 @@
 
 .method public bridge synthetic withCreatorVisibility(Lcom/flurry/org/codehaus/jackson/annotate/JsonAutoDetect$Visibility;)Lcom/flurry/org/codehaus/jackson/map/introspect/VisibilityChecker;
     .locals 1
-    .parameter "x0"
+    .param p1, "x0"    # Lcom/flurry/org/codehaus/jackson/annotate/JsonAutoDetect$Visibility;
 
     .prologue
     .line 158
@@ -903,7 +903,7 @@
 
 .method public withFieldVisibility(Lcom/flurry/org/codehaus/jackson/annotate/JsonAutoDetect$Visibility;)Lcom/flurry/org/codehaus/jackson/map/introspect/VisibilityChecker$Std;
     .locals 6
-    .parameter "v"
+    .param p1, "v"    # Lcom/flurry/org/codehaus/jackson/annotate/JsonAutoDetect$Visibility;
 
     .prologue
     .line 333
@@ -947,7 +947,7 @@
 
 .method public bridge synthetic withFieldVisibility(Lcom/flurry/org/codehaus/jackson/annotate/JsonAutoDetect$Visibility;)Lcom/flurry/org/codehaus/jackson/map/introspect/VisibilityChecker;
     .locals 1
-    .parameter "x0"
+    .param p1, "x0"    # Lcom/flurry/org/codehaus/jackson/annotate/JsonAutoDetect$Visibility;
 
     .prologue
     .line 158
@@ -960,7 +960,7 @@
 
 .method public withGetterVisibility(Lcom/flurry/org/codehaus/jackson/annotate/JsonAutoDetect$Visibility;)Lcom/flurry/org/codehaus/jackson/map/introspect/VisibilityChecker$Std;
     .locals 6
-    .parameter "v"
+    .param p1, "v"    # Lcom/flurry/org/codehaus/jackson/annotate/JsonAutoDetect$Visibility;
 
     .prologue
     .line 305
@@ -1004,7 +1004,7 @@
 
 .method public bridge synthetic withGetterVisibility(Lcom/flurry/org/codehaus/jackson/annotate/JsonAutoDetect$Visibility;)Lcom/flurry/org/codehaus/jackson/map/introspect/VisibilityChecker;
     .locals 1
-    .parameter "x0"
+    .param p1, "x0"    # Lcom/flurry/org/codehaus/jackson/annotate/JsonAutoDetect$Visibility;
 
     .prologue
     .line 158
@@ -1017,7 +1017,7 @@
 
 .method public withIsGetterVisibility(Lcom/flurry/org/codehaus/jackson/annotate/JsonAutoDetect$Visibility;)Lcom/flurry/org/codehaus/jackson/map/introspect/VisibilityChecker$Std;
     .locals 6
-    .parameter "v"
+    .param p1, "v"    # Lcom/flurry/org/codehaus/jackson/annotate/JsonAutoDetect$Visibility;
 
     .prologue
     .line 312
@@ -1061,7 +1061,7 @@
 
 .method public bridge synthetic withIsGetterVisibility(Lcom/flurry/org/codehaus/jackson/annotate/JsonAutoDetect$Visibility;)Lcom/flurry/org/codehaus/jackson/map/introspect/VisibilityChecker;
     .locals 1
-    .parameter "x0"
+    .param p1, "x0"    # Lcom/flurry/org/codehaus/jackson/annotate/JsonAutoDetect$Visibility;
 
     .prologue
     .line 158
@@ -1074,7 +1074,7 @@
 
 .method public withSetterVisibility(Lcom/flurry/org/codehaus/jackson/annotate/JsonAutoDetect$Visibility;)Lcom/flurry/org/codehaus/jackson/map/introspect/VisibilityChecker$Std;
     .locals 6
-    .parameter "v"
+    .param p1, "v"    # Lcom/flurry/org/codehaus/jackson/annotate/JsonAutoDetect$Visibility;
 
     .prologue
     .line 319
@@ -1118,7 +1118,7 @@
 
 .method public bridge synthetic withSetterVisibility(Lcom/flurry/org/codehaus/jackson/annotate/JsonAutoDetect$Visibility;)Lcom/flurry/org/codehaus/jackson/map/introspect/VisibilityChecker;
     .locals 1
-    .parameter "x0"
+    .param p1, "x0"    # Lcom/flurry/org/codehaus/jackson/annotate/JsonAutoDetect$Visibility;
 
     .prologue
     .line 158
@@ -1131,8 +1131,8 @@
 
 .method public withVisibility(Lcom/flurry/org/codehaus/jackson/annotate/JsonMethod;Lcom/flurry/org/codehaus/jackson/annotate/JsonAutoDetect$Visibility;)Lcom/flurry/org/codehaus/jackson/map/introspect/VisibilityChecker$Std;
     .locals 2
-    .parameter "method"
-    .parameter "v"
+    .param p1, "method"    # Lcom/flurry/org/codehaus/jackson/annotate/JsonMethod;
+    .param p2, "v"    # Lcom/flurry/org/codehaus/jackson/annotate/JsonAutoDetect$Visibility;
 
     .prologue
     .line 284
@@ -1216,8 +1216,8 @@
 
 .method public bridge synthetic withVisibility(Lcom/flurry/org/codehaus/jackson/annotate/JsonMethod;Lcom/flurry/org/codehaus/jackson/annotate/JsonAutoDetect$Visibility;)Lcom/flurry/org/codehaus/jackson/map/introspect/VisibilityChecker;
     .locals 1
-    .parameter "x0"
-    .parameter "x1"
+    .param p1, "x0"    # Lcom/flurry/org/codehaus/jackson/annotate/JsonMethod;
+    .param p2, "x1"    # Lcom/flurry/org/codehaus/jackson/annotate/JsonAutoDetect$Visibility;
 
     .prologue
     .line 158

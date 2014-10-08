@@ -100,10 +100,10 @@
 # virtual methods
 .method declared-synchronized startDownloadTask(Landroid/content/Context;Ljava/lang/String;Lcom/fusepowered/m1/android/CachedAd;Lcom/fusepowered/m1/android/AdCache$AdCacheTaskListener;)Z
     .locals 6
-    .parameter "context"
-    .parameter "adName"
-    .parameter "ad"
-    .parameter "listener"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "adName"    # Ljava/lang/String;
+    .param p3, "ad"    # Lcom/fusepowered/m1/android/CachedAd;
+    .param p4, "listener"    # Lcom/fusepowered/m1/android/AdCache$AdCacheTaskListener;
 
     .prologue
     .line 34
@@ -130,7 +130,7 @@
     invoke-direct/range {v0 .. v5}, Lcom/fusepowered/m1/android/AdCacheThreadPool$AdCacheTask;-><init>(Lcom/fusepowered/m1/android/AdCacheThreadPool;Landroid/content/Context;Ljava/lang/String;Lcom/fusepowered/m1/android/CachedAd;Lcom/fusepowered/m1/android/AdCache$AdCacheTaskListener;)V
 
     .line 38
-    .local v0, task:Lcom/fusepowered/m1/android/AdCacheThreadPool$AdCacheTask;
+    .local v0, "task":Lcom/fusepowered/m1/android/AdCacheThreadPool$AdCacheTask;
     iget-object v1, p0, Lcom/fusepowered/m1/android/AdCacheThreadPool;->queue:Ljava/util/concurrent/PriorityBlockingQueue;
 
     invoke-virtual {v1, v0}, Ljava/util/concurrent/PriorityBlockingQueue;->contains(Ljava/lang/Object;)Z
@@ -157,7 +157,7 @@
     const/4 v1, 0x1
 
     .line 47
-    .end local v0           #task:Lcom/fusepowered/m1/android/AdCacheThreadPool$AdCacheTask;
+    .end local v0    # "task":Lcom/fusepowered/m1/android/AdCacheThreadPool$AdCacheTask;
     :goto_0
     monitor-exit p0
 

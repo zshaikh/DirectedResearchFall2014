@@ -14,7 +14,6 @@
 # direct methods
 .method static a([B)V
     .locals 2
-    .parameter
 
     .prologue
     .line 67
@@ -46,7 +45,6 @@
 
 .method public static a(Ljava/lang/String;)[B
     .locals 4
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lcom/google/ads/ap;,
@@ -99,8 +97,6 @@
 
 .method public static a([BLjava/lang/String;)[B
     .locals 6
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lcom/google/ads/an$a;,

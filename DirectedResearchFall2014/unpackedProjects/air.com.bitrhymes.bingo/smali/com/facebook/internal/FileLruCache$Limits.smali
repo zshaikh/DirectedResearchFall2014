@@ -34,7 +34,7 @@
     iput v0, p0, Lcom/facebook/internal/FileLruCache$Limits;->fileCount:I
 
     .line 564
-    const/high16 v0, 0x10
+    const/high16 v0, 0x100000
 
     iput v0, p0, Lcom/facebook/internal/FileLruCache$Limits;->byteCount:I
 
@@ -66,7 +66,7 @@
 
 .method setByteCount(I)V
     .locals 2
-    .parameter "n"
+    .param p1, "n"    # I
 
     .prologue
     .line 576
@@ -91,7 +91,7 @@
 
 .method setFileCount(I)V
     .locals 2
-    .parameter "n"
+    .param p1, "n"    # I
 
     .prologue
     .line 583

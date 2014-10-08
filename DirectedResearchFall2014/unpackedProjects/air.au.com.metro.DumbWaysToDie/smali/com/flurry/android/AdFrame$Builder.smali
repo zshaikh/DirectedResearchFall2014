@@ -617,7 +617,6 @@
 
 .method public setAdGuid(Ljava/lang/CharSequence;)Lcom/flurry/android/AdFrame$Builder;
     .locals 3
-    .parameter
 
     .prologue
     const/4 v2, 0x5
@@ -649,7 +648,6 @@
 
 .method public setAdSpaceLayout(Lcom/flurry/android/AdSpaceLayout;)Lcom/flurry/android/AdFrame$Builder;
     .locals 3
-    .parameter
 
     .prologue
     const/4 v2, 0x3
@@ -681,7 +679,6 @@
 
 .method public setBinding(I)Lcom/flurry/android/AdFrame$Builder;
     .locals 3
-    .parameter
 
     .prologue
     const/4 v2, 0x0
@@ -717,7 +714,6 @@
 
 .method public setCallbacks(Ljava/util/List;)Lcom/flurry/android/AdFrame$Builder;
     .locals 3
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -759,7 +755,6 @@
 
 .method public setContent(Ljava/lang/CharSequence;)Lcom/flurry/android/AdFrame$Builder;
     .locals 3
-    .parameter
 
     .prologue
     const/4 v2, 0x2
@@ -791,7 +786,6 @@
 
 .method public setDisplay(Ljava/lang/CharSequence;)Lcom/flurry/android/AdFrame$Builder;
     .locals 2
-    .parameter
 
     .prologue
     const/4 v1, 0x1

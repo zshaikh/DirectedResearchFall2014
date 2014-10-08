@@ -62,7 +62,7 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 11
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     const-string v7, "utf8"
@@ -221,7 +221,7 @@
     check-cast v5, Landroid/telephony/TelephonyManager;
 
     .line 124
-    .local v5, tm:Landroid/telephony/TelephonyManager;
+    .local v5, "tm":Landroid/telephony/TelephonyManager;
     sget-object v7, Lcom/fusepowered/util/DeviceInfoFactory;->deviceId:Ljava/lang/String;
 
     if-nez v7, :cond_a
@@ -369,7 +369,7 @@
     check-cast v6, Landroid/net/wifi/WifiManager;
 
     .line 151
-    .local v6, wimanager:Landroid/net/wifi/WifiManager;
+    .local v6, "wimanager":Landroid/net/wifi/WifiManager;
     invoke-virtual {v6}, Landroid/net/wifi/WifiManager;->getConnectionInfo()Landroid/net/wifi/WifiInfo;
 
     move-result-object v7
@@ -383,7 +383,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
     .line 161
-    .end local v6           #wimanager:Landroid/net/wifi/WifiManager;
+    .end local v6    # "wimanager":Landroid/net/wifi/WifiManager;
     :cond_14
     :goto_0
     sget-object v7, Lcom/fusepowered/util/DeviceInfoFactory;->uuid:Ljava/util/UUID;
@@ -411,7 +411,7 @@
     move-result-object v4
 
     .line 165
-    .local v4, prefs:Landroid/content/SharedPreferences;
+    .local v4, "prefs":Landroid/content/SharedPreferences;
     const-string v8, "device_id"
 
     const/4 v9, 0x0
@@ -421,7 +421,7 @@
     move-result-object v3
 
     .line 167
-    .local v3, id:Ljava/lang/String;
+    .local v3, "id":Ljava/lang/String;
     if-eqz v3, :cond_17
 
     .line 169
@@ -432,8 +432,8 @@
     sput-object v8, Lcom/fusepowered/util/DeviceInfoFactory;->uuid:Ljava/util/UUID;
 
     .line 196
-    .end local v3           #id:Ljava/lang/String;
-    .end local v4           #prefs:Landroid/content/SharedPreferences;
+    .end local v3    # "id":Ljava/lang/String;
+    .end local v4    # "prefs":Landroid/content/SharedPreferences;
     :cond_15
     :goto_1
     monitor-exit v7
@@ -443,8 +443,8 @@
     return-void
 
     .line 174
-    .restart local v3       #id:Ljava/lang/String;
-    .restart local v4       #prefs:Landroid/content/SharedPreferences;
+    .restart local v3    # "id":Ljava/lang/String;
+    .restart local v4    # "prefs":Landroid/content/SharedPreferences;
     :cond_17
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -459,7 +459,7 @@
     move-result-object v0
 
     .line 180
-    .local v0, androidId:Ljava/lang/String;
+    .local v0, "androidId":Ljava/lang/String;
     :try_start_2
     const-string v8, "9774d56d682e549c"
 
@@ -482,8 +482,8 @@
 
     sput-object v8, Lcom/fusepowered/util/DeviceInfoFactory;->uuid:Ljava/util/UUID;
     :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
     .catch Ljava/io/UnsupportedEncodingException; {:try_start_2 .. :try_end_2} :catch_0
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
     .line 191
     :goto_2
@@ -509,9 +509,9 @@
     goto :goto_1
 
     .line 196
-    .end local v0           #androidId:Ljava/lang/String;
-    .end local v3           #id:Ljava/lang/String;
-    .end local v4           #prefs:Landroid/content/SharedPreferences;
+    .end local v0    # "androidId":Ljava/lang/String;
+    .end local v3    # "id":Ljava/lang/String;
+    .end local v4    # "prefs":Landroid/content/SharedPreferences;
     :catchall_0
     move-exception v8
 
@@ -522,9 +522,9 @@
     throw v8
 
     .line 183
-    .restart local v0       #androidId:Ljava/lang/String;
-    .restart local v3       #id:Ljava/lang/String;
-    .restart local v4       #prefs:Landroid/content/SharedPreferences;
+    .restart local v0    # "androidId":Ljava/lang/String;
+    .restart local v3    # "id":Ljava/lang/String;
+    .restart local v4    # "prefs":Landroid/content/SharedPreferences;
     :cond_18
     :try_start_4
     invoke-virtual {v5}, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;
@@ -532,7 +532,7 @@
     move-result-object v1
 
     .line 184
-    .local v1, deviceId:Ljava/lang/String;
+    .local v1, "deviceId":Ljava/lang/String;
     if-eqz v1, :cond_19
 
     const-string v8, "utf8"
@@ -548,20 +548,20 @@
     :goto_3
     sput-object v8, Lcom/fusepowered/util/DeviceInfoFactory;->uuid:Ljava/util/UUID;
     :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_0
     .catch Ljava/io/UnsupportedEncodingException; {:try_start_4 .. :try_end_4} :catch_0
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
     goto :goto_2
 
     .line 186
-    .end local v1           #deviceId:Ljava/lang/String;
+    .end local v1    # "deviceId":Ljava/lang/String;
     :catch_0
     move-exception v8
 
     move-object v2, v8
 
     .line 187
-    .local v2, e:Ljava/io/UnsupportedEncodingException;
+    .local v2, "e":Ljava/io/UnsupportedEncodingException;
     :try_start_5
     new-instance v8, Ljava/lang/RuntimeException;
 
@@ -572,24 +572,24 @@
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
     .line 184
-    .end local v2           #e:Ljava/io/UnsupportedEncodingException;
-    .restart local v1       #deviceId:Ljava/lang/String;
+    .end local v2    # "e":Ljava/io/UnsupportedEncodingException;
+    .restart local v1    # "deviceId":Ljava/lang/String;
     :cond_19
     :try_start_6
     invoke-static {}, Ljava/util/UUID;->randomUUID()Ljava/util/UUID;
     :try_end_6
-    .catchall {:try_start_6 .. :try_end_6} :catchall_0
     .catch Ljava/io/UnsupportedEncodingException; {:try_start_6 .. :try_end_6} :catch_0
+    .catchall {:try_start_6 .. :try_end_6} :catchall_0
 
     move-result-object v8
 
     goto :goto_3
 
     .line 153
-    .end local v0           #androidId:Ljava/lang/String;
-    .end local v1           #deviceId:Ljava/lang/String;
-    .end local v3           #id:Ljava/lang/String;
-    .end local v4           #prefs:Landroid/content/SharedPreferences;
+    .end local v0    # "androidId":Ljava/lang/String;
+    .end local v1    # "deviceId":Ljava/lang/String;
+    .end local v3    # "id":Ljava/lang/String;
+    .end local v4    # "prefs":Landroid/content/SharedPreferences;
     :catch_1
     move-exception v7
 
@@ -1110,7 +1110,7 @@
     move-result-object v0
 
     .line 49
-    .local v0, buf:Ljava/lang/StringBuilder;
+    .local v0, "buf":Ljava/lang/StringBuilder;
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1

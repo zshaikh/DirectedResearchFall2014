@@ -15,8 +15,6 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Lcom/adobe/air/AndroidActivityWrapper;)V
     .locals 3
-    .parameter
-    .parameter
 
     .prologue
     const/4 v2, 0x0
@@ -62,10 +60,6 @@
 # virtual methods
 .method public surfaceChanged(Landroid/view/SurfaceHolder;III)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 62
@@ -74,7 +68,6 @@
 
 .method public surfaceCreated(Landroid/view/SurfaceHolder;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 65
@@ -88,7 +81,6 @@
 
 .method public surfaceDestroyed(Landroid/view/SurfaceHolder;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 69

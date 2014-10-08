@@ -53,10 +53,10 @@
 
 .method public constructor <init>(IIILjava/lang/String;)V
     .locals 0
-    .parameter "major"
-    .parameter "minor"
-    .parameter "patchLevel"
-    .parameter "snapshotInfo"
+    .param p1, "major"    # I
+    .param p2, "minor"    # I
+    .param p3, "patchLevel"    # I
+    .param p4, "snapshotInfo"    # Ljava/lang/String;
 
     .prologue
     .line 28
@@ -92,7 +92,7 @@
 # virtual methods
 .method public compareTo(Lcom/flurry/org/codehaus/jackson/Version;)I
     .locals 3
-    .parameter "other"
+    .param p1, "other"    # Lcom/flurry/org/codehaus/jackson/Version;
 
     .prologue
     .line 81
@@ -103,7 +103,7 @@
     sub-int v0, v1, v2
 
     .line 82
-    .local v0, diff:I
+    .local v0, "diff":I
     if-nez v0, :cond_0
 
     .line 83
@@ -130,13 +130,13 @@
 
 .method public bridge synthetic compareTo(Ljava/lang/Object;)I
     .locals 1
-    .parameter "x0"
+    .param p1, "x0"    # Ljava/lang/Object;
 
     .prologue
     .line 9
     check-cast p1, Lcom/flurry/org/codehaus/jackson/Version;
 
-    .end local p1
+    .end local p1    # "x0":Ljava/lang/Object;
     invoke-virtual {p0, p1}, Lcom/flurry/org/codehaus/jackson/Version;->compareTo(Lcom/flurry/org/codehaus/jackson/Version;)I
 
     move-result v0
@@ -146,7 +146,7 @@
 
 .method public equals(Ljava/lang/Object;)Z
     .locals 6
-    .parameter "o"
+    .param p1, "o"    # Ljava/lang/Object;
 
     .prologue
     const/4 v5, 0x1
@@ -195,7 +195,7 @@
     move-object v1, v0
 
     .line 73
-    .local v1, other:Lcom/flurry/org/codehaus/jackson/Version;
+    .local v1, "other":Lcom/flurry/org/codehaus/jackson/Version;
     iget v2, v1, Lcom/flurry/org/codehaus/jackson/Version;->_majorVersion:I
 
     iget v3, p0, Lcom/flurry/org/codehaus/jackson/Version;->_majorVersion:I
@@ -332,7 +332,7 @@
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     .line 52
-    .local v0, sb:Ljava/lang/StringBuilder;
+    .local v0, "sb":Ljava/lang/StringBuilder;
     iget v1, p0, Lcom/flurry/org/codehaus/jackson/Version;->_majorVersion:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;

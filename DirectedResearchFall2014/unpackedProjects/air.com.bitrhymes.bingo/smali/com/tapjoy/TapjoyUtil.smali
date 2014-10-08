@@ -34,7 +34,7 @@
 
 .method public static SHA1(Ljava/lang/String;)Ljava/lang/String;
     .locals 1
-    .parameter "text"
+    .param p0, "text"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/security/NoSuchAlgorithmException;,
@@ -55,7 +55,7 @@
 
 .method public static SHA256(Ljava/lang/String;)Ljava/lang/String;
     .locals 1
-    .parameter "text"
+    .param p0, "text"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/security/NoSuchAlgorithmException;,
@@ -76,21 +76,21 @@
 
 .method public static buildDocument(Ljava/lang/String;)Lorg/w3c/dom/Document;
     .locals 8
-    .parameter "xml"
+    .param p0, "xml"    # Ljava/lang/String;
 
     .prologue
     .line 127
     const/4 v0, 0x0
 
     .line 131
-    .local v0, document:Lorg/w3c/dom/Document;
+    .local v0, "document":Lorg/w3c/dom/Document;
     :try_start_0
     invoke-static {}, Ljavax/xml/parsers/DocumentBuilderFactory;->newInstance()Ljavax/xml/parsers/DocumentBuilderFactory;
 
     move-result-object v3
 
     .line 135
-    .local v3, factory:Ljavax/xml/parsers/DocumentBuilderFactory;
+    .local v3, "factory":Ljavax/xml/parsers/DocumentBuilderFactory;
     new-instance v4, Ljava/io/ByteArrayInputStream;
 
     const-string v5, "UTF-8"
@@ -102,13 +102,13 @@
     invoke-direct {v4, v5}, Ljava/io/ByteArrayInputStream;-><init>([B)V
 
     .line 137
-    .local v4, is:Ljava/io/InputStream;
+    .local v4, "is":Ljava/io/InputStream;
     invoke-virtual {v3}, Ljavax/xml/parsers/DocumentBuilderFactory;->newDocumentBuilder()Ljavax/xml/parsers/DocumentBuilder;
 
     move-result-object v1
 
     .line 138
-    .local v1, documentBuilder:Ljavax/xml/parsers/DocumentBuilder;
+    .local v1, "documentBuilder":Ljavax/xml/parsers/DocumentBuilder;
     invoke-virtual {v1, v4}, Ljavax/xml/parsers/DocumentBuilder;->parse(Ljava/io/InputStream;)Lorg/w3c/dom/Document;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -116,9 +116,9 @@
     move-result-object v0
 
     .line 145
-    .end local v1           #documentBuilder:Ljavax/xml/parsers/DocumentBuilder;
-    .end local v3           #factory:Ljavax/xml/parsers/DocumentBuilderFactory;
-    .end local v4           #is:Ljava/io/InputStream;
+    .end local v1    # "documentBuilder":Ljavax/xml/parsers/DocumentBuilder;
+    .end local v3    # "factory":Ljavax/xml/parsers/DocumentBuilderFactory;
+    .end local v4    # "is":Ljava/io/InputStream;
     :goto_0
     return-object v0
 
@@ -129,7 +129,7 @@
     move-object v2, v5
 
     .line 142
-    .local v2, e:Ljava/lang/Exception;
+    .local v2, "e":Ljava/lang/Exception;
     const-string v5, "TapjoyUtil"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -161,7 +161,7 @@
 
 .method private static convertToHex([B)Ljava/lang/String;
     .locals 6
-    .parameter "data"
+    .param p0, "data"    # [B
 
     .prologue
     .line 96
@@ -170,10 +170,10 @@
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
 
     .line 98
-    .local v0, buf:Ljava/lang/StringBuffer;
+    .local v0, "buf":Ljava/lang/StringBuffer;
     const/4 v2, 0x0
 
-    .local v2, i:I
+    .local v2, "i":I
     :goto_0
     array-length v5, p0
 
@@ -187,15 +187,15 @@
     and-int/lit8 v1, v5, 0xf
 
     .line 101
-    .local v1, halfbyte:I
+    .local v1, "halfbyte":I
     const/4 v3, 0x0
 
-    .local v3, two_halfs:I
+    .local v3, "two_halfs":I
     move v4, v3
 
     .line 105
-    .end local v3           #two_halfs:I
-    .local v4, two_halfs:I
+    .end local v3    # "two_halfs":I
+    .local v4, "two_halfs":I
     :goto_1
     if-ltz v1, :cond_0
 
@@ -219,8 +219,8 @@
     .line 112
     add-int/lit8 v3, v4, 0x1
 
-    .end local v4           #two_halfs:I
-    .restart local v3       #two_halfs:I
+    .end local v4    # "two_halfs":I
+    .restart local v3    # "two_halfs":I
     const/4 v5, 0x1
 
     if-lt v4, v5, :cond_2
@@ -231,8 +231,8 @@
     goto :goto_0
 
     .line 108
-    .end local v3           #two_halfs:I
-    .restart local v4       #two_halfs:I
+    .end local v3    # "two_halfs":I
+    .restart local v4    # "two_halfs":I
     :cond_0
     const/16 v5, 0xa
 
@@ -247,8 +247,8 @@
     goto :goto_2
 
     .line 115
-    .end local v1           #halfbyte:I
-    .end local v4           #two_halfs:I
+    .end local v1    # "halfbyte":I
+    .end local v4    # "two_halfs":I
     :cond_1
     invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
@@ -256,20 +256,19 @@
 
     return-object v5
 
-    .restart local v1       #halfbyte:I
-    .restart local v3       #two_halfs:I
+    .restart local v1    # "halfbyte":I
+    .restart local v3    # "two_halfs":I
     :cond_2
     move v4, v3
 
-    .end local v3           #two_halfs:I
-    .restart local v4       #two_halfs:I
+    .end local v3    # "two_halfs":I
+    .restart local v4    # "two_halfs":I
     goto :goto_1
 .end method
 
 .method public static convertURLParams(Ljava/util/Map;Z)Ljava/lang/String;
     .locals 6
-    .parameter
-    .parameter "encode"
+    .param p1, "encode"    # Z
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -283,14 +282,14 @@
     .end annotation
 
     .prologue
-    .local p0, source:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p0, "source":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v5, "="
 
     .line 294
     const-string v2, ""
 
     .line 296
-    .local v2, result:Ljava/lang/String;
+    .local v2, "result":Ljava/lang/String;
     invoke-interface {p0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object v3
@@ -299,8 +298,8 @@
 
     move-result-object v1
 
-    .end local p0           #source:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
-    .local v1, i$:Ljava/util/Iterator;
+    .end local p0    # "source":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v1, "i$":Ljava/util/Iterator;
     :goto_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
@@ -315,7 +314,7 @@
     check-cast v0, Ljava/util/Map$Entry;
 
     .line 299
-    .local v0, entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v0, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-virtual {v2}, Ljava/lang/String;->length()I
 
     move-result v3
@@ -437,15 +436,15 @@
     goto :goto_0
 
     .line 308
-    .end local v0           #entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
+    .end local v0    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
     :cond_2
     return-object v2
 .end method
 
 .method public static convertURLParams(Ljava/lang/String;Z)Ljava/util/Map;
     .locals 11
-    .parameter "source"
-    .parameter "decode"
+    .param p0, "source"    # Ljava/lang/String;
+    .param p1, "decode"    # Z
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -468,35 +467,35 @@
     invoke-direct {v6}, Ljava/util/HashMap;-><init>()V
 
     .line 321
-    .local v6, result:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v6, "result":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     const/4 v3, 0x0
 
     .line 323
-    .local v3, index:I
+    .local v3, "index":I
     const/4 v0, 0x0
 
     .line 324
-    .local v0, KEY:I
+    .local v0, "KEY":I
     const/4 v1, 0x1
 
     .line 325
-    .local v1, VALUE:I
+    .local v1, "VALUE":I
     const/4 v5, 0x0
 
     .line 327
-    .local v5, mode:I
+    .local v5, "mode":I
     const-string v8, ""
 
     .line 328
-    .local v8, word:Ljava/lang/String;
+    .local v8, "word":Ljava/lang/String;
     const-string v4, ""
 
     .line 329
-    .local v4, key:Ljava/lang/String;
+    .local v4, "key":Ljava/lang/String;
     const-string v7, ""
 
     .line 332
-    .local v7, value:Ljava/lang/String;
+    .local v7, "value":Ljava/lang/String;
     :goto_0
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
@@ -514,7 +513,7 @@
     move-result v2
 
     .line 338
-    .local v2, c:C
+    .local v2, "c":C
     if-nez v5, :cond_3
 
     .line 341
@@ -626,7 +625,7 @@
     goto :goto_2
 
     .line 385
-    .end local v2           #c:C
+    .end local v2    # "c":C
     :cond_6
     if-ne v5, v10, :cond_7
 
@@ -661,14 +660,14 @@
 
 .method public static createBitmapFromView(Landroid/view/View;)Landroid/graphics/Bitmap;
     .locals 7
-    .parameter "v"
+    .param p0, "v"    # Landroid/view/View;
 
     .prologue
     .line 212
     const/4 v0, 0x0
 
     .line 214
-    .local v0, b:Landroid/graphics/Bitmap;
+    .local v0, "b":Landroid/graphics/Bitmap;
     if-eqz p0, :cond_0
 
     invoke-virtual {p0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -713,7 +712,7 @@
     invoke-direct {v1, v0}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
     .line 220
-    .local v1, c:Landroid/graphics/Canvas;
+    .local v1, "c":Landroid/graphics/Canvas;
     invoke-virtual {p0}, Landroid/view/View;->getLeft()I
 
     move-result v3
@@ -738,7 +737,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 229
-    .end local v1           #c:Landroid/graphics/Canvas;
+    .end local v1    # "c":Landroid/graphics/Canvas;
     :cond_0
     :goto_0
     return-object v0
@@ -750,7 +749,7 @@
     move-object v2, v3
 
     .line 225
-    .local v2, e:Ljava/lang/Exception;
+    .local v2, "e":Ljava/lang/Exception;
     const-string v3, "TapjoyUtil"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -782,7 +781,7 @@
 
 .method public static deleteFileOrDirectory(Ljava/io/File;)V
     .locals 8
-    .parameter "fileOrDirectory"
+    .param p0, "fileOrDirectory"    # Ljava/io/File;
 
     .prologue
     const-string v7, "****************************************"
@@ -801,20 +800,20 @@
 
     move-result-object v0
 
-    .local v0, arr$:[Ljava/io/File;
+    .local v0, "arr$":[Ljava/io/File;
     array-length v3, v0
 
-    .local v3, len$:I
+    .local v3, "len$":I
     const/4 v2, 0x0
 
-    .local v2, i$:I
+    .local v2, "i$":I
     :goto_0
     if-ge v2, v3, :cond_0
 
     aget-object v1, v0, v2
 
     .line 195
-    .local v1, child:Ljava/io/File;
+    .local v1, "child":Ljava/io/File;
     invoke-static {v1}, Lcom/tapjoy/TapjoyUtil;->deleteFileOrDirectory(Ljava/io/File;)V
 
     .line 194
@@ -823,10 +822,10 @@
     goto :goto_0
 
     .line 198
-    .end local v0           #arr$:[Ljava/io/File;
-    .end local v1           #child:Ljava/io/File;
-    .end local v2           #i$:I
-    .end local v3           #len$:I
+    .end local v0    # "arr$":[Ljava/io/File;
+    .end local v1    # "child":Ljava/io/File;
+    .end local v2    # "i$":I
+    .end local v3    # "len$":I
     :cond_0
     const-string v4, "TapjoyUtil"
 
@@ -887,7 +886,7 @@
 
 .method public static getNodeTrimValue(Lorg/w3c/dom/NodeList;)Ljava/lang/String;
     .locals 9
-    .parameter "nodeList"
+    .param p0, "nodeList"    # Lorg/w3c/dom/NodeList;
 
     .prologue
     const/4 v8, 0x0
@@ -902,11 +901,11 @@
     check-cast v0, Lorg/w3c/dom/Element;
 
     .line 157
-    .local v0, element:Lorg/w3c/dom/Element;
+    .local v0, "element":Lorg/w3c/dom/Element;
     const-string v5, ""
 
     .line 159
-    .local v5, nodeValue:Ljava/lang/String;
+    .local v5, "nodeValue":Ljava/lang/String;
     if-eqz v0, :cond_3
 
     .line 161
@@ -915,16 +914,16 @@
     move-result-object v2
 
     .line 163
-    .local v2, itemNodeList:Lorg/w3c/dom/NodeList;
+    .local v2, "itemNodeList":Lorg/w3c/dom/NodeList;
     invoke-interface {v2}, Lorg/w3c/dom/NodeList;->getLength()I
 
     move-result v3
 
     .line 165
-    .local v3, length:I
+    .local v3, "length":I
     const/4 v1, 0x0
 
-    .local v1, i:I
+    .local v1, "i":I
     :goto_0
     if-ge v1, v3, :cond_1
 
@@ -934,7 +933,7 @@
     move-result-object v4
 
     .line 168
-    .local v4, node:Lorg/w3c/dom/Node;
+    .local v4, "node":Lorg/w3c/dom/Node;
     if-eqz v4, :cond_0
 
     .line 169
@@ -965,7 +964,7 @@
     goto :goto_0
 
     .line 172
-    .end local v4           #node:Lorg/w3c/dom/Node;
+    .end local v4    # "node":Lorg/w3c/dom/Node;
     :cond_1
     if-eqz v5, :cond_2
 
@@ -983,24 +982,24 @@
     move-result-object v6
 
     .line 181
-    .end local v1           #i:I
-    .end local v2           #itemNodeList:Lorg/w3c/dom/NodeList;
-    .end local v3           #length:I
+    .end local v1    # "i":I
+    .end local v2    # "itemNodeList":Lorg/w3c/dom/NodeList;
+    .end local v3    # "length":I
     :goto_1
     return-object v6
 
-    .restart local v1       #i:I
-    .restart local v2       #itemNodeList:Lorg/w3c/dom/NodeList;
-    .restart local v3       #length:I
+    .restart local v1    # "i":I
+    .restart local v2    # "itemNodeList":Lorg/w3c/dom/NodeList;
+    .restart local v3    # "length":I
     :cond_2
     move-object v6, v8
 
     .line 178
     goto :goto_1
 
-    .end local v1           #i:I
-    .end local v2           #itemNodeList:Lorg/w3c/dom/NodeList;
-    .end local v3           #length:I
+    .end local v1    # "i":I
+    .end local v2    # "itemNodeList":Lorg/w3c/dom/NodeList;
+    .end local v3    # "length":I
     :cond_3
     move-object v6, v8
 
@@ -1010,8 +1009,8 @@
 
 .method private static hashAlgorithm(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 5
-    .parameter "hash"
-    .parameter "text"
+    .param p0, "hash"    # Ljava/lang/String;
+    .param p1, "text"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/security/NoSuchAlgorithmException;,
@@ -1026,13 +1025,13 @@
     new-array v1, v2, [B
 
     .line 80
-    .local v1, sha1hash:[B
+    .local v1, "sha1hash":[B
     invoke-static {p0}, Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
 
     move-result-object v0
 
     .line 81
-    .local v0, md:Ljava/security/MessageDigest;
+    .local v0, "md":Ljava/security/MessageDigest;
     const-string v2, "iso-8859-1"
 
     invoke-virtual {p1, v2}, Ljava/lang/String;->getBytes(Ljava/lang/String;)[B
@@ -1062,10 +1061,9 @@
 
 .method public static safePut(Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;Z)V
     .locals 2
-    .parameter
-    .parameter "key"
-    .parameter "value"
-    .parameter "encode"
+    .param p1, "key"    # Ljava/lang/String;
+    .param p2, "value"    # Ljava/lang/String;
+    .param p3, "encode"    # Z
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1082,7 +1080,7 @@
 
     .prologue
     .line 277
-    .local p0, map:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p0, "map":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Ljava/lang/String;->length()I
@@ -1127,8 +1125,8 @@
 
 .method public static scaleDisplayAd(Landroid/view/View;I)Landroid/view/View;
     .locals 12
-    .parameter "adView"
-    .parameter "targetWidth"
+    .param p0, "adView"    # Landroid/view/View;
+    .param p1, "targetWidth"    # I
 
     .prologue
     const/4 v11, 0x0
@@ -1141,7 +1139,7 @@
     iget v2, v7, Landroid/view/ViewGroup$LayoutParams;->width:I
 
     .line 241
-    .local v2, adWidth:I
+    .local v2, "adWidth":I
     invoke-virtual {p0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v7
@@ -1149,7 +1147,7 @@
     iget v1, v7, Landroid/view/ViewGroup$LayoutParams;->height:I
 
     .line 243
-    .local v1, adHeight:I
+    .local v1, "adHeight":I
     const-string v7, "TapjoyUtil"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -1189,7 +1187,7 @@
     move v6, p1
 
     .line 250
-    .local v6, width:I
+    .local v6, "width":I
     int-to-double v7, v6
 
     invoke-static {v7, v8}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
@@ -1217,12 +1215,12 @@
     move-result-object v5
 
     .line 251
-    .local v5, val:Ljava/lang/Double;
+    .local v5, "val":Ljava/lang/Double;
     invoke-virtual {v5}, Ljava/lang/Double;->doubleValue()D
 
     move-result-wide v7
 
-    const-wide/high16 v9, 0x4059
+    const-wide/high16 v9, 0x4059000000000000L
 
     mul-double/2addr v7, v9
 
@@ -1236,7 +1234,7 @@
     move-result v4
 
     .line 254
-    .local v4, scale:I
+    .local v4, "scale":I
     move-object v0, p0
 
     check-cast v0, Landroid/webkit/WebView;
@@ -1307,21 +1305,21 @@
     invoke-direct {v3, p1, v7}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
 
     .line 262
-    .local v3, layout:Landroid/view/ViewGroup$LayoutParams;
+    .local v3, "layout":Landroid/view/ViewGroup$LayoutParams;
     invoke-virtual {p0, v3}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 265
-    .end local v3           #layout:Landroid/view/ViewGroup$LayoutParams;
-    .end local v4           #scale:I
-    .end local v5           #val:Ljava/lang/Double;
-    .end local v6           #width:I
+    .end local v3    # "layout":Landroid/view/ViewGroup$LayoutParams;
+    .end local v4    # "scale":I
+    .end local v5    # "val":Ljava/lang/Double;
+    .end local v6    # "width":I
     :cond_0
     return-object p0
 .end method
 
 .method public static setMraidJsString(Ljava/lang/String;)V
     .locals 0
-    .parameter "js"
+    .param p0, "js"    # Ljava/lang/String;
 
     .prologue
     .line 403

@@ -29,7 +29,7 @@
 # direct methods
 .method private constructor <init>(Ljava/lang/Appendable;)V
     .locals 1
-    .parameter "appendable"
+    .param p1, "appendable"    # Ljava/lang/Appendable;
 
     .prologue
     .line 84
@@ -51,8 +51,8 @@
 
 .method synthetic constructor <init>(Ljava/lang/Appendable;Lcom/fusepowered/m1/google/gson/internal/Streams$1;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
+    .param p1, "x0"    # Ljava/lang/Appendable;
+    .param p2, "x1"    # Lcom/fusepowered/m1/google/gson/internal/Streams$1;
 
     .prologue
     .line 80
@@ -81,7 +81,7 @@
 
 .method public write(I)V
     .locals 2
-    .parameter "i"
+    .param p1, "i"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -102,9 +102,9 @@
 
 .method public write([CII)V
     .locals 3
-    .parameter "chars"
-    .parameter "offset"
-    .parameter "length"
+    .param p1, "chars"    # [C
+    .param p2, "offset"    # I
+    .param p3, "length"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;

@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/crashlog/CrashDetector;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 109
@@ -39,7 +38,7 @@
 # virtual methods
 .method public onCrashSendFinished(Z)V
     .locals 2
-    .parameter "success"
+    .param p1, "success"    # Z
 
     .prologue
     const-string v1, "CrashDetector"
@@ -57,7 +56,7 @@
     .line 114
     iget-object v0, p0, Lcom/fusepowered/crashlog/CrashDetector$1;->this$0:Lcom/fusepowered/crashlog/CrashDetector;
 
-    #getter for: Lcom/fusepowered/crashlog/CrashDetector;->mContext:Landroid/content/Context;
+    # getter for: Lcom/fusepowered/crashlog/CrashDetector;->mContext:Landroid/content/Context;
     invoke-static {v0}, Lcom/fusepowered/crashlog/CrashDetector;->access$000(Lcom/fusepowered/crashlog/CrashDetector;)Landroid/content/Context;
 
     move-result-object v0

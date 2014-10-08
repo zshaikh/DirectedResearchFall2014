@@ -173,9 +173,7 @@
 
 .method private constructor <init>(Ljava/lang/String;IZ)V
     .locals 2
-    .parameter
-    .parameter
-    .parameter "defaultState"
+    .param p3, "defaultState"    # Z
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(Z)V"
@@ -212,25 +210,25 @@
     const/4 v2, 0x0
 
     .line 146
-    .local v2, flags:I
+    .local v2, "flags":I
     invoke-static {}, Lcom/flurry/org/codehaus/jackson/JsonGenerator$Feature;->values()[Lcom/flurry/org/codehaus/jackson/JsonGenerator$Feature;
 
     move-result-object v0
 
-    .local v0, arr$:[Lcom/flurry/org/codehaus/jackson/JsonGenerator$Feature;
+    .local v0, "arr$":[Lcom/flurry/org/codehaus/jackson/JsonGenerator$Feature;
     array-length v4, v0
 
-    .local v4, len$:I
+    .local v4, "len$":I
     const/4 v3, 0x0
 
-    .local v3, i$:I
+    .local v3, "i$":I
     :goto_0
     if-ge v3, v4, :cond_1
 
     aget-object v1, v0, v3
 
     .line 147
-    .local v1, f:Lcom/flurry/org/codehaus/jackson/JsonGenerator$Feature;
+    .local v1, "f":Lcom/flurry/org/codehaus/jackson/JsonGenerator$Feature;
     invoke-virtual {v1}, Lcom/flurry/org/codehaus/jackson/JsonGenerator$Feature;->enabledByDefault()Z
 
     move-result v5
@@ -251,14 +249,14 @@
     goto :goto_0
 
     .line 151
-    .end local v1           #f:Lcom/flurry/org/codehaus/jackson/JsonGenerator$Feature;
+    .end local v1    # "f":Lcom/flurry/org/codehaus/jackson/JsonGenerator$Feature;
     :cond_1
     return v2
 .end method
 
 .method public static valueOf(Ljava/lang/String;)Lcom/flurry/org/codehaus/jackson/JsonGenerator$Feature;
     .locals 1
-    .parameter "name"
+    .param p0, "name"    # Ljava/lang/String;
 
     .prologue
     .line 37
@@ -268,7 +266,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "name":Ljava/lang/String;
     check-cast p0, Lcom/flurry/org/codehaus/jackson/JsonGenerator$Feature;
 
     return-object p0

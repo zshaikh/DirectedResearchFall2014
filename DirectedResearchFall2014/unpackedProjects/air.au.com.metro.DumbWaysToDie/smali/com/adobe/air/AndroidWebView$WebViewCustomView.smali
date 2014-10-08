@@ -25,7 +25,6 @@
 # direct methods
 .method public constructor <init>(Lcom/adobe/air/AndroidWebView;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 76
@@ -114,8 +113,6 @@
 
 .method public onShowCustomView(Landroid/view/View;Landroid/webkit/WebChromeClient$CustomViewCallback;)V
     .locals 5
-    .parameter
-    .parameter
 
     .prologue
     const/16 v4, 0x8
@@ -173,7 +170,7 @@
 
     iget-object v2, p0, Lcom/adobe/air/AndroidWebView$WebViewCustomView;->this$0:Lcom/adobe/air/AndroidWebView;
 
-    #getter for: Lcom/adobe/air/AndroidWebView;->mContext:Landroid/content/Context;
+    # getter for: Lcom/adobe/air/AndroidWebView;->mContext:Landroid/content/Context;
     invoke-static {v2}, Lcom/adobe/air/AndroidWebView;->access$000(Lcom/adobe/air/AndroidWebView;)Landroid/content/Context;
 
     move-result-object v2
@@ -185,7 +182,7 @@
     .line 114
     iget-object v1, p0, Lcom/adobe/air/AndroidWebView$WebViewCustomView;->mCustomViewHolder:Landroid/widget/FrameLayout;
 
-    const/high16 v2, -0x100
+    const/high16 v2, -0x1000000
 
     invoke-virtual {v1, v2}, Landroid/widget/FrameLayout;->setBackgroundColor(I)V
 

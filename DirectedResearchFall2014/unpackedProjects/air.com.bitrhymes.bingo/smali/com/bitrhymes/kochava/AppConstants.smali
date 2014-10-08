@@ -36,8 +36,8 @@
 
 .method public static getKochavaInstance(Landroid/app/Activity;Ljava/lang/String;)Lcom/kochava/android/tracker/Feature;
     .locals 2
-    .parameter "activity"
-    .parameter "appID"
+    .param p0, "activity"    # Landroid/app/Activity;
+    .param p1, "appID"    # Ljava/lang/String;
 
     .prologue
     .line 16

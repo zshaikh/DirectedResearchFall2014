@@ -31,7 +31,7 @@
 
 .field private static final EC_PERMISSION_DENIED:I = 0xa
 
-.field private static final EC_RANGE_PERMISSION:Lcom/facebook/FacebookRequestError$Range; = null
+.field private static final EC_RANGE_PERMISSION:Lcom/facebook/FacebookRequestError$Range;
 
 .field private static final EC_SERVICE_UNAVAILABLE:I = 0x2
 
@@ -59,11 +59,11 @@
 
 .field private static final ERROR_TYPE_FIELD_KEY:Ljava/lang/String; = "type"
 
-.field private static final HTTP_RANGE_CLIENT_ERROR:Lcom/facebook/FacebookRequestError$Range; = null
+.field private static final HTTP_RANGE_CLIENT_ERROR:Lcom/facebook/FacebookRequestError$Range;
 
-.field private static final HTTP_RANGE_SERVER_ERROR:Lcom/facebook/FacebookRequestError$Range; = null
+.field private static final HTTP_RANGE_SERVER_ERROR:Lcom/facebook/FacebookRequestError$Range;
 
-.field private static final HTTP_RANGE_SUCCESS:Lcom/facebook/FacebookRequestError$Range; = null
+.field private static final HTTP_RANGE_SUCCESS:Lcom/facebook/FacebookRequestError$Range;
 
 .field public static final INVALID_ERROR_CODE:I = -0x1
 
@@ -152,15 +152,15 @@
 
 .method private constructor <init>(IIILjava/lang/String;Ljava/lang/String;Lorg/json/JSONObject;Lorg/json/JSONObject;Ljava/lang/Object;Ljava/net/HttpURLConnection;)V
     .locals 11
-    .parameter "requestStatusCode"
-    .parameter "errorCode"
-    .parameter "subErrorCode"
-    .parameter "errorType"
-    .parameter "errorMessage"
-    .parameter "requestResultBody"
-    .parameter "requestResult"
-    .parameter "batchRequestResult"
-    .parameter "connection"
+    .param p1, "requestStatusCode"    # I
+    .param p2, "errorCode"    # I
+    .param p3, "subErrorCode"    # I
+    .param p4, "errorType"    # Ljava/lang/String;
+    .param p5, "errorMessage"    # Ljava/lang/String;
+    .param p6, "requestResultBody"    # Lorg/json/JSONObject;
+    .param p7, "requestResult"    # Lorg/json/JSONObject;
+    .param p8, "batchRequestResult"    # Ljava/lang/Object;
+    .param p9, "connection"    # Ljava/net/HttpURLConnection;
 
     .prologue
     .line 188
@@ -195,16 +195,16 @@
 
 .method private constructor <init>(IIILjava/lang/String;Ljava/lang/String;Lorg/json/JSONObject;Lorg/json/JSONObject;Ljava/lang/Object;Ljava/net/HttpURLConnection;Lcom/facebook/FacebookException;)V
     .locals 8
-    .parameter "requestStatusCode"
-    .parameter "errorCode"
-    .parameter "subErrorCode"
-    .parameter "errorType"
-    .parameter "errorMessage"
-    .parameter "requestResultBody"
-    .parameter "requestResult"
-    .parameter "batchRequestResult"
-    .parameter "connection"
-    .parameter "exception"
+    .param p1, "requestStatusCode"    # I
+    .param p2, "errorCode"    # I
+    .param p3, "subErrorCode"    # I
+    .param p4, "errorType"    # Ljava/lang/String;
+    .param p5, "errorMessage"    # Ljava/lang/String;
+    .param p6, "requestResultBody"    # Lorg/json/JSONObject;
+    .param p7, "requestResult"    # Lorg/json/JSONObject;
+    .param p8, "batchRequestResult"    # Ljava/lang/Object;
+    .param p9, "connection"    # Ljava/net/HttpURLConnection;
+    .param p10, "exception"    # Lcom/facebook/FacebookException;
 
     .prologue
     .line 107
@@ -249,7 +249,7 @@
     const/4 v3, 0x0
 
     .line 122
-    .local v3, isLocalException:Z
+    .local v3, "isLocalException":Z
     if-eqz p10, :cond_1
 
     .line 123
@@ -267,15 +267,15 @@
     const/4 v2, 0x0
 
     .line 132
-    .local v2, errorCategory:Lcom/facebook/FacebookRequestError$Category;
+    .local v2, "errorCategory":Lcom/facebook/FacebookRequestError$Category;
     const/4 v4, 0x0
 
     .line 133
-    .local v4, messageId:I
+    .local v4, "messageId":I
     const/4 v5, 0x0
 
     .line 134
-    .local v5, shouldNotify:Z
+    .local v5, "shouldNotify":Z
     if-eqz v3, :cond_2
 
     .line 135
@@ -299,9 +299,9 @@
     return-void
 
     .line 126
-    .end local v2           #errorCategory:Lcom/facebook/FacebookRequestError$Category;
-    .end local v4           #messageId:I
-    .end local v5           #shouldNotify:Z
+    .end local v2    # "errorCategory":Lcom/facebook/FacebookRequestError$Category;
+    .end local v4    # "messageId":I
+    .end local v5    # "shouldNotify":Z
     :cond_1
     new-instance v6, Lcom/facebook/FacebookServiceException;
 
@@ -312,9 +312,9 @@
     goto :goto_0
 
     .line 138
-    .restart local v2       #errorCategory:Lcom/facebook/FacebookRequestError$Category;
-    .restart local v4       #messageId:I
-    .restart local v5       #shouldNotify:Z
+    .restart local v2    # "errorCategory":Lcom/facebook/FacebookRequestError$Category;
+    .restart local v4    # "messageId":I
+    .restart local v5    # "shouldNotify":Z
     :cond_2
     const/4 v6, 0x1
 
@@ -515,9 +515,9 @@
 
 .method public constructor <init>(ILjava/lang/String;Ljava/lang/String;)V
     .locals 11
-    .parameter "errorCode"
-    .parameter "errorType"
-    .parameter "errorMessage"
+    .param p1, "errorCode"    # I
+    .param p2, "errorType"    # Ljava/lang/String;
+    .param p3, "errorMessage"    # Ljava/lang/String;
 
     .prologue
     const/4 v1, -0x1
@@ -552,8 +552,8 @@
 
 .method constructor <init>(Ljava/net/HttpURLConnection;Ljava/lang/Exception;)V
     .locals 11
-    .parameter "connection"
-    .parameter "exception"
+    .param p1, "connection"    # Ljava/net/HttpURLConnection;
+    .param p2, "exception"    # Ljava/lang/Exception;
 
     .prologue
     const/4 v1, -0x1
@@ -569,7 +569,7 @@
     .line 196
     check-cast p2, Lcom/facebook/FacebookException;
 
-    .end local p2
+    .end local p2    # "exception":Ljava/lang/Exception;
     move-object v10, p2
 
     :goto_0
@@ -595,7 +595,7 @@
     return-void
 
     .line 196
-    .restart local p2
+    .restart local p2    # "exception":Ljava/lang/Exception;
     :cond_0
     new-instance v0, Lcom/facebook/FacebookException;
 
@@ -608,9 +608,9 @@
 
 .method static checkResponseAndCreateError(Lorg/json/JSONObject;Ljava/lang/Object;Ljava/net/HttpURLConnection;)Lcom/facebook/FacebookRequestError;
     .locals 20
-    .parameter "singleResult"
-    .parameter "batchResult"
-    .parameter "connection"
+    .param p0, "singleResult"    # Lorg/json/JSONObject;
+    .param p1, "batchResult"    # Ljava/lang/Object;
+    .param p2, "connection"    # Ljava/net/HttpURLConnection;
 
     .prologue
     .line 356
@@ -639,7 +639,7 @@
     move-result v4
 
     .line 358
-    .local v4, responseCode:I
+    .local v4, "responseCode":I
     const-string v3, "body"
 
     .line 359
@@ -657,7 +657,7 @@
     move-result-object v3
 
     .line 361
-    .local v3, body:Ljava/lang/Object;
+    .local v3, "body":Ljava/lang/Object;
     if-eqz v3, :cond_3
 
     instance-of v5, v3, Lorg/json/JSONObject;
@@ -672,27 +672,27 @@
     move-object v9, v0
 
     .line 365
-    .local v9, jsonBody:Lorg/json/JSONObject;
+    .local v9, "jsonBody":Lorg/json/JSONObject;
     const/4 v7, 0x0
 
     .line 366
-    .local v7, errorType:Ljava/lang/String;
+    .local v7, "errorType":Ljava/lang/String;
     const/4 v8, 0x0
 
     .line 367
-    .local v8, errorMessage:Ljava/lang/String;
+    .local v8, "errorMessage":Ljava/lang/String;
     const/4 v5, -0x1
 
     .line 368
-    .local v5, errorCode:I
+    .local v5, "errorCode":I
     const/4 v6, -0x1
 
     .line 370
-    .local v6, errorSubCode:I
+    .local v6, "errorSubCode":I
     const/4 v3, 0x0
 
     .line 371
-    .local v3, hasError:Z
+    .local v3, "hasError":Z
     const-string v10, "error"
 
     invoke-virtual {v9, v10}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
@@ -704,25 +704,25 @@
     .line 373
     const-string v3, "error"
 
-    .end local v3           #hasError:Z
+    .end local v3    # "hasError":Z
     const/4 v5, 0x0
 
     invoke-static {v9, v3, v5}, Lcom/facebook/internal/Utility;->getStringPropertyAsJSON(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
-    .end local v5           #errorCode:I
+    .end local v5    # "errorCode":I
     move-result-object v3
 
     check-cast v3, Lorg/json/JSONObject;
 
     .line 375
-    .local v3, error:Lorg/json/JSONObject;
+    .local v3, "error":Lorg/json/JSONObject;
     const-string v5, "type"
 
     const/4 v6, 0x0
 
     invoke-virtual {v3, v5, v6}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .end local v6           #errorSubCode:I
+    .end local v6    # "errorSubCode":I
     move-result-object v7
 
     .line 376
@@ -744,7 +744,7 @@
     move-result v5
 
     .line 378
-    .restart local v5       #errorCode:I
+    .restart local v5    # "errorCode":I
     const-string v6, "error_subcode"
 
     const/4 v10, -0x1
@@ -754,11 +754,11 @@
     move-result v6
 
     .line 379
-    .restart local v6       #errorSubCode:I
+    .restart local v6    # "errorSubCode":I
     const/4 v3, 0x1
 
     .line 389
-    .local v3, hasError:Z
+    .local v3, "hasError":Z
     :cond_0
     :goto_0
     if-eqz v3, :cond_3
@@ -766,7 +766,7 @@
     .line 390
     new-instance v3, Lcom/facebook/FacebookRequestError;
 
-    .end local v3           #hasError:Z
+    .end local v3    # "hasError":Z
     move-object/from16 v10, p0
 
     move-object/from16 v11, p1
@@ -778,25 +778,25 @@
     move-object/from16 p0, v3
 
     .line 408
-    .end local v4           #responseCode:I
-    .end local v5           #errorCode:I
-    .end local v6           #errorSubCode:I
-    .end local v7           #errorType:Ljava/lang/String;
-    .end local v8           #errorMessage:Ljava/lang/String;
-    .end local v9           #jsonBody:Lorg/json/JSONObject;
-    .end local p0
+    .end local v4    # "responseCode":I
+    .end local v5    # "errorCode":I
+    .end local v6    # "errorSubCode":I
+    .end local v7    # "errorType":Ljava/lang/String;
+    .end local v8    # "errorMessage":Ljava/lang/String;
+    .end local v9    # "jsonBody":Lorg/json/JSONObject;
+    .end local p0    # "singleResult":Lorg/json/JSONObject;
     :goto_1
     return-object p0
 
     .line 380
-    .restart local v3       #hasError:Z
-    .restart local v4       #responseCode:I
-    .restart local v5       #errorCode:I
-    .restart local v6       #errorSubCode:I
-    .restart local v7       #errorType:Ljava/lang/String;
-    .restart local v8       #errorMessage:Ljava/lang/String;
-    .restart local v9       #jsonBody:Lorg/json/JSONObject;
-    .restart local p0
+    .restart local v3    # "hasError":Z
+    .restart local v4    # "responseCode":I
+    .restart local v5    # "errorCode":I
+    .restart local v6    # "errorSubCode":I
+    .restart local v7    # "errorType":Ljava/lang/String;
+    .restart local v8    # "errorMessage":Ljava/lang/String;
+    .restart local v9    # "jsonBody":Lorg/json/JSONObject;
+    .restart local p0    # "singleResult":Lorg/json/JSONObject;
     :cond_1
     const-string v10, "error_code"
 
@@ -827,12 +827,12 @@
     :cond_2
     const-string v3, "error_reason"
 
-    .end local v3           #hasError:Z
+    .end local v3    # "hasError":Z
     const/4 v5, 0x0
 
     invoke-virtual {v9, v3, v5}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .end local v5           #errorCode:I
+    .end local v5    # "errorCode":I
     move-result-object v7
 
     .line 383
@@ -854,30 +854,30 @@
     move-result v5
 
     .line 385
-    .restart local v5       #errorCode:I
+    .restart local v5    # "errorCode":I
     const-string v3, "error_subcode"
 
     const/4 v6, -0x1
 
     invoke-virtual {v9, v3, v6}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;I)I
 
-    .end local v6           #errorSubCode:I
+    .end local v6    # "errorSubCode":I
     move-result v6
 
     .line 386
-    .restart local v6       #errorSubCode:I
+    .restart local v6    # "errorSubCode":I
     const/4 v3, 0x1
 
-    .restart local v3       #hasError:Z
+    .restart local v3    # "hasError":Z
     goto :goto_0
 
     .line 396
-    .end local v3           #hasError:Z
-    .end local v5           #errorCode:I
-    .end local v6           #errorSubCode:I
-    .end local v7           #errorType:Ljava/lang/String;
-    .end local v8           #errorMessage:Ljava/lang/String;
-    .end local v9           #jsonBody:Lorg/json/JSONObject;
+    .end local v3    # "hasError":Z
+    .end local v5    # "errorCode":I
+    .end local v6    # "errorSubCode":I
+    .end local v7    # "errorType":Ljava/lang/String;
+    .end local v8    # "errorMessage":Ljava/lang/String;
+    .end local v9    # "jsonBody":Lorg/json/JSONObject;
     :cond_3
     sget-object v3, Lcom/facebook/FacebookRequestError;->HTTP_RANGE_SUCCESS:Lcom/facebook/FacebookRequestError$Range;
 
@@ -959,12 +959,12 @@
     goto :goto_2
 
     .line 405
-    .end local v4           #responseCode:I
+    .end local v4    # "responseCode":I
     :catch_0
     move-exception p0
 
     .line 408
-    .end local p0
+    .end local p0    # "singleResult":Lorg/json/JSONObject;
     :cond_5
     const/16 p0, 0x0
 

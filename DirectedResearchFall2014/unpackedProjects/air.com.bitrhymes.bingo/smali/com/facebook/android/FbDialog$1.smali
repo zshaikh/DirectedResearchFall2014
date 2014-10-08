@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/facebook/android/FbDialog;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1
@@ -40,14 +39,14 @@
 # virtual methods
 .method public onComplete(Landroid/os/Bundle;Lcom/facebook/FacebookException;)V
     .locals 1
-    .parameter "values"
-    .parameter "error"
+    .param p1, "values"    # Landroid/os/Bundle;
+    .param p2, "error"    # Lcom/facebook/FacebookException;
 
     .prologue
     .line 57
     iget-object v0, p0, Lcom/facebook/android/FbDialog$1;->this$0:Lcom/facebook/android/FbDialog;
 
-    #calls: Lcom/facebook/android/FbDialog;->callDialogListener(Landroid/os/Bundle;Lcom/facebook/FacebookException;)V
+    # invokes: Lcom/facebook/android/FbDialog;->callDialogListener(Landroid/os/Bundle;Lcom/facebook/FacebookException;)V
     invoke-static {v0, p1, p2}, Lcom/facebook/android/FbDialog;->access$0(Lcom/facebook/android/FbDialog;Landroid/os/Bundle;Lcom/facebook/FacebookException;)V
 
     .line 58

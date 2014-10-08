@@ -20,7 +20,7 @@
     .locals 2
 
     .prologue
-    .local p0, this:Lcom/flurry/org/apache/avro/specific/SpecificDatumReader;,"Lcom/flurry/org/apache/avro/specific/SpecificDatumReader<TT;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/specific/SpecificDatumReader;, "Lcom/flurry/org/apache/avro/specific/SpecificDatumReader<TT;>;"
     const/4 v1, 0x0
 
     .line 26
@@ -36,11 +36,11 @@
 
 .method public constructor <init>(Lcom/flurry/org/apache/avro/Schema;)V
     .locals 1
-    .parameter "schema"
+    .param p1, "schema"    # Lcom/flurry/org/apache/avro/Schema;
 
     .prologue
     .line 35
-    .local p0, this:Lcom/flurry/org/apache/avro/specific/SpecificDatumReader;,"Lcom/flurry/org/apache/avro/specific/SpecificDatumReader<TT;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/specific/SpecificDatumReader;, "Lcom/flurry/org/apache/avro/specific/SpecificDatumReader<TT;>;"
     invoke-static {}, Lcom/flurry/org/apache/avro/specific/SpecificData;->get()Lcom/flurry/org/apache/avro/specific/SpecificData;
 
     move-result-object v0
@@ -53,12 +53,12 @@
 
 .method public constructor <init>(Lcom/flurry/org/apache/avro/Schema;Lcom/flurry/org/apache/avro/Schema;)V
     .locals 1
-    .parameter "writer"
-    .parameter "reader"
+    .param p1, "writer"    # Lcom/flurry/org/apache/avro/Schema;
+    .param p2, "reader"    # Lcom/flurry/org/apache/avro/Schema;
 
     .prologue
     .line 40
-    .local p0, this:Lcom/flurry/org/apache/avro/specific/SpecificDatumReader;,"Lcom/flurry/org/apache/avro/specific/SpecificDatumReader<TT;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/specific/SpecificDatumReader;, "Lcom/flurry/org/apache/avro/specific/SpecificDatumReader<TT;>;"
     invoke-static {}, Lcom/flurry/org/apache/avro/specific/SpecificData;->get()Lcom/flurry/org/apache/avro/specific/SpecificData;
 
     move-result-object v0
@@ -71,13 +71,13 @@
 
 .method public constructor <init>(Lcom/flurry/org/apache/avro/Schema;Lcom/flurry/org/apache/avro/Schema;Lcom/flurry/org/apache/avro/specific/SpecificData;)V
     .locals 0
-    .parameter "writer"
-    .parameter "reader"
-    .parameter "data"
+    .param p1, "writer"    # Lcom/flurry/org/apache/avro/Schema;
+    .param p2, "reader"    # Lcom/flurry/org/apache/avro/Schema;
+    .param p3, "data"    # Lcom/flurry/org/apache/avro/specific/SpecificData;
 
     .prologue
     .line 47
-    .local p0, this:Lcom/flurry/org/apache/avro/specific/SpecificDatumReader;,"Lcom/flurry/org/apache/avro/specific/SpecificDatumReader<TT;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/specific/SpecificDatumReader;, "Lcom/flurry/org/apache/avro/specific/SpecificDatumReader<TT;>;"
     invoke-direct {p0, p1, p2, p3}, Lcom/flurry/org/apache/avro/generic/GenericDatumReader;-><init>(Lcom/flurry/org/apache/avro/Schema;Lcom/flurry/org/apache/avro/Schema;Lcom/flurry/org/apache/avro/generic/GenericData;)V
 
     .line 48
@@ -86,7 +86,6 @@
 
 .method public constructor <init>(Ljava/lang/Class;)V
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -97,8 +96,8 @@
 
     .prologue
     .line 30
-    .local p0, this:Lcom/flurry/org/apache/avro/specific/SpecificDatumReader;,"Lcom/flurry/org/apache/avro/specific/SpecificDatumReader<TT;>;"
-    .local p1, c:Ljava/lang/Class;,"Ljava/lang/Class<TT;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/specific/SpecificDatumReader;, "Lcom/flurry/org/apache/avro/specific/SpecificDatumReader<TT;>;"
+    .local p1, "c":Ljava/lang/Class;, "Ljava/lang/Class<TT;>;"
     invoke-static {}, Lcom/flurry/org/apache/avro/specific/SpecificData;->get()Lcom/flurry/org/apache/avro/specific/SpecificData;
 
     move-result-object v0
@@ -117,12 +116,12 @@
 # virtual methods
 .method protected createEnum(Ljava/lang/String;Lcom/flurry/org/apache/avro/Schema;)Ljava/lang/Object;
     .locals 2
-    .parameter "symbol"
-    .parameter "schema"
+    .param p1, "symbol"    # Ljava/lang/String;
+    .param p2, "schema"    # Lcom/flurry/org/apache/avro/Schema;
 
     .prologue
     .line 70
-    .local p0, this:Lcom/flurry/org/apache/avro/specific/SpecificDatumReader;,"Lcom/flurry/org/apache/avro/specific/SpecificDatumReader<TT;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/specific/SpecificDatumReader;, "Lcom/flurry/org/apache/avro/specific/SpecificDatumReader<TT;>;"
     invoke-virtual {p0}, Lcom/flurry/org/apache/avro/specific/SpecificDatumReader;->getSpecificData()Lcom/flurry/org/apache/avro/specific/SpecificData;
 
     move-result-object v1
@@ -132,7 +131,7 @@
     move-result-object v0
 
     .line 71
-    .local v0, c:Ljava/lang/Class;
+    .local v0, "c":Ljava/lang/Class;
     if-nez v0, :cond_0
 
     invoke-super {p0, p1, p2}, Lcom/flurry/org/apache/avro/generic/GenericDatumReader;->createEnum(Ljava/lang/String;Lcom/flurry/org/apache/avro/Schema;)Ljava/lang/Object;
@@ -156,12 +155,12 @@
 
     .prologue
     .line 51
-    .local p0, this:Lcom/flurry/org/apache/avro/specific/SpecificDatumReader;,"Lcom/flurry/org/apache/avro/specific/SpecificDatumReader<TT;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/specific/SpecificDatumReader;, "Lcom/flurry/org/apache/avro/specific/SpecificDatumReader<TT;>;"
     invoke-virtual {p0}, Lcom/flurry/org/apache/avro/specific/SpecificDatumReader;->getData()Lcom/flurry/org/apache/avro/generic/GenericData;
 
     move-result-object p0
 
-    .end local p0           #this:Lcom/flurry/org/apache/avro/specific/SpecificDatumReader;,"Lcom/flurry/org/apache/avro/specific/SpecificDatumReader<TT;>;"
+    .end local p0    # "this":Lcom/flurry/org/apache/avro/specific/SpecificDatumReader;, "Lcom/flurry/org/apache/avro/specific/SpecificDatumReader<TT;>;"
     check-cast p0, Lcom/flurry/org/apache/avro/specific/SpecificData;
 
     return-object p0
@@ -169,11 +168,11 @@
 
 .method public setSchema(Lcom/flurry/org/apache/avro/Schema;)V
     .locals 4
-    .parameter "actual"
+    .param p1, "actual"    # Lcom/flurry/org/apache/avro/Schema;
 
     .prologue
     .line 57
-    .local p0, this:Lcom/flurry/org/apache/avro/specific/SpecificDatumReader;,"Lcom/flurry/org/apache/avro/specific/SpecificDatumReader<TT;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/specific/SpecificDatumReader;, "Lcom/flurry/org/apache/avro/specific/SpecificDatumReader<TT;>;"
     invoke-virtual {p0}, Lcom/flurry/org/apache/avro/specific/SpecificDatumReader;->getExpected()Lcom/flurry/org/apache/avro/Schema;
 
     move-result-object v2
@@ -196,13 +195,13 @@
     move-result-object v1
 
     .line 60
-    .local v1, data:Lcom/flurry/org/apache/avro/specific/SpecificData;
+    .local v1, "data":Lcom/flurry/org/apache/avro/specific/SpecificData;
     invoke-virtual {v1, p1}, Lcom/flurry/org/apache/avro/specific/SpecificData;->getClass(Lcom/flurry/org/apache/avro/Schema;)Ljava/lang/Class;
 
     move-result-object v0
 
     .line 61
-    .local v0, c:Ljava/lang/Class;
+    .local v0, "c":Ljava/lang/Class;
     if-eqz v0, :cond_0
 
     const-class v2, Lcom/flurry/org/apache/avro/specific/SpecificRecord;
@@ -221,8 +220,8 @@
     invoke-virtual {p0, v2}, Lcom/flurry/org/apache/avro/specific/SpecificDatumReader;->setExpected(Lcom/flurry/org/apache/avro/Schema;)V
 
     .line 64
-    .end local v0           #c:Ljava/lang/Class;
-    .end local v1           #data:Lcom/flurry/org/apache/avro/specific/SpecificData;
+    .end local v0    # "c":Ljava/lang/Class;
+    .end local v1    # "data":Lcom/flurry/org/apache/avro/specific/SpecificData;
     :cond_0
     invoke-super {p0, p1}, Lcom/flurry/org/apache/avro/generic/GenericDatumReader;->setSchema(Lcom/flurry/org/apache/avro/Schema;)V
 

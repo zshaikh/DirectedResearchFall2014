@@ -40,7 +40,7 @@
 
 .method protected constructor <init>(Landroid/content/Context;)V
     .locals 1
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     .line 33
@@ -65,7 +65,7 @@
 
 .method public static getInstance(Landroid/content/Context;)Lv2/com/playhaven/requests/open/PHSession;
     .locals 1
-    .parameter "context"
+    .param p0, "context"    # Landroid/content/Context;
 
     .prologue
     .line 40
@@ -124,7 +124,7 @@
 
 .method private inflate(Landroid/content/Context;)V
     .locals 5
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     const-wide/16 v3, 0x0
@@ -139,7 +139,7 @@
     move-result-object v0
 
     .line 178
-    .local v0, prefs:Landroid/content/SharedPreferences;
+    .local v0, "prefs":Landroid/content/SharedPreferences;
     const-string v1, "com_playhaven_time_in_game_ssum"
 
     invoke-interface {v0, v1, v3, v4}, Landroid/content/SharedPreferences;->getLong(Ljava/lang/String;J)J
@@ -183,7 +183,7 @@
 
 .method public static regenerateInstance(Landroid/content/Context;)Lv2/com/playhaven/requests/open/PHSession;
     .locals 1
-    .parameter "context"
+    .param p0, "context"    # Landroid/content/Context;
 
     .prologue
     .line 49
@@ -215,7 +215,7 @@
 
 .method public static register(Landroid/app/Activity;)V
     .locals 1
-    .parameter "activity"
+    .param p0, "activity"    # Landroid/app/Activity;
 
     .prologue
     .line 129
@@ -271,7 +271,7 @@
 
 .method private save(Landroid/content/Context;)V
     .locals 7
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     .line 194
@@ -294,13 +294,13 @@
     move-result-object v1
 
     .line 199
-    .local v1, prefs:Landroid/content/SharedPreferences;
+    .local v1, "prefs":Landroid/content/SharedPreferences;
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
     .line 201
-    .local v0, editor:Landroid/content/SharedPreferences$Editor;
+    .local v0, "editor":Landroid/content/SharedPreferences$Editor;
     const-string v2, "com_playhaven_time_in_game_ssum"
 
     iget-wide v3, p0, Lv2/com/playhaven/requests/open/PHSession;->mTotalTime:J
@@ -332,7 +332,7 @@
 
 .method public static unregister(Landroid/app/Activity;)V
     .locals 1
-    .parameter "activity"
+    .param p0, "activity"    # Landroid/app/Activity;
 
     .prologue
     .line 144
@@ -388,7 +388,7 @@
 # virtual methods
 .method public clear(Landroid/content/Context;)V
     .locals 3
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     .line 183
@@ -401,13 +401,13 @@
     move-result-object v1
 
     .line 185
-    .local v1, prefs:Landroid/content/SharedPreferences;
+    .local v1, "prefs":Landroid/content/SharedPreferences;
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
     .line 187
-    .local v0, editor:Landroid/content/SharedPreferences$Editor;
+    .local v0, "editor":Landroid/content/SharedPreferences$Editor;
     const-string v2, "com_playhaven_time_in_game_ssum"
 
     invoke-interface {v0, v2}, Landroid/content/SharedPreferences$Editor;->remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;

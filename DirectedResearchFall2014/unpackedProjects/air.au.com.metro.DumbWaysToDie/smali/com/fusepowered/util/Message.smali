@@ -45,19 +45,19 @@
 
 .method public constructor <init>(IIIIIILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZZ)V
     .locals 0
-    .parameter "id"
-    .parameter "sticky"
-    .parameter "max_views"
-    .parameter "showOnView"
-    .parameter "isUrl"
-    .parameter "mandatory"
-    .parameter "title"
-    .parameter "body"
-    .parameter "action"
-    .parameter "actionTitle"
-    .parameter "displayed"
-    .parameter "isClicked"
-    .parameter "isUpgrade"
+    .param p1, "id"    # I
+    .param p2, "sticky"    # I
+    .param p3, "max_views"    # I
+    .param p4, "showOnView"    # I
+    .param p5, "isUrl"    # I
+    .param p6, "mandatory"    # I
+    .param p7, "title"    # Ljava/lang/String;
+    .param p8, "body"    # Ljava/lang/String;
+    .param p9, "action"    # Ljava/lang/String;
+    .param p10, "actionTitle"    # Ljava/lang/String;
+    .param p11, "displayed"    # Z
+    .param p12, "isClicked"    # Z
+    .param p13, "isUpgrade"    # Z
 
     .prologue
     .line 26
@@ -240,7 +240,7 @@
 
 .method public setAction(Ljava/lang/String;)V
     .locals 0
-    .parameter "action"
+    .param p1, "action"    # Ljava/lang/String;
 
     .prologue
     .line 76
@@ -252,7 +252,7 @@
 
 .method public setActionTitle(Ljava/lang/String;)V
     .locals 0
-    .parameter "actionTitle"
+    .param p1, "actionTitle"    # Ljava/lang/String;
 
     .prologue
     .line 94
@@ -264,7 +264,7 @@
 
 .method public setActionTtitle(Ljava/lang/String;)V
     .locals 0
-    .parameter "actionTitle"
+    .param p1, "actionTitle"    # Ljava/lang/String;
 
     .prologue
     .line 82
@@ -276,7 +276,7 @@
 
 .method public setBody(Ljava/lang/String;)V
     .locals 0
-    .parameter "body"
+    .param p1, "body"    # Ljava/lang/String;
 
     .prologue
     .line 70
@@ -288,7 +288,7 @@
 
 .method public setClicked(Z)V
     .locals 0
-    .parameter "isClicked"
+    .param p1, "isClicked"    # Z
 
     .prologue
     .line 122
@@ -300,7 +300,7 @@
 
 .method public setDisplayed(Z)V
     .locals 0
-    .parameter "displayed"
+    .param p1, "displayed"    # Z
 
     .prologue
     .line 90
@@ -312,7 +312,7 @@
 
 .method public setId(I)V
     .locals 0
-    .parameter "id"
+    .param p1, "id"    # I
 
     .prologue
     .line 46
@@ -324,7 +324,7 @@
 
 .method public setIsUpgrade(Z)V
     .locals 0
-    .parameter "isUpgrade"
+    .param p1, "isUpgrade"    # Z
 
     .prologue
     .line 134
@@ -336,7 +336,7 @@
 
 .method public setIsUrl(I)V
     .locals 0
-    .parameter "isUrl"
+    .param p1, "isUrl"    # I
 
     .prologue
     .line 106
@@ -348,7 +348,7 @@
 
 .method public setMandatory(I)V
     .locals 0
-    .parameter "mandatory"
+    .param p1, "mandatory"    # I
 
     .prologue
     .line 114
@@ -360,7 +360,7 @@
 
 .method public setMax_views(I)V
     .locals 0
-    .parameter "max_views"
+    .param p1, "max_views"    # I
 
     .prologue
     .line 130
@@ -372,7 +372,7 @@
 
 .method public setShowOnView(I)V
     .locals 0
-    .parameter "showOnView"
+    .param p1, "showOnView"    # I
 
     .prologue
     .line 58
@@ -384,7 +384,7 @@
 
 .method public setSticky(I)V
     .locals 0
-    .parameter "sticky"
+    .param p1, "sticky"    # I
 
     .prologue
     .line 52
@@ -396,7 +396,7 @@
 
 .method public setTitle(Ljava/lang/String;)V
     .locals 0
-    .parameter "title"
+    .param p1, "title"    # Ljava/lang/String;
 
     .prologue
     .line 64
@@ -562,7 +562,7 @@
     move-result-object v0
 
     .line 152
-    .local v0, buf:Ljava/lang/StringBuilder;
+    .local v0, "buf":Ljava/lang/StringBuilder;
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1

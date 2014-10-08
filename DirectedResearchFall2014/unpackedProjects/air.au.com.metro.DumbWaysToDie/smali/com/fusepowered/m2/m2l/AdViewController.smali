@@ -102,8 +102,8 @@
 
 .method public constructor <init>(Landroid/content/Context;Lcom/fusepowered/m2/m2l/MoPubView;)V
     .locals 2
-    .parameter "context"
-    .parameter "view"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "view"    # Lcom/fusepowered/m2/m2l/MoPubView;
 
     .prologue
     const/4 v1, 0x1
@@ -189,7 +189,6 @@
 
 .method static synthetic access$0(Lcom/fusepowered/m2/m2l/AdViewController;)Lcom/fusepowered/m2/m2l/AdConfiguration;
     .locals 1
-    .parameter
 
     .prologue
     .line 74
@@ -200,8 +199,6 @@
 
 .method static synthetic access$1(Lcom/fusepowered/m2/m2l/AdViewController;Landroid/view/View;)Landroid/widget/FrameLayout$LayoutParams;
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 460
@@ -229,7 +226,7 @@
 
 .method private getAdLayoutParams(Landroid/view/View;)Landroid/widget/FrameLayout$LayoutParams;
     .locals 6
-    .parameter "view"
+    .param p1, "view"    # Landroid/view/View;
 
     .prologue
     .line 461
@@ -240,7 +237,7 @@
     move-result v3
 
     .line 462
-    .local v3, width:I
+    .local v3, "width":I
     iget-object v4, p0, Lcom/fusepowered/m2/m2l/AdViewController;->mAdConfiguration:Lcom/fusepowered/m2/m2l/AdConfiguration;
 
     invoke-virtual {v4}, Lcom/fusepowered/m2/m2l/AdConfiguration;->getHeight()I
@@ -248,7 +245,7 @@
     move-result v0
 
     .line 464
-    .local v0, height:I
+    .local v0, "height":I
     invoke-static {p1}, Lcom/fusepowered/m2/m2l/AdViewController;->getShouldHonorServerDimensions(Landroid/view/View;)Z
 
     move-result v4
@@ -269,7 +266,7 @@
     move-result v2
 
     .line 466
-    .local v2, scaledWidth:I
+    .local v2, "scaledWidth":I
     int-to-float v4, v0
 
     iget-object v5, p0, Lcom/fusepowered/m2/m2l/AdViewController;->mContext:Landroid/content/Context;
@@ -279,7 +276,7 @@
     move-result v1
 
     .line 468
-    .local v1, scaledHeight:I
+    .local v1, "scaledHeight":I
     new-instance v4, Landroid/widget/FrameLayout$LayoutParams;
 
     const/16 v5, 0x11
@@ -287,8 +284,8 @@
     invoke-direct {v4, v2, v1, v5}, Landroid/widget/FrameLayout$LayoutParams;-><init>(III)V
 
     .line 470
-    .end local v1           #scaledHeight:I
-    .end local v2           #scaledWidth:I
+    .end local v1    # "scaledHeight":I
+    .end local v2    # "scaledWidth":I
     :goto_0
     return-object v4
 
@@ -337,11 +334,11 @@
     check-cast v5, Landroid/location/LocationManager;
 
     .line 489
-    .local v5, lm:Landroid/location/LocationManager;
+    .local v5, "lm":Landroid/location/LocationManager;
     const/4 v2, 0x0
 
     .line 491
-    .local v2, gpsLocation:Landroid/location/Location;
+    .local v2, "gpsLocation":Landroid/location/Location;
     :try_start_0
     const-string v14, "gps"
 
@@ -357,7 +354,7 @@
     const/4 v8, 0x0
 
     .line 500
-    .local v8, networkLocation:Landroid/location/Location;
+    .local v8, "networkLocation":Landroid/location/Location;
     :try_start_1
     const-string v14, "network"
 
@@ -380,14 +377,14 @@
     goto :goto_0
 
     .line 492
-    .end local v8           #networkLocation:Landroid/location/Location;
+    .end local v8    # "networkLocation":Landroid/location/Location;
     :catch_0
     move-exception v14
 
     move-object v1, v14
 
     .line 493
-    .local v1, e:Ljava/lang/SecurityException;
+    .local v1, "e":Ljava/lang/SecurityException;
     const-string v14, "MoPub"
 
     const-string v15, "Failed to retrieve GPS location: access appears to be disabled."
@@ -397,14 +394,14 @@
     goto :goto_1
 
     .line 494
-    .end local v1           #e:Ljava/lang/SecurityException;
+    .end local v1    # "e":Ljava/lang/SecurityException;
     :catch_1
     move-exception v14
 
     move-object v1, v14
 
     .line 495
-    .local v1, e:Ljava/lang/IllegalArgumentException;
+    .local v1, "e":Ljava/lang/IllegalArgumentException;
     const-string v14, "MoPub"
 
     const-string v15, "Failed to retrieve GPS location: device has no GPS provider."
@@ -414,15 +411,15 @@
     goto :goto_1
 
     .line 501
-    .end local v1           #e:Ljava/lang/IllegalArgumentException;
-    .restart local v8       #networkLocation:Landroid/location/Location;
+    .end local v1    # "e":Ljava/lang/IllegalArgumentException;
+    .restart local v8    # "networkLocation":Landroid/location/Location;
     :catch_2
     move-exception v14
 
     move-object v1, v14
 
     .line 502
-    .local v1, e:Ljava/lang/SecurityException;
+    .local v1, "e":Ljava/lang/SecurityException;
     const-string v14, "MoPub"
 
     const-string v15, "Failed to retrieve network location: access appears to be disabled."
@@ -432,14 +429,14 @@
     goto :goto_2
 
     .line 503
-    .end local v1           #e:Ljava/lang/SecurityException;
+    .end local v1    # "e":Ljava/lang/SecurityException;
     :catch_3
     move-exception v14
 
     move-object v1, v14
 
     .line 504
-    .local v1, e:Ljava/lang/IllegalArgumentException;
+    .local v1, "e":Ljava/lang/IllegalArgumentException;
     const-string v14, "MoPub"
 
     const-string v15, "Failed to retrieve network location: device has no network provider."
@@ -449,7 +446,7 @@
     goto :goto_2
 
     .line 510
-    .end local v1           #e:Ljava/lang/IllegalArgumentException;
+    .end local v1    # "e":Ljava/lang/IllegalArgumentException;
     :cond_1
     if-eqz v2, :cond_4
 
@@ -471,7 +468,7 @@
     move-object v9, v2
 
     .line 518
-    .local v9, result:Landroid/location/Location;
+    .local v9, "result":Landroid/location/Location;
     :goto_3
     move-object/from16 v0, p0
 
@@ -489,7 +486,7 @@
     move-result-wide v3
 
     .line 520
-    .local v3, lat:D
+    .local v3, "lat":D
     invoke-static {v3, v4}, Ljava/math/BigDecimal;->valueOf(D)Ljava/math/BigDecimal;
 
     move-result-object v14
@@ -513,7 +510,7 @@
     move-result-wide v10
 
     .line 523
-    .local v10, truncatedLat:D
+    .local v10, "truncatedLat":D
     invoke-virtual {v9, v10, v11}, Landroid/location/Location;->setLatitude(D)V
 
     .line 525
@@ -522,7 +519,7 @@
     move-result-wide v6
 
     .line 526
-    .local v6, lon:D
+    .local v6, "lon":D
     invoke-static {v6, v7}, Ljava/math/BigDecimal;->valueOf(D)Ljava/math/BigDecimal;
 
     move-result-object v14
@@ -546,13 +543,13 @@
     move-result-wide v12
 
     .line 529
-    .local v12, truncatedLon:D
+    .local v12, "truncatedLon":D
     invoke-virtual {v9, v12, v13}, Landroid/location/Location;->setLongitude(D)V
 
-    .end local v3           #lat:D
-    .end local v6           #lon:D
-    .end local v10           #truncatedLat:D
-    .end local v12           #truncatedLon:D
+    .end local v3    # "lat":D
+    .end local v6    # "lon":D
+    .end local v10    # "truncatedLat":D
+    .end local v12    # "truncatedLon":D
     :cond_2
     move-object v14, v9
 
@@ -560,30 +557,30 @@
     goto/16 :goto_0
 
     .line 512
-    .end local v9           #result:Landroid/location/Location;
+    .end local v9    # "result":Landroid/location/Location;
     :cond_3
     move-object v9, v8
 
     .line 513
-    .restart local v9       #result:Landroid/location/Location;
+    .restart local v9    # "result":Landroid/location/Location;
     goto :goto_3
 
     .line 514
-    .end local v9           #result:Landroid/location/Location;
+    .end local v9    # "result":Landroid/location/Location;
     :cond_4
     if-eqz v2, :cond_5
 
     move-object v9, v2
 
-    .restart local v9       #result:Landroid/location/Location;
+    .restart local v9    # "result":Landroid/location/Location;
     goto :goto_3
 
     .line 515
-    .end local v9           #result:Landroid/location/Location;
+    .end local v9    # "result":Landroid/location/Location;
     :cond_5
     move-object v9, v8
 
-    .restart local v9       #result:Landroid/location/Location;
+    .restart local v9    # "result":Landroid/location/Location;
     goto :goto_3
 .end method
 
@@ -609,7 +606,7 @@
 
 .method private static getShouldHonorServerDimensions(Landroid/view/View;)Z
     .locals 1
-    .parameter "view"
+    .param p0, "view"    # Landroid/view/View;
 
     .prologue
     .line 96
@@ -648,7 +645,7 @@
     move-result v2
 
     .line 434
-    .local v2, result:I
+    .local v2, "result":I
     const/4 v3, -0x1
 
     if-ne v2, v3, :cond_0
@@ -672,13 +669,13 @@
     check-cast v0, Landroid/net/ConnectivityManager;
 
     .line 439
-    .local v0, cm:Landroid/net/ConnectivityManager;
+    .local v0, "cm":Landroid/net/ConnectivityManager;
     invoke-virtual {v0}, Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;
 
     move-result-object v1
 
     .line 440
-    .local v1, networkInfo:Landroid/net/NetworkInfo;
+    .local v1, "networkInfo":Landroid/net/NetworkInfo;
     if-eqz v1, :cond_1
 
     invoke-virtual {v1}, Landroid/net/NetworkInfo;->isConnected()Z
@@ -699,7 +696,7 @@
 
 .method protected static setShouldHonorServerDimensions(Landroid/view/View;)V
     .locals 2
-    .parameter "view"
+    .param p0, "view"    # Landroid/view/View;
 
     .prologue
     .line 92
@@ -721,7 +718,7 @@
 # virtual methods
 .method adDidFail(Lcom/fusepowered/m2/m2l/MoPubErrorCode;)V
     .locals 2
-    .parameter "errorCode"
+    .param p1, "errorCode"    # Lcom/fusepowered/m2/m2l/MoPubErrorCode;
 
     .prologue
     .line 397
@@ -798,7 +795,7 @@
 
 .method configureUsingHttpResponse(Lorg/apache/http/HttpResponse;)V
     .locals 1
-    .parameter "response"
+    .param p1, "response"    # Lorg/apache/http/HttpResponse;
 
     .prologue
     .line 321
@@ -859,7 +856,7 @@
 
 .method fetchAd(Ljava/lang/String;)V
     .locals 1
-    .parameter "mUrl"
+    .param p1, "mUrl"    # Ljava/lang/String;
 
     .prologue
     .line 377
@@ -1250,7 +1247,7 @@
     move-result-object v0
 
     .line 140
-    .local v0, adUrl:Ljava/lang/String;
+    .local v0, "adUrl":Ljava/lang/String;
     invoke-virtual {p0, v0}, Lcom/fusepowered/m2/m2l/AdViewController;->loadNonJavascript(Ljava/lang/String;)V
 
     goto :goto_0
@@ -1258,7 +1255,7 @@
 
 .method loadFailUrl(Lcom/fusepowered/m2/m2l/MoPubErrorCode;)V
     .locals 3
-    .parameter "errorCode"
+    .param p1, "errorCode"    # Lcom/fusepowered/m2/m2l/MoPubErrorCode;
 
     .prologue
     const-string v2, "MoPub"
@@ -1358,7 +1355,7 @@
 
 .method loadNonJavascript(Ljava/lang/String;)V
     .locals 3
-    .parameter "url"
+    .param p1, "url"    # Ljava/lang/String;
 
     .prologue
     const-string v2, "MoPub"
@@ -1558,7 +1555,7 @@
 
 .method setAdContentView(Landroid/view/View;)V
     .locals 2
-    .parameter "view"
+    .param p1, "view"    # Landroid/view/View;
 
     .prologue
     .line 447
@@ -1576,7 +1573,7 @@
 
 .method public setAdUnitId(Ljava/lang/String;)V
     .locals 1
-    .parameter "adUnitId"
+    .param p1, "adUnitId"    # Ljava/lang/String;
 
     .prologue
     .line 217
@@ -1590,7 +1587,7 @@
 
 .method public setAutorefreshEnabled(Z)V
     .locals 3
-    .parameter "enabled"
+    .param p1, "enabled"    # Z
 
     .prologue
     .line 256
@@ -1664,7 +1661,7 @@
 
 .method public setClickthroughUrl(Ljava/lang/String;)V
     .locals 1
-    .parameter "clickthroughUrl"
+    .param p1, "clickthroughUrl"    # Ljava/lang/String;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -1680,7 +1677,7 @@
 
 .method public setFacebookSupported(Z)V
     .locals 0
-    .parameter "enabled"
+    .param p1, "enabled"    # Z
 
     .prologue
     .line 201
@@ -1692,7 +1689,7 @@
 
 .method setFailUrl(Ljava/lang/String;)V
     .locals 1
-    .parameter "failUrl"
+    .param p1, "failUrl"    # Ljava/lang/String;
 
     .prologue
     .line 181
@@ -1706,7 +1703,7 @@
 
 .method public setKeywords(Ljava/lang/String;)V
     .locals 0
-    .parameter "keywords"
+    .param p1, "keywords"    # Ljava/lang/String;
 
     .prologue
     .line 193
@@ -1718,7 +1715,6 @@
 
 .method setLocalExtras(Ljava/util/Map;)V
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1732,7 +1728,7 @@
 
     .prologue
     .line 412
-    .local p1, localExtras:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
+    .local p1, "localExtras":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
     if-eqz p1, :cond_0
 
     .line 413
@@ -1758,7 +1754,7 @@
 
 .method public setLocation(Landroid/location/Location;)V
     .locals 0
-    .parameter "location"
+    .param p1, "location"    # Landroid/location/Location;
 
     .prologue
     .line 209
@@ -1770,7 +1766,7 @@
 
 .method setLocationPrecision(I)V
     .locals 1
-    .parameter "precision"
+    .param p1, "precision"    # I
 
     .prologue
     .line 283
@@ -1801,7 +1797,7 @@
 
 .method setRefreshTimeMilliseconds(I)V
     .locals 1
-    .parameter "refreshTimeMilliseconds"
+    .param p1, "refreshTimeMilliseconds"    # I
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -1817,7 +1813,7 @@
 
 .method public setTesting(Z)V
     .locals 0
-    .parameter "enabled"
+    .param p1, "enabled"    # Z
 
     .prologue
     .line 275
@@ -1829,7 +1825,7 @@
 
 .method public setTimeout(I)V
     .locals 1
-    .parameter "milliseconds"
+    .param p1, "milliseconds"    # I
 
     .prologue
     .line 221

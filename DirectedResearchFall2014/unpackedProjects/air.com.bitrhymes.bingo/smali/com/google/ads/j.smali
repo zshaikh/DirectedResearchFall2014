@@ -15,7 +15,6 @@
 # direct methods
 .method public constructor <init>(Lcom/google/ads/h;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 28
@@ -32,7 +31,6 @@
 # virtual methods
 .method public onClick(Lcom/google/ads/mediation/MediationBannerAdapter;)V
     .locals 4
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -43,7 +41,7 @@
 
     .prologue
     .line 113
-    .local p1, adapter:Lcom/google/ads/mediation/MediationBannerAdapter;,"Lcom/google/ads/mediation/MediationBannerAdapter<**>;"
+    .local p1, "adapter":Lcom/google/ads/mediation/MediationBannerAdapter;, "Lcom/google/ads/mediation/MediationBannerAdapter<**>;"
     iget-object v0, p0, Lcom/google/ads/j;->a:Lcom/google/ads/h;
 
     monitor-enter v0
@@ -90,7 +88,6 @@
 
 .method public onDismissScreen(Lcom/google/ads/mediation/MediationBannerAdapter;)V
     .locals 3
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -101,7 +98,7 @@
 
     .prologue
     .line 99
-    .local p1, adapter:Lcom/google/ads/mediation/MediationBannerAdapter;,"Lcom/google/ads/mediation/MediationBannerAdapter<**>;"
+    .local p1, "adapter":Lcom/google/ads/mediation/MediationBannerAdapter;, "Lcom/google/ads/mediation/MediationBannerAdapter<**>;"
     iget-object v0, p0, Lcom/google/ads/j;->a:Lcom/google/ads/h;
 
     monitor-enter v0
@@ -137,8 +134,7 @@
 
 .method public onFailedToReceiveAd(Lcom/google/ads/mediation/MediationBannerAdapter;Lcom/google/ads/AdRequest$ErrorCode;)V
     .locals 4
-    .parameter
-    .parameter "error"
+    .param p2, "error"    # Lcom/google/ads/AdRequest$ErrorCode;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -151,7 +147,7 @@
 
     .prologue
     .line 72
-    .local p1, adapter:Lcom/google/ads/mediation/MediationBannerAdapter;,"Lcom/google/ads/mediation/MediationBannerAdapter<**>;"
+    .local p1, "adapter":Lcom/google/ads/mediation/MediationBannerAdapter;, "Lcom/google/ads/mediation/MediationBannerAdapter<**>;"
     iget-object v0, p0, Lcom/google/ads/j;->a:Lcom/google/ads/h;
 
     monitor-enter v0
@@ -254,7 +250,6 @@
 
 .method public onLeaveApplication(Lcom/google/ads/mediation/MediationBannerAdapter;)V
     .locals 3
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -265,7 +260,7 @@
 
     .prologue
     .line 106
-    .local p1, adapter:Lcom/google/ads/mediation/MediationBannerAdapter;,"Lcom/google/ads/mediation/MediationBannerAdapter<**>;"
+    .local p1, "adapter":Lcom/google/ads/mediation/MediationBannerAdapter;, "Lcom/google/ads/mediation/MediationBannerAdapter<**>;"
     iget-object v0, p0, Lcom/google/ads/j;->a:Lcom/google/ads/h;
 
     monitor-enter v0
@@ -301,7 +296,6 @@
 
 .method public onPresentScreen(Lcom/google/ads/mediation/MediationBannerAdapter;)V
     .locals 3
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -312,7 +306,7 @@
 
     .prologue
     .line 92
-    .local p1, adapter:Lcom/google/ads/mediation/MediationBannerAdapter;,"Lcom/google/ads/mediation/MediationBannerAdapter<**>;"
+    .local p1, "adapter":Lcom/google/ads/mediation/MediationBannerAdapter;, "Lcom/google/ads/mediation/MediationBannerAdapter<**>;"
     iget-object v0, p0, Lcom/google/ads/j;->a:Lcom/google/ads/h;
 
     monitor-enter v0
@@ -348,7 +342,6 @@
 
 .method public onReceivedAd(Lcom/google/ads/mediation/MediationBannerAdapter;)V
     .locals 4
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -359,7 +352,7 @@
 
     .prologue
     .line 34
-    .local p1, adapter:Lcom/google/ads/mediation/MediationBannerAdapter;,"Lcom/google/ads/mediation/MediationBannerAdapter<**>;"
+    .local p1, "adapter":Lcom/google/ads/mediation/MediationBannerAdapter;, "Lcom/google/ads/mediation/MediationBannerAdapter<**>;"
     iget-object v0, p0, Lcom/google/ads/j;->a:Lcom/google/ads/h;
 
     monitor-enter v0
@@ -386,8 +379,8 @@
 
     invoke-virtual {v1, v2}, Lcom/google/ads/h;->a(Landroid/view/View;)V
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     .line 50
     :try_start_2

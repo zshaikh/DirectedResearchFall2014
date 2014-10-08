@@ -108,7 +108,6 @@
 
 .method private static d(Ljava/lang/String;)Ljava/lang/Integer;
     .locals 1
-    .parameter
 
     .prologue
     .line 243
@@ -127,8 +126,6 @@
 # virtual methods
 .method public final a(Landroid/content/Context;Lcom/flurry/android/AdSpaceLayout;)Landroid/view/ViewGroup$LayoutParams;
     .locals 4
-    .parameter
-    .parameter
 
     .prologue
     .line 210

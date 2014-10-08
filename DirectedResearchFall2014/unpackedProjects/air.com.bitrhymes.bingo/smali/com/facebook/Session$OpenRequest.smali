@@ -21,7 +21,7 @@
 # direct methods
 .method public constructor <init>(Landroid/app/Activity;)V
     .locals 0
-    .parameter "activity"
+    .param p1, "activity"    # Landroid/app/Activity;
 
     .prologue
     .line 1874
@@ -33,7 +33,7 @@
 
 .method public constructor <init>(Landroid/support/v4/app/Fragment;)V
     .locals 0
-    .parameter "fragment"
+    .param p1, "fragment"    # Landroid/support/v4/app/Fragment;
 
     .prologue
     .line 1883
@@ -47,7 +47,6 @@
 # virtual methods
 .method public bridge synthetic setCallback(Lcom/facebook/Session$StatusCallback;)Lcom/facebook/Session$AuthorizationRequest;
     .locals 1
-    .parameter
 
     .prologue
     .line 1
@@ -60,7 +59,7 @@
 
 .method public final setCallback(Lcom/facebook/Session$StatusCallback;)Lcom/facebook/Session$OpenRequest;
     .locals 0
-    .parameter "statusCallback"
+    .param p1, "statusCallback"    # Lcom/facebook/Session$StatusCallback;
 
     .prologue
     .line 1894
@@ -72,7 +71,6 @@
 
 .method public bridge synthetic setDefaultAudience(Lcom/facebook/SessionDefaultAudience;)Lcom/facebook/Session$AuthorizationRequest;
     .locals 1
-    .parameter
 
     .prologue
     .line 1
@@ -85,7 +83,7 @@
 
 .method public final setDefaultAudience(Lcom/facebook/SessionDefaultAudience;)Lcom/facebook/Session$OpenRequest;
     .locals 0
-    .parameter "defaultAudience"
+    .param p1, "defaultAudience"    # Lcom/facebook/SessionDefaultAudience;
 
     .prologue
     .line 1958
@@ -97,7 +95,6 @@
 
 .method public bridge synthetic setLoginBehavior(Lcom/facebook/SessionLoginBehavior;)Lcom/facebook/Session$AuthorizationRequest;
     .locals 1
-    .parameter
 
     .prologue
     .line 1
@@ -110,7 +107,7 @@
 
 .method public final setLoginBehavior(Lcom/facebook/SessionLoginBehavior;)Lcom/facebook/Session$OpenRequest;
     .locals 0
-    .parameter "loginBehavior"
+    .param p1, "loginBehavior"    # Lcom/facebook/SessionLoginBehavior;
 
     .prologue
     .line 1907
@@ -122,7 +119,6 @@
 
 .method public bridge synthetic setPermissions(Ljava/util/List;)Lcom/facebook/Session$AuthorizationRequest;
     .locals 1
-    .parameter
 
     .prologue
     .line 1
@@ -135,7 +131,6 @@
 
 .method public bridge varargs synthetic setPermissions([Ljava/lang/String;)Lcom/facebook/Session$AuthorizationRequest;
     .locals 1
-    .parameter
 
     .prologue
     .line 1
@@ -148,7 +143,6 @@
 
 .method public final setPermissions(Ljava/util/List;)Lcom/facebook/Session$OpenRequest;
     .locals 0
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -162,7 +156,7 @@
 
     .prologue
     .line 1934
-    .local p1, permissions:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
+    .local p1, "permissions":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-super {p0, p1}, Lcom/facebook/Session$AuthorizationRequest;->setPermissions(Ljava/util/List;)Lcom/facebook/Session$AuthorizationRequest;
 
     .line 1935
@@ -171,7 +165,7 @@
 
 .method public final varargs setPermissions([Ljava/lang/String;)Lcom/facebook/Session$OpenRequest;
     .locals 0
-    .parameter "permissions"
+    .param p1, "permissions"    # [Ljava/lang/String;
 
     .prologue
     .line 1945
@@ -183,7 +177,6 @@
 
 .method public bridge synthetic setRequestCode(I)Lcom/facebook/Session$AuthorizationRequest;
     .locals 1
-    .parameter
 
     .prologue
     .line 1
@@ -196,7 +189,7 @@
 
 .method public final setRequestCode(I)Lcom/facebook/Session$OpenRequest;
     .locals 0
-    .parameter "requestCode"
+    .param p1, "requestCode"    # I
 
     .prologue
     .line 1921

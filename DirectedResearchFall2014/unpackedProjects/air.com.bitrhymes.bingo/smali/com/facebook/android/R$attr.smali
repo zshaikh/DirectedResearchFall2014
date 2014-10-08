@@ -123,7 +123,7 @@
     sput v0, Lcom/facebook/android/R$attr;->search_text:I
 
     .line 123
-    const/high16 v0, 0x7f01
+    const/high16 v0, 0x7f010000
 
     sput v0, Lcom/facebook/android/R$attr;->show_pictures:I
 

@@ -31,7 +31,6 @@
 
 .method synthetic constructor <init>(Lcom/facebook/TestSession$TestTokenCachingStrategy;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 498
@@ -67,7 +66,7 @@
 
 .method public save(Landroid/os/Bundle;)V
     .locals 0
-    .parameter "value"
+    .param p1, "value"    # Landroid/os/Bundle;
 
     .prologue
     .line 508

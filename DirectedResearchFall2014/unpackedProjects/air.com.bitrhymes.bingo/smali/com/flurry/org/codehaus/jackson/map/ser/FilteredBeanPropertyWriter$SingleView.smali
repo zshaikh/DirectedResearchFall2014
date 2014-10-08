@@ -30,8 +30,7 @@
 # direct methods
 .method protected constructor <init>(Lcom/flurry/org/codehaus/jackson/map/ser/BeanPropertyWriter;Ljava/lang/Class;)V
     .locals 0
-    .parameter "delegate"
-    .parameter
+    .param p1, "delegate"    # Lcom/flurry/org/codehaus/jackson/map/ser/BeanPropertyWriter;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -43,7 +42,7 @@
 
     .prologue
     .line 39
-    .local p2, view:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p2, "view":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-direct {p0, p1}, Lcom/flurry/org/codehaus/jackson/map/ser/BeanPropertyWriter;-><init>(Lcom/flurry/org/codehaus/jackson/map/ser/BeanPropertyWriter;)V
 
     .line 40
@@ -60,9 +59,9 @@
 # virtual methods
 .method public serializeAsField(Ljava/lang/Object;Lcom/flurry/org/codehaus/jackson/JsonGenerator;Lcom/flurry/org/codehaus/jackson/map/SerializerProvider;)V
     .locals 2
-    .parameter "bean"
-    .parameter "jgen"
-    .parameter "prov"
+    .param p1, "bean"    # Ljava/lang/Object;
+    .param p2, "jgen"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator;
+    .param p3, "prov"    # Lcom/flurry/org/codehaus/jackson/map/SerializerProvider;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/Exception;
@@ -76,7 +75,7 @@
     move-result-object v0
 
     .line 54
-    .local v0, activeView:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local v0, "activeView":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     if-eqz v0, :cond_0
 
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/map/ser/FilteredBeanPropertyWriter$SingleView;->_view:Ljava/lang/Class;
@@ -100,7 +99,6 @@
 
 .method public withSerializer(Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;)Lcom/flurry/org/codehaus/jackson/map/ser/BeanPropertyWriter;
     .locals 3
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -114,7 +112,7 @@
 
     .prologue
     .line 46
-    .local p1, ser:Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
+    .local p1, "ser":Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
     new-instance v0, Lcom/flurry/org/codehaus/jackson/map/ser/FilteredBeanPropertyWriter$SingleView;
 
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/map/ser/FilteredBeanPropertyWriter$SingleView;->_delegate:Lcom/flurry/org/codehaus/jackson/map/ser/BeanPropertyWriter;

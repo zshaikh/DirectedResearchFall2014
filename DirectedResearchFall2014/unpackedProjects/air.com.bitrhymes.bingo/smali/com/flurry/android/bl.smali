@@ -18,8 +18,6 @@
 # virtual methods
 .method public final a(Landroid/content/Context;Lcom/flurry/android/AdSpaceLayout;)Landroid/view/ViewGroup$LayoutParams;
     .locals 4
-    .parameter
-    .parameter
 
     .prologue
     const/4 v3, 0x0

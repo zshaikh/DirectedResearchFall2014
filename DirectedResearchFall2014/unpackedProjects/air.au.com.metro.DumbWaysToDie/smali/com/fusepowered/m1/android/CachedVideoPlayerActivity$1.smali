@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m1/android/CachedVideoPlayerActivity;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 178

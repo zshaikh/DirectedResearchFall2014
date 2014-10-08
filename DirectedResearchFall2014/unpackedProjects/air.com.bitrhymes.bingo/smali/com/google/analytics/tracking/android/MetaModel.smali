@@ -49,10 +49,10 @@
 # virtual methods
 .method public addField(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/google/analytics/tracking/android/MetaModel$Formatter;)V
     .locals 2
-    .parameter "key"
-    .parameter "urlParam"
-    .parameter "defaultValue"
-    .parameter "formatter"
+    .param p1, "key"    # Ljava/lang/String;
+    .param p2, "urlParam"    # Ljava/lang/String;
+    .param p3, "defaultValue"    # Ljava/lang/String;
+    .param p4, "formatter"    # Lcom/google/analytics/tracking/android/MetaModel$Formatter;
 
     .prologue
     .line 43
@@ -70,7 +70,7 @@
 
 .method getMetaInfo(Ljava/lang/String;)Lcom/google/analytics/tracking/android/MetaModel$MetaInfo;
     .locals 5
-    .parameter "key"
+    .param p1, "key"    # Ljava/lang/String;
 
     .prologue
     const/4 v3, 0x0
@@ -98,17 +98,17 @@
     invoke-direct {v1, v2, v3, v3}, Lcom/google/analytics/tracking/android/MetaModel$MetaInfo;-><init>(Ljava/lang/String;Ljava/lang/String;Lcom/google/analytics/tracking/android/MetaModel$Formatter;)V
 
     .line 32
-    .end local p0
+    .end local p0    # "this":Lcom/google/analytics/tracking/android/MetaModel;
     :goto_0
     return-object v1
 
     .line 28
-    .restart local p0
+    .restart local p0    # "this":Lcom/google/analytics/tracking/android/MetaModel;
     :cond_0
     move-object v0, p1
 
     .line 29
-    .local v0, tmpKey:Ljava/lang/String;
+    .local v0, "tmpKey":Ljava/lang/String;
     const-string v1, "*"
 
     invoke-virtual {p1, v4}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
@@ -138,7 +138,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/google/analytics/tracking/android/MetaModel;
     check-cast p0, Lcom/google/analytics/tracking/android/MetaModel$MetaInfo;
 
     move-object v1, p0

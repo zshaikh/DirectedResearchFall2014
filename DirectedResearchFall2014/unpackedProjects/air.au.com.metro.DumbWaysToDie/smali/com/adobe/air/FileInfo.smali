@@ -14,9 +14,6 @@
 # direct methods
 .method constructor <init>(JZZ)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 47

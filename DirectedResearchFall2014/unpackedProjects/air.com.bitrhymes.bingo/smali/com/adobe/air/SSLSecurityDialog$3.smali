@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/adobe/air/SSLSecurityDialog;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 139
@@ -39,8 +38,6 @@
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     .line 142
@@ -48,7 +45,7 @@
 
     const-string v1, "none"
 
-    #calls: Lcom/adobe/air/SSLSecurityDialog;->SetUserAction(Ljava/lang/String;)V
+    # invokes: Lcom/adobe/air/SSLSecurityDialog;->SetUserAction(Ljava/lang/String;)V
     invoke-static {v0, v1}, Lcom/adobe/air/SSLSecurityDialog;->access$000(Lcom/adobe/air/SSLSecurityDialog;Ljava/lang/String;)V
 
     .line 143

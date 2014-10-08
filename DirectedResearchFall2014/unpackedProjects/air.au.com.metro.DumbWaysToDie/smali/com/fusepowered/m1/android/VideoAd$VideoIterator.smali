@@ -43,8 +43,8 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Lcom/fusepowered/m1/android/VideoAd;)V
     .locals 1
-    .parameter "context"
-    .parameter "videoAd"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "videoAd"    # Lcom/fusepowered/m1/android/VideoAd;
 
     .prologue
     .line 364
@@ -77,7 +77,7 @@
 # virtual methods
 .method callback(Lcom/fusepowered/m1/android/CachedAd;)Z
     .locals 5
-    .parameter "cachedAd"
+    .param p1, "cachedAd"    # Lcom/fusepowered/m1/android/CachedAd;
 
     .prologue
     .line 375
@@ -95,7 +95,7 @@
     move-object v2, v0
 
     .line 378
-    .local v2, videoAd:Lcom/fusepowered/m1/android/VideoAd;
+    .local v2, "videoAd":Lcom/fusepowered/m1/android/VideoAd;
     iget-object v3, p0, Lcom/fusepowered/m1/android/VideoAd$VideoIterator;->videoAdRef:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v3}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -105,16 +105,16 @@
     check-cast v1, Lcom/fusepowered/m1/android/VideoAd;
 
     .line 379
-    .local v1, requestingVideoAd:Lcom/fusepowered/m1/android/VideoAd;
+    .local v1, "requestingVideoAd":Lcom/fusepowered/m1/android/VideoAd;
     if-eqz v1, :cond_0
 
     .line 381
-    #getter for: Lcom/fusepowered/m1/android/VideoAd;->videoFileId:Ljava/lang/String;
+    # getter for: Lcom/fusepowered/m1/android/VideoAd;->videoFileId:Ljava/lang/String;
     invoke-static {v2}, Lcom/fusepowered/m1/android/VideoAd;->access$000(Lcom/fusepowered/m1/android/VideoAd;)Ljava/lang/String;
 
     move-result-object v3
 
-    #getter for: Lcom/fusepowered/m1/android/VideoAd;->videoFileId:Ljava/lang/String;
+    # getter for: Lcom/fusepowered/m1/android/VideoAd;->videoFileId:Ljava/lang/String;
     invoke-static {v1}, Lcom/fusepowered/m1/android/VideoAd;->access$000(Lcom/fusepowered/m1/android/VideoAd;)Ljava/lang/String;
 
     move-result-object v4
@@ -131,8 +131,8 @@
     iput-boolean v3, p0, Lcom/fusepowered/m1/android/VideoAd$VideoIterator;->hasSharedVideoFile:Z
 
     .line 387
-    .end local v1           #requestingVideoAd:Lcom/fusepowered/m1/android/VideoAd;
-    .end local v2           #videoAd:Lcom/fusepowered/m1/android/VideoAd;
+    .end local v1    # "requestingVideoAd":Lcom/fusepowered/m1/android/VideoAd;
+    .end local v2    # "videoAd":Lcom/fusepowered/m1/android/VideoAd;
     :cond_0
     invoke-super {p0, p1}, Lcom/fusepowered/m1/android/AdCache$Iterator;->callback(Lcom/fusepowered/m1/android/CachedAd;)Z
 
@@ -143,7 +143,7 @@
 
 .method deleteVideoFile(Landroid/content/Context;)V
     .locals 5
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     .line 406
@@ -156,7 +156,7 @@
     check-cast v0, Lcom/fusepowered/m1/android/VideoAd;
 
     .line 407
-    .local v0, requestingVideoAd:Lcom/fusepowered/m1/android/VideoAd;
+    .local v0, "requestingVideoAd":Lcom/fusepowered/m1/android/VideoAd;
     if-eqz v0, :cond_0
 
     .line 409
@@ -164,7 +164,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    #getter for: Lcom/fusepowered/m1/android/VideoAd;->videoFileId:Ljava/lang/String;
+    # getter for: Lcom/fusepowered/m1/android/VideoAd;->videoFileId:Ljava/lang/String;
     invoke-static {v0}, Lcom/fusepowered/m1/android/VideoAd;->access$000(Lcom/fusepowered/m1/android/VideoAd;)Ljava/lang/String;
 
     move-result-object v2
@@ -198,7 +198,7 @@
 
     const/4 v3, 0x0
 
-    #getter for: Lcom/fusepowered/m1/android/VideoAd;->videoFileId:Ljava/lang/String;
+    # getter for: Lcom/fusepowered/m1/android/VideoAd;->videoFileId:Ljava/lang/String;
     invoke-static {v0}, Lcom/fusepowered/m1/android/VideoAd;->access$000(Lcom/fusepowered/m1/android/VideoAd;)Ljava/lang/String;
 
     move-result-object v4
@@ -231,14 +231,14 @@
     check-cast v0, Landroid/content/Context;
 
     .line 396
-    .local v0, context:Landroid/content/Context;
+    .local v0, "context":Landroid/content/Context;
     if-eqz v0, :cond_0
 
     .line 398
     invoke-virtual {p0, v0}, Lcom/fusepowered/m1/android/VideoAd$VideoIterator;->deleteVideoFile(Landroid/content/Context;)V
 
     .line 401
-    .end local v0           #context:Landroid/content/Context;
+    .end local v0    # "context":Landroid/content/Context;
     :cond_0
     invoke-super {p0}, Lcom/fusepowered/m1/android/AdCache$Iterator;->done()V
 

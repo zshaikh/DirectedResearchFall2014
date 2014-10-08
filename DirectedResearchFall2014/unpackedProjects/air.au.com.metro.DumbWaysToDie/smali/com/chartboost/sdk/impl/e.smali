@@ -41,12 +41,11 @@
 
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 5
-    .parameter
 
     .prologue
     const/4 v4, 0x0
 
-    const/high16 v3, 0x3f80
+    const/high16 v3, 0x3f800000
 
     .line 30
     invoke-direct {p0, p1}, Lcom/chartboost/sdk/impl/c;-><init>(Landroid/content/Context;)V
@@ -86,7 +85,7 @@
 
     const/4 v1, 0x2
 
-    const/high16 v2, 0x4180
+    const/high16 v2, 0x41800000
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/TextView;->setTextSize(IF)V
 
@@ -105,7 +104,7 @@
     .line 39
     iget-object v0, p0, Lcom/chartboost/sdk/impl/e;->f:Landroid/widget/TextView;
 
-    const/high16 v1, -0x100
+    const/high16 v1, -0x1000000
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
@@ -171,8 +170,6 @@
 
 .method public a(Lorg/json/JSONObject;I)V
     .locals 6
-    .parameter
-    .parameter
 
     .prologue
     .line 53
@@ -347,7 +344,7 @@
     invoke-virtual {v2, v3, v3, v3, v3}, Landroid/widget/LinearLayout$LayoutParams;->setMargins(IIII)V
 
     .line 92
-    const/high16 v3, 0x3f80
+    const/high16 v3, 0x3f800000
 
     iput v3, v0, Landroid/widget/LinearLayout$LayoutParams;->weight:F
 

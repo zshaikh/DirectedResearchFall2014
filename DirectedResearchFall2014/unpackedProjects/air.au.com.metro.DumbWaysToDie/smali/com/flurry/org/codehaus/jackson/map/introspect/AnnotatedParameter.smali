@@ -14,10 +14,10 @@
 # direct methods
 .method public constructor <init>(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedWithParams;Ljava/lang/reflect/Type;Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;I)V
     .locals 0
-    .parameter "owner"
-    .parameter "type"
-    .parameter "annotations"
-    .parameter "index"
+    .param p1, "owner"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedWithParams;
+    .param p2, "type"    # Ljava/lang/reflect/Type;
+    .param p3, "annotations"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;
+    .param p4, "index"    # I
 
     .prologue
     .line 53
@@ -40,7 +40,7 @@
 # virtual methods
 .method public addOrOverride(Ljava/lang/annotation/Annotation;)V
     .locals 1
-    .parameter "a"
+    .param p1, "a"    # Ljava/lang/annotation/Annotation;
 
     .prologue
     .line 69
@@ -64,7 +64,6 @@
 
 .method public getAnnotation(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<A::",
@@ -77,7 +76,7 @@
 
     .prologue
     .line 106
-    .local p1, acls:Ljava/lang/Class;,"Ljava/lang/Class<TA;>;"
+    .local p1, "acls":Ljava/lang/Class;, "Ljava/lang/Class<TA;>;"
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedParameter;->_annotations:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;
 
     invoke-virtual {v0, p1}, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;->get(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;
@@ -207,7 +206,7 @@
     .line 118
     iget-object p0, p0, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedParameter;->_type:Ljava/lang/reflect/Type;
 
-    .end local p0
+    .end local p0    # "this":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedParameter;
     check-cast p0, Ljava/lang/Class;
 
     move-object v1, p0
@@ -217,7 +216,7 @@
     return-object v1
 
     .line 121
-    .restart local p0
+    .restart local p0    # "this":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedParameter;
     :cond_0
     invoke-static {}, Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;->defaultInstance()Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;
 
@@ -230,7 +229,7 @@
     move-result-object v0
 
     .line 122
-    .local v0, t:Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .local v0, "t":Lcom/flurry/org/codehaus/jackson/type/JavaType;
     invoke-virtual {v0}, Lcom/flurry/org/codehaus/jackson/type/JavaType;->getRawClass()Ljava/lang/Class;
 
     move-result-object v1
@@ -240,8 +239,8 @@
 
 .method public setValue(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 3
-    .parameter "pojo"
-    .parameter "value"
+    .param p1, "pojo"    # Ljava/lang/Object;
+    .param p2, "value"    # Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/UnsupportedOperationException;
@@ -333,7 +332,7 @@
 
 .method public bridge synthetic withAnnotations(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;)Lcom/flurry/org/codehaus/jackson/map/introspect/Annotated;
     .locals 1
-    .parameter "x0"
+    .param p1, "x0"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;
 
     .prologue
     .line 22
@@ -346,7 +345,7 @@
 
 .method public withAnnotations(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;)Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedParameter;
     .locals 2
-    .parameter "ann"
+    .param p1, "ann"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotationMap;
 
     .prologue
     .line 61

@@ -14,7 +14,6 @@
 # direct methods
 .method constructor <init>(Landroid/content/Context;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 40
@@ -65,8 +64,8 @@
 
     iput-object v1, p0, Lcom/vungle/sdk/af;->b:Lcom/vungle/sdk/VungleCache;
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Lcom/vungle/sdk/VungleCache$d; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     .line 74
     :cond_0

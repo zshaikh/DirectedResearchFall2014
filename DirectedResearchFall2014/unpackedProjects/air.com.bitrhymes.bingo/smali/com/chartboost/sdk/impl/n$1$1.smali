@@ -28,9 +28,6 @@
 # direct methods
 .method constructor <init>(Lcom/chartboost/sdk/impl/n$1;Ljava/lang/String;Landroid/app/Activity;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 1

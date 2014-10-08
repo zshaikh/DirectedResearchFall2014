@@ -24,7 +24,6 @@
 # direct methods
 .method private constructor <init>(Lcom/vungle/sdk/j;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 310
@@ -37,8 +36,6 @@
 
 .method synthetic constructor <init>(Lcom/vungle/sdk/j;B)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 310
@@ -51,7 +48,7 @@
 # virtual methods
 .method public final onCompletion(Landroid/media/MediaPlayer;)V
     .locals 5
-    .parameter "mp"
+    .param p1, "mp"    # Landroid/media/MediaPlayer;
 
     .prologue
     .line 313

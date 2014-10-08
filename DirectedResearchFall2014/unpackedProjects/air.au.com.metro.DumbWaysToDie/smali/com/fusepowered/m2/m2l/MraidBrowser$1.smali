@@ -21,7 +21,6 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m2/m2l/M2RBrowser;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1
@@ -37,8 +36,8 @@
 # virtual methods
 .method public onPageFinished(Landroid/webkit/WebView;Ljava/lang/String;)V
     .locals 4
-    .parameter "view"
-    .parameter "url"
+    .param p1, "view"    # Landroid/webkit/WebView;
+    .param p2, "url"    # Ljava/lang/String;
 
     .prologue
     .line 147
@@ -63,11 +62,11 @@
     move-object v0, v2
 
     .line 152
-    .local v0, backImageDrawable:Landroid/graphics/drawable/Drawable;
+    .local v0, "backImageDrawable":Landroid/graphics/drawable/Drawable;
     :goto_0
     iget-object v2, p0, Lcom/fusepowered/m2/m2l/MraidBrowser$1;->this$0:Lcom/fusepowered/m2/m2l/M2RBrowser;
 
-    #getter for: Lcom/fusepowered/m2/m2l/M2RBrowser;->mBackButton:Landroid/widget/ImageButton;
+    # getter for: Lcom/fusepowered/m2/m2l/M2RBrowser;->mBackButton:Landroid/widget/ImageButton;
     invoke-static {v2}, Lcom/fusepowered/m2/m2l/M2RBrowser;->access$1(Lcom/fusepowered/m2/m2l/M2RBrowser;)Landroid/widget/ImageButton;
 
     move-result-object v2
@@ -93,11 +92,11 @@
     move-object v1, v2
 
     .line 157
-    .local v1, forwardImageDrawable:Landroid/graphics/drawable/Drawable;
+    .local v1, "forwardImageDrawable":Landroid/graphics/drawable/Drawable;
     :goto_1
     iget-object v2, p0, Lcom/fusepowered/m2/m2l/MraidBrowser$1;->this$0:Lcom/fusepowered/m2/m2l/M2RBrowser;
 
-    #getter for: Lcom/fusepowered/m2/m2l/M2RBrowser;->mForwardButton:Landroid/widget/ImageButton;
+    # getter for: Lcom/fusepowered/m2/m2l/M2RBrowser;->mForwardButton:Landroid/widget/ImageButton;
     invoke-static {v2}, Lcom/fusepowered/m2/m2l/M2RBrowser;->access$0(Lcom/fusepowered/m2/m2l/M2RBrowser;)Landroid/widget/ImageButton;
 
     move-result-object v2
@@ -108,8 +107,8 @@
     return-void
 
     .line 151
-    .end local v0           #backImageDrawable:Landroid/graphics/drawable/Drawable;
-    .end local v1           #forwardImageDrawable:Landroid/graphics/drawable/Drawable;
+    .end local v0    # "backImageDrawable":Landroid/graphics/drawable/Drawable;
+    .end local v1    # "forwardImageDrawable":Landroid/graphics/drawable/Drawable;
     :cond_0
     sget-object v2, Lcom/fusepowered/m2/m2l/resource/Drawables;->UNLEFT_ARROW:Lcom/fusepowered/m2/m2l/resource/Drawables;
 
@@ -124,7 +123,7 @@
     goto :goto_0
 
     .line 156
-    .restart local v0       #backImageDrawable:Landroid/graphics/drawable/Drawable;
+    .restart local v0    # "backImageDrawable":Landroid/graphics/drawable/Drawable;
     :cond_1
     sget-object v2, Lcom/fusepowered/m2/m2l/resource/Drawables;->UNRIGHT_ARROW:Lcom/fusepowered/m2/m2l/resource/Drawables;
 
@@ -141,9 +140,9 @@
 
 .method public onPageStarted(Landroid/webkit/WebView;Ljava/lang/String;Landroid/graphics/Bitmap;)V
     .locals 3
-    .parameter "view"
-    .parameter "url"
-    .parameter "favicon"
+    .param p1, "view"    # Landroid/webkit/WebView;
+    .param p2, "url"    # Ljava/lang/String;
+    .param p3, "favicon"    # Landroid/graphics/Bitmap;
 
     .prologue
     .line 141
@@ -152,7 +151,7 @@
     .line 142
     iget-object v0, p0, Lcom/fusepowered/m2/m2l/MraidBrowser$1;->this$0:Lcom/fusepowered/m2/m2l/M2RBrowser;
 
-    #getter for: Lcom/fusepowered/m2/m2l/M2RBrowser;->mForwardButton:Landroid/widget/ImageButton;
+    # getter for: Lcom/fusepowered/m2/m2l/M2RBrowser;->mForwardButton:Landroid/widget/ImageButton;
     invoke-static {v0}, Lcom/fusepowered/m2/m2l/M2RBrowser;->access$0(Lcom/fusepowered/m2/m2l/M2RBrowser;)Landroid/widget/ImageButton;
 
     move-result-object v0
@@ -173,10 +172,10 @@
 
 .method public onReceivedError(Landroid/webkit/WebView;ILjava/lang/String;Ljava/lang/String;)V
     .locals 3
-    .parameter "view"
-    .parameter "errorCode"
-    .parameter "description"
-    .parameter "failingUrl"
+    .param p1, "view"    # Landroid/webkit/WebView;
+    .param p2, "errorCode"    # I
+    .param p3, "description"    # Ljava/lang/String;
+    .param p4, "failingUrl"    # Ljava/lang/String;
 
     .prologue
     .line 111
@@ -187,7 +186,7 @@
     check-cast v0, Landroid/app/Activity;
 
     .line 112
-    .local v0, a:Landroid/app/Activity;
+    .local v0, "a":Landroid/app/Activity;
     new-instance v1, Ljava/lang/StringBuilder;
 
     const-string v2, "MRAID error: "
@@ -216,8 +215,8 @@
 
 .method public shouldOverrideUrlLoading(Landroid/webkit/WebView;Ljava/lang/String;)Z
     .locals 7
-    .parameter "view"
-    .parameter "url"
+    .param p1, "view"    # Landroid/webkit/WebView;
+    .param p2, "url"    # Ljava/lang/String;
 
     .prologue
     const/4 v4, 0x0
@@ -238,13 +237,13 @@
     move-result-object v2
 
     .line 120
-    .local v2, uri:Landroid/net/Uri;
+    .local v2, "uri":Landroid/net/Uri;
     invoke-virtual {v2}, Landroid/net/Uri;->getHost()Ljava/lang/String;
 
     move-result-object v1
 
     .line 122
-    .local v1, host:Ljava/lang/String;
+    .local v1, "host":Ljava/lang/String;
     const-string v3, "http:"
 
     invoke-virtual {p2, v3}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
@@ -322,7 +321,7 @@
     move-object v0, v3
 
     .line 131
-    .local v0, exception:Landroid/content/ActivityNotFoundException;
+    .local v0, "exception":Landroid/content/ActivityNotFoundException;
     const-string v3, "MoPub"
 
     new-instance v4, Ljava/lang/StringBuilder;

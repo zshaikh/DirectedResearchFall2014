@@ -153,9 +153,6 @@
 
 .method static synthetic access$1(Lcom/facebook/AuthorizationClient;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 1003
@@ -166,7 +163,6 @@
 
 .method static synthetic access$2(Lcom/facebook/AuthorizationClient;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 474
@@ -177,7 +173,6 @@
 
 .method static synthetic access$3(Lcom/facebook/AuthorizationClient;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 480
@@ -188,9 +183,9 @@
 
 .method private addLoggingExtra(Ljava/lang/String;Ljava/lang/String;Z)V
     .locals 2
-    .parameter "key"
-    .parameter "value"
-    .parameter "accumulate"
+    .param p1, "key"    # Ljava/lang/String;
+    .param p2, "value"    # Ljava/lang/String;
+    .param p3, "accumulate"    # Z
 
     .prologue
     .line 257
@@ -335,7 +330,7 @@
     invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
 
     .line 997
-    .local v0, e2e:Lorg/json/JSONObject;
+    .local v0, "e2e":Lorg/json/JSONObject;
     :try_start_0
     const-string v1, "init"
 
@@ -364,7 +359,7 @@
 
 .method private getHandlerTypes(Lcom/facebook/AuthorizationClient$AuthorizationRequest;)Ljava/util/List;
     .locals 3
-    .parameter "request"
+    .param p1, "request"    # Lcom/facebook/AuthorizationClient$AuthorizationRequest;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -384,13 +379,13 @@
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     .line 191
-    .local v1, handlers:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/facebook/AuthorizationClient$AuthHandler;>;"
+    .local v1, "handlers":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/facebook/AuthorizationClient$AuthHandler;>;"
     invoke-virtual {p1}, Lcom/facebook/AuthorizationClient$AuthorizationRequest;->getLoginBehavior()Lcom/facebook/SessionLoginBehavior;
 
     move-result-object v0
 
     .line 192
-    .local v0, behavior:Lcom/facebook/SessionLoginBehavior;
+    .local v0, "behavior":Lcom/facebook/SessionLoginBehavior;
     invoke-virtual {v0}, Lcom/facebook/SessionLoginBehavior;->allowsKatanaAuth()Z
 
     move-result v2
@@ -448,9 +443,8 @@
 
 .method private logAuthorizationMethodComplete(Ljava/lang/String;Lcom/facebook/AuthorizationClient$Result;Ljava/util/Map;)V
     .locals 6
-    .parameter "method"
-    .parameter "result"
-    .parameter
+    .param p1, "method"    # Ljava/lang/String;
+    .param p2, "result"    # Lcom/facebook/AuthorizationClient$Result;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -466,7 +460,7 @@
 
     .prologue
     .line 495
-    .local p3, loggingExtras:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p3, "loggingExtras":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     iget-object v0, p2, Lcom/facebook/AuthorizationClient$Result;->code:Lcom/facebook/AuthorizationClient$Result$Code;
 
     invoke-virtual {v0}, Lcom/facebook/AuthorizationClient$Result$Code;->getLoggingValue()Ljava/lang/String;
@@ -491,11 +485,10 @@
 
 .method private logAuthorizationMethodComplete(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;)V
     .locals 5
-    .parameter "method"
-    .parameter "result"
-    .parameter "errorMessage"
-    .parameter "errorCode"
-    .parameter
+    .param p1, "method"    # Ljava/lang/String;
+    .param p2, "result"    # Ljava/lang/String;
+    .param p3, "errorMessage"    # Ljava/lang/String;
+    .param p4, "errorCode"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -512,7 +505,7 @@
     .end annotation
 
     .prologue
-    .local p5, loggingExtras:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p5, "loggingExtras":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v4, "5_error_message"
 
     const-string v3, "2_result"
@@ -521,7 +514,7 @@
     const/4 v0, 0x0
 
     .line 502
-    .local v0, bundle:Landroid/os/Bundle;
+    .local v0, "bundle":Landroid/os/Bundle;
     iget-object v2, p0, Lcom/facebook/AuthorizationClient;->pendingRequest:Lcom/facebook/AuthorizationClient$AuthorizationRequest;
 
     if-nez v2, :cond_1
@@ -637,7 +630,7 @@
     invoke-direct {v1, p5}, Lorg/json/JSONObject;-><init>(Ljava/util/Map;)V
 
     .line 521
-    .local v1, jsonObject:Lorg/json/JSONObject;
+    .local v1, "jsonObject":Lorg/json/JSONObject;
     const-string v2, "6_extras"
 
     invoke-virtual {v1}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
@@ -651,7 +644,7 @@
 
 .method private logAuthorizationMethodStart(Ljava/lang/String;)V
     .locals 4
-    .parameter "method"
+    .param p1, "method"    # Ljava/lang/String;
 
     .prologue
     .line 487
@@ -666,7 +659,7 @@
     move-result-object v0
 
     .line 488
-    .local v0, bundle:Landroid/os/Bundle;
+    .local v0, "bundle":Landroid/os/Bundle;
     const-string v1, "1_timestamp_ms"
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -697,8 +690,8 @@
 
 .method private logWebLoginCompleted(Ljava/lang/String;Ljava/lang/String;)V
     .locals 5
-    .parameter "applicationId"
-    .parameter "e2e"
+    .param p1, "applicationId"    # Ljava/lang/String;
+    .param p2, "e2e"    # Ljava/lang/String;
 
     .prologue
     .line 1004
@@ -709,13 +702,13 @@
     move-result-object v0
 
     .line 1006
-    .local v0, appEventsLogger:Lcom/facebook/AppEventsLogger;
+    .local v0, "appEventsLogger":Lcom/facebook/AppEventsLogger;
     new-instance v1, Landroid/os/Bundle;
 
     invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
 
     .line 1007
-    .local v1, parameters:Landroid/os/Bundle;
+    .local v1, "parameters":Landroid/os/Bundle;
     const-string v2, "fb_web_login_e2e"
 
     invoke-virtual {v1, v2, p2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
@@ -747,7 +740,7 @@
 
 .method static newAuthorizationLoggingBundle(Ljava/lang/String;)Landroid/os/Bundle;
     .locals 5
-    .parameter "authLoggerId"
+    .param p0, "authLoggerId"    # Ljava/lang/String;
 
     .prologue
     const-string v4, ""
@@ -758,7 +751,7 @@
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     .line 533
-    .local v0, bundle:Landroid/os/Bundle;
+    .local v0, "bundle":Landroid/os/Bundle;
     const-string v1, "1_timestamp_ms"
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -851,7 +844,7 @@
 
 .method private notifyOnCompleteListener(Lcom/facebook/AuthorizationClient$Result;)V
     .locals 1
-    .parameter "outcome"
+    .param p1, "outcome"    # Lcom/facebook/AuthorizationClient$Result;
 
     .prologue
     .line 469
@@ -873,7 +866,7 @@
 # virtual methods
 .method authorize(Lcom/facebook/AuthorizationClient$AuthorizationRequest;)V
     .locals 2
-    .parameter "request"
+    .param p1, "request"    # Lcom/facebook/AuthorizationClient$AuthorizationRequest;
 
     .prologue
     .line 143
@@ -975,7 +968,7 @@
     move-result v2
 
     .line 213
-    .local v2, permissionCheck:I
+    .local v2, "permissionCheck":I
     if-eqz v2, :cond_1
 
     .line 218
@@ -994,7 +987,7 @@
     move-result-object v1
 
     .line 219
-    .local v1, errorType:Ljava/lang/String;
+    .local v1, "errorType":Ljava/lang/String;
     iget-object v3, p0, Lcom/facebook/AuthorizationClient;->context:Landroid/content/Context;
 
     sget-object v4, Lcom/bitrhymes/facebookext/FacebookExt;->context:Lcom/adobe/fre/FREContext;
@@ -1010,7 +1003,7 @@
     move-result-object v0
 
     .line 220
-    .local v0, errorDescription:Ljava/lang/String;
+    .local v0, "errorDescription":Ljava/lang/String;
     iget-object v3, p0, Lcom/facebook/AuthorizationClient;->pendingRequest:Lcom/facebook/AuthorizationClient$AuthorizationRequest;
 
     invoke-static {v3, v1, v0}, Lcom/facebook/AuthorizationClient$Result;->createErrorResult(Lcom/facebook/AuthorizationClient$AuthorizationRequest;Ljava/lang/String;Ljava/lang/String;)Lcom/facebook/AuthorizationClient$Result;
@@ -1025,8 +1018,8 @@
     goto :goto_0
 
     .line 226
-    .end local v0           #errorDescription:Ljava/lang/String;
-    .end local v1           #errorType:Ljava/lang/String;
+    .end local v0    # "errorDescription":Ljava/lang/String;
+    .end local v1    # "errorType":Ljava/lang/String;
     :cond_1
     iput-boolean v4, p0, Lcom/facebook/AuthorizationClient;->checkedInternetPermission:Z
 
@@ -1038,7 +1031,7 @@
 
 .method checkPermission(Ljava/lang/String;)I
     .locals 1
-    .parameter "permission"
+    .param p1, "permission"    # Ljava/lang/String;
 
     .prologue
     .line 352
@@ -1053,7 +1046,7 @@
 
 .method complete(Lcom/facebook/AuthorizationClient$Result;)V
     .locals 3
-    .parameter "outcome"
+    .param p1, "outcome"    # Lcom/facebook/AuthorizationClient$Result;
 
     .prologue
     const/4 v2, 0x0
@@ -1111,7 +1104,7 @@
 
 .method completeAndValidate(Lcom/facebook/AuthorizationClient$Result;)V
     .locals 1
-    .parameter "outcome"
+    .param p1, "outcome"    # Lcom/facebook/AuthorizationClient$Result;
 
     .prologue
     .line 286
@@ -1189,7 +1182,7 @@
 
 .method createGetPermissionsRequest(Ljava/lang/String;)Lcom/facebook/Request;
     .locals 6
-    .parameter "accessToken"
+    .param p1, "accessToken"    # Ljava/lang/String;
 
     .prologue
     const/4 v1, 0x0
@@ -1200,7 +1193,7 @@
     invoke-direct {v3}, Landroid/os/Bundle;-><init>()V
 
     .line 449
-    .local v3, parameters:Landroid/os/Bundle;
+    .local v3, "parameters":Landroid/os/Bundle;
     const-string v0, "fields"
 
     const-string v2, "id"
@@ -1228,7 +1221,7 @@
 
 .method createGetProfileIdRequest(Ljava/lang/String;)Lcom/facebook/Request;
     .locals 6
-    .parameter "accessToken"
+    .param p1, "accessToken"    # Ljava/lang/String;
 
     .prologue
     const/4 v1, 0x0
@@ -1239,7 +1232,7 @@
     invoke-direct {v3}, Landroid/os/Bundle;-><init>()V
 
     .line 456
-    .local v3, parameters:Landroid/os/Bundle;
+    .local v3, "parameters":Landroid/os/Bundle;
     const-string v0, "fields"
 
     const-string v2, "id"
@@ -1267,7 +1260,7 @@
 
 .method createReauthValidationBatch(Lcom/facebook/AuthorizationClient$Result;)Lcom/facebook/RequestBatch;
     .locals 11
-    .parameter "pendingResult"
+    .param p1, "pendingResult"    # Lcom/facebook/AuthorizationClient$Result;
 
     .prologue
     .line 372
@@ -1276,13 +1269,13 @@
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     .line 373
-    .local v1, fbids:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
+    .local v1, "fbids":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     new-instance v7, Ljava/util/ArrayList;
 
     invoke-direct {v7}, Ljava/util/ArrayList;-><init>()V
 
     .line 374
-    .local v7, tokenPermissions:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
+    .local v7, "tokenPermissions":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     iget-object v9, p1, Lcom/facebook/AuthorizationClient$Result;->token:Lcom/facebook/AccessToken;
 
     invoke-virtual {v9}, Lcom/facebook/AccessToken;->getToken()Ljava/lang/String;
@@ -1290,13 +1283,13 @@
     move-result-object v3
 
     .line 376
-    .local v3, newToken:Ljava/lang/String;
+    .local v3, "newToken":Ljava/lang/String;
     new-instance v2, Lcom/facebook/AuthorizationClient$3;
 
     invoke-direct {v2, p0, v1}, Lcom/facebook/AuthorizationClient$3;-><init>(Lcom/facebook/AuthorizationClient;Ljava/util/ArrayList;)V
 
     .line 389
-    .local v2, meCallback:Lcom/facebook/Request$Callback;
+    .local v2, "meCallback":Lcom/facebook/Request$Callback;
     iget-object v9, p0, Lcom/facebook/AuthorizationClient;->pendingRequest:Lcom/facebook/AuthorizationClient$AuthorizationRequest;
 
     invoke-virtual {v9}, Lcom/facebook/AuthorizationClient$AuthorizationRequest;->getPreviousAccessToken()Ljava/lang/String;
@@ -1304,13 +1297,13 @@
     move-result-object v8
 
     .line 390
-    .local v8, validateSameFbidAsToken:Ljava/lang/String;
+    .local v8, "validateSameFbidAsToken":Ljava/lang/String;
     invoke-virtual {p0, v8}, Lcom/facebook/AuthorizationClient;->createGetProfileIdRequest(Ljava/lang/String;)Lcom/facebook/Request;
 
     move-result-object v4
 
     .line 391
-    .local v4, requestCurrentTokenMe:Lcom/facebook/Request;
+    .local v4, "requestCurrentTokenMe":Lcom/facebook/Request;
     invoke-virtual {v4, v2}, Lcom/facebook/Request;->setCallback(Lcom/facebook/Request$Callback;)V
 
     .line 393
@@ -1319,7 +1312,7 @@
     move-result-object v6
 
     .line 394
-    .local v6, requestNewTokenMe:Lcom/facebook/Request;
+    .local v6, "requestNewTokenMe":Lcom/facebook/Request;
     invoke-virtual {v6, v2}, Lcom/facebook/Request;->setCallback(Lcom/facebook/Request$Callback;)V
 
     .line 396
@@ -1328,7 +1321,7 @@
     move-result-object v5
 
     .line 397
-    .local v5, requestCurrentTokenPermissions:Lcom/facebook/Request;
+    .local v5, "requestCurrentTokenPermissions":Lcom/facebook/Request;
     new-instance v9, Lcom/facebook/AuthorizationClient$4;
 
     invoke-direct {v9, p0, v7}, Lcom/facebook/AuthorizationClient$4;-><init>(Lcom/facebook/AuthorizationClient;Ljava/util/ArrayList;)V
@@ -1357,7 +1350,7 @@
     invoke-direct {v0, v9}, Lcom/facebook/RequestBatch;-><init>([Lcom/facebook/Request;)V
 
     .line 418
-    .local v0, batch:Lcom/facebook/RequestBatch;
+    .local v0, "batch":Lcom/facebook/RequestBatch;
     iget-object v9, p0, Lcom/facebook/AuthorizationClient;->pendingRequest:Lcom/facebook/AuthorizationClient$AuthorizationRequest;
 
     invoke-virtual {v9}, Lcom/facebook/AuthorizationClient$AuthorizationRequest;->getApplicationId()Ljava/lang/String;
@@ -1459,9 +1452,9 @@
 
 .method onActivityResult(IILandroid/content/Intent;)Z
     .locals 1
-    .parameter "requestCode"
-    .parameter "resultCode"
-    .parameter "data"
+    .param p1, "requestCode"    # I
+    .param p2, "resultCode"    # I
+    .param p3, "data"    # Landroid/content/Intent;
 
     .prologue
     .line 182
@@ -1492,7 +1485,7 @@
 
 .method setBackgroundProcessingListener(Lcom/facebook/AuthorizationClient$BackgroundProcessingListener;)V
     .locals 0
-    .parameter "backgroundProcessingListener"
+    .param p1, "backgroundProcessingListener"    # Lcom/facebook/AuthorizationClient$BackgroundProcessingListener;
 
     .prologue
     .line 328
@@ -1504,7 +1497,7 @@
 
 .method setContext(Landroid/app/Activity;)V
     .locals 1
-    .parameter "activity"
+    .param p1, "activity"    # Landroid/app/Activity;
 
     .prologue
     .line 117
@@ -1523,7 +1516,7 @@
 
 .method setContext(Landroid/content/Context;)V
     .locals 1
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     .line 111
@@ -1540,7 +1533,7 @@
 
 .method setOnCompletedListener(Lcom/facebook/AuthorizationClient$OnCompletedListener;)V
     .locals 0
-    .parameter "onCompletedListener"
+    .param p1, "onCompletedListener"    # Lcom/facebook/AuthorizationClient$OnCompletedListener;
 
     .prologue
     .line 320
@@ -1552,7 +1545,7 @@
 
 .method startOrContinueAuth(Lcom/facebook/AuthorizationClient$AuthorizationRequest;)V
     .locals 1
-    .parameter "request"
+    .param p1, "request"    # Lcom/facebook/AuthorizationClient$AuthorizationRequest;
 
     .prologue
     .line 135
@@ -1621,7 +1614,7 @@
     move-result v0
 
     .line 274
-    .local v0, tried:Z
+    .local v0, "tried":Z
     if-eqz v0, :cond_1
 
     .line 275
@@ -1736,7 +1729,7 @@
     move-result v6
 
     .line 241
-    .local v6, started:Z
+    .local v6, "started":Z
     if-eqz v6, :cond_0
 
     goto :goto_0
@@ -1744,7 +1737,7 @@
 
 .method validateSameFbidAndFinish(Lcom/facebook/AuthorizationClient$Result;)V
     .locals 3
-    .parameter "pendingResult"
+    .param p1, "pendingResult"    # Lcom/facebook/AuthorizationClient$Result;
 
     .prologue
     .line 356
@@ -1768,7 +1761,7 @@
     move-result-object v0
 
     .line 362
-    .local v0, batch:Lcom/facebook/RequestBatch;
+    .local v0, "batch":Lcom/facebook/RequestBatch;
     invoke-direct {p0}, Lcom/facebook/AuthorizationClient;->notifyBackgroundProcessingStart()V
 
     .line 364

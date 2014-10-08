@@ -25,9 +25,8 @@
 # direct methods
 .method public constructor <init>(Lcom/fusepowered/m1/android/NVASpeechKit;Ljava/lang/String;D)V
     .locals 1
-    .parameter
-    .parameter "resultString"
-    .parameter "resultScore"
+    .param p2, "resultString"    # Ljava/lang/String;
+    .param p3, "resultScore"    # D
 
     .prologue
     .line 93

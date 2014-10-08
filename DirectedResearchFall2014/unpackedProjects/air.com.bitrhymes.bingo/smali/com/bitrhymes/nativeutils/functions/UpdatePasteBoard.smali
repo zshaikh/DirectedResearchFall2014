@@ -21,8 +21,8 @@
 # virtual methods
 .method public call(Lcom/adobe/fre/FREContext;[Lcom/adobe/fre/FREObject;)Lcom/adobe/fre/FREObject;
     .locals 9
-    .parameter "mContext"
-    .parameter "args"
+    .param p1, "mContext"    # Lcom/adobe/fre/FREContext;
+    .param p2, "args"    # [Lcom/adobe/fre/FREObject;
 
     .prologue
     const-string v5, "clipboard"
@@ -42,7 +42,7 @@
     move-result-object v4
 
     .line 24
-    .local v4, stringVal:Ljava/lang/String;
+    .local v4, "stringVal":Ljava/lang/String;
     if-nez v4, :cond_0
 
     .line 25
@@ -53,7 +53,7 @@
     sget v3, Landroid/os/Build$VERSION;->SDK_INT:I
 
     .line 27
-    .local v3, sdk:I
+    .local v3, "sdk":I
     const/16 v5, 0xb
 
     if-ge v3, v5, :cond_1
@@ -72,21 +72,21 @@
     check-cast v1, Landroid/text/ClipboardManager;
 
     .line 29
-    .local v1, clipboard:Landroid/text/ClipboardManager;
+    .local v1, "clipboard":Landroid/text/ClipboardManager;
     invoke-virtual {v1, v4}, Landroid/text/ClipboardManager;->setText(Ljava/lang/CharSequence;)V
 
     .line 49
-    .end local v1           #clipboard:Landroid/text/ClipboardManager;
-    .end local v3           #sdk:I
-    .end local v4           #stringVal:Ljava/lang/String;
+    .end local v1    # "clipboard":Landroid/text/ClipboardManager;
+    .end local v3    # "sdk":I
+    .end local v4    # "stringVal":Ljava/lang/String;
     :goto_0
     const/4 v5, 0x0
 
     return-object v5
 
     .line 31
-    .restart local v3       #sdk:I
-    .restart local v4       #stringVal:Ljava/lang/String;
+    .restart local v3    # "sdk":I
+    .restart local v4    # "stringVal":Ljava/lang/String;
     :cond_1
     invoke-virtual {p1}, Lcom/adobe/fre/FREContext;->getActivity()Landroid/app/Activity;
 
@@ -101,7 +101,7 @@
     check-cast v1, Landroid/content/ClipboardManager;
 
     .line 32
-    .local v1, clipboard:Landroid/content/ClipboardManager;
+    .local v1, "clipboard":Landroid/content/ClipboardManager;
     const-string v5, "Bash Gaming"
 
     invoke-static {v5, v4}, Landroid/content/ClipData;->newPlainText(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Landroid/content/ClipData;
@@ -109,7 +109,7 @@
     move-result-object v0
 
     .line 33
-    .local v0, clip:Landroid/content/ClipData;
+    .local v0, "clip":Landroid/content/ClipData;
     invoke-virtual {v1, v0}, Landroid/content/ClipboardManager;->setPrimaryClip(Landroid/content/ClipData;)V
     :try_end_0
     .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
@@ -120,17 +120,17 @@
     goto :goto_0
 
     .line 35
-    .end local v0           #clip:Landroid/content/ClipData;
-    .end local v1           #clipboard:Landroid/content/ClipboardManager;
-    .end local v3           #sdk:I
-    .end local v4           #stringVal:Ljava/lang/String;
+    .end local v0    # "clip":Landroid/content/ClipData;
+    .end local v1    # "clipboard":Landroid/content/ClipboardManager;
+    .end local v3    # "sdk":I
+    .end local v4    # "stringVal":Ljava/lang/String;
     :catch_0
     move-exception v5
 
     move-object v2, v5
 
     .line 36
-    .local v2, e:Ljava/lang/IllegalStateException;
+    .local v2, "e":Ljava/lang/IllegalStateException;
     const-string v5, "ERROR_EVENT"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -199,14 +199,14 @@
     goto :goto_0
 
     .line 38
-    .end local v2           #e:Ljava/lang/IllegalStateException;
+    .end local v2    # "e":Ljava/lang/IllegalStateException;
     :catch_1
     move-exception v5
 
     move-object v2, v5
 
     .line 39
-    .local v2, e:Lcom/adobe/fre/FRETypeMismatchException;
+    .local v2, "e":Lcom/adobe/fre/FRETypeMismatchException;
     const-string v5, "ERROR_EVENT"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -275,14 +275,14 @@
     goto/16 :goto_0
 
     .line 41
-    .end local v2           #e:Lcom/adobe/fre/FRETypeMismatchException;
+    .end local v2    # "e":Lcom/adobe/fre/FRETypeMismatchException;
     :catch_2
     move-exception v5
 
     move-object v2, v5
 
     .line 42
-    .local v2, e:Lcom/adobe/fre/FREInvalidObjectException;
+    .local v2, "e":Lcom/adobe/fre/FREInvalidObjectException;
     const-string v5, "ERROR_EVENT"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -351,14 +351,14 @@
     goto/16 :goto_0
 
     .line 44
-    .end local v2           #e:Lcom/adobe/fre/FREInvalidObjectException;
+    .end local v2    # "e":Lcom/adobe/fre/FREInvalidObjectException;
     :catch_3
     move-exception v5
 
     move-object v2, v5
 
     .line 45
-    .local v2, e:Lcom/adobe/fre/FREWrongThreadException;
+    .local v2, "e":Lcom/adobe/fre/FREWrongThreadException;
     const-string v5, "ERROR_EVENT"
 
     new-instance v5, Ljava/lang/StringBuilder;

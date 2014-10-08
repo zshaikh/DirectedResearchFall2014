@@ -23,7 +23,6 @@
 # direct methods
 .method public constructor <init>(Landroid/view/InputDevice;)V
     .locals 7
-    .parameter
 
     .prologue
     const/4 v0, 0x0
@@ -149,7 +148,7 @@
 
     const/4 v3, 0x0
 
-    const/high16 v4, 0x3f80
+    const/high16 v4, 0x3f800000
 
     invoke-direct {v1, v2, v0, v3, v4}, Lcom/adobe/air/AndroidInputControl;-><init>(Lcom/adobe/air/ControlType;IFF)V
 
@@ -178,7 +177,6 @@
 
 .method private static isGameKey(I)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 322
@@ -213,7 +211,6 @@
 # virtual methods
 .method public getInputControl(I)Lcom/adobe/air/AndroidInputControl;
     .locals 1
-    .parameter
 
     .prologue
     .line 317
@@ -268,7 +265,6 @@
 
 .method public onGenericMotionEvent(Landroid/view/MotionEvent;)Z
     .locals 4
-    .parameter
 
     .prologue
     .line 370
@@ -336,7 +332,6 @@
 
 .method public onKeyEvent(Landroid/view/KeyEvent;)Z
     .locals 6
-    .parameter
 
     .prologue
     const/4 v5, 0x1
@@ -404,7 +399,7 @@
 
     .line 354
     :pswitch_0
-    const/high16 v1, 0x3f80
+    const/high16 v1, 0x3f800000
 
     invoke-virtual {v0, v1}, Lcom/adobe/air/AndroidInputControl;->setData(F)V
 

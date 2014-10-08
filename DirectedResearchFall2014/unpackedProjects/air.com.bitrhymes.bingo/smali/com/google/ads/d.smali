@@ -35,8 +35,6 @@
 # virtual methods
 .method public a(Lcom/google/ads/c;I)V
     .locals 4
-    .parameter
-    .parameter
 
     .prologue
     .line 57

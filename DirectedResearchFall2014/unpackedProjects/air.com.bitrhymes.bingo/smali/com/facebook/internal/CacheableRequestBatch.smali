@@ -23,7 +23,7 @@
 
 .method public varargs constructor <init>([Lcom/facebook/Request;)V
     .locals 0
-    .parameter "requests"
+    .param p1, "requests"    # [Lcom/facebook/Request;
 
     .prologue
     .line 35
@@ -57,7 +57,7 @@
 
 .method public final setCacheKeyOverride(Ljava/lang/String;)V
     .locals 0
-    .parameter "cacheKey"
+    .param p1, "cacheKey"    # Ljava/lang/String;
 
     .prologue
     .line 46
@@ -69,7 +69,7 @@
 
 .method public final setForceRoundTrip(Z)V
     .locals 0
-    .parameter "forceRoundTrip"
+    .param p1, "forceRoundTrip"    # Z
 
     .prologue
     .line 54

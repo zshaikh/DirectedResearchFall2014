@@ -25,8 +25,8 @@
 
 .method private storeUDID(Landroid/content/Context;Ljava/lang/String;)V
     .locals 4
-    .parameter "context"
-    .parameter "udidID"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "udidID"    # Ljava/lang/String;
 
     .prologue
     .line 43
@@ -39,13 +39,13 @@
     move-result-object v1
 
     .line 44
-    .local v1, mPreferences:Landroid/content/SharedPreferences;
+    .local v1, "mPreferences":Landroid/content/SharedPreferences;
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
     .line 45
-    .local v0, e:Landroid/content/SharedPreferences$Editor;
+    .local v0, "e":Landroid/content/SharedPreferences$Editor;
     const-string v2, "udid"
 
     invoke-interface {v0, v2, p2}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
@@ -61,8 +61,8 @@
 # virtual methods
 .method public call(Lcom/adobe/fre/FREContext;[Lcom/adobe/fre/FREObject;)Lcom/adobe/fre/FREObject;
     .locals 9
-    .parameter "arg0"
-    .parameter "arg1"
+    .param p1, "arg0"    # Lcom/adobe/fre/FREContext;
+    .param p2, "arg1"    # [Lcom/adobe/fre/FREObject;
 
     .prologue
     const/4 v8, 0x0
@@ -73,7 +73,7 @@
     const-string v3, ""
 
     .line 22
-    .local v3, rawUDID:Ljava/lang/String;
+    .local v3, "rawUDID":Ljava/lang/String;
     :try_start_0
     invoke-virtual {p1}, Lcom/adobe/fre/FREContext;->getActivity()Landroid/app/Activity;
 
@@ -88,7 +88,7 @@
     move-result-object v2
 
     .line 23
-    .local v2, mPreferences:Landroid/content/SharedPreferences;
+    .local v2, "mPreferences":Landroid/content/SharedPreferences;
     const-string v4, "udid"
 
     const/4 v5, 0x0
@@ -135,7 +135,7 @@
     const/4 v0, 0x0
 
     .line 34
-    .local v0, deviceInfoObject:Lcom/adobe/fre/FREObject;
+    .local v0, "deviceInfoObject":Lcom/adobe/fre/FREObject;
     invoke-static {v3}, Lcom/adobe/fre/FREObject;->newObject(Ljava/lang/String;)Lcom/adobe/fre/FREObject;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -145,8 +145,8 @@
     move-object v4, v0
 
     .line 39
-    .end local v0           #deviceInfoObject:Lcom/adobe/fre/FREObject;
-    .end local v2           #mPreferences:Landroid/content/SharedPreferences;
+    .end local v0    # "deviceInfoObject":Lcom/adobe/fre/FREObject;
+    .end local v2    # "mPreferences":Landroid/content/SharedPreferences;
     :goto_0
     return-object v4
 
@@ -157,7 +157,7 @@
     move-object v1, v4
 
     .line 37
-    .local v1, e:Ljava/lang/Exception;
+    .local v1, "e":Ljava/lang/Exception;
     const-string v4, "ERROR_EVENT"
 
     new-instance v5, Ljava/lang/StringBuilder;

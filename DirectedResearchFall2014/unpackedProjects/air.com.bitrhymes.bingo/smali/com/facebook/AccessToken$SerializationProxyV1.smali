@@ -45,11 +45,10 @@
 # direct methods
 .method private constructor <init>(Ljava/lang/String;Ljava/util/Date;Ljava/util/List;Lcom/facebook/AccessTokenSource;Ljava/util/Date;)V
     .locals 0
-    .parameter "token"
-    .parameter "expires"
-    .parameter
-    .parameter "source"
-    .parameter "lastRefresh"
+    .param p1, "token"    # Ljava/lang/String;
+    .param p2, "expires"    # Ljava/util/Date;
+    .param p4, "source"    # Lcom/facebook/AccessTokenSource;
+    .param p5, "lastRefresh"    # Ljava/util/Date;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -67,7 +66,7 @@
 
     .prologue
     .line 310
-    .local p3, permissions:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
+    .local p3, "permissions":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 312
@@ -91,12 +90,6 @@
 
 .method synthetic constructor <init>(Ljava/lang/String;Ljava/util/Date;Ljava/util/List;Lcom/facebook/AccessTokenSource;Ljava/util/Date;Lcom/facebook/AccessToken$SerializationProxyV1;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 310

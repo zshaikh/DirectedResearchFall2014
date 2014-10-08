@@ -32,8 +32,6 @@
 # direct methods
 .method public constructor <init>(Lcom/chartboost/sdk/impl/h$a;Landroid/content/Context;)V
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     .line 266
@@ -61,7 +59,6 @@
 
 .method static synthetic a(Lcom/chartboost/sdk/impl/h$a$a;)Lcom/chartboost/sdk/impl/h$a;
     .locals 1
-    .parameter
 
     .prologue
     .line 262
@@ -74,7 +71,6 @@
 # virtual methods
 .method public a(I)Lorg/json/JSONObject;
     .locals 1
-    .parameter
 
     .prologue
     .line 336
@@ -122,7 +118,6 @@
 
 .method public synthetic getItem(I)Ljava/lang/Object;
     .locals 1
-    .parameter
 
     .prologue
     .line 1
@@ -135,9 +130,9 @@
 
 .method public getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
     .locals 8
-    .parameter "position"
-    .parameter "convertView"
-    .parameter "parent"
+    .param p1, "position"    # I
+    .param p2, "convertView"    # Landroid/view/View;
+    .param p3, "parent"    # Landroid/view/ViewGroup;
 
     .prologue
     const/4 v7, -0x1
@@ -224,7 +219,7 @@
     invoke-direct {v5, v6, v1}, Lcom/chartboost/sdk/impl/t;-><init>(Landroid/content/Context;Landroid/view/View;)V
 
     .line 296
-    .end local p2
+    .end local p2    # "convertView":Landroid/view/View;
     :goto_1
     invoke-interface {v2, v4, p1}, Lcom/chartboost/sdk/impl/h$b;->a(Lorg/json/JSONObject;I)V
 
@@ -284,7 +279,7 @@
     return-object v5
 
     .line 285
-    .restart local p2
+    .restart local p2    # "convertView":Landroid/view/View;
     :cond_3
     const-string v5, "regular"
 
@@ -331,7 +326,7 @@
     check-cast p2, Lcom/chartboost/sdk/impl/t;
 
     .line 293
-    .end local p2
+    .end local p2    # "convertView":Landroid/view/View;
     invoke-virtual {p2}, Lcom/chartboost/sdk/impl/t;->a()Landroid/view/View;
 
     move-result-object v1

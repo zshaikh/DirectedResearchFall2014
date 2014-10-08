@@ -17,7 +17,7 @@
 
 .method static setOwnerOnlyReadWrite(Ljava/lang/String;)Z
     .locals 6
-    .parameter "path"
+    .param p0, "path"    # Ljava/lang/String;
 
     .prologue
     const/4 v5, 0x1
@@ -28,7 +28,7 @@
     const/16 v1, 0x9
 
     .line 40
-    .local v1, minVersionForSetReadableWritable:I
+    .local v1, "minVersionForSetReadableWritable":I
     invoke-static {}, Lcom/google/analytics/tracking/android/FutureApis;->version()I
 
     move-result v3
@@ -46,13 +46,13 @@
     const/4 v2, 0x1
 
     .line 44
-    .local v2, ownerOnly:Z
+    .local v2, "ownerOnly":Z
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, p0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
     .line 47
-    .local v0, file:Ljava/io/File;
+    .local v0, "file":Ljava/io/File;
     invoke-virtual {v0, v4, v4}, Ljava/io/File;->setReadable(ZZ)Z
 
     .line 48
@@ -85,19 +85,19 @@
     move-result v1
 
     .line 31
-    .local v1, version:I
+    .local v1, "version":I
     :goto_0
     return v1
 
     .line 27
-    .end local v1           #version:I
+    .end local v1    # "version":I
     :catch_0
     move-exception v2
 
     move-object v0, v2
 
     .line 28
-    .local v0, ignored:Ljava/lang/NumberFormatException;
+    .local v0, "ignored":Ljava/lang/NumberFormatException;
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -123,6 +123,6 @@
     .line 29
     const/4 v1, 0x0
 
-    .restart local v1       #version:I
+    .restart local v1    # "version":I
     goto :goto_0
 .end method

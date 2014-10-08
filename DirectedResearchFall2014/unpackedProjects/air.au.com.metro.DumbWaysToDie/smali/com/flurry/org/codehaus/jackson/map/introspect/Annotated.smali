@@ -55,7 +55,7 @@
 
 .method public getType(Lcom/flurry/org/codehaus/jackson/map/type/TypeBindings;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .locals 1
-    .parameter "context"
+    .param p1, "context"    # Lcom/flurry/org/codehaus/jackson/map/type/TypeBindings;
 
     .prologue
     .line 64
@@ -72,7 +72,6 @@
 
 .method public final hasAnnotation(Ljava/lang/Class;)Z
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<A::",
@@ -85,7 +84,7 @@
 
     .prologue
     .line 23
-    .local p1, acls:Ljava/lang/Class;,"Ljava/lang/Class<TA;>;"
+    .local p1, "acls":Ljava/lang/Class;, "Ljava/lang/Class<TA;>;"
     invoke-virtual {p0, p1}, Lcom/flurry/org/codehaus/jackson/map/introspect/Annotated;->getAnnotation(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;
 
     move-result-object v0
@@ -124,7 +123,7 @@
 
 .method public final withFallBackAnnotationsFrom(Lcom/flurry/org/codehaus/jackson/map/introspect/Annotated;)Lcom/flurry/org/codehaus/jackson/map/introspect/Annotated;
     .locals 2
-    .parameter "annotated"
+    .param p1, "annotated"    # Lcom/flurry/org/codehaus/jackson/map/introspect/Annotated;
 
     .prologue
     .line 41

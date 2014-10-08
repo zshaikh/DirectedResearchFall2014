@@ -33,8 +33,8 @@
 # virtual methods
 .method public accept(Ljava/io/File;Ljava/lang/String;)Z
     .locals 1
-    .parameter "dir"
-    .parameter "filename"
+    .param p1, "dir"    # Ljava/io/File;
+    .param p2, "filename"    # Ljava/lang/String;
 
     .prologue
     .line 324

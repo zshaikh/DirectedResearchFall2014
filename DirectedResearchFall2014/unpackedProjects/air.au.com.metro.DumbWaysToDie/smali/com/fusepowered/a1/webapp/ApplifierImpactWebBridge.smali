@@ -162,7 +162,7 @@
 
 .method public constructor <init>(Lcom/fusepowered/a1/webapp/IApplifierImpactWebBrigeListener;)V
     .locals 1
-    .parameter "listener"
+    .param p1, "listener"    # Lcom/fusepowered/a1/webapp/IApplifierImpactWebBrigeListener;
 
     .prologue
     .line 53
@@ -182,7 +182,7 @@
 
 .method private getEventType(Ljava/lang/String;)Lcom/fusepowered/a1/webapp/ApplifierImpactWebBridge$ApplifierImpactWebEvent;
     .locals 5
-    .parameter "event"
+    .param p1, "event"    # Ljava/lang/String;
 
     .prologue
     .line 45
@@ -208,7 +208,7 @@
     aget-object v0, v1, v3
 
     .line 46
-    .local v0, evt:Lcom/fusepowered/a1/webapp/ApplifierImpactWebBridge$ApplifierImpactWebEvent;
+    .local v0, "evt":Lcom/fusepowered/a1/webapp/ApplifierImpactWebBridge$ApplifierImpactWebEvent;
     invoke-virtual {v0}, Lcom/fusepowered/a1/webapp/ApplifierImpactWebBridge$ApplifierImpactWebEvent;->toString()Ljava/lang/String;
 
     move-result-object v4
@@ -235,8 +235,8 @@
 # virtual methods
 .method public handleWebEvent(Ljava/lang/String;Ljava/lang/String;)Z
     .locals 12
-    .parameter "type"
-    .parameter "data"
+    .param p1, "type"    # Ljava/lang/String;
+    .param p2, "data"    # Ljava/lang/String;
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 
@@ -291,15 +291,15 @@
     const/4 v5, 0x0
 
     .line 64
-    .local v5, jsonData:Lorg/json/JSONObject;
+    .local v5, "jsonData":Lorg/json/JSONObject;
     const/4 v7, 0x0
 
     .line 65
-    .local v7, parameters:Lorg/json/JSONObject;
+    .local v7, "parameters":Lorg/json/JSONObject;
     move-object v2, p1
 
     .line 68
-    .local v2, event:Ljava/lang/String;
+    .local v2, "event":Ljava/lang/String;
     :try_start_0
     new-instance v6, Lorg/json/JSONObject;
 
@@ -308,8 +308,8 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 69
-    .end local v5           #jsonData:Lorg/json/JSONObject;
-    .local v6, jsonData:Lorg/json/JSONObject;
+    .end local v5    # "jsonData":Lorg/json/JSONObject;
+    .local v6, "jsonData":Lorg/json/JSONObject;
     :try_start_1
     const-string v8, "data"
 
@@ -322,8 +322,8 @@
     move-object v5, v6
 
     .line 75
-    .end local v6           #jsonData:Lorg/json/JSONObject;
-    .restart local v5       #jsonData:Lorg/json/JSONObject;
+    .end local v6    # "jsonData":Lorg/json/JSONObject;
+    .restart local v5    # "jsonData":Lorg/json/JSONObject;
     :goto_1
     if-eqz v5, :cond_2
 
@@ -341,7 +341,7 @@
     move-object v1, v8
 
     .line 72
-    .local v1, e:Ljava/lang/Exception;
+    .local v1, "e":Ljava/lang/Exception;
     :goto_2
     new-instance v8, Ljava/lang/StringBuilder;
 
@@ -366,14 +366,14 @@
     goto :goto_1
 
     .line 77
-    .end local v1           #e:Ljava/lang/Exception;
+    .end local v1    # "e":Ljava/lang/Exception;
     :cond_3
     invoke-direct {p0, v2}, Lcom/fusepowered/a1/webapp/ApplifierImpactWebBridge;->getEventType(Ljava/lang/String;)Lcom/fusepowered/a1/webapp/ApplifierImpactWebBridge$ApplifierImpactWebEvent;
 
     move-result-object v3
 
     .line 79
-    .local v3, eventType:Lcom/fusepowered/a1/webapp/ApplifierImpactWebBridge$ApplifierImpactWebEvent;
+    .local v3, "eventType":Lcom/fusepowered/a1/webapp/ApplifierImpactWebBridge$ApplifierImpactWebEvent;
     if-nez v3, :cond_4
 
     move v8, v10
@@ -455,7 +455,7 @@
     const/4 v0, 0x0
 
     .line 102
-    .local v0, clickUrl:Ljava/lang/String;
+    .local v0, "clickUrl":Ljava/lang/String;
     :try_start_2
     const-string v8, "clickUrl"
 
@@ -477,7 +477,7 @@
     invoke-direct {v4, v8}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
     .line 112
-    .local v4, i:Landroid/content/Intent;
+    .local v4, "i":Landroid/content/Intent;
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v8
@@ -494,14 +494,14 @@
     goto :goto_3
 
     .line 115
-    .end local v4           #i:Landroid/content/Intent;
+    .end local v4    # "i":Landroid/content/Intent;
     :catch_1
     move-exception v8
 
     move-object v1, v8
 
     .line 116
-    .restart local v1       #e:Ljava/lang/Exception;
+    .restart local v1    # "e":Ljava/lang/Exception;
     new-instance v8, Ljava/lang/StringBuilder;
 
     const-string v9, "Could not start activity for opening URL: "
@@ -527,14 +527,14 @@
     goto :goto_3
 
     .line 104
-    .end local v1           #e:Ljava/lang/Exception;
+    .end local v1    # "e":Ljava/lang/Exception;
     :catch_2
     move-exception v8
 
     move-object v1, v8
 
     .line 105
-    .restart local v1       #e:Ljava/lang/Exception;
+    .restart local v1    # "e":Ljava/lang/Exception;
     const-string v8, "Error fetching clickUrl"
 
     invoke-static {v8, p0}, Lcom/fusepowered/a1/ApplifierImpactUtils;->Log(Ljava/lang/String;Ljava/lang/Object;)V
@@ -545,11 +545,11 @@
     goto/16 :goto_0
 
     .line 71
-    .end local v0           #clickUrl:Ljava/lang/String;
-    .end local v1           #e:Ljava/lang/Exception;
-    .end local v3           #eventType:Lcom/fusepowered/a1/webapp/ApplifierImpactWebBridge$ApplifierImpactWebEvent;
-    .end local v5           #jsonData:Lorg/json/JSONObject;
-    .restart local v6       #jsonData:Lorg/json/JSONObject;
+    .end local v0    # "clickUrl":Ljava/lang/String;
+    .end local v1    # "e":Ljava/lang/Exception;
+    .end local v3    # "eventType":Lcom/fusepowered/a1/webapp/ApplifierImpactWebBridge$ApplifierImpactWebEvent;
+    .end local v5    # "jsonData":Lorg/json/JSONObject;
+    .restart local v6    # "jsonData":Lorg/json/JSONObject;
     :catch_3
     move-exception v8
 
@@ -557,8 +557,8 @@
 
     move-object v5, v6
 
-    .end local v6           #jsonData:Lorg/json/JSONObject;
-    .restart local v5       #jsonData:Lorg/json/JSONObject;
+    .end local v6    # "jsonData":Lorg/json/JSONObject;
+    .restart local v5    # "jsonData":Lorg/json/JSONObject;
     goto/16 :goto_2
 
     .line 81

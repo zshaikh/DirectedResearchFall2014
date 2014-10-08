@@ -21,7 +21,6 @@
 # direct methods
 .method private constructor <init>(Lcom/tapjoy/TapjoyVideoView;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 475
@@ -34,8 +33,8 @@
 
 .method synthetic constructor <init>(Lcom/tapjoy/TapjoyVideoView;Lcom/tapjoy/TapjoyVideoView$1;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
+    .param p1, "x0"    # Lcom/tapjoy/TapjoyVideoView;
+    .param p2, "x1"    # Lcom/tapjoy/TapjoyVideoView$1;
 
     .prologue
     .line 475

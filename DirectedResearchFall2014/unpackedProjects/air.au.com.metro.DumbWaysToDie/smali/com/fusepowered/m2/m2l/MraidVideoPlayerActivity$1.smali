@@ -21,8 +21,7 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m2/m2l/M2RvpActivity;Landroid/content/Context;)V
     .locals 0
-    .parameter
-    .parameter "$anonymous0"
+    .param p2, "$anonymous0"    # Landroid/content/Context;
 
     .prologue
     .line 1

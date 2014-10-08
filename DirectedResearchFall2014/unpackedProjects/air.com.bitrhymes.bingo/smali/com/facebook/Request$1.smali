@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/facebook/Request$GraphUserCallback;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1
@@ -40,7 +39,7 @@
 # virtual methods
 .method public onCompleted(Lcom/facebook/Response;)V
     .locals 2
-    .parameter "response"
+    .param p1, "response"    # Lcom/facebook/Response;
 
     .prologue
     .line 268
@@ -57,7 +56,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/facebook/Request$1;
     check-cast p0, Lcom/facebook/model/GraphUser;
 
     invoke-interface {v0, p0, p1}, Lcom/facebook/Request$GraphUserCallback;->onCompleted(Lcom/facebook/model/GraphUser;Lcom/facebook/Response;)V

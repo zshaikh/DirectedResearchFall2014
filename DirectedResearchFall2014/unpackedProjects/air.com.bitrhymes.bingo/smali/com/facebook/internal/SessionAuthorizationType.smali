@@ -69,8 +69,6 @@
 
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 24
@@ -81,7 +79,6 @@
 
 .method public static valueOf(Ljava/lang/String;)Lcom/facebook/internal/SessionAuthorizationType;
     .locals 1
-    .parameter
 
     .prologue
     .line 1

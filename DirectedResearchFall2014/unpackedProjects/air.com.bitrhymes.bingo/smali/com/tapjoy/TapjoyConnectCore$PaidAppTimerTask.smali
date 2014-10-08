@@ -21,7 +21,6 @@
 # direct methods
 .method private constructor <init>(Lcom/tapjoy/TapjoyConnectCore;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 979
@@ -34,8 +33,8 @@
 
 .method synthetic constructor <init>(Lcom/tapjoy/TapjoyConnectCore;Lcom/tapjoy/TapjoyConnectCore$1;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
+    .param p1, "x0"    # Lcom/tapjoy/TapjoyConnectCore;
+    .param p2, "x1"    # Lcom/tapjoy/TapjoyConnectCore$1;
 
     .prologue
     .line 979
@@ -61,6 +60,7 @@
 
     const-wide/16 v3, 0x2710
 
+    # += operator for: Lcom/tapjoy/TapjoyConnectCore;->elapsed_time:J
     invoke-static {v2, v3, v4}, Lcom/tapjoy/TapjoyConnectCore;->access$014(Lcom/tapjoy/TapjoyConnectCore;J)J
 
     .line 985
@@ -78,7 +78,7 @@
 
     iget-object v3, p0, Lcom/tapjoy/TapjoyConnectCore$PaidAppTimerTask;->this$0:Lcom/tapjoy/TapjoyConnectCore;
 
-    #getter for: Lcom/tapjoy/TapjoyConnectCore;->elapsed_time:J
+    # getter for: Lcom/tapjoy/TapjoyConnectCore;->elapsed_time:J
     invoke-static {v3}, Lcom/tapjoy/TapjoyConnectCore;->access$000(Lcom/tapjoy/TapjoyConnectCore;)J
 
     move-result-wide v3
@@ -95,7 +95,7 @@
 
     iget-object v3, p0, Lcom/tapjoy/TapjoyConnectCore$PaidAppTimerTask;->this$0:Lcom/tapjoy/TapjoyConnectCore;
 
-    #getter for: Lcom/tapjoy/TapjoyConnectCore;->elapsed_time:J
+    # getter for: Lcom/tapjoy/TapjoyConnectCore;->elapsed_time:J
     invoke-static {v3}, Lcom/tapjoy/TapjoyConnectCore;->access$000(Lcom/tapjoy/TapjoyConnectCore;)J
 
     move-result-wide v3
@@ -116,7 +116,7 @@
 
     iget-object v3, p0, Lcom/tapjoy/TapjoyConnectCore$PaidAppTimerTask;->this$0:Lcom/tapjoy/TapjoyConnectCore;
 
-    #getter for: Lcom/tapjoy/TapjoyConnectCore;->elapsed_time:J
+    # getter for: Lcom/tapjoy/TapjoyConnectCore;->elapsed_time:J
     invoke-static {v3}, Lcom/tapjoy/TapjoyConnectCore;->access$000(Lcom/tapjoy/TapjoyConnectCore;)J
 
     move-result-wide v3
@@ -142,6 +142,7 @@
     invoke-static {v6, v2}, Lcom/tapjoy/TapjoyLog;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 987
+    # getter for: Lcom/tapjoy/TapjoyConnectCore;->context:Landroid/content/Context;
     invoke-static {}, Lcom/tapjoy/TapjoyConnectCore;->access$100()Landroid/content/Context;
 
     move-result-object v2
@@ -155,18 +156,18 @@
     move-result-object v1
 
     .line 988
-    .local v1, prefs:Landroid/content/SharedPreferences;
+    .local v1, "prefs":Landroid/content/SharedPreferences;
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
     .line 989
-    .local v0, editor:Landroid/content/SharedPreferences$Editor;
+    .local v0, "editor":Landroid/content/SharedPreferences$Editor;
     const-string v2, "tapjoy_elapsed_time"
 
     iget-object v3, p0, Lcom/tapjoy/TapjoyConnectCore$PaidAppTimerTask;->this$0:Lcom/tapjoy/TapjoyConnectCore;
 
-    #getter for: Lcom/tapjoy/TapjoyConnectCore;->elapsed_time:J
+    # getter for: Lcom/tapjoy/TapjoyConnectCore;->elapsed_time:J
     invoke-static {v3}, Lcom/tapjoy/TapjoyConnectCore;->access$000(Lcom/tapjoy/TapjoyConnectCore;)J
 
     move-result-wide v3
@@ -179,7 +180,7 @@
     .line 993
     iget-object v2, p0, Lcom/tapjoy/TapjoyConnectCore$PaidAppTimerTask;->this$0:Lcom/tapjoy/TapjoyConnectCore;
 
-    #getter for: Lcom/tapjoy/TapjoyConnectCore;->elapsed_time:J
+    # getter for: Lcom/tapjoy/TapjoyConnectCore;->elapsed_time:J
     invoke-static {v2}, Lcom/tapjoy/TapjoyConnectCore;->access$000(Lcom/tapjoy/TapjoyConnectCore;)J
 
     move-result-wide v2
@@ -198,12 +199,14 @@
     invoke-static {v6, v2}, Lcom/tapjoy/TapjoyLog;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 998
+    # getter for: Lcom/tapjoy/TapjoyConnectCore;->paidAppActionID:Ljava/lang/String;
     invoke-static {}, Lcom/tapjoy/TapjoyConnectCore;->access$200()Ljava/lang/String;
 
     move-result-object v2
 
     if-eqz v2, :cond_0
 
+    # getter for: Lcom/tapjoy/TapjoyConnectCore;->paidAppActionID:Ljava/lang/String;
     invoke-static {}, Lcom/tapjoy/TapjoyConnectCore;->access$200()Ljava/lang/String;
 
     move-result-object v2
@@ -224,6 +227,7 @@
     .line 1002
     iget-object v2, p0, Lcom/tapjoy/TapjoyConnectCore$PaidAppTimerTask;->this$0:Lcom/tapjoy/TapjoyConnectCore;
 
+    # getter for: Lcom/tapjoy/TapjoyConnectCore;->paidAppActionID:Ljava/lang/String;
     invoke-static {}, Lcom/tapjoy/TapjoyConnectCore;->access$200()Ljava/lang/String;
 
     move-result-object v3

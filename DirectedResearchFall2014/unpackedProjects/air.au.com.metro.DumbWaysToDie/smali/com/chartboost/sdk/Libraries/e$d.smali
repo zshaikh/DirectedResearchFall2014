@@ -21,7 +21,6 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 3
-    .parameter
 
     .prologue
     const/4 v2, 0x0
@@ -146,7 +145,6 @@
 # virtual methods
 .method public a(Ljava/lang/String;)Ljava/io/File;
     .locals 2
-    .parameter
 
     .prologue
     .line 394

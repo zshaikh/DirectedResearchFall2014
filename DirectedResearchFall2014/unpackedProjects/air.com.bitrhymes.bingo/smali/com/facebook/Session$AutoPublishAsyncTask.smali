@@ -36,9 +36,8 @@
 # direct methods
 .method public constructor <init>(Lcom/facebook/Session;Ljava/lang/String;Landroid/content/Context;)V
     .locals 1
-    .parameter
-    .parameter "applicationId"
-    .parameter "context"
+    .param p2, "applicationId"    # Ljava/lang/String;
+    .param p3, "context"    # Landroid/content/Context;
 
     .prologue
     .line 1612
@@ -64,7 +63,6 @@
 # virtual methods
 .method protected bridge varargs synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
-    .parameter
 
     .prologue
     .line 1
@@ -79,7 +77,7 @@
 
 .method protected varargs doInBackground([Ljava/lang/Void;)Ljava/lang/Void;
     .locals 4
-    .parameter "voids"
+    .param p1, "voids"    # [Ljava/lang/Void;
 
     .prologue
     .line 1620
@@ -107,7 +105,7 @@
     move-object v0, v1
 
     .line 1622
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v1, "Facebook-publish"
 
     invoke-static {v1, v0}, Lcom/facebook/internal/Utility;->logd(Ljava/lang/String;Ljava/lang/Exception;)V
@@ -117,7 +115,6 @@
 
 .method protected bridge synthetic onPostExecute(Ljava/lang/Object;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1
@@ -130,7 +127,7 @@
 
 .method protected onPostExecute(Ljava/lang/Void;)V
     .locals 3
-    .parameter "result"
+    .param p1, "result"    # Ljava/lang/Void;
 
     .prologue
     .line 1630
@@ -144,7 +141,6 @@
 
     const/4 v2, 0x0
 
-    #setter for: Lcom/facebook/Session;->autoPublishAsyncTask:Lcom/facebook/Session$AutoPublishAsyncTask;
     invoke-static {v1, v2}, Lcom/facebook/Session;->access$4(Lcom/facebook/Session;Lcom/facebook/Session$AutoPublishAsyncTask;)V
 
     .line 1630

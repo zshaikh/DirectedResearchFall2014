@@ -12,8 +12,6 @@
 # direct methods
 .method constructor <init>(Lcom/flurry/android/InstallReceiver;Ljava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 190
@@ -107,8 +105,8 @@
 
     invoke-static {v2, v1}, Lcom/flurry/android/db;->d(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_1
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 238
     invoke-static {v5}, Lcom/flurry/android/bd;->a(Ljava/io/Closeable;)V
@@ -130,8 +128,8 @@
 
     invoke-direct {v2, v1}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     .line 212
     :try_start_2
@@ -222,8 +220,8 @@
 
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
     :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
     .catch Ljava/lang/Throwable; {:try_start_2 .. :try_end_2} :catch_0
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
     goto :goto_1
 

@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/tapjoy/mraid/view/Browser;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 188
@@ -39,7 +38,7 @@
 # virtual methods
 .method public onClick(Landroid/view/View;)V
     .locals 1
-    .parameter "arg0"
+    .param p1, "arg0"    # Landroid/view/View;
 
     .prologue
     .line 192

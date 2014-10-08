@@ -1377,7 +1377,7 @@
 .method public static newUploadPhotoRequest(Lcom/facebook/Session;Ljava/io/File;Lcom/facebook/Request$Callback;)Lcom/facebook/Request;
     .locals 6
 
-    const/high16 v0, 0x1000
+    const/high16 v0, 0x10000000
 
     invoke-static {p1, v0}, Landroid/os/ParcelFileDescriptor;->open(Ljava/io/File;I)Landroid/os/ParcelFileDescriptor;
 
@@ -1411,7 +1411,7 @@
 .method public static newUploadVideoRequest(Lcom/facebook/Session;Ljava/io/File;Lcom/facebook/Request$Callback;)Lcom/facebook/Request;
     .locals 6
 
-    const/high16 v0, 0x1000
+    const/high16 v0, 0x10000000
 
     invoke-static {p1, v0}, Landroid/os/ParcelFileDescriptor;->open(Ljava/io/File;I)Landroid/os/ParcelFileDescriptor;
 

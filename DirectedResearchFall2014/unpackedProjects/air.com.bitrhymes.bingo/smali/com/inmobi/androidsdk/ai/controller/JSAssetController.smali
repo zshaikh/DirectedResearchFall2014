@@ -26,30 +26,28 @@
 
     .line 399
     :array_0
-    .array-data 0x2
-        0x30t 0x0t
-        0x31t 0x0t
-        0x32t 0x0t
-        0x33t 0x0t
-        0x34t 0x0t
-        0x35t 0x0t
-        0x36t 0x0t
-        0x37t 0x0t
-        0x38t 0x0t
-        0x39t 0x0t
-        0x61t 0x0t
-        0x62t 0x0t
-        0x63t 0x0t
-        0x64t 0x0t
-        0x65t 0x0t
-        0x66t 0x0t
+    .array-data 2
+        0x30s
+        0x31s
+        0x32s
+        0x33s
+        0x34s
+        0x35s
+        0x36s
+        0x37s
+        0x38s
+        0x39s
+        0x61s
+        0x62s
+        0x63s
+        0x64s
+        0x65s
+        0x66s
     .end array-data
 .end method
 
 .method public constructor <init>(Lcom/inmobi/androidsdk/ai/container/IMWebView;Landroid/content/Context;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 41
@@ -79,9 +77,6 @@
 
 .method private a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 5
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const-string v4, "ad"
@@ -228,7 +223,6 @@
 
 .method private a(Ljava/security/MessageDigest;)Ljava/lang/String;
     .locals 7
-    .parameter
 
     .prologue
     const/4 v2, 0x0
@@ -297,7 +291,6 @@
 
 .method private a(Ljava/lang/String;)Lorg/apache/http/HttpEntity;
     .locals 2
-    .parameter
 
     .prologue
     .line 133
@@ -343,7 +336,6 @@
 
 .method private b(Ljava/lang/String;)Ljava/io/FileOutputStream;
     .locals 3
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/FileNotFoundException;
@@ -382,7 +374,6 @@
 
 .method private c(Ljava/lang/String;)Ljava/io/File;
     .locals 4
-    .parameter
 
     .prologue
     .line 469
@@ -450,7 +441,6 @@
 
 .method private d(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
-    .parameter
 
     .prologue
     .line 484
@@ -493,7 +483,6 @@
 
 .method public static deleteDirectory(Ljava/io/File;)Z
     .locals 3
-    .parameter
 
     .prologue
     .line 542
@@ -556,7 +545,6 @@
 
 .method public static deleteDirectory(Ljava/lang/String;)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 529
@@ -583,7 +571,6 @@
 
 .method private e(Ljava/lang/String;)Ljava/lang/String;
     .locals 1
-    .parameter
 
     .prologue
     .line 502
@@ -624,8 +611,6 @@
 # virtual methods
 .method public addAsset(Ljava/lang/String;Ljava/lang/String;)V
     .locals 5
-    .parameter
-    .parameter
 
     .prologue
     .line 94
@@ -640,8 +625,8 @@
     :try_start_0
     invoke-interface {v0}, Lorg/apache/http/HttpEntity;->getContent()Ljava/io/InputStream;
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result-object v1
 
@@ -677,8 +662,8 @@
 
     invoke-virtual {v3, v2}, Lcom/inmobi/androidsdk/ai/container/IMWebView;->injectJavaScript(Ljava/lang/String;)V
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_5
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     .line 104
     if-eqz v1, :cond_0
@@ -832,8 +817,6 @@
 
 .method public copyTextFromJarIntoAssetDir(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 5
-    .parameter
-    .parameter
 
     .prologue
     const/4 v3, 0x0
@@ -904,8 +887,8 @@
     .line 67
     invoke-virtual {v1, v0}, Ljava/util/jar/JarFile;->getInputStream(Ljava/util/zip/ZipEntry;)Ljava/io/InputStream;
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result-object v0
 
@@ -915,8 +898,8 @@
     :try_start_1
     invoke-virtual {p0, v0, p1, v1}, Lcom/inmobi/androidsdk/ai/controller/JSAssetController;->writeToDisk(Ljava/io/InputStream;Ljava/lang/String;Z)Ljava/lang/String;
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_4
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     move-result-object v1
 
@@ -1114,7 +1097,6 @@
 
 .method public removeAsset(Ljava/lang/String;)V
     .locals 3
-    .parameter
 
     .prologue
     .line 452
@@ -1181,9 +1163,6 @@
 
 .method public writeToDisk(Ljava/io/InputStream;Ljava/lang/String;Z)Ljava/lang/String;
     .locals 5
-    .parameter
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/IllegalStateException;,
@@ -1361,12 +1340,6 @@
 
 .method public writeToDiskWrap(Ljava/io/InputStream;Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 9
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/IllegalStateException;,

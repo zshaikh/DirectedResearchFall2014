@@ -14,7 +14,7 @@
 # direct methods
 .method protected constructor <init>(Lcom/flurry/org/apache/avro/io/parsing/Symbol;)V
     .locals 1
-    .parameter "root"
+    .param p1, "root"    # Lcom/flurry/org/apache/avro/io/parsing/Symbol;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -81,7 +81,7 @@
     move-result-object v0
 
     .line 47
-    .local v0, top:Lcom/flurry/org/apache/avro/io/parsing/Symbol;
+    .local v0, "top":Lcom/flurry/org/apache/avro/io/parsing/Symbol;
     sget-object v1, Lcom/flurry/org/apache/avro/io/parsing/Symbol;->NULL:Lcom/flurry/org/apache/avro/io/parsing/Symbol;
 
     if-ne v0, v1, :cond_0

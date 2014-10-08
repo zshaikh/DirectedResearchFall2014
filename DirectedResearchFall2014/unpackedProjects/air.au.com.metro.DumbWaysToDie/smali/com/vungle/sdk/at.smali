@@ -155,7 +155,6 @@
 
 .method public static a(Ljava/lang/Class;)Ljava/lang/String;
     .locals 2
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -192,7 +191,6 @@
 
 .method static a(Ljava/lang/String;)Ljava/lang/String;
     .locals 3
-    .parameter
 
     .prologue
     .line 181
@@ -256,10 +254,6 @@
 
 .method private static a(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 4
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 228
@@ -302,7 +296,6 @@
 
 .method public static a(Ljava/lang/reflect/Type;)Ljava/lang/String;
     .locals 1
-    .parameter
 
     .prologue
     .line 61
@@ -317,8 +310,6 @@
 
 .method private static a(Ljava/lang/reflect/Type;Ljava/lang/annotation/Annotation;)Ljava/lang/String;
     .locals 5
-    .parameter
-    .parameter
 
     .prologue
     .line 72
@@ -471,9 +462,6 @@
 
 .method public static a(Ljava/lang/reflect/Type;[Ljava/lang/annotation/Annotation;Ljava/lang/Object;)Ljava/lang/String;
     .locals 6
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 112
@@ -555,9 +543,6 @@
 
 .method private static a(Ljava/lang/reflect/Type;Ljava/lang/StringBuilder;Z)V
     .locals 7
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const/4 v4, 0x1
@@ -764,9 +749,6 @@
 
 .method private static a(Ljava/lang/String;ILjava/lang/String;)Z
     .locals 2
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 233
@@ -785,7 +767,6 @@
 
 .method static b(Ljava/lang/String;)Ljava/lang/String;
     .locals 3
-    .parameter
 
     .prologue
     .line 197
@@ -827,7 +808,6 @@
 
 .method public static c(Ljava/lang/String;)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 243
@@ -842,7 +822,6 @@
 
 .method public static d(Ljava/lang/String;)Ljava/lang/String;
     .locals 3
-    .parameter
 
     .prologue
     const/4 v2, -0x1
@@ -910,7 +889,6 @@
 
 .method public static e(Ljava/lang/String;)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 263
@@ -952,7 +930,6 @@
 
 .method private static f(Ljava/lang/String;)I
     .locals 1
-    .parameter
 
     .prologue
     .line 210

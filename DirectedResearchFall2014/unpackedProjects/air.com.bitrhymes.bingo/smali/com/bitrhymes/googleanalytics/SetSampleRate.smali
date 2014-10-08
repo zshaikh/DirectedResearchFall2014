@@ -21,8 +21,8 @@
 # virtual methods
 .method public call(Lcom/adobe/fre/FREContext;[Lcom/adobe/fre/FREObject;)Lcom/adobe/fre/FREObject;
     .locals 9
-    .parameter "context"
-    .parameter "args"
+    .param p1, "context"    # Lcom/adobe/fre/FREContext;
+    .param p2, "args"    # [Lcom/adobe/fre/FREObject;
 
     .prologue
     const-string v8, "ERROR_EVENT"
@@ -40,11 +40,11 @@
     move-result-object v3
 
     .line 19
-    .local v3, sampleVal:Ljava/lang/String;
-    const-wide/high16 v1, 0x4059
+    .local v3, "sampleVal":Ljava/lang/String;
+    const-wide/high16 v1, 0x4059000000000000L
 
     .line 21
-    .local v1, sampleRate:D
+    .local v1, "sampleRate":D
     if-eqz v3, :cond_0
 
     invoke-virtual {v3}, Ljava/lang/String;->length()I
@@ -67,7 +67,7 @@
     if-gtz v5, :cond_1
 
     .line 25
-    const-wide/high16 v1, 0x4059
+    const-wide/high16 v1, 0x4059000000000000L
 
     .line 27
     :cond_1
@@ -86,7 +86,7 @@
     move-result-object v4
 
     .line 28
-    .local v4, tracker:Lcom/google/analytics/tracking/android/Tracker;
+    .local v4, "tracker":Lcom/google/analytics/tracking/android/Tracker;
     invoke-virtual {v4, v1, v2}, Lcom/google/analytics/tracking/android/Tracker;->setSampleRate(D)V
     :try_end_0
     .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
@@ -95,9 +95,9 @@
     .catch Lcom/adobe/fre/FREWrongThreadException; {:try_start_0 .. :try_end_0} :catch_3
 
     .line 40
-    .end local v1           #sampleRate:D
-    .end local v3           #sampleVal:Ljava/lang/String;
-    .end local v4           #tracker:Lcom/google/analytics/tracking/android/Tracker;
+    .end local v1    # "sampleRate":D
+    .end local v3    # "sampleVal":Ljava/lang/String;
+    .end local v4    # "tracker":Lcom/google/analytics/tracking/android/Tracker;
     :goto_0
     const/4 v5, 0x0
 
@@ -110,7 +110,7 @@
     move-object v0, v5
 
     .line 31
-    .local v0, e:Ljava/lang/IllegalStateException;
+    .local v0, "e":Ljava/lang/IllegalStateException;
     const-string v5, "ERROR_EVENT"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -176,14 +176,14 @@
     goto :goto_0
 
     .line 32
-    .end local v0           #e:Ljava/lang/IllegalStateException;
+    .end local v0    # "e":Ljava/lang/IllegalStateException;
     :catch_1
     move-exception v5
 
     move-object v0, v5
 
     .line 33
-    .local v0, e:Lcom/adobe/fre/FRETypeMismatchException;
+    .local v0, "e":Lcom/adobe/fre/FRETypeMismatchException;
     const-string v5, "ERROR_EVENT"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -249,14 +249,14 @@
     goto/16 :goto_0
 
     .line 34
-    .end local v0           #e:Lcom/adobe/fre/FRETypeMismatchException;
+    .end local v0    # "e":Lcom/adobe/fre/FRETypeMismatchException;
     :catch_2
     move-exception v5
 
     move-object v0, v5
 
     .line 35
-    .local v0, e:Lcom/adobe/fre/FREInvalidObjectException;
+    .local v0, "e":Lcom/adobe/fre/FREInvalidObjectException;
     const-string v5, "ERROR_EVENT"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -322,14 +322,14 @@
     goto/16 :goto_0
 
     .line 36
-    .end local v0           #e:Lcom/adobe/fre/FREInvalidObjectException;
+    .end local v0    # "e":Lcom/adobe/fre/FREInvalidObjectException;
     :catch_3
     move-exception v5
 
     move-object v0, v5
 
     .line 37
-    .local v0, e:Lcom/adobe/fre/FREWrongThreadException;
+    .local v0, "e":Lcom/adobe/fre/FREWrongThreadException;
     const-string v5, "ERROR_EVENT"
 
     new-instance v5, Ljava/lang/StringBuilder;

@@ -20,7 +20,7 @@
     .locals 2
 
     .prologue
-    .local p0, this:Lcom/flurry/org/apache/avro/reflect/ReflectDatumReader;,"Lcom/flurry/org/apache/avro/reflect/ReflectDatumReader<TT;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/reflect/ReflectDatumReader;, "Lcom/flurry/org/apache/avro/reflect/ReflectDatumReader<TT;>;"
     const/4 v1, 0x0
 
     .line 38
@@ -36,11 +36,11 @@
 
 .method public constructor <init>(Lcom/flurry/org/apache/avro/Schema;)V
     .locals 1
-    .parameter "root"
+    .param p1, "root"    # Lcom/flurry/org/apache/avro/Schema;
 
     .prologue
     .line 47
-    .local p0, this:Lcom/flurry/org/apache/avro/reflect/ReflectDatumReader;,"Lcom/flurry/org/apache/avro/reflect/ReflectDatumReader<TT;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/reflect/ReflectDatumReader;, "Lcom/flurry/org/apache/avro/reflect/ReflectDatumReader<TT;>;"
     invoke-static {}, Lcom/flurry/org/apache/avro/reflect/ReflectData;->get()Lcom/flurry/org/apache/avro/reflect/ReflectData;
 
     move-result-object v0
@@ -53,12 +53,12 @@
 
 .method public constructor <init>(Lcom/flurry/org/apache/avro/Schema;Lcom/flurry/org/apache/avro/Schema;)V
     .locals 1
-    .parameter "writer"
-    .parameter "reader"
+    .param p1, "writer"    # Lcom/flurry/org/apache/avro/Schema;
+    .param p2, "reader"    # Lcom/flurry/org/apache/avro/Schema;
 
     .prologue
     .line 52
-    .local p0, this:Lcom/flurry/org/apache/avro/reflect/ReflectDatumReader;,"Lcom/flurry/org/apache/avro/reflect/ReflectDatumReader<TT;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/reflect/ReflectDatumReader;, "Lcom/flurry/org/apache/avro/reflect/ReflectDatumReader<TT;>;"
     invoke-static {}, Lcom/flurry/org/apache/avro/reflect/ReflectData;->get()Lcom/flurry/org/apache/avro/reflect/ReflectData;
 
     move-result-object v0
@@ -71,13 +71,13 @@
 
 .method protected constructor <init>(Lcom/flurry/org/apache/avro/Schema;Lcom/flurry/org/apache/avro/Schema;Lcom/flurry/org/apache/avro/reflect/ReflectData;)V
     .locals 0
-    .parameter "writer"
-    .parameter "reader"
-    .parameter "data"
+    .param p1, "writer"    # Lcom/flurry/org/apache/avro/Schema;
+    .param p2, "reader"    # Lcom/flurry/org/apache/avro/Schema;
+    .param p3, "data"    # Lcom/flurry/org/apache/avro/reflect/ReflectData;
 
     .prologue
     .line 56
-    .local p0, this:Lcom/flurry/org/apache/avro/reflect/ReflectDatumReader;,"Lcom/flurry/org/apache/avro/reflect/ReflectDatumReader<TT;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/reflect/ReflectDatumReader;, "Lcom/flurry/org/apache/avro/reflect/ReflectDatumReader<TT;>;"
     invoke-direct {p0, p1, p2, p3}, Lcom/flurry/org/apache/avro/specific/SpecificDatumReader;-><init>(Lcom/flurry/org/apache/avro/Schema;Lcom/flurry/org/apache/avro/Schema;Lcom/flurry/org/apache/avro/specific/SpecificData;)V
 
     .line 57
@@ -86,7 +86,6 @@
 
 .method public constructor <init>(Ljava/lang/Class;)V
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -97,8 +96,8 @@
 
     .prologue
     .line 42
-    .local p0, this:Lcom/flurry/org/apache/avro/reflect/ReflectDatumReader;,"Lcom/flurry/org/apache/avro/reflect/ReflectDatumReader<TT;>;"
-    .local p1, c:Ljava/lang/Class;,"Ljava/lang/Class<TT;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/reflect/ReflectDatumReader;, "Lcom/flurry/org/apache/avro/reflect/ReflectDatumReader<TT;>;"
+    .local p1, "c":Ljava/lang/Class;, "Ljava/lang/Class<TT;>;"
     invoke-static {}, Lcom/flurry/org/apache/avro/reflect/ReflectData;->get()Lcom/flurry/org/apache/avro/reflect/ReflectData;
 
     move-result-object v0
@@ -117,13 +116,13 @@
 # virtual methods
 .method protected addToArray(Ljava/lang/Object;JLjava/lang/Object;)V
     .locals 1
-    .parameter "array"
-    .parameter "pos"
-    .parameter "e"
+    .param p1, "array"    # Ljava/lang/Object;
+    .param p2, "pos"    # J
+    .param p4, "e"    # Ljava/lang/Object;
 
     .prologue
     .line 87
-    .local p0, this:Lcom/flurry/org/apache/avro/reflect/ReflectDatumReader;,"Lcom/flurry/org/apache/avro/reflect/ReflectDatumReader<TT;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/reflect/ReflectDatumReader;, "Lcom/flurry/org/apache/avro/reflect/ReflectDatumReader<TT;>;"
     instance-of v0, p1, Ljava/util/Collection;
 
     if-eqz v0, :cond_0
@@ -131,7 +130,7 @@
     .line 88
     check-cast p1, Ljava/util/Collection;
 
-    .end local p1
+    .end local p1    # "array":Ljava/lang/Object;
     invoke-interface {p1, p4}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
     .line 92
@@ -139,7 +138,7 @@
     return-void
 
     .line 90
-    .restart local p1
+    .restart local p1    # "array":Ljava/lang/Object;
     :cond_0
     long-to-int v0, p2
 
@@ -150,29 +149,29 @@
 
 .method protected createString(Ljava/lang/String;)Ljava/lang/Object;
     .locals 0
-    .parameter "value"
+    .param p1, "value"    # Ljava/lang/String;
 
     .prologue
     .line 121
-    .local p0, this:Lcom/flurry/org/apache/avro/reflect/ReflectDatumReader;,"Lcom/flurry/org/apache/avro/reflect/ReflectDatumReader<TT;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/reflect/ReflectDatumReader;, "Lcom/flurry/org/apache/avro/reflect/ReflectDatumReader<TT;>;"
     return-object p1
 .end method
 
 .method protected newArray(Ljava/lang/Object;ILcom/flurry/org/apache/avro/Schema;)Ljava/lang/Object;
     .locals 5
-    .parameter "old"
-    .parameter "size"
-    .parameter "schema"
+    .param p1, "old"    # Ljava/lang/Object;
+    .param p2, "size"    # I
+    .param p3, "schema"    # Lcom/flurry/org/apache/avro/Schema;
 
     .prologue
     .line 62
-    .local p0, this:Lcom/flurry/org/apache/avro/reflect/ReflectDatumReader;,"Lcom/flurry/org/apache/avro/reflect/ReflectDatumReader<TT;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/reflect/ReflectDatumReader;, "Lcom/flurry/org/apache/avro/reflect/ReflectDatumReader<TT;>;"
     invoke-static {}, Lcom/flurry/org/apache/avro/reflect/ReflectData;->get()Lcom/flurry/org/apache/avro/reflect/ReflectData;
 
     move-result-object v2
 
     .line 63
-    .local v2, data:Lcom/flurry/org/apache/avro/reflect/ReflectData;
+    .local v2, "data":Lcom/flurry/org/apache/avro/reflect/ReflectData;
     const-string v4, "java-class"
 
     invoke-static {p3, v4}, Lcom/flurry/org/apache/avro/reflect/ReflectData;->getClassProp(Lcom/flurry/org/apache/avro/Schema;Ljava/lang/String;)Ljava/lang/Class;
@@ -180,7 +179,7 @@
     move-result-object v1
 
     .line 64
-    .local v1, collectionClass:Ljava/lang/Class;
+    .local v1, "collectionClass":Ljava/lang/Class;
     if-eqz v1, :cond_2
 
     .line 65
@@ -237,7 +236,7 @@
     move-result-object v3
 
     .line 74
-    .local v3, elementClass:Ljava/lang/Class;
+    .local v3, "elementClass":Ljava/lang/Class;
     if-nez v3, :cond_3
 
     .line 75
@@ -260,11 +259,11 @@
 
 .method protected peekArray(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
-    .parameter "array"
+    .param p1, "array"    # Ljava/lang/Object;
 
     .prologue
     .line 81
-    .local p0, this:Lcom/flurry/org/apache/avro/reflect/ReflectDatumReader;,"Lcom/flurry/org/apache/avro/reflect/ReflectDatumReader<TT;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/reflect/ReflectDatumReader;, "Lcom/flurry/org/apache/avro/reflect/ReflectDatumReader<TT;>;"
     const/4 v0, 0x0
 
     return-object v0
@@ -272,8 +271,8 @@
 
 .method protected readBytes(Ljava/lang/Object;Lcom/flurry/org/apache/avro/io/Decoder;)Ljava/lang/Object;
     .locals 3
-    .parameter "old"
-    .parameter "in"
+    .param p1, "old"    # Ljava/lang/Object;
+    .param p2, "in"    # Lcom/flurry/org/apache/avro/io/Decoder;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -282,7 +281,7 @@
 
     .prologue
     .line 125
-    .local p0, this:Lcom/flurry/org/apache/avro/reflect/ReflectDatumReader;,"Lcom/flurry/org/apache/avro/reflect/ReflectDatumReader<TT;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/reflect/ReflectDatumReader;, "Lcom/flurry/org/apache/avro/reflect/ReflectDatumReader<TT;>;"
     const/4 v2, 0x0
 
     invoke-virtual {p2, v2}, Lcom/flurry/org/apache/avro/io/Decoder;->readBytes(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
@@ -290,7 +289,7 @@
     move-result-object v0
 
     .line 126
-    .local v0, bytes:Ljava/nio/ByteBuffer;
+    .local v0, "bytes":Ljava/nio/ByteBuffer;
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->remaining()I
 
     move-result v2
@@ -298,7 +297,7 @@
     new-array v1, v2, [B
 
     .line 127
-    .local v1, result:[B
+    .local v1, "result":[B
     invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->get([B)Ljava/nio/ByteBuffer;
 
     .line 128
@@ -307,9 +306,9 @@
 
 .method protected readInt(Ljava/lang/Object;Lcom/flurry/org/apache/avro/Schema;Lcom/flurry/org/apache/avro/io/Decoder;)Ljava/lang/Object;
     .locals 3
-    .parameter "old"
-    .parameter "expected"
-    .parameter "in"
+    .param p1, "old"    # Ljava/lang/Object;
+    .param p2, "expected"    # Lcom/flurry/org/apache/avro/Schema;
+    .param p3, "in"    # Lcom/flurry/org/apache/avro/io/Decoder;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -318,7 +317,7 @@
 
     .prologue
     .line 134
-    .local p0, this:Lcom/flurry/org/apache/avro/reflect/ReflectDatumReader;,"Lcom/flurry/org/apache/avro/reflect/ReflectDatumReader<TT;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/reflect/ReflectDatumReader;, "Lcom/flurry/org/apache/avro/reflect/ReflectDatumReader<TT;>;"
     invoke-virtual {p3}, Lcom/flurry/org/apache/avro/io/Decoder;->readInt()I
 
     move-result v2
@@ -328,7 +327,7 @@
     move-result-object v1
 
     .line 135
-    .local v1, value:Ljava/lang/Integer;
+    .local v1, "value":Ljava/lang/Integer;
     const-string v2, "java-class"
 
     invoke-virtual {p2, v2}, Lcom/flurry/org/apache/avro/Schema;->getProp(Ljava/lang/String;)Ljava/lang/String;
@@ -336,7 +335,7 @@
     move-result-object v0
 
     .line 136
-    .local v0, intClass:Ljava/lang/String;
+    .local v0, "intClass":Ljava/lang/String;
     const-class v2, Ljava/lang/Byte;
 
     invoke-virtual {v2}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -352,7 +351,7 @@
     .line 137
     check-cast v1, Ljava/lang/Integer;
 
-    .end local v1           #value:Ljava/lang/Integer;
+    .end local v1    # "value":Ljava/lang/Integer;
     invoke-virtual {v1}, Ljava/lang/Integer;->byteValue()B
 
     move-result v2
@@ -367,7 +366,7 @@
     return-object v1
 
     .line 138
-    .restart local v1       #value:Ljava/lang/Integer;
+    .restart local v1    # "value":Ljava/lang/Integer;
     :cond_1
     const-class v2, Ljava/lang/Short;
 
@@ -384,7 +383,7 @@
     .line 139
     check-cast v1, Ljava/lang/Integer;
 
-    .end local v1           #value:Ljava/lang/Integer;
+    .end local v1    # "value":Ljava/lang/Integer;
     invoke-virtual {v1}, Ljava/lang/Integer;->shortValue()S
 
     move-result v2
@@ -393,15 +392,15 @@
 
     move-result-object v1
 
-    .local v1, value:Ljava/lang/Short;
+    .local v1, "value":Ljava/lang/Short;
     goto :goto_0
 .end method
 
 .method protected readString(Ljava/lang/Object;Lcom/flurry/org/apache/avro/Schema;Lcom/flurry/org/apache/avro/io/Decoder;)Ljava/lang/Object;
     .locals 6
-    .parameter "old"
-    .parameter "s"
-    .parameter "in"
+    .param p1, "old"    # Ljava/lang/Object;
+    .param p2, "s"    # Lcom/flurry/org/apache/avro/Schema;
+    .param p3, "in"    # Lcom/flurry/org/apache/avro/io/Decoder;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -410,7 +409,7 @@
 
     .prologue
     .line 98
-    .local p0, this:Lcom/flurry/org/apache/avro/reflect/ReflectDatumReader;,"Lcom/flurry/org/apache/avro/reflect/ReflectDatumReader<TT;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/reflect/ReflectDatumReader;, "Lcom/flurry/org/apache/avro/reflect/ReflectDatumReader<TT;>;"
     const/4 v3, 0x0
 
     invoke-virtual {p0, v3, p3}, Lcom/flurry/org/apache/avro/reflect/ReflectDatumReader;->readString(Ljava/lang/Object;Lcom/flurry/org/apache/avro/io/Decoder;)Ljava/lang/Object;
@@ -420,7 +419,7 @@
     check-cast v2, Ljava/lang/String;
 
     .line 99
-    .local v2, value:Ljava/lang/String;
+    .local v2, "value":Ljava/lang/String;
     const-string v3, "java-class"
 
     invoke-static {p2, v3}, Lcom/flurry/org/apache/avro/reflect/ReflectData;->getClassProp(Lcom/flurry/org/apache/avro/Schema;Ljava/lang/String;)Ljava/lang/Class;
@@ -428,7 +427,7 @@
     move-result-object v0
 
     .line 100
-    .local v0, c:Ljava/lang/Class;
+    .local v0, "c":Ljava/lang/Class;
     if-eqz v0, :cond_0
 
     .line 102
@@ -475,7 +474,7 @@
     move-object v1, v3
 
     .line 104
-    .local v1, e:Ljava/lang/NoSuchMethodException;
+    .local v1, "e":Ljava/lang/NoSuchMethodException;
     new-instance v3, Lcom/flurry/org/apache/avro/AvroRuntimeException;
 
     invoke-direct {v3, v1}, Lcom/flurry/org/apache/avro/AvroRuntimeException;-><init>(Ljava/lang/Throwable;)V
@@ -483,14 +482,14 @@
     throw v3
 
     .line 105
-    .end local v1           #e:Ljava/lang/NoSuchMethodException;
+    .end local v1    # "e":Ljava/lang/NoSuchMethodException;
     :catch_1
     move-exception v3
 
     move-object v1, v3
 
     .line 106
-    .local v1, e:Ljava/lang/InstantiationException;
+    .local v1, "e":Ljava/lang/InstantiationException;
     new-instance v3, Lcom/flurry/org/apache/avro/AvroRuntimeException;
 
     invoke-direct {v3, v1}, Lcom/flurry/org/apache/avro/AvroRuntimeException;-><init>(Ljava/lang/Throwable;)V
@@ -498,14 +497,14 @@
     throw v3
 
     .line 107
-    .end local v1           #e:Ljava/lang/InstantiationException;
+    .end local v1    # "e":Ljava/lang/InstantiationException;
     :catch_2
     move-exception v3
 
     move-object v1, v3
 
     .line 108
-    .local v1, e:Ljava/lang/IllegalAccessException;
+    .local v1, "e":Ljava/lang/IllegalAccessException;
     new-instance v3, Lcom/flurry/org/apache/avro/AvroRuntimeException;
 
     invoke-direct {v3, v1}, Lcom/flurry/org/apache/avro/AvroRuntimeException;-><init>(Ljava/lang/Throwable;)V
@@ -513,21 +512,21 @@
     throw v3
 
     .line 109
-    .end local v1           #e:Ljava/lang/IllegalAccessException;
+    .end local v1    # "e":Ljava/lang/IllegalAccessException;
     :catch_3
     move-exception v3
 
     move-object v1, v3
 
     .line 110
-    .local v1, e:Ljava/lang/reflect/InvocationTargetException;
+    .local v1, "e":Ljava/lang/reflect/InvocationTargetException;
     new-instance v3, Lcom/flurry/org/apache/avro/AvroRuntimeException;
 
     invoke-direct {v3, v1}, Lcom/flurry/org/apache/avro/AvroRuntimeException;-><init>(Ljava/lang/Throwable;)V
 
     throw v3
 
-    .end local v1           #e:Ljava/lang/reflect/InvocationTargetException;
+    .end local v1    # "e":Ljava/lang/reflect/InvocationTargetException;
     :cond_0
     move-object v3, v2
 
@@ -537,8 +536,8 @@
 
 .method protected readString(Ljava/lang/Object;Lcom/flurry/org/apache/avro/io/Decoder;)Ljava/lang/Object;
     .locals 1
-    .parameter "old"
-    .parameter "in"
+    .param p1, "old"    # Ljava/lang/Object;
+    .param p2, "in"    # Lcom/flurry/org/apache/avro/io/Decoder;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -547,7 +546,7 @@
 
     .prologue
     .line 117
-    .local p0, this:Lcom/flurry/org/apache/avro/reflect/ReflectDatumReader;,"Lcom/flurry/org/apache/avro/reflect/ReflectDatumReader<TT;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/reflect/ReflectDatumReader;, "Lcom/flurry/org/apache/avro/reflect/ReflectDatumReader<TT;>;"
     const/4 v0, 0x0
 
     invoke-super {p0, v0, p2}, Lcom/flurry/org/apache/avro/specific/SpecificDatumReader;->readString(Ljava/lang/Object;Lcom/flurry/org/apache/avro/io/Decoder;)Ljava/lang/Object;

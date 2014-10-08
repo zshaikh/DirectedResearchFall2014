@@ -90,9 +90,7 @@
 
 .method private constructor <init>(Ljava/lang/String;II)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter "eventCode"
+    .param p3, "eventCode"    # I
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I)V"
@@ -112,7 +110,7 @@
 
 .method public static getFuseAttackRobberyEventTypeByCode(I)Lcom/fusepowered/util/FuseAttackRobberyEventType;
     .locals 1
-    .parameter "eventCode"
+    .param p0, "eventCode"    # I
 
     .prologue
     .line 23
@@ -146,7 +144,7 @@
 
 .method public static valueOf(Ljava/lang/String;)Lcom/fusepowered/util/FuseAttackRobberyEventType;
     .locals 1
-    .parameter "name"
+    .param p0, "name"    # Ljava/lang/String;
 
     .prologue
     .line 3
@@ -156,7 +154,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "name":Ljava/lang/String;
     check-cast p0, Lcom/fusepowered/util/FuseAttackRobberyEventType;
 
     return-object p0
@@ -192,7 +190,7 @@
 
 .method public setEventCode(I)V
     .locals 0
-    .parameter "eventCode"
+    .param p1, "eventCode"    # I
 
     .prologue
     .line 19

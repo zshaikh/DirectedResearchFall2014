@@ -38,8 +38,8 @@
 # direct methods
 .method public constructor <init>(Lcom/fusepowered/m2/m2l/AdViewController;Ljava/lang/String;)V
     .locals 1
-    .parameter "adview"
-    .parameter "userAgent"
+    .param p1, "adview"    # Lcom/fusepowered/m2/m2l/AdViewController;
+    .param p2, "userAgent"    # Ljava/lang/String;
 
     .prologue
     .line 70
@@ -150,7 +150,7 @@
 
 .method public fetchAdForUrl(Ljava/lang/String;)V
     .locals 6
-    .parameter "url"
+    .param p1, "url"    # Ljava/lang/String;
 
     .prologue
     const/4 v4, 0x1
@@ -238,7 +238,7 @@
     move-object v0, v1
 
     .line 90
-    .local v0, exception:Ljava/lang/Exception;
+    .local v0, "exception":Ljava/lang/Exception;
     const-string v1, "MoPub"
 
     const-string v1, "Error executing AdFetchTask"
@@ -250,7 +250,7 @@
 
 .method protected setTimeout(I)V
     .locals 0
-    .parameter "milliseconds"
+    .param p1, "milliseconds"    # I
 
     .prologue
     .line 109

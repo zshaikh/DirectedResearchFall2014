@@ -28,7 +28,7 @@
 # virtual methods
 .method public generate(Lcom/flurry/org/apache/avro/Schema;)Lcom/flurry/org/apache/avro/io/parsing/Symbol;
     .locals 3
-    .parameter "schema"
+    .param p1, "schema"    # Lcom/flurry/org/apache/avro/Schema;
 
     .prologue
     .line 36
@@ -57,8 +57,7 @@
 
 .method public generate(Lcom/flurry/org/apache/avro/Schema;Ljava/util/Map;)Lcom/flurry/org/apache/avro/io/parsing/Symbol;
     .locals 19
-    .parameter "sc"
-    .parameter
+    .param p1, "sc"    # Lcom/flurry/org/apache/avro/Schema;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -74,7 +73,7 @@
 
     .prologue
     .line 50
-    .local p2, seen:Ljava/util/Map;,"Ljava/util/Map<Lcom/flurry/org/apache/avro/io/parsing/ValidatingGrammarGenerator$LitS;Lcom/flurry/org/apache/avro/io/parsing/Symbol;>;"
+    .local p2, "seen":Ljava/util/Map;, "Ljava/util/Map<Lcom/flurry/org/apache/avro/io/parsing/ValidatingGrammarGenerator$LitS;Lcom/flurry/org/apache/avro/io/parsing/Symbol;>;"
     sget-object v13, Lcom/flurry/org/apache/avro/io/parsing/ValidatingGrammarGenerator$1;->$SwitchMap$org$apache$avro$Schema$Type:[I
 
     invoke-virtual/range {p1 .. p1}, Lcom/flurry/org/apache/avro/Schema;->getType()Lcom/flurry/org/apache/avro/Schema$Type;
@@ -337,7 +336,7 @@
     invoke-direct {v0, v1}, Lcom/flurry/org/apache/avro/io/parsing/ValidatingGrammarGenerator$LitS;-><init>(Lcom/flurry/org/apache/avro/Schema;)V
 
     .line 82
-    .local v12, wsc:Lcom/flurry/org/apache/avro/io/parsing/ValidatingGrammarGenerator$LitS;
+    .local v12, "wsc":Lcom/flurry/org/apache/avro/io/parsing/ValidatingGrammarGenerator$LitS;
     move-object/from16 v0, p2
 
     move-object v1, v12
@@ -349,7 +348,7 @@
     check-cast v9, Lcom/flurry/org/apache/avro/io/parsing/Symbol;
 
     .line 83
-    .local v9, rresult:Lcom/flurry/org/apache/avro/io/parsing/Symbol;
+    .local v9, "rresult":Lcom/flurry/org/apache/avro/io/parsing/Symbol;
     if-nez v9, :cond_0
 
     .line 84
@@ -364,7 +363,7 @@
     new-array v8, v13, [Lcom/flurry/org/apache/avro/io/parsing/Symbol;
 
     .line 90
-    .local v8, production:[Lcom/flurry/org/apache/avro/io/parsing/Symbol;
+    .local v8, "production":[Lcom/flurry/org/apache/avro/io/parsing/Symbol;
     invoke-static {v8}, Lcom/flurry/org/apache/avro/io/parsing/Symbol;->seq([Lcom/flurry/org/apache/avro/io/parsing/Symbol;)Lcom/flurry/org/apache/avro/io/parsing/Symbol;
 
     move-result-object v9
@@ -382,7 +381,7 @@
     array-length v5, v8
 
     .line 94
-    .local v5, i:I
+    .local v5, "i":I
     invoke-virtual/range {p1 .. p1}, Lcom/flurry/org/apache/avro/Schema;->getFields()Ljava/util/List;
 
     move-result-object v13
@@ -391,7 +390,7 @@
 
     move-result-object v6
 
-    .local v6, i$:Ljava/util/Iterator;
+    .local v6, "i$":Ljava/util/Iterator;
     :goto_1
     invoke-interface {v6}, Ljava/util/Iterator;->hasNext()Z
 
@@ -406,7 +405,7 @@
     check-cast v4, Lcom/flurry/org/apache/avro/Schema$Field;
 
     .line 95
-    .local v4, f:Lcom/flurry/org/apache/avro/Schema$Field;
+    .local v4, "f":Lcom/flurry/org/apache/avro/Schema$Field;
     add-int/lit8 v5, v5, -0x1
 
     invoke-virtual {v4}, Lcom/flurry/org/apache/avro/Schema$Field;->schema()Lcom/flurry/org/apache/avro/Schema;
@@ -427,10 +426,10 @@
 
     goto :goto_1
 
-    .end local v4           #f:Lcom/flurry/org/apache/avro/Schema$Field;
-    .end local v5           #i:I
-    .end local v6           #i$:Ljava/util/Iterator;
-    .end local v8           #production:[Lcom/flurry/org/apache/avro/io/parsing/Symbol;
+    .end local v4    # "f":Lcom/flurry/org/apache/avro/Schema$Field;
+    .end local v5    # "i":I
+    .end local v6    # "i$":Ljava/util/Iterator;
+    .end local v8    # "production":[Lcom/flurry/org/apache/avro/io/parsing/Symbol;
     :cond_0
     move-object v13, v9
 
@@ -438,15 +437,15 @@
     goto/16 :goto_0
 
     .line 101
-    .end local v9           #rresult:Lcom/flurry/org/apache/avro/io/parsing/Symbol;
-    .end local v12           #wsc:Lcom/flurry/org/apache/avro/io/parsing/ValidatingGrammarGenerator$LitS;
+    .end local v9    # "rresult":Lcom/flurry/org/apache/avro/io/parsing/Symbol;
+    .end local v12    # "wsc":Lcom/flurry/org/apache/avro/io/parsing/ValidatingGrammarGenerator$LitS;
     :pswitch_d
     invoke-virtual/range {p1 .. p1}, Lcom/flurry/org/apache/avro/Schema;->getTypes()Ljava/util/List;
 
     move-result-object v10
 
     .line 102
-    .local v10, subs:Ljava/util/List;,"Ljava/util/List<Lcom/flurry/org/apache/avro/Schema;>;"
+    .local v10, "subs":Ljava/util/List;, "Ljava/util/List<Lcom/flurry/org/apache/avro/Schema;>;"
     invoke-interface {v10}, Ljava/util/List;->size()I
 
     move-result v13
@@ -454,7 +453,7 @@
     new-array v11, v13, [Lcom/flurry/org/apache/avro/io/parsing/Symbol;
 
     .line 103
-    .local v11, symbols:[Lcom/flurry/org/apache/avro/io/parsing/Symbol;
+    .local v11, "symbols":[Lcom/flurry/org/apache/avro/io/parsing/Symbol;
     invoke-interface {v10}, Ljava/util/List;->size()I
 
     move-result v13
@@ -462,11 +461,11 @@
     new-array v7, v13, [Ljava/lang/String;
 
     .line 105
-    .local v7, labels:[Ljava/lang/String;
+    .local v7, "labels":[Ljava/lang/String;
     const/4 v5, 0x0
 
     .line 106
-    .restart local v5       #i:I
+    .restart local v5    # "i":I
     invoke-virtual/range {p1 .. p1}, Lcom/flurry/org/apache/avro/Schema;->getTypes()Ljava/util/List;
 
     move-result-object v13
@@ -475,7 +474,7 @@
 
     move-result-object v6
 
-    .restart local v6       #i$:Ljava/util/Iterator;
+    .restart local v6    # "i$":Ljava/util/Iterator;
     :goto_2
     invoke-interface {v6}, Ljava/util/Iterator;->hasNext()Z
 
@@ -490,7 +489,7 @@
     check-cast v3, Lcom/flurry/org/apache/avro/Schema;
 
     .line 107
-    .local v3, b:Lcom/flurry/org/apache/avro/Schema;
+    .local v3, "b":Lcom/flurry/org/apache/avro/Schema;
     move-object/from16 v0, p0
 
     move-object v1, v3
@@ -517,7 +516,7 @@
     goto :goto_2
 
     .line 111
-    .end local v3           #b:Lcom/flurry/org/apache/avro/Schema;
+    .end local v3    # "b":Lcom/flurry/org/apache/avro/Schema;
     :cond_1
     const/4 v13, 0x2
 

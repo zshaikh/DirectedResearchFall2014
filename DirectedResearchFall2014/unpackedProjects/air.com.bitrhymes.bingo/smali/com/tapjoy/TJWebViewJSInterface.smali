@@ -24,8 +24,8 @@
 # direct methods
 .method public constructor <init>(Landroid/webkit/WebView;Lcom/tapjoy/TJWebViewJSInterfaceNotifier;)V
     .locals 0
-    .parameter "w"
-    .parameter "n"
+    .param p1, "w"    # Landroid/webkit/WebView;
+    .param p2, "n"    # Lcom/tapjoy/TJWebViewJSInterfaceNotifier;
 
     .prologue
     .line 25
@@ -45,9 +45,8 @@
 # virtual methods
 .method public callback(Ljava/util/ArrayList;Ljava/lang/String;Ljava/lang/String;)V
     .locals 3
-    .parameter
-    .parameter "methodName"
-    .parameter "callbackID"
+    .param p2, "methodName"    # Ljava/lang/String;
+    .param p3, "callbackID"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -61,20 +60,20 @@
 
     .prologue
     .line 91
-    .local p1, result:Ljava/util/ArrayList;,"Ljava/util/ArrayList<*>;"
+    .local p1, "result":Ljava/util/ArrayList;, "Ljava/util/ArrayList<*>;"
     :try_start_0
     new-instance v0, Lorg/json/JSONArray;
 
     invoke-direct {v0, p1}, Lorg/json/JSONArray;-><init>(Ljava/util/Collection;)V
 
     .line 92
-    .local v0, arguments:Lorg/json/JSONArray;
+    .local v0, "arguments":Lorg/json/JSONArray;
     invoke-virtual {p0, v0, p2, p3}, Lcom/tapjoy/TJWebViewJSInterface;->callbackToJavaScript(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 98
-    .end local v0           #arguments:Lorg/json/JSONArray;
+    .end local v0    # "arguments":Lorg/json/JSONArray;
     :goto_0
     return-void
 
@@ -85,7 +84,7 @@
     move-object v1, v2
 
     .line 96
-    .local v1, e:Ljava/lang/Exception;
+    .local v1, "e":Ljava/lang/Exception;
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0
@@ -93,9 +92,8 @@
 
 .method public callback(Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;)V
     .locals 6
-    .parameter
-    .parameter "methodName"
-    .parameter "callbackID"
+    .param p2, "methodName"    # Ljava/lang/String;
+    .param p3, "callbackID"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -109,20 +107,20 @@
 
     .prologue
     .line 120
-    .local p1, result:Ljava/util/Map;,"Ljava/util/Map<**>;"
+    .local p1, "result":Ljava/util/Map;, "Ljava/util/Map<**>;"
     :try_start_0
     new-instance v0, Lorg/json/JSONArray;
 
     invoke-direct {v0}, Lorg/json/JSONArray;-><init>()V
 
     .line 121
-    .local v0, arguments:Lorg/json/JSONArray;
+    .local v0, "arguments":Lorg/json/JSONArray;
     new-instance v2, Lorg/json/JSONObject;
 
     invoke-direct {v2, p1}, Lorg/json/JSONObject;-><init>(Ljava/util/Map;)V
 
     .line 122
-    .local v2, resultData:Lorg/json/JSONObject;
+    .local v2, "resultData":Lorg/json/JSONObject;
     invoke-virtual {v0, v2}, Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;
 
     .line 123
@@ -131,8 +129,8 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 130
-    .end local v0           #arguments:Lorg/json/JSONArray;
-    .end local v2           #resultData:Lorg/json/JSONObject;
+    .end local v0    # "arguments":Lorg/json/JSONArray;
+    .end local v2    # "resultData":Lorg/json/JSONObject;
     :goto_0
     return-void
 
@@ -143,7 +141,7 @@
     move-object v1, v3
 
     .line 127
-    .local v1, e:Ljava/lang/Exception;
+    .local v1, "e":Ljava/lang/Exception;
     const-string v3, "TJWebViewJSInterface"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -178,9 +176,9 @@
 
 .method public callbackToJavaScript(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
     .locals 8
-    .parameter "arguments"
-    .parameter "methodName"
-    .parameter "callbackID"
+    .param p1, "arguments"    # Ljava/lang/Object;
+    .param p2, "methodName"    # Ljava/lang/String;
+    .param p3, "callbackID"    # Ljava/lang/String;
 
     .prologue
     const-string v7, "TJWebViewJSInterface"
@@ -192,7 +190,7 @@
     invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
 
     .line 154
-    .local v0, data:Lorg/json/JSONObject;
+    .local v0, "data":Lorg/json/JSONObject;
     const-string v4, "arguments"
 
     invoke-virtual {v0, v4, p1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
@@ -218,7 +216,7 @@
     invoke-direct {v3}, Lorg/json/JSONObject;-><init>()V
 
     .line 162
-    .local v3, message:Lorg/json/JSONObject;
+    .local v3, "message":Lorg/json/JSONObject;
     if-eqz p3, :cond_1
 
     invoke-virtual {p3}, Ljava/lang/String;->length()I
@@ -264,7 +262,7 @@
     move-result-object v2
 
     .line 170
-    .local v2, js:Ljava/lang/String;
+    .local v2, "js":Ljava/lang/String;
     new-instance v4, Lcom/tapjoy/TJWebViewJSInterface$LoadJSTask;
 
     iget-object v5, p0, Lcom/tapjoy/TJWebViewJSInterface;->webView:Landroid/webkit/WebView;
@@ -307,9 +305,9 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 179
-    .end local v0           #data:Lorg/json/JSONObject;
-    .end local v2           #js:Ljava/lang/String;
-    .end local v3           #message:Lorg/json/JSONObject;
+    .end local v0    # "data":Lorg/json/JSONObject;
+    .end local v2    # "js":Ljava/lang/String;
+    .end local v3    # "message":Lorg/json/JSONObject;
     :goto_0
     return-void
 
@@ -320,7 +318,7 @@
     move-object v1, v4
 
     .line 176
-    .local v1, e:Ljava/lang/Exception;
+    .local v1, "e":Ljava/lang/Exception;
     const-string v4, "TJWebViewJSInterface"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -355,7 +353,7 @@
 
 .method public dispatchMethod(Ljava/lang/String;)V
     .locals 7
-    .parameter "params"
+    .param p1, "params"    # Ljava/lang/String;
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 
@@ -392,7 +390,7 @@
     invoke-direct {v2, p1}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
     .line 57
-    .local v2, json:Lorg/json/JSONObject;
+    .local v2, "json":Lorg/json/JSONObject;
     const-string v4, "data"
 
     invoke-virtual {v2, v4}, Lorg/json/JSONObject;->getJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
@@ -400,7 +398,7 @@
     move-result-object v0
 
     .line 58
-    .local v0, data:Lorg/json/JSONObject;
+    .local v0, "data":Lorg/json/JSONObject;
     const-string v4, "method"
 
     invoke-virtual {v0, v4}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -408,7 +406,7 @@
     move-result-object v3
 
     .line 60
-    .local v3, method:Ljava/lang/String;
+    .local v3, "method":Ljava/lang/String;
     const-string v4, "TJWebViewJSInterface"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -444,9 +442,9 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 69
-    .end local v0           #data:Lorg/json/JSONObject;
-    .end local v2           #json:Lorg/json/JSONObject;
-    .end local v3           #method:Ljava/lang/String;
+    .end local v0    # "data":Lorg/json/JSONObject;
+    .end local v2    # "json":Lorg/json/JSONObject;
+    .end local v3    # "method":Ljava/lang/String;
     :cond_0
     :goto_0
     return-void
@@ -458,7 +456,7 @@
     move-object v1, v4
 
     .line 67
-    .local v1, e:Ljava/lang/Exception;
+    .local v1, "e":Ljava/lang/Exception;
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0

@@ -21,7 +21,6 @@
 # direct methods
 .method protected constructor <init>(Ljava/lang/Class;)V
     .locals 0
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -32,8 +31,8 @@
 
     .prologue
     .line 11
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/deser/FromStringDeserializer;,"Lcom/flurry/org/codehaus/jackson/map/deser/FromStringDeserializer<TT;>;"
-    .local p1, vc:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/deser/FromStringDeserializer;, "Lcom/flurry/org/codehaus/jackson/map/deser/FromStringDeserializer<TT;>;"
+    .local p1, "vc":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-direct {p0, p1}, Lcom/flurry/org/codehaus/jackson/map/deser/std/FromStringDeserializer;-><init>(Ljava/lang/Class;)V
 
     .line 12

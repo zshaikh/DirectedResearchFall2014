@@ -34,8 +34,6 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/fuseapi/NetworkService;Landroid/widget/ImageButton;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 397
@@ -52,7 +50,7 @@
 # virtual methods
 .method protected varargs doInBackground([Ljava/lang/String;)Landroid/graphics/Bitmap;
     .locals 13
-    .parameter "params"
+    .param p1, "params"    # [Ljava/lang/String;
 
     .prologue
     const/4 v10, 0x0
@@ -67,7 +65,7 @@
     invoke-direct {v3}, Lorg/apache/http/impl/client/DefaultHttpClient;-><init>()V
 
     .line 403
-    .local v3, httpClient:Lorg/apache/http/client/HttpClient;
+    .local v3, "httpClient":Lorg/apache/http/client/HttpClient;
     :try_start_0
     new-instance v4, Lorg/apache/http/client/methods/HttpGet;
 
@@ -77,35 +75,35 @@
 
     invoke-direct {v4, v8}, Lorg/apache/http/client/methods/HttpGet;-><init>(Ljava/lang/String;)V
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_2
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 406
-    .local v4, request:Lorg/apache/http/client/methods/HttpUriRequest;
+    .local v4, "request":Lorg/apache/http/client/methods/HttpUriRequest;
     :try_start_1
     invoke-interface {v3, v4}, Lorg/apache/http/client/HttpClient;->execute(Lorg/apache/http/client/methods/HttpUriRequest;)Lorg/apache/http/HttpResponse;
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Lorg/apache/http/client/ClientProtocolException; {:try_start_1 .. :try_end_1} :catch_0
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     move-result-object v5
 
     .line 417
-    .local v5, response:Lorg/apache/http/HttpResponse;
+    .local v5, "response":Lorg/apache/http/HttpResponse;
     :try_start_2
     invoke-interface {v5}, Lorg/apache/http/HttpResponse;->getStatusLine()Lorg/apache/http/StatusLine;
 
     move-result-object v7
 
     .line 418
-    .local v7, statusLine:Lorg/apache/http/StatusLine;
+    .local v7, "statusLine":Lorg/apache/http/StatusLine;
     invoke-interface {v7}, Lorg/apache/http/StatusLine;->getStatusCode()I
 
     move-result v6
 
     .line 419
-    .local v6, statusCode:I
+    .local v6, "statusCode":I
     const/16 v8, 0xc8
 
     if-ne v6, v8, :cond_0
@@ -116,13 +114,13 @@
     move-result-object v2
 
     .line 421
-    .local v2, entity:Lorg/apache/http/HttpEntity;
+    .local v2, "entity":Lorg/apache/http/HttpEntity;
     invoke-static {v2}, Lorg/apache/http/util/EntityUtils;->toByteArray(Lorg/apache/http/HttpEntity;)[B
 
     move-result-object v0
 
     .line 422
-    .local v0, bytes:[B
+    .local v0, "bytes":[B
     iget-object v8, p0, Lcom/fusepowered/fuseapi/NetworkService$1;->this$0:Lcom/fusepowered/fuseapi/NetworkService;
 
     const/4 v9, 0x0
@@ -135,12 +133,12 @@
 
     iput-object v9, v8, Lcom/fusepowered/fuseapi/NetworkService;->imgFromCall:Landroid/graphics/Bitmap;
     :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
     .line 436
-    .end local v0           #bytes:[B
-    .end local v2           #entity:Lorg/apache/http/HttpEntity;
+    .end local v0    # "bytes":[B
+    .end local v2    # "entity":Lorg/apache/http/HttpEntity;
     :goto_0
     invoke-interface {v3}, Lorg/apache/http/client/HttpClient;->getConnectionManager()Lorg/apache/http/conn/ClientConnectionManager;
 
@@ -149,10 +147,10 @@
     invoke-interface {v8}, Lorg/apache/http/conn/ClientConnectionManager;->shutdown()V
 
     .line 438
-    .end local v4           #request:Lorg/apache/http/client/methods/HttpUriRequest;
-    .end local v5           #response:Lorg/apache/http/HttpResponse;
-    .end local v6           #statusCode:I
-    .end local v7           #statusLine:Lorg/apache/http/StatusLine;
+    .end local v4    # "request":Lorg/apache/http/client/methods/HttpUriRequest;
+    .end local v5    # "response":Lorg/apache/http/HttpResponse;
+    .end local v6    # "statusCode":I
+    .end local v7    # "statusLine":Lorg/apache/http/StatusLine;
     :goto_1
     iget-object v8, p0, Lcom/fusepowered/fuseapi/NetworkService$1;->this$0:Lcom/fusepowered/fuseapi/NetworkService;
 
@@ -162,12 +160,12 @@
     return-object v8
 
     .line 408
-    .restart local v4       #request:Lorg/apache/http/client/methods/HttpUriRequest;
+    .restart local v4    # "request":Lorg/apache/http/client/methods/HttpUriRequest;
     :catch_0
     move-exception v1
 
     .line 409
-    .local v1, e:Lorg/apache/http/client/ClientProtocolException;
+    .local v1, "e":Lorg/apache/http/client/ClientProtocolException;
     :try_start_3
     const-string v8, "FuseAPI"
 
@@ -175,8 +173,8 @@
 
     invoke-static {v8, v9, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_2
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
     .line 436
     invoke-interface {v3}, Lorg/apache/http/client/HttpClient;->getConnectionManager()Lorg/apache/http/conn/ClientConnectionManager;
@@ -190,12 +188,12 @@
     goto :goto_2
 
     .line 412
-    .end local v1           #e:Lorg/apache/http/client/ClientProtocolException;
+    .end local v1    # "e":Lorg/apache/http/client/ClientProtocolException;
     :catch_1
     move-exception v1
 
     .line 413
-    .local v1, e:Ljava/io/IOException;
+    .local v1, "e":Ljava/io/IOException;
     :try_start_4
     const-string v8, "FuseAPI"
 
@@ -203,8 +201,8 @@
 
     invoke-static {v8, v9, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_0
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_2
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
     .line 436
     invoke-interface {v3}, Lorg/apache/http/client/HttpClient;->getConnectionManager()Lorg/apache/http/conn/ClientConnectionManager;
@@ -218,10 +216,10 @@
     goto :goto_2
 
     .line 425
-    .end local v1           #e:Ljava/io/IOException;
-    .restart local v5       #response:Lorg/apache/http/HttpResponse;
-    .restart local v6       #statusCode:I
-    .restart local v7       #statusLine:Lorg/apache/http/StatusLine;
+    .end local v1    # "e":Ljava/io/IOException;
+    .restart local v5    # "response":Lorg/apache/http/HttpResponse;
+    .restart local v6    # "statusCode":I
+    .restart local v7    # "statusLine":Lorg/apache/http/StatusLine;
     :cond_0
     :try_start_5
     const-string v8, "FuseAPI"
@@ -254,23 +252,23 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_0
     .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_2
+    .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
     goto :goto_0
 
     .line 429
-    .end local v4           #request:Lorg/apache/http/client/methods/HttpUriRequest;
-    .end local v5           #response:Lorg/apache/http/HttpResponse;
-    .end local v6           #statusCode:I
-    .end local v7           #statusLine:Lorg/apache/http/StatusLine;
+    .end local v4    # "request":Lorg/apache/http/client/methods/HttpUriRequest;
+    .end local v5    # "response":Lorg/apache/http/HttpResponse;
+    .end local v6    # "statusCode":I
+    .end local v7    # "statusLine":Lorg/apache/http/StatusLine;
     :catch_2
     move-exception v8
 
     move-object v1, v8
 
     .line 430
-    .restart local v1       #e:Ljava/io/IOException;
+    .restart local v1    # "e":Ljava/io/IOException;
     :try_start_6
     const-string v8, "FuseAPI"
 
@@ -289,7 +287,7 @@
 
     goto :goto_1
 
-    .end local v1           #e:Ljava/io/IOException;
+    .end local v1    # "e":Ljava/io/IOException;
     :catchall_0
     move-exception v8
 
@@ -304,13 +302,13 @@
 
 .method protected bridge synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
-    .parameter "x0"
+    .param p1, "x0"    # [Ljava/lang/Object;
 
     .prologue
     .line 397
     check-cast p1, [Ljava/lang/String;
 
-    .end local p1
+    .end local p1    # "x0":[Ljava/lang/Object;
     invoke-virtual {p0, p1}, Lcom/fusepowered/fuseapi/NetworkService$1;->doInBackground([Ljava/lang/String;)Landroid/graphics/Bitmap;
 
     move-result-object v0
@@ -320,7 +318,7 @@
 
 .method protected onPostExecute(Landroid/graphics/Bitmap;)V
     .locals 2
-    .parameter "img"
+    .param p1, "img"    # Landroid/graphics/Bitmap;
 
     .prologue
     .line 445
@@ -338,13 +336,13 @@
 
 .method protected bridge synthetic onPostExecute(Ljava/lang/Object;)V
     .locals 0
-    .parameter "x0"
+    .param p1, "x0"    # Ljava/lang/Object;
 
     .prologue
     .line 397
     check-cast p1, Landroid/graphics/Bitmap;
 
-    .end local p1
+    .end local p1    # "x0":Ljava/lang/Object;
     invoke-virtual {p0, p1}, Lcom/fusepowered/fuseapi/NetworkService$1;->onPostExecute(Landroid/graphics/Bitmap;)V
 
     return-void

@@ -27,7 +27,6 @@
 # direct methods
 .method constructor <init>(Lcom/adobe/air/gestures/AIRGestureListener;)V
     .locals 1
-    .parameter
 
     .prologue
     const/4 v0, 0x0
@@ -54,10 +53,6 @@
 
 .method constructor <init>(Lcom/adobe/air/gestures/AIRGestureListener;FFI)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 120
@@ -80,10 +75,6 @@
 
 .method static synthetic access$000(Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;FFI)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 111
@@ -94,7 +85,6 @@
 
 .method static synthetic access$100(Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;)I
     .locals 1
-    .parameter
 
     .prologue
     .line 111
@@ -105,7 +95,6 @@
 
 .method static synthetic access$200(Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;)F
     .locals 1
-    .parameter
 
     .prologue
     .line 111
@@ -116,7 +105,6 @@
 
 .method static synthetic access$300(Lcom/adobe/air/gestures/AIRGestureListener$TouchPoint;)F
     .locals 1
-    .parameter
 
     .prologue
     .line 111
@@ -127,9 +115,6 @@
 
 .method private assign(FFI)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 136

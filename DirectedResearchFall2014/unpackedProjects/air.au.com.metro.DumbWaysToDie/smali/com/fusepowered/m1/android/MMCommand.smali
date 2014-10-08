@@ -40,8 +40,8 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m1/android/MMWebView;Ljava/lang/String;)V
     .locals 17
-    .parameter "webView"
-    .parameter "uriString"
+    .param p1, "webView"    # Lcom/fusepowered/m1/android/MMWebView;
+    .param p2, "uriString"    # Ljava/lang/String;
 
     .prologue
     .line 38
@@ -69,7 +69,7 @@
     move-result-object v12
 
     .line 49
-    .local v12, uri:Landroid/net/Uri;
+    .local v12, "uri":Landroid/net/Uri;
     invoke-virtual {v12}, Landroid/net/Uri;->getHost()Ljava/lang/String;
 
     move-result-object v13
@@ -81,7 +81,7 @@
     move-result-object v4
 
     .line 50
-    .local v4, components:[Ljava/lang/String;
+    .local v4, "components":[Ljava/lang/String;
     array-length v13, v4
 
     const/4 v14, 0x2
@@ -89,14 +89,14 @@
     if-ge v13, v14, :cond_0
 
     .line 79
-    .end local v4           #components:[Ljava/lang/String;
-    .end local v12           #uri:Landroid/net/Uri;
+    .end local v4    # "components":[Ljava/lang/String;
+    .end local v12    # "uri":Landroid/net/Uri;
     :goto_0
     return-void
 
     .line 52
-    .restart local v4       #components:[Ljava/lang/String;
-    .restart local v12       #uri:Landroid/net/Uri;
+    .restart local v4    # "components":[Ljava/lang/String;
+    .restart local v12    # "uri":Landroid/net/Uri;
     :cond_0
     array-length v13, v4
 
@@ -107,7 +107,7 @@
     aget-object v3, v4, v13
 
     .line 53
-    .local v3, className:Ljava/lang/String;
+    .local v3, "className":Ljava/lang/String;
     array-length v13, v4
 
     const/4 v14, 0x1
@@ -117,7 +117,7 @@
     aget-object v8, v4, v13
 
     .line 56
-    .local v8, methodName:Ljava/lang/String;
+    .local v8, "methodName":Ljava/lang/String;
     new-instance v13, Ljava/util/HashMap;
 
     invoke-direct {v13}, Ljava/util/HashMap;-><init>()V
@@ -150,7 +150,7 @@
     move-result-object v10
 
     .line 58
-    .local v10, queryString:Ljava/lang/String;
+    .local v10, "queryString":Ljava/lang/String;
     const-string v13, "&"
 
     invoke-virtual {v10, v13}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
@@ -160,20 +160,20 @@
     .line 59
     move-object v2, v4
 
-    .local v2, arr$:[Ljava/lang/String;
+    .local v2, "arr$":[Ljava/lang/String;
     array-length v7, v2
 
-    .local v7, len$:I
+    .local v7, "len$":I
     const/4 v6, 0x0
 
-    .local v6, i$:I
+    .local v6, "i$":I
     :goto_1
     if-ge v6, v7, :cond_2
 
     aget-object v9, v2, v6
 
     .line 61
-    .local v9, param:Ljava/lang/String;
+    .local v9, "param":Ljava/lang/String;
     const-string v13, "="
 
     invoke-virtual {v9, v13}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
@@ -181,7 +181,7 @@
     move-result-object v11
 
     .line 62
-    .local v11, subComponents:[Ljava/lang/String;
+    .local v11, "subComponents":[Ljava/lang/String;
     array-length v13, v11
 
     const/4 v14, 0x2
@@ -248,8 +248,8 @@
     goto :goto_1
 
     .line 71
-    .end local v9           #param:Ljava/lang/String;
-    .end local v11           #subComponents:[Ljava/lang/String;
+    .end local v9    # "param":Ljava/lang/String;
+    .end local v11    # "subComponents":[Ljava/lang/String;
     :cond_2
     new-instance v13, Ljava/lang/StringBuilder;
 
@@ -319,21 +319,21 @@
     goto/16 :goto_0
 
     .line 74
-    .end local v2           #arr$:[Ljava/lang/String;
-    .end local v3           #className:Ljava/lang/String;
-    .end local v4           #components:[Ljava/lang/String;
-    .end local v6           #i$:I
-    .end local v7           #len$:I
-    .end local v8           #methodName:Ljava/lang/String;
-    .end local v10           #queryString:Ljava/lang/String;
-    .end local v12           #uri:Landroid/net/Uri;
+    .end local v2    # "arr$":[Ljava/lang/String;
+    .end local v3    # "className":Ljava/lang/String;
+    .end local v4    # "components":[Ljava/lang/String;
+    .end local v6    # "i$":I
+    .end local v7    # "len$":I
+    .end local v8    # "methodName":Ljava/lang/String;
+    .end local v10    # "queryString":Ljava/lang/String;
+    .end local v12    # "uri":Landroid/net/Uri;
     :catch_0
     move-exception v13
 
     move-object v5, v13
 
     .line 76
-    .local v5, e:Ljava/lang/Exception;
+    .local v5, "e":Ljava/lang/Exception;
     const-string v13, "Exception while executing javascript call %s %s"
 
     const/4 v14, 0x2
@@ -362,7 +362,7 @@
 
 .method static synthetic access$000(Lcom/fusepowered/m1/android/MMCommand;)Ljava/lang/reflect/Method;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/fusepowered/m1/android/MMCommand;
 
     .prologue
     .line 14
@@ -383,7 +383,7 @@
     move-result-object v0
 
     .line 174
-    .local v0, preStripped:Ljava/lang/String;
+    .local v0, "preStripped":Ljava/lang/String;
     const-string v1, "Bridge"
 
     const-string v2, ""
@@ -453,7 +453,7 @@
     check-cast v7, Lcom/fusepowered/m1/android/MMWebView;
 
     .line 94
-    .local v7, webView:Lcom/fusepowered/m1/android/MMWebView;
+    .local v7, "webView":Lcom/fusepowered/m1/android/MMWebView;
     if-eqz v7, :cond_3
 
     .line 96
@@ -466,7 +466,7 @@
     check-cast v4, Lcom/fusepowered/m1/android/MMJSObject;
 
     .line 97
-    .local v4, receiver:Lcom/fusepowered/m1/android/MMJSObject;
+    .local v4, "receiver":Lcom/fusepowered/m1/android/MMJSObject;
     invoke-virtual {v7}, Lcom/fusepowered/m1/android/MMWebView;->getContext()Landroid/content/Context;
 
     move-result-object v9
@@ -510,7 +510,7 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
     .line 116
-    .local v5, response:Lcom/fusepowered/m1/android/MMJSResponse;
+    .local v5, "response":Lcom/fusepowered/m1/android/MMJSResponse;
     :goto_0
     :try_start_2
     iget-object v9, p0, Lcom/fusepowered/m1/android/MMCommand;->callback:Ljava/lang/String;
@@ -535,7 +535,7 @@
     check-cast v8, Lcom/fusepowered/m1/android/MMWebView;
 
     .line 119
-    .local v8, webViewCallback:Lcom/fusepowered/m1/android/MMWebView;
+    .local v8, "webViewCallback":Lcom/fusepowered/m1/android/MMWebView;
     if-eqz v8, :cond_3
 
     .line 122
@@ -607,7 +607,7 @@
     move-result-object v0
 
     .line 133
-    .local v0, call:Ljava/lang/String;
+    .local v0, "call":Ljava/lang/String;
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
@@ -636,31 +636,31 @@
     invoke-static {v9}, Lcom/fusepowered/m1/android/MMSDK;->runOnUiThread(Ljava/lang/Runnable;)V
 
     .line 169
-    .end local v0           #call:Ljava/lang/String;
-    .end local v4           #receiver:Lcom/fusepowered/m1/android/MMJSObject;
-    .end local v5           #response:Lcom/fusepowered/m1/android/MMJSResponse;
-    .end local v7           #webView:Lcom/fusepowered/m1/android/MMWebView;
-    .end local v8           #webViewCallback:Lcom/fusepowered/m1/android/MMWebView;
+    .end local v0    # "call":Ljava/lang/String;
+    .end local v4    # "receiver":Lcom/fusepowered/m1/android/MMJSObject;
+    .end local v5    # "response":Lcom/fusepowered/m1/android/MMJSResponse;
+    .end local v7    # "webView":Lcom/fusepowered/m1/android/MMWebView;
+    .end local v8    # "webViewCallback":Lcom/fusepowered/m1/android/MMWebView;
     :cond_3
     :goto_1
     return-void
 
     .line 108
-    .restart local v4       #receiver:Lcom/fusepowered/m1/android/MMJSObject;
-    .restart local v7       #webView:Lcom/fusepowered/m1/android/MMWebView;
+    .restart local v4    # "receiver":Lcom/fusepowered/m1/android/MMJSObject;
+    .restart local v7    # "webView":Lcom/fusepowered/m1/android/MMWebView;
     :catch_0
     move-exception v9
 
     move-object v3, v9
 
     .line 110
-    .local v3, ite:Ljava/lang/reflect/InvocationTargetException;
+    .local v3, "ite":Ljava/lang/reflect/InvocationTargetException;
     invoke-virtual {v3}, Ljava/lang/reflect/InvocationTargetException;->getCause()Ljava/lang/Throwable;
 
     move-result-object v6
 
     .line 111
-    .local v6, t:Ljava/lang/Throwable;
+    .local v6, "t":Ljava/lang/Throwable;
     if-eqz v6, :cond_4
 
     invoke-virtual {v6}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -678,11 +678,11 @@
 
     move-result-object v5
 
-    .restart local v5       #response:Lcom/fusepowered/m1/android/MMJSResponse;
+    .restart local v5    # "response":Lcom/fusepowered/m1/android/MMJSResponse;
     goto/16 :goto_0
 
     .line 114
-    .end local v5           #response:Lcom/fusepowered/m1/android/MMJSResponse;
+    .end local v5    # "response":Lcom/fusepowered/m1/android/MMJSResponse;
     :cond_4
     invoke-static {}, Lcom/fusepowered/m1/android/MMJSResponse;->responseWithError()Lcom/fusepowered/m1/android/MMJSResponse;
     :try_end_2
@@ -690,22 +690,22 @@
 
     move-result-object v5
 
-    .restart local v5       #response:Lcom/fusepowered/m1/android/MMJSResponse;
+    .restart local v5    # "response":Lcom/fusepowered/m1/android/MMJSResponse;
     goto/16 :goto_0
 
     .line 150
-    .end local v3           #ite:Ljava/lang/reflect/InvocationTargetException;
-    .end local v4           #receiver:Lcom/fusepowered/m1/android/MMJSObject;
-    .end local v5           #response:Lcom/fusepowered/m1/android/MMJSResponse;
-    .end local v6           #t:Ljava/lang/Throwable;
-    .end local v7           #webView:Lcom/fusepowered/m1/android/MMWebView;
+    .end local v3    # "ite":Ljava/lang/reflect/InvocationTargetException;
+    .end local v4    # "receiver":Lcom/fusepowered/m1/android/MMJSObject;
+    .end local v5    # "response":Lcom/fusepowered/m1/android/MMJSResponse;
+    .end local v6    # "t":Ljava/lang/Throwable;
+    .end local v7    # "webView":Lcom/fusepowered/m1/android/MMWebView;
     :catch_1
     move-exception v9
 
     move-object v1, v9
 
     .line 152
-    .local v1, e:Ljava/lang/Exception;
+    .local v1, "e":Ljava/lang/Exception;
     const-string v9, "Exception while executing javascript call %s %s"
 
     const/4 v10, 0x2
@@ -738,7 +738,7 @@
     goto :goto_1
 
     .line 155
-    .end local v1           #e:Ljava/lang/Exception;
+    .end local v1    # "e":Ljava/lang/Exception;
     :cond_5
     iget-object v9, p0, Lcom/fusepowered/m1/android/MMCommand;->callback:Ljava/lang/String;
 
@@ -756,7 +756,7 @@
     move-result-object v2
 
     .line 157
-    .local v2, failedResponse:Lcom/fusepowered/m1/android/MMJSResponse;
+    .local v2, "failedResponse":Lcom/fusepowered/m1/android/MMJSResponse;
     const-string v9, "javascript:%s(%s);"
 
     const/4 v10, 0x2
@@ -782,7 +782,7 @@
     move-result-object v0
 
     .line 158
-    .restart local v0       #call:Ljava/lang/String;
+    .restart local v0    # "call":Ljava/lang/String;
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
@@ -813,7 +813,7 @@
     check-cast v8, Lcom/fusepowered/m1/android/MMWebView;
 
     .line 160
-    .restart local v8       #webViewCallback:Lcom/fusepowered/m1/android/MMWebView;
+    .restart local v8    # "webViewCallback":Lcom/fusepowered/m1/android/MMWebView;
     new-instance v9, Lcom/fusepowered/m1/android/MMCommand$2;
 
     invoke-direct {v9, p0, v8, v0}, Lcom/fusepowered/m1/android/MMCommand$2;-><init>(Lcom/fusepowered/m1/android/MMCommand;Lcom/fusepowered/m1/android/MMWebView;Ljava/lang/String;)V

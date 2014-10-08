@@ -38,7 +38,6 @@
 
 .method public static a(Ljava/lang/Class;)Ljava/util/List;
     .locals 2
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -109,8 +108,6 @@
 
 .method private static a(Ljava/lang/Class;Ljava/util/List;)V
     .locals 3
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -187,7 +184,6 @@
 
 .method private static b(Ljava/lang/Class;)Ljava/util/List;
     .locals 2
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",

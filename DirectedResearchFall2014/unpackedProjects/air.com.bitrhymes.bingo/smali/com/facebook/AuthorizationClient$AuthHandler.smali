@@ -40,7 +40,6 @@
 # direct methods
 .method constructor <init>(Lcom/facebook/AuthorizationClient;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 543
@@ -55,8 +54,8 @@
 # virtual methods
 .method protected addLoggingExtra(Ljava/lang/String;Ljava/lang/Object;)V
     .locals 2
-    .parameter "key"
-    .parameter "value"
+    .param p1, "key"    # Ljava/lang/String;
+    .param p2, "value"    # Ljava/lang/Object;
 
     .prologue
     .line 567
@@ -127,9 +126,9 @@
 
 .method onActivityResult(IILandroid/content/Intent;)Z
     .locals 1
-    .parameter "requestCode"
-    .parameter "resultCode"
-    .parameter "data"
+    .param p1, "requestCode"    # I
+    .param p2, "resultCode"    # I
+    .param p3, "data"    # Landroid/content/Intent;
 
     .prologue
     .line 552

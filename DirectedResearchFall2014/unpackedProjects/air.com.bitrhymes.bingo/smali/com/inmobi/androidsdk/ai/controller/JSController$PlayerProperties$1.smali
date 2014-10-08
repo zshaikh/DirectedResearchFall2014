@@ -43,7 +43,6 @@
 # virtual methods
 .method public a(Landroid/os/Parcel;)Lcom/inmobi/androidsdk/ai/controller/JSController$PlayerProperties;
     .locals 1
-    .parameter
 
     .prologue
     .line 63
@@ -56,7 +55,6 @@
 
 .method public a(I)[Lcom/inmobi/androidsdk/ai/controller/JSController$PlayerProperties;
     .locals 1
-    .parameter
 
     .prologue
     .line 67
@@ -67,7 +65,6 @@
 
 .method public synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 1
-    .parameter
 
     .prologue
     .line 1
@@ -80,7 +77,6 @@
 
 .method public synthetic newArray(I)[Ljava/lang/Object;
     .locals 1
-    .parameter
 
     .prologue
     .line 1

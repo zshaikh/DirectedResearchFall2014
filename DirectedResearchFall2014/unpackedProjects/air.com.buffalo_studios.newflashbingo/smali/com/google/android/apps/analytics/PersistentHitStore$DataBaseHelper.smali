@@ -63,6 +63,7 @@
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
+    # getter for: Lcom/google/android/apps/analytics/PersistentHitStore;->CREATE_TRANSACTION_EVENTS_TABLE:Ljava/lang/String;
     invoke-static {}, Lcom/google/android/apps/analytics/PersistentHitStore;->access$500()Ljava/lang/String;
 
     move-result-object v0
@@ -73,6 +74,7 @@
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
+    # getter for: Lcom/google/android/apps/analytics/PersistentHitStore;->CREATE_ITEM_EVENTS_TABLE:Ljava/lang/String;
     invoke-static {}, Lcom/google/android/apps/analytics/PersistentHitStore;->access$600()Ljava/lang/String;
 
     move-result-object v0
@@ -89,6 +91,7 @@
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
+    # getter for: Lcom/google/android/apps/analytics/PersistentHitStore;->CREATE_HITS_TABLE:Ljava/lang/String;
     invoke-static {}, Lcom/google/android/apps/analytics/PersistentHitStore;->access$700()Ljava/lang/String;
 
     move-result-object v0
@@ -115,6 +118,7 @@
 .method private fixCVTables(Landroid/database/sqlite/SQLiteDatabase;)V
     .locals 1
 
+    # getter for: Lcom/google/android/apps/analytics/PersistentHitStore;->CREATE_CUSTOM_VAR_VISITOR_CACHE_TABLE:Ljava/lang/String;
     invoke-static {}, Lcom/google/android/apps/analytics/PersistentHitStore;->access$200()Ljava/lang/String;
 
     move-result-object v0
@@ -125,6 +129,7 @@
 
     if-nez v0, :cond_0
 
+    # getter for: Lcom/google/android/apps/analytics/PersistentHitStore;->CREATE_CUSTOM_VAR_VISITOR_CACHE_TABLE:Ljava/lang/String;
     invoke-static {}, Lcom/google/android/apps/analytics/PersistentHitStore;->access$200()Ljava/lang/String;
 
     move-result-object v0
@@ -167,8 +172,8 @@
 
     invoke-virtual/range {v0 .. v7}, Landroid/database/sqlite/SQLiteDatabase;->query(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Landroid/database/sqlite/SQLiteException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result-object v6
 
@@ -347,8 +352,8 @@
     :cond_4
     invoke-virtual {p1}, Landroid/database/sqlite/SQLiteDatabase;->setTransactionSuccessful()V
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
     .catch Landroid/database/sqlite/SQLiteException; {:try_start_1 .. :try_end_1} :catch_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     :cond_5
     if-eqz v6, :cond_6
@@ -362,7 +367,7 @@
 
     if-eqz v0, :cond_7
 
-    #calls: Lcom/google/android/apps/analytics/PersistentHitStore;->endTransaction(Landroid/database/sqlite/SQLiteDatabase;)Z
+    # invokes: Lcom/google/android/apps/analytics/PersistentHitStore;->endTransaction(Landroid/database/sqlite/SQLiteDatabase;)Z
     invoke-static {p1}, Lcom/google/android/apps/analytics/PersistentHitStore;->access$1000(Landroid/database/sqlite/SQLiteDatabase;)Z
 
     :cond_7
@@ -380,8 +385,8 @@
     :cond_9
     invoke-interface {v6, v5}, Landroid/database/Cursor;->getInt(I)I
     :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
     .catch Landroid/database/sqlite/SQLiteException; {:try_start_2 .. :try_end_2} :catch_1
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
     move-result v5
 
@@ -415,7 +420,7 @@
 
     if-eqz v0, :cond_7
 
-    #calls: Lcom/google/android/apps/analytics/PersistentHitStore;->endTransaction(Landroid/database/sqlite/SQLiteDatabase;)Z
+    # invokes: Lcom/google/android/apps/analytics/PersistentHitStore;->endTransaction(Landroid/database/sqlite/SQLiteDatabase;)Z
     invoke-static {p1}, Lcom/google/android/apps/analytics/PersistentHitStore;->access$1000(Landroid/database/sqlite/SQLiteDatabase;)Z
 
     goto :goto_5
@@ -437,7 +442,7 @@
 
     if-eqz v1, :cond_c
 
-    #calls: Lcom/google/android/apps/analytics/PersistentHitStore;->endTransaction(Landroid/database/sqlite/SQLiteDatabase;)Z
+    # invokes: Lcom/google/android/apps/analytics/PersistentHitStore;->endTransaction(Landroid/database/sqlite/SQLiteDatabase;)Z
     invoke-static {p1}, Lcom/google/android/apps/analytics/PersistentHitStore;->access$1000(Landroid/database/sqlite/SQLiteDatabase;)Z
 
     :cond_c
@@ -485,7 +490,7 @@
 
     move-result-object v1
 
-    #setter for: Lcom/google/android/apps/analytics/PersistentHitStore;->visitorCVCache:Lcom/google/android/apps/analytics/CustomVariableBuffer;
+    # setter for: Lcom/google/android/apps/analytics/PersistentHitStore;->visitorCVCache:Lcom/google/android/apps/analytics/CustomVariableBuffer;
     invoke-static {v0, v1}, Lcom/google/android/apps/analytics/PersistentHitStore;->access$802(Lcom/google/android/apps/analytics/PersistentHitStore;Lcom/google/android/apps/analytics/CustomVariableBuffer;)Lcom/google/android/apps/analytics/CustomVariableBuffer;
 
     iget-object v0, p0, Lcom/google/android/apps/analytics/PersistentHitStore$DataBaseHelper;->store:Lcom/google/android/apps/analytics/PersistentHitStore;
@@ -507,7 +512,7 @@
 
     aget-object v3, v0, v1
 
-    #calls: Lcom/google/android/apps/analytics/PersistentHitStore;->putEvent(Lcom/google/android/apps/analytics/Event;Landroid/database/sqlite/SQLiteDatabase;Z)V
+    # invokes: Lcom/google/android/apps/analytics/PersistentHitStore;->putEvent(Lcom/google/android/apps/analytics/Event;Landroid/database/sqlite/SQLiteDatabase;Z)V
     invoke-static {v2, v3, p1, v4}, Lcom/google/android/apps/analytics/PersistentHitStore;->access$900(Lcom/google/android/apps/analytics/PersistentHitStore;Lcom/google/android/apps/analytics/Event;Landroid/database/sqlite/SQLiteDatabase;Z)V
 
     add-int/lit8 v1, v1, 0x1
@@ -568,8 +573,8 @@
 
     invoke-virtual/range {v0 .. v7}, Landroid/database/sqlite/SQLiteDatabase;->query(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Landroid/database/sqlite/SQLiteException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result-object v8
 
@@ -606,8 +611,8 @@
 
     invoke-virtual/range {v0 .. v7}, Landroid/database/sqlite/SQLiteDatabase;->query(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
     .catch Landroid/database/sqlite/SQLiteException; {:try_start_1 .. :try_end_1} :catch_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     move-result-object v0
 
@@ -667,8 +672,8 @@
 
     invoke-virtual {p1, v1, v2, v3}, Landroid/database/sqlite/SQLiteDatabase;->insert(Ljava/lang/String;Ljava/lang/String;Landroid/content/ContentValues;)J
     :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_2
     .catch Landroid/database/sqlite/SQLiteException; {:try_start_2 .. :try_end_2} :catch_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
     :goto_1
     if-eqz v8, :cond_0
@@ -952,16 +957,16 @@
 
     invoke-virtual/range {v0 .. v7}, Landroid/database/sqlite/SQLiteDatabase;->query(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Landroid/database/sqlite/SQLiteException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result-object v0
 
     :try_start_1
     invoke-interface {v0}, Landroid/database/Cursor;->moveToFirst()Z
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
     .catch Landroid/database/sqlite/SQLiteException; {:try_start_1 .. :try_end_1} :catch_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     move-result v1
 
@@ -1058,6 +1063,7 @@
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
+    # getter for: Lcom/google/android/apps/analytics/PersistentHitStore;->CREATE_CUSTOM_VARIABLES_TABLE:Ljava/lang/String;
     invoke-static {}, Lcom/google/android/apps/analytics/PersistentHitStore;->access$300()Ljava/lang/String;
 
     move-result-object v0
@@ -1068,6 +1074,7 @@
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
+    # getter for: Lcom/google/android/apps/analytics/PersistentHitStore;->CREATE_OLD_CUSTOM_VAR_CACHE_TABLE:Ljava/lang/String;
     invoke-static {}, Lcom/google/android/apps/analytics/PersistentHitStore;->access$400()Ljava/lang/String;
 
     move-result-object v0
@@ -1140,6 +1147,7 @@
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
+    # getter for: Lcom/google/android/apps/analytics/PersistentHitStore;->CREATE_CUSTOM_VAR_VISITOR_CACHE_TABLE:Ljava/lang/String;
     invoke-static {}, Lcom/google/android/apps/analytics/PersistentHitStore;->access$200()Ljava/lang/String;
 
     move-result-object v0
@@ -1156,6 +1164,7 @@
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
+    # getter for: Lcom/google/android/apps/analytics/PersistentHitStore;->CREATE_EVENTS_TABLE:Ljava/lang/String;
     invoke-static {}, Lcom/google/android/apps/analytics/PersistentHitStore;->access$000()Ljava/lang/String;
 
     move-result-object v0
@@ -1174,6 +1183,7 @@
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
+    # getter for: Lcom/google/android/apps/analytics/PersistentHitStore;->CREATE_SESSION_TABLE:Ljava/lang/String;
     invoke-static {}, Lcom/google/android/apps/analytics/PersistentHitStore;->access$100()Ljava/lang/String;
 
     move-result-object v0
@@ -1257,18 +1267,21 @@
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
+    # getter for: Lcom/google/android/apps/analytics/PersistentHitStore;->CREATE_HITS_TABLE:Ljava/lang/String;
     invoke-static {}, Lcom/google/android/apps/analytics/PersistentHitStore;->access$700()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
+    # getter for: Lcom/google/android/apps/analytics/PersistentHitStore;->CREATE_CUSTOM_VAR_VISITOR_CACHE_TABLE:Ljava/lang/String;
     invoke-static {}, Lcom/google/android/apps/analytics/PersistentHitStore;->access$200()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
+    # getter for: Lcom/google/android/apps/analytics/PersistentHitStore;->CREATE_SESSION_TABLE:Ljava/lang/String;
     invoke-static {}, Lcom/google/android/apps/analytics/PersistentHitStore;->access$100()Ljava/lang/String;
 
     move-result-object v0
@@ -1359,6 +1372,7 @@
 
     if-le p3, v0, :cond_0
 
+    # getter for: Lcom/google/android/apps/analytics/PersistentHitStore;->CREATE_CUSTOM_VAR_VISITOR_CACHE_TABLE:Ljava/lang/String;
     invoke-static {}, Lcom/google/android/apps/analytics/PersistentHitStore;->access$200()Ljava/lang/String;
 
     move-result-object v0

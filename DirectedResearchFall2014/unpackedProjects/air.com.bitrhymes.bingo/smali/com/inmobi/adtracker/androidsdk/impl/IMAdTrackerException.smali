@@ -10,7 +10,6 @@
 # direct methods
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 6

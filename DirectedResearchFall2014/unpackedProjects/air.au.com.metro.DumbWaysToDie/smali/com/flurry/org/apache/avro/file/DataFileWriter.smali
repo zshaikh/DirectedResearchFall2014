@@ -80,7 +80,6 @@
 # direct methods
 .method public constructor <init>(Lcom/flurry/org/apache/avro/io/DatumWriter;)V
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -91,8 +90,8 @@
 
     .prologue
     .line 77
-    .local p0, this:Lcom/flurry/org/apache/avro/file/DataFileWriter;,"Lcom/flurry/org/apache/avro/file/DataFileWriter<TD;>;"
-    .local p1, dout:Lcom/flurry/org/apache/avro/io/DatumWriter;,"Lcom/flurry/org/apache/avro/io/DatumWriter<TD;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/file/DataFileWriter;, "Lcom/flurry/org/apache/avro/file/DataFileWriter<TD;>;"
+    .local p1, "dout":Lcom/flurry/org/apache/avro/io/DatumWriter;, "Lcom/flurry/org/apache/avro/io/DatumWriter<TD;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 63
@@ -119,7 +118,7 @@
 
     .prologue
     .line 85
-    .local p0, this:Lcom/flurry/org/apache/avro/file/DataFileWriter;,"Lcom/flurry/org/apache/avro/file/DataFileWriter<TD;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/file/DataFileWriter;, "Lcom/flurry/org/apache/avro/file/DataFileWriter<TD;>;"
     iget-boolean v0, p0, Lcom/flurry/org/apache/avro/file/DataFileWriter;->isOpen:Z
 
     if-eqz v0, :cond_0
@@ -142,7 +141,7 @@
 
     .prologue
     .line 82
-    .local p0, this:Lcom/flurry/org/apache/avro/file/DataFileWriter;,"Lcom/flurry/org/apache/avro/file/DataFileWriter<TD;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/file/DataFileWriter;, "Lcom/flurry/org/apache/avro/file/DataFileWriter<TD;>;"
     iget-boolean v0, p0, Lcom/flurry/org/apache/avro/file/DataFileWriter;->isOpen:Z
 
     if-nez v0, :cond_0
@@ -165,7 +164,7 @@
 
     .prologue
     .line 289
-    .local p0, this:Lcom/flurry/org/apache/avro/file/DataFileWriter;,"Lcom/flurry/org/apache/avro/file/DataFileWriter<TD;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/file/DataFileWriter;, "Lcom/flurry/org/apache/avro/file/DataFileWriter<TD;>;"
     iget-object v0, p0, Lcom/flurry/org/apache/avro/file/DataFileWriter;->buffer:Lcom/flurry/org/apache/avro/file/DataFileWriter$NonCopyingByteArrayOutputStream;
 
     invoke-virtual {v0}, Lcom/flurry/org/apache/avro/file/DataFileWriter$NonCopyingByteArrayOutputStream;->size()I
@@ -196,13 +195,13 @@
     move-result-object v0
 
     .line 194
-    .local v0, digester:Ljava/security/MessageDigest;
+    .local v0, "digester":Ljava/security/MessageDigest;
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
 
     .line 195
-    .local v2, time:J
+    .local v2, "time":J
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -245,15 +244,15 @@
     return-object v4
 
     .line 197
-    .end local v0           #digester:Ljava/security/MessageDigest;
-    .end local v2           #time:J
+    .end local v0    # "digester":Ljava/security/MessageDigest;
+    .end local v2    # "time":J
     :catch_0
     move-exception v4
 
     move-object v1, v4
 
     .line 198
-    .local v1, e:Ljava/security/NoSuchAlgorithmException;
+    .local v1, "e":Ljava/security/NoSuchAlgorithmException;
     new-instance v4, Ljava/lang/RuntimeException;
 
     invoke-direct {v4, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
@@ -263,7 +262,7 @@
 
 .method private init(Ljava/io/OutputStream;)V
     .locals 7
-    .parameter "outs"
+    .param p1, "outs"    # Ljava/io/OutputStream;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -271,7 +270,7 @@
     .end annotation
 
     .prologue
-    .local p0, this:Lcom/flurry/org/apache/avro/file/DataFileWriter;,"Lcom/flurry/org/apache/avro/file/DataFileWriter<TD;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/file/DataFileWriter;, "Lcom/flurry/org/apache/avro/file/DataFileWriter<TD;>;"
     const/4 v6, 0x0
 
     .line 178
@@ -287,7 +286,7 @@
     invoke-direct {v0}, Lcom/flurry/org/apache/avro/io/EncoderFactory;-><init>()V
 
     .line 180
-    .local v0, efactory:Lcom/flurry/org/apache/avro/io/EncoderFactory;
+    .local v0, "efactory":Lcom/flurry/org/apache/avro/io/EncoderFactory;
     iget-object v1, p0, Lcom/flurry/org/apache/avro/file/DataFileWriter;->out:Lcom/flurry/org/apache/avro/file/DataFileWriter$BufferedFileOutputStream;
 
     invoke-virtual {v0, v1, v6}, Lcom/flurry/org/apache/avro/io/EncoderFactory;->binaryEncoder(Ljava/io/OutputStream;Lcom/flurry/org/apache/avro/io/BinaryEncoder;)Lcom/flurry/org/apache/avro/io/BinaryEncoder;
@@ -310,7 +309,7 @@
 
     int-to-double v2, v2
 
-    const-wide/high16 v4, 0x3ff4
+    const-wide/high16 v4, 0x3ff4000000000000L
 
     mul-double/2addr v2, v4
 
@@ -363,7 +362,7 @@
 
 .method public static isReservedMeta(Ljava/lang/String;)Z
     .locals 1
-    .parameter "key"
+    .param p0, "key"    # Ljava/lang/String;
 
     .prologue
     .line 225
@@ -378,7 +377,7 @@
 
 .method private resetBufferTo(I)V
     .locals 3
-    .parameter "size"
+    .param p1, "size"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -387,7 +386,7 @@
 
     .prologue
     .line 271
-    .local p0, this:Lcom/flurry/org/apache/avro/file/DataFileWriter;,"Lcom/flurry/org/apache/avro/file/DataFileWriter<TD;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/file/DataFileWriter;, "Lcom/flurry/org/apache/avro/file/DataFileWriter<TD;>;"
     iget-object v1, p0, Lcom/flurry/org/apache/avro/file/DataFileWriter;->bufOut:Lcom/flurry/org/apache/avro/io/BinaryEncoder;
 
     invoke-virtual {v1}, Lcom/flurry/org/apache/avro/io/BinaryEncoder;->flush()V
@@ -400,7 +399,7 @@
     move-result-object v0
 
     .line 273
-    .local v0, data:[B
+    .local v0, "data":[B
     iget-object v1, p0, Lcom/flurry/org/apache/avro/file/DataFileWriter;->buffer:Lcom/flurry/org/apache/avro/file/DataFileWriter$NonCopyingByteArrayOutputStream;
 
     invoke-virtual {v1}, Lcom/flurry/org/apache/avro/file/DataFileWriter$NonCopyingByteArrayOutputStream;->reset()V
@@ -418,8 +417,8 @@
 
 .method private setMetaInternal(Ljava/lang/String;Ljava/lang/String;)Lcom/flurry/org/apache/avro/file/DataFileWriter;
     .locals 2
-    .parameter "key"
-    .parameter "value"
+    .param p1, "key"    # Ljava/lang/String;
+    .param p2, "value"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -433,7 +432,7 @@
 
     .prologue
     .line 210
-    .local p0, this:Lcom/flurry/org/apache/avro/file/DataFileWriter;,"Lcom/flurry/org/apache/avro/file/DataFileWriter<TD;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/file/DataFileWriter;, "Lcom/flurry/org/apache/avro/file/DataFileWriter<TD;>;"
     :try_start_0
     const-string v1, "UTF-8"
 
@@ -456,7 +455,7 @@
     move-object v0, v1
 
     .line 212
-    .local v0, e:Ljava/io/UnsupportedEncodingException;
+    .local v0, "e":Ljava/io/UnsupportedEncodingException;
     new-instance v1, Ljava/lang/RuntimeException;
 
     invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
@@ -466,8 +465,8 @@
 
 .method private setMetaInternal(Ljava/lang/String;[B)Lcom/flurry/org/apache/avro/file/DataFileWriter;
     .locals 1
-    .parameter "key"
-    .parameter "value"
+    .param p1, "key"    # Ljava/lang/String;
+    .param p2, "value"    # [B
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -480,7 +479,7 @@
 
     .prologue
     .line 203
-    .local p0, this:Lcom/flurry/org/apache/avro/file/DataFileWriter;,"Lcom/flurry/org/apache/avro/file/DataFileWriter<TD;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/file/DataFileWriter;, "Lcom/flurry/org/apache/avro/file/DataFileWriter<TD;>;"
     invoke-direct {p0}, Lcom/flurry/org/apache/avro/file/DataFileWriter;->assertNotOpen()V
 
     .line 204
@@ -501,7 +500,7 @@
     .end annotation
 
     .prologue
-    .local p0, this:Lcom/flurry/org/apache/avro/file/DataFileWriter;,"Lcom/flurry/org/apache/avro/file/DataFileWriter<TD;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/file/DataFileWriter;, "Lcom/flurry/org/apache/avro/file/DataFileWriter<TD;>;"
     const-wide/16 v4, 0x0
 
     .line 343
@@ -524,7 +523,7 @@
     move-result-object v1
 
     .line 346
-    .local v1, uncompressed:Ljava/nio/ByteBuffer;
+    .local v1, "uncompressed":Ljava/nio/ByteBuffer;
     new-instance v0, Lcom/flurry/org/apache/avro/file/DataFileStream$DataBlock;
 
     iget-wide v2, p0, Lcom/flurry/org/apache/avro/file/DataFileWriter;->blockCount:J
@@ -532,7 +531,7 @@
     invoke-direct {v0, v1, v2, v3}, Lcom/flurry/org/apache/avro/file/DataFileStream$DataBlock;-><init>(Ljava/nio/ByteBuffer;J)V
 
     .line 347
-    .local v0, block:Lcom/flurry/org/apache/avro/file/DataFileStream$DataBlock;
+    .local v0, "block":Lcom/flurry/org/apache/avro/file/DataFileStream$DataBlock;
     iget-object v2, p0, Lcom/flurry/org/apache/avro/file/DataFileWriter;->codec:Lcom/flurry/org/apache/avro/file/Codec;
 
     invoke-virtual {v0, v2}, Lcom/flurry/org/apache/avro/file/DataFileStream$DataBlock;->compressUsing(Lcom/flurry/org/apache/avro/file/Codec;)V
@@ -553,8 +552,8 @@
     iput-wide v4, p0, Lcom/flurry/org/apache/avro/file/DataFileWriter;->blockCount:J
 
     .line 352
-    .end local v0           #block:Lcom/flurry/org/apache/avro/file/DataFileStream$DataBlock;
-    .end local v1           #uncompressed:Ljava/nio/ByteBuffer;
+    .end local v0    # "block":Lcom/flurry/org/apache/avro/file/DataFileStream$DataBlock;
+    .end local v1    # "uncompressed":Ljava/nio/ByteBuffer;
     :cond_0
     return-void
 .end method
@@ -569,7 +568,7 @@
 
     .prologue
     .line 293
-    .local p0, this:Lcom/flurry/org/apache/avro/file/DataFileWriter;,"Lcom/flurry/org/apache/avro/file/DataFileWriter<TD;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/file/DataFileWriter;, "Lcom/flurry/org/apache/avro/file/DataFileWriter<TD;>;"
     invoke-direct {p0}, Lcom/flurry/org/apache/avro/file/DataFileWriter;->bufferInUse()I
 
     move-result v0
@@ -590,7 +589,6 @@
 # virtual methods
 .method public append(Ljava/lang/Object;)V
     .locals 7
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TD;)V"
@@ -605,8 +603,8 @@
 
     .prologue
     .line 252
-    .local p0, this:Lcom/flurry/org/apache/avro/file/DataFileWriter;,"Lcom/flurry/org/apache/avro/file/DataFileWriter<TD;>;"
-    .local p1, datum:Ljava/lang/Object;,"TD;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/file/DataFileWriter;, "Lcom/flurry/org/apache/avro/file/DataFileWriter<TD;>;"
+    .local p1, "datum":Ljava/lang/Object;, "TD;"
     invoke-direct {p0}, Lcom/flurry/org/apache/avro/file/DataFileWriter;->assertOpen()V
 
     .line 253
@@ -615,7 +613,7 @@
     move-result v2
 
     .line 255
-    .local v2, usedBuffer:I
+    .local v2, "usedBuffer":I
     :try_start_0
     iget-object v3, p0, Lcom/flurry/org/apache/avro/file/DataFileWriter;->dout:Lcom/flurry/org/apache/avro/io/DatumWriter;
 
@@ -648,7 +646,7 @@
     move-object v0, v3
 
     .line 257
-    .local v0, e:Ljava/io/IOException;
+    .local v0, "e":Ljava/io/IOException;
     invoke-direct {p0, v2}, Lcom/flurry/org/apache/avro/file/DataFileWriter;->resetBufferTo(I)V
 
     .line 258
@@ -659,14 +657,14 @@
     throw v3
 
     .line 259
-    .end local v0           #e:Ljava/io/IOException;
+    .end local v0    # "e":Ljava/io/IOException;
     :catch_1
     move-exception v3
 
     move-object v1, v3
 
     .line 260
-    .local v1, re:Ljava/lang/RuntimeException;
+    .local v1, "re":Ljava/lang/RuntimeException;
     invoke-direct {p0, v2}, Lcom/flurry/org/apache/avro/file/DataFileWriter;->resetBufferTo(I)V
 
     .line 261
@@ -679,8 +677,7 @@
 
 .method public appendAllFrom(Lcom/flurry/org/apache/avro/file/DataFileStream;Z)V
     .locals 6
-    .parameter
-    .parameter "recompress"
+    .param p2, "recompress"    # Z
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -697,8 +694,8 @@
 
     .prologue
     .line 316
-    .local p0, this:Lcom/flurry/org/apache/avro/file/DataFileWriter;,"Lcom/flurry/org/apache/avro/file/DataFileWriter<TD;>;"
-    .local p1, otherFile:Lcom/flurry/org/apache/avro/file/DataFileStream;,"Lcom/flurry/org/apache/avro/file/DataFileStream<TD;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/file/DataFileWriter;, "Lcom/flurry/org/apache/avro/file/DataFileWriter<TD;>;"
+    .local p1, "otherFile":Lcom/flurry/org/apache/avro/file/DataFileStream;, "Lcom/flurry/org/apache/avro/file/DataFileStream<TD;>;"
     invoke-direct {p0}, Lcom/flurry/org/apache/avro/file/DataFileWriter;->assertOpen()V
 
     .line 318
@@ -707,7 +704,7 @@
     move-result-object v2
 
     .line 319
-    .local v2, otherSchema:Lcom/flurry/org/apache/avro/Schema;
+    .local v2, "otherSchema":Lcom/flurry/org/apache/avro/Schema;
     iget-object v3, p0, Lcom/flurry/org/apache/avro/file/DataFileWriter;->schema:Lcom/flurry/org/apache/avro/Schema;
 
     invoke-virtual {v3, v2}, Lcom/flurry/org/apache/avro/Schema;->equals(Ljava/lang/Object;)Z
@@ -757,11 +754,11 @@
     move-result-object v1
 
     .line 325
-    .local v1, otherCodec:Lcom/flurry/org/apache/avro/file/Codec;
+    .local v1, "otherCodec":Lcom/flurry/org/apache/avro/file/Codec;
     const/4 v0, 0x0
 
     .line 326
-    .local v0, nextBlockRaw:Lcom/flurry/org/apache/avro/file/DataFileStream$DataBlock;
+    .local v0, "nextBlockRaw":Lcom/flurry/org/apache/avro/file/DataFileStream$DataBlock;
     iget-object v3, p0, Lcom/flurry/org/apache/avro/file/DataFileWriter;->codec:Lcom/flurry/org/apache/avro/file/Codec;
 
     invoke-virtual {v3, v1}, Lcom/flurry/org/apache/avro/file/Codec;->equals(Ljava/lang/Object;)Z
@@ -832,7 +829,7 @@
 
 .method public appendEncoded(Ljava/nio/ByteBuffer;)V
     .locals 5
-    .parameter "datum"
+    .param p1, "datum"    # Ljava/nio/ByteBuffer;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -841,7 +838,7 @@
 
     .prologue
     .line 281
-    .local p0, this:Lcom/flurry/org/apache/avro/file/DataFileWriter;,"Lcom/flurry/org/apache/avro/file/DataFileWriter<TD;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/file/DataFileWriter;, "Lcom/flurry/org/apache/avro/file/DataFileWriter<TD;>;"
     invoke-direct {p0}, Lcom/flurry/org/apache/avro/file/DataFileWriter;->assertOpen()V
 
     .line 282
@@ -850,7 +847,7 @@
     move-result v0
 
     .line 283
-    .local v0, start:I
+    .local v0, "start":I
     iget-object v1, p0, Lcom/flurry/org/apache/avro/file/DataFileWriter;->bufOut:Lcom/flurry/org/apache/avro/io/BinaryEncoder;
 
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->array()[B
@@ -883,7 +880,7 @@
 
 .method public appendTo(Ljava/io/File;)Lcom/flurry/org/apache/avro/file/DataFileWriter;
     .locals 8
-    .parameter "file"
+    .param p1, "file"    # Ljava/io/File;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -902,7 +899,7 @@
 
     .prologue
     .line 152
-    .local p0, this:Lcom/flurry/org/apache/avro/file/DataFileWriter;,"Lcom/flurry/org/apache/avro/file/DataFileWriter<TD;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/file/DataFileWriter;, "Lcom/flurry/org/apache/avro/file/DataFileWriter<TD;>;"
     invoke-direct {p0}, Lcom/flurry/org/apache/avro/file/DataFileWriter;->assertNotOpen()V
 
     .line 153
@@ -946,13 +943,13 @@
     invoke-direct {v2, p1, v5}, Ljava/io/RandomAccessFile;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
     .line 156
-    .local v2, raf:Ljava/io/RandomAccessFile;
+    .local v2, "raf":Ljava/io/RandomAccessFile;
     invoke-virtual {v2}, Ljava/io/RandomAccessFile;->getFD()Ljava/io/FileDescriptor;
 
     move-result-object v1
 
     .line 157
-    .local v1, fd:Ljava/io/FileDescriptor;
+    .local v1, "fd":Ljava/io/FileDescriptor;
     new-instance v3, Lcom/flurry/org/apache/avro/file/DataFileReader;
 
     new-instance v5, Lcom/flurry/org/apache/avro/file/SeekableFileInput;
@@ -966,7 +963,7 @@
     invoke-direct {v3, v5, v6}, Lcom/flurry/org/apache/avro/file/DataFileReader;-><init>(Lcom/flurry/org/apache/avro/file/SeekableInput;Lcom/flurry/org/apache/avro/io/DatumReader;)V
 
     .line 160
-    .local v3, reader:Lcom/flurry/org/apache/avro/file/DataFileReader;,"Lcom/flurry/org/apache/avro/file/DataFileReader<TD;>;"
+    .local v3, "reader":Lcom/flurry/org/apache/avro/file/DataFileReader;, "Lcom/flurry/org/apache/avro/file/DataFileReader<TD;>;"
     invoke-virtual {v3}, Lcom/flurry/org/apache/avro/file/DataFileReader;->getSchema()Lcom/flurry/org/apache/avro/Schema;
 
     move-result-object v5
@@ -1005,7 +1002,7 @@
     check-cast v0, [B
 
     .line 164
-    .local v0, codecBytes:[B
+    .local v0, "codecBytes":[B
     if-eqz v0, :cond_1
 
     .line 165
@@ -1016,7 +1013,7 @@
     invoke-direct {v4, v0, v5}, Ljava/lang/String;-><init>([BLjava/lang/String;)V
 
     .line 166
-    .local v4, strCodec:Ljava/lang/String;
+    .local v4, "strCodec":Ljava/lang/String;
     invoke-static {v4}, Lcom/flurry/org/apache/avro/file/CodecFactory;->fromString(Ljava/lang/String;)Lcom/flurry/org/apache/avro/file/CodecFactory;
 
     move-result-object v5
@@ -1028,7 +1025,7 @@
     iput-object v5, p0, Lcom/flurry/org/apache/avro/file/DataFileWriter;->codec:Lcom/flurry/org/apache/avro/file/Codec;
 
     .line 170
-    .end local v4           #strCodec:Ljava/lang/String;
+    .end local v4    # "strCodec":Ljava/lang/String;
     :goto_0
     invoke-virtual {v2}, Ljava/io/RandomAccessFile;->close()V
 
@@ -1069,7 +1066,7 @@
 
     .prologue
     .line 373
-    .local p0, this:Lcom/flurry/org/apache/avro/file/DataFileWriter;,"Lcom/flurry/org/apache/avro/file/DataFileWriter<TD;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/file/DataFileWriter;, "Lcom/flurry/org/apache/avro/file/DataFileWriter<TD;>;"
     invoke-virtual {p0}, Lcom/flurry/org/apache/avro/file/DataFileWriter;->flush()V
 
     .line 374
@@ -1088,8 +1085,8 @@
 
 .method public create(Lcom/flurry/org/apache/avro/Schema;Ljava/io/File;)Lcom/flurry/org/apache/avro/file/DataFileWriter;
     .locals 1
-    .parameter "schema"
-    .parameter "file"
+    .param p1, "schema"    # Lcom/flurry/org/apache/avro/Schema;
+    .param p2, "file"    # Ljava/io/File;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1109,7 +1106,7 @@
 
     .prologue
     .line 121
-    .local p0, this:Lcom/flurry/org/apache/avro/file/DataFileWriter;,"Lcom/flurry/org/apache/avro/file/DataFileWriter<TD;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/file/DataFileWriter;, "Lcom/flurry/org/apache/avro/file/DataFileWriter<TD;>;"
     new-instance v0, Ljava/io/FileOutputStream;
 
     invoke-direct {v0, p2}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
@@ -1123,8 +1120,8 @@
 
 .method public create(Lcom/flurry/org/apache/avro/Schema;Ljava/io/OutputStream;)Lcom/flurry/org/apache/avro/file/DataFileWriter;
     .locals 5
-    .parameter "schema"
-    .parameter "outs"
+    .param p1, "schema"    # Lcom/flurry/org/apache/avro/Schema;
+    .param p2, "outs"    # Ljava/io/OutputStream;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1144,7 +1141,7 @@
 
     .prologue
     .line 127
-    .local p0, this:Lcom/flurry/org/apache/avro/file/DataFileWriter;,"Lcom/flurry/org/apache/avro/file/DataFileWriter<TD;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/file/DataFileWriter;, "Lcom/flurry/org/apache/avro/file/DataFileWriter<TD;>;"
     invoke-direct {p0}, Lcom/flurry/org/apache/avro/file/DataFileWriter;->assertNotOpen()V
 
     .line 129
@@ -1205,7 +1202,7 @@
 
     move-result-object v1
 
-    .local v1, i$:Ljava/util/Iterator;
+    .local v1, "i$":Ljava/util/Iterator;
     :goto_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
@@ -1220,7 +1217,7 @@
     check-cast v0, Ljava/util/Map$Entry;
 
     .line 140
-    .local v0, entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;[B>;"
+    .local v0, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;[B>;"
     iget-object v2, p0, Lcom/flurry/org/apache/avro/file/DataFileWriter;->vout:Lcom/flurry/org/apache/avro/io/BinaryEncoder;
 
     invoke-virtual {v2}, Lcom/flurry/org/apache/avro/io/BinaryEncoder;->startItem()V
@@ -1250,7 +1247,7 @@
     goto :goto_0
 
     .line 144
-    .end local v0           #entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;[B>;"
+    .end local v0    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;[B>;"
     :cond_0
     iget-object v2, p0, Lcom/flurry/org/apache/avro/file/DataFileWriter;->vout:Lcom/flurry/org/apache/avro/io/BinaryEncoder;
 
@@ -1282,7 +1279,7 @@
 
     .prologue
     .line 366
-    .local p0, this:Lcom/flurry/org/apache/avro/file/DataFileWriter;,"Lcom/flurry/org/apache/avro/file/DataFileWriter<TD;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/file/DataFileWriter;, "Lcom/flurry/org/apache/avro/file/DataFileWriter<TD;>;"
     invoke-virtual {p0}, Lcom/flurry/org/apache/avro/file/DataFileWriter;->sync()J
 
     .line 367
@@ -1296,7 +1293,7 @@
 
 .method public setCodec(Lcom/flurry/org/apache/avro/file/CodecFactory;)Lcom/flurry/org/apache/avro/file/DataFileWriter;
     .locals 2
-    .parameter "c"
+    .param p1, "c"    # Lcom/flurry/org/apache/avro/file/CodecFactory;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1309,7 +1306,7 @@
 
     .prologue
     .line 93
-    .local p0, this:Lcom/flurry/org/apache/avro/file/DataFileWriter;,"Lcom/flurry/org/apache/avro/file/DataFileWriter<TD;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/file/DataFileWriter;, "Lcom/flurry/org/apache/avro/file/DataFileWriter<TD;>;"
     invoke-direct {p0}, Lcom/flurry/org/apache/avro/file/DataFileWriter;->assertNotOpen()V
 
     .line 94
@@ -1336,8 +1333,8 @@
 
 .method public setMeta(Ljava/lang/String;J)Lcom/flurry/org/apache/avro/file/DataFileWriter;
     .locals 1
-    .parameter "key"
-    .parameter "value"
+    .param p1, "key"    # Ljava/lang/String;
+    .param p2, "value"    # J
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1350,7 +1347,7 @@
 
     .prologue
     .line 238
-    .local p0, this:Lcom/flurry/org/apache/avro/file/DataFileWriter;,"Lcom/flurry/org/apache/avro/file/DataFileWriter<TD;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/file/DataFileWriter;, "Lcom/flurry/org/apache/avro/file/DataFileWriter<TD;>;"
     invoke-static {p2, p3}, Ljava/lang/Long;->toString(J)Ljava/lang/String;
 
     move-result-object v0
@@ -1364,8 +1361,8 @@
 
 .method public setMeta(Ljava/lang/String;Ljava/lang/String;)Lcom/flurry/org/apache/avro/file/DataFileWriter;
     .locals 2
-    .parameter "key"
-    .parameter "value"
+    .param p1, "key"    # Ljava/lang/String;
+    .param p2, "value"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1379,7 +1376,7 @@
 
     .prologue
     .line 231
-    .local p0, this:Lcom/flurry/org/apache/avro/file/DataFileWriter;,"Lcom/flurry/org/apache/avro/file/DataFileWriter<TD;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/file/DataFileWriter;, "Lcom/flurry/org/apache/avro/file/DataFileWriter<TD;>;"
     :try_start_0
     const-string v1, "UTF-8"
 
@@ -1402,7 +1399,7 @@
     move-object v0, v1
 
     .line 233
-    .local v0, e:Ljava/io/UnsupportedEncodingException;
+    .local v0, "e":Ljava/io/UnsupportedEncodingException;
     new-instance v1, Ljava/lang/RuntimeException;
 
     invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
@@ -1412,8 +1409,8 @@
 
 .method public setMeta(Ljava/lang/String;[B)Lcom/flurry/org/apache/avro/file/DataFileWriter;
     .locals 3
-    .parameter "key"
-    .parameter "value"
+    .param p1, "key"    # Ljava/lang/String;
+    .param p2, "value"    # [B
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1426,7 +1423,7 @@
 
     .prologue
     .line 218
-    .local p0, this:Lcom/flurry/org/apache/avro/file/DataFileWriter;,"Lcom/flurry/org/apache/avro/file/DataFileWriter<TD;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/file/DataFileWriter;, "Lcom/flurry/org/apache/avro/file/DataFileWriter<TD;>;"
     invoke-static {p1}, Lcom/flurry/org/apache/avro/file/DataFileWriter;->isReservedMeta(Ljava/lang/String;)Z
 
     move-result v0
@@ -1469,7 +1466,7 @@
 
 .method public setSyncInterval(I)Lcom/flurry/org/apache/avro/file/DataFileWriter;
     .locals 3
-    .parameter "syncInterval"
+    .param p1, "syncInterval"    # I
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I)",
@@ -1480,12 +1477,12 @@
 
     .prologue
     .line 112
-    .local p0, this:Lcom/flurry/org/apache/avro/file/DataFileWriter;,"Lcom/flurry/org/apache/avro/file/DataFileWriter<TD;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/file/DataFileWriter;, "Lcom/flurry/org/apache/avro/file/DataFileWriter<TD;>;"
     const/16 v0, 0x20
 
     if-lt p1, v0, :cond_0
 
-    const/high16 v0, 0x4000
+    const/high16 v0, 0x40000000
 
     if-le p1, v0, :cond_1
 
@@ -1533,7 +1530,7 @@
 
     .prologue
     .line 358
-    .local p0, this:Lcom/flurry/org/apache/avro/file/DataFileWriter;,"Lcom/flurry/org/apache/avro/file/DataFileWriter<TD;>;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/file/DataFileWriter;, "Lcom/flurry/org/apache/avro/file/DataFileWriter<TD;>;"
     invoke-direct {p0}, Lcom/flurry/org/apache/avro/file/DataFileWriter;->assertOpen()V
 
     .line 359

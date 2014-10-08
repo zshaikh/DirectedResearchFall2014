@@ -48,7 +48,7 @@
     move-result-object v0
 
     .line 1132
-    .local v0, t:[Lcom/flurry/org/codehaus/jackson/JsonToken;
+    .local v0, "t":[Lcom/flurry/org/codehaus/jackson/JsonToken;
     sget-object v1, Lcom/flurry/org/codehaus/jackson/util/TokenBuffer$Segment;->TOKEN_TYPES_BY_INDEX:[Lcom/flurry/org/codehaus/jackson/JsonToken;
 
     const/16 v2, 0xf
@@ -89,8 +89,8 @@
 # virtual methods
 .method public append(ILcom/flurry/org/codehaus/jackson/JsonToken;)Lcom/flurry/org/codehaus/jackson/util/TokenBuffer$Segment;
     .locals 2
-    .parameter "index"
-    .parameter "tokenType"
+    .param p1, "index"    # I
+    .param p2, "tokenType"    # Lcom/flurry/org/codehaus/jackson/JsonToken;
 
     .prologue
     .line 1176
@@ -131,9 +131,9 @@
 
 .method public append(ILcom/flurry/org/codehaus/jackson/JsonToken;Ljava/lang/Object;)Lcom/flurry/org/codehaus/jackson/util/TokenBuffer$Segment;
     .locals 2
-    .parameter "index"
-    .parameter "tokenType"
-    .parameter "value"
+    .param p1, "index"    # I
+    .param p2, "tokenType"    # Lcom/flurry/org/codehaus/jackson/JsonToken;
+    .param p3, "value"    # Ljava/lang/Object;
 
     .prologue
     .line 1187
@@ -174,7 +174,7 @@
 
 .method public get(I)Ljava/lang/Object;
     .locals 1
-    .parameter "index"
+    .param p1, "index"    # I
 
     .prologue
     .line 1167
@@ -197,8 +197,8 @@
 
 .method public set(ILcom/flurry/org/codehaus/jackson/JsonToken;)V
     .locals 4
-    .parameter "index"
-    .parameter "tokenType"
+    .param p1, "index"    # I
+    .param p2, "tokenType"    # Lcom/flurry/org/codehaus/jackson/JsonToken;
 
     .prologue
     .line 1198
@@ -209,7 +209,7 @@
     int-to-long v0, v2
 
     .line 1202
-    .local v0, typeCode:J
+    .local v0, "typeCode":J
     if-lez p1, :cond_0
 
     .line 1203
@@ -231,9 +231,9 @@
 
 .method public set(ILcom/flurry/org/codehaus/jackson/JsonToken;Ljava/lang/Object;)V
     .locals 4
-    .parameter "index"
-    .parameter "tokenType"
-    .parameter "value"
+    .param p1, "index"    # I
+    .param p2, "tokenType"    # Lcom/flurry/org/codehaus/jackson/JsonToken;
+    .param p3, "value"    # Ljava/lang/Object;
 
     .prologue
     .line 1210
@@ -249,7 +249,7 @@
     int-to-long v0, v2
 
     .line 1215
-    .local v0, typeCode:J
+    .local v0, "typeCode":J
     if-lez p1, :cond_0
 
     .line 1216
@@ -271,14 +271,14 @@
 
 .method public type(I)Lcom/flurry/org/codehaus/jackson/JsonToken;
     .locals 4
-    .parameter "index"
+    .param p1, "index"    # I
 
     .prologue
     .line 1158
     iget-wide v1, p0, Lcom/flurry/org/codehaus/jackson/util/TokenBuffer$Segment;->_tokenTypes:J
 
     .line 1159
-    .local v1, l:J
+    .local v1, "l":J
     if-lez p1, :cond_0
 
     .line 1160
@@ -293,7 +293,7 @@
     and-int/lit8 v0, v3, 0xf
 
     .line 1163
-    .local v0, ix:I
+    .local v0, "ix":I
     sget-object v3, Lcom/flurry/org/codehaus/jackson/util/TokenBuffer$Segment;->TOKEN_TYPES_BY_INDEX:[Lcom/flurry/org/codehaus/jackson/JsonToken;
 
     aget-object v3, v3, v0

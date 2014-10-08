@@ -10,8 +10,6 @@
 # direct methods
 .method public constructor <init>(Lcom/flurry/android/ao;Lcom/flurry/android/AdUnit;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 11
@@ -28,8 +26,6 @@
 # virtual methods
 .method public final a(Landroid/content/Context;Landroid/view/ViewGroup;)V
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 17

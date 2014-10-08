@@ -58,7 +58,7 @@
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
     .line 48
-    .local v0, filter:Landroid/content/IntentFilter;
+    .local v0, "filter":Landroid/content/IntentFilter;
     const-string v1, "millennialmedia.category.CATEGORY_SDK"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addCategory(Ljava/lang/String;)V
@@ -126,7 +126,7 @@
 # virtual methods
 .method public displayStarted(Lcom/fusepowered/m1/android/MMAd;)V
     .locals 1
-    .parameter "ad"
+    .param p1, "ad"    # Lcom/fusepowered/m1/android/MMAd;
 
     .prologue
     .line 222
@@ -140,7 +140,7 @@
 
 .method public fetchFailure(Lcom/fusepowered/m1/android/MMAd;)V
     .locals 1
-    .parameter "ad"
+    .param p1, "ad"    # Lcom/fusepowered/m1/android/MMAd;
 
     .prologue
     .line 211
@@ -154,7 +154,7 @@
 
 .method public fetchFinishedCaching(Lcom/fusepowered/m1/android/MMAd;)V
     .locals 1
-    .parameter "ad"
+    .param p1, "ad"    # Lcom/fusepowered/m1/android/MMAd;
 
     .prologue
     .line 200
@@ -168,7 +168,7 @@
 
 .method public fetchStartedCaching(Lcom/fusepowered/m1/android/MMAd;)V
     .locals 1
-    .parameter "ad"
+    .param p1, "ad"    # Lcom/fusepowered/m1/android/MMAd;
 
     .prologue
     .line 189
@@ -182,7 +182,7 @@
 
 .method public getAdFailure(Lcom/fusepowered/m1/android/MMAd;)V
     .locals 1
-    .parameter "ad"
+    .param p1, "ad"    # Lcom/fusepowered/m1/android/MMAd;
 
     .prologue
     .line 142
@@ -196,7 +196,7 @@
 
 .method public getAdSuccess(Lcom/fusepowered/m1/android/MMAd;)V
     .locals 1
-    .parameter "ad"
+    .param p1, "ad"    # Lcom/fusepowered/m1/android/MMAd;
 
     .prologue
     .line 131
@@ -210,8 +210,8 @@
 
 .method public intentStarted(Lcom/fusepowered/m1/android/MMAd;Ljava/lang/String;)V
     .locals 2
-    .parameter "ad"
-    .parameter "intent"
+    .param p1, "ad"    # Lcom/fusepowered/m1/android/MMAd;
+    .param p2, "intent"    # Ljava/lang/String;
 
     .prologue
     .line 175
@@ -245,8 +245,8 @@
 
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 10
-    .parameter "context"
-    .parameter "intent"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
     const-wide/16 v8, -0x4
@@ -257,7 +257,7 @@
     move-result-object v0
 
     .line 67
-    .local v0, action:Ljava/lang/String;
+    .local v0, "action":Ljava/lang/String;
     const-string v7, "packageName"
 
     invoke-virtual {p2, v7}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
@@ -265,7 +265,7 @@
     move-result-object v6
 
     .line 68
-    .local v6, packageName:Ljava/lang/String;
+    .local v6, "packageName":Ljava/lang/String;
     const-string v7, "internalId"
 
     invoke-virtual {p2, v7, v8, v9}, Landroid/content/Intent;->getLongExtra(Ljava/lang/String;J)J
@@ -273,15 +273,15 @@
     move-result-wide v4
 
     .line 69
-    .local v4, internalId:J
+    .local v4, "internalId":J
     const/4 v2, 0x0
 
     .line 70
-    .local v2, adImpl:Lcom/fusepowered/m1/android/MMAdImpl;
+    .local v2, "adImpl":Lcom/fusepowered/m1/android/MMAdImpl;
     const/4 v1, 0x0
 
     .line 71
-    .local v1, ad:Lcom/fusepowered/m1/android/MMAd;
+    .local v1, "ad":Lcom/fusepowered/m1/android/MMAd;
     invoke-virtual {p1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object v7
@@ -518,7 +518,7 @@
     move-result-object v3
 
     .line 119
-    .local v3, info:Ljava/lang/String;
+    .local v3, "info":Ljava/lang/String;
     invoke-virtual {p0, v1, v3}, Lcom/fusepowered/m1/android/MMBroadcastReceiver;->intentStarted(Lcom/fusepowered/m1/android/MMAd;Ljava/lang/String;)V
 
     goto/16 :goto_0
@@ -526,7 +526,7 @@
 
 .method public onSingleTap(Lcom/fusepowered/m1/android/MMAd;)V
     .locals 1
-    .parameter "ad"
+    .param p1, "ad"    # Lcom/fusepowered/m1/android/MMAd;
 
     .prologue
     .line 242
@@ -540,7 +540,7 @@
 
 .method public overlayClosed(Lcom/fusepowered/m1/android/MMAd;)V
     .locals 1
-    .parameter "ad"
+    .param p1, "ad"    # Lcom/fusepowered/m1/android/MMAd;
 
     .prologue
     .line 164
@@ -554,7 +554,7 @@
 
 .method public overlayOpened(Lcom/fusepowered/m1/android/MMAd;)V
     .locals 1
-    .parameter "ad"
+    .param p1, "ad"    # Lcom/fusepowered/m1/android/MMAd;
 
     .prologue
     .line 153
@@ -568,7 +568,7 @@
 
 .method public overlayTap(Lcom/fusepowered/m1/android/MMAd;)V
     .locals 1
-    .parameter "ad"
+    .param p1, "ad"    # Lcom/fusepowered/m1/android/MMAd;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 

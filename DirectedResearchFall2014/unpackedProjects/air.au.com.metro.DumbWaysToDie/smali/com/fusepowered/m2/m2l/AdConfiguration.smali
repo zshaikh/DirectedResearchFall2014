@@ -59,7 +59,7 @@
 # direct methods
 .method constructor <init>(Landroid/content/Context;)V
     .locals 3
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     const/4 v1, 0x0
@@ -85,7 +85,7 @@
     move-result-object v0
 
     .line 109
-    .local v0, udid:Ljava/lang/String;
+    .local v0, "udid":Ljava/lang/String;
     if-eqz v0, :cond_0
 
     move-object v1, v0
@@ -130,7 +130,7 @@
     iput-object v1, p0, Lcom/fusepowered/m2/m2l/AdConfiguration;->mDeviceLocale:Ljava/lang/String;
 
     .line 119
-    .end local v0           #udid:Ljava/lang/String;
+    .end local v0    # "udid":Ljava/lang/String;
     :goto_1
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -180,14 +180,14 @@
     return-void
 
     .line 109
-    .restart local v0       #udid:Ljava/lang/String;
+    .restart local v0    # "udid":Ljava/lang/String;
     :cond_0
     const-string v1, ""
 
     goto :goto_0
 
     .line 114
-    .end local v0           #udid:Ljava/lang/String;
+    .end local v0    # "udid":Ljava/lang/String;
     :cond_1
     iput-object v1, p0, Lcom/fusepowered/m2/m2l/AdConfiguration;->mHashedUdid:Ljava/lang/String;
 
@@ -202,7 +202,6 @@
 
 .method static extractFromMap(Ljava/util/Map;)Lcom/fusepowered/m2/m2l/AdConfiguration;
     .locals 3
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -216,7 +215,7 @@
     .end annotation
 
     .prologue
-    .local p0, map:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
+    .local p0, "map":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
     const/4 v2, 0x0
 
     .line 91
@@ -237,7 +236,7 @@
     move-result-object v0
 
     .line 97
-    .local v0, adConfiguration:Ljava/lang/Object;
+    .local v0, "adConfiguration":Ljava/lang/Object;
     instance-of v1, v0, Lcom/fusepowered/m2/m2l/AdConfiguration;
 
     if-eqz v1, :cond_1
@@ -245,12 +244,12 @@
     .line 98
     check-cast v0, Lcom/fusepowered/m2/m2l/AdConfiguration;
 
-    .end local v0           #adConfiguration:Ljava/lang/Object;
+    .end local v0    # "adConfiguration":Ljava/lang/Object;
     move-object v1, v0
 
     goto :goto_0
 
-    .restart local v0       #adConfiguration:Ljava/lang/Object;
+    .restart local v0    # "adConfiguration":Ljava/lang/Object;
     :cond_1
     move-object v1, v2
 
@@ -326,7 +325,7 @@
 # virtual methods
 .method addHttpResponse(Lorg/apache/http/HttpResponse;)V
     .locals 3
-    .parameter "httpResponse"
+    .param p1, "httpResponse"    # Lorg/apache/http/HttpResponse;
 
     .prologue
     const/4 v2, 0x0
@@ -703,7 +702,7 @@
 
 .method setAdUnitId(Ljava/lang/String;)V
     .locals 0
-    .parameter "adUnitId"
+    .param p1, "adUnitId"    # Ljava/lang/String;
 
     .prologue
     .line 179
@@ -715,7 +714,7 @@
 
 .method setClickthroughUrl(Ljava/lang/String;)V
     .locals 0
-    .parameter "clickthroughUrl"
+    .param p1, "clickthroughUrl"    # Ljava/lang/String;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -729,7 +728,7 @@
 
 .method setFailUrl(Ljava/lang/String;)V
     .locals 0
-    .parameter "failUrl"
+    .param p1, "failUrl"    # Ljava/lang/String;
 
     .prologue
     .line 220
@@ -741,7 +740,7 @@
 
 .method setRefreshTimeMilliseconds(I)V
     .locals 0
-    .parameter "refreshTimeMilliseconds"
+    .param p1, "refreshTimeMilliseconds"    # I
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -755,7 +754,7 @@
 
 .method setResponseString(Ljava/lang/String;)V
     .locals 0
-    .parameter "responseString"
+    .param p1, "responseString"    # Ljava/lang/String;
 
     .prologue
     .line 187

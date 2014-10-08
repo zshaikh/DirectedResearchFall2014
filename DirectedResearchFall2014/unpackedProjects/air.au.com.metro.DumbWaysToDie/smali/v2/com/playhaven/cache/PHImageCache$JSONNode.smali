@@ -25,7 +25,7 @@
 # direct methods
 .method public constructor <init>(Lorg/json/JSONArray;)V
     .locals 0
-    .parameter "array"
+    .param p1, "array"    # Lorg/json/JSONArray;
 
     .prologue
     .line 54
@@ -40,8 +40,8 @@
 
 .method public constructor <init>(Lorg/json/JSONArray;Ljava/lang/String;)V
     .locals 0
-    .parameter "array"
-    .parameter "name"
+    .param p1, "array"    # Lorg/json/JSONArray;
+    .param p2, "name"    # Ljava/lang/String;
 
     .prologue
     .line 63
@@ -59,7 +59,7 @@
 
 .method public constructor <init>(Lorg/json/JSONObject;)V
     .locals 0
-    .parameter "object"
+    .param p1, "object"    # Lorg/json/JSONObject;
 
     .prologue
     .line 50
@@ -74,8 +74,8 @@
 
 .method public constructor <init>(Lorg/json/JSONObject;Ljava/lang/String;)V
     .locals 0
-    .parameter "object"
-    .parameter "name"
+    .param p1, "object"    # Lorg/json/JSONObject;
+    .param p2, "name"    # Ljava/lang/String;
 
     .prologue
     .line 58
@@ -199,7 +199,7 @@
 
 .method public nameIs(Ljava/lang/String;)Z
     .locals 1
-    .parameter "name"
+    .param p1, "name"    # Ljava/lang/String;
 
     .prologue
     .line 84

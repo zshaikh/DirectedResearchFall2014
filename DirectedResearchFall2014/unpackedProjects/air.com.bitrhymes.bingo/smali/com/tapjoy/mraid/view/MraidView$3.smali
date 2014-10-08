@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/tapjoy/mraid/view/MraidView;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 852
@@ -39,8 +38,8 @@
 # virtual methods
 .method public onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
     .locals 2
-    .parameter "arg0"
-    .parameter "arg1"
+    .param p1, "arg0"    # Landroid/view/View;
+    .param p2, "arg1"    # Landroid/view/MotionEvent;
 
     .prologue
     .line 855

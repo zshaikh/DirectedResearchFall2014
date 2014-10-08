@@ -30,7 +30,6 @@
 # direct methods
 .method public constructor <init>(Lcom/inmobi/androidsdk/IMAdInterstitial;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 568
@@ -51,7 +50,6 @@
 # virtual methods
 .method public handleMessage(Landroid/os/Message;)V
     .locals 7
-    .parameter
 
     .prologue
     const/16 v5, 0x133

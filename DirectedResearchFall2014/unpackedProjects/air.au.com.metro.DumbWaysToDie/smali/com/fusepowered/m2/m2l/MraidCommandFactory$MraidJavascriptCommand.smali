@@ -353,9 +353,7 @@
 
 .method private constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter "command"
+    .param p3, "command"    # Ljava/lang/String;
 
     .prologue
     .line 59
@@ -370,7 +368,6 @@
 
 .method static synthetic access$2(Ljava/lang/String;)Lcom/fusepowered/m2/m2l/MraidCommandFactory$MraidJavascriptCommand;
     .locals 1
-    .parameter
 
     .prologue
     .line 63
@@ -383,7 +380,7 @@
 
 .method private static fromString(Ljava/lang/String;)Lcom/fusepowered/m2/m2l/MraidCommandFactory$MraidJavascriptCommand;
     .locals 5
-    .parameter "string"
+    .param p0, "string"    # Ljava/lang/String;
 
     .prologue
     .line 64
@@ -409,7 +406,7 @@
     aget-object v0, v1, v3
 
     .line 65
-    .local v0, command:Lcom/fusepowered/m2/m2l/MraidCommandFactory$MraidJavascriptCommand;
+    .local v0, "command":Lcom/fusepowered/m2/m2l/MraidCommandFactory$MraidJavascriptCommand;
     iget-object v4, v0, Lcom/fusepowered/m2/m2l/MraidCommandFactory$MraidJavascriptCommand;->mCommand:Ljava/lang/String;
 
     invoke-virtual {v4, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -432,7 +429,6 @@
 
 .method public static valueOf(Ljava/lang/String;)Lcom/fusepowered/m2/m2l/MraidCommandFactory$MraidJavascriptCommand;
     .locals 1
-    .parameter
 
     .prologue
     .line 1

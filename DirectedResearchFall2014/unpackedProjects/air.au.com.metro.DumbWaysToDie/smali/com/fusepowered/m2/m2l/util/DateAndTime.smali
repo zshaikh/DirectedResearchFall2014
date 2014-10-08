@@ -62,7 +62,7 @@
 
 .method public static setInstance(Lcom/fusepowered/m2/m2l/util/DateAndTime;)V
     .locals 0
-    .parameter "newInstance"
+    .param p0, "newInstance"    # Lcom/fusepowered/m2/m2l/util/DateAndTime;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 

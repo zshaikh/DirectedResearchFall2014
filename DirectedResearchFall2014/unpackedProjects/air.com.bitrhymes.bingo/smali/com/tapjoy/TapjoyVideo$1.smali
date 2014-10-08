@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/tapjoy/TapjoyVideo;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 193
@@ -51,7 +50,7 @@
     const/4 v4, 0x0
 
     .line 199
-    .local v4, returnValue:Z
+    .local v4, "returnValue":Z
     new-instance v5, Lcom/tapjoy/TapjoyURLConnection;
 
     invoke-direct {v5}, Lcom/tapjoy/TapjoyURLConnection;-><init>()V
@@ -87,7 +86,7 @@
     move-result-object v3
 
     .line 202
-    .local v3, response:Lcom/tapjoy/TapjoyHttpURLResponse;
+    .local v3, "response":Lcom/tapjoy/TapjoyHttpURLResponse;
     iget-object v5, v3, Lcom/tapjoy/TapjoyHttpURLResponse;->response:Ljava/lang/String;
 
     if-eqz v5, :cond_0
@@ -105,7 +104,7 @@
 
     iget-object v6, v3, Lcom/tapjoy/TapjoyHttpURLResponse;->response:Ljava/lang/String;
 
-    #calls: Lcom/tapjoy/TapjoyVideo;->handleGetVideosResponse(Ljava/lang/String;)Z
+    # invokes: Lcom/tapjoy/TapjoyVideo;->handleGetVideosResponse(Ljava/lang/String;)Z
     invoke-static {v5, v6}, Lcom/tapjoy/TapjoyVideo;->access$000(Lcom/tapjoy/TapjoyVideo;Ljava/lang/String;)Z
 
     move-result v4
@@ -117,7 +116,7 @@
     .line 211
     iget-object v5, p0, Lcom/tapjoy/TapjoyVideo$1;->this$0:Lcom/tapjoy/TapjoyVideo;
 
-    #calls: Lcom/tapjoy/TapjoyVideo;->validateCachedVideos()Z
+    # invokes: Lcom/tapjoy/TapjoyVideo;->validateCachedVideos()Z
     invoke-static {v5}, Lcom/tapjoy/TapjoyVideo;->access$100(Lcom/tapjoy/TapjoyVideo;)Z
 
     .line 214
@@ -142,13 +141,13 @@
     invoke-direct {v2, v5}, Ljava/net/URL;-><init>(Ljava/lang/String;)V
 
     .line 221
-    .local v2, fileURL:Ljava/net/URL;
+    .local v2, "fileURL":Ljava/net/URL;
     invoke-virtual {v2}, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;
 
     move-result-object v0
 
     .line 222
-    .local v0, connection:Ljava/net/URLConnection;
+    .local v0, "connection":Ljava/net/URLConnection;
     const/16 v5, 0x3a98
 
     invoke-virtual {v0, v5}, Ljava/net/URLConnection;->setConnectTimeout(I)V
@@ -174,6 +173,7 @@
 
     move-result-object v5
 
+    # setter for: Lcom/tapjoy/TapjoyVideo;->watermarkImage:Landroid/graphics/Bitmap;
     invoke-static {v5}, Lcom/tapjoy/TapjoyVideo;->access$202(Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
 
     .line 228
@@ -186,13 +186,13 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 237
-    .end local v0           #connection:Ljava/net/URLConnection;
-    .end local v2           #fileURL:Ljava/net/URL;
+    .end local v0    # "connection":Ljava/net/URLConnection;
+    .end local v2    # "fileURL":Ljava/net/URL;
     :cond_1
     :goto_0
     iget-object v5, p0, Lcom/tapjoy/TapjoyVideo$1;->this$0:Lcom/tapjoy/TapjoyVideo;
 
-    #calls: Lcom/tapjoy/TapjoyVideo;->setVideoIDs()V
+    # invokes: Lcom/tapjoy/TapjoyVideo;->setVideoIDs()V
     invoke-static {v5}, Lcom/tapjoy/TapjoyVideo;->access$300(Lcom/tapjoy/TapjoyVideo;)V
 
     .line 240
@@ -200,13 +200,13 @@
 
     const/4 v6, 0x1
 
-    #setter for: Lcom/tapjoy/TapjoyVideo;->initialized:Z
+    # setter for: Lcom/tapjoy/TapjoyVideo;->initialized:Z
     invoke-static {v5, v6}, Lcom/tapjoy/TapjoyVideo;->access$402(Lcom/tapjoy/TapjoyVideo;Z)Z
 
     .line 245
     iget-object v5, p0, Lcom/tapjoy/TapjoyVideo$1;->this$0:Lcom/tapjoy/TapjoyVideo;
 
-    #getter for: Lcom/tapjoy/TapjoyVideo;->cacheAuto:Z
+    # getter for: Lcom/tapjoy/TapjoyVideo;->cacheAuto:Z
     invoke-static {v5}, Lcom/tapjoy/TapjoyVideo;->access$500(Lcom/tapjoy/TapjoyVideo;)Z
 
     move-result v5
@@ -265,7 +265,7 @@
     move-object v1, v5
 
     .line 232
-    .local v1, e:Ljava/lang/Exception;
+    .local v1, "e":Ljava/lang/Exception;
     const-string v5, "TapjoyVideo"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -295,7 +295,7 @@
     goto :goto_0
 
     .line 259
-    .end local v1           #e:Ljava/lang/Exception;
+    .end local v1    # "e":Ljava/lang/Exception;
     :cond_3
     const/4 v5, 0x2
 

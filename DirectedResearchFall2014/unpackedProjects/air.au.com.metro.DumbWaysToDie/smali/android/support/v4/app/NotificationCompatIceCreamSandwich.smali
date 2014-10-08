@@ -16,19 +16,19 @@
 
 .method static add(Landroid/content/Context;Landroid/app/Notification;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Landroid/widget/RemoteViews;ILandroid/app/PendingIntent;Landroid/app/PendingIntent;Landroid/graphics/Bitmap;IIZ)Landroid/app/Notification;
     .locals 3
-    .parameter "context"
-    .parameter "n"
-    .parameter "contentTitle"
-    .parameter "contentText"
-    .parameter "contentInfo"
-    .parameter "tickerView"
-    .parameter "number"
-    .parameter "contentIntent"
-    .parameter "fullScreenIntent"
-    .parameter "largeIcon"
-    .parameter "mProgressMax"
-    .parameter "mProgress"
-    .parameter "mProgressIndeterminate"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "n"    # Landroid/app/Notification;
+    .param p2, "contentTitle"    # Ljava/lang/CharSequence;
+    .param p3, "contentText"    # Ljava/lang/CharSequence;
+    .param p4, "contentInfo"    # Ljava/lang/CharSequence;
+    .param p5, "tickerView"    # Landroid/widget/RemoteViews;
+    .param p6, "number"    # I
+    .param p7, "contentIntent"    # Landroid/app/PendingIntent;
+    .param p8, "fullScreenIntent"    # Landroid/app/PendingIntent;
+    .param p9, "largeIcon"    # Landroid/graphics/Bitmap;
+    .param p10, "mProgressMax"    # I
+    .param p11, "mProgress"    # I
+    .param p12, "mProgressIndeterminate"    # Z
 
     .prologue
     .line 31
@@ -42,7 +42,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "context":Landroid/content/Context;
     iget v0, p1, Landroid/app/Notification;->icon:I
 
     iget v1, p1, Landroid/app/Notification;->iconLevel:I
@@ -65,7 +65,7 @@
 
     iget-object p5, p1, Landroid/app/Notification;->sound:Landroid/net/Uri;
 
-    .end local p5
+    .end local p5    # "tickerView":Landroid/widget/RemoteViews;
     iget v0, p1, Landroid/app/Notification;->audioStreamType:I
 
     invoke-virtual {p0, p5, v0}, Landroid/app/Notification$Builder;->setSound(Landroid/net/Uri;I)Landroid/app/Notification$Builder;
@@ -151,14 +151,14 @@
 
     iget-object p2, p1, Landroid/app/Notification;->deleteIntent:Landroid/app/PendingIntent;
 
-    .end local p2
+    .end local p2    # "contentTitle":Ljava/lang/CharSequence;
     invoke-virtual {p0, p2}, Landroid/app/Notification$Builder;->setDeleteIntent(Landroid/app/PendingIntent;)Landroid/app/Notification$Builder;
 
     move-result-object p0
 
     iget p1, p1, Landroid/app/Notification;->flags:I
 
-    .end local p1
+    .end local p1    # "n":Landroid/app/Notification;
     and-int/lit16 p1, p1, 0x80
 
     if-eqz p1, :cond_3
@@ -183,17 +183,17 @@
     move-result-object p0
 
     .line 54
-    .local p0, b:Landroid/app/Notification$Builder;
+    .local p0, "b":Landroid/app/Notification$Builder;
     invoke-virtual {p0}, Landroid/app/Notification$Builder;->getNotification()Landroid/app/Notification;
 
     move-result-object p0
 
-    .end local p0           #b:Landroid/app/Notification$Builder;
+    .end local p0    # "b":Landroid/app/Notification$Builder;
     return-object p0
 
     .line 31
-    .restart local p1
-    .restart local p2
+    .restart local p1    # "n":Landroid/app/Notification;
+    .restart local p2    # "contentTitle":Ljava/lang/CharSequence;
     :cond_0
     const/4 p5, 0x0
 
@@ -209,8 +209,8 @@
 
     goto :goto_2
 
-    .end local p1
-    .end local p2
+    .end local p1    # "n":Landroid/app/Notification;
+    .end local p2    # "contentTitle":Ljava/lang/CharSequence;
     :cond_3
     const/4 p1, 0x0
 

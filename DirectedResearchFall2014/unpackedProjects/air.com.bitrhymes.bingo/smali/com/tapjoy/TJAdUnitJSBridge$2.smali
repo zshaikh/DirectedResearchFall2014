@@ -26,8 +26,6 @@
 # direct methods
 .method constructor <init>(Lcom/tapjoy/TJAdUnitJSBridge;Ljava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 196
@@ -44,15 +42,15 @@
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 7
-    .parameter "dialog"
-    .parameter "which"
+    .param p1, "dialog"    # Landroid/content/DialogInterface;
+    .param p2, "which"    # I
 
     .prologue
     .line 200
     const/4 v1, 0x0
 
     .line 202
-    .local v1, index:I
+    .local v1, "index":I
     packed-switch p2, :pswitch_data_0
 
     .line 217
@@ -109,7 +107,7 @@
     move-object v0, v2
 
     .line 221
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_1

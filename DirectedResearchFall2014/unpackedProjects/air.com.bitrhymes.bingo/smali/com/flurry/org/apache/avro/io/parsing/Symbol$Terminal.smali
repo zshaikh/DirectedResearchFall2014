@@ -21,7 +21,7 @@
 # direct methods
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 1
-    .parameter "printName"
+    .param p1, "printName"    # Ljava/lang/String;
 
     .prologue
     .line 228

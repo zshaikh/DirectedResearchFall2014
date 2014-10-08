@@ -13,8 +13,8 @@
 # direct methods
 .method public constructor <init>(Landroid/app/Activity;Ljava/lang/String;)V
     .locals 1
-    .parameter "activity"
-    .parameter "adUnitId"
+    .param p1, "activity"    # Landroid/app/Activity;
+    .param p2, "adUnitId"    # Ljava/lang/String;
 
     .prologue
     .line 82
@@ -28,9 +28,9 @@
 
 .method public constructor <init>(Landroid/app/Activity;Ljava/lang/String;Z)V
     .locals 7
-    .parameter "activity"
-    .parameter "adUnitId"
-    .parameter "shortTimeout"
+    .param p1, "activity"    # Landroid/app/Activity;
+    .param p2, "adUnitId"    # Ljava/lang/String;
+    .param p3, "shortTimeout"    # Z
 
     .prologue
     const/4 v3, 0x0
@@ -77,7 +77,7 @@
 
 .method public loadAd(Lcom/google/ads/AdRequest;)V
     .locals 1
-    .parameter "adRequest"
+    .param p1, "adRequest"    # Lcom/google/ads/AdRequest;
 
     .prologue
     .line 120
@@ -91,7 +91,7 @@
 
 .method public setAdListener(Lcom/google/ads/AdListener;)V
     .locals 1
-    .parameter "adListener"
+    .param p1, "adListener"    # Lcom/google/ads/AdListener;
 
     .prologue
     .line 142
@@ -111,7 +111,7 @@
 
 .method protected setAppEventListener(Lcom/google/ads/AppEventListener;)V
     .locals 1
-    .parameter "appEventListener"
+    .param p1, "appEventListener"    # Lcom/google/ads/AppEventListener;
 
     .prologue
     .line 151

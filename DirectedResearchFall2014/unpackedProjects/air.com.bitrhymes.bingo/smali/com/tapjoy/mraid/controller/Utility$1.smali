@@ -32,11 +32,6 @@
 # direct methods
 .method constructor <init>(Lcom/tapjoy/mraid/controller/Utility;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 321
@@ -59,8 +54,8 @@
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 6
-    .parameter "dialog"
-    .parameter "which"
+    .param p1, "dialog"    # Landroid/content/DialogInterface;
+    .param p2, "which"    # I
 
     .prologue
     .line 324
@@ -73,7 +68,7 @@
     check-cast v0, Ljava/util/Map;
 
     .line 325
-    .local v0, entry:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v0, "entry":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     iget-object v2, p0, Lcom/tapjoy/mraid/controller/Utility$1;->this$0:Lcom/tapjoy/mraid/controller/Utility;
 
     const-string v1, "ID"
@@ -94,7 +89,7 @@
 
     iget-object v5, p0, Lcom/tapjoy/mraid/controller/Utility$1;->val$body:Ljava/lang/String;
 
-    #calls: Lcom/tapjoy/mraid/controller/Utility;->addCalendarEvent(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    # invokes: Lcom/tapjoy/mraid/controller/Utility;->addCalendarEvent(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     invoke-static {v2, v1, v3, v4, v5}, Lcom/tapjoy/mraid/controller/Utility;->access$000(Lcom/tapjoy/mraid/controller/Utility;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 326

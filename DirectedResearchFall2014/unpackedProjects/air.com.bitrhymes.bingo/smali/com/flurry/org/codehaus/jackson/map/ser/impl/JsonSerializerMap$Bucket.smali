@@ -34,9 +34,8 @@
 # direct methods
 .method public constructor <init>(Lcom/flurry/org/codehaus/jackson/map/ser/impl/JsonSerializerMap$Bucket;Lcom/flurry/org/codehaus/jackson/map/ser/impl/SerializerCache$TypeKey;Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;)V
     .locals 0
-    .parameter "next"
-    .parameter "key"
-    .parameter
+    .param p1, "next"    # Lcom/flurry/org/codehaus/jackson/map/ser/impl/JsonSerializerMap$Bucket;
+    .param p2, "key"    # Lcom/flurry/org/codehaus/jackson/map/ser/impl/SerializerCache$TypeKey;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -51,7 +50,7 @@
 
     .prologue
     .line 87
-    .local p3, value:Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
+    .local p3, "value":Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonSerializer<Ljava/lang/Object;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 88

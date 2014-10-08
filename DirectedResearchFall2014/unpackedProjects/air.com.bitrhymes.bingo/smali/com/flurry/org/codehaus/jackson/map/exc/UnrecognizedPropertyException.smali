@@ -23,10 +23,9 @@
 # direct methods
 .method public constructor <init>(Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/JsonLocation;Ljava/lang/Class;Ljava/lang/String;)V
     .locals 0
-    .parameter "msg"
-    .parameter "loc"
-    .parameter
-    .parameter "propName"
+    .param p1, "msg"    # Ljava/lang/String;
+    .param p2, "loc"    # Lcom/flurry/org/codehaus/jackson/JsonLocation;
+    .param p4, "propName"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -41,7 +40,7 @@
 
     .prologue
     .line 36
-    .local p3, referringClass:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p3, "referringClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-direct {p0, p1, p2}, Lcom/flurry/org/codehaus/jackson/map/JsonMappingException;-><init>(Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/JsonLocation;)V
 
     .line 37
@@ -56,9 +55,9 @@
 
 .method public static from(Lcom/flurry/org/codehaus/jackson/JsonParser;Ljava/lang/Object;Ljava/lang/String;)Lcom/flurry/org/codehaus/jackson/map/exc/UnrecognizedPropertyException;
     .locals 6
-    .parameter "jp"
-    .parameter "fromObjectOrClass"
-    .parameter "propertyName"
+    .param p0, "jp"    # Lcom/flurry/org/codehaus/jackson/JsonParser;
+    .param p1, "fromObjectOrClass"    # Ljava/lang/Object;
+    .param p2, "propertyName"    # Ljava/lang/String;
 
     .prologue
     .line 43
@@ -85,7 +84,7 @@
     move-object v3, v0
 
     .line 52
-    .local v3, ref:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local v3, "ref":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     :goto_0
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -126,7 +125,7 @@
     move-result-object v2
 
     .line 53
-    .local v2, msg:Ljava/lang/String;
+    .local v2, "msg":Ljava/lang/String;
     new-instance v1, Lcom/flurry/org/codehaus/jackson/map/exc/UnrecognizedPropertyException;
 
     invoke-virtual {p0}, Lcom/flurry/org/codehaus/jackson/JsonParser;->getCurrentLocation()Lcom/flurry/org/codehaus/jackson/JsonLocation;
@@ -136,22 +135,22 @@
     invoke-direct {v1, v2, v4, v3, p2}, Lcom/flurry/org/codehaus/jackson/map/exc/UnrecognizedPropertyException;-><init>(Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/JsonLocation;Ljava/lang/Class;Ljava/lang/String;)V
 
     .line 55
-    .local v1, e:Lcom/flurry/org/codehaus/jackson/map/exc/UnrecognizedPropertyException;
+    .local v1, "e":Lcom/flurry/org/codehaus/jackson/map/exc/UnrecognizedPropertyException;
     invoke-virtual {v1, p1, p2}, Lcom/flurry/org/codehaus/jackson/map/exc/UnrecognizedPropertyException;->prependPath(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 56
     return-object v1
 
     .line 50
-    .end local v1           #e:Lcom/flurry/org/codehaus/jackson/map/exc/UnrecognizedPropertyException;
-    .end local v2           #msg:Ljava/lang/String;
-    .end local v3           #ref:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .end local v1    # "e":Lcom/flurry/org/codehaus/jackson/map/exc/UnrecognizedPropertyException;
+    .end local v2    # "msg":Ljava/lang/String;
+    .end local v3    # "ref":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     :cond_1
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v3
 
-    .restart local v3       #ref:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .restart local v3    # "ref":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     goto :goto_0
 .end method
 

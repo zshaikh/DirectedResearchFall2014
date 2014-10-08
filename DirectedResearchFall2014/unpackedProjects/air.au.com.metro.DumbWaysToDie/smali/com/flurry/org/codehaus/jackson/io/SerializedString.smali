@@ -19,7 +19,7 @@
 # direct methods
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 0
-    .parameter "v"
+    .param p1, "v"    # Ljava/lang/String;
 
     .prologue
     .line 36
@@ -40,7 +40,7 @@
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/io/SerializedString;->_quotedChars:[C
 
     .line 57
-    .local v0, result:[C
+    .local v0, "result":[C
     if-nez v0, :cond_0
 
     .line 58
@@ -70,7 +70,7 @@
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/io/SerializedString;->_quotedUTF8Ref:[B
 
     .line 87
-    .local v0, result:[B
+    .local v0, "result":[B
     if-nez v0, :cond_0
 
     .line 88
@@ -100,7 +100,7 @@
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/io/SerializedString;->_unquotedUTF8Ref:[B
 
     .line 72
-    .local v0, result:[B
+    .local v0, "result":[B
     if-nez v0, :cond_0
 
     .line 73
@@ -138,7 +138,7 @@
 
 .method public final equals(Ljava/lang/Object;)Z
     .locals 4
-    .parameter "o"
+    .param p1, "o"    # Ljava/lang/Object;
 
     .prologue
     .line 109
@@ -178,7 +178,7 @@
     move-object v1, v0
 
     .line 112
-    .local v1, other:Lcom/flurry/org/codehaus/jackson/io/SerializedString;
+    .local v1, "other":Lcom/flurry/org/codehaus/jackson/io/SerializedString;
     iget-object v2, p0, Lcom/flurry/org/codehaus/jackson/io/SerializedString;->_value:Ljava/lang/String;
 
     iget-object v3, v1, Lcom/flurry/org/codehaus/jackson/io/SerializedString;->_value:Ljava/lang/String;

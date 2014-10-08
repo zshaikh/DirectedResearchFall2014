@@ -55,11 +55,10 @@
 # direct methods
 .method private constructor <init>(Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 770
-    .local p0, this:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$LinkedTreeMapIterator;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap<TK;TV;>.LinkedTreeMapIterator<TT;>;"
+    .local p0, "this":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$LinkedTreeMapIterator;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap<TK;TV;>.LinkedTreeMapIterator<TT;>;"
     iput-object p1, p0, Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$LinkedTreeMapIterator;->this$0:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -90,12 +89,12 @@
 
 .method synthetic constructor <init>(Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap;Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$1;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
+    .param p1, "x0"    # Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap;
+    .param p2, "x1"    # Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$1;
 
     .prologue
     .line 770
-    .local p0, this:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$LinkedTreeMapIterator;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap<TK;TV;>.LinkedTreeMapIterator<TT;>;"
+    .local p0, "this":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$LinkedTreeMapIterator;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap<TK;TV;>.LinkedTreeMapIterator<TT;>;"
     invoke-direct {p0, p1}, Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$LinkedTreeMapIterator;-><init>(Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap;)V
 
     return-void
@@ -108,7 +107,7 @@
 
     .prologue
     .line 776
-    .local p0, this:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$LinkedTreeMapIterator;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap<TK;TV;>.LinkedTreeMapIterator<TT;>;"
+    .local p0, "this":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$LinkedTreeMapIterator;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap<TK;TV;>.LinkedTreeMapIterator<TT;>;"
     iget-object v0, p0, Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$LinkedTreeMapIterator;->next:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;
 
     iget-object v1, p0, Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$LinkedTreeMapIterator;->this$0:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap;
@@ -140,11 +139,11 @@
 
     .prologue
     .line 780
-    .local p0, this:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$LinkedTreeMapIterator;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap<TK;TV;>.LinkedTreeMapIterator<TT;>;"
+    .local p0, "this":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$LinkedTreeMapIterator;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap<TK;TV;>.LinkedTreeMapIterator<TT;>;"
     iget-object v0, p0, Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$LinkedTreeMapIterator;->next:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;
 
     .line 781
-    .local v0, e:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
+    .local v0, "e":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;"
     iget-object v1, p0, Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$LinkedTreeMapIterator;->this$0:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap;
 
     iget-object v1, v1, Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap;->header:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;
@@ -192,7 +191,7 @@
 
     .prologue
     .line 792
-    .local p0, this:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$LinkedTreeMapIterator;,"Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap<TK;TV;>.LinkedTreeMapIterator<TT;>;"
+    .local p0, "this":Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$LinkedTreeMapIterator;, "Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap<TK;TV;>.LinkedTreeMapIterator<TT;>;"
     iget-object v0, p0, Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$LinkedTreeMapIterator;->lastReturned:Lcom/fusepowered/m1/google/gson/internal/LinkedHashTreeMap$Node;
 
     if-nez v0, :cond_0

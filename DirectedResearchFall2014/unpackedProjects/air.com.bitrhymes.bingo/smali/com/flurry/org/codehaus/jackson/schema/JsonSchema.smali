@@ -10,7 +10,7 @@
 # direct methods
 .method public constructor <init>(Lcom/flurry/org/codehaus/jackson/node/ObjectNode;)V
     .locals 0
-    .parameter "schema"
+    .param p1, "schema"    # Lcom/flurry/org/codehaus/jackson/node/ObjectNode;
     .annotation runtime Lcom/flurry/org/codehaus/jackson/annotate/JsonCreator;
     .end annotation
 
@@ -37,7 +37,7 @@
     move-result-object v0
 
     .line 76
-    .local v0, objectNode:Lcom/flurry/org/codehaus/jackson/node/ObjectNode;
+    .local v0, "objectNode":Lcom/flurry/org/codehaus/jackson/node/ObjectNode;
     const-string v1, "type"
 
     const-string v2, "any"
@@ -52,7 +52,7 @@
 # virtual methods
 .method public equals(Ljava/lang/Object;)Z
     .locals 5
-    .parameter "o"
+    .param p1, "o"    # Ljava/lang/Object;
 
     .prologue
     const/4 v4, 0x1
@@ -95,7 +95,7 @@
     move-object v1, v0
 
     .line 62
-    .local v1, other:Lcom/flurry/org/codehaus/jackson/schema/JsonSchema;
+    .local v1, "other":Lcom/flurry/org/codehaus/jackson/schema/JsonSchema;
     iget-object v2, p0, Lcom/flurry/org/codehaus/jackson/schema/JsonSchema;->schema:Lcom/flurry/org/codehaus/jackson/node/ObjectNode;
 
     if-nez v2, :cond_4

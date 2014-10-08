@@ -18,7 +18,6 @@
 # direct methods
 .method protected constructor <init>(Ljava/lang/Class;)V
     .locals 0
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -29,8 +28,8 @@
 
     .prologue
     .line 22
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/ser/std/ContainerSerializerBase;,"Lcom/flurry/org/codehaus/jackson/map/ser/std/ContainerSerializerBase<TT;>;"
-    .local p1, t:Ljava/lang/Class;,"Ljava/lang/Class<TT;>;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/ser/std/ContainerSerializerBase;, "Lcom/flurry/org/codehaus/jackson/map/ser/std/ContainerSerializerBase<TT;>;"
+    .local p1, "t":Ljava/lang/Class;, "Ljava/lang/Class<TT;>;"
     invoke-direct {p0, p1}, Lcom/flurry/org/codehaus/jackson/map/ser/std/SerializerBase;-><init>(Ljava/lang/Class;)V
 
     .line 23
@@ -39,8 +38,7 @@
 
 .method protected constructor <init>(Ljava/lang/Class;Z)V
     .locals 0
-    .parameter
-    .parameter "dummy"
+    .param p2, "dummy"    # Z
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -51,8 +49,8 @@
 
     .prologue
     .line 32
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/ser/std/ContainerSerializerBase;,"Lcom/flurry/org/codehaus/jackson/map/ser/std/ContainerSerializerBase<TT;>;"
-    .local p1, t:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/ser/std/ContainerSerializerBase;, "Lcom/flurry/org/codehaus/jackson/map/ser/std/ContainerSerializerBase<TT;>;"
+    .local p1, "t":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-direct {p0, p1, p2}, Lcom/flurry/org/codehaus/jackson/map/ser/std/SerializerBase;-><init>(Ljava/lang/Class;Z)V
 
     .line 33
@@ -75,7 +73,7 @@
 
 .method public withValueTypeSerializer(Lcom/flurry/org/codehaus/jackson/map/TypeSerializer;)Lcom/flurry/org/codehaus/jackson/map/ser/std/ContainerSerializerBase;
     .locals 1
-    .parameter "vts"
+    .param p1, "vts"    # Lcom/flurry/org/codehaus/jackson/map/TypeSerializer;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -88,7 +86,7 @@
 
     .prologue
     .line 46
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/ser/std/ContainerSerializerBase;,"Lcom/flurry/org/codehaus/jackson/map/ser/std/ContainerSerializerBase<TT;>;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/ser/std/ContainerSerializerBase;, "Lcom/flurry/org/codehaus/jackson/map/ser/std/ContainerSerializerBase<TT;>;"
     if-nez p1, :cond_0
 
     move-object v0, p0

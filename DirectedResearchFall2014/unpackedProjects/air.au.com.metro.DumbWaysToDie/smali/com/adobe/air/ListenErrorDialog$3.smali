@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/adobe/air/ListenErrorDialog;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 81
@@ -39,7 +38,6 @@
 # virtual methods
 .method public onCancel(Landroid/content/DialogInterface;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 84

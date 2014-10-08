@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/tapjoy/TapjoyDisplayAd$GetBannerAdTask;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 330
@@ -49,7 +48,7 @@
 
 .method public onConsoleMessage(Landroid/webkit/ConsoleMessage;)Z
     .locals 1
-    .parameter "consoleMessage"
+    .param p1, "consoleMessage"    # Landroid/webkit/ConsoleMessage;
     .annotation build Landroid/annotation/TargetApi;
         value = 0x8
     .end annotation
@@ -93,8 +92,8 @@
 
 .method public onPageFinished(Landroid/webkit/WebView;Ljava/lang/String;)V
     .locals 0
-    .parameter "view"
-    .parameter "url"
+    .param p1, "view"    # Landroid/webkit/WebView;
+    .param p2, "url"    # Ljava/lang/String;
 
     .prologue
     .line 363
@@ -103,9 +102,9 @@
 
 .method public onPageStarted(Landroid/webkit/WebView;Ljava/lang/String;Landroid/graphics/Bitmap;)V
     .locals 0
-    .parameter "view"
-    .parameter "url"
-    .parameter "favicon"
+    .param p1, "view"    # Landroid/webkit/WebView;
+    .param p2, "url"    # Ljava/lang/String;
+    .param p3, "favicon"    # Landroid/graphics/Bitmap;
 
     .prologue
     .line 360
@@ -124,10 +123,10 @@
 
 .method public onReceivedError(Landroid/webkit/WebView;ILjava/lang/String;Ljava/lang/String;)V
     .locals 0
-    .parameter "view"
-    .parameter "errorCode"
-    .parameter "description"
-    .parameter "failingUrl"
+    .param p1, "view"    # Landroid/webkit/WebView;
+    .param p2, "errorCode"    # I
+    .param p3, "description"    # Ljava/lang/String;
+    .param p4, "failingUrl"    # Ljava/lang/String;
 
     .prologue
     .line 353
@@ -156,8 +155,8 @@
 
 .method public shouldOverrideUrlLoading(Landroid/webkit/WebView;Ljava/lang/String;)Z
     .locals 7
-    .parameter "view"
-    .parameter "url"
+    .param p1, "view"    # Landroid/webkit/WebView;
+    .param p2, "url"    # Ljava/lang/String;
 
     .prologue
     const-wide/16 v2, 0x2710
@@ -237,7 +236,7 @@
     .line 373
     check-cast p1, Lcom/tapjoy/mraid/view/MraidView;
 
-    .end local p1
+    .end local p1    # "view":Landroid/webkit/WebView;
     invoke-virtual {p1, p2}, Lcom/tapjoy/mraid/view/MraidView;->loadUrlStandard(Ljava/lang/String;)V
 
     .line 384
@@ -307,7 +306,7 @@
     return v0
 
     .line 377
-    .restart local p1
+    .restart local p1    # "view":Landroid/webkit/WebView;
     :cond_2
     new-instance v6, Landroid/content/Intent;
 
@@ -320,12 +319,12 @@
     invoke-direct {v6, v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
     .line 378
-    .local v6, intent:Landroid/content/Intent;
+    .local v6, "intent":Landroid/content/Intent;
     iget-object v0, p0, Lcom/tapjoy/TapjoyDisplayAd$GetBannerAdTask$1;->this$1:Lcom/tapjoy/TapjoyDisplayAd$GetBannerAdTask;
 
     iget-object v0, v0, Lcom/tapjoy/TapjoyDisplayAd$GetBannerAdTask;->this$0:Lcom/tapjoy/TapjoyDisplayAd;
 
-    #getter for: Lcom/tapjoy/TapjoyDisplayAd;->activityContext:Landroid/app/Activity;
+    # getter for: Lcom/tapjoy/TapjoyDisplayAd;->activityContext:Landroid/app/Activity;
     invoke-static {v0}, Lcom/tapjoy/TapjoyDisplayAd;->access$000(Lcom/tapjoy/TapjoyDisplayAd;)Landroid/app/Activity;
 
     move-result-object v0

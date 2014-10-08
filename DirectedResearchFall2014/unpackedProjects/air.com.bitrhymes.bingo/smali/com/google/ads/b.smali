@@ -91,7 +91,6 @@
 
 .method private static a(J)[B
     .locals 1
-    .parameter
 
     .prologue
     .line 117

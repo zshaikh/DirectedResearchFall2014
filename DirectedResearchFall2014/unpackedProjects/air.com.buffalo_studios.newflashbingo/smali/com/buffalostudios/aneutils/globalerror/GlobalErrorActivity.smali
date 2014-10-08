@@ -24,8 +24,8 @@
 
 .method public static start(Landroid/app/Activity;Ljava/lang/String;)V
     .locals 2
-    .parameter "activity"
-    .parameter "crashReport"
+    .param p0, "activity"    # Landroid/app/Activity;
+    .param p1, "crashReport"    # Ljava/lang/String;
 
     .prologue
     .line 16
@@ -36,18 +36,18 @@
     invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
     .line 17
-    .local v0, intent:Landroid/content/Intent;
+    .local v0, "intent":Landroid/content/Intent;
     const-string v1, "com.buffalostudios.aneutils.CRASH_REPORT"
 
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 18
-    const/high16 v1, 0x8
+    const/high16 v1, 0x80000
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
     .line 19
-    const/high16 v1, 0x400
+    const/high16 v1, 0x4000000
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
@@ -62,7 +62,7 @@
 # virtual methods
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 6
-    .parameter "savedInstanceState"
+    .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
     .line 27
@@ -79,7 +79,7 @@
     const-string v2, ""
 
     .line 34
-    .local v2, crashReport:Ljava/lang/String;
+    .local v2, "crashReport":Ljava/lang/String;
     invoke-virtual {p0}, Lcom/buffalostudios/aneutils/globalerror/GlobalErrorActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v3
@@ -89,7 +89,7 @@
     move-result-object v1
 
     .line 36
-    .local v1, bundle:Landroid/os/Bundle;
+    .local v1, "bundle":Landroid/os/Bundle;
     if-eqz v1, :cond_0
 
     .line 37
@@ -118,7 +118,7 @@
     invoke-direct {v0, v3}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
     .line 46
-    .local v0, builder:Landroid/app/AlertDialog$Builder;
+    .local v0, "builder":Landroid/app/AlertDialog$Builder;
     const-string v3, "There is something wrong"
 
     invoke-virtual {v0, v3}, Landroid/app/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;

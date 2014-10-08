@@ -6,7 +6,7 @@
 # direct methods
 .method constructor <init>(Landroid/content/Context;)V
     .locals 1
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     .line 17
@@ -20,8 +20,8 @@
 
 .method constructor <init>(Landroid/content/Context;Z)V
     .locals 1
-    .parameter "context"
-    .parameter "notification"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "notification"    # Z
 
     .prologue
     .line 21

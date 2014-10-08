@@ -34,10 +34,6 @@
 # direct methods
 .method private constructor <init>(Ljava/lang/String;Ljava/lang/ClassLoader;Ljava/lang/Object;Z)V
     .locals 2
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const/4 v1, 0x0
@@ -62,11 +58,6 @@
 
 .method synthetic constructor <init>(Ljava/lang/String;Ljava/lang/ClassLoader;Ljava/lang/Object;ZB)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 404
@@ -79,7 +70,6 @@
 # virtual methods
 .method public final a(Ljava/lang/Object;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 418
@@ -94,8 +84,6 @@
 
 .method public final a(Ljava/util/Set;Ljava/util/Set;)V
     .locals 2
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",

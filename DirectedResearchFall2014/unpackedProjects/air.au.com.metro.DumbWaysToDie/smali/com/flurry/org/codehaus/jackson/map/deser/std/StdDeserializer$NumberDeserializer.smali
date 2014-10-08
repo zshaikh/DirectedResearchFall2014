@@ -43,8 +43,8 @@
 # virtual methods
 .method public deserialize(Lcom/flurry/org/codehaus/jackson/JsonParser;Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;)Ljava/lang/Number;
     .locals 7
-    .parameter "jp"
-    .parameter "ctxt"
+    .param p1, "jp"    # Lcom/flurry/org/codehaus/jackson/JsonParser;
+    .param p2, "ctxt"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -59,7 +59,7 @@
     move-result-object v1
 
     .line 917
-    .local v1, t:Lcom/flurry/org/codehaus/jackson/JsonToken;
+    .local v1, "t":Lcom/flurry/org/codehaus/jackson/JsonToken;
     sget-object v5, Lcom/flurry/org/codehaus/jackson/JsonToken;->VALUE_NUMBER_INT:Lcom/flurry/org/codehaus/jackson/JsonToken;
 
     if-ne v1, v5, :cond_1
@@ -140,7 +140,7 @@
     move-result-object v2
 
     .line 938
-    .local v2, text:Ljava/lang/String;
+    .local v2, "text":Ljava/lang/String;
     const/16 v5, 0x2e
 
     :try_start_0
@@ -175,7 +175,7 @@
     move-object v0, v5
 
     .line 955
-    .local v0, iae:Ljava/lang/IllegalArgumentException;
+    .local v0, "iae":Ljava/lang/IllegalArgumentException;
     iget-object v5, p0, Lcom/flurry/org/codehaus/jackson/map/deser/std/StdDeserializer$NumberDeserializer;->_valueClass:Ljava/lang/Class;
 
     const-string v6, "not a valid number"
@@ -187,7 +187,7 @@
     throw v5
 
     .line 943
-    .end local v0           #iae:Ljava/lang/IllegalArgumentException;
+    .end local v0    # "iae":Ljava/lang/IllegalArgumentException;
     :cond_4
     :try_start_1
     new-instance v5, Ljava/lang/Double;
@@ -220,7 +220,7 @@
     move-result-wide v3
 
     .line 950
-    .local v3, value:J
+    .local v3, "value":J
     const-wide/32 v5, 0x7fffffff
 
     cmp-long v5, v3, v5
@@ -253,8 +253,8 @@
     goto :goto_0
 
     .line 959
-    .end local v2           #text:Ljava/lang/String;
-    .end local v3           #value:J
+    .end local v2    # "text":Ljava/lang/String;
+    .end local v3    # "value":J
     :cond_8
     iget-object v5, p0, Lcom/flurry/org/codehaus/jackson/map/deser/std/StdDeserializer$NumberDeserializer;->_valueClass:Ljava/lang/Class;
 
@@ -267,8 +267,8 @@
 
 .method public bridge synthetic deserialize(Lcom/flurry/org/codehaus/jackson/JsonParser;Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;)Ljava/lang/Object;
     .locals 1
-    .parameter "x0"
-    .parameter "x1"
+    .param p1, "x0"    # Lcom/flurry/org/codehaus/jackson/JsonParser;
+    .param p2, "x1"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -287,9 +287,9 @@
 
 .method public deserializeWithType(Lcom/flurry/org/codehaus/jackson/JsonParser;Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;Lcom/flurry/org/codehaus/jackson/map/TypeDeserializer;)Ljava/lang/Object;
     .locals 2
-    .parameter "jp"
-    .parameter "ctxt"
-    .parameter "typeDeserializer"
+    .param p1, "jp"    # Lcom/flurry/org/codehaus/jackson/JsonParser;
+    .param p2, "ctxt"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;
+    .param p3, "typeDeserializer"    # Lcom/flurry/org/codehaus/jackson/map/TypeDeserializer;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,

@@ -40,7 +40,7 @@
 
 .method private static getSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
     .locals 2
-    .parameter "ctxt"
+    .param p0, "ctxt"    # Landroid/content/Context;
 
     .prologue
     .line 22
@@ -57,9 +57,9 @@
 
 .method public static readSharedProperty(Landroid/content/Context;Ljava/lang/String;F)F
     .locals 2
-    .parameter "ctxt"
-    .parameter "name"
-    .parameter "defaultValue"
+    .param p0, "ctxt"    # Landroid/content/Context;
+    .param p1, "name"    # Ljava/lang/String;
+    .param p2, "defaultValue"    # F
 
     .prologue
     .line 77
@@ -68,7 +68,7 @@
     move-result-object v0
 
     .line 78
-    .local v0, settings:Landroid/content/SharedPreferences;
+    .local v0, "settings":Landroid/content/SharedPreferences;
     invoke-interface {v0, p1, p2}, Landroid/content/SharedPreferences;->getFloat(Ljava/lang/String;F)F
 
     move-result v1
@@ -78,9 +78,9 @@
 
 .method public static readSharedProperty(Landroid/content/Context;Ljava/lang/String;I)I
     .locals 2
-    .parameter "ctxt"
-    .parameter "name"
-    .parameter "defaultValue"
+    .param p0, "ctxt"    # Landroid/content/Context;
+    .param p1, "name"    # Ljava/lang/String;
+    .param p2, "defaultValue"    # I
 
     .prologue
     .line 49
@@ -89,7 +89,7 @@
     move-result-object v0
 
     .line 50
-    .local v0, settings:Landroid/content/SharedPreferences;
+    .local v0, "settings":Landroid/content/SharedPreferences;
     invoke-interface {v0, p1, p2}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
 
     move-result v1
@@ -99,9 +99,9 @@
 
 .method public static readSharedProperty(Landroid/content/Context;Ljava/lang/String;J)J
     .locals 3
-    .parameter "ctxt"
-    .parameter "name"
-    .parameter "defaultValue"
+    .param p0, "ctxt"    # Landroid/content/Context;
+    .param p1, "name"    # Ljava/lang/String;
+    .param p2, "defaultValue"    # J
 
     .prologue
     .line 91
@@ -110,7 +110,7 @@
     move-result-object v0
 
     .line 92
-    .local v0, settings:Landroid/content/SharedPreferences;
+    .local v0, "settings":Landroid/content/SharedPreferences;
     invoke-interface {v0, p1, p2, p3}, Landroid/content/SharedPreferences;->getLong(Ljava/lang/String;J)J
 
     move-result-wide v1
@@ -120,9 +120,9 @@
 
 .method public static readSharedProperty(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 2
-    .parameter "ctxt"
-    .parameter "name"
-    .parameter "defaultValue"
+    .param p0, "ctxt"    # Landroid/content/Context;
+    .param p1, "name"    # Ljava/lang/String;
+    .param p2, "defaultValue"    # Ljava/lang/String;
 
     .prologue
     .line 35
@@ -131,7 +131,7 @@
     move-result-object v0
 
     .line 36
-    .local v0, settings:Landroid/content/SharedPreferences;
+    .local v0, "settings":Landroid/content/SharedPreferences;
     invoke-interface {v0, p1, p2}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -141,9 +141,9 @@
 
 .method public static readSharedProperty(Landroid/content/Context;Ljava/lang/String;Z)Z
     .locals 2
-    .parameter "ctxt"
-    .parameter "name"
-    .parameter "defaultValue"
+    .param p0, "ctxt"    # Landroid/content/Context;
+    .param p1, "name"    # Ljava/lang/String;
+    .param p2, "defaultValue"    # Z
 
     .prologue
     .line 63
@@ -152,7 +152,7 @@
     move-result-object v0
 
     .line 64
-    .local v0, settings:Landroid/content/SharedPreferences;
+    .local v0, "settings":Landroid/content/SharedPreferences;
     invoke-interface {v0, p1, p2}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v1
@@ -162,9 +162,9 @@
 
 .method public static writeSharedProperty(Landroid/content/Context;Ljava/lang/String;F)V
     .locals 2
-    .parameter "ctxt"
-    .parameter "name"
-    .parameter "value"
+    .param p0, "ctxt"    # Landroid/content/Context;
+    .param p1, "name"    # Ljava/lang/String;
+    .param p2, "value"    # F
 
     .prologue
     .line 68
@@ -173,13 +173,13 @@
     move-result-object v1
 
     .line 69
-    .local v1, settings:Landroid/content/SharedPreferences;
+    .local v1, "settings":Landroid/content/SharedPreferences;
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
     .line 70
-    .local v0, editor:Landroid/content/SharedPreferences$Editor;
+    .local v0, "editor":Landroid/content/SharedPreferences$Editor;
     invoke-interface {v0, p1, p2}, Landroid/content/SharedPreferences$Editor;->putFloat(Ljava/lang/String;F)Landroid/content/SharedPreferences$Editor;
 
     .line 72
@@ -191,9 +191,9 @@
 
 .method public static writeSharedProperty(Landroid/content/Context;Ljava/lang/String;I)V
     .locals 2
-    .parameter "ctxt"
-    .parameter "name"
-    .parameter "value"
+    .param p0, "ctxt"    # Landroid/content/Context;
+    .param p1, "name"    # Ljava/lang/String;
+    .param p2, "value"    # I
 
     .prologue
     .line 40
@@ -202,13 +202,13 @@
     move-result-object v1
 
     .line 41
-    .local v1, settings:Landroid/content/SharedPreferences;
+    .local v1, "settings":Landroid/content/SharedPreferences;
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
     .line 42
-    .local v0, editor:Landroid/content/SharedPreferences$Editor;
+    .local v0, "editor":Landroid/content/SharedPreferences$Editor;
     invoke-interface {v0, p1, p2}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
     .line 44
@@ -220,9 +220,9 @@
 
 .method public static writeSharedProperty(Landroid/content/Context;Ljava/lang/String;J)V
     .locals 2
-    .parameter "ctxt"
-    .parameter "name"
-    .parameter "value"
+    .param p0, "ctxt"    # Landroid/content/Context;
+    .param p1, "name"    # Ljava/lang/String;
+    .param p2, "value"    # J
 
     .prologue
     .line 82
@@ -231,13 +231,13 @@
     move-result-object v1
 
     .line 83
-    .local v1, settings:Landroid/content/SharedPreferences;
+    .local v1, "settings":Landroid/content/SharedPreferences;
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
     .line 84
-    .local v0, editor:Landroid/content/SharedPreferences$Editor;
+    .local v0, "editor":Landroid/content/SharedPreferences$Editor;
     invoke-interface {v0, p1, p2, p3}, Landroid/content/SharedPreferences$Editor;->putLong(Ljava/lang/String;J)Landroid/content/SharedPreferences$Editor;
 
     .line 86
@@ -249,9 +249,9 @@
 
 .method public static writeSharedProperty(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
-    .parameter "ctxt"
-    .parameter "name"
-    .parameter "value"
+    .param p0, "ctxt"    # Landroid/content/Context;
+    .param p1, "name"    # Ljava/lang/String;
+    .param p2, "value"    # Ljava/lang/String;
 
     .prologue
     .line 26
@@ -260,13 +260,13 @@
     move-result-object v1
 
     .line 27
-    .local v1, settings:Landroid/content/SharedPreferences;
+    .local v1, "settings":Landroid/content/SharedPreferences;
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
     .line 28
-    .local v0, editor:Landroid/content/SharedPreferences$Editor;
+    .local v0, "editor":Landroid/content/SharedPreferences$Editor;
     invoke-interface {v0, p1, p2}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
     .line 30
@@ -278,9 +278,9 @@
 
 .method public static writeSharedProperty(Landroid/content/Context;Ljava/lang/String;Z)V
     .locals 2
-    .parameter "ctxt"
-    .parameter "name"
-    .parameter "value"
+    .param p0, "ctxt"    # Landroid/content/Context;
+    .param p1, "name"    # Ljava/lang/String;
+    .param p2, "value"    # Z
 
     .prologue
     .line 54
@@ -289,13 +289,13 @@
     move-result-object v1
 
     .line 55
-    .local v1, settings:Landroid/content/SharedPreferences;
+    .local v1, "settings":Landroid/content/SharedPreferences;
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
     .line 56
-    .local v0, editor:Landroid/content/SharedPreferences$Editor;
+    .local v0, "editor":Landroid/content/SharedPreferences$Editor;
     invoke-interface {v0, p1, p2}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
     .line 58

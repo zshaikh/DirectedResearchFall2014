@@ -158,7 +158,6 @@
 # virtual methods
 .method public downloadDone(Z)V
     .locals 4
-    .parameter
 
     .prologue
     .line 122
@@ -205,7 +204,6 @@
 
 .method public onBind(Landroid/content/Intent;)Landroid/os/IBinder;
     .locals 1
-    .parameter
 
     .prologue
     .line 89
@@ -295,9 +293,6 @@
 
 .method public onStartCommand(Landroid/content/Intent;II)I
     .locals 2
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 77

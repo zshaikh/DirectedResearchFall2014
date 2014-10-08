@@ -39,7 +39,7 @@
 # direct methods
 .method public constructor <init>(Lv2/com/playhaven/interstitial/jsbridge/ManipulatableContentDisplayer;)V
     .locals 1
-    .parameter "contentDisplayer"
+    .param p1, "contentDisplayer"    # Lv2/com/playhaven/interstitial/jsbridge/ManipulatableContentDisplayer;
 
     .prologue
     .line 47
@@ -65,7 +65,7 @@
 
 .method private stripQuery(Ljava/lang/String;)Ljava/lang/String;
     .locals 3
-    .parameter "url"
+    .param p1, "url"    # Ljava/lang/String;
 
     .prologue
     const-string v2, "?"
@@ -109,8 +109,8 @@
 # virtual methods
 .method public addRoute(Ljava/lang/String;Lv2/com/playhaven/interstitial/jsbridge/handlers/AbstractHandler;)V
     .locals 1
-    .parameter "route"
-    .parameter "handler"
+    .param p1, "route"    # Ljava/lang/String;
+    .param p2, "handler"    # Lv2/com/playhaven/interstitial/jsbridge/handlers/AbstractHandler;
 
     .prologue
     .line 117
@@ -138,7 +138,7 @@
 
 .method public attachWebview(Landroid/webkit/WebView;)V
     .locals 0
-    .parameter "webview"
+    .param p1, "webview"    # Landroid/webkit/WebView;
 
     .prologue
     .line 56
@@ -176,7 +176,7 @@
 
 .method public getCurrentQueryVar(Ljava/lang/String;)Ljava/lang/String;
     .locals 4
-    .parameter "name"
+    .param p1, "name"    # Ljava/lang/String;
 
     .prologue
     const/4 v3, 0x0
@@ -209,7 +209,7 @@
     move-result-object v0
 
     .line 106
-    .local v0, param:Ljava/lang/String;
+    .local v0, "param":Ljava/lang/String;
     if-eqz v0, :cond_1
 
     const-string v2, ""
@@ -244,7 +244,7 @@
     goto :goto_0
 
     .line 101
-    .end local v0           #param:Ljava/lang/String;
+    .end local v0    # "param":Ljava/lang/String;
     :catchall_0
     move-exception v2
 
@@ -302,7 +302,7 @@
 
 .method public hasRoute(Ljava/lang/String;)Z
     .locals 2
-    .parameter "url"
+    .param p1, "url"    # Ljava/lang/String;
 
     .prologue
     .line 140
@@ -358,7 +358,7 @@
 
 .method public loadUrlInWebView(Ljava/lang/String;)V
     .locals 1
-    .parameter "url"
+    .param p1, "url"    # Ljava/lang/String;
 
     .prologue
     .line 74
@@ -378,7 +378,7 @@
 
 .method public route(Ljava/lang/String;)V
     .locals 3
-    .parameter "url"
+    .param p1, "url"    # Ljava/lang/String;
 
     .prologue
     .line 149
@@ -410,7 +410,7 @@
     move-result-object v1
 
     .line 156
-    .local v1, stripped:Ljava/lang/String;
+    .local v1, "stripped":Ljava/lang/String;
     iget-object v2, p0, Lv2/com/playhaven/interstitial/jsbridge/PHJSBridge;->routers:Ljava/util/Hashtable;
 
     invoke-virtual {v2, v1}, Ljava/util/Hashtable;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -420,7 +420,7 @@
     check-cast v0, Lv2/com/playhaven/interstitial/jsbridge/handlers/AbstractHandler;
 
     .line 158
-    .local v0, handler:Lv2/com/playhaven/interstitial/jsbridge/handlers/AbstractHandler;
+    .local v0, "handler":Lv2/com/playhaven/interstitial/jsbridge/handlers/AbstractHandler;
     if-eqz v0, :cond_1
 
     .line 159
@@ -432,8 +432,8 @@
 
     goto :goto_0
 
-    .end local v0           #handler:Lv2/com/playhaven/interstitial/jsbridge/handlers/AbstractHandler;
-    .end local v1           #stripped:Ljava/lang/String;
+    .end local v0    # "handler":Lv2/com/playhaven/interstitial/jsbridge/handlers/AbstractHandler;
+    .end local v1    # "stripped":Ljava/lang/String;
     :catchall_0
     move-exception v2
 
@@ -446,7 +446,7 @@
 
 .method public runJavascript(Ljava/lang/String;)V
     .locals 3
-    .parameter "js"
+    .param p1, "js"    # Ljava/lang/String;
 
     .prologue
     .line 81
@@ -480,9 +480,9 @@
 
 .method public sendMessageToWebview(Ljava/lang/String;Lorg/json/JSONObject;Lorg/json/JSONObject;)V
     .locals 6
-    .parameter "callback"
-    .parameter "payload"
-    .parameter "error"
+    .param p1, "callback"    # Ljava/lang/String;
+    .param p2, "payload"    # Lorg/json/JSONObject;
+    .param p3, "error"    # Lorg/json/JSONObject;
 
     .prologue
     const-string v5, "null"
@@ -546,7 +546,7 @@
     move-result-object v0
 
     .line 180
-    .local v0, callbackCommand:Ljava/lang/String;
+    .local v0, "callbackCommand":Ljava/lang/String;
     new-instance v1, Ljava/lang/StringBuilder;
 
     const-string v2, "sending javascript callback to WebView: \'"
@@ -571,7 +571,7 @@
     goto :goto_0
 
     .line 175
-    .end local v0           #callbackCommand:Ljava/lang/String;
+    .end local v0    # "callbackCommand":Ljava/lang/String;
     :cond_1
     const-string v4, "null"
 

@@ -30,7 +30,7 @@
 
 .method synthetic constructor <init>(Lcom/flurry/org/codehaus/jackson/map/introspect/BasicClassIntrospector$1;)V
     .locals 0
-    .parameter "x0"
+    .param p1, "x0"    # Lcom/flurry/org/codehaus/jackson/map/introspect/BasicClassIntrospector$1;
 
     .prologue
     .line 258
@@ -43,7 +43,7 @@
 # virtual methods
 .method public includeMethod(Ljava/lang/reflect/Method;)Z
     .locals 3
-    .parameter "m"
+    .param p1, "m"    # Ljava/lang/reflect/Method;
 
     .prologue
     const/4 v2, 0x0
@@ -74,7 +74,7 @@
     array-length v0, v1
 
     .line 268
-    .local v0, pcount:I
+    .local v0, "pcount":I
     const/4 v1, 0x2
 
     if-gt v0, v1, :cond_1

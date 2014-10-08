@@ -16,13 +16,13 @@
 
 .method public static getAdLayoutAnimationController(Landroid/view/animation/AnimationSet;)Landroid/view/animation/LayoutAnimationController;
     .locals 2
-    .parameter "set"
+    .param p0, "set"    # Landroid/view/animation/AnimationSet;
 
     .prologue
     .line 19
     new-instance v0, Landroid/view/animation/LayoutAnimationController;
 
-    const/high16 v1, 0x3e80
+    const/high16 v1, 0x3e800000
 
     invoke-direct {v0, p0, v1}, Landroid/view/animation/LayoutAnimationController;-><init>(Landroid/view/animation/Animation;F)V
 
@@ -31,7 +31,7 @@
 
 .method public static getAlphaAnimation(I)Landroid/view/animation/Animation;
     .locals 3
-    .parameter "duration"
+    .param p0, "duration"    # I
 
     .prologue
     .line 25
@@ -39,12 +39,12 @@
 
     const/4 v1, 0x0
 
-    const/high16 v2, 0x3f80
+    const/high16 v2, 0x3f800000
 
     invoke-direct {v0, v1, v2}, Landroid/view/animation/AlphaAnimation;-><init>(FF)V
 
     .line 26
-    .local v0, animation:Landroid/view/animation/Animation;
+    .local v0, "animation":Landroid/view/animation/Animation;
     int-to-long v1, p0
 
     invoke-virtual {v0, v1, v2}, Landroid/view/animation/Animation;->setDuration(J)V
@@ -55,7 +55,7 @@
 
 .method public static getFancyTransitionAnimation(I)Landroid/view/animation/AnimationSet;
     .locals 11
-    .parameter "duration"
+    .param p0, "duration"    # I
 
     .prologue
     const/4 v4, 0x0
@@ -68,10 +68,10 @@
     invoke-direct {v9, v1}, Landroid/view/animation/AnimationSet;-><init>(Z)V
 
     .line 48
-    .local v9, animSet:Landroid/view/animation/AnimationSet;
+    .local v9, "animSet":Landroid/view/animation/AnimationSet;
     new-instance v0, Landroid/view/animation/TranslateAnimation;
 
-    const/high16 v2, -0x4080
+    const/high16 v2, -0x40800000
 
     move v3, v1
 
@@ -86,15 +86,15 @@
     invoke-direct/range {v0 .. v8}, Landroid/view/animation/TranslateAnimation;-><init>(IFIFIFIF)V
 
     .line 53
-    .local v0, translate:Landroid/view/animation/Animation;
+    .local v0, "translate":Landroid/view/animation/Animation;
     new-instance v10, Landroid/view/animation/RotateAnimation;
 
-    const/high16 v1, -0x3e90
+    const/high16 v1, -0x3e900000
 
     invoke-direct {v10, v1, v4}, Landroid/view/animation/RotateAnimation;-><init>(FF)V
 
     .line 55
-    .local v10, rotate:Landroid/view/animation/Animation;
+    .local v10, "rotate":Landroid/view/animation/Animation;
     invoke-virtual {v9, v0}, Landroid/view/animation/AnimationSet;->addAnimation(Landroid/view/animation/Animation;)V
 
     .line 56
@@ -118,7 +118,7 @@
 
 .method public static getSlideInAnimation(I)Landroid/view/animation/Animation;
     .locals 9
-    .parameter "duration"
+    .param p0, "duration"    # I
 
     .prologue
     const/4 v4, 0x0
@@ -128,7 +128,7 @@
     .line 65
     new-instance v0, Landroid/view/animation/TranslateAnimation;
 
-    const/high16 v2, -0x4080
+    const/high16 v2, -0x40800000
 
     move v3, v1
 
@@ -143,7 +143,7 @@
     invoke-direct/range {v0 .. v8}, Landroid/view/animation/TranslateAnimation;-><init>(IFIFIFIF)V
 
     .line 70
-    .local v0, animation:Landroid/view/animation/Animation;
+    .local v0, "animation":Landroid/view/animation/Animation;
     int-to-long v1, p0
 
     invoke-virtual {v0, v1, v2}, Landroid/view/animation/Animation;->setDuration(J)V
@@ -161,7 +161,7 @@
 
 .method public static getSlideOutAnimation(I)Landroid/view/animation/Animation;
     .locals 9
-    .parameter "duration"
+    .param p0, "duration"    # I
 
     .prologue
     const/4 v2, 0x0
@@ -171,7 +171,7 @@
     .line 77
     new-instance v0, Landroid/view/animation/TranslateAnimation;
 
-    const/high16 v4, 0x3f80
+    const/high16 v4, 0x3f800000
 
     move v3, v1
 
@@ -186,7 +186,7 @@
     invoke-direct/range {v0 .. v8}, Landroid/view/animation/TranslateAnimation;-><init>(IFIFIFIF)V
 
     .line 81
-    .local v0, animation:Landroid/view/animation/Animation;
+    .local v0, "animation":Landroid/view/animation/Animation;
     int-to-long v1, p0
 
     invoke-virtual {v0, v1, v2}, Landroid/view/animation/Animation;->setDuration(J)V
@@ -204,7 +204,7 @@
 
 .method public static getTranslateAnimation(I)Landroid/view/animation/Animation;
     .locals 9
-    .parameter "duration"
+    .param p0, "duration"    # I
 
     .prologue
     const/4 v2, 0x0
@@ -214,7 +214,7 @@
     .line 34
     new-instance v0, Landroid/view/animation/TranslateAnimation;
 
-    const/high16 v6, -0x4080
+    const/high16 v6, -0x40800000
 
     move v3, v1
 
@@ -229,7 +229,7 @@
     invoke-direct/range {v0 .. v8}, Landroid/view/animation/TranslateAnimation;-><init>(IFIFIFIF)V
 
     .line 39
-    .local v0, animation:Landroid/view/animation/Animation;
+    .local v0, "animation":Landroid/view/animation/Animation;
     int-to-long v1, p0
 
     invoke-virtual {v0, v1, v2}, Landroid/view/animation/Animation;->setDuration(J)V

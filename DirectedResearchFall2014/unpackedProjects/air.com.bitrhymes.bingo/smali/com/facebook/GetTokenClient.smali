@@ -6,12 +6,12 @@
 # direct methods
 .method constructor <init>(Landroid/content/Context;Ljava/lang/String;)V
     .locals 6
-    .parameter "context"
-    .parameter "applicationId"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "applicationId"    # Ljava/lang/String;
 
     .prologue
     .line 28
-    const/high16 v2, 0x1
+    const/high16 v2, 0x10000
 
     const v3, 0x10001
 
@@ -34,7 +34,7 @@
 # virtual methods
 .method protected populateRequestBundle(Landroid/os/Bundle;)V
     .locals 0
-    .parameter "data"
+    .param p1, "data"    # Landroid/os/Bundle;
 
     .prologue
     .line 34

@@ -9,7 +9,7 @@
 
 .field private static final ATTRIBUTION_ID_COLUMN_NAME:Ljava/lang/String; = "aid"
 
-.field private static final ATTRIBUTION_ID_CONTENT_URI:Landroid/net/Uri; = null
+.field private static final ATTRIBUTION_ID_CONTENT_URI:Landroid/net/Uri;
 
 .field private static final ATTRIBUTION_PREFERENCES:Ljava/lang/String; = "com.facebook.sdk.attributionTracking"
 
@@ -21,9 +21,9 @@
 
 .field private static final DEFAULT_MAXIMUM_POOL_SIZE:I = 0x80
 
-.field private static final DEFAULT_THREAD_FACTORY:Ljava/util/concurrent/ThreadFactory; = null
+.field private static final DEFAULT_THREAD_FACTORY:Ljava/util/concurrent/ThreadFactory;
 
-.field private static final DEFAULT_WORK_QUEUE:Ljava/util/concurrent/BlockingQueue; = null
+.field private static final DEFAULT_WORK_QUEUE:Ljava/util/concurrent/BlockingQueue;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/concurrent/BlockingQueue",
@@ -36,7 +36,7 @@
 
 .field private static final FACEBOOK_COM:Ljava/lang/String; = "facebook.com"
 
-.field private static final LOCK:Ljava/lang/Object; = null
+.field private static final LOCK:Ljava/lang/Object;
 
 .field private static final MOBILE_INSTALL_EVENT:Ljava/lang/String; = "MOBILE_APP_INSTALL"
 

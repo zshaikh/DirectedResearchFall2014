@@ -21,7 +21,7 @@
 # direct methods
 .method constructor <init>(I)V
     .locals 0
-    .parameter "compressionLevel"
+    .param p1, "compressionLevel"    # I
 
     .prologue
     .line 44

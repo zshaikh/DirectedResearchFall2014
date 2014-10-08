@@ -21,7 +21,6 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m2/m2l/M2RActivity;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1
@@ -37,14 +36,14 @@
 # virtual methods
 .method public onClose(Lcom/fusepowered/m2/m2l/MraidView;Lcom/fusepowered/m2/m2l/MraidView$ViewState;)V
     .locals 2
-    .parameter "view"
-    .parameter "newViewState"
+    .param p1, "view"    # Lcom/fusepowered/m2/m2l/MraidView;
+    .param p2, "newViewState"    # Lcom/fusepowered/m2/m2l/MraidView$ViewState;
 
     .prologue
     .line 125
     iget-object v0, p0, Lcom/fusepowered/m2/m2l/MraidActivity$3;->this$0:Lcom/fusepowered/m2/m2l/M2RActivity;
 
-    #getter for: Lcom/fusepowered/m2/m2l/M2RActivity;->mMraidView:Lcom/fusepowered/m2/m2l/MraidView;
+    # getter for: Lcom/fusepowered/m2/m2l/M2RActivity;->mMraidView:Lcom/fusepowered/m2/m2l/MraidView;
     invoke-static {v0}, Lcom/fusepowered/m2/m2l/M2RActivity;->access$0(Lcom/fusepowered/m2/m2l/M2RActivity;)Lcom/fusepowered/m2/m2l/MraidView;
 
     move-result-object v0
@@ -68,13 +67,13 @@
 
 .method public onReady(Lcom/fusepowered/m2/m2l/MraidView;)V
     .locals 2
-    .parameter "view"
+    .param p1, "view"    # Lcom/fusepowered/m2/m2l/MraidView;
 
     .prologue
     .line 121
     iget-object v0, p0, Lcom/fusepowered/m2/m2l/MraidActivity$3;->this$0:Lcom/fusepowered/m2/m2l/M2RActivity;
 
-    #getter for: Lcom/fusepowered/m2/m2l/M2RActivity;->mMraidView:Lcom/fusepowered/m2/m2l/MraidView;
+    # getter for: Lcom/fusepowered/m2/m2l/M2RActivity;->mMraidView:Lcom/fusepowered/m2/m2l/MraidView;
     invoke-static {v0}, Lcom/fusepowered/m2/m2l/M2RActivity;->access$0(Lcom/fusepowered/m2/m2l/M2RActivity;)Lcom/fusepowered/m2/m2l/MraidView;
 
     move-result-object v0

@@ -21,8 +21,8 @@
 # direct methods
 .method private varargs constructor <init>(Lcom/flurry/org/apache/avro/io/parsing/Symbol;[Lcom/flurry/org/apache/avro/io/parsing/Symbol;)V
     .locals 2
-    .parameter "end"
-    .parameter "sequenceToRepeat"
+    .param p1, "end"    # Lcom/flurry/org/apache/avro/io/parsing/Symbol;
+    .param p2, "sequenceToRepeat"    # [Lcom/flurry/org/apache/avro/io/parsing/Symbol;
 
     .prologue
     .line 332
@@ -50,9 +50,9 @@
 
 .method synthetic constructor <init>(Lcom/flurry/org/apache/avro/io/parsing/Symbol;[Lcom/flurry/org/apache/avro/io/parsing/Symbol;Lcom/flurry/org/apache/avro/io/parsing/Symbol$1;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
-    .parameter "x2"
+    .param p1, "x0"    # Lcom/flurry/org/apache/avro/io/parsing/Symbol;
+    .param p2, "x1"    # [Lcom/flurry/org/apache/avro/io/parsing/Symbol;
+    .param p3, "x2"    # Lcom/flurry/org/apache/avro/io/parsing/Symbol$1;
 
     .prologue
     .line 328
@@ -63,7 +63,7 @@
 
 .method private static makeProduction([Lcom/flurry/org/apache/avro/io/parsing/Symbol;)[Lcom/flurry/org/apache/avro/io/parsing/Symbol;
     .locals 4
-    .parameter "p"
+    .param p0, "p"    # [Lcom/flurry/org/apache/avro/io/parsing/Symbol;
 
     .prologue
     .line 338
@@ -74,7 +74,7 @@
     new-array v0, v1, [Lcom/flurry/org/apache/avro/io/parsing/Symbol;
 
     .line 339
-    .local v0, result:[Lcom/flurry/org/apache/avro/io/parsing/Symbol;
+    .local v0, "result":[Lcom/flurry/org/apache/avro/io/parsing/Symbol;
     const/4 v1, 0x0
 
     const/4 v2, 0x1
@@ -91,8 +91,6 @@
 # virtual methods
 .method public flatten(Ljava/util/Map;Ljava/util/Map;)Lcom/flurry/org/apache/avro/io/parsing/Symbol$Repeater;
     .locals 7
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -113,8 +111,8 @@
     .end annotation
 
     .prologue
-    .local p1, map:Ljava/util/Map;,"Ljava/util/Map<Lcom/flurry/org/apache/avro/io/parsing/Symbol$Sequence;Lcom/flurry/org/apache/avro/io/parsing/Symbol$Sequence;>;"
-    .local p2, map2:Ljava/util/Map;,"Ljava/util/Map<Lcom/flurry/org/apache/avro/io/parsing/Symbol$Sequence;Ljava/util/List<Lcom/flurry/org/apache/avro/io/parsing/Symbol$Fixup;>;>;"
+    .local p1, "map":Ljava/util/Map;, "Ljava/util/Map<Lcom/flurry/org/apache/avro/io/parsing/Symbol$Sequence;Lcom/flurry/org/apache/avro/io/parsing/Symbol$Sequence;>;"
+    .local p2, "map2":Ljava/util/Map;, "Ljava/util/Map<Lcom/flurry/org/apache/avro/io/parsing/Symbol$Sequence;Ljava/util/List<Lcom/flurry/org/apache/avro/io/parsing/Symbol$Fixup;>;>;"
     const/4 v1, 0x1
 
     .line 346
@@ -133,7 +131,7 @@
     invoke-direct {v6, v0, v2}, Lcom/flurry/org/apache/avro/io/parsing/Symbol$Repeater;-><init>(Lcom/flurry/org/apache/avro/io/parsing/Symbol;[Lcom/flurry/org/apache/avro/io/parsing/Symbol;)V
 
     .line 348
-    .local v6, result:Lcom/flurry/org/apache/avro/io/parsing/Symbol$Repeater;
+    .local v6, "result":Lcom/flurry/org/apache/avro/io/parsing/Symbol$Repeater;
     iget-object v0, p0, Lcom/flurry/org/apache/avro/io/parsing/Symbol$Repeater;->production:[Lcom/flurry/org/apache/avro/io/parsing/Symbol;
 
     iget-object v2, v6, Lcom/flurry/org/apache/avro/io/parsing/Symbol$Repeater;->production:[Lcom/flurry/org/apache/avro/io/parsing/Symbol;
@@ -152,8 +150,8 @@
 
 .method public bridge synthetic flatten(Ljava/util/Map;Ljava/util/Map;)Lcom/flurry/org/apache/avro/io/parsing/Symbol;
     .locals 1
-    .parameter "x0"
-    .parameter "x1"
+    .param p1, "x0"    # Ljava/util/Map;
+    .param p2, "x1"    # Ljava/util/Map;
 
     .prologue
     .line 328

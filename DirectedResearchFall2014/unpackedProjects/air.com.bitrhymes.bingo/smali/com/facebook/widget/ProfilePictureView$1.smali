@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/facebook/widget/ProfilePictureView;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1
@@ -40,13 +39,13 @@
 # virtual methods
 .method public onCompleted(Lcom/facebook/internal/ImageResponse;)V
     .locals 1
-    .parameter "response"
+    .param p1, "response"    # Lcom/facebook/internal/ImageResponse;
 
     .prologue
     .line 440
     iget-object v0, p0, Lcom/facebook/widget/ProfilePictureView$1;->this$0:Lcom/facebook/widget/ProfilePictureView;
 
-    #calls: Lcom/facebook/widget/ProfilePictureView;->processResponse(Lcom/facebook/internal/ImageResponse;)V
+    # invokes: Lcom/facebook/widget/ProfilePictureView;->processResponse(Lcom/facebook/internal/ImageResponse;)V
     invoke-static {v0, p1}, Lcom/facebook/widget/ProfilePictureView;->access$0(Lcom/facebook/widget/ProfilePictureView;Lcom/facebook/internal/ImageResponse;)V
 
     .line 441

@@ -17,7 +17,7 @@
 # direct methods
 .method public constructor <init>(Ljava/lang/Exception;)V
     .locals 0
-    .parameter "e"
+    .param p1, "e"    # Ljava/lang/Exception;
 
     .prologue
     .line 245

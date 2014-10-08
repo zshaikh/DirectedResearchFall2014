@@ -162,7 +162,7 @@
 
 .method private constructor <init>(Landroid/app/Activity;)V
     .locals 2
-    .parameter "activity"
+    .param p1, "activity"    # Landroid/app/Activity;
 
     .prologue
     .line 168
@@ -205,7 +205,7 @@
 
 .method private constructor <init>(Landroid/content/Context;)V
     .locals 2
-    .parameter "ctx"
+    .param p1, "ctx"    # Landroid/content/Context;
 
     .prologue
     .line 177
@@ -241,8 +241,8 @@
 
 .method public static acceptFriend(Ljava/lang/String;Lcom/fusepowered/util/FuseCallback;)V
     .locals 4
-    .parameter "fuseId"
-    .parameter "fuseCallback"
+    .param p0, "fuseId"    # Ljava/lang/String;
+    .param p1, "fuseCallback"    # Lcom/fusepowered/util/FuseCallback;
 
     .prologue
     .line 4679
@@ -254,7 +254,7 @@
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     .line 4683
-    .local v0, params:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v0, "params":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v1, "id"
 
     sget v2, Lcom/fusepowered/fuseapi/FuseAPI;->id:I
@@ -346,11 +346,11 @@
     .line 4692
     new-instance p1, Lcom/fusepowered/util/FuseMessageCallback;
 
-    .end local p1
+    .end local p1    # "fuseCallback":Lcom/fusepowered/util/FuseCallback;
     invoke-direct {p1}, Lcom/fusepowered/util/FuseMessageCallback;-><init>()V
 
     .line 4695
-    .restart local p1
+    .restart local p1    # "fuseCallback":Lcom/fusepowered/util/FuseCallback;
     :cond_0
     sget-object v1, Lcom/fusepowered/fuseapi/FuseAPI;->commonParams:Ljava/util/HashMap;
 
@@ -362,10 +362,10 @@
 
 .method static synthetic access$000([IILcom/fusepowered/activities/FuseApiBrowser;Lcom/fusepowered/util/FuseAdCallback;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
-    .parameter "x2"
-    .parameter "x3"
+    .param p0, "x0"    # [I
+    .param p1, "x1"    # I
+    .param p2, "x2"    # Lcom/fusepowered/activities/FuseApiBrowser;
+    .param p3, "x3"    # Lcom/fusepowered/util/FuseAdCallback;
 
     .prologue
     .line 98
@@ -376,7 +376,7 @@
 
 .method static synthetic access$200(I)V
     .locals 0
-    .parameter "x0"
+    .param p0, "x0"    # I
 
     .prologue
     .line 98
@@ -387,7 +387,7 @@
 
 .method static synthetic access$300(I)V
     .locals 0
-    .parameter "x0"
+    .param p0, "x0"    # I
 
     .prologue
     .line 98
@@ -398,7 +398,7 @@
 
 .method static synthetic access$400(Ljava/lang/String;)V
     .locals 0
-    .parameter "x0"
+    .param p0, "x0"    # Ljava/lang/String;
 
     .prologue
     .line 98
@@ -409,7 +409,7 @@
 
 .method static synthetic access$500(I)V
     .locals 0
-    .parameter "x0"
+    .param p0, "x0"    # I
 
     .prologue
     .line 98
@@ -420,7 +420,7 @@
 
 .method static synthetic access$602(Z)Z
     .locals 0
-    .parameter "x0"
+    .param p0, "x0"    # Z
 
     .prologue
     .line 98
@@ -466,7 +466,7 @@
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     .line 1530
-    .local v0, params:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v0, "params":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v1, "id"
 
     sget v2, Lcom/fusepowered/fuseapi/FuseAPI;->id:I
@@ -545,7 +545,7 @@
     invoke-static {v1, v0, v2}, Lcom/fusepowered/fuseapi/MessagingService;->sendJsonMessage(Ljava/util/HashMap;Ljava/util/HashMap;Lcom/fusepowered/util/FuseCallback;)V
 
     .line 1544
-    .end local v0           #params:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .end local v0    # "params":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     :cond_0
     invoke-static {v4}, Lcom/fusepowered/fuseapi/FuseAPI;->setFuseChildActivityOnDisplay(Z)V
 
@@ -589,7 +589,7 @@
 
 .method public static adDisplay(I)V
     .locals 4
-    .parameter "adId"
+    .param p0, "adId"    # I
 
     .prologue
     .line 1381
@@ -613,7 +613,7 @@
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     .line 1395
-    .local v0, params:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v0, "params":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v1, "id"
 
     sget v2, Lcom/fusepowered/fuseapi/FuseAPI;->id:I
@@ -688,15 +688,15 @@
     invoke-static {v1, v0, v2}, Lcom/fusepowered/fuseapi/MessagingService;->sendJsonMessage(Ljava/util/HashMap;Ljava/util/HashMap;Lcom/fusepowered/util/FuseCallback;)V
 
     .line 1413
-    .end local v0           #params:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .end local v0    # "params":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     :cond_0
     return-void
 .end method
 
 .method public static addFriend(Ljava/lang/String;Lcom/fusepowered/util/FuseCallback;)V
     .locals 4
-    .parameter "fuseId"
-    .parameter "fuseCallback"
+    .param p0, "fuseId"    # Ljava/lang/String;
+    .param p1, "fuseCallback"    # Lcom/fusepowered/util/FuseCallback;
 
     .prologue
     .line 4572
@@ -708,7 +708,7 @@
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     .line 4576
-    .local v0, params:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v0, "params":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v1, "id"
 
     sget v2, Lcom/fusepowered/fuseapi/FuseAPI;->id:I
@@ -800,11 +800,11 @@
     .line 4585
     new-instance p1, Lcom/fusepowered/util/FuseMessageCallback;
 
-    .end local p1
+    .end local p1    # "fuseCallback":Lcom/fusepowered/util/FuseCallback;
     invoke-direct {p1}, Lcom/fusepowered/util/FuseMessageCallback;-><init>()V
 
     .line 4588
-    .restart local p1
+    .restart local p1    # "fuseCallback":Lcom/fusepowered/util/FuseCallback;
     :cond_0
     sget-object v1, Lcom/fusepowered/fuseapi/FuseAPI;->commonParams:Ljava/util/HashMap;
 
@@ -816,8 +816,8 @@
 
 .method private static buildDataPayloadJSON(Ljava/lang/String;Lcom/fusepowered/util/GameKeyValuePairs;)Lorg/json/JSONObject;
     .locals 9
-    .parameter "objectMapKey"
-    .parameter "gameKeyValuePairs"
+    .param p0, "objectMapKey"    # Ljava/lang/String;
+    .param p1, "gameKeyValuePairs"    # Lcom/fusepowered/util/GameKeyValuePairs;
 
     .prologue
     .line 3183
@@ -826,20 +826,20 @@
     invoke-direct {v6}, Lorg/json/JSONObject;-><init>()V
 
     .line 3184
-    .local v6, paramJson:Lorg/json/JSONObject;
+    .local v6, "paramJson":Lorg/json/JSONObject;
     new-instance v0, Lorg/json/JSONArray;
 
     invoke-direct {v0}, Lorg/json/JSONArray;-><init>()V
 
     .line 3188
-    .local v0, dataPayload:Lorg/json/JSONArray;
+    .local v0, "dataPayload":Lorg/json/JSONArray;
     :try_start_0
     invoke-virtual {p1, p0}, Lcom/fusepowered/util/GameKeyValuePairs;->getMapForKey(Ljava/lang/String;)Ljava/util/HashMap;
 
     move-result-object v5
 
     .line 3190
-    .local v5, objectMapEntry:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v5, "objectMapEntry":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-virtual {v5}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
 
     move-result-object v7
@@ -848,8 +848,8 @@
 
     move-result-object v2
 
-    .end local p0
-    .local v2, i$:Ljava/util/Iterator;
+    .end local p0    # "objectMapKey":Ljava/lang/String;
+    .local v2, "i$":Ljava/util/Iterator;
     :cond_0
     :goto_0
     invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
@@ -865,13 +865,13 @@
     check-cast v4, Ljava/util/Map$Entry;
 
     .line 3192
-    .local v4, mapEntry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v4, "mapEntry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
     new-instance v3, Lorg/json/JSONObject;
 
     invoke-direct {v3}, Lorg/json/JSONObject;-><init>()V
 
     .line 3194
-    .local v3, jsonObject:Lorg/json/JSONObject;
+    .local v3, "jsonObject":Lorg/json/JSONObject;
     invoke-interface {v4}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object p0
@@ -923,17 +923,17 @@
     goto :goto_0
 
     .line 3211
-    .end local v2           #i$:Ljava/util/Iterator;
-    .end local v3           #jsonObject:Lorg/json/JSONObject;
-    .end local v4           #mapEntry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
-    .end local v5           #objectMapEntry:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .end local v2    # "i$":Ljava/util/Iterator;
+    .end local v3    # "jsonObject":Lorg/json/JSONObject;
+    .end local v4    # "mapEntry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
+    .end local v5    # "objectMapEntry":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     :catch_0
     move-exception v7
 
     move-object v1, v7
 
     .line 3213
-    .local v1, e:Lorg/json/JSONException;
+    .local v1, "e":Lorg/json/JSONException;
     const-string v7, "FuseAPI"
 
     const-string v8, "buildDataPayloadJSON JSONException"
@@ -944,13 +944,13 @@
     const/4 v7, 0x0
 
     .line 3217
-    .end local v1           #e:Lorg/json/JSONException;
+    .end local v1    # "e":Lorg/json/JSONException;
     :goto_1
     return-object v7
 
     .line 3209
-    .restart local v2       #i$:Ljava/util/Iterator;
-    .restart local v5       #objectMapEntry:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .restart local v2    # "i$":Ljava/util/Iterator;
+    .restart local v5    # "objectMapEntry":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     :cond_1
     :try_start_1
     const-string v7, "data_payload"
@@ -967,7 +967,6 @@
 
 .method private static buildDataPayloadJSON(Ljava/util/Set;)Lorg/json/JSONObject;
     .locals 8
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -984,26 +983,26 @@
 
     .prologue
     .line 3143
-    .local p0, mapEntries:Ljava/util/Set;,"Ljava/util/Set<Ljava/util/Map$Entry<Ljava/lang/String;Lcom/fusepowered/util/GameValue;>;>;"
+    .local p0, "mapEntries":Ljava/util/Set;, "Ljava/util/Set<Ljava/util/Map$Entry<Ljava/lang/String;Lcom/fusepowered/util/GameValue;>;>;"
     new-instance v5, Lorg/json/JSONObject;
 
     invoke-direct {v5}, Lorg/json/JSONObject;-><init>()V
 
     .line 3144
-    .local v5, paramJson:Lorg/json/JSONObject;
+    .local v5, "paramJson":Lorg/json/JSONObject;
     new-instance v0, Lorg/json/JSONArray;
 
     invoke-direct {v0}, Lorg/json/JSONArray;-><init>()V
 
     .line 3148
-    .local v0, dataPayload:Lorg/json/JSONArray;
+    .local v0, "dataPayload":Lorg/json/JSONArray;
     :try_start_0
     invoke-interface {p0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
 
-    .end local p0           #mapEntries:Ljava/util/Set;,"Ljava/util/Set<Ljava/util/Map$Entry<Ljava/lang/String;Lcom/fusepowered/util/GameValue;>;>;"
-    .local v2, i$:Ljava/util/Iterator;
+    .end local p0    # "mapEntries":Ljava/util/Set;, "Ljava/util/Set<Ljava/util/Map$Entry<Ljava/lang/String;Lcom/fusepowered/util/GameValue;>;>;"
+    .local v2, "i$":Ljava/util/Iterator;
     :cond_0
     :goto_0
     invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
@@ -1019,13 +1018,13 @@
     check-cast v4, Ljava/util/Map$Entry;
 
     .line 3150
-    .local v4, mapEntry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Lcom/fusepowered/util/GameValue;>;"
+    .local v4, "mapEntry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Lcom/fusepowered/util/GameValue;>;"
     new-instance v3, Lorg/json/JSONObject;
 
     invoke-direct {v3}, Lorg/json/JSONObject;-><init>()V
 
     .line 3152
-    .local v3, jsonObject:Lorg/json/JSONObject;
+    .local v3, "jsonObject":Lorg/json/JSONObject;
     invoke-interface {v4}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object p0
@@ -1098,16 +1097,16 @@
     goto :goto_0
 
     .line 3169
-    .end local v2           #i$:Ljava/util/Iterator;
-    .end local v3           #jsonObject:Lorg/json/JSONObject;
-    .end local v4           #mapEntry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Lcom/fusepowered/util/GameValue;>;"
+    .end local v2    # "i$":Ljava/util/Iterator;
+    .end local v3    # "jsonObject":Lorg/json/JSONObject;
+    .end local v4    # "mapEntry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Lcom/fusepowered/util/GameValue;>;"
     :catch_0
     move-exception v6
 
     move-object v1, v6
 
     .line 3171
-    .local v1, e:Lorg/json/JSONException;
+    .local v1, "e":Lorg/json/JSONException;
     const-string v6, "FuseAPI"
 
     const-string v7, "buildDataPayloadJSON JSONException"
@@ -1118,14 +1117,14 @@
     const/4 v6, 0x0
 
     .line 3175
-    .end local v1           #e:Lorg/json/JSONException;
+    .end local v1    # "e":Lorg/json/JSONException;
     :goto_2
     return-object v6
 
     .line 3156
-    .restart local v2       #i$:Ljava/util/Iterator;
-    .restart local v3       #jsonObject:Lorg/json/JSONObject;
-    .restart local v4       #mapEntry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Lcom/fusepowered/util/GameValue;>;"
+    .restart local v2    # "i$":Ljava/util/Iterator;
+    .restart local v3    # "jsonObject":Lorg/json/JSONObject;
+    .restart local v4    # "mapEntry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Lcom/fusepowered/util/GameValue;>;"
     :cond_1
     :try_start_1
     const-string v7, "0"
@@ -1133,8 +1132,8 @@
     goto :goto_1
 
     .line 3167
-    .end local v3           #jsonObject:Lorg/json/JSONObject;
-    .end local v4           #mapEntry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Lcom/fusepowered/util/GameValue;>;"
+    .end local v3    # "jsonObject":Lorg/json/JSONObject;
+    .end local v4    # "mapEntry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Lcom/fusepowered/util/GameValue;>;"
     :cond_2
     const-string v6, "data_payload"
 
@@ -1150,7 +1149,7 @@
 
 .method public static checkAdAvailable(Lcom/fusepowered/util/FuseAdCallback;)V
     .locals 14
-    .parameter "newAdCallback"
+    .param p0, "newAdCallback"    # Lcom/fusepowered/util/FuseAdCallback;
 
     .prologue
     const/4 v13, 0x5
@@ -1193,13 +1192,13 @@
     check-cast v1, Landroid/net/ConnectivityManager;
 
     .line 1625
-    .local v1, cm:Landroid/net/ConnectivityManager;
+    .local v1, "cm":Landroid/net/ConnectivityManager;
     invoke-virtual {v1}, Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;
 
     move-result-object v0
 
     .line 1627
-    .local v0, activeNetwork:Landroid/net/NetworkInfo;
+    .local v0, "activeNetwork":Landroid/net/NetworkInfo;
     if-eqz v0, :cond_2
 
     invoke-virtual {v0}, Landroid/net/NetworkInfo;->isConnectedOrConnecting()Z
@@ -1217,7 +1216,7 @@
     move v3, v7
 
     .line 1629
-    .local v3, isConnectedRTN:I
+    .local v3, "isConnectedRTN":I
     :goto_1
     sget-object v7, Lcom/fusepowered/fuseapi/FuseAPI;->responseValues:Lcom/fusepowered/util/ResponseValues;
 
@@ -1239,7 +1238,7 @@
     goto :goto_0
 
     .line 1627
-    .end local v3           #isConnectedRTN:I
+    .end local v3    # "isConnectedRTN":I
     :cond_2
     sget-object v7, Lcom/fusepowered/util/FuseAdErrors;->FUSE_AD_NOT_CONNECTED:Lcom/fusepowered/util/FuseAdErrors;
 
@@ -1252,7 +1251,7 @@
     goto :goto_1
 
     .line 1636
-    .restart local v3       #isConnectedRTN:I
+    .restart local v3    # "isConnectedRTN":I
     :cond_3
     sget-object v7, Lcom/fusepowered/fuseapi/FuseAPI;->responseValues:Lcom/fusepowered/util/ResponseValues;
 
@@ -1270,7 +1269,7 @@
     move-result-object v5
 
     .line 1640
-    .local v5, nextAd:Lcom/fusepowered/util/Ad;
+    .local v5, "nextAd":Lcom/fusepowered/util/Ad;
     invoke-virtual {v5, v12}, Lcom/fusepowered/util/Ad;->waterfallContains(I)Z
 
     move-result v7
@@ -1318,7 +1317,7 @@
     const/4 v6, 0x0
 
     .line 1654
-    .local v6, rtn:Z
+    .local v6, "rtn":Z
     invoke-virtual {v5, v10}, Lcom/fusepowered/util/Ad;->waterfallContains(I)Z
 
     move-result v7
@@ -1445,7 +1444,7 @@
     invoke-direct {v4, p0}, Lcom/fusepowered/fuseapi/FuseAPI$3;-><init>(Lcom/fusepowered/util/FuseAdCallback;)V
 
     .line 1705
-    .local v4, mopubAdCheck:Lcom/fusepowered/fuseapi/FuseAPI$MopubCheckAdCallback;
+    .local v4, "mopubAdCheck":Lcom/fusepowered/fuseapi/FuseAPI$MopubCheckAdCallback;
     sget-object v7, Lcom/fusepowered/fuseapi/FuseAPI;->mInterstitial:Lcom/fusepowered/m2/m2l/MoPubInterstitial;
 
     invoke-virtual {v7, v4}, Lcom/fusepowered/m2/m2l/MoPubInterstitial;->setInterstitialAdListener(Lcom/fusepowered/m2/m2l/MoPubInterstitial$InterstitialAdListener;)V
@@ -1461,7 +1460,7 @@
     invoke-direct {v2}, Landroid/os/Handler;-><init>()V
 
     .line 1710
-    .local v2, handler:Landroid/os/Handler;
+    .local v2, "handler":Landroid/os/Handler;
     new-instance v7, Lcom/fusepowered/fuseapi/FuseAPI$4;
 
     invoke-direct {v7, v4, p0}, Lcom/fusepowered/fuseapi/FuseAPI$4;-><init>(Lcom/fusepowered/fuseapi/FuseAPI$MopubCheckAdCallback;Lcom/fusepowered/util/FuseAdCallback;)V
@@ -1473,8 +1472,8 @@
     goto/16 :goto_0
 
     .line 1732
-    .end local v2           #handler:Landroid/os/Handler;
-    .end local v4           #mopubAdCheck:Lcom/fusepowered/fuseapi/FuseAPI$MopubCheckAdCallback;
+    .end local v2    # "handler":Landroid/os/Handler;
+    .end local v4    # "mopubAdCheck":Lcom/fusepowered/fuseapi/FuseAPI$MopubCheckAdCallback;
     :cond_b
     sput-boolean v9, Lcom/fusepowered/fuseapi/FuseAPI;->checkingAd:Z
 
@@ -1484,8 +1483,8 @@
     goto/16 :goto_0
 
     .line 1739
-    .end local v5           #nextAd:Lcom/fusepowered/util/Ad;
-    .end local v6           #rtn:Z
+    .end local v5    # "nextAd":Lcom/fusepowered/util/Ad;
+    .end local v6    # "rtn":Z
     :cond_c
     sput-boolean v9, Lcom/fusepowered/fuseapi/FuseAPI;->checkingAd:Z
 
@@ -1514,7 +1513,7 @@
     move-result-object v3
 
     .line 2431
-    .local v3, messages:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/fusepowered/util/Message;>;"
+    .local v3, "messages":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/fusepowered/util/Message;>;"
     if-eqz v3, :cond_0
 
     .line 2432
@@ -1522,7 +1521,7 @@
 
     move-result-object v1
 
-    .local v1, i$:Ljava/util/Iterator;
+    .local v1, "i$":Ljava/util/Iterator;
     :goto_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
@@ -1537,14 +1536,14 @@
     check-cast v2, Lcom/fusepowered/util/Message;
 
     .line 2433
-    .local v2, message:Lcom/fusepowered/util/Message;
+    .local v2, "message":Lcom/fusepowered/util/Message;
     invoke-virtual {v2, v5}, Lcom/fusepowered/util/Message;->setDisplayed(Z)V
 
     goto :goto_0
 
     .line 2437
-    .end local v1           #i$:Ljava/util/Iterator;
-    .end local v2           #message:Lcom/fusepowered/util/Message;
+    .end local v1    # "i$":Ljava/util/Iterator;
+    .end local v2    # "message":Lcom/fusepowered/util/Message;
     :cond_0
     sget-object v4, Lcom/fusepowered/fuseapi/FuseAPI;->responseValues:Lcom/fusepowered/util/ResponseValues;
 
@@ -1553,22 +1552,22 @@
     move-result-object v0
 
     .line 2438
-    .local v0, ad:Lcom/fusepowered/util/Ad;
+    .local v0, "ad":Lcom/fusepowered/util/Ad;
     if-eqz v0, :cond_1
 
     .line 2439
     invoke-virtual {v0, v5}, Lcom/fusepowered/util/Ad;->setDisplayed(Z)V
 
     .line 2442
-    .end local v0           #ad:Lcom/fusepowered/util/Ad;
-    .end local v3           #messages:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/fusepowered/util/Message;>;"
+    .end local v0    # "ad":Lcom/fusepowered/util/Ad;
+    .end local v3    # "messages":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/fusepowered/util/Message;>;"
     :cond_1
     return-void
 .end method
 
 .method private static configureApplifier(Lcom/fusepowered/util/FuseAdCallback;)V
     .locals 3
-    .parameter "adCallback"
+    .param p0, "adCallback"    # Lcom/fusepowered/util/FuseAdCallback;
 
     .prologue
     const-string v2, "FuseAPI"
@@ -1591,7 +1590,7 @@
     move-result-object v0
 
     .line 1002
-    .local v0, applifierId:Ljava/lang/String;
+    .local v0, "applifierId":Ljava/lang/String;
     if-eqz v0, :cond_1
 
     invoke-virtual {v0}, Ljava/lang/String;->length()I
@@ -1682,19 +1681,19 @@
     invoke-direct {v0}, Landroid/util/DisplayMetrics;-><init>()V
 
     .line 1060
-    .local v0, dm:Landroid/util/DisplayMetrics;
+    .local v0, "dm":Landroid/util/DisplayMetrics;
     const-wide/16 v1, 0x0
 
     .line 1061
-    .local v1, height:D
+    .local v1, "height":D
     const-wide/16 v5, 0x0
 
     .line 1062
-    .local v5, width:D
+    .local v5, "width":D
     const-wide/16 v3, 0x0
 
     .line 1064
-    .local v3, maxDimension:D
+    .local v3, "maxDimension":D
     sget-object v7, Lcom/fusepowered/fuseapi/FuseAPI;->mainActivity:Landroid/app/Activity;
 
     if-eqz v7, :cond_1
@@ -1729,7 +1728,7 @@
 
     .line 1072
     :cond_1
-    const-wide/high16 v7, 0x4090
+    const-wide/high16 v7, 0x4090000000000000L
 
     cmpg-double v7, v3, v7
 
@@ -1884,7 +1883,7 @@
 
 .method private static configureVungle(Lcom/fusepowered/util/FuseAdCallback;)V
     .locals 4
-    .parameter "adCallback"
+    .param p0, "adCallback"    # Lcom/fusepowered/util/FuseAdCallback;
 
     .prologue
     const-string v3, "FuseAPI"
@@ -1907,7 +1906,7 @@
     move-result-object v0
 
     .line 954
-    .local v0, vungleId:Ljava/lang/String;
+    .local v0, "vungleId":Ljava/lang/String;
     if-eqz v0, :cond_1
 
     invoke-virtual {v0}, Ljava/lang/String;->length()I
@@ -1997,13 +1996,13 @@
     check-cast v0, Landroid/net/ConnectivityManager;
 
     .line 2622
-    .local v0, cm:Landroid/net/ConnectivityManager;
+    .local v0, "cm":Landroid/net/ConnectivityManager;
     invoke-virtual {v0}, Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;
 
     move-result-object v1
 
     .line 2624
-    .local v1, netInfo:Landroid/net/NetworkInfo;
+    .local v1, "netInfo":Landroid/net/NetworkInfo;
     if-eqz v1, :cond_0
 
     invoke-virtual {v1}, Landroid/net/NetworkInfo;->isConnected()Z
@@ -2027,8 +2026,8 @@
 
 .method public static deleteSignPost(Ljava/lang/String;I)V
     .locals 4
-    .parameter "fuseId"
-    .parameter "signPostId"
+    .param p0, "fuseId"    # Ljava/lang/String;
+    .param p1, "signPostId"    # I
 
     .prologue
     .line 5040
@@ -2049,7 +2048,7 @@
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     .line 5045
-    .local v0, params:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v0, "params":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v1, "id"
 
     sget v2, Lcom/fusepowered/fuseapi/FuseAPI;->id:I
@@ -2154,15 +2153,15 @@
     invoke-static {v1, v0, v2}, Lcom/fusepowered/fuseapi/MessagingService;->sendJsonMessage(Ljava/util/HashMap;Ljava/util/HashMap;Lcom/fusepowered/util/FuseCallback;)V
 
     .line 5055
-    .end local v0           #params:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .end local v0    # "params":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     :cond_0
     return-void
 .end method
 
 .method public static deleteUserChatMessage(Ljava/lang/String;I)V
     .locals 4
-    .parameter "fuseId"
-    .parameter "messageId"
+    .param p0, "fuseId"    # Ljava/lang/String;
+    .param p1, "messageId"    # I
 
     .prologue
     .line 4069
@@ -2183,7 +2182,7 @@
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     .line 4075
-    .local v0, params:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v0, "params":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v1, "id"
 
     sget v2, Lcom/fusepowered/fuseapi/FuseAPI;->id:I
@@ -2288,15 +2287,15 @@
     invoke-static {v1, v0, v2}, Lcom/fusepowered/fuseapi/MessagingService;->sendJsonMessage(Ljava/util/HashMap;Ljava/util/HashMap;Lcom/fusepowered/util/FuseCallback;)V
 
     .line 4085
-    .end local v0           #params:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .end local v0    # "params":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     :cond_0
     return-void
 .end method
 
 .method public static deviceLogin(Ljava/lang/String;Lcom/fusepowered/util/FuseCallback;)V
     .locals 6
-    .parameter "alias"
-    .parameter "fuseCallback"
+    .param p0, "alias"    # Ljava/lang/String;
+    .param p1, "fuseCallback"    # Lcom/fusepowered/util/FuseCallback;
 
     .prologue
     const/4 v0, 0x0
@@ -2324,8 +2323,8 @@
 
 .method public static displayAd(Lcom/fusepowered/activities/FuseApiBrowser;Lcom/fusepowered/util/FuseAdCallback;)V
     .locals 4
-    .parameter "fuseApiAdBrowser"
-    .parameter "adCallback"
+    .param p0, "fuseApiAdBrowser"    # Lcom/fusepowered/activities/FuseApiBrowser;
+    .param p1, "adCallback"    # Lcom/fusepowered/util/FuseAdCallback;
 
     .prologue
     const/4 v3, 0x0
@@ -2464,10 +2463,10 @@
 
 .method private static displayAdFromWaterfall([IILcom/fusepowered/activities/FuseApiBrowser;Lcom/fusepowered/util/FuseAdCallback;)V
     .locals 5
-    .parameter "waterfall"
-    .parameter "index"
-    .parameter "fuseApiAdBrowser"
-    .parameter "adCallback"
+    .param p0, "waterfall"    # [I
+    .param p1, "index"    # I
+    .param p2, "fuseApiAdBrowser"    # Lcom/fusepowered/activities/FuseApiBrowser;
+    .param p3, "adCallback"    # Lcom/fusepowered/util/FuseAdCallback;
 
     .prologue
     const-string v4, "FuseAPI"
@@ -2518,7 +2517,7 @@
     aget v0, p0, p1
 
     .line 1286
-    .local v0, adProvider:I
+    .local v0, "adProvider":I
     const/4 v2, 0x1
 
     if-ne v0, v2, :cond_1
@@ -2536,7 +2535,7 @@
     move-result v1
 
     .line 1289
-    .local v1, success:Z
+    .local v1, "success":Z
     if-nez v1, :cond_0
 
     .line 1290
@@ -2545,14 +2544,14 @@
     invoke-static {p0, v2, p2, p3}, Lcom/fusepowered/fuseapi/FuseAPI;->displayAdFromWaterfall([IILcom/fusepowered/activities/FuseApiBrowser;Lcom/fusepowered/util/FuseAdCallback;)V
 
     .line 1315
-    .end local v0           #adProvider:I
-    .end local v1           #success:Z
+    .end local v0    # "adProvider":I
+    .end local v1    # "success":Z
     :cond_0
     :goto_0
     return-void
 
     .line 1292
-    .restart local v0       #adProvider:I
+    .restart local v0    # "adProvider":I
     :cond_1
     const/4 v2, 0x2
 
@@ -2622,7 +2621,7 @@
     goto :goto_0
 
     .line 1310
-    .end local v0           #adProvider:I
+    .end local v0    # "adProvider":I
     :cond_5
     sget-object v2, Lcom/fusepowered/util/FuseAdSkip;->FUSE_AD_SKIP_NO_HTML:Lcom/fusepowered/util/FuseAdSkip;
 
@@ -2645,10 +2644,10 @@
 
 .method private static displayApplifierAd([IILcom/fusepowered/activities/FuseApiBrowser;Lcom/fusepowered/util/FuseAdCallback;)V
     .locals 5
-    .parameter "waterfall"
-    .parameter "index"
-    .parameter "fuseApiAdBrowser"
-    .parameter "adCallback"
+    .param p0, "waterfall"    # [I
+    .param p1, "index"    # I
+    .param p2, "fuseApiAdBrowser"    # Lcom/fusepowered/activities/FuseApiBrowser;
+    .param p3, "adCallback"    # Lcom/fusepowered/util/FuseAdCallback;
 
     .prologue
     const/4 v4, 0x1
@@ -2692,7 +2691,7 @@
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     .line 1033
-    .local v0, properties:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/Object;>;"
+    .local v0, "properties":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/Object;>;"
     const-string v2, "noOfferScreen"
 
     invoke-static {v4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -2718,7 +2717,7 @@
     move-result v1
 
     .line 1038
-    .local v1, wasAdPlayed:Z
+    .local v1, "wasAdPlayed":Z
     if-eqz v1, :cond_3
 
     .line 1039
@@ -2742,8 +2741,8 @@
 
 .method private static displayFuseAd(Lcom/fusepowered/activities/FuseApiBrowser;Lcom/fusepowered/util/FuseAdCallback;)Z
     .locals 2
-    .parameter "fuseApiAdBrowser"
-    .parameter "adCallback"
+    .param p0, "fuseApiAdBrowser"    # Lcom/fusepowered/activities/FuseApiBrowser;
+    .param p1, "adCallback"    # Lcom/fusepowered/util/FuseAdCallback;
 
     .prologue
     const/4 v1, 0x1
@@ -2781,10 +2780,10 @@
 
 .method private static displayMoPubAd([IILcom/fusepowered/activities/FuseApiBrowser;Lcom/fusepowered/util/FuseAdCallback;)V
     .locals 8
-    .parameter "waterfall"
-    .parameter "index"
-    .parameter "fuseApiAdBrowser"
-    .parameter "adCallback"
+    .param p0, "waterfall"    # [I
+    .param p1, "index"    # I
+    .param p2, "fuseApiAdBrowser"    # Lcom/fusepowered/activities/FuseApiBrowser;
+    .param p3, "adCallback"    # Lcom/fusepowered/util/FuseAdCallback;
 
     .prologue
     .line 1114
@@ -2812,14 +2811,14 @@
     invoke-static {p0, p1, p2, p3}, Lcom/fusepowered/fuseapi/FuseAPI;->displayAdFromWaterfall([IILcom/fusepowered/activities/FuseApiBrowser;Lcom/fusepowered/util/FuseAdCallback;)V
 
     .line 1216
-    .end local p0
-    .end local p1
+    .end local p0    # "waterfall":[I
+    .end local p1    # "index":I
     :goto_0
     return-void
 
     .line 1122
-    .restart local p0
-    .restart local p1
+    .restart local p0    # "waterfall":[I
+    .restart local p1    # "index":I
     :cond_1
     const-string v0, "AD"
 
@@ -2833,7 +2832,7 @@
     invoke-direct {v1}, Landroid/util/DisplayMetrics;-><init>()V
 
     .line 1125
-    .local v1, dm:Landroid/util/DisplayMetrics;
+    .local v1, "dm":Landroid/util/DisplayMetrics;
     sget-object v0, Lcom/fusepowered/fuseapi/FuseAPI;->mainActivity:Landroid/app/Activity;
 
     invoke-virtual {v0}, Landroid/app/Activity;->getWindowManager()Landroid/view/WindowManager;
@@ -2845,16 +2844,16 @@
     move-result-object v0
 
     .line 1126
-    .local v0, display:Landroid/view/Display;
+    .local v0, "display":Landroid/view/Display;
     invoke-virtual {v0}, Landroid/view/Display;->getRotation()I
 
     move-result v0
 
     .line 1127
-    .local v0, rotation:I
+    .local v0, "rotation":I
     sget-object v0, Lcom/fusepowered/fuseapi/FuseAPI;->mainActivity:Landroid/app/Activity;
 
-    .end local v0           #rotation:I
+    .end local v0    # "rotation":I
     invoke-virtual {v0}, Landroid/app/Activity;->getWindowManager()Landroid/view/WindowManager;
 
     move-result-object v0
@@ -2871,14 +2870,14 @@
     int-to-double v2, v0
 
     .line 1129
-    .local v2, height:D
+    .local v2, "height":D
     iget v0, v1, Landroid/util/DisplayMetrics;->widthPixels:I
 
     int-to-double v0, v0
 
     .line 1132
-    .end local v1           #dm:Landroid/util/DisplayMetrics;
-    .local v0, width:D
+    .end local v1    # "dm":Landroid/util/DisplayMetrics;
+    .local v0, "width":D
     sget-object v4, Lcom/fusepowered/fuseapi/FuseAPI;->mPortraitInterstitial:Lcom/fusepowered/m2/m2l/MoPubInterstitial;
 
     if-nez v4, :cond_2
@@ -2893,7 +2892,7 @@
     if-lez v0, :cond_3
 
     .line 1141
-    .end local v0           #width:D
+    .end local v0    # "width":D
     sget-object v0, Lcom/fusepowered/fuseapi/FuseAPI;->mPortraitInterstitial:Lcom/fusepowered/m2/m2l/MoPubInterstitial;
 
     sput-object v0, Lcom/fusepowered/fuseapi/FuseAPI;->mInterstitial:Lcom/fusepowered/m2/m2l/MoPubInterstitial;
@@ -2964,8 +2963,8 @@
     invoke-direct/range {v0 .. v5}, Lcom/fusepowered/fuseapi/FuseAPI$1;-><init>(Lcom/fusepowered/util/FuseAdCallback;[IILcom/fusepowered/activities/FuseApiBrowser;Lcom/fusepowered/util/FuseAdCallback;)V
 
     .line 1169
-    .end local v2           #height:D
-    .local v0, interceptor:Lcom/fusepowered/fuseapi/FuseAPI$MoPubCallBackInterceptor;
+    .end local v2    # "height":D
+    .local v0, "interceptor":Lcom/fusepowered/fuseapi/FuseAPI$MoPubCallBackInterceptor;
     const-string v1, "MOPUB"
 
     const-string v2, "WE ARE JUST SETTING THE INTERCEPTOR NOW"
@@ -2980,7 +2979,7 @@
     move-result-object v1
 
     .line 1171
-    .local v1, ial:Lcom/fusepowered/m2/m2l/MoPubInterstitial$InterstitialAdListener;
+    .local v1, "ial":Lcom/fusepowered/m2/m2l/MoPubInterstitial$InterstitialAdListener;
     instance-of v2, v1, Lcom/fusepowered/fuseapi/FuseAPI$MopubCheckAdCallback;
 
     if-eqz v2, :cond_5
@@ -2989,7 +2988,7 @@
     check-cast v1, Lcom/fusepowered/fuseapi/FuseAPI$MopubCheckAdCallback;
 
     .line 1174
-    .local v1, mcac:Lcom/fusepowered/fuseapi/FuseAPI$MopubCheckAdCallback;
+    .local v1, "mcac":Lcom/fusepowered/fuseapi/FuseAPI$MopubCheckAdCallback;
     iget-boolean v2, v1, Lcom/fusepowered/fuseapi/FuseAPI$MopubCheckAdCallback;->didReturn:Z
 
     if-nez v2, :cond_5
@@ -3012,7 +3011,7 @@
     invoke-virtual {v1}, Lcom/fusepowered/fuseapi/FuseAPI$MopubCheckAdCallback;->checkAdAvailableReturnFailed()V
 
     .line 1181
-    .end local v1           #mcac:Lcom/fusepowered/fuseapi/FuseAPI$MopubCheckAdCallback;
+    .end local v1    # "mcac":Lcom/fusepowered/fuseapi/FuseAPI$MopubCheckAdCallback;
     :cond_5
     sget-object v1, Lcom/fusepowered/fuseapi/FuseAPI;->mInterstitial:Lcom/fusepowered/m2/m2l/MoPubInterstitial;
 
@@ -3033,7 +3032,7 @@
     invoke-direct {v7, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
     .line 1188
-    .local v7, handler:Landroid/os/Handler;
+    .local v7, "handler":Landroid/os/Handler;
     new-instance v1, Lcom/fusepowered/fuseapi/FuseAPI$2;
 
     move-object v2, v0
@@ -3055,16 +3054,16 @@
     goto/16 :goto_0
 
     .line 1210
-    .end local v0           #interceptor:Lcom/fusepowered/fuseapi/FuseAPI$MoPubCallBackInterceptor;
-    .end local v7           #handler:Landroid/os/Handler;
-    .restart local v2       #height:D
+    .end local v0    # "interceptor":Lcom/fusepowered/fuseapi/FuseAPI$MoPubCallBackInterceptor;
+    .end local v7    # "handler":Landroid/os/Handler;
+    .restart local v2    # "height":D
     :cond_6
     const-string p0, "MOPUB AD"
 
-    .end local p0
+    .end local p0    # "waterfall":[I
     const-string p1, "JUST SHOWING AN AD!!!!"
 
-    .end local p1
+    .end local p1    # "index":I
     invoke-static {p0, p1}, Lcom/fusepowered/logging/FuseLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 1211
@@ -3087,7 +3086,7 @@
 
 .method public static displayMoreGames(Lcom/fusepowered/activities/FuseApiBrowser;)V
     .locals 14
-    .parameter "fuseApiMoregamesBrowser"
+    .param p0, "fuseApiMoregamesBrowser"    # Lcom/fusepowered/activities/FuseApiBrowser;
 
     .prologue
     const/4 v13, 0x1
@@ -3114,7 +3113,7 @@
     invoke-direct {v3}, Ljava/util/HashMap;-><init>()V
 
     .line 2789
-    .local v3, params:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v3, "params":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v10, "id"
 
     sget v11, Lcom/fusepowered/fuseapi/FuseAPI;->id:I
@@ -3202,17 +3201,17 @@
     float-to-double v4, v10
 
     .line 2797
-    .local v4, pixelDensity:D
+    .local v4, "pixelDensity":D
     const/4 v7, 0x0
 
     .line 2799
-    .local v7, statusBarHeight:I
+    .local v7, "statusBarHeight":I
     new-instance v6, Landroid/graphics/Rect;
 
     invoke-direct {v6}, Landroid/graphics/Rect;-><init>()V
 
     .line 2801
-    .local v6, rectgle:Landroid/graphics/Rect;
+    .local v6, "rectgle":Landroid/graphics/Rect;
     sget-object v10, Lcom/fusepowered/fuseapi/FuseAPI;->mainActivity:Landroid/app/Activity;
 
     invoke-virtual {v10}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
@@ -3220,7 +3219,7 @@
     move-result-object v9
 
     .line 2803
-    .local v9, window:Landroid/view/Window;
+    .local v9, "window":Landroid/view/Window;
     if-eqz v9, :cond_0
 
     .line 2805
@@ -3234,7 +3233,7 @@
     iget v0, v6, Landroid/graphics/Rect;->top:I
 
     .line 2807
-    .local v0, StatusBarHeight:I
+    .local v0, "StatusBarHeight":I
     const v10, 0x1020002
 
     invoke-virtual {v9, v10}, Landroid/view/Window;->findViewById(I)Landroid/view/View;
@@ -3246,12 +3245,12 @@
     move-result v2
 
     .line 2808
-    .local v2, contentViewTop:I
+    .local v2, "contentViewTop":I
     sub-int v7, v2, v0
 
     .line 2811
-    .end local v0           #StatusBarHeight:I
-    .end local v2           #contentViewTop:I
+    .end local v0    # "StatusBarHeight":I
+    .end local v2    # "contentViewTop":I
     :cond_0
     new-instance v10, Ljava/lang/StringBuilder;
 
@@ -3300,7 +3299,7 @@
     move-result-object v1
 
     .line 2812
-    .local v1, buf:Ljava/lang/StringBuilder;
+    .local v1, "buf":Ljava/lang/StringBuilder;
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v10
@@ -3312,24 +3311,24 @@
     move-result-object v8
 
     .line 2819
-    .local v8, url:Ljava/lang/String;
+    .local v8, "url":Ljava/lang/String;
     invoke-static {v8, p0}, Lcom/fusepowered/fuseapi/FuseAPI;->showFuseApiMoreGamesBrowser(Ljava/lang/String;Lcom/fusepowered/activities/FuseApiBrowser;)V
 
     .line 2821
-    .end local v1           #buf:Ljava/lang/StringBuilder;
-    .end local v3           #params:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
-    .end local v4           #pixelDensity:D
-    .end local v6           #rectgle:Landroid/graphics/Rect;
-    .end local v7           #statusBarHeight:I
-    .end local v8           #url:Ljava/lang/String;
-    .end local v9           #window:Landroid/view/Window;
+    .end local v1    # "buf":Ljava/lang/StringBuilder;
+    .end local v3    # "params":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .end local v4    # "pixelDensity":D
+    .end local v6    # "rectgle":Landroid/graphics/Rect;
+    .end local v7    # "statusBarHeight":I
+    .end local v8    # "url":Ljava/lang/String;
+    .end local v9    # "window":Landroid/view/Window;
     :cond_1
     return-void
 .end method
 
 .method public static declared-synchronized displayNotifications(Landroid/app/AlertDialog$Builder;)V
     .locals 3
-    .parameter "alertDialogBuilder"
+    .param p0, "alertDialogBuilder"    # Landroid/app/AlertDialog$Builder;
 
     .prologue
     .line 2067
@@ -3352,7 +3351,7 @@
     move-result-object v0
 
     .line 2079
-    .local v0, messages:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/fusepowered/util/Message;>;"
+    .local v0, "messages":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/fusepowered/util/Message;>;"
     if-eqz v0, :cond_1
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -3375,7 +3374,7 @@
     return-void
 
     .line 2067
-    .end local v0           #messages:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/fusepowered/util/Message;>;"
+    .end local v0    # "messages":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/fusepowered/util/Message;>;"
     :catchall_0
     move-exception v2
 
@@ -3386,10 +3385,10 @@
 
 .method private static displayVungleAd([IILcom/fusepowered/activities/FuseApiBrowser;Lcom/fusepowered/util/FuseAdCallback;)V
     .locals 3
-    .parameter "waterfall"
-    .parameter "index"
-    .parameter "fuseApiAdBrowser"
-    .parameter "adCallback"
+    .param p0, "waterfall"    # [I
+    .param p1, "index"    # I
+    .param p2, "fuseApiAdBrowser"    # Lcom/fusepowered/activities/FuseApiBrowser;
+    .param p3, "adCallback"    # Lcom/fusepowered/util/FuseAdCallback;
 
     .prologue
     const-string v2, "FuseAPI"
@@ -3440,7 +3439,7 @@
     move-result v0
 
     .line 985
-    .local v0, wasAdPlayed:Z
+    .local v0, "wasAdPlayed":Z
     if-eqz v0, :cond_2
 
     .line 986
@@ -3470,9 +3469,9 @@
 
 .method public static emailLogin(Ljava/lang/String;Ljava/lang/String;Lcom/fusepowered/util/FuseCallback;)V
     .locals 6
-    .parameter "email"
-    .parameter "alias"
-    .parameter "fuseCallback"
+    .param p0, "email"    # Ljava/lang/String;
+    .param p1, "alias"    # Ljava/lang/String;
+    .param p2, "fuseCallback"    # Lcom/fusepowered/util/FuseCallback;
 
     .prologue
     .line 3731
@@ -3539,7 +3538,7 @@
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     .line 701
-    .local v0, params:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v0, "params":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v1, "id"
 
     sget v2, Lcom/fusepowered/fuseapi/FuseAPI;->id:I
@@ -3622,9 +3621,9 @@
 
 .method public static facebookLogin(Ljava/lang/String;Ljava/lang/String;Lcom/fusepowered/util/FuseCallback;)V
     .locals 6
-    .parameter "facebookId"
-    .parameter "name"
-    .parameter "fuseCallback"
+    .param p0, "facebookId"    # Ljava/lang/String;
+    .param p1, "name"    # Ljava/lang/String;
+    .param p2, "fuseCallback"    # Lcom/fusepowered/util/FuseCallback;
 
     .prologue
     .line 3574
@@ -3652,10 +3651,10 @@
 
 .method public static facebookLogin(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/fusepowered/util/FuseCallback;)V
     .locals 6
-    .parameter "facebookId"
-    .parameter "name"
-    .parameter "accessToken"
-    .parameter "fuseCallback"
+    .param p0, "facebookId"    # Ljava/lang/String;
+    .param p1, "name"    # Ljava/lang/String;
+    .param p2, "accessToken"    # Ljava/lang/String;
+    .param p3, "fuseCallback"    # Lcom/fusepowered/util/FuseCallback;
 
     .prologue
     .line 3606
@@ -3683,7 +3682,7 @@
 
 .method public static friendsPushNotification(Ljava/lang/String;)V
     .locals 5
-    .parameter "message"
+    .param p0, "message"    # Ljava/lang/String;
 
     .prologue
     .line 661
@@ -3694,7 +3693,7 @@
     move-result-object v0
 
     .line 663
-    .local v0, acct:Lcom/fusepowered/util/Account;
+    .local v0, "acct":Lcom/fusepowered/util/Account;
     if-nez v0, :cond_0
 
     .line 677
@@ -3711,7 +3710,7 @@
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
     .line 669
-    .local v1, params:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v1, "params":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v2, "id"
 
     sget v3, Lcom/fusepowered/fuseapi/FuseAPI;->id:I
@@ -3803,9 +3802,9 @@
 
 .method public static fuseLogin(Ljava/lang/String;Ljava/lang/String;Lcom/fusepowered/util/FuseCallback;)V
     .locals 6
-    .parameter "fuseId"
-    .parameter "alias"
-    .parameter "fuseCallback"
+    .param p0, "fuseId"    # Ljava/lang/String;
+    .param p1, "alias"    # Ljava/lang/String;
+    .param p2, "fuseCallback"    # Lcom/fusepowered/util/FuseCallback;
 
     .prologue
     .line 3699
@@ -3833,9 +3832,9 @@
 
 .method public static gamecenterLogin(Ljava/lang/String;Ljava/lang/String;Lcom/fusepowered/util/FuseCallback;)V
     .locals 6
-    .parameter "playerID"
-    .parameter "alias"
-    .parameter "fuseCallBack"
+    .param p0, "playerID"    # Ljava/lang/String;
+    .param p1, "alias"    # Ljava/lang/String;
+    .param p2, "fuseCallBack"    # Lcom/fusepowered/util/FuseCallback;
 
     .prologue
     .line 3796
@@ -3873,8 +3872,8 @@
 
 .method public static getAd(Lcom/fusepowered/activities/FuseApiBrowser;Lcom/fusepowered/util/FuseAdCallback;)V
     .locals 0
-    .parameter "fuseApiAdBrowser"
-    .parameter "adCallback"
+    .param p0, "fuseApiAdBrowser"    # Lcom/fusepowered/activities/FuseApiBrowser;
+    .param p1, "adCallback"    # Lcom/fusepowered/util/FuseAdCallback;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -3888,7 +3887,7 @@
 
 .method public static getAttackRobberyLog(Lcom/fusepowered/util/FuseGameDataCallback;)V
     .locals 1
-    .parameter "callback"
+    .param p0, "callback"    # Lcom/fusepowered/util/FuseGameDataCallback;
 
     .prologue
     .line 4919
@@ -3934,7 +3933,7 @@
     move-result-object v0
 
     .line 2425
-    .local v0, adAction:Ljava/lang/String;
+    .local v0, "adAction":Ljava/lang/String;
     return-object v0
 .end method
 
@@ -3954,15 +3953,15 @@
     move-result v0
 
     .line 2419
-    .local v0, adId:I
+    .local v0, "adId":I
     return v0
 .end method
 
 .method public static getEnemiesList(IILcom/fusepowered/util/FuseGameDataCallback;)V
     .locals 4
-    .parameter "level"
-    .parameter "range"
-    .parameter "fuseCallback"
+    .param p0, "level"    # I
+    .param p1, "range"    # I
+    .param p2, "fuseCallback"    # Lcom/fusepowered/util/FuseGameDataCallback;
 
     .prologue
     .line 4973
@@ -3974,7 +3973,7 @@
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     .line 4977
-    .local v0, params:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v0, "params":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v1, "id"
 
     sget v2, Lcom/fusepowered/fuseapi/FuseAPI;->id:I
@@ -4079,11 +4078,11 @@
     .line 4987
     new-instance p2, Lcom/fusepowered/util/FuseGameDataCallbackImpl;
 
-    .end local p2
+    .end local p2    # "fuseCallback":Lcom/fusepowered/util/FuseGameDataCallback;
     invoke-direct {p2}, Lcom/fusepowered/util/FuseGameDataCallbackImpl;-><init>()V
 
     .line 4990
-    .restart local p2
+    .restart local p2    # "fuseCallback":Lcom/fusepowered/util/FuseGameDataCallback;
     :cond_0
     sget-object v1, Lcom/fusepowered/fuseapi/FuseAPI;->commonParams:Ljava/util/HashMap;
 
@@ -4095,10 +4094,9 @@
 
 .method public static getFriendGameData(Ljava/lang/String;Ljava/util/ArrayList;Lcom/fusepowered/util/FuseGameDataCallback;Ljava/lang/String;)I
     .locals 1
-    .parameter "key"
-    .parameter
-    .parameter "fuseGameDataCallback"
-    .parameter "friendFuseId"
+    .param p0, "key"    # Ljava/lang/String;
+    .param p2, "fuseGameDataCallback"    # Lcom/fusepowered/util/FuseGameDataCallback;
+    .param p3, "friendFuseId"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -4115,7 +4113,7 @@
 
     .prologue
     .line 3352
-    .local p1, keys:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
+    .local p1, "keys":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     const/4 v0, 0x1
 
     invoke-static {p0, p1, p2, v0, p3}, Lcom/fusepowered/fuseapi/FuseAPI;->getMyGameData(Ljava/lang/String;Ljava/util/ArrayList;Lcom/fusepowered/util/FuseGameDataCallback;ZLjava/lang/String;)I
@@ -4127,9 +4125,8 @@
 
 .method public static getFriendGameData(Ljava/util/ArrayList;Lcom/fusepowered/util/FuseGameDataCallback;Ljava/lang/String;)I
     .locals 2
-    .parameter
-    .parameter "fuseGameDataCallback"
-    .parameter "friendFuseId"
+    .param p1, "fuseGameDataCallback"    # Lcom/fusepowered/util/FuseGameDataCallback;
+    .param p2, "friendFuseId"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -4145,7 +4142,7 @@
 
     .prologue
     .line 3337
-    .local p0, keys:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
+    .local p0, "keys":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     const/4 v0, 0x0
 
     const/4 v1, 0x1
@@ -4159,9 +4156,8 @@
 
 .method public static getFriendGameDataCollection(Ljava/util/ArrayList;Lcom/fusepowered/util/FuseGameDataCallback;Ljava/lang/String;)Ljava/util/HashMap;
     .locals 2
-    .parameter
-    .parameter "fuseGameDataCallback"
-    .parameter "friendFuseId"
+    .param p1, "fuseGameDataCallback"    # Lcom/fusepowered/util/FuseGameDataCallback;
+    .param p2, "friendFuseId"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -4182,7 +4178,7 @@
 
     .prologue
     .line 3366
-    .local p0, keys:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
+    .local p0, "keys":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     const/4 v0, 0x0
 
     const/4 v1, 0x1
@@ -4229,7 +4225,7 @@
     move-result-object v0
 
     .line 3538
-    .local v0, account:Lcom/fusepowered/util/Account;
+    .local v0, "account":Lcom/fusepowered/util/Account;
     if-eqz v0, :cond_0
 
     .line 3540
@@ -4269,24 +4265,24 @@
     move-result-object v3
 
     .line 4442
-    .local v3, m:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;*>;"
+    .local v3, "m":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;*>;"
     invoke-interface {v3}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
     move-result-object v1
 
     .line 4444
-    .local v1, k:Ljava/util/Set;,"Ljava/util/Set<Ljava/lang/String;>;"
+    .local v1, "k":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     new-instance v4, Ljava/util/HashMap;
 
     invoke-direct {v4}, Ljava/util/HashMap;-><init>()V
 
     .line 4446
-    .local v4, rtn:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v4, "rtn":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
-    .local v0, i:Ljava/util/Iterator;,"Ljava/util/Iterator<Ljava/lang/String;>;"
+    .local v0, "i":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/String;>;"
     :goto_0
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
@@ -4302,7 +4298,7 @@
     check-cast v2, Ljava/lang/String;
 
     .line 4449
-    .local v2, key:Ljava/lang/String;
+    .local v2, "key":Ljava/lang/String;
     sget-object v6, Lcom/fusepowered/fuseapi/FuseAPI;->appdata:Landroid/content/SharedPreferences;
 
     const/4 v7, 0x0
@@ -4312,21 +4308,21 @@
     move-result-object v5
 
     .line 4451
-    .local v5, value:Ljava/lang/String;
+    .local v5, "value":Ljava/lang/String;
     invoke-virtual {v4, v2, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 
     .line 4454
-    .end local v2           #key:Ljava/lang/String;
-    .end local v5           #value:Ljava/lang/String;
+    .end local v2    # "key":Ljava/lang/String;
+    .end local v5    # "value":Ljava/lang/String;
     :cond_0
     return-object v4
 .end method
 
 .method public static getGameConfigurationValue(Ljava/lang/String;)Ljava/lang/String;
     .locals 4
-    .parameter "key"
+    .param p0, "key"    # Ljava/lang/String;
 
     .prologue
     const/4 v3, 0x0
@@ -4382,9 +4378,8 @@
 
 .method public static getGameData(Ljava/lang/String;Ljava/util/ArrayList;Lcom/fusepowered/util/FuseGameDataCallback;)I
     .locals 2
-    .parameter "key"
-    .parameter
-    .parameter "fuseGameDataCallback"
+    .param p0, "key"    # Ljava/lang/String;
+    .param p2, "fuseGameDataCallback"    # Lcom/fusepowered/util/FuseGameDataCallback;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -4400,7 +4395,7 @@
 
     .prologue
     .line 3323
-    .local p1, keys:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
+    .local p1, "keys":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     const/4 v0, 0x0
 
     const/4 v1, 0x0
@@ -4414,8 +4409,7 @@
 
 .method public static getGameData(Ljava/util/ArrayList;Lcom/fusepowered/util/FuseGameDataCallback;)I
     .locals 2
-    .parameter
-    .parameter "fuseGameDataCallback"
+    .param p1, "fuseGameDataCallback"    # Lcom/fusepowered/util/FuseGameDataCallback;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -4429,7 +4423,7 @@
     .end annotation
 
     .prologue
-    .local p0, keys:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
+    .local p0, "keys":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     const/4 v1, 0x0
 
     .line 3270
@@ -4444,9 +4438,8 @@
 
 .method public static getGameData(Ljava/util/ArrayList;Lcom/fusepowered/util/FuseGameDataCallback;Z)I
     .locals 1
-    .parameter
-    .parameter "fuseGameDataCallback"
-    .parameter "isCollection"
+    .param p1, "fuseGameDataCallback"    # Lcom/fusepowered/util/FuseGameDataCallback;
+    .param p2, "isCollection"    # Z
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -4464,7 +4457,7 @@
 
     .prologue
     .line 3279
-    .local p0, keys:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
+    .local p0, "keys":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     const/4 v0, 0x0
 
     invoke-static {p0, p1, v0}, Lcom/fusepowered/fuseapi/FuseAPI;->getGameData(Ljava/util/ArrayList;Lcom/fusepowered/util/FuseGameDataCallback;Z)I
@@ -4476,8 +4469,7 @@
 
 .method public static getGameDataCollection(Ljava/util/ArrayList;Lcom/fusepowered/util/FuseGameDataCallback;)Ljava/util/HashMap;
     .locals 2
-    .parameter
-    .parameter "fuseGameDataCallback"
+    .param p1, "fuseGameDataCallback"    # Lcom/fusepowered/util/FuseGameDataCallback;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -4496,7 +4488,7 @@
     .end annotation
 
     .prologue
-    .local p0, keys:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
+    .local p0, "keys":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     const/4 v1, 0x0
 
     .line 3292
@@ -4511,7 +4503,7 @@
 
 .method public static getGameValue(Ljava/lang/String;)Ljava/lang/String;
     .locals 1
-    .parameter "key"
+    .param p0, "key"    # Ljava/lang/String;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -4590,8 +4582,8 @@
 
 .method private static getMailFromServer(Ljava/lang/String;Lcom/fusepowered/util/FuseCallback;)V
     .locals 4
-    .parameter "fuseId"
-    .parameter "callback"
+    .param p0, "fuseId"    # Ljava/lang/String;
+    .param p1, "callback"    # Lcom/fusepowered/util/FuseCallback;
 
     .prologue
     .line 4163
@@ -4612,7 +4604,7 @@
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     .line 4169
-    .local v0, params:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v0, "params":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v1, "id"
 
     sget v2, Lcom/fusepowered/fuseapi/FuseAPI;->id:I
@@ -4704,25 +4696,25 @@
     .line 4178
     new-instance p1, Lcom/fusepowered/util/FuseMessageCallback;
 
-    .end local p1
+    .end local p1    # "callback":Lcom/fusepowered/util/FuseCallback;
     invoke-direct {p1}, Lcom/fusepowered/util/FuseMessageCallback;-><init>()V
 
     .line 4181
-    .restart local p1
+    .restart local p1    # "callback":Lcom/fusepowered/util/FuseCallback;
     :cond_0
     sget-object v1, Lcom/fusepowered/fuseapi/FuseAPI;->commonParams:Ljava/util/HashMap;
 
     invoke-static {v1, v0, p1}, Lcom/fusepowered/fuseapi/MessagingService;->sendJsonMessage(Ljava/util/HashMap;Ljava/util/HashMap;Lcom/fusepowered/util/FuseCallback;)V
 
     .line 4183
-    .end local v0           #params:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .end local v0    # "params":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     :cond_1
     return-void
 .end method
 
 .method public static getMailList(Ljava/lang/String;)Ljava/util/List;
     .locals 1
-    .parameter "fuseId"
+    .param p0, "fuseId"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -4748,8 +4740,8 @@
 
 .method public static getMailListFriendFromServer(Ljava/lang/String;Lcom/fusepowered/util/FuseCallback;)V
     .locals 0
-    .parameter "fuseId"
-    .parameter "callback"
+    .param p0, "fuseId"    # Ljava/lang/String;
+    .param p1, "callback"    # Lcom/fusepowered/util/FuseCallback;
 
     .prologue
     .line 4144
@@ -4761,7 +4753,7 @@
 
 .method public static getMailListFromServer(Lcom/fusepowered/util/FuseCallback;)V
     .locals 1
-    .parameter "callback"
+    .param p0, "callback"    # Lcom/fusepowered/util/FuseCallback;
 
     .prologue
     .line 4130
@@ -4777,11 +4769,10 @@
 
 .method private static getMyGameData(Ljava/lang/String;Ljava/util/ArrayList;Lcom/fusepowered/util/FuseGameDataCallback;ZLjava/lang/String;)I
     .locals 10
-    .parameter "key"
-    .parameter
-    .parameter "fuseGameDataCallback"
-    .parameter "isFriend"
-    .parameter "friendFuseId"
+    .param p0, "key"    # Ljava/lang/String;
+    .param p2, "fuseGameDataCallback"    # Lcom/fusepowered/util/FuseGameDataCallback;
+    .param p3, "isFriend"    # Z
+    .param p4, "friendFuseId"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -4799,7 +4790,7 @@
 
     .prologue
     .line 3382
-    .local p1, keys:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
+    .local p1, "keys":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     sget-object v0, Lcom/fusepowered/fuseapi/FuseAPI;->responseValues:Lcom/fusepowered/util/ResponseValues;
 
     invoke-virtual {v0}, Lcom/fusepowered/util/ResponseValues;->getAccount()Lcom/fusepowered/util/Account;
@@ -4807,7 +4798,7 @@
     move-result-object v7
 
     .line 3384
-    .local v7, account:Lcom/fusepowered/util/Account;
+    .local v7, "account":Lcom/fusepowered/util/Account;
     if-eqz v7, :cond_3
 
     .line 3386
@@ -4816,7 +4807,7 @@
     move-result-object v8
 
     .line 3388
-    .local v8, accountId:Ljava/lang/String;
+    .local v8, "accountId":Ljava/lang/String;
     invoke-static {v8}, Lcom/fusepowered/util/StringUtil;->isEmpty(Ljava/lang/String;)Z
 
     move-result v0
@@ -4836,7 +4827,7 @@
     invoke-virtual {p2, v0, v1}, Lcom/fusepowered/util/FuseGameDataCallback;->setFuseGameDataError(Lcom/fusepowered/util/FuseGameDataError;I)V
 
     .line 3418
-    .end local v8           #accountId:Ljava/lang/String;
+    .end local v8    # "accountId":Ljava/lang/String;
     :goto_0
     const/4 v0, 0x0
 
@@ -4844,7 +4835,7 @@
     return v0
 
     .line 3397
-    .restart local v8       #accountId:Ljava/lang/String;
+    .restart local v8    # "accountId":Ljava/lang/String;
     :cond_1
     if-eqz p3, :cond_2
 
@@ -4856,11 +4847,11 @@
     move-result v3
 
     .line 3400
-    .local v3, accountType:I
+    .local v3, "accountType":I
     move-object v2, p4
 
     .line 3408
-    .local v2, finalAccountId:Ljava/lang/String;
+    .local v2, "finalAccountId":Ljava/lang/String;
     :goto_2
     const/4 v6, 0x1
 
@@ -4876,16 +4867,16 @@
 
     move-result v9
 
-    .local v9, reqID:I
+    .local v9, "reqID":I
     move v0, v9
 
     .line 3410
     goto :goto_1
 
     .line 3404
-    .end local v2           #finalAccountId:Ljava/lang/String;
-    .end local v3           #accountType:I
-    .end local v9           #reqID:I
+    .end local v2    # "finalAccountId":Ljava/lang/String;
+    .end local v3    # "accountType":I
+    .end local v9    # "reqID":I
     :cond_2
     invoke-virtual {v7}, Lcom/fusepowered/util/Account;->getAccountType()Lcom/fusepowered/util/AccountType;
 
@@ -4896,16 +4887,16 @@
     move-result v3
 
     .line 3405
-    .restart local v3       #accountType:I
+    .restart local v3    # "accountType":I
     move-object v2, v8
 
-    .restart local v2       #finalAccountId:Ljava/lang/String;
+    .restart local v2    # "finalAccountId":Ljava/lang/String;
     goto :goto_2
 
     .line 3415
-    .end local v2           #finalAccountId:Ljava/lang/String;
-    .end local v3           #accountType:I
-    .end local v8           #accountId:Ljava/lang/String;
+    .end local v2    # "finalAccountId":Ljava/lang/String;
+    .end local v3    # "accountType":I
+    .end local v8    # "accountId":Ljava/lang/String;
     :cond_3
     sget-object v0, Lcom/fusepowered/util/FuseGameDataError;->FUSE_GD_ERROR_NO_ACCOUNT:Lcom/fusepowered/util/FuseGameDataError;
 
@@ -4918,11 +4909,10 @@
 
 .method private static getMyGameDataCollection(Ljava/lang/String;Ljava/util/ArrayList;Lcom/fusepowered/util/FuseGameDataCallback;ZLjava/lang/String;)Ljava/util/HashMap;
     .locals 8
-    .parameter "key"
-    .parameter
-    .parameter "fuseGameDataCallback"
-    .parameter "isFriend"
-    .parameter "friendFuseId"
+    .param p0, "key"    # Ljava/lang/String;
+    .param p2, "fuseGameDataCallback"    # Lcom/fusepowered/util/FuseGameDataCallback;
+    .param p3, "isFriend"    # Z
+    .param p4, "friendFuseId"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -4945,22 +4935,22 @@
 
     .prologue
     .line 3431
-    .local p1, keys:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
+    .local p1, "keys":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     sget-object p0, Lcom/fusepowered/fuseapi/FuseAPI;->responseValues:Lcom/fusepowered/util/ResponseValues;
 
-    .end local p0
+    .end local p0    # "key":Ljava/lang/String;
     invoke-virtual {p0}, Lcom/fusepowered/util/ResponseValues;->getAccount()Lcom/fusepowered/util/Account;
 
     move-result-object p0
 
     .line 3432
-    .local p0, account:Lcom/fusepowered/util/Account;
+    .local p0, "account":Lcom/fusepowered/util/Account;
     new-instance v7, Ljava/util/HashMap;
 
     invoke-direct {v7}, Ljava/util/HashMap;-><init>()V
 
     .line 3434
-    .local v7, reqIDs:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v7, "reqIDs":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     if-eqz p0, :cond_5
 
     .line 3436
@@ -4969,7 +4959,7 @@
     move-result-object v0
 
     .line 3438
-    .local v0, accountId:Ljava/lang/String;
+    .local v0, "accountId":Ljava/lang/String;
     invoke-static {v0}, Lcom/fusepowered/util/StringUtil;->isEmpty(Ljava/lang/String;)Z
 
     move-result v1
@@ -4984,54 +4974,54 @@
     :cond_0
     sget-object p0, Lcom/fusepowered/util/FuseGameDataError;->FUSE_GD_ERROR_NO_ACCOUNT:Lcom/fusepowered/util/FuseGameDataError;
 
-    .end local p0           #account:Lcom/fusepowered/util/Account;
+    .end local p0    # "account":Lcom/fusepowered/util/Account;
     sget p1, Lcom/fusepowered/fuseapi/FuseAPI;->id:I
 
-    .end local p1           #keys:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
+    .end local p1    # "keys":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     invoke-virtual {p2, p0, p1}, Lcom/fusepowered/util/FuseGameDataCallback;->setFuseGameDataError(Lcom/fusepowered/util/FuseGameDataError;I)V
 
     .line 3476
-    .end local v0           #accountId:Ljava/lang/String;
+    .end local v0    # "accountId":Ljava/lang/String;
     :cond_1
     :goto_0
     return-object v7
 
     .line 3447
-    .restart local v0       #accountId:Ljava/lang/String;
-    .restart local p0       #account:Lcom/fusepowered/util/Account;
-    .restart local p1       #keys:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
+    .restart local v0    # "accountId":Ljava/lang/String;
+    .restart local p0    # "account":Lcom/fusepowered/util/Account;
+    .restart local p1    # "keys":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     :cond_2
     if-eqz p3, :cond_3
 
     .line 3449
     sget-object p0, Lcom/fusepowered/util/AccountType;->FUSE_USER:Lcom/fusepowered/util/AccountType;
 
-    .end local p0           #account:Lcom/fusepowered/util/Account;
+    .end local p0    # "account":Lcom/fusepowered/util/Account;
     invoke-virtual {p0}, Lcom/fusepowered/util/AccountType;->getAccountNumber()I
 
     move-result v3
 
     .line 3450
-    .local v3, accountType:I
+    .local v3, "accountType":I
     move-object v2, p4
 
     .line 3458
-    .local v2, finalAccountId:Ljava/lang/String;
+    .local v2, "finalAccountId":Ljava/lang/String;
     :goto_1
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     .line 3459
-    .local v1, emptyList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
+    .local v1, "emptyList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
 
     .line 3462
-    .end local v0           #accountId:Ljava/lang/String;
-    .end local p1           #keys:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
-    .local p0, iter:Ljava/util/Iterator;,"Ljava/util/Iterator<Ljava/lang/String;>;"
+    .end local v0    # "accountId":Ljava/lang/String;
+    .end local p1    # "keys":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
+    .local p0, "iter":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/String;>;"
     :goto_2
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
@@ -5047,7 +5037,7 @@
     check-cast v0, Ljava/lang/String;
 
     .line 3465
-    .local v0, masterKey:Ljava/lang/String;
+    .local v0, "masterKey":Ljava/lang/String;
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
     move-result p1
@@ -5068,45 +5058,45 @@
     move-result p1
 
     .line 3467
-    .local p1, reqID:I
+    .local p1, "reqID":I
     invoke-static {p1}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object p1
 
-    .end local p1           #reqID:I
+    .end local p1    # "reqID":I
     invoke-virtual {v7, v0, p1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_2
 
     .line 3454
-    .end local v1           #emptyList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
-    .end local v2           #finalAccountId:Ljava/lang/String;
-    .end local v3           #accountType:I
-    .local v0, accountId:Ljava/lang/String;
-    .local p0, account:Lcom/fusepowered/util/Account;
-    .local p1, keys:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
+    .end local v1    # "emptyList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
+    .end local v2    # "finalAccountId":Ljava/lang/String;
+    .end local v3    # "accountType":I
+    .local v0, "accountId":Ljava/lang/String;
+    .local p0, "account":Lcom/fusepowered/util/Account;
+    .local p1, "keys":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     :cond_3
     invoke-virtual {p0}, Lcom/fusepowered/util/Account;->getAccountType()Lcom/fusepowered/util/AccountType;
 
     move-result-object p0
 
-    .end local p0           #account:Lcom/fusepowered/util/Account;
+    .end local p0    # "account":Lcom/fusepowered/util/Account;
     invoke-virtual {p0}, Lcom/fusepowered/util/AccountType;->getAccountNumber()I
 
     move-result v3
 
     .line 3455
-    .restart local v3       #accountType:I
+    .restart local v3    # "accountType":I
     move-object v2, v0
 
-    .restart local v2       #finalAccountId:Ljava/lang/String;
+    .restart local v2    # "finalAccountId":Ljava/lang/String;
     goto :goto_1
 
     .line 3465
-    .end local p1           #keys:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
-    .local v0, masterKey:Ljava/lang/String;
-    .restart local v1       #emptyList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
-    .local p0, iter:Ljava/util/Iterator;,"Ljava/util/Iterator<Ljava/lang/String;>;"
+    .end local p1    # "keys":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
+    .local v0, "masterKey":Ljava/lang/String;
+    .restart local v1    # "emptyList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
+    .local p0, "iter":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/String;>;"
     :cond_4
     const/4 p1, 0x0
 
@@ -5115,19 +5105,19 @@
     goto :goto_3
 
     .line 3473
-    .end local v0           #masterKey:Ljava/lang/String;
-    .end local v1           #emptyList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
-    .end local v2           #finalAccountId:Ljava/lang/String;
-    .end local v3           #accountType:I
-    .local p0, account:Lcom/fusepowered/util/Account;
-    .restart local p1       #keys:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
+    .end local v0    # "masterKey":Ljava/lang/String;
+    .end local v1    # "emptyList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
+    .end local v2    # "finalAccountId":Ljava/lang/String;
+    .end local v3    # "accountType":I
+    .local p0, "account":Lcom/fusepowered/util/Account;
+    .restart local p1    # "keys":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     :cond_5
     sget-object p0, Lcom/fusepowered/util/FuseGameDataError;->FUSE_GD_ERROR_NO_ACCOUNT:Lcom/fusepowered/util/FuseGameDataError;
 
-    .end local p0           #account:Lcom/fusepowered/util/Account;
+    .end local p0    # "account":Lcom/fusepowered/util/Account;
     sget p1, Lcom/fusepowered/fuseapi/FuseAPI;->id:I
 
-    .end local p1           #keys:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
+    .end local p1    # "keys":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     invoke-virtual {p2, p0, p1}, Lcom/fusepowered/util/FuseGameDataCallback;->setFuseGameDataError(Lcom/fusepowered/util/FuseGameDataError;I)V
 
     goto :goto_0
@@ -5135,7 +5125,7 @@
 
 .method private static getNotificationSkipCount(I)I
     .locals 3
-    .parameter "messageId"
+    .param p0, "messageId"    # I
 
     .prologue
     .line 2369
@@ -5170,7 +5160,7 @@
 
 .method private static getNotificationViewCount(I)I
     .locals 3
-    .parameter "messageId"
+    .param p0, "messageId"    # I
 
     .prologue
     .line 2360
@@ -5225,7 +5215,7 @@
     move-result-object v0
 
     .line 3856
-    .local v0, account:Lcom/fusepowered/util/Account;
+    .local v0, "account":Lcom/fusepowered/util/Account;
     if-eqz v0, :cond_0
 
     invoke-virtual {v0}, Lcom/fusepowered/util/Account;->getAccountId()Ljava/lang/String;
@@ -5253,7 +5243,7 @@
     move-result-object v0
 
     .line 3916
-    .local v0, account:Lcom/fusepowered/util/Account;
+    .local v0, "account":Lcom/fusepowered/util/Account;
     invoke-virtual {v0}, Lcom/fusepowered/util/Account;->getAccountType()Lcom/fusepowered/util/AccountType;
 
     move-result-object v1
@@ -5267,12 +5257,12 @@
 
 .method private static getRegisterId(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Lcom/fusepowered/util/AccountType;Lcom/fusepowered/util/FuseCallback;)V
     .locals 5
-    .parameter "accountId"
-    .parameter "alias"
-    .parameter "gender"
-    .parameter "accessToken"
-    .parameter "accountType"
-    .parameter "fuseCallback"
+    .param p0, "accountId"    # Ljava/lang/String;
+    .param p1, "alias"    # Ljava/lang/String;
+    .param p2, "gender"    # I
+    .param p3, "accessToken"    # Ljava/lang/String;
+    .param p4, "accountType"    # Lcom/fusepowered/util/AccountType;
+    .param p5, "fuseCallback"    # Lcom/fusepowered/util/FuseCallback;
 
     .prologue
     const-string v4, "account_id"
@@ -5286,7 +5276,7 @@
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     .line 3809
-    .local v0, params:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v0, "params":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v1, "id"
 
     sget v2, Lcom/fusepowered/fuseapi/FuseAPI;->id:I
@@ -5376,11 +5366,11 @@
     .line 3829
     new-instance p5, Lcom/fusepowered/util/FuseRegisterAccountCallback;
 
-    .end local p5
+    .end local p5    # "fuseCallback":Lcom/fusepowered/util/FuseCallback;
     invoke-direct {p5, p1}, Lcom/fusepowered/util/FuseRegisterAccountCallback;-><init>(Ljava/lang/String;)V
 
     .line 3832
-    .restart local p5
+    .restart local p5    # "fuseCallback":Lcom/fusepowered/util/FuseCallback;
     :cond_0
     sput-object p1, Lcom/fusepowered/fuseapi/FuseAPI;->accountAlias:Ljava/lang/String;
 
@@ -5405,7 +5395,7 @@
 
 .method public static getSignPost(Ljava/lang/String;)V
     .locals 4
-    .parameter "fuseId"
+    .param p0, "fuseId"    # Ljava/lang/String;
 
     .prologue
     .line 5022
@@ -5426,7 +5416,7 @@
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     .line 5027
-    .local v0, params:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v0, "params":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v1, "id"
 
     sget v2, Lcom/fusepowered/fuseapi/FuseAPI;->id:I
@@ -5533,14 +5523,14 @@
     invoke-static {v1, v0, v2}, Lcom/fusepowered/fuseapi/MessagingService;->sendJsonMessage(Ljava/util/HashMap;Ljava/util/HashMap;Lcom/fusepowered/util/FuseCallback;)V
 
     .line 5037
-    .end local v0           #params:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .end local v0    # "params":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     :cond_0
     return-void
 .end method
 
 .method public static getUserChatList(Ljava/lang/String;)Ljava/util/List;
     .locals 1
-    .parameter "fuseId"
+    .param p0, "fuseId"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -5566,8 +5556,8 @@
 
 .method public static getUserChatListFromServer(Ljava/lang/String;Lcom/fusepowered/util/FuseCallback;)V
     .locals 4
-    .parameter "fuseId"
-    .parameter "fuseCallback"
+    .param p0, "fuseId"    # Ljava/lang/String;
+    .param p1, "fuseCallback"    # Lcom/fusepowered/util/FuseCallback;
 
     .prologue
     .line 4003
@@ -5588,7 +5578,7 @@
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     .line 4008
-    .local v0, params:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v0, "params":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v1, "id"
 
     sget v2, Lcom/fusepowered/fuseapi/FuseAPI;->id:I
@@ -5680,25 +5670,25 @@
     .line 4016
     new-instance p1, Lcom/fusepowered/util/FuseMessageCallback;
 
-    .end local p1
+    .end local p1    # "fuseCallback":Lcom/fusepowered/util/FuseCallback;
     invoke-direct {p1}, Lcom/fusepowered/util/FuseMessageCallback;-><init>()V
 
     .line 4019
-    .restart local p1
+    .restart local p1    # "fuseCallback":Lcom/fusepowered/util/FuseCallback;
     :cond_0
     sget-object v1, Lcom/fusepowered/fuseapi/FuseAPI;->commonParams:Ljava/util/HashMap;
 
     invoke-static {v1, v0, p1}, Lcom/fusepowered/fuseapi/MessagingService;->sendJsonMessage(Ljava/util/HashMap;Ljava/util/HashMap;Lcom/fusepowered/util/FuseCallback;)V
 
     .line 4021
-    .end local v0           #params:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .end local v0    # "params":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     :cond_1
     return-void
 .end method
 
 .method private static getUserTransactionLog(Lcom/fusepowered/util/FuseGameDataCallback;)V
     .locals 4
-    .parameter "callback"
+    .param p0, "callback"    # Lcom/fusepowered/util/FuseGameDataCallback;
 
     .prologue
     .line 4927
@@ -5719,7 +5709,7 @@
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     .line 4933
-    .local v0, params:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v0, "params":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v1, "id"
 
     sget v2, Lcom/fusepowered/fuseapi/FuseAPI;->id:I
@@ -5806,27 +5796,27 @@
     .line 4941
     new-instance p0, Lcom/fusepowered/util/FuseGameDataCallbackImpl;
 
-    .end local p0
+    .end local p0    # "callback":Lcom/fusepowered/util/FuseGameDataCallback;
     invoke-direct {p0}, Lcom/fusepowered/util/FuseGameDataCallbackImpl;-><init>()V
 
     .line 4944
-    .restart local p0
+    .restart local p0    # "callback":Lcom/fusepowered/util/FuseGameDataCallback;
     :cond_0
     sget-object v1, Lcom/fusepowered/fuseapi/FuseAPI;->commonParams:Ljava/util/HashMap;
 
     invoke-static {v1, v0, p0}, Lcom/fusepowered/fuseapi/MessagingService;->sendJsonMessage(Ljava/util/HashMap;Ljava/util/HashMap;Lcom/fusepowered/util/FuseCallback;)V
 
     .line 4946
-    .end local v0           #params:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .end local v0    # "params":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     :cond_1
     return-void
 .end method
 
 .method public static googlePlayLogin(Ljava/lang/String;Ljava/lang/String;Lcom/fusepowered/util/FuseCallback;)V
     .locals 6
-    .parameter "alias"
-    .parameter "accessToken"
-    .parameter "fuseCallBack"
+    .param p0, "alias"    # Ljava/lang/String;
+    .param p1, "accessToken"    # Ljava/lang/String;
+    .param p2, "fuseCallBack"    # Lcom/fusepowered/util/FuseCallback;
 
     .prologue
     .line 3790
@@ -5854,7 +5844,7 @@
 
 .method private static incrementGameDataRequestId(Ljava/lang/String;)I
     .locals 4
-    .parameter "gameId"
+    .param p0, "gameId"    # Ljava/lang/String;
 
     .prologue
     .line 2401
@@ -5873,7 +5863,7 @@
     move-result-object v0
 
     .line 2402
-    .local v0, property:Ljava/lang/String;
+    .local v0, "property":Ljava/lang/String;
     sget-object v2, Lcom/fusepowered/fuseapi/FuseAPI;->context:Landroid/content/Context;
 
     const/4 v3, 0x0
@@ -5883,7 +5873,7 @@
     move-result v1
 
     .line 2403
-    .local v1, request_id:I
+    .local v1, "request_id":I
     add-int/lit8 v1, v1, 0x1
 
     sput v1, Lcom/fusepowered/fuseapi/FuseAPI;->gameDataReqId:I
@@ -5903,7 +5893,7 @@
 
 .method private static incrementRequestId(Ljava/lang/String;)V
     .locals 4
-    .parameter "gameId"
+    .param p0, "gameId"    # Ljava/lang/String;
 
     .prologue
     .line 2389
@@ -5922,7 +5912,7 @@
     move-result-object v0
 
     .line 2390
-    .local v0, property:Ljava/lang/String;
+    .local v0, "property":Ljava/lang/String;
     sget-object v2, Lcom/fusepowered/fuseapi/FuseAPI;->context:Landroid/content/Context;
 
     const/4 v3, 0x0
@@ -5932,7 +5922,7 @@
     move-result v1
 
     .line 2391
-    .local v1, request_id:I
+    .local v1, "request_id":I
     add-int/lit8 v1, v1, 0x1
 
     sput v1, Lcom/fusepowered/fuseapi/FuseAPI;->id:I
@@ -5950,8 +5940,8 @@
 
 .method public static initializeFuseAPI(Landroid/app/Activity;Landroid/content/Context;)V
     .locals 1
-    .parameter "activity"
-    .parameter "ctx"
+    .param p0, "activity"    # Landroid/app/Activity;
+    .param p1, "ctx"    # Landroid/content/Context;
 
     .prologue
     .line 193
@@ -6041,13 +6031,13 @@
     move-result v0
 
     .line 868
-    .local v0, isChildActivityOnDisplay:Z
+    .local v0, "isChildActivityOnDisplay":Z
     return v0
 .end method
 
 .method private static declared-synchronized isPreviousNotificationDisplayed(I)Z
     .locals 5
-    .parameter "nextMessageIndexToDisplay"
+    .param p0, "nextMessageIndexToDisplay"    # I
 
     .prologue
     .line 2138
@@ -6058,7 +6048,7 @@
     const/4 v2, 0x0
 
     .line 2139
-    .local v2, previousNotificationDisplayed:Z
+    .local v2, "previousNotificationDisplayed":Z
     if-lez p0, :cond_0
 
     .line 2140
@@ -6070,7 +6060,7 @@
     move-result-object v0
 
     .line 2141
-    .local v0, messages:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/fusepowered/util/Message;>;"
+    .local v0, "messages":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/fusepowered/util/Message;>;"
     const/4 v4, 0x1
 
     sub-int v4, p0, v4
@@ -6082,7 +6072,7 @@
     check-cast v1, Lcom/fusepowered/util/Message;
 
     .line 2142
-    .local v1, previousMessage:Lcom/fusepowered/util/Message;
+    .local v1, "previousMessage":Lcom/fusepowered/util/Message;
     invoke-virtual {v1}, Lcom/fusepowered/util/Message;->isDisplayed()Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -6090,8 +6080,8 @@
     move-result v2
 
     .line 2144
-    .end local v0           #messages:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/fusepowered/util/Message;>;"
-    .end local v1           #previousMessage:Lcom/fusepowered/util/Message;
+    .end local v0    # "messages":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/fusepowered/util/Message;>;"
+    .end local v1    # "previousMessage":Lcom/fusepowered/util/Message;
     :cond_0
     monitor-exit v3
 
@@ -6118,7 +6108,7 @@
 
 .method public static log(Ljava/lang/String;)V
     .locals 1
-    .parameter "text"
+    .param p0, "text"    # Ljava/lang/String;
 
     .prologue
     .line 5059
@@ -6132,11 +6122,11 @@
 
 .method private static logUserTransactions(Ljava/lang/String;Lcom/fusepowered/util/FuseAttackRobberyEventType;ZII)V
     .locals 4
-    .parameter "targetFuseId"
-    .parameter "eventType"
-    .parameter "wasWon"
-    .parameter "amountWon"
-    .parameter "amountLost"
+    .param p0, "targetFuseId"    # Ljava/lang/String;
+    .param p1, "eventType"    # Lcom/fusepowered/util/FuseAttackRobberyEventType;
+    .param p2, "wasWon"    # Z
+    .param p3, "amountWon"    # I
+    .param p4, "amountLost"    # I
 
     .prologue
     .line 4950
@@ -6157,7 +6147,7 @@
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     .line 4956
-    .local v0, params:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v0, "params":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v1, "id"
 
     sget v2, Lcom/fusepowered/fuseapi/FuseAPI;->id:I
@@ -6294,12 +6284,12 @@
     invoke-static {v1, v0, v2}, Lcom/fusepowered/fuseapi/MessagingService;->sendJsonMessage(Ljava/util/HashMap;Ljava/util/HashMap;Lcom/fusepowered/util/FuseCallback;)V
 
     .line 4969
-    .end local v0           #params:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .end local v0    # "params":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     :cond_0
     return-void
 
     .line 4962
-    .restart local v0       #params:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .restart local v0    # "params":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     :cond_1
     const-string v2, "0"
 
@@ -6308,8 +6298,8 @@
 
 .method public static migrateFriends(Ljava/lang/String;Lcom/fusepowered/util/FuseCallback;)V
     .locals 4
-    .parameter "fuseId"
-    .parameter "fuseCallback"
+    .param p0, "fuseId"    # Ljava/lang/String;
+    .param p1, "fuseCallback"    # Lcom/fusepowered/util/FuseCallback;
 
     .prologue
     .line 4755
@@ -6321,7 +6311,7 @@
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     .line 4759
-    .local v0, params:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v0, "params":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v1, "id"
 
     sget v2, Lcom/fusepowered/fuseapi/FuseAPI;->id:I
@@ -6413,11 +6403,11 @@
     .line 4768
     new-instance p1, Lcom/fusepowered/util/FuseMessageCallback;
 
-    .end local p1
+    .end local p1    # "fuseCallback":Lcom/fusepowered/util/FuseCallback;
     invoke-direct {p1}, Lcom/fusepowered/util/FuseMessageCallback;-><init>()V
 
     .line 4771
-    .restart local p1
+    .restart local p1    # "fuseCallback":Lcom/fusepowered/util/FuseCallback;
     :cond_0
     sget-object v1, Lcom/fusepowered/fuseapi/FuseAPI;->commonParams:Ljava/util/HashMap;
 
@@ -6445,7 +6435,7 @@
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     .line 2834
-    .local v0, params:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v0, "params":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v1, "id"
 
     sget v2, Lcom/fusepowered/fuseapi/FuseAPI;->id:I
@@ -6498,14 +6488,14 @@
     invoke-static {v1, v0, v2}, Lcom/fusepowered/fuseapi/MessagingService;->sendJsonMessage(Ljava/util/HashMap;Ljava/util/HashMap;Lcom/fusepowered/util/FuseCallback;)V
 
     .line 2840
-    .end local v0           #params:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .end local v0    # "params":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     :cond_0
     return-void
 .end method
 
 .method private static notificationClick(I)V
     .locals 4
-    .parameter "messageId"
+    .param p0, "messageId"    # I
 
     .prologue
     .line 2122
@@ -6522,7 +6512,7 @@
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     .line 2128
-    .local v0, params:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v0, "params":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v1, "id"
 
     sget v2, Lcom/fusepowered/fuseapi/FuseAPI;->id:I
@@ -6584,14 +6574,14 @@
     invoke-static {v1, v0, v2}, Lcom/fusepowered/fuseapi/MessagingService;->sendJsonMessage(Ljava/util/HashMap;Ljava/util/HashMap;Lcom/fusepowered/util/FuseCallback;)V
 
     .line 2135
-    .end local v0           #params:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .end local v0    # "params":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     :cond_0
     return-void
 .end method
 
 .method private static notificationView(I)V
     .locals 4
-    .parameter "messageId"
+    .param p0, "messageId"    # I
 
     .prologue
     .line 2097
@@ -6611,7 +6601,7 @@
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     .line 2105
-    .local v0, params:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v0, "params":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v1, "id"
 
     sget v2, Lcom/fusepowered/fuseapi/FuseAPI;->id:I
@@ -6686,14 +6676,14 @@
     invoke-static {v1, v0, v2}, Lcom/fusepowered/fuseapi/MessagingService;->sendJsonMessage(Ljava/util/HashMap;Ljava/util/HashMap;Lcom/fusepowered/util/FuseCallback;)V
 
     .line 2115
-    .end local v0           #params:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .end local v0    # "params":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     :cond_0
     return-void
 .end method
 
 .method private static openWebPage(Ljava/lang/String;)V
     .locals 3
-    .parameter "url"
+    .param p0, "url"    # Ljava/lang/String;
 
     .prologue
     .line 2446
@@ -6705,8 +6695,8 @@
     invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
     .line 2447
-    .local v1, i:Landroid/content/Intent;
-    const/high16 v2, 0x1000
+    .local v1, "i":Landroid/content/Intent;
+    const/high16 v2, 0x10000000
 
     invoke-virtual {v1, v2}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
@@ -6725,7 +6715,7 @@
     .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 2455
-    .end local v1           #i:Landroid/content/Intent;
+    .end local v1    # "i":Landroid/content/Intent;
     :goto_0
     return-void
 
@@ -6736,7 +6726,7 @@
     move-object v0, v2
 
     .line 2453
-    .local v0, e:Landroid/content/ActivityNotFoundException;
+    .local v0, "e":Landroid/content/ActivityNotFoundException;
     const/4 v2, 0x0
 
     invoke-static {v2}, Lcom/fusepowered/fuseapi/FuseAPI;->displayNotifications(Landroid/app/AlertDialog$Builder;)V
@@ -6746,9 +6736,9 @@
 
 .method public static postSignPost(Ljava/lang/String;II)V
     .locals 4
-    .parameter "fuseId"
-    .parameter "messageId"
-    .parameter "stickerId"
+    .param p0, "fuseId"    # Ljava/lang/String;
+    .param p1, "messageId"    # I
+    .param p2, "stickerId"    # I
 
     .prologue
     .line 5003
@@ -6769,7 +6759,7 @@
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     .line 5008
-    .local v0, params:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v0, "params":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v1, "id"
 
     sget v2, Lcom/fusepowered/fuseapi/FuseAPI;->id:I
@@ -6883,15 +6873,15 @@
     invoke-static {v1, v0, v2}, Lcom/fusepowered/fuseapi/MessagingService;->sendJsonMessage(Ljava/util/HashMap;Ljava/util/HashMap;Lcom/fusepowered/util/FuseCallback;)V
 
     .line 5019
-    .end local v0           #params:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .end local v0    # "params":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     :cond_0
     return-void
 .end method
 
 .method public static postUserChatMessage(Ljava/lang/String;Ljava/lang/String;)V
     .locals 4
-    .parameter "fuseId"
-    .parameter "message"
+    .param p0, "fuseId"    # Ljava/lang/String;
+    .param p1, "message"    # Ljava/lang/String;
 
     .prologue
     .line 3941
@@ -6912,7 +6902,7 @@
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     .line 3947
-    .local v0, params:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v0, "params":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v1, "id"
 
     sget v2, Lcom/fusepowered/fuseapi/FuseAPI;->id:I
@@ -7013,7 +7003,7 @@
     invoke-static {v1, v0, v2}, Lcom/fusepowered/fuseapi/MessagingService;->sendJsonMessage(Ljava/util/HashMap;Ljava/util/HashMap;Lcom/fusepowered/util/FuseCallback;)V
 
     .line 3957
-    .end local v0           #params:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .end local v0    # "params":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     :cond_0
     return-void
 .end method
@@ -7031,7 +7021,7 @@
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     .line 1453
-    .local v0, params:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v0, "params":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v1, "token"
 
     sget-object v2, Lcom/fusepowered/fuseapi/FuseAPI;->registrationID:Ljava/lang/String;
@@ -7099,9 +7089,9 @@
 
 .method public static registerCrash(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 4
-    .parameter "crashInfo"
-    .parameter "crashName"
-    .parameter "stack"
+    .param p0, "crashInfo"    # Ljava/lang/String;
+    .param p1, "crashName"    # Ljava/lang/String;
+    .param p2, "stack"    # Ljava/lang/String;
 
     .prologue
     .line 2746
@@ -7118,7 +7108,7 @@
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     .line 2752
-    .local v0, params:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v0, "params":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v1, "id"
 
     sget v2, Lcom/fusepowered/fuseapi/FuseAPI;->id:I
@@ -7186,15 +7176,15 @@
     invoke-static {v1, v0, v2}, Lcom/fusepowered/fuseapi/MessagingService;->sendJsonMessage(Ljava/util/HashMap;Ljava/util/HashMap;Lcom/fusepowered/util/FuseCallback;)V
 
     .line 2761
-    .end local v0           #params:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .end local v0    # "params":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     :cond_0
     return-void
 .end method
 
 .method public static registerCurrency(II)V
     .locals 0
-    .parameter "currencyType"
-    .parameter "balance"
+    .param p0, "currencyType"    # I
+    .param p1, "balance"    # I
 
     .prologue
     .line 4814
@@ -7206,11 +7196,11 @@
 
 .method public static registerEvent(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Number;)Lcom/fusepowered/util/FuseEvent;
     .locals 6
-    .parameter "name"
-    .parameter "param_name"
-    .parameter "param_value"
-    .parameter "variable_name"
-    .parameter "variable_value"
+    .param p0, "name"    # Ljava/lang/String;
+    .param p1, "param_name"    # Ljava/lang/String;
+    .param p2, "param_value"    # Ljava/lang/String;
+    .param p3, "variable_name"    # Ljava/lang/String;
+    .param p4, "variable_value"    # Ljava/lang/Number;
 
     .prologue
     const-string v4, ""
@@ -7219,7 +7209,7 @@
     const/4 v1, 0x0
 
     .line 1949
-    .local v1, noMoreVars:Z
+    .local v1, "noMoreVars":Z
     if-eqz p0, :cond_0
 
     const-string v3, ""
@@ -7351,7 +7341,7 @@
     invoke-direct {v2}, Lorg/json/JSONObject;-><init>()V
 
     .line 1990
-    .local v2, params:Lorg/json/JSONObject;
+    .local v2, "params":Lorg/json/JSONObject;
     :try_start_0
     const-string v3, "id"
 
@@ -7434,21 +7424,21 @@
     invoke-static {v3, v2, v4, v5}, Lcom/fusepowered/fuseapi/MessagingService;->sendJsonMessage(Ljava/util/HashMap;Lorg/json/JSONObject;Lcom/fusepowered/util/FuseCallback;Z)V
 
     .line 2009
-    .end local v2           #params:Lorg/json/JSONObject;
+    .end local v2    # "params":Lorg/json/JSONObject;
     :cond_b
     sget-object v3, Lcom/fusepowered/util/FuseEvent;->FUSE_EVENT_OK:Lcom/fusepowered/util/FuseEvent;
 
     goto/16 :goto_0
 
     .line 2000
-    .restart local v2       #params:Lorg/json/JSONObject;
+    .restart local v2    # "params":Lorg/json/JSONObject;
     :catch_0
     move-exception v3
 
     move-object v0, v3
 
     .line 2002
-    .local v0, e:Lorg/json/JSONException;
+    .local v0, "e":Lorg/json/JSONException;
     const-string v3, "FuseAPI"
 
     const-string v4, "sendEvent JSONException"
@@ -7463,10 +7453,9 @@
 
 .method public static registerEvent(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/HashMap;)Lcom/fusepowered/util/FuseEvent;
     .locals 7
-    .parameter "name"
-    .parameter "param_name"
-    .parameter "param_value"
-    .parameter
+    .param p0, "name"    # Ljava/lang/String;
+    .param p1, "param_name"    # Ljava/lang/String;
+    .param p2, "param_value"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -7483,14 +7472,14 @@
     .end annotation
 
     .prologue
-    .local p3, data:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/Number;>;"
+    .local p3, "data":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/Number;>;"
     const-string v5, ""
 
     .line 1861
     const/4 v2, 0x0
 
     .line 1862
-    .local v2, noMoreVars:Z
+    .local v2, "noMoreVars":Z
     if-eqz p0, :cond_0
 
     const-string v4, ""
@@ -7587,7 +7576,7 @@
     invoke-direct {v3}, Lorg/json/JSONObject;-><init>()V
 
     .line 1890
-    .local v3, params:Lorg/json/JSONObject;
+    .local v3, "params":Lorg/json/JSONObject;
     :try_start_0
     const-string v4, "id"
 
@@ -7646,13 +7635,13 @@
     move-result-object v0
 
     .line 1899
-    .local v0, dataJson:Lorg/json/JSONObject;
+    .local v0, "dataJson":Lorg/json/JSONObject;
     const-string v4, "dictionary"
 
     invoke-virtual {v3, v4, v0}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     .line 1902
-    .end local v0           #dataJson:Lorg/json/JSONObject;
+    .end local v0    # "dataJson":Lorg/json/JSONObject;
     :cond_7
     const-string v4, "action"
 
@@ -7682,21 +7671,21 @@
     invoke-static {v4, v3, v5, v6}, Lcom/fusepowered/fuseapi/MessagingService;->sendJsonMessage(Ljava/util/HashMap;Lorg/json/JSONObject;Lcom/fusepowered/util/FuseCallback;Z)V
 
     .line 1913
-    .end local v3           #params:Lorg/json/JSONObject;
+    .end local v3    # "params":Lorg/json/JSONObject;
     :cond_8
     sget-object v4, Lcom/fusepowered/util/FuseEvent;->FUSE_EVENT_OK:Lcom/fusepowered/util/FuseEvent;
 
     goto/16 :goto_0
 
     .line 1904
-    .restart local v3       #params:Lorg/json/JSONObject;
+    .restart local v3    # "params":Lorg/json/JSONObject;
     :catch_0
     move-exception v4
 
     move-object v1, v4
 
     .line 1906
-    .local v1, e:Lorg/json/JSONException;
+    .local v1, "e":Lorg/json/JSONException;
     const-string v4, "FuseAPI"
 
     const-string v5, "sendEvent JSONException"
@@ -7711,7 +7700,7 @@
 
 .method public static registerEvent(Ljava/lang/String;)V
     .locals 1
-    .parameter "event"
+    .param p0, "event"    # Ljava/lang/String;
 
     .prologue
     .line 1791
@@ -7725,8 +7714,7 @@
 
 .method public static registerEvent(Ljava/lang/String;Ljava/util/HashMap;)V
     .locals 4
-    .parameter "event"
-    .parameter
+    .param p0, "event"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -7740,7 +7728,7 @@
     .end annotation
 
     .prologue
-    .local p1, data:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p1, "data":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     const/4 v3, 0x0
 
     .line 1822
@@ -7752,7 +7740,7 @@
 
     move-result-object v0
 
-    .local v0, i$:Ljava/util/Iterator;
+    .local v0, "i$":Ljava/util/Iterator;
     :goto_0
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
@@ -7767,7 +7755,7 @@
     check-cast v1, Ljava/lang/String;
 
     .line 1824
-    .local v1, k:Ljava/lang/String;
+    .local v1, "k":Ljava/lang/String;
     invoke-virtual {p1, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v2
@@ -7779,7 +7767,7 @@
     goto :goto_0
 
     .line 1828
-    .end local v1           #k:Ljava/lang/String;
+    .end local v1    # "k":Ljava/lang/String;
     :cond_0
     return-void
 .end method
@@ -7816,7 +7804,7 @@
 
 .method public static registerFuseAdSkip(I)V
     .locals 4
-    .parameter "state"
+    .param p0, "state"    # I
 
     .prologue
     const-string v2, "id"
@@ -7830,7 +7818,7 @@
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     .line 1422
-    .local v0, params:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v0, "params":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v1, "id"
 
     sget v1, Lcom/fusepowered/fuseapi/FuseAPI;->id:I
@@ -7906,7 +7894,7 @@
 
 .method public static registerGCM(Ljava/lang/String;)V
     .locals 4
-    .parameter "newRegistrationID"
+    .param p0, "newRegistrationID"    # Ljava/lang/String;
 
     .prologue
     .line 1433
@@ -7918,7 +7906,7 @@
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     .line 1436
-    .local v0, params:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v0, "params":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     sput-object p0, Lcom/fusepowered/fuseapi/FuseAPI;->registrationID:Ljava/lang/String;
 
     .line 1437
@@ -8015,7 +8003,7 @@
 
 .method public static registerGender(I)V
     .locals 4
-    .parameter "gender"
+    .param p0, "gender"    # I
 
     .prologue
     .line 2881
@@ -8027,7 +8015,7 @@
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     .line 2885
-    .local v0, params:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v0, "params":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v1, "id"
 
     sget v2, Lcom/fusepowered/fuseapi/FuseAPI;->id:I
@@ -8097,7 +8085,7 @@
 
 .method public static registerInAppPurchase(Lcom/fusepowered/util/VerifiedPurchase;)V
     .locals 3
-    .parameter "verifiedPurchase"
+    .param p0, "verifiedPurchase"    # Lcom/fusepowered/util/VerifiedPurchase;
 
     .prologue
     .line 2502
@@ -8113,9 +8101,9 @@
 
 .method public static registerInAppPurchase(Lcom/fusepowered/util/VerifiedPurchase;DLjava/lang/String;)V
     .locals 4
-    .parameter "verifiedPurchase"
-    .parameter "price"
-    .parameter "currency"
+    .param p0, "verifiedPurchase"    # Lcom/fusepowered/util/VerifiedPurchase;
+    .param p1, "price"    # D
+    .param p3, "currency"    # Ljava/lang/String;
 
     .prologue
     .line 2546
@@ -8132,7 +8120,7 @@
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     .line 2551
-    .local v0, params:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v0, "params":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v1, "id"
 
     sget v2, Lcom/fusepowered/fuseapi/FuseAPI;->id:I
@@ -8274,14 +8262,14 @@
     invoke-static {v1, v0, v2}, Lcom/fusepowered/fuseapi/MessagingService;->sendJsonMessage(Ljava/util/HashMap;Ljava/util/HashMap;Lcom/fusepowered/util/FuseCallback;)V
 
     .line 2567
-    .end local v0           #params:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .end local v0    # "params":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     :cond_0
     return-void
 .end method
 
 .method public static registerLevel(I)V
     .locals 1
-    .parameter "level"
+    .param p0, "level"    # I
 
     .prologue
     .line 4795
@@ -8295,7 +8283,7 @@
 
 .method public static registerTapjoyReward(I)V
     .locals 1
-    .parameter "amount"
+    .param p0, "amount"    # I
 
     .prologue
     .line 4866
@@ -8309,8 +8297,8 @@
 
 .method public static rejectFriend(Ljava/lang/String;Lcom/fusepowered/util/FuseCallback;)V
     .locals 4
-    .parameter "fuseId"
-    .parameter "fuseCallback"
+    .param p0, "fuseId"    # Ljava/lang/String;
+    .param p1, "fuseCallback"    # Lcom/fusepowered/util/FuseCallback;
 
     .prologue
     .line 4733
@@ -8322,7 +8310,7 @@
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     .line 4737
-    .local v0, params:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v0, "params":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v1, "id"
 
     sget v2, Lcom/fusepowered/fuseapi/FuseAPI;->id:I
@@ -8414,11 +8402,11 @@
     .line 4746
     new-instance p1, Lcom/fusepowered/util/FuseMessageCallback;
 
-    .end local p1
+    .end local p1    # "fuseCallback":Lcom/fusepowered/util/FuseCallback;
     invoke-direct {p1}, Lcom/fusepowered/util/FuseMessageCallback;-><init>()V
 
     .line 4749
-    .restart local p1
+    .restart local p1    # "fuseCallback":Lcom/fusepowered/util/FuseCallback;
     :cond_0
     sget-object v1, Lcom/fusepowered/fuseapi/FuseAPI;->commonParams:Ljava/util/HashMap;
 
@@ -8430,8 +8418,8 @@
 
 .method public static removeFriend(Ljava/lang/String;Lcom/fusepowered/util/FuseCallback;)V
     .locals 4
-    .parameter "fuseId"
-    .parameter "fuseCallback"
+    .param p0, "fuseId"    # Ljava/lang/String;
+    .param p1, "fuseCallback"    # Lcom/fusepowered/util/FuseCallback;
 
     .prologue
     .line 4625
@@ -8443,7 +8431,7 @@
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     .line 4629
-    .local v0, params:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v0, "params":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v1, "id"
 
     sget v2, Lcom/fusepowered/fuseapi/FuseAPI;->id:I
@@ -8535,11 +8523,11 @@
     .line 4638
     new-instance p1, Lcom/fusepowered/util/FuseMessageCallback;
 
-    .end local p1
+    .end local p1    # "fuseCallback":Lcom/fusepowered/util/FuseCallback;
     invoke-direct {p1}, Lcom/fusepowered/util/FuseMessageCallback;-><init>()V
 
     .line 4641
-    .restart local p1
+    .restart local p1    # "fuseCallback":Lcom/fusepowered/util/FuseCallback;
     :cond_0
     sget-object v1, Lcom/fusepowered/fuseapi/FuseAPI;->commonParams:Ljava/util/HashMap;
 
@@ -8667,7 +8655,7 @@
 
 .method public static resumeSession(Lcom/fusepowered/util/FuseCallback;)V
     .locals 6
-    .parameter "callback"
+    .param p0, "callback"    # Lcom/fusepowered/util/FuseCallback;
 
     .prologue
     const/4 v5, 0x0
@@ -8743,7 +8731,7 @@
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
     .line 812
-    .local v1, params:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v1, "params":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v2, "id"
 
     sget v3, Lcom/fusepowered/fuseapi/FuseAPI;->id:I
@@ -8817,7 +8805,7 @@
     sput-boolean v5, Lcom/fusepowered/fuseapi/FuseAPI;->suspended:Z
 
     .line 831
-    .end local v1           #params:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .end local v1    # "params":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     :cond_4
     sget-boolean v2, Lcom/fusepowered/fuseapi/FuseAPI;->showingManditoryMessage:Z
 
@@ -8838,14 +8826,14 @@
     move-result-object v0
 
     .line 835
-    .local v0, alert:Landroid/app/AlertDialog;
+    .local v0, "alert":Landroid/app/AlertDialog;
     invoke-virtual {v0, v5}, Landroid/app/AlertDialog;->setCancelable(Z)V
 
     .line 836
     invoke-virtual {v0}, Landroid/app/AlertDialog;->show()V
 
     .line 839
-    .end local v0           #alert:Landroid/app/AlertDialog;
+    .end local v0    # "alert":Landroid/app/AlertDialog;
     :cond_5
     sget-boolean v2, Lcom/fusepowered/fuseapi/FuseAPI;->displayNotifications:Z
 
@@ -8857,7 +8845,7 @@
     goto :goto_0
 
     .line 823
-    .restart local v1       #params:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .restart local v1    # "params":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     :cond_6
     new-instance v2, Lcom/fusepowered/util/FuseMessageCallback;
 
@@ -8870,10 +8858,10 @@
 
 .method public static sendAttack(Ljava/lang/String;ZII)V
     .locals 1
-    .parameter "attackedFuseId"
-    .parameter "wasWon"
-    .parameter "amountWon"
-    .parameter "amountLost"
+    .param p0, "attackedFuseId"    # Ljava/lang/String;
+    .param p1, "wasWon"    # Z
+    .param p2, "amountWon"    # I
+    .param p3, "amountLost"    # I
 
     .prologue
     .line 4893
@@ -8897,8 +8885,7 @@
 
 .method private static sendEvent(Ljava/lang/String;Ljava/util/HashMap;)V
     .locals 6
-    .parameter "event"
-    .parameter
+    .param p0, "event"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -8913,7 +8900,7 @@
 
     .prologue
     .line 2020
-    .local p1, data:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p1, "data":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     sget-boolean v3, Lcom/fusepowered/fuseapi/FuseAPI;->optOut:Z
 
     if-nez v3, :cond_1
@@ -8927,7 +8914,7 @@
     invoke-direct {v2}, Lorg/json/JSONObject;-><init>()V
 
     .line 2028
-    .local v2, params:Lorg/json/JSONObject;
+    .local v2, "params":Lorg/json/JSONObject;
     :try_start_0
     const-string v3, "id"
 
@@ -8985,7 +8972,7 @@
     move-result-object v0
 
     .line 2036
-    .local v0, dataJson:Lorg/json/JSONObject;
+    .local v0, "dataJson":Lorg/json/JSONObject;
     const-string v3, "dictionary"
 
     invoke-virtual {v2, v3, v0}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
@@ -8993,7 +8980,7 @@
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 2045
-    .end local v0           #dataJson:Lorg/json/JSONObject;
+    .end local v0    # "dataJson":Lorg/json/JSONObject;
     :cond_0
     sget-object v3, Lcom/fusepowered/fuseapi/FuseAPI;->commonParams:Ljava/util/HashMap;
 
@@ -9006,20 +8993,20 @@
     invoke-static {v3, v2, v4, v5}, Lcom/fusepowered/fuseapi/MessagingService;->sendJsonMessage(Ljava/util/HashMap;Lorg/json/JSONObject;Lcom/fusepowered/util/FuseCallback;Z)V
 
     .line 2047
-    .end local v2           #params:Lorg/json/JSONObject;
+    .end local v2    # "params":Lorg/json/JSONObject;
     :cond_1
     :goto_0
     return-void
 
     .line 2039
-    .restart local v2       #params:Lorg/json/JSONObject;
+    .restart local v2    # "params":Lorg/json/JSONObject;
     :catch_0
     move-exception v3
 
     move-object v1, v3
 
     .line 2041
-    .local v1, e:Lorg/json/JSONException;
+    .local v1, "e":Lorg/json/JSONException;
     const-string v3, "FuseAPI"
 
     const-string v4, "sendEvent JSONException"
@@ -9031,7 +9018,7 @@
 
 .method public static sendFuseAdSkip(I)V
     .locals 4
-    .parameter "state"
+    .param p0, "state"    # I
 
     .prologue
     const-string v2, "FuseAPI"
@@ -9064,7 +9051,7 @@
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     .line 1755
-    .local v0, params:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v0, "params":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v1, "id"
 
     sget v2, Lcom/fusepowered/fuseapi/FuseAPI;->id:I
@@ -9131,11 +9118,11 @@
 
 .method private static sendGameDataMap(Ljava/lang/String;Ljava/lang/String;Lorg/json/JSONObject;Lcom/fusepowered/util/FuseGameDataCallback;Z)I
     .locals 5
-    .parameter "fuseId"
-    .parameter "key"
-    .parameter "paramJson"
-    .parameter "fuseGameDataCallback"
-    .parameter "doSendNow"
+    .param p0, "fuseId"    # Ljava/lang/String;
+    .param p1, "key"    # Ljava/lang/String;
+    .param p2, "paramJson"    # Lorg/json/JSONObject;
+    .param p3, "fuseGameDataCallback"    # Lcom/fusepowered/util/FuseGameDataCallback;
+    .param p4, "doSendNow"    # Z
 
     .prologue
     const-string v2, "type"
@@ -9159,7 +9146,7 @@
     move-result v1
 
     .line 3097
-    .local v1, reqID:I
+    .local v1, "reqID":I
     :try_start_0
     const-string v2, "id"
 
@@ -9322,7 +9309,7 @@
     move-object v0, v2
 
     .line 3126
-    .local v0, je:Lorg/json/JSONException;
+    .local v0, "je":Lorg/json/JSONException;
     const-string v2, "FuseAPI"
 
     const-string v3, "sendGameDataMap JSONException"
@@ -9335,7 +9322,7 @@
     goto :goto_2
 
     .line 3121
-    .end local v0           #je:Lorg/json/JSONException;
+    .end local v0    # "je":Lorg/json/JSONException;
     :cond_1
     :try_start_2
     const-string v2, "fuse_object_key"
@@ -9351,10 +9338,10 @@
 
 .method private static sendGameDataRequest(Ljava/lang/String;Lcom/fusepowered/util/GameKeyValuePairs;Lcom/fusepowered/util/FuseGameDataCallback;Ljava/lang/String;)I
     .locals 2
-    .parameter "key"
-    .parameter "gameKeyValuePairs"
-    .parameter "fuseGameDataCallback"
-    .parameter "fuseId"
+    .param p0, "key"    # Ljava/lang/String;
+    .param p1, "gameKeyValuePairs"    # Lcom/fusepowered/util/GameKeyValuePairs;
+    .param p2, "fuseGameDataCallback"    # Lcom/fusepowered/util/FuseGameDataCallback;
+    .param p3, "fuseId"    # Ljava/lang/String;
 
     .prologue
     .line 3028
@@ -9391,7 +9378,7 @@
     move-result-object v0
 
     .line 3034
-    .local v0, paramJson:Lorg/json/JSONObject;
+    .local v0, "paramJson":Lorg/json/JSONObject;
     if-eqz v0, :cond_0
 
     .line 3036
@@ -9402,7 +9389,7 @@
     move-result v1
 
     .line 3041
-    .end local v0           #paramJson:Lorg/json/JSONObject;
+    .end local v0    # "paramJson":Lorg/json/JSONObject;
     :goto_0
     return v1
 
@@ -9414,9 +9401,9 @@
 
 .method private static sendGameDataRequestCollection(Lcom/fusepowered/util/GameKeyValuePairs;Lcom/fusepowered/util/FuseGameDataCallback;Ljava/lang/String;)Ljava/util/HashMap;
     .locals 8
-    .parameter "gameKeyValuePairs"
-    .parameter "fuseGameDataCallback"
-    .parameter "fuseId"
+    .param p0, "gameKeyValuePairs"    # Lcom/fusepowered/util/GameKeyValuePairs;
+    .param p1, "fuseGameDataCallback"    # Lcom/fusepowered/util/FuseGameDataCallback;
+    .param p2, "fuseId"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -9439,7 +9426,7 @@
     invoke-direct {v6}, Ljava/util/HashMap;-><init>()V
 
     .line 3060
-    .local v6, reqIDs:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v6, "reqIDs":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     sget-object v7, Lcom/fusepowered/fuseapi/FuseAPI;->responseValues:Lcom/fusepowered/util/ResponseValues;
 
     invoke-virtual {v7}, Lcom/fusepowered/util/ResponseValues;->getAccount()Lcom/fusepowered/util/Account;
@@ -9454,7 +9441,7 @@
     move-result-object v3
 
     .line 3064
-    .local v3, objectMapKeys:Ljava/util/Set;,"Ljava/util/Set<Ljava/lang/String;>;"
+    .local v3, "objectMapKeys":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     invoke-interface {v3}, Ljava/util/Set;->isEmpty()Z
 
     move-result v7
@@ -9467,7 +9454,7 @@
     move-result-object v1
 
     .line 3068
-    .local v1, it:Ljava/util/Iterator;,"Ljava/util/Iterator<Ljava/lang/String;>;"
+    .local v1, "it":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/String;>;"
     :cond_0
     :goto_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
@@ -9484,13 +9471,13 @@
     check-cast v2, Ljava/lang/String;
 
     .line 3071
-    .local v2, objectMapKey:Ljava/lang/String;
+    .local v2, "objectMapKey":Ljava/lang/String;
     invoke-static {v2, p0}, Lcom/fusepowered/fuseapi/FuseAPI;->buildDataPayloadJSON(Ljava/lang/String;Lcom/fusepowered/util/GameKeyValuePairs;)Lorg/json/JSONObject;
 
     move-result-object v4
 
     .line 3073
-    .local v4, paramJson:Lorg/json/JSONObject;
+    .local v4, "paramJson":Lorg/json/JSONObject;
     if-eqz v4, :cond_0
 
     .line 3075
@@ -9505,14 +9492,14 @@
     move v0, v7
 
     .line 3076
-    .local v0, doSendNow:Z
+    .local v0, "doSendNow":Z
     :goto_1
     invoke-static {p2, v2, v4, p1, v0}, Lcom/fusepowered/fuseapi/FuseAPI;->sendGameDataMap(Ljava/lang/String;Ljava/lang/String;Lorg/json/JSONObject;Lcom/fusepowered/util/FuseGameDataCallback;Z)I
 
     move-result v5
 
     .line 3078
-    .local v5, reqID:I
+    .local v5, "reqID":I
     invoke-static {v5}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object v7
@@ -9522,8 +9509,8 @@
     goto :goto_0
 
     .line 3075
-    .end local v0           #doSendNow:Z
-    .end local v5           #reqID:I
+    .end local v0    # "doSendNow":Z
+    .end local v5    # "reqID":I
     :cond_1
     const/4 v7, 0x0
 
@@ -9532,10 +9519,10 @@
     goto :goto_1
 
     .line 3084
-    .end local v1           #it:Ljava/util/Iterator;,"Ljava/util/Iterator<Ljava/lang/String;>;"
-    .end local v2           #objectMapKey:Ljava/lang/String;
-    .end local v3           #objectMapKeys:Ljava/util/Set;,"Ljava/util/Set<Ljava/lang/String;>;"
-    .end local v4           #paramJson:Lorg/json/JSONObject;
+    .end local v1    # "it":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/String;>;"
+    .end local v2    # "objectMapKey":Ljava/lang/String;
+    .end local v3    # "objectMapKeys":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
+    .end local v4    # "paramJson":Lorg/json/JSONObject;
     :cond_2
     return-object v6
 .end method
@@ -9553,7 +9540,7 @@
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
     .line 1474
-    .local v1, params:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v1, "params":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v5, "wifi"
 
     invoke-static {}, Lcom/fusepowered/fuseapi/FuseAPI;->getContext()Landroid/content/Context;
@@ -9615,7 +9602,7 @@
     invoke-direct {v2}, Landroid/graphics/Rect;-><init>()V
 
     .line 1480
-    .local v2, r:Landroid/graphics/Rect;
+    .local v2, "r":Landroid/graphics/Rect;
     sget-object v5, Lcom/fusepowered/fuseapi/FuseAPI;->mainActivity:Landroid/app/Activity;
 
     invoke-virtual {v5}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
@@ -9623,7 +9610,7 @@
     move-result-object v3
 
     .line 1481
-    .local v3, w:Landroid/view/Window;
+    .local v3, "w":Landroid/view/Window;
     invoke-virtual {v3}, Landroid/view/Window;->getDecorView()Landroid/view/View;
 
     move-result-object v5
@@ -9638,7 +9625,7 @@
     sub-int v0, v5, v6
 
     .line 1484
-    .local v0, height:I
+    .local v0, "height":I
     iget v5, v2, Landroid/graphics/Rect;->right:I
 
     iget v6, v2, Landroid/graphics/Rect;->left:I
@@ -9646,7 +9633,7 @@
     sub-int v4, v5, v6
 
     .line 1487
-    .local v4, width:I
+    .local v4, "width":I
     const-string v5, "w"
 
     invoke-static {v4}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -9699,13 +9686,12 @@
 
 .method private static sendGetGameDataRequest(Ljava/lang/String;Ljava/util/ArrayList;Ljava/lang/String;IZLcom/fusepowered/util/FuseGameDataCallback;Z)I
     .locals 6
-    .parameter "key"
-    .parameter
-    .parameter "accountId"
-    .parameter "accountType"
-    .parameter "friendsRequest"
-    .parameter "fuseGameDataCallback"
-    .parameter "sendNow"
+    .param p0, "key"    # Ljava/lang/String;
+    .param p2, "accountId"    # Ljava/lang/String;
+    .param p3, "accountType"    # I
+    .param p4, "friendsRequest"    # Z
+    .param p5, "fuseGameDataCallback"    # Lcom/fusepowered/util/FuseGameDataCallback;
+    .param p6, "sendNow"    # Z
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -9722,7 +9708,7 @@
     .end annotation
 
     .prologue
-    .local p1, keys:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
+    .local p1, "keys":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     const-string v5, "fuse_object_key"
 
     .line 3484
@@ -9740,13 +9726,13 @@
     move-result v1
 
     .line 3488
-    .local v1, reqID:I
+    .local v1, "reqID":I
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     .line 3490
-    .local v0, params:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v0, "params":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v2, "id"
 
     sget v3, Lcom/fusepowered/fuseapi/FuseAPI;->id:I
@@ -9873,9 +9859,9 @@
 
 .method public static sendMail(Ljava/lang/String;Ljava/lang/String;Lcom/fusepowered/util/FuseCallback;)I
     .locals 2
-    .parameter "fuseId"
-    .parameter "message"
-    .parameter "callback"
+    .param p0, "fuseId"    # Ljava/lang/String;
+    .param p1, "message"    # Ljava/lang/String;
+    .param p2, "callback"    # Lcom/fusepowered/util/FuseCallback;
 
     .prologue
     const/4 v1, 0x0
@@ -9908,11 +9894,11 @@
 
 .method public static sendMailWithGift(Ljava/lang/String;Ljava/lang/String;IILcom/fusepowered/util/FuseCallback;)I
     .locals 5
-    .parameter "fuseId"
-    .parameter "message"
-    .parameter "giftId"
-    .parameter "giftAmount"
-    .parameter "callback"
+    .param p0, "fuseId"    # Ljava/lang/String;
+    .param p1, "message"    # Ljava/lang/String;
+    .param p2, "giftId"    # I
+    .param p3, "giftAmount"    # I
+    .param p4, "callback"    # Lcom/fusepowered/util/FuseCallback;
 
     .prologue
     .line 4277
@@ -9939,13 +9925,13 @@
     move-result v1
 
     .line 4283
-    .local v1, reqID:I
+    .local v1, "reqID":I
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     .line 4285
-    .local v0, params:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v0, "params":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v2, "id"
 
     sget v3, Lcom/fusepowered/fuseapi/FuseAPI;->id:I
@@ -10069,11 +10055,11 @@
     .line 4298
     new-instance p4, Lcom/fusepowered/util/FuseMessageCallback;
 
-    .end local p4
+    .end local p4    # "callback":Lcom/fusepowered/util/FuseCallback;
     invoke-direct {p4}, Lcom/fusepowered/util/FuseMessageCallback;-><init>()V
 
     .line 4301
-    .restart local p4
+    .restart local p4    # "callback":Lcom/fusepowered/util/FuseCallback;
     :cond_0
     sget-object v2, Lcom/fusepowered/fuseapi/FuseAPI;->commonParams:Ljava/util/HashMap;
 
@@ -10082,8 +10068,8 @@
     move v2, v1
 
     .line 4306
-    .end local v0           #params:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
-    .end local v1           #reqID:I
+    .end local v0    # "params":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .end local v1    # "reqID":I
     :goto_0
     return v2
 
@@ -10095,8 +10081,8 @@
 
 .method private static sendRegisterResource(II)V
     .locals 4
-    .parameter "type"
-    .parameter "value"
+    .param p0, "type"    # I
+    .param p1, "value"    # I
 
     .prologue
     .line 4874
@@ -10108,7 +10094,7 @@
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     .line 4878
-    .local v0, params:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v0, "params":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v1, "id"
 
     sget v2, Lcom/fusepowered/fuseapi/FuseAPI;->id:I
@@ -10184,10 +10170,10 @@
 
 .method public static sendRobbery(Ljava/lang/String;ZII)V
     .locals 1
-    .parameter "robbedFuseId"
-    .parameter "wasWon"
-    .parameter "amountWon"
-    .parameter "amountLost"
+    .param p0, "robbedFuseId"    # Ljava/lang/String;
+    .param p1, "wasWon"    # Z
+    .param p2, "amountWon"    # I
+    .param p3, "amountLost"    # I
 
     .prologue
     .line 4901
@@ -10211,8 +10197,8 @@
 
 .method private static setDisplayedAdDetails(ILjava/lang/String;)V
     .locals 2
-    .parameter "adId"
-    .parameter "adAction"
+    .param p0, "adId"    # I
+    .param p1, "adAction"    # Ljava/lang/String;
 
     .prologue
     .line 2413
@@ -10235,7 +10221,7 @@
 
 .method public static setFuseChildActivityOnDisplay(Z)V
     .locals 3
-    .parameter "isDisplayed"
+    .param p0, "isDisplayed"    # Z
 
     .prologue
     .line 849
@@ -10310,8 +10296,8 @@
 
 .method public static setGameData(Lcom/fusepowered/util/GameKeyValuePairs;Lcom/fusepowered/util/FuseGameDataCallback;)I
     .locals 1
-    .parameter "gameKeyValuePairs"
-    .parameter "fuseGameDataCallback"
+    .param p0, "gameKeyValuePairs"    # Lcom/fusepowered/util/GameKeyValuePairs;
+    .param p1, "fuseGameDataCallback"    # Lcom/fusepowered/util/FuseGameDataCallback;
 
     .prologue
     .line 2950
@@ -10326,9 +10312,9 @@
 
 .method public static setGameData(Ljava/lang/String;Lcom/fusepowered/util/GameKeyValuePairs;Lcom/fusepowered/util/FuseGameDataCallback;)I
     .locals 1
-    .parameter "key"
-    .parameter "gameKeyValuePairs"
-    .parameter "fuseGameDataCallback"
+    .param p0, "key"    # Ljava/lang/String;
+    .param p1, "gameKeyValuePairs"    # Lcom/fusepowered/util/GameKeyValuePairs;
+    .param p2, "fuseGameDataCallback"    # Lcom/fusepowered/util/FuseGameDataCallback;
 
     .prologue
     .line 2981
@@ -10343,10 +10329,10 @@
 
 .method public static setGameData(Ljava/lang/String;Ljava/lang/String;Lcom/fusepowered/util/GameKeyValuePairs;Lcom/fusepowered/util/FuseGameDataCallback;)I
     .locals 1
-    .parameter "fuseId"
-    .parameter "key"
-    .parameter "gameKeyValuePairs"
-    .parameter "fuseGameDataCallback"
+    .param p0, "fuseId"    # Ljava/lang/String;
+    .param p1, "key"    # Ljava/lang/String;
+    .param p2, "gameKeyValuePairs"    # Lcom/fusepowered/util/GameKeyValuePairs;
+    .param p3, "fuseGameDataCallback"    # Lcom/fusepowered/util/FuseGameDataCallback;
 
     .prologue
     .line 2997
@@ -10359,9 +10345,9 @@
 
 .method public static setGameDataCollection(Ljava/lang/String;Lcom/fusepowered/util/GameKeyValuePairs;Lcom/fusepowered/util/FuseGameDataCallback;)Ljava/util/HashMap;
     .locals 1
-    .parameter "fuseId"
-    .parameter "gameKeyValuePairs"
-    .parameter "fuseGameDataCallback"
+    .param p0, "fuseId"    # Ljava/lang/String;
+    .param p1, "gameKeyValuePairs"    # Lcom/fusepowered/util/GameKeyValuePairs;
+    .param p2, "fuseGameDataCallback"    # Lcom/fusepowered/util/FuseGameDataCallback;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -10388,7 +10374,7 @@
 
 .method private static setGender(I)V
     .locals 2
-    .parameter "gender"
+    .param p0, "gender"    # I
 
     .prologue
     .line 2900
@@ -10404,7 +10390,7 @@
 
 .method public static setMailAsReceived(I)V
     .locals 4
-    .parameter "mailId"
+    .param p0, "mailId"    # I
 
     .prologue
     .line 4321
@@ -10425,7 +10411,7 @@
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     .line 4327
-    .local v0, params:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v0, "params":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v1, "id"
 
     sget v2, Lcom/fusepowered/fuseapi/FuseAPI;->id:I
@@ -10525,14 +10511,14 @@
     invoke-static {v1, v0, v2}, Lcom/fusepowered/fuseapi/MessagingService;->sendJsonMessage(Ljava/util/HashMap;Ljava/util/HashMap;Lcom/fusepowered/util/FuseCallback;)V
 
     .line 4336
-    .end local v0           #params:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .end local v0    # "params":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     :cond_0
     return-void
 .end method
 
 .method private static setNotificationSkipped(I)V
     .locals 4
-    .parameter "messageId"
+    .param p0, "messageId"    # I
 
     .prologue
     .line 2373
@@ -10541,7 +10527,7 @@
     move-result v0
 
     .line 2374
-    .local v0, notificationSkipCount:I
+    .local v0, "notificationSkipCount":I
     sget-object v1, Lcom/fusepowered/fuseapi/FuseAPI;->context:Landroid/content/Context;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -10572,7 +10558,7 @@
 
 .method private static setNotificationViewed(I)V
     .locals 4
-    .parameter "messageId"
+    .param p0, "messageId"    # I
 
     .prologue
     .line 2364
@@ -10581,7 +10567,7 @@
     move-result v0
 
     .line 2365
-    .local v0, notificationViewCount:I
+    .local v0, "notificationViewCount":I
     sget-object v1, Lcom/fusepowered/fuseapi/FuseAPI;->context:Landroid/content/Context;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -10612,7 +10598,7 @@
 
 .method private static setNumPlays(Ljava/lang/String;)V
     .locals 5
-    .parameter "gameId"
+    .param p0, "gameId"    # Ljava/lang/String;
 
     .prologue
     const-string v4, "num_plays_"
@@ -10645,7 +10631,7 @@
     move-result v0
 
     .line 2379
-    .local v0, notificationViewCount:I
+    .local v0, "notificationViewCount":I
     add-int/lit8 v0, v0, 0x1
 
     sput v0, Lcom/fusepowered/fuseapi/FuseAPI;->numPlays:I
@@ -10681,7 +10667,7 @@
 
 .method private static setOptOut(I)V
     .locals 3
-    .parameter "optOutValue"
+    .param p0, "optOutValue"    # I
 
     .prologue
     .line 2721
@@ -10733,11 +10719,11 @@
 
 .method public static setupGCM(Ljava/lang/String;Landroid/content/Intent;Landroid/app/Activity;II)V
     .locals 9
-    .parameter "GCM_Project_Number"
-    .parameter "gcm_Intent"
-    .parameter "activity"
-    .parameter "smallIconID"
-    .parameter "largeIconID"
+    .param p0, "GCM_Project_Number"    # Ljava/lang/String;
+    .param p1, "gcm_Intent"    # Landroid/content/Intent;
+    .param p2, "activity"    # Landroid/app/Activity;
+    .param p3, "smallIconID"    # I
+    .param p4, "largeIconID"    # I
 
     .prologue
     const-string v8, "Push Notification"
@@ -10804,7 +10790,7 @@
     move-result-object v1
 
     .line 528
-    .local v1, pm:Landroid/content/pm/PackageManager;
+    .local v1, "pm":Landroid/content/pm/PackageManager;
     invoke-virtual {p2}, Landroid/app/Activity;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
 
     move-result-object v3
@@ -10845,7 +10831,7 @@
     iget v2, v3, Landroid/content/pm/ApplicationInfo;->labelRes:I
 
     .line 535
-    .local v2, resID:I
+    .local v2, "resID":I
     invoke-virtual {p2}, Landroid/app/Activity;->getApplication()Landroid/app/Application;
 
     move-result-object v3
@@ -10857,7 +10843,7 @@
     sput-object v3, Lcom/fusepowered/fuseapi/FuseAPI;->appName:Ljava/lang/String;
 
     .line 538
-    .end local v2           #resID:I
+    .end local v2    # "resID":I
     :cond_5
     sget-object v3, Lcom/fusepowered/fuseapi/FuseAPI;->appName:Ljava/lang/String;
 
@@ -11100,7 +11086,7 @@
     move-object v0, v3
 
     .line 590
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v3, "Push Notification"
 
     invoke-virtual {v0}, Ljava/lang/Exception;->toString()Ljava/lang/String;
@@ -11114,8 +11100,8 @@
 
 .method private static declared-synchronized showDialog(Lcom/fusepowered/util/Message;I)V
     .locals 9
-    .parameter "message"
-    .parameter "next"
+    .param p0, "message"    # Lcom/fusepowered/util/Message;
+    .param p1, "next"    # I
 
     .prologue
     const/4 v8, 0x1
@@ -11131,7 +11117,7 @@
     move-result-object v0
 
     .line 2198
-    .local v0, actionTile:Ljava/lang/String;
+    .local v0, "actionTile":Ljava/lang/String;
     if-eqz v0, :cond_0
 
     invoke-virtual {v0}, Ljava/lang/String;->trim()Ljava/lang/String;
@@ -11219,7 +11205,7 @@
     const/4 v1, 0x0
 
     .line 2211
-    .local v1, alert:Landroid/app/AlertDialog;
+    .local v1, "alert":Landroid/app/AlertDialog;
     invoke-virtual {p0}, Lcom/fusepowered/util/Message;->getMandatory()I
 
     move-result v5
@@ -11238,11 +11224,11 @@
     invoke-direct {v3, p0, p1}, Lcom/fusepowered/fuseapi/FuseAPI$5;-><init>(Lcom/fusepowered/util/Message;I)V
 
     .line 2246
-    .local v3, okClickListener:Landroid/content/DialogInterface$OnClickListener;
+    .local v3, "okClickListener":Landroid/content/DialogInterface$OnClickListener;
     const-string v2, "Cancel"
 
     .line 2248
-    .local v2, dismissString:Ljava/lang/String;
+    .local v2, "dismissString":Ljava/lang/String;
     sget-object v5, Lcom/fusepowered/fuseapi/FuseAPI;->builder:Landroid/app/AlertDialog$Builder;
 
     invoke-virtual {p0}, Lcom/fusepowered/util/Message;->getTitle()Ljava/lang/String;
@@ -11278,7 +11264,7 @@
     move-result-object v1
 
     .line 2346
-    .end local v2           #dismissString:Ljava/lang/String;
+    .end local v2    # "dismissString":Ljava/lang/String;
     :goto_0
     invoke-virtual {p0}, Lcom/fusepowered/util/Message;->getIsUpgrade()Z
 
@@ -11308,7 +11294,7 @@
     return-void
 
     .line 2264
-    .end local v3           #okClickListener:Landroid/content/DialogInterface$OnClickListener;
+    .end local v3    # "okClickListener":Landroid/content/DialogInterface$OnClickListener;
     :cond_3
     :try_start_1
     invoke-virtual {p0}, Lcom/fusepowered/util/Message;->getIsUrl()I
@@ -11323,7 +11309,7 @@
     invoke-direct {v3, p0, p1}, Lcom/fusepowered/fuseapi/FuseAPI$7;-><init>(Lcom/fusepowered/util/Message;I)V
 
     .line 2301
-    .restart local v3       #okClickListener:Landroid/content/DialogInterface$OnClickListener;
+    .restart local v3    # "okClickListener":Landroid/content/DialogInterface$OnClickListener;
     sget-object v5, Lcom/fusepowered/fuseapi/FuseAPI;->builder:Landroid/app/AlertDialog$Builder;
 
     invoke-virtual {p0}, Lcom/fusepowered/util/Message;->getTitle()Ljava/lang/String;
@@ -11354,14 +11340,14 @@
     goto :goto_0
 
     .line 2308
-    .end local v3           #okClickListener:Landroid/content/DialogInterface$OnClickListener;
+    .end local v3    # "okClickListener":Landroid/content/DialogInterface$OnClickListener;
     :cond_4
     new-instance v3, Lcom/fusepowered/fuseapi/FuseAPI$8;
 
     invoke-direct {v3, p0}, Lcom/fusepowered/fuseapi/FuseAPI$8;-><init>(Lcom/fusepowered/util/Message;)V
 
     .line 2340
-    .restart local v3       #okClickListener:Landroid/content/DialogInterface$OnClickListener;
+    .restart local v3    # "okClickListener":Landroid/content/DialogInterface$OnClickListener;
     sget-object v5, Lcom/fusepowered/fuseapi/FuseAPI;->builder:Landroid/app/AlertDialog$Builder;
 
     invoke-virtual {p0}, Lcom/fusepowered/util/Message;->getTitle()Ljava/lang/String;
@@ -11393,9 +11379,9 @@
     goto :goto_0
 
     .line 2197
-    .end local v0           #actionTile:Ljava/lang/String;
-    .end local v1           #alert:Landroid/app/AlertDialog;
-    .end local v3           #okClickListener:Landroid/content/DialogInterface$OnClickListener;
+    .end local v0    # "actionTile":Ljava/lang/String;
+    .end local v1    # "alert":Landroid/app/AlertDialog;
+    .end local v3    # "okClickListener":Landroid/content/DialogInterface$OnClickListener;
     :catchall_0
     move-exception v5
 
@@ -11406,7 +11392,7 @@
 
 .method public static showFuseApiAdBrowser(Lcom/fusepowered/activities/FuseApiBrowser;)V
     .locals 5
-    .parameter "fuseApiAdBrowser"
+    .param p0, "fuseApiAdBrowser"    # Lcom/fusepowered/activities/FuseApiBrowser;
 
     .prologue
     .line 2460
@@ -11430,7 +11416,7 @@
     move-result v1
 
     .line 2462
-    .local v1, adId:I
+    .local v1, "adId":I
     sget-object v3, Lcom/fusepowered/fuseapi/FuseAPI;->adToDisplay:Lcom/fusepowered/util/Ad;
 
     invoke-virtual {v3}, Lcom/fusepowered/util/Ad;->getAction()Ljava/lang/String;
@@ -11438,7 +11424,7 @@
     move-result-object v0
 
     .line 2463
-    .local v0, adAction:Ljava/lang/String;
+    .local v0, "adAction":Ljava/lang/String;
     invoke-static {v1, v0}, Lcom/fusepowered/fuseapi/FuseAPI;->setDisplayedAdDetails(ILjava/lang/String;)V
 
     .line 2469
@@ -11453,7 +11439,7 @@
     invoke-direct {v2, v3, v4}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
     .line 2470
-    .local v2, intent:Landroid/content/Intent;
+    .local v2, "intent":Landroid/content/Intent;
     const-string v3, "AD_ACTION"
 
     invoke-virtual {v2, v3, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
@@ -11527,9 +11513,9 @@
     invoke-virtual {v3, v2, v4}, Landroid/app/Activity;->startActivityForResult(Landroid/content/Intent;I)V
 
     .line 2488
-    .end local v0           #adAction:Ljava/lang/String;
-    .end local v1           #adId:I
-    .end local v2           #intent:Landroid/content/Intent;
+    .end local v0    # "adAction":Ljava/lang/String;
+    .end local v1    # "adId":I
+    .end local v2    # "intent":Landroid/content/Intent;
     :goto_0
     return-void
 
@@ -11551,8 +11537,8 @@
 
 .method private static showFuseApiMoreGamesBrowser(Ljava/lang/String;Lcom/fusepowered/activities/FuseApiBrowser;)V
     .locals 3
-    .parameter "url"
-    .parameter "fuseApiMoregamesBrowser"
+    .param p0, "url"    # Ljava/lang/String;
+    .param p1, "fuseApiMoregamesBrowser"    # Lcom/fusepowered/activities/FuseApiBrowser;
 
     .prologue
     .line 2847
@@ -11567,7 +11553,7 @@
     invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
     .line 2849
-    .local v0, intent:Landroid/content/Intent;
+    .local v0, "intent":Landroid/content/Intent;
     invoke-static {p0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v1
@@ -11596,7 +11582,7 @@
 
 .method private static declared-synchronized showNextMessage(I)V
     .locals 9
-    .parameter "i"
+    .param p0, "i"    # I
 
     .prologue
     const/4 v8, 0x1
@@ -11630,7 +11616,7 @@
     move-result-object v1
 
     .line 2156
-    .local v1, m:Lcom/fusepowered/util/Message;
+    .local v1, "m":Lcom/fusepowered/util/Message;
     if-nez v1, :cond_2
 
     .line 2157
@@ -11643,7 +11629,7 @@
     goto :goto_0
 
     .line 2149
-    .end local v1           #m:Lcom/fusepowered/util/Message;
+    .end local v1    # "m":Lcom/fusepowered/util/Message;
     :catchall_0
     move-exception v7
 
@@ -11652,7 +11638,7 @@
     throw v7
 
     .line 2161
-    .restart local v1       #m:Lcom/fusepowered/util/Message;
+    .restart local v1    # "m":Lcom/fusepowered/util/Message;
     :cond_2
     :try_start_2
     invoke-virtual {v1}, Lcom/fusepowered/util/Message;->getId()I
@@ -11660,31 +11646,31 @@
     move-result v2
 
     .line 2162
-    .local v2, messageId:I
+    .local v2, "messageId":I
     invoke-static {v2}, Lcom/fusepowered/fuseapi/FuseAPI;->getNotificationViewCount(I)I
 
     move-result v5
 
     .line 2163
-    .local v5, notificationViewCount:I
+    .local v5, "notificationViewCount":I
     invoke-static {v2}, Lcom/fusepowered/fuseapi/FuseAPI;->getNotificationSkipCount(I)I
 
     move-result v4
 
     .line 2165
-    .local v4, notificationSkipCount:I
+    .local v4, "notificationSkipCount":I
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     .line 2173
-    .local v0, buf:Ljava/lang/StringBuilder;
+    .local v0, "buf":Ljava/lang/StringBuilder;
     invoke-virtual {v1}, Lcom/fusepowered/util/Message;->getSticky()I
 
     move-result v3
 
     .line 2174
-    .local v3, messageSticky:I
+    .local v3, "messageSticky":I
     if-eq v3, v8, :cond_5
 
     if-nez v3, :cond_4
@@ -11774,10 +11760,10 @@
 
 .method public static startSession(Ljava/lang/String;Landroid/app/Activity;Landroid/content/Context;Lcom/fusepowered/util/FuseCallback;)V
     .locals 3
-    .parameter "gameId"
-    .parameter "activity"
-    .parameter "ctx"
-    .parameter "callback"
+    .param p0, "gameId"    # Ljava/lang/String;
+    .param p1, "activity"    # Landroid/app/Activity;
+    .param p2, "ctx"    # Landroid/content/Context;
+    .param p3, "callback"    # Lcom/fusepowered/util/FuseCallback;
 
     .prologue
     .line 313
@@ -11849,7 +11835,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "gameId":Ljava/lang/String;
     invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -11878,29 +11864,29 @@
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     .line 335
-    .local v0, params:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v0, "params":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-virtual {p1}, Landroid/app/Activity;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object p0
 
     .line 336
-    .local p0, pm:Landroid/content/pm/PackageManager;
+    .local p0, "pm":Landroid/content/pm/PackageManager;
     invoke-virtual {p1}, Landroid/app/Activity;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
 
     move-result-object p2
 
-    .end local p2
+    .end local p2    # "ctx":Landroid/content/Context;
     invoke-virtual {p0, p2}, Landroid/content/pm/PackageManager;->getApplicationLabel(Landroid/content/pm/ApplicationInfo;)Ljava/lang/CharSequence;
 
     move-result-object p0
 
-    .end local p0           #pm:Landroid/content/pm/PackageManager;
+    .end local p0    # "pm":Landroid/content/pm/PackageManager;
     invoke-interface {p0}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
     move-result-object p0
 
     .line 337
-    .local p0, applicationName:Ljava/lang/String;
+    .local p0, "applicationName":Ljava/lang/String;
     const-string p2, "[^A-Za-z0-9]"
 
     const-string v1, ""
@@ -11919,7 +11905,7 @@
     move-result-object p2
 
     .line 340
-    .local p2, packageName:Ljava/lang/String;
+    .local p2, "packageName":Ljava/lang/String;
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -11934,7 +11920,7 @@
 
     move-result-object p2
 
-    .end local p2           #packageName:Ljava/lang/String;
+    .end local p2    # "packageName":Ljava/lang/String;
     const-string v1, "."
 
     invoke-virtual {p2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -11945,20 +11931,20 @@
 
     move-result-object p0
 
-    .end local p0           #applicationName:Ljava/lang/String;
+    .end local p0    # "applicationName":Ljava/lang/String;
     invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
 
     .line 342
-    .local p0, fileName:Ljava/lang/String;
+    .local p0, "fileName":Ljava/lang/String;
     const/4 p2, 0x0
 
     invoke-virtual {p1, p0, p2}, Landroid/app/Activity;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
     move-result-object p0
 
-    .end local p0           #fileName:Ljava/lang/String;
+    .end local p0    # "fileName":Ljava/lang/String;
     sput-object p0, Lcom/fusepowered/fuseapi/FuseAPI;->appdata:Landroid/content/SharedPreferences;
 
     .line 345
@@ -11971,7 +11957,7 @@
 
     const-string p1, "1"
 
-    .end local p1
+    .end local p1    # "activity":Landroid/app/Activity;
     invoke-virtual {v0, p0, p1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 377
@@ -12061,7 +12047,7 @@
     move-result-object p0
 
     .line 386
-    .local p0, deviceId:Ljava/lang/String;
+    .local p0, "deviceId":Ljava/lang/String;
     if-eqz p0, :cond_1
 
     invoke-virtual {p0}, Ljava/lang/String;->length()I
@@ -12079,7 +12065,7 @@
     :cond_1
     sget-object p0, Lcom/fusepowered/fuseapi/FuseAPI;->context:Landroid/content/Context;
 
-    .end local p0           #deviceId:Ljava/lang/String;
+    .end local p0    # "deviceId":Ljava/lang/String;
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -12091,7 +12077,7 @@
     move-result-object p0
 
     .line 393
-    .local p0, androidId:Ljava/lang/String;
+    .local p0, "androidId":Ljava/lang/String;
     if-eqz p0, :cond_2
 
     invoke-virtual {p0}, Ljava/lang/String;->length()I
@@ -12111,7 +12097,7 @@
 
     move-object p0, p3
 
-    .end local p0           #androidId:Ljava/lang/String;
+    .end local p0    # "androidId":Ljava/lang/String;
     :goto_2
     sput-object p0, Lcom/fusepowered/fuseapi/FuseAPI;->fuseCallback:Lcom/fusepowered/util/FuseCallback;
 
@@ -12123,27 +12109,27 @@
     invoke-static {p0, v0, p1}, Lcom/fusepowered/fuseapi/MessagingService;->sendJsonMessage(Ljava/util/HashMap;Ljava/util/HashMap;Lcom/fusepowered/util/FuseCallback;)V
 
     .line 405
-    .end local v0           #params:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .end local v0    # "params":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     :cond_3
     return-void
 
     .line 330
-    .restart local p1
-    .local p2, ctx:Landroid/content/Context;
+    .restart local p1    # "activity":Landroid/app/Activity;
+    .local p2, "ctx":Landroid/content/Context;
     :cond_4
     const/4 p0, 0x0
 
     goto/16 :goto_0
 
     .line 351
-    .end local p2           #ctx:Landroid/content/Context;
-    .restart local v0       #params:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .end local p2    # "ctx":Landroid/content/Context;
+    .restart local v0    # "params":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     :cond_5
     const-string p0, "timestamp"
 
     new-instance p1, Ljava/util/Date;
 
-    .end local p1
+    .end local p1    # "activity":Landroid/app/Activity;
     invoke-direct {p1}, Ljava/util/Date;-><init>()V
 
     invoke-virtual {p1}, Ljava/util/Date;->getTime()J
@@ -12246,7 +12232,7 @@
     invoke-direct {p1}, Landroid/graphics/Rect;-><init>()V
 
     .line 362
-    .local p1, r:Landroid/graphics/Rect;
+    .local p1, "r":Landroid/graphics/Rect;
     sget-object p0, Lcom/fusepowered/fuseapi/FuseAPI;->mainActivity:Landroid/app/Activity;
 
     invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
@@ -12254,12 +12240,12 @@
     move-result-object p0
 
     .line 363
-    .local p0, w:Landroid/view/Window;
+    .local p0, "w":Landroid/view/Window;
     invoke-virtual {p0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
 
     move-result-object p0
 
-    .end local p0           #w:Landroid/view/Window;
+    .end local p0    # "w":Landroid/view/Window;
     invoke-virtual {p0, p1}, Landroid/view/View;->getWindowVisibleDisplayFrame(Landroid/graphics/Rect;)V
 
     .line 365
@@ -12270,23 +12256,23 @@
     sub-int/2addr p0, p2
 
     .line 366
-    .local p0, height:I
+    .local p0, "height":I
     iget p2, p1, Landroid/graphics/Rect;->right:I
 
     iget p1, p1, Landroid/graphics/Rect;->left:I
 
-    .end local p1           #r:Landroid/graphics/Rect;
+    .end local p1    # "r":Landroid/graphics/Rect;
     sub-int p1, p2, p1
 
     .line 369
-    .local p1, width:I
+    .local p1, "width":I
     const-string p2, "w"
 
     invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object p1
 
-    .end local p1           #width:I
+    .end local p1    # "width":I
     invoke-virtual {v0, p2, p1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 370
@@ -12296,7 +12282,7 @@
 
     move-result-object p0
 
-    .end local p0           #height:I
+    .end local p0    # "height":I
     invoke-virtual {v0, p1, p0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 372
@@ -12319,24 +12305,24 @@
     move-result p0
 
     .line 373
-    .local p0, Rotation:I
+    .local p0, "Rotation":I
     const-string p1, "o"
 
     invoke-static {p0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object p0
 
-    .end local p0           #Rotation:I
+    .end local p0    # "Rotation":I
     invoke-virtual {v0, p1, p0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto/16 :goto_1
 
     .line 398
-    .local p0, androidId:Ljava/lang/String;
+    .local p0, "androidId":Ljava/lang/String;
     :cond_6
     new-instance p0, Lcom/fusepowered/util/FuseMessageCallback;
 
-    .end local p0           #androidId:Ljava/lang/String;
+    .end local p0    # "androidId":Ljava/lang/String;
     invoke-direct {p0}, Lcom/fusepowered/util/FuseMessageCallback;-><init>()V
 
     goto/16 :goto_2
@@ -12393,7 +12379,7 @@
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     .line 750
-    .local v0, params:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v0, "params":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v1, "id"
 
     sget v2, Lcom/fusepowered/fuseapi/FuseAPI;->id:I
@@ -12460,7 +12446,7 @@
 
 .method public static testGCMSetup(Landroid/app/Activity;)V
     .locals 11
-    .parameter "activity"
+    .param p0, "activity"    # Landroid/app/Activity;
 
     .prologue
     const-string v10, "."
@@ -12475,7 +12461,7 @@
     move-result-object v1
 
     .line 419
-    .local v1, pm:Landroid/content/pm/PackageManager;
+    .local v1, "pm":Landroid/content/pm/PackageManager;
     invoke-virtual {p0}, Landroid/app/Activity;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
 
     move-result-object v5
@@ -12541,7 +12527,7 @@
     iget v3, v5, Landroid/content/pm/ApplicationInfo;->labelRes:I
 
     .line 427
-    .local v3, resID:I
+    .local v3, "resID":I
     invoke-virtual {p0}, Landroid/app/Activity;->getApplication()Landroid/app/Application;
 
     move-result-object v5
@@ -12578,7 +12564,7 @@
     invoke-static {v8, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 431
-    .end local v3           #resID:I
+    .end local v3    # "resID":I
     :cond_1
     sget-object v5, Lcom/fusepowered/fuseapi/FuseAPI;->appName:Ljava/lang/String;
 
@@ -12801,13 +12787,13 @@
     move-result-object v0
 
     .line 460
-    .local v0, intentName:Ljava/lang/String;
+    .local v0, "intentName":Ljava/lang/String;
     new-instance v2, Landroid/content/Intent;
 
     invoke-direct {v2, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
     .line 461
-    .local v2, receiver:Landroid/content/Intent;
+    .local v2, "receiver":Landroid/content/Intent;
     sget-object v5, Lcom/fusepowered/fuseapi/FuseAPI;->packageName:Ljava/lang/String;
 
     invoke-virtual {v2, v5}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
@@ -12820,7 +12806,7 @@
     move-result-object v4
 
     .line 463
-    .local v4, ri:Landroid/content/pm/ResolveInfo;
+    .local v4, "ri":Landroid/content/pm/ResolveInfo;
     if-eqz v4, :cond_9
 
     .line 465
@@ -12863,8 +12849,8 @@
 
 .method public static triggerFuseAdDisplay(Lcom/fusepowered/activities/FuseApiBrowser;Lcom/fusepowered/util/FuseAdCallback;)V
     .locals 2
-    .parameter "fuseApiAdBrowser"
-    .parameter "adCallback"
+    .param p0, "fuseApiAdBrowser"    # Lcom/fusepowered/activities/FuseApiBrowser;
+    .param p1, "adCallback"    # Lcom/fusepowered/util/FuseAdCallback;
 
     .prologue
     .line 1354
@@ -12913,7 +12899,7 @@
 
 .method public static triggerMopubAdDisplay(Lcom/fusepowered/util/FuseAdCallback;)V
     .locals 3
-    .parameter "adCallback"
+    .param p0, "adCallback"    # Lcom/fusepowered/util/FuseAdCallback;
 
     .prologue
     .line 1365
@@ -12965,8 +12951,8 @@
 
 .method public static twitterLogin(Ljava/lang/String;Lcom/fusepowered/util/FuseCallback;)V
     .locals 6
-    .parameter "twitterId"
-    .parameter "fuseCallback"
+    .param p0, "twitterId"    # Ljava/lang/String;
+    .param p1, "fuseCallback"    # Lcom/fusepowered/util/FuseCallback;
 
     .prologue
     .line 3635
@@ -12994,9 +12980,9 @@
 
 .method public static twitterLogin(Ljava/lang/String;Ljava/lang/String;Lcom/fusepowered/util/FuseCallback;)V
     .locals 6
-    .parameter "twitterId"
-    .parameter "alias"
-    .parameter "fuseCallback"
+    .param p0, "twitterId"    # Ljava/lang/String;
+    .param p1, "alias"    # Ljava/lang/String;
+    .param p2, "fuseCallback"    # Lcom/fusepowered/util/FuseCallback;
 
     .prologue
     .line 3665
@@ -13236,7 +13222,7 @@
 
 .method public static updateFriendsListFromServer(Lcom/fusepowered/util/FuseCallback;)V
     .locals 4
-    .parameter "fuseCallback"
+    .param p0, "fuseCallback"    # Lcom/fusepowered/util/FuseCallback;
 
     .prologue
     .line 4499
@@ -13248,7 +13234,7 @@
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     .line 4503
-    .local v0, params:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v0, "params":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v1, "id"
 
     sget v2, Lcom/fusepowered/fuseapi/FuseAPI;->id:I
@@ -13335,11 +13321,11 @@
     .line 4511
     new-instance p0, Lcom/fusepowered/util/FuseMessageCallback;
 
-    .end local p0
+    .end local p0    # "fuseCallback":Lcom/fusepowered/util/FuseCallback;
     invoke-direct {p0}, Lcom/fusepowered/util/FuseMessageCallback;-><init>()V
 
     .line 4514
-    .restart local p0
+    .restart local p0    # "fuseCallback":Lcom/fusepowered/util/FuseCallback;
     :cond_0
     sget-object v1, Lcom/fusepowered/fuseapi/FuseAPI;->commonParams:Ljava/util/HashMap;
 
@@ -13351,7 +13337,7 @@
 
 .method private static updateFuseAPI(Landroid/app/Activity;)V
     .locals 2
-    .parameter "activity"
+    .param p0, "activity"    # Landroid/app/Activity;
 
     .prologue
     .line 186
@@ -13379,7 +13365,7 @@
 
 .method public static userOptOut(I)V
     .locals 4
-    .parameter "optOut"
+    .param p0, "optOut"    # I
 
     .prologue
     .line 2702
@@ -13391,7 +13377,7 @@
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     .line 2706
-    .local v0, params:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v0, "params":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v1, "id"
 
     sget v2, Lcom/fusepowered/fuseapi/FuseAPI;->id:I
@@ -13461,8 +13447,8 @@
 
 .method public static userPushNotification(Ljava/lang/String;Ljava/lang/String;)V
     .locals 5
-    .parameter "fuse_id"
-    .parameter "message"
+    .param p0, "fuse_id"    # Ljava/lang/String;
+    .param p1, "message"    # Ljava/lang/String;
 
     .prologue
     .line 622
@@ -13473,7 +13459,7 @@
     move-result-object v0
 
     .line 624
-    .local v0, acct:Lcom/fusepowered/util/Account;
+    .local v0, "acct":Lcom/fusepowered/util/Account;
     if-nez v0, :cond_0
 
     .line 640
@@ -13490,7 +13476,7 @@
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
     .line 630
-    .local v1, params:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v1, "params":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v2, "id"
 
     sget v3, Lcom/fusepowered/fuseapi/FuseAPI;->id:I
@@ -13587,7 +13573,7 @@
 
 .method public static utcTimeFromServer(Lcom/fusepowered/util/FuseCallback;)V
     .locals 4
-    .parameter "callback"
+    .param p0, "callback"    # Lcom/fusepowered/util/FuseCallback;
 
     .prologue
     .line 2668
@@ -13599,7 +13585,7 @@
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     .line 2672
-    .local v0, params:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v0, "params":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v1, "id"
 
     sget v2, Lcom/fusepowered/fuseapi/FuseAPI;->id:I

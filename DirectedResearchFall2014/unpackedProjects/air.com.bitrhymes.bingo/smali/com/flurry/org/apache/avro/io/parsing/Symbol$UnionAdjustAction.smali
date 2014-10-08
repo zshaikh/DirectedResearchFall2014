@@ -23,8 +23,8 @@
 # direct methods
 .method public constructor <init>(ILcom/flurry/org/apache/avro/io/parsing/Symbol;)V
     .locals 1
-    .parameter "rindex"
-    .parameter "symToParse"
+    .param p1, "rindex"    # I
+    .param p2, "symToParse"    # Lcom/flurry/org/apache/avro/io/parsing/Symbol;
 
     .prologue
     .line 481
@@ -46,8 +46,6 @@
 # virtual methods
 .method public flatten(Ljava/util/Map;Ljava/util/Map;)Lcom/flurry/org/apache/avro/io/parsing/Symbol$UnionAdjustAction;
     .locals 3
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -69,8 +67,8 @@
 
     .prologue
     .line 489
-    .local p1, map:Ljava/util/Map;,"Ljava/util/Map<Lcom/flurry/org/apache/avro/io/parsing/Symbol$Sequence;Lcom/flurry/org/apache/avro/io/parsing/Symbol$Sequence;>;"
-    .local p2, map2:Ljava/util/Map;,"Ljava/util/Map<Lcom/flurry/org/apache/avro/io/parsing/Symbol$Sequence;Ljava/util/List<Lcom/flurry/org/apache/avro/io/parsing/Symbol$Fixup;>;>;"
+    .local p1, "map":Ljava/util/Map;, "Ljava/util/Map<Lcom/flurry/org/apache/avro/io/parsing/Symbol$Sequence;Lcom/flurry/org/apache/avro/io/parsing/Symbol$Sequence;>;"
+    .local p2, "map2":Ljava/util/Map;, "Ljava/util/Map<Lcom/flurry/org/apache/avro/io/parsing/Symbol$Sequence;Ljava/util/List<Lcom/flurry/org/apache/avro/io/parsing/Symbol$Fixup;>;>;"
     new-instance v0, Lcom/flurry/org/apache/avro/io/parsing/Symbol$UnionAdjustAction;
 
     iget v1, p0, Lcom/flurry/org/apache/avro/io/parsing/Symbol$UnionAdjustAction;->rindex:I
@@ -88,8 +86,8 @@
 
 .method public bridge synthetic flatten(Ljava/util/Map;Ljava/util/Map;)Lcom/flurry/org/apache/avro/io/parsing/Symbol;
     .locals 1
-    .parameter "x0"
-    .parameter "x1"
+    .param p1, "x0"    # Ljava/util/Map;
+    .param p2, "x1"    # Ljava/util/Map;
 
     .prologue
     .line 478

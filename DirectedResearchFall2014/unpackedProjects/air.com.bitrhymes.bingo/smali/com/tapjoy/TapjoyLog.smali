@@ -71,8 +71,8 @@
 
 .method public static d(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
-    .parameter "tag"
-    .parameter "msg"
+    .param p0, "tag"    # Ljava/lang/String;
+    .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
     .line 142
@@ -101,8 +101,8 @@
 
 .method public static e(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
-    .parameter "tag"
-    .parameter "msg"
+    .param p0, "tag"    # Ljava/lang/String;
+    .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
     .line 114
@@ -131,7 +131,7 @@
 
 .method public static enableLogging(Z)V
     .locals 3
-    .parameter "enable"
+    .param p0, "enable"    # Z
 
     .prologue
     .line 29
@@ -185,8 +185,8 @@
 
 .method public static i(Ljava/lang/String;Ljava/lang/String;)V
     .locals 5
-    .parameter "tag"
-    .parameter "msg"
+    .param p0, "tag"    # Ljava/lang/String;
+    .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
     .line 84
@@ -206,7 +206,7 @@
     .line 89
     const/4 v1, 0x0
 
-    .local v1, i:I
+    .local v1, "i":I
     :goto_0
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
@@ -220,13 +220,13 @@
     mul-int/lit16 v2, v1, 0x1000
 
     .line 92
-    .local v2, start:I
+    .local v2, "start":I
     add-int/lit8 v3, v1, 0x1
 
     mul-int/lit16 v0, v3, 0x1000
 
     .line 93
-    .local v0, end:I
+    .local v0, "end":I
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v3
@@ -253,9 +253,9 @@
     goto :goto_0
 
     .line 99
-    .end local v0           #end:I
-    .end local v1           #i:I
-    .end local v2           #start:I
+    .end local v0    # "end":I
+    .end local v1    # "i":I
+    .end local v2    # "start":I
     :cond_1
     invoke-static {p0, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -287,7 +287,7 @@
 
 .method public static saveLogHistory(Z)V
     .locals 2
-    .parameter "save"
+    .param p0, "save"    # Z
 
     .prologue
     .line 47
@@ -322,8 +322,8 @@
 
 .method public static v(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
-    .parameter "tag"
-    .parameter "msg"
+    .param p0, "tag"    # Ljava/lang/String;
+    .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
     .line 156
@@ -352,8 +352,8 @@
 
 .method public static w(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
-    .parameter "tag"
-    .parameter "msg"
+    .param p0, "tag"    # Ljava/lang/String;
+    .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
     .line 128

@@ -59,7 +59,7 @@
 # virtual methods
 .method addPurchase(Lcom/bitrhymes/iab/util/Purchase;)V
     .locals 2
-    .parameter "p"
+    .param p1, "p"    # Lcom/bitrhymes/iab/util/Purchase;
 
     .prologue
     .line 80
@@ -77,7 +77,7 @@
 
 .method addSkuDetails(Lcom/bitrhymes/iab/util/SkuDetails;)V
     .locals 2
-    .parameter "d"
+    .param p1, "d"    # Lcom/bitrhymes/iab/util/SkuDetails;
 
     .prologue
     .line 76
@@ -95,7 +95,7 @@
 
 .method public erasePurchase(Ljava/lang/String;)V
     .locals 1
-    .parameter "sku"
+    .param p1, "sku"    # Ljava/lang/String;
 
     .prologue
     .line 53
@@ -145,7 +145,7 @@
 
 .method getAllOwnedSkus(Ljava/lang/String;)Ljava/util/List;
     .locals 4
-    .parameter "itemType"
+    .param p1, "itemType"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -165,7 +165,7 @@
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     .line 64
-    .local v1, result:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
+    .local v1, "result":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     iget-object v2, p0, Lcom/bitrhymes/iab/util/Inventory;->mPurchaseMap:Ljava/util/Map;
 
     invoke-interface {v2}, Ljava/util/Map;->values()Ljava/util/Collection;
@@ -196,7 +196,7 @@
     check-cast v0, Lcom/bitrhymes/iab/util/Purchase;
 
     .line 65
-    .local v0, p:Lcom/bitrhymes/iab/util/Purchase;
+    .local v0, "p":Lcom/bitrhymes/iab/util/Purchase;
     invoke-virtual {v0}, Lcom/bitrhymes/iab/util/Purchase;->getItemType()Ljava/lang/String;
 
     move-result-object v3
@@ -245,7 +245,7 @@
 
 .method public getPurchase(Ljava/lang/String;)Lcom/bitrhymes/iab/util/Purchase;
     .locals 1
-    .parameter "sku"
+    .param p1, "sku"    # Ljava/lang/String;
 
     .prologue
     .line 31
@@ -255,7 +255,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/bitrhymes/iab/util/Inventory;
     check-cast p0, Lcom/bitrhymes/iab/util/Purchase;
 
     return-object p0
@@ -283,7 +283,7 @@
 
 .method public getSkuDetails(Ljava/lang/String;)Lcom/bitrhymes/iab/util/SkuDetails;
     .locals 1
-    .parameter "sku"
+    .param p1, "sku"    # Ljava/lang/String;
 
     .prologue
     .line 26
@@ -293,7 +293,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/bitrhymes/iab/util/Inventory;
     check-cast p0, Lcom/bitrhymes/iab/util/SkuDetails;
 
     return-object p0
@@ -301,7 +301,7 @@
 
 .method public hasDetails(Ljava/lang/String;)Z
     .locals 1
-    .parameter "sku"
+    .param p1, "sku"    # Ljava/lang/String;
 
     .prologue
     .line 41
@@ -316,7 +316,7 @@
 
 .method public hasPurchase(Ljava/lang/String;)Z
     .locals 1
-    .parameter "sku"
+    .param p1, "sku"    # Ljava/lang/String;
 
     .prologue
     .line 36

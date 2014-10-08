@@ -21,8 +21,8 @@
 # virtual methods
 .method public call(Lcom/adobe/fre/FREContext;[Lcom/adobe/fre/FREObject;)Lcom/adobe/fre/FREObject;
     .locals 5
-    .parameter "context"
-    .parameter "args"
+    .param p1, "context"    # Lcom/adobe/fre/FREContext;
+    .param p2, "args"    # [Lcom/adobe/fre/FREObject;
 
     .prologue
     .line 24
@@ -86,7 +86,7 @@
     move-result-object v1
 
     .line 25
-    .local v1, formLink:Ljava/lang/String;
+    .local v1, "formLink":Ljava/lang/String;
     const-string v3, "LaunchEmail"
 
     const-string v4, "formLink"
@@ -104,7 +104,7 @@
     move-result-object v2
 
     .line 28
-    .local v2, intent:Landroid/content/Intent;
+    .local v2, "intent":Landroid/content/Intent;
     invoke-virtual {p1}, Lcom/adobe/fre/FREContext;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
@@ -115,22 +115,22 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
     .line 38
-    .end local v1           #formLink:Ljava/lang/String;
-    .end local v2           #intent:Landroid/content/Intent;
+    .end local v1    # "formLink":Ljava/lang/String;
+    .end local v2    # "intent":Landroid/content/Intent;
     :goto_0
     const/4 v3, 0x0
 
     return-object v3
 
     .line 29
-    .restart local v1       #formLink:Ljava/lang/String;
+    .restart local v1    # "formLink":Ljava/lang/String;
     :catch_0
     move-exception v3
 
     move-object v0, v3
 
     .line 30
-    .local v0, e:Ljava/net/URISyntaxException;
+    .local v0, "e":Ljava/net/URISyntaxException;
     :try_start_2
     invoke-virtual {v0}, Ljava/net/URISyntaxException;->printStackTrace()V
     :try_end_2
@@ -139,15 +139,15 @@
     goto :goto_0
 
     .line 33
-    .end local v0           #e:Ljava/net/URISyntaxException;
-    .end local v1           #formLink:Ljava/lang/String;
+    .end local v0    # "e":Ljava/net/URISyntaxException;
+    .end local v1    # "formLink":Ljava/lang/String;
     :catch_1
     move-exception v3
 
     move-object v0, v3
 
     .line 35
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v3, "AIR_AndroidDialog"
 
     invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;

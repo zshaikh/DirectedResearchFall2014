@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/vungle/sdk/j$a;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 381
@@ -39,8 +38,6 @@
 # virtual methods
 .method public final onClick(Landroid/content/DialogInterface;I)V
     .locals 7
-    .parameter
-    .parameter
 
     .prologue
     .line 384

@@ -42,13 +42,12 @@
 
 .method public constructor <init>(IIZIILjava/lang/String;Ljava/util/ArrayList;)V
     .locals 0
-    .parameter "id"
-    .parameter "numFiles"
-    .parameter "update"
-    .parameter "bytes"
-    .parameter "contentId"
-    .parameter "productId"
-    .parameter
+    .param p1, "id"    # I
+    .param p2, "numFiles"    # I
+    .param p3, "update"    # Z
+    .param p4, "bytes"    # I
+    .param p5, "contentId"    # I
+    .param p6, "productId"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(IIZII",
@@ -62,7 +61,7 @@
 
     .prologue
     .line 19
-    .local p7, dlcContents:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/fusepowered/util/DlcContent;>;"
+    .local p7, "dlcContents":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/fusepowered/util/DlcContent;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 20
@@ -173,7 +172,7 @@
 
 .method public setBytes(I)V
     .locals 0
-    .parameter "bytes"
+    .param p1, "bytes"    # I
 
     .prologue
     .line 51
@@ -185,7 +184,7 @@
 
 .method public setContentId(I)V
     .locals 0
-    .parameter "contentId"
+    .param p1, "contentId"    # I
 
     .prologue
     .line 57
@@ -197,7 +196,6 @@
 
 .method public setDlcContents(Ljava/util/ArrayList;)V
     .locals 0
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -210,7 +208,7 @@
 
     .prologue
     .line 69
-    .local p1, dlcContents:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/fusepowered/util/DlcContent;>;"
+    .local p1, "dlcContents":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/fusepowered/util/DlcContent;>;"
     iput-object p1, p0, Lcom/fusepowered/util/DLC;->dlcContents:Ljava/util/ArrayList;
 
     .line 70
@@ -219,7 +217,7 @@
 
 .method public setId(I)V
     .locals 0
-    .parameter "id"
+    .param p1, "id"    # I
 
     .prologue
     .line 33
@@ -231,7 +229,7 @@
 
 .method public setNumFiles(I)V
     .locals 0
-    .parameter "numFiles"
+    .param p1, "numFiles"    # I
 
     .prologue
     .line 39
@@ -243,7 +241,7 @@
 
 .method public setProductId(Ljava/lang/String;)V
     .locals 0
-    .parameter "productId"
+    .param p1, "productId"    # Ljava/lang/String;
 
     .prologue
     .line 63
@@ -255,7 +253,7 @@
 
 .method public setUpdate(Z)V
     .locals 0
-    .parameter "update"
+    .param p1, "update"    # Z
 
     .prologue
     .line 45
@@ -349,14 +347,14 @@
     move-result-object v0
 
     .line 81
-    .local v0, buf:Ljava/lang/StringBuilder;
+    .local v0, "buf":Ljava/lang/StringBuilder;
     iget-object v3, p0, Lcom/fusepowered/util/DLC;->dlcContents:Ljava/util/ArrayList;
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
 
-    .local v2, i$:Ljava/util/Iterator;
+    .local v2, "i$":Ljava/util/Iterator;
     :goto_0
     invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
@@ -371,7 +369,7 @@
     check-cast v1, Lcom/fusepowered/util/DlcContent;
 
     .line 82
-    .local v1, dlcContent:Lcom/fusepowered/util/DlcContent;
+    .local v1, "dlcContent":Lcom/fusepowered/util/DlcContent;
     invoke-virtual {v1}, Lcom/fusepowered/util/DlcContent;->toString()Ljava/lang/String;
 
     move-result-object v3
@@ -381,7 +379,7 @@
     goto :goto_0
 
     .line 85
-    .end local v1           #dlcContent:Lcom/fusepowered/util/DlcContent;
+    .end local v1    # "dlcContent":Lcom/fusepowered/util/DlcContent;
     :cond_0
     const-string v3, "]]"
 

@@ -26,8 +26,6 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m2/m2l/MraidVideoView;Lcom/fusepowered/m2/m2l/BaseVideoView$BaseVideoViewListener;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 1
@@ -45,9 +43,9 @@
 # virtual methods
 .method public onError(Landroid/media/MediaPlayer;II)Z
     .locals 2
-    .parameter "mediaPlayer"
-    .parameter "what"
-    .parameter "extra"
+    .param p1, "mediaPlayer"    # Landroid/media/MediaPlayer;
+    .param p2, "what"    # I
+    .param p3, "extra"    # I
 
     .prologue
     const/4 v1, 0x0

@@ -87,14 +87,14 @@
 # virtual methods
 .method public getBinaryValue(Ljava/lang/String;)[B
     .locals 4
-    .parameter "key"
+    .param p1, "key"    # Ljava/lang/String;
 
     .prologue
     .line 84
     const/4 v0, 0x0
 
     .line 85
-    .local v0, binaryValue:[B
+    .local v0, "binaryValue":[B
     iget-object v2, p0, Lcom/fusepowered/util/GameKeyValuePairs;->map:Ljava/util/HashMap;
 
     invoke-virtual {v2, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -104,7 +104,7 @@
     check-cast v1, Lcom/fusepowered/util/GameValue;
 
     .line 86
-    .local v1, gv:Lcom/fusepowered/util/GameValue;
+    .local v1, "gv":Lcom/fusepowered/util/GameValue;
     if-eqz v1, :cond_0
 
     invoke-virtual {v1}, Lcom/fusepowered/util/GameValue;->getValue()Ljava/lang/String;
@@ -144,7 +144,7 @@
 
 .method public getMapForKey(Ljava/lang/String;)Ljava/util/HashMap;
     .locals 1
-    .parameter "objectKey"
+    .param p1, "objectKey"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -166,7 +166,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/fusepowered/util/GameKeyValuePairs;
     check-cast p0, Ljava/util/HashMap;
 
     return-object p0
@@ -237,14 +237,14 @@
 
 .method public getStringValue(Ljava/lang/String;)Ljava/lang/String;
     .locals 3
-    .parameter "key"
+    .param p1, "key"    # Ljava/lang/String;
 
     .prologue
     .line 76
     const/4 v1, 0x0
 
     .line 77
-    .local v1, strValue:Ljava/lang/String;
+    .local v1, "strValue":Ljava/lang/String;
     iget-object v2, p0, Lcom/fusepowered/util/GameKeyValuePairs;->map:Ljava/util/HashMap;
 
     invoke-virtual {v2, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -254,7 +254,7 @@
     check-cast v0, Lcom/fusepowered/util/GameValue;
 
     .line 78
-    .local v0, gv:Lcom/fusepowered/util/GameValue;
+    .local v0, "gv":Lcom/fusepowered/util/GameValue;
     if-eqz v0, :cond_0
 
     invoke-virtual {v0}, Lcom/fusepowered/util/GameValue;->getValue()Ljava/lang/String;
@@ -268,8 +268,8 @@
 
 .method public getStringValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 1
-    .parameter "objectKey"
-    .parameter "key"
+    .param p1, "objectKey"    # Ljava/lang/String;
+    .param p2, "key"    # Ljava/lang/String;
 
     .prologue
     .line 121
@@ -279,7 +279,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/fusepowered/util/GameKeyValuePairs;
     check-cast p0, Ljava/util/HashMap;
 
     invoke-virtual {p0, p2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -303,8 +303,8 @@
 
 .method public setKeyValue(Ljava/lang/String;D)V
     .locals 4
-    .parameter "key"
-    .parameter "value"
+    .param p1, "key"    # Ljava/lang/String;
+    .param p2, "value"    # D
 
     .prologue
     .line 59
@@ -328,8 +328,8 @@
 
 .method public setKeyValue(Ljava/lang/String;F)V
     .locals 4
-    .parameter "key"
-    .parameter "value"
+    .param p1, "key"    # Ljava/lang/String;
+    .param p2, "value"    # F
 
     .prologue
     .line 55
@@ -353,8 +353,8 @@
 
 .method public setKeyValue(Ljava/lang/String;I)V
     .locals 4
-    .parameter "key"
-    .parameter "value"
+    .param p1, "key"    # Ljava/lang/String;
+    .param p2, "value"    # I
 
     .prologue
     .line 51
@@ -378,8 +378,8 @@
 
 .method public setKeyValue(Ljava/lang/String;Ljava/lang/String;)V
     .locals 3
-    .parameter "key"
-    .parameter "value"
+    .param p1, "key"    # Ljava/lang/String;
+    .param p2, "value"    # Ljava/lang/String;
 
     .prologue
     .line 47
@@ -399,8 +399,8 @@
 
 .method public setKeyValue(Ljava/lang/String;Ljava/util/Date;)V
     .locals 4
-    .parameter "key"
-    .parameter "value"
+    .param p1, "key"    # Ljava/lang/String;
+    .param p2, "value"    # Ljava/util/Date;
 
     .prologue
     .line 67
@@ -424,8 +424,8 @@
 
 .method public setKeyValue(Ljava/lang/String;Z)V
     .locals 4
-    .parameter "key"
-    .parameter "value"
+    .param p1, "key"    # Ljava/lang/String;
+    .param p2, "value"    # Z
 
     .prologue
     .line 63
@@ -449,8 +449,8 @@
 
 .method public setKeyValue(Ljava/lang/String;[B)V
     .locals 5
-    .parameter "key"
-    .parameter "value"
+    .param p1, "key"    # Ljava/lang/String;
+    .param p2, "value"    # [B
 
     .prologue
     .line 71
@@ -461,7 +461,7 @@
     move-result-object v0
 
     .line 72
-    .local v0, strValue:Ljava/lang/String;
+    .local v0, "strValue":Ljava/lang/String;
     iget-object v1, p0, Lcom/fusepowered/util/GameKeyValuePairs;->map:Ljava/util/HashMap;
 
     new-instance v2, Lcom/fusepowered/util/GameValue;
@@ -482,7 +482,6 @@
 
 .method public setMap(Ljava/util/HashMap;)V
     .locals 0
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -496,7 +495,7 @@
 
     .prologue
     .line 27
-    .local p1, map:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Lcom/fusepowered/util/GameValue;>;"
+    .local p1, "map":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Lcom/fusepowered/util/GameValue;>;"
     iput-object p1, p0, Lcom/fusepowered/util/GameKeyValuePairs;->map:Ljava/util/HashMap;
 
     .line 28
@@ -505,8 +504,7 @@
 
 .method public setMapForKey(Ljava/lang/String;Ljava/util/HashMap;)V
     .locals 1
-    .parameter "objectKey"
-    .parameter
+    .param p1, "objectKey"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -521,7 +519,7 @@
 
     .prologue
     .line 35
-    .local p2, map:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p2, "map":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     iget-object v0, p0, Lcom/fusepowered/util/GameKeyValuePairs;->objectMap:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1, p2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -532,10 +530,10 @@
 
 .method public setObjectKeyValue(Ljava/lang/String;Ljava/lang/String;DLjava/lang/String;)V
     .locals 1
-    .parameter "objectKey"
-    .parameter "key"
-    .parameter "value"
-    .parameter "requestId"
+    .param p1, "objectKey"    # Ljava/lang/String;
+    .param p2, "key"    # Ljava/lang/String;
+    .param p3, "value"    # D
+    .param p5, "requestId"    # Ljava/lang/String;
 
     .prologue
     .line 109
@@ -551,10 +549,10 @@
 
 .method public setObjectKeyValue(Ljava/lang/String;Ljava/lang/String;FLjava/lang/String;)V
     .locals 1
-    .parameter "objectKey"
-    .parameter "key"
-    .parameter "value"
-    .parameter "requestId"
+    .param p1, "objectKey"    # Ljava/lang/String;
+    .param p2, "key"    # Ljava/lang/String;
+    .param p3, "value"    # F
+    .param p4, "requestId"    # Ljava/lang/String;
 
     .prologue
     .line 105
@@ -570,10 +568,10 @@
 
 .method public setObjectKeyValue(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;)V
     .locals 1
-    .parameter "objectKey"
-    .parameter "key"
-    .parameter "value"
-    .parameter "requestId"
+    .param p1, "objectKey"    # Ljava/lang/String;
+    .param p2, "key"    # Ljava/lang/String;
+    .param p3, "value"    # I
+    .param p4, "requestId"    # Ljava/lang/String;
 
     .prologue
     .line 101
@@ -589,10 +587,10 @@
 
 .method public setObjectKeyValue(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
-    .parameter "objectKey"
-    .parameter "key"
-    .parameter "value"
-    .parameter "requestId"
+    .param p1, "objectKey"    # Ljava/lang/String;
+    .param p2, "key"    # Ljava/lang/String;
+    .param p3, "value"    # Ljava/lang/String;
+    .param p4, "requestId"    # Ljava/lang/String;
 
     .prologue
     .line 91
@@ -601,17 +599,17 @@
     move-result-object v0
 
     .line 92
-    .local v0, mapForKey:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v0, "mapForKey":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     if-nez v0, :cond_0
 
     .line 93
     new-instance v0, Ljava/util/HashMap;
 
-    .end local v0           #mapForKey:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .end local v0    # "mapForKey":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     .line 95
-    .restart local v0       #mapForKey:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .restart local v0    # "mapForKey":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     :cond_0
     invoke-virtual {v0, p2, p3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -631,10 +629,10 @@
 
 .method public setObjectKeyValue(Ljava/lang/String;Ljava/lang/String;Ljava/util/Date;Ljava/lang/String;)V
     .locals 1
-    .parameter "objectKey"
-    .parameter "key"
-    .parameter "value"
-    .parameter "requestId"
+    .param p1, "objectKey"    # Ljava/lang/String;
+    .param p2, "key"    # Ljava/lang/String;
+    .param p3, "value"    # Ljava/util/Date;
+    .param p4, "requestId"    # Ljava/lang/String;
 
     .prologue
     .line 117
@@ -650,10 +648,10 @@
 
 .method public setObjectKeyValue(Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;)V
     .locals 1
-    .parameter "objectKey"
-    .parameter "key"
-    .parameter "value"
-    .parameter "requestId"
+    .param p1, "objectKey"    # Ljava/lang/String;
+    .param p2, "key"    # Ljava/lang/String;
+    .param p3, "value"    # Z
+    .param p4, "requestId"    # Ljava/lang/String;
 
     .prologue
     .line 113
@@ -669,7 +667,7 @@
 
 .method public setReqId(Ljava/lang/String;)V
     .locals 0
-    .parameter "reqId"
+    .param p1, "reqId"    # Ljava/lang/String;
 
     .prologue
     .line 145
@@ -681,7 +679,7 @@
 
 .method public setRowKey(Ljava/lang/String;)V
     .locals 0
-    .parameter "rowKey"
+    .param p1, "rowKey"    # Ljava/lang/String;
 
     .prologue
     .line 137
@@ -693,7 +691,7 @@
 
 .method public setUser(Ljava/lang/String;)V
     .locals 0
-    .parameter "user"
+    .param p1, "user"    # Ljava/lang/String;
 
     .prologue
     .line 129
@@ -769,7 +767,7 @@
     move-result-object v0
 
     .line 155
-    .local v0, buf:Ljava/lang/StringBuilder;
+    .local v0, "buf":Ljava/lang/StringBuilder;
     iget-object v11, p0, Lcom/fusepowered/util/GameKeyValuePairs;->map:Ljava/util/HashMap;
 
     invoke-virtual {v11}, Ljava/util/HashMap;->size()I
@@ -794,7 +792,7 @@
 
     move-result-object v4
 
-    .local v4, i$:Ljava/util/Iterator;
+    .local v4, "i$":Ljava/util/Iterator;
     :goto_0
     invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
 
@@ -809,7 +807,7 @@
     check-cast v1, Ljava/util/Map$Entry;
 
     .line 159
-    .local v1, entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Lcom/fusepowered/util/GameValue;>;"
+    .local v1, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Lcom/fusepowered/util/GameValue;>;"
     invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v6
@@ -817,7 +815,7 @@
     check-cast v6, Ljava/lang/String;
 
     .line 160
-    .local v6, key:Ljava/lang/String;
+    .local v6, "key":Ljava/lang/String;
     invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v9
@@ -825,7 +823,7 @@
     check-cast v9, Lcom/fusepowered/util/GameValue;
 
     .line 161
-    .local v9, value:Lcom/fusepowered/util/GameValue;
+    .local v9, "value":Lcom/fusepowered/util/GameValue;
     const/16 v11, 0x28
 
     invoke-virtual {v0, v11}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
@@ -853,16 +851,16 @@
     goto :goto_0
 
     .line 164
-    .end local v1           #entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Lcom/fusepowered/util/GameValue;>;"
-    .end local v6           #key:Ljava/lang/String;
-    .end local v9           #value:Lcom/fusepowered/util/GameValue;
+    .end local v1    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Lcom/fusepowered/util/GameValue;>;"
+    .end local v6    # "key":Ljava/lang/String;
+    .end local v9    # "value":Lcom/fusepowered/util/GameValue;
     :cond_0
     const/16 v11, 0x5d
 
     invoke-virtual {v0, v11}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     .line 167
-    .end local v4           #i$:Ljava/util/Iterator;
+    .end local v4    # "i$":Ljava/util/Iterator;
     :cond_1
     iget-object v11, p0, Lcom/fusepowered/util/GameKeyValuePairs;->requestIdToObjectMapKeyMap:Ljava/util/HashMap;
 
@@ -888,7 +886,7 @@
 
     move-result-object v4
 
-    .restart local v4       #i$:Ljava/util/Iterator;
+    .restart local v4    # "i$":Ljava/util/Iterator;
     :goto_1
     invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
 
@@ -903,7 +901,7 @@
     check-cast v2, Ljava/util/Map$Entry;
 
     .line 171
-    .local v2, entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v2, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-interface {v2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v6
@@ -911,7 +909,7 @@
     check-cast v6, Ljava/lang/String;
 
     .line 172
-    .restart local v6       #key:Ljava/lang/String;
+    .restart local v6    # "key":Ljava/lang/String;
     invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v9
@@ -919,7 +917,7 @@
     check-cast v9, Ljava/lang/String;
 
     .line 173
-    .local v9, value:Ljava/lang/String;
+    .local v9, "value":Ljava/lang/String;
     const/16 v11, 0x28
 
     invoke-virtual {v0, v11}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
@@ -947,16 +945,16 @@
     goto :goto_1
 
     .line 176
-    .end local v2           #entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
-    .end local v6           #key:Ljava/lang/String;
-    .end local v9           #value:Ljava/lang/String;
+    .end local v2    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
+    .end local v6    # "key":Ljava/lang/String;
+    .end local v9    # "value":Ljava/lang/String;
     :cond_2
     const/16 v11, 0x5d
 
     invoke-virtual {v0, v11}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     .line 179
-    .end local v4           #i$:Ljava/util/Iterator;
+    .end local v4    # "i$":Ljava/util/Iterator;
     :cond_3
     iget-object v11, p0, Lcom/fusepowered/util/GameKeyValuePairs;->objectMap:Ljava/util/HashMap;
 
@@ -996,7 +994,7 @@
     check-cast v3, Ljava/util/Map$Entry;
 
     .line 183
-    .local v3, entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;>;"
+    .local v3, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;>;"
     invoke-interface {v3}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v6
@@ -1004,7 +1002,7 @@
     check-cast v6, Ljava/lang/String;
 
     .line 184
-    .restart local v6       #key:Ljava/lang/String;
+    .restart local v6    # "key":Ljava/lang/String;
     const-string v11, "{Key:"
 
     invoke-virtual {v0, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -1021,7 +1019,7 @@
     check-cast v10, Ljava/util/HashMap;
 
     .line 186
-    .local v10, valueMap:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v10, "valueMap":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-virtual {v10}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
 
     move-result-object v11
@@ -1030,7 +1028,7 @@
 
     move-result-object v5
 
-    .local v5, i$:Ljava/util/Iterator;
+    .local v5, "i$":Ljava/util/Iterator;
     :goto_3
     invoke-interface {v5}, Ljava/util/Iterator;->hasNext()Z
 
@@ -1045,7 +1043,7 @@
     check-cast v7, Ljava/util/Map$Entry;
 
     .line 187
-    .local v7, mapEntry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v7, "mapEntry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-interface {v7}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v8
@@ -1053,7 +1051,7 @@
     check-cast v8, Ljava/lang/String;
 
     .line 188
-    .local v8, mapKey:Ljava/lang/String;
+    .local v8, "mapKey":Ljava/lang/String;
     invoke-interface {v7}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v9
@@ -1061,7 +1059,7 @@
     check-cast v9, Ljava/lang/String;
 
     .line 189
-    .restart local v9       #value:Ljava/lang/String;
+    .restart local v9    # "value":Ljava/lang/String;
     const/16 v11, 0x28
 
     invoke-virtual {v0, v11}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
@@ -1089,9 +1087,9 @@
     goto :goto_3
 
     .line 191
-    .end local v7           #mapEntry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
-    .end local v8           #mapKey:Ljava/lang/String;
-    .end local v9           #value:Ljava/lang/String;
+    .end local v7    # "mapEntry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
+    .end local v8    # "mapKey":Ljava/lang/String;
+    .end local v9    # "value":Ljava/lang/String;
     :cond_4
     const/16 v11, 0x7d
 
@@ -1100,10 +1098,10 @@
     goto :goto_2
 
     .line 194
-    .end local v3           #entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;>;"
-    .end local v5           #i$:Ljava/util/Iterator;
-    .end local v6           #key:Ljava/lang/String;
-    .end local v10           #valueMap:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .end local v3    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;>;"
+    .end local v5    # "i$":Ljava/util/Iterator;
+    .end local v6    # "key":Ljava/lang/String;
+    .end local v10    # "valueMap":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     :cond_5
     const/16 v11, 0x5d
 

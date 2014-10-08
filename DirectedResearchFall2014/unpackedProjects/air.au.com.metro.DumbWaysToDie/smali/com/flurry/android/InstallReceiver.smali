@@ -49,7 +49,6 @@
 
 .method static synthetic a(Lcom/flurry/android/InstallReceiver;)Ljava/io/File;
     .locals 1
-    .parameter
 
     .prologue
     .line 30
@@ -60,7 +59,6 @@
 
 .method private static a(Ljava/io/File;)Ljava/lang/String;
     .locals 8
-    .parameter
 
     .prologue
     const/4 v6, 0x0
@@ -72,8 +70,8 @@
 
     invoke-direct {v0, p0}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_1
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 103
     :try_start_1
@@ -81,8 +79,8 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_2
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     .line 104
     const/16 v2, 0x400
@@ -107,8 +105,8 @@
 
     invoke-virtual {v1, v4}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
     :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
     .catch Ljava/lang/Throwable; {:try_start_2 .. :try_end_2} :catch_0
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
     goto :goto_0
 
@@ -220,7 +218,6 @@
 
 .method static synthetic c(Ljava/io/File;)Ljava/lang/String;
     .locals 1
-    .parameter
 
     .prologue
     .line 30
@@ -233,7 +230,6 @@
 
 .method static e(Ljava/lang/String;)Ljava/util/Map;
     .locals 8
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -449,7 +445,6 @@
 
 .method private declared-synchronized x(Ljava/lang/String;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 189
@@ -484,8 +479,6 @@
 # virtual methods
 .method public final onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 4
-    .parameter
-    .parameter
 
     .prologue
     const-string v3, "InstallReceiver"

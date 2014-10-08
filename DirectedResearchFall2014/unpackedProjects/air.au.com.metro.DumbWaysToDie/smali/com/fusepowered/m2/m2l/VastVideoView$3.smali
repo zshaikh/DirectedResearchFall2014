@@ -26,8 +26,6 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m2/m2l/VastVideoView;Landroid/content/Context;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 1
@@ -45,8 +43,8 @@
 # virtual methods
 .method public onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
     .locals 4
-    .parameter "view"
-    .parameter "motionEvent"
+    .param p1, "view"    # Landroid/view/View;
+    .param p2, "motionEvent"    # Landroid/view/MotionEvent;
 
     .prologue
     const/4 v3, 0x1
@@ -63,18 +61,18 @@
 
     iget-object v2, p0, Lcom/fusepowered/m2/m2l/VastVideoView$3;->this$0:Lcom/fusepowered/m2/m2l/VastVideoView;
 
-    #getter for: Lcom/fusepowered/m2/m2l/VastVideoView;->mClickThroughTrackers:Ljava/util/ArrayList;
+    # getter for: Lcom/fusepowered/m2/m2l/VastVideoView;->mClickThroughTrackers:Ljava/util/ArrayList;
     invoke-static {v2}, Lcom/fusepowered/m2/m2l/VastVideoView;->access$5(Lcom/fusepowered/m2/m2l/VastVideoView;)Ljava/util/ArrayList;
 
     move-result-object v2
 
-    #calls: Lcom/fusepowered/m2/m2l/VastVideoView;->pingOnBackgroundThread(Ljava/util/List;)V
+    # invokes: Lcom/fusepowered/m2/m2l/VastVideoView;->pingOnBackgroundThread(Ljava/util/List;)V
     invoke-static {v1, v2}, Lcom/fusepowered/m2/m2l/VastVideoView;->access$3(Lcom/fusepowered/m2/m2l/VastVideoView;Ljava/util/List;)V
 
     .line 142
     iget-object v1, p0, Lcom/fusepowered/m2/m2l/VastVideoView$3;->this$0:Lcom/fusepowered/m2/m2l/VastVideoView;
 
-    #getter for: Lcom/fusepowered/m2/m2l/VastVideoView;->mBaseVideoViewListener:Lcom/fusepowered/m2/m2l/BaseVideoView$BaseVideoViewListener;
+    # getter for: Lcom/fusepowered/m2/m2l/VastVideoView;->mBaseVideoViewListener:Lcom/fusepowered/m2/m2l/BaseVideoView$BaseVideoViewListener;
     invoke-static {v1}, Lcom/fusepowered/m2/m2l/VastVideoView;->access$1(Lcom/fusepowered/m2/m2l/VastVideoView;)Lcom/fusepowered/m2/m2l/BaseVideoView$BaseVideoViewListener;
 
     move-result-object v1
@@ -84,7 +82,7 @@
     .line 143
     iget-object v1, p0, Lcom/fusepowered/m2/m2l/VastVideoView$3;->this$0:Lcom/fusepowered/m2/m2l/VastVideoView;
 
-    #getter for: Lcom/fusepowered/m2/m2l/VastVideoView;->mBaseVideoViewListener:Lcom/fusepowered/m2/m2l/BaseVideoView$BaseVideoViewListener;
+    # getter for: Lcom/fusepowered/m2/m2l/VastVideoView;->mBaseVideoViewListener:Lcom/fusepowered/m2/m2l/BaseVideoView$BaseVideoViewListener;
     invoke-static {v1}, Lcom/fusepowered/m2/m2l/VastVideoView;->access$1(Lcom/fusepowered/m2/m2l/VastVideoView;)Lcom/fusepowered/m2/m2l/BaseVideoView$BaseVideoViewListener;
 
     move-result-object v1
@@ -102,12 +100,12 @@
     invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
     .line 147
-    .local v0, mraidBrowserIntent:Landroid/content/Intent;
+    .local v0, "mraidBrowserIntent":Landroid/content/Intent;
     const-string v1, "extra_url"
 
     iget-object v2, p0, Lcom/fusepowered/m2/m2l/VastVideoView$3;->this$0:Lcom/fusepowered/m2/m2l/VastVideoView;
 
-    #getter for: Lcom/fusepowered/m2/m2l/VastVideoView;->mClickThroughUrl:Ljava/lang/String;
+    # getter for: Lcom/fusepowered/m2/m2l/VastVideoView;->mClickThroughUrl:Ljava/lang/String;
     invoke-static {v2}, Lcom/fusepowered/m2/m2l/VastVideoView;->access$6(Lcom/fusepowered/m2/m2l/VastVideoView;)Ljava/lang/String;
 
     move-result-object v2
@@ -120,7 +118,7 @@
     invoke-virtual {v1, v0}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
 
     .line 151
-    .end local v0           #mraidBrowserIntent:Landroid/content/Intent;
+    .end local v0    # "mraidBrowserIntent":Landroid/content/Intent;
     :cond_1
     return v3
 .end method

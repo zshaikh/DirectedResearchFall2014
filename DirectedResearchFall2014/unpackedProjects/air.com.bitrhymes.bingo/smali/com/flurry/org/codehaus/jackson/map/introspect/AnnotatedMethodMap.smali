@@ -47,7 +47,7 @@
 # virtual methods
 .method public add(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;)V
     .locals 3
-    .parameter "am"
+    .param p1, "am"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
 
     .prologue
     .line 23
@@ -82,8 +82,7 @@
 
 .method public find(Ljava/lang/String;[Ljava/lang/Class;)Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
     .locals 2
-    .parameter "name"
-    .parameter
+    .param p1, "name"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -97,7 +96,7 @@
 
     .prologue
     .line 56
-    .local p2, paramTypes:[Ljava/lang/Class;,"[Ljava/lang/Class<*>;"
+    .local p2, "paramTypes":[Ljava/lang/Class;, "[Ljava/lang/Class<*>;"
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethodMap;->_methods:Ljava/util/LinkedHashMap;
 
     if-nez v0, :cond_0
@@ -106,11 +105,11 @@
     const/4 v0, 0x0
 
     .line 59
-    .end local p0
+    .end local p0    # "this":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethodMap;
     :goto_0
     return-object v0
 
-    .restart local p0
+    .restart local p0    # "this":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethodMap;
     :cond_0
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethodMap;->_methods:Ljava/util/LinkedHashMap;
 
@@ -122,7 +121,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethodMap;
     check-cast p0, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
 
     move-object v0, p0
@@ -132,7 +131,7 @@
 
 .method public find(Ljava/lang/reflect/Method;)Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
     .locals 2
-    .parameter "m"
+    .param p1, "m"    # Ljava/lang/reflect/Method;
 
     .prologue
     .line 64
@@ -144,11 +143,11 @@
     const/4 v0, 0x0
 
     .line 67
-    .end local p0
+    .end local p0    # "this":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethodMap;
     :goto_0
     return-object v0
 
-    .restart local p0
+    .restart local p0    # "this":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethodMap;
     :cond_0
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethodMap;->_methods:Ljava/util/LinkedHashMap;
 
@@ -160,7 +159,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethodMap;
     check-cast p0, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
 
     move-object v0, p0
@@ -237,7 +236,7 @@
     move-result-object v0
 
     .line 83
-    .local v0, empty:Ljava/util/List;,"Ljava/util/List<Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;>;"
+    .local v0, "empty":Ljava/util/List;, "Ljava/util/List<Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;>;"
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -247,7 +246,7 @@
 
 .method public remove(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;)Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
     .locals 1
-    .parameter "am"
+    .param p1, "am"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
 
     .prologue
     .line 35
@@ -264,7 +263,7 @@
 
 .method public remove(Ljava/lang/reflect/Method;)Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
     .locals 2
-    .parameter "m"
+    .param p1, "m"    # Ljava/lang/reflect/Method;
 
     .prologue
     .line 40
@@ -283,7 +282,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethodMap;
     check-cast p0, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
 
     move-object v0, p0
@@ -292,7 +291,7 @@
     :goto_0
     return-object v0
 
-    .restart local p0
+    .restart local p0    # "this":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethodMap;
     :cond_0
     const/4 v0, 0x0
 

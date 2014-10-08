@@ -106,7 +106,7 @@
 
 .method public static capabilityToString(I)Ljava/lang/String;
     .locals 1
-    .parameter "capability"
+    .param p0, "capability"    # I
 
     .prologue
     .line 437
@@ -159,7 +159,7 @@
 
 .method public static feedbackTypeToString(I)Ljava/lang/String;
     .locals 4
-    .parameter "feedbackType"
+    .param p0, "feedbackType"    # I
 
     .prologue
     const/4 v3, 0x1
@@ -170,7 +170,7 @@
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     .line 356
-    .local v0, builder:Ljava/lang/StringBuilder;
+    .local v0, "builder":Ljava/lang/StringBuilder;
     const-string v2, "["
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -187,7 +187,7 @@
     shl-int v1, v3, v2
 
     .line 359
-    .local v1, feedbackTypeFlag:I
+    .local v1, "feedbackTypeFlag":I
     xor-int/lit8 v2, v1, -0x1
 
     and-int/2addr p0, v2
@@ -251,7 +251,7 @@
     goto :goto_0
 
     .line 381
-    .end local v1           #feedbackTypeFlag:I
+    .end local v1    # "feedbackTypeFlag":I
     :cond_1
     const-string v2, "]"
 
@@ -279,7 +279,7 @@
 
 .method public static flagToString(I)Ljava/lang/String;
     .locals 1
-    .parameter "flag"
+    .param p0, "flag"    # I
 
     .prologue
     .line 394
@@ -343,7 +343,7 @@
 
 .method public static getCanRetrieveWindowContent(Landroid/accessibilityservice/AccessibilityServiceInfo;)Z
     .locals 1
-    .parameter "info"
+    .param p0, "info"    # Landroid/accessibilityservice/AccessibilityServiceInfo;
 
     .prologue
     .line 330
@@ -358,7 +358,7 @@
 
 .method public static getCapabilities(Landroid/accessibilityservice/AccessibilityServiceInfo;)I
     .locals 1
-    .parameter "info"
+    .param p0, "info"    # Landroid/accessibilityservice/AccessibilityServiceInfo;
 
     .prologue
     .line 425
@@ -373,7 +373,7 @@
 
 .method public static getDescription(Landroid/accessibilityservice/AccessibilityServiceInfo;)Ljava/lang/String;
     .locals 1
-    .parameter "info"
+    .param p0, "info"    # Landroid/accessibilityservice/AccessibilityServiceInfo;
 
     .prologue
     .line 343
@@ -388,7 +388,7 @@
 
 .method public static getId(Landroid/accessibilityservice/AccessibilityServiceInfo;)Ljava/lang/String;
     .locals 1
-    .parameter "info"
+    .param p0, "info"    # Landroid/accessibilityservice/AccessibilityServiceInfo;
 
     .prologue
     .line 292
@@ -403,7 +403,7 @@
 
 .method public static getResolveInfo(Landroid/accessibilityservice/AccessibilityServiceInfo;)Landroid/content/pm/ResolveInfo;
     .locals 1
-    .parameter "info"
+    .param p0, "info"    # Landroid/accessibilityservice/AccessibilityServiceInfo;
 
     .prologue
     .line 304
@@ -418,7 +418,7 @@
 
 .method public static getSettingsActivityName(Landroid/accessibilityservice/AccessibilityServiceInfo;)Ljava/lang/String;
     .locals 1
-    .parameter "info"
+    .param p0, "info"    # Landroid/accessibilityservice/AccessibilityServiceInfo;
 
     .prologue
     .line 317

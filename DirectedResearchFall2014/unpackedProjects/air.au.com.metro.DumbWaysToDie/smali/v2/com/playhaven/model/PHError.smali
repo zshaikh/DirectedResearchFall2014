@@ -12,7 +12,7 @@
 # direct methods
 .method public constructor <init>(I)V
     .locals 1
-    .parameter "errorCode"
+    .param p1, "errorCode"    # I
 
     .prologue
     .line 26
@@ -26,7 +26,7 @@
 
 .method public constructor <init>(Ljava/lang/Exception;)V
     .locals 2
-    .parameter "e"
+    .param p1, "e"    # Ljava/lang/Exception;
 
     .prologue
     .line 23
@@ -44,7 +44,7 @@
 
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 1
-    .parameter "message"
+    .param p1, "message"    # Ljava/lang/String;
 
     .prologue
     .line 19
@@ -58,8 +58,8 @@
 
 .method public constructor <init>(Ljava/lang/String;I)V
     .locals 0
-    .parameter "message"
-    .parameter "errorCode"
+    .param p1, "message"    # Ljava/lang/String;
+    .param p2, "errorCode"    # I
 
     .prologue
     .line 13

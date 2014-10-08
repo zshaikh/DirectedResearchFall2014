@@ -24,10 +24,10 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m2/m2l/HtmlWebViewListener;Lcom/fusepowered/m2/m2l/BaseHtmlWebView;Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
-    .parameter "htmlWebViewListener"
-    .parameter "htmlWebView"
-    .parameter "clickthrough"
-    .parameter "redirect"
+    .param p1, "htmlWebViewListener"    # Lcom/fusepowered/m2/m2l/HtmlWebViewListener;
+    .param p2, "htmlWebView"    # Lcom/fusepowered/m2/m2l/BaseHtmlWebView;
+    .param p3, "clickthrough"    # Ljava/lang/String;
+    .param p4, "redirect"    # Ljava/lang/String;
 
     .prologue
     .line 55
@@ -58,7 +58,7 @@
 
 .method private canHandleApplicationUrl(Ljava/lang/String;)Z
     .locals 4
-    .parameter "url"
+    .param p1, "url"    # Ljava/lang/String;
 
     .prologue
     .line 180
@@ -73,7 +73,7 @@
     invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
     .line 183
-    .local v0, intent:Landroid/content/Intent;
+    .local v0, "intent":Landroid/content/Intent;
     iget-object v1, p0, Lcom/fusepowered/m2/m2l/HtmlWebViewClient;->mContext:Landroid/content/Context;
 
     invoke-static {v1, v0}, Lcom/fusepowered/m2/m2l/Utils;->deviceCanHandleIntent(Landroid/content/Context;Landroid/content/Intent;)Z
@@ -137,9 +137,9 @@
 
 .method private executeIntent(Landroid/content/Context;Landroid/content/Intent;Ljava/lang/String;)Z
     .locals 3
-    .parameter "context"
-    .parameter "intent"
-    .parameter "errorMessage"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "intent"    # Landroid/content/Intent;
+    .param p3, "errorMessage"    # Ljava/lang/String;
 
     .prologue
     .line 268
@@ -159,7 +159,7 @@
     move-exception v0
 
     .line 270
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v1, "MoPub"
 
     if-eqz p3, :cond_0
@@ -183,7 +183,7 @@
 
 .method private handleCustomIntentFromUri(Landroid/net/Uri;)V
     .locals 8
-    .parameter "uri"
+    .param p1, "uri"    # Landroid/net/Uri;
 
     .prologue
     .line 235
@@ -195,7 +195,7 @@
     move-result-object v0
 
     .line 236
-    .local v0, action:Ljava/lang/String;
+    .local v0, "action":Ljava/lang/String;
     const-string v5, "data"
 
     invoke-virtual {p1, v5}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
@@ -205,14 +205,14 @@
     move-result-object v1
 
     .line 242
-    .local v1, adData:Ljava/lang/String;
+    .local v1, "adData":Ljava/lang/String;
     new-instance v2, Landroid/content/Intent;
 
     invoke-direct {v2, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
     .line 243
-    .local v2, customIntent:Landroid/content/Intent;
-    const/high16 v5, 0x1000
+    .local v2, "customIntent":Landroid/content/Intent;
+    const/high16 v5, 0x10000000
 
     invoke-virtual {v2, v5}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
@@ -245,16 +245,16 @@
     move-result-object v4
 
     .line 249
-    .local v4, errorMessage:Ljava/lang/String;
+    .local v4, "errorMessage":Ljava/lang/String;
     iget-object v5, p0, Lcom/fusepowered/m2/m2l/HtmlWebViewClient;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0, v5, v2, v4}, Lcom/fusepowered/m2/m2l/HtmlWebViewClient;->launchIntentForUserClick(Landroid/content/Context;Landroid/content/Intent;Ljava/lang/String;)Z
 
     .line 250
-    .end local v0           #action:Ljava/lang/String;
-    .end local v1           #adData:Ljava/lang/String;
-    .end local v2           #customIntent:Landroid/content/Intent;
-    .end local v4           #errorMessage:Ljava/lang/String;
+    .end local v0    # "action":Ljava/lang/String;
+    .end local v1    # "adData":Ljava/lang/String;
+    .end local v2    # "customIntent":Landroid/content/Intent;
+    .end local v4    # "errorMessage":Ljava/lang/String;
     :goto_0
     return-void
 
@@ -265,7 +265,7 @@
     move-object v3, v5
 
     .line 238
-    .local v3, e:Ljava/lang/UnsupportedOperationException;
+    .local v3, "e":Ljava/lang/UnsupportedOperationException;
     const-string v5, "MoPub"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -289,7 +289,7 @@
 
 .method private handleNativeBrowserScheme(Ljava/lang/String;)Z
     .locals 10
-    .parameter "url"
+    .param p1, "url"    # Ljava/lang/String;
 
     .prologue
     const/4 v9, 0x0
@@ -314,7 +314,7 @@
     move-result-object v4
 
     .line 151
-    .local v4, uri:Landroid/net/Uri;
+    .local v4, "uri":Landroid/net/Uri;
     :try_start_0
     const-string v6, "url"
 
@@ -325,7 +325,7 @@
     move-result-object v5
 
     .line 157
-    .local v5, urlToOpenInNativeBrowser:Ljava/lang/String;
+    .local v5, "urlToOpenInNativeBrowser":Ljava/lang/String;
     const-string v6, "navigate"
 
     invoke-virtual {v4}, Landroid/net/Uri;->getHost()Ljava/lang/String;
@@ -347,14 +347,14 @@
     goto :goto_0
 
     .line 152
-    .end local v5           #urlToOpenInNativeBrowser:Ljava/lang/String;
+    .end local v5    # "urlToOpenInNativeBrowser":Ljava/lang/String;
     :catch_0
     move-exception v6
 
     move-object v0, v6
 
     .line 153
-    .local v0, e:Ljava/lang/UnsupportedOperationException;
+    .local v0, "e":Ljava/lang/UnsupportedOperationException;
     const-string v6, "MoPub"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -379,15 +379,15 @@
     goto :goto_0
 
     .line 161
-    .end local v0           #e:Ljava/lang/UnsupportedOperationException;
-    .restart local v5       #urlToOpenInNativeBrowser:Ljava/lang/String;
+    .end local v0    # "e":Ljava/lang/UnsupportedOperationException;
+    .restart local v5    # "urlToOpenInNativeBrowser":Ljava/lang/String;
     :cond_2
     invoke-static {v5}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v3
 
     .line 163
-    .local v3, intentUri:Landroid/net/Uri;
+    .local v3, "intentUri":Landroid/net/Uri;
     new-instance v2, Landroid/content/Intent;
 
     const-string v6, "android.intent.action.VIEW"
@@ -395,8 +395,8 @@
     invoke-direct {v2, v6, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
     .line 164
-    .local v2, intent:Landroid/content/Intent;
-    const/high16 v6, 0x1000
+    .local v2, "intent":Landroid/content/Intent;
+    const/high16 v6, 0x10000000
 
     invoke-virtual {v2, v6}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
@@ -424,7 +424,7 @@
     move-result-object v1
 
     .line 169
-    .local v1, errorMessage:Ljava/lang/String;
+    .local v1, "errorMessage":Ljava/lang/String;
     iget-object v6, p0, Lcom/fusepowered/m2/m2l/HtmlWebViewClient;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0, v6, v2, v1}, Lcom/fusepowered/m2/m2l/HtmlWebViewClient;->launchIntentForUserClick(Landroid/content/Context;Landroid/content/Intent;Ljava/lang/String;)Z
@@ -437,7 +437,7 @@
 
 .method private handlePhoneScheme(Ljava/lang/String;)Z
     .locals 4
-    .parameter "url"
+    .param p1, "url"    # Ljava/lang/String;
 
     .prologue
     .line 124
@@ -467,8 +467,8 @@
     invoke-direct {v1, v2, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
     .line 128
-    .local v1, intent:Landroid/content/Intent;
-    const/high16 v2, 0x1000
+    .local v1, "intent":Landroid/content/Intent;
+    const/high16 v2, 0x10000000
 
     invoke-virtual {v1, v2}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
@@ -496,7 +496,7 @@
     move-result-object v0
 
     .line 133
-    .local v0, errorMessage:Ljava/lang/String;
+    .local v0, "errorMessage":Ljava/lang/String;
     iget-object v2, p0, Lcom/fusepowered/m2/m2l/HtmlWebViewClient;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0, v2, v1, v0}, Lcom/fusepowered/m2/m2l/HtmlWebViewClient;->launchIntentForUserClick(Landroid/content/Context;Landroid/content/Intent;Ljava/lang/String;)Z
@@ -509,7 +509,7 @@
 
 .method private handleSpecialMoPubScheme(Ljava/lang/String;)Z
     .locals 4
-    .parameter "url"
+    .param p1, "url"    # Ljava/lang/String;
 
     .prologue
     .line 98
@@ -533,13 +533,13 @@
     move-result-object v1
 
     .line 102
-    .local v1, uri:Landroid/net/Uri;
+    .local v1, "uri":Landroid/net/Uri;
     invoke-virtual {v1}, Landroid/net/Uri;->getHost()Ljava/lang/String;
 
     move-result-object v0
 
     .line 104
-    .local v0, host:Ljava/lang/String;
+    .local v0, "host":Ljava/lang/String;
     const-string v2, "finishLoad"
 
     invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -616,7 +616,7 @@
 
 .method private isNativeBrowserScheme(Ljava/lang/String;)Z
     .locals 1
-    .parameter "url"
+    .param p1, "url"    # Ljava/lang/String;
 
     .prologue
     .line 139
@@ -631,7 +631,7 @@
 
 .method private isPhoneScheme(Ljava/lang/String;)Z
     .locals 1
-    .parameter "url"
+    .param p1, "url"    # Ljava/lang/String;
 
     .prologue
     .line 118
@@ -699,7 +699,7 @@
 
 .method private isSpecialMoPubScheme(Ljava/lang/String;)Z
     .locals 1
-    .parameter "url"
+    .param p1, "url"    # Ljava/lang/String;
 
     .prologue
     .line 94
@@ -714,7 +714,7 @@
 
 .method private isWebSiteUrl(Ljava/lang/String;)Z
     .locals 1
-    .parameter "url"
+    .param p1, "url"    # Ljava/lang/String;
 
     .prologue
     .line 175
@@ -747,7 +747,7 @@
 
 .method private launchApplicationUrl(Ljava/lang/String;)Z
     .locals 4
-    .parameter "url"
+    .param p1, "url"    # Ljava/lang/String;
 
     .prologue
     .line 203
@@ -762,8 +762,8 @@
     invoke-direct {v1, v2, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
     .line 204
-    .local v1, intent:Landroid/content/Intent;
-    const/high16 v2, 0x1000
+    .local v1, "intent":Landroid/content/Intent;
+    const/high16 v2, 0x10000000
 
     invoke-virtual {v1, v2}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
@@ -771,7 +771,7 @@
     const-string v0, "Unable to open intent."
 
     .line 208
-    .local v0, errorMessage:Ljava/lang/String;
+    .local v0, "errorMessage":Ljava/lang/String;
     iget-object v2, p0, Lcom/fusepowered/m2/m2l/HtmlWebViewClient;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0, v2, v1, v0}, Lcom/fusepowered/m2/m2l/HtmlWebViewClient;->launchIntentForUserClick(Landroid/content/Context;Landroid/content/Intent;Ljava/lang/String;)Z
@@ -783,10 +783,10 @@
 
 .method private showMraidBrowserForUrl(Ljava/lang/String;)V
     .locals 7
-    .parameter "url"
+    .param p1, "url"    # Ljava/lang/String;
 
     .prologue
-    const/high16 v6, 0x1000
+    const/high16 v6, 0x10000000
 
     .line 212
     if-eqz p1, :cond_0
@@ -832,7 +832,7 @@
     invoke-direct {v2, v3, v4}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
     .line 215
-    .local v2, intent:Landroid/content/Intent;
+    .local v2, "intent":Landroid/content/Intent;
     const-string v3, "extra_url"
 
     invoke-virtual {v2, v3, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
@@ -844,7 +844,7 @@
     const-string v0, "Could not handle intent action. . Perhaps you forgot to declare com.mopub.mobileads.MraidBrowser in your Android manifest file."
 
     .line 222
-    .local v0, errorMessage:Ljava/lang/String;
+    .local v0, "errorMessage":Ljava/lang/String;
     iget-object v3, p0, Lcom/fusepowered/m2/m2l/HtmlWebViewClient;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0, v3, v2, v0}, Lcom/fusepowered/m2/m2l/HtmlWebViewClient;->launchIntentForUserClick(Landroid/content/Context;Landroid/content/Intent;Ljava/lang/String;)Z
@@ -852,13 +852,13 @@
     move-result v1
 
     .line 224
-    .local v1, handledByMraidBrowser:Z
+    .local v1, "handledByMraidBrowser":Z
     if-nez v1, :cond_2
 
     .line 225
     new-instance v2, Landroid/content/Intent;
 
-    .end local v2           #intent:Landroid/content/Intent;
+    .end local v2    # "intent":Landroid/content/Intent;
     const-string v3, "android.intent.action.VIEW"
 
     const-string v4, "about:blank"
@@ -870,7 +870,7 @@
     invoke-direct {v2, v3, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
     .line 226
-    .restart local v2       #intent:Landroid/content/Intent;
+    .restart local v2    # "intent":Landroid/content/Intent;
     invoke-virtual {v2, v6}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
     .line 227
@@ -887,7 +887,7 @@
 
 .method private urlWithClickTrackingRedirect(Ljava/lang/String;)Ljava/lang/String;
     .locals 3
-    .parameter "url"
+    .param p1, "url"    # Ljava/lang/String;
 
     .prologue
     .line 194
@@ -908,7 +908,7 @@
     move-result-object v0
 
     .line 198
-    .local v0, encodedUrl:Ljava/lang/String;
+    .local v0, "encodedUrl":Ljava/lang/String;
     new-instance v1, Ljava/lang/StringBuilder;
 
     iget-object v2, p0, Lcom/fusepowered/m2/m2l/HtmlWebViewClient;->mClickthroughUrl:Ljava/lang/String;
@@ -940,9 +940,9 @@
 # virtual methods
 .method launchIntentForUserClick(Landroid/content/Context;Landroid/content/Intent;Ljava/lang/String;)Z
     .locals 2
-    .parameter "context"
-    .parameter "intent"
-    .parameter "errorMessage"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "intent"    # Landroid/content/Intent;
+    .param p3, "errorMessage"    # Ljava/lang/String;
 
     .prologue
     .line 253
@@ -968,7 +968,7 @@
     move-result v0
 
     .line 258
-    .local v0, wasIntentStarted:Z
+    .local v0, "wasIntentStarted":Z
     if-eqz v0, :cond_1
 
     .line 259
@@ -990,9 +990,9 @@
 
 .method public onPageStarted(Landroid/webkit/WebView;Ljava/lang/String;Landroid/graphics/Bitmap;)V
     .locals 1
-    .parameter "view"
-    .parameter "url"
-    .parameter "favicon"
+    .param p1, "view"    # Landroid/webkit/WebView;
+    .param p2, "url"    # Ljava/lang/String;
+    .param p3, "favicon"    # Landroid/graphics/Bitmap;
 
     .prologue
     .line 86
@@ -1026,8 +1026,8 @@
 
 .method public shouldOverrideUrlLoading(Landroid/webkit/WebView;Ljava/lang/String;)Z
     .locals 4
-    .parameter "view"
-    .parameter "url"
+    .param p1, "view"    # Landroid/webkit/WebView;
+    .param p2, "url"    # Ljava/lang/String;
 
     .prologue
     const/4 v3, 0x1

@@ -33,21 +33,21 @@
 
     iget-object v1, p0, Lcom/facebook/ProgressOutputStream$1;->this$0:Lcom/facebook/ProgressOutputStream;
 
-    #getter for: Lcom/facebook/ProgressOutputStream;->requests:Lcom/facebook/RequestBatch;
+    # getter for: Lcom/facebook/ProgressOutputStream;->requests:Lcom/facebook/RequestBatch;
     invoke-static {v1}, Lcom/facebook/ProgressOutputStream;->access$000(Lcom/facebook/ProgressOutputStream;)Lcom/facebook/RequestBatch;
 
     move-result-object v1
 
     iget-object v2, p0, Lcom/facebook/ProgressOutputStream$1;->this$0:Lcom/facebook/ProgressOutputStream;
 
-    #getter for: Lcom/facebook/ProgressOutputStream;->batchProgress:J
+    # getter for: Lcom/facebook/ProgressOutputStream;->batchProgress:J
     invoke-static {v2}, Lcom/facebook/ProgressOutputStream;->access$100(Lcom/facebook/ProgressOutputStream;)J
 
     move-result-wide v2
 
     iget-object v4, p0, Lcom/facebook/ProgressOutputStream$1;->this$0:Lcom/facebook/ProgressOutputStream;
 
-    #getter for: Lcom/facebook/ProgressOutputStream;->maxProgress:J
+    # getter for: Lcom/facebook/ProgressOutputStream;->maxProgress:J
     invoke-static {v4}, Lcom/facebook/ProgressOutputStream;->access$200(Lcom/facebook/ProgressOutputStream;)J
 
     move-result-wide v4

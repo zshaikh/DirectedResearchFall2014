@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/inmobi/androidsdk/ai/container/IMWebView;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1
@@ -40,7 +39,6 @@
 # virtual methods
 .method public onComplete(Lcom/inmobi/androidsdk/ai/controller/util/IMAVPlayer;)V
     .locals 3
-    .parameter
 
     .prologue
     .line 3086
@@ -161,7 +159,6 @@
 
 .method public onError(Lcom/inmobi/androidsdk/ai/controller/util/IMAVPlayer;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 3080
@@ -173,7 +170,6 @@
 
 .method public onPrepared(Lcom/inmobi/androidsdk/ai/controller/util/IMAVPlayer;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 3076

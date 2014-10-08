@@ -26,8 +26,6 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m1/android/MMLayout;Ljava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 314
@@ -51,7 +49,7 @@
 
     iget-object v1, p0, Lcom/fusepowered/m1/android/MMLayout$1;->val$position:Ljava/lang/String;
 
-    #calls: Lcom/fusepowered/m1/android/MMLayout;->internalSetCloseArea(Ljava/lang/String;)V
+    # invokes: Lcom/fusepowered/m1/android/MMLayout;->internalSetCloseArea(Ljava/lang/String;)V
     invoke-static {v0, v1}, Lcom/fusepowered/m1/android/MMLayout;->access$000(Lcom/fusepowered/m1/android/MMLayout;Ljava/lang/String;)V
 
     .line 319

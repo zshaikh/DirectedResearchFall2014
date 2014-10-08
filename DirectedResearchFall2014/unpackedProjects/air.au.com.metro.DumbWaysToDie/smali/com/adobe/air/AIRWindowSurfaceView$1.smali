@@ -28,9 +28,6 @@
 # direct methods
 .method constructor <init>(Lcom/adobe/air/AIRWindowSurfaceView;ILandroid/widget/RelativeLayout;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 1000
@@ -62,7 +59,7 @@
 
     iget-object v0, p0, Lcom/adobe/air/AIRWindowSurfaceView$1;->this$0:Lcom/adobe/air/AIRWindowSurfaceView;
 
-    #getter for: Lcom/adobe/air/AIRWindowSurfaceView;->mResizedWebView:Lcom/adobe/air/AndroidWebView;
+    # getter for: Lcom/adobe/air/AIRWindowSurfaceView;->mResizedWebView:Lcom/adobe/air/AndroidWebView;
     invoke-static {v0}, Lcom/adobe/air/AIRWindowSurfaceView;->access$600(Lcom/adobe/air/AIRWindowSurfaceView;)Lcom/adobe/air/AndroidWebView;
 
     move-result-object v0
@@ -72,7 +69,7 @@
     .line 1004
     iget-object v0, p0, Lcom/adobe/air/AIRWindowSurfaceView$1;->this$0:Lcom/adobe/air/AIRWindowSurfaceView;
 
-    #getter for: Lcom/adobe/air/AIRWindowSurfaceView;->mResizedWebView:Lcom/adobe/air/AndroidWebView;
+    # getter for: Lcom/adobe/air/AIRWindowSurfaceView;->mResizedWebView:Lcom/adobe/air/AndroidWebView;
     invoke-static {v0}, Lcom/adobe/air/AIRWindowSurfaceView;->access$600(Lcom/adobe/air/AIRWindowSurfaceView;)Lcom/adobe/air/AndroidWebView;
 
     move-result-object v0
@@ -82,7 +79,7 @@
     .line 1005
     iget-object v0, p0, Lcom/adobe/air/AIRWindowSurfaceView$1;->this$0:Lcom/adobe/air/AIRWindowSurfaceView;
 
-    #setter for: Lcom/adobe/air/AIRWindowSurfaceView;->mResizedWebView:Lcom/adobe/air/AndroidWebView;
+    # setter for: Lcom/adobe/air/AIRWindowSurfaceView;->mResizedWebView:Lcom/adobe/air/AndroidWebView;
     invoke-static {v0, v1}, Lcom/adobe/air/AIRWindowSurfaceView;->access$602(Lcom/adobe/air/AIRWindowSurfaceView;Lcom/adobe/air/AndroidWebView;)Lcom/adobe/air/AndroidWebView;
 
     .line 1007
@@ -93,7 +90,7 @@
 
     iget-object v0, p0, Lcom/adobe/air/AIRWindowSurfaceView$1;->this$0:Lcom/adobe/air/AIRWindowSurfaceView;
 
-    #getter for: Lcom/adobe/air/AIRWindowSurfaceView;->mResizedStageText:Lcom/adobe/air/AndroidStageText;
+    # getter for: Lcom/adobe/air/AIRWindowSurfaceView;->mResizedStageText:Lcom/adobe/air/AndroidStageText;
     invoke-static {v0}, Lcom/adobe/air/AIRWindowSurfaceView;->access$700(Lcom/adobe/air/AIRWindowSurfaceView;)Lcom/adobe/air/AndroidStageText;
 
     move-result-object v0
@@ -103,7 +100,7 @@
     .line 1009
     iget-object v0, p0, Lcom/adobe/air/AIRWindowSurfaceView$1;->this$0:Lcom/adobe/air/AIRWindowSurfaceView;
 
-    #getter for: Lcom/adobe/air/AIRWindowSurfaceView;->mResizedStageText:Lcom/adobe/air/AndroidStageText;
+    # getter for: Lcom/adobe/air/AIRWindowSurfaceView;->mResizedStageText:Lcom/adobe/air/AndroidStageText;
     invoke-static {v0}, Lcom/adobe/air/AIRWindowSurfaceView;->access$700(Lcom/adobe/air/AIRWindowSurfaceView;)Lcom/adobe/air/AndroidStageText;
 
     move-result-object v0
@@ -113,7 +110,7 @@
     .line 1010
     iget-object v0, p0, Lcom/adobe/air/AIRWindowSurfaceView$1;->this$0:Lcom/adobe/air/AIRWindowSurfaceView;
 
-    #setter for: Lcom/adobe/air/AIRWindowSurfaceView;->mResizedStageText:Lcom/adobe/air/AndroidStageText;
+    # setter for: Lcom/adobe/air/AIRWindowSurfaceView;->mResizedStageText:Lcom/adobe/air/AndroidStageText;
     invoke-static {v0, v1}, Lcom/adobe/air/AIRWindowSurfaceView;->access$702(Lcom/adobe/air/AIRWindowSurfaceView;Lcom/adobe/air/AndroidStageText;)Lcom/adobe/air/AndroidStageText;
 
     .line 1012

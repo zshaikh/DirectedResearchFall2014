@@ -486,8 +486,6 @@
 
 .method public static a(DD)V
     .locals 4
-    .parameter
-    .parameter
 
     .prologue
     .line 292
@@ -581,7 +579,6 @@
 
 .method public static a(I)V
     .locals 3
-    .parameter
 
     .prologue
     .line 223
@@ -634,7 +631,6 @@
 
 .method public static a(J)V
     .locals 3
-    .parameter
 
     .prologue
     .line 238
@@ -672,7 +668,6 @@
 
 .method public static a(Lcom/vungle/sdk/VunglePub$EventListener;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 164

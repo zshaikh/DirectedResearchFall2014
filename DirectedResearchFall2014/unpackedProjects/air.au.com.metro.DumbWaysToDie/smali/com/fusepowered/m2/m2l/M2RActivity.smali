@@ -20,7 +20,6 @@
 
 .method static synthetic access$0(Lcom/fusepowered/m2/m2l/M2RActivity;)Lcom/fusepowered/m2/m2l/MraidView;
     .locals 1
-    .parameter
 
     .prologue
     .line 59
@@ -31,9 +30,9 @@
 
 .method private static createIntent(Landroid/content/Context;Ljava/lang/String;Lcom/fusepowered/m2/m2l/AdConfiguration;)Landroid/content/Intent;
     .locals 2
-    .parameter "context"
-    .parameter "htmlData"
-    .parameter "adConfiguration"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "htmlData"    # Ljava/lang/String;
+    .param p2, "adConfiguration"    # Lcom/fusepowered/m2/m2l/AdConfiguration;
 
     .prologue
     .line 108
@@ -44,7 +43,7 @@
     invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
     .line 109
-    .local v0, intent:Landroid/content/Intent;
+    .local v0, "intent":Landroid/content/Intent;
     const-string v1, "Html-Response-Body"
 
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
@@ -55,7 +54,7 @@
     invoke-virtual {v0, v1, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/io/Serializable;)Landroid/content/Intent;
 
     .line 111
-    const/high16 v1, 0x1000
+    const/high16 v1, 0x10000000
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
@@ -65,9 +64,9 @@
 
 .method static preRenderHtml(Landroid/content/Context;Lcom/fusepowered/m2/m2l/CustomEventInterstitial$CustomEventInterstitialListener;Ljava/lang/String;)V
     .locals 5
-    .parameter "context"
-    .parameter "customEventInterstitialListener"
-    .parameter "htmlData"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "customEventInterstitialListener"    # Lcom/fusepowered/m2/m2l/CustomEventInterstitial$CustomEventInterstitialListener;
+    .param p2, "htmlData"    # Ljava/lang/String;
 
     .prologue
     .line 62
@@ -84,7 +83,7 @@
     move-result-object v0
 
     .line 64
-    .local v0, dummyMraidView:Lcom/fusepowered/m2/m2l/MraidView;
+    .local v0, "dummyMraidView":Lcom/fusepowered/m2/m2l/MraidView;
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/fusepowered/m2/m2l/MraidView;->enablePlugins(Z)V
@@ -112,9 +111,9 @@
 
 .method public static start(Landroid/content/Context;Ljava/lang/String;Lcom/fusepowered/m2/m2l/AdConfiguration;)V
     .locals 4
-    .parameter "context"
-    .parameter "htmlData"
-    .parameter "adConfiguration"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "htmlData"    # Ljava/lang/String;
+    .param p2, "adConfiguration"    # Lcom/fusepowered/m2/m2l/AdConfiguration;
 
     .prologue
     .line 99
@@ -123,7 +122,7 @@
     move-result-object v1
 
     .line 101
-    .local v1, intent:Landroid/content/Intent;
+    .local v1, "intent":Landroid/content/Intent;
     :try_start_0
     invoke-virtual {p0, v1}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
     :try_end_0
@@ -138,7 +137,7 @@
     move-exception v0
 
     .line 103
-    .local v0, anfe:Landroid/content/ActivityNotFoundException;
+    .local v0, "anfe":Landroid/content/ActivityNotFoundException;
     const-string v2, "MraidInterstitial"
 
     const-string v3, "MraidActivity.class not found. Did you declare MraidActivity in your manifest?"
@@ -201,7 +200,7 @@
     move-result-object v0
 
     .line 141
-    .local v0, source:Ljava/lang/String;
+    .local v0, "source":Ljava/lang/String;
     iget-object v1, p0, Lcom/fusepowered/m2/m2l/M2RActivity;->mMraidView:Lcom/fusepowered/m2/m2l/MraidView;
 
     invoke-virtual {v1, v0}, Lcom/fusepowered/m2/m2l/MraidView;->loadHtmlData(Ljava/lang/String;)V
@@ -214,10 +213,10 @@
 
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 3
-    .parameter "savedInstanceState"
+    .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
-    const/high16 v2, 0x100
+    const/high16 v2, 0x1000000
 
     .line 148
     invoke-super {p0, p1}, Lcom/fusepowered/m2/m2l/BaseInterstitialActivity;->onCreate(Landroid/os/Bundle;)V

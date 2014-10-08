@@ -92,8 +92,6 @@
 
 .method static synthetic access$3(Lcom/facebook/widget/UserSettingsFragment;Lcom/facebook/model/GraphUser;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 66
@@ -104,7 +102,6 @@
 
 .method static synthetic access$4(Lcom/facebook/widget/UserSettingsFragment;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 371
@@ -115,7 +112,6 @@
 
 .method static synthetic access$5(Lcom/facebook/widget/UserSettingsFragment;)Lcom/facebook/widget/LoginButton;
     .locals 1
-    .parameter
 
     .prologue
     .line 63
@@ -126,7 +122,6 @@
 
 .method static synthetic access$6(Lcom/facebook/widget/UserSettingsFragment;)Lcom/facebook/model/GraphUser;
     .locals 1
-    .parameter
 
     .prologue
     .line 66
@@ -137,9 +132,6 @@
 
 .method static synthetic access$7(Lcom/facebook/widget/UserSettingsFragment;Ljava/lang/String;Lcom/facebook/internal/ImageResponse;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 439
@@ -158,7 +150,7 @@
     move-result-object v0
 
     .line 346
-    .local v0, currentSession:Lcom/facebook/Session;
+    .local v0, "currentSession":Lcom/facebook/Session;
     if-eqz v0, :cond_1
 
     invoke-virtual {v0}, Lcom/facebook/Session;->isOpened()Z
@@ -182,13 +174,13 @@
     move-result-object v2
 
     .line 360
-    .local v2, request:Lcom/facebook/Request;
+    .local v2, "request":Lcom/facebook/Request;
     new-instance v1, Landroid/os/Bundle;
 
     invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
 
     .line 361
-    .local v1, parameters:Landroid/os/Bundle;
+    .local v1, "parameters":Landroid/os/Bundle;
     const-string v3, "fields"
 
     sget-object v4, Lcom/facebook/widget/UserSettingsFragment;->REQUEST_FIELDS:Ljava/lang/String;
@@ -213,8 +205,8 @@
     iput-object v0, p0, Lcom/facebook/widget/UserSettingsFragment;->userInfoSession:Lcom/facebook/Session;
 
     .line 369
-    .end local v1           #parameters:Landroid/os/Bundle;
-    .end local v2           #request:Lcom/facebook/Request;
+    .end local v1    # "parameters":Landroid/os/Bundle;
+    .end local v2    # "request":Lcom/facebook/Request;
     :cond_0
     :goto_0
     return-void
@@ -236,7 +228,7 @@
     const/4 v0, 0x0
 
     .line 418
-    .local v0, request:Lcom/facebook/internal/ImageRequest;
+    .local v0, "request":Lcom/facebook/internal/ImageRequest;
     :try_start_0
     new-instance v1, Lcom/facebook/internal/ImageRequest$Builder;
 
@@ -295,7 +287,7 @@
     invoke-direct {v1, v2, v3}, Lcom/facebook/internal/ImageRequest$Builder;-><init>(Landroid/content/Context;Ljava/net/URI;)V
 
     .line 425
-    .local v1, requestBuilder:Lcom/facebook/internal/ImageRequest$Builder;
+    .local v1, "requestBuilder":Lcom/facebook/internal/ImageRequest$Builder;
     invoke-virtual {v1, p0}, Lcom/facebook/internal/ImageRequest$Builder;->setCallerTag(Ljava/lang/Object;)Lcom/facebook/internal/ImageRequest$Builder;
 
     move-result-object v2
@@ -318,7 +310,7 @@
     move-result-object v0
 
     .line 436
-    .end local v1           #requestBuilder:Lcom/facebook/internal/ImageRequest$Builder;
+    .end local v1    # "requestBuilder":Lcom/facebook/internal/ImageRequest$Builder;
     :goto_0
     return-object v0
 
@@ -331,8 +323,8 @@
 
 .method private processImageResponse(Ljava/lang/String;Lcom/facebook/internal/ImageResponse;)V
     .locals 8
-    .parameter "id"
-    .parameter "response"
+    .param p1, "id"    # Ljava/lang/String;
+    .param p2, "response"    # Lcom/facebook/internal/ImageResponse;
 
     .prologue
     const/4 v7, 0x0
@@ -348,7 +340,7 @@
     move-result-object v0
 
     .line 442
-    .local v0, bitmap:Landroid/graphics/Bitmap;
+    .local v0, "bitmap":Landroid/graphics/Bitmap;
     if-eqz v0, :cond_0
 
     .line 443
@@ -361,7 +353,7 @@
     invoke-direct {v1, v2, v0}, Landroid/graphics/drawable/BitmapDrawable;-><init>(Landroid/content/res/Resources;Landroid/graphics/Bitmap;)V
 
     .line 445
-    .local v1, drawable:Landroid/graphics/drawable/BitmapDrawable;
+    .local v1, "drawable":Landroid/graphics/drawable/BitmapDrawable;
     invoke-virtual {p0}, Lcom/facebook/widget/UserSettingsFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
@@ -423,8 +415,8 @@
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setTag(Ljava/lang/Object;)V
 
     .line 453
-    .end local v0           #bitmap:Landroid/graphics/Bitmap;
-    .end local v1           #drawable:Landroid/graphics/drawable/BitmapDrawable;
+    .end local v0    # "bitmap":Landroid/graphics/Bitmap;
+    .end local v1    # "drawable":Landroid/graphics/drawable/BitmapDrawable;
     :cond_0
     return-void
 .end method
@@ -482,9 +474,9 @@
     .line 377
     iget-object v4, p0, Lcom/facebook/widget/UserSettingsFragment;->connectedStateLabel:Landroid/widget/TextView;
 
-    const/high16 v5, 0x3f80
+    const/high16 v5, 0x3f800000
 
-    const/high16 v6, -0x4080
+    const/high16 v6, -0x40800000
 
     .line 378
     invoke-virtual {p0}, Lcom/facebook/widget/UserSettingsFragment;->getResources()Landroid/content/res/Resources;
@@ -517,7 +509,7 @@
     move-result-object v1
 
     .line 382
-    .local v1, request:Lcom/facebook/internal/ImageRequest;
+    .local v1, "request":Lcom/facebook/internal/ImageRequest;
     if-eqz v1, :cond_1
 
     .line 383
@@ -526,7 +518,7 @@
     move-result-object v2
 
     .line 385
-    .local v2, requestUrl:Ljava/net/URI;
+    .local v2, "requestUrl":Ljava/net/URI;
     iget-object v4, p0, Lcom/facebook/widget/UserSettingsFragment;->connectedStateLabel:Landroid/widget/TextView;
 
     invoke-virtual {v4}, Landroid/widget/TextView;->getTag()Ljava/lang/Object;
@@ -567,7 +559,7 @@
     invoke-virtual {v4, v2}, Landroid/widget/TextView;->setTag(Ljava/lang/Object;)V
 
     .line 394
-    .end local v2           #requestUrl:Ljava/net/URI;
+    .end local v2    # "requestUrl":Ljava/net/URI;
     :cond_1
     :goto_1
     iget-object v4, p0, Lcom/facebook/widget/UserSettingsFragment;->connectedStateLabel:Landroid/widget/TextView;
@@ -583,15 +575,15 @@
     goto :goto_0
 
     .line 390
-    .restart local v2       #requestUrl:Ljava/net/URI;
+    .restart local v2    # "requestUrl":Ljava/net/URI;
     :cond_2
     invoke-static {v1}, Lcom/facebook/internal/ImageDownloader;->downloadAsync(Lcom/facebook/internal/ImageRequest;)V
 
     goto :goto_1
 
     .line 396
-    .end local v1           #request:Lcom/facebook/internal/ImageRequest;
-    .end local v2           #requestUrl:Ljava/net/URI;
+    .end local v1    # "request":Lcom/facebook/internal/ImageRequest;
+    .end local v2    # "requestUrl":Ljava/net/URI;
     :cond_3
     iget-object v4, p0, Lcom/facebook/widget/UserSettingsFragment;->connectedStateLabel:Landroid/widget/TextView;
 
@@ -633,7 +625,7 @@
     move-result-object v0
 
     .line 400
-    .local v0, noProfilePic:Landroid/graphics/drawable/Drawable;
+    .local v0, "noProfilePic":Landroid/graphics/drawable/Drawable;
     invoke-virtual {p0}, Lcom/facebook/widget/UserSettingsFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
@@ -678,7 +670,7 @@
     goto/16 :goto_0
 
     .line 405
-    .end local v0           #noProfilePic:Landroid/graphics/drawable/Drawable;
+    .end local v0    # "noProfilePic":Landroid/graphics/drawable/Drawable;
     :cond_4
     invoke-virtual {p0}, Lcom/facebook/widget/UserSettingsFragment;->getResources()Landroid/content/res/Resources;
 
@@ -697,7 +689,7 @@
     move-result v3
 
     .line 406
-    .local v3, textColor:I
+    .local v3, "textColor":I
     iget-object v4, p0, Lcom/facebook/widget/UserSettingsFragment;->connectedStateLabel:Landroid/widget/TextView;
 
     invoke-virtual {v4, v3}, Landroid/widget/TextView;->setTextColor(I)V
@@ -835,7 +827,6 @@
 
 .method public bridge synthetic onActivityCreated(Landroid/os/Bundle;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1
@@ -846,9 +837,6 @@
 
 .method public bridge synthetic onActivityResult(IILandroid/content/Intent;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 1
@@ -859,7 +847,7 @@
 
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 1
-    .parameter "savedInstanceState"
+    .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
     .line 97
@@ -876,9 +864,9 @@
 
 .method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
     .locals 5
-    .parameter "inflater"
-    .parameter "container"
-    .parameter "savedInstanceState"
+    .param p1, "inflater"    # Landroid/view/LayoutInflater;
+    .param p2, "container"    # Landroid/view/ViewGroup;
+    .param p3, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
     .line 74
@@ -897,7 +885,7 @@
     move-result-object v1
 
     .line 75
-    .local v1, view:Landroid/view/View;
+    .local v1, "view":Landroid/view/View;
     sget-object v2, Lcom/bitrhymes/facebookext/FacebookExt;->context:Lcom/adobe/fre/FREContext;
 
     const-string v3, "id.com_facebook_usersettingsfragment_login_button"
@@ -939,7 +927,7 @@
     move-result-object v0
 
     .line 81
-    .local v0, session:Lcom/facebook/Session;
+    .local v0, "session":Lcom/facebook/Session;
     if-eqz v0, :cond_0
 
     invoke-static {}, Lcom/facebook/Session;->getActiveSession()Lcom/facebook/Session;
@@ -1047,8 +1035,8 @@
 
 .method protected onSessionStateChange(Lcom/facebook/SessionState;Ljava/lang/Exception;)V
     .locals 2
-    .parameter "state"
-    .parameter "exception"
+    .param p1, "state"    # Lcom/facebook/SessionState;
+    .param p2, "exception"    # Ljava/lang/Exception;
 
     .prologue
     .line 331
@@ -1078,7 +1066,7 @@
 
 .method public setDefaultAudience(Lcom/facebook/SessionDefaultAudience;)V
     .locals 1
-    .parameter "defaultAudience"
+    .param p1, "defaultAudience"    # Lcom/facebook/SessionDefaultAudience;
 
     .prologue
     .line 140
@@ -1092,7 +1080,7 @@
 
 .method public setLoginBehavior(Lcom/facebook/SessionLoginBehavior;)V
     .locals 1
-    .parameter "loginBehavior"
+    .param p1, "loginBehavior"    # Lcom/facebook/SessionLoginBehavior;
 
     .prologue
     .line 274
@@ -1106,7 +1094,7 @@
 
 .method public setOnErrorListener(Lcom/facebook/widget/LoginButton$OnErrorListener;)V
     .locals 1
-    .parameter "onErrorListener"
+    .param p1, "onErrorListener"    # Lcom/facebook/widget/LoginButton$OnErrorListener;
 
     .prologue
     .line 297
@@ -1120,7 +1108,6 @@
 
 .method public setPublishPermissions(Ljava/util/List;)V
     .locals 2
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1133,7 +1120,7 @@
 
     .prologue
     .line 227
-    .local p1, permissions:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
+    .local p1, "permissions":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     iget-object v0, p0, Lcom/facebook/widget/UserSettingsFragment;->loginButtonProperties:Lcom/facebook/widget/LoginButton$LoginButtonProperties;
 
     invoke-virtual {p0}, Lcom/facebook/widget/UserSettingsFragment;->getSession()Lcom/facebook/Session;
@@ -1148,7 +1135,7 @@
 
 .method public varargs setPublishPermissions([Ljava/lang/String;)V
     .locals 3
-    .parameter "permissions"
+    .param p1, "permissions"    # [Ljava/lang/String;
 
     .prologue
     .line 253
@@ -1170,7 +1157,6 @@
 
 .method public setReadPermissions(Ljava/util/List;)V
     .locals 2
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1183,7 +1169,7 @@
 
     .prologue
     .line 176
-    .local p1, permissions:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
+    .local p1, "permissions":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     iget-object v0, p0, Lcom/facebook/widget/UserSettingsFragment;->loginButtonProperties:Lcom/facebook/widget/LoginButton$LoginButtonProperties;
 
     invoke-virtual {p0}, Lcom/facebook/widget/UserSettingsFragment;->getSession()Lcom/facebook/Session;
@@ -1198,7 +1184,7 @@
 
 .method public varargs setReadPermissions([Ljava/lang/String;)V
     .locals 3
-    .parameter "permissions"
+    .param p1, "permissions"    # [Ljava/lang/String;
 
     .prologue
     .line 201
@@ -1220,7 +1206,7 @@
 
 .method public setSession(Lcom/facebook/Session;)V
     .locals 1
-    .parameter "newSession"
+    .param p1, "newSession"    # Lcom/facebook/Session;
 
     .prologue
     .line 124
@@ -1249,7 +1235,7 @@
 
 .method public setSessionStatusCallback(Lcom/facebook/Session$StatusCallback;)V
     .locals 0
-    .parameter "callback"
+    .param p1, "callback"    # Lcom/facebook/Session$StatusCallback;
 
     .prologue
     .line 316

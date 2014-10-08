@@ -28,7 +28,7 @@
 
 .field public static final FUSE_API_TAG:Ljava/lang/String; = "FuseAPI"
 
-.field public static final FUSE_SERVER:Lcom/fusepowered/util/FuseServer$SERVER_NAMES; = null
+.field public static final FUSE_SERVER:Lcom/fusepowered/util/FuseServer$SERVER_NAMES;
 
 .field public static final LOGGING_ENABLED:Z = false
 

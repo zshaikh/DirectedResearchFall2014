@@ -74,9 +74,8 @@
 # direct methods
 .method public constructor <init>(Lcom/flurry/org/codehaus/jackson/map/MapperConfig;Lcom/flurry/org/codehaus/jackson/type/JavaType;Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;)V
     .locals 1
-    .parameter
-    .parameter "type"
-    .parameter "ac"
+    .param p2, "type"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .param p3, "ac"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -93,7 +92,7 @@
 
     .prologue
     .line 88
-    .local p1, config:Lcom/flurry/org/codehaus/jackson/map/MapperConfig;,"Lcom/flurry/org/codehaus/jackson/map/MapperConfig<*>;"
+    .local p1, "config":Lcom/flurry/org/codehaus/jackson/map/MapperConfig;, "Lcom/flurry/org/codehaus/jackson/map/MapperConfig<*>;"
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object v0
@@ -106,10 +105,8 @@
 
 .method protected constructor <init>(Lcom/flurry/org/codehaus/jackson/map/MapperConfig;Lcom/flurry/org/codehaus/jackson/type/JavaType;Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;Ljava/util/List;)V
     .locals 1
-    .parameter
-    .parameter "type"
-    .parameter "ac"
-    .parameter
+    .param p2, "type"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .param p3, "ac"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -126,8 +123,8 @@
 
     .prologue
     .line 97
-    .local p1, config:Lcom/flurry/org/codehaus/jackson/map/MapperConfig;,"Lcom/flurry/org/codehaus/jackson/map/MapperConfig<*>;"
-    .local p4, properties:Ljava/util/List;,"Ljava/util/List<Lcom/flurry/org/codehaus/jackson/map/BeanPropertyDefinition;>;"
+    .local p1, "config":Lcom/flurry/org/codehaus/jackson/map/MapperConfig;, "Lcom/flurry/org/codehaus/jackson/map/MapperConfig<*>;"
+    .local p4, "properties":Ljava/util/List;, "Ljava/util/List<Lcom/flurry/org/codehaus/jackson/map/BeanPropertyDefinition;>;"
     invoke-direct {p0, p2}, Lcom/flurry/org/codehaus/jackson/map/BeanDescription;-><init>(Lcom/flurry/org/codehaus/jackson/type/JavaType;)V
 
     .line 98
@@ -161,7 +158,7 @@
 
 .method public static forDeserialization(Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertiesCollector;)Lcom/flurry/org/codehaus/jackson/map/introspect/BasicBeanDescription;
     .locals 5
-    .parameter "coll"
+    .param p0, "coll"    # Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertiesCollector;
 
     .prologue
     .line 112
@@ -186,7 +183,7 @@
     invoke-direct {v0, v1, v2, v3, v4}, Lcom/flurry/org/codehaus/jackson/map/introspect/BasicBeanDescription;-><init>(Lcom/flurry/org/codehaus/jackson/map/MapperConfig;Lcom/flurry/org/codehaus/jackson/type/JavaType;Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;Ljava/util/List;)V
 
     .line 114
-    .local v0, desc:Lcom/flurry/org/codehaus/jackson/map/introspect/BasicBeanDescription;
+    .local v0, "desc":Lcom/flurry/org/codehaus/jackson/map/introspect/BasicBeanDescription;
     invoke-virtual {p0}, Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertiesCollector;->getAnySetterMethod()Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
 
     move-result-object v1
@@ -220,9 +217,8 @@
 
 .method public static forOtherUse(Lcom/flurry/org/codehaus/jackson/map/MapperConfig;Lcom/flurry/org/codehaus/jackson/type/JavaType;Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;)Lcom/flurry/org/codehaus/jackson/map/introspect/BasicBeanDescription;
     .locals 2
-    .parameter
-    .parameter "type"
-    .parameter "ac"
+    .param p1, "type"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .param p2, "ac"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -237,7 +233,7 @@
 
     .prologue
     .line 146
-    .local p0, config:Lcom/flurry/org/codehaus/jackson/map/MapperConfig;,"Lcom/flurry/org/codehaus/jackson/map/MapperConfig<*>;"
+    .local p0, "config":Lcom/flurry/org/codehaus/jackson/map/MapperConfig;, "Lcom/flurry/org/codehaus/jackson/map/MapperConfig<*>;"
     new-instance v0, Lcom/flurry/org/codehaus/jackson/map/introspect/BasicBeanDescription;
 
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
@@ -251,7 +247,7 @@
 
 .method public static forSerialization(Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertiesCollector;)Lcom/flurry/org/codehaus/jackson/map/introspect/BasicBeanDescription;
     .locals 5
-    .parameter "coll"
+    .param p0, "coll"    # Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertiesCollector;
 
     .prologue
     .line 129
@@ -276,7 +272,7 @@
     invoke-direct {v0, v1, v2, v3, v4}, Lcom/flurry/org/codehaus/jackson/map/introspect/BasicBeanDescription;-><init>(Lcom/flurry/org/codehaus/jackson/map/MapperConfig;Lcom/flurry/org/codehaus/jackson/type/JavaType;Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;Ljava/util/List;)V
 
     .line 131
-    .local v0, desc:Lcom/flurry/org/codehaus/jackson/map/introspect/BasicBeanDescription;
+    .local v0, "desc":Lcom/flurry/org/codehaus/jackson/map/introspect/BasicBeanDescription;
     invoke-virtual {p0}, Lcom/flurry/org/codehaus/jackson/map/introspect/POJOPropertiesCollector;->getJsonValueMethod()Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
 
     move-result-object v1
@@ -298,8 +294,7 @@
 # virtual methods
 .method public _findPropertyFields(Ljava/util/Collection;Z)Ljava/util/LinkedHashMap;
     .locals 6
-    .parameter
-    .parameter "forSerialization"
+    .param p2, "forSerialization"    # Z
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -317,20 +312,20 @@
 
     .prologue
     .line 543
-    .local p1, ignoredProperties:Ljava/util/Collection;,"Ljava/util/Collection<Ljava/lang/String;>;"
+    .local p1, "ignoredProperties":Ljava/util/Collection;, "Ljava/util/Collection<Ljava/lang/String;>;"
     new-instance v4, Ljava/util/LinkedHashMap;
 
     invoke-direct {v4}, Ljava/util/LinkedHashMap;-><init>()V
 
     .line 544
-    .local v4, results:Ljava/util/LinkedHashMap;,"Ljava/util/LinkedHashMap<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedField;>;"
+    .local v4, "results":Ljava/util/LinkedHashMap;, "Ljava/util/LinkedHashMap<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedField;>;"
     iget-object v5, p0, Lcom/flurry/org/codehaus/jackson/map/introspect/BasicBeanDescription;->_properties:Ljava/util/List;
 
     invoke-interface {v5}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
 
-    .local v1, i$:Ljava/util/Iterator;
+    .local v1, "i$":Ljava/util/Iterator;
     :cond_0
     :goto_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
@@ -346,13 +341,13 @@
     check-cast v3, Lcom/flurry/org/codehaus/jackson/map/BeanPropertyDefinition;
 
     .line 545
-    .local v3, property:Lcom/flurry/org/codehaus/jackson/map/BeanPropertyDefinition;
+    .local v3, "property":Lcom/flurry/org/codehaus/jackson/map/BeanPropertyDefinition;
     invoke-virtual {v3}, Lcom/flurry/org/codehaus/jackson/map/BeanPropertyDefinition;->getField()Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedField;
 
     move-result-object v0
 
     .line 546
-    .local v0, f:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedField;
+    .local v0, "f":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedField;
     if-eqz v0, :cond_0
 
     .line 547
@@ -361,7 +356,7 @@
     move-result-object v2
 
     .line 548
-    .local v2, name:Ljava/lang/String;
+    .local v2, "name":Ljava/lang/String;
     if-eqz p1, :cond_1
 
     .line 549
@@ -378,9 +373,9 @@
     goto :goto_0
 
     .line 556
-    .end local v0           #f:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedField;
-    .end local v2           #name:Ljava/lang/String;
-    .end local v3           #property:Lcom/flurry/org/codehaus/jackson/map/BeanPropertyDefinition;
+    .end local v0    # "f":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedField;
+    .end local v2    # "name":Ljava/lang/String;
+    .end local v3    # "property":Lcom/flurry/org/codehaus/jackson/map/BeanPropertyDefinition;
     :cond_2
     return-object v4
 .end method
@@ -438,7 +433,7 @@
     move-result-object v0
 
     .line 490
-    .local v0, type:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local v0, "type":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const-class v1, Ljava/util/Map;
 
     invoke-virtual {v1, v0}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
@@ -485,7 +480,7 @@
     throw v1
 
     .line 494
-    .end local v0           #type:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .end local v0    # "type":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     :cond_0
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/map/introspect/BasicBeanDescription;->_anyGetterMethod:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
 
@@ -516,7 +511,7 @@
     move-result-object v0
 
     .line 257
-    .local v0, type:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local v0, "type":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const-class v1, Ljava/lang/String;
 
     if-eq v0, v1, :cond_0
@@ -571,7 +566,7 @@
     throw v1
 
     .line 261
-    .end local v0           #type:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .end local v0    # "type":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     :cond_0
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/map/introspect/BasicBeanDescription;->_anySetterMethod:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
 
@@ -596,14 +591,14 @@
     const/4 v5, 0x0
 
     .line 505
-    .local v5, result:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMember;>;"
+    .local v5, "result":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMember;>;"
     iget-object v6, p0, Lcom/flurry/org/codehaus/jackson/map/introspect/BasicBeanDescription;->_properties:Ljava/util/List;
 
     invoke-interface {v6}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
 
-    .local v1, i$:Ljava/util/Iterator;
+    .local v1, "i$":Ljava/util/Iterator;
     :cond_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
@@ -618,13 +613,13 @@
     check-cast v2, Lcom/flurry/org/codehaus/jackson/map/BeanPropertyDefinition;
 
     .line 506
-    .local v2, property:Lcom/flurry/org/codehaus/jackson/map/BeanPropertyDefinition;
+    .local v2, "property":Lcom/flurry/org/codehaus/jackson/map/BeanPropertyDefinition;
     invoke-virtual {v2}, Lcom/flurry/org/codehaus/jackson/map/BeanPropertyDefinition;->getMutator()Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMember;
 
     move-result-object v0
 
     .line 507
-    .local v0, am:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMember;
+    .local v0, "am":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMember;
     if-eqz v0, :cond_0
 
     .line 510
@@ -635,7 +630,7 @@
     move-result-object v3
 
     .line 511
-    .local v3, refDef:Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector$ReferenceProperty;
+    .local v3, "refDef":Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector$ReferenceProperty;
     if-eqz v3, :cond_0
 
     invoke-virtual {v3}, Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector$ReferenceProperty;->isBackReference()Z
@@ -650,18 +645,18 @@
     .line 513
     new-instance v5, Ljava/util/HashMap;
 
-    .end local v5           #result:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMember;>;"
+    .end local v5    # "result":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMember;>;"
     invoke-direct {v5}, Ljava/util/HashMap;-><init>()V
 
     .line 515
-    .restart local v5       #result:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMember;>;"
+    .restart local v5    # "result":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMember;>;"
     :cond_1
     invoke-virtual {v3}, Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector$ReferenceProperty;->getName()Ljava/lang/String;
 
     move-result-object v4
 
     .line 516
-    .local v4, refName:Ljava/lang/String;
+    .local v4, "refName":Ljava/lang/String;
     invoke-virtual {v5, v4, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v6
@@ -700,10 +695,10 @@
     throw v6
 
     .line 521
-    .end local v0           #am:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMember;
-    .end local v2           #property:Lcom/flurry/org/codehaus/jackson/map/BeanPropertyDefinition;
-    .end local v3           #refDef:Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector$ReferenceProperty;
-    .end local v4           #refName:Ljava/lang/String;
+    .end local v0    # "am":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMember;
+    .end local v2    # "property":Lcom/flurry/org/codehaus/jackson/map/BeanPropertyDefinition;
+    .end local v3    # "refDef":Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector$ReferenceProperty;
+    .end local v4    # "refName":Ljava/lang/String;
     :cond_2
     return-object v5
 .end method
@@ -725,10 +720,10 @@
     const/4 v6, 0x0
 
     .line 431
-    .local v6, names:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
+    .local v6, "names":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     const/4 v2, 0x0
 
-    .local v2, i:I
+    .local v2, "i":I
     :goto_0
     const/4 v8, 0x2
 
@@ -744,13 +739,13 @@
     move-object v4, v8
 
     .line 434
-    .local v4, l:Ljava/util/List;,"Ljava/util/List<+Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedWithParams;>;"
+    .local v4, "l":Ljava/util/List;, "Ljava/util/List<+Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedWithParams;>;"
     :goto_1
     invoke-interface {v4}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
 
-    .local v3, i$:Ljava/util/Iterator;
+    .local v3, "i$":Ljava/util/Iterator;
     :cond_0
     invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
 
@@ -765,13 +760,13 @@
     check-cast v1, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedWithParams;
 
     .line 435
-    .local v1, creator:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedWithParams;
+    .local v1, "creator":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedWithParams;
     invoke-virtual {v1}, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedWithParams;->getParameterCount()I
 
     move-result v0
 
     .line 436
-    .local v0, argCount:I
+    .local v0, "argCount":I
     const/4 v8, 0x1
 
     if-lt v0, v8, :cond_0
@@ -790,7 +785,7 @@
     move-result-object v5
 
     .line 438
-    .local v5, name:Ljava/lang/String;
+    .local v5, "name":Ljava/lang/String;
     if-eqz v5, :cond_0
 
     .line 439
@@ -799,18 +794,18 @@
     .line 440
     new-instance v6, Ljava/util/ArrayList;
 
-    .end local v6           #names:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
+    .end local v6    # "names":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-direct {v6}, Ljava/util/ArrayList;-><init>()V
 
     .line 442
-    .restart local v6       #names:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
+    .restart local v6    # "names":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     :cond_1
     invoke-interface {v6, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 443
     const/4 v7, 0x1
 
-    .local v7, p:I
+    .local v7, "p":I
     :goto_2
     if-ge v7, v0, :cond_0
 
@@ -833,12 +828,12 @@
     goto :goto_2
 
     .line 432
-    .end local v0           #argCount:I
-    .end local v1           #creator:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedWithParams;
-    .end local v3           #i$:Ljava/util/Iterator;
-    .end local v4           #l:Ljava/util/List;,"Ljava/util/List<+Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedWithParams;>;"
-    .end local v5           #name:Ljava/lang/String;
-    .end local v7           #p:I
+    .end local v0    # "argCount":I
+    .end local v1    # "creator":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedWithParams;
+    .end local v3    # "i$":Ljava/util/Iterator;
+    .end local v4    # "l":Ljava/util/List;, "Ljava/util/List<+Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedWithParams;>;"
+    .end local v5    # "name":Ljava/lang/String;
+    .end local v7    # "p":I
     :cond_2
     invoke-virtual {p0}, Lcom/flurry/org/codehaus/jackson/map/introspect/BasicBeanDescription;->getFactoryMethods()Ljava/util/List;
 
@@ -849,16 +844,16 @@
     goto :goto_1
 
     .line 431
-    .restart local v3       #i$:Ljava/util/Iterator;
-    .restart local v4       #l:Ljava/util/List;,"Ljava/util/List<+Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedWithParams;>;"
+    .restart local v3    # "i$":Ljava/util/Iterator;
+    .restart local v4    # "l":Ljava/util/List;, "Ljava/util/List<+Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedWithParams;>;"
     :cond_3
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
     .line 448
-    .end local v3           #i$:Ljava/util/Iterator;
-    .end local v4           #l:Ljava/util/List;,"Ljava/util/List<+Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedWithParams;>;"
+    .end local v3    # "i$":Ljava/util/Iterator;
+    .end local v4    # "l":Ljava/util/List;, "Ljava/util/List<+Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedWithParams;>;"
     :cond_4
     if-nez v6, :cond_5
 
@@ -893,8 +888,6 @@
 
 .method public findDeserializableFields(Lcom/flurry/org/codehaus/jackson/map/introspect/VisibilityChecker;Ljava/util/Collection;)Ljava/util/LinkedHashMap;
     .locals 1
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -914,8 +907,8 @@
 
     .prologue
     .line 613
-    .local p1, visibilityChecker:Lcom/flurry/org/codehaus/jackson/map/introspect/VisibilityChecker;,"Lcom/flurry/org/codehaus/jackson/map/introspect/VisibilityChecker<*>;"
-    .local p2, ignoredProperties:Ljava/util/Collection;,"Ljava/util/Collection<Ljava/lang/String;>;"
+    .local p1, "visibilityChecker":Lcom/flurry/org/codehaus/jackson/map/introspect/VisibilityChecker;, "Lcom/flurry/org/codehaus/jackson/map/introspect/VisibilityChecker<*>;"
+    .local p2, "ignoredProperties":Ljava/util/Collection;, "Ljava/util/Collection<Ljava/lang/String;>;"
     const/4 v0, 0x0
 
     invoke-virtual {p0, p2, v0}, Lcom/flurry/org/codehaus/jackson/map/introspect/BasicBeanDescription;->_findPropertyFields(Ljava/util/Collection;Z)Ljava/util/LinkedHashMap;
@@ -927,7 +920,6 @@
 
 .method public varargs findFactoryMethod([Ljava/lang/Class;)Ljava/lang/reflect/Method;
     .locals 8
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "([",
@@ -939,7 +931,7 @@
 
     .prologue
     .line 379
-    .local p1, expArgTypes:[Ljava/lang/Class;,"[Ljava/lang/Class<*>;"
+    .local p1, "expArgTypes":[Ljava/lang/Class;, "[Ljava/lang/Class<*>;"
     iget-object v7, p0, Lcom/flurry/org/codehaus/jackson/map/introspect/BasicBeanDescription;->_classInfo:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;
 
     invoke-virtual {v7}, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;->getStaticMethods()Ljava/util/List;
@@ -964,7 +956,7 @@
     check-cast v1, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
 
     .line 380
-    .local v1, am:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
+    .local v1, "am":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
     invoke-virtual {p0, v1}, Lcom/flurry/org/codehaus/jackson/map/introspect/BasicBeanDescription;->isFactoryMethod(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;)Z
 
     move-result v7
@@ -979,23 +971,23 @@
     move-result-object v0
 
     .line 383
-    .local v0, actualArgType:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local v0, "actualArgType":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     move-object v2, p1
 
-    .local v2, arr$:[Ljava/lang/Class;
+    .local v2, "arr$":[Ljava/lang/Class;
     array-length v6, v2
 
-    .local v6, len$:I
+    .local v6, "len$":I
     const/4 v5, 0x0
 
-    .local v5, i$:I
+    .local v5, "i$":I
     :goto_0
     if-ge v5, v6, :cond_0
 
     aget-object v3, v2, v5
 
     .line 385
-    .local v3, expArgType:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local v3, "expArgType":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-virtual {v0, v3}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
 
     move-result v7
@@ -1008,34 +1000,34 @@
     move-result-object v7
 
     .line 391
-    .end local v0           #actualArgType:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
-    .end local v1           #am:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
-    .end local v2           #arr$:[Ljava/lang/Class;
-    .end local v3           #expArgType:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
-    .end local v5           #i$:I
-    .end local v6           #len$:I
+    .end local v0    # "actualArgType":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
+    .end local v1    # "am":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
+    .end local v2    # "arr$":[Ljava/lang/Class;
+    .end local v3    # "expArgType":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
+    .end local v5    # "i$":I
+    .end local v6    # "len$":I
     :goto_1
     return-object v7
 
     .line 383
-    .restart local v0       #actualArgType:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
-    .restart local v1       #am:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
-    .restart local v2       #arr$:[Ljava/lang/Class;
-    .restart local v3       #expArgType:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
-    .restart local v5       #i$:I
-    .restart local v6       #len$:I
+    .restart local v0    # "actualArgType":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
+    .restart local v1    # "am":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
+    .restart local v2    # "arr$":[Ljava/lang/Class;
+    .restart local v3    # "expArgType":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
+    .restart local v5    # "i$":I
+    .restart local v6    # "len$":I
     :cond_1
     add-int/lit8 v5, v5, 0x1
 
     goto :goto_0
 
     .line 391
-    .end local v0           #actualArgType:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
-    .end local v1           #am:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
-    .end local v2           #arr$:[Ljava/lang/Class;
-    .end local v3           #expArgType:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
-    .end local v5           #i$:I
-    .end local v6           #len$:I
+    .end local v0    # "actualArgType":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
+    .end local v1    # "am":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
+    .end local v2    # "arr$":[Ljava/lang/Class;
+    .end local v3    # "expArgType":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
+    .end local v5    # "i$":I
+    .end local v6    # "len$":I
     :cond_2
     const/4 v7, 0x0
 
@@ -1044,8 +1036,6 @@
 
 .method public findGetters(Lcom/flurry/org/codehaus/jackson/map/introspect/VisibilityChecker;Ljava/util/Collection;)Ljava/util/LinkedHashMap;
     .locals 6
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1065,21 +1055,21 @@
 
     .prologue
     .line 570
-    .local p1, visibilityChecker:Lcom/flurry/org/codehaus/jackson/map/introspect/VisibilityChecker;,"Lcom/flurry/org/codehaus/jackson/map/introspect/VisibilityChecker<*>;"
-    .local p2, ignoredProperties:Ljava/util/Collection;,"Ljava/util/Collection<Ljava/lang/String;>;"
+    .local p1, "visibilityChecker":Lcom/flurry/org/codehaus/jackson/map/introspect/VisibilityChecker;, "Lcom/flurry/org/codehaus/jackson/map/introspect/VisibilityChecker<*>;"
+    .local p2, "ignoredProperties":Ljava/util/Collection;, "Ljava/util/Collection<Ljava/lang/String;>;"
     new-instance v4, Ljava/util/LinkedHashMap;
 
     invoke-direct {v4}, Ljava/util/LinkedHashMap;-><init>()V
 
     .line 571
-    .local v4, results:Ljava/util/LinkedHashMap;,"Ljava/util/LinkedHashMap<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;>;"
+    .local v4, "results":Ljava/util/LinkedHashMap;, "Ljava/util/LinkedHashMap<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;>;"
     iget-object v5, p0, Lcom/flurry/org/codehaus/jackson/map/introspect/BasicBeanDescription;->_properties:Ljava/util/List;
 
     invoke-interface {v5}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
-    .local v0, i$:Ljava/util/Iterator;
+    .local v0, "i$":Ljava/util/Iterator;
     :cond_0
     :goto_0
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
@@ -1095,13 +1085,13 @@
     check-cast v3, Lcom/flurry/org/codehaus/jackson/map/BeanPropertyDefinition;
 
     .line 572
-    .local v3, property:Lcom/flurry/org/codehaus/jackson/map/BeanPropertyDefinition;
+    .local v3, "property":Lcom/flurry/org/codehaus/jackson/map/BeanPropertyDefinition;
     invoke-virtual {v3}, Lcom/flurry/org/codehaus/jackson/map/BeanPropertyDefinition;->getGetter()Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
 
     move-result-object v1
 
     .line 573
-    .local v1, m:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
+    .local v1, "m":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
     if-eqz v1, :cond_0
 
     .line 574
@@ -1110,7 +1100,7 @@
     move-result-object v2
 
     .line 575
-    .local v2, name:Ljava/lang/String;
+    .local v2, "name":Ljava/lang/String;
     if-eqz p2, :cond_1
 
     .line 576
@@ -1127,9 +1117,9 @@
     goto :goto_0
 
     .line 583
-    .end local v1           #m:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
-    .end local v2           #name:Ljava/lang/String;
-    .end local v3           #property:Lcom/flurry/org/codehaus/jackson/map/BeanPropertyDefinition;
+    .end local v1    # "m":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
+    .end local v2    # "name":Ljava/lang/String;
+    .end local v3    # "property":Lcom/flurry/org/codehaus/jackson/map/BeanPropertyDefinition;
     :cond_2
     return-object v4
 .end method
@@ -1166,8 +1156,7 @@
 
 .method public findMethod(Ljava/lang/String;[Ljava/lang/Class;)Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
     .locals 1
-    .parameter "name"
-    .parameter
+    .param p1, "name"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1181,7 +1170,7 @@
 
     .prologue
     .line 283
-    .local p2, paramTypes:[Ljava/lang/Class;,"[Ljava/lang/Class<*>;"
+    .local p2, "paramTypes":[Ljava/lang/Class;, "[Ljava/lang/Class<*>;"
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/map/introspect/BasicBeanDescription;->_classInfo:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;
 
     invoke-virtual {v0, p1, p2}, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;->findMethod(Ljava/lang/String;[Ljava/lang/Class;)Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
@@ -1212,8 +1201,6 @@
 
 .method public findSerializableFields(Lcom/flurry/org/codehaus/jackson/map/introspect/VisibilityChecker;Ljava/util/Collection;)Ljava/util/LinkedHashMap;
     .locals 1
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1233,8 +1220,8 @@
 
     .prologue
     .line 605
-    .local p1, visibilityChecker:Lcom/flurry/org/codehaus/jackson/map/introspect/VisibilityChecker;,"Lcom/flurry/org/codehaus/jackson/map/introspect/VisibilityChecker<*>;"
-    .local p2, ignoredProperties:Ljava/util/Collection;,"Ljava/util/Collection<Ljava/lang/String;>;"
+    .local p1, "visibilityChecker":Lcom/flurry/org/codehaus/jackson/map/introspect/VisibilityChecker;, "Lcom/flurry/org/codehaus/jackson/map/introspect/VisibilityChecker<*>;"
+    .local p2, "ignoredProperties":Ljava/util/Collection;, "Ljava/util/Collection<Ljava/lang/String;>;"
     const/4 v0, 0x1
 
     invoke-virtual {p0, p2, v0}, Lcom/flurry/org/codehaus/jackson/map/introspect/BasicBeanDescription;->_findPropertyFields(Ljava/util/Collection;Z)Ljava/util/LinkedHashMap;
@@ -1246,8 +1233,8 @@
 
 .method public bridge synthetic findSerializableFields(Lcom/flurry/org/codehaus/jackson/map/introspect/VisibilityChecker;Ljava/util/Collection;)Ljava/util/Map;
     .locals 1
-    .parameter "x0"
-    .parameter "x1"
+    .param p1, "x0"    # Lcom/flurry/org/codehaus/jackson/map/introspect/VisibilityChecker;
+    .param p2, "x1"    # Ljava/util/Collection;
 
     .prologue
     .line 18
@@ -1260,7 +1247,7 @@
 
 .method public findSerializationInclusion(Lcom/flurry/org/codehaus/jackson/map/annotate/JsonSerialize$Inclusion;)Lcom/flurry/org/codehaus/jackson/map/annotate/JsonSerialize$Inclusion;
     .locals 2
-    .parameter "defValue"
+    .param p1, "defValue"    # Lcom/flurry/org/codehaus/jackson/map/annotate/JsonSerialize$Inclusion;
 
     .prologue
     .line 468
@@ -1288,7 +1275,6 @@
 
 .method public findSetters(Lcom/flurry/org/codehaus/jackson/map/introspect/VisibilityChecker;)Ljava/util/LinkedHashMap;
     .locals 5
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1304,20 +1290,20 @@
 
     .prologue
     .line 590
-    .local p1, visibilityChecker:Lcom/flurry/org/codehaus/jackson/map/introspect/VisibilityChecker;,"Lcom/flurry/org/codehaus/jackson/map/introspect/VisibilityChecker<*>;"
+    .local p1, "visibilityChecker":Lcom/flurry/org/codehaus/jackson/map/introspect/VisibilityChecker;, "Lcom/flurry/org/codehaus/jackson/map/introspect/VisibilityChecker<*>;"
     new-instance v3, Ljava/util/LinkedHashMap;
 
     invoke-direct {v3}, Ljava/util/LinkedHashMap;-><init>()V
 
     .line 591
-    .local v3, results:Ljava/util/LinkedHashMap;,"Ljava/util/LinkedHashMap<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;>;"
+    .local v3, "results":Ljava/util/LinkedHashMap;, "Ljava/util/LinkedHashMap<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;>;"
     iget-object v4, p0, Lcom/flurry/org/codehaus/jackson/map/introspect/BasicBeanDescription;->_properties:Ljava/util/List;
 
     invoke-interface {v4}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
-    .local v0, i$:Ljava/util/Iterator;
+    .local v0, "i$":Ljava/util/Iterator;
     :cond_0
     :goto_0
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
@@ -1333,13 +1319,13 @@
     check-cast v2, Lcom/flurry/org/codehaus/jackson/map/BeanPropertyDefinition;
 
     .line 592
-    .local v2, property:Lcom/flurry/org/codehaus/jackson/map/BeanPropertyDefinition;
+    .local v2, "property":Lcom/flurry/org/codehaus/jackson/map/BeanPropertyDefinition;
     invoke-virtual {v2}, Lcom/flurry/org/codehaus/jackson/map/BeanPropertyDefinition;->getSetter()Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
 
     move-result-object v1
 
     .line 593
-    .local v1, m:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
+    .local v1, "m":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
     if-eqz v1, :cond_0
 
     .line 594
@@ -1352,15 +1338,14 @@
     goto :goto_0
 
     .line 597
-    .end local v1           #m:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
-    .end local v2           #property:Lcom/flurry/org/codehaus/jackson/map/BeanPropertyDefinition;
+    .end local v1    # "m":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
+    .end local v2    # "property":Lcom/flurry/org/codehaus/jackson/map/BeanPropertyDefinition;
     :cond_1
     return-object v3
 .end method
 
 .method public varargs findSingleArgConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
     .locals 9
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "([",
@@ -1373,7 +1358,7 @@
 
     .prologue
     .line 350
-    .local p1, argTypes:[Ljava/lang/Class;,"[Ljava/lang/Class<*>;"
+    .local p1, "argTypes":[Ljava/lang/Class;, "[Ljava/lang/Class<*>;"
     iget-object v7, p0, Lcom/flurry/org/codehaus/jackson/map/introspect/BasicBeanDescription;->_classInfo:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;
 
     invoke-virtual {v7}, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedClass;->getConstructors()Ljava/util/List;
@@ -1398,7 +1383,7 @@
     check-cast v0, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedConstructor;
 
     .line 355
-    .local v0, ac:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedConstructor;
+    .local v0, "ac":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedConstructor;
     invoke-virtual {v0}, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedConstructor;->getParameterCount()I
 
     move-result v7
@@ -1415,23 +1400,23 @@
     move-result-object v1
 
     .line 357
-    .local v1, actArg:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local v1, "actArg":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     move-object v2, p1
 
-    .local v2, arr$:[Ljava/lang/Class;
+    .local v2, "arr$":[Ljava/lang/Class;
     array-length v6, v2
 
-    .local v6, len$:I
+    .local v6, "len$":I
     const/4 v5, 0x0
 
-    .local v5, i$:I
+    .local v5, "i$":I
     :goto_0
     if-ge v5, v6, :cond_0
 
     aget-object v3, v2, v5
 
     .line 358
-    .local v3, expArg:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local v3, "expArg":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     if-ne v3, v1, :cond_1
 
     .line 359
@@ -1440,34 +1425,34 @@
     move-result-object v7
 
     .line 364
-    .end local v0           #ac:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedConstructor;
-    .end local v1           #actArg:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
-    .end local v2           #arr$:[Ljava/lang/Class;
-    .end local v3           #expArg:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
-    .end local v5           #i$:I
-    .end local v6           #len$:I
+    .end local v0    # "ac":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedConstructor;
+    .end local v1    # "actArg":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
+    .end local v2    # "arr$":[Ljava/lang/Class;
+    .end local v3    # "expArg":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
+    .end local v5    # "i$":I
+    .end local v6    # "len$":I
     :goto_1
     return-object v7
 
     .line 357
-    .restart local v0       #ac:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedConstructor;
-    .restart local v1       #actArg:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
-    .restart local v2       #arr$:[Ljava/lang/Class;
-    .restart local v3       #expArg:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
-    .restart local v5       #i$:I
-    .restart local v6       #len$:I
+    .restart local v0    # "ac":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedConstructor;
+    .restart local v1    # "actArg":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
+    .restart local v2    # "arr$":[Ljava/lang/Class;
+    .restart local v3    # "expArg":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
+    .restart local v5    # "i$":I
+    .restart local v6    # "len$":I
     :cond_1
     add-int/lit8 v5, v5, 0x1
 
     goto :goto_0
 
     .line 364
-    .end local v0           #ac:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedConstructor;
-    .end local v1           #actArg:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
-    .end local v2           #arr$:[Ljava/lang/Class;
-    .end local v3           #expArg:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
-    .end local v5           #i$:I
-    .end local v6           #len$:I
+    .end local v0    # "ac":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedConstructor;
+    .end local v1    # "actArg":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
+    .end local v2    # "arr$":[Ljava/lang/Class;
+    .end local v3    # "expArg":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
+    .end local v5    # "i$":I
+    .end local v6    # "len$":I
     :cond_2
     const/4 v7, 0x0
 
@@ -1542,7 +1527,7 @@
     move-result-object v1
 
     .line 330
-    .local v1, candidates:Ljava/util/List;,"Ljava/util/List<Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;>;"
+    .local v1, "candidates":Ljava/util/List;, "Ljava/util/List<Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;>;"
     invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
 
     move-result v4
@@ -1562,12 +1547,12 @@
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
     .line 334
-    .local v3, result:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;>;"
+    .local v3, "result":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;>;"
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
 
-    .local v2, i$:Ljava/util/Iterator;
+    .local v2, "i$":Ljava/util/Iterator;
     :cond_1
     :goto_1
     invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
@@ -1583,7 +1568,7 @@
     check-cast v0, Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
 
     .line 335
-    .local v0, am:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
+    .local v0, "am":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
     invoke-virtual {p0, v0}, Lcom/flurry/org/codehaus/jackson/map/introspect/BasicBeanDescription;->isFactoryMethod(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;)Z
 
     move-result v4
@@ -1595,7 +1580,7 @@
 
     goto :goto_1
 
-    .end local v0           #am:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
+    .end local v0    # "am":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
     :cond_2
     move-object v4, v3
 
@@ -1671,7 +1656,7 @@
 
 .method public instantiateBean(Z)Ljava/lang/Object;
     .locals 6
-    .parameter "fixAccess"
+    .param p1, "fixAccess"    # Z
 
     .prologue
     .line 300
@@ -1682,7 +1667,7 @@
     move-result-object v0
 
     .line 301
-    .local v0, ac:Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedConstructor;
+    .local v0, "ac":Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedConstructor;
     if-nez v0, :cond_0
 
     .line 302
@@ -1725,11 +1710,11 @@
     move-object v1, v3
 
     .line 310
-    .local v1, e:Ljava/lang/Exception;
+    .local v1, "e":Ljava/lang/Exception;
     move-object v2, v1
 
     .line 311
-    .local v2, t:Ljava/lang/Throwable;
+    .local v2, "t":Ljava/lang/Throwable;
     :goto_1
     invoke-virtual {v2}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
 
@@ -1752,11 +1737,11 @@
 
     check-cast v2, Ljava/lang/Error;
 
-    .end local v2           #t:Ljava/lang/Throwable;
+    .end local v2    # "t":Ljava/lang/Throwable;
     throw v2
 
     .line 315
-    .restart local v2       #t:Ljava/lang/Throwable;
+    .restart local v2    # "t":Ljava/lang/Throwable;
     :cond_3
     instance-of v3, v2, Ljava/lang/RuntimeException;
 
@@ -1764,11 +1749,11 @@
 
     check-cast v2, Ljava/lang/RuntimeException;
 
-    .end local v2           #t:Ljava/lang/Throwable;
+    .end local v2    # "t":Ljava/lang/Throwable;
     throw v2
 
     .line 316
-    .restart local v2       #t:Ljava/lang/Throwable;
+    .restart local v2    # "t":Ljava/lang/Throwable;
     :cond_4
     new-instance v3, Ljava/lang/IllegalArgumentException;
 
@@ -1839,7 +1824,7 @@
 
 .method protected isFactoryMethod(Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;)Z
     .locals 5
-    .parameter "am"
+    .param p1, "am"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
 
     .prologue
     const/4 v4, 0x1
@@ -1852,7 +1837,7 @@
     move-result-object v0
 
     .line 401
-    .local v0, rt:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local v0, "rt":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-virtual {p0}, Lcom/flurry/org/codehaus/jackson/map/introspect/BasicBeanDescription;->getBeanClass()Ljava/lang/Class;
 
     move-result-object v1
@@ -1912,7 +1897,7 @@
 
 .method public resolveType(Ljava/lang/reflect/Type;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .locals 1
-    .parameter "jdkType"
+    .param p1, "jdkType"    # Ljava/lang/reflect/Type;
 
     .prologue
     .line 216

@@ -34,8 +34,8 @@
 # virtual methods
 .method public deserialize(Lcom/flurry/org/codehaus/jackson/JsonParser;Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;)Ljava/lang/Class;
     .locals 4
-    .parameter "jp"
-    .parameter "ctxt"
+    .param p1, "jp"    # Lcom/flurry/org/codehaus/jackson/JsonParser;
+    .param p2, "ctxt"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -61,7 +61,7 @@
     move-result-object v1
 
     .line 27
-    .local v1, curr:Lcom/flurry/org/codehaus/jackson/JsonToken;
+    .local v1, "curr":Lcom/flurry/org/codehaus/jackson/JsonToken;
     sget-object v3, Lcom/flurry/org/codehaus/jackson/JsonToken;->VALUE_STRING:Lcom/flurry/org/codehaus/jackson/JsonToken;
 
     if-ne v1, v3, :cond_9
@@ -72,7 +72,7 @@
     move-result-object v0
 
     .line 30
-    .local v0, className:Ljava/lang/String;
+    .local v0, "className":Ljava/lang/String;
     const/16 v3, 0x2e
 
     invoke-virtual {v0, v3}, Ljava/lang/String;->indexOf(I)I
@@ -230,7 +230,7 @@
     move-object v2, v3
 
     .line 44
-    .local v2, e:Ljava/lang/ClassNotFoundException;
+    .local v2, "e":Ljava/lang/ClassNotFoundException;
     iget-object v3, p0, Lcom/flurry/org/codehaus/jackson/map/deser/std/ClassDeserializer;->_valueClass:Ljava/lang/Class;
 
     invoke-virtual {p2, v3, v2}, Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;->instantiationException(Ljava/lang/Class;Ljava/lang/Throwable;)Lcom/flurry/org/codehaus/jackson/map/JsonMappingException;
@@ -240,8 +240,8 @@
     throw v3
 
     .line 47
-    .end local v0           #className:Ljava/lang/String;
-    .end local v2           #e:Ljava/lang/ClassNotFoundException;
+    .end local v0    # "className":Ljava/lang/String;
+    .end local v2    # "e":Ljava/lang/ClassNotFoundException;
     :cond_9
     iget-object v3, p0, Lcom/flurry/org/codehaus/jackson/map/deser/std/ClassDeserializer;->_valueClass:Ljava/lang/Class;
 
@@ -254,8 +254,8 @@
 
 .method public bridge synthetic deserialize(Lcom/flurry/org/codehaus/jackson/JsonParser;Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;)Ljava/lang/Object;
     .locals 1
-    .parameter "x0"
-    .parameter "x1"
+    .param p1, "x0"    # Lcom/flurry/org/codehaus/jackson/JsonParser;
+    .param p2, "x1"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,

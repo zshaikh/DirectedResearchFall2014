@@ -37,7 +37,7 @@
     const/4 v2, 0x0
 
     .line 27
-    .local v2, speechKit:Lcom/fusepowered/m1/android/NVASpeechKit;
+    .local v2, "speechKit":Lcom/fusepowered/m1/android/NVASpeechKit;
     iget-object v4, p0, Lcom/fusepowered/m1/android/BridgeMMSpeechkit;->mmWebViewRef:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v4}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -47,7 +47,7 @@
     check-cast v3, Lcom/fusepowered/m1/android/MMWebView;
 
     .line 28
-    .local v3, webView:Lcom/fusepowered/m1/android/MMWebView;
+    .local v3, "webView":Lcom/fusepowered/m1/android/MMWebView;
     if-eqz v3, :cond_1
 
     invoke-virtual {v3}, Lcom/fusepowered/m1/android/MMWebView;->allowSpeechCreationCommands()Z
@@ -79,17 +79,17 @@
     move-result-object v0
 
     .line 35
-    .local v0, context:Landroid/content/Context;
+    .local v0, "context":Landroid/content/Context;
     if-eqz v0, :cond_1
 
     .line 37
     new-instance v2, Lcom/fusepowered/m1/android/NVASpeechKit;
 
-    .end local v2           #speechKit:Lcom/fusepowered/m1/android/NVASpeechKit;
+    .end local v2    # "speechKit":Lcom/fusepowered/m1/android/NVASpeechKit;
     invoke-direct {v2, v3}, Lcom/fusepowered/m1/android/NVASpeechKit;-><init>(Lcom/fusepowered/m1/android/MMWebView;)V
 
     .line 38
-    .restart local v2       #speechKit:Lcom/fusepowered/m1/android/NVASpeechKit;
+    .restart local v2    # "speechKit":Lcom/fusepowered/m1/android/NVASpeechKit;
     invoke-static {v2}, Lcom/fusepowered/m1/android/BridgeMMSpeechkit;->setSpeechKit(Lcom/fusepowered/m1/android/NVASpeechKit;)V
 
     .line 39
@@ -100,7 +100,7 @@
     iget-object v1, v4, Lcom/fusepowered/m1/android/HandShake;->nuanceCredentials:Lcom/fusepowered/m1/android/HandShake$NuanceCredentials;
 
     .line 40
-    .local v1, credentials:Lcom/fusepowered/m1/android/HandShake$NuanceCredentials;
+    .local v1, "credentials":Lcom/fusepowered/m1/android/HandShake$NuanceCredentials;
     if-eqz v1, :cond_1
 
     .line 42
@@ -110,8 +110,8 @@
 
     invoke-virtual {v2, v1, v4}, Lcom/fusepowered/m1/android/NVASpeechKit;->initialize(Lcom/fusepowered/m1/android/HandShake$NuanceCredentials;Landroid/content/Context;)Z
 
-    .end local v0           #context:Landroid/content/Context;
-    .end local v1           #credentials:Lcom/fusepowered/m1/android/HandShake$NuanceCredentials;
+    .end local v0    # "context":Landroid/content/Context;
+    .end local v1    # "credentials":Lcom/fusepowered/m1/android/HandShake$NuanceCredentials;
     :cond_1
     move-object v4, v2
 
@@ -143,7 +143,7 @@
     check-cast v0, Lcom/fusepowered/m1/android/MMWebView;
 
     .line 52
-    .local v0, webView:Lcom/fusepowered/m1/android/MMWebView;
+    .local v0, "webView":Lcom/fusepowered/m1/android/MMWebView;
     if-eqz v0, :cond_0
 
     invoke-virtual {v0}, Lcom/fusepowered/m1/android/MMWebView;->allowRecordingCommands()Z
@@ -213,7 +213,7 @@
 
 .method static setSpeechKit(Lcom/fusepowered/m1/android/NVASpeechKit;)V
     .locals 1
-    .parameter "speechKit"
+    .param p0, "speechKit"    # Lcom/fusepowered/m1/android/NVASpeechKit;
 
     .prologue
     .line 420
@@ -238,7 +238,6 @@
 # virtual methods
 .method public addCustomVoiceWords(Ljava/util/HashMap;)Lcom/fusepowered/m1/android/MMJSResponse;
     .locals 5
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -253,13 +252,13 @@
 
     .prologue
     .line 318
-    .local p1, arguments:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p1, "arguments":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-direct {p0}, Lcom/fusepowered/m1/android/BridgeMMSpeechkit;->getCreateSpeechKit()Lcom/fusepowered/m1/android/NVASpeechKit;
 
     move-result-object v0
 
     .line 319
-    .local v0, speechKit:Lcom/fusepowered/m1/android/NVASpeechKit;
+    .local v0, "speechKit":Lcom/fusepowered/m1/android/NVASpeechKit;
     if-nez v0, :cond_0
 
     .line 321
@@ -284,7 +283,7 @@
     check-cast v2, Ljava/lang/String;
 
     .line 324
-    .local v2, words:Ljava/lang/String;
+    .local v2, "words":Ljava/lang/String;
     invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v3
@@ -299,7 +298,7 @@
     move-result-object v1
 
     .line 327
-    .local v1, wordArray:[Ljava/lang/String;
+    .local v1, "wordArray":[Ljava/lang/String;
     sget-object v3, Lcom/fusepowered/m1/android/NVASpeechKit$CustomWordsOp;->Add:Lcom/fusepowered/m1/android/NVASpeechKit$CustomWordsOp;
 
     invoke-virtual {v0, v3, v1}, Lcom/fusepowered/m1/android/NVASpeechKit;->updateCustomWords(Lcom/fusepowered/m1/android/NVASpeechKit$CustomWordsOp;[Ljava/lang/String;)V
@@ -335,7 +334,7 @@
     goto :goto_0
 
     .line 332
-    .end local v1           #wordArray:[Ljava/lang/String;
+    .end local v1    # "wordArray":[Ljava/lang/String;
     :cond_1
     const/4 v3, 0x0
 
@@ -344,7 +343,6 @@
 
 .method public cacheAudio(Ljava/util/HashMap;)Lcom/fusepowered/m1/android/MMJSResponse;
     .locals 5
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -359,7 +357,7 @@
 
     .prologue
     .line 111
-    .local p1, arguments:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p1, "arguments":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v3, "url"
 
     invoke-virtual {p1, v3}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -369,7 +367,7 @@
     check-cast v2, Ljava/lang/String;
 
     .line 113
-    .local v2, url:Ljava/lang/String;
+    .local v2, "url":Ljava/lang/String;
     invoke-static {v2}, Landroid/webkit/URLUtil;->isValidUrl(Ljava/lang/String;)Z
 
     move-result v3
@@ -403,7 +401,7 @@
     check-cast v0, Landroid/content/Context;
 
     .line 120
-    .local v0, context:Landroid/content/Context;
+    .local v0, "context":Landroid/content/Context;
     if-eqz v0, :cond_1
 
     .line 122
@@ -420,7 +418,7 @@
     move-result-object v1
 
     .line 123
-    .local v1, fileName:Ljava/lang/String;
+    .local v1, "fileName":Ljava/lang/String;
     invoke-static {v2, v1, v0}, Lcom/fusepowered/m1/android/AdCache;->downloadComponentToCache(Ljava/lang/String;Ljava/lang/String;Landroid/content/Context;)Z
 
     move-result v3
@@ -458,8 +456,8 @@
     goto :goto_0
 
     .line 131
-    .end local v0           #context:Landroid/content/Context;
-    .end local v1           #fileName:Ljava/lang/String;
+    .end local v0    # "context":Landroid/content/Context;
+    .end local v1    # "fileName":Ljava/lang/String;
     :cond_1
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -488,7 +486,6 @@
 
 .method public deleteCustomVoiceWords(Ljava/util/HashMap;)Lcom/fusepowered/m1/android/MMJSResponse;
     .locals 5
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -503,13 +500,13 @@
 
     .prologue
     .line 341
-    .local p1, arguments:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p1, "arguments":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-direct {p0}, Lcom/fusepowered/m1/android/BridgeMMSpeechkit;->getCreateSpeechKit()Lcom/fusepowered/m1/android/NVASpeechKit;
 
     move-result-object v0
 
     .line 342
-    .local v0, speechKit:Lcom/fusepowered/m1/android/NVASpeechKit;
+    .local v0, "speechKit":Lcom/fusepowered/m1/android/NVASpeechKit;
     if-nez v0, :cond_0
 
     .line 344
@@ -534,7 +531,7 @@
     check-cast v2, Ljava/lang/String;
 
     .line 348
-    .local v2, words:Ljava/lang/String;
+    .local v2, "words":Ljava/lang/String;
     invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v3
@@ -549,7 +546,7 @@
     move-result-object v1
 
     .line 351
-    .local v1, wordArray:[Ljava/lang/String;
+    .local v1, "wordArray":[Ljava/lang/String;
     sget-object v3, Lcom/fusepowered/m1/android/NVASpeechKit$CustomWordsOp;->Remove:Lcom/fusepowered/m1/android/NVASpeechKit$CustomWordsOp;
 
     invoke-virtual {v0, v3, v1}, Lcom/fusepowered/m1/android/NVASpeechKit;->updateCustomWords(Lcom/fusepowered/m1/android/NVASpeechKit$CustomWordsOp;[Ljava/lang/String;)V
@@ -585,7 +582,7 @@
     goto :goto_0
 
     .line 356
-    .end local v1           #wordArray:[Ljava/lang/String;
+    .end local v1    # "wordArray":[Ljava/lang/String;
     :cond_1
     const/4 v3, 0x0
 
@@ -594,7 +591,6 @@
 
 .method public endRecording(Ljava/util/HashMap;)Lcom/fusepowered/m1/android/MMJSResponse;
     .locals 2
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -609,13 +605,13 @@
 
     .prologue
     .line 92
-    .local p1, arguments:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p1, "arguments":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-direct {p0}, Lcom/fusepowered/m1/android/BridgeMMSpeechkit;->getSpeechKit()Lcom/fusepowered/m1/android/NVASpeechKit;
 
     move-result-object v0
 
     .line 93
-    .local v0, speechKit:Lcom/fusepowered/m1/android/NVASpeechKit;
+    .local v0, "speechKit":Lcom/fusepowered/m1/android/NVASpeechKit;
     if-nez v0, :cond_0
 
     .line 95
@@ -678,7 +674,6 @@
 
 .method public getSessionId(Ljava/util/HashMap;)Lcom/fusepowered/m1/android/MMJSResponse;
     .locals 4
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -692,7 +687,7 @@
     .end annotation
 
     .prologue
-    .local p1, arguments:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p1, "arguments":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v3, "No SpeechKit session open."
 
     .line 139
@@ -701,7 +696,7 @@
     move-result-object v1
 
     .line 140
-    .local v1, speechKit:Lcom/fusepowered/m1/android/NVASpeechKit;
+    .local v1, "speechKit":Lcom/fusepowered/m1/android/NVASpeechKit;
     if-nez v1, :cond_0
 
     .line 142
@@ -722,7 +717,7 @@
     move-result-object v0
 
     .line 145
-    .local v0, sessionId:Ljava/lang/String;
+    .local v0, "sessionId":Ljava/lang/String;
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v2
@@ -749,7 +744,7 @@
 
 .method injectJavascript(Ljava/lang/String;)V
     .locals 2
-    .parameter "javascript"
+    .param p1, "javascript"    # Ljava/lang/String;
 
     .prologue
     .line 225
@@ -762,7 +757,7 @@
     check-cast v0, Lcom/fusepowered/m1/android/MMWebView;
 
     .line 226
-    .local v0, webView:Lcom/fusepowered/m1/android/MMWebView;
+    .local v0, "webView":Lcom/fusepowered/m1/android/MMWebView;
     if-eqz v0, :cond_0
 
     .line 228
@@ -775,7 +770,7 @@
 
 .method public onCompletion(Landroid/media/MediaPlayer;)V
     .locals 3
-    .parameter "mp"
+    .param p1, "mp"    # Landroid/media/MediaPlayer;
 
     .prologue
     .line 203
@@ -793,7 +788,7 @@
     check-cast v1, Landroid/content/Context;
 
     .line 206
-    .local v1, context:Landroid/content/Context;
+    .local v1, "context":Landroid/content/Context;
     if-eqz v1, :cond_0
 
     .line 208
@@ -802,7 +797,7 @@
     move-result-object v0
 
     .line 209
-    .local v0, audio:Lcom/fusepowered/m1/android/BridgeMMMedia$Audio;
+    .local v0, "audio":Lcom/fusepowered/m1/android/BridgeMMMedia$Audio;
     if-eqz v0, :cond_0
 
     .line 211
@@ -812,14 +807,14 @@
     invoke-virtual {v0, p0}, Lcom/fusepowered/m1/android/BridgeMMMedia$Audio;->removePeriodicListener(Lcom/fusepowered/m1/android/BridgeMMMedia$Audio$PeriodicListener;)Z
 
     .line 215
-    .end local v0           #audio:Lcom/fusepowered/m1/android/BridgeMMMedia$Audio;
+    .end local v0    # "audio":Lcom/fusepowered/m1/android/BridgeMMMedia$Audio;
     :cond_0
     return-void
 .end method
 
 .method public onUpdate(I)V
     .locals 2
-    .parameter "currentPositionMillis"
+    .param p1, "currentPositionMillis"    # I
 
     .prologue
     .line 220
@@ -855,7 +850,6 @@
 
 .method public playAudio(Ljava/util/HashMap;)Lcom/fusepowered/m1/android/MMJSResponse;
     .locals 9
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -869,7 +863,7 @@
     .end annotation
 
     .prologue
-    .local p1, arguments:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p1, "arguments":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v8, "url"
 
     .line 156
@@ -878,7 +872,7 @@
     move-result-object v5
 
     .line 157
-    .local v5, speechKit:Lcom/fusepowered/m1/android/NVASpeechKit;
+    .local v5, "speechKit":Lcom/fusepowered/m1/android/NVASpeechKit;
     if-nez v5, :cond_0
 
     .line 159
@@ -903,7 +897,7 @@
     check-cast v6, Ljava/lang/String;
 
     .line 164
-    .local v6, url:Ljava/lang/String;
+    .local v6, "url":Ljava/lang/String;
     invoke-static {v6}, Landroid/webkit/URLUtil;->isValidUrl(Ljava/lang/String;)Z
 
     move-result v7
@@ -926,7 +920,7 @@
     invoke-direct {v2}, Lcom/fusepowered/m1/android/BridgeMMMedia;-><init>()V
 
     .line 170
-    .local v2, media:Lcom/fusepowered/m1/android/BridgeMMMedia;
+    .local v2, "media":Lcom/fusepowered/m1/android/BridgeMMMedia;
     iget-object v7, p0, Lcom/fusepowered/m1/android/BridgeMMSpeechkit;->contextRef:Ljava/lang/ref/WeakReference;
 
     if-eqz v7, :cond_4
@@ -952,7 +946,7 @@
     check-cast v3, Ljava/lang/String;
 
     .line 174
-    .local v3, path:Ljava/lang/String;
+    .local v3, "path":Ljava/lang/String;
     invoke-static {v3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v7
@@ -969,7 +963,7 @@
     check-cast v1, Landroid/content/Context;
 
     .line 177
-    .local v1, context:Landroid/content/Context;
+    .local v1, "context":Landroid/content/Context;
     if-eqz v1, :cond_4
 
     .line 179
@@ -978,7 +972,7 @@
     move-result-object v0
 
     .line 180
-    .local v0, audio:Lcom/fusepowered/m1/android/BridgeMMMedia$Audio;
+    .local v0, "audio":Lcom/fusepowered/m1/android/BridgeMMMedia$Audio;
     if-eqz v0, :cond_2
 
     .line 182
@@ -999,7 +993,7 @@
     move-result-object v4
 
     .line 187
-    .local v4, response:Lcom/fusepowered/m1/android/MMJSResponse;
+    .local v4, "response":Lcom/fusepowered/m1/android/MMJSResponse;
     if-eqz v4, :cond_3
 
     iget v7, v4, Lcom/fusepowered/m1/android/MMJSResponse;->result:I
@@ -1020,10 +1014,10 @@
     goto :goto_0
 
     .line 197
-    .end local v0           #audio:Lcom/fusepowered/m1/android/BridgeMMMedia$Audio;
-    .end local v1           #context:Landroid/content/Context;
-    .end local v3           #path:Ljava/lang/String;
-    .end local v4           #response:Lcom/fusepowered/m1/android/MMJSResponse;
+    .end local v0    # "audio":Lcom/fusepowered/m1/android/BridgeMMMedia$Audio;
+    .end local v1    # "context":Landroid/content/Context;
+    .end local v3    # "path":Ljava/lang/String;
+    .end local v4    # "response":Lcom/fusepowered/m1/android/MMJSResponse;
     :cond_4
     const/4 v7, 0x0
 
@@ -1032,7 +1026,6 @@
 
 .method public releaseVoice(Ljava/util/HashMap;)Lcom/fusepowered/m1/android/MMJSResponse;
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1047,7 +1040,7 @@
 
     .prologue
     .line 299
-    .local p1, arguments:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p1, "arguments":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-static {}, Lcom/fusepowered/m1/android/BridgeMMSpeechkit;->releaseSpeechKit()Z
 
     move-result v0
@@ -1077,7 +1070,6 @@
 
 .method public sampleBackgroundAudioLevel(Ljava/util/HashMap;)Lcom/fusepowered/m1/android/MMJSResponse;
     .locals 2
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1092,13 +1084,13 @@
 
     .prologue
     .line 284
-    .local p1, arguments:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p1, "arguments":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-direct {p0}, Lcom/fusepowered/m1/android/BridgeMMSpeechkit;->getCreateSpeechKit()Lcom/fusepowered/m1/android/NVASpeechKit;
 
     move-result-object v0
 
     .line 285
-    .local v0, speechKit:Lcom/fusepowered/m1/android/NVASpeechKit;
+    .local v0, "speechKit":Lcom/fusepowered/m1/android/NVASpeechKit;
     if-nez v0, :cond_0
 
     .line 287
@@ -1124,7 +1116,6 @@
 
 .method public startRecording(Ljava/util/HashMap;)Lcom/fusepowered/m1/android/MMJSResponse;
     .locals 3
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1139,13 +1130,13 @@
 
     .prologue
     .line 70
-    .local p1, arguments:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p1, "arguments":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-direct {p0}, Lcom/fusepowered/m1/android/BridgeMMSpeechkit;->getCreateSpeechKit()Lcom/fusepowered/m1/android/NVASpeechKit;
 
     move-result-object v1
 
     .line 71
-    .local v1, speechKit:Lcom/fusepowered/m1/android/NVASpeechKit;
+    .local v1, "speechKit":Lcom/fusepowered/m1/android/NVASpeechKit;
     if-nez v1, :cond_0
 
     .line 73
@@ -1170,7 +1161,7 @@
     check-cast v0, Ljava/lang/String;
 
     .line 77
-    .local v0, language:Ljava/lang/String;
+    .local v0, "language":Ljava/lang/String;
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v2
@@ -1208,7 +1199,6 @@
 
 .method public stopAudio(Ljava/util/HashMap;)Lcom/fusepowered/m1/android/MMJSResponse;
     .locals 3
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1223,13 +1213,13 @@
 
     .prologue
     .line 262
-    .local p1, arguments:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p1, "arguments":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-direct {p0}, Lcom/fusepowered/m1/android/BridgeMMSpeechkit;->getSpeechKit()Lcom/fusepowered/m1/android/NVASpeechKit;
 
     move-result-object v1
 
     .line 263
-    .local v1, speechKit:Lcom/fusepowered/m1/android/NVASpeechKit;
+    .local v1, "speechKit":Lcom/fusepowered/m1/android/NVASpeechKit;
     if-nez v1, :cond_0
 
     .line 265
@@ -1240,12 +1230,12 @@
     move-result-object v2
 
     .line 276
-    .end local p0
+    .end local p0    # "this":Lcom/fusepowered/m1/android/BridgeMMSpeechkit;
     :goto_0
     return-object v2
 
     .line 268
-    .restart local p0
+    .restart local p0    # "this":Lcom/fusepowered/m1/android/BridgeMMSpeechkit;
     :cond_0
     invoke-virtual {v1}, Lcom/fusepowered/m1/android/NVASpeechKit;->stopActions()V
 
@@ -1255,7 +1245,7 @@
     invoke-direct {v0}, Lcom/fusepowered/m1/android/BridgeMMMedia;-><init>()V
 
     .line 271
-    .local v0, media:Lcom/fusepowered/m1/android/BridgeMMMedia;
+    .local v0, "media":Lcom/fusepowered/m1/android/BridgeMMMedia;
     iget-object v2, p0, Lcom/fusepowered/m1/android/BridgeMMSpeechkit;->contextRef:Ljava/lang/ref/WeakReference;
 
     if-eqz v2, :cond_1
@@ -1267,7 +1257,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/fusepowered/m1/android/BridgeMMSpeechkit;
     check-cast p0, Landroid/content/Context;
 
     invoke-virtual {v0, p0}, Lcom/fusepowered/m1/android/BridgeMMMedia;->setContext(Landroid/content/Context;)V
@@ -1280,7 +1270,7 @@
     goto :goto_0
 
     .line 276
-    .restart local p0
+    .restart local p0    # "this":Lcom/fusepowered/m1/android/BridgeMMSpeechkit;
     :cond_1
     invoke-static {}, Lcom/fusepowered/m1/android/MMJSResponse;->responseWithSuccess()Lcom/fusepowered/m1/android/MMJSResponse;
 
@@ -1291,7 +1281,6 @@
 
 .method public textToSpeech(Ljava/util/HashMap;)Lcom/fusepowered/m1/android/MMJSResponse;
     .locals 4
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1306,7 +1295,7 @@
 
     .prologue
     .line 238
-    .local p1, arguments:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p1, "arguments":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v3, "@@-Calling textToSpeech"
 
     invoke-static {v3}, Lcom/fusepowered/m1/android/MMSDK$Log;->d(Ljava/lang/String;)V
@@ -1317,7 +1306,7 @@
     move-result-object v1
 
     .line 240
-    .local v1, speechKit:Lcom/fusepowered/m1/android/NVASpeechKit;
+    .local v1, "speechKit":Lcom/fusepowered/m1/android/NVASpeechKit;
     if-nez v1, :cond_0
 
     .line 242
@@ -1342,7 +1331,7 @@
     check-cast v0, Ljava/lang/String;
 
     .line 246
-    .local v0, language:Ljava/lang/String;
+    .local v0, "language":Ljava/lang/String;
     const-string v3, "text"
 
     invoke-virtual {p1, v3}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1352,7 +1341,7 @@
     check-cast v2, Ljava/lang/String;
 
     .line 247
-    .local v2, text:Ljava/lang/String;
+    .local v2, "text":Ljava/lang/String;
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v3

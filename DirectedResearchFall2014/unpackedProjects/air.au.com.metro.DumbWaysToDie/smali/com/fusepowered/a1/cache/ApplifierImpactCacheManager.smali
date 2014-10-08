@@ -120,7 +120,7 @@
 
 .method private addToDownloadingHandlers(Lcom/fusepowered/a1/campaign/ApplifierImpactCampaignHandler;)V
     .locals 1
-    .parameter "campaignHandler"
+    .param p1, "campaignHandler"    # Lcom/fusepowered/a1/campaign/ApplifierImpactCampaignHandler;
 
     .prologue
     .line 147
@@ -147,7 +147,7 @@
 
 .method private addToUpdatingHandlers(Lcom/fusepowered/a1/campaign/ApplifierImpactCampaignHandler;)V
     .locals 1
-    .parameter "campaignHandler"
+    .param p1, "campaignHandler"    # Lcom/fusepowered/a1/campaign/ApplifierImpactCampaignHandler;
 
     .prologue
     .line 135
@@ -174,7 +174,7 @@
 
 .method private removeFromDownloadingHandlers(Lcom/fusepowered/a1/campaign/ApplifierImpactCampaignHandler;)V
     .locals 1
-    .parameter "campaignHandler"
+    .param p1, "campaignHandler"    # Lcom/fusepowered/a1/campaign/ApplifierImpactCampaignHandler;
 
     .prologue
     .line 142
@@ -194,7 +194,7 @@
 
 .method private removeFromUpdatingHandlers(Lcom/fusepowered/a1/campaign/ApplifierImpactCampaignHandler;)V
     .locals 1
-    .parameter "campaignHandler"
+    .param p1, "campaignHandler"    # Lcom/fusepowered/a1/campaign/ApplifierImpactCampaignHandler;
 
     .prologue
     .line 130
@@ -297,7 +297,7 @@
     check-cast v0, Lcom/fusepowered/a1/campaign/ApplifierImpactCampaignHandler;
 
     .line 91
-    .local v0, ch:Lcom/fusepowered/a1/campaign/ApplifierImpactCampaignHandler;
+    .local v0, "ch":Lcom/fusepowered/a1/campaign/ApplifierImpactCampaignHandler;
     invoke-virtual {v0, v3}, Lcom/fusepowered/a1/campaign/ApplifierImpactCampaignHandler;->setListener(Lcom/fusepowered/a1/campaign/IApplifierImpactCampaignHandlerListener;)V
 
     .line 92
@@ -306,7 +306,7 @@
     goto :goto_0
 
     .line 101
-    .end local v0           #ch:Lcom/fusepowered/a1/campaign/ApplifierImpactCampaignHandler;
+    .end local v0    # "ch":Lcom/fusepowered/a1/campaign/ApplifierImpactCampaignHandler;
     :cond_4
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -315,7 +315,7 @@
     check-cast v0, Lcom/fusepowered/a1/campaign/ApplifierImpactCampaignHandler;
 
     .line 102
-    .restart local v0       #ch:Lcom/fusepowered/a1/campaign/ApplifierImpactCampaignHandler;
+    .restart local v0    # "ch":Lcom/fusepowered/a1/campaign/ApplifierImpactCampaignHandler;
     invoke-virtual {v0, v3}, Lcom/fusepowered/a1/campaign/ApplifierImpactCampaignHandler;->setListener(Lcom/fusepowered/a1/campaign/IApplifierImpactCampaignHandlerListener;)V
 
     .line 103
@@ -354,7 +354,6 @@
 
 .method public initCache(Ljava/util/ArrayList;)V
     .locals 0
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -367,7 +366,7 @@
 
     .prologue
     .line 39
-    .local p1, activeList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;>;"
+    .local p1, "activeList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;>;"
     invoke-virtual {p0, p1}, Lcom/fusepowered/a1/cache/ApplifierImpactCacheManager;->updateCache(Ljava/util/ArrayList;)V
 
     .line 40
@@ -376,7 +375,7 @@
 
 .method public onCampaignHandled(Lcom/fusepowered/a1/campaign/ApplifierImpactCampaignHandler;)V
     .locals 2
-    .parameter "campaignHandler"
+    .param p1, "campaignHandler"    # Lcom/fusepowered/a1/campaign/ApplifierImpactCampaignHandler;
 
     .prologue
     .line 117
@@ -416,7 +415,7 @@
 
 .method public setDownloadListener(Lcom/fusepowered/a1/cache/IApplifierImpactCacheListener;)V
     .locals 0
-    .parameter "listener"
+    .param p1, "listener"    # Lcom/fusepowered/a1/cache/IApplifierImpactCacheListener;
 
     .prologue
     .line 31
@@ -428,7 +427,6 @@
 
 .method public updateCache(Ljava/util/ArrayList;)V
     .locals 9
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -440,7 +438,7 @@
     .end annotation
 
     .prologue
-    .local p1, activeList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;>;"
+    .local p1, "activeList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;>;"
     const/4 v6, 0x0
 
     .line 43
@@ -485,13 +483,13 @@
     invoke-direct {v3, v5}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
     .line 54
-    .local v3, dir:Ljava/io/File;
+    .local v3, "dir":Ljava/io/File;
     invoke-virtual {v3}, Ljava/io/File;->listFiles()[Ljava/io/File;
 
     move-result-object v4
 
     .line 56
-    .local v4, fileList:[Ljava/io/File;
+    .local v4, "fileList":[Ljava/io/File;
     if-eqz v4, :cond_2
 
     .line 57
@@ -501,8 +499,8 @@
     if-lt v6, v5, :cond_5
 
     .line 69
-    .end local v3           #dir:Ljava/io/File;
-    .end local v4           #fileList:[Ljava/io/File;
+    .end local v3    # "dir":Ljava/io/File;
+    .end local v4    # "fileList":[Ljava/io/File;
     :cond_2
     if-eqz p1, :cond_4
 
@@ -550,13 +548,13 @@
     return-void
 
     .line 57
-    .restart local v3       #dir:Ljava/io/File;
-    .restart local v4       #fileList:[Ljava/io/File;
+    .restart local v3    # "dir":Ljava/io/File;
+    .restart local v4    # "fileList":[Ljava/io/File;
     :cond_5
     aget-object v2, v4, v6
 
     .line 58
-    .local v2, currentFile:Ljava/io/File;
+    .local v2, "currentFile":Ljava/io/File;
     new-instance v7, Ljava/lang/StringBuilder;
 
     const-string v8, "Checking file: "
@@ -628,9 +626,9 @@
     goto :goto_0
 
     .line 72
-    .end local v2           #currentFile:Ljava/io/File;
-    .end local v3           #dir:Ljava/io/File;
-    .end local v4           #fileList:[Ljava/io/File;
+    .end local v2    # "currentFile":Ljava/io/File;
+    .end local v3    # "dir":Ljava/io/File;
+    .end local v4    # "fileList":[Ljava/io/File;
     :cond_7
     invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -639,13 +637,13 @@
     check-cast v0, Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;
 
     .line 73
-    .local v0, campaign:Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;
+    .local v0, "campaign":Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;
     new-instance v1, Lcom/fusepowered/a1/campaign/ApplifierImpactCampaignHandler;
 
     invoke-direct {v1, v0}, Lcom/fusepowered/a1/campaign/ApplifierImpactCampaignHandler;-><init>(Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;)V
 
     .line 74
-    .local v1, campaignHandler:Lcom/fusepowered/a1/campaign/ApplifierImpactCampaignHandler;
+    .local v1, "campaignHandler":Lcom/fusepowered/a1/campaign/ApplifierImpactCampaignHandler;
     invoke-direct {p0, v1}, Lcom/fusepowered/a1/cache/ApplifierImpactCacheManager;->addToUpdatingHandlers(Lcom/fusepowered/a1/campaign/ApplifierImpactCampaignHandler;)V
 
     .line 75

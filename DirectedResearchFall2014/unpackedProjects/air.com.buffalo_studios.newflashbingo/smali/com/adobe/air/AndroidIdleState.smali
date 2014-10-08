@@ -42,7 +42,6 @@
 
 .method private constructor <init>(Landroid/content/Context;)V
     .locals 2
-    .parameter
 
     .prologue
     const/4 v1, 0x0
@@ -118,7 +117,6 @@
 
 .method public static GetIdleStateManager(Landroid/content/Context;)Lcom/adobe/air/AndroidIdleState;
     .locals 1
-    .parameter
 
     .prologue
     .line 30
@@ -142,7 +140,6 @@
 
 .method static synthetic access$000(Lcom/adobe/air/AndroidIdleState;)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 14
@@ -153,8 +150,6 @@
 
 .method static synthetic access$002(Lcom/adobe/air/AndroidIdleState;Z)Z
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 14
@@ -167,8 +162,6 @@
 # virtual methods
 .method public ChangeIdleState(Landroid/content/Context;I)V
     .locals 3
-    .parameter
-    .parameter
 
     .prologue
     .line 79

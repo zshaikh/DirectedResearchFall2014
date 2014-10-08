@@ -170,9 +170,6 @@
 
 .method private constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 9
@@ -187,7 +184,6 @@
 
 .method public static fromString(Ljava/lang/String;)Lcom/inmobi/androidsdk/ai/controller/util/IMTransitionStringEnum;
     .locals 5
-    .parameter
 
     .prologue
     .line 18
@@ -239,7 +235,6 @@
 
 .method public static valueOf(Ljava/lang/String;)Lcom/inmobi/androidsdk/ai/controller/util/IMTransitionStringEnum;
     .locals 1
-    .parameter
 
     .prologue
     .line 1

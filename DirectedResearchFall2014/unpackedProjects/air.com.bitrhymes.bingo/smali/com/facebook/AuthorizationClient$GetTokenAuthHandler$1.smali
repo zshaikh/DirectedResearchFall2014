@@ -26,8 +26,6 @@
 # direct methods
 .method constructor <init>(Lcom/facebook/AuthorizationClient$GetTokenAuthHandler;Lcom/facebook/AuthorizationClient$AuthorizationRequest;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 1
@@ -45,7 +43,7 @@
 # virtual methods
 .method public completed(Landroid/os/Bundle;)V
     .locals 2
-    .parameter "result"
+    .param p1, "result"    # Landroid/os/Bundle;
 
     .prologue
     .line 739

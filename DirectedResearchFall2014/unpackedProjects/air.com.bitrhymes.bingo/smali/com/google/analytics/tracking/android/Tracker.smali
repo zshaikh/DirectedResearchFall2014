@@ -13,7 +13,7 @@
 
 
 # static fields
-.field private static final DF:Ljava/text/DecimalFormat; = null
+.field private static final DF:Ljava/text/DecimalFormat;
 
 .field static final MAX_TOKENS:J = 0x1d4c0L
 
@@ -100,8 +100,8 @@
 
 .method constructor <init>(Ljava/lang/String;Lcom/google/analytics/tracking/android/TrackerHandler;)V
     .locals 4
-    .parameter "trackingId"
-    .parameter "handler"
+    .param p1, "trackingId"    # Ljava/lang/String;
+    .param p2, "handler"    # Lcom/google/analytics/tracking/android/TrackerHandler;
 
     .prologue
     const/4 v3, 0x1
@@ -215,8 +215,8 @@
 
 .method private constructItem(Lcom/google/analytics/tracking/android/Transaction$Item;Lcom/google/analytics/tracking/android/Transaction;)Ljava/util/Map;
     .locals 4
-    .parameter "item"
-    .parameter "trans"
+    .param p1, "item"    # Lcom/google/analytics/tracking/android/Transaction$Item;
+    .param p2, "trans"    # Lcom/google/analytics/tracking/android/Transaction;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -238,7 +238,7 @@
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     .line 673
-    .local v0, params:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v0, "params":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v1, "transactionId"
 
     invoke-virtual {p2}, Lcom/google/analytics/tracking/android/Transaction;->getTransactionId()Ljava/lang/String;
@@ -324,8 +324,7 @@
 
 .method private internalSend(Ljava/lang/String;Ljava/util/Map;)V
     .locals 2
-    .parameter "hitType"
-    .parameter
+    .param p1, "hitType"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -339,7 +338,7 @@
     .end annotation
 
     .prologue
-    .local p2, params:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p2, "params":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     const/4 v1, 0x1
 
     .line 375
@@ -351,11 +350,11 @@
     .line 377
     new-instance p2, Ljava/util/HashMap;
 
-    .end local p2           #params:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .end local p2    # "params":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-direct {p2}, Ljava/util/HashMap;-><init>()V
 
     .line 379
-    .restart local p2       #params:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .restart local p2    # "params":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     :cond_0
     const-string v0, "hitType"
 
@@ -408,7 +407,7 @@
 
 .method private static microsToCurrencyString(J)Ljava/lang/String;
     .locals 5
-    .parameter "currencyInMicros"
+    .param p0, "currencyInMicros"    # J
 
     .prologue
     .line 649
@@ -449,10 +448,10 @@
 
 .method public constructEvent(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)Ljava/util/Map;
     .locals 4
-    .parameter "category"
-    .parameter "action"
-    .parameter "label"
-    .parameter "value"
+    .param p1, "category"    # Ljava/lang/String;
+    .param p2, "action"    # Ljava/lang/String;
+    .param p3, "label"    # Ljava/lang/String;
+    .param p4, "value"    # Ljava/lang/Long;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -476,7 +475,7 @@
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     .line 638
-    .local v0, params:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v0, "params":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v1, "eventCategory"
 
     invoke-interface {v0, v1, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -523,8 +522,8 @@
 
 .method public constructException(Ljava/lang/String;Z)Ljava/util/Map;
     .locals 3
-    .parameter "exceptionDescription"
-    .parameter "fatal"
+    .param p1, "exceptionDescription"    # Ljava/lang/String;
+    .param p2, "fatal"    # Z
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -545,7 +544,7 @@
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     .line 691
-    .local v0, params:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v0, "params":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v1, "exDescription"
 
     invoke-interface {v0, v1, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -574,9 +573,9 @@
 
 .method public constructRawException(Ljava/lang/String;Ljava/lang/Throwable;Z)Ljava/util/Map;
     .locals 5
-    .parameter "threadName"
-    .parameter "exception"
-    .parameter "fatal"
+    .param p1, "threadName"    # Ljava/lang/String;
+    .param p2, "exception"    # Ljava/lang/Throwable;
+    .param p3, "fatal"    # Z
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -604,19 +603,19 @@
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
     .line 704
-    .local v1, params:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v1, "params":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     new-instance v0, Ljava/io/ByteArrayOutputStream;
 
     invoke-direct {v0}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
     .line 705
-    .local v0, byteStream:Ljava/io/ByteArrayOutputStream;
+    .local v0, "byteStream":Ljava/io/ByteArrayOutputStream;
     new-instance v2, Ljava/io/ObjectOutputStream;
 
     invoke-direct {v2, v0}, Ljava/io/ObjectOutputStream;-><init>(Ljava/io/OutputStream;)V
 
     .line 706
-    .local v2, stream:Ljava/io/ObjectOutputStream;
+    .local v2, "stream":Ljava/io/ObjectOutputStream;
     invoke-virtual {v2, p2}, Ljava/io/ObjectOutputStream;->writeObject(Ljava/lang/Object;)V
 
     .line 707
@@ -668,9 +667,9 @@
 
 .method public constructSocial(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/util/Map;
     .locals 3
-    .parameter "network"
-    .parameter "action"
-    .parameter "target"
+    .param p1, "network"    # Ljava/lang/String;
+    .param p2, "action"    # Ljava/lang/String;
+    .param p3, "target"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -693,7 +692,7 @@
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     .line 739
-    .local v0, params:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v0, "params":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v1, "socialNetwork"
 
     invoke-interface {v0, v1, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -723,10 +722,10 @@
 
 .method public constructTiming(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/util/Map;
     .locals 3
-    .parameter "category"
-    .parameter "intervalInMilliseconds"
-    .parameter "name"
-    .parameter "label"
+    .param p1, "category"    # Ljava/lang/String;
+    .param p2, "intervalInMilliseconds"    # J
+    .param p4, "name"    # Ljava/lang/String;
+    .param p5, "label"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -750,7 +749,7 @@
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     .line 725
-    .local v0, params:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v0, "params":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v1, "timingCategory"
 
     invoke-interface {v0, v1, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -789,7 +788,7 @@
 
 .method public constructTransaction(Lcom/google/analytics/tracking/android/Transaction;)Ljava/util/Map;
     .locals 4
-    .parameter "trans"
+    .param p1, "trans"    # Lcom/google/analytics/tracking/android/Transaction;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -810,7 +809,7 @@
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     .line 659
-    .local v0, params:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v0, "params":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v1, "transactionId"
 
     invoke-virtual {p1}, Lcom/google/analytics/tracking/android/Transaction;->getTransactionId()Ljava/lang/String;
@@ -891,7 +890,7 @@
 
 .method public get(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
-    .parameter "key"
+    .param p1, "key"    # Ljava/lang/String;
 
     .prologue
     .line 393
@@ -1096,8 +1095,7 @@
 
 .method public send(Ljava/lang/String;Ljava/util/Map;)V
     .locals 2
-    .parameter "hitType"
-    .parameter
+    .param p1, "hitType"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1112,7 +1110,7 @@
 
     .prologue
     .line 369
-    .local p2, params:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p2, "params":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-direct {p0}, Lcom/google/analytics/tracking/android/Tracker;->assertTrackerOpen()V
 
     .line 370
@@ -1133,10 +1131,10 @@
 
 .method public sendEvent(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)V
     .locals 2
-    .parameter "category"
-    .parameter "action"
-    .parameter "label"
-    .parameter "value"
+    .param p1, "category"    # Ljava/lang/String;
+    .param p2, "action"    # Ljava/lang/String;
+    .param p3, "label"    # Ljava/lang/String;
+    .param p4, "value"    # Ljava/lang/Long;
 
     .prologue
     .line 213
@@ -1184,9 +1182,9 @@
 
 .method public sendException(Ljava/lang/String;Ljava/lang/Throwable;Z)V
     .locals 6
-    .parameter "threadName"
-    .parameter "exception"
-    .parameter "fatal"
+    .param p1, "threadName"    # Ljava/lang/String;
+    .param p2, "exception"    # Ljava/lang/Throwable;
+    .param p3, "fatal"    # Z
 
     .prologue
     const/4 v5, 0x1
@@ -1218,7 +1216,7 @@
     move-result-object v0
 
     .line 300
-    .local v0, description:Ljava/lang/String;
+    .local v0, "description":Ljava/lang/String;
     :goto_0
     invoke-static {}, Lcom/google/analytics/tracking/android/GAUsage;->getInstance()Lcom/google/analytics/tracking/android/GAUsage;
 
@@ -1237,7 +1235,7 @@
     invoke-virtual {v2, v4}, Lcom/google/analytics/tracking/android/GAUsage;->setDisableUsage(Z)V
 
     .line 303
-    .end local v0           #description:Ljava/lang/String;
+    .end local v0    # "description":Ljava/lang/String;
     :goto_1
     return-void
 
@@ -1281,7 +1279,7 @@
     move-object v1, v2
 
     .line 296
-    .local v1, e:Ljava/io/IOException;
+    .local v1, "e":Ljava/io/IOException;
     const-string v2, "trackException: couldn\'t serialize, sending \"Unknown Exception\""
 
     invoke-static {v2}, Lcom/google/analytics/tracking/android/Log;->w(Ljava/lang/String;)I
@@ -1289,14 +1287,14 @@
     .line 297
     const-string v0, "Unknown Exception"
 
-    .restart local v0       #description:Ljava/lang/String;
+    .restart local v0    # "description":Ljava/lang/String;
     goto :goto_0
 .end method
 
 .method public sendException(Ljava/lang/String;Z)V
     .locals 2
-    .parameter "description"
-    .parameter "fatal"
+    .param p1, "description"    # Ljava/lang/String;
+    .param p2, "fatal"    # Z
 
     .prologue
     .line 259
@@ -1344,9 +1342,9 @@
 
 .method public sendSocial(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
-    .parameter "network"
-    .parameter "action"
-    .parameter "target"
+    .param p1, "network"    # Ljava/lang/String;
+    .param p2, "action"    # Ljava/lang/String;
+    .param p3, "target"    # Ljava/lang/String;
 
     .prologue
     .line 345
@@ -1394,10 +1392,10 @@
 
 .method public sendTiming(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)V
     .locals 2
-    .parameter "category"
-    .parameter "intervalInMilliseconds"
-    .parameter "name"
-    .parameter "label"
+    .param p1, "category"    # Ljava/lang/String;
+    .param p2, "intervalInMilliseconds"    # J
+    .param p4, "name"    # Ljava/lang/String;
+    .param p5, "label"    # Ljava/lang/String;
 
     .prologue
     .line 322
@@ -1445,7 +1443,7 @@
 
 .method public sendTransaction(Lcom/google/analytics/tracking/android/Transaction;)V
     .locals 4
-    .parameter "transaction"
+    .param p1, "transaction"    # Lcom/google/analytics/tracking/android/Transaction;
 
     .prologue
     .line 232
@@ -1487,7 +1485,7 @@
 
     move-result-object v0
 
-    .local v0, i$:Ljava/util/Iterator;
+    .local v0, "i$":Ljava/util/Iterator;
     :goto_0
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
@@ -1502,7 +1500,7 @@
     check-cast v1, Lcom/google/analytics/tracking/android/Transaction$Item;
 
     .line 238
-    .local v1, item:Lcom/google/analytics/tracking/android/Transaction$Item;
+    .local v1, "item":Lcom/google/analytics/tracking/android/Transaction$Item;
     const-string v2, "item"
 
     invoke-direct {p0, v1, p1}, Lcom/google/analytics/tracking/android/Tracker;->constructItem(Lcom/google/analytics/tracking/android/Transaction$Item;Lcom/google/analytics/tracking/android/Transaction;)Ljava/util/Map;
@@ -1514,7 +1512,7 @@
     goto :goto_0
 
     .line 240
-    .end local v1           #item:Lcom/google/analytics/tracking/android/Transaction$Item;
+    .end local v1    # "item":Lcom/google/analytics/tracking/android/Transaction$Item;
     :cond_0
     invoke-static {}, Lcom/google/analytics/tracking/android/GAUsage;->getInstance()Lcom/google/analytics/tracking/android/GAUsage;
 
@@ -1582,7 +1580,7 @@
 
 .method public sendView(Ljava/lang/String;)V
     .locals 2
-    .parameter "appScreen"
+    .param p1, "appScreen"    # Ljava/lang/String;
 
     .prologue
     .line 186
@@ -1634,8 +1632,8 @@
 
 .method public set(Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
-    .parameter "key"
-    .parameter "value"
+    .param p1, "key"    # Ljava/lang/String;
+    .param p2, "value"    # Ljava/lang/String;
 
     .prologue
     .line 402
@@ -1658,7 +1656,7 @@
 
 .method public setAnonymizeIp(Z)V
     .locals 3
-    .parameter "anonymizeIp"
+    .param p1, "anonymizeIp"    # Z
 
     .prologue
     .line 425
@@ -1687,7 +1685,7 @@
 
 .method public setAppId(Ljava/lang/String;)V
     .locals 2
-    .parameter "appId"
+    .param p1, "appId"    # Ljava/lang/String;
 
     .prologue
     .line 535
@@ -1712,7 +1710,7 @@
 
 .method public setAppInstallerId(Ljava/lang/String;)V
     .locals 2
-    .parameter "appInstallerId"
+    .param p1, "appInstallerId"    # Ljava/lang/String;
 
     .prologue
     .line 551
@@ -1737,7 +1735,7 @@
 
 .method public setAppName(Ljava/lang/String;)V
     .locals 2
-    .parameter "appName"
+    .param p1, "appName"    # Ljava/lang/String;
 
     .prologue
     .line 112
@@ -1791,7 +1789,7 @@
 
 .method public setAppScreen(Ljava/lang/String;)V
     .locals 2
-    .parameter "appScreen"
+    .param p1, "appScreen"    # Ljava/lang/String;
 
     .prologue
     .line 148
@@ -1819,7 +1817,7 @@
 
 .method public setAppVersion(Ljava/lang/String;)V
     .locals 2
-    .parameter "appVersion"
+    .param p1, "appVersion"    # Ljava/lang/String;
 
     .prologue
     .line 133
@@ -1858,7 +1856,7 @@
 
 .method public setCampaign(Ljava/lang/String;)V
     .locals 2
-    .parameter "campaign"
+    .param p1, "campaign"    # Ljava/lang/String;
 
     .prologue
     .line 523
@@ -1883,8 +1881,8 @@
 
 .method public setCustomDimension(ILjava/lang/String;)V
     .locals 2
-    .parameter "index"
-    .parameter "value"
+    .param p1, "index"    # I
+    .param p2, "value"    # Ljava/lang/String;
 
     .prologue
     .line 583
@@ -1944,8 +1942,6 @@
 
 .method public setCustomDimensionsAndMetrics(Ljava/util/Map;Ljava/util/Map;)V
     .locals 4
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1964,8 +1960,8 @@
 
     .prologue
     .line 618
-    .local p1, dimensions:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/Integer;Ljava/lang/String;>;"
-    .local p2, metrics:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/Integer;Ljava/lang/Long;>;"
+    .local p1, "dimensions":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/Integer;Ljava/lang/String;>;"
+    .local p2, "metrics":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/Integer;Ljava/lang/Long;>;"
     if-eqz p1, :cond_0
 
     .line 619
@@ -1977,7 +1973,7 @@
 
     move-result-object v0
 
-    .local v0, i$:Ljava/util/Iterator;
+    .local v0, "i$":Ljava/util/Iterator;
     :goto_0
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
@@ -1992,7 +1988,7 @@
     check-cast v1, Ljava/lang/Integer;
 
     .line 620
-    .local v1, key:Ljava/lang/Integer;
+    .local v1, "key":Ljava/lang/Integer;
     invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
 
     move-result v3
@@ -2008,8 +2004,8 @@
     goto :goto_0
 
     .line 623
-    .end local v0           #i$:Ljava/util/Iterator;
-    .end local v1           #key:Ljava/lang/Integer;
+    .end local v0    # "i$":Ljava/util/Iterator;
+    .end local v1    # "key":Ljava/lang/Integer;
     :cond_0
     if-eqz p2, :cond_1
 
@@ -2022,7 +2018,7 @@
 
     move-result-object v0
 
-    .restart local v0       #i$:Ljava/util/Iterator;
+    .restart local v0    # "i$":Ljava/util/Iterator;
     :goto_1
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
@@ -2037,7 +2033,7 @@
     check-cast v1, Ljava/lang/Integer;
 
     .line 625
-    .restart local v1       #key:Ljava/lang/Integer;
+    .restart local v1    # "key":Ljava/lang/Integer;
     invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
 
     move-result v3
@@ -2053,16 +2049,16 @@
     goto :goto_1
 
     .line 628
-    .end local v0           #i$:Ljava/util/Iterator;
-    .end local v1           #key:Ljava/lang/Integer;
+    .end local v0    # "i$":Ljava/util/Iterator;
+    .end local v1    # "key":Ljava/lang/Integer;
     :cond_1
     return-void
 .end method
 
 .method public setCustomMetric(ILjava/lang/Long;)V
     .locals 3
-    .parameter "index"
-    .parameter "value"
+    .param p1, "index"    # I
+    .param p2, "value"    # Ljava/lang/Long;
 
     .prologue
     .line 598
@@ -2110,7 +2106,7 @@
     const/4 v0, 0x0
 
     .line 603
-    .local v0, tmpValue:Ljava/lang/String;
+    .local v0, "tmpValue":Ljava/lang/String;
     if-eqz p2, :cond_1
 
     .line 604
@@ -2139,7 +2135,7 @@
 
 .method public setExceptionParser(Lcom/google/analytics/tracking/android/ExceptionParser;)V
     .locals 2
-    .parameter "exceptionParser"
+    .param p1, "exceptionParser"    # Lcom/google/analytics/tracking/android/ExceptionParser;
 
     .prologue
     .line 564
@@ -2160,7 +2156,7 @@
 
 .method setLastTrackTime(J)V
     .locals 0
-    .parameter "lastTrackTime"
+    .param p1, "lastTrackTime"    # J
     .annotation build Lcom/google/android/gms/common/util/VisibleForTesting;
     .end annotation
 
@@ -2174,7 +2170,7 @@
 
 .method public setReferrer(Ljava/lang/String;)V
     .locals 2
-    .parameter "referrer"
+    .param p1, "referrer"    # Ljava/lang/String;
 
     .prologue
     .line 493
@@ -2199,7 +2195,7 @@
 
 .method public setSampleRate(D)V
     .locals 3
-    .parameter "sampleRate"
+    .param p1, "sampleRate"    # D
 
     .prologue
     .line 455
@@ -2228,7 +2224,7 @@
 
 .method public setStartSession(Z)V
     .locals 3
-    .parameter "startSession"
+    .param p1, "startSession"    # Z
 
     .prologue
     .line 99
@@ -2267,7 +2263,7 @@
 
 .method public setThrottlingEnabled(Z)V
     .locals 0
-    .parameter "throttlingEnabled"
+    .param p1, "throttlingEnabled"    # Z
     .annotation build Lcom/google/android/gms/common/util/VisibleForTesting;
     .end annotation
 
@@ -2281,7 +2277,7 @@
 
 .method setTokens(J)V
     .locals 0
-    .parameter "tokens"
+    .param p1, "tokens"    # J
     .annotation build Lcom/google/android/gms/common/util/VisibleForTesting;
     .end annotation
 
@@ -2295,7 +2291,7 @@
 
 .method public setUseSecure(Z)V
     .locals 3
-    .parameter "useSecure"
+    .param p1, "useSecure"    # Z
 
     .prologue
     .line 474
@@ -2360,7 +2356,7 @@
     move-result-wide v2
 
     .line 770
-    .local v2, timeNow:J
+    .local v2, "timeNow":J
     iget-wide v4, p0, Lcom/google/analytics/tracking/android/Tracker;->mTokens:J
 
     cmp-long v4, v4, v6
@@ -2373,7 +2369,7 @@
     sub-long v0, v2, v4
 
     .line 772
-    .local v0, timeElapsed:J
+    .local v0, "timeElapsed":J
     const-wide/16 v4, 0x0
 
     cmp-long v4, v0, v4
@@ -2394,7 +2390,7 @@
     iput-wide v4, p0, Lcom/google/analytics/tracking/android/Tracker;->mTokens:J
 
     .line 776
-    .end local v0           #timeElapsed:J
+    .end local v0    # "timeElapsed":J
     :cond_1
     iput-wide v2, p0, Lcom/google/analytics/tracking/android/Tracker;->mLastTrackTime:J
 
@@ -2431,7 +2427,7 @@
     goto :goto_0
 
     .line 766
-    .end local v2           #timeNow:J
+    .end local v2    # "timeNow":J
     :catchall_0
     move-exception v4
 
@@ -2442,10 +2438,10 @@
 
 .method public trackEvent(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)V
     .locals 0
-    .parameter "category"
-    .parameter "action"
-    .parameter "label"
-    .parameter "value"
+    .param p1, "category"    # Ljava/lang/String;
+    .param p2, "action"    # Ljava/lang/String;
+    .param p3, "label"    # Ljava/lang/String;
+    .param p4, "value"    # Ljava/lang/Long;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -2459,9 +2455,9 @@
 
 .method public trackException(Ljava/lang/String;Ljava/lang/Throwable;Z)V
     .locals 0
-    .parameter "threadName"
-    .parameter "exception"
-    .parameter "fatal"
+    .param p1, "threadName"    # Ljava/lang/String;
+    .param p2, "exception"    # Ljava/lang/Throwable;
+    .param p3, "fatal"    # Z
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -2475,8 +2471,8 @@
 
 .method public trackException(Ljava/lang/String;Z)V
     .locals 0
-    .parameter "description"
-    .parameter "fatal"
+    .param p1, "description"    # Ljava/lang/String;
+    .param p2, "fatal"    # Z
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -2490,9 +2486,9 @@
 
 .method public trackSocial(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
-    .parameter "network"
-    .parameter "action"
-    .parameter "target"
+    .param p1, "network"    # Ljava/lang/String;
+    .param p2, "action"    # Ljava/lang/String;
+    .param p3, "target"    # Ljava/lang/String;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -2506,10 +2502,10 @@
 
 .method public trackTiming(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)V
     .locals 0
-    .parameter "category"
-    .parameter "intervalInMilliseconds"
-    .parameter "name"
-    .parameter "label"
+    .param p1, "category"    # Ljava/lang/String;
+    .param p2, "intervalInMilliseconds"    # J
+    .param p4, "name"    # Ljava/lang/String;
+    .param p5, "label"    # Ljava/lang/String;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -2523,7 +2519,7 @@
 
 .method public trackTransaction(Lcom/google/analytics/tracking/android/Transaction;)V
     .locals 0
-    .parameter "transaction"
+    .param p1, "transaction"    # Lcom/google/analytics/tracking/android/Transaction;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -2550,7 +2546,7 @@
 
 .method public trackView(Ljava/lang/String;)V
     .locals 0
-    .parameter "appScreen"
+    .param p1, "appScreen"    # Ljava/lang/String;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 

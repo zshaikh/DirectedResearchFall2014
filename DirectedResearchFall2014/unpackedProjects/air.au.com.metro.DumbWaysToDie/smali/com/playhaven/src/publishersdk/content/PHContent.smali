@@ -6,7 +6,7 @@
 # direct methods
 .method public constructor <init>(Lv2/com/playhaven/model/PHContent;)V
     .locals 2
-    .parameter "content"
+    .param p1, "content"    # Lv2/com/playhaven/model/PHContent;
 
     .prologue
     .line 12

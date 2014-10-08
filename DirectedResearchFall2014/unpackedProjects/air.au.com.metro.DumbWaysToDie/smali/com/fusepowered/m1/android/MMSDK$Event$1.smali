@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Ljava/lang/String;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 364
@@ -47,7 +46,7 @@
     invoke-direct {v1}, Lcom/fusepowered/m1/android/HttpGetRequest;-><init>()V
 
     .line 371
-    .local v1, getRequest:Lcom/fusepowered/m1/android/HttpGetRequest;
+    .local v1, "getRequest":Lcom/fusepowered/m1/android/HttpGetRequest;
     :try_start_0
     iget-object v2, p0, Lcom/fusepowered/m1/android/MMSDK$Event$1;->val$logString:Ljava/lang/String;
 
@@ -66,7 +65,7 @@
     move-object v0, v2
 
     .line 374
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0

@@ -4,7 +4,7 @@
 
 
 # static fields
-.field private static final HEX_CHARS:[C = null
+.field private static final HEX_CHARS:[C
 
 .field private static final TAG:Ljava/lang/String; = "MRAID Assets"
 
@@ -30,30 +30,30 @@
     return-void
 
     :array_0
-    .array-data 0x2
-        0x30t 0x0t
-        0x31t 0x0t
-        0x32t 0x0t
-        0x33t 0x0t
-        0x34t 0x0t
-        0x35t 0x0t
-        0x36t 0x0t
-        0x37t 0x0t
-        0x38t 0x0t
-        0x39t 0x0t
-        0x61t 0x0t
-        0x62t 0x0t
-        0x63t 0x0t
-        0x64t 0x0t
-        0x65t 0x0t
-        0x66t 0x0t
+    .array-data 2
+        0x30s
+        0x31s
+        0x32s
+        0x33s
+        0x34s
+        0x35s
+        0x36s
+        0x37s
+        0x38s
+        0x39s
+        0x61s
+        0x62s
+        0x63s
+        0x64s
+        0x65s
+        0x66s
     .end array-data
 .end method
 
 .method public constructor <init>(Lcom/tapjoy/mraid/view/MraidView;Landroid/content/Context;)V
     .locals 1
-    .parameter "adView"
-    .parameter "c"
+    .param p1, "adView"    # Lcom/tapjoy/mraid/view/MraidView;
+    .param p2, "c"    # Landroid/content/Context;
 
     .prologue
     .line 50
@@ -70,7 +70,7 @@
 
 .method private asHex(Ljava/security/MessageDigest;)Ljava/lang/String;
     .locals 7
-    .parameter "digest"
+    .param p1, "digest"    # Ljava/security/MessageDigest;
 
     .prologue
     .line 558
@@ -79,7 +79,7 @@
     move-result-object v1
 
     .line 559
-    .local v1, hash:[B
+    .local v1, "hash":[B
     array-length v5, v1
 
     mul-int/lit8 v5, v5, 0x2
@@ -87,13 +87,13 @@
     new-array v0, v5, [C
 
     .line 560
-    .local v0, buf:[C
+    .local v0, "buf":[C
     const/4 v2, 0x0
 
-    .local v2, i:I
+    .local v2, "i":I
     const/4 v3, 0x0
 
-    .local v3, x:I
+    .local v3, "x":I
     :goto_0
     array-length v5, v1
 
@@ -102,8 +102,8 @@
     .line 561
     add-int/lit8 v4, v3, 0x1
 
-    .end local v3           #x:I
-    .local v4, x:I
+    .end local v3    # "x":I
+    .local v4, "x":I
     sget-object v5, Lcom/tapjoy/mraid/controller/Assets;->HEX_CHARS:[C
 
     aget-byte v6, v1, v2
@@ -119,8 +119,8 @@
     .line 562
     add-int/lit8 v3, v4, 0x1
 
-    .end local v4           #x:I
-    .restart local v3       #x:I
+    .end local v4    # "x":I
+    .restart local v3    # "x":I
     sget-object v5, Lcom/tapjoy/mraid/controller/Assets;->HEX_CHARS:[C
 
     aget-byte v6, v1, v2
@@ -147,8 +147,8 @@
 
 .method private contains(Ljava/lang/StringBuffer;Ljava/lang/String;)Z
     .locals 4
-    .parameter "buffer"
-    .parameter "lookForMe"
+    .param p1, "buffer"    # Ljava/lang/StringBuffer;
+    .param p2, "lookForMe"    # Ljava/lang/String;
 
     .prologue
     .line 507
@@ -172,7 +172,7 @@
     move-exception v0
 
     .line 509
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v1, "contains"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -196,7 +196,7 @@
     invoke-static {v1, v2}, Lcom/tapjoy/TapjoyLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 511
-    .end local v0           #e:Ljava/lang/Exception;
+    .end local v0    # "e":Ljava/lang/Exception;
     :cond_0
     const/4 v1, 0x0
 
@@ -205,7 +205,7 @@
 
 .method public static deleteDirectory(Ljava/io/File;)Z
     .locals 3
-    .parameter "path"
+    .param p0, "path"    # Ljava/io/File;
 
     .prologue
     .line 689
@@ -221,10 +221,10 @@
     move-result-object v0
 
     .line 691
-    .local v0, files:[Ljava/io/File;
+    .local v0, "files":[Ljava/io/File;
     const/4 v1, 0x0
 
-    .local v1, i:I
+    .local v1, "i":I
     :goto_0
     array-length v2, v0
 
@@ -259,8 +259,8 @@
     goto :goto_1
 
     .line 699
-    .end local v0           #files:[Ljava/io/File;
-    .end local v1           #i:I
+    .end local v0    # "files":[Ljava/io/File;
+    .end local v1    # "i":I
     :cond_1
     invoke-virtual {p0}, Ljava/io/File;->delete()Z
 
@@ -271,7 +271,7 @@
 
 .method public static deleteDirectory(Ljava/lang/String;)Z
     .locals 1
-    .parameter "path"
+    .param p0, "path"    # Ljava/lang/String;
 
     .prologue
     .line 676
@@ -298,7 +298,7 @@
 
 .method private getAssetDir(Ljava/lang/String;)Ljava/io/File;
     .locals 4
-    .parameter "path"
+    .param p1, "path"    # Ljava/lang/String;
 
     .prologue
     .line 617
@@ -309,7 +309,7 @@
     move-result-object v0
 
     .line 618
-    .local v0, filesDir:Ljava/io/File;
+    .local v0, "filesDir":Ljava/io/File;
     new-instance v1, Ljava/io/File;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -341,13 +341,13 @@
     invoke-direct {v1, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
     .line 620
-    .local v1, newDir:Ljava/io/File;
+    .local v1, "newDir":Ljava/io/File;
     return-object v1
 .end method
 
 .method private getAssetName(Ljava/lang/String;)Ljava/lang/String;
     .locals 3
-    .parameter "asset"
+    .param p1, "asset"    # Ljava/lang/String;
 
     .prologue
     .line 649
@@ -358,11 +358,11 @@
     move-result v0
 
     .line 650
-    .local v0, lastSep:I
+    .local v0, "lastSep":I
     move-object v1, p1
 
     .line 652
-    .local v1, name:Ljava/lang/String;
+    .local v1, "name":Ljava/lang/String;
     if-ltz v0, :cond_0
 
     .line 653
@@ -385,7 +385,7 @@
 
 .method private getAssetPath(Ljava/lang/String;)Ljava/lang/String;
     .locals 4
-    .parameter "asset"
+    .param p1, "asset"    # Ljava/lang/String;
 
     .prologue
     .line 631
@@ -396,11 +396,11 @@
     move-result v0
 
     .line 632
-    .local v0, lastSep:I
+    .local v0, "lastSep":I
     const-string v1, "/"
 
     .line 634
-    .local v1, path:Ljava/lang/String;
+    .local v1, "path":Ljava/lang/String;
     if-ltz v0, :cond_0
 
     .line 635
@@ -441,33 +441,33 @@
 
 .method private getHttpEntity(Ljava/lang/String;)Lorg/apache/http/HttpEntity;
     .locals 6
-    .parameter "url"
+    .param p1, "url"    # Ljava/lang/String;
 
     .prologue
     .line 278
     const/4 v1, 0x0
 
     .line 280
-    .local v1, entity:Lorg/apache/http/HttpEntity;
+    .local v1, "entity":Lorg/apache/http/HttpEntity;
     :try_start_0
     new-instance v2, Lorg/apache/http/impl/client/DefaultHttpClient;
 
     invoke-direct {v2}, Lorg/apache/http/impl/client/DefaultHttpClient;-><init>()V
 
     .line 281
-    .local v2, httpclient:Lorg/apache/http/impl/client/DefaultHttpClient;
+    .local v2, "httpclient":Lorg/apache/http/impl/client/DefaultHttpClient;
     new-instance v3, Lorg/apache/http/client/methods/HttpGet;
 
     invoke-direct {v3, p1}, Lorg/apache/http/client/methods/HttpGet;-><init>(Ljava/lang/String;)V
 
     .line 282
-    .local v3, httpget:Lorg/apache/http/client/methods/HttpGet;
+    .local v3, "httpget":Lorg/apache/http/client/methods/HttpGet;
     invoke-virtual {v2, v3}, Lorg/apache/http/impl/client/DefaultHttpClient;->execute(Lorg/apache/http/client/methods/HttpUriRequest;)Lorg/apache/http/HttpResponse;
 
     move-result-object v4
 
     .line 283
-    .local v4, response:Lorg/apache/http/HttpResponse;
+    .local v4, "response":Lorg/apache/http/HttpResponse;
     invoke-interface {v4}, Lorg/apache/http/HttpResponse;->getEntity()Lorg/apache/http/HttpEntity;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -477,9 +477,9 @@
     move-object v5, v1
 
     .line 288
-    .end local v2           #httpclient:Lorg/apache/http/impl/client/DefaultHttpClient;
-    .end local v3           #httpget:Lorg/apache/http/client/methods/HttpGet;
-    .end local v4           #response:Lorg/apache/http/HttpResponse;
+    .end local v2    # "httpclient":Lorg/apache/http/impl/client/DefaultHttpClient;
+    .end local v3    # "httpget":Lorg/apache/http/client/methods/HttpGet;
+    .end local v4    # "response":Lorg/apache/http/HttpResponse;
     :goto_0
     return-object v5
 
@@ -490,7 +490,7 @@
     move-object v0, v5
 
     .line 285
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     .line 286
@@ -501,9 +501,9 @@
 
 .method private moveToAdDirectory(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 6
-    .parameter "fn"
-    .parameter "filesDir"
-    .parameter "subDir"
+    .param p1, "fn"    # Ljava/lang/String;
+    .param p2, "filesDir"    # Ljava/lang/String;
+    .param p3, "subDir"    # Ljava/lang/String;
 
     .prologue
     const-string v5, "ad"
@@ -536,7 +536,7 @@
     invoke-direct {v2, v3}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
     .line 535
-    .local v2, file:Ljava/io/File;
+    .local v2, "file":Ljava/io/File;
     new-instance v0, Ljava/io/File;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -566,7 +566,7 @@
     invoke-direct {v0, v3}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
     .line 536
-    .local v0, adDir:Ljava/io/File;
+    .local v0, "adDir":Ljava/io/File;
     invoke-virtual {v0}, Ljava/io/File;->mkdir()Z
 
     .line 537
@@ -609,7 +609,7 @@
     invoke-direct {v1, v3}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
     .line 539
-    .local v1, dir:Ljava/io/File;
+    .local v1, "dir":Ljava/io/File;
     invoke-virtual {v1}, Ljava/io/File;->mkdir()Z
 
     .line 540
@@ -651,9 +651,9 @@
 
 .method private replace(Ljava/lang/StringBuffer;Ljava/lang/String;Ljava/lang/String;)V
     .locals 4
-    .parameter "buffer"
-    .parameter "toReplace"
-    .parameter "bridgePath"
+    .param p1, "buffer"    # Ljava/lang/StringBuffer;
+    .param p2, "toReplace"    # Ljava/lang/String;
+    .param p3, "bridgePath"    # Ljava/lang/String;
 
     .prologue
     .line 515
@@ -662,7 +662,7 @@
     move-result v0
 
     .line 516
-    .local v0, start:I
+    .local v0, "start":I
     const-string v1, "replace "
 
     invoke-static {v1, p3}, Lcom/tapjoy/TapjoyLog;->d(Ljava/lang/String;Ljava/lang/String;)V
@@ -702,8 +702,8 @@
 # virtual methods
 .method public addAsset(Ljava/lang/String;Ljava/lang/String;)V
     .locals 6
-    .parameter "alias"
-    .parameter "url"
+    .param p1, "alias"    # Ljava/lang/String;
+    .param p2, "url"    # Ljava/lang/String;
 
     .prologue
     .line 240
@@ -712,11 +712,11 @@
     move-result-object v1
 
     .line 241
-    .local v1, entity:Lorg/apache/http/HttpEntity;
+    .local v1, "entity":Lorg/apache/http/HttpEntity;
     const/4 v2, 0x0
 
     .line 243
-    .local v2, in:Ljava/io/InputStream;
+    .local v2, "in":Ljava/io/InputStream;
     :try_start_0
     invoke-interface {v1}, Lorg/apache/http/HttpEntity;->getContent()Ljava/io/InputStream;
 
@@ -753,13 +753,13 @@
     move-result-object v3
 
     .line 246
-    .local v3, str:Ljava/lang/String;
+    .local v3, "str":Ljava/lang/String;
     iget-object v4, p0, Lcom/tapjoy/mraid/controller/Assets;->mMraidView:Lcom/tapjoy/mraid/view/MraidView;
 
     invoke-virtual {v4, v3}, Lcom/tapjoy/mraid/view/MraidView;->injectMraidJavaScript(Ljava/lang/String;)V
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 250
     if-eqz v2, :cond_0
@@ -775,7 +775,7 @@
     const/4 v2, 0x0
 
     .line 260
-    .end local v3           #str:Ljava/lang/String;
+    .end local v3    # "str":Ljava/lang/String;
     :cond_0
     :goto_1
     :try_start_2
@@ -794,7 +794,7 @@
     move-object v0, v4
 
     .line 248
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     :try_start_3
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_3
@@ -816,7 +816,7 @@
     goto :goto_1
 
     .line 250
-    .end local v0           #e:Ljava/lang/Exception;
+    .end local v0    # "e":Ljava/lang/Exception;
     :catchall_0
     move-exception v4
 
@@ -840,27 +840,27 @@
     move-exception v0
 
     .line 262
-    .restart local v0       #e:Ljava/lang/Exception;
+    .restart local v0    # "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_2
 
     .line 253
-    .end local v0           #e:Ljava/lang/Exception;
-    .restart local v3       #str:Ljava/lang/String;
+    .end local v0    # "e":Ljava/lang/Exception;
+    .restart local v3    # "str":Ljava/lang/String;
     :catch_2
     move-exception v4
 
     goto :goto_0
 
-    .end local v3           #str:Ljava/lang/String;
-    .restart local v0       #e:Ljava/lang/Exception;
+    .end local v3    # "str":Ljava/lang/String;
+    .restart local v0    # "e":Ljava/lang/Exception;
     :catch_3
     move-exception v4
 
     goto :goto_3
 
-    .end local v0           #e:Ljava/lang/Exception;
+    .end local v0    # "e":Ljava/lang/Exception;
     :catch_4
     move-exception v5
 
@@ -879,7 +879,7 @@
     move-result-object v0
 
     .line 298
-    .local v0, filesDir:Ljava/io/File;
+    .local v0, "filesDir":Ljava/io/File;
     new-instance v2, Landroid/os/StatFs;
 
     invoke-virtual {v0}, Ljava/io/File;->getPath()Ljava/lang/String;
@@ -889,7 +889,7 @@
     invoke-direct {v2, v3}, Landroid/os/StatFs;-><init>(Ljava/lang/String;)V
 
     .line 299
-    .local v2, stats:Landroid/os/StatFs;
+    .local v2, "stats":Landroid/os/StatFs;
     invoke-virtual {v2}, Landroid/os/StatFs;->getFreeBlocks()I
 
     move-result v3
@@ -901,21 +901,21 @@
     mul-int v1, v3, v4
 
     .line 300
-    .local v1, free:I
+    .local v1, "free":I
     return v1
 .end method
 
 .method public copyTextFromJarIntoAssetDir(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 12
-    .parameter "alias"
-    .parameter "source"
+    .param p1, "alias"    # Ljava/lang/String;
+    .param p2, "source"    # Ljava/lang/String;
 
     .prologue
     .line 125
     const/4 v4, 0x0
 
     .line 127
-    .local v4, in:Ljava/io/InputStream;
+    .local v4, "in":Ljava/io/InputStream;
     :try_start_0
     const-class v9, Lcom/tapjoy/mraid/controller/Assets;
 
@@ -928,7 +928,7 @@
     move-result-object v8
 
     .line 130
-    .local v8, url:Ljava/net/URL;
+    .local v8, "url":Ljava/net/URL;
     if-nez v8, :cond_1
 
     .line 132
@@ -939,25 +939,25 @@
     move-result-object v0
 
     .line 133
-    .local v0, am:Landroid/content/res/AssetManager;
+    .local v0, "am":Landroid/content/res/AssetManager;
     invoke-virtual {v0, p2}, Landroid/content/res/AssetManager;->open(Ljava/lang/String;)Ljava/io/InputStream;
 
     move-result-object v4
 
     .line 153
-    .end local v0           #am:Landroid/content/res/AssetManager;
+    .end local v0    # "am":Landroid/content/res/AssetManager;
     :goto_0
     const/4 v9, 0x0
 
     invoke-virtual {p0, v4, p1, v9}, Lcom/tapjoy/mraid/controller/Assets;->writeToDisk(Ljava/io/InputStream;Ljava/lang/String;Z)Ljava/lang/String;
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result-object v6
 
     .line 159
-    .local v6, name:Ljava/lang/String;
+    .local v6, "name":Ljava/lang/String;
     if-eqz v4, :cond_0
 
     .line 161
@@ -974,13 +974,13 @@
     move-object v9, v6
 
     .line 168
-    .end local v6           #name:Ljava/lang/String;
-    .end local v8           #url:Ljava/net/URL;
+    .end local v6    # "name":Ljava/lang/String;
+    .end local v8    # "url":Ljava/net/URL;
     :goto_2
     return-object v9
 
     .line 137
-    .restart local v8       #url:Ljava/net/URL;
+    .restart local v8    # "url":Ljava/net/URL;
     :cond_1
     :try_start_2
     invoke-virtual {v8}, Ljava/net/URL;->getFile()Ljava/lang/String;
@@ -988,7 +988,7 @@
     move-result-object v3
 
     .line 139
-    .local v3, file:Ljava/lang/String;
+    .local v3, "file":Ljava/lang/String;
     const-string v9, "jar:"
 
     invoke-virtual {v3, v9}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
@@ -1030,7 +1030,7 @@
     move-result v7
 
     .line 146
-    .local v7, pos:I
+    .local v7, "pos":I
     if-lez v7, :cond_4
 
     .line 147
@@ -1047,35 +1047,35 @@
     invoke-direct {v5, v3}, Ljava/util/jar/JarFile;-><init>(Ljava/lang/String;)V
 
     .line 149
-    .local v5, jf:Ljava/util/jar/JarFile;
+    .local v5, "jf":Ljava/util/jar/JarFile;
     invoke-virtual {v5, p2}, Ljava/util/jar/JarFile;->getJarEntry(Ljava/lang/String;)Ljava/util/jar/JarEntry;
 
     move-result-object v2
 
     .line 150
-    .local v2, entry:Ljava/util/jar/JarEntry;
+    .local v2, "entry":Ljava/util/jar/JarEntry;
     invoke-virtual {v5, v2}, Ljava/util/jar/JarFile;->getInputStream(Ljava/util/zip/ZipEntry;)Ljava/io/InputStream;
     :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
     move-result-object v4
 
     goto :goto_0
 
     .line 156
-    .end local v2           #entry:Ljava/util/jar/JarEntry;
-    .end local v3           #file:Ljava/lang/String;
-    .end local v5           #jf:Ljava/util/jar/JarFile;
-    .end local v7           #pos:I
-    .end local v8           #url:Ljava/net/URL;
+    .end local v2    # "entry":Ljava/util/jar/JarEntry;
+    .end local v3    # "file":Ljava/lang/String;
+    .end local v5    # "jf":Ljava/util/jar/JarFile;
+    .end local v7    # "pos":I
+    .end local v8    # "url":Ljava/net/URL;
     :catch_0
     move-exception v9
 
     move-object v1, v9
 
     .line 157
-    .local v1, e:Ljava/lang/Exception;
+    .local v1, "e":Ljava/lang/Exception;
     :try_start_3
     const-string v9, "MRAID Assets"
 
@@ -1125,7 +1125,7 @@
     goto :goto_2
 
     .line 159
-    .end local v1           #e:Ljava/lang/Exception;
+    .end local v1    # "e":Ljava/lang/Exception;
     :catchall_0
     move-exception v9
 
@@ -1145,22 +1145,22 @@
     throw v9
 
     .line 162
-    .restart local v6       #name:Ljava/lang/String;
-    .restart local v8       #url:Ljava/net/URL;
+    .restart local v6    # "name":Ljava/lang/String;
+    .restart local v8    # "url":Ljava/net/URL;
     :catch_1
     move-exception v9
 
     goto :goto_1
 
-    .end local v6           #name:Ljava/lang/String;
-    .end local v8           #url:Ljava/net/URL;
-    .restart local v1       #e:Ljava/lang/Exception;
+    .end local v6    # "name":Ljava/lang/String;
+    .end local v8    # "url":Ljava/net/URL;
+    .restart local v1    # "e":Ljava/lang/Exception;
     :catch_2
     move-exception v9
 
     goto :goto_3
 
-    .end local v1           #e:Ljava/lang/Exception;
+    .end local v1    # "e":Ljava/lang/Exception;
     :catch_3
     move-exception v10
 
@@ -1169,7 +1169,7 @@
 
 .method public copyTextFromJarIntoString(Ljava/lang/String;)Ljava/lang/String;
     .locals 17
-    .parameter "source"
+    .param p1, "source"    # Ljava/lang/String;
 
     .prologue
     .line 178
@@ -1178,17 +1178,17 @@
     new-array v4, v14, [B
 
     .line 179
-    .local v4, buff:[B
+    .local v4, "buff":[B
     new-instance v5, Ljava/lang/StringBuffer;
 
     invoke-direct {v5}, Ljava/lang/StringBuffer;-><init>()V
 
     .line 180
-    .local v5, buffer:Ljava/lang/StringBuffer;
+    .local v5, "buffer":Ljava/lang/StringBuffer;
     const/4 v9, 0x0
 
     .line 182
-    .local v9, in:Ljava/io/InputStream;
+    .local v9, "in":Ljava/io/InputStream;
     :try_start_0
     const-class v14, Lcom/tapjoy/mraid/controller/Assets;
 
@@ -1205,7 +1205,7 @@
     move-result-object v13
 
     .line 185
-    .local v13, url:Ljava/net/URL;
+    .local v13, "url":Ljava/net/URL;
     if-nez v13, :cond_1
 
     .line 187
@@ -1220,7 +1220,7 @@
     move-result-object v2
 
     .line 188
-    .local v2, am:Landroid/content/res/AssetManager;
+    .local v2, "am":Landroid/content/res/AssetManager;
     move-object v0, v2
 
     move-object/from16 v1, p1
@@ -1230,21 +1230,21 @@
     move-result-object v9
 
     .line 208
-    .end local v2           #am:Landroid/content/res/AssetManager;
+    .end local v2    # "am":Landroid/content/res/AssetManager;
     :goto_0
     invoke-virtual {v9, v4}, Ljava/io/InputStream;->read([B)I
 
     move-result v11
 
     .line 209
-    .local v11, numread:I
+    .local v11, "numread":I
     if-gtz v11, :cond_5
 
     .line 214
     invoke-virtual {v5}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result-object v14
 
@@ -1262,14 +1262,14 @@
     const/4 v9, 0x0
 
     .line 229
-    .end local v11           #numread:I
-    .end local v13           #url:Ljava/net/URL;
+    .end local v11    # "numread":I
+    .end local v13    # "url":Ljava/net/URL;
     :cond_0
     :goto_2
     return-object v14
 
     .line 192
-    .restart local v13       #url:Ljava/net/URL;
+    .restart local v13    # "url":Ljava/net/URL;
     :cond_1
     :try_start_2
     invoke-virtual {v13}, Ljava/net/URL;->getFile()Ljava/lang/String;
@@ -1277,7 +1277,7 @@
     move-result-object v8
 
     .line 193
-    .local v8, file:Ljava/lang/String;
+    .local v8, "file":Ljava/lang/String;
     const-string v14, "jar:"
 
     invoke-virtual {v8, v14}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
@@ -1319,7 +1319,7 @@
     move-result v12
 
     .line 200
-    .local v12, pos:I
+    .local v12, "pos":I
     if-lez v12, :cond_4
 
     .line 201
@@ -1336,7 +1336,7 @@
     invoke-direct {v10, v8}, Ljava/util/jar/JarFile;-><init>(Ljava/lang/String;)V
 
     .line 203
-    .local v10, jf:Ljava/util/jar/JarFile;
+    .local v10, "jf":Ljava/util/jar/JarFile;
     move-object v0, v10
 
     move-object/from16 v1, p1
@@ -1346,7 +1346,7 @@
     move-result-object v7
 
     .line 204
-    .local v7, entry:Ljava/util/jar/JarEntry;
+    .local v7, "entry":Ljava/util/jar/JarEntry;
     invoke-virtual {v10, v7}, Ljava/util/jar/JarFile;->getInputStream(Ljava/util/zip/ZipEntry;)Ljava/io/InputStream;
 
     move-result-object v9
@@ -1354,18 +1354,18 @@
     goto :goto_0
 
     .line 211
-    .end local v7           #entry:Ljava/util/jar/JarEntry;
-    .end local v8           #file:Ljava/lang/String;
-    .end local v10           #jf:Ljava/util/jar/JarFile;
-    .end local v12           #pos:I
-    .restart local v11       #numread:I
+    .end local v7    # "entry":Ljava/util/jar/JarEntry;
+    .end local v8    # "file":Ljava/lang/String;
+    .end local v10    # "jf":Ljava/util/jar/JarFile;
+    .end local v12    # "pos":I
+    .restart local v11    # "numread":I
     :cond_5
     new-instance v3, Ljava/lang/String;
 
     invoke-direct {v3, v4}, Ljava/lang/String;-><init>([B)V
 
     .line 212
-    .local v3, bstring:Ljava/lang/String;
+    .local v3, "bstring":Ljava/lang/String;
     const/4 v14, 0x0
 
     invoke-virtual {v3, v14, v11}, Ljava/lang/String;->substring(II)Ljava/lang/String;
@@ -1374,22 +1374,22 @@
 
     invoke-virtual {v5, v14}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
     :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
     goto :goto_0
 
     .line 216
-    .end local v3           #bstring:Ljava/lang/String;
-    .end local v11           #numread:I
-    .end local v13           #url:Ljava/net/URL;
+    .end local v3    # "bstring":Ljava/lang/String;
+    .end local v11    # "numread":I
+    .end local v13    # "url":Ljava/net/URL;
     :catch_0
     move-exception v14
 
     move-object v6, v14
 
     .line 217
-    .local v6, e:Ljava/lang/Exception;
+    .local v6, "e":Ljava/lang/Exception;
     :try_start_3
     const-string v14, "MRAID Assets"
 
@@ -1442,7 +1442,7 @@
     goto :goto_2
 
     .line 220
-    .end local v6           #e:Ljava/lang/Exception;
+    .end local v6    # "e":Ljava/lang/Exception;
     :catchall_0
     move-exception v14
 
@@ -1462,22 +1462,22 @@
     throw v14
 
     .line 223
-    .restart local v11       #numread:I
-    .restart local v13       #url:Ljava/net/URL;
+    .restart local v11    # "numread":I
+    .restart local v13    # "url":Ljava/net/URL;
     :catch_1
     move-exception v15
 
     goto :goto_1
 
-    .end local v11           #numread:I
-    .end local v13           #url:Ljava/net/URL;
-    .restart local v6       #e:Ljava/lang/Exception;
+    .end local v11    # "numread":I
+    .end local v13    # "url":Ljava/net/URL;
+    .restart local v6    # "e":Ljava/lang/Exception;
     :catch_2
     move-exception v14
 
     goto :goto_3
 
-    .end local v6           #e:Ljava/lang/Exception;
+    .end local v6    # "e":Ljava/lang/Exception;
     :catch_3
     move-exception v15
 
@@ -1494,7 +1494,7 @@
     move-result-object v1
 
     .line 707
-    .local v1, filesDir:Ljava/lang/String;
+    .local v1, "filesDir":Ljava/lang/String;
     new-instance v0, Ljava/io/File;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1524,7 +1524,7 @@
     invoke-direct {v0, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
     .line 708
-    .local v0, adDir:Ljava/io/File;
+    .local v0, "adDir":Ljava/io/File;
     invoke-static {v0}, Lcom/tapjoy/mraid/controller/Assets;->deleteDirectory(Ljava/io/File;)Z
 
     .line 709
@@ -1533,7 +1533,7 @@
 
 .method public getAssetOutputString(Ljava/lang/String;)Ljava/io/FileOutputStream;
     .locals 3
-    .parameter "asset"
+    .param p1, "asset"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/FileNotFoundException;
@@ -1551,7 +1551,7 @@
     move-result-object v0
 
     .line 588
-    .local v0, dir:Ljava/io/File;
+    .local v0, "dir":Ljava/io/File;
     invoke-virtual {v0}, Ljava/io/File;->mkdirs()Z
 
     .line 589
@@ -1564,7 +1564,7 @@
     invoke-direct {v1, v0, v2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
     .line 590
-    .local v1, file:Ljava/io/File;
+    .local v1, "file":Ljava/io/File;
     new-instance v2, Ljava/io/FileOutputStream;
 
     invoke-direct {v2, v1}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
@@ -1612,7 +1612,7 @@
 
 .method public removeAsset(Ljava/lang/String;)V
     .locals 5
-    .parameter "asset"
+    .param p1, "asset"    # Ljava/lang/String;
 
     .prologue
     .line 600
@@ -1625,7 +1625,7 @@
     move-result-object v0
 
     .line 601
-    .local v0, dir:Ljava/io/File;
+    .local v0, "dir":Ljava/io/File;
     invoke-virtual {v0}, Ljava/io/File;->mkdirs()Z
 
     .line 602
@@ -1638,7 +1638,7 @@
     invoke-direct {v1, v0, v3}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
     .line 603
-    .local v1, file:Ljava/io/File;
+    .local v1, "file":Ljava/io/File;
     invoke-virtual {v1}, Ljava/io/File;->delete()Z
 
     .line 605
@@ -1667,7 +1667,7 @@
     move-result-object v2
 
     .line 606
-    .local v2, str:Ljava/lang/String;
+    .local v2, "str":Ljava/lang/String;
     iget-object v3, p0, Lcom/tapjoy/mraid/controller/Assets;->mMraidView:Lcom/tapjoy/mraid/view/MraidView;
 
     invoke-virtual {v3, v2}, Lcom/tapjoy/mraid/view/MraidView;->injectMraidJavaScript(Ljava/lang/String;)V
@@ -1686,7 +1686,7 @@
 
 .method public storePicture(Ljava/lang/String;)V
     .locals 20
-    .parameter "URI"
+    .param p1, "URI"    # Ljava/lang/String;
 
     .prologue
     .line 70
@@ -1770,7 +1770,7 @@
     invoke-direct {v0, v1}, Ljava/net/URL;-><init>(Ljava/lang/String;)V
 
     .line 76
-    .local v13, url:Ljava/net/URL;
+    .local v13, "url":Ljava/net/URL;
     new-instance v14, Ljava/lang/StringBuilder;
 
     invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
@@ -1802,7 +1802,7 @@
     move-result-object v7
 
     .line 77
-    .local v7, fileName:Ljava/lang/String;
+    .local v7, "fileName":Ljava/lang/String;
     new-instance v6, Ljava/io/File;
 
     new-instance v14, Ljava/lang/StringBuilder;
@@ -1838,13 +1838,13 @@
     invoke-direct {v6, v14}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
     .line 79
-    .local v6, file:Ljava/io/File;
+    .local v6, "file":Ljava/io/File;
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v10
 
     .line 80
-    .local v10, startTime:J
+    .local v10, "startTime":J
     const-string v14, "MRAID Assets"
 
     const-string v15, "download beginning"
@@ -1903,19 +1903,19 @@
     move-result-object v12
 
     .line 89
-    .local v12, ucon:Ljava/net/URLConnection;
+    .local v12, "ucon":Ljava/net/URLConnection;
     invoke-virtual {v12}, Ljava/net/URLConnection;->getInputStream()Ljava/io/InputStream;
 
     move-result-object v9
 
     .line 90
-    .local v9, is:Ljava/io/InputStream;
+    .local v9, "is":Ljava/io/InputStream;
     new-instance v3, Ljava/io/BufferedInputStream;
 
     invoke-direct {v3, v9}, Ljava/io/BufferedInputStream;-><init>(Ljava/io/InputStream;)V
 
     .line 95
-    .local v3, bis:Ljava/io/BufferedInputStream;
+    .local v3, "bis":Ljava/io/BufferedInputStream;
     new-instance v2, Lorg/apache/http/util/ByteArrayBuffer;
 
     const/16 v14, 0x32
@@ -1923,11 +1923,11 @@
     invoke-direct {v2, v14}, Lorg/apache/http/util/ByteArrayBuffer;-><init>(I)V
 
     .line 96
-    .local v2, baf:Lorg/apache/http/util/ByteArrayBuffer;
+    .local v2, "baf":Lorg/apache/http/util/ByteArrayBuffer;
     const/4 v4, 0x0
 
     .line 97
-    .local v4, current:I
+    .local v4, "current":I
     :goto_0
     invoke-virtual {v3}, Ljava/io/BufferedInputStream;->read()I
 
@@ -1947,22 +1947,22 @@
     goto :goto_0
 
     .line 109
-    .end local v2           #baf:Lorg/apache/http/util/ByteArrayBuffer;
-    .end local v3           #bis:Ljava/io/BufferedInputStream;
-    .end local v4           #current:I
-    .end local v6           #file:Ljava/io/File;
-    .end local v7           #fileName:Ljava/lang/String;
-    .end local v9           #is:Ljava/io/InputStream;
-    .end local v10           #startTime:J
-    .end local v12           #ucon:Ljava/net/URLConnection;
-    .end local v13           #url:Ljava/net/URL;
+    .end local v2    # "baf":Lorg/apache/http/util/ByteArrayBuffer;
+    .end local v3    # "bis":Ljava/io/BufferedInputStream;
+    .end local v4    # "current":I
+    .end local v6    # "file":Ljava/io/File;
+    .end local v7    # "fileName":Ljava/lang/String;
+    .end local v9    # "is":Ljava/io/InputStream;
+    .end local v10    # "startTime":J
+    .end local v12    # "ucon":Ljava/net/URLConnection;
+    .end local v13    # "url":Ljava/net/URL;
     :catch_0
     move-exception v14
 
     move-object v5, v14
 
     .line 110
-    .local v5, e:Ljava/io/IOException;
+    .local v5, "e":Ljava/io/IOException;
     const-string v14, "MRAID Assets"
 
     new-instance v15, Ljava/lang/StringBuilder;
@@ -1986,20 +1986,20 @@
     invoke-static {v14, v15}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 112
-    .end local v5           #e:Ljava/io/IOException;
+    .end local v5    # "e":Ljava/io/IOException;
     :goto_1
     return-void
 
     .line 102
-    .restart local v2       #baf:Lorg/apache/http/util/ByteArrayBuffer;
-    .restart local v3       #bis:Ljava/io/BufferedInputStream;
-    .restart local v4       #current:I
-    .restart local v6       #file:Ljava/io/File;
-    .restart local v7       #fileName:Ljava/lang/String;
-    .restart local v9       #is:Ljava/io/InputStream;
-    .restart local v10       #startTime:J
-    .restart local v12       #ucon:Ljava/net/URLConnection;
-    .restart local v13       #url:Ljava/net/URL;
+    .restart local v2    # "baf":Lorg/apache/http/util/ByteArrayBuffer;
+    .restart local v3    # "bis":Ljava/io/BufferedInputStream;
+    .restart local v4    # "current":I
+    .restart local v6    # "file":Ljava/io/File;
+    .restart local v7    # "fileName":Ljava/lang/String;
+    .restart local v9    # "is":Ljava/io/InputStream;
+    .restart local v10    # "startTime":J
+    .restart local v12    # "ucon":Ljava/net/URLConnection;
+    .restart local v13    # "url":Ljava/net/URL;
     :cond_0
     :try_start_1
     new-instance v8, Ljava/io/FileOutputStream;
@@ -2007,7 +2007,7 @@
     invoke-direct {v8, v6}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
 
     .line 103
-    .local v8, fos:Ljava/io/FileOutputStream;
+    .local v8, "fos":Ljava/io/FileOutputStream;
     invoke-virtual {v2}, Lorg/apache/http/util/ByteArrayBuffer;->toByteArray()[B
 
     move-result-object v14
@@ -2063,7 +2063,7 @@
 
 .method public storePictureInit(Ljava/lang/String;)V
     .locals 4
-    .parameter "URI"
+    .param p1, "URI"    # Ljava/lang/String;
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 
@@ -2072,7 +2072,7 @@
     move-object v1, p1
 
     .line 56
-    .local v1, uri:Ljava/lang/String;
+    .local v1, "uri":Ljava/lang/String;
     new-instance v0, Landroid/app/AlertDialog$Builder;
 
     iget-object v2, p0, Lcom/tapjoy/mraid/controller/Assets;->mContext:Landroid/content/Context;
@@ -2080,7 +2080,7 @@
     invoke-direct {v0, v2}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
     .line 57
-    .local v0, myDialog:Landroid/app/AlertDialog$Builder;
+    .local v0, "myDialog":Landroid/app/AlertDialog$Builder;
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -2137,9 +2137,9 @@
 
 .method public writeToDisk(Ljava/io/InputStream;Ljava/lang/String;Z)Ljava/lang/String;
     .locals 9
-    .parameter "in"
-    .parameter "file"
-    .parameter "storeInHashedDirectory"
+    .param p1, "in"    # Ljava/io/InputStream;
+    .param p2, "file"    # Ljava/lang/String;
+    .param p3, "storeInHashedDirectory"    # Z
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/IllegalStateException;,
@@ -2152,17 +2152,17 @@
     const/4 v4, 0x0
 
     .line 326
-    .local v4, i:I
+    .local v4, "i":I
     const/16 v7, 0x400
 
     new-array v0, v7, [B
 
     .line 328
-    .local v0, buff:[B
+    .local v0, "buff":[B
     const/4 v1, 0x0
 
     .line 329
-    .local v1, digest:Ljava/security/MessageDigest;
+    .local v1, "digest":Ljava/security/MessageDigest;
     if-eqz p3, :cond_0
 
     .line 331
@@ -2181,7 +2181,7 @@
     const/4 v6, 0x0
 
     .line 338
-    .local v6, out:Ljava/io/FileOutputStream;
+    .local v6, "out":Ljava/io/FileOutputStream;
     :try_start_1
     invoke-virtual {p0, p2}, Lcom/tapjoy/mraid/controller/Assets;->getAssetOutputString(Ljava/lang/String;)Ljava/io/FileOutputStream;
 
@@ -2194,7 +2194,7 @@
     move-result v5
 
     .line 341
-    .local v5, numread:I
+    .local v5, "numread":I
     if-gtz v5, :cond_3
 
     .line 350
@@ -2222,7 +2222,7 @@
     move-result-object v3
 
     .line 363
-    .local v3, filesDir:Ljava/lang/String;
+    .local v3, "filesDir":Ljava/lang/String;
     if-eqz p3, :cond_2
 
     if-eqz v1, :cond_2
@@ -2257,24 +2257,24 @@
     return-object v7
 
     .line 332
-    .end local v3           #filesDir:Ljava/lang/String;
-    .end local v5           #numread:I
-    .end local v6           #out:Ljava/io/FileOutputStream;
+    .end local v3    # "filesDir":Ljava/lang/String;
+    .end local v5    # "numread":I
+    .end local v6    # "out":Ljava/io/FileOutputStream;
     :catch_0
     move-exception v7
 
     move-object v2, v7
 
     .line 333
-    .local v2, e:Ljava/security/NoSuchAlgorithmException;
+    .local v2, "e":Ljava/security/NoSuchAlgorithmException;
     invoke-virtual {v2}, Ljava/security/NoSuchAlgorithmException;->printStackTrace()V
 
     goto :goto_0
 
     .line 344
-    .end local v2           #e:Ljava/security/NoSuchAlgorithmException;
-    .restart local v5       #numread:I
-    .restart local v6       #out:Ljava/io/FileOutputStream;
+    .end local v2    # "e":Ljava/security/NoSuchAlgorithmException;
+    .restart local v5    # "numread":I
+    .restart local v6    # "out":Ljava/io/FileOutputStream;
     :cond_3
     if-eqz p3, :cond_4
 
@@ -2299,7 +2299,7 @@
     goto :goto_1
 
     .line 352
-    .end local v5           #numread:I
+    .end local v5    # "numread":I
     :catchall_0
     move-exception v7
 
@@ -2319,13 +2319,13 @@
     throw v7
 
     .line 355
-    .restart local v5       #numread:I
+    .restart local v5    # "numread":I
     :catch_1
     move-exception v7
 
     goto :goto_2
 
-    .end local v5           #numread:I
+    .end local v5    # "numread":I
     :catch_2
     move-exception v8
 
@@ -2334,11 +2334,11 @@
 
 .method public writeToDiskWrap(Ljava/io/InputStream;Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 16
-    .parameter "in"
-    .parameter "file"
-    .parameter "storeInHashedDirectory"
-    .parameter "injection"
-    .parameter "bridgePath"
+    .param p1, "in"    # Ljava/io/InputStream;
+    .param p2, "file"    # Ljava/lang/String;
+    .param p3, "storeInHashedDirectory"    # Z
+    .param p4, "injection"    # Ljava/lang/String;
+    .param p5, "bridgePath"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/IllegalStateException;,
@@ -2353,11 +2353,11 @@
     new-array v4, v14, [B
 
     .line 395
-    .local v4, buff:[B
+    .local v4, "buff":[B
     const/4 v5, 0x0
 
     .line 396
-    .local v5, digest:Ljava/security/MessageDigest;
+    .local v5, "digest":Ljava/security/MessageDigest;
     if-eqz p3, :cond_0
 
     .line 398
@@ -2378,11 +2378,11 @@
     invoke-direct {v8}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
     .line 406
-    .local v8, fromFile:Ljava/io/ByteArrayOutputStream;
+    .local v8, "fromFile":Ljava/io/ByteArrayOutputStream;
     const/4 v11, 0x0
 
     .line 409
-    .local v11, out:Ljava/io/FileOutputStream;
+    .local v11, "out":Ljava/io/FileOutputStream;
     :goto_1
     :try_start_1
     move-object/from16 v0, p1
@@ -2394,7 +2394,7 @@
     move-result v10
 
     .line 411
-    .local v10, numread:I
+    .local v10, "numread":I
     if-gtz v10, :cond_8
 
     .line 423
@@ -2403,7 +2403,7 @@
     move-result-object v12
 
     .line 424
-    .local v12, wholeHTML:Ljava/lang/String;
+    .local v12, "wholeHTML":Ljava/lang/String;
     const-string v14, "</html>"
 
     invoke-virtual {v12, v14}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
@@ -2417,19 +2417,19 @@
     move v9, v14
 
     .line 428
-    .local v9, hasHTMLWrap:Z
+    .local v9, "hasHTMLWrap":Z
     :goto_2
     const/4 v13, 0x0
 
     .line 429
-    .local v13, wholeHTMLBuffer:Ljava/lang/StringBuffer;
+    .local v13, "wholeHTMLBuffer":Ljava/lang/StringBuffer;
     new-instance v13, Ljava/lang/StringBuffer;
 
-    .end local v13           #wholeHTMLBuffer:Ljava/lang/StringBuffer;
+    .end local v13    # "wholeHTMLBuffer":Ljava/lang/StringBuffer;
     invoke-direct {v13, v12}, Ljava/lang/StringBuffer;-><init>(Ljava/lang/String;)V
 
     .line 431
-    .restart local v13       #wholeHTMLBuffer:Ljava/lang/StringBuffer;
+    .restart local v13    # "wholeHTMLBuffer":Ljava/lang/StringBuffer;
     if-eqz v9, :cond_1
 
     .line 432
@@ -2683,7 +2683,7 @@
     move-result-object v7
 
     .line 499
-    .local v7, filesDir:Ljava/lang/String;
+    .local v7, "filesDir":Ljava/lang/String;
     if-eqz p3, :cond_7
 
     if-eqz v5, :cond_7
@@ -2714,29 +2714,29 @@
     return-object v7
 
     .line 399
-    .end local v7           #filesDir:Ljava/lang/String;
-    .end local v8           #fromFile:Ljava/io/ByteArrayOutputStream;
-    .end local v9           #hasHTMLWrap:Z
-    .end local v10           #numread:I
-    .end local v11           #out:Ljava/io/FileOutputStream;
-    .end local v12           #wholeHTML:Ljava/lang/String;
-    .end local v13           #wholeHTMLBuffer:Ljava/lang/StringBuffer;
+    .end local v7    # "filesDir":Ljava/lang/String;
+    .end local v8    # "fromFile":Ljava/io/ByteArrayOutputStream;
+    .end local v9    # "hasHTMLWrap":Z
+    .end local v10    # "numread":I
+    .end local v11    # "out":Ljava/io/FileOutputStream;
+    .end local v12    # "wholeHTML":Ljava/lang/String;
+    .end local v13    # "wholeHTMLBuffer":Ljava/lang/StringBuffer;
     :catch_0
     move-exception v14
 
     move-object v6, v14
 
     .line 400
-    .local v6, e:Ljava/security/NoSuchAlgorithmException;
+    .local v6, "e":Ljava/security/NoSuchAlgorithmException;
     invoke-virtual {v6}, Ljava/security/NoSuchAlgorithmException;->printStackTrace()V
 
     goto/16 :goto_0
 
     .line 415
-    .end local v6           #e:Ljava/security/NoSuchAlgorithmException;
-    .restart local v8       #fromFile:Ljava/io/ByteArrayOutputStream;
-    .restart local v10       #numread:I
-    .restart local v11       #out:Ljava/io/FileOutputStream;
+    .end local v6    # "e":Ljava/security/NoSuchAlgorithmException;
+    .restart local v8    # "fromFile":Ljava/io/ByteArrayOutputStream;
+    .restart local v10    # "numread":I
+    .restart local v11    # "out":Ljava/io/FileOutputStream;
     :cond_8
     if-eqz p3, :cond_9
 
@@ -2757,7 +2757,7 @@
     goto/16 :goto_1
 
     .line 479
-    .end local v10           #numread:I
+    .end local v10    # "numread":I
     :catchall_0
     move-exception v14
 
@@ -2791,8 +2791,8 @@
     throw v14
 
     .line 424
-    .restart local v10       #numread:I
-    .restart local v12       #wholeHTML:Ljava/lang/String;
+    .restart local v10    # "numread":I
+    .restart local v12    # "wholeHTML":Ljava/lang/String;
     :cond_c
     const/4 v14, 0x0
 
@@ -2801,8 +2801,8 @@
     goto/16 :goto_2
 
     .line 434
-    .restart local v9       #hasHTMLWrap:Z
-    .restart local v13       #wholeHTMLBuffer:Ljava/lang/StringBuffer;
+    .restart local v9    # "hasHTMLWrap":Z
+    .restart local v13    # "wholeHTMLBuffer":Ljava/lang/StringBuffer;
     :cond_d
     :try_start_7
     const-string v14, "ormma.js"
@@ -2894,10 +2894,10 @@
     goto/16 :goto_6
 
     .line 482
-    .end local v9           #hasHTMLWrap:Z
-    .end local v10           #numread:I
-    .end local v12           #wholeHTML:Ljava/lang/String;
-    .end local v13           #wholeHTMLBuffer:Ljava/lang/StringBuffer;
+    .end local v9    # "hasHTMLWrap":Z
+    .end local v10    # "numread":I
+    .end local v12    # "wholeHTML":Ljava/lang/String;
+    .end local v13    # "wholeHTMLBuffer":Ljava/lang/StringBuffer;
     :catch_3
     move-exception v15
 

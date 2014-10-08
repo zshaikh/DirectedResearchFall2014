@@ -19,7 +19,6 @@
 
 .method private toAIRCallState(I)I
     .locals 4
-    .parameter
 
     .prologue
     const/4 v3, 0x2
@@ -57,8 +56,6 @@
 # virtual methods
 .method public onCallStateChanged(ILjava/lang/String;)V
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 98

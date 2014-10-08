@@ -17,8 +17,8 @@
 # direct methods
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/Object;)V
     .locals 1
-    .parameter "function"
-    .parameter "value"
+    .param p1, "function"    # Ljava/lang/String;
+    .param p2, "value"    # Ljava/lang/Object;
 
     .prologue
     .line 42
@@ -34,9 +34,9 @@
 
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/Object;Lcom/flurry/org/codehaus/jackson/type/JavaType;)V
     .locals 0
-    .parameter "function"
-    .parameter "value"
-    .parameter "asType"
+    .param p1, "function"    # Ljava/lang/String;
+    .param p2, "value"    # Ljava/lang/Object;
+    .param p3, "asType"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
 
     .prologue
     .line 46
@@ -57,9 +57,8 @@
 
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Class;)V
     .locals 1
-    .parameter "function"
-    .parameter "value"
-    .parameter
+    .param p1, "function"    # Ljava/lang/String;
+    .param p2, "value"    # Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -75,7 +74,7 @@
 
     .prologue
     .line 57
-    .local p3, rawType:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p3, "rawType":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 58
@@ -142,8 +141,8 @@
 
 .method public serialize(Lcom/flurry/org/codehaus/jackson/JsonGenerator;Lcom/flurry/org/codehaus/jackson/map/SerializerProvider;)V
     .locals 4
-    .parameter "jgen"
-    .parameter "provider"
+    .param p1, "jgen"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator;
+    .param p2, "provider"    # Lcom/flurry/org/codehaus/jackson/map/SerializerProvider;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -211,7 +210,7 @@
     move-result-object v0
 
     .line 91
-    .local v0, cls:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local v0, "cls":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-virtual {p2, v0, v2, v3}, Lcom/flurry/org/codehaus/jackson/map/SerializerProvider;->findTypedValueSerializer(Ljava/lang/Class;ZLcom/flurry/org/codehaus/jackson/map/BeanProperty;)Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;
 
     move-result-object v1
@@ -225,9 +224,9 @@
 
 .method public serializeWithType(Lcom/flurry/org/codehaus/jackson/JsonGenerator;Lcom/flurry/org/codehaus/jackson/map/SerializerProvider;Lcom/flurry/org/codehaus/jackson/map/TypeSerializer;)V
     .locals 0
-    .parameter "jgen"
-    .parameter "provider"
-    .parameter "typeSer"
+    .param p1, "jgen"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator;
+    .param p2, "provider"    # Lcom/flurry/org/codehaus/jackson/map/SerializerProvider;
+    .param p3, "typeSer"    # Lcom/flurry/org/codehaus/jackson/map/TypeSerializer;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,

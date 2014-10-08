@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/bitrhymes/iab/functions/GoogleIABV3Activity$1;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1
@@ -40,8 +39,8 @@
 # virtual methods
 .method public onIabPurchaseFinished(Lcom/bitrhymes/iab/util/IabResult;Lcom/bitrhymes/iab/util/Purchase;)V
     .locals 7
-    .parameter "result"
-    .parameter "purchase"
+    .param p1, "result"    # Lcom/bitrhymes/iab/util/IabResult;
+    .param p2, "purchase"    # Lcom/bitrhymes/iab/util/Purchase;
 
     .prologue
     const-string v6, ""
@@ -58,7 +57,7 @@
     .line 91
     iget-object v2, p0, Lcom/bitrhymes/iab/functions/GoogleIABV3Activity$1$1;->this$1:Lcom/bitrhymes/iab/functions/GoogleIABV3Activity$1;
 
-    #getter for: Lcom/bitrhymes/iab/functions/GoogleIABV3Activity$1;->this$0:Lcom/bitrhymes/iab/functions/GoogleIABV3Activity;
+    # getter for: Lcom/bitrhymes/iab/functions/GoogleIABV3Activity$1;->this$0:Lcom/bitrhymes/iab/functions/GoogleIABV3Activity;
     invoke-static {v2}, Lcom/bitrhymes/iab/functions/GoogleIABV3Activity$1;->access$0(Lcom/bitrhymes/iab/functions/GoogleIABV3Activity$1;)Lcom/bitrhymes/iab/functions/GoogleIABV3Activity;
 
     move-result-object v2
@@ -197,7 +196,7 @@
     invoke-direct {v1}, Lorg/json/JSONObject;-><init>()V
 
     .line 111
-    .local v1, jsonObj:Lorg/json/JSONObject;
+    .local v1, "jsonObj":Lorg/json/JSONObject;
     :try_start_0
     const-string v2, "0"
 
@@ -263,7 +262,7 @@
     move-object v0, v2
 
     .line 116
-    .local v0, e:Lorg/json/JSONException;
+    .local v0, "e":Lorg/json/JSONException;
     invoke-virtual {v0}, Lorg/json/JSONException;->printStackTrace()V
 
     .line 117
@@ -280,8 +279,8 @@
     goto/16 :goto_0
 
     .line 120
-    .end local v0           #e:Lorg/json/JSONException;
-    .end local v1           #jsonObj:Lorg/json/JSONObject;
+    .end local v0    # "e":Lorg/json/JSONException;
+    .end local v1    # "jsonObj":Lorg/json/JSONObject;
     :cond_2
     invoke-static {}, Lcom/bitrhymes/iab/functions/Utils;->getFREContext()Lcom/adobe/fre/FREContext;
 

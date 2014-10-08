@@ -32,7 +32,7 @@
 # virtual methods
 .method public includeMethod(Ljava/lang/reflect/Method;)Z
     .locals 4
-    .parameter "m"
+    .param p1, "m"    # Ljava/lang/reflect/Method;
 
     .prologue
     const/4 v3, 0x1
@@ -72,7 +72,7 @@
     move-result-object v0
 
     .line 357
-    .local v0, rt:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local v0, "rt":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const-class v1, Ljava/util/Collection;
 
     invoke-virtual {v1, v0}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z

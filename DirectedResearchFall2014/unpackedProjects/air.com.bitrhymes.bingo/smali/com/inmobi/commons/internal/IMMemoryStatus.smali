@@ -56,7 +56,6 @@
 
 .method public static declared-synchronized formatSize(J)Ljava/lang/String;
     .locals 8
-    .parameter
 
     .prologue
     const/4 v3, 0x0
@@ -206,8 +205,8 @@
     .line 35
     invoke-virtual {v2}, Landroid/os/StatFs;->getBlockCount()I
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result v1
 
@@ -279,8 +278,8 @@
     .line 22
     invoke-virtual {v2}, Landroid/os/StatFs;->getBlockCount()I
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result v1
 

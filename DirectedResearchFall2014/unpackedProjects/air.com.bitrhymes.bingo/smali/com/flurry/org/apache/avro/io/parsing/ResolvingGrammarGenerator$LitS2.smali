@@ -21,8 +21,8 @@
 # direct methods
 .method public constructor <init>(Lcom/flurry/org/apache/avro/Schema;Lcom/flurry/org/apache/avro/Schema;)V
     .locals 0
-    .parameter "actual"
-    .parameter "expected"
+    .param p1, "actual"    # Lcom/flurry/org/apache/avro/Schema;
+    .param p2, "expected"    # Lcom/flurry/org/apache/avro/Schema;
 
     .prologue
     .line 467
@@ -39,7 +39,7 @@
 # virtual methods
 .method public equals(Ljava/lang/Object;)Z
     .locals 5
-    .parameter "o"
+    .param p1, "o"    # Ljava/lang/Object;
 
     .prologue
     const/4 v4, 0x0
@@ -64,7 +64,7 @@
     move-object v1, v0
 
     .line 473
-    .local v1, other:Lcom/flurry/org/apache/avro/io/parsing/ResolvingGrammarGenerator$LitS2;
+    .local v1, "other":Lcom/flurry/org/apache/avro/io/parsing/ResolvingGrammarGenerator$LitS2;
     iget-object v2, p0, Lcom/flurry/org/apache/avro/io/parsing/ResolvingGrammarGenerator$LitS2;->actual:Lcom/flurry/org/apache/avro/Schema;
 
     iget-object v3, v1, Lcom/flurry/org/apache/avro/io/parsing/ResolvingGrammarGenerator$LitS2;->actual:Lcom/flurry/org/apache/avro/Schema;

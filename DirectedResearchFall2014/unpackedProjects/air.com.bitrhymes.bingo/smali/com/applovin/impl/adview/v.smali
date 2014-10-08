@@ -56,7 +56,7 @@
 
     invoke-virtual {p0, v2}, Lcom/applovin/impl/adview/v;->setHorizontalScrollBarEnabled(Z)V
 
-    const/high16 v0, 0x200
+    const/high16 v0, 0x2000000
 
     invoke-virtual {p0, v0}, Lcom/applovin/impl/adview/v;->setScrollBarStyle(I)V
 

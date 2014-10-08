@@ -35,7 +35,6 @@
 
 .method synthetic constructor <init>(Lcom/facebook/internal/ImageDownloader$DownloaderContext;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 322

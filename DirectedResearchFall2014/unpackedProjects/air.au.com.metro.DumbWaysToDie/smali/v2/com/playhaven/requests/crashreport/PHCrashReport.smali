@@ -80,9 +80,9 @@
 
 .method public constructor <init>(Ljava/lang/Exception;Ljava/lang/String;Lv2/com/playhaven/requests/crashreport/PHCrashReport$Urgency;)V
     .locals 1
-    .parameter "e"
-    .parameter "tag"
-    .parameter "level"
+    .param p1, "e"    # Ljava/lang/Exception;
+    .param p2, "tag"    # Ljava/lang/String;
+    .param p3, "level"    # Lv2/com/playhaven/requests/crashreport/PHCrashReport$Urgency;
 
     .prologue
     .line 87
@@ -102,8 +102,8 @@
 
 .method public constructor <init>(Ljava/lang/Exception;Lv2/com/playhaven/requests/crashreport/PHCrashReport$Urgency;)V
     .locals 1
-    .parameter "e"
-    .parameter "level"
+    .param p1, "e"    # Ljava/lang/Exception;
+    .param p2, "level"    # Lv2/com/playhaven/requests/crashreport/PHCrashReport$Urgency;
 
     .prologue
     .line 81
@@ -148,13 +148,13 @@
     invoke-direct {v3}, Ljava/io/StringWriter;-><init>()V
 
     .line 167
-    .local v3, sWriter:Ljava/io/StringWriter;
+    .local v3, "sWriter":Ljava/io/StringWriter;
     new-instance v2, Ljava/io/PrintWriter;
 
     invoke-direct {v2, v3}, Ljava/io/PrintWriter;-><init>(Ljava/io/Writer;)V
 
     .line 169
-    .local v2, pWriter:Ljava/io/PrintWriter;
+    .local v2, "pWriter":Ljava/io/PrintWriter;
     iget-object v4, p0, Lv2/com/playhaven/requests/crashreport/PHCrashReport;->exception:Ljava/lang/Exception;
 
     invoke-virtual {v4, v2}, Ljava/lang/Exception;->printStackTrace(Ljava/io/PrintWriter;)V
@@ -167,13 +167,13 @@
     invoke-direct {v1, v4}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
 
     .line 174
-    .local v1, df:Ljava/text/SimpleDateFormat;
+    .local v1, "df":Ljava/text/SimpleDateFormat;
     new-instance v0, Lv2/com/playhaven/configuration/PHConfiguration;
 
     invoke-direct {v0}, Lv2/com/playhaven/configuration/PHConfiguration;-><init>()V
 
     .line 176
-    .local v0, config:Lv2/com/playhaven/configuration/PHConfiguration;
+    .local v0, "config":Lv2/com/playhaven/configuration/PHConfiguration;
     const-string v4, "Crash Report [PHCrashReport]\nTag: %s\nPlatform: %s\nVersion: %s\nTime: %s\nSession: %s\nDevice: %s\nUrgency: %s\nMessage: %sStack Trace:\n\n%s"
 
     const/16 v5, 0x8
@@ -273,9 +273,9 @@
 
 .method public static reportCrash(Ljava/lang/Exception;Ljava/lang/String;Lv2/com/playhaven/requests/crashreport/PHCrashReport$Urgency;)Lv2/com/playhaven/requests/crashreport/PHCrashReport;
     .locals 1
-    .parameter "e"
-    .parameter "tag"
-    .parameter "level"
+    .param p0, "e"    # Ljava/lang/Exception;
+    .param p1, "tag"    # Ljava/lang/String;
+    .param p2, "level"    # Lv2/com/playhaven/requests/crashreport/PHCrashReport$Urgency;
 
     .prologue
     .line 97
@@ -289,8 +289,8 @@
 
 .method public static reportCrash(Ljava/lang/Exception;Lv2/com/playhaven/requests/crashreport/PHCrashReport$Urgency;)Lv2/com/playhaven/requests/crashreport/PHCrashReport;
     .locals 1
-    .parameter "e"
-    .parameter "level"
+    .param p0, "e"    # Ljava/lang/Exception;
+    .param p1, "level"    # Lv2/com/playhaven/requests/crashreport/PHCrashReport$Urgency;
 
     .prologue
     .line 105
@@ -306,7 +306,7 @@
 # virtual methods
 .method public baseURL(Landroid/content/Context;)Ljava/lang/String;
     .locals 1
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     .line 112
@@ -321,7 +321,7 @@
 
 .method public getAdditionalParams(Landroid/content/Context;)Ljava/util/Hashtable;
     .locals 4
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -342,7 +342,7 @@
     invoke-direct {v0}, Ljava/util/Hashtable;-><init>()V
 
     .line 120
-    .local v0, params:Ljava/util/Hashtable;,"Ljava/util/Hashtable<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v0, "params":Ljava/util/Hashtable;, "Ljava/util/Hashtable<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v1, "ts"
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -403,7 +403,7 @@
     invoke-direct {v0}, Ljava/util/Hashtable;-><init>()V
 
     .line 137
-    .local v0, params:Ljava/util/Hashtable;,"Ljava/util/Hashtable<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v0, "params":Ljava/util/Hashtable;, "Ljava/util/Hashtable<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v1, "payload"
 
     invoke-direct {p0}, Lv2/com/playhaven/requests/crashreport/PHCrashReport;->generateCrashReport()Ljava/lang/String;
@@ -428,7 +428,7 @@
 
 .method public send(Landroid/content/Context;)V
     .locals 0
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     .line 144

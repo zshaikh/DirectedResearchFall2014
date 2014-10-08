@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/adobe/air/AIRExpandableFileChooser;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 508
@@ -39,8 +38,6 @@
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 8
-    .parameter
-    .parameter
 
     .prologue
     const/4 v7, 0x0
@@ -48,7 +45,7 @@
     .line 511
     iget-object v0, p0, Lcom/adobe/air/AIRExpandableFileChooser$4;->this$0:Lcom/adobe/air/AIRExpandableFileChooser;
 
-    #getter for: Lcom/adobe/air/AIRExpandableFileChooser;->mFilenames:Ljava/util/ArrayList;
+    # getter for: Lcom/adobe/air/AIRExpandableFileChooser;->mFilenames:Ljava/util/ArrayList;
     invoke-static {v0}, Lcom/adobe/air/AIRExpandableFileChooser;->access$800(Lcom/adobe/air/AIRExpandableFileChooser;)Ljava/util/ArrayList;
 
     move-result-object v0
@@ -58,7 +55,7 @@
     .line 512
     iget-object v0, p0, Lcom/adobe/air/AIRExpandableFileChooser$4;->this$0:Lcom/adobe/air/AIRExpandableFileChooser;
 
-    #getter for: Lcom/adobe/air/AIRExpandableFileChooser;->mGroupData:Ljava/util/List;
+    # getter for: Lcom/adobe/air/AIRExpandableFileChooser;->mGroupData:Ljava/util/List;
     invoke-static {v0}, Lcom/adobe/air/AIRExpandableFileChooser;->access$500(Lcom/adobe/air/AIRExpandableFileChooser;)Ljava/util/List;
 
     move-result-object v0
@@ -76,7 +73,7 @@
     .line 515
     iget-object v0, p0, Lcom/adobe/air/AIRExpandableFileChooser$4;->this$0:Lcom/adobe/air/AIRExpandableFileChooser;
 
-    #getter for: Lcom/adobe/air/AIRExpandableFileChooser;->mChildData:Ljava/util/List;
+    # getter for: Lcom/adobe/air/AIRExpandableFileChooser;->mChildData:Ljava/util/List;
     invoke-static {v0}, Lcom/adobe/air/AIRExpandableFileChooser;->access$400(Lcom/adobe/air/AIRExpandableFileChooser;)Ljava/util/List;
 
     move-result-object v0
@@ -100,7 +97,7 @@
     .line 518
     iget-object v0, p0, Lcom/adobe/air/AIRExpandableFileChooser$4;->this$0:Lcom/adobe/air/AIRExpandableFileChooser;
 
-    #calls: Lcom/adobe/air/AIRExpandableFileChooser;->expandableListPositionToFlatPosition(II)I
+    # invokes: Lcom/adobe/air/AIRExpandableFileChooser;->expandableListPositionToFlatPosition(II)I
     invoke-static {v0, v2, v4}, Lcom/adobe/air/AIRExpandableFileChooser;->access$100(Lcom/adobe/air/AIRExpandableFileChooser;II)I
 
     move-result v0
@@ -108,7 +105,7 @@
     .line 519
     iget-object v5, p0, Lcom/adobe/air/AIRExpandableFileChooser$4;->this$0:Lcom/adobe/air/AIRExpandableFileChooser;
 
-    #getter for: Lcom/adobe/air/AIRExpandableFileChooser;->mCheckedFiles:Landroid/util/SparseBooleanArray;
+    # getter for: Lcom/adobe/air/AIRExpandableFileChooser;->mCheckedFiles:Landroid/util/SparseBooleanArray;
     invoke-static {v5}, Lcom/adobe/air/AIRExpandableFileChooser;->access$300(Lcom/adobe/air/AIRExpandableFileChooser;)Landroid/util/SparseBooleanArray;
 
     move-result-object v5
@@ -122,7 +119,7 @@
     .line 521
     iget-object v0, p0, Lcom/adobe/air/AIRExpandableFileChooser$4;->this$0:Lcom/adobe/air/AIRExpandableFileChooser;
 
-    #getter for: Lcom/adobe/air/AIRExpandableFileChooser;->mAdapter:Landroid/widget/ExpandableListAdapter;
+    # getter for: Lcom/adobe/air/AIRExpandableFileChooser;->mAdapter:Landroid/widget/ExpandableListAdapter;
     invoke-static {v0}, Lcom/adobe/air/AIRExpandableFileChooser;->access$1100(Lcom/adobe/air/AIRExpandableFileChooser;)Landroid/widget/ExpandableListAdapter;
 
     move-result-object v0
@@ -136,7 +133,7 @@
     .line 522
     iget-object v5, p0, Lcom/adobe/air/AIRExpandableFileChooser$4;->this$0:Lcom/adobe/air/AIRExpandableFileChooser;
 
-    #getter for: Lcom/adobe/air/AIRExpandableFileChooser;->mFilenames:Ljava/util/ArrayList;
+    # getter for: Lcom/adobe/air/AIRExpandableFileChooser;->mFilenames:Ljava/util/ArrayList;
     invoke-static {v5}, Lcom/adobe/air/AIRExpandableFileChooser;->access$800(Lcom/adobe/air/AIRExpandableFileChooser;)Ljava/util/ArrayList;
 
     move-result-object v5
@@ -173,7 +170,7 @@
     :cond_2
     iget-object v0, p0, Lcom/adobe/air/AIRExpandableFileChooser$4;->this$0:Lcom/adobe/air/AIRExpandableFileChooser;
 
-    #getter for: Lcom/adobe/air/AIRExpandableFileChooser;->mFileChooserStub:Lcom/adobe/air/FileChooserStub;
+    # getter for: Lcom/adobe/air/AIRExpandableFileChooser;->mFileChooserStub:Lcom/adobe/air/FileChooserStub;
     invoke-static {v0}, Lcom/adobe/air/AIRExpandableFileChooser;->access$600(Lcom/adobe/air/AIRExpandableFileChooser;)Lcom/adobe/air/FileChooserStub;
 
     move-result-object v0

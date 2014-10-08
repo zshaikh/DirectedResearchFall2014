@@ -95,7 +95,6 @@
 
 .method public static setDeviceIDMask(I)V
     .locals 0
-    .parameter
 
     .prologue
     .line 92
@@ -107,7 +106,6 @@
 
 .method public static setLogLevel(Lcom/inmobi/commons/IMCommonUtil$LOG_LEVEL;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 50

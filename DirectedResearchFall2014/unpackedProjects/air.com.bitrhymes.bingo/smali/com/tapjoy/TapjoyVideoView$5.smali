@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/tapjoy/TapjoyVideoView;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 615
@@ -39,8 +38,8 @@
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 2
-    .parameter "dialog"
-    .parameter "whichButton"
+    .param p1, "dialog"    # Landroid/content/DialogInterface;
+    .param p2, "whichButton"    # I
 
     .prologue
     .line 619
@@ -48,7 +47,7 @@
 
     const/4 v1, 0x0
 
-    #calls: Lcom/tapjoy/TapjoyVideoView;->finishWithResult(Z)V
+    # invokes: Lcom/tapjoy/TapjoyVideoView;->finishWithResult(Z)V
     invoke-static {v0, v1}, Lcom/tapjoy/TapjoyVideoView;->access$900(Lcom/tapjoy/TapjoyVideoView;Z)V
 
     .line 620

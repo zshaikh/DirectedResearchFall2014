@@ -26,8 +26,6 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m1/android/PreCacheWorker;Lcom/fusepowered/m1/android/DTOCachedVideo;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 135
@@ -44,8 +42,8 @@
 # virtual methods
 .method public declared-synchronized downloadCompleted(Lcom/fusepowered/m1/android/CachedAd;Z)V
     .locals 2
-    .parameter "ad"
-    .parameter "success"
+    .param p1, "ad"    # Lcom/fusepowered/m1/android/CachedAd;
+    .param p2, "success"    # Z
 
     .prologue
     .line 145
@@ -57,7 +55,7 @@
     :try_start_0
     iget-object v0, p0, Lcom/fusepowered/m1/android/PreCacheWorker$1;->this$0:Lcom/fusepowered/m1/android/PreCacheWorker;
 
-    #getter for: Lcom/fusepowered/m1/android/PreCacheWorker;->appContext:Landroid/content/Context;
+    # getter for: Lcom/fusepowered/m1/android/PreCacheWorker;->appContext:Landroid/content/Context;
     invoke-static {v0}, Lcom/fusepowered/m1/android/PreCacheWorker;->access$000(Lcom/fusepowered/m1/android/PreCacheWorker;)Landroid/content/Context;
 
     move-result-object v0
@@ -69,7 +67,7 @@
 
     const/4 v1, 0x1
 
-    #setter for: Lcom/fusepowered/m1/android/PreCacheWorker;->downloadedNewVideos:Z
+    # setter for: Lcom/fusepowered/m1/android/PreCacheWorker;->downloadedNewVideos:Z
     invoke-static {v0, v1}, Lcom/fusepowered/m1/android/PreCacheWorker;->access$102(Lcom/fusepowered/m1/android/PreCacheWorker;Z)Z
 
     .line 148
@@ -114,7 +112,7 @@
 
 .method public downloadStart(Lcom/fusepowered/m1/android/CachedAd;)V
     .locals 1
-    .parameter "ad"
+    .param p1, "ad"    # Lcom/fusepowered/m1/android/CachedAd;
 
     .prologue
     .line 138

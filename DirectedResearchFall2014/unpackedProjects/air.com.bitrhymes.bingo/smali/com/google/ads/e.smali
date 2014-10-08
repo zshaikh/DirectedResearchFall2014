@@ -70,7 +70,6 @@
 
 .method public constructor <init>(Lcom/google/ads/internal/d;)V
     .locals 2
-    .parameter
 
     .prologue
     const/4 v1, 0x0
@@ -122,7 +121,6 @@
 
 .method static synthetic a(Lcom/google/ads/e;)Ljava/lang/Object;
     .locals 1
-    .parameter
 
     .prologue
     .line 52
@@ -133,8 +131,6 @@
 
 .method static synthetic a(Lcom/google/ads/e;Ljava/lang/Thread;)Ljava/lang/Thread;
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 52
@@ -145,9 +141,6 @@
 
 .method static synthetic a(Lcom/google/ads/e;Lcom/google/ads/c;Lcom/google/ads/AdRequest;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 52
@@ -158,8 +151,6 @@
 
 .method public static a(Lcom/google/ads/c;Lcom/google/ads/internal/d;)Z
     .locals 5
-    .parameter
-    .parameter
 
     .prologue
     const/4 v2, 0x1
@@ -343,8 +334,6 @@
 
 .method static synthetic a(Lcom/google/ads/e;Lcom/google/ads/h;)Z
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 52
@@ -357,8 +346,6 @@
 
 .method private a(Lcom/google/ads/h;Ljava/lang/String;)Z
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     .line 213
@@ -424,12 +411,6 @@
 
 .method private a(Ljava/lang/String;Landroid/app/Activity;Lcom/google/ads/AdRequest;Lcom/google/ads/f;Ljava/util/HashMap;J)Z
     .locals 7
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -512,8 +493,8 @@
     .line 413
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     move-result-wide v5
 
@@ -695,7 +676,6 @@
 
 .method static synthetic b(Lcom/google/ads/e;)Lcom/google/ads/internal/d;
     .locals 1
-    .parameter
 
     .prologue
     .line 52
@@ -706,8 +686,6 @@
 
 .method private b(Lcom/google/ads/c;Lcom/google/ads/AdRequest;)V
     .locals 13
-    .parameter
-    .parameter
 
     .prologue
     .line 336
@@ -978,7 +956,6 @@
 
 .method static synthetic c(Lcom/google/ads/e;)Lcom/google/ads/h;
     .locals 1
-    .parameter
 
     .prologue
     .line 52
@@ -1045,7 +1022,6 @@
 
 .method private e(Lcom/google/ads/h;)Z
     .locals 2
-    .parameter
 
     .prologue
     .line 478
@@ -1099,8 +1075,6 @@
 # virtual methods
 .method public a(Lcom/google/ads/c;Lcom/google/ads/AdRequest;)V
     .locals 3
-    .parameter
-    .parameter
 
     .prologue
     .line 127
@@ -1221,7 +1195,6 @@
 
 .method public a(Lcom/google/ads/h;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 260
@@ -1262,8 +1235,6 @@
 
 .method public a(Lcom/google/ads/h;Landroid/view/View;)V
     .locals 3
-    .parameter
-    .parameter
 
     .prologue
     .line 240
@@ -1351,8 +1322,6 @@
 
 .method public a(Lcom/google/ads/h;Z)V
     .locals 3
-    .parameter
-    .parameter
 
     .prologue
     .line 225
@@ -1512,7 +1481,6 @@
 
 .method public b(Lcom/google/ads/h;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 273
@@ -1553,7 +1521,6 @@
 
 .method public c(Lcom/google/ads/h;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 286
@@ -1640,7 +1607,6 @@
 
 .method public d(Lcom/google/ads/h;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 495

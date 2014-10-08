@@ -14,7 +14,6 @@
 # direct methods
 .method public constructor <init>([B)V
     .locals 7
-    .parameter
 
     .prologue
     const/16 v6, 0x100
@@ -112,7 +111,6 @@
 # virtual methods
 .method public a([B)V
     .locals 8
-    .parameter
 
     .prologue
     .line 28

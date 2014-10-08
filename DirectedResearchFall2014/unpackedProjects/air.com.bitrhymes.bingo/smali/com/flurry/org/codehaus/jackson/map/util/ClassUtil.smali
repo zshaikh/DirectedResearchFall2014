@@ -25,10 +25,7 @@
 
 .method private static _addSuperTypes(Ljava/lang/Class;Ljava/lang/Class;Ljava/util/Collection;Z)V
     .locals 6
-    .parameter
-    .parameter
-    .parameter
-    .parameter "addClassItself"
+    .param p3, "addClassItself"    # Z
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -44,9 +41,9 @@
     .end annotation
 
     .prologue
-    .local p0, cls:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
-    .local p1, endBefore:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
-    .local p2, result:Ljava/util/Collection;,"Ljava/util/Collection<Ljava/lang/Class<*>;>;"
+    .local p0, "cls":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
+    .local p1, "endBefore":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
+    .local p2, "result":Ljava/util/Collection;, "Ljava/util/Collection<Ljava/lang/Class<*>;>;"
     const/4 v5, 0x1
 
     .line 39
@@ -83,20 +80,20 @@
 
     move-result-object v0
 
-    .local v0, arr$:[Ljava/lang/Class;
+    .local v0, "arr$":[Ljava/lang/Class;
     array-length v3, v0
 
-    .local v3, len$:I
+    .local v3, "len$":I
     const/4 v1, 0x0
 
-    .local v1, i$:I
+    .local v1, "i$":I
     :goto_1
     if-ge v1, v3, :cond_3
 
     aget-object v2, v0, v1
 
     .line 49
-    .local v2, intCls:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local v2, "intCls":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-static {v2, p1, p2, v5}, Lcom/flurry/org/codehaus/jackson/map/util/ClassUtil;->_addSuperTypes(Ljava/lang/Class;Ljava/lang/Class;Ljava/util/Collection;Z)V
 
     .line 48
@@ -105,7 +102,7 @@
     goto :goto_1
 
     .line 51
-    .end local v2           #intCls:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .end local v2    # "intCls":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     :cond_3
     invoke-virtual {p0}, Ljava/lang/Class;->getSuperclass()Ljava/lang/Class;
 
@@ -118,7 +115,6 @@
 
 .method public static canBeABeanType(Ljava/lang/Class;)Ljava/lang/String;
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -130,7 +126,7 @@
 
     .prologue
     .line 67
-    .local p0, type:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p0, "type":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-virtual {p0}, Ljava/lang/Class;->isAnnotation()Z
 
     move-result v0
@@ -192,7 +188,7 @@
 
 .method public static checkAndFixAccess(Ljava/lang/reflect/Member;)V
     .locals 7
-    .parameter "member"
+    .param p0, "member"    # Ljava/lang/reflect/Member;
 
     .prologue
     .line 467
@@ -203,7 +199,7 @@
     move-object v1, v0
 
     .line 475
-    .local v1, ao:Ljava/lang/reflect/AccessibleObject;
+    .local v1, "ao":Ljava/lang/reflect/AccessibleObject;
     const/4 v4, 0x1
 
     :try_start_0
@@ -220,7 +216,7 @@
     move-exception v3
 
     .line 481
-    .local v3, se:Ljava/lang/SecurityException;
+    .local v3, "se":Ljava/lang/SecurityException;
     invoke-virtual {v1}, Ljava/lang/reflect/AccessibleObject;->isAccessible()Z
 
     move-result v4
@@ -233,7 +229,7 @@
     move-result-object v2
 
     .line 483
-    .local v2, declClass:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local v2, "declClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     new-instance v4, Ljava/lang/IllegalArgumentException;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -289,8 +285,7 @@
 
 .method public static createInstance(Ljava/lang/Class;Z)Ljava/lang/Object;
     .locals 5
-    .parameter
-    .parameter "canFixAccess"
+    .param p1, "canFixAccess"    # Z
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -309,13 +304,13 @@
 
     .prologue
     .line 342
-    .local p0, cls:Ljava/lang/Class;,"Ljava/lang/Class<TT;>;"
+    .local p0, "cls":Ljava/lang/Class;, "Ljava/lang/Class<TT;>;"
     invoke-static {p0, p1}, Lcom/flurry/org/codehaus/jackson/map/util/ClassUtil;->findConstructor(Ljava/lang/Class;Z)Ljava/lang/reflect/Constructor;
 
     move-result-object v0
 
     .line 343
-    .local v0, ctor:Ljava/lang/reflect/Constructor;,"Ljava/lang/reflect/Constructor<TT;>;"
+    .local v0, "ctor":Ljava/lang/reflect/Constructor;, "Ljava/lang/reflect/Constructor<TT;>;"
     if-nez v0, :cond_0
 
     .line 344
@@ -377,7 +372,7 @@
     move-object v1, v2
 
     .line 349
-    .local v1, e:Ljava/lang/Exception;
+    .local v1, "e":Ljava/lang/Exception;
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -424,7 +419,6 @@
 
 .method public static defaultValue(Ljava/lang/Class;)Ljava/lang/Object;
     .locals 3
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -435,7 +429,7 @@
     .end annotation
 
     .prologue
-    .local p0, cls:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p0, "cls":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const/4 v1, 0x0
 
     .line 390
@@ -586,8 +580,7 @@
 
 .method public static findConstructor(Ljava/lang/Class;Z)Ljava/lang/reflect/Constructor;
     .locals 5
-    .parameter
-    .parameter "canFixAccess"
+    .param p1, "canFixAccess"    # Z
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -608,7 +601,7 @@
 
     .prologue
     .line 358
-    .local p0, cls:Ljava/lang/Class;,"Ljava/lang/Class<TT;>;"
+    .local p0, "cls":Ljava/lang/Class;, "Ljava/lang/Class<TT;>;"
     const/4 v2, 0x0
 
     :try_start_0
@@ -619,7 +612,7 @@
     move-result-object v0
 
     .line 359
-    .local v0, ctor:Ljava/lang/reflect/Constructor;,"Ljava/lang/reflect/Constructor<TT;>;"
+    .local v0, "ctor":Ljava/lang/reflect/Constructor;, "Ljava/lang/reflect/Constructor<TT;>;"
     if-eqz p1, :cond_1
 
     .line 360
@@ -629,12 +622,12 @@
     move-object v2, v0
 
     .line 373
-    .end local v0           #ctor:Ljava/lang/reflect/Constructor;,"Ljava/lang/reflect/Constructor<TT;>;"
+    .end local v0    # "ctor":Ljava/lang/reflect/Constructor;, "Ljava/lang/reflect/Constructor<TT;>;"
     :goto_0
     return-object v2
 
     .line 363
-    .restart local v0       #ctor:Ljava/lang/reflect/Constructor;,"Ljava/lang/reflect/Constructor<TT;>;"
+    .restart local v0    # "ctor":Ljava/lang/reflect/Constructor;, "Ljava/lang/reflect/Constructor<TT;>;"
     :cond_1
     invoke-virtual {v0}, Ljava/lang/reflect/Constructor;->getModifiers()I
 
@@ -685,7 +678,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
     .line 368
-    .end local v0           #ctor:Ljava/lang/reflect/Constructor;,"Ljava/lang/reflect/Constructor<TT;>;"
+    .end local v0    # "ctor":Ljava/lang/reflect/Constructor;, "Ljava/lang/reflect/Constructor<TT;>;"
     :catch_0
     move-exception v2
 
@@ -702,7 +695,7 @@
     move-object v1, v2
 
     .line 371
-    .local v1, e:Ljava/lang/Exception;
+    .local v1, "e":Ljava/lang/Exception;
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -746,7 +739,6 @@
 
 .method public static findEnumType(Ljava/lang/Class;)Ljava/lang/Class;
     .locals 2
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -761,7 +753,7 @@
 
     .prologue
     .line 557
-    .local p0, cls:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p0, "cls":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-virtual {p0}, Ljava/lang/Class;->getSuperclass()Ljava/lang/Class;
 
     move-result-object v0
@@ -782,7 +774,6 @@
 
 .method public static findEnumType(Ljava/lang/Enum;)Ljava/lang/Class;
     .locals 3
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -797,13 +788,13 @@
 
     .prologue
     .line 540
-    .local p0, en:Ljava/lang/Enum;,"Ljava/lang/Enum<*>;"
+    .local p0, "en":Ljava/lang/Enum;, "Ljava/lang/Enum<*>;"
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
 
     .line 541
-    .local v0, ec:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local v0, "ec":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-virtual {v0}, Ljava/lang/Class;->getSuperclass()Ljava/lang/Class;
 
     move-result-object v1
@@ -824,7 +815,6 @@
 
 .method public static findEnumType(Ljava/util/EnumMap;)Ljava/lang/Class;
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -839,7 +829,7 @@
 
     .prologue
     .line 523
-    .local p0, m:Ljava/util/EnumMap;,"Ljava/util/EnumMap<**>;"
+    .local p0, "m":Ljava/util/EnumMap;, "Ljava/util/EnumMap<**>;"
     invoke-virtual {p0}, Ljava/util/EnumMap;->isEmpty()Z
 
     move-result v0
@@ -859,7 +849,7 @@
 
     move-result-object p0
 
-    .end local p0           #m:Ljava/util/EnumMap;,"Ljava/util/EnumMap<**>;"
+    .end local p0    # "m":Ljava/util/EnumMap;, "Ljava/util/EnumMap<**>;"
     check-cast p0, Ljava/lang/Enum;
 
     invoke-static {p0}, Lcom/flurry/org/codehaus/jackson/map/util/ClassUtil;->findEnumType(Ljava/lang/Enum;)Ljava/lang/Class;
@@ -870,7 +860,7 @@
     :goto_0
     return-object v0
 
-    .restart local p0       #m:Ljava/util/EnumMap;,"Ljava/util/EnumMap<**>;"
+    .restart local p0    # "m":Ljava/util/EnumMap;, "Ljava/util/EnumMap<**>;"
     :cond_0
     sget-object v0, Lcom/flurry/org/codehaus/jackson/map/util/ClassUtil$EnumTypeLocator;->instance:Lcom/flurry/org/codehaus/jackson/map/util/ClassUtil$EnumTypeLocator;
 
@@ -883,7 +873,6 @@
 
 .method public static findEnumType(Ljava/util/EnumSet;)Ljava/lang/Class;
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -898,7 +887,7 @@
 
     .prologue
     .line 506
-    .local p0, s:Ljava/util/EnumSet;,"Ljava/util/EnumSet<*>;"
+    .local p0, "s":Ljava/util/EnumSet;, "Ljava/util/EnumSet<*>;"
     invoke-virtual {p0}, Ljava/util/EnumSet;->isEmpty()Z
 
     move-result v0
@@ -914,7 +903,7 @@
 
     move-result-object p0
 
-    .end local p0           #s:Ljava/util/EnumSet;,"Ljava/util/EnumSet<*>;"
+    .end local p0    # "s":Ljava/util/EnumSet;, "Ljava/util/EnumSet<*>;"
     check-cast p0, Ljava/lang/Enum;
 
     invoke-static {p0}, Lcom/flurry/org/codehaus/jackson/map/util/ClassUtil;->findEnumType(Ljava/lang/Enum;)Ljava/lang/Class;
@@ -925,7 +914,7 @@
     :goto_0
     return-object v0
 
-    .restart local p0       #s:Ljava/util/EnumSet;,"Ljava/util/EnumSet<*>;"
+    .restart local p0    # "s":Ljava/util/EnumSet;, "Ljava/util/EnumSet<*>;"
     :cond_0
     sget-object v0, Lcom/flurry/org/codehaus/jackson/map/util/ClassUtil$EnumTypeLocator;->instance:Lcom/flurry/org/codehaus/jackson/map/util/ClassUtil$EnumTypeLocator;
 
@@ -938,8 +927,6 @@
 
 .method public static findSuperTypes(Ljava/lang/Class;Ljava/lang/Class;)Ljava/util/List;
     .locals 2
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -956,8 +943,8 @@
 
     .prologue
     .line 28
-    .local p0, cls:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
-    .local p1, endBefore:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p0, "cls":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
+    .local p1, "endBefore":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     new-instance v0, Ljava/util/ArrayList;
 
     const/16 v1, 0x8
@@ -973,9 +960,6 @@
 
 .method public static findSuperTypes(Ljava/lang/Class;Ljava/lang/Class;Ljava/util/List;)Ljava/util/List;
     .locals 1
-    .parameter
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -996,9 +980,9 @@
 
     .prologue
     .line 33
-    .local p0, cls:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
-    .local p1, endBefore:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
-    .local p2, result:Ljava/util/List;,"Ljava/util/List<Ljava/lang/Class<*>;>;"
+    .local p0, "cls":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
+    .local p1, "endBefore":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
+    .local p2, "result":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Class<*>;>;"
     const/4 v0, 0x0
 
     invoke-static {p0, p1, p2, v0}, Lcom/flurry/org/codehaus/jackson/map/util/ClassUtil;->_addSuperTypes(Ljava/lang/Class;Ljava/lang/Class;Ljava/util/Collection;Z)V
@@ -1009,7 +993,7 @@
 
 .method public static getClassDescription(Ljava/lang/Object;)Ljava/lang/String;
     .locals 2
-    .parameter "classOrInstance"
+    .param p0, "classOrInstance"    # Ljava/lang/Object;
 
     .prologue
     .line 207
@@ -1019,12 +1003,12 @@
     const-string v1, "unknown"
 
     .line 212
-    .end local p0
+    .end local p0    # "classOrInstance":Ljava/lang/Object;
     :goto_0
     return-object v1
 
     .line 210
-    .restart local p0
+    .restart local p0    # "classOrInstance":Ljava/lang/Object;
     :cond_0
     instance-of v1, p0, Ljava/lang/Class;
 
@@ -1032,11 +1016,11 @@
 
     check-cast p0, Ljava/lang/Class;
 
-    .end local p0
+    .end local p0    # "classOrInstance":Ljava/lang/Object;
     move-object v0, p0
 
     .line 212
-    .local v0, cls:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local v0, "cls":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     :goto_1
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -1045,8 +1029,8 @@
     goto :goto_0
 
     .line 210
-    .end local v0           #cls:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
-    .restart local p0
+    .end local v0    # "cls":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
+    .restart local p0    # "classOrInstance":Ljava/lang/Object;
     :cond_1
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -1059,7 +1043,6 @@
 
 .method public static getOuterClass(Ljava/lang/Class;)Ljava/lang/Class;
     .locals 2
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1071,7 +1054,7 @@
     .end annotation
 
     .prologue
-    .local p0, type:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p0, "type":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const/4 v1, 0x0
 
     .line 134
@@ -1130,7 +1113,7 @@
 
 .method public static getRootCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
     .locals 1
-    .parameter "t"
+    .param p0, "t"    # Ljava/lang/Throwable;
 
     .prologue
     .line 252
@@ -1155,7 +1138,7 @@
 
 .method public static hasGetterSignature(Ljava/lang/reflect/Method;)Z
     .locals 4
-    .parameter "m"
+    .param p0, "m"    # Ljava/lang/reflect/Method;
 
     .prologue
     const/4 v3, 0x0
@@ -1184,7 +1167,7 @@
     move-result-object v0
 
     .line 229
-    .local v0, pts:[Ljava/lang/Class;,"[Ljava/lang/Class<*>;"
+    .local v0, "pts":[Ljava/lang/Class;, "[Ljava/lang/Class<*>;"
     if-eqz v0, :cond_1
 
     array-length v1, v0
@@ -1220,7 +1203,6 @@
 
 .method public static isCollectionMapOrArray(Ljava/lang/Class;)Z
     .locals 2
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1230,7 +1212,7 @@
     .end annotation
 
     .prologue
-    .local p0, type:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p0, "type":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const/4 v1, 0x1
 
     .line 188
@@ -1283,7 +1265,6 @@
 
 .method public static isConcrete(Ljava/lang/Class;)Z
     .locals 2
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1294,13 +1275,13 @@
 
     .prologue
     .line 173
-    .local p0, type:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p0, "type":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-virtual {p0}, Ljava/lang/Class;->getModifiers()I
 
     move-result v0
 
     .line 174
-    .local v0, mod:I
+    .local v0, "mod":I
     and-int/lit16 v1, v0, 0x600
 
     if-nez v1, :cond_0
@@ -1318,7 +1299,7 @@
 
 .method public static isConcrete(Ljava/lang/reflect/Member;)Z
     .locals 2
-    .parameter "member"
+    .param p0, "member"    # Ljava/lang/reflect/Member;
 
     .prologue
     .line 182
@@ -1327,7 +1308,7 @@
     move-result v0
 
     .line 183
-    .local v0, mod:I
+    .local v0, "mod":I
     and-int/lit16 v1, v0, 0x600
 
     if-nez v1, :cond_0
@@ -1345,7 +1326,6 @@
 
 .method public static isLocalType(Ljava/lang/Class;)Ljava/lang/String;
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1360,7 +1340,7 @@
 
     .prologue
     .line 89
-    .local p0, type:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p0, "type":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const/4 v0, 0x0
 
     invoke-static {p0, v0}, Lcom/flurry/org/codehaus/jackson/map/util/ClassUtil;->isLocalType(Ljava/lang/Class;Z)Ljava/lang/String;
@@ -1372,8 +1352,7 @@
 
 .method public static isLocalType(Ljava/lang/Class;Z)Ljava/lang/String;
     .locals 1
-    .parameter
-    .parameter "allowNonStatic"
+    .param p1, "allowNonStatic"    # Z
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1385,7 +1364,7 @@
 
     .prologue
     .line 103
-    .local p0, type:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p0, "type":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     :try_start_0
     invoke-virtual {p0}, Ljava/lang/Class;->getEnclosingMethod()Ljava/lang/reflect/Method;
 
@@ -1450,7 +1429,6 @@
 
 .method public static isProxyType(Ljava/lang/Class;)Z
     .locals 3
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1460,7 +1438,7 @@
     .end annotation
 
     .prologue
-    .local p0, type:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p0, "type":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const/4 v2, 0x1
 
     .line 154
@@ -1483,7 +1461,7 @@
     move-result-object v0
 
     .line 159
-    .local v0, name:Ljava/lang/String;
+    .local v0, "name":Ljava/lang/String;
     const-string v1, "net.sf.cglib.proxy."
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
@@ -1515,7 +1493,7 @@
 
 .method public static throwAsIAE(Ljava/lang/Throwable;)V
     .locals 1
-    .parameter "t"
+    .param p0, "t"    # Ljava/lang/Throwable;
 
     .prologue
     .line 281
@@ -1531,8 +1509,8 @@
 
 .method public static throwAsIAE(Ljava/lang/Throwable;Ljava/lang/String;)V
     .locals 1
-    .parameter "t"
-    .parameter "msg"
+    .param p0, "t"    # Ljava/lang/Throwable;
+    .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
     .line 291
@@ -1543,11 +1521,11 @@
     .line 292
     check-cast p0, Ljava/lang/RuntimeException;
 
-    .end local p0
+    .end local p0    # "t":Ljava/lang/Throwable;
     throw p0
 
     .line 294
-    .restart local p0
+    .restart local p0    # "t":Ljava/lang/Throwable;
     :cond_0
     instance-of v0, p0, Ljava/lang/Error;
 
@@ -1556,11 +1534,11 @@
     .line 295
     check-cast p0, Ljava/lang/Error;
 
-    .end local p0
+    .end local p0    # "t":Ljava/lang/Throwable;
     throw p0
 
     .line 297
-    .restart local p0
+    .restart local p0    # "t":Ljava/lang/Throwable;
     :cond_1
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -1571,7 +1549,7 @@
 
 .method public static throwRootCause(Ljava/lang/Throwable;)V
     .locals 1
-    .parameter "t"
+    .param p0, "t"    # Ljava/lang/Throwable;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/Exception;
@@ -1592,21 +1570,21 @@
     .line 270
     check-cast p0, Ljava/lang/Exception;
 
-    .end local p0
+    .end local p0    # "t":Ljava/lang/Throwable;
     throw p0
 
     .line 272
-    .restart local p0
+    .restart local p0    # "t":Ljava/lang/Throwable;
     :cond_0
     check-cast p0, Ljava/lang/Error;
 
-    .end local p0
+    .end local p0    # "t":Ljava/lang/Throwable;
     throw p0
 .end method
 
 .method public static unwrapAndThrowAsIAE(Ljava/lang/Throwable;)V
     .locals 1
-    .parameter "t"
+    .param p0, "t"    # Ljava/lang/Throwable;
 
     .prologue
     .line 307
@@ -1622,8 +1600,8 @@
 
 .method public static unwrapAndThrowAsIAE(Ljava/lang/Throwable;Ljava/lang/String;)V
     .locals 1
-    .parameter "t"
-    .parameter "msg"
+    .param p0, "t"    # Ljava/lang/Throwable;
+    .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
     .line 317
@@ -1639,7 +1617,6 @@
 
 .method public static wrapperType(Ljava/lang/Class;)Ljava/lang/Class;
     .locals 3
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1652,7 +1629,7 @@
 
     .prologue
     .line 425
-    .local p0, primitiveType:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p0, "primitiveType":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     sget-object v0, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
     if-ne p0, v0, :cond_0

@@ -28,9 +28,6 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m1/android/CachedVideoPlayerActivity;Landroid/widget/ImageButton;Lcom/fusepowered/m1/android/VideoImage;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 313
@@ -49,7 +46,7 @@
 # virtual methods
 .method public onClick(Landroid/view/View;)V
     .locals 2
-    .parameter "view"
+    .param p1, "view"    # Landroid/view/View;
 
     .prologue
     .line 317

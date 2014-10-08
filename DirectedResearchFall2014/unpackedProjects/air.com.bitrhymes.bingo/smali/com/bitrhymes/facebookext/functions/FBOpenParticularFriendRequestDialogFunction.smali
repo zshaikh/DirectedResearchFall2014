@@ -21,8 +21,8 @@
 # virtual methods
 .method public call(Lcom/adobe/fre/FREContext;[Lcom/adobe/fre/FREObject;)Lcom/adobe/fre/FREObject;
     .locals 13
-    .parameter "context"
-    .parameter "args"
+    .param p1, "context"    # Lcom/adobe/fre/FREContext;
+    .param p2, "args"    # [Lcom/adobe/fre/FREObject;
 
     .prologue
     .line 20
@@ -57,7 +57,7 @@
     move-result-object v0
 
     .line 25
-    .local v0, appAccessToken:Ljava/lang/String;
+    .local v0, "appAccessToken":Ljava/lang/String;
     const/4 v11, 0x1
 
     aget-object v11, p2, v11
@@ -67,7 +67,7 @@
     move-result-object v1
 
     .line 26
-    .local v1, appId:Ljava/lang/String;
+    .local v1, "appId":Ljava/lang/String;
     const/4 v11, 0x2
 
     aget-object v11, p2, v11
@@ -77,7 +77,7 @@
     move-result-object v6
 
     .line 27
-    .local v6, message:Ljava/lang/String;
+    .local v6, "message":Ljava/lang/String;
     const/4 v11, 0x3
 
     aget-object v11, p2, v11
@@ -87,7 +87,7 @@
     move-result-object v8
 
     .line 28
-    .local v8, notificationText:Ljava/lang/String;
+    .local v8, "notificationText":Ljava/lang/String;
     const/4 v11, 0x4
 
     aget-object v11, p2, v11
@@ -97,7 +97,7 @@
     move-result-object v4
 
     .line 29
-    .local v4, friendId:Ljava/lang/String;
+    .local v4, "friendId":Ljava/lang/String;
     const/4 v11, 0x5
 
     aget-object v11, p2, v11
@@ -107,7 +107,7 @@
     move-result-object v10
 
     .line 30
-    .local v10, titleStr:Ljava/lang/String;
+    .local v10, "titleStr":Ljava/lang/String;
     const/4 v11, 0x6
 
     aget-object v11, p2, v11
@@ -117,7 +117,7 @@
     move-result-object v2
 
     .line 31
-    .local v2, dataStr:Ljava/lang/String;
+    .local v2, "dataStr":Ljava/lang/String;
     const/4 v11, 0x7
 
     aget-object v11, p2, v11
@@ -127,7 +127,7 @@
     move-result-object v3
 
     .line 33
-    .local v3, expiresTime:Ljava/lang/String;
+    .local v3, "expiresTime":Ljava/lang/String;
     invoke-static {v0, v3, v1}, Lcom/bitrhymes/facebookext/FacebookExtContext;->updateFBSession(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 35
@@ -136,7 +136,7 @@
     invoke-direct {v9}, Landroid/os/Bundle;-><init>()V
 
     .line 36
-    .local v9, params:Landroid/os/Bundle;
+    .local v9, "params":Landroid/os/Bundle;
     const-string v11, "to"
 
     invoke-virtual {v9, v11, v4}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
@@ -185,7 +185,7 @@
     const-string v7, "apprequests"
 
     .line 46
-    .local v7, method:Ljava/lang/String;
+    .local v7, "method":Ljava/lang/String;
     new-instance v5, Landroid/content/Intent;
 
     invoke-virtual {p1}, Lcom/adobe/fre/FREContext;->getActivity()Landroid/app/Activity;
@@ -201,7 +201,7 @@
     invoke-direct {v5, v11, v12}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
     .line 47
-    .local v5, i:Landroid/content/Intent;
+    .local v5, "i":Landroid/content/Intent;
     new-instance v11, Ljava/lang/StringBuilder;
 
     sget-object v12, Lcom/bitrhymes/facebookext/DialogActivity;->extraPrefix:Ljava/lang/String;
@@ -282,17 +282,17 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 55
-    .end local v0           #appAccessToken:Ljava/lang/String;
-    .end local v1           #appId:Ljava/lang/String;
-    .end local v2           #dataStr:Ljava/lang/String;
-    .end local v3           #expiresTime:Ljava/lang/String;
-    .end local v4           #friendId:Ljava/lang/String;
-    .end local v5           #i:Landroid/content/Intent;
-    .end local v6           #message:Ljava/lang/String;
-    .end local v7           #method:Ljava/lang/String;
-    .end local v8           #notificationText:Ljava/lang/String;
-    .end local v9           #params:Landroid/os/Bundle;
-    .end local v10           #titleStr:Ljava/lang/String;
+    .end local v0    # "appAccessToken":Ljava/lang/String;
+    .end local v1    # "appId":Ljava/lang/String;
+    .end local v2    # "dataStr":Ljava/lang/String;
+    .end local v3    # "expiresTime":Ljava/lang/String;
+    .end local v4    # "friendId":Ljava/lang/String;
+    .end local v5    # "i":Landroid/content/Intent;
+    .end local v6    # "message":Ljava/lang/String;
+    .end local v7    # "method":Ljava/lang/String;
+    .end local v8    # "notificationText":Ljava/lang/String;
+    .end local v9    # "params":Landroid/os/Bundle;
+    .end local v10    # "titleStr":Ljava/lang/String;
     :goto_0
     const/4 v11, 0x0
 

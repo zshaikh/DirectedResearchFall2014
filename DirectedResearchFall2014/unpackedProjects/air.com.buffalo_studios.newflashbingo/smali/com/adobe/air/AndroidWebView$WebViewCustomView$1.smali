@@ -21,8 +21,6 @@
 # direct methods
 .method constructor <init>(Lcom/adobe/air/AndroidWebView$WebViewCustomView;Landroid/content/Context;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 99
@@ -37,7 +35,6 @@
 # virtual methods
 .method public dispatchKeyEvent(Landroid/view/KeyEvent;)Z
     .locals 3
-    .parameter
 
     .prologue
     const/4 v2, 0x1

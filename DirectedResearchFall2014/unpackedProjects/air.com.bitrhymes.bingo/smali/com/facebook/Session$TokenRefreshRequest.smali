@@ -28,7 +28,6 @@
 # direct methods
 .method constructor <init>(Lcom/facebook/Session;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 1405
@@ -58,7 +57,6 @@
 
 .method static synthetic access$0(Lcom/facebook/Session$TokenRefreshRequest;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1437
@@ -74,7 +72,7 @@
     .line 1438
     iget-object v0, p0, Lcom/facebook/Session$TokenRefreshRequest;->this$0:Lcom/facebook/Session;
 
-    #getter for: Lcom/facebook/Session;->currentTokenRefreshRequest:Lcom/facebook/Session$TokenRefreshRequest;
+    # getter for: Lcom/facebook/Session;->currentTokenRefreshRequest:Lcom/facebook/Session$TokenRefreshRequest;
     invoke-static {v0}, Lcom/facebook/Session;->access$2(Lcom/facebook/Session;)Lcom/facebook/Session$TokenRefreshRequest;
 
     move-result-object v0
@@ -86,7 +84,6 @@
 
     const/4 v1, 0x0
 
-    #setter for: Lcom/facebook/Session;->currentTokenRefreshRequest:Lcom/facebook/Session$TokenRefreshRequest;
     invoke-static {v0, v1}, Lcom/facebook/Session;->access$3(Lcom/facebook/Session;Lcom/facebook/Session$TokenRefreshRequest;)V
 
     .line 1441
@@ -104,7 +101,7 @@
     invoke-direct {v2}, Landroid/os/Bundle;-><init>()V
 
     .line 1445
-    .local v2, requestData:Landroid/os/Bundle;
+    .local v2, "requestData":Landroid/os/Bundle;
     const-string v3, "access_token"
 
     iget-object v4, p0, Lcom/facebook/Session$TokenRefreshRequest;->this$0:Lcom/facebook/Session;
@@ -125,7 +122,7 @@
     move-result-object v1
 
     .line 1448
-    .local v1, request:Landroid/os/Message;
+    .local v1, "request":Landroid/os/Message;
     invoke-virtual {v1, v2}, Landroid/os/Message;->setData(Landroid/os/Bundle;)V
 
     .line 1449
@@ -152,7 +149,7 @@
     move-object v0, v3
 
     .line 1454
-    .local v0, e:Landroid/os/RemoteException;
+    .local v0, "e":Landroid/os/RemoteException;
     invoke-direct {p0}, Lcom/facebook/Session$TokenRefreshRequest;->cleanup()V
 
     goto :goto_0
@@ -174,10 +171,11 @@
     move-result-object v0
 
     .line 1414
-    .local v0, intent:Landroid/content/Intent;
+    .local v0, "intent":Landroid/content/Intent;
     if-eqz v0, :cond_0
 
     .line 1415
+    # getter for: Lcom/facebook/Session;->staticContext:Landroid/content/Context;
     invoke-static {}, Lcom/facebook/Session;->access$1()Landroid/content/Context;
 
     move-result-object v1
@@ -212,8 +210,8 @@
 
 .method public onServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V
     .locals 1
-    .parameter "className"
-    .parameter "service"
+    .param p1, "className"    # Landroid/content/ComponentName;
+    .param p2, "service"    # Landroid/os/IBinder;
 
     .prologue
     .line 1424
@@ -232,13 +230,14 @@
 
 .method public onServiceDisconnected(Landroid/content/ComponentName;)V
     .locals 1
-    .parameter "arg"
+    .param p1, "arg"    # Landroid/content/ComponentName;
 
     .prologue
     .line 1430
     invoke-direct {p0}, Lcom/facebook/Session$TokenRefreshRequest;->cleanup()V
 
     .line 1434
+    # getter for: Lcom/facebook/Session;->staticContext:Landroid/content/Context;
     invoke-static {}, Lcom/facebook/Session;->access$1()Landroid/content/Context;
 
     move-result-object v0

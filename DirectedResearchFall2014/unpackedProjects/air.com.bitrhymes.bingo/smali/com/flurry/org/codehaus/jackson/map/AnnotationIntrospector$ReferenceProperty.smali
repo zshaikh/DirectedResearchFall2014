@@ -29,8 +29,8 @@
 # direct methods
 .method public constructor <init>(Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector$ReferenceProperty$Type;Ljava/lang/String;)V
     .locals 0
-    .parameter "t"
-    .parameter "n"
+    .param p1, "t"    # Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector$ReferenceProperty$Type;
+    .param p2, "n"    # Ljava/lang/String;
 
     .prologue
     .line 66
@@ -48,7 +48,7 @@
 
 .method public static back(Ljava/lang/String;)Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector$ReferenceProperty;
     .locals 2
-    .parameter "name"
+    .param p0, "name"    # Ljava/lang/String;
 
     .prologue
     .line 72
@@ -63,7 +63,7 @@
 
 .method public static managed(Ljava/lang/String;)Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector$ReferenceProperty;
     .locals 2
-    .parameter "name"
+    .param p0, "name"    # Ljava/lang/String;
 
     .prologue
     .line 71

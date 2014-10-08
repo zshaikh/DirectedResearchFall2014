@@ -22,7 +22,6 @@
 
 .method private constructor <init>(B)V
     .locals 0
-    .parameter
 
     .prologue
     .line 194

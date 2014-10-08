@@ -30,7 +30,6 @@
 # direct methods
 .method public constructor <init>(Ljava/util/Set;)V
     .locals 0
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -43,7 +42,7 @@
 
     .prologue
     .line 95
-    .local p1, properties:Ljava/util/Set;,"Ljava/util/Set<Ljava/lang/String;>;"
+    .local p1, "properties":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     invoke-direct {p0}, Lcom/flurry/org/codehaus/jackson/map/ser/impl/SimpleBeanPropertyFilter;-><init>()V
 
     .line 96
@@ -57,10 +56,10 @@
 # virtual methods
 .method public serializeAsField(Ljava/lang/Object;Lcom/flurry/org/codehaus/jackson/JsonGenerator;Lcom/flurry/org/codehaus/jackson/map/SerializerProvider;Lcom/flurry/org/codehaus/jackson/map/ser/BeanPropertyWriter;)V
     .locals 2
-    .parameter "bean"
-    .parameter "jgen"
-    .parameter "provider"
-    .parameter "writer"
+    .param p1, "bean"    # Ljava/lang/Object;
+    .param p2, "jgen"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator;
+    .param p3, "provider"    # Lcom/flurry/org/codehaus/jackson/map/SerializerProvider;
+    .param p4, "writer"    # Lcom/flurry/org/codehaus/jackson/map/ser/BeanPropertyWriter;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/Exception;

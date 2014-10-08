@@ -26,7 +26,7 @@
 
     .prologue
     .line 282
-    const/high16 v0, 0x7f08
+    const/high16 v0, 0x7f080000
 
     sput v0, Lcom/facebook/android/R$style;->com_facebook_loginview_default_style:I
 

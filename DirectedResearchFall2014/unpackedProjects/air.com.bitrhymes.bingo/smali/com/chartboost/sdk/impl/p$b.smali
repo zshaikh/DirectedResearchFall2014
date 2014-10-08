@@ -148,8 +148,6 @@
 
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 22
@@ -160,7 +158,6 @@
 
 .method public static a(I)Lcom/chartboost/sdk/impl/p$b;
     .locals 2
-    .parameter
 
     .prologue
     const/4 v1, 0x0
@@ -208,7 +205,6 @@
 
 .method public static valueOf(Ljava/lang/String;)Lcom/chartboost/sdk/impl/p$b;
     .locals 1
-    .parameter
 
     .prologue
     .line 1

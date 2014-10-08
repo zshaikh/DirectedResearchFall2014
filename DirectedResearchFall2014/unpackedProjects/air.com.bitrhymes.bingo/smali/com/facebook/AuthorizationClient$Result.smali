@@ -54,11 +54,11 @@
 # direct methods
 .method private constructor <init>(Lcom/facebook/AuthorizationClient$AuthorizationRequest;Lcom/facebook/AuthorizationClient$Result$Code;Lcom/facebook/AccessToken;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
-    .parameter "request"
-    .parameter "code"
-    .parameter "token"
-    .parameter "errorMessage"
-    .parameter "errorCode"
+    .param p1, "request"    # Lcom/facebook/AuthorizationClient$AuthorizationRequest;
+    .param p2, "code"    # Lcom/facebook/AuthorizationClient$Result$Code;
+    .param p3, "token"    # Lcom/facebook/AccessToken;
+    .param p4, "errorMessage"    # Ljava/lang/String;
+    .param p5, "errorCode"    # Ljava/lang/String;
 
     .prologue
     .line 1144
@@ -85,8 +85,8 @@
 
 .method static createCancelResult(Lcom/facebook/AuthorizationClient$AuthorizationRequest;Ljava/lang/String;)Lcom/facebook/AuthorizationClient$Result;
     .locals 6
-    .parameter "request"
-    .parameter "message"
+    .param p0, "request"    # Lcom/facebook/AuthorizationClient$AuthorizationRequest;
+    .param p1, "message"    # Ljava/lang/String;
 
     .prologue
     const/4 v3, 0x0
@@ -109,9 +109,9 @@
 
 .method static createErrorResult(Lcom/facebook/AuthorizationClient$AuthorizationRequest;Ljava/lang/String;Ljava/lang/String;)Lcom/facebook/AuthorizationClient$Result;
     .locals 1
-    .parameter "request"
-    .parameter "errorType"
-    .parameter "errorDescription"
+    .param p0, "request"    # Lcom/facebook/AuthorizationClient$AuthorizationRequest;
+    .param p1, "errorType"    # Ljava/lang/String;
+    .param p2, "errorDescription"    # Ljava/lang/String;
 
     .prologue
     .line 1162
@@ -126,10 +126,10 @@
 
 .method static createErrorResult(Lcom/facebook/AuthorizationClient$AuthorizationRequest;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lcom/facebook/AuthorizationClient$Result;
     .locals 6
-    .parameter "request"
-    .parameter "errorType"
-    .parameter "errorDescription"
-    .parameter "errorCode"
+    .param p0, "request"    # Lcom/facebook/AuthorizationClient$AuthorizationRequest;
+    .param p1, "errorType"    # Ljava/lang/String;
+    .param p2, "errorDescription"    # Ljava/lang/String;
+    .param p3, "errorCode"    # Ljava/lang/String;
 
     .prologue
     .line 1167
@@ -156,7 +156,7 @@
     move-result-object v4
 
     .line 1168
-    .local v4, message:Ljava/lang/String;
+    .local v4, "message":Ljava/lang/String;
     new-instance v0, Lcom/facebook/AuthorizationClient$Result;
 
     sget-object v2, Lcom/facebook/AuthorizationClient$Result$Code;->ERROR:Lcom/facebook/AuthorizationClient$Result$Code;
@@ -174,8 +174,8 @@
 
 .method static createTokenResult(Lcom/facebook/AuthorizationClient$AuthorizationRequest;Lcom/facebook/AccessToken;)Lcom/facebook/AuthorizationClient$Result;
     .locals 6
-    .parameter "request"
-    .parameter "token"
+    .param p0, "request"    # Lcom/facebook/AuthorizationClient$AuthorizationRequest;
+    .param p1, "token"    # Lcom/facebook/AccessToken;
 
     .prologue
     const/4 v4, 0x0

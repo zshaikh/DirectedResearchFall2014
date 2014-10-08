@@ -32,11 +32,6 @@
 # direct methods
 .method constructor <init>(Lcom/bitrhymes/iab/util/IabHelper;Ljava/util/List;Lcom/bitrhymes/iab/util/IabHelper$OnConsumeFinishedListener;Landroid/os/Handler;Lcom/bitrhymes/iab/util/IabHelper$OnConsumeMultiFinishedListener;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 1
@@ -68,7 +63,7 @@
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
     .line 911
-    .local v2, results:Ljava/util/List;,"Ljava/util/List<Lcom/bitrhymes/iab/util/IabResult;>;"
+    .local v2, "results":Ljava/util/List;, "Ljava/util/List<Lcom/bitrhymes/iab/util/IabResult;>;"
     iget-object v3, p0, Lcom/bitrhymes/iab/util/IabHelper$3;->val$purchases:Ljava/util/List;
 
     invoke-interface {v3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -137,7 +132,7 @@
     check-cast v1, Lcom/bitrhymes/iab/util/Purchase;
 
     .line 913
-    .local v1, purchase:Lcom/bitrhymes/iab/util/Purchase;
+    .local v1, "purchase":Lcom/bitrhymes/iab/util/Purchase;
     :try_start_0
     iget-object v4, p0, Lcom/bitrhymes/iab/util/IabHelper$3;->this$0:Lcom/bitrhymes/iab/util/IabHelper;
 
@@ -181,7 +176,7 @@
     move-object v0, v4
 
     .line 917
-    .local v0, ex:Lcom/bitrhymes/iab/util/IabException;
+    .local v0, "ex":Lcom/bitrhymes/iab/util/IabException;
     invoke-virtual {v0}, Lcom/bitrhymes/iab/util/IabException;->getResult()Lcom/bitrhymes/iab/util/IabResult;
 
     move-result-object v4

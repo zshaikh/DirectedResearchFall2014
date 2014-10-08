@@ -26,8 +26,6 @@
 # direct methods
 .method constructor <init>(Lcom/google/analytics/tracking/android/GAThread;Lcom/google/analytics/tracking/android/AnalyticsThread$ClientIdCallback;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 316
@@ -51,7 +49,7 @@
 
     iget-object v1, p0, Lcom/google/analytics/tracking/android/GAThread$5;->this$0:Lcom/google/analytics/tracking/android/GAThread;
 
-    #getter for: Lcom/google/analytics/tracking/android/GAThread;->mClientId:Ljava/lang/String;
+    # getter for: Lcom/google/analytics/tracking/android/GAThread;->mClientId:Ljava/lang/String;
     invoke-static {v1}, Lcom/google/analytics/tracking/android/GAThread;->access$000(Lcom/google/analytics/tracking/android/GAThread;)Ljava/lang/String;
 
     move-result-object v1

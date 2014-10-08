@@ -26,8 +26,6 @@
 # direct methods
 .method constructor <init>(Lcom/bitrhymes/iab/util/IabHelper;Lcom/bitrhymes/iab/util/IabHelper$OnIabSetupFinishedListener;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 1
@@ -45,8 +43,8 @@
 # virtual methods
 .method public onServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V
     .locals 7
-    .parameter "name"
-    .parameter "service"
+    .param p1, "name"    # Landroid/content/ComponentName;
+    .param p2, "service"    # Landroid/os/IBinder;
 
     .prologue
     const/4 v6, 0x0
@@ -77,7 +75,7 @@
     move-result-object v1
 
     .line 202
-    .local v1, packageName:Ljava/lang/String;
+    .local v1, "packageName":Ljava/lang/String;
     :try_start_0
     iget-object v3, p0, Lcom/bitrhymes/iab/util/IabHelper$1;->this$0:Lcom/bitrhymes/iab/util/IabHelper;
 
@@ -99,7 +97,7 @@
     move-result v2
 
     .line 206
-    .local v2, response:I
+    .local v2, "response":I
     if-eqz v2, :cond_2
 
     .line 207
@@ -128,13 +126,13 @@
     iput-boolean v4, v3, Lcom/bitrhymes/iab/util/IabHelper;->mSubscriptionsSupported:Z
 
     .line 240
-    .end local v2           #response:I
+    .end local v2    # "response":I
     :cond_1
     :goto_0
     return-void
 
     .line 214
-    .restart local v2       #response:I
+    .restart local v2    # "response":I
     :cond_2
     iget-object v3, p0, Lcom/bitrhymes/iab/util/IabHelper$1;->this$0:Lcom/bitrhymes/iab/util/IabHelper;
 
@@ -238,14 +236,14 @@
     goto :goto_1
 
     .line 228
-    .end local v2           #response:I
+    .end local v2    # "response":I
     :catch_0
     move-exception v3
 
     move-object v0, v3
 
     .line 229
-    .local v0, e:Landroid/os/RemoteException;
+    .local v0, "e":Landroid/os/RemoteException;
     iget-object v3, p0, Lcom/bitrhymes/iab/util/IabHelper$1;->val$listener:Lcom/bitrhymes/iab/util/IabHelper$OnIabSetupFinishedListener;
 
     if-eqz v3, :cond_4
@@ -274,7 +272,7 @@
 
 .method public onServiceDisconnected(Landroid/content/ComponentName;)V
     .locals 2
-    .parameter "name"
+    .param p1, "name"    # Landroid/content/ComponentName;
 
     .prologue
     .line 192

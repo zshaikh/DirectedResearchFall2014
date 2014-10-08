@@ -60,7 +60,6 @@
 
 .method synthetic constructor <init>(B)V
     .locals 0
-    .parameter
 
     .prologue
     .line 8
@@ -83,7 +82,6 @@
 # virtual methods
 .method protected final a(Landroid/os/Parcel;)Lcom/vungle/sdk/ae;
     .locals 0
-    .parameter
 
     .prologue
     .line 37
@@ -95,9 +93,6 @@
 
 .method protected final a(Lcom/vungle/sdk/ah;Lcom/vungle/sdk/aj;Lcom/vungle/sdk/am;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 25
@@ -106,7 +101,6 @@
 
 .method protected final bridge synthetic b(Landroid/os/Parcel;)Lcom/vungle/sdk/net/http/MaxRetryAgeHttpResponseHandler;
     .locals 0
-    .parameter
 
     .prologue
     .line 8
@@ -117,8 +111,8 @@
 
 .method public final writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
-    .parameter "parcel"
-    .parameter "flags"
+    .param p1, "parcel"    # Landroid/os/Parcel;
+    .param p2, "flags"    # I
 
     .prologue
     .line 32

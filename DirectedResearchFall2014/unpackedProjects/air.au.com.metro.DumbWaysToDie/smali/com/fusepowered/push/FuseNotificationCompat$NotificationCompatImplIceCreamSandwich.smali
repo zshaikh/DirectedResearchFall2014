@@ -32,7 +32,7 @@
 # virtual methods
 .method public build(Lcom/fusepowered/push/FuseNotificationCompat$Builder;)Landroid/app/Notification;
     .locals 13
-    .parameter "b"
+    .param p1, "b"    # Lcom/fusepowered/push/FuseNotificationCompat$Builder;
 
     .prologue
     .line 108

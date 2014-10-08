@@ -31,12 +31,12 @@
 
 .method public constructor <init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/fusepowered/util/Gift;)V
     .locals 0
-    .parameter "id"
-    .parameter "alias"
-    .parameter "fuseId"
-    .parameter "message"
-    .parameter "date"
-    .parameter "gift"
+    .param p1, "id"    # I
+    .param p2, "alias"    # Ljava/lang/String;
+    .param p3, "fuseId"    # Ljava/lang/String;
+    .param p4, "message"    # Ljava/lang/String;
+    .param p5, "date"    # Ljava/lang/String;
+    .param p6, "gift"    # Lcom/fusepowered/util/Gift;
 
     .prologue
     .line 18
@@ -128,7 +128,7 @@
 
 .method public setAlias(Ljava/lang/String;)V
     .locals 0
-    .parameter "alias"
+    .param p1, "alias"    # Ljava/lang/String;
 
     .prologue
     .line 54
@@ -140,7 +140,7 @@
 
 .method public setDate(Ljava/lang/String;)V
     .locals 0
-    .parameter "date"
+    .param p1, "date"    # Ljava/lang/String;
 
     .prologue
     .line 43
@@ -152,7 +152,7 @@
 
 .method public setFuseId(Ljava/lang/String;)V
     .locals 0
-    .parameter "fuseId"
+    .param p1, "fuseId"    # Ljava/lang/String;
 
     .prologue
     .line 66
@@ -164,7 +164,7 @@
 
 .method public setGift(Lcom/fusepowered/util/Gift;)V
     .locals 0
-    .parameter "gift"
+    .param p1, "gift"    # Lcom/fusepowered/util/Gift;
 
     .prologue
     .line 33
@@ -176,7 +176,7 @@
 
 .method public setId(I)V
     .locals 0
-    .parameter "id"
+    .param p1, "id"    # I
 
     .prologue
     .line 87
@@ -188,7 +188,7 @@
 
 .method public setMessage(Ljava/lang/String;)V
     .locals 0
-    .parameter "message"
+    .param p1, "message"    # Ljava/lang/String;
 
     .prologue
     .line 78
@@ -282,7 +282,7 @@
     move-result-object v0
 
     .line 100
-    .local v0, buf:Ljava/lang/StringBuilder;
+    .local v0, "buf":Ljava/lang/StringBuilder;
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1

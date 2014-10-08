@@ -16,7 +16,7 @@
 
 .method private validateReward(Lorg/json/JSONObject;)Z
     .locals 11
-    .parameter "data"
+    .param p1, "data"    # Lorg/json/JSONObject;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/security/NoSuchAlgorithmException;,
@@ -48,12 +48,12 @@
     move v7, v10
 
     .line 96
-    .end local p0
+    .end local p0    # "this":Lv2/com/playhaven/interstitial/jsbridge/handlers/RewardHandler;
     :goto_0
     return v7
 
     .line 73
-    .restart local p0
+    .restart local p0    # "this":Lv2/com/playhaven/interstitial/jsbridge/handlers/RewardHandler;
     :cond_1
     sget-object v7, Lv2/com/playhaven/interstitial/PHContentEnums$Reward;->IDKey:Lv2/com/playhaven/interstitial/PHContentEnums$Reward;
 
@@ -68,7 +68,7 @@
     move-result-object v5
 
     .line 74
-    .local v5, reward:Ljava/lang/String;
+    .local v5, "reward":Ljava/lang/String;
     sget-object v7, Lv2/com/playhaven/interstitial/PHContentEnums$Reward;->QuantityKey:Lv2/com/playhaven/interstitial/PHContentEnums$Reward;
 
     invoke-virtual {v7}, Lv2/com/playhaven/interstitial/PHContentEnums$Reward;->key()Ljava/lang/String;
@@ -82,7 +82,7 @@
     move-result-object v3
 
     .line 75
-    .local v3, quantity:Ljava/lang/String;
+    .local v3, "quantity":Ljava/lang/String;
     sget-object v7, Lv2/com/playhaven/interstitial/PHContentEnums$Reward;->ReceiptKey:Lv2/com/playhaven/interstitial/PHContentEnums$Reward;
 
     invoke-virtual {v7}, Lv2/com/playhaven/interstitial/PHContentEnums$Reward;->key()Ljava/lang/String;
@@ -96,7 +96,7 @@
     move-result-object v4
 
     .line 76
-    .local v4, receipt:Ljava/lang/String;
+    .local v4, "receipt":Ljava/lang/String;
     sget-object v7, Lv2/com/playhaven/interstitial/PHContentEnums$Reward;->SignatureKey:Lv2/com/playhaven/interstitial/PHContentEnums$Reward;
 
     invoke-virtual {v7}, Lv2/com/playhaven/interstitial/PHContentEnums$Reward;->key()Ljava/lang/String;
@@ -110,7 +110,7 @@
     move-result-object v6
 
     .line 78
-    .local v6, signature:Ljava/lang/String;
+    .local v6, "signature":Ljava/lang/String;
     iget-object v7, p0, Lv2/com/playhaven/interstitial/jsbridge/handlers/RewardHandler;->contentDisplayer:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v7}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -124,7 +124,7 @@
     move-result-object v1
 
     .line 80
-    .local v1, device_id:Ljava/lang/String;
+    .local v1, "device_id":Ljava/lang/String;
     if-nez v1, :cond_2
 
     .line 81
@@ -137,7 +137,7 @@
     invoke-direct {v0}, Lv2/com/playhaven/configuration/PHConfiguration;-><init>()V
 
     .line 86
-    .local v0, config:Lv2/com/playhaven/configuration/PHConfiguration;
+    .local v0, "config":Lv2/com/playhaven/configuration/PHConfiguration;
     const-string v7, "%s:%s:%s:%s:%s"
 
     const/4 v8, 0x5
@@ -171,7 +171,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lv2/com/playhaven/interstitial/jsbridge/handlers/RewardHandler;
     check-cast p0, Lv2/com/playhaven/interstitial/jsbridge/ManipulatableContentDisplayer;
 
     invoke-interface {p0}, Lv2/com/playhaven/interstitial/jsbridge/ManipulatableContentDisplayer;->getSecret()Ljava/lang/String;
@@ -190,7 +190,7 @@
     move-result-object v2
 
     .line 94
-    .local v2, generatedSig:Ljava/lang/String;
+    .local v2, "generatedSig":Ljava/lang/String;
     new-instance v7, Ljava/lang/StringBuilder;
 
     const-string v8, "Checking reward signature:  "
@@ -229,7 +229,7 @@
 # virtual methods
 .method public handle(Lorg/json/JSONObject;)V
     .locals 10
-    .parameter "jsonPayload"
+    .param p1, "jsonPayload"    # Lorg/json/JSONObject;
 
     .prologue
     const-string v7, "rewards"
@@ -262,11 +262,11 @@
     move-object v6, v7
 
     .line 34
-    .local v6, rewards:Lorg/json/JSONArray;
+    .local v6, "rewards":Lorg/json/JSONArray;
     :goto_1
     const/4 v3, 0x0
 
-    .local v3, i:I
+    .local v3, "i":I
     :goto_2
     invoke-virtual {v6}, Lorg/json/JSONArray;->length()I
 
@@ -294,15 +294,15 @@
     goto :goto_0
 
     .line 61
-    .end local v3           #i:I
-    .end local v6           #rewards:Lorg/json/JSONArray;
+    .end local v3    # "i":I
+    .end local v6    # "rewards":Lorg/json/JSONArray;
     :catch_0
     move-exception v7
 
     move-object v1, v7
 
     .line 62
-    .local v1, e:Ljava/lang/Exception;
+    .local v1, "e":Ljava/lang/Exception;
     const-string v7, "PHInterstitialActivity - handleRewards"
 
     sget-object v8, Lv2/com/playhaven/requests/crashreport/PHCrashReport$Urgency;->low:Lv2/com/playhaven/requests/crashreport/PHCrashReport$Urgency;
@@ -312,7 +312,7 @@
     goto :goto_0
 
     .line 32
-    .end local v1           #e:Ljava/lang/Exception;
+    .end local v1    # "e":Ljava/lang/Exception;
     :cond_1
     :try_start_1
     const-string v7, "rewards"
@@ -326,15 +326,15 @@
     goto :goto_1
 
     .line 36
-    .restart local v3       #i:I
-    .restart local v6       #rewards:Lorg/json/JSONArray;
+    .restart local v3    # "i":I
+    .restart local v6    # "rewards":Lorg/json/JSONArray;
     :cond_2
     invoke-virtual {v6, v3}, Lorg/json/JSONArray;->optJSONObject(I)Lorg/json/JSONObject;
 
     move-result-object v5
 
     .line 38
-    .local v5, reward:Lorg/json/JSONObject;
+    .local v5, "reward":Lorg/json/JSONObject;
     invoke-direct {p0, v5}, Lv2/com/playhaven/interstitial/jsbridge/handlers/RewardHandler;->validateReward(Lorg/json/JSONObject;)Z
 
     move-result v7
@@ -347,7 +347,7 @@
     invoke-direct {v4}, Lv2/com/playhaven/model/PHReward;-><init>()V
 
     .line 42
-    .local v4, r:Lv2/com/playhaven/model/PHReward;
+    .local v4, "r":Lv2/com/playhaven/model/PHReward;
     sget-object v7, Lv2/com/playhaven/interstitial/PHContentEnums$Reward;->IDKey:Lv2/com/playhaven/interstitial/PHContentEnums$Reward;
 
     invoke-virtual {v7}, Lv2/com/playhaven/interstitial/PHContentEnums$Reward;->key()Ljava/lang/String;
@@ -398,7 +398,7 @@
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     .line 50
-    .local v0, args:Landroid/os/Bundle;
+    .local v0, "args":Landroid/os/Bundle;
     sget-object v7, Lv2/com/playhaven/interstitial/requestbridge/bridges/ContentRequestToInterstitialBridge$InterstitialEventArgument;->Reward:Lv2/com/playhaven/interstitial/requestbridge/bridges/ContentRequestToInterstitialBridge$InterstitialEventArgument;
 
     invoke-virtual {v7}, Lv2/com/playhaven/interstitial/requestbridge/bridges/ContentRequestToInterstitialBridge$InterstitialEventArgument;->getKey()Ljava/lang/String;
@@ -415,7 +415,7 @@
     move-result-object v2
 
     .line 54
-    .local v2, event:Ljava/lang/String;
+    .local v2, "event":Ljava/lang/String;
     iget-object v7, p0, Lv2/com/playhaven/interstitial/jsbridge/handlers/RewardHandler;->contentDisplayer:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v7}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -429,9 +429,9 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
     .line 34
-    .end local v0           #args:Landroid/os/Bundle;
-    .end local v2           #event:Ljava/lang/String;
-    .end local v4           #r:Lv2/com/playhaven/model/PHReward;
+    .end local v0    # "args":Landroid/os/Bundle;
+    .end local v2    # "event":Ljava/lang/String;
+    .end local v4    # "r":Lv2/com/playhaven/model/PHReward;
     :cond_3
     add-int/lit8 v3, v3, 0x1
 

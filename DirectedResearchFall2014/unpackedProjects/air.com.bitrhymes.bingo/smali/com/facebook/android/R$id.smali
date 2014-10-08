@@ -185,7 +185,7 @@
     sput v0, Lcom/facebook/android/R$id;->picker_subtitle:I
 
     .line 236
-    const/high16 v0, 0x7f04
+    const/high16 v0, 0x7f040000
 
     sput v0, Lcom/facebook/android/R$id;->small:I
 

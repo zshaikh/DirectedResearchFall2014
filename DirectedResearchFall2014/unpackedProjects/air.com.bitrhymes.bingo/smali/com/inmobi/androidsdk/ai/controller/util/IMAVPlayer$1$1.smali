@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/inmobi/androidsdk/ai/controller/util/IMAVPlayer$1;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1

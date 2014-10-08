@@ -68,8 +68,6 @@
 
 .method public static decode(Ljava/lang/String;I)[B
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 96
@@ -86,8 +84,6 @@
 
 .method public static decode([BI)[B
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     .line 114
@@ -104,10 +100,6 @@
 
 .method public static decode([BIII)[B
     .locals 4
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const/4 v3, 0x0
@@ -179,8 +171,6 @@
 
 .method public static encode([BI)[B
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     .line 472
@@ -197,10 +187,6 @@
 
 .method public static encode([BIII)[B
     .locals 5
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const/4 v4, 0x1
@@ -326,8 +312,6 @@
 
 .method public static encodeToString([BI)Ljava/lang/String;
     .locals 3
-    .parameter
-    .parameter
 
     .prologue
     .line 434
@@ -360,10 +344,6 @@
 
 .method public static encodeToString([BIII)Ljava/lang/String;
     .locals 3
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 455

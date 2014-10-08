@@ -43,7 +43,6 @@
 # virtual methods
 .method protected removeEldestEntry(Ljava/util/Map$Entry;)Z
     .locals 2
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -57,7 +56,7 @@
 
     .prologue
     .line 16
-    .local p1, eldest:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Lcom/tapjoy/TJEvent;>;"
+    .local p1, "eldest":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Lcom/tapjoy/TJEvent;>;"
     invoke-virtual {p0}, Lcom/tapjoy/TJEventManager$1;->size()I
 
     move-result v0

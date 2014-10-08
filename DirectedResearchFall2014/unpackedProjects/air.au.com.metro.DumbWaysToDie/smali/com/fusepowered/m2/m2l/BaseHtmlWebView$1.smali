@@ -26,8 +26,6 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m2/m2l/BaseHtmlWebView;Z)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 1
@@ -45,14 +43,14 @@
 # virtual methods
 .method public onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
     .locals 2
-    .parameter "v"
-    .parameter "event"
+    .param p1, "v"    # Landroid/view/View;
+    .param p2, "event"    # Landroid/view/MotionEvent;
 
     .prologue
     .line 93
     iget-object v0, p0, Lcom/fusepowered/m2/m2l/BaseHtmlWebView$1;->this$0:Lcom/fusepowered/m2/m2l/BaseHtmlWebView;
 
-    #getter for: Lcom/fusepowered/m2/m2l/BaseHtmlWebView;->mViewGestureDetector:Lcom/fusepowered/m2/m2l/ViewGestureDetector;
+    # getter for: Lcom/fusepowered/m2/m2l/BaseHtmlWebView;->mViewGestureDetector:Lcom/fusepowered/m2/m2l/ViewGestureDetector;
     invoke-static {v0}, Lcom/fusepowered/m2/m2l/BaseHtmlWebView;->access$0(Lcom/fusepowered/m2/m2l/BaseHtmlWebView;)Lcom/fusepowered/m2/m2l/ViewGestureDetector;
 
     move-result-object v0

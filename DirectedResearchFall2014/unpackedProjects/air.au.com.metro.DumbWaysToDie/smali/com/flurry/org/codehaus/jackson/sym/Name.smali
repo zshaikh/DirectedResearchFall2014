@@ -12,8 +12,8 @@
 # direct methods
 .method protected constructor <init>(Ljava/lang/String;I)V
     .locals 0
-    .parameter "name"
-    .parameter "hashCode"
+    .param p1, "name"    # Ljava/lang/String;
+    .param p2, "hashCode"    # I
 
     .prologue
     .line 16
@@ -39,7 +39,7 @@
 
 .method public equals(Ljava/lang/Object;)Z
     .locals 1
-    .parameter "o"
+    .param p1, "o"    # Ljava/lang/Object;
 
     .prologue
     .line 48

@@ -37,8 +37,8 @@
 # direct methods
 .method constructor <init>(Ljava/lang/String;Ljava/lang/Object;)V
     .locals 0
-    .parameter "key"
-    .parameter "value"
+    .param p1, "key"    # Ljava/lang/String;
+    .param p2, "value"    # Ljava/lang/Object;
 
     .prologue
     .line 51
@@ -95,7 +95,7 @@
 
 .method public setValue(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
-    .parameter "object"
+    .param p1, "object"    # Ljava/lang/Object;
 
     .prologue
     .line 69

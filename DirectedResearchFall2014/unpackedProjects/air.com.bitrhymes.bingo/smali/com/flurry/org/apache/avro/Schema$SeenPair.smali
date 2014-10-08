@@ -23,8 +23,8 @@
 # direct methods
 .method private constructor <init>(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 0
-    .parameter "s1"
-    .parameter "s2"
+    .param p1, "s1"    # Ljava/lang/Object;
+    .param p2, "s2"    # Ljava/lang/Object;
 
     .prologue
     .line 575
@@ -39,9 +39,9 @@
 
 .method synthetic constructor <init>(Ljava/lang/Object;Ljava/lang/Object;Lcom/flurry/org/apache/avro/Schema$1;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
-    .parameter "x2"
+    .param p1, "x0"    # Ljava/lang/Object;
+    .param p2, "x1"    # Ljava/lang/Object;
+    .param p3, "x2"    # Lcom/flurry/org/apache/avro/Schema$1;
 
     .prologue
     .line 573
@@ -54,7 +54,7 @@
 # virtual methods
 .method public equals(Ljava/lang/Object;)Z
     .locals 3
-    .parameter "o"
+    .param p1, "o"    # Ljava/lang/Object;
 
     .prologue
     .line 577
@@ -74,7 +74,7 @@
 
     check-cast p1, Lcom/flurry/org/apache/avro/Schema$SeenPair;
 
-    .end local p1
+    .end local p1    # "o":Ljava/lang/Object;
     iget-object v2, p1, Lcom/flurry/org/apache/avro/Schema$SeenPair;->s2:Ljava/lang/Object;
 
     if-ne v1, v2, :cond_0

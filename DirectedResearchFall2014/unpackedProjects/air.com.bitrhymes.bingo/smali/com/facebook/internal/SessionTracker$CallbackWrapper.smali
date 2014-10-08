@@ -26,8 +26,7 @@
 # direct methods
 .method public constructor <init>(Lcom/facebook/internal/SessionTracker;Lcom/facebook/Session$StatusCallback;)V
     .locals 0
-    .parameter
-    .parameter "wrapped"
+    .param p2, "wrapped"    # Lcom/facebook/Session$StatusCallback;
 
     .prologue
     .line 223
@@ -46,9 +45,9 @@
 # virtual methods
 .method public call(Lcom/facebook/Session;Lcom/facebook/SessionState;Ljava/lang/Exception;)V
     .locals 2
-    .parameter "session"
-    .parameter "state"
-    .parameter "exception"
+    .param p1, "session"    # Lcom/facebook/Session;
+    .param p2, "state"    # Lcom/facebook/SessionState;
+    .param p3, "exception"    # Ljava/lang/Exception;
 
     .prologue
     .line 229
@@ -73,7 +72,7 @@
     :cond_0
     iget-object v0, p0, Lcom/facebook/internal/SessionTracker$CallbackWrapper;->this$0:Lcom/facebook/internal/SessionTracker;
 
-    #getter for: Lcom/facebook/internal/SessionTracker;->session:Lcom/facebook/Session;
+    # getter for: Lcom/facebook/internal/SessionTracker;->session:Lcom/facebook/Session;
     invoke-static {v0}, Lcom/facebook/internal/SessionTracker;->access$1(Lcom/facebook/internal/SessionTracker;)Lcom/facebook/Session;
 
     move-result-object v0

@@ -26,8 +26,6 @@
 # direct methods
 .method public constructor <init>(Lcom/chartboost/sdk/b;Landroid/content/Context;)V
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 31
@@ -62,8 +60,6 @@
 
 .method private b(II)Z
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 61
@@ -112,7 +108,6 @@
 
 .method public a(Landroid/app/Activity;)Z
     .locals 4
-    .parameter
 
     .prologue
     .line 85
@@ -259,10 +254,10 @@
 
 .method protected onSizeChanged(IIII)V
     .locals 1
-    .parameter "w"
-    .parameter "h"
-    .parameter "oldw"
-    .parameter "oldh"
+    .param p1, "w"    # I
+    .param p2, "h"    # I
+    .param p3, "oldw"    # I
+    .param p4, "oldh"    # I
 
     .prologue
     .line 47

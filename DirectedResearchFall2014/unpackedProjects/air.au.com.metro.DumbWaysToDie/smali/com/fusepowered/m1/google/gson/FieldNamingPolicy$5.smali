@@ -17,8 +17,6 @@
 # direct methods
 .method constructor <init>(Ljava/lang/String;I)V
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 112
@@ -33,7 +31,7 @@
 # virtual methods
 .method public translateName(Ljava/lang/reflect/Field;)Ljava/lang/String;
     .locals 2
-    .parameter "f"
+    .param p1, "f"    # Ljava/lang/reflect/Field;
 
     .prologue
     .line 114
@@ -43,7 +41,7 @@
 
     const-string v1, "-"
 
-    #calls: Lcom/fusepowered/m1/google/gson/FieldNamingPolicy;->separateCamelCase(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    # invokes: Lcom/fusepowered/m1/google/gson/FieldNamingPolicy;->separateCamelCase(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     invoke-static {v0, v1}, Lcom/fusepowered/m1/google/gson/FieldNamingPolicy;->access$200(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0

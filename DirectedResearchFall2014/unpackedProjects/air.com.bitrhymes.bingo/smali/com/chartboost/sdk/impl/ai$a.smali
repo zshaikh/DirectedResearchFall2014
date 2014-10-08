@@ -326,11 +326,6 @@
 
 .method private constructor <init>(Ljava/lang/String;IICLjava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 159
@@ -351,7 +346,6 @@
 
 .method public static valueOf(Ljava/lang/String;)Lcom/chartboost/sdk/impl/ai$a;
     .locals 1
-    .parameter
 
     .prologue
     .line 1

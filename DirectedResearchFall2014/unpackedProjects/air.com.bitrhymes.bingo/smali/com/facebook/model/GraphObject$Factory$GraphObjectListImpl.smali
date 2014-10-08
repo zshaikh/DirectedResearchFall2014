@@ -45,8 +45,7 @@
 # direct methods
 .method public constructor <init>(Lorg/json/JSONArray;Ljava/lang/Class;)V
     .locals 1
-    .parameter "state"
-    .parameter
+    .param p1, "state"    # Lorg/json/JSONArray;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -58,8 +57,8 @@
 
     .prologue
     .line 710
-    .local p0, this:Lcom/facebook/model/GraphObject$Factory$GraphObjectListImpl;,"Lcom/facebook/model/GraphObject$Factory$GraphObjectListImpl<TT;>;"
-    .local p2, itemType:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p0, "this":Lcom/facebook/model/GraphObject$Factory$GraphObjectListImpl;, "Lcom/facebook/model/GraphObject$Factory$GraphObjectListImpl<TT;>;"
+    .local p2, "itemType":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-direct {p0}, Ljava/util/AbstractList;-><init>()V
 
     .line 711
@@ -84,11 +83,11 @@
 
 .method private checkIndex(I)V
     .locals 1
-    .parameter "index"
+    .param p1, "index"    # I
 
     .prologue
     .line 824
-    .local p0, this:Lcom/facebook/model/GraphObject$Factory$GraphObjectListImpl;,"Lcom/facebook/model/GraphObject$Factory$GraphObjectListImpl<TT;>;"
+    .local p0, "this":Lcom/facebook/model/GraphObject$Factory$GraphObjectListImpl;, "Lcom/facebook/model/GraphObject$Factory$GraphObjectListImpl<TT;>;"
     if-ltz p1, :cond_0
 
     iget-object v0, p0, Lcom/facebook/model/GraphObject$Factory$GraphObjectListImpl;->state:Lorg/json/JSONArray;
@@ -114,8 +113,7 @@
 
 .method private put(ILjava/lang/Object;)V
     .locals 3
-    .parameter "index"
-    .parameter
+    .param p1, "index"    # I
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(ITT;)V"
@@ -124,15 +122,15 @@
 
     .prologue
     .line 830
-    .local p0, this:Lcom/facebook/model/GraphObject$Factory$GraphObjectListImpl;,"Lcom/facebook/model/GraphObject$Factory$GraphObjectListImpl<TT;>;"
-    .local p2, obj:Ljava/lang/Object;,"TT;"
-    #calls: Lcom/facebook/model/GraphObject$Factory;->getUnderlyingJSONObject(Ljava/lang/Object;)Ljava/lang/Object;
+    .local p0, "this":Lcom/facebook/model/GraphObject$Factory$GraphObjectListImpl;, "Lcom/facebook/model/GraphObject$Factory$GraphObjectListImpl<TT;>;"
+    .local p2, "obj":Ljava/lang/Object;, "TT;"
+    # invokes: Lcom/facebook/model/GraphObject$Factory;->getUnderlyingJSONObject(Ljava/lang/Object;)Ljava/lang/Object;
     invoke-static {p2}, Lcom/facebook/model/GraphObject$Factory;->access$2(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
     .line 832
-    .local v1, underlyingObject:Ljava/lang/Object;
+    .local v1, "underlyingObject":Ljava/lang/Object;
     :try_start_0
     iget-object v2, p0, Lcom/facebook/model/GraphObject$Factory$GraphObjectListImpl;->state:Lorg/json/JSONArray;
 
@@ -150,7 +148,7 @@
     move-object v0, v2
 
     .line 834
-    .local v0, e:Lorg/json/JSONException;
+    .local v0, "e":Lorg/json/JSONException;
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
     invoke-direct {v2, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/Throwable;)V
@@ -162,8 +160,7 @@
 # virtual methods
 .method public add(ILjava/lang/Object;)V
     .locals 2
-    .parameter "location"
-    .parameter
+    .param p1, "location"    # I
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(ITT;)V"
@@ -172,8 +169,8 @@
 
     .prologue
     .line 726
-    .local p0, this:Lcom/facebook/model/GraphObject$Factory$GraphObjectListImpl;,"Lcom/facebook/model/GraphObject$Factory$GraphObjectListImpl<TT;>;"
-    .local p2, object:Ljava/lang/Object;,"TT;"
+    .local p0, "this":Lcom/facebook/model/GraphObject$Factory$GraphObjectListImpl;, "Lcom/facebook/model/GraphObject$Factory$GraphObjectListImpl<TT;>;"
+    .local p2, "object":Ljava/lang/Object;, "TT;"
     if-gez p1, :cond_0
 
     .line 727
@@ -210,7 +207,6 @@
 
 .method public final castToListOf(Ljava/lang/Class;)Lcom/facebook/model/GraphObjectList;
     .locals 4
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<U::",
@@ -225,8 +221,8 @@
 
     .prologue
     .line 784
-    .local p0, this:Lcom/facebook/model/GraphObject$Factory$GraphObjectListImpl;,"Lcom/facebook/model/GraphObject$Factory$GraphObjectListImpl<TT;>;"
-    .local p1, graphObjectClass:Ljava/lang/Class;,"Ljava/lang/Class<TU;>;"
+    .local p0, "this":Lcom/facebook/model/GraphObject$Factory$GraphObjectListImpl;, "Lcom/facebook/model/GraphObject$Factory$GraphObjectListImpl<TT;>;"
+    .local p1, "graphObjectClass":Ljava/lang/Class;, "Ljava/lang/Class<TU;>;"
     const-class v1, Lcom/facebook/model/GraphObject;
 
     iget-object v2, p0, Lcom/facebook/model/GraphObject$Factory$GraphObjectListImpl;->itemType:Ljava/lang/Class;
@@ -249,11 +245,11 @@
     .line 787
     move-object v0, p0
 
-    .local v0, result:Lcom/facebook/model/GraphObjectList;,"Lcom/facebook/model/GraphObjectList<TU;>;"
+    .local v0, "result":Lcom/facebook/model/GraphObjectList;, "Lcom/facebook/model/GraphObjectList<TU;>;"
     move-object v1, v0
 
     .line 791
-    .end local v0           #result:Lcom/facebook/model/GraphObjectList;,"Lcom/facebook/model/GraphObjectList<TU;>;"
+    .end local v0    # "result":Lcom/facebook/model/GraphObjectList;, "Lcom/facebook/model/GraphObjectList<TU;>;"
     :goto_0
     return-object v1
 
@@ -298,7 +294,7 @@
 
     .prologue
     .line 805
-    .local p0, this:Lcom/facebook/model/GraphObject$Factory$GraphObjectListImpl;,"Lcom/facebook/model/GraphObject$Factory$GraphObjectListImpl<TT;>;"
+    .local p0, "this":Lcom/facebook/model/GraphObject$Factory$GraphObjectListImpl;, "Lcom/facebook/model/GraphObject$Factory$GraphObjectListImpl<TT;>;"
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -308,10 +304,10 @@
 
 .method public equals(Ljava/lang/Object;)Z
     .locals 5
-    .parameter "obj"
+    .param p1, "obj"    # Ljava/lang/Object;
 
     .prologue
-    .local p0, this:Lcom/facebook/model/GraphObject$Factory$GraphObjectListImpl;,"Lcom/facebook/model/GraphObject$Factory$GraphObjectListImpl<TT;>;"
+    .local p0, "this":Lcom/facebook/model/GraphObject$Factory$GraphObjectListImpl;, "Lcom/facebook/model/GraphObject$Factory$GraphObjectListImpl<TT;>;"
     const/4 v4, 0x0
 
     .line 751
@@ -358,7 +354,7 @@
     move-object v1, v0
 
     .line 760
-    .local v1, other:Lcom/facebook/model/GraphObject$Factory$GraphObjectListImpl;,"Lcom/facebook/model/GraphObject$Factory$GraphObjectListImpl<TT;>;"
+    .local v1, "other":Lcom/facebook/model/GraphObject$Factory$GraphObjectListImpl;, "Lcom/facebook/model/GraphObject$Factory$GraphObjectListImpl<TT;>;"
     iget-object v2, p0, Lcom/facebook/model/GraphObject$Factory$GraphObjectListImpl;->state:Lorg/json/JSONArray;
 
     iget-object v3, v1, Lcom/facebook/model/GraphObject$Factory$GraphObjectListImpl;->state:Lorg/json/JSONArray;
@@ -372,7 +368,7 @@
 
 .method public get(I)Ljava/lang/Object;
     .locals 4
-    .parameter "location"
+    .param p1, "location"    # I
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I)TT;"
@@ -381,7 +377,7 @@
 
     .prologue
     .line 766
-    .local p0, this:Lcom/facebook/model/GraphObject$Factory$GraphObjectListImpl;,"Lcom/facebook/model/GraphObject$Factory$GraphObjectListImpl<TT;>;"
+    .local p0, "this":Lcom/facebook/model/GraphObject$Factory$GraphObjectListImpl;, "Lcom/facebook/model/GraphObject$Factory$GraphObjectListImpl<TT;>;"
     invoke-direct {p0, p1}, Lcom/facebook/model/GraphObject$Factory$GraphObjectListImpl;->checkIndex(I)V
 
     .line 768
@@ -392,7 +388,7 @@
     move-result-object v1
 
     .line 772
-    .local v1, value:Ljava/lang/Object;
+    .local v1, "value":Ljava/lang/Object;
     iget-object v2, p0, Lcom/facebook/model/GraphObject$Factory$GraphObjectListImpl;->itemType:Ljava/lang/Class;
 
     const/4 v3, 0x0
@@ -402,7 +398,7 @@
     move-result-object v0
 
     .line 774
-    .local v0, result:Ljava/lang/Object;,"TT;"
+    .local v0, "result":Ljava/lang/Object;, "TT;"
     return-object v0
 .end method
 
@@ -411,7 +407,7 @@
 
     .prologue
     .line 800
-    .local p0, this:Lcom/facebook/model/GraphObject$Factory$GraphObjectListImpl;,"Lcom/facebook/model/GraphObject$Factory$GraphObjectListImpl<TT;>;"
+    .local p0, "this":Lcom/facebook/model/GraphObject$Factory$GraphObjectListImpl;, "Lcom/facebook/model/GraphObject$Factory$GraphObjectListImpl<TT;>;"
     iget-object v0, p0, Lcom/facebook/model/GraphObject$Factory$GraphObjectListImpl;->state:Lorg/json/JSONArray;
 
     return-object v0
@@ -422,7 +418,7 @@
 
     .prologue
     .line 746
-    .local p0, this:Lcom/facebook/model/GraphObject$Factory$GraphObjectListImpl;,"Lcom/facebook/model/GraphObject$Factory$GraphObjectListImpl<TT;>;"
+    .local p0, "this":Lcom/facebook/model/GraphObject$Factory$GraphObjectListImpl;, "Lcom/facebook/model/GraphObject$Factory$GraphObjectListImpl<TT;>;"
     iget-object v0, p0, Lcom/facebook/model/GraphObject$Factory$GraphObjectListImpl;->state:Lorg/json/JSONArray;
 
     invoke-virtual {v0}, Lorg/json/JSONArray;->hashCode()I
@@ -434,11 +430,11 @@
 
 .method public remove(Ljava/lang/Object;)Z
     .locals 1
-    .parameter "o"
+    .param p1, "o"    # Ljava/lang/Object;
 
     .prologue
     .line 810
-    .local p0, this:Lcom/facebook/model/GraphObject$Factory$GraphObjectListImpl;,"Lcom/facebook/model/GraphObject$Factory$GraphObjectListImpl<TT;>;"
+    .local p0, "this":Lcom/facebook/model/GraphObject$Factory$GraphObjectListImpl;, "Lcom/facebook/model/GraphObject$Factory$GraphObjectListImpl<TT;>;"
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -448,7 +444,6 @@
 
 .method public removeAll(Ljava/util/Collection;)Z
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -459,8 +454,8 @@
 
     .prologue
     .line 815
-    .local p0, this:Lcom/facebook/model/GraphObject$Factory$GraphObjectListImpl;,"Lcom/facebook/model/GraphObject$Factory$GraphObjectListImpl<TT;>;"
-    .local p1, c:Ljava/util/Collection;,"Ljava/util/Collection<*>;"
+    .local p0, "this":Lcom/facebook/model/GraphObject$Factory$GraphObjectListImpl;, "Lcom/facebook/model/GraphObject$Factory$GraphObjectListImpl<TT;>;"
+    .local p1, "c":Ljava/util/Collection;, "Ljava/util/Collection<*>;"
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -470,7 +465,6 @@
 
 .method public retainAll(Ljava/util/Collection;)Z
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -481,8 +475,8 @@
 
     .prologue
     .line 820
-    .local p0, this:Lcom/facebook/model/GraphObject$Factory$GraphObjectListImpl;,"Lcom/facebook/model/GraphObject$Factory$GraphObjectListImpl<TT;>;"
-    .local p1, c:Ljava/util/Collection;,"Ljava/util/Collection<*>;"
+    .local p0, "this":Lcom/facebook/model/GraphObject$Factory$GraphObjectListImpl;, "Lcom/facebook/model/GraphObject$Factory$GraphObjectListImpl<TT;>;"
+    .local p1, "c":Ljava/util/Collection;, "Ljava/util/Collection<*>;"
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -492,8 +486,7 @@
 
 .method public set(ILjava/lang/Object;)Ljava/lang/Object;
     .locals 1
-    .parameter "location"
-    .parameter
+    .param p1, "location"    # I
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(ITT;)TT;"
@@ -502,8 +495,8 @@
 
     .prologue
     .line 737
-    .local p0, this:Lcom/facebook/model/GraphObject$Factory$GraphObjectListImpl;,"Lcom/facebook/model/GraphObject$Factory$GraphObjectListImpl<TT;>;"
-    .local p2, object:Ljava/lang/Object;,"TT;"
+    .local p0, "this":Lcom/facebook/model/GraphObject$Factory$GraphObjectListImpl;, "Lcom/facebook/model/GraphObject$Factory$GraphObjectListImpl<TT;>;"
+    .local p2, "object":Ljava/lang/Object;, "TT;"
     invoke-direct {p0, p1}, Lcom/facebook/model/GraphObject$Factory$GraphObjectListImpl;->checkIndex(I)V
 
     .line 739
@@ -512,7 +505,7 @@
     move-result-object v0
 
     .line 740
-    .local v0, result:Ljava/lang/Object;,"TT;"
+    .local v0, "result":Ljava/lang/Object;, "TT;"
     invoke-direct {p0, p1, p2}, Lcom/facebook/model/GraphObject$Factory$GraphObjectListImpl;->put(ILjava/lang/Object;)V
 
     .line 741
@@ -524,7 +517,7 @@
 
     .prologue
     .line 779
-    .local p0, this:Lcom/facebook/model/GraphObject$Factory$GraphObjectListImpl;,"Lcom/facebook/model/GraphObject$Factory$GraphObjectListImpl<TT;>;"
+    .local p0, "this":Lcom/facebook/model/GraphObject$Factory$GraphObjectListImpl;, "Lcom/facebook/model/GraphObject$Factory$GraphObjectListImpl<TT;>;"
     iget-object v0, p0, Lcom/facebook/model/GraphObject$Factory$GraphObjectListImpl;->state:Lorg/json/JSONArray;
 
     invoke-virtual {v0}, Lorg/json/JSONArray;->length()I
@@ -539,7 +532,7 @@
 
     .prologue
     .line 720
-    .local p0, this:Lcom/facebook/model/GraphObject$Factory$GraphObjectListImpl;,"Lcom/facebook/model/GraphObject$Factory$GraphObjectListImpl<TT;>;"
+    .local p0, "this":Lcom/facebook/model/GraphObject$Factory$GraphObjectListImpl;, "Lcom/facebook/model/GraphObject$Factory$GraphObjectListImpl<TT;>;"
     const-string v0, "GraphObjectList{itemType=%s, state=%s}"
 
     const/4 v1, 0x2

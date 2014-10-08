@@ -31,7 +31,7 @@
 
 .method public constructor <init>(Lcom/adobe/fre/FREContext;)V
     .locals 0
-    .parameter "contextObj"
+    .param p1, "contextObj"    # Lcom/adobe/fre/FREContext;
 
     .prologue
     .line 13
@@ -48,7 +48,7 @@
 # virtual methods
 .method public didCacheInterstitial(Ljava/lang/String;)V
     .locals 3
-    .parameter "arg0"
+    .param p1, "arg0"    # Ljava/lang/String;
 
     .prologue
     .line 20
@@ -109,7 +109,7 @@
 
 .method public didClickInterstitial(Ljava/lang/String;)V
     .locals 2
-    .parameter "arg0"
+    .param p1, "arg0"    # Ljava/lang/String;
 
     .prologue
     .line 38
@@ -140,7 +140,7 @@
 
 .method public didCloseInterstitial(Ljava/lang/String;)V
     .locals 2
-    .parameter "arg0"
+    .param p1, "arg0"    # Ljava/lang/String;
 
     .prologue
     .line 56
@@ -171,7 +171,7 @@
 
 .method public didDismissInterstitial(Ljava/lang/String;)V
     .locals 2
-    .parameter "arg0"
+    .param p1, "arg0"    # Ljava/lang/String;
 
     .prologue
     .line 74
@@ -202,7 +202,7 @@
 
 .method public didFailToLoadInterstitial(Ljava/lang/String;)V
     .locals 3
-    .parameter "arg0"
+    .param p1, "arg0"    # Ljava/lang/String;
 
     .prologue
     .line 92
@@ -263,7 +263,7 @@
 
 .method public didFailToLoadUrl(Ljava/lang/String;)V
     .locals 4
-    .parameter "e"
+    .param p1, "e"    # Ljava/lang/String;
 
     .prologue
     .line 110
@@ -306,7 +306,7 @@
 
 .method public didShowInterstitial(Ljava/lang/String;)V
     .locals 3
-    .parameter "arg0"
+    .param p1, "arg0"    # Ljava/lang/String;
 
     .prologue
     .line 119
@@ -367,7 +367,7 @@
 
 .method public shouldDisplayInterstitial(Ljava/lang/String;)Z
     .locals 3
-    .parameter "arg0"
+    .param p1, "arg0"    # Ljava/lang/String;
 
     .prologue
     .line 137
@@ -431,7 +431,7 @@
 
 .method public shouldRequestInterstitial(Ljava/lang/String;)Z
     .locals 3
-    .parameter "arg0"
+    .param p1, "arg0"    # Ljava/lang/String;
 
     .prologue
     .line 155

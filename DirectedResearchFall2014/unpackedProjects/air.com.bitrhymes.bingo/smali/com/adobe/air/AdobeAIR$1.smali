@@ -21,7 +21,6 @@
 # direct methods
 .method constructor <init>(Lcom/adobe/air/AdobeAIR;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 43
@@ -36,10 +35,6 @@
 # virtual methods
 .method public onReceivedError(Landroid/webkit/WebView;ILjava/lang/String;Ljava/lang/String;)V
     .locals 2
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 93
@@ -47,13 +42,13 @@
 
     const/4 v1, 0x1
 
-    #setter for: Lcom/adobe/air/AdobeAIR;->mOffline:Z
+    # setter for: Lcom/adobe/air/AdobeAIR;->mOffline:Z
     invoke-static {v0, v1}, Lcom/adobe/air/AdobeAIR;->access$102(Lcom/adobe/air/AdobeAIR;Z)Z
 
     .line 96
     iget-object v0, p0, Lcom/adobe/air/AdobeAIR$1;->this$0:Lcom/adobe/air/AdobeAIR;
 
-    #getter for: Lcom/adobe/air/AdobeAIR;->mWebView:Landroid/webkit/WebView;
+    # getter for: Lcom/adobe/air/AdobeAIR;->mWebView:Landroid/webkit/WebView;
     invoke-static {v0}, Lcom/adobe/air/AdobeAIR;->access$200(Lcom/adobe/air/AdobeAIR;)Landroid/webkit/WebView;
 
     move-result-object v0
@@ -68,8 +63,6 @@
 
 .method public shouldOverrideUrlLoading(Landroid/webkit/WebView;Ljava/lang/String;)Z
     .locals 5
-    .parameter
-    .parameter
 
     .prologue
     const/4 v4, 0x0
@@ -91,6 +84,7 @@
     move-result v1
 
     .line 52
+    # getter for: Lcom/adobe/air/AdobeAIR;->sRootServer:Ljava/lang/String;
     invoke-static {}, Lcom/adobe/air/AdobeAIR;->access$000()Ljava/lang/String;
 
     move-result-object v2
@@ -101,7 +95,7 @@
 
     iget-object v2, p0, Lcom/adobe/air/AdobeAIR$1;->this$0:Lcom/adobe/air/AdobeAIR;
 
-    #getter for: Lcom/adobe/air/AdobeAIR;->mOffline:Z
+    # getter for: Lcom/adobe/air/AdobeAIR;->mOffline:Z
     invoke-static {v2}, Lcom/adobe/air/AdobeAIR;->access$100(Lcom/adobe/air/AdobeAIR;)Z
 
     move-result v2
@@ -115,13 +109,14 @@
 
     move-result-object v2
 
+    # setter for: Lcom/adobe/air/AdobeAIR;->sRootServer:Ljava/lang/String;
     invoke-static {v2}, Lcom/adobe/air/AdobeAIR;->access$002(Ljava/lang/String;)Ljava/lang/String;
 
     .line 56
     :cond_0
     iget-object v2, p0, Lcom/adobe/air/AdobeAIR$1;->this$0:Lcom/adobe/air/AdobeAIR;
 
-    #getter for: Lcom/adobe/air/AdobeAIR;->mOffline:Z
+    # getter for: Lcom/adobe/air/AdobeAIR;->mOffline:Z
     invoke-static {v2}, Lcom/adobe/air/AdobeAIR;->access$100(Lcom/adobe/air/AdobeAIR;)Z
 
     move-result v2
@@ -161,12 +156,14 @@
     if-eqz v2, :cond_3
 
     :cond_1
+    # getter for: Lcom/adobe/air/AdobeAIR;->sRootServer:Ljava/lang/String;
     invoke-static {}, Lcom/adobe/air/AdobeAIR;->access$000()Ljava/lang/String;
 
     move-result-object v2
 
     if-eqz v2, :cond_2
 
+    # getter for: Lcom/adobe/air/AdobeAIR;->sRootServer:Ljava/lang/String;
     invoke-static {}, Lcom/adobe/air/AdobeAIR;->access$000()Ljava/lang/String;
 
     move-result-object v2

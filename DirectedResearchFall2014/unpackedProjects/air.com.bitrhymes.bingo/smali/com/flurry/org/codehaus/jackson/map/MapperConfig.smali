@@ -65,13 +65,11 @@
 
 .method protected constructor <init>(Lcom/flurry/org/codehaus/jackson/map/ClassIntrospector;Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;Lcom/flurry/org/codehaus/jackson/map/introspect/VisibilityChecker;Lcom/flurry/org/codehaus/jackson/map/jsontype/SubtypeResolver;Lcom/flurry/org/codehaus/jackson/map/PropertyNamingStrategy;Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;Lcom/flurry/org/codehaus/jackson/map/HandlerInstantiator;)V
     .locals 9
-    .parameter
-    .parameter "ai"
-    .parameter
-    .parameter "str"
-    .parameter "pns"
-    .parameter "tf"
-    .parameter "hi"
+    .param p2, "ai"    # Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;
+    .param p4, "str"    # Lcom/flurry/org/codehaus/jackson/map/jsontype/SubtypeResolver;
+    .param p5, "pns"    # Lcom/flurry/org/codehaus/jackson/map/PropertyNamingStrategy;
+    .param p6, "tf"    # Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;
+    .param p7, "hi"    # Lcom/flurry/org/codehaus/jackson/map/HandlerInstantiator;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -92,9 +90,9 @@
 
     .prologue
     .line 129
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/MapperConfig;,"Lcom/flurry/org/codehaus/jackson/map/MapperConfig<TT;>;"
-    .local p1, ci:Lcom/flurry/org/codehaus/jackson/map/ClassIntrospector;,"Lcom/flurry/org/codehaus/jackson/map/ClassIntrospector<+Lcom/flurry/org/codehaus/jackson/map/BeanDescription;>;"
-    .local p3, vc:Lcom/flurry/org/codehaus/jackson/map/introspect/VisibilityChecker;,"Lcom/flurry/org/codehaus/jackson/map/introspect/VisibilityChecker<*>;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/MapperConfig;, "Lcom/flurry/org/codehaus/jackson/map/MapperConfig<TT;>;"
+    .local p1, "ci":Lcom/flurry/org/codehaus/jackson/map/ClassIntrospector;, "Lcom/flurry/org/codehaus/jackson/map/ClassIntrospector<+Lcom/flurry/org/codehaus/jackson/map/BeanDescription;>;"
+    .local p3, "vc":Lcom/flurry/org/codehaus/jackson/map/introspect/VisibilityChecker;, "Lcom/flurry/org/codehaus/jackson/map/introspect/VisibilityChecker<*>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 130
@@ -134,7 +132,6 @@
 
 .method protected constructor <init>(Lcom/flurry/org/codehaus/jackson/map/MapperConfig;)V
     .locals 2
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -145,8 +142,8 @@
 
     .prologue
     .line 142
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/MapperConfig;,"Lcom/flurry/org/codehaus/jackson/map/MapperConfig<TT;>;"
-    .local p1, src:Lcom/flurry/org/codehaus/jackson/map/MapperConfig;,"Lcom/flurry/org/codehaus/jackson/map/MapperConfig<TT;>;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/MapperConfig;, "Lcom/flurry/org/codehaus/jackson/map/MapperConfig<TT;>;"
+    .local p1, "src":Lcom/flurry/org/codehaus/jackson/map/MapperConfig;, "Lcom/flurry/org/codehaus/jackson/map/MapperConfig<TT;>;"
     iget-object v0, p1, Lcom/flurry/org/codehaus/jackson/map/MapperConfig;->_base:Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Base;
 
     iget-object v1, p1, Lcom/flurry/org/codehaus/jackson/map/MapperConfig;->_subtypeResolver:Lcom/flurry/org/codehaus/jackson/map/jsontype/SubtypeResolver;
@@ -159,9 +156,8 @@
 
 .method protected constructor <init>(Lcom/flurry/org/codehaus/jackson/map/MapperConfig;Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Base;Lcom/flurry/org/codehaus/jackson/map/jsontype/SubtypeResolver;)V
     .locals 1
-    .parameter
-    .parameter "base"
-    .parameter "str"
+    .param p2, "base"    # Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Base;
+    .param p3, "str"    # Lcom/flurry/org/codehaus/jackson/map/jsontype/SubtypeResolver;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -175,8 +171,8 @@
 
     .prologue
     .line 149
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/MapperConfig;,"Lcom/flurry/org/codehaus/jackson/map/MapperConfig<TT;>;"
-    .local p1, src:Lcom/flurry/org/codehaus/jackson/map/MapperConfig;,"Lcom/flurry/org/codehaus/jackson/map/MapperConfig<TT;>;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/MapperConfig;, "Lcom/flurry/org/codehaus/jackson/map/MapperConfig<TT;>;"
+    .local p1, "src":Lcom/flurry/org/codehaus/jackson/map/MapperConfig;, "Lcom/flurry/org/codehaus/jackson/map/MapperConfig<TT;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 150
@@ -203,8 +199,6 @@
 # virtual methods
 .method public final addMixInAnnotations(Ljava/lang/Class;Ljava/lang/Class;)V
     .locals 2
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -216,9 +210,9 @@
     .end annotation
 
     .prologue
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/MapperConfig;,"Lcom/flurry/org/codehaus/jackson/map/MapperConfig<TT;>;"
-    .local p1, target:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
-    .local p2, mixinSource:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/MapperConfig;, "Lcom/flurry/org/codehaus/jackson/map/MapperConfig<TT;>;"
+    .local p1, "target":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
+    .local p2, "mixinSource":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const/4 v1, 0x0
 
     .line 498
@@ -273,13 +267,13 @@
 
 .method public final appendAnnotationIntrospector(Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;)V
     .locals 2
-    .parameter "introspector"
+    .param p1, "introspector"    # Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
     .prologue
     .line 418
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/MapperConfig;,"Lcom/flurry/org/codehaus/jackson/map/MapperConfig<TT;>;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/MapperConfig;, "Lcom/flurry/org/codehaus/jackson/map/MapperConfig<TT;>;"
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/map/MapperConfig;->_base:Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Base;
 
     invoke-virtual {p0}, Lcom/flurry/org/codehaus/jackson/map/MapperConfig;->getAnnotationIntrospector()Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;
@@ -305,8 +299,7 @@
 
 .method public constructSpecializedType(Lcom/flurry/org/codehaus/jackson/type/JavaType;Ljava/lang/Class;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .locals 1
-    .parameter "baseType"
-    .parameter
+    .param p1, "baseType"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -319,8 +312,8 @@
 
     .prologue
     .line 599
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/MapperConfig;,"Lcom/flurry/org/codehaus/jackson/map/MapperConfig<TT;>;"
-    .local p2, subclass:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/MapperConfig;, "Lcom/flurry/org/codehaus/jackson/map/MapperConfig<TT;>;"
+    .local p2, "subclass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-virtual {p0}, Lcom/flurry/org/codehaus/jackson/map/MapperConfig;->getTypeFactory()Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;
 
     move-result-object v0
@@ -334,7 +327,6 @@
 
 .method public final constructType(Lcom/flurry/org/codehaus/jackson/type/TypeReference;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .locals 2
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -346,8 +338,8 @@
 
     .prologue
     .line 592
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/MapperConfig;,"Lcom/flurry/org/codehaus/jackson/map/MapperConfig<TT;>;"
-    .local p1, valueTypeRef:Lcom/flurry/org/codehaus/jackson/type/TypeReference;,"Lcom/flurry/org/codehaus/jackson/type/TypeReference<*>;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/MapperConfig;, "Lcom/flurry/org/codehaus/jackson/map/MapperConfig<TT;>;"
+    .local p1, "valueTypeRef":Lcom/flurry/org/codehaus/jackson/type/TypeReference;, "Lcom/flurry/org/codehaus/jackson/type/TypeReference<*>;"
     invoke-virtual {p0}, Lcom/flurry/org/codehaus/jackson/map/MapperConfig;->getTypeFactory()Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;
 
     move-result-object v0
@@ -360,7 +352,7 @@
 
     check-cast p0, Lcom/flurry/org/codehaus/jackson/map/type/TypeBindings;
 
-    .end local p0           #this:Lcom/flurry/org/codehaus/jackson/map/MapperConfig;,"Lcom/flurry/org/codehaus/jackson/map/MapperConfig<TT;>;"
+    .end local p0    # "this":Lcom/flurry/org/codehaus/jackson/map/MapperConfig;, "Lcom/flurry/org/codehaus/jackson/map/MapperConfig<TT;>;"
     invoke-virtual {v0, v1, p0}, Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;->constructType(Ljava/lang/reflect/Type;Lcom/flurry/org/codehaus/jackson/map/type/TypeBindings;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
 
     move-result-object v0
@@ -370,7 +362,6 @@
 
 .method public final constructType(Ljava/lang/Class;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -382,8 +373,8 @@
 
     .prologue
     .line 578
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/MapperConfig;,"Lcom/flurry/org/codehaus/jackson/map/MapperConfig<TT;>;"
-    .local p1, cls:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/MapperConfig;, "Lcom/flurry/org/codehaus/jackson/map/MapperConfig<TT;>;"
+    .local p1, "cls":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-virtual {p0}, Lcom/flurry/org/codehaus/jackson/map/MapperConfig;->getTypeFactory()Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;
 
     move-result-object v0
@@ -392,7 +383,7 @@
 
     check-cast p0, Lcom/flurry/org/codehaus/jackson/map/type/TypeBindings;
 
-    .end local p0           #this:Lcom/flurry/org/codehaus/jackson/map/MapperConfig;,"Lcom/flurry/org/codehaus/jackson/map/MapperConfig<TT;>;"
+    .end local p0    # "this":Lcom/flurry/org/codehaus/jackson/map/MapperConfig;, "Lcom/flurry/org/codehaus/jackson/map/MapperConfig<TT;>;"
     invoke-virtual {v0, p1, p0}, Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;->constructType(Ljava/lang/reflect/Type;Lcom/flurry/org/codehaus/jackson/map/type/TypeBindings;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
 
     move-result-object v0
@@ -412,7 +403,6 @@
 
 .method public final findMixInClassFor(Ljava/lang/Class;)Ljava/lang/Class;
     .locals 2
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -425,19 +415,19 @@
 
     .prologue
     .line 518
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/MapperConfig;,"Lcom/flurry/org/codehaus/jackson/map/MapperConfig<TT;>;"
-    .local p1, cls:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/MapperConfig;, "Lcom/flurry/org/codehaus/jackson/map/MapperConfig<TT;>;"
+    .local p1, "cls":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/map/MapperConfig;->_mixInAnnotations:Ljava/util/HashMap;
 
     if-nez v0, :cond_0
 
     const/4 v0, 0x0
 
-    .end local p0           #this:Lcom/flurry/org/codehaus/jackson/map/MapperConfig;,"Lcom/flurry/org/codehaus/jackson/map/MapperConfig<TT;>;"
+    .end local p0    # "this":Lcom/flurry/org/codehaus/jackson/map/MapperConfig;, "Lcom/flurry/org/codehaus/jackson/map/MapperConfig<TT;>;"
     :goto_0
     return-object v0
 
-    .restart local p0       #this:Lcom/flurry/org/codehaus/jackson/map/MapperConfig;,"Lcom/flurry/org/codehaus/jackson/map/MapperConfig<TT;>;"
+    .restart local p0    # "this":Lcom/flurry/org/codehaus/jackson/map/MapperConfig;, "Lcom/flurry/org/codehaus/jackson/map/MapperConfig<TT;>;"
     :cond_0
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/map/MapperConfig;->_mixInAnnotations:Ljava/util/HashMap;
 
@@ -449,7 +439,7 @@
 
     move-result-object p0
 
-    .end local p0           #this:Lcom/flurry/org/codehaus/jackson/map/MapperConfig;,"Lcom/flurry/org/codehaus/jackson/map/MapperConfig<TT;>;"
+    .end local p0    # "this":Lcom/flurry/org/codehaus/jackson/map/MapperConfig;, "Lcom/flurry/org/codehaus/jackson/map/MapperConfig<TT;>;"
     check-cast p0, Ljava/lang/Class;
 
     move-object v0, p0
@@ -475,7 +465,7 @@
 
     .prologue
     .line 383
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/MapperConfig;,"Lcom/flurry/org/codehaus/jackson/map/MapperConfig<TT;>;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/MapperConfig;, "Lcom/flurry/org/codehaus/jackson/map/MapperConfig<TT;>;"
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/map/MapperConfig;->_base:Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Base;
 
     invoke-virtual {v0}, Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Base;->getAnnotationIntrospector()Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;
@@ -499,7 +489,7 @@
 
     .prologue
     .line 373
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/MapperConfig;,"Lcom/flurry/org/codehaus/jackson/map/MapperConfig<TT;>;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/MapperConfig;, "Lcom/flurry/org/codehaus/jackson/map/MapperConfig<TT;>;"
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/map/MapperConfig;->_base:Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Base;
 
     invoke-virtual {v0}, Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Base;->getClassIntrospector()Lcom/flurry/org/codehaus/jackson/map/ClassIntrospector;
@@ -514,7 +504,7 @@
 
     .prologue
     .line 624
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/MapperConfig;,"Lcom/flurry/org/codehaus/jackson/map/MapperConfig<TT;>;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/MapperConfig;, "Lcom/flurry/org/codehaus/jackson/map/MapperConfig<TT;>;"
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/map/MapperConfig;->_base:Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Base;
 
     invoke-virtual {v0}, Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Base;->getDateFormat()Ljava/text/DateFormat;
@@ -526,7 +516,7 @@
 
 .method public final getDefaultTyper(Lcom/flurry/org/codehaus/jackson/type/JavaType;)Lcom/flurry/org/codehaus/jackson/map/jsontype/TypeResolverBuilder;
     .locals 1
-    .parameter "baseType"
+    .param p1, "baseType"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -539,7 +529,7 @@
 
     .prologue
     .line 543
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/MapperConfig;,"Lcom/flurry/org/codehaus/jackson/map/MapperConfig<TT;>;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/MapperConfig;, "Lcom/flurry/org/codehaus/jackson/map/MapperConfig<TT;>;"
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/map/MapperConfig;->_base:Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Base;
 
     invoke-virtual {v0}, Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Base;->getTypeResolverBuilder()Lcom/flurry/org/codehaus/jackson/map/jsontype/TypeResolverBuilder;
@@ -561,7 +551,7 @@
 
     .prologue
     .line 434
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/MapperConfig;,"Lcom/flurry/org/codehaus/jackson/map/MapperConfig<TT;>;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/MapperConfig;, "Lcom/flurry/org/codehaus/jackson/map/MapperConfig<TT;>;"
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/map/MapperConfig;->_base:Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Base;
 
     invoke-virtual {v0}, Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Base;->getVisibilityChecker()Lcom/flurry/org/codehaus/jackson/map/introspect/VisibilityChecker;
@@ -576,7 +566,7 @@
 
     .prologue
     .line 448
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/MapperConfig;,"Lcom/flurry/org/codehaus/jackson/map/MapperConfig<TT;>;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/MapperConfig;, "Lcom/flurry/org/codehaus/jackson/map/MapperConfig<TT;>;"
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/map/MapperConfig;->_base:Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Base;
 
     invoke-virtual {v0}, Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Base;->getHandlerInstantiator()Lcom/flurry/org/codehaus/jackson/map/HandlerInstantiator;
@@ -591,7 +581,7 @@
 
     .prologue
     .line 441
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/MapperConfig;,"Lcom/flurry/org/codehaus/jackson/map/MapperConfig<TT;>;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/MapperConfig;, "Lcom/flurry/org/codehaus/jackson/map/MapperConfig<TT;>;"
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/map/MapperConfig;->_base:Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Base;
 
     invoke-virtual {v0}, Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Base;->getPropertyNamingStrategy()Lcom/flurry/org/codehaus/jackson/map/PropertyNamingStrategy;
@@ -606,7 +596,7 @@
 
     .prologue
     .line 554
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/MapperConfig;,"Lcom/flurry/org/codehaus/jackson/map/MapperConfig<TT;>;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/MapperConfig;, "Lcom/flurry/org/codehaus/jackson/map/MapperConfig<TT;>;"
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/map/MapperConfig;->_subtypeResolver:Lcom/flurry/org/codehaus/jackson/map/jsontype/SubtypeResolver;
 
     if-nez v0, :cond_0
@@ -630,7 +620,7 @@
 
     .prologue
     .line 564
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/MapperConfig;,"Lcom/flurry/org/codehaus/jackson/map/MapperConfig<TT;>;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/MapperConfig;, "Lcom/flurry/org/codehaus/jackson/map/MapperConfig<TT;>;"
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/map/MapperConfig;->_base:Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Base;
 
     invoke-virtual {v0}, Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Base;->getTypeFactory()Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;
@@ -642,13 +632,13 @@
 
 .method public final insertAnnotationIntrospector(Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;)V
     .locals 2
-    .parameter "introspector"
+    .param p1, "introspector"    # Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
     .prologue
     .line 400
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/MapperConfig;,"Lcom/flurry/org/codehaus/jackson/map/MapperConfig<TT;>;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/MapperConfig;, "Lcom/flurry/org/codehaus/jackson/map/MapperConfig<TT;>;"
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/map/MapperConfig;->_base:Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Base;
 
     invoke-virtual {p0}, Lcom/flurry/org/codehaus/jackson/map/MapperConfig;->getAnnotationIntrospector()Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;
@@ -683,7 +673,6 @@
 
 .method public introspectClassAnnotations(Ljava/lang/Class;)Lcom/flurry/org/codehaus/jackson/map/BeanDescription;
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<DESC:",
@@ -696,8 +685,8 @@
 
     .prologue
     .line 634
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/MapperConfig;,"Lcom/flurry/org/codehaus/jackson/map/MapperConfig<TT;>;"
-    .local p1, cls:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/MapperConfig;, "Lcom/flurry/org/codehaus/jackson/map/MapperConfig<TT;>;"
+    .local p1, "cls":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-virtual {p0, p1}, Lcom/flurry/org/codehaus/jackson/map/MapperConfig;->constructType(Ljava/lang/Class;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
 
     move-result-object v0
@@ -723,7 +712,6 @@
 
 .method public introspectDirectClassAnnotations(Ljava/lang/Class;)Lcom/flurry/org/codehaus/jackson/map/BeanDescription;
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<DESC:",
@@ -736,8 +724,8 @@
 
     .prologue
     .line 654
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/MapperConfig;,"Lcom/flurry/org/codehaus/jackson/map/MapperConfig<TT;>;"
-    .local p1, cls:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/MapperConfig;, "Lcom/flurry/org/codehaus/jackson/map/MapperConfig<TT;>;"
+    .local p1, "cls":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-virtual {p0, p1}, Lcom/flurry/org/codehaus/jackson/map/MapperConfig;->constructType(Ljava/lang/Class;)Lcom/flurry/org/codehaus/jackson/type/JavaType;
 
     move-result-object v0
@@ -760,7 +748,7 @@
 
     .prologue
     .line 525
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/MapperConfig;,"Lcom/flurry/org/codehaus/jackson/map/MapperConfig<TT;>;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/MapperConfig;, "Lcom/flurry/org/codehaus/jackson/map/MapperConfig<TT;>;"
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/map/MapperConfig;->_mixInAnnotations:Ljava/util/HashMap;
 
     if-nez v0, :cond_0
@@ -782,13 +770,13 @@
 
 .method public final setAnnotationIntrospector(Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;)V
     .locals 1
-    .parameter "ai"
+    .param p1, "ai"    # Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
     .prologue
     .line 725
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/MapperConfig;,"Lcom/flurry/org/codehaus/jackson/map/MapperConfig<TT;>;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/MapperConfig;, "Lcom/flurry/org/codehaus/jackson/map/MapperConfig<TT;>;"
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/map/MapperConfig;->_base:Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Base;
 
     invoke-virtual {v0, p1}, Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Base;->withAnnotationIntrospector(Lcom/flurry/org/codehaus/jackson/map/AnnotationIntrospector;)Lcom/flurry/org/codehaus/jackson/map/MapperConfig$Base;
@@ -803,13 +791,13 @@
 
 .method public setDateFormat(Ljava/text/DateFormat;)V
     .locals 1
-    .parameter "df"
+    .param p1, "df"    # Ljava/text/DateFormat;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
     .prologue
     .line 744
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/MapperConfig;,"Lcom/flurry/org/codehaus/jackson/map/MapperConfig<TT;>;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/MapperConfig;, "Lcom/flurry/org/codehaus/jackson/map/MapperConfig<TT;>;"
     if-nez p1, :cond_0
 
     .line 745
@@ -831,7 +819,6 @@
 
 .method public final setMixInAnnotations(Ljava/util/Map;)V
     .locals 5
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -846,12 +833,12 @@
 
     .prologue
     .line 473
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/MapperConfig;,"Lcom/flurry/org/codehaus/jackson/map/MapperConfig<TT;>;"
-    .local p1, sourceMixins:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/Class<*>;Ljava/lang/Class<*>;>;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/MapperConfig;, "Lcom/flurry/org/codehaus/jackson/map/MapperConfig<TT;>;"
+    .local p1, "sourceMixins":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/Class<*>;Ljava/lang/Class<*>;>;"
     const/4 v2, 0x0
 
     .line 474
-    .local v2, mixins:Ljava/util/HashMap;,"Ljava/util/HashMap<Lcom/flurry/org/codehaus/jackson/map/type/ClassKey;Ljava/lang/Class<*>;>;"
+    .local v2, "mixins":Ljava/util/HashMap;, "Ljava/util/HashMap<Lcom/flurry/org/codehaus/jackson/map/type/ClassKey;Ljava/lang/Class<*>;>;"
     if-eqz p1, :cond_0
 
     invoke-interface {p1}, Ljava/util/Map;->size()I
@@ -863,7 +850,7 @@
     .line 475
     new-instance v2, Ljava/util/HashMap;
 
-    .end local v2           #mixins:Ljava/util/HashMap;,"Ljava/util/HashMap<Lcom/flurry/org/codehaus/jackson/map/type/ClassKey;Ljava/lang/Class<*>;>;"
+    .end local v2    # "mixins":Ljava/util/HashMap;, "Ljava/util/HashMap<Lcom/flurry/org/codehaus/jackson/map/type/ClassKey;Ljava/lang/Class<*>;>;"
     invoke-interface {p1}, Ljava/util/Map;->size()I
 
     move-result v3
@@ -871,7 +858,7 @@
     invoke-direct {v2, v3}, Ljava/util/HashMap;-><init>(I)V
 
     .line 476
-    .restart local v2       #mixins:Ljava/util/HashMap;,"Ljava/util/HashMap<Lcom/flurry/org/codehaus/jackson/map/type/ClassKey;Ljava/lang/Class<*>;>;"
+    .restart local v2    # "mixins":Ljava/util/HashMap;, "Ljava/util/HashMap<Lcom/flurry/org/codehaus/jackson/map/type/ClassKey;Ljava/lang/Class<*>;>;"
     invoke-interface {p1}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object v3
@@ -880,7 +867,7 @@
 
     move-result-object v1
 
-    .local v1, i$:Ljava/util/Iterator;
+    .local v1, "i$":Ljava/util/Iterator;
     :goto_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
@@ -895,7 +882,7 @@
     check-cast v0, Ljava/util/Map$Entry;
 
     .line 477
-    .local v0, en:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/Class<*>;Ljava/lang/Class<*>;>;"
+    .local v0, "en":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/Class<*>;Ljava/lang/Class<*>;>;"
     new-instance v4, Lcom/flurry/org/codehaus/jackson/map/type/ClassKey;
 
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
@@ -915,8 +902,8 @@
     goto :goto_0
 
     .line 480
-    .end local v0           #en:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/Class<*>;Ljava/lang/Class<*>;>;"
-    .end local v1           #i$:Ljava/util/Iterator;
+    .end local v0    # "en":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/Class<*>;Ljava/lang/Class<*>;>;"
+    .end local v1    # "i$":Ljava/util/Iterator;
     :cond_0
     const/4 v3, 0x0
 
@@ -934,8 +921,7 @@
 
 .method public typeIdResolverInstance(Lcom/flurry/org/codehaus/jackson/map/introspect/Annotated;Ljava/lang/Class;)Lcom/flurry/org/codehaus/jackson/map/jsontype/TypeIdResolver;
     .locals 3
-    .parameter "annotated"
-    .parameter
+    .param p1, "annotated"    # Lcom/flurry/org/codehaus/jackson/map/introspect/Annotated;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -950,14 +936,14 @@
 
     .prologue
     .line 697
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/MapperConfig;,"Lcom/flurry/org/codehaus/jackson/map/MapperConfig<TT;>;"
-    .local p2, resolverClass:Ljava/lang/Class;,"Ljava/lang/Class<+Lcom/flurry/org/codehaus/jackson/map/jsontype/TypeIdResolver;>;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/MapperConfig;, "Lcom/flurry/org/codehaus/jackson/map/MapperConfig<TT;>;"
+    .local p2, "resolverClass":Ljava/lang/Class;, "Ljava/lang/Class<+Lcom/flurry/org/codehaus/jackson/map/jsontype/TypeIdResolver;>;"
     invoke-virtual {p0}, Lcom/flurry/org/codehaus/jackson/map/MapperConfig;->getHandlerInstantiator()Lcom/flurry/org/codehaus/jackson/map/HandlerInstantiator;
 
     move-result-object v1
 
     .line 698
-    .local v1, hi:Lcom/flurry/org/codehaus/jackson/map/HandlerInstantiator;
+    .local v1, "hi":Lcom/flurry/org/codehaus/jackson/map/HandlerInstantiator;
     if-eqz v1, :cond_0
 
     .line 699
@@ -966,18 +952,18 @@
     move-result-object v0
 
     .line 700
-    .local v0, builder:Lcom/flurry/org/codehaus/jackson/map/jsontype/TypeIdResolver;
+    .local v0, "builder":Lcom/flurry/org/codehaus/jackson/map/jsontype/TypeIdResolver;
     if-eqz v0, :cond_0
 
     move-object v2, v0
 
     .line 704
-    .end local v0           #builder:Lcom/flurry/org/codehaus/jackson/map/jsontype/TypeIdResolver;
-    .end local p0           #this:Lcom/flurry/org/codehaus/jackson/map/MapperConfig;,"Lcom/flurry/org/codehaus/jackson/map/MapperConfig<TT;>;"
+    .end local v0    # "builder":Lcom/flurry/org/codehaus/jackson/map/jsontype/TypeIdResolver;
+    .end local p0    # "this":Lcom/flurry/org/codehaus/jackson/map/MapperConfig;, "Lcom/flurry/org/codehaus/jackson/map/MapperConfig<TT;>;"
     :goto_0
     return-object v2
 
-    .restart local p0       #this:Lcom/flurry/org/codehaus/jackson/map/MapperConfig;,"Lcom/flurry/org/codehaus/jackson/map/MapperConfig<TT;>;"
+    .restart local p0    # "this":Lcom/flurry/org/codehaus/jackson/map/MapperConfig;, "Lcom/flurry/org/codehaus/jackson/map/MapperConfig<TT;>;"
     :cond_0
     invoke-virtual {p0}, Lcom/flurry/org/codehaus/jackson/map/MapperConfig;->canOverrideAccessModifiers()Z
 
@@ -987,7 +973,7 @@
 
     move-result-object p0
 
-    .end local p0           #this:Lcom/flurry/org/codehaus/jackson/map/MapperConfig;,"Lcom/flurry/org/codehaus/jackson/map/MapperConfig<TT;>;"
+    .end local p0    # "this":Lcom/flurry/org/codehaus/jackson/map/MapperConfig;, "Lcom/flurry/org/codehaus/jackson/map/MapperConfig<TT;>;"
     check-cast p0, Lcom/flurry/org/codehaus/jackson/map/jsontype/TypeIdResolver;
 
     move-object v2, p0
@@ -997,8 +983,7 @@
 
 .method public typeResolverBuilderInstance(Lcom/flurry/org/codehaus/jackson/map/introspect/Annotated;Ljava/lang/Class;)Lcom/flurry/org/codehaus/jackson/map/jsontype/TypeResolverBuilder;
     .locals 3
-    .parameter "annotated"
-    .parameter
+    .param p1, "annotated"    # Lcom/flurry/org/codehaus/jackson/map/introspect/Annotated;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1014,14 +999,14 @@
 
     .prologue
     .line 678
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/MapperConfig;,"Lcom/flurry/org/codehaus/jackson/map/MapperConfig<TT;>;"
-    .local p2, builderClass:Ljava/lang/Class;,"Ljava/lang/Class<+Lcom/flurry/org/codehaus/jackson/map/jsontype/TypeResolverBuilder<*>;>;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/MapperConfig;, "Lcom/flurry/org/codehaus/jackson/map/MapperConfig<TT;>;"
+    .local p2, "builderClass":Ljava/lang/Class;, "Ljava/lang/Class<+Lcom/flurry/org/codehaus/jackson/map/jsontype/TypeResolverBuilder<*>;>;"
     invoke-virtual {p0}, Lcom/flurry/org/codehaus/jackson/map/MapperConfig;->getHandlerInstantiator()Lcom/flurry/org/codehaus/jackson/map/HandlerInstantiator;
 
     move-result-object v1
 
     .line 679
-    .local v1, hi:Lcom/flurry/org/codehaus/jackson/map/HandlerInstantiator;
+    .local v1, "hi":Lcom/flurry/org/codehaus/jackson/map/HandlerInstantiator;
     if-eqz v1, :cond_0
 
     .line 680
@@ -1030,18 +1015,18 @@
     move-result-object v0
 
     .line 681
-    .local v0, builder:Lcom/flurry/org/codehaus/jackson/map/jsontype/TypeResolverBuilder;,"Lcom/flurry/org/codehaus/jackson/map/jsontype/TypeResolverBuilder<*>;"
+    .local v0, "builder":Lcom/flurry/org/codehaus/jackson/map/jsontype/TypeResolverBuilder;, "Lcom/flurry/org/codehaus/jackson/map/jsontype/TypeResolverBuilder<*>;"
     if-eqz v0, :cond_0
 
     move-object v2, v0
 
     .line 685
-    .end local v0           #builder:Lcom/flurry/org/codehaus/jackson/map/jsontype/TypeResolverBuilder;,"Lcom/flurry/org/codehaus/jackson/map/jsontype/TypeResolverBuilder<*>;"
-    .end local p0           #this:Lcom/flurry/org/codehaus/jackson/map/MapperConfig;,"Lcom/flurry/org/codehaus/jackson/map/MapperConfig<TT;>;"
+    .end local v0    # "builder":Lcom/flurry/org/codehaus/jackson/map/jsontype/TypeResolverBuilder;, "Lcom/flurry/org/codehaus/jackson/map/jsontype/TypeResolverBuilder<*>;"
+    .end local p0    # "this":Lcom/flurry/org/codehaus/jackson/map/MapperConfig;, "Lcom/flurry/org/codehaus/jackson/map/MapperConfig<TT;>;"
     :goto_0
     return-object v2
 
-    .restart local p0       #this:Lcom/flurry/org/codehaus/jackson/map/MapperConfig;,"Lcom/flurry/org/codehaus/jackson/map/MapperConfig<TT;>;"
+    .restart local p0    # "this":Lcom/flurry/org/codehaus/jackson/map/MapperConfig;, "Lcom/flurry/org/codehaus/jackson/map/MapperConfig<TT;>;"
     :cond_0
     invoke-virtual {p0}, Lcom/flurry/org/codehaus/jackson/map/MapperConfig;->canOverrideAccessModifiers()Z
 
@@ -1051,7 +1036,7 @@
 
     move-result-object p0
 
-    .end local p0           #this:Lcom/flurry/org/codehaus/jackson/map/MapperConfig;,"Lcom/flurry/org/codehaus/jackson/map/MapperConfig<TT;>;"
+    .end local p0    # "this":Lcom/flurry/org/codehaus/jackson/map/MapperConfig;, "Lcom/flurry/org/codehaus/jackson/map/MapperConfig<TT;>;"
     check-cast p0, Lcom/flurry/org/codehaus/jackson/map/jsontype/TypeResolverBuilder;
 
     move-object v2, p0

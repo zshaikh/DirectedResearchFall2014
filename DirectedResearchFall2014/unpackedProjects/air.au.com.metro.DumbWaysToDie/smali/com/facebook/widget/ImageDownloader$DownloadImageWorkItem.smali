@@ -33,7 +33,7 @@
 
     iget-object v1, p0, Lcom/facebook/widget/ImageDownloader$DownloadImageWorkItem;->context:Landroid/content/Context;
 
-    #calls: Lcom/facebook/widget/ImageDownloader;->download(Lcom/facebook/widget/ImageDownloader$RequestKey;Landroid/content/Context;)V
+    # invokes: Lcom/facebook/widget/ImageDownloader;->download(Lcom/facebook/widget/ImageDownloader$RequestKey;Landroid/content/Context;)V
     invoke-static {v0, v1}, Lcom/facebook/widget/ImageDownloader;->access$200(Lcom/facebook/widget/ImageDownloader$RequestKey;Landroid/content/Context;)V
 
     return-void

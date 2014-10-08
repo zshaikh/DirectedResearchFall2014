@@ -41,8 +41,8 @@
 # direct methods
 .method constructor <init>(Lcom/facebook/Session;Lcom/facebook/Session$TokenRefreshRequest;)V
     .locals 1
-    .parameter "session"
-    .parameter "refreshRequest"
+    .param p1, "session"    # Lcom/facebook/Session;
+    .param p2, "refreshRequest"    # Lcom/facebook/Session$TokenRefreshRequest;
 
     .prologue
     .line 1471
@@ -74,7 +74,7 @@
 # virtual methods
 .method public handleMessage(Landroid/os/Message;)V
     .locals 5
-    .parameter "msg"
+    .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
     .line 1478
@@ -89,7 +89,7 @@
     move-result-object v2
 
     .line 1479
-    .local v2, token:Ljava/lang/String;
+    .local v2, "token":Ljava/lang/String;
     iget-object v3, p0, Lcom/facebook/Session$TokenRefreshRequestHandler;->sessionWeakReference:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v3}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -99,7 +99,7 @@
     check-cast v1, Lcom/facebook/Session;
 
     .line 1481
-    .local v1, session:Lcom/facebook/Session;
+    .local v1, "session":Lcom/facebook/Session;
     if-eqz v1, :cond_0
 
     if-eqz v2, :cond_0
@@ -122,10 +122,11 @@
     check-cast v0, Lcom/facebook/Session$TokenRefreshRequest;
 
     .line 1486
-    .local v0, request:Lcom/facebook/Session$TokenRefreshRequest;
+    .local v0, "request":Lcom/facebook/Session$TokenRefreshRequest;
     if-eqz v0, :cond_1
 
     .line 1489
+    # getter for: Lcom/facebook/Session;->staticContext:Landroid/content/Context;
     invoke-static {}, Lcom/facebook/Session;->access$1()Landroid/content/Context;
 
     move-result-object v3
@@ -133,7 +134,7 @@
     invoke-virtual {v3, v0}, Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V
 
     .line 1490
-    #calls: Lcom/facebook/Session$TokenRefreshRequest;->cleanup()V
+    # invokes: Lcom/facebook/Session$TokenRefreshRequest;->cleanup()V
     invoke-static {v0}, Lcom/facebook/Session$TokenRefreshRequest;->access$0(Lcom/facebook/Session$TokenRefreshRequest;)V
 
     .line 1492

@@ -27,7 +27,6 @@
 
 .method synthetic constructor <init>(B)V
     .locals 0
-    .parameter
 
     .prologue
     .line 152

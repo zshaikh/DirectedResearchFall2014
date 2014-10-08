@@ -40,10 +40,10 @@
 # direct methods
 .method public constructor <init>(Landroid/app/Activity;IILandroid/graphics/drawable/Drawable;)V
     .locals 1
-    .parameter "activity"
-    .parameter "centerX"
-    .parameter "centerY"
-    .parameter "drawable"
+    .param p1, "activity"    # Landroid/app/Activity;
+    .param p2, "centerX"    # I
+    .param p3, "centerY"    # I
+    .param p4, "drawable"    # Landroid/graphics/drawable/Drawable;
 
     .prologue
     const/4 v0, 0x0
@@ -77,7 +77,6 @@
 # virtual methods
 .method protected bridge varargs synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
-    .parameter
 
     .prologue
     .line 1
@@ -92,7 +91,7 @@
 
 .method protected varargs doInBackground([Ljava/lang/Void;)Ljava/lang/Void;
     .locals 1
-    .parameter "params"
+    .param p1, "params"    # [Ljava/lang/Void;
 
     .prologue
     .line 172
@@ -103,7 +102,6 @@
 
 .method protected bridge synthetic onPostExecute(Ljava/lang/Object;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1
@@ -116,7 +114,7 @@
 
 .method protected onPostExecute(Ljava/lang/Void;)V
     .locals 0
-    .parameter "result"
+    .param p1, "result"    # Ljava/lang/Void;
 
     .prologue
     .line 181
@@ -132,7 +130,7 @@
     .prologue
     const/4 v13, -0x2
 
-    const/high16 v4, 0x3f00
+    const/high16 v4, 0x3f000000
 
     const/4 v3, 0x1
 
@@ -166,7 +164,7 @@
     move-result v10
 
     .line 137
-    .local v10, spinnerWidth:I
+    .local v10, "spinnerWidth":I
     iget-object v1, p0, Lcom/buffalostudios/aneutils/loadingspinner/LoadingSpinnerActivity$Task;->_spinner:Landroid/widget/ProgressBar;
 
     invoke-virtual {v1}, Landroid/widget/ProgressBar;->getMeasuredHeight()I
@@ -174,7 +172,7 @@
     move-result v9
 
     .line 139
-    .local v9, spinnerHeight:I
+    .local v9, "spinnerHeight":I
     new-instance v7, Landroid/widget/RelativeLayout;
 
     iget-object v1, p0, Lcom/buffalostudios/aneutils/loadingspinner/LoadingSpinnerActivity$Task;->_activity:Landroid/app/Activity;
@@ -182,13 +180,13 @@
     invoke-direct {v7, v1}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;)V
 
     .line 140
-    .local v7, layout:Landroid/widget/RelativeLayout;
+    .local v7, "layout":Landroid/widget/RelativeLayout;
     new-instance v8, Landroid/widget/RelativeLayout$LayoutParams;
 
     invoke-direct {v8, v13, v13}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
     .line 142
-    .local v8, layoutParams:Landroid/widget/RelativeLayout$LayoutParams;
+    .local v8, "layoutParams":Landroid/widget/RelativeLayout$LayoutParams;
     const/16 v1, 0x9
 
     invoke-virtual {v8, v1, v11}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
@@ -251,7 +249,7 @@
 
     const/4 v1, 0x0
 
-    const/high16 v2, 0x43b4
+    const/high16 v2, 0x43b40000
 
     move v5, v3
 
@@ -260,7 +258,7 @@
     invoke-direct/range {v0 .. v6}, Landroid/view/animation/RotateAnimation;-><init>(FFIFIF)V
 
     .line 158
-    .local v0, anim:Landroid/view/animation/RotateAnimation;
+    .local v0, "anim":Landroid/view/animation/RotateAnimation;
     const-wide/16 v1, 0x3e8
 
     invoke-virtual {v0, v1, v2}, Landroid/view/animation/RotateAnimation;->setDuration(J)V
@@ -281,7 +279,7 @@
     invoke-virtual {v1, v0}, Landroid/widget/ProgressBar;->startAnimation(Landroid/view/animation/Animation;)V
 
     .line 164
-    .end local v0           #anim:Landroid/view/animation/RotateAnimation;
+    .end local v0    # "anim":Landroid/view/animation/RotateAnimation;
     :cond_0
     iget-object v1, p0, Lcom/buffalostudios/aneutils/loadingspinner/LoadingSpinnerActivity$Task;->_spinner:Landroid/widget/ProgressBar;
 
@@ -298,7 +296,7 @@
 
 .method protected varargs onProgressUpdate([Ljava/lang/Integer;)V
     .locals 0
-    .parameter "values"
+    .param p1, "values"    # [Ljava/lang/Integer;
 
     .prologue
     .line 176
@@ -310,7 +308,6 @@
 
 .method protected bridge varargs synthetic onProgressUpdate([Ljava/lang/Object;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1

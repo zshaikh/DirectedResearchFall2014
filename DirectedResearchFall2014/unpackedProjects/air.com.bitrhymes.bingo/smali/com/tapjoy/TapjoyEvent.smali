@@ -40,7 +40,7 @@
 
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
-    .parameter "ctx"
+    .param p1, "ctx"    # Landroid/content/Context;
 
     .prologue
     .line 26
@@ -74,7 +74,7 @@
 # virtual methods
 .method public createEventParameter(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
-    .parameter "parameter"
+    .param p1, "parameter"    # Ljava/lang/String;
 
     .prologue
     .line 66
@@ -107,8 +107,7 @@
 
 .method public sendEvent(ILjava/util/Map;)V
     .locals 4
-    .parameter "type"
-    .parameter
+    .param p1, "type"    # I
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I",
@@ -122,7 +121,7 @@
 
     .prologue
     .line 77
-    .local p2, eventData:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p2, "eventData":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v1, "Event"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -151,7 +150,7 @@
     move-result-object v0
 
     .line 81
-    .local v0, eventURLParams:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v0, "eventURLParams":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v1, "event_type_id"
 
     invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -186,10 +185,10 @@
 
 .method public sendIAPEvent(Ljava/lang/String;FILjava/lang/String;)V
     .locals 4
-    .parameter "name"
-    .parameter "price"
-    .parameter "quantity"
-    .parameter "currencyCode"
+    .param p1, "name"    # Ljava/lang/String;
+    .param p2, "price"    # F
+    .param p3, "quantity"    # I
+    .param p4, "currencyCode"    # Ljava/lang/String;
 
     .prologue
     const/4 v3, 0x1
@@ -200,7 +199,7 @@
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     .line 51
-    .local v0, params:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v0, "params":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v1, "name"
 
     invoke-virtual {p0, v1}, Lcom/tapjoy/TapjoyEvent;->createEventParameter(Ljava/lang/String;)Ljava/lang/String;

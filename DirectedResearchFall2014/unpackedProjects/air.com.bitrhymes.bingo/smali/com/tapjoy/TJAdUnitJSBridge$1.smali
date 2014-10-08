@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/tapjoy/TJAdUnitJSBridge;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 98
@@ -39,8 +38,8 @@
 # virtual methods
 .method public dispatchMethod(Ljava/lang/String;Lorg/json/JSONObject;)V
     .locals 10
-    .parameter "methodName"
-    .parameter "json"
+    .param p1, "methodName"    # Ljava/lang/String;
+    .param p2, "json"    # Lorg/json/JSONObject;
 
     .prologue
     const/4 v9, 0x1
@@ -51,11 +50,11 @@
     const/4 v0, 0x0
 
     .line 105
-    .local v0, callbackID:Ljava/lang/String;
+    .local v0, "callbackID":Ljava/lang/String;
     const/4 v1, 0x0
 
     .line 110
-    .local v1, data:Lorg/json/JSONObject;
+    .local v1, "data":Lorg/json/JSONObject;
     :try_start_0
     const-string v4, "callbackId"
 
@@ -98,10 +97,10 @@
     move-result-object v3
 
     .line 119
-    .local v3, m:Ljava/lang/reflect/Method;
+    .local v3, "m":Ljava/lang/reflect/Method;
     iget-object v4, p0, Lcom/tapjoy/TJAdUnitJSBridge$1;->this$0:Lcom/tapjoy/TJAdUnitJSBridge;
 
-    #getter for: Lcom/tapjoy/TJAdUnitJSBridge;->self:Lcom/tapjoy/TJAdUnitJSBridge;
+    # getter for: Lcom/tapjoy/TJAdUnitJSBridge;->self:Lcom/tapjoy/TJAdUnitJSBridge;
     invoke-static {v4}, Lcom/tapjoy/TJAdUnitJSBridge;->access$000(Lcom/tapjoy/TJAdUnitJSBridge;)Lcom/tapjoy/TJAdUnitJSBridge;
 
     move-result-object v4
@@ -121,7 +120,7 @@
     invoke-virtual {v3, v4, v5}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 126
-    .end local v3           #m:Ljava/lang/reflect/Method;
+    .end local v3    # "m":Ljava/lang/reflect/Method;
     :goto_1
     return-void
 
@@ -132,7 +131,7 @@
     move-object v2, v4
 
     .line 114
-    .local v2, e:Ljava/lang/Exception;
+    .local v2, "e":Ljava/lang/Exception;
     const-string v4, "TJAdUnitJSBridge"
 
     invoke-virtual {v2}, Ljava/lang/Exception;->toString()Ljava/lang/String;
@@ -146,14 +145,14 @@
     goto :goto_0
 
     .line 121
-    .end local v2           #e:Ljava/lang/Exception;
+    .end local v2    # "e":Ljava/lang/Exception;
     :catch_1
     move-exception v4
 
     move-object v2, v4
 
     .line 123
-    .restart local v2       #e:Ljava/lang/Exception;
+    .restart local v2    # "e":Ljava/lang/Exception;
     invoke-virtual {v2}, Ljava/lang/Exception;->printStackTrace()V
 
     .line 124

@@ -82,7 +82,6 @@
 
 .method private getCameraRollDirectory(Landroid/app/Activity;)Ljava/lang/String;
     .locals 5
-    .parameter
 
     .prologue
     const/4 v4, 0x0
@@ -162,9 +161,9 @@
 
     sput-object v1, Lcom/adobe/air/CameraUI;->sCameraRollPath:Ljava/lang/String;
     :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
     .catch Landroid/content/ActivityNotFoundException; {:try_start_2 .. :try_end_2} :catch_1
     .catch Ljava/lang/NullPointerException; {:try_start_2 .. :try_end_2} :catch_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
     .line 561
     invoke-virtual {p1}, Landroid/app/Activity;->getContentResolver()Landroid/content/ContentResolver;
@@ -308,9 +307,6 @@
 
 .method private getCursorFromUri(Landroid/net/Uri;Landroid/app/Activity;[Ljava/lang/String;)Landroid/database/Cursor;
     .locals 10
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const/4 v8, 0x0
@@ -489,8 +485,6 @@
 
 .method private getFileFromUri(Landroid/net/Uri;Landroid/app/Activity;)Ljava/io/File;
     .locals 5
-    .parameter
-    .parameter
 
     .prologue
     const-string v4, "_data"
@@ -535,8 +529,8 @@
 
     invoke-direct {v3, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 230
     invoke-interface {v1}, Landroid/database/Cursor;->close()V
@@ -603,7 +597,6 @@
 
 .method private onCameraError(I)V
     .locals 4
-    .parameter
 
     .prologue
     const-wide/16 v2, 0x0
@@ -630,9 +623,6 @@
 
 .method private onCameraResult(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 8
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const-wide/16 v6, 0x0
@@ -723,7 +713,6 @@
 
 .method private processVideoSuccessResult(Landroid/content/Intent;)V
     .locals 9
-    .parameter
 
     .prologue
     const/4 v7, 0x2
@@ -803,8 +792,8 @@
     .line 303
     invoke-interface {v0, v1}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result-object v1
 
@@ -820,8 +809,8 @@
     .line 308
     invoke-direct {p0, v2}, Lcom/adobe/air/CameraUI;->toMediaType(Ljava/lang/String;)Ljava/lang/String;
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_1 .. :try_end_1} :catch_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     move-result-object v2
 
@@ -836,8 +825,8 @@
 
     invoke-direct {v4, v5}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
     :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_2 .. :try_end_2} :catch_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
     move-object v2, v4
 
@@ -846,8 +835,8 @@
     :try_start_3
     invoke-interface {v0, v3}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
     :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_3 .. :try_end_3} :catch_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
     move-result-object v3
 
@@ -862,8 +851,8 @@
 
     invoke-direct {v4, v5}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
     :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_4 .. :try_end_4} :catch_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
     move-object v3, v4
 
@@ -1189,7 +1178,6 @@
 
 .method private toMediaType(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
-    .parameter
 
     .prologue
     .line 196
@@ -1324,8 +1312,6 @@
 
 .method public launch(JI)V
     .locals 5
-    .parameter
-    .parameter
 
     .prologue
     const-wide/16 v3, 0x0
@@ -1417,9 +1403,6 @@
 
 .method public onActivityResult(IILandroid/content/Intent;)V
     .locals 7
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const/4 v6, 0x4
@@ -1531,7 +1514,6 @@
 
 .method public unregisterCallbacks(J)V
     .locals 2
-    .parameter
 
     .prologue
     .line 184

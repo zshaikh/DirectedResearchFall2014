@@ -21,8 +21,8 @@
 # direct methods
 .method constructor <init>(Ljava/io/InputStream;Ljava/net/HttpURLConnection;)V
     .locals 1
-    .parameter "stream"
-    .parameter "connection"
+    .param p1, "stream"    # Ljava/io/InputStream;
+    .param p2, "connection"    # Ljava/net/HttpURLConnection;
 
     .prologue
     .line 111

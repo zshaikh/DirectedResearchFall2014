@@ -36,7 +36,6 @@
 
 .method public static p(Landroid/content/Context;)Landroid/os/Bundle;
     .locals 4
-    .parameter
 
     .prologue
     .line 20

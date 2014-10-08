@@ -153,7 +153,6 @@
 
 .method constructor <init>(Ljava/io/DataInput;)V
     .locals 5
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -230,10 +229,6 @@
 
 .method constructor <init>(Ljava/lang/String;ZJLjava/util/Map;)V
     .locals 3
-    .parameter
-    .parameter
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -328,7 +323,6 @@
 
 .method final a(Ljava/io/DataOutput;)V
     .locals 2
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;

@@ -46,9 +46,9 @@
 
 .method public read([CII)I
     .locals 1
-    .parameter "buffer"
-    .parameter "offset"
-    .parameter "count"
+    .param p1, "buffer"    # [C
+    .param p2, "offset"    # I
+    .param p3, "count"    # I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;

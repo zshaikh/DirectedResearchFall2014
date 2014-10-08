@@ -21,9 +21,6 @@
 # direct methods
 .method constructor <init>(Lcom/adobe/air/OrientationManager;Landroid/content/Context;I)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 238
@@ -38,7 +35,6 @@
 # virtual methods
 .method public onOrientationChanged(I)V
     .locals 7
-    .parameter
 
     .prologue
     const/16 v6, 0xe1
@@ -72,7 +68,7 @@
 
     move-result v1
 
-    #setter for: Lcom/adobe/air/OrientationManager;->mDeviceOrientation:I
+    # setter for: Lcom/adobe/air/OrientationManager;->mDeviceOrientation:I
     invoke-static {v0, v1}, Lcom/adobe/air/OrientationManager;->access$002(Lcom/adobe/air/OrientationManager;I)I
 
     .line 258
@@ -97,7 +93,7 @@
 
     iget-object v1, p0, Lcom/adobe/air/OrientationManager$1;->this$0:Lcom/adobe/air/OrientationManager;
 
-    #getter for: Lcom/adobe/air/OrientationManager;->mAutoOrients:Z
+    # getter for: Lcom/adobe/air/OrientationManager;->mAutoOrients:Z
     invoke-static {v1}, Lcom/adobe/air/OrientationManager;->access$100(Lcom/adobe/air/OrientationManager;)Z
 
     move-result v1
@@ -106,14 +102,14 @@
 
     iget-object v1, p0, Lcom/adobe/air/OrientationManager$1;->this$0:Lcom/adobe/air/OrientationManager;
 
-    #getter for: Lcom/adobe/air/OrientationManager;->mOldDeviceOrientation:I
+    # getter for: Lcom/adobe/air/OrientationManager;->mOldDeviceOrientation:I
     invoke-static {v1}, Lcom/adobe/air/OrientationManager;->access$200(Lcom/adobe/air/OrientationManager;)I
 
     move-result v1
 
     iget-object v2, p0, Lcom/adobe/air/OrientationManager$1;->this$0:Lcom/adobe/air/OrientationManager;
 
-    #getter for: Lcom/adobe/air/OrientationManager;->mDeviceOrientation:I
+    # getter for: Lcom/adobe/air/OrientationManager;->mDeviceOrientation:I
     invoke-static {v2}, Lcom/adobe/air/OrientationManager;->access$000(Lcom/adobe/air/OrientationManager;)I
 
     move-result v2
@@ -130,7 +126,7 @@
 
     iget-object v1, p0, Lcom/adobe/air/OrientationManager$1;->this$0:Lcom/adobe/air/OrientationManager;
 
-    #getter for: Lcom/adobe/air/OrientationManager;->mOrientation:I
+    # getter for: Lcom/adobe/air/OrientationManager;->mOrientation:I
     invoke-static {v1}, Lcom/adobe/air/OrientationManager;->access$300(Lcom/adobe/air/OrientationManager;)I
 
     move-result v1
@@ -140,7 +136,7 @@
     .line 285
     iget-object v1, p0, Lcom/adobe/air/OrientationManager$1;->this$0:Lcom/adobe/air/OrientationManager;
 
-    #getter for: Lcom/adobe/air/OrientationManager;->m_activity:Landroid/app/Activity;
+    # getter for: Lcom/adobe/air/OrientationManager;->m_activity:Landroid/app/Activity;
     invoke-static {v1}, Lcom/adobe/air/OrientationManager;->access$400(Lcom/adobe/air/OrientationManager;)Landroid/app/Activity;
 
     move-result-object v1
@@ -158,7 +154,7 @@
     .line 287
     iget-object v2, p0, Lcom/adobe/air/OrientationManager$1;->this$0:Lcom/adobe/air/OrientationManager;
 
-    #getter for: Lcom/adobe/air/OrientationManager;->m_activity:Landroid/app/Activity;
+    # getter for: Lcom/adobe/air/OrientationManager;->m_activity:Landroid/app/Activity;
     invoke-static {v2}, Lcom/adobe/air/OrientationManager;->access$400(Lcom/adobe/air/OrientationManager;)Landroid/app/Activity;
 
     move-result-object v2
@@ -170,7 +166,7 @@
     .line 289
     iget-object v1, p0, Lcom/adobe/air/OrientationManager$1;->this$0:Lcom/adobe/air/OrientationManager;
 
-    #calls: Lcom/adobe/air/OrientationManager;->isReOrientingAllowed()Z
+    # invokes: Lcom/adobe/air/OrientationManager;->isReOrientingAllowed()Z
     invoke-static {v1}, Lcom/adobe/air/OrientationManager;->access$500(Lcom/adobe/air/OrientationManager;)Z
 
     move-result v1
@@ -182,7 +178,7 @@
 
     iget-object v2, p0, Lcom/adobe/air/OrientationManager$1;->this$0:Lcom/adobe/air/OrientationManager;
 
-    #getter for: Lcom/adobe/air/OrientationManager;->mOrientation:I
+    # getter for: Lcom/adobe/air/OrientationManager;->mOrientation:I
     invoke-static {v2}, Lcom/adobe/air/OrientationManager;->access$300(Lcom/adobe/air/OrientationManager;)I
 
     move-result v2
@@ -199,7 +195,7 @@
 
     iget-object v1, p0, Lcom/adobe/air/OrientationManager$1;->this$0:Lcom/adobe/air/OrientationManager;
 
-    #getter for: Lcom/adobe/air/OrientationManager;->mOrientation:I
+    # getter for: Lcom/adobe/air/OrientationManager;->mOrientation:I
     invoke-static {v1}, Lcom/adobe/air/OrientationManager;->access$300(Lcom/adobe/air/OrientationManager;)I
 
     move-result v1
@@ -211,12 +207,12 @@
 
     iget-object v1, p0, Lcom/adobe/air/OrientationManager$1;->this$0:Lcom/adobe/air/OrientationManager;
 
-    #getter for: Lcom/adobe/air/OrientationManager;->mOrientation:I
+    # getter for: Lcom/adobe/air/OrientationManager;->mOrientation:I
     invoke-static {v1}, Lcom/adobe/air/OrientationManager;->access$300(Lcom/adobe/air/OrientationManager;)I
 
     move-result v1
 
-    #setter for: Lcom/adobe/air/OrientationManager;->mFinalOrientation:I
+    # setter for: Lcom/adobe/air/OrientationManager;->mFinalOrientation:I
     invoke-static {v0, v1}, Lcom/adobe/air/OrientationManager;->access$602(Lcom/adobe/air/OrientationManager;I)I
 
     .line 313
@@ -226,12 +222,12 @@
 
     iget-object v1, p0, Lcom/adobe/air/OrientationManager$1;->this$0:Lcom/adobe/air/OrientationManager;
 
-    #getter for: Lcom/adobe/air/OrientationManager;->mDeviceOrientation:I
+    # getter for: Lcom/adobe/air/OrientationManager;->mDeviceOrientation:I
     invoke-static {v1}, Lcom/adobe/air/OrientationManager;->access$000(Lcom/adobe/air/OrientationManager;)I
 
     move-result v1
 
-    #setter for: Lcom/adobe/air/OrientationManager;->mOldDeviceOrientation:I
+    # setter for: Lcom/adobe/air/OrientationManager;->mOldDeviceOrientation:I
     invoke-static {v0, v1}, Lcom/adobe/air/OrientationManager;->access$202(Lcom/adobe/air/OrientationManager;I)I
 
     .line 314
@@ -252,7 +248,7 @@
 
     move-result v1
 
-    #setter for: Lcom/adobe/air/OrientationManager;->mDeviceOrientation:I
+    # setter for: Lcom/adobe/air/OrientationManager;->mDeviceOrientation:I
     invoke-static {v0, v1}, Lcom/adobe/air/OrientationManager;->access$002(Lcom/adobe/air/OrientationManager;I)I
 
     .line 263
@@ -279,7 +275,7 @@
 
     move-result v1
 
-    #setter for: Lcom/adobe/air/OrientationManager;->mDeviceOrientation:I
+    # setter for: Lcom/adobe/air/OrientationManager;->mDeviceOrientation:I
     invoke-static {v0, v1}, Lcom/adobe/air/OrientationManager;->access$002(Lcom/adobe/air/OrientationManager;I)I
 
     .line 268
@@ -308,7 +304,7 @@
 
     move-result v1
 
-    #setter for: Lcom/adobe/air/OrientationManager;->mDeviceOrientation:I
+    # setter for: Lcom/adobe/air/OrientationManager;->mDeviceOrientation:I
     invoke-static {v0, v1}, Lcom/adobe/air/OrientationManager;->access$002(Lcom/adobe/air/OrientationManager;I)I
 
     .line 273
@@ -345,7 +341,7 @@
 
     move-result v1
 
-    #setter for: Lcom/adobe/air/OrientationManager;->mDeviceOrientation:I
+    # setter for: Lcom/adobe/air/OrientationManager;->mDeviceOrientation:I
     invoke-static {v0, v1}, Lcom/adobe/air/OrientationManager;->access$002(Lcom/adobe/air/OrientationManager;I)I
 
     .line 278
@@ -363,7 +359,7 @@
 
     iget-object v2, p0, Lcom/adobe/air/OrientationManager$1;->this$0:Lcom/adobe/air/OrientationManager;
 
-    #calls: Lcom/adobe/air/OrientationManager;->setSensorBasedOrientation()Z
+    # invokes: Lcom/adobe/air/OrientationManager;->setSensorBasedOrientation()Z
     invoke-static {v2}, Lcom/adobe/air/OrientationManager;->access$700(Lcom/adobe/air/OrientationManager;)Z
 
     move-result v2
@@ -371,7 +367,7 @@
     if-eqz v2, :cond_9
 
     :goto_2
-    #setter for: Lcom/adobe/air/OrientationManager;->mFinalOrientation:I
+    # setter for: Lcom/adobe/air/OrientationManager;->mFinalOrientation:I
     invoke-static {v1, v0}, Lcom/adobe/air/OrientationManager;->access$602(Lcom/adobe/air/OrientationManager;I)I
 
     goto :goto_1
@@ -379,7 +375,7 @@
     :cond_9
     iget-object v0, p0, Lcom/adobe/air/OrientationManager$1;->this$0:Lcom/adobe/air/OrientationManager;
 
-    #getter for: Lcom/adobe/air/OrientationManager;->mOrientation:I
+    # getter for: Lcom/adobe/air/OrientationManager;->mOrientation:I
     invoke-static {v0}, Lcom/adobe/air/OrientationManager;->access$300(Lcom/adobe/air/OrientationManager;)I
 
     move-result v0
@@ -390,7 +386,7 @@
     :cond_a
     iget-object v0, p0, Lcom/adobe/air/OrientationManager$1;->this$0:Lcom/adobe/air/OrientationManager;
 
-    #getter for: Lcom/adobe/air/OrientationManager;->mAutoOrients:Z
+    # getter for: Lcom/adobe/air/OrientationManager;->mAutoOrients:Z
     invoke-static {v0}, Lcom/adobe/air/OrientationManager;->access$100(Lcom/adobe/air/OrientationManager;)Z
 
     move-result v0
@@ -399,7 +395,7 @@
 
     iget-object v0, p0, Lcom/adobe/air/OrientationManager$1;->this$0:Lcom/adobe/air/OrientationManager;
 
-    #getter for: Lcom/adobe/air/OrientationManager;->mSetOrientation:Z
+    # getter for: Lcom/adobe/air/OrientationManager;->mSetOrientation:Z
     invoke-static {v0}, Lcom/adobe/air/OrientationManager;->access$800(Lcom/adobe/air/OrientationManager;)Z
 
     move-result v0
@@ -408,14 +404,14 @@
 
     iget-object v0, p0, Lcom/adobe/air/OrientationManager$1;->this$0:Lcom/adobe/air/OrientationManager;
 
-    #getter for: Lcom/adobe/air/OrientationManager;->mOldDeviceOrientation:I
+    # getter for: Lcom/adobe/air/OrientationManager;->mOldDeviceOrientation:I
     invoke-static {v0}, Lcom/adobe/air/OrientationManager;->access$200(Lcom/adobe/air/OrientationManager;)I
 
     move-result v0
 
     iget-object v1, p0, Lcom/adobe/air/OrientationManager$1;->this$0:Lcom/adobe/air/OrientationManager;
 
-    #getter for: Lcom/adobe/air/OrientationManager;->mDeviceOrientation:I
+    # getter for: Lcom/adobe/air/OrientationManager;->mDeviceOrientation:I
     invoke-static {v1}, Lcom/adobe/air/OrientationManager;->access$000(Lcom/adobe/air/OrientationManager;)I
 
     move-result v1
@@ -424,7 +420,7 @@
 
     iget-object v0, p0, Lcom/adobe/air/OrientationManager$1;->this$0:Lcom/adobe/air/OrientationManager;
 
-    #getter for: Lcom/adobe/air/OrientationManager;->mOldDeviceOrientation:I
+    # getter for: Lcom/adobe/air/OrientationManager;->mOldDeviceOrientation:I
     invoke-static {v0}, Lcom/adobe/air/OrientationManager;->access$200(Lcom/adobe/air/OrientationManager;)I
 
     move-result v0
@@ -439,7 +435,7 @@
 
     iget-object v0, p0, Lcom/adobe/air/OrientationManager$1;->this$0:Lcom/adobe/air/OrientationManager;
 
-    #getter for: Lcom/adobe/air/OrientationManager;->mDeviceOrientation:I
+    # getter for: Lcom/adobe/air/OrientationManager;->mDeviceOrientation:I
     invoke-static {v0}, Lcom/adobe/air/OrientationManager;->access$000(Lcom/adobe/air/OrientationManager;)I
 
     move-result v0
@@ -454,7 +450,7 @@
 
     iget-object v0, p0, Lcom/adobe/air/OrientationManager$1;->this$0:Lcom/adobe/air/OrientationManager;
 
-    #getter for: Lcom/adobe/air/OrientationManager;->mNamespaceVersion:F
+    # getter for: Lcom/adobe/air/OrientationManager;->mNamespaceVersion:F
     invoke-static {v0}, Lcom/adobe/air/OrientationManager;->access$900(Lcom/adobe/air/OrientationManager;)F
 
     move-result v0
@@ -468,7 +464,7 @@
     .line 308
     iget-object v0, p0, Lcom/adobe/air/OrientationManager$1;->this$0:Lcom/adobe/air/OrientationManager;
 
-    #getter for: Lcom/adobe/air/OrientationManager;->m_activity:Landroid/app/Activity;
+    # getter for: Lcom/adobe/air/OrientationManager;->m_activity:Landroid/app/Activity;
     invoke-static {v0}, Lcom/adobe/air/OrientationManager;->access$400(Lcom/adobe/air/OrientationManager;)Landroid/app/Activity;
 
     move-result-object v0
@@ -478,7 +474,7 @@
     .line 309
     iget-object v0, p0, Lcom/adobe/air/OrientationManager$1;->this$0:Lcom/adobe/air/OrientationManager;
 
-    #getter for: Lcom/adobe/air/OrientationManager;->m_activity:Landroid/app/Activity;
+    # getter for: Lcom/adobe/air/OrientationManager;->m_activity:Landroid/app/Activity;
     invoke-static {v0}, Lcom/adobe/air/OrientationManager;->access$400(Lcom/adobe/air/OrientationManager;)Landroid/app/Activity;
 
     move-result-object v0
@@ -491,7 +487,7 @@
     :cond_b
     iget-object v0, p0, Lcom/adobe/air/OrientationManager$1;->this$0:Lcom/adobe/air/OrientationManager;
 
-    #setter for: Lcom/adobe/air/OrientationManager;->mSetOrientation:Z
+    # setter for: Lcom/adobe/air/OrientationManager;->mSetOrientation:Z
     invoke-static {v0, v4}, Lcom/adobe/air/OrientationManager;->access$802(Lcom/adobe/air/OrientationManager;Z)Z
 
     goto/16 :goto_1

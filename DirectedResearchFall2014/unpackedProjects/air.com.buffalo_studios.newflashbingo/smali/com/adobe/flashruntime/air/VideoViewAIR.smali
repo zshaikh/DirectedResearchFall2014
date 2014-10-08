@@ -28,8 +28,6 @@
 
 .method public constructor <init>(Landroid/content/Context;Lcom/adobe/air/AndroidActivityWrapper;)V
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     .line 44
@@ -72,10 +70,6 @@
 
 .method static synthetic access$000(Lcom/adobe/flashruntime/air/VideoViewAIR;JII)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 34

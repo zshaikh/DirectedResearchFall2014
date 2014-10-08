@@ -47,7 +47,7 @@
 
 .method public static getInstance(Lcom/adobe/fre/FREContext;)Lcom/bitrhymes/flurry/FlurryAdListenerClass;
     .locals 1
-    .parameter "freContext1"
+    .param p0, "freContext1"    # Lcom/adobe/fre/FREContext;
 
     .prologue
     .line 23
@@ -76,7 +76,7 @@
 
 .method private setFREContext(Lcom/adobe/fre/FREContext;)V
     .locals 0
-    .parameter "freContext1"
+    .param p1, "freContext1"    # Lcom/adobe/fre/FREContext;
 
     .prologue
     .line 18
@@ -90,7 +90,7 @@
 # virtual methods
 .method public onAdClicked(Ljava/lang/String;)V
     .locals 0
-    .parameter "arg0"
+    .param p1, "arg0"    # Ljava/lang/String;
 
     .prologue
     .line 35
@@ -99,7 +99,7 @@
 
 .method public onAdClosed(Ljava/lang/String;)V
     .locals 3
-    .parameter "arg0"
+    .param p1, "arg0"    # Ljava/lang/String;
 
     .prologue
     .line 39
@@ -152,7 +152,7 @@
 
 .method public onAdOpened(Ljava/lang/String;)V
     .locals 0
-    .parameter "arg0"
+    .param p1, "arg0"    # Ljava/lang/String;
 
     .prologue
     .line 53
@@ -161,7 +161,7 @@
 
 .method public onApplicationExit(Ljava/lang/String;)V
     .locals 0
-    .parameter "arg0"
+    .param p1, "arg0"    # Ljava/lang/String;
 
     .prologue
     .line 58
@@ -170,7 +170,7 @@
 
 .method public onRenderFailed(Ljava/lang/String;)V
     .locals 3
-    .parameter "arg0"
+    .param p1, "arg0"    # Ljava/lang/String;
 
     .prologue
     .line 62
@@ -223,7 +223,7 @@
 
 .method public onVideoCompleted(Ljava/lang/String;)V
     .locals 3
-    .parameter "arg0"
+    .param p1, "arg0"    # Ljava/lang/String;
 
     .prologue
     .line 105
@@ -264,8 +264,8 @@
 
 .method public shouldDisplayAd(Ljava/lang/String;Lcom/flurry/android/FlurryAdType;)Z
     .locals 1
-    .parameter "arg0"
-    .parameter "arg1"
+    .param p1, "arg0"    # Ljava/lang/String;
+    .param p2, "arg1"    # Lcom/flurry/android/FlurryAdType;
 
     .prologue
     .line 75
@@ -276,7 +276,7 @@
 
 .method public spaceDidFailToReceiveAd(Ljava/lang/String;)V
     .locals 3
-    .parameter "arg0"
+    .param p1, "arg0"    # Ljava/lang/String;
 
     .prologue
     .line 80
@@ -329,7 +329,7 @@
 
 .method public spaceDidReceiveAd(Ljava/lang/String;)V
     .locals 3
-    .parameter "arg0"
+    .param p1, "arg0"    # Ljava/lang/String;
 
     .prologue
     .line 93

@@ -26,8 +26,8 @@
 # virtual methods
 .method public call(Lcom/adobe/fre/FREContext;[Lcom/adobe/fre/FREObject;)Lcom/adobe/fre/FREObject;
     .locals 5
-    .parameter "context"
-    .parameter "args"
+    .param p1, "context"    # Lcom/adobe/fre/FREContext;
+    .param p2, "args"    # [Lcom/adobe/fre/FREObject;
 
     .prologue
     const-string v4, "PlayhavenEXt"
@@ -85,13 +85,13 @@
     invoke-direct {v1, v2, v3}, Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest;-><init>(Landroid/app/Activity;Ljava/lang/String;)V
 
     .line 31
-    .local v1, request:Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest;
+    .local v1, "request":Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest;
     invoke-virtual {v1}, Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest;->send()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 37
-    .end local v1           #request:Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest;
+    .end local v1    # "request":Lcom/playhaven/src/publishersdk/content/PHPublisherContentRequest;
     :goto_0
     const/4 v2, 0x0
 
@@ -104,7 +104,7 @@
     move-object v0, v2
 
     .line 33
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v2, "PlayhavenEXt"
 
     const-string v2, "RequestContentPH : failed"
@@ -139,8 +139,8 @@
 
 .method public requestFailed(Lcom/playhaven/src/common/PHAPIRequest;Ljava/lang/Exception;)V
     .locals 3
-    .parameter "request"
-    .parameter "e"
+    .param p1, "request"    # Lcom/playhaven/src/common/PHAPIRequest;
+    .param p2, "e"    # Ljava/lang/Exception;
 
     .prologue
     .line 44
@@ -165,8 +165,8 @@
 
 .method public requestSucceeded(Lcom/playhaven/src/common/PHAPIRequest;Lorg/json/JSONObject;)V
     .locals 6
-    .parameter "request"
-    .parameter "responseData"
+    .param p1, "request"    # Lcom/playhaven/src/common/PHAPIRequest;
+    .param p2, "responseData"    # Lorg/json/JSONObject;
 
     .prologue
     .line 51
@@ -185,7 +185,7 @@
     move-result-object v1
 
     .line 53
-    .local v1, formattedJson:Ljava/lang/String;
+    .local v1, "formattedJson":Ljava/lang/String;
     iget-object v2, p0, Lcom/bitrhymes/PlayHavenAndroidLib/RequestContentPH;->context:Lcom/adobe/fre/FREContext;
 
     const-string v3, "PH_REQUEST_CONTENT_EVENT"
@@ -209,7 +209,7 @@
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 59
-    .end local v1           #formattedJson:Ljava/lang/String;
+    .end local v1    # "formattedJson":Ljava/lang/String;
     :goto_0
     return-void
 
@@ -220,7 +220,7 @@
     move-object v0, v2
 
     .line 57
-    .local v0, e:Lorg/json/JSONException;
+    .local v0, "e":Lorg/json/JSONException;
     invoke-virtual {v0}, Lorg/json/JSONException;->printStackTrace()V
 
     goto :goto_0

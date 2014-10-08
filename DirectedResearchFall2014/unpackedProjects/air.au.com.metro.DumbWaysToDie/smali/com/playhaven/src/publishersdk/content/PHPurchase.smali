@@ -20,7 +20,7 @@
 # direct methods
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 0
-    .parameter "tag"
+    .param p1, "tag"    # Ljava/lang/String;
 
     .prologue
     .line 13
@@ -32,7 +32,7 @@
 
 .method public constructor <init>(Lv2/com/playhaven/model/PHPurchase;)V
     .locals 2
-    .parameter "purchase"
+    .param p1, "purchase"    # Lv2/com/playhaven/model/PHPurchase;
 
     .prologue
     .line 18
@@ -109,8 +109,8 @@
 # virtual methods
 .method public reportResolution(Lcom/playhaven/src/publishersdk/content/PHPurchase$Resolution;Landroid/app/Activity;)V
     .locals 1
-    .parameter "resolution"
-    .parameter "context"
+    .param p1, "resolution"    # Lcom/playhaven/src/publishersdk/content/PHPurchase$Resolution;
+    .param p2, "context"    # Landroid/app/Activity;
 
     .prologue
     .line 70

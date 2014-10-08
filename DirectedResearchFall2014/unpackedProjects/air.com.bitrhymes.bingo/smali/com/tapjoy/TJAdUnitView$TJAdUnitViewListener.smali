@@ -24,7 +24,6 @@
 # direct methods
 .method private constructor <init>(Lcom/tapjoy/TJAdUnitView;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 380
@@ -37,8 +36,8 @@
 
 .method synthetic constructor <init>(Lcom/tapjoy/TJAdUnitView;Lcom/tapjoy/TJAdUnitView$1;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
+    .param p1, "x0"    # Lcom/tapjoy/TJAdUnitView;
+    .param p2, "x1"    # Lcom/tapjoy/TJAdUnitView$1;
 
     .prologue
     .line 380
@@ -66,7 +65,7 @@
 
 .method public onConsoleMessage(Landroid/webkit/ConsoleMessage;)Z
     .locals 8
-    .parameter "consoleMessage"
+    .param p1, "consoleMessage"    # Landroid/webkit/ConsoleMessage;
     .annotation build Landroid/annotation/TargetApi;
         value = 0x8
     .end annotation
@@ -117,7 +116,7 @@
     aput-object v6, v2, v5
 
     .line 424
-    .local v2, errors:[Ljava/lang/String;
+    .local v2, "errors":[Ljava/lang/String;
     const-string v5, "TJAdUnitView"
 
     const-string v6, "shouldClose..."
@@ -127,20 +126,20 @@
     .line 427
     move-object v0, v2
 
-    .local v0, arr$:[Ljava/lang/String;
+    .local v0, "arr$":[Ljava/lang/String;
     array-length v4, v0
 
-    .local v4, len$:I
+    .local v4, "len$":I
     const/4 v3, 0x0
 
-    .local v3, i$:I
+    .local v3, "i$":I
     :goto_0
     if-ge v3, v4, :cond_1
 
     aget-object v1, v0, v3
 
     .line 429
-    .local v1, error:Ljava/lang/String;
+    .local v1, "error":Ljava/lang/String;
     invoke-virtual {p1}, Landroid/webkit/ConsoleMessage;->message()Ljava/lang/String;
 
     move-result-object v5
@@ -154,7 +153,7 @@
     .line 431
     iget-object v5, p0, Lcom/tapjoy/TJAdUnitView$TJAdUnitViewListener;->this$0:Lcom/tapjoy/TJAdUnitView;
 
-    #calls: Lcom/tapjoy/TJAdUnitView;->handleBackKey()V
+    # invokes: Lcom/tapjoy/TJAdUnitView;->handleBackKey()V
     invoke-static {v5}, Lcom/tapjoy/TJAdUnitView;->access$100(Lcom/tapjoy/TJAdUnitView;)V
 
     .line 427
@@ -164,11 +163,11 @@
     goto :goto_0
 
     .line 436
-    .end local v0           #arr$:[Ljava/lang/String;
-    .end local v1           #error:Ljava/lang/String;
-    .end local v2           #errors:[Ljava/lang/String;
-    .end local v3           #i$:I
-    .end local v4           #len$:I
+    .end local v0    # "arr$":[Ljava/lang/String;
+    .end local v1    # "error":Ljava/lang/String;
+    .end local v2    # "errors":[Ljava/lang/String;
+    .end local v3    # "i$":I
+    .end local v4    # "len$":I
     :cond_1
     return v7
 .end method
@@ -205,8 +204,8 @@
 
 .method public onPageFinished(Landroid/webkit/WebView;Ljava/lang/String;)V
     .locals 2
-    .parameter "view"
-    .parameter "url"
+    .param p1, "view"    # Landroid/webkit/WebView;
+    .param p2, "url"    # Ljava/lang/String;
 
     .prologue
     .line 464
@@ -217,7 +216,7 @@
     .line 467
     iget-object v0, p0, Lcom/tapjoy/TJAdUnitView$TJAdUnitViewListener;->this$0:Lcom/tapjoy/TJAdUnitView;
 
-    #getter for: Lcom/tapjoy/TJAdUnitView;->isLegacyView:Z
+    # getter for: Lcom/tapjoy/TJAdUnitView;->isLegacyView:Z
     invoke-static {v0}, Lcom/tapjoy/TJAdUnitView;->access$200(Lcom/tapjoy/TJAdUnitView;)Z
 
     move-result v0
@@ -227,7 +226,7 @@
     .line 468
     iget-object v0, p0, Lcom/tapjoy/TJAdUnitView$TJAdUnitViewListener;->this$0:Lcom/tapjoy/TJAdUnitView;
 
-    #getter for: Lcom/tapjoy/TJAdUnitView;->progressBar:Landroid/widget/ProgressBar;
+    # getter for: Lcom/tapjoy/TJAdUnitView;->progressBar:Landroid/widget/ProgressBar;
     invoke-static {v0}, Lcom/tapjoy/TJAdUnitView;->access$300(Lcom/tapjoy/TJAdUnitView;)Landroid/widget/ProgressBar;
 
     move-result-object v0
@@ -277,9 +276,9 @@
 
 .method public onPageStarted(Landroid/webkit/WebView;Ljava/lang/String;Landroid/graphics/Bitmap;)V
     .locals 4
-    .parameter "view"
-    .parameter "url"
-    .parameter "favicon"
+    .param p1, "view"    # Landroid/webkit/WebView;
+    .param p2, "url"    # Ljava/lang/String;
+    .param p3, "favicon"    # Landroid/graphics/Bitmap;
 
     .prologue
     const/4 v3, 0x0
@@ -310,7 +309,7 @@
     .line 444
     iget-object v0, p0, Lcom/tapjoy/TJAdUnitView$TJAdUnitViewListener;->this$0:Lcom/tapjoy/TJAdUnitView;
 
-    #getter for: Lcom/tapjoy/TJAdUnitView;->isLegacyView:Z
+    # getter for: Lcom/tapjoy/TJAdUnitView;->isLegacyView:Z
     invoke-static {v0}, Lcom/tapjoy/TJAdUnitView;->access$200(Lcom/tapjoy/TJAdUnitView;)Z
 
     move-result v0
@@ -320,7 +319,7 @@
     .line 446
     iget-object v0, p0, Lcom/tapjoy/TJAdUnitView$TJAdUnitViewListener;->this$0:Lcom/tapjoy/TJAdUnitView;
 
-    #getter for: Lcom/tapjoy/TJAdUnitView;->progressBar:Landroid/widget/ProgressBar;
+    # getter for: Lcom/tapjoy/TJAdUnitView;->progressBar:Landroid/widget/ProgressBar;
     invoke-static {v0}, Lcom/tapjoy/TJAdUnitView;->access$300(Lcom/tapjoy/TJAdUnitView;)Landroid/widget/ProgressBar;
 
     move-result-object v0
@@ -330,7 +329,7 @@
     .line 447
     iget-object v0, p0, Lcom/tapjoy/TJAdUnitView$TJAdUnitViewListener;->this$0:Lcom/tapjoy/TJAdUnitView;
 
-    #getter for: Lcom/tapjoy/TJAdUnitView;->progressBar:Landroid/widget/ProgressBar;
+    # getter for: Lcom/tapjoy/TJAdUnitView;->progressBar:Landroid/widget/ProgressBar;
     invoke-static {v0}, Lcom/tapjoy/TJAdUnitView;->access$300(Lcom/tapjoy/TJAdUnitView;)Landroid/widget/ProgressBar;
 
     move-result-object v0
@@ -385,10 +384,10 @@
 
 .method public onReceivedError(Landroid/webkit/WebView;ILjava/lang/String;Ljava/lang/String;)V
     .locals 1
-    .parameter "view"
-    .parameter "errorCode"
-    .parameter "description"
-    .parameter "failingUrl"
+    .param p1, "view"    # Landroid/webkit/WebView;
+    .param p2, "errorCode"    # I
+    .param p3, "description"    # Ljava/lang/String;
+    .param p4, "failingUrl"    # Ljava/lang/String;
 
     .prologue
     .line 410
@@ -422,8 +421,8 @@
 
 .method public shouldOverrideUrlLoading(Landroid/webkit/WebView;Ljava/lang/String;)Z
     .locals 7
-    .parameter "view"
-    .parameter "url"
+    .param p1, "view"    # Landroid/webkit/WebView;
+    .param p2, "url"    # Ljava/lang/String;
     .annotation build Landroid/annotation/TargetApi;
         value = 0x9
     .end annotation
@@ -458,12 +457,12 @@
     move v0, v2
 
     .line 566
-    .end local p1
+    .end local p1    # "view":Landroid/webkit/WebView;
     :goto_0
     return v0
 
     .line 486
-    .restart local p1
+    .restart local p1    # "view":Landroid/webkit/WebView;
     :cond_0
     iget-object v0, p0, Lcom/tapjoy/TJAdUnitView$TJAdUnitViewListener;->this$0:Lcom/tapjoy/TJAdUnitView;
 
@@ -526,7 +525,7 @@
     :cond_1
     iget-object v0, p0, Lcom/tapjoy/TJAdUnitView$TJAdUnitViewListener;->this$0:Lcom/tapjoy/TJAdUnitView;
 
-    #getter for: Lcom/tapjoy/TJAdUnitView;->viewType:I
+    # getter for: Lcom/tapjoy/TJAdUnitView;->viewType:I
     invoke-static {v0}, Lcom/tapjoy/TJAdUnitView;->access$400(Lcom/tapjoy/TJAdUnitView;)I
 
     move-result v0
@@ -546,7 +545,7 @@
 
     const-string v1, "offer_wall"
 
-    #calls: Lcom/tapjoy/TJAdUnitView;->finishWithResult(Ljava/lang/String;)V
+    # invokes: Lcom/tapjoy/TJAdUnitView;->finishWithResult(Ljava/lang/String;)V
     invoke-static {v0, v1}, Lcom/tapjoy/TJAdUnitView;->access$500(Lcom/tapjoy/TJAdUnitView;Ljava/lang/String;)V
 
     move v0, v2
@@ -558,7 +557,7 @@
     :cond_2
     iget-object v0, p0, Lcom/tapjoy/TJAdUnitView$TJAdUnitViewListener;->this$0:Lcom/tapjoy/TJAdUnitView;
 
-    #getter for: Lcom/tapjoy/TJAdUnitView;->viewType:I
+    # getter for: Lcom/tapjoy/TJAdUnitView;->viewType:I
     invoke-static {v0}, Lcom/tapjoy/TJAdUnitView;->access$400(Lcom/tapjoy/TJAdUnitView;)I
 
     move-result v0
@@ -578,7 +577,7 @@
 
     const-string v1, "tjvideo"
 
-    #calls: Lcom/tapjoy/TJAdUnitView;->finishWithResult(Ljava/lang/String;)V
+    # invokes: Lcom/tapjoy/TJAdUnitView;->finishWithResult(Ljava/lang/String;)V
     invoke-static {v0, v1}, Lcom/tapjoy/TJAdUnitView;->access$500(Lcom/tapjoy/TJAdUnitView;Ljava/lang/String;)V
 
     move v0, v2
@@ -599,7 +598,7 @@
     .line 515
     iget-object v0, p0, Lcom/tapjoy/TJAdUnitView$TJAdUnitViewListener;->this$0:Lcom/tapjoy/TJAdUnitView;
 
-    #calls: Lcom/tapjoy/TJAdUnitView;->handleTJVideoURL(Ljava/lang/String;)V
+    # invokes: Lcom/tapjoy/TJAdUnitView;->handleTJVideoURL(Ljava/lang/String;)V
     invoke-static {v0, p2}, Lcom/tapjoy/TJAdUnitView;->access$600(Lcom/tapjoy/TJAdUnitView;Ljava/lang/String;)V
 
     move v0, v2
@@ -749,7 +748,7 @@
     .line 552
     check-cast p1, Lcom/tapjoy/mraid/view/MraidView;
 
-    .end local p1
+    .end local p1    # "view":Landroid/webkit/WebView;
     invoke-virtual {p1, p2}, Lcom/tapjoy/mraid/view/MraidView;->loadUrlStandard(Ljava/lang/String;)V
 
     move v0, v2
@@ -758,7 +757,7 @@
     goto/16 :goto_0
 
     .line 557
-    .restart local p1
+    .restart local p1    # "view":Landroid/webkit/WebView;
     :cond_9
     iget-object v0, p0, Lcom/tapjoy/TJAdUnitView$TJAdUnitViewListener;->this$0:Lcom/tapjoy/TJAdUnitView;
 

@@ -246,7 +246,7 @@
 
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 0
-    .parameter "tag"
+    .param p1, "tag"    # Ljava/lang/String;
 
     .prologue
     .line 86
@@ -260,7 +260,7 @@
 # virtual methods
 .method public attachContentListener(Lv2/com/playhaven/listeners/PHContentRequestListener;)V
     .locals 0
-    .parameter "listener"
+    .param p1, "listener"    # Lv2/com/playhaven/listeners/PHContentRequestListener;
 
     .prologue
     .line 109
@@ -272,7 +272,7 @@
 
 .method public attachPurchaseListener(Lv2/com/playhaven/listeners/PHPurchaseListener;)V
     .locals 0
-    .parameter "listener"
+    .param p1, "listener"    # Lv2/com/playhaven/listeners/PHPurchaseListener;
 
     .prologue
     .line 105
@@ -284,7 +284,7 @@
 
 .method public attachRewardListener(Lv2/com/playhaven/listeners/PHRewardListener;)V
     .locals 0
-    .parameter "listener"
+    .param p1, "listener"    # Lv2/com/playhaven/listeners/PHRewardListener;
 
     .prologue
     .line 101
@@ -335,7 +335,7 @@
 
 .method public onDisplayerAttached(Lv2/com/playhaven/interstitial/requestbridge/base/ContentDisplayer;)V
     .locals 1
-    .parameter "displayer"
+    .param p1, "displayer"    # Lv2/com/playhaven/interstitial/requestbridge/base/ContentDisplayer;
 
     .prologue
     .line 97
@@ -343,7 +343,7 @@
 
     check-cast p1, Lv2/com/playhaven/interstitial/PHInterstitialActivity;
 
-    .end local p1
+    .end local p1    # "displayer":Lv2/com/playhaven/interstitial/requestbridge/base/ContentDisplayer;
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object v0, p0, Lv2/com/playhaven/interstitial/requestbridge/bridges/ContentRequestToInterstitialBridge;->interstitialActivity:Ljava/lang/ref/WeakReference;
@@ -354,8 +354,8 @@
 
 .method public onDisplayerSentMessage(Ljava/lang/String;Landroid/os/Bundle;)V
     .locals 9
-    .parameter "event"
-    .parameter "message"
+    .param p1, "event"    # Ljava/lang/String;
+    .param p2, "message"    # Landroid/os/Bundle;
 
     .prologue
     .line 172
@@ -372,20 +372,20 @@
     if-nez v7, :cond_1
 
     .line 238
-    .end local p0
+    .end local p0    # "this":Lv2/com/playhaven/interstitial/requestbridge/bridges/ContentRequestToInterstitialBridge;
     :cond_0
     :goto_0
     return-void
 
     .line 174
-    .restart local p0
+    .restart local p0    # "this":Lv2/com/playhaven/interstitial/requestbridge/bridges/ContentRequestToInterstitialBridge;
     :cond_1
     invoke-static {p1}, Lv2/com/playhaven/interstitial/requestbridge/bridges/ContentRequestToInterstitialBridge$InterstitialEvent;->valueOf(Ljava/lang/String;)Lv2/com/playhaven/interstitial/requestbridge/bridges/ContentRequestToInterstitialBridge$InterstitialEvent;
 
     move-result-object v4
 
     .line 176
-    .local v4, parsedEvent:Lv2/com/playhaven/interstitial/requestbridge/bridges/ContentRequestToInterstitialBridge$InterstitialEvent;
+    .local v4, "parsedEvent":Lv2/com/playhaven/interstitial/requestbridge/bridges/ContentRequestToInterstitialBridge$InterstitialEvent;
     new-instance v7, Ljava/lang/StringBuilder;
 
     const-string v8, "ContentRequestToInterstitial bridge handling: "
@@ -493,7 +493,7 @@
     check-cast v0, Lv2/com/playhaven/model/PHContent;
 
     .line 188
-    .local v0, content:Lv2/com/playhaven/model/PHContent;
+    .local v0, "content":Lv2/com/playhaven/model/PHContent;
     iget-object v7, p0, Lv2/com/playhaven/interstitial/requestbridge/bridges/ContentRequestToInterstitialBridge;->content_listener:Lv2/com/playhaven/listeners/PHContentRequestListener;
 
     if-eqz v7, :cond_0
@@ -509,7 +509,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lv2/com/playhaven/interstitial/requestbridge/bridges/ContentRequestToInterstitialBridge;
     check-cast p0, Lv2/com/playhaven/requests/content/PHContentRequest;
 
     invoke-interface {v7, p0, v0}, Lv2/com/playhaven/listeners/PHContentRequestListener;->onDisplayedContent(Lv2/com/playhaven/requests/content/PHContentRequest;Lv2/com/playhaven/model/PHContent;)V
@@ -517,8 +517,8 @@
     goto/16 :goto_0
 
     .line 195
-    .end local v0           #content:Lv2/com/playhaven/model/PHContent;
-    .restart local p0
+    .end local v0    # "content":Lv2/com/playhaven/model/PHContent;
+    .restart local p0    # "this":Lv2/com/playhaven/interstitial/requestbridge/bridges/ContentRequestToInterstitialBridge;
     :pswitch_1
     sget-object v7, Lv2/com/playhaven/interstitial/requestbridge/bridges/ContentRequestToInterstitialBridge$InterstitialEventArgument;->CloseType:Lv2/com/playhaven/interstitial/requestbridge/bridges/ContentRequestToInterstitialBridge$InterstitialEventArgument;
 
@@ -531,7 +531,7 @@
     move-result-object v2
 
     .line 200
-    .local v2, dismissTypeStr:Ljava/lang/String;
+    .local v2, "dismissTypeStr":Ljava/lang/String;
     iget-object v7, p0, Lv2/com/playhaven/interstitial/requestbridge/bridges/ContentRequestToInterstitialBridge;->content_listener:Lv2/com/playhaven/listeners/PHContentRequestListener;
 
     if-eqz v7, :cond_0
@@ -544,7 +544,7 @@
     move-result-object v1
 
     .line 203
-    .local v1, dismissType:Lv2/com/playhaven/requests/content/PHContentRequest$PHDismissType;
+    .local v1, "dismissType":Lv2/com/playhaven/requests/content/PHContentRequest$PHDismissType;
     iget-object v7, p0, Lv2/com/playhaven/interstitial/requestbridge/bridges/ContentRequestToInterstitialBridge;->content_listener:Lv2/com/playhaven/listeners/PHContentRequestListener;
 
     iget-object v8, p0, Lv2/com/playhaven/interstitial/requestbridge/bridges/ContentRequestToInterstitialBridge;->contentRequest:Ljava/lang/ref/WeakReference;
@@ -553,7 +553,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lv2/com/playhaven/interstitial/requestbridge/bridges/ContentRequestToInterstitialBridge;
     check-cast p0, Lv2/com/playhaven/requests/content/PHContentRequest;
 
     invoke-interface {v7, p0, v1}, Lv2/com/playhaven/listeners/PHContentRequestListener;->onDismissedContent(Lv2/com/playhaven/requests/content/PHContentRequest;Lv2/com/playhaven/requests/content/PHContentRequest$PHDismissType;)V
@@ -561,9 +561,9 @@
     goto/16 :goto_0
 
     .line 211
-    .end local v1           #dismissType:Lv2/com/playhaven/requests/content/PHContentRequest$PHDismissType;
-    .end local v2           #dismissTypeStr:Ljava/lang/String;
-    .restart local p0
+    .end local v1    # "dismissType":Lv2/com/playhaven/requests/content/PHContentRequest$PHDismissType;
+    .end local v2    # "dismissTypeStr":Ljava/lang/String;
+    .restart local p0    # "this":Lv2/com/playhaven/interstitial/requestbridge/bridges/ContentRequestToInterstitialBridge;
     :pswitch_2
     sget-object v7, Lv2/com/playhaven/interstitial/requestbridge/bridges/ContentRequestToInterstitialBridge$InterstitialEventArgument;->Error:Lv2/com/playhaven/interstitial/requestbridge/bridges/ContentRequestToInterstitialBridge$InterstitialEventArgument;
 
@@ -576,7 +576,7 @@
     move-result-object v3
 
     .line 213
-    .local v3, error:Ljava/lang/String;
+    .local v3, "error":Ljava/lang/String;
     iget-object v7, p0, Lv2/com/playhaven/interstitial/requestbridge/bridges/ContentRequestToInterstitialBridge;->content_listener:Lv2/com/playhaven/listeners/PHContentRequestListener;
 
     if-eqz v7, :cond_0
@@ -592,7 +592,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lv2/com/playhaven/interstitial/requestbridge/bridges/ContentRequestToInterstitialBridge;
     check-cast p0, Lv2/com/playhaven/requests/content/PHContentRequest;
 
     new-instance v8, Lv2/com/playhaven/model/PHError;
@@ -604,8 +604,8 @@
     goto/16 :goto_0
 
     .line 222
-    .end local v3           #error:Ljava/lang/String;
-    .restart local p0
+    .end local v3    # "error":Ljava/lang/String;
+    .restart local p0    # "this":Lv2/com/playhaven/interstitial/requestbridge/bridges/ContentRequestToInterstitialBridge;
     :pswitch_3
     sget-object v7, Lv2/com/playhaven/interstitial/requestbridge/bridges/ContentRequestToInterstitialBridge$InterstitialEventArgument;->Reward:Lv2/com/playhaven/interstitial/requestbridge/bridges/ContentRequestToInterstitialBridge$InterstitialEventArgument;
 
@@ -620,7 +620,7 @@
     check-cast v6, Lv2/com/playhaven/model/PHReward;
 
     .line 224
-    .local v6, reward:Lv2/com/playhaven/model/PHReward;
+    .local v6, "reward":Lv2/com/playhaven/model/PHReward;
     iget-object v7, p0, Lv2/com/playhaven/interstitial/requestbridge/bridges/ContentRequestToInterstitialBridge;->reward_listener:Lv2/com/playhaven/listeners/PHRewardListener;
 
     if-eqz v7, :cond_0
@@ -636,7 +636,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lv2/com/playhaven/interstitial/requestbridge/bridges/ContentRequestToInterstitialBridge;
     check-cast p0, Lv2/com/playhaven/requests/content/PHContentRequest;
 
     invoke-interface {v7, p0, v6}, Lv2/com/playhaven/listeners/PHRewardListener;->onUnlockedReward(Lv2/com/playhaven/requests/content/PHContentRequest;Lv2/com/playhaven/model/PHReward;)V
@@ -644,8 +644,8 @@
     goto/16 :goto_0
 
     .line 231
-    .end local v6           #reward:Lv2/com/playhaven/model/PHReward;
-    .restart local p0
+    .end local v6    # "reward":Lv2/com/playhaven/model/PHReward;
+    .restart local p0    # "this":Lv2/com/playhaven/interstitial/requestbridge/bridges/ContentRequestToInterstitialBridge;
     :pswitch_4
     sget-object v7, Lv2/com/playhaven/interstitial/requestbridge/bridges/ContentRequestToInterstitialBridge$InterstitialEventArgument;->Purchase:Lv2/com/playhaven/interstitial/requestbridge/bridges/ContentRequestToInterstitialBridge$InterstitialEventArgument;
 
@@ -660,7 +660,7 @@
     check-cast v5, Lv2/com/playhaven/model/PHPurchase;
 
     .line 233
-    .local v5, purchase:Lv2/com/playhaven/model/PHPurchase;
+    .local v5, "purchase":Lv2/com/playhaven/model/PHPurchase;
     iget-object v7, p0, Lv2/com/playhaven/interstitial/requestbridge/bridges/ContentRequestToInterstitialBridge;->purchase_listener:Lv2/com/playhaven/listeners/PHPurchaseListener;
 
     if-eqz v7, :cond_0
@@ -676,7 +676,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lv2/com/playhaven/interstitial/requestbridge/bridges/ContentRequestToInterstitialBridge;
     check-cast p0, Lv2/com/playhaven/requests/content/PHContentRequest;
 
     invoke-interface {v7, p0, v5}, Lv2/com/playhaven/listeners/PHPurchaseListener;->onMadePurchase(Lv2/com/playhaven/requests/content/PHContentRequest;Lv2/com/playhaven/model/PHPurchase;)V
@@ -698,7 +698,7 @@
 
 .method public onRequesterAttached(Lv2/com/playhaven/interstitial/requestbridge/base/ContentRequester;)V
     .locals 1
-    .parameter "requester"
+    .param p1, "requester"    # Lv2/com/playhaven/interstitial/requestbridge/base/ContentRequester;
 
     .prologue
     .line 92
@@ -706,7 +706,7 @@
 
     check-cast p1, Lv2/com/playhaven/requests/content/PHContentRequest;
 
-    .end local p1
+    .end local p1    # "requester":Lv2/com/playhaven/interstitial/requestbridge/base/ContentRequester;
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object v0, p0, Lv2/com/playhaven/interstitial/requestbridge/bridges/ContentRequestToInterstitialBridge;->contentRequest:Ljava/lang/ref/WeakReference;
@@ -717,21 +717,21 @@
 
 .method public onRequesterSentMessage(Ljava/lang/String;Landroid/os/Bundle;)V
     .locals 5
-    .parameter "event"
-    .parameter "messageData"
+    .param p1, "event"    # Ljava/lang/String;
+    .param p2, "messageData"    # Landroid/os/Bundle;
 
     .prologue
     .line 124
     if-nez p1, :cond_1
 
     .line 144
-    .end local p0
+    .end local p0    # "this":Lv2/com/playhaven/interstitial/requestbridge/bridges/ContentRequestToInterstitialBridge;
     :cond_0
     :goto_0
     return-void
 
     .line 126
-    .restart local p0
+    .restart local p0    # "this":Lv2/com/playhaven/interstitial/requestbridge/bridges/ContentRequestToInterstitialBridge;
     :cond_1
     iget-object v3, p0, Lv2/com/playhaven/interstitial/requestbridge/bridges/ContentRequestToInterstitialBridge;->interstitialActivity:Ljava/lang/ref/WeakReference;
 
@@ -751,7 +751,7 @@
     move-result-object v0
 
     .line 132
-    .local v0, eventParsed:Lv2/com/playhaven/interstitial/requestbridge/bridges/ContentRequestToInterstitialBridge$InterstitialEvent;
+    .local v0, "eventParsed":Lv2/com/playhaven/interstitial/requestbridge/bridges/ContentRequestToInterstitialBridge$InterstitialEvent;
     sget-object v3, Lv2/com/playhaven/interstitial/requestbridge/bridges/ContentRequestToInterstitialBridge$InterstitialEvent;->PurchaseResolved:Lv2/com/playhaven/interstitial/requestbridge/bridges/ContentRequestToInterstitialBridge$InterstitialEvent;
 
     if-ne v0, v3, :cond_0
@@ -764,7 +764,7 @@
     move-result-object v2
 
     .line 136
-    .local v2, purchase_key:Ljava/lang/String;
+    .local v2, "purchase_key":Ljava/lang/String;
     invoke-virtual {p2, v2}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
 
     move-result-object v1
@@ -772,7 +772,7 @@
     check-cast v1, Lv2/com/playhaven/model/PHPurchase;
 
     .line 138
-    .local v1, purchase:Lv2/com/playhaven/model/PHPurchase;
+    .local v1, "purchase":Lv2/com/playhaven/model/PHPurchase;
     new-instance v3, Ljava/lang/StringBuilder;
 
     const-string v4, "Displayer received purchase resolution: "
@@ -798,7 +798,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lv2/com/playhaven/interstitial/requestbridge/bridges/ContentRequestToInterstitialBridge;
     check-cast p0, Lv2/com/playhaven/interstitial/PHInterstitialActivity;
 
     invoke-virtual {p0, v1}, Lv2/com/playhaven/interstitial/PHInterstitialActivity;->onPurchaseResolved(Lv2/com/playhaven/model/PHPurchase;)V

@@ -28,8 +28,8 @@
 # direct methods
 .method public constructor <init>(Lcom/tapjoy/mraid/view/MraidView;Landroid/content/Context;)V
     .locals 2
-    .parameter "adView"
-    .parameter "context"
+    .param p1, "adView"    # Lcom/tapjoy/mraid/view/MraidView;
+    .param p2, "context"    # Landroid/content/Context;
 
     .prologue
     .line 65
@@ -111,11 +111,11 @@
 
 .method static synthetic access$000(Lcom/tapjoy/mraid/controller/Utility;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
-    .parameter "x2"
-    .parameter "x3"
-    .parameter "x4"
+    .param p0, "x0"    # Lcom/tapjoy/mraid/controller/Utility;
+    .param p1, "x1"    # I
+    .param p2, "x2"    # Ljava/lang/String;
+    .param p3, "x3"    # Ljava/lang/String;
+    .param p4, "x4"    # Ljava/lang/String;
 
     .prologue
     .line 44
@@ -126,10 +126,10 @@
 
 .method private addCalendarEvent(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 16
-    .parameter "callId"
-    .parameter "date"
-    .parameter "title"
-    .parameter "body"
+    .param p1, "callId"    # I
+    .param p2, "date"    # Ljava/lang/String;
+    .param p3, "title"    # Ljava/lang/String;
+    .param p4, "body"    # Ljava/lang/String;
 
     .prologue
     .line 346
@@ -144,25 +144,25 @@
     move-result-object v3
 
     .line 347
-    .local v3, cr:Landroid/content/ContentResolver;
+    .local v3, "cr":Landroid/content/ContentResolver;
     invoke-static/range {p2 .. p2}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
 
     move-result-wide v7
 
     .line 348
-    .local v7, dtStart:J
+    .local v7, "dtStart":J
     const-wide/32 v13, 0x36ee80
 
     add-long v5, v7, v13
 
     .line 349
-    .local v5, dtEnd:J
+    .local v5, "dtEnd":J
     new-instance v4, Landroid/content/ContentValues;
 
     invoke-direct {v4}, Landroid/content/ContentValues;-><init>()V
 
     .line 350
-    .local v4, cv:Landroid/content/ContentValues;
+    .local v4, "cv":Landroid/content/ContentValues;
     const-string v13, "calendar_id"
 
     invoke-static/range {p1 .. p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -245,7 +245,7 @@
     move-result-object v11
 
     .line 363
-    .local v11, newEvent:Landroid/net/Uri;
+    .local v11, "newEvent":Landroid/net/Uri;
     :goto_0
     if-eqz v11, :cond_0
 
@@ -259,13 +259,13 @@
     move-result-wide v9
 
     .line 365
-    .local v9, id:J
+    .local v9, "id":J
     new-instance v12, Landroid/content/ContentValues;
 
     invoke-direct {v12}, Landroid/content/ContentValues;-><init>()V
 
     .line 366
-    .local v12, values:Landroid/content/ContentValues;
+    .local v12, "values":Landroid/content/ContentValues;
     const-string v13, "event_id"
 
     invoke-static {v9, v10}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -317,8 +317,8 @@
     invoke-virtual {v3, v13, v12}, Landroid/content/ContentResolver;->insert(Landroid/net/Uri;Landroid/content/ContentValues;)Landroid/net/Uri;
 
     .line 375
-    .end local v9           #id:J
-    .end local v12           #values:Landroid/content/ContentValues;
+    .end local v9    # "id":J
+    .end local v12    # "values":Landroid/content/ContentValues;
     :cond_0
     :goto_1
     move-object/from16 v0, p0
@@ -341,7 +341,7 @@
     return-void
 
     .line 361
-    .end local v11           #newEvent:Landroid/net/Uri;
+    .end local v11    # "newEvent":Landroid/net/Uri;
     :cond_1
     const-string v13, "content://calendar/events"
 
@@ -353,12 +353,12 @@
 
     move-result-object v11
 
-    .restart local v11       #newEvent:Landroid/net/Uri;
+    .restart local v11    # "newEvent":Landroid/net/Uri;
     goto :goto_0
 
     .line 372
-    .restart local v9       #id:J
-    .restart local v12       #values:Landroid/content/ContentValues;
+    .restart local v9    # "id":J
+    .restart local v12    # "values":Landroid/content/ContentValues;
     :cond_2
     const-string v13, "content://calendar/reminders"
 
@@ -373,7 +373,7 @@
 
 .method private createTelUrl(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
-    .parameter "number"
+    .param p1, "number"    # Ljava/lang/String;
 
     .prologue
     .line 196
@@ -399,7 +399,7 @@
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     .line 201
-    .local v0, buf:Ljava/lang/StringBuilder;
+    .local v0, "buf":Ljava/lang/StringBuilder;
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 202
@@ -422,7 +422,7 @@
     const-string v1, "supports: [ \'level-1\', \'level-2\', \'screen\', \'orientation\', \'network\'"
 
     .line 111
-    .local v1, supports:Ljava/lang/String;
+    .local v1, "supports":Ljava/lang/String;
     iget-object v2, p0, Lcom/tapjoy/mraid/controller/Utility;->mLocationController:Lcom/tapjoy/mraid/controller/MraidLocation;
 
     invoke-virtual {v2}, Lcom/tapjoy/mraid/controller/MraidLocation;->allowLocationServices()Z
@@ -455,7 +455,7 @@
     move v0, v5
 
     .line 114
-    .local v0, p:Z
+    .local v0, "p":Z
     :goto_0
     if-eqz v0, :cond_1
 
@@ -708,14 +708,14 @@
     .line 140
     return-object v1
 
-    .end local v0           #p:Z
+    .end local v0    # "p":Z
     :cond_5
     move v0, v4
 
     .line 111
     goto/16 :goto_0
 
-    .restart local v0       #p:Z
+    .restart local v0    # "p":Z
     :cond_6
     move v0, v4
 
@@ -739,7 +739,7 @@
 # virtual methods
 .method public activate(Ljava/lang/String;)V
     .locals 3
-    .parameter "event"
+    .param p1, "event"    # Ljava/lang/String;
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 
@@ -882,8 +882,8 @@
 
 .method public copyTextFromJarIntoAssetDir(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 1
-    .parameter "alias"
-    .parameter "source"
+    .param p1, "alias"    # Ljava/lang/String;
+    .param p2, "source"    # Ljava/lang/String;
 
     .prologue
     .line 387
@@ -898,7 +898,7 @@
 
 .method public copyTextFromJarIntoString(Ljava/lang/String;)Ljava/lang/String;
     .locals 1
-    .parameter "source"
+    .param p1, "source"    # Ljava/lang/String;
 
     .prologue
     .line 396
@@ -913,9 +913,9 @@
 
 .method public createEvent(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 21
-    .parameter "date"
-    .parameter "title"
-    .parameter "body"
+    .param p1, "date"    # Ljava/lang/String;
+    .param p2, "title"    # Ljava/lang/String;
+    .param p3, "body"    # Ljava/lang/String;
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 
@@ -987,7 +987,7 @@
     move-result-object v5
 
     .line 280
-    .local v5, cr:Landroid/content/ContentResolver;
+    .local v5, "cr":Landroid/content/ContentResolver;
     const/4 v6, 0x3
 
     new-array v7, v6, [Ljava/lang/String;
@@ -1011,7 +1011,7 @@
     aput-object v8, v7, v6
 
     .line 282
-    .local v7, cols:[Ljava/lang/String;
+    .local v7, "cols":[Ljava/lang/String;
     sget-object v6, Landroid/os/Build$VERSION;->SDK:Ljava/lang/String;
 
     invoke-static {v6}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -1040,7 +1040,7 @@
     move-result-object v18
 
     .line 289
-    .local v18, cursor:Landroid/database/Cursor;
+    .local v18, "cursor":Landroid/database/Cursor;
     :goto_0
     if-eqz v18, :cond_0
 
@@ -1062,7 +1062,7 @@
 
     const-string v7, "No calendar account found"
 
-    .end local v7           #cols:[Ljava/lang/String;
+    .end local v7    # "cols":[Ljava/lang/String;
     const/4 v8, 0x1
 
     invoke-static {v6, v7, v8}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
@@ -1083,8 +1083,8 @@
     return-void
 
     .line 286
-    .end local v18           #cursor:Landroid/database/Cursor;
-    .restart local v7       #cols:[Ljava/lang/String;
+    .end local v18    # "cursor":Landroid/database/Cursor;
+    .restart local v7    # "cols":[Ljava/lang/String;
     :cond_2
     const-string v6, "content://calendar/calendars"
 
@@ -1102,7 +1102,7 @@
 
     move-result-object v18
 
-    .restart local v18       #cursor:Landroid/database/Cursor;
+    .restart local v18    # "cursor":Landroid/database/Cursor;
     goto :goto_0
 
     .line 297
@@ -1116,7 +1116,7 @@
     if-ne v6, v7, :cond_4
 
     .line 298
-    .end local v7           #cols:[Ljava/lang/String;
+    .end local v7    # "cols":[Ljava/lang/String;
     const/4 v6, 0x0
 
     move-object/from16 v0, v18
@@ -1152,10 +1152,10 @@
     invoke-direct {v10}, Ljava/util/ArrayList;-><init>()V
 
     .line 303
-    .local v10, entries:Ljava/util/List;,"Ljava/util/List<Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;>;"
+    .local v10, "entries":Ljava/util/List;, "Ljava/util/List<Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;>;"
     const/16 v20, 0x0
 
-    .local v20, i:I
+    .local v20, "i":I
     :goto_3
     invoke-interface/range {v18 .. v18}, Landroid/database/Cursor;->getCount()I
 
@@ -1173,7 +1173,7 @@
     invoke-direct/range {v19 .. v19}, Ljava/util/HashMap;-><init>()V
 
     .line 305
-    .local v19, entry:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v19, "entry":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v6, "ID"
 
     const/4 v7, 0x0
@@ -1252,7 +1252,7 @@
     goto :goto_3
 
     .line 312
-    .end local v19           #entry:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .end local v19    # "entry":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     :cond_5
     new-instance v17, Landroid/app/AlertDialog$Builder;
 
@@ -1269,7 +1269,7 @@
     invoke-direct {v0, v1}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
     .line 313
-    .local v17, builder:Landroid/app/AlertDialog$Builder;
+    .local v17, "builder":Landroid/app/AlertDialog$Builder;
     const-string v6, "Choose Calendar to save event to"
 
     move-object/from16 v0, v17
@@ -1314,7 +1314,7 @@
     invoke-direct/range {v8 .. v13}, Landroid/widget/SimpleAdapter;-><init>(Landroid/content/Context;Ljava/util/List;I[Ljava/lang/String;[I)V
 
     .line 321
-    .local v8, adapter:Landroid/widget/ListAdapter;
+    .local v8, "adapter":Landroid/widget/ListAdapter;
     const/4 v6, -0x1
 
     new-instance v11, Lcom/tapjoy/mraid/controller/Utility$1;
@@ -1352,15 +1352,15 @@
 
     .line 314
     :array_0
-    .array-data 0x4
-        0x14t 0x0t 0x2t 0x1t
-        0x15t 0x0t 0x2t 0x1t
+    .array-data 4
+        0x1020014
+        0x1020015
     .end array-data
 .end method
 
 .method public deactivate(Ljava/lang/String;)V
     .locals 3
-    .parameter "event"
+    .param p1, "event"    # Ljava/lang/String;
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 
@@ -1508,7 +1508,7 @@
 
 .method public init(F)V
     .locals 5
-    .parameter "density"
+    .param p1, "density"    # F
 
     .prologue
     const-string v4, "\',"
@@ -1787,7 +1787,7 @@
     move-result-object v0
 
     .line 97
-    .local v0, injection:Ljava/lang/String;
+    .local v0, "injection":Ljava/lang/String;
     const-string v1, "MRAID Utility"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1824,7 +1824,7 @@
 
 .method public makeCall(Ljava/lang/String;)V
     .locals 5
-    .parameter "number"
+    .param p1, "number"    # Ljava/lang/String;
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 
@@ -1858,7 +1858,7 @@
     move-result-object v1
 
     .line 214
-    .local v1, url:Ljava/lang/String;
+    .local v1, "url":Ljava/lang/String;
     if-nez v1, :cond_0
 
     .line 215
@@ -1891,8 +1891,8 @@
     invoke-direct {v0, v2, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
     .line 219
-    .local v0, i:Landroid/content/Intent;
-    const/high16 v2, 0x1000
+    .local v0, "i":Landroid/content/Intent;
+    const/high16 v2, 0x10000000
 
     invoke-virtual {v0, v2}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
@@ -1906,7 +1906,7 @@
 
 .method public mraidCreateEvent(Ljava/lang/String;)V
     .locals 21
-    .parameter "properties"
+    .param p1, "properties"    # Ljava/lang/String;
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 
@@ -1914,21 +1914,21 @@
     .line 232
     const/4 v10, 0x0
 
-    .local v10, description:Ljava/lang/String;
+    .local v10, "description":Ljava/lang/String;
     const/4 v15, 0x0
 
-    .local v15, location:Ljava/lang/String;
+    .local v15, "location":Ljava/lang/String;
     const/16 v20, 0x0
 
     .line 233
-    .local v20, summary:Ljava/lang/String;
+    .local v20, "summary":Ljava/lang/String;
     const/16 v17, 0x0
 
-    .local v17, reminder:Ljava/lang/String;
+    .local v17, "reminder":Ljava/lang/String;
     const/16 v19, 0x0
 
     .line 235
-    .local v19, status:Ljava/lang/String;
+    .local v19, "status":Ljava/lang/String;
     sget v4, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v5, 0xe
@@ -1946,13 +1946,13 @@
     move-result-object v3
 
     .line 237
-    .local v3, beginTime:Ljava/util/Calendar;
+    .local v3, "beginTime":Ljava/util/Calendar;
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
     move-result-object v13
 
     .line 239
-    .local v13, endTime:Ljava/util/Calendar;
+    .local v13, "endTime":Ljava/util/Calendar;
     :try_start_0
     new-instance v16, Lorg/json/JSONObject;
 
@@ -1963,7 +1963,7 @@
     invoke-direct {v0, v1}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
     .line 240
-    .local v16, propertiesJSON:Lorg/json/JSONObject;
+    .local v16, "propertiesJSON":Lorg/json/JSONObject;
     const-string v4, "start"
 
     move-object/from16 v0, v16
@@ -1975,7 +1975,7 @@
     move-result-object v18
 
     .line 241
-    .local v18, start:Lorg/json/JSONObject;
+    .local v18, "start":Lorg/json/JSONObject;
     const-string v4, "end"
 
     move-object/from16 v0, v16
@@ -1987,7 +1987,7 @@
     move-result-object v12
 
     .line 243
-    .local v12, end:Lorg/json/JSONObject;
+    .local v12, "end":Lorg/json/JSONObject;
     if-nez v12, :cond_1
 
     .line 244
@@ -2129,9 +2129,9 @@
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 257
-    .end local v12           #end:Lorg/json/JSONObject;
-    .end local v16           #propertiesJSON:Lorg/json/JSONObject;
-    .end local v18           #start:Lorg/json/JSONObject;
+    .end local v12    # "end":Lorg/json/JSONObject;
+    .end local v16    # "propertiesJSON":Lorg/json/JSONObject;
+    .end local v18    # "start":Lorg/json/JSONObject;
     :goto_1
     new-instance v4, Landroid/content/Intent;
 
@@ -2202,7 +2202,7 @@
     move-result-object v14
 
     .line 265
-    .local v14, intent:Landroid/content/Intent;
+    .local v14, "intent":Landroid/content/Intent;
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/tapjoy/mraid/controller/Utility;->mMraidView:Lcom/tapjoy/mraid/view/MraidView;
@@ -2218,14 +2218,14 @@
     goto/16 :goto_0
 
     .line 254
-    .end local v14           #intent:Landroid/content/Intent;
+    .end local v14    # "intent":Landroid/content/Intent;
     :catch_0
     move-exception v4
 
     move-object v11, v4
 
     .line 255
-    .local v11, e:Lorg/json/JSONException;
+    .local v11, "e":Lorg/json/JSONException;
     invoke-virtual {v11}, Lorg/json/JSONException;->printStackTrace()V
 
     goto :goto_1
@@ -2283,9 +2283,9 @@
 
 .method public sendMail(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 4
-    .parameter "recipient"
-    .parameter "subject"
-    .parameter "body"
+    .param p1, "recipient"    # Ljava/lang/String;
+    .param p2, "subject"    # Ljava/lang/String;
+    .param p3, "body"    # Ljava/lang/String;
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 
@@ -2341,7 +2341,7 @@
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
     .line 181
-    .local v0, i:Landroid/content/Intent;
+    .local v0, "i":Landroid/content/Intent;
     const-string v1, "plain/text"
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
@@ -2370,7 +2370,7 @@
     invoke-virtual {v0, v1, p3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 185
-    const/high16 v1, 0x1000
+    const/high16 v1, 0x10000000
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
@@ -2385,8 +2385,8 @@
 
 .method public sendSMS(Ljava/lang/String;Ljava/lang/String;)V
     .locals 4
-    .parameter "recipient"
-    .parameter "body"
+    .param p1, "recipient"    # Ljava/lang/String;
+    .param p2, "body"    # Ljava/lang/String;
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 
@@ -2432,7 +2432,7 @@
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
     .line 163
-    .local v0, sendIntent:Landroid/content/Intent;
+    .local v0, "sendIntent":Landroid/content/Intent;
     const-string v1, "address"
 
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
@@ -2448,7 +2448,7 @@
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
 
     .line 166
-    const/high16 v1, 0x1000
+    const/high16 v1, 0x10000000
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
@@ -2463,8 +2463,8 @@
 
 .method public setMaxSize(II)V
     .locals 1
-    .parameter "w"
-    .parameter "h"
+    .param p1, "w"    # I
+    .param p2, "h"    # I
 
     .prologue
     .line 406
@@ -2478,7 +2478,7 @@
 
 .method public showAlert(Ljava/lang/String;)V
     .locals 1
-    .parameter "message"
+    .param p1, "message"    # Ljava/lang/String;
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 
@@ -2537,11 +2537,11 @@
 
 .method public writeToDiskWrap(Ljava/io/InputStream;Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 6
-    .parameter "is"
-    .parameter "currentFile"
-    .parameter "storeInHashedDirectory"
-    .parameter "injection"
-    .parameter "bridgePath"
+    .param p1, "is"    # Ljava/io/InputStream;
+    .param p2, "currentFile"    # Ljava/lang/String;
+    .param p3, "storeInHashedDirectory"    # Z
+    .param p4, "injection"    # Ljava/lang/String;
+    .param p5, "bridgePath"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/IllegalStateException;,

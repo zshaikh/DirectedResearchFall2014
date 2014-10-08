@@ -44,7 +44,6 @@
 
 .method public constructor <init>(B)V
     .locals 1
-    .parameter
 
     .prologue
     .line 64
@@ -58,7 +57,6 @@
 
 .method private constructor <init>(C)V
     .locals 2
-    .parameter
 
     .prologue
     .line 71
@@ -100,7 +98,6 @@
 
 .method public b(Landroid/os/Parcel;)Lcom/vungle/sdk/net/http/MaxRetryAgeHttpResponseHandler;
     .locals 2
-    .parameter
 
     .prologue
     .line 193
@@ -144,9 +141,6 @@
 
 .method public b(Lcom/vungle/sdk/ah;Lcom/vungle/sdk/aj;Lcom/vungle/sdk/am;)V
     .locals 11
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const/4 v9, 0x1
@@ -371,7 +365,6 @@
 
 .method protected final c(I)J
     .locals 6
-    .parameter
 
     .prologue
     .line 160
@@ -387,7 +380,7 @@
 
     long-to-double v0, v0
 
-    const-wide/high16 v2, 0x4000
+    const-wide/high16 v2, 0x4000000000000000L
 
     const/4 v4, 0x1
 
@@ -426,8 +419,7 @@
 
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 2
-    .parameter "parcel"
-    .parameter
+    .param p1, "parcel"    # Landroid/os/Parcel;
 
     .prologue
     .line 184

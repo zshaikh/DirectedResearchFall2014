@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/chartboost/sdk/Chartboost;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1
@@ -40,7 +39,6 @@
 # virtual methods
 .method public a(Lcom/chartboost/sdk/impl/k;)V
     .locals 6
-    .parameter
 
     .prologue
     const-string v5, "location"
@@ -136,8 +134,6 @@
 
 .method public a(Lorg/json/JSONObject;Lcom/chartboost/sdk/impl/k;)V
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 1125

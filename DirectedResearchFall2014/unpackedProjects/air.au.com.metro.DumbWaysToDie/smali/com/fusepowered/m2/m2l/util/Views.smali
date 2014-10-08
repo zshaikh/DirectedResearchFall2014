@@ -16,7 +16,7 @@
 
 .method public static removeFromParent(Landroid/view/View;)V
     .locals 1
-    .parameter "view"
+    .param p0, "view"    # Landroid/view/View;
 
     .prologue
     .line 40

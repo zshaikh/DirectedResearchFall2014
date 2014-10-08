@@ -49,7 +49,7 @@
     .prologue
     const/4 v3, 0x0
 
-    const-wide/high16 v1, -0x8000
+    const-wide/high16 v1, -0x8000000000000000L
 
     const/4 v10, 0x0
 
@@ -200,9 +200,9 @@
 
     invoke-direct {v4, v6}, Ljava/io/BufferedReader;-><init>(Ljava/io/Reader;)V
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_7
     .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_3
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 426
     :try_start_1
@@ -226,9 +226,9 @@
     .line 430
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
     .catch Ljava/lang/NumberFormatException; {:try_start_1 .. :try_end_1} :catch_6
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     goto :goto_3
 
@@ -246,7 +246,7 @@
     iput-object v5, p0, Lcom/vungle/sdk/VungleCache;->e:Ljava/lang/String;
 
     .line 443
-    const-wide/high16 v5, -0x8000
+    const-wide/high16 v5, -0x8000000000000000L
 
     iput-wide v5, p0, Lcom/vungle/sdk/VungleCache;->f:J
     :try_end_2
@@ -296,9 +296,9 @@
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
     :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_1
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_0
     .catch Ljava/lang/NumberFormatException; {:try_start_4 .. :try_end_4} :catch_6
+    .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
     .line 455
     :try_start_5
@@ -330,7 +330,7 @@
     iput-object v5, p0, Lcom/vungle/sdk/VungleCache;->e:Ljava/lang/String;
 
     .line 451
-    const-wide/high16 v5, -0x8000
+    const-wide/high16 v5, -0x8000000000000000L
 
     iput-wide v5, p0, Lcom/vungle/sdk/VungleCache;->f:J
     :try_end_6
@@ -410,8 +410,6 @@
 
 .method static synthetic a(Lcom/vungle/sdk/VungleCache;Ljava/lang/String;)Lcom/vungle/sdk/VungleCache$b;
     .locals 1
-    .parameter
-    .parameter
 
     .prologue
     .line 23
@@ -424,7 +422,6 @@
 
 .method static synthetic a(Lcom/vungle/sdk/VungleCache;)Ljava/lang/Boolean;
     .locals 1
-    .parameter
 
     .prologue
     .line 23
@@ -435,8 +432,6 @@
 
 .method static synthetic a(Lcom/vungle/sdk/VungleCache;Ljava/lang/Boolean;)Ljava/lang/Boolean;
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 23
@@ -447,7 +442,6 @@
 
 .method static synthetic a(Lcom/vungle/sdk/VungleCache$b;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 23
@@ -476,7 +470,6 @@
 
 .method public static a(Ljava/io/File;)Z
     .locals 4
-    .parameter
 
     .prologue
     const/4 v2, 0x0
@@ -537,7 +530,6 @@
 
 .method static synthetic b(Lcom/vungle/sdk/VungleCache;)J
     .locals 2
-    .parameter
 
     .prologue
     .line 23
@@ -619,7 +611,6 @@
 
 .method private static b(Lcom/vungle/sdk/VungleCache$b;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 175
@@ -639,7 +630,6 @@
 
 .method private static b(Ljava/lang/String;)Z
     .locals 7
-    .parameter
 
     .prologue
     const/4 v6, 0x1
@@ -714,7 +704,6 @@
 
 .method private static c(Ljava/lang/String;)Ljava/lang/String;
     .locals 10
-    .parameter
 
     .prologue
     const/4 v9, 0x0
@@ -818,7 +807,6 @@
 
 .method static synthetic c(Lcom/vungle/sdk/VungleCache;)Ljava/util/ArrayList;
     .locals 1
-    .parameter
 
     .prologue
     .line 23
@@ -829,7 +817,6 @@
 
 .method private static c(Lcom/vungle/sdk/VungleCache$b;)V
     .locals 3
-    .parameter
 
     .prologue
     .line 797
@@ -935,7 +922,6 @@
 
 .method private d(Ljava/lang/String;)Lcom/vungle/sdk/VungleCache$b;
     .locals 22
-    .parameter
 
     .prologue
     .line 307
@@ -946,7 +932,7 @@
     const/4 v6, 0x0
 
     .line 308
-    const-wide/high16 v7, -0x8000
+    const-wide/high16 v7, -0x8000000000000000L
 
     .line 311
     new-instance v11, Ljava/io/File;
@@ -1154,8 +1140,8 @@
 
     invoke-direct/range {v15 .. v16}, Ljava/util/Scanner;-><init>(Ljava/io/File;)V
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 345
     :try_start_1
@@ -1168,8 +1154,8 @@
     .line 346
     invoke-virtual {v15}, Ljava/util/Scanner;->nextLong()J
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
     .catch Ljava/io/FileNotFoundException; {:try_start_1 .. :try_end_1} :catch_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     move-result-wide v6
 
@@ -1247,7 +1233,7 @@
     :goto_5
     if-eqz v5, :cond_b
 
-    const-wide/high16 v3, -0x8000
+    const-wide/high16 v3, -0x8000000000000000L
 
     cmp-long v3, v9, v3
 
@@ -1372,7 +1358,6 @@
 
 .method static synthetic d(Lcom/vungle/sdk/VungleCache;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 23
@@ -1657,7 +1642,6 @@
 # virtual methods
 .method public final a(Lcom/vungle/sdk/z;)V
     .locals 10
-    .parameter
 
     .prologue
     const/4 v8, 0x0
@@ -1981,8 +1965,8 @@
 
     invoke-direct {v2, v3}, Ljava/io/BufferedWriter;-><init>(Ljava/io/Writer;)V
     :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_0
     .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_1
+    .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
     .line 758
     :try_start_6
@@ -1994,8 +1978,8 @@
 
     invoke-virtual {v2, v1}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
     :try_end_6
-    .catchall {:try_start_6 .. :try_end_6} :catchall_6
     .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_a
+    .catchall {:try_start_6 .. :try_end_6} :catchall_6
 
     .line 769
     :try_start_7
@@ -2135,8 +2119,8 @@
 
     invoke-direct {v6, v7}, Ljava/io/BufferedWriter;-><init>(Ljava/io/Writer;)V
     :try_end_d
-    .catchall {:try_start_d .. :try_end_d} :catchall_3
     .catch Ljava/io/IOException; {:try_start_d .. :try_end_d} :catch_3
+    .catchall {:try_start_d .. :try_end_d} :catchall_3
 
     :try_start_e
     iget-wide v7, p1, Lcom/vungle/sdk/z;->o:J
@@ -2147,8 +2131,8 @@
 
     invoke-virtual {v6, v2}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
     :try_end_e
-    .catchall {:try_start_e .. :try_end_e} :catchall_4
     .catch Ljava/io/IOException; {:try_start_e .. :try_end_e} :catch_9
+    .catchall {:try_start_e .. :try_end_e} :catchall_4
 
     :try_start_f
     invoke-virtual {v6}, Ljava/io/BufferedWriter;->close()V
@@ -2391,7 +2375,6 @@
 
 .method public final declared-synchronized a(Ljava/lang/String;)V
     .locals 7
-    .parameter
 
     .prologue
     .line 920
@@ -2419,8 +2402,8 @@
 
     invoke-direct {v1, v2}, Ljava/io/BufferedWriter;-><init>(Ljava/io/Writer;)V
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 930
     :try_start_1
@@ -2455,15 +2438,15 @@
     .line 931
     invoke-virtual {v1, p1}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_2
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_4
+    .catchall {:try_start_1 .. :try_end_1} :catchall_2
 
     .line 943
     :try_start_2
     invoke-virtual {v1}, Ljava/io/BufferedWriter;->close()V
     :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
     .line 949
     :cond_0
@@ -2489,8 +2472,8 @@
     :try_start_4
     invoke-virtual {v0}, Ljava/io/BufferedWriter;->close()V
     :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_1
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_1
+    .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
     goto :goto_0
 
@@ -2518,8 +2501,8 @@
     :try_start_5
     invoke-virtual {v1}, Ljava/io/BufferedWriter;->close()V
     :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_1
     .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_3
+    .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
     .line 948
     :cond_1
@@ -2601,7 +2584,7 @@
     iput-object v0, p0, Lcom/vungle/sdk/VungleCache;->e:Ljava/lang/String;
 
     .line 958
-    const-wide/high16 v0, -0x8000
+    const-wide/high16 v0, -0x8000000000000000L
 
     iput-wide v0, p0, Lcom/vungle/sdk/VungleCache;->f:J
     :try_end_0

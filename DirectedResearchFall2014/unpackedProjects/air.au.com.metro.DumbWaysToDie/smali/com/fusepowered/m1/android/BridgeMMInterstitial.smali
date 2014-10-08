@@ -17,8 +17,8 @@
 
 .method private getExpandExtrasIntent(Ljava/lang/String;Lcom/fusepowered/m1/android/OverlaySettings;)Landroid/content/Intent;
     .locals 4
-    .parameter "url"
-    .parameter "settings"
+    .param p1, "url"    # Ljava/lang/String;
+    .param p2, "settings"    # Lcom/fusepowered/m1/android/OverlaySettings;
 
     .prologue
     .line 178
@@ -27,7 +27,7 @@
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
     .line 179
-    .local v0, intent:Landroid/content/Intent;
+    .local v0, "intent":Landroid/content/Intent;
     if-eqz p1, :cond_0
 
     .line 181
@@ -56,7 +56,7 @@
 
 .method private isForcingOrientation(Lcom/fusepowered/m1/android/MMJSResponse;)Z
     .locals 4
-    .parameter "response"
+    .param p1, "response"    # Lcom/fusepowered/m1/android/MMJSResponse;
 
     .prologue
     const/4 v3, 0x1
@@ -80,7 +80,7 @@
     check-cast v0, Ljava/lang/String;
 
     .line 224
-    .local v0, result:Ljava/lang/String;
+    .local v0, "result":Ljava/lang/String;
     const-string v1, "portrait"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
@@ -101,18 +101,18 @@
     move v1, v3
 
     .line 226
-    .end local v0           #result:Ljava/lang/String;
+    .end local v0    # "result":Ljava/lang/String;
     :goto_0
     return v1
 
-    .restart local v0       #result:Ljava/lang/String;
+    .restart local v0    # "result":Ljava/lang/String;
     :cond_1
     move v1, v2
 
     .line 224
     goto :goto_0
 
-    .end local v0           #result:Ljava/lang/String;
+    .end local v0    # "result":Ljava/lang/String;
     :cond_2
     move v1, v2
 
@@ -122,7 +122,6 @@
 
 .method private setAllowOrientationChange(Ljava/util/HashMap;)Lcom/fusepowered/m1/android/MMJSResponse;
     .locals 4
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -137,7 +136,7 @@
 
     .prologue
     .line 231
-    .local p1, arguments:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p1, "arguments":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v3, "allowOrientationChange"
 
     invoke-virtual {p1, v3}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -147,7 +146,7 @@
     check-cast v0, Ljava/lang/String;
 
     .line 232
-    .local v0, allowOrientationChange:Ljava/lang/String;
+    .local v0, "allowOrientationChange":Ljava/lang/String;
     if-eqz v0, :cond_0
 
     .line 235
@@ -156,7 +155,7 @@
     move-result-object v2
 
     .line 236
-    .local v2, overlayActivity:Lcom/fusepowered/m1/android/AdViewOverlayActivity;
+    .local v2, "overlayActivity":Lcom/fusepowered/m1/android/AdViewOverlayActivity;
     if-eqz v2, :cond_0
 
     .line 238
@@ -165,7 +164,7 @@
     move-result v1
 
     .line 239
-    .local v1, canOrientationChange:Z
+    .local v1, "canOrientationChange":Z
     invoke-virtual {v2, v1}, Lcom/fusepowered/m1/android/AdViewOverlayActivity;->setAllowOrientationChange(Z)V
 
     .line 240
@@ -174,8 +173,8 @@
     move-result-object v3
 
     .line 243
-    .end local v1           #canOrientationChange:Z
-    .end local v2           #overlayActivity:Lcom/fusepowered/m1/android/AdViewOverlayActivity;
+    .end local v1    # "canOrientationChange":Z
+    .end local v2    # "overlayActivity":Lcom/fusepowered/m1/android/AdViewOverlayActivity;
     :goto_0
     return-object v3
 
@@ -187,7 +186,6 @@
 
 .method private setForceOrientation(Ljava/util/HashMap;)Lcom/fusepowered/m1/android/MMJSResponse;
     .locals 5
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -201,7 +199,7 @@
     .end annotation
 
     .prologue
-    .local p1, arguments:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p1, "arguments":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v4, "portrait"
 
     const-string v3, "landscape"
@@ -216,7 +214,7 @@
     check-cast v0, Ljava/lang/String;
 
     .line 250
-    .local v0, forceOrientation:Ljava/lang/String;
+    .local v0, "forceOrientation":Ljava/lang/String;
     const-string v2, "none"
 
     invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -231,7 +229,7 @@
     move-result-object v1
 
     .line 253
-    .local v1, overlayActivity:Lcom/fusepowered/m1/android/AdViewOverlayActivity;
+    .local v1, "overlayActivity":Lcom/fusepowered/m1/android/AdViewOverlayActivity;
     if-eqz v1, :cond_1
 
     .line 255
@@ -254,12 +252,12 @@
     move-result-object v2
 
     .line 268
-    .end local v1           #overlayActivity:Lcom/fusepowered/m1/android/AdViewOverlayActivity;
+    .end local v1    # "overlayActivity":Lcom/fusepowered/m1/android/AdViewOverlayActivity;
     :goto_0
     return-object v2
 
     .line 260
-    .restart local v1       #overlayActivity:Lcom/fusepowered/m1/android/AdViewOverlayActivity;
+    .restart local v1    # "overlayActivity":Lcom/fusepowered/m1/android/AdViewOverlayActivity;
     :cond_0
     const-string v2, "landscape"
 
@@ -282,7 +280,7 @@
     goto :goto_0
 
     .line 268
-    .end local v1           #overlayActivity:Lcom/fusepowered/m1/android/AdViewOverlayActivity;
+    .end local v1    # "overlayActivity":Lcom/fusepowered/m1/android/AdViewOverlayActivity;
     :cond_1
     const/4 v2, 0x0
 
@@ -293,7 +291,6 @@
 # virtual methods
 .method public close(Ljava/util/HashMap;)Lcom/fusepowered/m1/android/MMJSResponse;
     .locals 3
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -308,7 +305,7 @@
 
     .prologue
     .line 47
-    .local p1, arguments:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p1, "arguments":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     iget-object v2, p0, Lcom/fusepowered/m1/android/BridgeMMInterstitial;->mmWebViewRef:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v2}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -318,7 +315,7 @@
     check-cast v1, Lcom/fusepowered/m1/android/MMWebView;
 
     .line 48
-    .local v1, mmWebView:Lcom/fusepowered/m1/android/MMWebView;
+    .local v1, "mmWebView":Lcom/fusepowered/m1/android/MMWebView;
     if-eqz v1, :cond_0
 
     .line 50
@@ -327,7 +324,7 @@
     move-result-object v0
 
     .line 51
-    .local v0, layout:Lcom/fusepowered/m1/android/MMLayout;
+    .local v0, "layout":Lcom/fusepowered/m1/android/MMLayout;
     invoke-virtual {v0}, Lcom/fusepowered/m1/android/MMLayout;->closeAreaTouched()V
 
     .line 52
@@ -336,7 +333,7 @@
     move-result-object v2
 
     .line 54
-    .end local v0           #layout:Lcom/fusepowered/m1/android/MMLayout;
+    .end local v0    # "layout":Lcom/fusepowered/m1/android/MMLayout;
     :goto_0
     return-object v2
 
@@ -348,7 +345,6 @@
 
 .method public expandToExternalBrowser(Ljava/util/HashMap;)Lcom/fusepowered/m1/android/MMJSResponse;
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -363,7 +359,7 @@
 
     .prologue
     .line 81
-    .local p1, arguments:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p1, "arguments":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-virtual {p0, p1}, Lcom/fusepowered/m1/android/BridgeMMInterstitial;->open(Ljava/util/HashMap;)Lcom/fusepowered/m1/android/MMJSResponse;
 
     move-result-object v0
@@ -373,7 +369,6 @@
 
 .method public expandWithProperties(Ljava/util/HashMap;)Lcom/fusepowered/m1/android/MMJSResponse;
     .locals 25
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -388,7 +383,7 @@
 
     .prologue
     .line 92
-    .local p1, arguments:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p1, "arguments":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v21, "PROPERTY_BANNER_TYPE"
 
     move-object/from16 v0, p1
@@ -402,7 +397,7 @@
     check-cast v9, Ljava/lang/String;
 
     .line 93
-    .local v9, isBanner:Ljava/lang/String;
+    .local v9, "isBanner":Ljava/lang/String;
     if-eqz v9, :cond_0
 
     invoke-static {v9}, Ljava/lang/Boolean;->parseBoolean(Ljava/lang/String;)Z
@@ -419,12 +414,12 @@
     move-result-object v21
 
     .line 173
-    .end local p1           #arguments:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .end local p1    # "arguments":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     :goto_0
     return-object v21
 
     .line 98
-    .restart local p1       #arguments:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .restart local p1    # "arguments":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     :cond_0
     const-string v21, "url"
 
@@ -439,7 +434,7 @@
     check-cast v18, Ljava/lang/String;
 
     .line 99
-    .local v18, url:Ljava/lang/String;
+    .local v18, "url":Ljava/lang/String;
     const-string v21, "transparent"
 
     move-object/from16 v0, p1
@@ -453,7 +448,7 @@
     check-cast v17, Ljava/lang/String;
 
     .line 100
-    .local v17, transparent:Ljava/lang/String;
+    .local v17, "transparent":Ljava/lang/String;
     const-string v21, "useCustomClose"
 
     move-object/from16 v0, p1
@@ -467,7 +462,7 @@
     check-cast v19, Ljava/lang/String;
 
     .line 101
-    .local v19, useCustomClose:Ljava/lang/String;
+    .local v19, "useCustomClose":Ljava/lang/String;
     const-string v21, "transition"
 
     move-object/from16 v0, p1
@@ -481,7 +476,7 @@
     check-cast v15, Ljava/lang/String;
 
     .line 102
-    .local v15, transition:Ljava/lang/String;
+    .local v15, "transition":Ljava/lang/String;
     const-string v21, "orientation"
 
     move-object/from16 v0, p1
@@ -495,7 +490,7 @@
     check-cast v11, Ljava/lang/String;
 
     .line 103
-    .local v11, orientation:Ljava/lang/String;
+    .local v11, "orientation":Ljava/lang/String;
     const-string v21, "transitionDuration"
 
     move-object/from16 v0, p1
@@ -509,7 +504,7 @@
     check-cast v16, Ljava/lang/String;
 
     .line 104
-    .local v16, transitionDuration:Ljava/lang/String;
+    .local v16, "transitionDuration":Ljava/lang/String;
     const-string v21, "height"
 
     move-object/from16 v0, p1
@@ -523,7 +518,7 @@
     check-cast v8, Ljava/lang/String;
 
     .line 105
-    .local v8, height:Ljava/lang/String;
+    .local v8, "height":Ljava/lang/String;
     const-string v21, "width"
 
     move-object/from16 v0, p1
@@ -537,7 +532,7 @@
     check-cast v20, Ljava/lang/String;
 
     .line 106
-    .local v20, width:Ljava/lang/String;
+    .local v20, "width":Ljava/lang/String;
     const-string v21, "modal"
 
     move-object/from16 v0, p1
@@ -551,7 +546,7 @@
     check-cast v10, Ljava/lang/String;
 
     .line 107
-    .local v10, modal:Ljava/lang/String;
+    .local v10, "modal":Ljava/lang/String;
     const-string v21, "PROPERTY_EXPANDING"
 
     move-object/from16 v0, p1
@@ -565,7 +560,7 @@
     check-cast v7, Ljava/lang/String;
 
     .line 108
-    .local v7, creatorAdImplId:Ljava/lang/String;
+    .local v7, "creatorAdImplId":Ljava/lang/String;
     const-string v21, "allowOrientationChange"
 
     move-object/from16 v0, p1
@@ -579,7 +574,7 @@
     check-cast v5, Ljava/lang/String;
 
     .line 109
-    .local v5, allowOrientationChange:Ljava/lang/String;
+    .local v5, "allowOrientationChange":Ljava/lang/String;
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/fusepowered/m1/android/BridgeMMInterstitial;->contextRef:Ljava/lang/ref/WeakReference;
@@ -593,7 +588,7 @@
     check-cast v6, Landroid/content/Context;
 
     .line 110
-    .local v6, context:Landroid/content/Context;
+    .local v6, "context":Landroid/content/Context;
     if-eqz v6, :cond_d
 
     .line 112
@@ -602,7 +597,7 @@
     invoke-direct {v12}, Lcom/fusepowered/m1/android/OverlaySettings;-><init>()V
 
     .line 113
-    .local v12, settings:Lcom/fusepowered/m1/android/OverlaySettings;
+    .local v12, "settings":Lcom/fusepowered/m1/android/OverlaySettings;
     if-eqz v18, :cond_1
 
     .line 115
@@ -706,11 +701,11 @@
 
     move-result-object v11
 
-    .end local v11           #orientation:Ljava/lang/String;
+    .end local v11    # "orientation":Ljava/lang/String;
     check-cast v11, Ljava/lang/String;
 
     .line 141
-    .restart local v11       #orientation:Ljava/lang/String;
+    .restart local v11    # "orientation":Ljava/lang/String;
     :cond_7
     if-eqz v11, :cond_8
 
@@ -789,13 +784,13 @@
     mul-long v13, v21, v23
 
     .line 162
-    .local v13, transTimeMillis:J
+    .local v13, "transTimeMillis":J
     invoke-virtual {v12, v13, v14}, Lcom/fusepowered/m1/android/OverlaySettings;->setTransitionDurationInMillis(J)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 167
-    .end local v13           #transTimeMillis:J
+    .end local v13    # "transTimeMillis":J
     :cond_c
     :goto_1
     move-object/from16 v0, p0
@@ -825,7 +820,7 @@
 
     move-result-object p1
 
-    .end local p1           #arguments:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .end local p1    # "arguments":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     check-cast p1, Ljava/lang/String;
 
     invoke-virtual/range {p0 .. p1}, Lcom/fusepowered/m1/android/BridgeMMInterstitial;->getAdImplId(Ljava/lang/String;)J
@@ -833,7 +828,7 @@
     move-result-wide v3
 
     .line 170
-    .local v3, adImplId:J
+    .local v3, "adImplId":J
     invoke-static {v6, v3, v4}, Lcom/fusepowered/m1/android/MMSDK$Event;->overlayOpenedBroadCast(Landroid/content/Context;J)V
 
     .line 171
@@ -844,16 +839,16 @@
     goto/16 :goto_0
 
     .line 173
-    .end local v3           #adImplId:J
-    .end local v12           #settings:Lcom/fusepowered/m1/android/OverlaySettings;
-    .restart local p1       #arguments:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .end local v3    # "adImplId":J
+    .end local v12    # "settings":Lcom/fusepowered/m1/android/OverlaySettings;
+    .restart local p1    # "arguments":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     :cond_d
     const/16 v21, 0x0
 
     goto/16 :goto_0
 
     .line 163
-    .restart local v12       #settings:Lcom/fusepowered/m1/android/OverlaySettings;
+    .restart local v12    # "settings":Lcom/fusepowered/m1/android/OverlaySettings;
     :catch_0
     move-exception v21
 
@@ -862,7 +857,6 @@
 
 .method public open(Ljava/util/HashMap;)Lcom/fusepowered/m1/android/MMJSResponse;
     .locals 7
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -877,7 +871,7 @@
 
     .prologue
     .line 65
-    .local p1, arguments:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p1, "arguments":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v5, "url"
 
     invoke-virtual {p1, v5}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -887,7 +881,7 @@
     check-cast v4, Ljava/lang/String;
 
     .line 66
-    .local v4, url:Ljava/lang/String;
+    .local v4, "url":Ljava/lang/String;
     iget-object v5, p0, Lcom/fusepowered/m1/android/BridgeMMInterstitial;->contextRef:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v5}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -897,7 +891,7 @@
     check-cast v2, Landroid/content/Context;
 
     .line 67
-    .local v2, context:Landroid/content/Context;
+    .local v2, "context":Landroid/content/Context;
     if-eqz v4, :cond_0
 
     if-eqz v2, :cond_0
@@ -914,7 +908,7 @@
     invoke-direct {v3, v5, v6}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
     .line 71
-    .local v3, intent:Landroid/content/Intent;
+    .local v3, "intent":Landroid/content/Intent;
     const-string v5, "PROPERTY_EXPANDING"
 
     invoke-virtual {p1, v5}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -928,7 +922,7 @@
     move-result-wide v0
 
     .line 72
-    .local v0, adImplId:J
+    .local v0, "adImplId":J
     const-string v5, "browser"
 
     invoke-static {v2, v5, v0, v1}, Lcom/fusepowered/m1/android/MMSDK$Event;->intentStarted(Landroid/content/Context;Ljava/lang/String;J)V
@@ -942,8 +936,8 @@
     move-result-object v5
 
     .line 76
-    .end local v0           #adImplId:J
-    .end local v3           #intent:Landroid/content/Intent;
+    .end local v0    # "adImplId":J
+    .end local v3    # "intent":Landroid/content/Intent;
     :goto_0
     return-object v5
 
@@ -955,7 +949,6 @@
 
 .method public setOrientation(Ljava/util/HashMap;)Lcom/fusepowered/m1/android/MMJSResponse;
     .locals 2
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -970,13 +963,13 @@
 
     .prologue
     .line 211
-    .local p1, arguments:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p1, "arguments":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-direct {p0, p1}, Lcom/fusepowered/m1/android/BridgeMMInterstitial;->setForceOrientation(Ljava/util/HashMap;)Lcom/fusepowered/m1/android/MMJSResponse;
 
     move-result-object v0
 
     .line 212
-    .local v0, response:Lcom/fusepowered/m1/android/MMJSResponse;
+    .local v0, "response":Lcom/fusepowered/m1/android/MMJSResponse;
     if-eqz v0, :cond_0
 
     invoke-direct {p0, v0}, Lcom/fusepowered/m1/android/BridgeMMInterstitial;->isForcingOrientation(Lcom/fusepowered/m1/android/MMJSResponse;)Z
@@ -998,7 +991,6 @@
 
 .method public show(Ljava/util/HashMap;)Lcom/fusepowered/m1/android/MMJSResponse;
     .locals 3
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1013,7 +1005,7 @@
 
     .prologue
     .line 28
-    .local p1, arguments:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p1, "arguments":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v2, "url"
 
     invoke-virtual {p1, v2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1023,7 +1015,7 @@
     check-cast v1, Ljava/lang/String;
 
     .line 29
-    .local v1, url:Ljava/lang/String;
+    .local v1, "url":Ljava/lang/String;
     iget-object v2, p0, Lcom/fusepowered/m1/android/BridgeMMInterstitial;->contextRef:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v2}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -1033,7 +1025,7 @@
     check-cast v0, Landroid/content/Context;
 
     .line 30
-    .local v0, context:Landroid/content/Context;
+    .local v0, "context":Landroid/content/Context;
     if-eqz v1, :cond_0
 
     if-eqz v0, :cond_0
@@ -1058,7 +1050,6 @@
 
 .method public useCustomClose(Ljava/util/HashMap;)Lcom/fusepowered/m1/android/MMJSResponse;
     .locals 4
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1073,7 +1064,7 @@
 
     .prologue
     .line 192
-    .local p1, arguments:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p1, "arguments":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     iget-object v3, p0, Lcom/fusepowered/m1/android/BridgeMMInterstitial;->mmWebViewRef:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v3}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -1083,7 +1074,7 @@
     check-cast v0, Lcom/fusepowered/m1/android/MMWebView;
 
     .line 193
-    .local v0, mmWebView:Lcom/fusepowered/m1/android/MMWebView;
+    .local v0, "mmWebView":Lcom/fusepowered/m1/android/MMWebView;
     const-string v3, "useCustomClose"
 
     invoke-virtual {p1, v3}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1093,7 +1084,7 @@
     check-cast v2, Ljava/lang/String;
 
     .line 194
-    .local v2, useCustomClose:Ljava/lang/String;
+    .local v2, "useCustomClose":Ljava/lang/String;
     if-eqz v2, :cond_0
 
     .line 196
@@ -1105,7 +1096,7 @@
     move-result-object v1
 
     .line 199
-    .local v1, overlayView:Lcom/fusepowered/m1/android/AdViewOverlayView;
+    .local v1, "overlayView":Lcom/fusepowered/m1/android/AdViewOverlayView;
     if-eqz v1, :cond_0
 
     .line 201
@@ -1121,7 +1112,7 @@
     move-result-object v3
 
     .line 206
-    .end local v1           #overlayView:Lcom/fusepowered/m1/android/AdViewOverlayView;
+    .end local v1    # "overlayView":Lcom/fusepowered/m1/android/AdViewOverlayView;
     :goto_0
     return-object v3
 

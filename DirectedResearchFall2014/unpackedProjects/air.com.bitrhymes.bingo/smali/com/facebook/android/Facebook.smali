@@ -21,7 +21,7 @@
     .end annotation
 .end field
 
-.field public static final ATTRIBUTION_ID_CONTENT_URI:Landroid/net/Uri; = null
+.field public static final ATTRIBUTION_ID_CONTENT_URI:Landroid/net/Uri;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 .end field
@@ -145,7 +145,7 @@
 
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 3
-    .parameter "appId"
+    .param p1, "appId"    # Ljava/lang/String;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -195,7 +195,6 @@
 
 .method static synthetic access$0(Lcom/facebook/android/Facebook;)Ljava/lang/String;
     .locals 1
-    .parameter
 
     .prologue
     .line 93
@@ -206,7 +205,6 @@
 
 .method static synthetic access$1(Lcom/facebook/android/Facebook;)Lcom/facebook/Session;
     .locals 1
-    .parameter
 
     .prologue
     .line 102
@@ -217,8 +215,6 @@
 
 .method static synthetic access$10(Lcom/facebook/android/Facebook;J)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 95
@@ -229,11 +225,6 @@
 
 .method static synthetic access$11(Lcom/facebook/android/Facebook;Lcom/facebook/Session;Lcom/facebook/SessionState;Ljava/lang/Exception;Lcom/facebook/android/Facebook$DialogListener;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 326
@@ -244,7 +235,6 @@
 
 .method static synthetic access$2(Lcom/facebook/android/Facebook;)J
     .locals 2
-    .parameter
 
     .prologue
     .line 94
@@ -255,7 +245,6 @@
 
 .method static synthetic access$3(Lcom/facebook/android/Facebook;)[Ljava/lang/String;
     .locals 1
-    .parameter
 
     .prologue
     .line 99
@@ -266,7 +255,6 @@
 
 .method static synthetic access$4([Ljava/lang/String;)Ljava/util/List;
     .locals 1
-    .parameter
 
     .prologue
     .line 1147
@@ -279,7 +267,6 @@
 
 .method static synthetic access$5(Lcom/facebook/android/Facebook;)J
     .locals 2
-    .parameter
 
     .prologue
     .line 95
@@ -290,8 +277,6 @@
 
 .method static synthetic access$6(Lcom/facebook/android/Facebook;Ljava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 93
@@ -302,8 +287,6 @@
 
 .method static synthetic access$7(Lcom/facebook/android/Facebook;J)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 94
@@ -314,7 +297,6 @@
 
 .method static synthetic access$8(Ljava/util/List;)[Ljava/lang/String;
     .locals 1
-    .parameter
 
     .prologue
     .line 1134
@@ -327,8 +309,6 @@
 
 .method static synthetic access$9(Lcom/facebook/android/Facebook;[Ljava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 99
@@ -339,11 +319,11 @@
 
 .method private authorize(Landroid/app/Activity;[Ljava/lang/String;ILcom/facebook/SessionLoginBehavior;Lcom/facebook/android/Facebook$DialogListener;)V
     .locals 5
-    .parameter "activity"
-    .parameter "permissions"
-    .parameter "activityCode"
-    .parameter "behavior"
-    .parameter "listener"
+    .param p1, "activity"    # Landroid/app/Activity;
+    .param p2, "permissions"    # [Ljava/lang/String;
+    .param p3, "activityCode"    # I
+    .param p4, "behavior"    # Lcom/facebook/SessionLoginBehavior;
+    .param p5, "listener"    # Lcom/facebook/android/Facebook$DialogListener;
 
     .prologue
     const/4 v4, 0x0
@@ -399,7 +379,7 @@
     invoke-direct {v0, p0, p5}, Lcom/facebook/android/Facebook$1;-><init>(Lcom/facebook/android/Facebook;Lcom/facebook/android/Facebook$DialogListener;)V
 
     .line 308
-    .local v0, callback:Lcom/facebook/Session$StatusCallback;
+    .local v0, "callback":Lcom/facebook/Session$StatusCallback;
     new-instance v2, Lcom/facebook/Session$OpenRequest;
 
     invoke-direct {v2, p1}, Lcom/facebook/Session$OpenRequest;-><init>(Landroid/app/Activity;)V
@@ -431,7 +411,7 @@
     move-result-object v1
 
     .line 313
-    .local v1, openRequest:Lcom/facebook/Session$OpenRequest;
+    .local v1, "openRequest":Lcom/facebook/Session$OpenRequest;
     iget-object v2, p0, Lcom/facebook/android/Facebook;->pendingOpeningSession:Lcom/facebook/Session;
 
     iget-object v3, p0, Lcom/facebook/android/Facebook;->pendingAuthorizationPermissions:[Ljava/lang/String;
@@ -449,15 +429,15 @@
     return-void
 
     .line 298
-    .end local v0           #callback:Lcom/facebook/Session$StatusCallback;
-    .end local v1           #openRequest:Lcom/facebook/Session$OpenRequest;
+    .end local v0    # "callback":Lcom/facebook/Session$StatusCallback;
+    .end local v1    # "openRequest":Lcom/facebook/Session$OpenRequest;
     :cond_0
     new-array v2, v4, [Ljava/lang/String;
 
     goto :goto_0
 
-    .restart local v0       #callback:Lcom/facebook/Session$StatusCallback;
-    .restart local v1       #openRequest:Lcom/facebook/Session$OpenRequest;
+    .restart local v0    # "callback":Lcom/facebook/Session$StatusCallback;
+    .restart local v1    # "openRequest":Lcom/facebook/Session$OpenRequest;
     :cond_1
     move v3, v4
 
@@ -467,7 +447,7 @@
 
 .method private checkUserSession(Ljava/lang/String;)V
     .locals 4
-    .parameter "methodName"
+    .param p1, "methodName"    # Ljava/lang/String;
 
     .prologue
     .line 902
@@ -505,7 +485,7 @@
 
 .method public static getAttributionId(Landroid/content/ContentResolver;)Ljava/lang/String;
     .locals 1
-    .parameter "contentResolver"
+    .param p0, "contentResolver"    # Landroid/content/ContentResolver;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -545,10 +525,10 @@
 
 .method private onSessionCallback(Lcom/facebook/Session;Lcom/facebook/SessionState;Ljava/lang/Exception;Lcom/facebook/android/Facebook$DialogListener;)V
     .locals 7
-    .parameter "callbackSession"
-    .parameter "state"
-    .parameter "exception"
-    .parameter "listener"
+    .param p1, "callbackSession"    # Lcom/facebook/Session;
+    .param p2, "state"    # Lcom/facebook/SessionState;
+    .param p3, "exception"    # Ljava/lang/Exception;
+    .param p4, "listener"    # Lcom/facebook/android/Facebook$DialogListener;
 
     .prologue
     const-string v5, "com.facebook.sdk.WebViewErrorCode"
@@ -561,7 +541,7 @@
     move-result-object v1
 
     .line 330
-    .local v1, extras:Landroid/os/Bundle;
+    .local v1, "extras":Landroid/os/Bundle;
     sget-object v3, Lcom/facebook/SessionState;->OPENED:Lcom/facebook/SessionState;
 
     if-ne p2, v3, :cond_3
@@ -570,7 +550,7 @@
     const/4 v2, 0x0
 
     .line 333
-    .local v2, sessionToClose:Lcom/facebook/Session;
+    .local v2, "sessionToClose":Lcom/facebook/Session;
     iget-object v3, p0, Lcom/facebook/android/Facebook;->lock:Ljava/lang/Object;
 
     monitor-enter v3
@@ -609,13 +589,13 @@
     invoke-interface {p4, v1}, Lcom/facebook/android/Facebook$DialogListener;->onComplete(Landroid/os/Bundle;)V
 
     .line 361
-    .end local v2           #sessionToClose:Lcom/facebook/Session;
+    .end local v2    # "sessionToClose":Lcom/facebook/Session;
     :cond_2
     :goto_0
     return-void
 
     .line 333
-    .restart local v2       #sessionToClose:Lcom/facebook/Session;
+    .restart local v2    # "sessionToClose":Lcom/facebook/Session;
     :catchall_0
     move-exception v4
 
@@ -627,7 +607,7 @@
     throw v4
 
     .line 346
-    .end local v2           #sessionToClose:Lcom/facebook/Session;
+    .end local v2    # "sessionToClose":Lcom/facebook/Session;
     :cond_3
     if-eqz p3, :cond_2
 
@@ -692,13 +672,13 @@
     invoke-direct {v0, v3, v4, v5}, Lcom/facebook/android/DialogError;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     .line 355
-    .local v0, error:Lcom/facebook/android/DialogError;
+    .local v0, "error":Lcom/facebook/android/DialogError;
     invoke-interface {p4, v0}, Lcom/facebook/android/Facebook$DialogListener;->onError(Lcom/facebook/android/DialogError;)V
 
     goto :goto_0
 
     .line 357
-    .end local v0           #error:Lcom/facebook/android/DialogError;
+    .end local v0    # "error":Lcom/facebook/android/DialogError;
     :cond_5
     new-instance v0, Lcom/facebook/android/FacebookError;
 
@@ -709,7 +689,7 @@
     invoke-direct {v0, v3}, Lcom/facebook/android/FacebookError;-><init>(Ljava/lang/String;)V
 
     .line 358
-    .local v0, error:Lcom/facebook/android/FacebookError;
+    .local v0, "error":Lcom/facebook/android/FacebookError;
     invoke-interface {p4, v0}, Lcom/facebook/android/Facebook$DialogListener;->onFacebookError(Lcom/facebook/android/FacebookError;)V
 
     goto :goto_0
@@ -717,9 +697,9 @@
 
 .method private openSession(Lcom/facebook/Session;Lcom/facebook/Session$OpenRequest;Z)V
     .locals 1
-    .parameter "session"
-    .parameter "openRequest"
-    .parameter "isPublish"
+    .param p1, "session"    # Lcom/facebook/Session;
+    .param p2, "openRequest"    # Lcom/facebook/Session$OpenRequest;
+    .param p3, "isPublish"    # Z
 
     .prologue
     .line 317
@@ -746,7 +726,6 @@
 
 .method private static stringArray(Ljava/util/List;)[Ljava/lang/String;
     .locals 4
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -760,7 +739,7 @@
 
     .prologue
     .line 1135
-    .local p0, list:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
+    .local p0, "list":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     if-eqz p0, :cond_1
 
     invoke-interface {p0}, Ljava/util/List;->size()I
@@ -770,31 +749,31 @@
     move v2, v3
 
     .line 1136
-    .local v2, size:I
+    .local v2, "size":I
     :goto_0
     new-array v0, v2, [Ljava/lang/String;
 
     .line 1138
-    .local v0, array:[Ljava/lang/String;
+    .local v0, "array":[Ljava/lang/String;
     if-eqz p0, :cond_0
 
     .line 1139
     const/4 v1, 0x0
 
-    .local v1, i:I
+    .local v1, "i":I
     :goto_1
     array-length v3, v0
 
     if-lt v1, v3, :cond_2
 
     .line 1144
-    .end local v1           #i:I
+    .end local v1    # "i":I
     :cond_0
     return-object v0
 
     .line 1135
-    .end local v0           #array:[Ljava/lang/String;
-    .end local v2           #size:I
+    .end local v0    # "array":[Ljava/lang/String;
+    .end local v2    # "size":I
     :cond_1
     const/4 v3, 0x0
 
@@ -803,9 +782,9 @@
     goto :goto_0
 
     .line 1140
-    .restart local v0       #array:[Ljava/lang/String;
-    .restart local v1       #i:I
-    .restart local v2       #size:I
+    .restart local v0    # "array":[Ljava/lang/String;
+    .restart local v1    # "i":I
+    .restart local v2    # "size":I
     :cond_2
     invoke-interface {p0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -823,7 +802,7 @@
 
 .method private static stringList([Ljava/lang/String;)Ljava/util/List;
     .locals 1
-    .parameter "array"
+    .param p0, "array"    # [Ljava/lang/String;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "([",
@@ -859,8 +838,8 @@
 
 .method private validateAppSignatureForPackage(Landroid/content/Context;Ljava/lang/String;)Z
     .locals 9
-    .parameter "context"
-    .parameter "packageName"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "packageName"    # Ljava/lang/String;
 
     .prologue
     const/4 v8, 0x0
@@ -880,7 +859,7 @@
     move-result-object v1
 
     .line 398
-    .local v1, packageInfo:Landroid/content/pm/PackageInfo;
+    .local v1, "packageInfo":Landroid/content/pm/PackageInfo;
     iget-object v3, v1, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
 
     array-length v4, v3
@@ -893,7 +872,7 @@
     move v3, v8
 
     .line 403
-    .end local v1           #packageInfo:Landroid/content/pm/PackageInfo;
+    .end local v1    # "packageInfo":Landroid/content/pm/PackageInfo;
     :goto_1
     return v3
 
@@ -903,20 +882,20 @@
 
     move-object v0, v3
 
-    .local v0, e:Landroid/content/pm/PackageManager$NameNotFoundException;
+    .local v0, "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     move v3, v8
 
     .line 395
     goto :goto_1
 
     .line 398
-    .end local v0           #e:Landroid/content/pm/PackageManager$NameNotFoundException;
-    .restart local v1       #packageInfo:Landroid/content/pm/PackageInfo;
+    .end local v0    # "e":Landroid/content/pm/PackageManager$NameNotFoundException;
+    .restart local v1    # "packageInfo":Landroid/content/pm/PackageInfo;
     :cond_0
     aget-object v2, v3, v5
 
     .line 399
-    .local v2, signature:Landroid/content/pm/Signature;
+    .local v2, "signature":Landroid/content/pm/Signature;
     invoke-virtual {v2}, Landroid/content/pm/Signature;->toCharsString()Ljava/lang/String;
 
     move-result-object v6
@@ -943,8 +922,8 @@
 
 .method private validateServiceIntent(Landroid/content/Context;Landroid/content/Intent;)Z
     .locals 3
-    .parameter "context"
-    .parameter "intent"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
     const/4 v2, 0x0
@@ -959,7 +938,7 @@
     move-result-object v0
 
     .line 374
-    .local v0, resolveInfo:Landroid/content/pm/ResolveInfo;
+    .local v0, "resolveInfo":Landroid/content/pm/ResolveInfo;
     if-nez v0, :cond_0
 
     move v1, v2
@@ -984,8 +963,8 @@
 # virtual methods
 .method public authorize(Landroid/app/Activity;Lcom/facebook/android/Facebook$DialogListener;)V
     .locals 6
-    .parameter "activity"
-    .parameter "listener"
+    .param p1, "activity"    # Landroid/app/Activity;
+    .param p2, "listener"    # Lcom/facebook/android/Facebook$DialogListener;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -1013,10 +992,10 @@
 
 .method public authorize(Landroid/app/Activity;[Ljava/lang/String;ILcom/facebook/android/Facebook$DialogListener;)V
     .locals 6
-    .parameter "activity"
-    .parameter "permissions"
-    .parameter "activityCode"
-    .parameter "listener"
+    .param p1, "activity"    # Landroid/app/Activity;
+    .param p2, "permissions"    # [Ljava/lang/String;
+    .param p3, "activityCode"    # I
+    .param p4, "listener"    # Lcom/facebook/android/Facebook$DialogListener;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -1028,7 +1007,7 @@
 
     move-object v4, v0
 
-    .local v4, behavior:Lcom/facebook/SessionLoginBehavior;
+    .local v4, "behavior":Lcom/facebook/SessionLoginBehavior;
     :goto_0
     move-object v0, p0
 
@@ -1047,7 +1026,7 @@
     return-void
 
     .line 219
-    .end local v4           #behavior:Lcom/facebook/SessionLoginBehavior;
+    .end local v4    # "behavior":Lcom/facebook/SessionLoginBehavior;
     :cond_0
     sget-object v0, Lcom/facebook/SessionLoginBehavior;->SUPPRESS_SSO:Lcom/facebook/SessionLoginBehavior;
 
@@ -1058,9 +1037,9 @@
 
 .method public authorize(Landroid/app/Activity;[Ljava/lang/String;Lcom/facebook/android/Facebook$DialogListener;)V
     .locals 6
-    .parameter "activity"
-    .parameter "permissions"
-    .parameter "listener"
+    .param p1, "activity"    # Landroid/app/Activity;
+    .param p2, "permissions"    # [Ljava/lang/String;
+    .param p3, "listener"    # Lcom/facebook/android/Facebook$DialogListener;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -1086,9 +1065,9 @@
 
 .method public authorizeCallback(IILandroid/content/Intent;)V
     .locals 3
-    .parameter "requestCode"
-    .parameter "resultCode"
-    .parameter "data"
+    .param p1, "requestCode"    # I
+    .param p2, "resultCode"    # I
+    .param p3, "data"    # Landroid/content/Intent;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -1104,7 +1083,7 @@
     iget-object v0, p0, Lcom/facebook/android/Facebook;->pendingOpeningSession:Lcom/facebook/Session;
 
     .line 426
-    .local v0, pending:Lcom/facebook/Session;
+    .local v0, "pending":Lcom/facebook/Session;
     if-eqz v0, :cond_0
 
     .line 427
@@ -1132,10 +1111,10 @@
 
 .method public dialog(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;Lcom/facebook/android/Facebook$DialogListener;)V
     .locals 2
-    .parameter "context"
-    .parameter "action"
-    .parameter "parameters"
-    .parameter "listener"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "action"    # Ljava/lang/String;
+    .param p3, "parameters"    # Landroid/os/Bundle;
+    .param p4, "listener"    # Lcom/facebook/android/Facebook$DialogListener;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -1238,9 +1217,9 @@
 
 .method public dialog(Landroid/content/Context;Ljava/lang/String;Lcom/facebook/android/Facebook$DialogListener;)V
     .locals 1
-    .parameter "context"
-    .parameter "action"
-    .parameter "listener"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "action"    # Ljava/lang/String;
+    .param p3, "listener"    # Lcom/facebook/android/Facebook$DialogListener;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -1258,8 +1237,8 @@
 
 .method public extendAccessToken(Landroid/content/Context;Lcom/facebook/android/Facebook$ServiceListener;)Z
     .locals 3
-    .parameter "context"
-    .parameter "serviceListener"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "serviceListener"    # Lcom/facebook/android/Facebook$ServiceListener;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -1275,7 +1254,7 @@
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
     .line 461
-    .local v0, intent:Landroid/content/Intent;
+    .local v0, "intent":Landroid/content/Intent;
     const-string v1, "com.facebook.katana"
 
     const-string v2, "com.facebook.katana.platform.TokenRefreshService"
@@ -1314,8 +1293,8 @@
 
 .method public extendAccessTokenIfNeeded(Landroid/content/Context;Lcom/facebook/android/Facebook$ServiceListener;)Z
     .locals 1
-    .parameter "context"
-    .parameter "serviceListener"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "serviceListener"    # Lcom/facebook/android/Facebook$ServiceListener;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -1359,7 +1338,7 @@
     move-result-object v0
 
     .line 1006
-    .local v0, s:Lcom/facebook/Session;
+    .local v0, "s":Lcom/facebook/Session;
     if-eqz v0, :cond_0
 
     .line 1007
@@ -1393,7 +1372,7 @@
     move-result-object v0
 
     .line 990
-    .local v0, s:Lcom/facebook/Session;
+    .local v0, "s":Lcom/facebook/Session;
     if-eqz v0, :cond_0
 
     .line 991
@@ -1450,11 +1429,11 @@
     const/4 v0, 0x0
 
     .line 917
-    .local v0, cachedToken:Ljava/lang/String;
+    .local v0, "cachedToken":Ljava/lang/String;
     const/4 v3, 0x0
 
     .line 919
-    .local v3, oldSession:Lcom/facebook/Session;
+    .local v3, "oldSession":Lcom/facebook/Session;
     iget-object v7, p0, Lcom/facebook/android/Facebook;->lock:Ljava/lang/Object;
 
     monitor-enter v7
@@ -1534,7 +1513,7 @@
     move-result-object v5
 
     .line 947
-    .local v5, permissions:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
+    .local v5, "permissions":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     :goto_1
     new-instance v7, Lcom/facebook/Session$Builder;
 
@@ -1564,7 +1543,7 @@
     move-result-object v2
 
     .line 951
-    .local v2, newSession:Lcom/facebook/Session;
+    .local v2, "newSession":Lcom/facebook/Session;
     invoke-virtual {v2}, Lcom/facebook/Session;->getState()Lcom/facebook/SessionState;
 
     move-result-object v7
@@ -1579,8 +1558,8 @@
     goto :goto_0
 
     .line 941
-    .end local v2           #newSession:Lcom/facebook/Session;
-    .end local v5           #permissions:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
+    .end local v2    # "newSession":Lcom/facebook/Session;
+    .end local v5    # "permissions":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     :cond_5
     iget-object v7, p0, Lcom/facebook/android/Facebook;->pendingAuthorizationPermissions:[Ljava/lang/String;
 
@@ -1594,21 +1573,21 @@
     move-result-object v5
 
     .line 943
-    .restart local v5       #permissions:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
+    .restart local v5    # "permissions":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     goto :goto_1
 
     .line 944
-    .end local v5           #permissions:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
+    .end local v5    # "permissions":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     :cond_6
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object v5
 
-    .restart local v5       #permissions:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
+    .restart local v5    # "permissions":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     goto :goto_1
 
     .line 955
-    .restart local v2       #newSession:Lcom/facebook/Session;
+    .restart local v2    # "newSession":Lcom/facebook/Session;
     :cond_7
     new-instance v7, Lcom/facebook/Session$OpenRequest;
 
@@ -1621,7 +1600,7 @@
     move-result-object v4
 
     .line 956
-    .local v4, openRequest:Lcom/facebook/Session$OpenRequest;
+    .local v4, "openRequest":Lcom/facebook/Session$OpenRequest;
     invoke-interface {v5}, Ljava/util/List;->isEmpty()Z
 
     move-result v7
@@ -1637,11 +1616,11 @@
     const/4 v1, 0x0
 
     .line 959
-    .local v1, invalidatedSession:Lcom/facebook/Session;
+    .local v1, "invalidatedSession":Lcom/facebook/Session;
     const/4 v6, 0x0
 
     .line 961
-    .local v6, returnSession:Lcom/facebook/Session;
+    .local v6, "returnSession":Lcom/facebook/Session;
     iget-object v7, p0, Lcom/facebook/android/Facebook;->lock:Ljava/lang/Object;
 
     monitor-enter v7
@@ -1692,16 +1671,16 @@
     goto/16 :goto_0
 
     .line 956
-    .end local v1           #invalidatedSession:Lcom/facebook/Session;
-    .end local v6           #returnSession:Lcom/facebook/Session;
+    .end local v1    # "invalidatedSession":Lcom/facebook/Session;
+    .end local v6    # "returnSession":Lcom/facebook/Session;
     :cond_b
     const/4 v7, 0x1
 
     goto :goto_2
 
     .line 961
-    .restart local v1       #invalidatedSession:Lcom/facebook/Session;
-    .restart local v6       #returnSession:Lcom/facebook/Session;
+    .restart local v1    # "invalidatedSession":Lcom/facebook/Session;
+    .restart local v6    # "returnSession":Lcom/facebook/Session;
     :catchall_1
     move-exception v8
 
@@ -1778,7 +1757,7 @@
 
 .method public logout(Landroid/content/Context;)Ljava/lang/String;
     .locals 1
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/net/MalformedURLException;,
@@ -1800,7 +1779,7 @@
 
 .method logoutImpl(Landroid/content/Context;)Ljava/lang/String;
     .locals 8
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/net/MalformedURLException;,
@@ -1820,7 +1799,7 @@
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     .line 648
-    .local v0, b:Landroid/os/Bundle;
+    .local v0, "b":Landroid/os/Bundle;
     const-string v5, "method"
 
     const-string v6, "auth.expireSession"
@@ -1833,17 +1812,17 @@
     move-result-object v3
 
     .line 651
-    .local v3, response:Ljava/lang/String;
+    .local v3, "response":Ljava/lang/String;
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v1
 
     .line 652
-    .local v1, currentTimeMillis:J
+    .local v1, "currentTimeMillis":J
     const/4 v4, 0x0
 
     .line 654
-    .local v4, sessionToClose:Lcom/facebook/Session;
+    .local v4, "sessionToClose":Lcom/facebook/Session;
     iget-object v5, p0, Lcom/facebook/android/Facebook;->lock:Ljava/lang/Object;
 
     monitor-enter v5
@@ -1904,7 +1883,7 @@
 
 .method public publishInstall(Landroid/content/Context;)Z
     .locals 1
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -1922,7 +1901,7 @@
 
 .method public request(Landroid/os/Bundle;)Ljava/lang/String;
     .locals 2
-    .parameter "parameters"
+    .param p1, "parameters"    # Landroid/os/Bundle;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/net/MalformedURLException;,
@@ -1967,7 +1946,7 @@
 
 .method public request(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
-    .parameter "graphPath"
+    .param p1, "graphPath"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/net/MalformedURLException;,
@@ -1995,8 +1974,8 @@
 
 .method public request(Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/String;
     .locals 1
-    .parameter "graphPath"
-    .parameter "parameters"
+    .param p1, "graphPath"    # Ljava/lang/String;
+    .param p2, "parameters"    # Landroid/os/Bundle;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/net/MalformedURLException;,
@@ -2020,9 +1999,9 @@
 
 .method public request(Ljava/lang/String;Landroid/os/Bundle;Ljava/lang/String;)Ljava/lang/String;
     .locals 1
-    .parameter "graphPath"
-    .parameter "params"
-    .parameter "httpMethod"
+    .param p1, "graphPath"    # Ljava/lang/String;
+    .param p2, "params"    # Landroid/os/Bundle;
+    .param p3, "httpMethod"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/FileNotFoundException;,
@@ -2045,9 +2024,9 @@
 
 .method requestImpl(Ljava/lang/String;Landroid/os/Bundle;Ljava/lang/String;)Ljava/lang/String;
     .locals 3
-    .parameter "graphPath"
-    .parameter "params"
-    .parameter "httpMethod"
+    .param p1, "graphPath"    # Ljava/lang/String;
+    .param p2, "params"    # Landroid/os/Bundle;
+    .param p3, "httpMethod"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/FileNotFoundException;,
@@ -2105,7 +2084,7 @@
     move-object v0, v1
 
     .line 804
-    .local v0, url:Ljava/lang/String;
+    .local v0, "url":Ljava/lang/String;
     :goto_0
     invoke-static {v0, p3, p2}, Lcom/facebook/android/Util;->openUrl(Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/String;
 
@@ -2114,7 +2093,7 @@
     return-object v1
 
     .line 803
-    .end local v0           #url:Ljava/lang/String;
+    .end local v0    # "url":Ljava/lang/String;
     :cond_1
     sget-object v1, Lcom/facebook/android/Facebook;->RESTSERVER_URL:Ljava/lang/String;
 
@@ -2125,7 +2104,7 @@
 
 .method public setAccessExpires(J)V
     .locals 3
-    .parameter "timestampInMsec"
+    .param p1, "timestampInMsec"    # J
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -2175,7 +2154,7 @@
 
 .method public setAccessExpiresIn(Ljava/lang/String;)V
     .locals 8
-    .parameter "expiresInSecsFromNow"
+    .param p1, "expiresInSecsFromNow"    # Ljava/lang/String;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -2202,12 +2181,12 @@
     move-wide v0, v2
 
     .line 1097
-    .local v0, expires:J
+    .local v0, "expires":J
     :goto_0
     invoke-virtual {p0, v0, v1}, Lcom/facebook/android/Facebook;->setAccessExpires(J)V
 
     .line 1099
-    .end local v0           #expires:J
+    .end local v0    # "expires":J
     :cond_0
     return-void
 
@@ -2235,7 +2214,7 @@
 
 .method public setAccessToken(Ljava/lang/String;)V
     .locals 3
-    .parameter "token"
+    .param p1, "token"    # Ljava/lang/String;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -2285,7 +2264,7 @@
 
 .method public setAppId(Ljava/lang/String;)V
     .locals 2
-    .parameter "appId"
+    .param p1, "appId"    # Ljava/lang/String;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -2328,7 +2307,7 @@
 
 .method public setSession(Lcom/facebook/Session;)V
     .locals 2
-    .parameter "session"
+    .param p1, "session"    # Lcom/facebook/Session;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -2374,7 +2353,7 @@
 
 .method public setShouldAutoPublishInstall(Z)V
     .locals 0
-    .parameter "value"
+    .param p1, "value"    # Z
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -2388,9 +2367,9 @@
 
 .method public setTokenFromCache(Ljava/lang/String;JJ)V
     .locals 2
-    .parameter "accessToken"
-    .parameter "accessExpires"
-    .parameter "lastAccessUpdate"
+    .param p1, "accessToken"    # Ljava/lang/String;
+    .param p2, "accessExpires"    # J
+    .param p4, "lastAccessUpdate"    # J
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 

@@ -17,8 +17,8 @@
 
 .method public static deviceCanHandleIntent(Landroid/content/Context;Landroid/content/Intent;)Z
     .locals 4
-    .parameter "context"
-    .parameter "intent"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "intent"    # Landroid/content/Intent;
 
     .prologue
     const/4 v3, 0x0
@@ -29,13 +29,13 @@
     move-result-object v1
 
     .line 69
-    .local v1, packageManager:Landroid/content/pm/PackageManager;
+    .local v1, "packageManager":Landroid/content/pm/PackageManager;
     invoke-virtual {v1, p1, v3}, Landroid/content/pm/PackageManager;->queryIntentActivities(Landroid/content/Intent;I)Ljava/util/List;
 
     move-result-object v0
 
     .line 70
-    .local v0, activities:Ljava/util/List;,"Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
+    .local v0, "activities":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v2
@@ -55,7 +55,7 @@
 
 .method public static sha1(Ljava/lang/String;)Ljava/lang/String;
     .locals 8
-    .parameter "s"
+    .param p0, "s"    # Ljava/lang/String;
 
     .prologue
     const-string v7, ""
@@ -69,7 +69,7 @@
     move-result-object v0
 
     .line 51
-    .local v0, digest:Ljava/security/MessageDigest;
+    .local v0, "digest":Ljava/security/MessageDigest;
     invoke-virtual {p0}, Ljava/lang/String;->getBytes()[B
 
     move-result-object v5
@@ -82,16 +82,16 @@
     move-result-object v4
 
     .line 54
-    .local v4, messageDigest:[B
+    .local v4, "messageDigest":[B
     new-instance v2, Ljava/lang/StringBuffer;
 
     invoke-direct {v2}, Ljava/lang/StringBuffer;-><init>()V
 
     .line 55
-    .local v2, hexString:Ljava/lang/StringBuffer;
+    .local v2, "hexString":Ljava/lang/StringBuffer;
     const/4 v3, 0x0
 
-    .local v3, i:I
+    .local v3, "i":I
     :goto_0
     array-length v5, v4
 
@@ -103,18 +103,18 @@
     move-result-object v5
 
     .line 63
-    .end local v0           #digest:Ljava/security/MessageDigest;
-    .end local v2           #hexString:Ljava/lang/StringBuffer;
-    .end local v3           #i:I
-    .end local v4           #messageDigest:[B
+    .end local v0    # "digest":Ljava/security/MessageDigest;
+    .end local v2    # "hexString":Ljava/lang/StringBuffer;
+    .end local v3    # "i":I
+    .end local v4    # "messageDigest":[B
     :goto_1
     return-object v5
 
     .line 56
-    .restart local v0       #digest:Ljava/security/MessageDigest;
-    .restart local v2       #hexString:Ljava/lang/StringBuffer;
-    .restart local v3       #i:I
-    .restart local v4       #messageDigest:[B
+    .restart local v0    # "digest":Ljava/security/MessageDigest;
+    .restart local v2    # "hexString":Ljava/lang/StringBuffer;
+    .restart local v3    # "i":I
+    .restart local v4    # "messageDigest":[B
     :cond_0
     aget-byte v5, v4, v3
 
@@ -143,17 +143,17 @@
     goto :goto_0
 
     .line 59
-    .end local v0           #digest:Ljava/security/MessageDigest;
-    .end local v2           #hexString:Ljava/lang/StringBuffer;
-    .end local v3           #i:I
-    .end local v4           #messageDigest:[B
+    .end local v0    # "digest":Ljava/security/MessageDigest;
+    .end local v2    # "hexString":Ljava/lang/StringBuffer;
+    .end local v3    # "i":I
+    .end local v4    # "messageDigest":[B
     :catch_0
     move-exception v5
 
     move-object v1, v5
 
     .line 60
-    .local v1, e:Ljava/security/NoSuchAlgorithmException;
+    .local v1, "e":Ljava/security/NoSuchAlgorithmException;
     const-string v5, ""
 
     move-object v5, v7
@@ -161,14 +161,14 @@
     goto :goto_1
 
     .line 62
-    .end local v1           #e:Ljava/security/NoSuchAlgorithmException;
+    .end local v1    # "e":Ljava/security/NoSuchAlgorithmException;
     :catch_1
     move-exception v5
 
     move-object v1, v5
 
     .line 63
-    .local v1, e:Ljava/lang/NullPointerException;
+    .local v1, "e":Ljava/lang/NullPointerException;
     const-string v5, ""
 
     move-object v5, v7

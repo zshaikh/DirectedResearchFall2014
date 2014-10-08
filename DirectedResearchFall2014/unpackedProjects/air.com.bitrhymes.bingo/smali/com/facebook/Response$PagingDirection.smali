@@ -80,8 +80,6 @@
 
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 172
@@ -92,7 +90,6 @@
 
 .method public static valueOf(Ljava/lang/String;)Lcom/facebook/Response$PagingDirection;
     .locals 1
-    .parameter
 
     .prologue
     .line 1

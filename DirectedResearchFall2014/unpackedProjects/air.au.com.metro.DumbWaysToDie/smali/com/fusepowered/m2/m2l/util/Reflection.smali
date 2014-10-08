@@ -24,9 +24,8 @@
 
 .method public static varargs getDeclaredMethodWithTraversal(Ljava/lang/Class;Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
     .locals 4
-    .parameter
-    .parameter "methodName"
-    .parameter "parameterTypes"
+    .param p1, "methodName"    # Ljava/lang/String;
+    .param p2, "parameterTypes"    # [Ljava/lang/Class;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -48,11 +47,11 @@
 
     .prologue
     .line 88
-    .local p0, clazz:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p0, "clazz":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     move-object v0, p0
 
     .line 90
-    .local v0, currentClass:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local v0, "currentClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     :goto_0
     if-nez v0, :cond_0
 
@@ -73,16 +72,16 @@
     move-result-object v2
 
     .line 93
-    .local v2, method:Ljava/lang/reflect/Method;
+    .local v2, "method":Ljava/lang/reflect/Method;
     return-object v2
 
     .line 94
-    .end local v2           #method:Ljava/lang/reflect/Method;
+    .end local v2    # "method":Ljava/lang/reflect/Method;
     :catch_0
     move-exception v1
 
     .line 95
-    .local v1, e:Ljava/lang/NoSuchMethodException;
+    .local v1, "e":Ljava/lang/NoSuchMethodException;
     invoke-virtual {v0}, Ljava/lang/Class;->getSuperclass()Ljava/lang/Class;
 
     move-result-object v0

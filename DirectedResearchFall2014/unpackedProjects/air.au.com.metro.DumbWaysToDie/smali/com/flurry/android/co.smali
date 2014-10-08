@@ -23,7 +23,6 @@
 # direct methods
 .method constructor <init>(Lcom/flurry/android/FlurryAds;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 2218
@@ -73,8 +72,8 @@
 
     invoke-direct {v1, v0}, Ljava/io/DataInputStream;-><init>(Ljava/io/InputStream;)V
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     .line 2233
     :try_start_2
@@ -82,8 +81,8 @@
 
     invoke-virtual {v0, v1}, Lcom/flurry/android/FlurryAds;->c(Ljava/io/DataInputStream;)V
     :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
     .catch Ljava/lang/Throwable; {:try_start_2 .. :try_end_2} :catch_3
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
     .line 2241
     :try_start_3
@@ -222,7 +221,6 @@
 # virtual methods
 .method protected final bridge synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
-    .parameter
 
     .prologue
     .line 2218

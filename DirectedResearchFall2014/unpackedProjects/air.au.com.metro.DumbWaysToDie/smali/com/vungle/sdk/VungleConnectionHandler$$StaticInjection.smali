@@ -52,7 +52,6 @@
 
 .method public final a(Lcom/vungle/sdk/av;)V
     .locals 3
-    .parameter
 
     .prologue
     .line 21

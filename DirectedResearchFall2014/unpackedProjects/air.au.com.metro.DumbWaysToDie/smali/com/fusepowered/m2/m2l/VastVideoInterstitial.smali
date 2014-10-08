@@ -3,8 +3,8 @@
 .source "VastVideoInterstitial.java"
 
 # interfaces
-.implements Lcom/fusepowered/m2/m2l/util/vast/VastManager$VastManagerListener;
 .implements Lcom/fusepowered/m2/m2l/VastVideoDownloadTask$OnDownloadCompleteListener;
+.implements Lcom/fusepowered/m2/m2l/util/vast/VastManager$VastManagerListener;
 
 
 # static fields
@@ -121,7 +121,6 @@
 # virtual methods
 .method protected extractExtras(Ljava/util/Map;)V
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -135,7 +134,7 @@
 
     .prologue
     .line 64
-    .local p1, serverExtras:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p1, "serverExtras":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v0, "Html-Response-Body"
 
     invoke-interface {p1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -180,7 +179,7 @@
 
 .method public onComplete(Lcom/fusepowered/m2/m2l/util/vast/VastManager;)V
     .locals 5
-    .parameter "vastManager"
+    .param p1, "vastManager"    # Lcom/fusepowered/m2/m2l/util/vast/VastManager;
 
     .prologue
     .line 115
@@ -200,7 +199,7 @@
     move-result-object v0
 
     .line 118
-    .local v0, uri:Landroid/net/Uri;
+    .local v0, "uri":Landroid/net/Uri;
     if-eqz v0, :cond_0
 
     .line 119
@@ -390,7 +389,7 @@
 
 .method protected preRenderHtml(Lcom/fusepowered/m2/m2l/CustomEventInterstitial$CustomEventInterstitialListener;)V
     .locals 5
-    .parameter "customEventInterstitialListener"
+    .param p1, "customEventInterstitialListener"    # Lcom/fusepowered/m2/m2l/CustomEventInterstitial$CustomEventInterstitialListener;
 
     .prologue
     .line 69
@@ -443,7 +442,7 @@
     move-object v0, v1
 
     .line 75
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v1, "MoPub"
 
     const-string v2, "Unable to create VAST video cache."
@@ -462,7 +461,7 @@
 
 .method setVastManager(Lcom/fusepowered/m2/m2l/util/vast/VastManager;)V
     .locals 0
-    .parameter "vastManager"
+    .param p1, "vastManager"    # Lcom/fusepowered/m2/m2l/util/vast/VastManager;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 

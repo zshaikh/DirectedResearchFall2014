@@ -64,7 +64,7 @@
     move-result v0
 
     .line 251
-    .local v0, dir:I
+    .local v0, "dir":I
     if-ne v0, v2, :cond_0
 
     move v1, v2

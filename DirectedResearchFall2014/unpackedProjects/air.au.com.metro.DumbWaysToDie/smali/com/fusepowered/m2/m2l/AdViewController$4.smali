@@ -26,8 +26,6 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m2/m2l/AdViewController;Landroid/view/View;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 1
@@ -55,7 +53,7 @@
     move-result-object v0
 
     .line 451
-    .local v0, moPubView:Lcom/fusepowered/m2/m2l/MoPubView;
+    .local v0, "moPubView":Lcom/fusepowered/m2/m2l/MoPubView;
     if-nez v0, :cond_0
 
     .line 456
@@ -73,7 +71,7 @@
 
     iget-object v3, p0, Lcom/fusepowered/m2/m2l/AdViewController$4;->val$view:Landroid/view/View;
 
-    #calls: Lcom/fusepowered/m2/m2l/AdViewController;->getAdLayoutParams(Landroid/view/View;)Landroid/widget/FrameLayout$LayoutParams;
+    # invokes: Lcom/fusepowered/m2/m2l/AdViewController;->getAdLayoutParams(Landroid/view/View;)Landroid/widget/FrameLayout$LayoutParams;
     invoke-static {v2, v3}, Lcom/fusepowered/m2/m2l/AdViewController;->access$1(Lcom/fusepowered/m2/m2l/AdViewController;Landroid/view/View;)Landroid/widget/FrameLayout$LayoutParams;
 
     move-result-object v2

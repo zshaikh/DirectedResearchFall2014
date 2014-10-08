@@ -16,8 +16,8 @@
 
 .method public static dipToPixels(Landroid/content/Context;F)F
     .locals 2
-    .parameter "context"
-    .parameter "dips"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "dips"    # F
 
     .prologue
     .line 9
@@ -30,7 +30,7 @@
     move-result-object v0
 
     .line 10
-    .local v0, dm:Landroid/util/DisplayMetrics;
+    .local v0, "dm":Landroid/util/DisplayMetrics;
     iget v1, v0, Landroid/util/DisplayMetrics;->density:F
 
     mul-float/2addr v1, p1

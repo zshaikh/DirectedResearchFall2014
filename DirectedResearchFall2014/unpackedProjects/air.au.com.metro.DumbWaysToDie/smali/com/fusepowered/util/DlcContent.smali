@@ -37,15 +37,15 @@
 
 .method public constructor <init>(IIILjava/lang/String;Ljava/lang/String;IZLjava/lang/String;Z)V
     .locals 0
-    .parameter "id"
-    .parameter "parentId"
-    .parameter "contentId"
-    .parameter "downloadPath"
-    .parameter "md5"
-    .parameter "bytes"
-    .parameter "purchased"
-    .parameter "productId"
-    .parameter "autoDownload"
+    .param p1, "id"    # I
+    .param p2, "parentId"    # I
+    .param p3, "contentId"    # I
+    .param p4, "downloadPath"    # Ljava/lang/String;
+    .param p5, "md5"    # Ljava/lang/String;
+    .param p6, "bytes"    # I
+    .param p7, "purchased"    # Z
+    .param p8, "productId"    # Ljava/lang/String;
+    .param p9, "autoDownload"    # Z
 
     .prologue
     .line 20
@@ -176,7 +176,7 @@
 
 .method public setAutoDownload(Z)V
     .locals 0
-    .parameter "autoDownload"
+    .param p1, "autoDownload"    # Z
 
     .prologue
     .line 91
@@ -188,7 +188,7 @@
 
 .method public setBytes(I)V
     .locals 0
-    .parameter "bytes"
+    .param p1, "bytes"    # I
 
     .prologue
     .line 68
@@ -200,7 +200,7 @@
 
 .method public setContentId(I)V
     .locals 0
-    .parameter "contentId"
+    .param p1, "contentId"    # I
 
     .prologue
     .line 50
@@ -212,7 +212,7 @@
 
 .method public setDownloadPath(Ljava/lang/String;)V
     .locals 0
-    .parameter "downloadPath"
+    .param p1, "downloadPath"    # Ljava/lang/String;
 
     .prologue
     .line 56
@@ -224,7 +224,7 @@
 
 .method public setId(I)V
     .locals 0
-    .parameter "id"
+    .param p1, "id"    # I
 
     .prologue
     .line 38
@@ -236,7 +236,7 @@
 
 .method public setMd5(Ljava/lang/String;)V
     .locals 0
-    .parameter "md5"
+    .param p1, "md5"    # Ljava/lang/String;
 
     .prologue
     .line 62
@@ -248,7 +248,7 @@
 
 .method public setParentId(I)V
     .locals 0
-    .parameter "parentId"
+    .param p1, "parentId"    # I
 
     .prologue
     .line 44
@@ -260,7 +260,7 @@
 
 .method public setProductId(Ljava/lang/String;)V
     .locals 0
-    .parameter "productId"
+    .param p1, "productId"    # Ljava/lang/String;
 
     .prologue
     .line 82
@@ -272,7 +272,7 @@
 
 .method public setPurchased(Z)V
     .locals 0
-    .parameter "purchased"
+    .param p1, "purchased"    # Z
 
     .prologue
     .line 74
@@ -402,7 +402,7 @@
     move-result-object v0
 
     .line 106
-    .local v0, buf:Ljava/lang/StringBuilder;
+    .local v0, "buf":Ljava/lang/StringBuilder;
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1

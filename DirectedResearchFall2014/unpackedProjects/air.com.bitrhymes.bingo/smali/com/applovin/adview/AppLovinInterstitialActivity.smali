@@ -233,7 +233,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    const/high16 v1, -0x4500
+    const/high16 v1, -0x45000000
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->setBackgroundColor(I)V
 

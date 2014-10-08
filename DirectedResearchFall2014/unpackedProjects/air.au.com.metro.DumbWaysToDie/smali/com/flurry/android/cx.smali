@@ -16,8 +16,6 @@
 
 .method static a(Lcom/flurry/android/FlurryAds;Ljava/lang/String;)Lcom/flurry/android/cz;
     .locals 3
-    .parameter
-    .parameter
 
     .prologue
     .line 16
@@ -40,7 +38,6 @@
 
 .method static b(Lcom/flurry/android/AdSpaceLayout;)Lcom/flurry/android/AdCreative;
     .locals 6
-    .parameter
 
     .prologue
     .line 24

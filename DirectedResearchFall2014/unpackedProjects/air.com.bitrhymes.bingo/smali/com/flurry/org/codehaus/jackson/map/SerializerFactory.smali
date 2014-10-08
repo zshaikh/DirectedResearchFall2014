@@ -71,8 +71,8 @@
 
 .method public final createSerializer(Lcom/flurry/org/codehaus/jackson/type/JavaType;Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;)Lcom/flurry/org/codehaus/jackson/map/JsonSerializer;
     .locals 2
-    .parameter "type"
-    .parameter "config"
+    .param p1, "type"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .param p2, "config"    # Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -107,7 +107,7 @@
     move-exception v0
 
     .line 178
-    .local v0, e:Lcom/flurry/org/codehaus/jackson/map/JsonMappingException;
+    .local v0, "e":Lcom/flurry/org/codehaus/jackson/map/JsonMappingException;
     new-instance v1, Lcom/flurry/org/codehaus/jackson/map/RuntimeJsonMappingException;
 
     invoke-direct {v1, v0}, Lcom/flurry/org/codehaus/jackson/map/RuntimeJsonMappingException;-><init>(Lcom/flurry/org/codehaus/jackson/map/JsonMappingException;)V
@@ -125,8 +125,8 @@
 
 .method public final createTypeSerializer(Lcom/flurry/org/codehaus/jackson/type/JavaType;Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;)Lcom/flurry/org/codehaus/jackson/map/TypeSerializer;
     .locals 2
-    .parameter "baseType"
-    .parameter "config"
+    .param p1, "baseType"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .param p2, "config"    # Lcom/flurry/org/codehaus/jackson/map/SerializationConfig;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -148,7 +148,7 @@
     move-exception v0
 
     .line 195
-    .local v0, e:Lcom/flurry/org/codehaus/jackson/map/JsonMappingException;
+    .local v0, "e":Lcom/flurry/org/codehaus/jackson/map/JsonMappingException;
     new-instance v1, Ljava/lang/RuntimeException;
 
     invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
@@ -161,7 +161,7 @@
 
 .method public final withAdditionalKeySerializers(Lcom/flurry/org/codehaus/jackson/map/Serializers;)Lcom/flurry/org/codehaus/jackson/map/SerializerFactory;
     .locals 1
-    .parameter "additional"
+    .param p1, "additional"    # Lcom/flurry/org/codehaus/jackson/map/Serializers;
 
     .prologue
     .line 97
@@ -182,7 +182,7 @@
 
 .method public final withAdditionalSerializers(Lcom/flurry/org/codehaus/jackson/map/Serializers;)Lcom/flurry/org/codehaus/jackson/map/SerializerFactory;
     .locals 1
-    .parameter "additional"
+    .param p1, "additional"    # Lcom/flurry/org/codehaus/jackson/map/Serializers;
 
     .prologue
     .line 90
@@ -206,7 +206,7 @@
 
 .method public final withSerializerModifier(Lcom/flurry/org/codehaus/jackson/map/ser/BeanSerializerModifier;)Lcom/flurry/org/codehaus/jackson/map/SerializerFactory;
     .locals 1
-    .parameter "modifier"
+    .param p1, "modifier"    # Lcom/flurry/org/codehaus/jackson/map/ser/BeanSerializerModifier;
 
     .prologue
     .line 110

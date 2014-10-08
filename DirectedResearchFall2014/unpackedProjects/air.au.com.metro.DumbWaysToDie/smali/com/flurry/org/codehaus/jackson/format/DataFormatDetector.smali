@@ -20,7 +20,6 @@
 # direct methods
 .method public constructor <init>(Ljava/util/Collection;)V
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -33,7 +32,7 @@
 
     .prologue
     .line 65
-    .local p1, detectors:Ljava/util/Collection;,"Ljava/util/Collection<Lcom/flurry/org/codehaus/jackson/JsonFactory;>;"
+    .local p1, "detectors":Ljava/util/Collection;, "Ljava/util/Collection<Lcom/flurry/org/codehaus/jackson/JsonFactory;>;"
     invoke-interface {p1}, Ljava/util/Collection;->size()I
 
     move-result v0
@@ -54,7 +53,7 @@
 
 .method public varargs constructor <init>([Lcom/flurry/org/codehaus/jackson/JsonFactory;)V
     .locals 3
-    .parameter "detectors"
+    .param p1, "detectors"    # [Lcom/flurry/org/codehaus/jackson/JsonFactory;
 
     .prologue
     .line 60
@@ -72,10 +71,10 @@
 
 .method private constructor <init>([Lcom/flurry/org/codehaus/jackson/JsonFactory;Lcom/flurry/org/codehaus/jackson/format/MatchStrength;Lcom/flurry/org/codehaus/jackson/format/MatchStrength;I)V
     .locals 0
-    .parameter "detectors"
-    .parameter "optMatch"
-    .parameter "minMatch"
-    .parameter "maxInputLookahead"
+    .param p1, "detectors"    # [Lcom/flurry/org/codehaus/jackson/JsonFactory;
+    .param p2, "optMatch"    # Lcom/flurry/org/codehaus/jackson/format/MatchStrength;
+    .param p3, "minMatch"    # Lcom/flurry/org/codehaus/jackson/format/MatchStrength;
+    .param p4, "maxInputLookahead"    # I
 
     .prologue
     .line 106
@@ -99,7 +98,7 @@
 
 .method private _findFormat(Lcom/flurry/org/codehaus/jackson/format/InputAccessor$Std;)Lcom/flurry/org/codehaus/jackson/format/DataFormatMatcher;
     .locals 9
-    .parameter "acc"
+    .param p1, "acc"    # Lcom/flurry/org/codehaus/jackson/format/InputAccessor$Std;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -111,27 +110,27 @@
     const/4 v1, 0x0
 
     .line 153
-    .local v1, bestMatch:Lcom/flurry/org/codehaus/jackson/JsonFactory;
+    .local v1, "bestMatch":Lcom/flurry/org/codehaus/jackson/JsonFactory;
     const/4 v2, 0x0
 
     .line 154
-    .local v2, bestMatchStrength:Lcom/flurry/org/codehaus/jackson/format/MatchStrength;
+    .local v2, "bestMatchStrength":Lcom/flurry/org/codehaus/jackson/format/MatchStrength;
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/format/DataFormatDetector;->_detectors:[Lcom/flurry/org/codehaus/jackson/JsonFactory;
 
-    .local v0, arr$:[Lcom/flurry/org/codehaus/jackson/JsonFactory;
+    .local v0, "arr$":[Lcom/flurry/org/codehaus/jackson/JsonFactory;
     array-length v5, v0
 
-    .local v5, len$:I
+    .local v5, "len$":I
     const/4 v4, 0x0
 
-    .local v4, i$:I
+    .local v4, "i$":I
     :goto_0
     if-ge v4, v5, :cond_3
 
     aget-object v3, v0, v4
 
     .line 155
-    .local v3, f:Lcom/flurry/org/codehaus/jackson/JsonFactory;
+    .local v3, "f":Lcom/flurry/org/codehaus/jackson/JsonFactory;
     invoke-virtual {p1}, Lcom/flurry/org/codehaus/jackson/format/InputAccessor$Std;->reset()V
 
     .line 156
@@ -140,7 +139,7 @@
     move-result-object v6
 
     .line 158
-    .local v6, strength:Lcom/flurry/org/codehaus/jackson/format/MatchStrength;
+    .local v6, "strength":Lcom/flurry/org/codehaus/jackson/format/MatchStrength;
     if-eqz v6, :cond_0
 
     invoke-virtual {v6}, Lcom/flurry/org/codehaus/jackson/format/MatchStrength;->ordinal()I
@@ -197,8 +196,8 @@
     if-lt v7, v8, :cond_0
 
     .line 174
-    .end local v3           #f:Lcom/flurry/org/codehaus/jackson/JsonFactory;
-    .end local v6           #strength:Lcom/flurry/org/codehaus/jackson/format/MatchStrength;
+    .end local v3    # "f":Lcom/flurry/org/codehaus/jackson/JsonFactory;
+    .end local v6    # "strength":Lcom/flurry/org/codehaus/jackson/format/MatchStrength;
     :cond_3
     invoke-virtual {p1, v1, v2}, Lcom/flurry/org/codehaus/jackson/format/InputAccessor$Std;->createMatcher(Lcom/flurry/org/codehaus/jackson/JsonFactory;Lcom/flurry/org/codehaus/jackson/format/MatchStrength;)Lcom/flurry/org/codehaus/jackson/format/DataFormatMatcher;
 
@@ -211,7 +210,7 @@
 # virtual methods
 .method public findFormat(Ljava/io/InputStream;)Lcom/flurry/org/codehaus/jackson/format/DataFormatMatcher;
     .locals 2
-    .parameter "in"
+    .param p1, "in"    # Ljava/io/InputStream;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -237,7 +236,7 @@
 
 .method public findFormat([B)Lcom/flurry/org/codehaus/jackson/format/DataFormatMatcher;
     .locals 1
-    .parameter "fullInputData"
+    .param p1, "fullInputData"    # [B
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -259,7 +258,7 @@
 
 .method public withMaxInputLookahead(I)Lcom/flurry/org/codehaus/jackson/format/DataFormatDetector;
     .locals 4
-    .parameter "lookaheadBytes"
+    .param p1, "lookaheadBytes"    # I
 
     .prologue
     .line 97
@@ -289,7 +288,7 @@
 
 .method public withMinimalMatch(Lcom/flurry/org/codehaus/jackson/format/MatchStrength;)Lcom/flurry/org/codehaus/jackson/format/DataFormatDetector;
     .locals 4
-    .parameter "minMatch"
+    .param p1, "minMatch"    # Lcom/flurry/org/codehaus/jackson/format/MatchStrength;
 
     .prologue
     .line 85
@@ -319,7 +318,7 @@
 
 .method public withOptimalMatch(Lcom/flurry/org/codehaus/jackson/format/MatchStrength;)Lcom/flurry/org/codehaus/jackson/format/DataFormatDetector;
     .locals 4
-    .parameter "optMatch"
+    .param p1, "optMatch"    # Lcom/flurry/org/codehaus/jackson/format/MatchStrength;
 
     .prologue
     .line 74

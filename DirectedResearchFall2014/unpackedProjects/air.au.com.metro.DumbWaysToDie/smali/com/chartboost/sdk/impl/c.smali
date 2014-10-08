@@ -21,7 +21,6 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 2
-    .parameter
 
     .prologue
     const/4 v1, 0x0
@@ -54,8 +53,6 @@
 
 .method private a(Landroid/graphics/Canvas;Landroid/graphics/RectF;)V
     .locals 9
-    .parameter
-    .parameter
 
     .prologue
     const v3, 0x3dcccccd
@@ -163,11 +160,9 @@
 
 .method private b(Landroid/graphics/Canvas;Landroid/graphics/RectF;)V
     .locals 7
-    .parameter
-    .parameter
 
     .prologue
-    const/high16 v6, 0x3f80
+    const/high16 v6, 0x3f800000
 
     .line 70
     iget-object v0, p0, Lcom/chartboost/sdk/impl/c;->c:Landroid/graphics/Paint;
@@ -252,7 +247,7 @@
 # virtual methods
 .method protected onDraw(Landroid/graphics/Canvas;)V
     .locals 4
-    .parameter "canvas"
+    .param p1, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
     const/4 v3, 0x0

@@ -39,7 +39,6 @@
 
 .method public constructor <init>(Ljava/util/Map;)V
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -53,7 +52,7 @@
 
     .prologue
     .line 48
-    .local p1, mapping:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/map/ser/BeanPropertyFilter;>;"
+    .local p1, "mapping":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/map/ser/BeanPropertyFilter;>;"
     invoke-direct {p0}, Lcom/flurry/org/codehaus/jackson/map/ser/FilterProvider;-><init>()V
 
     .line 33
@@ -72,8 +71,8 @@
 # virtual methods
 .method public addFilter(Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/map/ser/BeanPropertyFilter;)Lcom/flurry/org/codehaus/jackson/map/ser/impl/SimpleFilterProvider;
     .locals 1
-    .parameter "id"
-    .parameter "filter"
+    .param p1, "id"    # Ljava/lang/String;
+    .param p2, "filter"    # Lcom/flurry/org/codehaus/jackson/map/ser/BeanPropertyFilter;
 
     .prologue
     .line 87
@@ -87,7 +86,7 @@
 
 .method public findFilter(Ljava/lang/Object;)Lcom/flurry/org/codehaus/jackson/map/ser/BeanPropertyFilter;
     .locals 4
-    .parameter "filterId"
+    .param p1, "filterId"    # Ljava/lang/Object;
 
     .prologue
     .line 104
@@ -100,7 +99,7 @@
     check-cast v0, Lcom/flurry/org/codehaus/jackson/map/ser/BeanPropertyFilter;
 
     .line 105
-    .local v0, f:Lcom/flurry/org/codehaus/jackson/map/ser/BeanPropertyFilter;
+    .local v0, "f":Lcom/flurry/org/codehaus/jackson/map/ser/BeanPropertyFilter;
     if-nez v0, :cond_0
 
     .line 106
@@ -179,7 +178,7 @@
 
 .method public removeFilter(Ljava/lang/String;)Lcom/flurry/org/codehaus/jackson/map/ser/BeanPropertyFilter;
     .locals 1
-    .parameter "id"
+    .param p1, "id"    # Ljava/lang/String;
 
     .prologue
     .line 92
@@ -189,7 +188,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/flurry/org/codehaus/jackson/map/ser/impl/SimpleFilterProvider;
     check-cast p0, Lcom/flurry/org/codehaus/jackson/map/ser/BeanPropertyFilter;
 
     return-object p0
@@ -197,7 +196,7 @@
 
 .method public setDefaultFilter(Lcom/flurry/org/codehaus/jackson/map/ser/BeanPropertyFilter;)Lcom/flurry/org/codehaus/jackson/map/ser/impl/SimpleFilterProvider;
     .locals 0
-    .parameter "f"
+    .param p1, "f"    # Lcom/flurry/org/codehaus/jackson/map/ser/BeanPropertyFilter;
 
     .prologue
     .line 60
@@ -209,7 +208,7 @@
 
 .method public setFailOnUnknownId(Z)Lcom/flurry/org/codehaus/jackson/map/ser/impl/SimpleFilterProvider;
     .locals 0
-    .parameter "state"
+    .param p1, "state"    # Z
 
     .prologue
     .line 75

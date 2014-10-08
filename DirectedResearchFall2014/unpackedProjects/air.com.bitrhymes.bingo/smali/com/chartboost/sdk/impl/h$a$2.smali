@@ -26,8 +26,6 @@
 # direct methods
 .method constructor <init>(Lcom/chartboost/sdk/impl/h$a;Lcom/chartboost/sdk/Libraries/CBOrientation$Difference;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 1

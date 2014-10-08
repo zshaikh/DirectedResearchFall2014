@@ -25,7 +25,7 @@
 # direct methods
 .method public constructor <init>(Ljava/lang/reflect/Type;)V
     .locals 3
-    .parameter "type"
+    .param p1, "type"    # Ljava/lang/reflect/Type;
 
     .prologue
     .line 31
@@ -42,7 +42,7 @@
     .line 34
     check-cast p1, Ljava/lang/Class;
 
-    .end local p1
+    .end local p1    # "type":Ljava/lang/reflect/Type;
     iput-object p1, p0, Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;->_rawClass:Ljava/lang/Class;
 
     .line 35
@@ -55,7 +55,7 @@
     return-void
 
     .line 36
-    .restart local p1
+    .restart local p1    # "type":Ljava/lang/reflect/Type;
     :cond_0
     instance-of v0, p1, Ljava/lang/reflect/ParameterizedType;
 
@@ -64,7 +64,7 @@
     .line 37
     check-cast p1, Ljava/lang/reflect/ParameterizedType;
 
-    .end local p1
+    .end local p1    # "type":Ljava/lang/reflect/Type;
     iput-object p1, p0, Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;->_genericType:Ljava/lang/reflect/ParameterizedType;
 
     .line 38
@@ -81,7 +81,7 @@
     goto :goto_0
 
     .line 40
-    .restart local p1
+    .restart local p1    # "type":Ljava/lang/reflect/Type;
     :cond_1
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -124,11 +124,10 @@
 
 .method private constructor <init>(Ljava/lang/reflect/Type;Ljava/lang/Class;Ljava/lang/reflect/ParameterizedType;Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;)V
     .locals 0
-    .parameter "actualType"
-    .parameter
-    .parameter "genericType"
-    .parameter "superType"
-    .parameter "subType"
+    .param p1, "actualType"    # Ljava/lang/reflect/Type;
+    .param p3, "genericType"    # Ljava/lang/reflect/ParameterizedType;
+    .param p4, "superType"    # Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;
+    .param p5, "subType"    # Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -144,7 +143,7 @@
 
     .prologue
     .line 46
-    .local p2, rawClass:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p2, "rawClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 47
@@ -192,7 +191,7 @@
     move-object v4, v5
 
     .line 63
-    .local v4, sup:Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;
+    .local v4, "sup":Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;
     :goto_0
     new-instance v0, Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;
 
@@ -205,7 +204,7 @@
     invoke-direct/range {v0 .. v5}, Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;-><init>(Ljava/lang/reflect/Type;Ljava/lang/Class;Ljava/lang/reflect/ParameterizedType;Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;)V
 
     .line 64
-    .local v0, result:Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;
+    .local v0, "result":Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;
     if-eqz v4, :cond_0
 
     .line 65
@@ -216,8 +215,8 @@
     return-object v0
 
     .line 62
-    .end local v0           #result:Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;
-    .end local v4           #sup:Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;
+    .end local v0    # "result":Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;
+    .end local v4    # "sup":Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;
     :cond_1
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;->_superType:Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;
 
@@ -289,7 +288,7 @@
 
 .method public setSubType(Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;)V
     .locals 0
-    .parameter "sub"
+    .param p1, "sub"    # Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;
 
     .prologue
     .line 72
@@ -300,7 +299,7 @@
 
 .method public setSuperType(Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;)V
     .locals 0
-    .parameter "sup"
+    .param p1, "sup"    # Lcom/flurry/org/codehaus/jackson/map/type/HierarchicType;
 
     .prologue
     .line 70

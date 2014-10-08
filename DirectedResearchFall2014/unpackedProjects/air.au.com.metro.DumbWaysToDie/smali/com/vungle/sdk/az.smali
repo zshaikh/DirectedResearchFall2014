@@ -6,8 +6,6 @@
 # direct methods
 .method public static a(Lcom/vungle/sdk/aw;[Ljava/lang/Object;)Ljava/util/Map;
     .locals 8
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -148,9 +146,6 @@
 
 .method private static a(Lcom/vungle/sdk/aw;Lcom/vungle/sdk/ay;Ljava/util/Map;)V
     .locals 5
-    .parameter
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",

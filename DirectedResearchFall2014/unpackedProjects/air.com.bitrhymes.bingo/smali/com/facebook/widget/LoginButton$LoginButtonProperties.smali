@@ -73,7 +73,6 @@
 
 .method static synthetic access$0(Lcom/facebook/widget/LoginButton$LoginButtonProperties;)Lcom/facebook/SessionDefaultAudience;
     .locals 1
-    .parameter
 
     .prologue
     .line 76
@@ -84,7 +83,6 @@
 
 .method static synthetic access$1(Lcom/facebook/widget/LoginButton$LoginButtonProperties;)Ljava/util/List;
     .locals 1
-    .parameter
 
     .prologue
     .line 77
@@ -95,7 +93,6 @@
 
 .method static synthetic access$2(Lcom/facebook/widget/LoginButton$LoginButtonProperties;)Lcom/facebook/SessionLoginBehavior;
     .locals 1
-    .parameter
 
     .prologue
     .line 80
@@ -106,7 +103,6 @@
 
 .method static synthetic access$3(Lcom/facebook/widget/LoginButton$LoginButtonProperties;)Lcom/facebook/internal/SessionAuthorizationType;
     .locals 1
-    .parameter
 
     .prologue
     .line 78
@@ -117,7 +113,6 @@
 
 .method static synthetic access$4(Lcom/facebook/widget/LoginButton$LoginButtonProperties;)Lcom/facebook/Session$StatusCallback;
     .locals 1
-    .parameter
 
     .prologue
     .line 81
@@ -128,7 +123,6 @@
 
 .method static synthetic access$5(Lcom/facebook/widget/LoginButton$LoginButtonProperties;)Lcom/facebook/widget/LoginButton$OnErrorListener;
     .locals 1
-    .parameter
 
     .prologue
     .line 79
@@ -139,9 +133,8 @@
 
 .method private validatePermissions(Ljava/util/List;Lcom/facebook/internal/SessionAuthorizationType;Lcom/facebook/Session;)Z
     .locals 2
-    .parameter
-    .parameter "authType"
-    .parameter "currentSession"
+    .param p2, "authType"    # Lcom/facebook/internal/SessionAuthorizationType;
+    .param p3, "currentSession"    # Lcom/facebook/Session;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -157,7 +150,7 @@
 
     .prologue
     .line 123
-    .local p1, permissions:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
+    .local p1, "permissions":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     sget-object v0, Lcom/facebook/internal/SessionAuthorizationType;->PUBLISH:Lcom/facebook/internal/SessionAuthorizationType;
 
     invoke-virtual {v0, p2}, Lcom/facebook/internal/SessionAuthorizationType;->equals(Ljava/lang/Object;)Z
@@ -204,6 +197,7 @@
     if-nez v0, :cond_1
 
     .line 130
+    # getter for: Lcom/facebook/widget/LoginButton;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/facebook/widget/LoginButton;->access$0()Ljava/lang/String;
 
     move-result-object v0
@@ -304,7 +298,7 @@
 
 .method public setDefaultAudience(Lcom/facebook/SessionDefaultAudience;)V
     .locals 0
-    .parameter "defaultAudience"
+    .param p1, "defaultAudience"    # Lcom/facebook/SessionDefaultAudience;
 
     .prologue
     .line 92
@@ -316,7 +310,7 @@
 
 .method public setLoginBehavior(Lcom/facebook/SessionLoginBehavior;)V
     .locals 0
-    .parameter "loginBehavior"
+    .param p1, "loginBehavior"    # Lcom/facebook/SessionLoginBehavior;
 
     .prologue
     .line 147
@@ -328,7 +322,7 @@
 
 .method public setOnErrorListener(Lcom/facebook/widget/LoginButton$OnErrorListener;)V
     .locals 0
-    .parameter "onErrorListener"
+    .param p1, "onErrorListener"    # Lcom/facebook/widget/LoginButton$OnErrorListener;
 
     .prologue
     .line 84
@@ -340,8 +334,7 @@
 
 .method public setPublishPermissions(Ljava/util/List;Lcom/facebook/Session;)V
     .locals 2
-    .parameter
-    .parameter "session"
+    .param p2, "session"    # Lcom/facebook/Session;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -356,7 +349,7 @@
 
     .prologue
     .line 111
-    .local p1, permissions:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
+    .local p1, "permissions":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     sget-object v0, Lcom/facebook/internal/SessionAuthorizationType;->READ:Lcom/facebook/internal/SessionAuthorizationType;
 
     iget-object v1, p0, Lcom/facebook/widget/LoginButton$LoginButtonProperties;->authorizationType:Lcom/facebook/internal/SessionAuthorizationType;
@@ -403,8 +396,7 @@
 
 .method public setReadPermissions(Ljava/util/List;Lcom/facebook/Session;)V
     .locals 2
-    .parameter
-    .parameter "session"
+    .param p2, "session"    # Lcom/facebook/Session;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -419,7 +411,7 @@
 
     .prologue
     .line 100
-    .local p1, permissions:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
+    .local p1, "permissions":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     sget-object v0, Lcom/facebook/internal/SessionAuthorizationType;->PUBLISH:Lcom/facebook/internal/SessionAuthorizationType;
 
     iget-object v1, p0, Lcom/facebook/widget/LoginButton$LoginButtonProperties;->authorizationType:Lcom/facebook/internal/SessionAuthorizationType;
@@ -466,7 +458,7 @@
 
 .method public setSessionStatusCallback(Lcom/facebook/Session$StatusCallback;)V
     .locals 0
-    .parameter "callback"
+    .param p1, "callback"    # Lcom/facebook/Session$StatusCallback;
 
     .prologue
     .line 155

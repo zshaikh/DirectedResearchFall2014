@@ -22,8 +22,7 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Ljava/util/Collection;)V
     .locals 1
-    .parameter "context"
-    .parameter
+    .param p1, "context"    # Landroid/content/Context;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -37,7 +36,7 @@
 
     .prologue
     .line 41
-    .local p2, additionalPackages:Ljava/util/Collection;,"Ljava/util/Collection<Ljava/lang/String;>;"
+    .local p2, "additionalPackages":Ljava/util/Collection;, "Ljava/util/Collection<Ljava/lang/String;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 39
@@ -58,7 +57,7 @@
 # virtual methods
 .method protected getBestStackTraceElement(Ljava/lang/Throwable;)Ljava/lang/StackTraceElement;
     .locals 9
-    .parameter "t"
+    .param p1, "t"    # Ljava/lang/Throwable;
 
     .prologue
     .line 131
@@ -67,7 +66,7 @@
     move-result-object v3
 
     .line 132
-    .local v3, elements:[Ljava/lang/StackTraceElement;
+    .local v3, "elements":[Ljava/lang/StackTraceElement;
     if-eqz v3, :cond_0
 
     array-length v8, v3
@@ -86,38 +85,38 @@
     :cond_1
     move-object v0, v3
 
-    .local v0, arr$:[Ljava/lang/StackTraceElement;
+    .local v0, "arr$":[Ljava/lang/StackTraceElement;
     array-length v6, v0
 
-    .local v6, len$:I
+    .local v6, "len$":I
     const/4 v4, 0x0
 
-    .local v4, i$:I
+    .local v4, "i$":I
     move v5, v4
 
-    .end local v4           #i$:I
-    .local v5, i$:I
+    .end local v4    # "i$":I
+    .local v5, "i$":I
     :goto_1
     if-ge v5, v6, :cond_4
 
     aget-object v2, v0, v5
 
     .line 136
-    .local v2, e:Ljava/lang/StackTraceElement;
+    .local v2, "e":Ljava/lang/StackTraceElement;
     invoke-virtual {v2}, Ljava/lang/StackTraceElement;->getClassName()Ljava/lang/String;
 
     move-result-object v1
 
     .line 137
-    .local v1, className:Ljava/lang/String;
+    .local v1, "className":Ljava/lang/String;
     iget-object v8, p0, Lcom/google/analytics/tracking/android/StandardExceptionParser;->includedPackages:Ljava/util/TreeSet;
 
     invoke-virtual {v8}, Ljava/util/TreeSet;->iterator()Ljava/util/Iterator;
 
     move-result-object v4
 
-    .end local v5           #i$:I
-    .local v4, i$:Ljava/util/Iterator;
+    .end local v5    # "i$":I
+    .local v4, "i$":Ljava/util/Iterator;
     :cond_2
     invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
 
@@ -132,7 +131,7 @@
     check-cast v7, Ljava/lang/String;
 
     .line 138
-    .local v7, packageName:Ljava/lang/String;
+    .local v7, "packageName":Ljava/lang/String;
     invoke-virtual {v1, v7}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v8
@@ -145,20 +144,20 @@
     goto :goto_0
 
     .line 135
-    .end local v7           #packageName:Ljava/lang/String;
+    .end local v7    # "packageName":Ljava/lang/String;
     :cond_3
     add-int/lit8 v4, v5, 0x1
 
-    .local v4, i$:I
+    .local v4, "i$":I
     move v5, v4
 
-    .end local v4           #i$:I
-    .restart local v5       #i$:I
+    .end local v4    # "i$":I
+    .restart local v5    # "i$":I
     goto :goto_1
 
     .line 143
-    .end local v1           #className:Ljava/lang/String;
-    .end local v2           #e:Ljava/lang/StackTraceElement;
+    .end local v1    # "className":Ljava/lang/String;
+    .end local v2    # "e":Ljava/lang/StackTraceElement;
     :cond_4
     const/4 v8, 0x0
 
@@ -169,14 +168,14 @@
 
 .method protected getCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
     .locals 2
-    .parameter "t"
+    .param p1, "t"    # Ljava/lang/Throwable;
 
     .prologue
     .line 116
     move-object v0, p1
 
     .line 117
-    .local v0, result:Ljava/lang/Throwable;
+    .local v0, "result":Ljava/lang/Throwable;
     :goto_0
     invoke-virtual {v0}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
 
@@ -198,8 +197,8 @@
 
 .method public getDescription(Ljava/lang/String;Ljava/lang/Throwable;)Ljava/lang/String;
     .locals 2
-    .parameter "threadName"
-    .parameter "t"
+    .param p1, "threadName"    # Ljava/lang/String;
+    .param p2, "t"    # Ljava/lang/Throwable;
 
     .prologue
     .line 177
@@ -224,9 +223,9 @@
 
 .method protected getDescription(Ljava/lang/Throwable;Ljava/lang/StackTraceElement;Ljava/lang/String;)Ljava/lang/String;
     .locals 9
-    .parameter "cause"
-    .parameter "element"
-    .parameter "threadName"
+    .param p1, "cause"    # Ljava/lang/Throwable;
+    .param p2, "element"    # Ljava/lang/StackTraceElement;
+    .param p3, "threadName"    # Ljava/lang/String;
 
     .prologue
     const/4 v8, 0x0
@@ -239,7 +238,7 @@
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
     .line 156
-    .local v2, descriptionBuilder:Ljava/lang/StringBuilder;
+    .local v2, "descriptionBuilder":Ljava/lang/StringBuilder;
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v3
@@ -265,11 +264,11 @@
     move-result-object v1
 
     .line 159
-    .local v1, classNameParts:[Ljava/lang/String;
+    .local v1, "classNameParts":[Ljava/lang/String;
     const-string v0, "unknown"
 
     .line 160
-    .local v0, className:Ljava/lang/String;
+    .local v0, "className":Ljava/lang/String;
     if-eqz v1, :cond_0
 
     array-length v3, v1
@@ -318,8 +317,8 @@
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 169
-    .end local v0           #className:Ljava/lang/String;
-    .end local v1           #classNameParts:[Ljava/lang/String;
+    .end local v0    # "className":Ljava/lang/String;
+    .end local v1    # "classNameParts":[Ljava/lang/String;
     :cond_1
     if-eqz p3, :cond_2
 
@@ -347,8 +346,7 @@
 
 .method public setIncludedPackages(Landroid/content/Context;Ljava/util/Collection;)V
     .locals 18
-    .parameter "context"
-    .parameter
+    .param p1, "context"    # Landroid/content/Context;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -362,7 +360,7 @@
 
     .prologue
     .line 57
-    .local p2, additionalPackages:Ljava/util/Collection;,"Ljava/util/Collection<Ljava/lang/String;>;"
+    .local p2, "additionalPackages":Ljava/util/Collection;, "Ljava/util/Collection<Ljava/lang/String;>;"
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/google/analytics/tracking/android/StandardExceptionParser;->includedPackages:Ljava/util/TreeSet;
@@ -377,7 +375,7 @@
     invoke-direct {v13}, Ljava/util/HashSet;-><init>()V
 
     .line 59
-    .local v13, packages:Ljava/util/Set;,"Ljava/util/Set<Ljava/lang/String;>;"
+    .local v13, "packages":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     if-eqz p2, :cond_0
 
     .line 60
@@ -402,7 +400,7 @@
     move-result-object v4
 
     .line 67
-    .local v4, appPackage:Ljava/lang/String;
+    .local v4, "appPackage":Ljava/lang/String;
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/google/analytics/tracking/android/StandardExceptionParser;->includedPackages:Ljava/util/TreeSet;
@@ -437,30 +435,30 @@
     move-result-object v14
 
     .line 74
-    .local v14, pi:Landroid/content/pm/PackageInfo;
+    .local v14, "pi":Landroid/content/pm/PackageInfo;
     iget-object v3, v14, Landroid/content/pm/PackageInfo;->activities:[Landroid/content/pm/ActivityInfo;
 
     .line 75
-    .local v3, ai:[Landroid/content/pm/ActivityInfo;
+    .local v3, "ai":[Landroid/content/pm/ActivityInfo;
     if-eqz v3, :cond_1
 
     .line 76
     move-object v5, v3
 
-    .local v5, arr$:[Landroid/content/pm/ActivityInfo;
+    .local v5, "arr$":[Landroid/content/pm/ActivityInfo;
     array-length v9, v5
 
-    .local v9, len$:I
+    .local v9, "len$":I
     const/4 v7, 0x0
 
-    .local v7, i$:I
+    .local v7, "i$":I
     :goto_0
     if-ge v7, v9, :cond_1
 
     aget-object v15, v5, v7
 
     .line 77
-    .local v15, sx:Landroid/content/pm/ActivityInfo;
+    .local v15, "sx":Landroid/content/pm/ActivityInfo;
     move-object v0, v15
 
     iget-object v0, v0, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
@@ -481,26 +479,26 @@
     goto :goto_0
 
     .line 80
-    .end local v3           #ai:[Landroid/content/pm/ActivityInfo;
-    .end local v4           #appPackage:Ljava/lang/String;
-    .end local v5           #arr$:[Landroid/content/pm/ActivityInfo;
-    .end local v7           #i$:I
-    .end local v9           #len$:I
-    .end local v14           #pi:Landroid/content/pm/PackageInfo;
-    .end local v15           #sx:Landroid/content/pm/ActivityInfo;
+    .end local v3    # "ai":[Landroid/content/pm/ActivityInfo;
+    .end local v4    # "appPackage":Ljava/lang/String;
+    .end local v5    # "arr$":[Landroid/content/pm/ActivityInfo;
+    .end local v7    # "i$":I
+    .end local v9    # "len$":I
+    .end local v14    # "pi":Landroid/content/pm/PackageInfo;
+    .end local v15    # "sx":Landroid/content/pm/ActivityInfo;
     :catch_0
     move-exception v16
 
     move-object/from16 v6, v16
 
     .line 81
-    .local v6, e:Landroid/content/pm/PackageManager$NameNotFoundException;
+    .local v6, "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     const-string v16, "No package found"
 
     invoke-static/range {v16 .. v16}, Lcom/google/analytics/tracking/android/Log;->i(Ljava/lang/String;)I
 
     .line 89
-    .end local v6           #e:Landroid/content/pm/PackageManager$NameNotFoundException;
+    .end local v6    # "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     :cond_1
     invoke-interface {v13}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
@@ -521,11 +519,11 @@
     check-cast v12, Ljava/lang/String;
 
     .line 90
-    .local v12, packageName:Ljava/lang/String;
+    .local v12, "packageName":Ljava/lang/String;
     const/4 v10, 0x1
 
     .line 91
-    .local v10, needToAdd:Z
+    .local v10, "needToAdd":Z
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/google/analytics/tracking/android/StandardExceptionParser;->includedPackages:Ljava/util/TreeSet;
@@ -536,7 +534,7 @@
 
     move-result-object v8
 
-    .local v8, i$:Ljava/util/Iterator;
+    .local v8, "i$":Ljava/util/Iterator;
     :goto_2
     invoke-interface {v8}, Ljava/util/Iterator;->hasNext()Z
 
@@ -551,7 +549,7 @@
     check-cast v11, Ljava/lang/String;
 
     .line 92
-    .local v11, oldName:Ljava/lang/String;
+    .local v11, "oldName":Ljava/lang/String;
     invoke-virtual {v12, v11}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v16
@@ -579,7 +577,7 @@
     invoke-virtual {v0, v1}, Ljava/util/TreeSet;->remove(Ljava/lang/Object;)Z
 
     .line 101
-    .end local v11           #oldName:Ljava/lang/String;
+    .end local v11    # "oldName":Ljava/lang/String;
     :cond_3
     if-eqz v10, :cond_2
 
@@ -599,17 +597,17 @@
     goto :goto_1
 
     .line 98
-    .restart local v11       #oldName:Ljava/lang/String;
+    .restart local v11    # "oldName":Ljava/lang/String;
     :cond_4
     const/4 v10, 0x0
 
     goto :goto_2
 
     .line 105
-    .end local v8           #i$:Ljava/util/Iterator;
-    .end local v10           #needToAdd:Z
-    .end local v11           #oldName:Ljava/lang/String;
-    .end local v12           #packageName:Ljava/lang/String;
+    .end local v8    # "i$":Ljava/util/Iterator;
+    .end local v10    # "needToAdd":Z
+    .end local v11    # "oldName":Ljava/lang/String;
+    .end local v12    # "packageName":Ljava/lang/String;
     :cond_5
     return-void
 .end method

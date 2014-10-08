@@ -139,7 +139,7 @@
     move-result-object v0
 
     .line 180
-    .local v0, result:Ljava/lang/String;
+    .local v0, "result":Ljava/lang/String;
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -154,7 +154,7 @@
     return-object v0
 
     .line 176
-    .end local v0           #result:Ljava/lang/String;
+    .end local v0    # "result":Ljava/lang/String;
     :catchall_0
     move-exception v1
 
@@ -178,15 +178,15 @@
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
     .line 124
-    .local v3, result:Ljava/lang/StringBuilder;
+    .local v3, "result":Ljava/lang/StringBuilder;
     const/4 v4, 0x0
 
     .line 131
-    .local v4, spot:I
+    .local v4, "spot":I
     const/4 v1, 0x6
 
     .line 133
-    .local v1, nextBoundary:I
+    .local v1, "nextBoundary":I
     :goto_0
     iget-object v5, p0, Lcom/google/analytics/tracking/android/GAUsage;->mUsedFields:Ljava/util/SortedSet;
 
@@ -206,7 +206,7 @@
     check-cast v0, Lcom/google/analytics/tracking/android/GAUsage$Field;
 
     .line 138
-    .local v0, f:Lcom/google/analytics/tracking/android/GAUsage$Field;
+    .local v0, "f":Lcom/google/analytics/tracking/android/GAUsage$Field;
     iget-object v5, p0, Lcom/google/analytics/tracking/android/GAUsage;->mUsedFields:Ljava/util/SortedSet;
 
     invoke-interface {v5, v0}, Ljava/util/SortedSet;->remove(Ljava/lang/Object;)Z
@@ -217,7 +217,7 @@
     move-result v2
 
     .line 147
-    .local v2, nextLoc:I
+    .local v2, "nextLoc":I
     :goto_1
     if-lt v2, v1, :cond_0
 
@@ -256,8 +256,8 @@
     goto :goto_0
 
     .line 158
-    .end local v0           #f:Lcom/google/analytics/tracking/android/GAUsage$Field;
-    .end local v2           #nextLoc:I
+    .end local v0    # "f":Lcom/google/analytics/tracking/android/GAUsage$Field;
+    .end local v2    # "nextLoc":I
     :cond_1
     if-gtz v4, :cond_2
 
@@ -295,9 +295,9 @@
     return-object v5
 
     .line 123
-    .end local v1           #nextBoundary:I
-    .end local v3           #result:Ljava/lang/StringBuilder;
-    .end local v4           #spot:I
+    .end local v1    # "nextBoundary":I
+    .end local v3    # "result":Ljava/lang/StringBuilder;
+    .end local v4    # "spot":I
     :catchall_0
     move-exception v5
 
@@ -308,7 +308,7 @@
 
 .method public declared-synchronized setDisableUsage(Z)V
     .locals 1
-    .parameter "disableUsage"
+    .param p1, "disableUsage"    # Z
 
     .prologue
     .line 106
@@ -335,7 +335,7 @@
 
 .method public declared-synchronized setUsage(Lcom/google/analytics/tracking/android/GAUsage$Field;)V
     .locals 3
-    .parameter "field"
+    .param p1, "field"    # Lcom/google/analytics/tracking/android/GAUsage$Field;
 
     .prologue
     .line 110

@@ -29,11 +29,11 @@
 # direct methods
 .method protected constructor <init>(Lcom/flurry/org/codehaus/jackson/type/JavaType;)V
     .locals 0
-    .parameter "valueType"
+    .param p1, "valueType"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
 
     .prologue
     .line 27
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/deser/StdDeserializer;,"Lcom/flurry/org/codehaus/jackson/map/deser/StdDeserializer<TT;>;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/deser/StdDeserializer;, "Lcom/flurry/org/codehaus/jackson/map/deser/StdDeserializer<TT;>;"
     invoke-direct {p0, p1}, Lcom/flurry/org/codehaus/jackson/map/deser/std/StdDeserializer;-><init>(Lcom/flurry/org/codehaus/jackson/type/JavaType;)V
 
     .line 28
@@ -42,7 +42,6 @@
 
 .method protected constructor <init>(Ljava/lang/Class;)V
     .locals 0
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -53,8 +52,8 @@
 
     .prologue
     .line 23
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/deser/StdDeserializer;,"Lcom/flurry/org/codehaus/jackson/map/deser/StdDeserializer<TT;>;"
-    .local p1, vc:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/deser/StdDeserializer;, "Lcom/flurry/org/codehaus/jackson/map/deser/StdDeserializer<TT;>;"
+    .local p1, "vc":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-direct {p0, p1}, Lcom/flurry/org/codehaus/jackson/map/deser/std/StdDeserializer;-><init>(Ljava/lang/Class;)V
 
     .line 24

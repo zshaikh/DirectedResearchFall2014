@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/tapjoy/mraid/view/ActionHandler;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 123

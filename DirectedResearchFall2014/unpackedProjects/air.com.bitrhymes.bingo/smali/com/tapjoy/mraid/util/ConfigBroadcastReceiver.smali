@@ -12,7 +12,7 @@
 # direct methods
 .method public constructor <init>(Lcom/tapjoy/mraid/controller/Display;)V
     .locals 1
-    .parameter "mraidDisplayController"
+    .param p1, "mraidDisplayController"    # Lcom/tapjoy/mraid/controller/Display;
 
     .prologue
     .line 28
@@ -38,8 +38,8 @@
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 4
-    .parameter "context"
-    .parameter "intent"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
     .line 38
@@ -48,7 +48,7 @@
     move-result-object v0
 
     .line 39
-    .local v0, action:Ljava/lang/String;
+    .local v0, "action":Ljava/lang/String;
     const-string v2, "android.intent.action.CONFIGURATION_CHANGED"
 
     invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -65,7 +65,7 @@
     move-result v1
 
     .line 41
-    .local v1, orientation:I
+    .local v1, "orientation":I
     iget v2, p0, Lcom/tapjoy/mraid/util/ConfigBroadcastReceiver;->mLastOrientation:I
 
     if-eq v1, v2, :cond_0
@@ -81,7 +81,7 @@
     invoke-virtual {v2, v3}, Lcom/tapjoy/mraid/controller/Display;->onOrientationChanged(I)V
 
     .line 46
-    .end local v1           #orientation:I
+    .end local v1    # "orientation":I
     :cond_0
     return-void
 .end method

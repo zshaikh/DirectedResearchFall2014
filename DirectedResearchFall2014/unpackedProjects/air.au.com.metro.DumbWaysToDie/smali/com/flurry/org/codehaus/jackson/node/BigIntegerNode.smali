@@ -10,7 +10,7 @@
 # direct methods
 .method public constructor <init>(Ljava/math/BigInteger;)V
     .locals 0
-    .parameter "v"
+    .param p1, "v"    # Ljava/math/BigInteger;
 
     .prologue
     .line 24
@@ -23,7 +23,7 @@
 
 .method public static valueOf(Ljava/math/BigInteger;)Lcom/flurry/org/codehaus/jackson/node/BigIntegerNode;
     .locals 1
-    .parameter "v"
+    .param p0, "v"    # Ljava/math/BigInteger;
 
     .prologue
     .line 26
@@ -38,7 +38,7 @@
 # virtual methods
 .method public asBoolean(Z)Z
     .locals 2
-    .parameter "defaultValue"
+    .param p1, "defaultValue"    # Z
 
     .prologue
     .line 79
@@ -89,7 +89,7 @@
 
 .method public equals(Ljava/lang/Object;)Z
     .locals 4
-    .parameter "o"
+    .param p1, "o"    # Ljava/lang/Object;
 
     .prologue
     const/4 v3, 0x1
@@ -102,12 +102,12 @@
     move v0, v3
 
     .line 97
-    .end local p1
+    .end local p1    # "o":Ljava/lang/Object;
     :goto_0
     return v0
 
     .line 93
-    .restart local p1
+    .restart local p1    # "o":Ljava/lang/Object;
     :cond_0
     if-nez p1, :cond_1
 
@@ -136,7 +136,7 @@
     :cond_2
     check-cast p1, Lcom/flurry/org/codehaus/jackson/node/BigIntegerNode;
 
-    .end local p1
+    .end local p1    # "o":Ljava/lang/Object;
     iget-object v0, p1, Lcom/flurry/org/codehaus/jackson/node/BigIntegerNode;->_value:Ljava/math/BigInteger;
 
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/node/BigIntegerNode;->_value:Ljava/math/BigInteger;
@@ -275,8 +275,8 @@
 
 .method public final serialize(Lcom/flurry/org/codehaus/jackson/JsonGenerator;Lcom/flurry/org/codehaus/jackson/map/SerializerProvider;)V
     .locals 1
-    .parameter "jg"
-    .parameter "provider"
+    .param p1, "jg"    # Lcom/flurry/org/codehaus/jackson/JsonGenerator;
+    .param p2, "provider"    # Lcom/flurry/org/codehaus/jackson/map/SerializerProvider;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,

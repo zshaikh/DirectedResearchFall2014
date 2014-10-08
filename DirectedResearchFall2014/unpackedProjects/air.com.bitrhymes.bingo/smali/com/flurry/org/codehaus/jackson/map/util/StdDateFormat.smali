@@ -4,15 +4,15 @@
 
 
 # static fields
-.field protected static final ALL_FORMATS:[Ljava/lang/String; = null
+.field protected static final ALL_FORMATS:[Ljava/lang/String;
 
-.field protected static final DATE_FORMAT_ISO8601:Ljava/text/DateFormat; = null
+.field protected static final DATE_FORMAT_ISO8601:Ljava/text/DateFormat;
 
-.field protected static final DATE_FORMAT_ISO8601_Z:Ljava/text/DateFormat; = null
+.field protected static final DATE_FORMAT_ISO8601_Z:Ljava/text/DateFormat;
 
-.field protected static final DATE_FORMAT_PLAIN:Ljava/text/DateFormat; = null
+.field protected static final DATE_FORMAT_PLAIN:Ljava/text/DateFormat;
 
-.field protected static final DATE_FORMAT_RFC1123:Ljava/text/DateFormat; = null
+.field protected static final DATE_FORMAT_RFC1123:Ljava/text/DateFormat;
 
 .field protected static final DATE_FORMAT_STR_ISO8601:Ljava/lang/String; = "yyyy-MM-dd\'T\'HH:mm:ss.SSSZ"
 
@@ -87,7 +87,7 @@
     move-result-object v0
 
     .line 79
-    .local v0, gmt:Ljava/util/TimeZone;
+    .local v0, "gmt":Ljava/util/TimeZone;
     new-instance v1, Ljava/text/SimpleDateFormat;
 
     const-string v2, "EEE, dd MMM yyyy HH:mm:ss zzz"
@@ -185,7 +185,7 @@
 
 .method public static getISO8601Format(Ljava/util/TimeZone;)Ljava/text/DateFormat;
     .locals 2
-    .parameter "tz"
+    .param p0, "tz"    # Ljava/util/TimeZone;
 
     .prologue
     .line 131
@@ -198,7 +198,7 @@
     check-cast v0, Ljava/text/DateFormat;
 
     .line 132
-    .local v0, df:Ljava/text/DateFormat;
+    .local v0, "df":Ljava/text/DateFormat;
     invoke-virtual {v0, p0}, Ljava/text/DateFormat;->setTimeZone(Ljava/util/TimeZone;)V
 
     .line 133
@@ -207,7 +207,7 @@
 
 .method public static getRFC1123Format(Ljava/util/TimeZone;)Ljava/text/DateFormat;
     .locals 2
-    .parameter "tz"
+    .param p0, "tz"    # Ljava/util/TimeZone;
 
     .prologue
     .line 153
@@ -220,7 +220,7 @@
     check-cast v0, Ljava/text/DateFormat;
 
     .line 154
-    .local v0, df:Ljava/text/DateFormat;
+    .local v0, "df":Ljava/text/DateFormat;
     invoke-virtual {v0, p0}, Ljava/text/DateFormat;->setTimeZone(Ljava/util/TimeZone;)V
 
     .line 155
@@ -229,7 +229,7 @@
 
 .method private static final hasTimeZone(Ljava/lang/String;)Z
     .locals 6
-    .parameter "str"
+    .param p0, "str"    # Ljava/lang/String;
 
     .prologue
     const/4 v2, 0x6
@@ -246,7 +246,7 @@
     move-result v1
 
     .line 337
-    .local v1, len:I
+    .local v1, "len":I
     if-lt v1, v2, :cond_5
 
     .line 338
@@ -257,7 +257,7 @@
     move-result v0
 
     .line 339
-    .local v0, c:C
+    .local v0, "c":C
     if-eq v0, v4, :cond_0
 
     if-ne v0, v5, :cond_1
@@ -266,12 +266,12 @@
     move v2, v3
 
     .line 345
-    .end local v0           #c:C
+    .end local v0    # "c":C
     :goto_0
     return v2
 
     .line 340
-    .restart local v0       #c:C
+    .restart local v0    # "c":C
     :cond_1
     const/4 v2, 0x5
 
@@ -312,7 +312,7 @@
     goto :goto_0
 
     .line 345
-    .end local v0           #c:C
+    .end local v0    # "c":C
     :cond_5
     const/4 v2, 0x0
 
@@ -347,9 +347,9 @@
 
 .method public format(Ljava/util/Date;Ljava/lang/StringBuffer;Ljava/text/FieldPosition;)Ljava/lang/StringBuffer;
     .locals 1
-    .parameter "date"
-    .parameter "toAppendTo"
-    .parameter "fieldPosition"
+    .param p1, "date"    # Ljava/util/Date;
+    .param p2, "toAppendTo"    # Ljava/lang/StringBuffer;
+    .param p3, "fieldPosition"    # Ljava/text/FieldPosition;
 
     .prologue
     .line 216
@@ -381,7 +381,7 @@
 
 .method protected looksLikeISO8601(Ljava/lang/String;)Z
     .locals 3
-    .parameter "dateStr"
+    .param p1, "dateStr"    # Ljava/lang/String;
 
     .prologue
     const/4 v2, 0x0
@@ -442,7 +442,7 @@
 
 .method public parse(Ljava/lang/String;)Ljava/util/Date;
     .locals 12
-    .parameter "dateStr"
+    .param p1, "dateStr"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/text/ParseException;
@@ -465,13 +465,13 @@
     invoke-direct {v4, v10}, Ljava/text/ParsePosition;-><init>(I)V
 
     .line 169
-    .local v4, pos:Ljava/text/ParsePosition;
+    .local v4, "pos":Ljava/text/ParsePosition;
     invoke-virtual {p0, p1, v4}, Lcom/flurry/org/codehaus/jackson/map/util/StdDateFormat;->parse(Ljava/lang/String;Ljava/text/ParsePosition;)Ljava/util/Date;
 
     move-result-object v5
 
     .line 170
-    .local v5, result:Ljava/util/Date;
+    .local v5, "result":Ljava/util/Date;
     if-eqz v5, :cond_0
 
     .line 171
@@ -484,23 +484,23 @@
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
     .line 175
-    .local v6, sb:Ljava/lang/StringBuilder;
+    .local v6, "sb":Ljava/lang/StringBuilder;
     sget-object v0, Lcom/flurry/org/codehaus/jackson/map/util/StdDateFormat;->ALL_FORMATS:[Ljava/lang/String;
 
-    .local v0, arr$:[Ljava/lang/String;
+    .local v0, "arr$":[Ljava/lang/String;
     array-length v3, v0
 
-    .local v3, len$:I
+    .local v3, "len$":I
     const/4 v2, 0x0
 
-    .local v2, i$:I
+    .local v2, "i$":I
     :goto_0
     if-ge v2, v3, :cond_2
 
     aget-object v1, v0, v2
 
     .line 176
-    .local v1, f:Ljava/lang/String;
+    .local v1, "f":Ljava/lang/String;
     invoke-virtual {v6}, Ljava/lang/StringBuilder;->length()I
 
     move-result v7
@@ -528,7 +528,7 @@
     goto :goto_1
 
     .line 183
-    .end local v1           #f:Ljava/lang/String;
+    .end local v1    # "f":Ljava/lang/String;
     :cond_2
     invoke-virtual {v6, v8}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
@@ -566,8 +566,8 @@
 
 .method public parse(Ljava/lang/String;Ljava/text/ParsePosition;)Ljava/util/Date;
     .locals 5
-    .parameter "dateStr"
-    .parameter "pos"
+    .param p1, "dateStr"    # Ljava/lang/String;
+    .param p2, "pos"    # Ljava/text/ParsePosition;
 
     .prologue
     .line 192
@@ -593,7 +593,7 @@
     move-result v1
 
     .line 199
-    .local v1, i:I
+    .local v1, "i":I
     :cond_1
     add-int/lit8 v1, v1, -0x1
 
@@ -605,7 +605,7 @@
     move-result v0
 
     .line 201
-    .local v0, ch:C
+    .local v0, "ch":C
     const/16 v2, 0x30
 
     if-lt v0, v2, :cond_2
@@ -615,7 +615,7 @@
     if-le v0, v2, :cond_1
 
     .line 203
-    .end local v0           #ch:C
+    .end local v0    # "ch":C
     :cond_2
     if-gez v1, :cond_3
 
@@ -650,8 +650,8 @@
 
 .method protected parseAsISO8601(Ljava/lang/String;Ljava/text/ParsePosition;)Ljava/util/Date;
     .locals 11
-    .parameter "dateStr"
-    .parameter "pos"
+    .param p1, "dateStr"    # Ljava/lang/String;
+    .param p2, "pos"    # Ljava/text/ParsePosition;
 
     .prologue
     const/16 v10, 0x5a
@@ -670,7 +670,7 @@
     move-result v2
 
     .line 255
-    .local v2, len:I
+    .local v2, "len":I
     sub-int v5, v2, v6
 
     invoke-virtual {p1, v5}, Ljava/lang/String;->charAt(I)C
@@ -678,7 +678,7 @@
     move-result v0
 
     .line 259
-    .local v0, c:C
+    .local v0, "c":C
     const/16 v5, 0xa
 
     if-gt v2, v5, :cond_1
@@ -693,7 +693,7 @@
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/map/util/StdDateFormat;->_formatPlain:Ljava/text/DateFormat;
 
     .line 261
-    .local v1, df:Ljava/text/DateFormat;
+    .local v1, "df":Ljava/text/DateFormat;
     if-nez v1, :cond_0
 
     .line 262
@@ -703,13 +703,13 @@
 
     move-result-object v1
 
-    .end local v1           #df:Ljava/text/DateFormat;
+    .end local v1    # "df":Ljava/text/DateFormat;
     check-cast v1, Ljava/text/DateFormat;
 
     iput-object v1, p0, Lcom/flurry/org/codehaus/jackson/map/util/StdDateFormat;->_formatPlain:Ljava/text/DateFormat;
 
     .line 322
-    .restart local v1       #df:Ljava/text/DateFormat;
+    .restart local v1    # "df":Ljava/text/DateFormat;
     :cond_0
     :goto_0
     invoke-virtual {v1, p1, p2}, Ljava/text/DateFormat;->parse(Ljava/lang/String;Ljava/text/ParsePosition;)Ljava/util/Date;
@@ -719,7 +719,7 @@
     return-object v5
 
     .line 264
-    .end local v1           #df:Ljava/text/DateFormat;
+    .end local v1    # "df":Ljava/text/DateFormat;
     :cond_1
     if-ne v0, v10, :cond_3
 
@@ -727,7 +727,7 @@
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/map/util/StdDateFormat;->_formatISO8601_z:Ljava/text/DateFormat;
 
     .line 266
-    .restart local v1       #df:Ljava/text/DateFormat;
+    .restart local v1    # "df":Ljava/text/DateFormat;
     if-nez v1, :cond_2
 
     .line 267
@@ -737,13 +737,13 @@
 
     move-result-object v1
 
-    .end local v1           #df:Ljava/text/DateFormat;
+    .end local v1    # "df":Ljava/text/DateFormat;
     check-cast v1, Ljava/text/DateFormat;
 
     iput-object v1, p0, Lcom/flurry/org/codehaus/jackson/map/util/StdDateFormat;->_formatISO8601_z:Ljava/text/DateFormat;
 
     .line 270
-    .restart local v1       #df:Ljava/text/DateFormat;
+    .restart local v1    # "df":Ljava/text/DateFormat;
     :cond_2
     const/4 v5, 0x4
 
@@ -761,7 +761,7 @@
     invoke-direct {v3, p1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     .line 272
-    .local v3, sb:Ljava/lang/StringBuilder;
+    .local v3, "sb":Ljava/lang/StringBuilder;
     sub-int v5, v2, v6
 
     const-string v6, ".000"
@@ -777,8 +777,8 @@
     goto :goto_0
 
     .line 277
-    .end local v1           #df:Ljava/text/DateFormat;
-    .end local v3           #sb:Ljava/lang/StringBuilder;
+    .end local v1    # "df":Ljava/text/DateFormat;
+    .end local v3    # "sb":Ljava/lang/StringBuilder;
     :cond_3
     invoke-static {p1}, Lcom/flurry/org/codehaus/jackson/map/util/StdDateFormat;->hasTimeZone(Ljava/lang/String;)Z
 
@@ -802,7 +802,7 @@
     invoke-direct {v3, p1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     .line 282
-    .restart local v3       #sb:Ljava/lang/StringBuilder;
+    .restart local v3    # "sb":Ljava/lang/StringBuilder;
     sub-int v5, v2, v8
 
     const/4 v6, 0x2
@@ -817,7 +817,7 @@
     move-result-object p1
 
     .line 289
-    .end local v3           #sb:Ljava/lang/StringBuilder;
+    .end local v3    # "sb":Ljava/lang/StringBuilder;
     :cond_4
     :goto_1
     invoke-virtual {p1}, Ljava/lang/String;->length()I
@@ -846,7 +846,7 @@
     invoke-direct {v3, p1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     .line 294
-    .restart local v3       #sb:Ljava/lang/StringBuilder;
+    .restart local v3    # "sb":Ljava/lang/StringBuilder;
     const/4 v5, 0x5
 
     sub-int v5, v2, v5
@@ -861,12 +861,12 @@
     move-result-object p1
 
     .line 298
-    .end local v3           #sb:Ljava/lang/StringBuilder;
+    .end local v3    # "sb":Ljava/lang/StringBuilder;
     :cond_5
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/map/util/StdDateFormat;->_formatISO8601:Ljava/text/DateFormat;
 
     .line 299
-    .restart local v1       #df:Ljava/text/DateFormat;
+    .restart local v1    # "df":Ljava/text/DateFormat;
     iget-object v5, p0, Lcom/flurry/org/codehaus/jackson/map/util/StdDateFormat;->_formatISO8601:Ljava/text/DateFormat;
 
     if-nez v5, :cond_0
@@ -878,16 +878,16 @@
 
     move-result-object v1
 
-    .end local v1           #df:Ljava/text/DateFormat;
+    .end local v1    # "df":Ljava/text/DateFormat;
     check-cast v1, Ljava/text/DateFormat;
 
     iput-object v1, p0, Lcom/flurry/org/codehaus/jackson/map/util/StdDateFormat;->_formatISO8601:Ljava/text/DateFormat;
 
-    .restart local v1       #df:Ljava/text/DateFormat;
+    .restart local v1    # "df":Ljava/text/DateFormat;
     goto/16 :goto_0
 
     .line 284
-    .end local v1           #df:Ljava/text/DateFormat;
+    .end local v1    # "df":Ljava/text/DateFormat;
     :cond_6
     const/16 v5, 0x2b
 
@@ -926,7 +926,7 @@
     invoke-direct {v3, p1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     .line 310
-    .restart local v3       #sb:Ljava/lang/StringBuilder;
+    .restart local v3    # "sb":Ljava/lang/StringBuilder;
     const/16 v5, 0x54
 
     invoke-virtual {p1, v5}, Ljava/lang/String;->lastIndexOf(I)I
@@ -938,7 +938,7 @@
     sub-int v4, v5, v6
 
     .line 311
-    .local v4, timeLen:I
+    .local v4, "timeLen":I
     const/16 v5, 0x8
 
     if-gt v4, v5, :cond_9
@@ -961,7 +961,7 @@
     iget-object v1, p0, Lcom/flurry/org/codehaus/jackson/map/util/StdDateFormat;->_formatISO8601_z:Ljava/text/DateFormat;
 
     .line 317
-    .restart local v1       #df:Ljava/text/DateFormat;
+    .restart local v1    # "df":Ljava/text/DateFormat;
     if-nez v1, :cond_0
 
     .line 318
@@ -971,19 +971,19 @@
 
     move-result-object v1
 
-    .end local v1           #df:Ljava/text/DateFormat;
+    .end local v1    # "df":Ljava/text/DateFormat;
     check-cast v1, Ljava/text/DateFormat;
 
     iput-object v1, p0, Lcom/flurry/org/codehaus/jackson/map/util/StdDateFormat;->_formatISO8601_z:Ljava/text/DateFormat;
 
-    .restart local v1       #df:Ljava/text/DateFormat;
+    .restart local v1    # "df":Ljava/text/DateFormat;
     goto/16 :goto_0
 .end method
 
 .method protected parseAsRFC1123(Ljava/lang/String;Ljava/text/ParsePosition;)Ljava/util/Date;
     .locals 1
-    .parameter "dateStr"
-    .parameter "pos"
+    .param p1, "dateStr"    # Ljava/lang/String;
+    .param p2, "pos"    # Ljava/text/ParsePosition;
 
     .prologue
     .line 327

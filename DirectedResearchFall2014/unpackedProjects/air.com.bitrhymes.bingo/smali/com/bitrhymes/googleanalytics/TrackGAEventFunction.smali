@@ -21,8 +21,8 @@
 # virtual methods
 .method public call(Lcom/adobe/fre/FREContext;[Lcom/adobe/fre/FREObject;)Lcom/adobe/fre/FREObject;
     .locals 11
-    .parameter "context"
-    .parameter "args"
+    .param p1, "context"    # Lcom/adobe/fre/FREContext;
+    .param p2, "args"    # [Lcom/adobe/fre/FREObject;
 
     .prologue
     const-string v10, "ERROR_EVENT"
@@ -45,7 +45,7 @@
     move-result-object v4
 
     .line 22
-    .local v4, tracker:Lcom/google/analytics/tracking/android/Tracker;
+    .local v4, "tracker":Lcom/google/analytics/tracking/android/Tracker;
     const/4 v7, 0x0
 
     :try_start_0
@@ -56,7 +56,7 @@
     move-result-object v1
 
     .line 23
-    .local v1, category:Ljava/lang/String;
+    .local v1, "category":Ljava/lang/String;
     const/4 v7, 0x1
 
     aget-object v7, p2, v7
@@ -66,7 +66,7 @@
     move-result-object v0
 
     .line 24
-    .local v0, action:Ljava/lang/String;
+    .local v0, "action":Ljava/lang/String;
     const/4 v7, 0x2
 
     aget-object v7, p2, v7
@@ -76,7 +76,7 @@
     move-result-object v3
 
     .line 25
-    .local v3, label:Ljava/lang/String;
+    .local v3, "label":Ljava/lang/String;
     const/4 v7, 0x3
 
     aget-object v7, p2, v7
@@ -90,7 +90,7 @@
     move-result-wide v5
 
     .line 27
-    .local v5, value:J
+    .local v5, "value":J
     invoke-static {v5, v6}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v7
@@ -117,10 +117,10 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_4
 
     .line 41
-    .end local v0           #action:Ljava/lang/String;
-    .end local v1           #category:Ljava/lang/String;
-    .end local v3           #label:Ljava/lang/String;
-    .end local v5           #value:J
+    .end local v0    # "action":Ljava/lang/String;
+    .end local v1    # "category":Ljava/lang/String;
+    .end local v3    # "label":Ljava/lang/String;
+    .end local v5    # "value":J
     :goto_0
     const/4 v7, 0x0
 
@@ -133,7 +133,7 @@
     move-object v2, v7
 
     .line 30
-    .local v2, e:Ljava/lang/IllegalStateException;
+    .local v2, "e":Ljava/lang/IllegalStateException;
     const-string v7, "ERROR_EVENT"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -199,14 +199,14 @@
     goto :goto_0
 
     .line 31
-    .end local v2           #e:Ljava/lang/IllegalStateException;
+    .end local v2    # "e":Ljava/lang/IllegalStateException;
     :catch_1
     move-exception v7
 
     move-object v2, v7
 
     .line 32
-    .local v2, e:Lcom/adobe/fre/FRETypeMismatchException;
+    .local v2, "e":Lcom/adobe/fre/FRETypeMismatchException;
     const-string v7, "ERROR_EVENT"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -272,14 +272,14 @@
     goto/16 :goto_0
 
     .line 33
-    .end local v2           #e:Lcom/adobe/fre/FRETypeMismatchException;
+    .end local v2    # "e":Lcom/adobe/fre/FRETypeMismatchException;
     :catch_2
     move-exception v7
 
     move-object v2, v7
 
     .line 34
-    .local v2, e:Lcom/adobe/fre/FREInvalidObjectException;
+    .local v2, "e":Lcom/adobe/fre/FREInvalidObjectException;
     const-string v7, "ERROR_EVENT"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -345,14 +345,14 @@
     goto/16 :goto_0
 
     .line 35
-    .end local v2           #e:Lcom/adobe/fre/FREInvalidObjectException;
+    .end local v2    # "e":Lcom/adobe/fre/FREInvalidObjectException;
     :catch_3
     move-exception v7
 
     move-object v2, v7
 
     .line 36
-    .local v2, e:Lcom/adobe/fre/FREWrongThreadException;
+    .local v2, "e":Lcom/adobe/fre/FREWrongThreadException;
     const-string v7, "ERROR_EVENT"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -418,14 +418,14 @@
     goto/16 :goto_0
 
     .line 37
-    .end local v2           #e:Lcom/adobe/fre/FREWrongThreadException;
+    .end local v2    # "e":Lcom/adobe/fre/FREWrongThreadException;
     :catch_4
     move-exception v7
 
     move-object v2, v7
 
     .line 39
-    .local v2, e:Ljava/lang/Exception;
+    .local v2, "e":Ljava/lang/Exception;
     const-string v7, "ERROR_EVENT"
 
     new-instance v7, Ljava/lang/StringBuilder;

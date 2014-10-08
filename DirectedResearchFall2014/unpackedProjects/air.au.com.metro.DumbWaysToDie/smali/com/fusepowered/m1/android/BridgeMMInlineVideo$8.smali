@@ -36,8 +36,6 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m1/android/BridgeMMInlineVideo;Ljava/util/HashMap;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 181
@@ -68,7 +66,7 @@
     check-cast v2, Lcom/fusepowered/m1/android/MMWebView;
 
     .line 186
-    .local v2, webView:Lcom/fusepowered/m1/android/MMWebView;
+    .local v2, "webView":Lcom/fusepowered/m1/android/MMWebView;
     if-eqz v2, :cond_0
 
     .line 188
@@ -77,7 +75,7 @@
     move-result-object v0
 
     .line 189
-    .local v0, mmLayout:Lcom/fusepowered/m1/android/MMLayout;
+    .local v0, "mmLayout":Lcom/fusepowered/m1/android/MMLayout;
     iget-object v3, p0, Lcom/fusepowered/m1/android/BridgeMMInlineVideo$8;->val$parameters:Ljava/util/HashMap;
 
     const-string v4, "streamVideoURI"
@@ -89,7 +87,7 @@
     check-cast v1, Ljava/lang/String;
 
     .line 190
-    .local v1, streamVideoURI:Ljava/lang/String;
+    .local v1, "streamVideoURI":Ljava/lang/String;
     if-eqz v0, :cond_0
 
     if-eqz v1, :cond_0
@@ -103,8 +101,8 @@
     move-result-object v3
 
     .line 196
-    .end local v0           #mmLayout:Lcom/fusepowered/m1/android/MMLayout;
-    .end local v1           #streamVideoURI:Ljava/lang/String;
+    .end local v0    # "mmLayout":Lcom/fusepowered/m1/android/MMLayout;
+    .end local v1    # "streamVideoURI":Ljava/lang/String;
     :goto_0
     return-object v3
 

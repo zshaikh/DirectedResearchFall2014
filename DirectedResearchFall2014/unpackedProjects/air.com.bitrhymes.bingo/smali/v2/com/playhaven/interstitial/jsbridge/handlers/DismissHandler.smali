@@ -18,7 +18,7 @@
 # virtual methods
 .method public handle(Lorg/json/JSONObject;)V
     .locals 3
-    .parameter "jsonPayload"
+    .param p1, "jsonPayload"    # Lorg/json/JSONObject;
 
     .prologue
     .line 17
@@ -35,7 +35,7 @@
     move-object v0, v1
 
     .line 24
-    .local v0, closePingUrl:Ljava/lang/String;
+    .local v0, "closePingUrl":Ljava/lang/String;
     :goto_0
     iget-object v1, p0, Lv2/com/playhaven/interstitial/jsbridge/handlers/DismissHandler;->contentDisplayer:Ljava/lang/ref/WeakReference;
 
@@ -51,7 +51,7 @@
     return-void
 
     .line 17
-    .end local v0           #closePingUrl:Ljava/lang/String;
+    .end local v0    # "closePingUrl":Ljava/lang/String;
     :cond_0
     const/4 v1, 0x0
 

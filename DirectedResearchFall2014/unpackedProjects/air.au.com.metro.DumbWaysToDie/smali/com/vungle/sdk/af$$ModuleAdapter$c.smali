@@ -37,7 +37,6 @@
 # direct methods
 .method public constructor <init>(Lcom/vungle/sdk/af;)V
     .locals 4
-    .parameter
 
     .prologue
     .line 102

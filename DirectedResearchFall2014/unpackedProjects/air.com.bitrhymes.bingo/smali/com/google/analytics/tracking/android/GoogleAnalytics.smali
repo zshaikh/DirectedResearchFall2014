@@ -71,7 +71,7 @@
 
 .method private constructor <init>(Landroid/content/Context;)V
     .locals 1
-    .parameter "context"
+    .param p1, "context"    # Landroid/content/Context;
 
     .prologue
     .line 56
@@ -87,8 +87,8 @@
 
 .method private constructor <init>(Landroid/content/Context;Lcom/google/analytics/tracking/android/AnalyticsThread;)V
     .locals 2
-    .parameter "context"
-    .parameter "thread"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "thread"    # Lcom/google/analytics/tracking/android/AnalyticsThread;
 
     .prologue
     .line 59
@@ -155,8 +155,8 @@
 
 .method static synthetic access$002(Lcom/google/analytics/tracking/android/GoogleAnalytics;Ljava/lang/Boolean;)Ljava/lang/Boolean;
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
+    .param p0, "x0"    # Lcom/google/analytics/tracking/android/GoogleAnalytics;
+    .param p1, "x1"    # Ljava/lang/Boolean;
 
     .prologue
     .line 24
@@ -167,8 +167,8 @@
 
 .method static synthetic access$102(Lcom/google/analytics/tracking/android/GoogleAnalytics;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
+    .param p0, "x0"    # Lcom/google/analytics/tracking/android/GoogleAnalytics;
+    .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
     .line 24
@@ -241,7 +241,7 @@
 
 .method public static getInstance(Landroid/content/Context;)Lcom/google/analytics/tracking/android/GoogleAnalytics;
     .locals 2
-    .parameter "context"
+    .param p0, "context"    # Landroid/content/Context;
 
     .prologue
     .line 90
@@ -283,8 +283,8 @@
 
 .method static getNewInstance(Landroid/content/Context;Lcom/google/analytics/tracking/android/AnalyticsThread;)Lcom/google/analytics/tracking/android/GoogleAnalytics;
     .locals 2
-    .parameter "context"
-    .parameter "thread"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "thread"    # Lcom/google/analytics/tracking/android/AnalyticsThread;
     .annotation build Lcom/google/android/gms/common/util/VisibleForTesting;
     .end annotation
 
@@ -345,7 +345,7 @@
 
 .method public closeTracker(Lcom/google/analytics/tracking/android/Tracker;)V
     .locals 1
-    .parameter "tracker"
+    .param p1, "tracker"    # Lcom/google/analytics/tracking/android/Tracker;
 
     .prologue
     .line 207
@@ -464,7 +464,7 @@
 
 .method public getTracker(Ljava/lang/String;)Lcom/google/analytics/tracking/android/Tracker;
     .locals 3
-    .parameter "trackingId"
+    .param p1, "trackingId"    # Ljava/lang/String;
 
     .prologue
     .line 166
@@ -505,17 +505,17 @@
     check-cast v0, Lcom/google/analytics/tracking/android/Tracker;
 
     .line 172
-    .local v0, tracker:Lcom/google/analytics/tracking/android/Tracker;
+    .local v0, "tracker":Lcom/google/analytics/tracking/android/Tracker;
     if-nez v0, :cond_1
 
     .line 173
     new-instance v0, Lcom/google/analytics/tracking/android/Tracker;
 
-    .end local v0           #tracker:Lcom/google/analytics/tracking/android/Tracker;
+    .end local v0    # "tracker":Lcom/google/analytics/tracking/android/Tracker;
     invoke-direct {v0, p1, p0}, Lcom/google/analytics/tracking/android/Tracker;-><init>(Ljava/lang/String;Lcom/google/analytics/tracking/android/TrackerHandler;)V
 
     .line 174
-    .restart local v0       #tracker:Lcom/google/analytics/tracking/android/Tracker;
+    .restart local v0    # "tracker":Lcom/google/analytics/tracking/android/Tracker;
     iget-object v1, p0, Lcom/google/analytics/tracking/android/GoogleAnalytics;->mTrackers:Ljava/util/Map;
 
     invoke-interface {v1, p1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -577,7 +577,7 @@
 
 .method public requestAppOptOut(Lcom/google/analytics/tracking/android/GoogleAnalytics$AppOptOutCallback;)V
     .locals 2
-    .parameter "callback"
+    .param p1, "callback"    # Lcom/google/analytics/tracking/android/GoogleAnalytics$AppOptOutCallback;
 
     .prologue
     .line 297
@@ -618,7 +618,6 @@
 
 .method public sendHit(Ljava/util/Map;)V
     .locals 3
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -632,7 +631,7 @@
 
     .prologue
     .line 217
-    .local p1, hit:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p1, "hit":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     monitor-enter p0
 
     .line 218
@@ -786,7 +785,7 @@
 
 .method public setAppOptOut(Z)V
     .locals 2
-    .parameter "optOut"
+    .param p1, "optOut"    # Z
 
     .prologue
     .line 276
@@ -816,7 +815,7 @@
 
 .method public setDebug(Z)V
     .locals 2
-    .parameter "debug"
+    .param p1, "debug"    # Z
 
     .prologue
     .line 145
@@ -840,7 +839,7 @@
 
 .method public setDefaultTracker(Lcom/google/analytics/tracking/android/Tracker;)V
     .locals 2
-    .parameter "tracker"
+    .param p1, "tracker"    # Lcom/google/analytics/tracking/android/Tracker;
 
     .prologue
     .line 199

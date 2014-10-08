@@ -42,7 +42,7 @@
 
 .field private static final MANAGE_PERMISSION_PREFIX:Ljava/lang/String; = "manage"
 
-.field private static final OTHER_PUBLISH_PERMISSIONS:Ljava/util/Set; = null
+.field private static final OTHER_PUBLISH_PERMISSIONS:Ljava/util/Set;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Set",
@@ -57,9 +57,9 @@
 
 .field private static final SESSION_BUNDLE_SAVE_KEY:Ljava/lang/String; = "com.facebook.sdk.Session.saveSessionKey"
 
-.field private static final STATIC_LOCK:Ljava/lang/Object; = null
+.field private static final STATIC_LOCK:Ljava/lang/Object;
 
-.field public static final TAG:Ljava/lang/String; = null
+.field public static final TAG:Ljava/lang/String;
 
 .field private static final TOKEN_EXTEND_RETRY_SECONDS:I = 0xe10
 
@@ -308,7 +308,7 @@
 
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 2
-    .parameter "currentContext"
+    .param p1, "currentContext"    # Landroid/content/Context;
 
     .prologue
     const/4 v1, 0x0
@@ -324,9 +324,9 @@
 
 .method constructor <init>(Landroid/content/Context;Ljava/lang/String;Lcom/facebook/TokenCachingStrategy;)V
     .locals 1
-    .parameter "context"
-    .parameter "applicationId"
-    .parameter "tokenCachingStrategy"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "applicationId"    # Ljava/lang/String;
+    .param p3, "tokenCachingStrategy"    # Lcom/facebook/TokenCachingStrategy;
 
     .prologue
     .line 216
@@ -340,10 +340,10 @@
 
 .method constructor <init>(Landroid/content/Context;Ljava/lang/String;Lcom/facebook/TokenCachingStrategy;Z)V
     .locals 7
-    .parameter "context"
-    .parameter "applicationId"
-    .parameter "tokenCachingStrategy"
-    .parameter "loadTokenFromCache"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "applicationId"    # Ljava/lang/String;
+    .param p3, "tokenCachingStrategy"    # Lcom/facebook/TokenCachingStrategy;
+    .param p4, "loadTokenFromCache"    # Z
 
     .prologue
     const/4 v6, 0x0
@@ -392,13 +392,13 @@
     .line 232
     new-instance p3, Lcom/facebook/SharedPreferencesTokenCachingStrategy;
 
-    .end local p3
+    .end local p3    # "tokenCachingStrategy":Lcom/facebook/TokenCachingStrategy;
     sget-object v3, Lcom/facebook/Session;->staticContext:Landroid/content/Context;
 
     invoke-direct {p3, v3}, Lcom/facebook/SharedPreferencesTokenCachingStrategy;-><init>(Landroid/content/Context;)V
 
     .line 235
-    .restart local p3
+    .restart local p3    # "tokenCachingStrategy":Lcom/facebook/TokenCachingStrategy;
     :cond_1
     iput-object p2, p0, Lcom/facebook/Session;->applicationId:Ljava/lang/String;
 
@@ -441,7 +441,7 @@
     move-object v2, v3
 
     .line 243
-    .local v2, tokenState:Landroid/os/Bundle;
+    .local v2, "tokenState":Landroid/os/Bundle;
     :goto_0
     invoke-static {v2}, Lcom/facebook/TokenCachingStrategy;->hasTokenInformation(Landroid/os/Bundle;)Z
 
@@ -457,13 +457,13 @@
     move-result-object v0
 
     .line 246
-    .local v0, cachedExpirationDate:Ljava/util/Date;
+    .local v0, "cachedExpirationDate":Ljava/util/Date;
     new-instance v1, Ljava/util/Date;
 
     invoke-direct {v1}, Ljava/util/Date;-><init>()V
 
     .line 248
-    .local v1, now:Ljava/util/Date;
+    .local v1, "now":Ljava/util/Date;
     if-eqz v0, :cond_2
 
     invoke-virtual {v0, v1}, Ljava/util/Date;->before(Ljava/util/Date;)Z
@@ -488,12 +488,12 @@
     iput-object v3, p0, Lcom/facebook/Session;->tokenInfo:Lcom/facebook/AccessToken;
 
     .line 261
-    .end local v0           #cachedExpirationDate:Ljava/util/Date;
-    .end local v1           #now:Ljava/util/Date;
+    .end local v0    # "cachedExpirationDate":Ljava/util/Date;
+    .end local v1    # "now":Ljava/util/Date;
     :goto_1
     return-void
 
-    .end local v2           #tokenState:Landroid/os/Bundle;
+    .end local v2    # "tokenState":Landroid/os/Bundle;
     :cond_3
     move-object v2, v6
 
@@ -501,9 +501,9 @@
     goto :goto_0
 
     .line 255
-    .restart local v0       #cachedExpirationDate:Ljava/util/Date;
-    .restart local v1       #now:Ljava/util/Date;
-    .restart local v2       #tokenState:Landroid/os/Bundle;
+    .restart local v0    # "cachedExpirationDate":Ljava/util/Date;
+    .restart local v1    # "now":Ljava/util/Date;
+    .restart local v2    # "tokenState":Landroid/os/Bundle;
     :cond_4
     invoke-static {v2}, Lcom/facebook/AccessToken;->createFromCache(Landroid/os/Bundle;)Lcom/facebook/AccessToken;
 
@@ -519,8 +519,8 @@
     goto :goto_1
 
     .line 259
-    .end local v0           #cachedExpirationDate:Ljava/util/Date;
-    .end local v1           #now:Ljava/util/Date;
+    .end local v0    # "cachedExpirationDate":Ljava/util/Date;
+    .end local v1    # "now":Ljava/util/Date;
     :cond_5
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
@@ -537,12 +537,12 @@
 
 .method private constructor <init>(Ljava/lang/String;Lcom/facebook/SessionState;Lcom/facebook/AccessToken;Ljava/util/Date;ZLcom/facebook/Session$AuthorizationRequest;)V
     .locals 4
-    .parameter "applicationId"
-    .parameter "state"
-    .parameter "tokenInfo"
-    .parameter "lastAttemptedTokenExtendDate"
-    .parameter "shouldAutoPublish"
-    .parameter "pendingAuthorizationRequest"
+    .param p1, "applicationId"    # Ljava/lang/String;
+    .param p2, "state"    # Lcom/facebook/SessionState;
+    .param p3, "tokenInfo"    # Lcom/facebook/AccessToken;
+    .param p4, "lastAttemptedTokenExtendDate"    # Ljava/util/Date;
+    .param p5, "shouldAutoPublish"    # Z
+    .param p6, "pendingAuthorizationRequest"    # Lcom/facebook/Session$AuthorizationRequest;
 
     .prologue
     const/4 v3, 0x0
@@ -611,13 +611,6 @@
 
 .method synthetic constructor <init>(Ljava/lang/String;Lcom/facebook/SessionState;Lcom/facebook/AccessToken;Ljava/util/Date;ZLcom/facebook/Session$AuthorizationRequest;Lcom/facebook/Session;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 192
@@ -638,7 +631,6 @@
 
 .method static synthetic access$2(Lcom/facebook/Session;)Lcom/facebook/Session$TokenRefreshRequest;
     .locals 1
-    .parameter
 
     .prologue
     .line 154
@@ -649,8 +641,6 @@
 
 .method static synthetic access$3(Lcom/facebook/Session;Lcom/facebook/Session$TokenRefreshRequest;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 154
@@ -661,8 +651,6 @@
 
 .method static synthetic access$4(Lcom/facebook/Session;Lcom/facebook/Session$AutoPublishAsyncTask;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 150
@@ -673,9 +661,6 @@
 
 .method static synthetic access$6(Lcom/facebook/Session;ILcom/facebook/AuthorizationClient$Result;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 1071
@@ -686,7 +671,6 @@
 
 .method static synthetic access$7(Lcom/facebook/Session;)Ljava/util/List;
     .locals 1
-    .parameter
 
     .prologue
     .line 148
@@ -697,7 +681,6 @@
 
 .method static synthetic access$8(Lcom/facebook/Session;)Landroid/os/Handler;
     .locals 1
-    .parameter
 
     .prologue
     .line 149
@@ -708,8 +691,6 @@
 
 .method static synthetic access$9(Landroid/os/Handler;Ljava/lang/Runnable;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 1330
@@ -720,8 +701,8 @@
 
 .method private static areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
     .locals 1
-    .parameter "a"
-    .parameter "b"
+    .param p0, "a"    # Ljava/lang/Object;
+    .param p1, "b"    # Ljava/lang/Object;
 
     .prologue
     .line 1523
@@ -759,7 +740,7 @@
     const/4 v1, 0x0
 
     .line 1588
-    .local v1, asyncTask:Lcom/facebook/Session$AutoPublishAsyncTask;
+    .local v1, "asyncTask":Lcom/facebook/Session$AutoPublishAsyncTask;
     monitor-enter p0
 
     .line 1589
@@ -778,7 +759,7 @@
     iget-object v0, p0, Lcom/facebook/Session;->applicationId:Ljava/lang/String;
 
     .line 1594
-    .local v0, applicationId:Ljava/lang/String;
+    .local v0, "applicationId":Ljava/lang/String;
     if-eqz v0, :cond_0
 
     .line 1595
@@ -790,14 +771,14 @@
 
     iput-object v2, p0, Lcom/facebook/Session;->autoPublishAsyncTask:Lcom/facebook/Session$AutoPublishAsyncTask;
 
-    .end local v1           #asyncTask:Lcom/facebook/Session$AutoPublishAsyncTask;
-    .local v2, asyncTask:Lcom/facebook/Session$AutoPublishAsyncTask;
+    .end local v1    # "asyncTask":Lcom/facebook/Session$AutoPublishAsyncTask;
+    .local v2, "asyncTask":Lcom/facebook/Session$AutoPublishAsyncTask;
     move-object v1, v2
 
     .line 1588
-    .end local v0           #applicationId:Ljava/lang/String;
-    .end local v2           #asyncTask:Lcom/facebook/Session$AutoPublishAsyncTask;
-    .restart local v1       #asyncTask:Lcom/facebook/Session$AutoPublishAsyncTask;
+    .end local v0    # "applicationId":Ljava/lang/String;
+    .end local v2    # "asyncTask":Lcom/facebook/Session$AutoPublishAsyncTask;
+    .restart local v1    # "asyncTask":Lcom/facebook/Session$AutoPublishAsyncTask;
     :cond_0
     monitor-exit p0
     :try_end_0
@@ -831,15 +812,15 @@
 
 .method private finishAuthorization(Lcom/facebook/AccessToken;Ljava/lang/Exception;)V
     .locals 2
-    .parameter "newToken"
-    .parameter "exception"
+    .param p1, "newToken"    # Lcom/facebook/AccessToken;
+    .param p2, "exception"    # Ljava/lang/Exception;
 
     .prologue
     .line 1245
     iget-object v0, p0, Lcom/facebook/Session;->state:Lcom/facebook/SessionState;
 
     .line 1246
-    .local v0, oldState:Lcom/facebook/SessionState;
+    .local v0, "oldState":Lcom/facebook/SessionState;
     if-eqz p1, :cond_1
 
     .line 1247
@@ -882,15 +863,15 @@
 
 .method private finishReauthorization(Lcom/facebook/AccessToken;Ljava/lang/Exception;)V
     .locals 2
-    .parameter "newToken"
-    .parameter "exception"
+    .param p1, "newToken"    # Lcom/facebook/AccessToken;
+    .param p2, "exception"    # Ljava/lang/Exception;
 
     .prologue
     .line 1259
     iget-object v0, p0, Lcom/facebook/Session;->state:Lcom/facebook/SessionState;
 
     .line 1261
-    .local v0, oldState:Lcom/facebook/SessionState;
+    .local v0, "oldState":Lcom/facebook/SessionState;
     if-eqz p1, :cond_0
 
     .line 1262
@@ -994,7 +975,7 @@
 
 .method private getLoginActivityIntent(Lcom/facebook/Session$AuthorizationRequest;)Landroid/content/Intent;
     .locals 5
-    .parameter "request"
+    .param p1, "request"    # Lcom/facebook/Session$AuthorizationRequest;
 
     .prologue
     .line 1183
@@ -1003,7 +984,7 @@
     invoke-direct {v2}, Landroid/content/Intent;-><init>()V
 
     .line 1184
-    .local v2, intent:Landroid/content/Intent;
+    .local v2, "intent":Landroid/content/Intent;
     invoke-static {}, Lcom/facebook/Session;->getStaticContext()Landroid/content/Context;
 
     move-result-object v3
@@ -1029,13 +1010,13 @@
     move-result-object v0
 
     .line 1189
-    .local v0, authClientRequest:Lcom/facebook/AuthorizationClient$AuthorizationRequest;
+    .local v0, "authClientRequest":Lcom/facebook/AuthorizationClient$AuthorizationRequest;
     invoke-static {v0}, Lcom/facebook/LoginActivity;->populateIntentExtras(Lcom/facebook/AuthorizationClient$AuthorizationRequest;)Landroid/os/Bundle;
 
     move-result-object v1
 
     .line 1190
-    .local v1, extras:Landroid/os/Bundle;
+    .local v1, "extras":Landroid/os/Bundle;
     invoke-virtual {v2, v1}, Landroid/content/Intent;->putExtras(Landroid/os/Bundle;)Landroid/content/Intent;
 
     .line 1192
@@ -1054,19 +1035,19 @@
 
 .method private handleAuthorizationResult(ILcom/facebook/AuthorizationClient$Result;)V
     .locals 4
-    .parameter "resultCode"
-    .parameter "result"
+    .param p1, "resultCode"    # I
+    .param p2, "result"    # Lcom/facebook/AuthorizationClient$Result;
 
     .prologue
     .line 1072
     const/4 v1, 0x0
 
     .line 1073
-    .local v1, newToken:Lcom/facebook/AccessToken;
+    .local v1, "newToken":Lcom/facebook/AccessToken;
     const/4 v0, 0x0
 
     .line 1074
-    .local v0, exception:Ljava/lang/Exception;
+    .local v0, "exception":Ljava/lang/Exception;
     const/4 v2, -0x1
 
     if-ne p1, v2, :cond_2
@@ -1105,13 +1086,13 @@
     :cond_1
     new-instance v0, Lcom/facebook/FacebookAuthorizationException;
 
-    .end local v0           #exception:Ljava/lang/Exception;
+    .end local v0    # "exception":Ljava/lang/Exception;
     iget-object v2, p2, Lcom/facebook/AuthorizationClient$Result;->errorMessage:Ljava/lang/String;
 
     invoke-direct {v0, v2}, Lcom/facebook/FacebookAuthorizationException;-><init>(Ljava/lang/String;)V
 
     .line 1080
-    .restart local v0       #exception:Ljava/lang/Exception;
+    .restart local v0    # "exception":Ljava/lang/Exception;
     goto :goto_0
 
     :cond_2
@@ -1120,18 +1101,18 @@
     .line 1081
     new-instance v0, Lcom/facebook/FacebookOperationCanceledException;
 
-    .end local v0           #exception:Ljava/lang/Exception;
+    .end local v0    # "exception":Ljava/lang/Exception;
     iget-object v2, p2, Lcom/facebook/AuthorizationClient$Result;->errorMessage:Ljava/lang/String;
 
     invoke-direct {v0, v2}, Lcom/facebook/FacebookOperationCanceledException;-><init>(Ljava/lang/String;)V
 
-    .restart local v0       #exception:Ljava/lang/Exception;
+    .restart local v0    # "exception":Ljava/lang/Exception;
     goto :goto_0
 .end method
 
 .method static initializeStaticContext(Landroid/content/Context;)V
     .locals 2
-    .parameter "currentContext"
+    .param p0, "currentContext"    # Landroid/content/Context;
 
     .prologue
     .line 902
@@ -1147,7 +1128,7 @@
     move-result-object v0
 
     .line 904
-    .local v0, applicationContext:Landroid/content/Context;
+    .local v0, "applicationContext":Landroid/content/Context;
     if-eqz v0, :cond_1
 
     move-object v1, v0
@@ -1156,11 +1137,11 @@
     sput-object v1, Lcom/facebook/Session;->staticContext:Landroid/content/Context;
 
     .line 906
-    .end local v0           #applicationContext:Landroid/content/Context;
+    .end local v0    # "applicationContext":Landroid/content/Context;
     :cond_0
     return-void
 
-    .restart local v0       #applicationContext:Landroid/content/Context;
+    .restart local v0    # "applicationContext":Landroid/content/Context;
     :cond_1
     move-object v1, p0
 
@@ -1170,7 +1151,7 @@
 
 .method public static isPublishPermission(Ljava/lang/String;)Z
     .locals 1
-    .parameter "permission"
+    .param p0, "permission"    # Ljava/lang/String;
 
     .prologue
     .line 1064
@@ -1218,9 +1199,8 @@
 
 .method private logAuthorizationComplete(Lcom/facebook/AuthorizationClient$Result$Code;Ljava/util/Map;Ljava/lang/Exception;)V
     .locals 7
-    .parameter "result"
-    .parameter
-    .parameter "exception"
+    .param p1, "result"    # Lcom/facebook/AuthorizationClient$Result$Code;
+    .param p3, "exception"    # Ljava/lang/Exception;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1236,7 +1216,7 @@
     .end annotation
 
     .prologue
-    .local p2, resultExtras:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p2, "resultExtras":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v6, "5_error_message"
 
     const-string v5, "2_result"
@@ -1245,7 +1225,7 @@
     const/4 v0, 0x0
 
     .line 1116
-    .local v0, bundle:Landroid/os/Bundle;
+    .local v0, "bundle":Landroid/os/Bundle;
     iget-object v4, p0, Lcom/facebook/Session;->pendingAuthorizationRequest:Lcom/facebook/Session$AuthorizationRequest;
 
     if-nez v4, :cond_1
@@ -1296,7 +1276,7 @@
     move-result-object v3
 
     .line 1155
-    .local v3, logger:Lcom/facebook/AppEventsLogger;
+    .local v3, "logger":Lcom/facebook/AppEventsLogger;
     const-string v4, "fb_mobile_login_complete"
 
     const/4 v5, 0x0
@@ -1307,7 +1287,7 @@
     return-void
 
     .line 1124
-    .end local v3           #logger:Lcom/facebook/AppEventsLogger;
+    .end local v3    # "logger":Lcom/facebook/AppEventsLogger;
     :cond_1
     iget-object v4, p0, Lcom/facebook/Session;->pendingAuthorizationRequest:Lcom/facebook/Session$AuthorizationRequest;
 
@@ -1355,10 +1335,10 @@
     const/4 v2, 0x0
 
     .line 1134
-    .local v2, jsonObject:Lorg/json/JSONObject;
+    .local v2, "jsonObject":Lorg/json/JSONObject;
     iget-object v4, p0, Lcom/facebook/Session;->pendingAuthorizationRequest:Lcom/facebook/Session$AuthorizationRequest;
 
-    #getter for: Lcom/facebook/Session$AuthorizationRequest;->loggingExtras:Ljava/util/Map;
+    # getter for: Lcom/facebook/Session$AuthorizationRequest;->loggingExtras:Ljava/util/Map;
     invoke-static {v4}, Lcom/facebook/Session$AuthorizationRequest;->access$2(Lcom/facebook/Session$AuthorizationRequest;)Ljava/util/Map;
 
     move-result-object v4
@@ -1372,10 +1352,10 @@
     .line 1135
     new-instance v2, Lorg/json/JSONObject;
 
-    .end local v2           #jsonObject:Lorg/json/JSONObject;
+    .end local v2    # "jsonObject":Lorg/json/JSONObject;
     iget-object v4, p0, Lcom/facebook/Session;->pendingAuthorizationRequest:Lcom/facebook/Session$AuthorizationRequest;
 
-    #getter for: Lcom/facebook/Session$AuthorizationRequest;->loggingExtras:Ljava/util/Map;
+    # getter for: Lcom/facebook/Session$AuthorizationRequest;->loggingExtras:Ljava/util/Map;
     invoke-static {v4}, Lcom/facebook/Session$AuthorizationRequest;->access$2(Lcom/facebook/Session$AuthorizationRequest;)Ljava/util/Map;
 
     move-result-object v4
@@ -1383,7 +1363,7 @@
     invoke-direct {v2, v4}, Lorg/json/JSONObject;-><init>(Ljava/util/Map;)V
 
     .line 1137
-    .restart local v2       #jsonObject:Lorg/json/JSONObject;
+    .restart local v2    # "jsonObject":Lorg/json/JSONObject;
     :cond_4
     if-eqz p2, :cond_6
 
@@ -1393,11 +1373,11 @@
     .line 1139
     new-instance v2, Lorg/json/JSONObject;
 
-    .end local v2           #jsonObject:Lorg/json/JSONObject;
+    .end local v2    # "jsonObject":Lorg/json/JSONObject;
     invoke-direct {v2}, Lorg/json/JSONObject;-><init>()V
 
     .line 1142
-    .restart local v2       #jsonObject:Lorg/json/JSONObject;
+    .restart local v2    # "jsonObject":Lorg/json/JSONObject;
     :cond_5
     :try_start_0
     invoke-interface {p2}, Ljava/util/Map;->entrySet()Ljava/util/Set;
@@ -1443,7 +1423,7 @@
     check-cast v1, Ljava/util/Map$Entry;
 
     .line 1143
-    .local v1, entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v1, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v4
@@ -1461,7 +1441,7 @@
     goto :goto_1
 
     .line 1145
-    .end local v1           #entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
+    .end local v1    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
     :catch_0
     move-exception v4
 
@@ -1484,7 +1464,7 @@
     move-result-object v0
 
     .line 1092
-    .local v0, bundle:Landroid/os/Bundle;
+    .local v0, "bundle":Landroid/os/Bundle;
     const-string v3, "1_timestamp_ms"
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -1500,13 +1480,13 @@
     invoke-direct {v1}, Lorg/json/JSONObject;-><init>()V
 
     .line 1097
-    .local v1, extras:Lorg/json/JSONObject;
+    .local v1, "extras":Lorg/json/JSONObject;
     const-string v3, "login_behavior"
 
     .line 1098
     iget-object v4, p0, Lcom/facebook/Session;->pendingAuthorizationRequest:Lcom/facebook/Session$AuthorizationRequest;
 
-    #getter for: Lcom/facebook/Session$AuthorizationRequest;->loginBehavior:Lcom/facebook/SessionLoginBehavior;
+    # getter for: Lcom/facebook/Session$AuthorizationRequest;->loginBehavior:Lcom/facebook/SessionLoginBehavior;
     invoke-static {v4}, Lcom/facebook/Session$AuthorizationRequest;->access$4(Lcom/facebook/Session$AuthorizationRequest;)Lcom/facebook/SessionLoginBehavior;
 
     move-result-object v4
@@ -1523,7 +1503,7 @@
 
     iget-object v4, p0, Lcom/facebook/Session;->pendingAuthorizationRequest:Lcom/facebook/Session$AuthorizationRequest;
 
-    #getter for: Lcom/facebook/Session$AuthorizationRequest;->requestCode:I
+    # getter for: Lcom/facebook/Session$AuthorizationRequest;->requestCode:I
     invoke-static {v4}, Lcom/facebook/Session$AuthorizationRequest;->access$5(Lcom/facebook/Session$AuthorizationRequest;)I
 
     move-result v4
@@ -1535,7 +1515,7 @@
 
     iget-object v4, p0, Lcom/facebook/Session;->pendingAuthorizationRequest:Lcom/facebook/Session$AuthorizationRequest;
 
-    #getter for: Lcom/facebook/Session$AuthorizationRequest;->isLegacy:Z
+    # getter for: Lcom/facebook/Session$AuthorizationRequest;->isLegacy:Z
     invoke-static {v4}, Lcom/facebook/Session$AuthorizationRequest;->access$3(Lcom/facebook/Session$AuthorizationRequest;)Z
 
     move-result v4
@@ -1550,7 +1530,7 @@
 
     iget-object v5, p0, Lcom/facebook/Session;->pendingAuthorizationRequest:Lcom/facebook/Session$AuthorizationRequest;
 
-    #getter for: Lcom/facebook/Session$AuthorizationRequest;->permissions:Ljava/util/List;
+    # getter for: Lcom/facebook/Session$AuthorizationRequest;->permissions:Ljava/util/List;
     invoke-static {v5}, Lcom/facebook/Session$AuthorizationRequest;->access$6(Lcom/facebook/Session$AuthorizationRequest;)Ljava/util/List;
 
     move-result-object v5
@@ -1568,7 +1548,7 @@
     .line 1104
     iget-object v4, p0, Lcom/facebook/Session;->pendingAuthorizationRequest:Lcom/facebook/Session$AuthorizationRequest;
 
-    #getter for: Lcom/facebook/Session$AuthorizationRequest;->defaultAudience:Lcom/facebook/SessionDefaultAudience;
+    # getter for: Lcom/facebook/Session$AuthorizationRequest;->defaultAudience:Lcom/facebook/SessionDefaultAudience;
     invoke-static {v4}, Lcom/facebook/Session$AuthorizationRequest;->access$7(Lcom/facebook/Session$AuthorizationRequest;)Lcom/facebook/SessionDefaultAudience;
 
     move-result-object v4
@@ -1592,14 +1572,14 @@
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 1109
-    .end local v1           #extras:Lorg/json/JSONObject;
+    .end local v1    # "extras":Lorg/json/JSONObject;
     :goto_0
     invoke-direct {p0}, Lcom/facebook/Session;->getAppEventsLogger()Lcom/facebook/AppEventsLogger;
 
     move-result-object v2
 
     .line 1110
-    .local v2, logger:Lcom/facebook/AppEventsLogger;
+    .local v2, "logger":Lcom/facebook/AppEventsLogger;
     const-string v3, "fb_mobile_login_start"
 
     const/4 v4, 0x0
@@ -1610,7 +1590,7 @@
     return-void
 
     .line 1106
-    .end local v2           #logger:Lcom/facebook/AppEventsLogger;
+    .end local v2    # "logger":Lcom/facebook/AppEventsLogger;
     :catch_0
     move-exception v3
 
@@ -1619,8 +1599,8 @@
 
 .method private open(Lcom/facebook/Session$OpenRequest;Lcom/facebook/internal/SessionAuthorizationType;)V
     .locals 7
-    .parameter "openRequest"
-    .parameter "authType"
+    .param p1, "openRequest"    # Lcom/facebook/Session$OpenRequest;
+    .param p2, "authType"    # Lcom/facebook/internal/SessionAuthorizationType;
 
     .prologue
     .line 952
@@ -1668,7 +1648,7 @@
     iget-object v1, p0, Lcom/facebook/Session;->state:Lcom/facebook/SessionState;
 
     .line 964
-    .local v1, oldState:Lcom/facebook/SessionState;
+    .local v1, "oldState":Lcom/facebook/SessionState;
     invoke-static {}, Lcom/facebook/Session;->$SWITCH_TABLE$com$facebook$SessionState()[I
 
     move-result-object v3
@@ -1695,7 +1675,7 @@
     throw v3
 
     .line 956
-    .end local v1           #oldState:Lcom/facebook/SessionState;
+    .end local v1    # "oldState":Lcom/facebook/SessionState;
     :catchall_0
     move-exception v3
 
@@ -1706,12 +1686,12 @@
     throw v3
 
     .line 966
-    .restart local v1       #oldState:Lcom/facebook/SessionState;
+    .restart local v1    # "oldState":Lcom/facebook/SessionState;
     :pswitch_0
     :try_start_1
     sget-object v0, Lcom/facebook/SessionState;->OPENING:Lcom/facebook/SessionState;
 
-    .local v0, newState:Lcom/facebook/SessionState;
+    .local v0, "newState":Lcom/facebook/SessionState;
     iput-object v0, p0, Lcom/facebook/Session;->state:Lcom/facebook/SessionState;
 
     .line 967
@@ -1763,7 +1743,7 @@
     goto :goto_0
 
     .line 973
-    .end local v0           #newState:Lcom/facebook/SessionState;
+    .end local v0    # "newState":Lcom/facebook/SessionState;
     :pswitch_1
     if-eqz p1, :cond_4
 
@@ -1805,17 +1785,17 @@
     .line 979
     sget-object v0, Lcom/facebook/SessionState;->OPENED:Lcom/facebook/SessionState;
 
-    .restart local v0       #newState:Lcom/facebook/SessionState;
+    .restart local v0    # "newState":Lcom/facebook/SessionState;
     iput-object v0, p0, Lcom/facebook/Session;->state:Lcom/facebook/SessionState;
 
     goto :goto_1
 
     .line 981
-    .end local v0           #newState:Lcom/facebook/SessionState;
+    .end local v0    # "newState":Lcom/facebook/SessionState;
     :cond_5
     sget-object v0, Lcom/facebook/SessionState;->OPENING:Lcom/facebook/SessionState;
 
-    .restart local v0       #newState:Lcom/facebook/SessionState;
+    .restart local v0    # "newState":Lcom/facebook/SessionState;
     iput-object v0, p0, Lcom/facebook/Session;->state:Lcom/facebook/SessionState;
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
@@ -1834,9 +1814,9 @@
 
 .method public static openActiveSession(Landroid/app/Activity;ZLcom/facebook/Session$StatusCallback;)Lcom/facebook/Session;
     .locals 1
-    .parameter "activity"
-    .parameter "allowLoginUI"
-    .parameter "callback"
+    .param p0, "activity"    # Landroid/app/Activity;
+    .param p1, "allowLoginUI"    # Z
+    .param p2, "callback"    # Lcom/facebook/Session$StatusCallback;
 
     .prologue
     .line 830
@@ -1857,10 +1837,10 @@
 
 .method public static openActiveSession(Landroid/content/Context;Landroid/support/v4/app/Fragment;ZLcom/facebook/Session$StatusCallback;)Lcom/facebook/Session;
     .locals 1
-    .parameter "context"
-    .parameter "fragment"
-    .parameter "allowLoginUI"
-    .parameter "callback"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "fragment"    # Landroid/support/v4/app/Fragment;
+    .param p2, "allowLoginUI"    # Z
+    .param p3, "callback"    # Lcom/facebook/Session$StatusCallback;
 
     .prologue
     .line 853
@@ -1881,9 +1861,9 @@
 
 .method private static openActiveSession(Landroid/content/Context;ZLcom/facebook/Session$OpenRequest;)Lcom/facebook/Session;
     .locals 3
-    .parameter "context"
-    .parameter "allowLoginUI"
-    .parameter "openRequest"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "allowLoginUI"    # Z
+    .param p2, "openRequest"    # Lcom/facebook/Session$OpenRequest;
 
     .prologue
     .line 888
@@ -1896,7 +1876,7 @@
     move-result-object v0
 
     .line 889
-    .local v0, session:Lcom/facebook/Session;
+    .local v0, "session":Lcom/facebook/Session;
     sget-object v1, Lcom/facebook/SessionState;->CREATED_TOKEN_LOADED:Lcom/facebook/SessionState;
 
     invoke-virtual {v0}, Lcom/facebook/Session;->getState()Lcom/facebook/SessionState;
@@ -1932,7 +1912,7 @@
 
 .method public static openActiveSessionFromCache(Landroid/content/Context;)Lcom/facebook/Session;
     .locals 2
-    .parameter "context"
+    .param p0, "context"    # Landroid/content/Context;
 
     .prologue
     .line 808
@@ -1949,9 +1929,9 @@
 
 .method public static openActiveSessionWithAccessToken(Landroid/content/Context;Lcom/facebook/AccessToken;Lcom/facebook/Session$StatusCallback;)Lcom/facebook/Session;
     .locals 3
-    .parameter "context"
-    .parameter "accessToken"
-    .parameter "callback"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "accessToken"    # Lcom/facebook/AccessToken;
+    .param p2, "callback"    # Lcom/facebook/Session$StatusCallback;
 
     .prologue
     const/4 v2, 0x0
@@ -1964,7 +1944,7 @@
     invoke-direct {v0, p0, v2, v2, v1}, Lcom/facebook/Session;-><init>(Landroid/content/Context;Ljava/lang/String;Lcom/facebook/TokenCachingStrategy;Z)V
 
     .line 881
-    .local v0, session:Lcom/facebook/Session;
+    .local v0, "session":Lcom/facebook/Session;
     invoke-static {v0}, Lcom/facebook/Session;->setActiveSession(Lcom/facebook/Session;)V
 
     .line 882
@@ -1976,7 +1956,7 @@
 
 .method static postActiveSessionAction(Ljava/lang/String;)V
     .locals 2
-    .parameter "action"
+    .param p0, "action"    # Ljava/lang/String;
 
     .prologue
     .line 1325
@@ -1985,7 +1965,7 @@
     invoke-direct {v0, p0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
     .line 1327
-    .local v0, intent:Landroid/content/Intent;
+    .local v0, "intent":Landroid/content/Intent;
     invoke-static {}, Lcom/facebook/Session;->getStaticContext()Landroid/content/Context;
 
     move-result-object v1
@@ -2002,7 +1982,7 @@
 
 .method private readObject(Ljava/io/ObjectInputStream;)V
     .locals 2
-    .parameter "stream"
+    .param p1, "stream"    # Ljava/io/ObjectInputStream;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/InvalidObjectException;
@@ -2022,8 +2002,8 @@
 
 .method private requestNewPermissions(Lcom/facebook/Session$NewPermissionsRequest;Lcom/facebook/internal/SessionAuthorizationType;)V
     .locals 3
-    .parameter "newPermissionsRequest"
-    .parameter "authType"
+    .param p1, "newPermissionsRequest"    # Lcom/facebook/Session$NewPermissionsRequest;
+    .param p2, "authType"    # Lcom/facebook/internal/SessionAuthorizationType;
 
     .prologue
     .line 1000
@@ -2139,7 +2119,7 @@
 
 .method private resolveIntent(Landroid/content/Intent;)Z
     .locals 3
-    .parameter "intent"
+    .param p1, "intent"    # Landroid/content/Intent;
 
     .prologue
     const/4 v2, 0x0
@@ -2158,7 +2138,7 @@
     move-result-object v0
 
     .line 1176
-    .local v0, resolveInfo:Landroid/content/pm/ResolveInfo;
+    .local v0, "resolveInfo":Landroid/content/pm/ResolveInfo;
     if-nez v0, :cond_0
 
     move v1, v2
@@ -2175,10 +2155,10 @@
 
 .method public static final restoreSession(Landroid/content/Context;Lcom/facebook/TokenCachingStrategy;Lcom/facebook/Session$StatusCallback;Landroid/os/Bundle;)Lcom/facebook/Session;
     .locals 7
-    .parameter "context"
-    .parameter "cachingStrategy"
-    .parameter "callback"
-    .parameter "bundle"
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "cachingStrategy"    # Lcom/facebook/TokenCachingStrategy;
+    .param p2, "callback"    # Lcom/facebook/Session$StatusCallback;
+    .param p3, "bundle"    # Landroid/os/Bundle;
 
     .prologue
     const/4 v6, 0x0
@@ -2201,7 +2181,7 @@
     move-result-object v0
 
     .line 723
-    .local v0, data:[B
+    .local v0, "data":[B
     if-eqz v0, :cond_3
 
     .line 724
@@ -2210,7 +2190,7 @@
     invoke-direct {v2, v0}, Ljava/io/ByteArrayInputStream;-><init>([B)V
 
     .line 726
-    .local v2, is:Ljava/io/ByteArrayInputStream;
+    .local v2, "is":Ljava/io/ByteArrayInputStream;
     :try_start_0
     new-instance v4, Ljava/io/ObjectInputStream;
 
@@ -2223,7 +2203,7 @@
     check-cast v3, Lcom/facebook/Session;
 
     .line 727
-    .local v3, session:Lcom/facebook/Session;
+    .local v3, "session":Lcom/facebook/Session;
     invoke-static {p0}, Lcom/facebook/Session;->initializeStaticContext(Landroid/content/Context;)V
 
     .line 728
@@ -2268,22 +2248,22 @@
     goto :goto_1
 
     .line 738
-    .end local v3           #session:Lcom/facebook/Session;
+    .end local v3    # "session":Lcom/facebook/Session;
     :catch_0
     move-exception v4
 
     move-object v1, v4
 
     .line 739
-    .local v1, e:Ljava/lang/ClassNotFoundException;
+    .local v1, "e":Ljava/lang/ClassNotFoundException;
     sget-object v4, Lcom/facebook/Session;->TAG:Ljava/lang/String;
 
     const-string v5, "Unable to restore session"
 
     invoke-static {v4, v5, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .end local v1           #e:Ljava/lang/ClassNotFoundException;
-    .end local v2           #is:Ljava/io/ByteArrayInputStream;
+    .end local v1    # "e":Ljava/lang/ClassNotFoundException;
+    .end local v2    # "is":Ljava/io/ByteArrayInputStream;
     :cond_3
     :goto_2
     move-object v4, v6
@@ -2292,14 +2272,14 @@
     goto :goto_0
 
     .line 740
-    .restart local v2       #is:Ljava/io/ByteArrayInputStream;
+    .restart local v2    # "is":Ljava/io/ByteArrayInputStream;
     :catch_1
     move-exception v4
 
     move-object v1, v4
 
     .line 741
-    .local v1, e:Ljava/io/IOException;
+    .local v1, "e":Ljava/io/IOException;
     sget-object v4, Lcom/facebook/Session;->TAG:Ljava/lang/String;
 
     const-string v5, "Unable to restore session."
@@ -2311,8 +2291,8 @@
 
 .method private static runWithHandlerOrExecutor(Landroid/os/Handler;Ljava/lang/Runnable;)V
     .locals 1
-    .parameter "handler"
-    .parameter "runnable"
+    .param p0, "handler"    # Landroid/os/Handler;
+    .param p1, "runnable"    # Ljava/lang/Runnable;
 
     .prologue
     .line 1331
@@ -2338,8 +2318,8 @@
 
 .method public static final saveSession(Lcom/facebook/Session;Landroid/os/Bundle;)V
     .locals 4
-    .parameter "session"
-    .parameter "bundle"
+    .param p0, "session"    # Lcom/facebook/Session;
+    .param p1, "bundle"    # Landroid/os/Bundle;
 
     .prologue
     const-string v3, "com.facebook.sdk.Session.saveSessionKey"
@@ -2363,7 +2343,7 @@
     invoke-direct {v1}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
     .line 694
-    .local v1, outputStream:Ljava/io/ByteArrayOutputStream;
+    .local v1, "outputStream":Ljava/io/ByteArrayOutputStream;
     :try_start_0
     new-instance v2, Ljava/io/ObjectOutputStream;
 
@@ -2390,19 +2370,19 @@
     invoke-virtual {p1, v2, v3}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
 
     .line 701
-    .end local v1           #outputStream:Ljava/io/ByteArrayOutputStream;
+    .end local v1    # "outputStream":Ljava/io/ByteArrayOutputStream;
     :cond_0
     return-void
 
     .line 695
-    .restart local v1       #outputStream:Ljava/io/ByteArrayOutputStream;
+    .restart local v1    # "outputStream":Ljava/io/ByteArrayOutputStream;
     :catch_0
     move-exception v2
 
     move-object v0, v2
 
     .line 696
-    .local v0, e:Ljava/io/IOException;
+    .local v0, "e":Ljava/io/IOException;
     new-instance v2, Lcom/facebook/FacebookException;
 
     const-string v3, "Unable to save session."
@@ -2414,7 +2394,7 @@
 
 .method private saveTokenToCache(Lcom/facebook/AccessToken;)V
     .locals 2
-    .parameter "newToken"
+    .param p1, "newToken"    # Lcom/facebook/AccessToken;
 
     .prologue
     .line 1273
@@ -2440,7 +2420,7 @@
 
 .method public static final setActiveSession(Lcom/facebook/Session;)V
     .locals 3
-    .parameter "session"
+    .param p0, "session"    # Lcom/facebook/Session;
 
     .prologue
     .line 775
@@ -2458,7 +2438,7 @@
     sget-object v0, Lcom/facebook/Session;->activeSession:Lcom/facebook/Session;
 
     .line 779
-    .local v0, oldSession:Lcom/facebook/Session;
+    .local v0, "oldSession":Lcom/facebook/Session;
     if-eqz v0, :cond_0
 
     .line 780
@@ -2498,7 +2478,7 @@
     invoke-static {v2}, Lcom/facebook/Session;->postActiveSessionAction(Ljava/lang/String;)V
 
     .line 775
-    .end local v0           #oldSession:Lcom/facebook/Session;
+    .end local v0    # "oldSession":Lcom/facebook/Session;
     :cond_2
     monitor-exit v1
 
@@ -2518,7 +2498,7 @@
 
 .method private tryLegacyAuth(Lcom/facebook/Session$AuthorizationRequest;)V
     .locals 2
-    .parameter "request"
+    .param p1, "request"    # Lcom/facebook/Session$AuthorizationRequest;
 
     .prologue
     .line 1196
@@ -2561,7 +2541,7 @@
 
 .method private tryLoginActivity(Lcom/facebook/Session$AuthorizationRequest;)Z
     .locals 5
-    .parameter "request"
+    .param p1, "request"    # Lcom/facebook/Session$AuthorizationRequest;
 
     .prologue
     const/4 v4, 0x0
@@ -2572,7 +2552,7 @@
     move-result-object v1
 
     .line 1161
-    .local v1, intent:Landroid/content/Intent;
+    .local v1, "intent":Landroid/content/Intent;
     invoke-direct {p0, v1}, Lcom/facebook/Session;->resolveIntent(Landroid/content/Intent;)Z
 
     move-result v2
@@ -2611,7 +2591,7 @@
 
     move-object v0, v2
 
-    .local v0, e:Landroid/content/ActivityNotFoundException;
+    .local v0, "e":Landroid/content/ActivityNotFoundException;
     move v2, v4
 
     .line 1168
@@ -2620,7 +2600,7 @@
 
 .method private validateLoginBehavior(Lcom/facebook/Session$AuthorizationRequest;)V
     .locals 7
-    .parameter "request"
+    .param p1, "request"    # Lcom/facebook/Session$AuthorizationRequest;
 
     .prologue
     const-class v6, Lcom/facebook/LoginActivity;
@@ -2628,7 +2608,7 @@
     .line 1026
     if-eqz p1, :cond_0
 
-    #getter for: Lcom/facebook/Session$AuthorizationRequest;->isLegacy:Z
+    # getter for: Lcom/facebook/Session$AuthorizationRequest;->isLegacy:Z
     invoke-static {p1}, Lcom/facebook/Session$AuthorizationRequest;->access$3(Lcom/facebook/Session$AuthorizationRequest;)Z
 
     move-result v1
@@ -2641,7 +2621,7 @@
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
     .line 1028
-    .local v0, intent:Landroid/content/Intent;
+    .local v0, "intent":Landroid/content/Intent;
     invoke-static {}, Lcom/facebook/Session;->getStaticContext()Landroid/content/Context;
 
     move-result-object v1
@@ -2696,15 +2676,15 @@
     throw v1
 
     .line 1035
-    .end local v0           #intent:Landroid/content/Intent;
+    .end local v0    # "intent":Landroid/content/Intent;
     :cond_0
     return-void
 .end method
 
 .method private validatePermissions(Lcom/facebook/Session$AuthorizationRequest;Lcom/facebook/internal/SessionAuthorizationType;)V
     .locals 7
-    .parameter "request"
-    .parameter "authType"
+    .param p1, "request"    # Lcom/facebook/Session$AuthorizationRequest;
+    .param p2, "authType"    # Lcom/facebook/internal/SessionAuthorizationType;
 
     .prologue
     const/4 v6, 0x1
@@ -2774,7 +2754,7 @@
     check-cast v0, Ljava/lang/String;
 
     .line 1045
-    .local v0, permission:Ljava/lang/String;
+    .local v0, "permission":Ljava/lang/String;
     invoke-static {v0}, Lcom/facebook/Session;->isPublishPermission(Ljava/lang/String;)Z
 
     move-result v2
@@ -2873,7 +2853,7 @@
 # virtual methods
 .method public final addCallback(Lcom/facebook/Session$StatusCallback;)V
     .locals 2
-    .parameter "callback"
+    .param p1, "callback"    # Lcom/facebook/Session$StatusCallback;
 
     .prologue
     .line 625
@@ -2918,7 +2898,7 @@
 
 .method authorize(Lcom/facebook/Session$AuthorizationRequest;)V
     .locals 7
-    .parameter "request"
+    .param p1, "request"    # Lcom/facebook/Session$AuthorizationRequest;
 
     .prologue
     const-string v6, "1"
@@ -2927,7 +2907,7 @@
     const/4 v2, 0x0
 
     .line 911
-    .local v2, started:Z
+    .local v2, "started":Z
     iget-object v3, p0, Lcom/facebook/Session;->applicationId:Ljava/lang/String;
 
     invoke-virtual {p1, v3}, Lcom/facebook/Session$AuthorizationRequest;->setApplicationId(Ljava/lang/String;)V
@@ -2946,7 +2926,7 @@
     .line 919
     iget-object v3, p0, Lcom/facebook/Session;->pendingAuthorizationRequest:Lcom/facebook/Session$AuthorizationRequest;
 
-    #getter for: Lcom/facebook/Session$AuthorizationRequest;->loggingExtras:Ljava/util/Map;
+    # getter for: Lcom/facebook/Session$AuthorizationRequest;->loggingExtras:Ljava/util/Map;
     invoke-static {v3}, Lcom/facebook/Session$AuthorizationRequest;->access$2(Lcom/facebook/Session$AuthorizationRequest;)Ljava/util/Map;
 
     move-result-object v3
@@ -2967,7 +2947,7 @@
     .line 922
     if-nez v2, :cond_0
 
-    #getter for: Lcom/facebook/Session$AuthorizationRequest;->isLegacy:Z
+    # getter for: Lcom/facebook/Session$AuthorizationRequest;->isLegacy:Z
     invoke-static {p1}, Lcom/facebook/Session$AuthorizationRequest;->access$3(Lcom/facebook/Session$AuthorizationRequest;)Z
 
     move-result v3
@@ -2977,7 +2957,7 @@
     .line 923
     iget-object v3, p0, Lcom/facebook/Session;->pendingAuthorizationRequest:Lcom/facebook/Session$AuthorizationRequest;
 
-    #getter for: Lcom/facebook/Session$AuthorizationRequest;->loggingExtras:Ljava/util/Map;
+    # getter for: Lcom/facebook/Session$AuthorizationRequest;->loggingExtras:Ljava/util/Map;
     invoke-static {v3}, Lcom/facebook/Session$AuthorizationRequest;->access$2(Lcom/facebook/Session$AuthorizationRequest;)Ljava/util/Map;
 
     move-result-object v3
@@ -3010,7 +2990,7 @@
     iget-object v1, p0, Lcom/facebook/Session;->state:Lcom/facebook/SessionState;
 
     .line 934
-    .local v1, oldState:Lcom/facebook/SessionState;
+    .local v1, "oldState":Lcom/facebook/SessionState;
     invoke-static {}, Lcom/facebook/Session;->$SWITCH_TABLE$com$facebook$SessionState()[I
 
     move-result-object v4
@@ -3040,7 +3020,7 @@
     invoke-direct {v0, v4}, Lcom/facebook/FacebookException;-><init>(Ljava/lang/String;)V
 
     .line 944
-    .local v0, exception:Ljava/lang/Exception;
+    .local v0, "exception":Ljava/lang/Exception;
     sget-object v4, Lcom/facebook/AuthorizationClient$Result$Code;->ERROR:Lcom/facebook/AuthorizationClient$Result$Code;
 
     const/4 v5, 0x0
@@ -3058,8 +3038,8 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 949
-    .end local v0           #exception:Ljava/lang/Exception;
-    .end local v1           #oldState:Lcom/facebook/SessionState;
+    .end local v0    # "exception":Ljava/lang/Exception;
+    .end local v1    # "oldState":Lcom/facebook/SessionState;
     :cond_1
     :goto_1
     return-void
@@ -3071,7 +3051,7 @@
     goto :goto_0
 
     .line 937
-    .restart local v1       #oldState:Lcom/facebook/SessionState;
+    .restart local v1    # "oldState":Lcom/facebook/SessionState;
     :pswitch_0
     :try_start_1
     monitor-exit v3
@@ -3079,7 +3059,7 @@
     goto :goto_1
 
     .line 931
-    .end local v1           #oldState:Lcom/facebook/SessionState;
+    .end local v1    # "oldState":Lcom/facebook/SessionState;
     :catchall_0
     move-exception v4
 
@@ -3113,7 +3093,7 @@
     iget-object v0, p0, Lcom/facebook/Session;->state:Lcom/facebook/SessionState;
 
     .line 584
-    .local v0, oldState:Lcom/facebook/SessionState;
+    .local v0, "oldState":Lcom/facebook/SessionState;
     invoke-static {}, Lcom/facebook/Session;->$SWITCH_TABLE$com$facebook$SessionState()[I
 
     move-result-object v2
@@ -3157,7 +3137,7 @@
     goto :goto_0
 
     .line 581
-    .end local v0           #oldState:Lcom/facebook/SessionState;
+    .end local v0    # "oldState":Lcom/facebook/SessionState;
     :catchall_0
     move-exception v2
 
@@ -3168,7 +3148,7 @@
     throw v2
 
     .line 595
-    .restart local v0       #oldState:Lcom/facebook/SessionState;
+    .restart local v0    # "oldState":Lcom/facebook/SessionState;
     :pswitch_1
     :try_start_1
     sget-object v2, Lcom/facebook/SessionState;->CLOSED:Lcom/facebook/SessionState;
@@ -3233,7 +3213,7 @@
 
 .method public equals(Ljava/lang/Object;)Z
     .locals 5
-    .parameter "otherObj"
+    .param p1, "otherObj"    # Ljava/lang/Object;
 
     .prologue
     const/4 v4, 0x0
@@ -3258,7 +3238,7 @@
     move-object v1, v0
 
     .line 1516
-    .local v1, other:Lcom/facebook/Session;
+    .local v1, "other":Lcom/facebook/Session;
     iget-object v2, v1, Lcom/facebook/Session;->applicationId:Ljava/lang/String;
 
     iget-object v3, p0, Lcom/facebook/Session;->applicationId:Ljava/lang/String;
@@ -3325,7 +3305,7 @@
     const/4 v0, 0x0
 
     .line 1346
-    .local v0, newTokenRefreshRequest:Lcom/facebook/Session$TokenRefreshRequest;
+    .local v0, "newTokenRefreshRequest":Lcom/facebook/Session$TokenRefreshRequest;
     iget-object v2, p0, Lcom/facebook/Session;->lock:Ljava/lang/Object;
 
     monitor-enter v2
@@ -3344,8 +3324,8 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 1349
-    .end local v0           #newTokenRefreshRequest:Lcom/facebook/Session$TokenRefreshRequest;
-    .local v1, newTokenRefreshRequest:Lcom/facebook/Session$TokenRefreshRequest;
+    .end local v0    # "newTokenRefreshRequest":Lcom/facebook/Session$TokenRefreshRequest;
+    .local v1, "newTokenRefreshRequest":Lcom/facebook/Session$TokenRefreshRequest;
     :try_start_1
     iput-object v1, p0, Lcom/facebook/Session;->currentTokenRefreshRequest:Lcom/facebook/Session$TokenRefreshRequest;
     :try_end_1
@@ -3354,8 +3334,8 @@
     move-object v0, v1
 
     .line 1346
-    .end local v1           #newTokenRefreshRequest:Lcom/facebook/Session$TokenRefreshRequest;
-    .restart local v0       #newTokenRefreshRequest:Lcom/facebook/Session$TokenRefreshRequest;
+    .end local v1    # "newTokenRefreshRequest":Lcom/facebook/Session$TokenRefreshRequest;
+    .restart local v0    # "newTokenRefreshRequest":Lcom/facebook/Session$TokenRefreshRequest;
     :cond_0
     :try_start_2
     monitor-exit v2
@@ -3384,15 +3364,15 @@
 
     throw v3
 
-    .end local v0           #newTokenRefreshRequest:Lcom/facebook/Session$TokenRefreshRequest;
-    .restart local v1       #newTokenRefreshRequest:Lcom/facebook/Session$TokenRefreshRequest;
+    .end local v0    # "newTokenRefreshRequest":Lcom/facebook/Session$TokenRefreshRequest;
+    .restart local v1    # "newTokenRefreshRequest":Lcom/facebook/Session$TokenRefreshRequest;
     :catchall_1
     move-exception v3
 
     move-object v0, v1
 
-    .end local v1           #newTokenRefreshRequest:Lcom/facebook/Session$TokenRefreshRequest;
-    .restart local v0       #newTokenRefreshRequest:Lcom/facebook/Session$TokenRefreshRequest;
+    .end local v1    # "newTokenRefreshRequest":Lcom/facebook/Session$TokenRefreshRequest;
+    .restart local v0    # "newTokenRefreshRequest":Lcom/facebook/Session$TokenRefreshRequest;
     goto :goto_0
 .end method
 
@@ -3417,7 +3397,7 @@
 
 .method extendTokenCompleted(Landroid/os/Bundle;)V
     .locals 5
-    .parameter "bundle"
+    .param p1, "bundle"    # Landroid/os/Bundle;
 
     .prologue
     .line 651
@@ -3430,7 +3410,7 @@
     iget-object v0, p0, Lcom/facebook/Session;->state:Lcom/facebook/SessionState;
 
     .line 654
-    .local v0, oldState:Lcom/facebook/SessionState;
+    .local v0, "oldState":Lcom/facebook/SessionState;
     invoke-static {}, Lcom/facebook/Session;->$SWITCH_TABLE$com$facebook$SessionState()[I
 
     move-result-object v2
@@ -3518,7 +3498,7 @@
 
     goto :goto_0
 
-    .end local v0           #oldState:Lcom/facebook/SessionState;
+    .end local v0    # "oldState":Lcom/facebook/SessionState;
     :catchall_0
     move-exception v2
 
@@ -3538,8 +3518,8 @@
 
 .method finishAuthOrReauth(Lcom/facebook/AccessToken;Ljava/lang/Exception;)V
     .locals 4
-    .parameter "newToken"
-    .parameter "exception"
+    .param p1, "newToken"    # Lcom/facebook/AccessToken;
+    .param p2, "exception"    # Ljava/lang/Exception;
 
     .prologue
     .line 1215
@@ -3557,13 +3537,13 @@
     .line 1217
     new-instance p2, Lcom/facebook/FacebookException;
 
-    .end local p2
+    .end local p2    # "exception":Ljava/lang/Exception;
     const-string v0, "Invalid access token."
 
     invoke-direct {p2, v0}, Lcom/facebook/FacebookException;-><init>(Ljava/lang/String;)V
 
     .line 1221
-    .restart local p2
+    .restart local p2    # "exception":Ljava/lang/Exception;
     :cond_0
     iget-object v0, p0, Lcom/facebook/Session;->lock:Ljava/lang/Object;
 
@@ -3951,10 +3931,10 @@
 
 .method public final onActivityResult(Landroid/app/Activity;IILandroid/content/Intent;)Z
     .locals 7
-    .parameter "currentActivity"
-    .parameter "requestCode"
-    .parameter "resultCode"
-    .parameter "data"
+    .param p1, "currentActivity"    # Landroid/app/Activity;
+    .param p2, "requestCode"    # I
+    .param p3, "resultCode"    # I
+    .param p4, "data"    # Landroid/content/Intent;
 
     .prologue
     const/4 v6, 0x0
@@ -4008,11 +3988,11 @@
     const/4 v1, 0x0
 
     .line 547
-    .local v1, exception:Ljava/lang/Exception;
+    .local v1, "exception":Ljava/lang/Exception;
     sget-object v0, Lcom/facebook/AuthorizationClient$Result$Code;->ERROR:Lcom/facebook/AuthorizationClient$Result$Code;
 
     .line 549
-    .local v0, code:Lcom/facebook/AuthorizationClient$Result$Code;
+    .local v0, "code":Lcom/facebook/AuthorizationClient$Result$Code;
     if-eqz p4, :cond_3
 
     .line 551
@@ -4026,7 +4006,7 @@
     check-cast v2, Lcom/facebook/AuthorizationClient$Result;
 
     .line 552
-    .local v2, result:Lcom/facebook/AuthorizationClient$Result;
+    .local v2, "result":Lcom/facebook/AuthorizationClient$Result;
     if-eqz v2, :cond_2
 
     .line 554
@@ -4038,9 +4018,9 @@
     goto :goto_0
 
     .line 540
-    .end local v0           #code:Lcom/facebook/AuthorizationClient$Result$Code;
-    .end local v1           #exception:Ljava/lang/Exception;
-    .end local v2           #result:Lcom/facebook/AuthorizationClient$Result;
+    .end local v0    # "code":Lcom/facebook/AuthorizationClient$Result$Code;
+    .end local v1    # "exception":Ljava/lang/Exception;
+    .end local v2    # "result":Lcom/facebook/AuthorizationClient$Result;
     :catchall_0
     move-exception v4
 
@@ -4052,9 +4032,9 @@
     throw v4
 
     .line 556
-    .restart local v0       #code:Lcom/facebook/AuthorizationClient$Result$Code;
-    .restart local v1       #exception:Ljava/lang/Exception;
-    .restart local v2       #result:Lcom/facebook/AuthorizationClient$Result;
+    .restart local v0    # "code":Lcom/facebook/AuthorizationClient$Result$Code;
+    .restart local v1    # "exception":Ljava/lang/Exception;
+    .restart local v2    # "result":Lcom/facebook/AuthorizationClient$Result;
     :cond_2
     iget-object v3, p0, Lcom/facebook/Session;->authorizationClient:Lcom/facebook/AuthorizationClient;
 
@@ -4071,20 +4051,20 @@
     goto :goto_0
 
     .line 561
-    .end local v2           #result:Lcom/facebook/AuthorizationClient$Result;
+    .end local v2    # "result":Lcom/facebook/AuthorizationClient$Result;
     :cond_3
     if-nez p3, :cond_4
 
     .line 562
     new-instance v1, Lcom/facebook/FacebookOperationCanceledException;
 
-    .end local v1           #exception:Ljava/lang/Exception;
+    .end local v1    # "exception":Ljava/lang/Exception;
     const-string v3, "User canceled operation."
 
     invoke-direct {v1, v3}, Lcom/facebook/FacebookOperationCanceledException;-><init>(Ljava/lang/String;)V
 
     .line 563
-    .restart local v1       #exception:Ljava/lang/Exception;
+    .restart local v1    # "exception":Ljava/lang/Exception;
     sget-object v0, Lcom/facebook/AuthorizationClient$Result$Code;->CANCEL:Lcom/facebook/AuthorizationClient$Result$Code;
 
     .line 566
@@ -4094,13 +4074,13 @@
     .line 567
     new-instance v1, Lcom/facebook/FacebookException;
 
-    .end local v1           #exception:Ljava/lang/Exception;
+    .end local v1    # "exception":Ljava/lang/Exception;
     const-string v3, "Unexpected call to Session.onActivityResult"
 
     invoke-direct {v1, v3}, Lcom/facebook/FacebookException;-><init>(Ljava/lang/String;)V
 
     .line 570
-    .restart local v1       #exception:Ljava/lang/Exception;
+    .restart local v1    # "exception":Ljava/lang/Exception;
     :cond_5
     invoke-direct {p0, v0, v6, v1}, Lcom/facebook/Session;->logAuthorizationComplete(Lcom/facebook/AuthorizationClient$Result$Code;Ljava/util/Map;Ljava/lang/Exception;)V
 
@@ -4115,8 +4095,8 @@
 
 .method public final open(Lcom/facebook/AccessToken;Lcom/facebook/Session$StatusCallback;)V
     .locals 4
-    .parameter "accessToken"
-    .parameter "callback"
+    .param p1, "accessToken"    # Lcom/facebook/AccessToken;
+    .param p2, "callback"    # Lcom/facebook/Session$StatusCallback;
 
     .prologue
     .line 443
@@ -4228,7 +4208,7 @@
     iget-object v0, p0, Lcom/facebook/Session;->state:Lcom/facebook/SessionState;
 
     .line 468
-    .local v0, oldState:Lcom/facebook/SessionState;
+    .local v0, "oldState":Lcom/facebook/SessionState;
     sget-object v2, Lcom/facebook/SessionState;->OPENED:Lcom/facebook/SessionState;
 
     iput-object v2, p0, Lcom/facebook/Session;->state:Lcom/facebook/SessionState;
@@ -4254,7 +4234,7 @@
 
 .method public final openForPublish(Lcom/facebook/Session$OpenRequest;)V
     .locals 1
-    .parameter "openRequest"
+    .param p1, "openRequest"    # Lcom/facebook/Session$OpenRequest;
 
     .prologue
     .line 423
@@ -4268,7 +4248,7 @@
 
 .method public final openForRead(Lcom/facebook/Session$OpenRequest;)V
     .locals 1
-    .parameter "openRequest"
+    .param p1, "openRequest"    # Lcom/facebook/Session$OpenRequest;
 
     .prologue
     .line 388
@@ -4282,9 +4262,9 @@
 
 .method postStateChange(Lcom/facebook/SessionState;Lcom/facebook/SessionState;Ljava/lang/Exception;)V
     .locals 3
-    .parameter "oldState"
-    .parameter "newState"
-    .parameter "exception"
+    .param p1, "oldState"    # Lcom/facebook/SessionState;
+    .param p2, "newState"    # Lcom/facebook/SessionState;
+    .param p3, "exception"    # Ljava/lang/Exception;
 
     .prologue
     .line 1282
@@ -4335,7 +4315,7 @@
     invoke-direct {v0, p0, p2, p3}, Lcom/facebook/Session$3;-><init>(Lcom/facebook/Session;Lcom/facebook/SessionState;Ljava/lang/Exception;)V
 
     .line 1310
-    .local v0, runCallbacks:Ljava/lang/Runnable;
+    .local v0, "runCallbacks":Ljava/lang/Runnable;
     iget-object v2, p0, Lcom/facebook/Session;->handler:Landroid/os/Handler;
 
     invoke-static {v2, v0}, Lcom/facebook/Session;->runWithHandlerOrExecutor(Landroid/os/Handler;Ljava/lang/Runnable;)V
@@ -4376,7 +4356,7 @@
     goto :goto_0
 
     .line 1292
-    .end local v0           #runCallbacks:Ljava/lang/Runnable;
+    .end local v0    # "runCallbacks":Ljava/lang/Runnable;
     :catchall_0
     move-exception v2
 
@@ -4388,7 +4368,7 @@
     throw v2
 
     .line 1318
-    .restart local v0       #runCallbacks:Ljava/lang/Runnable;
+    .restart local v0    # "runCallbacks":Ljava/lang/Runnable;
     :cond_3
     const-string v1, "com.facebook.sdk.ACTIVE_SESSION_CLOSED"
 
@@ -4399,7 +4379,7 @@
 
 .method public final removeCallback(Lcom/facebook/Session$StatusCallback;)V
     .locals 2
-    .parameter "callback"
+    .param p1, "callback"    # Lcom/facebook/Session$StatusCallback;
 
     .prologue
     .line 638
@@ -4432,7 +4412,7 @@
 
 .method public final requestNewPublishPermissions(Lcom/facebook/Session$NewPermissionsRequest;)V
     .locals 1
-    .parameter "newPermissionsRequest"
+    .param p1, "newPermissionsRequest"    # Lcom/facebook/Session$NewPermissionsRequest;
 
     .prologue
     .line 512
@@ -4446,7 +4426,7 @@
 
 .method public final requestNewReadPermissions(Lcom/facebook/Session$NewPermissionsRequest;)V
     .locals 1
-    .parameter "newPermissionsRequest"
+    .param p1, "newPermissionsRequest"    # Lcom/facebook/Session$NewPermissionsRequest;
 
     .prologue
     .line 492
@@ -4460,7 +4440,7 @@
 
 .method setCurrentTokenRefreshRequest(Lcom/facebook/Session$TokenRefreshRequest;)V
     .locals 0
-    .parameter "request"
+    .param p1, "request"    # Lcom/facebook/Session$TokenRefreshRequest;
 
     .prologue
     .line 1402
@@ -4472,7 +4452,7 @@
 
 .method setLastAttemptedTokenExtendDate(Ljava/util/Date;)V
     .locals 0
-    .parameter "lastAttemptedTokenExtendDate"
+    .param p1, "lastAttemptedTokenExtendDate"    # Ljava/util/Date;
 
     .prologue
     .line 1398
@@ -4484,7 +4464,7 @@
 
 .method setTokenInfo(Lcom/facebook/AccessToken;)V
     .locals 0
-    .parameter "tokenInfo"
+    .param p1, "tokenInfo"    # Lcom/facebook/AccessToken;
 
     .prologue
     .line 1390
@@ -4515,13 +4495,13 @@
     const/4 v1, 0x0
 
     .line 1365
-    .local v1, result:Z
+    .local v1, "result":Z
     new-instance v0, Ljava/util/Date;
 
     invoke-direct {v0}, Ljava/util/Date;-><init>()V
 
     .line 1367
-    .local v0, now:Ljava/util/Date;
+    .local v0, "now":Ljava/util/Date;
     iget-object v2, p0, Lcom/facebook/Session;->state:Lcom/facebook/SessionState;
 
     invoke-virtual {v2}, Lcom/facebook/SessionState;->isOpened()Z

@@ -34,7 +34,7 @@
 
 .method public static create(Ljava/lang/String;)Lcom/fusepowered/m2/m2l/CustomEventBanner;
     .locals 1
-    .parameter "className"
+    .param p0, "className"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/Exception;
@@ -54,7 +54,7 @@
 
 .method public static setInstance(Lcom/fusepowered/m2/m2l/factories/CustomEventBannerFactory;)V
     .locals 0
-    .parameter "factory"
+    .param p0, "factory"    # Lcom/fusepowered/m2/m2l/factories/CustomEventBannerFactory;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -70,7 +70,7 @@
 # virtual methods
 .method protected internalCreate(Ljava/lang/String;)Lcom/fusepowered/m2/m2l/CustomEventBanner;
     .locals 4
-    .parameter "className"
+    .param p1, "className"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/Exception;
@@ -91,7 +91,7 @@
     move-result-object v0
 
     .line 54
-    .local v0, bannerClass:Ljava/lang/Class;,"Ljava/lang/Class<+Lcom/fusepowered/m2/m2l/CustomEventBanner;>;"
+    .local v0, "bannerClass":Ljava/lang/Class;, "Ljava/lang/Class<+Lcom/fusepowered/m2/m2l/CustomEventBanner;>;"
     const/4 v2, 0x0
 
     invoke-virtual {v0, v2}, Ljava/lang/Class;->getDeclaredConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
@@ -99,7 +99,7 @@
     move-result-object v1
 
     .line 55
-    .local v1, bannerConstructor:Ljava/lang/reflect/Constructor;,"Ljava/lang/reflect/Constructor<*>;"
+    .local v1, "bannerConstructor":Ljava/lang/reflect/Constructor;, "Ljava/lang/reflect/Constructor<*>;"
     const/4 v2, 0x1
 
     invoke-virtual {v1, v2}, Ljava/lang/reflect/Constructor;->setAccessible(Z)V
@@ -113,7 +113,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/fusepowered/m2/m2l/factories/CustomEventBannerFactory;
     check-cast p0, Lcom/fusepowered/m2/m2l/CustomEventBanner;
 
     return-object p0

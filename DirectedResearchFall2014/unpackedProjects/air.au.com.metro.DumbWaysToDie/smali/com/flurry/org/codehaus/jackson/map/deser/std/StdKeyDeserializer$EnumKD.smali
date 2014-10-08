@@ -30,8 +30,7 @@
 # direct methods
 .method protected constructor <init>(Lcom/flurry/org/codehaus/jackson/map/util/EnumResolver;Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;)V
     .locals 1
-    .parameter
-    .parameter "factory"
+    .param p2, "factory"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMethod;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -44,7 +43,7 @@
 
     .prologue
     .line 231
-    .local p1, er:Lcom/flurry/org/codehaus/jackson/map/util/EnumResolver;,"Lcom/flurry/org/codehaus/jackson/map/util/EnumResolver<*>;"
+    .local p1, "er":Lcom/flurry/org/codehaus/jackson/map/util/EnumResolver;, "Lcom/flurry/org/codehaus/jackson/map/util/EnumResolver<*>;"
     invoke-virtual {p1}, Lcom/flurry/org/codehaus/jackson/map/util/EnumResolver;->getEnumClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -65,8 +64,8 @@
 # virtual methods
 .method public _parse(Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;)Ljava/lang/Object;
     .locals 4
-    .parameter "key"
-    .parameter "ctxt"
+    .param p1, "key"    # Ljava/lang/String;
+    .param p2, "ctxt"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lcom/flurry/org/codehaus/jackson/map/JsonMappingException;
@@ -100,11 +99,11 @@
     move-object v0, v2
 
     .line 243
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     invoke-static {v0}, Lcom/flurry/org/codehaus/jackson/map/util/ClassUtil;->unwrapAndThrowAsIAE(Ljava/lang/Throwable;)V
 
     .line 246
-    .end local v0           #e:Ljava/lang/Exception;
+    .end local v0    # "e":Ljava/lang/Exception;
     :cond_0
     iget-object v2, p0, Lcom/flurry/org/codehaus/jackson/map/deser/std/StdKeyDeserializer$EnumKD;->_resolver:Lcom/flurry/org/codehaus/jackson/map/util/EnumResolver;
 
@@ -113,7 +112,7 @@
     move-result-object v1
 
     .line 247
-    .local v1, e:Ljava/lang/Enum;,"Ljava/lang/Enum<*>;"
+    .local v1, "e":Ljava/lang/Enum;, "Ljava/lang/Enum<*>;"
     if-nez v1, :cond_1
 
     .line 248

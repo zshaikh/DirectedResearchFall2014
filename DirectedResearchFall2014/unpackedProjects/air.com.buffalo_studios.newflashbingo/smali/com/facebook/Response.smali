@@ -3,8 +3,7 @@
 
 
 # static fields
-#the value of this static final field might be set in the static constructor
-.field static final synthetic $assertionsDisabled:Z = false
+.field static final synthetic $assertionsDisabled:Z
 
 .field private static final BODY_KEY:Ljava/lang/String; = "body"
 
@@ -776,10 +775,10 @@
     :try_start_0
     invoke-virtual {v2, v3}, Lcom/facebook/internal/FileLruCache;->get(Ljava/lang/String;)Ljava/io/InputStream;
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Lcom/facebook/FacebookException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_2
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result-object v1
 
@@ -792,10 +791,10 @@
     :try_start_1
     invoke-static {v1, v4, p1, v5}, Lcom/facebook/Response;->createResponsesFromStream(Ljava/io/InputStream;Ljava/net/HttpURLConnection;Lcom/facebook/RequestBatch;Z)Ljava/util/List;
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_4
     .catch Lcom/facebook/FacebookException; {:try_start_1 .. :try_end_1} :catch_d
     .catch Lorg/json/JSONException; {:try_start_1 .. :try_end_1} :catch_c
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_b
+    .catchall {:try_start_1 .. :try_end_1} :catchall_4
 
     move-result-object v2
 
@@ -838,11 +837,11 @@
 
     invoke-virtual {p0}, Ljava/net/HttpURLConnection;->getErrorStream()Ljava/io/InputStream;
     :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
     .catch Lcom/facebook/FacebookException; {:try_start_2 .. :try_end_2} :catch_3
     .catch Lorg/json/JSONException; {:try_start_2 .. :try_end_2} :catch_4
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_5
     .catch Ljava/lang/SecurityException; {:try_start_2 .. :try_end_2} :catch_6
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
     move-result-object v1
 
@@ -853,11 +852,11 @@
     :try_start_3
     invoke-static {v1, p0, p1, v2}, Lcom/facebook/Response;->createResponsesFromStream(Ljava/io/InputStream;Ljava/net/HttpURLConnection;Lcom/facebook/RequestBatch;Z)Ljava/util/List;
     :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_2
     .catch Lcom/facebook/FacebookException; {:try_start_3 .. :try_end_3} :catch_a
     .catch Lorg/json/JSONException; {:try_start_3 .. :try_end_3} :catch_9
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_8
     .catch Ljava/lang/SecurityException; {:try_start_3 .. :try_end_3} :catch_7
+    .catchall {:try_start_3 .. :try_end_3} :catchall_2
 
     move-result-object v2
 
@@ -939,11 +938,11 @@
 
     invoke-virtual {v2, v1, v3}, Lcom/facebook/internal/FileLruCache;->interceptAndPut(Ljava/lang/String;Ljava/io/InputStream;)Ljava/io/InputStream;
     :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_1
     .catch Lcom/facebook/FacebookException; {:try_start_4 .. :try_end_4} :catch_3
     .catch Lorg/json/JSONException; {:try_start_4 .. :try_end_4} :catch_4
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_5
     .catch Ljava/lang/SecurityException; {:try_start_4 .. :try_end_4} :catch_6
+    .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
     move-result-object v1
 

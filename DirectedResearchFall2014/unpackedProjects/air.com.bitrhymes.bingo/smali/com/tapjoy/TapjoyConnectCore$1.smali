@@ -44,6 +44,7 @@
     invoke-static {v4, v1}, Lcom/tapjoy/TapjoyLog;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 1669
+    # getter for: Lcom/tapjoy/TapjoyConnectCore;->tapjoyURLConnection:Lcom/tapjoy/TapjoyURLConnection;
     invoke-static {}, Lcom/tapjoy/TapjoyConnectCore;->access$300()Lcom/tapjoy/TapjoyURLConnection;
 
     move-result-object v1
@@ -79,7 +80,7 @@
     move-result-object v0
 
     .line 1672
-    .local v0, response:Lcom/tapjoy/TapjoyHttpURLResponse;
+    .local v0, "response":Lcom/tapjoy/TapjoyHttpURLResponse;
     iget-object v1, v0, Lcom/tapjoy/TapjoyHttpURLResponse;->response:Ljava/lang/String;
 
     if-eqz v1, :cond_1
@@ -87,7 +88,7 @@
     .line 1674
     iget-object v1, v0, Lcom/tapjoy/TapjoyHttpURLResponse;->response:Ljava/lang/String;
 
-    #calls: Lcom/tapjoy/TapjoyConnectCore;->handleConnectResponse(Ljava/lang/String;)Z
+    # invokes: Lcom/tapjoy/TapjoyConnectCore;->handleConnectResponse(Ljava/lang/String;)Z
     invoke-static {v1}, Lcom/tapjoy/TapjoyConnectCore;->access$400(Ljava/lang/String;)Z
 
     move-result v1

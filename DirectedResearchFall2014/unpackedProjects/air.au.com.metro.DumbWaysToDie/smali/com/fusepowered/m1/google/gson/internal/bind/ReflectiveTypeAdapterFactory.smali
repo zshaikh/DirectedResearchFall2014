@@ -26,9 +26,9 @@
 # direct methods
 .method public constructor <init>(Lcom/fusepowered/m1/google/gson/internal/ConstructorConstructor;Lcom/fusepowered/m1/google/gson/FieldNamingStrategy;Lcom/fusepowered/m1/google/gson/internal/Excluder;)V
     .locals 0
-    .parameter "constructorConstructor"
-    .parameter "fieldNamingPolicy"
-    .parameter "excluder"
+    .param p1, "constructorConstructor"    # Lcom/fusepowered/m1/google/gson/internal/ConstructorConstructor;
+    .param p2, "fieldNamingPolicy"    # Lcom/fusepowered/m1/google/gson/FieldNamingStrategy;
+    .param p3, "excluder"    # Lcom/fusepowered/m1/google/gson/internal/Excluder;
 
     .prologue
     .line 50
@@ -49,12 +49,11 @@
 
 .method private createBoundField(Lcom/fusepowered/m1/google/gson/Gson;Ljava/lang/reflect/Field;Ljava/lang/String;Lcom/fusepowered/m1/google/gson/reflect/TypeToken;ZZ)Lcom/fusepowered/m1/google/gson/internal/bind/ReflectiveTypeAdapterFactory$BoundField;
     .locals 9
-    .parameter "context"
-    .parameter "field"
-    .parameter "name"
-    .parameter
-    .parameter "serialize"
-    .parameter "deserialize"
+    .param p1, "context"    # Lcom/fusepowered/m1/google/gson/Gson;
+    .param p2, "field"    # Ljava/lang/reflect/Field;
+    .param p3, "name"    # Ljava/lang/String;
+    .param p5, "serialize"    # Z
+    .param p6, "deserialize"    # Z
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -69,7 +68,7 @@
 
     .prologue
     .line 79
-    .local p4, fieldType:Lcom/fusepowered/m1/google/gson/reflect/TypeToken;,"Lcom/fusepowered/m1/google/gson/reflect/TypeToken<*>;"
+    .local p4, "fieldType":Lcom/fusepowered/m1/google/gson/reflect/TypeToken;, "Lcom/fusepowered/m1/google/gson/reflect/TypeToken<*>;"
     invoke-virtual {p4}, Lcom/fusepowered/m1/google/gson/reflect/TypeToken;->getRawType()Ljava/lang/Class;
 
     move-result-object v0
@@ -79,7 +78,7 @@
     move-result v8
 
     .line 82
-    .local v8, isPrimitive:Z
+    .local v8, "isPrimitive":Z
     new-instance v0, Lcom/fusepowered/m1/google/gson/internal/bind/ReflectiveTypeAdapterFactory$1;
 
     move-object v1, p0
@@ -103,9 +102,7 @@
 
 .method private getBoundFields(Lcom/fusepowered/m1/google/gson/Gson;Lcom/fusepowered/m1/google/gson/reflect/TypeToken;Ljava/lang/Class;)Ljava/util/Map;
     .locals 19
-    .parameter "context"
-    .parameter
-    .parameter
+    .param p1, "context"    # Lcom/fusepowered/m1/google/gson/Gson;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -124,14 +121,14 @@
 
     .prologue
     .line 103
-    .local p2, type:Lcom/fusepowered/m1/google/gson/reflect/TypeToken;,"Lcom/fusepowered/m1/google/gson/reflect/TypeToken<*>;"
-    .local p3, raw:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p2, "type":Lcom/fusepowered/m1/google/gson/reflect/TypeToken;, "Lcom/fusepowered/m1/google/gson/reflect/TypeToken<*>;"
+    .local p3, "raw":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     new-instance v18, Ljava/util/LinkedHashMap;
 
     invoke-direct/range {v18 .. v18}, Ljava/util/LinkedHashMap;-><init>()V
 
     .line 104
-    .local v18, result:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Lcom/fusepowered/m1/google/gson/internal/bind/ReflectiveTypeAdapterFactory$BoundField;>;"
+    .local v18, "result":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Lcom/fusepowered/m1/google/gson/internal/bind/ReflectiveTypeAdapterFactory$BoundField;>;"
     invoke-virtual/range {p3 .. p3}, Ljava/lang/Class;->isInterface()Z
 
     move-result v3
@@ -149,7 +146,7 @@
     move-result-object v12
 
     .line 109
-    .local v12, declaredType:Ljava/lang/reflect/Type;
+    .local v12, "declaredType":Ljava/lang/reflect/Type;
     :goto_0
     const-class v3, Ljava/lang/Object;
 
@@ -165,20 +162,20 @@
     move-result-object v14
 
     .line 111
-    .local v14, fields:[Ljava/lang/reflect/Field;
+    .local v14, "fields":[Ljava/lang/reflect/Field;
     move-object v10, v14
 
-    .local v10, arr$:[Ljava/lang/reflect/Field;
+    .local v10, "arr$":[Ljava/lang/reflect/Field;
     move-object v0, v10
 
     array-length v0, v0
 
     move/from16 v16, v0
 
-    .local v16, len$:I
+    .local v16, "len$":I
     const/4 v15, 0x0
 
-    .local v15, i$:I
+    .local v15, "i$":I
     :goto_1
     move v0, v15
 
@@ -189,7 +186,7 @@
     aget-object v5, v10, v15
 
     .line 112
-    .local v5, field:Ljava/lang/reflect/Field;
+    .local v5, "field":Ljava/lang/reflect/Field;
     const/4 v3, 0x1
 
     move-object/from16 v0, p0
@@ -203,7 +200,7 @@
     move-result v8
 
     .line 113
-    .local v8, serialize:Z
+    .local v8, "serialize":Z
     const/4 v3, 0x0
 
     move-object/from16 v0, p0
@@ -217,7 +214,7 @@
     move-result v9
 
     .line 114
-    .local v9, deserialize:Z
+    .local v9, "deserialize":Z
     if-nez v8, :cond_3
 
     if-nez v9, :cond_3
@@ -254,7 +251,7 @@
     move-result-object v13
 
     .line 119
-    .local v13, fieldType:Ljava/lang/reflect/Type;
+    .local v13, "fieldType":Ljava/lang/reflect/Type;
     move-object/from16 v0, p0
 
     move-object v1, v5
@@ -276,7 +273,7 @@
     move-result-object v11
 
     .line 121
-    .local v11, boundField:Lcom/fusepowered/m1/google/gson/internal/bind/ReflectiveTypeAdapterFactory$BoundField;
+    .local v11, "boundField":Lcom/fusepowered/m1/google/gson/internal/bind/ReflectiveTypeAdapterFactory$BoundField;
     iget-object v3, v11, Lcom/fusepowered/m1/google/gson/internal/bind/ReflectiveTypeAdapterFactory$BoundField;->name:Ljava/lang/String;
 
     move-object/from16 v0, v18
@@ -292,7 +289,7 @@
     check-cast v17, Lcom/fusepowered/m1/google/gson/internal/bind/ReflectiveTypeAdapterFactory$BoundField;
 
     .line 122
-    .local v17, previous:Lcom/fusepowered/m1/google/gson/internal/bind/ReflectiveTypeAdapterFactory$BoundField;
+    .local v17, "previous":Lcom/fusepowered/m1/google/gson/internal/bind/ReflectiveTypeAdapterFactory$BoundField;
     if-eqz v17, :cond_2
 
     .line 123
@@ -308,7 +305,7 @@
 
     const-string v5, " declares multiple JSON fields named "
 
-    .end local v5           #field:Ljava/lang/reflect/Field;
+    .end local v5    # "field":Ljava/lang/reflect/Field;
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v4
@@ -332,11 +329,11 @@
     throw v3
 
     .line 127
-    .end local v8           #serialize:Z
-    .end local v9           #deserialize:Z
-    .end local v11           #boundField:Lcom/fusepowered/m1/google/gson/internal/bind/ReflectiveTypeAdapterFactory$BoundField;
-    .end local v13           #fieldType:Ljava/lang/reflect/Type;
-    .end local v17           #previous:Lcom/fusepowered/m1/google/gson/internal/bind/ReflectiveTypeAdapterFactory$BoundField;
+    .end local v8    # "serialize":Z
+    .end local v9    # "deserialize":Z
+    .end local v11    # "boundField":Lcom/fusepowered/m1/google/gson/internal/bind/ReflectiveTypeAdapterFactory$BoundField;
+    .end local v13    # "fieldType":Ljava/lang/reflect/Type;
+    .end local v17    # "previous":Lcom/fusepowered/m1/google/gson/internal/bind/ReflectiveTypeAdapterFactory$BoundField;
     :cond_4
     invoke-virtual/range {p2 .. p2}, Lcom/fusepowered/m1/google/gson/reflect/TypeToken;->getType()Ljava/lang/reflect/Type;
 
@@ -371,7 +368,7 @@
 
 .method private getFieldName(Ljava/lang/reflect/Field;)Ljava/lang/String;
     .locals 2
-    .parameter "f"
+    .param p1, "f"    # Ljava/lang/reflect/Field;
 
     .prologue
     .line 61
@@ -384,7 +381,7 @@
     check-cast v0, Lcom/fusepowered/m1/google/gson/annotations/SerializedName;
 
     .line 62
-    .local v0, serializedName:Lcom/fusepowered/m1/google/gson/annotations/SerializedName;
+    .local v0, "serializedName":Lcom/fusepowered/m1/google/gson/annotations/SerializedName;
     if-nez v0, :cond_0
 
     iget-object v1, p0, Lcom/fusepowered/m1/google/gson/internal/bind/ReflectiveTypeAdapterFactory;->fieldNamingPolicy:Lcom/fusepowered/m1/google/gson/FieldNamingStrategy;
@@ -408,8 +405,7 @@
 # virtual methods
 .method public create(Lcom/fusepowered/m1/google/gson/Gson;Lcom/fusepowered/m1/google/gson/reflect/TypeToken;)Lcom/fusepowered/m1/google/gson/TypeAdapter;
     .locals 5
-    .parameter "gson"
-    .parameter
+    .param p1, "gson"    # Lcom/fusepowered/m1/google/gson/Gson;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -424,7 +420,7 @@
     .end annotation
 
     .prologue
-    .local p2, type:Lcom/fusepowered/m1/google/gson/reflect/TypeToken;,"Lcom/fusepowered/m1/google/gson/reflect/TypeToken<TT;>;"
+    .local p2, "type":Lcom/fusepowered/m1/google/gson/reflect/TypeToken;, "Lcom/fusepowered/m1/google/gson/reflect/TypeToken<TT;>;"
     const/4 v4, 0x0
 
     .line 66
@@ -433,7 +429,7 @@
     move-result-object v1
 
     .line 68
-    .local v1, raw:Ljava/lang/Class;,"Ljava/lang/Class<-TT;>;"
+    .local v1, "raw":Ljava/lang/Class;, "Ljava/lang/Class<-TT;>;"
     const-class v2, Ljava/lang/Object;
 
     invoke-virtual {v2, v1}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
@@ -457,7 +453,7 @@
     move-result-object v0
 
     .line 73
-    .local v0, constructor:Lcom/fusepowered/m1/google/gson/internal/ObjectConstructor;,"Lcom/fusepowered/m1/google/gson/internal/ObjectConstructor<TT;>;"
+    .local v0, "constructor":Lcom/fusepowered/m1/google/gson/internal/ObjectConstructor;, "Lcom/fusepowered/m1/google/gson/internal/ObjectConstructor<TT;>;"
     new-instance v2, Lcom/fusepowered/m1/google/gson/internal/bind/ReflectiveTypeAdapterFactory$Adapter;
 
     invoke-direct {p0, p1, p2, v1}, Lcom/fusepowered/m1/google/gson/internal/bind/ReflectiveTypeAdapterFactory;->getBoundFields(Lcom/fusepowered/m1/google/gson/Gson;Lcom/fusepowered/m1/google/gson/reflect/TypeToken;Ljava/lang/Class;)Ljava/util/Map;
@@ -471,8 +467,8 @@
 
 .method public excludeField(Ljava/lang/reflect/Field;Z)Z
     .locals 2
-    .parameter "f"
-    .parameter "serialize"
+    .param p1, "f"    # Ljava/lang/reflect/Field;
+    .param p2, "serialize"    # Z
 
     .prologue
     .line 57

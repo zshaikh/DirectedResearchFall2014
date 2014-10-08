@@ -74,8 +74,7 @@
 
 .method constructor <init>(Ljava/util/Map;Lcom/fusepowered/m2/m2l/MraidView;)V
     .locals 0
-    .parameter
-    .parameter "view"
+    .param p2, "view"    # Lcom/fusepowered/m2/m2l/MraidView;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -91,7 +90,7 @@
 
     .prologue
     .line 162
-    .local p1, params:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p1, "params":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-direct {p0, p1, p2}, Lcom/fusepowered/m2/m2l/MraidCommand;-><init>(Ljava/util/Map;Lcom/fusepowered/m2/m2l/MraidView;)V
 
     .line 163
@@ -112,7 +111,7 @@
     move-result v2
 
     .line 168
-    .local v2, width:I
+    .local v2, "width":I
     const-string v0, "h"
 
     invoke-virtual {p0, v0}, Lcom/fusepowered/m2/m2l/MraidCommandExpand;->getIntFromParamsForKey(Ljava/lang/String;)I
@@ -120,7 +119,7 @@
     move-result v3
 
     .line 169
-    .local v3, height:I
+    .local v3, "height":I
     const-string v0, "url"
 
     invoke-virtual {p0, v0}, Lcom/fusepowered/m2/m2l/MraidCommandExpand;->getStringFromParamsForKey(Ljava/lang/String;)Ljava/lang/String;
@@ -128,7 +127,7 @@
     move-result-object v1
 
     .line 170
-    .local v1, url:Ljava/lang/String;
+    .local v1, "url":Ljava/lang/String;
     const-string v0, "shouldUseCustomClose"
 
     invoke-virtual {p0, v0}, Lcom/fusepowered/m2/m2l/MraidCommandExpand;->getBooleanFromParamsForKey(Ljava/lang/String;)Z
@@ -136,7 +135,7 @@
     move-result v4
 
     .line 171
-    .local v4, shouldUseCustomClose:Z
+    .local v4, "shouldUseCustomClose":Z
     const-string v0, "lockOrientation"
 
     invoke-virtual {p0, v0}, Lcom/fusepowered/m2/m2l/MraidCommandExpand;->getBooleanFromParamsForKey(Ljava/lang/String;)Z
@@ -144,7 +143,7 @@
     move-result v5
 
     .line 173
-    .local v5, shouldLockOrientation:Z
+    .local v5, "shouldLockOrientation":Z
     if-gtz v2, :cond_0
 
     iget-object v0, p0, Lcom/fusepowered/m2/m2l/MraidCommandExpand;->mView:Lcom/fusepowered/m2/m2l/MraidView;
@@ -183,7 +182,7 @@
 
 .method protected isCommandDependentOnUserClick(Lcom/fusepowered/m2/m2l/MraidView$PlacementType;)Z
     .locals 2
-    .parameter "placementType"
+    .param p1, "placementType"    # Lcom/fusepowered/m2/m2l/MraidView$PlacementType;
 
     .prologue
     .line 182

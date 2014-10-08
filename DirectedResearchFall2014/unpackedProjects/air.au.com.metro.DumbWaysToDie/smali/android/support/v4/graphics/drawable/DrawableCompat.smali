@@ -26,7 +26,7 @@
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     .line 58
-    .local v0, version:I
+    .local v0, "version":I
     const/16 v1, 0xb
 
     if-lt v0, v1, :cond_0
@@ -66,7 +66,7 @@
 
 .method public static jumpToCurrentState(Landroid/graphics/drawable/Drawable;)V
     .locals 1
-    .parameter "drawable"
+    .param p0, "drawable"    # Landroid/graphics/drawable/Drawable;
 
     .prologue
     .line 71

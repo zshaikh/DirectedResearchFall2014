@@ -36,13 +36,10 @@
 # direct methods
 .method constructor <init>(Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap;Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 73
-    .local p0, this:Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap$1;,"Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap.1;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap$1;, "Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap.1;"
     iput-object p1, p0, Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap$1;->this$0:Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap;
 
     iput-object p2, p0, Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap$1;->val$key:Ljava/lang/Object;
@@ -66,7 +63,7 @@
 
     .prologue
     .line 75
-    .local p0, this:Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap$1;,"Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap.1;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap$1;, "Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap.1;"
     iget-object v0, p0, Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap$1;->val$key:Ljava/lang/Object;
 
     return-object v0
@@ -82,7 +79,7 @@
 
     .prologue
     .line 78
-    .local p0, this:Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap$1;,"Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap.1;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap$1;, "Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap.1;"
     iget-object v0, p0, Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap$1;->val$value:Ljava/lang/Object;
 
     return-object v0
@@ -90,7 +87,6 @@
 
 .method public setValue(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TV;)TV;"
@@ -99,8 +95,8 @@
 
     .prologue
     .line 81
-    .local p0, this:Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap$1;,"Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap.1;"
-    .local p1, value:Ljava/lang/Object;,"TV;"
+    .local p0, "this":Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap$1;, "Lcom/flurry/org/apache/avro/util/WeakIdentityHashMap.1;"
+    .local p1, "value":Ljava/lang/Object;, "TV;"
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V

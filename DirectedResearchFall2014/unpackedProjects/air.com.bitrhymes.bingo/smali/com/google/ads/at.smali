@@ -36,7 +36,6 @@
 
 .method public static a(Landroid/app/Activity;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 159
@@ -56,8 +55,6 @@
 
 .method public static a(Landroid/content/Context;J)Z
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     .line 119
@@ -103,9 +100,6 @@
 
 .method static a(Landroid/content/Context;JLandroid/content/SharedPreferences;)Z
     .locals 4
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const-string v2, "drt_ts"

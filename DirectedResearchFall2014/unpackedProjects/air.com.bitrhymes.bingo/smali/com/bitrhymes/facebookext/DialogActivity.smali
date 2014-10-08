@@ -58,7 +58,7 @@
 # virtual methods
 .method protected bundleSetToURLEncoded(Landroid/os/Bundle;)Ljava/lang/String;
     .locals 6
-    .parameter "values"
+    .param p1, "values"    # Landroid/os/Bundle;
 
     .prologue
     .line 143
@@ -67,7 +67,7 @@
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
     .line 145
-    .local v2, sb:Ljava/lang/StringBuilder;
+    .local v2, "sb":Ljava/lang/StringBuilder;
     invoke-virtual {p1}, Landroid/os/Bundle;->keySet()Ljava/util/Set;
 
     move-result-object v3
@@ -83,10 +83,10 @@
     check-cast v1, [Ljava/lang/String;
 
     .line 146
-    .local v1, keys:[Ljava/lang/String;
+    .local v1, "keys":[Ljava/lang/String;
     const/4 v0, 0x0
 
-    .local v0, i:I
+    .local v0, "i":I
     :goto_0
     array-length v3, v1
 
@@ -158,9 +158,9 @@
 
 .method protected onActivityResult(IILandroid/content/Intent;)V
     .locals 1
-    .parameter "requestCode"
-    .parameter "resultCode"
-    .parameter "data"
+    .param p1, "requestCode"    # I
+    .param p2, "resultCode"    # I
+    .param p3, "data"    # Landroid/content/Intent;
 
     .prologue
     .line 60
@@ -177,15 +177,15 @@
 
 .method public onComplete(Landroid/os/Bundle;Lcom/facebook/FacebookException;)V
     .locals 10
-    .parameter "values"
-    .parameter "error"
+    .param p1, "values"    # Landroid/os/Bundle;
+    .param p2, "error"    # Lcom/facebook/FacebookException;
 
     .prologue
     .line 66
     sget-object v0, Lcom/bitrhymes/facebookext/FacebookExt;->context:Lcom/adobe/fre/FREContext;
 
     .line 67
-    .local v0, context:Lcom/adobe/fre/FREContext;
+    .local v0, "context":Lcom/adobe/fre/FREContext;
     const-string v7, "INFO - DialogActivity.onComplete"
 
     invoke-static {v7}, Lcom/bitrhymes/facebookext/FacebookExt;->log(Ljava/lang/String;)V
@@ -315,7 +315,7 @@
     move-result-object v5
 
     .line 88
-    .local v5, requestId:Ljava/lang/String;
+    .local v5, "requestId":Ljava/lang/String;
     if-nez v5, :cond_2
 
     .line 89
@@ -335,7 +335,7 @@
     const-string v6, ""
 
     .line 95
-    .local v6, returnString:Ljava/lang/String;
+    .local v6, "returnString":Ljava/lang/String;
     iget-boolean v7, p0, Lcom/bitrhymes/facebookext/DialogActivity;->isRequestDialog:Z
 
     if-nez v7, :cond_8
@@ -359,16 +359,16 @@
     move-result-object v3
 
     .line 100
-    .local v3, keySet:Ljava/util/Set;,"Ljava/util/Set<Ljava/lang/String;>;"
+    .local v3, "keySet":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     invoke-interface {v3}, Ljava/util/Set;->toArray()[Ljava/lang/Object;
 
     move-result-object v2
 
     .line 101
-    .local v2, keyArray:[Ljava/lang/Object;
+    .local v2, "keyArray":[Ljava/lang/Object;
     const/4 v1, 0x0
 
-    .local v1, i:I
+    .local v1, "i":I
     :goto_2
     invoke-virtual {p1}, Landroid/os/Bundle;->size()I
 
@@ -397,29 +397,29 @@
     invoke-virtual {v0, v7, v8}, Lcom/adobe/fre/FREContext;->dispatchStatusEventAsync(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 138
-    .end local v1           #i:I
-    .end local v2           #keyArray:[Ljava/lang/Object;
-    .end local v3           #keySet:Ljava/util/Set;,"Ljava/util/Set<Ljava/lang/String;>;"
-    .end local v5           #requestId:Ljava/lang/String;
-    .end local v6           #returnString:Ljava/lang/String;
+    .end local v1    # "i":I
+    .end local v2    # "keyArray":[Ljava/lang/Object;
+    .end local v3    # "keySet":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
+    .end local v5    # "requestId":Ljava/lang/String;
+    .end local v6    # "returnString":Ljava/lang/String;
     :cond_4
     invoke-virtual {p0}, Lcom/bitrhymes/facebookext/DialogActivity;->finish()V
 
     goto :goto_1
 
     .line 103
-    .restart local v1       #i:I
-    .restart local v2       #keyArray:[Ljava/lang/Object;
-    .restart local v3       #keySet:Ljava/util/Set;,"Ljava/util/Set<Ljava/lang/String;>;"
-    .restart local v5       #requestId:Ljava/lang/String;
-    .restart local v6       #returnString:Ljava/lang/String;
+    .restart local v1    # "i":I
+    .restart local v2    # "keyArray":[Ljava/lang/Object;
+    .restart local v3    # "keySet":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
+    .restart local v5    # "requestId":Ljava/lang/String;
+    .restart local v6    # "returnString":Ljava/lang/String;
     :cond_5
     aget-object v4, v2, v1
 
     check-cast v4, Ljava/lang/String;
 
     .line 104
-    .local v4, keyValue:Ljava/lang/String;
+    .local v4, "keyValue":Ljava/lang/String;
     const-string v7, "request_id"
 
     invoke-virtual {v4, v7}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
@@ -528,26 +528,26 @@
     goto :goto_3
 
     .line 118
-    .end local v1           #i:I
-    .end local v2           #keyArray:[Ljava/lang/Object;
-    .end local v3           #keySet:Ljava/util/Set;,"Ljava/util/Set<Ljava/lang/String;>;"
-    .end local v4           #keyValue:Ljava/lang/String;
+    .end local v1    # "i":I
+    .end local v2    # "keyArray":[Ljava/lang/Object;
+    .end local v3    # "keySet":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
+    .end local v4    # "keyValue":Ljava/lang/String;
     :cond_8
     invoke-virtual {p1}, Landroid/os/Bundle;->keySet()Ljava/util/Set;
 
     move-result-object v3
 
     .line 119
-    .restart local v3       #keySet:Ljava/util/Set;,"Ljava/util/Set<Ljava/lang/String;>;"
+    .restart local v3    # "keySet":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     invoke-interface {v3}, Ljava/util/Set;->toArray()[Ljava/lang/Object;
 
     move-result-object v2
 
     .line 120
-    .restart local v2       #keyArray:[Ljava/lang/Object;
+    .restart local v2    # "keyArray":[Ljava/lang/Object;
     const/4 v1, 0x0
 
-    .restart local v1       #i:I
+    .restart local v1    # "i":I
     :goto_4
     invoke-virtual {p1}, Landroid/os/Bundle;->size()I
 
@@ -561,7 +561,7 @@
     check-cast v4, Ljava/lang/String;
 
     .line 124
-    .restart local v4       #keyValue:Ljava/lang/String;
+    .restart local v4    # "keyValue":Ljava/lang/String;
     const-string v7, "request_id"
 
     invoke-virtual {v4, v7}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
@@ -672,7 +672,7 @@
 
 .method protected onCreate(Landroid/os/Bundle;)V
     .locals 7
-    .parameter "savedInstanceState"
+    .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
     const/16 v6, 0x400
@@ -689,7 +689,7 @@
     sget-object v0, Lcom/bitrhymes/facebookext/FacebookExt;->context:Lcom/adobe/fre/FREContext;
 
     .line 38
-    .local v0, context:Lcom/adobe/fre/FREContext;
+    .local v0, "context":Lcom/adobe/fre/FREContext;
     const/4 v3, 0x3
 
     invoke-virtual {p0, v3}, Lcom/bitrhymes/facebookext/DialogActivity;->requestWindowFeature(I)Z
@@ -764,7 +764,7 @@
     move-result-object v2
 
     .line 44
-    .local v2, parameters:Landroid/os/Bundle;
+    .local v2, "parameters":Landroid/os/Bundle;
     invoke-virtual {p0}, Lcom/bitrhymes/facebookext/DialogActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v3
@@ -844,7 +844,7 @@
     move-result-object v1
 
     .line 53
-    .local v1, dialog_window:Landroid/view/Window;
+    .local v1, "dialog_window":Landroid/view/Window;
     invoke-virtual {v1, v6, v6}, Landroid/view/Window;->setFlags(II)V
 
     .line 54

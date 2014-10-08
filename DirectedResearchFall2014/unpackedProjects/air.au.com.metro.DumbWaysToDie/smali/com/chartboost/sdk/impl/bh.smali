@@ -30,7 +30,6 @@
 # direct methods
 .method public constructor <init>(I)V
     .locals 1
-    .parameter
 
     .prologue
     .line 26
@@ -54,7 +53,6 @@
 # virtual methods
 .method protected a(Ljava/lang/Object;)Z
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;)Z"
@@ -78,7 +76,6 @@
 
 .method public b(Ljava/lang/Object;)V
     .locals 2
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;)V"

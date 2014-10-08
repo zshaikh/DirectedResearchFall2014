@@ -51,7 +51,7 @@
 
 .method private doAction(Landroid/os/Bundle;)V
     .locals 5
-    .parameter "data"
+    .param p1, "data"    # Landroid/os/Bundle;
 
     .prologue
     .line 52
@@ -62,7 +62,7 @@
     move-result-object v0
 
     .line 54
-    .local v0, actionData:Ljava/lang/String;
+    .local v0, "actionData":Ljava/lang/String;
     if-nez v0, :cond_0
 
     .line 73
@@ -76,7 +76,7 @@
     move-result-object v1
 
     .line 59
-    .local v1, actionType:Lcom/tapjoy/mraid/view/MraidView$Action;
+    .local v1, "actionType":Lcom/tapjoy/mraid/view/MraidView$Action;
     sget-object v3, Lcom/tapjoy/mraid/view/ActionHandler$2;->$SwitchMap$com$tapjoy$mraid$view$MraidView$Action:[I
 
     invoke-virtual {v1}, Lcom/tapjoy/mraid/view/MraidView$Action;->ordinal()I
@@ -96,20 +96,20 @@
     move-result-object v2
 
     .line 62
-    .local v2, player:Lcom/tapjoy/mraid/util/MraidPlayer;
+    .local v2, "player":Lcom/tapjoy/mraid/util/MraidPlayer;
     invoke-virtual {v2}, Lcom/tapjoy/mraid/util/MraidPlayer;->playAudio()V
 
     goto :goto_0
 
     .line 66
-    .end local v2           #player:Lcom/tapjoy/mraid/util/MraidPlayer;
+    .end local v2    # "player":Lcom/tapjoy/mraid/util/MraidPlayer;
     :pswitch_1
     invoke-virtual {p0, p1, v1}, Lcom/tapjoy/mraid/view/ActionHandler;->initPlayer(Landroid/os/Bundle;Lcom/tapjoy/mraid/view/MraidView$Action;)Lcom/tapjoy/mraid/util/MraidPlayer;
 
     move-result-object v2
 
     .line 67
-    .restart local v2       #player:Lcom/tapjoy/mraid/util/MraidPlayer;
+    .restart local v2    # "player":Lcom/tapjoy/mraid/util/MraidPlayer;
     invoke-virtual {v2}, Lcom/tapjoy/mraid/util/MraidPlayer;->playVideo()V
 
     goto :goto_0
@@ -126,7 +126,7 @@
 
 .method private setPlayerListener(Lcom/tapjoy/mraid/util/MraidPlayer;)V
     .locals 1
-    .parameter "player"
+    .param p1, "player"    # Lcom/tapjoy/mraid/util/MraidPlayer;
 
     .prologue
     .line 123
@@ -144,11 +144,11 @@
 # virtual methods
 .method initPlayer(Landroid/os/Bundle;Lcom/tapjoy/mraid/view/MraidView$Action;)Lcom/tapjoy/mraid/util/MraidPlayer;
     .locals 9
-    .parameter "playData"
-    .parameter "actionType"
+    .param p1, "playData"    # Landroid/os/Bundle;
+    .param p2, "actionType"    # Lcom/tapjoy/mraid/view/MraidView$Action;
 
     .prologue
-    const/high16 v8, 0x100
+    const/high16 v8, 0x1000000
 
     const/16 v7, 0x400
 
@@ -164,7 +164,7 @@
     check-cast v3, Lcom/tapjoy/mraid/controller/Abstract$PlayerProperties;
 
     .line 86
-    .local v3, properties:Lcom/tapjoy/mraid/controller/Abstract$PlayerProperties;
+    .local v3, "properties":Lcom/tapjoy/mraid/controller/Abstract$PlayerProperties;
     const-string v4, "expand_dimensions"
 
     invoke-virtual {p1, v4}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
@@ -174,13 +174,13 @@
     check-cast v1, Lcom/tapjoy/mraid/controller/Abstract$Dimensions;
 
     .line 87
-    .local v1, playDimensions:Lcom/tapjoy/mraid/controller/Abstract$Dimensions;
+    .local v1, "playDimensions":Lcom/tapjoy/mraid/controller/Abstract$Dimensions;
     new-instance v2, Lcom/tapjoy/mraid/util/MraidPlayer;
 
     invoke-direct {v2, p0}, Lcom/tapjoy/mraid/util/MraidPlayer;-><init>(Landroid/content/Context;)V
 
     .line 88
-    .local v2, player:Lcom/tapjoy/mraid/util/MraidPlayer;
+    .local v2, "player":Lcom/tapjoy/mraid/util/MraidPlayer;
     const-string v4, "expand_url"
 
     invoke-static {v4, p1}, Lcom/tapjoy/mraid/util/Utils;->getData(Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/String;
@@ -224,7 +224,7 @@
     invoke-direct {v0, v6, v6}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
     .line 99
-    .local v0, lp:Landroid/widget/RelativeLayout$LayoutParams;
+    .local v0, "lp":Landroid/widget/RelativeLayout$LayoutParams;
     const/16 v4, 0xd
 
     invoke-virtual {v0, v4}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
@@ -250,7 +250,7 @@
     return-object v2
 
     .line 104
-    .end local v0           #lp:Landroid/widget/RelativeLayout$LayoutParams;
+    .end local v0    # "lp":Landroid/widget/RelativeLayout$LayoutParams;
     :cond_0
     new-instance v0, Landroid/widget/RelativeLayout$LayoutParams;
 
@@ -261,7 +261,7 @@
     invoke-direct {v0, v4, v5}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
     .line 105
-    .restart local v0       #lp:Landroid/widget/RelativeLayout$LayoutParams;
+    .restart local v0    # "lp":Landroid/widget/RelativeLayout$LayoutParams;
     iget v4, v1, Lcom/tapjoy/mraid/controller/Abstract$Dimensions;->y:I
 
     iput v4, v0, Landroid/widget/RelativeLayout$LayoutParams;->topMargin:I
@@ -276,7 +276,7 @@
 
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 4
-    .parameter "savedInstanceState"
+    .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
     const/4 v3, -0x1
@@ -299,7 +299,7 @@
     move-result-object v0
 
     .line 39
-    .local v0, data:Landroid/os/Bundle;
+    .local v0, "data":Landroid/os/Bundle;
     new-instance v1, Landroid/widget/RelativeLayout;
 
     invoke-direct {v1, p0}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;)V
@@ -318,7 +318,7 @@
     .line 41
     iget-object v1, p0, Lcom/tapjoy/mraid/view/ActionHandler;->layout:Landroid/widget/RelativeLayout;
 
-    const/high16 v2, -0x100
+    const/high16 v2, -0x1000000
 
     invoke-virtual {v1, v2}, Landroid/widget/RelativeLayout;->setBackgroundColor(I)V
 
@@ -349,7 +349,7 @@
 
     move-result-object v1
 
-    .local v1, i$:Ljava/util/Iterator;
+    .local v1, "i$":Ljava/util/Iterator;
     :goto_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
@@ -364,7 +364,7 @@
     check-cast v0, Ljava/util/Map$Entry;
 
     .line 146
-    .local v0, entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Lcom/tapjoy/mraid/view/MraidView$Action;Ljava/lang/Object;>;"
+    .local v0, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Lcom/tapjoy/mraid/view/MraidView$Action;Ljava/lang/Object;>;"
     sget-object v4, Lcom/tapjoy/mraid/view/ActionHandler$2;->$SwitchMap$com$tapjoy$mraid$view$MraidView$Action:[I
 
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
@@ -392,14 +392,14 @@
     check-cast v2, Lcom/tapjoy/mraid/util/MraidPlayer;
 
     .line 150
-    .local v2, player:Lcom/tapjoy/mraid/util/MraidPlayer;
+    .local v2, "player":Lcom/tapjoy/mraid/util/MraidPlayer;
     invoke-virtual {v2}, Lcom/tapjoy/mraid/util/MraidPlayer;->releasePlayer()V
 
     goto :goto_0
 
     .line 156
-    .end local v0           #entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Lcom/tapjoy/mraid/view/MraidView$Action;Ljava/lang/Object;>;"
-    .end local v2           #player:Lcom/tapjoy/mraid/util/MraidPlayer;
+    .end local v0    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Lcom/tapjoy/mraid/view/MraidView$Action;Ljava/lang/Object;>;"
+    .end local v2    # "player":Lcom/tapjoy/mraid/util/MraidPlayer;
     :cond_0
     invoke-super {p0}, Landroid/app/Activity;->onStop()V
 

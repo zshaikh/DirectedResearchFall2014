@@ -64,7 +64,7 @@
     sput v0, Lcom/fusepowered/m1/android/R$attr;->age:I
 
     .line 35
-    const/high16 v0, 0x7f01
+    const/high16 v0, 0x7f010000
 
     sput v0, Lcom/fusepowered/m1/android/R$attr;->apid:I
 

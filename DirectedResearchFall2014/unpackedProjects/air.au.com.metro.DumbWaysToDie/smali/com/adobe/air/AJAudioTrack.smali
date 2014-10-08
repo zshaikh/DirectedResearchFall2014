@@ -26,10 +26,6 @@
 
 .method public constructor <init>(IIII)V
     .locals 7
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     .line 49
@@ -60,10 +56,6 @@
 
 .method public static CreateTrack(IIII)Lcom/adobe/air/AJAudioTrack;
     .locals 5
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
     .prologue
     const/4 v4, 0x0
@@ -142,7 +134,6 @@
 
 .method public static SetStreamType(I)V
     .locals 0
-    .parameter
 
     .prologue
     .line 56
@@ -154,7 +145,6 @@
 
 .method public static ToAndroidChannelCount(I)I
     .locals 1
-    .parameter
 
     .prologue
     .line 70
@@ -177,7 +167,6 @@
 
 .method public static ToAndroidFormat(I)I
     .locals 1
-    .parameter
 
     .prologue
     .line 62

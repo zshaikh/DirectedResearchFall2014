@@ -26,8 +26,6 @@
 # direct methods
 .method constructor <init>(Lcom/tapjoy/mraid/view/MraidView;Ljava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 388
@@ -73,7 +71,7 @@
 
     iget-object v1, p0, Lcom/tapjoy/mraid/view/MraidView$1;->val$url:Ljava/lang/String;
 
-    #calls: Landroid/webkit/WebView;->loadUrl(Ljava/lang/String;)V
+    # invokes: Landroid/webkit/WebView;->loadUrl(Ljava/lang/String;)V
     invoke-static {v0, v1}, Lcom/tapjoy/mraid/view/MraidView;->access$001(Lcom/tapjoy/mraid/view/MraidView;Ljava/lang/String;)V
 
     .line 404

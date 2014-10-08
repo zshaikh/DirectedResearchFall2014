@@ -6,10 +6,10 @@
 # direct methods
 .method constructor <init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/Double;Ljava/lang/String;)V
     .locals 2
-    .parameter "context"
-    .parameter "username"
-    .parameter "price"
-    .parameter "currency"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "username"    # Ljava/lang/String;
+    .param p3, "price"    # Ljava/lang/Double;
+    .param p4, "currency"    # Ljava/lang/String;
 
     .prologue
     .line 17

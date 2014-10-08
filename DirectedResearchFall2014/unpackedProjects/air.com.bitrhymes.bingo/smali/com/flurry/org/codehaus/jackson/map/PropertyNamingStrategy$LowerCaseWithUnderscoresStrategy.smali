@@ -29,7 +29,7 @@
 # virtual methods
 .method public translate(Ljava/lang/String;)Ljava/lang/String;
     .locals 8
-    .parameter "input"
+    .param p1, "input"    # Ljava/lang/String;
 
     .prologue
     const/16 v7, 0x5f
@@ -50,7 +50,7 @@
     move-result v2
 
     .line 229
-    .local v2, length:I
+    .local v2, "length":I
     new-instance v3, Ljava/lang/StringBuilder;
 
     mul-int/lit8 v6, v2, 0x2
@@ -58,18 +58,18 @@
     invoke-direct {v3, v6}, Ljava/lang/StringBuilder;-><init>(I)V
 
     .line 230
-    .local v3, result:Ljava/lang/StringBuilder;
+    .local v3, "result":Ljava/lang/StringBuilder;
     const/4 v4, 0x0
 
     .line 231
-    .local v4, resultLength:I
+    .local v4, "resultLength":I
     const/4 v5, 0x0
 
     .line 232
-    .local v5, wasPrevTranslated:Z
+    .local v5, "wasPrevTranslated":Z
     const/4 v1, 0x0
 
-    .local v1, i:I
+    .local v1, "i":I
     :goto_1
     if-ge v1, v2, :cond_5
 
@@ -79,7 +79,7 @@
     move-result v0
 
     .line 235
-    .local v0, c:C
+    .local v0, "c":C
     if-gtz v1, :cond_1
 
     if-eq v0, v7, :cond_3
@@ -142,7 +142,7 @@
     goto :goto_2
 
     .line 255
-    .end local v0           #c:C
+    .end local v0    # "c":C
     :cond_5
     if-lez v4, :cond_6
 

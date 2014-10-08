@@ -10,11 +10,11 @@
 # direct methods
 .method public constructor <init>(Ljava/lang/String;Lcom/flurry/org/codehaus/jackson/type/JavaType;Lcom/flurry/org/codehaus/jackson/map/util/Annotations;Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMember;Ljava/lang/Object;)V
     .locals 0
-    .parameter "propertyName"
-    .parameter "type"
-    .parameter "contextAnnotations"
-    .parameter "mutator"
-    .parameter "valueId"
+    .param p1, "propertyName"    # Ljava/lang/String;
+    .param p2, "type"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .param p3, "contextAnnotations"    # Lcom/flurry/org/codehaus/jackson/map/util/Annotations;
+    .param p4, "mutator"    # Lcom/flurry/org/codehaus/jackson/map/introspect/AnnotatedMember;
+    .param p5, "valueId"    # Ljava/lang/Object;
 
     .prologue
     .line 31
@@ -31,8 +31,8 @@
 # virtual methods
 .method public findValue(Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
-    .parameter "context"
-    .parameter "beanInstance"
+    .param p1, "context"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;
+    .param p2, "beanInstance"    # Ljava/lang/Object;
 
     .prologue
     .line 37
@@ -47,8 +47,8 @@
 
 .method public inject(Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;Ljava/lang/Object;)V
     .locals 2
-    .parameter "context"
-    .parameter "beanInstance"
+    .param p1, "context"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationContext;
+    .param p2, "beanInstance"    # Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;

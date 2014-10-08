@@ -25,8 +25,8 @@
 # virtual methods
 .method public call(Lcom/adobe/fre/FREContext;[Lcom/adobe/fre/FREObject;)Lcom/adobe/fre/FREObject;
     .locals 9
-    .parameter "context"
-    .parameter "arg1"
+    .param p1, "context"    # Lcom/adobe/fre/FREContext;
+    .param p2, "arg1"    # [Lcom/adobe/fre/FREObject;
 
     .prologue
     const-string v8, ","
@@ -35,11 +35,11 @@
     const/4 v2, 0x0
 
     .line 18
-    .local v2, isFbInstalled:Z
+    .local v2, "isFbInstalled":Z
     const/4 v4, 0x0
 
     .line 20
-    .local v4, newObject:Lcom/adobe/fre/FREObject;
+    .local v4, "newObject":Lcom/adobe/fre/FREObject;
     :try_start_0
     invoke-virtual {p1}, Lcom/adobe/fre/FREContext;->getActivity()Landroid/app/Activity;
 
@@ -50,7 +50,7 @@
     move-result-object v3
 
     .line 22
-    .local v3, manager:Landroid/content/pm/PackageManager;
+    .local v3, "manager":Landroid/content/pm/PackageManager;
     const-string v5, "com.facebook.katana"
 
     const/4 v6, 0x0
@@ -60,7 +60,7 @@
     move-result-object v1
 
     .line 24
-    .local v1, info:Landroid/content/pm/ApplicationInfo;
+    .local v1, "info":Landroid/content/pm/ApplicationInfo;
     const/4 v2, 0x1
 
     .line 26
@@ -73,8 +73,8 @@
     move-object v5, v4
 
     .line 34
-    .end local v1           #info:Landroid/content/pm/ApplicationInfo;
-    .end local v3           #manager:Landroid/content/pm/PackageManager;
+    .end local v1    # "info":Landroid/content/pm/ApplicationInfo;
+    .end local v3    # "manager":Landroid/content/pm/PackageManager;
     :goto_0
     return-object v5
 
@@ -85,7 +85,7 @@
     move-object v0, v5
 
     .line 32
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     const-string v5, "ERROR_EVENT"
 
     new-instance v6, Ljava/lang/StringBuilder;

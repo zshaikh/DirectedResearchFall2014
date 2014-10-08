@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m2/m2l/MraidView;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1
@@ -40,14 +39,14 @@
 # virtual methods
 .method public onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
     .locals 1
-    .parameter "v"
-    .parameter "event"
+    .param p1, "v"    # Landroid/view/View;
+    .param p2, "event"    # Landroid/view/MotionEvent;
 
     .prologue
     .line 148
     iget-object v0, p0, Lcom/fusepowered/m2/m2l/MraidView$1;->this$0:Lcom/fusepowered/m2/m2l/MraidView;
 
-    #getter for: Lcom/fusepowered/m2/m2l/MraidView;->mViewGestureDetector:Lcom/fusepowered/m2/m2l/ViewGestureDetector;
+    # getter for: Lcom/fusepowered/m2/m2l/MraidView;->mViewGestureDetector:Lcom/fusepowered/m2/m2l/ViewGestureDetector;
     invoke-static {v0}, Lcom/fusepowered/m2/m2l/MraidView;->access$5(Lcom/fusepowered/m2/m2l/MraidView;)Lcom/fusepowered/m2/m2l/ViewGestureDetector;
 
     move-result-object v0

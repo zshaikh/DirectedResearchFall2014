@@ -34,7 +34,6 @@
 
 .method static synthetic access$000(Lcom/adobe/air/AndroidNetworkDetector;)J
     .locals 2
-    .parameter
 
     .prologue
     .line 11
@@ -45,8 +44,6 @@
 
 .method static synthetic access$100(Lcom/adobe/air/AndroidNetworkDetector;J)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 11
@@ -62,8 +59,6 @@
 # virtual methods
 .method public RegisterForNetworkChange(Landroid/content/Context;J)V
     .locals 2
-    .parameter
-    .parameter
 
     .prologue
     .line 25

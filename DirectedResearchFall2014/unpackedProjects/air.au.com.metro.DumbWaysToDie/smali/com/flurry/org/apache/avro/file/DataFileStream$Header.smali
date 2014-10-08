@@ -77,7 +77,7 @@
 
 .method synthetic constructor <init>(Lcom/flurry/org/apache/avro/file/DataFileStream$1;)V
     .locals 0
-    .parameter "x0"
+    .param p1, "x0"    # Lcom/flurry/org/apache/avro/file/DataFileStream$1;
 
     .prologue
     .line 52
@@ -88,7 +88,7 @@
 
 .method static synthetic access$100(Lcom/flurry/org/apache/avro/file/DataFileStream$Header;)Ljava/util/List;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/flurry/org/apache/avro/file/DataFileStream$Header;
 
     .prologue
     .line 52
@@ -99,8 +99,8 @@
 
 .method static synthetic access$102(Lcom/flurry/org/apache/avro/file/DataFileStream$Header;Ljava/util/List;)Ljava/util/List;
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
+    .param p0, "x0"    # Lcom/flurry/org/apache/avro/file/DataFileStream$Header;
+    .param p1, "x1"    # Ljava/util/List;
 
     .prologue
     .line 52

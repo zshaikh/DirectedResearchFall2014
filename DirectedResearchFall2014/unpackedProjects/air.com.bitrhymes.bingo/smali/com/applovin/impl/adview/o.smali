@@ -37,7 +37,7 @@
 
     iget-object v0, p0, Lcom/applovin/impl/adview/o;->a:Lcom/applovin/impl/adview/AdViewControllerJsInterface;
 
-    #getter for: Lcom/applovin/impl/adview/AdViewControllerJsInterface;->adVideoPlaybackListener:Lcom/applovin/sdk/AppLovinAdVideoPlaybackListener;
+    # getter for: Lcom/applovin/impl/adview/AdViewControllerJsInterface;->adVideoPlaybackListener:Lcom/applovin/sdk/AppLovinAdVideoPlaybackListener;
     invoke-static {v0}, Lcom/applovin/impl/adview/AdViewControllerJsInterface;->access$100(Lcom/applovin/impl/adview/AdViewControllerJsInterface;)Lcom/applovin/sdk/AppLovinAdVideoPlaybackListener;
 
     move-result-object v0
@@ -46,14 +46,14 @@
 
     iget-object v0, p0, Lcom/applovin/impl/adview/o;->a:Lcom/applovin/impl/adview/AdViewControllerJsInterface;
 
-    #getter for: Lcom/applovin/impl/adview/AdViewControllerJsInterface;->adVideoPlaybackListener:Lcom/applovin/sdk/AppLovinAdVideoPlaybackListener;
+    # getter for: Lcom/applovin/impl/adview/AdViewControllerJsInterface;->adVideoPlaybackListener:Lcom/applovin/sdk/AppLovinAdVideoPlaybackListener;
     invoke-static {v0}, Lcom/applovin/impl/adview/AdViewControllerJsInterface;->access$100(Lcom/applovin/impl/adview/AdViewControllerJsInterface;)Lcom/applovin/sdk/AppLovinAdVideoPlaybackListener;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/applovin/impl/adview/o;->a:Lcom/applovin/impl/adview/AdViewControllerJsInterface;
 
-    #getter for: Lcom/applovin/impl/adview/AdViewControllerJsInterface;->currentAd:Lcom/applovin/sdk/AppLovinAd;
+    # getter for: Lcom/applovin/impl/adview/AdViewControllerJsInterface;->currentAd:Lcom/applovin/sdk/AppLovinAd;
     invoke-static {v1}, Lcom/applovin/impl/adview/AdViewControllerJsInterface;->access$200(Lcom/applovin/impl/adview/AdViewControllerJsInterface;)Lcom/applovin/sdk/AppLovinAd;
 
     move-result-object v1
@@ -71,7 +71,7 @@
 
     iget-object v0, p0, Lcom/applovin/impl/adview/o;->a:Lcom/applovin/impl/adview/AdViewControllerJsInterface;
 
-    #getter for: Lcom/applovin/impl/adview/AdViewControllerJsInterface;->adVideoPlaybackListener:Lcom/applovin/sdk/AppLovinAdVideoPlaybackListener;
+    # getter for: Lcom/applovin/impl/adview/AdViewControllerJsInterface;->adVideoPlaybackListener:Lcom/applovin/sdk/AppLovinAdVideoPlaybackListener;
     invoke-static {v0}, Lcom/applovin/impl/adview/AdViewControllerJsInterface;->access$100(Lcom/applovin/impl/adview/AdViewControllerJsInterface;)Lcom/applovin/sdk/AppLovinAdVideoPlaybackListener;
 
     move-result-object v0
@@ -80,21 +80,21 @@
 
     iget-object v0, p0, Lcom/applovin/impl/adview/o;->a:Lcom/applovin/impl/adview/AdViewControllerJsInterface;
 
-    #getter for: Lcom/applovin/impl/adview/AdViewControllerJsInterface;->adVideoPlaybackListener:Lcom/applovin/sdk/AppLovinAdVideoPlaybackListener;
+    # getter for: Lcom/applovin/impl/adview/AdViewControllerJsInterface;->adVideoPlaybackListener:Lcom/applovin/sdk/AppLovinAdVideoPlaybackListener;
     invoke-static {v0}, Lcom/applovin/impl/adview/AdViewControllerJsInterface;->access$100(Lcom/applovin/impl/adview/AdViewControllerJsInterface;)Lcom/applovin/sdk/AppLovinAdVideoPlaybackListener;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/applovin/impl/adview/o;->a:Lcom/applovin/impl/adview/AdViewControllerJsInterface;
 
-    #getter for: Lcom/applovin/impl/adview/AdViewControllerJsInterface;->currentAd:Lcom/applovin/sdk/AppLovinAd;
+    # getter for: Lcom/applovin/impl/adview/AdViewControllerJsInterface;->currentAd:Lcom/applovin/sdk/AppLovinAd;
     invoke-static {v1}, Lcom/applovin/impl/adview/AdViewControllerJsInterface;->access$200(Lcom/applovin/impl/adview/AdViewControllerJsInterface;)Lcom/applovin/sdk/AppLovinAd;
 
     move-result-object v1
 
     iget-object v2, p0, Lcom/applovin/impl/adview/o;->a:Lcom/applovin/impl/adview/AdViewControllerJsInterface;
 
-    #getter for: Lcom/applovin/impl/adview/AdViewControllerJsInterface;->videoOverlay:Lcom/applovin/impl/adview/AppLovinVideoOverlay;
+    # getter for: Lcom/applovin/impl/adview/AdViewControllerJsInterface;->videoOverlay:Lcom/applovin/impl/adview/AppLovinVideoOverlay;
     invoke-static {v2}, Lcom/applovin/impl/adview/AdViewControllerJsInterface;->access$300(Lcom/applovin/impl/adview/AdViewControllerJsInterface;)Lcom/applovin/impl/adview/AppLovinVideoOverlay;
 
     move-result-object v2
@@ -120,7 +120,7 @@
 
     iget-object v0, p0, Lcom/applovin/impl/adview/o;->a:Lcom/applovin/impl/adview/AdViewControllerJsInterface;
 
-    #getter for: Lcom/applovin/impl/adview/AdViewControllerJsInterface;->adVideoPlaybackListener:Lcom/applovin/sdk/AppLovinAdVideoPlaybackListener;
+    # getter for: Lcom/applovin/impl/adview/AdViewControllerJsInterface;->adVideoPlaybackListener:Lcom/applovin/sdk/AppLovinAdVideoPlaybackListener;
     invoke-static {v0}, Lcom/applovin/impl/adview/AdViewControllerJsInterface;->access$100(Lcom/applovin/impl/adview/AdViewControllerJsInterface;)Lcom/applovin/sdk/AppLovinAdVideoPlaybackListener;
 
     move-result-object v0
@@ -129,21 +129,21 @@
 
     iget-object v0, p0, Lcom/applovin/impl/adview/o;->a:Lcom/applovin/impl/adview/AdViewControllerJsInterface;
 
-    #getter for: Lcom/applovin/impl/adview/AdViewControllerJsInterface;->adVideoPlaybackListener:Lcom/applovin/sdk/AppLovinAdVideoPlaybackListener;
+    # getter for: Lcom/applovin/impl/adview/AdViewControllerJsInterface;->adVideoPlaybackListener:Lcom/applovin/sdk/AppLovinAdVideoPlaybackListener;
     invoke-static {v0}, Lcom/applovin/impl/adview/AdViewControllerJsInterface;->access$100(Lcom/applovin/impl/adview/AdViewControllerJsInterface;)Lcom/applovin/sdk/AppLovinAdVideoPlaybackListener;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/applovin/impl/adview/o;->a:Lcom/applovin/impl/adview/AdViewControllerJsInterface;
 
-    #getter for: Lcom/applovin/impl/adview/AdViewControllerJsInterface;->currentAd:Lcom/applovin/sdk/AppLovinAd;
+    # getter for: Lcom/applovin/impl/adview/AdViewControllerJsInterface;->currentAd:Lcom/applovin/sdk/AppLovinAd;
     invoke-static {v1}, Lcom/applovin/impl/adview/AdViewControllerJsInterface;->access$200(Lcom/applovin/impl/adview/AdViewControllerJsInterface;)Lcom/applovin/sdk/AppLovinAd;
 
     move-result-object v1
 
     iget-object v2, p0, Lcom/applovin/impl/adview/o;->a:Lcom/applovin/impl/adview/AdViewControllerJsInterface;
 
-    #getter for: Lcom/applovin/impl/adview/AdViewControllerJsInterface;->videoOverlay:Lcom/applovin/impl/adview/AppLovinVideoOverlay;
+    # getter for: Lcom/applovin/impl/adview/AdViewControllerJsInterface;->videoOverlay:Lcom/applovin/impl/adview/AppLovinVideoOverlay;
     invoke-static {v2}, Lcom/applovin/impl/adview/AdViewControllerJsInterface;->access$300(Lcom/applovin/impl/adview/AdViewControllerJsInterface;)Lcom/applovin/impl/adview/AppLovinVideoOverlay;
 
     move-result-object v2
@@ -176,7 +176,7 @@
 
     iget-object v0, p0, Lcom/applovin/impl/adview/o;->a:Lcom/applovin/impl/adview/AdViewControllerJsInterface;
 
-    #getter for: Lcom/applovin/impl/adview/AdViewControllerJsInterface;->adVideoPlaybackListener:Lcom/applovin/sdk/AppLovinAdVideoPlaybackListener;
+    # getter for: Lcom/applovin/impl/adview/AdViewControllerJsInterface;->adVideoPlaybackListener:Lcom/applovin/sdk/AppLovinAdVideoPlaybackListener;
     invoke-static {v0}, Lcom/applovin/impl/adview/AdViewControllerJsInterface;->access$100(Lcom/applovin/impl/adview/AdViewControllerJsInterface;)Lcom/applovin/sdk/AppLovinAdVideoPlaybackListener;
 
     move-result-object v0
@@ -185,14 +185,14 @@
 
     iget-object v0, p0, Lcom/applovin/impl/adview/o;->a:Lcom/applovin/impl/adview/AdViewControllerJsInterface;
 
-    #getter for: Lcom/applovin/impl/adview/AdViewControllerJsInterface;->adVideoPlaybackListener:Lcom/applovin/sdk/AppLovinAdVideoPlaybackListener;
+    # getter for: Lcom/applovin/impl/adview/AdViewControllerJsInterface;->adVideoPlaybackListener:Lcom/applovin/sdk/AppLovinAdVideoPlaybackListener;
     invoke-static {v0}, Lcom/applovin/impl/adview/AdViewControllerJsInterface;->access$100(Lcom/applovin/impl/adview/AdViewControllerJsInterface;)Lcom/applovin/sdk/AppLovinAdVideoPlaybackListener;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/applovin/impl/adview/o;->a:Lcom/applovin/impl/adview/AdViewControllerJsInterface;
 
-    #getter for: Lcom/applovin/impl/adview/AdViewControllerJsInterface;->currentAd:Lcom/applovin/sdk/AppLovinAd;
+    # getter for: Lcom/applovin/impl/adview/AdViewControllerJsInterface;->currentAd:Lcom/applovin/sdk/AppLovinAd;
     invoke-static {v1}, Lcom/applovin/impl/adview/AdViewControllerJsInterface;->access$200(Lcom/applovin/impl/adview/AdViewControllerJsInterface;)Lcom/applovin/sdk/AppLovinAd;
 
     move-result-object v1
@@ -208,7 +208,7 @@
     :cond_5
     iget-object v0, p0, Lcom/applovin/impl/adview/o;->a:Lcom/applovin/impl/adview/AdViewControllerJsInterface;
 
-    #getter for: Lcom/applovin/impl/adview/AdViewControllerJsInterface;->videoOverlay:Lcom/applovin/impl/adview/AppLovinVideoOverlay;
+    # getter for: Lcom/applovin/impl/adview/AdViewControllerJsInterface;->videoOverlay:Lcom/applovin/impl/adview/AppLovinVideoOverlay;
     invoke-static {v0}, Lcom/applovin/impl/adview/AdViewControllerJsInterface;->access$300(Lcom/applovin/impl/adview/AdViewControllerJsInterface;)Lcom/applovin/impl/adview/AppLovinVideoOverlay;
 
     move-result-object v0

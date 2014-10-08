@@ -13,7 +13,7 @@
 # direct methods
 .method public constructor <init>(Lcom/playhaven/src/publishersdk/open/PHPublisherOpenRequest$PrefetchListener;)V
     .locals 0
-    .parameter "delegate"
+    .param p1, "delegate"    # Lcom/playhaven/src/publishersdk/open/PHPublisherOpenRequest$PrefetchListener;
 
     .prologue
     .line 13
@@ -30,7 +30,7 @@
 # virtual methods
 .method public onPrefetchFinished(Lv2/com/playhaven/requests/open/PHOpenRequest;)V
     .locals 1
-    .parameter "request"
+    .param p1, "request"    # Lv2/com/playhaven/requests/open/PHOpenRequest;
 
     .prologue
     .line 19
@@ -38,7 +38,7 @@
 
     check-cast p1, Lcom/playhaven/src/publishersdk/open/PHPublisherOpenRequest;
 
-    .end local p1
+    .end local p1    # "request":Lv2/com/playhaven/requests/open/PHOpenRequest;
     invoke-interface {v0, p1}, Lcom/playhaven/src/publishersdk/open/PHPublisherOpenRequest$PrefetchListener;->prefetchFinished(Lcom/playhaven/src/publishersdk/open/PHPublisherOpenRequest;)V
 
     .line 20

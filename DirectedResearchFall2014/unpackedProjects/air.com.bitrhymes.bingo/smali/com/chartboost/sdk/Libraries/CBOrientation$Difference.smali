@@ -111,8 +111,6 @@
 
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 72
@@ -225,7 +223,6 @@
 
 .method public static valueOf(Ljava/lang/String;)Lcom/chartboost/sdk/Libraries/CBOrientation$Difference;
     .locals 1
-    .parameter
 
     .prologue
     .line 1

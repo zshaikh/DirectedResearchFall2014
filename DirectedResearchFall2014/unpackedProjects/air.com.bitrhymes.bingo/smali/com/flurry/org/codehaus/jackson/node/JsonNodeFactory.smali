@@ -36,7 +36,7 @@
 # virtual methods
 .method public POJONode(Ljava/lang/Object;)Lcom/flurry/org/codehaus/jackson/node/POJONode;
     .locals 1
-    .parameter "pojo"
+    .param p1, "pojo"    # Ljava/lang/Object;
 
     .prologue
     .line 220
@@ -61,7 +61,7 @@
 
 .method public binaryNode([B)Lcom/flurry/org/codehaus/jackson/node/BinaryNode;
     .locals 1
-    .parameter "data"
+    .param p1, "data"    # [B
 
     .prologue
     .line 187
@@ -74,9 +74,9 @@
 
 .method public binaryNode([BII)Lcom/flurry/org/codehaus/jackson/node/BinaryNode;
     .locals 1
-    .parameter "data"
-    .parameter "offset"
-    .parameter "length"
+    .param p1, "data"    # [B
+    .param p2, "offset"    # I
+    .param p3, "length"    # I
 
     .prologue
     .line 195
@@ -89,7 +89,7 @@
 
 .method public booleanNode(Z)Lcom/flurry/org/codehaus/jackson/node/BooleanNode;
     .locals 1
-    .parameter "v"
+    .param p1, "v"    # Z
 
     .prologue
     .line 35
@@ -124,7 +124,7 @@
 
 .method public numberNode(B)Lcom/flurry/org/codehaus/jackson/node/NumericNode;
     .locals 1
-    .parameter "v"
+    .param p1, "v"    # B
 
     .prologue
     .line 54
@@ -137,7 +137,7 @@
 
 .method public numberNode(D)Lcom/flurry/org/codehaus/jackson/node/NumericNode;
     .locals 1
-    .parameter "v"
+    .param p1, "v"    # D
 
     .prologue
     .line 150
@@ -150,7 +150,7 @@
 
 .method public numberNode(F)Lcom/flurry/org/codehaus/jackson/node/NumericNode;
     .locals 2
-    .parameter "v"
+    .param p1, "v"    # F
 
     .prologue
     .line 132
@@ -165,7 +165,7 @@
 
 .method public numberNode(I)Lcom/flurry/org/codehaus/jackson/node/NumericNode;
     .locals 1
-    .parameter "v"
+    .param p1, "v"    # I
 
     .prologue
     .line 90
@@ -178,7 +178,7 @@
 
 .method public numberNode(J)Lcom/flurry/org/codehaus/jackson/node/NumericNode;
     .locals 1
-    .parameter "v"
+    .param p1, "v"    # J
 
     .prologue
     .line 108
@@ -191,7 +191,7 @@
 
 .method public numberNode(Ljava/math/BigDecimal;)Lcom/flurry/org/codehaus/jackson/node/NumericNode;
     .locals 1
-    .parameter "v"
+    .param p1, "v"    # Ljava/math/BigDecimal;
 
     .prologue
     .line 168
@@ -204,7 +204,7 @@
 
 .method public numberNode(Ljava/math/BigInteger;)Lcom/flurry/org/codehaus/jackson/node/NumericNode;
     .locals 1
-    .parameter "v"
+    .param p1, "v"    # Ljava/math/BigInteger;
 
     .prologue
     .line 126
@@ -217,7 +217,7 @@
 
 .method public numberNode(S)Lcom/flurry/org/codehaus/jackson/node/NumericNode;
     .locals 1
-    .parameter "v"
+    .param p1, "v"    # S
 
     .prologue
     .line 72
@@ -230,7 +230,7 @@
 
 .method public numberNode(Ljava/lang/Byte;)Lcom/flurry/org/codehaus/jackson/node/ValueNode;
     .locals 1
-    .parameter "value"
+    .param p1, "value"    # Ljava/lang/Byte;
 
     .prologue
     .line 65
@@ -257,7 +257,7 @@
 
 .method public numberNode(Ljava/lang/Double;)Lcom/flurry/org/codehaus/jackson/node/ValueNode;
     .locals 2
-    .parameter "value"
+    .param p1, "value"    # Ljava/lang/Double;
 
     .prologue
     .line 161
@@ -284,7 +284,7 @@
 
 .method public numberNode(Ljava/lang/Float;)Lcom/flurry/org/codehaus/jackson/node/ValueNode;
     .locals 2
-    .parameter "value"
+    .param p1, "value"    # Ljava/lang/Float;
 
     .prologue
     .line 143
@@ -311,7 +311,7 @@
 
 .method public numberNode(Ljava/lang/Integer;)Lcom/flurry/org/codehaus/jackson/node/ValueNode;
     .locals 1
-    .parameter "value"
+    .param p1, "value"    # Ljava/lang/Integer;
 
     .prologue
     .line 101
@@ -338,7 +338,7 @@
 
 .method public numberNode(Ljava/lang/Long;)Lcom/flurry/org/codehaus/jackson/node/ValueNode;
     .locals 2
-    .parameter "value"
+    .param p1, "value"    # Ljava/lang/Long;
 
     .prologue
     .line 119
@@ -365,7 +365,7 @@
 
 .method public numberNode(Ljava/lang/Short;)Lcom/flurry/org/codehaus/jackson/node/ValueNode;
     .locals 1
-    .parameter "value"
+    .param p1, "value"    # Ljava/lang/Short;
 
     .prologue
     .line 83
@@ -404,7 +404,7 @@
 
 .method public textNode(Ljava/lang/String;)Lcom/flurry/org/codehaus/jackson/node/TextNode;
     .locals 1
-    .parameter "text"
+    .param p1, "text"    # Ljava/lang/String;
 
     .prologue
     .line 180

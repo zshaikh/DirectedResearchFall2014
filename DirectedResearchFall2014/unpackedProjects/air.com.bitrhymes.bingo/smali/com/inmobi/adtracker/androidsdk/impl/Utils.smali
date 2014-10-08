@@ -182,8 +182,6 @@
 
 .method public static increaseRetryTime(Ljava/lang/String;I)Z
     .locals 11
-    .parameter
-    .parameter
 
     .prologue
     const/4 v9, 0x0
@@ -362,7 +360,6 @@
 
 .method public static sendBroadcastMessage(I)Z
     .locals 3
-    .parameter
 
     .prologue
     .line 118
@@ -413,7 +410,6 @@
 
 .method public static setAppContext(Landroid/content/Context;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 29

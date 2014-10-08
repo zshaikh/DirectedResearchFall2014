@@ -67,7 +67,7 @@
 
 .method synthetic constructor <init>(Lcom/google/analytics/tracking/android/Tracker$1;)V
     .locals 0
-    .parameter "x0"
+    .param p1, "x0"    # Lcom/google/analytics/tracking/android/Tracker$1;
 
     .prologue
     .line 790
@@ -108,7 +108,7 @@
 
 .method public declared-synchronized get(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
-    .parameter "key"
+    .param p1, "key"    # Ljava/lang/String;
 
     .prologue
     .line 807
@@ -126,7 +126,7 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 808
-    .local v0, result:Ljava/lang/String;
+    .local v0, "result":Ljava/lang/String;
     if-eqz v0, :cond_0
 
     move-object v1, v0
@@ -152,7 +152,7 @@
     goto :goto_0
 
     .line 807
-    .end local v0           #result:Ljava/lang/String;
+    .end local v0    # "result":Ljava/lang/String;
     :catchall_0
     move-exception v1
 
@@ -186,7 +186,7 @@
     invoke-direct {v0, v1}, Ljava/util/HashMap;-><init>(Ljava/util/Map;)V
 
     .line 824
-    .local v0, result:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v0, "result":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     iget-object v1, p0, Lcom/google/analytics/tracking/android/Tracker$SimpleModel;->temporaryMap:Ljava/util/Map;
 
     invoke-interface {v0, v1}, Ljava/util/Map;->putAll(Ljava/util/Map;)V
@@ -199,7 +199,7 @@
     return-object v0
 
     .line 823
-    .end local v0           #result:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .end local v0    # "result":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     :catchall_0
     move-exception v1
 
@@ -210,8 +210,8 @@
 
 .method public declared-synchronized set(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
-    .parameter "key"
-    .parameter "value"
+    .param p1, "key"    # Ljava/lang/String;
+    .param p2, "value"    # Ljava/lang/String;
 
     .prologue
     .line 799
@@ -240,8 +240,7 @@
 
 .method public declared-synchronized setAll(Ljava/util/Map;Ljava/lang/Boolean;)V
     .locals 1
-    .parameter
-    .parameter "isForNextHit"
+    .param p2, "isForNextHit"    # Ljava/lang/Boolean;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -257,7 +256,7 @@
 
     .prologue
     .line 815
-    .local p1, keysAndValues:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
+    .local p1, "keysAndValues":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     monitor-enter p0
 
     :try_start_0
@@ -302,8 +301,8 @@
 
 .method public declared-synchronized setForNextHit(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
-    .parameter "key"
-    .parameter "value"
+    .param p1, "key"    # Ljava/lang/String;
+    .param p2, "value"    # Ljava/lang/String;
 
     .prologue
     .line 795

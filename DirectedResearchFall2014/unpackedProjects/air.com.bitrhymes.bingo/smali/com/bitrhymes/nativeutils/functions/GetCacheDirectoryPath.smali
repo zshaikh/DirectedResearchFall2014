@@ -21,8 +21,8 @@
 # virtual methods
 .method public call(Lcom/adobe/fre/FREContext;[Lcom/adobe/fre/FREObject;)Lcom/adobe/fre/FREObject;
     .locals 9
-    .parameter "arg0"
-    .parameter "arg1"
+    .param p1, "arg0"    # Lcom/adobe/fre/FREContext;
+    .param p2, "arg1"    # [Lcom/adobe/fre/FREObject;
 
     .prologue
     const-string v8, ","
@@ -38,7 +38,7 @@
     move-result-object v2
 
     .line 18
-    .local v2, fileObj:Ljava/io/File;
+    .local v2, "fileObj":Ljava/io/File;
     if-nez v2, :cond_0
 
     .line 19
@@ -57,11 +57,11 @@
     move-result-object v3
 
     .line 21
-    .local v3, filePath:Ljava/lang/String;
+    .local v3, "filePath":Ljava/lang/String;
     const/4 v0, 0x0
 
     .line 23
-    .local v0, deviceInfoObject:Lcom/adobe/fre/FREObject;
+    .local v0, "deviceInfoObject":Lcom/adobe/fre/FREObject;
     invoke-virtual {v2}, Ljava/io/File;->length()J
 
     move-result-wide v4
@@ -83,16 +83,16 @@
     move-object v4, v0
 
     .line 31
-    .end local v0           #deviceInfoObject:Lcom/adobe/fre/FREObject;
-    .end local v2           #fileObj:Ljava/io/File;
-    .end local v3           #filePath:Ljava/lang/String;
+    .end local v0    # "deviceInfoObject":Lcom/adobe/fre/FREObject;
+    .end local v2    # "fileObj":Ljava/io/File;
+    .end local v3    # "filePath":Ljava/lang/String;
     :goto_1
     return-object v4
 
     .line 26
-    .restart local v0       #deviceInfoObject:Lcom/adobe/fre/FREObject;
-    .restart local v2       #fileObj:Ljava/io/File;
-    .restart local v3       #filePath:Ljava/lang/String;
+    .restart local v0    # "deviceInfoObject":Lcom/adobe/fre/FREObject;
+    .restart local v2    # "fileObj":Ljava/io/File;
+    .restart local v3    # "filePath":Ljava/lang/String;
     :cond_1
     invoke-static {v3}, Lcom/adobe/fre/FREObject;->newObject(Ljava/lang/String;)Lcom/adobe/fre/FREObject;
     :try_end_0
@@ -103,16 +103,16 @@
     goto :goto_0
 
     .line 28
-    .end local v0           #deviceInfoObject:Lcom/adobe/fre/FREObject;
-    .end local v2           #fileObj:Ljava/io/File;
-    .end local v3           #filePath:Ljava/lang/String;
+    .end local v0    # "deviceInfoObject":Lcom/adobe/fre/FREObject;
+    .end local v2    # "fileObj":Ljava/io/File;
+    .end local v3    # "filePath":Ljava/lang/String;
     :catch_0
     move-exception v4
 
     move-object v1, v4
 
     .line 29
-    .local v1, e:Ljava/lang/Exception;
+    .local v1, "e":Ljava/lang/Exception;
     const-string v4, "ERROR_EVENT"
 
     new-instance v5, Ljava/lang/StringBuilder;

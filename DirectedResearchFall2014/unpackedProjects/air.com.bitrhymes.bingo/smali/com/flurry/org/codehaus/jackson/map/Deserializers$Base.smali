@@ -32,12 +32,11 @@
 # virtual methods
 .method public findArrayDeserializer(Lcom/flurry/org/codehaus/jackson/map/type/ArrayType;Lcom/flurry/org/codehaus/jackson/map/DeserializationConfig;Lcom/flurry/org/codehaus/jackson/map/DeserializerProvider;Lcom/flurry/org/codehaus/jackson/map/BeanProperty;Lcom/flurry/org/codehaus/jackson/map/TypeDeserializer;Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;)Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;
     .locals 1
-    .parameter "type"
-    .parameter "config"
-    .parameter "provider"
-    .parameter "property"
-    .parameter "elementTypeDeserializer"
-    .parameter
+    .param p1, "type"    # Lcom/flurry/org/codehaus/jackson/map/type/ArrayType;
+    .param p2, "config"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationConfig;
+    .param p3, "provider"    # Lcom/flurry/org/codehaus/jackson/map/DeserializerProvider;
+    .param p4, "property"    # Lcom/flurry/org/codehaus/jackson/map/BeanProperty;
+    .param p5, "elementTypeDeserializer"    # Lcom/flurry/org/codehaus/jackson/map/TypeDeserializer;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -61,7 +60,7 @@
 
     .prologue
     .line 259
-    .local p6, elementDeserializer:Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer<*>;"
+    .local p6, "elementDeserializer":Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer<*>;"
     const/4 v0, 0x0
 
     return-object v0
@@ -69,11 +68,11 @@
 
 .method public findBeanDeserializer(Lcom/flurry/org/codehaus/jackson/type/JavaType;Lcom/flurry/org/codehaus/jackson/map/DeserializationConfig;Lcom/flurry/org/codehaus/jackson/map/DeserializerProvider;Lcom/flurry/org/codehaus/jackson/map/BeanDescription;Lcom/flurry/org/codehaus/jackson/map/BeanProperty;)Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;
     .locals 1
-    .parameter "type"
-    .parameter "config"
-    .parameter "provider"
-    .parameter "beanDesc"
-    .parameter "property"
+    .param p1, "type"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .param p2, "config"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationConfig;
+    .param p3, "provider"    # Lcom/flurry/org/codehaus/jackson/map/DeserializerProvider;
+    .param p4, "beanDesc"    # Lcom/flurry/org/codehaus/jackson/map/BeanDescription;
+    .param p5, "property"    # Lcom/flurry/org/codehaus/jackson/map/BeanProperty;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -103,13 +102,12 @@
 
 .method public findCollectionDeserializer(Lcom/flurry/org/codehaus/jackson/map/type/CollectionType;Lcom/flurry/org/codehaus/jackson/map/DeserializationConfig;Lcom/flurry/org/codehaus/jackson/map/DeserializerProvider;Lcom/flurry/org/codehaus/jackson/map/BeanDescription;Lcom/flurry/org/codehaus/jackson/map/BeanProperty;Lcom/flurry/org/codehaus/jackson/map/TypeDeserializer;Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;)Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;
     .locals 1
-    .parameter "type"
-    .parameter "config"
-    .parameter "provider"
-    .parameter "beanDesc"
-    .parameter "property"
-    .parameter "elementTypeDeserializer"
-    .parameter
+    .param p1, "type"    # Lcom/flurry/org/codehaus/jackson/map/type/CollectionType;
+    .param p2, "config"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationConfig;
+    .param p3, "provider"    # Lcom/flurry/org/codehaus/jackson/map/DeserializerProvider;
+    .param p4, "beanDesc"    # Lcom/flurry/org/codehaus/jackson/map/BeanDescription;
+    .param p5, "property"    # Lcom/flurry/org/codehaus/jackson/map/BeanProperty;
+    .param p6, "elementTypeDeserializer"    # Lcom/flurry/org/codehaus/jackson/map/TypeDeserializer;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -134,7 +132,7 @@
 
     .prologue
     .line 268
-    .local p7, elementDeserializer:Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer<*>;"
+    .local p7, "elementDeserializer":Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer<*>;"
     const/4 v0, 0x0
 
     return-object v0
@@ -142,13 +140,12 @@
 
 .method public findCollectionLikeDeserializer(Lcom/flurry/org/codehaus/jackson/map/type/CollectionLikeType;Lcom/flurry/org/codehaus/jackson/map/DeserializationConfig;Lcom/flurry/org/codehaus/jackson/map/DeserializerProvider;Lcom/flurry/org/codehaus/jackson/map/BeanDescription;Lcom/flurry/org/codehaus/jackson/map/BeanProperty;Lcom/flurry/org/codehaus/jackson/map/TypeDeserializer;Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;)Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;
     .locals 1
-    .parameter "type"
-    .parameter "config"
-    .parameter "provider"
-    .parameter "beanDesc"
-    .parameter "property"
-    .parameter "elementTypeDeserializer"
-    .parameter
+    .param p1, "type"    # Lcom/flurry/org/codehaus/jackson/map/type/CollectionLikeType;
+    .param p2, "config"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationConfig;
+    .param p3, "provider"    # Lcom/flurry/org/codehaus/jackson/map/DeserializerProvider;
+    .param p4, "beanDesc"    # Lcom/flurry/org/codehaus/jackson/map/BeanDescription;
+    .param p5, "property"    # Lcom/flurry/org/codehaus/jackson/map/BeanProperty;
+    .param p6, "elementTypeDeserializer"    # Lcom/flurry/org/codehaus/jackson/map/TypeDeserializer;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -173,7 +170,7 @@
 
     .prologue
     .line 277
-    .local p7, elementDeserializer:Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer<*>;"
+    .local p7, "elementDeserializer":Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer<*>;"
     const/4 v0, 0x0
 
     return-object v0
@@ -181,10 +178,9 @@
 
 .method public findEnumDeserializer(Ljava/lang/Class;Lcom/flurry/org/codehaus/jackson/map/DeserializationConfig;Lcom/flurry/org/codehaus/jackson/map/BeanDescription;Lcom/flurry/org/codehaus/jackson/map/BeanProperty;)Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;
     .locals 1
-    .parameter
-    .parameter "config"
-    .parameter "beanDesc"
-    .parameter "property"
+    .param p2, "config"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationConfig;
+    .param p3, "beanDesc"    # Lcom/flurry/org/codehaus/jackson/map/BeanDescription;
+    .param p4, "property"    # Lcom/flurry/org/codehaus/jackson/map/BeanProperty;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -207,7 +203,7 @@
 
     .prologue
     .line 306
-    .local p1, type:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p1, "type":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const/4 v0, 0x0
 
     return-object v0
@@ -215,14 +211,13 @@
 
 .method public findMapDeserializer(Lcom/flurry/org/codehaus/jackson/map/type/MapType;Lcom/flurry/org/codehaus/jackson/map/DeserializationConfig;Lcom/flurry/org/codehaus/jackson/map/DeserializerProvider;Lcom/flurry/org/codehaus/jackson/map/BeanDescription;Lcom/flurry/org/codehaus/jackson/map/BeanProperty;Lcom/flurry/org/codehaus/jackson/map/KeyDeserializer;Lcom/flurry/org/codehaus/jackson/map/TypeDeserializer;Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;)Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;
     .locals 1
-    .parameter "type"
-    .parameter "config"
-    .parameter "provider"
-    .parameter "beanDesc"
-    .parameter "property"
-    .parameter "keyDeserializer"
-    .parameter "elementTypeDeserializer"
-    .parameter
+    .param p1, "type"    # Lcom/flurry/org/codehaus/jackson/map/type/MapType;
+    .param p2, "config"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationConfig;
+    .param p3, "provider"    # Lcom/flurry/org/codehaus/jackson/map/DeserializerProvider;
+    .param p4, "beanDesc"    # Lcom/flurry/org/codehaus/jackson/map/BeanDescription;
+    .param p5, "property"    # Lcom/flurry/org/codehaus/jackson/map/BeanProperty;
+    .param p6, "keyDeserializer"    # Lcom/flurry/org/codehaus/jackson/map/KeyDeserializer;
+    .param p7, "elementTypeDeserializer"    # Lcom/flurry/org/codehaus/jackson/map/TypeDeserializer;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -248,7 +243,7 @@
 
     .prologue
     .line 287
-    .local p8, elementDeserializer:Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer<*>;"
+    .local p8, "elementDeserializer":Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer<*>;"
     const/4 v0, 0x0
 
     return-object v0
@@ -256,14 +251,13 @@
 
 .method public findMapLikeDeserializer(Lcom/flurry/org/codehaus/jackson/map/type/MapLikeType;Lcom/flurry/org/codehaus/jackson/map/DeserializationConfig;Lcom/flurry/org/codehaus/jackson/map/DeserializerProvider;Lcom/flurry/org/codehaus/jackson/map/BeanDescription;Lcom/flurry/org/codehaus/jackson/map/BeanProperty;Lcom/flurry/org/codehaus/jackson/map/KeyDeserializer;Lcom/flurry/org/codehaus/jackson/map/TypeDeserializer;Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;)Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;
     .locals 1
-    .parameter "type"
-    .parameter "config"
-    .parameter "provider"
-    .parameter "beanDesc"
-    .parameter "property"
-    .parameter "keyDeserializer"
-    .parameter "elementTypeDeserializer"
-    .parameter
+    .param p1, "type"    # Lcom/flurry/org/codehaus/jackson/map/type/MapLikeType;
+    .param p2, "config"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationConfig;
+    .param p3, "provider"    # Lcom/flurry/org/codehaus/jackson/map/DeserializerProvider;
+    .param p4, "beanDesc"    # Lcom/flurry/org/codehaus/jackson/map/BeanDescription;
+    .param p5, "property"    # Lcom/flurry/org/codehaus/jackson/map/BeanProperty;
+    .param p6, "keyDeserializer"    # Lcom/flurry/org/codehaus/jackson/map/KeyDeserializer;
+    .param p7, "elementTypeDeserializer"    # Lcom/flurry/org/codehaus/jackson/map/TypeDeserializer;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -289,7 +283,7 @@
 
     .prologue
     .line 297
-    .local p8, elementDeserializer:Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;,"Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer<*>;"
+    .local p8, "elementDeserializer":Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;, "Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer<*>;"
     const/4 v0, 0x0
 
     return-object v0
@@ -297,9 +291,8 @@
 
 .method public findTreeNodeDeserializer(Ljava/lang/Class;Lcom/flurry/org/codehaus/jackson/map/DeserializationConfig;Lcom/flurry/org/codehaus/jackson/map/BeanProperty;)Lcom/flurry/org/codehaus/jackson/map/JsonDeserializer;
     .locals 1
-    .parameter
-    .parameter "config"
-    .parameter "property"
+    .param p2, "config"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationConfig;
+    .param p3, "property"    # Lcom/flurry/org/codehaus/jackson/map/BeanProperty;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -323,7 +316,7 @@
 
     .prologue
     .line 315
-    .local p1, nodeType:Ljava/lang/Class;,"Ljava/lang/Class<+Lcom/flurry/org/codehaus/jackson/JsonNode;>;"
+    .local p1, "nodeType":Ljava/lang/Class;, "Ljava/lang/Class<+Lcom/flurry/org/codehaus/jackson/JsonNode;>;"
     const/4 v0, 0x0
 
     return-object v0

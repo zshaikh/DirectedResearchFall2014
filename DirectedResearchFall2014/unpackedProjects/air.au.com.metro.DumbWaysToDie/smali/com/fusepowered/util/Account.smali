@@ -18,7 +18,7 @@
 # direct methods
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 1
-    .parameter "alias"
+    .param p1, "alias"    # Ljava/lang/String;
 
     .prologue
     .line 11
@@ -80,7 +80,7 @@
 
 .method public setAccountId(Ljava/lang/String;)V
     .locals 0
-    .parameter "accountId"
+    .param p1, "accountId"    # Ljava/lang/String;
 
     .prologue
     .line 20
@@ -92,7 +92,7 @@
 
 .method public setAccountType(Lcom/fusepowered/util/AccountType;)V
     .locals 0
-    .parameter "accountType"
+    .param p1, "accountType"    # Lcom/fusepowered/util/AccountType;
 
     .prologue
     .line 32
@@ -104,7 +104,7 @@
 
 .method public setAlias(Ljava/lang/String;)V
     .locals 0
-    .parameter "alias"
+    .param p1, "alias"    # Ljava/lang/String;
 
     .prologue
     .line 26
@@ -116,7 +116,7 @@
 
 .method public setFuseId(Ljava/lang/String;)V
     .locals 0
-    .parameter "fuseId"
+    .param p1, "fuseId"    # Ljava/lang/String;
 
     .prologue
     .line 38
@@ -186,7 +186,7 @@
     move-result-object v0
 
     .line 48
-    .local v0, buf:Ljava/lang/StringBuilder;
+    .local v0, "buf":Ljava/lang/StringBuilder;
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1

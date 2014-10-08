@@ -46,8 +46,8 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/m1/android/AdViewOverlayActivity;Lcom/fusepowered/m1/android/OverlaySettings;)V
     .locals 10
-    .parameter "overlayActivity"
-    .parameter "settingsIn"
+    .param p1, "overlayActivity"    # Lcom/fusepowered/m1/android/AdViewOverlayActivity;
+    .param p2, "settingsIn"    # Lcom/fusepowered/m1/android/OverlaySettings;
 
     .prologue
     const/4 v9, 0x0
@@ -94,7 +94,7 @@
     const/4 v0, 0x0
 
     .line 62
-    .local v0, nonConfigurationInstance:Lcom/fusepowered/m1/android/AdViewOverlayView$NonConfigurationInstance;
+    .local v0, "nonConfigurationInstance":Lcom/fusepowered/m1/android/AdViewOverlayView$NonConfigurationInstance;
     iget-object v4, p1, Lcom/fusepowered/m1/android/AdViewOverlayActivity;->activity:Lcom/fusepowered/m1/android/MMActivity;
 
     instance-of v4, v4, Landroid/app/Activity;
@@ -108,11 +108,11 @@
 
     move-result-object v0
 
-    .end local v0           #nonConfigurationInstance:Lcom/fusepowered/m1/android/AdViewOverlayView$NonConfigurationInstance;
+    .end local v0    # "nonConfigurationInstance":Lcom/fusepowered/m1/android/AdViewOverlayView$NonConfigurationInstance;
     check-cast v0, Lcom/fusepowered/m1/android/AdViewOverlayView$NonConfigurationInstance;
 
     .line 65
-    .restart local v0       #nonConfigurationInstance:Lcom/fusepowered/m1/android/AdViewOverlayView$NonConfigurationInstance;
+    .restart local v0    # "nonConfigurationInstance":Lcom/fusepowered/m1/android/AdViewOverlayView$NonConfigurationInstance;
     if-eqz v0, :cond_8
 
     .line 67
@@ -200,7 +200,7 @@
     iget v2, v4, Landroid/util/DisplayMetrics;->density:F
 
     .line 80
-    .local v2, scale:F
+    .local v2, "scale":F
     iget-object v4, p0, Lcom/fusepowered/m1/android/AdViewOverlayView;->settings:Lcom/fusepowered/m1/android/OverlaySettings;
 
     iget v4, v4, Lcom/fusepowered/m1/android/OverlaySettings;->height:I
@@ -239,7 +239,7 @@
     invoke-direct {v1, v4, v5}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
     .line 89
-    .local v1, params:Landroid/widget/RelativeLayout$LayoutParams;
+    .local v1, "params":Landroid/widget/RelativeLayout$LayoutParams;
     :goto_1
     const/16 v4, 0xd
 
@@ -249,7 +249,7 @@
     invoke-virtual {p0, v1}, Lcom/fusepowered/m1/android/AdViewOverlayView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 91
-    const/high16 v4, 0x3d80
+    const/high16 v4, 0x3d800000
 
     mul-float/2addr v4, v2
 
@@ -268,7 +268,7 @@
     move-result-object v3
 
     .line 92
-    .local v3, scaledPadding:Ljava/lang/Integer;
+    .local v3, "scaledPadding":Ljava/lang/Integer;
     invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
 
     move-result v4
@@ -464,9 +464,9 @@
     return-void
 
     .line 75
-    .end local v1           #params:Landroid/widget/RelativeLayout$LayoutParams;
-    .end local v2           #scale:F
-    .end local v3           #scaledPadding:Ljava/lang/Integer;
+    .end local v1    # "params":Landroid/widget/RelativeLayout$LayoutParams;
+    .end local v2    # "scale":F
+    .end local v3    # "scaledPadding":Ljava/lang/Integer;
     :cond_8
     const-string v4, "Null configurationinstance "
 
@@ -475,17 +475,17 @@
     goto/16 :goto_0
 
     .line 87
-    .restart local v2       #scale:F
+    .restart local v2    # "scale":F
     :cond_9
     new-instance v1, Landroid/widget/RelativeLayout$LayoutParams;
 
     invoke-direct {v1, v8, v8}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
-    .restart local v1       #params:Landroid/widget/RelativeLayout$LayoutParams;
+    .restart local v1    # "params":Landroid/widget/RelativeLayout$LayoutParams;
     goto/16 :goto_1
 
     .line 116
-    .restart local v3       #scaledPadding:Ljava/lang/Integer;
+    .restart local v3    # "scaledPadding":Ljava/lang/Integer;
     :cond_a
     iget-object v4, p0, Lcom/fusepowered/m1/android/AdViewOverlayView;->adImpl:Lcom/fusepowered/m1/android/MMAdImpl;
 
@@ -523,7 +523,7 @@
 
 .method static synthetic access$200(Lcom/fusepowered/m1/android/AdViewOverlayView;)V
     .locals 0
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/fusepowered/m1/android/AdViewOverlayView;
 
     .prologue
     .line 37
@@ -534,7 +534,7 @@
 
 .method static synthetic access$300(Lcom/fusepowered/m1/android/AdViewOverlayView;)Landroid/widget/Button;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/fusepowered/m1/android/AdViewOverlayView;
 
     .prologue
     .line 37
@@ -545,7 +545,7 @@
 
 .method static synthetic access$400(Lcom/fusepowered/m1/android/AdViewOverlayView;)Landroid/widget/ProgressBar;
     .locals 1
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/fusepowered/m1/android/AdViewOverlayView;
 
     .prologue
     .line 37
@@ -556,7 +556,7 @@
 
 .method static synthetic access$500(Lcom/fusepowered/m1/android/AdViewOverlayView;)V
     .locals 0
-    .parameter "x0"
+    .param p0, "x0"    # Lcom/fusepowered/m1/android/AdViewOverlayView;
 
     .prologue
     .line 37
@@ -571,7 +571,7 @@
     .prologue
     const v4, 0x3f666666
 
-    const/high16 v8, 0x3f00
+    const/high16 v8, 0x3f000000
 
     const/4 v2, 0x0
 
@@ -595,7 +595,7 @@
     .line 184
     new-instance v0, Landroid/view/animation/TranslateAnimation;
 
-    const/high16 v6, 0x3f80
+    const/high16 v6, 0x3f800000
 
     move v3, v1
 
@@ -610,7 +610,7 @@
     invoke-direct/range {v0 .. v8}, Landroid/view/animation/TranslateAnimation;-><init>(IFIFIFIF)V
 
     .line 185
-    .local v0, animation:Landroid/view/animation/Animation;
+    .local v0, "animation":Landroid/view/animation/Animation;
     const-string v1, "Translate up"
 
     invoke-static {v1}, Lcom/fusepowered/m1/android/MMSDK$Log;->v(Ljava/lang/String;)V
@@ -629,7 +629,7 @@
     invoke-virtual {p0, v0}, Lcom/fusepowered/m1/android/AdViewOverlayView;->startAnimation(Landroid/view/animation/Animation;)V
 
     .line 204
-    .end local v0           #animation:Landroid/view/animation/Animation;
+    .end local v0    # "animation":Landroid/view/animation/Animation;
     :cond_0
     return-void
 
@@ -652,7 +652,7 @@
     .line 189
     new-instance v0, Landroid/view/animation/TranslateAnimation;
 
-    const/high16 v6, -0x4080
+    const/high16 v6, -0x40800000
 
     move v3, v1
 
@@ -667,7 +667,7 @@
     invoke-direct/range {v0 .. v8}, Landroid/view/animation/TranslateAnimation;-><init>(IFIFIFIF)V
 
     .line 190
-    .restart local v0       #animation:Landroid/view/animation/Animation;
+    .restart local v0    # "animation":Landroid/view/animation/Animation;
     const-string v1, "Translate down"
 
     invoke-static {v1}, Lcom/fusepowered/m1/android/MMSDK$Log;->v(Ljava/lang/String;)V
@@ -675,7 +675,7 @@
     goto :goto_0
 
     .line 192
-    .end local v0           #animation:Landroid/view/animation/Animation;
+    .end local v0    # "animation":Landroid/view/animation/Animation;
     :cond_2
     iget-object v2, p0, Lcom/fusepowered/m1/android/AdViewOverlayView;->settings:Lcom/fusepowered/m1/android/OverlaySettings;
 
@@ -711,7 +711,7 @@
     invoke-direct/range {v2 .. v10}, Landroid/view/animation/ScaleAnimation;-><init>(FFFFIFIF)V
 
     .line 195
-    .restart local v0       #animation:Landroid/view/animation/Animation;
+    .restart local v0    # "animation":Landroid/view/animation/Animation;
     const-string v1, "Explode"
 
     invoke-static {v1}, Lcom/fusepowered/m1/android/MMSDK$Log;->v(Ljava/lang/String;)V
@@ -721,28 +721,28 @@
 
 .method private getCloseAreaParams(F)Landroid/widget/RelativeLayout$LayoutParams;
     .locals 4
-    .parameter "scale"
+    .param p1, "scale"    # F
 
     .prologue
     .line 166
-    const/high16 v2, 0x4248
+    const/high16 v2, 0x42480000
 
     mul-float/2addr v2, p1
 
-    const/high16 v3, 0x3f00
+    const/high16 v3, 0x3f000000
 
     add-float/2addr v2, v3
 
     float-to-int v1, v2
 
     .line 167
-    .local v1, closeHeight:I
+    .local v1, "closeHeight":I
     new-instance v0, Landroid/widget/RelativeLayout$LayoutParams;
 
     invoke-direct {v0, v1, v1}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
     .line 168
-    .local v0, closeButParams:Landroid/widget/RelativeLayout$LayoutParams;
+    .local v0, "closeButParams":Landroid/widget/RelativeLayout$LayoutParams;
     const/16 v2, 0xb
 
     invoke-virtual {v0, v2}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
@@ -758,8 +758,8 @@
 
 .method private initMRaidCloseButton(Landroid/content/Context;F)Landroid/widget/Button;
     .locals 7
-    .parameter "context"
-    .parameter "scale"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "scale"    # F
 
     .prologue
     .line 146
@@ -768,7 +768,7 @@
     invoke-direct {v1, p1}, Landroid/widget/Button;-><init>(Landroid/content/Context;)V
 
     .line 147
-    .local v1, mraidCloseButton:Landroid/widget/Button;
+    .local v1, "mraidCloseButton":Landroid/widget/Button;
     const/16 v0, 0x12d
 
     invoke-virtual {v1, v0}, Landroid/widget/Button;->setId(I)V
@@ -795,7 +795,7 @@
     move-result-object v6
 
     .line 159
-    .local v6, closeButParams:Landroid/widget/RelativeLayout$LayoutParams;
+    .local v6, "closeButParams":Landroid/widget/RelativeLayout$LayoutParams;
     invoke-virtual {v1, v6}, Landroid/widget/Button;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 160
@@ -833,7 +833,7 @@
     check-cast v0, Lcom/fusepowered/m1/android/AdViewOverlayActivity;
 
     .line 131
-    .local v0, overlayActivity:Lcom/fusepowered/m1/android/AdViewOverlayActivity;
+    .local v0, "overlayActivity":Lcom/fusepowered/m1/android/AdViewOverlayActivity;
     if-eqz v0, :cond_0
 
     .line 133
@@ -865,7 +865,7 @@
     invoke-direct {v1, v4, v4}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
     .line 137
-    .local v1, progParams:Landroid/widget/RelativeLayout$LayoutParams;
+    .local v1, "progParams":Landroid/widget/RelativeLayout$LayoutParams;
     const/16 v2, 0xd
 
     invoke-virtual {v1, v2}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
@@ -876,7 +876,7 @@
     invoke-virtual {p0, v2, v1}, Lcom/fusepowered/m1/android/AdViewOverlayView;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 140
-    .end local v1           #progParams:Landroid/widget/RelativeLayout$LayoutParams;
+    .end local v1    # "progParams":Landroid/widget/RelativeLayout$LayoutParams;
     :cond_0
     return-void
 .end method
@@ -1031,7 +1031,7 @@
     check-cast v0, Landroid/app/Activity;
 
     .line 371
-    .local v0, activity:Landroid/app/Activity;
+    .local v0, "activity":Landroid/app/Activity;
     if-nez v0, :cond_0
 
     .line 381
@@ -1042,14 +1042,14 @@
     :cond_0
     new-instance v1, Landroid/view/animation/AlphaAnimation;
 
-    const/high16 v2, 0x3f80
+    const/high16 v2, 0x3f800000
 
     const/4 v3, 0x0
 
     invoke-direct {v1, v2, v3}, Landroid/view/animation/AlphaAnimation;-><init>(FF)V
 
     .line 375
-    .local v1, animation:Landroid/view/animation/AlphaAnimation;
+    .local v1, "animation":Landroid/view/animation/AlphaAnimation;
     new-instance v2, Lcom/fusepowered/m1/android/AdViewOverlayView$AnimationListener;
 
     invoke-direct {v2, p0}, Lcom/fusepowered/m1/android/AdViewOverlayView$AnimationListener;-><init>(Lcom/fusepowered/m1/android/AdViewOverlayView;)V
@@ -1168,7 +1168,7 @@
     invoke-direct {v0, v1}, Lcom/fusepowered/m1/android/AdViewOverlayView$NonConfigurationInstance;-><init>(Lcom/fusepowered/m1/android/AdViewOverlayView$1;)V
 
     .line 265
-    .local v0, nonConfigurationInstance:Lcom/fusepowered/m1/android/AdViewOverlayView$NonConfigurationInstance;
+    .local v0, "nonConfigurationInstance":Lcom/fusepowered/m1/android/AdViewOverlayView$NonConfigurationInstance;
     iget-boolean v1, p0, Lcom/fusepowered/m1/android/AdViewOverlayView;->progressDone:Z
 
     iput-boolean v1, v0, Lcom/fusepowered/m1/android/AdViewOverlayView$NonConfigurationInstance;->progressDone:Z
@@ -1191,7 +1191,7 @@
 
 .method getWebContent(Ljava/lang/String;)V
     .locals 2
-    .parameter "urlToLoad"
+    .param p1, "urlToLoad"    # Ljava/lang/String;
 
     .prologue
     .line 590
@@ -1200,7 +1200,7 @@
     invoke-direct {v0, p0, p1}, Lcom/fusepowered/m1/android/AdViewOverlayView$FetchWebViewContentTask;-><init>(Lcom/fusepowered/m1/android/AdViewOverlayView;Ljava/lang/String;)V
 
     .line 591
-    .local v0, task:Lcom/fusepowered/m1/android/AdViewOverlayView$FetchWebViewContentTask;
+    .local v0, "task":Lcom/fusepowered/m1/android/AdViewOverlayView$FetchWebViewContentTask;
     const/4 v1, 0x0
 
     new-array v1, v1, [Ljava/lang/Void;
@@ -1213,7 +1213,7 @@
 
 .method injectJS(Ljava/lang/String;)V
     .locals 1
-    .parameter "jsString"
+    .param p1, "jsString"    # Ljava/lang/String;
 
     .prologue
     .line 249
@@ -1338,7 +1338,7 @@
     move-result-object v0
 
     .line 687
-    .local v0, parent:Landroid/view/ViewParent;
+    .local v0, "parent":Landroid/view/ViewParent;
     if-eqz v0, :cond_0
 
     instance-of v1, v0, Landroid/view/ViewGroup;
@@ -1348,7 +1348,7 @@
     .line 689
     check-cast v0, Landroid/view/ViewGroup;
 
-    .end local v0           #parent:Landroid/view/ViewParent;
+    .end local v0    # "parent":Landroid/view/ViewParent;
     invoke-virtual {v0, p0}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
 
     .line 691
@@ -1385,7 +1385,7 @@
 
 .method setUseCustomClose(Z)V
     .locals 2
-    .parameter "isHideDrawable"
+    .param p1, "isHideDrawable"    # Z
 
     .prologue
     .line 546

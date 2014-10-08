@@ -43,7 +43,7 @@
 # virtual methods
 .method public createFromParcel(Landroid/os/Parcel;)Lcom/facebook/widget/FacebookDialog$PendingCall;
     .locals 2
-    .parameter "in"
+    .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
     .line 1147
@@ -58,7 +58,6 @@
 
 .method public bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 1
-    .parameter
 
     .prologue
     .line 1
@@ -71,7 +70,7 @@
 
 .method public newArray(I)[Lcom/facebook/widget/FacebookDialog$PendingCall;
     .locals 1
-    .parameter "size"
+    .param p1, "size"    # I
 
     .prologue
     .line 1151
@@ -82,7 +81,6 @@
 
 .method public bridge synthetic newArray(I)[Ljava/lang/Object;
     .locals 1
-    .parameter
 
     .prologue
     .line 1

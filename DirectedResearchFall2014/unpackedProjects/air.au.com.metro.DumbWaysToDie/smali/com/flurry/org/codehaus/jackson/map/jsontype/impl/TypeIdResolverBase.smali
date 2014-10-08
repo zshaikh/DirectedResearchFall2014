@@ -15,8 +15,8 @@
 # direct methods
 .method protected constructor <init>(Lcom/flurry/org/codehaus/jackson/type/JavaType;Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;)V
     .locals 0
-    .parameter "baseType"
-    .parameter "typeFactory"
+    .param p1, "baseType"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .param p2, "typeFactory"    # Lcom/flurry/org/codehaus/jackson/map/type/TypeFactory;
 
     .prologue
     .line 18
@@ -56,7 +56,7 @@
 
 .method public init(Lcom/flurry/org/codehaus/jackson/type/JavaType;)V
     .locals 0
-    .parameter "bt"
+    .param p1, "bt"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
 
     .prologue
     .line 28

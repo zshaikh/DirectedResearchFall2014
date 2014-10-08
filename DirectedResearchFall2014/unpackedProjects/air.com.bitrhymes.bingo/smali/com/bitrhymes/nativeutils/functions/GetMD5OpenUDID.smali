@@ -21,8 +21,8 @@
 # virtual methods
 .method public call(Lcom/adobe/fre/FREContext;[Lcom/adobe/fre/FREObject;)Lcom/adobe/fre/FREObject;
     .locals 12
-    .parameter "arg0"
-    .parameter "arg1"
+    .param p1, "arg0"    # Lcom/adobe/fre/FREContext;
+    .param p2, "arg1"    # [Lcom/adobe/fre/FREObject;
 
     .prologue
     const-string v8, "GetMD5OpenUDID"
@@ -35,7 +35,7 @@
     const/4 v7, 0x0
 
     .line 27
-    .local v7, openUDID:Ljava/lang/String;
+    .local v7, "openUDID":Ljava/lang/String;
     :try_start_0
     sget-object v8, Lcom/bitrhymes/nativeutils/utils/Utils;->ODID_STRING_PATH:Ljava/lang/String;
 
@@ -44,7 +44,7 @@
     move-result-object v5
 
     .line 28
-    .local v5, idsFromFile:Ljava/lang/String;
+    .local v5, "idsFromFile":Ljava/lang/String;
     invoke-virtual {p1}, Lcom/adobe/fre/FREContext;->getActivity()Landroid/app/Activity;
 
     move-result-object v8
@@ -63,13 +63,13 @@
     move-result-object v4
 
     .line 31
-    .local v4, idsArray:[Ljava/lang/String;
+    .local v4, "idsArray":[Ljava/lang/String;
     const/4 v8, 0x1
 
     aget-object v7, v4, v8
 
     .line 33
-    .end local v4           #idsArray:[Ljava/lang/String;
+    .end local v4    # "idsArray":[Ljava/lang/String;
     :cond_0
     const-string v8, "GetMD5OpenUDID"
 
@@ -142,7 +142,7 @@
     move-result-object v0
 
     .line 41
-    .local v0, anotherHash:Ljava/lang/String;
+    .local v0, "anotherHash":Ljava/lang/String;
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -166,25 +166,25 @@
     move-result-object v3
 
     .line 42
-    .local v3, idToSave:Ljava/lang/String;
+    .local v3, "idToSave":Ljava/lang/String;
     sget-object v8, Lcom/bitrhymes/nativeutils/utils/Utils;->ODID_STRING_PATH:Ljava/lang/String;
 
     invoke-static {v3, v8}, Lcom/bitrhymes/nativeutils/utils/Utils;->writeToSDFile(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 44
-    .end local v0           #anotherHash:Ljava/lang/String;
-    .end local v3           #idToSave:Ljava/lang/String;
+    .end local v0    # "anotherHash":Ljava/lang/String;
+    .end local v3    # "idToSave":Ljava/lang/String;
     :cond_2
     const/4 v1, 0x0
 
     .line 45
-    .local v1, deviceInfoObject:Lcom/adobe/fre/FREObject;
+    .local v1, "deviceInfoObject":Lcom/adobe/fre/FREObject;
     invoke-static {v7}, Lcom/bitrhymes/nativeutils/utils/Utils;->md5(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v6
 
     .line 47
-    .local v6, md5RawODID:Ljava/lang/String;
+    .local v6, "md5RawODID":Ljava/lang/String;
     invoke-static {v6}, Lcom/adobe/fre/FREObject;->newObject(Ljava/lang/String;)Lcom/adobe/fre/FREObject;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -194,9 +194,9 @@
     move-object v8, v1
 
     .line 52
-    .end local v1           #deviceInfoObject:Lcom/adobe/fre/FREObject;
-    .end local v5           #idsFromFile:Ljava/lang/String;
-    .end local v6           #md5RawODID:Ljava/lang/String;
+    .end local v1    # "deviceInfoObject":Lcom/adobe/fre/FREObject;
+    .end local v5    # "idsFromFile":Ljava/lang/String;
+    .end local v6    # "md5RawODID":Ljava/lang/String;
     :goto_0
     return-object v8
 
@@ -207,7 +207,7 @@
     move-object v2, v8
 
     .line 50
-    .local v2, e:Ljava/lang/Exception;
+    .local v2, "e":Ljava/lang/Exception;
     const-string v8, "ERROR_EVENT"
 
     new-instance v9, Ljava/lang/StringBuilder;

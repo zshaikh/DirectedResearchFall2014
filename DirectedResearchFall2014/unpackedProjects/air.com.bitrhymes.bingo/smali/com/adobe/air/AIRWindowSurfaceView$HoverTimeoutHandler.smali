@@ -29,8 +29,6 @@
 # direct methods
 .method public constructor <init>(Lcom/adobe/air/AIRWindowSurfaceView;Lcom/adobe/air/AIRWindowSurfaceView;)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 221
@@ -49,7 +47,6 @@
 # virtual methods
 .method public handleMessage(Landroid/os/Message;)V
     .locals 11
-    .parameter
 
     .prologue
     const-wide/16 v6, 0x1f4
@@ -74,7 +71,7 @@
     .line 229
     iget-object v0, p0, Lcom/adobe/air/AIRWindowSurfaceView$HoverTimeoutHandler;->this$0:Lcom/adobe/air/AIRWindowSurfaceView;
 
-    #setter for: Lcom/adobe/air/AIRWindowSurfaceView;->mHoverInProgress:Z
+    # setter for: Lcom/adobe/air/AIRWindowSurfaceView;->mHoverInProgress:Z
     invoke-static {v0, v5}, Lcom/adobe/air/AIRWindowSurfaceView;->access$002(Lcom/adobe/air/AIRWindowSurfaceView;Z)Z
 
     .line 230
@@ -84,14 +81,14 @@
 
     iget-object v2, p0, Lcom/adobe/air/AIRWindowSurfaceView$HoverTimeoutHandler;->mAIRWindowSurfaceView:Lcom/adobe/air/AIRWindowSurfaceView;
 
-    #getter for: Lcom/adobe/air/AIRWindowSurfaceView;->mLastTouchedXCoord:F
+    # getter for: Lcom/adobe/air/AIRWindowSurfaceView;->mLastTouchedXCoord:F
     invoke-static {v2}, Lcom/adobe/air/AIRWindowSurfaceView;->access$100(Lcom/adobe/air/AIRWindowSurfaceView;)F
 
     move-result v2
 
     iget-object v3, p0, Lcom/adobe/air/AIRWindowSurfaceView$HoverTimeoutHandler;->mAIRWindowSurfaceView:Lcom/adobe/air/AIRWindowSurfaceView;
 
-    #getter for: Lcom/adobe/air/AIRWindowSurfaceView;->mLastTouchedYCoord:F
+    # getter for: Lcom/adobe/air/AIRWindowSurfaceView;->mLastTouchedYCoord:F
     invoke-static {v3}, Lcom/adobe/air/AIRWindowSurfaceView;->access$200(Lcom/adobe/air/AIRWindowSurfaceView;)F
 
     move-result v3
@@ -102,7 +99,7 @@
 
     iget-object v6, p0, Lcom/adobe/air/AIRWindowSurfaceView$HoverTimeoutHandler;->mAIRWindowSurfaceView:Lcom/adobe/air/AIRWindowSurfaceView;
 
-    #getter for: Lcom/adobe/air/AIRWindowSurfaceView;->mHoverMetaState:I
+    # getter for: Lcom/adobe/air/AIRWindowSurfaceView;->mHoverMetaState:I
     invoke-static {v6}, Lcom/adobe/air/AIRWindowSurfaceView;->access$300(Lcom/adobe/air/AIRWindowSurfaceView;)I
 
     move-result v10
@@ -124,7 +121,7 @@
     :cond_0
     iget-object v0, p0, Lcom/adobe/air/AIRWindowSurfaceView$HoverTimeoutHandler;->this$0:Lcom/adobe/air/AIRWindowSurfaceView;
 
-    #getter for: Lcom/adobe/air/AIRWindowSurfaceView;->mHoverTimeoutHandler:Lcom/adobe/air/AIRWindowSurfaceView$HoverTimeoutHandler;
+    # getter for: Lcom/adobe/air/AIRWindowSurfaceView;->mHoverTimeoutHandler:Lcom/adobe/air/AIRWindowSurfaceView$HoverTimeoutHandler;
     invoke-static {v0}, Lcom/adobe/air/AIRWindowSurfaceView;->access$400(Lcom/adobe/air/AIRWindowSurfaceView;)Lcom/adobe/air/AIRWindowSurfaceView$HoverTimeoutHandler;
 
     move-result-object v0
@@ -136,7 +133,6 @@
 
 .method public setLastMove(J)V
     .locals 0
-    .parameter
 
     .prologue
     .line 248

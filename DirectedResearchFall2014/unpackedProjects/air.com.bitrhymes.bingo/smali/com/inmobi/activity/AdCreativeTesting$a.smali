@@ -30,7 +30,6 @@
 # direct methods
 .method public constructor <init>(Lcom/inmobi/activity/AdCreativeTesting;)V
     .locals 1
-    .parameter
 
     .prologue
     .line 163
@@ -51,7 +50,6 @@
 # virtual methods
 .method public handleMessage(Landroid/os/Message;)V
     .locals 2
-    .parameter
 
     .prologue
     .line 169

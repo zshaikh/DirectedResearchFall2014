@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1
@@ -40,9 +39,9 @@
 # virtual methods
 .method public onError(Landroid/media/MediaPlayer;II)Z
     .locals 2
-    .parameter "mp"
-    .parameter "what"
-    .parameter "extra"
+    .param p1, "mp"    # Landroid/media/MediaPlayer;
+    .param p2, "what"    # I
+    .param p3, "extra"    # I
 
     .prologue
     .line 88
@@ -81,7 +80,7 @@
     .line 89
     iget-object v0, p0, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$1;->this$0:Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;
 
-    #calls: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->videoErrorOperations()V
+    # invokes: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->videoErrorOperations()V
     invoke-static {v0}, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->access$12(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;)V
 
     .line 90

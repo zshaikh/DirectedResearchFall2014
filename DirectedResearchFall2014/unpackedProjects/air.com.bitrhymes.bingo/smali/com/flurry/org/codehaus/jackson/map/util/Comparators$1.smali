@@ -23,8 +23,6 @@
 # direct methods
 .method constructor <init>(Ljava/lang/Object;I)V
     .locals 0
-    .parameter
-    .parameter
 
     .prologue
     .line 25
@@ -41,7 +39,7 @@
 # virtual methods
 .method public equals(Ljava/lang/Object;)Z
     .locals 7
-    .parameter "other"
+    .param p1, "other"    # Ljava/lang/Object;
 
     .prologue
     const/4 v6, 0x1
@@ -97,7 +95,7 @@
     :cond_3
     const/4 v0, 0x0
 
-    .local v0, i:I
+    .local v0, "i":I
     :goto_1
     iget v3, p0, Lcom/flurry/org/codehaus/jackson/map/util/Comparators$1;->val$length:I
 
@@ -111,13 +109,13 @@
     move-result-object v1
 
     .line 36
-    .local v1, value1:Ljava/lang/Object;
+    .local v1, "value1":Ljava/lang/Object;
     invoke-static {p1, v0}, Ljava/lang/reflect/Array;->get(Ljava/lang/Object;I)Ljava/lang/Object;
 
     move-result-object v2
 
     .line 37
-    .local v2, value2:Ljava/lang/Object;
+    .local v2, "value2":Ljava/lang/Object;
     if-ne v1, v2, :cond_5
 
     .line 34
@@ -142,8 +140,8 @@
     .line 40
     goto :goto_0
 
-    .end local v1           #value1:Ljava/lang/Object;
-    .end local v2           #value2:Ljava/lang/Object;
+    .end local v1    # "value1":Ljava/lang/Object;
+    .end local v2    # "value2":Ljava/lang/Object;
     :cond_6
     move v3, v6
 

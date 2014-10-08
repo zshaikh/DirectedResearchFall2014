@@ -24,12 +24,12 @@
 # direct methods
 .method public constructor <init>(II)V
     .locals 2
-    .parameter "initialEntries"
-    .parameter "maxEntries"
+    .param p1, "initialEntries"    # I
+    .param p2, "maxEntries"    # I
 
     .prologue
     .line 18
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/util/LRUMap;,"Lcom/flurry/org/codehaus/jackson/map/util/LRUMap<TK;TV;>;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/util/LRUMap;, "Lcom/flurry/org/codehaus/jackson/map/util/LRUMap<TK;TV;>;"
     const v0, 0x3f4ccccd
 
     const/4 v1, 0x1
@@ -47,7 +47,6 @@
 # virtual methods
 .method protected removeEldestEntry(Ljava/util/Map$Entry;)Z
     .locals 2
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -58,8 +57,8 @@
 
     .prologue
     .line 25
-    .local p0, this:Lcom/flurry/org/codehaus/jackson/map/util/LRUMap;,"Lcom/flurry/org/codehaus/jackson/map/util/LRUMap<TK;TV;>;"
-    .local p1, eldest:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<TK;TV;>;"
+    .local p0, "this":Lcom/flurry/org/codehaus/jackson/map/util/LRUMap;, "Lcom/flurry/org/codehaus/jackson/map/util/LRUMap<TK;TV;>;"
+    .local p1, "eldest":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<TK;TV;>;"
     invoke-virtual {p0}, Lcom/flurry/org/codehaus/jackson/map/util/LRUMap;->size()I
 
     move-result v0

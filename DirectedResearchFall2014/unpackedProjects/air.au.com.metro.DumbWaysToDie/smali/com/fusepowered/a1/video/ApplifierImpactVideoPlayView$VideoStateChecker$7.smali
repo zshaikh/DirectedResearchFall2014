@@ -24,7 +24,6 @@
 # direct methods
 .method constructor <init>(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker;)V
     .locals 0
-    .parameter
 
     .prologue
     .line 1
@@ -47,23 +46,23 @@
     .line 689
     iget-object v3, p0, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker$7;->this$1:Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker;
 
-    #getter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker;->this$0:Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;
+    # getter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker;->this$0:Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;
     invoke-static {v3}, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker;->access$4(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker;)Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;
 
     move-result-object v3
 
-    #calls: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->hideBufferingView()V
+    # invokes: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->hideBufferingView()V
     invoke-static {v3}, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->access$15(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;)V
 
     .line 690
     iget-object v3, p0, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker$7;->this$1:Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker;
 
-    #getter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker;->this$0:Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;
+    # getter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker;->this$0:Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;
     invoke-static {v3}, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker;->access$4(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker;)Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;
 
     move-result-object v3
 
-    #getter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->_videoPlaybackStartedSent:Z
+    # getter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->_videoPlaybackStartedSent:Z
     invoke-static {v3}, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->access$16(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;)Z
 
     move-result v3
@@ -73,12 +72,12 @@
     .line 691
     iget-object v3, p0, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker$7;->this$1:Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker;
 
-    #getter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker;->this$0:Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;
+    # getter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker;->this$0:Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;
     invoke-static {v3}, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker;->access$4(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker;)Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;
 
     move-result-object v3
 
-    #getter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->_listener:Lcom/fusepowered/a1/video/IApplifierImpactVideoPlayerListener;
+    # getter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->_listener:Lcom/fusepowered/a1/video/IApplifierImpactVideoPlayerListener;
     invoke-static {v3}, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->access$10(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;)Lcom/fusepowered/a1/video/IApplifierImpactVideoPlayerListener;
 
     move-result-object v3
@@ -88,12 +87,11 @@
     .line 692
     iget-object v3, p0, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker$7;->this$1:Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker;
 
-    #getter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker;->this$0:Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;
+    # getter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker;->this$0:Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;
     invoke-static {v3}, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker;->access$4(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker;)Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;
 
     move-result-object v3
 
-    #setter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->_videoPlaybackStartedSent:Z
     invoke-static {v3, v7}, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->access$17(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;Z)V
 
     .line 693
@@ -104,12 +102,12 @@
     .line 694
     iget-object v3, p0, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker$7;->this$1:Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker;
 
-    #getter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker;->this$0:Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;
+    # getter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker;->this$0:Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;
     invoke-static {v3}, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker;->access$4(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker;)Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;
 
     move-result-object v3
 
-    #getter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->_listener:Lcom/fusepowered/a1/video/IApplifierImpactVideoPlayerListener;
+    # getter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->_listener:Lcom/fusepowered/a1/video/IApplifierImpactVideoPlayerListener;
     invoke-static {v3}, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->access$10(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;)Lcom/fusepowered/a1/video/IApplifierImpactVideoPlayerListener;
 
     move-result-object v3
@@ -119,7 +117,7 @@
     .line 695
     iget-object v3, p0, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker$7;->this$1:Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker;
 
-    #getter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker;->this$0:Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;
+    # getter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker;->this$0:Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;
     invoke-static {v3}, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker;->access$4(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker;)Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;
 
     move-result-object v3
@@ -128,13 +126,12 @@
 
     move-result-wide v4
 
-    #setter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->_bufferingCompledtedMillis:J
     invoke-static {v3, v4, v5}, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->access$18(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;J)V
 
     .line 696
     iget-object v3, p0, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker$7;->this$1:Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker;
 
-    #getter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker;->this$0:Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;
+    # getter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker;->this$0:Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;
     invoke-static {v3}, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker;->access$4(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker;)Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;
 
     move-result-object v3
@@ -143,30 +140,29 @@
 
     move-result-wide v4
 
-    #setter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->_videoStartedPlayingMillis:J
     invoke-static {v3, v4, v5}, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->access$19(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;J)V
 
     .line 697
     iget-object v3, p0, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker$7;->this$1:Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker;
 
-    #getter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker;->this$0:Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;
+    # getter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker;->this$0:Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;
     invoke-static {v3}, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker;->access$4(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker;)Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;
 
     move-result-object v3
 
-    #getter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->_bufferingCompledtedMillis:J
+    # getter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->_bufferingCompledtedMillis:J
     invoke-static {v3}, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->access$20(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;)J
 
     move-result-wide v3
 
     iget-object v5, p0, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker$7;->this$1:Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker;
 
-    #getter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker;->this$0:Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;
+    # getter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker;->this$0:Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;
     invoke-static {v5}, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker;->access$4(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker;)Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;
 
     move-result-object v5
 
-    #getter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->_bufferingStartedMillis:J
+    # getter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->_bufferingStartedMillis:J
     invoke-static {v5}, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->access$11(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;)J
 
     move-result-wide v5
@@ -174,13 +170,13 @@
     sub-long v0, v3, v5
 
     .line 698
-    .local v0, bufferingDuration:J
+    .local v0, "bufferingDuration":J
     new-instance v2, Ljava/util/HashMap;
 
     invoke-direct {v2}, Ljava/util/HashMap;-><init>()V
 
     .line 699
-    .local v2, values:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
+    .local v2, "values":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
     const-string v3, "bufferingDuration"
 
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -195,17 +191,17 @@
     invoke-static {v3, v2}, Lcom/fusepowered/a1/webapp/ApplifierImpactInstrumentation;->gaInstrumentationVideoPlay(Lcom/fusepowered/a1/campaign/ApplifierImpactCampaign;Ljava/util/Map;)V
 
     .line 703
-    .end local v0           #bufferingDuration:J
-    .end local v2           #values:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
+    .end local v0    # "bufferingDuration":J
+    .end local v2    # "values":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;"
     :cond_0
     iget-object v3, p0, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker$7;->this$1:Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker;
 
-    #getter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker;->this$0:Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;
+    # getter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker;->this$0:Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;
     invoke-static {v3}, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker;->access$4(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker;)Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;
 
     move-result-object v3
 
-    #getter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->_sentPositionEvents:Ljava/util/Map;
+    # getter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->_sentPositionEvents:Ljava/util/Map;
     invoke-static {v3}, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->access$9(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;)Ljava/util/Map;
 
     move-result-object v3
@@ -221,12 +217,12 @@
     .line 704
     iget-object v3, p0, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker$7;->this$1:Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker;
 
-    #getter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker;->this$0:Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;
+    # getter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker;->this$0:Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;
     invoke-static {v3}, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker;->access$4(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker;)Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;
 
     move-result-object v3
 
-    #getter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->_sentPositionEvents:Ljava/util/Map;
+    # getter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->_sentPositionEvents:Ljava/util/Map;
     invoke-static {v3}, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->access$9(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;)Ljava/util/Map;
 
     move-result-object v3
@@ -242,12 +238,12 @@
     .line 705
     iget-object v3, p0, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker$7;->this$1:Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker;
 
-    #getter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker;->this$0:Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;
+    # getter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker;->this$0:Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;
     invoke-static {v3}, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker;->access$4(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView$VideoStateChecker;)Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;
 
     move-result-object v3
 
-    #getter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->_listener:Lcom/fusepowered/a1/video/IApplifierImpactVideoPlayerListener;
+    # getter for: Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->_listener:Lcom/fusepowered/a1/video/IApplifierImpactVideoPlayerListener;
     invoke-static {v3}, Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;->access$10(Lcom/fusepowered/a1/video/ApplifierImpactVideoPlayView;)Lcom/fusepowered/a1/video/IApplifierImpactVideoPlayerListener;
 
     move-result-object v3

@@ -19,7 +19,6 @@
 
 .method protected static a(I)Z
     .locals 1
-    .parameter
 
     .prologue
     .line 31
@@ -51,7 +50,6 @@
 
 .method protected static b(I)Z
     .locals 2
-    .parameter
 
     .prologue
     .line 43

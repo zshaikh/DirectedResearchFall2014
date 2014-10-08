@@ -34,7 +34,7 @@
 
 .method synthetic constructor <init>(Lcom/flurry/org/apache/avro/io/parsing/Symbol$1;)V
     .locals 0
-    .parameter "x0"
+    .param p1, "x0"    # Lcom/flurry/org/apache/avro/io/parsing/Symbol$1;
 
     .prologue
     .line 234
@@ -45,7 +45,7 @@
 
 .method private constructor <init>(Z)V
     .locals 1
-    .parameter "isTrailing"
+    .param p1, "isTrailing"    # Z
 
     .prologue
     .line 247
@@ -62,8 +62,8 @@
 
 .method synthetic constructor <init>(ZLcom/flurry/org/apache/avro/io/parsing/Symbol$1;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
+    .param p1, "x0"    # Z
+    .param p2, "x1"    # Lcom/flurry/org/apache/avro/io/parsing/Symbol$1;
 
     .prologue
     .line 234

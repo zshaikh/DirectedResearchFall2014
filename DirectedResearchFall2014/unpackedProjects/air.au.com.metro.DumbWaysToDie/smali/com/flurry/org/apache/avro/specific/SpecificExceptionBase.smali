@@ -20,7 +20,7 @@
 
 .method public constructor <init>(Ljava/lang/Object;)V
     .locals 0
-    .parameter "value"
+    .param p1, "value"    # Ljava/lang/Object;
 
     .prologue
     .line 37
@@ -32,8 +32,8 @@
 
 .method public constructor <init>(Ljava/lang/Object;Ljava/lang/Throwable;)V
     .locals 0
-    .parameter "value"
-    .parameter "cause"
+    .param p1, "value"    # Ljava/lang/Object;
+    .param p2, "cause"    # Ljava/lang/Throwable;
 
     .prologue
     .line 41
@@ -45,7 +45,7 @@
 
 .method public constructor <init>(Ljava/lang/Throwable;)V
     .locals 0
-    .parameter "value"
+    .param p1, "value"    # Ljava/lang/Throwable;
 
     .prologue
     .line 33
@@ -59,7 +59,7 @@
 # virtual methods
 .method public equals(Ljava/lang/Object;)Z
     .locals 4
-    .parameter "that"
+    .param p1, "that"    # Ljava/lang/Object;
 
     .prologue
     const/4 v3, 0x1

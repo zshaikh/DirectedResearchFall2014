@@ -21,15 +21,15 @@
 # virtual methods
 .method public call(Lcom/adobe/fre/FREContext;[Lcom/adobe/fre/FREObject;)Lcom/adobe/fre/FREObject;
     .locals 13
-    .parameter "freContext"
-    .parameter "arg1"
+    .param p1, "freContext"    # Lcom/adobe/fre/FREContext;
+    .param p2, "arg1"    # [Lcom/adobe/fre/FREObject;
 
     .prologue
     .line 20
     const/4 v3, 0x0
 
     .line 22
-    .local v3, map:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v3, "map":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     const/4 v10, 0x0
 
     :try_start_0
@@ -40,7 +40,7 @@
     move-result-object v1
 
     .line 23
-    .local v1, eventName:Ljava/lang/String;
+    .local v1, "eventName":Ljava/lang/String;
     const/4 v10, 0x1
 
     aget-object v10, p2, v10
@@ -50,7 +50,7 @@
     move-result-object v6
 
     .line 24
-    .local v6, parameters:Ljava/lang/String;
+    .local v6, "parameters":Ljava/lang/String;
     const/4 v10, 0x3
 
     aget-object v10, p2, v10
@@ -60,7 +60,7 @@
     move-result-object v8
 
     .line 26
-    .local v8, timedValue:Ljava/lang/String;
+    .local v8, "timedValue":Ljava/lang/String;
     if-eqz v8, :cond_2
 
     invoke-virtual {v8}, Ljava/lang/String;->length()I
@@ -75,11 +75,11 @@
     move-result v9
 
     .line 29
-    .local v9, value:I
+    .local v9, "value":I
     const/4 v7, 0x0
 
     .line 30
-    .local v7, timedBooleanValue:Z
+    .local v7, "timedBooleanValue":Z
     const/4 v10, 0x1
 
     if-ne v9, v10, :cond_0
@@ -96,7 +96,7 @@
     move-result-object v5
 
     .line 33
-    .local v5, parameterValues:[Ljava/lang/String;
+    .local v5, "parameterValues":[Ljava/lang/String;
     new-instance v4, Ljava/util/HashMap;
 
     invoke-direct {v4}, Ljava/util/HashMap;-><init>()V
@@ -108,11 +108,11 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_4
 
     .line 34
-    .end local v3           #map:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
-    .local v4, map:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .end local v3    # "map":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .local v4, "map":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     const/4 v2, 0x0
 
-    .local v2, i:I
+    .local v2, "i":I
     :goto_0
     :try_start_1
     array-length v10, v5
@@ -131,10 +131,10 @@
     move-object v3, v4
 
     .line 51
-    .end local v4           #map:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
-    .end local v7           #timedBooleanValue:Z
-    .end local v9           #value:I
-    .restart local v3       #map:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .end local v4    # "map":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .end local v7    # "timedBooleanValue":Z
+    .end local v9    # "value":I
+    .restart local v3    # "map":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     :goto_1
     :try_start_2
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -156,26 +156,26 @@
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_4
 
     .line 69
-    .end local v1           #eventName:Ljava/lang/String;
-    .end local v2           #i:I
-    .end local v5           #parameterValues:[Ljava/lang/String;
-    .end local v6           #parameters:Ljava/lang/String;
-    .end local v8           #timedValue:Ljava/lang/String;
+    .end local v1    # "eventName":Ljava/lang/String;
+    .end local v2    # "i":I
+    .end local v5    # "parameterValues":[Ljava/lang/String;
+    .end local v6    # "parameters":Ljava/lang/String;
+    .end local v8    # "timedValue":Ljava/lang/String;
     :goto_2
     const/4 v10, 0x0
 
     return-object v10
 
     .line 35
-    .end local v3           #map:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
-    .restart local v1       #eventName:Ljava/lang/String;
-    .restart local v2       #i:I
-    .restart local v4       #map:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
-    .restart local v5       #parameterValues:[Ljava/lang/String;
-    .restart local v6       #parameters:Ljava/lang/String;
-    .restart local v7       #timedBooleanValue:Z
-    .restart local v8       #timedValue:Ljava/lang/String;
-    .restart local v9       #value:I
+    .end local v3    # "map":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .restart local v1    # "eventName":Ljava/lang/String;
+    .restart local v2    # "i":I
+    .restart local v4    # "map":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .restart local v5    # "parameterValues":[Ljava/lang/String;
+    .restart local v6    # "parameters":Ljava/lang/String;
+    .restart local v7    # "timedBooleanValue":Z
+    .restart local v8    # "timedValue":Ljava/lang/String;
+    .restart local v9    # "value":I
     :cond_1
     :try_start_3
     aget-object v10, v5, v2
@@ -198,12 +198,12 @@
     goto :goto_0
 
     .line 42
-    .end local v2           #i:I
-    .end local v4           #map:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
-    .end local v5           #parameterValues:[Ljava/lang/String;
-    .end local v7           #timedBooleanValue:Z
-    .end local v9           #value:I
-    .restart local v3       #map:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .end local v2    # "i":I
+    .end local v4    # "map":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .end local v5    # "parameterValues":[Ljava/lang/String;
+    .end local v7    # "timedBooleanValue":Z
+    .end local v9    # "value":I
+    .restart local v3    # "map":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     :cond_2
     :try_start_4
     const-string v10, ","
@@ -213,7 +213,7 @@
     move-result-object v5
 
     .line 43
-    .restart local v5       #parameterValues:[Ljava/lang/String;
+    .restart local v5    # "parameterValues":[Ljava/lang/String;
     new-instance v4, Ljava/util/HashMap;
 
     invoke-direct {v4}, Ljava/util/HashMap;-><init>()V
@@ -225,11 +225,11 @@
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_4
 
     .line 44
-    .end local v3           #map:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
-    .restart local v4       #map:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .end local v3    # "map":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .restart local v4    # "map":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     const/4 v2, 0x0
 
-    .restart local v2       #i:I
+    .restart local v2    # "i":I
     :goto_3
     :try_start_5
     array-length v10, v5
@@ -241,13 +241,13 @@
 
     move-object v3, v4
 
-    .end local v4           #map:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
-    .restart local v3       #map:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .end local v4    # "map":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .restart local v3    # "map":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     goto :goto_1
 
     .line 45
-    .end local v3           #map:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
-    .restart local v4       #map:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .end local v3    # "map":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .restart local v4    # "map":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     :cond_3
     aget-object v10, v5, v2
 
@@ -269,20 +269,20 @@
     goto :goto_3
 
     .line 53
-    .end local v1           #eventName:Ljava/lang/String;
-    .end local v2           #i:I
-    .end local v4           #map:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
-    .end local v5           #parameterValues:[Ljava/lang/String;
-    .end local v6           #parameters:Ljava/lang/String;
-    .end local v8           #timedValue:Ljava/lang/String;
-    .restart local v3       #map:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .end local v1    # "eventName":Ljava/lang/String;
+    .end local v2    # "i":I
+    .end local v4    # "map":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .end local v5    # "parameterValues":[Ljava/lang/String;
+    .end local v6    # "parameters":Ljava/lang/String;
+    .end local v8    # "timedValue":Ljava/lang/String;
+    .restart local v3    # "map":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     :catch_0
     move-exception v10
 
     move-object v0, v10
 
     .line 54
-    .local v0, e:Ljava/lang/IllegalStateException;
+    .local v0, "e":Ljava/lang/IllegalStateException;
     :goto_4
     invoke-virtual {v0}, Ljava/lang/IllegalStateException;->printStackTrace()V
 
@@ -352,14 +352,14 @@
     goto :goto_2
 
     .line 56
-    .end local v0           #e:Ljava/lang/IllegalStateException;
+    .end local v0    # "e":Ljava/lang/IllegalStateException;
     :catch_1
     move-exception v10
 
     move-object v0, v10
 
     .line 57
-    .local v0, e:Lcom/adobe/fre/FRETypeMismatchException;
+    .local v0, "e":Lcom/adobe/fre/FRETypeMismatchException;
     :goto_5
     invoke-virtual {v0}, Lcom/adobe/fre/FRETypeMismatchException;->printStackTrace()V
 
@@ -429,14 +429,14 @@
     goto/16 :goto_2
 
     .line 59
-    .end local v0           #e:Lcom/adobe/fre/FRETypeMismatchException;
+    .end local v0    # "e":Lcom/adobe/fre/FRETypeMismatchException;
     :catch_2
     move-exception v10
 
     move-object v0, v10
 
     .line 60
-    .local v0, e:Lcom/adobe/fre/FREInvalidObjectException;
+    .local v0, "e":Lcom/adobe/fre/FREInvalidObjectException;
     :goto_6
     invoke-virtual {v0}, Lcom/adobe/fre/FREInvalidObjectException;->printStackTrace()V
 
@@ -506,14 +506,14 @@
     goto/16 :goto_2
 
     .line 62
-    .end local v0           #e:Lcom/adobe/fre/FREInvalidObjectException;
+    .end local v0    # "e":Lcom/adobe/fre/FREInvalidObjectException;
     :catch_3
     move-exception v10
 
     move-object v0, v10
 
     .line 63
-    .local v0, e:Lcom/adobe/fre/FREWrongThreadException;
+    .local v0, "e":Lcom/adobe/fre/FREWrongThreadException;
     :goto_7
     invoke-virtual {v0}, Lcom/adobe/fre/FREWrongThreadException;->printStackTrace()V
 
@@ -583,14 +583,14 @@
     goto/16 :goto_2
 
     .line 65
-    .end local v0           #e:Lcom/adobe/fre/FREWrongThreadException;
+    .end local v0    # "e":Lcom/adobe/fre/FREWrongThreadException;
     :catch_4
     move-exception v10
 
     move-object v0, v10
 
     .line 66
-    .local v0, e:Ljava/lang/Exception;
+    .local v0, "e":Ljava/lang/Exception;
     :goto_8
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -660,14 +660,14 @@
     goto/16 :goto_2
 
     .line 65
-    .end local v0           #e:Ljava/lang/Exception;
-    .end local v3           #map:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
-    .restart local v1       #eventName:Ljava/lang/String;
-    .restart local v2       #i:I
-    .restart local v4       #map:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
-    .restart local v5       #parameterValues:[Ljava/lang/String;
-    .restart local v6       #parameters:Ljava/lang/String;
-    .restart local v8       #timedValue:Ljava/lang/String;
+    .end local v0    # "e":Ljava/lang/Exception;
+    .end local v3    # "map":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .restart local v1    # "eventName":Ljava/lang/String;
+    .restart local v2    # "i":I
+    .restart local v4    # "map":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .restart local v5    # "parameterValues":[Ljava/lang/String;
+    .restart local v6    # "parameters":Ljava/lang/String;
+    .restart local v8    # "timedValue":Ljava/lang/String;
     :catch_5
     move-exception v10
 
@@ -675,13 +675,13 @@
 
     move-object v3, v4
 
-    .end local v4           #map:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
-    .restart local v3       #map:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .end local v4    # "map":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .restart local v3    # "map":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     goto :goto_8
 
     .line 62
-    .end local v3           #map:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
-    .restart local v4       #map:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .end local v3    # "map":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .restart local v4    # "map":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     :catch_6
     move-exception v10
 
@@ -689,13 +689,13 @@
 
     move-object v3, v4
 
-    .end local v4           #map:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
-    .restart local v3       #map:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .end local v4    # "map":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .restart local v3    # "map":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     goto/16 :goto_7
 
     .line 59
-    .end local v3           #map:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
-    .restart local v4       #map:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .end local v3    # "map":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .restart local v4    # "map":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     :catch_7
     move-exception v10
 
@@ -703,13 +703,13 @@
 
     move-object v3, v4
 
-    .end local v4           #map:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
-    .restart local v3       #map:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .end local v4    # "map":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .restart local v3    # "map":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     goto/16 :goto_6
 
     .line 56
-    .end local v3           #map:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
-    .restart local v4       #map:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .end local v3    # "map":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .restart local v4    # "map":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     :catch_8
     move-exception v10
 
@@ -717,13 +717,13 @@
 
     move-object v3, v4
 
-    .end local v4           #map:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
-    .restart local v3       #map:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .end local v4    # "map":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .restart local v3    # "map":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     goto/16 :goto_5
 
     .line 53
-    .end local v3           #map:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
-    .restart local v4       #map:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .end local v3    # "map":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .restart local v4    # "map":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     :catch_9
     move-exception v10
 
@@ -731,7 +731,7 @@
 
     move-object v3, v4
 
-    .end local v4           #map:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
-    .restart local v3       #map:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .end local v4    # "map":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
+    .restart local v3    # "map":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     goto/16 :goto_4
 .end method

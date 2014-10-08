@@ -26,10 +26,10 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Lcom/facebook/Session;Ljava/lang/String;Landroid/os/Bundle;)V
     .locals 0
-    .parameter "context"
-    .parameter "session"
-    .parameter "action"
-    .parameter "parameters"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "session"    # Lcom/facebook/Session;
+    .param p3, "action"    # Ljava/lang/String;
+    .param p4, "parameters"    # Landroid/os/Bundle;
 
     .prologue
     .line 548
@@ -41,10 +41,10 @@
 
 .method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)V
     .locals 0
-    .parameter "context"
-    .parameter "applicationId"
-    .parameter "action"
-    .parameter "parameters"
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "applicationId"    # Ljava/lang/String;
+    .param p3, "action"    # Ljava/lang/String;
+    .param p4, "parameters"    # Landroid/os/Bundle;
 
     .prologue
     .line 561
@@ -70,7 +70,6 @@
 
 .method public bridge synthetic setOnCompleteListener(Lcom/facebook/widget/WebDialog$OnCompleteListener;)Lcom/facebook/widget/WebDialog$BuilderBase;
     .locals 1
-    .parameter
 
     .prologue
     .line 1
@@ -83,7 +82,6 @@
 
 .method public bridge synthetic setTheme(I)Lcom/facebook/widget/WebDialog$BuilderBase;
     .locals 1
-    .parameter
 
     .prologue
     .line 1

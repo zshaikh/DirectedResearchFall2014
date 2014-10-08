@@ -201,7 +201,7 @@
         }
     .end annotation
 
-    const/high16 v0, -0x8000
+    const/high16 v0, -0x80000000
 
     invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 

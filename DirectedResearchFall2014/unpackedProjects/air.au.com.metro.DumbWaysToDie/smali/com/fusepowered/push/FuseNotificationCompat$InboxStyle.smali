@@ -48,7 +48,7 @@
 
 .method public constructor <init>(Lcom/fusepowered/push/FuseNotificationCompat$Builder;)V
     .locals 1
-    .parameter "builder"
+    .param p1, "builder"    # Lcom/fusepowered/push/FuseNotificationCompat$Builder;
 
     .prologue
     .line 788
@@ -72,7 +72,7 @@
 # virtual methods
 .method public addLine(Ljava/lang/CharSequence;)Lcom/fusepowered/push/FuseNotificationCompat$InboxStyle;
     .locals 1
-    .parameter "cs"
+    .param p1, "cs"    # Ljava/lang/CharSequence;
 
     .prologue
     .line 814
@@ -86,7 +86,7 @@
 
 .method public setBigContentTitle(Ljava/lang/CharSequence;)Lcom/fusepowered/push/FuseNotificationCompat$InboxStyle;
     .locals 0
-    .parameter "title"
+    .param p1, "title"    # Ljava/lang/CharSequence;
 
     .prologue
     .line 797
@@ -98,7 +98,7 @@
 
 .method public setSummaryText(Ljava/lang/CharSequence;)Lcom/fusepowered/push/FuseNotificationCompat$InboxStyle;
     .locals 1
-    .parameter "cs"
+    .param p1, "cs"    # Ljava/lang/CharSequence;
 
     .prologue
     .line 805

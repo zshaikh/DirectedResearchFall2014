@@ -41,8 +41,7 @@
 # virtual methods
 .method public addDeserializer(Ljava/lang/Class;Lcom/flurry/org/codehaus/jackson/map/KeyDeserializer;)Lcom/flurry/org/codehaus/jackson/map/module/SimpleKeyDeserializers;
     .locals 2
-    .parameter
-    .parameter "deser"
+    .param p2, "deser"    # Lcom/flurry/org/codehaus/jackson/map/KeyDeserializer;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -56,7 +55,7 @@
 
     .prologue
     .line 37
-    .local p1, forClass:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
+    .local p1, "forClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/map/module/SimpleKeyDeserializers;->_classMappings:Ljava/util/HashMap;
 
     if-nez v0, :cond_0
@@ -84,10 +83,10 @@
 
 .method public findKeyDeserializer(Lcom/flurry/org/codehaus/jackson/type/JavaType;Lcom/flurry/org/codehaus/jackson/map/DeserializationConfig;Lcom/flurry/org/codehaus/jackson/map/BeanDescription;Lcom/flurry/org/codehaus/jackson/map/BeanProperty;)Lcom/flurry/org/codehaus/jackson/map/KeyDeserializer;
     .locals 3
-    .parameter "type"
-    .parameter "config"
-    .parameter "beanDesc"
-    .parameter "property"
+    .param p1, "type"    # Lcom/flurry/org/codehaus/jackson/type/JavaType;
+    .param p2, "config"    # Lcom/flurry/org/codehaus/jackson/map/DeserializationConfig;
+    .param p3, "beanDesc"    # Lcom/flurry/org/codehaus/jackson/map/BeanDescription;
+    .param p4, "property"    # Lcom/flurry/org/codehaus/jackson/map/BeanProperty;
 
     .prologue
     .line 54
@@ -99,11 +98,11 @@
     const/4 v0, 0x0
 
     .line 57
-    .end local p0
+    .end local p0    # "this":Lcom/flurry/org/codehaus/jackson/map/module/SimpleKeyDeserializers;
     :goto_0
     return-object v0
 
-    .restart local p0
+    .restart local p0    # "this":Lcom/flurry/org/codehaus/jackson/map/module/SimpleKeyDeserializers;
     :cond_0
     iget-object v0, p0, Lcom/flurry/org/codehaus/jackson/map/module/SimpleKeyDeserializers;->_classMappings:Ljava/util/HashMap;
 
@@ -119,7 +118,7 @@
 
     move-result-object p0
 
-    .end local p0
+    .end local p0    # "this":Lcom/flurry/org/codehaus/jackson/map/module/SimpleKeyDeserializers;
     check-cast p0, Lcom/flurry/org/codehaus/jackson/map/KeyDeserializer;
 
     move-object v0, p0
